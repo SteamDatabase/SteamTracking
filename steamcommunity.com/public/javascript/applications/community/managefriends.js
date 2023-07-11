@@ -69,11 +69,13 @@
         }
         LoadProfiles(e, t) {
           return (0, r.mG)(this, void 0, void 0, function* () {
-            (0,
-            c.X)(e.length <= 500, "Check LoadProfiles, requesting too many steam IDs");
+            (0, c.X)(
+              e.length <= 500,
+              "Check LoadProfiles, requesting too many steam IDs",
+            );
             let n = e.filter(
               (e) =>
-                !this.m_mapProfiles.has(e) && !this.m_mapProfilesLoading.has(e)
+                !this.m_mapProfiles.has(e) && !this.m_mapProfilesLoading.has(e),
             );
             if (0 == n.length) return this.m_mapProfilesLoading.get(e[0]);
             let r = u.De.COMMUNITY_BASE_URL + "actions/ajaxresolveusers",
@@ -101,7 +103,7 @@
         }
         GetProfileByAccountID(e) {
           return this.m_mapProfiles.get(
-            l.K.InitFromAccountID(e).ConvertTo64BitString()
+            l.K.InitFromAccountID(e).ConvertTo64BitString(),
           );
         }
         GetProfileBySteamID(e) {
@@ -112,7 +114,7 @@
         }
         BHasProfileByAccountID(e) {
           return this.m_mapProfiles.has(
-            l.K.InitFromAccountID(e).ConvertTo64BitString()
+            l.K.InitFromAccountID(e).ConvertTo64BitString(),
           );
         }
         BHasProfileBySteamID(e) {
@@ -137,7 +139,7 @@
       function f(e) {
         const t = o.useMemo(
             () => (e ? ("string" == typeof e ? new l.K(e) : e) : null),
-            [e]
+            [e],
           ),
           [n, r] = (0, o.useState)(!!t && !p.BHasProfileBySteamID(t));
         (0, o.useEffect)(() => {
@@ -154,7 +156,7 @@
                       t.ConvertTo64BitString() +
                       ": " +
                       n.strErrorMsg,
-                    n
+                    n,
                   );
                 })
                 .finally(() => {
@@ -202,7 +204,7 @@
           return (0, r.mG)(this, void 0, void 0, function* () {
             const e = yield o().get(
               u.De.COMMUNITY_BASE_URL + "invites/ajaxgetall",
-              { params: { sessionid: u.De.SESSIONID } }
+              { params: { sessionid: u.De.SESSIONID } },
             );
             if (e && e.data && e.data.tokens) {
               const t = e.data.tokens.filter((e) => e.valid);
@@ -220,7 +222,7 @@
               e.append("duration", (2592e3).toString());
             const t = yield o().post(
               u.De.COMMUNITY_BASE_URL + "invites/ajaxcreate",
-              e
+              e,
             );
             t &&
               t.data &&
@@ -246,7 +248,7 @@
             try {
               const e = yield o().post(
                 u.De.COMMUNITY_BASE_URL + "actions/AddFriendAjax",
-                t
+                t,
               );
               return e && e.data && 1 == e.data.success;
             } catch (e) {
@@ -265,7 +267,7 @@
             u.De.COMMUNITY_BASE_URL +
               "search/users/#text=" +
               encodeURIComponent(this.state.input_search),
-            "_self"
+            "_self",
           );
         }
         render() {
@@ -276,7 +278,7 @@
             s.createElement(
               "div",
               { className: m().HeaderBlock },
-              (0, l.Xx)("#ManageFriends_AddAFriend")
+              (0, l.Xx)("#ManageFriends_AddAFriend"),
             ),
             s.createElement(
               "div",
@@ -284,7 +286,7 @@
               s.createElement(
                 "h1",
                 { className: m().Heading },
-                (0, l.Xx)("#ManageFriends_YourFriendCode")
+                (0, l.Xx)("#ManageFriends_YourFriendCode"),
               ),
               s.createElement(
                 "div",
@@ -300,13 +302,13 @@
                   },
                   this.state.friend_code_copied
                     ? (0, l.Xx)("#ManageFriends_Copied")
-                    : (0, l.Xx)("#ManageFriends_Copy")
-                )
+                    : (0, l.Xx)("#ManageFriends_Copy"),
+                ),
               ),
               s.createElement(
                 "p",
                 { className: m().Body },
-                (0, l.Xx)("#ManageFriends_EnterFriendCode")
+                (0, l.Xx)("#ManageFriends_EnterFriendCode"),
               ),
               s.createElement(C, {
                 onButtonClick: this.OnAddFriend,
@@ -314,7 +316,7 @@
                 bDisableForSelf: !0,
                 bDisableForFriends: !0,
                 bShowStatus: !0,
-              })
+              }),
             ),
             s.createElement(
               "div",
@@ -322,17 +324,17 @@
               s.createElement(
                 "h1",
                 { className: m().Heading },
-                (0, l.Xx)("#ManageFriends_OrSendQuickInvite")
+                (0, l.Xx)("#ManageFriends_OrSendQuickInvite"),
               ),
               s.createElement(
                 "p",
                 { className: m().Body },
-                (0, l.Xx)("#ManageFriends_QuickInviteDescription")
+                (0, l.Xx)("#ManageFriends_QuickInviteDescription"),
               ),
               s.createElement(
                 "p",
                 { className: m().Body },
-                (0, l.Xx)("#ManageFriends_QuickInviteNote")
+                (0, l.Xx)("#ManageFriends_QuickInviteNote"),
               ),
               s.createElement(
                 "div",
@@ -347,8 +349,8 @@
                   },
                   this.state.invite_copied
                     ? (0, l.Xx)("#ManageFriends_Copied")
-                    : (0, l.Xx)("#ManageFriends_Copy")
-                )
+                    : (0, l.Xx)("#ManageFriends_Copy"),
+                ),
               ),
               s.createElement(
                 d.zx,
@@ -356,8 +358,8 @@
                   className: m().GenerateLinkButton,
                   onClick: this.OnCreateInviteLink,
                 },
-                (0, l.Xx)("#ManageFriends_CreateInviteLink")
-              )
+                (0, l.Xx)("#ManageFriends_CreateInviteLink"),
+              ),
             ),
             s.createElement(
               "div",
@@ -365,7 +367,7 @@
               s.createElement(
                 "h1",
                 { className: m().Heading },
-                (0, l.Xx)("#ManageFriends_OrSearch")
+                (0, l.Xx)("#ManageFriends_OrSearch"),
               ),
               s.createElement("br", null),
               s.createElement(
@@ -387,7 +389,7 @@
                     value: this.state.input_search,
                     onChange: this.OnSearchChange,
                     placeholder: (0, l.Xx)("#ManageFriends_EnterProfileName"),
-                  })
+                  }),
                 ),
                 s.createElement(
                   "div",
@@ -400,10 +402,10 @@
                     },
                     onClick: this.OnSearchSubmit,
                   },
-                  s.createElement(g.YtI, null)
-                )
-              )
-            )
+                  s.createElement(g.YtI, null),
+                ),
+              ),
+            ),
           );
         }
       }
@@ -431,7 +433,7 @@
               window.clearTimeout(this.m_currentRequest),
               (this.m_currentRequest = window.setTimeout(
                 () => this.LoadProfile(t),
-                500
+                500,
               ));
           });
         }
@@ -482,7 +484,7 @@
               value: this.state.input_friend_code,
               onChange: this.OnFriendCodeChange,
               placeholder: (0, l.Xx)(
-                "#ManageFriends_EnterFriendCodePlaceholder"
+                "#ManageFriends_EnterFriendCodePlaceholder",
               ),
             }),
             s.createElement(
@@ -500,9 +502,9 @@
                     this.OnActionClick(this.state.searchResult.steamid),
                   disabled: this.state.disable_send_invite,
                 },
-                this.props.buttonText
-              )
-            )
+                this.props.buttonText,
+              ),
+            ),
           );
         }
       }
@@ -530,7 +532,7 @@
                   s.createElement("img", {
                     style: { width: "100%", height: "100%" },
                     src: t.avatar_url_full,
-                  })
+                  }),
                 ),
                 s.createElement(
                   "div",
@@ -538,7 +540,7 @@
                   s.createElement(
                     "h1",
                     { className: m().Heading },
-                    t.persona_name
+                    t.persona_name,
                   ),
                   s.createElement(
                     "div",
@@ -549,7 +551,7 @@
                         target: i ? void 0 : "_blank",
                         href: u.De.COMMUNITY_BASE_URL + "profiles/" + t.steamid,
                       },
-                      (0, l.Xx)("#ManageFriends_ProfileLink")
+                      (0, l.Xx)("#ManageFriends_ProfileLink"),
                     ),
                     s.createElement("br", null),
                     s.createElement(
@@ -559,11 +561,11 @@
                       s.createElement("br", null),
                       `${t.city}${t.city ? "," : ""} ${t.state}${
                         t.state ? "," : ""
-                      } ${t.country}`
-                    )
-                  )
+                      } ${t.country}`,
+                    ),
+                  ),
                 ),
-                a
+                a,
               ),
               s.createElement(
                 "div",
@@ -572,7 +574,7 @@
                   s.createElement(
                     "div",
                     null,
-                    (0, l.Xx)("#ManageFriends_IsFriend")
+                    (0, l.Xx)("#ManageFriends_IsFriend"),
                   ),
                 0 != t.friends_in_common &&
                   s.createElement(
@@ -591,29 +593,29 @@
                       1 === t.friends_in_common
                         ? (0, l.Xx)(
                             "#ManageFriends_FriendsInCommonSingular",
-                            t.friends_in_common
+                            t.friends_in_common,
                           )
                         : (0, l.Xx)(
                             "#ManageFriends_FriendsInCommon",
-                            t.friends_in_common
-                          )
-                    )
+                            t.friends_in_common,
+                          ),
+                    ),
                   ),
                 r &&
                   "failure" === n &&
                   s.createElement(
                     "div",
                     { className: m().Failure },
-                    (0, l.Xx)("#ManageFriends_InviteFailure")
+                    (0, l.Xx)("#ManageFriends_InviteFailure"),
                   ),
                 r &&
                   "success" === n &&
                   s.createElement(
                     "div",
                     { className: m().Success },
-                    (0, l.Xx)("#ManageFriends_InviteSuccess", t.persona_name)
-                  )
-              )
+                    (0, l.Xx)("#ManageFriends_InviteSuccess", t.persona_name),
+                  ),
+              ),
             )
           : null;
       };
@@ -663,7 +665,7 @@
             return { strErrorMsg: e.err_msg, errorCode: e.success };
           if ("string" == typeof e && e.length > 1024)
             console.groupCollapsed(
-              "GetMsgAndErrorCodeFromResponse cannot parse: "
+              "GetMsgAndErrorCodeFromResponse cannot parse: ",
             ),
               console.error(e),
               console.groupEnd();

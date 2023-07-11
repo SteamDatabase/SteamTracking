@@ -129,14 +129,14 @@
               {
                 type: n.k_Owned,
                 display: (0, p.Xx)(
-                  "#NotificationsList_CommentFilters_YourItems"
+                  "#NotificationsList_CommentFilters_YourItems",
                 ),
                 fnFilter: this.IsCommentOwned,
               },
               {
                 type: n.k_Subscribed,
                 display: (0, p.Xx)(
-                  "#NotificationsList_CommentFilters_Subscribed"
+                  "#NotificationsList_CommentFilters_Subscribed",
                 ),
                 fnFilter: this.IsCommentSubscribed,
               },
@@ -199,12 +199,12 @@
           }),
             this.rgFilterState.has(3) &&
               this.commentFilter.setItemTypes.forEach(
-                (e) => (t += (t ? "," : "") + e)
+                (e) => (t += (t ? "," : "") + e),
               ),
             window.history.pushState(
               {},
               null,
-              window.location.pathname + (t ? "#" + t : "")
+              window.location.pathname + (t ? "#" + t : ""),
             );
         }
       }
@@ -226,10 +226,10 @@
           var t;
           const e = new Map();
           for (const i of w.m_rgNotificationRollups.filter(
-            (t) => 3 == t.type
+            (t) => 3 == t.type,
           )) {
             const n = (0, s.dh)(
-              null === (t = i.item) || void 0 === t ? void 0 : t.body_data
+              null === (t = i.item) || void 0 === t ? void 0 : t.body_data,
             );
             e.set(n.comment_type, 1 + (e.get(n.comment_type) || 0));
           }
@@ -331,9 +331,9 @@
                     o.createElement(
                       "span",
                       { className: y().NotificationsHeaderTitle },
-                      (0, p.Xx)("#NotificationsList_Header")
+                      (0, p.Xx)("#NotificationsList_Header"),
                     ),
-                    o.createElement(M, null)
+                    o.createElement(M, null),
                   ),
                   o.createElement(
                     "div",
@@ -341,20 +341,20 @@
                     o.createElement(
                       "div",
                       { className: y().NotificationListCtn },
-                      o.createElement(H, null)
+                      o.createElement(H, null),
                     ),
                     o.createElement(
                       "div",
                       { className: y().NotificationFiltersCtn },
-                      o.createElement(U, null)
-                    )
-                  )
-                )
+                      o.createElement(U, null),
+                    ),
+                  ),
+                ),
               )
             : o.createElement(
                 "div",
                 { className: y().NotificationPageCtn },
-                o.createElement(O, null)
+                o.createElement(O, null),
               )
         );
       }
@@ -368,7 +368,7 @@
                 (0, s.UN)(
                   e,
                   t.type,
-                  null === (i = t.rgunread) || void 0 === i ? void 0 : i.length
+                  null === (i = t.rgunread) || void 0 === i ? void 0 : i.length,
                 );
               }),
               (0, s.RY)(e)
@@ -378,7 +378,7 @@
         return o.createElement(
           "span",
           { className: y().NotificationsHeaderUnread },
-          e
+          e,
         );
       }
       function H() {
@@ -386,7 +386,7 @@
         return o.createElement(
           R.s,
           { className: y().NotificationsList },
-          t.map((t, e) => o.createElement(Y, { key: e, rollup: t }))
+          t.map((t, e) => o.createElement(Y, { key: e, rollup: t })),
         );
       }
       function O() {
@@ -396,13 +396,13 @@
           o.createElement(
             R.s,
             { className: y().EmptyNotificationsTitle },
-            (0, p.Xx)("#NotificationsList_EmptyTitle")
+            (0, p.Xx)("#NotificationsList_EmptyTitle"),
           ),
           o.createElement(
             R.s,
             { className: y().EmptyNotificationsBody },
-            (0, p.Xx)("#NotificationsList_EmptyBody")
-          )
+            (0, p.Xx)("#NotificationsList_EmptyBody"),
+          ),
         );
       }
       function U() {
@@ -428,8 +428,8 @@
                   className: y().MarkAllReadButton,
                   onClick: () => w.MarkAllItemsRead(t),
                 },
-                (0, p.Xx)("#NotificationsList_MarkAllRead")
-              )
+                (0, p.Xx)("#NotificationsList_MarkAllRead"),
+              ),
             ),
             o.createElement(
               f.zx,
@@ -437,24 +437,26 @@
                 className: y().SettingsButton,
                 onClick: () =>
                   window.location.assign(
-                    `${l.De.STORE_BASE_URL}account/notificationsettings`
+                    `${l.De.STORE_BASE_URL}account/notificationsettings`,
                   ),
               },
               o.createElement(r.Zrf, { className: y().SettingsImg }),
-              (0, p.Xx)("#NotificationsList_Settings")
-            )
+              (0, p.Xx)("#NotificationsList_Settings"),
+            ),
           ),
           o.createElement(
             "div",
             { className: y().SettingsFiltersTitle },
-            (0, p.Xx)("#NotificationsList_FilterTo")
+            (0, p.Xx)("#NotificationsList_FilterTo"),
           ),
           o.createElement(
             "div",
             { className: y().SettingsFilters },
             T.k_rgFilterCheckboxes
               .filter((t) => e.has(t.type))
-              .map((t) => o.createElement(P, { key: t.type, filterOptions: t }))
+              .map((t) =>
+                o.createElement(P, { key: t.type, filterOptions: t }),
+              ),
           ),
           o.createElement(
             f.zx,
@@ -462,8 +464,8 @@
               className: y().ResetButton,
               onClick: () => T.SetFilter(null, !1, !0),
             },
-            (0, p.Xx)("#NotificationsList_Reset")
-          )
+            (0, p.Xx)("#NotificationsList_Reset"),
+          ),
         );
       }
       function P(t) {
@@ -508,8 +510,8 @@
           "div",
           { className: (0, L.Z)(y().AdvancedCommentFilters, e) },
           Array.from(i.keys()).map((t) =>
-            o.createElement(Z, { key: t, threadType: t })
-          )
+            o.createElement(Z, { key: t, threadType: t }),
+          ),
         );
       }
       function j(t) {
@@ -525,7 +527,7 @@
             className: (0, L.Z)(y().Expander, y().Expanded),
             style: { height: e ? n : 0 },
           },
-          o.createElement("div", { ref: a }, i)
+          o.createElement("div", { ref: a }, i),
         );
       }
       function z(t) {
@@ -537,10 +539,12 @@
               const i = new Map();
               for (const n of T.k_rgCommentFilters)
                 for (const o of w.m_rgNotificationRollups.filter(
-                  (t) => 3 == t.type
+                  (t) => 3 == t.type,
                 )) {
                   const a = (0, s.dh)(
-                    null === (e = o.item) || void 0 === e ? void 0 : e.body_data
+                    null === (e = o.item) || void 0 === e
+                      ? void 0
+                      : e.body_data,
                   );
                   n.fnFilter(a, t) && i.set(n.type, 1 + (i.get(n.type) || 0));
                 }
@@ -573,10 +577,10 @@
                 o.createElement(
                   "div",
                   { className: y().CommentFilters },
-                  r && o.createElement(G, { className: y().Expanded })
-                )
-              )
-            )
+                  r && o.createElement(G, { className: y().Expanded }),
+                ),
+              ),
+            ),
         );
       }
       function D(t, e) {
@@ -590,7 +594,7 @@
             (0, o.useCallback)((t) => {
               t.isIntersecting && a(!0);
             }, []),
-            { rootMargin: "600px" }
+            { rootMargin: "600px" },
           );
         if (e.item.hidden && 5 == e.type) {
           const t = (0, s.gs)(e.item.body_data);
@@ -607,7 +611,7 @@
                   onNotificationClick: D,
                   location: d.IS.AllNotificationsTray,
                   uimode: 7,
-                })
+                }),
             )
           : null;
       }
@@ -615,8 +619,8 @@
         o.createElement(
           "div",
           { className: y().AllNotificationsRowCtn, ref: e },
-          t.children
-        )
+          t.children,
+        ),
       );
       function W(t) {
         let e = t.location.hash;

@@ -46,12 +46,12 @@
                     B().Section,
                     "note" == r && B().Note,
                     "important" == r && B().Important,
-                    "warning" == r && B().Warning
+                    "warning" == r && B().Warning,
                   );
                 return i.createElement(
                   "div",
                   { id: t || void 0, className: a },
-                  e.children
+                  e.children,
                 );
               },
               autocloses: !1,
@@ -126,17 +126,17 @@
                         fnBBComponent: c.V2,
                       },
                     ],
-                    {}
+                    {},
                   ),
-                  e
+                  e,
                 ),
-              []
+              [],
             ),
             n = i.useRef(new m.Z6(g, a));
           return i.createElement(
             "div",
             { className: B().FAQContainer },
-            n.current.ParseBBCode(t, { showErrorInfo: r })
+            n.current.ParseBBCode(t, { showErrorInfo: r }),
           );
         };
     },
@@ -178,14 +178,20 @@
             return !!t.strTitle || !!t.strContent;
           }
           return Array.from(this.m_mapLocalUpdates.values()).some(
-            (e) => !!e.strTitle || !!e.strContent
+            (e) => !!e.strTitle || !!e.strContent,
           );
         }
         SaveDrafts() {
           var e, t, r, a;
           return (0, i.mG)(this, void 0, void 0, function* () {
-            (0,
-            d.X)(Boolean(null === (e = this.m_summary) || void 0 === e ? void 0 : e.faq_id), "Attempting to save when we lack a FaqID in the summary object");
+            (0, d.X)(
+              Boolean(
+                null === (e = this.m_summary) || void 0 === e
+                  ? void 0
+                  : e.faq_id,
+              ),
+              "Attempting to save when we lack a FaqID in the summary object",
+            );
             let i = 1,
               n = new Array();
             for (let e = 0; e < 30; ++e)
@@ -211,7 +217,7 @@
                       : a.faq_id,
                     e,
                     t,
-                    r
+                    r,
                   );
                 s
                   .then((a) => {
@@ -233,7 +239,7 @@
                               ((i = !0),
                               (t.last_update_timestamp = Math.max(
                                 t.last_update_timestamp,
-                                a.rtUpdateTime
+                                a.rtUpdateTime,
                               )));
                           }),
                             i ||
@@ -245,14 +251,14 @@
                       : 1 == i &&
                         (console.error(
                           "FAQModel.SaveDraft: Response not ok " + a.eResult,
-                          a
+                          a,
                         ),
                         (i = a.eResult));
                   })
                   .catch((e) => {
                     console.error(
                       "FAQModel.SaveDrafts: Hit error " +
-                        (0, B.l)(e).strErrorMsg
+                        (0, B.l)(e).strErrorMsg,
                     ),
                       1 == i && (i = 2);
                   }),
@@ -371,7 +377,7 @@
             0 == e.length && e.push(c.IN.k_ESteamRealmGlobal),
             (0, d.X)(
               e.length > 0,
-              `FAQ ${this.m_summary.faq_id} is currently configured so that no realms are valid for display.`
+              `FAQ ${this.m_summary.faq_id} is currently configured so that no realms are valid for display.`,
             ),
             e
           );
@@ -379,8 +385,8 @@
         BHasPublished() {
           return Boolean(
             this.m_summary.per_language_info.some(
-              (e) => !!e.last_publish_timestamp
-            )
+              (e) => !!e.last_publish_timestamp,
+            ),
           );
         }
         GetLastTimeLanguageUpdated(e) {
@@ -2073,7 +2079,7 @@
               "ClanFAQS.GetAllLatestVersionPublishedFAQS#1",
               t,
               P,
-              { ePrivilege: 1 }
+              { ePrivilege: 1 },
             );
           }),
           (e.CheckFAQPermissions = function (e, t) {
@@ -2136,7 +2142,7 @@
                 for (const e of r.draft) i.set(e.language, e);
                 this.m_mapFAQDrafts.set(
                   t,
-                  new f(this.m_mapFAQSummaries.get(t), i)
+                  new f(this.m_mapFAQSummaries.get(t), i),
                 );
               }
             if (e.allfaqs)
@@ -2167,18 +2173,19 @@
             try {
               const a = yield H.Create(
                 this.m_steamInterface.GetServiceTransport(),
-                t
+                t,
               );
               if (((i = a.GetEResult()), 1 == i)) {
                 r = a.Body().faq_id();
                 const t = { faq_id: r, internal_name: e };
                 this.m_mapFAQSummaries.set(r, t);
-              } else console.error("FAQStore.CreateFAQ: Create request failed:", i);
+              } else
+                console.error("FAQStore.CreateFAQ: Create request failed:", i);
             } catch (e) {
               const t = (0, B.l)(e);
               console.error(
                 "FAQStore.CreateFAQ: caught error " + t.strErrorMsg,
-                t
+                t,
               );
             }
             return { eResult: i, strFaqId: r };
@@ -2197,7 +2204,7 @@
             try {
               const e = yield H.UpdateDraft(
                 this.m_steamInterface.GetServiceTransport(),
-                i
+                i,
               );
               (n = e.GetEResult()),
                 1 != n
@@ -2207,7 +2214,7 @@
               const t = (0, B.l)(e);
               console.error(
                 "FAQStore.UpdateDraft: caught error " + t.strErrorMsg,
-                t
+                t,
               );
             }
             return { eResult: n, rtUpdateTime: s };
@@ -2224,7 +2231,7 @@
             try {
               (a = (yield H.UpdateJsonData(
                 this.m_steamInterface.GetServiceTransport(),
-                i
+                i,
               )).GetEResult()),
                 1 != a
                   ? console.error("FAQStore.UpdateJsonData request failed:", a)
@@ -2233,7 +2240,7 @@
               const t = (0, B.l)(e);
               console.error(
                 "FAQStore.UpdateJsonData: caught error " + t.strErrorMsg,
-                t
+                t,
               );
             }
             return a;
@@ -2249,7 +2256,7 @@
             try {
               const e = yield H.GetFAQVersion(
                   this.m_steamInterface.GetServiceTransport(),
-                  i
+                  i,
                 ),
                 t = e.GetEResult();
               if (1 == t) return e.Body().faq().toObject();
@@ -2258,7 +2265,7 @@
               const t = (0, B.l)(e);
               console.error(
                 "FAQStore.GetFAQVersion: caught error " + t.strErrorMsg,
-                t
+                t,
               );
             }
             return null;
@@ -2272,7 +2279,7 @@
             try {
               (r = (yield H.Delete(
                 this.m_steamInterface.GetServiceTransport(),
-                t
+                t,
               )).GetEResult()),
                 1 != r
                   ? console.error("FAQStore.DeleteFAQ request failed:", r)
@@ -2283,7 +2290,7 @@
               const t = (0, B.l)(e);
               console.error(
                 "FAQStore.DeleteFAQ: caught error " + t.strErrorMsg,
-                t
+                t,
               );
             }
             return r;
@@ -2319,13 +2326,13 @@
             try {
               const i = yield H.GetAllDrafts(
                 this.m_steamInterface.GetServiceTransport(),
-                t
+                t,
               );
               if (((r = i.GetEResult()), 1 != r))
                 return (
                   console.error(
                     "FaqStore.LoadFAQDraftContent request failed:",
-                    r
+                    r,
                   ),
                   null
                 );
@@ -2343,7 +2350,7 @@
               const t = (0, B.l)(e);
               console.error(
                 "FaqStore.LoadFAQDraftContent: exception " + t.strErrorMsg,
-                t
+                t,
               );
             }
             return null;
@@ -2361,7 +2368,7 @@
               if (
                 ((a = (yield H.SetVisibility(
                   this.m_steamInterface.GetServiceTransport(),
-                  i
+                  i,
                 )).GetEResult()),
                 1 === a)
               ) {
@@ -2375,7 +2382,7 @@
               const t = (0, B.l)(e);
               console.error(
                 "FaqStore.UpdateVisibility: exception " + t.strErrorMsg,
-                t
+                t,
               );
             }
             return a;
@@ -2392,7 +2399,7 @@
             try {
               const a = yield H.PublishDraft(
                 this.m_steamInterface.GetServiceTransport(),
-                r
+                r,
               );
               if (((i = a.GetEResult()), 1 === i)) {
                 const r = this.m_mapFAQSummaries.get(e);
@@ -2406,7 +2413,7 @@
                         if (t.indexOf(n) >= 0) {
                           r.last_publish_timestamp = Math.max(
                             r.last_publish_timestamp,
-                            a.Body().last_publish_timestamp()
+                            a.Body().last_publish_timestamp(),
                           );
                           const t =
                             null === (i = this.m_mapFAQDrafts.get(e)) ||
@@ -2417,12 +2424,13 @@
                         }
                       });
                   });
-              } else console.error("FaqStore.PublishDraftByLanguage: Failed " + i);
+              } else
+                console.error("FaqStore.PublishDraftByLanguage: Failed " + i);
             } catch (e) {
               const t = (0, B.l)(e);
               console.error(
                 "FaqStore.PublishDraftByLanguage: exception " + t.strErrorMsg,
-                t
+                t,
               );
             }
             return i;
@@ -2438,7 +2446,7 @@
             try {
               (i = (yield H.UpdateInternalName(
                 this.m_steamInterface.GetServiceTransport(),
-                r
+                r,
               )).GetEResult()),
                 1 === i
                   ? (0, o.z)(() => {
@@ -2465,7 +2473,7 @@
               const t = (0, B.l)(e);
               console.error(
                 "FaqStore.UpdateInternalName: exception " + t.strErrorMsg,
-                t
+                t,
               );
             }
             return i;
@@ -2547,7 +2555,7 @@
                 "Could not import from crowdin",
                 e,
                 m.strErrorMsg,
-                m
+                m,
               ),
               []
             );
@@ -2557,7 +2565,7 @@
           return this.m_mapFAQSummaries
             .get(e)
             .per_language_info.some(
-              (e) => 0 == e.language && e.last_publish_timestamp > 0
+              (e) => 0 == e.language && e.last_publish_timestamp > 0,
             );
         }
         GetNonEnglishDraftsToPublish(e) {
@@ -2595,7 +2603,7 @@
           .toUpperCase();
         return `${t.slice(0, 4)}-${t.slice(4, 8)}-${t.slice(8, 12)}-${t.slice(
           12,
-          16
+          16,
         )}`;
       }
       function ee(e, t) {

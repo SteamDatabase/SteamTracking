@@ -2574,7 +2574,9 @@ input.clanimagepicker_SearchInput_lwt4u {
   z-index: 2;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  transition: filter 0.24s ease-in-out, transform 0.24s ease-in-out,
+  transition:
+    filter 0.24s ease-in-out,
+    transform 0.24s ease-in-out,
     color 0.24s ease-in-out;
 }
 .items_in_row_4 .eventrow_EventSummaryText_h5tE8 {
@@ -2594,7 +2596,9 @@ input.clanimagepicker_SearchInput_lwt4u {
   z-index: 2;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  transition: filter 0.24s ease-in-out, transform 0.24s ease-in-out,
+  transition:
+    filter 0.24s ease-in-out,
+    transform 0.24s ease-in-out,
     color 0.24s ease-in-out;
 }
 .eventrow_OtherEvents_EventCtn_17gGs.eventrow_HorizontalEvent_1RS0b {
@@ -2775,7 +2779,9 @@ input.clanimagepicker_SearchInput_lwt4u {
   margin-left: auto;
   margin-right: auto;
   filter: saturate(0.9);
-  transition: transform 0.21s ease-in-out, filter 0.21s ease-in-out;
+  transition:
+    transform 0.21s ease-in-out,
+    filter 0.21s ease-in-out;
 }
 .spotlight_MajorEventContainer_3do5n:hover .spotlight_MajorEventImage_1Up1W {
   transform: scale(1.02);
@@ -4158,7 +4164,9 @@ td.rdtYear:hover {
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local("Jolly Lodger"), local("JollyLodger"),
+  src:
+    local("Jolly Lodger"),
+    local("JollyLodger"),
     url(https://fonts.gstatic.com/s/jollylodger/v7/BXRsvFTAh_bGkA1uQ48dlB3lUODS7Zw.woff2)
       format("woff2");
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
@@ -4169,7 +4177,9 @@ td.rdtYear:hover {
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local("Jolly Lodger"), local("JollyLodger"),
+  src:
+    local("Jolly Lodger"),
+    local("JollyLodger"),
     url(https://fonts.gstatic.com/s/jollylodger/v7/BXRsvFTAh_bGkA1uQ48dlB3lXuDS.woff2)
       format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
@@ -4181,7 +4191,9 @@ td.rdtYear:hover {
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local("New Rocker"), local("NewRocker-Regular"),
+  src:
+    local("New Rocker"),
+    local("NewRocker-Regular"),
     url(https://fonts.gstatic.com/s/newrocker/v8/MwQzbhjp3-HImzcCU_cJoGofiIlP.woff2)
       format("woff2");
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
@@ -4192,7 +4204,9 @@ td.rdtYear:hover {
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local("New Rocker"), local("NewRocker-Regular"),
+  src:
+    local("New Rocker"),
+    local("NewRocker-Regular"),
     url(https://fonts.gstatic.com/s/newrocker/v8/MwQzbhjp3-HImzcCU_cJoGQfiA.woff2)
       format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
@@ -4204,7 +4218,9 @@ td.rdtYear:hover {
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local("Chonburi"), local("Chonburi-Regular"),
+  src:
+    local("Chonburi"),
+    local("Chonburi-Regular"),
     url(https://fonts.gstatic.com/s/chonburi/v4/8AtqGs-wOpGRTBq66LWJHLzriA.woff2)
       format("woff2");
   unicode-range: U+0E01-0E5B, U+200C-200D, U+25CC;
@@ -4214,7 +4230,9 @@ td.rdtYear:hover {
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local("Chonburi"), local("Chonburi-Regular"),
+  src:
+    local("Chonburi"),
+    local("Chonburi-Regular"),
     url(https://fonts.gstatic.com/s/chonburi/v4/8AtqGs-wOpGRTBq66LWSHLzriA.woff2)
       format("woff2");
   unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
@@ -4223,7 +4241,9 @@ td.rdtYear:hover {
   font-family: "Sigmar One";
   font-style: normal;
   font-weight: 400;
-  src: local("Sigmar One Regular"), local("SigmarOne-Regular"),
+  src:
+    local("Sigmar One Regular"),
+    local("SigmarOne-Regular"),
     url(https://fonts.gstatic.com/s/sigmarone/v10/co3DmWZ8kjZuErj9Ta3do6vppkDi.woff2)
       format("woff2");
   unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
@@ -4232,7 +4252,9 @@ td.rdtYear:hover {
   font-family: "Sigmar One";
   font-style: normal;
   font-weight: 400;
-  src: local("Sigmar One Regular"), local("SigmarOne-Regular"),
+  src:
+    local("Sigmar One Regular"),
+    local("SigmarOne-Regular"),
     url(https://fonts.gstatic.com/s/sigmarone/v10/co3DmWZ8kjZuErj9Ta3do6rppkDi.woff2)
       format("woff2");
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
@@ -4242,7 +4264,9 @@ td.rdtYear:hover {
   font-family: "Sigmar One";
   font-style: normal;
   font-weight: 400;
-  src: local("Sigmar One Regular"), local("SigmarOne-Regular"),
+  src:
+    local("Sigmar One Regular"),
+    local("SigmarOne-Regular"),
     url(https://fonts.gstatic.com/s/sigmarone/v10/co3DmWZ8kjZuErj9Ta3do6Tppg.woff2)
       format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
@@ -5080,7 +5104,10 @@ td.rdtYear:hover {
   .friendsnooze_SnoozeZ_1DArl {
   font-size: 14px;
   font-weight: 500;
-  text-shadow: -1px -1px 4px #000, 1px -1px 4px #000, -1px 1px 2px #000,
+  text-shadow:
+    -1px -1px 4px #000,
+    1px -1px 4px #000,
+    -1px 1px 2px #000,
     1px 1px 2px #000;
 }
 .friendsnooze_SnoozeContainer_3EzTy.friendsnooze_Dim_2TzRZ
@@ -6224,14 +6251,17 @@ td.rdtYear:hover {
   padding: 2px 6px;
   opacity: 0;
   transform: translateX(calc(-100% - 8px));
-  transition: opacity 0.2s cubic-bezier(0.32, 0, 0.67, 0),
+  transition:
+    opacity 0.2s cubic-bezier(0.32, 0, 0.67, 0),
     transform 0.2s cubic-bezier(0.32, 0, 0.67, 0);
 }
 .discoveryqueuewizard_AppVideoCtn_2XCS5
   .discoveryqueuewizard_WishlistBadge_2vb6r.discoveryqueuewizard_Active_2EDE0 {
   opacity: 1;
   transform: translateX(0px);
-  transition: opacity 0.1s ease, transform 0.2s ease;
+  transition:
+    opacity 0.1s ease,
+    transform 0.2s ease;
 }
 .discoveryqueuewizard_AppVideoCtn_2XCS5
   .discoveryqueuewizard_DeckVerifiedLogo_2mYU2 {
@@ -6462,7 +6492,9 @@ td.rdtYear:hover {
   color: #fff;
   opacity: 0;
   transform: translateY(32px);
-  transition: opacity 0.1s ease-in, transform 0.15s ease-in;
+  transition:
+    opacity 0.1s ease-in,
+    transform 0.15s ease-in;
 }
 .discoveryqueuewizard_IgnoredCtn_2e3_o
   .discoveryqueuewizard_IgnoredInfo_130E6
@@ -6498,7 +6530,9 @@ td.rdtYear:hover {
   .discoveryqueuewizard_IgnoredInfo_130E6.discoveryqueuewizard_Active_2EDE0 {
   opacity: 1;
   transform: translateY(0px);
-  transition: opacity 0.3s ease, transform 0.4s ease;
+  transition:
+    opacity 0.3s ease,
+    transform 0.4s ease;
 }
 .discoveryqueuewizard_AppDesc_3bAqJ {
   font-size: 12px;
@@ -6625,7 +6659,9 @@ td.rdtYear:hover {
   color: #1a9fff;
   cursor: pointer;
   padding: 2px 4px;
-  transition: color 0.1s ease, background-color 0.1s ease;
+  transition:
+    color 0.1s ease,
+    background-color 0.1s ease;
 }
 .discoveryqueuewizard_LearnMoreLink_3bCDZ:hover {
   color: #fff;
@@ -6658,7 +6694,9 @@ td.rdtYear:hover {
   user-select: none;
   -webkit-user-select: none;
   padding: 8px 16px;
-  transition: background-color 0.1s ease, border-radius 0.1s ease;
+  transition:
+    background-color 0.1s ease,
+    border-radius 0.1s ease;
 }
 .discoveryqueuewizard_QueueButton_19cHb.discoveryqueuewizard_Disabled_1yh4o {
   opacity: 0.4;
@@ -6712,9 +6750,13 @@ td.rdtYear:hover {
   display: none;
   background-color: rgba(103, 112, 123, 0.6);
   backdrop-filter: blur(24px);
-  box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.3),
+  box-shadow:
+    0px 12px 16px rgba(0, 0, 0, 0.3),
     inset 0 0 0 1px rgba(255, 255, 255, 0.1);
-  transition: background-color ease, box-shadow ease, transform ease,
+  transition:
+    background-color ease,
+    box-shadow ease,
+    transform ease,
     opacity ease;
   transition-duration: 0.3s;
 }
@@ -6727,7 +6769,8 @@ td.rdtYear:hover {
 }
 .discoveryqueuewizard_QueueNavArrow_1kgdo:hover {
   background-color: #fff;
-  box-shadow: 0px 16px 18px rgba(0, 0, 0, 0.4),
+  box-shadow:
+    0px 16px 18px rgba(0, 0, 0, 0.4),
     inset 0 0 0 1px rgba(255, 255, 255, 0.1);
   transform: translateY(-50%) scale(1);
   transition-duration: 0.06s;

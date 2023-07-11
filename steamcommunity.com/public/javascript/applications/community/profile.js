@@ -343,26 +343,26 @@
                     o,
                     r && l().animating,
                     d,
-                    m && l().Dim
+                    m && l().Dim,
                   ),
                 },
-                c
+                c,
               ),
               a.createElement(
                 "div",
                 { "data-text": "Z", className: (0, n.Z)(l().SnoozeZ, l().Z1) },
-                "Z"
+                "Z",
               ),
               a.createElement(
                 "div",
                 { "data-text": "Z", className: (0, n.Z)(l().SnoozeZ, l().Z2) },
-                "Z"
+                "Z",
               ),
               a.createElement(
                 "div",
                 { "data-text": "Z", className: (0, n.Z)(l().SnoozeZ, l().Z3) },
-                "Z"
-              )
+                "Z",
+              ),
             )
           );
         }
@@ -402,13 +402,13 @@
                     r,
                     d().PersonaStatusIcon,
                     d().MobilePhoneIcon,
-                    (0, s.sB)(t)
+                    (0, s.sB)(t),
                   ),
                   title: (0, n.Xx)("#Platform_Hint_Mobile"),
                 },
-                o
+                o,
               ),
-              a.createElement(p.Mr, null)
+              a.createElement(p.Mr, null),
             ),
           u &&
             a.createElement(
@@ -419,13 +419,13 @@
                     r,
                     d().PersonaStatusIcon,
                     d().VRIcon,
-                    (0, s.sB)(t)
+                    (0, s.sB)(t),
                   ),
                   title: (0, n.Xx)("#Platform_Hint_VR"),
                 },
-                o
+                o,
               ),
-              a.createElement(m.VR, null)
+              a.createElement(m.VR, null),
             ),
           h &&
             a.createElement(
@@ -436,14 +436,14 @@
                     r,
                     d().PersonaStatusIcon,
                     d().BigPictureIcon,
-                    (0, s.sB)(t)
+                    (0, s.sB)(t),
                   ),
                   title: (0, n.Xx)("#Platform_Hint_BigPicture"),
                 },
-                o
+                o,
               ),
-              a.createElement(m.Ucz, null)
-            )
+              a.createElement(m.Ucz, null),
+            ),
         );
       });
     },
@@ -514,7 +514,7 @@
                   "miniprofile/" +
                   this.m_accountid +
                   "/json/?origin=" +
-                  (0, p.Kc)()
+                  (0, p.Kc)(),
               )
               .then((e) => {
                 let t = e.data;
@@ -540,7 +540,7 @@
                 {
                   className: (0, g.Z)(
                     E().miniProfileFeaturedContainer,
-                    this.props.className
+                    this.props.className,
                   ),
                 },
                 c.createElement(
@@ -549,27 +549,27 @@
                   c.createElement("img", {
                     src: t.icon,
                     className: E().badgeIcon,
-                  })
+                  }),
                 ),
                 c.createElement(
                   "div",
                   {
                     className: (0, g.Z)(
                       E().featuredLabels,
-                      E().favoriteBadgeDescription
+                      E().favoriteBadgeDescription,
                     ),
                   },
                   c.createElement(
                     "div",
                     { className: E().featuredTitle },
-                    t.name
+                    t.name,
                   ),
                   c.createElement(
                     "div",
                     { className: E().featuredSubTitle },
-                    (0, h.Xx)("#Hover_BadgeXP", t.xp)
-                  )
-                )
+                    (0, h.Xx)("#Hover_BadgeXP", t.xp),
+                  ),
+                ),
               )
             : null;
         }
@@ -588,8 +588,8 @@
                   c.createElement(
                     "span",
                     { className: E().friendPlayerLevelNum },
-                    e.level
-                  )
+                    e.level,
+                  ),
                 ),
                 c.createElement(
                   "div",
@@ -597,9 +597,9 @@
                   c.createElement(
                     "div",
                     { className: E().featuredTitle },
-                    (0, h.Xx)("#Hover_SteamLevel") + " "
-                  )
-                )
+                    (0, h.Xx)("#Hover_SteamLevel") + " ",
+                  ),
+                ),
               )
             : null;
         }
@@ -613,7 +613,7 @@
             {
               className: (0, g.Z)(
                 E().miniProfileGameContainer,
-                this.props.className
+                this.props.className,
               ),
             },
             this.props.persona.GetCurrentGameLogoURL() &&
@@ -628,7 +628,7 @@
                   E().gameContent,
                   E().persona,
                   E().ingame,
-                  E().ellipsis
+                  E().ellipsis,
                 ),
               },
               c.createElement(
@@ -637,18 +637,18 @@
                 (0, h.Xx)(
                   e.is_in_nonsteam_game
                     ? "#PersonaStateInNonSteamGame"
-                    : "#PersonaStateInGame"
-                )
+                    : "#PersonaStateInGame",
+                ),
               ),
               this.props.persona.GetCurrentGameName(),
               this.props.persona.HasCurrentGameRichPresence() &&
                 c.createElement(
                   "div",
                   { className: E().richPresence },
-                  this.props.persona.GetCurrentGameRichPresence()
+                  this.props.persona.GetCurrentGameRichPresence(),
                 ),
-              this.props.in_game_section_additional
-            )
+              this.props.in_game_section_additional,
+            ),
           );
         }
       };
@@ -665,7 +665,7 @@
               {
                 className: (0, g.Z)(
                   E().miniProfileGameContainer,
-                  this.props.className
+                  this.props.className,
                 ),
               },
               this.props.persona.GetBroadcastGameLogoURL() &&
@@ -680,7 +680,7 @@
                     E().gameContent,
                     E().persona,
                     E().watchingbroadcast,
-                    E().ellipsis
+                    E().ellipsis,
                   ),
                 },
                 c.createElement("div", { className: E().gameState }, e),
@@ -688,9 +688,9 @@
                 c.createElement(
                   "div",
                   { className: E().watchingbroadcastThumbnail },
-                  this.props.broadcast_thumbnail
-                )
-              )
+                  this.props.broadcast_thumbnail,
+                ),
+              ),
             )
           );
         }
@@ -739,14 +739,14 @@
                 G,
                 Object.assign({}, this.props, {
                   className: b ? E().miniProfileBackdropBlur : void 0,
-                })
+                }),
               ))
             : r.is_watchingbroadcast
             ? (k = c.createElement(
                 B,
                 Object.assign({}, this.props, {
                   className: b ? E().miniProfileBackdropBlur : void 0,
-                })
+                }),
               ))
             : (w += " " + E().notInOrWatchingGame);
           let O = !0,
@@ -771,7 +771,7 @@
                       c.createElement(
                         "div",
                         { className: E().personaNameLabel },
-                        this.props.nickname
+                        this.props.nickname,
                       ),
                       c.createElement(
                         "div",
@@ -779,10 +779,10 @@
                           className: E().playerNicknameBracket,
                           title: (0, h.Xx)("#isNickname"),
                         },
-                        "*"
-                      )
+                        "*",
+                      ),
                     ),
-                    c.createElement(f._, { persona: r })
+                    c.createElement(f._, { persona: r }),
                   ),
                   c.createElement(
                     "div",
@@ -791,10 +791,10 @@
                     c.createElement(
                       "div",
                       { className: E().personaNameLabel },
-                      r.m_strPlayerName
+                      r.m_strPlayerName,
                     ),
-                    ")"
-                  )
+                    ")",
+                  ),
                 )
               : c.createElement(
                   "div",
@@ -805,10 +805,10 @@
                     c.createElement(
                       "div",
                       { className: E().personaNameLabel },
-                      r.m_strPlayerName
-                    )
+                      r.m_strPlayerName,
+                    ),
                   ),
-                  c.createElement(f._, { persona: r })
+                  c.createElement(f._, { persona: r }),
                 )),
             2 == this.props.friend_relationship && (D = !0),
             c.createElement(
@@ -821,7 +821,7 @@
                     key: r.GetAccountID(),
                     className: (0, g.Z)(this.props.className, E().miniProfile),
                   },
-                  C
+                  C,
                 ),
                 c.createElement(
                   "div",
@@ -837,7 +837,7 @@
                           E().miniProfilePlayer,
                           r.online_state,
                           M && E().isAway,
-                          (0, u.sB)(r)
+                          (0, u.sB)(r),
                         ),
                       },
                       c.createElement(L, {
@@ -865,20 +865,20 @@
                               c.createElement(
                                 "div",
                                 { className: E().awayStatusLabel },
-                                (0, h.Xx)("#PersonaStateAway")
+                                (0, h.Xx)("#PersonaStateAway"),
                               ),
                             !r.is_online &&
                               c.createElement(
                                 "div",
                                 { className: E().awayStatusLabel },
-                                this.props.persona.GetLocalizedOnlineStatus()
+                                this.props.persona.GetLocalizedOnlineStatus(),
                               ),
                             "online" == r.online_state &&
                               !M &&
                               c.createElement(
                                 "div",
                                 { className: E().awayStatusLabel },
-                                (0, h.Xx)("#PersonaStateOnline")
+                                (0, h.Xx)("#PersonaStateOnline"),
                               ),
                             !O &&
                               c.createElement(
@@ -886,20 +886,20 @@
                                 { className: E().miniProfileNotFriends },
                                 D
                                   ? (0, h.Xx)(
-                                      "#Friend_Menu_NotAFriendRequesting"
+                                      "#Friend_Menu_NotAFriendRequesting",
                                     )
-                                  : (0, h.Xx)("#Friend_Menu_NotAFriendLabel")
+                                  : (0, h.Xx)("#Friend_Menu_NotAFriendLabel"),
                               ),
                             x &&
                               c.createElement(
                                 "div",
                                 { className: E().miniProfileBlocked },
-                                (0, h.Xx)("#PersonaStateBlocked")
-                              )
-                          )
-                        )
-                      )
-                    )
+                                (0, h.Xx)("#PersonaStateBlocked"),
+                              ),
+                          ),
+                        ),
+                      ),
+                    ),
                   ),
                   k,
                   c.createElement(
@@ -907,20 +907,20 @@
                     {
                       className: (0, g.Z)(
                         E().miniProfileBottom,
-                        b && E().miniProfileBackdropBlur
+                        b && E().miniProfileBackdropBlur,
                       ),
                     },
                     c.createElement(S, { community_data: I }),
-                    c.createElement(A, { community_data: I })
+                    c.createElement(A, { community_data: I }),
                   ),
                   y,
                   c.createElement(
                     "div",
                     { className: E().mutualFriends },
-                    this.props.mutual_friends
-                  )
-                )
-              )
+                    this.props.mutual_friends,
+                  ),
+                ),
+              ),
             )
           );
         }
@@ -949,9 +949,9 @@
                     poster: r,
                   },
                   Object.keys(a).map((e) =>
-                    c.createElement("source", { key: e, src: a[e], type: e })
-                  )
-                )
+                    c.createElement("source", { key: e, src: a[e], type: e }),
+                  ),
+                ),
               );
             if (r)
               return c.createElement(
@@ -960,7 +960,7 @@
                 c.createElement("img", {
                   className: E().miniProfileVideoBackground,
                   src: r,
-                })
+                }),
               );
           }
           return c.createElement(
@@ -969,7 +969,7 @@
             c.createElement("img", {
               className: E().miniProfileBackgroundBlur,
               src: t.avatar_url,
-            })
+            }),
           );
         },
         L = (e) => {
@@ -992,7 +992,7 @@
             ? c.createElement(
                 _.o,
                 Object.assign({}, o, { strAvatarURL: s }, l),
-                n
+                n,
               )
             : c.createElement(_.vV, Object.assign({ persona: t }, o, l), n);
         };
@@ -1029,7 +1029,7 @@
             });
             let t = yield D.AE.GetAvatarHistory(
               this.m_SteamInterface.GetServiceTransport(),
-              e
+              e,
             );
             return (
               1 == t.GetEResult()
@@ -1044,7 +1044,7 @@
                       });
                     }))
                 : console.error(
-                    "Error when calling CommunityService.GetAvatarHistory: EResult=${msgResponse.GetEResult()}"
+                    "Error when calling CommunityService.GetAvatarHistory: EResult=${msgResponse.GetEResult()}",
                   ),
               !!this.m_rgPreviousAvatars
             );
@@ -1068,7 +1068,7 @@
             let i =
               (yield n().post(
                 `${p.De.COMMUNITY_BASE_URL}actions/selectPreviousAvatar`,
-                r
+                r,
               )).data.success || 2;
             return 1 == i && e.CommitAvatarHash(), i;
           });
@@ -1106,7 +1106,7 @@
         LoadOGGAvatars() {
           return (0, i.mG)(this, void 0, void 0, function* () {
             let e = yield n().get(
-              `${p.De.COMMUNITY_BASE_URL}actions/GameAvatars/?json=1&l=${p.De.LANGUAGE}`
+              `${p.De.COMMUNITY_BASE_URL}actions/GameAvatars/?json=1&l=${p.De.LANGUAGE}`,
             );
             return (this.m_AvatarData = e.data || null), !!e.data;
           });
@@ -1139,7 +1139,7 @@
             let a =
               (yield n().post(
                 `${p.De.COMMUNITY_BASE_URL}ogg/${t}/selectAvatar`,
-                i
+                i,
               )).data.success || 2;
             return 1 == a && e.CommitAvatarHash(), a;
           });
@@ -1172,27 +1172,27 @@
           return "PrivacyOwnedGames" == e
             ? M(
                 this.m_PrivacySettings.PrivacyProfile,
-                this.m_PrivacySettings.PrivacyOwnedGames
+                this.m_PrivacySettings.PrivacyOwnedGames,
               )
             : "PrivacyPlaytime" == e
             ? M(
                 this.GetPrivacySetting("PrivacyOwnedGames"),
-                this.m_PrivacySettings.PrivacyPlaytime
+                this.m_PrivacySettings.PrivacyPlaytime,
               )
             : "PrivacyInventory" == e
             ? M(
                 this.m_PrivacySettings.PrivacyProfile,
-                this.m_PrivacySettings.PrivacyInventory
+                this.m_PrivacySettings.PrivacyInventory,
               )
             : "PrivacyInventoryGifts" == e
             ? M(
                 this.GetPrivacySetting("PrivacyInventory"),
-                this.m_PrivacySettings.PrivacyInventoryGifts
+                this.m_PrivacySettings.PrivacyInventoryGifts,
               )
             : "PrivacyFriendsList" == e
             ? M(
                 this.m_PrivacySettings.PrivacyProfile,
-                this.m_PrivacySettings.PrivacyFriendsList
+                this.m_PrivacySettings.PrivacyFriendsList,
               )
             : this.m_PrivacySettings[e];
         }
@@ -1237,7 +1237,7 @@
             e.append("Privacy", JSON.stringify(this.m_PrivacySettings)),
             e.append(
               "eCommentPermission",
-              JSON.stringify(this.m_eCommentPermission)
+              JSON.stringify(this.m_eCommentPermission),
             ),
             n()
               .post(a._.ProfileURL + "ajaxsetprivacy/", e)
@@ -1247,7 +1247,7 @@
                   return (
                     window.ShowAlertDialog(
                       (0, h.Xx)("#Error_Error"),
-                      (0, h.Xx)("#Error_CommentEditFailed")
+                      (0, h.Xx)("#Error_CommentEditFailed"),
                     ),
                     !1
                   );
@@ -1267,10 +1267,10 @@
                 (e) => (
                   window.ShowAlertDialog(
                     (0, h.Xx)("#Error_Error"),
-                    (0, h.Xx)("#Error_CommentEditFailed")
+                    (0, h.Xx)("#Error_CommentEditFailed"),
                   ),
                   !1
-                )
+                ),
               )
           );
         }
@@ -1332,7 +1332,7 @@
                 t.Body().set_communityitemid(e.communityitemid);
             let r = yield U.lk.SetFavoriteBadge(
               this.m_CMInterface.GetServiceTransport(),
-              t
+              t,
             );
             return (
               1 == r.GetEResult() &&
@@ -1474,7 +1474,7 @@
             return (
               this.m_Backgrounds.m_rgOwnedItems ||
                 (yield this.m_Backgrounds.SetItems(
-                  (yield this.m_promiseOwned).Body().profile_backgrounds()
+                  (yield this.m_promiseOwned).Body().profile_backgrounds(),
                 )),
               this.m_Backgrounds.m_rgOwnedItems
             );
@@ -1486,7 +1486,9 @@
               (() => {
                 (0, i.mG)(this, void 0, void 0, function* () {
                   return this.m_Backgrounds.LoadEquipped(
-                    (yield this.m_promiseEquipped).Body().profile_background(!1)
+                    (yield this.m_promiseEquipped)
+                      .Body()
+                      .profile_background(!1),
                   );
                 });
               })(),
@@ -1515,11 +1517,11 @@
                 let e = O.gA.Init(U.DN);
                 e.Body().set_communityitemid(
                   this.m_Backgrounds.m_EquippedItem &&
-                    this.m_Backgrounds.m_EquippedItem.communityitemid
+                    this.m_Backgrounds.m_EquippedItem.communityitemid,
                 );
                 let t = yield U.lk.SetProfileBackground(
                   this.m_SteamInterface.GetServiceTransport(),
-                  e
+                  e,
                 );
                 if (1 != t.GetEResult()) return t.GetEResult();
               }
@@ -1531,16 +1533,16 @@
                 e
                   .Body()
                   .set_communityitemid(
-                    this.m_Backgrounds.m_EquippedItem.communityitemid
+                    this.m_Backgrounds.m_EquippedItem.communityitemid,
                   ),
                   e.Body().set_flags(this.m_Backgrounds.m_EquipFlags);
                 let t = yield U.lk.SetEquippedProfileItemFlags(
                   this.m_SteamInterface.GetServiceTransport(),
-                  e
+                  e,
                 );
                 1 != t.GetEResult() &&
                   console.error(
-                    `Error when calling PlayerService.SetEquippedProfileItemFlags: EResult=${t.GetEResult()}`
+                    `Error when calling PlayerService.SetEquippedProfileItemFlags: EResult=${t.GetEResult()}`,
                   );
               }
             }
@@ -1555,7 +1557,7 @@
             return (
               this.m_MiniProfileBackgrounds.m_rgOwnedItems ||
                 (yield this.m_MiniProfileBackgrounds.SetItems(
-                  (yield this.m_promiseOwned).Body().mini_profile_backgrounds()
+                  (yield this.m_promiseOwned).Body().mini_profile_backgrounds(),
                 )),
               this.m_MiniProfileBackgrounds.m_rgOwnedItems
             );
@@ -1569,7 +1571,7 @@
                   return this.m_MiniProfileBackgrounds.LoadEquipped(
                     (yield this.m_promiseEquipped)
                       .Body()
-                      .mini_profile_background(!1)
+                      .mini_profile_background(!1),
                   );
                 });
               })(),
@@ -1588,11 +1590,11 @@
               let e = O.gA.Init(U.N$);
               e.Body().set_communityitemid(
                 this.m_MiniProfileBackgrounds.m_EquippedItem &&
-                  this.m_MiniProfileBackgrounds.m_EquippedItem.communityitemid
+                  this.m_MiniProfileBackgrounds.m_EquippedItem.communityitemid,
               );
               let t = yield U.lk.SetMiniProfileBackground(
                 this.m_SteamInterface.GetServiceTransport(),
-                e
+                e,
               );
               if (1 != t.GetEResult()) return t.GetEResult();
             }
@@ -1621,11 +1623,11 @@
                 .Body()
                 .set_communityitemid(
                   this.m_Avatars.m_EquippedItem &&
-                    this.m_Avatars.m_EquippedItem.communityitemid
+                    this.m_Avatars.m_EquippedItem.communityitemid,
                 ),
                 (e = U.lk.SetAnimatedAvatar(
                   this.m_SteamInterface.GetServiceTransport(),
-                  t
+                  t,
                 ));
             }
             if (this.m_AvatarFrames.BIsUncomitted()) {
@@ -1634,11 +1636,11 @@
                 .Body()
                 .set_communityitemid(
                   this.m_AvatarFrames.m_EquippedItem &&
-                    this.m_AvatarFrames.m_EquippedItem.communityitemid
+                    this.m_AvatarFrames.m_EquippedItem.communityitemid,
                 ),
                 (t = U.lk.SetAvatarFrame(
                   this.m_SteamInterface.GetServiceTransport(),
-                  e
+                  e,
                 ));
             }
             const [r, i] = yield Promise.all([e, t]);
@@ -1663,7 +1665,7 @@
             return (
               this.m_Avatars.m_rgOwnedItems ||
                 (yield this.m_Avatars.SetItems(
-                  (yield this.m_promiseOwned).Body().animated_avatars()
+                  (yield this.m_promiseOwned).Body().animated_avatars(),
                 )),
               this.m_Avatars.m_rgOwnedItems
             );
@@ -1675,7 +1677,7 @@
               (() => {
                 (0, i.mG)(this, void 0, void 0, function* () {
                   return this.m_Avatars.LoadEquipped(
-                    (yield this.m_promiseEquipped).Body().animated_avatar(!1)
+                    (yield this.m_promiseEquipped).Body().animated_avatar(!1),
                   );
                 });
               })(),
@@ -1688,7 +1690,7 @@
               (() => {
                 (0, i.mG)(this, void 0, void 0, function* () {
                   return this.m_Avatars.LoadEquipped(
-                    (yield this.m_promiseEquipped).Body().animated_avatar(!1)
+                    (yield this.m_promiseEquipped).Body().animated_avatar(!1),
                   );
                 });
               })(),
@@ -1703,7 +1705,7 @@
             return (
               this.m_AvatarFrames.m_rgOwnedItems ||
                 (yield this.m_AvatarFrames.SetItems(
-                  (yield this.m_promiseOwned).Body().avatar_frames()
+                  (yield this.m_promiseOwned).Body().avatar_frames(),
                 )),
               this.m_AvatarFrames.m_rgOwnedItems
             );
@@ -1715,7 +1717,7 @@
               (() => {
                 (0, i.mG)(this, void 0, void 0, function* () {
                   return this.m_AvatarFrames.LoadEquipped(
-                    (yield this.m_promiseEquipped).Body().avatar_frame(!1)
+                    (yield this.m_promiseEquipped).Body().avatar_frame(!1),
                   );
                 });
               })(),
@@ -1728,7 +1730,7 @@
               (() => {
                 (0, i.mG)(this, void 0, void 0, function* () {
                   return this.m_AvatarFrames.LoadEquipped(
-                    (yield this.m_promiseEquipped).Body().avatar_frame(!1)
+                    (yield this.m_promiseEquipped).Body().avatar_frame(!1),
                   );
                 });
               })(),
@@ -1743,7 +1745,7 @@
             return (
               this.m_ProfileModifiers.m_rgOwnedItems ||
                 (yield this.m_ProfileModifiers.SetItems(
-                  (yield this.m_promiseOwned).Body().profile_modifiers()
+                  (yield this.m_promiseOwned).Body().profile_modifiers(),
                 )),
               this.m_ProfileModifiers.m_rgOwnedItems
             );
@@ -1755,7 +1757,7 @@
               (() => {
                 (0, i.mG)(this, void 0, void 0, function* () {
                   return this.m_ProfileModifiers.LoadEquipped(
-                    (yield this.m_promiseEquipped).Body().profile_modifier(!1)
+                    (yield this.m_promiseEquipped).Body().profile_modifier(!1),
                   );
                 });
               })(),
@@ -1768,7 +1770,7 @@
               (() => {
                 (0, i.mG)(this, void 0, void 0, function* () {
                   return this.m_ProfileModifiers.LoadEquipped(
-                    (yield this.m_promiseEquipped).Body().profile_modifier(!1)
+                    (yield this.m_promiseEquipped).Body().profile_modifier(!1),
                   );
                 });
               })(),
@@ -1793,7 +1795,7 @@
             e.Body().set_language(p.De.LANGUAGE),
             (this.m_promiseEquipped = U.lk.GetProfileItemsEquipped(
               this.m_SteamInterface.GetServiceTransport(),
-              e
+              e,
             )),
             this.m_AvatarFrames.SetEquipped(null, !0),
             (this.m_AvatarFrames.m_bEquippedLoaded = !1),
@@ -1819,17 +1821,17 @@
                   .Body()
                   .set_communityitemid(
                     this.m_ProfileModifiers.m_CommittedEquippedItem
-                      .communityitemid
+                      .communityitemid,
                   ),
                   t
                     .Body()
                     .set_appid(
-                      this.m_ProfileModifiers.m_CommittedEquippedItem.appid
+                      this.m_ProfileModifiers.m_CommittedEquippedItem.appid,
                     ),
                   t.Body().set_activate(!1);
                 let r = yield z.Ts.ActivateProfileModifierItem(
                   this.m_SteamInterface.GetServiceTransport(),
-                  t
+                  t,
                 );
                 if (1 != r.GetEResult()) return r.GetEResult();
                 e = !0;
@@ -1839,7 +1841,7 @@
                 t
                   .Body()
                   .set_communityitemid(
-                    this.m_ProfileModifiers.m_EquippedItem.communityitemid
+                    this.m_ProfileModifiers.m_EquippedItem.communityitemid,
                   ),
                   t
                     .Body()
@@ -1847,7 +1849,7 @@
                   t.Body().set_activate(!0);
                 let r = yield z.Ts.ActivateProfileModifierItem(
                   this.m_SteamInterface.GetServiceTransport(),
-                  t
+                  t,
                 );
                 if (1 != r.GetEResult()) return r.GetEResult();
                 e = !0;
@@ -1888,14 +1890,14 @@
             e.Body().set_language(p.De.LANGUAGE),
               (this.m_promiseOwned = U.lk.GetProfileItemsOwned(
                 this.m_SteamInterface.GetServiceTransport(),
-                e
+                e,
               ));
             let t = O.gA.Init(U.cy);
             t.Body().set_steamid(p.L7.steamid),
               t.Body().set_language(p.De.LANGUAGE),
               (this.m_promiseEquipped = U.lk.GetProfileItemsEquipped(
                 this.m_SteamInterface.GetServiceTransport(),
-                t
+                t,
               ));
           });
         }
@@ -1905,7 +1907,7 @@
           [s.aD],
           Q.prototype,
           "RevertMiniProfileBackgroundChanges",
-          null
+          null,
         ),
         (0, i.gn)([s.aD], Q.prototype, "RevertAvatarChanges", null),
         (0, i.gn)([s.aD], Q.prototype, "ReloadEquippedItems", null);
@@ -1976,7 +1978,7 @@
         FillAppNames(e) {
           return (0, i.mG)(this, void 0, void 0, function* () {
             yield this.m_parent.AppInfoStore.EnsureAppInfoForAppIDs(
-              e.map((e) => e.appid)
+              e.map((e) => e.appid),
             );
             for (let t of e)
               t.app_name = t.appid
@@ -2070,7 +2072,7 @@
                     },
                     () => {
                       this.m_promiseLoadCountries = null;
-                    }
+                    },
                   )),
                 this.m_promiseLoadCountries);
           });
@@ -2079,7 +2081,7 @@
           (this.m_CountryCur =
             this.m_strCountryCode &&
             this.m_rgCountryList.find(
-              (e) => e.countrycode == this.m_strCountryCode
+              (e) => e.countrycode == this.m_strCountryCode,
             )),
             (this.m_bStateSelectionAvailable =
               this.m_CountryCur && !!this.m_CountryCur.hasstates);
@@ -2095,7 +2097,7 @@
                     ((e.stateloader = n()
                       .get(
                         p.De.COMMUNITY_BASE_URL +
-                          `/actions/QueryLocations/${e.countrycode}/`
+                          `/actions/QueryLocations/${e.countrycode}/`,
                       )
                       .then((e) => e.data)),
                     e.stateloader.then(
@@ -2106,7 +2108,7 @@
                       },
                       () => {
                         delete e.stateloader;
-                      }
+                      },
                     )),
                   e.stateloader)
               : [];
@@ -2117,7 +2119,7 @@
             this.m_CountryCur &&
             this.m_CountryCur.states &&
             this.m_CountryCur.states.find(
-              (e) => e.statecode == this.m_strStateCode
+              (e) => e.statecode == this.m_strStateCode,
             )),
             (this.m_bCitySelectionAvailable = !!this.m_StateCur);
         }
@@ -2132,7 +2134,7 @@
                     ((e.cityloader = n()
                       .get(
                         p.De.COMMUNITY_BASE_URL +
-                          `/actions/QueryLocations/${e.countrycode}/${e.statecode}`
+                          `/actions/QueryLocations/${e.countrycode}/${e.statecode}`,
                       )
                       .then((e) => e.data)),
                     e.cityloader.then(
@@ -2141,7 +2143,7 @@
                       },
                       () => {
                         delete e.cityloader;
-                      }
+                      },
                     )),
                   e.cityloader)
               : [];
@@ -2168,7 +2170,7 @@
               Object.assign(Object.assign({}, e), {
                 theme_id: e.theme_id || "Default",
                 title: (0, h.Xx)(e.title),
-              })
+              }),
             )),
             void 0 === t || "" === t.theme_id
               ? this.SetActiveTheme("Default", !0)
@@ -2201,11 +2203,11 @@
             e.Body().set_theme_id(
               "Default" == this.ActiveTheme.theme_id
                 ? ""
-                : this.ActiveTheme.theme_id
+                : this.ActiveTheme.theme_id,
             );
             const t = yield U.lk.SetProfileTheme(
               this.m_CMInterface.GetServiceTransport(),
-              e
+              e,
             );
             return (
               1 == t.GetEResult() &&
@@ -2281,13 +2283,13 @@
         LoadUserGroups() {
           return (0, i.mG)(this, void 0, void 0, function* () {
             let e = yield n().get(
-              `${a._.ProfileURL}ajaxgroupinvite?select_primary=1&json=1`
+              `${a._.ProfileURL}ajaxgroupinvite?select_primary=1&json=1`,
             );
             return (
               (0, s.z)(() => {
                 e.data &&
                   (this.m_rgUserGroups = e.data.map(
-                    (e) => new oe(new b.K(e.steamid), e.name, e.avatarHash)
+                    (e) => new oe(new b.K(e.steamid), e.name, e.avatarHash),
                   )),
                   (this.m_bLoaded = !0);
               }),
@@ -2340,7 +2342,7 @@
         GetAvatarURL(e) {
           return (0, re.U)(
             this.m_strAvatarHash || "0000000000000000000000000000000000000000",
-            e
+            e,
           );
         }
       }
@@ -2357,21 +2359,21 @@
             (this.m_ProfileBadges = new H(
               this.m_WebAPI,
               this.m_AppInfoStore,
-              t
+              t,
             )),
             (this.m_ProfileItems = new Q(
               this.m_WebAPI,
               this.m_AppInfoStore,
-              e.rgGoldenProfileData
+              e.rgGoldenProfileData,
             )),
             (this.m_ProfileTheme = new te(
               this.m_WebAPI,
               e.ActiveTheme,
-              e.rgAvailableThemes
+              e.rgAvailableThemes,
             )),
             (this.m_ProfilePrivacy = new F(
               e.Privacy.PrivacySettings,
-              e.Privacy.eCommentPermission
+              e.Privacy.eCommentPermission,
             )),
             (this.m_AvatarHistory = new x(this.m_WebAPI)),
             this.m_ProfileItems.AddOnAvatarEquipmentChangedCallback(() => {
@@ -2555,7 +2557,7 @@
             try {
               let e = yield n().post(
                 `${p.De.COMMUNITY_BASE_URL}actions/FileUploader/`,
-                t
+                t,
               );
               e.data && e.data.success
                 ? ((r = !0), this.SetAvatarHash(e.data.hash, !0))
@@ -2698,7 +2700,7 @@
               c.createElement(
                 ge,
                 null,
-                (0, h.Xx)("#Profile_Edit_Avatar_YourAvatars")
+                (0, h.Xx)("#Profile_Edit_Avatar_YourAvatars"),
               ),
               c.createElement(ye, {
                 rgAnimatedAvatars: this.m_rgAvatars,
@@ -2707,7 +2709,7 @@
                 onSelectAnimatedAvatar: this.SelectAnimatedAvatar,
                 onSelectOGGAvatar: this.SelectOGGAvatar,
                 onSelectPreviousAvatar: this.SelectPreviousAvatar,
-              })
+              }),
             );
           {
             let e = this.GetTopAvatars();
@@ -2717,7 +2719,7 @@
               c.createElement(
                 ge,
                 null,
-                (0, h.Xx)("#Profile_Edit_Avatar_YourAvatars")
+                (0, h.Xx)("#Profile_Edit_Avatar_YourAvatars"),
               ),
               c.createElement(
                 "div",
@@ -2737,7 +2739,7 @@
                           }),
                           c.createElement("div", {
                             className: ve.AvatarRowSpacer,
-                          })
+                          }),
                         )
                       : "timestamp" in e
                       ? c.createElement(
@@ -2750,7 +2752,7 @@
                           }),
                           c.createElement("div", {
                             className: ve.AvatarRowSpacer,
-                          })
+                          }),
                         )
                       : c.createElement(
                           c.Fragment,
@@ -2762,10 +2764,10 @@
                           }),
                           c.createElement("div", {
                             className: ve.AvatarRowSpacer,
-                          })
-                        )
-                  )
-                )
+                          }),
+                        ),
+                  ),
+                ),
               ),
               c.createElement(
                 "div",
@@ -2773,9 +2775,9 @@
                 c.createElement(
                   ue.zx,
                   { onClick: t },
-                  (0, h.Xx)("#Profile_Edit_Avatar_SeeAll")
-                )
-              )
+                  (0, h.Xx)("#Profile_Edit_Avatar_SeeAll"),
+                ),
+              ),
             );
           }
         }
@@ -2789,7 +2791,7 @@
           c.createElement(
             "div",
             { className: ve.AvatarCollectionHeader },
-            c.createElement("div", { className: ve.AvatarCollectionName }, e)
+            c.createElement("div", { className: ve.AvatarCollectionName }, e),
           );
       class Pe extends c.Component {
         constructor() {
@@ -2818,7 +2820,7 @@
             c.createElement("img", {
               src: r || qe ? j(e) : $(e),
               loading: "lazy",
-            })
+            }),
           );
         }
       }
@@ -2835,7 +2837,7 @@
             c.createElement("img", {
               src: (0, u.U0)(e, r ? "full" : "medium"),
               loading: "lazy",
-            })
+            }),
           ),
         ye = (0, d.Pi)(
           ({
@@ -2863,9 +2865,9 @@
                   rgAvatars: t.GetOtherGameAvatars(),
                   onSelected: a,
                   title: (0, h.Xx)("#Profile_Edit_MoreGameAvatars"),
-                })
+                }),
             );
-          }
+          },
         ),
         Ce = ({ rgAnimatedAvatars: e, onSelected: t }) =>
           e.length
@@ -2875,7 +2877,7 @@
                 c.createElement(
                   "div",
                   { className: ve.Title },
-                  (0, h.Xx)("#Profile_Edit_PurchasedFromRewardsStore")
+                  (0, h.Xx)("#Profile_Edit_PurchasedFromRewardsStore"),
                 ),
                 c.createElement(
                   "div",
@@ -2885,9 +2887,9 @@
                       key: e.communityitemid,
                       avatar: e,
                       onSelected: t,
-                    })
-                  )
-                )
+                    }),
+                  ),
+                ),
               )
             : null,
         Se = (0, d.Pi)(({ rgAvatars: e, onSelected: t }) =>
@@ -2898,7 +2900,7 @@
                 c.createElement(
                   "div",
                   { className: ve.Title },
-                  (0, h.Xx)("#Profile_Edit_YourPreviousAvatars")
+                  (0, h.Xx)("#Profile_Edit_YourPreviousAvatars"),
                 ),
                 c.createElement(
                   "div",
@@ -2908,11 +2910,11 @@
                       key: e.avatar_hash,
                       hash: e.avatar_hash,
                       onSelected: t,
-                    })
-                  )
-                )
+                    }),
+                  ),
+                ),
               )
-            : null
+            : null,
         ),
         Ae = ({ rgAvatars: e, onSelected: t, title: r }) =>
           e.length
@@ -2921,8 +2923,8 @@
                 { className: (0, g.Z)(ve.CollectionGroup, ve.Primary) },
                 c.createElement("div", { className: ve.Title }, r),
                 e.map((e) =>
-                  c.createElement(Ge, { key: e.appid, game: e, onSelected: t })
-                )
+                  c.createElement(Ge, { key: e.appid, game: e, onSelected: t }),
+                ),
               )
             : null,
         Ge = ({ game: e, onSelected: t }) =>
@@ -2938,9 +2940,9 @@
                   key: e.avatar_hash,
                   hash: e.avatar_hash,
                   onSelected: t,
-                })
-              )
-            )
+                }),
+              ),
+            ),
           );
       var Be = r(17547);
       class Ie extends c.Component {
@@ -2973,7 +2975,7 @@
               c.createElement(
                 ge,
                 null,
-                (0, h.Xx)("#Profile_Edit_Avatar_YourFrames")
+                (0, h.Xx)("#Profile_Edit_Avatar_YourFrames"),
               ),
               c.createElement(
                 Be.SV,
@@ -2982,8 +2984,8 @@
                   rgFrames: this.m_rgFrames,
                   ProfileItems: t,
                   onSelected: this.SelectFrame,
-                })
-              )
+                }),
+              ),
             );
           {
             let e = this.m_rgFrames.slice(0, 2),
@@ -2994,7 +2996,7 @@
               c.createElement(
                 ge,
                 null,
-                (0, h.Xx)("#Profile_Edit_Avatar_YourFrames")
+                (0, h.Xx)("#Profile_Edit_Avatar_YourFrames"),
               ),
               c.createElement(
                 "div",
@@ -3004,7 +3006,7 @@
                   {
                     className: (0, g.Z)(
                       ve.AvatarCollectionSingleRow,
-                      ve.ThreeColumns
+                      ve.ThreeColumns,
                     ),
                   },
                   c.createElement(Le, {
@@ -3027,11 +3029,11 @@
                         }),
                         c.createElement("div", {
                           className: ve.AvatarRowSpacer,
-                        })
-                      )
-                    )
-                  )
-                )
+                        }),
+                      ),
+                    ),
+                  ),
+                ),
               ),
               i &&
                 c.createElement(
@@ -3040,9 +3042,9 @@
                   c.createElement(
                     ue.zx,
                     { onClick: r },
-                    (0, h.Xx)("#Profile_Edit_Avatar_SeeAll")
-                  )
-                )
+                    (0, h.Xx)("#Profile_Edit_Avatar_SeeAll"),
+                  ),
+                ),
             );
           }
         }
@@ -3072,7 +3074,7 @@
               onMouseLeave: this.OnMouseLeave,
               onClick: this.onSelected,
             },
-            c.createElement("img", { src: r || qe ? j(e) : $(e) })
+            c.createElement("img", { src: r || qe ? j(e) : $(e) }),
           );
         }
       }
@@ -3088,7 +3090,7 @@
                   className: (0, g.Z)(ve.FramePreview, r && ve.Large),
                   onClick: () => e(null),
                 },
-                c.createElement("img", { src: i })
+                c.createElement("img", { src: i }),
               )
             : c.createElement(
                 "div",
@@ -3096,7 +3098,7 @@
                   className: (0, g.Z)(
                     ve.FramePreview,
                     r && ve.Large,
-                    ve.DefaultAvatarFramePreview
+                    ve.DefaultAvatarFramePreview,
                   ),
                   onClick: () => e(null),
                 },
@@ -3105,8 +3107,8 @@
                   { className: ve.DefaultAvatarFrame },
                   c.createElement("div", {
                     className: ve.DefaultAvatarFrameContent,
-                  })
-                )
+                  }),
+                ),
               );
         }),
         be = ({ rgFrames: e, ProfileItems: t, onSelected: r }) =>
@@ -3116,7 +3118,7 @@
             c.createElement(
               "div",
               { className: ve.Title },
-              (0, h.Xx)("#Profile_Edit_PurchasedFromRewardsStore")
+              (0, h.Xx)("#Profile_Edit_PurchasedFromRewardsStore"),
             ),
             c.createElement(
               "div",
@@ -3127,9 +3129,9 @@
                   key: e.communityitemid,
                   frame: e,
                   onSelected: r,
-                })
-              )
-            )
+                }),
+              ),
+            ),
           );
       var ke = r(88909),
         we = (r(99307), r(72120));
@@ -3141,8 +3143,8 @@
             c.createElement(
               "div",
               { className: ke.ProfileBoxContent },
-              c.createElement(Be.SV, null, r)
-            )
+              c.createElement(Be.SV, null, r),
+            ),
           ),
         De = ({ onSave: e, onCancel: t, disabled: r }) =>
           c.createElement(
@@ -3151,9 +3153,9 @@
             c.createElement(
               ue.KM,
               { onClick: e, disabled: r },
-              (0, h.Xx)("#Button_Save")
+              (0, h.Xx)("#Button_Save"),
             ),
-            c.createElement(ue.zx, { onClick: t }, (0, h.Xx)("#Button_Cancel"))
+            c.createElement(ue.zx, { onClick: t }, (0, h.Xx)("#Button_Cancel")),
           );
       function xe(e) {
         return (0, h.Xx)(e).replace(/%s/g, "");
@@ -3212,7 +3214,7 @@
               c.createElement(
                 "div",
                 { className: ke.PickerPreview },
-                c.createElement(Be.SV, null, o(s))
+                c.createElement(Be.SV, null, o(s)),
               ),
               t && c.createElement(ue.h4, null, t),
               c.createElement(
@@ -3226,16 +3228,16 @@
                     Object.assign({}, n, {
                       onItemSelected: this.OnItemSelected,
                       activeItem: s,
-                    })
-                  )
-                )
+                    }),
+                  ),
+                ),
               ),
               c.createElement(De, {
                 onSave: this.CommitChanges,
                 onCancel: this.RevertChanges,
                 disabled: l,
-              })
-            )
+              }),
+            ),
           );
         }
       }
@@ -3355,7 +3357,7 @@
                   label: "filter",
                   autoFocus: !0,
                   onChange: this.OnSearchChange,
-                })
+                }),
               ),
             c.createElement(
               "div",
@@ -3374,16 +3376,16 @@
                           Item: r.item,
                           onSelected: r.OnSelected,
                           active: i && p(r.item, i),
-                        })
+                        }),
                       )
                     : c.createElement(
                         Be.SV,
                         { key: r.key },
-                        t({ onSelected: r.OnSelected, active: !i })
-                      )
-                )
-              )
-            )
+                        t({ onSelected: r.OnSelected, active: !i }),
+                      ),
+                ),
+              ),
+            ),
           );
         }
       }
@@ -3397,12 +3399,12 @@
                   "b",
                   null,
                   (0, h.Xx)("#Error_Generic_Label"),
-                  " "
+                  " ",
                 ),
                 c.createElement("span", {
                   className: ke.HTMLError,
                   dangerouslySetInnerHTML: { __html: e },
-                })
+                }),
               )
             : null,
         Ue = ({
@@ -3425,15 +3427,17 @@
                 e,
                 " ",
                 (0, h.yW)(a, { eSuffix: we.U$.None, bForceSingleUnits: !0 }),
-                " "
+                " ",
               ),
-              c.createElement("div", { dangerouslySetInnerHTML: { __html: r } })
+              c.createElement("div", {
+                dangerouslySetInnerHTML: { __html: r },
+              }),
             ),
-            c.createElement("div", { className: ke.DisabledInputCtn }, i)
+            c.createElement("div", { className: ke.DisabledInputCtn }, i),
           );
         },
         He = c.lazy(() =>
-          Promise.all([r.e(8691), r.e(2329)]).then(r.bind(r, 93372))
+          Promise.all([r.e(8691), r.e(2329)]).then(r.bind(r, 93372)),
         ),
         qe = !0;
       let Xe = class extends c.Component {
@@ -3454,7 +3458,7 @@
                   e.GetCommittedAvatarHash(),
                   t.GetCommittedEquippedAvatar(),
                   "small",
-                  { disableAnimation: !0 }
+                  { disableAnimation: !0 },
                 );
               document
                 .querySelectorAll(".user_avatar > img")
@@ -3471,7 +3475,7 @@
           const { Profile: e, ProfileItems: t } = this.props;
           return de.createPortal(
             c.createElement(Qe, { Profile: e, ProfileItems: t }),
-            document.querySelector(".profile_small_header_avatar")
+            document.querySelector(".profile_small_header_avatar"),
           );
         }
       }
@@ -3543,7 +3547,7 @@
               a = yield t.UploadAvatar(
                 yield null === (e = this.cropRef.current) || void 0 === e
                   ? void 0
-                  : e.getBlob()
+                  : e.getBlob(),
               );
             a.bSuccess
               ? (this.setState({ uploadImage: null, strUploadError: "" }),
@@ -3614,7 +3618,7 @@
               c.createElement(
                 ue.Ac,
                 null,
-                (0, h.Xx)("#Profile_Edit_Avatar_Instructions")
+                (0, h.Xx)("#Profile_Edit_Avatar_Instructions"),
               ),
               c.createElement(Fe, {
                 strHTMLError: this.state.bHTMLError
@@ -3639,15 +3643,15 @@
                     c.createElement(
                       "div",
                       null,
-                      (0, h.Xx)("#Profile_Edit_Avatar_UploadInstructions")
-                    )
-                  )
+                      (0, h.Xx)("#Profile_Edit_Avatar_UploadInstructions"),
+                    ),
+                  ),
                 ),
                 a &&
                   c.createElement(
                     c.Suspense,
                     { fallback: null },
-                    c.createElement(He, { imageData: a, ref: this.cropRef })
+                    c.createElement(He, { imageData: a, ref: this.cropRef }),
                   ),
                 !a &&
                   !n &&
@@ -3656,7 +3660,7 @@
                     Object.assign({}, l, {
                       bExpanded: o,
                       fnOnExpand: this.OnShowAllAvatarsClicked,
-                    })
+                    }),
                   ),
                 !a &&
                   !o &&
@@ -3665,15 +3669,15 @@
                     Object.assign({}, l, {
                       bExpanded: n,
                       fnOnExpand: this.OnShowAllFramesClicked,
-                    })
-                  )
-              )
+                    }),
+                  ),
+              ),
             ),
             c.createElement(De, {
               onSave: this.OnSave,
               onCancel: this.RevertChanges,
               disabled: s || e.BIsAvatarChangeOnCooldown(),
-            })
+            }),
           );
         }
       }
@@ -3694,10 +3698,10 @@
                 strCooldownLabel: (0, h.Xx)("#Profile_AvatarUploadingBanned"),
                 strCooldownDescHTML: (0, h.Xx)(
                   "#Profile_AvatarUploadingBanned_Desc",
-                  se.k_strAvatarCooldownSupportURL
+                  se.k_strAvatarCooldownSupportURL,
                 ),
               },
-              t
+              t,
             )
           : c.createElement(c.Fragment, null, t);
       function $e(e, t, r, i) {
@@ -3739,7 +3743,7 @@
                 avatarURL: $e(r, i, "small"),
                 frameURL: n,
                 isGolden: !!o,
-              })
+              }),
             )
           );
         }),
@@ -3761,12 +3765,12 @@
                 c.createElement(
                   "div",
                   { className: pe.AvatarFrame },
-                  c.createElement("img", { src: i })
+                  c.createElement("img", { src: i }),
                 ),
               a && c.createElement("div", { className: "goldenAvatarOverlay" }),
-              c.createElement("img", { src: r })
+              c.createElement("img", { src: r }),
             ),
-            c.createElement("div", { className: pe.size }, t, "px")
+            c.createElement("div", { className: pe.size }, t, "px"),
           );
       function Ye(e) {
         const { OnAvatarSelected: t, disabled: r, strError: i } = e,
@@ -3793,15 +3797,15 @@
           c.createElement(
             ue.zx,
             { onClick: () => a.current.click(), disabled: r },
-            (0, h.Xx)("#Profile_UploadAvatar")
-          )
+            (0, h.Xx)("#Profile_UploadAvatar"),
+          ),
         );
       }
       const Qe = (0, d.Pi)(({ Profile: e, ProfileItems: t }) => {
         const r = $e(
             e.GetCommittedAvatarHash(),
             t.GetCommittedEquippedAvatar(),
-            "full"
+            "full",
           ),
           i = t.GetCommittedEquippedAvatarFrame();
         let a = null;
@@ -3819,10 +3823,10 @@
                 c.createElement(
                   "div",
                   { className: pe.AvatarFrame },
-                  c.createElement("img", { src: a })
+                  c.createElement("img", { src: a }),
                 ),
-              c.createElement("img", { src: r })
-            )
+              c.createElement("img", { src: r }),
+            ),
           )
         );
       });
@@ -3837,7 +3841,7 @@
             null,
             c.createElement(rt, { Location: e }),
             c.createElement(it, { Location: e }),
-            c.createElement(at, { Location: e })
+            c.createElement(at, { Location: e }),
           );
         }
       }
@@ -3878,8 +3882,8 @@
                 strInitialDisplay: e,
                 strDefaultLabel: (0, h.Xx)("#Profile_LocationDoNotDisplay"),
                 tooltip: xe("#Profile_DescriptionLocation"),
-              })
-            )
+              }),
+            ),
           );
         }
       };
@@ -3921,8 +3925,8 @@
                   initialValue: i,
                   strInitialDisplay: r,
                   strDefaultLabel: (0, h.Xx)("#Profile_LocationDoNotDisplay"),
-                })
-              )
+                }),
+              ),
           );
         }
       };
@@ -3964,8 +3968,8 @@
                   initialValue: "" + i,
                   strInitialDisplay: r,
                   strDefaultLabel: (0, h.Xx)("#Profile_LocationDoNotDisplay"),
-                })
-              )
+                }),
+              ),
           );
         }
       };
@@ -4031,8 +4035,8 @@
                 OnEmoticonSelected: this.InsertEmoticon,
                 emoticonHoverStore: t,
                 emoticonStore: e,
-              })
-            )
+              }),
+            ),
           );
         }
       }
@@ -4047,10 +4051,10 @@
                 strCooldownLabel: (0, h.Xx)("#Profile_ProfileSummaryCooldown"),
                 strCooldownDescHTML: (0, h.Xx)(
                   "#Profile_ProfileSummaryCooldown_Desc",
-                  se.k_strProfileSummaryCooldownSupportURL
+                  se.k_strProfileSummaryCooldownSupportURL,
                 ),
               },
-              t
+              t,
             )
           : c.createElement(c.Fragment, null, t);
       class mt extends c.Component {
@@ -4139,13 +4143,13 @@
               Oe,
               { title: (0, h.Xx)("#Profile_Edit_BasicInfo") },
               c.createElement(dt, { Profile: e }),
-              !(0, me.e7)(p.De.EREALM) && c.createElement(ht, { Profile: e })
+              !(0, me.e7)(p.De.EREALM) && c.createElement(ht, { Profile: e }),
             ),
             !(0, me.e7)(p.De.EREALM) &&
               c.createElement(
                 Oe,
                 { title: (0, h.Xx)("#Profile_Edit_Location") },
-                c.createElement(et, { Profile: e })
+                c.createElement(et, { Profile: e }),
               ),
             !(0, me.e7)(p.De.EREALM) &&
               c.createElement(
@@ -4155,15 +4159,15 @@
                   Profile: e,
                   EmoticonStore: t,
                   EmoticonHoverStore: r,
-                })
+                }),
               ),
             !(0, me.e7)(p.De.EREALM) &&
               c.createElement(
                 Oe,
                 { title: (0, h.Xx)("#Profile_Edit_Preferences") },
-                c.createElement(_t, { Profile: e })
+                c.createElement(_t, { Profile: e }),
               ),
-            c.createElement(De, { onCancel: this.RevertChanges, disabled: i })
+            c.createElement(De, { onCancel: this.RevertChanges, disabled: i }),
           );
         }
       }
@@ -4178,9 +4182,9 @@
               text: (0, h.Xx)(
                 (0, me.e7)(p.De.EREALM)
                   ? "#Profile_Edit_About_Instructions_SteamChina"
-                  : "#Profile_Edit_About_Instructions"
+                  : "#Profile_Edit_About_Instructions",
               ),
-            })
+            }),
           );
         }
       }
@@ -4205,7 +4209,7 @@
                 name: "personaName",
                 value: e.GetPersonaName(),
                 onChange: this.OnPersonaNameChange,
-              })
+              }),
             ),
             !(0, me.e7)(p.De.EREALM) &&
               c.createElement(
@@ -4218,8 +4222,8 @@
                   name: "real_name",
                   value: e.GetRealName(),
                   onChange: this.OnRealNameChange,
-                })
-              )
+                }),
+              ),
           );
         }
       };
@@ -4235,10 +4239,10 @@
                   strCooldownLabel: (0, h.Xx)("#Profile_PersonaNameCooldown"),
                   strCooldownDescHTML: (0, h.Xx)(
                     "#Profile_PersonaNameCooldown_Desc",
-                    se.k_strPersonaNameCooldownSupportURL
+                    se.k_strPersonaNameCooldownSupportURL,
                   ),
                 },
-                t
+                t,
               )
             : c.createElement(c.Fragment, null, t),
         ut = ({ Profile: e, children: t }) =>
@@ -4250,10 +4254,10 @@
                   strCooldownLabel: (0, h.Xx)("#Profile_RealNameCooldown"),
                   strCooldownDescHTML: (0, h.Xx)(
                     "#Profile_RealNameCooldown_Desc",
-                    se.k_strProfileSummaryCooldownSupportURL
+                    se.k_strProfileSummaryCooldownSupportURL,
                   ),
                 },
-                t
+                t,
               )
             : c.createElement(c.Fragment, null, t);
       let ht = class extends c.Component {
@@ -4273,9 +4277,9 @@
               onChange: this.OnProfileURLChange,
               description: (0, h.Xx)(
                 "#Profile_ProfileAvailableAtURL",
-                e.GetConstructedURL()
+                e.GetConstructedURL(),
               ),
-            })
+            }),
           );
         }
       };
@@ -4320,7 +4324,7 @@
               type: "hidden",
               name: "hide_profile_awards",
               value: t.hide_profile_awards ? 1 : 0,
-            })
+            }),
           );
         }
       };
@@ -4338,7 +4342,7 @@
               1 != (yield e.CommitFavoriteBadgeChanges())
                 ? this.setState({
                     strHTMLError: (0, h.Xx)(
-                      "#ConnectionTrouble_FailedToConnect"
+                      "#ConnectionTrouble_FailedToConnect",
                     ),
                   })
                 : this.setState({ strHTMLError: "" }),
@@ -4366,12 +4370,12 @@
             c.createElement(
               ue.h4,
               null,
-              (0, h.Xx)("#Profile_Edit_FavoriteBadge")
+              (0, h.Xx)("#Profile_Edit_FavoriteBadge"),
             ),
             c.createElement(
               ue.Ac,
               null,
-              (0, h.Xx)("#Profile_Edit_Badge_Instructions")
+              (0, h.Xx)("#Profile_Edit_Badge_Instructions"),
             ),
             c.createElement(Fe, { strHTMLError: r }),
             a && c.createElement(Et, { badge: a }),
@@ -4391,7 +4395,7 @@
               onSave: this.CommitFavoriteBadge,
               onCancel: this.RevertFavoriteBadge,
               disabled: t,
-            })
+            }),
           );
         }
       };
@@ -4414,9 +4418,9 @@
               c.createElement(
                 "div",
                 { className: ft.GameName },
-                e.GetGameName()
-              )
-            )
+                e.GetGameName(),
+              ),
+            ),
           ),
         yt = ({ count: e, children: t }) =>
           c.createElement(
@@ -4432,14 +4436,14 @@
               c.createElement(
                 "div",
                 { className: ft.BadgeName },
-                "None selected"
+                "None selected",
               ),
               c.createElement(
                 "div",
                 { className: ft.GameName },
-                `${e} badges available`
-              )
-            )
+                `${e} badges available`,
+              ),
+            ),
           ),
         Ct = (e) => [e.GetName(), e.GetGameName()],
         St = ({ Item: e, onSelected: t }) => {
@@ -4459,9 +4463,9 @@
               c.createElement(
                 "div",
                 { className: ft.GameName },
-                r.GetGameName()
-              )
-            )
+                r.GetGameName(),
+              ),
+            ),
           );
         };
       var At = r(38062);
@@ -4502,12 +4506,12 @@
             c.createElement(
               ue.h4,
               null,
-              (0, h.Xx)("#Profile_Edit_FavoriteGroup")
+              (0, h.Xx)("#Profile_Edit_FavoriteGroup"),
             ),
             c.createElement(
               ue.Ac,
               null,
-              (0, h.Xx)("#Profile_Edit_Group_Instructions")
+              (0, h.Xx)("#Profile_Edit_Group_Instructions"),
             ),
             c.createElement(Fe, { strHTMLError: r }),
             o && c.createElement(It, { group: o }),
@@ -4526,7 +4530,7 @@
               onSave: this.CommitFavoriteGroup,
               onCancel: this.RevertFavoriteGroup,
               disabled: t,
-            })
+            }),
           );
         }
       };
@@ -4545,8 +4549,8 @@
             c.createElement(
               "div",
               { className: At.GroupDetails },
-              c.createElement("div", { className: At.GroupName }, e.GetName())
-            )
+              c.createElement("div", { className: At.GroupName }, e.GetName()),
+            ),
           ),
         Nt = (e) => [e.GetName()],
         Lt = ({ Item: e, onSelected: t }) => {
@@ -4562,8 +4566,8 @@
             c.createElement(
               "div",
               { className: At.GroupDetails },
-              c.createElement("div", { className: At.GroupName }, r.GetName())
-            )
+              c.createElement("div", { className: At.GroupName }, r.GetName()),
+            ),
           );
         };
       var bt = r(68485);
@@ -4581,8 +4585,8 @@
                   playsInline: !0,
                 },
                 Object.keys(r).map((e) =>
-                  c.createElement("source", { key: e, src: r[e], type: e })
-                )
+                  c.createElement("source", { key: e, src: r[e], type: e }),
+                ),
               );
         },
         wt = ({ Background: e, className: t, small: r }) =>
@@ -4590,7 +4594,7 @@
             ? c.createElement(
                 "div",
                 { className: t },
-                c.createElement(kt, { Item: e, small: r })
+                c.createElement(kt, { Item: e, small: r }),
               )
             : null;
       function Ot(e) {
@@ -4616,19 +4620,19 @@
             c.createElement(
               ue.h4,
               null,
-              (0, h.Xx)("#Profile_Edit_MiniProfile")
+              (0, h.Xx)("#Profile_Edit_MiniProfile"),
             ),
             c.createElement(
               ue.Ac,
               null,
-              (0, h.Xx)("#Profile_Edit_MiniProfile_Instructions")
+              (0, h.Xx)("#Profile_Edit_MiniProfile_Instructions"),
             ),
             c.createElement(Mt, {
               ProfileItems: r,
               Profile: t,
               MiniProfileOverrideData: i,
               onDismiss: this.RevertChanges,
-            })
+            }),
           );
         }
       };
@@ -4674,7 +4678,7 @@
                   }),
               })
             );
-          }
+          },
         ),
         Ft = ({
           MiniProfileBackground: e,
@@ -4706,8 +4710,8 @@
                 community_data_override: Object.assign(Object.assign({}, t), {
                   profile_background: n,
                 }),
-              })
-            )
+              }),
+            ),
           );
         },
         Ut = ({ Item: e, onSelected: t, children: r, active: i }) => {
@@ -4719,7 +4723,7 @@
               className: (0, g.Z)(
                 bt.MiniProfileBackgroundOption,
                 o && bt.WithVideo,
-                i && bt.Active
+                i && bt.Active,
               ),
               onClick: t,
               onMouseEnter: o ? Ot : void 0,
@@ -4732,8 +4736,8 @@
                 c.createElement(
                   "div",
                   { className: bt.PreviewVideo },
-                  c.createElement(kt, { Item: e })
-                )
+                  c.createElement(kt, { Item: e }),
+                ),
             ),
             c.createElement(
               "div",
@@ -4742,10 +4746,10 @@
                 "div",
                 null,
                 c.createElement("div", { className: bt.Title }, e.item_title),
-                c.createElement("div", { className: bt.App }, e.app_name)
+                c.createElement("div", { className: bt.App }, e.app_name),
               ),
-              r
-            )
+              r,
+            ),
           );
         },
         Ht = ({ Modifier: e, onSelected: t, children: r, active: i }) =>
@@ -4756,7 +4760,7 @@
                 {
                   className: (0, g.Z)(
                     bt.MiniProfileBackgroundOption,
-                    i && bt.Active
+                    i && bt.Active,
                   ),
                   onClick: t,
                 },
@@ -4766,7 +4770,7 @@
                   c.createElement("img", {
                     src: `${p.De.COMMUNITY_CDN_URL}public/images/trans.gif`,
                     loading: "lazy",
-                  })
+                  }),
                 ),
                 c.createElement(
                   "div",
@@ -4777,12 +4781,12 @@
                     c.createElement(
                       "div",
                       { className: bt.Title },
-                      (0, h.Xx)("#Profile_Edit_DefaultBlankBackground")
+                      (0, h.Xx)("#Profile_Edit_DefaultBlankBackground"),
                     ),
-                    c.createElement("div", { className: bt.App })
+                    c.createElement("div", { className: bt.App }),
                   ),
-                  r
-                )
+                  r,
+                ),
               );
       var qt = r(40103),
         Xt = r(69159),
@@ -4800,7 +4804,7 @@
                 strLabel: (0, h.Xx)("#ProfilePrivacy_BasicDetails"),
                 strReadOnlySetting: T(3),
               },
-              (0, h.Xx)("#ProfilePrivacy_BasicDetails_Desc")
+              (0, h.Xx)("#ProfilePrivacy_BasicDetails_Desc"),
             ),
             c.createElement("div", { className: "ProfilePrivacyHR" }),
             c.createElement(
@@ -4813,13 +4817,13 @@
               c.createElement(
                 "p",
                 null,
-                (0, h.Xx)("#ProfilePrivacy_Profile_Desc")
+                (0, h.Xx)("#ProfilePrivacy_Profile_Desc"),
               ),
               c.createElement(
                 "p",
                 null,
-                (0, h.Xx)("#ProfilePrivacy_Profile_Desc2")
-              )
+                (0, h.Xx)("#ProfilePrivacy_Profile_Desc2"),
+              ),
             ),
             c.createElement(
               "div",
@@ -4841,8 +4845,8 @@
                       PrivacyKey: "PrivacyPlaytime",
                       LimitPrivacyKey: "PrivacyOwnedGames",
                     },
-                    (0, h.Xx)("#ProfilePrivacy_Playtime")
-                  )
+                    (0, h.Xx)("#ProfilePrivacy_Playtime"),
+                  ),
               ),
               c.createElement("div", { className: "ProfilePrivacyHR" }),
               c.createElement(
@@ -4853,7 +4857,7 @@
                   PrivacyKey: "PrivacyFriendsList",
                   LimitPrivacyKey: "PrivacyProfile",
                 },
-                (0, h.Xx)("#ProfilePrivacy_FriendsList_Desc")
+                (0, h.Xx)("#ProfilePrivacy_FriendsList_Desc"),
               ),
               c.createElement("div", { className: "ProfilePrivacyHR" }),
               c.createElement(
@@ -4869,13 +4873,13 @@
                   c.createElement(
                     "a",
                     { href: a._.ProfileURL + "inventory/" },
-                    (0, h.Xx)("#ProfilePrivacy_Inventory_Inventory")
+                    (0, h.Xx)("#ProfilePrivacy_Inventory_Inventory"),
                   ),
                   c.createElement(
                     "a",
                     { href: a._.ProfileURL + "inventory/#753_6" },
-                    (0, h.Xx)("#ProfilePrivacy_Inventory_TradingCards")
-                  )
+                    (0, h.Xx)("#ProfilePrivacy_Inventory_TradingCards"),
+                  ),
                 ),
                 1 != e.GetPrivacySetting("PrivacyInventory") &&
                   c.createElement(
@@ -4885,8 +4889,8 @@
                       PrivacyKey: "PrivacyInventoryGifts",
                       LimitPrivacyKey: "PrivacyInventory",
                     },
-                    (0, h.Xx)("#ProfilePrivacy_Gifts")
-                  )
+                    (0, h.Xx)("#ProfilePrivacy_Gifts"),
+                  ),
               ),
               c.createElement("div", { className: "ProfilePrivacyHR" }),
               c.createElement(
@@ -4894,7 +4898,7 @@
                 null,
                 (0, h.Xx)("#ProfilePrivacy_Comments"),
                 ":",
-                c.createElement(Qt, { PrivacyStore: e })
+                c.createElement(Qt, { PrivacyStore: e }),
               ),
               !(0, me.e7)(p.De.EREALM) &&
                 c.createElement("div", { className: "ProfilePrivacyHR" }),
@@ -4911,16 +4915,16 @@
                     c.createElement(
                       "a",
                       { href: a._.ProfileURL + "screenshots/" },
-                      (0, h.Xx)("#ProfilePrivacy_UGC_Desc_Screenshots")
+                      (0, h.Xx)("#ProfilePrivacy_UGC_Desc_Screenshots"),
                     ),
                     c.createElement(
                       "a",
                       { href: a._.ProfileURL + "myworkshopfiles/" },
-                      (0, h.Xx)("#ProfilePrivacy_UGC_Desc_WorkshopItems")
-                    )
-                  )
-                )
-            )
+                      (0, h.Xx)("#ProfilePrivacy_UGC_Desc_WorkshopItems"),
+                    ),
+                  ),
+                ),
+            ),
           );
         }
       };
@@ -4938,7 +4942,7 @@
             c.Fragment,
             null,
             c.createElement(jt, null, e.strLabel, ":", t),
-            c.createElement($t, null, e.children)
+            c.createElement($t, null, e.children),
           )
         );
       }
@@ -4946,14 +4950,14 @@
         return c.createElement(
           "div",
           { className: "ProfilePrivacyHeader" },
-          e.children
+          e.children,
         );
       }
       function $t(e) {
         return c.createElement(
           "div",
           { className: "ProfilePrivacyDesc" },
-          e.children
+          e.children,
         );
       }
       zt = (0, i.gn)([d.Pi], zt);
@@ -4971,7 +4975,7 @@
             (e) => {
               t.ChangePrivacySetting(r, e);
             },
-            [t, r]
+            [t, r],
           ),
           s = c.useCallback(
             (e) => {
@@ -4983,10 +4987,10 @@
                   eMinPrivacy: o(),
                 }),
                 e,
-                { bOverlapHorizontal: !0 }
+                { bOverlapHorizontal: !0 },
               );
             },
-            [t, r, n, o]
+            [t, r, n, o],
           );
         let l = T(t.GetPrivacySetting(r));
         return c.createElement(
@@ -5001,9 +5005,9 @@
               src:
                 p.De.COMMUNITY_CDN_URL +
                 "public/images/skin_1/actionArrowDnWhite.gif",
-            })
+            }),
           ),
-          c.createElement(Kt, { eSaveState: t.GetSaveState(r) })
+          c.createElement(Kt, { eSaveState: t.GetSaveState(r) }),
         );
       });
       function Kt(e) {
@@ -5012,19 +5016,19 @@
             return c.createElement(
               "div",
               { className: "PrivacySaveNotice Saving" },
-              (0, h.Xx)("#Shared_Saving")
+              (0, h.Xx)("#Shared_Saving"),
             );
           case 3:
             return c.createElement(
               "div",
               { className: "PrivacySaveNotice Error" },
-              (0, h.Xx)("#Error_Error")
+              (0, h.Xx)("#Error_Error"),
             );
           case 2:
             return c.createElement(
               "div",
               { className: "PrivacySaveNotice Saved" },
-              (0, h.Xx)("#Shared_Saved")
+              (0, h.Xx)("#Shared_Saved"),
             );
           default:
             return null;
@@ -5042,7 +5046,7 @@
               let a = e.currentTarget.checked ? 1 : 3;
               t.ChangePrivacySetting(r, a, i);
             },
-            [t, r, i]
+            [t, r, i],
           );
         let n = 1 == (0, Zt.SZ)(() => t.GetPrivacySetting(r));
         return c.createElement(
@@ -5060,9 +5064,9 @@
             c.createElement(
               "div",
               { className: "ProfilePrivacyCheckbox_Desc" },
-              a
-            )
-          )
+              a,
+            ),
+          ),
         );
       }
       let Qt = class extends c.Component {
@@ -5079,7 +5083,7 @@
                 this.props.PrivacyStore.GetPrivacySetting("PrivacyProfile"),
             }),
             e,
-            { bOverlapHorizontal: !0 }
+            { bOverlapHorizontal: !0 },
           );
         }
         OnSettingChanged(e) {
@@ -5113,11 +5117,11 @@
                 src:
                   p.De.COMMUNITY_CDN_URL +
                   "public/images/skin_1/actionArrowDnWhite.gif",
-              })
+              }),
             ),
             c.createElement(Kt, {
               eSaveState: this.props.PrivacyStore.GetCommentSaveState(),
-            })
+            }),
           );
         }
       };
@@ -5125,7 +5129,7 @@
         return c.createElement(
           "div",
           { className: "ProfilePrivacyDropDown readonly" },
-          e.strLabel
+          e.strLabel,
         );
       }
       (0, i.gn)([he.ak], Qt.prototype, "OnClick", null),
@@ -5141,19 +5145,19 @@
               c.createElement(
                 Xt.Zo,
                 { onSelected: () => this.props.OnChange(3) },
-                (0, h.Xx)("#Privacy_Public")
+                (0, h.Xx)("#Privacy_Public"),
               ),
             (!e || e >= 2) &&
               c.createElement(
                 Xt.Zo,
                 { onSelected: () => this.props.OnChange(2) },
-                (0, h.Xx)("#Privacy_FriendsOnly")
+                (0, h.Xx)("#Privacy_FriendsOnly"),
               ),
             c.createElement(
               Xt.Zo,
               { onSelected: () => this.props.OnChange(1) },
-              (0, h.Xx)("#Privacy_Private")
-            )
+              (0, h.Xx)("#Privacy_Private"),
+            ),
           );
         }
       }
@@ -5170,7 +5174,7 @@
                   onSelected: () => this.props.OnChange(1),
                   title: (0, h.Xx)("#Profile_CommentPermission_Public_Desc"),
                 },
-                (0, h.Xx)("#Privacy_Public")
+                (0, h.Xx)("#Privacy_Public"),
               ),
             (!e || e >= 2) &&
               c.createElement(
@@ -5178,10 +5182,10 @@
                 {
                   onSelected: () => this.props.OnChange(0),
                   title: (0, h.Xx)(
-                    "#Profile_CommentPermission_FriendsOnly_Desc"
+                    "#Profile_CommentPermission_FriendsOnly_Desc",
                   ),
                 },
-                (0, h.Xx)("#Privacy_FriendsOnly")
+                (0, h.Xx)("#Privacy_FriendsOnly"),
               ),
             c.createElement(
               Xt.Zo,
@@ -5189,8 +5193,8 @@
                 onSelected: () => this.props.OnChange(2),
                 title: (0, h.Xx)("#Profile_CommentPermission_Private_Desc"),
               },
-              (0, h.Xx)("#Privacy_Private")
-            )
+              (0, h.Xx)("#Privacy_Private"),
+            ),
           );
         }
       }
@@ -5546,7 +5550,7 @@
                   offset: "1",
                   stopColor: "var(--gradient-background-left)",
                   stopOpacity: "0",
-                })
+                }),
               ),
               c.createElement(
                 "radialGradient",
@@ -5567,9 +5571,9 @@
                   offset: "1",
                   stopColor: "var(--gradient-background-right)",
                   stopOpacity: "0",
-                })
-              )
-            )
+                }),
+              ),
+            ),
           );
         },
         sr = (0, d.Pi)(({ ProfileItems: e, Background: t, theme: r }) => {
@@ -5587,8 +5591,8 @@
                 "div",
                 { className: (0, g.Z)(ir.Background, o && ir.FullScreen) },
                 !i && c.createElement("img", { src: a }),
-                i && c.createElement(wt, { Background: t, className: "" })
-              )
+                i && c.createElement(wt, { Background: t, className: "" }),
+              ),
             ),
             c.createElement(
               "div",
@@ -5601,9 +5605,9 @@
                   width: "50%",
                   height: "auto",
                   theme: r,
-                })
-              )
-            )
+                }),
+              ),
+            ),
           );
         });
       let lr = class extends c.Component {
@@ -5638,12 +5642,12 @@
               c.createElement(
                 ue.h4,
                 null,
-                (0, h.Xx)("#Profile_Edit_ChooseBackground")
+                (0, h.Xx)("#Profile_Edit_ChooseBackground"),
               ),
               c.createElement(
                 ue.Ac,
                 null,
-                (0, h.Xx)("#Profile_Edit_Background_Instructions")
+                (0, h.Xx)("#Profile_Edit_Background_Instructions"),
               ),
               c.createElement(Re, {
                 className: rr.BackgroundPickerPage,
@@ -5666,7 +5670,7 @@
                     ProfileItems: e,
                     theme: t.ActiveTheme.theme_id,
                   }),
-              })
+              }),
             )
           );
         }
@@ -5686,7 +5690,7 @@
                 e && i(r);
               },
               label: e,
-            })
+            }),
           );
       let dr = class extends c.Component {
         OnChange(e) {
@@ -5706,7 +5710,7 @@
               currentFlag: r,
               onSelect: this.OnChange,
               label: (0, h.Xx)(
-                "#Profile_Edit_BackgroundEquipFlag_OriginalSize"
+                "#Profile_Edit_BackgroundEquipFlag_OriginalSize",
               ),
             });
           return c.createElement(
@@ -5714,11 +5718,11 @@
             {
               className: (0, g.Z)(
                 rr.ProfileBackgroundEquipOptions,
-                !e && rr.HideEquipOptions
+                !e && rr.HideEquipOptions,
               ),
             },
             i,
-            a
+            a,
           );
         }
       };
@@ -5734,8 +5738,8 @@
               key: e && e.communityitemid,
               theme: r,
             }),
-            c.createElement(dr, { ProfileItems: t, Background: e })
-          )
+            c.createElement(dr, { ProfileItems: t, Background: e }),
+          ),
         ),
         ur = ({ Background: e, children: t }) =>
           c.createElement(
@@ -5749,11 +5753,11 @@
                 { className: rr.Title },
                 e
                   ? e.item_title
-                  : (0, h.Xx)("#Profile_Edit_DefaultBlankBackground")
+                  : (0, h.Xx)("#Profile_Edit_DefaultBlankBackground"),
               ),
-              c.createElement("div", { className: rr.App }, e && e.app_name)
+              c.createElement("div", { className: rr.App }, e && e.app_name),
             ),
-            t
+            t,
           ),
         hr = ({ Item: e, onSelected: t, active: r, children: i }) => {
           let a = !!e.movie_webm;
@@ -5763,7 +5767,7 @@
               className: (0, g.Z)(
                 rr.BackgroundOption,
                 a && rr.WithVideo,
-                r && rr.Active
+                r && rr.Active,
               ),
               onClick: t,
               onMouseEnter: a ? Ot : void 0,
@@ -5776,9 +5780,9 @@
                 Background: e,
                 className: rr.PreviewVideo,
                 small: !0,
-              })
+              }),
             ),
-            c.createElement(ur, { Background: e }, i)
+            c.createElement(ur, { Background: e }, i),
           );
         },
         vr = ({ onSelected: e, Modifier: t, active: r, children: i }) =>
@@ -5793,9 +5797,9 @@
                 c.createElement(
                   "div",
                   { className: rr.Preview },
-                  c.createElement("img", { src: V(null) })
+                  c.createElement("img", { src: V(null) }),
                 ),
-                c.createElement(ur, { Background: null }, i)
+                c.createElement(ur, { Background: null }, i),
               );
       var _r = r(565),
         fr = r(12209);
@@ -5816,8 +5820,8 @@
               c.createElement(
                 "a",
                 { href: a._.ProfileURL },
-                (0, h.Xx)("#Profile_ReturnToYourProfile")
-              )
+                (0, h.Xx)("#Profile_ReturnToYourProfile"),
+              ),
             ),
             c.createElement(
               "div",
@@ -5830,9 +5834,9 @@
               c.createElement(
                 "div",
                 { className: fr.PageContent },
-                c.createElement(Be.SV, null, i)
-              )
-            )
+                c.createElement(Be.SV, null, i),
+              ),
+            ),
           );
         }
       }
@@ -5845,27 +5849,27 @@
             c.createElement(
               Er,
               Object.assign({}, i, { to: a.Info() }),
-              (0, h.Xx)("#Profile_Edit_BasicInfo")
+              (0, h.Xx)("#Profile_Edit_BasicInfo"),
             ),
             c.createElement(
               Er,
               Object.assign({}, i, { to: a.Avatar() }),
-              (0, h.Xx)("#Profile_FieldAvatar")
+              (0, h.Xx)("#Profile_FieldAvatar"),
             ),
             c.createElement(
               Er,
               Object.assign({}, i, { to: a.Background() }),
-              (0, h.Xx)("#Profile_FieldProfileBackground")
+              (0, h.Xx)("#Profile_FieldProfileBackground"),
             ),
             c.createElement(
               Er,
               Object.assign({}, i, { to: a.MiniProfile() }),
-              (0, h.Xx)("#Profile_Edit_MiniProfile")
+              (0, h.Xx)("#Profile_Edit_MiniProfile"),
             ),
             c.createElement(
               Er,
               Object.assign({}, i, { to: a.Theme() }),
-              (0, h.Xx)("#Profile_Edit_Theme")
+              (0, h.Xx)("#Profile_Edit_Theme"),
             ),
             c.createElement(
               Er,
@@ -5873,7 +5877,7 @@
                 to: a.ProfileModifier(),
                 fnVisible: r.ProfileModifierAvailable,
               }),
-              (0, h.Xx)("#Profile_Edit_ProfileModifier")
+              (0, h.Xx)("#Profile_Edit_ProfileModifier"),
             ),
             c.createElement(
               Er,
@@ -5881,7 +5885,7 @@
                 to: a.FavoriteBadge(),
                 fnVisible: r.BadgesAvailable,
               }),
-              (0, h.Xx)("#Profile_Edit_FavoriteBadge")
+              (0, h.Xx)("#Profile_Edit_FavoriteBadge"),
             ),
             c.createElement(
               Er,
@@ -5889,7 +5893,7 @@
                 to: a.FavoriteGroup(),
                 fnVisible: r.GroupsAvailable,
               }),
-              (0, h.Xx)("#Profile_Edit_FavoriteGroup")
+              (0, h.Xx)("#Profile_Edit_FavoriteGroup"),
             ),
             c.createElement(
               Er,
@@ -5897,13 +5901,13 @@
                 to: a.Showcases(),
                 fnVisible: r.ShowcasesAvailable,
               }),
-              (0, h.Xx)("#Profile_Edit_FeaturedShowcase")
+              (0, h.Xx)("#Profile_Edit_FeaturedShowcase"),
             ),
             c.createElement("div", { className: fr.ProfileEditLine }),
             c.createElement(
               Er,
               Object.assign({}, i, { to: a.Privacy() }),
-              (0, h.Xx)("#Profile_EditPrivacySettings")
+              (0, h.Xx)("#Profile_EditPrivacySettings"),
             ),
             c.createElement(
               "div",
@@ -5914,9 +5918,9 @@
                   className: (0, g.Z)(fr.ExternalLink),
                   href: `${p.De.STORE_BASE_URL}points/`,
                 },
-                (0, h.Xx)("#SteamPointsShop")
-              )
-            )
+                (0, h.Xx)("#SteamPointsShop"),
+              ),
+            ),
           );
         },
         Er = (0, d.Pi)(
@@ -5942,16 +5946,16 @@
                   className: (0, g.Z)(
                     fr.NavLink,
                     s && fr.Active,
-                    m && fr.Disabled
+                    m && fr.Disabled,
                   ),
                   to: n,
                   onClick: d,
                   title: l,
                 },
-                o
+                o,
               )
             );
-          }
+          },
         );
       var yr = r(59536);
       let Cr = class extends c.Component {
@@ -6008,8 +6012,8 @@
                 src: t,
               }),
               c.createElement("div", { className: yr.GoldenProfileTitle }, r),
-              c.createElement("div", { className: yr.GoldenProfileApp }, i)
-            )
+              c.createElement("div", { className: yr.GoldenProfileApp }, i),
+            ),
           );
         };
       let Br = class extends c.Component {
@@ -6025,12 +6029,12 @@
             c.createElement(
               ue.h4,
               null,
-              (0, h.Xx)("#Profile_Edit_ProfileModifier")
+              (0, h.Xx)("#Profile_Edit_ProfileModifier"),
             ),
             c.createElement(
               ue.Ac,
               null,
-              (0, h.Xx)("#Profile_Edit_ProfileModifier_Instructions")
+              (0, h.Xx)("#Profile_Edit_ProfileModifier_Instructions"),
             ),
             c.createElement(Re, {
               fnRevertChanges: this.OnDismiss,
@@ -6050,7 +6054,7 @@
               fnIsSameItem: xt,
               fnRenderPreview: (e) =>
                 c.createElement(Gr, { ProfileModifier: e }),
-            })
+            }),
           );
         }
       };
@@ -6066,7 +6070,7 @@
             c.createElement(
               "div",
               { className: yr.Preview },
-              c.createElement("img", { src: $(e), loading: "lazy" })
+              c.createElement("img", { src: $(e), loading: "lazy" }),
             ),
             c.createElement(
               "div",
@@ -6075,10 +6079,10 @@
                 "div",
                 null,
                 c.createElement("div", { className: yr.Title }, e.item_title),
-                c.createElement("div", { className: yr.App }, e.app_name)
+                c.createElement("div", { className: yr.App }, e.app_name),
               ),
-              r
-            )
+              r,
+            ),
           ),
         Nr = ({ onSelected: e, children: t, active: r }) =>
           c.createElement(
@@ -6093,7 +6097,7 @@
               c.createElement("img", {
                 src: `${p.De.COMMUNITY_CDN_URL}public/images/trans.gif`,
                 loading: "lazy",
-              })
+              }),
             ),
             c.createElement(
               "div",
@@ -6104,12 +6108,12 @@
                 c.createElement(
                   "div",
                   { className: yr.Title },
-                  (0, h.Xx)("#ProfileModifier_DisabledTitle")
+                  (0, h.Xx)("#ProfileModifier_DisabledTitle"),
                 ),
-                c.createElement("div", { className: yr.App })
+                c.createElement("div", { className: yr.App }),
               ),
-              t
-            )
+              t,
+            ),
           );
       var Lr = r(94374);
       let br = class extends c.Component {
@@ -6146,7 +6150,7 @@
             c.createElement(
               ue.Ac,
               null,
-              (0, h.Xx)("#Profile_Edit_Theme_Instructions")
+              (0, h.Xx)("#Profile_Edit_Theme_Instructions"),
             ),
             c.createElement(Fe, { strHTMLError: this.state.strHTMLError }),
             r && c.createElement(Rr, null),
@@ -6165,7 +6169,7 @@
               ItemComponent: xr,
               classNameItemPicker: Lr.ProfileThemePicker,
               className: (0, g.Z)(r && Lr.ThemePickerDisabled),
-            })
+            }),
           );
         }
       };
@@ -6187,8 +6191,8 @@
           c.createElement(
             "div",
             { className: Lr.ProfileThemePreviewCtn },
-            c.createElement(sr, { ProfileItems: t, theme: e.theme_id })
-          )
+            c.createElement(sr, { ProfileItems: t, theme: e.theme_id }),
+          ),
         ),
         Dr = (e, t) => (e && e.theme_id) === (t && t.theme_id),
         xr = ({ Item: e, onSelected: t, active: r, children: i }) => {
@@ -6201,7 +6205,7 @@
                 Lr.ProfileTheme,
                 t && Lr.Option,
                 r && Lr.Active,
-                ar[a]
+                ar[a],
               ),
               onClick: t,
             },
@@ -6262,7 +6266,7 @@
                       offset: "1",
                       stopColor: "var(--gradient-background-left)",
                       stopOpacity: "0",
-                    })
+                    }),
                   ),
                   c.createElement(
                     "radialGradient",
@@ -6283,17 +6287,17 @@
                       offset: "1",
                       stopColor: "var(--gradient-background-right)",
                       stopOpacity: "0",
-                    })
-                  )
-                )
-              )
+                    }),
+                  ),
+                ),
+              ),
             ),
             c.createElement(
               "div",
               { className: Lr.Details },
               c.createElement("div", { className: Lr.Title }, e.title),
-              i
-            )
+              i,
+            ),
           );
         },
         Rr = ({ children: e }) =>
@@ -6303,8 +6307,8 @@
             c.createElement(
               "div",
               { className: Lr.Notice },
-              (0, h.Xx)("#Profile_Edit_GoldenProfileOverridesTheme")
-            )
+              (0, h.Xx)("#Profile_Edit_GoldenProfileOverridesTheme"),
+            ),
           );
       class Tr extends c.Component {
         constructor() {
@@ -6345,17 +6349,20 @@
               c.createElement(
                 ue.h4,
                 null,
-                (0, h.Xx)("#Profile_Edit_FeaturedShowcase")
+                (0, h.Xx)("#Profile_Edit_FeaturedShowcase"),
               ),
               c.createElement(
                 ue.Ac,
                 null,
-                (0, h.Xx)("#Profile_Edit_Showcase_Instructions")
+                (0, h.Xx)("#Profile_Edit_Showcase_Instructions"),
               ),
               c.createElement(Fe, { strHTMLError: t }),
               c.createElement("div", { ref: this.m_refDiv }),
-              c.createElement(De, { onCancel: this.RevertChanges, disabled: e })
-            )
+              c.createElement(De, {
+                onCancel: this.RevertChanges,
+                disabled: e,
+              }),
+            ),
           );
         }
       }
@@ -6373,7 +6380,7 @@
                     (Mr = new ne(
                       (0, p.kQ)("profile-edit", "profile_edit_config"),
                       (0, p.kQ)("profile-badges", "profile_edit_config"),
-                      e
+                      e,
                     )),
                     (0, me.e7)(p.De.EREALM) ||
                       Mr.Profile.GroupList.GetUserGroups(),
@@ -6433,7 +6440,7 @@
                   Profile: l,
                   EmoticonStore: u,
                   EmoticonHoverStore: h,
-                })
+                }),
               ),
               c.createElement(
                 le.AW,
@@ -6443,57 +6450,57 @@
                   ProfileItems: m,
                   OGGAvatars: s.OGGAvatarStore,
                   AvatarHistory: s.AvatarHistory,
-                })
+                }),
               ),
               c.createElement(
                 le.AW,
                 { path: `${n}${v.Background()}` },
-                c.createElement(mr, { ProfileTheme: d, ProfileItems: m })
+                c.createElement(mr, { ProfileTheme: d, ProfileItems: m }),
               ),
               c.createElement(
                 le.AW,
                 { path: `${n}${v.MiniProfile()}` },
-                c.createElement(Tt, { ProfileEdit: s })
+                c.createElement(Tt, { ProfileEdit: s }),
               ),
               c.createElement(
                 le.AW,
                 { path: `${n}${v.Theme()}` },
-                c.createElement(kr, { ProfileTheme: d, ProfileItems: m })
+                c.createElement(kr, { ProfileTheme: d, ProfileItems: m }),
               ),
               c.createElement(
                 le.AW,
                 { path: `${n}${v.ProfileModifier()}` },
-                c.createElement(Sr, { ProfileItems: m })
+                c.createElement(Sr, { ProfileItems: m }),
               ),
               !(0, me.e7)(p.De.EREALM) &&
                 c.createElement(
                   le.AW,
                   { path: `${n}${v.FavoriteBadge()}` },
-                  c.createElement(Pt, { Badges: s.ProfileBadges })
+                  c.createElement(Pt, { Badges: s.ProfileBadges }),
                 ),
               !(0, me.e7)(p.De.EREALM) &&
                 c.createElement(
                   le.AW,
                   { path: `${n}${v.FavoriteGroup()}` },
-                  c.createElement(Bt, { Profile: l })
+                  c.createElement(Bt, { Profile: l }),
                 ),
               c.createElement(
                 le.AW,
                 { path: `${n}${v.Privacy()}` },
-                c.createElement(zt, { PrivacyStore: s.ProfilePrivacy })
+                c.createElement(zt, { PrivacyStore: s.ProfilePrivacy }),
               ),
               c.createElement(
                 le.AW,
                 { path: `${n}${v.Showcases()}` },
-                c.createElement(Tr, { elShowcases: Fr, ProfileTheme: d })
+                c.createElement(Tr, { elShowcases: Fr, ProfileTheme: d }),
               ),
               c.createElement(
                 le.AW,
                 null,
-                c.createElement(le.l_, { to: `${n}${v.Info()}` })
-              )
-            )
-          )
+                c.createElement(le.l_, { to: `${n}${v.Info()}` }),
+              ),
+            ),
+          ),
         );
       }
       (0, i.gn)([he.ak], Tr.prototype, "OnSubmit", null),
@@ -6521,7 +6528,7 @@
         return c.createElement(
           "div",
           null,
-          c.createElement(qr.ZP, { targetType: 3 })
+          c.createElement(qr.ZP, { targetType: 3 }),
         );
       }
       function jr(e) {
@@ -6542,7 +6549,7 @@
                     c.createElement(Wr, Object.assign({}, e)),
                 },
               }),
-          })
+          }),
         );
       }
     },

@@ -633,7 +633,7 @@
               "UserReviews.GetIndividualRecommendations#1",
               r,
               b,
-              { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 2 }
+              { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 2 },
             );
           });
       })(w || (w = {}));

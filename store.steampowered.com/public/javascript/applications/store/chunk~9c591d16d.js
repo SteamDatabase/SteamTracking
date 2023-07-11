@@ -317,7 +317,7 @@
               t,
               2 * r + 1,
               o,
-              i.t - r - 1
+              i.t - r - 1,
             )) >= i.DV && ((t[r + i.t] -= i.DV), (t[r + i.t + 1] = 1));
           }
           t.t > 0 && (t[t.t - 1] += i.am(r, i[r], t, 2 * r, 0, 1)),
@@ -1024,7 +1024,7 @@
             do {
               i += String.fromCharCode(
                 ((this.hex.indexOf(t.charAt(r++)) << 4) & 240) |
-                  (15 & this.hex.indexOf(t.charAt(r++)))
+                  (15 & this.hex.indexOf(t.charAt(r++))),
               );
             } while (r < t.length);
             return i;

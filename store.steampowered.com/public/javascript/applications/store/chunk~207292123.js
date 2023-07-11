@@ -74,7 +74,7 @@
                 {
                   params: { genre: e },
                   cancelToken: null == r ? void 0 : r.token,
-                }
+                },
               );
               if (
                 200 == (null == u ? void 0 : u.status) &&
@@ -96,7 +96,7 @@
               "Could not check claim on genre",
               e,
               u.strErrorMsg,
-              u
+              u,
             );
           });
         }
@@ -116,7 +116,7 @@
                 {
                   withCredentials: !0,
                   cancelToken: null == t ? void 0 : t.token,
-                }
+                },
               );
               if (
                 200 == (null == S ? void 0 : S.status) &&
@@ -145,7 +145,7 @@
                 "Could not make claim on genre",
                 e,
                 a.strErrorMsg,
-                a
+                a,
               ),
               (null === (S = null == i ? void 0 : i.data) || void 0 === S
                 ? void 0

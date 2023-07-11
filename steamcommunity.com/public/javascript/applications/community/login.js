@@ -18,7 +18,7 @@
       function l(e) {
         const { redirectUrl: n = i.De.COMMUNITY_BASE_URL } = e,
           [t] = (0, r.useState)(
-            new a.J(i.De.WEBAPI_BASE_URL).GetAnonymousServiceTransport()
+            new a.J(i.De.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
           ),
           [l, u] = (0, r.useState)(!1);
         return r.createElement(
@@ -36,7 +36,7 @@
                     : window.location.assign(n);
                 },
                 redirectUrl: n,
-              })
+              }),
         );
       }
     },

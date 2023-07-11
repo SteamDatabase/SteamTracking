@@ -227,7 +227,7 @@
                     else {
                       if (3 != r && 4 != r)
                         throw new Error(
-                          "Not expecting to accumulate buffer in state " + r
+                          "Not expecting to accumulate buffer in state " + r,
                         );
                       n += l;
                     }
@@ -263,9 +263,9 @@
                   language: this.m_renderingLanguage,
                   key: "bbnode_" + r++,
                 }),
-                ...s
+                ...s,
               ),
-            o
+            o,
           );
           return s.length > 1
             ? n.createElement(n.Fragment, null, ...s)
@@ -375,8 +375,8 @@
                       "data-copystyle": "merge-adjacent",
                       "bbcode-text": e,
                     },
-                    e
-                  )
+                    e,
+                  ),
                 )
               : this.reactNodes.push(e));
         }

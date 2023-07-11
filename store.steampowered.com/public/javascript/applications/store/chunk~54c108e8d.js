@@ -91,7 +91,7 @@
           return (
             (0, a.X)(
               this.m_bInitialized,
-              "Attempting to serialize an uninitialized AppInfo object for caching!"
+              "Attempting to serialize an uninitialized AppInfo object for caching!",
             ),
             this.m_bInitialized
               ? {
@@ -1994,7 +1994,7 @@
               "Community.GetAppRichPresenceLocalization#1",
               r,
               m,
-              { ePrivilege: 1 }
+              { ePrivilege: 1 },
             );
           }),
           (e.GetCommentThread = function (e, r) {
@@ -2032,7 +2032,7 @@
               "Community.GetClanAnnouncementVoteForUser#1",
               r,
               h,
-              { ePrivilege: 1 }
+              { ePrivilege: 1 },
             );
           }),
           (e.GetAvatarHistory = function (e, r) {
@@ -2064,7 +2064,7 @@
               "Community.GetUserPartnerEventViewStatus#1",
               r,
               I,
-              { bConstMethod: !0, ePrivilege: 1 }
+              { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
           (e.PartnerEventsShowMoreForApp = function (e, r) {
@@ -2082,7 +2082,7 @@
               "Community.ClearUserPartnerEventsAppPriorities#1",
               r,
               S,
-              { ePrivilege: 1 }
+              { ePrivilege: 1 },
             );
           }),
           (e.GetUserPartnerEventsAppPriorities = function (e, r) {
@@ -2090,7 +2090,7 @@
               "Community.GetUserPartnerEventsAppPriorities#1",
               r,
               j,
-              { ePrivilege: 1 }
+              { ePrivilege: 1 },
             );
           }),
           (e.ClearSinglePartnerEventsAppPriority = function (e, r) {
@@ -2098,7 +2098,7 @@
               "Community.ClearSinglePartnerEventsAppPriority#1",
               r,
               O,
-              { ePrivilege: 1 }
+              { ePrivilege: 1 },
             );
           });
       })(D || (D = {}));

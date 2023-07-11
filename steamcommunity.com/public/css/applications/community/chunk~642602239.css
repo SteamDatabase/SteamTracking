@@ -576,7 +576,9 @@ img.emoticon_emoticon_316r8.emoticon_large_2mWtZ {
   right: 0;
   opacity: 0;
   cursor: zoom-in;
-  transition: opacity 0.3s, transform 0.3s;
+  transition:
+    opacity 0.3s,
+    transform 0.3s;
 }
 .hover___MYy31,
 .loading___1pvNI,
@@ -698,7 +700,9 @@ img.emoticon_emoticon_316r8.emoticon_large_2mWtZ {
 }
 .carousel_carouselNavButton_1KK5N svg {
   opacity: 0.7;
-  transition: opacity 0.2s ease-in-out, filter 0.2s ease-in-out;
+  transition:
+    opacity 0.2s ease-in-out,
+    filter 0.2s ease-in-out;
   fill: #fff;
 }
 .carousel_carouselBtnCtn_aqswv {
@@ -1526,7 +1530,9 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
 }
 .ChatMessageEntryVoice .VoiceControlPanelButton.ToggleMicrophoneButton {
   transform: translateX(-32px) scale(0.5);
-  transition: transform 0.1s ease-in-out, opacity 0.3s ease-in-out;
+  transition:
+    transform 0.1s ease-in-out,
+    opacity 0.3s ease-in-out;
   opacity: 0;
   cursor: pointer;
 }
@@ -1534,7 +1540,9 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
 .ChatMessageEntryVoice.Active .VoiceControlPanelButton.ToggleMicrophoneButton {
   opacity: 1;
   transform: translateX(0px) scale(1);
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out,
+  transition:
+    transform 0.3s ease-in-out,
+    opacity 0.3s ease-in-out,
     background-color 0.1s ease-in-out;
 }
 .ChatMessageEntryVoice .VoiceControlPanelButton.chatEndVoiceChat {

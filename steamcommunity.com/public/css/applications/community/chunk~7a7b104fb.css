@@ -541,7 +541,9 @@
   margin-bottom: 4px;
   border-radius: 2px;
   background-color: #405358;
-  box-shadow: 0px 1px 8px 2px #000, 1px 2px 28px #000;
+  box-shadow:
+    0px 1px 8px 2px #000,
+    1px 2px 28px #000;
   position: relative;
   cursor: pointer;
   user-select: none;
@@ -1083,7 +1085,9 @@
 }
 .STV_timelineSegment:hover {
   z-index: 5;
-  text-shadow: 0px 0px 2px #000, 1px 1px 3px #000;
+  text-shadow:
+    0px 0px 2px #000,
+    1px 1px 3px #000;
 }
 .STV_timelineSegment:hover .STV_timelineSegmentBackFill,
 .STV_timelineSegment:hover .STV_timelineSegmentFrontFill {
@@ -1205,7 +1209,8 @@
   border-radius: 4px;
   user-select: none;
   background-color: #216c91;
-  box-shadow: 0px 1px 8px 2px rgba(0, 0, 0, 0.5),
+  box-shadow:
+    0px 1px 8px 2px rgba(0, 0, 0, 0.5),
     2px 3px 32px rgba(0, 0, 0, 0.8);
   z-index: 1000;
 }
@@ -1585,7 +1590,10 @@
   height: 64px;
   padding: 8px 16px;
   font-size: 20px;
-  text-shadow: 0px 0px 2px #000, 1px 1px 3px 4px #000, 1px 1px 8px 6px #000;
+  text-shadow:
+    0px 0px 2px #000,
+    1px 1px 3px 4px #000,
+    1px 1px 8px 6px #000;
   display: none;
   transition-property: transform;
   transition-duration: 0.3s;
@@ -1846,7 +1854,9 @@ iframe.steamTVLogin {
   width: fit-content;
   vertical-align: middle;
   font-size: 16px;
-  text-shadow: 1px 1px 2px 4px #000, 1px 1px 3px 3px #000;
+  text-shadow:
+    1px 1px 2px 4px #000,
+    1px 1px 3px 3px #000;
   font-weight: 100;
   align-self: center;
 }
@@ -2268,7 +2278,9 @@ iframe.steamTVLogin {
   );
   overflow: hidden;
   z-index: 5;
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  transition:
+    transform 0.3s ease-in-out,
+    opacity 0.3s ease-in-out;
   transform: translateY(0%);
   opacity: 1;
 }

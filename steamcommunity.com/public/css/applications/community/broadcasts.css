@@ -209,7 +209,9 @@
   z-index: 2;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  transition: filter 0.24s ease-in-out, transform 0.24s ease-in-out,
+  transition:
+    filter 0.24s ease-in-out,
+    transform 0.24s ease-in-out,
     color 0.24s ease-in-out;
 }
 .items_in_row_4 .eventrow_EventSummaryText_h5tE8 {
@@ -229,7 +231,9 @@
   z-index: 2;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  transition: filter 0.24s ease-in-out, transform 0.24s ease-in-out,
+  transition:
+    filter 0.24s ease-in-out,
+    transform 0.24s ease-in-out,
     color 0.24s ease-in-out;
 }
 .eventrow_OtherEvents_EventCtn_17gGs.eventrow_HorizontalEvent_1RS0b {

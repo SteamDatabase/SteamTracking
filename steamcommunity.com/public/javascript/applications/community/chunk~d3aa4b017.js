@@ -49,7 +49,7 @@
           [r, s] = (0, p.vs)(t, n.current);
         let o = (0, g.Z)(
             f().StoreSaleWidgetContainer_mini,
-            "StoreSaleWidgetContainer_mini"
+            "StoreSaleWidgetContainer_mini",
           ),
           i = f().StoreSaleWidgetImage_mini,
           c = f().StoreSaleImage_mini;
@@ -58,7 +58,7 @@
             "div",
             { className: o },
             l.createElement(E.V, { size: "medium" }),
-            ";"
+            ";",
           );
         if (2 == s || !r.GetName())
           return l.createElement("div", {
@@ -84,10 +84,10 @@
                   l.createElement("img", {
                     className: c,
                     src: r.GetAssets().GetSmallCapsuleURL(),
-                  })
-                )
-              )
-            )
+                  }),
+                ),
+              ),
+            ),
           ),
           l.createElement(
             "div",
@@ -106,25 +106,25 @@
                     {
                       className: (0, g.Z)(
                         _.StoreSaleWidgetTitle,
-                        "StoreSaleWidgetTitle"
+                        "StoreSaleWidgetTitle",
                       ),
                     },
-                    r.GetName()
-                  )
-                )
-              )
+                    r.GetName(),
+                  ),
+                ),
+              ),
             ),
             l.createElement(
               "div",
               { className: _.StoreSaleWidgetRelease },
-              r.GetFormattedSteamReleaseDate()
+              r.GetFormattedSteamReleaseDate(),
             ),
             Boolean(d) &&
               l.createElement(u.x1, {
                 info: { id: t, type: "game" },
                 bShowDemoButton: !0,
-              })
-          )
+              }),
+          ),
         );
       });
       var N = a(46132);
@@ -155,7 +155,7 @@
           r = !t || !t.jsondata || !t.jsondata.broadcast_item_drops_enabled,
           o = (0, l.useRef)(null),
           [i, c] = (0, l.useState)(
-            t ? W.bq.GetCreatorHome(t.clanSteamID) : null
+            t ? W.bq.GetCreatorHome(t.clanSteamID) : null,
           );
         if (
           ((0, l.useEffect)(() => {
@@ -200,15 +200,15 @@
               t.jsondata.broadcast_item_drops_min_watch_time_minutes % 60 == 0
                 ? t.jsondata.broadcast_item_drops_min_watch_time_minutes / 60
                 : t.jsondata.broadcast_item_drops_min_watch_time_minutes,
-              i.GetName()
+              i.GetName(),
             ),
             Boolean(t.jsondata.broadcast_item_drops_details_clan_accountid) &&
               l.createElement(
                 "a",
                 { href: d, target: S.De.IN_CLIENT ? "" : "_blank" },
-                (0, T.Xx)("#SalePage_WatchForDrop_LearnMore")
-              )
-          )
+                (0, T.Xx)("#SalePage_WatchForDrop_LearnMore"),
+              ),
+          ),
         );
       });
       var Z = a(17318),
@@ -235,7 +235,7 @@
             modalClassName: "EventDisplay_Share_Dialog",
           },
           l.createElement(te, { steamid: t }),
-          l.createElement(ae, { steamid: t })
+          l.createElement(ae, { steamid: t }),
         );
       }
       function te(e) {
@@ -252,8 +252,8 @@
               l.createElement("img", {
                 className: (0, g.Z)(j().Button),
                 src: X.Z,
-              })
-            )
+              }),
+            ),
           ),
           l.createElement(
             k.HP,
@@ -264,8 +264,8 @@
               l.createElement("img", {
                 className: (0, g.Z)(j().Button),
                 src: q.Z,
-              })
-            )
+              }),
+            ),
           ),
           l.createElement(
             k.HP,
@@ -276,9 +276,9 @@
               l.createElement("img", {
                 className: (0, g.Z)(j().Button),
                 src: Y.Z,
-              })
-            )
-          )
+              }),
+            ),
+          ),
         );
       }
       function ae(e) {
@@ -299,7 +299,7 @@
                       console.error("Failed to copy link to clipboard:", e);
                   });
             },
-            [a]
+            [a],
           ),
           i = S.De.COMMUNITY_BASE_URL + "broadcast/watch/" + t;
         return l.createElement(
@@ -314,7 +314,7 @@
             l.createElement(
               "span",
               { className: Q().LinkInputLabel },
-              (0, T.Xx)("#EventDisplay_Share_Link")
+              (0, T.Xx)("#EventDisplay_Share_Link"),
             ),
             l.createElement("textarea", {
               className: Q().LinkInput,
@@ -332,11 +332,11 @@
                   l.createElement("img", {
                     className: Q().ClipboardIcon,
                     src: F.Z,
-                  })
-                )
-              )
+                  }),
+                ),
+              ),
           ),
-          l.createElement("div", { ref: s, className: Q().ClipboardText }, n)
+          l.createElement("div", { ref: s, className: Q().ClipboardText }, n),
         );
       }
       function ne(e, t) {
@@ -421,7 +421,7 @@
                         .BIsEmbeddedBroadcastHiddenByDefaultUserSettings()
                         ? "0vh"
                         : "100vh",
-                    }
+                    },
                   ),
                 }),
               yield this.props.bIsPreview &&
@@ -457,20 +457,20 @@
                 this.setState({
                   innerStyle: Object.assign(
                     Object.assign({}, this.state.innerStyle),
-                    { maxHeight: t ? "0vh" : "100vh" }
+                    { maxHeight: t ? "0vh" : "100vh" },
                   ),
                 }),
-              10
+              10,
             ),
             t ||
               this.setState({ bExpanded: !this.state.bExpanded }, () =>
-                I.ai.Get().SetEmbeddedStreamCollapsed(!this.state.bExpanded)
+                I.ai.Get().SetEmbeddedStreamCollapsed(!this.state.bExpanded),
               );
         }
         OnShrinkTransitionEnd() {
           "0vh" === this.state.innerStyle.maxHeight &&
             this.setState({ bExpanded: !1 }, () =>
-              I.ai.Get().SetEmbeddedStreamCollapsed(!0)
+              I.ai.Get().SetEmbeddedStreamCollapsed(!0),
             );
         }
         onStreamSelect(e) {
@@ -489,7 +489,7 @@
               .GetStreams(this.props)
               .filter(
                 (e) =>
-                  !this.props.fnFilterStreams || this.props.fnFilterStreams(e)
+                  !this.props.fnFilterStreams || this.props.fnFilterStreams(e),
               );
             yield I.ai.Get().PlayFromAvailableStreams(this.props, e, !0);
           });
@@ -506,7 +506,7 @@
             s = l.createElement(
               "div",
               { className: M().rightPanel },
-              l.createElement(_e, { key: "right" + r, ImgUrl: e.right_panel })
+              l.createElement(_e, { key: "right" + r, ImgUrl: e.right_panel }),
             ),
             o = l.createElement(_e, { key: "left" + r, ImgUrl: e.left_panel });
           if (r < 11) {
@@ -568,11 +568,11 @@
               (e = Object.assign(Object.assign({}, e), {
                 left_panel: a.GetImageURL(
                   "broadcast_left",
-                  n || (0, N.jM)(S.De.LANGUAGE)
+                  n || (0, N.jM)(S.De.LANGUAGE),
                 ),
                 right_panel: a.GetImageURL(
                   "broadcast_right",
-                  n || (0, N.jM)(S.De.LANGUAGE)
+                  n || (0, N.jM)(S.De.LANGUAGE),
                 ),
                 store_title: a.GetBroadcastTitle(n || (0, N.jM)(S.De.LANGUAGE)),
                 broadcast_chat_visibility: a.GetBroadcastChatVisibility(),
@@ -610,7 +610,7 @@
                     {
                       className: (0, g.Z)(
                         M().bordered_title,
-                        "bordered_title_trgt"
+                        "bordered_title_trgt",
                       ),
                     },
                     l.createElement(G.xP, null),
@@ -622,11 +622,11 @@
                         l.createElement("div", {
                           className: M().broadcast_settings_icon,
                           "data-tooltip-text": (0, T.Xx)(
-                            "#StoreBroadcast_Change_store_Broadcast_settings"
+                            "#StoreBroadcast_Change_store_Broadcast_settings",
                           ),
                           onClick: () =>
                             window.open(
-                              `${S.De.STORE_BASE_URL}account/preferences/#store_broadcast_settings`
+                              `${S.De.STORE_BASE_URL}account/preferences/#store_broadcast_settings`,
                             ),
                         }),
                       l.createElement("div", {
@@ -634,17 +634,17 @@
                           ? M().bordered_corner_expanded
                           : M().bordered_corner_shrinked,
                         "data-tooltip-text": (0, T.Xx)(
-                          "#StoreBroadcast_Hide_Tooltip"
+                          "#StoreBroadcast_Hide_Tooltip",
                         ),
                         onClick: this.ToggleBroadcastExpandShrink,
-                      })
+                      }),
                     ),
                     Boolean(e.gamedata_subtitle) &&
                       l.createElement(
                         "div",
                         { className: M().bordered_subtitle },
-                        e.gamedata_subtitle
-                      )
+                        e.gamedata_subtitle,
+                      ),
                   ),
                   Boolean(this.state.bExpanded) &&
                     l.createElement(
@@ -677,14 +677,14 @@
                           chatAnnouncementGivewayGID: s.rightPanel
                             ? void 0
                             : this.props.chat_announcement_giveaway,
-                        })
-                    )
+                        }),
+                    ),
                 ),
                 Boolean(
-                  a && a.jsondata && a.jsondata.broadcast_item_drops_enabled
+                  a && a.jsondata && a.jsondata.broadcast_item_drops_enabled,
                 ) && l.createElement(U, { event: a }),
-                l.createElement("div", { className: M().clear_div })
-              )
+                l.createElement("div", { className: M().clear_div }),
+              ),
             );
           }
           return l.createElement("div", { className: "NoBroadcastAvailable" });
@@ -706,7 +706,7 @@
         }
         CloseBroadcastPopup() {
           const e = D.c9.GetOrCreateBroadcastInfo(
-            this.props.stream.steamid
+            this.props.stream.steamid,
           ).m_nAppID;
           (0, I.wx)(e, 7, this.props.stream.snr),
             y() && y().AddEvent(1006),
@@ -762,11 +762,11 @@
                         this.props.fnRenderBroadcastContext,
                       fnOnVideoEnd: this.props.fnOnVideoEnd,
                       nAppIDVOD: this.props.stream.nAppIDVOD,
-                    })
-                  )
-                )
-              )
-            )
+                    }),
+                  ),
+                ),
+              ),
+            ),
           );
         }
       }
@@ -777,7 +777,8 @@
           r = ie.list.find(
             (e) =>
               e.appid == n &&
-              (!e.broadcasterAccountID || e.broadcasterAccountID == t.accountid)
+              (!e.broadcasterAccountID ||
+                e.broadcasterAccountID == t.accountid),
           );
         if (r) {
           let e = r.url;
@@ -790,7 +791,7 @@
             l.createElement(
               "a",
               { href: e },
-              (0, T.Xx)("#Broadcast_Embed_Watch_With_Frieds_SteamTV")
+              (0, T.Xx)("#Broadcast_Embed_Watch_With_Frieds_SteamTV"),
             )
           );
         }
@@ -804,8 +805,8 @@
             l.createElement(
               "a",
               { href: e, className: M().external_link },
-              l.createElement(A.dLw, null)
-            )
+              l.createElement(A.dLw, null),
+            ),
           );
         }
       }
@@ -816,18 +817,18 @@
         OnToggleChat(e) {
           e.preventDefault();
           const t = D.c9.GetOrCreateBroadcastInfo(
-            this.props.stream.steamid
+            this.props.stream.steamid,
           ).m_nAppID;
           (0, I.wx)(
             t,
             "show" === I.ai.Get().GetChatVisibility() ? 5 : 4,
-            this.props.stream.snr
+            this.props.stream.snr,
           ),
             I.ai.Get().ToggleChatVisibility();
         }
         onWatchBroadcastPage() {
           const e = D.c9.GetOrCreateBroadcastInfo(
-            this.props.stream.steamid
+            this.props.stream.steamid,
           ).m_nAppID;
           (0, I.wx)(e, 9, this.props.stream.snr);
         }
@@ -839,7 +840,7 @@
           Number.parseInt(
             "" +
               D.c9.GetOrCreateBroadcastInfo(this.props.stream.steamid)
-                .m_nViewerCount
+                .m_nViewerCount,
           );
           return l.createElement(
             "div",
@@ -847,7 +848,7 @@
             l.createElement(
               "div",
               { className: (0, g.Z)(M().viewer_count, "viewer_count") },
-              " "
+              " ",
             ),
             l.createElement(
               "div",
@@ -863,8 +864,8 @@
                       className: M().ChatToggle,
                       onClick: this.OnToggleChat,
                     },
-                    (0, T.Xx)("#sale_three_section_show_streams")
-                  )
+                    (0, T.Xx)("#sale_three_section_show_streams"),
+                  ),
                 ),
               e &&
                 l.createElement(
@@ -881,9 +882,9 @@
                     (0, T.Xx)(
                       t
                         ? "#sale_three_section_show_chat"
-                        : "#sale_three_section_hide_chat"
-                    )
-                  )
+                        : "#sale_three_section_hide_chat",
+                    ),
+                  ),
                 ),
               n &&
                 l.createElement(
@@ -900,17 +901,17 @@
                           l.createElement(ee, {
                             steamid: this.props.stream.steamid,
                           }),
-                          (0, re.RA)(e)
+                          (0, re.RA)(e),
                         ),
                     },
-                    (0, T.Xx)("#Broadcast_ShareBroadcast")
-                  )
+                    (0, T.Xx)("#Broadcast_ShareBroadcast"),
+                  ),
                 ),
               l.createElement(
                 k.HP,
                 {
                   toolTipContent: (0, T.Xx)(
-                    "#StoreBroadcast_Change_store_Broadcast_settings"
+                    "#StoreBroadcast_Change_store_Broadcast_settings",
                   ),
                 },
                 l.createElement(
@@ -922,16 +923,16 @@
                     target: S.De.IN_CLIENT ? void 0 : "_blank",
                     className: M().settings_link,
                   },
-                  l.createElement(A.Zrf, null)
-                )
+                  l.createElement(A.Zrf, null),
+                ),
               ),
-              a && l.createElement(me, Object.assign({}, this.props))
+              a && l.createElement(me, Object.assign({}, this.props)),
             ),
             Boolean(this.props.chatAnnouncementGivewayGID) &&
               l.createElement(oe.U, {
                 gidGiveaway: this.props.chatAnnouncementGivewayGID,
                 stream: this.props.stream,
-              })
+              }),
           );
         }
       };
@@ -949,7 +950,7 @@
                 className: M().side_panels,
                 src: this.props.ImgUrl,
               }),
-            !e && l.createElement("div", { className: M().side_panels })
+            !e && l.createElement("div", { className: M().side_panels }),
           );
         }
       }
@@ -964,24 +965,24 @@
             ? l.createElement(
                 h._,
                 { type: "app", id: a, className: M().PopOutVideoTitleText },
-                (0, T.Xx)("#StoreBroadcast_Detault_popout_Title")
+                (0, T.Xx)("#StoreBroadcast_Detault_popout_Title"),
               )
             : l.createElement(
                 "div",
                 { className: M().PopOutVideoTitleText },
-                (0, T.Xx)("#StoreBroadcast_Detault_popout_Title")
+                (0, T.Xx)("#StoreBroadcast_Detault_popout_Title"),
               ),
           l.createElement(
             "button",
             {
               className: M().PopOutVideoCloseButton,
               "data-tooltip-text": (0, T.Xx)(
-                "#StoreBroadcast_close_broadcast_popup"
+                "#StoreBroadcast_close_broadcast_popup",
               ),
               onClick: e.OnPreventPopup,
             },
-            l.createElement(A.X, null)
-          )
+            l.createElement(A.X, null),
+          ),
         );
       });
       function he(e, t) {
@@ -1051,7 +1052,7 @@
                 onStreamSelect: a,
                 bShowCapsuleArt: r,
               });
-            })
+            }),
           )
         );
       }
@@ -1064,7 +1065,7 @@
             bShowCapsuleArt: s,
           } = e,
           o = (0, i.SZ)(
-            () => D.c9.GetOrCreateBroadcastInfo(r.steamid).m_nAppID
+            () => D.c9.GetOrCreateBroadcastInfo(r.steamid).m_nAppID,
           ),
           [c] = (0, p.vs)(null !== (t = r.nAppIDVOD) && void 0 !== t ? t : o, {
             include_assets: !0,
@@ -1099,8 +1100,8 @@
                 bSelected: n,
                 strCapsuleArtURL: d,
               }),
-              n && l.createElement("div", { className: M().stream_icon_arrow })
-            )
+              n && l.createElement("div", { className: M().stream_icon_arrow }),
+            ),
           ),
           l.createElement(
             "div",
@@ -1111,10 +1112,10 @@
                   null,
                   l.createElement(A.lsH, null),
                   " ",
-                  (0, L.AV)(m)
+                  (0, L.AV)(m),
                 )
-              : u
-          )
+              : u,
+          ),
         );
       }
       function ge(e) {
@@ -1132,7 +1133,7 @@
             l.createElement(w.J, {
               className: (0, g.Z)(r, M().stream_icon_show_on_hover),
               srcs: e,
-            })
+            }),
           );
         }
         return l.createElement("img", { className: r, src: a });
@@ -1168,8 +1169,8 @@
                   watchLocation: 6,
                   steamID: o,
                   broadcastID: s,
-                })
-              )
+                }),
+              ),
             )
           : null;
       }
@@ -1189,11 +1190,11 @@
                 a(e),
               t && t(e)
             ),
-            [t, a]
+            [t, a],
           );
         return n.createElement(
           r.h,
-          Object.assign({}, e, { onPositionChange: s })
+          Object.assign({}, e, { onPositionChange: s }),
         );
       };
     },

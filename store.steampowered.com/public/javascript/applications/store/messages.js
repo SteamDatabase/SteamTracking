@@ -164,7 +164,7 @@
               info: t,
               bIsHovered: y,
               bHasParentAppToDisplay: D,
-            })
+            }),
           );
         return a.createElement(
           n.s,
@@ -196,16 +196,16 @@
                     fnOnHoverStateChange: !A && f,
                     nCreatorAccountID: e.creatorAccountID,
                   },
-                  G
+                  G,
                 ),
-            Boolean(c) && a.createElement("div", null, c)
+            Boolean(c) && a.createElement("div", null, c),
           ),
           D &&
             a.createElement(
               i.Ks,
               Object.assign(
                 { className: M().CapsuleParentInfo },
-                (0, B.h)(F, z, A, e.strExtraParams)
+                (0, B.h)(F, z, A, e.strExtraParams),
               ),
               a.createElement(
                 b.zw,
@@ -216,8 +216,8 @@
                   (0, C.Xx)(
                     11 == w.GetAppType()
                       ? "#SalePage_ParentApp_SoundTrack"
-                      : "#SalePage_ParentApp_DLC"
-                  )
+                      : "#SalePage_ParentApp_DLC",
+                  ),
                 ),
                 a.createElement(
                   E._,
@@ -235,12 +235,12 @@
                         alt: F.GetName(),
                         src: F.GetAssets().GetSmallCapsuleURL(),
                       },
-                      (0, s.fn)()
-                    )
-                  )
-                )
-              )
-            )
+                      (0, s.fn)(),
+                    ),
+                  ),
+                ),
+              ),
+            ),
         );
       }
       function k(e) {
@@ -265,14 +265,14 @@
             ((0, b.Dt)(r.type),
             (0, a.useMemo)(
               () => (null == T ? void 0 : T.GetIncludedAppIDsOrSelf()),
-              [T]
+              [T],
             )),
           z =
             T &&
             (null == T
               ? void 0
               : T.GetIncludedAppIDsOrSelf().every((e) =>
-                  c.jg.Get().BOwnsApp(e)
+                  c.jg.Get().BOwnsApp(e),
                 ));
         if (!T) return null;
         const A = z && !n,
@@ -321,7 +321,7 @@
                   : t.steam_deck_compat_category,
             }),
             Boolean(R && !(0, d.Hu)()) && a.createElement(v.v, { appInfo: r }),
-            P
+            P,
           )
         );
       }
@@ -345,13 +345,13 @@
           o = (0, i.id)(),
           c = a.useMemo(
             () => ({ setLegalText: l && !o ? r : void 0 }),
-            [l, r, o]
+            [l, r, o],
           );
         return a.createElement(
           n.Provider,
           { value: c },
           l && a.createElement(m, { strLegalText: t }),
-          e.children
+          e.children,
         );
       }
       function m(e) {
@@ -362,7 +362,7 @@
             (r.current = t),
               SteamClient.BrowserView.PostMessageToParent(
                 "MarketingMessageLegal",
-                t || ""
+                t || "",
               );
           }, [t]),
           a.useEffect(
@@ -371,10 +371,10 @@
                 "MarketingMessageDialogReady" == e &&
                   SteamClient.BrowserView.PostMessageToParent(
                     "MarketingMessageLegal",
-                    r.current
+                    r.current,
                   );
               }).unregister,
-            []
+            [],
           ),
           null
         );
@@ -475,7 +475,7 @@
                 });
               })(e, t);
             }),
-          { enabled: Boolean(e && e != B.kI) }
+          { enabled: Boolean(e && e != B.kI) },
         );
         return r.isSuccess ? r.data : null;
       }
@@ -526,7 +526,7 @@
             "video",
             Object.assign({}, l, { ref: u }),
             a.createElement("source", { src: c, type: "video/webm" }),
-            a.createElement("source", { src: m, type: "video/mp4" })
+            a.createElement("source", { src: m, type: "video/mp4" }),
           )
         );
       }
@@ -567,9 +567,9 @@
                     src: (0, G.et)(t.GetFeaturedVideoMP4URL()),
                     type: "video/mp4",
                   }),
-                a.createElement(N, { message: t })
+                a.createElement(N, { message: t }),
               )
-            : a.createElement(I, { message: t })
+            : a.createElement(I, { message: t }),
         );
       }
       function I(e) {
@@ -585,7 +585,7 @@
           a.Fragment,
           null,
           a.createElement("img", { src: l, className: P.Poster }),
-          a.createElement(D.GhU, null)
+          a.createElement(D.GhU, null),
         );
       }
       function N(e) {
@@ -612,7 +612,7 @@
                     srcLang: (0, s.dt)(e),
                     default: f.De.LANGUAGE == l,
                     label: (0, d.Xx)("#language_selection_" + (0, s.j_)(e)),
-                  })
+                  }),
                 );
               }
             }
@@ -642,9 +642,9 @@
               a.createElement(V, { bOverrideUseBackgroundImage: s }),
               Boolean(s) && a.createElement(O, null),
               a.createElement(H, null),
-              a.createElement("div", { style: { clear: "both" } })
-            )
-          )
+              a.createElement("div", { style: { clear: "both" } }),
+            ),
+          ),
         );
       }
       function j(e) {
@@ -657,8 +657,8 @@
             a.createElement(V, { isBackgroundBlur: !0 }),
             a.createElement(X, null),
             a.createElement(H, null),
-            a.createElement("div", { style: { clear: "both" } })
-          )
+            a.createElement("div", { style: { clear: "both" } }),
+          ),
         );
       }
       function U(e, t) {
@@ -668,10 +668,10 @@
           (0, n.h4)() && i.startsWith("https://store.steampowered.com")
             ? i.replace(
                 "https://store.steampowered.com",
-                "https://store.steamchina.com"
+                "https://store.steamchina.com",
               )
             : i),
-          t
+          t,
         );
         var i;
         return (
@@ -680,7 +680,7 @@
             (e) => {
               (0, A.RA)(e).location.href = s;
             },
-            [s]
+            [s],
           )
         );
       }
@@ -697,7 +697,7 @@
             className: (0, z.Z)(x.GameImage, t && x.IsBlur),
             onActivate: i,
           },
-          n && a.createElement(F, { message: s, path: n, eLanguage: l })
+          n && a.createElement(F, { message: s, path: n, eLanguage: l }),
         );
       }
       function X(e) {
@@ -723,7 +723,7 @@
             message: t,
             webmPath: o,
             language: i,
-          })
+          }),
         );
       }
       function H(e) {
@@ -733,7 +733,7 @@
           i = (0, L.SZ)(
             () =>
               r.GetTemplateVars().button_text_custom ||
-              r.GetTemplateVars().button_text
+              r.GetTemplateVars().button_text,
           );
         return a.createElement(
           "div",
@@ -749,11 +749,12 @@
                 className: x.Btn,
                 onActivate: s,
               },
-              i
+              i,
             ),
-            Boolean(!t) && a.createElement(S.SV, null, a.createElement($, null))
+            Boolean(!t) &&
+              a.createElement(S.SV, null, a.createElement($, null)),
           ),
-          a.createElement(Z, null)
+          a.createElement(Z, null),
         );
       }
       function $() {
@@ -767,7 +768,7 @@
           return a.createElement(
             "div",
             { className: x.MessagePriceCtn },
-            a.createElement(C.nk, { storeItem: e })
+            a.createElement(C.nk, { storeItem: e }),
           );
         }
         return a.createElement("div", { className: x.NoPrice });
@@ -810,13 +811,13 @@
                         null === (r = i.data) || void 0 === r
                           ? void 0
                           : r.err_msg
-                      }`
+                      }`,
                     );
                   return i.data.count;
                 });
               })(e);
             }),
-          { enabled: Boolean(e && e != B.kI) }
+          { enabled: Boolean(e && e != B.kI) },
         );
         return t || r ? null : a;
       }
@@ -830,13 +831,13 @@
               s.GetDLCAppIDs(),
               s.GetDLCAppIDs().map((e) => ({ id: e, type: "game" })),
             ],
-            [s]
+            [s],
           );
         (0, o.wZ)(i, Q);
         const l = J(
           null === (t = null == s ? void 0 : s.associated_item) || void 0 === t
             ? void 0
-            : t.GetAppID()
+            : t.GetAppID(),
         );
         return (
           (0, a.useEffect)(() => {
@@ -846,7 +847,7 @@
                 : (0, d.Xx)("#MarketingMessages_See_All_Items");
               s.OverrideCustomText(e),
                 s.OverrideURL(
-                  `${f.De.STORE_BASE_URL}dlc/${s.associated_item.GetAppID()}`
+                  `${f.De.STORE_BASE_URL}dlc/${s.associated_item.GetAppID()}`,
                 );
             }
           }, [s, l]),
@@ -860,7 +861,7 @@
                 "div",
                 { className: _.BackgroundImage },
                 a.createElement(te, { storeItem: s.associated_item }),
-                a.createElement(te, { storeItem: s.associated_item })
+                a.createElement(te, { storeItem: s.associated_item }),
               ),
               a.createElement(ee, {
                 storeItem: s.associated_item,
@@ -871,8 +872,8 @@
                 messageType: s.GetType(),
               }),
               a.createElement(H, { bHidePrice: !0 }),
-              a.createElement("div", { style: { clear: "both" } })
-            )
+              a.createElement("div", { style: { clear: "both" } }),
+            ),
           )
         );
       }
@@ -899,7 +900,7 @@
           a.createElement(
             "div",
             { className: _.CapsuleCtn },
-            a.createElement(u.N, { info: s, bPreferLibrary: !0 })
+            a.createElement(u.N, { info: s, bPreferLibrary: !0 }),
           ),
           a.createElement(
             "div",
@@ -907,7 +908,7 @@
             a.createElement(
               "div",
               { className: _.GameNameCtn },
-              a.createElement("div", { className: _.GameName }, t.GetName())
+              a.createElement("div", { className: _.GameName }, t.GetName()),
             ),
             a.createElement(
               "div",
@@ -921,8 +922,8 @@
                     href: "steam://nav/games/details/" + t.GetID(),
                     className: _.Button,
                   },
-                  (0, d.Xx)("#EventDisplay_ViewInLibrary")
-                )
+                  (0, d.Xx)("#EventDisplay_ViewInLibrary"),
+                ),
               ),
               Boolean(null == n ? void 0 : n.rtime_last_played) &&
                 a.createElement(
@@ -931,9 +932,9 @@
                   a.createElement(
                     "span",
                     null,
-                    (0, d.Xx)("#MarketingMessages_DLC_lastplayed")
+                    (0, d.Xx)("#MarketingMessages_DLC_lastplayed"),
                   ),
-                  (0, d.m9)(n.rtime_last_played)
+                  (0, d.m9)(n.rtime_last_played),
                 ),
               Boolean(null == n ? void 0 : n.playtime_forever) &&
                 a.createElement(
@@ -942,12 +943,12 @@
                   a.createElement(
                     "span",
                     null,
-                    (0, d.Xx)("#MarketingMessages_DLC_hours")
+                    (0, d.Xx)("#MarketingMessages_DLC_hours"),
                   ),
-                  (0, w.W)(n.playtime_forever)
-                )
-            )
-          )
+                  (0, w.W)(n.playtime_forever),
+                ),
+            ),
+          ),
         );
       }
       function te(e) {
@@ -964,25 +965,25 @@
             a.createElement(
               "div",
               { className: _.Type },
-              (0, d.Xx)("#spotlight_weekend_deal")
+              (0, d.Xx)("#spotlight_weekend_deal"),
             ),
           Boolean(11 === t) &&
             a.createElement(
               "div",
               { className: _.Type },
-              (0, d.Xx)("#spotlight_midweek_madness")
+              (0, d.Xx)("#spotlight_midweek_madness"),
             ),
           Boolean(12 === t) &&
             a.createElement(
               "div",
               { className: _.Type },
-              (0, d.Xx)("#spotlight_daily_deal")
+              (0, d.Xx)("#spotlight_daily_deal"),
             ),
           a.createElement(
             "div",
             { className: _.DealDesc },
-            (0, d.Xx)("#MarketingMessages_DLC_desc")
-          )
+            (0, d.Xx)("#MarketingMessages_DLC_desc"),
+          ),
         );
       }
       function ae(e) {
@@ -993,7 +994,7 @@
               { className: _.DlcCtn },
               a.createElement(re, { messageType: r }),
               a.createElement(se, { first: t[0], second: t[1] }),
-              a.createElement(se, { first: t[2], second: t[3] })
+              a.createElement(se, { first: t[2], second: t[3] }),
             )
           : t.length >= 3
           ? a.createElement(
@@ -1003,9 +1004,9 @@
               a.createElement(
                 "div",
                 { className: _.OneItemRow },
-                a.createElement(c.ju, { id: t[0].id, type: t[0].type })
+                a.createElement(c.ju, { id: t[0].id, type: t[0].type }),
               ),
-              a.createElement(se, { first: t[1], second: t[2] })
+              a.createElement(se, { first: t[1], second: t[2] }),
             )
           : t.length >= 2
           ? a.createElement(
@@ -1015,13 +1016,13 @@
               a.createElement(
                 "div",
                 { className: _.OneItemRow },
-                a.createElement(c.ju, { id: t[0].id, type: t[0].type })
+                a.createElement(c.ju, { id: t[0].id, type: t[0].type }),
               ),
               a.createElement(
                 "div",
                 { className: _.OneItemRow },
-                a.createElement(c.ju, { id: t[1].id, type: t[1].type })
-              )
+                a.createElement(c.ju, { id: t[1].id, type: t[1].type }),
+              ),
             )
           : t.length >= 1
           ? a.createElement(
@@ -1036,8 +1037,8 @@
                   imageType: "main",
                   bShowParentApp: !1,
                   bHideStoreHover: !0,
-                })
-              )
+                }),
+              ),
             )
           : null;
       }
@@ -1054,7 +1055,7 @@
               imageType: "header",
               bShowParentApp: !1,
               bHideStoreHover: !0,
-            })
+            }),
           ),
           a.createElement(
             "div",
@@ -1064,8 +1065,8 @@
               imageType: "header",
               bShowParentApp: !1,
               bHideStoreHover: !0,
-            })
-          )
+            }),
+          ),
         );
       }
       const ie = a.createContext(null);
@@ -1086,8 +1087,8 @@
             a.createElement(
               a.Suspense,
               { fallback: null },
-              a.createElement(ce, { message: t, active: s, preview: r })
-            )
+              a.createElement(ce, { message: t, active: s, preview: r }),
+            ),
           )
         );
       }
@@ -1122,7 +1123,7 @@
           return {
             bIncludeSeenMessages: !!t.get("include_seen"),
             nClientPackageVersion: parseInt(
-              t.get("client_package_version") || "0"
+              t.get("client_package_version") || "0",
             ),
             eOSType: parseInt(t.get("os_type") || "0"),
             bLowBandwidthMode: !!t.get("low_bandwidth"),
@@ -1136,7 +1137,7 @@
           e.nClientPackageVersion &&
             t.append(
               "client_package_version",
-              e.nClientPackageVersion.toString()
+              e.nClientPackageVersion.toString(),
             ),
           e.eOSType && t.append("os_type", e.eOSType.toString()),
           e.bLowBandwidthMode && t.append("low_bandwidth", "1"),
@@ -2293,7 +2294,7 @@
             "MarketingMessages.GetActiveMarketingMessages#1",
             t,
             y,
-            { bConstMethod: !0, ePrivilege: 0, eWebAPIKeyRequirement: 1 }
+            { bConstMethod: !0, ePrivilege: 0, eWebAPIKeyRequirement: 1 },
           );
         }),
           (e.GetMarketingMessagesForUser = function (e, t) {
@@ -2301,7 +2302,7 @@
               "MarketingMessages.GetMarketingMessagesForUser#1",
               t,
               b,
-              { bConstMethod: !0, ePrivilege: 1 }
+              { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
           (e.DoesUserHavePendingMarketingMessages = function (e, t) {
@@ -2309,7 +2310,7 @@
               "MarketingMessages.DoesUserHavePendingMarketingMessages#1",
               t,
               E,
-              { bConstMethod: !0, ePrivilege: 1 }
+              { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
           (e.GetDisplayMarketingMessage = function (e, t) {
@@ -2317,7 +2318,7 @@
               "MarketingMessages.GetDisplayMarketingMessage#1",
               t,
               h,
-              { bConstMethod: !0, ePrivilege: 0, eWebAPIKeyRequirement: 1 }
+              { bConstMethod: !0, ePrivilege: 0, eWebAPIKeyRequirement: 1 },
             );
           }),
           (e.GetDisplayMarketingMessageAdmin = function (e, t) {
@@ -2325,14 +2326,14 @@
               "MarketingMessages.GetDisplayMarketingMessageAdmin#1",
               t,
               h,
-              { bConstMethod: !0, ePrivilege: 4 }
+              { bConstMethod: !0, ePrivilege: 4 },
             );
           }),
           (e.MarkMessageSeen = function (e, t) {
             return e.SendNotification(
               "MarketingMessages.MarkMessageSeen#1",
               t,
-              { ePrivilege: 1 }
+              { ePrivilege: 1 },
             );
           }),
           (e.GetMarketingMessage = function (e, t) {
@@ -2346,7 +2347,7 @@
               "MarketingMessages.CreateMarketingMessage#1",
               t,
               T,
-              { ePrivilege: 4 }
+              { ePrivilege: 4 },
             );
           }),
           (e.UpdateMarketingMessage = function (e, t) {
@@ -2354,7 +2355,7 @@
               "MarketingMessages.UpdateMarketingMessage#1",
               t,
               F,
-              { ePrivilege: 4 }
+              { ePrivilege: 4 },
             );
           }),
           (e.DeleteMarketingMessage = function (e, t) {
@@ -2362,7 +2363,7 @@
               "MarketingMessages.DeleteMarketingMessage#1",
               t,
               k,
-              { ePrivilege: 4 }
+              { ePrivilege: 4 },
             );
           }),
           (e.FindMarketingMessages = function (e, t) {
@@ -2370,7 +2371,7 @@
               "MarketingMessages.FindMarketingMessages#1",
               t,
               R,
-              { ePrivilege: 4 }
+              { ePrivilege: 4 },
             );
           }),
           (e.GetMarketingMessageViewerStats = function (e, t) {
@@ -2378,7 +2379,7 @@
               "MarketingMessages.GetMarketingMessageViewerStats#1",
               t,
               A,
-              { ePrivilege: 4 }
+              { ePrivilege: 4 },
             );
           }),
           (e.GetMarketingMessagesViewerRangeStats = function (e, t) {
@@ -2386,7 +2387,7 @@
               "MarketingMessages.GetMarketingMessagesViewerRangeStats#1",
               t,
               D,
-              { ePrivilege: 4 }
+              { ePrivilege: 4 },
             );
           });
       })(G || (G = {}));
@@ -2424,7 +2425,7 @@
               (0, O.De)(r, L.sm_DefaultDataRequest);
             const a = yield G.GetMarketingMessagesForUser(
               this.m_SteamInterface.GetServiceTransport(),
-              r
+              r,
             );
             if (1 != a.GetEResult())
               throw `Error loading marketing messages: ${a.GetEResult()}`;
@@ -2446,11 +2447,11 @@
               (a = t
                 ? yield G.GetDisplayMarketingMessageAdmin(
                     this.m_SteamInterfacePromotions.GetServiceTransport(),
-                    r
+                    r,
                   )
                 : yield G.GetDisplayMarketingMessage(
                     this.m_SteamInterface.GetAnonymousServiceTransport(),
-                    r
+                    r,
                   )),
               1 != a.GetEResult())
             )
@@ -2478,7 +2479,7 @@
             e.associated_item() &&
               (this.m_item = new I.Z(
                 e.associated_item(),
-                L.sm_DefaultDataRequest
+                L.sm_DefaultDataRequest,
               )),
             (this.m_templateVars = (function (e) {
               if (!e) return null;
@@ -2500,7 +2501,7 @@
                 "dev" == P.De.WEB_UNIVERSE &&
                   console.error(
                     "MarketingMessageReadAndParseTemplateVars: Failed to prase",
-                    e
+                    e,
                   );
               }
               return null;
@@ -2624,11 +2625,11 @@
           } = (0, c.useQuery)(
             ["MarketingMessages", "List", i, { bIncludeSeenMessages: !!a }],
             () => e.GetMessageList(i, a),
-            r
+            r,
           ),
           u = s.useMemo(
             () => (null == n ? void 0 : n.map((e) => new W(e.message()))),
-            [n]
+            [n],
           );
         return { rgMessages: l ? null : u, isError: m };
       }
@@ -2664,9 +2665,9 @@
                       search: (0, X.j4)(
                         Object.assign(Object.assign({}, r), {
                           bIncludeSeenMessages: !0,
-                        })
+                        }),
                       ),
-                    })
+                    }),
                   ));
           }, [a, r, u, n]),
           n)
@@ -2674,13 +2675,13 @@
           return s.createElement(
             ie,
             null,
-            (0, V.Xx)("#Error_ErrorCommunicatingWithNetwork")
+            (0, V.Xx)("#Error_ErrorCommunicatingWithNetwork"),
           );
         if (l)
           return s.createElement(
             ie,
             null,
-            (0, V.Xx)("#MarketingMessages_NoneAvailable")
+            (0, V.Xx)("#MarketingMessages_NoneAvailable"),
           );
         const g = r.bIncludeSeenMessages
           ? a
@@ -2697,13 +2698,13 @@
               MarketingMessagesStore: t,
               rgMessages: g,
               iActiveMessage: c,
-            })
+            }),
           ),
           s.createElement(re, {
             cMessages: null == g ? void 0 : g.length,
             iMessage: c,
             setMessage: m,
-          })
+          }),
         );
       }
       function te(e) {
@@ -2726,13 +2727,13 @@
                       MarketingMessagesStore: t,
                       active: r == a,
                       next: r == a + 1 || r == a - 1,
-                    })
-                  )
+                    }),
+                  ),
             )
           : s.createElement(
               "div",
               { className: (0, Z.Z)(H.MessageListContainer, H.Loading) },
-              s.createElement(J.V, { size: "xxlarge", msDelayAppear: 500 })
+              s.createElement(J.V, { size: "xxlarge", msDelayAppear: 500 }),
             );
       }
       function re(e) {
@@ -2747,7 +2748,7 @@
               active: e == r,
               iMessage: e,
               setMessage: a,
-            })
+            }),
           );
         const o = r > 0 ? i : void 0,
           c = r < t - 1 ? n : void 0;
@@ -2764,22 +2765,22 @@
               s.createElement(
                 "div",
                 { className: (0, Z.Z)(H.LeftArrow, o && H.Active), onClick: o },
-                s.createElement($.BKy, { angle: 180 })
+                s.createElement($.BKy, { angle: 180 }),
               ),
               s.createElement("div", { className: H.Spacer }),
               s.createElement(
                 "div",
                 { className: H.PipContainer },
-                s.createElement("div", { className: H.Pips }, l)
+                s.createElement("div", { className: H.Pips }, l),
               ),
               s.createElement("div", { className: H.Spacer }),
               s.createElement(
                 "div",
                 { className: (0, Z.Z)(H.LeftArrow, c && H.Active), onClick: c },
-                s.createElement($.BKy, { angle: 0 })
-              )
-            )
-          )
+                s.createElement($.BKy, { angle: 0 }),
+              ),
+            ),
+          ),
         );
       }
       function ae(e) {
@@ -2797,7 +2798,7 @@
             const { data: a, isError: i } = (0, c.useQuery)(
               ["MarketingMessages", r ? "SinglePreivew" : "Single", t],
               () => e.GetSingleMessage(t, r),
-              { enabled: !!t }
+              { enabled: !!t },
             );
             return {
               message: s.useMemo(() => {
@@ -2807,7 +2808,7 @@
                   if (r) {
                     const r = (0, P.kQ)(
                       "marketingmessage_preview_config",
-                      "application_config"
+                      "application_config",
                     );
                     (null ===
                       (e = null == r ? void 0 : r.dlc_appid_overrides) ||
@@ -2828,7 +2829,7 @@
             ? s.createElement(
                 ie,
                 null,
-                (0, V.Xx)("#Error_ErrorCommunicatingWithNetwork")
+                (0, V.Xx)("#Error_ErrorCommunicatingWithNetwork"),
               )
             : a.params.messageid
             ? n
@@ -2837,7 +2838,7 @@
             : s.createElement(
                 ie,
                 null,
-                (0, V.Xx)("#MarketingMessages_NoneAvailable")
+                (0, V.Xx)("#MarketingMessages_NoneAvailable"),
               )
         );
       }
@@ -2846,7 +2847,7 @@
           U.VY,
           { style: { maxWidth: "400px", margin: "0 auto" } },
           s.createElement(U.h4, null, (0, V.Xx)("#Error_Generic"), " "),
-          s.createElement(U.uT, null, e.children)
+          s.createElement(U.uT, null, e.children),
         );
       }
       function ne(e) {
@@ -2891,8 +2892,8 @@
           s.createElement(
             "div",
             { className: (0, Z.Z)(H.MessageWrapper, a && H.Active), ref: l },
-            s.createElement(Q.v, { message: t, active: a })
-          )
+            s.createElement(Q.v, { message: t, active: a }),
+          ),
         );
       }
       var le = r(27070),
@@ -2916,7 +2917,7 @@
                     if (!de) {
                       const t = (0, P.kQ)(
                         "marketingmessage_config",
-                        "application_config"
+                        "application_config",
                       );
                       if (
                         ((de = new L(e)),
@@ -2924,13 +2925,13 @@
                       ) {
                         const e = new oe.J(
                           P.De.WEBAPI_BASE_URL,
-                          t.promotion_operation_token
+                          t.promotion_operation_token,
                         );
                         de.SetSteamInterfacePromotions(e);
                       }
                     }
                     return de;
-                  })(r)
+                  })(r),
                 );
             }, [e, r]),
             e
@@ -2956,7 +2957,7 @@
                     s.createElement(
                       i.AW,
                       { path: `${ue.List()}` },
-                      s.createElement(ee, { MarketingMessagesStore: t })
+                      s.createElement(ee, { MarketingMessagesStore: t }),
                     ),
                     s.createElement(
                       i.AW,
@@ -2964,21 +2965,21 @@
                       s.createElement(se, {
                         MarketingMessagesStore: t,
                         preview: !0,
-                      })
+                      }),
                     ),
                     s.createElement(
                       i.AW,
                       { path: `${ue.Message(":messageid")}` },
-                      s.createElement(se, { MarketingMessagesStore: t })
+                      s.createElement(se, { MarketingMessagesStore: t }),
                     ),
                     s.createElement(
                       i.AW,
                       null,
-                      s.createElement(i.l_, { to: `${ue.List()}` })
-                    )
-                  )
-                )
-              )
+                      s.createElement(i.l_, { to: `${ue.List()}` }),
+                    ),
+                  ),
+                ),
+              ),
             )
           : null;
       }

@@ -227,8 +227,8 @@
                       super.AppendNode(
                         this.m_mapHostToComponent[e].fnBBComponent(
                           i,
-                          this.m_globalStoreLink
-                        )
+                          this.m_globalStoreLink,
+                        ),
                       );
                     break;
                   }
@@ -259,8 +259,8 @@
                 i.createElement(
                   a.tk,
                   { emoticonHoverStore: n.$, emoticon: o },
-                  []
-                )
+                  [],
+                ),
               ),
                 (r = e.input.substr(e.index + o.length + 2)),
                 (e = this.m_EmoteRegex.exec(r));
@@ -329,9 +329,9 @@
               nMaxCapsulesPerRow: Math.min(
                 Math.max(
                   Math.floor(window.innerWidth / r.nItemMinimumWidth),
-                  1
+                  1,
                 ),
-                r.nMaxItemsPerRow
+                r.nMaxItemsPerRow,
               ),
               bScreenIsWide: t,
             };
@@ -342,7 +342,7 @@
           ? t.nMaxItemsPerRow
           : Math.min(
               Math.max(Math.floor(window.innerWidth / t.nItemMinimumWidth), 1),
-              t.nMaxItemsPerRow
+              t.nMaxItemsPerRow,
             );
       }
     },
@@ -375,7 +375,7 @@
             this.GetTokenList(r),
             "english" != r ? this.GetTokenList("english") : null,
             this.m_appid,
-            t
+            t,
           );
         }
         SubstituteParams(e, t) {
@@ -385,7 +385,7 @@
             this.GetTokenList(r),
             "english" != r ? this.GetTokenList("english") : null,
             this.m_appid,
-            t
+            t,
           );
         }
       }
@@ -410,7 +410,7 @@
               "Tokens:",
               t,
               "Fallback:",
-              r
+              r,
             ),
           t && 1 != l.De.EUNIVERSE)
         )
@@ -468,7 +468,7 @@
             return (
               (0, h.X)(
                 !1,
-                "Registering for callback on appinfo load, but nothing queued"
+                "Registering for callback on appinfo load, but nothing queued",
               ),
               void e()
             );
@@ -481,7 +481,7 @@
           if (
             ((0, h.X)(
               this.m_CMInterface,
-              "CAppInfoStore.GetAppInfo called before Init"
+              "CAppInfoStore.GetAppInfo called before Init",
             ),
             !this.m_mapAppInfo.has(e))
           ) {
@@ -494,7 +494,7 @@
           return e
             ? (this.m_setPendingAppInfo.size ||
                 ((this.m_PendingAppInfoPromise = new Promise(
-                  (e) => (this.m_PendingAppInfoResolve = e)
+                  (e) => (this.m_PendingAppInfoResolve = e),
                 )),
                 window.setTimeout(() => this.FlushPendingAppInfo(), 25)),
               this.m_setPendingAppInfo.add(e),
@@ -528,13 +528,13 @@
                 (t = t.slice(i)), e.Body().set_appids(n);
                 const a = yield u.AE.GetApps(
                   this.m_CMInterface.GetServiceTransport(),
-                  e
+                  e,
                 );
                 1 == a.GetEResult()
                   ? this.OnGetAppsResponse(a)
                   : console.error(
                       `Error when calling CommunityService.GetApps: EResult=${a.GetEResult()}, AppIDs:`,
-                      n
+                      n,
                     );
               }
             }
@@ -550,7 +550,7 @@
             let e = this.m_mapAppInfo.get(r.appid());
             (0, h.X)(
               e,
-              `Got AppInfo response for unrequested AppID: ${r.appid()}`
+              `Got AppInfo response for unrequested AppID: ${r.appid()}`,
             ),
               e &&
                 ((e = new s.Am(r.appid())),
@@ -600,14 +600,14 @@
               r = (e) =>
                 (0, i.mG)(this, void 0, void 0, function* () {
                   const r = yield this.m_CacheStorage.GetObject(
-                    this.GetCacheKeyForAppID(e)
+                    this.GetCacheKeyForAppID(e),
                   );
                   if (!r) return e;
                   let i = this.m_mapAppInfo.get(e);
                   return (
                     (0, h.X)(
                       i,
-                      "Didn't find AppInfo in our map when loading from cache but it should've been there?"
+                      "Didn't find AppInfo in our map when loading from cache but it should've been there?",
                     ),
                     i
                       ? ((i = new s.Am(e)),
@@ -618,7 +618,7 @@
                           : (console.warn(
                               "Failed to deserialize cached App Info: ",
                               e,
-                              r
+                              r,
                             ),
                             e))
                       : e
@@ -633,14 +633,14 @@
             if (this.m_CacheStorage) {
               console.log(
                 "Saving batch of App Info to Local Cache: ",
-                e.map((e) => e.appid)
+                e.map((e) => e.appid),
               );
               for (const t of e) {
                 const e = t.SerializeToCacheObject();
                 e &&
                   this.m_CacheStorage.StoreObject(
                     this.GetCacheKeyForAppID(t.appid),
-                    e
+                    e,
                   );
               }
             }
@@ -652,7 +652,7 @@
             ? i.Localize(t, r)
             : 1 != l.De.EUNIVERSE
             ? (console.log(
-                `Unable to find app localization information for app ${e} token ${t}, this may not have had a chance to load yet`
+                `Unable to find app localization information for app ${e} token ${t}, this may not have had a chance to load yet`,
               ),
               t)
             : "";
@@ -701,7 +701,7 @@
                     t.Body().set_language(l.De.LANGUAGE),
                     u.AE.GetAppRichPresenceLocalization(
                       this.m_CMInterface.GetServiceTransport(),
-                      t
+                      t,
                     )
                   );
                 })
@@ -712,10 +712,10 @@
                       ? Promise.reject()
                       : (this.OnRichPresenceLocUpdate(
                           e,
-                          t.Body().token_lists()
+                          t.Body().token_lists(),
                         ),
                         Promise.resolve(e))
-                  )
+                  ),
                 )),
               e.m_fetching.catch(() => {
                 e.m_fetching = null;
@@ -1779,7 +1779,7 @@
             const t = `${
               n.De.COMMUNITY_CDN_URL
             }economy/emoticonhoverjson/${encodeURIComponent(
-              e
+              e,
             )}?l=${encodeURIComponent(n.De.LANGUAGE)}&origin=${(0, n.Kc)()}`;
             this.m_inflightRequests[e] = !0;
             try {
@@ -1849,7 +1849,7 @@
               this.m_mapDefIDToPromise.has(e) ||
                 this.m_mapDefIDToPromise.set(
                   e,
-                  this.InternalLoadRewardDefinition(e)
+                  this.InternalLoadRewardDefinition(e),
                 ),
               this.m_mapDefIDToPromise.get(e)
             );
@@ -1866,7 +1866,7 @@
             try {
               const a = yield s.pQ.QueryRewardItems(
                 this.m_SteamInterface.GetServiceTransport(),
-                i
+                i,
               );
               if (
                 1 == a.GetEResult() &&
@@ -1883,7 +1883,7 @@
                     null === (n = a.Body().definitions()) || void 0 === n
                       ? void 0
                       : n.length
-                  }, expecting exactly one.`
+                  }, expecting exactly one.`,
                 );
                 const t = a.Body().definitions()[0].toObject();
                 return (
@@ -1900,7 +1900,7 @@
               console.error(
                 "CLoyaltyRewardDefinitionStore.LoadRewardDefinition failed: " +
                   (null == o ? void 0 : o.strErrorMsg),
-                o
+                o,
               ),
               null
             );
@@ -1913,7 +1913,7 @@
               this.m_mapCategoryAndClassToPromise.has(r) ||
                 this.m_mapCategoryAndClassToPromise.set(
                   r,
-                  this.InternalLoadRewardDefinitionByCategoryAndClass(e, t)
+                  this.InternalLoadRewardDefinitionByCategoryAndClass(e, t),
                 ),
               this.m_mapCategoryAndClassToPromise.get(r)
             );
@@ -1932,7 +1932,7 @@
             try {
               const a = yield s.pQ.QueryRewardItems(
                 this.m_SteamInterface.GetServiceTransport(),
-                n
+                n,
               );
               if (
                 1 == a.GetEResult() &&
@@ -1955,7 +1955,7 @@
                   ("dev" != p.De.WEB_UNIVERSE && "beta" != p.De.WEB_UNIVERSE) ||
                     console.log(
                       "CLoyaltyRewardDefinitionStore.LoadRewardDefinitionByCategoryAndClass loaded " +
-                        r.length
+                        r.length,
                     ),
                   r
                 );
@@ -1968,7 +1968,7 @@
               console.error(
                 "CLoyaltyRewardDefinitionStore.LoadRewardDefinitionByCategoryAndClass failed: " +
                   (null == o ? void 0 : o.strErrorMsg),
-                o
+                o,
               ),
               null
             );
@@ -2009,7 +2009,7 @@
       }
       function _(e, t) {
         const [r, i] = (0, n.useState)(
-          u.Get().GetItemsByCategoryAndClass(e, t)
+          u.Get().GetItemsByCategoryAndClass(e, t),
         );
         return (
           (0, n.useEffect)(() => {
@@ -2076,12 +2076,12 @@
                     e,
                     null === (n = null == p ? void 0 : p.data) || void 0 === n
                       ? void 0
-                      : n.registration
+                      : n.registration,
                   ),
                   this.GetRegistrationChangeCallback(e).Dispatch(
                     null === (o = null == p ? void 0 : p.data) || void 0 === o
                       ? void 0
-                      : o.registration
+                      : o.registration,
                   ),
                   null === (l = null == p ? void 0 : p.data) || void 0 === l
                     ? void 0
@@ -2097,7 +2097,7 @@
                   e +
                   " error: " +
                   (null == i ? void 0 : i.strErrorMsg),
-                i
+                i,
               ),
               { registered: !1 }
             );
@@ -2108,7 +2108,7 @@
             this.m_mapCreatePromises.has(e) ||
               this.m_mapCreatePromises.set(
                 e,
-                this.InternalCreateRegistration(e)
+                this.InternalCreateRegistration(e),
               ),
             this.m_mapCreatePromises.get(e)
           );
@@ -2138,12 +2138,12 @@
                     e,
                     null === (n = null == p ? void 0 : p.data) || void 0 === n
                       ? void 0
-                      : n.registration
+                      : n.registration,
                   ),
                   this.GetRegistrationChangeCallback(e).Dispatch(
                     null === (o = null == p ? void 0 : p.data) || void 0 === o
                       ? void 0
-                      : o.registration
+                      : o.registration,
                   ),
                   null === (l = null == p ? void 0 : p.data) || void 0 === l
                     ? void 0
@@ -2159,7 +2159,7 @@
                   e +
                   " error: " +
                   (null == i ? void 0 : i.strErrorMsg),
-                i
+                i,
               ),
               { registered: !1 }
             );
@@ -2236,7 +2236,7 @@
               ? (this.m_mapPromises.has(e) ||
                   this.m_mapPromises.set(
                     e,
-                    this.InternalLoadCommunityInventory(e)
+                    this.InternalLoadCommunityInventory(e),
                   ),
                 this.m_mapPromises.get(e))
               : 2;
@@ -2250,7 +2250,7 @@
             try {
               const i = yield s.Ts.GetCommunityInventory(
                 this.m_SteamInterface.GetServiceTransport(),
-                t
+                t,
               );
               if (1 == i.GetEResult()) {
                 const t = new Array();
@@ -2274,7 +2274,7 @@
                   e +
                   " error: " +
                   (null == r ? void 0 : r.strErrorMsg),
-                r
+                r,
               ),
               2
             );
@@ -2300,7 +2300,7 @@
           const e = (0, p.kQ)("read_inventory_token", "application_config");
           (0, l.X)(
             e,
-            "CQuestCommunityInventoryStore: missing read_inventory:steam oauth permission"
+            "CQuestCommunityInventoryStore: missing read_inventory:steam oauth permission",
           ),
             (this.m_SteamInterface = new o.J(p.De.WEBAPI_BASE_URL, e));
         }
@@ -2387,12 +2387,12 @@
               t.Body().set_activate(!0);
             const r = yield h.Ts.ActivateProfileModifierItem(
               this.m_SteamInterface.GetServiceTransport(),
-              t
+              t,
             );
             return (
               1 != r.GetEResult() &&
                 console.error(
-                  `Error when calling QuestService.ActivateProfileModifierItem: EResult=${r.GetEResult()}`
+                  `Error when calling QuestService.ActivateProfileModifierItem: EResult=${r.GetEResult()}`,
                 ),
               r.GetEResult()
             );
@@ -2411,29 +2411,31 @@
         InternalLoadCanUserClaimItem() {
           var e, t, r;
           return (0, i.mG)(this, void 0, void 0, function* () {
-            (0,
-            s.X)(l.L7.logged_in, "User must be logged to use CSaleItemClaimableRewardsStore");
+            (0, s.X)(
+              l.L7.logged_in,
+              "User must be logged to use CSaleItemClaimableRewardsStore",
+            );
             const i = n.gA.Init(o.FE);
             i.Body().set_language(l.De.LANGUAGE);
             let a = null;
             try {
               const n = yield o.tE.CanClaimItem(
                 this.m_SteamInterface.GetServiceTransport(),
-                i
+                i,
               );
               if (1 == n.GetEResult())
                 return (
                   (this.m_claimedFreeItemDef = Boolean(
                     null === (e = n.Body().reward_item()) || void 0 === e
                       ? void 0
-                      : e.defid()
+                      : e.defid(),
                   )
                     ? n.Body().reward_item().toObject()
                     : null),
                   (this.m_claimState = {
                     bCanClaimNewItem: n.Body().can_claim(),
                     bAlreadyClaimedCurrentItem: Boolean(
-                      this.m_claimedFreeItemDef
+                      this.m_claimedFreeItemDef,
                     ),
                     appid:
                       null === (t = this.m_claimedFreeItemDef) || void 0 === t
@@ -2451,7 +2453,7 @@
                   (this.m_rtNextClaimTime = n.Body().next_claim_time()),
                   this.SetClaimTimer(),
                   this.GetClaimStateChangeCallback().Dispatch(
-                    this.m_claimState
+                    this.m_claimState,
                   ),
                   this.m_claimState
                 );
@@ -2463,7 +2465,7 @@
               console.error(
                 "CSaleItemClaimableRewardsStore.InternalLoadCanUserClaimItem failed: error: " +
                   (null == a ? void 0 : a.strErrorMsg),
-                a
+                a,
               ),
               { bCanClaimNewItem: !1, bAlreadyClaimedCurrentItem: !1 }
             );
@@ -2475,7 +2477,7 @@
               this.m_testNextClaimFakeResponse &&
                 (console.log(
                   "CSaleItemClaimableRewardsStore - testing, pretending claim action succeeded",
-                  (0, u.ZN)(this.m_testNextClaimFakeResponse)
+                  (0, u.ZN)(this.m_testNextClaimFakeResponse),
                 ),
                 (this.m_claimState = this.m_testNextClaimFakeResponse),
                 this.GetClaimStateChangeCallback().Dispatch(this.m_claimState),
@@ -2494,11 +2496,11 @@
           return (0, i.mG)(this, void 0, void 0, function* () {
             (0, s.X)(
               l.L7.logged_in,
-              "User must be logged to use CSaleItemClaimableRewardsStore"
+              "User must be logged to use CSaleItemClaimableRewardsStore",
             ),
               (0, s.X)(
                 this.m_claimState.bCanClaimNewItem,
-                "Only should be called when we previously verified you can claim something. "
+                "Only should be called when we previously verified you can claim something. ",
               );
             const e = n.gA.Init(o.xs);
             e.Body().set_language(l.De.LANGUAGE);
@@ -2506,7 +2508,7 @@
             try {
               const r = yield o.tE.ClaimItem(
                 this.m_SteamInterface.GetServiceTransport(),
-                e
+                e,
               );
               if (1 == r.GetEResult())
                 return (
@@ -2517,7 +2519,7 @@
                   (this.m_claimState = {
                     bCanClaimNewItem: !1,
                     bAlreadyClaimedCurrentItem: Boolean(
-                      this.m_claimedFreeItemDef
+                      this.m_claimedFreeItemDef,
                     ),
                     appid: this.m_claimedFreeItemDef.appid,
                     community_item_type:
@@ -2528,7 +2530,7 @@
                         : void 0,
                   }),
                   this.GetClaimStateChangeCallback().Dispatch(
-                    this.m_claimState
+                    this.m_claimState,
                   ),
                   (this.m_rtNextClaimTime = r.Body().next_claim_time()),
                   this.SetClaimTimer(),
@@ -2548,7 +2550,7 @@
               console.error(
                 "CSaleItemClaimableRewardsStore.InternalUserClaimItem failed: error: " +
                   (null == t ? void 0 : t.strErrorMsg),
-                t
+                t,
               ),
               { bCanClaimNewItem: !1, bAlreadyClaimedCurrentItem: !1 }
             );
@@ -2573,11 +2575,11 @@
                       rtNextClaimTime: void 0,
                     }),
                     this.GetClaimStateChangeCallback().Dispatch(
-                      this.m_claimState
+                      this.m_claimState,
                     ))
                   : this.SetClaimTimer();
             },
-            r > 3e5 ? r / 2 : r
+            r > 3e5 ? r / 2 : r,
           );
         }
         static Get() {
@@ -2606,7 +2608,7 @@
           const e = (0, l.kQ)("loyalty_webapi_token", "application_config");
           (0, s.X)(
             e,
-            "CQuestCommunityInventoryStore: missing loyalty_webapi_token oauth permission"
+            "CQuestCommunityInventoryStore: missing loyalty_webapi_token oauth permission",
           ),
             (this.m_SteamInterface = new a.J(l.De.WEBAPI_BASE_URL, e));
         }
@@ -2675,7 +2677,7 @@
               ? (this.m_mapPromises.has(e) ||
                   this.m_mapPromises.set(
                     e,
-                    this.InternalLoadAppCommunityItems(e, t)
+                    this.InternalLoadAppCommunityItems(e, t),
                   ),
                 this.m_mapPromises.get(e))
               : 2;
@@ -2711,7 +2713,7 @@
                 return (
                   this.m_mapAppToDefs.set(e, c.data.item_definitions),
                   this.GetItemDefsChangeForEventID(e).Dispatch(
-                    c.data.item_definitions
+                    c.data.item_definitions,
                   ),
                   1
                 );
@@ -2727,7 +2729,7 @@
                   t +
                   " error: " +
                   (null == i ? void 0 : i.strErrorMsg),
-                i
+                i,
               ),
               2
             );
@@ -2768,7 +2770,7 @@
           (0, o.useEffect)(() => {
             if (e && i && null == n) {
               const r = i.find(
-                (r) => r.active && r.appid == e && r.item_type == t
+                (r) => r.active && r.appid == e && r.item_type == t,
               );
               r && a(r);
             }
@@ -2790,7 +2792,7 @@
       function l(e) {
         const { text: t, languageOverride: r } = e,
           [o] = (0, n.useState)(
-            new i.Z6(new Map([...Array.from(a.Be.entries())]), s, r)
+            new i.Z6(new Map([...Array.from(a.Be.entries())]), s, r),
           );
         return n.createElement(n.Fragment, null, o.ParseBBCode(t, {}));
       }
@@ -2822,7 +2824,7 @@
               [e.className]: !0,
             }),
           },
-          i
+          i,
         );
       }
       class _ extends n.Component {
@@ -2846,10 +2848,10 @@
                   className: (0, s.Z)(
                     c.pipScrollButton,
                     c.left,
-                    c.carouselNavButton
+                    c.carouselNavButton,
                   ),
                 },
-                n.createElement(o.thP, null)
+                n.createElement(o.thP, null),
               ),
             n.createElement(
               "div",
@@ -2870,8 +2872,8 @@
                   {
                     className: (0, s.Z)(c.carouselNavButton, c.scrollNavButton),
                   },
-                  n.createElement("div", null)
-                )
+                  n.createElement("div", null),
+                ),
               ),
               n.createElement(
                 "div",
@@ -2884,9 +2886,9 @@
                   {
                     className: (0, s.Z)(c.carouselNavButton, c.scrollNavButton),
                   },
-                  n.createElement("div", null)
-                )
-              )
+                  n.createElement("div", null),
+                ),
+              ),
             ),
             e &&
               n.createElement(
@@ -2895,11 +2897,11 @@
                   className: (0, s.Z)(
                     c.pipScrollButton,
                     c.right,
-                    c.carouselNavButton
+                    c.carouselNavButton,
                   ),
                 },
-                n.createElement(o.thP, null)
-              )
+                n.createElement(o.thP, null),
+              ),
           );
         }
       }
@@ -2966,15 +2968,15 @@
                         placeholderWidth: 1,
                         placeholderHeight: 1,
                       },
-                      t
+                      t,
                     )
                   : t;
                 return n.createElement(
                   i.Mi,
                   { className: c.innerSlide, key: "slide_" + r, index: r },
-                  a
+                  a,
                 );
-              })
+              }),
             ),
             !_ &&
               (e.useTestScrollbar
@@ -2989,11 +2991,11 @@
                           : n.createElement(
                               i.oT,
                               { slide: r, className: c.pip },
-                              n.createElement("img", { src: l.Z })
-                            )
-                      ))(d)
-                  ))
-          )
+                              n.createElement("img", { src: l.Z }),
+                            ),
+                      ))(d),
+                  )),
+          ),
         );
       }
       function v(e) {
@@ -3047,10 +3049,10 @@
                   c.carouselBtnCtn,
                   c.left,
                   c.carouselNavButton,
-                  "CarouselBtnLeft"
+                  "CarouselBtnLeft",
                 ),
               },
-              n.createElement(o.thP, null)
+              n.createElement(o.thP, null),
             ),
           n.createElement(
             i.iR,
@@ -3059,7 +3061,7 @@
               classNameTray: c.slideTrayCustomize,
               classNameAnimation: c.DisableSliderMotion,
             },
-            a
+            a,
           ),
           !t &&
             n.createElement(
@@ -3069,11 +3071,11 @@
                   c.carouselBtnCtn,
                   c.right,
                   c.carouselNavButton,
-                  "CarouselBtnRight"
+                  "CarouselBtnRight",
                 ),
               },
-              n.createElement(o.thP, null)
-            )
+              n.createElement(o.thP, null),
+            ),
         );
       }
     },
@@ -3132,8 +3134,8 @@
               i.createElement(
                 "div",
                 { className: a.ErrorStylesWithIcon },
-                u || (0, o.Xx)("#Error_ErrorCommunicatingWithNetwork")
-              )
+                u || (0, o.Xx)("#Error_ErrorCommunicatingWithNetwork"),
+              ),
             )
           : p || h || _
           ? i.createElement(
@@ -3144,7 +3146,7 @@
                 bAlertDialog: !0,
                 closeModal: l,
               },
-              i.createElement(i.Fragment, null, Boolean(_) && _)
+              i.createElement(i.Fragment, null, Boolean(_) && _),
             )
           : i.createElement(
               n.uH,
@@ -3153,7 +3155,7 @@
                 string: c || (0, o.Xx)("#Loading"),
                 size: "medium",
                 position: "center",
-              })
+              }),
             );
       }
     },
@@ -3200,7 +3202,7 @@
           }
           return (
             console.log(
-              `Error: CopyableText must be the parent of exactly one child:\n\tcopystyle=${this.props.style} copytext=${e}`
+              `Error: CopyableText must be the parent of exactly one child:\n\tcopystyle=${this.props.style} copytext=${e}`,
             ),
             o.createElement(o.Fragment, null, this.props.children)
           );
@@ -3238,7 +3240,7 @@
                       this.setState({
                         activeIndex: Math.min(
                           e.length - 1,
-                          this.state.activeIndex + 1
+                          this.state.activeIndex + 1,
                         ),
                       });
                 }
@@ -3247,7 +3249,7 @@
             v.s,
             { className: C.Picker, onButtonDown: n },
             i && o.createElement(b, null, this.RenderTabs()),
-            r
+            r,
           );
         }
         RenderTabs() {
@@ -3260,7 +3262,7 @@
                 active: r,
                 onClick: () => this.setState({ activeIndex: t }),
               },
-              e(r)
+              e(r),
             );
           });
         }
@@ -3269,7 +3271,7 @@
         return o.createElement(
           v.s,
           { className: C.Tabs, "flow-children": "row" },
-          e.children
+          e.children,
         );
       }
       function I(e) {
@@ -3287,8 +3289,8 @@
           o.createElement(
             "div",
             { className: (0, u.Z)(C.TabContent, t && C.Active) },
-            r
-          )
+            r,
+          ),
         );
       }
       function B(e) {
@@ -3309,15 +3311,15 @@
               autoFocus: 0 === a,
               focusClassName: C.Focus,
             },
-            r(t[a])
-          )
+            r(t[a]),
+          ),
         );
         return (
           0 === t.length && a && (s = a()),
           o.createElement(
             v.s,
             { "flow-children": "grid", className: C.ItemList },
-            s
+            s,
           )
         );
       }
@@ -3333,10 +3335,10 @@
             o.createElement(
               D,
               { title: t },
-              o.createElement(B, Object.assign({}, s))
-            )
+              o.createElement(B, Object.assign({}, s)),
+            ),
           ),
-          o.createElement(k, { value: n, onChange: r, onSubmit: a })
+          o.createElement(k, { value: n, onChange: r, onSubmit: a }),
         );
       }
       function R(e) {
@@ -3354,11 +3356,11 @@
               return o.createElement(
                 D,
                 { title: t, key: t },
-                o.createElement(B, Object.assign({}, r))
+                o.createElement(B, Object.assign({}, r)),
               );
-            })
+            }),
           ),
-          o.createElement(k, { value: r, onChange: t })
+          o.createElement(k, { value: r, onChange: t }),
         );
       }
       function D(e) {
@@ -3366,7 +3368,7 @@
           "div",
           { className: C.Section },
           o.createElement("div", { className: C.SectionTitle }, e.title),
-          o.createElement("div", { className: C.SectionContent }, e.children)
+          o.createElement("div", { className: C.SectionContent }, e.children),
         );
       }
       function k(e) {
@@ -3381,7 +3383,7 @@
             value: t,
             onChange: (e) => r(e.target.value),
             onSubmit: i,
-          })
+          }),
         );
       }
       function F(e) {
@@ -3389,7 +3391,7 @@
           r = (0, i._T)(e, ["className"]);
         return o.createElement(
           "div",
-          Object.assign({ className: (0, u.Z)(t, C.AddonPickerMessage) }, r)
+          Object.assign({ className: (0, u.Z)(t, C.AddonPickerMessage) }, r),
         );
       }
       var N = r(28744),
@@ -3424,14 +3426,14 @@
                 onMouseEnter: this.OnMouseEnter,
                 onMouseLeave: this.OnMouseLeave,
                 ref: this.m_ref,
-              })
+              }),
             ),
             this.state.showHover &&
               o.createElement(x, {
                 target: this.m_ref.current,
                 store: r,
                 emoticon: e,
-              })
+              }),
           );
         }
       }
@@ -3451,7 +3453,7 @@
               emoticon: i,
               emoticonHoverStore: r,
               large: !0,
-            })
+            }),
           );
         }),
         P = ({ target: e, title: t, subtitle: r, children: i }) =>
@@ -3469,14 +3471,14 @@
               o.createElement(
                 "div",
                 { className: U().Name },
-                t || o.createElement("span", null, " ")
+                t || o.createElement("span", null, " "),
               ),
               o.createElement(
                 "div",
                 { className: U().AppName },
-                r || o.createElement("span", null, " ")
-              )
-            )
+                r || o.createElement("span", null, " "),
+              ),
+            ),
           );
       function T(e) {
         return e.recent_emoticons;
@@ -3504,7 +3506,7 @@
               e.UpdateEmoticonList();
               const t = (0, n.gx)(
                 () => e.is_initialized,
-                () => r(e.is_initialized)
+                () => r(e.is_initialized),
               );
               return () => t();
             }
@@ -3523,10 +3525,10 @@
                     className: (0, u.Z)(
                       U().PickerTab,
                       U().Clock,
-                      e && U().ActiveTab
+                      e && U().ActiveTab,
                     ),
                   },
-                  o.createElement(le, null)
+                  o.createElement(le, null),
                 ),
               renderContent: () =>
                 o.createElement(j, {
@@ -3551,7 +3553,7 @@
                         title: (0, h.Xx)("#AddonPicker_Emoticons"),
                         className: (0, u.Z)(U().PickerTab, e && U().ActiveTab),
                       },
-                      o.createElement(oe, null)
+                      o.createElement(oe, null),
                     ),
                   renderContent: () =>
                     o.createElement(V, {
@@ -3569,7 +3571,7 @@
                         title: (0, h.Xx)("#AddonPicker_Stickers"),
                         className: (0, u.Z)(U().PickerTab, e && U().ActiveTab),
                       },
-                      o.createElement(ae, null)
+                      o.createElement(ae, null),
                     ),
                   renderContent: () =>
                     o.createElement(Q, {
@@ -3585,7 +3587,7 @@
                         title: (0, h.Xx)("#AddonPicker_RoomEffects"),
                         className: (0, u.Z)(U().PickerTab, e && U().ActiveTab),
                       },
-                      o.createElement(se, null)
+                      o.createElement(se, null),
                     ),
                   renderContent: () =>
                     o.createElement(Y, {
@@ -3595,7 +3597,7 @@
                     }),
                 },
               ],
-            })
+            }),
           )
         );
       });
@@ -3607,7 +3609,7 @@
             (t.UpdateEmoticonList(),
             (this.m_disposeEmoticonStore = (0, n.gx)(
               () => t.is_initialized,
-              () => this.forceUpdate()
+              () => this.forceUpdate(),
             )));
         }
         componentWillUnmount() {
@@ -3633,10 +3635,10 @@
                       className: (0, u.Z)(
                         U().PickerTab,
                         U().Clock,
-                        e && U().ActiveTab
+                        e && U().ActiveTab,
                       ),
                     },
-                    o.createElement(le, null)
+                    o.createElement(le, null),
                   ),
                 renderContent: () =>
                   o.createElement(j, {
@@ -3661,10 +3663,10 @@
                           title: (0, h.Xx)("#AddonPicker_Emoticons"),
                           className: (0, u.Z)(
                             U().PickerTab,
-                            e && U().ActiveTab
+                            e && U().ActiveTab,
                           ),
                         },
-                        o.createElement(oe, null)
+                        o.createElement(oe, null),
                       ),
                     renderContent: () =>
                       o.createElement(V, {
@@ -3682,10 +3684,10 @@
                           title: (0, h.Xx)("#AddonPicker_Stickers"),
                           className: (0, u.Z)(
                             U().PickerTab,
-                            e && U().ActiveTab
+                            e && U().ActiveTab,
                           ),
                         },
-                        o.createElement(ae, null)
+                        o.createElement(ae, null),
                       ),
                     renderContent: () =>
                       o.createElement(Q, {
@@ -3694,7 +3696,7 @@
                       }),
                   },
                 ],
-              })
+              }),
             )
           );
         }
@@ -3708,7 +3710,7 @@
             (t.UpdateEmoticonList(),
             (this.m_disposeEmoticonStore = (0, n.gx)(
               () => t.is_initialized,
-              () => this.forceUpdate()
+              () => this.forceUpdate(),
             )));
         }
         componentWillUnmount() {
@@ -3728,7 +3730,7 @@
                         title: (0, h.Xx)("#AddonPicker_Emoticons"),
                         className: U().PickerTab,
                       },
-                      o.createElement(oe, null)
+                      o.createElement(oe, null),
                     ),
                   renderContent: () =>
                     o.createElement(q, {
@@ -3739,7 +3741,7 @@
                     }),
                 },
               ],
-            })
+            }),
           );
         }
       }
@@ -3751,7 +3753,7 @@
             (t.UpdateEmoticonList(),
             (this.m_disposeEmoticonStore = (0, n.gx)(
               () => t.is_initialized,
-              () => this.forceUpdate()
+              () => this.forceUpdate(),
             )));
         }
         componentWillUnmount() {
@@ -3771,7 +3773,7 @@
                         title: (0, h.Xx)("#AddonPicker_Emoticons"),
                         className: U().PickerTab,
                       },
-                      o.createElement(oe, null)
+                      o.createElement(oe, null),
                     ),
                   renderContent: () =>
                     o.createElement($, {
@@ -3782,7 +3784,7 @@
                     }),
                 },
               ],
-            })
+            }),
           );
         }
       }
@@ -3816,8 +3818,8 @@
                       ? (0, h.Xx)("#AddonPicker_NoResults")
                       : (0, h.Xx)(
                           "#AddonPicker_NoRecent",
-                          (0, h.Xx)("#AddonPicker_Emoticons")
-                        )
+                          (0, h.Xx)("#AddonPicker_Emoticons"),
+                        ),
                   ),
               }),
             G(e).length &&
@@ -3835,8 +3837,8 @@
                       ? (0, h.Xx)("#AddonPicker_NoResults")
                       : (0, h.Xx)(
                           "#AddonPicker_NoRecent",
-                          (0, h.Xx)("#AddonPicker_Stickers")
-                        )
+                          (0, h.Xx)("#AddonPicker_Stickers"),
+                        ),
                   ),
               }),
             o.createElement(R, {
@@ -3887,8 +3889,8 @@
             null,
             (0, h.Xx)(
               "#AddonPicker_NoneOwned",
-              (0, h.Xx)("#AddonPicker_Emoticons")
-            )
+              (0, h.Xx)("#AddonPicker_Emoticons"),
+            ),
           ),
           o.createElement(
             F,
@@ -3898,15 +3900,15 @@
               o.createElement(
                 L.ns,
                 { href: `${f.De.STORE_BASE_URL}points/shop/c/emoticons` },
-                (0, h.Xx)("#AddonPicker_AcquireAtPointsShop_Link")
+                (0, h.Xx)("#AddonPicker_AcquireAtPointsShop_Link"),
               ),
               o.createElement(
                 L.ns,
                 { href: `${f.De.COMMUNITY_BASE_URL}market` },
-                (0, h.Xx)("#AddonPicker_AcquireAtPointsShopOrMarket_Link")
-              )
-            )
-          )
+                (0, h.Xx)("#AddonPicker_AcquireAtPointsShopOrMarket_Link"),
+              ),
+            ),
+          ),
         );
       }
       class Q extends o.Component {
@@ -3937,8 +3939,8 @@
                       null,
                       (0, h.Xx)(
                         "#AddonPicker_NoneOwned",
-                        (0, h.Xx)("#AddonPicker_Stickers")
-                      )
+                        (0, h.Xx)("#AddonPicker_Stickers"),
+                      ),
                     ),
                     o.createElement(
                       F,
@@ -3950,10 +3952,10 @@
                           {
                             href: `${f.De.STORE_BASE_URL}points/shop/c/stickers`,
                           },
-                          (0, h.Xx)("#AddonPicker_AcquireAtPointsShop_Link")
-                        )
-                      )
-                    )
+                          (0, h.Xx)("#AddonPicker_AcquireAtPointsShop_Link"),
+                        ),
+                      ),
+                    ),
                   ),
           });
         }
@@ -3987,8 +3989,8 @@
                       null,
                       (0, h.Xx)(
                         "#AddonPicker_NoneOwned",
-                        (0, h.Xx)("#AddonPicker_RoomEffects")
-                      )
+                        (0, h.Xx)("#AddonPicker_RoomEffects"),
+                      ),
                     ),
                     o.createElement(
                       F,
@@ -4000,10 +4002,10 @@
                           {
                             href: `${f.De.STORE_BASE_URL}points/shop/c/chateffects`,
                           },
-                          (0, h.Xx)("#AddonPicker_AcquireAtPointsShop_Link")
-                        )
-                      )
-                    )
+                          (0, h.Xx)("#AddonPicker_AcquireAtPointsShop_Link"),
+                        ),
+                      ),
+                    ),
                   ),
           });
         }
@@ -4038,8 +4040,8 @@
                       ? (0, h.Xx)("#AddonPicker_NoResults")
                       : (0, h.Xx)(
                           "#AddonPicker_NoRecent",
-                          (0, h.Xx)("#AddonPicker_Emoticons")
-                        )
+                          (0, h.Xx)("#AddonPicker_Emoticons"),
+                        ),
                   ),
               }),
             o.createElement(R, {
@@ -4059,7 +4061,7 @@
                       ? o.createElement(
                           F,
                           null,
-                          (0, h.Xx)("#AddonPicker_NoResults")
+                          (0, h.Xx)("#AddonPicker_NoResults"),
                         )
                       : o.createElement(Z, null),
                 },
@@ -4097,7 +4099,7 @@
                     ? o.createElement(
                         F,
                         null,
-                        (0, h.Xx)("#AddonPicker_NoResults")
+                        (0, h.Xx)("#AddonPicker_NoResults"),
                       )
                     : o.createElement(Z, null),
               },
@@ -4117,7 +4119,7 @@
             emoticonHoverStore: r,
             large: i,
           }),
-          n && o.createElement(ie, null)
+          n && o.createElement(ie, null),
         );
       };
       class K extends o.Component {
@@ -4142,11 +4144,11 @@
                 onMouseLeave: () => this.setState({ showHover: !1 }),
                 onBlur: () => this.setState({ showHover: !1 }),
               },
-              n
+              n,
             ),
             o.createElement("img", { style: { width: "100%" }, src: a }),
             this.state.showHover &&
-              o.createElement(ee, { target: this.m_ref.current, sticker: t })
+              o.createElement(ee, { target: this.m_ref.current, sticker: t }),
           );
         }
       }
@@ -4162,7 +4164,7 @@
           o.createElement("img", {
             src: g(f.De.COMMUNITY_CDN_URL, r),
             className: U().StickerHoverSticker,
-          })
+          }),
         );
       });
       class te extends o.Component {
@@ -4187,7 +4189,7 @@
                 onBlur: () => this.setState({ showHover: !1 }),
                 className: (0, u.Z)(n, U().EffectButton),
               },
-              a
+              a,
             ),
             s.renderEffectIcon(),
             this.state.showHover &&
@@ -4195,7 +4197,7 @@
                 target: this.m_ref.current,
                 effect: t,
                 roomEffectSettings: r,
-              })
+              }),
           );
         }
       }
@@ -4213,15 +4215,15 @@
           o.createElement(
             "div",
             { className: U().EffectHoverEffect },
-            a.renderEffectIcon()
-          )
+            a.renderEffectIcon(),
+          ),
         );
       });
       function ie() {
         return o.createElement(
           "div",
           { className: U().NewEmoticonIndicator },
-          o.createElement("div", { className: U().NewEmoticonCircle })
+          o.createElement("div", { className: U().NewEmoticonCircle }),
         );
       }
       class ne extends o.Component {
@@ -4234,7 +4236,7 @@
         componentDidMount() {
           this.props.coordinator.RegisterChild(
             s.findDOMNode(this),
-            this.SetVisible
+            this.SetVisible,
           );
         }
         componentWillUnmount() {
@@ -4261,7 +4263,7 @@
                   emoticon: e.name,
                   large: !0,
                 }),
-              r && o.createElement(ie, null)
+              r && o.createElement(ie, null),
             )
           );
         }
@@ -4276,7 +4278,7 @@
                   fill: "none",
                   xmlns: "http://www.w3.org/2000/svg",
                 },
-                e
+                e,
               ),
               o.createElement("path", {
                 fillRule: "evenodd",
@@ -4307,7 +4309,7 @@
               o.createElement("path", {
                 d: "M29 22.1875V21L31 19V22.1875H29Z",
                 fill: "currentColor",
-              })
+              }),
             )
           : o.createElement(
               "svg",
@@ -4323,9 +4325,9 @@
                     fillRule: "evenodd",
                     clipRule: "evenodd",
                     fill: "#fff",
-                  })
-                )
-              )
+                  }),
+                ),
+              ),
             );
       }
       function oe(e) {
@@ -4340,14 +4342,14 @@
                   fill: "none",
                   xmlns: "http://www.w3.org/2000/svg",
                 },
-                e
+                e,
               ),
               o.createElement("path", {
                 fillRule: "evenodd",
                 clipRule: "evenodd",
                 d: "M33 18C33 26.2843 26.2843 33 18 33C15.031 33 12.2636 32.1374 9.93446 30.6492L4.35707 32.4107C3.95174 32.5387 3.58168 32.1347 3.74474 31.7421L5.81718 26.7529C4.04426 24.2896 3 21.2667 3 18C3 9.71573 9.71573 3 18 3C26.2843 3 33 9.71573 33 18ZM18 9.66667C16.3518 9.66667 14.7407 10.1554 13.3703 11.0711C11.9998 11.9868 10.9317 13.2883 10.301 14.811C9.67028 16.3337 9.50525 18.0092 9.82679 19.6258C10.1483 21.2423 10.942 22.7271 12.1074 23.8926C13.2729 25.058 14.7577 25.8517 16.3743 26.1732C17.9908 26.4948 19.6663 26.3297 21.189 25.699C22.7118 25.0683 24.0132 24.0002 24.9289 22.6298C25.8446 21.2593 26.3333 19.6482 26.3333 18C26.3333 16.9057 26.1178 15.822 25.699 14.811C25.2802 13.7999 24.6664 12.8813 23.8926 12.1074C23.1187 11.3336 22.2001 10.7198 21.189 10.301C20.178 9.88222 19.0944 9.66667 18 9.66667ZM13 16.3333C13 16.0037 13.0978 15.6815 13.2809 15.4074C13.464 15.1333 13.7243 14.9197 14.0289 14.7935C14.3334 14.6674 14.6685 14.6344 14.9918 14.6987C15.3151 14.763 15.6121 14.9217 15.8452 15.1548C16.0783 15.3879 16.237 15.6849 16.3013 16.0082C16.3656 16.3315 16.3326 16.6666 16.2065 16.9711C16.0803 17.2757 15.8667 17.536 15.5926 17.7191C15.3185 17.9023 14.9963 18 14.6667 18C14.2246 18 13.8007 17.8244 13.4882 17.5118C13.1756 17.1993 13 16.7754 13 16.3333ZM21.3333 18C21.0037 18 20.6815 17.9023 20.4074 17.7191C20.1333 17.536 19.9197 17.2757 19.7935 16.9711C19.6674 16.6666 19.6344 16.3315 19.6987 16.0082C19.763 15.6849 19.9217 15.3879 20.1548 15.1548C20.3879 14.9217 20.6849 14.763 21.0082 14.6987C21.3315 14.6344 21.6666 14.6674 21.9711 14.7935C22.2757 14.9197 22.536 15.1333 22.7191 15.4074C22.9023 15.6815 23 16.0037 23 16.3333C23 16.7754 22.8244 17.1993 22.5119 17.5118C22.1993 17.8244 21.7754 18 21.3333 18ZM19.9642 22.1864C20.4851 21.6655 20.7778 20.9589 20.7778 20.2222H15.2222C15.2222 20.9589 15.5149 21.6655 16.0358 22.1864C16.5568 22.7073 17.2633 23 18 23C18.7367 23 19.4433 22.7073 19.9642 22.1864Z",
                 fill: "currentColor",
-              })
+              }),
             )
           : o.createElement(
               "svg",
@@ -4357,7 +4359,7 @@
                 fillRule: "evenodd",
                 clipRule: "evenodd",
                 fill: "#fff",
-              })
+              }),
             );
       }
       function se(e) {
@@ -4370,7 +4372,7 @@
                   fill: "none",
                   xmlns: "http://www.w3.org/2000/svg",
                 },
-                e
+                e,
               ),
               o.createElement("path", {
                 d: "M14.5 7L17.2 15.37C17.5375 16.5175 18.4825 17.395 19.63 17.8L28 20.5L19.63 23.2C18.4825 23.5375 17.605 24.4825 17.2 25.63L14.5 34L11.8 25.63C11.4625 24.4825 10.5175 23.605 9.37 23.2L1 20.5L9.37 17.8C10.5175 17.4625 11.395 16.5175 11.8 15.37L14.5 7Z",
@@ -4391,7 +4393,7 @@
               o.createElement("path", {
                 d: "M26.4615 25L27.1538 27.1913C27.2462 27.471 27.4769 27.7042 27.7538 27.7974L29.9231 28.4968L27.7538 29.1961C27.4769 29.2894 27.2462 29.5225 27.1538 29.8022L26.4615 31.9935L25.7692 29.8022C25.6769 29.5225 25.4462 29.2894 25.1692 29.1961L23 28.4968L25.1692 27.7974C25.4462 27.7042 25.6769 27.471 25.7692 27.1913L26.4615 25Z",
                 fill: "currentColor",
-              })
+              }),
             )
           : o.createElement(
               "svg",
@@ -4401,7 +4403,7 @@
                 fillRule: "evenodd",
                 clipRule: "evenodd",
                 fill: "#fff",
-              })
+              }),
             );
       }
       function le(e) {
@@ -4419,11 +4421,11 @@
               height: "20px",
               viewBox: "0 0 24 24",
             },
-            r
+            r,
           ),
           o.createElement("path", {
             d: "M15.999 15c-.15 0-.303-.034-.446-.105l-4-2A1.001 1.001 0 0111 12V5a1 1 0 012 0v6.382l3.447 1.724A1 1 0 0115.999 15zM12 24C5.383 24 0 18.617 0 12S5.383 0 12 0s12 5.383 12 12-5.383 12-12 12zm0-22C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2z",
-          })
+          }),
         );
       }
       (0, i.gn)([_.ak], ne.prototype, "SetVisible", null);
@@ -4492,7 +4494,7 @@
                 bOverlapHorizontal: !0,
                 bPreferPopLeft: !0,
                 bPreferPopTop: !0,
-              }
+              },
             ),
             this.BHaveUnseenEmoticons() && a)
           ) {
@@ -4526,7 +4528,7 @@
                   {
                     onClick: this.OnEmoticonClick,
                     onOKActionDescription: (0, d.Xx)(
-                      "#ChatEntryButton_Emoticon"
+                      "#ChatEntryButton_Emoticon",
                     ),
                     focusable: !0,
                   },
@@ -4537,7 +4539,7 @@
                       this.props.title ||
                       (0, d.Xx)("#ChatEntryButton_Emoticon"),
                     "data-tooltip-text": r,
-                  })
+                  }),
                 )
               : (a.push(h().chatSubmitButton, h().EmoticonPickerButton),
                 n.createElement(
@@ -4545,7 +4547,7 @@
                   {
                     className: (0, p.Z)(...a),
                     onOKActionDescription: (0, d.Xx)(
-                      "#ChatEntryButton_Emoticon"
+                      "#ChatEntryButton_Emoticon",
                     ),
                     type: "button",
                     onClick: this.OnEmoticonClick,
@@ -4556,7 +4558,7 @@
                     "data-tooltip-text": r,
                   },
                   this.props.buttonIcon || n.createElement(_.tk, null),
-                  o && n.createElement(m.D3, null)
+                  o && n.createElement(m.D3, null),
                 ))
           );
         }
@@ -4609,7 +4611,7 @@
         componentDidMount() {
           C.A.LoadSharedFileDynamicData(
             [this.props.sharedFileID],
-            this.m_cancelSignal
+            this.m_cancelSignal,
           )
             .then((e) => {
               !this.m_cancelSignal.token.reason &&
@@ -4618,7 +4620,7 @@
                 this.setState({ bLoadedMetadata: !0 }));
             })
             .catch((e) =>
-              console.error("SharedFileSnippet: " + (0, y.l)(e).strErrorMsg)
+              console.error("SharedFileSnippet: " + (0, y.l)(e).strErrorMsg),
             );
         }
         componentWillUnmount() {
@@ -4648,7 +4650,7 @@
               n.createElement(
                 "div",
                 { className: h().DynamicLink_Name },
-                this.m_sharedFileInfo.title
+                this.m_sharedFileInfo.title,
               ),
               n.createElement(
                 "div",
@@ -4656,8 +4658,8 @@
                 n.createElement(
                   "span",
                   { className: h().DynamicLink_Type },
-                  this.m_sharedFileInfo.type
-                )
+                  this.m_sharedFileInfo.type,
+                ),
               ),
               e &&
                 n.createElement(
@@ -4668,16 +4670,16 @@
                     n.createElement(
                       "span",
                       { className: h().DynamicLink_AuthorName },
-                      this.m_sharedFileInfo.personnaname
-                    )
-                  )
+                      this.m_sharedFileInfo.personnaname,
+                    ),
+                  ),
                 ),
               n.createElement(
                 "div",
                 { className: h().DynamicLink_Description },
-                this.m_sharedFileInfo.description
-              )
-            )
+                this.m_sharedFileInfo.description,
+              ),
+            ),
           );
         }
       };
@@ -4760,7 +4762,7 @@
               " strGroupVanity " +
               n +
               " error: " +
-              t.strErrorMsg
+              t.strErrorMsg,
           ),
             this.setState({ bFailedLoad: !0 });
         }
@@ -4788,7 +4790,7 @@
             m = l.GetImageForSizeAsArrayWithFallback(
               "capsule",
               c,
-              R.FN.capsule_main
+              R.FN.capsule_main,
             );
           o && (m = o(m));
           let d = l.GetNameWithFallback(c),
@@ -4822,21 +4824,21 @@
                   28 == l.type
                     ? "#EventDisplay_Share_Announcement"
                     : "#EventDisplay_Share_Event",
-                  u
+                  u,
                 ),
-                n.createElement("span", { className: h().DynamicLink_Date }, _)
+                n.createElement("span", { className: h().DynamicLink_Date }, _),
               ),
               n.createElement(
                 "div",
                 { className: h().DynamicLink_Name },
-                n.createElement("div", { className: h().DynamicLink_Type }, d)
+                n.createElement("div", { className: h().DynamicLink_Type }, d),
               ),
               n.createElement(
                 "div",
                 { className: h().DynamicLink_Description },
-                p
-              )
-            )
+                p,
+              ),
+            ),
           );
         }
       };
@@ -4861,7 +4863,7 @@
             } catch (e) {
               this.setState({ bError: !0 }),
                 console.error(
-                  "SketchFabEmbed failed to load: " + (0, y.l)(e).strErrorMsg
+                  "SketchFabEmbed failed to load: " + (0, y.l)(e).strErrorMsg,
                 );
             }
           });
@@ -4882,8 +4884,8 @@
                 n.createElement(
                   "span",
                   null,
-                  (0, g.Xx)("#EventDisplay_SketchFab_Error_Network")
-                )
+                  (0, g.Xx)("#EventDisplay_SketchFab_Error_Network"),
+                ),
               )
             : this.state.bSummaryMode
             ? n.createElement(
@@ -4912,23 +4914,23 @@
                           n.createElement(
                             "span",
                             { className: O().dynamiclink_type },
-                            (0, g.Xx)("#EventDisplay_Sketchfab")
+                            (0, g.Xx)("#EventDisplay_Sketchfab"),
                           ),
                           n.createElement(
                             "div",
                             null,
                             this.state.data.title,
-                            " "
-                          )
+                            " ",
+                          ),
                         ),
                         n.createElement(
                           "div",
                           { className: O().dynamiclink_author },
-                          this.state.data.author_name
-                        )
-                      )
+                          this.state.data.author_name,
+                        ),
+                      ),
                     )
-                  : n.createElement(N.V, { size: "medium" })
+                  : n.createElement(N.V, { size: "medium" }),
               )
             : n.createElement(
                 "div",
@@ -4941,7 +4943,7 @@
                     "/embed?autostart=1",
                   frameBorder: 0,
                   allowFullScreen: !0,
-                })
+                }),
               );
         }
       };
@@ -4970,8 +4972,8 @@
               n.createElement("img", {
                 src: s,
                 alt: i.community_item_data.item_title,
-              })
-            )
+              }),
+            ),
           )
         );
       }
@@ -5080,7 +5082,7 @@
               return n.createElement(
                 "div",
                 { className: (0, w.Z)(P.LoyaltyRewardCtn) },
-                n.createElement(V, { defid: r, url: e })
+                n.createElement(V, { defid: r, url: e }),
               );
           }
         }
@@ -5150,7 +5152,7 @@
           "div",
           { className: P.SocialLink },
           n.createElement("div", { className: P.SocialIcon }, t),
-          l
+          l,
         );
       }
       function Ce(e, t, r) {
@@ -5235,15 +5237,15 @@
               return void (10 == this.m_Callbacks.GetMaxFileSizeMB()
                 ? this.SetUploadFileError(
                     4,
-                    (0, g.Xx)("#Chat_Settings_Error_ChatFileTooLarge", e.name)
+                    (0, g.Xx)("#Chat_Settings_Error_ChatFileTooLarge", e.name),
                   )
                 : this.SetUploadFileError(
                     4,
                     (0, g.Xx)(
                       "#Chat_Settings_Error_ChatFileTooLarge_dynamic",
                       e.name,
-                      this.m_Callbacks.GetMaxFileSizeMB()
-                    )
+                      this.m_Callbacks.GetMaxFileSizeMB(),
+                    ),
                   ));
             let r = e.name.split(".").pop().toLowerCase();
             if (
@@ -5264,8 +5266,8 @@
                 5,
                 (0, g.Xx)(
                   "#Chat_Settings_Error_ChatFileTypeNotSupported",
-                  e.name
-                )
+                  e.name,
+                ),
               );
             const i = yield t(e);
             this.SetFileToUpload(i.file),
@@ -5315,7 +5317,7 @@
               throw (
                 ((0, be.X)(
                   !1,
-                  "Must SetImageFileToUpload before calling BeginFileUpload"
+                  "Must SetImageFileToUpload before calling BeginFileUpload",
                 ),
                 new Error("Invalid State"))
               );
@@ -5330,23 +5332,23 @@
               r.append("file_sha", this.m_fileUploadProps.sha1),
               r.append(
                 "file_image_width",
-                this.m_fileUploadProps.imageWidth.toString()
+                this.m_fileUploadProps.imageWidth.toString(),
               ),
               r.append(
                 "file_image_height",
-                this.m_fileUploadProps.imageHeight.toString()
+                this.m_fileUploadProps.imageHeight.toString(),
               ),
               r.append("file_type", t.type),
               this.m_Callbacks.PopulateBeginFileUploadFormData &&
                 this.m_Callbacks.PopulateBeginFileUploadFormData(
                   r,
-                  this.file_upload_props.additionalProps
+                  this.file_upload_props.additionalProps,
                 );
             try {
               let e = yield E().post(
                 this.m_Callbacks.GetBeginFileUploadURL(),
                 r,
-                { params: { l: v.De.LANGUAGE } }
+                { params: { l: v.De.LANGUAGE } },
               );
               return (
                 (this.m_fileUploadProps.timestamp = e.data.timestamp),
@@ -5370,7 +5372,7 @@
                   } else t = (0, g.Xx)("#ConnectionTrouble_FailedToConnect");
                   this.m_fileUploadProps.strErrorDescription = (0, g.Xx)(
                     "#Chat_Upload_ErrorStart",
-                    t
+                    t,
                   );
                 }),
                 t)
@@ -5407,7 +5409,7 @@
                 (this.LogFileUploadMessage(t.response),
                 (0, S.z)(() => {
                   (this.m_fileUploadProps.strErrorDescription = (0, g.Xx)(
-                    "#Chat_Upload_ErrorCloud"
+                    "#Chat_Upload_ErrorCloud",
                   )),
                     (this.m_fileUploadProps.eUploadState = 3),
                     (this.m_fileUploadProps.uploadProgress = 0);
@@ -5432,25 +5434,25 @@
               n.append("file_type", r.type),
               n.append(
                 "file_image_width",
-                this.m_fileUploadProps.imageWidth.toString()
+                this.m_fileUploadProps.imageWidth.toString(),
               ),
               n.append(
                 "file_image_height",
-                this.m_fileUploadProps.imageHeight.toString()
+                this.m_fileUploadProps.imageHeight.toString(),
               ),
               n.append(
                 "timestamp",
-                this.m_fileUploadProps.timestamp.toString()
+                this.m_fileUploadProps.timestamp.toString(),
               ),
               n.append("hmac", this.m_fileUploadProps.hmac),
               this.m_Callbacks.PopulateCommitFileUploadFormData(
                 n,
-                this.file_upload_props.additionalProps
+                this.file_upload_props.additionalProps,
               );
             try {
               let t = yield E().post(
                 this.m_Callbacks.GetCommitFileUploadURL(),
-                n
+                n,
               );
               return (
                 e
@@ -5591,22 +5593,22 @@
                         "Trailer " +
                           e.trailerBaseID +
                           " doesn't existed within appid " +
-                          e.appid
+                          e.appid,
                       ),
                       o(
                         (0, g.Xx)(
                           "#TrailerPlayer_CouldNotLoad",
                           e.appid,
-                          e.trailerBaseID
-                        )
+                          e.trailerBaseID,
+                        ),
                       )),
                     r(!1))
                   : o(
                       (0, g.Xx)(
                         "#TrailerPlayer_CouldNotLoad",
                         e.appid,
-                        e.trailerBaseID
-                      )
+                        e.trailerBaseID,
+                      ),
                     );
             });
           }, [e.appid, e.trailerBaseID]),
@@ -5649,17 +5651,17 @@
             r.e(2449),
             r.e(2832),
             r.e(4601),
-          ]).then(r.bind(r, 28388))
+          ]).then(r.bind(r, 28388)),
         ),
         Ge = (e) => {
           const t = (0, n.useRef)(null),
             [r, a] = (0, n.useState)(xe.D.Get().GetVODForAppID(e.appid)),
             [o, s] = (0, n.useState)(
-              !Boolean(xe.D.Get().GetVODForAppID(e.appid))
+              !Boolean(xe.D.Get().GetVODForAppID(e.appid)),
             );
           return (
             (0, n.useEffect)(
-              () => () => t.current && t.current("VODPlayer: unmounting")
+              () => () => t.current && t.current("VODPlayer: unmounting"),
             ),
             (0, n.useEffect)(() => {
               let n = r;
@@ -5688,8 +5690,8 @@
                   null,
                   (0, g.Xx)(
                     o ? "#VODPlayer_Loading" : "#VODPlayer_ErrorLoading",
-                    e.appid
-                  )
+                    e.appid,
+                  ),
                 )
               : n.createElement(
                   "div",
@@ -5704,9 +5706,9 @@
                         nAppIDVOD: e.appid,
                         watchLocation: 9,
                         bStartPaused: !0,
-                      })
-                    )
-                  )
+                      }),
+                    ),
+                  ),
                 )
           );
         };
@@ -5731,7 +5733,7 @@
             bAutoAdvance: i,
             className: T().ScreenshotCarousel,
           },
-          e.children
+          e.children,
         );
       }
       var Ve = r(44026),
@@ -5769,8 +5771,8 @@
               onOKActionDescription: (0, g.Xx)("#Button_Upload"),
               onClick: () => r.current.click(),
             },
-            n.createElement(I.pkz, null)
-          )
+            n.createElement(I.pkz, null),
+          ),
         );
       }
       var Ye = r(25125),
@@ -5804,12 +5806,12 @@
             { className: qe.FileUploadFileName },
             "'",
             r.name,
-            "'"
+            "'",
           ),
           n.createElement(
             "div",
             { className: qe.FileUploadCancel, onClick: () => t.Reset() },
-            n.createElement(I.pVO, null)
+            n.createElement(I.pVO, null),
           ),
           n.createElement(
             De.KM,
@@ -5820,8 +5822,8 @@
                   yield t.BeginFileUpload(), t.Reset();
                 }),
             },
-            (0, g.Xx)("#Button_Upload")
-          )
+            (0, g.Xx)("#Button_Upload"),
+          ),
         );
       }
       function Ke(e) {
@@ -5842,14 +5844,14 @@
             {
               className: (0, w.Z)(
                 qe.FileUploadProgressBarContainer,
-                "DialogProgressBar_ProgressBarContainer"
+                "DialogProgressBar_ProgressBarContainer",
               ),
             },
             n.createElement("div", {
               className: "DialogProgressBar_Value",
               style: s,
-            })
-          )
+            }),
+          ),
         );
       }
       function et(e) {
@@ -5868,7 +5870,7 @@
           n.createElement(
             "div",
             { className: qe.FileUploadErrorDescription },
-            l
+            l,
           ),
           n.createElement(
             "div",
@@ -5885,15 +5887,15 @@
                         yield t.RetryFileUpload(), t.Reset();
                       }),
                   },
-                  (0, g.Xx)("#Chat_Upload_ErrorAction_Retry")
+                  (0, g.Xx)("#Chat_Upload_ErrorAction_Retry"),
                 ),
               n.createElement(
                 De.zx,
                 { onClick: () => t.ClearFileUploadError() },
-                (0, g.Xx)("#Chat_Upload_ErrorAction_Close")
-              )
-            )
-          )
+                (0, g.Xx)("#Chat_Upload_ErrorAction_Close"),
+              ),
+            ),
+          ),
         );
       }
       var tt = r(99307),
@@ -5920,7 +5922,7 @@
             e.language,
             null === (t = e.context.event) || void 0 === t
               ? void 0
-              : t.rtime32_last_modified
+              : t.rtime32_last_modified,
           );
           i = "string" == typeof r ? r : r[1];
         }
@@ -5930,7 +5932,7 @@
             "store.steampowered.com" == (0, B.FM)(i) &&
             ((i = i.replace(
               "https://store.steampowered.com/",
-              v.De.STORE_BASE_URL
+              v.De.STORE_BASE_URL,
             )),
             "clorthax_quest" ==
               (null === (r = null == c ? void 0 : c.jsondata) || void 0 === r
@@ -5945,12 +5947,12 @@
             ? n.createElement(
                 ze.ns,
                 { className: l, href: "steam://settings/account" },
-                e.children
+                e.children,
               )
             : n.createElement(
                 L.z,
                 { className: l, url: i, event: e.context.event, id: o },
-                e.children
+                e.children,
               )
         );
       }
@@ -5966,7 +5968,7 @@
         const a = s.vZ(
           i,
           e.language,
-          null == r ? void 0 : r.rtime32_last_modified
+          null == r ? void 0 : r.rtime32_last_modified,
         );
         if ("string" == typeof a) {
           let e;
@@ -5994,11 +5996,11 @@
           i = new Array();
         return (
           i.push(
-            `${v.De.MEDIA_CDN_COMMUNITY_URL}images/steamworks_docs/${v.De.LANGUAGE}/${t}`
+            `${v.De.MEDIA_CDN_COMMUNITY_URL}images/steamworks_docs/${v.De.LANGUAGE}/${t}`,
           ),
           "english" != v.De.LANGUAGE &&
             i.push(
-              `${v.De.MEDIA_CDN_COMMUNITY_URL}images/steamworks_docs/english/${t}`
+              `${v.De.MEDIA_CDN_COMMUNITY_URL}images/steamworks_docs/english/${t}`,
             ),
           n.createElement(U.j, { rgSources: i, alt: r })
         );
@@ -6007,7 +6009,7 @@
         const t = ut(
             e.args,
             "appid",
-            e.context.event.appid ? e.context.event.appid : 0
+            e.context.event.appid ? e.context.event.appid : 0,
           ),
           r = ut(e.args, "trailerid", 0);
         return n.createElement(Le, {
@@ -6068,7 +6070,7 @@
           return n.createElement(
             De.zx,
             { onClick: it.X, className: "CSSClaimItemLoginButton" },
-            (0, g.Xx)("#Sale_ClaimableReward_Login")
+            (0, g.Xx)("#Sale_ClaimableReward_Login"),
           );
         const r = (0, s.im)(e.args, "type");
         let i;
@@ -6139,7 +6141,7 @@
             ? n.createElement(
                 "div",
                 null,
-                "Failed to provide all tokens. Dialog will not appear"
+                "Failed to provide all tokens. Dialog will not appear",
               )
             : null;
         }
@@ -6158,20 +6160,20 @@
                         strSuccessToken: i,
                         strFailToken: a,
                       },
-                      e.children
+                      e.children,
                     ),
-                    (0, Xe.RA)(o)
+                    (0, Xe.RA)(o),
                   );
                 },
               },
               Boolean(o.bInitialState) && (0, g.Xx)(r),
               Boolean(o.bSuccessState) && (0, g.Xx)(i),
-              Boolean(o.bFailedState) && (0, g.Xx)(a)
+              Boolean(o.bFailedState) && (0, g.Xx)(a),
             )
           : n.createElement(
               De.zx,
               { className: "CSSActionDialogButton", onClick: it.X },
-              (0, g.Xx)("#Login_SignIn")
+              (0, g.Xx)("#Login_SignIn"),
             );
       }
       function vt(e) {
@@ -6202,7 +6204,7 @@
               null,
               Boolean(l.bInitialState) && (0, g.Xx)(a),
               Boolean(l.bSuccessState) && (0, g.Xx)(o),
-              Boolean(l.bFailedState) && (0, g.Xx)(s)
+              Boolean(l.bFailedState) && (0, g.Xx)(s),
             ),
             n.createElement(
               De.uT,
@@ -6216,9 +6218,9 @@
                       position: "center",
                       string: (0, g.Xx)("#Loading"),
                     })
-                  : r
-              )
-            )
+                  : r,
+              ),
+            ),
           )
         );
       }
@@ -6245,8 +6247,8 @@
                   GetMaxFileSizeMB: () => 100,
                 };
                 return t;
-              })(i)
-            )
+              })(i),
+            ),
           );
         return i == ye.sq ||
           i == ye.RQ ||
@@ -6256,7 +6258,7 @@
               "div",
               null,
               n.createElement(Qe, { fileUploadManager: a }),
-              n.createElement($e, { fileUploadManager: a })
+              n.createElement($e, { fileUploadManager: a }),
             )
           : t
           ? n.createElement("div", null, (0, g.Xx)("#CloudUpload_NotSupport"))
@@ -6268,7 +6270,7 @@
             (this.m_parser = new a.Z6(
               Ct.sm_BBCodeDictionary,
               this.ElementAccumulator,
-              e.languageOverride
+              e.languageOverride,
             ));
         }
         ElementAccumulator(e) {
@@ -6293,7 +6295,7 @@
                         },
                         {
                           urlRegExp: new RegExp(
-                            /community.+sharedfiles\/filedetails\/\?id=\d+/i
+                            /community.+sharedfiles\/filedetails\/\?id=\d+/i,
                           ),
                           fnBBComponent: ce,
                         },
@@ -6313,10 +6315,10 @@
                 {
                   partnerEventStore: this.props.partnerEventStore,
                   event: this.props.event,
-                }
-              )
+                },
+              ),
             ),
-            e
+            e,
           );
         }
         static AddDictionary(e) {
@@ -6414,7 +6416,7 @@
               ["docimg", { Constructor: ct, autocloses: !1 }],
               ["carousel", { Constructor: je, autocloses: !1 }],
             ])),
-          ot).entries()
+          ot).entries(),
         ),
       ])),
         (0, i.gn)([c.ak], Ct.prototype, "ElementAccumulator", null);
@@ -6432,7 +6434,11 @@
         return i.createElement(
           "div",
           { className: (0, n.Z)(o.AppSummaryWidgetCtn, "AppSummaryWidgetCtn") },
-          i.createElement(a.ju, { id: r, type: s, bAllowTwoLinesForHeader: !0 })
+          i.createElement(a.ju, {
+            id: r,
+            type: s,
+            bAllowTwoLinesForHeader: !0,
+          }),
         );
       }
     },
@@ -6475,20 +6481,20 @@
                     a.createElement(
                       "span",
                       { className: h().SpeakerTitle },
-                      e.title
+                      e.title,
                     ),
                   i && n && a.createElement("span", null, ", "),
-                  n && a.createElement("span", null, e.company)
-                )
-            )
+                  n && a.createElement("span", null, e.company),
+                ),
+            ),
           ),
           e.bio &&
             a.createElement(
               "div",
               { className: h().SpeakerBio },
               e.bio,
-              e.bioString && a.createElement(p.N, { text: e.bioString })
-            )
+              e.bioString && a.createElement(p.N, { text: e.bioString }),
+            ),
         );
       });
       class g extends a.Component {
@@ -6530,10 +6536,10 @@
               Object.assign({}, r),
               a.createElement(
                 _,
-                Object.assign({}, this.props, { fnClose: this.OnLeave })
-              )
+                Object.assign({}, this.props, { fnClose: this.OnLeave }),
+              ),
             ),
-            i
+            i,
           );
         }
         OnLeave(e) {
@@ -6550,7 +6556,7 @@
               onMouseLeave: this.OnLeave,
               onBlur: this.OnLeave,
             },
-            this.props.children
+            this.props.children,
           );
         }
       }
@@ -6597,15 +6603,15 @@
                           a.createElement(
                             "span",
                             { className: h().SpeakerTitle },
-                            this.props.title
+                            this.props.title,
                           ),
                         r && i && a.createElement("span", null, ", "),
-                        i && a.createElement("span", null, this.props.company)
-                      )
-                  )
-                )
-              )
-            )
+                        i && a.createElement("span", null, this.props.company),
+                      ),
+                  ),
+                ),
+              ),
+            ),
           );
         }
       }
@@ -6645,11 +6651,11 @@
                     o) &&
                   ((0, m.AM)(
                     n.createElement(C, { rewardType: c }),
-                    (0, h.RA)(e)
+                    (0, h.RA)(e),
                   ),
                   console.log(
                     "Show dialog for debugging, since already claimed: ",
-                    (0, i.ZN)(t)
+                    (0, i.ZN)(t),
                   ));
             },
             disabled: r,
@@ -6659,7 +6665,7 @@
                 string: (0, _.Xx)("#Loading"),
                 size: "small",
               })
-            : n.createElement(S, { claimState: t })
+            : n.createElement(S, { claimState: t }),
         );
       }
       function S(e) {
@@ -6675,8 +6681,8 @@
               " ",
               (null == r ? void 0 : r.length) > 0
                 ? r
-                : (0, _.Xx)("#Sale_ClaimableReward_AlreadyClaimed")
-            )
+                : (0, _.Xx)("#Sale_ClaimableReward_AlreadyClaimed"),
+            ),
           );
         let a = (0, _.Xx)("#Sale_ClaimableReward_generic");
         switch (i) {
@@ -6705,7 +6711,7 @@
                       break;
                     case 8:
                       t = (0, _.Xx)(
-                        "#Sale_ClaimableReward_completed_profilemodifier"
+                        "#Sale_ClaimableReward_completed_profilemodifier",
                       );
                   }
                   o.fnSetStrSuccess("   "),
@@ -6718,13 +6724,13 @@
                           appid: e.appid,
                           community_item_type: e.community_item_type,
                           rewardType: r,
-                        })
-                      )
+                        }),
+                      ),
                     );
                 } else o.fnSetStrError((0, _.Xx)("#Sale_ClaimableReward_Busy"));
               })
               .catch((e) =>
-                o.fnSetStrError((0, _.Xx)("#Sale_ClaimableReward_Busy"))
+                o.fnSetStrError((0, _.Xx)("#Sale_ClaimableReward_Busy")),
               ));
         }, [o, a, r]);
         let l = (0, _.Xx)("#Sale_ClaimableReward_generic");
@@ -6749,7 +6755,7 @@
               null,
               n.createElement(E.x, { appid: t, community_item_type: r }),
               Boolean(8 == i) &&
-                n.createElement(b, { appid: t, community_item_type: r })
+                n.createElement(b, { appid: t, community_item_type: r }),
             )
           : null;
       }
@@ -6768,8 +6774,8 @@
                     "div",
                     null,
                     (0, _.Xx)(
-                      "#Sale_ClaimableReward_profilemodifier_apply_success"
-                    )
+                      "#Sale_ClaimableReward_profilemodifier_apply_success",
+                    ),
                   )
                 : n.createElement(
                     l.zx,
@@ -6780,13 +6786,13 @@
                         });
                       },
                     },
-                    (0, _.Xx)("#Sale_ClaimableReward_profilemodifier_apply")
+                    (0, _.Xx)("#Sale_ClaimableReward_profilemodifier_apply"),
                   ),
               n.createElement(
                 a.IS,
                 { href: `${g.De.COMMUNITY_BASE_URL}profiles/${g.L7.steamid}` },
-                (0, _.Xx)("#Sale_ClaimableReward_profilemodifier_view")
-              )
+                (0, _.Xx)("#Sale_ClaimableReward_profilemodifier_view"),
+              ),
             )
           : n.createElement(
               "div",
@@ -6796,13 +6802,13 @@
                 {
                   href: `${g.De.COMMUNITY_BASE_URL}profiles/${g.L7.steamid}/edit/goldenprofile`,
                 },
-                (0, _.Xx)("#Sale_ClaimableReward_profilemodifier_choose")
+                (0, _.Xx)("#Sale_ClaimableReward_profilemodifier_choose"),
               ),
               n.createElement(
                 a.IS,
                 { href: `${g.De.COMMUNITY_BASE_URL}profiles/${g.L7.steamid}` },
-                (0, _.Xx)("#Sale_ClaimableReward_profilemodifier_view")
-              )
+                (0, _.Xx)("#Sale_ClaimableReward_profilemodifier_view"),
+              ),
             );
       }
     },
@@ -6836,7 +6842,7 @@
             { muted: !0, controls: !1, autoPlay: !0, loop: !0, poster: e },
             n.createElement("source", { src: r, type: "video/webm" }),
             Boolean(!l.De.IN_CLIENT) &&
-              n.createElement("source", { src: i, type: "video/mp4" })
+              n.createElement("source", { src: i, type: "video/mp4" }),
           );
         }
         if (c) {
@@ -6864,7 +6870,7 @@
               Boolean(
                 null === (e = t.rewards) || void 0 === e
                   ? void 0
-                  : e.show_reward_item_name
+                  : e.show_reward_item_name,
               ),
             ];
           });
@@ -6895,7 +6901,7 @@
             community_item_type: null == r ? void 0 : r.community_item_type,
           }),
           Boolean(m) &&
-            n.createElement("span", null, null == s ? void 0 : s.item_name)
+            n.createElement("span", null, null == s ? void 0 : s.item_name),
         );
       }
     },
@@ -6986,7 +6992,7 @@
               onVisibilityChange: this.OnVisibilityChange,
               trigger: p,
             }),
-            m && this.props.children
+            m && this.props.children,
           );
         }
       }
@@ -7018,7 +7024,7 @@
               (console.warn(
                 "MultiSourceImage created with no image src",
                 this.props,
-                this.state.nImage
+                this.state.nImage,
               ),
               (e =
                 "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=")),
@@ -7033,7 +7039,7 @@
             this.props.onIncrementalError(
               e,
               this.props.rgSources[this.state.nImage],
-              this.state.nImage
+              this.state.nImage,
             );
           let t = this.state.nImage + 1;
           t >= this.props.rgSources.length &&
@@ -7055,7 +7061,7 @@
             "img",
             Object.assign({ src: l, ref: this.m_refImage }, s, {
               onError: this.OnImageError,
-            })
+            }),
           );
         }
       }
@@ -7166,7 +7172,7 @@
           return n.createElement(
             "div",
             Object.assign({ ref: this.m_refElement }, s),
-            this.props.children
+            this.props.children,
           );
         }
       }

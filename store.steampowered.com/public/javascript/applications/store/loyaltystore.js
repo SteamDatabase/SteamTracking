@@ -1484,7 +1484,7 @@
               secondary: !0,
               parentEmbeddedNavTree: e,
             }),
-            i.createElement(o.O, null, t)
+            i.createElement(o.O, null, t),
           );
         }
         return i.createElement(i.Fragment, null, t);
@@ -1530,7 +1530,7 @@
                             state: Object.assign(Object.assign({}, a.state), {
                               [c]: l,
                             }),
-                          })
+                          }),
                         )),
                         d.current == l &&
                           (s
@@ -1538,11 +1538,11 @@
                             : window.history.replaceState(
                                 Object.assign(
                                   Object.assign({}, window.history.state),
-                                  { [l]: (0, o.Sp)(e.Node()) }
+                                  { [l]: (0, o.Sp)(e.Node()) },
                                 ),
-                                null
+                                null,
                               ));
-                    }
+                    },
                   ).Unregister;
               }, [t, s]),
               i.useLayoutEffect(() => {
@@ -1574,7 +1574,7 @@
         return i.createElement(
           s.s,
           Object.assign(Object.assign({}, m), { navRef: d }),
-          t
+          t,
         );
       }
     },
@@ -1592,7 +1592,7 @@
         return n.createElement(
           "div",
           { style: c(t) },
-          n.createElement(i.Provider, { value: null }, e.children)
+          n.createElement(i.Provider, { value: null }, e.children),
         );
       }
       function s() {
@@ -1730,7 +1730,7 @@
           return i.createElement(
             "div",
             Object.assign({ ref: this.m_refElement }, s),
-            this.props.children
+            this.props.children,
           );
         }
       }
@@ -1781,7 +1781,7 @@
             return { strErrorMsg: e.err_msg, errorCode: e.success };
           if ("string" == typeof e && e.length > 1024)
             console.groupCollapsed(
-              "GetMsgAndErrorCodeFromResponse cannot parse: "
+              "GetMsgAndErrorCodeFromResponse cannot parse: ",
             ),
               console.error(e),
               console.groupEnd();
@@ -1910,7 +1910,7 @@
                 fetch(`${m.De.STORE_BASE_URL}points/heroimage?appid=${e}`)
                   .then((e) => e.json())
                   .then((e) => e.img_url),
-              (e) => e.toString()
+              (e) => e.toString(),
             )),
             (this.m_batchedRewardItemLoader = new H(
               (e) => _.pQ.BatchedQueryRewardItems(this.m_anonymousTransport, e),
@@ -1925,9 +1925,9 @@
                       .responses()
                       .map((e) => e.toObject())
                   : (console.error(
-                      `Error when calling LoyaltyRewardsService.BatchedQueryRewardItems: EResult=${e.GetEResult()}`
+                      `Error when calling LoyaltyRewardsService.BatchedQueryRewardItems: EResult=${e.GetEResult()}`,
                     ),
-                    [])
+                    []),
             )),
             (this.m_batchedCommunityInventoryLoader = new H(
               (e) => h.Ts.GetCommunityInventory(this.m_transport, e),
@@ -1948,11 +1948,11 @@
                 }
                 return (
                   console.error(
-                    `Error when calling QuestService.GetCommunityInventory: EResult=${e.GetEResult()}`
+                    `Error when calling QuestService.GetCommunityInventory: EResult=${e.GetEResult()}`,
                   ),
                   t.map(() => [])
                 );
-              }
+              },
             )),
             (this.m_mapPages = o.LO.map({}, { deep: !1 })),
             (this.m_mapClusters = o.LO.map({}, { deep: !1 }));
@@ -1971,7 +1971,7 @@
             ? ((this.m_bLoadedEligibleApps = !0),
               (this.m_rgEligibleApps = t.eligible_apps.apps),
               (this.m_mapEligibleApps = new Map(
-                this.m_rgEligibleApps.map((e) => [e.appid, e])
+                this.m_rgEligibleApps.map((e) => [e.appid, e]),
               )))
             : this.LoadEligibleApps(),
             t.profile_customizations_config &&
@@ -1980,7 +1980,7 @@
             t.last_played &&
               ((this.m_bLoadedRecentlyPlayed = !0),
               (this.m_rgRecentlyPlayed = this.ProcessRecentlyPlayedApps(
-                t.last_played.games
+                t.last_played.games,
               ))),
             t.profile_items_equipped
               ? (this.m_equippedItems = t.profile_items_equipped)
@@ -1994,7 +1994,7 @@
                 [])),
             t.summary
               ? (this.m_lPointsAvailable = a().fromString(
-                  t.summary.summary.points
+                  t.summary.summary.points,
                 ))
               : this.GetLoyaltyRewardsSummary(),
             t.golden_profiles &&
@@ -2032,10 +2032,10 @@
             let t = yield _.pQ.GetSummary(this.m_transport, e);
             1 == t.GetEResult()
               ? (this.m_lPointsAvailable = a().fromString(
-                  t.Body().summary().points()
+                  t.Body().summary().points(),
                 ))
               : console.error(
-                  `Error when calling LoyaltyRewardsService.GetSummary: EResult=${t.GetEResult()}`
+                  `Error when calling LoyaltyRewardsService.GetSummary: EResult=${t.GetEResult()}`,
                 );
           });
         }
@@ -2061,11 +2061,11 @@
                           e.points_transferred())
                       : (this.m_unAwardPointsTransferred = Math.min(
                           this.m_unAwardPointsTransferred,
-                          e.points_transferred()
+                          e.points_transferred(),
                         ));
                   }))
               : (console.error(
-                  `Error when calling LoyaltyRewardsService.GetReactionConfig: EResult=${t.GetEResult()}`
+                  `Error when calling LoyaltyRewardsService.GetReactionConfig: EResult=${t.GetEResult()}`,
                 ),
                 (this.m_bLoadedAwardCost = !1));
           });
@@ -2137,7 +2137,7 @@
           const t = e.filter(
             (e) =>
               !this.m_mapLoyaltyRewardDefs.has(e) &&
-              !this.m_inflightRewardItemRequestsByID[e]
+              !this.m_inflightRewardItemRequestsByID[e],
           );
           if (t.length > 0) {
             t.forEach((e) => (this.m_inflightRewardItemRequestsByID[e] = !0));
@@ -2154,7 +2154,7 @@
                       this.m_mapLoyaltyRewardDefs.set(e.defid, e);
                   });
                 });
-              })
+              }),
             );
           }
           return e
@@ -2171,11 +2171,11 @@
             return 1 == r.eresult
               ? (r.response.count !== r.response.total_count &&
                   console.error(
-                    "LoadRewardDefinitions did not receive all expected definitions (likely to due server-side limiting). The calling code should be paging/batching the request into multiple."
+                    "LoadRewardDefinitions did not receive all expected definitions (likely to due server-side limiting). The calling code should be paging/batching the request into multiple.",
                   ),
                 r.response.definitions)
               : (console.error(
-                  `Error loading reward definitions by ID: EResult=${r.eresult}`
+                  `Error loading reward definitions by ID: EResult=${r.eresult}`,
                 ),
                 []);
           });
@@ -2190,7 +2190,7 @@
             }),
             t,
             r,
-            i
+            i,
           );
           if (a.length) {
             const t = Object.assign(Object.assign({}, e), {
@@ -2272,11 +2272,11 @@
                               0 != e.bundle_defids.length
                               ? !e.bundle_discount &&
                                   (console.error(
-                                    `Bundle has no discount for def ${e.defid}`
+                                    `Bundle has no discount for def ${e.defid}`,
                                   ),
                                   !0)
                               : (console.error(
-                                  `Bundle contains no items for def ${e.defid}`
+                                  `Bundle contains no items for def ${e.defid}`,
                                 ),
                                 !0);
                           const t = e.community_item_data;
@@ -2324,14 +2324,14 @@
                             if (r)
                               return (
                                 console.error(
-                                  `Missing expected assets for reward ${e.defid}`
+                                  `Missing expected assets for reward ${e.defid}`,
                                 ),
                                 !0
                               );
                           }
                           return !1;
                         })(e) && 4 !== e.type
-                      )
+                      ),
                   ),
                   o = this.m_mapAppRewards.get(s);
                 delete this.m_inflightRewardItemRequests[s],
@@ -2392,7 +2392,7 @@
             return 1 == g.eresult
               ? g.response
               : (console.error(
-                  `Error when loading reward definitions: EResult=${g.eresult}`
+                  `Error when loading reward definitions: EResult=${g.eresult}`,
                 ),
                 {
                   definitions: [],
@@ -2432,7 +2432,7 @@
           return (
             void 0 === this.m_seasonalBadgeDefinition &&
               this.LoadSeasonalBadgeDefinition().then(
-                (e) => (this.m_seasonalBadgeDefinition = e)
+                (e) => (this.m_seasonalBadgeDefinition = e),
               ),
             this.m_seasonalBadgeDefinition
           );
@@ -2450,7 +2450,7 @@
             }
             return (
               console.error(
-                `Error when loading badge definition: EResult=${t.eresult}`
+                `Error when loading badge definition: EResult=${t.eresult}`,
               ),
               null
             );
@@ -2460,7 +2460,7 @@
           return (
             void 0 === this.m_goldenProfileDefinition &&
               this.LoadGoldenProfileDefinition().then(
-                (e) => (this.m_goldenProfileDefinition = e)
+                (e) => (this.m_goldenProfileDefinition = e),
               ),
             this.m_goldenProfileDefinition
           );
@@ -2479,14 +2479,14 @@
               }
               return (
                 console.error(
-                  `Error when loading golden profile definition: Failed to find definition for appid ${this.GetCurrentSeasonalAppID()}`
+                  `Error when loading golden profile definition: Failed to find definition for appid ${this.GetCurrentSeasonalAppID()}`,
                 ),
                 null
               );
             }
             return (
               console.error(
-                `Error when loading golden profile definition: EResult=${t.eresult}`
+                `Error when loading golden profile definition: EResult=${t.eresult}`,
               ),
               null
             );
@@ -2497,7 +2497,7 @@
             this.m_bLoadedCouponDefinitions ||
               ((this.m_bLoadedCouponDefinitions = !0),
               this.LoadCouponDefinitions().then((e) =>
-                e.forEach((e) => this.m_mapCouponDefinitons.set(e.defid, e))
+                e.forEach((e) => this.m_mapCouponDefinitons.set(e.defid, e)),
               )),
             this.m_mapCouponDefinitons.get(e)
           );
@@ -2513,7 +2513,7 @@
             return 1 == t.eresult
               ? t.response.definitions
               : (console.error(
-                  `Error when loading coupon definitions: EResult=${t.eresult}`
+                  `Error when loading coupon definitions: EResult=${t.eresult}`,
                 ),
                 null);
           });
@@ -2536,7 +2536,7 @@
                 ? -1
                 : 8 == t.community_item_class
                 ? 1
-                : t.community_item_class - e.community_item_class
+                : t.community_item_class - e.community_item_class,
             ),
             t.items.forEach((e) => {
               const r = parseInt(e.point_cost);
@@ -2545,7 +2545,7 @@
               t.mapItemOwnership.set(e.defid, n), n || (t.point_cost += r);
             }),
             (t.point_cost = Math.ceil(
-              t.point_cost * (100 - t.discount) * 0.01
+              t.point_cost * (100 - t.discount) * 0.01,
             )),
             t
           );
@@ -2556,8 +2556,8 @@
         BRewardOwnedByUser(e) {
           const t = this.m_mapOwnedCommunityItems.get(
             this.GetOwnedItemCacheKey(
-              this.m_bLoadedFullInventory ? void 0 : e.appid
-            )
+              this.m_bLoadedFullInventory ? void 0 : e.appid,
+            ),
           );
           if ((t || this.GetCommunityItemInventory(e.appid), !t)) return !1;
           if (5 == e.type || 6 == e.type) {
@@ -2615,14 +2615,14 @@
         GetOwnedCommunityItem(e) {
           const t = this.m_mapOwnedCommunityItems.get(
             this.GetOwnedItemCacheKey(
-              this.m_bLoadedFullInventory ? void 0 : e.appid
-            )
+              this.m_bLoadedFullInventory ? void 0 : e.appid,
+            ),
           );
           return (
             t || this.GetCommunityItemInventory(e.appid),
             (0, E.X)(
               t.has(e.community_item_type),
-              `Missing owned item ${e.community_item_type}`
+              `Missing owned item ${e.community_item_type}`,
             ),
             t.get(e.community_item_type)
           );
@@ -2673,10 +2673,10 @@
                   ...t
                     .Body()
                     .bonuses()
-                    .map((e) => e.toObject())
+                    .map((e) => e.toObject()),
                 )
               : console.error(
-                  `Error when calling LoyaltyRewardsService.GetActivePurchaseBonuses: EResult=${t.GetEResult()}`
+                  `Error when calling LoyaltyRewardsService.GetActivePurchaseBonuses: EResult=${t.GetEResult()}`,
                 );
           });
         }
@@ -2692,7 +2692,7 @@
               (t.eResult = n.GetEResult()),
               1 != n.GetEResult() &&
                 console.error(
-                  `Error when calling PlayerService.SetProfileBackground: EResult=${n.GetEResult()}`
+                  `Error when calling PlayerService.SetProfileBackground: EResult=${n.GetEResult()}`,
                 ),
               t
             );
@@ -2710,7 +2710,7 @@
               (t.eResult = n.GetEResult()),
               1 != n.GetEResult()
                 ? console.error(
-                    `Error when calling PlayerService.SetAvatarFrame: EResult=${n.GetEResult()}`
+                    `Error when calling PlayerService.SetAvatarFrame: EResult=${n.GetEResult()}`,
                   )
                 : this.RefreshEquippedProfileItems(),
               t
@@ -2729,7 +2729,7 @@
               (t.eResult = n.GetEResult()),
               1 != n.GetEResult()
                 ? console.error(
-                    `Error when calling PlayerService.SetAnimatedAvatar: EResult=${n.GetEResult()}`
+                    `Error when calling PlayerService.SetAnimatedAvatar: EResult=${n.GetEResult()}`,
                   )
                 : this.RefreshEquippedProfileItems(),
               t
@@ -2748,7 +2748,7 @@
               (t.eResult = n.GetEResult()),
               1 != n.GetEResult()
                 ? console.error(
-                    `Error when calling PlayerService.SetMiniProfileBackground: EResult=${n.GetEResult()}`
+                    `Error when calling PlayerService.SetMiniProfileBackground: EResult=${n.GetEResult()}`,
                   )
                 : this.RefreshEquippedProfileItems(),
               t
@@ -2767,7 +2767,7 @@
               (t.eResult = n.GetEResult()),
               1 != n.GetEResult()
                 ? console.error(
-                    `Error when calling PlayerService.SetSteamDeckKeyboardSkin: EResult=${n.GetEResult()}`
+                    `Error when calling PlayerService.SetSteamDeckKeyboardSkin: EResult=${n.GetEResult()}`,
                   )
                 : this.RefreshEquippedProfileItems(),
               t
@@ -2785,13 +2785,13 @@
               r.Body().set_activate(!0);
             const n = yield h.Ts.ActivateProfileModifierItem(
               this.m_transport,
-              r
+              r,
             );
             return (
               (t.eResult = n.GetEResult()),
               1 != n.GetEResult()
                 ? console.error(
-                    `Error when calling QuestService.ActivateProfileModifierItem: EResult=${n.GetEResult()}`
+                    `Error when calling QuestService.ActivateProfileModifierItem: EResult=${n.GetEResult()}`,
                   )
                 : this.RefreshEquippedProfileItems(),
               t
@@ -2816,7 +2816,7 @@
                   this.GetLoyaltyRewardsSummary())
                 : ((r.strMessage = this.EResultToErrorMessage(i.GetEResult())),
                   console.error(
-                    `Error when calling LoyaltyRewardsService.RedeemPoints: EResult=${i.GetEResult()}`
+                    `Error when calling LoyaltyRewardsService.RedeemPoints: EResult=${i.GetEResult()}`,
                   )),
               r
             );
@@ -2837,12 +2837,12 @@
               (r.eResult = i.GetEResult()),
               1 == i.GetEResult()
                 ? (this.GetCommunityItemInventory(
-                    this.GetCurrentSeasonalAppID()
+                    this.GetCurrentSeasonalAppID(),
                   ),
                   this.GetLoyaltyRewardsSummary())
                 : ((r.strMessage = this.EResultToErrorMessage(i.GetEResult())),
                   console.error(
-                    `Error when calling LoyaltyRewardsService.RedeemPointsForBadgeLevel: EResult=${i.GetEResult()}`
+                    `Error when calling LoyaltyRewardsService.RedeemPointsForBadgeLevel: EResult=${i.GetEResult()}`,
                   )),
               r
             );
@@ -2857,7 +2857,7 @@
             r.Body().set_customization_type(e);
             const n = yield _.pQ.RedeemPointsForProfileCustomization(
               this.m_transport,
-              r
+              r,
             );
             return (
               (t.eResult = n.GetEResult()),
@@ -2865,7 +2865,7 @@
                 ? this.RefreshPurchasedProfileCustomizations()
                 : ((t.strMessage = this.EResultToErrorMessage(n.GetEResult())),
                   console.error(
-                    `Error when calling LoyaltyRewardsService.RedeemPointsForProfileCustomization: EResult=${n.GetEResult()}`
+                    `Error when calling LoyaltyRewardsService.RedeemPointsForProfileCustomization: EResult=${n.GetEResult()}`,
                   )),
               t
             );
@@ -2883,7 +2883,7 @@
             n.SetBodyFields({ customization_type: e, new_level: t });
             const i = yield _.pQ.RedeemPointsForProfileCustomizationUpgrade(
               this.m_transport,
-              n
+              n,
             );
             return (
               (r.eResult = i.GetEResult()),
@@ -2891,7 +2891,7 @@
                 ? this.RefreshPurchasedProfileCustomizations()
                 : ((r.strMessage = this.EResultToErrorMessage(i.GetEResult())),
                   console.error(
-                    `Error when calling LoyaltyRewardsService.RedeemPointsForProfileCustomizationUpgrade: EResult=${i.GetEResult()}`
+                    `Error when calling LoyaltyRewardsService.RedeemPointsForProfileCustomizationUpgrade: EResult=${i.GetEResult()}`,
                   )),
               r
             );
@@ -2912,7 +2912,7 @@
               yield c()
                 .post(
                   `${m.De.STORE_BASE_URL}cart/ajaxredeemtokensforcartdiscount`,
-                  r
+                  r,
                 )
                 .then((e) => {
                   const r = e.data;
@@ -2920,14 +2920,14 @@
                     1 == r.eresult && r.redirect
                       ? (window.location.href = r.redirect)
                       : console.error(
-                          `Error when calling ajaxredeemtokensforcartdiscount: ${r}`
+                          `Error when calling ajaxredeemtokensforcartdiscount: ${r}`,
                         );
                 });
             } catch (e) {
               let t = (0, d.l)(e);
               console.error(
                 `Error when calling ajaxredeemtokensforcartdiscount: ${t.strErrorMsg}`,
-                t
+                t,
               );
             }
             return t;
@@ -2944,11 +2944,11 @@
                       ? -1
                       : e.max_use_count == t.max_use_count
                       ? 0
-                      : 1
+                      : 1,
                   )
                   .forEach((e) =>
-                    this.m_mapCouponPromos.set(e.loyalty_reward_id, e)
-                  )
+                    this.m_mapCouponPromos.set(e.loyalty_reward_id, e),
+                  ),
               )),
             this.m_mapCouponPromos
           );
@@ -2959,7 +2959,7 @@
             e.Body().set_country_code(m.L7.country_code);
             const t = yield f.Ng.GetAvailableValveDiscountPromotions(
               this.m_transport,
-              e
+              e,
             );
             return 1 == t.GetEResult()
               ? t
@@ -2967,7 +2967,7 @@
                   .promotions()
                   .map((e) => e.toObject())
               : (console.error(
-                  `Error when calling UserAccountService.GetAvailableValveDiscountPromotions: EResult=${t.GetEResult()}`
+                  `Error when calling UserAccountService.GetAvailableValveDiscountPromotions: EResult=${t.GetEResult()}`,
                 ),
                 []);
           });
@@ -3017,7 +3017,7 @@
             Promise.all([e, t]).then(([e, t]) => {
               (this.m_rgEligibleApps = e),
                 (this.m_mapEligibleApps = new Map(
-                  this.m_rgEligibleApps.map((e) => [e.appid, e])
+                  this.m_rgEligibleApps.map((e) => [e.appid, e]),
                 ));
               const r = t.filter((e) => this.m_mapEligibleApps.has(e)),
                 n = e
@@ -3058,11 +3058,11 @@
             const r = yield g.lk.ClientGetLastPlayedTimes(this.m_transport, e);
             return 1 == r.GetEResult()
               ? ((this.m_rgRecentlyPlayed = this.ProcessRecentlyPlayedApps(
-                  r.Body().toObject().games
+                  r.Body().toObject().games,
                 )),
                 this.m_rgRecentlyPlayed)
               : (console.error(
-                  `Error when calling PlayerService.ClientGetLastPlayedTimes: EResult=${r.GetEResult()}`
+                  `Error when calling PlayerService.ClientGetLastPlayedTimes: EResult=${r.GetEResult()}`,
                 ),
                 []);
           });
@@ -3074,7 +3074,7 @@
                 ? t.last_playtime - e.last_playtime
                 : t.playtime_2weeks != e.playtime_2weeks
                 ? t.playtime_2weeks - e.playtime_2weeks
-                : t.playtime_forever - e.playtime_forever
+                : t.playtime_forever - e.playtime_forever,
             ),
             e.map((e) => e.appid)
           );
@@ -3088,7 +3088,7 @@
             return 1 == t.GetEResult()
               ? t.Body().toObject().apps
               : (console.error(
-                  `Error when calling GetEligibleApps: EResult=${t.GetEResult()}`
+                  `Error when calling GetEligibleApps: EResult=${t.GetEResult()}`,
                 ),
                 []);
           });
@@ -3102,7 +3102,7 @@
             1 == t.GetEResult()
               ? (this.m_equippedItems = t.Body().toObject())
               : console.error(
-                  `Error when calling GetProfileItemsEquipped: EResult=${t.GetEResult()}`
+                  `Error when calling GetProfileItemsEquipped: EResult=${t.GetEResult()}`,
                 );
           });
         }
@@ -3113,13 +3113,16 @@
             e.SetBodyFields({ steamid: m.L7.steamid });
             const t = yield g.lk.GetPurchasedAndUpgradedProfileCustomizations(
               this.m_transport,
-              e
+              e,
             );
             if (1 == t.GetEResult()) {
               let e = t.Body().toObject();
               (this.m_rgPurchasedCustomizations = e.purchased_customizations),
                 (this.m_rgUpgradedCustomizations = e.upgraded_customizations);
-            } else console.error(`Error when calling GetPurchasedAndUpgradedProfileCustomizations: EResult=${t.GetEResult()}`);
+            } else
+              console.error(
+                `Error when calling GetPurchasedAndUpgradedProfileCustomizations: EResult=${t.GetEResult()}`,
+              );
           });
         }
         GetEquippedProfileItems(e) {
@@ -3132,7 +3135,7 @@
               (t.eResult = n.GetEResult()),
               1 != n.GetEResult() &&
                 console.error(
-                  `Error when calling LoyaltyRewardsService.GetEquippedProfileItems: EResult=${n.GetEResult()}`
+                  `Error when calling LoyaltyRewardsService.GetEquippedProfileItems: EResult=${n.GetEResult()}`,
                 ),
               Object.assign(Object.assign({}, n.Body().toObject()), t)
             );
@@ -3150,7 +3153,7 @@
             return c()
               .get(
                 `${m.De.WEBAPI_BASE_URL}ISteamUserOAuth/GetUserSummaries/v2/`,
-                { params: e }
+                { params: e },
               )
               .then((e) => {
                 if (
@@ -3212,7 +3215,7 @@
                 ? r.response.definitions[0]
                 : null
               : (console.error(
-                  `Error when loading reward definitions: EResult=${r.eresult}`
+                  `Error when loading reward definitions: EResult=${r.eresult}`,
                 ),
                 null);
           });
@@ -3231,7 +3234,7 @@
                 e.appid,
                 e.appid === this.GetCurrentSeasonalAppID()
                   ? (0, s.Xx)("#HeroCluster_Premier_Collection_Subtitle")
-                  : void 0
+                  : void 0,
               );
             case "event":
               return new F(e.eventname);
@@ -3249,7 +3252,7 @@
               const n = new k(
                 e,
                 t,
-                Object.assign({ grouping: 2, maxToReturn: 0 }, r)
+                Object.assign({ grouping: 2, maxToReturn: 0 }, r),
               );
               return (
                 this.m_mapClusters.has(n.id) || this.m_mapClusters.set(n.id, n),
@@ -3291,19 +3294,19 @@
             i = e(
               (0, s.Xx)(
                 "#RewardCluster_Popular_Title",
-                (0, s.Xx)("#RewardCluster_Popular_RewardItems")
+                (0, s.Xx)("#RewardCluster_Popular_RewardItems"),
               ),
-              (0, s.Xx)("#RewardCluster_Popular_Subtitle")
+              (0, s.Xx)("#RewardCluster_Popular_Subtitle"),
             ),
             a = e(
               N(13, !0),
               (0, s.Xx)("#RewardCluster_MiniProfileBackgrounds_Subtitle"),
-              { itemclass: [13] }
+              { itemclass: [13] },
             ),
             l = e(
               (0, s.Xx)("#ShopPageTitle_Avatar"),
               (0, s.Xx)("#RewardCluster_AvatarItems_Subtitle"),
-              { itemclass: [15, 14] }
+              { itemclass: [15, 14] },
             ),
             c = e(N(3, !0), (0, s.Xx)("#RewardCluster_Backgrounds_Subtitle"), {
               itemclass: [3],
@@ -3311,82 +3314,82 @@
             m = e(
               (0, s.Xx)(
                 "#RewardCluster_Popular_Title",
-                (0, s.Xx)("#ShopNav_ChatEffectsLink")
+                (0, s.Xx)("#ShopNav_ChatEffectsLink"),
               ),
               (0, s.Xx)("#RewardCluster_ChatEffect_Subtitle"),
-              { itemclass: [12] }
+              { itemclass: [12] },
             ),
             d = e(
               (0, s.Xx)(
                 "#RewardCluster_Popular_Title",
-                (0, s.Xx)("#ShopNav_StickersLink")
+                (0, s.Xx)("#ShopNav_StickersLink"),
               ),
               (0, s.Xx)("#RewardCluster_Popular_Subtitle"),
-              { itemclass: [11] }
+              { itemclass: [11] },
             ),
             p = e(
               (0, s.Xx)(
                 "#RewardCluster_Popular_Title",
-                (0, s.Xx)("#ShopNav_EmoticonsLink")
+                (0, s.Xx)("#ShopNav_EmoticonsLink"),
               ),
               (0, s.Xx)("#RewardCluster_Popular_Subtitle"),
-              { itemclass: [4] }
+              { itemclass: [4] },
             ),
             u = e(
               (0, s.Xx)("#RewardCluster_All_Title", N(15, !0)),
               (0, s.Xx)("#RewardCluster_AnimatedAvatar_Subtitle"),
-              { itemclass: [15] }
+              { itemclass: [15] },
             ),
             _ = e(
               (0, s.Xx)("#RewardCluster_All_Title", N(14, !0)),
               (0, s.Xx)("#RewardCluster_AvatarFrames_Subtitle"),
-              { itemclass: [14] }
+              { itemclass: [14] },
             ),
             h = e(
               (0, s.Xx)("#RewardCluster_All_Title", N(16, !0)),
               (0, s.Xx)("#RewardCluster_SteamDeckKeyboardSkins_Subtitle"),
-              { itemclass: [16] }
+              { itemclass: [16] },
             ),
             g = e(
               (0, s.Xx)("#RewardCluster_All_Title", N(17, !0)),
               (0, s.Xx)("#RewardCluster_SteamDeckStartupMovies_Subtitle"),
-              { itemclass: [17] }
+              { itemclass: [17] },
             ),
             f = e(
               (0, s.Xx)(
                 "#RewardCluster_All_Title",
-                (0, s.Xx)("#RewardItemType_Bundle_plural")
+                (0, s.Xx)("#RewardItemType_Bundle_plural"),
               ),
               "",
-              { rewardtype: [5, 6] }
+              { rewardtype: [5, 6] },
             ),
             C = e(
               (0, s.Xx)(
                 "#RewardCluster_All_Title",
-                (0, s.Xx)("#RewardItemType_ProfileBundle_plural")
+                (0, s.Xx)("#RewardItemType_ProfileBundle_plural"),
               ),
               "",
-              { itemclass: [8], queryFilter: [3], grouping: 1 }
+              { itemclass: [8], queryFilter: [3], grouping: 1 },
             ),
             I = e(
               (0, s.Xx)(
                 "#RewardCluster_Popular_Title",
-                (0, s.Xx)("#RewardItemType_ProfileBundle_plural")
+                (0, s.Xx)("#RewardItemType_ProfileBundle_plural"),
               ),
               "",
-              { itemclass: [8], queryFilter: [3], grouping: 2 }
+              { itemclass: [8], queryFilter: [3], grouping: 2 },
             ),
             y = e(
               (0, s.Xx)(
                 "#RewardCluster_All_Title",
-                (0, s.Xx)("#RewardItemType_ArtistProfile_plural")
+                (0, s.Xx)("#RewardItemType_ArtistProfile_plural"),
               ),
               "",
               {
                 itemclass: [8],
                 queryFilter: [3],
                 categoryTag: ["artist_profile"],
-              }
+              },
             ),
             S =
               (e(
@@ -3396,7 +3399,7 @@
                   itemclass: [8],
                   queryFilter: [3],
                   categoryTag: ["tabletop_fest_2021"],
-                }
+                },
               ),
               [
                 {
@@ -3454,8 +3457,8 @@
               [{ cluster: d, type: 0 }],
               (0, s.Xx)("#ShopPageTitle_Stickers"),
               void 0,
-              (0, s.Xx)("#SearchPlaceholder_Stickers")
-            )
+              (0, s.Xx)("#SearchPlaceholder_Stickers"),
+            ),
           );
           n(
             new z(
@@ -3463,8 +3466,8 @@
               [{ cluster: p, type: 0 }],
               (0, s.Xx)("#ShopPageTitle_Emoticons"),
               void 0,
-              (0, s.Xx)("#SearchPlaceholder_Emoticons")
-            )
+              (0, s.Xx)("#SearchPlaceholder_Emoticons"),
+            ),
           ),
             n(
               new z(
@@ -3472,28 +3475,28 @@
                 [{ cluster: m, type: 0 }],
                 N(12, !0),
                 void 0,
-                (0, s.Xx)("#SearchPlaceholder_ChatEffects")
-              )
+                (0, s.Xx)("#SearchPlaceholder_ChatEffects"),
+              ),
             );
           const v = e(
               (0, s.Xx)("#RewardCluster_AnimatedProfileBackgrounds_Title"),
               (0, s.Xx)("#RewardCluster_Backgrounds_Subtitle"),
-              { itemclass: [3], queryFilter: [1] }
+              { itemclass: [3], queryFilter: [1] },
             ),
             A = e(
               (0, s.Xx)("#RewardCluster_AnimatedMiniProfileBackgrounds_Title"),
               (0, s.Xx)("#RewardCluster_MiniProfileBackgrounds_Subtitle"),
-              { itemclass: [13], queryFilter: [1] }
+              { itemclass: [13], queryFilter: [1] },
             ),
             B = e(
               (0, s.Xx)("#RewardCluster_StillProfileBackgrounds_Title"),
               (0, s.Xx)("#RewardCluster_Backgrounds_Subtitle"),
-              { itemclass: [3], queryFilter: [2] }
+              { itemclass: [3], queryFilter: [2] },
             ),
             P = e(
               (0, s.Xx)("#RewardCluster_StillMiniProfileBackgrounds_Title"),
               (0, s.Xx)("#RewardCluster_MiniProfileBackgrounds_Subtitle"),
-              { itemclass: [13], queryFilter: [2] }
+              { itemclass: [13], queryFilter: [2] },
             );
           n(
             new z(
@@ -3506,8 +3509,8 @@
               ],
               (0, s.Xx)("#ShopPageTitle_Backgrounds"),
               void 0,
-              (0, s.Xx)("#SearchPlaceholder_Backgrounds")
-            )
+              (0, s.Xx)("#SearchPlaceholder_Backgrounds"),
+            ),
           ),
             n(
               new z(
@@ -3518,8 +3521,8 @@
                 ],
                 (0, s.Xx)("#ShopPageTitle_Avatar"),
                 void 0,
-                (0, s.Xx)("#SearchPlaceholder_Avatar")
-              )
+                (0, s.Xx)("#SearchPlaceholder_Avatar"),
+              ),
             );
           n(
             new z(
@@ -3530,8 +3533,8 @@
               ],
               (0, s.Xx)("#ShopPageTitle_SteamDeckItems"),
               void 0,
-              (0, s.Xx)("#SearchPlaceholder_SteamDeckItems")
-            )
+              (0, s.Xx)("#SearchPlaceholder_SteamDeckItems"),
+            ),
           ),
             n(
               new z(
@@ -3539,8 +3542,8 @@
                 [{ cluster: h, type: 0 }],
                 (0, s.Xx)("#ShopPageTitle_SteamDeckKeyboardSkin"),
                 void 0,
-                (0, s.Xx)("#SearchPlaceholder_SteamDeckKeyboardSkin")
-              )
+                (0, s.Xx)("#SearchPlaceholder_SteamDeckKeyboardSkin"),
+              ),
             ),
             n(
               new z(
@@ -3548,8 +3551,8 @@
                 [{ cluster: g, type: 0 }],
                 (0, s.Xx)("#ShopPageTitle_SteamDeckStartupMovie"),
                 void 0,
-                (0, s.Xx)("#SearchPlaceholder_SteamDeckStartupMovie")
-              )
+                (0, s.Xx)("#SearchPlaceholder_SteamDeckStartupMovie"),
+              ),
             ),
             n(
               new z(
@@ -3557,8 +3560,8 @@
                 [{ cluster: f, type: 0 }],
                 (0, s.Xx)("#ShopPageTitle_ItemBundles"),
                 (0, s.Xx)("#ShopPageTitle_ItemBundles_Subtitle"),
-                (0, s.Xx)("#SearchPlaceholder_ItemBundles")
-              )
+                (0, s.Xx)("#SearchPlaceholder_ItemBundles"),
+              ),
             );
           n(
             new z(
@@ -3570,8 +3573,8 @@
               ],
               (0, s.Xx)("#ShopPageTitle_ProfileBundles"),
               (0, s.Xx)("#ShopPageTitle_ProfileBundles_Subtitle"),
-              (0, s.Xx)("#SearchPlaceholder_ProfileBundles")
-            )
+              (0, s.Xx)("#SearchPlaceholder_ProfileBundles"),
+            ),
           );
           n(
             new z(
@@ -3579,12 +3582,12 @@
               [{ cluster: y, type: 0, bHomogeneous: !0 }],
               (0, s.Xx)("#ShopPageTitle_ArtistProfiles"),
               (0, s.Xx)("#ShopPageTitle_ArtistProfiles_Subtitle"),
-              (0, s.Xx)("#SearchPlaceholder_ArtistProfiles")
-            )
+              (0, s.Xx)("#SearchPlaceholder_ArtistProfiles"),
+            ),
           ),
             this.BIsLoggedIn() &&
               (0, o.gx)(
-                () => !!D.Get().GetSortedGamesWithRewards().length
+                () => !!D.Get().GetSortedGamesWithRewards().length,
               ).then(() => {
                 const e = new k(
                   (0, s.Xx)("#HeroCluster_YourGamesTitle"),
@@ -3594,7 +3597,7 @@
                       return D.Get().GetSortedGamesWithRewards().slice(0, 10);
                     },
                     grouping: 2,
-                  }
+                  },
                 );
                 this.m_mapClusters.set(e.id, e);
                 const t = {
@@ -3615,7 +3618,8 @@
                   if (
                     -1 !=
                     M.findIndex(
-                      (t) => "clusterview" === t.type && i(t.view.cluster) === e
+                      (t) =>
+                        "clusterview" === t.type && i(t.view.cluster) === e,
                     )
                   )
                     continue;
@@ -3630,7 +3634,7 @@
                 }
                 this.m_mapPages.set(
                   L({ type: "custom", pageid: x }),
-                  new O(x, M)
+                  new O(x, M),
                 );
               });
         }
@@ -3721,7 +3725,7 @@
           [o.LO],
           D.prototype,
           "m_rgProfileCustomizationsConfig",
-          void 0
+          void 0,
         ),
         (0, n.gn)([o.LO], D.prototype, "m_persona", void 0),
         (0, n.gn)([o.LO], D.prototype, "m_equippedItems", void 0),
@@ -3801,7 +3805,7 @@
                     D.Get().QueryRewardDefinitions(
                       U({ grouping: 2, categoryTag: [this.m_strEventName] }, r),
                       e,
-                      t
+                      t,
                     ),
                 },
               },
@@ -3839,7 +3843,7 @@
                     D.Get().QueryRewardDefinitions(
                       U({ appid: [this.m_appid], rewardtype: [5, 6] }, r),
                       e,
-                      t
+                      t,
                     ),
                 },
               },
@@ -3858,7 +3862,7 @@
                   D.Get().QueryRewardDefinitions(
                     U({ appid: [this.m_appid], itemclass: [e] }, n),
                     t,
-                    r
+                    r,
                   ),
               },
             },
@@ -3904,7 +3908,7 @@
                     }),
                   };
               }
-            })(e)
+            })(e),
           );
         }
       }
@@ -3916,7 +3920,7 @@
             r,
             n,
             i,
-            a
+            a,
           );
         }
       }
@@ -3961,31 +3965,31 @@
                 t.itemclass &&
                   (r.itemclass && r.itemclass.length
                     ? (r.itemclass = r.itemclass.filter((e) =>
-                        t.itemclass.includes(e)
+                        t.itemclass.includes(e),
                       ))
                     : (r.itemclass = t.itemclass)),
                 t.queryFilter &&
                   (r.queryFilter
                     ? r.queryFilter.push(
                         ...t.queryFilter.filter((e) =>
-                          r.queryFilter.includes(e)
-                        )
+                          r.queryFilter.includes(e),
+                        ),
                       )
                     : (r.queryFilter = t.queryFilter)),
                 t.categoryTag &&
                   (r.categoryTag
                     ? r.categoryTag.push(
                         ...t.categoryTag.filter((e) =>
-                          r.categoryTag.includes(e)
-                        )
+                          r.categoryTag.includes(e),
+                        ),
                       )
                     : (r.categoryTag = t.categoryTag)),
                 t.excludedContentDescriptors &&
                   (r.excludedContentDescriptors
                     ? r.excludedContentDescriptors.push(
                         ...t.excludedContentDescriptors.filter((e) =>
-                          r.excludedContentDescriptors.includes(e)
-                        )
+                          r.excludedContentDescriptors.includes(e),
+                        ),
                       )
                     : (r.excludedContentDescriptors =
                         t.excludedContentDescriptors)),
@@ -4058,7 +4062,7 @@
             1 == t.GetEResult()
               ? this.InitFreeItemReward(t.Body().toObject())
               : console.error(
-                  "Error when calling SaleItemRewardsService.CanClaimItem: EResult=${msgResponse.GetEResult()}"
+                  "Error when calling SaleItemRewardsService.CanClaimItem: EResult=${msgResponse.GetEResult()}",
                 );
           });
         }
@@ -4080,7 +4084,7 @@
                     .reward_item()
                     .toObject()),
                   D.Get().GetCommunityItemInventory(
-                    this.m_claimedFreeItemDef.appid
+                    this.m_claimedFreeItemDef.appid,
                   ),
                   (this.m_bCanClaimFreeItem = !1),
                   (this.m_rtNextClaimTime = r.Body().next_claim_time()),
@@ -4088,7 +4092,7 @@
                 : (10 == r.GetEResult() &&
                     (e.strMessage = (0, s.Xx)("#SummerSale_Redeem_Busy")),
                   console.error(
-                    `Error when calling SaleItemRewardsService.ClaimItem: EResult=${r.GetEResult()}`
+                    `Error when calling SaleItemRewardsService.ClaimItem: EResult=${r.GetEResult()}`,
                   )),
               e
             );
@@ -4111,7 +4115,7 @@
                   ? (this.m_bCanClaimFreeItem = !0)
                   : this.SetClaimTimer();
             },
-            r > 3e5 ? r / 2 : r
+            r > 3e5 ? r / 2 : r,
           );
         }
       }
@@ -4142,7 +4146,7 @@
           Object.assign({ className: (0, u.Z)(_.Discount, r) }, a),
           "-",
           t,
-          "%"
+          "%",
         );
       };
       var g = r(13997),
@@ -4169,11 +4173,11 @@
                     bundle: d,
                     definition: t,
                   },
-                  i
+                  i,
                 );
-              })(e)
-            )
-          )
+              })(e),
+            ),
+          ),
         ),
         I = (0, a.Pi)((e) => {
           const {
@@ -4213,7 +4217,7 @@
                 style: Object.assign(Object.assign({}, h), { width: "524px" }),
                 onActivate: g,
               },
-              f
+              f,
             ),
             r &&
               i.createElement("img", {
@@ -4239,14 +4243,14 @@
                 width: 464,
                 cardSize: 90,
                 offer: a,
-              })
+              }),
             ),
             i.createElement(y, {
               label: C,
               count: a.items.length,
               cost: s,
               discount: a.discount,
-            })
+            }),
           );
         }),
         y = ({ cost: e, discount: t, label: r, count: n }) => {
@@ -4269,16 +4273,16 @@
                   i.createElement(
                     "span",
                     { className: p.AlreadyOwned },
-                    (0, c.Xx)("#Redeem_BundleItemOwned")
+                    (0, c.Xx)("#Redeem_BundleItemOwned"),
                   ),
-                  i.createElement(f.Zg, { className: p.CheckmarkCircle })
+                  i.createElement(f.Zg, { className: p.CheckmarkCircle }),
                 )
               : i.createElement(
                   i.Fragment,
                   null,
                   i.createElement(h, { value: t, className: p.BundleDiscount }),
-                  i.createElement(g.L, { amount: e })
-                )
+                  i.createElement(g.L, { amount: e }),
+                ),
           );
         };
       const w = (0, a.Pi)((e) => {
@@ -4310,9 +4314,9 @@
               i.createElement("img", {
                 src: (0, d.T)(e),
                 className: p.ItemCardImage,
-              })
-            )
-          )
+              }),
+            ),
+          ),
         );
       });
       function S(e, t, r, n, i) {
@@ -4342,8 +4346,8 @@
               alignItems: "center",
             },
             e,
-            { className: p.ItemCard }
-          )
+            { className: p.ItemCard },
+          ),
         );
       function M(e) {
         var t, r;
@@ -4362,7 +4366,7 @@
           default:
             return (
               console.error(
-                `Cannot derive bundle title for definition ${e.defid} with type ${e.type}`
+                `Cannot derive bundle title for definition ${e.defid} with type ${e.type}`,
               ),
               ""
             );
@@ -4387,7 +4391,7 @@
               className: a.BackgroundFadeImageBlurred,
               style: { backgroundImage: `url(${e})` },
             }),
-            n.createElement("div", { className: a.BackgroundFade })
+            n.createElement("div", { className: a.BackgroundFade }),
           ),
         s = ({ theme: e }) =>
           n.createElement(
@@ -4399,7 +4403,7 @@
             n.createElement("div", {
               className: (0, i.Z)(a.BackgroundFadeThemeBlurred, e),
             }),
-            n.createElement("div", { className: a.BackgroundFade })
+            n.createElement("div", { className: a.BackgroundFade }),
           );
     },
     42490: (e, t, r) => {
@@ -4421,12 +4425,12 @@
                 focusable: !0,
                 onActivate: l,
               },
-              c
+              c,
             ),
             i.createElement("div", {
               className: (0, o.Z)(a.NoBackdropSupportBackdrop),
             }),
-            r
+            r,
           );
         },
         c = (e) => {
@@ -4434,7 +4438,7 @@
             r = (0, n._T)(e, ["className"]);
           return i.createElement(
             "div",
-            Object.assign({ className: (0, o.Z)(a.Body, t) }, r)
+            Object.assign({ className: (0, o.Z)(a.Body, t) }, r),
           );
         },
         m = (e) => {
@@ -4442,7 +4446,7 @@
             r = (0, n._T)(e, ["className"]);
           return i.createElement(
             "div",
-            Object.assign({ className: (0, o.Z)(a.Footer, t) }, r)
+            Object.assign({ className: (0, o.Z)(a.Footer, t) }, r),
           );
         };
     },
@@ -4534,7 +4538,7 @@
               I("margin-top", C || g || _),
               I("margin-right", y || h || _),
               I("margin-bottom", w || g || _),
-              B
+              B,
             ),
             R = Object.assign(
               {
@@ -4548,7 +4552,7 @@
                 flexBasis: A,
                 flex: D,
               },
-              L
+              L,
             ),
             k = Object.assign({ className: T, style: R, ref: t }, P);
           if (r) {
@@ -4557,7 +4561,7 @@
           }
           return i.createElement(
             s.s,
-            Object.assign({ className: T, style: R, ref: t }, P)
+            Object.assign({ className: T, style: R, ref: t }, P),
           );
         }),
         m = (0, i.forwardRef)(function (e, t) {
@@ -4592,7 +4596,7 @@
                   marginTop: p(-I),
                 }),
               },
-              g
+              g,
             ),
             i.createElement(
               "div",
@@ -4602,11 +4606,11 @@
                   ? i.createElement(
                       c,
                       { paddingLeft: m || l, paddingTop: d || l, className: u },
-                      e
+                      e,
                     )
-                  : null
-              )
-            )
+                  : null,
+              ),
+            ),
           );
         }),
         d = (0, i.forwardRef)(function (e, t) {
@@ -4622,7 +4626,7 @@
             s.s,
             Object.assign(
               { "flow-children": "column", ref: t, className: d },
-              p
+              p,
             ),
             i.Children.map(m, (e, t) =>
               null != e
@@ -4632,10 +4636,10 @@
                       paddingBottom: t !== u - 1 ? r : void 0,
                       className: (0, o.Z)(l, a.RemoveOnEmpty),
                     },
-                    e
+                    e,
                   )
-                : null
-            )
+                : null,
+            ),
           );
         }),
         p = (e) => `${e}px`,
@@ -4676,12 +4680,12 @@
                     .map((t) =>
                       Object.keys(e.spacing)
                         .map((r) => C(t, r, e.spacing[r]))
-                        .join("\n")
+                        .join("\n"),
                     )
                     .join("\n");
                   return t;
                 })(n),
-              [n]
+              [n],
             ),
             [o, s] = (0, i.useState)(0);
           return (
@@ -4692,7 +4696,7 @@
               i.Fragment,
               null,
               i.createElement("style", null, a),
-              r
+              r,
             )
           );
         };
@@ -4786,8 +4790,8 @@
               style: m ? { fontSize: `${m}rem` } : void 0,
             },
             p,
-            e.children
-          )
+            e.children,
+          ),
         );
       };
     },
@@ -4848,7 +4852,7 @@
               },
               ref: r,
             }),
-            t.children
+            t.children,
           );
         });
       }
@@ -4904,13 +4908,13 @@
                     0,
                     Math.min(
                       e.x - d.clientWidth / 2 + e.width / 2,
-                      d.scrollWidth - d.clientWidth
-                    )
+                      d.scrollWidth - d.clientWidth,
+                    ),
                   );
                   c(t);
                 }
               },
-              [o, d]
+              [o, d],
             ),
             [_, h] = i.useState(0);
           return (
@@ -4931,8 +4935,8 @@
                   fnScrollIntoViewHandler: () => !0,
                 }),
                 t,
-                i.createElement("div", { className: b.Accent, style: p })
-              )
+                i.createElement("div", { className: b.Accent, style: p }),
+              ),
             )
           );
         },
@@ -4950,9 +4954,9 @@
               "div",
               Object.assign(
                 { className: (0, I.Z)(b.Item, r && b.Active, a), ref: m },
-                o
+                o,
               ),
-              t
+              t,
             )
           );
         };
@@ -5142,18 +5146,18 @@
                     e.external
                       ? i.createElement(
                           j,
-                          Object.assign({}, e.props, { key: e.props.href })
+                          Object.assign({}, e.props, { key: e.props.href }),
                         )
                       : i.createElement(
                           k,
                           Object.assign({}, e.props, {
                             key: JSON.stringify(e.props.to),
-                          })
-                        )
-                  )
-                )
-              )
-            )
+                          }),
+                        ),
+                  ),
+                ),
+              ),
+            ),
           );
         },
         k = (e) => {
@@ -5178,10 +5182,10 @@
                 className: (0, I.Z)(C.SecondaryNavItem, r),
                 activeClassName: C.Selected,
               },
-              l
+              l,
             ),
             i.createElement("div", { className: C.Label }, a),
-            c && i.createElement(c, { className: C.Callout })
+            c && i.createElement(c, { className: C.Callout }),
           );
         },
         j = (e) => {
@@ -5202,7 +5206,7 @@
             "a",
             Object.assign({ className: (0, I.Z)(C.SecondaryNavItem, r) }, s),
             i.createElement("div", { className: C.Label }, a),
-            l && i.createElement(l, { className: C.Callout })
+            l && i.createElement(l, { className: C.Callout }),
           );
         };
       function F(e) {
@@ -5214,7 +5218,7 @@
         return i.createElement(
           A,
           { active: s, className: C.ScrollableTabItem },
-          e.children
+          e.children,
         );
       }
       const G = () => {
@@ -5238,9 +5242,9 @@
                     i.createElement(
                       A,
                       { className: C.ScrollableTabItem },
-                      e.props.children
-                    )
-                  )
+                      e.props.children,
+                    ),
+                  ),
                 );
               } else {
                 const r = e.props,
@@ -5255,8 +5259,8 @@
                       focusClassName: C.Focused,
                       noFocusRing: !0,
                     }),
-                    i.createElement(F, Object.assign({}, r), r.children)
-                  )
+                    i.createElement(F, Object.assign({}, r), r.children),
+                  ),
                 );
               }
             });
@@ -5307,14 +5311,14 @@
                 fill: "none",
                 xmlns: "http://www.w3.org/2000/svg",
               },
-              e
+              e,
             ),
             i.createElement("path", {
               fill: "currentColor",
               fillRule: "evenodd",
               clipRule: "evenodd",
               d: "M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24ZM10.9577 17.254L18.8038 10.0384L16.773 7.83022L10.0706 13.9941L7.71092 11.2399L5.43271 13.1918L8.80323 17.1259C9.06802 17.4349 9.44701 17.6231 9.85327 17.6473C10.2595 17.6715 10.6582 17.5295 10.9577 17.254Z",
-            })
+            }),
           ),
         s = (e) =>
           i.createElement(
@@ -5327,12 +5331,12 @@
                 fill: "none",
                 xmlns: "http://www.w3.org/2000/svg",
               },
-              e
+              e,
             ),
             i.createElement("path", {
               d: "M15.2305 28.1415L15.2305 15.621L15.2305 3.10029C8.31552 3.10029 2.70984 8.70596 2.70984 15.6209C2.70984 22.5359 8.31552 28.1415 15.2305 28.1415ZM30.2305 15.6209C30.2305 23.9052 23.5147 30.6209 15.2305 30.6209C6.9462 30.6209 0.230469 23.9052 0.230469 15.6209C0.230469 7.33664 6.9462 0.620911 15.2305 0.620911C23.5147 0.620911 30.2305 7.33664 30.2305 15.6209Z",
               fill: "#5B7E0F",
-            })
+            }),
           );
       function l(e) {
         const { className: t } = e;
@@ -5352,7 +5356,7 @@
             clipRule: "evenodd",
             d: "M31.327 0.622074L31.0027 0.341797L30.6762 0.619372L7.67619 20.1694L0.676186 26.1194C0.465782 26.2982 0.440197 26.6138 0.61904 26.8242C0.797884 27.0346 1.11343 27.0602 1.32383 26.8813L7.50001 21.6316V49.0003C7.50001 50.3811 8.6193 51.5003 10 51.5003H51.5C52.8807 51.5003 54 50.3811 54 49.0003V21.5426L60.173 26.8786C60.3819 27.0592 60.6977 27.0362 60.8783 26.8273C61.0589 26.6184 61.0359 26.3027 60.827 26.1221L53.827 20.0712L31.327 0.622074ZM8.50001 49.0003V20.7816L30.9973 1.65889L53 20.6782V49.0003C53 49.8288 52.3284 50.5003 51.5 50.5003H38.5V32.0003C38.5 30.6196 37.3807 29.5003 36 29.5003H26C24.6193 29.5003 23.5 30.6196 23.5 32.0003V50.5003H10C9.17158 50.5003 8.50001 49.8288 8.50001 49.0003ZM24.5 50.5003H37.5V32.0003C37.5 31.1719 36.8284 30.5003 36 30.5003H26C25.1716 30.5003 24.5 31.1719 24.5 32.0003V50.5003Z",
             fill: "",
-          })
+          }),
         );
       }
       function c(e) {
@@ -5373,7 +5377,7 @@
             clipRule: "evenodd",
             d: "M33.9999 10.5C33.9999 15.7034 29.5671 20 23.9999 20C18.4327 20 13.9999 15.7034 13.9999 10.5C13.9999 5.29663 18.4327 1 23.9999 1C29.5671 1 33.9999 5.29663 33.9999 10.5ZM34.9999 10.5C34.9999 16.299 30.075 21 23.9999 21C17.9247 21 12.9999 16.299 12.9999 10.5C12.9999 4.70101 17.9247 0 23.9999 0C30.075 0 34.9999 4.70101 34.9999 10.5ZM16.3702 23.5C10.6886 23.5 5.62398 26.8717 3.72868 32.2547C2.47599 35.8127 1.26935 39.3781 0.768536 40.866C0.549738 41.516 0.803538 42.2172 1.36831 42.5884L4.65592 44.7495C16.463 52.5107 31.809 52.2879 43.3858 44.1873L45.6833 42.5797C46.2215 42.2031 46.452 41.5201 46.2522 40.8944L43.9193 33.5891C42.0002 27.5792 36.4154 23.5 30.1065 23.5H24.2027H16.3702ZM4.67193 32.5868C6.41799 27.6277 11.0872 24.5 16.3702 24.5H24.2027H30.1065C35.9803 24.5 41.1799 28.2979 42.9667 33.8933L45.2996 41.1986C45.3662 41.4072 45.2893 41.6348 45.1099 41.7604L42.8125 43.368C31.5712 51.2338 16.67 51.4501 5.20521 43.9139L1.9176 41.7528C1.72419 41.6257 1.64564 41.3949 1.71629 41.185C2.21655 39.6988 3.42149 36.1384 4.67193 32.5868Z",
             fill: "",
-          })
+          }),
         );
       }
       function m(e) {
@@ -5394,7 +5398,7 @@
             clipRule: "evenodd",
             d: "M24.5 12C27.5376 12 30 9.53757 30 6.5C30 3.46243 27.5376 1 24.5 1C21.4624 1 19 3.46243 19 6.5C19 9.53757 21.4624 12 24.5 12ZM24.5 13C26.1149 13 27.5923 12.411 28.7291 11.4362L38.2929 21H11.2071L20.5469 11.6602C21.6422 12.5005 23.0128 13 24.5 13ZM9.79289 21L19.8014 10.9915C18.6855 9.8244 18 8.24225 18 6.5C18 2.91015 20.9101 0 24.5 0C28.0899 0 31 2.91015 31 6.5C31 8.11495 30.411 9.59234 29.4362 10.7291L39.7071 21H40H45C46.933 21 48.5 22.567 48.5 24.5V54C48.5 55.933 46.933 57.5 45 57.5H4C2.067 57.5 0.5 55.933 0.5 54V24.5C0.5 22.567 2.067 21 4 21H8H9.79289ZM8 22H4C2.61929 22 1.5 23.1193 1.5 24.5V54C1.5 55.3807 2.61929 56.5 4 56.5H45C46.3807 56.5 47.5 55.3807 47.5 54V24.5C47.5 23.1193 46.3807 22 45 22H40H39.5H39.2929H10.2071H10H8ZM10.5 29C9.11929 29 8 30.1193 8 31.5V48C8 49.3807 9.11929 50.5 10.5 50.5H37.5C38.8807 50.5 40 49.3807 40 48V31.5C40 30.1193 38.8807 29 37.5 29H10.5ZM9 31.5C9 30.6716 9.67157 30 10.5 30H37.5C38.3284 30 39 30.6716 39 31.5V48C39 48.8284 38.3284 49.5 37.5 49.5H10.5C9.67157 49.5 9 48.8284 9 48V31.5Z",
             fill: "",
-          })
+          }),
         );
       }
       function d(e) {
@@ -5409,14 +5413,14 @@
               viewBox: "0 0 36 36",
               fill: "none",
             },
-            r
+            r,
           ),
           i.createElement("path", {
             fill: "none",
             fillRule: "evenodd",
             clipRule: "evenodd",
             d: "M2 9H34V27H2V9ZM5 13H7V15H5V13ZM7 21H5V23H7V21ZM5 17H9V19H5V17ZM11 13H9V15H11V13ZM9 21H27V23H9V21ZM15 13H13V15H15V13ZM11 17H13V19H11V17ZM19 13H17V15H19V13ZM15 17H17V19H15V17ZM21 17H19V19H21V17ZM21 13H23V15H21V13ZM25 17H23V19H25V17ZM25 13H27V15H25V13ZM31 13H29V15H31V13ZM29 21H31V23H29V21ZM31 17H27V19H31V17Z",
-          })
+          }),
         );
       }
       function p(e) {
@@ -5437,7 +5441,7 @@
             clipRule: "evenodd",
             d: "M5.68889 0H58.3111C61.44 0 64 2.56 64 5.68889V18.8444H0V5.68889C0 2.56 2.56 0 5.68889 0ZM17.2302 12.7289C17.8183 12.7289 18.2969 12.2503 18.2969 11.6622V6.82667C18.2969 6.23858 17.8183 5.76 17.2302 5.76H7.98578C7.39769 5.76 6.91911 6.23858 6.91911 6.82667V11.6622C6.91911 12.2503 7.39769 12.7289 7.98578 12.7289H17.2302ZM36.6222 12.7289C37.2103 12.7289 37.6889 12.2503 37.6889 11.6622V6.82667C37.6889 6.23858 37.2103 5.76 36.6222 5.76H27.3778C26.7897 5.76 26.3111 6.23858 26.3111 6.82667V11.6622C26.3111 12.2503 26.7897 12.7289 27.3778 12.7289H36.6222ZM56.0142 12.7289C56.603 12.7289 57.0809 12.2503 57.0809 11.6622V6.82667C57.0809 6.23858 56.603 5.76 56.0142 5.76H46.7698C46.1824 5.76 45.7031 6.23858 45.7031 6.82667V11.6622C45.7031 12.2503 46.1824 12.7289 46.7698 12.7289H56.0142ZM5.68889 61.8667C2.56 61.8667 0 59.3067 0 56.1778V22.4H64V56.1778C64 59.3067 61.44 61.8667 58.3111 61.8667H5.68889ZM26.5202 29.9164C24.7673 28.9422 23.3323 29.7856 23.3323 31.7916V48.5639C23.3323 50.5714 24.7666 51.4133 26.5202 50.4391L41.1669 42.3033C43.2697 41.1342 43.2697 39.222 41.1669 38.053L26.5202 29.9164Z",
             fill: "",
-          })
+          }),
         );
       }
       function u(e) {
@@ -5494,7 +5498,7 @@
             clipRule: "evenodd",
             d: "M33.3984 13.2063C34.2545 13.2063 34.9484 12.5123 34.9484 11.6562C34.9484 10.8002 34.2545 10.1062 33.3984 10.1062C32.5424 10.1062 31.8484 10.8002 31.8484 11.6562C31.8484 12.5123 32.5424 13.2063 33.3984 13.2063ZM33.3984 14.4062C34.9172 14.4062 36.1484 13.175 36.1484 11.6562C36.1484 10.1375 34.9172 8.90625 33.3984 8.90625C31.8797 8.90625 30.6484 10.1375 30.6484 11.6562C30.6484 13.175 31.8797 14.4062 33.3984 14.4062Z",
             fill: "",
-          })
+          }),
         );
       }
       function _(e) {
@@ -5511,7 +5515,7 @@
               xmlns: "http://www.w3.org/2000/svg",
               className: (0, a.Z)(t, "SVGIcon_Button"),
             },
-            r
+            r,
           ),
           i.createElement("path", {
             d: "M57.2981 10.8369L56.9021 9.61803C56.3034 7.77541 53.6966 7.77541 53.0979 9.61803L52.7019 10.8369H51.4203C49.4828 10.8369 48.6773 13.3161 50.2447 14.4549L51.2815 15.2082L50.8855 16.4271C50.2868 18.2697 52.3958 19.8019 53.9632 18.6631L55 17.9098L56.0368 18.6631C57.6042 19.8019 59.7132 18.2697 59.1145 16.4271L58.7185 15.2082L59.7553 14.4549C61.3227 13.3161 60.5172 10.8369 58.5797 10.8369L57.2981 10.8369Z",
@@ -5578,7 +5582,7 @@
             fill: "none",
             strokeWidth: "2",
             strokeLinecap: "round",
-          })
+          }),
         );
       }
       function h(e) {
@@ -5593,7 +5597,7 @@
           },
           i.createElement("path", {
             d: "M51.5,40.2l-6.8-11.7c2.4-2,3.9-5,3.9-8.4c0-6.1-4.9-11-11-11c-1.3,0-2.5,0.2-3.7,0.6L29.4,2c-0.7-1.2-2-2-3.4-2s-2.7,0.7-3.4,2l-4.1,7.1H6.6v20.6l-6,10.5c-0.7,1.2-0.7,2.7,0,4c0.7,1.2,2,2,3.4,2H48c1.4,0,2.7-0.7,3.4-2C52.2,42.9,52.2,41.4,51.5,40.2z M46.6,20.1c0,5-4,9-9,9s-9-4-9-9s4-9,9-9S46.6,15.1,46.6,20.1z M8.6,11.1h8.7L8.6,26.2V11.1zM49.7,43.1c-0.4,0.6-1,1-1.7,1H4c-0.7,0-1.3-0.4-1.7-1c-0.4-0.6-0.4-1.3,0-2L24.3,3c0.4-0.6,1-1,1.7-1s1.3,0.4,1.7,1l4.4,7.6c-3.3,1.9-5.5,5.5-5.5,9.5c0,6.1,4.9,11,11,11c2,0,3.9-0.5,5.5-1.5l6.7,11.5C50.1,41.8,50.1,42.5,49.7,43.1z",
-          })
+          }),
         );
       }
       function g(e) {
@@ -5614,7 +5618,7 @@
             clipRule: "evenodd",
             d: "M4 0C1.79086 0 0 1.79086 0 4V50C0 52.2091 1.79086 54 4 54H11H53H60C62.2091 54 64 52.2091 64 50V4C64 1.79086 62.2091 0 60 0H53H11H4ZM11 2V52H53V2H11ZM8 25H3V29.8H8V25ZM3 15H8V19.8H3V15ZM8 6H3V10.8H8V6ZM3 34.5996H8V39.3996H3V34.5996ZM8 44.2002H3V49.0002H8V44.2002ZM39.8603 17.535C39.8603 21.0291 36.8085 24.0701 32.7786 24.0701C28.7487 24.0701 25.6969 21.0291 25.6969 17.535C25.6969 14.041 28.7487 11 32.7786 11C36.8085 11 39.8603 14.041 39.8603 17.535ZM41.8603 17.535C41.8603 22.2488 37.7943 26.0701 32.7786 26.0701C27.7629 26.0701 23.6969 22.2488 23.6969 17.535C23.6969 12.8213 27.7629 9 32.7786 9C37.7943 9 41.8603 12.8213 41.8603 17.535ZM30.4484 27.5466C24.6389 27.5466 19.3689 30.9432 17.364 36.4652C16.8368 37.9173 16.3885 39.1885 16.1121 39.9794C15.773 40.9495 16.227 42.0134 17.1535 42.4456L17.9794 42.831C27.4793 47.2632 38.4824 47.1178 47.8618 42.4361C48.7479 41.9938 49.1714 40.9651 48.8535 40.0271L48.0754 37.7315C46.0118 31.6431 40.2979 27.5466 33.8692 27.5466H33.0013H30.4484ZM19.2439 37.1478C20.9397 32.4771 25.4141 29.5466 30.4484 29.5466H33.0013H33.8692C39.4407 29.5466 44.3928 33.0969 46.1812 38.3735L46.9541 40.6538C38.1237 45.056 27.7672 45.1905 18.825 41.0185L18.0018 40.6344C18.2765 39.8484 18.7212 38.5873 19.2439 37.1478ZM61 25H56V29.8H61V25ZM56 15H61V19.8H56V15ZM61 6H56V10.8H61V6ZM56 34.5996H61V39.3996H56V34.5996ZM61 44.2002H56V49.0002H61V44.2002Z",
             fill: "",
-          })
+          }),
         );
       }
       function f(e) {
@@ -5635,7 +5639,7 @@
             clipRule: "evenodd",
             d: "M58 2H3C2.44772 2 2 2.44772 2 3V49.9671L14.44 40.7192L15.0898 40.2361L15.6975 40.7713L21.5338 45.911L40.422 28.2692L41.1163 27.6207L41.7995 28.2809L59 44.9038V3C59 2.44772 58.5523 2 58 2ZM2 63V52.4592L14.9834 42.8074L20.8927 48.0113L27.4097 53.7505L28.7315 52.2495L23.0419 47.2391L41.0928 30.3793L59 47.6851V63C59 63.5523 58.5523 64 58 64H3C2.44772 64 2 63.5523 2 63ZM3 0C1.34315 0 0 1.34315 0 3V63C0 64.6569 1.34315 66 3 66H58C59.6569 66 61 64.6569 61 63V3C61 1.34315 59.6569 0 58 0H3ZM22.7185 16.2664C22.7185 18.5968 20.8293 20.486 18.4989 20.486C16.1685 20.486 14.2793 18.5968 14.2793 16.2664C14.2793 13.936 16.1685 12.0468 18.4989 12.0468C20.8293 12.0468 22.7185 13.936 22.7185 16.2664ZM24.7185 16.2664C24.7185 19.7014 21.9339 22.486 18.4989 22.486C15.0639 22.486 12.2793 19.7014 12.2793 16.2664C12.2793 12.8314 15.0639 10.0468 18.4989 10.0468C21.9339 10.0468 24.7185 12.8314 24.7185 16.2664Z",
             fill: "",
-          })
+          }),
         );
       }
       function C(e) {
@@ -5688,15 +5692,15 @@
                 "feMerge",
                 null,
                 i.createElement("feMergeNode", { in: "SoftGlow_colored" }),
-                i.createElement("feMergeNode", { in: "SourceGraphic" })
-              )
-            )
+                i.createElement("feMergeNode", { in: "SourceGraphic" }),
+              ),
+            ),
           ),
           i.createElement("path", {
             fill: "none",
             strokeWidth: ".6px",
             d: "M31.9861 26.8551C32.2029 26.8551 32.3783 27.0254 32.3783 27.2355V29.2195C32.3783 29.4295 32.2029 29.5998 31.9861 29.5998H1.39223C1.17543 29.5998 1 29.4295 1 29.2195V27.2355C1 27.0254 1.17543 26.8551 1.39223 26.8551H3.20016V1.83469C3.20016 1.62465 3.37559 1.45435 3.59239 1.45435H10.1412C10.358 1.45435 10.5334 1.62465 10.5334 1.83469V5.05554H14.5097V1.83469C14.5097 1.62465 14.6851 1.45435 14.9019 1.45435H19.6631C19.8798 1.45435 20.0553 1.62465 20.0553 1.83469V4.18744L25.4729 3.22867C25.576 3.21139 25.6813 3.23257 25.7663 3.28995C25.8521 3.34734 25.9108 3.43537 25.9291 3.53454L30.1782 26.1126C30.2172 26.3193 30.0759 26.5175 29.8629 26.5552L28.1683 26.8551H31.9861ZM23.5066 22.6202L24.2874 26.7688L29.3362 25.8751L28.5555 21.7266L23.5066 22.6202ZM23.3657 21.8718L28.4147 20.9782L28.0604 19.0957L23.0114 19.989L23.3657 21.8718ZM27.9195 18.3472L25.2278 4.04525L20.1786 4.93891L22.8705 19.2406L27.9195 18.3472ZM20.0553 26.8551H23.5062L20.0553 8.51936V26.8551ZM19.2708 2.21503H15.2941V5.43589V26.8551H19.2708V2.21503ZM14.5097 26.8551V5.81623H10.5334V26.8551H14.5097ZM9.74893 10.38H3.98462V18.6904H9.74893V10.38ZM3.98462 9.6193H9.74893V7.41988H3.98462V9.6193ZM9.74893 19.451H3.98462V21.6503H9.74893V19.451ZM9.74893 5.43589V2.21503H3.98462V6.65919H9.74893V5.43589ZM9.74893 22.411H3.98462V26.8551H9.74893V22.411ZM1.78446 28.8391H31.5939V27.6158H19.6631H14.9019H10.1412H3.59239H1.78446V28.8391ZM13.6023 22.1066H11.4409C11.2241 22.1066 11.0486 21.9363 11.0486 21.7263C11.0486 21.5162 11.2241 21.3459 11.4409 21.3459H13.6023C13.8191 21.3459 13.9946 21.5162 13.9946 21.7263C13.9946 21.9363 13.8191 22.1066 13.6023 22.1066ZM11.4409 19.4512H13.6023C13.8191 19.4512 13.9946 19.2809 13.9946 19.0709C13.9946 18.8608 13.8191 18.6905 13.6023 18.6905H11.4409C11.2241 18.6905 11.0486 18.8608 11.0486 19.0709C11.0486 19.2809 11.2241 19.4512 11.4409 19.4512ZM18.3634 22.1066H16.2016C15.9848 22.1066 15.8093 21.9363 15.8093 21.7263C15.8093 21.5162 15.9848 21.3459 16.2016 21.3459H18.3634C18.5802 21.3459 18.7556 21.5162 18.7556 21.7263C18.7556 21.9363 18.5802 22.1066 18.3634 22.1066ZM16.2016 19.4512H18.3634C18.5802 19.4512 18.7556 19.2809 18.7556 19.0709C18.7556 18.8608 18.5802 18.6905 18.3634 18.6905H16.2016C15.9848 18.6905 15.8093 18.8608 15.8093 19.0709C15.8093 19.2809 15.9848 19.4512 16.2016 19.4512ZM4.80876 14.5352C4.80876 12.8573 5.71273 11.543 6.86643 11.543C8.02052 11.543 8.92449 12.8573 8.92449 14.5352C8.92449 16.2129 8.02052 17.5273 6.86643 17.5273C5.71273 17.5273 4.80876 16.2129 4.80876 14.5352ZM5.59322 14.5352C5.59322 15.7448 6.1762 16.7666 6.86643 16.7666C7.55666 16.7666 8.14003 15.7448 8.14003 14.5352C8.14003 13.3256 7.55666 12.3037 6.86643 12.3037C6.1762 12.3037 5.59322 13.3256 5.59322 14.5352Z",
-          })
+          }),
         );
       }
       function I(e) {
@@ -5728,7 +5732,7 @@
             clipRule: "evenodd",
             d: "M1.27802 1.01483H16.4788V1.65525H17.2664V1.01483V0.227242H16.4788H1.27802H0.490433V1.01483V16.243V17.0305H1.27802H1.91844V16.243H1.27802V1.01483Z",
             fill: "currentColor",
-          })
+          }),
         );
       }
       function y(e) {
@@ -5749,7 +5753,7 @@
             clipRule: "evenodd",
             d: "M5.68889 0H58.3111C61.44 0 64 2.56 64 5.68889V18.8444H0V5.68889C0 2.56 2.56 0 5.68889 0ZM17.2302 12.7289C17.8183 12.7289 18.2969 12.2503 18.2969 11.6622V6.82667C18.2969 6.23858 17.8183 5.76 17.2302 5.76H7.98578C7.39769 5.76 6.91911 6.23858 6.91911 6.82667V11.6622C6.91911 12.2503 7.39769 12.7289 7.98578 12.7289H17.2302ZM36.6222 12.7289C37.2103 12.7289 37.6889 12.2503 37.6889 11.6622V6.82667C37.6889 6.23858 37.2103 5.76 36.6222 5.76H27.3778C26.7897 5.76 26.3111 6.23858 26.3111 6.82667V11.6622C26.3111 12.2503 26.7897 12.7289 27.3778 12.7289H36.6222ZM56.0142 12.7289C56.603 12.7289 57.0809 12.2503 57.0809 11.6622V6.82667C57.0809 6.23858 56.603 5.76 56.0142 5.76H46.7698C46.1824 5.76 45.7031 6.23858 45.7031 6.82667V11.6622C45.7031 12.2503 46.1824 12.7289 46.7698 12.7289H56.0142ZM5.68889 61.8667C2.56 61.8667 0 59.3067 0 56.1778V22.4H64V56.1778C64 59.3067 61.44 61.8667 58.3111 61.8667H5.68889ZM26.5202 29.9164C24.7673 28.9422 23.3323 29.7856 23.3323 31.7916V48.5639C23.3323 50.5714 24.7666 51.4133 26.5202 50.4391L41.1669 42.3033C43.2697 41.1342 43.2697 39.222 41.1669 38.053L26.5202 29.9164Z",
             fill: "",
-          })
+          }),
         );
       }
       function w(e) {
@@ -5766,10 +5770,10 @@
               fill: "none",
               xmlns: "http://www.w3.org/2000/svg",
             },
-            r
+            r,
           ),
           i.createElement("path", { d: "M21 1L1 21", strokeWidth: "2" }),
-          i.createElement("path", { d: "M0.999999 1L20 21", strokeWidth: "2" })
+          i.createElement("path", { d: "M0.999999 1L20 21", strokeWidth: "2" }),
         );
       }
       function S(e) {
@@ -5797,7 +5801,7 @@
           i.createElement("path", {
             d: "M29.14 15.868C30.748 15.868 32.128 16.144 33.28 16.696C34.456 17.224 35.356 17.968 35.98 18.928C36.604 19.864 36.916 20.932 36.916 22.132C36.916 22.948 36.772 23.68 36.484 24.328C36.196 24.952 35.848 25.492 35.44 25.948C35.032 26.38 34.468 26.932 33.748 27.604C32.956 28.3 32.308 28.924 31.804 29.476C31.3 30.028 30.868 30.724 30.508 31.564C30.172 32.38 30.004 33.34 30.004 34.444H27.088C27.088 33.004 27.268 31.78 27.628 30.772C28.012 29.764 28.468 28.96 28.996 28.36C29.548 27.736 30.232 27.076 31.048 26.38C31.888 25.636 32.5 24.988 32.884 24.436C33.292 23.884 33.496 23.212 33.496 22.42C33.496 21.268 33.064 20.356 32.2 19.684C31.336 19.012 30.16 18.676 28.672 18.676C26.608 18.676 24.736 19.336 23.056 20.656L21.76 18.244C22.696 17.524 23.8 16.948 25.072 16.516C26.368 16.084 27.724 15.868 29.14 15.868ZM28.564 37.288C29.26 37.288 29.812 37.504 30.22 37.936C30.628 38.344 30.832 38.908 30.832 39.628C30.832 40.348 30.628 40.912 30.22 41.32C29.812 41.728 29.26 41.932 28.564 41.932C27.892 41.932 27.352 41.728 26.944 41.32C26.536 40.912 26.332 40.348 26.332 39.628C26.332 38.908 26.536 38.344 26.944 37.936C27.352 37.504 27.892 37.288 28.564 37.288Z",
             fill: "",
-          })
+          }),
         );
       }
       function E(e) {
@@ -5816,7 +5820,7 @@
           i.createElement("path", {
             d: "M48.3765 33.45C47.1427 38.7688 44.1478 43.5146 39.8778 46.9174C35.6078 50.3201 30.3132 52.1801 24.8531 52.1956C23.0011 52.1943 21.1552 51.9821 19.3511 51.5633C14.4369 50.4243 10.0013 47.7787 6.66379 43.9961C3.32632 40.2135 1.25375 35.4829 0.735641 30.4651C0.708708 30.2012 0.787709 29.9374 0.955263 29.7318C1.12282 29.5261 1.3652 29.3955 1.62909 29.3685C1.89298 29.3416 2.15676 29.4206 2.36241 29.5882C2.56805 29.7557 2.69871 29.9981 2.72564 30.262C3.1115 34.01 4.44505 37.5981 6.60068 40.6883C8.75631 43.7786 11.6631 46.2693 15.0472 47.9258C18.4313 49.5824 22.1814 50.3503 25.9443 50.1571C29.7071 49.964 33.3589 48.8163 36.5556 46.822C39.0282 45.2791 41.1726 43.2644 42.8665 40.8927C44.5604 38.5211 45.7706 35.8391 46.428 32.9997C47.0854 30.1604 47.1771 27.2194 46.6978 24.3447C46.2186 21.4699 45.1779 18.7177 43.635 16.2451C42.0921 13.7726 40.0774 11.6282 37.7057 9.93425C35.3341 8.24035 32.6521 7.03016 29.8127 6.37279C24.0785 5.04515 18.0517 6.04982 13.0581 9.16578L8.53564 11.9879L17.0203 12.8514C17.2749 12.8779 17.5096 13.0011 17.6761 13.1955C17.8426 13.3899 17.9282 13.6407 17.9153 13.8964C17.9024 14.152 17.792 14.3929 17.6068 14.5696C17.4216 14.7463 17.1757 14.8452 16.9197 14.846C16.8855 14.8461 16.8512 14.8443 16.8171 14.8406L5.42564 13.6814C5.40474 13.6793 5.38834 13.6669 5.36784 13.6635C5.32663 13.6572 5.28587 13.6482 5.24584 13.6366C5.22414 13.6302 5.20214 13.6328 5.18054 13.6248C5.15644 13.6159 5.14054 13.5965 5.11764 13.586C5.03876 13.5541 4.96583 13.5091 4.90194 13.4529C4.86699 13.4246 4.83401 13.394 4.80324 13.3612C4.77384 13.3299 4.74658 13.2967 4.72164 13.2618C4.70914 13.2442 4.69014 13.2346 4.67864 13.2161C4.66714 13.1976 4.66684 13.1761 4.65664 13.1575C4.63643 13.12 4.6187 13.0812 4.60354 13.0414C4.57364 12.9592 4.55279 12.8741 4.54134 12.7874C4.53787 12.7449 4.5372 12.7022 4.53934 12.6597C4.53994 12.6343 4.52934 12.6114 4.53214 12.5857C4.53434 12.5636 4.54714 12.5457 4.55074 12.5245C4.55755 12.4833 4.56704 12.4426 4.57914 12.4026C4.58524 12.382 4.58124 12.3611 4.58914 12.3406L8.55334 1.59938C8.64516 1.35049 8.83209 1.14827 9.07301 1.0372C9.1923 0.982204 9.32125 0.951243 9.45251 0.946084C9.58377 0.940926 9.71475 0.96167 9.83799 1.00713C9.96123 1.0526 10.0743 1.12189 10.1708 1.21105C10.2672 1.30022 10.3452 1.40751 10.4002 1.5268C10.4552 1.64609 10.4861 1.77505 10.4913 1.9063C10.4964 2.03756 10.4757 2.16854 10.4302 2.29178L7.47744 10.2918L11.9995 7.46998C16.0588 4.93676 20.7781 3.66416 25.5607 3.81312C30.3433 3.96208 34.9742 5.52591 38.868 8.30684C42.7618 11.0878 45.7434 14.9609 47.436 19.4364C49.1285 23.912 49.4558 28.7889 48.3765 33.4505V33.45ZM14.7565 39.346L25.4126 28.6897C25.6002 28.5022 25.7056 28.2479 25.7056 27.9827V17.0784C25.7056 16.8132 25.6003 16.5588 25.4127 16.3713C25.2252 16.1837 24.9709 16.0784 24.7056 16.0784C24.4404 16.0784 24.1861 16.1837 23.9985 16.3713C23.811 16.5588 23.7056 16.8132 23.7056 17.0784V27.5684L13.3423 37.9319C13.2475 38.0243 13.1721 38.1346 13.1202 38.2565C13.0684 38.3783 13.0413 38.5092 13.0404 38.6416C13.0396 38.7739 13.0651 38.9052 13.1153 39.0276C13.1656 39.1501 13.2397 39.2614 13.3333 39.355C13.4269 39.4486 13.5382 39.5227 13.6607 39.573C13.7831 39.6233 13.9144 39.6487 14.0468 39.6479C14.1792 39.647 14.3101 39.6199 14.4319 39.5681C14.5537 39.5163 14.664 39.4408 14.7564 39.346H14.7565Z",
             fill: "",
-          })
+          }),
         );
       }
       function M(e) {
@@ -5835,7 +5839,7 @@
           i.createElement("path", {
             d: "M36.4525 0.983032C34.3364 0.983032 32.2684 1.65634 30.5371 2.90676C30.4409 2.95486 29.9599 3.3396 29.9599 3.38769L23.7078 8.48558L17.5038 3.43579C17.3595 3.3396 16.3976 2.57011 16.1091 2.42583C14.5701 1.51206 12.7426 1.03113 10.915 1.03113C5.33619 1.03113 0.767334 5.59999 0.767334 11.1788C0.767334 16.7576 5.33619 21.3265 10.915 21.3265C13.0311 21.3265 15.0991 20.6532 16.8305 19.4028C16.9267 19.3547 17.4076 18.9699 17.4557 18.9218L23.7078 13.8239L29.9119 18.8737C30.0561 18.9699 31.0661 19.7394 31.3066 19.8837C32.8455 20.7975 34.6731 21.2784 36.5006 21.2784C42.0795 21.2784 46.6483 16.7095 46.6483 11.1307C46.6483 5.55189 42.0795 0.983032 36.4525 0.983032ZM14.4739 15.94C13.4159 16.7095 12.2135 17.1424 10.915 17.1424C7.64467 17.1424 4.95145 14.4491 4.95145 11.1788C4.95145 7.90846 7.64467 5.21524 10.915 5.21524C11.9731 5.21524 13.0311 5.5038 13.9449 6.03282C14.1373 6.12901 14.7144 6.56185 14.8106 6.65804L20.3894 11.1788C20.3894 11.1788 14.522 15.8919 14.4739 15.94ZM36.4525 17.1424C35.3945 17.1424 34.3364 16.8538 33.4227 16.3248C33.2303 16.2286 32.6532 15.7958 32.557 15.6996L26.9782 11.1788L32.8455 6.41757C33.9036 5.64808 35.1059 5.21524 36.4044 5.21524C39.6748 5.21524 42.368 7.90846 42.368 11.1788C42.368 14.4491 39.771 17.1424 36.4525 17.1424Z",
             fill: "",
-          })
+          }),
         );
       }
       function b(e) {
@@ -5854,7 +5858,7 @@
           i.createElement("path", {
             d: "M24.4232 4.36344C22.5002 2.44044 20.0502 1.13086 17.383 0.600287C14.7157 0.0697194 11.9511 0.342 9.43855 1.3827C6.92606 2.42339 4.77858 4.18576 3.2677 6.44695C1.75682 8.70813 0.950394 11.3666 0.950394 14.0861C0.950394 16.8056 1.75682 19.464 3.2677 21.7252C4.77858 23.9864 6.92606 25.7487 9.43855 26.7894C11.9511 27.8301 14.7157 28.1024 17.383 27.5718C20.0502 27.0413 22.5002 25.7317 24.4232 23.8087C25.7042 22.5343 26.7208 21.0193 27.4145 19.3507C28.1082 17.6822 28.4653 15.893 28.4653 14.0861C28.4653 12.2791 28.1082 10.4899 27.4145 8.82138C26.7208 7.15284 25.7042 5.63784 24.4232 4.36344ZM16.5334 21.3914H12.865V12.3164H16.5334V21.3914ZM14.6992 10.7874C14.3015 10.7874 13.9127 10.6695 13.5821 10.4485C13.2514 10.2274 12.9938 9.91333 12.8417 9.54584C12.6896 9.17835 12.65 8.77402 12.7278 8.38399C12.8056 7.99397 12.9973 7.63578 13.2787 7.35475C13.5601 7.07373 13.9186 6.88248 14.3087 6.80523C14.6988 6.72797 15.1031 6.76818 15.4704 6.92075C15.8377 7.07332 16.1514 7.33141 16.372 7.66235C16.5926 7.9933 16.71 8.38223 16.7094 8.77994C16.7094 9.0438 16.6574 9.30507 16.5564 9.54881C16.4553 9.79255 16.3072 10.014 16.1205 10.2004C15.9338 10.3869 15.7122 10.5347 15.4683 10.6354C15.2244 10.7361 14.9631 10.7878 14.6992 10.7874Z",
             fill: "",
-          })
+          }),
         );
       }
       function v(e) {
@@ -5875,7 +5879,7 @@
             clipRule: "evenodd",
             d: "M30.4126 5.84583C28.4532 5.77501 26.5883 4.98584 25.1733 3.62868C22.883 1.43206 19.2764 1.40456 16.9529 3.566C15.5173 4.90142 13.6406 5.66206 11.6804 5.70299C8.50765 5.76924 5.93799 8.30001 5.82337 11.4714C5.75255 13.4308 4.96338 15.2956 3.60622 16.7107C1.4096 19.001 1.3821 22.6075 3.54354 24.9311C4.87896 26.3667 5.6396 28.2433 5.68053 30.2036C5.74678 33.3763 8.27755 35.946 11.4489 36.0606C13.4083 36.1314 15.2732 36.9206 16.6882 38.2778C18.9785 40.4744 22.5851 40.5019 24.9086 38.3404C26.3442 37.005 28.2209 36.2444 30.1811 36.2035C33.3539 36.1372 35.9235 33.6064 36.0382 30.4351C36.109 28.4757 36.8981 26.6108 38.2553 25.1958C40.4519 22.9055 40.4794 19.2989 38.318 16.9754C36.9826 15.5398 36.2219 13.6631 36.181 11.7029C36.1147 8.53011 33.584 5.96045 30.4126 5.84583ZM37.1808 11.682C37.1035 7.9792 34.1499 4.98025 30.4487 4.84648C28.7347 4.78453 27.1033 4.09418 25.8655 2.90697C23.1926 0.343378 18.9835 0.311283 16.2718 2.83381C15.016 4.00202 13.3743 4.6674 11.6595 4.70321C7.95674 4.78052 4.95779 7.73408 4.82402 11.4352C4.76207 13.1493 4.07172 14.7806 2.88451 16.0185C0.320917 18.6914 0.288821 22.9005 2.81135 25.6122C3.97955 26.868 4.64494 28.5097 4.68075 30.2245C4.75807 33.9272 7.71162 36.9262 11.4128 37.06C13.1268 37.1219 14.7582 37.8123 15.996 38.9995C18.669 41.5631 22.878 41.5952 25.5897 39.0726C26.8455 37.9044 28.4872 37.239 30.202 37.2032C33.9048 37.1259 36.9037 34.1724 37.0375 30.4712C37.0995 28.7572 37.7898 27.1258 38.977 25.888C41.5406 23.215 41.5727 19.006 39.0502 16.2943C37.882 15.0384 37.2166 13.3968 37.1808 11.682ZM31.4863 41.2401C31.4867 41.2404 31.487 41.2407 31.1669 41.6248L31.487 41.2407L31.6669 41.3906V41.6248V62.5728V63.4683L30.9046 62.9985L20.9309 56.8517L10.9573 62.9985L10.1949 63.4683V62.5728V41.6248V41.3555L10.4198 41.2073L10.6949 41.6248C10.4198 41.2073 10.42 41.2071 10.4203 41.2069L10.4209 41.2065L10.4222 41.2057L10.425 41.2039L10.4321 41.1993L10.4518 41.1873C10.4674 41.1779 10.4879 41.1661 10.5133 41.1524C10.5641 41.125 10.6344 41.0902 10.7241 41.0527C10.9034 40.9778 11.1598 40.8927 11.4906 40.8367C12.1557 40.724 13.1039 40.7318 14.3111 41.1525C14.7935 41.3206 15.3635 41.6156 15.9507 41.9446C16.2911 42.1353 16.6562 42.3485 17.0236 42.563L17.024 42.5632L17.0248 42.5637C17.2873 42.717 17.551 42.871 17.8076 43.0179C18.4375 43.3784 19.0498 43.7114 19.6033 43.955C20.1687 44.2038 20.6187 44.3343 20.9375 44.3385C21.205 44.3421 21.6162 44.2205 22.1636 43.9649C22.6946 43.7169 23.2892 43.3749 23.9047 43.0052C24.1025 42.8864 24.3034 42.7642 24.5044 42.642L24.5055 42.6413L24.5067 42.6406L24.5067 42.6405L24.5069 42.6405C24.9206 42.3888 25.3344 42.137 25.7213 41.9151C26.2933 41.587 26.855 41.2951 27.3286 41.1477C28.7347 40.7101 29.7388 40.6983 30.4172 40.8191C30.7557 40.8794 31.0083 40.9719 31.1846 41.0565C31.2726 41.0987 31.3409 41.1387 31.3909 41.1712C31.4159 41.1874 31.4363 41.2018 31.4523 41.2136C31.4603 41.2195 31.4671 41.2248 31.4729 41.2293L31.4808 41.2356L31.4841 41.2383L31.4856 41.2395L31.4863 41.2401ZM11.1949 41.9422V61.6774L20.6686 55.8387L20.9309 55.6771L21.1932 55.8387L30.6669 61.6774V41.9208C30.5682 41.8813 30.4282 41.8368 30.242 41.8037C29.7472 41.7156 28.9065 41.704 27.6258 42.1025C27.2665 42.2144 26.7877 42.4563 26.2189 42.7825C25.8428 42.9982 25.4485 43.2381 25.0417 43.4856L25.0415 43.4858L25.0399 43.4867C24.836 43.6108 24.629 43.7367 24.4195 43.8625C23.8009 44.234 23.1684 44.5994 22.5866 44.871C22.0212 45.135 21.4338 45.3452 20.9243 45.3385C20.3958 45.3315 19.7928 45.1309 19.2005 44.8703C18.5965 44.6045 17.9466 44.2496 17.3108 43.8857C17.0355 43.7281 16.7669 43.5712 16.504 43.4176C16.1468 43.209 15.8002 43.0066 15.4619 42.817C14.8778 42.4897 14.3743 42.2334 13.9821 42.0968C12.9316 41.7307 12.1539 41.7385 11.6576 41.8226C11.4625 41.8557 11.308 41.901 11.1949 41.9422ZM23.7901 8.68637C24.8582 9.71081 26.2659 10.3065 27.7449 10.36C29.879 10.4371 31.582 12.1663 31.6266 14.3013C31.6575 15.781 32.2316 17.1975 33.2397 18.2812C34.6941 19.8447 34.6756 22.2717 33.1975 23.8129C32.173 24.881 31.5774 26.2887 31.5239 27.7677C31.4468 29.9018 29.7176 31.6048 27.5826 31.6494C26.1029 31.6803 24.6863 32.2544 23.6027 33.2625C22.0391 34.7169 19.6122 34.6984 18.071 33.2203C17.0028 32.1958 15.5952 31.6002 14.1162 31.5467C11.9821 31.4696 10.2791 29.7404 10.2345 27.6054C10.2036 26.1257 9.62942 24.7091 8.62139 23.6255C7.16691 22.0619 7.18542 19.635 8.66357 18.0938C9.68801 17.0256 10.2837 15.618 10.3372 14.1389C10.4143 12.0049 12.1435 10.3019 14.2785 10.2573C15.7582 10.2264 17.1747 9.65222 18.2584 8.64419C19.8219 7.18971 22.2489 7.20821 23.7901 8.68637ZM27.781 9.36061C30.4449 9.45689 32.5707 11.6154 32.6264 14.2804C32.6521 15.5146 33.131 16.6962 33.9719 17.6001C35.7874 19.5518 35.7643 22.5812 33.9192 24.5051C33.0647 25.396 32.5678 26.5702 32.5232 27.8038C32.427 30.4677 30.2685 32.5935 27.6034 32.6492C26.3692 32.6749 25.1876 33.1538 24.2838 33.9946C22.332 35.8102 19.3026 35.7871 17.3788 33.942C16.4879 33.0875 15.3137 32.5906 14.08 32.546C11.4161 32.4498 9.29034 30.2913 9.23469 27.6262C9.20892 26.392 8.73001 25.2104 7.88921 24.3066C6.07363 22.3548 6.09673 19.3254 7.94186 17.4016C8.79635 16.5107 9.29322 15.3365 9.33781 14.1028C9.43409 11.4389 11.5926 9.31314 14.2576 9.25749C15.4918 9.23172 16.6734 8.75281 17.5773 7.912C19.529 6.09643 22.5584 6.11953 24.4823 7.96466C25.3732 8.81915 26.5474 9.31602 27.781 9.36061Z",
             fill: "none",
-          })
+          }),
         );
       }
       function N(e) {
@@ -5954,7 +5958,7 @@
           i.createElement("path", {
             d: "M44.1309 43.1534H44.333C45.4783 43.1534 46.4214 42.2102 46.4214 41.0649V40.8628C46.4214 39.7176 45.4783 38.7744 44.333 38.7744H44.1309C42.9856 38.7744 42.0425 39.7176 42.0425 40.8628V41.0649C42.0425 42.2102 42.9856 43.1534 44.1309 43.1534Z",
             fill: "",
-          })
+          }),
         );
       }
       function x(e) {
@@ -5975,7 +5979,7 @@
           }),
           i.createElement("path", {
             d: "M63.189 4.402H5.813a1 1 0 00-1 1L4.81 62.598H2.46a1 1 0 100 2h64.08a1 1 0 100-2h-2.35l-.001-57.196a1 1 0 00-1-1zm-56.376 2h55.376v39.426H43.584v-5.854h-7.556l2.448-2.48a.999.999 0 00.288-.702V18.915h2.062a1 1 0 100-2h-3.508v-3.775h1.32a1 1 0 100-2h-3.584v-.917a1 1 0 10-2 0v.917H29.47a1 1 0 100 2h1.32v3.775h-3.508a1 1 0 100 2h2.061v17.875c0 .242.087.474.245.656l2.195 2.527h-6.365v5.854H6.813V6.402zm25.977 6.74h2.528v3.774H32.79v-3.775zm-1.447 5.774h1.711v14.642a1 1 0 102 0V18.916h1.71v17.465l-2.9 2.94-2.52-2.904v-17.5zm10.241 23.058v3.834H27.418v-3.834h14.166zM6.81 62.598v-14.77h55.38v14.77H6.81z",
-          })
+          }),
         );
       }
       function A(e) {
@@ -5990,12 +5994,12 @@
               height: "1409px",
               viewBox: "0 1801.5 1400 1409",
             },
-            e
+            e,
           ),
           i.createElement("path", {
             fill: "#FFFFFF",
             d: "M362.353,2310.588c148.235-148.235,387.06-148.235,527.06,0\r\n\t\t\t\tc16.471,16.471,32.941,41.177,49.411,57.647L807.059,2500c-41.176-82.353-131.765-131.765-222.353-115.294\r\n\t\t\t\tc-41.177,8.235-74.118,24.706-98.823,49.411l-247.059,247.06c-74.118,74.117-74.118,197.646,0,280\r\n\t\t\t\tc74.118,74.117,197.647,74.117,280,0l0,0l74.118-74.118c74.117,24.706,148.235,41.177,222.353,32.941l-172.94,172.941\r\n\t\t\t\tc-148.235,148.235-387.06,148.235-527.06,0s-148.235-387.059,0-527.059C107.059,2557.647,362.353,2310.588,362.353,2310.588z\r\n\t\t\t\t\tM757.646,1907.059L592.941,2080c74.117-8.235,148.235,8.235,214.117,32.941l74.118-74.118c74.117-74.117,197.646-74.117,280,0\r\n\t\t\t\tc82.353,74.118,74.117,197.647,0,280l-255.294,247.06c-74.118,74.117-197.647,74.117-280,0\r\n\t\t\t\tc-8.235-16.471-24.706-41.177-32.941-65.883l-131.765,131.765c16.471,24.706,32.94,41.177,49.411,57.647\r\n\t\t\t\tc148.235,148.235,387.059,148.235,527.06,0l0,0l247.059-247.06c148.235-148.235,148.235-387.059,0-527.059\r\n\t\t\t\tS905.883,1767.059,757.646,1907.059L757.646,1907.059L757.646,1907.059z",
-          })
+          }),
         );
       }
       function D(e) {
@@ -6009,7 +6013,7 @@
               fill: "none",
               xmlns: "http://www.w3.org/2000/svg",
             },
-            e
+            e,
           ),
           i.createElement("rect", {
             x: "1.73633",
@@ -6032,7 +6036,7 @@
             x2: "7.58338",
             y2: "13.6355",
             "stroke-width": "2.5",
-          })
+          }),
         );
       }
       function B(e) {
@@ -6047,7 +6051,7 @@
               viewBox: "0 0 39 30",
               fill: "none",
             },
-            e
+            e,
           ),
           i.createElement("path", {
             fill: "#06BFFF",
@@ -6072,7 +6076,7 @@
           i.createElement("path", {
             fill: "currentColor",
             d: "M-8.51111e-08 15.8413L1.23261 16.2308C1.38996 16.2827 1.52109 16.4125 1.57354 16.5683L1.96693 17.7885L2.36031 16.5683C2.41276 16.4125 2.54389 16.2827 2.70125 16.2308L3.93386 15.8413L2.70125 15.4519C2.54389 15.4 2.41276 15.2702 2.36031 15.1144L1.96693 13.8942L1.57354 15.1144C1.52109 15.2702 1.38996 15.4 1.23261 15.4519L-8.51111e-08 15.8413Z",
-          })
+          }),
         );
       }
     },
@@ -6142,10 +6146,10 @@
               "div",
               Object.assign(
                 { ref: a, className: (0, d.Z)(o.StandardRoot, t) },
-                r
-              )
+                r,
+              ),
             ),
-            i.createElement(m, { scrollElement: a.current })
+            i.createElement(m, { scrollElement: a.current }),
           );
         },
         y = (e) => {
@@ -6153,7 +6157,7 @@
             r = (0, n._T)(e, ["className"]);
           return i.createElement(
             "div",
-            Object.assign({ className: (0, d.Z)(o.StandardBackground, t) }, r)
+            Object.assign({ className: (0, d.Z)(o.StandardBackground, t) }, r),
           );
         },
         w = ({ children: e }) =>
@@ -6166,7 +6170,7 @@
             i.createElement("div", {
               className: (0, d.Z)(o.ParallaxBackground, r),
               style: { backgroundImage: `url(${t})` },
-            })
+            }),
           );
       function E(e) {
         const t = (0, s.Vt)(["xxsmall", "small", "xxlarge"]),
@@ -6187,9 +6191,9 @@
             i.createElement(
               s.Kq,
               { itemClassName: o.PageItem, className: o.ItemContainer },
-              e.children
-            )
-          )
+              e.children,
+            ),
+          ),
         );
       }
       const M = ({ background: e, children: t }) => {
@@ -6199,7 +6203,7 @@
             i.createElement(
               w,
               null,
-              i.createElement(S, { src: r }, i.createElement(E, null, t))
+              i.createElement(S, { src: r }, i.createElement(E, null, t)),
             )
           );
         },
@@ -6209,7 +6213,7 @@
           i.createElement(
             w,
             null,
-            i.createElement(b, null, i.createElement(E, null, e))
+            i.createElement(b, null, i.createElement(E, null, e)),
           ),
         N = (0, a.Pi)(({ children: e, appid: t }) => {
           const r = (function (e) {
@@ -6234,7 +6238,7 @@
           return i.createElement(
             S,
             { src: r, className: o.ParallaxAppBackground },
-            e
+            e,
           );
         }),
         x = { 1461450: g };
@@ -6257,8 +6261,8 @@
               style: { backgroundImage: `url("${n}")` },
               className: o.CustomAppBackground,
             },
-            i.createElement(E, null, t)
-          )
+            i.createElement(E, null, t),
+          ),
         );
       }
       function B(e) {
@@ -6266,7 +6270,7 @@
         return i.createElement(
           w,
           null,
-          i.createElement(N, { appid: r }, i.createElement(E, null, t))
+          i.createElement(N, { appid: r }, i.createElement(E, null, t)),
         );
       }
       const L = ({ title: e, subtitle: t, headerImage: r }) =>
@@ -6275,7 +6279,7 @@
           null,
           r && i.createElement("img", { className: o.PageHeaderImage, src: r }),
           e && i.createElement("div", { className: o.PageTitle }, e),
-          t && i.createElement("div", { className: o.PageSubtitle }, t)
+          t && i.createElement("div", { className: o.PageSubtitle }, t),
         );
     },
     98170: (e, t, r) => {
@@ -6322,7 +6326,7 @@
                   definition: t,
                   bOwned: m,
                 },
-                i
+                i,
               );
             })(e);
           return t
@@ -6370,12 +6374,12 @@
                 className: _,
                 appName: t,
               },
-              f
+              f,
             ),
             i.createElement("img", {
               src: (0, p.T)(o),
               style: { width: "100%", height: "100%" },
-            })
+            }),
           );
         }),
         E = (0, a.Pi)((e) => {
@@ -6419,7 +6423,7 @@
                 style: Object.assign(Object.assign({}, g), { width: "524px" }),
                 onActivate: I,
               },
-              y
+              y,
             ),
             r &&
               i.createElement("img", {
@@ -6439,9 +6443,9 @@
                 },
               },
               S && i.createElement(f.u, { theme: C[`${S}Theme`] }),
-              i.createElement(v, { items: a.items, offer: a })
+              i.createElement(v, { items: a.items, offer: a }),
             ),
-            i.createElement(M, { label: w, cost: s, bOwned: l })
+            i.createElement(M, { label: w, cost: s, bOwned: l }),
           );
         }),
         M = ({ cost: e, label: t, bOwned: r }) =>
@@ -6463,15 +6467,15 @@
                   i.createElement(
                     "span",
                     { className: u.AlreadyOwned },
-                    (0, c.Xx)("#Redeem_BundleItemOwned")
+                    (0, c.Xx)("#Redeem_BundleItemOwned"),
                   ),
-                  i.createElement(g.Zg, { className: u.CheckmarkCircle })
+                  i.createElement(g.Zg, { className: u.CheckmarkCircle }),
                 )
               : i.createElement(
                   i.Fragment,
                   null,
-                  i.createElement(_.L, { amount: e })
-                )
+                  i.createElement(_.L, { amount: e }),
+                ),
           );
       function b(e, t) {
         const r = e.filter((e) => e.community_item_class == t).slice(0, 1);
@@ -6504,7 +6508,7 @@
                 item: s,
                 offer: t,
                 className: u.ProfileBackground,
-              })
+              }),
           );
         }),
         N = (0, a.Pi)((e) => {
@@ -6521,7 +6525,7 @@
                 alignItems: "center",
               },
               o,
-              { className: (0, h.Z)(a, u.ItemCard), key: r.defid }
+              { className: (0, h.Z)(a, u.ItemCard), key: r.defid },
             ),
             s &&
               i.createElement("img", {
@@ -6534,7 +6538,7 @@
               src: (0, p.T)(r),
               className: u.ItemCardImage,
               style: s ? { zIndex: 1 } : void 0,
-            })
+            }),
           );
         });
     },
@@ -6699,7 +6703,7 @@
               return o.createElement(
                 S.Z.Provider,
                 { value: { isMounting: !this.appeared } },
-                e
+                e,
               );
             }),
             t
@@ -6790,7 +6794,7 @@
           let e = new Promise((e, t) => {
             try {
               this.m_socket = new WebSocket(
-                "ws://127.0.0.1:27060/clientsocket/"
+                "ws://127.0.0.1:27060/clientsocket/",
               );
             } catch (e) {
               return (this.m_bSecurityException = !0), void t(e);
@@ -6854,7 +6858,7 @@
         BClientConnected() {
           return this.m_connection.Connect().then(
             () => F,
-            () => this.FailureResult()
+            () => this.FailureResult(),
           );
         }
         BClientSupportsMessage(e) {
@@ -6904,9 +6908,9 @@
                 ? this.m_connection
                     .SendMsgAndAwaitResponse(e)
                     .then((e) =>
-                      1 === e.success ? F : this.FailureResult(e.success)
+                      1 === e.success ? F : this.FailureResult(e.success),
                     )
-                : { success: !1, result: 19, account_mismatch: !0 }
+                : { success: !1, result: 19, account_mismatch: !0 },
             )
             .catch(() => this.FailureResult());
         }
@@ -7082,13 +7086,13 @@
                     msDelay: t.nDelay,
                     scale: t.flScale,
                     sale: this.props.sale,
-                  })
+                  }),
                 );
               }),
             o.createElement(
               "div",
               { ref: this.m_refContainer, className: Z().FireworkContainer },
-              e
+              e,
             )
           );
         }
@@ -7111,7 +7115,7 @@
             o.createElement("div", {
               style: e.style,
               className: Z().FireworkPNG,
-            })
+            }),
           )
         );
       }
@@ -7133,7 +7137,7 @@
             o.createElement("div", {
               style: e.style,
               className: Z().FireworkPNG,
-            })
+            }),
           )
         );
       }
@@ -7155,7 +7159,7 @@
             o.createElement("div", {
               style: e.style,
               className: Z().FireworkPNG,
-            })
+            }),
           )
         );
       }
@@ -7198,7 +7202,7 @@
                 style: { transform: "rotation( 360deg )" },
                 className: `${Z().SnowballImage} ${n}`,
                 src: this.getAsset(t),
-              })
+              }),
             )
           );
         }
@@ -7209,18 +7213,18 @@
             o.createElement(
               "div",
               { style: { transform: `rotate(${this.m_splatRots[0]}deg)` } },
-              this.fragment("splat1.png", "snowball-residue")
+              this.fragment("splat1.png", "snowball-residue"),
             ),
             o.createElement(
               "div",
               { style: { transform: `rotate(${this.m_splatRots[1]}deg)` } },
-              this.fragment("splat2.png", "snowball-residue")
+              this.fragment("splat2.png", "snowball-residue"),
             ),
             o.createElement(
               "div",
               { style: { transform: `rotate(${this.m_splatRots[2]}deg)` } },
-              this.fragment("splat3.png", "snowball-residue")
-            )
+              this.fragment("splat3.png", "snowball-residue"),
+            ),
           );
         }
         render() {
@@ -7250,25 +7254,25 @@
                 this.fragment(
                   "snowball_1.png",
                   "snowball-chunk",
-                  "snowball-chunk-1"
+                  "snowball-chunk-1",
                 ),
                 this.fragment(
                   "snowball_2.png",
                   "snowball-chunk",
-                  "snowball-chunk-2"
+                  "snowball-chunk-2",
                 ),
                 this.fragment(
                   "snowball_3.png",
                   "snowball-chunk",
-                  "snowball-chunk-3"
+                  "snowball-chunk-3",
                 ),
                 this.fragment(
                   "snowball_4.png",
                   "snowball-chunk",
-                  "snowball-chunk-4"
-                )
-              )
-            )
+                  "snowball-chunk-4",
+                ),
+              ),
+            ),
           );
         }
       }
@@ -7301,7 +7305,7 @@
             src: r,
             style: { maxWidth: "100%", position: "absolute" },
           }),
-          n
+          n,
         );
       }
       class ie extends X {
@@ -7382,8 +7386,8 @@
                 data: e,
                 effect: this.props.effect,
                 sale: this.m_strSaleId,
-              })
-            )
+              }),
+            ),
           );
         }
       }
@@ -7441,28 +7445,28 @@
       }
       const pe = {
         lny2020_lanterns: me("lny2020_lanterns", "lny2020", se, (e) =>
-          o.createElement(ie, { effect: e, sale: "lny2020" })
+          o.createElement(ie, { effect: e, sale: "lny2020" }),
         ),
         lny2020_firework: me("lny2020_firework", "lny2020", 7e3, () =>
-          o.createElement(q, { sale: "lny2020" })
+          o.createElement(q, { sale: "lny2020" }),
         ),
         lny2020_confetti: me("lny2020_confetti", "lny2020", ee.VL, () =>
-          o.createElement(ee.DI, { eType: ee.sS.LNY2020 })
+          o.createElement(ee.DI, { eType: ee.sS.LNY2020 }),
         ),
         snowball: de("snowball", le, (e) =>
-          o.createElement(te, { effect: e, sale: "winter2019" })
+          o.createElement(te, { effect: e, sale: "winter2019" }),
         ),
         balloons: de("balloons", se, (e) =>
-          o.createElement(ie, { effect: e, sale: "winter2019" })
+          o.createElement(ie, { effect: e, sale: "winter2019" }),
         ),
         confetti: de("confetti", ee.VL, () =>
-          o.createElement(ee.DI, { eType: ee.sS.Default })
+          o.createElement(ee.DI, { eType: ee.sS.Default }),
         ),
         goldfetti: de("goldfetti", ee.VL, () =>
-          o.createElement(ee.DI, { eType: ee.sS.Gold })
+          o.createElement(ee.DI, { eType: ee.sS.Gold }),
         ),
         firework: de("firework", 7e3, () =>
-          o.createElement(q, { sale: "winter2019" })
+          o.createElement(q, { sale: "winter2019" }),
         ),
         snow: de("snow", 1e4, function (e) {
           const t = [],
@@ -7482,12 +7486,12 @@
                   style: a,
                   className: (0, k.Z)(
                     Z().Snowflake,
-                    Z()["Snowflake-" + (n % 20)]
+                    Z()["Snowflake-" + (n % 20)],
                   ),
                 },
                 oe(i),
-                oe(i + 1)
-              )
+                oe(i + 1),
+              ),
             );
           }
           return o.createElement(o.Fragment, null, " ", t, " ");
@@ -7499,8 +7503,8 @@
             "div",
             { className: Z()["animation-container"] },
             this.props.effectManager.m_rgRunningEffects.map((e) =>
-              o.createElement(o.Fragment, { key: e.timestamp }, e.render())
-            )
+              o.createElement(o.Fragment, { key: e.timestamp }, e.render()),
+            ),
           );
         }
       };
@@ -7581,7 +7585,7 @@
         }
         UpdateRunningRoomEffects() {
           this.m_rgRunningEffects = this.m_rgRunningEffects.filter(
-            (e) => !e.bIsExpired()
+            (e) => !e.bIsExpired(),
           );
           for (let e in this.m_mapRoomEffectQueue) {
             const t = e;
@@ -7634,8 +7638,8 @@
               className: (0, k.Z)(we.Icon),
               "data-flash": i ? 1 : 0,
               onAnimationEnd: () => s(!1),
-            })
-          )
+            }),
+          ),
         );
       }
       var Ee = r(93718),
@@ -7646,7 +7650,7 @@
             n = (0, a._T)(t, ["className"]);
           return o.createElement(
             Ee.k,
-            Object.assign({ className: (0, k.Z)(e, r) }, n)
+            Object.assign({ className: (0, k.Z)(e, r) }, n),
           );
         };
       }
@@ -7660,7 +7664,7 @@
       function Pe(e, t) {
         (0, f.x1)(
           o.createElement(Oe, { definitionid: t }),
-          e ? (0, C.RA)(e) : window
+          e ? (0, C.RA)(e) : window,
         );
       }
       function Te(e, t, r, n) {
@@ -7672,7 +7676,7 @@
         };
         (0, f.x1)(
           o.createElement(ze, { definition: i, saleitem: n }),
-          e ? (0, C.RA)(e) : window
+          e ? (0, C.RA)(e) : window,
         );
       }
       function Re(e, t, r, n) {
@@ -7685,7 +7689,7 @@
         };
         (0, f.x1)(
           o.createElement(ze, { definition: i }),
-          e ? (0, C.RA)(e) : window
+          e ? (0, C.RA)(e) : window,
         );
       }
       function ke(e, t, r, n) {
@@ -7697,14 +7701,14 @@
         };
         (0, f.x1)(
           o.createElement(ze, { definition: i }),
-          e ? (0, C.RA)(e) : window
+          e ? (0, C.RA)(e) : window,
         );
       }
       function je(e, t) {
         const r = { type: 1, rewardDefinition: t };
         (0, f.x1)(
           o.createElement(He, { definition: r }),
-          e ? (0, C.RA)(e) : window
+          e ? (0, C.RA)(e) : window,
         );
       }
       function Fe(e) {
@@ -7714,12 +7718,12 @@
           case 2:
             return g.Vb.Get().BCanRedeemPointsForProfileShowcaseUpgrade(
               e.profileCustomizationType,
-              e.itemLevel
+              e.itemLevel,
             );
           case 3:
             return g.Vb.Get().BCanRedeemPointsForProfileShowcaseSlot(
               e.profileCustomizationType,
-              e.itemCount
+              e.itemCount,
             );
         }
         return !1;
@@ -7770,7 +7774,7 @@
               () =>
                 !e ||
                 0 == e.length ||
-                g.Vb.Get().GetRewardDefinitions(...e).length > 0
+                g.Vb.Get().GetRewardDefinitions(...e).length > 0,
             )
               .then(() => {
                 let t = [];
@@ -7782,7 +7786,9 @@
                   t.push(this.m_mutableObjDefinition.rewardDefinition.appid);
                 let r = Array.from(new Set(t));
                 return Promise.all(
-                  r.map((e) => g.Vb.Get().EnsureCommunityItemInventoryLoaded(e))
+                  r.map((e) =>
+                    g.Vb.Get().EnsureCommunityItemInventoryLoaded(e),
+                  ),
                 );
               })
               .then(() => this.SetInitialState());
@@ -7825,7 +7831,7 @@
             return g.Vb.Get().BIsLoggedIn() && !this.BCanAffordItem();
           const e =
             g.Vb.Get().BRewardOwnedByUser(
-              this.props.definition.rewardDefinition
+              this.props.definition.rewardDefinition,
             ) && 2 != this.props.definition.rewardDefinition.type;
           return g.Vb.Get().BIsLoggedIn() && !e && !this.BCanAffordItem();
         }
@@ -7837,12 +7843,12 @@
               case 2:
                 return !g.Vb.Get().BCanRedeemPointsForProfileShowcaseUpgrade(
                   e.profileCustomizationType,
-                  e.itemLevel
+                  e.itemLevel,
                 );
               case 3:
                 return !g.Vb.Get().BCanRedeemPointsForProfileShowcaseSlot(
                   e.profileCustomizationType,
-                  e.itemCount
+                  e.itemCount,
                 );
             }
             return !0;
@@ -7854,7 +7860,7 @@
             3 != this.props.definition.type &&
             !(
               !g.Vb.Get().BRewardOwnedByUser(
-                this.props.definition.rewardDefinition
+                this.props.definition.rewardDefinition,
               ) ||
               !(
                 (2 == this.props.definition.rewardDefinition.type &&
@@ -7882,9 +7888,9 @@
               o.createElement(
                 "a",
                 { href: I.De.HELP_BASE_URL },
-                (0, h.Xx)("#Redeem_Error_SteamSupport")
-              )
-            )
+                (0, h.Xx)("#Redeem_Error_SteamSupport"),
+              ),
+            ),
           );
         }
         ShowError(e) {
@@ -7899,7 +7905,7 @@
                 void g.Vb.Get().ShowLoginDialog(
                   this.props.definition.rewardDefinition
                     ? this.props.definition.rewardDefinition.defid
-                    : void 0
+                    : void 0,
                 )
               );
             switch (
@@ -7935,7 +7941,7 @@
                       : g.Vb.Get()
                           .RedeemPointsForItem(
                             this.props.definition.rewardDefinition.defid,
-                            this.props.definition.rewardDefinition.appid
+                            this.props.definition.rewardDefinition.appid,
                           )
                           .then((e) => {
                             1 == e.eResult
@@ -7952,7 +7958,7 @@
                   case 4:
                     g.Vb.Get()
                       .RedeemPointsForCoupon(
-                        this.props.definition.rewardDefinition.defid
+                        this.props.definition.rewardDefinition.defid,
                       )
                       .then((e) => {
                         1 == e.eResult
@@ -7968,12 +7974,12 @@
                     let e = Math.max(
                       this.props.definition.itemLevel -
                         g.Vb.Get().GetUserSeasonalBadgeLevel(),
-                      1
+                      1,
                     );
                     g.Vb.Get()
                       .RedeemPointsForBadge(
                         this.props.definition.rewardDefinition.defid,
-                        e
+                        e,
                       )
                       .then((e) => {
                         1 == e.eResult
@@ -7993,7 +7999,7 @@
                 g.Vb.Get()
                   .RedeemPointsForProfileShowcaseUpgrade(
                     this.props.definition.profileCustomizationType,
-                    this.props.definition.desiredItemLevel
+                    this.props.definition.desiredItemLevel,
                   )
                   .then((e) => {
                     1 == e.eResult
@@ -8008,7 +8014,7 @@
               case 3:
                 g.Vb.Get()
                   .RedeemPointsForProfileShowcase(
-                    this.props.definition.profileCustomizationType
+                    this.props.definition.profileCustomizationType,
                   )
                   .then((e) => {
                     1 == e.eResult
@@ -8028,32 +8034,32 @@
           switch (this.props.definition.rewardDefinition.community_item_class) {
             case 3:
               e = g.Vb.Get().SetProfileBackground(
-                this.props.definition.rewardDefinition
+                this.props.definition.rewardDefinition,
               );
               break;
             case 14:
               e = g.Vb.Get().SetAvatarFrame(
-                this.props.definition.rewardDefinition
+                this.props.definition.rewardDefinition,
               );
               break;
             case 15:
               e = g.Vb.Get().SetAnimatedAvatar(
-                this.props.definition.rewardDefinition
+                this.props.definition.rewardDefinition,
               );
               break;
             case 13:
               e = g.Vb.Get().SetMiniProfileBackground(
-                this.props.definition.rewardDefinition
+                this.props.definition.rewardDefinition,
               );
               break;
             case 8:
               e = g.Vb.Get().ActivateProfileModifier(
-                this.props.definition.rewardDefinition
+                this.props.definition.rewardDefinition,
               );
               break;
             case 16:
               e = g.Vb.Get().SetSteamDeckKeyboardSkin(
-                this.props.definition.rewardDefinition
+                this.props.definition.rewardDefinition,
               );
               break;
             case 17:
@@ -8064,7 +8070,7 @@
             default:
               return void (0, B.X)(
                 !1,
-                `Missing equip handler for item class ${this.props.definition.rewardDefinition.community_item_class}`
+                `Missing equip handler for item class ${this.props.definition.rewardDefinition.community_item_class}`,
               );
           }
           e.then((e) => {
@@ -8096,7 +8102,7 @@
               null === (e = this.props.definition.rewardDefinition) ||
                 void 0 === e
                 ? void 0
-                : e.type
+                : e.type,
             )
           ) {
             a = `${document.location.href.split("/reward/")[0]}/reward/${
@@ -8126,7 +8132,7 @@
                     o.createElement(
                       "div",
                       { className: u.ErrorContainer },
-                      this.m_strError
+                      this.m_strError,
                     ),
                   o.createElement(
                     A,
@@ -8147,12 +8153,12 @@
                         equipItem: this.EquipItem,
                         step: this.state.step,
                         bRequestInProgress: this.state.requestInProgress,
-                      })
-                    )
-                  )
-                )
-              )
-            )
+                      }),
+                    ),
+                  ),
+                ),
+              ),
+            ),
           );
         }
       };
@@ -8196,11 +8202,11 @@
                       equipItem: n,
                       step: "preview",
                       bRequestInProgress: !1,
-                    })
-                  )
-                )
-              )
-            )
+                    }),
+                  ),
+                ),
+              ),
+            ),
           );
         },
         Ue = (0, m.Pi)(
@@ -8231,7 +8237,7 @@
                     o.createElement(Se, {
                       link: r,
                       style: { marginLeft: "8px" },
-                    })
+                    }),
                 ),
                 o.createElement("div", { className: u.SubHeader }, t),
                 n &&
@@ -8250,10 +8256,10 @@
                         { className: u.SubHeader },
                         " ",
                         n.name,
-                        " "
-                      )
-                    )
-                  )
+                        " ",
+                      ),
+                    ),
+                  ),
               ),
               g.Vb.Get().BIsLoggedIn() &&
                 o.createElement(
@@ -8266,24 +8272,24 @@
                     o.createElement(
                       "div",
                       { className: u.Balance },
-                      (0, h.Xx)("#YourBalance")
+                      (0, h.Xx)("#YourBalance"),
                     ),
                     o.createElement(
                       "div",
                       { className: u.CurrentPoints },
-                      (0, Le.AV)(g.Vb.Get().GetPointsAvailable().getLowBits())
-                    )
-                  )
-                )
-            )
+                      (0, Le.AV)(g.Vb.Get().GetPointsAvailable().getLowBits()),
+                    ),
+                  ),
+                ),
+            ),
         ),
         Ze = (e) =>
           2 == e.type || 3 == e.type
             ? (0, h.Xx)(
                 "#ProfileShowcases_ShowcaseName",
                 (0, h.Xx)(
-                  "#ProfileShowcases_Type_" + e.profileCustomizationType
-                )
+                  "#ProfileShowcases_Type_" + e.profileCustomizationType,
+                ),
               )
             : Ve(e.rewardDefinition),
         Ve = (e) => {
@@ -8291,7 +8297,7 @@
             return (
               (0, B.X)(
                 e.community_item_data,
-                `Missing community item data for virtual item ${e.defid}`
+                `Missing community item data for virtual item ${e.defid}`,
               ),
               e.community_item_data.item_title
             );
@@ -8343,7 +8349,7 @@
               };
             return o.createElement(
               fe.vV,
-              Object.assign({ persona: r, animatedAvatar: t }, i)
+              Object.assign({ persona: r, animatedAvatar: t }, i),
             );
           }),
           (0, m.Pi)((e) => {
@@ -8365,8 +8371,8 @@
               o.createElement(
                 fe.vV,
                 Object.assign({ persona: n, animatedAvatar: t }, s),
-                o.createElement(fe.DY, { profileItem: r })
-              )
+                o.createElement(fe.DY, { profileItem: r }),
+              ),
             );
           }));
       class Qe extends o.Component {
@@ -8380,7 +8386,7 @@
                 (0, h.Xx)("#LunarSale2022_Redeem_Desc1"),
                 o.createElement("br", null),
                 o.createElement("br", null),
-                (0, h.Xx)("#LunarSale2022_Redeem_Desc2")
+                (0, h.Xx)("#LunarSale2022_Redeem_Desc2"),
               )
             : (0, h.Xx)("#Redeem_UsePoints_Sticker");
         }
@@ -8393,7 +8399,7 @@
                 className: u.SaleRewardImg,
                 alt: "Free Sale Item",
                 src: z,
-              })
+              }),
             );
           {
             const e = this.props.definition.rewardDefinition;
@@ -8417,7 +8423,7 @@
               yt,
               { className: u.PreviewChat, step: this.props.step },
               o.createElement("div", { className: u.LargePreview, style: t }),
-              o.createElement(wt, { icon: r })
+              o.createElement(wt, { icon: r }),
             );
           }
         }
@@ -8427,7 +8433,7 @@
             {
               className: (0, k.Z)(
                 u.StickerPreviewContainer,
-                u.ChatPreviewContainer
+                u.ChatPreviewContainer,
               ),
             },
             this.GetModalPreview(),
@@ -8445,8 +8451,8 @@
                 closeModal: this.props.closeModal,
                 redeemPoints: this.props.redeemPoints,
               },
-              o.createElement(_t, { closeModal: this.props.closeModal })
-            )
+              o.createElement(_t, { closeModal: this.props.closeModal }),
+            ),
           );
         }
       }
@@ -8464,9 +8470,9 @@
                     "span",
                     null,
                     this.props.definition.rewardDefinition.community_item_data
-                      .item_title
-                  )
-                )
+                      .item_title,
+                  ),
+                ),
               )
             : (0, h.Xx)("#Redeem_UsePoints_Background");
         }
@@ -8513,7 +8519,7 @@
                   "/" +
                   n,
                 type: "video/mp4",
-              })
+              }),
             );
           }
           return r;
@@ -8539,7 +8545,7 @@
                 step: this.props.step,
               },
               o.createElement("div", { className: u.PreviewBackground }),
-              this.GetPreview()
+              this.GetPreview(),
             ),
             o.createElement(Et, {
               definition: this.props.definition,
@@ -8555,8 +8561,8 @@
                 closeModal: this.props.closeModal,
                 redeemPoints: this.props.redeemPoints,
               },
-              this.GetButtons()
-            )
+              this.GetButtons(),
+            ),
           );
         }
       }
@@ -8589,7 +8595,7 @@
             {
               className: (0, k.Z)(
                 u.EmoticonPreviewContainer,
-                u.ChatPreviewContainer
+                u.ChatPreviewContainer,
               ),
             },
             o.createElement(
@@ -8600,9 +8606,9 @@
                 { className: u.LargePreviewContainer },
                 o.createElement("div", { className: u.LargePreview, style: r }),
                 o.createElement("div", { className: u.LargePreview, style: r }),
-                o.createElement("div", { className: u.LargePreview, style: r })
+                o.createElement("div", { className: u.LargePreview, style: r }),
               ),
-              o.createElement(wt, { icon: t })
+              o.createElement(wt, { icon: t }),
             ),
             o.createElement(Et, {
               definition: this.props.definition,
@@ -8618,8 +8624,8 @@
                 closeModal: this.props.closeModal,
                 redeemPoints: this.props.redeemPoints,
               },
-              o.createElement(_t, { closeModal: this.props.closeModal })
-            )
+              o.createElement(_t, { closeModal: this.props.closeModal }),
+            ),
           );
         }
       }
@@ -8638,7 +8644,7 @@
           this.m_manager.AddRoomEffect(e),
             (this.m_interval = window.setInterval(
               () => this.m_manager.AddRoomEffect(e),
-              this.GetEffectConfig().timeout
+              this.GetEffectConfig().timeout,
             ));
         }
         componentWillUnmount() {
@@ -8655,7 +8661,7 @@
             {
               className: (0, k.Z)(
                 u.EmoticonPreviewContainer,
-                u.ChatPreviewContainer
+                u.ChatPreviewContainer,
               ),
             },
             o.createElement(
@@ -8664,9 +8670,9 @@
               o.createElement(
                 "div",
                 { className: u.PreviewEffectContainer },
-                o.createElement(ue, { effectManager: this.m_manager })
+                o.createElement(ue, { effectManager: this.m_manager }),
               ),
-              o.createElement(wt, null, this.GetEffectConfig().renderButton())
+              o.createElement(wt, null, this.GetEffectConfig().renderButton()),
             ),
             o.createElement(Et, {
               definition: this.props.definition,
@@ -8682,8 +8688,8 @@
                 closeModal: this.props.closeModal,
                 redeemPoints: this.props.redeemPoints,
               },
-              o.createElement(_t, { closeModal: this.props.closeModal })
-            )
+              o.createElement(_t, { closeModal: this.props.closeModal }),
+            ),
           );
         }
       };
@@ -8702,9 +8708,9 @@
                     "span",
                     null,
                     this.props.definition.rewardDefinition.community_item_data
-                      .item_title
-                  )
-                )
+                      .item_title,
+                  ),
+                ),
               )
             : (0, h.Xx)("#Redeem_UsePoints_MiniProfile");
         }
@@ -8718,7 +8724,7 @@
             ? o.createElement(
                 ve,
                 { onClick: this.props.closeModal },
-                (0, h.Xx)("#Button_Close")
+                (0, h.Xx)("#Button_Close"),
               )
             : null;
         }
@@ -8771,17 +8777,17 @@
                       "/" +
                       e.community_item_data.item_movie_mp4,
                     type: "video/mp4",
-                  })
+                  }),
                 ),
                 o.createElement(
                   "div",
                   { className: u.ProfileImage },
-                  g.Vb.Get().BIsLoggedIn() && n
+                  g.Vb.Get().BIsLoggedIn() && n,
                 ),
                 o.createElement("div", {
                   className: (0, k.Z)(u.ImageBlur, "miniprofile_backdropblur"),
-                })
-              )
+                }),
+              ),
             ),
             o.createElement(Et, {
               definition: this.props.definition,
@@ -8797,8 +8803,8 @@
                 closeModal: this.props.closeModal,
                 redeemPoints: this.props.redeemPoints,
               },
-              this.GetButtons()
-            )
+              this.GetButtons(),
+            ),
           );
         }
       }
@@ -8816,9 +8822,9 @@
                     "span",
                     null,
                     this.props.definition.rewardDefinition.community_item_data
-                      .item_title
-                  )
-                )
+                      .item_title,
+                  ),
+                ),
               )
             : (0, h.Xx)("#Redeem_UsePoints_AvatarFrame");
         }
@@ -8867,8 +8873,8 @@
                 o.createElement(
                   "div",
                   { className: u.CurrentlyEquippedAvatarAndFrameDesc },
-                  (0, h.Xx)("#Redeem_Equipped_CurrentAvatarFrame")
-                )
+                  (0, h.Xx)("#Redeem_Equipped_CurrentAvatarFrame"),
+                ),
               )),
             o.createElement(
               Mt,
@@ -8882,13 +8888,13 @@
                 o.createElement(
                   "div",
                   { className: (0, k.Z)(u.ItemPreview, u.TopAvatar) },
-                  i
+                  i,
                 ),
                 o.createElement(
                   "div",
                   { className: (0, k.Z)(u.ItemPreview, u.BottomAvatar) },
-                  i
-                )
+                  i,
+                ),
               ),
               a,
               o.createElement(Et, {
@@ -8905,8 +8911,8 @@
                   closeModal: this.props.closeModal,
                   redeemPoints: this.props.redeemPoints,
                 },
-                this.GetButtons()
-              )
+                this.GetButtons(),
+              ),
             )
           );
         }
@@ -8925,9 +8931,9 @@
                     "span",
                     null,
                     this.props.definition.rewardDefinition.community_item_data
-                      .item_title
-                  )
-                )
+                      .item_title,
+                  ),
+                ),
               )
             : (0, h.Xx)("#Redeem_UsePoints_AnimatedAvatar");
         }
@@ -8976,8 +8982,8 @@
                 o.createElement(
                   "div",
                   { className: u.CurrentlyEquippedAvatarAndFrameDesc },
-                  (0, h.Xx)("#Redeem_Equipped_CurrentAvatar")
-                )
+                  (0, h.Xx)("#Redeem_Equipped_CurrentAvatar"),
+                ),
               )),
             o.createElement(
               Mt,
@@ -8991,13 +8997,13 @@
                 o.createElement(
                   "div",
                   { className: (0, k.Z)(u.ItemPreview, u.TopAvatar) },
-                  i
+                  i,
                 ),
                 o.createElement(
                   "div",
                   { className: (0, k.Z)(u.ItemPreview, u.BottomAvatar) },
-                  i
-                )
+                  i,
+                ),
               ),
               a,
               o.createElement(Et, {
@@ -9014,8 +9020,8 @@
                   closeModal: this.props.closeModal,
                   redeemPoints: this.props.redeemPoints,
                 },
-                this.GetButtons()
-              )
+                this.GetButtons(),
+              ),
             )
           );
         }
@@ -9051,7 +9057,7 @@
               o.createElement("img", {
                 className: u.KeyboardPreviewImg,
                 src: t,
-              })
+              }),
             ),
             o.createElement(Et, {
               definition: this.props.definition,
@@ -9067,8 +9073,8 @@
                 closeModal: this.props.closeModal,
                 redeemPoints: this.props.redeemPoints,
               },
-              this.GetButtons()
-            )
+              this.GetButtons(),
+            ),
           );
         }
       }
@@ -9128,8 +9134,8 @@
                     e.community_item_data.item_movie_mp4,
                   type: "video/mp4",
                 }),
-                o.createElement("img", { src: t })
-              )
+                o.createElement("img", { src: t }),
+              ),
             ),
             o.createElement(Et, {
               definition: this.props.definition,
@@ -9145,8 +9151,8 @@
                 closeModal: this.props.closeModal,
                 redeemPoints: this.props.redeemPoints,
               },
-              this.GetButtons()
-            )
+              this.GetButtons(),
+            ),
           );
         }
       }
@@ -9184,13 +9190,13 @@
                 o.createElement(
                   "div",
                   { className: (0, k.Z)(u.BadgeColumn, u.ArrowColumn) },
-                  o.createElement("div", { className: u.BlueArrow })
+                  o.createElement("div", { className: u.BlueArrow }),
                 ),
                 o.createElement(St, {
                   definition: this.props.definition.rewardDefinition,
                   badgeLevel: this.props.definition.itemLevel,
                   title: (0, h.Xx)("#Redeem_Badge_AfterPoints"),
-                })
+                }),
               );
         }
         render() {
@@ -9202,7 +9208,7 @@
                 o.createElement(
                   yt,
                   { className: u.BadgePreviewContainer },
-                  this.GetPreviewForLevel()
+                  this.GetPreviewForLevel(),
                 ),
                 o.createElement(Et, {
                   definition: this.props.definition,
@@ -9218,11 +9224,11 @@
                     closeModal: this.props.closeModal,
                     redeemPoints: this.props.redeemPoints,
                   },
-                  this.GetButtons()
-                )
+                  this.GetButtons(),
+                ),
               )
             : (console.log(
-                `Missing badge level ${this.props.definition.itemLevel} image`
+                `Missing badge level ${this.props.definition.itemLevel} image`,
               ),
               null);
         }
@@ -9266,8 +9272,8 @@
                 closeModal: this.props.closeModal,
                 redeemPoints: this.props.redeemPoints,
               },
-              this.GetButtons()
-            )
+              this.GetButtons(),
+            ),
           );
         }
       }
@@ -9295,7 +9301,7 @@
           let r = g.Vb.Get().GetPersonaState(),
             n = g.Vb.Get().GetEquippedItems(),
             i = g.Vb.Get().GetGoldenProfileConfigForApp(
-              t.rewardDefinition.appid
+              t.rewardDefinition.appid,
             );
           if (
             !i &&
@@ -9336,8 +9342,8 @@
                   persona: r,
                   animatedAvatar: n.animated_avatar,
                   avatarFrame: a,
-                })
-              )
+                }),
+              ),
             ),
             o.createElement(
               Et,
@@ -9349,8 +9355,8 @@
               o.createElement(
                 dt,
                 null,
-                (0, h.Xx)("#Redeem_GoldenProfile_Expiration")
-              )
+                (0, h.Xx)("#Redeem_GoldenProfile_Expiration"),
+              ),
             ),
             o.createElement(
               It,
@@ -9361,8 +9367,8 @@
                 closeModal: this.props.closeModal,
                 redeemPoints: this.props.redeemPoints,
               },
-              this.GetButtons()
-            )
+              this.GetButtons(),
+            ),
           );
         }
       }
@@ -9388,20 +9394,20 @@
         GetDescription() {
           const e = (0, h.Xx)(
             "#ProfileShowcases_Type_" +
-              this.props.definition.profileCustomizationType
+              this.props.definition.profileCustomizationType,
           );
           if ("equipped" == this.props.step)
             return 2 == this.props.definition.type
               ? (0, h.Xx)(
                   "#Redeem_Equipped_ProfileShowcaseUpgraded",
                   e,
-                  this.props.definition.itemLevel
+                  this.props.definition.itemLevel,
                 )
               : (0, h.Xx)("#Redeem_Equipped_ProfileShowcaseSlotPurchased", e);
           if (2 == this.props.definition.type)
             return (0, h.Xx)(
               "#Redeem_UsePoints_ProfileShowcaseUpgrade",
-              this.props.definition.desiredItemLevel
+              this.props.definition.desiredItemLevel,
             );
           const t = g.Vb.Get().GetMaxProfileShowcaseSlots();
           return (0, h.Xx)("#Redeem_UsePoints_ProfileShowcaseSlot", e, t + 1);
@@ -9431,7 +9437,7 @@
               this.props.definition.desiredItemLevel
                 ? this.props.definition.desiredItemLevel
                 : this.props.definition.itemLevel,
-              g.Vb.Get().GetMaxProfileShowcaseUpgradeLevel()
+              g.Vb.Get().GetMaxProfileShowcaseUpgradeLevel(),
             ),
             i = 0.5 * this.state.iframeHeight;
           return o.createElement(
@@ -9442,7 +9448,7 @@
               {
                 className: (0, k.Z)(
                   u.ProfileShowcasePreviewContainer,
-                  e ? u.LoadedPreview : u.LoadingPreview
+                  e ? u.LoadedPreview : u.LoadingPreview,
                 ),
                 step: this.props.step,
               },
@@ -9459,9 +9465,9 @@
                     size: "xlarge",
                     string: (0, h.Xx)(
                       "#ProfileShowcases_LoadingPreview",
-                      (0, h.Xx)("#ProfileShowcases_Type_" + r)
+                      (0, h.Xx)("#ProfileShowcases_Type_" + r),
                     ),
-                  })
+                  }),
                 ),
               o.createElement(
                 s.s,
@@ -9483,8 +9489,8 @@
                   onLoad: () => {
                     this.OnProfileFrameLoaded();
                   },
-                })
-              )
+                }),
+              ),
             ),
             o.createElement(Et, {
               definition: this.props.definition,
@@ -9500,8 +9506,8 @@
                 closeModal: this.props.closeModal,
                 redeemPoints: this.props.redeemPoints,
               },
-              this.GetButtons()
-            )
+              this.GetButtons(),
+            ),
           );
         }
       }
@@ -9544,7 +9550,7 @@
                 o.createElement(
                   "div",
                   { className: u.BundleItemPreviewImage },
-                  o.createElement("img", { src: r })
+                  o.createElement("img", { src: r }),
                 ),
                 o.createElement(
                   "div",
@@ -9552,13 +9558,13 @@
                   o.createElement(
                     "div",
                     { className: u.BundleChildItemName },
-                    e.community_item_data.item_title
+                    e.community_item_data.item_title,
                   ),
                   o.createElement(
                     "div",
                     { className: u.BundleChildItemClass },
-                    (0, g.gl)(e.community_item_class)
-                  )
+                    (0, g.gl)(e.community_item_class),
+                  ),
                 ),
                 n &&
                   o.createElement(
@@ -9566,8 +9572,8 @@
                     { className: u.BundleChildItemOwned },
                     o.createElement(ge.Zg, { className: u.OwnedCheckmark }),
                     "redeem" == this.props.step &&
-                      (0, h.Xx)("#Redeem_BundleItemOwned")
-                  )
+                      (0, h.Xx)("#Redeem_BundleItemOwned"),
+                  ),
               );
             });
           return o.createElement(
@@ -9576,7 +9582,7 @@
             o.createElement(
               "div",
               { className: u.BundleItemPreviewContainer },
-              e
+              e,
             ),
             o.createElement(Et, {
               definition: this.props.definition,
@@ -9592,8 +9598,8 @@
                 closeModal: this.props.closeModal,
                 redeemPoints: this.props.redeemPoints,
               },
-              this.GetButtons()
-            )
+              this.GetButtons(),
+            ),
           );
         }
       }
@@ -9624,7 +9630,7 @@
         render() {
           const { bLoadedIFrame: e } = this.state,
             t = g.Vb.Get().GetBundleOfferForUser(
-              this.props.definition.rewardDefinition
+              this.props.definition.rewardDefinition,
             ),
             r = this.props.definition.rewardDefinition.appid,
             n = this.props.definition.rewardDefinition.community_item_type,
@@ -9639,13 +9645,13 @@
                   padding: "xxsmall",
                   className: (0, k.Z)(
                     u.BundleItemPreview,
-                    n && u.ProfileModifier
+                    n && u.ProfileModifier,
                   ),
                 },
                 o.createElement(
                   "div",
                   { className: u.BundleItemPreviewImage },
-                  o.createElement("img", { src: t })
+                  o.createElement("img", { src: t }),
                 ),
                 o.createElement(
                   "div",
@@ -9653,13 +9659,13 @@
                   o.createElement(
                     "div",
                     { className: u.BundleChildItemName },
-                    e.community_item_data.item_title
+                    e.community_item_data.item_title,
                   ),
                   o.createElement(
                     "div",
                     { className: u.BundleChildItemClass },
-                    (0, g.gl)(e.community_item_class)
-                  )
+                    (0, g.gl)(e.community_item_class),
+                  ),
                 ),
                 r &&
                   o.createElement(
@@ -9667,8 +9673,8 @@
                     { className: u.BundleChildItemOwned },
                     o.createElement(ge.Zg, { className: u.OwnedCheckmark }),
                     "redeem" == this.props.step &&
-                      (0, h.Xx)("#Redeem_ProfileBundleItemOwned")
-                  )
+                      (0, h.Xx)("#Redeem_ProfileBundleItemOwned"),
+                  ),
               );
             }),
             a =
@@ -9684,7 +9690,7 @@
             {
               className: (0, k.Z)(
                 u.BundleItemContainer,
-                e ? u.LoadedPreview : u.LoadingPreview
+                e ? u.LoadedPreview : u.LoadingPreview,
               ),
             },
             !e &&
@@ -9696,9 +9702,9 @@
                   size: "xlarge",
                   string: (0, h.Xx)(
                     "#ProfileBundle_LoadingPreview",
-                    Ve(this.props.definition.rewardDefinition)
+                    Ve(this.props.definition.rewardDefinition),
                   ),
-                })
+                }),
               ),
             o.createElement(
               s.s,
@@ -9715,7 +9721,7 @@
                 onLoad: () => {
                   this.OnIFrameLoaded();
                 },
-              })
+              }),
             ),
             !I.De.IN_GAMEPADUI &&
               o.createElement(
@@ -9724,13 +9730,13 @@
                 o.createElement(
                   "a",
                   { href: a, target: "_blank", className: u.PreviewLink },
-                  (0, h.Xx)("#ProfileModifier_PreviewLinkText")
-                )
+                  (0, h.Xx)("#ProfileModifier_PreviewLinkText"),
+                ),
               ),
             o.createElement(
               "div",
               { className: u.BundleItemPreviewContainer },
-              i
+              i,
             ),
             o.createElement(Et, {
               definition: this.props.definition,
@@ -9746,8 +9752,8 @@
                 closeModal: this.props.closeModal,
                 redeemPoints: this.props.redeemPoints,
               },
-              this.GetButtons()
-            )
+              this.GetButtons(),
+            ),
           );
         }
       }
@@ -9800,10 +9806,10 @@
             "div",
             Object.assign(
               { className: (0, k.Z)(u.WarningTextContainer, e.className) },
-              r
+              r,
             ),
             o.createElement(R.g0p, { className: u.TimeWarning }),
-            e.children
+            e.children,
           );
         },
         pt = (e) => {
@@ -9823,7 +9829,7 @@
               originalCost: n,
               onClick: i,
             }),
-            o.createElement(ve, { onClick: a }, (0, h.Xx)("#Button_Cancel"))
+            o.createElement(ve, { onClick: a }, (0, h.Xx)("#Button_Cancel")),
           );
         },
         ut = (e) => {
@@ -9847,14 +9853,14 @@
                       e,
                       " ",
                       (0, h.Xx)("#Rewards_Points"),
-                      " "
+                      " ",
                     ),
                     o.createElement(
                       L.L,
                       { amount: t },
                       " ",
-                      t > 0 && (0, h.Xx)("#Rewards_Points")
-                    )
+                      t > 0 && (0, h.Xx)("#Rewards_Points"),
+                    ),
                   )
                 : o.createElement("span", null, (0, h.Xx)("#Button_Login"));
             return o.createElement(
@@ -9865,9 +9871,9 @@
                 { className: u.DiscountContainer },
                 "-",
                 r,
-                "%"
+                "%",
               ),
-              o.createElement("div", { className: u.CostContainer }, l)
+              o.createElement("div", { className: u.CostContainer }, l),
             );
           }
           const l = g.Vb.Get().BIsLoggedIn()
@@ -9875,13 +9881,13 @@
                 L.L,
                 { size: 1.125, amount: t },
                 " ",
-                t > 0 && (0, h.Xx)("#Rewards_Points")
+                t > 0 && (0, h.Xx)("#Rewards_Points"),
               )
             : o.createElement("span", null, (0, h.Xx)("#Button_Login"));
           return o.createElement(
             s.s,
             { className: (0, k.Z)(u.RedeemButton, a), onActivate: i },
-            o.createElement("div", { className: u.CostContainer }, l)
+            o.createElement("div", { className: u.CostContainer }, l),
           );
         },
         _t = (e) => {
@@ -9892,7 +9898,7 @@
             n = () => {
               window.open(
                 I.De.CHAT_BASE_URL + "chat",
-                "height=790,width=1015,resize=yes,scrollbars=yes"
+                "height=790,width=1015,resize=yes,scrollbars=yes",
               ),
                 t();
             },
@@ -9912,9 +9918,9 @@
                 o.createElement(
                   xe,
                   { onClick: r },
-                  (0, h.Xx)("#Button_Goto_Chat")
+                  (0, h.Xx)("#Button_Goto_Chat"),
                 ),
-                o.createElement(ve, { onClick: t }, (0, h.Xx)("#Button_Later"))
+                o.createElement(ve, { onClick: t }, (0, h.Xx)("#Button_Later")),
               )
             : o.createElement(
                 o.Fragment,
@@ -9922,14 +9928,14 @@
                 o.createElement(
                   xe,
                   { onClick: n },
-                  (0, h.Xx)("#Button_Goto_WebChat")
+                  (0, h.Xx)("#Button_Goto_WebChat"),
                 ),
                 o.createElement(
                   Ne,
                   { onClick: i },
-                  (0, h.Xx)("#Button_Goto_ClientChat")
+                  (0, h.Xx)("#Button_Goto_ClientChat"),
                 ),
-                o.createElement(ve, { onClick: t }, (0, h.Xx)("#Button_Later"))
+                o.createElement(ve, { onClick: t }, (0, h.Xx)("#Button_Later")),
               );
         },
         ht = (e) => {
@@ -9938,7 +9944,7 @@
             o.Fragment,
             null,
             o.createElement(xe, { onClick: t }, (0, h.Xx)("#Button_Equip")),
-            o.createElement(ve, { onClick: r }, (0, h.Xx)("#Button_Later"))
+            o.createElement(ve, { onClick: r }, (0, h.Xx)("#Button_Later")),
           );
         },
         gt = (e) => {
@@ -9952,9 +9958,9 @@
                 onClick: () =>
                   (window.location.href = I.De.COMMUNITY_BASE_URL + "my"),
               },
-              (0, h.Xx)("#Button_Goto_Profile")
+              (0, h.Xx)("#Button_Goto_Profile"),
             ),
-            o.createElement(ve, { onClick: t }, (0, h.Xx)("#Button_Close"))
+            o.createElement(ve, { onClick: t }, (0, h.Xx)("#Button_Close")),
           );
         },
         ft = (e) => {
@@ -9968,10 +9974,10 @@
               o.createElement(
                 p.rU,
                 { to: T.Z.LoyaltyHowItWorks() },
-                (0, h.Xx)("#Redeem_NeedToOwnApp")
-              )
+                (0, h.Xx)("#Redeem_NeedToOwnApp"),
+              ),
             ),
-            o.createElement(ve, { onClick: t }, (0, h.Xx)("#Button_Cancel"))
+            o.createElement(ve, { onClick: t }, (0, h.Xx)("#Button_Cancel")),
           );
         },
         Ct = (e) => {
@@ -9985,10 +9991,10 @@
               o.createElement(
                 p.rU,
                 { to: T.Z.LoyaltyHowItWorks() },
-                (0, h.Xx)("#Redeem_HowToGetPoints")
-              )
+                (0, h.Xx)("#Redeem_HowToGetPoints"),
+              ),
             ),
-            o.createElement(ve, { onClick: t }, (0, h.Xx)("#Button_Cancel"))
+            o.createElement(ve, { onClick: t }, (0, h.Xx)("#Button_Cancel")),
           );
         },
         It = (e) => {
@@ -10068,21 +10074,21 @@
                   o.createElement(
                     Ne,
                     { onClick: i },
-                    (0, h.Xx)("#SummerSale_Redeem_Btn")
+                    (0, h.Xx)("#SummerSale_Redeem_Btn"),
                   ),
                   o.createElement(
                     ve,
                     { onClick: n },
-                    (0, h.Xx)("#Button_Cancel")
-                  )
+                    (0, h.Xx)("#Button_Cancel"),
+                  ),
                 ));
           return o.createElement(
             s.s,
             Object.assign(
               { "flow-children": "row", className: u.ItemButtonsContainer },
-              c
+              c,
             ),
-            m
+            m,
           );
         },
         yt = (e) => {
@@ -10102,10 +10108,10 @@
               "div",
               Object.assign(
                 { className: (0, k.Z)(r, u.ItemPreviewContainer) },
-                n
+                n,
               ),
               i,
-              e.children
+              e.children,
             )
           );
         },
@@ -10121,8 +10127,8 @@
                 className: u.IconPreview,
                 style: t && { backgroundImage: `url( ${t} )` },
               },
-              e.children
-            )
+              e.children,
+            ),
           );
         },
         St = (e) => {
@@ -10146,15 +10152,15 @@
                     style: {
                       backgroundImage: `url( ${(0, P._)(t.appid, i)} )`,
                     },
-                  })
+                  }),
                 ),
                 o.createElement("div", { className: u.BadgeLine }),
                 o.createElement(
                   "div",
                   { className: (0, k.Z)(u.BadgeLevelContainer, a) },
-                  o.createElement("div", { className: u.BadgeLevelText }, r)
-                )
-              )
+                  o.createElement("div", { className: u.BadgeLevelText }, r),
+                ),
+              ),
             )
           );
         },
@@ -10172,26 +10178,26 @@
               let e = o.createElement(
                 "span",
                 { className: u.NeedAppOwnership },
-                Ce.Q8.GetAppInfo(t.rewardDefinition.appid).name || ""
+                Ce.Q8.GetAppInfo(t.rewardDefinition.appid).name || "",
               );
               l = o.createElement(
                 "div",
                 { className: (0, k.Z)(u.Bold, u.Opacity) },
-                (0, h.kQ)("#Redeem_CantRedeemItemForApp", e)
+                (0, h.kQ)("#Redeem_CantRedeemItemForApp", e),
               );
             } else if ("cantafford" == r) {
               let e = Ge(t) - g.Vb.Get().GetPointsAvailable().getLowBits();
               l = o.createElement(
                 "div",
                 { className: (0, k.Z)(u.Bold, u.Opacity) },
-                (0, h.Xx)("#Redeem_CantAfford", e.toLocaleString())
+                (0, h.Xx)("#Redeem_CantAfford", e.toLocaleString()),
               );
             }
           } else
             s = o.createElement(
               "div",
               { className: u.Bold },
-              (0, h.Xx)("#Redeem_YoursToOwn", Ve(t.rewardDefinition))
+              (0, h.Xx)("#Redeem_YoursToOwn", Ve(t.rewardDefinition)),
             );
           return o.createElement(
             "div",
@@ -10203,8 +10209,8 @@
             o.createElement(
               "div",
               { className: u.Small },
-              (0, h.Xx)("#Redeem_RefundWarning")
-            )
+              (0, h.Xx)("#Redeem_RefundWarning"),
+            ),
           );
         },
         Mt = (e) => {
@@ -10213,7 +10219,7 @@
           return o.createElement(
             "div",
             Object.assign({ className: (0, k.Z)(u.ItemWrapper, t) }, r),
-            e.children
+            e.children,
           );
         };
       function bt(e) {
@@ -10227,7 +10233,7 @@
                 bDestructiveWarning: r,
                 hideTopBar: !1,
               },
-              t
+              t,
             )
           : o.createElement(_.Yy, { active: !0 }, t);
       }
@@ -10237,8 +10243,8 @@
           "div",
           Object.assign(
             { className: (0, k.Z)(u.ModalContainer, t && u.Responsive) },
-            e
-          )
+            e,
+          ),
         );
       }
     },
@@ -10273,7 +10279,7 @@
           r = (0, n._T)(e, ["className"]);
         return i.createElement(
           "div",
-          Object.assign({ className: (0, c.Z)(t, C.Pulse) }, r)
+          Object.assign({ className: (0, c.Z)(t, C.Pulse) }, r),
         );
       }
       var y = r(54560),
@@ -10304,7 +10310,7 @@
             i.createElement(_.fS, {
               className: l.IconAnimated,
               key: "animated",
-            })
+            }),
           );
         const { icon_url: s, name: c } = g.Q8.GetAppInfo(t.appid),
           d = t.community_item_data.item_title
@@ -10323,7 +10329,7 @@
             appIcon: s,
             appName: c,
           },
-          r
+          r,
         );
       }
       const b = (0, a.Pi)((e) => i.createElement(O, Object.assign({}, M(e)))),
@@ -10347,8 +10353,8 @@
                 className: l.ImageMedium,
                 src: s,
               });
-            }
-          )
+            },
+          ),
         ),
         N = (0, a.Pi)((e) =>
           i.createElement(
@@ -10358,18 +10364,18 @@
               className: l.ImageSmall,
               src: (0, S.h)(
                 e.definition.appid,
-                e.definition.community_item_data.item_image_large
+                e.definition.community_item_data.item_image_large,
               ),
-            })
-          )
+            }),
+          ),
         ),
         x = (0, a.Pi)((e) =>
-          i.createElement(O, Object.assign({}, M(e), { iconComponent: s.ktE }))
+          i.createElement(O, Object.assign({}, M(e), { iconComponent: s.ktE })),
         ),
         A = (0, a.Pi)((e) =>
           e.definition.community_item_data.animated
             ? i.createElement(D, Object.assign({}, e))
-            : i.createElement(B, Object.assign({}, e))
+            : i.createElement(B, Object.assign({}, e)),
         ),
         D = (0, a.Pi)((e) =>
           i.createElement(
@@ -10396,7 +10402,7 @@
                   e.definition.appid,
                   e.definition.community_item_data.item_movie_webm_small
                     ? e.definition.community_item_data.item_movie_webm_small
-                    : e.definition.community_item_data.item_movie_webm
+                    : e.definition.community_item_data.item_movie_webm,
                 ),
                 type: "video/webm",
               }),
@@ -10405,12 +10411,12 @@
                   e.definition.appid,
                   e.definition.community_item_data.item_movie_mp4_small
                     ? e.definition.community_item_data.item_movie_mp4_small
-                    : e.definition.community_item_data.item_movie_mp4
+                    : e.definition.community_item_data.item_movie_mp4,
                 ),
                 type: "video/mp4",
-              })
-            )
-          )
+              }),
+            ),
+          ),
         ),
         B = (0, a.Pi)((e) =>
           i.createElement(
@@ -10428,8 +10434,8 @@
                 "/" +
                 e.definition.community_item_data.item_image_large +
                 "?size=320x200",
-            })
-          )
+            }),
+          ),
         ),
         L = (0, a.Pi)((e) =>
           i.createElement(
@@ -10440,7 +10446,7 @@
                 className: l.ImageMiniBackground,
                 poster: (0, S.h)(
                   e.definition.appid,
-                  e.definition.community_item_data.item_image_large
+                  e.definition.community_item_data.item_image_large,
                 ),
               },
             }),
@@ -10452,7 +10458,7 @@
                   e.definition.appid,
                   e.definition.community_item_data.item_movie_webm_small
                     ? e.definition.community_item_data.item_movie_webm_small
-                    : e.definition.community_item_data.item_movie_webm
+                    : e.definition.community_item_data.item_movie_webm,
                 ),
                 type: "video/webm",
               }),
@@ -10461,12 +10467,12 @@
                   e.definition.appid,
                   e.definition.community_item_data.item_movie_mp4_small
                     ? e.definition.community_item_data.item_movie_mp4_small
-                    : e.definition.community_item_data.item_movie_mp4
+                    : e.definition.community_item_data.item_movie_mp4,
                 ),
                 type: "video/mp4",
-              })
-            )
-          )
+              }),
+            ),
+          ),
         ),
         P = (0, a.Pi)((e) =>
           i.createElement(
@@ -10488,8 +10494,8 @@
                 className: l.ImageFrames,
                 src: s,
               });
-            }
-          )
+            },
+          ),
         ),
         T = (0, a.Pi)((e) =>
           i.createElement(
@@ -10511,14 +10517,17 @@
                 className: l.ImageAnimatedAvatar,
                 src: s,
               });
-            }
-          )
+            },
+          ),
         ),
         R = (0, a.Pi)((e) =>
           i.createElement(
             O,
-            Object.assign({}, M(e), { iconComponent: _.jz, desc: (0, p.gl)(8) })
-          )
+            Object.assign({}, M(e), {
+              iconComponent: _.jz,
+              desc: (0, p.gl)(8),
+            }),
+          ),
         ),
         k = (0, a.Pi)((e) =>
           i.createElement(
@@ -10528,10 +10537,10 @@
               className: l.ImageKeyboard,
               src: (0, S.h)(
                 e.definition.appid,
-                e.definition.community_item_data.item_image_small
+                e.definition.community_item_data.item_image_small,
               ),
-            })
-          )
+            }),
+          ),
         ),
         j = (0, a.Pi)((e) =>
           i.createElement(
@@ -10542,7 +10551,7 @@
                 className: l.ImageFillHeight,
                 poster: (0, S.h)(
                   e.definition.appid,
-                  e.definition.community_item_data.item_image_large
+                  e.definition.community_item_data.item_image_large,
                 ),
               },
             }),
@@ -10554,7 +10563,7 @@
                   e.definition.appid,
                   e.definition.community_item_data.item_movie_webm_small
                     ? e.definition.community_item_data.item_movie_webm_small
-                    : e.definition.community_item_data.item_movie_webm
+                    : e.definition.community_item_data.item_movie_webm,
                 ),
                 type: "video/webm",
               }),
@@ -10563,12 +10572,12 @@
                   e.definition.appid,
                   e.definition.community_item_data.item_movie_mp4_small
                     ? e.definition.community_item_data.item_movie_mp4_small
-                    : e.definition.community_item_data.item_movie_mp4
+                    : e.definition.community_item_data.item_movie_mp4,
                 ),
                 type: "video/mp4",
-              })
-            )
-          )
+              }),
+            ),
+          ),
         );
       class F extends i.Component {
         constructor() {
@@ -10601,10 +10610,10 @@
                   controls: !1,
                 },
                 r,
-                { ref: this.m_ref }
+                { ref: this.m_ref },
               ),
-              this.state.bVisible && t
-            )
+              this.state.bVisible && t,
+            ),
           );
         }
         HandleVisibilityChange(e) {
@@ -10639,7 +10648,7 @@
               onMouseEnter: () => this.setState({ bHover: !0 }),
               onMouseLeave: () => this.setState({ bHover: !1 }),
             }),
-            t(this.state.bHover || !0)
+            t(this.state.bHover || !0),
           );
         }
       }
@@ -10702,9 +10711,9 @@
                     i.createElement(_.H_, {
                       className: l.IconPartialCheckMark,
                     }),
-                    i.createElement(_.Zg, { className: l.IconCheckMark })
+                    i.createElement(_.Zg, { className: l.IconCheckMark }),
                   ),
-                s
+                s,
               ),
               i.createElement(
                 u.GK,
@@ -10724,9 +10733,9 @@
                           className: l.Icon,
                           style: { fill: "" },
                         }),
-                      i.createElement("div", { className: l.Subtitle }, h, " ")
-                    )
-                  )
+                      i.createElement("div", { className: l.Subtitle }, h, " "),
+                    ),
+                  ),
                 ),
                 S &&
                   i.createElement(
@@ -10739,12 +10748,12 @@
                     i.createElement(
                       "div",
                       { className: l.Cost },
-                      null != y ? y : i.createElement(o.L, { amount: m })
-                    )
-                  )
+                      null != y ? y : i.createElement(o.L, { amount: m }),
+                    ),
+                  ),
               ),
-              i.createElement("div", { className: l.ItemContainerShine })
-            )
+              i.createElement("div", { className: l.ItemContainerShine }),
+            ),
           );
         },
         z = (e) => {
@@ -10797,7 +10806,7 @@
                 { className: l.Body, style: b },
                 i.createElement("div", { className: l.Attributes }, a),
                 i.createElement(X, { src: r, title: t }),
-                s
+                s,
               ),
               i.createElement(
                 u.GK,
@@ -10817,9 +10826,9 @@
                           className: l.Icon,
                           style: { fill: "" },
                         }),
-                      i.createElement("div", { className: l.Subtitle }, h, " ")
-                    )
-                  )
+                      i.createElement("div", { className: l.Subtitle }, h, " "),
+                    ),
+                  ),
                 ),
                 i.createElement(
                   "div",
@@ -10829,12 +10838,12 @@
                   i.createElement(
                     "div",
                     { className: l.Cost },
-                    null != y ? y : i.createElement(o.L, { amount: m })
-                  )
-                )
+                    null != y ? y : i.createElement(o.L, { amount: m }),
+                  ),
+                ),
               ),
-              i.createElement("div", { className: l.ItemContainerShine })
-            )
+              i.createElement("div", { className: l.ItemContainerShine }),
+            ),
           );
         },
         H = {
@@ -10861,8 +10870,8 @@
               { fallback: null },
               i.createElement(
                 y.u,
-                Object.assign({}, a, { className: s, onClick: e.onClick })
-              )
+                Object.assign({}, a, { className: s, onClick: e.onClick }),
+              ),
             );
           if (
             8 == e.definition.community_item_class &&
@@ -10876,8 +10885,8 @@
               { fallback: null },
               i.createElement(
                 w.Z,
-                Object.assign({}, a, { className: s, onClick: e.onClick })
-              )
+                Object.assign({}, a, { className: s, onClick: e.onClick }),
+              ),
             );
           const m = H[e.definition.community_item_class];
           return m
@@ -10886,16 +10895,16 @@
                 { fallback: null },
                 i.createElement(
                   m,
-                  Object.assign({}, a, { className: s, onClick: e.onClick })
-                )
+                  Object.assign({}, a, { className: s, onClick: e.onClick }),
+                ),
               )
             : i.createElement(
                 h.SV,
                 { fallback: null },
                 i.createElement(
                   b,
-                  Object.assign({}, a, { className: s, onClick: e.onClick })
-                )
+                  Object.assign({}, a, { className: s, onClick: e.onClick }),
+                ),
               );
         });
       function Z(e) {
@@ -10937,10 +10946,10 @@
                   className: g,
                   iconComponent: _.Je,
                 },
-                o
+                o,
               );
-            })(e)
-          )
+            })(e),
+          ),
         );
       const W = (e) =>
         i.createElement(
@@ -10977,10 +10986,10 @@
                   className: g,
                   iconComponent: _.Je,
                 },
-                s
+                s,
               );
-            })(e)
-          )
+            })(e),
+          ),
         );
       class X extends i.Component {
         constructor() {
@@ -11000,7 +11009,7 @@
                   style: r ? void 0 : { display: "none" },
                   title: t,
                   alt: t,
-                })
+                }),
               )
             : null;
         }
@@ -11023,11 +11032,11 @@
                   "div",
                   null,
                   i.createElement("div", { className: l.SkeletonName }),
-                  i.createElement("div", { className: l.SkeletonSubtitle })
-                )
-              )
-            )
-          )
+                  i.createElement("div", { className: l.SkeletonSubtitle }),
+                ),
+              ),
+            ),
+          ),
         );
       }
     },
@@ -11067,7 +11076,7 @@
             o.gF,
             Object.assign(
               { verticalSpacing: "large", "flow-children": "grid" },
-              d
+              d,
             ),
             f,
             g &&
@@ -11081,8 +11090,8 @@
             i.createElement(s.U, {
               trigger: "repeated",
               onVisibilityChange: (e) => e && _(u + p),
-            })
-          )
+            }),
+          ),
         );
       });
     },
@@ -11119,12 +11128,12 @@
                     i.createElement("div", { className: s.SectionTitle }, t),
                     n && i.createElement("div", { className: s.Actions }, n),
                     i.createElement("div", { className: s.SectionLine }),
-                    a && i.createElement("div", { className: s.Actions }, a)
+                    a && i.createElement("div", { className: s.Actions }, a),
                   ),
-                  i.createElement("div", { className: s.SectionSubtitle }, r)
-                )
+                  i.createElement("div", { className: s.SectionSubtitle }, r),
+                ),
               ),
-            i.createElement("div", { className: s.Body }, o)
+            i.createElement("div", { className: s.Body }, o),
           );
         },
         c = (e) => {
@@ -11132,7 +11141,7 @@
             r = (0, n._T)(e, ["className"]);
           return i.createElement(
             o.k,
-            Object.assign({ className: (0, a.Z)(t, s.ActionButton) }, r)
+            Object.assign({ className: (0, a.Z)(t, s.ActionButton) }, r),
           );
         },
         m = (e) => {
@@ -11140,7 +11149,7 @@
             r = (0, n._T)(e, ["className"]);
           return i.createElement(
             "div",
-            Object.assign({ className: (0, a.Z)(t, s.SectionCallout) }, r)
+            Object.assign({ className: (0, a.Z)(t, s.SectionCallout) }, r),
           );
         };
     },
@@ -11171,7 +11180,7 @@
             I.Loading,
             "small" == t && I.Small,
             ("medium" == t || !t) && I.Medium,
-            "large" == t && I.Large
+            "large" == t && I.Large,
           ),
         });
       }
@@ -11223,11 +11232,11 @@
                     ref: 0 === r ? s : void 0,
                     className: (0, C.Z)(
                       0 === r || r < u - 1 ? d : void 0,
-                      t.itemClassName
+                      t.itemClassName,
                     ),
                   },
-                  e
-                )
+                  e,
+                ),
               );
           return {
             containerRef: c,
@@ -11276,9 +11285,9 @@
                 ref: r,
                 "flow-children": "row",
               },
-              d
+              d,
             ),
-            a
+            a,
           );
         },
         N = (e) => {
@@ -11293,7 +11302,7 @@
             i.createElement(B, {
               className: (0, C.Z)(f.RightArrow, !t && f.Disabled),
               onClick: n,
-            })
+            }),
           );
         },
         x = () => (window.ResizeObserver ? A() : D()),
@@ -11306,8 +11315,8 @@
               if (r) {
                 const e = new ResizeObserver(() =>
                   window.requestAnimationFrame(() =>
-                    t(r.getBoundingClientRect())
-                  )
+                    t(r.getBoundingClientRect()),
+                  ),
                 );
                 return e.observe(r), () => e.disconnect();
               }
@@ -11325,7 +11334,7 @@
               if (r) {
                 const e = () =>
                   window.requestAnimationFrame(() =>
-                    t(r.getBoundingClientRect())
+                    t(r.getBoundingClientRect()),
                   );
                 return (
                   e(),
@@ -11354,8 +11363,8 @@
                 stroke: "#EAEAEA",
                 fill: "none",
                 strokeWidth: "4",
-              })
-            )
+              }),
+            ),
           ),
         L = (e) => {
           const { style: t } = e,
@@ -11392,9 +11401,9 @@
               i.createElement(
                 "div",
                 { className: f.Loading },
-                i.createElement(y, null)
-              )
-          )
+                i.createElement(y, null),
+              ),
+          ),
         );
       }
       var T = r(89469),
@@ -11438,7 +11447,7 @@
                 className: (0, C.Z)(j.Container, s),
                 style: m ? Object.assign({ backgroundImage: u }, d) : d,
               },
-              p
+              p,
             ),
             !m && i.createElement(F.b, { src: c }),
             i.createElement(
@@ -11468,12 +11477,12 @@
                       className: j.Title,
                     },
                     t,
-                    " "
+                    " ",
                   ),
-                  a
+                  a,
                 ),
-                i.createElement("div", { className: j.Description }, r)
-              )
+                i.createElement("div", { className: j.Description }, r),
+              ),
             ),
             i.createElement(
               h.gF,
@@ -11482,8 +11491,8 @@
                 style: { alignSelf: _ ? "flex-start" : "flex-end" },
                 itemClassName: l,
               },
-              o
-            )
+              o,
+            ),
           );
         },
         O = (e) => {
@@ -11491,7 +11500,7 @@
             a = (0, n._T)(e, ["theme", "style"]);
           return i.createElement(
             T.Kk,
-            Object.assign({}, a, { style: Object.assign({}, r) })
+            Object.assign({}, a, { style: Object.assign({}, r) }),
           );
         };
       var z = r(49231),
@@ -11518,10 +11527,10 @@
                 title: (0, g.kb)(
                   "#HiddenItems_Explanation",
                   t,
-                  t.toLocaleString()
+                  t.toLocaleString(),
                 ),
               },
-              W(e)
+              W(e),
             );
       }
       const Q = (e) => {
@@ -11540,7 +11549,7 @@
             return i.createElement(h.m, null, (t) =>
               "desktop" !== t
                 ? i.createElement(ee, Object.assign({}, e))
-                : i.createElement(K, Object.assign({}, e))
+                : i.createElement(K, Object.assign({}, e)),
             );
           default:
             return (
@@ -11572,7 +11581,7 @@
           return i.createElement(h.m, null, (e) =>
             "desktop" !== e
               ? i.createElement(q, Object.assign({}, m))
-              : i.createElement(J, Object.assign({}, m))
+              : i.createElement(J, Object.assign({}, m)),
           );
         }
       };
@@ -11604,8 +11613,8 @@
                     i.createElement(
                       T.Kk,
                       { onClick: () => l.push(n) },
-                      (0, g.Xx)("#SeeAllButton")
-                    )
+                      (0, g.Xx)("#SeeAllButton"),
+                    ),
                   )
                 : void 0,
             },
@@ -11619,8 +11628,8 @@
                 renderItem: (e) =>
                   i.createElement(te, { definition: e, key: e.defid }),
                 style: f,
-              })
-            )
+              }),
+            ),
           );
         }),
         J = (0, c.Pi)((e) => {
@@ -11638,7 +11647,7 @@
               {
                 itemClassName: H.ItemHover,
                 fnRenderItemSkeleton: () => i.createElement(R.dw, null),
-              }
+              },
             ),
             c = l.bAllowNext || l.bAllowPrev;
           let m = "";
@@ -11649,7 +11658,7 @@
                 : s.cTotalMatching > 0
                 ? (0, g.Xx)(
                     "#SeeAllWithCountButton",
-                    s.cTotalMatching.toLocaleString()
+                    s.cTotalMatching.toLocaleString(),
                   )
                 : (0, g.Xx)("#SeeAllButton")),
             0 === s.cTotalMatching && !s.bLoadingMore)
@@ -11665,15 +11674,15 @@
                 i.createElement(
                   d.rU,
                   { to: n, key: "SeeAll" },
-                  i.createElement(T.Kk, null, m)
-                )
+                  i.createElement(T.Kk, null, m),
+                ),
               ),
             c &&
               h.push(
                 i.createElement(
                   N,
-                  Object.assign({ key: "CarouselControls" }, l)
-                )
+                  Object.assign({ key: "CarouselControls" }, l),
+                ),
               ),
             u && (0 == h.length ? h.push(u) : 0 == _.length && _.push(u)),
             i.createElement(
@@ -11681,8 +11690,11 @@
               { title: t, subtitle: r, leftActions: _, rightActions: h },
               i.createElement(
                 v,
-                Object.assign({ style: { width: "100%", flexWrap: "wrap" } }, l)
-              )
+                Object.assign(
+                  { style: { width: "100%", flexWrap: "wrap" } },
+                  l,
+                ),
+              ),
             )
           );
         }),
@@ -11708,7 +11720,7 @@
                 i.createElement(te, { definition: e, key: e.defid }),
               renderItemSkeleton: () => i.createElement(R.dw, null),
               key: `${n}||${JSON.stringify(l)}`,
-            })
+            }),
           );
         }),
         K = (0, c.Pi)((e) => {
@@ -11717,7 +11729,7 @@
           if (2 !== t.type)
             return (
               console.error(
-                `Attempt to render a hero cluster with a non-hero view. Cluster ${t.cluster.id}`
+                `Attempt to render a hero cluster with a non-hero view. Cluster ${t.cluster.id}`,
               ),
               null
             );
@@ -11743,7 +11755,7 @@
                       definition: e,
                       key: e.defid,
                       theme: l,
-                    })
+                    }),
                   );
           return i.createElement(
             T.iS,
@@ -11760,11 +11772,11 @@
                 actions: i.createElement(
                   d.rU,
                   { to: C },
-                  i.createElement(O, { theme: l }, (0, g.Xx)("#SeeAllButton"))
+                  i.createElement(O, { theme: l }, (0, g.Xx)("#SeeAllButton")),
                 ),
               },
-              y
-            )
+              y,
+            ),
           );
         }),
         ee = (0, c.Pi)((e) => {
@@ -11773,7 +11785,7 @@
           if (2 !== t.type)
             return (
               console.error(
-                `Attempt to render a hero cluster with a non-hero view. Cluster ${t.cluster.id}`
+                `Attempt to render a hero cluster with a non-hero view. Cluster ${t.cluster.id}`,
               ),
               null
             );
@@ -11808,8 +11820,8 @@
                       theme: c,
                       className: H.MobileHeroAction,
                     },
-                    (0, g.Xx)("#SeeAllButton")
-                  )
+                    (0, g.Xx)("#SeeAllButton"),
+                  ),
                 ),
               },
               i.createElement(P, {
@@ -11821,8 +11833,8 @@
                     key: e.defid,
                     theme: c,
                   }),
-              })
-            )
+              }),
+            ),
           );
         }),
         te = (e) => {
@@ -11863,10 +11875,10 @@
               "div",
               { className: ne.Content },
               i.createElement("div", { className: ne.Title }, t),
-              i.createElement("div", { className: ne.Description }, r)
+              i.createElement("div", { className: ne.Description }, r),
             ),
-            i.createElement(re.F, { className: ne.Link, to: c }, s)
-          )
+            i.createElement(re.F, { className: ne.Link, to: c }, s),
+          ),
         );
       }
       var ae = r(58961),
@@ -11892,7 +11904,7 @@
               },
             },
             i.createElement("div", null, r.name),
-            i.createElement(he.uY, { className: _e.AppFilterClearIcon })
+            i.createElement(he.uY, { className: _e.AppFilterClearIcon }),
           );
         },
         fe = (e) => {
@@ -11910,8 +11922,8 @@
             i.createElement(
               "div",
               { className: _e.SuggestedAppFilterName },
-              r.name
-            )
+              r.name,
+            ),
           );
         };
       let Ce = class extends i.Component {
@@ -11971,7 +11983,7 @@
               (o = i.createElement(
                 "div",
                 { className: _e.AppFilterNoMatches },
-                (0, g.Xx)("#AppFilter_NoMatches")
+                (0, g.Xx)("#AppFilter_NoMatches"),
               )),
             i.createElement(
               "div",
@@ -11982,8 +11994,8 @@
                 i.createElement(
                   "div",
                   { className: _e.Header },
-                  (0, g.Xx)("#AppFilter_Label")
-                )
+                  (0, g.Xx)("#AppFilter_Label"),
+                ),
               ),
               0 != t.size &&
                 i.createElement(
@@ -11992,8 +12004,8 @@
                   Array.from(t.keys()).map((e) =>
                     ae.Q8.GetAppInfo(e).is_valid
                       ? i.createElement(ge, { key: e, appid: e })
-                      : null
-                  )
+                      : null,
+                  ),
                 ),
               i.createElement(
                 "div",
@@ -12010,8 +12022,8 @@
                     className: _e.AppFilterClearButton,
                     onClick: this.ClearAppFilterString,
                   },
-                  i.createElement(he.uY, { className: _e.AppFilterClearIcon })
-                )
+                  i.createElement(he.uY, { className: _e.AppFilterClearIcon }),
+                ),
               ),
               o,
               i.createElement(
@@ -12020,8 +12032,8 @@
                 a.map((e) =>
                   ae.Q8.GetAppInfo(e).is_valid
                     ? i.createElement(fe, { key: e, appid: e })
-                    : null
-                )
+                    : null,
+                ),
               ),
               0 != n.length &&
                 i.createElement(
@@ -12030,8 +12042,8 @@
                   i.createElement(
                     "div",
                     { className: _e.Header },
-                    (0, g.Xx)("#AppFilter_FilterByRecentlyPlayed")
-                  )
+                    (0, g.Xx)("#AppFilter_FilterByRecentlyPlayed"),
+                  ),
                 ),
               0 != n.length &&
                 i.createElement(
@@ -12040,9 +12052,9 @@
                   n.map((e) =>
                     ae.Q8.GetAppInfo(e).is_valid
                       ? i.createElement(fe, { key: e, appid: e })
-                      : null
-                  )
-                )
+                      : null,
+                  ),
+                ),
             )
           );
         }
@@ -12098,12 +12110,12 @@
                       className: pe.ShellScroll,
                       "flow-children": "column",
                     },
-                    t
-                  )
-                )
-              )
-            )
-          )
+                    t,
+                  ),
+                ),
+              ),
+            ),
+          ),
         );
       }
       const Ee = (0, c.Pi)(() => {
@@ -12122,7 +12134,7 @@
                   n(
                     window.setTimeout(() => {
                       _.Vb.Get().SetCurrentSearchTerm(i);
-                    }, 300)
+                    }, 300),
                   ),
                   t(i);
               },
@@ -12132,7 +12144,7 @@
             i.createElement(
               "div",
               { className: pe.SearchIconContainer },
-              i.createElement(me.YtI, { className: (0, C.Z)(pe.SearchIcon) })
+              i.createElement(me.YtI, { className: (0, C.Z)(pe.SearchIcon) }),
             ),
             e.length > 0 &&
               i.createElement(
@@ -12143,8 +12155,8 @@
                     t(""), _.Vb.Get().SetCurrentSearchTerm("");
                   },
                 },
-                i.createElement(he.uY, { className: pe.SearchTermClearIcon })
-              )
+                i.createElement(he.uY, { className: pe.SearchTermClearIcon }),
+              ),
           );
         }),
         Me = (0, c.Pi)(() => {
@@ -12173,14 +12185,14 @@
                     className: pe.YourBalanceLabel,
                     href: s.De.STORE_BASE_URL + "pointssummary/",
                   },
-                  (0, g.Xx)("#YourBalance")
+                  (0, g.Xx)("#YourBalance"),
                 ),
                 i.createElement(
                   "div",
                   { className: pe.RewardsPointsCount },
-                  (0, de.AV)(_.Vb.Get().GetPointsAvailable().getLowBits())
-                )
-              )
+                  (0, de.AV)(_.Vb.Get().GetPointsAvailable().getLowBits()),
+                ),
+              ),
             ));
           let t = null;
           if (_.Vb.Get().BIsLoggedIn() && _.Vb.Get().GetIsUsingAppIDFilters()) {
@@ -12197,8 +12209,8 @@
                 { className: pe.SearchTermContainer },
                 null,
                 i.createElement(Ee, null),
-                null
-              )
+                null,
+              ),
             );
           }
           return i.createElement(
@@ -12222,12 +12234,12 @@
                   { className: pe.ShellHeaderBrandName },
                   " ",
                   (0, g.Xx)("#ShopLink"),
-                  " "
-                )
+                  " ",
+                ),
               ),
               i.createElement(h.m, null, (e) => "mobile" !== e && t),
-              e
-            )
+              e,
+            ),
           );
         }),
         be =
@@ -12282,7 +12294,7 @@
             (a = i.createElement(
               "div",
               { className: ke.ClaimedText },
-              (0, g.Xx)("#Rewards_Claimed")
+              (0, g.Xx)("#Rewards_Claimed"),
             )),
               (n = (0, C.Z)(Te.SaleRewardItemOwned, ke.OwnedItem)),
               (l = null);
@@ -12315,7 +12327,7 @@
                     className: Te.SaleRewardLogo,
                     alt: "Sale",
                     src: _.Vb.Get().GetFreeItemHeaderSource(),
-                  })
+                  }),
                 ),
                 i.createElement(
                   "div",
@@ -12323,20 +12335,20 @@
                   i.createElement(
                     "div",
                     { className: Te.SaleRewardSubHeader },
-                    (0, g.Xx)("#SummerSale_FreeDesc_2")
+                    (0, g.Xx)("#SummerSale_FreeDesc_2"),
                   ),
                   !p &&
                     i.createElement(
                       "div",
                       { className: Te.SummerNextStop },
-                      i.createElement(Oe, null)
+                      i.createElement(Oe, null),
                     ),
                   i.createElement(
                     d.rU,
                     { className: Te.RulesLink, to: o.Z.LoyaltyGiveawayRules() },
-                    (0, g.Xx)("#SummerSale_Redeem_Rules")
-                  )
-                )
+                    (0, g.Xx)("#SummerSale_Redeem_Rules"),
+                  ),
+                ),
               ),
               i.createElement(
                 "div",
@@ -12358,10 +12370,10 @@
                     strPriceOverride: a,
                     onClick: l,
                   },
-                  i.createElement("img", { className: ke.ImageMedium, src: c })
-                )
-              )
-            )
+                  i.createElement("img", { className: ke.ImageMedium, src: c }),
+                ),
+              ),
+            ),
           );
         }),
         Oe = (0, c.Pi)(() => {
@@ -12373,9 +12385,9 @@
                 i.createElement(
                   "span",
                   { className: Te.Title },
-                  (0, g.Xx)("#SummerSale_NextStop")
+                  (0, g.Xx)("#SummerSale_NextStop"),
                 ),
-                i.createElement(ze, { className: Te.Timer, time: e.getTime() })
+                i.createElement(ze, { className: Te.Timer, time: e.getTime() }),
               )
             : null;
         }),
@@ -12393,7 +12405,7 @@
             ":",
             He(s),
             ":",
-            He(l)
+            He(l),
           );
         }),
         He = (e) => e.toString().padStart(2, "0");
@@ -12409,7 +12421,7 @@
             i.Fragment,
             null,
             i.createElement($e, null),
-            i.createElement(qe, null)
+            i.createElement(qe, null),
           );
         }
       };
@@ -12502,8 +12514,8 @@
                   i.createElement("img", {
                     className: u.PageHomeBannerDance,
                     src: Le,
-                  })
-                )
+                  }),
+                ),
               ),
               i.createElement(
                 "div",
@@ -12511,12 +12523,12 @@
                 i.createElement(
                   "div",
                   { className: u.PageHomeTopTitle },
-                  (0, g.Xx)("#ShopHome_UseRewardPoints")
+                  (0, g.Xx)("#ShopHome_UseRewardPoints"),
                 ),
                 i.createElement(
                   "div",
                   { className: u.PageHomeTopSubTitle },
-                  (0, g.Xx)("#ShopHome_UseRewardPoints_Subtitle")
+                  (0, g.Xx)("#ShopHome_UseRewardPoints_Subtitle"),
                 ),
                 i.createElement(
                   d.rU,
@@ -12525,10 +12537,10 @@
                     p.k,
                     { className: u.PageHomeHowItWorks },
                     " ",
-                    (0, g.Xx)("#ShopHome_HowLinkBtn")
-                  )
-                )
-              )
+                    (0, g.Xx)("#ShopHome_HowLinkBtn"),
+                  ),
+                ),
+              ),
             );
           return i.createElement(
             ve.Uv,
@@ -12538,8 +12550,8 @@
                 rt,
                 { header: r, descriptor: t },
                 _.Vb.Get().BIsSaleActive() &&
-                  i.createElement(T.iS, null, i.createElement(Ge, null))
-              )
+                  i.createElement(T.iS, null, i.createElement(Ge, null)),
+              ),
           );
         }
       };
@@ -12551,18 +12563,18 @@
             i.createElement(
               a.AW,
               { path: o.Z.LoyaltySteamBadge() },
-              i.createElement(Ke, null)
+              i.createElement(Ke, null),
             ),
             i.createElement(
               a.AW,
               { path: o.Z.LoyaltyByGame() },
-              i.createElement(st, null)
+              i.createElement(st, null),
             ),
             !1,
             i.createElement(
               a.AW,
               { path: o.Z.LoyaltyProfileCustomizations() },
-              i.createElement(Xe, null)
+              i.createElement(Xe, null),
             ),
             i.createElement(a.AW, {
               path: o.Z.LoyaltyItemBundle(":bundleid"),
@@ -12591,7 +12603,7 @@
               render: (e) =>
                 i.createElement(tt, { pageid: e.match.params.pageid }),
             }),
-            i.createElement(a.AW, null, i.createElement(et, null))
+            i.createElement(a.AW, null, i.createElement(et, null)),
           ),
         Ke = () => i.createElement(oe.m, null),
         et = () => i.createElement(Je, null);
@@ -12618,7 +12630,7 @@
             null,
             o
               ? i.createElement(rt, { descriptor: o, additionalFilter: a })
-              : i.createElement(y, null)
+              : i.createElement(y, null),
           );
         }
       };
@@ -12647,7 +12659,7 @@
               _.Vb.Get().SetCurrentSearchPlaceholder(p),
               () => _.Vb.Get().SetCurrentSearchPlaceholder("")
             ),
-            [p]
+            [p],
           ),
           i.createElement(
             h.xu,
@@ -12668,7 +12680,7 @@
                       a = (0, n._T)(e, ["type"]);
                     return i.createElement(
                       ie,
-                      Object.assign({}, a, { key: `${e.title}_${t}` })
+                      Object.assign({}, a, { key: `${e.title}_${t}` }),
                     );
                   case "clusterview":
                     return i.createElement(Q, {
@@ -12684,8 +12696,8 @@
                             }),
                     });
                 }
-              })
-            )
+              }),
+            ),
           )
         );
       });
@@ -12747,8 +12759,8 @@
                 flexDirection: "column",
                 alignItems: "center",
               },
-              i.createElement(Q, { descriptor: e, additionalFilter: a })
-            )
+              i.createElement(Q, { descriptor: e, additionalFilter: a }),
+            ),
           );
         }
       };
@@ -12756,7 +12768,7 @@
         const { appid: t } = e,
           r = (0, ye.bJ)(),
           n = (0, m.SZ)(() =>
-            _.Vb.Get().GetPageDescriptor({ type: "app", appid: t })
+            _.Vb.Get().GetPageDescriptor({ type: "app", appid: t }),
           ),
           a = (0, m.SZ)(() => ae.Q8.GetAppInfo(t));
         return n
@@ -12770,15 +12782,15 @@
                     {
                       href: (0, We.Hf)(
                         `${s.De.STORE_BASE_URL}app/${a.appid}`,
-                        r
+                        r,
                       ),
                     },
-                    a.name
+                    a.name,
                   ),
                   subtitle: n.subtitle,
                 }),
                 descriptor: n,
-              })
+              }),
             )
           : null;
       }
@@ -12786,7 +12798,7 @@
         var t, r, a, o, l, c, d, p, u, h, g;
         const { eventname: f } = e,
           C = (0, m.SZ)(() =>
-            _.Vb.Get().GetPageDescriptor({ type: "event", eventname: f })
+            _.Vb.Get().GetPageDescriptor({ type: "event", eventname: f }),
           ),
           I = (0, ye.bJ)(),
           y = (0, Ue.useQuery)(
@@ -12796,10 +12808,10 @@
                 return (yield Ve().get(
                   s.De.STORE_BASE_URL +
                     "points/ajaxgeteventdetails?event_name=" +
-                    f
+                    f,
                 )).data;
               }),
-            { staleTime: 1 / 0 }
+            { staleTime: 1 / 0 },
           );
         if (!C || !y.isSuccess)
           return console.error(`Failed to get event page for ${f}`), null;
@@ -12858,13 +12870,13 @@
                             : h.details) || void 0 === g
                         ? void 0
                         : g.url),
-                    I
+                    I,
                   ),
                 },
-                w
+                w,
               ),
               descriptor: C,
-            })
+            }),
           )
         );
       }
@@ -12889,7 +12901,7 @@
                   i.createElement(
                     "div",
                     null,
-                    (0, g.Xx)("#RequiresLogin_Desc")
+                    (0, g.Xx)("#RequiresLogin_Desc"),
                   ),
                   i.createElement(
                     "div",
@@ -12899,18 +12911,18 @@
                       {
                         className: (0, C.Z)(
                           "btn_green_white_innerfade",
-                          " btn_medium"
+                          " btn_medium",
                         ),
                         onClick: () => _.Vb.Get().ShowLoginDialog(),
                       },
                       i.createElement(
                         "span",
                         null,
-                        (0, g.Xx)("#RequiresLogin_Button")
-                      )
-                    )
-                  )
-                )
+                        (0, g.Xx)("#RequiresLogin_Button"),
+                      ),
+                    ),
+                  ),
+                ),
               );
         }
       }
@@ -12958,8 +12970,8 @@
                 onVisibilityChange: (t) =>
                   t && e < r.length && this.setState({ cVisible: e + 10 }),
                 rootMargin: "0px 0px 100px 0px",
-              })
-            )
+              }),
+            ),
           );
         }
       };
@@ -12990,23 +13002,23 @@
                 i.createElement(
                   "div",
                   { className: lt.Title },
-                  (0, g.Xx)("#BonusPoints_Title")
+                  (0, g.Xx)("#BonusPoints_Title"),
                 ),
                 i.createElement(
                   "div",
                   { className: lt.Subtitle },
-                  (0, g.Xx)("#BonusPoints_Description")
-                )
+                  (0, g.Xx)("#BonusPoints_Description"),
+                ),
               ),
               i.createElement(
                 h.Kq,
                 { spacing: "small" },
                 _.Vb.Get().active_bonuses.map((e) =>
-                  i.createElement(mt, { key: e.bonusid, bonus: e })
-                )
-              )
-            )
-          )
+                  i.createElement(mt, { key: e.bonusid, bonus: e }),
+                ),
+              ),
+            ),
+          ),
         ),
         mt = (0, c.Pi)((e) => {
           const {
@@ -13029,8 +13041,8 @@
                 description: o,
                 pointValue: r,
               },
-              s
-            )
+              s,
+            ),
           );
         }),
         dt = (e) => {
@@ -13062,14 +13074,14 @@
               },
               i.createElement("div", null, r),
               i.createElement("div", null, s),
-              i.createElement("div", null, a)
+              i.createElement("div", null, a),
             ),
             i.createElement(
               "div",
               null,
               i.createElement(me.LjF, { className: lt.Icon }),
-              i.createElement("div", null, "+", o)
-            )
+              i.createElement("div", null, "+", o),
+            ),
           );
         };
       var pt = r(67727);
@@ -13141,15 +13153,15 @@
             i.createElement(
               "div",
               { className: Dt.CalloutIconContainer },
-              i.createElement(a, { className: Dt.CalloutIcon })
+              i.createElement(a, { className: Dt.CalloutIcon }),
             ),
             i.createElement(
               "div",
               { className: Dt.CalloutText },
               " ",
               (0, g.Xx)(o),
-              " "
-            )
+              " ",
+            ),
           );
         },
         Lt = (e) =>
@@ -13165,19 +13177,19 @@
             i.createElement(
               "div",
               { className: Dt.HeaderText },
-              (0, g.Xx)("#HowItWorks_SteamPoints")
+              (0, g.Xx)("#HowItWorks_SteamPoints"),
             ),
             i.createElement(
               "div",
               { className: Dt.SubHeaderText },
-              (0, g.Xx)("#HowItWorks_SteamPoints_Desc1")
+              (0, g.Xx)("#HowItWorks_SteamPoints_Desc1"),
             ),
             i.createElement("img", { src: vt, className: Dt.HeaderImage }),
             i.createElement(
               "div",
               { className: Dt.SubHeaderText },
-              (0, g.Xx)("#HowItWorks_SteamPoints_Desc2")
-            )
+              (0, g.Xx)("#HowItWorks_SteamPoints_Desc2"),
+            ),
           ),
         Pt = (e) => {
           let t = (0, g.kQ)(
@@ -13189,8 +13201,8 @@
               ((r = e.dollarConversion),
               "undefined" == typeof GStoreItemData
                 ? (console.error("Unable to find GStoreItemData"), null)
-                : GStoreItemData.fnFormatCurrency(r))
-            )
+                : GStoreItemData.fnFormatCurrency(r)),
+            ),
           );
           var r;
           return i.createElement(
@@ -13211,16 +13223,16 @@
               i.createElement(
                 "div",
                 { className: Dt.SectionSubtitle },
-                (0, g.Xx)("#HowItWorks_How_Desc")
-              )
-            )
+                (0, g.Xx)("#HowItWorks_How_Desc"),
+              ),
+            ),
           );
         },
         Tt = (e) => {
           let t = (0, g.kQ)(
             "#ShopName",
             i.createElement("span", null, (0, g.Xx)("#ShopNamePre")),
-            (0, g.Xx)("#ShopNamePost")
+            (0, g.Xx)("#ShopNamePost"),
           );
           return i.createElement(
             h.xu,
@@ -13314,7 +13326,7 @@
               }),
               i.createElement(he.qE, {
                 className: (0, C.Z)(Dt.UsePointsSvg, Dt.UsePointsAnim1),
-              })
+              }),
             ),
             i.createElement(
               h.xu,
@@ -13329,7 +13341,7 @@
               i.createElement(
                 "div",
                 { className: Dt.SectionSubtitle },
-                (0, g.Xx)("#HowItWorks_UsePoints_Desc1")
+                (0, g.Xx)("#HowItWorks_UsePoints_Desc1"),
               ),
               i.createElement(
                 h.ux,
@@ -13351,7 +13363,7 @@
                 i.createElement(Bt, {
                   iconComponent: he.kI,
                   descCallout: "#HowItWorks_Marketable",
-                })
+                }),
               ),
               i.createElement(
                 h.ux,
@@ -13366,12 +13378,12 @@
                   "div",
                   { className: Dt.ItemMiddle },
                   i.createElement("img", { className: Dt.ItemFrame, src: gt }),
-                  i.createElement("img", { className: Dt.ItemAvatar, src: ht })
+                  i.createElement("img", { className: Dt.ItemAvatar, src: ht }),
                 ),
                 i.createElement("img", { className: Dt.ItemRightMid, src: xe }),
-                i.createElement("img", { className: Dt.ItemRight, src: Ae })
-              )
-            )
+                i.createElement("img", { className: Dt.ItemRight, src: Ae }),
+              ),
+            ),
           );
         },
         Rt = () => {
@@ -13400,13 +13412,13 @@
                 i.createElement(
                   "div",
                   { className: Dt.SectionTitle },
-                  (0, g.Xx)("#HowItWorks_YourGames")
-                )
+                  (0, g.Xx)("#HowItWorks_YourGames"),
+                ),
               ),
               i.createElement(
                 "div",
                 { className: Dt.SectionSubtitle },
-                (0, g.Xx)("#HowItWorks_YourGames_Desc1")
+                (0, g.Xx)("#HowItWorks_YourGames_Desc1"),
               ),
               i.createElement(
                 h.ux,
@@ -13422,9 +13434,9 @@
                 i.createElement(Bt, {
                   iconComponent: he.kI,
                   descCallout: "#HowItWorks_YourGames_TradingCards",
-                })
-              )
-            )
+                }),
+              ),
+            ),
           );
         },
         kt = (0, c.Pi)(() => {
@@ -13469,7 +13481,7 @@
               i.createElement("img", { src: wt, className: Dt.ScrollIcon }),
               i.createElement("img", { src: St, className: Dt.ScrollIcon }),
               i.createElement("img", { src: Et, className: Dt.ScrollIcon }),
-              i.createElement("img", { src: Mt, className: Dt.ScrollIcon })
+              i.createElement("img", { src: Mt, className: Dt.ScrollIcon }),
             ),
             i.createElement(
               h.ux,
@@ -13485,14 +13497,14 @@
               i.createElement(
                 "div",
                 { className: Dt.ShellHeaderBrandName },
-                (0, g.Xx)("#HowItWorks_ReviewAwards")
+                (0, g.Xx)("#HowItWorks_ReviewAwards"),
               ),
               i.createElement(
                 "div",
                 { className: Dt.SectionSubtitle },
-                (0, g.Xx)("#HowItWorks_ReviewAwardsWinter_Desc", e)
+                (0, g.Xx)("#HowItWorks_ReviewAwardsWinter_Desc", e),
               ),
-              i.createElement("img", { src: bt, className: Dt.AwardsUiImg })
+              i.createElement("img", { src: bt, className: Dt.AwardsUiImg }),
             ),
             i.createElement(
               h.ux,
@@ -13525,10 +13537,10 @@
                     {
                       className: (0, C.Z)(
                         Dt.SectionSubtitle,
-                        Dt.SectionSubtitleLeftAlign
+                        Dt.SectionSubtitleLeftAlign,
                       ),
                     },
-                    (0, g.Xx)("#HowItWorks_AwardsReviews", e)
+                    (0, g.Xx)("#HowItWorks_AwardsReviews", e),
                   ),
                   i.createElement(
                     "a",
@@ -13536,10 +13548,10 @@
                     i.createElement(
                       "div",
                       { className: Dt.AwardsLink },
-                      (0, g.Xx)("#HowItWorks_AwardsReviewsLink")
-                    )
-                  )
-                )
+                      (0, g.Xx)("#HowItWorks_AwardsReviewsLink"),
+                    ),
+                  ),
+                ),
               ),
               i.createElement(
                 h.xu,
@@ -13559,10 +13571,10 @@
                     {
                       className: (0, C.Z)(
                         Dt.SectionSubtitle,
-                        Dt.SectionSubtitleLeftAlign
+                        Dt.SectionSubtitleLeftAlign,
                       ),
                     },
-                    (0, g.Xx)("#HowItWorks_AwardsUgc", e)
+                    (0, g.Xx)("#HowItWorks_AwardsUgc", e),
                   ),
                   i.createElement(
                     "a",
@@ -13570,10 +13582,10 @@
                     i.createElement(
                       "div",
                       { className: Dt.AwardsLink },
-                      (0, g.Xx)("#HowItWorks_AwardsUgcLink")
-                    )
-                  )
-                )
+                      (0, g.Xx)("#HowItWorks_AwardsUgcLink"),
+                    ),
+                  ),
+                ),
               ),
               i.createElement(
                 h.xu,
@@ -13596,13 +13608,13 @@
                     {
                       className: (0, C.Z)(
                         Dt.SectionSubtitle,
-                        Dt.SectionSubtitleLeftAlign
+                        Dt.SectionSubtitleLeftAlign,
                       ),
                     },
-                    (0, g.Xx)("#HowItWorks_AwardsProfile", e)
-                  )
-                )
-              )
+                    (0, g.Xx)("#HowItWorks_AwardsProfile", e),
+                  ),
+                ),
+              ),
             ),
             i.createElement(
               h.ux,
@@ -13633,13 +13645,13 @@
                     style: { paddingTop: "32px" },
                   },
                   (0, g.Xx)("#HowItWorks_Patron_Badge"),
-                  " "
+                  " ",
                 ),
                 i.createElement(
                   "div",
                   { className: Dt.SectionSubtitleBadge },
-                  (0, g.Xx)("#HowItWorks_Patron_Badge_Desc")
-                )
+                  (0, g.Xx)("#HowItWorks_Patron_Badge_Desc"),
+                ),
               ),
               i.createElement(
                 h.xu,
@@ -13658,15 +13670,15 @@
                     style: { paddingTop: "32px" },
                   },
                   (0, g.Xx)("#HowItWorks_Contributor_Badge"),
-                  " "
+                  " ",
                 ),
                 i.createElement(
                   "div",
                   { className: Dt.SectionSubtitleBadge },
-                  (0, g.Xx)("#HowItWorks_Contributor_Badge_Desc")
-                )
-              )
-            )
+                  (0, g.Xx)("#HowItWorks_Contributor_Badge_Desc"),
+                ),
+              ),
+            ),
           );
         });
       const jt = () => {
@@ -13723,17 +13735,17 @@
               i.createElement(
                 "div",
                 { className: Dt.FaqTitle },
-                (0, g.Xx)("#Faq_Title")
+                (0, g.Xx)("#Faq_Title"),
               ),
               e.map((e) =>
                 i.createElement(
                   Ft,
                   Object.assign({}, e, {
                     key: Array.isArray(e.question) ? e.question[0] : e.question,
-                  })
-                )
-              )
-            )
+                  }),
+                ),
+              ),
+            ),
           );
         },
         Ft = (e) => {
@@ -13750,7 +13762,7 @@
               focusable: !0,
             },
             n.map((e) => i.createElement(Gt, { key: e }, (0, g.Xx)(e))),
-            a.map((e) => i.createElement(Ot, { key: e }, (0, g.Xx)(e)))
+            a.map((e) => i.createElement(Ot, { key: e }, (0, g.Xx)(e))),
           );
         },
         Gt = ({ children: e }) =>
@@ -13780,9 +13792,9 @@
                 i.createElement(Tt, null),
                 i.createElement(Rt, null),
                 !(0, pt.e7)(s.De.EREALM) && i.createElement(kt, null),
-                i.createElement(jt, null)
-              )
-            )
+                i.createElement(jt, null),
+              ),
+            ),
           );
         };
       var Ht = r(28567),
@@ -13819,7 +13831,7 @@
                         flexDirection: "column",
                         className: Ht.PageHeader,
                       },
-                      (0, g.Xx)("#LunarSale2022_Rules_Header_China")
+                      (0, g.Xx)("#LunarSale2022_Rules_Header_China"),
                     ),
                     i.createElement(
                       h.xu,
@@ -13829,8 +13841,8 @@
                         flexDirection: "column",
                         className: Ht.SectionContent,
                       },
-                      (0, g.Xx)("#LunarSale2022_Rules_Intro_China")
-                    )
+                      (0, g.Xx)("#LunarSale2022_Rules_Intro_China"),
+                    ),
                   ),
                   i.createElement(
                     h.xu,
@@ -13848,7 +13860,7 @@
                         flexDirection: "column",
                         className: Ht.SectionHeader,
                       },
-                      (0, g.Xx)("#LunarSale2022_Rules_1_Title_China")
+                      (0, g.Xx)("#LunarSale2022_Rules_1_Title_China"),
                     ),
                     i.createElement(
                       h.xu,
@@ -13858,8 +13870,8 @@
                         flexDirection: "column",
                         className: Ht.SectionContent,
                       },
-                      (0, g.Xx)("#LunarSale2022_Rules_1_Desc_China")
-                    )
+                      (0, g.Xx)("#LunarSale2022_Rules_1_Desc_China"),
+                    ),
                   ),
                   i.createElement(
                     h.xu,
@@ -13877,7 +13889,7 @@
                         flexDirection: "column",
                         className: Ht.SectionHeader,
                       },
-                      (0, g.Xx)("#LunarSale2022_Rules_2_Title_China")
+                      (0, g.Xx)("#LunarSale2022_Rules_2_Title_China"),
                     ),
                     i.createElement(
                       h.xu,
@@ -13887,7 +13899,7 @@
                         flexDirection: "column",
                         className: Ht.SectionContent,
                       },
-                      (0, g.Xx)("#LunarSale2022_Rules_2_Desc_China")
+                      (0, g.Xx)("#LunarSale2022_Rules_2_Desc_China"),
                     ),
                     i.createElement(
                       h.xu,
@@ -13897,8 +13909,8 @@
                         flexDirection: "column",
                         className: Ht.SectionContent,
                       },
-                      (0, g.Xx)("#LunarSale2022_Rules_2_Desc2_China")
-                    )
+                      (0, g.Xx)("#LunarSale2022_Rules_2_Desc2_China"),
+                    ),
                   ),
                   i.createElement(
                     h.xu,
@@ -13916,7 +13928,7 @@
                         flexDirection: "column",
                         className: Ht.SectionHeader,
                       },
-                      (0, g.Xx)("#LunarSale2022_Rules_3_Title_China")
+                      (0, g.Xx)("#LunarSale2022_Rules_3_Title_China"),
                     ),
                     i.createElement(
                       h.xu,
@@ -13926,7 +13938,7 @@
                         flexDirection: "column",
                         className: Ht.SectionContent,
                       },
-                      (0, g.Xx)("#LunarSale2022_Rules_3_Desc_China")
+                      (0, g.Xx)("#LunarSale2022_Rules_3_Desc_China"),
                     ),
                     i.createElement(
                       h.xu,
@@ -13936,8 +13948,8 @@
                         flexDirection: "column",
                         className: Ht.SectionContent,
                       },
-                      (0, g.Xx)("#LunarSale2022_Rules_3_Desc2_China")
-                    )
+                      (0, g.Xx)("#LunarSale2022_Rules_3_Desc2_China"),
+                    ),
                   ),
                   i.createElement(
                     h.xu,
@@ -13955,7 +13967,7 @@
                         flexDirection: "column",
                         className: Ht.SectionHeader,
                       },
-                      (0, g.Xx)("#LunarSale2022_Rules_4_Title_China")
+                      (0, g.Xx)("#LunarSale2022_Rules_4_Title_China"),
                     ),
                     i.createElement(
                       h.xu,
@@ -13965,12 +13977,12 @@
                         i.createElement(
                           Ut.ns,
                           { href: s.De.STORE_BASE_URL + "privacy_agreement" },
-                          (0, g.Xx)("#LunarSale2022_Rules_ClickHere")
-                        )
-                      )
-                    )
-                  )
-                )
+                          (0, g.Xx)("#LunarSale2022_Rules_ClickHere"),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
               )
             : i.createElement(
                 ve.OC,
@@ -13998,7 +14010,7 @@
                         flexDirection: "column",
                         className: Ht.PageHeader,
                       },
-                      (0, g.Xx)("#LunarSale2022_Rules_Header")
+                      (0, g.Xx)("#LunarSale2022_Rules_Header"),
                     ),
                     i.createElement(
                       h.xu,
@@ -14008,8 +14020,8 @@
                         flexDirection: "column",
                         className: Ht.SectionContent,
                       },
-                      (0, g.Xx)("#LunarSale2022_Rules_Intro")
-                    )
+                      (0, g.Xx)("#LunarSale2022_Rules_Intro"),
+                    ),
                   ),
                   i.createElement(
                     h.xu,
@@ -14027,7 +14039,7 @@
                         flexDirection: "column",
                         className: Ht.SectionHeader,
                       },
-                      (0, g.Xx)("#LunarSale2022_Rules_1_Title")
+                      (0, g.Xx)("#LunarSale2022_Rules_1_Title"),
                     ),
                     i.createElement(
                       h.xu,
@@ -14037,8 +14049,8 @@
                         flexDirection: "column",
                         className: Ht.SectionContent,
                       },
-                      (0, g.Xx)("#LunarSale2022_Rules_1_Desc")
-                    )
+                      (0, g.Xx)("#LunarSale2022_Rules_1_Desc"),
+                    ),
                   ),
                   i.createElement(
                     h.xu,
@@ -14056,7 +14068,7 @@
                         flexDirection: "column",
                         className: Ht.SectionHeader,
                       },
-                      (0, g.Xx)("#LunarSale2022_Rules_2_Title")
+                      (0, g.Xx)("#LunarSale2022_Rules_2_Title"),
                     ),
                     i.createElement(
                       h.xu,
@@ -14066,7 +14078,7 @@
                         flexDirection: "column",
                         className: Ht.SectionContent,
                       },
-                      (0, g.Xx)("#LunarSale2022_Rules_2_Desc")
+                      (0, g.Xx)("#LunarSale2022_Rules_2_Desc"),
                     ),
                     i.createElement(
                       h.xu,
@@ -14076,8 +14088,8 @@
                         flexDirection: "column",
                         className: Ht.SectionContent,
                       },
-                      (0, g.Xx)("#LunarSale2022_Rules_2_Desc2")
-                    )
+                      (0, g.Xx)("#LunarSale2022_Rules_2_Desc2"),
+                    ),
                   ),
                   i.createElement(
                     h.xu,
@@ -14095,7 +14107,7 @@
                         flexDirection: "column",
                         className: Ht.SectionHeader,
                       },
-                      (0, g.Xx)("#LunarSale2022_Rules_3_Title")
+                      (0, g.Xx)("#LunarSale2022_Rules_3_Title"),
                     ),
                     i.createElement(
                       h.xu,
@@ -14105,7 +14117,7 @@
                         flexDirection: "column",
                         className: Ht.SectionContent,
                       },
-                      (0, g.Xx)("#LunarSale2022_Rules_3_Desc")
+                      (0, g.Xx)("#LunarSale2022_Rules_3_Desc"),
                     ),
                     i.createElement(
                       h.xu,
@@ -14115,8 +14127,8 @@
                         flexDirection: "column",
                         className: Ht.SectionContent,
                       },
-                      (0, g.Xx)("#LunarSale2022_Rules_3_Desc2")
-                    )
+                      (0, g.Xx)("#LunarSale2022_Rules_3_Desc2"),
+                    ),
                   ),
                   i.createElement(
                     h.xu,
@@ -14134,7 +14146,7 @@
                         flexDirection: "column",
                         className: Ht.SectionHeader,
                       },
-                      (0, g.Xx)("#LunarSale2022_Rules_4_Title")
+                      (0, g.Xx)("#LunarSale2022_Rules_4_Title"),
                     ),
                     i.createElement(
                       h.xu,
@@ -14144,12 +14156,12 @@
                         i.createElement(
                           Ut.ns,
                           { href: s.De.STORE_BASE_URL + "privacy_agreement" },
-                          (0, g.Xx)("#LunarSale2022_Rules_ClickHere")
-                        )
-                      )
-                    )
-                  )
-                )
+                          (0, g.Xx)("#LunarSale2022_Rules_ClickHere"),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
               );
         }
       };
@@ -14165,7 +14177,7 @@
           d = (0, Ue.useQuery)(
             ["EquippedProfileItems", c],
             () => _.Vb.Get().GetEquippedProfileItems(c),
-            { staleTime: 1 / 0 }
+            { staleTime: 1 / 0 },
           ),
           p = (0, Ue.useQuery)(
             ["MiniprofileData", c],
@@ -14176,10 +14188,10 @@
                     "miniprofile/" +
                     m.GetAccountID() +
                     "/json/?origin=" +
-                    s.De.STORE_BASE_URL
+                    s.De.STORE_BASE_URL,
                 )).data;
               }),
-            { staleTime: 1 / 0 }
+            { staleTime: 1 / 0 },
           ),
           f = i.useMemo(() => {
             var e, t;
@@ -14242,7 +14254,7 @@
                 _.Vb.Get().QueryRewardDefinitions(
                   { appid: f, grouping: 2 },
                   e,
-                  t
+                  t,
                 ),
             },
           },
@@ -14262,13 +14274,13 @@
                 statusPosition: "right",
                 strAvatarURL: p.data.avatar_url,
               }),
-              p.data.persona_name
+              p.data.persona_name,
             ),
             i.createElement(
               "div",
               null,
-              (0, g.Xx)("#EquippedProfile_Header_Title")
-            )
+              (0, g.Xx)("#EquippedProfile_Header_Title"),
+            ),
           );
         return i.createElement(
           ve.OC,
@@ -14310,7 +14322,7 @@
                   itemClassName: pe.ItemHoverZIndex,
                   renderItem: (e) =>
                     i.createElement(te, { definition: e, key: e.defid }),
-                })
+                }),
               ),
             (null === (l = d.data.inactive_definitions) || void 0 === l
               ? void 0
@@ -14321,7 +14333,7 @@
                   title: (0, g.Xx)("#EquippedProfile_NotAvailable"),
                   subtitle: (0, g.kb)(
                     "#EquippedProfile_NotAvailable_Desc",
-                    d.data.inactive_definitions.length
+                    d.data.inactive_definitions.length,
                   ),
                 },
                 i.createElement(k.c, {
@@ -14339,11 +14351,11 @@
                       purchaseable: !1,
                       key: e.defid,
                     }),
-                })
+                }),
               ),
             (null == f ? void 0 : f.length) > 0 &&
-              i.createElement(Q, { descriptor: y })
-          )
+              i.createElement(Q, { descriptor: y }),
+          ),
         );
       }
       var qt = r(54856),
@@ -15245,7 +15257,7 @@
             return 1 == t.GetEResult()
               ? t.Body().toObject().bids
               : (console.error(
-                  `Error when calling AuctionService.GetBidsForUser: EResult=${t.GetEResult()}`
+                  `Error when calling AuctionService.GetBidsForUser: EResult=${t.GetEResult()}`,
                 ),
                 []);
           });
@@ -15256,7 +15268,7 @@
               ((this.m_bLoadedCurrentUserBids = !0),
               (this.m_rgCurrentUserBids = []),
               this.LoadCurrentUserBids().then((e) =>
-                e.forEach((e) => this.m_rgCurrentUserBids.push(e))
+                e.forEach((e) => this.m_rgCurrentUserBids.push(e)),
               )),
             this.m_rgCurrentUserBids
           );
@@ -15268,7 +15280,7 @@
             return 1 == t.GetEResult()
               ? t.Body().toObject().items
               : (console.error(
-                  `Error when calling AuctionService.GetAllItems: EResult=${t.GetEResult()}`
+                  `Error when calling AuctionService.GetAllItems: EResult=${t.GetEResult()}`,
                 ),
                 []);
           });
@@ -15279,7 +15291,7 @@
               ((this.m_bLoadedCurrentUserBids = !0),
               this.m_mapAuctionItems.clear(),
               this.LoadAllItems().then((e) =>
-                e.forEach((e) => this.m_mapAuctionItems.set(e.store_appid, e))
+                e.forEach((e) => this.m_mapAuctionItems.set(e.store_appid, e)),
               )),
             this.m_mapAuctionItems
           );
@@ -15294,7 +15306,7 @@
             return 1 == t.GetEResult()
               ? t.Body().toObject().bid
               : (console.error(
-                  `Error when calling AuctionService.GetUserBidForItem: EResult=${t.GetEResult()}`
+                  `Error when calling AuctionService.GetUserBidForItem: EResult=${t.GetEResult()}`,
                 ),
                 null);
           });
@@ -15317,7 +15329,7 @@
                 ? this.GetCurrentUserBids(!0)
                 : ((n.strMessage = a.Hdr().error_message()),
                   console.error(
-                    `Error when calling AuctionService.PlaceBid: EResult=${a.GetEResult()}`
+                    `Error when calling AuctionService.PlaceBid: EResult=${a.GetEResult()}`,
                   )),
               n
             );
@@ -15337,7 +15349,7 @@
                 ? this.GetCurrentUserBids(!0)
                 : ((t.strMessage = n.Hdr().error_message()),
                   console.error(
-                    `Error when calling AuctionService.CancelBid: EResult=${n.GetEResult()}`
+                    `Error when calling AuctionService.CancelBid: EResult=${n.GetEResult()}`,
                   )),
               t
             );
@@ -15365,22 +15377,22 @@
                   i.createElement(
                     a.AW,
                     { path: o.Z.LoyaltyGetPoints() },
-                    i.createElement(ct, null)
+                    i.createElement(ct, null),
                   ),
                   i.createElement(
                     a.AW,
                     { path: o.Z.LoyaltyHowItWorks() },
-                    i.createElement(zt, null)
+                    i.createElement(zt, null),
                   ),
                   i.createElement(
                     a.AW,
                     { path: o.Z.LoyaltyStore() },
-                    i.createElement(Ye, null)
+                    i.createElement(Ye, null),
                   ),
                   i.createElement(
                     a.AW,
                     { path: o.Z.LoyaltyGiveawayRules() },
-                    i.createElement(Zt, null)
+                    i.createElement(Zt, null),
                   ),
                   i.createElement(a.AW, {
                     path: o.Z.LoyaltyEquippedProfile(":steamid"),
@@ -15390,9 +15402,9 @@
                   i.createElement(
                     a.AW,
                     null,
-                    i.createElement(a.l_, { to: o.Z.LoyaltyStore() })
-                  )
-                )
+                    i.createElement(a.l_, { to: o.Z.LoyaltyStore() }),
+                  ),
+                ),
               )
             : i.createElement(y, null);
         }
@@ -15470,7 +15482,7 @@
                     imgSrc: C(e.appid, n),
                     owned: t >= r,
                     cost: _.Vb.Get().GetCostToLevelSeasonalBadge(r),
-                  })
+                  }),
                 )
               : [];
           return i.createElement(
@@ -15499,12 +15511,12 @@
                       w,
                       Object.assign({ key: t.level }, t, {
                         onClick: (r) => (0, g.s1)(r, e, t.level),
-                      })
-                    )
-                  )
-                )
-              )
-            )
+                      }),
+                    ),
+                  ),
+                ),
+              ),
+            ),
           );
         }),
         y = ({ children: e }) =>
@@ -15515,7 +15527,7 @@
               verticalSpacing: "large",
               "flow-children": "grid",
             },
-            e
+            e,
           ),
         w = (e) => {
           const { level: t, owned: r, cost: a, imgSrc: s, className: m } = e,
@@ -15530,7 +15542,7 @@
                 src: s,
                 title: (0, o.Xx)("#BadgeLevel", t),
                 className: c.BadgeImage,
-              })
+              }),
             ),
             i.createElement(
               l.GK,
@@ -15539,9 +15551,9 @@
               i.createElement(
                 "div",
                 { className: c.Hint },
-                r ? i.createElement(S, null) : i.createElement(E, { cost: a })
-              )
-            )
+                r ? i.createElement(S, null) : i.createElement(E, { cost: a }),
+              ),
+            ),
           );
         },
         S = () => i.createElement(u.Zg, { className: c.OwnedSticker }),
@@ -15551,7 +15563,7 @@
           return i.createElement(
             "div",
             { className: (0, d.Z)(c.LevelMarker, r && c.Owned) },
-            i.createElement("div", { className: c.Inner }, t)
+            i.createElement("div", { className: c.Inner }, t),
           );
         };
     },
@@ -15583,7 +15595,7 @@
                 })(e) ||
                 (e.preventDefault(), t());
             },
-          })
+          }),
         );
       }
       function l(e) {

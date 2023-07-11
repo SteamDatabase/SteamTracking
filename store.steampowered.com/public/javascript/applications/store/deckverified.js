@@ -48,7 +48,7 @@
             return { strErrorMsg: r.err_msg, errorCode: r.success };
           if ("string" == typeof r && r.length > 1024)
             console.groupCollapsed(
-              "GetMsgAndErrorCodeFromResponse cannot parse: "
+              "GetMsgAndErrorCodeFromResponse cannot parse: ",
             ),
               console.error(r),
               console.groupEnd();

@@ -65,7 +65,7 @@
               secondary: !0,
               parentEmbeddedNavTree: e,
             }),
-            i.createElement(o.O, null, t)
+            i.createElement(o.O, null, t),
           );
         }
         return i.createElement(i.Fragment, null, t);
@@ -116,7 +116,7 @@
             return { strErrorMsg: e.err_msg, errorCode: e.success };
           if ("string" == typeof e && e.length > 1024)
             console.groupCollapsed(
-              "GetMsgAndErrorCodeFromResponse cannot parse: "
+              "GetMsgAndErrorCodeFromResponse cannot parse: ",
             ),
               console.error(e),
               console.groupEnd();
@@ -288,7 +288,7 @@
               )
                 window.ShowAlertDialog(
                   (0, _.Xx)("#CookiePref_Error"),
-                  (0, _.Xx)("#CookiePref_ErrorNotSaved")
+                  (0, _.Xx)("#CookiePref_ErrorNotSaved"),
                 );
               else if (
                 1 ==
@@ -304,7 +304,7 @@
               0,
                 window.ShowAlertDialog(
                   (0, _.Xx)("#CookiePref_Error"),
-                  (0, _.Xx)("#CookiePref_ErrorNotSaved")
+                  (0, _.Xx)("#CookiePref_ErrorNotSaved"),
                 );
             }
           });
@@ -348,14 +348,14 @@
               {
                 className: (0, p.Z)(
                   d.CookieSettingsHeader,
-                  "account_header_line noicon"
+                  "account_header_line noicon",
                 ),
               },
               s.createElement(
                 "div",
                 null,
-                (0, _.Xx)("#CookiePref_OptionalCookies_Title")
-              )
+                (0, _.Xx)("#CookiePref_OptionalCookies_Title"),
+              ),
             ),
             s.createElement(
               "div",
@@ -368,42 +368,42 @@
                   {
                     className: (0, p.Z)(
                       d.AllButton,
-                      e.BIsRejectAll() ? d.ButtonHighlight : ""
+                      e.BIsRejectAll() ? d.ButtonHighlight : "",
                     ),
                     onClick: i,
                   },
-                  (0, _.Xx)("#CookiePref_RejectAll")
+                  (0, _.Xx)("#CookiePref_RejectAll"),
                 ),
                 s.createElement(
                   k.Ks,
                   {
                     className: (0, p.Z)(
                       d.AllButton,
-                      e.BIsAllowAll() ? d.ButtonHighlight : ""
+                      e.BIsAllowAll() ? d.ButtonHighlight : "",
                     ),
                     onClick: r,
                   },
-                  (0, _.Xx)("#CookiePref_AcceptAll")
-                )
+                  (0, _.Xx)("#CookiePref_AcceptAll"),
+                ),
               ),
               s.createElement(N, { settings: e }),
               s.createElement(C, { settings: e }),
               s.createElement(v, { settings: e }),
-              s.createElement(S, { settings: e })
+              s.createElement(S, { settings: e }),
             ),
             s.createElement(
               "div",
               {
                 className: (0, p.Z)(
                   d.CookieSettingsHeader,
-                  "account_header_line noicon"
+                  "account_header_line noicon",
                 ),
               },
               s.createElement(
                 "div",
                 null,
-                (0, _.Xx)("#CookiePref_TechnicallyNeccesary_Title")
-              )
+                (0, _.Xx)("#CookiePref_TechnicallyNeccesary_Title"),
+              ),
             ),
             s.createElement(
               "div",
@@ -411,7 +411,7 @@
               s.createElement(
                 "p",
                 null,
-                (0, _.Xx)("#CookiePref_TechnicallyNeccesary_Desc")
+                (0, _.Xx)("#CookiePref_TechnicallyNeccesary_Desc"),
               ),
               s.createElement(
                 "div",
@@ -422,13 +422,13 @@
                   s.createElement(
                     "span",
                     { className: d.NecessaryTitle },
-                    (0, _.Xx)("#CookiePref_SessionID_Title")
+                    (0, _.Xx)("#CookiePref_SessionID_Title"),
                   ),
                   s.createElement(
                     "span",
                     { className: d.NecessaryDesc },
-                    (0, _.Xx)("#CookiePref_SessionID_Desc")
-                  )
+                    (0, _.Xx)("#CookiePref_SessionID_Desc"),
+                  ),
                 ),
                 s.createElement(
                   "div",
@@ -436,13 +436,13 @@
                   s.createElement(
                     "span",
                     { className: d.NecessaryTitle },
-                    (0, _.Xx)("#CookiePref_ShoppingCart_Title")
+                    (0, _.Xx)("#CookiePref_ShoppingCart_Title"),
                   ),
                   s.createElement(
                     "span",
                     { className: d.NecessaryDesc },
-                    (0, _.Xx)("#CookiePref_ShoppingCart_Desc")
-                  )
+                    (0, _.Xx)("#CookiePref_ShoppingCart_Desc"),
+                  ),
                 ),
                 s.createElement(
                   "div",
@@ -450,13 +450,13 @@
                   s.createElement(
                     "span",
                     { className: d.NecessaryTitle },
-                    (0, _.Xx)("#CookiePref_SteamCountry_Title")
+                    (0, _.Xx)("#CookiePref_SteamCountry_Title"),
                   ),
                   s.createElement(
                     "span",
                     { className: d.NecessaryDesc },
-                    (0, _.Xx)("#CookiePref_SteamCountry_Desc")
-                  )
+                    (0, _.Xx)("#CookiePref_SteamCountry_Desc"),
+                  ),
                 ),
                 s.createElement(
                   "div",
@@ -464,13 +464,13 @@
                   s.createElement(
                     "span",
                     { className: d.NecessaryTitle },
-                    (0, _.Xx)("#CookiePref_Timezone_Title")
+                    (0, _.Xx)("#CookiePref_Timezone_Title"),
                   ),
                   s.createElement(
                     "span",
                     { className: d.NecessaryDesc },
-                    (0, _.Xx)("#CookiePref_Timezone_Desc")
-                  )
+                    (0, _.Xx)("#CookiePref_Timezone_Desc"),
+                  ),
                 ),
                 s.createElement(
                   "div",
@@ -478,13 +478,13 @@
                   s.createElement(
                     "span",
                     { className: d.NecessaryTitle },
-                    (0, _.Xx)("#CookiePref_BirthTime_Title")
+                    (0, _.Xx)("#CookiePref_BirthTime_Title"),
                   ),
                   s.createElement(
                     "span",
                     { className: d.NecessaryDesc },
-                    (0, _.Xx)("#CookiePref_BirthTime_Desc")
-                  )
+                    (0, _.Xx)("#CookiePref_BirthTime_Desc"),
+                  ),
                 ),
                 s.createElement(
                   "div",
@@ -492,13 +492,13 @@
                   s.createElement(
                     "span",
                     { className: d.NecessaryTitle },
-                    (0, _.Xx)("#CookiePref_Login_Title")
+                    (0, _.Xx)("#CookiePref_Login_Title"),
                   ),
                   s.createElement(
                     "span",
                     { className: d.NecessaryDesc },
-                    (0, _.Xx)("#CookiePref_Login_Desc")
-                  )
+                    (0, _.Xx)("#CookiePref_Login_Desc"),
+                  ),
                 ),
                 s.createElement(
                   "div",
@@ -506,13 +506,13 @@
                   s.createElement(
                     "span",
                     { className: d.NecessaryTitle },
-                    (0, _.Xx)("#CookiePref_Language_Title")
+                    (0, _.Xx)("#CookiePref_Language_Title"),
                   ),
                   s.createElement(
                     "span",
                     { className: d.NecessaryDesc },
-                    (0, _.Xx)("#CookiePref_Language_Desc")
-                  )
+                    (0, _.Xx)("#CookiePref_Language_Desc"),
+                  ),
                 ),
                 s.createElement(
                   "div",
@@ -520,36 +520,36 @@
                   s.createElement(
                     "span",
                     { className: d.NecessaryTitle },
-                    (0, _.Xx)("#CookiePref_CookieSettings_Title")
+                    (0, _.Xx)("#CookiePref_CookieSettings_Title"),
                   ),
                   s.createElement(
                     "span",
                     { className: d.NecessaryDesc },
-                    (0, _.Xx)("#CookiePref_CookieSettings_Desc")
-                  )
-                )
-              )
+                    (0, _.Xx)("#CookiePref_CookieSettings_Desc"),
+                  ),
+                ),
+              ),
             ),
             s.createElement(
               "div",
               {
                 className: (0, p.Z)(
                   d.CookieSettingsHeader,
-                  "account_header_line noicon"
+                  "account_header_line noicon",
                 ),
               },
               s.createElement(
                 "div",
                 null,
-                (0, _.Xx)("#PrivacySettings_Marketing_Header")
-              )
+                (0, _.Xx)("#PrivacySettings_Marketing_Header"),
+              ),
             ),
             s.createElement(
               "div",
               { className: "account_settings_container" },
-              s.createElement(T, { settings: e })
+              s.createElement(T, { settings: e }),
             ),
-            null
+            null,
           );
         }),
         N = (0, f.Pi)((e) => {
@@ -566,20 +566,20 @@
               s.createElement(
                 "h2",
                 null,
-                (0, _.Xx)("#CookiePref_Content_Title")
+                (0, _.Xx)("#CookiePref_Content_Title"),
               ),
               s.createElement(
                 "p",
                 { className: d.SectionDescription },
-                (0, _.Xx)("#CookiePref_Content_Desc")
+                (0, _.Xx)("#CookiePref_Content_Desc"),
               ),
               s.createElement(g.gE, {
                 onChange: r,
                 label: (0, _.Xx)("#CookiePref_Content_ToggleTitle"),
                 checked: t.GetRecentApps(),
                 description: (0, _.Xx)("#CookiePref_Content_ToggleDesc"),
-              })
-            )
+              }),
+            ),
           );
         }),
         C = (0, f.Pi)((e) => {
@@ -596,20 +596,20 @@
               s.createElement(
                 "h2",
                 null,
-                (0, _.Xx)("#CookiePref_ValveAnalytics_Title")
+                (0, _.Xx)("#CookiePref_ValveAnalytics_Title"),
               ),
               s.createElement(
                 "p",
                 { className: d.SectionDescription },
-                (0, _.Xx)("#CookiePref_ValveAnalytics_Desc")
+                (0, _.Xx)("#CookiePref_ValveAnalytics_Desc"),
               ),
               s.createElement(g.gE, {
                 onChange: r,
                 label: (0, _.Xx)("#CookiePref_ValveAnalytics_ToggleTitle"),
                 checked: t.GetImpressions(),
                 description: (0, _.Xx)("#CookiePref_ValveAnalytics_ToggleDesc"),
-              })
-            )
+              }),
+            ),
           );
         }),
         v = (0, f.Pi)((e) => {
@@ -626,12 +626,12 @@
               s.createElement(
                 "h2",
                 null,
-                (0, _.Xx)("#CookiePref_GoogleAnalytics_Title")
+                (0, _.Xx)("#CookiePref_GoogleAnalytics_Title"),
               ),
               s.createElement(
                 "p",
                 { className: d.SectionDescription },
-                (0, _.Xx)("#CookiePref_GoogleAnalytics_Desc")
+                (0, _.Xx)("#CookiePref_GoogleAnalytics_Desc"),
               ),
               s.createElement(g.gE, {
                 onChange: r,
@@ -645,11 +645,11 @@
                       href: "https://policies.google.com/privacy",
                       target: "_blank",
                     },
-                    (0, _.Xx)("#CookiePref_GoogleAnalytics_TogglePolicyName")
-                  )
+                    (0, _.Xx)("#CookiePref_GoogleAnalytics_TogglePolicyName"),
+                  ),
                 ),
-              })
-            )
+              }),
+            ),
           );
         }),
         S = (0, f.Pi)((e) => {
@@ -672,12 +672,12 @@
               s.createElement(
                 "h2",
                 null,
-                (0, _.Xx)("#CookiePref_ThirdParty_Title")
+                (0, _.Xx)("#CookiePref_ThirdParty_Title"),
               ),
               s.createElement(
                 "p",
                 { className: d.SectionDescription },
-                (0, _.Xx)("#CookiePref_ThirdParty_Desc")
+                (0, _.Xx)("#CookiePref_ThirdParty_Desc"),
               ),
               s.createElement(g.gE, {
                 onChange: r,
@@ -691,8 +691,8 @@
                       href: "https://policies.google.com/privacy",
                       target: "_blank",
                     },
-                    (0, _.Xx)("#CookiePref_YouTube_TogglePolicyName")
-                  )
+                    (0, _.Xx)("#CookiePref_YouTube_TogglePolicyName"),
+                  ),
                 ),
               }),
               s.createElement(g.gE, {
@@ -704,8 +704,8 @@
                   s.createElement(
                     "a",
                     { href: "https://vimeo.com/privacy", target: "_blank" },
-                    (0, _.Xx)("#CookiePref_Vimeo_TogglePolicyName")
-                  )
+                    (0, _.Xx)("#CookiePref_Vimeo_TogglePolicyName"),
+                  ),
                 ),
               }),
               s.createElement(g.gE, {
@@ -717,11 +717,11 @@
                   s.createElement(
                     "a",
                     { href: "https://sketchfab.com/privacy", target: "_blank" },
-                    (0, _.Xx)("#CookiePref_Sketchfab_TogglePolicyName")
-                  )
+                    (0, _.Xx)("#CookiePref_Sketchfab_TogglePolicyName"),
+                  ),
                 ),
-              })
-            )
+              }),
+            ),
           );
         }),
         T = (0, f.Pi)((e) => {
@@ -738,20 +738,20 @@
               s.createElement(
                 "h2",
                 null,
-                (0, _.Xx)("#PrivacySettings_Marketing_Title")
+                (0, _.Xx)("#PrivacySettings_Marketing_Title"),
               ),
               s.createElement(
                 "p",
                 { className: d.SectionDescription },
-                (0, _.Xx)("#PrivacySettings_Marketing_Desc")
+                (0, _.Xx)("#PrivacySettings_Marketing_Desc"),
               ),
               s.createElement(g.gE, {
                 onChange: r,
                 label: (0, _.Xx)("#PrivacySettings_UTM_ToggleLabel"),
                 checked: t.GetUTMEnabled(),
                 description: (0, _.Xx)("#PrivacySettings_UTM_ToggleDesc"),
-              })
-            )
+              }),
+            ),
           );
         });
       class b {
@@ -786,7 +786,7 @@
             s.set("sessionid", a.De.SESSIONID),
               s.append(
                 "notificationpreferences",
-                JSON.stringify(this.m_Preferences)
+                JSON.stringify(this.m_Preferences),
               );
             try {
               let i = yield l().post(r, s, { withCredentials: !0 });
@@ -797,7 +797,7 @@
                   : e.success)
                 ? window.ShowAlertDialog(
                     (0, _.Xx)("#NotificationPref_Error"),
-                    (0, _.Xx)("#NotificationPref_ErrorNotSaved")
+                    (0, _.Xx)("#NotificationPref_ErrorNotSaved"),
                   )
                 : null === (t = null == i ? void 0 : i.data) ||
                   void 0 === t ||
@@ -806,7 +806,7 @@
               0,
                 window.ShowAlertDialog(
                   (0, _.Xx)("#NotificationPref_Error"),
-                  (0, _.Xx)("#NotificationPref_ErrorNotSaved")
+                  (0, _.Xx)("#NotificationPref_ErrorNotSaved"),
                 );
             }
           });
@@ -838,14 +838,14 @@
               {
                 className: (0, p.Z)(
                   D.NotificationSettingsHeader,
-                  "account_header_line noicon"
+                  "account_header_line noicon",
                 ),
               },
               s.createElement(
                 "div",
                 null,
-                (0, _.Xx)("#NotificationSettings_Title")
-              )
+                (0, _.Xx)("#NotificationSettings_Title"),
+              ),
             ),
             s.createElement(
               "div",
@@ -853,12 +853,12 @@
               s.createElement(
                 "p",
                 { className: D.SectionDescription },
-                (0, _.Xx)("#NotificationSettings_Desc1")
+                (0, _.Xx)("#NotificationSettings_Desc1"),
               ),
               s.createElement(
                 "p",
                 { className: D.SectionDescription },
-                (0, _.Xx)("#NotificationSettings_Desc2")
+                (0, _.Xx)("#NotificationSettings_Desc2"),
               ),
               s.createElement(
                 "div",
@@ -866,11 +866,11 @@
                 s.createElement(
                   "p",
                   null,
-                  (0, _.Xx)("#NotificationSettings_SendMeWhen")
+                  (0, _.Xx)("#NotificationSettings_SendMeWhen"),
                 ),
-                r
-              )
-            )
+                r,
+              ),
+            ),
           );
         }),
         w = (0, f.Pi)((e) => {
@@ -908,7 +908,7 @@
                 "p",
                 { className: D.NotificationDescription },
                 ((u = t.notification_type),
-                (0, _.Xx)("#SteamNotificationTypeDesc_" + u))
+                (0, _.Xx)("#SteamNotificationTypeDesc_" + u)),
               ),
               s.createElement(
                 g.Yz,
@@ -919,8 +919,8 @@
                   }),
                   onClick: () => c(!a),
                 },
-                s.createElement(x.vVQ, { direction: "down" })
-              )
+                s.createElement(x.vVQ, { direction: "down" }),
+              ),
             ),
             a &&
               s.createElement(
@@ -937,8 +937,8 @@
                   disabled: l || !m,
                   checked: f,
                   onChange: o,
-                })
-              )
+                }),
+              ),
           );
           var u;
         });
@@ -972,7 +972,7 @@
                   },
                 }),
             }),
-            ";"
+            ";",
           );
         };
     },

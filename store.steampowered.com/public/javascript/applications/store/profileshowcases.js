@@ -37,9 +37,9 @@
                   t,
                   e.customization_type,
                   e.current_level,
-                  e.desired_level
+                  e.desired_level,
                 ),
-            })
+            }),
           ),
         f = (e) =>
           r.createElement(
@@ -50,9 +50,9 @@
                   t,
                   e.customization_type,
                   e.purchased_count,
-                  e.current_level
+                  e.current_level,
                 ),
-            })
+            }),
           ),
         w = (e) =>
           r.createElement(
@@ -68,7 +68,7 @@
             r.createElement("img", {
               src: d,
               className: c.ProfileShowcaseHeaderImage,
-            })
+            }),
           ),
         P = (e) => {
           const {
@@ -108,8 +108,8 @@
                 title: (0, p.Xx)("#ProfileShowcases_Upgrades_Title"),
                 subtitle: (0, p.Xx)("#ProfileShowcases_Upgrades_Subtitle"),
               },
-              c
-            )
+              c,
+            ),
           );
         },
         b = (e) => {
@@ -139,7 +139,7 @@
               current_level: i.get(e),
               customization_type: e,
               purchased_count: c.get(e),
-            })
+            }),
           );
           return r.createElement(
             n.Kq,
@@ -154,8 +154,8 @@
                 title: (0, p.Xx)("#ProfileShowcases_Slots_Title"),
                 subtitle: (0, p.Xx)("#ProfileShowcases_Slots_Subtitle"),
               },
-              h
-            )
+              h,
+            ),
           );
         };
       let S = class extends r.Component {
@@ -181,7 +181,7 @@
                 null,
                 r.createElement(i._f, {
                   title: (0, p.Xx)("#ShopPageTitle_ProfileShowcases"),
-                })
+                }),
               ),
               r.createElement(w, null),
               r.createElement(P, {
@@ -195,8 +195,8 @@
                 purchased_showcases: c,
                 purchased_upgrades: s,
               }),
-              this.props.children
-            )
+              this.props.children,
+            ),
           );
         }
       };

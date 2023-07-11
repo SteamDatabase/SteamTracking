@@ -16,7 +16,7 @@
         a = s(207),
         n = s(32765);
       const o = JSON.parse(
-        '{"store.steampowered.com":1,"default":4,"message":41,"steamtv":2200,"steamclient":5000,"library":5100,"friendsui":5200,"friendcontextmenu":5201,"topsellers":7000,"steamcharts":7001,"weeklytopsellers":7002,"topchartlist":7003,"overview":7004,"mostplayed":7005,"salecreatorhome":100700,"saleitembrowse":100701,"salefacetbrowse":100702,"salesection":100703,"saletabsection":100704,"salebroadcast":100705,"salecuratorrec":100706,"saleeventsched":100707,"salesubscription":100708,"saleitemsearch":100709,"salesmartwishlist":100710,"salesmartir":100711,"salesmartdlc":100712,"salesmarttagrec":100713,"salebrowsetopwishlisted":100714,"salebrowsetrendingwishlisted":100715,"salebrowsepopularcomingsoon":100716,"salebrowsemostplayeddemo":100717,"salebrowsedailyactiveuserdemo":100718,"salebrowseplayednowdemo":100719,"salebrowserecentlyreleased":100720,"salebrowsepopularpurchased":100721,"salebrowsepopularpurchaseddiscounted":100722,"salebrowsediscounted":100723,"salebrowseprice":100724,"salebrowsenewandtrending":100725,"salebrowsetopsellers":100726,"salebrowsetoprated":100727,"discoveryqueue2022":100728,"saleeventsection":100729,"salesectionlinks":100730,"salesectionrewards":100731,"salesectiontext":100732,"salesectioneventschedule":100733,"spotlight":40,"daily-deal":43,"promo-takeover":118,"live-broadcast":143,"large-cluster":201,"yearinreview":662}'
+        '{"store.steampowered.com":1,"default":4,"message":41,"steamtv":2200,"steamclient":5000,"library":5100,"friendsui":5200,"friendcontextmenu":5201,"topsellers":7000,"steamcharts":7001,"weeklytopsellers":7002,"topchartlist":7003,"overview":7004,"mostplayed":7005,"salecreatorhome":100700,"saleitembrowse":100701,"salefacetbrowse":100702,"salesection":100703,"saletabsection":100704,"salebroadcast":100705,"salecuratorrec":100706,"saleeventsched":100707,"salesubscription":100708,"saleitemsearch":100709,"salesmartwishlist":100710,"salesmartir":100711,"salesmartdlc":100712,"salesmarttagrec":100713,"salebrowsetopwishlisted":100714,"salebrowsetrendingwishlisted":100715,"salebrowsepopularcomingsoon":100716,"salebrowsemostplayeddemo":100717,"salebrowsedailyactiveuserdemo":100718,"salebrowseplayednowdemo":100719,"salebrowserecentlyreleased":100720,"salebrowsepopularpurchased":100721,"salebrowsepopularpurchaseddiscounted":100722,"salebrowsediscounted":100723,"salebrowseprice":100724,"salebrowsenewandtrending":100725,"salebrowsetopsellers":100726,"salebrowsetoprated":100727,"discoveryqueue2022":100728,"saleeventsection":100729,"salesectionlinks":100730,"salesectionrewards":100731,"salesectiontext":100732,"salesectioneventschedule":100733,"spotlight":40,"daily-deal":43,"promo-takeover":118,"live-broadcast":143,"large-cluster":201,"yearinreview":662}',
       );
       function c(e, t = "", s = null) {
         return u.InstrumentLink(e, t, s);
@@ -77,7 +77,7 @@
               e.domain,
               e.controller,
               e.method,
-              e.submethod
+              e.submethod,
             )),
               (r = e.feature),
               (t = null != t ? t : e.depth);
@@ -108,12 +108,12 @@
                 u.sm_strDomain,
                 u.sm_strController,
                 u.sm_strMethod,
-                u.sm_strSubmethod
+                u.sm_strSubmethod,
               )),
               !0)
             : ((0, r.X)(
                 !1,
-                "CStoreNavEvents::SetNavEventParams was not called before calling InstrumentLink!"
+                "CStoreNavEvents::SetNavEventParams was not called before calling InstrumentLink!",
               ),
               !1);
         }
@@ -169,10 +169,10 @@
           {
             value: Object.assign(
               Object.assign(Object.assign({}, n.ZP.GetDefaultParams()), o),
-              s
+              s,
             ),
           },
-          t
+          t,
         );
       }
       function i(e) {
@@ -184,7 +184,7 @@
           {
             value: Object.assign(Object.assign({}, n.ZP.GetDefaultParams()), r),
           },
-          t
+          t,
         );
       }
       function m() {
@@ -198,9 +198,9 @@
                 Object.assign(Object.assign({}, r), {
                   feature: t || r.feature,
                 }),
-                s
+                s,
               ),
-            [r, t, s]
+            [r, t, s],
           );
         return a.useMemo(() => n.ZP.AddNavParamToURL(e, o), [e, o]);
       }
@@ -225,7 +225,7 @@
       function o(e) {
         let t = new RegExp(
             "^(steam://openurl(_external)?/)?((f|ht)tps?://)?([^@/?#]*@)?([^/#?]+)",
-            "im"
+            "im",
           ),
           s = e.match(t);
         return s && s.length > 5 ? s[6].toString() : e;
@@ -246,46 +246,46 @@
               (e = (e = (e = (e = (e = (e = (e = (e = (e = (e = (e = (e = (e =
                 (e = (e = (e = e.replace(
                   /https:\/\/media.steampowered.com\//g,
-                  r.De.MEDIA_CDN_URL
+                  r.De.MEDIA_CDN_URL,
                 )).replace(
                   /https:\/\/cdn.akamai.steamstatic.com\//g,
-                  r.De.MEDIA_CDN_URL
+                  r.De.MEDIA_CDN_URL,
                 )).replace(
                   /https:\/\/cdn.cloudflare.steamstatic.com\//g,
-                  r.De.MEDIA_CDN_URL
+                  r.De.MEDIA_CDN_URL,
                 )).replace(
                   /https:\/\/cdn.edgecast.steamstatic.com\//g,
-                  r.De.MEDIA_CDN_URL
+                  r.De.MEDIA_CDN_URL,
                 )).replace(
                 /https:\/\/cdn.dota2.com\//g,
-                r.De.MEDIA_CDN_URL
+                r.De.MEDIA_CDN_URL,
               )).replace(
                 /https:\/\/storefront.steampowered.com\/v\/gfx\//g,
-                r.De.MEDIA_CDN_URL + "steam/"
+                r.De.MEDIA_CDN_URL + "steam/",
               )).replace(
                 /https:\/\/clan.akamai.steamstatic.com\//g,
-                r.De.CLAN_CDN_ASSET_URL
+                r.De.CLAN_CDN_ASSET_URL,
               )).replace(
                 /https:\/\/clan.cloudflare.steamstatic.com\//g,
-                r.De.CLAN_CDN_ASSET_URL
+                r.De.CLAN_CDN_ASSET_URL,
               )).replace(
                 /https:\/\/cdn.steamcommunity.com\//g,
-                r.De.COMMUNITY_CDN_URL
+                r.De.COMMUNITY_CDN_URL,
               )).replace(
                 /https:\/\/community.akamai.steamstatic.com\//g,
-                r.De.COMMUNITY_CDN_URL
+                r.De.COMMUNITY_CDN_URL,
               )).replace(
                 /https:\/\/community.cloudflare.steamstatic.com\//g,
-                r.De.COMMUNITY_CDN_URL
+                r.De.COMMUNITY_CDN_URL,
               )).replace(
                 /https:\/\/community.edgecast.steamstatic.com\//g,
-                r.De.COMMUNITY_CDN_URL
+                r.De.COMMUNITY_CDN_URL,
               )).replace(/{IMG_URL}/g, r.De.IMG_URL)).replace(
                 /{MEDIA_CDN_URL}/g,
-                r.De.MEDIA_CDN_URL
+                r.De.MEDIA_CDN_URL,
               )).replace(
                 /{MEDIA_CDN_COMMUNITY_URL}/g,
-                r.De.MEDIA_CDN_COMMUNITY_URL
+                r.De.MEDIA_CDN_COMMUNITY_URL,
               )).replace(/{COMMUNITY_CDN_URL}/g, r.De.COMMUNITY_CDN_URL)),
               (e = (0, a.HZ)(e)))
           : e;

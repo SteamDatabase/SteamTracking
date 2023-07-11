@@ -250,7 +250,7 @@ var CLSTAMP = "8156261";
           },
           h = setTimeout(
             b.bind(null, void 0, { type: "timeout", target: r }),
-            12e4
+            12e4,
           );
         (r.onerror = b.bind(null, r.onerror)),
           (r.onload = b.bind(null, r.onload)),
@@ -274,7 +274,7 @@ var CLSTAMP = "8156261";
       }
       if (!a)
         throw new Error(
-          "Automatic publicPath is not supported in this browser"
+          "Automatic publicPath is not supported in this browser",
         );
       (a = a
         .replace(/#.*$/, "")
@@ -317,7 +317,7 @@ var CLSTAMP = "8156261";
                   var r = t && ("load" === t.type ? "missing" : t.type),
                     l = (t && t.target && t.target.href) || e,
                     c = new Error(
-                      "Loading CSS chunk " + a + " failed.\n(" + l + ")"
+                      "Loading CSS chunk " + a + " failed.\n(" + l + ")",
                     );
                   (c.code = "CSS_CHUNK_LOAD_FAILED"),
                     (c.type = r),
@@ -343,8 +343,8 @@ var CLSTAMP = "8156261";
               },
               (e) => {
                 throw (delete r[a], e);
-              }
-            ))
+              },
+            )),
           );
     }),
     (() => {
@@ -373,7 +373,7 @@ var CLSTAMP = "8156261";
                 }
               },
               "chunk-" + e,
-              e
+              e,
             );
           } else a[e] = 0;
       }),

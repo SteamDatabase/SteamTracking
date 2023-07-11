@@ -74,7 +74,8 @@ body.rewards .app_App_2uHYt {
   overflow-x: hidden;
 }
 .GreenEnvelopeMenu {
-  box-shadow: inset rgba(61, 68, 80, 0.75) 1px 1px 1px 0px,
+  box-shadow:
+    inset rgba(61, 68, 80, 0.75) 1px 1px 1px 0px,
     inset rgba(61, 68, 80, 0.25) -1px -1px 1px 0px;
   border: 1px solid #000;
   padding: 1px;
@@ -390,7 +391,9 @@ html.contextmenu_ContextMenuPopup_2GpKT body {
   box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.6666666667);
   position: absolute;
   left: 0;
-  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  transition:
+    transform 0.2s ease-in-out,
+    background-color 0.2s ease-in-out;
 }
 .toggle_Toggle_3jXWQ .toggle_ToggleSwitch_2mW8B.toggle_On_1YqUA {
   background-color: #16a1e1;
@@ -497,7 +500,8 @@ html.contextmenu_ContextMenuPopup_2GpKT body {
   border-radius: 2px;
   color: #e0e1e6;
   padding: 6px 8px;
-  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3333333333),
+  box-shadow:
+    1px 1px 8px rgba(0, 0, 0, 0.3333333333),
     2px 2px 16px 1px rgba(0, 0, 0, 0.3333333333);
   max-width: 300px;
   user-select: none;
@@ -511,7 +515,8 @@ html.contextmenu_ContextMenuPopup_2GpKT body {
   border-radius: 2px;
   color: #e0e1e6;
   padding: 6px 8px;
-  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3333333333),
+  box-shadow:
+    1px 1px 8px rgba(0, 0, 0, 0.3333333333),
     2px 2px 16px 1px rgba(0, 0, 0, 0.3333333333);
   max-width: 300px;
   user-select: none;
@@ -2350,8 +2355,10 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Z-Cc svg {
   pointer-events: none;
   outline-offset: 2px;
   outline: 2px solid rgba(255, 255, 255, 0.6);
-  animation: focusring_flash_1YTKZ 0.5s ease,
-    focusring_growOutline_Z3LxS 0.4s ease, focusring_fadeOutline_2hZu3 0.4s ease,
+  animation:
+    focusring_flash_1YTKZ 0.5s ease,
+    focusring_growOutline_Z3LxS 0.4s ease,
+    focusring_fadeOutline_2hZu3 0.4s ease,
     focusring_blinker_3wFMM 1.2s ease-in-out 0.4s 20;
 }
 .focusring_FocusRing_1IZrQ.focusring_DebugFocusRing_YxeOZ {

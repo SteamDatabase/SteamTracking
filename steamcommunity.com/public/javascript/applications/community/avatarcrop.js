@@ -98,9 +98,9 @@
                     className: d.AvatarLoading,
                     style: { display: a ? "" : "none" },
                   },
-                  (0, s.Xx)("#Loading")
-                )
-              )
+                  (0, s.Xx)("#Loading"),
+                ),
+              ),
             )
           );
         });
@@ -127,7 +127,7 @@
           let r = m;
           for (;;) {
             const e = yield w(
-              p(t, { left: a.x, top: a.y, size: a.width, maxSize: u * r })
+              p(t, { left: a.x, top: a.y, size: a.width, maxSize: u * r }),
             );
             if (1 === r || e.size < g) return e;
             r--;

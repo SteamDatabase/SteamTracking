@@ -232,11 +232,13 @@
         }
         LoadProfiles(e, t) {
           return (0, r.mG)(this, void 0, void 0, function* () {
-            (0,
-            c.X)(e.length <= 500, "Check LoadProfiles, requesting too many steam IDs");
+            (0, c.X)(
+              e.length <= 500,
+              "Check LoadProfiles, requesting too many steam IDs",
+            );
             let i = e.filter(
               (e) =>
-                !this.m_mapProfiles.has(e) && !this.m_mapProfilesLoading.has(e)
+                !this.m_mapProfiles.has(e) && !this.m_mapProfilesLoading.has(e),
             );
             if (0 == i.length) return this.m_mapProfilesLoading.get(e[0]);
             let r = u.De.COMMUNITY_BASE_URL + "actions/ajaxresolveusers",
@@ -264,7 +266,7 @@
         }
         GetProfileByAccountID(e) {
           return this.m_mapProfiles.get(
-            m.K.InitFromAccountID(e).ConvertTo64BitString()
+            m.K.InitFromAccountID(e).ConvertTo64BitString(),
           );
         }
         GetProfileBySteamID(e) {
@@ -275,7 +277,7 @@
         }
         BHasProfileByAccountID(e) {
           return this.m_mapProfiles.has(
-            m.K.InitFromAccountID(e).ConvertTo64BitString()
+            m.K.InitFromAccountID(e).ConvertTo64BitString(),
           );
         }
         BHasProfileBySteamID(e) {
@@ -300,7 +302,7 @@
       function f(e) {
         const t = o.useMemo(
             () => (e ? ("string" == typeof e ? new m.K(e) : e) : null),
-            [e]
+            [e],
           ),
           [i, r] = (0, o.useState)(!!t && !p.BHasProfileBySteamID(t));
         (0, o.useEffect)(() => {
@@ -317,7 +319,7 @@
                       t.ConvertTo64BitString() +
                       ": " +
                       i.strErrorMsg,
-                    i
+                    i,
                   );
                 })
                 .finally(() => {
@@ -930,21 +932,21 @@
             return e.SendNotification(
               "SteamNotification.MarkNotificationsRead#1",
               t,
-              { ePrivilege: 1 }
+              { ePrivilege: 1 },
             );
           }),
           (e.MarkNotificationsViewed = function (e, t) {
             return e.SendNotification(
               "SteamNotification.MarkNotificationsViewed#1",
               t,
-              { ePrivilege: 1 }
+              { ePrivilege: 1 },
             );
           }),
           (e.HideNotification = function (e, t) {
             return e.SendNotification(
               "SteamNotification.HideNotification#1",
               t,
-              { ePrivilege: 1 }
+              { ePrivilege: 1 },
             );
           }),
           (e.SetPreferences = function (e, t) {
@@ -1859,7 +1861,7 @@
         Dev_AddTestNotification(e, t = null) {}
         Dev_UpdateTestNotificationReadState(e, t) {
           const i = this.m_rgTestNotifications.findIndex(
-            (t) => t.notification_id == e
+            (t) => t.notification_id == e,
           );
           return (
             -1 !== i &&
@@ -1884,16 +1886,16 @@
         MarkItemRead(e) {
           var t;
           let i = this.m_rgNotificationRollups.findIndex(
-            (t) => t.item.notification_id == e
+            (t) => t.item.notification_id == e,
           );
           if (-1 === i)
             return void console.error(
-              "Attempted to mark notification read that is not in the notification store"
+              "Attempted to mark notification read that is not in the notification store",
             );
           let r = this.m_rgNotificationRollups[i];
           if (r.item.read)
             console.error(
-              "Attempted to mark notification read that is already read"
+              "Attempted to mark notification read that is already read",
             );
           else if (
             ((r.item.read = !0),
@@ -1911,11 +1913,11 @@
         MarkItemHidden(e) {
           var t, i;
           let r = this.m_rgNotificationRollups.findIndex(
-            (t) => t.item.notification_id == e
+            (t) => t.item.notification_id == e,
           );
           if (-1 === r)
             return void console.error(
-              "Attempted to mark notification hidden that is not in the notification store"
+              "Attempted to mark notification hidden that is not in the notification store",
             );
           let a = this.m_rgNotificationRollups[r];
           (a.item.hidden = !0),
@@ -1923,7 +1925,7 @@
               0 &&
               this.ReduceNewTotals(
                 a.type,
-                null === (i = a.rgunread) || void 0 === i ? void 0 : i.length
+                null === (i = a.rgunread) || void 0 === i ? void 0 : i.length,
               ),
             this.NotifyServerNotificationsHidden([...a.rgunread, ...a.rgread]);
         }
@@ -1998,7 +2000,7 @@
               if (this.m_rgNotifyServerHidden.length > 0) {
                 -1 !==
                   this.m_rgNotifyServerHidden.findIndex(
-                    (t) => t == e.notification_id
+                    (t) => t == e.notification_id,
                   ) && (e.hidden = !0);
               }
               if (
@@ -2015,7 +2017,7 @@
                 if (this.m_rgNotifyServerRead.length > 0) {
                   -1 !==
                     this.m_rgNotifyServerRead.findIndex(
-                      (t) => t == e.notification_id
+                      (t) => t == e.notification_id,
                     ) && (e.read = !0);
                 }
                 e.read || de(s, e.notification_type, 1),
@@ -2229,7 +2231,7 @@
                   if (!(e && e.steamid && e.contextid && e.appid && e.assetid))
                     return (
                       console.error(
-                        "Item notification missing required attributes"
+                        "Item notification missing required attributes",
                       ),
                       null
                     );
@@ -2245,14 +2247,14 @@
                     return (
                       console.error(
                         "Request for steam item metadata did not succeed",
-                        a.GetEResult()
+                        a.GetEResult(),
                       ),
                       null
                     );
                   let n = "";
                   const s = yield O.Z.Get().QueueAppRequest(
                     parseInt(e.appid),
-                    {}
+                    {},
                   );
                   if (1 == s) {
                     const t = O.Z.Get().GetApp(parseInt(e.appid));
@@ -2265,7 +2267,7 @@
                 });
               })(a, i);
             }),
-          { staleTime: 1 / 0 }
+          { staleTime: 1 / 0 },
         );
         return n.isSuccess ? n.data : null;
       }
@@ -2436,12 +2438,12 @@
               return t.ticket
                 ? {
                     display_name: (0, W.Xx)(
-                      "#SteamNotification_HelpRequest_Author"
+                      "#SteamNotification_HelpRequest_Author",
                     ),
                     title: (0, W.Xx)("#SteamNotification_HelpRequest_Title"),
                     body: (0, W.Xx)(
                       "#SteamNotification_HelpRequest_Body",
-                      t.ticket
+                      t.ticket,
                     ),
                     link: C.De.HELP_BASE_URL + "wizard/HelpRequest/" + t.ticket,
                   }
@@ -2461,7 +2463,7 @@
               let i = JSON.parse(e);
               return i.title || i.body
                 ? ((i.display_name = (0, W.Xx)(
-                    "#SteamNotifications_MajorSale"
+                    "#SteamNotifications_MajorSale",
                   )),
                   t &&
                     (null == i
@@ -2469,10 +2471,10 @@
                       : i.link.includes("https://store.steampowered.com")) &&
                     ((i.link = i.link.replace(
                       "https://store.steampowered.com",
-                      C.De.STORE_BASE_URL
+                      C.De.STORE_BASE_URL,
                     )),
                     (i.body = (0, W.Xx)(
-                      "#SteamNotifications_MajorSale_SteamChina_Title"
+                      "#SteamNotifications_MajorSale_SteamChina_Title",
                     ))),
                   i)
                 : (te(), null);
@@ -2490,7 +2492,7 @@
               return t.msgid
                 ? {
                     title: (0, W.Xx)(
-                      "#SteamNotification_ModeratorMessage_Title"
+                      "#SteamNotification_ModeratorMessage_Title",
                     ),
                     link:
                       C.De.COMMUNITY_BASE_URL +
@@ -2622,9 +2624,9 @@
                 "div",
                 { className: c().PinnedBody },
                 r.createElement("span", { className: c().Icon }, i),
-                s
-              )
-            )
+                s,
+              ),
+            ),
           )
         );
       }
@@ -2708,8 +2710,8 @@
               }),
               r.createElement("div", {
                 className: (0, n.Z)(c().Body, c().ShimmerBody),
-              })
-            )
+              }),
+            ),
           );
         }
         return r.createElement(
@@ -2726,7 +2728,7 @@
             r.createElement(
               "div",
               { className: c().StandardLogoDimensions },
-              e.logo
+              e.logo,
             ),
             e.personaStatus &&
               r.createElement("div", {
@@ -2734,9 +2736,9 @@
               }),
             r.createElement("div", { className: c().Content }, e.children),
             h,
-            m && r.createElement(B, { location: i })
+            m && r.createElement(B, { location: i }),
           ),
-          l || null
+          l || null,
         );
       }
       function B(e) {
@@ -2745,7 +2747,7 @@
           ? r.createElement(
               "div",
               { className: c().NewIndicator },
-              r.createElement(d.Cdc, null)
+              r.createElement(d.Cdc, null),
             )
           : null;
       }
@@ -2764,7 +2766,7 @@
           { className: c().Header },
           r.createElement(h, { icon: t }),
           !!i && r.createElement(S, { title: i }),
-          o && l({ timestamp: a })
+          o && l({ timestamp: a }),
         );
       }
       function h(e) {
@@ -2776,14 +2778,14 @@
       function v(e) {
         let t = (0, n.Z)(
           c().StandardNotificationDescription,
-          e.multiline && c().Multiline
+          e.multiline && c().Multiline,
         );
         return r.createElement("div", { className: t }, e.children);
       }
       function w(e) {
         let t = (0, n.Z)(
           c().StandardNotificationSubText,
-          e.multiline && c().Multiline
+          e.multiline && c().Multiline,
         );
         return r.createElement("div", { className: t }, e.children);
       }
@@ -2845,7 +2847,7 @@
               (i) => {
                 e && e(i), t && t();
               },
-              [e, t]
+              [e, t],
             );
           })(t, i);
         return r.createElement(
@@ -2869,10 +2871,10 @@
               "div",
               { className: B().Header },
               r.createElement("div", { className: B().Icon }, n),
-              r.createElement("div", { className: B().Title }, s)
+              r.createElement("div", { className: B().Title }, s),
             ),
-            r.createElement("div", { className: B().Body }, o)
-          )
+            r.createElement("div", { className: B().Body }, o),
+          ),
         );
       }
       var h = i(2427),
@@ -2924,7 +2926,7 @@
         return y
           ? r.createElement(
               b,
-              Object.assign({}, e, { logo: N, icon: l, title: u, body: _ })
+              Object.assign({}, e, { logo: N, icon: l, title: u, body: _ }),
             )
           : r.createElement(
               f.gd,
@@ -2937,7 +2939,7 @@
                 fnRenderTimestamp: c,
               }),
               r.createElement(f.ur, { multiline: !p }, _),
-              !!p && r.createElement(f.pv, null, p)
+              !!p && r.createElement(f.pv, null, p),
             );
       }
       function E(e) {
@@ -2963,7 +2965,7 @@
                 icon: e.icon,
                 title: l,
                 body: m,
-              })
+              }),
             )
           : r.createElement(
               f.gd,
@@ -2976,7 +2978,7 @@
                 fnRenderTimestamp: s,
               }),
               r.createElement(f.ur, null, m),
-              r.createElement(f.pv, null, c)
+              r.createElement(f.pv, null, c),
             );
       }
       function M(e) {
@@ -3002,7 +3004,7 @@
                 icon: e.icon,
                 title: c,
                 body: l,
-              })
+              }),
             )
           : r.createElement(
               f.gd,
@@ -3015,7 +3017,7 @@
                 fnRenderTimestamp: s,
               }),
               r.createElement(f.ur, { multiline: !m }, l),
-              !!m && r.createElement(f.pv, null, m)
+              !!m && r.createElement(f.pv, null, m),
             );
       }
       function F(e) {
@@ -3033,11 +3035,11 @@
         let u = "";
         t && 2 == n.state
           ? (u = (0, _.Xx)(
-              "#SteamNotifications_FriendInvite_Description_AwaitingResponse"
+              "#SteamNotifications_FriendInvite_Description_AwaitingResponse",
             ))
           : t && 3 == n.state
           ? (u = (0, _.Xx)(
-              "#SteamNotifications_FriendInvite_Description_Friends"
+              "#SteamNotifications_FriendInvite_Description_Friends",
             ))
           : t &&
             (u = (0, _.Xx)("#SteamNotifications_FriendInvite_Description"));
@@ -3051,7 +3053,7 @@
             d.s,
             { style: { position: "relative" } },
             e && r.createElement(w.Fsn, { className: S().FriendIndicator }),
-            r.createElement("img", { className: t, src: i, onError: B })
+            r.createElement("img", { className: t, src: i, onError: B }),
           );
         }
         const v =
@@ -3065,7 +3067,7 @@
                 icon: e.icon,
                 title: (0, _.Xx)("#Notification_FriendInvite_Title"),
                 body: v,
-              })
+              }),
             )
           : r.createElement(
               f.gd,
@@ -3078,7 +3080,7 @@
                 fnRenderTimestamp: m,
               }),
               r.createElement(f.ur, { multiline: !u }, v),
-              !!u && r.createElement(f.pv, null, u)
+              !!u && r.createElement(f.pv, null, u),
             );
       }
       function R(e) {
@@ -3116,7 +3118,7 @@
               style: { backgroundColor: t, justifyContent: "center" },
               src: e,
               onError: h,
-            })
+            }),
           );
         }
         const N = 753 == parseInt(s.appid);
@@ -3148,11 +3150,11 @@
               ? u > 1
                 ? (0, _.Xx)(
                     "#Notification_Item_Body_Short_Plural",
-                    null == a ? void 0 : a.app_name
+                    null == a ? void 0 : a.app_name,
                   )
                 : (0, _.Xx)(
                     "#Notification_Item_Body_Short",
-                    null == a ? void 0 : a.app_name
+                    null == a ? void 0 : a.app_name,
                   )
               : (0, _.Xx)("#Notification_Item_Body_Generic")),
             r.createElement(
@@ -3162,7 +3164,7 @@
                 icon: e.icon,
                 title: (0, _.Xx)("#Notification_ItemAnnouncement_Body"),
                 body: t,
-              })
+              }),
             )
           );
         }
@@ -3177,7 +3179,7 @@
             fnRenderTimestamp: c,
           }),
           r.createElement(f.ur, { multiline: !T }, E),
-          !!T && r.createElement(f.pv, null, T)
+          !!T && r.createElement(f.pv, null, T),
         );
       }
       function I(e) {
@@ -3200,7 +3202,7 @@
                 c && (null == i ? void 0 : i.GetName())
                   ? (0, _.Xx)(
                       "#SteamNotification_AsyncGame_Action_Short",
-                      i.GetName()
+                      i.GetName(),
                     )
                   : (0, _.Xx)("#SteamNotification_AsyncGame_Action"))
             : a.state == l.QN.k_EAsyncGameSessionUserStateDone &&
@@ -3208,7 +3210,7 @@
                 c && (null == i ? void 0 : i.GetName())
                   ? (0, _.Xx)(
                       "#SteamNotification_AsyncGame_Done_Short",
-                      i.GetName()
+                      i.GetName(),
                     )
                   : (0, _.Xx)("#SteamNotification_AsyncGame_Done")),
           c
@@ -3219,7 +3221,7 @@
                   icon: e.icon,
                   title: (0, _.Xx)("#SteamNotification_AsyncGame_Title"),
                   body: p,
-                })
+                }),
               )
             : r.createElement(
                 f.gd,
@@ -3232,7 +3234,7 @@
                   fnRenderTimestamp: m,
                 }),
                 r.createElement(f.ur, null, p),
-                r.createElement(f.pv, null, null == i ? void 0 : i.GetName())
+                r.createElement(f.pv, null, null == i ? void 0 : i.GetName()),
               )
         );
       }
@@ -3257,7 +3259,7 @@
           [F, R] = r.useState(!1),
           I = () => R(!0),
           [A, k] = (0, v.KU)(
-            u.bclan_account ? u.owner_steam_id.GetAccountID() : void 0
+            u.bclan_account ? u.owner_steam_id.GetAccountID() : void 0,
           ),
           z = (0, l.Fg)(u) ? m : null,
           D = (0, l.x)(u) ? d : null;
@@ -3274,7 +3276,7 @@
                   ? (0, _.Xx)(
                       "#SteamNotifications_Comment_Player_Profile_By",
                       z,
-                      D
+                      D,
                     )
                   : (0, _.Xx)("#SteamNotifications_Comment_Player_Profile", D)
                 : (0, _.Xx)("#SteamNotifications_Comment_Profile"))
@@ -3290,13 +3292,13 @@
                 ? T
                   ? (0, _.Xx)(
                       "#SteamNotifications_Comment_Your_Screenshot_Game",
-                      T.GetName()
+                      T.GetName(),
                     )
                   : (0, _.Xx)("#SteamNotifications_Comment_Your_Screenshot")
                 : T
                 ? (0, _.Xx)(
                     "#SteamNotifications_Comment_Screenshot_Game",
-                    T.GetName()
+                    T.GetName(),
                   )
                 : (0, _.Xx)("#SteamNotifications_Comment_Screenshot"))
           : !E &&
@@ -3310,8 +3312,8 @@
                 null,
                 (0, _.Xx)(
                   "#SteamNotifications_Comment_NewDiscussion",
-                  u.comment
-                )
+                  u.comment,
+                ),
               )
             : r.createElement(f.pv, null, '"', u.comment, '"');
         let U = (0, _.Xx)("#SteamNotifications_Comment"),
@@ -3322,7 +3324,7 @@
             ? (O = r.createElement(
                 "div",
                 { className: S().AllNotificationsCommentPlus },
-                e
+                e,
               ))
             : (U = U + " " + e);
         }
@@ -3335,7 +3337,7 @@
               "div",
               { style: { position: "relative" } },
               t && r.createElement(w.Fsn, { className: S().FriendIndicator }),
-              r.createElement("img", { className: e, src: c, onError: I })
+              r.createElement("img", { className: e, src: c, onError: I }),
             );
           } else
             (null == k ? void 0 : k.avatar_medium_url) &&
@@ -3348,7 +3350,12 @@
         return M
           ? r.createElement(
               b,
-              Object.assign({}, e, { logo: C, icon: e.icon, title: U, body: E })
+              Object.assign({}, e, {
+                logo: C,
+                icon: e.icon,
+                title: U,
+                body: E,
+              }),
             )
           : r.createElement(
               f.gd,
@@ -3362,7 +3369,7 @@
               }),
               r.createElement(f.ur, null, E),
               G,
-              O
+              O,
             );
       }
       function k(e) {
@@ -3391,35 +3398,35 @@
                       r.createElement(
                         "span",
                         { style: { color: "#FFFFFF" } },
-                        t.GetBestPurchasePriceFormatted()
-                      )
+                        t.GetBestPurchasePriceFormatted(),
+                      ),
                     ))
                   : (p = (0, _.kQ)(
                       "#SteamNotifications_Wishlist_OnSale_Single",
                       r.createElement(
                         "span",
                         { style: { color: "#FFFFFF" } },
-                        t.GetBestPurchasePriceFormatted()
-                      )
+                        t.GetBestPurchasePriceFormatted(),
+                      ),
                     ))
                 : 2 == a.count
                 ? m
                   ? (u = (0, _.Xx)(
                       "#SteamNotifications_Wishlist_OnSale_PlusOne_Short",
-                      t.GetName()
+                      t.GetName(),
                     ))
                   : (p = (0, _.Xx)(
-                      "#SteamNotifications_Wishlist_OnSale_PlusOne"
+                      "#SteamNotifications_Wishlist_OnSale_PlusOne",
                     ))
                 : m
                 ? (u = (0, _.Xx)(
                     "#SteamNotifications_Wishlist_OnSale_PlusMany_Short",
                     t.GetName(),
-                    a.count - 1
+                    a.count - 1,
                   ))
                 : (p = (0, _.Xx)(
                     "#SteamNotifications_Wishlist_OnSale_PlusMany",
-                    a.count - 1
+                    a.count - 1,
                   )))
             : (u = (0, _.Xx)("#SteamNotifications_Wishlist_Generic")),
           m
@@ -3430,7 +3437,7 @@
                   icon: e.icon,
                   title: (0, _.Xx)("#SteamNotifications_Wishlist"),
                   body: u,
-                })
+                }),
               )
             : r.createElement(
                 f.gd,
@@ -3443,7 +3450,7 @@
                   fnRenderTimestamp: l,
                 }),
                 r.createElement(f.ur, { multiline: !p }, u),
-                !!p && r.createElement(f.pv, null, p)
+                !!p && r.createElement(f.pv, null, p),
               )
         );
       }
@@ -3460,7 +3467,7 @@
                 src: null == e ? void 0 : e.GetAssets().GetCommunityIconURL(),
                 className: S().ShortLogoDimensions,
                 onError: s,
-              })
+              }),
             )
           : r.createElement(
               d.s,
@@ -3480,7 +3487,7 @@
                   height: 32,
                   width: 32,
                 },
-              })
+              }),
             );
       }
       const D = {
@@ -3511,7 +3518,7 @@
             [S, v] = (0, o.Jq)(h),
             [N] = (0, m.vs)(
               null === (n = p.json_data) || void 0 === n ? void 0 : n.app_id,
-              { include_assets: !0 }
+              { include_assets: !0 },
             );
           return r.createElement(
             "a",
@@ -3536,7 +3543,7 @@
               ownerDisplayName: null == v ? void 0 : v.persona_name,
               bNewIndicator: (0, l.Pi)(s.item),
               app: N,
-            })
+            }),
           );
         },
         8: function (e) {
@@ -3556,7 +3563,7 @@
               const e = d.appid ? `?appid=${d.appid}` : "";
               p(
                 c.De.STORE_BASE_URL +
-                  `wishlist/profiles/${f}/${e}#sort=discount`
+                  `wishlist/profiles/${f}/${e}#sort=discount`,
               );
             } else p(u.GetStorePageURL());
           }, [d, u, f]);
@@ -3574,7 +3581,7 @@
               nUnread: t.rgunread.length,
               eUIMode: s,
               bNewIndicator: (0, l.Pi)(t.item),
-            })
+            }),
           );
         },
         5: function (e) {
@@ -3604,7 +3611,7 @@
               requestorAvatarURL: null == g ? void 0 : g.avatar_url_medium,
               requestorName: null == g ? void 0 : g.persona_name,
               bNewIndicator: (0, l.Pi)(t.item),
-            })
+            }),
           );
         },
         4: function (e) {
@@ -3633,7 +3640,7 @@
               nUnread: t.rgunread.length,
               itemState: u,
               bNewIndicator: (0, l.Pi)(t.item),
-            })
+            }),
           );
         },
         2: function (e) {
@@ -3661,7 +3668,7 @@
               nUnread: t.rgunread.length,
               senderName: null == g ? void 0 : g.persona_name,
               bNewIndicator: (0, l.Pi)(t.item),
-            })
+            }),
           );
         },
         9: function (e) {
@@ -3689,7 +3696,7 @@
               nUnread: t.rgunread.length,
               displayName: null == g ? void 0 : g.persona_name,
               bNewIndicator: (0, l.Pi)(t.item),
-            })
+            }),
           );
         },
         12: function (e) {
@@ -3702,7 +3709,7 @@
             s = `${c.De.COMMUNITY_BASE_URL}my/gamenotifications/`,
             o = (0, r.useMemo)(
               () => (0, l.ZJ)(t.item.body_data),
-              [t.item.body_data]
+              [t.item.body_data],
             ),
             [d] = (0, m.vs)(o.appid, { include_assets: !0 });
           return r.createElement(
@@ -3719,7 +3726,7 @@
               nUnread: t.rgunread.length,
               app: d,
               bNewIndicator: (0, l.Pi)(t.item),
-            })
+            }),
           );
         },
       };
@@ -3757,7 +3764,7 @@
             nUnread: a.rgunread.length,
             app: u,
             bNewIndicator: (0, l.Pi)(a.item),
-          })
+          }),
         );
       }
     },

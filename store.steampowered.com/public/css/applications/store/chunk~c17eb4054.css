@@ -574,7 +574,9 @@
 }
 .ChatMessageEntryVoice .VoiceControlPanelButton.ToggleMicrophoneButton {
   transform: translateX(-32px) scale(0.5);
-  transition: transform 0.1s ease-in-out, opacity 0.3s ease-in-out;
+  transition:
+    transform 0.1s ease-in-out,
+    opacity 0.3s ease-in-out;
   opacity: 0;
   cursor: pointer;
 }
@@ -582,7 +584,9 @@
 .ChatMessageEntryVoice.Active .VoiceControlPanelButton.ToggleMicrophoneButton {
   opacity: 1;
   transform: translateX(0px) scale(1);
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out,
+  transition:
+    transform 0.3s ease-in-out,
+    opacity 0.3s ease-in-out,
     background-color 0.1s ease-in-out;
 }
 .ChatMessageEntryVoice .VoiceControlPanelButton.chatEndVoiceChat {

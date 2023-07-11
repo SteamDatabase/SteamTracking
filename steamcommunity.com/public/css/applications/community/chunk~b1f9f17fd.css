@@ -3179,21 +3179,27 @@ html.responsive.touch
   cursor: pointer;
   box-shadow: 3px -6px 5px -6px rgba(35, 35, 35, 0.4);
   transform: rotate(0deg) scale(1);
-  -webkit-transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+  -webkit-transition:
+    transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
     filter 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  -moz-transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+  -moz-transition:
+    transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
     filter 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+  transition:
+    transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
     filter 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .storywidget_BookmarkCtn_1YzIh:hover {
   box-shadow: 3px -6px 10px -6px rgba(35, 35, 35, 0.4);
   transform: rotate(3deg) scale(1.07);
-  -webkit-transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+  -webkit-transition:
+    transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
     filter 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  -moz-transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+  -moz-transition:
+    transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
     filter 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+  transition:
+    transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
     filter 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .storywidget_BookmarkTriangle_3lQDm {
@@ -3393,7 +3399,9 @@ html.responsive.touch
   margin: 4px;
   margin-top: 0px;
   margin-bottom: 18px;
-  box-shadow: 0 0 0 2px rgba(35, 35, 35, 0.4), 0 0 0 4px #f7f0e4,
+  box-shadow:
+    0 0 0 2px rgba(35, 35, 35, 0.4),
+    0 0 0 4px #f7f0e4,
     0 0 0 6px rgba(35, 35, 35, 0.4);
 }
 .storywidget_OptionTextNotice_3_DMH {
@@ -3438,11 +3446,14 @@ html.responsive.touch
   border-radius: 5px;
   box-shadow: 2px 4px 16px rgba(61, 62, 56, 0.6);
   transform: rotateZ(3deg) scale(1);
-  -webkit-transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+  -webkit-transition:
+    transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
     filter 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  -moz-transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+  -moz-transition:
+    transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
     filter 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+  transition:
+    transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
     filter 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .storywidget_ResultBadge_2BETt.storywidget_Opening_31yf0,
@@ -3452,11 +3463,14 @@ html.responsive.touch
 .storywidget_ResultBadge_2BETt.storywidget_Opening_31yf0:hover,
 .storywidget_ResultBadge_2BETt.storywidget_Open_2l4Gw:hover {
   transform: rotateZ(1.5deg) scale(1.03);
-  -webkit-transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+  -webkit-transition:
+    transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
     filter 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  -moz-transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+  -moz-transition:
+    transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
     filter 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+  transition:
+    transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
     filter 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .storywidget_BadgeImage_2X2A9 {

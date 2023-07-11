@@ -150,7 +150,7 @@
                     4,
                     4,
                     void 0,
-                    e
+                    e,
                   );
                   if (!e.token.reason) {
                     s = s || [];
@@ -172,7 +172,7 @@
                           (e.MarkEventRead(
                             t.GID,
                             t.clanSteamID.GetAccountID(),
-                            l
+                            l,
                           ),
                           (n = !0));
                       }
@@ -183,8 +183,8 @@
                             e.MarkEventShown(
                               t.GID,
                               t.clanSteamID.GetAccountID(),
-                              l
-                            )
+                              l,
+                            ),
                           ),
                         (n = !0)),
                         n && e.Flush();
@@ -195,7 +195,7 @@
                   d.current && d.current("PartnerEventRow: unmounting");
                 }
               ),
-              [t, a, r, l]
+              [t, a, r, l],
             ),
             S)
           )
@@ -216,16 +216,16 @@
                   {
                     className: (0, A.Z)(
                       B().EventSectionTitle,
-                      "EventSectionTitle"
+                      "EventSectionTitle",
                     ),
                   },
                   (0, N.kQ)("#EventBrowse_MoreEventsTitle", y.group_name),
-                  " "
+                  " ",
                 ),
                 i.createElement(
                   "div",
                   { className: B().EventSectionSpacer },
-                  " "
+                  " ",
                 ),
                 s
                   ? i.createElement(
@@ -234,7 +234,7 @@
                         className: B().EventSectionMoreBtn,
                         onClick: () => I(!0),
                       },
-                      (0, N.Xx)("#EventBrowse_MoreEventsBtn")
+                      (0, N.Xx)("#EventBrowse_MoreEventsBtn"),
                     )
                   : i.createElement(
                       g.JW,
@@ -243,8 +243,8 @@
                         route: g.Ue.k_eViewWebSiteHub,
                         className: B().EventSectionMoreBtn,
                       },
-                      (0, N.Xx)("#EventBrowse_MoreEventsBtn")
-                    )
+                      (0, N.Xx)("#EventBrowse_MoreEventsBtn"),
+                    ),
               ),
               i.createElement(
                 m.s,
@@ -254,8 +254,8 @@
                   navEntryPreferPosition: u.c4.PREFERRED_CHILD,
                 },
                 _.map((e) =>
-                  i.createElement(H, { key: e.AnnouncementGID, event: e })
-                )
+                  i.createElement(H, { key: e.AnnouncementGID, event: e }),
+                ),
               ),
               Boolean(f) &&
                 i.createElement(b.x, {
@@ -264,8 +264,8 @@
                   announcementGID: _[0].AnnouncementGID,
                   closeModal: () => I(!1),
                   partnerEventStore: r,
-                })
-            )
+                }),
+            ),
           );
         }),
         V = 30;
@@ -322,7 +322,7 @@
               {
                 className: (0, A.Z)(
                   x().OtherEvents_EventCtn,
-                  x().HoversEnabled
+                  x().HoversEnabled,
                 ),
                 eventModel: t,
                 route: g.Ue.k_eView,
@@ -333,7 +333,7 @@
                 "div",
                 { className: x().EventSummaryContainer },
                 i.createElement("div", { className: x().EventSummaryType }, v),
-                i.createElement("div", { className: x().EventSummaryText }, E)
+                i.createElement("div", { className: x().EventSummaryText }, E),
               ),
               i.createElement("div", {
                 className: x().OtherEvents_BGImage,
@@ -351,7 +351,7 @@
                   i.createElement("img", {
                     src: m,
                     className: x().OtherEvents_MainImage,
-                  })
+                  }),
                 ),
                 i.createElement(
                   "div",
@@ -359,13 +359,13 @@
                   i.createElement(
                     "div",
                     { className: x().OtherEvents_TextTitle },
-                    u
+                    u,
                   ),
                   Boolean(T) &&
                     i.createElement(
                       "div",
                       { className: x().OtherEvents_SubTitle },
-                      T
+                      T,
                     ),
                   Boolean(D > I)
                     ? i.createElement(
@@ -374,17 +374,17 @@
                         i.createElement(y.H6, {
                           bSingleLine: !0,
                           dateAndTime: t.GetStartTimeAndDateUnixSeconds(),
-                        })
+                        }),
                       )
                     : i.createElement(y.H6, {
                         bSingleLine: !0,
                         bOnlyDate: !0,
                         dateAndTime: t.GetStartTimeAndDateUnixSeconds(),
-                      })
-                )
-              )
+                      }),
+                ),
+              ),
             ),
-            Boolean(n && t.appid) && i.createElement(z, { appid: t.appid })
+            Boolean(n && t.appid) && i.createElement(z, { appid: t.appid }),
           )
         );
       }
@@ -400,7 +400,7 @@
           m.s,
           Object.assign(
             { className: (0, A.Z)(x().AppCapsuleCtn, "AppCapsuleCtn") },
-            (0, I.h)(n, r, o)
+            (0, I.h)(n, r, o),
           ),
           i.createElement(
             M.ll,
@@ -414,7 +414,7 @@
             i.createElement("img", {
               className: x().AppCapsuleImage,
               src: n.GetAssets().GetSmallCapsuleURL(),
-            })
+            }),
           ),
           Boolean(!a && !n.BIsFree()) &&
             i.createElement(
@@ -424,28 +424,28 @@
                   x().AppCapsulePrice,
                   Boolean(null == l ? void 0 : l.discount_pct)
                     ? U().Discounted
-                    : ""
+                    : "",
                 ),
               },
               Boolean((null == l ? void 0 : l.discount_pct) && s) &&
                 i.createElement(
                   "div",
                   { className: U().DiscountIconCtn },
-                  i.createElement(L.dCe, null)
+                  i.createElement(L.dCe, null),
                 ),
               Boolean((null == l ? void 0 : l.discount_pct) && !s) &&
                 i.createElement(
                   "span",
                   { className: U().StoreSaleDiscountBox },
-                  `-${null == l ? void 0 : l.discount_pct}%`
+                  `-${null == l ? void 0 : l.discount_pct}%`,
                 ),
               Boolean(l.final_price_in_cents) &&
                 i.createElement(
                   "span",
                   { className: U().StoreSalePriceBox },
-                  l.formatted_final_price
-                )
-            )
+                  l.formatted_final_price,
+                ),
+            ),
         );
       }
       function F(e) {
@@ -459,12 +459,12 @@
                     : t.GetImageURLWithFallback(
                         "capsule",
                         r,
-                        p.FN.capsule_main
+                        p.FN.capsule_main,
                       ),
                   t.GetNameWithFallback(r),
                   t.GetCategoryAsString(),
                 ]
-              : [void 0, void 0, void 0]
+              : [void 0, void 0, void 0],
           );
         return t
           ? i.createElement(
@@ -484,8 +484,8 @@
                   i.createElement("img", {
                     src: o,
                     className: x().OtherEvents_MainImage,
-                  })
-                )
+                  }),
+                ),
               ),
               i.createElement(
                 "div",
@@ -496,15 +496,15 @@
                   i.createElement(
                     "div",
                     { className: x().HorizontalDescription },
-                    d
+                    d,
                   ),
                   i.createElement(y.H6, {
                     bSingleLine: !0,
                     dateAndTime: t.GetStartTimeAndDateUnixSeconds(),
-                  })
+                  }),
                 ),
-                i.createElement("div", { className: x().HorizontalTitle }, l)
-              )
+                i.createElement("div", { className: x().HorizontalTitle }, l),
+              ),
             )
           : i.createElement("div", { className: x().OtherEvents_EventCtn });
       }
@@ -565,7 +565,7 @@
               let t = (0, u.l)(e);
               console.error(
                 "LoadBroadcastDebugInfo: Failed " + t.strErrorMsg,
-                t
+                t,
               );
             }
             return null;
@@ -590,7 +590,7 @@
               if (a && a.token.reason) return !1;
               if (e && 200 == e.status && e.data && 1 == e.data.success) {
                 const e = m.c9.GetOrCreateBroadcastInfo(
-                  this.m_steamid.ConvertTo64BitString()
+                  this.m_steamid.ConvertTo64BitString(),
                 );
                 return (
                   e &&
@@ -604,7 +604,7 @@
               let t = (0, u.l)(e);
               console.error(
                 "UpdateBroadcastSettings: Failed " + t.strErrorMsg,
-                t
+                t,
               );
             }
             return !1;
@@ -624,7 +624,7 @@
               "StopBroadcast",
               n,
               r,
-              e
+              e,
             );
           });
         }
@@ -645,7 +645,7 @@
               "SetBroadcasterRestrictions",
               o,
               l,
-              a
+              a,
             );
           });
         }
@@ -663,7 +663,7 @@
               "SetUnBannable",
               n,
               r,
-              e
+              e,
             );
           });
         }
@@ -682,7 +682,7 @@
               "SendUserReportOnBroadcast",
               n,
               r,
-              null
+              null,
             );
           });
         }
@@ -701,7 +701,7 @@
               let a = (0, u.l)(t);
               console.error(
                 `CCommunityBroadcastStore:${e}: Failed ` + a.strErrorMsg,
-                a
+                a,
               );
             }
             return !1;
@@ -757,7 +757,7 @@
               () => () => {
                 t.current && t.current("BroadcastDebugSection: unmounting");
               },
-              []
+              [],
             ),
             n.createElement(
               I.SV,
@@ -779,11 +779,11 @@
                             r(yield v.Get().LoadBroadcastDebugInfo(e));
                         }),
                     },
-                    "(VO) Load Debug Info"
-                  )
+                    "(VO) Load Debug Info",
+                  ),
                 ),
-                n.createElement(I.SV, null, n.createElement(V, { info: a }))
-              )
+                n.createElement(I.SV, null, n.createElement(V, { info: a })),
+              ),
             )
           );
         },
@@ -813,8 +813,8 @@
                   n.createElement(R.H6, {
                     dateAndTime: a.last_error_time,
                     bSingleLine: !0,
-                  })
-                )
+                  }),
+                ),
               ),
             n.createElement(
               "div",
@@ -822,7 +822,7 @@
               n.createElement(
                 "div",
                 { className: L.Header },
-                "Broadcast Setup"
+                "Broadcast Setup",
               ),
               n.createElement(
                 "div",
@@ -830,7 +830,7 @@
                 "Broadcaster: ",
                 a.steam_id,
                 ", SteamID: ",
-                l
+                l,
               ),
               n.createElement(
                 "div",
@@ -838,7 +838,7 @@
                 "Directory Server: ",
                 a.directory_server,
                 ", SessionID: ",
-                a.broadcast_id
+                a.broadcast_id,
               ),
               n.createElement(
                 "div",
@@ -846,7 +846,7 @@
                 "Ingester Server: ",
                 a.relay_server,
                 ", UploadID: ",
-                a.upload_id
+                a.upload_id,
               ),
               n.createElement("div", null, "Origin Server: ", a.origin_server),
               n.createElement(
@@ -855,14 +855,14 @@
                 "Chat Server: ",
                 a.chat_server,
                 ", chat_id: ",
-                a.chat_id
+                a.chat_id,
               ),
               n.createElement(
                 "div",
                 null,
                 "Transcoder Server : ",
-                a.transcode_server
-              )
+                a.transcode_server,
+              ),
             ),
             n.createElement(
               "div",
@@ -874,7 +874,7 @@
                 "Client: ",
                 a.remote_address,
                 " ",
-                Boolean(a.is_rtmp) ? "(RTMP)" : "(STEAM CLIENT)"
+                Boolean(a.is_rtmp) ? "(RTMP)" : "(STEAM CLIENT)",
               ),
               n.createElement(
                 "div",
@@ -887,7 +887,7 @@
                 a.upload_fps,
                 ", ",
                 a.upload_bandwidth,
-                " kbps "
+                " kbps ",
               ),
               n.createElement(
                 "div",
@@ -898,7 +898,7 @@
                 a.upload_audio_samplerate,
                 "Hz, ",
                 a.upload_audio_bitrate / 1e3,
-                " kbps "
+                " kbps ",
               ),
               n.createElement(
                 "div",
@@ -909,7 +909,7 @@
                 a.upload_avg_bandwidth,
                 " kbps, ",
                 a.upload_avg_key_interval,
-                " msec key frame interval"
+                " msec key frame interval",
               ),
               n.createElement(
                 "div",
@@ -919,12 +919,12 @@
                 " video frames,  ",
                 Math.round(
                   (a.upload_current_video_pts - a.upload_first_video_pts) /
-                    a.upload_video_timescale
+                    a.upload_video_timescale,
                 ),
                 " seconds ( ",
                 (0, U.l)(a.upload_total_bytes_uploaded || 0, 1),
-                " ) "
-              )
+                " ) ",
+              ),
             ),
             Boolean(a.transcode_server) &&
               n.createElement(
@@ -933,7 +933,7 @@
                 n.createElement(
                   "div",
                   { className: L.Header },
-                  "Transcoder Info"
+                  "Transcoder Info",
                 ),
                 n.createElement(
                   "div",
@@ -950,7 +950,7 @@
                   a.transcoder_frames_to_decode,
                   " queued,  ",
                   a.transcoder_frames_total_decoded,
-                  " decoded"
+                  " decoded",
                 ),
                 a.transcoder_streams.map((e) =>
                   n.createElement(
@@ -970,9 +970,9 @@
                     e.frames_to_encode,
                     " queued, ",
                     e.frames_total_encoded,
-                    " encoded"
-                  )
-                )
+                    " encoded",
+                  ),
+                ),
               ),
             n.createElement(
               "div",
@@ -1003,8 +1003,8 @@
                       2 * e.num_segments_cached,
                       " seconds cached ( ",
                       (0, U.l)(e.memory_used, 2),
-                      " )"
-                    )
+                      " )",
+                    ),
                   ),
               "Audio Stream ",
               a.origin_audio_stream.representation_id,
@@ -1022,7 +1022,7 @@
               2 * a.origin_audio_stream.num_segments_cached,
               " seconds cached ( ",
               (0, U.l)(a.origin_audio_stream.memory_used, 2),
-              " )"
+              " )",
             ),
             n.createElement(
               "div",
@@ -1039,14 +1039,14 @@
                 a.total_unique_viewers,
                 " total unique, ",
                 a.max_concurrent_viewers,
-                " max concurrent"
+                " max concurrent",
               ),
               n.createElement(
                 "div",
                 null,
                 "Average time watched: ",
                 a.average_watch_duration,
-                " seconds"
+                " seconds",
               ),
               n.createElement(
                 "div",
@@ -1055,10 +1055,10 @@
                 a.added_viewers_last_minute,
                 " watch requests, ",
                 a.rejected_viewers_last_minute,
-                " rejected"
+                " rejected",
               ),
               n.createElement("div", null, "Restrictions: ", a.restriction),
-              n.createElement("div", null, a.extra_viewer_info)
+              n.createElement("div", null, a.extra_viewer_info),
             ),
             n.createElement(
               "div",
@@ -1069,26 +1069,26 @@
                 "div",
                 null,
                 "is replay local file? ",
-                a.is_replay_local_file
+                a.is_replay_local_file,
               ),
               n.createElement(
                 "div",
                 null,
                 "is replay clip? ",
-                a.is_replay_clip
+                a.is_replay_clip,
               ),
               n.createElement(
                 "div",
                 null,
                 "is capturing VOD? ",
-                a.is_capturing_vod
+                a.is_capturing_vod,
               ),
               n.createElement(
                 "div",
                 null,
                 "is white listed for store streaming? ",
-                a.is_whitelisted
-              )
+                a.is_whitelisted,
+              ),
             ),
             n.createElement(
               "div",
@@ -1104,8 +1104,8 @@
                 n.createElement(
                   "div",
                   { className: L.AppSummaryWidgetCtn },
-                  n.createElement(N.ju, { id: a.app_id, type: "game" })
-                )
+                  n.createElement(N.ju, { id: a.app_id, type: "game" }),
+                ),
             ),
             n.createElement(
               "div",
@@ -1113,16 +1113,16 @@
               n.createElement(
                 "div",
                 { className: L.Header },
-                "Manifest Information"
+                "Manifest Information",
               ),
               n.createElement(
                 "div",
                 null,
                 "Heartbeat Interval: ",
-                s.m_data.heartbeat_interval
+                s.m_data.heartbeat_interval,
               ),
               n.createElement("div", null, "DASH MPEG Url: ", s.m_data.url),
-              n.createElement("div", null, "HLS Url: ", s.m_data.hls_url)
+              n.createElement("div", null, "HLS Url: ", s.m_data.hls_url),
             ),
             n.createElement(B.zx, { onClick: () => o(!r) }, "Toggle Raw Data"),
             Boolean(r) &&
@@ -1132,16 +1132,16 @@
                 n.createElement(
                   "div",
                   { className: L.SubSection },
-                  n.createElement(M.G, { data: a })
+                  n.createElement(M.G, { data: a }),
                 ),
                 n.createElement(
                   "div",
                   { className: L.SubSection },
                   n.createElement(M.G, {
                     data: (null == s ? void 0 : s.m_data) || "",
-                  })
-                )
-              )
+                  }),
+                ),
+              ),
           );
         };
       var H = a(55395),
@@ -1192,7 +1192,7 @@
                 persona: t,
                 size: e.size,
                 statusPosition: "bottom",
-              })
+              }),
             ),
             n.createElement(
               "div",
@@ -1204,10 +1204,10 @@
                     href: r,
                     "data-miniprofile": "s" + e.steamid.ConvertTo64BitString(),
                   },
-                  s
+                  s,
                 ),
-              e.children
-            )
+              e.children,
+            ),
           )
         );
       };
@@ -1241,10 +1241,10 @@
                   className: ee.GameCapsule,
                   href: (0, J.OL)(
                     (null == l ? void 0 : l.GetStorePageURL()) ||
-                      _.De.STORE_BASE_URL + "app/" + o
+                      _.De.STORE_BASE_URL + "app/" + o,
                   ),
                 },
-                n.createElement("img", { src: s })
+                n.createElement("img", { src: s }),
               ),
             n.createElement(
               "div",
@@ -1259,14 +1259,14 @@
                   n.createElement(
                     "div",
                     { className: ee.ViewerCount },
-                    (0, x.kb)("#Broadcast_ViewerCount", r.toLocaleString())
-                  )
+                    (0, x.kb)("#Broadcast_ViewerCount", r.toLocaleString()),
+                  ),
                 ),
-                n.createElement(ne, { broadcasterSteamID: t })
+                n.createElement(ne, { broadcasterSteamID: t }),
               ),
-              n.createElement(q, { steamid: t, size: "Medium", bShowName: !0 })
-            )
-          )
+              n.createElement(q, { steamid: t, size: "Medium", bShowName: !0 }),
+            ),
+          ),
         );
       }
       const ae = (0, p.Pi)((e) => {
@@ -1286,13 +1286,13 @@
               {
                 href: (0, J.OL)(
                   (null == l ? void 0 : l.GetStorePageURL()) ||
-                    _.De.STORE_BASE_URL + "app/" + o
+                    _.De.STORE_BASE_URL + "app/" + o,
                 ),
               },
-              Boolean(r) ? r : null == l ? void 0 : l.GetName()
+              Boolean(r) ? r : null == l ? void 0 : l.GetName(),
             ),
             Boolean((null == r ? void 0 : r.length) > 0) &&
-              n.createElement("span", null, " - ", r)
+              n.createElement("span", null, " - ", r),
           );
         }),
         ne = (0, p.Pi)((e) => {
@@ -1303,7 +1303,7 @@
             "div",
             { className: ee.BroadcastUserActionsCtn },
             Boolean(
-              _.L7.steamid != e.broadcasterSteamID.ConvertTo64BitString()
+              _.L7.steamid != e.broadcasterSteamID.ConvertTo64BitString(),
             ) &&
               n.createElement(
                 B.zx,
@@ -1313,24 +1313,24 @@
                     _.L7.logged_in
                       ? (0, T.AM)(
                           n.createElement(re, { broadcasterSteamID: t }),
-                          (0, k.RA)(e)
+                          (0, k.RA)(e),
                         )
                       : (0, T.AM)(
                           n.createElement(w.uH, {
                             strTitle: (0, x.Xx)(
-                              "#EventDisplay_Share_NotLoggedIn"
+                              "#EventDisplay_Share_NotLoggedIn",
                             ),
                             strDescription: (0, x.Xx)(
-                              "#EventDisplay_Share_NotLoggedIn_Description"
+                              "#EventDisplay_Share_NotLoggedIn_Description",
                             ),
                             strOKButtonText: (0, x.Xx)("#MobileLogin_SignIn"),
                             onOK: () => (0, j.X)(),
                           }),
-                          (0, k.RA)(e)
+                          (0, k.RA)(e),
                         );
                   },
                 },
-                n.createElement($.WNf, null)
+                n.createElement($.WNf, null),
               ),
             n.createElement(
               B.zx,
@@ -1339,11 +1339,11 @@
                 onClick: (e) =>
                   (0, Q.b8)(
                     e,
-                    "https://support.steampowered.com/kb_article.php?ref=6730-TOAK-6497"
+                    "https://support.steampowered.com/kb_article.php?ref=6730-TOAK-6497",
                   ),
               },
-              n.createElement($.daM, null)
-            )
+              n.createElement($.daM, null),
+            ),
           );
         }),
         re = (e) => {
@@ -1366,7 +1366,7 @@
               onChange: (e) => a(e.currentTarget.value),
               rows: 10,
               cols: 80,
-            })
+            }),
           );
         };
       var oe = a(70651),
@@ -1379,7 +1379,7 @@
                   broadcastSteamID: e.broadcastSteamID,
                   strAction: a,
                 }),
-                (0, k.RA)(t)
+                (0, k.RA)(t),
               );
             },
             a =
@@ -1392,12 +1392,12 @@
             n.createElement(
               B.zx,
               { onClick: (e) => t(e, "frontpage") },
-              "Remove from Front Page"
+              "Remove from Front Page",
             ),
             n.createElement(
               B.zx,
               { onClick: (e) => t(e, "ban") },
-              "Ban from Broadcasting"
+              "Ban from Broadcasting",
             ),
             n.createElement(
               B.zx,
@@ -1405,17 +1405,17 @@
                 onClick: (t) => {
                   (0, T.AM)(
                     n.createElement(ce, { steamid: e.broadcastSteamID }),
-                    (0, k.RA)(t)
+                    (0, k.RA)(t),
                   );
                 },
               },
-              "Make Unbannable"
+              "Make Unbannable",
             ),
             n.createElement(
               B.zx,
               { onClick: (e) => (0, Q.b8)(e, a) },
-              "Go to Support Page"
-            )
+              "Go to Support Page",
+            ),
           );
         },
         ie = (0, p.Pi)((e) => {
@@ -1429,7 +1429,7 @@
             () => () => {
               p.current && p.current("BroadcastConfirmBanAction: unmounting");
             },
-            []
+            [],
           );
           const E = () => e.closeModal && e.closeModal();
           return n.createElement(
@@ -1453,7 +1453,7 @@
                       null,
                       "frontpage" == a
                         ? "How long should we prevent the broadcast from appearing in community or store?"
-                        : "How long should we prevent the user from Broadcast at all on Steam?"
+                        : "How long should we prevent the user from Broadcast at all on Steam?",
                     ),
                     n.createElement(
                       "div",
@@ -1476,10 +1476,10 @@
                           null,
                           u
                             ? "Successfully Completed Request"
-                            : "Failed to complete request, check browser console and/or try again later"
-                        )
-                    )
-                  )
+                            : "Failed to complete request, check browser console and/or try again later",
+                        ),
+                    ),
+                  ),
                 ),
                 n.createElement(
                   B.$_,
@@ -1488,7 +1488,7 @@
                     ? n.createElement(
                         B.KM,
                         { onClick: E },
-                        (0, x.Xx)("#Button_Dismiss")
+                        (0, x.Xx)("#Button_Dismiss"),
                       )
                     : n.createElement(
                         B.Uq,
@@ -1496,7 +1496,7 @@
                         n.createElement(
                           B.zx,
                           { onClick: E },
-                          (0, x.Xx)("#Button_Cancel")
+                          (0, x.Xx)("#Button_Cancel"),
                         ),
                         n.createElement(
                           B.KM,
@@ -1517,12 +1517,12 @@
                                 }
                               }),
                           },
-                          (0, x.Xx)("#Button_Confirm")
-                        )
-                      )
-                )
-              )
-            )
+                          (0, x.Xx)("#Button_Confirm"),
+                        ),
+                      ),
+                ),
+              ),
+            ),
           );
         }),
         ce = (e) => {
@@ -1534,7 +1534,7 @@
             () => () => {
               d.current && d.current("BroadcastMakeUnbannable: unmounting");
             },
-            []
+            [],
           );
           const m = () => e.closeModal && e.closeModal();
           return n.createElement(
@@ -1556,7 +1556,7 @@
                     n.createElement(
                       "p",
                       null,
-                      "Prevent automatic, report based banning changes to this strema visibility the stream for 1 week?"
+                      "Prevent automatic, report based banning changes to this strema visibility the stream for 1 week?",
                     ),
                     n.createElement(
                       "div",
@@ -1568,10 +1568,10 @@
                           null,
                           s
                             ? "Successfully Set Unbannable"
-                            : "Failed to make Unbannable"
-                        )
-                    )
-                  )
+                            : "Failed to make Unbannable",
+                        ),
+                    ),
+                  ),
                 ),
                 n.createElement(
                   B.$_,
@@ -1580,7 +1580,7 @@
                     ? n.createElement(
                         B.KM,
                         { onClick: m },
-                        (0, x.Xx)("#Button_Dismiss")
+                        (0, x.Xx)("#Button_Dismiss"),
                       )
                     : n.createElement(
                         B.Uq,
@@ -1588,7 +1588,7 @@
                         n.createElement(
                           B.zx,
                           { onClick: m },
-                          (0, x.Xx)("#Button_Cancel")
+                          (0, x.Xx)("#Button_Cancel"),
                         ),
                         n.createElement(
                           B.KM,
@@ -1607,12 +1607,12 @@
                                 }
                               }),
                           },
-                          (0, x.Xx)("#Button_Confirm")
-                        )
-                      )
-                )
-              )
-            )
+                          (0, x.Xx)("#Button_Confirm"),
+                        ),
+                      ),
+                ),
+              ),
+            ),
           );
         },
         de = (0, p.Pi)((e) => {
@@ -1656,11 +1656,11 @@
                               steamIDBroadcast: a,
                               watchLocation: 5,
                               bStartMuted: r,
-                            })
-                          )
-                        )
-                      )
-                    )
+                            }),
+                          ),
+                        ),
+                      ),
+                    ),
                   ),
                 Boolean(!v.Get().BShowOnlyVideo()) &&
                   n.createElement(
@@ -1677,14 +1677,17 @@
                           watchLocation: 6,
                           steamID: a,
                           broadcastID: l ? l.m_ulBroadcastID : void 0,
-                        })
-                      )
-                    )
-                  )
+                        }),
+                      ),
+                    ),
+                  ),
               ),
               Boolean(!v.Get().BShowInIframe()) &&
-                n.createElement(me, { broadcasterSteamID: t, broadcastInfo: s })
-            )
+                n.createElement(me, {
+                  broadcasterSteamID: t,
+                  broadcastInfo: s,
+                }),
+            ),
           );
         }),
         me = (0, p.Pi)((e) => {
@@ -1694,7 +1697,7 @@
             (0, n.useEffect)(() => {
               (0, l.mG)(void 0, void 0, void 0, function* () {
                 let e = yield g.sV.LoadOGGClanInfoForAppID(
-                  Number.parseInt(a.m_strAppId)
+                  Number.parseInt(a.m_strAppId),
                 );
                 o(e);
               });
@@ -1714,8 +1717,8 @@
                     {
                       className: (0, O.Z)(A().ValveOnlyBackground, H.DebugCtn),
                     },
-                    n.createElement(P, null)
-                  )
+                    n.createElement(P, null),
+                  ),
                 ),
               Boolean(a.m_strAppId && Number.parseInt(a.m_strAppId) > 7) &&
                 n.createElement(
@@ -1729,13 +1732,13 @@
                       { className: H.GameAboutTitle },
                       " ",
                       (0, x.Xx)("#Broadcast_About_Game"),
-                      " "
+                      " ",
                     ),
                     n.createElement(
                       "div",
                       { className: A().EventSectionSpacer },
-                      " "
-                    )
+                      " ",
+                    ),
                   ),
                   n.createElement(
                     "div",
@@ -1743,8 +1746,8 @@
                     n.createElement(N.ju, {
                       id: Number.parseInt(a.m_strAppId),
                       type: "game",
-                    })
-                  )
+                    }),
+                  ),
                 ),
               Boolean(r) &&
                 n.createElement(
@@ -1755,15 +1758,15 @@
                     trackingLocation: 6,
                     partnerEventStore: f.j1,
                     bViewAllShowInfiniteScroll: !0,
-                  })
-                )
+                  }),
+                ),
             )
           );
         }),
         ue = (0, p.Pi)((e) => {
           const t = (0, n.useRef)(null);
           let a = m.c9.GetOrCreateBroadcastInfo(
-            e.steamid.ConvertTo64BitString()
+            e.steamid.ConvertTo64BitString(),
           );
           const [r, o] = (0, n.useState)(a.m_strTitle),
             [s, c] = (0, n.useState)(""),
@@ -1776,7 +1779,7 @@
                   t.current && t.current("BroadcastControls: unmounting");
                 }
               ),
-              [a.m_strTitle]
+              [a.m_strTitle],
             ),
             _.L7.accountid != e.steamid.GetAccountID())
           )
@@ -1787,7 +1790,7 @@
             n.createElement(
               "div",
               { className: H.ControlsTitle },
-              (0, x.Xx)("#Broadcaster_Control_title")
+              (0, x.Xx)("#Broadcaster_Control_title"),
             ),
             n.createElement(
               "div",
@@ -1822,16 +1825,16 @@
                             (0, x.Xx)(
                               a
                                 ? "#Broadcast_Control_Success"
-                                : "#Broadcast_Control_Failure"
-                            )
+                                : "#Broadcast_Control_Failure",
+                            ),
                           );
                       }),
                     "data-tooltip-text": (0, x.Xx)(
-                      "#Broadcast_save_title_ttip"
+                      "#Broadcast_save_title_ttip",
                     ),
                   },
-                  (0, x.Xx)("#Broadcast_save_changes")
-                )
+                  (0, x.Xx)("#Broadcast_save_changes"),
+                ),
               ),
               n.createElement(
                 "div",
@@ -1843,10 +1846,10 @@
                       (0, T.AM)(
                         n.createElement(w.uH, {
                           strTitle: (0, x.Xx)(
-                            "#Broadcast_Control_StopBroadcast"
+                            "#Broadcast_Control_StopBroadcast",
                           ),
                           strDescription: (0, x.Xx)(
-                            "#EventEditor_GenericAreYouSure"
+                            "#EventEditor_GenericAreYouSure",
                           ),
                           onOK: () =>
                             (0, l.mG)(void 0, void 0, void 0, function* () {
@@ -1859,20 +1862,20 @@
                                   (0, x.Xx)(
                                     a
                                       ? "#Broadcast_Control_StopSuccess"
-                                      : "#Broadcast_Control_StopFailure"
-                                  )
+                                      : "#Broadcast_Control_StopFailure",
+                                  ),
                                 );
                             }),
                         }),
-                        (0, k.RA)(e)
+                        (0, k.RA)(e),
                       );
                     },
                   },
-                  (0, x.Xx)("#Broadcast_Control_StopBroadcast")
+                  (0, x.Xx)("#Broadcast_Control_StopBroadcast"),
                 ),
-                Boolean(d) && n.createElement("div", null, d)
-              )
-            )
+                Boolean(d) && n.createElement("div", null, d),
+              ),
+            ),
           );
         });
       var _e = a(56368);
@@ -1902,8 +1905,8 @@
                         strSteamID: e.match.params.steamid_or_user_vanity,
                       }),
                   }),
-                  n.createElement(r.AW, { component: o.R })
-                )
+                  n.createElement(r.AW, { component: o.R }),
+                ),
               )
         );
       }

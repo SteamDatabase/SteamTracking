@@ -35,7 +35,7 @@
             a,
             function (t) {
               return e[t];
-            }.bind(null, a)
+            }.bind(null, a),
           );
       return r;
     }),
@@ -124,11 +124,11 @@
         var h = window.cancelAnimationFrame;
         "function" != typeof window.requestAnimationFrame &&
           console.error(
-            "This browser doesn't support requestAnimationFrame. Make sure that you load a polyfill in older browsers. https://reactjs.org/link/react-polyfills"
+            "This browser doesn't support requestAnimationFrame. Make sure that you load a polyfill in older browsers. https://reactjs.org/link/react-polyfills",
           ),
           "function" != typeof h &&
             console.error(
-              "This browser doesn't support cancelAnimationFrame. Make sure that you load a polyfill in older browsers. https://reactjs.org/link/react-polyfills"
+              "This browser doesn't support cancelAnimationFrame. Make sure that you load a polyfill in older browsers. https://reactjs.org/link/react-polyfills",
             );
       }
       var v = !1,
@@ -143,7 +143,7 @@
         (t.unstable_forceFrameRate = function (e) {
           0 > e || 125 < e
             ? console.error(
-                "forceFrameRate takes a positive int between 0 and 125, forcing frame rates higher than 125 fps is not supported"
+                "forceFrameRate takes a positive int between 0 and 125, forcing frame rates higher than 125 fps is not supported",
               )
             : (b = 0 < e ? Math.floor(1e3 / e) : 5);
         });
@@ -391,7 +391,7 @@
         function e(e, t, n, a, o, i) {
           if (i !== r) {
             var s = new Error(
-              "Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types"
+              "Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types",
             );
             throw ((s.name = "Invariant Violation"), s);
           }
@@ -517,9 +517,9 @@
             1, 1, 126, 32, 0, 173, 32, 1, 173, 66, 32, 134, 132, 32, 2, 173, 32,
             3, 173, 66, 32, 134, 132, 130, 34, 4, 66, 32, 135, 167, 36, 0, 32,
             4, 167, 11,
-          ])
+          ]),
         ),
-        {}
+        {},
       ).exports;
     } catch (e) {}
     function r(e, t, n) {
@@ -758,7 +758,7 @@
           u(
             ((p &= 65535) << 16) | (m &= 65535),
             ((c &= 65535) << 16) | (d &= 65535),
-            this.unsigned
+            this.unsigned,
           )
         );
       }),
@@ -772,7 +772,7 @@
           return u(
             n.mul(this.low, this.high, e.low, e.high),
             n.get_high(),
-            this.unsigned
+            this.unsigned,
           );
         if (e.isZero()) return g;
         if (this.eq(k)) return e.isOdd() ? k : g;
@@ -810,7 +810,7 @@
           u(
             ((y &= 65535) << 16) | (b &= 65535),
             ((m &= 65535) << 16) | (h &= 65535),
-            this.unsigned
+            this.unsigned,
           )
         );
       }),
@@ -828,10 +828,10 @@
                   this.low,
                   this.high,
                   e.low,
-                  e.high
+                  e.high,
                 ),
                 n.get_high(),
-                this.unsigned
+                this.unsigned,
               )
             : this;
         if (this.isZero()) return this.unsigned ? y : g;
@@ -883,10 +883,10 @@
                   this.low,
                   this.high,
                   e.low,
-                  e.high
+                  e.high,
                 ),
                 n.get_high(),
-                this.unsigned
+                this.unsigned,
               )
             : this.sub(this.div(e).mul(e))
         );
@@ -923,7 +923,7 @@
             ? u(
                 this.low << e,
                 (this.high << e) | (this.low >>> (32 - e)),
-                this.unsigned
+                this.unsigned,
               )
             : u(0, this.low << (e - 32), this.unsigned)
         );
@@ -938,7 +938,7 @@
             ? u(
                 (this.low >>> e) | (this.high << (32 - e)),
                 this.high >> e,
-                this.unsigned
+                this.unsigned,
               )
             : u(this.high >> (e - 32), this.high >= 0 ? 0 : -1, this.unsigned)
         );
@@ -997,14 +997,14 @@
         return new r(
           e[0] | (e[1] << 8) | (e[2] << 16) | (e[3] << 24),
           e[4] | (e[5] << 8) | (e[6] << 16) | (e[7] << 24),
-          t
+          t,
         );
       }),
       (r.fromBytesBE = function (e, t) {
         return new r(
           (e[4] << 24) | (e[5] << 16) | (e[6] << 8) | e[7],
           (e[0] << 24) | (e[1] << 16) | (e[2] << 8) | e[3],
-          t
+          t,
         );
       });
   },
@@ -1222,7 +1222,7 @@
           throw new Error(
             "[mobx] " +
               (t ||
-                "An invariant failed, however the error is obfuscated because this is an production build.")
+                "An invariant failed, however the error is obfuscated because this is an production build."),
           );
       }
       function d(e) {
@@ -1404,7 +1404,7 @@ See the Apache Version 2.0 License for specific language governing permissions
 and limitations under the License.
 ***************************************************************************** */ function I(
         e,
-        t
+        t,
       ) {
         function n() {
           this.constructor = e;
@@ -1480,7 +1480,7 @@ and limitations under the License.
                 r.prop,
                 r.descriptor,
                 r.decoratorTarget,
-                r.decoratorArguments
+                r.decoratorArguments,
               );
             }
         }
@@ -1541,7 +1541,7 @@ and limitations under the License.
               t,
               n,
               r ? (r.initializer ? r.initializer.call(t) : r.value) : void 0,
-              e
+              e,
             );
           }),
           n =
@@ -1657,7 +1657,7 @@ and limitations under the License.
             e +
             ". Did you accidentally try to use observable." +
             e +
-            " as decorator?"
+            " as decorator?",
         );
       }
       Object.keys(ne).forEach(function (e) {
@@ -1691,7 +1691,7 @@ and limitations under the License.
                       },
                     })
                   );
-                })(t)
+                })(t),
               );
           })(e, t, j({ get: o, set: i }, s));
         }),
@@ -2064,7 +2064,7 @@ and limitations under the License.
                   "Cycle detected in computation " +
                     this.name +
                     ": " +
-                    this.derivation
+                    this.derivation,
                 ),
                 0 !== ze.inBatch ||
                 0 !== this.observers.length ||
@@ -2105,7 +2105,7 @@ and limitations under the License.
                   !this.isRunningSetter,
                   "The setter of computed value '" +
                     this.name +
-                    "' is trying to update itself. Did you intend to update an _observable_ value, instead of the computed property?"
+                    "' is trying to update itself. Did you intend to update an _observable_ value, instead of the computed property?",
                 ),
                   (this.isRunningSetter = !0);
                 try {
@@ -2211,7 +2211,7 @@ and limitations under the License.
               : (setTimeout(function () {
                   Be ||
                     u(
-                      "There are multiple, different versions of MobX active. Make sure MobX is loaded only once or use `configure({ isolateGlobalState: true })`"
+                      "There are multiple, different versions of MobX active. Make sure MobX is loaded only once or use `configure({ isolateGlobalState: true })`",
                     );
                 }, 1),
                 new De())
@@ -2276,7 +2276,7 @@ and limitations under the License.
               e.name +
               "' is invalidated due to a change in: '" +
               t.name +
-              "'"
+              "'",
           ),
           e.isTracing === ie.BREAK)
         ) {
@@ -2302,7 +2302,7 @@ and limitations under the License.
                   : "") +
                 "\n\nThe dependencies for this derivation are:\n\n" +
                 n.join("\n") +
-                "\n*/\n    "
+                "\n*/\n    ",
             )();
         }
       }
@@ -2381,7 +2381,7 @@ and limitations under the License.
                 ? console.warn(
                     "[mobx] (error in reaction '" +
                       this.name +
-                      "' suppressed, fix error of causing action below)"
+                      "' suppressed, fix error of causing action below)",
                   )
                 : console.error(n, e),
                 et() &&
@@ -2437,7 +2437,7 @@ and limitations under the License.
           100 == ++t &&
             (console.error(
               "Reaction doesn't converge to a stable state after 100 iterations. Probably there is a cycle in the reactive function: " +
-                e[0]
+                e[0],
             ),
             e.splice(0));
           for (var n = e.splice(0), r = 0, a = n.length; r < a; r++)
@@ -2533,7 +2533,7 @@ and limitations under the License.
           "string" == typeof e ? e : e.name || "<unnamed action>",
           "function" == typeof e ? e : t,
           this,
-          void 0
+          void 0,
         );
       }
       function dt(e) {
@@ -2553,7 +2553,7 @@ and limitations under the License.
               this.track(s);
             },
             t.onError,
-            t.requiresObservable
+            t.requiresObservable,
           );
         else {
           var a = ht(t),
@@ -2568,7 +2568,7 @@ and limitations under the License.
                 }));
             },
             t.onError,
-            t.requiresObservable
+            t.requiresObservable,
           );
         }
         function s() {
@@ -2630,7 +2630,7 @@ and limitations under the License.
                     r.call(this, e);
                   }
                 })
-              : t
+              : t,
           ),
           c = !n.scheduler && !n.delay,
           d = ht(n),
@@ -2643,7 +2643,7 @@ and limitations under the License.
               f || c ? v() : p || ((p = !0), d(v));
             },
             n.onError,
-            n.requiresObservable
+            n.requiresObservable,
           );
         function v() {
           if (((p = !1), !h.isDisposed)) {
@@ -2690,7 +2690,7 @@ and limitations under the License.
               ze.inBatch ||
               ze.isRunningReactions) &&
               u(
-                "isolateGlobalState should be called before MobX is running any reactions"
+                "isolateGlobalState should be called before MobX is running any reactions",
               ),
             (Be = !0),
             Ue &&
@@ -2716,7 +2716,7 @@ and limitations under the License.
               u(
                 "Invalid value for 'enforceActions': '" +
                   t +
-                  "', expected 'never', 'always' or 'observed'"
+                  "', expected 'never', 'always' or 'observed'",
               );
           }
           (ze.enforceActions = d),
@@ -2731,7 +2731,7 @@ and limitations under the License.
           void 0 !== a &&
             (!0 === a &&
               console.warn(
-                "WARNING: Debug feature only. MobX will NOT recover from errors if this is on."
+                "WARNING: Debug feature only. MobX will NOT recover from errors if this is on.",
               ),
             (ze.disableErrorBoundaries = !!a)),
           "number" == typeof o && un(o),
@@ -2799,7 +2799,7 @@ and limitations under the License.
                 try {
                   n = ut(t + " - runid: " + o + " - yield " + a++, i.next).call(
                     i,
-                    e
+                    e,
                   );
                 } catch (e) {
                   return r(e);
@@ -2812,7 +2812,7 @@ and limitations under the License.
                 try {
                   n = ut(
                     t + " - runid: " + o + " - yield " + a++,
-                    i.throw
+                    i.throw,
                   ).call(i, e);
                 } catch (e) {
                   return r(e);
@@ -3082,7 +3082,7 @@ and limitations under the License.
               a < o &&
               (c(
                 !(t = r[a](t)) || t.type,
-                "Intercept handlers should return nothing or a change object"
+                "Intercept handlers should return nothing or a change object",
               ),
               t);
               a++
@@ -3213,7 +3213,7 @@ and limitations under the License.
             (e.prototype.updateArrayLength = function (e, t) {
               if (e !== this.lastKnownLength)
                 throw new Error(
-                  "[mobx] Modification exception: the internal structure of an observable array was changed. Did you use peek() to change it?"
+                  "[mobx] Modification exception: the internal structure of an observable array was changed. Did you use peek() to change it?",
                 );
               (this.lastKnownLength += t),
                 t > 0 && e + t + 1 > tn && un(e + t + 1);
@@ -3346,7 +3346,7 @@ and limitations under the License.
                   this.peek(),
                   e.map(function (e) {
                     return dn(e) ? e.peek() : e;
-                  })
+                  }),
                 )
               );
             }),
@@ -3401,7 +3401,7 @@ and limitations under the License.
             (t.prototype.pop = function () {
               return this.splice(
                 Math.max(this.$mobx.values.length - 1, 0),
-                1
+                1,
               )[0];
             }),
             (t.prototype.shift = function () {
@@ -3429,7 +3429,7 @@ and limitations under the License.
               function n(e) {
                 if (e < 0)
                   throw new Error(
-                    "[mobx.array] Index out of bounds: " + e + " is negative"
+                    "[mobx.array] Index out of bounds: " + e + " is negative",
                   );
                 var t = this.$mobx.values.length;
                 if (e >= t)
@@ -3437,7 +3437,7 @@ and limitations under the License.
                     "[mobx.array] Index out of bounds: " +
                       e +
                       " is not smaller than " +
-                      t
+                      t,
                   );
               }
               if ((n.call(this, e), n.call(this, t), e !== t)) {
@@ -3449,7 +3449,7 @@ and limitations under the License.
                         a.slice(0, e),
                         a.slice(e + 1, t + 1),
                         [a[e]],
-                        a.slice(t + 1)
+                        a.slice(t + 1),
                       )
                     : U(a.slice(0, t), [a[e]], a.slice(t, e), a.slice(e + 1))),
                   this.replace(r);
@@ -3465,7 +3465,7 @@ and limitations under the License.
                     e +
                     ") that is out of bounds (" +
                     t.values.length +
-                    "). Please check length first. Out of bound indices will not be tracked by MobX"
+                    "). Please check length first. Out of bound indices will not be tracked by MobX",
                 );
               }
             }),
@@ -3493,7 +3493,7 @@ and limitations under the License.
                     "[mobx.array] Index out of bounds, " +
                       e +
                       " is larger than " +
-                      r.length
+                      r.length,
                   );
                 n.spliceWithArray(e, 0, [t]);
               }
@@ -3535,7 +3535,7 @@ and limitations under the License.
           var t = Array.prototype[e];
           c(
             "function" == typeof t,
-            "Base function not defined on Array prototype: '" + e + "'"
+            "Base function not defined on Array prototype: '" + e + "'",
           ),
             h(an.prototype, e, function () {
               return t.apply(this.peek(), arguments);
@@ -3544,7 +3544,7 @@ and limitations under the License.
         ["every", "filter", "forEach", "map", "some"].forEach(function (e) {
           c(
             "function" == typeof Array.prototype[e],
-            "Base function not defined on Array prototype: '" + e + "'"
+            "Base function not defined on Array prototype: '" + e + "'",
           ),
             h(an.prototype, e, function (t, n) {
               var r = this,
@@ -3638,7 +3638,7 @@ and limitations under the License.
               "function" != typeof Map)
             )
               throw new Error(
-                "mobx.map requires Map polyfill for the current browser. Check babel-polyfill or core-js/es6/map.js"
+                "mobx.map requires Map polyfill for the current browser. Check babel-polyfill or core-js/es6/map.js",
               );
             (this._data = new Map()), (this._hasMap = new Map()), this.merge(e);
           }
@@ -3655,7 +3655,7 @@ and limitations under the License.
                   this._has(e),
                   q,
                   this.name + "." + mn(e) + "?",
-                  !1
+                  !1,
                 ));
                 this._hasMap.set(e, r),
                   gt(r, function () {
@@ -3821,7 +3821,7 @@ and limitations under the License.
                       ? e.constructor !== Map
                         ? u(
                             "Cannot initialize from classes that inherit from Map: " +
-                              e.constructor.name
+                              e.constructor.name,
                           )
                         : e.forEach(function (e, n) {
                             return t.set(n, e);
@@ -3968,7 +3968,7 @@ and limitations under the License.
               "function" != typeof Set)
             )
               throw new Error(
-                "mobx.set requires Set polyfill for the current browser. Check babel-polyfill or core-js/es6/set.js"
+                "mobx.set requires Set polyfill for the current browser. Check babel-polyfill or core-js/es6/set.js",
               );
             (this.enhancer = function (e, r) {
               return t(e, r, n);
@@ -4217,7 +4217,7 @@ and limitations under the License.
                   t +
                   "' of '" +
                   e +
-                  "' was accessed through the prototype chain. Use 'decorate' instead to declare the prop or access it statically through it's owner"
+                  "' was accessed through the prototype chain. Use 'decorate' instead to declare the prop or access it statically through it's owner",
               );
             }),
             (e.prototype.observe = function (e, t) {
@@ -4236,7 +4236,7 @@ and limitations under the License.
                     }),
                     q,
                     "keys(" + this.name + ")",
-                    !0
+                    !0,
                   )),
                 this.keys.slice()
               );
@@ -4280,7 +4280,7 @@ and limitations under the License.
                   },
                 })
               );
-            })(t)
+            })(t),
           ),
           a.keys && a.keys.push(t),
           (function (e, t, n, r) {
@@ -4430,7 +4430,7 @@ and limitations under the License.
           },
           $mobx: Rn,
         });
-    }.call(this, n("yLpj"), n("8oxB")));
+    }).call(this, n("yLpj"), n("8oxB"));
   },
   "3KMn": function (e, t, n) {
     "use strict";
@@ -4773,7 +4773,7 @@ and limitations under the License.
               Object.defineProperty(
                 e,
                 t,
-                Object.getOwnPropertyDescriptor(n, t)
+                Object.getOwnPropertyDescriptor(n, t),
               );
             });
       }
@@ -4798,7 +4798,7 @@ and limitations under the License.
     function h(e) {
       if (void 0 === e)
         throw new ReferenceError(
-          "this hasn't been initialised - super() hasn't been called"
+          "this hasn't been initialised - super() hasn't been called",
         );
       return e;
     }
@@ -4866,7 +4866,7 @@ and limitations under the License.
           (function (e, t) {
             if ("function" != typeof t && null !== t)
               throw new TypeError(
-                "Super expression must either be null or a function"
+                "Super expression must either be null or a function",
               );
             (e.prototype = Object.create(t && t.prototype, {
               constructor: { value: e, writable: !0, configurable: !0 },
@@ -4950,7 +4950,7 @@ and limitations under the License.
                   e.variableWidth &&
                     (e.rows > 1 || e.slidesPerRow > 1) &&
                     (console.warn(
-                      "variableWidth is not supported in case of rows > 1 or slidesPerRow > 1"
+                      "variableWidth is not supported in case of rows > 1 or slidesPerRow > 1",
                     ),
                     (e.variableWidth = !1));
                 for (
@@ -4980,10 +4980,10 @@ and limitations under the License.
                             width: "".concat(100 / e.slidesPerRow, "%"),
                             display: "inline-block",
                           },
-                        })
+                        }),
                       );
                     d.push(
-                      r.default.createElement("div", { key: 10 * u + p }, m)
+                      r.default.createElement("div", { key: 10 * u + p }, m),
                     );
                   }
                   e.variableWidth
@@ -4991,8 +4991,8 @@ and limitations under the License.
                         r.default.createElement(
                           "div",
                           { key: u, style: { width: l } },
-                          d
-                        )
+                          d,
+                        ),
                       )
                     : s.push(r.default.createElement("div", { key: u }, d));
                 }
@@ -5009,9 +5009,9 @@ and limitations under the License.
                         style: this.props.style,
                         ref: this.innerSliderRefHandler,
                       },
-                      e
+                      e,
                     ),
-                    s
+                    s,
                   )
                 );
               },
@@ -5213,7 +5213,7 @@ and limitations under the License.
             (function (e) {
               var n = t - (e - l);
               return v ? f(n, o - (e - u)) : n;
-            })(e)
+            })(e),
           );
         }
         function E(e) {
@@ -5243,7 +5243,7 @@ and limitations under the License.
           S
         );
       };
-    }.call(this, n("yLpj")));
+    }).call(this, n("yLpj"));
   },
   "9a8T": function (e, t, n) {
     e.exports = (function (e) {
@@ -5325,7 +5325,7 @@ and limitations under the License.
               : (h.disableMutationObserver ||
                   l.default.isSupported() ||
                   (console.info(
-                    '\n      aos: MutationObserver is not supported on this browser,\n      code mutations observing has been disabled.\n      You may have to call "refreshHard()" by yourself.\n    '
+                    '\n      aos: MutationObserver is not supported on this browser,\n      code mutations observing has been disabled.\n      You may have to call "refreshHard()" by yourself.\n    ',
                   ),
                   (h.disableMutationObserver = !0)),
                 document
@@ -5349,17 +5349,17 @@ and limitations under the License.
                     }),
                 window.addEventListener(
                   "resize",
-                  (0, s.default)(v, h.debounceDelay, !0)
+                  (0, s.default)(v, h.debounceDelay, !0),
                 ),
                 window.addEventListener(
                   "orientationchange",
-                  (0, s.default)(v, h.debounceDelay, !0)
+                  (0, s.default)(v, h.debounceDelay, !0),
                 ),
                 window.addEventListener(
                   "scroll",
                   (0, i.default)(function () {
                     (0, c.default)(p, h.once);
-                  }, h.throttleDelay)
+                  }, h.throttleDelay),
                 ),
                 h.disableMutationObserver || l.default.ready("[data-aos]", g),
                 p);
@@ -5398,7 +5398,7 @@ and limitations under the License.
                     (function (e) {
                       var n = t - (e - g);
                       return S ? _(n, m - (e - y)) : n;
-                    })(e)
+                    })(e),
                   ));
             }
             function c(e) {
@@ -5520,12 +5520,12 @@ and limitations under the License.
               n(e, t, { leading: o, maxWait: t, trailing: i })
             );
           };
-        }.call(
+        }).call(
           t,
           (function () {
             return this;
-          })()
-        ));
+          })(),
+        );
       },
       function (e, t) {
         (function (t) {
@@ -5620,7 +5620,7 @@ and limitations under the License.
                     (function (e) {
                       var n = t - (e - g);
                       return S ? b(n, m - (e - w)) : n;
-                    })(e)
+                    })(e),
                   ));
             }
             function c(e) {
@@ -5663,12 +5663,12 @@ and limitations under the License.
               d
             );
           };
-        }.call(
+        }).call(
           t,
           (function () {
             return this;
-          })()
-        ));
+          })(),
+        );
       },
       function (e, t) {
         "use strict";
@@ -5934,7 +5934,7 @@ and limitations under the License.
         return a.default.createElement(
           "ul",
           { style: { display: "block" } },
-          e
+          e,
         );
       },
       arrows: !0,
@@ -6092,7 +6092,7 @@ and limitations under the License.
             forcedJSONParsing: u.transitional(u.boolean, "1.0.0"),
             clarifyTimeoutError: u.transitional(u.boolean, "1.0.0"),
           },
-          !1
+          !1,
         );
       var n = [],
         r = !0;
@@ -6146,7 +6146,7 @@ and limitations under the License.
       r.forEach(["delete", "get", "head", "options"], function (e) {
         c.prototype[e] = function (t, n) {
           return this.request(
-            s(n || {}, { method: e, url: t, data: (n || {}).data })
+            s(n || {}, { method: e, url: t, data: (n || {}).data }),
           );
         };
       }),
@@ -6184,7 +6184,7 @@ and limitations under the License.
             e &&
             e !== Object.prototype &&
             Object.getOwnPropertyNames(e).concat(
-              s(Object.getPrototypeOf(e)) || []
+              s(Object.getPrototypeOf(e)) || [],
             )
           );
         },
@@ -6214,7 +6214,7 @@ and limitations under the License.
           i(
             "function" == typeof e ||
               ("object" == typeof e && e && "function" == typeof e.then),
-            "Please pass a promise or function to fromPromise"
+            "Please pass a promise or function to fromPromise",
           ),
           !0 === e.isPromiseBasedObservable)
         )
@@ -6227,7 +6227,7 @@ and limitations under the License.
           }),
           Object(r.k)("observableFromPromise-reject", function (e) {
             (n.value = e), (n.state = "rejected");
-          })
+          }),
         ),
           (n.isPromiseBasedObservable = !0),
           (n.case = u);
@@ -6266,7 +6266,7 @@ and limitations under the License.
                   });
                 });
             },
-            u
+            u,
           );
         return {
           current: function () {
@@ -6275,7 +6275,7 @@ and limitations under the License.
               c.reportObserved() ||
                 o ||
                 console.warn(
-                  "Called `get` of a subscribingObservable outside a reaction. Current value will be returned but no new subscription has started"
+                  "Called `get` of a subscribingObservable outside a reaction. Current value will be returned but no new subscription has started",
                 ),
               l
             );
@@ -6384,7 +6384,7 @@ and limitations under the License.
                     -1 === h.indexOf(n),
                     "The propertyname " +
                       n +
-                      " is reserved and cannot be used with viewModels"
+                      " is reserved and cannot be used with viewModels",
                   ),
                   Object(r.w)(e, n))
                 ) {
@@ -6410,7 +6410,7 @@ and limitations under the License.
                         ? t.localValues.set(n, e)
                         : t.localValues.delete(n);
                     }),
-                  })
+                  }),
                 );
               }
             });
@@ -6474,7 +6474,7 @@ and limitations under the License.
                           function () {
                             clearInterval(t);
                           },
-                          Date.now()
+                          Date.now(),
                         );
                       })(e)
                     : (t = d(
@@ -6487,7 +6487,7 @@ and limitations under the License.
                             })();
                         },
                         function () {},
-                        Date.now()
+                        Date.now(),
                       ))),
               v[e].current())
             : Date.now()
@@ -6614,7 +6614,7 @@ and limitations under the License.
                         var o = t._getGroupArr(n),
                           i = o.length;
                         o.push(e), (a.groupByValue = n), (a.groupArrIndex = i);
-                      }
+                      },
                     ),
                   };
                 Object.defineProperty(e, this._ogmInfoKey, {
@@ -6703,7 +6703,7 @@ and limitations under the License.
               "DeepMap should be used with functions with a consistent length, expected: " +
                 this.argsLength +
                 ", got: " +
-                e.length
+                e.length,
             );
           return (
             this.last && (this.last.isDisposed = !0),
@@ -6729,7 +6729,7 @@ and limitations under the License.
           w(e);
         });
       };
-    }.call(this, n("8oxB")));
+    }).call(this, n("8oxB"));
   },
   HSsa: function (e, t, n) {
     "use strict";
@@ -6769,7 +6769,7 @@ and limitations under the License.
     function s(e, t) {
       if (!e)
         throw new ReferenceError(
-          "this hasn't been initialised - super() hasn't been called"
+          "this hasn't been initialised - super() hasn't been called",
         );
       return !t || ("object" != typeof t && "function" != typeof t) ? e : t;
     }
@@ -6779,7 +6779,7 @@ and limitations under the License.
           i(this, t),
           s(
             this,
-            (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments)
+            (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments),
           )
         );
       }
@@ -6788,7 +6788,7 @@ and limitations under the License.
           if ("function" != typeof t && null !== t)
             throw new TypeError(
               "Super expression must either be null or a function, not " +
-                typeof t
+                typeof t,
             );
           (e.prototype = Object.create(t && t.prototype, {
             constructor: {
@@ -6820,7 +6820,7 @@ and limitations under the License.
               return a.default.createElement(
                 "div",
                 { style: { textAlign: "right" } },
-                this.getComponents()
+                this.getComponents(),
               );
             },
           },
@@ -6937,7 +6937,7 @@ and limitations under the License.
           u.headers[e] = r.merge(i);
         }),
         (e.exports = u);
-    }.call(this, n("8oxB")));
+    }).call(this, n("8oxB"));
   },
   JoIL: function (e, t, n) {
     "use strict";
@@ -7012,7 +7012,7 @@ and limitations under the License.
               Object.defineProperty(
                 e,
                 t,
-                Object.getOwnPropertyDescriptor(n, t)
+                Object.getOwnPropertyDescriptor(n, t),
               );
             });
       }
@@ -7052,7 +7052,7 @@ and limitations under the License.
         ? (function (e) {
             if (void 0 === e)
               throw new ReferenceError(
-                "this hasn't been initialised - super() hasn't been called"
+                "this hasn't been initialised - super() hasn't been called",
               );
             return e;
           })(e)
@@ -7068,7 +7068,7 @@ and limitations under the License.
     function g(e, t) {
       if ("function" != typeof t && null !== t)
         throw new TypeError(
-          "Super expression must either be null or a function"
+          "Super expression must either be null or a function",
         );
       (e.prototype = Object.create(t && t.prototype, {
         constructor: { value: e, writable: !0, configurable: !0 },
@@ -7121,7 +7121,7 @@ and limitations under the License.
                     "button",
                     l({ key: "0", type: "button" }, n),
                     " ",
-                    "Previous"
+                    "Previous",
                   );
             },
           },
@@ -7167,7 +7167,7 @@ and limitations under the License.
                     "button",
                     l({ key: "1", type: "button" }, n),
                     " ",
-                    "Next"
+                    "Next",
                   );
             },
           },
@@ -7310,7 +7310,7 @@ object-assign
     function i(e) {
       if (null == e)
         throw new TypeError(
-          "Object.assign cannot be called with null or undefined"
+          "Object.assign cannot be called with null or undefined",
         );
       return Object(e);
     }
@@ -7431,7 +7431,7 @@ object-assign
   PDX0: function (e, t) {
     (function (t) {
       e.exports = t;
-    }.call(this, {}));
+    }).call(this, {});
   },
   PxDe: function (e, t, n) {
     "use strict";
@@ -7529,7 +7529,7 @@ object-assign
           ? self
           : l;
       }
-    }.call(this, n("yLpj")));
+    }).call(this, n("yLpj"));
   },
   "Rn+g": function (e, t, n) {
     "use strict";
@@ -7543,15 +7543,15 @@ object-assign
               n.config,
               null,
               n.request,
-              n
-            )
+              n,
+            ),
           )
         : e(n);
     };
   },
   SgzI: function (e) {
     e.exports = JSON.parse(
-      '{"name":"axios","version":"0.21.4","description":"Promise based HTTP client for the browser and node.js","main":"index.js","scripts":{"test":"grunt test","start":"node ./sandbox/server.js","build":"NODE_ENV=production grunt build","preversion":"npm test","version":"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json","postversion":"git push && git push --tags","examples":"node ./examples/server.js","coveralls":"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js","fix":"eslint --fix lib/**/*.js"},"repository":{"type":"git","url":"https://github.com/axios/axios.git"},"keywords":["xhr","http","ajax","promise","node"],"author":"Matt Zabriskie","license":"MIT","bugs":{"url":"https://github.com/axios/axios/issues"},"homepage":"https://axios-http.com","devDependencies":{"coveralls":"^3.0.0","es6-promise":"^4.2.4","grunt":"^1.3.0","grunt-banner":"^0.6.0","grunt-cli":"^1.2.0","grunt-contrib-clean":"^1.1.0","grunt-contrib-watch":"^1.0.0","grunt-eslint":"^23.0.0","grunt-karma":"^4.0.0","grunt-mocha-test":"^0.13.3","grunt-ts":"^6.0.0-beta.19","grunt-webpack":"^4.0.2","istanbul-instrumenter-loader":"^1.0.0","jasmine-core":"^2.4.1","karma":"^6.3.2","karma-chrome-launcher":"^3.1.0","karma-firefox-launcher":"^2.1.0","karma-jasmine":"^1.1.1","karma-jasmine-ajax":"^0.1.13","karma-safari-launcher":"^1.0.0","karma-sauce-launcher":"^4.3.6","karma-sinon":"^1.0.5","karma-sourcemap-loader":"^0.3.8","karma-webpack":"^4.0.2","load-grunt-tasks":"^3.5.2","minimist":"^1.2.0","mocha":"^8.2.1","sinon":"^4.5.0","terser-webpack-plugin":"^4.2.3","typescript":"^4.0.5","url-search-params":"^0.10.0","webpack":"^4.44.2","webpack-dev-server":"^3.11.0"},"browser":{"./lib/adapters/http.js":"./lib/adapters/xhr.js"},"jsdelivr":"dist/axios.min.js","unpkg":"dist/axios.min.js","typings":"./index.d.ts","dependencies":{"follow-redirects":"^1.14.0"},"bundlesize":[{"path":"./dist/axios.min.js","threshold":"5kB"}]}'
+      '{"name":"axios","version":"0.21.4","description":"Promise based HTTP client for the browser and node.js","main":"index.js","scripts":{"test":"grunt test","start":"node ./sandbox/server.js","build":"NODE_ENV=production grunt build","preversion":"npm test","version":"npm run build && grunt version && git add -A dist && git add CHANGELOG.md bower.json package.json","postversion":"git push && git push --tags","examples":"node ./examples/server.js","coveralls":"cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js","fix":"eslint --fix lib/**/*.js"},"repository":{"type":"git","url":"https://github.com/axios/axios.git"},"keywords":["xhr","http","ajax","promise","node"],"author":"Matt Zabriskie","license":"MIT","bugs":{"url":"https://github.com/axios/axios/issues"},"homepage":"https://axios-http.com","devDependencies":{"coveralls":"^3.0.0","es6-promise":"^4.2.4","grunt":"^1.3.0","grunt-banner":"^0.6.0","grunt-cli":"^1.2.0","grunt-contrib-clean":"^1.1.0","grunt-contrib-watch":"^1.0.0","grunt-eslint":"^23.0.0","grunt-karma":"^4.0.0","grunt-mocha-test":"^0.13.3","grunt-ts":"^6.0.0-beta.19","grunt-webpack":"^4.0.2","istanbul-instrumenter-loader":"^1.0.0","jasmine-core":"^2.4.1","karma":"^6.3.2","karma-chrome-launcher":"^3.1.0","karma-firefox-launcher":"^2.1.0","karma-jasmine":"^1.1.1","karma-jasmine-ajax":"^0.1.13","karma-safari-launcher":"^1.0.0","karma-sauce-launcher":"^4.3.6","karma-sinon":"^1.0.5","karma-sourcemap-loader":"^0.3.8","karma-webpack":"^4.0.2","load-grunt-tasks":"^3.5.2","minimist":"^1.2.0","mocha":"^8.2.1","sinon":"^4.5.0","terser-webpack-plugin":"^4.2.3","typescript":"^4.0.5","url-search-params":"^0.10.0","webpack":"^4.44.2","webpack-dev-server":"^3.11.0"},"browser":{"./lib/adapters/http.js":"./lib/adapters/xhr.js"},"jsdelivr":"dist/axios.min.js","unpkg":"dist/axios.min.js","typings":"./index.d.ts","dependencies":{"follow-redirects":"^1.14.0"},"bundlesize":[{"path":"./dist/axios.min.js","threshold":"5kB"}]}',
     );
   },
   SntB: function (e, t, n) {
@@ -7717,7 +7717,7 @@ object-assign
         ? (function (e) {
             if (void 0 === e)
               throw new ReferenceError(
-                "this hasn't been initialised - super() hasn't been called"
+                "this hasn't been initialised - super() hasn't been called",
               );
             return e;
           })(e)
@@ -7762,7 +7762,7 @@ object-assign
               Object.defineProperty(
                 e,
                 t,
-                Object.getOwnPropertyDescriptor(n, t)
+                Object.getOwnPropertyDescriptor(n, t),
               );
             });
       }
@@ -7872,7 +7872,7 @@ object-assign
                     p.props && p.props.onClick && p.props.onClick(t),
                       e.focusOnSelect && e.focusOnSelect(m);
                   },
-                })
+                }),
               ),
               e.infinite && !1 === e.fade)
             ) {
@@ -7893,7 +7893,7 @@ object-assign
                       p.props && p.props.onClick && p.props.onClick(t),
                         e.focusOnSelect && e.focusOnSelect(m);
                     },
-                  })
+                  }),
                 )),
                 l !== e.slidesToShow &&
                   ((t = l + f) < c && (p = d),
@@ -7910,7 +7910,7 @@ object-assign
                         p.props && p.props.onClick && p.props.onClick(t),
                           e.focusOnSelect && e.focusOnSelect(m);
                       },
-                    })
+                    }),
                   ));
             }
           }),
@@ -7926,7 +7926,7 @@ object-assign
           (function (e, t) {
             if ("function" != typeof t && null !== t)
               throw new TypeError(
-                "Super expression must either be null or a function"
+                "Super expression must either be null or a function",
               );
             (e.prototype = Object.create(t && t.prototype, {
               constructor: { value: e, writable: !0, configurable: !0 },
@@ -7949,9 +7949,9 @@ object-assign
                   "div",
                   l(
                     { className: "slick-track", style: this.props.trackStyle },
-                    n
+                    n,
                   ),
-                  e
+                  e,
                 );
               },
             },
@@ -7979,13 +7979,13 @@ object-assign
         (e.headers = r.merge(
           e.headers.common || {},
           e.headers[e.method] || {},
-          e.headers
+          e.headers,
         )),
         r.forEach(
           ["delete", "get", "head", "post", "put", "patch", "common"],
           function (t) {
             delete e.headers[t];
-          }
+          },
         ),
         (e.adapter || i.adapter)(e).then(
           function (t) {
@@ -8005,11 +8005,11 @@ object-assign
                     e,
                     t.response.data,
                     t.response.headers,
-                    e.transformResponse
+                    e.transformResponse,
                   ))),
               Promise.reject(t)
             );
-          }
+          },
         )
       );
     };
@@ -8144,7 +8144,7 @@ object-assign
         ? (function (e) {
             if (void 0 === e)
               throw new ReferenceError(
-                "this hasn't been initialised - super() hasn't been called"
+                "this hasn't been initialised - super() hasn't been called",
               );
             return e;
           })(e)
@@ -8173,7 +8173,7 @@ object-assign
         (function (e, t) {
           if ("function" != typeof t && null !== t)
             throw new TypeError(
-              "Super expression must either be null or a function"
+              "Super expression must either be null or a function",
             );
           (e.prototype = Object.create(t && t.prototype, {
             constructor: { value: e, writable: !0, configurable: !0 },
@@ -8201,7 +8201,7 @@ object-assign
                 }).infinite
                   ? Math.ceil(e.slideCount / e.slidesToScroll)
                   : Math.ceil(
-                      (e.slideCount - e.slidesToShow) / e.slidesToScroll
+                      (e.slideCount - e.slidesToShow) / e.slidesToScroll,
                     ) + 1,
                 o = this.props,
                 i = {
@@ -8213,7 +8213,7 @@ object-assign
                   null,
                   Array(n + 1)
                     .join("0")
-                    .split("")
+                    .split(""),
                 ).map(function (e, n) {
                   var o = n * t.props.slidesToScroll,
                     i =
@@ -8234,7 +8234,7 @@ object-assign
                     { key: n, className: s },
                     r.default.cloneElement(t.props.customPaging(n), {
                       onClick: u,
-                    })
+                    }),
                   );
                 });
               return r.default.cloneElement(
@@ -8249,18 +8249,18 @@ object-assign
                       : Object.getOwnPropertyDescriptors
                       ? Object.defineProperties(
                           e,
-                          Object.getOwnPropertyDescriptors(n)
+                          Object.getOwnPropertyDescriptors(n),
                         )
                       : s(n).forEach(function (t) {
                           Object.defineProperty(
                             e,
                             t,
-                            Object.getOwnPropertyDescriptor(n, t)
+                            Object.getOwnPropertyDescriptor(n, t),
                           );
                         });
                   }
                   return e;
-                })({ className: this.props.dotsClass }, i)
+                })({ className: this.props.dotsClass }, i),
               );
             },
           },
@@ -8412,7 +8412,7 @@ object-assign
     function S(e) {
       if (void 0 === e)
         throw new ReferenceError(
-          "this hasn't been initialised - super() hasn't been called"
+          "this hasn't been initialised - super() hasn't been called",
         );
       return e;
     }
@@ -8466,7 +8466,7 @@ object-assign
                   Object.defineProperty(
                     e,
                     t,
-                    Object.getOwnPropertyDescriptor(n, t)
+                    Object.getOwnPropertyDescriptor(n, t),
                   );
                 });
           }
@@ -8887,7 +8887,7 @@ object-assign
                   : t;
               })(this, _(n).call(this, e))).isEventListenerAdded = !1),
               (t.handleOrientationChange = t.handleOrientationChange.bind(
-                S(t)
+                S(t),
               )),
               (t.onOrientationChange = t.onOrientationChange.bind(S(t))),
               (t.onPageLoad = t.onPageLoad.bind(S(t))),
@@ -8900,7 +8900,7 @@ object-assign
             (function (e, t) {
               if ("function" != typeof t && null !== t)
                 throw new TypeError(
-                  "Super expression must either be null or a function"
+                  "Super expression must either be null or a function",
                 );
               (e.prototype = Object.create(t && t.prototype, {
                 constructor: { value: e, writable: !0, configurable: !0 },
@@ -8942,7 +8942,7 @@ object-assign
                     window.addEventListener(
                       "resize",
                       this.onOrientationChange,
-                      !1
+                      !1,
                     ));
                 },
               },
@@ -8952,7 +8952,7 @@ object-assign
                   window.removeEventListener(
                     "resize",
                     this.onOrientationChange,
-                    !1
+                    !1,
                   );
                 },
               },
@@ -8964,7 +8964,7 @@ object-assign
                     y({}, this.props, {
                       isLandscape: this.state.isLandscape,
                       isPortrait: this.state.isPortrait,
-                    })
+                    }),
                   );
                 },
               },
@@ -9124,12 +9124,12 @@ object-assign
                   !this.connected_ &&
                   (document.addEventListener(
                     "transitionend",
-                    this.onTransitionEnd_
+                    this.onTransitionEnd_,
                   ),
                   window.addEventListener("resize", this.refresh),
                   s
                     ? ((this.mutationsObserver_ = new MutationObserver(
-                        this.refresh
+                        this.refresh,
                       )),
                       this.mutationsObserver_.observe(document, {
                         attributes: !0,
@@ -9139,7 +9139,7 @@ object-assign
                       }))
                     : (document.addEventListener(
                         "DOMSubtreeModified",
-                        this.refresh
+                        this.refresh,
                       ),
                       (this.mutationEventsAdded_ = !0)),
                   (this.connected_ = !0));
@@ -9149,7 +9149,7 @@ object-assign
                   this.connected_ &&
                   (document.removeEventListener(
                     "transitionend",
-                    this.onTransitionEnd_
+                    this.onTransitionEnd_,
                   ),
                   window.removeEventListener("resize", this.refresh),
                   this.mutationsObserver_ &&
@@ -9157,7 +9157,7 @@ object-assign
                   this.mutationEventsAdded_ &&
                     document.removeEventListener(
                       "DOMSubtreeModified",
-                      this.refresh
+                      this.refresh,
                     ),
                   (this.mutationsObserver_ = null),
                   (this.mutationEventsAdded_ = !1),
@@ -9329,7 +9329,7 @@ object-assign
                 "function" != typeof e)
               )
                 throw new TypeError(
-                  "The callback provided as parameter 1 is not a function."
+                  "The callback provided as parameter 1 is not a function.",
                 );
               (this.callback_ = e),
                 (this.controller_ = t),
@@ -9339,7 +9339,7 @@ object-assign
               (e.prototype.observe = function (e) {
                 if (!arguments.length)
                   throw new TypeError(
-                    "1 argument required, but only 0 present."
+                    "1 argument required, but only 0 present.",
                   );
                 if (
                   "undefined" != typeof Element &&
@@ -9347,7 +9347,7 @@ object-assign
                 ) {
                   if (!(e instanceof c(e).Element))
                     throw new TypeError(
-                      'parameter 1 is not of type "Element".'
+                      'parameter 1 is not of type "Element".',
                     );
                   var t = this.observations_;
                   t.has(e) ||
@@ -9359,7 +9359,7 @@ object-assign
               (e.prototype.unobserve = function (e) {
                 if (!arguments.length)
                   throw new TypeError(
-                    "1 argument required, but only 0 present."
+                    "1 argument required, but only 0 present.",
                   );
                 if (
                   "undefined" != typeof Element &&
@@ -9367,7 +9367,7 @@ object-assign
                 ) {
                   if (!(e instanceof c(e).Element))
                     throw new TypeError(
-                      'parameter 1 is not of type "Element".'
+                      'parameter 1 is not of type "Element".',
                     );
                   var t = this.observations_;
                   t.has(e) &&
@@ -9470,7 +9470,7 @@ object-assign
           },
           read: function (e) {
             var t = document.cookie.match(
-              new RegExp("(^|;\\s*)(" + e + ")=([^;]*)")
+              new RegExp("(^|;\\s*)(" + e + ")=([^;]*)"),
             );
             return t ? decodeURIComponent(t[3]) : null;
           },
@@ -9699,7 +9699,7 @@ PERFORMANCE OF THIS SOFTWARE.
       throw new Error("mobx-react-lite requires React with Hooks support");
     if (!p.G)
       throw new Error(
-        "mobx-react-lite requires mobx at least version 4 to be available"
+        "mobx-react-lite requires mobx at least version 4 to be available",
       );
     var m = n("R7aG"),
       h = Object(m.b)("observerBatching");
@@ -9791,7 +9791,7 @@ PERFORMANCE OF THIS SOFTWARE.
                       return e();
                     });
                 },
-                [n]
+                [n],
               ),
               t
             );
@@ -9866,7 +9866,7 @@ PERFORMANCE OF THIS SOFTWARE.
       return i && s
         ? new Error(
             "MobX Observer: Do not use children and render in the same time in`" +
-              n
+              n,
           )
         : i || s
         ? null
@@ -9877,7 +9877,7 @@ PERFORMANCE OF THIS SOFTWARE.
               typeof e[t] +
               "` supplied to `" +
               n +
-              "`, expected `function`."
+              "`, expected `function`.",
           );
     }
     (R.propTypes = { children: M, render: M }), (R.displayName = "Observer");
@@ -10004,18 +10004,18 @@ PERFORMANCE OF THIS SOFTWARE.
         console.warn(
           "The provided component class (" +
             n +
-            ") \n                has already been declared as an observer component."
+            ") \n                has already been declared as an observer component.",
         );
       } else e[$] = !0;
       if (t.componentWillReact)
         throw new Error(
-          "The componentWillReact life-cycle event is no longer supported"
+          "The componentWillReact life-cycle event is no longer supported",
         );
       if (e.__proto__ !== d.PureComponent)
         if (t.shouldComponentUpdate) {
           if (t.shouldComponentUpdate !== te)
             throw new Error(
-              "It is not allowed to use shouldComponentUpdate in observer based components."
+              "It is not allowed to use shouldComponentUpdate in observer based components.",
             );
         } else t.shouldComponentUpdate = te;
       ne(t, "props"), ne(t, "state");
@@ -10036,7 +10036,7 @@ PERFORMANCE OF THIS SOFTWARE.
             console.warn(
               "The reactive render of an observer class component (" +
                 t +
-                ") \n                was overriden after MobX attached. This may result in a memory leak if the \n                overriden reactive render was not properly disposed."
+                ") \n                was overriden after MobX attached. This may result in a memory leak if the \n                overriden reactive render was not properly disposed.",
             );
           }
         }),
@@ -10095,7 +10095,7 @@ PERFORMANCE OF THIS SOFTWARE.
       return (
         y() &&
           console.warn(
-            "[mobx-react] It seems that a re-rendering of a React component is triggered while in static (server-side) mode. Please make sure components are rendered only once server-side."
+            "[mobx-react] It seems that a re-rendering of a React component is triggered while in static (server-side) mode. Please make sure components are rendered only once server-side.",
           ),
         this.state !== t || !B(this.props, e)
       );
@@ -10145,12 +10145,12 @@ PERFORMANCE OF THIS SOFTWARE.
       if (
         (!0 === e.isMobxInjector &&
           console.warn(
-            "Mobx observer: You are trying to use 'observer' on a component that already has 'inject'. Please apply 'observer' before applying 'inject'"
+            "Mobx observer: You are trying to use 'observer' on a component that already has 'inject'. Please apply 'observer' before applying 'inject'",
           ),
         oe && e.$$typeof === oe)
       )
         throw new Error(
-          "Mobx observer: You are trying to use 'observer' on a function component wrapped in either another observer or 'React.memo'. The observer already applies 'React.memo' for you."
+          "Mobx observer: You are trying to use 'observer' on a function component wrapped in either another observer or 'React.memo'. The observer already applies 'React.memo' for you.",
         );
       if (ae && e.$$typeof === ae) {
         var t = e.render;
@@ -10317,7 +10317,7 @@ PERFORMANCE OF THIS SOFTWARE.
           ? new URIError(
               'Pathname "' +
                 a.pathname +
-                '" could not be decoded. This is likely caused by an invalid percent-encoding.'
+                '" could not be decoded. This is likely caused by an invalid percent-encoding.',
             )
           : e;
       }
@@ -10921,7 +10921,7 @@ PERFORMANCE OF THIS SOFTWARE.
               ? "string" == typeof n
                 ? Ve(n, t.params)
                 : le({}, n, { pathname: Ve(n.pathname, t.params) })
-              : n
+              : n,
           );
         return o
           ? (i(s), null)
@@ -11029,7 +11029,7 @@ PERFORMANCE OF THIS SOFTWARE.
                     : null
                   : "function" == typeof o
                   ? o(r)
-                  : null
+                  : null,
               )
             );
           });
@@ -11105,7 +11105,7 @@ PERFORMANCE OF THIS SOFTWARE.
           r[a] = arguments[a];
         return (
           ((t = e.call.apply(e, [this].concat(r)) || this).history = Ne(
-            t.props
+            t.props,
           )),
           t
         );
@@ -11246,7 +11246,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 style: E,
                 to: a,
               },
-              v
+              v,
             );
           return (
             ct !== dt ? (S.ref = t || h) : (S.innerRef = h),
@@ -11930,9 +11930,9 @@ PERFORMANCE OF THIS SOFTWARE.
                     nn.LANGUAGE +
                     "', " +
                     this.m_mapTokens.size +
-                    " tokens in map"
+                    " tokens in map",
                 ),
-                { bIncludeMessageInIdentifier: !0 }
+                { bIncludeMessageInIdentifier: !0 },
               );
           }
         }),
@@ -12017,8 +12017,8 @@ PERFORMANCE OF THIS SOFTWARE.
                   href: "https://store.steampowered.com/app/1046930/Dota_Underlords/",
                   className: mn(pn.a.DownloadButton, pn.a.SteamButton),
                 },
-                f.a.createElement("img", { src: mt.IMG_URL + "steam.png" })
-              )
+                f.a.createElement("img", { src: mt.IMG_URL + "steam.png" }),
+              ),
             ),
             f.a.createElement(
               "li",
@@ -12031,8 +12031,8 @@ PERFORMANCE OF THIS SOFTWARE.
                 },
                 f.a.createElement("img", {
                   src: mt.IMG_URL + "apple_store.png",
-                })
-              )
+                }),
+              ),
             ),
             f.a.createElement(
               "li",
@@ -12045,9 +12045,9 @@ PERFORMANCE OF THIS SOFTWARE.
                 },
                 f.a.createElement("img", {
                   src: mt.IMG_URL + "google_play.png",
-                })
-              )
-            )
+                }),
+              ),
+            ),
           ),
           f.a.createElement(
             "div",
@@ -12055,15 +12055,15 @@ PERFORMANCE OF THIS SOFTWARE.
             f.a.createElement(
               "a",
               { href: "https://underlords.com/download/androidarm32" },
-              un("#download_btn_32bit")
+              un("#download_btn_32bit"),
             ),
             "/",
             f.a.createElement(
               "a",
               { href: "https://underlords.com/download/androidarm64" },
-              un("#download_btn_64bit")
-            )
-          )
+              un("#download_btn_64bit"),
+            ),
+          ),
         );
       },
       gn = n("OS56"),
@@ -12083,7 +12083,7 @@ PERFORMANCE OF THIS SOFTWARE.
             return d.createElement(
               "span",
               { className: "Bold" },
-              this.getComponents()
+              this.getComponents(),
             );
           }),
           t
@@ -12099,7 +12099,7 @@ PERFORMANCE OF THIS SOFTWARE.
             return d.createElement(
               "span",
               { className: "Blocked" },
-              this.getComponents()
+              this.getComponents(),
             );
           }),
           t
@@ -12116,7 +12116,7 @@ PERFORMANCE OF THIS SOFTWARE.
               "span",
               null,
               d.createElement("br", null),
-              this.getComponents()
+              this.getComponents(),
             );
           }),
           t
@@ -12144,7 +12144,7 @@ PERFORMANCE OF THIS SOFTWARE.
             return d.createElement(
               "span",
               { className: "Superscript" },
-              this.getComponents()
+              this.getComponents(),
             );
           }),
           t
@@ -12204,7 +12204,7 @@ PERFORMANCE OF THIS SOFTWARE.
           "div",
           { className: An.a.FadeContainer },
           t && f.a.createElement("div", { style: c, className: An.a.Fade }),
-          n && f.a.createElement("div", { style: d, className: An.a.Fade })
+          n && f.a.createElement("div", { style: d, className: An.a.Fade }),
         );
       },
       Mn = n("MLDc"),
@@ -12232,8 +12232,8 @@ PERFORMANCE OF THIS SOFTWARE.
             f.a.createElement(
               "div",
               { className: Dn.a.InnerWrapper },
-              f.a.createElement("span", null, un("#Header_SelectLanguage"))
-            )
+              f.a.createElement("span", null, un("#Header_SelectLanguage")),
+            ),
           ),
           f.a.createElement(
             "div",
@@ -12283,10 +12283,10 @@ PERFORMANCE OF THIS SOFTWARE.
                   className: Dn.a.LanguageOption,
                   href: mt.BASE_URL + "?l=" + e,
                 },
-                un("#language_selection_" + e)
+                un("#language_selection_" + e),
               );
-            })
-          )
+            }),
+          ),
         );
       },
       Bn = function (e) {
@@ -12298,8 +12298,8 @@ PERFORMANCE OF THIS SOFTWARE.
           f.a.createElement(
             "div",
             { className: Dn.a.InnerWrapper },
-            f.a.createElement("span", null, t)
-          )
+            f.a.createElement("span", null, t),
+          ),
         );
       },
       zn = function () {
@@ -12312,7 +12312,7 @@ PERFORMANCE OF THIS SOFTWARE.
             f.a.createElement("img", {
               className: Dn.a.HeaderLogo,
               src: mt.IMG_URL + "/nav/logomark.svg",
-            })
+            }),
           ),
           f.a.createElement(
             "div",
@@ -12325,8 +12325,8 @@ PERFORMANCE OF THIS SOFTWARE.
               title: un("#Header_Leaderboard"),
               route: bt(ft.Standard),
             }),
-            f.a.createElement(Un, null)
-          )
+            f.a.createElement(Un, null),
+          ),
         );
       },
       Fn = n("iI56"),
@@ -12350,7 +12350,7 @@ PERFORMANCE OF THIS SOFTWARE.
                   f.a.createElement("img", {
                     className: Hn.a.FooterLogo,
                     src: mt.IMG_URL + "teaser/valve_logo.png",
-                  })
+                  }),
                 ),
                 f.a.createElement(
                   ut,
@@ -12358,16 +12358,16 @@ PERFORMANCE OF THIS SOFTWARE.
                   f.a.createElement("img", {
                     className: Hn.a.FooterLogo,
                     src: mt.IMG_URL + "logos/Underlords_WordMark_Horiz.svg",
-                  })
+                  }),
                 ),
                 f.a.createElement(
                   "div",
                   { className: Hn.a.Legal },
-                  un("#footer_legal")
-                )
-              )
-            )
-          )
+                  un("#footer_legal"),
+                ),
+              ),
+            ),
+          ),
         );
       },
       Vn = (function (e) {
@@ -12403,9 +12403,9 @@ PERFORMANCE OF THIS SOFTWARE.
               f.a.createElement(
                 "div",
                 { className: In.a.Content },
-                this.props.children
+                this.props.children,
               ),
-              f.a.createElement(Gn, null)
+              f.a.createElement(Gn, null),
             );
           }),
           t
@@ -12511,7 +12511,7 @@ PERFORMANCE OF THIS SOFTWARE.
               f.a.createElement(
                 "div",
                 { className: "control" },
-                un("#underlords_carousel_prev")
+                un("#underlords_carousel_prev"),
               ),
               f.a.createElement(
                 "div",
@@ -12523,9 +12523,9 @@ PERFORMANCE OF THIS SOFTWARE.
                       "name previous_name" +
                       (this.state.bInTransition ? " fade" : ""),
                   },
-                  xn(this.state.strCarouselPrevName)
-                )
-              )
+                  xn(this.state.strCarouselPrevName),
+                ),
+              ),
             );
           }),
           (t.prototype.NextButton = function (e) {
@@ -12541,7 +12541,7 @@ PERFORMANCE OF THIS SOFTWARE.
               f.a.createElement(
                 "div",
                 { className: "control" },
-                un("#underlords_carousel_next")
+                un("#underlords_carousel_next"),
               ),
               f.a.createElement(
                 "div",
@@ -12553,9 +12553,9 @@ PERFORMANCE OF THIS SOFTWARE.
                       "name next_name" +
                       (this.state.bInTransition ? " fade" : ""),
                   },
-                  xn(this.state.strCarouselNextName)
-                )
-              )
+                  xn(this.state.strCarouselNextName),
+                ),
+              ),
             );
           }),
           (t.prototype.render = function () {
@@ -12577,18 +12577,18 @@ PERFORMANCE OF THIS SOFTWARE.
                     "div",
                     { className: Lt.a.SubTitle },
                     " ",
-                    xn("#available_now")
+                    xn("#available_now"),
                   ),
-                  f.a.createElement(vn, null)
+                  f.a.createElement(vn, null),
                 ),
-                f.a.createElement("div", { className: Lt.a.BottomFade })
+                f.a.createElement("div", { className: Lt.a.BottomFade }),
               ),
               f.a.createElement(
                 "div",
                 { className: Lt.a.PaintSwipe },
                 f.a.createElement("img", {
                   src: mt.IMG_URL + "paint_swipe.svg",
-                })
+                }),
               ),
               f.a.createElement(
                 "div",
@@ -12601,8 +12601,8 @@ PERFORMANCE OF THIS SOFTWARE.
                     src: "https://www.youtube.com/embed/74Gh0lU89Ic?controls=0&autoplay=1&mute=1&hd=1&loop=1&playlist=m9MqIzmWG24",
                     frameBorder: 0,
                     allowFullScreen: !0,
-                  })
-                )
+                  }),
+                ),
               ),
               f.a.createElement(
                 "div",
@@ -12619,7 +12619,7 @@ PERFORMANCE OF THIS SOFTWARE.
                     },
                     f.a.createElement("img", {
                       src: mt.IMG_URL + "gameboard_heroes.png",
-                    })
+                    }),
                   ),
                   f.a.createElement(
                     "h1",
@@ -12628,7 +12628,7 @@ PERFORMANCE OF THIS SOFTWARE.
                       "data-aos": "fade-in",
                       "data-aos-duration": "800",
                     },
-                    xn("#gameplay_heros_for_hire")
+                    xn("#gameplay_heros_for_hire"),
                   ),
                   f.a.createElement(
                     "div",
@@ -12637,7 +12637,7 @@ PERFORMANCE OF THIS SOFTWARE.
                       "data-aos": "fade-in",
                       "data-aos-duration": "800",
                     },
-                    f.a.createElement("p", null, xn("#gameplay_build_a_team"))
+                    f.a.createElement("p", null, xn("#gameplay_build_a_team")),
                   ),
                   f.a.createElement(
                     "div",
@@ -12650,7 +12650,7 @@ PERFORMANCE OF THIS SOFTWARE.
                         { className: Lt.a.image },
                         f.a.createElement("img", {
                           src: mt.IMG_URL + "recruit_and_upgrade.png",
-                        })
+                        }),
                       ),
                       f.a.createElement(
                         "div",
@@ -12660,17 +12660,17 @@ PERFORMANCE OF THIS SOFTWARE.
                           {
                             className: mn(
                               Lt.a.gameplay_title,
-                              Lt.a.blocked_text
+                              Lt.a.blocked_text,
                             ),
                           },
-                          xn("#gameplay_strategize_title")
+                          xn("#gameplay_strategize_title"),
                         ),
                         f.a.createElement(
                           "div",
                           { className: Lt.a.gameplay_text },
-                          xn("#gameplay_strategize_text")
-                        )
-                      )
+                          xn("#gameplay_strategize_text"),
+                        ),
+                      ),
                     ),
                     f.a.createElement(
                       "div",
@@ -12680,7 +12680,7 @@ PERFORMANCE OF THIS SOFTWARE.
                         { className: Lt.a.image },
                         f.a.createElement("img", {
                           src: mt.IMG_URL + "mix_and_match2.png",
-                        })
+                        }),
                       ),
                       f.a.createElement(
                         "div",
@@ -12690,20 +12690,20 @@ PERFORMANCE OF THIS SOFTWARE.
                           {
                             className: mn(
                               Lt.a.gameplay_title,
-                              Lt.a.blocked_text
+                              Lt.a.blocked_text,
                             ),
                           },
-                          xn("#gameplay_mixmatch_title")
+                          xn("#gameplay_mixmatch_title"),
                         ),
                         f.a.createElement(
                           "div",
                           { className: Lt.a.gameplay_text },
-                          xn("#gameplay_mixmatch_text")
-                        )
-                      )
-                    )
-                  )
-                )
+                          xn("#gameplay_mixmatch_text"),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
               ),
               f.a.createElement(
                 "div",
@@ -12714,14 +12714,14 @@ PERFORMANCE OF THIS SOFTWARE.
                   f.a.createElement(
                     "div",
                     { className: Lt.a.Title },
-                    xn("#game_on_go")
+                    xn("#game_on_go"),
                   ),
                   f.a.createElement(
                     "div",
                     { className: Lt.a.SubTitle },
-                    xn("#running_late")
-                  )
-                )
+                    xn("#running_late"),
+                  ),
+                ),
               ),
               f.a.createElement(
                 "div",
@@ -12734,7 +12734,7 @@ PERFORMANCE OF THIS SOFTWARE.
                     {
                       className: mn(
                         Lt.a.whitespire_cityscene,
-                        bn.isMobile ? Lt.a.mobile : ""
+                        bn.isMobile ? Lt.a.mobile : "",
                       ),
                     },
                     f.a.createElement(
@@ -12742,7 +12742,7 @@ PERFORMANCE OF THIS SOFTWARE.
                       { className: mn(Lt.a.sky, Lt.a.base) },
                       f.a.createElement("img", {
                         src: mt.IMG_URL + "cityscene_sky.jpg",
-                      })
+                      }),
                     ),
                     f.a.createElement(
                       "div",
@@ -12753,7 +12753,7 @@ PERFORMANCE OF THIS SOFTWARE.
                       },
                       f.a.createElement("img", {
                         src: mt.IMG_URL + "cityscene_moon.png",
-                      })
+                      }),
                     ),
                     f.a.createElement(
                       "div",
@@ -12764,7 +12764,7 @@ PERFORMANCE OF THIS SOFTWARE.
                       },
                       f.a.createElement("img", {
                         src: mt.IMG_URL + "cityscene_bdg_01.png",
-                      })
+                      }),
                     ),
                     f.a.createElement(
                       "div",
@@ -12775,7 +12775,7 @@ PERFORMANCE OF THIS SOFTWARE.
                       },
                       f.a.createElement("img", {
                         src: mt.IMG_URL + "cityscene_bdg_02.png",
-                      })
+                      }),
                     ),
                     f.a.createElement(
                       "div",
@@ -12786,7 +12786,7 @@ PERFORMANCE OF THIS SOFTWARE.
                       },
                       f.a.createElement("img", {
                         src: mt.IMG_URL + "cityscene_bdg_03.png",
-                      })
+                      }),
                     ),
                     f.a.createElement(
                       "div",
@@ -12796,7 +12796,7 @@ PERFORMANCE OF THIS SOFTWARE.
                       }),
                       f.a.createElement("img", {
                         src: mt.IMG_URL + "cityscene_bdg_04_glow.png",
-                      })
+                      }),
                     ),
                     f.a.createElement(
                       "div",
@@ -12810,15 +12810,15 @@ PERFORMANCE OF THIS SOFTWARE.
                       }),
                       f.a.createElement("img", {
                         src: mt.IMG_URL + "cityscene_bdg_05_glow.png",
-                      })
+                      }),
                     ),
                     f.a.createElement(
                       "div",
                       { className: mn(Lt.a.bdg_06, Lt.a.layer) },
                       f.a.createElement("img", {
                         src: mt.IMG_URL + "cityscene_bdg_06.png",
-                      })
-                    )
+                      }),
+                    ),
                   ),
                   f.a.createElement(
                     "div",
@@ -12826,18 +12826,18 @@ PERFORMANCE OF THIS SOFTWARE.
                     f.a.createElement(
                       "h1",
                       { className: Lt.a.blocked_text },
-                      xn("#whitespire_title")
+                      xn("#whitespire_title"),
                     ),
                     f.a.createElement(
                       "div",
                       { className: Lt.a.subtitle },
-                      xn("#whitespire_subtitle")
+                      xn("#whitespire_subtitle"),
                     ),
                     f.a.createElement(
                       "div",
                       { className: Lt.a.text },
-                      xn("#whitespire_text")
-                    )
+                      xn("#whitespire_text"),
+                    ),
                   ),
                   f.a.createElement(
                     "div",
@@ -12875,76 +12875,75 @@ PERFORMANCE OF THIS SOFTWARE.
                               f.a.createElement(
                                 "h2",
                                 { className: Lt.a.name },
-                                xn("#underlord_carousel_underlords")
-                              )
+                                xn("#underlord_carousel_underlords"),
+                              ),
                             ),
                             f.a.createElement(
                               "div",
                               { className: Lt.a.description },
-                              xn("#underlord_carousel_underlords_desc")
-                            )
+                              xn("#underlord_carousel_underlords_desc"),
+                            ),
                           ),
                           f.a.createElement(
                             "div",
                             { className: Lt.a.image },
                             f.a.createElement("img", {
                               src: mt.IMG_URL + "characters/heroes-sil.png",
-                            })
-                          )
-                        )
+                            }),
+                          ),
+                        ),
                       ),
-                      ["anessix", "enno", "jull", "hobgen"].map(function (
-                        e,
-                        t
-                      ) {
-                        return f.a.createElement(
-                          "div",
-                          { key: e },
-                          f.a.createElement(
+                      ["anessix", "enno", "jull", "hobgen"].map(
+                        function (e, t) {
+                          return f.a.createElement(
                             "div",
-                            { className: Lt.a.underlord },
+                            { key: e },
                             f.a.createElement(
                               "div",
-                              { className: Lt.a.content },
+                              { className: Lt.a.underlord },
                               f.a.createElement(
                                 "div",
-                                { className: Lt.a.name_wrapper },
+                                { className: Lt.a.content },
                                 f.a.createElement(
-                                  "h2",
-                                  { className: Lt.a.name },
-                                  xn("#underlord_carousel_" + e + "_name")
-                                )
+                                  "div",
+                                  { className: Lt.a.name_wrapper },
+                                  f.a.createElement(
+                                    "h2",
+                                    { className: Lt.a.name },
+                                    xn("#underlord_carousel_" + e + "_name"),
+                                  ),
+                                ),
+                                f.a.createElement(
+                                  "div",
+                                  { className: Lt.a.title },
+                                  xn("#underlord_carousel_" + e + "_title"),
+                                ),
+                                f.a.createElement(
+                                  "div",
+                                  { className: Lt.a.last_spotted },
+                                  xn("#underlord_carousel_" + e + "_location"),
+                                ),
+                                f.a.createElement(
+                                  "div",
+                                  { className: Lt.a.description },
+                                  xn("#underlord_carousel_" + e + "_desc"),
+                                ),
                               ),
                               f.a.createElement(
                                 "div",
-                                { className: Lt.a.title },
-                                xn("#underlord_carousel_" + e + "_title")
+                                { className: Lt.a.image },
+                                f.a.createElement("img", {
+                                  src: mt.IMG_URL + "characters/" + e + ".png",
+                                }),
                               ),
-                              f.a.createElement(
-                                "div",
-                                { className: Lt.a.last_spotted },
-                                xn("#underlord_carousel_" + e + "_location")
-                              ),
-                              f.a.createElement(
-                                "div",
-                                { className: Lt.a.description },
-                                xn("#underlord_carousel_" + e + "_desc")
-                              )
                             ),
-                            f.a.createElement(
-                              "div",
-                              { className: Lt.a.image },
-                              f.a.createElement("img", {
-                                src: mt.IMG_URL + "characters/" + e + ".png",
-                              })
-                            )
-                          )
-                        );
-                      })
-                    )
-                  )
-                )
-              )
+                          );
+                        },
+                      ),
+                    ),
+                  ),
+                ),
+              ),
             );
           }),
           i([an], t.prototype, "PrevButton", null),
@@ -12988,20 +12987,20 @@ PERFORMANCE OF THIS SOFTWARE.
                                   "https://steamcommunity.com/games/underlords/announcements/edit/" +
                                   i.gid,
                               },
-                              "Edit Post"
-                            )
-                          )
+                              "Edit Post",
+                            ),
+                          ),
                       ),
                       f.a.createElement(
                         "div",
                         { className: Kn.a.Header },
-                        i.headline
+                        i.headline,
                       ),
                       f.a.createElement("div", {
                         className: Kn.a.Body,
                         dangerouslySetInnerHTML: ((e = i.body), { __html: e }),
-                      })
-                    )
+                      }),
+                    ),
                   );
               }
             return f.a.createElement(
@@ -13017,8 +13016,8 @@ PERFORMANCE OF THIS SOFTWARE.
                 f.a.createElement(
                   "div",
                   { className: Kn.a.ComingSoon },
-                  xn("#updates_title")
-                )
+                  xn("#updates_title"),
+                ),
               ),
               r &&
                 f.a.createElement(
@@ -13030,7 +13029,7 @@ PERFORMANCE OF THIS SOFTWARE.
                     {
                       href: "https://steamcommunity.com/games/underlords/announcements/create/",
                     },
-                    "Post New Announcement"
+                    "Post New Announcement",
                   ),
                   "public" !== mt.WG_UNIVERSE &&
                     f.a.createElement(
@@ -13038,10 +13037,10 @@ PERFORMANCE OF THIS SOFTWARE.
                       null,
                       f.a.createElement("br", null),
                       f.a.createElement("br", null),
-                      "Note: Patch notes are only visible on web stacks pointed at Steam Public."
-                    )
+                      "Note: Patch notes are only visible on web stacks pointed at Steam Public.",
+                    ),
                 ),
-              f.a.createElement("div", { className: Kn.a.EntryList }, t)
+              f.a.createElement("div", { className: Kn.a.EntryList }, t),
             );
           }),
           (t = i([ie], t))
@@ -13056,8 +13055,8 @@ PERFORMANCE OF THIS SOFTWARE.
           f.a.createElement(
             "div",
             { className: Jn.a.Title },
-            un("#leaderboard_title")
-          )
+            un("#leaderboard_title"),
+          ),
         );
       }),
       Qn = ie(function (e) {
@@ -13067,7 +13066,7 @@ PERFORMANCE OF THIS SOFTWARE.
           { className: Jn.a.Row },
           f.a.createElement("div", null, t.rank),
           f.a.createElement("div", null, t.name),
-          f.a.createElement("div", null, t.level_score)
+          f.a.createElement("div", null, t.level_score),
         );
       }),
       Zn = ie(function (e) {
@@ -13099,7 +13098,7 @@ PERFORMANCE OF THIS SOFTWARE.
                     to: bt(ft.Standard),
                     className: mn(Jn.a.Tab, t == ft.Standard && Jn.a.Selected),
                   },
-                  xn("#leaderboard_standard")
+                  xn("#leaderboard_standard"),
                 ),
                 f.a.createElement(
                   pt,
@@ -13107,7 +13106,7 @@ PERFORMANCE OF THIS SOFTWARE.
                     to: bt(ft.Knockout),
                     className: mn(Jn.a.Tab, t == ft.Knockout && Jn.a.Selected),
                   },
-                  xn("#leaderboard_knockout")
+                  xn("#leaderboard_knockout"),
                 ),
                 f.a.createElement(
                   pt,
@@ -13115,15 +13114,15 @@ PERFORMANCE OF THIS SOFTWARE.
                     to: bt(ft.Duos),
                     className: mn(Jn.a.Tab, t == ft.Duos && Jn.a.Selected),
                   },
-                  xn("#leaderboard_duos")
-                )
+                  xn("#leaderboard_duos"),
+                ),
               ),
               f.a.createElement(
                 "div",
                 { className: Jn.a.Footnote },
-                xn("#leaderboard_activity")
-              )
-            )
+                xn("#leaderboard_activity"),
+              ),
+            ),
           ),
           f.a.createElement(
             "div",
@@ -13148,15 +13147,15 @@ PERFORMANCE OF THIS SOFTWARE.
                     " @ ",
                     s.getHours(),
                     ":",
-                    s.getMinutes()
+                    s.getMinutes(),
                   ),
                   f.a.createElement(
                     "div",
                     { className: Jn.a.Frequency },
-                    xn("#leaderboard_time")
-                  )
-                )
-            )
+                    xn("#leaderboard_time"),
+                  ),
+                ),
+            ),
           ),
           f.a.createElement(
             "div",
@@ -13166,10 +13165,10 @@ PERFORMANCE OF THIS SOFTWARE.
               { className: Jn.a.Row },
               f.a.createElement("div", null, xn("#leaderboard_rank")),
               f.a.createElement("div", null, xn("#leaderboard_player")),
-              f.a.createElement("div", null, xn("#leaderboard_rankscore"))
+              f.a.createElement("div", null, xn("#leaderboard_rankscore")),
             ),
-            n
-          )
+            n,
+          ),
         );
       }),
       er = (function (e) {
@@ -13184,7 +13183,7 @@ PERFORMANCE OF THIS SOFTWARE.
               { className: Jn.a.FullscreenPage },
               f.a.createElement(zn, null),
               f.a.createElement(Yn, null),
-              f.a.createElement(Zn, { leaderboard: this.props.tab })
+              f.a.createElement(Zn, { leaderboard: this.props.tab }),
             );
           }),
           (t = i([ie], t))
@@ -13248,7 +13247,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 f.a.createElement("img", {
                   src: mt.IMG_URL + "Underlords_WordMark_Vertical.svg",
                   className: nr.a.Image,
-                })
+                }),
               ),
               f.a.createElement(
                 "div",
@@ -13259,20 +13258,20 @@ PERFORMANCE OF THIS SOFTWARE.
                   f.a.createElement(
                     "h1",
                     { className: nr.a.Title },
-                    un("#feedback_title")
+                    un("#feedback_title"),
                   ),
                   f.a.createElement(
                     "div",
                     { className: nr.a.Content },
                     f.a.createElement("p", null, cn("#feedback_messaging")),
-                    f.a.createElement("p", null, cn("#feedback_messaging_2"))
-                  )
+                    f.a.createElement("p", null, cn("#feedback_messaging_2")),
+                  ),
                 ),
                 this.state.success
                   ? f.a.createElement(
                       "div",
                       { className: nr.a.Success },
-                      this.state.successMessage
+                      this.state.successMessage,
                     )
                   : f.a.createElement(
                       "form",
@@ -13283,13 +13282,13 @@ PERFORMANCE OF THIS SOFTWARE.
                         f.a.createElement(
                           "label",
                           null,
-                          un("#feedback_form_email")
+                          un("#feedback_form_email"),
                         ),
                         f.a.createElement("input", {
                           type: "email",
                           value: this.state.email,
                           onChange: this.handleEmailChange,
-                        })
+                        }),
                       ),
                       f.a.createElement(
                         "div",
@@ -13297,13 +13296,13 @@ PERFORMANCE OF THIS SOFTWARE.
                         f.a.createElement(
                           "label",
                           null,
-                          un("#feedback_form_subject")
+                          un("#feedback_form_subject"),
                         ),
                         f.a.createElement("input", {
                           type: "text",
                           value: this.state.subject,
                           onChange: this.handleSubjectChange,
-                        })
+                        }),
                       ),
                       f.a.createElement(
                         "div",
@@ -13311,13 +13310,13 @@ PERFORMANCE OF THIS SOFTWARE.
                         f.a.createElement(
                           "label",
                           null,
-                          un("#feedback_form_message")
+                          un("#feedback_form_message"),
                         ),
                         f.a.createElement("textarea", {
                           name: "message",
                           value: this.state.message,
                           onChange: this.handleMessageChange,
-                        })
+                        }),
                       ),
                       this.state.errors.length > 0
                         ? f.a.createElement(
@@ -13325,7 +13324,7 @@ PERFORMANCE OF THIS SOFTWARE.
                             { className: nr.a.Errors },
                             this.state.errors.map(function (e) {
                               return f.a.createElement("p", { key: e }, e);
-                            })
+                            }),
                           )
                         : null,
                       f.a.createElement(
@@ -13334,11 +13333,11 @@ PERFORMANCE OF THIS SOFTWARE.
                         f.a.createElement(
                           "button",
                           null,
-                          un("#feedback_form_submit")
-                        )
-                      )
-                    )
-              )
+                          un("#feedback_form_submit"),
+                        ),
+                      ),
+                    ),
+              ),
             );
           }),
           i([an], t.prototype, "handleEmailChange", null),
@@ -13371,7 +13370,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 f.a.createElement("img", {
                   className: sr.a.Logo,
                   src: mt.IMG_URL + "protopass/protopass_logo.png",
-                })
+                }),
               ),
               f.a.createElement(
                 "div",
@@ -13383,7 +13382,7 @@ PERFORMANCE OF THIS SOFTWARE.
                       "row",
                       "no-gutters",
                       sr.a.Welcome,
-                      sr.a.Section
+                      sr.a.Section,
                     ),
                   },
                   f.a.createElement(
@@ -13392,13 +13391,13 @@ PERFORMANCE OF THIS SOFTWARE.
                     f.a.createElement(
                       "h3",
                       { className: sr.a.Subtitle },
-                      xn("#protopass_intro_a")
+                      xn("#protopass_intro_a"),
                     ),
                     f.a.createElement(
                       "div",
                       { className: sr.a.Description },
-                      xn("#protopass_intro_b")
-                    )
+                      xn("#protopass_intro_b"),
+                    ),
                   ),
                   f.a.createElement(
                     "div",
@@ -13414,21 +13413,21 @@ PERFORMANCE OF THIS SOFTWARE.
                           { className: "HeroImage" },
                           f.a.createElement("img", {
                             src: mt.IMG_URL + "protopass/daily_challenge.png",
-                          })
+                          }),
                         ),
                         f.a.createElement(
                           "h2",
                           { className: sr.a.Title },
-                          xn("#protopass_challenges_title")
+                          xn("#protopass_challenges_title"),
                         ),
                         f.a.createElement(
                           "div",
                           { className: sr.a.Description },
-                          xn("#protopass_challenges_desc")
-                        )
-                      )
-                    )
-                  )
+                          xn("#protopass_challenges_desc"),
+                        ),
+                      ),
+                    ),
+                  ),
                 ),
                 f.a.createElement(
                   "div",
@@ -13442,14 +13441,14 @@ PERFORMANCE OF THIS SOFTWARE.
                       f.a.createElement(
                         "h2",
                         { className: sr.a.Title },
-                        xn("#protopass_rewards_title")
+                        xn("#protopass_rewards_title"),
                       ),
                       f.a.createElement(
                         "div",
                         { className: sr.a.Description },
-                        xn("#protopass_rewards_desc")
-                      )
-                    )
+                        xn("#protopass_rewards_desc"),
+                      ),
+                    ),
                   ),
                   f.a.createElement(
                     "div",
@@ -13460,13 +13459,13 @@ PERFORMANCE OF THIS SOFTWARE.
                       f.a.createElement(
                         "h3",
                         { className: sr.a.Subtitle },
-                        xn("#protopass_rewards_map_title")
+                        xn("#protopass_rewards_map_title"),
                       ),
                       f.a.createElement(
                         "div",
                         { className: sr.a.Description },
-                        xn("#protopass_rewards_map_desc")
-                      )
+                        xn("#protopass_rewards_map_desc"),
+                      ),
                     ),
                     f.a.createElement(
                       "div",
@@ -13476,9 +13475,9 @@ PERFORMANCE OF THIS SOFTWARE.
                         { className: sr.a.Image },
                         f.a.createElement("img", {
                           src: mt.IMG_URL + "protopass/map.png",
-                        })
-                      )
-                    )
+                        }),
+                      ),
+                    ),
                   ),
                   f.a.createElement(
                     "div",
@@ -13493,8 +13492,8 @@ PERFORMANCE OF THIS SOFTWARE.
                           src:
                             mt.IMG_URL +
                             "protopass/streaks_and_teleports_a.png",
-                        })
-                      )
+                        }),
+                      ),
                     ),
                     f.a.createElement(
                       "div",
@@ -13502,24 +13501,24 @@ PERFORMANCE OF THIS SOFTWARE.
                       f.a.createElement(
                         "h3",
                         { className: sr.a.Subtitle },
-                        xn("#protopass_rewards_winstreak_title")
+                        xn("#protopass_rewards_winstreak_title"),
                       ),
                       f.a.createElement(
                         "div",
                         { className: sr.a.Description },
-                        xn("#protopass_rewards_winstreak_desc")
+                        xn("#protopass_rewards_winstreak_desc"),
                       ),
                       f.a.createElement(
                         "h3",
                         { className: sr.a.Subtitle },
-                        xn("#protopass_rewards_respawn_title")
+                        xn("#protopass_rewards_respawn_title"),
                       ),
                       f.a.createElement(
                         "div",
                         { className: sr.a.Description },
-                        xn("#protopass_rewards_respawn_desc")
-                      )
-                    )
+                        xn("#protopass_rewards_respawn_desc"),
+                      ),
+                    ),
                   ),
                   f.a.createElement(
                     "div",
@@ -13530,23 +13529,23 @@ PERFORMANCE OF THIS SOFTWARE.
                       f.a.createElement(
                         "h3",
                         { className: sr.a.Subtitle },
-                        xn("#protopass_rewards_banners_title")
+                        xn("#protopass_rewards_banners_title"),
                       ),
                       f.a.createElement(
                         "div",
                         { className: sr.a.Description },
-                        xn("#protopass_rewards_banners_desc")
+                        xn("#protopass_rewards_banners_desc"),
                       ),
                       f.a.createElement(
                         "h3",
                         { className: sr.a.Subtitle },
-                        xn("#protopass_rewards_fireworks_title")
+                        xn("#protopass_rewards_fireworks_title"),
                       ),
                       f.a.createElement(
                         "div",
                         { className: sr.a.Description },
-                        xn("#protopass_rewards_fireworks_desc")
-                      )
+                        xn("#protopass_rewards_fireworks_desc"),
+                      ),
                     ),
                     f.a.createElement(
                       "div",
@@ -13556,9 +13555,9 @@ PERFORMANCE OF THIS SOFTWARE.
                         { className: sr.a.Image },
                         f.a.createElement("img", {
                           src: mt.IMG_URL + "protopass/banners_web_a.png",
-                        })
-                      )
-                    )
+                        }),
+                      ),
+                    ),
                   ),
                   f.a.createElement(
                     "div",
@@ -13571,18 +13570,18 @@ PERFORMANCE OF THIS SOFTWARE.
                         { className: sr.a.Image },
                         f.a.createElement("img", {
                           src: mt.IMG_URL + "protopass/standards_a.png",
-                        })
+                        }),
                       ),
                       f.a.createElement(
                         "h3",
                         { className: sr.a.Subtitle },
-                        xn("#protopass_rewards_standards_title")
+                        xn("#protopass_rewards_standards_title"),
                       ),
                       f.a.createElement(
                         "div",
                         { className: sr.a.Description },
-                        xn("#protopass_rewards_standards_desc")
-                      )
+                        xn("#protopass_rewards_standards_desc"),
+                      ),
                     ),
                     f.a.createElement(
                       "div",
@@ -13592,18 +13591,18 @@ PERFORMANCE OF THIS SOFTWARE.
                         { className: sr.a.Image },
                         f.a.createElement("img", {
                           src: mt.IMG_URL + "protopass/YOs.png",
-                        })
+                        }),
                       ),
                       f.a.createElement(
                         "h3",
                         { className: sr.a.Subtitle },
-                        xn("#protopass_rewards_yos_title")
+                        xn("#protopass_rewards_yos_title"),
                       ),
                       f.a.createElement(
                         "div",
                         { className: sr.a.Description },
-                        xn("#protopass_rewards_yos_desc")
-                      )
+                        xn("#protopass_rewards_yos_desc"),
+                      ),
                     ),
                     f.a.createElement(
                       "div",
@@ -13613,20 +13612,20 @@ PERFORMANCE OF THIS SOFTWARE.
                         { className: sr.a.Image },
                         f.a.createElement("img", {
                           src: mt.IMG_URL + "protopass/profile_rings_a.png",
-                        })
+                        }),
                       ),
                       f.a.createElement(
                         "h3",
                         { className: sr.a.Subtitle },
-                        xn("#protopass_rewards_portraitrings_title")
+                        xn("#protopass_rewards_portraitrings_title"),
                       ),
                       f.a.createElement(
                         "div",
                         { className: sr.a.Description },
-                        xn("#protopass_rewards_portraitrings_desc")
-                      )
-                    )
-                  )
+                        xn("#protopass_rewards_portraitrings_desc"),
+                      ),
+                    ),
+                  ),
                 ),
                 f.a.createElement(
                   "div",
@@ -13634,21 +13633,21 @@ PERFORMANCE OF THIS SOFTWARE.
                   f.a.createElement(
                     "h2",
                     { className: sr.a.Title },
-                    xn("#protopass_feedback_title")
+                    xn("#protopass_feedback_title"),
                   ),
                   f.a.createElement(
                     "div",
                     { className: sr.a.Description },
-                    xn("#protopass_feedback_desc")
+                    xn("#protopass_feedback_desc"),
                   ),
                   f.a.createElement(
                     ut,
                     { className: sr.a.Button, to: _t() },
-                    xn("#protopass_feedback_btn")
-                  )
-                )
+                    xn("#protopass_feedback_btn"),
+                  ),
+                ),
               ),
-              f.a.createElement(Gn, null)
+              f.a.createElement(Gn, null),
             );
           }),
           t
@@ -13694,7 +13693,7 @@ PERFORMANCE OF THIS SOFTWARE.
                   className: mn(
                     cr.a.Hero,
                     cr.a.Outer,
-                    !this.state.bExpandPaper && cr.a.HeroCollapsed
+                    !this.state.bExpandPaper && cr.a.HeroCollapsed,
                   ),
                 },
                 f.a.createElement("div", {
@@ -13907,9 +13906,9 @@ PERFORMANCE OF THIS SOFTWARE.
                         return e.setState({ bExpandPaper: !0 });
                       },
                     },
-                    xn("#outlanders_hero_button")
-                  )
-                )
+                    xn("#outlanders_hero_button"),
+                  ),
+                ),
               ),
               f.a.createElement(
                 "div",
@@ -13928,7 +13927,7 @@ PERFORMANCE OF THIS SOFTWARE.
                       "data-aos": "zoom-out",
                       "data-aos-duration": "800",
                       src: mt.IMG_URL + "outlanders/poster_simonne.png",
-                    })
+                    }),
                   ),
                   f.a.createElement(
                     "div",
@@ -13939,8 +13938,8 @@ PERFORMANCE OF THIS SOFTWARE.
                       "data-aos-offset": "300",
                       "data-aos-duration": "800",
                       src: mt.IMG_URL + "outlanders/poster_lawrence.png",
-                    })
-                  )
+                    }),
+                  ),
                 ),
                 f.a.createElement("div", { className: cr.a.Poster3 }),
                 f.a.createElement(
@@ -13965,7 +13964,7 @@ PERFORMANCE OF THIS SOFTWARE.
                           {
                             className: mn(cr.a.KnockoutLabel, cr.a.LabelLarge),
                           },
-                          xn("#outlanders_knockout_label")
+                          xn("#outlanders_knockout_label"),
                         ),
                         f.a.createElement(
                           "div",
@@ -13973,12 +13972,12 @@ PERFORMANCE OF THIS SOFTWARE.
                           f.a.createElement(
                             "span",
                             null,
-                            xn("#outlanders_knockout_title")
-                          )
-                        )
-                      )
+                            xn("#outlanders_knockout_title"),
+                          ),
+                        ),
+                      ),
                     ),
-                    f.a.createElement("div", { className: "col-1" })
+                    f.a.createElement("div", { className: "col-1" }),
                   ),
                   f.a.createElement(
                     "div",
@@ -13993,18 +13992,18 @@ PERFORMANCE OF THIS SOFTWARE.
                         f.a.createElement(
                           "div",
                           { className: cr.a.KnockoutDescSpan },
-                          xn("#outlanders_knockout_subtitle")
+                          xn("#outlanders_knockout_subtitle"),
                         ),
                         f.a.createElement(
                           "div",
                           { className: cr.a.KnockoutDescText },
-                          xn("#outlanders_knockout_desc")
-                        )
+                          xn("#outlanders_knockout_desc"),
+                        ),
                       ),
-                      f.a.createElement("div", { className: "col-3" })
-                    )
-                  )
-                )
+                      f.a.createElement("div", { className: "col-3" }),
+                    ),
+                  ),
+                ),
               ),
               f.a.createElement(
                 "div",
@@ -14012,7 +14011,7 @@ PERFORMANCE OF THIS SOFTWARE.
                   className: mn(
                     cr.a.Snapfire,
                     cr.a.Outer,
-                    cr.a.PaddingBottomLg
+                    cr.a.PaddingBottomLg,
                   ),
                 },
                 f.a.createElement("div", {
@@ -14046,7 +14045,7 @@ PERFORMANCE OF THIS SOFTWARE.
                           {
                             className: mn(cr.a.SnapfireLabel, cr.a.LabelMedium),
                           },
-                          xn("#outlanders_snapfire_label")
+                          xn("#outlanders_snapfire_label"),
                         ),
                         f.a.createElement(
                           "div",
@@ -14058,7 +14057,7 @@ PERFORMANCE OF THIS SOFTWARE.
                           f.a.createElement("img", {
                             className: cr.a.FullWidth,
                             src: mt.IMG_URL + "outlanders/snapfire-title.png",
-                          })
+                          }),
                         ),
                         f.a.createElement(
                           "div",
@@ -14066,7 +14065,7 @@ PERFORMANCE OF THIS SOFTWARE.
                           f.a.createElement(
                             "span",
                             { className: cr.a.LeftFloat },
-                            xn("#outlanders_snapfire_subtitle")
+                            xn("#outlanders_snapfire_subtitle"),
                           ),
                           f.a.createElement(
                             "span",
@@ -14076,12 +14075,12 @@ PERFORMANCE OF THIS SOFTWARE.
                               src:
                                 mt.IMG_URL +
                                 "outlanders/alliances-snapfire.png",
-                            })
-                          )
-                        )
-                      )
+                            }),
+                          ),
+                        ),
+                      ),
                     ),
-                    f.a.createElement("div", { className: "col-1" })
+                    f.a.createElement("div", { className: "col-1" }),
                   ),
                   f.a.createElement(
                     "div",
@@ -14101,7 +14100,7 @@ PERFORMANCE OF THIS SOFTWARE.
                             className: mn(
                               cr.a.Video,
                               cr.a.VideoBox,
-                              cr.a.FullWidth
+                              cr.a.FullWidth,
                             ),
                             muted: !0,
                             loop: !0,
@@ -14123,11 +14122,11 @@ PERFORMANCE OF THIS SOFTWARE.
                             src:
                               mt.IMG_URL +
                               "outlanders/video/snapfire_abilities.jpg",
-                          })
-                        )
-                      )
+                          }),
+                        ),
+                      ),
                     ),
-                    f.a.createElement("div", { className: "col-3" })
+                    f.a.createElement("div", { className: "col-3" }),
                   ),
                   f.a.createElement(
                     "div",
@@ -14150,7 +14149,7 @@ PERFORMANCE OF THIS SOFTWARE.
                               src:
                                 mt.IMG_URL +
                                 "outlanders/snapfire_shotgun_blast.png",
-                            })
+                            }),
                           ),
                           f.a.createElement(
                             "div",
@@ -14158,16 +14157,16 @@ PERFORMANCE OF THIS SOFTWARE.
                             f.a.createElement(
                               "div",
                               { className: cr.a.LabelMedium },
-                              xn("#outlanders_snapfire_ability1_title")
+                              xn("#outlanders_snapfire_ability1_title"),
                             ),
                             f.a.createElement(
                               "div",
                               { className: cr.a.BodyMd },
-                              xn("#outlanders_snapfire_ability1_desc")
-                            )
-                          )
-                        )
-                      )
+                              xn("#outlanders_snapfire_ability1_desc"),
+                            ),
+                          ),
+                        ),
+                      ),
                     ),
                     f.a.createElement(
                       "div",
@@ -14185,7 +14184,7 @@ PERFORMANCE OF THIS SOFTWARE.
                               className: cr.a.FullWidth,
                               src:
                                 mt.IMG_URL + "outlanders/snapfire_bazooka.png",
-                            })
+                            }),
                           ),
                           f.a.createElement(
                             "div",
@@ -14193,20 +14192,20 @@ PERFORMANCE OF THIS SOFTWARE.
                             f.a.createElement(
                               "div",
                               { className: cr.a.LabelLarge },
-                              xn("#outlanders_snapfire_ability2_title")
+                              xn("#outlanders_snapfire_ability2_title"),
                             ),
                             f.a.createElement(
                               "div",
                               { className: cr.a.BodyMd },
-                              xn("#outlanders_snapfire_ability2_desc")
-                            )
-                          )
-                        )
-                      )
+                              xn("#outlanders_snapfire_ability2_desc"),
+                            ),
+                          ),
+                        ),
+                      ),
                     ),
-                    f.a.createElement("div", { className: "col-2" })
-                  )
-                )
+                    f.a.createElement("div", { className: "col-2" }),
+                  ),
+                ),
               ),
               f.a.createElement(
                 "div",
@@ -14234,21 +14233,21 @@ PERFORMANCE OF THIS SOFTWARE.
                       f.a.createElement(
                         "div",
                         { className: cr.a.LabelMedium },
-                        xn("#outlanders_spiritalliance_label")
+                        xn("#outlanders_spiritalliance_label"),
                       ),
                       f.a.createElement(
                         "div",
                         { className: cr.a.TitleDistressed },
-                        xn("#outlanders_spiritalliance_title")
+                        xn("#outlanders_spiritalliance_title"),
                       ),
                       f.a.createElement(
                         "div",
                         { className: cr.a.BodyLg },
-                        xn("#outlanders_spiritalliance_desc")
-                      )
+                        xn("#outlanders_spiritalliance_desc"),
+                      ),
                     ),
-                    f.a.createElement("div", { className: "col-3" })
-                  )
+                    f.a.createElement("div", { className: "col-3" }),
+                  ),
                 ),
                 f.a.createElement(
                   "div",
@@ -14278,7 +14277,7 @@ PERFORMANCE OF THIS SOFTWARE.
                           {
                             className: mn(cr.a.SnapfireLabel, cr.a.LabelMedium),
                           },
-                          xn("#outlanders_voidspirit_label")
+                          xn("#outlanders_voidspirit_label"),
                         ),
                         f.a.createElement(
                           "div",
@@ -14286,7 +14285,7 @@ PERFORMANCE OF THIS SOFTWARE.
                           f.a.createElement("img", {
                             className: cr.a.FullWidth,
                             src: mt.IMG_URL + "outlanders/void_title.png",
-                          })
+                          }),
                         ),
                         f.a.createElement(
                           "div",
@@ -14294,7 +14293,7 @@ PERFORMANCE OF THIS SOFTWARE.
                           f.a.createElement(
                             "span",
                             { className: "left-float" },
-                            xn("#outlanders_voidspirit_subtitle")
+                            xn("#outlanders_voidspirit_subtitle"),
                           ),
                           f.a.createElement(
                             "span",
@@ -14302,12 +14301,12 @@ PERFORMANCE OF THIS SOFTWARE.
                             f.a.createElement("img", {
                               className: cr.a.AlliancePips,
                               src: mt.IMG_URL + "outlanders/alliances-void.png",
-                            })
-                          )
-                        )
-                      )
+                            }),
+                          ),
+                        ),
+                      ),
                     ),
-                    f.a.createElement("div", { className: "col-1" })
+                    f.a.createElement("div", { className: "col-1" }),
                   ),
                   f.a.createElement(
                     "div",
@@ -14327,7 +14326,7 @@ PERFORMANCE OF THIS SOFTWARE.
                             className: mn(
                               cr.a.Video,
                               cr.a.VideoBox,
-                              cr.a.FullWidth
+                              cr.a.FullWidth,
                             ),
                             muted: !0,
                             loop: !0,
@@ -14349,11 +14348,11 @@ PERFORMANCE OF THIS SOFTWARE.
                             src:
                               mt.IMG_URL +
                               "outlanders/video/void_abilities.jpg",
-                          })
-                        )
-                      )
+                          }),
+                        ),
+                      ),
                     ),
-                    f.a.createElement("div", { className: "col-2" })
+                    f.a.createElement("div", { className: "col-2" }),
                   ),
                   f.a.createElement(
                     "div",
@@ -14376,7 +14375,7 @@ PERFORMANCE OF THIS SOFTWARE.
                               src:
                                 mt.IMG_URL +
                                 "outlanders/void_spirit_dissimilate.png",
-                            })
+                            }),
                           ),
                           f.a.createElement(
                             "div",
@@ -14384,16 +14383,16 @@ PERFORMANCE OF THIS SOFTWARE.
                             f.a.createElement(
                               "div",
                               { className: cr.a.LabelMedium },
-                              xn("#outlanders_voidspirit_ability1_title")
+                              xn("#outlanders_voidspirit_ability1_title"),
                             ),
                             f.a.createElement(
                               "div",
                               { className: cr.a.BodyMd },
-                              xn("#outlanders_voidspirit_ability1_desc")
-                            )
-                          )
-                        )
-                      )
+                              xn("#outlanders_voidspirit_ability1_desc"),
+                            ),
+                          ),
+                        ),
+                      ),
                     ),
                     f.a.createElement(
                       "div",
@@ -14412,7 +14411,7 @@ PERFORMANCE OF THIS SOFTWARE.
                               src:
                                 mt.IMG_URL +
                                 "outlanders/void_spirit_element.png",
-                            })
+                            }),
                           ),
                           f.a.createElement(
                             "div",
@@ -14420,20 +14419,20 @@ PERFORMANCE OF THIS SOFTWARE.
                             f.a.createElement(
                               "div",
                               { className: cr.a.LabelMedium },
-                              xn("#outlanders_voidspirit_ability2_title")
+                              xn("#outlanders_voidspirit_ability2_title"),
                             ),
                             f.a.createElement(
                               "div",
                               { className: cr.a.BodyMd },
-                              xn("#outlanders_voidspirit_ability2_desc")
-                            )
-                          )
-                        )
-                      )
+                              xn("#outlanders_voidspirit_ability2_desc"),
+                            ),
+                          ),
+                        ),
+                      ),
                     ),
-                    f.a.createElement("div", { className: "col-2" })
-                  )
-                )
+                    f.a.createElement("div", { className: "col-2" }),
+                  ),
+                ),
               ),
               f.a.createElement(
                 "div",
@@ -14456,13 +14455,13 @@ PERFORMANCE OF THIS SOFTWARE.
                         f.a.createElement(
                           "div",
                           { className: mn(cr.a.LabelMedium, cr.a.PaddingMd) },
-                          xn("#outlanders_spiritbros_label")
+                          xn("#outlanders_spiritbros_label"),
                         ),
                         f.a.createElement("img", {
                           className: mn(cr.a.FullWidth, cr.a.SpiritImg),
                           src: mt.IMG_URL + "outlanders/storm.png",
-                        })
-                      )
+                        }),
+                      ),
                     ),
                     f.a.createElement(
                       "div",
@@ -14473,7 +14472,7 @@ PERFORMANCE OF THIS SOFTWARE.
                         f.a.createElement(
                           "div",
                           { className: cr.a.TitleSm },
-                          xn("#outlanders_stormspirit_title")
+                          xn("#outlanders_stormspirit_title"),
                         ),
                         f.a.createElement(
                           "div",
@@ -14486,7 +14485,7 @@ PERFORMANCE OF THIS SOFTWARE.
                             f.a.createElement(
                               "span",
                               { className: cr.a.LeftFloat },
-                              xn("#outlanders_stormspirit_subtitle")
+                              xn("#outlanders_stormspirit_subtitle"),
                             ),
                             f.a.createElement(
                               "span",
@@ -14495,12 +14494,12 @@ PERFORMANCE OF THIS SOFTWARE.
                                 className: cr.a.AlliancePips,
                                 src:
                                   mt.IMG_URL + "outlanders/alliances-storm.png",
-                              })
-                            )
-                          )
-                        )
-                      )
-                    )
+                              }),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
                   ),
                   f.a.createElement(
                     "div",
@@ -14520,7 +14519,7 @@ PERFORMANCE OF THIS SOFTWARE.
                             src:
                               mt.IMG_URL +
                               "outlanders/storm_spirit_ball_lightning.png",
-                          })
+                          }),
                         ),
                         f.a.createElement(
                           "div",
@@ -14528,16 +14527,16 @@ PERFORMANCE OF THIS SOFTWARE.
                           f.a.createElement(
                             "div",
                             { className: cr.a.LabelSmall },
-                            xn("#outlanders_stormspirit_ability1_title")
+                            xn("#outlanders_stormspirit_ability1_title"),
                           ),
                           f.a.createElement(
                             "div",
                             { className: mn(cr.a.BodyMd, cr.a.justify) },
-                            xn("#outlanders_stormspirit_ability1_desc")
-                          )
-                        )
+                            xn("#outlanders_stormspirit_ability1_desc"),
+                          ),
+                        ),
                       ),
-                      f.a.createElement("div", { className: "col-2" })
+                      f.a.createElement("div", { className: "col-2" }),
                     ),
                     f.a.createElement(
                       "div",
@@ -14554,7 +14553,7 @@ PERFORMANCE OF THIS SOFTWARE.
                             src:
                               mt.IMG_URL +
                               "outlanders/storm_spirit_element.png",
-                          })
+                          }),
                         ),
                         f.a.createElement(
                           "div",
@@ -14562,17 +14561,17 @@ PERFORMANCE OF THIS SOFTWARE.
                           f.a.createElement(
                             "div",
                             { className: cr.a.LabelSmall },
-                            xn("#outlanders_stormspirit_ability2_title")
+                            xn("#outlanders_stormspirit_ability2_title"),
                           ),
                           f.a.createElement(
                             "div",
                             { className: cr.a.BodySm },
-                            xn("#outlanders_stormspirit_ability2_desc")
-                          )
-                        )
+                            xn("#outlanders_stormspirit_ability2_desc"),
+                          ),
+                        ),
                       ),
-                      f.a.createElement("div", { className: "col-2" })
-                    )
+                      f.a.createElement("div", { className: "col-2" }),
+                    ),
                   ),
                   f.a.createElement(
                     "div",
@@ -14586,8 +14585,8 @@ PERFORMANCE OF THIS SOFTWARE.
                         f.a.createElement("img", {
                           className: mn(cr.a.FullWidth, cr.a.SpiritImg),
                           src: mt.IMG_URL + "outlanders/earth_spirit.png",
-                        })
-                      )
+                        }),
+                      ),
                     ),
                     f.a.createElement(
                       "div",
@@ -14598,7 +14597,7 @@ PERFORMANCE OF THIS SOFTWARE.
                         f.a.createElement(
                           "div",
                           { className: cr.a.TitleSm },
-                          xn("#outlanders_earthspirit_title")
+                          xn("#outlanders_earthspirit_title"),
                         ),
                         f.a.createElement(
                           "div",
@@ -14611,7 +14610,7 @@ PERFORMANCE OF THIS SOFTWARE.
                             f.a.createElement(
                               "span",
                               { className: cr.a.LeftFloat },
-                              xn("#outlanders_earthspirit_subtitle")
+                              xn("#outlanders_earthspirit_subtitle"),
                             ),
                             f.a.createElement(
                               "span",
@@ -14620,11 +14619,11 @@ PERFORMANCE OF THIS SOFTWARE.
                                 className: cr.a.AlliancePips,
                                 src:
                                   mt.IMG_URL + "outlanders/alliances-earth.png",
-                              })
-                            )
-                          )
-                        )
-                      )
+                              }),
+                            ),
+                          ),
+                        ),
+                      ),
                     ),
                     f.a.createElement(
                       "div",
@@ -14641,7 +14640,7 @@ PERFORMANCE OF THIS SOFTWARE.
                             src:
                               mt.IMG_URL +
                               "outlanders/earth_spirit_geomagnetic_grip.png",
-                          })
+                          }),
                         ),
                         f.a.createElement(
                           "div",
@@ -14649,16 +14648,16 @@ PERFORMANCE OF THIS SOFTWARE.
                           f.a.createElement(
                             "div",
                             { className: cr.a.LabelSmall },
-                            xn("#outlanders_earthspirit_ability1_title")
+                            xn("#outlanders_earthspirit_ability1_title"),
                           ),
                           f.a.createElement(
                             "div",
                             { className: mn(cr.a.BodyMd, cr.a.Justify) },
-                            xn("#outlanders_earthspirit_ability1_desc")
-                          )
-                        )
+                            xn("#outlanders_earthspirit_ability1_desc"),
+                          ),
+                        ),
                       ),
-                      f.a.createElement("div", { className: "col-2" })
+                      f.a.createElement("div", { className: "col-2" }),
                     ),
                     f.a.createElement(
                       "div",
@@ -14675,7 +14674,7 @@ PERFORMANCE OF THIS SOFTWARE.
                             src:
                               mt.IMG_URL +
                               "outlanders/earth_spirit_element.png",
-                          })
+                          }),
                         ),
                         f.a.createElement(
                           "div",
@@ -14683,17 +14682,17 @@ PERFORMANCE OF THIS SOFTWARE.
                           f.a.createElement(
                             "div",
                             { className: cr.a.LabelSmall },
-                            xn("#outlanders_earthspirit_ability2_title")
+                            xn("#outlanders_earthspirit_ability2_title"),
                           ),
                           f.a.createElement(
                             "div",
                             { className: cr.a.BodySm },
-                            xn("#outlanders_earthspirit_ability2_desc")
-                          )
-                        )
+                            xn("#outlanders_earthspirit_ability2_desc"),
+                          ),
+                        ),
                       ),
-                      f.a.createElement("div", { className: "col-2" })
-                    )
+                      f.a.createElement("div", { className: "col-2" }),
+                    ),
                   ),
                   f.a.createElement(
                     "div",
@@ -14708,9 +14707,9 @@ PERFORMANCE OF THIS SOFTWARE.
                         f.a.createElement("img", {
                           className: mn(cr.a.FullWidth, cr.a.SpiritImg),
                           src: mt.IMG_URL + "outlanders/ember_spirit.png",
-                        })
+                        }),
                       ),
-                      f.a.createElement("div", { className: "col-2" })
+                      f.a.createElement("div", { className: "col-2" }),
                     ),
                     f.a.createElement(
                       "div",
@@ -14721,7 +14720,7 @@ PERFORMANCE OF THIS SOFTWARE.
                         f.a.createElement(
                           "div",
                           { className: cr.a.TitleSm },
-                          xn("#outlanders_emberspirit_title")
+                          xn("#outlanders_emberspirit_title"),
                         ),
                         f.a.createElement(
                           "div",
@@ -14729,7 +14728,7 @@ PERFORMANCE OF THIS SOFTWARE.
                           f.a.createElement(
                             "span",
                             { className: cr.a.LeftFloat },
-                            xn("#outlanders_emberspirit_subtitle")
+                            xn("#outlanders_emberspirit_subtitle"),
                           ),
                           f.a.createElement(
                             "span",
@@ -14738,10 +14737,10 @@ PERFORMANCE OF THIS SOFTWARE.
                               className: cr.a.AlliancePips,
                               src:
                                 mt.IMG_URL + "outlanders/alliances-ember.png",
-                            })
-                          )
-                        )
-                      )
+                            }),
+                          ),
+                        ),
+                      ),
                     ),
                     f.a.createElement(
                       "div",
@@ -14758,7 +14757,7 @@ PERFORMANCE OF THIS SOFTWARE.
                             src:
                               mt.IMG_URL +
                               "outlanders/ember_spirit_sleight_of_fist.png",
-                          })
+                          }),
                         ),
                         f.a.createElement(
                           "div",
@@ -14766,16 +14765,16 @@ PERFORMANCE OF THIS SOFTWARE.
                           f.a.createElement(
                             "div",
                             { className: cr.a.LabelSmall },
-                            xn("#outlanders_emberspirit_ability1_title")
+                            xn("#outlanders_emberspirit_ability1_title"),
                           ),
                           f.a.createElement(
                             "div",
                             { className: mn(cr.a.BodyMd, cr.a.Justify) },
-                            xn("#outlanders_emberspirit_ability1_desc")
-                          )
-                        )
+                            xn("#outlanders_emberspirit_ability1_desc"),
+                          ),
+                        ),
                       ),
-                      f.a.createElement("div", { className: "col-2" })
+                      f.a.createElement("div", { className: "col-2" }),
                     ),
                     f.a.createElement(
                       "div",
@@ -14792,7 +14791,7 @@ PERFORMANCE OF THIS SOFTWARE.
                             src:
                               mt.IMG_URL +
                               "outlanders/ember_spirit_element.png",
-                          })
+                          }),
                         ),
                         f.a.createElement(
                           "div",
@@ -14800,21 +14799,21 @@ PERFORMANCE OF THIS SOFTWARE.
                           f.a.createElement(
                             "div",
                             { className: cr.a.LabelSmall },
-                            xn("#outlanders_emberspirit_ability2_title")
+                            xn("#outlanders_emberspirit_ability2_title"),
                           ),
                           f.a.createElement(
                             "div",
                             { className: cr.a.BodySm },
-                            xn("#outlanders_emberspirit_ability2_desc")
-                          )
-                        )
+                            xn("#outlanders_emberspirit_ability2_desc"),
+                          ),
+                        ),
                       ),
-                      f.a.createElement("div", { className: "col-2" })
-                    )
-                  )
-                )
+                      f.a.createElement("div", { className: "col-2" }),
+                    ),
+                  ),
+                ),
               ),
-              f.a.createElement(Gn, null)
+              f.a.createElement(Gn, null),
             );
           }),
           t
@@ -14843,7 +14842,7 @@ PERFORMANCE OF THIS SOFTWARE.
                     src: mt.IMG_URL + "enno/enno-hero.png",
                     "data-aos": "zoom-out",
                     "data-aos-duration": "800",
-                  })
+                  }),
                 ),
                 f.a.createElement(
                   "div",
@@ -14858,17 +14857,17 @@ PERFORMANCE OF THIS SOFTWARE.
                     f.a.createElement(
                       "div",
                       { className: pr.a.Introducing },
-                      xn("#enno_top_label")
+                      xn("#enno_top_label"),
                     ),
                     f.a.createElement(
                       "div",
                       { className: pr.a.Title },
-                      f.a.createElement("span", null, xn("#enno_top_title"))
+                      f.a.createElement("span", null, xn("#enno_top_title")),
                     ),
                     f.a.createElement(
                       "div",
                       { className: pr.a.SubTitle },
-                      f.a.createElement("span", null, xn("#enno_top_subtitle"))
+                      f.a.createElement("span", null, xn("#enno_top_subtitle")),
                     ),
                     f.a.createElement(
                       "div",
@@ -14876,11 +14875,11 @@ PERFORMANCE OF THIS SOFTWARE.
                       f.a.createElement(
                         "span",
                         null,
-                        xn("#enno_top_description")
-                      )
-                    )
-                  )
-                )
+                        xn("#enno_top_description"),
+                      ),
+                    ),
+                  ),
+                ),
               ),
               f.a.createElement(
                 "div",
@@ -14909,8 +14908,8 @@ PERFORMANCE OF THIS SOFTWARE.
                     f.a.createElement("source", {
                       type: "image/jpg",
                       src: mt.IMG_URL + "enno/build1_poster.jpg",
-                    })
-                  )
+                    }),
+                  ),
                 ),
                 f.a.createElement(
                   "div",
@@ -14918,13 +14917,13 @@ PERFORMANCE OF THIS SOFTWARE.
                   f.a.createElement(
                     "div",
                     { className: pr.a.Header },
-                    xn("#enno_build1_title")
+                    xn("#enno_build1_title"),
                   ),
                   f.a.createElement(
                     "div",
                     { className: pr.a.SubHeader },
-                    xn("#enno_build1_subtitle")
-                  )
+                    xn("#enno_build1_subtitle"),
+                  ),
                 ),
                 f.a.createElement(
                   "div",
@@ -14941,14 +14940,14 @@ PERFORMANCE OF THIS SOFTWARE.
                       f.a.createElement(
                         "div",
                         { className: pr.a.AbilityHeader },
-                        xn("#enno_build1_ability1_title")
+                        xn("#enno_build1_ability1_title"),
                       ),
                       f.a.createElement(
                         "div",
                         { className: pr.a.AbilityDescription },
-                        xn("#enno_build1_ability1_desc")
-                      )
-                    )
+                        xn("#enno_build1_ability1_desc"),
+                      ),
+                    ),
                   ),
                   f.a.createElement(
                     "div",
@@ -14962,16 +14961,16 @@ PERFORMANCE OF THIS SOFTWARE.
                       f.a.createElement(
                         "div",
                         { className: pr.a.AbilityHeader },
-                        xn("#enno_build1_ability2_title")
+                        xn("#enno_build1_ability2_title"),
                       ),
                       f.a.createElement(
                         "div",
                         { className: pr.a.AbilityDescription },
-                        xn("#enno_build1_ability2_desc")
-                      )
-                    )
-                  )
-                )
+                        xn("#enno_build1_ability2_desc"),
+                      ),
+                    ),
+                  ),
+                ),
               ),
               f.a.createElement(
                 "div",
@@ -15000,8 +14999,8 @@ PERFORMANCE OF THIS SOFTWARE.
                     f.a.createElement("source", {
                       type: "image/jpg",
                       src: mt.IMG_URL + "enno/build2_poster.jpg",
-                    })
-                  )
+                    }),
+                  ),
                 ),
                 f.a.createElement(
                   "div",
@@ -15009,13 +15008,13 @@ PERFORMANCE OF THIS SOFTWARE.
                   f.a.createElement(
                     "div",
                     { className: pr.a.Header },
-                    xn("#enno_build2_title")
+                    xn("#enno_build2_title"),
                   ),
                   f.a.createElement(
                     "div",
                     { className: pr.a.SubHeader },
-                    xn("#enno_build2_subtitle")
-                  )
+                    xn("#enno_build2_subtitle"),
+                  ),
                 ),
                 f.a.createElement(
                   "div",
@@ -15032,14 +15031,14 @@ PERFORMANCE OF THIS SOFTWARE.
                       f.a.createElement(
                         "div",
                         { className: pr.a.AbilityHeader },
-                        xn("#enno_build2_ability1_title")
+                        xn("#enno_build2_ability1_title"),
                       ),
                       f.a.createElement(
                         "div",
                         { className: pr.a.AbilityDescription },
-                        xn("#enno_build2_ability1_desc")
-                      )
-                    )
+                        xn("#enno_build2_ability1_desc"),
+                      ),
+                    ),
                   ),
                   f.a.createElement(
                     "div",
@@ -15053,17 +15052,17 @@ PERFORMANCE OF THIS SOFTWARE.
                       f.a.createElement(
                         "div",
                         { className: pr.a.AbilityHeader },
-                        xn("#enno_build2_ability2_title")
+                        xn("#enno_build2_ability2_title"),
                       ),
                       f.a.createElement(
                         "div",
                         { className: pr.a.AbilityDescription },
-                        xn("#enno_build2_ability2_desc")
-                      )
-                    )
-                  )
-                )
-              )
+                        xn("#enno_build2_ability2_desc"),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
             );
           }),
           t
@@ -15093,7 +15092,7 @@ PERFORMANCE OF THIS SOFTWARE.
           f.a.createElement("img", {
             className: vr.a.Icon,
             src: mt.IMG_URL + "synergyicons/" + n.strAllianceName + ".png",
-          })
+          }),
         );
       },
       _r = function (e) {
@@ -15106,7 +15105,7 @@ PERFORMANCE OF THIS SOFTWARE.
           f.a.createElement(
             "div",
             { className: vr.a.Header },
-            xn("#profile_top_finishes")
+            xn("#profile_top_finishes"),
           ),
           f.a.createElement(
             "div",
@@ -15118,8 +15117,8 @@ PERFORMANCE OF THIS SOFTWARE.
               f.a.createElement(
                 "div",
                 { className: vr.a.Place },
-                xn("#profile_finish_first")
-              )
+                xn("#profile_finish_first"),
+              ),
             ),
             f.a.createElement(
               "div",
@@ -15128,8 +15127,8 @@ PERFORMANCE OF THIS SOFTWARE.
               f.a.createElement(
                 "div",
                 { className: vr.a.Place },
-                xn("#profile_finish_second")
-              )
+                xn("#profile_finish_second"),
+              ),
             ),
             f.a.createElement(
               "div",
@@ -15138,10 +15137,10 @@ PERFORMANCE OF THIS SOFTWARE.
               f.a.createElement(
                 "div",
                 { className: vr.a.Place },
-                xn("#profile_finish_third")
-              )
-            )
-          )
+                xn("#profile_finish_third"),
+              ),
+            ),
+          ),
         );
       },
       wr = function (e) {
@@ -15154,7 +15153,7 @@ PERFORMANCE OF THIS SOFTWARE.
             f.a.createElement(
               "div",
               { className: vr.a.Header },
-              xn("#profile_top_alliances")
+              xn("#profile_top_alliances"),
             ),
             f.a.createElement(
               "div",
@@ -15170,9 +15169,9 @@ PERFORMANCE OF THIS SOFTWARE.
                   { className: vr.a.Percent },
                   xn(
                     "#profile_top_percent",
-                    t.length > 0 ? (100 * t[0].count) / 20 : 0
-                  )
-                )
+                    t.length > 0 ? (100 * t[0].count) / 20 : 0,
+                  ),
+                ),
               ),
               f.a.createElement(
                 "div",
@@ -15185,9 +15184,9 @@ PERFORMANCE OF THIS SOFTWARE.
                   { className: vr.a.Percent },
                   xn(
                     "#profile_top_percent",
-                    t.length > 1 ? (100 * t[1].count) / 20 : 0
-                  )
-                )
+                    t.length > 1 ? (100 * t[1].count) / 20 : 0,
+                  ),
+                ),
               ),
               f.a.createElement(
                 "div",
@@ -15200,11 +15199,11 @@ PERFORMANCE OF THIS SOFTWARE.
                   { className: vr.a.Percent },
                   xn(
                     "#profile_top_percent",
-                    t.length > 2 ? (100 * t[2].count) / 20 : 0
-                  )
-                )
-              )
-            )
+                    t.length > 2 ? (100 * t[2].count) / 20 : 0,
+                  ),
+                ),
+              ),
+            ),
           )
         );
       },
@@ -15272,7 +15271,7 @@ PERFORMANCE OF THIS SOFTWARE.
                   elimination_round: S.elimination_round,
                   underlord: S.underlord,
                   timestamp: S.start_time,
-                })
+                }),
               );
             }
             return f.a.createElement(
@@ -15288,7 +15287,7 @@ PERFORMANCE OF THIS SOFTWARE.
                   f.a.createElement("div", { className: vr.a.Poster }),
                   f.a.createElement(gr, null),
                   f.a.createElement("div", { className: vr.a.Spacer }),
-                  f.a.createElement(yr, { accountID: e })
+                  f.a.createElement(yr, { accountID: e }),
                 ),
                 f.a.createElement(
                   "div",
@@ -15298,9 +15297,9 @@ PERFORMANCE OF THIS SOFTWARE.
                     { className: vr.a.TopSection },
                     f.a.createElement(_r, { first: r, second: a, third: o }),
                     f.a.createElement("div", { className: vr.a.Spacer }),
-                    f.a.createElement(wr, { allianceList: b })
+                    f.a.createElement(wr, { allianceList: b }),
                   ),
-                  f.a.createElement("div", { className: vr.a.Spacer })
+                  f.a.createElement("div", { className: vr.a.Spacer }),
                 ),
                 f.a.createElement(
                   "div",
@@ -15311,13 +15310,13 @@ PERFORMANCE OF THIS SOFTWARE.
                     f.a.createElement(
                       "div",
                       { className: vr.a.Header },
-                      xn("#profile_recent_matches")
+                      xn("#profile_recent_matches"),
                     ),
-                    f.a.createElement("div", { className: vr.a.MatchList }, _)
-                  )
-                )
+                    f.a.createElement("div", { className: vr.a.MatchList }, _),
+                  ),
+                ),
               ),
-              f.a.createElement(Gn, null)
+              f.a.createElement(Gn, null),
             );
           }),
           (t = i([ie], t))
@@ -15337,8 +15336,8 @@ PERFORMANCE OF THIS SOFTWARE.
                 Ot(
                   this.props.match.params.puzzle_id,
                   e.target.value,
-                  this.props.match.params.account
-                )
+                  this.props.match.params.account,
+                ),
               );
             }),
             (t.prototype.handlePuzzleIDChange = function (e) {
@@ -15346,8 +15345,8 @@ PERFORMANCE OF THIS SOFTWARE.
                 Ot(
                   e.target.value,
                   this.props.match.params.type,
-                  this.props.match.params.account
-                )
+                  this.props.match.params.account,
+                ),
               );
             }),
             (t.prototype.handleAccountChange = function (e) {
@@ -15356,8 +15355,8 @@ PERFORMANCE OF THIS SOFTWARE.
                   Ot(
                     this.props.match.params.puzzle_id,
                     this.props.match.params.type,
-                    e.target.value ? e.target.value : 0
-                  )
+                    e.target.value ? e.target.value : 0,
+                  ),
                 );
             }),
             (t.prototype.handleCopy = function (e, t) {
@@ -15381,7 +15380,7 @@ PERFORMANCE OF THIS SOFTWARE.
                           f.a.createElement(
                             "div",
                             { className: Nr.a.Score },
-                            t.score
+                            t.score,
                           ),
                           f.a.createElement(
                             "div",
@@ -15393,8 +15392,8 @@ PERFORMANCE OF THIS SOFTWARE.
                                   "https://steamcommunity.com/profiles/" +
                                   t.steam_id,
                               },
-                              t.name
-                            )
+                              t.name,
+                            ),
                           ),
                           f.a.createElement(
                             "div",
@@ -15404,9 +15403,9 @@ PERFORMANCE OF THIS SOFTWARE.
                                 return e.handleCopy(n, t.share_code);
                               },
                             },
-                            "Copy Solution Board Code"
-                          )
-                        )
+                            "Copy Solution Board Code",
+                          ),
+                        ),
                       );
                     },
                     l = 0,
@@ -15433,7 +15432,7 @@ PERFORMANCE OF THIS SOFTWARE.
                       f.a.createElement(
                         "div",
                         { className: Nr.a.OptionHeader },
-                        "Select Puzzle"
+                        "Select Puzzle",
                       ),
                       f.a.createElement(
                         "select",
@@ -15449,10 +15448,10 @@ PERFORMANCE OF THIS SOFTWARE.
                             return f.a.createElement(
                               "option",
                               { key: e.puzzle_id, value: e.puzzle_id },
-                              un("#" + e.name) + " (" + e.puzzle_id + ")"
+                              un("#" + e.name) + " (" + e.puzzle_id + ")",
                             );
-                          })
-                      )
+                          }),
+                      ),
                     ),
                     f.a.createElement(
                       "div",
@@ -15460,7 +15459,7 @@ PERFORMANCE OF THIS SOFTWARE.
                       f.a.createElement(
                         "div",
                         { className: Nr.a.OptionHeader },
-                        "Select Leaderboard Type"
+                        "Select Leaderboard Type",
                       ),
                       f.a.createElement(
                         "select",
@@ -15472,8 +15471,8 @@ PERFORMANCE OF THIS SOFTWARE.
                         f.a.createElement("option", { value: 0 }, "-"),
                         f.a.createElement("option", { value: 1 }, "Gold"),
                         f.a.createElement("option", { value: 2 }, "Duration"),
-                        f.a.createElement("option", { value: 4 }, "Units")
-                      )
+                        f.a.createElement("option", { value: 4 }, "Units"),
+                      ),
                     ),
                     f.a.createElement(
                       "div",
@@ -15481,18 +15480,18 @@ PERFORMANCE OF THIS SOFTWARE.
                       f.a.createElement(
                         "div",
                         { className: Nr.a.OptionHeader },
-                        "Optional Account ID"
+                        "Optional Account ID",
                       ),
                       f.a.createElement("input", {
                         className: Nr.a.Name,
                         type: "text",
                         onKeyDown: this.handleAccountChange,
-                      })
-                    )
+                      }),
+                    ),
                   ),
-                  f.a.createElement("div", { className: Nr.a.Entries }, i)
+                  f.a.createElement("div", { className: Nr.a.Entries }, i),
                 ),
-                f.a.createElement(Gn, null)
+                f.a.createElement(Gn, null),
               );
             }),
             i([an], t.prototype, "handlePuzzleTypeChange", null),
@@ -15501,7 +15500,7 @@ PERFORMANCE OF THIS SOFTWARE.
             i([an], t.prototype, "handleCopy", null),
             (t = i([ie], t))
           );
-        })(f.a.Component)
+        })(f.a.Component),
       ),
       Tr = n("Kmj8"),
       Cr = n.n(Tr),
@@ -15545,13 +15544,13 @@ PERFORMANCE OF THIS SOFTWARE.
                     "div",
                     { className: Cr.a.RowElement },
                     X.round_min + " - " + X.round_max,
-                    " "
+                    " ",
                   ),
                   f.a.createElement(
                     "div",
                     { className: mn(Cr.a.RowElement, Cr.a.RightJustify) },
                     "" + X.num_combat_rounds,
-                    " "
+                    " ",
                   ),
                   f.a.createElement(
                     "div",
@@ -15559,9 +15558,9 @@ PERFORMANCE OF THIS SOFTWARE.
                     "" +
                       this.SafeDivide(
                         X.num_combat_rounds,
-                        o * t.num_games
+                        o * t.num_games,
                       ).toFixed(2),
-                    " "
+                    " ",
                   ),
                   f.a.createElement(
                     "div",
@@ -15569,9 +15568,9 @@ PERFORMANCE OF THIS SOFTWARE.
                     "" +
                       this.SafeDivideLong(
                         X.starting_life,
-                        new Pr.a(X.num_combat_rounds)
+                        new Pr.a(X.num_combat_rounds),
                       ).toFixed(2),
-                    " "
+                    " ",
                   ),
                   f.a.createElement(
                     "div",
@@ -15579,9 +15578,9 @@ PERFORMANCE OF THIS SOFTWARE.
                     "" +
                       this.SafeDivideLong(
                         X.player_level,
-                        new Pr.a(X.num_combat_rounds)
+                        new Pr.a(X.num_combat_rounds),
                       ).toFixed(2),
-                    " "
+                    " ",
                   ),
                   f.a.createElement(
                     "div",
@@ -15589,9 +15588,9 @@ PERFORMANCE OF THIS SOFTWARE.
                     "" +
                       this.SafeDivideLong(
                         X.rerolls,
-                        new Pr.a(X.num_combat_rounds)
+                        new Pr.a(X.num_combat_rounds),
                       ).toFixed(2),
-                    " "
+                    " ",
                   ),
                   f.a.createElement(
                     "div",
@@ -15599,9 +15598,9 @@ PERFORMANCE OF THIS SOFTWARE.
                     "" +
                       this.SafeDivideLong(
                         X.gold,
-                        new Pr.a(X.num_combat_rounds)
+                        new Pr.a(X.num_combat_rounds),
                       ).toFixed(2),
-                    " "
+                    " ",
                   ),
                   f.a.createElement(
                     "div",
@@ -15609,9 +15608,9 @@ PERFORMANCE OF THIS SOFTWARE.
                     "" +
                       this.SafeDivideLong(
                         X.interest_gold,
-                        new Pr.a(X.num_combat_rounds)
+                        new Pr.a(X.num_combat_rounds),
                       ).toFixed(2),
-                    " "
+                    " ",
                   ),
                   f.a.createElement(
                     "div",
@@ -15619,9 +15618,9 @@ PERFORMANCE OF THIS SOFTWARE.
                     "" +
                       this.SafeDivideLong(
                         X.streak_gold,
-                        new Pr.a(X.num_combat_rounds)
+                        new Pr.a(X.num_combat_rounds),
                       ).toFixed(2),
-                    " "
+                    " ",
                   ),
                   f.a.createElement(
                     "div",
@@ -15629,9 +15628,9 @@ PERFORMANCE OF THIS SOFTWARE.
                     "" +
                       this.SafeDivideLong(
                         X.bonus_gold,
-                        new Pr.a(X.num_combat_rounds)
+                        new Pr.a(X.num_combat_rounds),
                       ).toFixed(2),
-                    " "
+                    " ",
                   ),
                   f.a.createElement(
                     "div",
@@ -15639,9 +15638,9 @@ PERFORMANCE OF THIS SOFTWARE.
                     "" +
                       this.SafeDivideLong(
                         X.total_damage,
-                        new Pr.a(X.num_combat_rounds)
+                        new Pr.a(X.num_combat_rounds),
                       ).toFixed(2),
-                    " "
+                    " ",
                   ),
                   f.a.createElement(
                     "div",
@@ -15649,11 +15648,11 @@ PERFORMANCE OF THIS SOFTWARE.
                     "" +
                       this.SafeDivideLong(
                         X.total_losses.mul(100),
-                        new Pr.a(X.num_combat_rounds)
+                        new Pr.a(X.num_combat_rounds),
                       ).toFixed(2),
-                    " "
-                  )
-                )
+                    " ",
+                  ),
+                ),
               );
             }
             for (
@@ -15676,7 +15675,7 @@ PERFORMANCE OF THIS SOFTWARE.
                   f.a.createElement(
                     "div",
                     { className: Cr.a.UnderlordName },
-                    l[m.underlord_id]
+                    l[m.underlord_id],
                   ),
                   f.a.createElement(
                     "div",
@@ -15687,7 +15686,7 @@ PERFORMANCE OF THIS SOFTWARE.
                       f.a.createElement(
                         "div",
                         { className: Cr.a.Label },
-                        "Picks: "
+                        "Picks: ",
                       ),
                       f.a.createElement(
                         "div",
@@ -15695,8 +15694,8 @@ PERFORMANCE OF THIS SOFTWARE.
                         m.total_players +
                           " (" +
                           this.SafeDivide(100 * m.total_players, s).toFixed(2) +
-                          "%)"
-                      )
+                          "%)",
+                      ),
                     ),
                     f.a.createElement(
                       "div",
@@ -15704,20 +15703,20 @@ PERFORMANCE OF THIS SOFTWARE.
                       f.a.createElement(
                         "div",
                         { className: Cr.a.Label },
-                        "Average Place: "
+                        "Average Place: ",
                       ),
                       f.a.createElement(
                         "div",
                         { className: Cr.a.Value },
                         this.SafeDivideLong(
                           m.total_place,
-                          new Pr.a(m.total_players)
+                          new Pr.a(m.total_players),
                         ).toFixed(2),
-                        " "
-                      )
-                    )
-                  )
-                )
+                        " ",
+                      ),
+                    ),
+                  ),
+                ),
               );
             }
             for (
@@ -15734,8 +15733,8 @@ PERFORMANCE OF THIS SOFTWARE.
               f.a.createElement(
                 "div",
                 { className: mn(Cr.a.ID, Cr.a.StatHeader), key: "column_0_0" },
-                "ID"
-              )
+                "ID",
+              ),
             ),
               w.elRowElements.push(
                 f.a.createElement(
@@ -15744,15 +15743,15 @@ PERFORMANCE OF THIS SOFTWARE.
                     className: mn(
                       Cr.a.Name,
                       Cr.a.StatHeader,
-                      Hr.isGameStatsSortColumn(-1) && Cr.a.SortColumn
+                      Hr.isGameStatsSortColumn(-1) && Cr.a.SortColumn,
                     ),
                     key: "column_1_0",
                     onClick: function () {
                       return e.onSortColumn(-1);
                     },
                   },
-                  "Name"
-                )
+                  "Name",
+                ),
               ),
               w.elRowElements.push(
                 f.a.createElement(
@@ -15761,8 +15760,8 @@ PERFORMANCE OF THIS SOFTWARE.
                     className: mn(Cr.a.Type, Cr.a.StatHeader),
                     key: "column_2_0",
                   },
-                  "Type"
-                )
+                  "Type",
+                ),
               );
             for (
               var E = 1,
@@ -15784,13 +15783,13 @@ PERFORMANCE OF THIS SOFTWARE.
                               {
                                 className: mn(
                                   Cr.a.MergeLeft,
-                                  !o && Cr.a.Hidden
+                                  !o && Cr.a.Hidden,
                                 ),
                                 onClick: function () {
                                   return Hr.mergeColumnEnd(n, !0);
                                 },
                               },
-                              "<<"
+                              "<<",
                             ),
                             f.a.createElement(
                               "div",
@@ -15800,28 +15799,28 @@ PERFORMANCE OF THIS SOFTWARE.
                                   return Hr.hideColumn(n);
                                 },
                               },
-                              "X"
+                              "X",
                             ),
                             f.a.createElement(
                               "div",
                               {
                                 className: mn(
                                   Cr.a.MergeRight,
-                                  !i && Cr.a.Hidden
+                                  !i && Cr.a.Hidden,
                                 ),
                                 onClick: function () {
                                   return Hr.mergeColumnEnd(n, !1);
                                 },
                               },
-                              ">>"
-                            )
+                              ">>",
+                            ),
                           ),
                           f.a.createElement(
                             "div",
                             {
                               className: mn(
                                 Cr.a.StatElementHeader,
-                                Hr.isGameStatsSortColumn(n) && Cr.a.SortColumn
+                                Hr.isGameStatsSortColumn(n) && Cr.a.SortColumn,
                               ),
                               onClick: function () {
                                 return e.onSortColumn(n);
@@ -15830,7 +15829,7 @@ PERFORMANCE OF THIS SOFTWARE.
                             f.a.createElement(
                               "div",
                               { className: Cr.a.Rounds },
-                              E + " - " + n
+                              E + " - " + n,
                             ),
                             f.a.createElement(
                               "div",
@@ -15843,18 +15842,18 @@ PERFORMANCE OF THIS SOFTWARE.
                                 { className: Cr.a.UsagePct },
                                 "Usage",
                                 f.a.createElement("br", null),
-                                "%"
+                                "%",
                               ),
                               f.a.createElement(
                                 "div",
                                 { className: Cr.a.WinPct },
                                 "Win",
                                 f.a.createElement("br", null),
-                                "%"
-                              )
-                            )
-                          )
-                        )
+                                "%",
+                              ),
+                            ),
+                          ),
+                        ),
                       ),
                         1;
                     }
@@ -15880,13 +15879,13 @@ PERFORMANCE OF THIS SOFTWARE.
                     className: mn(
                       Cr.a.MergeContainer,
                       Cr.a.Reset,
-                      !T && !C && Cr.a.Hidden
+                      !T && !C && Cr.a.Hidden,
                     ),
                     onClick: function () {
                       return Hr.resetColumns();
                     },
                   },
-                  "Reset"
+                  "Reset",
                 ),
                 f.a.createElement(
                   "div",
@@ -15894,7 +15893,7 @@ PERFORMANCE OF THIS SOFTWARE.
                     className: mn(
                       Cr.a.StatElementHeader,
                       Cr.a.Totals,
-                      Hr.isGameStatsSortColumn(0) && Cr.a.SortColumn
+                      Hr.isGameStatsSortColumn(0) && Cr.a.SortColumn,
                     ),
                     onClick: function () {
                       return e.onSortColumn(0);
@@ -15903,7 +15902,7 @@ PERFORMANCE OF THIS SOFTWARE.
                   f.a.createElement(
                     "div",
                     { className: Cr.a.Rounds },
-                    "Totals"
+                    "Totals",
                   ),
                   f.a.createElement(
                     "div",
@@ -15913,18 +15912,18 @@ PERFORMANCE OF THIS SOFTWARE.
                       { className: Cr.a.UsagePct },
                       "Usage",
                       f.a.createElement("br", null),
-                      "%"
+                      "%",
                     ),
                     f.a.createElement(
                       "div",
                       { className: Cr.a.WinPct },
                       "Win",
                       f.a.createElement("br", null),
-                      "%"
-                    )
-                  )
-                )
-              )
+                      "%",
+                    ),
+                  ),
+                ),
+              ),
             ),
               _.push(w);
             for (var x = 0, P = t.entity_infos || []; x < P.length; x++) {
@@ -15959,22 +15958,22 @@ PERFORMANCE OF THIS SOFTWARE.
                     "div",
                     { className: Cr.a.ID, key: "column_0_" + b.entity_id },
                     b.entity_id,
-                    " "
-                  )
+                    " ",
+                  ),
                 ),
                   R.elRowElements.push(
                     f.a.createElement(
                       "div",
                       { className: Cr.a.Name, key: "column_1_" + b.entity_id },
-                      h.get(b.entity_id)
-                    )
+                      h.get(b.entity_id),
+                    ),
                   ),
                   R.elRowElements.push(
                     f.a.createElement(
                       "div",
                       { className: L, key: "column_2_" + b.entity_id },
-                      v.get(b.entity_id)
-                    )
+                      v.get(b.entity_id),
+                    ),
                   ),
                   (E = 1);
                 for (
@@ -16040,7 +16039,7 @@ PERFORMANCE OF THIS SOFTWARE.
                               className: Cr.a.UsagePct,
                               style: { color: "rgb( 0, " + ee + ", 0 )" },
                             },
-                            Z.toFixed(2)
+                            Z.toFixed(2),
                           ),
                           f.a.createElement(
                             "div",
@@ -16050,9 +16049,9 @@ PERFORMANCE OF THIS SOFTWARE.
                                 color: "rgb( " + ne + ", " + ne + ", 0 )",
                               },
                             },
-                            te.toFixed(2)
-                          )
-                        )
+                            te.toFixed(2),
+                          ),
+                        ),
                       ),
                         Hr.isGameStatsSortColumn(F) && (R.nSortKey = te);
                     } else
@@ -16066,14 +16065,14 @@ PERFORMANCE OF THIS SOFTWARE.
                           f.a.createElement(
                             "div",
                             { className: Cr.a.UsagePct },
-                            "0.00"
+                            "0.00",
                           ),
                           f.a.createElement(
                             "div",
                             { className: Cr.a.WinPct },
-                            "0.00"
-                          )
-                        )
+                            "0.00",
+                          ),
+                        ),
                       ),
                         Hr.isGameStatsSortColumn(F) && (R.nSortKey = 0);
                     (M += 1), (E = F + 1);
@@ -16096,7 +16095,7 @@ PERFORMANCE OF THIS SOFTWARE.
                         className: Cr.a.UsagePct,
                         style: { color: "rgb( 0, " + ae + ", 0 )" },
                       },
-                      re.toFixed(2)
+                      re.toFixed(2),
                     ),
                     f.a.createElement(
                       "div",
@@ -16104,9 +16103,9 @@ PERFORMANCE OF THIS SOFTWARE.
                         className: Cr.a.WinPct,
                         style: { color: "rgb( " + ie + ", " + ie + ", 0 )" },
                       },
-                      oe.toFixed(2)
-                    )
-                  )
+                      oe.toFixed(2),
+                    ),
+                  ),
                 ),
                   Hr.isGameStatsSortColumn(0) && (R.nSortKey = oe),
                   Hr.isGameStatsSortColumn(-1) && (R.nSortKey = 0),
@@ -16140,13 +16139,13 @@ PERFORMANCE OF THIS SOFTWARE.
                       f.a.createElement(
                         "span",
                         { className: Cr.a.Label },
-                        "Games:"
+                        "Games:",
                       ),
                       f.a.createElement(
                         "span",
                         { className: Cr.a.Value },
-                        t.num_games
-                      )
+                        t.num_games,
+                      ),
                     ),
                     f.a.createElement(
                       "div",
@@ -16154,14 +16153,14 @@ PERFORMANCE OF THIS SOFTWARE.
                       f.a.createElement(
                         "span",
                         { className: Cr.a.Label },
-                        "Players:"
+                        "Players:",
                       ),
                       f.a.createElement(
                         "span",
                         { className: Cr.a.Value },
-                        t.num_players
-                      )
-                    )
+                        t.num_players,
+                      ),
+                    ),
                   ),
                   f.a.createElement(
                     "div",
@@ -16172,13 +16171,13 @@ PERFORMANCE OF THIS SOFTWARE.
                       f.a.createElement(
                         "span",
                         { className: Cr.a.Label },
-                        "Average Players:"
+                        "Average Players:",
                       ),
                       f.a.createElement(
                         "span",
                         { className: Cr.a.Value },
-                        this.SafeDivide(t.num_players, t.num_games).toFixed(2)
-                      )
+                        this.SafeDivide(t.num_players, t.num_games).toFixed(2),
+                      ),
                     ),
                     f.a.createElement(
                       "div",
@@ -16186,7 +16185,7 @@ PERFORMANCE OF THIS SOFTWARE.
                       f.a.createElement(
                         "span",
                         { className: Cr.a.Label },
-                        "Average Minutes:"
+                        "Average Minutes:",
                       ),
                       f.a.createElement(
                         "span",
@@ -16194,10 +16193,10 @@ PERFORMANCE OF THIS SOFTWARE.
                         (
                           this.SafeDivideLong(
                             t.total_duration_seconds,
-                            new Pr.a(t.num_games)
+                            new Pr.a(t.num_games),
                           ) / 60
-                        ).toFixed(2)
-                      )
+                        ).toFixed(2),
+                      ),
                     ),
                     f.a.createElement(
                       "div",
@@ -16205,7 +16204,7 @@ PERFORMANCE OF THIS SOFTWARE.
                       f.a.createElement(
                         "span",
                         { className: Cr.a.Label },
-                        "Average Player Minutes:"
+                        "Average Player Minutes:",
                       ),
                       f.a.createElement(
                         "span",
@@ -16213,12 +16212,12 @@ PERFORMANCE OF THIS SOFTWARE.
                         (
                           this.SafeDivideLong(
                             t.player_duration_seconds,
-                            new Pr.a(t.num_games)
+                            new Pr.a(t.num_games),
                           ) / 60
-                        ).toFixed(2)
-                      )
-                    )
-                  )
+                        ).toFixed(2),
+                      ),
+                    ),
+                  ),
                 ),
                 f.a.createElement(
                   "div",
@@ -16229,70 +16228,70 @@ PERFORMANCE OF THIS SOFTWARE.
                     f.a.createElement(
                       "div",
                       { className: Cr.a.HeaderElement },
-                      "Round"
+                      "Round",
                     ),
                     f.a.createElement(
                       "div",
                       { className: mn(Cr.a.HeaderElement, Cr.a.RightJustify) },
-                      "Samples"
+                      "Samples",
                     ),
                     f.a.createElement(
                       "div",
                       { className: mn(Cr.a.HeaderElement, Cr.a.RightJustify) },
-                      "Players"
+                      "Players",
                     ),
                     f.a.createElement(
                       "div",
                       { className: mn(Cr.a.HeaderElement, Cr.a.RightJustify) },
-                      "Life"
+                      "Life",
                     ),
                     f.a.createElement(
                       "div",
                       { className: mn(Cr.a.HeaderElement, Cr.a.RightJustify) },
-                      "Level"
+                      "Level",
                     ),
                     f.a.createElement(
                       "div",
                       { className: mn(Cr.a.HeaderElement, Cr.a.RightJustify) },
-                      "Rerolls"
+                      "Rerolls",
                     ),
                     f.a.createElement(
                       "div",
                       { className: mn(Cr.a.HeaderElement, Cr.a.RightJustify) },
-                      "Gold"
+                      "Gold",
                     ),
                     f.a.createElement(
                       "div",
                       { className: mn(Cr.a.HeaderElement, Cr.a.RightJustify) },
-                      "Interest"
+                      "Interest",
                     ),
                     f.a.createElement(
                       "div",
                       { className: mn(Cr.a.HeaderElement, Cr.a.RightJustify) },
-                      "Streak"
+                      "Streak",
                     ),
                     f.a.createElement(
                       "div",
                       { className: mn(Cr.a.HeaderElement, Cr.a.RightJustify) },
-                      "Bonus"
+                      "Bonus",
                     ),
                     f.a.createElement(
                       "div",
                       { className: mn(Cr.a.HeaderElement, Cr.a.RightJustify) },
-                      "Damage"
+                      "Damage",
                     ),
                     f.a.createElement(
                       "div",
                       { className: mn(Cr.a.HeaderElement, Cr.a.RightJustify) },
-                      "Loss %"
-                    )
+                      "Loss %",
+                    ),
                   ),
-                  n
+                  n,
                 ),
                 f.a.createElement(
                   "div",
                   { className: Cr.a.StatsUnderlords },
-                  i
+                  i,
                 ),
                 f.a.createElement(
                   "div",
@@ -16303,13 +16302,13 @@ PERFORMANCE OF THIS SOFTWARE.
                       className: mn(
                         Cr.a.StatsCheckbox,
                         Cr.a.Unit,
-                        !Hr.hasActiveStatsType(jr.Unit) && Cr.a.Disabled
+                        !Hr.hasActiveStatsType(jr.Unit) && Cr.a.Disabled,
                       ),
                       onClick: function () {
                         return Hr.toggleActiveStatsType(jr.Unit);
                       },
                     },
-                    "Units"
+                    "Units",
                   ),
                   f.a.createElement(
                     "div",
@@ -16317,13 +16316,13 @@ PERFORMANCE OF THIS SOFTWARE.
                       className: mn(
                         Cr.a.StatsCheckbox,
                         Cr.a.Item,
-                        !Hr.hasActiveStatsType(jr.Item) && Cr.a.Disabled
+                        !Hr.hasActiveStatsType(jr.Item) && Cr.a.Disabled,
                       ),
                       onClick: function () {
                         return Hr.toggleActiveStatsType(jr.Item);
                       },
                     },
-                    "Item"
+                    "Item",
                   ),
                   f.a.createElement(
                     "div",
@@ -16331,13 +16330,13 @@ PERFORMANCE OF THIS SOFTWARE.
                       className: mn(
                         Cr.a.StatsCheckbox,
                         Cr.a.Synergy,
-                        !Hr.hasActiveStatsType(jr.Synergy) && Cr.a.Disabled
+                        !Hr.hasActiveStatsType(jr.Synergy) && Cr.a.Disabled,
                       ),
                       onClick: function () {
                         return Hr.toggleActiveStatsType(jr.Synergy);
                       },
                     },
-                    "Synergy"
+                    "Synergy",
                   ),
                   f.a.createElement(
                     "div",
@@ -16345,14 +16344,14 @@ PERFORMANCE OF THIS SOFTWARE.
                       className: mn(
                         Cr.a.StatsCheckbox,
                         Cr.a.Talent,
-                        !Hr.hasActiveStatsType(jr.Talent) && Cr.a.Disabled
+                        !Hr.hasActiveStatsType(jr.Talent) && Cr.a.Disabled,
                       ),
                       onClick: function () {
                         return Hr.toggleActiveStatsType(jr.Talent);
                       },
                     },
-                    "Talent"
-                  )
+                    "Talent",
+                  ),
                 ),
                 f.a.createElement(
                   "div",
@@ -16361,10 +16360,10 @@ PERFORMANCE OF THIS SOFTWARE.
                     return f.a.createElement(
                       "div",
                       { key: "entity_index_" + t, className: Cr.a.StatRow },
-                      e.elRowElements
+                      e.elRowElements,
                     );
-                  })
-                )
+                  }),
+                ),
               )
             );
           }),
@@ -16416,7 +16415,7 @@ PERFORMANCE OF THIS SOFTWARE.
                   void 0,
                   void 0,
                   void 0,
-                  void 0
+                  void 0,
                 );
             }),
             (t.prototype.onMinMMRChange = function (e) {
@@ -16429,7 +16428,7 @@ PERFORMANCE OF THIS SOFTWARE.
                   e.target.value,
                   void 0,
                   void 0,
-                  void 0
+                  void 0,
                 );
             }),
             (t.prototype.onMaxMMRChange = function (e) {
@@ -16442,7 +16441,7 @@ PERFORMANCE OF THIS SOFTWARE.
                   void 0,
                   e.target.value,
                   void 0,
-                  void 0
+                  void 0,
                 );
             }),
             (t.prototype.onMatchModeChange = function (e) {
@@ -16452,7 +16451,7 @@ PERFORMANCE OF THIS SOFTWARE.
                   void 0,
                   void 0,
                   e.target.value,
-                  void 0
+                  void 0,
                 );
             }),
             (t.prototype.onGameModeChange = function (e) {
@@ -16462,7 +16461,7 @@ PERFORMANCE OF THIS SOFTWARE.
                   void 0,
                   void 0,
                   void 0,
-                  e.target.value
+                  e.target.value,
                 );
             }),
             (t.getDerivedStateFromProps = function (e, t) {
@@ -16473,16 +16472,16 @@ PERFORMANCE OF THIS SOFTWARE.
                   this.props.match.params.timestring || this.state.timestring,
                 t = Date.parse(e) / 1e3,
                 n = parseInt(
-                  this.props.match.params.min_mmr || this.state.min_mmr
+                  this.props.match.params.min_mmr || this.state.min_mmr,
                 ),
                 r = parseInt(
-                  this.props.match.params.max_mmr || this.state.max_mmr
+                  this.props.match.params.max_mmr || this.state.max_mmr,
                 ),
                 a = parseInt(
-                  this.props.match.params.match_mode || this.state.match_mode
+                  this.props.match.params.match_mode || this.state.match_mode,
                 ),
                 o = parseInt(
-                  this.props.match.params.game_mode || this.state.game_mode
+                  this.props.match.params.game_mode || this.state.game_mode,
                 );
               if (!this.props.match.params.timestring)
                 return (
@@ -16532,7 +16531,7 @@ PERFORMANCE OF THIS SOFTWARE.
                     f.a.createElement(
                       "div",
                       { className: Cr.a.Title },
-                      "Select a Day"
+                      "Select a Day",
                     ),
                     f.a.createElement("input", {
                       type: "date",
@@ -16540,7 +16539,7 @@ PERFORMANCE OF THIS SOFTWARE.
                       name: "day_selector",
                       value: this.state.timestring,
                       onChange: this.onDateChange,
-                    })
+                    }),
                   ),
                   f.a.createElement(
                     "div",
@@ -16548,7 +16547,7 @@ PERFORMANCE OF THIS SOFTWARE.
                     f.a.createElement(
                       "div",
                       { className: Cr.a.Title },
-                      "Minimum MMR"
+                      "Minimum MMR",
                     ),
                     f.a.createElement("input", {
                       type: "text",
@@ -16557,7 +16556,7 @@ PERFORMANCE OF THIS SOFTWARE.
                       value: this.state.min_mmr,
                       onKeyDown: this.onMinMMRKey,
                       onChange: this.onMinMMRChange,
-                    })
+                    }),
                   ),
                   f.a.createElement(
                     "div",
@@ -16565,7 +16564,7 @@ PERFORMANCE OF THIS SOFTWARE.
                     f.a.createElement(
                       "div",
                       { className: Cr.a.Title },
-                      "Maximum MMR"
+                      "Maximum MMR",
                     ),
                     f.a.createElement("input", {
                       type: "text",
@@ -16574,7 +16573,7 @@ PERFORMANCE OF THIS SOFTWARE.
                       value: this.state.max_mmr,
                       onKeyDown: this.onMaxMMRKey,
                       onChange: this.onMaxMMRChange,
-                    })
+                    }),
                   ),
                   f.a.createElement(
                     "div",
@@ -16582,7 +16581,7 @@ PERFORMANCE OF THIS SOFTWARE.
                     f.a.createElement(
                       "div",
                       { className: Cr.a.Title },
-                      "Match Mode"
+                      "Match Mode",
                     ),
                     f.a.createElement(
                       "select",
@@ -16593,14 +16592,14 @@ PERFORMANCE OF THIS SOFTWARE.
                       f.a.createElement(
                         "option",
                         { value: Mr.Casual },
-                        "Casual"
+                        "Casual",
                       ),
                       f.a.createElement(
                         "option",
                         { value: Mr.Ranked },
-                        "Ranked"
-                      )
-                    )
+                        "Ranked",
+                      ),
+                    ),
                   ),
                   f.a.createElement(
                     "div",
@@ -16608,7 +16607,7 @@ PERFORMANCE OF THIS SOFTWARE.
                     f.a.createElement(
                       "div",
                       { className: Cr.a.Title },
-                      "Game Mode"
+                      "Game Mode",
                     ),
                     f.a.createElement(
                       "select",
@@ -16619,16 +16618,16 @@ PERFORMANCE OF THIS SOFTWARE.
                       f.a.createElement(
                         "option",
                         { value: Ir.Normal },
-                        "Standard"
+                        "Standard",
                       ),
                       f.a.createElement(
                         "option",
                         { value: Ir.Turbo },
-                        "Knockout"
+                        "Knockout",
                       ),
-                      f.a.createElement("option", { value: Ir.Duos }, "Duos")
-                    )
-                  )
+                      f.a.createElement("option", { value: Ir.Duos }, "Duos"),
+                    ),
+                  ),
                 ),
                 f.a.createElement(
                   "div",
@@ -16644,7 +16643,7 @@ PERFORMANCE OF THIS SOFTWARE.
                         month: "long",
                         day: "numeric",
                         year: "numeric",
-                      })
+                      }),
                     ),
                     f.a.createElement("div", { className: Cr.a.MMR }, c),
                     f.a.createElement(
@@ -16653,11 +16652,15 @@ PERFORMANCE OF THIS SOFTWARE.
                       f.a.createElement(
                         "span",
                         { className: Cr.a.MatchMode },
-                        i
+                        i,
                       ),
                       " - ",
-                      f.a.createElement("span", { className: Cr.a.GameMode }, s)
-                    )
+                      f.a.createElement(
+                        "span",
+                        { className: Cr.a.GameMode },
+                        s,
+                      ),
+                    ),
                   ),
                   f.a.createElement(
                     "div",
@@ -16665,17 +16668,17 @@ PERFORMANCE OF THIS SOFTWARE.
                     f.a.createElement(
                       "div",
                       { className: mn(Cr.a.Pending, u && Cr.a.IsPending) },
-                      "Loading data..."
+                      "Loading data...",
                     ),
                     f.a.createElement(
                       "div",
                       { className: mn(Cr.a.HasData, !u && Cr.a.DoesHaveData) },
-                      f.a.createElement(Lr, { gameStats: l })
+                      f.a.createElement(Lr, { gameStats: l }),
                     ),
-                    []
-                  )
+                    [],
+                  ),
                 ),
-                f.a.createElement(Gn, null)
+                f.a.createElement(Gn, null),
               );
             }),
             i([an], t.prototype, "updateRoute", null),
@@ -16688,7 +16691,7 @@ PERFORMANCE OF THIS SOFTWARE.
             i([an], t.prototype, "onGameModeChange", null),
             (t = i([ie], t))
           );
-        })(f.a.Component)
+        })(f.a.Component),
       ),
       Rr = (function (e) {
         function t() {
@@ -16749,7 +16752,7 @@ PERFORMANCE OF THIS SOFTWARE.
                       ":min_mmr?",
                       ":max_mmr?",
                       ":match_mode?",
-                      ":game_mode?"
+                      ":game_mode?",
                     ),
                     component: Ar,
                   }),
@@ -16758,9 +16761,9 @@ PERFORMANCE OF THIS SOFTWARE.
                     render: function () {
                       return f.a.createElement(We, { to: gt() });
                     },
-                  })
-                )
-              )
+                  }),
+                ),
+              ),
             );
           }),
           (t = i([ie], t))
@@ -16947,7 +16950,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 },
                 function (e) {
                   return e.data;
-                }
+                },
               );
           }),
           (e.prototype.isGameStatsSortColumn = function (e) {
@@ -16960,7 +16963,7 @@ PERFORMANCE OF THIS SOFTWARE.
             this.m_arrActiveTypes.includes(e)
               ? this.m_arrActiveTypes.splice(
                   this.m_arrActiveTypes.indexOf(e),
-                  1
+                  1,
                 )
               : this.m_arrActiveTypes.push(e);
           }),
@@ -17060,13 +17063,13 @@ PERFORMANCE OF THIS SOFTWARE.
               function (e) {
                 if (!e.data.success) return e.data;
                 (e.data.player_duration_seconds = Pr.a.fromString(
-                  e.data.player_duration_seconds
+                  e.data.player_duration_seconds,
                 )),
                   (e.data.player_rounds = Pr.a.fromString(
-                    e.data.player_rounds
+                    e.data.player_rounds,
                   )),
                   (e.data.total_duration_seconds = Pr.a.fromString(
-                    e.data.total_duration_seconds
+                    e.data.total_duration_seconds,
                   )),
                   (e.data.total_rounds = Pr.a.fromString(e.data.total_rounds));
                 for (
@@ -17098,7 +17101,7 @@ PERFORMANCE OF THIS SOFTWARE.
                   u.total_place = Pr.a.fromString(u.total_place);
                 }
                 return e.data;
-              }
+              },
             );
           }),
           (e.prototype.getPuzzleInfoList = function () {
@@ -17124,7 +17127,7 @@ PERFORMANCE OF THIS SOFTWARE.
               },
               function (e) {
                 return e.data;
-              }
+              },
             );
           }),
           (e.prototype.getLeaderboardData = function (e) {
@@ -17153,7 +17156,7 @@ PERFORMANCE OF THIS SOFTWARE.
                   },
                   function (e) {
                     return e.data;
-                  }
+                  },
                 );
                 break;
               case ft.Knockout:
@@ -17178,7 +17181,7 @@ PERFORMANCE OF THIS SOFTWARE.
                   },
                   function (e) {
                     return e.data;
-                  }
+                  },
                 );
                 break;
               case ft.Duos:
@@ -17203,7 +17206,7 @@ PERFORMANCE OF THIS SOFTWARE.
                   },
                   function (e) {
                     return e.data;
-                  }
+                  },
                 );
             }
             return t;
@@ -17226,7 +17229,7 @@ PERFORMANCE OF THIS SOFTWARE.
               },
               function (e) {
                 return e.data;
-              }
+              },
             );
           }),
           (e.prototype.getAccountID = function (e) {
@@ -17252,7 +17255,7 @@ PERFORMANCE OF THIS SOFTWARE.
               },
               function (e) {
                 return e.data;
-              }
+              },
             );
           }),
           (e.prototype.getProfileData = function (e) {
@@ -17278,7 +17281,7 @@ PERFORMANCE OF THIS SOFTWARE.
               },
               function (e) {
                 return e.data;
-              }
+              },
             );
           }),
           (e.prototype.getAllianceInfoByType = function (e) {
@@ -17494,7 +17497,7 @@ PERFORMANCE OF THIS SOFTWARE.
           (e.prototype.Init = function () {
             c.render(
               d.createElement(Rr, { app: this }),
-              document.getElementById("underlords_root")
+              document.getElementById("underlords_root"),
             );
           }),
           i([p.B], e.prototype, "m_nSortColumnEndRound", void 0),
@@ -17534,7 +17537,7 @@ PERFORMANCE OF THIS SOFTWARE.
         a[e] = function (n) {
           return typeof n === e || "a" + (t < 1 ? "n " : " ") + e;
         };
-      }
+      },
     );
     var o = {},
       i = r.version.split(".");
@@ -17569,8 +17572,8 @@ PERFORMANCE OF THIS SOFTWARE.
                 r,
                 " has been deprecated since v" +
                   t +
-                  " and will be removed in the near future"
-              )
+                  " and will be removed in the near future",
+              ),
             )),
           !e || e(n, r, s)
         );
@@ -17791,7 +17794,7 @@ PERFORMANCE OF THIS SOFTWARE.
     function s(e, t) {
       if (!e)
         throw new ReferenceError(
-          "this hasn't been initialised - super() hasn't been called"
+          "this hasn't been initialised - super() hasn't been called",
         );
       return !t || ("object" != typeof t && "function" != typeof t) ? e : t;
     }
@@ -17801,7 +17804,7 @@ PERFORMANCE OF THIS SOFTWARE.
           i(this, t),
           s(
             this,
-            (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments)
+            (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments),
           )
         );
       }
@@ -17810,7 +17813,7 @@ PERFORMANCE OF THIS SOFTWARE.
           if ("function" != typeof t && null !== t)
             throw new TypeError(
               "Super expression must either be null or a function, not " +
-                typeof t
+                typeof t,
             );
           (e.prototype = Object.create(t && t.prototype, {
             constructor: {
@@ -17848,7 +17851,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 : a.default.createElement(
                     "span",
                     { style: { fontSize: e + "px" } },
-                    this.getComponents()
+                    this.getComponents(),
                   );
             },
           },
@@ -17886,7 +17889,7 @@ PERFORMANCE OF THIS SOFTWARE.
     function s(e, t) {
       if (!e)
         throw new ReferenceError(
-          "this hasn't been initialised - super() hasn't been called"
+          "this hasn't been initialised - super() hasn't been called",
         );
       return !t || ("object" != typeof t && "function" != typeof t) ? e : t;
     }
@@ -17897,7 +17900,7 @@ PERFORMANCE OF THIS SOFTWARE.
         i(this, t);
         var r = s(
           this,
-          (t.__proto__ || Object.getPrototypeOf(t)).call(this, e, n)
+          (t.__proto__ || Object.getPrototypeOf(t)).call(this, e, n),
         );
         return (r.STRIP_INNER = !0), (r.STRIP_OUTER = !0), r;
       }
@@ -17906,7 +17909,7 @@ PERFORMANCE OF THIS SOFTWARE.
           if ("function" != typeof t && null !== t)
             throw new TypeError(
               "Super expression must either be null or a function, not " +
-                typeof t
+                typeof t,
             );
           (e.prototype = Object.create(t && t.prototype, {
             constructor: {
@@ -17942,7 +17945,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 "blockquote",
                 null,
                 e && a.default.createElement("small", null, e, " wrote:"),
-                this.getComponents()
+                this.getComponents(),
               );
             },
           },
@@ -18082,7 +18085,7 @@ PERFORMANCE OF THIS SOFTWARE.
     function l(e, t) {
       if (!e)
         throw new ReferenceError(
-          "this hasn't been initialised - super() hasn't been called"
+          "this hasn't been initialised - super() hasn't been called",
         );
       return !t || ("object" != typeof t && "function" != typeof t) ? e : t;
     }
@@ -18094,7 +18097,7 @@ PERFORMANCE OF THIS SOFTWARE.
           s(this, o);
           var r = l(
             this,
-            (o.__proto__ || Object.getPrototypeOf(o)).call(this, e, n)
+            (o.__proto__ || Object.getPrototypeOf(o)).call(this, e, n),
           );
           return (
             Object.keys(t || {}).forEach(function (e) {
@@ -18108,7 +18111,7 @@ PERFORMANCE OF THIS SOFTWARE.
             if ("function" != typeof t && null !== t)
               throw new TypeError(
                 "Super expression must either be null or a function, not " +
-                  typeof t
+                  typeof t,
               );
             (e.prototype = Object.create(t && t.prototype, {
               constructor: {
@@ -18141,7 +18144,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 return a.default.createElement(
                   t,
                   this.params,
-                  this.getComponents()
+                  this.getComponents(),
                 );
               },
             },
@@ -18200,7 +18203,7 @@ PERFORMANCE OF THIS SOFTWARE.
     function s(e, t) {
       if (!e)
         throw new ReferenceError(
-          "this hasn't been initialised - super() hasn't been called"
+          "this hasn't been initialised - super() hasn't been called",
         );
       return !t || ("object" != typeof t && "function" != typeof t) ? e : t;
     }
@@ -18210,7 +18213,7 @@ PERFORMANCE OF THIS SOFTWARE.
           i(this, t),
           s(
             this,
-            (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments)
+            (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments),
           )
         );
       }
@@ -18219,7 +18222,7 @@ PERFORMANCE OF THIS SOFTWARE.
           if ("function" != typeof t && null !== t)
             throw new TypeError(
               "Super expression must either be null or a function, not " +
-                typeof t
+                typeof t,
             );
           (e.prototype = Object.create(t && t.prototype, {
             constructor: {
@@ -18251,7 +18254,7 @@ PERFORMANCE OF THIS SOFTWARE.
               return a.default.createElement(
                 "div",
                 { style: { textAlign: "center" } },
-                this.getComponents()
+                this.getComponents(),
               );
             },
           },
@@ -18289,7 +18292,7 @@ PERFORMANCE OF THIS SOFTWARE.
     function s(e, t) {
       if (!e)
         throw new ReferenceError(
-          "this hasn't been initialised - super() hasn't been called"
+          "this hasn't been initialised - super() hasn't been called",
         );
       return !t || ("object" != typeof t && "function" != typeof t) ? e : t;
     }
@@ -18299,7 +18302,7 @@ PERFORMANCE OF THIS SOFTWARE.
           i(this, t),
           s(
             this,
-            (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments)
+            (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments),
           )
         );
       }
@@ -18308,7 +18311,7 @@ PERFORMANCE OF THIS SOFTWARE.
           if ("function" != typeof t && null !== t)
             throw new TypeError(
               "Super expression must either be null or a function, not " +
-                typeof t
+                typeof t,
             );
           (e.prototype = Object.create(t && t.prototype, {
             constructor: {
@@ -18417,7 +18420,7 @@ PERFORMANCE OF THIS SOFTWARE.
     function s(e, t) {
       if (!e)
         throw new ReferenceError(
-          "this hasn't been initialised - super() hasn't been called"
+          "this hasn't been initialised - super() hasn't been called",
         );
       return !t || ("object" != typeof t && "function" != typeof t) ? e : t;
     }
@@ -18428,7 +18431,7 @@ PERFORMANCE OF THIS SOFTWARE.
         i(this, t);
         var r = s(
           this,
-          (t.__proto__ || Object.getPrototypeOf(t)).call(this, e, n)
+          (t.__proto__ || Object.getPrototypeOf(t)).call(this, e, n),
         );
         return (
           (r.STRIP_INNER = !0),
@@ -18442,7 +18445,7 @@ PERFORMANCE OF THIS SOFTWARE.
           if ("function" != typeof t && null !== t)
             throw new TypeError(
               "Super expression must either be null or a function, not " +
-                typeof t
+                typeof t,
             );
           (e.prototype = Object.create(t && t.prototype, {
             constructor: {
@@ -18480,7 +18483,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 return a.default.createElement(
                   "code",
                   null,
-                  this.getContent(!0)
+                  this.getContent(!0),
                 );
               var e = this.params.lang || this.params[this.name],
                 t = "prettyprint";
@@ -18489,7 +18492,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 a.default.createElement(
                   "pre",
                   { className: t },
-                  this.getContent(!0)
+                  this.getContent(!0),
                 )
               );
             },
@@ -19177,7 +19180,7 @@ PERFORMANCE OF THIS SOFTWARE.
     function s(e, t) {
       if (!e)
         throw new ReferenceError(
-          "this hasn't been initialised - super() hasn't been called"
+          "this hasn't been initialised - super() hasn't been called",
         );
       return !t || ("object" != typeof t && "function" != typeof t) ? e : t;
     }
@@ -19188,7 +19191,7 @@ PERFORMANCE OF THIS SOFTWARE.
         i(this, t);
         var r = s(
           this,
-          (t.__proto__ || Object.getPrototypeOf(t)).call(this, e, n)
+          (t.__proto__ || Object.getPrototypeOf(t)).call(this, e, n),
         );
         return (r.SELF_CLOSE = !0), (r.STRIP_OUTER = !0), r;
       }
@@ -19197,7 +19200,7 @@ PERFORMANCE OF THIS SOFTWARE.
           if ("function" != typeof t && null !== t)
             throw new TypeError(
               "Super expression must either be null or a function, not " +
-                typeof t
+                typeof t,
             );
           (e.prototype = Object.create(t && t.prototype, {
             constructor: {
@@ -19399,7 +19402,7 @@ PERFORMANCE OF THIS SOFTWARE.
     function s(e, t) {
       if (!e)
         throw new ReferenceError(
-          "this hasn't been initialised - super() hasn't been called"
+          "this hasn't been initialised - super() hasn't been called",
         );
       return !t || ("object" != typeof t && "function" != typeof t) ? e : t;
     }
@@ -19410,7 +19413,7 @@ PERFORMANCE OF THIS SOFTWARE.
         i(this, t);
         var r = s(
           this,
-          (t.__proto__ || Object.getPrototypeOf(t)).call(this, e, n)
+          (t.__proto__ || Object.getPrototypeOf(t)).call(this, e, n),
         );
         return (r.STRIP_INNER = !0), (r.STRIP_OUTER = !0), r;
       }
@@ -19419,7 +19422,7 @@ PERFORMANCE OF THIS SOFTWARE.
           if ("function" != typeof t && null !== t)
             throw new TypeError(
               "Super expression must either be null or a function, not " +
-                typeof t
+                typeof t,
             );
           (e.prototype = Object.create(t && t.prototype, {
             constructor: {
@@ -19471,7 +19474,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 ? a.default.createElement(
                     "ol",
                     { style: { listStyleType: t[e] } },
-                    this.getComponents()
+                    this.getComponents(),
                   )
                 : a.default.createElement("ul", null, this.getComponents());
             },
@@ -19539,7 +19542,7 @@ PERFORMANCE OF THIS SOFTWARE.
     function s(e, t) {
       if (!e)
         throw new ReferenceError(
-          "this hasn't been initialised - super() hasn't been called"
+          "this hasn't been initialised - super() hasn't been called",
         );
       return !t || ("object" != typeof t && "function" != typeof t) ? e : t;
     }
@@ -19550,7 +19553,7 @@ PERFORMANCE OF THIS SOFTWARE.
         i(this, t);
         var r = s(
           this,
-          (t.__proto__ || Object.getPrototypeOf(t)).call(this, e, n)
+          (t.__proto__ || Object.getPrototypeOf(t)).call(this, e, n),
         );
         return (r.CLOSED_BY = ["*", "/list"]), (r.STRIP_INNER = !0), r;
       }
@@ -19559,7 +19562,7 @@ PERFORMANCE OF THIS SOFTWARE.
           if ("function" != typeof t && null !== t)
             throw new TypeError(
               "Super expression must either be null or a function, not " +
-                typeof t
+                typeof t,
             );
           (e.prototype = Object.create(t && t.prototype, {
             constructor: {
@@ -19701,7 +19704,7 @@ PERFORMANCE OF THIS SOFTWARE.
                     (this.renderer.options.linkify &&
                       (r = this.renderer.linkify(r)),
                     (r = this.renderer.cosmeticReplace(
-                      r.replace(s.NEWLINE_RE, s.LINE_BREAK)
+                      r.replace(s.NEWLINE_RE, s.LINE_BREAK),
                     ))),
                   n.push(r)),
                 this.children.forEach(function (r) {
@@ -19827,7 +19830,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 var t;
                 return (
                   ((t = e.apply(this, arguments) || this).emitter = u(
-                    t.props.value
+                    t.props.value,
                   )),
                   t
                 );
@@ -19896,7 +19899,7 @@ PERFORMANCE OF THIS SOFTWARE.
               }),
               (r.render = function () {
                 return ((e = this.props.children), Array.isArray(e) ? e[0] : e)(
-                  this.state.value
+                  this.state.value,
                 );
                 var e;
               }),
@@ -19909,7 +19912,7 @@ PERFORMANCE OF THIS SOFTWARE.
           );
         };
       t.a = c;
-    }.call(this, n("yLpj")));
+    }).call(this, n("yLpj"));
   },
   tQ2B: function (e, t, n) {
     "use strict";
@@ -19960,7 +19963,7 @@ PERFORMANCE OF THIS SOFTWARE.
           (m.open(
             e.method.toUpperCase(),
             i(g, e.params, e.paramsSerializer),
-            !0
+            !0,
           ),
           (m.timeout = e.timeout),
           "onloadend" in m
@@ -19988,8 +19991,8 @@ PERFORMANCE OF THIS SOFTWARE.
                   e.transitional && e.transitional.clarifyTimeoutError
                     ? "ETIMEDOUT"
                     : "ECONNABORTED",
-                  m
-                )
+                  m,
+                ),
               ),
               (m = null);
           }),
@@ -20136,7 +20139,7 @@ PERFORMANCE OF THIS SOFTWARE.
               Object.defineProperty(
                 e,
                 t,
-                Object.getOwnPropertyDescriptor(n, t)
+                Object.getOwnPropertyDescriptor(n, t),
               );
             });
       }
@@ -20152,7 +20155,7 @@ PERFORMANCE OF THIS SOFTWARE.
     function _(e) {
       if (void 0 === e)
         throw new ReferenceError(
-          "this hasn't been initialised - super() hasn't been called"
+          "this hasn't been initialised - super() hasn't been called",
         );
       return e;
     }
@@ -20198,7 +20201,7 @@ PERFORMANCE OF THIS SOFTWARE.
           E(_(n), "adaptHeight", function () {
             if (n.props.adaptiveHeight && n.list) {
               var e = n.list.querySelector(
-                '[data-index="'.concat(n.state.currentSlide, '"]')
+                '[data-index="'.concat(n.state.currentSlide, '"]'),
               );
               n.list.style.height = (0, l.getHeight)(e) + "px";
             }
@@ -20230,7 +20233,7 @@ PERFORMANCE OF THIS SOFTWARE.
                     n.callbackTimers.push(
                       setTimeout(function () {
                         return n.onWindowResized();
-                      }, n.props.speed)
+                      }, n.props.speed),
                     ))
                   : n.onWindowResized();
               })),
@@ -20240,7 +20243,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 function (e) {
                   (e.onfocus = n.props.pauseOnFocus ? n.onSlideFocus : null),
                     (e.onblur = n.props.pauseOnFocus ? n.onSlideBlur : null);
-                }
+                },
               ),
               window &&
                 (window.addEventListener
@@ -20324,7 +20327,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 { listRef: n.list, trackRef: n.track },
                 n.props,
                 {},
-                n.state
+                n.state,
               );
               n.updateState(t, e, function () {
                 n.props.autoplay ? n.autoPlay("update") : n.pause("paused");
@@ -20353,12 +20356,12 @@ PERFORMANCE OF THIS SOFTWARE.
                 o = (0, l.getPreClones)(
                   y({}, n.props, {}, n.state, {
                     slideCount: n.props.children.length,
-                  })
+                  }),
                 ),
                 i = (0, l.getPostClones)(
                   y({}, n.props, {}, n.state, {
                     slideCount: n.props.children.length,
-                  })
+                  }),
                 );
               n.props.children.forEach(function (t) {
                 a.push(t.props.style.width), (e += t.props.style.width);
@@ -20411,7 +20414,7 @@ PERFORMANCE OF THIS SOFTWARE.
                   ? (e.onload = function () {
                       n.adaptHeight(),
                         n.callbackTimers.push(
-                          setTimeout(n.onWindowResized, n.props.speed)
+                          setTimeout(n.onWindowResized, n.props.speed),
                         );
                     })
                   : ((e.onload = a),
@@ -20463,7 +20466,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 y({ index: e }, n.props, {}, n.state, {
                   trackRef: n.track,
                   useCSS: n.props.useCSS && !t,
-                })
+                }),
               ),
               f = d.state,
               p = d.nextState;
@@ -20483,7 +20486,7 @@ PERFORMANCE OF THIS SOFTWARE.
                           n.callbackTimers.push(
                             setTimeout(function () {
                               return n.setState({ animating: e });
-                            }, 10)
+                            }, 10),
                           ),
                             u && u(f.currentSlide),
                             delete n.animationEndCallback;
@@ -20532,7 +20535,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 trackRef: n.track,
                 listRef: n.list,
                 slideIndex: n.state.currentSlide,
-              })
+              }),
             );
             t && (t.swiping && (n.clickable = !1), n.setState(t));
           }),
@@ -20543,7 +20546,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 trackRef: n.track,
                 listRef: n.list,
                 slideIndex: n.state.currentSlide,
-              })
+              }),
             );
             if (t) {
               var r = t.triggerSlideHandler;
@@ -20558,14 +20561,14 @@ PERFORMANCE OF THIS SOFTWARE.
             n.callbackTimers.push(
               setTimeout(function () {
                 return n.changeSlide({ message: "previous" });
-              }, 0)
+              }, 0),
             );
           }),
           E(_(n), "slickNext", function () {
             n.callbackTimers.push(
               setTimeout(function () {
                 return n.changeSlide({ message: "next" });
-              }, 0)
+              }, 0),
             );
           }),
           E(_(n), "slickGoTo", function (e) {
@@ -20580,9 +20583,9 @@ PERFORMANCE OF THIS SOFTWARE.
                     index: e,
                     currentSlide: n.state.currentSlide,
                   },
-                  t
+                  t,
                 );
-              }, 0)
+              }, 0),
             );
           }),
           E(_(n), "play", function () {
@@ -20761,11 +20764,11 @@ PERFORMANCE OF THIS SOFTWARE.
                   r.default.createElement(
                     u.Track,
                     m({ ref: n.trackRefHandler }, f),
-                    n.props.children
-                  )
+                    n.props.children,
+                  ),
                 ),
                 n.props.unslick ? "" : a,
-                n.props.unslick ? "" : e
+                n.props.unslick ? "" : e,
               )
             );
           }),
@@ -20785,7 +20788,7 @@ PERFORMANCE OF THIS SOFTWARE.
         (function (e, t) {
           if ("function" != typeof t && null !== t)
             throw new TypeError(
-              "Super expression must either be null or a function"
+              "Super expression must either be null or a function",
             );
           (e.prototype = Object.create(t && t.prototype, {
             constructor: { value: e, writable: !0, configurable: !0 },
@@ -20859,7 +20862,7 @@ PERFORMANCE OF THIS SOFTWARE.
         "(\\\\.)",
         "([\\/.])?(?:(?:\\:(\\w+)(?:\\(((?:\\\\.|[^\\\\()])+)\\))?|\\(((?:\\\\.|[^\\\\()])+)\\))([+*?])?|(\\*))",
       ].join("|"),
-      "g"
+      "g",
     );
     function o(e, t) {
       for (
@@ -20935,12 +20938,12 @@ PERFORMANCE OF THIS SOFTWARE.
                     c.name +
                     '" to not repeat, but received `' +
                     JSON.stringify(f) +
-                    "`"
+                    "`",
                 );
               if (0 === f.length) {
                 if (c.optional) continue;
                 throw new TypeError(
-                  'Expected "' + c.name + '" to not be empty'
+                  'Expected "' + c.name + '" to not be empty',
                 );
               }
               for (var p = 0; p < f.length; p++) {
@@ -20952,7 +20955,7 @@ PERFORMANCE OF THIS SOFTWARE.
                       c.pattern +
                       '", but received `' +
                       JSON.stringify(d) +
-                      "`"
+                      "`",
                   );
                 o += (0 === p ? c.prefix : c.delimiter) + d;
               }
@@ -20972,7 +20975,7 @@ PERFORMANCE OF THIS SOFTWARE.
                     c.pattern +
                     '", but received "' +
                     d +
-                    '"'
+                    '"',
                 );
               o += c.prefix + d;
             }
@@ -21232,7 +21235,7 @@ PERFORMANCE OF THIS SOFTWARE.
                     (!i.key || (l && l.key === i.key)
                       ? ""
                       : ("" + i.key).replace(N, "$&/") + "/") +
-                    e
+                    e,
                 )),
               t.push(i)),
           1
@@ -21262,8 +21265,8 @@ PERFORMANCE OF THIS SOFTWARE.
               31,
               "[object Object]" === t
                 ? "object with keys {" + Object.keys(e).join(", ") + "}"
-                : t
-            )
+                : t,
+            ),
           ))
         );
       return l;
@@ -21292,7 +21295,7 @@ PERFORMANCE OF THIS SOFTWARE.
             },
             function (t) {
               0 === e._status && ((e._status = 2), (e._result = t));
-            }
+            },
           );
       }
       if (1 === e._status) return e._result;
@@ -21319,7 +21322,7 @@ PERFORMANCE OF THIS SOFTWARE.
           function () {
             t.apply(this, arguments);
           },
-          n
+          n,
         );
       },
       count: function (e) {
@@ -21519,7 +21522,7 @@ PERFORMANCE OF THIS SOFTWARE.
     function s(e, t) {
       if (!e)
         throw new ReferenceError(
-          "this hasn't been initialised - super() hasn't been called"
+          "this hasn't been initialised - super() hasn't been called",
         );
       return !t || ("object" != typeof t && "function" != typeof t) ? e : t;
     }
@@ -21529,7 +21532,7 @@ PERFORMANCE OF THIS SOFTWARE.
           i(this, t),
           s(
             this,
-            (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments)
+            (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments),
           )
         );
       }
@@ -21538,7 +21541,7 @@ PERFORMANCE OF THIS SOFTWARE.
           if ("function" != typeof t && null !== t)
             throw new TypeError(
               "Super expression must either be null or a function, not " +
-                typeof t
+                typeof t,
             );
           (e.prototype = Object.create(t && t.prototype, {
             constructor: {
@@ -21559,7 +21562,7 @@ PERFORMANCE OF THIS SOFTWARE.
             value: function () {
               var e = this,
                 t = this.renderer.strip(
-                  this.params[this.name] || this.getContent(!0)
+                  this.params[this.name] || this.getContent(!0),
                 );
               return (
                 /javascript:/i.test(t) && (t = ""),
@@ -21579,7 +21582,7 @@ PERFORMANCE OF THIS SOFTWARE.
             key: "toReact",
             value: function () {
               var e = this.renderer.strip(
-                this.params[this.name] || this.getContent(!0)
+                this.params[this.name] || this.getContent(!0),
               );
               return (
                 /javascript:/i.test(e) && (e = ""),
@@ -21588,7 +21591,7 @@ PERFORMANCE OF THIS SOFTWARE.
                     a.default.createElement(
                       "a",
                       { href: e, target: "_blank", rel: "noopener noreferrer" },
-                      this.getComponents()
+                      this.getComponents(),
                     ))
                   : this.getComponents()
               );
@@ -21609,7 +21612,7 @@ PERFORMANCE OF THIS SOFTWARE.
     function l() {
       if (!window.matchMedia)
         throw new Error(
-          "matchMedia not present, legacy browsers require a polyfill"
+          "matchMedia not present, legacy browsers require a polyfill",
         );
       (this.queries = {}),
         (this.browserIsIncapable = !window.matchMedia("only all").matches);
@@ -21705,7 +21708,7 @@ PERFORMANCE OF THIS SOFTWARE.
               Object.defineProperty(
                 e,
                 t,
-                Object.getOwnPropertyDescriptor(n, t)
+                Object.getOwnPropertyDescriptor(n, t),
               );
             });
       }
@@ -21996,7 +21999,7 @@ PERFORMANCE OF THIS SOFTWARE.
         (_.curX = e.touches ? e.touches[0].pageX : e.clientX),
           (_.curY = e.touches ? e.touches[0].pageY : e.clientY),
           (_.swipeLength = Math.round(
-            Math.sqrt(Math.pow(_.curX - _.startX, 2))
+            Math.sqrt(Math.pow(_.curX - _.startX, 2)),
           ));
         var x = Math.round(Math.sqrt(Math.pow(_.curY - _.startY, 2)));
         if (!i && !m && x > 10) return { scrolling: !0 };
@@ -22113,7 +22116,8 @@ PERFORMANCE OF THIS SOFTWARE.
           (Array.from(r).every(function (r) {
             if (e.vertical) {
               if (r.offsetTop + h(r) / 2 > -1 * e.swipeLeft) return (n = r), !1;
-            } else if (r.offsetLeft - t + m(r) / 2 > -1 * e.swipeLeft) return (n = r), !1;
+            } else if (r.offsetLeft - t + m(r) / 2 > -1 * e.swipeLeft)
+              return (n = r), !1;
             return !0;
           }),
           !n)
@@ -22495,7 +22499,7 @@ PERFORMANCE OF THIS SOFTWARE.
     function s(e, t) {
       if (!e)
         throw new ReferenceError(
-          "this hasn't been initialised - super() hasn't been called"
+          "this hasn't been initialised - super() hasn't been called",
         );
       return !t || ("object" != typeof t && "function" != typeof t) ? e : t;
     }
@@ -22505,7 +22509,7 @@ PERFORMANCE OF THIS SOFTWARE.
           i(this, t),
           s(
             this,
-            (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments)
+            (t.__proto__ || Object.getPrototypeOf(t)).apply(this, arguments),
           )
         );
       }
@@ -22514,7 +22518,7 @@ PERFORMANCE OF THIS SOFTWARE.
           if ("function" != typeof t && null !== t)
             throw new TypeError(
               "Super expression must either be null or a function, not " +
-                typeof t
+                typeof t,
             );
           (e.prototype = Object.create(t && t.prototype, {
             constructor: {
@@ -22551,7 +22555,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 ? a.default.createElement(
                     "span",
                     { style: { color: e } },
-                    this.getComponents()
+                    this.getComponents(),
                   )
                 : this.getComponents();
             },
@@ -22657,11 +22661,11 @@ PERFORMANCE OF THIS SOFTWARE.
         var t = e[0];
         g[t] = new v(t, 1, !1, e[1], null, !1, !1);
       }),
-      ["contentEditable", "draggable", "spellCheck", "value"].forEach(function (
-        e
-      ) {
-        g[e] = new v(e, 2, !1, e.toLowerCase(), null, !1, !1);
-      }),
+      ["contentEditable", "draggable", "spellCheck", "value"].forEach(
+        function (e) {
+          g[e] = new v(e, 2, !1, e.toLowerCase(), null, !1, !1);
+        },
+      ),
       [
         "autoReverse",
         "externalResourcesRequired",
@@ -22775,7 +22779,7 @@ PERFORMANCE OF THIS SOFTWARE.
           e,
           "http://www.w3.org/XML/1998/namespace",
           !1,
-          !1
+          !1,
         );
       }),
       ["tabIndex", "crossOrigin"].forEach(function (e) {
@@ -22788,7 +22792,7 @@ PERFORMANCE OF THIS SOFTWARE.
         "xlink:href",
         "http://www.w3.org/1999/xlink",
         !0,
-        !1
+        !1,
       )),
       ["src", "href", "action", "formAction"].forEach(function (e) {
         g[e] = new v(e, 1, !1, e.toLowerCase(), null, !0, !0);
@@ -23343,7 +23347,7 @@ PERFORMANCE OF THIS SOFTWARE.
         source: !0,
         track: !0,
         wbr: !0,
-      }
+      },
     );
     function Se(e, t) {
       if (t) {
@@ -23608,7 +23612,7 @@ PERFORMANCE OF THIS SOFTWARE.
       dt = [],
       ft =
         "mousedown mouseup touchcancel touchend touchstart auxclick dblclick pointercancel pointerdown pointerup dragend dragstart drop compositionend compositionstart keydown keypress keyup input textInput copy cut paste click change contextmenu reset submit".split(
-          " "
+          " ",
         );
     function pt(e, t, n, r, a) {
       return {
@@ -24169,7 +24173,7 @@ PERFORMANCE OF THIS SOFTWARE.
       gn = sn(a({}, hn, { dataTransfer: 0 })),
       yn = sn(a({}, pn, { relatedTarget: 0 })),
       bn = sn(
-        a({}, dn, { animationName: 0, elapsedTime: 0, pseudoElement: 0 })
+        a({}, dn, { animationName: 0, elapsedTime: 0, pseudoElement: 0 }),
       ),
       _n = sn(
         a({}, dn, {
@@ -24178,7 +24182,7 @@ PERFORMANCE OF THIS SOFTWARE.
               ? e.clipboardData
               : window.clipboardData;
           },
-        })
+        }),
       ),
       wn = sn(a({}, dn, { data: 0 })),
       En = {
@@ -24285,7 +24289,7 @@ PERFORMANCE OF THIS SOFTWARE.
               ? e.keyCode
               : 0;
           },
-        })
+        }),
       ),
       Cn = sn(
         a({}, hn, {
@@ -24299,7 +24303,7 @@ PERFORMANCE OF THIS SOFTWARE.
           twist: 0,
           pointerType: 0,
           isPrimary: 0,
-        })
+        }),
       ),
       xn = sn(
         a({}, pn, {
@@ -24311,7 +24315,7 @@ PERFORMANCE OF THIS SOFTWARE.
           ctrlKey: 0,
           shiftKey: 0,
           getModifierState: On,
-        })
+        }),
       ),
       Pn = sn(a({}, dn, { propertyName: 0, elapsedTime: 0, pseudoElement: 0 })),
       Ln = sn(
@@ -24334,7 +24338,7 @@ PERFORMANCE OF THIS SOFTWARE.
           },
           deltaZ: 0,
           deltaMode: 0,
-        })
+        }),
       ),
       An = [9, 13, 27, 32],
       Rn = d && "CompositionEvent" in window,
@@ -24554,21 +24558,21 @@ PERFORMANCE OF THIS SOFTWARE.
     }
     Mt(
       "cancel cancel click click close close contextmenu contextMenu copy copy cut cut auxclick auxClick dblclick doubleClick dragend dragEnd dragstart dragStart drop drop focusin focus focusout blur input input invalid invalid keydown keyDown keypress keyPress keyup keyUp mousedown mouseDown mouseup mouseUp paste paste pause pause play play pointercancel pointerCancel pointerdown pointerDown pointerup pointerUp ratechange rateChange reset reset seeked seeked submit submit touchcancel touchCancel touchend touchEnd touchstart touchStart volumechange volumeChange".split(
-        " "
+        " ",
       ),
-      0
+      0,
     ),
       Mt(
         "drag drag dragenter dragEnter dragexit dragExit dragleave dragLeave dragover dragOver mousemove mouseMove mouseout mouseOut mouseover mouseOver pointermove pointerMove pointerout pointerOut pointerover pointerOver scroll scroll toggle toggle touchmove touchMove wheel wheel".split(
-          " "
+          " ",
         ),
-        1
+        1,
       ),
       Mt(Rt, 2);
     for (
       var br =
           "change selectionchange textInput compositionstart compositionend compositionupdate".split(
-            " "
+            " ",
           ),
         _r = 0;
       _r < br.length;
@@ -24582,34 +24586,36 @@ PERFORMANCE OF THIS SOFTWARE.
       u(
         "onChange",
         "change click focusin focusout input keydown keyup selectionchange".split(
-          " "
-        )
+          " ",
+        ),
       ),
       u(
         "onSelect",
         "focusout contextmenu dragend focusin keydown keyup mousedown mouseup selectionchange".split(
-          " "
-        )
+          " ",
+        ),
       ),
       u("onBeforeInput", ["compositionend", "keypress", "textInput", "paste"]),
       u(
         "onCompositionEnd",
-        "compositionend focusout keydown keypress keyup mousedown".split(" ")
+        "compositionend focusout keydown keypress keyup mousedown".split(" "),
       ),
       u(
         "onCompositionStart",
-        "compositionstart focusout keydown keypress keyup mousedown".split(" ")
+        "compositionstart focusout keydown keypress keyup mousedown".split(" "),
       ),
       u(
         "onCompositionUpdate",
-        "compositionupdate focusout keydown keypress keyup mousedown".split(" ")
+        "compositionupdate focusout keydown keypress keyup mousedown".split(
+          " ",
+        ),
       );
     var wr =
         "abort canplay canplaythrough durationchange emptied encrypted ended error loadeddata loadedmetadata loadstart pause play playing progress ratechange seeked seeking stalled suspend timeupdate volumechange waiting".split(
-          " "
+          " ",
         ),
       Er = new Set(
-        "cancel close invalid load scroll toggle".split(" ").concat(wr)
+        "cancel close invalid load scroll toggle".split(" ").concat(wr),
       );
     function Sr(e, t, n) {
       var r = e.type || "unknown-event";
@@ -25702,8 +25708,8 @@ PERFORMANCE OF THIS SOFTWARE.
             31,
             "[object Object]" === Object.prototype.toString.call(t)
               ? "object with keys {" + Object.keys(t).join(", ") + "}"
-              : t
-          )
+              : t,
+          ),
         );
     }
     function wo(e) {
@@ -25756,7 +25762,7 @@ PERFORMANCE OF THIS SOFTWARE.
           : (((r = zl(n.type, n.key, n.props, null, e.mode, r)).ref = bo(
               e,
               t,
-              n
+              n,
             )),
             (r.return = e),
             r);
@@ -25784,7 +25790,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 ((n = zl(t.type, t.key, t.props, null, e.mode, n)).ref = bo(
                   e,
                   null,
-                  t
+                  t,
                 )),
                 (n.return = e),
                 n
@@ -25835,7 +25841,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 t,
                 (e = e.get(null === r.key ? n : r.key) || null),
                 r,
-                a
+                a,
               );
           }
           if (yo(r) || H(r)) return d(t, (e = e.get(n) || null), r, a, null);
@@ -26035,7 +26041,7 @@ PERFORMANCE OF THIS SOFTWARE.
         default:
           t = me(
             (t = (e = 8 === e ? t.parentNode : t).namespaceURI || null),
-            (e = e.tagName)
+            (e = e.tagName),
           );
       }
       oa(No), ia(No, t);
@@ -26390,7 +26396,7 @@ PERFORMANCE OF THIS SOFTWARE.
               }
             }
           },
-          [n, t, r]
+          [n, t, r],
         ),
         l.useEffect(
           function () {
@@ -26408,7 +26414,7 @@ PERFORMANCE OF THIS SOFTWARE.
               }
             });
           },
-          [t, r]
+          [t, r],
         ),
         (ir(m, n) && ir(h, t) && ir(f, r)) ||
           (((e = {
@@ -26649,7 +26655,7 @@ PERFORMANCE OF THIS SOFTWARE.
                   Ko.transition = t;
                 }
               },
-              [e]
+              [e],
             ),
             n
           );
@@ -26691,7 +26697,7 @@ PERFORMANCE OF THIS SOFTWARE.
                     n("r:" + (Wr++).toString(36));
                   },
                   void 0,
-                  null
+                  null,
                 )),
               t
             );
@@ -26729,7 +26735,7 @@ PERFORMANCE OF THIS SOFTWARE.
                   Ko.transition = t;
                 }
               },
-              [e]
+              [e],
             ),
             n
           );
@@ -26773,7 +26779,7 @@ PERFORMANCE OF THIS SOFTWARE.
                   Ko.transition = t;
                 }
               },
-              [e]
+              [e],
             ),
             n
           );
@@ -27059,7 +27065,7 @@ PERFORMANCE OF THIS SOFTWARE.
                   { mode: "visible", children: e },
                   t.mode,
                   n,
-                  null
+                  null,
                 )).return = t),
                 (t.child = n)))
           : (e.memoizedState,
@@ -27833,7 +27839,7 @@ PERFORMANCE OF THIS SOFTWARE.
               r = e.memoizedState;
             (t = (e = t.stateNode).getSnapshotBeforeUpdate(
               t.elementType === t.type ? n : qa(t.type, n),
-              r
+              r,
             )),
               (e.__reactInternalSnapshotBeforeUpdate = t);
           }
@@ -27891,7 +27897,7 @@ PERFORMANCE OF THIS SOFTWARE.
                   e.componentDidUpdate(
                     r,
                     t.memoizedState,
-                    e.__reactInternalSnapshotBeforeUpdate
+                    e.__reactInternalSnapshotBeforeUpdate,
                   ))),
             void (null !== (t = n.updateQueue) && uo(n, t, e))
           );
@@ -28352,7 +28358,7 @@ PERFORMANCE OF THIS SOFTWARE.
                     return 0;
                 }
               })(e)),
-              tl
+              tl,
             )),
         e
       );
@@ -28448,7 +28454,7 @@ PERFORMANCE OF THIS SOFTWARE.
                     throw Error(i(358, e));
                 }
               })(t)),
-              cl.bind(null, e)
+              cl.bind(null, e),
             )),
           (e.callbackPriority = t),
           (e.callbackNode = n);
@@ -28749,7 +28755,7 @@ PERFORMANCE OF THIS SOFTWARE.
               } while (null !== f);
               l = Error(
                 (K(s.type) || "A React component") +
-                  " suspended while rendering, but no fallback UI was specified.\n\nAdd a <Suspense fallback=...> component higher in the tree to provide a loading indicator or placeholder to display."
+                  " suspended while rendering, but no fallback UI was specified.\n\nAdd a <Suspense fallback=...> component higher in the tree to provide a loading indicator or placeholder to display.",
               );
             }
             5 !== Ls && (Ls = 2), (l = as(l, s)), (f = i);
@@ -29918,7 +29924,7 @@ PERFORMANCE OF THIS SOFTWARE.
               for (n = e; n.parentNode; ) n = n.parentNode;
               for (
                 n = n.querySelectorAll(
-                  "input[name=" + JSON.stringify("" + t) + '][type="radio"]'
+                  "input[name=" + JSON.stringify("" + t) + '][type="radio"]',
                 ),
                   t = 0;
                 t < n.length;
@@ -30062,7 +30068,7 @@ PERFORMANCE OF THIS SOFTWARE.
         return eu(
           e,
           t,
-          2 < arguments.length && void 0 !== arguments[2] ? arguments[2] : null
+          2 < arguments.length && void 0 !== arguments[2] ? arguments[2] : null,
         );
       }),
       (t.unstable_renderSubtreeIntoContainer = function (e, t, n, r) {

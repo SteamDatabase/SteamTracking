@@ -188,12 +188,12 @@
                 href: m.De.COMMUNITY_BASE_URL.slice(0, -1) + o,
                 className: e.className,
               },
-              e.children
+              e.children,
             )
           : n.createElement(
               u.rU,
               { to: o, className: e.className },
-              e.children
+              e.children,
             );
       };
       function g(e, t) {
@@ -7332,11 +7332,11 @@
                           "Skipping redirected KB",
                           e.id,
                           e.strRef,
-                          e.strTitle
+                          e.strTitle,
                         ),
-                        !1)
+                        !1),
                     )
-                    .sort((e, t) => t.nViewCount - e.nViewCount)
+                    .sort((e, t) => t.nViewCount - e.nViewCount),
                 );
               });
             }, []),
@@ -7381,7 +7381,7 @@
             n.createElement(
               "div",
               { className: v().ToolHeader },
-              "FAQ Importer"
+              "FAQ Importer",
             ),
             n.createElement("div", { className: v().StatusMessage }, g),
             n.createElement(
@@ -7391,7 +7391,7 @@
               n.createElement("div", { className: v().Ref }, "KB REF"),
               n.createElement("div", { className: v().Text }, "KB Title"),
               n.createElement("div", { className: v().Ref }, "Imported ID"),
-              n.createElement("div", { className: v().Ref }, "Languages")
+              n.createElement("div", { className: v().Ref }, "Languages"),
             ),
             o.map((e) =>
               n.createElement(_, {
@@ -7400,8 +7400,8 @@
                 matchingSummary: r.get(e.id),
                 rgLocalizedFAQs: p.get(e.id),
                 rgLocFlags: c.get(e.id),
-              })
-            )
+              }),
+            ),
           );
         });
       const x =
@@ -7491,7 +7491,7 @@
             (null == i ? void 0 : i.faq_id) &&
               m.De.COMMUNITY_BASE_URL.substr(
                 0,
-                m.De.COMMUNITY_BASE_URL.length - 1
+                m.De.COMMUNITY_BASE_URL.length - 1,
               ) + g(o.k_eCommunityPreview, i.faq_id)),
           p = new Array(31);
         for (let e = 0; e < 30; e++) {
@@ -7507,12 +7507,12 @@
               "missing" == (null == r ? void 0 : r[e]) && v().Missing,
               "suspicious" == (null == r ? void 0 : r[e]) && v().Suspicious,
               "bad" == (null == r ? void 0 : r[e]) && v().Bad,
-              "badimport" == (null == r ? void 0 : r[e]) && v().BadImport
+              "badimport" == (null == r ? void 0 : r[e]) && v().BadImport,
             );
           p[A[e]] = n.createElement(
             "a",
             { key: "loc-" + e, className: o, href: l + "?l=" + (0, d.j_)(e) },
-            (0, d.dt)(e)
+            (0, d.dt)(e),
           );
         }
         return n.createElement(
@@ -7527,7 +7527,7 @@
                 a.strRef,
               className: v().Ref,
             },
-            a.strRef
+            a.strRef,
           ),
           n.createElement("div", { className: v().Text }, a.strTitle),
           !!(null == i ? void 0 : i.faq_id) &&
@@ -7535,9 +7535,9 @@
               "a",
               { className: v().Ref, href: l },
               " ",
-              (0, h.hS)(i.faq_id)
+              (0, h.hS)(i.faq_id),
             ),
-          p
+          p,
         );
       };
       const A = [
@@ -7605,7 +7605,7 @@
                     Array.from(o)
                   );
                 })(t, e, a),
-            })
+            }),
           );
         },
         Z = (e) => {
@@ -7620,11 +7620,11 @@
                 onClick: (e) => {
                   (0, P.AM)(
                     n.createElement(ee, { direction: "export", draft: t }, " "),
-                    (0, j.RA)(e)
+                    (0, j.RA)(e),
                   );
                 },
               },
-              (0, z.Xx)("#EventEditor_Loc_Export_Short")
+              (0, z.Xx)("#EventEditor_Loc_Export_Short"),
             ),
             n.createElement(
               "div",
@@ -7633,12 +7633,12 @@
                 onClick: (e) => {
                   (0, P.AM)(
                     n.createElement(ee, { direction: "import", draft: t }, " "),
-                    (0, j.RA)(e)
+                    (0, j.RA)(e),
                   );
                 },
               },
-              (0, z.Xx)("#EventEditor_Loc_Import_Short")
-            )
+              (0, z.Xx)("#EventEditor_Loc_Import_Short"),
+            ),
           );
         },
         ee = (e) => {
@@ -7650,12 +7650,12 @@
               (0, z.Xx)(
                 "import" == a
                   ? "#EventEditor_Loc_CrowdinIntegration_ImportTitle"
-                  : "#EventEditor_Loc_CrowdinIntegration_ExportTitle"
+                  : "#EventEditor_Loc_CrowdinIntegration_ExportTitle",
               )),
             c = (0, z.Xx)(
               "import" == a
                 ? "#EventEditor_Loc_Import_Crowdin_Confirm"
-                : "#EventEditor_Loc_Export_Crowdin_Confirm"
+                : "#EventEditor_Loc_Export_Crowdin_Confirm",
             ),
             u =
               "import" == a
@@ -7691,7 +7691,7 @@
                 }),
               bOKDisabled: s,
             },
-            s ? n.createElement(q.V, { position: "center" }) : u
+            s ? n.createElement(q.V, { position: "center" }) : u,
           );
         },
         te = (e) => {
@@ -7724,7 +7724,7 @@
                                   null !== (a = e.GetDraftTitle(s)) &&
                                     void 0 !== a
                                     ? a
-                                    : ""
+                                    : "",
                                 ),
                                 i.SetLocalization(
                                   K,
@@ -7732,7 +7732,7 @@
                                   null !== (o = e.GetDraftContent(s)) &&
                                     void 0 !== o
                                     ? o
-                                    : ""
+                                    : "",
                                 ));
                             return i;
                           })(t, a),
@@ -7740,14 +7740,14 @@
                         bShowCSV: !0,
                         strFileNamePrefix: "faq",
                         lang: a,
-                      })
+                      }),
                     ),
-                    (0, j.RA)(e)
+                    (0, j.RA)(e),
                   );
                 },
               },
-              (0, z.Xx)("#EventEditor_Loc_Export_Short")
-            )
+              (0, z.Xx)("#EventEditor_Loc_Export_Short"),
+            ),
           );
         },
         ae = [
@@ -7784,7 +7784,7 @@
                   eLang: e,
                   bInitialState: o.includes(e),
                   fnOnChecked: s,
-                })
+                }),
               );
           return n.createElement(
             n.Fragment,
@@ -7795,13 +7795,13 @@
               n.createElement(
                 "div",
                 { className: $.Language },
-                (0, z.Xx)("#FAQCrowdin_LanguageHeader")
+                (0, z.Xx)("#FAQCrowdin_LanguageHeader"),
               ),
               n.createElement(
                 "div",
                 { className: $.Timestamp },
-                (0, z.Xx)("#FAQCrowdin_DraftTimestampHeader")
-              )
+                (0, z.Xx)("#FAQCrowdin_DraftTimestampHeader"),
+              ),
             ),
             n.createElement(C.ji, {
               className: $.CheckAll,
@@ -7818,9 +7818,9 @@
                 : n.createElement(
                     "div",
                     null,
-                    (0, z.Xx)("#FAQCrowdin_NoDraftFound")
-                  )
-            )
+                    (0, z.Xx)("#FAQCrowdin_NoDraftFound"),
+                  ),
+            ),
           );
         },
         se = (e) => {
@@ -7840,7 +7840,7 @@
                   null !== (t = null == h ? void 0 : h.persona_name) &&
                     void 0 !== t
                     ? t
-                    : r.author_account_id
+                    : r.author_account_id,
                 )
               : (0, z.Xx)("#FAQCrowdin_NoDraftFound"),
             u = n.createElement(
@@ -7849,9 +7849,9 @@
               n.createElement(
                 "div",
                 { className: $.Language },
-                (0, z.Xx)("#Language_" + (0, d.j_)(o))
+                (0, z.Xx)("#Language_" + (0, d.j_)(o)),
               ),
-              n.createElement("div", { className: $.Timestamp }, c)
+              n.createElement("div", { className: $.Timestamp }, c),
             );
           return n.createElement(C.ji, {
             className: $.LanguageCheckbox,
@@ -7893,7 +7893,7 @@
           n.createElement(
             C.h4,
             null,
-            (0, z.Xx)("#FAQDashboard_CrowdinToolTitle")
+            (0, z.Xx)("#FAQDashboard_CrowdinToolTitle"),
           ),
           n.createElement(
             C.uT,
@@ -7903,13 +7903,13 @@
               null,
               (0, z.Xx)(
                 "#FAQDashboard_CrowdinToolInstructionsWithCount",
-                t.length
+                t.length,
               ),
               n.createElement(
                 "div",
                 { className: $.Warning },
-                (0, z.Xx)("#FAQDashboard_CrowdinToolWarning")
-              )
+                (0, z.Xx)("#FAQDashboard_CrowdinToolWarning"),
+              ),
             ),
             n.createElement(
               C.Ac,
@@ -7930,7 +7930,11 @@
                           o.push(
                             h.xP
                               .Get()
-                              .ImportNonEnglishDraftsFromCrowdin(a.faq_id, t, f)
+                              .ImportNonEnglishDraftsFromCrowdin(
+                                a.faq_id,
+                                t,
+                                f,
+                              ),
                           );
                         }
                         yield Promise.all(o),
@@ -7941,11 +7945,11 @@
                               console.log(
                                 "Going to publish FAQ",
                                 a.faq_id,
-                                g.current[e].map((e) => (0, d.j_)(e))
+                                g.current[e].map((e) => (0, d.j_)(e)),
                               ))
                             : console.log(
                                 "No live english version for:",
-                                a.faq_id
+                                a.faq_id,
                               );
                       }
                       for (let e = 0; e < g.current.length; e++) {
@@ -7959,7 +7963,7 @@
                           if (f.token.reason) return;
                           if (1 != t)
                             return void m(
-                              (0, z.Xx)("#FAQDashboard_PublishFailed")
+                              (0, z.Xx)("#FAQDashboard_PublishFailed"),
                             );
                         }
                       }
@@ -7967,13 +7971,15 @@
                     }),
                   disabled: r,
                 },
-                (0, z.Xx)("#FAQDashboard_UpdateAllFAQsButton")
+                (0, z.Xx)("#FAQDashboard_UpdateAllFAQsButton"),
               ),
               r && n.createElement(re, { nProgressPct: y, strCurrentLabel: b }),
               g.current.length > 0 &&
-                n.createElement(le, { rgUpdatedLanguagesForAllFAQs: g.current })
-            )
-          )
+                n.createElement(le, {
+                  rgUpdatedLanguagesForAllFAQs: g.current,
+                }),
+            ),
+          ),
         );
       }
       function re(e) {
@@ -7987,13 +7993,13 @@
             n.createElement("div", {
               className: $.ProgressMarker,
               style: { width: t + "%" },
-            })
+            }),
           ),
           n.createElement(
             "div",
             { className: $.CurrentFAQ },
-            (0, z.Xx)("#FAQDashboard_CrowdinToolProgress", a)
-          )
+            (0, z.Xx)("#FAQDashboard_CrowdinToolProgress", a),
+          ),
         );
       }
       function le(e) {
@@ -8005,7 +8011,7 @@
           n.createElement(
             "div",
             { className: $.ImportResultLabel },
-            (0, z.Xx)("#FAQDashboard_CrowdinToolResultsLabel")
+            (0, z.Xx)("#FAQDashboard_CrowdinToolResultsLabel"),
           ),
           t.map((e, t) => {
             const o = a[t];
@@ -8025,7 +8031,7 @@
                     nAllowOffscreenPx: 4e4,
                     className: $.UrlCode,
                   },
-                  o.url_code + ": "
+                  o.url_code + ": ",
                 ),
                 n.createElement(
                   M.HP,
@@ -8036,11 +8042,11 @@
                     direction: "left",
                     className: $.LanguageList,
                   },
-                  i
-                )
-              )
+                  i,
+                ),
+              ),
             );
-          })
+          }),
         );
       }
       var pe = a(21904),
@@ -8054,14 +8060,14 @@
             return n.createElement(
               "div",
               { className: ue().Never },
-              (0, z.Xx)("#FAQDashboard_TimeNever")
+              (0, z.Xx)("#FAQDashboard_TimeNever"),
             );
           const o = Date.now() / 1e3 - t,
             i = o < 86400 ? (0, z.yW)(o, !1, !0) : (0, z.vX)(t);
           return n.createElement(
             pe.Zg,
             { className: a && ue().Warning, rtFullDate: t, stylesmodule: he() },
-            i
+            i,
           );
         },
         fe = (0, s.Pi)((e) => {
@@ -8073,23 +8079,24 @@
                   a = (null == t ? void 0 : t.last_update_timestamp) || 0,
                   o = Array.from(
                     e.per_language_info.filter(
-                      (e) => 0 != e.language && e.last_update_timestamp >= a
-                    )
+                      (e) => 0 != e.language && e.last_update_timestamp >= a,
+                    ),
                   ).length,
                   i = Array.from(
                     e.per_language_info.filter(
-                      (e) => e.last_update_timestamp < a
-                    )
+                      (e) => e.last_update_timestamp < a,
+                    ),
                   ).length,
                   s = Array.from(
                     e.per_language_info.filter(
-                      (e) => e.last_publish_timestamp >= e.last_update_timestamp
-                    )
+                      (e) =>
+                        e.last_publish_timestamp >= e.last_update_timestamp,
+                    ),
                   ).length,
                   n = Array.from(
                     e.per_language_info.filter(
-                      (e) => e.last_publish_timestamp < e.last_update_timestamp
-                    )
+                      (e) => e.last_publish_timestamp < e.last_update_timestamp,
+                    ),
                   ).length;
                 return [
                   e.faq_id,
@@ -8123,12 +8130,12 @@
                   n.createElement(
                     "div",
                     { className: W().ErrorMsg },
-                    (0, z.Xx)("#FAQDashboard_Empty")
+                    (0, z.Xx)("#FAQDashboard_Empty"),
                   ),
                 s.map((e) => n.createElement(ke, { key: e[0], rgColumns: e })),
                 !a &&
-                  n.createElement(q.V, { position: "center", size: "xlarge" })
-              )
+                  n.createElement(q.V, { position: "center", size: "xlarge" }),
+              ),
             )
           );
         }),
@@ -8138,16 +8145,16 @@
                 (0, P.x1)(n.createElement(ye, null), window, {
                   strTitle: (0, z.Xx)("#FAQDashboard_CreateFAQButton"),
                 }),
-              []
+              [],
             ),
             a = n.useCallback(
               () =>
                 (0, P.x1)(
                   n.createElement(ne, { bDisableBackgroundDismiss: !0 }),
                   window,
-                  { strTitle: (0, z.Xx)("#FAQDashboard_CrowdinToolTitle") }
+                  { strTitle: (0, z.Xx)("#FAQDashboard_CrowdinToolTitle") },
                 ),
-              []
+              [],
             );
           return n.createElement(
             "div",
@@ -8155,7 +8162,7 @@
             n.createElement(
               "div",
               { className: W().DashboardHeaderTitle },
-              (0, z.Xx)("#FAQDashboard_Header")
+              (0, z.Xx)("#FAQDashboard_Header"),
             ),
             n.createElement(
               "div",
@@ -8163,14 +8170,14 @@
               n.createElement(
                 C.zx,
                 { onClick: a },
-                (0, z.Xx)("#FAQDashboard_CrowdinToolButton")
+                (0, z.Xx)("#FAQDashboard_CrowdinToolButton"),
               ),
               n.createElement(
                 C.KM,
                 { onClick: t },
-                (0, z.Xx)("#FAQDashboard_CreateFAQButton")
-              )
-            )
+                (0, z.Xx)("#FAQDashboard_CreateFAQButton"),
+              ),
+            ),
           );
         },
         ye = (e) => {
@@ -8188,7 +8195,7 @@
             n.createElement(
               C.h4,
               null,
-              (0, z.Xx)("#FAQDashboard_CreateFAQButton")
+              (0, z.Xx)("#FAQDashboard_CreateFAQButton"),
             ),
             n.createElement(
               C.uT,
@@ -8205,9 +8212,9 @@
                   onFocus: (e) => e.target.select(),
                   onChange: (e) => a(e.currentTarget.value),
                   maxLength: 120,
-                })
-              )
-            )
+                }),
+              ),
+            ),
           );
         },
         be = (e) =>
@@ -8222,8 +8229,8 @@
                   bIsNameColumn: !0,
                   eThisColumn: 1,
                 },
-                e
-              )
+                e,
+              ),
             ),
             n.createElement(
               we,
@@ -8232,8 +8239,8 @@
                   strLabelLocToken: "#FAQDashboard_DraftTimetampColumn",
                   eThisColumn: 2,
                 },
-                e
-              )
+                e,
+              ),
             ),
             n.createElement(
               we,
@@ -8242,8 +8249,8 @@
                   strLabelLocToken: "#FAQDashboard_UpdatedLanguagesColumn",
                   eThisColumn: 3,
                 },
-                e
-              )
+                e,
+              ),
             ),
             n.createElement(
               we,
@@ -8252,8 +8259,8 @@
                   strLabelLocToken: "#FAQDashboard_StaleLanguagesColumn",
                   eThisColumn: 4,
                 },
-                e
-              )
+                e,
+              ),
             ),
             n.createElement(
               we,
@@ -8262,8 +8269,8 @@
                   strLabelLocToken: "#FAQDashboard_PublishedLanguagesColumn",
                   eThisColumn: 5,
                 },
-                e
-              )
+                e,
+              ),
             ),
             n.createElement(
               we,
@@ -8272,8 +8279,8 @@
                   strLabelLocToken: "#FAQDashboard_NeedPublishColumn",
                   eThisColumn: 6,
                 },
-                e
-              )
+                e,
+              ),
             ),
             n.createElement(
               we,
@@ -8282,8 +8289,8 @@
                   strLabelLocToken: "#FAQDashboard_VisibilityColumn",
                   eThisColumn: 7,
                 },
-                e
-              )
+                e,
+              ),
             ),
             n.createElement(
               we,
@@ -8292,9 +8299,9 @@
                   strLabelLocToken: "#FAQDashboard_SteamChinaVisibilityColumn",
                   eThisColumn: 8,
                 },
-                e
-              )
-            )
+                e,
+              ),
+            ),
           ),
         we = (e) => {
           const {
@@ -8308,7 +8315,7 @@
               W().EntryColumn,
               W().ClickableHeader,
               a ? W().NameCol : W().DataCol,
-              i == o && W().Selected
+              i == o && W().Selected,
             );
           return n.createElement(
             M.HP,
@@ -8322,8 +8329,8 @@
             n.createElement(
               "div",
               { className: W().DownArrow },
-              n.createElement(D.$gZ, null)
-            )
+              n.createElement(D.$gZ, null),
+            ),
           );
         },
         ve = (e) => {
@@ -8331,7 +8338,7 @@
           return n.createElement(
             "div",
             { className: t == o ? W().GoodCount : W().BadCount },
-            t + " / " + a
+            t + " / " + a,
           );
         },
         Se = (e) => {
@@ -8339,7 +8346,7 @@
           return n.createElement(
             "div",
             { className: t ? W().Visible : W().Hidden },
-            (0, z.Xx)(t ? "#FAQDashboard_Visible" : "#FAQDashboard_Invisible")
+            (0, z.Xx)(t ? "#FAQDashboard_Visible" : "#FAQDashboard_Invisible"),
           );
         },
         ke = (e) => {
@@ -8356,43 +8363,43 @@
             n.createElement(
               "div",
               { className: (0, y.Z)(W().EntryColumn, W().NameCol) },
-              n.createElement("div", { className: W().EntryInternalName }, a)
+              n.createElement("div", { className: W().EntryInternalName }, a),
             ),
             n.createElement(
               "div",
               { className: (0, y.Z)(W().EntryColumn, W().DataCol) },
-              n.createElement(me, { rtTimestamp: i })
+              n.createElement(me, { rtTimestamp: i }),
             ),
             n.createElement(
               "div",
               { className: (0, y.Z)(W().EntryColumn, W().DataCol) },
-              n.createElement(ve, { nCount: s, nTotal: u, nGoal: u })
+              n.createElement(ve, { nCount: s, nTotal: u, nGoal: u }),
             ),
             n.createElement(
               "div",
               { className: (0, y.Z)(W().EntryColumn, W().DataCol) },
-              n.createElement(ve, { nCount: r, nTotal: u, nGoal: 0 })
+              n.createElement(ve, { nCount: r, nTotal: u, nGoal: 0 }),
             ),
             n.createElement(
               "div",
               { className: (0, y.Z)(W().EntryColumn, W().DataCol) },
-              n.createElement(ve, { nCount: l, nTotal: c, nGoal: c })
+              n.createElement(ve, { nCount: l, nTotal: c, nGoal: c }),
             ),
             n.createElement(
               "div",
               { className: (0, y.Z)(W().EntryColumn, W().DataCol) },
-              n.createElement(ve, { nCount: p, nTotal: c, nGoal: 0 })
+              n.createElement(ve, { nCount: p, nTotal: c, nGoal: 0 }),
             ),
             n.createElement(
               "div",
               { className: (0, y.Z)(W().EntryColumn, W().DataCol) },
-              n.createElement(Se, { bIsVisible: d })
+              n.createElement(Se, { bIsVisible: d }),
             ),
             n.createElement(
               "div",
               { className: (0, y.Z)(W().EntryColumn, W().DataCol) },
-              n.createElement(Se, { bIsVisible: h })
-            )
+              n.createElement(Se, { bIsVisible: h }),
+            ),
           );
         },
         xe = (e) =>
@@ -8407,13 +8414,13 @@
                       null == o ? void 0 : o.filter((e) => e.BNeedsSaving())) ||
                   void 0 === t
                     ? void 0
-                    : t.length) > 0
+                    : t.length) > 0,
                 ) ||
                 (e.pathname != Pt.DashboardFAQ(m.JA.VANITY_ID) &&
                   !(null === (a = e.pathname) || void 0 === a
                     ? void 0
                     : a.startsWith(
-                        Pt.ViewFAQ(m.JA.VANITY_ID, "").slice(0, -1)
+                        Pt.ViewFAQ(m.JA.VANITY_ID, "").slice(0, -1),
                       ))) ||
                 (0, z.Xx)("#EventEditor_UnsavedChanges")
               );
@@ -8437,12 +8444,12 @@
                 onClick: (t) => {
                   (0, P.AM)(
                     n.createElement(Me, { draft: e.draft }),
-                    (0, j.RA)(t)
+                    (0, j.RA)(t),
                   );
                 },
               },
-              (0, z.Xx)("#FAQEditor_DeleteAction")
-            )
+              (0, z.Xx)("#FAQEditor_DeleteAction"),
+            ),
           ),
         Me = (e) => {
           const { draft: t } = e,
@@ -8452,7 +8459,7 @@
           let d = n.createElement(
             "div",
             null,
-            (0, z.Xx)("#FAQEditor_DeleteDesc")
+            (0, z.Xx)("#FAQEditor_DeleteDesc"),
           );
           return (
             s
@@ -8468,8 +8475,8 @@
                   (0, z.Xx)(
                     "Error_Description",
                     l,
-                    (0, z.Xx)("#Error_GenericFailureDescription")
-                  )
+                    (0, z.Xx)("#Error_GenericFailureDescription"),
+                  ),
                 )),
             n.createElement(
               Ce.SV,
@@ -8483,7 +8490,7 @@
                   n.createElement(
                     C.h4,
                     null,
-                    (0, z.Xx)("#FAQEditor_DeleteAction")
+                    (0, z.Xx)("#FAQEditor_DeleteAction"),
                   ),
                   n.createElement(C.uT, null, n.createElement(C.Ac, null, d)),
                   n.createElement(
@@ -8507,7 +8514,7 @@
                                   const e =
                                     m.De.COMMUNITY_BASE_URL.substr(
                                       0,
-                                      m.De.COMMUNITY_BASE_URL.length - 1
+                                      m.De.COMMUNITY_BASE_URL.length - 1,
                                     ) + g(o.k_eCommunityDashboard);
                                   window.location.href = e;
                                 }
@@ -8518,16 +8525,16 @@
                                 console.error(
                                   "FAQDeleteDialog: hit error: " +
                                     t.strErrorMsg,
-                                  t
+                                  t,
                                 ),
                                   p(2);
                               })
                               .finally(() => r(!1));
                         }),
-                    })
-                  )
-                )
-              )
+                    }),
+                  ),
+                ),
+              ),
             )
           );
         },
@@ -8538,7 +8545,7 @@
             M.HP,
             {
               toolTipContent: (0, z.Xx)(
-                o ? "#FAQPublish_SaveRequire_ttip" : "#FAQPublish_Publish_ttip"
+                o ? "#FAQPublish_SaveRequire_ttip" : "#FAQPublish_Publish_ttip",
               ),
             },
             n.createElement(
@@ -8551,16 +8558,16 @@
                       o
                         ? n.createElement(T.JX, {
                             strDescription: (0, z.Xx)(
-                              "#FAQPublish_SaveRequire_ttip"
+                              "#FAQPublish_SaveRequire_ttip",
                             ),
                           })
                         : n.createElement(Ee, { draft: e.draft }),
-                      (0, j.RA)(t)
+                      (0, j.RA)(t),
                     );
                 },
               },
-              (0, z.Xx)("#FAQPublish_Publish")
-            )
+              (0, z.Xx)("#FAQPublish_Publish"),
+            ),
           );
         }),
         Ee = (e) => {
@@ -8584,7 +8591,7 @@
               y = n.createElement(
                 "div",
                 null,
-                (0, z.Xx)("#FAQPublish_Success")
+                (0, z.Xx)("#FAQPublish_Success"),
               );
             else if (d)
               y = n.createElement(
@@ -8593,8 +8600,8 @@
                 (0, z.Xx)(
                   "#Error_Description",
                   d,
-                  (0, z.Xx)("#Error_GenericFailureDescription")
-                )
+                  (0, z.Xx)("#Error_GenericFailureDescription"),
+                ),
               );
             else if (u) {
               const e =
@@ -8603,7 +8610,7 @@
                   : t
                       .filter(
                         (e) =>
-                          e.last_publish_timestamp < e.last_update_timestamp
+                          e.last_publish_timestamp < e.last_update_timestamp,
                       )
                       .map((e) => e.language);
               y = n.createElement(
@@ -8618,13 +8625,13 @@
                   rgAllLanguages: e,
                   rgLanguagesSelected: f,
                   fnSelectLanguages: g,
-                })
+                }),
               );
             } else
               y = n.createElement(
                 "div",
                 null,
-                (0, z.Xx)("#FAQPublish_LoadError")
+                (0, z.Xx)("#FAQPublish_LoadError"),
               );
           else
             y = n.createElement(q.V, {
@@ -8666,16 +8673,16 @@
                               const t = (0, b.l)(e);
                               console.error(
                                 "FAQPublishDialog: hit error: " + t.strErrorMsg,
-                                t
+                                t,
                               ),
                                 c(2);
                             })
                             .finally(() => r(!1));
                       }),
-                  })
-                )
-              )
-            )
+                  }),
+                ),
+              ),
+            ),
           );
         },
         Fe = (e) =>
@@ -8689,12 +8696,12 @@
                 onClick: (t) => {
                   (0, P.AM)(
                     n.createElement(We, { draft: e.draft }),
-                    (0, j.RA)(t)
+                    (0, j.RA)(t),
                   );
                 },
               },
-              (0, z.Xx)("#FAQEditor_EditVisible")
-            )
+              (0, z.Xx)("#FAQEditor_EditVisible"),
+            ),
           ),
         We = (e) => {
           const { draft: t } = e,
@@ -8711,7 +8718,7 @@
             n.createElement(
               "div",
               null,
-              (0, z.Xx)("#FAQEditor_ChangeVisible_Desc")
+              (0, z.Xx)("#FAQEditor_ChangeVisible_Desc"),
             ),
             n.createElement(C.ji, {
               label: (0, z.Xx)("#FAQEditor_VisibleInGlobal"),
@@ -8723,7 +8730,7 @@
               checked: f,
               tooltip: (0, z.Xx)("#FAQEditor_VisibleInChina_ttip"),
               onChange: (e) => g(e),
-            })
+            }),
           );
           return (
             o
@@ -8736,7 +8743,7 @@
               ? (y = n.createElement(
                   "div",
                   null,
-                  (0, z.Xx)("#FAQEditor_ChangeVisible_Success")
+                  (0, z.Xx)("#FAQEditor_ChangeVisible_Success"),
                 ))
               : p &&
                 (y = n.createElement(
@@ -8745,8 +8752,8 @@
                   (0, z.Xx)(
                     "Error_Description",
                     p,
-                    (0, z.Xx)("#Error_GenericFailureDescription")
-                  )
+                    (0, z.Xx)("#Error_GenericFailureDescription"),
+                  ),
                 )),
             n.createElement(
               Ce.SV,
@@ -8760,7 +8767,7 @@
                   n.createElement(
                     C.h4,
                     null,
-                    (0, z.Xx)("#FAQEditor_ChangeVisible")
+                    (0, z.Xx)("#FAQEditor_ChangeVisible"),
                   ),
                   n.createElement(C.uT, null, n.createElement(C.Ac, null, y)),
                   n.createElement(
@@ -8787,16 +8794,16 @@
                                 console.error(
                                   "FAQChangeVisibilityDialog: hit error: " +
                                     t.strErrorMsg,
-                                  t
+                                  t,
                                 ),
                                   d(2);
                               })
                               .finally(() => s(!1));
                         }),
-                    })
-                  )
-                )
-              )
+                    }),
+                  ),
+                ),
+              ),
             )
           );
         };
@@ -8821,7 +8828,7 @@
               void 0 === o
                 ? void 0
                 : o.some(
-                    (e) => e.last_publish_timestamp < e.last_update_timestamp
+                    (e) => e.last_publish_timestamp < e.last_update_timestamp,
                   ),
             f =
               null ===
@@ -8839,7 +8846,7 @@
                       key: e.language,
                       info: e,
                       rtEnglishUpdateTime: u,
-                    })
+                    }),
                   );
           return n.createElement(
             Ce.SV,
@@ -8854,7 +8861,7 @@
                   "div",
                   { className: Re.SectionTitle },
                   (0, z.Xx)("#FAQDashboard_VisibilityColumn"),
-                  " "
+                  " ",
                 ),
                 n.createElement(
                   "div",
@@ -8869,7 +8876,7 @@
                       " ",
                       n.createElement(Se, {
                         bIsVisible: d.visible_in_global_realm,
-                      })
+                      }),
                     ),
                     n.createElement(
                       "div",
@@ -8878,13 +8885,13 @@
                       " ",
                       n.createElement(Se, {
                         bIsVisible: d.visible_in_china_realm,
-                      })
+                      }),
                     ),
                     n.createElement(
                       "div",
                       { className: Re.StatusBtnCtn },
-                      n.createElement(Fe, { draft: r })
-                    )
+                      n.createElement(Fe, { draft: r }),
+                    ),
                   ),
                   n.createElement(
                     "div",
@@ -8893,20 +8900,20 @@
                       ? n.createElement(
                           "div",
                           { className: Re.PublishStatus },
-                          (0, z.Xx)("#FAQStatus_DraftVersionsDesc")
+                          (0, z.Xx)("#FAQStatus_DraftVersionsDesc"),
                         )
                       : n.createElement(
                           "div",
                           { className: Re.PublishStatus },
-                          (0, z.Xx)("#FAQStatus_NothingToPublish")
+                          (0, z.Xx)("#FAQStatus_NothingToPublish"),
                         ),
                     n.createElement(
                       "div",
                       { className: Re.PublishBtn },
-                      n.createElement(ze, { draft: r, bDisabled: !m })
-                    )
-                  )
-                )
+                      n.createElement(ze, { draft: r, bDisabled: !m }),
+                    ),
+                  ),
+                ),
               ),
               n.createElement(
                 "div",
@@ -8915,7 +8922,7 @@
                   "div",
                   { className: Re.SectionTitle },
                   (0, z.Xx)("#FAQDashboard_LocalizationSection"),
-                  " "
+                  " ",
                 ),
                 n.createElement(
                   "div",
@@ -8923,9 +8930,9 @@
                   n.createElement(
                     "div",
                     { className: Re.SectionDescription },
-                    (0, z.Xx)("#FAQDashboard_LocalizationSectionDesc")
+                    (0, z.Xx)("#FAQDashboard_LocalizationSectionDesc"),
                   ),
-                  n.createElement(J, { draft: r, eLanguage: l })
+                  n.createElement(J, { draft: r, eLanguage: l }),
                 ),
                 n.createElement(
                   "div",
@@ -8933,10 +8940,10 @@
                   n.createElement(
                     "div",
                     { className: Re.SectionDescription },
-                    (0, z.Xx)("#EventEditor_Loc_CrowdinIntegration_Desc")
+                    (0, z.Xx)("#EventEditor_Loc_CrowdinIntegration_Desc"),
                   ),
-                  n.createElement(Z, { draft: r })
-                )
+                  n.createElement(Z, { draft: r }),
+                ),
               ),
               n.createElement(
                 "div",
@@ -8944,7 +8951,7 @@
                 n.createElement(
                   "div",
                   { className: Re.SectionTitle },
-                  (0, z.Xx)("#FAQStatus_LocalizedVersionStatusHeader")
+                  (0, z.Xx)("#FAQStatus_LocalizedVersionStatusHeader"),
                 ),
                 n.createElement(
                   "table",
@@ -8959,24 +8966,24 @@
                       n.createElement(
                         "th",
                         null,
-                        (0, z.Xx)("#FAQStatus_LastUpdated")
+                        (0, z.Xx)("#FAQStatus_LastUpdated"),
                       ),
                       n.createElement(
                         "th",
                         null,
-                        (0, z.Xx)("#FAQStatus_LastPublished")
-                      )
-                    )
+                        (0, z.Xx)("#FAQStatus_LastPublished"),
+                      ),
+                    ),
                   ),
-                  n.createElement("tbody", null, f)
-                )
+                  n.createElement("tbody", null, f),
+                ),
               ),
               n.createElement(
                 "div",
                 { className: Re.Section },
-                n.createElement(qe, { draft: r })
-              )
-            )
+                n.createElement(qe, { draft: r }),
+              ),
+            ),
           );
         }),
         Ne = (0, s.Pi)((e) => {
@@ -8989,7 +8996,7 @@
             n.createElement(
               "td",
               null,
-              (0, z.Xx)("#Language_" + (0, d.j_)(t.language))
+              (0, z.Xx)("#Language_" + (0, d.j_)(t.language)),
             ),
             n.createElement(
               "td",
@@ -8997,7 +9004,7 @@
               n.createElement(me, {
                 rtTimestamp: t.last_update_timestamp,
                 bShowAsWarning: o,
-              })
+              }),
             ),
             n.createElement(
               "td",
@@ -9005,8 +9012,8 @@
               n.createElement(me, {
                 rtTimestamp: t.last_publish_timestamp,
                 bShowAsWarning: i,
-              })
-            )
+              }),
+            ),
           );
         });
       var Le = a(67727),
@@ -9025,7 +9032,7 @@
               onClick: (t) =>
                 (0, P.AM)(
                   n.createElement(Ye, { draft: e.draft }),
-                  (0, j.RA)(t)
+                  (0, j.RA)(t),
                 ),
             },
             n.createElement(
@@ -9033,8 +9040,8 @@
               null,
               !a &&
                 n.createElement("img", { className: Be.SavedImage, src: Ue.Z }),
-              (0, z.Xx)(a ? "#Button_Save" : "#Button_Saved")
-            )
+              (0, z.Xx)(a ? "#Button_Save" : "#Button_Saved"),
+            ),
           );
         }),
         Ye = (e) => {
@@ -9052,7 +9059,7 @@
                   l(2),
                     console.log(
                       "FAQSaveProgressDialog hit exception " +
-                        (0, b.l)(e).strErrorMsg
+                        (0, b.l)(e).strErrorMsg,
                     );
                 } finally {
                   s(!1);
@@ -9073,10 +9080,10 @@
                       (0, z.Xx)(
                         Boolean(1 == r)
                           ? "#FAQSave_SaveSuccess"
-                          : "#FAQSave_Error"
+                          : "#FAQSave_Error",
                       ),
-                      " "
-                    )
+                      " ",
+                    ),
               ),
               n.createElement(
                 C.uT,
@@ -9090,7 +9097,7 @@
                         ? n.createElement(
                             "div",
                             null,
-                            (0, z.Xx)("#FAQSave_SaveSuccess_desc")
+                            (0, z.Xx)("#FAQSave_SaveSuccess_desc"),
                           )
                         : n.createElement(
                             "div",
@@ -9098,17 +9105,21 @@
                             (0, z.Xx)(
                               "#Error_Description",
                               r,
-                              (0, z.Xx)("#Error_GenericFailureDescription")
-                            )
-                          )
-                    )
+                              (0, z.Xx)("#Error_GenericFailureDescription"),
+                            ),
+                          ),
+                    ),
               ),
               n.createElement(
                 C.$_,
                 null,
                 !o &&
-                  n.createElement(C.KM, { onClick: a }, (0, z.Xx)("#Button_OK"))
-              )
+                  n.createElement(
+                    C.KM,
+                    { onClick: a },
+                    (0, z.Xx)("#Button_OK"),
+                  ),
+              ),
             )
           );
         };
@@ -9138,8 +9149,8 @@
                   className: G().EditPreviewButton,
                 },
                 (0, z.Xx)(
-                  a ? "#FAQEditor_EditFAQ" : "#EventDisplay_EventsDashBtn"
-                )
+                  a ? "#FAQEditor_EditFAQ" : "#EventDisplay_EventsDashBtn",
+                ),
               ),
               n.createElement(
                 "div",
@@ -9150,8 +9161,8 @@
                   (0, z.Xx)(
                     a
                       ? "#FAQEditor_InternalName_Preview"
-                      : "#FAQEditor_InternalName"
-                  )
+                      : "#FAQEditor_InternalName",
+                  ),
                 ),
                 n.createElement(
                   "div",
@@ -9162,10 +9173,10 @@
                     onClick: (e) =>
                       (0, P.AM)(
                         n.createElement(Ke, { draft: t }),
-                        (0, j.RA)(e)
+                        (0, j.RA)(e),
                       ),
-                  })
-                )
+                  }),
+                ),
               ),
               n.createElement(
                 "div",
@@ -9186,10 +9197,10 @@
                       faqid: t.GetFAQID(),
                       className: G().EditPreviewButton,
                     },
-                    (0, z.Xx)("#Button_Preview")
-                  )
-              )
-            )
+                    (0, z.Xx)("#Button_Preview"),
+                  ),
+              ),
+            ),
           );
         }),
         Ke = (e) => {
@@ -9204,7 +9215,7 @@
             n.createElement(
               C.h4,
               null,
-              (0, z.Xx)("#FAQEditor_ChangeInternalName")
+              (0, z.Xx)("#FAQEditor_ChangeInternalName"),
             ),
             n.createElement(
               C.uT,
@@ -9212,7 +9223,7 @@
               n.createElement(
                 "div",
                 null,
-                (0, z.Xx)("#FAQEditor_ChangeInternalName_desc")
+                (0, z.Xx)("#FAQEditor_ChangeInternalName_desc"),
               ),
               n.createElement("input", {
                 type: "text",
@@ -9238,9 +9249,9 @@
                     : (0, z.Xx)(
                         "#Error_Description",
                         p,
-                        (0, z.Xx)("#Error_GenericFailureDescription")
-                      )
-                )
+                        (0, z.Xx)("#Error_GenericFailureDescription"),
+                      ),
+                ),
             ),
             n.createElement(
               C.$_,
@@ -9262,8 +9273,8 @@
                           u(!0);
                         });
                   }),
-              })
-            )
+              }),
+            ),
           );
         },
         Je = (0, s.Pi)((e) => {
@@ -9298,11 +9309,11 @@
                     n.createElement(
                       "a",
                       { href: m.De.HELP_BASE_URL + "faqs/view/" + i.url_code },
-                      (0, z.Xx)("#FAQEditir_ViewLiveFAQ")
-                    )
-                  )
-              )
-            )
+                      (0, z.Xx)("#FAQEditir_ViewLiveFAQ"),
+                    ),
+                  ),
+              ),
+            ),
           );
         }),
         Ze = (0, s.Pi)((e) => {
@@ -9330,7 +9341,7 @@
               n.createElement(
                 "div",
                 { className: De().FAQMenuCtn },
-                n.createElement(Oe, { draft: a, eLanguage: s })
+                n.createElement(Oe, { draft: a, eLanguage: s }),
               ),
               n.createElement(
                 "div",
@@ -9349,18 +9360,18 @@
                         bbcodeEditorRef: i,
                         draft: a,
                         eLanguage: s,
-                      })
+                      }),
                     ),
                     n.createElement(et, {
                       draft: a,
                       bbcodeEditorRef: i,
                       className: G().RightCol,
-                    })
-                  )
-                )
-              )
+                    }),
+                  ),
+                ),
+              ),
             ),
-            n.createElement(Je, { draft: a, eLanguage: s })
+            n.createElement(Je, { draft: a, eLanguage: s }),
           );
         }),
         et = (e) => {
@@ -9381,8 +9392,8 @@
                   o.current && (0, Ie.G)(null == o ? void 0 : o.current, e, t),
                 fnSetImageURL: () => {},
                 rgRealmList: a.GetIncludedRealmList(),
-              })
-            )
+              }),
+            ),
           );
         },
         tt = (0, s.Pi)((e) => {
@@ -9393,7 +9404,7 @@
             n.createElement(
               "div",
               { className: De().EditorLabel },
-              (0, z.Xx)("#FAQEditor_TitleLabel")
+              (0, z.Xx)("#FAQEditor_TitleLabel"),
             ),
             n.createElement("input", {
               type: "text",
@@ -9403,7 +9414,7 @@
               onFocus: (e) => e.target.select(),
               onChange: (e) => t.SetDraftTitle(a, e.currentTarget.value),
               maxLength: 120,
-            })
+            }),
           );
         }),
         at = (0, s.Pi)((e) => {
@@ -9414,7 +9425,7 @@
             n.createElement(
               "div",
               { className: De().EditorLabel },
-              (0, z.Xx)("#FAQEditor_ContentLabel")
+              (0, z.Xx)("#FAQEditor_ContentLabel"),
             ),
             n.createElement(Ae.R, {
               ref: o,
@@ -9426,7 +9437,7 @@
               bSupportHTMLImport: !0,
               showFormatHelp: "PartnerEvents",
               classNameForTextArea: De().EditorPaneTextArea,
-            })
+            }),
           );
         }),
         ot = (e) =>
@@ -9437,8 +9448,8 @@
             n.createElement(
               f,
               { route: o.k_eCommunityDashboard, className: De().EscapeLink },
-              (0, z.Xx)("#FAQEditor_GoToDashboard")
-            )
+              (0, z.Xx)("#FAQEditor_GoToDashboard"),
+            ),
           );
       var it = a(30132);
       const st = (e) => {
@@ -9457,7 +9468,7 @@
                           ? void 0
                           : t.substr(0, 1))
                         ? 1
-                        : 0
+                        : 0,
                     );
               o &&
                 (null === (a = document.getElementById(o)) ||
@@ -9470,7 +9481,7 @@
               n.createElement(
                 "a",
                 { className: it.SupportTitle, href: `${m.De.HELP_BASE_URL}` },
-                (0, z.Xx)("#FAQViewer_SteamSupport")
+                (0, z.Xx)("#FAQViewer_SteamSupport"),
               ),
               n.createElement(
                 "div",
@@ -9486,16 +9497,16 @@
                     n.createElement(
                       "div",
                       { className: it.FAQContent },
-                      n.createElement(p.R, { text: a, bShowErrorInfo: o })
-                    )
-                  )
+                      n.createElement(p.R, { text: a, bShowErrorInfo: o }),
+                    ),
+                  ),
                 ),
                 n.createElement(
                   "div",
                   { className: it.RightCol },
-                  n.createElement("div", { className: it.SectionCtn }, i)
-                )
-              )
+                  n.createElement("div", { className: it.SectionCtn }, i),
+                ),
+              ),
             )
           );
         },
@@ -9541,7 +9552,7 @@
                   const t = { accountids: e.join(","), origin: self.origin },
                     a = yield lt().get(
                       `${i}actions/ajaxgetmultiavatarpersona`,
-                      { params: t }
+                      { params: t },
                     );
                   if (
                     !a ||
@@ -9560,14 +9571,14 @@
                   const n = new Map();
                   return (
                     a.data.userinfos.forEach((e) =>
-                      n.set(new L.K(e.steamid).GetAccountID(), e)
+                      n.set(new L.K(e.steamid).GetAccountID(), e),
                     ),
                     e.map((e) => n.get(e))
                   );
                 }
               });
             })(e),
-          { cache: !1 }
+          { cache: !1 },
         ),
         ut = "avatarandpersonas";
       var mt = a(77571);
@@ -9575,7 +9586,7 @@
         const { accountID: t, bHideWhenNotAvailable: a } = e,
           [o] = (function (e) {
             const { data: t, isLoading: a } = (0, ht.useQuery)([ut, e], () =>
-              ct.load(e)
+              ct.load(e),
             );
             return [t, a];
           })(t),
@@ -9587,7 +9598,7 @@
             ? n.createElement(
                 n.Fragment,
                 null,
-                Boolean(!a) && n.createElement("span", null, t)
+                Boolean(!a) && n.createElement("span", null, t),
               )
             : n.createElement(
                 n.Fragment,
@@ -9597,8 +9608,8 @@
                   src: o.avatar_url,
                   "data-miniprofile": "s" + i.ConvertTo64BitString(),
                 }),
-                n.createElement("span", null, o.persona_name)
-              )
+                n.createElement("span", null, o.persona_name),
+              ),
         );
       }
       var gt = a(74809),
@@ -9613,7 +9624,7 @@
                 n.createElement(
                   "div",
                   { className: yt.TopicHeader },
-                  (0, z.Xx)("#FAQViewer_AdminLinks")
+                  (0, z.Xx)("#FAQViewer_AdminLinks"),
                 ),
                 n.createElement(
                   "div",
@@ -9630,9 +9641,9 @@
                       null,
                       (0, z.$1)(t.timestamp) +
                         "@" +
-                        (0, Y.Sc)(t.timestamp, { bForce24HourClock: !1 })
-                    )
-                  )
+                        (0, Y.Sc)(t.timestamp, { bForce24HourClock: !1 }),
+                    ),
+                  ),
                 ),
                 n.createElement(wt, { faqContent: t }),
                 n.createElement(
@@ -9642,8 +9653,8 @@
                     route: o.k_eCommunityEdit,
                     bForceAnchor: !0,
                   },
-                  (0, z.Xx)("#FAQViewer_GotoEditor")
-                )
+                  (0, z.Xx)("#FAQViewer_GotoEditor"),
+                ),
               )
             : null;
         },
@@ -9670,9 +9681,9 @@
                 null,
                 (0, z.$1)(i.timestamp) +
                   "@" +
-                  (0, Y.Sc)(i.timestamp, { bForce24HourClock: !1 })
-              )
-            )
+                  (0, Y.Sc)(i.timestamp, { bForce24HourClock: !1 }),
+              ),
+            ),
           );
         },
         vt = (e) =>
@@ -9685,7 +9696,7 @@
               n.createElement(
                 "div",
                 { className: yt.LeftCol },
-                n.createElement(D.WWB, null)
+                n.createElement(D.WWB, null),
               ),
               n.createElement(
                 "div",
@@ -9693,12 +9704,12 @@
                 n.createElement(
                   "div",
                   { className: yt.TopicHeader },
-                  (0, z.Xx)("#FAQViewer_SideBar_ProblemWithSteam_Title")
+                  (0, z.Xx)("#FAQViewer_SideBar_ProblemWithSteam_Title"),
                 ),
                 n.createElement(
                   "div",
                   null,
-                  (0, z.Xx)("#FAQViewer_SideBar_ProblemWithSteam_Desc")
+                  (0, z.Xx)("#FAQViewer_SideBar_ProblemWithSteam_Desc"),
                 ),
                 n.createElement(
                   "div",
@@ -9709,10 +9720,10 @@
                       href: m.De.HELP_BASE_URL,
                       className: V.EditPreviewButton,
                     },
-                    (0, z.Xx)("#FAQViewer_SideBar_ProblemWithSteam_Link")
-                  )
-                )
-              )
+                    (0, z.Xx)("#FAQViewer_SideBar_ProblemWithSteam_Link"),
+                  ),
+                ),
+              ),
             ),
             !(0, m.h4)() &&
               n.createElement(
@@ -9721,7 +9732,7 @@
                 n.createElement(
                   "div",
                   { className: yt.LeftCol },
-                  n.createElement(D.IWH, null)
+                  n.createElement(D.IWH, null),
                 ),
                 n.createElement(
                   "div",
@@ -9729,12 +9740,12 @@
                   n.createElement(
                     "div",
                     { className: yt.TopicHeader },
-                    (0, z.Xx)("#FAQViewer_SideBar_CommunityHelp_Title")
+                    (0, z.Xx)("#FAQViewer_SideBar_CommunityHelp_Title"),
                   ),
                   n.createElement(
                     "div",
                     null,
-                    (0, z.Xx)("#FAQViewer_SideBar_CommunityHelp_Desc")
+                    (0, z.Xx)("#FAQViewer_SideBar_CommunityHelp_Desc"),
                   ),
                   n.createElement(
                     "div",
@@ -9745,11 +9756,11 @@
                         href: m.De.COMMUNITY_BASE_URL + "discussions",
                         className: V.EditPreviewButton,
                       },
-                      (0, z.Xx)("#FAQViewer_SideBar_CommunityHelp_Link")
-                    )
-                  )
-                )
-              )
+                      (0, z.Xx)("#FAQViewer_SideBar_CommunityHelp_Link"),
+                    ),
+                  ),
+                ),
+              ),
           );
       var St = a(6972),
         kt = a.n(St);
@@ -9771,7 +9782,7 @@
                   null,
                   n.createElement(It, {
                     strError: (0, z.Xx)("#FAQViewer_NoFAQFound"),
-                  })
+                  }),
                 )
             : n.createElement(
                 nt,
@@ -9780,7 +9791,7 @@
                   position: "center",
                   size: "xlarge",
                   string: (0, z.Xx)("#Loading"),
-                })
+                }),
               );
         },
         It = (e) => {
@@ -9798,8 +9809,8 @@
             n.createElement(
               "a",
               { className: kt().EscapeLink, href: a },
-              (0, z.Xx)("#FAQViewer_GoToHomepage")
-            )
+              (0, z.Xx)("#FAQViewer_GoToHomepage"),
+            ),
           );
         },
         _t = (0, s.Pi)((e) => {
@@ -9816,14 +9827,14 @@
                     title: a.GetDraftTitleWithFallback(i, m.De.EREALM),
                     content: a.GetDraftContentWithFallback(i, m.De.EREALM),
                   }),
-                  n.createElement(Je, { draft: a, eLanguage: i })
+                  n.createElement(Je, { draft: a, eLanguage: i }),
                 )
               : n.createElement(
                   nt,
                   null,
                   n.createElement(It, {
                     strError: (0, z.Xx)("#FAQViewer_NoFAQFound"),
-                  })
+                  }),
                 )
             : n.createElement(
                 nt,
@@ -9832,7 +9843,7 @@
                   position: "center",
                   size: "xlarge",
                   string: (0, z.Xx)("#Loading"),
-                })
+                }),
               );
         });
       var At = a(56368),
@@ -9926,8 +9937,8 @@
                       path: Pt.ImportTool(":vanity_str"),
                       component: k,
                     }),
-                    n.createElement(c.AW, { component: Tt.R })
-                  )
+                    n.createElement(c.AW, { component: Tt.R }),
+                  ),
                 )
           );
         });

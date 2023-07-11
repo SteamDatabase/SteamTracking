@@ -125,7 +125,7 @@
                     eventModel: e,
                     bIsPreview: !0,
                     language: t,
-                  })
+                  }),
                 )
               : i.createElement(
                   i.Fragment,
@@ -146,7 +146,7 @@
                       partnerEventStore: d.wk,
                       bViewAllShowInfiniteScroll: !e.BIsOGGEvent(),
                     }),
-                  })
+                  }),
                 );
           }
           return i.createElement(m.H, {
@@ -167,7 +167,7 @@
               bClearDirty: !0,
               bPreview: !1,
               bPreventRedirect: !0,
-            })
+            }),
           );
     },
     59365: (e, t, n) => {
@@ -225,10 +225,10 @@
                           a.length > 1
                             ? (a.sort((e, t) =>
                                 (0, I.Xx)(
-                                  "#Language_" + (0, N.j_)(e)
+                                  "#Language_" + (0, N.j_)(e),
                                 ).localeCompare(
-                                  (0, I.Xx)("#Language_" + (0, N.j_)(t))
-                                )
+                                  (0, I.Xx)("#Language_" + (0, N.j_)(t)),
+                                ),
                               ),
                               (0, D.AM)(
                                 d.createElement(X, {
@@ -236,7 +236,7 @@
                                   locData: t,
                                   fnOnGotoPage: n,
                                 }),
-                                window
+                                window,
                               ))
                             : O(n, t);
                         })
@@ -249,16 +249,16 @@
                               bDestructiveWarning: !0,
                               strDescription: (0, I.Xx)(
                                 "#EventEditor_CloneError_Desc",
-                                t.strErrorMsg
+                                t.strErrorMsg,
                               ),
                             }),
                             window,
-                            { strTitle: (0, I.Xx)("#EventEditor_CloneError") }
+                            { strTitle: (0, I.Xx)("#EventEditor_CloneError") },
                           );
                         });
                   })(t, e, n),
               },
-              (0, I.Xx)("#Button_Clone")
+              (0, I.Xx)("#Button_Clone"),
             );
       }
       function O(e, t, n) {
@@ -287,7 +287,7 @@
           d.createElement(
             "div",
             { className: P.CloneLangAlert },
-            (0, I.Xx)("#EventEditor_Clone_Alert")
+            (0, I.Xx)("#EventEditor_Clone_Alert"),
           ),
           d.createElement(
             "div",
@@ -302,19 +302,19 @@
                 },
                 label: (0, I.Xx)("#Language_" + (0, N.j_)(e)),
                 checked: !l.has(e),
-              })
-            )
+              }),
+            ),
           ),
           d.createElement(
             G.zx,
             { onClick: () => o(new Set()) },
-            (0, I.Xx)("#EventEditor_Clone_SelectAll")
+            (0, I.Xx)("#EventEditor_Clone_SelectAll"),
           ),
           d.createElement(
             G.zx,
             { onClick: () => o(new Set(t)) },
-            (0, I.Xx)("#EventEditor_Clone_DeSelectAll")
-          )
+            (0, I.Xx)("#EventEditor_Clone_DeSelectAll"),
+          ),
         );
       }
       var U = n(35809),
@@ -375,7 +375,7 @@
               default:
                 console.log(
                   "EventDisplayTile - Unexpected Case - " +
-                    this.state.redirectTarget
+                    this.state.redirectTarget,
                 );
             }
           let s = (0, N.jM)(k.De.LANGUAGE);
@@ -396,7 +396,7 @@
                   ? d.createElement(
                       "div",
                       { className: P.TileTextStartsIn },
-                      (0, I.Xx)("#EventEditor_Status_WillBeVisible_EventStart")
+                      (0, I.Xx)("#EventEditor_Status_WillBeVisible_EventStart"),
                     )
                   : d.createElement(
                       "div",
@@ -407,8 +407,8 @@
                           dateAndTime:
                             t.GetVisibilityStartTimeAndDateUnixSeconds(),
                           bSingleLine: !0,
-                        })
-                      )
+                        }),
+                      ),
                     )),
             !D && S)
           ) {
@@ -417,19 +417,19 @@
               ? (m = d.createElement(
                   "span",
                   { className: P.EventStateUpcoming },
-                  (0, I.Xx)("#EventDisplay_Upcoming")
+                  (0, I.Xx)("#EventDisplay_Upcoming"),
                 ))
               : (0, Z.G1)(t.type) && t.GetEndTimeAndDateUnixSeconds() > e
               ? (m = d.createElement(
                   "span",
                   { className: P.EventStateActive },
-                  (0, I.Xx)("#EventDisplay_Active")
+                  (0, I.Xx)("#EventDisplay_Active"),
                 ))
               : t.GetStartTimeAndDateUnixSeconds() > e + 3600 &&
                 (m = d.createElement(
                   "span",
                   { className: P.EventStateRecent },
-                  (0, I.Xx)("#EventDisplay_RecentlyActive")
+                  (0, I.Xx)("#EventDisplay_RecentlyActive"),
                 ));
           }
           i &&
@@ -448,7 +448,7 @@
               o &&
                 y &&
                 y.is_ogg &&
-                y.clanAccountID != t.announcementClanSteamID.GetAccountID()
+                y.clanAccountID != t.announcementClanSteamID.GetAccountID(),
             );
           return d.createElement(
             j.SV,
@@ -469,7 +469,7 @@
                   className: P.TileImageCtn,
                   onClick: (e) => this.OnFallbackClick(e),
                 },
-                d.createElement(z.J, { className: P.TileImage, srcs: v })
+                d.createElement(z.J, { className: P.TileImage, srcs: v }),
               ),
               d.createElement(
                 "div",
@@ -493,9 +493,9 @@
                           "span",
                           { className: P.TileHasSale },
                           " | ",
-                          (0, I.Xx)("#EventEditor_Status_HasSale")
-                        )
-                    )
+                          (0, I.Xx)("#EventEditor_Status_HasSale"),
+                        ),
+                    ),
                   ),
                   g && !1,
                   d.createElement(
@@ -523,10 +523,13 @@
                                 t.clanSteamID.GetAccountID() +
                                 "/admin/manage_rss/",
                             },
-                            " " + (0, I.Xx)("#EventEditor_Status_FromRSSFeed")
-                          )
+                            " " + (0, I.Xx)("#EventEditor_Status_FromRSSFeed"),
+                          ),
                         ),
-                      d.createElement(K.bv, { eventModel: t, bAllowUpdate: !1 })
+                      d.createElement(K.bv, {
+                        eventModel: t,
+                        bAllowUpdate: !1,
+                      }),
                     ),
                     Boolean(C) &&
                       d.createElement(
@@ -537,8 +540,8 @@
                           d.createElement(
                             "span",
                             null,
-                            C.m_stats.total_showm.toLocaleString()
-                          )
+                            C.m_stats.total_showm.toLocaleString(),
+                          ),
                         ),
                         d.createElement("br", null),
                         (0, I.kQ)(
@@ -546,10 +549,10 @@
                           d.createElement(
                             "span",
                             null,
-                            C.m_stats.total_read.toLocaleString()
-                          )
-                        )
-                      )
+                            C.m_stats.total_read.toLocaleString(),
+                          ),
+                        ),
+                      ),
                   ),
                   c,
                   x
@@ -562,7 +565,7 @@
                         d.createElement(
                           "div",
                           null,
-                          (0, I.Xx)("#EventEditor_DataFromConnectAnnouncement")
+                          (0, I.Xx)("#EventEditor_DataFromConnectAnnouncement"),
                         ),
                         d.createElement(
                           F.JW,
@@ -571,25 +574,25 @@
                             eventModel: t,
                             route: F.Ue.k_eView,
                           },
-                          (0, I.Xx)("#Button_ViewPage")
-                        )
+                          (0, I.Xx)("#Button_ViewPage"),
+                        ),
                       )
                     : d.createElement(
                         $,
                         Object.assign(
                           { fnOnGotoPage: this.OnGotoPage },
-                          this.props
-                        )
+                          this.props,
+                        ),
                       ),
                   r &&
                     d.createElement(
                       J.s,
                       { requireAdmin: !0, clanSteamID: t.clanSteamID },
-                      d.createElement(te, { eventModel: t })
-                    )
-                )
-              )
-            )
+                      d.createElement(te, { eventModel: t }),
+                    ),
+                ),
+              ),
+            ),
           );
         }
       };
@@ -612,7 +615,7 @@
                   editModel: i.wk.GetEditModel(),
                   OnPublishSuccess: this.OnPublishSuccess,
                 }),
-                window
+                window,
               );
             })
             .catch((e) => {
@@ -624,11 +627,11 @@
                   bDestructiveWarning: !0,
                   strDescription: (0, I.Xx)(
                     "#EventEditor_PublishingError_Desc",
-                    t.strErrorMsg
+                    t.strErrorMsg,
                   ),
                 }),
                 window,
-                { strTitle: (0, I.Xx)("#EventEditor_PublishingError") }
+                { strTitle: (0, I.Xx)("#EventEditor_PublishingError") },
               );
             });
         }
@@ -645,7 +648,7 @@
                 eventModel: this.props.eventModel,
                 partnerEventStore: i.wk,
               }),
-              (0, Q.RA)(e)
+              (0, Q.RA)(e),
             );
         }
         render() {
@@ -668,7 +671,7 @@
                   route: F.Ue.k_eCommunityEdit,
                   onClick: this.StopPropagation,
                 },
-                (0, I.Xx)("#Button_Edit")
+                (0, I.Xx)("#Button_Edit"),
               ),
             n &&
               d.createElement(
@@ -676,13 +679,13 @@
                 {
                   className: (0, w.Z)(P.ManageButton, P.Edit),
                   "data-tooltip-text": (0, I.Xx)(
-                    "#EventEditor_Button_MigrateAndEdit_Announcement_ttip"
+                    "#EventEditor_Button_MigrateAndEdit_Announcement_ttip",
                   ),
                   eventModel: e,
                   route: F.Ue.k_eCommunityMigrate,
                   onClick: this.StopPropagation,
                 },
-                (0, I.Xx)("#EventEditor_Button_MigrateAndEdit")
+                (0, I.Xx)("#EventEditor_Button_MigrateAndEdit"),
               ),
             a &&
               d.createElement(
@@ -690,13 +693,13 @@
                 {
                   className: (0, w.Z)(P.ManageButton, P.View),
                   "data-tooltip-text": (0, I.Xx)(
-                    "#EventEditor_Button_PreviewButton_ttip"
+                    "#EventEditor_Button_PreviewButton_ttip",
                   ),
                   eventModel: e,
                   route: F.Ue.k_eCommunityPreview,
                   onClick: this.StopPropagation,
                 },
-                (0, I.Xx)("#EventDisplay_Preview")
+                (0, I.Xx)("#EventDisplay_Preview"),
               ),
             !a &&
               d.createElement(
@@ -707,7 +710,7 @@
                   route: F.Ue.k_eView,
                   onClick: this.StopPropagation,
                 },
-                (0, I.Xx)("#EventDisplay_View")
+                (0, I.Xx)("#EventDisplay_View"),
               ),
             !i &&
               !n &&
@@ -717,7 +720,7 @@
                   className: (0, w.Z)(P.ManageButton, P.Publish),
                   onClick: this.OnPublishEvent,
                 },
-                (0, I.Xx)("#EventDisplay_Publish")
+                (0, I.Xx)("#EventDisplay_Publish"),
               ),
             d.createElement("div", { className: P.Spacer }, " "),
             d.createElement(B, { eventModel: e, fnOnGotoPage: t }),
@@ -726,12 +729,12 @@
               {
                 className: (0, w.Z)(P.ManageButton, P.Delete),
                 "data-tooltip-text": (0, I.Xx)(
-                  "#EventEditor_Button_DeleteButton_ttip"
+                  "#EventEditor_Button_DeleteButton_ttip",
                 ),
                 onClick: this.OnDeleteClickAndVerify,
               },
-              (0, I.Xx)("#Button_Delete")
-            )
+              (0, I.Xx)("#Button_Delete"),
+            ),
           );
         }
       };
@@ -782,7 +785,7 @@
                   ? void 0
                   : t.length) || void 0 === n
               ? void 0
-              : n.toLocaleString()
+              : n.toLocaleString(),
           ),
           i
             .slice(0, 10)
@@ -792,9 +795,9 @@
                 { key: e.key },
                 e.key,
                 ": ",
-                e.size.toLocaleString()
-              )
-            )
+                e.size.toLocaleString(),
+              ),
+            ),
         );
       };
       var ne = n(91666),
@@ -821,8 +824,8 @@
               : Boolean(0 == n.length)
               ? d.createElement("div", null, "No Publishing History available")
               : n.map((e) =>
-                  d.createElement(re, { key: e.clan_event_gid, record: e })
-                )
+                  d.createElement(re, { key: e.clan_event_gid, record: e }),
+                ),
           );
         },
         re = (e) => {
@@ -840,7 +843,7 @@
               d.createElement(q.H6, {
                 dateAndTime: n.publish_time,
                 bSingleLine: !0,
-              })
+              }),
             ),
             d.createElement(
               "div",
@@ -848,15 +851,15 @@
               d.createElement(ae.K, {
                 accountID: n.publish_account_id,
                 locToken: "#EventDashbard_PublishingAccount",
-              })
+              }),
             ),
             d.createElement(
               "div",
               null,
               "tags: ",
-              null === (t = n.tags) || void 0 === t ? void 0 : t.join(", ")
+              null === (t = n.tags) || void 0 === t ? void 0 : t.join(", "),
             ),
-            d.createElement("hr", null)
+            d.createElement("hr", null),
           );
         };
       var le = n(10412),
@@ -905,7 +908,7 @@
                         0,
                         o,
                         { rtime_oldestevent: t },
-                        r
+                        r,
                       )),
                       (null == m ? void 0 : m.length) > 0)
                     ) {
@@ -924,10 +927,10 @@
                             Object.assign(
                               Object.assign(
                                 { event_name: a.GetNameWithFallback(u) },
-                                n.m_stats
+                                n.m_stats,
                               ),
-                              { event_gid: "'" + t }
-                            )
+                              { event_gid: "'" + t },
+                            ),
                           );
                         }));
                     }
@@ -937,13 +940,13 @@
                       i,
                       "event_stats_" +
                         e.group_name.toLocaleLowerCase().replace(/\s/g, "_") +
-                        ".csv"
+                        ".csv",
                     ),
                     !0
                   );
                 });
               })(t, a ? c : u, r ? Number.MAX_SAFE_INTEGER : E, g).then(() =>
-                n()
+                n(),
               ),
           },
           d.createElement(
@@ -952,7 +955,7 @@
             d.createElement(
               "div",
               { className: "DialogLabel" },
-              (0, I.Xx)("#EventDashboard_Stats_Oldest_Title")
+              (0, I.Xx)("#EventDashboard_Stats_Oldest_Title"),
             ),
             d.createElement(
               "div",
@@ -975,13 +978,13 @@
                     fnGetTimeToUpdate: () => u,
                     fnSetTimeToUpdate: v,
                     disabled: b,
-                  })
-                )
+                  }),
+                ),
             ),
             d.createElement(
               "div",
               { className: "DialogLabel" },
-              (0, I.Xx)("#EventDashboard_Stats_Newest_Title")
+              (0, I.Xx)("#EventDashboard_Stats_Newest_Title"),
             ),
             d.createElement(
               "div",
@@ -1003,16 +1006,16 @@
                     fnGetTimeToUpdate: () => E,
                     fnSetTimeToUpdate: _,
                     disabled: b,
-                  })
-                )
+                  }),
+                ),
             ),
             b &&
               d.createElement(C.V, {
                 position: "center",
                 size: "medium",
                 string: (0, I.Xx)("#EventDashboard_Stats_Progress", h),
-              })
-          )
+              }),
+          ),
         );
       }
       let ve = class extends d.Component {
@@ -1037,7 +1040,7 @@
           i.wk
             .LoadClanEventsForPartnerDashboard(
               this.m_clanSteamID,
-              this.m_cancelSignal
+              this.m_cancelSignal,
             )
             .then((e) => {
               this.EventLoaded(), this.setState({ bInitialLoadComplete: !0 });
@@ -1054,7 +1057,7 @@
               p.h.LoadStatsForEvents(
                 this.m_clanSteamID,
                 e,
-                this.m_cancelSignal
+                this.m_cancelSignal,
               );
           });
         }
@@ -1064,9 +1067,9 @@
             d.createElement(
               S.JX,
               null,
-              (0, I.Xx)("#Error_Description", t.errorCode, t.strErrorMsg)
+              (0, I.Xx)("#Error_Description", t.errorCode, t.strErrorMsg),
             ),
-            window
+            window,
           );
         }
         componentDidMount() {
@@ -1100,7 +1103,7 @@
               (a = a.sort((e, t) => {
                 (0, y.X)(
                   e !== t,
-                  `Unexpected duplicates in the list: ${e} ${t}`
+                  `Unexpected duplicates in the list: ${e} ${t}`,
                 );
                 const n = i.wk.GetClanEventModel(e);
                 return i.wk.GetClanEventModel(t).startTime - n.startTime;
@@ -1115,7 +1118,7 @@
                   gid: e,
                   eventModel: t,
                   bShowEventMetaDataSizes: this.state.bShowEventMetaDataSizes,
-                })
+                }),
               );
             }
           }
@@ -1136,21 +1139,21 @@
                         bInfiniteScrollLoading: !0,
                         nLastFetchRequestedMS: Date.now(),
                       },
-                      this.LoadMorePublicEvents
+                      this.LoadMorePublicEvents,
                     )
                   : this.setState(
                       {
                         bInfiniteScrollLoading: !0,
                         nLastFetchRequestedMS: Date.now(),
                       },
-                      this.LoadMorePublicEventWithDelay
+                      this.LoadMorePublicEventWithDelay,
                     ))));
         }
         LoadMorePublicEventWithDelay() {
           return (0, l.mG)(this, void 0, void 0, function* () {
             this.m_IntervalTimer = window.setInterval(
               this.LoadMorePublicEvents,
-              500
+              500,
             );
           });
         }
@@ -1174,14 +1177,14 @@
                       this.m_clanSteamID,
                       void 0,
                       0,
-                      this.k_nMaxPerDirection
+                      this.k_nMaxPerDirection,
                     )
                   : yield i.wk.LoadAdjacentPartnerEvents(
                       e ? e.GID : void 0,
                       this.m_clanSteamID,
                       void 0,
                       0,
-                      this.k_nMaxPerDirection
+                      this.k_nMaxPerDirection,
                     )),
                 (t = n.length < this.k_nMaxPerDirection);
             } catch (e) {
@@ -1194,7 +1197,7 @@
                 bInfiniteScrollLoading: !1,
                 bErrorOnInfiniteScrollRequest: n,
               },
-              this.EventLoaded
+              this.EventLoaded,
             );
           });
         }
@@ -1205,7 +1208,7 @@
           const e = new v.K(k.JA.CLANSTEAMID);
           let t = this.CreateTiles(
               this.m_clanSteamID,
-              u.ac.k_EEventStateUnpublished
+              u.ac.k_EEventStateUnpublished,
             ),
             n = this.CreateTiles(this.m_clanSteamID, u.ac.k_EEventStateStaged),
             a = this.CreateTiles(this.m_clanSteamID, u.ac.k_EEventStateVisible),
@@ -1232,7 +1235,7 @@
                       "maincontent",
                       M().EventDashboardCtn,
                       M().EventDashAdminToolsCtn,
-                      g().FlexRowContainer
+                      g().FlexRowContainer,
                     ),
                   },
                   d.createElement(G.ji, {
@@ -1249,10 +1252,10 @@
                         (0, D.AM)(d.createElement(ie, null), (0, Q.RA)(e));
                       },
                     },
-                    "Show Publishing Audit History"
-                  )
-                )
-              )
+                    "Show Publishing Audit History",
+                  ),
+                ),
+              ),
             ),
             d.createElement(
               "div",
@@ -1267,7 +1270,7 @@
                       className: (0, w.Z)(
                         "maincontent",
                         "eventlist",
-                        M().EventDashboardCtn
+                        M().EventDashboardCtn,
                       ),
                     },
                     d.createElement(
@@ -1279,14 +1282,14 @@
                         "span",
                         {
                           "data-tooltip-text": (0, I.Xx)(
-                            "#EventDisplay_Unpublished_SubTitle"
+                            "#EventDisplay_Unpublished_SubTitle",
                           ),
                         },
-                        " (?)"
-                      )
+                        " (?)",
+                      ),
                     ),
-                    t.length > 0 && t
-                  )
+                    t.length > 0 && t,
+                  ),
                 ),
               n.length > 0 &&
                 d.createElement(
@@ -1298,7 +1301,7 @@
                       className: (0, w.Z)(
                         "maincontent",
                         "eventlist",
-                        M().EventDashboardCtn
+                        M().EventDashboardCtn,
                       ),
                     },
                     d.createElement(
@@ -1310,14 +1313,14 @@
                         "span",
                         {
                           "data-tooltip-text": (0, I.Xx)(
-                            "#EventDisplay_Stage_SubTitle"
+                            "#EventDisplay_Stage_SubTitle",
                           ),
                         },
-                        " (?)"
-                      )
+                        " (?)",
+                      ),
                     ),
-                    n.length > 0 && n
-                  )
+                    n.length > 0 && n,
+                  ),
                 ),
               d.createElement(
                 "div",
@@ -1325,7 +1328,7 @@
                   className: (0, w.Z)(
                     M().Section,
                     M().DisplaySectionHeaderContainer,
-                    M().Visible
+                    M().Visible,
                   ),
                 },
                 d.createElement(
@@ -1334,18 +1337,18 @@
                     className: (0, w.Z)(
                       "maincontent",
                       "eventlist",
-                      M().EventDashboardCtn
+                      M().EventDashboardCtn,
                     ),
                   },
                   d.createElement(
                     "div",
                     { className: M().DisplaySectionHeader },
-                    (0, I.Xx)("#EventDisplay_Visible_Title")
+                    (0, I.Xx)("#EventDisplay_Visible_Title"),
                   ),
                   d.createElement(
                     "div",
                     { className: M().DisplaySectionSubHeader },
-                    (0, I.Xx)("#EventDisplay_Visible_Title_WithRange")
+                    (0, I.Xx)("#EventDisplay_Visible_Title_WithRange"),
                   ),
                   a && a,
                   !i &&
@@ -1353,7 +1356,7 @@
                     d.createElement(
                       "div",
                       null,
-                      (0, I.Xx)("#EventDisplay_NoPublic")
+                      (0, I.Xx)("#EventDisplay_NoPublic"),
                     ),
                   i &&
                     d.createElement(C.V, {
@@ -1364,17 +1367,17 @@
                     d.createElement(
                       "div",
                       null,
-                      (0, I.Xx)("#EventDisplay_AllPublicShown")
+                      (0, I.Xx)("#EventDisplay_AllPublicShown"),
                     ),
                   this.state.bErrorOnInfiniteScrollRequest &&
                     d.createElement(
                       "div",
                       null,
-                      (0, I.Xx)("#EventDisplay_HitErrorInfiniteScroll")
-                    )
-                )
-              )
-            )
+                      (0, I.Xx)("#EventDisplay_HitErrorInfiniteScroll"),
+                    ),
+                ),
+              ),
+            ),
           );
         }
       };
@@ -1402,8 +1405,8 @@
                 d.createElement(
                   "div",
                   { className: g().subtitle },
-                  (0, I.Xx)("#EventDisplay_Edit_Desc")
-                )
+                  (0, I.Xx)("#EventDisplay_Edit_Desc"),
+                ),
               ),
               d.createElement(
                 "div",
@@ -1415,7 +1418,7 @@
                     to: a.rQ.Create(r),
                     onClick: () => i.wk.ResetModel(),
                   },
-                  (0, I.Xx)("#EventDisplay_CreateNewEvent")
+                  (0, I.Xx)("#EventDisplay_CreateNewEvent"),
                 ),
                 d.createElement(
                   G.zx,
@@ -1423,12 +1426,12 @@
                     onClick: (e) =>
                       (0, D.AM)(
                         d.createElement(ue, { clanInfo: n }),
-                        (0, Q.RA)(e)
+                        (0, Q.RA)(e),
                       ),
                   },
-                  (0, I.Xx)("#EventDashboard_Stats_export")
-                )
-              )
+                  (0, I.Xx)("#EventDashboard_Stats_export"),
+                ),
+              ),
             ),
             d.createElement(
               "div",
@@ -1437,8 +1440,8 @@
                 summary: l.m_stats,
                 bIsAllowedInLibrary: null == n ? void 0 : n.is_ogg,
                 bIncludeDescription: !0,
-              })
-            )
+              }),
+            ),
           );
         }),
         pe = (0, A.M)(ve);
@@ -1487,7 +1490,7 @@
               console.error(
                 "CDeckCompCountStore.LoadInternalCount failed: " +
                   (null == n ? void 0 : n.strErrorMsg),
-                n
+                n,
               ),
               null
             );
@@ -1551,7 +1554,7 @@
                   { className: fe.Closed },
                   i > 0
                     ? (0, I.Xx)("#Giveaway_Closed", i.toLocaleString())
-                    : (0, I.Xx)("#Giveaway_Closed_NoWinnerInfo")
+                    : (0, I.Xx)("#Giveaway_Closed_NoWinnerInfo"),
                 ),
               Boolean(!r) &&
                 d.createElement(
@@ -1565,8 +1568,8 @@
                         d.createElement(
                           "div",
                           null,
-                          (0, I.Xx)("#Giveaway_RandomDraw")
-                        )
+                          (0, I.Xx)("#Giveaway_RandomDraw"),
+                        ),
                       )
                     : d.createElement(
                         "div",
@@ -1574,15 +1577,15 @@
                         d.createElement(
                           "div",
                           { className: fe.CountDownTime },
-                          Me(Math.floor(l / 60)) + ":" + Me(l % 60)
+                          Me(Math.floor(l / 60)) + ":" + Me(l % 60),
                         ),
                         d.createElement(
                           "div",
                           { className: fe.CountDownText },
                           (0, I.Xx)("#Giveaway_CountDown2"),
                           " ",
-                          (0, I.Xx)("#Giveaway_KeepWatching")
-                        )
+                          (0, I.Xx)("#Giveaway_KeepWatching"),
+                        ),
                       ),
                   Boolean(i > 0) &&
                     d.createElement(
@@ -1591,15 +1594,15 @@
                       d.createElement(
                         "div",
                         { className: fe.WinnerCount },
-                        i.toLocaleString()
+                        i.toLocaleString(),
                       ),
                       d.createElement(
                         "div",
                         { className: fe.WinnerText },
-                        (0, I.Xx)("#Giveaway_Congratulation")
-                      )
-                    )
-                )
+                        (0, I.Xx)("#Giveaway_Congratulation"),
+                      ),
+                    ),
+                ),
             );
       }
       var Ne = n(61963),
@@ -1636,7 +1639,7 @@
           return d.createElement(
             "span",
             { className: "DisplayBadgeProgress" },
-            e.toLocaleString()
+            e.toLocaleString(),
           );
         }
         return null;
@@ -1651,14 +1654,14 @@
           }, [t]),
           { storePageFilter: r, eStoreDiscoveryQueueType: l } = d.useMemo(
             () => (0, We.N)(t, i),
-            [t, i]
+            [t, i],
           ),
           o = (0, Ve.GD)(l, r),
           s = Math.min(n + o, a);
         return d.createElement(
           "span",
           { className: "DisplayBadgeProgress" },
-          s.toLocaleString()
+          s.toLocaleString(),
         );
       }
       function He(e) {
@@ -1699,8 +1702,8 @@
                 null,
                 Boolean(r) && d.createElement(C.V, { size: "small" }),
                 Boolean(a) && d.createElement(Pe.JrY, null),
-                n
-              )
+                n,
+              ),
         );
       }
       function ze(e) {
@@ -1741,7 +1744,7 @@
               "div",
               { className: Xe.ErrorDiv },
               "Error could not find sale section ",
-              a
+              a,
             );
         }
         return null;
@@ -1859,8 +1862,8 @@
             d.createElement("b", null),
             d.createElement("b", null),
             d.createElement("b", null),
-            d.createElement("b", null)
-          )
+            d.createElement("b", null),
+          ),
         );
       }
       function rt(e) {
@@ -1925,7 +1928,7 @@
                     ["salesection", { Constructor: Je, autocloses: !1 }],
                     ["reservationbutton", { Constructor: lt, autocloses: !1 }],
                   ])),
-                Ze)
+                Ze),
               ),
               Promise.all([De.cb.InitGlobal()]).then(() => n(!1));
           }, []),
@@ -1963,7 +1966,7 @@
                     render: (e) =>
                       d.createElement(
                         r.k,
-                        Object.assign({}, e, { key: e.match.params.gid })
+                        Object.assign({}, e, { key: e.match.params.gid }),
                       ),
                   }),
                   d.createElement(W.AW, {
@@ -1977,7 +1980,7 @@
                     render: (e) =>
                       d.createElement(
                         he.IE,
-                        Object.assign({}, e, { key: e.match.params.gid })
+                        Object.assign({}, e, { key: e.match.params.gid }),
                       ),
                   }),
                   d.createElement(W.AW, {
@@ -1989,14 +1992,14 @@
                         Object.assign({}, e, {
                           key: e.match.params.gid,
                           bInitiatePublishDialog: !0,
-                        })
+                        }),
                       ),
                   }),
                   d.createElement(W.AW, {
                     exact: !0,
                     path: a.rQ.PreviewSale(
                       ":appid_or_vanity_str",
-                      ":gid(\\d+)?"
+                      ":gid(\\d+)?",
                     ),
                     render: (e) =>
                       d.createElement(
@@ -2004,7 +2007,7 @@
                         Object.assign({}, e, {
                           key: e.match.params.gid,
                           mode: "previewsale",
-                        })
+                        }),
                       ),
                   }),
                   d.createElement(W.AW, {
@@ -2016,7 +2019,7 @@
                         Object.assign({}, e, {
                           key: e.match.params.gid,
                           mode: "preview",
-                        })
+                        }),
                       ),
                   }),
                   d.createElement(W.AW, {
@@ -2028,42 +2031,42 @@
                         Object.assign({}, e, {
                           key: e.match.params.gid,
                           mode: "view",
-                        })
+                        }),
                       ),
                   }),
                   d.createElement(W.AW, {
                     exact: !0,
                     path: a.rQ.Migrate(
                       ":appid_or_vanity_str",
-                      ":oldAnnouncementGID(\\d+)"
+                      ":oldAnnouncementGID(\\d+)",
                     ),
                     render: (e) =>
                       d.createElement(
                         ge.Lc,
                         Object.assign({}, e, {
                           key: e.match.params.oldAnnouncementGID,
-                        })
+                        }),
                       ),
                   }),
                   d.createElement(W.AW, {
                     exact: !0,
                     path: a.rQ.MigrateCategory(
                       ":appid_or_vanity_str",
-                      ":oldAnnouncementGID(\\d+)"
+                      ":oldAnnouncementGID(\\d+)",
                     ),
                     render: (e) =>
                       d.createElement(
                         ge.QU,
                         Object.assign({}, e, {
                           key: e.match.params.oldAnnouncementGID,
-                        })
+                        }),
                       ),
                   }),
                   d.createElement(W.AW, {
                     exact: !0,
                     path: a.rQ.ViewOldAnnouncement(
                       ":appid_or_vanity_str",
-                      ":oldAnnouncementGID(\\d+)"
+                      ":oldAnnouncementGID(\\d+)",
                     ),
                     render: (e) =>
                       d.createElement(
@@ -2072,14 +2075,14 @@
                           key: e.match.params.oldAnnouncementGID,
                           bClearDirty: !0,
                           bPreview: !1,
-                        })
+                        }),
                       ),
                   }),
                   d.createElement(W.AW, {
                     exact: !0,
                     path: a.rQ.PreviewOldAnnouncement(
                       ":appid_or_vanity_str",
-                      ":oldAnnouncementGID(\\d+)"
+                      ":oldAnnouncementGID(\\d+)",
                     ),
                     render: (e) =>
                       d.createElement(
@@ -2088,11 +2091,11 @@
                           key: e.match.params.oldAnnouncementGID,
                           bClearDirty: !0,
                           bPreview: !0,
-                        })
+                        }),
                       ),
                   }),
-                  d.createElement(W.AW, { component: ct.R })
-                )
+                  d.createElement(W.AW, { component: ct.R }),
+                ),
               )
         );
       }

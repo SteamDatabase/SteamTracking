@@ -78,8 +78,8 @@
                 i.j1.LoadPartnerEventFromClanEventGIDAndClanSteamID(
                   o.K.InitFromClanID(e.clanid),
                   e.unique_id,
-                  0
-                )
+                  0,
+                ),
               ),
               r = yield Promise.all(n),
               d = new Map();
@@ -134,7 +134,7 @@
             this.m_mapBroadcasterSteamIDData.set(a, n),
               this.m_mapBroadcasterSteamIDToEvents.set(
                 a,
-                e.map((e) => e.GID)
+                e.map((e) => e.GID),
               );
           });
         }
@@ -216,7 +216,7 @@
         }
         GetInfoByInstance(e, t) {
           return this.m_mapGiveawayIDAndInstanceToNextDrawInfo.get(
-            this.GetKey(e, t)
+            this.GetKey(e, t),
           );
         }
         GetNextDrawChangeCallback(e) {
@@ -250,7 +250,7 @@
                     this.m_mapGiveawayIDToNextDrawInfo.set(e, new u()),
                   this.CopyToGiveaway(
                     n.data,
-                    this.m_mapGiveawayIDToNextDrawInfo.get(e)
+                    this.m_mapGiveawayIDToNextDrawInfo.get(e),
                   ),
                   void 0 !== t)
                 ) {
@@ -258,16 +258,16 @@
                   this.m_mapGiveawayIDAndInstanceToNextDrawInfo.has(a) ||
                     this.m_mapGiveawayIDAndInstanceToNextDrawInfo.set(
                       a,
-                      new u()
+                      new u(),
                     ),
                     this.CopyToGiveaway(
                       n.data,
-                      this.m_mapGiveawayIDAndInstanceToNextDrawInfo.get(a)
+                      this.m_mapGiveawayIDAndInstanceToNextDrawInfo.get(a),
                     );
                 }
               }),
               this.GetNextDrawChangeCallback(e).Dispatch(
-                this.m_mapGiveawayIDToNextDrawInfo.get(e)
+                this.m_mapGiveawayIDToNextDrawInfo.get(e),
               ),
               this.m_mapGiveawayIDToNextDrawInfo.get(e)
             );
@@ -353,10 +353,10 @@
                         .ReloadGiveaway(e, t.m_myInstanceNumber)
                         .then((a) => {
                           t.SetupCountDown(a.seconds_until_drawing, () =>
-                            v(e, t)
+                            v(e, t),
                           );
                         }));
-                  })(e, t)
+                  })(e, t),
                 ),
                   t.SetupCountDown(n.seconds_until_drawing, () => v(e, t)),
                   a();
@@ -365,7 +365,7 @@
               t.ClearRefreshInterval(), t.ClearCountDown();
             }
           ),
-          [t, e, a]
+          [t, e, a],
         );
         const n = p.Get().GetInfoByInstance(e, t.m_myInstanceNumber),
           [r, o, s] = (0, i.SZ)(() => [

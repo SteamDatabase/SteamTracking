@@ -32,7 +32,7 @@
             this.GetTokenList(n),
             "english" != n ? this.GetTokenList("english") : null,
             this.m_appid,
-            t
+            t,
           );
         }
         SubstituteParams(e, t) {
@@ -42,7 +42,7 @@
             this.GetTokenList(n),
             "english" != n ? this.GetTokenList("english") : null,
             this.m_appid,
-            t
+            t,
           );
         }
       }
@@ -67,7 +67,7 @@
               "Tokens:",
               t,
               "Fallback:",
-              n
+              n,
             ),
           t && 1 != r.De.EUNIVERSE)
         )
@@ -125,7 +125,7 @@
             return (
               (0, d.X)(
                 !1,
-                "Registering for callback on appinfo load, but nothing queued"
+                "Registering for callback on appinfo load, but nothing queued",
               ),
               void e()
             );
@@ -138,7 +138,7 @@
           if (
             ((0, d.X)(
               this.m_CMInterface,
-              "CAppInfoStore.GetAppInfo called before Init"
+              "CAppInfoStore.GetAppInfo called before Init",
             ),
             !this.m_mapAppInfo.has(e))
           ) {
@@ -151,7 +151,7 @@
           return e
             ? (this.m_setPendingAppInfo.size ||
                 ((this.m_PendingAppInfoPromise = new Promise(
-                  (e) => (this.m_PendingAppInfoResolve = e)
+                  (e) => (this.m_PendingAppInfoResolve = e),
                 )),
                 window.setTimeout(() => this.FlushPendingAppInfo(), 25)),
               this.m_setPendingAppInfo.add(e),
@@ -185,13 +185,13 @@
                 (t = t.slice(i)), e.Body().set_appids(o);
                 const s = yield f.AE.GetApps(
                   this.m_CMInterface.GetServiceTransport(),
-                  e
+                  e,
                 );
                 1 == s.GetEResult()
                   ? this.OnGetAppsResponse(s)
                   : console.error(
                       `Error when calling CommunityService.GetApps: EResult=${s.GetEResult()}, AppIDs:`,
-                      o
+                      o,
                     );
               }
             }
@@ -207,7 +207,7 @@
             let e = this.m_mapAppInfo.get(n.appid());
             (0, d.X)(
               e,
-              `Got AppInfo response for unrequested AppID: ${n.appid()}`
+              `Got AppInfo response for unrequested AppID: ${n.appid()}`,
             ),
               e &&
                 ((e = new a.Am(n.appid())),
@@ -257,14 +257,14 @@
               n = (e) =>
                 (0, i.mG)(this, void 0, void 0, function* () {
                   const n = yield this.m_CacheStorage.GetObject(
-                    this.GetCacheKeyForAppID(e)
+                    this.GetCacheKeyForAppID(e),
                   );
                   if (!n) return e;
                   let i = this.m_mapAppInfo.get(e);
                   return (
                     (0, d.X)(
                       i,
-                      "Didn't find AppInfo in our map when loading from cache but it should've been there?"
+                      "Didn't find AppInfo in our map when loading from cache but it should've been there?",
                     ),
                     i
                       ? ((i = new a.Am(e)),
@@ -275,7 +275,7 @@
                           : (console.warn(
                               "Failed to deserialize cached App Info: ",
                               e,
-                              n
+                              n,
                             ),
                             e))
                       : e
@@ -290,14 +290,14 @@
             if (this.m_CacheStorage) {
               console.log(
                 "Saving batch of App Info to Local Cache: ",
-                e.map((e) => e.appid)
+                e.map((e) => e.appid),
               );
               for (const t of e) {
                 const e = t.SerializeToCacheObject();
                 e &&
                   this.m_CacheStorage.StoreObject(
                     this.GetCacheKeyForAppID(t.appid),
-                    e
+                    e,
                   );
               }
             }
@@ -309,7 +309,7 @@
             ? i.Localize(t, n)
             : 1 != r.De.EUNIVERSE
             ? (console.log(
-                `Unable to find app localization information for app ${e} token ${t}, this may not have had a chance to load yet`
+                `Unable to find app localization information for app ${e} token ${t}, this may not have had a chance to load yet`,
               ),
               t)
             : "";
@@ -358,7 +358,7 @@
                     t.Body().set_language(r.De.LANGUAGE),
                     f.AE.GetAppRichPresenceLocalization(
                       this.m_CMInterface.GetServiceTransport(),
-                      t
+                      t,
                     )
                   );
                 })
@@ -369,10 +369,10 @@
                       ? Promise.reject()
                       : (this.OnRichPresenceLocUpdate(
                           e,
-                          t.Body().token_lists()
+                          t.Body().token_lists(),
                         ),
                         Promise.resolve(e))
-                  )
+                  ),
                 )),
               e.m_fetching.catch(() => {
                 e.m_fetching = null;

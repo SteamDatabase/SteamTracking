@@ -48,7 +48,7 @@
               secondary: !0,
               parentEmbeddedNavTree: e,
             }),
-            r.createElement(c.O, null, t)
+            r.createElement(c.O, null, t),
           );
         }
         return r.createElement(r.Fragment, null, t);
@@ -94,7 +94,7 @@
                             state: Object.assign(Object.assign({}, o.state), {
                               [u]: i,
                             }),
-                          })
+                          }),
                         )),
                         g.current == i &&
                           (s
@@ -102,11 +102,11 @@
                             : window.history.replaceState(
                                 Object.assign(
                                   Object.assign({}, window.history.state),
-                                  { [i]: (0, c.Sp)(e.Node()) }
+                                  { [i]: (0, c.Sp)(e.Node()) },
                                 ),
-                                null
+                                null,
                               ));
-                    }
+                    },
                   ).Unregister;
               }, [t, s]),
               r.useLayoutEffect(() => {
@@ -138,7 +138,7 @@
         return r.createElement(
           s.s,
           Object.assign(Object.assign({}, l), { navRef: g }),
-          t
+          t,
         );
       }
     },
@@ -177,7 +177,7 @@
             a.createElement(
               "span",
               { className: E.CategorySectionName },
-              t.name
+              t.name,
             ),
             a.createElement(
               s.P8,
@@ -192,9 +192,9 @@
                   key: "category" + t.name,
                   category: t,
                   autoFocus: e.autoFocus && 0 === n,
-                })
-              )
-            )
+                }),
+              ),
+            ),
           );
         return r ? o : a.createElement(g.Y, { placeholderHeight: "150px" }, o);
       }
@@ -219,10 +219,10 @@
             a.createElement(
               "span",
               { className: E.CategoryName },
-              a.createElement("span", null, t.name)
+              a.createElement("span", null, t.name),
             ),
-            a.createElement(f, Object.assign({}, e))
-          )
+            a.createElement(f, Object.assign({}, e)),
+          ),
         );
       }
       function f(e) {
@@ -233,8 +233,8 @@
           a.createElement(
             "div",
             { className: E.Grid },
-            a.createElement("img", { src: d.De.STORE_BASE_URL + t.image_url })
-          )
+            a.createElement("img", { src: d.De.STORE_BASE_URL + t.image_url }),
+          ),
         );
       }
       const y = function () {
@@ -266,10 +266,10 @@
                     key: "section" + e.name,
                     section: e,
                     autoFocus: 0 == t,
-                  })
-                )
-              )
-            )
+                  }),
+                ),
+              ),
+            ),
           )
         );
       };
@@ -295,13 +295,13 @@
         return a.createElement(
           _.n,
           { bSalePage: !0 },
-          a.createElement(f, Object.assign({}, e))
+          a.createElement(f, Object.assign({}, e)),
         );
       }
       function f(e) {
         const { promotionName: t, language: n } = e,
           [g, _] = a.useState(
-            u.j1.GetClanEventFromAnnouncementGID(p.Wj.ANNOUNCEMENT_GID)
+            u.j1.GetClanEventFromAnnouncementGID(p.Wj.ANNOUNCEMENT_GID),
           ),
           v = (0, i.L)();
         if (
@@ -314,7 +314,7 @@
                 .LoadPartnerEventFromAnnoucementGIDAndClanSteamID(
                   e,
                   p.Wj.ANNOUNCEMENT_GID,
-                  null
+                  null,
                 )
                 .then(_);
             }
@@ -327,7 +327,7 @@
             a.createElement(d.V, {
               size: "medium",
               string: (0, E.Xx)("#Loading"),
-            })
+            }),
           );
         const f = g.visibility_state !== c.ac.k_EEventStateVisible;
         return a.createElement(
@@ -341,8 +341,8 @@
               language: n,
               eventModel: g,
               bIsPreview: f,
-            })
-          )
+            }),
+          ),
         );
       }
     },

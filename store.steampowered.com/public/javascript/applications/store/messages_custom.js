@@ -28,7 +28,7 @@
               throw new TypeError(
                 "DataLoader must be constructed with a function which accepts Array<key> and returns Promise<Array<value>>, but got: " +
                   e +
-                  "."
+                  ".",
               );
             (this._batchLoadFn = e),
               (this._maxBatchSize = (function (e) {
@@ -38,7 +38,7 @@
                 if (void 0 === r) return 1 / 0;
                 if ("number" != typeof r || r < 1)
                   throw new TypeError(
-                    "maxBatchSize must be a positive number: " + r
+                    "maxBatchSize must be a positive number: " + r,
                   );
                 return r;
               })(t)),
@@ -47,7 +47,7 @@
                 if (void 0 === t) return n;
                 if ("function" != typeof t)
                   throw new TypeError(
-                    "batchScheduleFn must be a function: " + t
+                    "batchScheduleFn must be a function: " + t,
                   );
                 return t;
               })(t)),
@@ -67,14 +67,14 @@
                 var r = e && e.cacheMap;
                 if (void 0 === r) return new Map();
                 if (null !== r) {
-                  var n = ["get", "set", "delete", "clear"].filter(function (
-                    e
-                  ) {
-                    return r && "function" != typeof r[e];
-                  });
+                  var n = ["get", "set", "delete", "clear"].filter(
+                    function (e) {
+                      return r && "function" != typeof r[e];
+                    },
+                  );
                   if (0 !== n.length)
                     throw new TypeError(
-                      "Custom cacheMap missing methods: " + n.join(", ")
+                      "Custom cacheMap missing methods: " + n.join(", "),
                     );
                 }
                 return r;
@@ -92,7 +92,7 @@
                 throw new TypeError(
                   "The loader.load() function must be called with a value, but got: " +
                     String(e) +
-                    "."
+                    ".",
                 );
               var t = (function (e) {
                   var t = e._batch;
@@ -119,8 +119,8 @@
                             new TypeError(
                               "DataLoader must be constructed with a function which accepts Array<key> and returns Promise<Array<value>>, but the function errored synchronously: " +
                                 String(r) +
-                                "."
-                            )
+                                ".",
+                            ),
                           );
                         }
                         if (!r || "function" != typeof r.then)
@@ -130,22 +130,22 @@
                             new TypeError(
                               "DataLoader must be constructed with a function which accepts Array<key> and returns Promise<Array<value>>, but the function did not return a Promise: " +
                                 String(r) +
-                                "."
-                            )
+                                ".",
+                            ),
                           );
                         r.then(function (e) {
                           if (!o(e))
                             throw new TypeError(
                               "DataLoader must be constructed with a function which accepts Array<key> and returns Promise<Array<value>>, but the function did not return a Promise of an Array: " +
                                 String(e) +
-                                "."
+                                ".",
                             );
                           if (e.length !== t.keys.length)
                             throw new TypeError(
                               "DataLoader must be constructed with a function which accepts Array<key> and returns Promise<Array<value>>, but the function did not return a Promise of an Array of the same length as the Array of keys.\n\nKeys:\n" +
                                 String(t.keys) +
                                 "\n\nValues:\n" +
-                                String(e)
+                                String(e),
                             );
                           c(t);
                           for (var r = 0; r < t.callbacks.length; r++) {
@@ -186,13 +186,13 @@
                 throw new TypeError(
                   "The loader.loadMany() function must be called with Array<key> but got: " +
                     e +
-                    "."
+                    ".",
                 );
               for (var t = [], r = 0; r < e.length; r++)
                 t.push(
                   this.load(e[r]).catch(function (e) {
                     return e;
-                  })
+                  }),
                 );
               return Promise.all(t);
             }),
@@ -326,19 +326,19 @@
                   const i = new Map();
                   return (
                     r.data.userinfos.forEach((e) =>
-                      i.set(new u.K(e.steamid).GetAccountID(), e)
+                      i.set(new u.K(e.steamid).GetAccountID(), e),
                     ),
                     e.map((e) => i.get(e))
                   );
                 }
               });
             })(e),
-          { cache: !1 }
+          { cache: !1 },
         ),
         p = "avatarandpersonas";
       function d(e) {
         const { data: t, isLoading: r } = (0, s.useQuery)([p, e], () =>
-          f.load(e)
+          f.load(e),
         );
         return [t, r];
       }
@@ -396,9 +396,9 @@
             n.createElement(
               "div",
               { className: a.Description },
-              (0, i.Xx)("#YIR_MM_Generic_Desc")
-            )
-          )
+              (0, i.Xx)("#YIR_MM_Generic_Desc"),
+            ),
+          ),
         );
       }
       function f() {
@@ -414,7 +414,7 @@
                   e.avatar_url &&
                   n.createElement("img", {
                     src: e.avatar_url.replace(/\.jpg$/, "_full.jpg"),
-                  })
+                  }),
               ),
               n.createElement(
                 "div",
@@ -422,17 +422,17 @@
                 n.createElement(
                   "div",
                   { className: a.PersonaName },
-                  e ? e.persona_name : ""
+                  e ? e.persona_name : "",
                 ),
                 n.createElement(
                   "div",
                   { className: a.GenericTitleBlock },
                   (0, i.yu)(
                     "#YIR_MM_Generic_Title",
-                    n.createElement("span", { className: a.ReplayHighlight })
-                  )
-                )
-              )
+                    n.createElement("span", { className: a.ReplayHighlight }),
+                  ),
+                ),
+              ),
             )
           : null;
       }
@@ -441,7 +441,7 @@
         return n.createElement(
           l.s,
           { className: a.ViewPageButton, onActivate: e },
-          (0, i.Xx)("#YIR_MM_Generic_Action")
+          (0, i.Xx)("#YIR_MM_Generic_Action"),
         );
       }
       function d(e) {
@@ -453,7 +453,7 @@
               viewBox: "0 0 476 600",
               fill: "none",
             },
-            e
+            e,
           ),
           n.createElement("path", {
             fill: "currentColor",
@@ -469,7 +469,7 @@
             fill: "currentColor",
             d: "M326.71 177.812C326.71 128.541 286.659 88.4688 237.413 88.4688C188.167 88.4688 148.116 128.541 148.116 177.812C148.116 227.084 188.167 267.156 237.413 267.156C286.659 267.156 326.71 227.084 326.71 177.812ZM170.479 177.656C170.479 140.625 200.557 110.532 237.569 110.532C274.581 110.532 304.658 140.547 304.658 177.656C304.658 214.766 274.659 244.781 237.569 244.781C200.479 244.781 170.479 214.766 170.479 177.656Z",
             fillOpacity: "0.15",
-          })
+          }),
         );
       }
       function m(e) {
@@ -481,7 +481,7 @@
               viewBox: "0 0 181 73",
               fill: "none",
             },
-            e
+            e,
           ),
           n.createElement("path", {
             fill: "currentColor",
@@ -556,14 +556,14 @@
           n.createElement("path", {
             fill: "currentColor",
             d: "M79.7866 0C81.1412 0 82.4225 0.192197 83.6306 0.576592C84.8387 0.960985 85.818 1.4369 86.5684 2.00434L84.2621 6.06793C83.6397 5.61032 82.9075 5.23508 82.0655 4.94221C81.2418 4.63103 80.4822 4.47545 79.7866 4.47545C79.1826 4.47545 78.725 4.59442 78.4138 4.83238C78.1026 5.07034 77.947 5.37236 77.947 5.73845C77.947 6.19607 78.185 6.553 78.6609 6.80927C79.1368 7.06553 79.8873 7.34925 80.9124 7.66042C82.1388 8.04482 83.1455 8.42921 83.9326 8.81361C84.738 9.198 85.4336 9.78374 86.0193 10.5708C86.6234 11.3579 86.9254 12.3921 86.9254 13.6734C86.9254 15.0097 86.5684 16.1629 85.8546 17.133C85.159 18.0848 84.198 18.8079 82.9716 19.3021C81.7452 19.7963 80.3541 20.0434 78.7982 20.0434C77.5535 20.0434 76.2996 19.8878 75.0366 19.5766C73.7736 19.2655 72.6662 18.8262 71.7144 18.2587L73.3343 13.7009C75.3844 14.726 77.2515 15.2385 78.9355 15.2385C79.5944 15.2385 80.0978 15.1195 80.4456 14.8815C80.7934 14.6253 80.9673 14.2958 80.9673 13.8931C80.9673 13.4721 80.7568 13.1426 80.3358 12.9047C79.9331 12.6667 79.2833 12.4287 78.3863 12.1908C77.0318 11.8064 75.9335 11.4311 75.0915 11.0651C74.2678 10.699 73.5631 10.1224 72.9774 9.33528C72.3916 8.52989 72.0987 7.45907 72.0987 6.12285C72.0987 4.84154 72.4191 3.74327 73.0597 2.82804C73.7187 1.91282 74.6248 1.21725 75.7779 0.741332C76.9494 0.247111 78.2857 0 79.7866 0Z",
-          })
+          }),
         );
       }
       function y() {
         return n.createElement(
           "div",
           { className: a.Hashtag },
-          (0, i.Xx)("#YIR_MM_HashTag")
+          (0, i.Xx)("#YIR_MM_HashTag"),
         );
       }
       function v() {
@@ -575,7 +575,7 @@
             (e) => {
               (0, u.RA)(e).location.href = t;
             },
-            [t]
+            [t],
           )
         );
       }

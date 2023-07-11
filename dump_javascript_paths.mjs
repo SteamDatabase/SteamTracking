@@ -8,6 +8,7 @@ const pathsToRecurse = [
 	"./partner.steamgames.com/",
 	"./steamcommunity.com/",
 	"./store.steampowered.com",
+	"./checkout.steampowered.com",
 	"./www.dota2.com",
 	"./www.underlords.com",
 ];

@@ -1072,7 +1072,9 @@ a:link {
   padding-bottom: 0px;
   margin-bottom: 4px;
   position: absolute;
-  transition: all 0.1s ease-in-out, top 0.3s ease-in-out;
+  transition:
+    all 0.1s ease-in-out,
+    top 0.3s ease-in-out;
 }
 .app_RecommendationEntry_2B7qq .app_BottomEntrySection_E5OsK {
   display: flex;
@@ -1122,7 +1124,9 @@ a:link {
   height: 100px;
   position: absolute;
   background: black;
-  transition: opacity 0.2s ease-in-out, width 0.1s ease-in-out,
+  transition:
+    opacity 0.2s ease-in-out,
+    width 0.1s ease-in-out,
     height 0.1s ease-in-out;
   opacity: 0;
 }
@@ -1462,14 +1466,18 @@ input[type="range"]::-webkit-slider-runnable-track {
   width: 100%;
   height: 3.1px;
   cursor: pointer;
-  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  box-shadow:
+    0px 0px 0px #000000,
+    0px 0px 0px #0d0d0d;
   background: #67c1f5;
   border-radius: 1.5px;
   border: 0px solid #67c1f5;
 }
 
 input[type="range"]::-webkit-slider-thumb {
-  box-shadow: 0px 0px 8px #000000, 0px 0px 3px #0d0d0d;
+  box-shadow:
+    0px 0px 8px #000000,
+    0px 0px 3px #0d0d0d;
   border: 0px solid #ffffff;
   height: 12px;
   width: 12px;
@@ -1496,14 +1504,18 @@ input[type="range"]::-moz-range-track {
   width: 100%;
   height: 3.1px;
   cursor: pointer;
-  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  box-shadow:
+    0px 0px 0px #000000,
+    0px 0px 0px #0d0d0d;
   background: #67c1f5;
   border-radius: 1.5px;
   border: 0px solid #67c1f5;
 }
 
 input[type="range"]::-moz-range-thumb {
-  box-shadow: 0px 0px 8px #000000, 0px 0px 3px #0d0d0d;
+  box-shadow:
+    0px 0px 8px #000000,
+    0px 0px 3px #0d0d0d;
   border: 0px solid #ffffff;
   height: 12px;
   width: 12px;
@@ -1525,18 +1537,24 @@ input[type="range"]::-ms-fill-lower {
   background: #4fb7f3;
   border: 0px solid #67c1f5;
   border-radius: 3px;
-  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  box-shadow:
+    0px 0px 0px #000000,
+    0px 0px 0px #0d0d0d;
 }
 
 input[type="range"]::-ms-fill-upper {
   background: #67c1f5;
   border: 0px solid #67c1f5;
   border-radius: 3px;
-  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  box-shadow:
+    0px 0px 0px #000000,
+    0px 0px 0px #0d0d0d;
 }
 
 input[type="range"]::-ms-thumb {
-  box-shadow: 0px 0px 8px #000000, 0px 0px 3px #0d0d0d;
+  box-shadow:
+    0px 0px 8px #000000,
+    0px 0px 3px #0d0d0d;
   border: 0px solid #ffffff;
   height: 12px;
   width: 12px;

@@ -104,8 +104,8 @@
                 i.j1.LoadPartnerEventFromClanEventGIDAndClanSteamID(
                   o.K.InitFromClanID(e.clanid),
                   e.unique_id,
-                  0
-                )
+                  0,
+                ),
               ),
               r = yield Promise.all(n),
               s = new Map();
@@ -160,7 +160,7 @@
             this.m_mapBroadcasterSteamIDData.set(a, n),
               this.m_mapBroadcasterSteamIDToEvents.set(
                 a,
-                e.map((e) => e.GID)
+                e.map((e) => e.GID),
               );
           });
         }
@@ -236,7 +236,7 @@
                 l.current && l.current("SearchForCurator: unmounting"),
                 s.current && s.current.Hide();
             },
-            []
+            [],
           );
           const u = (0, d.useCallback)(
             (e) =>
@@ -262,7 +262,7 @@
                               bMatchWidth: !0,
                               bFitToWindow: !0,
                               bDisablePopTop: !0,
-                            }
+                            },
                           );
                         } catch (t) {
                           if (e.token.reason) return;
@@ -270,14 +270,14 @@
                           console.log(
                             "SearchForCurator.SearchCreatorHomeStore error " +
                               a.strErrorMsg,
-                            a
+                            a,
                           );
                         }
                       }),
-                    300
+                    300,
                   )));
               }),
-            [n, r]
+            [n, r],
           );
           return d.createElement(
             B.SV,
@@ -291,7 +291,7 @@
               },
               ref: m,
               tooltip: a,
-            })
+            }),
           );
         },
         L = (e) => {
@@ -315,12 +315,12 @@
                     d.createElement("img", {
                       src: e.GetAvatarURLFullSize(),
                       className: T.AvatarImage,
-                    })
+                    }),
                   ),
-                  (0, b.HA)(e.GetName())
-                )
-              )
-            )
+                  (0, b.HA)(e.GetName()),
+                ),
+              ),
+            ),
           );
         };
       var P = a(93317);
@@ -346,10 +346,11 @@
           const a = t.filter((e) => !e.gid_clan_event),
             n = a.filter(
               (e) =>
-                e.display_name.toLocaleLowerCase().indexOf("franchise") >= 0
+                e.display_name.toLocaleLowerCase().indexOf("franchise") >= 0,
             ),
             r = a.filter(
-              (e) => e.display_name.toLocaleLowerCase().indexOf("franchise") < 0
+              (e) =>
+                e.display_name.toLocaleLowerCase().indexOf("franchise") < 0,
             ),
             o = t.filter((e) => Boolean(e.gid_clan_event && e.hidden)),
             l = t.filter((e) => Boolean(e.gid_clan_event && !e.hidden));
@@ -360,7 +361,7 @@
             d.createElement(
               "p",
               null,
-              "For unmigrated or migrated but unpublished pages, you can view the existing sale page using a not logged in browser (or incognito mode). You can see the new sale page being built on the store if logged in using a Valve Admin account."
+              "For unmigrated or migrated but unpublished pages, you can view the existing sale page using a not logged in browser (or incognito mode). You can see the new sale page being built on the store if logged in using a Valve Admin account.",
             ),
             d.createElement(R, {
               strName: "Unmigrated Franchises",
@@ -376,7 +377,7 @@
               strName: "Migrated and Visible",
               records: l,
               bHideByDefault: !0,
-            })
+            }),
           );
         }),
         R = (e) => {
@@ -396,23 +397,23 @@
               d.createElement(
                 g.zx,
                 { onClick: () => o(!r) },
-                r ? d.createElement(v.YqJ, null) : d.createElement(v.gR, null)
-              )
+                r ? d.createElement(v.YqJ, null) : d.createElement(v.gR, null),
+              ),
             ),
             d.createElement("hr", null),
             Boolean(r)
               ? d.createElement(
                   g.zx,
                   { onClick: () => o(!1) },
-                  (0, f.Xx)("#Sale_ShowContents")
+                  (0, f.Xx)("#Sale_ShowContents"),
                 )
               : d.createElement(
                   d.Fragment,
                   null,
                   a.map((e) =>
-                    d.createElement(N, { key: e.sale_page_id, record: e })
-                  )
-                )
+                    d.createElement(N, { key: e.sale_page_id, record: e }),
+                  ),
+                ),
           );
         },
         N = (0, c.Pi)((e) => {
@@ -436,9 +437,9 @@
                     d.createElement(
                       "b",
                       null,
-                      `${t.display_name} - (${t.vanity})`
-                    )
-                  )
+                      `${t.display_name} - (${t.vanity})`,
+                    ),
+                  ),
                 ),
                 Boolean(a) &&
                   d.createElement(
@@ -448,8 +449,8 @@
                       "a",
                       { href: a.vanity_url },
                       "Sale Page part of ",
-                      a.group_name
-                    )
+                      a.group_name,
+                    ),
                   ),
                 Boolean(t.gid_clan_event) &&
                   d.createElement(
@@ -462,14 +463,14 @@
                           I.De.COMMUNITY_BASE_URL +
                           "gid/" +
                           m.K.InitFromClanID(
-                            t.clan_account_id
+                            t.clan_account_id,
                           ).ConvertTo64BitString() +
                           "/partnerevents/edit/" +
                           t.gid_clan_event,
                       },
-                      `Migrated: Event Editor Links: State hidden: ${t.hidden} published: ${t.published} sale/ vanity?: ${t.valve_approved_sale_vanity_id}`
-                    )
-                  )
+                      `Migrated: Event Editor Links: State hidden: ${t.hidden} published: ${t.published} sale/ vanity?: ${t.valve_approved_sale_vanity_id}`,
+                    ),
+                  ),
               ),
               Boolean(!t.gid_clan_event || (t.hidden && !t.published)) &&
                 d.createElement(
@@ -478,13 +479,13 @@
                     onClick: (e) =>
                       (0, h.AM)(
                         d.createElement(O, { record: t }),
-                        (0, _.RA)(e)
+                        (0, _.RA)(e),
                       ),
                   },
-                  "Migrate Sale Page"
-                )
+                  "Migrate Sale Page",
+                ),
             ),
-            d.createElement("hr", null)
+            d.createElement("hr", null),
           );
         }),
         O = (e) => {
@@ -507,7 +508,7 @@
                     .MigrateOrUpdateSalePage(
                       t.sale_page_id,
                       n,
-                      t.gid_clan_event
+                      t.gid_clan_event,
                     )
                     .then(([e, t, a]) => {
                       s(e), u(t), h(a);
@@ -522,10 +523,10 @@
                   d.createElement(
                     "div",
                     null,
-                    "Sale page already migrated. This will update the hidden page with latest migration code"
+                    "Sale page already migrated. This will update the hidden page with latest migration code",
                   ),
                   d.createElement("div", null, "ClanID = ", t.clan_account_id),
-                  d.createElement("div", null, "GID = ", t.gid_clan_event)
+                  d.createElement("div", null, "GID = ", t.gid_clan_event),
                 )
               : d.createElement(
                   d.Fragment,
@@ -539,7 +540,7 @@
                       r(e.GetClanAccountID()), _(e);
                     },
                   }),
-                  Boolean(v) && d.createElement(k, { creatorHome: v })
+                  Boolean(v) && d.createElement(k, { creatorHome: v }),
                 ),
             Boolean(o && !i) &&
               d.createElement(E.V, { position: "center", size: "medium" }),
@@ -557,8 +558,8 @@
                       href: I.De.STORE_BASE_URL + "sale/" + t.vanity,
                       target: "_blank",
                     },
-                    "Sale Page"
-                  )
+                    "Sale Page",
+                  ),
                 ),
                 d.createElement(
                   "div",
@@ -574,10 +575,10 @@
                         g,
                       target: "_blank",
                     },
-                    "New Sale Page Editor"
-                  )
-                )
-              )
+                    "New Sale Page Editor",
+                  ),
+                ),
+              ),
           );
         },
         k = (e) => {
@@ -594,7 +595,7 @@
                   "ClanID = ",
                   n,
                   " - SteamID ",
-                  a.ConvertTo64BitString()
+                  a.ConvertTo64BitString(),
                 ),
                 d.createElement(
                   "div",
@@ -606,8 +607,8 @@
                         "https://steamsupport.valvesoftware.com/clan/overview/" +
                         a.ConvertTo64BitString(),
                     },
-                    "Group Support Page"
-                  )
+                    "Group Support Page",
+                  ),
                 ),
                 Boolean(!t.BIsPartnerEventEditorEnabled()) &&
                   d.createElement(
@@ -620,13 +621,13 @@
                         href: "https://confluence.valve.org/display/STEAM/Creator+home+and+Partner+Events+Beta",
                         target: "_blank",
                       },
-                      "Read more about the state here."
-                    )
+                      "Read more about the state here.",
+                    ),
                   ),
                 d.createElement(P.oZ, {
                   creatorID: t.GetCreatorHomeIdentifier(),
                   bHideCreatorType: !0,
-                })
+                }),
               )
             : null;
         };
@@ -690,7 +691,7 @@
                   console.error(
                     "CMigrateSaleStore.LoadSalePageMigrationInfo: failed with " +
                       e.strErrorMsg,
-                    e
+                    e,
                   ),
                   [d.data.msg || "Failed", !1, void 0]
                 );
@@ -700,7 +701,7 @@
               console.error(
                 "CMigrateSaleStore.MigrateOrUpdateSalePage: caught error with " +
                   t.strErrorMsg,
-                t
+                t,
               );
             }
             return ["failed", !1, void 0];
@@ -740,13 +741,13 @@
                     r.data.data.forEach((e) => {
                       this.m_mapSaleIDToInfo.set(e.sale_page_id, e),
                         this.m_listSaleState.push(
-                          this.m_mapSaleIDToInfo.get(e.sale_page_id)
+                          this.m_mapSaleIDToInfo.get(e.sale_page_id),
                         );
                     });
                   }),
                   console.log(
                     "InternalLoadSalePageMigrationInfo Loaded: " +
-                      this.m_listSaleState.length
+                      this.m_listSaleState.length,
                   ),
                   this.m_listSaleState
                 );
@@ -755,7 +756,7 @@
                 console.error(
                   "CMigrateSaleStore.LoadSalePageMigrationInfo: failed with " +
                     e.strErrorMsg,
-                  e
+                  e,
                 );
               }
             } catch (e) {
@@ -763,7 +764,7 @@
               console.error(
                 "CMigrateSaleStore.LoadSalePageMigrationInfo: caught error with " +
                   t.strErrorMsg,
-                t
+                t,
               );
             }
             return [];
@@ -822,7 +823,7 @@
                 "Cannot switch starting AppID from " +
                   this.m_startAppID +
                   " to " +
-                  a
+                  a,
               );
             this.m_startAppID = a;
             let o = Math.max(t, 20);
@@ -869,7 +870,7 @@
                   d.errorCode +
                   ':"' +
                   d.strErrorMsg +
-                  '"'
+                  '"',
               );
             }
           });
@@ -904,7 +905,7 @@
               )
                 return void (this.m_rgClanAccountIDs =
                   this.m_rgClanAccountIDs.concat(
-                    e.data.accountids.map(Number)
+                    e.data.accountids.map(Number),
                   ));
               l = (0, S.l)(null == e ? void 0 : e.data);
             } catch (e) {
@@ -912,7 +913,7 @@
             }
             console.error(
               "FetchClans: ajax request failed with error",
-              l.strErrorMsg
+              l.strErrorMsg,
             );
           });
         }
@@ -952,7 +953,7 @@
             d.createElement(
               "div",
               { className: q().ToolHeader },
-              "Partner Events Migration Tools"
+              "Partner Events Migration Tools",
             ),
             B.map((e) =>
               d.createElement(j, {
@@ -962,7 +963,7 @@
                 bAutoMigrate: h || _,
                 nMigrateBatchSize: g,
                 fnOnCompletion: T,
-              })
+              }),
             ),
             t &&
               d.createElement(E.V, {
@@ -984,13 +985,13 @@
                   f(!1), D(new Set()), o(n + s);
                 },
               },
-              "LOAD NEXT PAGE"
+              "LOAD NEXT PAGE",
             ),
             !h &&
               d.createElement(
                 "div",
                 { className: q().LoadEventsButton, onClick: () => f(!0) },
-                "MIGRATE ALL ON PAGE"
+                "MIGRATE ALL ON PAGE",
               ),
             d.createElement(
               "div",
@@ -999,8 +1000,8 @@
                 " OF " +
                 M.length +
                 " APPS COMPLETE. #EVENTS: " +
-                A.current
-            )
+                A.current,
+            ),
           );
         }),
         j = (0, c.Pi)((e) => {
@@ -1020,7 +1021,7 @@
                 null === (a = null == e ? void 0 : e.clanSteamID) ||
                   void 0 === a
                   ? void 0
-                  : a.ConvertTo64BitString()
+                  : a.ConvertTo64BitString(),
               );
             });
           }, [t]);
@@ -1037,14 +1038,14 @@
               (e) =>
                 e.bOldAnnouncement &&
                 g &&
-                g.clanAccountID != e.announcementClanSteamID.GetAccountID()
+                g.clanAccountID != e.announcementClanSteamID.GetAccountID(),
             ).length,
             A = f.filter(
               (e) =>
                 e.bOldAnnouncement &&
                 !m.current.has(e.AnnouncementGID) &&
                 (!g ||
-                  g.clanAccountID == e.announcementClanSteamID.GetAccountID())
+                  g.clanAccountID == e.announcementClanSteamID.GetAccountID()),
             ),
             M = A.length,
             B = !_ && M > 0 && (null == g ? void 0 : g.clanSteamID),
@@ -1056,7 +1057,7 @@
                   void 0,
                   t,
                   e,
-                  50
+                  50,
                 );
                 i(l.concat(o)), c(!1);
               });
@@ -1077,7 +1078,7 @@
                           a,
                           o.AnnouncementGID,
                           o.GetNameWithFallback(0),
-                          o
+                          o,
                         );
                         try {
                           const e = yield (0, V.HO)(o.AnnouncementGID, a, n);
@@ -1096,7 +1097,7 @@
                           const t = (0, S.l)(e);
                           console.error(
                             "MigrateEvents: " + t.strErrorMsg.slice(0, 512),
-                            t
+                            t,
                           ),
                             l(o.AnnouncementGID, !1);
                         }
@@ -1125,14 +1126,14 @@
                   d.createElement(
                     "span",
                     { className: q().LinkedAnnouncements },
-                    `Linked: ${D}`
-                  )
+                    `Linked: ${D}`,
+                  ),
               ),
               _
                 ? d.createElement(
                     "div",
                     { className: q().LoadEventsButton, onClick: T },
-                    "LOAD EVENTS"
+                    "LOAD EVENTS",
                   )
                 : s
                 ? d.createElement(E.V, { size: "small" })
@@ -1140,13 +1141,13 @@
                 ? d.createElement(
                     "div",
                     { className: q().MigrateEventsButton, onClick: w },
-                    "MIGRATE EVENTS"
+                    "MIGRATE EVENTS",
                   )
                 : d.createElement(
                     "div",
                     { className: q().CompleteMessage },
-                    "NOTHING TO MIGRATE"
-                  )
+                    "NOTHING TO MIGRATE",
+                  ),
             )
           );
         });
@@ -1172,7 +1173,7 @@
                   path: n.wZ.MigrateEvents(),
                   component: $,
                 }),
-                d.createElement(Y.AW, { component: Z.R })
+                d.createElement(Y.AW, { component: Z.R }),
               )
         );
       }

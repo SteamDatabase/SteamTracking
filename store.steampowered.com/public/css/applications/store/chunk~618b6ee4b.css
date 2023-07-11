@@ -1110,7 +1110,9 @@ div.apppartnereventspage_EventDetailsBody_AWjK8 {
   z-index: 2;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  transition: filter 0.24s ease-in-out, transform 0.24s ease-in-out,
+  transition:
+    filter 0.24s ease-in-out,
+    transform 0.24s ease-in-out,
     color 0.24s ease-in-out;
 }
 .items_in_row_4 .eventrow_EventSummaryText_h5tE8 {
@@ -1130,7 +1132,9 @@ div.apppartnereventspage_EventDetailsBody_AWjK8 {
   z-index: 2;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  transition: filter 0.24s ease-in-out, transform 0.24s ease-in-out,
+  transition:
+    filter 0.24s ease-in-out,
+    transform 0.24s ease-in-out,
     color 0.24s ease-in-out;
 }
 .eventrow_OtherEvents_EventCtn_17gGs.eventrow_HorizontalEvent_1RS0b {
@@ -1274,7 +1278,9 @@ div.apppartnereventspage_EventDetailsBody_AWjK8 {
   margin-bottom: 0px;
   transform: scale(1);
   filter: saturate(0.85);
-  transition: transform 0.21s ease-in-out, filter 0.21s ease-in-out;
+  transition:
+    transform 0.21s ease-in-out,
+    filter 0.21s ease-in-out;
 }
 .salebanner_Banner_2df4N:hover {
   filter: saturate(1);
@@ -1368,7 +1374,9 @@ div.apppartnereventspage_EventDetailsBody_AWjK8 {
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local("Jolly Lodger"), local("JollyLodger"),
+  src:
+    local("Jolly Lodger"),
+    local("JollyLodger"),
     url(https://fonts.gstatic.com/s/jollylodger/v7/BXRsvFTAh_bGkA1uQ48dlB3lUODS7Zw.woff2)
       format("woff2");
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
@@ -1379,7 +1387,9 @@ div.apppartnereventspage_EventDetailsBody_AWjK8 {
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local("Jolly Lodger"), local("JollyLodger"),
+  src:
+    local("Jolly Lodger"),
+    local("JollyLodger"),
     url(https://fonts.gstatic.com/s/jollylodger/v7/BXRsvFTAh_bGkA1uQ48dlB3lXuDS.woff2)
       format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
@@ -1391,7 +1401,9 @@ div.apppartnereventspage_EventDetailsBody_AWjK8 {
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local("New Rocker"), local("NewRocker-Regular"),
+  src:
+    local("New Rocker"),
+    local("NewRocker-Regular"),
     url(https://fonts.gstatic.com/s/newrocker/v8/MwQzbhjp3-HImzcCU_cJoGofiIlP.woff2)
       format("woff2");
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
@@ -1402,7 +1414,9 @@ div.apppartnereventspage_EventDetailsBody_AWjK8 {
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local("New Rocker"), local("NewRocker-Regular"),
+  src:
+    local("New Rocker"),
+    local("NewRocker-Regular"),
     url(https://fonts.gstatic.com/s/newrocker/v8/MwQzbhjp3-HImzcCU_cJoGQfiA.woff2)
       format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
@@ -1414,7 +1428,9 @@ div.apppartnereventspage_EventDetailsBody_AWjK8 {
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local("Chonburi"), local("Chonburi-Regular"),
+  src:
+    local("Chonburi"),
+    local("Chonburi-Regular"),
     url(https://fonts.gstatic.com/s/chonburi/v4/8AtqGs-wOpGRTBq66LWJHLzriA.woff2)
       format("woff2");
   unicode-range: U+0E01-0E5B, U+200C-200D, U+25CC;
@@ -1424,7 +1440,9 @@ div.apppartnereventspage_EventDetailsBody_AWjK8 {
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local("Chonburi"), local("Chonburi-Regular"),
+  src:
+    local("Chonburi"),
+    local("Chonburi-Regular"),
     url(https://fonts.gstatic.com/s/chonburi/v4/8AtqGs-wOpGRTBq66LWSHLzriA.woff2)
       format("woff2");
   unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
@@ -1433,7 +1451,9 @@ div.apppartnereventspage_EventDetailsBody_AWjK8 {
   font-family: "Sigmar One";
   font-style: normal;
   font-weight: 400;
-  src: local("Sigmar One Regular"), local("SigmarOne-Regular"),
+  src:
+    local("Sigmar One Regular"),
+    local("SigmarOne-Regular"),
     url(https://fonts.gstatic.com/s/sigmarone/v10/co3DmWZ8kjZuErj9Ta3do6vppkDi.woff2)
       format("woff2");
   unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
@@ -1442,7 +1462,9 @@ div.apppartnereventspage_EventDetailsBody_AWjK8 {
   font-family: "Sigmar One";
   font-style: normal;
   font-weight: 400;
-  src: local("Sigmar One Regular"), local("SigmarOne-Regular"),
+  src:
+    local("Sigmar One Regular"),
+    local("SigmarOne-Regular"),
     url(https://fonts.gstatic.com/s/sigmarone/v10/co3DmWZ8kjZuErj9Ta3do6rppkDi.woff2)
       format("woff2");
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
@@ -1452,7 +1474,9 @@ div.apppartnereventspage_EventDetailsBody_AWjK8 {
   font-family: "Sigmar One";
   font-style: normal;
   font-weight: 400;
-  src: local("Sigmar One Regular"), local("SigmarOne-Regular"),
+  src:
+    local("Sigmar One Regular"),
+    local("SigmarOne-Regular"),
     url(https://fonts.gstatic.com/s/sigmarone/v10/co3DmWZ8kjZuErj9Ta3do6Tppg.woff2)
       format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
@@ -5906,21 +5930,27 @@ html.responsive.touch
   cursor: pointer;
   box-shadow: 3px -6px 5px -6px rgba(35, 35, 35, 0.4);
   transform: rotate(0deg) scale(1);
-  -webkit-transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+  -webkit-transition:
+    transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
     filter 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  -moz-transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+  -moz-transition:
+    transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
     filter 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+  transition:
+    transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
     filter 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .storywidget_BookmarkCtn_1YzIh:hover {
   box-shadow: 3px -6px 10px -6px rgba(35, 35, 35, 0.4);
   transform: rotate(3deg) scale(1.07);
-  -webkit-transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+  -webkit-transition:
+    transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
     filter 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  -moz-transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+  -moz-transition:
+    transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
     filter 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+  transition:
+    transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
     filter 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .storywidget_BookmarkTriangle_3lQDm {
@@ -6120,7 +6150,9 @@ html.responsive.touch
   margin: 4px;
   margin-top: 0px;
   margin-bottom: 18px;
-  box-shadow: 0 0 0 2px rgba(35, 35, 35, 0.4), 0 0 0 4px #f7f0e4,
+  box-shadow:
+    0 0 0 2px rgba(35, 35, 35, 0.4),
+    0 0 0 4px #f7f0e4,
     0 0 0 6px rgba(35, 35, 35, 0.4);
 }
 .storywidget_OptionTextNotice_3_DMH {
@@ -6165,11 +6197,14 @@ html.responsive.touch
   border-radius: 5px;
   box-shadow: 2px 4px 16px rgba(61, 62, 56, 0.6);
   transform: rotateZ(3deg) scale(1);
-  -webkit-transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+  -webkit-transition:
+    transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
     filter 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  -moz-transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+  -moz-transition:
+    transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
     filter 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+  transition:
+    transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
     filter 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .storywidget_ResultBadge_2BETt.storywidget_Opening_31yf0,
@@ -6179,11 +6214,14 @@ html.responsive.touch
 .storywidget_ResultBadge_2BETt.storywidget_Opening_31yf0:hover,
 .storywidget_ResultBadge_2BETt.storywidget_Open_2l4Gw:hover {
   transform: rotateZ(1.5deg) scale(1.03);
-  -webkit-transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+  -webkit-transition:
+    transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
     filter 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  -moz-transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+  -moz-transition:
+    transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
     filter 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+  transition:
+    transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
     filter 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .storywidget_BadgeImage_2X2A9 {

@@ -126,7 +126,7 @@ for (const file of files) {
 						if (globalModuleExportedMessages.has(currentModule)) {
 							globalModuleExportedMessages.set(
 								currentModule,
-								new Map([...globalModuleExportedMessages.get(currentModule), ...result.exportedIds])
+								new Map([...globalModuleExportedMessages.get(currentModule), ...result.exportedIds]),
 							);
 						} else {
 							globalModuleExportedMessages.set(currentModule, result.exportedIds);
@@ -1017,7 +1017,7 @@ function TraverseModule(ast) {
 						e.left.type === Syntax.MemberExpression &&
 						e.right.type === Syntax.Literal &&
 						e.left.property.type === Syntax.AssignmentExpression &&
-						e.left.property.left.property.name === e.right.value
+						e.left.property.left.property.name === e.right.value,
 				)
 			) {
 				const enumObj = ParseEnum(node);

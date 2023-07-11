@@ -2452,7 +2452,7 @@ var CLSTAMP = "8176124";
               "Authentication.BeginAuthSessionViaCredentials#1",
               r,
               b,
-              { ePrivilege: 0, eWebAPIKeyRequirement: 1 }
+              { ePrivilege: 0, eWebAPIKeyRequirement: 1 },
             );
           }),
           (e.PollAuthSessionStatus = function (e, r) {
@@ -2471,7 +2471,7 @@ var CLSTAMP = "8176124";
               "Authentication.UpdateAuthSessionWithMobileConfirmation#1",
               r,
               z,
-              { ePrivilege: 1 }
+              { ePrivilege: 1 },
             );
           }),
           (e.UpdateAuthSessionWithSteamGuardCode = function (e, r) {
@@ -2479,7 +2479,7 @@ var CLSTAMP = "8176124";
               "Authentication.UpdateAuthSessionWithSteamGuardCode#1",
               r,
               f,
-              { ePrivilege: 0, eWebAPIKeyRequirement: 1 }
+              { ePrivilege: 0, eWebAPIKeyRequirement: 1 },
             );
           }),
           (e.GenerateAccessTokenForApp = function (e, r) {
@@ -2487,7 +2487,7 @@ var CLSTAMP = "8176124";
               "Authentication.GenerateAccessTokenForApp#1",
               r,
               M,
-              { ePrivilege: 0, eWebAPIKeyRequirement: 1 }
+              { ePrivilege: 0, eWebAPIKeyRequirement: 1 },
             );
           }),
           (e.EnumerateTokens = function (e, r) {
@@ -2500,7 +2500,7 @@ var CLSTAMP = "8176124";
               "Authentication.GetAuthSessionsForAccount#1",
               r,
               g,
-              { bConstMethod: !0, ePrivilege: 1 }
+              { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
           (e.MigrateMobileSession = function (e, r) {
@@ -2528,7 +2528,7 @@ var CLSTAMP = "8176124";
               "AuthenticationSupport.QueryRefreshTokensByAccount#1",
               r,
               C,
-              { bConstMethod: !0, ePrivilege: 5 }
+              { bConstMethod: !0, ePrivilege: 5 },
             );
           }),
             (e.QueryRefreshTokenByID = function (e, r) {
@@ -2536,7 +2536,7 @@ var CLSTAMP = "8176124";
                 "AuthenticationSupport.QueryRefreshTokenByID#1",
                 r,
                 E,
-                { bConstMethod: !0, ePrivilege: 5 }
+                { bConstMethod: !0, ePrivilege: 5 },
               );
             }),
             (e.RevokeToken = function (e, r) {
@@ -2549,7 +2549,7 @@ var CLSTAMP = "8176124";
                 "AuthenticationSupport.GetTokenHistory#1",
                 r,
                 U,
-                { bConstMethod: !0, ePrivilege: 5 }
+                { bConstMethod: !0, ePrivilege: 5 },
               );
             });
         })(I || (I = {})),
@@ -6629,7 +6629,7 @@ var CLSTAMP = "8176124";
             return e.SendNotification(
               "Broadcast.NotifyBroadcastUploadStop#1",
               r,
-              { ePrivilege: 1 }
+              { ePrivilege: 1 },
             );
           }),
           (e.WatchBroadcast = function (e, r) {
@@ -6671,7 +6671,7 @@ var CLSTAMP = "8176124";
             return e.SendNotification(
               "Broadcast.NotifyBroadcastSessionHeartbeat#1",
               r,
-              { ePrivilege: 1 }
+              { ePrivilege: 1 },
             );
           }),
           (e.GetBroadcastChatInfo = function (e, r) {
@@ -6745,7 +6745,7 @@ var CLSTAMP = "8176124";
             return e.SendNotification(
               "Broadcast.NotifyWebRTCHaveTURNServer#1",
               r,
-              { ePrivilege: 1 }
+              { ePrivilege: 1 },
             );
           }),
           (e.WebRTCStartResult = function (e, r) {
@@ -15531,7 +15531,7 @@ var CLSTAMP = "8176124";
                 "ChatRoom.SetChatRoomGroupWatchingBroadcast#1",
                 r,
                 M,
-                { ePrivilege: 3 }
+                { ePrivilege: 3 },
               );
             }),
             (e.JoinMiniGameForChatRoomGroup = function (e, r) {
@@ -15539,7 +15539,7 @@ var CLSTAMP = "8176124";
                 "ChatRoom.JoinMiniGameForChatRoomGroup#1",
                 r,
                 R,
-                { ePrivilege: 3 }
+                { ePrivilege: 3 },
               );
             }),
             (e.EndMiniGameForChatRoomGroup = function (e, r) {
@@ -15625,7 +15625,7 @@ var CLSTAMP = "8176124";
                 "ChatRoom.InviteFriendToChatRoomGroup#1",
                 r,
                 he,
-                { ePrivilege: 3 }
+                { ePrivilege: 3 },
               );
             }),
             (e.LeaveChatRoomGroup = function (e, r) {
@@ -15693,14 +15693,14 @@ var CLSTAMP = "8176124";
                 "ChatRoom.SetAppChatRoomGroupForceActive#1",
                 r,
                 te,
-                { ePrivilege: 1 }
+                { ePrivilege: 1 },
               );
             }),
             (e.SetAppChatRoomGroupStopForceActive = function (e, r) {
               return e.SendNotification(
                 "ChatRoom.SetAppChatRoomGroupStopForceActive#1",
                 r,
-                { ePrivilege: 1 }
+                { ePrivilege: 1 },
               );
             }),
             (e.AckChatMessage = function (e, r) {
@@ -15748,7 +15748,7 @@ var CLSTAMP = "8176124";
                 "ChatRoom.SetSessionActiveChatRoomGroups#1",
                 r,
                 lr,
-                { ePrivilege: 1 }
+                { ePrivilege: 1 },
               );
             }),
             (e.SetUserChatGroupPreferences = function (e, r) {
@@ -15756,7 +15756,7 @@ var CLSTAMP = "8176124";
                 "ChatRoom.SetUserChatGroupPreferences#1",
                 r,
                 dr,
-                { ePrivilege: 1 }
+                { ePrivilege: 1 },
               );
             }),
             (e.DeleteChatMessages = function (e, r) {
@@ -15796,7 +15796,7 @@ var CLSTAMP = "8176124";
                 "ClanChatRooms.SetClanChatRoomPrivate#1",
                 r,
                 vr,
-                { ePrivilege: 3 }
+                { ePrivilege: 3 },
               );
             });
         })(qr || (qr = {})),
@@ -15851,7 +15851,7 @@ var CLSTAMP = "8176124";
             return e.SendNotification(
               "ChatUsability.NotifyClientUsabilityMetrics#1",
               r,
-              { ePrivilege: 1 }
+              { ePrivilege: 1 },
             );
           };
         })(Vr || (Vr = {})),
@@ -16460,21 +16460,21 @@ var CLSTAMP = "8176124";
           return e.SendNotification(
             "ClientMetrics.ClientAppInterfaceStatsReport#1",
             r,
-            { ePrivilege: 1 }
+            { ePrivilege: 1 },
           );
         }),
           (e.ClientIPv6ConnectivityReport = function (e, r) {
             return e.SendNotification(
               "ClientMetrics.ClientIPv6ConnectivityReport#1",
               r,
-              { ePrivilege: 1 }
+              { ePrivilege: 1 },
             );
           }),
           (e.SteamPipeWorkStatsReport = function (e, r) {
             return e.SendNotification(
               "ClientMetrics.SteamPipeWorkStatsReport#1",
               r,
-              { ePrivilege: 1 }
+              { ePrivilege: 1 },
             );
           }),
           (e.ReportReactUsage = function (e, r) {
@@ -16493,35 +16493,35 @@ var CLSTAMP = "8176124";
             return e.SendNotification(
               "ClientMetrics.ClientBootstrapReport#1",
               r,
-              { ePrivilege: 1 }
+              { ePrivilege: 1 },
             );
           }),
           (e.ClientDownloadRatesReport = function (e, r) {
             return e.SendNotification(
               "ClientMetrics.ClientDownloadRatesReport#1",
               r,
-              { ePrivilege: 1 }
+              { ePrivilege: 1 },
             );
           }),
           (e.ClientContentValidationReport = function (e, r) {
             return e.SendNotification(
               "ClientMetrics.ClientContentValidationReport#1",
               r,
-              { ePrivilege: 1 }
+              { ePrivilege: 1 },
             );
           }),
           (e.ClientCloudAppSyncStats = function (e, r) {
             return e.SendNotification(
               "ClientMetrics.ClientCloudAppSyncStats#1",
               r,
-              { ePrivilege: 1 }
+              { ePrivilege: 1 },
             );
           }),
           (e.ClientDownloadResponseCodeCounts = function (e, r) {
             return e.SendNotification(
               "ClientMetrics.ClientDownloadResponseCodeCounts#1",
               r,
-              { ePrivilege: 1 }
+              { ePrivilege: 1 },
             );
           }),
           (e.ReportClientArgs = function (e, r) {
@@ -22111,7 +22111,7 @@ var CLSTAMP = "8176124";
               "Community.GetAppRichPresenceLocalization#1",
               r,
               u,
-              { ePrivilege: 1 }
+              { ePrivilege: 1 },
             );
           }),
           (e.GetCommentThread = function (e, r) {
@@ -22149,7 +22149,7 @@ var CLSTAMP = "8176124";
               "Community.GetClanAnnouncementVoteForUser#1",
               r,
               R,
-              { ePrivilege: 1 }
+              { ePrivilege: 1 },
             );
           }),
           (e.GetAvatarHistory = function (e, r) {
@@ -22181,7 +22181,7 @@ var CLSTAMP = "8176124";
               "Community.GetUserPartnerEventViewStatus#1",
               r,
               N,
-              { bConstMethod: !0, ePrivilege: 1 }
+              { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
           (e.PartnerEventsShowMoreForApp = function (e, r) {
@@ -22199,7 +22199,7 @@ var CLSTAMP = "8176124";
               "Community.ClearUserPartnerEventsAppPriorities#1",
               r,
               v,
-              { ePrivilege: 1 }
+              { ePrivilege: 1 },
             );
           }),
           (e.GetUserPartnerEventsAppPriorities = function (e, r) {
@@ -22207,7 +22207,7 @@ var CLSTAMP = "8176124";
               "Community.GetUserPartnerEventsAppPriorities#1",
               r,
               O,
-              { ePrivilege: 1 }
+              { ePrivilege: 1 },
             );
           }),
           (e.ClearSinglePartnerEventsAppPriority = function (e, r) {
@@ -22215,7 +22215,7 @@ var CLSTAMP = "8176124";
               "Community.ClearSinglePartnerEventsAppPriority#1",
               r,
               C,
-              { ePrivilege: 1 }
+              { ePrivilege: 1 },
             );
           });
       })(I || (I = {}));
@@ -23186,7 +23186,7 @@ var CLSTAMP = "8176124";
           return e.SendNotification(
             "ExperimentService.ReportProductImpressionsFromClient#1",
             r,
-            { ePrivilege: 1 }
+            { ePrivilege: 1 },
           );
         };
       })(l || (l = {}));
@@ -24306,7 +24306,7 @@ var CLSTAMP = "8176124";
               "FriendMessages.GetActiveMessageSessions#1",
               r,
               m,
-              { bConstMethod: !0, ePrivilege: 1 }
+              { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
           (e.SendMessage = function (e, r) {
@@ -26091,7 +26091,7 @@ var CLSTAMP = "8176124";
             "PhysicalGoods.CheckInventoryAvailableByPackage#1",
             r,
             o,
-            { bConstMethod: !0, ePrivilege: 0, eWebAPIKeyRequirement: 1 }
+            { bConstMethod: !0, ePrivilege: 0, eWebAPIKeyRequirement: 1 },
           );
         };
       })(l || (l = {}));
@@ -31482,7 +31482,7 @@ var CLSTAMP = "8176124";
             "Player.GetMutualFriendsForIncomingInvites#1",
             r,
             m,
-            { bConstMethod: !0, ePrivilege: 1 }
+            { bConstMethod: !0, ePrivilege: 1 },
           );
         }),
           (e.GetOwnedGames = function (e, r) {
@@ -31638,7 +31638,7 @@ var CLSTAMP = "8176124";
               "Player.GetPurchasedProfileCustomizations#1",
               r,
               ee,
-              { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 }
+              { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
             );
           }),
           (e.GetPurchasedAndUpgradedProfileCustomizations = function (e, r) {
@@ -31646,7 +31646,7 @@ var CLSTAMP = "8176124";
               "Player.GetPurchasedAndUpgradedProfileCustomizations#1",
               r,
               te,
-              { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 }
+              { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
             );
           }),
           (e.GetProfileThemesAvailable = function (e, r) {
@@ -31749,7 +31749,7 @@ var CLSTAMP = "8176124";
               "Player.UpdateSteamAnnouncementLastRead#1",
               r,
               Ue,
-              { ePrivilege: 1 }
+              { ePrivilege: 1 },
             );
           }),
           (e.GetPrivacySettings = function (e, r) {
@@ -34882,7 +34882,7 @@ var CLSTAMP = "8176124";
               "SteamTV.GetBroadcastChannelBroadcasters#1",
               r,
               W,
-              { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 2 }
+              { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 2 },
             );
           }),
           (e.GetFollowedChannels = function (e, r) {
@@ -38740,7 +38740,7 @@ var CLSTAMP = "8176124";
               "Store.ShouldPromptForCompatibilityFeedback#1",
               r,
               O,
-              { ePrivilege: 1 }
+              { ePrivilege: 1 },
             );
           });
       })(X || (X = {})),
@@ -38861,7 +38861,7 @@ var CLSTAMP = "8176124";
               0,
               -1,
               [11, 12, 20, 21, 25, 41, 42, 52],
-              null
+              null,
             );
         }
         static M() {
@@ -42314,7 +42314,7 @@ var CLSTAMP = "8176124";
               "TwoFactor.RemoveAuthenticatorViaChallengeStart#1",
               r,
               B,
-              { ePrivilege: 9 }
+              { ePrivilege: 9 },
             );
           }),
           (e.RemoveAuthenticatorViaChallengeContinue = function (e, r) {
@@ -42322,7 +42322,7 @@ var CLSTAMP = "8176124";
               "TwoFactor.RemoveAuthenticatorViaChallengeContinue#1",
               r,
               _,
-              { ePrivilege: 9 }
+              { ePrivilege: 9 },
             );
           });
       })(g || (g = {}));
@@ -44470,7 +44470,7 @@ var CLSTAMP = "8176124";
               "WebRTCClient.AcknowledgeUpdatedRemoteDescription#1",
               r,
               d,
-              { ePrivilege: 1 }
+              { ePrivilege: 1 },
             );
           });
       })(B || (B = {})),

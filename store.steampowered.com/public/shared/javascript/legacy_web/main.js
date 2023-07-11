@@ -158,7 +158,7 @@ var CLSTAMP = "8166954";
               this.SetControllerActive(t),
               this.DispatchButtonDown(e),
               this.m_ButtonRepeatHandler.HandleInputButtonDown(e, () =>
-                this.DispatchButtonDown(e, !0)
+                this.DispatchButtonDown(e, !0),
               );
           }
           OnButtonUp(e, t) {
@@ -168,7 +168,7 @@ var CLSTAMP = "8166954";
               this.m_ButtonUpCallbacks.Dispatch(
                 e,
                 this.m_eNavigationSourceType,
-                this.m_nLastActiveControllerIndex
+                this.m_nLastActiveControllerIndex,
               );
           }
           DispatchButtonDown(e, t) {
@@ -176,7 +176,7 @@ var CLSTAMP = "8166954";
               e,
               this.m_eNavigationSourceType,
               this.m_nLastActiveControllerIndex,
-              t
+              t,
             );
           }
           OnAnalogPad(e, t, n, i) {
@@ -186,7 +186,7 @@ var CLSTAMP = "8166954";
                 e,
                 this.m_nLastActiveControllerIndex,
                 t,
-                n
+                n,
               );
           }
           OnNavigationTypeChanged(e) {
@@ -319,11 +319,11 @@ var CLSTAMP = "8166954";
         "VALVE_PUBLIC_PATH" in window
           ? (n.p = window.VALVE_PUBLIC_PATH)
           : console.error(
-              "VALVE_PUBLIC_PATH not defined; check for a call to CHTMLHelpers::WebpackConfigScriptlet"
+              "VALVE_PUBLIC_PATH not defined; check for a call to CHTMLHelpers::WebpackConfigScriptlet",
             ),
           console.assert(
             123 === Array.from(new Set([123]))[0],
-            "Should not include prototypejs."
+            "Should not include prototypejs.",
           );
       },
       655: (e, t, n) => {
@@ -479,7 +479,7 @@ var CLSTAMP = "8166954";
           },
           h = setTimeout(
             d.bind(null, void 0, { type: "timeout", target: s }),
-            12e4
+            12e4,
           );
         (s.onerror = d.bind(null, s.onerror)),
           (s.onload = d.bind(null, s.onload)),
@@ -502,7 +502,7 @@ var CLSTAMP = "8166954";
       }
       if (!e)
         throw new Error(
-          "Automatic publicPath is not supported in this browser"
+          "Automatic publicPath is not supported in this browser",
         );
       (e = e
         .replace(/#.*$/, "")
@@ -545,7 +545,7 @@ var CLSTAMP = "8166954";
                   var o = a && ("load" === a.type ? "missing" : a.type),
                     s = (a && a.target && a.target.href) || t,
                     c = new Error(
-                      "Loading CSS chunk " + e + " failed.\n(" + s + ")"
+                      "Loading CSS chunk " + e + " failed.\n(" + s + ")",
                     );
                   (c.code = "CSS_CHUNK_LOAD_FAILED"),
                     (c.type = o),
@@ -571,8 +571,8 @@ var CLSTAMP = "8166954";
               },
               (t) => {
                 throw (delete i[e], t);
-              }
-            ))
+              },
+            )),
           );
     }),
     (() => {
@@ -601,7 +601,7 @@ var CLSTAMP = "8166954";
                 }
               },
               "chunk-" + t,
-              t
+              t,
             );
           }
       };

@@ -428,7 +428,7 @@
               0,
               -1,
               [11, 12, 20, 21, 25, 41, 42, 52],
-              null
+              null,
             );
         }
         static M() {
@@ -3562,7 +3562,7 @@
         })(
           e.coming_soon_display,
           e.steam_release_date,
-          e.custom_release_date_message
+          e.custom_release_date_message,
         );
       }
       class c {
@@ -3636,7 +3636,7 @@
               (this.m_rgStoreTagIDs = this.m_rgStoreTags.map((e) => e.tagid)),
               (this.m_DataRequested.include_tag_count = Math.max(
                 t.include_tag_count,
-                this.m_rgStoreTags.length || 0
+                this.m_rgStoreTags.length || 0,
               ))),
             t.include_reviews &&
               !this.m_ReviewInfo &&
@@ -3667,13 +3667,13 @@
                 (e.include_tag_count || 0) >= t.include_tag_count) &&
               (!t.include_reviews || e.include_reviews) &&
               (!t.include_basic_info || e.include_basic_info) &&
-              (!t.include_supported_languages || e.include_supported_languages)
+              (!t.include_supported_languages || e.include_supported_languages),
           );
         }
         BContainDataRequest(e) {
           return c.BDataRequestContainsOtherDataRequest(
             this.m_DataRequested,
-            e
+            e,
           );
         }
         BCheckDataRequestIncluded(e) {
@@ -3684,7 +3684,7 @@
                 this.m_unID
               }`,
               (0, i.ZN)(e),
-              (0, i.ZN)(this.m_DataRequested)
+              (0, i.ZN)(this.m_DataRequested),
             );
         }
         GetStoreItemType() {
@@ -3754,7 +3754,7 @@
             0 === this.GetStoreItemType() &&
               ((e = this.GetStorePageURLWithOverride().replace(
                 this.k_regexSalePage,
-                ""
+                "",
               )),
               e.endsWith("/") && (e = e.replace("/", ""))),
             e
@@ -3840,7 +3840,7 @@
           return Boolean(
             this.GetStoreCategories_SupportedPlayers().find((t) => e === t) ||
               this.GetStoreCategories_Features().find((t) => e === t) ||
-              this.GetStoreCategories_Controller().find((t) => e === t)
+              this.GetStoreCategories_Controller().find((t) => e === t),
           );
         }
         GetFilteredReviewSummary() {
@@ -4090,7 +4090,7 @@
                 : e.coming_soon_display
             )
               ? ["text_tba", "text_comingsoon"].includes(
-                  this.m_ReleaseInfo.coming_soon_display
+                  this.m_ReleaseInfo.coming_soon_display,
                 )
               : !!this.m_ReleaseInfo.custom_release_date_message)
           );
@@ -4102,7 +4102,7 @@
             Boolean(
               null === (e = this.GetBestPurchaseOption()) || void 0 === e
                 ? void 0
-                : e.packageid
+                : e.packageid,
             )
           );
         }
@@ -4126,7 +4126,7 @@
               : e.final_price_in_cents
           )
             return Number.parseInt(
-              this.m_BestPurchaseOption.final_price_in_cents
+              this.m_BestPurchaseOption.final_price_in_cents,
             );
         }
         GetBestPurchasePriceFormatted() {
@@ -4223,7 +4223,7 @@
               : t.some(
                   (t) =>
                     t.elanguage == e &&
-                    (t.supported || t.subtitles || t.full_audio)
+                    (t.supported || t.subtitles || t.full_audio),
                 )) || !1
           );
         }
@@ -4275,54 +4275,54 @@
             (e.main_capsule() &&
               (this.m_strMainCapsuleURL = this.ConstructAssetURL(
                 r,
-                e.main_capsule()
+                e.main_capsule(),
               )),
             e.small_capsule() &&
               (this.m_strSmallCapsuleURL = this.ConstructAssetURL(
                 r,
-                e.small_capsule()
+                e.small_capsule(),
               )),
             e.header() &&
               (this.m_strHeaderURL = this.ConstructAssetURL(r, e.header())),
             e.package_header() &&
               (this.m_strPackageHeaderURL = this.ConstructAssetURL(
                 r,
-                e.package_header()
+                e.package_header(),
               )),
             e.page_background() &&
               (this.m_strPageBackgroundURL = this.ConstructAssetURL(
                 r,
-                e.page_background()
+                e.page_background(),
               )),
             e.hero_capsule() &&
               (this.m_strHeroCapsuleURL = this.ConstructAssetURL(
                 r,
-                e.hero_capsule()
+                e.hero_capsule(),
               )),
             e.hero_capsule_2x() &&
               (this.m_strHeroCapsuleURL_2x = this.ConstructAssetURL(
                 r,
-                e.hero_capsule_2x()
+                e.hero_capsule_2x(),
               )),
             e.library_capsule() &&
               (this.m_strLibraryCapsuleURL = this.ConstructAssetURL(
                 r,
-                e.library_capsule()
+                e.library_capsule(),
               )),
             e.library_capsule_2x() &&
               (this.m_strLibraryCapsuleURL_2x = this.ConstructAssetURL(
                 r,
-                e.library_capsule_2x()
+                e.library_capsule_2x(),
               )),
             e.library_hero() &&
               (this.m_strLibraryHeroURL = this.ConstructAssetURL(
                 r,
-                e.library_hero()
+                e.library_hero(),
               )),
             e.library_hero_2x() &&
               (this.m_strLibraryHeroURL_2x = this.ConstructAssetURL(
                 r,
-                e.library_hero_2x()
+                e.library_hero_2x(),
               ))),
             e.community_icon() &&
               (this.m_strCommunityIcon = `${
@@ -4411,27 +4411,27 @@
             (e.trailer_480p() &&
               (this.m_Trailer480p = this.ExtractTrailerFormats(
                 t,
-                e.trailer_480p()
+                e.trailer_480p(),
               )),
             e.trailer_max() &&
               (this.m_TrailerMax = this.ExtractTrailerFormats(
                 t,
-                e.trailer_max()
+                e.trailer_max(),
               )),
             e.microtrailer() &&
               (this.m_MicroTrailer = this.ExtractTrailerFormats(
                 t,
-                e.microtrailer()
+                e.microtrailer(),
               )),
             e.screenshot_medium() &&
               (this.m_strScreenshotMedium = this.ConstructAssetURL(
                 t,
-                e.screenshot_medium()
+                e.screenshot_medium(),
               )),
             e.screenshot_full() &&
               (this.m_strScreenshotFull = this.ConstructAssetURL(
                 t,
-                e.screenshot_full()
+                e.screenshot_full(),
               )));
         }
         GetName() {
@@ -4669,7 +4669,7 @@
           return (0, i.mG)(this, void 0, void 0, function* () {
             (0, _.X)(
               !f.Get().m_bInitialized,
-              "CStoreItemCache was already initialized; initialize it only once."
+              "CStoreItemCache was already initialized; initialize it only once.",
             ),
               (f.Get().m_SteamInterface = e),
               (f.Get().m_bUsePartnerAPI = !!t),
@@ -4773,7 +4773,7 @@
           return (0, i.mG)(this, void 0, void 0, function* () {
             if (!e || 0 == e.length) return 1;
             const r = (yield Promise.all(
-              e.map((e) => this.QueueStoreItemRequest(e, 0, t))
+              e.map((e) => this.QueueStoreItemRequest(e, 0, t)),
             )).filter((e) => 1 != e);
             return r.length > 0 ? r[0] : 1;
           });
@@ -4782,7 +4782,7 @@
           return (0, i.mG)(this, void 0, void 0, function* () {
             if (!e || 0 == e.length) return 1;
             const r = (yield Promise.all(
-              e.map((e) => this.QueueStoreItemRequest(e, 1, t))
+              e.map((e) => this.QueueStoreItemRequest(e, 1, t)),
             )).filter((e) => 1 != e);
             return r.length > 0 ? r[0] : 1;
           });
@@ -4791,7 +4791,7 @@
           return (0, i.mG)(this, void 0, void 0, function* () {
             if (!e || 0 == e.length) return 1;
             const r = (yield Promise.all(
-              e.map((e) => this.QueueStoreItemRequest(e, 2, t))
+              e.map((e) => this.QueueStoreItemRequest(e, 2, t)),
             )).filter((e) => 1 != e);
             return r.length > 0 ? r[0] : 1;
           });
@@ -4800,7 +4800,7 @@
           return (0, i.mG)(this, void 0, void 0, function* () {
             if (!e || 0 == e.length) return 1;
             const r = (yield Promise.all(
-              e.map((e) => this.QueueStoreItemRequest(e, 4, t))
+              e.map((e) => this.QueueStoreItemRequest(e, 4, t)),
             )).filter((e) => 1 != e);
             return r.length > 0 ? r[0] : 1;
           });
@@ -4809,7 +4809,7 @@
           return (0, i.mG)(this, void 0, void 0, function* () {
             if (!e || 0 == e.length) return 1;
             const r = (yield Promise.all(
-              e.map((e) => this.QueueStoreItemRequest(e, 5, t))
+              e.map((e) => this.QueueStoreItemRequest(e, 5, t)),
             )).filter((e) => 1 != e);
             return r.length > 0 ? r[0] : 1;
           });
@@ -4818,7 +4818,7 @@
           return (0, i.mG)(this, void 0, void 0, function* () {
             if (!e || 0 == e.length) return 1;
             const r = (yield Promise.all(
-              e.map((e) => this.QueueStoreItemRequest(e, 6, t))
+              e.map((e) => this.QueueStoreItemRequest(e, 6, t)),
             )).filter((e) => 1 != e);
             return r.length > 0 ? r[0] : 1;
           });
@@ -4827,7 +4827,7 @@
           return (0, i.mG)(this, void 0, void 0, function* () {
             if (!e || 0 == e.length) return 1;
             const i = (yield Promise.all(
-              e.map((e, i) => this.QueueStoreItemRequest(e, t[i], r))
+              e.map((e, i) => this.QueueStoreItemRequest(e, t[i], r)),
             )).filter((e) => 1 != e);
             return i.length > 0 ? i[0] : 1;
           });
@@ -4837,13 +4837,13 @@
             if (
               ((0, _.X)(
                 f.ValidateDataRequest(r),
-                "Invalid Data Request: " + JSON.stringify(r)
+                "Invalid Data Request: " + JSON.stringify(r),
               ),
               this.m_bActivelyResettingCache)
             )
               return (
                 console.log(
-                  "Rejecting store item request due to currently clearing the cache"
+                  "Rejecting store item request due to currently clearing the cache",
                 ),
                 this.k_AlreadyResolvedBusy
               );
@@ -4851,7 +4851,7 @@
               return (
                 (0, _.X)(
                   !e,
-                  `unexpected id ${e} of zero or undefined for type ${t}`
+                  `unexpected id ${e} of zero or undefined for type ${t}`,
                 ),
                 this.k_AlreadyResolvedInvalid
               );
@@ -4860,15 +4860,15 @@
             switch (
               (this.m_PendingInfoPromise ||
                 ((this.m_PendingInfoPromise = new Promise(
-                  (e) => (this.m_PendingInfoResolve = e)
+                  (e) => (this.m_PendingInfoResolve = e),
                 )),
                 (this.m_PendingTimer = window.setTimeout(
                   () => this.FlushPendingInfo(),
-                  this.k_QueueWaitUntilRequestMS
+                  this.k_QueueWaitUntilRequestMS,
                 ))),
               (this.m_setPendingDataRequest = p(
                 this.m_setPendingDataRequest,
-                r
+                r,
               )),
               t)
             ) {
@@ -4928,7 +4928,7 @@
               (this.m_setPendingDataRequest = {}),
               (this.m_PendingTimer = void 0),
               this.HintLoadStoreItems(void 0, t, r, i, s, a, n, o).then((t) =>
-                e(t)
+                e(t),
               );
           });
         }
@@ -4942,7 +4942,7 @@
               null,
               null,
               null,
-              t
+              t,
             );
           });
         }
@@ -4956,7 +4956,7 @@
               null,
               null,
               null,
-              t
+              t,
             );
           });
         }
@@ -4970,7 +4970,7 @@
               null,
               null,
               null,
-              t
+              t,
             );
           });
         }
@@ -5114,7 +5114,7 @@
               (a || []).forEach((e) => this.m_mapTagsInFlight.delete(e)),
               (n || []).forEach((e) => this.m_mapCreatorsInFlight.delete(e)),
               (o || []).forEach((e) =>
-                this.m_mapHubCategoriesInFlight.delete(e)
+                this.m_mapHubCategoriesInFlight.delete(e),
               ),
               _
             );
@@ -5216,7 +5216,7 @@
                             ("dev" == B.De.WEB_UNIVERSE &&
                               console.warn(
                                 `Failed to load ${a} type ${n} with error ${i.success()}`,
-                                i
+                                i,
                               ),
                             n)
                           ) {
@@ -5249,24 +5249,24 @@
                                 "CStoreItemCache.InternalHandleLoadStoreItems unexpected item_type in response " +
                                   n +
                                   " " +
-                                  a
+                                  a,
                               );
                           }
                           if (i.unvailable_for_country_restriction())
                             switch (n) {
                               case 0:
                                 this.m_setUnavailableDueToCountryRestrictionApps.add(
-                                  a
+                                  a,
                                 );
                                 break;
                               case 1:
                                 this.m_setUnavailableDueToCountryRestrictionPackages.add(
-                                  a
+                                  a,
                                 );
                                 break;
                               case 2:
                                 this.m_setUnavailableDueToCountryRestrictionBundles.add(
-                                  a
+                                  a,
                                 );
                                 break;
                               case 4:
@@ -5277,7 +5277,7 @@
                                     e.GetEResult() +
                                     " message: " +
                                     e.Hdr().error_message(),
-                                  (0, s.ZN)(t)
+                                  (0, s.ZN)(t),
                                 );
                             }
                         }
@@ -5287,7 +5287,7 @@
                         e.GetEResult() +
                         " message: " +
                         e.Hdr().error_message(),
-                      (0, s.ZN)(t)
+                      (0, s.ZN)(t),
                     ),
                     (1 == e.Hdr().transport_error() || B.De.FROM_WEB) &&
                       this.MarkStoreItemIDUnavailable(o[a]),
@@ -5299,7 +5299,7 @@
                 console.error(
                   "CStoreItemCache::InternalHandleLoadStoreItems failed: " +
                     t.strErrorMsg,
-                  t
+                  t,
                 ),
                 o.forEach((e) => this.MarkStoreItemIDUnavailable(e)),
                 79
@@ -5337,7 +5337,7 @@
         BHasStoreItem(e, t, r) {
           let i = this.GetMapForType(t);
           return Boolean(
-            i && i.has(e) && (!r || i.get(e).BContainDataRequest(r))
+            i && i.has(e) && (!r || i.get(e).BContainDataRequest(r)),
           );
         }
         GetStoreItem(e, t) {
@@ -5449,7 +5449,7 @@
               return (
                 console.error(
                   "BIsStoreItemUnavailableDueToCountryRestriction - tags, creators or categories don't have country restrictions. type: ",
-                  t
+                  t,
                 ),
                 !0
               );
@@ -5671,7 +5671,7 @@
             return { strErrorMsg: e.err_msg, errorCode: e.success };
           if ("string" == typeof e && e.length > 1024)
             console.groupCollapsed(
-              "GetMsgAndErrorCodeFromResponse cannot parse: "
+              "GetMsgAndErrorCodeFromResponse cannot parse: ",
             ),
               console.error(e),
               console.groupEnd();

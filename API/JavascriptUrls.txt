@@ -2100,6 +2100,7 @@ https://checkout.steampowered.com/checkout/updatebillingaddress/
 https://checkout.steampowered.com/checkout/verifyshippingaddress/
 https://checkout.steampowered.com/paypal/launchauth/?webbasedpurchasing=1&transid=${transID}&authurl=${escapedUrl}&s=${g_sessionID}
 https://checkout.steampowered.com/paypal/launchauth/?webbasedpurchasing=1&transid=${transID}&authurl=${paypal_url}${}&s=${g_sessionID}
+https://checkout.steampowered.com/paypal/launchauth/?webbasedpurchasing=1&transid=${txnid}&authurl=${auth_url}&s=${g_sessionID}
 https://checkout.steampowered.com/qiwi/launchauth
 https://community.cloudflare.steamstatic.com/${m_strURL}
 https://community.cloudflare.steamstatic.com/economy/boosterpack/${appid}?l=english&single=1&v=2
@@ -2770,6 +2771,7 @@ https://store.steampowered.com/bundle/${unBundleID}/
 https://store.steampowered.com/cart
 https://store.steampowered.com/cart/
 https://store.steampowered.com/cart/addtocart
+https://store.steampowered.com/cart/forgetcart
 https://store.steampowered.com/cart/getcartstate
 https://store.steampowered.com/categories/homepageimage/${strImageURL}?cc=${}&l=${}
 https://store.steampowered.com/checkout/?purchasetype=updatebillinginfo&agreementid=${agreementid}&agreementpackageid=${packageid}
@@ -2829,7 +2831,6 @@ https://store.steampowered.com/login/?redir=grandprix
 https://store.steampowered.com/logout/
 https://store.steampowered.com/mobile
 https://store.steampowered.com/news/app/${appid}/view/${announcementid}/
-https://store.steampowered.com/paypal/launchauth/?webbasedpurchasing=1&transid=${txnid}&authurl=${auth_url}&s=${g_sessionID}
 https://store.steampowered.com/pitstop
 https://store.steampowered.com/promotion/opencottagedoorajax
 https://store.steampowered.com/pub/${vanity_url}

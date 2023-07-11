@@ -243,7 +243,7 @@ var CLSTAMP = "7947568";
           },
           l = setTimeout(
             h.bind(null, void 0, { type: "timeout", target: t }),
-            12e4
+            12e4,
           );
         (t.onerror = h.bind(null, t.onerror)),
           (t.onload = h.bind(null, t.onload)),
@@ -267,7 +267,7 @@ var CLSTAMP = "7947568";
       }
       if (!e)
         throw new Error(
-          "Automatic publicPath is not supported in this browser"
+          "Automatic publicPath is not supported in this browser",
         );
       (e = e
         .replace(/#.*$/, "")
@@ -301,7 +301,7 @@ var CLSTAMP = "7947568";
                 }
               },
               "chunk-" + a,
-              a
+              a,
             );
           } else e[a] = 0;
       }),

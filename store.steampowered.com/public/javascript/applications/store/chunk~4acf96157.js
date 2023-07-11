@@ -120,8 +120,8 @@
                 r.j1.LoadPartnerEventFromClanEventGIDAndClanSteamID(
                   s.K.InitFromClanID(e.clanid),
                   e.unique_id,
-                  0
-                )
+                  0,
+                ),
               ),
               i = yield Promise.all(a),
               c = new Map();
@@ -176,7 +176,7 @@
             this.m_mapBroadcasterSteamIDData.set(n, a),
               this.m_mapBroadcasterSteamIDToEvents.set(
                 n,
-                e.map((e) => e.GID)
+                e.map((e) => e.GID),
               );
           });
         }
@@ -259,7 +259,7 @@
         }
         GetInfoByInstance(e, t) {
           return this.m_mapGiveawayIDAndInstanceToNextDrawInfo.get(
-            this.GetKey(e, t)
+            this.GetKey(e, t),
           );
         }
         GetNextDrawChangeCallback(e) {
@@ -293,7 +293,7 @@
                     this.m_mapGiveawayIDToNextDrawInfo.set(e, new _()),
                   this.CopyToGiveaway(
                     a.data,
-                    this.m_mapGiveawayIDToNextDrawInfo.get(e)
+                    this.m_mapGiveawayIDToNextDrawInfo.get(e),
                   ),
                   void 0 !== t)
                 ) {
@@ -301,16 +301,16 @@
                   this.m_mapGiveawayIDAndInstanceToNextDrawInfo.has(n) ||
                     this.m_mapGiveawayIDAndInstanceToNextDrawInfo.set(
                       n,
-                      new _()
+                      new _(),
                     ),
                     this.CopyToGiveaway(
                       a.data,
-                      this.m_mapGiveawayIDAndInstanceToNextDrawInfo.get(n)
+                      this.m_mapGiveawayIDAndInstanceToNextDrawInfo.get(n),
                     );
                 }
               }),
               this.GetNextDrawChangeCallback(e).Dispatch(
-                this.m_mapGiveawayIDToNextDrawInfo.get(e)
+                this.m_mapGiveawayIDToNextDrawInfo.get(e),
               ),
               this.m_mapGiveawayIDToNextDrawInfo.get(e)
             );
@@ -384,7 +384,7 @@
                   (function (e, t) {
                     const n = D.Get().GetInfoByInstance(
                       e,
-                      t.m_myInstanceNumber
+                      t.m_myInstanceNumber,
                     );
                     n &&
                       n.BIsValid() &&
@@ -395,10 +395,10 @@
                         .ReloadGiveaway(e, t.m_myInstanceNumber)
                         .then((n) => {
                           t.SetupCountDown(n.seconds_until_drawing, () =>
-                            I(e, t)
+                            I(e, t),
                           );
                         }));
-                  })(e, t)
+                  })(e, t),
                 ),
                   t.SetupCountDown(a.seconds_until_drawing, () => I(e, t)),
                   n();
@@ -407,7 +407,7 @@
               t.ClearRefreshInterval(), t.ClearCountDown();
             }
           ),
-          [t, e, n]
+          [t, e, n],
         );
         const a = D.Get().GetInfoByInstance(e, t.m_myInstanceNumber),
           [i, s, o] = (0, r.SZ)(() => [
@@ -465,11 +465,11 @@
               const e = (0, i.jM)(u.De.LANGUAGE),
                 t = c.LZ.GetWithFallback(
                   n.jsondata.localized_sale_product_banner,
-                  e
+                  e,
                 ),
                 a = c.LZ.GetWithFallback(
                   n.jsondata.localized_sale_product_mobile_banner,
-                  e
+                  e,
                 );
               if (
                 (null == t ? void 0 : t.length) > 0 &&
@@ -493,7 +493,7 @@
               a.createElement("img", {
                 src: _,
                 className: (0, r.Z)(l.Banner, l.Mobile),
-              })
+              }),
             )
           : null;
       }

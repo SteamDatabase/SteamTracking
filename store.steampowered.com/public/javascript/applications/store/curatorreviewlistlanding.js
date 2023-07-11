@@ -88,7 +88,7 @@
               secondary: !0,
               parentEmbeddedNavTree: e,
             }),
-            n.createElement(o.O, null, t)
+            n.createElement(o.O, null, t),
           );
         }
         return n.createElement(n.Fragment, null, t);
@@ -172,24 +172,24 @@
                           r.createElement(
                             i.IS,
                             { key: "anchor_" + e.name, href: e.url },
-                            e.name
-                          )
+                            e.name,
+                          ),
                         )
                       : t.push(
                           r.createElement(
                             o.rU,
                             { key: "link_" + e.name, to: e.url },
-                            e.name
-                          )
+                            e.name,
+                          ),
                         ),
                     t.push(
-                      r.createElement("span", { key: e.name + "span" }, " > ")
+                      r.createElement("span", { key: e.name + "span" }, " > "),
                     ),
                     t
                   );
-                })
+                }),
               ),
-              r.createElement("div", { style: { clear: "left" } })
+              r.createElement("div", { style: { clear: "left" } }),
             )
           : null;
       }
@@ -250,7 +250,7 @@
               o.e,
               Object.assign({}, e, {
                 classnames: (0, i.Z)(c().YoutubePlayer, e.classnames),
-              })
+              }),
             );
           {
             const t = (t) => {
@@ -265,7 +265,7 @@
                 className: (0, i.Z)(
                   "YoutubePreviewContainer",
                   c().YoutubePreviewImage,
-                  e.imageClassnames
+                  e.imageClassnames,
                 ),
                 onClick: t,
               },
@@ -278,13 +278,13 @@
               r.createElement(
                 "div",
                 { className: "YoutubePreviewPlay" },
-                r.createElement(l.GhU, null)
+                r.createElement(l.GhU, null),
               ),
               r.createElement(
                 "div",
                 { className: "VideoHintText" },
-                (0, s.Xx)("#EventCalendar_WatchYouTubeVideo")
-              )
+                (0, s.Xx)("#EventCalendar_WatchYouTubeVideo"),
+              ),
             );
           }
         };
@@ -313,7 +313,7 @@
         const [a, r] = (0, n.useState)(
             (null == e ? void 0 : e.BUsesContentHubForItemSource())
               ? new Set()
-              : null
+              : null,
           ),
           l = (0, v.T)("useFilteredAppViaContentHub");
         return (
@@ -356,7 +356,7 @@
                     console.error(
                       "LoadContentHubFilteredApps failed: " +
                         (null == l ? void 0 : l.strErrorMsg),
-                      l
+                      l,
                     ),
                     o
                   );
@@ -382,7 +382,7 @@
         D = a(19304),
         P = a(51857);
       const G = new RegExp(
-        "(?:https?://)?(?:www.)?twitch.tv/videos/([0-9]+)S*"
+        "(?:https?://)?(?:www.)?twitch.tv/videos/([0-9]+)S*",
       );
       function Y(e) {
         const t = G.exec(e);
@@ -408,7 +408,7 @@
               className: (0, D.Z)(
                 "YoutubePreviewContainer",
                 P.YoutubePreviewImage,
-                e.imageClassnames
+                e.imageClassnames,
               ),
               onClick: () => m(!1),
             },
@@ -422,8 +422,8 @@
             n.createElement(
               "div",
               { className: "YoutubePreviewPlay" },
-              n.createElement(k.GhU, null)
-            )
+              n.createElement(k.GhU, null),
+            ),
           );
         let p = (0, E.Kc)().replace("https://", "");
         const _ = p.indexOf("/");
@@ -447,7 +447,7 @@
               className: (0, D.Z)(
                 "YoutubePreviewContainer",
                 P.YoutubePreviewImage,
-                e.imageClassnames
+                e.imageClassnames,
               ),
               src:
                 E.De.COMMUNITY_CDN_URL +
@@ -459,7 +459,7 @@
               frameBorder: 0,
               width: s || 460,
               height: u || 300,
-            })
+            }),
           )
         );
       }
@@ -480,7 +480,7 @@
         const { clanInfo: t } = e,
           { curator_link: a, curator_medium_avatar: r } = (0, E.kQ)(
             "curator_header",
-            "application_config"
+            "application_config",
           );
         return n.createElement(
           u.s,
@@ -504,8 +504,8 @@
                   n.createElement("img", {
                     className: "curator_avatar",
                     src: r,
-                  })
-                )
+                  }),
+                ),
               ),
               n.createElement(
                 "div",
@@ -517,11 +517,11 @@
                 n.createElement(
                   i.IS,
                   { className: "pageheader curator_name", href: a },
-                  (0, V.Xx)("#SteamCurator_List_Header_List", t.group_name)
-                )
-              )
-            )
-          )
+                  (0, V.Xx)("#SteamCurator_List_Header_List", t.group_name),
+                ),
+              ),
+            ),
+          ),
         );
       }
       const q = function (e) {
@@ -529,12 +529,12 @@
         return n.createElement(
           s.p,
           { navID: "StoreCuratorPageRoot", NavigationManager: t },
-          n.createElement(K, { listid: e.listid })
+          n.createElement(K, { listid: e.listid }),
         );
       };
       function K(e) {
         const t = parseInt(
-            (0, E.kQ)("curator_account_id", "application_config")
+            (0, E.kQ)("curator_account_id", "application_config"),
           ),
           a = (0, w.P4)(t),
           r = (0, w.N)(null == a ? void 0 : a.clanSteamID, e.listid);
@@ -567,17 +567,17 @@
                         n.createElement(
                           "h2",
                           null,
-                          (0, V.Xx)("#SteamCurator_ExploreMoreTitle")
+                          (0, V.Xx)("#SteamCurator_ExploreMoreTitle"),
                         ),
                         n.createElement(
                           i.IS,
                           { href: a.vanity_url },
-                          (0, V.kQ)("#SteamCurator_MoreReviews", a.group_name)
-                        )
-                      )
-                    )
-                  )
-                )
+                          (0, V.kQ)("#SteamCurator_MoreReviews", a.group_name),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
               )
             : null
         );
@@ -589,7 +589,7 @@
           o = (0, m.Mx)(l.GetAccountID(), t.sale_clan_event_gid),
           i = (0, n.useMemo)(
             () => (t.apps || []).map((e) => e.recommended_app.appid),
-            [t]
+            [t],
           ),
           s = f(o, i);
         return (
@@ -606,9 +606,9 @@
                           return s.has(
                             null === (t = e.recommended_app) || void 0 === t
                               ? void 0
-                              : t.appid
+                              : t.appid,
                           );
-                        })
+                        }),
                   );
               else {
                 const e = o.GetSaleFeaturedApps();
@@ -620,9 +620,9 @@
                         return e.has(
                           null === (a = t.recommended_app) || void 0 === a
                             ? void 0
-                            : a.appid
+                            : a.appid,
                         );
-                      })
+                      }),
                 );
               }
           }, [t, o, s]),
@@ -651,9 +651,9 @@
                           a.filter(
                             (e) =>
                               !(0, A.TR)(
-                                N.Z.Get().GetApp(e.recommended_app.appid)
-                              )
-                          )
+                                N.Z.Get().GetApp(e.recommended_app.appid),
+                              ),
+                          ),
                         );
                     })
                     .catch(() => {
@@ -684,8 +684,8 @@
                 item: e,
                 listDetails: t,
                 bAutoFocus: 0 == a,
-              })
-            )
+              }),
+            ),
           ),
           Boolean(r > o.length) &&
             n.createElement(
@@ -695,14 +695,14 @@
                 "span",
                 null,
                 (0, V.kb)("#SteamCurator_Hidden", r - o.length),
-                " "
+                " ",
               ),
               n.createElement(
                 i.IS,
                 { href: E.De.STORE_BASE_URL + "account/preferences/" },
-                (0, V.Xx)("#SteamCurator_Setting")
-              )
-            )
+                (0, V.Xx)("#SteamCurator_Setting"),
+              ),
+            ),
         );
       }
       function te(e) {
@@ -722,7 +722,7 @@
             a &&
             a.GetImageURL(
               (0, W.p)() ? "product_mobile_banner" : "product_banner",
-              m
+              m,
             );
         return n.createElement(
           "div",
@@ -731,7 +731,7 @@
             n.createElement(
               i.IS,
               { href: a.GetSaleURL() },
-              n.createElement("img", { className: X().SaleBanner, src: v })
+              n.createElement("img", { className: X().SaleBanner, src: v }),
             ),
           r && d && n.createElement("div", { className: X().Title }, d),
           r && p && n.createElement("div", { className: X().Blurb }, p),
@@ -750,7 +750,7 @@
                 preloadYoutubeScripts: !0,
                 playsInline: !0,
                 imageClassnames: X().YouTubePreviewImage,
-              })
+              }),
             ),
           Boolean(u) &&
             n.createElement(
@@ -760,9 +760,9 @@
                 videoid: u,
                 posterURL: "",
                 imageClassnames: X().YouTubePreviewImage,
-              })
+              }),
             ),
-          _ && n.createElement(le, { url: _ })
+          _ && n.createElement(le, { url: _ }),
         );
       }
       const ae = (0, r.Pi)((e) => {
@@ -775,17 +775,17 @@
               void 0 === t
               ? void 0
               : t.appid,
-            { include_assets: !0, include_release: !0 }
+            { include_assets: !0, include_release: !0 },
           ),
           d = (0, n.useMemo)(
             () => ({
               id: null == m ? void 0 : m.GetID(),
               type: (0, R.Ds)(
                 null == m ? void 0 : m.GetStoreItemType(),
-                null == m ? void 0 : m.GetAppType()
+                null == m ? void 0 : m.GetAppType(),
               ),
             }),
-            [m]
+            [m],
           );
         if (!s || !m) return null;
         const {
@@ -827,7 +827,7 @@
                   capsule: d,
                   bShowDemoButton: T,
                   strExtraParams: B,
-                })
+                }),
           ),
           n.createElement(
             "div",
@@ -843,19 +843,19 @@
                 h || !Boolean(b)
                   ? (0, V.Xx)(
                       "#EventModTile_ReleaseDate",
-                      m.GetFormattedSteamReleaseDate()
+                      m.GetFormattedSteamReleaseDate(),
                     )
-                  : (0, V.vX)(b)
-              )
+                  : (0, V.vX)(b),
+              ),
             ),
             Boolean(N) &&
               n.createElement(
                 "div",
                 { className: X().ReviewBlurb },
-                (0, V.Xx)("#SteamCurator_ReviewTextQuoted", N)
+                (0, V.Xx)("#SteamCurator_ReviewTextQuoted", N),
               ),
-            Boolean(_) && n.createElement(le, { url: _ })
-          )
+            Boolean(_) && n.createElement(le, { url: _ }),
+          ),
         );
       });
       function re(e) {
@@ -893,7 +893,7 @@
                   playsInline: !0,
                   imageClassnames: X().YouTubePreviewImage,
                   altImg: l,
-                })
+                }),
           ),
           n.createElement(
             "div",
@@ -917,11 +917,11 @@
                   className: X().GameImage,
                   src:
                     null == u ? void 0 : u.GetAssets().GetLibraryCapsuleURL(),
-                })
-              )
+                }),
+              ),
             ),
-            n.createElement(M.Hl, { info: r, strClassName: X().FullWidth })
-          )
+            n.createElement(M.Hl, { info: r, strClassName: X().FullWidth }),
+          ),
         );
       }
       function ne(e) {
@@ -930,19 +930,19 @@
             return n.createElement(
               "div",
               { className: X().Recommended },
-              (0, V.Xx)("#SteamCurator_Recommended")
+              (0, V.Xx)("#SteamCurator_Recommended"),
             );
           case 1:
             return n.createElement(
               "div",
               { className: X().NotRecommended },
-              (0, V.Xx)("#SteamCurator_NotRecommended")
+              (0, V.Xx)("#SteamCurator_NotRecommended"),
             );
           case 2:
             return n.createElement(
               "div",
               { className: X().Informational },
-              (0, V.Xx)("#SteamCurator_Informational")
+              (0, V.Xx)("#SteamCurator_Informational"),
             );
           default:
             return null;
@@ -973,14 +973,14 @@
             (0, V.Xx)(
               r
                 ? "#SteamCurator_WatchFullReview"
-                : "#SteamCurator_ReadFullReview"
-            )
+                : "#SteamCurator_ReadFullReview",
+            ),
           ),
           n.createElement(
             "div",
             { className: X().FullReviewDomain },
-            (0, V.Xx)("#SteamCurator_ReviewLinkHostnameBracketed", a)
-          )
+            (0, V.Xx)("#SteamCurator_ReviewLinkHostnameBracketed", a),
+          ),
         );
       }
     },

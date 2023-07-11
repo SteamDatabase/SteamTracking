@@ -3332,7 +3332,7 @@
             return e.SendNotification(
               "Broadcast.NotifyBroadcastUploadStop#1",
               t,
-              { ePrivilege: 1 }
+              { ePrivilege: 1 },
             );
           }),
           (e.WatchBroadcast = function (e, t) {
@@ -3374,7 +3374,7 @@
             return e.SendNotification(
               "Broadcast.NotifyBroadcastSessionHeartbeat#1",
               t,
-              { ePrivilege: 1 }
+              { ePrivilege: 1 },
             );
           }),
           (e.GetBroadcastChatInfo = function (e, t) {
@@ -3448,7 +3448,7 @@
             return e.SendNotification(
               "Broadcast.NotifyWebRTCHaveTURNServer#1",
               t,
-              { ePrivilege: 1 }
+              { ePrivilege: 1 },
             );
           }),
           (e.WebRTCStartResult = function (e, t) {
@@ -6618,7 +6618,7 @@
               "SteamTV.SetBroadcastChannelLinkRegions#1",
               t,
               ze,
-              { ePrivilege: 1, eWebAPIKeyRequirement: 2 }
+              { ePrivilege: 1, eWebAPIKeyRequirement: 2 },
             );
           }),
           (e.GetBroadcastChannelLinks = function (e, t) {
@@ -6632,7 +6632,7 @@
               "SteamTV.GetBroadcastChannelBroadcasters#1",
               t,
               ke,
-              { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 2 }
+              { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 2 },
             );
           }),
           (e.GetFollowedChannels = function (e, t) {
@@ -6684,7 +6684,7 @@
               "SteamTV.GetBroadcastChannelInteraction#1",
               t,
               Ne,
-              { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 2 }
+              { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 2 },
             );
           }),
           (e.GetGames = function (e, t) {
@@ -6836,7 +6836,7 @@
           return (0, i.mG)(this, void 0, void 0, function* () {
             if (this.m_Storage) {
               let e = yield this.m_Storage.GetObject(
-                "CTextFilterStore_TextFilterPreferences"
+                "CTextFilterStore_TextFilterPreferences",
               );
               e && (this.m_TextFilterPreferences = e);
             }
@@ -6846,14 +6846,14 @@
           this.m_Storage &&
             this.m_Storage.StoreObject(
               "CTextFilterStore_TextFilterPreferences",
-              this.m_TextFilterPreferences
+              this.m_TextFilterPreferences,
             );
         }
         LoadTextFilterWords() {
           return (0, i.mG)(this, void 0, void 0, function* () {
             if (this.m_Storage) {
               let e = yield this.m_Storage.GetObject(
-                "CTextFilterStore_TextFilterWords"
+                "CTextFilterStore_TextFilterWords",
               );
               e && (this.m_TextFilterWords = Ct.No.fromObject(e));
             }
@@ -6863,17 +6863,17 @@
           this.m_Storage &&
             this.m_Storage.StoreObject(
               "CTextFilterStore_TextFilterWords",
-              this.m_TextFilterWords.toObject()
+              this.m_TextFilterWords.toObject(),
             );
         }
         LoadFilter() {
           return (0, i.mG)(this, void 0, void 0, function* () {
             if (this.m_Storage) {
               let e = yield this.m_Storage.GetObject(
-                  "CTextFilterStore_strBannedPattern"
+                  "CTextFilterStore_strBannedPattern",
                 ),
                 t = yield this.m_Storage.GetObject(
-                  "CTextFilterStore_strCleanPattern"
+                  "CTextFilterStore_strCleanPattern",
                 );
               null != e && null != t && this.BRebuildFilter(e, t);
             }
@@ -6883,11 +6883,11 @@
           this.m_Storage &&
             (this.m_Storage.StoreObject(
               "CTextFilterStore_strBannedPattern",
-              this.m_strBannedPattern
+              this.m_strBannedPattern,
             ),
             this.m_Storage.StoreObject(
               "CTextFilterStore_strCleanPattern",
-              this.m_strCleanPattern
+              this.m_strCleanPattern,
             ));
         }
         RequestUpdatedSettings() {
@@ -6905,7 +6905,7 @@
                   const r = yield s().get(
                     ft.De.COMMUNITY_BASE_URL +
                       "textfilter/ajaxgetcommunitypreferences",
-                    { params: t, withCredentials: !0 }
+                    { params: t, withCredentials: !0 },
                   );
                   e = Ct.n8.fromObject(r.data.preferences);
                 }
@@ -6931,7 +6931,7 @@
                     const r = yield s().get(
                       ft.De.COMMUNITY_BASE_URL +
                         "textfilter/ajaxgettextfiltercustomwords",
-                      { params: e, withCredentials: !0 }
+                      { params: e, withCredentials: !0 },
                     );
                     t = Ct.No.fromObject(r.data.words);
                   }
@@ -7017,15 +7017,15 @@
             default:
               t = t.concat(
                 this.m_strProfanityWords.split(e),
-                this.m_strBannedWords.split(e)
+                this.m_strBannedWords.split(e),
               );
           }
           (t = t.concat(
-            this.m_TextFilterWords.text_filter_custom_banned_words()
+            this.m_TextFilterWords.text_filter_custom_banned_words(),
           )),
             (r = this.m_strCleanWords.split(e)),
             (r = r.concat(
-              this.m_TextFilterWords.text_filter_custom_clean_words()
+              this.m_TextFilterWords.text_filter_custom_clean_words(),
             ));
           let i = this.CreatePattern(t),
             a = this.CreatePattern(r);
@@ -7042,8 +7042,8 @@
               console.warn("Couldn't compile textfilter bannedwords regex"),
                 (0, Ft.Uh)().ReportError(
                   new Error(
-                    `Couldn't compile textfilter bannedwords regex: ${e}`
-                  )
+                    `Couldn't compile textfilter bannedwords regex: ${e}`,
+                  ),
                 );
             }
           if (((this.m_regexCleanWords = null), "" !== t))
@@ -7053,8 +7053,8 @@
               console.warn("Couldn't compile textfilter cleanwords regex"),
                 (0, Ft.Uh)().ReportError(
                   new Error(
-                    `Couldn't compile textfilter cleanwords regex: ${e}`
-                  )
+                    `Couldn't compile textfilter cleanwords regex: ${e}`,
+                  ),
                 );
             }
           return (
@@ -7087,7 +7087,7 @@
             : t.replace(this.m_regexBannedWords, (e) =>
                 this.m_regexCleanWords && 0 == e.search(this.m_regexCleanWords)
                   ? e
-                  : this.CreateProfanityReplacement(e.length)
+                  : this.CreateProfanityReplacement(e.length),
               );
         }
       }
@@ -7170,7 +7170,7 @@
             (this.m_latestAnnouncement = null),
             (this.m_webAPIInterface = new _.J(
               ft.De.WEBAPI_BASE_URL,
-              ft.L7.webapi_token
+              ft.L7.webapi_token,
             ));
         }
         InitTextFilter() {
@@ -7193,7 +7193,7 @@
         StartForSteamID(e, t) {
           (this.m_webAPIInterface = new _.J(
             ft.De.WEBAPI_BASE_URL,
-            ft.L7.webapi_token
+            ft.L7.webapi_token,
           )),
             (this.m_ulBroadcastSteamID = e),
             (this.m_ulBroadcastID = t),
@@ -7203,7 +7203,7 @@
         StartForChannel(e) {
           (this.m_webAPIInterface = new _.J(
             ft.De.WEBAPI_BASE_URL,
-            ft.L7.webapi_token
+            ft.L7.webapi_token,
           )),
             (this.m_ulBroadcastChannelID = e),
             (this.m_strUserSteamID = ft.L7.steamid),
@@ -7226,7 +7226,7 @@
                     e.append("instance_id", this.m_unInstanceID.toString()),
                     (r = yield s().post(
                       `${ft.De.WEBAPI_BASE_URL}IBroadcastService/PostChatMessage/v0001?access_token=${this.m_webApiToken}`,
-                      e
+                      e,
                     )),
                     (i = r.data && r.data.response);
                 } else {
@@ -7238,7 +7238,7 @@
                   }),
                     (e = yield be.PostChatMessage(
                       this.m_webAPIInterface.GetServiceTransport(),
-                      r
+                      r,
                     )),
                     (i = {
                       result: e.GetEResult(),
@@ -7256,7 +7256,7 @@
                         : 84 == i.result
                         ? (0, wt.Xx)(
                             "#BroadcastChat_Cooldown",
-                            i.cooldown_time_seconds
+                            i.cooldown_time_seconds,
                           )
                         : (0, wt.Xx)("#BroadcastChat_FailedToSendMsg", t)),
                     void this.m_rgChatMessages.push({
@@ -7276,7 +7276,7 @@
                     ((this.m_bRateLimited = !0),
                     setTimeout(
                       () => (this.m_bRateLimited = !1),
-                      1e3 * this.m_nRateLimitSeconds
+                      1e3 * this.m_nRateLimitSeconds,
                     ));
               } catch (e) {
                 this.m_rgChatMessages.push({
@@ -7306,7 +7306,7 @@
                     params: t,
                     withCredentials: !0,
                     cancelToken: null == e ? void 0 : e.token,
-                  }
+                  },
                 );
               (e && e.token.reason) ||
                 (0, c.z)(() => {
@@ -7333,7 +7333,7 @@
                     this.m_mapBroadcastModeratorUsers.clear(),
                     e.moderators_steamid &&
                       e.moderators_steamid.forEach((e) =>
-                        this.m_mapBroadcastModeratorUsers.set(e, !0)
+                        this.m_mapBroadcastModeratorUsers.set(e, !0),
                       ),
                     (this.m_chatScheduledFunc = new St.Ar()),
                     this.m_chatScheduledFunc.Schedule(0, this.RequestLoop);
@@ -7352,7 +7352,7 @@
               });
               let t = yield gt.JoinChat(
                 this.m_webAPIInterface.GetServiceTransport(),
-                e
+                e,
               );
               if (!t.Body().chat_id || !t.Body().view_url_template)
                 return void console.log("Failed to join channel chat");
@@ -7387,7 +7387,7 @@
             });
             const t = (yield gt.GetChatModerators(
                 this.m_webAPIInterface.GetServiceTransport(),
-                e
+                e,
               ))
                 .Body()
                 .results(),
@@ -7406,7 +7406,7 @@
               (this.m_latestAnnouncement &&
                 JSON.stringify(this.m_latestAnnouncement) ==
                   JSON.stringify(
-                    this.m_rgAnnouncements[this.m_rgAnnouncements.length - 1]
+                    this.m_rgAnnouncements[this.m_rgAnnouncements.length - 1],
                   )) ||
                 (this.m_latestAnnouncement =
                   this.m_rgAnnouncements[this.m_rgAnnouncements.length - 1]))
@@ -7419,7 +7419,7 @@
             const e = {},
               t = this.m_strChatURL.replace(
                 "{0}",
-                this.m_nNextChatTS.toString()
+                this.m_nNextChatTS.toString(),
               );
             t == this.m_strChatURL &&
               this.m_nNextChatTS > 0 &&
@@ -7432,7 +7432,7 @@
                   Object.assign(Object.assign({}, e), {
                     type: m.gK.Chat,
                     client_ts: Number(new Date()),
-                  })
+                  }),
                 )
                 .filter((e) => !this.IsUserMutedLocally(e.steamid));
               this.m_rgChatMessages.push(...i),
@@ -7442,7 +7442,7 @@
                 (this.m_rgChatMessages.length > a &&
                   this.m_rgChatMessages.splice(
                     0,
-                    this.m_rgChatMessages.length - a
+                    this.m_rgChatMessages.length - a,
                   ),
                 r.muted)
               )
@@ -7472,7 +7472,7 @@
               ) {
                 if ("undefined" === r.initial_delay)
                   return void console.log(
-                    "Need initial_delay to know when to request first chat message"
+                    "Need initial_delay to know when to request first chat message",
                   );
                 (this.m_tsFirstRequest = performance.now() + r.initial_delay),
                   (this.m_nFromFirstRequestMS = 0),
@@ -7504,7 +7504,7 @@
                     " firstFromRequest: " +
                     this.m_nFromFirstRequestMS +
                     " nudge: " +
-                    this.m_nNudgeFactorMS
+                    this.m_nNudgeFactorMS,
                 ),
                 this.m_cConsecutiveErrors++,
                 (this.m_nNudgeFactorMS += 10),
@@ -7553,14 +7553,14 @@
               try {
                 yield s().post(
                   `${ft.De.CHAT_BASE_URL}broadcast/ajaxupdatechannelmod`,
-                  i
+                  i,
                 ),
                   this.m_mapBroadcastModeratorUsers.set(e, t);
                 const a = (0, wt.Xx)(
                   t
                     ? "#BroadcastChat_AddedModerator"
                     : "#BroadcastChat_RemovedModerator",
-                  r
+                  r,
                 );
                 this.m_rgChatMessages.push({ type: m.gK.Notification, msg: a });
               } catch (e) {
@@ -7568,7 +7568,7 @@
                   t
                     ? "#BroadcastChat_AddModeratorFailed"
                     : "#BroadcastChat_RemoveModeratorFailed",
-                  r
+                  r,
                 );
                 this.m_rgChatMessages.push({ type: m.gK.Error, msg: i });
               }
@@ -7590,7 +7590,7 @@
               }),
                 yield gt.AddChatBan(
                   this.m_webAPIInterface.GetServiceTransport(),
-                  t
+                  t,
                 );
             } else {
               const o = new FormData();
@@ -7604,7 +7604,7 @@
               try {
                 yield s().post(
                   `${ft.De.CHAT_BASE_URL}broadcast/ajaxupdateusermute`,
-                  o
+                  o,
                 ),
                   0 == t
                     ? delete this.m_mapMutedUsers[e]
@@ -7630,7 +7630,7 @@
                     t.append("muted", "1"),
                     yield s().post(
                       `${ft.De.WEBAPI_BASE_URL}IBroadcastService/MuteBroadcastChatUser/v0001/?access_token=${this.m_webApiToken}`,
-                      t
+                      t,
                     );
                 } else {
                   const t = u.gA.Init(U);
@@ -7641,7 +7641,7 @@
                   }),
                     yield be.MuteBroadcastChatUser(
                       this.m_webAPIInterface.GetServiceTransport(),
-                      t
+                      t,
                     );
                 }
               } catch (i) {
@@ -7685,7 +7685,7 @@
                     t.append("muted", "0"),
                     yield s().post(
                       `${ft.De.WEBAPI_BASE_URL}IBroadcastService/MuteBroadcastChatUser/v0001/?access_token=${this.m_webApiToken}`,
-                      t
+                      t,
                     );
                 } else {
                   const t = u.gA.Init(U);
@@ -7696,7 +7696,7 @@
                   }),
                     yield be.MuteBroadcastChatUser(
                       this.m_webAPIInterface.GetServiceTransport(),
-                      t
+                      t,
                     );
                 }
                 this.m_rgChatMessages.push({
@@ -7733,7 +7733,7 @@
         }
         RemoveUserMessagesLocal(e) {
           this.m_rgChatMessages = this.m_rgChatMessages.filter(
-            (t) => t.steamid !== e
+            (t) => t.steamid !== e,
           );
         }
         RemoveUserMessagesServer(e, t) {
@@ -7746,7 +7746,7 @@
                     t.append("user_steamid", e),
                     yield s().post(
                       `${ft.De.WEBAPI_BASE_URL}IBroadcastService/RemoveUserChatText/v0001/?access_token=${this.m_webApiToken}`,
-                      t
+                      t,
                     );
                 } else {
                   const t = u.gA.Init(X);
@@ -7756,7 +7756,7 @@
                   }),
                     yield be.RemoveUserChatText(
                       this.m_webAPIInterface.GetServiceTransport(),
-                      t
+                      t,
                     );
                 }
               } catch (e) {
@@ -7780,7 +7780,7 @@
                 t.append("flair", `^${this.m_strFlairGroupID}^:${e}:`),
                 yield s().post(
                   `${ft.De.WEBAPI_BASE_URL}IBroadcastService/UpdateChatMessageFlair/v0001/?access_token=${this.m_webApiToken}`,
-                  t
+                  t,
                 );
             } else {
               const t = u.gA.Init(A);
@@ -7790,7 +7790,7 @@
               }),
                 yield be.UpdateChatMessageFlair(
                   this.m_webAPIInterface.GetServiceTransport(),
-                  t
+                  t,
                 );
             }
           });
@@ -7836,7 +7836,9 @@
           l.createElement(
             "div",
             { className: Xt().FriendsListInsetShadowCtn },
-            l.createElement("div", { className: Xt().FriendListInsetShadowTop })
+            l.createElement("div", {
+              className: Xt().FriendListInsetShadowTop,
+            }),
           ),
         Lt = () =>
           l.createElement(
@@ -7844,7 +7846,7 @@
             { className: Xt().FriendsListInsetShadowCtn },
             l.createElement("div", {
               className: Xt().FriendListInsetShadowBottom,
-            })
+            }),
           );
       var Ht = r(701),
         qt = r(19304),
@@ -7881,10 +7883,10 @@
               : 0,
           [c, d] = l.useState(o),
           m = (0, rr.et)(
-            `${(0, Yt.OL)()}4/080b1f163b02a9810fa78f0b32b9396fab012aef.gif`
+            `${(0, Yt.OL)()}4/080b1f163b02a9810fa78f0b32b9396fab012aef.gif`,
           ),
           u = (0, rr.et)(
-            `${(0, Yt.OL)()}4/56521811317a8298a7aff4a914be964b67dd0325.png`
+            `${(0, Yt.OL)()}4/56521811317a8298a7aff4a914be964b67dd0325.png`,
           ),
           h = (0, Qt.J)(i.giveaway_gid);
         let _ =
@@ -7918,7 +7920,7 @@
               l.createElement("img", {
                 className: ar().GiveawayWinnerArt,
                 src: m,
-              })
+              }),
             ),
             l.createElement(
               "div",
@@ -7929,8 +7931,8 @@
                   { className: (0, qt.Z)(ar().GiveawayWinnerText) },
                   (0, wt.kQ)(
                     "#GA2022_Congrats_Deck_Unknown",
-                    l.createElement("br", null)
-                  )
+                    l.createElement("br", null),
+                  ),
                 ),
               Boolean(c === o) &&
                 l.createElement(
@@ -7938,7 +7940,7 @@
                   {
                     className: (0, qt.Z)(
                       ar().GiveawayWinnerText,
-                      ar().GiveawayWinnerAnnounced
+                      ar().GiveawayWinnerAnnounced,
                     ),
                   },
                   (0, wt.kQ)(
@@ -7946,15 +7948,15 @@
                       ? "#GA2022_Congrats_Deck_Me"
                       : "#GA2022_Congrats_Deck_OTher",
                     b,
-                    l.createElement("br", null)
-                  )
+                    l.createElement("br", null),
+                  ),
                 ),
               Boolean(_ > 0) &&
                 l.createElement(
                   "div",
                   { className: ar().GiveawayWinnerCountdown },
-                  (0, wt.kQ)("#GA2022_Congrats_NextDraw", _)
-                )
+                  (0, wt.kQ)("#GA2022_Congrats_NextDraw", _),
+                ),
             ),
             l.createElement("img", {
               className: ar().GiveawayWinnerQuestion,
@@ -7964,9 +7966,9 @@
               l.createElement(
                 "div",
                 { className: n },
-                B ? (0, wt.Xx)("#GA2022_YouWonNextSteps") : s
-              )
-          )
+                B ? (0, wt.Xx)("#GA2022_YouWonNextSteps") : s,
+              ),
+          ),
         );
       }
       function or(e) {
@@ -7997,7 +7999,7 @@
               );
             }, [r, i]);
             const n = (0, o.SZ)(
-              () => (null == a ? void 0 : a.m_latestAnnouncement) || null
+              () => (null == a ? void 0 : a.m_latestAnnouncement) || null,
             );
             if ("giveaway_draw" == (null == n ? void 0 : n.type)) {
               const t = n;
@@ -8028,7 +8030,7 @@
       const lr = new RegExp("ː([^ː]*)ː", "g"),
         cr = new RegExp(
           "^https?://(?:[^/?#]+?\\.)?(?:valvesoftware|steamcommunity|steampowered)\\.com(?:/?#|$)",
-          "i"
+          "i",
         );
       const dr = (e) => {
           const { userType: t, msg: r, presenterInfo: i } = e;
@@ -8050,15 +8052,15 @@
                   {
                     className: (0, qt.Z)(
                       Kt().MessageName,
-                      Kt().MessagePresenter
+                      Kt().MessagePresenter,
                     ),
                     href: ft.De.COMMUNITY_BASE_URL + "profiles/" + r.steamid,
                     target: "_blank",
                     rel: "noopener noreferrer",
                   },
-                  r.persona_name
-                )
-              )
+                  r.persona_name,
+                ),
+              ),
             );
           {
             let e = null;
@@ -8078,8 +8080,8 @@
                     target: "_blank",
                     rel: "noopener noreferrer",
                   },
-                  r.persona_name
-                )
+                  r.persona_name,
+                ),
               )
             );
           }
@@ -8092,10 +8094,10 @@
                 {
                   className: Kt().RoleFlairContainer,
                   "data-tooltip-text": (0, wt.Xx)(
-                    "#BroadcastChat_Role_Presenter_ttip"
+                    "#BroadcastChat_Role_Presenter_ttip",
                   ),
                 },
-                l.createElement(Ht.x0L, null)
+                l.createElement(Ht.x0L, null),
               );
             case "moderator":
               return l.createElement(
@@ -8103,10 +8105,10 @@
                 {
                   className: Kt().RoleFlairContainer,
                   "data-tooltip-text": (0, wt.Xx)(
-                    "#BroadcastChat_Role_Moderatorr_ttip"
+                    "#BroadcastChat_Role_Moderatorr_ttip",
                   ),
                 },
-                l.createElement(Ht.yTr, null)
+                l.createElement(Ht.yTr, null),
               );
             case "broadcaster":
               return l.createElement(
@@ -8114,10 +8116,10 @@
                 {
                   className: Kt().RoleFlairContainer,
                   "data-tooltip-text": (0, wt.Xx)(
-                    "#BroadcastChat_Role_Broadcaster_ttip"
+                    "#BroadcastChat_Role_Broadcaster_ttip",
                   ),
                 },
-                l.createElement(Ht.miF, null)
+                l.createElement(Ht.miF, null),
               );
             default:
               return null;
@@ -8149,7 +8151,7 @@
             (this.m_chat && this.m_chat.Stop(),
             (this.m_chat = Et.Get().GetOrCreateChat(
               this.props.broadcastChannelID,
-              this.props.steamID
+              this.props.steamID,
             )),
             this.props.broadcastChannelID)
           )
@@ -8180,7 +8182,7 @@
                     key: e,
                     emoticon: i[e],
                     large: !0,
-                  })
+                  }),
                 )
               : a.push(i[e]);
           return a;
@@ -8204,7 +8206,7 @@
           const r = [],
             i = this.m_chat.IsUserBroadcaster(this.m_chat.GetUserSteamID()),
             a = this.m_chat.BIsUserBroadcastModerator(
-              this.m_chat.GetUserSteamID()
+              this.m_chat.GetUserSteamID(),
             );
           if (
             ((ft.L7 && ft.L7.is_support) || i || a
@@ -8216,10 +8218,10 @@
                       onSelected: () =>
                         this.m_chat.RemoveUserMessagesServer(
                           t.steamid,
-                          t.persona_name
+                          t.persona_name,
                         ),
                     },
-                    (0, wt.Xx)("#BroadcastChat_RemoveMessages")
+                    (0, wt.Xx)("#BroadcastChat_RemoveMessages"),
                   ),
                   l.createElement(
                     Nt.Zo,
@@ -8231,10 +8233,10 @@
                           1,
                           12,
                           !1,
-                          t.persona_name
+                          t.persona_name,
                         ),
                     },
-                    (0, wt.Xx)("#BroadcastChat_half_Mute")
+                    (0, wt.Xx)("#BroadcastChat_half_Mute"),
                   ),
                   l.createElement(
                     Nt.Zo,
@@ -8246,10 +8248,10 @@
                           1,
                           24,
                           !1,
-                          t.persona_name
+                          t.persona_name,
                         ),
                     },
-                    (0, wt.Xx)("#BroadcastChat_day_Mute")
+                    (0, wt.Xx)("#BroadcastChat_day_Mute"),
                   ),
                   l.createElement(
                     Nt.Zo,
@@ -8261,10 +8263,10 @@
                           1,
                           168,
                           !1,
-                          t.persona_name
+                          t.persona_name,
                         ),
                     },
-                    (0, wt.Xx)("#BroadcastChat_week_Mute")
+                    (0, wt.Xx)("#BroadcastChat_week_Mute"),
                   ),
                   l.createElement(
                     Nt.Zo,
@@ -8276,10 +8278,10 @@
                           1,
                           0,
                           !0,
-                          t.persona_name
+                          t.persona_name,
                         ),
                     },
-                    (0, wt.Xx)("#BroadcastChat_perm_Mute")
+                    (0, wt.Xx)("#BroadcastChat_perm_Mute"),
                   ),
                   l.createElement(
                     Nt.Zo,
@@ -8292,11 +8294,11 @@
                           0,
                           !1,
                           t.persona_name,
-                          !0
+                          !0,
                         ),
                     },
-                    (0, wt.Xx)("#BroadcastChat_Unmute")
-                  )
+                    (0, wt.Xx)("#BroadcastChat_Unmute"),
+                  ),
                 )
               : this.m_chat.IsUserMutedLocally(t.steamid)
               ? r.push(
@@ -8307,11 +8309,11 @@
                       onSelected: () =>
                         this.m_chat.UnmuteUserForSession(
                           t.steamid,
-                          t.persona_name
+                          t.persona_name,
                         ),
                     },
-                    (0, wt.Xx)("#BroadcastChat_UnmuteLocal")
-                  )
+                    (0, wt.Xx)("#BroadcastChat_UnmuteLocal"),
+                  ),
                 )
               : r.push(
                   l.createElement(
@@ -8321,11 +8323,11 @@
                       onSelected: () =>
                         this.m_chat.MuteUserForSession(
                           t.steamid,
-                          t.persona_name
+                          t.persona_name,
                         ),
                     },
-                    (0, wt.Xx)("#BroadcastChat_MuteLocal")
-                  )
+                    (0, wt.Xx)("#BroadcastChat_MuteLocal"),
+                  ),
                 ),
             ((ft.L7 && ft.L7.is_support) ||
               this.m_chat.IsUserBroadcaster(this.m_chat.GetUserSteamID())) &&
@@ -8341,11 +8343,11 @@
                         this.m_chat.UpdateBroadcastChatModerator(
                           t.steamid,
                           !1,
-                          t.persona_name
+                          t.persona_name,
                         ),
                     },
-                    (0, wt.Xx)("#BroadcastChat_Remove_Moderator")
-                  )
+                    (0, wt.Xx)("#BroadcastChat_Remove_Moderator"),
+                  ),
                 )
               : r.push(
                   l.createElement(
@@ -8356,11 +8358,11 @@
                         this.m_chat.UpdateBroadcastChatModerator(
                           t.steamid,
                           !0,
-                          t.persona_name
+                          t.persona_name,
                         ),
                     },
-                    (0, wt.Xx)("#BroadcastChat_Add_Moderator")
-                  )
+                    (0, wt.Xx)("#BroadcastChat_Add_Moderator"),
+                  ),
                 );
           }
           return r.length
@@ -8376,12 +8378,12 @@
                     l.createElement(
                       "span",
                       { className: Kt().SelectedUserName },
-                      t.persona_name
-                    )
+                      t.persona_name,
+                    ),
                   ),
-                  r
+                  r,
                 ),
-                e
+                e,
               )
             : null;
         }
@@ -8425,7 +8427,7 @@
               l.createElement(
                 "span",
                 { className: Kt().FlairContainer },
-                this.AddLinksEmoticons(e.flair, !1)
+                this.AddLinksEmoticons(e.flair, !1),
               ),
             e.type === m.gK.Chat &&
               l.createElement(dr, { userType: a, msg: e, presenterInfo: i }),
@@ -8438,7 +8440,7 @@
                     Kt().MessageContents
                   }`,
                 },
-                ` (${(0, wt.Xx)("#BroadcastChat_Broadcaster")})`
+                ` (${(0, wt.Xx)("#BroadcastChat_Broadcaster")})`,
               ),
             e.type === m.gK.Chat &&
               this.m_chat.m_mapChannelModeratorUsers.get(e.steamid) &&
@@ -8449,22 +8451,22 @@
                     Kt().MessageContents
                   }`,
                 },
-                ` (${(0, wt.Xx)("#BroadcastChat_Moderator")})`
+                ` (${(0, wt.Xx)("#BroadcastChat_Moderator")})`,
               ),
             l.createElement(
               "span",
               {
                 className: `${Kt().MessageContents} ${
                   this.AddLinksEmoticons(e.msg, !1).filter(
-                    (e) => e && "string" == typeof e
+                    (e) => e && "string" == typeof e,
                   ).length
                     ? ""
                     : Kt().EmoticonsOnly
                 }`,
               },
               e.type === m.gK.Chat ? " : " : "",
-              this.FormatMessage(e, this.m_chat.TextFilterStore)
-            )
+              this.FormatMessage(e, this.m_chat.TextFilterStore),
+            ),
           );
         }
         render() {
@@ -8477,7 +8479,7 @@
             a = r ? i.reverse() : i,
             s = this.m_chat
               ? Wt.C.GetPresenterMapForBroadcasterSteamID(
-                  this.m_chat.GetBroadcastSteamID()
+                  this.m_chat.GetBroadcastSteamID(),
                 )
               : void 0,
             n = this.m_chat ? this.m_chat.m_latestAnnouncement : null;
@@ -8501,12 +8503,12 @@
               {
                 className: (0, qt.Z)(
                   `${Kt().ChatMessages} ${It().minHeightZero}`,
-                  "ChatMessages"
+                  "ChatMessages",
                 ),
                 onScroll: this.HandleScroll,
                 ref: this.messagesContainer,
               },
-              a.map((e, t) => this.RenderUserChatLine(e, t, s))
+              a.map((e, t) => this.RenderUserChatLine(e, t, s)),
             ),
             l.createElement(Lt, null),
             !r &&
@@ -8515,7 +8517,7 @@
                 oChat: this.m_chat,
                 emoticonStore: this.props.emoticonStore,
                 bPartnerMemberOnlyChat: t,
-              })
+              }),
           );
         }
       };
@@ -8543,14 +8545,14 @@
                 (t.m_bRateLimited || (t.SendMessage(i), a("")),
                 e.preventDefault());
             },
-            [t, i]
+            [t, i],
           ),
           d = l.useCallback(
             (e, t = !1) => {
               a(i + `ː${e}ː`),
                 (null == s ? void 0 : s.current) && s.current.focus();
             },
-            [i, s]
+            [i, s],
           );
         let m = n || 0 == i.trim().length,
           u = (0, qt.Z)(It().chatSubmitButton, 0 == i.length && It().disabled);
@@ -8586,8 +8588,8 @@
                     t.SendMessage(i), a("");
                   },
                 },
-                l.createElement(Ht.k4K, null)
-              )
+                l.createElement(Ht.k4K, null),
+              ),
             ),
             l.createElement(
               "div",
@@ -8605,10 +8607,10 @@
                   emoticonStore: r,
                   emoticonHoverStore: xt.$,
                 }),
-                l.createElement(Br, Object.assign({}, e, { textInputRef: s }))
-              )
-            )
-          )
+                l.createElement(Br, Object.assign({}, e, { textInputRef: s })),
+              ),
+            ),
+          ),
         );
       }
       function Br(e) {
@@ -8660,8 +8662,8 @@
               l.createElement("div", {
                 className: Kt().mask,
                 style: { animationDuration: `${this.props.nSeconds || 0}s` },
-              })
-            )
+              }),
+            ),
           );
         }
       }
@@ -8672,14 +8674,14 @@
           l.createElement(
             "div",
             { className: Kt().LogInPrompt },
-            (0, wt.Xx)("#Broadcast_PartnerChat_Login")
+            (0, wt.Xx)("#Broadcast_PartnerChat_Login"),
           ),
           !ft.L7.logged_in &&
             l.createElement(
               Pt.zx,
               { onClick: kt.X, className: (0, qt.Z)(Kt().SignInButton) },
-              (0, wt.Xx)("#Login_SignIn")
-            )
+              (0, wt.Xx)("#Login_SignIn"),
+            ),
         );
       }
       var gr = r(28388),
@@ -8699,7 +8701,7 @@
           [a, s] = (0, Sr.vs)(t, i.current);
         let n = (0, qt.Z)(
             Rr().StoreSaleWidgetContainer_mini,
-            "StoreSaleWidgetContainer_mini"
+            "StoreSaleWidgetContainer_mini",
           ),
           o = Rr().StoreSaleWidgetImage_mini,
           c = Rr().StoreSaleImage_mini;
@@ -8708,7 +8710,7 @@
             "div",
             { className: n },
             l.createElement(Cr.V, { size: "medium" }),
-            ";"
+            ";",
           );
         if (2 == s || !a.GetName())
           return l.createElement("div", {
@@ -8734,10 +8736,10 @@
                   l.createElement("img", {
                     className: c,
                     src: a.GetAssets().GetSmallCapsuleURL(),
-                  })
-                )
-              )
-            )
+                  }),
+                ),
+              ),
+            ),
           ),
           l.createElement(
             "div",
@@ -8756,25 +8758,25 @@
                     {
                       className: (0, qt.Z)(
                         wr.StoreSaleWidgetTitle,
-                        "StoreSaleWidgetTitle"
+                        "StoreSaleWidgetTitle",
                       ),
                     },
-                    a.GetName()
-                  )
-                )
-              )
+                    a.GetName(),
+                  ),
+                ),
+              ),
             ),
             l.createElement(
               "div",
               { className: wr.StoreSaleWidgetRelease },
-              a.GetFormattedSteamReleaseDate()
+              a.GetFormattedSteamReleaseDate(),
             ),
             Boolean(d) &&
               l.createElement(fr.x1, {
                 info: { id: t, type: "game" },
                 bShowDemoButton: !0,
-              })
-          )
+              }),
+          ),
         );
       });
       var Tr = r(65786),
@@ -8795,11 +8797,11 @@
                 r(e),
               t && t(e)
             ),
-            [t, r]
+            [t, r],
           );
         return l.createElement(
           Nr.h,
-          Object.assign({}, e, { onPositionChange: i })
+          Object.assign({}, e, { onPositionChange: i }),
         );
       };
       var jr = r(88443),
@@ -8812,7 +8814,7 @@
           a = !t || !t.jsondata || !t.jsondata.broadcast_item_drops_enabled,
           n = (0, l.useRef)(null),
           [o, c] = (0, l.useState)(
-            t ? Ar.bq.GetCreatorHome(t.clanSteamID) : null
+            t ? Ar.bq.GetCreatorHome(t.clanSteamID) : null,
           );
         if (
           ((0, l.useEffect)(() => {
@@ -8857,15 +8859,15 @@
               t.jsondata.broadcast_item_drops_min_watch_time_minutes % 60 == 0
                 ? t.jsondata.broadcast_item_drops_min_watch_time_minutes / 60
                 : t.jsondata.broadcast_item_drops_min_watch_time_minutes,
-              o.GetName()
+              o.GetName(),
             ),
             Boolean(t.jsondata.broadcast_item_drops_details_clan_accountid) &&
               l.createElement(
                 "a",
                 { href: d, target: ft.De.IN_CLIENT ? "" : "_blank" },
-                (0, wt.Xx)("#SalePage_WatchForDrop_LearnMore")
-              )
-          )
+                (0, wt.Xx)("#SalePage_WatchForDrop_LearnMore"),
+              ),
+          ),
         );
       });
       var Xr = r(17318),
@@ -8891,7 +8893,7 @@
             modalClassName: "EventDisplay_Share_Dialog",
           },
           l.createElement(ei, { steamid: t }),
-          l.createElement(ti, { steamid: t })
+          l.createElement(ti, { steamid: t }),
         );
       }
       function ei(e) {
@@ -8901,7 +8903,7 @@
           {
             className: (0, qt.Z)(
               Vr().FlexRowContainer,
-              Yr().share_controls_ctn
+              Yr().share_controls_ctn,
             ),
           },
           l.createElement(
@@ -8913,8 +8915,8 @@
               l.createElement("img", {
                 className: (0, qt.Z)(Vr().Button),
                 src: Hr.Z,
-              })
-            )
+              }),
+            ),
           ),
           l.createElement(
             Ir.HP,
@@ -8925,8 +8927,8 @@
               l.createElement("img", {
                 className: (0, qt.Z)(Vr().Button),
                 src: $r.Z,
-              })
-            )
+              }),
+            ),
           ),
           l.createElement(
             Ir.HP,
@@ -8937,9 +8939,9 @@
               l.createElement("img", {
                 className: (0, qt.Z)(Vr().Button),
                 src: qr.Z,
-              })
-            )
-          )
+              }),
+            ),
+          ),
         );
       }
       function ti(e) {
@@ -8957,12 +8959,12 @@
                   })
                   .catch((e) => {
                     a(
-                      (0, wt.Xx)("#EventDisplay_Share_FailedToCopyToClipboard")
+                      (0, wt.Xx)("#EventDisplay_Share_FailedToCopyToClipboard"),
                     ),
                       console.error("Failed to copy link to clipboard:", e);
                   });
             },
-            [r]
+            [r],
           ),
           o = ft.De.COMMUNITY_BASE_URL + "broadcast/watch/" + t;
         return l.createElement(
@@ -8977,7 +8979,7 @@
             l.createElement(
               "span",
               { className: Yr().LinkInputLabel },
-              (0, wt.Xx)("#EventDisplay_Share_Link")
+              (0, wt.Xx)("#EventDisplay_Share_Link"),
             ),
             l.createElement("textarea", {
               className: Yr().LinkInput,
@@ -8995,17 +8997,17 @@
                     className: (0, qt.Z)(
                       Vr().Button,
                       Vr().Icon,
-                      Yr().LinkButton
+                      Yr().LinkButton,
                     ),
                   },
                   l.createElement("img", {
                     className: Yr().ClipboardIcon,
                     src: Lr.Z,
-                  })
-                )
-              )
+                  }),
+                ),
+              ),
           ),
-          l.createElement("div", { ref: s, className: Yr().ClipboardText }, i)
+          l.createElement("div", { ref: s, className: Yr().ClipboardText }, i),
         );
       }
       function ri(e, t) {
@@ -9089,7 +9091,7 @@
                         .BIsEmbeddedBroadcastHiddenByDefaultUserSettings()
                         ? "0vh"
                         : "100vh",
-                    }
+                    },
                   ),
                 }),
               yield this.props.bIsPreview &&
@@ -9125,20 +9127,20 @@
                 this.setState({
                   innerStyle: Object.assign(
                     Object.assign({}, this.state.innerStyle),
-                    { maxHeight: t ? "0vh" : "100vh" }
+                    { maxHeight: t ? "0vh" : "100vh" },
                   ),
                 }),
-              10
+              10,
             ),
             t ||
               this.setState({ bExpanded: !this.state.bExpanded }, () =>
-                Er.ai.Get().SetEmbeddedStreamCollapsed(!this.state.bExpanded)
+                Er.ai.Get().SetEmbeddedStreamCollapsed(!this.state.bExpanded),
               );
         }
         OnShrinkTransitionEnd() {
           "0vh" === this.state.innerStyle.maxHeight &&
             this.setState({ bExpanded: !1 }, () =>
-              Er.ai.Get().SetEmbeddedStreamCollapsed(!0)
+              Er.ai.Get().SetEmbeddedStreamCollapsed(!0),
             );
         }
         onStreamSelect(e) {
@@ -9157,7 +9159,7 @@
               .GetStreams(this.props)
               .filter(
                 (e) =>
-                  !this.props.fnFilterStreams || this.props.fnFilterStreams(e)
+                  !this.props.fnFilterStreams || this.props.fnFilterStreams(e),
               );
             yield Er.ai.Get().PlayFromAvailableStreams(this.props, e, !0);
           });
@@ -9174,7 +9176,7 @@
             s = l.createElement(
               "div",
               { className: Ur().rightPanel },
-              l.createElement(mi, { key: "right" + a, ImgUrl: e.right_panel })
+              l.createElement(mi, { key: "right" + a, ImgUrl: e.right_panel }),
             ),
             n = l.createElement(mi, { key: "left" + a, ImgUrl: e.left_panel });
           if (a < 11) {
@@ -9237,14 +9239,14 @@
               (e = Object.assign(Object.assign({}, e), {
                 left_panel: r.GetImageURL(
                   "broadcast_left",
-                  i || (0, Mt.jM)(ft.De.LANGUAGE)
+                  i || (0, Mt.jM)(ft.De.LANGUAGE),
                 ),
                 right_panel: r.GetImageURL(
                   "broadcast_right",
-                  i || (0, Mt.jM)(ft.De.LANGUAGE)
+                  i || (0, Mt.jM)(ft.De.LANGUAGE),
                 ),
                 store_title: r.GetBroadcastTitle(
-                  i || (0, Mt.jM)(ft.De.LANGUAGE)
+                  i || (0, Mt.jM)(ft.De.LANGUAGE),
                 ),
                 broadcast_chat_visibility: r.GetBroadcastChatVisibility(),
               }));
@@ -9281,7 +9283,7 @@
                     {
                       className: (0, qt.Z)(
                         Ur().bordered_title,
-                        "bordered_title_trgt"
+                        "bordered_title_trgt",
                       ),
                     },
                     l.createElement(Wr.xP, null),
@@ -9293,11 +9295,11 @@
                         l.createElement("div", {
                           className: Ur().broadcast_settings_icon,
                           "data-tooltip-text": (0, wt.Xx)(
-                            "#StoreBroadcast_Change_store_Broadcast_settings"
+                            "#StoreBroadcast_Change_store_Broadcast_settings",
                           ),
                           onClick: () =>
                             window.open(
-                              `${ft.De.STORE_BASE_URL}account/preferences/#store_broadcast_settings`
+                              `${ft.De.STORE_BASE_URL}account/preferences/#store_broadcast_settings`,
                             ),
                         }),
                       l.createElement("div", {
@@ -9305,17 +9307,17 @@
                           ? Ur().bordered_corner_expanded
                           : Ur().bordered_corner_shrinked,
                         "data-tooltip-text": (0, wt.Xx)(
-                          "#StoreBroadcast_Hide_Tooltip"
+                          "#StoreBroadcast_Hide_Tooltip",
                         ),
                         onClick: this.ToggleBroadcastExpandShrink,
-                      })
+                      }),
                     ),
                     Boolean(e.gamedata_subtitle) &&
                       l.createElement(
                         "div",
                         { className: Ur().bordered_subtitle },
-                        e.gamedata_subtitle
-                      )
+                        e.gamedata_subtitle,
+                      ),
                   ),
                   Boolean(this.state.bExpanded) &&
                     l.createElement(
@@ -9348,14 +9350,14 @@
                           chatAnnouncementGivewayGID: s.rightPanel
                             ? void 0
                             : this.props.chat_announcement_giveaway,
-                        })
-                    )
+                        }),
+                    ),
                 ),
                 Boolean(
-                  r && r.jsondata && r.jsondata.broadcast_item_drops_enabled
+                  r && r.jsondata && r.jsondata.broadcast_item_drops_enabled,
                 ) && l.createElement(Gr, { event: r }),
-                l.createElement("div", { className: Ur().clear_div })
-              )
+                l.createElement("div", { className: Ur().clear_div }),
+              ),
             );
           }
           return l.createElement("div", { className: "NoBroadcastAvailable" });
@@ -9377,7 +9379,7 @@
         }
         CloseBroadcastPopup() {
           const e = Jt.c9.GetOrCreateBroadcastInfo(
-            this.props.stream.steamid
+            this.props.stream.steamid,
           ).m_nAppID;
           (0, Er.wx)(e, 7, this.props.stream.snr),
             (0, Tr.X)() && (0, Tr.X)().AddEvent(1006),
@@ -9433,11 +9435,11 @@
                         this.props.fnRenderBroadcastContext,
                       fnOnVideoEnd: this.props.fnOnVideoEnd,
                       nAppIDVOD: this.props.stream.nAppIDVOD,
-                    })
-                  )
-                )
-              )
-            )
+                    }),
+                  ),
+                ),
+              ),
+            ),
           );
         }
       }
@@ -9448,7 +9450,8 @@
           a = si.list.find(
             (e) =>
               e.appid == i &&
-              (!e.broadcasterAccountID || e.broadcasterAccountID == t.accountid)
+              (!e.broadcasterAccountID ||
+                e.broadcasterAccountID == t.accountid),
           );
         if (a) {
           let e = a.url;
@@ -9461,7 +9464,7 @@
             l.createElement(
               "a",
               { href: e },
-              (0, wt.Xx)("#Broadcast_Embed_Watch_With_Frieds_SteamTV")
+              (0, wt.Xx)("#Broadcast_Embed_Watch_With_Frieds_SteamTV"),
             )
           );
         }
@@ -9475,8 +9478,8 @@
             l.createElement(
               "a",
               { href: e, className: Ur().external_link },
-              l.createElement(Ht.dLw, null)
-            )
+              l.createElement(Ht.dLw, null),
+            ),
           );
         }
       }
@@ -9487,18 +9490,18 @@
         OnToggleChat(e) {
           e.preventDefault();
           const t = Jt.c9.GetOrCreateBroadcastInfo(
-            this.props.stream.steamid
+            this.props.stream.steamid,
           ).m_nAppID;
           (0, Er.wx)(
             t,
             "show" === Er.ai.Get().GetChatVisibility() ? 5 : 4,
-            this.props.stream.snr
+            this.props.stream.snr,
           ),
             Er.ai.Get().ToggleChatVisibility();
         }
         onWatchBroadcastPage() {
           const e = Jt.c9.GetOrCreateBroadcastInfo(
-            this.props.stream.steamid
+            this.props.stream.steamid,
           ).m_nAppID;
           (0, Er.wx)(e, 9, this.props.stream.snr);
         }
@@ -9510,7 +9513,7 @@
           let a = Number.parseInt(
             "" +
               Jt.c9.GetOrCreateBroadcastInfo(this.props.stream.steamid)
-                .m_nViewerCount
+                .m_nViewerCount,
           );
           return l.createElement(
             "div",
@@ -9519,7 +9522,7 @@
               "div",
               { className: (0, qt.Z)(Ur().viewer_count, "viewer_count") },
               l.createElement(Ht.lsH, null),
-              (0, jr.AV)(a)
+              (0, jr.AV)(a),
             ),
             l.createElement(
               "div",
@@ -9535,8 +9538,8 @@
                       className: Ur().ChatToggle,
                       onClick: this.OnToggleChat,
                     },
-                    (0, wt.Xx)("#sale_three_section_show_streams")
-                  )
+                    (0, wt.Xx)("#sale_three_section_show_streams"),
+                  ),
                 ),
               e &&
                 l.createElement(
@@ -9553,9 +9556,9 @@
                     (0, wt.Xx)(
                       t
                         ? "#sale_three_section_show_chat"
-                        : "#sale_three_section_hide_chat"
-                    )
-                  )
+                        : "#sale_three_section_hide_chat",
+                    ),
+                  ),
                 ),
               i &&
                 l.createElement(
@@ -9572,17 +9575,17 @@
                           l.createElement(Qr, {
                             steamid: this.props.stream.steamid,
                           }),
-                          (0, ii.RA)(e)
+                          (0, ii.RA)(e),
                         ),
                     },
-                    (0, wt.Xx)("#Broadcast_ShareBroadcast")
-                  )
+                    (0, wt.Xx)("#Broadcast_ShareBroadcast"),
+                  ),
                 ),
               l.createElement(
                 Ir.HP,
                 {
                   toolTipContent: (0, wt.Xx)(
-                    "#StoreBroadcast_Change_store_Broadcast_settings"
+                    "#StoreBroadcast_Change_store_Broadcast_settings",
                   ),
                 },
                 l.createElement(
@@ -9594,16 +9597,16 @@
                     target: ft.De.IN_CLIENT ? void 0 : "_blank",
                     className: Ur().settings_link,
                   },
-                  l.createElement(Ht.Zrf, null)
-                )
+                  l.createElement(Ht.Zrf, null),
+                ),
               ),
-              r && l.createElement(ci, Object.assign({}, this.props))
+              r && l.createElement(ci, Object.assign({}, this.props)),
             ),
             Boolean(this.props.chatAnnouncementGivewayGID) &&
               l.createElement(or, {
                 gidGiveaway: this.props.chatAnnouncementGivewayGID,
                 stream: this.props.stream,
-              })
+              }),
           );
         }
       };
@@ -9621,7 +9624,7 @@
                 className: Ur().side_panels,
                 src: this.props.ImgUrl,
               }),
-            !e && l.createElement("div", { className: Ur().side_panels })
+            !e && l.createElement("div", { className: Ur().side_panels }),
           );
         }
       }
@@ -9636,24 +9639,24 @@
             ? l.createElement(
                 Mr._,
                 { type: "app", id: r, className: Ur().PopOutVideoTitleText },
-                (0, wt.Xx)("#StoreBroadcast_Detault_popout_Title")
+                (0, wt.Xx)("#StoreBroadcast_Detault_popout_Title"),
               )
             : l.createElement(
                 "div",
                 { className: Ur().PopOutVideoTitleText },
-                (0, wt.Xx)("#StoreBroadcast_Detault_popout_Title")
+                (0, wt.Xx)("#StoreBroadcast_Detault_popout_Title"),
               ),
           l.createElement(
             "button",
             {
               className: Ur().PopOutVideoCloseButton,
               "data-tooltip-text": (0, wt.Xx)(
-                "#StoreBroadcast_close_broadcast_popup"
+                "#StoreBroadcast_close_broadcast_popup",
               ),
               onClick: e.OnPreventPopup,
             },
-            l.createElement(Ht.X, null)
-          )
+            l.createElement(Ht.X, null),
+          ),
         );
       });
       function hi(e, t) {
@@ -9723,7 +9726,7 @@
                 onStreamSelect: r,
                 bShowCapsuleArt: a,
               });
-            })
+            }),
           )
         );
       }
@@ -9736,7 +9739,7 @@
             bShowCapsuleArt: s,
           } = e,
           n = (0, o.SZ)(
-            () => Jt.c9.GetOrCreateBroadcastInfo(a.steamid).m_nAppID
+            () => Jt.c9.GetOrCreateBroadcastInfo(a.steamid).m_nAppID,
           ),
           [c] = (0, Sr.vs)(null !== (t = a.nAppIDVOD) && void 0 !== t ? t : n, {
             include_assets: !0,
@@ -9771,8 +9774,9 @@
                 bSelected: i,
                 strCapsuleArtURL: d,
               }),
-              i && l.createElement("div", { className: Ur().stream_icon_arrow })
-            )
+              i &&
+                l.createElement("div", { className: Ur().stream_icon_arrow }),
+            ),
           ),
           l.createElement(
             "div",
@@ -9783,10 +9787,10 @@
                   null,
                   l.createElement(Ht.lsH, null),
                   " ",
-                  (0, jr.AV)(m)
+                  (0, jr.AV)(m),
                 )
-              : h
-          )
+              : h,
+          ),
         );
       }
       function bi(e) {
@@ -9804,7 +9808,7 @@
             l.createElement(xr.J, {
               className: (0, qt.Z)(a, Ur().stream_icon_show_on_hover),
               srcs: e,
-            })
+            }),
           );
         }
         return l.createElement("img", { className: a, src: r });
@@ -9840,8 +9844,8 @@
                   watchLocation: 6,
                   steamID: n,
                   broadcastID: s,
-                })
-              )
+                }),
+              ),
             )
           : null;
       }
@@ -9897,10 +9901,10 @@
             r = this.props.updateRate;
           this.m_Context = this.m_elCanvas.getContext("2d");
           let i = Math.floor(
-              this.m_elCanvas.clientWidth / this.props.reductionFactor
+              this.m_elCanvas.clientWidth / this.props.reductionFactor,
             ),
             a = Math.floor(
-              this.m_elCanvas.clientHeight / this.props.reductionFactor
+              this.m_elCanvas.clientHeight / this.props.reductionFactor,
             );
           (this.m_elCanvas.width = i),
             (this.m_elCanvas.height = a),
@@ -9960,8 +9964,8 @@
                 key: t(),
                 style: c,
               },
-              n
-            )
+              n,
+            ),
           );
         }
       }
@@ -9974,7 +9978,7 @@
           return l.createElement(
             f,
             Object.assign({ style: a, keyExtractor: () => t }, r),
-            l.createElement("div", { className: "crossfade-img" })
+            l.createElement("div", { className: "crossfade-img" }),
           );
         }
       }
@@ -9997,7 +10001,7 @@
         return l.createElement(
           "div",
           { className: "STV_ReplayBanner" },
-          (0, E.Xx)("#DASHPlayerControls_IsReplay")
+          (0, E.Xx)("#DASHPlayerControls_IsReplay"),
         );
       }
       const k = (0, o.Pi)((e) => {
@@ -10025,8 +10029,8 @@
             l.createElement(
               "div",
               { className: "BroadcastVideoWatchState_Text" },
-              i
-            )
+              i,
+            ),
         );
       });
       class U extends l.Component {
@@ -10044,8 +10048,8 @@
             l.createElement(
               "span",
               null,
-              (0, E.Xx)("#DASHPlayerControls_ClickToPlay")
-            )
+              (0, E.Xx)("#DASHPlayerControls_ClickToPlay"),
+            ),
           );
         }
       }
@@ -10065,7 +10069,7 @@
             l.createElement(
               "button",
               { className: "dash_stat_close_button", onClick: this.HideStats },
-              l.createElement(R.pVO, null)
+              l.createElement(R.pVO, null),
             ),
             l.createElement(
               "div",
@@ -10075,8 +10079,8 @@
               l.createElement(
                 "span",
                 { className: "videoStatsValue" },
-                e.GetBufferingResolutionToDisplay()
-              )
+                e.GetBufferingResolutionToDisplay(),
+              ),
             ),
             l.createElement(
               "div",
@@ -10086,8 +10090,8 @@
               l.createElement(
                 "span",
                 { className: "videoStatsValue" },
-                e.GetPlaybackResolutionToDisplay()
-              )
+                e.GetPlaybackResolutionToDisplay(),
+              ),
             ),
             l.createElement(
               "div",
@@ -10097,8 +10101,8 @@
               l.createElement(
                 "span",
                 { className: "videoStatsValue" },
-                e.GetHTMLVideoResolutionToDisplay()
-              )
+                e.GetHTMLVideoResolutionToDisplay(),
+              ),
             ),
             l.createElement(
               "div",
@@ -10108,8 +10112,8 @@
               l.createElement(
                 "span",
                 { className: "videoStatsValue" },
-                e.GetContentServerToDisplay()
-              )
+                e.GetContentServerToDisplay(),
+              ),
             ),
             l.createElement(
               "div",
@@ -10119,8 +10123,8 @@
               l.createElement(
                 "span",
                 { className: "videoStatsValue" },
-                e.GetStalledEventsToDisplay()
-              )
+                e.GetStalledEventsToDisplay(),
+              ),
             ),
             l.createElement(
               "div",
@@ -10130,8 +10134,8 @@
               l.createElement(
                 "span",
                 { className: "videoStatsValue" },
-                e.GetFailedDownloadsToDisplay()
-              )
+                e.GetFailedDownloadsToDisplay(),
+              ),
             ),
             l.createElement(
               "div",
@@ -10141,8 +10145,8 @@
               l.createElement(
                 "span",
                 { className: "videoStatsValue" },
-                e.GetTimeToFirstFrameToDisplay()
-              )
+                e.GetTimeToFirstFrameToDisplay(),
+              ),
             ),
             l.createElement(
               "div",
@@ -10152,10 +10156,10 @@
               l.createElement(
                 "span",
                 { className: "videoStatsValue" },
-                e.GetPlaybackRateForDisplay()
-              )
+                e.GetPlaybackRateForDisplay(),
+              ),
             ),
-            l.createElement(X, { stats: e })
+            l.createElement(X, { stats: e }),
           );
         }
       };
@@ -10178,7 +10182,7 @@
                   e
                     ? "#DASHPlayerStats_VideoBufferRange"
                     : "#DASHPlayerStats_AudioBufferRange",
-                  s
+                  s,
                 ),
                 n = e
                   ? t.GetBufferedVideoSegmentForDisplay(s)
@@ -10189,15 +10193,15 @@
                   { key: i + s },
                   a,
                   " ",
-                  l.createElement("span", { className: "videoStatsValue" }, n)
-                )
+                  l.createElement("span", { className: "videoStatsValue" }, n),
+                ),
               );
             }
           else {
             let t = (0, E.Xx)(
               e
                 ? "#DASHPlayerStats_VideoNoRangeInformation"
-                : "#DASHPlayerStats_AudioNoRangeInformation"
+                : "#DASHPlayerStats_AudioNoRangeInformation",
             );
             r.push(l.createElement("div", { key: i + "none" }, t));
           }
@@ -10216,8 +10220,8 @@
               l.createElement(
                 "span",
                 { className: "videoStatsValue" },
-                e.GetBytesReceivedToDisplay()
-              )
+                e.GetBytesReceivedToDisplay(),
+              ),
             ),
             this.props.stats.BHasFrameInformation() &&
               l.createElement(
@@ -10228,8 +10232,8 @@
                 l.createElement(
                   "span",
                   { className: "videoStatsValue" },
-                  e.GetDroppedFramesToDisplay()
-                )
+                  e.GetDroppedFramesToDisplay(),
+                ),
               ),
             l.createElement(
               "div",
@@ -10240,8 +10244,8 @@
                 "span",
                 { className: "videoStatsValue" },
                 e.GetVideoBufferedToDisplay(),
-                " "
-              )
+                " ",
+              ),
             ),
             l.createElement(
               "div",
@@ -10252,8 +10256,8 @@
                 "span",
                 { className: "videoStatsValue" },
                 e.GetAudioBufferedToDisplay(),
-                " "
-              )
+                " ",
+              ),
             ),
             this.createBufferedRange(!0),
             this.createBufferedRange(!1),
@@ -10265,8 +10269,8 @@
               l.createElement(
                 "span",
                 { className: "videoStatsValue" },
-                e.GetBandwidthRequiredToDisplay()
-              )
+                e.GetBandwidthRequiredToDisplay(),
+              ),
             ),
             l.createElement(
               "div",
@@ -10276,8 +10280,8 @@
               l.createElement(
                 "span",
                 { className: "videoStatsValue" },
-                e.GetBandwithVideoToDisplay()
-              )
+                e.GetBandwithVideoToDisplay(),
+              ),
             ),
             l.createElement(
               "div",
@@ -10287,8 +10291,8 @@
               l.createElement(
                 "span",
                 { className: "videoStatsValue" },
-                e.GetBandwidthStatsToDisplay()
-              )
+                e.GetBandwidthStatsToDisplay(),
+              ),
             ),
             l.createElement(
               "div",
@@ -10298,8 +10302,8 @@
               l.createElement(
                 "span",
                 { className: "videoStatsValue" },
-                e.GetDownloadTimeStatsToDisplay()
-              )
+                e.GetDownloadTimeStatsToDisplay(),
+              ),
             ),
             l.createElement(
               "div",
@@ -10309,8 +10313,8 @@
               l.createElement(
                 "span",
                 { className: "videoStatsValue" },
-                e.GetActiveDownloadsToDisplay()
-              )
+                e.GetActiveDownloadsToDisplay(),
+              ),
             ),
             l.createElement(
               "div",
@@ -10320,8 +10324,8 @@
               l.createElement(
                 "span",
                 { className: "videoStatsValue" },
-                e.GetVideoDownloadProgressToDisplay()
-              )
+                e.GetVideoDownloadProgressToDisplay(),
+              ),
             ),
             l.createElement(
               "div",
@@ -10331,8 +10335,8 @@
               l.createElement(
                 "span",
                 { className: "videoStatsValue" },
-                e.GetPersistentFrameDropsForDisplay()
-              )
+                e.GetPersistentFrameDropsForDisplay(),
+              ),
             ),
             l.createElement(
               "div",
@@ -10342,9 +10346,9 @@
               l.createElement(
                 "span",
                 { className: "videoStatsValue" },
-                e.GetCurrentFPSForDisplay()
-              )
-            )
+                e.GetCurrentFPSForDisplay(),
+              ),
+            ),
           );
         }
       };
@@ -10423,22 +10427,22 @@
               (this.m_listeners.AddEventListener(
                 e,
                 "fullscreenchange",
-                this.OnFullscreenChange
+                this.OnFullscreenChange,
               ),
               this.m_listeners.AddEventListener(
                 e,
                 "mozfullscreenchange",
-                this.OnFullscreenChange
+                this.OnFullscreenChange,
               ),
               this.m_listeners.AddEventListener(
                 e,
                 "webkitfullscreenchange",
-                this.OnFullscreenChange
+                this.OnFullscreenChange,
               ),
               this.m_listeners.AddEventListener(
                 e,
                 "msfullscreenchange",
-                this.OnFullscreenChange
+                this.OnFullscreenChange,
               ));
         }
         BindVideoRef(e) {
@@ -10450,21 +10454,21 @@
                   e,
                   this.props.steamIDBroadcast,
                   this.props.watchLocation,
-                  this.props.bWebRTC
+                  this.props.bWebRTC,
                 ))
               : this.props.broadcastClipID
               ? e &&
                 (t = u.c9.CreateClipVideo(
                   e,
                   this.props.broadcastClipID,
-                  this.props.watchLocation
+                  this.props.watchLocation,
                 ))
               : this.props.nAppIDVOD &&
                 e &&
                 ((t = u.c9.CreateVODVideo(
                   e,
                   this.props.nAppIDVOD,
-                  this.props.watchLocation
+                  this.props.watchLocation,
                 )),
                 this.props.fnOnVideoEnd &&
                   t.SetOnVideoCallback(this.props.fnOnVideoEnd)),
@@ -10481,14 +10485,14 @@
             (this.m_elMouseDown = e.currentTarget),
             this.m_elMouseDown.ownerDocument.defaultView.addEventListener(
               "mouseup",
-              this.OnMouseUp
+              this.OnMouseUp,
             );
         }
         OnMouseUp(e) {
           (this.m_bMouseDown = !1),
             this.m_elMouseDown.ownerDocument.defaultView.removeEventListener(
               "mouseup",
-              this.OnMouseUp
+              this.OnMouseUp,
             ),
             this.m_schHideControls.Schedule(3200, this.HideControls);
         }
@@ -10525,7 +10529,7 @@
           this.state.bFullscreen ||
             ((0, d.yV)(
               l.createElement(p.xV, null, this.GetContextMenuItems()),
-              e
+              e,
             ),
             e.preventDefault());
         }
@@ -10559,8 +10563,8 @@
                     this.ToggleStatsView(e);
                   },
                 },
-                (0, E.Xx)("#Broadcast_VideoContext_ToggleStats")
-              )
+                (0, E.Xx)("#Broadcast_VideoContext_ToggleStats"),
+              ),
             ),
             r &&
               "0" != r.m_strAppId &&
@@ -10574,8 +10578,8 @@
                       this.ShowStorePage(e);
                     },
                   },
-                  (0, E.Xx)("#Broadcast_VideoContext_OpenStore")
-                )
+                  (0, E.Xx)("#Broadcast_VideoContext_OpenStore"),
+                ),
               ),
             e
           );
@@ -10634,7 +10638,7 @@
                   onClick: this.props.onTheaterMode,
                   title: (0, E.Xx)("#Broadcast_View_Theater"),
                   className: "BroadcastTheaterToggle",
-                })
+                }),
               ),
             d.push(
               l.createElement("div", {
@@ -10642,7 +10646,7 @@
                 title: (0, E.Xx)("#Broadcast_View_Fullscreen"),
                 onClick: this.OnToggleFullscreen,
                 className: "BroadcastFullscreenToggle",
-              })
+              }),
             );
           const m = a && !this.BHideVideoControls(),
             u = a && !this.state.bFullscreen,
@@ -10693,7 +10697,7 @@
                 loading: "lazy",
                 className: (0, w.Z)(
                   P().BroadcastPlaceholderImg,
-                  "BroadcastPlaceholderImg"
+                  "BroadcastPlaceholderImg",
                 ),
                 src: this.state.strInitialCapsuleImageUrl,
               }),
@@ -10712,7 +10716,7 @@
                 closeStats: this.CloseStats,
               }),
             l.createElement(k, { video: e }),
-            n && l.createElement(U, { video: e })
+            n && l.createElement(U, { video: e }),
           );
         }
       };
@@ -10766,9 +10770,9 @@
                   video: e,
                   actions: this.props.actions,
                   onShowStats: this.props.onShowStats,
-                })
-              )
-            )
+                }),
+              ),
+            ),
           );
         }
       };
@@ -10782,7 +10786,7 @@
                   className: "STV_BroadcastClose",
                   onClick: this.props.onClick,
                 },
-                l.createElement(R.pVO, null)
+                l.createElement(R.pVO, null),
               )
             : null;
         }
@@ -10814,7 +10818,7 @@
                   bShowJumpAheadBox: !0,
                   bFlipHorizontal: !0,
                 }),
-                l.createElement("div", { className: "jumpAheadValue" }, V)
+                l.createElement("div", { className: "jumpAheadValue" }, V),
               ),
             l.createElement(J, { video: e }),
             t &&
@@ -10830,9 +10834,9 @@
                   bShowJumpAheadBox: !0,
                   bFlipHorizontal: !1,
                 }),
-                l.createElement("div", { className: "jumpAheadValue" }, V)
+                l.createElement("div", { className: "jumpAheadValue" }, V),
               ),
-            t && l.createElement(Q, { video: e })
+            t && l.createElement(Q, { video: e }),
           );
         }
       }
@@ -10865,10 +10869,10 @@
               "div",
               { className: "jumpGoLive" },
               (0, E.Xx)(
-                t ? "#DASHPlayerControls_IsLive" : "#DASHPlayerControls_GoLive"
-              )
-            )
-          )
+                t ? "#DASHPlayerControls_IsLive" : "#DASHPlayerControls_GoLive",
+              ),
+            ),
+          ),
         );
       });
       let J = class extends l.Component {
@@ -10883,7 +10887,7 @@
               className: "videoControlButton buttonPlayPause",
               onClick: this.OnTogglePlayPause,
             },
-            e ? l.createElement(R.shV, null) : l.createElement(R.dzL, null)
+            e ? l.createElement(R.shV, null) : l.createElement(R.dzL, null),
           );
         }
       };
@@ -10915,7 +10919,7 @@
                 (this.has_previous_marker ? "" : " noMarkersInDirection"),
               onClick: this.OnJumpToPreviousMarkerClicked,
             },
-            l.createElement(R.P9w, { bHidePostArrow: !0, bFlipHorizontal: !0 })
+            l.createElement(R.P9w, { bHidePostArrow: !0, bFlipHorizontal: !0 }),
           );
         }
       };
@@ -10948,7 +10952,7 @@
                 (this.has_next_marker ? "" : " noMarkersInDirection"),
               onClick: this.OnJumpToNextMarkerClicked,
             },
-            l.createElement(R.P9w, { bHidePostArrow: !0, bFlipHorizontal: !1 })
+            l.createElement(R.P9w, { bHidePostArrow: !0, bFlipHorizontal: !1 }),
           );
         }
       };
@@ -10973,7 +10977,7 @@
             this.m_elClickListener.addEventListener(
               "mouseup",
               this.OnMouseUp,
-              !0
+              !0,
             );
         }
         OnSubtitlesClick(e) {
@@ -10987,14 +10991,14 @@
             this.m_elClickListener.addEventListener(
               "mouseup",
               this.OnMouseUp,
-              !0
+              !0,
             );
         }
         OnMouseUp(e) {
           this.m_elClickListener.removeEventListener(
             "mouseup",
             this.OnMouseUp,
-            !0
+            !0,
           ),
             (0, T.ni)(this.m_elSettingsPanel, e.target) ||
               this.setState({ bSettingsOpen: !1 }),
@@ -11039,8 +11043,8 @@
                     },
                     bChecked: e.selected,
                   },
-                  e.displayName
-                )
+                  e.displayName,
+                ),
               )),
               s.push(o),
               s.push(
@@ -11048,8 +11052,8 @@
                   g.s,
                   { key: "statsToggle", onClick: this.OnShowStats },
                   (0, E.Xx)("#Broadcast_VideoContext_ToggleStats"),
-                  "\t"
-                )
+                  "\t",
+                ),
               ),
               (n = 0 - (21 * s.length + 32))),
             this.state.bSubtitlesOpen)
@@ -11070,8 +11074,8 @@
                     className: "NoSubtitles",
                     bChecked: !1,
                   },
-                  (0, E.Xx)("#Broadcast_None")
-                )
+                  (0, E.Xx)("#Broadcast_None"),
+                ),
               );
             for (let e = 0; e < this.props.video.ListSubtitles().length; e++) {
               const t = this.props.video.ListSubtitles()[e];
@@ -11088,8 +11092,8 @@
                     },
                     bChecked: "showing" === t.mode,
                   },
-                  t.label
-                )
+                  t.label,
+                ),
               );
             }
             n = -292;
@@ -11107,7 +11111,7 @@
                     onClick: this.OnSubtitlesClick,
                     ref: this.m_elSubtitlesButton,
                   },
-                  l.createElement(R.Vgm, null)
+                  l.createElement(R.Vgm, null),
                 )
               : null,
             l.createElement(
@@ -11119,7 +11123,7 @@
                 onClick: this.OnVideoControlClick,
                 ref: this.bindSettingsButton,
               },
-              l.createElement(R.Zrf, null)
+              l.createElement(R.Zrf, null),
             ),
             l.createElement(te, { video: r }),
             i &&
@@ -11130,8 +11134,8 @@
                     key: e.key,
                     className: "videoControlButton videoControlFitWidth",
                   },
-                  e
-                )
+                  e,
+                ),
               ),
             e &&
               l.createElement(
@@ -11148,8 +11152,8 @@
                 l.createElement(
                   "div",
                   { className: "STV_BroadcastSettingsMenuItems" },
-                  s
-                )
+                  s,
+                ),
               ),
             t &&
               l.createElement(
@@ -11167,9 +11171,9 @@
                 l.createElement(
                   "div",
                   { className: "STV_BroadcastSettingsMenuItems" },
-                  s
-                )
-              )
+                  s,
+                ),
+              ),
           );
         }
       }
@@ -11212,7 +11216,7 @@
             this.m_bChildDragging ||
             this.m_schHideSlider.Schedule(
               this.k_nHideSliderTimeout,
-              () => (this.m_bShowSlider = true)
+              () => (this.m_bShowSlider = true),
             );
         }
         render() {
@@ -11244,10 +11248,10 @@
                 l.createElement(
                   "div",
                   { className: i, onClick: this.ToggleMute },
-                  l.createElement(R.ffh, null)
+                  l.createElement(R.ffh, null),
                 ),
-                l.createElement(re, { video: e, onDrag: this.OnChildDrag })
-              )
+                l.createElement(re, { video: e, onDrag: this.OnChildDrag }),
+              ),
             )
           );
         }
@@ -11271,11 +11275,11 @@
             this.SetVolumeWithCoord(t, e.clientX),
             t.ownerDocument.defaultView.addEventListener(
               "mousemove",
-              this.OnMouseMove
+              this.OnMouseMove,
             ),
             t.ownerDocument.defaultView.addEventListener(
               "mouseup",
-              this.OnMouseUp
+              this.OnMouseUp,
             ),
             this.props.onDrag(!0);
         }
@@ -11290,11 +11294,11 @@
           t.IsMuted() && t.SetVolume(this.m_nVolumeStartOfDrag),
             this.m_elSlider.ownerDocument.defaultView.removeEventListener(
               "mousemove",
-              this.OnMouseMove
+              this.OnMouseMove,
             ),
             this.m_elSlider.ownerDocument.defaultView.removeEventListener(
               "mouseup",
-              this.OnMouseUp
+              this.OnMouseUp,
             ),
             (this.m_nVolumeStartOfDrag = 0),
             (this.m_elSlider = null),
@@ -11329,7 +11333,7 @@
             l.createElement("div", {
               className: "BroadcastVolumeSlider_Thumb",
               style: r,
-            })
+            }),
           );
         }
       };
@@ -11352,8 +11356,8 @@
           l.createElement(
             "div",
             { className: "timelineMarkerIcon" },
-            l.createElement(R.$06, null)
-          )
+            l.createElement(R.$06, null),
+          ),
         );
       function ae(e) {
         let t = e.startPos,
@@ -11379,12 +11383,12 @@
                 className: "STV_timelineSegmentLabel",
                 style: { color: "rgb(" + e.color + ")" },
               },
-              e.label
+              e.label,
             ),
             l.createElement("div", {
               className: "STV_timelineSegmentBackFill",
               style: { borderColor: "rgb(" + e.color + ")" },
-            })
+            }),
           )
         );
       }
@@ -11417,11 +11421,11 @@
               this.setState(r, () => this.AdjustSliderForClientX(e.clientX)),
               this.m_elSlider.current.ownerDocument.defaultView.addEventListener(
                 "mousemove",
-                this.OnMouseMove
+                this.OnMouseMove,
               ),
               this.m_elSlider.current.ownerDocument.defaultView.addEventListener(
                 "mouseup",
-                this.OnMouseUp
+                this.OnMouseUp,
               );
           }
         }
@@ -11441,11 +11445,11 @@
             this.m_elSlider.current &&
               (this.m_elSlider.current.ownerDocument.defaultView.removeEventListener(
                 "mousemove",
-                this.OnMouseMove
+                this.OnMouseMove,
               ),
               this.m_elSlider.current.ownerDocument.defaultView.removeEventListener(
                 "mouseup",
-                this.OnMouseUp
+                this.OnMouseUp,
               ));
         }
         OnKeyDown(e) {
@@ -11498,12 +11502,12 @@
             t = this.state.bGrabberMouseDown,
             r = e.GetPercentOffsetFromTime(
               this.state.nGrabberMouseDownTime,
-              u.QO.Timeline
+              u.QO.Timeline,
             ),
             i = e.GetPercentOffsetFromTime(e.GetPlaybackTime(), u.QO.Timeline),
             a = e.GetPercentOffsetFromTime(
               e.GetVideoAvailableStartTime(),
-              u.QO.Timeline
+              u.QO.Timeline,
             );
           a < 0.05 && (a = 0);
           let s = W.Lh(r, 0, 100).toFixed(1) + "%",
@@ -11538,7 +11542,7 @@
                   label: t.strTemplateName,
                   onMouseEnter: this.OnMarkerMouseEnter,
                   onMouseLeave: this.OnMarkerMouseLeave,
-                })
+                }),
               );
           });
           let y = [];
@@ -11555,12 +11559,12 @@
                   label: t.strTemplateName,
                   color: t.color,
                   onClick: (e) => this.OnSegmentClick(t.nTimeStart),
-                })
+                }),
               );
           });
           const S = e.GetPercentOffsetFromTime(
               e.m_editorStartTime,
-              u.QO.Timeline
+              u.QO.Timeline,
             ),
             w = e.GetPercentOffsetFromTime(e.m_editorEndTime, u.QO.Timeline),
             f = this.props.bIncludeClipEditor
@@ -11597,7 +11601,7 @@
               l.createElement(
                 "div",
                 { className: "STV_timelineSegmentsContainer" },
-                y
+                y,
               ),
               l.createElement(
                 "div",
@@ -11655,9 +11659,9 @@
                             className: "STV_timelineGrabberValue",
                             style: { position: "absolute", bottom: "4px" },
                           },
-                          B
-                        )
-                      )
+                          B,
+                        ),
+                      ),
                     ),
                   l.createElement(
                     "div",
@@ -11668,13 +11672,13 @@
                       l.createElement(
                         "div",
                         { className: "STV_timelineGrabberArrow" },
-                        l.createElement(R.tEX, null)
-                      )
-                    )
-                  )
-                )
-              )
-            )
+                        l.createElement(R.tEX, null),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
           );
         }
       };
@@ -11755,25 +11759,25 @@
                     l.createElement(
                       "span",
                       { className: "AppTitle" },
-                      e.m_strAppTitle
+                      e.m_strAppTitle,
                     ),
                     e.m_strTitle &&
                       l.createElement(
                         "span",
                         { className: "BroadcastTitle" },
                         " - ",
-                        e.m_strTitle
+                        e.m_strTitle,
                       ),
                     this.props.onLocalStreamChange &&
-                      this.RenderStreamSwitcher()
+                      this.RenderStreamSwitcher(),
                   ),
                   t &&
                     l.createElement(
                       "div",
                       { className: "BroadcastDetailsHeader_ViewerCount" },
                       l.createElement(R.lsH, null),
-                      (0, E.kb)("#Broadcast_ViewerCount", t)
-                    )
+                      (0, E.kb)("#Broadcast_ViewerCount", t),
+                    ),
                 ),
               r &&
                 this.props.onOpenLinkInNewWindow &&
@@ -11787,9 +11791,9 @@
                         this.props.onOpenLinkInNewWindow(e, D.rr.link),
                       className: "BroadcastLink",
                     },
-                    D.rr.linkName
-                  )
-                )
+                    D.rr.linkName,
+                  ),
+                ),
             ),
             a && l.createElement(C.i, { gidEvent: D.rr.gidEvent }),
             i &&
@@ -11801,7 +11805,7 @@
                     ? D.rr.appID
                     : parseInt(e.m_strAppId),
                 type: "game",
-              })
+              }),
           );
         }
       };
@@ -11813,8 +11817,8 @@
               l.createElement(
                 p.Td,
                 { key: e, onSelected: () => i(e), bChecked: e === r },
-                (0, E.Xx)(t[e])
-              )
+                (0, E.Xx)(t[e]),
+              ),
             );
           (0, d.yV)(l.createElement(p.xV, null, a), e);
         }
@@ -11828,8 +11832,8 @@
             l.createElement(
               "div",
               { className: "ContextMenuButton" },
-              l.createElement(R.$gZ, null)
-            )
+              l.createElement(R.$gZ, null),
+            ),
           );
         }
       }
@@ -11848,7 +11852,7 @@
               heightPct: 15,
             }),
               this.setState({ sizableRegion: this.state.sizableRegion }, () =>
-                this.OnSaveRegions()
+                this.OnSaveRegions(),
               );
           });
         }
@@ -11896,7 +11900,7 @@
             this.state.sizableRegion.splice(e, 1),
               console.log("keys: ", this.state.sizableRegion.keys),
               this.setState({ sizableRegion: this.state.sizableRegion }, () =>
-                this.OnSaveRegions()
+                this.OnSaveRegions(),
               );
           });
         }
@@ -11904,7 +11908,7 @@
           return (0, i.mG)(this, void 0, void 0, function* () {
             (this.state.sizableRegion[e] = t),
               this.setState({ sizableRegion: this.state.sizableRegion }, () =>
-                this.OnSaveRegions()
+                this.OnSaveRegions(),
               );
           });
         }
@@ -11941,9 +11945,9 @@
                           "div",
                           { className: "LinkRegionText" },
                           e.link_description,
-                          " "
-                        )
-                      )
+                          " ",
+                        ),
+                      ),
                     );
                   })
                 : null,
@@ -11960,14 +11964,14 @@
                     heightPct: e.heightPct,
                     link_url: e.link_url,
                     link_description: e.link_description,
-                  })
+                  }),
                 ),
               this.props.editMode &&
                 l.createElement(
                   "div",
                   { className: "AddLinkRegion", onClick: this.AddLinkRegion },
-                  (0, E.Xx)("#SteamTV_AddLinkRegion")
-                )
+                  (0, E.Xx)("#SteamTV_AddLinkRegion"),
+                ),
             ),
             l.createElement(
               "div",
@@ -11975,9 +11979,9 @@
               l.createElement(
                 "div",
                 null,
-                (0, E.Xx)("#SteamTV_LinkRegionReserved")
-              )
-            )
+                (0, E.Xx)("#SteamTV_LinkRegionReserved"),
+              ),
+            ),
           );
         }
       };

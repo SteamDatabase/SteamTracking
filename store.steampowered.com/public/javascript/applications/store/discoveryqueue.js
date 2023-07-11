@@ -45,7 +45,7 @@
               secondary: !0,
               parentEmbeddedNavTree: e,
             }),
-            r.createElement(o.O, null, t)
+            r.createElement(o.O, null, t),
           );
         }
         return r.createElement(r.Fragment, null, t);
@@ -105,7 +105,7 @@
             (t) => {
               s(n, e, o(t) ? String(t) : null);
             },
-            [n, e]
+            [n, e],
           );
         return [l, u];
       }
@@ -211,7 +211,7 @@
                     onSecondaryButton: f,
                     onOKButton: Q,
                     onOKActionDescription: (0, p.Xx)(
-                      "#DiscoveryQueue_ResumeWizard"
+                      "#DiscoveryQueue_ResumeWizard",
                     ),
                     onSecondaryActionDescription: (0, p.Xx)("#Button_Close"),
                   },
@@ -224,13 +224,13 @@
                     "div",
                     { onClick: Q, className: v().WidgetText },
                     (0, p.Xx)("#DiscoveryQueue_ResumeWizard"),
-                    (null == Z ? void 0 : Z.length) > 0 && ": " + Z
+                    (null == Z ? void 0 : Z.length) > 0 && ": " + Z,
                   ),
                   !S &&
                     i.createElement(
                       "div",
                       { className: v().CloseButton, onClick: f },
-                      i.createElement(u.X, null)
+                      i.createElement(u.X, null),
                     ),
                   m &&
                     i.createElement(d.MS, {
@@ -239,8 +239,8 @@
                       fnCloseModal: () => D(!1),
                       eStoreDiscoveryQueueType: M,
                       storePageFilter: w,
-                    })
-                )
+                    }),
+                ),
               )
           : null;
       }
@@ -268,16 +268,16 @@
                       window.location.href = `${
                         a.De.STORE_BASE_URL
                       }login?redir=${encodeURIComponent(
-                        document.location.href
+                        document.location.href,
                       )}`;
                     },
                     strOKButtonText: (0, r.Xx)(
-                      "#DiscoveryQueue_Error_Login_Title"
+                      "#DiscoveryQueue_Error_Login_Title",
                     ),
                     strDescription: (0, r.Xx)("#DiscoveryQueue_Error_Login"),
                     strTitle: (0, r.Xx)("#DiscoveryQueue_Error_Login_Title"),
                   }),
-                  window
+                  window,
                 );
           }, []);
         return t
@@ -287,19 +287,19 @@
               i.createElement(
                 "a",
                 { onClick: g, className: "experiment-button" },
-                (0, r.Xx)("#DiscoveryQueue_OpenWizard")
+                (0, r.Xx)("#DiscoveryQueue_OpenWizard"),
               ),
               n &&
                 i.createElement(c.MS, {
                   bWizardVisible: n,
                   fnCloseModal: () => d(!1),
                   eStoreDiscoveryQueueType: 0,
-                })
+                }),
             )
           : i.createElement(
               "div",
               { className: "experiment-button-placeholder" },
-              " "
+              " ",
             );
       }
     },

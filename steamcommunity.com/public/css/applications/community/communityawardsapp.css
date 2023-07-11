@@ -473,7 +473,9 @@
   flex-direction: column;
   align-items: center;
   position: relative;
-  transition: background-color 0.2s ease, border-radius 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    border-radius 0.2s ease;
 }
 @media screen and (max-width: 910px) {
   .awardmodal_GrantAwardModal_2vlF5

@@ -138,10 +138,10 @@
               r.createElement(
                 "a",
                 { href: t, target: i.De.IN_CLIENT ? void 0 : "_blank" },
-                (0, o.Xx)("#User_LimitedAccount_UrlInfo")
-              )
-            )
-          )
+                (0, o.Xx)("#User_LimitedAccount_UrlInfo"),
+              ),
+            ),
+          ),
         );
       };
     },
@@ -159,7 +159,7 @@
         return r.createElement(
           a.e1,
           { onEscKeypress: e.closeModal, bDisableBackgroundDismiss: !0 },
-          r.createElement(h, { redirectURL: e.redirectURL })
+          r.createElement(h, { redirectURL: e.redirectURL }),
         );
       }
       function v() {
@@ -169,20 +169,20 @@
             redirectURL: window.location.href,
           }),
           window,
-          { strTitle: (0, o.Xx)("#Login_SignIn") }
+          { strTitle: (0, o.Xx)("#Login_SignIn") },
         );
       }
       function p(e) {
         (0, a.AM)(
           r.createElement(s, { ownerWin: window, redirectURL: e }),
           window,
-          { strTitle: (0, o.Xx)("#Login_SignIn") }
+          { strTitle: (0, o.Xx)("#Login_SignIn") },
         );
       }
       function h(e) {
         const { redirectURL: t } = e,
           [n] = (0, r.useState)(
-            new l.J(i.De.WEBAPI_BASE_URL).GetAnonymousServiceTransport()
+            new l.J(i.De.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
           ),
           [a, o] = (0, r.useState)(!1);
         return r.createElement(
@@ -201,7 +201,7 @@
                 },
                 redirectUrl: t,
                 theme: "modal",
-              })
+              }),
         );
       }
     },

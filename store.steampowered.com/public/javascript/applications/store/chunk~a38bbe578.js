@@ -57,7 +57,7 @@
             (0, u.X)(t.BIsValid(), "Clan SteamID is not valid when ClanInfo"),
             (0, u.X)(
               t.BIsClanAccount(),
-              "Clan SteamID is not a clan account id when requesting clan info "
+              "Clan SteamID is not a clan account id when requesting clan info ",
             ),
             this.m_mapClanAccountIDToClanInfo.has(t.GetAccountID())
           );
@@ -92,7 +92,7 @@
               t.vanity_url.length > 0 &&
               this.m_mapVanityToClanInfo.set(
                 t.vanity_url.toLocaleLowerCase(),
-                e
+                e,
               ),
             this.m_mapClanAccountIDToClanInfo.set(t.clanAccountID, e);
         }
@@ -106,7 +106,7 @@
               "string" == typeof t && (t = parseInt(t)),
               (0, u.X)(
                 0 != t,
-                "LoadOGGClanInfoForAppID called with appid of zero"
+                "LoadOGGClanInfoForAppID called with appid of zero",
               ),
               0 == t)
             )
@@ -118,7 +118,7 @@
               this.m_mapPromisesLoading.has(e) ||
                 this.m_mapPromisesLoading.set(
                   e,
-                  this.InternalLoadOGGClanInfoForAppID(t)
+                  this.InternalLoadOGGClanInfoForAppID(t),
                 ),
               this.m_mapPromisesLoading.get(e)
             );
@@ -139,11 +139,11 @@
             if (
               (this.LazyInit(),
               this.m_mapVanityToClanInfo.has(
-                null == t ? void 0 : t.toLocaleLowerCase()
+                null == t ? void 0 : t.toLocaleLowerCase(),
               ))
             )
               return this.m_mapVanityToClanInfo.get(
-                null == t ? void 0 : t.toLocaleLowerCase()
+                null == t ? void 0 : t.toLocaleLowerCase(),
               );
             let e =
               "storevanity_" + (null == t ? void 0 : t.toLocaleLowerCase());
@@ -151,7 +151,7 @@
               this.m_mapPromisesLoading.has(e) ||
                 this.m_mapPromisesLoading.set(
                   e,
-                  this.InternalLoadOGGClanInfoForIdentifier(t)
+                  this.InternalLoadOGGClanInfoForIdentifier(t),
                 ),
               this.m_mapPromisesLoading.get(e)
             );
@@ -168,7 +168,7 @@
             return (
               this.InternalSetupValue(n.data),
               this.m_mapVanityToClanInfo.get(
-                null == t ? void 0 : t.toLocaleLowerCase()
+                null == t ? void 0 : t.toLocaleLowerCase(),
               )
             );
           });
@@ -178,11 +178,11 @@
             if (
               (this.LazyInit(),
               this.m_mapVanityToClanInfo.has(
-                null == t ? void 0 : t.toLocaleLowerCase()
+                null == t ? void 0 : t.toLocaleLowerCase(),
               ))
             )
               return this.m_mapVanityToClanInfo.get(
-                null == t ? void 0 : t.toLocaleLowerCase()
+                null == t ? void 0 : t.toLocaleLowerCase(),
               );
             let e = "community_name_" + t;
             return (
@@ -190,8 +190,8 @@
                 this.m_mapPromisesLoading.set(
                   e,
                   this.InternalLoadOGGClanInfoForGroupVanity(
-                    null == t ? void 0 : t.toLocaleLowerCase()
-                  )
+                    null == t ? void 0 : t.toLocaleLowerCase(),
+                  ),
                 ),
               this.m_mapPromisesLoading.get(e)
             );
@@ -208,7 +208,7 @@
             return (
               this.InternalSetupValue(n.data),
               this.m_mapVanityToClanInfo.get(
-                null == t ? void 0 : t.toLocaleLowerCase()
+                null == t ? void 0 : t.toLocaleLowerCase(),
               )
             );
           });
@@ -224,7 +224,7 @@
               this.m_mapPromisesLoading.has(n) ||
                 this.m_mapPromisesLoading.set(
                   n,
-                  this.InternalLoadClanInfoForClanSteamID(t)
+                  this.InternalLoadClanInfoForClanSteamID(t),
                 ),
               this.m_mapPromisesLoading.get(n)
             );
@@ -254,14 +254,14 @@
         GetOGGClanInfo(t) {
           return "string" == typeof t
             ? this.m_mapVanityToClanInfo.get(
-                null == t ? void 0 : t.toLocaleLowerCase()
+                null == t ? void 0 : t.toLocaleLowerCase(),
               )
             : this.m_mapAppIDToClanInfo.get(t);
         }
         GetClanSteamIDForAppID(t) {
           if ((this.LazyInit(), this.m_mapAppIDToClanInfo.has(t)))
             return l.K.InitFromClanID(
-              this.m_mapAppIDToClanInfo.get(t).clanAccountID
+              this.m_mapAppIDToClanInfo.get(t).clanAccountID,
             );
         }
         GetClanVanityForAppID(t) {
@@ -289,7 +289,7 @@
             this.LazyInit(),
             (0, u.X)(
               !!t,
-              "Unepxected clanid when requesting information. GetClanInfoByClanAccountID "
+              "Unepxected clanid when requesting information. GetClanInfoByClanAccountID ",
             ),
             this.m_mapClanAccountIDToClanInfo.get(t)
           );
@@ -314,7 +314,7 @@
       const d = new p();
       function _(t) {
         const [e, n] = (0, s.useState)(
-            t ? d.GetClanInfoByClanAccountID(t) : void 0
+            t ? d.GetClanInfoByClanAccountID(t) : void 0,
           ),
           [a, o] = (0, s.useState)(!!t && !d.BHasClanInfoLoadedByAccountID(t));
         return (
@@ -325,7 +325,7 @@
               else {
                 o(!0);
                 const e = l.K.InitFromClanID(
-                  "string" == typeof t ? Number.parseInt(t) : t
+                  "string" == typeof t ? Number.parseInt(t) : t,
                 );
                 d.LoadClanInfoForClanSteamID(e).then((t) => {
                   n(t), o(!1);
@@ -818,7 +818,7 @@
                   !(
                     s.Z.Get().BHasStoreItem(t, e, n) ||
                     s.Z.Get().BIsStoreItemMissing(t, e)
-                  )
+                  ),
               );
             if (0 == a.length) return;
             const i = o().CancelToken.source(),
@@ -837,12 +837,12 @@
           !t.every(
             (t) =>
               s.Z.Get().BHasStoreItem(t, e, n) ||
-              s.Z.Get().BIsStoreItemMissing(t, e)
+              s.Z.Get().BIsStoreItemMissing(t, e),
           )
         )
           return 1;
         return t.every((t) =>
-          s.Z.Get().GetStoreItemWithLegacyVisibilityCheck(t, e)
+          s.Z.Get().GetStoreItemWithLegacyVisibilityCheck(t, e),
         )
           ? 3
           : 2;
@@ -856,7 +856,7 @@
             s.Z.Get().SetReturnUnavailableItems(!0),
             () => s.Z.Get().SetReturnUnavailableItems(!1)
           ),
-          []
+          [],
         );
       }
     },

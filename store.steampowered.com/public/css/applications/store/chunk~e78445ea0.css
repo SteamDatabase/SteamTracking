@@ -26,7 +26,10 @@
   .friendsnooze_SnoozeZ_1DArl {
   font-size: 14px;
   font-weight: 500;
-  text-shadow: -1px -1px 4px #000, 1px -1px 4px #000, -1px 1px 2px #000,
+  text-shadow:
+    -1px -1px 4px #000,
+    1px -1px 4px #000,
+    -1px 1px 2px #000,
     1px 1px 2px #000;
 }
 .friendsnooze_SnoozeContainer_3EzTy.friendsnooze_Dim_2TzRZ
@@ -1170,14 +1173,17 @@
   padding: 2px 6px;
   opacity: 0;
   transform: translateX(calc(-100% - 8px));
-  transition: opacity 0.2s cubic-bezier(0.32, 0, 0.67, 0),
+  transition:
+    opacity 0.2s cubic-bezier(0.32, 0, 0.67, 0),
     transform 0.2s cubic-bezier(0.32, 0, 0.67, 0);
 }
 .discoveryqueuewizard_AppVideoCtn_2XCS5
   .discoveryqueuewizard_WishlistBadge_2vb6r.discoveryqueuewizard_Active_2EDE0 {
   opacity: 1;
   transform: translateX(0px);
-  transition: opacity 0.1s ease, transform 0.2s ease;
+  transition:
+    opacity 0.1s ease,
+    transform 0.2s ease;
 }
 .discoveryqueuewizard_AppVideoCtn_2XCS5
   .discoveryqueuewizard_DeckVerifiedLogo_2mYU2 {
@@ -1408,7 +1414,9 @@
   color: #fff;
   opacity: 0;
   transform: translateY(32px);
-  transition: opacity 0.1s ease-in, transform 0.15s ease-in;
+  transition:
+    opacity 0.1s ease-in,
+    transform 0.15s ease-in;
 }
 .discoveryqueuewizard_IgnoredCtn_2e3_o
   .discoveryqueuewizard_IgnoredInfo_130E6
@@ -1444,7 +1452,9 @@
   .discoveryqueuewizard_IgnoredInfo_130E6.discoveryqueuewizard_Active_2EDE0 {
   opacity: 1;
   transform: translateY(0px);
-  transition: opacity 0.3s ease, transform 0.4s ease;
+  transition:
+    opacity 0.3s ease,
+    transform 0.4s ease;
 }
 .discoveryqueuewizard_AppDesc_3bAqJ {
   font-size: 12px;
@@ -1571,7 +1581,9 @@
   color: #1a9fff;
   cursor: pointer;
   padding: 2px 4px;
-  transition: color 0.1s ease, background-color 0.1s ease;
+  transition:
+    color 0.1s ease,
+    background-color 0.1s ease;
 }
 .discoveryqueuewizard_LearnMoreLink_3bCDZ:hover {
   color: #fff;
@@ -1604,7 +1616,9 @@
   user-select: none;
   -webkit-user-select: none;
   padding: 8px 16px;
-  transition: background-color 0.1s ease, border-radius 0.1s ease;
+  transition:
+    background-color 0.1s ease,
+    border-radius 0.1s ease;
 }
 .discoveryqueuewizard_QueueButton_19cHb.discoveryqueuewizard_Disabled_1yh4o {
   opacity: 0.4;
@@ -1658,9 +1672,13 @@
   display: none;
   background-color: rgba(103, 112, 123, 0.6);
   backdrop-filter: blur(24px);
-  box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.3),
+  box-shadow:
+    0px 12px 16px rgba(0, 0, 0, 0.3),
     inset 0 0 0 1px rgba(255, 255, 255, 0.1);
-  transition: background-color ease, box-shadow ease, transform ease,
+  transition:
+    background-color ease,
+    box-shadow ease,
+    transform ease,
     opacity ease;
   transition-duration: 0.3s;
 }
@@ -1673,7 +1691,8 @@
 }
 .discoveryqueuewizard_QueueNavArrow_1kgdo:hover {
   background-color: #fff;
-  box-shadow: 0px 16px 18px rgba(0, 0, 0, 0.4),
+  box-shadow:
+    0px 16px 18px rgba(0, 0, 0, 0.4),
     inset 0 0 0 1px rgba(255, 255, 255, 0.1);
   transform: translateY(-50%) scale(1);
   transition-duration: 0.06s;

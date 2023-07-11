@@ -114,11 +114,11 @@
               const t = (0, n.jM)(g.De.LANGUAGE),
                 e = l.LZ.GetWithFallback(
                   i.jsondata.localized_sale_product_banner,
-                  t
+                  t,
                 ),
                 o = l.LZ.GetWithFallback(
                   i.jsondata.localized_sale_product_mobile_banner,
-                  t
+                  t,
                 );
               if (
                 (null == e ? void 0 : e.length) > 0 &&
@@ -142,7 +142,7 @@
               o.createElement("img", {
                 src: d,
                 className: (0, a.Z)(h.Banner, h.Mobile),
-              })
+              }),
             )
           : null;
       }
@@ -230,12 +230,12 @@
             this.m_listeners.AddEventListener(
               this.m_elLinkRegionBox.ownerDocument.defaultView,
               "mousemove",
-              this.m_fnMouseMove
+              this.m_fnMouseMove,
             ),
             this.m_listeners.AddEventListener(
               this.m_elLinkRegionBox.ownerDocument.defaultView,
               "mouseup",
-              this.m_fnMouseUp
+              this.m_fnMouseUp,
             ),
             t.preventDefault(),
             t.stopPropagation();
@@ -289,13 +289,13 @@
                 const e = (0, L.Lh)(
                     this.CalcLeftEdge(t.clientX),
                     0,
-                    100 - this.state.curWidthPct
+                    100 - this.state.curWidthPct,
                   ),
                   i = 100 - (e + this.state.curWidthPct),
                   o = (0, L.Lh)(
                     this.CalcTopEdge(t.clientY),
                     0,
-                    100 - this.state.curHeightPct
+                    100 - this.state.curHeightPct,
                   ),
                   n = {
                     curLeftPosPct: e,
@@ -333,12 +333,12 @@
             s = (0, L.Lh)(
               100 - n - o,
               this.props.widthMinPct || 0,
-              this.props.widthMaxPct || 100
+              this.props.widthMaxPct || 100,
             ),
             c = (0, L.Lh)(
               100 - i - e,
               this.props.heightMinPct || 0,
-              this.props.heightMaxPct || 100
+              this.props.heightMaxPct || 100,
             );
           this.props.bLockAspectRatio &&
             (void 0 !== t.curLeftPosPct || void 0 !== t.curRightPosPct
@@ -386,7 +386,7 @@
           return (0, L.Lh)(
             100 - (this.GetXPercent(t) + this.state.curWidthPct),
             0,
-            100
+            100,
           );
         }
         CalcTopEdge(t) {
@@ -396,7 +396,7 @@
           return (0, L.Lh)(
             100 - (this.GetYPercent(t) + this.state.curHeightPct),
             0,
-            100
+            100,
           );
         }
         OnMouseUp(t, e) {
@@ -435,7 +435,7 @@
         }
         validateUrl(t) {
           return /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/i.test(
-            t
+            t,
           );
         }
         OnSaveLink() {
@@ -518,7 +518,7 @@
                         className: d().LinkRegionDelete,
                         onClick: this.HandleDelete,
                       },
-                      s.createElement(h.pVO, null)
+                      s.createElement(h.pVO, null),
                     ),
                   !this.props.bDisableLink &&
                     s.createElement(
@@ -527,15 +527,15 @@
                         className: d().LinkRegionSettings,
                         onClick: this.OnEditLink,
                       },
-                      s.createElement(h.pkz, null)
+                      s.createElement(h.pkz, null),
                     ),
                   s.createElement(
                     "div",
                     { className: d().LinkText },
                     " ",
                     this.m_strDescription,
-                    " "
-                  )
+                    " ",
+                  ),
                 ),
                 s.createElement("div", {
                   className: `${d().LinkRegionEdge} ${d().Right}`,
@@ -564,7 +564,7 @@
                     this.OnMouseDown(t, o.bottomright);
                   },
                   draggable: !1,
-                })
+                }),
               ),
               this.state.bEditingLink &&
                 s.createElement(
@@ -587,7 +587,7 @@
                     value: this.state.text_link_description,
                     label: (0, r.Xx)("#SteamTV_LinkDescription"),
                     placeholder: (0, r.Xx)(
-                      "#SteamTV_LinkDescription_Placeholder"
+                      "#SteamTV_LinkDescription_Placeholder",
                     ),
                     onChange: this.OnSetLinkDescriptionChange,
                   }),
@@ -602,16 +602,16 @@
                       },
                       " ",
                       (0, r.Xx)("#Button_OK"),
-                      " "
+                      " ",
                     ),
                     s.createElement(
                       g.zx,
                       { onClick: this.OnEditLink },
                       " ",
-                      (0, r.Xx)("#Button_Cancel")
-                    )
-                  )
-                )
+                      (0, r.Xx)("#Button_Cancel"),
+                    ),
+                  ),
+                ),
             )
           );
         }

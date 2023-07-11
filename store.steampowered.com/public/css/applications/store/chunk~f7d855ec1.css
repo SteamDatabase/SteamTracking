@@ -552,7 +552,9 @@ span.suggestdialog_mentionSearchMatch_mBrO4 {
   right: 0;
   opacity: 0;
   cursor: zoom-in;
-  transition: opacity 0.3s, transform 0.3s;
+  transition:
+    opacity 0.3s,
+    transform 0.3s;
 }
 .hover___MYy31,
 .loading___1pvNI,
@@ -678,7 +680,9 @@ span.suggestdialog_mentionSearchMatch_mBrO4 {
 }
 .carousel_carouselNavButton_1KK5N svg {
   opacity: 0.7;
-  transition: opacity 0.2s ease-in-out, filter 0.2s ease-in-out;
+  transition:
+    opacity 0.2s ease-in-out,
+    filter 0.2s ease-in-out;
   fill: #fff;
 }
 .carousel_carouselBtnCtn_aqswv {

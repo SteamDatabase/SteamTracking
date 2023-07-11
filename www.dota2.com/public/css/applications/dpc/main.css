@@ -948,8 +948,11 @@
   }
 }
 .global_VerticalCollapseable_23_Go {
-  transition: opacity 0.4s ease-in-out, height 0.4s ease-in-out,
-    padding 0.4s ease-in-out, margin 0.4s ease-in-out,
+  transition:
+    opacity 0.4s ease-in-out,
+    height 0.4s ease-in-out,
+    padding 0.4s ease-in-out,
+    margin 0.4s ease-in-out,
     min-height 0.4s ease-in-out;
 }
 .global_VerticalCollapse_tJoWs {
@@ -4352,7 +4355,9 @@
   border-radius: 6px;
   margin-right: 6px;
   background-color: #000;
-  transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+  transition:
+    width 0.4s ease-in-out,
+    height 0.4s ease-in-out;
 }
 .fantasypage_FantasyHelp_39-fj
   .fantasypage_RosterSlot_2OTsk
@@ -4375,7 +4380,9 @@
   background-color: #000;
   padding: 4px;
   border-radius: 6px;
-  transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+  transition:
+    width 0.4s ease-in-out,
+    height 0.4s ease-in-out;
 }
 .fantasypage_FantasyHelp_39-fj
   .fantasypage_RosterSlot_2OTsk
@@ -4942,7 +4949,9 @@
   width: 200px;
   text-align: center;
   cursor: pointer;
-  transition: height 0.4s ease-in-out, padding 0.4s ease-in-out,
+  transition:
+    height 0.4s ease-in-out,
+    padding 0.4s ease-in-out,
     opacity 0.4s ease-in-out;
 }
 .fantasypage_FantasyPage_3zKgk
@@ -4975,7 +4984,9 @@
   margin-top: 6px;
   text-align: right;
   text-align: center;
-  transition: height 0.4s ease-in-out, opacity 0.4s ease-in-out;
+  transition:
+    height 0.4s ease-in-out,
+    opacity 0.4s ease-in-out;
 }
 .fantasypage_FantasyPage_3zKgk
   .fantasypage_Contents_QRAGK
@@ -5010,7 +5021,9 @@
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
   background-color: #000;
-  transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+  transition:
+    width 0.4s ease-in-out,
+    height 0.4s ease-in-out;
 }
 .fantasypage_FantasyPage_3zKgk
   .fantasypage_Contents_QRAGK
@@ -5026,7 +5039,9 @@
   padding: 4px;
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
-  transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+  transition:
+    width 0.4s ease-in-out,
+    height 0.4s ease-in-out;
 }
 .fantasypage_FantasyPage_3zKgk
   .fantasypage_Contents_QRAGK
@@ -5160,7 +5175,9 @@
   width: 24px;
   height: 24px;
   border-radius: 12px;
-  transition: margin-left 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  transition:
+    margin-left 0.2s ease-in-out,
+    background-color 0.2s ease-in-out;
 }
 .fantasypage_FantasyPage_3zKgk
   .fantasypage_Contents_QRAGK
@@ -6171,7 +6188,9 @@
   width: 20px;
   height: 20px;
   border-radius: 10px;
-  transition: margin-left 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  transition:
+    margin-left 0.2s ease-in-out,
+    background-color 0.2s ease-in-out;
 }
 .profilepage_LogoutText_2o_BU {
   font-size: 12px;
@@ -7328,7 +7347,9 @@
   height: 20px;
   z-index: 5;
   position: absolute;
-  transition: left 1s ease-in-out, bottom 1s ease-in-out;
+  transition:
+    left 1s ease-in-out,
+    bottom 1s ease-in-out;
 }
 .matchpage_MatchPage_1LIfg
   .matchpage_Body_68kN3
@@ -8252,7 +8273,9 @@
   background-color: #0f1417;
   z-index: 5;
   position: absolute;
-  transition: left 1s ease-in-out, bottom 1s ease-in-out;
+  transition:
+    left 1s ease-in-out,
+    bottom 1s ease-in-out;
 }
 .livematchpage_Map_1YqX1 .livematchpage_Hero_FoeqX.livematchpage_Radiant_37ORm {
   border-color: #3ae67c;

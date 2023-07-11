@@ -5672,7 +5672,7 @@
             "Player.GetMutualFriendsForIncomingInvites#1",
             r,
             m,
-            { bConstMethod: !0, ePrivilege: 1 }
+            { bConstMethod: !0, ePrivilege: 1 },
           );
         }),
           (e.GetOwnedGames = function (e, r) {
@@ -5828,7 +5828,7 @@
               "Player.GetPurchasedProfileCustomizations#1",
               r,
               oe,
-              { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 }
+              { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
             );
           }),
           (e.GetPurchasedAndUpgradedProfileCustomizations = function (e, r) {
@@ -5836,7 +5836,7 @@
               "Player.GetPurchasedAndUpgradedProfileCustomizations#1",
               r,
               me,
-              { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 }
+              { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
             );
           }),
           (e.GetProfileThemesAvailable = function (e, r) {
@@ -5939,7 +5939,7 @@
               "Player.UpdateSteamAnnouncementLastRead#1",
               r,
               xe,
-              { ePrivilege: 1 }
+              { ePrivilege: 1 },
             );
           }),
           (e.GetPrivacySettings = function (e, r) {

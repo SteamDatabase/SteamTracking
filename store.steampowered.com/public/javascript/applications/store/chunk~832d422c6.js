@@ -208,19 +208,19 @@
                     ? "#SteamAward_Vote_LimitedAccount"
                     : "#SteamAward_Nominate_LimitedAccount",
                 }),
-                window
+                window,
               ),
               !1)
           : ((0, y.AM)(
               l.createElement(h.uH, {
                 strTitle: (0, g.Xx)("#EventDisplay_Share_NotLoggedIn"),
                 strDescription: (0, g.Xx)(
-                  "#EventDisplay_Share_NotLoggedIn_Description"
+                  "#EventDisplay_Share_NotLoggedIn_Description",
                 ),
                 strOKButtonText: (0, g.Xx)("#MobileLogin_SignIn"),
                 onOK: k.X,
               }),
-              window
+              window,
             ),
             !1);
       }
@@ -251,7 +251,7 @@
             const t = (0, c.l)(e);
             console.error(
               "Could not fetch award event details:" + t.strErrorMsg,
-              t
+              t,
             );
           }
           return null;
@@ -270,7 +270,7 @@
           this.FetchNominationState(),
             f(
               [this.props.event.GetSteamAwardCategory()],
-              this.m_cancelSignal
+              this.m_cancelSignal,
             ).then((e) => {
               this.m_nominationEventDetails = e;
             });
@@ -283,7 +283,7 @@
         }
         componentWillUnmount() {
           this.m_cancelSignal.cancel(
-            "EventDisplaySteamAwardNomination is being unmounted"
+            "EventDisplaySteamAwardNomination is being unmounted",
           );
         }
         FetchNominationState() {
@@ -313,7 +313,7 @@
                 const t = (0, c.l)(e);
                 console.error(
                   "Could not fetch previous nominations:" + t.strErrorMsg,
-                  t
+                  t,
                 );
               }
             else this.ProcessNominations([]);
@@ -365,7 +365,7 @@
                 this.m_refCheckbox.current.checked &&
                 this.m_refCheckbox.current.Toggle(),
             }),
-            window
+            window,
           );
         }
         SaveNomination(e, t, a) {
@@ -420,7 +420,7 @@
               { className: w().ExpiredEventHeader },
               " ",
               (0, g.Xx)("#SteamAwards_ExpiredEvent"),
-              " "
+              " ",
             );
           let n = {};
           this.m_nominationEventDetails.strBackgroundCSS.length &&
@@ -446,7 +446,7 @@
               style: n,
               className: (0, _.Z)(
                 w().SteamAwardContainer,
-                v().PartnerEventFont
+                v().PartnerEventFont,
               ),
             },
             l.createElement(
@@ -464,7 +464,7 @@
                   { className: w().SteamAwardMainTitle },
                   " ",
                   (0, g.Xx)("#SteamAwards_EventMainTitle"),
-                  " "
+                  " ",
                 ),
                 l.createElement(
                   "div",
@@ -481,8 +481,8 @@
                       },
                       "(",
                       (0, g.Xx)("#EventDisplay_CallToAction_LearnMore"),
-                      ")"
-                    )
+                      ")",
+                    ),
                 ),
                 l.createElement(
                   "div",
@@ -491,7 +491,7 @@
                     ? r
                       ? (0, g.Xx)(
                           "#SteamAwards_EventNominateGamePrompt_Long",
-                          this.props.event.GetGameTitle(this.props.lang)
+                          this.props.event.GetGameTitle(this.props.lang),
                         )
                       : l.createElement(
                           "a",
@@ -502,12 +502,12 @@
                           },
                           (0, g.Xx)(
                             "#SteamAwards_EventNominateGamePrompt_NoCategory",
-                            this.props.event.GetGameTitle(this.props.lang)
-                          )
+                            this.props.event.GetGameTitle(this.props.lang),
+                          ),
                         )
-                    : (0, g.Xx)("#SteamAwards_Event_NominationsClosed")
-                )
-              )
+                    : (0, g.Xx)("#SteamAwards_Event_NominationsClosed"),
+                ),
+              ),
             ),
             d &&
               l.createElement(
@@ -540,16 +540,16 @@
                         "div",
                         { className: w().SteamAwardCategoryTitle },
                         this.m_nominationEventDetails.rgAwardCategoryDetails[0]
-                          .strSuggestedCategoryTitle
+                          .strSuggestedCategoryTitle,
                       ),
                       l.createElement(
                         "span",
                         { className: w().SteamAwardCategoryDesc },
                         this.m_nominationEventDetails.rgAwardCategoryDetails[0]
-                          .strSuggestedCategoryDesc
-                      )
+                          .strSuggestedCategoryDesc,
+                      ),
                     ),
-                  })
+                  }),
                 ),
                 s && i != this.m_nominationEventDetails.eLaborOfLove
                   ? l.createElement(
@@ -563,13 +563,13 @@
                         },
                         " ",
                         (0, g.Xx)(
-                          "#SteamAwards_EventNominationAlternativeLinkText"
+                          "#SteamAwards_EventNominationAlternativeLinkText",
                         ),
-                        " "
-                      )
+                        " ",
+                      ),
                     )
-                  : null
-              )
+                  : null,
+              ),
           );
         }
       };
@@ -590,14 +590,14 @@
           const e = l.createElement(
               "span",
               { className: w().SteamAwardModalGameTitle },
-              this.props.strNewGameTitle
+              this.props.strNewGameTitle,
             ),
             t = this.props.fnGetOldGameTitle(),
             a = t
               ? l.createElement(
                   "span",
                   { className: w().SteamAwardModalGameTitle },
-                  t
+                  t,
                 )
               : l.createElement(A.V, {
                   size: "small",
@@ -607,12 +607,12 @@
           return l.createElement(h.uH, {
             bDestructiveWarning: !0,
             strTitle: (0, g.Xx)(
-              `#SteamAward_${this.props.strLocTokenInfix}ConflictWarning_Title`
+              `#SteamAward_${this.props.strLocTokenInfix}ConflictWarning_Title`,
             ),
             strDescription: (0, g.kQ)(
               `#SteamAward_${this.props.strLocTokenInfix}ConflictWarning_Explanation`,
               a,
-              e
+              e,
             ),
             onOK: this.OnConfirm,
             onCancel: this.OnCancel,
@@ -638,7 +638,7 @@
         }
         componentWillUnmount() {
           this.m_cancelSignal.cancel(
-            "EventDisplaySteamAwardVote is being unmounted"
+            "EventDisplaySteamAwardVote is being unmounted",
           );
         }
         FetchVoteState() {
@@ -662,7 +662,7 @@
                 const t = (0, c.l)(e);
                 console.error(
                   "Could not fetch previous votes:" + t.strErrorMsg,
-                  t
+                  t,
                 );
               }
             else this.UpdateVoteState([]);
@@ -711,7 +711,7 @@
               fnOnConfirm: e,
               fnOnCancel: () => {},
             }),
-            window
+            window,
           );
         }
         SaveVote(e, t) {
@@ -758,16 +758,16 @@
                     {
                       className: (0, _.Z)(
                         w().SteamAwardCategoryTitle,
-                        w().VotingTitle
+                        w().VotingTitle,
                       ),
                     },
-                    this.props.strCategoryTitle
+                    this.props.strCategoryTitle,
                   ),
                   !this.props.bRenderFromStorePage &&
                     l.createElement(
                       "span",
                       { className: w().SteamAwardCategoryDesc },
-                      this.props.strCategoryDesc
+                      this.props.strCategoryDesc,
                     ),
                   t
                     ? l.createElement(
@@ -776,8 +776,8 @@
                         l.createElement(
                           "span",
                           { className: w().SteamAwardVoteButtonText },
-                          (0, g.Xx)("#SteamAward_VoteButton_VotedText")
-                        )
+                          (0, g.Xx)("#SteamAward_VoteButton_VotedText"),
+                        ),
                       )
                     : l.createElement(
                         "button",
@@ -788,10 +788,10 @@
                         l.createElement(
                           "span",
                           { className: w().SteamAwardVoteButtonText },
-                          (0, g.Xx)("#SteamAward_VoteButton_PromptText")
-                        )
-                      )
-                )
+                          (0, g.Xx)("#SteamAward_VoteButton_PromptText"),
+                        ),
+                      ),
+                ),
               )
             : null;
         }
@@ -815,7 +815,7 @@
                 voteCategories: this.m_voteCategories,
               })
             : (console.error(
-                `SteamAwardStorePageVoteWidget: Missing Steam Awards config for app ${this.props.appID}`
+                `SteamAwardStorePageVoteWidget: Missing Steam Awards config for app ${this.props.appID}`,
               ),
               null);
         }
@@ -840,7 +840,7 @@
         }
         componentWillUnmount() {
           this.m_cancelSignal.cancel(
-            "WinterSaleSteamAwardVoteWrapper is being unmounted"
+            "WinterSaleSteamAwardVoteWrapper is being unmounted",
           );
         }
         GetNominatedAwardCategories() {
@@ -860,9 +860,9 @@
                         strCategoryDesc: e.strSuggestedCategoryDesc,
                         strCategoryTitle: e.strSuggestedCategoryTitle,
                       },
-                      this.props
-                    )
-                  )
+                      this.props,
+                    ),
+                  ),
                 );
               }),
             t
@@ -885,7 +885,7 @@
                 style: t,
                 className: (0, _.Z)(
                   w().SteamAwardContainer,
-                  v().PartnerEventFont
+                  v().PartnerEventFont,
                 ),
               },
               l.createElement(
@@ -903,7 +903,7 @@
                     { className: w().SteamAwardMainTitle },
                     " ",
                     (0, g.Xx)("#SteamAwards_EventMainTitleCombined"),
-                    " "
+                    " ",
                   ),
                   l.createElement(
                     "div",
@@ -917,7 +917,7 @@
                             null === (e = d.Z.Get().GetApp(this.props.appID)) ||
                               void 0 === e
                               ? void 0
-                              : e.GetName()
+                              : e.GetName(),
                           ),
                           l.createElement(
                             "a",
@@ -925,11 +925,11 @@
                               href: u.De.STORE_BASE_URL + "steamawards/",
                               className: (0, _.Z)(
                                 w().SteamAwardLearnMore,
-                                w().BottomRight
+                                w().BottomRight,
                               ),
                             },
-                            (0, g.Xx)("#EventDisplay_CallToAction_LearnMore")
-                          )
+                            (0, g.Xx)("#EventDisplay_CallToAction_LearnMore"),
+                          ),
                         )
                       : l.createElement(
                           "a",
@@ -937,16 +937,16 @@
                             href: u.De.STORE_BASE_URL + "steamawards/",
                             className: w().LinkText,
                           },
-                          (0, g.Xx)("#SteamAwards_Event_VotesClosed")
-                        )
+                          (0, g.Xx)("#SteamAwards_Event_VotesClosed"),
+                        ),
                   ),
                   l.createElement(
                     "div",
                     { className: w().AwardCategoriesCtn },
-                    this.GetNominatedAwardCategories()
-                  )
-                )
-              )
+                    this.GetNominatedAwardCategories(),
+                  ),
+                ),
+              ),
             )
           );
         }

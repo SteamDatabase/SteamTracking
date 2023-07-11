@@ -101,7 +101,7 @@
             return (
               1 != a.GetEResult()
                 ? console.error(
-                    `Error when calling LoyaltyRewardsService.AddReaction: EResult=${a.GetEResult()}`
+                    `Error when calling LoyaltyRewardsService.AddReaction: EResult=${a.GetEResult()}`,
                   )
                 : (this.m_bPointsBalanceLoadedOrInFlight = !1),
               { eResult: a.GetEResult(), strMessage: "" }
@@ -124,10 +124,10 @@
             let t = yield p.pQ.GetSummary(this.m_transport, e);
             1 == t.GetEResult()
               ? (this.m_lPointsAvailable = h().fromString(
-                  t.Body().summary().points()
+                  t.Body().summary().points(),
                 ))
               : console.error(
-                  `Error when calling LoyaltyRewardsService.GetSummary: EResult=${t.GetEResult()}`
+                  `Error when calling LoyaltyRewardsService.GetSummary: EResult=${t.GetEResult()}`,
                 );
           });
         }
@@ -147,7 +147,10 @@
               let e = t.Body().toObject().reactions;
               for (const t of e)
                 this.m_mapReactionConfiguration.set(t.reactionid, t);
-            } else console.error(`Error when calling LoyaltyRewardsService.GetReactionConfig: EResult=${t.GetEResult()}`);
+            } else
+              console.error(
+                `Error when calling LoyaltyRewardsService.GetReactionConfig: EResult=${t.GetEResult()}`,
+              );
           });
         }
         GetExistingReactions() {
@@ -166,7 +169,7 @@
                   .reactionids()
                   .map((e) => this.m_mapExistingReactions.set(e, !0))
               : console.error(
-                  `Error when calling LoyaltyRewardsService.GetReactions: EResult=${t.GetEResult()}`
+                  `Error when calling LoyaltyRewardsService.GetReactions: EResult=${t.GetEResult()}`,
                 );
           });
         }
@@ -176,7 +179,7 @@
           [g.LO.deep],
           E.prototype,
           "m_mapReactionConfiguration",
-          void 0
+          void 0,
         ),
         (0, n.gn)([g.LO.deep], E.prototype, "m_mapExistingReactions", void 0);
       var _ = a(57605),
@@ -278,7 +281,7 @@
                         }px, ${m}px) rotateY(${t}rad) rotateX(${a}rad) rotateZ(${d}rad) scale(${c})`;
                       }),
                     };
-                  })(e, a)
+                  })(e, a),
                 ),
                 o = n
                   .map((e) =>
@@ -306,7 +309,7 @@
                           }px, ${a}px) rotateZ(${t}rad) scale(${s})`;
                         }),
                       };
-                    })(e, a)
+                    })(e, a),
                   )
                   .filter((e) => !!e);
               return { rgParticleStyles: r, rgStreamerStyles: o };
@@ -341,7 +344,7 @@
               n = r.map((e, t) =>
                 t % 2
                   ? s.createElement(I, { key: t, style: e })
-                  : s.createElement(P, { key: t, style: e })
+                  : s.createElement(P, { key: t, style: e }),
               );
               break;
             case x.Default:
@@ -364,8 +367,8 @@
             o.map((e, t) =>
               e.flRandom > 0.5
                 ? s.createElement(Z, { key: t, style: e })
-                : s.createElement(D, { key: t, style: e })
-            )
+                : s.createElement(D, { key: t, style: e }),
+            ),
           );
         },
         I = ({ style: e }) =>
@@ -404,7 +407,7 @@
               clipRule: "evenodd",
               d: "M0.53418 0.446363C4.80788 7.96949 8.99436 15.2008 13.0073 22.1324C35.0383 60.1862 51.8397 89.2071 49.1318 107.895C48.8475 101.617 47.1164 95.1506 43.6182 89.4997C22.9652 56.1375 -2.34054 7.06674 0.53418 0.446363ZM56.8207 188.805C55.1885 180.279 48.7591 170.011 41.3806 161.521C37.204 156.715 9.25983 141.889 7.31883 141.711L7.31474 141.711L7.31468 141.71L7.31452 141.71L7.11268 139.174L6.5244 131.791L6.5251 131.791L6.52505 131.79L6.52672 131.791C34.8022 129.659 47.1567 121.526 49.1318 107.895C49.6795 119.989 44.859 131.385 36.9599 134.917C33.2606 136.571 29.1329 137.843 25.1609 138.813C32.3599 142.599 44.0294 149.927 51.5956 160.751C60.8324 173.966 58.2537 184.901 56.8207 188.805ZM14.1541 214.387C28.3318 211.43 49.5183 206.914 54.7559 200.428C57.1974 197.404 57.6912 193.352 56.8207 188.805C56.4544 189.804 56.163 190.342 56.163 190.342C50.7646 194.114 26.0806 200.624 11.3908 204.497L11.3906 204.497L11.3904 204.497C7.40758 205.548 4.15949 206.404 2.22967 206.96L2.67009 212.483L3.21786 219.36C12.4021 224.467 20.8538 228.732 28.2879 232.483C70.3706 253.717 79.8458 258.498 5.02032 306.544C5.02047 306.546 5.02063 306.548 5.02078 306.55C5.01989 306.548 5.019 306.547 5.01812 306.545C5.24371 309.369 5.53845 312.547 5.79092 315.269C5.89859 316.43 5.99858 317.508 6.08223 318.44C6.15188 319.464 6.19564 320.436 6.20554 321.424C6.20464 321.331 6.23688 321.223 6.30064 321.101C6.31949 321.398 6.32799 321.609 6.32408 321.719C6.27561 321.616 6.23528 321.518 6.20333 321.425C6.28038 321.817 6.31788 321.895 6.32408 321.719C7.33553 323.874 11.894 328.285 17.8731 334.069C41.6329 357.056 87.8264 401.748 23.0228 412.886C23.5764 419.833 23.1631 419.992 23.1631 419.992C23.1631 419.992 24.3205 419.752 26.2506 419.305C34.1052 423.989 55.3095 438.589 58.8169 442.625C66.1955 451.115 72.6248 461.382 74.2571 469.909C73.8908 470.907 73.5993 471.446 73.5993 471.446C68.4367 475.053 42.2327 481.635 25.7172 485.783L25.7152 485.783L25.7147 485.784L25.7135 485.784L25.7028 485.787C20.6602 487.053 16.5222 488.093 14.1645 488.751L13.6222 488.439L13.6585 488.894L13.653 488.896L13.6602 488.916L14.4124 498.36C47.1778 516.58 73.923 535.597 77.6114 557.121C77.1891 558.457 76.6366 559.776 75.9628 561.084C62.5946 587.039 41.1874 608.612 24.1016 619.88C66.6744 596.331 80.8095 575.784 77.6114 557.121C81.823 543.801 73.0945 528.757 42.6319 505.104L26.8056 496.013C27.3301 495.908 27.8664 495.802 28.4133 495.693L28.4153 495.693C43.5756 492.685 66.9267 488.052 72.1923 481.531C74.6338 478.508 75.1275 474.456 74.2571 469.909C75.69 466.004 78.2687 455.069 69.032 441.855C57.4339 425.262 36.1944 416.886 36.1944 416.886L35.6563 416.927C41.635 415.285 48.7178 413.074 54.4334 410.519C66.4332 405.154 68.2307 384.374 57.9941 367.838C51.515 357.372 43.7231 350.194 35.4751 342.596C27.6489 335.386 19.4122 327.798 11.4967 316.664C12.7089 315.779 14.0928 314.791 15.6091 313.709C40.2963 296.086 100.082 253.407 25.4758 221.439L14.1541 214.387Z",
               fill: e.fill,
-            })
+            }),
           ),
         Z = ({ style: e }) =>
           s.createElement(
@@ -420,7 +423,7 @@
               clipRule: "evenodd",
               d: "M104.427 22.6009L104.428 22.6013C125.146 59.4015 140.687 87.0059 133.282 102.839C134.662 95.3303 133.62 86.4659 129.246 79.1843C112.124 50.6796 91.1453 8.75528 93.5285 3.10091C97.2525 9.85693 100.914 16.3611 104.427 22.6009ZM142.726 166.38C141.373 159.096 136.043 150.323 129.926 143.069C127.078 139.691 110.154 127.651 103.342 123.396C101.494 123.638 100.371 123.725 100.371 123.725C100.371 123.725 100.713 123.589 100.254 117.655C119.247 116.187 129.407 111.125 133.282 102.839C131.985 109.898 128.547 115.759 123.726 117.978C120.124 119.637 116.182 120.838 112.579 121.699C116.941 123.721 130.418 130.653 138.395 142.414C146.052 153.705 143.914 163.045 142.726 166.38ZM103.389 188.664C103.824 188.575 104.268 188.484 104.721 188.392L104.722 188.392C117.291 185.827 136.649 181.876 141.015 176.307C143.039 173.725 143.448 170.264 142.726 166.38C142.423 167.232 142.181 167.693 142.181 167.693C137.901 170.772 116.177 176.387 102.486 179.926C98.3006 181.007 94.8659 181.895 92.9093 182.457L92.4596 182.191L92.4896 182.579C92.4878 182.58 92.486 182.58 92.4842 182.581L92.4914 182.602L93.1147 190.665C120.278 206.239 142.45 222.491 145.508 240.879C145.158 242.02 144.7 243.146 144.141 244.263C133.059 266.43 115.312 284.852 101.148 294.472C136.441 274.369 148.16 256.821 145.508 240.879C149 229.501 141.764 216.649 116.509 196.435L103.389 188.664Z",
               fill: e.fill,
-            })
+            }),
           ),
         F = [
           ({ style: e }) =>
@@ -437,7 +440,7 @@
                 clipRule: "evenodd",
                 d: "M45.8382 77.0734L24 0L2.16179 77.0734C0.773631 79.3013 0 81.7786 0 84.3885C0 84.4894 0.00115761 84.5902 0.00346361 84.6908L0 84.703H0.00374963C0.23239 94.2845 10.8883 102 24 102C37.1117 102 47.7676 94.2845 47.9963 84.703H48L47.9965 84.6908C47.9988 84.5902 48 84.4894 48 84.3885C48 81.7786 47.2264 79.3013 45.8382 77.0734Z",
                 fill: "#F7D51E",
-              })
+              }),
             ),
           ({ style: e }) =>
             s.createElement(
@@ -455,7 +458,7 @@
               s.createElement("path", {
                 d: "M48.444 16.0525L32.7132 0.633915C20.0884 16.8827 7.13568 21.7989 0.597293 21.9904C7.33478 28.5984 14.1472 37.4728 14.1472 37.4728C31.6473 38.7751 44.3035 23.7352 48.444 16.0525Z",
                 fill: e.fill,
-              })
+              }),
             ),
           ({ style: e }) =>
             s.createElement(
@@ -472,7 +475,7 @@
                 height: "48",
                 transform: "rotate(-45 0 34.6389)",
                 fill: e.fill,
-              })
+              }),
             ),
           ({ style: e }) =>
             s.createElement(
@@ -488,7 +491,7 @@
                 clipRule: "evenodd",
                 d: "M24 0L0 24L24 47.9999L48 24L24 0ZM23.7089 8.48533L8.48527 23.7089L23.7089 38.9325L38.9324 23.7089L23.7089 8.48533Z",
                 fill: e.fill,
-              })
+              }),
             ),
           ({ style: e }) =>
             s.createElement(
@@ -505,7 +508,7 @@
                 rx: "24",
                 ry: "15",
                 fill: e.fill,
-              })
+              }),
             ),
           ({ style: e }) =>
             s.createElement(
@@ -522,7 +525,7 @@
                 rx: "24",
                 ry: "15",
                 fill: e.fill,
-              })
+              }),
             ),
           ({ style: e }) =>
             s.createElement(
@@ -539,7 +542,7 @@
                 rx: "24",
                 ry: "15",
                 fill: e.fill,
-              })
+              }),
             ),
           ({ style: e }) =>
             s.createElement(
@@ -553,7 +556,7 @@
               s.createElement("path", {
                 d: "M33.8287 29.6914L24.9705 21.1201C23.199 24.5487 23.4612 24.5487 21.4282 27.9773C19.3952 31.4058 13.4557 29.6914 12.57 27.9773C7.25553 22.8344 10.7985 17.6914 12.57 15.9773C19.656 5.69155 36.5247 4.54869 48 5.69155C47.4095 4.54865 45.5199 1.92 42.6855 0.548571C39.1425 -1.16571 1.94169 0.548571 0.170191 14.2629C-1.60131 27.9771 10.7992 38.2629 21.4282 38.2629C29.9314 38.2629 33.2382 32.5486 33.8287 29.6914Z",
                 fill: e.fill,
-              })
+              }),
             ),
           ({ style: e }) =>
             s.createElement(
@@ -569,7 +572,7 @@
               s.createElement("path", {
                 d: "M48 0H0L24 35L48 0Z",
                 fill: e.fill,
-              })
+              }),
             ),
         ],
         j = [
@@ -592,7 +595,7 @@
               s.createElement("path", {
                 fill: "#f93838",
                 d: "M27,40.35c1.12,0,1.55-.37,1.89-1.53a4.17,4.17,0,0,1-.73-.37A5,5,0,0,1,27,37.39a5,5,0,0,1-1.16,1.06,4.17,4.17,0,0,1-.73.37C25.45,40,25.88,40.35,27,40.35Z",
-              })
+              }),
             ),
           ({ style: e }) =>
             s.createElement(
@@ -620,7 +623,7 @@
               s.createElement("path", {
                 fill: "#fc1010",
                 d: "M9.8,17.7c-0.1,0-0.2,0-0.3,0l-0.6-0.1c0,0-0.1,0-0.1-0.1c0,0-0.1,0-0.1,0c0,0,0,0-0.1,0c0,0,0,0,0-0.1c-0.1,0-0.2-0.1-0.3-0.1c-0.1,0-0.2-0.1-0.3-0.1L7.8,17c-0.1,0-0.1-0.1-0.2-0.1c-0.2-0.2-0.4-0.5-0.5-0.9C7,15.7,6.9,15.4,6.9,15c0-0.2,0-0.6,0-0.9c0-0.5,0-0.8,0.1-1.1c0-0.3,0.1-0.7,0.3-1.1c0.1,0,0.1-0.2,0.3-0.5c0,0,0.1-0.1,0.1-0.1s0-0.1,0.1-0.1c0,0,0,0,0-0.1s0-0.1,0.1-0.1c0.1,0,0.2-0.1,0.3-0.2c0,0,0.1-0.1,0.2-0.1c0.1-0.1,0.1-0.1,0.2-0.1c0.2-0.1,0.5-0.2,0.8-0.3c0.1,0,0.1,0,0.2,0c0.1,0,0.2,0,0.2,0c0.1,0,0.2,0,0.3,0c0.1,0,0.1,0,0.2,0c0.5,0,0.9,0,1.3,0.1c0.3,0,0.7,0.1,1.1,0.2c0,0,0.1,0,0.1,0c0.3,0.1,0.5,0.2,0.6,0.2c0.1,0,0.1,0.1,0.1,0.1v0.1c0.1,0,0.2,0,0.3,0.1s0.2,0.2,0.3,0.3c0.1,0.1,0.2,0.2,0.2,0.4c0,0.1,0.1,0.2,0.1,0.3c0.1,0,0.1,0,0.1,0s0,0,0,0.1c0,0.2,0.1,0.4,0.1,0.5c0,0.1,0,0.1,0.1,0.2c0,0.1,0,0.2,0.1,0.3l0,0.1l0,0.4v0.3c0,0.6,0,1.1-0.1,1.4c-0.1,0.5-0.3,0.9-0.7,1.2c-0.1,0.1-0.3,0.2-0.4,0.3l-0.4,0.3c-0.2,0.1-0.4,0.1-0.5,0.2l-0.5,0.2c-0.3,0-0.6,0-0.9,0.1c-0.3,0-0.6,0.1-0.9,0.1C9.9,17.7,9.9,17.7,9.8,17.7z M11.2,15.7c0-0.1,0.1-0.2,0.1-0.3c0-0.1,0-0.2,0-0.2l0-0.3c0-0.2,0-0.5,0-0.7c0-0.1,0-0.2,0-0.3c0-0.2,0-0.4-0.1-0.6c0-0.2-0.1-0.3-0.1-0.5c0-0.2-0.1-0.3-0.1-0.3c0-0.1,0-0.3-0.1-0.3C10.9,12,10.8,12,10.7,12c-0.2,0-0.4,0.1-0.5,0.4c0,0.1-0.1,0.2-0.1,0.3c0,0,0,0.2,0,0.3L10,13.6c-0.1,0.2-0.1,0.4-0.1,0.6c0,0.3,0,0.5,0.1,0.8c0,0.1,0,0.2,0.1,0.4s0.1,0.2,0.1,0.3c0,0.1,0.1,0.2,0.2,0.2c0,0,0.1,0.1,0.1,0.1c0,0,0.1,0,0.1,0C10.9,16,11.1,15.9,11.2,15.7z",
-              })
+              }),
             ),
         ];
       var X = a(83965);
@@ -633,7 +636,7 @@
           a = (0, n._T)(e, ["className"]);
         return s.createElement(
           i.wl,
-          Object.assign({ className: (0, L.Z)(t, $.UnstyledButton) }, a)
+          Object.assign({ className: (0, L.Z)(t, $.UnstyledButton) }, a),
         );
       };
       var q, z, V;
@@ -653,14 +656,14 @@
               fill: "none",
               xmlns: "http://www.w3.org/2000/svg",
             },
-            e
+            e,
           ),
           s.createElement("path", {
             fill: "currentColor",
             fillRule: "evenodd",
             clipRule: "evenodd",
             d: "M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24ZM10.9577 17.254L18.8038 10.0384L16.773 7.83022L10.0706 13.9941L7.71092 11.2399L5.43271 13.1918L8.80323 17.1259C9.06802 17.4349 9.44701 17.6231 9.85327 17.6473C10.2595 17.6715 10.6582 17.5295 10.9577 17.254Z",
-          })
+          }),
         );
       class Q extends s.PureComponent {
         constructor(e) {
@@ -719,18 +722,18 @@
                   try {
                     const e = yield o().get(
                       `${(0, C.Kc)()}pointssummary/ajaxgetasyncconfig`,
-                      { withCredentials: !0 }
+                      { withCredentials: !0 },
                     );
                     return 1 === e.data.success
                       ? e.data.data
                       : (console.error(
-                          `Failed to load async config: ${e.data.success}`
+                          `Failed to load async config: ${e.data.success}`,
                         ),
                         {});
                   } catch (e) {
                     return (
                       console.error(
-                        `Unexpected failure while loading async config: ${e}`
+                        `Unexpected failure while loading async config: ${e}`,
                       ),
                       {}
                     );
@@ -771,9 +774,9 @@
                 s.createElement(
                   "div",
                   { className: (0, L.Z)(X.LoadingContainer, X.Visible) },
-                  s.createElement(oe, null)
-                )
-              )
+                  s.createElement(oe, null),
+                ),
+              ),
             );
           i.GetAwardConfigurations();
           return s.createElement(ee, {
@@ -902,12 +905,12 @@
                       title: (0, b.Xx)(
                         e
                           ? "#GrantAward_PromptTooltip"
-                          : "#GrantAward_SubmitTooltip"
+                          : "#GrantAward_SubmitTooltip",
                       ),
                     },
                     (0, b.Xx)(
-                      e ? "#GrantAward_SelectAward" : "#GrantAward_Next"
-                    )
+                      e ? "#GrantAward_SelectAward" : "#GrantAward_Next",
+                    ),
                   );
                 y = s.createElement(
                   s.Fragment,
@@ -921,8 +924,8 @@
                       s.createElement(
                         "div",
                         { className: (0, L.Z)(X.LoadingContainer, X.Visible) },
-                        s.createElement(oe, null)
-                      )
+                        s.createElement(oe, null),
+                      ),
                     ),
                   s.createElement(
                     d.P8,
@@ -945,8 +948,8 @@
                               selectedReaction: e === o ? 0 : e,
                             });
                         },
-                      })
-                    )
+                      }),
+                    ),
                   ),
                   s.createElement(ne, null),
                   s.createElement(
@@ -960,8 +963,8 @@
                             { key: "msg", className: X.NotEnoughPoints },
                             (0, b.Xx)(
                               "#GrantAward_CantAfford",
-                              h.negate().add(p).toNumber().toLocaleString()
-                            )
+                              h.negate().add(p).toNumber().toLocaleString(),
+                            ),
                           ),
                           s.createElement(
                             i.IS,
@@ -972,11 +975,11 @@
                             s.createElement(
                               _.zx,
                               { key: "button" },
-                              (0, b.Xx)("#GrantAward_HowToGetPoints")
-                            )
+                              (0, b.Xx)("#GrantAward_HowToGetPoints"),
+                            ),
                           ),
-                        ]
-                  )
+                        ],
+                  ),
                 );
               }
               break;
@@ -996,7 +999,7 @@
                     {
                       className: (0, L.Z)(
                         X.ConfirmContainer,
-                        l === V.CONFIRM && X.Visible
+                        l === V.CONFIRM && X.Visible,
                       ),
                     },
                     s.createElement(Q, {
@@ -1015,9 +1018,9 @@
                           s.createElement(
                             "span",
                             { className: X.AwardName },
-                            H(o)
-                          )
-                        )
+                            H(o),
+                          ),
+                        ),
                       ),
                       s.createElement(
                         "div",
@@ -1028,28 +1031,28 @@
                           s.createElement(
                             "span",
                             { className: X.TimePeriod },
-                            (0, b.Xx)("#GrantAward_Confirm_DetailsTimePeriod")
-                          )
-                        )
-                      )
-                    )
+                            (0, b.Xx)("#GrantAward_Confirm_DetailsTimePeriod"),
+                          ),
+                        ),
+                      ),
+                    ),
                   ),
                   s.createElement(
                     "div",
                     {
                       className: (0, L.Z)(
                         X.LoadingContainer,
-                        l === V.SUBMITTING && X.Visible
+                        l === V.SUBMITTING && X.Visible,
                       ),
                     },
-                    s.createElement(oe, null)
+                    s.createElement(oe, null),
                   ),
                   s.createElement(
                     "div",
                     {
                       className: (0, L.Z)(
                         X.SuccessContainer,
-                        l === V.DONE && X.Visible
+                        l === V.DONE && X.Visible,
                       ),
                     },
                     s.createElement(Q, {
@@ -1059,9 +1062,9 @@
                     s.createElement(
                       "div",
                       { className: X.SuccessText },
-                      (0, b.Xx)("#GrantAward_Success")
-                    )
-                  )
+                      (0, b.Xx)("#GrantAward_Success"),
+                    ),
+                  ),
                 ),
                 s.createElement(ne, null),
                 s.createElement(
@@ -1073,7 +1076,7 @@
                       onClick: () => this.setState({ ePhase: V.SELECTING }),
                       disabled: l !== V.CONFIRM,
                     },
-                    (0, b.Xx)("#GrantAward_Back")
+                    (0, b.Xx)("#GrantAward_Back"),
                   ),
                   s.createElement(
                     _.KM,
@@ -1082,9 +1085,9 @@
                       title: (0, b.Xx)("#GrantAward_SubmitTooltip"),
                       disabled: l !== V.CONFIRM,
                     },
-                    (0, b.Xx)("#GrantAwardNowButton")
-                  )
-                )
+                    (0, b.Xx)("#GrantAwardNowButton"),
+                  ),
+                ),
               );
               break;
             case V.ERROR: {
@@ -1125,8 +1128,8 @@
                   s.createElement(
                     "div",
                     { className: X.ErrorContainer },
-                    s.createElement("div", { className: X.ErrorText }, e)
-                  )
+                    s.createElement("div", { className: X.ErrorText }, e),
+                  ),
                 ),
                 s.createElement(ne, null),
                 s.createElement(
@@ -1135,9 +1138,9 @@
                   s.createElement(
                     _.zx,
                     { onClick: () => this.setState({ ePhase: V.SELECTING }) },
-                    (0, b.Xx)("#GrantAward_Back")
-                  )
-                )
+                    (0, b.Xx)("#GrantAward_Back"),
+                  ),
+                ),
               );
             }
           }
@@ -1148,8 +1151,8 @@
               f.Pv,
               { navID: "GrantAward", closeModal: r },
               c && s.createElement(B, { eType: x.Default }),
-              y
-            )
+              y,
+            ),
           );
         }
         GrantAward() {
@@ -1163,7 +1166,7 @@
                 ? this.setState({ ePhase: V.DONE, celebrate: !0 }, () =>
                     setTimeout(() => {
                       a && a(e, n);
-                    }, 2e3)
+                    }, 2e3),
                   )
                 : this.setState({ ePhase: V.ERROR, eResult: t });
             }));
@@ -1178,9 +1181,9 @@
             s.createElement(
               "div",
               { className: X.Title },
-              (0, b.Xx)("#GrantAwardTitle")
+              (0, b.Xx)("#GrantAwardTitle"),
             ),
-            s.createElement("div", { className: X.Description }, e)
+            s.createElement("div", { className: X.Description }, e),
           ),
         ae = (0, l.Pi)(({ store: e, children: t }) => {
           const a = e.GetUserPointBalance(),
@@ -1198,10 +1201,10 @@
                 s.createElement(
                   "div",
                   { className: X.BalanceLabel },
-                  (0, b.Xx)("#YourBalance")
+                  (0, b.Xx)("#YourBalance"),
                 ),
-                s.createElement("div", { className: X.BalanceAmount }, n)
-              )
+                s.createElement("div", { className: X.BalanceAmount }, n),
+              ),
             ),
             s.createElement(
               "div",
@@ -1210,8 +1213,8 @@
                 c.s,
                 { className: X.Actions, "flow-children": "row" },
                 s.Children.map(t, (e) =>
-                  s.createElement("div", { className: X.Action }, e)
-                )
+                  s.createElement("div", { className: X.Action }, e),
+                ),
               ),
               s.createElement(
                 "a",
@@ -1219,9 +1222,9 @@
                   className: X.FooterLink,
                   href: `${C.De.STORE_BASE_URL}points/howitworks`,
                 },
-                (0, b.Xx)("#GrantAward_PointsLink")
-              )
-            )
+                (0, b.Xx)("#GrantAward_PointsLink"),
+              ),
+            ),
           );
         }),
         ne = () => s.createElement("div", { className: X.Divider });
@@ -1261,7 +1264,7 @@
                 className: (0, L.Z)(X.Button, a && X.Selected, r && X.Disabled),
                 autoFocus: l,
               },
-              i
+              i,
             ),
             s.createElement(
               "div",
@@ -1270,15 +1273,15 @@
                 reactionType: t,
                 bForceAnimated: this.state.bHovered,
                 bDisableAnimation: r,
-              })
+              }),
             ),
             s.createElement(
               "div",
               { className: X.LabelCtn },
               s.createElement("div", { className: X.Label }, H(t)),
-              s.createElement(le, { className: X.Points }, o.toLocaleString())
+              s.createElement(le, { className: X.Points }, o.toLocaleString()),
             ),
-            r && s.createElement(Y, { className: X.IconCheckMark })
+            r && s.createElement(Y, { className: X.IconCheckMark }),
           );
         }
       }
@@ -1293,7 +1296,7 @@
             "span",
             Object.assign({}, r, { className: (0, L.Z)(a, X.PointsAmount) }),
             s.createElement(y.doA, { className: X.PointsAmountIcon }),
-            t
+            t,
           );
         };
     },

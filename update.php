@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-ini_set( 'memory_limit', '256M' ); // Some files may be big
+ini_set( 'memory_limit', '1G' ); // Some files may be big
 
 // Enable error tracking
 if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
@@ -537,7 +537,7 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 					{
 						$this->Log( '{yellow}Error ' . $Code . '{normal}    - ' . $URL );
 
-						if( $Code !== 404 )
+						if( $Code < 400 && $Code > 499 )
 						{
 							$this->URLsToFetch[ ] =
 							[

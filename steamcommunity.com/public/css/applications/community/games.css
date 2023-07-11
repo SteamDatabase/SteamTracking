@@ -135,7 +135,8 @@
   cursor: pointer;
 }
 .achievementiconbase_Icon_2bzHb.achievementiconbase_IconGlow_tH67c {
-  box-shadow: 0px 0px 2px 1px rgba(255, 184, 78, 0.6),
+  box-shadow:
+    0px 0px 2px 1px rgba(255, 184, 78, 0.6),
     0px 0px 16px 1px rgba(255, 184, 78, 0.4);
 }
 .achievementiconbase_Icon_2bzHb:after {

@@ -1107,7 +1107,7 @@
             "UserAccount.GetAvailableValveDiscountPromotions#1",
             r,
             o,
-            { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 }
+            { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
           );
         }),
           (e.GetClientWalletDetails = function (e, r) {

@@ -337,7 +337,7 @@ var CLSTAMP = "8176124";
     BClientConnected() {
       return this.m_connection.Connect().then(
         () => m,
-        () => this.FailureResult()
+        () => this.FailureResult(),
       );
     }
     BClientSupportsMessage(e) {
@@ -384,9 +384,9 @@ var CLSTAMP = "8176124";
             ? this.m_connection
                 .SendMsgAndAwaitResponse(e)
                 .then((e) =>
-                  1 === e.success ? m : this.FailureResult(e.success)
+                  1 === e.success ? m : this.FailureResult(e.success),
                 )
-            : { success: !1, result: 19, account_mismatch: !0 }
+            : { success: !1, result: 19, account_mismatch: !0 },
         )
         .catch(() => this.FailureResult());
     }

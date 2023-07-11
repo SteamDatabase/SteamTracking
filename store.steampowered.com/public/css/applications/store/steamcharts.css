@@ -648,7 +648,9 @@ body.steamchartsshell_SteamChartsPage_2aYDM .responsive_page_frame {
 }
 .page_content_ctn#page_root {
   position: relative;
-  transition: padding-left 0.2s, padding-right 0.2s;
+  transition:
+    padding-left 0.2s,
+    padding-right 0.2s;
   overflow: hidden;
 }
 div#global_header .content {

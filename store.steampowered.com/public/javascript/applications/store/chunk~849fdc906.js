@@ -122,7 +122,8 @@
             30 <= this.m_primaryLanguage ||
             e.some(
               (e) =>
-                this.m_primaryLanguage === e || this.m_secondaryLanguages.has(e)
+                this.m_primaryLanguage === e ||
+                this.m_secondaryLanguages.has(e),
             )
           );
         }
@@ -175,26 +176,26 @@
                   if (
                     (e.data.rgCuratorsIgnored &&
                       (this.m_setCuratorsIgnored = new Set(
-                        e.data.rgCuratorsIgnored.map((e) => Number(e))
+                        e.data.rgCuratorsIgnored.map((e) => Number(e)),
                       )),
                     e.data.rgWishlist &&
                       ((this.m_wishlistInOrder = e.data.rgWishlist.map((e) =>
-                        Number(e)
+                        Number(e),
                       )),
                       (this.m_setWishList = new Set(
-                        e.data.rgWishlist.map((e) => Number(e))
+                        e.data.rgWishlist.map((e) => Number(e)),
                       ))),
                     e.data.rgFollowedApps &&
                       (this.m_setFollowedApps = new Set(
-                        e.data.rgFollowedApps.map((e) => Number(e))
+                        e.data.rgFollowedApps.map((e) => Number(e)),
                       )),
                     e.data.rgOwnedApps &&
                       (this.m_setOwnedApps = new Set(
-                        e.data.rgOwnedApps.map((e) => Number(e))
+                        e.data.rgOwnedApps.map((e) => Number(e)),
                       )),
                     e.data.rgOwnedPackages &&
                       (this.m_setOwnedPackages = new Set(
-                        e.data.rgOwnedPackages.map((e) => Number(e))
+                        e.data.rgOwnedPackages.map((e) => Number(e)),
                       )),
                     e.data.rgIgnoredApps)
                   ) {
@@ -212,24 +213,24 @@
                   if (
                     (e.data.rgExcludedTags &&
                       (this.m_setExcludedTagsIds = new Set(
-                        e.data.rgExcludedTags.map((e) => Number(e.tagid))
+                        e.data.rgExcludedTags.map((e) => Number(e.tagid)),
                       )),
                     e.data.rgExcludedContentDescriptorIDs &&
                       (this.m_setExcludedContentDescriptors = new Set(
                         e.data.rgExcludedContentDescriptorIDs.map((e) =>
-                          Number(e)
-                        )
+                          Number(e),
+                        ),
                       )),
                     e.data.rgRecommendedApps &&
                       ((this.m_recAppInOrder = e.data.rgRecommendedApps.map(
-                        (e) => Number(e)
+                        (e) => Number(e),
                       )),
                       (this.m_setRecommendedApps = new Set(
-                        e.data.rgRecommendedApps.map((e) => Number(e))
+                        e.data.rgRecommendedApps.map((e) => Number(e)),
                       ))),
                     e.data.rgPreferredPlatforms &&
                       (this.m_setPreferredPlatforms = new Set(
-                        e.data.rgPreferredPlatforms
+                        e.data.rgPreferredPlatforms,
                       )),
                     e.data.bAllowAppImpressions &&
                       (this.m_bAllowAppImpressions =
@@ -240,17 +241,17 @@
                       (this.m_primaryLanguage = e.data.rgPrimaryLanguage),
                     e.data.rgSecondaryLanguages &&
                       (this.m_secondaryLanguages = new Set(
-                        e.data.rgSecondaryLanguages
+                        e.data.rgSecondaryLanguages,
                       )),
                     e.data.rgRecommendedTags &&
                       (this.m_setRecommendedTags = new Set(
-                        e.data.rgRecommendedTags.map((e) => e.tagid)
+                        e.data.rgRecommendedTags.map((e) => e.tagid),
                       )),
                     e.data.rgAppsInCart &&
                       (this.m_setAppsInCart = new Set(e.data.rgAppsInCart)),
                     e.data.rgPackagesInCart &&
                       (this.m_setPackagesInCart = new Set(
-                        e.data.rgPackagesInCart
+                        e.data.rgPackagesInCart,
                       )),
                     e.data.nCartLineItemCount &&
                       (this.m_nCartLineItemCount = e.data.nCartLineItemCount),
@@ -437,7 +438,7 @@
             p,
             (
               Number.parseInt(window.localStorage.getItem(p) || "0") + 1
-            ).toString()
+            ).toString(),
           );
         }
         static Get() {
@@ -499,7 +500,7 @@
           [o.LO],
           l.prototype,
           "m_setExcludedContentDescriptors",
-          void 0
+          void 0,
         ),
         (0, r.gn)([o.LO], l.prototype, "m_setRecommendedApps", void 0),
         (0, r.gn)([o.LO], l.prototype, "m_mapIgnoredApps", void 0),
@@ -510,7 +511,7 @@
           [o.LO],
           l.prototype,
           "m_bShowFilteredUserReviewScores",
-          void 0
+          void 0,
         ),
         (0, r.gn)([o.LO], l.prototype, "m_primaryLanguage", void 0),
         (0, r.gn)([o.LO], l.prototype, "m_secondaryLanguages", void 0),
@@ -519,7 +520,7 @@
           [o.LO],
           l.prototype,
           "m_mapRecommendingCuratorsForApp",
-          void 0
+          void 0,
         ),
         (0, r.gn)([o.LO], l.prototype, "m_setPackagesInCart", void 0),
         (0, r.gn)([o.LO], l.prototype, "m_setAppsInCart", void 0),
@@ -541,7 +542,7 @@
         return r.createElement(
           a.e1,
           { onEscKeypress: e.closeModal, bDisableBackgroundDismiss: !0 },
-          r.createElement(c, { redirectURL: e.redirectURL })
+          r.createElement(c, { redirectURL: e.redirectURL }),
         );
       }
       function l() {
@@ -551,20 +552,20 @@
             redirectURL: window.location.href,
           }),
           window,
-          { strTitle: (0, n.Xx)("#Login_SignIn") }
+          { strTitle: (0, n.Xx)("#Login_SignIn") },
         );
       }
       function u(e) {
         (0, a.AM)(
           r.createElement(p, { ownerWin: window, redirectURL: e }),
           window,
-          { strTitle: (0, n.Xx)("#Login_SignIn") }
+          { strTitle: (0, n.Xx)("#Login_SignIn") },
         );
       }
       function c(e) {
         const { redirectURL: t } = e,
           [s] = (0, r.useState)(
-            new d.J(o.De.WEBAPI_BASE_URL).GetAnonymousServiceTransport()
+            new d.J(o.De.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
           ),
           [a, n] = (0, r.useState)(!1);
         return r.createElement(
@@ -583,7 +584,7 @@
                 },
                 redirectUrl: t,
                 theme: "modal",
-              })
+              }),
         );
       }
     },

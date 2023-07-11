@@ -10,7 +10,8 @@ html.responsive
   right: 0;
   bottom: 0;
   left: 0;
-  background: radial-gradient(
+  background:
+    radial-gradient(
       circle at top left,
       rgba(74, 81, 92, 0.4) 0%,
       rgba(75, 81, 92, 0) 60%,
@@ -361,7 +362,9 @@ html.responsive
   z-index: 2;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  transition: filter 0.24s ease-in-out, transform 0.24s ease-in-out,
+  transition:
+    filter 0.24s ease-in-out,
+    transform 0.24s ease-in-out,
     color 0.24s ease-in-out;
 }
 .items_in_row_4 .eventrow_EventSummaryText_h5tE8 {
@@ -381,7 +384,9 @@ html.responsive
   z-index: 2;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  transition: filter 0.24s ease-in-out, transform 0.24s ease-in-out,
+  transition:
+    filter 0.24s ease-in-out,
+    transform 0.24s ease-in-out,
     color 0.24s ease-in-out;
 }
 .eventrow_OtherEvents_EventCtn_17gGs.eventrow_HorizontalEvent_1RS0b {
@@ -905,7 +910,9 @@ A:active {
   width: fit-content;
   flex-grow: 1;
   line-height: 19px;
-  transition: box-shadow 0.25s ease-out, background-color 0.25s ease-out;
+  transition:
+    box-shadow 0.25s ease-out,
+    background-color 0.25s ease-out;
 }
 .image_Btn_3YohC:hover {
   background-color: #427d9f;

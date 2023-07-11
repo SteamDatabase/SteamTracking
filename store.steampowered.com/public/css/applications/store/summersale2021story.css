@@ -1,5 +1,6 @@
 body.forgeyourfate {
-  background: url(../../../images/applications/store/story_page_bg.jpg?v=valveisgoodatcaching)
+  background:
+    url(../../../images/applications/store/story_page_bg.jpg?v=valveisgoodatcaching)
       no-repeat top center,
     #232323;
   filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.4));
@@ -32,7 +33,8 @@ body.forgeyourfate {
   }
 }
 .summersale2021story_PageInnerBG_dkYvU {
-  background: url(../../../images/applications/store/back_cover.jpg?v=valveisgoodatcaching)
+  background:
+    url(../../../images/applications/store/back_cover.jpg?v=valveisgoodatcaching)
       no-repeat top center,
     #442e31;
   max-width: 1300px;
@@ -286,7 +288,8 @@ body.forgeyourfate {
   background-position: center;
   background-color: rgba(35, 35, 35, 0.2);
   background-repeat: no-repeat;
-  box-shadow: 3px -1px 4px 4px rgba(0, 0, 0, 0.1333333333),
+  box-shadow:
+    3px -1px 4px 4px rgba(0, 0, 0, 0.1333333333),
     inset 0px 0px 0px 5px #fefeef;
 }
 .summersale2021story_GenreContainer_2JuP7
@@ -394,7 +397,8 @@ body.forgeyourfate {
   background-size: contain;
   background-repeat: no-repeat;
   border-radius: 50%;
-  box-shadow: 3px -1px 4px 4px rgba(0, 0, 0, 0.0666666667),
+  box-shadow:
+    3px -1px 4px 4px rgba(0, 0, 0, 0.0666666667),
     inset 0px 0px 0px 22px #fefeef;
   margin-bottom: 50px;
 }

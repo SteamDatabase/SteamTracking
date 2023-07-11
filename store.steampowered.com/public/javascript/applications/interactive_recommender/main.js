@@ -60,7 +60,7 @@
             n,
             function (e) {
               return t[e];
-            }.bind(null, n)
+            }.bind(null, n),
           );
       return a;
     }),
@@ -390,7 +390,7 @@
             return D.a.createElement(
               m.a,
               { onChange: this.onVisibilityChanged },
-              this.props.children
+              this.props.children,
             );
           }),
           Object(_.c)([E], t.prototype, "onVisibilityChanged", null),
@@ -440,7 +440,7 @@
           { className: "Speaker" },
           l.createElement("path", {
             d: "M93.785,52.265c-0.946,0-2.357,0.63-3.304,1.577L40.284,98.022c-0.947,0.789-2.831,1.578-4.093,1.578H9.367 C8.104,99.6,7,100.706,7,101.967v52.069c0,1.264,1.104,2.367,2.367,2.367H36.19c1.262,0,3.146,0.632,4.093,1.578l50.197,44.181 c0.947,0.789,2.516,1.578,3.304,1.578s1.578-1.104,1.578-2.367V54.631C95.363,53.369,94.731,52.265,93.785,52.265z",
-          })
+          }),
         ),
         !e.muted &&
           l.createElement(
@@ -461,7 +461,7 @@
             l.createElement("path", {
               className: "SoundWavesLow",
               d: "M121.989,101.229l-8.778,9.073c4.641,4.516,7.397,10.706,7.397,17.702c0,6.995-2.755,13.186-7.397,17.702l8.778,9.073 c7.035-6.844,11.243-16.413,11.243-26.775C133.232,117.643,129.024,108.075,121.989,101.229z",
-            })
+            }),
           ),
         l.createElement(
           "g",
@@ -485,8 +485,8 @@
             y1: "84.5",
             x2: "223.167",
             y2: "170.667",
-          })
-        )
+          }),
+        ),
       );
     }
     a("Gp1o");
@@ -882,19 +882,19 @@
               D.a.createElement(
                 "div",
                 { className: j.a.Persona },
-                N.PERSONA_NAME
+                N.PERSONA_NAME,
               ),
               D.a.createElement(
                 "div",
                 { className: j.a.GameCount },
-                w("#PlaytimeList_RecentGames", a)
+                w("#PlaytimeList_RecentGames", a),
               ),
               D.a.createElement(
                 "div",
                 { className: j.a.TotalTime },
-                w("#PlaytimeList_HoursTotal", n)
-              )
-            )
+                w("#PlaytimeList_HoursTotal", n),
+              ),
+            ),
           )
         );
       },
@@ -942,7 +942,7 @@
                           ? (e -= b.PerHour) >= 2 * b.PerMinute
                             ? w(
                                 a + "1HourXMinutes",
-                                Math.floor(e / b.PerMinute)
+                                Math.floor(e / b.PerMinute),
                               )
                             : w(a + "1Hour")
                           : e >= 2 * b.PerMinute
@@ -950,7 +950,7 @@
                           : e >= b.PerMinute
                           ? w(a + "1Minute")
                           : w(a + "LessThanAMinute");
-                      })(s)
+                      })(s),
                 )),
           D.a.createElement(
             "div",
@@ -958,7 +958,7 @@
             D.a.createElement(
               "a",
               { href: N.BASE_URL + "app/" + t },
-              D.a.createElement("img", { className: j.a.Logo, src: i })
+              D.a.createElement("img", { className: j.a.Logo, src: i }),
             ),
             D.a.createElement(
               "div",
@@ -966,7 +966,7 @@
               D.a.createElement(
                 "div",
                 { className: j.a.HoursPlayed },
-                w("#PlaytimeList_Hours", n)
+                w("#PlaytimeList_Hours", n),
               ),
               D.a.createElement("div", { className: j.a.Title }, a),
               D.a.createElement("div", { className: j.a.LastPlayed }, c),
@@ -978,9 +978,9 @@
                     return ce.onToggleIgnore(t);
                   },
                 },
-                w(o ? "#PlaytimeList_UnIgnore" : "#PlaytimeList_Ignore")
-              )
-            )
+                w(o ? "#PlaytimeList_UnIgnore" : "#PlaytimeList_Ignore"),
+              ),
+            ),
           )
         );
       },
@@ -1001,9 +1001,9 @@
                 D.a.createElement(
                   "div",
                   { className: j.a.Header },
-                  w("#PlaytimeList_Header")
+                  w("#PlaytimeList_Header"),
                 ),
-                D.a.createElement("div", { className: j.a.Loading })
+                D.a.createElement("div", { className: j.a.Loading }),
               );
             ce.getAppInfo();
             var n = e.slice().sort(function (e, t) {
@@ -1020,7 +1020,7 @@
                     hours: t.p,
                     lastPlayed: t.l,
                     ignored: t.i || t.ip,
-                  })
+                  }),
                 );
               }),
               D.a.createElement(
@@ -1029,10 +1029,10 @@
                 D.a.createElement(
                   "div",
                   { className: j.a.Header },
-                  w("#PlaytimeList_Header")
+                  w("#PlaytimeList_Header"),
                 ),
                 D.a.createElement(W, { accountID: this.props.accountID }),
-                D.a.createElement("div", { className: j.a.List }, a)
+                D.a.createElement("div", { className: j.a.List }, a),
               )
             );
           }),
@@ -1058,7 +1058,7 @@
             "div",
             { className: j.a.Labels },
             D.a.createElement("div", { className: j.a.Min }, a),
-            D.a.createElement("div", { className: j.a.Max }, n)
+            D.a.createElement("div", { className: j.a.Max }, n),
           ),
           D.a.createElement("input", {
             type: "range",
@@ -1068,7 +1068,7 @@
             value: i,
             onChange: s,
           }),
-          D.a.createElement("div", { className: j.a.OptionalLabel }, u)
+          D.a.createElement("div", { className: j.a.OptionalLabel }, u),
         );
       },
       X = function (e) {
@@ -1085,7 +1085,7 @@
             checked: n,
             onChange: r,
           }),
-          a
+          a,
         );
       },
       z = (function (a) {
@@ -1198,8 +1198,8 @@
                         },
                       },
                       D.a.createElement("div", null, e),
-                      D.a.createElement("div", { className: j.a.Close }, "X")
-                    )
+                      D.a.createElement("div", { className: j.a.Close }, "X"),
+                    ),
                   );
                 },
                 r = 0,
@@ -1215,7 +1215,7 @@
               D.a.createElement(
                 "div",
                 { className: j.a.Label },
-                this.props.title
+                this.props.title,
               ),
               D.a.createElement(V.a, {
                 suggestions: this.state.suggestions,
@@ -1237,7 +1237,7 @@
                   suggestionsContainerOpen: j.a.SuggestionContainerOpen,
                 },
               }),
-              n
+              n,
             );
           }),
           Object(_.c)([E], e.prototype, "onFetchRequested", null),
@@ -1290,7 +1290,7 @@
               value: ce.m_fQueuedRecencyValue,
               onChange: ce.onRecencyChanged,
               sliderLabels: i,
-            })
+            }),
           ),
           D.a.createElement(
             "div",
@@ -1322,9 +1322,9 @@
                 onClick: ce.onSaveUserSettings,
                 title: w("#SaveUserSettingsTooltip"),
               },
-              w("#SaveUserSettings")
-            )
-          )
+              w("#SaveUserSettings"),
+            ),
+          ),
         );
       }),
       Q = (function (a) {
@@ -1352,7 +1352,7 @@
               e &&
                 e.then(
                   function () {},
-                  function () {}
+                  function () {},
                 );
             }
           }),
@@ -1417,8 +1417,8 @@
                     D.a.createElement(
                       "div",
                       { key: a + "_" + h, className: j.a.Tag },
-                      ce.getTagName(h)
-                    )
+                      ce.getTagName(h),
+                    ),
                   ),
                   5 == ++p)
                 )
@@ -1473,7 +1473,7 @@
                     "ds_flagged",
                     "ds_wishlist",
                     30 < r && j.a.Hidden,
-                    v && j.a.Hovered
+                    v && j.a.Hovered,
                   ),
                   style: { top: Math.min(31, r) * g },
                   onMouseEnter: this.OnHover,
@@ -1495,7 +1495,7 @@
                         "highlight_player_item",
                         "highlight_movie",
                         j.a.Video,
-                        I && v && j.a.Revealed
+                        I && v && j.a.Revealed,
                       ),
                       playsInline: !0,
                       autoPlay: !0,
@@ -1510,7 +1510,7 @@
                           return t.onMuteToggle(e);
                         },
                       },
-                      D.a.createElement(U, { muted: ce.shouldMute() })
+                      D.a.createElement(U, { muted: ce.shouldMute() }),
                     ),
                     this.state.wishlisted &&
                       D.a.createElement(
@@ -1519,11 +1519,11 @@
                           className: M(
                             "ds_flag",
                             "ds_wishlist_flag",
-                            j.a.WishlistFlag
+                            j.a.WishlistFlag,
                           ),
                         },
-                        w("#Recommendation_OnWishlist") + "  "
-                      )
+                        w("#Recommendation_OnWishlist") + "  ",
+                      ),
                   ),
                   D.a.createElement(
                     "div",
@@ -1538,13 +1538,13 @@
                           className: M(
                             j.a.CenterOption,
                             j.a.CenterDefault,
-                            v && j.a.Hidden
+                            v && j.a.Hidden,
                           ),
                         },
                         D.a.createElement(
                           "div",
                           { className: j.a.Released },
-                          l
+                          l,
                         ),
                         D.a.createElement(
                           "div",
@@ -1552,9 +1552,9 @@
                           D.a.createElement("div", {
                             className: j.a.Bar,
                             style: { width: f + "%" },
-                          })
+                          }),
                         ),
-                        D.a.createElement("div", { className: j.a.Tags }, u)
+                        D.a.createElement("div", { className: j.a.Tags }, u),
                       ),
                       D.a.createElement(
                         "div",
@@ -1562,11 +1562,11 @@
                           className: M(
                             j.a.CenterOption,
                             j.a.CenterHovered,
-                            !v && j.a.Hidden
+                            !v && j.a.Hidden,
                           ),
                         },
-                        C
-                      )
+                        C,
+                      ),
                     ),
                     S &&
                       D.a.createElement(
@@ -1577,7 +1577,7 @@
                           {
                             className: M(
                               "game_purchase_action",
-                              j.a.PurchaseSection
+                              j.a.PurchaseSection,
                             ),
                           },
                           D.a.createElement(
@@ -1585,7 +1585,7 @@
                             {
                               className: M(
                                 "game_purchase_action_bg",
-                                j.a.PurchaseBG
+                                j.a.PurchaseBG,
                               ),
                             },
                             T &&
@@ -1598,7 +1598,7 @@
                                 D.a.createElement(
                                   "div",
                                   { className: "discount_pct" },
-                                  L
+                                  L,
                                 ),
                                 D.a.createElement(
                                   "div",
@@ -1606,14 +1606,14 @@
                                   D.a.createElement(
                                     "div",
                                     { className: "discount_original_price" },
-                                    k
+                                    k,
                                   ),
                                   D.a.createElement(
                                     "div",
                                     { className: "discount_final_price" },
-                                    R
-                                  )
-                                )
+                                    R,
+                                  ),
+                                ),
                               ),
                             !T &&
                               D.a.createElement(
@@ -1622,10 +1622,10 @@
                                   className: M(
                                     "game_purchase_price",
                                     "price",
-                                    j.a.Price
+                                    j.a.Price,
                                   ),
                                 },
-                                R
+                                R,
                               ),
                             !y &&
                               D.a.createElement(
@@ -1645,11 +1645,11 @@
                                   D.a.createElement(
                                     "span",
                                     null,
-                                    w("#btn_add_to_cart")
-                                  )
-                                )
-                              )
-                          )
+                                    w("#btn_add_to_cart"),
+                                  ),
+                                ),
+                              ),
+                          ),
                         ),
                         !this.state.wishlisted &&
                           !y &&
@@ -1668,9 +1668,9 @@
                               D.a.createElement(
                                 "span",
                                 null,
-                                w("#wishlist_add_to_wishlist")
-                              )
-                            )
+                                w("#wishlist_add_to_wishlist"),
+                              ),
+                            ),
                           ),
                         this.state.wishlisted &&
                           !y &&
@@ -1681,7 +1681,7 @@
                                 "btnv6_blue_hoverfade btn_medium",
                                 "queue_btn_active",
                                 j.a.Wishlisted,
-                                j.a.WishlistSection
+                                j.a.WishlistSection,
                               ),
                               "data-tooltip-text": w("#OnWishlistTooltip"),
                               onClick: function (e) {
@@ -1695,13 +1695,13 @@
                                 src:
                                   N.IMG_URL_BASE + "/v6/ico/ico_selected.png",
                               }),
-                              "  " + w("#OnWishlist")
-                            )
-                          )
-                      )
-                  )
-                )
-              )
+                              "  " + w("#OnWishlist"),
+                            ),
+                          ),
+                      ),
+                  ),
+                ),
+              ),
             );
           }),
           Object(_.c)([E], e.prototype, "OnHover", null),
@@ -1807,7 +1807,7 @@
                     score: I.score,
                     rank: I.rank,
                     width: this.props.width,
-                  })
+                  }),
                 );
               }
             } else
@@ -1815,7 +1815,7 @@
                 D.a.createElement("div", {
                   key: "recommendations_loading",
                   className: j.a.RecommendationsLoading,
-                })
+                }),
               );
             return D.a.createElement(
               "div",
@@ -1823,7 +1823,7 @@
               D.a.createElement(
                 "div",
                 { className: j.a.Header },
-                w("#Recommendations_Header")
+                w("#Recommendations_Header"),
               ),
               D.a.createElement(K, null),
               D.a.createElement(
@@ -1831,11 +1831,11 @@
                 {
                   className: M(
                     j.a.List,
-                    ce.areResultsExpired() && j.a.Updating
+                    ce.areResultsExpired() && j.a.Updating,
                   ),
                 },
-                m
-              )
+                m,
+              ),
             );
           }),
           (e = Object(_.c)([i.a], e))
@@ -1865,20 +1865,20 @@
                     D.a.createElement(
                       "div",
                       { className: j.a.Text },
-                      w("#LoginText")
+                      w("#LoginText"),
                     ),
                     D.a.createElement(
                       "a",
                       {
                         className: M(
                           "btn_green_white_innerfade",
-                          " btn_medium"
+                          " btn_medium",
                         ),
                         href: N.LOGIN_REDIRECT,
                       },
-                      D.a.createElement("span", null, w("#LoginButton"))
-                    )
-                  )
+                      D.a.createElement("span", null, w("#LoginButton")),
+                    ),
+                  ),
                 )
               : D.a.createElement(
                   "div",
@@ -1895,12 +1895,12 @@
                       D.a.createElement(
                         "div",
                         { className: j.a.Header },
-                        w("#HeaderTitle")
+                        w("#HeaderTitle"),
                       ),
                       D.a.createElement(
                         "div",
                         { className: j.a.Body },
-                        w("#HeaderBody1")
+                        w("#HeaderBody1"),
                       ),
                       D.a.createElement("div", { className: j.a.Spacer }),
                       D.a.createElement(
@@ -1924,7 +1924,7 @@
                             o.push(n.substr(s)),
                             l.createElement.apply(
                               l,
-                              Object(_.f)([l.Fragment, null], o)
+                              Object(_.f)([l.Fragment, null], o),
                             )
                           );
                         })(
@@ -1934,19 +1934,19 @@
                             {
                               href: "https://steamcommunity.com/games/593110/announcements/detail/1612767708821405787",
                             },
-                            w("#HeaderBody3a")
-                          )
-                        )
-                      )
+                            w("#HeaderBody3a"),
+                          ),
+                        ),
+                      ),
                     ),
                     D.a.createElement(
                       "div",
                       { className: j.a.BottomSection },
                       D.a.createElement(Y, { accountID: N.ACCOUNT_ID }),
                       D.a.createElement("div", { className: j.a.VerticalBar }),
-                      D.a.createElement(J, { width: this.state.width })
-                    )
-                  )
+                      D.a.createElement(J, { width: this.state.width }),
+                    ),
+                  ),
                 );
           }),
           Object(_.c)([E], e.prototype, "updateDimensions", null),
@@ -2047,7 +2047,7 @@
                   recency: e.m_fRecencyValue,
                   excludewishlisted: e.m_bExcludeWishlisted,
                 },
-                ""
+                "",
               ),
               (e.m_bStateUpdated = !1));
           }, 1e3),
@@ -2071,7 +2071,7 @@
             (this.m_bStateUpdated = !0),
             ee.render(
               l.createElement(Z, { app: this }),
-              document.getElementById("recommender_root")
+              document.getElementById("recommender_root"),
             );
         }),
         (e.prototype.getDetails = function (t) {
@@ -2095,7 +2095,7 @@
                               "/details?appid=" +
                               t +
                               "&sessionid=" +
-                              N.SESSION_ID
+                              N.SESSION_ID,
                           ),
                         ];
                       case 1:
@@ -2106,7 +2106,7 @@
               },
               function (e) {
                 return e.data;
-              }
+              },
             )
           );
         }),
@@ -2150,7 +2150,7 @@
                                 s +
                                 "&model_version=" +
                                 c +
-                                l
+                                l,
                             ),
                           ];
                         case 1:
@@ -2161,7 +2161,7 @@
                 },
                 function (e) {
                   return e.data;
-                }
+                },
               )
             );
           }
@@ -2174,7 +2174,7 @@
             N.INCLUDE_PLAYED,
             N.ALGORITHM,
             N.REINFERENCE,
-            N.MODEL_VERSION
+            N.MODEL_VERSION,
           );
           return e ? e.recommendations : void 0;
         }),
@@ -2196,7 +2196,7 @@
                             "/inputs?sessionid=" +
                             N.SESSION_ID +
                             "&steamid=" +
-                            N.STEAM_ID
+                            N.STEAM_ID,
                         ),
                       ];
                     case 1:
@@ -2207,7 +2207,7 @@
             },
             function (e) {
               return e.data;
-            }
+            },
           );
         }),
         (e.prototype.getAppInfo = function () {
@@ -2215,7 +2215,7 @@
             N.INCLUDE_PLAYED,
             N.ALGORITHM,
             N.REINFERENCE,
-            N.MODEL_VERSION
+            N.MODEL_VERSION,
           );
           return e ? e.app_info : void 0;
         }),
@@ -2235,7 +2235,7 @@
                             "recommender/" +
                             N.STEAM_ID +
                             "/tags?sessionid=" +
-                            N.SESSION_ID
+                            N.SESSION_ID,
                         ),
                       ];
                     case 1:
@@ -2251,7 +2251,7 @@
                 r.m_TagNameMap.set(n.tagid, n.name);
               }
               return e.data;
-            }
+            },
           );
         }),
         (e.prototype.getTagName = function (e) {
@@ -2260,7 +2260,7 @@
         (e.prototype.getTagHeight = function () {
           return Math.max(
             this.m_rgFilterTags.length,
-            this.m_rgExcludeTags.length
+            this.m_rgExcludeTags.length,
           );
         }),
         (e.prototype.onPopularityChanged = function (e) {
@@ -2336,10 +2336,10 @@
                     (N.DEFAULT_RECENCY_SLIDER = this.m_fRecencyValue),
                     (N.DEFAULT_POPULARITY_SLIDER = this.m_fPopularityValue),
                     (N.DEFAULT_INCLUDED_TAGS = Object(_.f)(
-                      this.m_rgFilterTags
+                      this.m_rgFilterTags,
                     )),
                     (N.DEFAULT_EXCLUDED_TAGS = Object(_.f)(
-                      this.m_rgExcludeTags
+                      this.m_rgExcludeTags,
                     )),
                     (N.DEFAULT_IGNORED_PLAYED_APPS = Object(_.f)(t)),
                     [
@@ -2349,7 +2349,7 @@
                           "recommender/" +
                           N.STEAM_ID +
                           "/savesettings",
-                        i
+                        i,
                       ),
                     ]
                   );
@@ -2402,7 +2402,7 @@
                       4,
                       d.a.post(
                         N.BASE_URL + "recommender/" + N.STEAM_ID + "/stats",
-                        t
+                        t,
                       ),
                     ]
                   );
@@ -2429,7 +2429,7 @@
                           N.STEAM_ID +
                           "/wishlist?snr=" +
                           N.LINK_PARAM,
-                        t
+                        t,
                       ),
                     ]
                   );
@@ -2450,7 +2450,7 @@
                       4,
                       d.a.post(
                         N.BASE_URL + "recommender/" + N.STEAM_ID + "/stats",
-                        n
+                        n,
                       ),
                     ]
                   );
@@ -2480,7 +2480,7 @@
                           N.STEAM_ID +
                           "/cart?snr=" +
                           N.LINK_PARAM,
-                        t
+                        t,
                       ),
                     ]
                   );
@@ -2501,7 +2501,7 @@
                       4,
                       d.a.post(
                         N.BASE_URL + "recommender/" + N.STEAM_ID + "/stats",
-                        a
+                        a,
                       ),
                     ]
                   );

@@ -98,8 +98,8 @@
                     className: h.PrimaryRedeemButton,
                     onClick: (e) => (0, i.s1)(e, n),
                   }),
-              t.createElement(A, { offer: r })
-            )
+              t.createElement(A, { offer: r }),
+            ),
           );
         }),
         f = (0, o.Pi)(({ bundle: e, offer: n }) => {
@@ -108,7 +108,7 @@
           return t.createElement(
             u.xu,
             { paddingBottom: "xlarge" },
-            t.createElement(c._f, { title: r, subtitle: l })
+            t.createElement(c._f, { title: r, subtitle: l }),
           );
         }),
         x = ({ className: e }) =>
@@ -119,8 +119,8 @@
             t.createElement(
               "span",
               { className: h.AlreadyOwnedText },
-              (0, _.Xx)("#Redeem_BundleItemOwned")
-            )
+              (0, _.Xx)("#Redeem_BundleItemOwned"),
+            ),
           ),
         A = (0, o.Pi)((e) => {
           const { offer: n } = e;
@@ -141,7 +141,7 @@
                   purchaseable: !1,
                   onClick: (n) => (0, i.u4)(n, e),
                 }),
-            })
+            }),
           );
         });
     },

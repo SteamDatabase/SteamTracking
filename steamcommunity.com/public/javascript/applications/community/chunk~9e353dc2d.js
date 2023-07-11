@@ -472,7 +472,7 @@
                 "CEventCalendarDevFeatures overriding partner event time: " +
                   this.nOverrideDateNow +
                   " " +
-                  n.format()
+                  n.format(),
               );
           }
         }
@@ -526,7 +526,7 @@
         return a.createElement(
           r.e1,
           { onEscKeypress: e.closeModal, bDisableBackgroundDismiss: !0 },
-          a.createElement(m, { redirectURL: e.redirectURL })
+          a.createElement(m, { redirectURL: e.redirectURL }),
         );
       }
       function v() {
@@ -536,13 +536,13 @@
             redirectURL: window.location.href,
           }),
           window,
-          { strTitle: (0, s.Xx)("#Login_SignIn") }
+          { strTitle: (0, s.Xx)("#Login_SignIn") },
         );
       }
       function m(e) {
         const { redirectURL: t } = e,
           [n] = (0, a.useState)(
-            new o.J(i.De.WEBAPI_BASE_URL).GetAnonymousServiceTransport()
+            new o.J(i.De.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
           ),
           [r, s] = (0, a.useState)(!1);
         return a.createElement(
@@ -561,7 +561,7 @@
                 },
                 redirectUrl: t,
                 theme: "modal",
-              })
+              }),
         );
       }
     },
@@ -608,9 +608,9 @@
                   "span",
                   { "data-tooltip-text": a.format("Z") + ", " + n },
                   " ",
-                  a.zoneAbbr()
+                  a.zoneAbbr(),
                 )
-              : null
+              : null,
           )
         );
       }
@@ -633,7 +633,7 @@
                 { className: a || s ? c.DateAndTimeInline : c.DateAndTime },
                 l && d,
                 r.createElement("span", null, " "),
-                Boolean(t && o) && u(t, !0)
+                Boolean(t && o) && u(t, !0),
               )
             : r.createElement(
                 "div",
@@ -644,13 +644,13 @@
                     null,
                     r.createElement("div", { className: c.LocalizedDate }, d),
                     " ",
-                    r.createElement("span", { className: c.At }, "@")
+                    r.createElement("span", { className: c.At }, "@"),
                   ),
                 r.createElement(
                   "div",
                   { className: c.LocalizedTime },
-                  Boolean(t && o) && u(t, !0)
-                )
+                  Boolean(t && o) && u(t, !0),
+                ),
               );
         }),
         E = (e) => {
@@ -671,7 +671,7 @@
                   ? void 0
                   : t.DateToolTip,
             },
-            e.children
+            e.children,
           );
         };
       let j = class extends r.Component {
@@ -691,9 +691,9 @@
               r.createElement(
                 "span",
                 { className: n.RightSideTitles },
-                (0, i.Xx)("#EventDisplay_TimeRange")
+                (0, i.Xx)("#EventDisplay_TimeRange"),
               ),
-              (0, i.Xx)("#EventDisplay_TimeDisplayNone")
+              (0, i.Xx)("#EventDisplay_TimeDisplayNone"),
             );
           let s = m.JW.GetTimeNowWithOverride();
           if (a)
@@ -706,11 +706,11 @@
                 (0, i.Xx)(
                   e < s
                     ? "#EventDisplay_TimeInPast"
-                    : "#EventDisplay_TimeUpcoming"
+                    : "#EventDisplay_TimeUpcoming",
                 ),
-                " "
+                " ",
               ),
-              r.createElement(h, { stylesmodule: n, dateAndTime: e })
+              r.createElement(h, { stylesmodule: n, dateAndTime: e }),
             );
           let l = e <= s && s <= t;
           const c = (0, d.yK)(new Date(1e3 * e), new Date(1e3 * t));
@@ -728,14 +728,14 @@
                     ? "#EventDisplay_TimeBeginsOn"
                     : t >= s
                     ? "#EventDisplay_TimeBeginsOn_Past"
-                    : "#EventDisplay_TimeBeginsOn_StartAndEnd_Past"
-                )
+                    : "#EventDisplay_TimeBeginsOn_StartAndEnd_Past",
+                ),
               ),
               r.createElement(h, {
                 stylesmodule: n,
                 bSingleLine: !0,
                 dateAndTime: e,
-              })
+              }),
             ),
             r.createElement(
               "div",
@@ -746,15 +746,15 @@
                 (0, i.Xx)(
                   t < s
                     ? "#EventDisplay_TimeEndsOn_Past"
-                    : "#EventDisplay_TimeEndsOn"
-                )
+                    : "#EventDisplay_TimeEndsOn",
+                ),
               ),
               r.createElement(h, {
                 stylesmodule: n,
                 bSingleLine: !0,
                 bOnlyTime: c,
                 dateAndTime: t,
-              })
+              }),
             ),
             l &&
               r.createElement(
@@ -765,12 +765,12 @@
                   {
                     className: (0, o.Z)(
                       n.RightSideTitles,
-                      n.ActiveEventCallOut
+                      n.ActiveEventCallOut,
                     ),
                   },
-                  (0, i.Xx)("#Time_Now")
-                )
-              )
+                  (0, i.Xx)("#Time_Now"),
+                ),
+              ),
           );
         }
       };
@@ -792,9 +792,9 @@
               r.createElement(
                 "span",
                 { className: a.RightSideTitles },
-                (0, i.Xx)("#EventDisplay_TimeRange")
+                (0, i.Xx)("#EventDisplay_TimeRange"),
               ),
-              (0, i.Xx)("#EventDisplay_TimeDisplayNone")
+              (0, i.Xx)("#EventDisplay_TimeDisplayNone"),
             );
           const s = m.JW.GetTimeNowWithOverrideAsDate(),
             l = m.JW.GetTimeNowWithOverride(),
@@ -802,7 +802,7 @@
             c = r.createElement(
               "div",
               { className: a.ShortDateAndTime },
-              (0, i.$1)(e, o)
+              (0, i.$1)(e, o),
             );
           let p = r.createElement(
             E,
@@ -813,10 +813,10 @@
               (0, i.Xx)(
                 e < l
                   ? "#EventDisplay_TimeInPast"
-                  : "#EventDisplay_TimeUpcoming"
-              )
+                  : "#EventDisplay_TimeUpcoming",
+              ),
             ),
-            c
+            c,
           );
           if (
             (l < e &&
@@ -834,10 +834,10 @@
                       "div",
                       { className: a.ShortDateAndTime },
                       u(e),
-                      " "
-                    )
-                  )
-                )
+                      " ",
+                    ),
+                  ),
+                ),
               )),
             n || null == t || t < 1)
           )
@@ -850,8 +850,8 @@
               r.createElement(
                 "span",
                 { className: a.ActiveEventCallOut },
-                (0, i.Xx)("#Time_Now")
-              )
+                (0, i.Xx)("#Time_Now"),
+              ),
             ));
           let h = null;
           const j = _ ? t - l : t - e;
@@ -859,7 +859,7 @@
             const e = r.createElement(
               "div",
               { className: a.ShortDateAndTime },
-              (0, i.yW)(j, !0)
+              (0, i.yW)(j, !0),
             );
             h =
               t < l
@@ -867,7 +867,7 @@
                     "div",
                     { className: a.RightSideTitles },
                     (0, i.Xx)("#EventDisplay_TimeEndsOn_Ran"),
-                    e
+                    e,
                   )
                 : r.createElement(
                     "div",
@@ -876,8 +876,8 @@
                       _
                         ? "#EventDisplay_TimeLeft"
                         : "#EventDisplay_RunsForDuration",
-                      e
-                    )
+                      e,
+                    ),
                   );
           } else {
             const e = s.getFullYear() == new Date(1e3 * t).getFullYear();
@@ -890,14 +890,14 @@
                 (0, i.Xx)(
                   t < l
                     ? "#EventDisplay_TimeEndsOn_Past"
-                    : "#EventDisplay_TimeEndsOn"
-                )
+                    : "#EventDisplay_TimeEndsOn",
+                ),
               ),
               r.createElement(
                 "div",
                 { className: a.ShortDateAndTime },
-                (0, i.$1)(t, e)
-              )
+                (0, i.$1)(t, e),
+              ),
             );
           }
           const T = r.createElement(E, { rtFullDate: t, stylesmodule: a }, h);
@@ -941,7 +941,7 @@
               );
             }
           })(t, n, a),
-          " "
+          " ",
         );
       }
       T = (0, a.gn)([l.Pi], T);

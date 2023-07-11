@@ -222,7 +222,7 @@
         get player_group_size() {
           return this.m_mapRichPresence.has("steam_player_group_size")
             ? Number.parseInt(
-                this.m_mapRichPresence.get("steam_player_group_size")
+                this.m_mapRichPresence.get("steam_player_group_size"),
               )
             : 0;
         }
@@ -343,7 +343,7 @@
                   case "FillArea":
                     return u;
                 }
-              })(r)
+              })(r),
             ),
             a.createElement(
               "div",
@@ -354,10 +354,10 @@
                     "avatarHolder",
                     "no-drag",
                     r || "Medium",
-                    n
+                    n,
                   ),
                 },
-                _
+                _,
               ),
               a.createElement("div", {
                 className: (0, o.Z)(d().avatarStatus, "avatarStatus", m),
@@ -368,7 +368,7 @@
                 rgSources: g,
                 draggable: !1,
               }),
-              c
+              c,
             )
           );
         }
@@ -401,8 +401,8 @@
                   size: r,
                   className: (0, o.Z)((0, s.sB)(t), l),
                 },
-                u
-              )
+                u,
+              ),
             )
           );
         }
@@ -421,9 +421,9 @@
             "div",
             Object.assign(
               { className: (0, o.Z)(d().avatarFrame, r, "avatarFrame") },
-              s
+              s,
             ),
-            a.createElement("img", { className: d().avatarFrameImg, src: l })
+            a.createElement("img", { className: d().avatarFrameImg, src: l }),
           )
         );
       });
@@ -452,7 +452,7 @@
             (this.setState({ bAnimate: "None" != this.props.loopDuration }),
             (this.m_timer = window.setTimeout(
               () => this.setState({ bAnimate: !1 }),
-              e
+              e,
             )));
         }
         StopAnimationTimer() {
@@ -519,8 +519,8 @@
                 a.createElement(p, {
                   profileItem: n,
                   bDisableAnimation: m && !this.state.bAnimate,
-                })
-              )
+                }),
+              ),
             )
           );
         }
@@ -1458,7 +1458,7 @@
               (console.warn(
                 "MultiSourceImage created with no image src",
                 this.props,
-                this.state.nImage
+                this.state.nImage,
               ),
               (e =
                 "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=")),
@@ -1473,7 +1473,7 @@
             this.props.onIncrementalError(
               e,
               this.props.rgSources[this.state.nImage],
-              this.state.nImage
+              this.state.nImage,
             );
           let t = this.state.nImage + 1;
           t >= this.props.rgSources.length &&
@@ -1495,7 +1495,7 @@
             "img",
             Object.assign({ src: m, ref: this.m_refImage }, o, {
               onError: this.OnImageError,
-            })
+            }),
           );
         }
       }

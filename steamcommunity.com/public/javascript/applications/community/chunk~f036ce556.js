@@ -453,7 +453,7 @@
               e,
               2 * r + 1,
               i,
-              t.t - r - 1
+              t.t - r - 1,
             )) >= t.DV && ((e[r + t.t] -= t.DV), (e[r + t.t + 1] = 1));
           }
           e.t > 0 && (e[e.t - 1] += t.am(r, t[r], e, 2 * r, 0, 1)),
@@ -1160,7 +1160,7 @@
             do {
               t += String.fromCharCode(
                 ((this.hex.indexOf(e.charAt(r++)) << 4) & 240) |
-                  (15 & this.hex.indexOf(e.charAt(r++)))
+                  (15 & this.hex.indexOf(e.charAt(r++))),
               );
             } while (r < e.length);
             return t;
@@ -1232,7 +1232,7 @@
             identity_secret: h.JQ(r),
             secret_1: h.JQ(i),
           },
-          l
+          l,
         );
       }
       !(function (e) {
@@ -1265,7 +1265,7 @@
               ? this.PollForUpdate()
               : (this.m_activeTimerID = window.setTimeout(
                   this.PollForUpdate,
-                  this.m_msPollInterval
+                  this.m_msPollInterval,
                 ));
         }
         StopPolling() {
@@ -1288,7 +1288,7 @@
                   const e = t.Hdr().transport_error();
                   if (
                     (console.error(
-                      `Failed to poll auth session. Result ${r}. Transport Error: ${e}`
+                      `Failed to poll auth session. Result ${r}. Transport Error: ${e}`,
                     ),
                     2 === e || 3 === e)
                   )
@@ -1296,7 +1296,7 @@
                       this.m_transport.MakeReady(),
                       window.setTimeout(
                         this.PollForUpdate,
-                        this.m_msPollInterval
+                        this.m_msPollInterval,
                       ),
                       1
                     );
@@ -1311,7 +1311,7 @@
                       const e = t.Body().agreement_session_url(),
                         r = document.location.href;
                       window.location.href = `${e}&redir=${encodeURIComponent(
-                        r
+                        r,
                       )}`;
                     }
                     return this.m_onCompleteCallback({ bSuccess: !1 }), r;
@@ -1345,7 +1345,7 @@
                     a && (this.m_strClientID = a),
                     (this.m_activeTimerID = window.setTimeout(
                       this.PollForUpdate,
-                      this.m_msPollInterval
+                      this.m_msPollInterval,
                     )),
                     r)
               );
@@ -1402,7 +1402,7 @@
               )
                 return (
                   console.error(
-                    "Result of finalizelogin does not match expectations!"
+                    "Result of finalizelogin does not match expectations!",
                   ),
                   n.k_PrimaryDomainFail
                 );
@@ -1422,24 +1422,24 @@
                         });
                         200 !== a.status
                           ? (console.error(
-                              `Transfer login to ${r.host} failed with status code: ${a.status}`
+                              `Transfer login to ${r.host} failed with status code: ${a.status}`,
                             ),
                             (i = !1))
                           : 1 !== a.data.result &&
                             (console.error(
-                              `Transfer login to ${r.host} failed with result: ${a.data.result}`
+                              `Transfer login to ${r.host} failed with result: ${a.data.result}`,
                             ),
                             (i = !1));
                       } catch (e) {
                         console.error(
-                          `Transfer login to ${r.host} failed: "${e}"`
+                          `Transfer login to ${r.host} failed: "${e}"`,
                         ),
                           (i = !1);
                       }
                       return { bSuccess: i, domain: r.host };
                     });
-                  })(e, Object.assign(Object.assign({}, t), { steamID: i }))
-                )
+                  })(e, Object.assign(Object.assign({}, t), { steamID: i })),
+                ),
               ).then(
                 (e) =>
                   (function (e, t) {
@@ -1455,13 +1455,13 @@
                       r
                     );
                   })(e, s),
-                () => n.k_SecondaryDomainFail
+                () => n.k_SecondaryDomainFail,
               );
             },
             () => (
               console.error("Failed to finalize login. Initial call failed."),
               n.k_PrimaryDomainFail
-            )
+            ),
           );
       }
       (0, a.gn)([s.LO], _.prototype, "m_strChallengeURL", void 0),
@@ -2347,7 +2347,7 @@
               "TwoFactor.RemoveAuthenticatorViaChallengeStart#1",
               t,
               T,
-              { ePrivilege: 9 }
+              { ePrivilege: 9 },
             );
           }),
           (e.RemoveAuthenticatorViaChallengeContinue = function (e, t) {
@@ -2355,7 +2355,7 @@
               "TwoFactor.RemoveAuthenticatorViaChallengeContinue#1",
               t,
               k,
-              { ePrivilege: 9 }
+              { ePrivilege: 9 },
             );
           });
       })(N || (N = {}));
@@ -2374,7 +2374,7 @@
               e.onComplete(r);
             },
             e.onDeviceDetails,
-            e.onShowAgreement
+            e.onShowAgreement,
           ),
             (this.m_eStatus = 0),
             (this.m_strConfirmationAssociatedMessage = ""),
@@ -2388,7 +2388,7 @@
             if (0 !== this.m_eStatus && 2 !== this.m_eStatus)
               return (
                 console.error(
-                  "Cannot start an already started auth session. Create a new session instance."
+                  "Cannot start an already started auth session. Create a new session instance.",
                 ),
                 29
               );
@@ -2414,7 +2414,7 @@
                     if ((t.DEBUG_LogToConsole(), 1 !== t.GetEResult()))
                       return (
                         console.error(
-                          `Failed to get RSA key with EResult: ${t.GetEResult()}`
+                          `Failed to get RSA key with EResult: ${t.GetEResult()}`,
                         ),
                         null
                       );
@@ -2430,13 +2430,13 @@
                             publickey_exp: i,
                             publickey_mod: n,
                             timestamp: a,
-                          })}`
+                          })}`,
                         ),
                         null);
                   } catch (e) {
                     return (
                       console.error(
-                        `Failed to get RSA key: ${JSON.stringify(e)}`
+                        `Failed to get RSA key: ${JSON.stringify(e)}`,
                       ),
                       null
                     );
@@ -2446,7 +2446,7 @@
               if (!t)
                 return (
                   console.error(
-                    "Cannot start auth session without a valid RSA key"
+                    "Cannot start auth session without a valid RSA key",
                   ),
                   this.SetFailureState(m.NZ.Network, j.EResult(20)),
                   20
@@ -2475,7 +2475,7 @@
               yield this.m_transport.MakeReady();
               const _ = yield p.$h.BeginAuthSessionViaCredentials(
                 this.m_transport,
-                g
+                g,
               );
               return (
                 _.DEBUG_LogToConsole(),
@@ -2496,32 +2496,32 @@
                           return (
                             this.SetFailureState(
                               m.NZ.RateLimitExceeded,
-                              j.EResult(t)
+                              j.EResult(t),
                             ),
                             t
                           );
                         case 118:
                           if (this.m_onShowAgreement)
                             this.m_onShowAgreement(
-                              _.Body().agreement_session_url()
+                              _.Body().agreement_session_url(),
                             );
                           else {
                             const e = _.Body().agreement_session_url(),
                               t = document.location.href;
                             window.location.href = `${e}&redir=${encodeURIComponent(
-                              t
+                              t,
                             )}`;
                           }
                           return this.m_onCompleteCallback({ bSuccess: !1 }), t;
                         default:
                           return (
                             console.error(
-                              `Failed to start auth session. Result: ${t} Transport: ${r}`
+                              `Failed to start auth session. Result: ${t} Transport: ${r}`,
                             ),
                             this.SetFailureState(
                               m.NZ.Generic,
                               j.EResult(t),
-                              _.Body().extended_error_message()
+                              _.Body().extended_error_message(),
                             ),
                             this.m_onCompleteCallback({ bSuccess: !1 }),
                             t
@@ -2560,7 +2560,7 @@
                       } catch (e) {
                         if (
                           (console.log(
-                            `checkdevice ajax to ${t} failed: ${e.message}`
+                            `checkdevice ajax to ${t} failed: ${e.message}`,
                           ),
                           e instanceof o.AxiosError)
                         ) {
@@ -2568,12 +2568,12 @@
                           return t.response
                             ? (this.SetFailureState(
                                 m.NZ.Network,
-                                j.AjaxFailureWithCode(t.response.status)
+                                j.AjaxFailureWithCode(t.response.status),
                               ),
                               20)
                             : (this.SetFailureState(
                                 m.NZ.Network,
-                                j.AjaxFailureNoCode()
+                                j.AjaxFailureNoCode(),
                               ),
                               20);
                         }
@@ -2610,15 +2610,15 @@
                         (this.m_eStatus = 6), this.StartPolling(!1);
                     }
                     return t;
-                  })
+                  }),
                 )
               );
             } catch (e) {
               return (
                 console.error(
                   `Failed to start auth session. Exception: ${JSON.stringify(
-                    e
-                  )}`
+                    e,
+                  )}`,
                 ),
                 console.log(e),
                 this.SetFailureState(m.NZ.Generic, j.FailedToStart()),
@@ -2677,7 +2677,7 @@
                 i.Body().set_code_type(r ? 2 : 3);
               const n = yield p.$h.UpdateAuthSessionWithSteamGuardCode(
                   this.m_transport,
-                  i
+                  i,
                 ),
                 a = n.GetEResult();
               if (1 !== a) {
@@ -2686,7 +2686,7 @@
                     console.error(
                       `Failed to automatically update session with local SG info. Result ${a}. Transport ${n
                         .Hdr()
-                        .transport_error()}`
+                        .transport_error()}`,
                     ),
                     a
                   );
@@ -2704,7 +2704,7 @@
                     return (
                       this.SetFailureState(
                         m.NZ.RateLimitExceeded,
-                        j.EResult(a)
+                        j.EResult(a),
                       ),
                       this.m_onCompleteCallback({ bSuccess: !1 }),
                       a
@@ -2716,14 +2716,14 @@
                       const e = n.Body().agreement_session_url(),
                         t = document.location.href;
                       window.location.href = `${e}&redir=${encodeURIComponent(
-                        t
+                        t,
                       )}`;
                     }
                     return this.m_onCompleteCallback({ bSuccess: !1 }), a;
                   default:
                     return (
                       console.error(
-                        `Failed to update auth session with SG code. Result: ${a}`
+                        `Failed to update auth session with SG code. Result: ${a}`,
                       ),
                       this.SetFailureState(m.NZ.Generic, j.EResult(a)),
                       this.m_onCompleteCallback({ bSuccess: !1 }),
@@ -2735,7 +2735,7 @@
             } catch (e) {
               return (
                 console.error(
-                  `Failed to update auth session with SG code. ${e}`
+                  `Failed to update auth session with SG code. ${e}`,
                 ),
                 this.SetFailureState(m.NZ.Generic, j.FailedToAddCode()),
                 this.m_onCompleteCallback({ bSuccess: !1 }),
@@ -2756,7 +2756,7 @@
               );
             default:
               return void console.error(
-                `Don't know how to UseCodeOverride from login session status ${this.m_eStatus}`
+                `Don't know how to UseCodeOverride from login session status ${this.m_eStatus}`,
               );
           }
         }
@@ -2767,29 +2767,29 @@
           return (0, i.mG)(this, void 0, void 0, function* () {
             this.m_weakAuthWebInterface = new b.J(
               c.De.WEBAPI_BASE_URL,
-              this.m_strWeakAuthToken
+              this.m_strWeakAuthToken,
             );
             try {
               const e = u.gA.Init(M),
                 t = yield N.RemoveAuthenticatorViaChallengeStart(
                   this.m_weakAuthWebInterface.GetServiceTransport(),
-                  e
+                  e,
                 );
               1 != t.GetEResult()
                 ? (t.DEBUG_LogToConsole(),
                   console.error(
                     "An unexpected error occured while adding an authenticator",
-                    t.GetEResult()
+                    t.GetEResult(),
                   ),
                   this.SetFailureState(
                     m.NZ.MoveAuthenticator,
-                    j.EResult(t.GetEResult())
+                    j.EResult(t.GetEResult()),
                   ))
                 : (this.m_eStatus = 8);
             } catch (e) {
               console.error(
                 "An unexpected error occured while moving an authenticator",
-                e
+                e,
               ),
                 this.SetFailureState(m.NZ.MoveAuthenticator, j.EResult(2));
             }
@@ -2800,17 +2800,17 @@
             const e = u.gA.Init(M),
               t = yield N.RemoveAuthenticatorViaChallengeStart(
                 this.m_weakAuthWebInterface.GetServiceTransport(),
-                e
+                e,
               );
             1 != t.GetEResult()
               ? (t.DEBUG_LogToConsole(),
                 console.error(
                   "An unexpected error occured while adding an authenticator",
-                  t.GetEResult()
+                  t.GetEResult(),
                 ),
                 this.SetFailureState(
                   m.NZ.MoveAuthenticator,
-                  j.EResult(t.GetEResult())
+                  j.EResult(t.GetEResult()),
                 ))
               : (this.m_eStatus = 8);
           });
@@ -2823,25 +2823,25 @@
               t.Body().set_version(2);
             const r = yield N.RemoveAuthenticatorViaChallengeContinue(
               this.m_weakAuthWebInterface.GetServiceTransport(),
-              t
+              t,
             );
             94 == r.GetEResult()
               ? (this.m_eStatus = 12)
               : r.Body().success()
               ? (r.DEBUG_LogToConsole(),
                 (this.m_replacementAuthenticator = (0, m.tY)(
-                  r.Body().replacement_token().toObject()
+                  r.Body().replacement_token().toObject(),
                 )),
                 (this.m_eStatus = 9),
                 (this.m_bUsingCodeOverride = !1))
               : (r.DEBUG_LogToConsole(),
                 console.error(
                   "Error when calling RemoveAuthenticatorViaChallengeContinue",
-                  r.GetEResult()
+                  r.GetEResult(),
                 ),
                 this.SetFailureState(
                   m.NZ.MoveAuthenticator,
-                  j.EResult(r.GetEResult())
+                  j.EResult(r.GetEResult()),
                 ));
           });
         }
@@ -2885,7 +2885,7 @@
               break;
             default:
               return void console.error(
-                `Don't know how to GoBack from login session status ${this.m_eStatus}`
+                `Don't know how to GoBack from login session status ${this.m_eStatus}`,
               );
           }
         }
@@ -2970,7 +2970,7 @@
                 key: `${e}_${t}`,
                 className: r ? h : d,
                 style: r ? g : _,
-              })
+              }),
             );
           }
         let f = u.length;
@@ -2980,7 +2980,7 @@
             className: (0, a.Z)(q().QRBits, i),
             style: { gridTemplateColumns: `repeat( ${f}, 1fr )` },
           },
-          m
+          m,
         );
       }
       !(function (e) {
@@ -2996,7 +2996,7 @@
             (t) => {
               (this.m_eStatus = t.bSuccess ? 3 : 4), e.onComplete(t);
             },
-            e.onDeviceDetails
+            e.onDeviceDetails,
           ),
             (this.m_eStatus = 0);
         }
@@ -3005,7 +3005,7 @@
             if (0 !== this.m_eStatus)
               return (
                 console.error(
-                  "Cannot start an already started auth session. Create a new session instance."
+                  "Cannot start an already started auth session. Create a new session instance.",
                 ),
                 2
               );
@@ -3026,7 +3026,7 @@
               if (1 !== r)
                 return (
                   console.error(
-                    `Failed to start auth session. Result: ${r} Transport: ${i}`
+                    `Failed to start auth session. Result: ${r} Transport: ${i}`,
                   ),
                   (this.m_eFailureState = m.NZ.Generic),
                   this.m_onCompleteCallback({ bSuccess: !1 }),
@@ -3050,7 +3050,7 @@
             } catch (e) {
               return (
                 console.error(
-                  `Failed to start auth session: ${JSON.stringify(e)}`
+                  `Failed to start auth session: ${JSON.stringify(e)}`,
                 ),
                 (this.m_eFailureState = m.NZ.Generic),
                 this.m_onCompleteCallback({ bSuccess: !1 }),
@@ -3098,7 +3098,7 @@
                     t.Stop();
                   }
                 ),
-                [t]
+                [t],
               ),
               (0, h.SZ)(() => ({
                 strChallengeURL: t.GetChallengeURL(),
@@ -3146,18 +3146,18 @@
                   className: (0, a.Z)(
                     K().LoginQR,
                     o && K().QRLoginDeck,
-                    w && K().Blur
+                    w && K().Blur,
                   ),
                 },
-                f
+                f,
               ),
               w &&
                 n.createElement(
                   "div",
                   { className: K().Overlay },
-                  n.createElement("div", { className: K().Box }, B)
-                )
-            )
+                  n.createElement("div", { className: K().Box }, B),
+                ),
+            ),
           )
         );
       }
@@ -3171,7 +3171,7 @@
             K().Loading,
             "small" == t && K().Small,
             ("medium" == t || !t) && K().Medium,
-            "large" == t && K().Large
+            "large" == t && K().Large,
           ),
         });
       }
@@ -3179,7 +3179,7 @@
         return n.createElement(
           J.zx,
           { onClick: e.reset, className: K().QRFailure },
-          n.createElement(ie, null)
+          n.createElement(ie, null),
         );
       }
       function ie(e) {
@@ -3207,7 +3207,7 @@
           n.createElement("polygon", {
             points: "147.639,108.361 245.755,10.166 245.834,108.361",
             fill: "#fff",
-          })
+          }),
         );
       }
       function ne() {
@@ -3232,7 +3232,7 @@
             strokeLinejoin: "round",
             strokeMiterlimit: "10",
             points: "49.5,147.75 95,210.75 206.5,45.25 ",
-          })
+          }),
         );
       }
       var ae = r(14826),
@@ -3336,7 +3336,7 @@
               autoComplete: "none",
               autoFocus: 0 === e && l,
               disabled: c || u,
-            })
+            }),
           );
         return n.createElement(
           _e.s,
@@ -3345,7 +3345,7 @@
               pe().SegmentedCharacterInput,
               "danger" === o && pe().Danger,
               c && pe().Disabled,
-              m && pe().BackupCode
+              m && pe().BackupCode,
             ),
             onClick: p,
           },
@@ -3353,9 +3353,9 @@
             n.createElement(
               "div",
               { className: pe().Loading },
-              n.createElement(Je, { size: "small" })
+              n.createElement(Je, { size: "small" }),
             ),
-          B
+          B,
         );
       }
       const ye = (0, n.createContext)(!1),
@@ -3367,7 +3367,7 @@
           n.createElement(et, {
             reset: () => window.location.reload(),
             failure: m.NZ.Generic,
-          })
+          }),
         );
       }
       function Se(e) {
@@ -3429,11 +3429,11 @@
                   const { strRefreshToken: r } = t;
                   (0, m.qO)(r).then(
                     (t) => e.onComplete(t),
-                    () => e.onComplete(m.TG.k_PrimaryDomainFail)
+                    () => e.onComplete(m.TG.k_PrimaryDomainFail),
                   );
                 },
                 embedded: "modal" === e.theme,
-              })
+              }),
             );
       }
       function Ee(e) {
@@ -3448,9 +3448,9 @@
             n.createElement(
               "div",
               { className: G().Login },
-              n.createElement(ze, Object.assign({}, r))
-            )
-          )
+              n.createElement(ze, Object.assign({}, r)),
+            ),
+          ),
         );
       }
       function ve(e) {
@@ -3461,7 +3461,7 @@
           ? n.createElement(
               dt,
               { onClick: r },
-              (0, ae.Xx)("#Login_Help_SignIn")
+              (0, ae.Xx)("#Login_Help_SignIn"),
             )
           : n.createElement(
               dt,
@@ -3469,10 +3469,10 @@
                 href: `${
                   c.De.HELP_BASE_URL
                 }wizard/HelpWithLogin?redir=${encodeURIComponent(
-                  document.location.href
+                  document.location.href,
                 )}`,
               },
-              (0, ae.Xx)("#Login_Help_SignIn")
+              (0, ae.Xx)("#Login_Help_SignIn"),
             );
       }
       function Ce(e) {
@@ -3481,7 +3481,7 @@
           return n.createElement(
             dt,
             { inline: !0, onClick: t },
-            (0, ae.Xx)("#Login_CreateAccount")
+            (0, ae.Xx)("#Login_CreateAccount"),
           );
         switch (null != t ? t : "normal") {
           default:
@@ -3489,13 +3489,13 @@
             return n.createElement(
               dt,
               { inline: !0, href: `${c.De.STORE_BASE_URL}join/` },
-              (0, ae.Xx)("#Login_CreateAccount")
+              (0, ae.Xx)("#Login_CreateAccount"),
             );
           case "partner":
             return n.createElement(
               dt,
               { inline: !0, href: `${c.De.PARTNER_BASE_URL}` },
-              (0, ae.Xx)("#Login_CreateSteamworksAccount")
+              (0, ae.Xx)("#Login_CreateSteamworksAccount"),
             );
           case "none":
             return null;
@@ -3521,9 +3521,9 @@
           n.createElement(
             "span",
             { className: G().AccountCreationPrompt },
-            (0, ae.Xx)(s)
+            (0, ae.Xx)(s),
           ),
-          n.createElement(Ce, { style: r })
+          n.createElement(Ce, { style: r }),
         );
       }
       function Fe() {
@@ -3604,7 +3604,7 @@
                   strNewGuardData: n,
                 });
             },
-            [a]
+            [a],
           ),
           u = (function (e) {
             const [t, r] = (0, n.useState)(new O(e));
@@ -3651,7 +3651,7 @@
                   ? r
                   : e.defaultAccountName) && void 0 !== i
               ? i
-              : ""
+              : "",
           ),
           [p, b] = (0, n.useState)(""),
           [y, B] = (0, n.useState)(s && !o && "0" != localStorage.getItem(g)),
@@ -3678,7 +3678,7 @@
                     },
                     () => {
                       S(!0);
-                    }
+                    },
                   )
                 : S(!0);
             }, []),
@@ -3746,7 +3746,7 @@
               failure: m.NZ.Generic,
               errorReference: u.toString(),
               extendedErrorMessage: p.password.strExtendedErrorMessage,
-            })
+            }),
           );
         if (!p.bHaveLastCreds)
           return n.createElement(bt, null, n.createElement("div", null));
@@ -3775,7 +3775,7 @@
                 onComplete: p.onComplete,
                 platform: i,
                 refreshInfo: o,
-              })
+              }),
           );
           if (b) {
             const t = c.De.IN_STEAMUI,
@@ -3798,15 +3798,15 @@
                 {
                   className: (0, a.Z)(
                     G().EmbeddedRootFooter,
-                    t && G().InClient
+                    t && G().InClient,
                   ),
                 },
                 n.createElement(ve, {
                   launcherType: i,
                   style: e.helpLinkStyle,
                 }),
-                n.createElement(Re, { launcherType: i, style: d })
-              )
+                n.createElement(Re, { launcherType: i, style: d }),
+              ),
             );
           }
           const l = n.createElement(
@@ -3825,9 +3825,9 @@
               { className: G().PrimaryHeader },
               e.refreshInfo
                 ? (0, ae.Xx)("#Login_RefreshSignIn")
-                : (0, ae.Xx)("#Login_SignIn")
+                : (0, ae.Xx)("#Login_SignIn"),
             ),
-            n.createElement(Ae, { refreshInfo: e.refreshInfo })
+            n.createElement(Ae, { refreshInfo: e.refreshInfo }),
           );
           return n.createElement(bt, { title: l }, r);
         }
@@ -3936,13 +3936,13 @@
           n.createElement(
             "div",
             { className: G().RefreshTitle },
-            (0, ae.Xx)("#Login_RefreshSignIn")
+            (0, ae.Xx)("#Login_RefreshSignIn"),
           ),
           n.createElement(
             "div",
             { className: G().RefreshReason },
-            (0, ae.Xx)(i)
-          )
+            (0, ae.Xx)(i),
+          ),
         );
       }
       function ke(e) {
@@ -3968,7 +3968,7 @@
                 () => () => {
                   e.current = !1;
                 },
-                [e]
+                [e],
               ),
               (0, n.useCallback)(() => e.current, [e])
             );
@@ -3996,7 +3996,7 @@
             label: n.createElement(
               je,
               { highlight: !0 },
-              (0, ae.Xx)("#Login_SignIn_WithAccountName")
+              (0, ae.Xx)("#Login_SignIn_WithAccountName"),
             ),
             value: s,
             onChange: (e) => {
@@ -4026,12 +4026,12 @@
                   label: (0, ae.Xx)("#Login_RememberMe_Short"),
                   value: m,
                   onChange: d,
-                })
+                }),
               )
             : n.createElement(
                 "div",
                 { className: G().InsecureComputer },
-                (0, ae.Xx)("#Login_InsecureComputer")
+                (0, ae.Xx)("#Login_InsecureComputer"),
               ),
           n.createElement(Ze, { loading: b, refreshLogin: E }),
           B,
@@ -4042,12 +4042,12 @@
                 href: `${
                   c.De.HELP_BASE_URL
                 }wizard/HelpWithLogin?redir=${encodeURIComponent(
-                  document.location.href
+                  document.location.href,
                 )}`,
                 align: "center",
               },
-              (0, ae.Xx)("#Login_Help_SignIn")
-            )
+              (0, ae.Xx)("#Login_Help_SignIn"),
+            ),
         );
       }
       const Le = 700;
@@ -4064,7 +4064,7 @@
             { className: G().QRSection },
             i
               ? n.createElement(xe, Object.assign({}, e))
-              : n.createElement(Oe, Object.assign({}, e))
+              : n.createElement(Oe, Object.assign({}, e)),
           )
         );
       }
@@ -4076,7 +4076,7 @@
         return t
           ? n.createElement(
               We,
-              Object.assign({}, e, { bShowHideButton: !0, setShowQR: r })
+              Object.assign({}, e, { bShowHideButton: !0, setShowQR: r }),
             )
           : n.createElement(De, { setShowQR: r });
       }
@@ -4087,7 +4087,7 @@
           n.createElement(
             "div",
             { className: G().MessagingTag },
-            (0, ae.Xx)("#Login_MobileFlow_New")
+            (0, ae.Xx)("#Login_MobileFlow_New"),
           ),
           n.createElement(
             "div",
@@ -4095,13 +4095,13 @@
             n.createElement(
               "div",
               { className: G().MessagingSubtitle },
-              (0, ae.Xx)("#Login_MobileFlow_SignIn_ScanQR")
-            )
+              (0, ae.Xx)("#Login_MobileFlow_SignIn_ScanQR"),
+            ),
           ),
           n.createElement(
             "div",
             { className: G().MessagingButton, onClick: () => e.setShowQR(!0) },
-            (0, ae.Xx)("#Login_MobileFlow_ShowMeQR_Button")
+            (0, ae.Xx)("#Login_MobileFlow_ShowMeQR_Button"),
           ),
           n.createElement(
             "a",
@@ -4109,8 +4109,8 @@
               href: `${c.De.STORE_BASE_URL}mobile`,
               className: G().MessagingLink,
             },
-            (0, ae.Xx)("#Login_JoinBeta_Button")
-          )
+            (0, ae.Xx)("#Login_JoinBeta_Button"),
+          ),
         );
       }
       function We(e) {
@@ -4129,7 +4129,7 @@
           n.createElement(
             je,
             { highlight: !0 },
-            (0, ae.Xx)("#Login_SignIn_OrWithQRCode")
+            (0, ae.Xx)("#Login_SignIn_OrWithQRCode"),
           ),
           n.createElement(
             "div",
@@ -4140,14 +4140,14 @@
               onComplete: i,
               platform: a,
               refreshInfo: s,
-            })
+            }),
           ),
           o &&
             l &&
             n.createElement(
               "div",
               { className: G().QRHideLink, onClick: () => l(!1) },
-              (0, ae.Xx)("#Button_Hide")
+              (0, ae.Xx)("#Button_Hide"),
             ),
           n.createElement(
             "div",
@@ -4157,9 +4157,9 @@
               n.createElement(dt, {
                 href: `${c.De.STORE_BASE_URL}mobile`,
                 align: "center",
-              })
-            )
-          )
+              }),
+            ),
+          ),
         );
       }
       function Ie(e) {
@@ -4171,7 +4171,7 @@
           { className: G().TextField },
           "string" == typeof t ? n.createElement(je, null, t) : t,
           n.createElement(Ue, { type: "error" }, r),
-          n.createElement(Xe, Object.assign({ autoFocus: s, tone: l }, o))
+          n.createElement(Xe, Object.assign({ autoFocus: s, tone: l }, o)),
         );
       }
       function je(e) {
@@ -4179,7 +4179,7 @@
         return n.createElement(
           "div",
           { className: (0, a.Z)(G().FieldLabel, r && G().Highlight) },
-          t
+          t,
         );
       }
       function Xe(e) {
@@ -4206,7 +4206,7 @@
         return n.createElement(
           "div",
           { className: (0, a.Z)(G().FieldHint, "error" === r && G().Error) },
-          t
+          t,
         );
       }
       function Ge(e) {
@@ -4224,7 +4224,7 @@
             },
           },
           n.createElement(Pe, { value: i }),
-          n.createElement("div", { className: G().CheckboxFieldLabel }, t)
+          n.createElement("div", { className: G().CheckboxFieldLabel }, t),
         );
       }
       function Pe(e) {
@@ -4236,8 +4236,8 @@
             n.createElement(
               "div",
               { className: G().Check },
-              n.createElement(le.JrY, { strokeWidth: 35 })
-            )
+              n.createElement(le.JrY, { strokeWidth: 35 }),
+            ),
         );
       }
       function Ze(e) {
@@ -4255,7 +4255,11 @@
         return n.createElement(
           "div",
           { className: G().SignInButtonContainer },
-          n.createElement(Ve, Object.assign({}, e), (0, ae.Xx)("#Login_SignIn"))
+          n.createElement(
+            Ve,
+            Object.assign({}, e),
+            (0, ae.Xx)("#Login_SignIn"),
+          ),
         );
       }
       function qe() {
@@ -4265,7 +4269,7 @@
           n.createElement(
             "button",
             { className: G().SubmitButton, type: "submit" },
-            (0, ae.Xx)("#Login_SignIn")
+            (0, ae.Xx)("#Login_SignIn"),
           ),
           n.createElement(
             "button",
@@ -4273,8 +4277,8 @@
               className: G().RefreshQuitButton,
               onClick: () => SteamClient.User.StartShutdown(!0),
             },
-            (0, ae.Xx)("#Login_ExitSteam")
-          )
+            (0, ae.Xx)("#Login_ExitSteam"),
+          ),
         );
       }
       function Ve(e) {
@@ -4291,15 +4295,15 @@
               className: (0, a.Z)(G().SubmitButton, r && G().Loading, t),
               disabled: c,
             },
-            l
+            l,
           ),
           o,
           r &&
             n.createElement(
               "div",
               { className: G().LoadingContainer },
-              n.createElement(Je, { size: "small" })
-            )
+              n.createElement(Je, { size: "small" }),
+            ),
         );
       }
       function $e(e) {
@@ -4316,7 +4320,7 @@
               alignItems: "center",
               className: (0, a.Z)(
                 G().WaitingForTokenContainer,
-                c.De.IN_STEAMUI && G().Client
+                c.De.IN_STEAMUI && G().Client,
               ),
             },
             n.createElement(se.V, { size: "xlarge" }),
@@ -4326,10 +4330,10 @@
               (0, ae.Xx)(
                 c.De.IN_STEAMUI
                   ? "#Login_ConnectingToSteam"
-                  : "#Login_LoadingAccountInfo"
-              )
-            )
-          )
+                  : "#Login_LoadingAccountInfo",
+              ),
+            ),
+          ),
         );
       }
       function Je(e) {
@@ -4339,7 +4343,7 @@
             G().LoadingSpinner,
             "small" == t && G().Small,
             ("medium" == t || !t) && G().Medium,
-            "large" == t && G().Large
+            "large" == t && G().Large,
           ),
         });
       }
@@ -4350,8 +4354,8 @@
           n.createElement(
             "button",
             { className: G().OfferOfflineButton, onClick: e.onRequestOffline },
-            (0, ae.Xx)("#Login_GoOffline_Button")
-          )
+            (0, ae.Xx)("#Login_GoOffline_Button"),
+          ),
         );
       }
       function et(e) {
@@ -4383,7 +4387,7 @@
                 r = {
                   title: (0, ae.Xx)("#Error_Generic"),
                   description: (0, ae.Xx)(
-                    "#Login_Error_MoveAuthenticator_Description"
+                    "#Login_Error_MoveAuthenticator_Description",
                   ),
                 };
                 break;
@@ -4422,7 +4426,7 @@
               n.createElement(
                 "div",
                 { className: G().FailureDescription },
-                (0, ae.Xx)("#Login_GoOffline_Description")
+                (0, ae.Xx)("#Login_GoOffline_Description"),
               ),
             n.createElement(
               _t,
@@ -4430,17 +4434,17 @@
               n.createElement(
                 Qe,
                 { className: G().TryAgainButton, onClick: t },
-                (0, ae.Xx)("#Button_Retry")
+                (0, ae.Xx)("#Button_Retry"),
               ),
-              u && n.createElement(Ye, { onRequestOffline: i })
-            )
+              u && n.createElement(Ye, { onRequestOffline: i }),
+            ),
           ),
           a &&
             n.createElement(
               "div",
               { className: G().MutedErrorReference },
-              (0, ae.Xx)("#Login_Error_Reference", a)
-            )
+              (0, ae.Xx)("#Login_Error_Reference", a),
+            ),
         );
       }
       function tt(e) {
@@ -4506,7 +4510,7 @@
                       n.createElement(
                         $e,
                         null,
-                        (0, ae.Xx)("#Login_IncorrectSteamGuard")
+                        (0, ae.Xx)("#Login_IncorrectSteamGuard"),
                       ),
                     n.createElement(ft, {
                       key: f,
@@ -4519,9 +4523,9 @@
                       tone: S ? "danger" : void 0,
                       loading: d,
                       backupCode: g,
-                    })
+                    }),
                   ),
-                  v
+                  v,
                 ),
                 b &&
                   n.createElement(
@@ -4532,11 +4536,11 @@
                       },
                       align: "center",
                     },
-                    (0, ae.Xx)(E)
+                    (0, ae.Xx)(E),
                   ),
-                n.createElement(it, { type: t, onCodeHelp: e.onCodeHelp })
-              )
-            )
+                n.createElement(it, { type: t, onCodeHelp: e.onCodeHelp }),
+              ),
+            ),
           )
         );
       }
@@ -4552,7 +4556,7 @@
             ? n.createElement(
                 dt,
                 { onClick: () => e.onCodeHelp(t), align: "center" },
-                r
+                r,
               )
             : n.createElement(dt, { href: t, align: "center" }, r)
         );
@@ -4571,14 +4575,14 @@
             n.createElement(
               "div",
               { className: G().EnterCodeFromMobile },
-              (0, ae.Xx)("#Login_EnterBackupCode")
+              (0, ae.Xx)("#Login_EnterBackupCode"),
             ),
             n.createElement(
               "div",
               { className: G().Label },
-              (0, ae.Xx)("#Login_EnterBackupCodeDescription")
-            )
-          )
+              (0, ae.Xx)("#Login_EnterBackupCodeDescription"),
+            ),
+          ),
         );
       }
       function at() {
@@ -4592,9 +4596,9 @@
           n.createElement(
             "div",
             { className: G().EnterCodeFromMobile },
-            (0, ae.Xx)("#Login_EnterMobileCode")
+            (0, ae.Xx)("#Login_EnterMobileCode"),
           ),
-          n.createElement(ct, { className: G().AwaitingMobileConfIcon })
+          n.createElement(ct, { className: G().AwaitingMobileConfIcon }),
         );
       }
       function st(e) {
@@ -4616,12 +4620,12 @@
                 n.createElement(
                   "span",
                   { className: G().EnterCodeEmailAddress },
-                  e.emailAddress
-                )
-              )
-            )
+                  e.emailAddress,
+                ),
+              ),
+            ),
           ),
-          n.createElement(ut, { className: G().AwaitingEmailConfIcon })
+          n.createElement(ut, { className: G().AwaitingEmailConfIcon }),
         );
       }
       function ot(e) {
@@ -4639,10 +4643,10 @@
             { className: G().Label },
             (0, ae.kQ)(
               "#Login_ActiveAccountName",
-              n.createElement("span", { className: G().AccountName }, t)
-            )
+              n.createElement("span", { className: G().AccountName }, t),
+            ),
           ),
-          !a && n.createElement("div", { className: G().Description }, i)
+          !a && n.createElement("div", { className: G().Description }, i),
         );
       }
       function lt() {
@@ -4656,9 +4660,9 @@
             n.createElement(
               "div",
               { className: G().AwaitingMobileConfText },
-              (0, ae.yu)("#Login_AwaitingMobileConfirmation")
-            )
-          )
+              (0, ae.yu)("#Login_AwaitingMobileConfirmation"),
+            ),
+          ),
         );
       }
       function ct(e) {
@@ -4694,7 +4698,7 @@
           n.createElement("path", {
             fill: "currentColor",
             d: "M8.14983 22.4164C8.14983 21.6666 8.7169 21.0002 9.527 21.0002C10.3371 21.0002 10.9852 21.6666 10.9042 22.4164C10.9042 23.1661 10.3371 23.8325 9.527 23.8325C8.79791 23.8325 8.14983 23.1661 8.14983 22.4164Z",
-          })
+          }),
         );
       }
       function ut(e) {
@@ -4704,7 +4708,7 @@
           n.createElement("path", {
             d: "M57.9352 24.5887C57.8463 24.233 57.8463 23.8774 57.6684 23.5217C57.4017 22.8993 57.046 22.4547 56.5125 22.0101L49.577 16.4083V10.9844C49.577 8.85041 47.8876 7.16098 45.7536 7.16098H38.1956L31.5269 1.73706C30.1042 0.581137 28.0591 0.581137 26.6364 1.73706L19.9677 7.16098H12.4097C10.2757 7.16098 8.58631 8.93932 8.58631 10.9844V16.4083L1.56188 22.0101C1.02838 22.3658 0.672713 22.8993 0.405962 23.5217V23.6106C0.228128 24.1441 0.050293 24.5887 0.050293 25.1222V52.1529C0.050293 53.2199 0.494878 54.1091 1.1173 54.8204C1.82863 55.5318 2.80672 55.8874 3.7848 55.8874H54.0228C55.0898 55.8874 55.979 55.4428 56.6903 54.8204C57.4017 54.1091 57.7573 53.131 57.7573 52.1529V25.1222C57.9352 24.8554 57.9352 24.7665 57.9352 24.5887ZM49.577 19.7872L54.7342 23.9663L49.577 28.9456V19.7872ZM28.148 3.60431C28.4148 3.42648 28.6815 3.24864 28.9483 3.24864C29.3039 3.24864 29.5707 3.33756 29.7485 3.60431L34.0165 7.07207H23.9689L28.148 3.60431ZM10.9871 10.9844C10.9871 10.2731 11.5206 9.73958 12.2319 9.73958H45.6646C46.376 9.73958 46.9095 10.362 46.9095 10.9844V31.4353L46.8206 31.5242L40.2407 37.9262H17.6558L11.076 31.5242L10.9871 31.4353V10.9844ZM8.40848 19.7872V28.9456L3.34022 23.9663L8.40848 19.7872ZM2.62888 51.6194V26.9005L15.2551 39.26L2.62888 51.6194ZM4.49614 53.3088L17.6558 40.5048H40.2407L53.4004 53.3088H4.49614ZM55.3566 51.6194L42.6415 39.1711L55.2677 26.8116V51.6194H55.3566ZM29.0372 35.3476C30.5488 35.3476 31.9715 35.0809 33.3941 34.5474C34.0165 34.2806 34.3722 33.4804 34.1055 32.858C33.8387 32.2355 33.0385 31.8799 32.416 32.1466C31.349 32.5912 30.1931 32.769 29.0372 32.769C27.3478 32.769 25.7473 32.3245 24.4135 31.5242C21.746 29.9237 20.0566 27.0784 20.0566 23.7884C20.0566 18.8091 24.0579 14.8078 29.0372 14.8078C34.0165 14.8078 38.0178 18.8091 38.0178 23.7884V24.4109C38.0178 25.4779 37.2175 26.367 36.0616 26.367C34.9946 26.367 34.1055 25.4779 34.1055 24.4109V23.7884C34.1055 20.9431 31.7936 18.6313 28.9483 18.6313C26.1029 18.6313 23.7911 20.9431 23.7911 23.7884C23.7911 26.6338 26.1029 28.9456 28.9483 28.9456C30.3709 28.9456 31.7047 28.3232 32.5939 27.434C33.3941 28.4121 34.639 28.9456 35.9727 28.9456C38.4624 28.9456 40.5075 26.9894 40.5075 24.4109V23.7884C40.5075 17.3864 35.2614 12.2292 28.9483 12.2292C22.6352 12.2292 17.3891 17.4753 17.3891 23.7884C17.3891 26.7227 18.545 29.4791 20.3233 31.5242C22.5463 33.925 25.5694 35.3476 29.0372 35.3476ZM29.0372 26.367C27.6145 26.367 26.4586 25.2111 26.4586 23.7884C26.4586 22.3658 27.6145 21.2098 29.0372 21.2098C30.4599 21.2098 31.6158 22.3658 31.6158 23.7884C31.5269 25.2111 30.371 26.367 29.0372 26.367Z",
             fill: "#1A99FF",
-          })
+          }),
         );
       }
       function mt(e) {
@@ -4718,8 +4722,8 @@
                 n.createElement(
                   dt,
                   { align: "center", onClick: i },
-                  (0, ae.Xx)("#Login_EnterCodeInstead")
-                )
+                  (0, ae.Xx)("#Login_EnterCodeInstead"),
+                ),
               )
             : n.createElement(
                 "div",
@@ -4727,8 +4731,8 @@
                 n.createElement(
                   dt,
                   { align: "center", onClick: i },
-                  (0, ae.Xx)("#Login_EnterCodeInstead")
-                )
+                  (0, ae.Xx)("#Login_EnterCodeInstead"),
+                ),
               );
         return n.createElement(
           bt,
@@ -4738,8 +4742,8 @@
             { gap: c.De.IN_STEAMUI ? 24 : 40 },
             n.createElement(ot, { type: t, accountName: r }),
             n.createElement(lt, null),
-            n.createElement("div", { className: G().LinkContainer }, o, s)
-          )
+            n.createElement("div", { className: G().LinkContainer }, o, s),
+          ),
         );
       }
       function dt(e) {
@@ -4761,7 +4765,7 @@
         return n.createElement(
           "form",
           { onSubmit: (e) => (e.preventDefault(), t(), !1), className: i },
-          r
+          r,
         );
       }
       function gt(e) {
@@ -4776,7 +4780,7 @@
             G().FlexCol,
             "center" === t && G().AlignItemsCenter,
             "center" === r && G().JustifyContentCenter,
-            s
+            s,
           ),
           c = i ? { gap: "number" == typeof i ? `${i}px` : i } : void 0;
         return n.createElement("div", { className: l, style: c }, o);
@@ -4812,8 +4816,8 @@
               autoFocus: !0,
             },
             a,
-            { allowCharacter: (e) => /\w/g.test(e) }
-          )
+            { allowCharacter: (e) => /\w/g.test(e) },
+          ),
         );
       }
       function pt(e) {
@@ -4826,10 +4830,10 @@
               ? n.createElement(
                   "div",
                   { style: t > 0 ? { paddingTop: `${r}px` } : void 0 },
-                  e
+                  e,
                 )
-              : null
-          ).filter(Boolean)
+              : null,
+          ).filter(Boolean),
         );
       }
       function bt(e) {
@@ -4843,13 +4847,13 @@
               G().StandardLayout,
               s && G().Embedded,
               i && G().Compact,
-              c.De.IN_STEAMUI && "IN_CLIENT"
+              c.De.IN_STEAMUI && "IN_CLIENT",
             ),
           },
           "string" == typeof t
             ? n.createElement("div", { className: G().PrimaryHeader }, t)
             : t,
-          n.createElement("div", { className: G().FormContainer }, r)
+          n.createElement("div", { className: G().FormContainer }, r),
         );
       }
       function yt(e) {
@@ -4867,7 +4871,7 @@
               t !== oe.IN.k_ESteamRealmChina
                 ? n.createElement(wt, { className: i })
                 : n.createElement(St, { className: i }),
-              " "
+              " ",
             );
       }
       function Bt(e) {
@@ -4875,7 +4879,7 @@
           ? n.createElement(
               "div",
               { className: G().BackArrowContainer, onClick: e.onBack },
-              n.createElement(le.lBf, { className: G().BackArrow })
+              n.createElement(le.lBf, { className: G().BackArrow }),
             )
           : null;
       }
@@ -4923,7 +4927,7 @@
           n.createElement("path", {
             d: "M153 16.5288C153 18.0361 151.905 18.9197 150.602 18.9197C149.299 18.9197 148.204 17.9841 148.204 16.5288C148.204 15.0214 149.351 14.1378 150.602 14.1378C151.853 14.0858 153 15.0214 153 16.5288ZM148.569 16.5288C148.569 17.7762 149.455 18.5559 150.55 18.5559C151.645 18.5559 152.531 17.7762 152.531 16.5288C152.531 15.2813 151.645 14.5016 150.55 14.5016C149.455 14.5016 148.569 15.2813 148.569 16.5288ZM150.602 15.2813C151.228 15.2813 151.436 15.5932 151.436 15.957C151.436 16.2689 151.228 16.4768 151.019 16.6327L151.593 17.6723H151.123L150.654 16.7367H150.133V17.6723H149.768V15.2813H150.602ZM150.185 16.3728H150.602C150.863 16.3728 151.019 16.2169 151.019 16.009C151.019 15.8011 150.915 15.6451 150.602 15.6451H150.185V16.3728Z",
             fill: "#E0E1E6",
-          })
+          }),
         );
       }
       function St(e) {
@@ -4952,7 +4956,7 @@
               stroke: "null",
               id: "svg_5",
               d: "m32.89793,18.49576c0,-2.65966 -2.16505,-4.82471 -4.82471,-4.82471c-2.65966,0 -4.82471,2.16505 -4.82471,4.82471c0,2.65966 2.16505,4.82037 4.82471,4.82037c2.65966,0.00434 4.82471,-2.16071 4.82471,-4.82037m-8.4389,-0.00434c0,-2.00017 1.6227,-3.62287 3.62287,-3.62287c2.00017,0 3.62287,1.6227 3.62287,3.62287c0,2.00017 -1.6227,3.62287 -3.62287,3.62287c-2.00017,0 -3.62287,-1.6227 -3.62287,-3.62287",
-            })
+            }),
           ),
           n.createElement("path", {
             stroke: "null",
@@ -4977,7 +4981,7 @@
             n.createElement("path", {
               id: "svg_11",
               d: "m212.48999,8.06667c3.81,3.56 8.73,8.65 10.88,12.12l-4.18,3.02c-0.54,-0.91 -1.28,-1.99 -2.15,-3.14c-21.97,1.08 -24.9,1.16 -27.09,1.9c-0.25,-0.99 -1.03,-3.43 -1.61,-4.72c1.08,-0.29 2.07,-1.08 3.43,-2.4c1.45,-1.28 5.96,-6.29 8.77,-11.25l4.96,2.11c-2.61,3.85 -5.87,7.53 -9.02,10.55l16.96,-0.54c-1.61,-1.82 -3.27,-3.56 -4.8,-5.09l3.85,-2.56zm-21.18,16.63l27.88,0l0,18.12l-5.29,0l0,-2.07l-17.54,0l0,2.11l-5.05,0l0,-18.16zm5.04,4.72l0,6.62l17.54,0l0,-6.62l-17.54,0z",
-            })
+            }),
           ),
           n.createElement(
             "g",
@@ -4989,15 +4993,15 @@
             n.createElement("path", {
               id: "svg_14",
               d: "m229.54999,4.42667c-0.03,-0.55 -0.06,-1.21 -0.06,-1.71l-0.02,0c-0.13,0.46 -0.3,0.96 -0.5,1.5l-0.7,1.92l-0.39,0l-0.64,-1.88c-0.19,-0.56 -0.35,-1.07 -0.46,-1.54l-0.01,0c-0.01,0.49 -0.04,1.15 -0.08,1.75l-0.11,1.69l-0.49,0l0.28,-3.95l0.65,0l0.67,1.91c0.16,0.49 0.3,0.92 0.4,1.33l0.02,0c0.1,-0.4 0.24,-0.83 0.42,-1.33l0.7,-1.91l0.65,0l0.25,3.95l-0.5,0l-0.08,-1.73z",
-            })
-          )
+            }),
+          ),
         );
       }
       function Et() {
         return n.createElement(
           gt,
           { alignItems: "center", justifyContent: "center" },
-          n.createElement(se.V, null)
+          n.createElement(se.V, null),
         );
       }
     },
@@ -7049,7 +7053,7 @@
               "Authentication.BeginAuthSessionViaCredentials#1",
               t,
               g,
-              { ePrivilege: 0, eWebAPIKeyRequirement: 1 }
+              { ePrivilege: 0, eWebAPIKeyRequirement: 1 },
             );
           }),
           (e.PollAuthSessionStatus = function (e, t) {
@@ -7068,7 +7072,7 @@
               "Authentication.UpdateAuthSessionWithMobileConfirmation#1",
               t,
               y,
-              { ePrivilege: 1 }
+              { ePrivilege: 1 },
             );
           }),
           (e.UpdateAuthSessionWithSteamGuardCode = function (e, t) {
@@ -7076,7 +7080,7 @@
               "Authentication.UpdateAuthSessionWithSteamGuardCode#1",
               t,
               w,
-              { ePrivilege: 0, eWebAPIKeyRequirement: 1 }
+              { ePrivilege: 0, eWebAPIKeyRequirement: 1 },
             );
           }),
           (e.GenerateAccessTokenForApp = function (e, t) {
@@ -7084,7 +7088,7 @@
               "Authentication.GenerateAccessTokenForApp#1",
               t,
               S,
-              { ePrivilege: 0, eWebAPIKeyRequirement: 1 }
+              { ePrivilege: 0, eWebAPIKeyRequirement: 1 },
             );
           }),
           (e.EnumerateTokens = function (e, t) {
@@ -7097,7 +7101,7 @@
               "Authentication.GetAuthSessionsForAccount#1",
               t,
               b,
-              { bConstMethod: !0, ePrivilege: 1 }
+              { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
           (e.MigrateMobileSession = function (e, t) {
@@ -7125,7 +7129,7 @@
               "AuthenticationSupport.QueryRefreshTokensByAccount#1",
               t,
               k,
-              { bConstMethod: !0, ePrivilege: 5 }
+              { bConstMethod: !0, ePrivilege: 5 },
             );
           }),
             (e.QueryRefreshTokenByID = function (e, t) {
@@ -7133,7 +7137,7 @@
                 "AuthenticationSupport.QueryRefreshTokenByID#1",
                 t,
                 L,
-                { bConstMethod: !0, ePrivilege: 5 }
+                { bConstMethod: !0, ePrivilege: 5 },
               );
             }),
             (e.RevokeToken = function (e, t) {
@@ -7146,7 +7150,7 @@
                 "AuthenticationSupport.GetTokenHistory#1",
                 t,
                 O,
-                { bConstMethod: !0, ePrivilege: 5 }
+                { bConstMethod: !0, ePrivilege: 5 },
               );
             });
         })(j || (j = {})),

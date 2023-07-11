@@ -383,7 +383,6 @@ https://steamcommunity.com/public/javascript/minigame/towerattack/network.js?__T
 https://steamcommunity.com/public/javascript/minigame/towerattack/running.js?__TIME__&l=english&_cdn=cloudflare
 https://steamcommunity.com/public/javascript/minigame/towerattack/ui.js?__TIME__&l=english&_cdn=cloudflare
 https://steamcommunity.com/public/javascript/mobile/comment_utils.js?__TIME__&l=english&_cdn=cloudflare
-https://steamcommunity.com/public/javascript/mobile/community_utils.js?__TIME__&l=english&_cdn=cloudflare
 https://steamcommunity.com/public/javascript/mobile/economy_utils.js?__TIME__&l=english&_cdn=cloudflare
 https://steamcommunity.com/public/javascript/mobile/mobileconf.js?__TIME__&l=english&_cdn=cloudflare
 https://steamcommunity.com/public/javascript/mobile/mobileprofile.js?__TIME__&l=english&_cdn=cloudflare
@@ -422,7 +421,6 @@ https://steamcommunity.com/public/javascript/sharedfiles_functions_logged_in.js?
 https://steamcommunity.com/public/javascript/sharedfiles_functions_logged_out.js?__TIME__&l=english&_cdn=cloudflare
 https://steamcommunity.com/public/javascript/sharedfiles_guide_functions.js?__TIME__&l=english&_cdn=cloudflare
 https://steamcommunity.com/public/javascript/sharedfiles_previews_functions.js?__TIME__&l=english&_cdn=cloudflare
-https://steamcommunity.com/public/javascript/steamguard.js?__TIME__&l=english&_cdn=cloudflare
 https://steamcommunity.com/public/javascript/user_reviews_community.js?__TIME__&l=english&_cdn=cloudflare
 https://steamcommunity.com/public/javascript/video_functions.js?__TIME__&l=english&_cdn=cloudflare
 https://steamcommunity.com/public/javascript/video_functions_v2.js?__TIME__&l=english&_cdn=cloudflare
@@ -444,7 +442,6 @@ https://steamcommunity.com/public/shared/javascript/billingaddress.js?__TIME__&l
 https://steamcommunity.com/public/shared/javascript/dash_player.js?__TIME__&l=english&_cdn=cloudflare
 https://steamcommunity.com/public/shared/javascript/joinsteam.js?__TIME__&l=english&_cdn=cloudflare
 https://steamcommunity.com/public/shared/javascript/login.js?__TIME__&l=english&_cdn=cloudflare
-https://steamcommunity.com/public/shared/javascript/mobileappapi.js?__TIME__&l=english&_cdn=cloudflare&mobileClientType=android
 https://steamcommunity.com/public/shared/javascript/shared_global.js?__TIME__&l=english&_cdn=cloudflare
 https://steamcommunity.com/public/shared/javascript/shared_mobile.js?__TIME__&l=english&_cdn=cloudflare
 https://steamcommunity.com/public/shared/javascript/shared_responsive_adapter.js?__TIME__&l=english&_cdn=cloudflare

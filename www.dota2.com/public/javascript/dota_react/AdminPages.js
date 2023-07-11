@@ -302,8 +302,8 @@
                     i.createElement(
                       "a",
                       { href: l, target: "_blank", rel: "noopener" },
-                      r
-                    )
+                      r,
+                    ),
                   )
                 : i.createElement("span", { style: { color: Y } }, "No Guild");
             },
@@ -321,8 +321,8 @@
                     i.createElement(
                       "a",
                       { href: e, target: "_blank", rel: "noopener" },
-                      e.split("/").pop()
-                    )
+                      e.split("/").pop(),
+                    ),
                   )
                 : "",
           },
@@ -362,8 +362,8 @@
                     i.createElement(
                       "a",
                       { href: `${t}${r}`, target: "_blank", rel: "noopener" },
-                      r
-                    )
+                      r,
+                    ),
                   )
                 : "";
             },
@@ -379,8 +379,8 @@
                     i.createElement(
                       "a",
                       { href: e, target: "_blank", rel: "noopener" },
-                      "Reports"
-                    )
+                      "Reports",
+                    ),
                   )
                 : "",
           },
@@ -395,8 +395,8 @@
                     i.createElement(
                       "a",
                       { href: e, target: "_blank", rel: "noopener" },
-                      "Associates"
-                    )
+                      "Associates",
+                    ),
                   )
                 : "",
           },
@@ -411,8 +411,8 @@
                     i.createElement(
                       "a",
                       { href: e, target: "_blank", rel: "noopener" },
-                      "Persona V1"
-                    )
+                      "Persona V1",
+                    ),
                   )
                 : "",
           },
@@ -434,24 +434,24 @@
                     i.createElement(
                       "span",
                       { style: { color: P } },
-                      `${C(F.PW.BAN_WARNING)}${t}`
-                    )
+                      `${C(F.PW.BAN_WARNING)}${t}`,
+                    ),
                   ),
                 (e & F.PW.RETURNING_PLAYER) > 0 &&
                   a.push(
                     i.createElement(
                       "span",
                       { style: { color: U } },
-                      `${C(F.PW.RETURNING_PLAYER)}${t}`
-                    )
+                      `${C(F.PW.RETURNING_PLAYER)}${t}`,
+                    ),
                   ),
                 (e & F.PW.COMMS_DISRUPTIVE) > 0 &&
                   a.push(
                     i.createElement(
                       "span",
                       { style: { color: P } },
-                      `${C(F.PW.COMMS_DISRUPTIVE)}${t}`
-                    )
+                      `${C(F.PW.COMMS_DISRUPTIVE)}${t}`,
+                    ),
                   ),
                 i.createElement("div", null, a)
               );
@@ -500,9 +500,9 @@
                     { style: { marginRight: "12px" } },
                     i.createElement("span", { style: { color: x } }, `${e}`),
                     i.createElement("span", null, " - "),
-                    i.createElement("span", { style: { color: B } }, `${t}`)
+                    i.createElement("span", { style: { color: B } }, `${t}`),
                   ),
-                  i.createElement("span", { style: { color: l } }, `(${n}%)`)
+                  i.createElement("span", { style: { color: l } }, `(${n}%)`),
                 )
               );
             },
@@ -527,7 +527,7 @@
               i.createElement(
                 "span",
                 { style: { color: w } },
-                "HWID Changed (example)"
+                "HWID Changed (example)",
               ),
           },
           {
@@ -537,7 +537,7 @@
               i.createElement(
                 "span",
                 { style: { color: w } },
-                "Hotkeys changed (example)"
+                "Hotkeys changed (example)",
               ),
           },
           {
@@ -547,7 +547,7 @@
               i.createElement(
                 "span",
                 { style: { color: w } },
-                "Won last 16/20 games (example)"
+                "Won last 16/20 games (example)",
               ),
           },
           {
@@ -589,7 +589,7 @@
               i.createElement(
                 "span",
                 { style: { color: Y } },
-                "(some hotkeys)"
+                "(some hotkeys)",
               ),
           },
           {
@@ -599,7 +599,7 @@
               i.createElement(
                 "span",
                 { style: { color: Y } },
-                "(some settings)"
+                "(some settings)",
               ),
           },
         ],
@@ -647,7 +647,7 @@
               i.createElement(
                 "span",
                 { style: { color: Y } },
-                "(video setting ID)"
+                "(video setting ID)",
               ),
           },
           {
@@ -657,7 +657,7 @@
               i.createElement(
                 "span",
                 { style: { color: Y } },
-                "(some setting ID, expand)"
+                "(some setting ID, expand)",
               ),
           },
           {
@@ -667,7 +667,7 @@
               i.createElement(
                 "span",
                 { style: { color: Y } },
-                "(audio setting ID)"
+                "(audio setting ID)",
               ),
           },
           {
@@ -683,7 +683,7 @@
               i.createElement(
                 "span",
                 { style: { color: Y } },
-                "(weird hotkeys)"
+                "(weird hotkeys)",
               ),
           },
           {
@@ -705,7 +705,7 @@
               i.createElement(
                 "span",
                 { style: { color: Y } },
-                "(some time, last x games)"
+                "(some time, last x games)",
               ),
           },
           {
@@ -749,31 +749,31 @@
                   return i.createElement(
                     "span",
                     { style: { color: P } },
-                    S(F.n4.VERY_LIKELY)
+                    S(F.n4.VERY_LIKELY),
                   );
                 case F.n4.SOMEWHAT_LIKELY:
                   return i.createElement(
                     "span",
                     { style: { color: w } },
-                    S(F.n4.SOMEWHAT_LIKELY)
+                    S(F.n4.SOMEWHAT_LIKELY),
                   );
                 case F.n4.UNCLEAR:
                   return i.createElement(
                     "span",
                     { style: { color: U } },
-                    S(F.n4.UNCLEAR)
+                    S(F.n4.UNCLEAR),
                   );
                 case F.n4.SOMEWHAT_UNLIKELY:
                   return i.createElement(
                     "span",
                     { style: {} },
-                    S(F.n4.SOMEWHAT_UNLIKELY)
+                    S(F.n4.SOMEWHAT_UNLIKELY),
                   );
                 case F.n4.VERY_UNLIKELY:
                   return i.createElement(
                     "span",
                     { style: {} },
-                    S(F.n4.VERY_UNLIKELY)
+                    S(F.n4.VERY_UNLIKELY),
                   );
                 default:
                   return i.createElement("span", null, S(F.n4.INVALID));
@@ -805,9 +805,9 @@
                     { style: { marginRight: "12px" } },
                     i.createElement("span", { style: { color: x } }, `${e}`),
                     i.createElement("span", null, " - "),
-                    i.createElement("span", { style: { color: B } }, `${t}`)
+                    i.createElement("span", { style: { color: B } }, `${t}`),
                   ),
-                  i.createElement("span", { style: { color: l } }, `(${n}%)`)
+                  i.createElement("span", { style: { color: l } }, `(${n}%)`),
                 )
               );
             },
@@ -856,7 +856,7 @@
                 i.createElement(
                   "span",
                   { style: { color: a } },
-                  `${t} / 32 games`
+                  `${t} / 32 games`,
                 )
               );
             },
@@ -881,10 +881,10 @@
                     src: `${
                       N.Y.CDN_URL
                     }/apps/dota2/images/small_ranks/ranked_icons_emoticon_${Math.floor(
-                      a / 10
+                      a / 10,
                     )}.png`,
-                  })
-                )
+                  }),
+                ),
               ),
           },
           {
@@ -896,7 +896,7 @@
                 i.Fragment,
                 null,
                 i.createElement("span", { className: b().RankNumber }, `${e}`),
-                i.createElement("span", null, `+/- ${t}`)
+                i.createElement("span", null, `+/- ${t}`),
               ),
           },
         ],
@@ -912,8 +912,8 @@
                     i.createElement(
                       "a",
                       { href: e, target: "_blank", rel: "noopener" },
-                      e.split("/").pop()
-                    )
+                      e.split("/").pop(),
+                    ),
                   )
                 : "",
           },
@@ -953,8 +953,8 @@
                     i.createElement(
                       "a",
                       { href: `${t}${r}`, target: "_blank", rel: "noopener" },
-                      r
-                    )
+                      r,
+                    ),
                   )
                 : "";
             },
@@ -970,8 +970,8 @@
                     i.createElement(
                       "a",
                       { href: e, target: "_blank", rel: "noopener" },
-                      "Persona V1"
-                    )
+                      "Persona V1",
+                    ),
                   )
                 : "",
           },
@@ -999,8 +999,8 @@
                     i.Fragment,
                     { key: o },
                     i.createElement("div", null, o),
-                    i.createElement("div", null, m)
-                  )
+                    i.createElement("div", null, m),
+                  ),
                 );
               }
               return r;
@@ -1041,8 +1041,8 @@
                 i.createElement(
                   "a",
                   { href: a, target: "_blank", rel: "noopener" },
-                  e
-                )
+                  e,
+                ),
               );
             },
           },
@@ -1053,7 +1053,7 @@
               i.createElement(
                 "span",
                 { style: { textTransform: "uppercase" } },
-                e
+                e,
               ),
           },
           { key: "sponsor", displayName: "Sponsor" },
@@ -1089,14 +1089,14 @@
                       "div",
                       null,
                       `${s} `,
-                      i.createElement("i", { style: { color: Y } }, `[${m}]`)
+                      i.createElement("i", { style: { color: Y } }, `[${m}]`),
                     ),
                     i.createElement(
                       "a",
                       { href: o, target: "_blank", rel: "noopener" },
-                      r
-                    )
-                  )
+                      r,
+                    ),
+                  ),
                 );
               }
               return a;
@@ -1108,7 +1108,7 @@
             i.Fragment,
             null,
             i.createElement("span", { style: { color: w } }, "YES"),
-            i.createElement("span", null, " (check V1 Link for details)")
+            i.createElement("span", null, " (check V1 Link for details)"),
           ),
         se = [
           {
@@ -1149,8 +1149,8 @@
             i.createElement(
               "span",
               { style: { color: P } },
-              c()(e).format("MMMM Do YYYY, h:mm:ss a")
-            )
+              c()(e).format("MMMM Do YYYY, h:mm:ss a"),
+            ),
           ),
         ce = [
           {
@@ -1189,10 +1189,10 @@
                     i.createElement(
                       "div",
                       { style: { textTransform: "capitalize" } },
-                      `VAC ${a.replace(/_/g, " ")}`
+                      `VAC ${a.replace(/_/g, " ")}`,
                     ),
-                    i.createElement("div", null, n)
-                  )
+                    i.createElement("div", null, n),
+                  ),
                 );
               }
               return t;
@@ -1228,7 +1228,7 @@
                   try {
                     const t = yield r().get(
                         N.Y.BASE_URL + "persona/showplayerreact/",
-                        { params: e }
+                        { params: e },
                       ),
                       a = null == t ? void 0 : t.data;
                     try {
@@ -1246,7 +1246,7 @@
                         Object.keys(a.persona.history.matches).length
                       ) {
                         let e = Object.values(
-                          a.persona.history.matches
+                          a.persona.history.matches,
                         ).reverse();
                         me(e), pe(e);
                       }
@@ -1275,11 +1275,11 @@
                   !(
                     !Fe &&
                     ![F.Eq.CASUAL_MATCH, F.Eq.COMPETITIVE_MATCH].includes(
-                      e.lobbytype
+                      e.lobbytype,
                     )
                   ) &&
                   !(!Oe && e.rankwassolo) &&
-                  !(!Ce && !e.rankwassolo)
+                  !(!Ce && !e.rankwassolo),
               )),
                 pe(e);
             }, [ie, Ne, he, Fe, Oe, Ce]);
@@ -1303,15 +1303,15 @@
               i.createElement(
                 s.q,
                 null,
-                i.createElement("title", null, "Dota 2 - Persona Details")
+                i.createElement("title", null, "Dota 2 - Persona Details"),
               ),
               i.createElement(I.Z, null),
               i.createElement(
                 "div",
                 { className: b().ContentFrame },
-                i.createElement("h2", { className: b().Header }, Ge)
+                i.createElement("h2", { className: b().Header }, Ge),
               ),
-              i.createElement(h.U, null)
+              i.createElement(h.U, null),
             );
           const be = [
             {
@@ -1374,13 +1374,13 @@
                       ? i.createElement(
                           "span",
                           { key: "W-L", style: { color: x } },
-                          "W"
+                          "W",
                         )
                       : i.createElement(
                           "span",
                           { key: "W-L", style: { color: B } },
-                          "L"
-                        )
+                          "L",
+                        ),
                   );
                   const o =
                     null === (a = null == e ? void 0 : e.rowData) ||
@@ -1393,23 +1393,23 @@
                           i.createElement(
                             "span",
                             { key: "rankChange", style: { color: x } },
-                            ` (+${o})`
-                          )
+                            ` (+${o})`,
+                          ),
                         )
                       : o < 0
                       ? r.push(
                           i.createElement(
                             "span",
                             { key: "rankChange", style: { color: B } },
-                            ` (${o})`
-                          )
+                            ` (${o})`,
+                          ),
                         )
                       : r.push(
                           i.createElement(
                             "span",
                             { key: "rankChange", style: { color: B } },
-                            ` (-${o})`
-                          )
+                            ` (-${o})`,
+                          ),
                         ),
                     r
                   );
@@ -1493,8 +1493,12 @@
                     i.createElement(
                       "label",
                       { htmlFor: "ranked" },
-                      i.createElement("span", { style: { color: W } }, "Ranked")
-                    )
+                      i.createElement(
+                        "span",
+                        { style: { color: W } },
+                        "Ranked",
+                      ),
+                    ),
                   ),
                   i.createElement(
                     "div",
@@ -1512,10 +1516,10 @@
                       i.createElement(
                         "span",
                         { style: { color: H } },
-                        "Unranked"
-                      )
-                    )
-                  )
+                        "Unranked",
+                      ),
+                    ),
+                  ),
                 ),
             },
             {
@@ -1543,8 +1547,8 @@
                     i.createElement(
                       "label",
                       { htmlFor: "solo" },
-                      i.createElement("span", { style: { color: j } }, "Solo")
-                    )
+                      i.createElement("span", { style: { color: j } }, "Solo"),
+                    ),
                   ),
                   i.createElement(
                     "div",
@@ -1559,9 +1563,9 @@
                     i.createElement(
                       "label",
                       { htmlFor: "party" },
-                      i.createElement("span", { style: { color: V } }, "Party")
-                    )
-                  )
+                      i.createElement("span", { style: { color: V } }, "Party"),
+                    ),
+                  ),
                 ),
             },
             {
@@ -1585,7 +1589,7 @@
                       key: e,
                       href: `${N.Y.BASE_URL}matches/match/${e}?u=${$}&appid=${N.Y.DOTA_APP_ID}&highlight=${t}`,
                     },
-                    e
+                    e,
                   ))(e.cellData, e.columnData.strAccountId),
             },
             {
@@ -1637,7 +1641,7 @@
                     (null === (t = null == e ? void 0 : e.rowData) ||
                     void 0 === t
                       ? void 0
-                      : t.leaver) || {}
+                      : t.leaver) || {},
                   );
                 if (0 == a.length && 0 == n.length) return "";
                 let l = 0,
@@ -1650,24 +1654,24 @@
                       i.createElement(
                         "span",
                         { key: "leaver", style: { color: P } },
-                        "[L]"
-                      )
+                        "[L]",
+                      ),
                     ),
                   l &&
                     o.push(
                       i.createElement(
                         "span",
                         { key: "commends", style: { color: x } },
-                        `[${l}]`
-                      )
+                        `[${l}]`,
+                      ),
                     ),
                   r &&
                     o.push(
                       i.createElement(
                         "span",
                         { key: "reports", style: { color: P } },
-                        `[${r}]`
-                      )
+                        `[${r}]`,
+                      ),
                     ),
                   o
                 );
@@ -1689,7 +1693,7 @@
                   i.createElement(
                     "span",
                     { style: { color: "darkgoldenrod" } },
-                    `${a}`
+                    `${a}`,
                   )
                 );
               },
@@ -1706,7 +1710,8 @@
                       ? void 0
                       : Le.itemabilities.find(
                           (t) =>
-                            t.id == (null == e ? void 0 : e.rowData[`item${a}`])
+                            t.id ==
+                            (null == e ? void 0 : e.rowData[`item${a}`]),
                         );
                   let l = null == n ? void 0 : n.name.replace("item_", "");
                   (n && l) || (l = "emptyitembg"),
@@ -1716,14 +1721,14 @@
                         className: b().ItemIcon,
                         src: `${N.Y.IMG_URL}items/${l}.png`,
                         alt: e.cellData,
-                      })
+                      }),
                     );
                 }
                 return i.createElement(
                   "div",
                   { className: b().ItemContainer },
                   t,
-                  " "
+                  " ",
                 );
               },
             },
@@ -1753,8 +1758,8 @@
               i.createElement(
                 "title",
                 null,
-                "Dota 2 Player" + (we ? " - " + we : "")
-              )
+                "Dota 2 Player" + (we ? " - " + we : ""),
+              ),
             ),
             i.createElement(I.Z, null),
             i.createElement("br", null),
@@ -1783,16 +1788,16 @@
                             ? e.formatFunction.call(
                                 null,
                                 null == L ? void 0 : L.persona[e.key],
-                                null == L ? void 0 : L.persona[e.secondaryKey]
+                                null == L ? void 0 : L.persona[e.secondaryKey],
                               )
                             : JSON.stringify(
                                 (null == L ? void 0 : L.persona[e.key]) || "",
                                 null,
-                                2
-                              ).replace(/['"]+/g, "")
-                        )
-                      )
-                    )
+                                2,
+                              ).replace(/['"]+/g, ""),
+                        ),
+                      ),
+                    ),
                   ),
                   i.createElement(
                     "div",
@@ -1810,16 +1815,16 @@
                                 null,
                                 null == L ? void 0 : L.persona[e.key],
                                 null == L ? void 0 : L.persona[e.secondaryKey],
-                                null == L ? void 0 : L.persona.compranktier
+                                null == L ? void 0 : L.persona.compranktier,
                               )
                             : JSON.stringify(
                                 (null == L ? void 0 : L.persona[e.key]) || "",
                                 null,
-                                2
-                              ).replace(/['"]+/g, "")
-                        )
-                      )
-                    )
+                                2,
+                              ).replace(/['"]+/g, ""),
+                        ),
+                      ),
+                    ),
                   ),
                   i.createElement(
                     "div",
@@ -1836,16 +1841,16 @@
                             ? e.formatFunction.call(
                                 null,
                                 null == L ? void 0 : L.persona[e.key],
-                                null == L ? void 0 : L.persona[e.secondaryKey]
+                                null == L ? void 0 : L.persona[e.secondaryKey],
                               )
                             : JSON.stringify(
                                 (null == L ? void 0 : L.persona[e.key]) || "",
                                 null,
-                                2
-                              ).replace(/['"]+/g, "")
-                        )
-                      )
-                    )
+                                2,
+                              ).replace(/['"]+/g, ""),
+                        ),
+                      ),
+                    ),
                   ),
                   i.createElement(
                     "div",
@@ -1862,22 +1867,22 @@
                             ? e.formatFunction.call(
                                 null,
                                 null == L ? void 0 : L.persona[e.key],
-                                null == L ? void 0 : L.persona[e.secondaryKey]
+                                null == L ? void 0 : L.persona[e.secondaryKey],
                               )
                             : JSON.stringify(
                                 (null == L ? void 0 : L.persona[e.key]) || "",
                                 null,
-                                2
-                              ).replace(/['"]+/g, "")
-                        )
-                      )
-                    )
+                                2,
+                              ).replace(/['"]+/g, ""),
+                        ),
+                      ),
+                    ),
                   ),
                   i.createElement("br", null),
                   i.createElement(
                     "h2",
                     { className: b().Header },
-                    "Smurf Flag Triggers (WIP)"
+                    "Smurf Flag Triggers (WIP)",
                   ),
                   i.createElement(
                     "div",
@@ -1894,22 +1899,22 @@
                             ? e.formatFunction.call(
                                 null,
                                 null == L ? void 0 : L.persona[e.key],
-                                null == L ? void 0 : L.persona[e.secondaryKey]
+                                null == L ? void 0 : L.persona[e.secondaryKey],
                               )
                             : JSON.stringify(
                                 (null == L ? void 0 : L.persona[e.key]) || "",
                                 null,
-                                2
-                              ).replace(/['"]+/g, "")
-                        )
-                      )
-                    )
+                                2,
+                              ).replace(/['"]+/g, ""),
+                        ),
+                      ),
+                    ),
                   ),
                   i.createElement("br", null),
                   i.createElement(
                     "h2",
                     { className: b().Header },
-                    "Linked Accounts (WIP)"
+                    "Linked Accounts (WIP)",
                   ),
                   i.createElement(
                     "div",
@@ -1926,17 +1931,17 @@
                             ? e.formatFunction.call(
                                 null,
                                 null == L ? void 0 : L.persona[e.key],
-                                null == L ? void 0 : L.persona[e.secondaryKey]
+                                null == L ? void 0 : L.persona[e.secondaryKey],
                               )
                             : JSON.stringify(
                                 (null == L ? void 0 : L.persona[e.key]) || "",
                                 null,
-                                2
-                              ).replace(/['"]+/g, "")
-                        )
-                      )
-                    )
-                  )
+                                2,
+                              ).replace(/['"]+/g, ""),
+                        ),
+                      ),
+                    ),
+                  ),
                 ),
                 i.createElement(
                   "div",
@@ -1948,7 +1953,7 @@
                       i.createElement(
                         "div",
                         { className: b().ChartTitle },
-                        `Last ${U.length} games`
+                        `Last ${U.length} games`,
                       ),
                     i.createElement(
                       d.h,
@@ -2004,11 +2009,11 @@
                           stroke: "#82ca9d",
                           strokeWidth: 2,
                           connectNulls: !0,
-                        })
-                      )
-                    )
-                  )
-                )
+                        }),
+                      ),
+                    ),
+                  ),
+                ),
               ),
               i.createElement("div", { className: b().FilterGrid }),
               i.createElement("div", { className: b().SmoothLine }),
@@ -2046,13 +2051,13 @@
                             cellRenderer: t.cellRenderer,
                             columnData: { strAccountId: M },
                             headerRenderer: t.headerRenderer,
-                          })
-                        )
-                      )
+                          }),
+                        ),
+                      ),
                     ),
                   (!ie || !ie.length) &&
-                    i.createElement("div", null, "No matches")
-                )
+                    i.createElement("div", null, "No matches"),
+                ),
               ),
               ie &&
                 ie.length &&
@@ -2072,15 +2077,15 @@
                     i.createElement(
                       "span",
                       null,
-                      "Include custom & practice games"
-                    )
-                  )
+                      "Include custom & practice games",
+                    ),
+                  ),
                 ),
               i.createElement("div", { className: b().SmoothLine }),
               i.createElement(
                 "h2",
                 { className: b().Header },
-                "Fingerprint (WIP)"
+                "Fingerprint (WIP)",
               ),
               i.createElement(
                 "div",
@@ -2097,16 +2102,16 @@
                         ? e.formatFunction.call(
                             null,
                             null == L ? void 0 : L.persona[e.key],
-                            null == L ? void 0 : L.persona[e.secondaryKey]
+                            null == L ? void 0 : L.persona[e.secondaryKey],
                           )
                         : JSON.stringify(
                             (null == L ? void 0 : L.persona[e.key]) || "",
                             null,
-                            2
-                          ).replace(/['"]+/g, "")
-                    )
-                  )
-                )
+                            2,
+                          ).replace(/['"]+/g, ""),
+                    ),
+                  ),
+                ),
               ),
               i.createElement("div", { className: b().SmoothLine }),
               i.createElement(
@@ -2118,7 +2123,7 @@
                   i.createElement(
                     "h2",
                     { className: b().Header },
-                    "Support Info"
+                    "Support Info",
                   ),
                   i.createElement(
                     "div",
@@ -2135,16 +2140,16 @@
                             ? e.formatFunction.call(
                                 null,
                                 null == L ? void 0 : L.persona[e.key],
-                                null == L ? void 0 : L.persona[e.secondaryKey]
+                                null == L ? void 0 : L.persona[e.secondaryKey],
                               )
                             : JSON.stringify(
                                 (null == L ? void 0 : L.persona[e.key]) || "",
                                 null,
-                                2
-                              ).replace(/['"]+/g, "")
-                        )
-                      )
-                    )
+                                2,
+                              ).replace(/['"]+/g, ""),
+                        ),
+                      ),
+                    ),
                   ),
                   i.createElement("br", null),
                   i.createElement(
@@ -2162,16 +2167,16 @@
                             ? e.formatFunction.call(
                                 null,
                                 null == L ? void 0 : L.persona[e.key],
-                                null == L ? void 0 : L.persona[e.secondaryKey]
+                                null == L ? void 0 : L.persona[e.secondaryKey],
                               )
                             : JSON.stringify(
                                 (null == L ? void 0 : L.persona[e.key]) || "",
                                 null,
-                                2
-                              ).replace(/['"]+/g, "")
-                        )
-                      )
-                    )
+                                2,
+                              ).replace(/['"]+/g, ""),
+                        ),
+                      ),
+                    ),
                   ),
                   i.createElement("br", null),
                   i.createElement(
@@ -2191,16 +2196,16 @@
                             ? e.formatFunction.call(
                                 null,
                                 null == L ? void 0 : L.persona[e.key],
-                                null == L ? void 0 : L.persona[e.secondaryKey]
+                                null == L ? void 0 : L.persona[e.secondaryKey],
                               )
                             : JSON.stringify(
                                 (null == L ? void 0 : L.persona[e.key]) || "",
                                 null,
-                                2
-                              ).replace(/['"]+/g, "")
-                        )
-                      )
-                    )
+                                2,
+                              ).replace(/['"]+/g, ""),
+                        ),
+                      ),
+                    ),
                   ),
                   !$e && i.createElement("br", null),
                   i.createElement(
@@ -2220,16 +2225,18 @@
                               ? e.formatFunction.call(
                                   null,
                                   null == L ? void 0 : L.persona[e.key],
-                                  null == L ? void 0 : L.persona[e.secondaryKey]
+                                  null == L
+                                    ? void 0
+                                    : L.persona[e.secondaryKey],
                                 )
                               : JSON.stringify(
                                   (null == L ? void 0 : L.persona[e.key]) || "",
                                   null,
-                                  2
-                                ).replace(/['"]+/g, "")
-                          )
-                      )
-                    )
+                                  2,
+                                ).replace(/['"]+/g, ""),
+                          ),
+                      ),
+                    ),
                   ),
                   !Pe && i.createElement("br", null),
                   i.createElement(
@@ -2241,12 +2248,12 @@
                         { key: `${e.key}-${e.displayName}-bansInfo-row` },
                         !!(null == L ? void 0 : L.persona[e.key]) &&
                           c()(
-                            null == L ? void 0 : L.persona[e.key]
+                            null == L ? void 0 : L.persona[e.key],
                           ).isAfter() &&
                           i.createElement("div", null, e.displayName || e.key),
                         !!(null == L ? void 0 : L.persona[e.key]) &&
                           c()(
-                            null == L ? void 0 : L.persona[e.key]
+                            null == L ? void 0 : L.persona[e.key],
                           ).isAfter() &&
                           i.createElement(
                             "div",
@@ -2255,16 +2262,18 @@
                               ? e.formatFunction.call(
                                   null,
                                   null == L ? void 0 : L.persona[e.key],
-                                  null == L ? void 0 : L.persona[e.secondaryKey]
+                                  null == L
+                                    ? void 0
+                                    : L.persona[e.secondaryKey],
                                 )
                               : JSON.stringify(
                                   (null == L ? void 0 : L.persona[e.key]) || "",
                                   null,
-                                  2
-                                ).replace(/['"]+/g, "")
-                          )
-                      )
-                    )
+                                  2,
+                                ).replace(/['"]+/g, ""),
+                          ),
+                      ),
+                    ),
                   ),
                   i.createElement("br", null),
                   i.createElement(
@@ -2281,17 +2290,17 @@
                             ? e.formatFunction.call(
                                 null,
                                 null == L ? void 0 : L.persona[e.key],
-                                null == L ? void 0 : L.persona[e.secondaryKey]
+                                null == L ? void 0 : L.persona[e.secondaryKey],
                               )
                             : JSON.stringify(
                                 (null == L ? void 0 : L.persona[e.key]) || "",
                                 null,
-                                2
-                              ).replace(/['"]+/g, "")
-                        )
-                      )
-                    )
-                  )
+                                2,
+                              ).replace(/['"]+/g, ""),
+                        ),
+                      ),
+                    ),
+                  ),
                 ),
                 i.createElement(
                   "div",
@@ -2299,7 +2308,7 @@
                   i.createElement(
                     "h2",
                     { className: b().Header },
-                    "Official Profile"
+                    "Official Profile",
                   ),
                   i.createElement(
                     "div",
@@ -2327,7 +2336,9 @@
                                     void 0 === t
                                     ? void 0
                                     : t.official_profile[e.key],
-                                  null == L ? void 0 : L.persona[e.secondaryKey]
+                                  null == L
+                                    ? void 0
+                                    : L.persona[e.secondaryKey],
                                 )
                               : JSON.stringify(
                                   (null ===
@@ -2336,9 +2347,9 @@
                                     ? void 0
                                     : a.official_profile[e.key]) || "",
                                   null,
-                                  2
-                                ).replace(/['"]+/g, "")
-                          )
+                                  2,
+                                ).replace(/['"]+/g, ""),
+                          ),
                         );
                       }),
                     !(null === (l = null == L ? void 0 : L.persona) ||
@@ -2351,9 +2362,9 @@
                         i.createElement(
                           "span",
                           { style: { color: Y } },
-                          "(None)"
-                        )
-                      )
+                          "(None)",
+                        ),
+                      ),
                   ),
                   i.createElement(
                     "div",
@@ -2375,15 +2386,17 @@
                               ? e.formatFunction.call(
                                   null,
                                   null == L ? void 0 : L.persona[e.key],
-                                  null == L ? void 0 : L.persona[e.secondaryKey]
+                                  null == L
+                                    ? void 0
+                                    : L.persona[e.secondaryKey],
                                 )
                               : JSON.stringify(
                                   (null == L ? void 0 : L.persona[e.key]) || "",
                                   null,
-                                  2
-                                ).replace(/['"]+/g, "")
-                          )
-                        )
+                                  2,
+                                ).replace(/['"]+/g, ""),
+                          ),
+                        ),
                       ),
                     !(null === (C = null == L ? void 0 : L.persona) ||
                     void 0 === C
@@ -2395,10 +2408,10 @@
                         i.createElement(
                           "span",
                           { style: { color: Y } },
-                          "(None)"
-                        )
-                      )
-                  )
+                          "(None)",
+                        ),
+                      ),
+                  ),
                 ),
                 i.createElement(
                   "div",
@@ -2406,7 +2419,7 @@
                   i.createElement(
                     "h2",
                     { className: b().Header },
-                    "Event Information"
+                    "Event Information",
                   ),
                   i.createElement(
                     "div",
@@ -2421,21 +2434,21 @@
                           e.formatFunction
                             ? e.formatFunction.call(
                                 null,
-                                null == L ? void 0 : L.persona[e.key]
+                                null == L ? void 0 : L.persona[e.key],
                               )
                             : JSON.stringify(
                                 (null == L ? void 0 : L.persona[e.key]) || "",
                                 null,
-                                2
-                              ).replace(/['"]+/g, "")
-                        )
-                      )
-                    )
-                  )
-                )
-              )
+                                2,
+                              ).replace(/['"]+/g, ""),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
             ),
-            i.createElement(h.U, null)
+            i.createElement(h.U, null),
           );
         };
       class pe extends i.Component {
@@ -2469,7 +2482,7 @@
             {
               href: `${o.Y.BASE_URL}persona/showplayer/${e}?u=${f}&appid=${o.Y.DOTA_APP_ID}`,
             },
-            e
+            e,
           );
       var g;
       !(function (e) {
@@ -2526,7 +2539,7 @@
                 null,
                 "Invited a new/legacy player ",
                 s.createElement("b", null, `${e}`),
-                "."
+                ".",
               ),
           },
           {
@@ -2537,7 +2550,7 @@
                 null,
                 "Removed a legacy player ",
                 s.createElement("b", null, `${e}`),
-                "."
+                ".",
               ),
           },
           {
@@ -2547,7 +2560,7 @@
                 s.Fragment,
                 null,
                 s.createElement("b", null, `${e}`),
-                " cancelled an issued invite."
+                " cancelled an issued invite.",
               ),
           },
           {
@@ -2557,7 +2570,7 @@
                 s.Fragment,
                 null,
                 s.createElement("b", null, `${e}`),
-                " registered a new player."
+                " registered a new player.",
               ),
           },
           {
@@ -2567,7 +2580,7 @@
                 s.Fragment,
                 null,
                 s.createElement("b", null, `${e}`),
-                " accepted an invite."
+                " accepted an invite.",
               ),
           },
           {
@@ -2577,7 +2590,7 @@
                 s.Fragment,
                 null,
                 s.createElement("b", null, `${e}`),
-                " rejected an invite."
+                " rejected an invite.",
               ),
           },
           {
@@ -2596,7 +2609,7 @@
                 s.Fragment,
                 null,
                 "Manager transferred management to a new manager ",
-                s.createElement("b", null, `${t}`, ".")
+                s.createElement("b", null, `${t}`, "."),
               ),
           },
           {
@@ -2607,7 +2620,7 @@
                 null,
                 "Invited a coach ",
                 s.createElement("b", null, `${e}`),
-                "."
+                ".",
               ),
           },
           {
@@ -2618,7 +2631,7 @@
                 null,
                 "Removed a coach ",
                 s.createElement("b", null, `${e}`),
-                "."
+                ".",
               ),
           },
           {
@@ -2628,7 +2641,7 @@
                 s.Fragment,
                 null,
                 s.createElement("b", null, `${e}`),
-                " cancelled an issued coach invite."
+                " cancelled an issued coach invite.",
               ),
           },
           {
@@ -2638,7 +2651,7 @@
                 s.Fragment,
                 null,
                 s.createElement("b", null, `${e}`),
-                " (coach) accepted an invite."
+                " (coach) accepted an invite.",
               ),
           },
           {
@@ -2648,7 +2661,7 @@
                 s.Fragment,
                 null,
                 s.createElement("b", null, `${e}`),
-                " (coach) rejected an invite."
+                " (coach) rejected an invite.",
               ),
           },
           {
@@ -2659,7 +2672,7 @@
                 null,
                 "Valve fixed a name for player ",
                 s.createElement("b", null, `${e}`),
-                "."
+                ".",
               ),
           },
           {
@@ -2698,7 +2711,7 @@
                 ? s.createElement(
                     s.Fragment,
                     null,
-                    s.createElement("a", { href: e }, e)
+                    s.createElement("a", { href: e }, e),
                   )
                 : "",
           },
@@ -2739,7 +2752,7 @@
                       yield r().get(`${e}`), setTimeout(() => t(), 1e3);
                     }),
                 },
-                "KICK"
+                "KICK",
               ),
           },
           {
@@ -2756,7 +2769,7 @@
                       yield r().get(`${e}`), setTimeout(() => t(), 1e3);
                     }),
                 },
-                "MAKE ADMIN"
+                "MAKE ADMIN",
               ),
           },
         ],
@@ -2785,8 +2798,8 @@
                       style: { backgroundColor: e },
                     }),
                     " ",
-                    e
-                  )
+                    e,
+                  ),
               ),
           },
           {
@@ -2805,8 +2818,8 @@
                       style: { backgroundColor: e },
                     }),
                     " ",
-                    e
-                  )
+                    e,
+                  ),
               ),
           },
           {
@@ -2827,8 +2840,8 @@
                           (e.src = `${o.Y.IMG_URL}teams_override/team_unknown_web.png`);
                       },
                       src: `${o.Y.CDN_URL}apps/dota2/teamlogos/${t}.png`,
-                    })
-                  )
+                    }),
+                  ),
               ),
           },
         ],
@@ -2843,8 +2856,8 @@
                 s.createElement(
                   "div",
                   { className: _().URLLogoContainer },
-                  e && s.createElement("img", { src: e })
-                )
+                  e && s.createElement("img", { src: e }),
+                ),
               ),
           },
           {
@@ -2857,8 +2870,8 @@
                 s.createElement(
                   "div",
                   { className: _().URLLogoContainer },
-                  e && s.createElement("img", { src: e })
-                )
+                  e && s.createElement("img", { src: e }),
+                ),
               ),
           },
           {
@@ -2871,8 +2884,8 @@
                 s.createElement(
                   "div",
                   { className: _().URLLogoContainer },
-                  e && s.createElement("img", { src: e })
-                )
+                  e && s.createElement("img", { src: e }),
+                ),
               ),
           },
           {
@@ -2885,8 +2898,8 @@
                 s.createElement(
                   "div",
                   { className: _().URLLogoContainer },
-                  e && s.createElement("img", { src: e })
-                )
+                  e && s.createElement("img", { src: e }),
+                ),
               ),
           },
         ],
@@ -2965,7 +2978,7 @@
                         : "skyblue"),
                   },
                 },
-                e
+                e,
               ),
           },
           { key: "score", displayName: "Score" },
@@ -2981,9 +2994,9 @@
                 s.createElement(
                   "a",
                   { href: `${o.Y.BASE_URL}${p._.teamdetails(a).substr(1)}` },
-                  a
+                  a,
                 )),
-                " )"
+                " )",
               );
               var a;
             },
@@ -3004,16 +3017,16 @@
                           key: t,
                           href: `${o.Y.BASE_URL}matches/match/${t}?u=${f}&appid=${o.Y.DOTA_APP_ID}`,
                         },
-                        t
+                        t,
                       )),
                       s.createElement(
                         "span",
                         { key: `${e.match_id}-tab` },
-                        " "
+                        " ",
                       ),
                     ];
                     var t;
-                  })
+                  }),
                 ),
                 t
               );
@@ -3047,7 +3060,7 @@
                 },
                 n = yield r().get(
                   o.Y.BASE_URL + "webapi/IDOTA2Teams/GetRegisteredTeams/v001",
-                  { params: a }
+                  { params: a },
                 ),
                 i =
                   (null ===
@@ -3071,14 +3084,14 @@
               const e = { appid: o.Y.DOTA_APP_ID, u: f, team_id: t },
                 a = yield r().get(
                   o.Y.BASE_URL + "webapi/IDOTA2Teams/GetSingleTeamInfo/v001",
-                  { params: e }
+                  { params: e },
                 ),
                 l = null == a ? void 0 : a.data,
                 i = l.members || [];
               try {
                 const e = yield r().get(
                   o.Y.BASE_URL + "teams/getugcfilelinks/",
-                  { params: { team_id: t } }
+                  { params: { team_id: t } },
                 );
                 e.data && Object.assign(l, e.data),
                   yield Promise.all(
@@ -3088,7 +3101,7 @@
                         const l = yield r().get(
                           o.Y.BASE_URL +
                             "webapi/IDOTA2Fantasy/GetPlayerInfo/v0001",
-                          { params: { account_id: e.account_id } }
+                          { params: { account_id: e.account_id } },
                         );
                         (i[t].is_pro = !!(null ===
                           (a = null == l ? void 0 : l.data) || void 0 === a
@@ -3101,11 +3114,11 @@
                               : n.name) || "");
                         const s = yield r().get(
                           o.Y.BASE_URL + "teams/getpersonaname/",
-                          { params: { account_id: e.account_id } }
+                          { params: { account_id: e.account_id } },
                         );
                         i[t].persona_name = (null == s ? void 0 : s.data) || "";
-                      })
-                    )
+                      }),
+                    ),
                   );
                 const a = (e, t) =>
                   e.is_pro && !t.is_pro
@@ -3139,7 +3152,7 @@
                     n = yield r().get(
                       o.Y.BASE_URL +
                         "webapi/IDOTA2Teams/GetFanContentStatus/v0001",
-                      { params: a }
+                      { params: a },
                     ),
                     l =
                       (null === (e = null == n ? void 0 : n.data) ||
@@ -3188,7 +3201,7 @@
                       a = yield r().get(
                         o.Y.BASE_URL +
                           "webapi/IDOTA2Teams/GetTeamAuditInformation/v001",
-                        { params: e }
+                        { params: e },
                       ),
                       l = null == a ? void 0 : a.data,
                       i = (null == l ? void 0 : l.actions) || [];
@@ -3201,13 +3214,13 @@
                           ) {
                             const t = yield r().get(
                               o.Y.BASE_URL + "teams/getpersonaname/",
-                              { params: { account_id: e.account_id } }
+                              { params: { account_id: e.account_id } },
                             );
                             e.target_manager_name =
                               (null == t ? void 0 : t.data) || "";
                           }
-                        })
-                      )
+                        }),
+                      ),
                     ),
                       a && a.data && l.actions && B(l.actions);
                   });
@@ -3225,7 +3238,7 @@
               e = e.filter(
                 (e) =>
                   e.registration_period ===
-                  o.Y.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD
+                  o.Y.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD,
               );
               let a = [];
               for (let t of e) {
@@ -3243,7 +3256,7 @@
                       n = yield r().get(
                         o.Y.BASE_URL +
                           "webapi/IDOTA2League/GetLeaguesData/v001",
-                        { params: e }
+                        { params: e },
                       ),
                       l = null == n ? void 0 : n.data,
                       i = null == l ? void 0 : l.leagues,
@@ -3284,7 +3297,7 @@
                         ? -1
                         : e.scheduled_time < t.scheduled_time
                         ? 1
-                        : 0
+                        : 0,
                     ),
                       s.length &&
                         U(
@@ -3294,8 +3307,8 @@
                               Object.assign(Object.assign({}, e), {
                                 [t[m]]: [...(e[t[m]] || []), t],
                               }),
-                            {}
-                          ))
+                            {},
+                          )),
                         );
                   });
                 })();
@@ -3312,14 +3325,14 @@
               (j = s.createElement(
                 "div",
                 null,
-                "Error loading registered teams..."
+                "Error loading registered teams...",
               )),
             M &&
               (0 == Object.keys(N).length || G) &&
               (j = s.createElement(
                 "div",
                 null,
-                `Error loading single team info for teamId ${t} `
+                `Error loading single team info for teamId ${t} `,
               )),
             j)
           )
@@ -3330,11 +3343,11 @@
               s.createElement(
                 m.q,
                 null,
-                s.createElement("title", null, "Dota 2 - Team Details")
+                s.createElement("title", null, "Dota 2 - Team Details"),
               ),
               s.createElement(y.Z, null),
               s.createElement("div", { className: _().ContentFrame }, j),
-              s.createElement(u.U, null)
+              s.createElement(u.U, null),
             );
           const J = N.members || [];
           J.forEach((e) => {
@@ -3354,7 +3367,7 @@
             s.createElement(
               m.q,
               null,
-              s.createElement("title", null, "Dota 2 - Team Details")
+              s.createElement("title", null, "Dota 2 - Team Details"),
             ),
             s.createElement(y.Z, null),
             s.createElement(
@@ -3363,7 +3376,9 @@
               s.createElement(
                 "h1",
                 { className: _().Header },
-                `Team Details for ${null == N ? void 0 : N.name} (${N.team_id})`
+                `Team Details for ${null == N ? void 0 : N.name} (${
+                  N.team_id
+                })`,
               ),
               s.createElement(
                 "div",
@@ -3380,10 +3395,10 @@
                         ? e.formatFunction.call(null, N[e.key])
                         : JSON.stringify(N[e.key] || "", null, 2).replace(
                             /['"]+/g,
-                            ""
-                          )
-                    )
-                  )
+                            "",
+                          ),
+                    ),
+                  ),
                 ),
                 !K &&
                   s.createElement(
@@ -3392,10 +3407,10 @@
                     s.createElement(
                       "div",
                       { className: _().Link, onClick: () => Y(!0) },
-                      "Update Info / Add Member"
+                      "Update Info / Add Member",
                     ),
-                    s.createElement("div", null)
-                  )
+                    s.createElement("div", null),
+                  ),
               ),
               K &&
                 s.createElement(
@@ -3423,7 +3438,7 @@
                               };
                               yield r().get(
                                 `${o.Y.BASE_URL}webapi/IDOTA2Teams/EditTeamName/v0001`,
-                                { params: n }
+                                { params: n },
                               );
                               W(), setTimeout(() => u(!1), k);
                             }),
@@ -3431,7 +3446,7 @@
                         s.createElement(
                           "h2",
                           { className: _().Header },
-                          "Update Team Information"
+                          "Update Team Information",
                         ),
                         s.createElement(
                           "div",
@@ -3466,13 +3481,13 @@
                             s.createElement(
                               "button",
                               { className: _().SubmitButton, disabled: d },
-                              d ? "Updating..." : "Update"
-                            )
-                          )
-                        )
+                              d ? "Updating..." : "Update",
+                            ),
+                          ),
+                        ),
                       );
                     },
-                    { strTeamId: t }
+                    { strTeamId: t },
                   ),
                   s.createElement("div", { className: _().SmoothLine }),
                   s.createElement(
@@ -3489,7 +3504,7 @@
                               const n = { team_id: e, account_id: t };
                               yield r().get(
                                 `${o.Y.BASE_URL}webapi/IDOTA2Teams/AddTeamMember/v0001`,
-                                { params: n }
+                                { params: n },
                               );
                               W(), setTimeout(() => i(!1), k);
                             }),
@@ -3497,7 +3512,7 @@
                         s.createElement(
                           "h2",
                           { className: _().Header },
-                          "Add Team Member"
+                          "Add Team Member",
                         ),
                         s.createElement(
                           "div",
@@ -3516,14 +3531,14 @@
                             s.createElement(
                               "button",
                               { className: _().SubmitButton, disabled: l },
-                              l ? "Adding..." : "Add Account"
-                            )
-                          )
-                        )
+                              l ? "Adding..." : "Add Account",
+                            ),
+                          ),
+                        ),
                       );
                     },
-                    { strTeamId: t }
-                  )
+                    { strTeamId: t },
+                  ),
                 ),
               s.createElement("div", { className: _().SmoothLine }),
               s.createElement("h2", { className: _().Header }, "Members"),
@@ -3542,9 +3557,9 @@
                     s.createElement(
                       "div",
                       { key: `${e.key}-members-grid-header}` },
-                      s.createElement("b", null, e.displayName || e.key)
-                    )
-                  )
+                      s.createElement("b", null, e.displayName || e.key),
+                    ),
+                  ),
                 ),
                 s.createElement(
                   s.Fragment,
@@ -3559,13 +3574,13 @@
                             ? t.formatFunction.call(null, e[t.key], W)
                             : JSON.stringify(e[t.key] || "", null, 2).replace(
                                 /['"]+/g,
-                                ""
-                              )
-                        )
-                      )
+                                "",
+                              ),
+                        ),
+                      ),
                     ),
-                  !J.length && s.createElement("div", null, "No team members.")
-                )
+                  !J.length && s.createElement("div", null, "No team members."),
+                ),
               ),
               s.createElement("br", null),
               s.createElement(
@@ -3583,9 +3598,9 @@
                     s.createElement(
                       "div",
                       { key: `${e.key}-manager-grid-header}` },
-                      s.createElement("b", null, e.displayName || e.key)
-                    )
-                  )
+                      s.createElement("b", null, e.displayName || e.key),
+                    ),
+                  ),
                 ),
                 s.createElement(
                   s.Fragment,
@@ -3601,13 +3616,13 @@
                           ? e.formatFunction.call(null, V[e.key])
                           : JSON.stringify(V[e.key] || "", null, 2).replace(
                               /['"]+/g,
-                              ""
-                            )
-                      )
-                    )
+                              "",
+                            ),
+                      ),
+                    ),
                   ),
-                  !R.length && s.createElement("div", null, "No manager.")
-                )
+                  !R.length && s.createElement("div", null, "No manager."),
+                ),
               ),
               K &&
                 s.createElement(
@@ -3634,7 +3649,7 @@
                               };
                               yield r().post(
                                 `${o.Y.BASE_URL}webapi/IDOTA2Teams/UpdateRegisteredTeamData/v0001?u=${f}&appid=${o.Y.DOTA_APP_ID}`,
-                                { params: a }
+                                { params: a },
                               );
                               H(), setTimeout(() => c(!1), k);
                             }),
@@ -3642,7 +3657,7 @@
                         s.createElement(
                           "h2",
                           { className: _().Header },
-                          "Update Manager Email"
+                          "Update Manager Email",
                         ),
                         s.createElement(
                           "div",
@@ -3669,20 +3684,20 @@
                             s.createElement(
                               "button",
                               { className: _().SubmitButton, disabled: m },
-                              m ? "Updating..." : "Update Manager Email"
-                            )
-                          )
-                        )
+                              m ? "Updating..." : "Update Manager Email",
+                            ),
+                          ),
+                        ),
                       );
                     },
-                    { strTeamId: t }
-                  )
+                    { strTeamId: t },
+                  ),
                 ),
               s.createElement("div", { className: _().SmoothLine }),
               s.createElement(
                 "h2",
                 { className: _().Header },
-                "Logos & Colors"
+                "Logos & Colors",
               ),
               s.createElement(
                 "div",
@@ -3699,11 +3714,11 @@
                         ? e.formatFunction.call(null, N[e.key], N.team_id)
                         : JSON.stringify(N[e.key] || "", null, 2).replace(
                             /['"]+/g,
-                            ""
-                          )
-                    )
-                  )
-                )
+                            "",
+                          ),
+                    ),
+                  ),
+                ),
               ),
               s.createElement("br", null),
               s.createElement(
@@ -3719,9 +3734,9 @@
                     s.createElement(
                       "div",
                       { key: `${e.key}-ugc-grid-header}` },
-                      s.createElement("b", null, e.displayName || e.key)
-                    )
-                  )
+                      s.createElement("b", null, e.displayName || e.key),
+                    ),
+                  ),
                 ),
                 s.createElement(
                   s.Fragment,
@@ -3734,17 +3749,17 @@
                         ? e.formatFunction.call(null, N[e.key])
                         : JSON.stringify(N[e.key] || "", null, 2).replace(
                             /['"]+/g,
-                            ""
-                          )
-                    )
-                  )
-                )
+                            "",
+                          ),
+                    ),
+                  ),
+                ),
               ),
               s.createElement("div", { className: _().SmoothLine }),
               s.createElement(
                 "h2",
                 { className: _().Header },
-                "Audit Action History"
+                "Audit Action History",
               ),
               s.createElement(
                 "div",
@@ -3761,9 +3776,9 @@
                       {
                         key: `${e.key}-${e.displayName}-audit-action-grid-header`,
                       },
-                      s.createElement("b", null, e.displayName || e.key)
-                    )
-                  )
+                      s.createElement("b", null, e.displayName || e.key),
+                    ),
+                  ),
                 ),
                 s.createElement(
                   s.Fragment,
@@ -3779,23 +3794,24 @@
                                 null,
                                 e[t.key],
                                 e.player_name,
-                                e.target_manager_name
+                                e.target_manager_name,
                               )
                             : JSON.stringify(e[t.key] || "", null, 2).replace(
                                 /['"]+/g,
-                                ""
-                              )
-                        )
-                      )
+                                "",
+                              ),
+                        ),
+                      ),
                     ),
-                  !x.length && s.createElement("div", null, "No audit actions.")
-                )
+                  !x.length &&
+                    s.createElement("div", null, "No audit actions."),
+                ),
               ),
               s.createElement("div", { className: _().SmoothLine }),
               s.createElement(
                 "h2",
                 { className: _().Header },
-                "Supporters Club / Workshop Status"
+                "Supporters Club / Workshop Status",
               ),
               s.createElement(
                 "div",
@@ -3812,17 +3828,17 @@
                         ? e.formatFunction.call(null, $[e.key])
                         : JSON.stringify($[e.key] || "", null, 2).replace(
                             /['"]+/g,
-                            ""
-                          )
-                    )
-                  )
-                )
+                            "",
+                          ),
+                    ),
+                  ),
+                ),
               ),
               s.createElement("div", { className: _().SmoothLine }),
               s.createElement(
                 "h2",
                 { className: (0, c.Z)(_().Header, _().SeasonMatchHeader) },
-                `Season ${o.Y.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD} Matches`
+                `Season ${o.Y.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD} Matches`,
               ),
               s.createElement(
                 "div",
@@ -3844,8 +3860,8 @@
                               key: `league-name-row-${a}`,
                               style: { gridColumn: `span ${C.length}` },
                             },
-                            s.createElement("b", null, t)
-                          )
+                            s.createElement("b", null, t),
+                          ),
                         ),
                           e.push(
                             C.map((e) =>
@@ -3857,10 +3873,10 @@
                                 s.createElement(
                                   "b",
                                   null,
-                                  e.displayName || e.key
-                                )
-                              )
-                            )
+                                  e.displayName || e.key,
+                                ),
+                              ),
+                            ),
                           );
                         for (let a of w[t])
                           e.push(
@@ -3874,15 +3890,15 @@
                                   ? e.formatFunction.call(
                                       null,
                                       a[e.key],
-                                      q(a.opponent_team_id)
+                                      q(a.opponent_team_id),
                                     )
                                   : JSON.stringify(
                                       a[e.key] || "",
                                       null,
-                                      2
-                                    ).replace(/['"]+/g, "")
-                              )
-                            )
+                                      2,
+                                    ).replace(/['"]+/g, ""),
+                              ),
+                            ),
                           );
                       }),
                       e
@@ -3893,13 +3909,13 @@
                       "div",
                       null,
                       s.createElement("br", null),
-                      "No league matches."
-                    )
-                )
+                      "No league matches.",
+                    ),
+                ),
               ),
-              s.createElement("br", null)
+              s.createElement("br", null),
             ),
-            s.createElement(u.U, null)
+            s.createElement(u.U, null),
           );
         };
       class M extends s.Component {

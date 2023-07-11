@@ -2128,7 +2128,9 @@ html:not(.touch)
   .eventcalendartile_TileContainer_27AwJ
     .eventcalendartile_GameSource_NopR2
     .eventcalendartile_SourceList_EyXCR
-    .eventcalendartile_Source_cwALQ:not(.eventcalendartile_RecommendedSource_dG5lj) {
+    .eventcalendartile_Source_cwALQ:not(
+      .eventcalendartile_RecommendedSource_dG5lj
+    ) {
     display: none;
   }
 }
@@ -2524,7 +2526,9 @@ html:not(.touch)
   .eventcalendartile_TileImage_Zo12U {
   filter: blur(0px);
   opacity: 1;
-  transition: filter 0.24s ease-in-out, opacity 0.24s ease-in-out;
+  transition:
+    filter 0.24s ease-in-out,
+    opacity 0.24s ease-in-out;
   height: 0;
   padding-top: 56.25%;
   background: #2d3138 center/cover no-repeat;
@@ -2559,7 +2563,9 @@ html:not(.touch)
   border-radius: 2px;
   padding: 0 6px;
   opacity: 0;
-  transition: opacity 0.24s ease-in-out, transform 0.24s ease-in-out;
+  transition:
+    opacity 0.24s ease-in-out,
+    transform 0.24s ease-in-out;
 }
 .eventcalendartile_TileContainer_27AwJ
   .eventcalendartile_Tile_a0iPy
@@ -3186,12 +3192,16 @@ html:not(.touch)
   margin-left: 0;
 }
 @media screen and (max-width: 800px) {
-  .eventcalendartile_TileContainer_27AwJ.eventcalendartile_UpcomingMode_2oNi3:nth-child(3) {
+  .eventcalendartile_TileContainer_27AwJ.eventcalendartile_UpcomingMode_2oNi3:nth-child(
+      3
+    ) {
     display: none;
   }
 }
 @media screen and (max-width: 500px) {
-  .eventcalendartile_TileContainer_27AwJ.eventcalendartile_UpcomingMode_2oNi3:nth-child(2) {
+  .eventcalendartile_TileContainer_27AwJ.eventcalendartile_UpcomingMode_2oNi3:nth-child(
+      2
+    ) {
     display: none;
   }
 }
@@ -3234,7 +3244,11 @@ html:not(.touch)
   .eventcalendartile_Footer_DEtoe {
   display: none;
 }
-.eventcalendartile_TileContainer_27AwJ.eventcalendartile_EnableHovers_1fwVU:not(.eventcalendartile_EventType12_KucHh):not(.eventcalendartile_EventType14_1jnLc):not(.eventcalendartile_TileVideoIcon_3_ckM)
+.eventcalendartile_TileContainer_27AwJ.eventcalendartile_EnableHovers_1fwVU:not(
+    .eventcalendartile_EventType12_KucHh
+  ):not(.eventcalendartile_EventType14_1jnLc):not(
+    .eventcalendartile_TileVideoIcon_3_ckM
+  )
   .eventcalendartile_Tile_a0iPy:hover {
   background: radial-gradient(circle at top left, #4f5764 0%, #454854 140%);
 }
@@ -3514,7 +3528,9 @@ html:not(.touch)
   border-radius: 2px;
   padding: 0 6px;
   opacity: 0;
-  transition: opacity 0.24s ease-in-out, transform 0.24s ease-in-out;
+  transition:
+    opacity 0.24s ease-in-out,
+    transform 0.24s ease-in-out;
 }
 .youtubepreviewimage_YoutubePreviewImage_MzScK:hover img {
   opacity: 1;

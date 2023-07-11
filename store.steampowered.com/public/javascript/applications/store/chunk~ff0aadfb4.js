@@ -66,7 +66,7 @@
           : ((0, v.X)(
               !t.list_jsondata,
               "Found unexpected ListDetails_t.list_jsondata type: " +
-                typeof t.list_jsondata
+                typeof t.list_jsondata,
             ),
             (t.list_jsondata = {}));
       }
@@ -135,7 +135,7 @@
                 return (
                   (0, v.X)(
                     e == (null == n ? void 0 : n.listid),
-                    "Wanted" + e + "but got" + (null == n ? void 0 : n.listid)
+                    "Wanted" + e + "but got" + (null == n ? void 0 : n.listid),
                   ),
                   h(n),
                   b(r.data.curation_language, n),
@@ -149,7 +149,7 @@
               console.error(
                 "CCuratorListStore.LoadListDetails: error on load: " +
                   e.strErrorMsg,
-                e
+                e,
               );
             }
             return null;
@@ -179,7 +179,7 @@
               "CCuratorListStore.LoadMyFollowedSaleCurationLists",
               t,
               e,
-              n
+              n,
             );
           });
         }
@@ -199,7 +199,7 @@
               "CCuratorListStore.LoadAllSaleCurationLists",
               t,
               e,
-              n
+              n,
             );
           });
         }
@@ -225,7 +225,7 @@
                         e.multi_detail_lists.forEach((n) => {
                           this.m_mapListIDToClanAccount.set(
                             n.listid,
-                            e.clan_account_id
+                            e.clan_account_id,
                           ),
                             h(n),
                             b(e.curation_language, n),
@@ -258,7 +258,7 @@
             console.log(
               "DEV_DEBUG: CCuratorListStore loading list payload: " +
                 (null == t ? void 0 : t.length),
-              t
+              t,
             ),
             this.ValidateStoreDefault(t) &&
               (0, l.z)(() => {
@@ -318,7 +318,7 @@
                         Object.assign(Object.assign({}, p.NC), {
                           include_assets: !0,
                           include_release: !0,
-                        })
+                        }),
                       ),
                         u.ZP.Get().LoadAppIDsBatch(t.map((t) => t.id)),
                         n();
@@ -367,7 +367,7 @@
                     yield _.j1.LoadPartnerEventFromClanEventGIDAndClanSteamID(
                       new s.K(t.sale_clan_steamid),
                       n,
-                      0
+                      0,
                     ),
                     l.token.reason || e();
                 });
@@ -432,7 +432,7 @@
               info: e,
               bIsHovered: f,
               bHasParentAppToDisplay: H,
-            })
+            }),
           );
         return a.createElement(
           l.s,
@@ -464,16 +464,16 @@
                     fnOnHoverStateChange: !P && b,
                     nCreatorAccountID: t.creatorAccountID,
                   },
-                  z
+                  z,
                 ),
-            Boolean(c) && a.createElement("div", null, c)
+            Boolean(c) && a.createElement("div", null, c),
           ),
           H &&
             a.createElement(
               i.Ks,
               Object.assign(
                 { className: g().CapsuleParentInfo },
-                (0, h.h)(w, O, P, t.strExtraParams)
+                (0, h.h)(w, O, P, t.strExtraParams),
               ),
               a.createElement(
                 C.zw,
@@ -484,8 +484,8 @@
                   (0, S.Xx)(
                     11 == y.GetAppType()
                       ? "#SalePage_ParentApp_SoundTrack"
-                      : "#SalePage_ParentApp_DLC"
-                  )
+                      : "#SalePage_ParentApp_DLC",
+                  ),
                 ),
                 a.createElement(
                   L._,
@@ -503,12 +503,12 @@
                         alt: w.GetName(),
                         src: w.GetAssets().GetSmallCapsuleURL(),
                       },
-                      (0, o.fn)()
-                    )
-                  )
-                )
-              )
-            )
+                      (0, o.fn)(),
+                    ),
+                  ),
+                ),
+              ),
+            ),
         );
       }
       function T(t) {
@@ -533,14 +533,14 @@
             ((0, C.Dt)(n.type),
             (0, a.useMemo)(
               () => (null == G ? void 0 : G.GetIncludedAppIDsOrSelf()),
-              [G]
+              [G],
             )),
           O =
             G &&
             (null == G
               ? void 0
               : G.GetIncludedAppIDsOrSelf().every((t) =>
-                  c.jg.Get().BOwnsApp(t)
+                  c.jg.Get().BOwnsApp(t),
                 ));
         if (!G) return null;
         const P = O && !l,
@@ -589,7 +589,7 @@
                   : e.steam_deck_compat_category,
             }),
             Boolean(A && !(0, p.Hu)()) && a.createElement(E.v, { appInfo: n }),
-            j
+            j,
           )
         );
       }

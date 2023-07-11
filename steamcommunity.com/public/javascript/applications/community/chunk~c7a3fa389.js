@@ -1617,7 +1617,7 @@
               0,
               -1,
               [1, 3, 9, 10, 11, 12, 13, 14, 15, 17, 18],
-              null
+              null,
             );
         }
         static M() {
@@ -2523,7 +2523,7 @@
               "LoyaltyRewards.RedeemPointsForBadgeLevel#1",
               r,
               c,
-              { ePrivilege: 1 }
+              { ePrivilege: 1 },
             );
           }),
           (e.RedeemPointsToUpgradeItem = function (e, r) {
@@ -2531,7 +2531,7 @@
               "LoyaltyRewards.RedeemPointsToUpgradeItem#1",
               r,
               c,
-              { ePrivilege: 1 }
+              { ePrivilege: 1 },
             );
           }),
           (e.RedeemPointsForProfileCustomization = function (e, r) {
@@ -2539,7 +2539,7 @@
               "LoyaltyRewards.RedeemPointsForProfileCustomization#1",
               r,
               m,
-              { ePrivilege: 1 }
+              { ePrivilege: 1 },
             );
           }),
           (e.RedeemPointsForProfileCustomizationUpgrade = function (e, r) {
@@ -2547,7 +2547,7 @@
               "LoyaltyRewards.RedeemPointsForProfileCustomizationUpgrade#1",
               r,
               d,
-              { ePrivilege: 1 }
+              { ePrivilege: 1 },
             );
           }),
           (e.RegisterForSteamDeckRewards = function (e, r) {
@@ -2555,7 +2555,7 @@
               "LoyaltyRewards.RegisterForSteamDeckRewards#1",
               r,
               B,
-              { ePrivilege: 1 }
+              { ePrivilege: 1 },
             );
           }),
           (e.AddReaction = function (e, r) {
@@ -2574,7 +2574,7 @@
               "LoyaltyRewards.GetReactionsSummaryForUser#1",
               r,
               R,
-              { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 }
+              { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
             );
           }),
           (e.GetReactionConfig = function (e, r) {
@@ -2589,7 +2589,7 @@
               "LoyaltyRewards.GetProfileCustomizationsConfig#1",
               r,
               p,
-              { bConstMethod: !0, ePrivilege: 0, eWebAPIKeyRequirement: 1 }
+              { bConstMethod: !0, ePrivilege: 0, eWebAPIKeyRequirement: 1 },
             );
           }),
           (e.GetEligibleApps = function (e, r) {
@@ -2604,7 +2604,7 @@
               "LoyaltyRewards.GetActivePurchaseBonuses#1",
               r,
               j,
-              { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 }
+              { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
             );
           }),
           (e.QueryRewardItems = function (e, r) {

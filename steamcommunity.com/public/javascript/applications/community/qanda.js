@@ -43,11 +43,13 @@
         }
         LoadProfiles(e, r) {
           return (0, s.mG)(this, void 0, void 0, function* () {
-            (0,
-            c.X)(e.length <= 500, "Check LoadProfiles, requesting too many steam IDs");
+            (0, c.X)(
+              e.length <= 500,
+              "Check LoadProfiles, requesting too many steam IDs",
+            );
             let t = e.filter(
               (e) =>
-                !this.m_mapProfiles.has(e) && !this.m_mapProfilesLoading.has(e)
+                !this.m_mapProfiles.has(e) && !this.m_mapProfilesLoading.has(e),
             );
             if (0 == t.length) return this.m_mapProfilesLoading.get(e[0]);
             let s = d.De.COMMUNITY_BASE_URL + "actions/ajaxresolveusers",
@@ -75,7 +77,7 @@
         }
         GetProfileByAccountID(e) {
           return this.m_mapProfiles.get(
-            u.K.InitFromAccountID(e).ConvertTo64BitString()
+            u.K.InitFromAccountID(e).ConvertTo64BitString(),
           );
         }
         GetProfileBySteamID(e) {
@@ -86,7 +88,7 @@
         }
         BHasProfileByAccountID(e) {
           return this.m_mapProfiles.has(
-            u.K.InitFromAccountID(e).ConvertTo64BitString()
+            u.K.InitFromAccountID(e).ConvertTo64BitString(),
           );
         }
         BHasProfileBySteamID(e) {
@@ -111,7 +113,7 @@
       function p(e) {
         const r = i.useMemo(
             () => (e ? ("string" == typeof e ? new u.K(e) : e) : null),
-            [e]
+            [e],
           ),
           [t, s] = (0, i.useState)(!!r && !g.BHasProfileBySteamID(r));
         (0, i.useEffect)(() => {
@@ -128,7 +130,7 @@
                       r.ConvertTo64BitString() +
                       ": " +
                       t.strErrorMsg,
-                    t
+                    t,
                   );
                 })
                 .finally(() => {
@@ -204,7 +206,7 @@
             return { strErrorMsg: e.err_msg, errorCode: e.success };
           if ("string" == typeof e && e.length > 1024)
             console.groupCollapsed(
-              "GetMsgAndErrorCodeFromResponse cannot parse: "
+              "GetMsgAndErrorCodeFromResponse cannot parse: ",
             ),
               console.error(e),
               console.groupEnd();
@@ -264,7 +266,7 @@
                 },
               }),
           }),
-          o.createElement(a.AW, { component: i.R })
+          o.createElement(a.AW, { component: i.R }),
         );
       };
     },

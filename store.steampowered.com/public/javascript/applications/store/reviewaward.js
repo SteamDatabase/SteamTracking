@@ -103,7 +103,7 @@
             return (
               1 != a.GetEResult()
                 ? console.error(
-                    `Error when calling LoyaltyRewardsService.AddReaction: EResult=${a.GetEResult()}`
+                    `Error when calling LoyaltyRewardsService.AddReaction: EResult=${a.GetEResult()}`,
                   )
                 : (this.m_bPointsBalanceLoadedOrInFlight = !1),
               { eResult: a.GetEResult(), strMessage: "" }
@@ -126,10 +126,10 @@
             let t = yield w.pQ.GetSummary(this.m_transport, e);
             1 == t.GetEResult()
               ? (this.m_lPointsAvailable = _().fromString(
-                  t.Body().summary().points()
+                  t.Body().summary().points(),
                 ))
               : console.error(
-                  `Error when calling LoyaltyRewardsService.GetSummary: EResult=${t.GetEResult()}`
+                  `Error when calling LoyaltyRewardsService.GetSummary: EResult=${t.GetEResult()}`,
                 );
           });
         }
@@ -149,7 +149,10 @@
               let e = t.Body().toObject().reactions;
               for (const t of e)
                 this.m_mapReactionConfiguration.set(t.reactionid, t);
-            } else console.error(`Error when calling LoyaltyRewardsService.GetReactionConfig: EResult=${t.GetEResult()}`);
+            } else
+              console.error(
+                `Error when calling LoyaltyRewardsService.GetReactionConfig: EResult=${t.GetEResult()}`,
+              );
           });
         }
         GetExistingReactions() {
@@ -168,7 +171,7 @@
                   .reactionids()
                   .map((e) => this.m_mapExistingReactions.set(e, !0))
               : console.error(
-                  `Error when calling LoyaltyRewardsService.GetReactions: EResult=${t.GetEResult()}`
+                  `Error when calling LoyaltyRewardsService.GetReactions: EResult=${t.GetEResult()}`,
                 );
           });
         }
@@ -178,7 +181,7 @@
           [g.LO.deep],
           p.prototype,
           "m_mapReactionConfiguration",
-          void 0
+          void 0,
         ),
         (0, n.gn)([g.LO.deep], p.prototype, "m_mapExistingReactions", void 0);
       var y = a(57605),
@@ -213,14 +216,14 @@
               fill: "none",
               xmlns: "http://www.w3.org/2000/svg",
             },
-            e
+            e,
           ),
           i.createElement("path", {
             fill: "currentColor",
             fillRule: "evenodd",
             clipRule: "evenodd",
             d: "M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24ZM10.9577 17.254L18.8038 10.0384L16.773 7.83022L10.0706 13.9941L7.71092 11.2399L5.43271 13.1918L8.80323 17.1259C9.06802 17.4349 9.44701 17.6231 9.85327 17.6473C10.2595 17.6715 10.6582 17.5295 10.9577 17.254Z",
-          })
+          }),
         );
       class B extends i.PureComponent {
         constructor(e) {
@@ -279,18 +282,18 @@
                   try {
                     const e = yield o().get(
                       `${(0, h.Kc)()}pointssummary/ajaxgetasyncconfig`,
-                      { withCredentials: !0 }
+                      { withCredentials: !0 },
                     );
                     return 1 === e.data.success
                       ? e.data.data
                       : (console.error(
-                          `Failed to load async config: ${e.data.success}`
+                          `Failed to load async config: ${e.data.success}`,
                         ),
                         {});
                   } catch (e) {
                     return (
                       console.error(
-                        `Unexpected failure while loading async config: ${e}`
+                        `Unexpected failure while loading async config: ${e}`,
                       ),
                       {}
                     );
@@ -331,9 +334,9 @@
                 i.createElement(
                   "div",
                   { className: (0, R.Z)(f.LoadingContainer, f.Visible) },
-                  i.createElement(Z, null)
-                )
-              )
+                  i.createElement(Z, null),
+                ),
+              ),
             );
           l.GetAwardConfigurations();
           return i.createElement(D, {
@@ -462,12 +465,12 @@
                       title: (0, S.Xx)(
                         e
                           ? "#GrantAward_PromptTooltip"
-                          : "#GrantAward_SubmitTooltip"
+                          : "#GrantAward_SubmitTooltip",
                       ),
                     },
                     (0, S.Xx)(
-                      e ? "#GrantAward_SelectAward" : "#GrantAward_Next"
-                    )
+                      e ? "#GrantAward_SelectAward" : "#GrantAward_Next",
+                    ),
                   );
                 v = i.createElement(
                   i.Fragment,
@@ -481,8 +484,8 @@
                       i.createElement(
                         "div",
                         { className: (0, R.Z)(f.LoadingContainer, f.Visible) },
-                        i.createElement(Z, null)
-                      )
+                        i.createElement(Z, null),
+                      ),
                     ),
                   i.createElement(
                     d.P8,
@@ -505,8 +508,8 @@
                               selectedReaction: e === o ? 0 : e,
                             });
                         },
-                      })
-                    )
+                      }),
+                    ),
                   ),
                   i.createElement(U, null),
                   i.createElement(
@@ -520,8 +523,8 @@
                             { key: "msg", className: f.NotEnoughPoints },
                             (0, S.Xx)(
                               "#GrantAward_CantAfford",
-                              _.negate().add(w).toNumber().toLocaleString()
-                            )
+                              _.negate().add(w).toNumber().toLocaleString(),
+                            ),
                           ),
                           i.createElement(
                             l.IS,
@@ -532,11 +535,11 @@
                             i.createElement(
                               y.zx,
                               { key: "button" },
-                              (0, S.Xx)("#GrantAward_HowToGetPoints")
-                            )
+                              (0, S.Xx)("#GrantAward_HowToGetPoints"),
+                            ),
                           ),
-                        ]
-                  )
+                        ],
+                  ),
                 );
               }
               break;
@@ -556,7 +559,7 @@
                     {
                       className: (0, R.Z)(
                         f.ConfirmContainer,
-                        s === I.CONFIRM && f.Visible
+                        s === I.CONFIRM && f.Visible,
                       ),
                     },
                     i.createElement(B, {
@@ -575,9 +578,9 @@
                           i.createElement(
                             "span",
                             { className: f.AwardName },
-                            N(o)
-                          )
-                        )
+                            N(o),
+                          ),
+                        ),
                       ),
                       i.createElement(
                         "div",
@@ -588,28 +591,28 @@
                           i.createElement(
                             "span",
                             { className: f.TimePeriod },
-                            (0, S.Xx)("#GrantAward_Confirm_DetailsTimePeriod")
-                          )
-                        )
-                      )
-                    )
+                            (0, S.Xx)("#GrantAward_Confirm_DetailsTimePeriod"),
+                          ),
+                        ),
+                      ),
+                    ),
                   ),
                   i.createElement(
                     "div",
                     {
                       className: (0, R.Z)(
                         f.LoadingContainer,
-                        s === I.SUBMITTING && f.Visible
+                        s === I.SUBMITTING && f.Visible,
                       ),
                     },
-                    i.createElement(Z, null)
+                    i.createElement(Z, null),
                   ),
                   i.createElement(
                     "div",
                     {
                       className: (0, R.Z)(
                         f.SuccessContainer,
-                        s === I.DONE && f.Visible
+                        s === I.DONE && f.Visible,
                       ),
                     },
                     i.createElement(B, {
@@ -619,9 +622,9 @@
                     i.createElement(
                       "div",
                       { className: f.SuccessText },
-                      (0, S.Xx)("#GrantAward_Success")
-                    )
-                  )
+                      (0, S.Xx)("#GrantAward_Success"),
+                    ),
+                  ),
                 ),
                 i.createElement(U, null),
                 i.createElement(
@@ -633,7 +636,7 @@
                       onClick: () => this.setState({ ePhase: I.SELECTING }),
                       disabled: s !== I.CONFIRM,
                     },
-                    (0, S.Xx)("#GrantAward_Back")
+                    (0, S.Xx)("#GrantAward_Back"),
                   ),
                   i.createElement(
                     y.KM,
@@ -642,9 +645,9 @@
                       title: (0, S.Xx)("#GrantAward_SubmitTooltip"),
                       disabled: s !== I.CONFIRM,
                     },
-                    (0, S.Xx)("#GrantAwardNowButton")
-                  )
-                )
+                    (0, S.Xx)("#GrantAwardNowButton"),
+                  ),
+                ),
               );
               break;
             case I.ERROR: {
@@ -685,8 +688,8 @@
                   i.createElement(
                     "div",
                     { className: f.ErrorContainer },
-                    i.createElement("div", { className: f.ErrorText }, e)
-                  )
+                    i.createElement("div", { className: f.ErrorText }, e),
+                  ),
                 ),
                 i.createElement(U, null),
                 i.createElement(
@@ -695,9 +698,9 @@
                   i.createElement(
                     y.zx,
                     { onClick: () => this.setState({ ePhase: I.SELECTING }) },
-                    (0, S.Xx)("#GrantAward_Back")
-                  )
-                )
+                    (0, S.Xx)("#GrantAward_Back"),
+                  ),
+                ),
               );
             }
           }
@@ -708,8 +711,8 @@
               A.Pv,
               { navID: "GrantAward", closeModal: r },
               c && i.createElement(b.DI, { eType: b.sS.Default }),
-              v
-            )
+              v,
+            ),
           );
         }
         GrantAward() {
@@ -723,7 +726,7 @@
                 ? this.setState({ ePhase: I.DONE, celebrate: !0 }, () =>
                     setTimeout(() => {
                       a && a(e, n);
-                    }, 2e3)
+                    }, 2e3),
                   )
                 : this.setState({ ePhase: I.ERROR, eResult: t });
             }));
@@ -738,9 +741,9 @@
             i.createElement(
               "div",
               { className: f.Title },
-              (0, S.Xx)("#GrantAwardTitle")
+              (0, S.Xx)("#GrantAwardTitle"),
             ),
-            i.createElement("div", { className: f.Description }, e)
+            i.createElement("div", { className: f.Description }, e),
           ),
         X = (0, s.Pi)(({ store: e, children: t }) => {
           const a = e.GetUserPointBalance(),
@@ -758,10 +761,10 @@
                 i.createElement(
                   "div",
                   { className: f.BalanceLabel },
-                  (0, S.Xx)("#YourBalance")
+                  (0, S.Xx)("#YourBalance"),
                 ),
-                i.createElement("div", { className: f.BalanceAmount }, n)
-              )
+                i.createElement("div", { className: f.BalanceAmount }, n),
+              ),
             ),
             i.createElement(
               "div",
@@ -770,8 +773,8 @@
                 c.s,
                 { className: f.Actions, "flow-children": "row" },
                 i.Children.map(t, (e) =>
-                  i.createElement("div", { className: f.Action }, e)
-                )
+                  i.createElement("div", { className: f.Action }, e),
+                ),
               ),
               i.createElement(
                 "a",
@@ -779,9 +782,9 @@
                   className: f.FooterLink,
                   href: `${h.De.STORE_BASE_URL}points/howitworks`,
                 },
-                (0, S.Xx)("#GrantAward_PointsLink")
-              )
-            )
+                (0, S.Xx)("#GrantAward_PointsLink"),
+              ),
+            ),
           );
         }),
         U = () => i.createElement("div", { className: f.Divider });
@@ -821,7 +824,7 @@
                 className: (0, R.Z)(f.Button, a && f.Selected, r && f.Disabled),
                 autoFocus: s,
               },
-              l
+              l,
             ),
             i.createElement(
               "div",
@@ -830,15 +833,15 @@
                 reactionType: t,
                 bForceAnimated: this.state.bHovered,
                 bDisableAnimation: r,
-              })
+              }),
             ),
             i.createElement(
               "div",
               { className: f.LabelCtn },
               i.createElement("div", { className: f.Label }, N(t)),
-              i.createElement($, { className: f.Points }, o.toLocaleString())
+              i.createElement($, { className: f.Points }, o.toLocaleString()),
             ),
-            r && i.createElement(x, { className: f.IconCheckMark })
+            r && i.createElement(x, { className: f.IconCheckMark }),
           );
         }
       }
@@ -853,7 +856,7 @@
             "span",
             Object.assign({}, r, { className: (0, R.Z)(a, f.PointsAmount) }),
             i.createElement(v.doA, { className: f.PointsAmountIcon }),
-            t
+            t,
           );
         };
     },

@@ -3888,9 +3888,9 @@
                     "Unable to find localization token '"
                       .concat(t, "' for language '")
                       .concat(se.LANGUAGE, "', ")
-                      .concat(this.m_mapTokens.size, " tokens in map")
+                      .concat(this.m_mapTokens.size, " tokens in map"),
                   ),
-                  { bIncludeMessageInIdentifier: !0 }
+                  { bIncludeMessageInIdentifier: !0 },
                 );
             }
           }),
@@ -3931,7 +3931,7 @@
               (n = null),
               (a = e) ||
                 console.error(
-                  "array should be defined for us to fill in the missing indexes"
+                  "array should be defined for us to fill in the missing indexes",
                 ),
               (e = a.length < o ? a.concat(Array(o - a.length).fill(n)) : a);
           }
@@ -4118,7 +4118,7 @@
                       active: r === e.state.strActivePath,
                       enabled: n,
                     });
-                  })
+                  }),
                 )
               );
             }),
@@ -4155,7 +4155,7 @@
                 _.createElement("img", {
                   src: a + (o ? "_selected.png" : ".png"),
                 }),
-                r
+                r,
               );
             }),
             t
@@ -4177,7 +4177,7 @@
                 { className: Ue().HelpTop },
                 _.createElement("img", {
                   src: i.IMG_URL + "help_main_news_feed.png",
-                })
+                }),
               ),
               _.createElement(
                 "div",
@@ -4185,14 +4185,14 @@
                 _.createElement(
                   "div",
                   { className: Ue().BottomHeader },
-                  pe("#HelpMain_NewsFeed")
+                  pe("#HelpMain_NewsFeed"),
                 ),
                 _.createElement(
                   "div",
                   { className: Ue().BottomText },
-                  pe("#HelpMain_NewsFeedText")
-                )
-              )
+                  pe("#HelpMain_NewsFeedText"),
+                ),
+              ),
             ),
             _.createElement(
               "div",
@@ -4202,7 +4202,7 @@
                 { className: Ue().HelpTop },
                 _.createElement("img", {
                   src: i.IMG_URL + "help_main_tournament.png",
-                })
+                }),
               ),
               _.createElement(
                 "div",
@@ -4210,14 +4210,14 @@
                 _.createElement(
                   "div",
                   { className: Ue().BottomHeader },
-                  pe("#HelpMain_Tournaments")
+                  pe("#HelpMain_Tournaments"),
                 ),
                 _.createElement(
                   "div",
                   { className: Ue().BottomText },
-                  pe("#HelpMain_TournamentsText")
-                )
-              )
+                  pe("#HelpMain_TournamentsText"),
+                ),
+              ),
             ),
             _.createElement(
               "div",
@@ -4227,7 +4227,7 @@
                 { className: Ue().HelpTop },
                 _.createElement("img", {
                   src: i.IMG_URL + "help_main_matches.png",
-                })
+                }),
               ),
               _.createElement(
                 "div",
@@ -4235,14 +4235,14 @@
                 _.createElement(
                   "div",
                   { className: Ue().BottomHeader },
-                  pe("#HelpMain_Matches")
+                  pe("#HelpMain_Matches"),
                 ),
                 _.createElement(
                   "div",
                   { className: Ue().BottomText },
-                  pe("#HelpMain_MatchesText")
-                )
-              )
+                  pe("#HelpMain_MatchesText"),
+                ),
+              ),
             ),
             _.createElement(
               "div",
@@ -4252,7 +4252,7 @@
                 { className: Ue().HelpTop },
                 _.createElement("img", {
                   src: i.IMG_URL + "help_main_following.png",
-                })
+                }),
               ),
               _.createElement(
                 "div",
@@ -4260,14 +4260,14 @@
                 _.createElement(
                   "div",
                   { className: Ue().BottomHeader },
-                  pe("#HelpMain_Favorites")
+                  pe("#HelpMain_Favorites"),
                 ),
                 _.createElement(
                   "div",
                   { className: Ue().BottomText },
-                  pe("#HelpMain_FavoritesText")
-                )
-              )
+                  pe("#HelpMain_FavoritesText"),
+                ),
+              ),
             ),
             _.createElement(
               "div",
@@ -4277,7 +4277,7 @@
                 { className: Ue().HelpTop },
                 _.createElement("img", {
                   src: i.IMG_URL + "help_main_predictions.png",
-                })
+                }),
               ),
               _.createElement(
                 "div",
@@ -4285,14 +4285,14 @@
                 _.createElement(
                   "div",
                   { className: Ue().BottomHeader },
-                  pe("#HelpMain_Predictions")
+                  pe("#HelpMain_Predictions"),
                 ),
                 _.createElement(
                   "div",
                   { className: Ue().BottomText },
-                  pe("#HelpMain_PredictionsText")
-                )
-              )
+                  pe("#HelpMain_PredictionsText"),
+                ),
+              ),
             ),
             _.createElement(
               "div",
@@ -4302,7 +4302,7 @@
                 { className: Ue().HelpTop },
                 _.createElement("img", {
                   src: i.IMG_URL + "help_main_fantasy.png",
-                })
+                }),
               ),
               _.createElement(
                 "div",
@@ -4310,15 +4310,15 @@
                 _.createElement(
                   "div",
                   { className: Ue().BottomHeader },
-                  pe("#HelpMain_Fantasy")
+                  pe("#HelpMain_Fantasy"),
                 ),
                 _.createElement(
                   "div",
                   { className: Ue().BottomText },
-                  pe("#HelpMain_FantasyText")
-                )
-              )
-            )
+                  pe("#HelpMain_FantasyText"),
+                ),
+              ),
+            ),
           );
         },
         qe = function (e) {
@@ -4333,7 +4333,7 @@
                 { className: Ue().HelpTop },
                 _.createElement("img", {
                   src: i.IMG_URL + "help_fantasy_tournament.png",
-                })
+                }),
               ),
               _.createElement(
                 "div",
@@ -4341,14 +4341,14 @@
                 _.createElement(
                   "div",
                   { className: Ue().BottomHeader },
-                  pe("#HelpFantasy_Page1_Header")
+                  pe("#HelpFantasy_Page1_Header"),
                 ),
                 _.createElement(
                   "div",
                   { className: Ue().BottomText },
-                  pe("#HelpFantasy_Page1_Body")
-                )
-              )
+                  pe("#HelpFantasy_Page1_Body"),
+                ),
+              ),
             ),
             _.createElement(
               "div",
@@ -4358,7 +4358,7 @@
                 { className: Ue().HelpTop },
                 _.createElement("img", {
                   src: i.IMG_URL + "help_fantasy_roster.png",
-                })
+                }),
               ),
               _.createElement(
                 "div",
@@ -4366,20 +4366,20 @@
                 _.createElement(
                   "div",
                   { className: Ue().BottomHeader },
-                  pe("#HelpFantasy_Page2_Header")
+                  pe("#HelpFantasy_Page2_Header"),
                 ),
                 _.createElement(
                   "div",
                   { className: Ue().BottomText },
-                  pe("#HelpFantasy_Page2_Body")
+                  pe("#HelpFantasy_Page2_Body"),
                 ),
                 _.createElement("div", { className: Ue().Spacer }),
                 _.createElement(
                   "div",
                   { className: Ue().BottomText },
-                  pe("#HelpFantasy_Page2_Body2")
-                )
-              )
+                  pe("#HelpFantasy_Page2_Body2"),
+                ),
+              ),
             ),
             _.createElement(
               "div",
@@ -4389,7 +4389,7 @@
                 { className: Ue().HelpTop },
                 _.createElement("img", {
                   src: i.IMG_URL + "help_fantasy_compare.png",
-                })
+                }),
               ),
               _.createElement(
                 "div",
@@ -4397,14 +4397,14 @@
                 _.createElement(
                   "div",
                   { className: Ue().BottomHeader },
-                  pe("#HelpFantasy_Page3_Header")
+                  pe("#HelpFantasy_Page3_Header"),
                 ),
                 _.createElement(
                   "div",
                   { className: Ue().BottomText },
-                  pe("#HelpFantasy_Page3_Body")
-                )
-              )
+                  pe("#HelpFantasy_Page3_Body"),
+                ),
+              ),
             ),
             _.createElement(
               "div",
@@ -4414,7 +4414,7 @@
                 { className: Ue().HelpTop },
                 _.createElement("img", {
                   src: i.IMG_URL + "help_fantasy_shards.png",
-                })
+                }),
               ),
               _.createElement(
                 "div",
@@ -4422,56 +4422,56 @@
                 _.createElement(
                   "div",
                   { className: Ue().BottomHeader },
-                  pe("#HelpFantasy_Page4_Header")
+                  pe("#HelpFantasy_Page4_Header"),
                 ),
                 _.createElement(
                   "div",
                   { className: Ue().BottomText },
-                  pe("#HelpFantasy_Page4_Body")
+                  pe("#HelpFantasy_Page4_Body"),
                 ),
                 _.createElement("div", { className: Ue().Spacer }),
                 _.createElement(
                   "div",
                   { className: Ae(Ue().BottomText, Ue().SubHeader) },
-                  pe("#HelpFantasy_Page4_Qualifiers")
+                  pe("#HelpFantasy_Page4_Qualifiers"),
                 ),
                 _.createElement(
                   "div",
                   { className: Ae(Ue().BottomText, Ue().Caps, Ue().Gold) },
-                  pe("#HelpFantasy_Page4_Details1")
+                  pe("#HelpFantasy_Page4_Details1"),
                 ),
                 _.createElement(
                   "div",
                   { className: Ae(Ue().BottomText, Ue().Caps, Ue().Silver) },
-                  pe("#HelpFantasy_Page4_Details2")
+                  pe("#HelpFantasy_Page4_Details2"),
                 ),
                 _.createElement(
                   "div",
                   { className: Ae(Ue().BottomText, Ue().Caps, Ue().Bronze) },
-                  pe("#HelpFantasy_Page4_Details3")
+                  pe("#HelpFantasy_Page4_Details3"),
                 ),
                 _.createElement("div", { className: Ue().Spacer }),
                 _.createElement(
                   "div",
                   { className: Ae(Ue().BottomText, Ue().SubHeader) },
-                  pe("#HelpFantasy_Page4_MainEvents")
+                  pe("#HelpFantasy_Page4_MainEvents"),
                 ),
                 _.createElement(
                   "div",
                   { className: Ae(Ue().BottomText, Ue().Caps, Ue().Gold) },
-                  pe("#HelpFantasy_Page4_Details1b")
+                  pe("#HelpFantasy_Page4_Details1b"),
                 ),
                 _.createElement(
                   "div",
                   { className: Ae(Ue().BottomText, Ue().Caps, Ue().Silver) },
-                  pe("#HelpFantasy_Page4_Details2b")
+                  pe("#HelpFantasy_Page4_Details2b"),
                 ),
                 _.createElement(
                   "div",
                   { className: Ae(Ue().BottomText, Ue().Caps, Ue().Bronze) },
-                  pe("#HelpFantasy_Page4_Details3b")
-                )
-              )
+                  pe("#HelpFantasy_Page4_Details3b"),
+                ),
+              ),
             ),
             _.createElement(
               "div",
@@ -4481,7 +4481,7 @@
                 { className: Ue().HelpTop },
                 _.createElement("img", {
                   src: i.IMG_URL + "help_fantasy_ranking.png",
-                })
+                }),
               ),
               _.createElement(
                 "div",
@@ -4489,12 +4489,12 @@
                 _.createElement(
                   "div",
                   { className: Ue().BottomHeader },
-                  pe("#HelpFantasy_Page5_Header")
+                  pe("#HelpFantasy_Page5_Header"),
                 ),
                 _.createElement(
                   "div",
                   { className: Ue().BottomText },
-                  pe("#HelpFantasy_Page5_Body")
+                  pe("#HelpFantasy_Page5_Body"),
                 ),
                 _.createElement(
                   "div",
@@ -4506,38 +4506,38 @@
                     _.createElement(
                       "div",
                       { className: Ae(Ue().BottomText, Ue().Small) },
-                      pe("#HelpFantasy_Page5_Details1")
+                      pe("#HelpFantasy_Page5_Details1"),
                     ),
                     _.createElement("div", { className: Ue().Spacer }),
                     _.createElement(
                       "div",
                       { className: Ae(Ue().BottomText, Ue().Small) },
-                      pe("#HelpFantasy_Page5_Details2")
+                      pe("#HelpFantasy_Page5_Details2"),
                     ),
                     _.createElement("div", { className: Ue().Spacer }),
                     _.createElement(
                       "div",
                       { className: Ae(Ue().BottomText, Ue().Small) },
-                      pe("#HelpFantasy_Page5_Details3")
+                      pe("#HelpFantasy_Page5_Details3"),
                     ),
                     _.createElement("div", { className: Ue().Spacer }),
                     _.createElement(
                       "div",
                       { className: Ae(Ue().BottomText, Ue().Small) },
-                      pe("#HelpFantasy_Page5_Details4")
+                      pe("#HelpFantasy_Page5_Details4"),
                     ),
                     _.createElement("div", { className: Ue().Spacer }),
                     _.createElement(
                       "div",
                       { className: Ae(Ue().BottomText, Ue().Small) },
-                      pe("#HelpFantasy_Page5_Details5")
+                      pe("#HelpFantasy_Page5_Details5"),
                     ),
                     _.createElement("div", { className: Ue().Spacer }),
                     _.createElement(
                       "div",
                       { className: Ae(Ue().BottomText, Ue().Small) },
-                      pe("#HelpFantasy_Page5_Details6")
-                    )
+                      pe("#HelpFantasy_Page5_Details6"),
+                    ),
                   ),
                   _.createElement(
                     "div",
@@ -4546,42 +4546,42 @@
                     _.createElement(
                       "div",
                       { className: Ae(Ue().BottomText, Ue().Small) },
-                      pe("#HelpFantasy_Page5_Details7")
+                      pe("#HelpFantasy_Page5_Details7"),
                     ),
                     _.createElement("div", { className: Ue().Spacer }),
                     _.createElement(
                       "div",
                       { className: Ae(Ue().BottomText, Ue().Small) },
-                      pe("#HelpFantasy_Page5_Details8")
+                      pe("#HelpFantasy_Page5_Details8"),
                     ),
                     _.createElement("div", { className: Ue().Spacer }),
                     _.createElement(
                       "div",
                       { className: Ae(Ue().BottomText, Ue().Small) },
-                      pe("#HelpFantasy_Page5_Details9")
+                      pe("#HelpFantasy_Page5_Details9"),
                     ),
                     _.createElement("div", { className: Ue().Spacer }),
                     _.createElement(
                       "div",
                       { className: Ae(Ue().BottomText, Ue().Small) },
-                      pe("#HelpFantasy_Page5_Details10")
+                      pe("#HelpFantasy_Page5_Details10"),
                     ),
                     _.createElement("div", { className: Ue().Spacer }),
                     _.createElement(
                       "div",
                       { className: Ae(Ue().BottomText, Ue().Small) },
-                      pe("#HelpFantasy_Page5_Details11")
+                      pe("#HelpFantasy_Page5_Details11"),
                     ),
                     _.createElement("div", { className: Ue().Spacer }),
                     _.createElement(
                       "div",
                       { className: Ae(Ue().BottomText, Ue().Small) },
-                      pe("#HelpFantasy_Page5_Details12")
-                    )
-                  )
-                )
-              )
-            )
+                      pe("#HelpFantasy_Page5_Details12"),
+                    ),
+                  ),
+                ),
+              ),
+            ),
           );
         },
         Ye = function (e) {
@@ -4596,7 +4596,7 @@
                 { className: Ue().HelpTop },
                 _.createElement("img", {
                   src: i.IMG_URL + "help_prediction_pick.png",
-                })
+                }),
               ),
               _.createElement(
                 "div",
@@ -4604,20 +4604,20 @@
                 _.createElement(
                   "div",
                   { className: Ue().BottomHeader },
-                  pe("#PredictionsHelp_PickYourTeam")
+                  pe("#PredictionsHelp_PickYourTeam"),
                 ),
                 _.createElement(
                   "div",
                   { className: Ue().BottomText },
-                  pe("#PredictionsHelp_PickYourTeamDetail")
+                  pe("#PredictionsHelp_PickYourTeamDetail"),
                 ),
                 _.createElement("div", { className: Ue().Spacer }),
                 _.createElement(
                   "div",
                   { className: Ue().BottomText },
-                  pe("#PredictionsHelp_PickYourTeamSubDetail")
-                )
-              )
+                  pe("#PredictionsHelp_PickYourTeamSubDetail"),
+                ),
+              ),
             ),
             _.createElement(
               "div",
@@ -4627,7 +4627,7 @@
                 { className: Ue().HelpTop },
                 _.createElement("img", {
                   src: i.IMG_URL + "help_prediction_wager.png",
-                })
+                }),
               ),
               _.createElement(
                 "div",
@@ -4635,14 +4635,14 @@
                 _.createElement(
                   "div",
                   { className: Ue().BottomHeader },
-                  pe("#PredictionsHelp_WagerYourShards")
+                  pe("#PredictionsHelp_WagerYourShards"),
                 ),
                 _.createElement(
                   "div",
                   { className: Ue().BottomText },
-                  pe("#PredictionsHelp_WagerYourShardsDetail")
-                )
-              )
+                  pe("#PredictionsHelp_WagerYourShardsDetail"),
+                ),
+              ),
             ),
             _.createElement(
               "div",
@@ -4652,7 +4652,7 @@
                 { className: Ue().HelpTop },
                 _.createElement("img", {
                   src: i.IMG_URL + "help_prediction_win.png",
-                })
+                }),
               ),
               _.createElement(
                 "div",
@@ -4660,15 +4660,15 @@
                 _.createElement(
                   "div",
                   { className: Ue().BottomHeader },
-                  pe("#PredictionsHelp_WinOrLose")
+                  pe("#PredictionsHelp_WinOrLose"),
                 ),
                 _.createElement(
                   "div",
                   { className: Ue().BottomText },
-                  pe("#PredictionsHelp_WinOrLoseDetail")
-                )
-              )
-            )
+                  pe("#PredictionsHelp_WinOrLoseDetail"),
+                ),
+              ),
+            ),
           );
         },
         ze = (function (e) {
@@ -4704,7 +4704,7 @@
               ) {
                 var e = Math.round(
                   this.refHelpPages.current.scrollLeft /
-                    this.refHelpPages.current.clientWidth
+                    this.refHelpPages.current.clientWidth,
                 );
                 this.setState({ pageNum: e });
               }
@@ -4763,11 +4763,11 @@
                         Ue().HelpPage,
                         o < t && Ue().OffLeft,
                         o == t && Ue().OnScreen,
-                        o > t && Ue().OffRight
+                        o > t && Ue().OffRight,
                       ),
                     },
-                    r[o]
-                  )
+                    r[o],
+                  ),
                 );
               var n = [];
               for (o = 0; o < r.length; o++)
@@ -4775,7 +4775,7 @@
                   _.createElement("div", {
                     key: "helppip_" + this.props.helpPage + "_" + o,
                     className: Ae(Ue().Pip, o == t && Ue().Selected),
-                  })
+                  }),
                 );
               var l = _.createElement("div", null),
                 s = _.createElement("div", null);
@@ -4798,14 +4798,14 @@
                     _.createElement("img", {
                       src: i.IMG_URL + "forward_arrow.png",
                       className: Ue().PageRight,
-                    })
+                    }),
                   ))),
                 _.createElement(
                   "div",
                   {
                     className: Ae(
                       Ue().HelpContainer,
-                      Ia.shouldShowHelp(this.props.helpPage) && Ue().Show
+                      Ia.shouldShowHelp(this.props.helpPage) && Ue().Show,
                     ),
                     onTouchStart: this.onTouchStart,
                     onTouchEnd: this.onTouchEnd,
@@ -4816,7 +4816,7 @@
                       className: Ae(Ue().HelpPages, this.props.className),
                       ref: this.refHelpPages,
                     },
-                    a
+                    a,
                   ),
                   l,
                   s,
@@ -4831,10 +4831,10 @@
                       _.createElement(
                         "div",
                         { className: Ue().Dismiss, onClick: this.onDismiss },
-                        pe(t < r.length - 1 ? "#Help_Skip" : "#Help_Dismiss")
-                      )
-                    )
-                  )
+                        pe(t < r.length - 1 ? "#Help_Skip" : "#Help_Dismiss"),
+                      ),
+                    ),
+                  ),
                 )
               );
             }),
@@ -4876,7 +4876,7 @@
                 },
                 t,
                 r,
-                a
+                a,
               )
             );
           }),
@@ -4905,18 +4905,18 @@
               _.createElement(
                 "div",
                 { className: Ze().ErrorHeading },
-                pe("#GCDown_Header")
+                pe("#GCDown_Header"),
               ),
               _.createElement(
                 "div",
                 { className: Ze().ErrorMessage },
-                pe("#GCDown_Message")
+                pe("#GCDown_Message"),
               ),
               _.createElement(
                 "div",
                 { className: Ze().RetryButton, onClick: this.reload },
-                pe("#GCDown_Retry")
-              )
+                pe("#GCDown_Retry"),
+              ),
             );
           }),
           (t = (0, a.gn)([He.Pi], t))
@@ -4960,7 +4960,7 @@
                 };
               }
             },
-            [i, c]
+            [i, c],
           ),
           void 0 === a && l.push(st().noString),
           t && l.push(t),
@@ -4971,7 +4971,7 @@
               className: Ae(
                 "center" == o && st().throbber_center_wrapper,
                 i && st().ThrobberDelayAppear,
-                c && st().Visible
+                c && st().Visible,
               ),
             },
             c &&
@@ -4981,11 +4981,11 @@
                 _.createElement(
                   "div",
                   { className: st().NewThrobber },
-                  _.createElement("img", { src: ct })
-                )
+                  _.createElement("img", { src: ct }),
+                ),
               ),
             Boolean(a) &&
-              _.createElement("div", { className: st().ThrobberText }, a)
+              _.createElement("div", { className: st().ThrobberText }, a),
           )
         );
       });
@@ -5012,7 +5012,7 @@
                 };
               }
             },
-            [i, c]
+            [i, c],
           ),
           void 0 === a && l.push(st().noString),
           t && l.push(t),
@@ -5023,7 +5023,7 @@
               className: Ae(
                 "center" == o && st().throbber_center_wrapper,
                 i && st().ThrobberDelayAppear,
-                c && st().Visible
+                c && st().Visible,
               ),
             },
             c &&
@@ -5034,11 +5034,11 @@
                   "div",
                   { className: st().Throbber },
                   _.createElement(dt, { className: st().base }),
-                  _.createElement(dt, { className: st().blur })
-                )
+                  _.createElement(dt, { className: st().blur }),
+                ),
               ),
             Boolean(a) &&
-              _.createElement("div", { className: st().ThrobberText }, a)
+              _.createElement("div", { className: st().ThrobberText }, a),
           )
         );
       });
@@ -5099,7 +5099,7 @@
                 strokeWidth: "6",
                 strokeMiterlimit: "10",
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754",
-              })
+              }),
             ),
             _.createElement(
               "g",
@@ -5255,7 +5255,7 @@
                 strokeWidth: "6",
                 strokeMiterlimit: "10",
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-              })
+              }),
             ),
             _.createElement(
               "g",
@@ -5263,7 +5263,7 @@
               _.createElement("path", {
                 fill: "#ffffff",
                 d: "M89.226,181.579L76.5,176.321c2.256,4.696,6.159,8.628,11.339,10.786 c11.197,4.668,24.11-0.647,28.779-11.854c2.259-5.425,2.274-11.405,0.033-16.841c-2.237-5.436-6.46-9.675-11.886-11.938 c-5.384-2.24-11.151-2.156-16.22-0.244l13.146,5.436c8.261,3.443,12.166,12.93,8.725,21.189 C106.976,181.115,97.486,185.022,89.226,181.579",
-              })
+              }),
             ),
             _.createElement(
               "g",
@@ -5276,8 +5276,8 @@
                 cx: "161.731",
                 cy: "101.274",
                 r: "23.019",
-              })
-            )
+              }),
+            ),
           )
         );
       }
@@ -5381,7 +5381,7 @@
               return _.createElement("div", { key: this.props.nSeriesID });
             var e = Ia.getSeriesData(
               this.props.nLeagueID,
-              this.props.nSeriesID
+              this.props.nSeriesID,
             );
             if (!e)
               return _.createElement(
@@ -5394,7 +5394,7 @@
                   size: "medium",
                   string: pe("#Loading"),
                   position: "center",
-                })
+                }),
               );
             if (!e.series_id)
               return _.createElement("div", { key: this.props.nSeriesID });
@@ -5449,8 +5449,8 @@
                     _.createElement(
                       "div",
                       { className: it().TeamName },
-                      e.team_1.team_name
-                    )
+                      e.team_1.team_name,
+                    ),
                   ),
                   _.createElement(
                     "div",
@@ -5463,11 +5463,11 @@
                       _.createElement(
                         "div",
                         { className: it().ScoreSeparator },
-                        "-"
+                        "-",
                       ),
-                      _.createElement("div", { className: it().ScoreValue }, r)
+                      _.createElement("div", { className: it().ScoreValue }, r),
                     ),
-                    _.createElement("div", { className: it().Time }, "")
+                    _.createElement("div", { className: it().Time }, ""),
                   ),
                   _.createElement(
                     "div",
@@ -5479,11 +5479,11 @@
                     _.createElement(
                       "div",
                       { className: it().TeamName },
-                      e.team_2.team_name
-                    )
-                  )
+                      e.team_2.team_name,
+                    ),
+                  ),
                 ),
-                _.createElement("div", { className: it().Timestamp }, d)
+                _.createElement("div", { className: it().Timestamp }, d),
               )
             );
           }),
@@ -5497,8 +5497,8 @@
                   to: Re(this.props.nLeagueID, this.props.nSeriesID),
                   className: it().SeriesCard,
                 },
-                this.getContents()
-              )
+                this.getContents(),
+              ),
             );
           }),
           (0, a.gn)([_e], t.prototype, "onChange", null),
@@ -5530,7 +5530,7 @@
                   size: "medium",
                   string: pe("Loading"),
                   position: "center",
-                })
+                }),
               );
             var t = Math.floor(e.duration / 3600),
               r = Math.floor((e.duration - 3600 * t) / 60),
@@ -5561,8 +5561,8 @@
                   _.createElement(
                     "div",
                     { className: it().TeamName },
-                    e.tourney.radiant_team_name
-                  )
+                    e.tourney.radiant_team_name,
+                  ),
                 ),
                 _.createElement(
                   "div",
@@ -5570,7 +5570,7 @@
                   _.createElement(
                     "div",
                     { className: it().Game },
-                    pe("#Series_Game", e.tourney.series_game + 1)
+                    pe("#Series_Game", e.tourney.series_game + 1),
                   ),
                   _.createElement(
                     "div",
@@ -5578,20 +5578,20 @@
                     _.createElement(
                       "div",
                       { className: it().ScoreValue },
-                      e.radiant_score
+                      e.radiant_score,
                     ),
                     _.createElement(
                       "div",
                       { className: it().ScoreSeparator },
-                      "-"
+                      "-",
                     ),
                     _.createElement(
                       "div",
                       { className: it().ScoreValue },
-                      e.dire_score
-                    )
+                      e.dire_score,
+                    ),
                   ),
-                  _.createElement("div", { className: it().Time }, o)
+                  _.createElement("div", { className: it().Time }, o),
                 ),
                 _.createElement(
                   "div",
@@ -5603,10 +5603,10 @@
                   _.createElement(
                     "div",
                     { className: it().TeamName },
-                    e.tourney.dire_team_name
-                  )
-                )
-              )
+                    e.tourney.dire_team_name,
+                  ),
+                ),
+              ),
             );
           }),
           (t.prototype.render = function () {
@@ -5616,8 +5616,8 @@
               _.createElement(
                 m.rU,
                 { to: Ne(this.props.matchID), className: it().MatchCard },
-                this.getContents()
-              )
+                this.getContents(),
+              ),
             );
           }),
           (0, a.gn)([_e], t.prototype, "onChange", null),
@@ -5631,23 +5631,23 @@
           return _.createElement(
             "div",
             (0, a.pi)({}, r, { className: Ae(it().card, r.className) }),
-            t
+            t,
           );
         },
         {
           Image: function (e) {
             return _.createElement(
               "img",
-              (0, a.pi)({}, e, { className: Ae(it().image, e.className) })
+              (0, a.pi)({}, e, { className: Ae(it().image, e.className) }),
             );
           },
           Content: function (e) {
             return _.createElement(
               "div",
-              (0, a.pi)({}, e, { className: Ae(it().content, e.className) })
+              (0, a.pi)({}, e, { className: Ae(it().content, e.className) }),
             );
           },
-        }
+        },
       );
       function ft(e) {
         var t = e % 100,
@@ -5726,9 +5726,9 @@
                         : "#Feed_TournamentResult_Elimination",
                       e.name,
                       t.name,
-                      r
-                    )
-                  )
+                      r,
+                    ),
+                  ),
                 ),
                 _.createElement(
                   "div",
@@ -5736,17 +5736,17 @@
                   _.createElement(
                     "div",
                     { className: it().Points },
-                    pe("#Feed_TournamentResult_Points", this.props.points)
+                    pe("#Feed_TournamentResult_Points", this.props.points),
                   ),
                   _.createElement(
                     "div",
                     { className: it().Winnings },
                     pe(
                       "#Feed_TournamentResult_Winnings",
-                      It(this.props.winnings)
-                    )
-                  )
-                )
+                      It(this.props.winnings),
+                    ),
+                  ),
+                ),
               );
             }
             return _.createElement(
@@ -5766,10 +5766,10 @@
                   pe(
                     "#Feed_TournamentResult_EliminationGeneric",
                     e.name,
-                    t.name
-                  )
-                )
-              )
+                    t.name,
+                  ),
+                ),
+              ),
             );
           }),
           (t.prototype.render = function () {
@@ -5795,10 +5795,10 @@
                   _.createElement(
                     "div",
                     { className: it().Content },
-                    this.getcontents()
-                  )
-                )
-              )
+                    this.getcontents(),
+                  ),
+                ),
+              ),
             );
           }),
           (0, a.gn)([_e], t.prototype, "onChange", null),
@@ -5820,7 +5820,7 @@
               return _.createElement("div", { key: this.props.nodeID });
             var e = Ia.getLeagueNodeData(
                 this.props.leagueID,
-                this.props.nodeID
+                this.props.nodeID,
               ),
               t = e ? Ia.getTeamData(e.team_id_1) : void 0,
               r = e ? Ia.getTeamData(e.team_id_2) : void 0;
@@ -5835,11 +5835,11 @@
                   size: "medium",
                   string: pe("Loading"),
                   position: "center",
-                })
+                }),
               );
             var a = Ia.getLeagueNodeGroupData(
                 this.props.leagueID,
-                e.node_group_id
+                e.node_group_id,
               ),
               o = "";
             switch (e.node_type) {
@@ -5868,7 +5868,7 @@
               i.CDN_URL +
                 "apps/dota2/images/leagues/" +
                 this.props.leagueID +
-                "/images/image_8.png"
+                "/images/image_8.png",
             );
             var l = a && 7 == a.node_group_type,
               s = _.createElement("div", { className: it().Details });
@@ -5877,7 +5877,7 @@
                 ? (s = _.createElement(
                     "div",
                     { className: it().Details },
-                    pe("#MatchDetails_ShowMatch")
+                    pe("#MatchDetails_ShowMatch"),
                   ))
                 : 0 == e.losing_node_id &&
                   0 != e.winning_node_id &&
@@ -5887,7 +5887,7 @@
                 ? (s = _.createElement(
                     "div",
                     { className: it().Details },
-                    pe("#MatchDetails_Elimination")
+                    pe("#MatchDetails_Elimination"),
                   ))
                 : 0 == e.losing_node_id &&
                   0 == e.winning_node_id &&
@@ -5897,7 +5897,7 @@
                   (s = _.createElement(
                     "div",
                     { className: it().Details },
-                    pe("#MatchDetails_Championship")
+                    pe("#MatchDetails_Championship"),
                   )),
               _.createElement(
                 "div",
@@ -5919,14 +5919,14 @@
                     _.createElement(
                       "div",
                       { className: it().TeamName },
-                      t ? t.name : pe("#Feed_TBD")
-                    )
+                      t ? t.name : pe("#Feed_TBD"),
+                    ),
                   ),
                   _.createElement(
                     "div",
                     { className: it().Center },
                     _.createElement("div", null, pe("#VS")),
-                    _.createElement("div", { className: it().BestOf }, o)
+                    _.createElement("div", { className: it().BestOf }, o),
                   ),
                   _.createElement(
                     "div",
@@ -5938,10 +5938,10 @@
                     _.createElement(
                       "div",
                       { className: it().TeamName },
-                      r ? r.name : pe("#Feed_TBD")
-                    )
-                  )
-                )
+                      r ? r.name : pe("#Feed_TBD"),
+                    ),
+                  ),
+                ),
               )
             );
           }),
@@ -5966,9 +5966,9 @@
                 _.createElement(
                   "div",
                   { className: it().Content },
-                  this.getContents()
-                )
-              )
+                  this.getContents(),
+                ),
+              ),
             );
           }),
           (0, a.gn)([_e], t.prototype, "onChange", null),
@@ -5990,14 +5990,14 @@
               return _.createElement("div", { key: this.props.serverSteamID });
             var e = Ia.getLeagueNodeData(
                 this.props.leagueID,
-                this.props.nodeID
+                this.props.nodeID,
               ),
               t = Ia.getTeamData(this.props.radiantTeamID),
               r = Ia.getTeamData(this.props.direTeamID),
               a = e
                 ? Ia.getLeagueNodeGroupData(
                     this.props.leagueID,
-                    e.node_group_id
+                    e.node_group_id,
                   )
                 : void 0,
               o = "";
@@ -6032,13 +6032,13 @@
                   ? (l = _.createElement(
                       "div",
                       { className: it().Details },
-                      pe("#MatchDetails_ShowMatch")
+                      pe("#MatchDetails_ShowMatch"),
                     ))
                   : 0 == e.losing_node_id && 0 != e.winning_node_id && n
                   ? (l = _.createElement(
                       "div",
                       { className: it().Details },
-                      pe("#MatchDetails_Elimination")
+                      pe("#MatchDetails_Elimination"),
                     ))
                   : 0 == e.losing_node_id &&
                     0 == e.winning_node_id &&
@@ -6048,7 +6048,7 @@
                     (l = _.createElement(
                       "div",
                       { className: it().Details },
-                      pe("#MatchDetails_Championship")
+                      pe("#MatchDetails_Championship"),
                     ))),
               _.createElement(
                 "div",
@@ -6067,14 +6067,14 @@
                     _.createElement(
                       "div",
                       { className: it().TeamName },
-                      t ? t.name : pe("#Feed_TBD")
-                    )
+                      t ? t.name : pe("#Feed_TBD"),
+                    ),
                   ),
                   _.createElement(
                     "div",
                     { className: it().Center },
                     _.createElement("div", null, pe("#VS")),
-                    _.createElement("div", { className: it().BestOf }, o)
+                    _.createElement("div", { className: it().BestOf }, o),
                   ),
                   _.createElement(
                     "div",
@@ -6086,10 +6086,10 @@
                     _.createElement(
                       "div",
                       { className: it().TeamName },
-                      r ? r.name : pe("#Feed_TBD")
-                    )
-                  )
-                )
+                      r ? r.name : pe("#Feed_TBD"),
+                    ),
+                  ),
+                ),
               )
             );
           }),
@@ -6114,9 +6114,9 @@
                 _.createElement(
                   "div",
                   { className: it().Content },
-                  this.getContents()
-                )
-              )
+                  this.getContents(),
+                ),
+              ),
             );
           }),
           (0, a.gn)([_e], t.prototype, "onChange", null),
@@ -6167,8 +6167,8 @@
                     key: "teamlogo_" + this.props.teamID,
                     className: it().TeamLogo,
                   },
-                  _.createElement(yt, { team_id: e.team_id, size: gt.Small })
-                )
+                  _.createElement(yt, { team_id: e.team_id, size: gt.Small }),
+                ),
               ),
                 a.push(
                   _.createElement(
@@ -6177,8 +6177,8 @@
                       key: "teamcontent_" + this.props.accountID,
                       className: it().Text,
                     },
-                    o
-                  )
+                    o,
+                  ),
                 );
             }
             return a;
@@ -6196,10 +6196,10 @@
                   _.createElement(
                     "div",
                     { className: it().Content },
-                    this.getContents()
-                  )
-                )
-              )
+                    this.getContents(),
+                  ),
+                ),
+              ),
             );
           }),
           (0, a.gn)([_e], t.prototype, "onChange", null),
@@ -6408,20 +6408,20 @@
                         1 == m
                           ? "#Feed_Timestamp_Future_Hour"
                           : "#Feed_Timestamp_Future_Hours",
-                        m
+                        m,
                       )
                     : g < 1
                     ? pe(
                         1 == d
                           ? "#Feed_Timestamp_Future_Day"
                           : "#Feed_Timestamp_Future_Days",
-                        d
+                        d,
                       )
                     : pe(
                         1 == g
                           ? "#Feed_Timestamp_Future_Week"
                           : "#Feed_Timestamp_Future_Weeks",
-                        g
+                        g,
                       );
               } else {
                 var p = s - this.props.timestamp,
@@ -6437,25 +6437,25 @@
                         1 == u
                           ? "#Feed_Timestamp_Minute"
                           : "#Feed_Timestamp_Minutes",
-                        u
+                        u,
                       )
                     : E < 1
                     ? pe(
                         1 == h
                           ? "#Feed_Timestamp_Hour"
                           : "#Feed_Timestamp_Hours",
-                        h
+                        h,
                       )
                     : y < 1
                     ? pe(
                         1 == E ? "#Feed_Timestamp_Day" : "#Feed_Timestamp_Days",
-                        E
+                        E,
                       )
                     : pe(
                         1 == y
                           ? "#Feed_Timestamp_Week"
                           : "#Feed_Timestamp_Weeks",
-                        y
+                        y,
                       );
               }
             return _.createElement(
@@ -6469,10 +6469,10 @@
                   src: i.IMG_URL + "/" + a,
                 }),
                 _.createElement("div", { className: ot().Headline }, r),
-                _.createElement("div", { className: ot().Timestamp }, l)
+                _.createElement("div", { className: ot().Timestamp }, l),
               ),
               _.createElement("div", { className: Ae(ot().Underline, t) }),
-              e
+              e,
             );
           }),
           t
@@ -6493,7 +6493,7 @@
                 this.props.type,
                 this.props.id,
                 this.props.name,
-                this.props.url
+                this.props.url,
               );
             }),
             (t.prototype.render = function () {
@@ -6507,7 +6507,7 @@
                     (e ? "favorite_star.png" : "favorite_star_empty.png"),
                   className: Gt().Favorite,
                   onClick: this.toggle,
-                })
+                }),
               );
             }),
             (0, a.gn)([_e], t.prototype, "toggle", null),
@@ -6539,11 +6539,11 @@
                     (0, a.pi)({}, o, {
                       src: t,
                       onError: this.HandleFallbackError,
-                    })
+                    }),
                   )
                 : _.createElement(
                     "img",
-                    (0, a.pi)({}, o, { src: r, onError: this.HandleError })
+                    (0, a.pi)({}, o, { src: r, onError: this.HandleError }),
                   );
             }),
             (t.prototype.HandleError = function (e) {
@@ -6586,7 +6586,7 @@
                 (e = _.createElement(
                   "div",
                   { className: Lt().HeaderText },
-                  this.props.text
+                  this.props.text,
                 ));
               var g,
                 p,
@@ -6604,7 +6604,7 @@
                           _.createElement("img", {
                             src: i.IMG_URL + this.props.titleButtonImage,
                             className: Lt().HeaderButton,
-                          })
+                          }),
                         )
                       : _.createElement(
                           m.rU,
@@ -6612,7 +6612,7 @@
                           _.createElement("img", {
                             src: i.IMG_URL + this.props.titleButtonImage,
                             className: Lt().HeaderButton,
-                          })
+                          }),
                         ))
                   : this.props.titleButtonText &&
                     (t = E
@@ -6624,11 +6624,11 @@
                             {
                               className: Ae(
                                 Lt().HeaderButtonText,
-                                this.props.titleButtonTextClass
+                                this.props.titleButtonTextClass,
                               ),
                             },
-                            this.props.titleButtonText
-                          )
+                            this.props.titleButtonText,
+                          ),
                         )
                       : _.createElement(
                           m.rU,
@@ -6638,11 +6638,11 @@
                             {
                               className: Ae(
                                 Lt().HeaderButtonText,
-                                this.props.titleButtonTextClass
+                                this.props.titleButtonTextClass,
                               ),
                             },
-                            this.props.titleButtonText
-                          )
+                            this.props.titleButtonText,
+                          ),
                         )),
                 this.props.profileAccountID)
               ) {
@@ -6656,7 +6656,7 @@
                     className: Lt().Avatar,
                     src: v,
                     fallbackSrc: i.IMG_URL + "portrait_unknown.png",
-                  })
+                  }),
                 );
               }
               return (
@@ -6671,8 +6671,8 @@
                     _.createElement(
                       "div",
                       { className: Lt().Count },
-                      It(this.props.shards)
-                    )
+                      It(this.props.shards),
+                    ),
                   )),
                 this.props.favoriteType &&
                   (u = _.createElement(Mt, {
@@ -6703,21 +6703,21 @@
                     g,
                     p,
                     u,
-                    h
+                    h,
                   ),
                   _.createElement("div", {
                     className: Ae(
                       Lt().Underline,
                       this.props.underlineColorStyle
                         ? this.props.underlineColorStyle
-                        : ""
+                        : "",
                     ),
                   }),
                   _.createElement(
                     "div",
                     { className: this.props.childrenStyle },
-                    this.props.children
-                  )
+                    this.props.children,
+                  ),
                 )
               );
             }),
@@ -6755,9 +6755,9 @@
                       size: "medium",
                       string: pe("#Loading"),
                       position: "center",
-                    })
-                  )
-                )
+                    }),
+                  ),
+                ),
               );
             for (var t = [], r = 0, a = e.elements; r < a.length; r++) {
               var o = a[r],
@@ -6792,7 +6792,7 @@
                   data_2: o.data_2,
                   data_3: o.data_3,
                   data_4: o.data_4,
-                })
+                }),
               );
             }
             return _.createElement(
@@ -6805,7 +6805,7 @@
                 profileAccountID: i.ACCOUNT_ID,
                 titleButtonDestination: Se(),
               }),
-              _.createElement("div", { className: et().Contents }, t)
+              _.createElement("div", { className: et().Contents }, t),
             );
           }),
           (t = (0, a.gn)([He.Pi], t))
@@ -6864,12 +6864,12 @@
                     _.createElement(
                       "span",
                       { className: it().prize },
-                      "$" + n.toLocaleString()
-                    )
+                      "$" + n.toLocaleString(),
+                    ),
                   ),
-                _.createElement("div", { className: it().Dates }, E)
-              )
-            )
+                _.createElement("div", { className: it().Dates }, E),
+              ),
+            ),
           );
         },
         Ht = r(8019),
@@ -6910,8 +6910,8 @@
                           startdate: e.start_timestamp,
                           enddate: e.end_timestamp,
                         });
-                      })
-                  )
+                      }),
+                  ),
                 )
               : _.createElement(
                   "div",
@@ -6923,8 +6923,8 @@
                       size: "medium",
                       string: "Loading...",
                       position: "center",
-                    })
-                  )
+                    }),
+                  ),
                 );
           }),
           (t = (0, a.gn)([He.Pi], t))
@@ -6979,9 +6979,9 @@
                   (
                     Math.floor(
                       this.nMin +
-                        ((this.nMax - this.nMin) * a) / this.props.stepSize
+                        ((this.nMax - this.nMin) * a) / this.props.stepSize,
                     ) * this.props.stepSize
-                  ).toFixed(0)
+                  ).toFixed(0),
                 );
                 this.setState({ currValue: o, pipPosition: t + (r - t) * a }),
                   this.props.onValueChanged && this.props.onValueChanged(o);
@@ -7008,8 +7008,8 @@
                     className: Zt().Pip,
                     ref: this.refPip,
                     style: { left: this.state.pipPosition },
-                  })
-                )
+                  }),
+                ),
               );
             }),
             (0, a.gn)([_e], t.prototype, "onTouchStart", null),
@@ -7033,7 +7033,7 @@
                   this.props.match.nodeId,
                   this.props.match.teams[0].teamId,
                   this.props.match.teams[0].payout,
-                  this.props.wagerTimestamp
+                  this.props.wagerTimestamp,
                 );
             }),
             (t.prototype.selectTeam2 = function () {
@@ -7043,7 +7043,7 @@
                   this.props.match.nodeId,
                   this.props.match.teams[1].teamId,
                   this.props.match.teams[1].payout,
-                  this.props.wagerTimestamp
+                  this.props.wagerTimestamp,
                 );
             }),
             (t.prototype.handleOnChange = function (e) {
@@ -7060,7 +7060,7 @@
               null == this.props.demoMode &&
                 Ia.clearProPredictionError(
                   this.props.leagueId,
-                  this.props.match.nodeId
+                  this.props.match.nodeId,
                 );
             }),
             (t.prototype.OddsString = function (e) {
@@ -7151,12 +7151,12 @@
               } else
                 (e = Ia.getProPrediction(
                   this.props.leagueId,
-                  this.props.match.nodeId
+                  this.props.match.nodeId,
                 )),
                   (t = Ia.getSelectedProPrediction()),
                   (r = Ia.getProPredictionError(
                     this.props.leagueId,
-                    this.props.match.nodeId
+                    this.props.match.nodeId,
                   ));
               if (!e) return _.createElement("div", null);
               var o = null;
@@ -7185,14 +7185,18 @@
                         _.createElement(
                           "div",
                           null,
-                          pe("#Predictions_Selected")
-                        )
+                          pe("#Predictions_Selected"),
+                        ),
                       ))
                     : a.teams[l].payout < 2 &&
                       (n[l] = _.createElement(
                         "div",
                         { className: Ae(Kt().TeamStatus, Kt().TeamFavored) },
-                        _.createElement("div", null, pe("#Predictions_Favored"))
+                        _.createElement(
+                          "div",
+                          null,
+                          pe("#Predictions_Favored"),
+                        ),
                       ));
                 else if (a.teams[l].games_won > a.teams[1 - l].games_won) {
                   var s = null;
@@ -7200,7 +7204,7 @@
                     (n[l] = _.createElement(
                       "div",
                       { className: Ae(Kt().TeamStatus, s) },
-                      _.createElement("div", null, pe("#Predictions_Winner"))
+                      _.createElement("div", null, pe("#Predictions_Winner")),
                     ));
                 }
               var c,
@@ -7223,14 +7227,14 @@
                     { className: Kt().Results },
                     a.teams[0].games_won,
                     " : ",
-                    a.teams[1].games_won
+                    a.teams[1].games_won,
                   ),
                   _.createElement(
                     "div",
                     { className: Kt().PayoutLabel },
-                    pe("#Predictions_Result")
+                    pe("#Predictions_Result"),
                   ),
-                  _.createElement("div", { className: Kt().BottomPadding })
+                  _.createElement("div", { className: Kt().BottomPadding }),
                 );
               else if (0 == e.wagerAmount) {
                 var u =
@@ -7242,20 +7246,20 @@
                   {
                     className: Ae(
                       Kt().PayoutContainer,
-                      this.props.staleOdds && u && Kt().StaleOdds
+                      this.props.staleOdds && u && Kt().StaleOdds,
                     ),
                   },
                   _.createElement(
                     "div",
                     { className: Kt().Payouts },
-                    this.OddsString(a.teams[0].payout)
+                    this.OddsString(a.teams[0].payout),
                   ),
                   _.createElement(
                     "div",
                     { className: Kt().PayoutLabel },
-                    pe("#Predictions_Odds")
+                    pe("#Predictions_Odds"),
                   ),
-                  _.createElement("div", { className: Kt().BottomPadding })
+                  _.createElement("div", { className: Kt().BottomPadding }),
                 );
               } else
                 p = _.createElement(
@@ -7264,14 +7268,14 @@
                   _.createElement(
                     "div",
                     { className: Kt().Payouts },
-                    this.OddsString(e.payout)
+                    this.OddsString(e.payout),
                   ),
                   _.createElement(
                     "div",
                     { className: Kt().PayoutLabel },
-                    pe("#Predictions_Odds")
+                    pe("#Predictions_Odds"),
                   ),
-                  _.createElement("div", { className: Kt().BottomPadding })
+                  _.createElement("div", { className: Kt().BottomPadding }),
                 );
               (c =
                 0 == a.actualMatchTime
@@ -7283,7 +7287,7 @@
                         day: "numeric",
                         hour: "numeric",
                         minute: "2-digit",
-                      })
+                      }),
                     )
                   : e.state == ha.STATE_INCOMPLETE
                   ? _.createElement(
@@ -7292,15 +7296,15 @@
                         className: Ae(
                           Kt().StartTime,
                           Kt().StartTimePadding,
-                          Kt().InProgress
+                          Kt().InProgress,
                         ),
                       },
-                      pe("#Predictions_InProgress")
+                      pe("#Predictions_InProgress"),
                     )
                   : _.createElement(
                       "div",
                       { className: Ae(Kt().StartTime, Kt().StartTimePadding) },
-                      pe("#Predictions_Final")
+                      pe("#Predictions_Final"),
                     )),
                 (d = _.createElement(
                   "div",
@@ -7318,10 +7322,10 @@
                       _.createElement(
                         "div",
                         { className: Kt().TeamName },
-                        a.teams[0].name
-                      )
+                        a.teams[0].name,
+                      ),
                     ),
-                    n[0]
+                    n[0],
                   ),
                   p,
                   _.createElement(
@@ -7337,11 +7341,11 @@
                       _.createElement(
                         "div",
                         { className: Kt().TeamName },
-                        a.teams[1].name
-                      )
+                        a.teams[1].name,
+                      ),
                     ),
-                    n[1]
-                  )
+                    n[1],
+                  ),
                 ));
               var h = null;
               null == this.props.demoMode && (h = Kt().NotDemoMode);
@@ -7350,7 +7354,7 @@
                   ? 50
                   : Math.min(
                       this.props.maxWager,
-                      Ia.getProPredictionWagerTokens()
+                      Ia.getProPredictionWagerTokens(),
                     );
               if (null != r) {
                 var C = "#Predictions_UnknownError";
@@ -7393,20 +7397,20 @@
                   {
                     className: Ae(
                       Kt().PredictionBottomSection,
-                      Kt().ErrorSection
+                      Kt().ErrorSection,
                     ),
                   },
                   _.createElement("div", { className: Kt().ErrorBody }, pe(C)),
                   _.createElement(
                     "div",
                     { className: Kt().ErrorButton, onClick: this.clearError },
-                    pe("#Predictions_Dismiss")
-                  )
+                    pe("#Predictions_Dismiss"),
+                  ),
                 );
               } else if (
                 Ia.isProPredictionInProgress(
                   this.props.leagueId,
-                  this.props.match.nodeId
+                  this.props.match.nodeId,
                 )
               )
                 E = _.createElement(
@@ -7418,9 +7422,9 @@
                     _.createElement(
                       "div",
                       { className: Kt().SubmittingText },
-                      pe("#Predictions_SubmittingPrediction")
-                    )
-                  )
+                      pe("#Predictions_SubmittingPrediction"),
+                    ),
+                  ),
                 );
               else if (0 == e.wagerAmount)
                 E =
@@ -7440,7 +7444,7 @@
                             _.createElement(
                               "div",
                               { className: Kt().WagerLabel },
-                              pe("#Predictions_Wager")
+                              pe("#Predictions_Wager"),
                             ),
                             _.createElement("img", {
                               src: i.IMG_URL + "currency_icon_small.png",
@@ -7448,8 +7452,8 @@
                             _.createElement(
                               "div",
                               { className: Kt().WagerAmount },
-                              t ? t.wagerAmount : ""
-                            )
+                              t ? t.wagerAmount : "",
+                            ),
                           ),
                           _.createElement(
                             "div",
@@ -7457,7 +7461,7 @@
                             _.createElement(
                               "div",
                               { className: Kt().WagerLabel },
-                              pe("#Predictions_Pays")
+                              pe("#Predictions_Pays"),
                             ),
                             _.createElement("img", {
                               src: i.IMG_URL + "currency_icon_small.png",
@@ -7467,12 +7471,12 @@
                               {
                                 className: Ae(
                                   Kt().WagerAmount,
-                                  this.props.staleOdds && Kt().StaleOdds
+                                  this.props.staleOdds && Kt().StaleOdds,
                                 ),
                               },
-                              t ? t.payoutAmount : ""
-                            )
-                          )
+                              t ? t.payoutAmount : "",
+                            ),
+                          ),
                         ),
                         _.createElement(
                           "div",
@@ -7484,13 +7488,13 @@
                                 h,
                                 Kt().WagerShardsButton,
                                 Kt().Small,
-                                Kt().Close
+                                Kt().Close,
                               ),
                               onClick: this.OnCancelWager,
                             },
                             _.createElement("img", {
                               src: i.IMG_URL + "x_close.png",
-                            })
+                            }),
                           ),
                           _.createElement(
                             "div",
@@ -7501,7 +7505,7 @@
                               max: y,
                               stepSize: 5,
                               onValueChanged: this.handleOnChange,
-                            })
+                            }),
                           ),
                           _.createElement(
                             "div",
@@ -7510,22 +7514,22 @@
                                 h,
                                 Kt().WagerShardsButton,
                                 Kt().Small,
-                                Kt().Check
+                                Kt().Check,
                               ),
                               onClick: this.OnMakeWager,
                             },
                             _.createElement("img", {
                               src: i.IMG_URL + "check.png",
-                            })
-                          )
-                        )
+                            }),
+                          ),
+                        ),
                       )
                     : _.createElement(
                         "div",
                         {
                           className: Ae(
                             Kt().PredictionBottomSection,
-                            Kt().MakeWager
+                            Kt().MakeWager,
                           ),
                         },
                         _.createElement(
@@ -7539,12 +7543,12 @@
                             },
                             _.createElement("img", {
                               src: i.IMG_URL + "check_gray.png",
-                            })
+                            }),
                           ),
                           _.createElement(
                             "div",
                             { className: Kt().SelectTeamLabel },
-                            pe("#Predictions_SelectTeam")
+                            pe("#Predictions_SelectTeam"),
                           ),
                           _.createElement(
                             "div",
@@ -7554,9 +7558,9 @@
                             },
                             _.createElement("img", {
                               src: i.IMG_URL + "check_gray.png",
-                            })
-                          )
-                        )
+                            }),
+                          ),
+                        ),
                       );
               else {
                 var v = null,
@@ -7594,21 +7598,21 @@
                         {
                           className: Ae(
                             Kt().WagerSelectionGroup,
-                            Kt().TeamSelected
+                            Kt().TeamSelected,
                           ),
                         },
                         _.createElement(
                           "div",
                           { className: Kt().WagerLabel },
                           pe("#Predictions_Predicted"),
-                          ":"
+                          ":",
                         ),
                         _.createElement(
                           "div",
                           { className: Kt().WagerSelectionTeamName },
-                          I
-                        )
-                      )
+                          I,
+                        ),
+                      ),
                     ),
                     _.createElement(
                       "div",
@@ -7619,7 +7623,7 @@
                         _.createElement(
                           "div",
                           { className: Kt().WagerLabel },
-                          pe("#Predictions_Wager")
+                          pe("#Predictions_Wager"),
                         ),
                         _.createElement("img", {
                           src: i.IMG_URL + "currency_icon_small.png",
@@ -7627,8 +7631,8 @@
                         _.createElement(
                           "div",
                           { className: Kt().WagerAmount },
-                          e.wagerAmount
-                        )
+                          e.wagerAmount,
+                        ),
                       ),
                       _.createElement(
                         "div",
@@ -7636,7 +7640,7 @@
                         _.createElement(
                           "div",
                           { className: Kt().WagerLabel },
-                          pe(k)
+                          pe(k),
                         ),
                         _.createElement("img", {
                           src: i.IMG_URL + "currency_icon_small.png",
@@ -7644,10 +7648,10 @@
                         _.createElement(
                           "div",
                           { className: Kt().WagerAmount },
-                          f
-                        )
-                      )
-                    )
+                          f,
+                        ),
+                      ),
+                    ),
                   ));
               }
               return a.seriesID
@@ -7659,14 +7663,14 @@
                     },
                     c,
                     d,
-                    E
+                    E,
                   )
                 : _.createElement(
                     "div",
                     { className: Ae(rt().FadeIn, Kt().PredictionCard, o) },
                     c,
                     d,
-                    E
+                    E,
                   );
             }),
             (0, a.gn)([_e], t.prototype, "selectTeam1", null),
@@ -7714,7 +7718,7 @@
                   size: "medium",
                   string: pe("#Loading"),
                   position: "center",
-                })
+                }),
               );
             var t = Ia.getProPredictionWagerTokens(),
               r = Ia.getProPredictionMaxWager();
@@ -7749,8 +7753,8 @@
                         src: i.IMG_URL + "nav_tournaments_white.png",
                         className: Yt().ShardsIcon,
                       }),
-                      _.createElement("div", null, n.name)
-                    )
+                      _.createElement("div", null, n.name),
+                    ),
                   );
                   var m = n.matches.slice().sort(function (e, t) {
                     return e.actualMatchTime != t.actualMatchTime
@@ -7770,7 +7774,7 @@
                           match: d,
                           wagerTimestamp: e.wager_timestamp,
                           staleOdds: this.state.isStaleOdds,
-                        })
+                        }),
                       );
                     }
                   }
@@ -7793,9 +7797,9 @@
                     _.createElement(
                       "div",
                       { className: Yt().PredictionList },
-                      a
-                    )
-                  )
+                      a,
+                    ),
+                  ),
                 )
               : _.createElement(
                   "div",
@@ -7818,21 +7822,21 @@
                         _.createElement(
                           "div",
                           { className: Yt().NoPredictionsIcon },
-                          pe("#Predictions_NoPredictionsIcon")
-                        )
+                          pe("#Predictions_NoPredictionsIcon"),
+                        ),
                       ),
                       _.createElement(
                         "div",
                         { className: Yt().NoPredictionsTitle },
-                        pe("#Predictions_NoPredictions_Title")
+                        pe("#Predictions_NoPredictions_Title"),
                       ),
                       _.createElement(
                         "div",
                         { className: Yt().NoPredictionsDetail },
-                        pe("#Predictions_NoPredictions")
-                      )
-                    )
-                  )
+                        pe("#Predictions_NoPredictions"),
+                      ),
+                    ),
+                  ),
                 );
           }),
           (t = (0, a.gn)([He.Pi], t))
@@ -7866,8 +7870,8 @@
                     size: "medium",
                     string: pe("#Loading"),
                     position: "center",
-                  })
-                )
+                  }),
+                ),
               );
             }),
             (t.prototype.GetLeagueList = function () {
@@ -7883,11 +7887,11 @@
                     className: Ae(
                       tr().LeagueHeader,
                       rt().VerticalCollapseable,
-                      r && rt().VerticalCollapse
+                      r && rt().VerticalCollapse,
                     ),
                   },
-                  pe("#Fantasy_SelectLeague")
-                )
+                  pe("#Fantasy_SelectLeague"),
+                ),
               ),
               t.league_infos)) {
                 var o = t.league_infos[a],
@@ -7929,21 +7933,21 @@
                               tr().League,
                               rt().VerticalCollapseable,
                               g && rt().VerticalCollapse,
-                              tr().Selected
+                              tr().Selected,
                             ),
                           },
                           _.createElement("div", { className: tr().Dates }, c),
                           _.createElement(
                             "div",
                             { className: tr().Name },
-                            pe("#LeagueName_" + o.league_id)
+                            pe("#LeagueName_" + o.league_id),
                           ),
                           _.createElement(
                             "div",
                             { className: Ae(tr().Status, p) },
-                            pe("#Fantasy_LeagueStatus_" + o.status)
-                          )
-                        )
+                            pe("#Fantasy_LeagueStatus_" + o.status),
+                          ),
+                        ),
                       )
                     : e.push(
                         _.createElement(
@@ -7955,21 +7959,21 @@
                               tr().League,
                               rt().VerticalCollapseable,
                               g && rt().VerticalCollapse,
-                              d && tr().Selected
+                              d && tr().Selected,
                             ),
                           },
                           _.createElement("div", { className: tr().Dates }, c),
                           _.createElement(
                             "div",
                             { className: tr().Name },
-                            pe("#LeagueName_" + o.league_id)
+                            pe("#LeagueName_" + o.league_id),
                           ),
                           _.createElement(
                             "div",
                             { className: Ae(tr().Status, p) },
-                            pe("#Fantasy_LeagueStatus_" + o.status)
-                          )
-                        )
+                            pe("#Fantasy_LeagueStatus_" + o.status),
+                          ),
+                        ),
                       );
                 var h = this.props.section == he.Roster,
                   E = this.props.section == he.Scores,
@@ -7982,7 +7986,7 @@
                       className: Ae(
                         tr().TabSelector,
                         rt().VerticalCollapseable,
-                        !d && rt().VerticalCollapse
+                        !d && rt().VerticalCollapse,
                       ),
                     },
                     _.createElement(
@@ -7994,7 +7998,7 @@
                           to: Le(he.Roster, o.league_id, 0),
                           className: Ae(tr().Entry, h && tr().Selected),
                         },
-                        pe("#Fantasy_Roster")
+                        pe("#Fantasy_Roster"),
                       ),
                       _.createElement(
                         m.OL,
@@ -8002,7 +8006,7 @@
                           to: Le(he.Scores, o.league_id, 0, 0),
                           className: Ae(tr().Entry, E && tr().Selected),
                         },
-                        pe("#Fantasy_Scores")
+                        pe("#Fantasy_Scores"),
                       ),
                       _.createElement(
                         m.OL,
@@ -8010,8 +8014,8 @@
                           to: Le(he.Leaderboard, o.league_id, 0),
                           className: Ae(tr().Entry, y && tr().Selected),
                         },
-                        pe("#Fantasy_Ranking")
-                      )
+                        pe("#Fantasy_Ranking"),
+                      ),
                     ),
                     _.createElement(
                       "div",
@@ -8021,14 +8025,14 @@
                           tr().Underline,
                           h && tr().Roster,
                           E && tr().Scores,
-                          y && tr().Leaderboard
+                          y && tr().Leaderboard,
                         ),
                       }),
                       _.createElement("div", {
                         className: tr().UnderlineSpacer,
-                      })
-                    )
-                  )
+                      }),
+                    ),
+                  ),
                 );
               }
               return e;
@@ -8041,7 +8045,7 @@
                       return [
                         4,
                         Ia.submitFantasyLineup(
-                          parseInt(this.props.match.params.leagueID)
+                          parseInt(this.props.match.params.leagueID),
                         ),
                       ];
                     case 1:
@@ -8090,14 +8094,14 @@
                         _.createElement(
                           "div",
                           { className: tr().Header },
-                          pe("#Fantasy_NoPlayers")
+                          pe("#Fantasy_NoPlayers"),
                         ),
                         _.createElement(
                           "div",
                           { className: tr().Sub },
-                          pe("#Fantasy_NoPlayersSub")
-                        )
-                      )
+                          pe("#Fantasy_NoPlayersSub"),
+                        ),
+                      ),
                     ),
                     e
                   );
@@ -8133,8 +8137,8 @@
                           _.createElement(
                             "div",
                             { className: tr().Name },
-                            o.name
-                          )
+                            o.name,
+                          ),
                         ),
                         _.createElement(
                           m.OL,
@@ -8147,13 +8151,13 @@
                                 o.account_id,
                                 a,
                                 o.name,
-                                o.team_url_logo
+                                o.team_url_logo,
                               );
                             },
                           },
-                          pe("#Fantasy_Select")
-                        )
-                      )
+                          pe("#Fantasy_Select"),
+                        ),
+                      ),
                     );
                   },
                   c = this;
@@ -8167,11 +8171,11 @@
                         tr().PlayerSelect,
                         rt().VerticalCollapseable,
                         this.props.section != he.PlayerSelect &&
-                          rt().VerticalCollapse
+                          rt().VerticalCollapse,
                       ),
                     },
-                    t
-                  )
+                    t,
+                  ),
                 );
               }
               return e;
@@ -8195,8 +8199,8 @@
                               _.createElement(
                                 "div",
                                 { key: "Concluded", className: tr().Concluded },
-                                pe("#Fantasy_Concluded")
-                              )
+                                pe("#Fantasy_Concluded"),
+                              ),
                             ),
                             t
                           );
@@ -8218,8 +8222,8 @@
                           _.createElement(
                             "div",
                             { key: "role_" + t, className: tr().RoleHeader },
-                            pe("#Team_RoleCore")
-                          )
+                            pe("#Team_RoleCore"),
+                          ),
                         );
                         break;
                       case 4:
@@ -8227,8 +8231,8 @@
                           _.createElement(
                             "div",
                             { key: "role_" + t, className: tr().RoleHeader },
-                            pe("#Team_RoleMid")
-                          )
+                            pe("#Team_RoleMid"),
+                          ),
                         );
                         break;
                       case 6:
@@ -8236,8 +8240,8 @@
                           _.createElement(
                             "div",
                             { key: "role_" + t, className: tr().RoleHeader },
-                            pe("#Team_RoleSupport")
-                          )
+                            pe("#Team_RoleSupport"),
+                          ),
                         );
                     }
                     var c =
@@ -8276,13 +8280,13 @@
                           className: Ae(
                             tr().RosterSlot,
                             l && tr().NeedsSubmit,
-                            n && tr().Locked
+                            n && tr().Locked,
                           ),
                         },
                         _.createElement(Ft, {
                           className: Ae(tr().Icon, tr().Player),
                           src: Ia.getPlayerImageURL(
-                            e.rgRosterSlots[t].nAccountID
+                            e.rgRosterSlots[t].nAccountID,
                           ),
                           fallbackSrc: i.IMG_URL + "portrait_unknown.png",
                         }),
@@ -8297,11 +8301,11 @@
                           _.createElement(
                             "div",
                             { className: Ae(tr().Name, o && tr().Empty) },
-                            s
-                          )
+                            s,
+                          ),
                         ),
-                        g
-                      )
+                        g,
+                      ),
                     );
                   },
                   d = this,
@@ -8319,7 +8323,8 @@
                       className: Ae(
                         tr().Roster,
                         rt().VerticalCollapseable,
-                        this.props.section != he.Roster && rt().VerticalCollapse
+                        this.props.section != he.Roster &&
+                          rt().VerticalCollapse,
                       ),
                     },
                     _.createElement(
@@ -8327,11 +8332,11 @@
                       {
                         className: Ae(
                           tr().SubmitButton,
-                          e.bRosterNeedsSubmission && tr().Enabled
+                          e.bRosterNeedsSubmission && tr().Enabled,
                         ),
                         onClick: this.SubmitRosterSlots,
                       },
-                      pe("#Fantasy_SubmitRoster")
+                      pe("#Fantasy_SubmitRoster"),
                     ),
                     _.createElement(
                       "div",
@@ -8340,12 +8345,12 @@
                           tr().RosterSlots,
                           rt().VerticalCollapseable,
                           this.props.section != he.Roster &&
-                            rt().VerticalCollapse
+                            rt().VerticalCollapse,
                         ),
                       },
-                      r
-                    )
-                  )
+                      r,
+                    ),
+                  ),
                 ),
                 t
               );
@@ -8377,19 +8382,19 @@
                           he.Scores,
                           this.props.match.params.leagueID,
                           0,
-                          0
+                          0,
                         ),
                         key: "league_" + n + "_day_0",
                         className: Ae(
                           tr().DayOption,
-                          !this.state.bSelectingDay && 0 != l && tr().Collapse
+                          !this.state.bSelectingDay && 0 != l && tr().Collapse,
                         ),
                         onClick: function () {
                           return e.ToggleDaySelect(0);
                         },
                       },
-                      pe("#Fantasy_Total")
-                    )
+                      pe("#Fantasy_Total"),
+                    ),
                   );
                   var u = function (t) {
                       var a = p.day_timestamps[t],
@@ -8405,19 +8410,19 @@
                               he.Scores,
                               h.props.match.params.leagueID,
                               0,
-                              a
+                              a,
                             ),
                             key: "league_" + n + "_day_" + a,
                             className: Ae(
                               tr().DayOption,
-                              !h.state.bSelectingDay && l != a && tr().Collapse
+                              !h.state.bSelectingDay && l != a && tr().Collapse,
                             ),
                             onClick: function () {
                               return e.ToggleDaySelect(a);
                             },
                           },
-                          o
-                        )
+                          o,
+                        ),
                       );
                     },
                     h = this;
@@ -8435,7 +8440,7 @@
                         className: Ae(
                           tr().Scores,
                           rt().VerticalCollapseable,
-                          !o && rt().VerticalCollapse
+                          !o && rt().VerticalCollapse,
                         ),
                       },
                       _.createElement(
@@ -8451,18 +8456,18 @@
                           _.createElement("div", {
                             className: Ae(
                               tr().HorizonalLine,
-                              s && tr().Collapse
+                              s && tr().Collapse,
                             ),
-                          })
+                          }),
                         ),
                         _.createElement("div", {
                           className: Ae(tr().VerticalLine, !s && tr().Collapse),
-                        })
+                        }),
                       ),
                       _.createElement("div", {
                         className: Ae(tr().TotalScore, tr().Collapsed),
-                      })
-                    )
+                      }),
+                    ),
                   ),
                   o && t.push(this.GetLoadingThrobber()),
                   t
@@ -8504,22 +8509,22 @@
                           _.createElement(
                             "div",
                             { className: tr().Name },
-                            C.name
+                            C.name,
                           ),
                           _.createElement(
                             "div",
                             { className: tr().Role },
-                            pe("#Fantasy_Role_" + C.role)
-                          )
+                            pe("#Fantasy_Role_" + C.role),
+                          ),
                         ),
                         _.createElement(
                           "div",
                           { className: tr().Score },
-                          C.score.toFixed(2)
-                        )
-                      )
-                    )
-                  )
+                          C.score.toFixed(2),
+                        ),
+                      ),
+                    ),
+                  ),
                 );
               }
               return (
@@ -8531,7 +8536,8 @@
                       className: Ae(
                         tr().Scores,
                         rt().VerticalCollapseable,
-                        this.props.section != he.Scores && rt().VerticalCollapse
+                        this.props.section != he.Scores &&
+                          rt().VerticalCollapse,
                       ),
                     },
                     _.createElement(
@@ -8546,19 +8552,19 @@
                         r,
                         _.createElement("div", {
                           className: Ae(tr().HorizonalLine, s && tr().Collapse),
-                        })
+                        }),
                       ),
                       _.createElement("div", {
                         className: Ae(tr().VerticalLine, !s && tr().Collapse),
-                      })
+                      }),
                     ),
                     _.createElement(
                       "div",
                       { className: tr().TotalScore },
-                      c.total_score.toFixed(2)
+                      c.total_score.toFixed(2),
                     ),
-                    a
-                  )
+                    a,
+                  ),
                 ),
                 t
               );
@@ -8589,14 +8595,14 @@
                       _.createElement(
                         "div",
                         { className: tr().Heading },
-                        pe("#Fantasy_EmptyLeaderboard")
+                        pe("#Fantasy_EmptyLeaderboard"),
                       ),
                       _.createElement(
                         "div",
                         { className: tr().SubHeading },
-                        pe("#Fantasy_EmptyLeaderboard2")
-                      )
-                    )
+                        pe("#Fantasy_EmptyLeaderboard2"),
+                      ),
+                    ),
                   );
                 else
                   for (var n in o.entries) {
@@ -8611,14 +8617,14 @@
                         _.createElement(
                           "div",
                           { className: tr().Name },
-                          i.name
+                          i.name,
                         ),
                         _.createElement(
                           "div",
                           { className: tr().Score },
-                          i.score.toFixed(2)
-                        )
-                      )
+                          i.score.toFixed(2),
+                        ),
+                      ),
                     );
                   }
               else r && t.push(this.GetLoadingThrobber());
@@ -8631,7 +8637,7 @@
                       className: Ae(
                         tr().Leaderboards,
                         rt().VerticalCollapseable,
-                        !r && rt().VerticalCollapse
+                        !r && rt().VerticalCollapse,
                       ),
                     },
                     _.createElement(
@@ -8640,23 +8646,23 @@
                       _.createElement(
                         "div",
                         { className: tr().Title },
-                        pe("#Fantasy_SteamFriends")
+                        pe("#Fantasy_SteamFriends"),
                       ),
                       _.createElement(
                         "div",
                         {
                           className: Ae(
                             tr().FriendSwitch,
-                            this.state.bFriendLeaderboard && tr().Friend
+                            this.state.bFriendLeaderboard && tr().Friend,
                           ),
                           onClick: this.ToggleLeaderboard,
                         },
                         _.createElement("div", { className: tr().Background }),
-                        _.createElement("div", { className: tr().Selector })
-                      )
+                        _.createElement("div", { className: tr().Selector }),
+                      ),
                     ),
-                    _.createElement("div", { className: tr().PlayerList }, t)
-                  )
+                    _.createElement("div", { className: tr().PlayerList }, t),
+                  ),
                 ),
                 e
               );
@@ -8686,8 +8692,8 @@
                   t,
                   r,
                   a,
-                  o
-                )
+                  o,
+                ),
               );
             }),
             (0, a.gn)([_e], t.prototype, "SubmitRosterSlots", null),
@@ -8726,7 +8732,7 @@
                     render: function (e) {
                       return _.createElement(
                         ar,
-                        (0, a.pi)({ section: he.LeagueSelect }, e)
+                        (0, a.pi)({ section: he.LeagueSelect }, e),
                       );
                     },
                   }),
@@ -8735,7 +8741,7 @@
                     render: function (e) {
                       return _.createElement(
                         ar,
-                        (0, a.pi)({ section: he.RegionSelect }, e)
+                        (0, a.pi)({ section: he.RegionSelect }, e),
                       );
                     },
                   }),
@@ -8744,7 +8750,7 @@
                     render: function (e) {
                       return _.createElement(
                         ar,
-                        (0, a.pi)({ section: he.Roster }, e)
+                        (0, a.pi)({ section: he.Roster }, e),
                       );
                     },
                   }),
@@ -8753,7 +8759,7 @@
                     render: function (e) {
                       return _.createElement(
                         ar,
-                        (0, a.pi)({ section: he.PlayerSelect }, e)
+                        (0, a.pi)({ section: he.PlayerSelect }, e),
                       );
                     },
                   }),
@@ -8762,7 +8768,7 @@
                     render: function (e) {
                       return _.createElement(
                         ar,
-                        (0, a.pi)({ section: he.Scores }, e)
+                        (0, a.pi)({ section: he.Scores }, e),
                       );
                     },
                   }),
@@ -8771,12 +8777,12 @@
                     render: function (e) {
                       return _.createElement(
                         ar,
-                        (0, a.pi)({ section: he.Leaderboard }, e)
+                        (0, a.pi)({ section: he.Leaderboard }, e),
                       );
                     },
-                  })
-                )
-              )
+                  }),
+                ),
+              ),
             );
           }),
           (t = (0, a.gn)([He.Pi], t))
@@ -8801,7 +8807,7 @@
                   size: "medium",
                   string: pe("#Loading"),
                   position: "center",
-                })
+                }),
               );
             var r = Ia.getDPCStandings(),
               a = "0";
@@ -8817,7 +8823,7 @@
               return _.createElement(
                 "div",
                 { key: "InvalidTeam", className: ir().InvalidTeam },
-                pe("#Team_InvalidTeam")
+                pe("#Team_InvalidTeam"),
               );
             var s = null,
               c = [];
@@ -8848,14 +8854,14 @@
                           fallbackSrc:
                             i.IMG_URL + "nav_tournaments_standings.png",
                           className: ir().LeagueImage,
-                        })
+                        }),
                       ),
                       _.createElement(
                         "span",
                         { className: ir().AchievementRank },
-                        ft(p.standing)
-                      )
-                    )
+                        ft(p.standing),
+                      ),
+                    ),
                   );
                 }
               }
@@ -8899,7 +8905,7 @@
                                   i.IMG_URL_BASE +
                                   "players/portrait_unknown.png",
                                 className: ir().PlayerImage,
-                              })
+                              }),
                             ),
                             _.createElement(
                               "span",
@@ -8907,13 +8913,13 @@
                               _.createElement(
                                 "span",
                                 { className: ir().PlayerNickname },
-                                D.name
+                                D.name,
                               ),
                               _.createElement(
                                 "span",
                                 { className: ir().TeamRole },
-                                D.fantasy_role ? St(D.fantasy_role) : ""
-                              )
+                                D.fantasy_role ? St(D.fantasy_role) : "",
+                              ),
                             ),
                             _.createElement("span", { className: ir().Spacer }),
                             D.country_code &&
@@ -8922,8 +8928,8 @@
                                 { className: ir().PlayerCountry },
                                 pe(
                                   "#Steam_Country_" +
-                                    D.country_code.toUpperCase()
-                                )
+                                    D.country_code.toUpperCase(),
+                                ),
                               ),
                             D.country_code &&
                               _.createElement("img", {
@@ -8933,8 +8939,8 @@
                                   D.country_code +
                                   ".png",
                                 className: ir().CountryFlag,
-                              })
-                          )
+                              }),
+                          ),
                         );
                       }
                     }
@@ -8965,7 +8971,7 @@
                             fallbackSrc:
                               i.IMG_URL_BASE + "players/portrait_unknown.png",
                             className: ir().PlayerImage,
-                          })
+                          }),
                         ),
                         _.createElement(
                           "span",
@@ -8973,20 +8979,22 @@
                           _.createElement(
                             "span",
                             { className: ir().PlayerNickname },
-                            D.name
+                            D.name,
                           ),
                           _.createElement(
                             "span",
                             { className: ir().TeamRole },
-                            D.fantasy_role ? St(D.fantasy_role) : ""
-                          )
+                            D.fantasy_role ? St(D.fantasy_role) : "",
+                          ),
                         ),
                         _.createElement("span", { className: ir().Spacer }),
                         D.country_code &&
                           _.createElement(
                             "span",
                             { className: ir().PlayerCountry },
-                            pe("#Steam_Country_" + D.country_code.toUpperCase())
+                            pe(
+                              "#Steam_Country_" + D.country_code.toUpperCase(),
+                            ),
                           ),
                         D.country_code &&
                           _.createElement("img", {
@@ -8996,8 +9004,8 @@
                               D.country_code +
                               ".png",
                             className: ir().CountryFlag,
-                          })
-                      )
+                          }),
+                      ),
                     );
                   }
                 }
@@ -9021,13 +9029,13 @@
                     className: ir().Logo,
                     team_id: e,
                     size: gt.Large,
-                  })
+                  }),
                 ),
                 _.createElement("div", { className: ir().TeamName }, t.name),
                 _.createElement(
                   "div",
                   { className: ir().SubsectionHeader },
-                  pe("#Team_TeamInformation")
+                  pe("#Team_TeamInformation"),
                 ),
                 t.country_code &&
                   _.createElement(
@@ -9038,7 +9046,7 @@
                     _.createElement(
                       "span",
                       null,
-                      pe("#Steam_Country_" + t.country_code.toUpperCase())
+                      pe("#Steam_Country_" + t.country_code.toUpperCase()),
                     ),
                     _.createElement("img", {
                       src:
@@ -9047,7 +9055,7 @@
                         t.country_code +
                         ".png",
                       className: ir().CountryFlag,
-                    })
+                    }),
                   ),
                 0 != t.region &&
                   _.createElement(
@@ -9058,8 +9066,8 @@
                     _.createElement(
                       "span",
                       null,
-                      pe("#LeagueRegion_" + t.region)
-                    )
+                      pe("#LeagueRegion_" + t.region),
+                    ),
                   ),
                 t.url_sponsor_logo > 0 &&
                   _.createElement(
@@ -9070,7 +9078,7 @@
                     _.createElement("img", {
                       src: t.url_sponsor_logo,
                       className: ir().SponsorLogo,
-                    })
+                    }),
                   ),
                 s > 0 &&
                   _.createElement(
@@ -9078,7 +9086,7 @@
                     { className: ir().InfoStat },
                     _.createElement("span", null, pe("#Team_Earnings")),
                     _.createElement("span", { className: ir().Spacer }),
-                    _.createElement("span", null, "$", It(s))
+                    _.createElement("span", null, "$", It(s)),
                   ),
                 _.createElement(
                   "div",
@@ -9094,36 +9102,36 @@
                       _.createElement(
                         "span",
                         { className: ir().RankDash },
-                        " -"
-                      )
+                        " -",
+                      ),
                     ),
                   _.createElement(
                     "span",
                     { className: ir().DPCPoints },
-                    pe("#Team_DPCRankValue", a)
-                  )
+                    pe("#Team_DPCRankValue", a),
+                  ),
                 ),
                 t.dpc_results &&
                   _.createElement(
                     "div",
                     { className: ir().SubsectionHeader },
-                    pe("#Team_TeamAchievements")
+                    pe("#Team_TeamAchievements"),
                   ),
                 _.createElement("div", { className: ir().AchievementsList }, c),
                 _.createElement(
                   "div",
                   { className: ir().SubsectionHeader },
-                  pe("#Team_Roster")
+                  pe("#Team_Roster"),
                 ),
                 y,
                 b.length > 0 &&
                   _.createElement(
                     "div",
                     { className: ir().SubsectionHeader },
-                    pe("#Team_PreviousMembers")
+                    pe("#Team_PreviousMembers"),
                   ),
-                b
-              )
+                b,
+              ),
             );
           }),
           (t = (0, a.gn)([He.Pi], t))
@@ -9148,13 +9156,13 @@
                   size: "medium",
                   string: pe("#Loading"),
                   position: "center",
-                })
+                }),
               );
             if (!t.name)
               return _.createElement(
                 "div",
                 { key: "InvalidPlayer", className: cr().InvalidPlayer },
-                pe("#Player_InvalidPlayer")
+                pe("#Player_InvalidPlayer"),
               );
             var r = null;
             t.team_id && (r = Ia.getTeamData(t.team_id));
@@ -9181,14 +9189,14 @@
                         fallbackSrc:
                           i.IMG_URL + "nav_tournaments_standings.png",
                         className: cr().LeagueImage,
-                      })
+                      }),
                     ),
                     _.createElement(
                       "span",
                       { className: cr().AchievementRank },
-                      ft(t.results[o].placement)
-                    )
-                  )
+                      ft(t.results[o].placement),
+                    ),
+                  ),
                 );
             var n = [];
             if (t.audit_entries)
@@ -9209,12 +9217,12 @@
                             src: l.team_url_logo,
                             fallbackSrc: i.IMG_URL + "team_unknown.png",
                             className: cr().PrevTeamLogo,
-                          })
+                          }),
                         ),
                         _.createElement(
                           "div",
                           { className: cr().TeamName },
-                          l.team_name
+                          l.team_name,
                         ),
                         _.createElement("span", { className: cr().Spacer }),
                         _.createElement(
@@ -9225,7 +9233,7 @@
                             day: "numeric",
                             year: "2-digit",
                           }),
-                          " - "
+                          " - ",
                         ),
                         c &&
                           _.createElement(
@@ -9235,15 +9243,15 @@
                               month: "numeric",
                               day: "numeric",
                               year: "2-digit",
-                            })
+                            }),
                           ),
                         !c &&
                           _.createElement(
                             "span",
                             { className: cr().TeamDates },
-                            pe("#Player_PresentTime")
-                          )
-                      )
+                            pe("#Player_PresentTime"),
+                          ),
+                      ),
                     );
                 }
               }
@@ -9269,7 +9277,7 @@
                       fallbackSrc:
                         i.IMG_URL_BASE + "players/portrait_unknown.png",
                       className: cr().PlayerImage,
-                    })
+                    }),
                   ),
                   r &&
                     _.createElement(
@@ -9278,14 +9286,14 @@
                       _.createElement(Ft, {
                         src: r.url_logo,
                         fallbackSrc: i.IMG_URL + "team_unknown.png",
-                      })
-                    )
+                      }),
+                    ),
                 ),
                 _.createElement("div", { className: cr().PlayerName }, t.name),
                 _.createElement(
                   "div",
                   { className: cr().SubsectionHeader },
-                  pe("#Player_PlayerInformation")
+                  pe("#Player_PlayerInformation"),
                 ),
                 t.real_name &&
                   _.createElement(
@@ -9293,7 +9301,7 @@
                     { className: cr().InfoStat },
                     _.createElement("span", null, pe("#Player_Name")),
                     _.createElement("span", { className: cr().Spacer }),
-                    _.createElement("span", null, t.real_name)
+                    _.createElement("span", null, t.real_name),
                   ),
                 t.country_code &&
                   _.createElement(
@@ -9304,7 +9312,7 @@
                     _.createElement(
                       "span",
                       null,
-                      pe("#Steam_Country_" + t.country_code.toUpperCase())
+                      pe("#Steam_Country_" + t.country_code.toUpperCase()),
                     ),
                     _.createElement("img", {
                       src:
@@ -9313,7 +9321,7 @@
                         t.country_code +
                         ".png",
                       className: cr().CountryFlag,
-                    })
+                    }),
                   ),
                 0 != t.birthdate &&
                   _.createElement(
@@ -9324,8 +9332,8 @@
                     _.createElement(
                       "span",
                       null,
-                      Math.floor((Date.now() / 1e3 - t.birthdate) / 31536e3)
-                    )
+                      Math.floor((Date.now() / 1e3 - t.birthdate) / 31536e3),
+                    ),
                   ),
                 _.createElement(
                   "div",
@@ -9335,8 +9343,8 @@
                   _.createElement(
                     "span",
                     null,
-                    t.team_name ? t.team_name : pe("#Player_TeamNone")
-                  )
+                    t.team_name ? t.team_name : pe("#Player_TeamNone"),
+                  ),
                 ),
                 t.fantasy_role &&
                   _.createElement(
@@ -9347,8 +9355,8 @@
                     _.createElement(
                       "span",
                       { className: cr().TeamRole },
-                      St(t.fantasy_role)
-                    )
+                      St(t.fantasy_role),
+                    ),
                   ),
                 t.total_earnings &&
                   _.createElement(
@@ -9356,7 +9364,7 @@
                     { className: cr().InfoStat },
                     _.createElement("span", null, pe("#Team_Earnings")),
                     _.createElement("span", { className: cr().Spacer }),
-                    _.createElement("span", null, "~$", It(t.total_earnings))
+                    _.createElement("span", null, "~$", It(t.total_earnings)),
                   ),
                 t.dpc_rank &&
                   _.createElement(
@@ -9364,22 +9372,22 @@
                     { className: cr().InfoStat },
                     _.createElement("span", null, pe("#Player_DPCRank")),
                     _.createElement("span", { className: cr().Spacer }),
-                    _.createElement("span", null, "#", t.dpc_rank)
+                    _.createElement("span", null, "#", t.dpc_rank),
                   ),
                 t.results &&
                   _.createElement(
                     "div",
                     { className: cr().SubsectionHeader },
-                    pe("#Player_PlayerAchievements")
+                    pe("#Player_PlayerAchievements"),
                   ),
                 _.createElement("div", { className: cr().AchievementsList }, a),
                 _.createElement(
                   "div",
                   { className: cr().SubsectionHeader },
-                  pe("#Player_Teams")
+                  pe("#Player_Teams"),
                 ),
-                n
-              )
+                n,
+              ),
             );
           }),
           (t = (0, a.gn)([He.Pi], t))
@@ -9411,7 +9419,7 @@
                   size: "medium",
                   string: pe("#Loading"),
                   position: "center",
-                })
+                }),
               );
             for (
               var n = r ? r.avatarfull : "",
@@ -9443,9 +9451,9 @@
                             _.createElement(
                               "div",
                               { className: dr().Name },
-                              t.name
-                            )
-                          )
+                              t.name,
+                            ),
+                          ),
                         );
                         break;
                       case 2:
@@ -9465,9 +9473,9 @@
                             _.createElement(
                               "div",
                               { className: dr().Name },
-                              t.name
-                            )
-                          )
+                              t.name,
+                            ),
+                          ),
                         );
                     }
                   });
@@ -9486,15 +9494,15 @@
                     _.createElement(
                       "div",
                       { className: dr().Label },
-                      pe("#Profile_PredictionPercent")
+                      pe("#Profile_PredictionPercent"),
                     ),
                     _.createElement(
                       "div",
                       { className: dr().Value },
                       a.prediction_info.percent,
-                      " %"
-                    )
-                  )
+                      " %",
+                    ),
+                  ),
                 ),
                 p.push(
                   _.createElement(
@@ -9503,21 +9511,21 @@
                     _.createElement(
                       "div",
                       { className: dr().Label },
-                      pe("#Profile_PredictionShards")
+                      pe("#Profile_PredictionShards"),
                     ),
                     _.createElement(
                       "div",
                       { className: dr().Value },
-                      a.prediction_info.shard_winnings
-                    )
-                  )
+                      a.prediction_info.shard_winnings,
+                    ),
+                  ),
                 ))
               : p.push(
                   _.createElement(
                     "div",
                     { key: "pred_none", className: dr().NoPredictionData },
-                    pe("#Profile_NoPredictionData")
-                  )
+                    pe("#Profile_NoPredictionData"),
+                  ),
                 );
             var u = [];
             return (
@@ -9551,7 +9559,7 @@
                     _.createElement(
                       "div",
                       { className: dr().Label },
-                      pe(t.locstring)
+                      pe(t.locstring),
                     ),
                     _.createElement(
                       "div",
@@ -9559,16 +9567,16 @@
                         className: Ae(
                           dr().Switch,
                           -1 == a.disabled_notifications.indexOf(t.id) &&
-                            dr().On
+                            dr().On,
                         ),
                         onClick: function () {
                           return e.toggleNotificationDisabled(t.id);
                         },
                       },
                       _.createElement("div", { className: dr().Background }),
-                      _.createElement("div", { className: dr().Selector })
-                    )
-                  )
+                      _.createElement("div", { className: dr().Selector }),
+                    ),
+                  ),
                 );
               }),
               _.createElement(
@@ -9597,8 +9605,8 @@
                       "div",
                       { className: dr().NameInfo },
                       _.createElement("div", { className: dr().Name }, l),
-                      _.createElement("div", { className: dr().RealName }, s)
-                    )
+                      _.createElement("div", { className: dr().RealName }, s),
+                    ),
                   ),
                   _.createElement(
                     "div",
@@ -9616,16 +9624,16 @@
                         _.createElement(
                           "div",
                           { className: dr().FavoritesLabel },
-                          pe("#Profile_YourFavorites")
-                        )
+                          pe("#Profile_YourFavorites"),
+                        ),
                       ),
                       _.createElement(
                         m.rU,
                         { to: Ie(), className: dr().ManageFavorites },
-                        pe("#Profile_ManageFavorites")
-                      )
+                        pe("#Profile_ManageFavorites"),
+                      ),
                     ),
-                    c
+                    c,
                   ),
                   _.createElement(
                     "div",
@@ -9636,12 +9644,12 @@
                       _.createElement(
                         "div",
                         { className: dr().NotificationsLabel },
-                        pe("#Profile_Notifications")
-                      )
+                        pe("#Profile_Notifications"),
+                      ),
                     ),
-                    u
-                  )
-                )
+                    u,
+                  ),
+                ),
               )
             );
           }),
@@ -9680,7 +9688,7 @@
                   size: "medium",
                   string: pe("#Loading"),
                   position: "center",
-                })
+                }),
               );
             var o = _.createElement("div", null),
               n = a.team_1.wager_count + a.team_2.wager_count;
@@ -9705,8 +9713,8 @@
                     _.createElement(
                       "div",
                       { className: Ae(ur().Name, ur().Left) },
-                      a.team_1.team_name
-                    )
+                      a.team_1.team_name,
+                    ),
                   ),
                   _.createElement(
                     "div",
@@ -9714,13 +9722,13 @@
                     _.createElement(
                       "div",
                       { className: Ae(ur().Name, ur().Right) },
-                      a.team_2.team_name
+                      a.team_2.team_name,
                     ),
                     _.createElement("img", {
                       src: a.team_2.team_logo_url,
                       className: ur().Logo,
-                    })
-                  )
+                    }),
+                  ),
                 ),
                 _.createElement(
                   "div",
@@ -9738,7 +9746,7 @@
                       flexGrow: s,
                       backgroundColor: this.state.strTeamColor2,
                     },
-                  })
+                  }),
                 ),
                 _.createElement(
                   "div",
@@ -9749,7 +9757,7 @@
                       className: ur().Percentage,
                       style: { color: this.state.strTeamColor1 },
                     },
-                    c
+                    c,
                   ),
                   _.createElement(
                     "div",
@@ -9757,9 +9765,9 @@
                       className: ur().Percentage,
                       style: { color: this.state.strTeamColor2 },
                     },
-                    d
-                  )
-                )
+                    d,
+                  ),
+                ),
               );
             }
             var g,
@@ -9804,8 +9812,8 @@
                     leagueID: k.tourney.league_id,
                     matchID: k.match_id,
                   },
-                  " "
-                )
+                  " ",
+                ),
               );
             }
             var f = String(h[a.team_1.team_id] || 0),
@@ -9856,7 +9864,7 @@
                         className: Ae(
                           ur().Player,
                           0 == O && ur().Left,
-                          1 == O && ur().Right
+                          1 == O && ur().Right,
                         ),
                       },
                       _.createElement(Ft, {
@@ -9870,26 +9878,26 @@
                           className: Ae(
                             ur().Name,
                             0 == O && ur().Left,
-                            1 == O && ur().Right
+                            1 == O && ur().Right,
                           ),
                         },
                         _.createElement(
                           "div",
                           { className: ur().ProName },
-                          V.name
+                          V.name,
                         ),
                         _.createElement(
                           "div",
                           { className: ur().RealName },
-                          V.real_name
-                        )
+                          V.real_name,
+                        ),
                       ),
                       _.createElement(Ft, {
                         className: Ae(ur().Image, 0 == O && ur().Hide),
                         src: Ia.getPlayerImageURL(V.account_id),
                         fallbackSrc: i.IMG_URL + "portrait_unknown.png",
-                      })
-                    )
+                      }),
+                    ),
                   );
               }
             return _.createElement(
@@ -9919,7 +9927,7 @@
                     onClick: function () {
                       return window.history.back();
                     },
-                  })
+                  }),
                 ),
                 _.createElement(
                   "div",
@@ -9934,15 +9942,15 @@
                     _.createElement(
                       "div",
                       { className: ur().Name },
-                      a.team_1.team_name
-                    )
+                      a.team_1.team_name,
+                    ),
                   ),
                   _.createElement(
                     "div",
                     { className: ur().Score },
                     f,
                     " : ",
-                    I
+                    I,
                   ),
                   _.createElement(
                     m.rU,
@@ -9954,10 +9962,10 @@
                     _.createElement(
                       "div",
                       { className: ur().Name },
-                      a.team_2.team_name
-                    )
-                  )
-                )
+                      a.team_2.team_name,
+                    ),
+                  ),
+                ),
               ),
               _.createElement(
                 "div",
@@ -9967,7 +9975,7 @@
                   "div",
                   { className: ur().Winner },
                   _.createElement("div", { className: ur().WinString }, p),
-                  _.createElement("div", { className: ur().Predict }, u)
+                  _.createElement("div", { className: ur().Predict }, u),
                 ),
                 _.createElement(
                   "div",
@@ -9978,7 +9986,7 @@
                     _.createElement(
                       "div",
                       { className: ur().Text },
-                      pe("#Series_MostKills")
+                      pe("#Series_MostKills"),
                     ),
                     _.createElement(
                       m.rU,
@@ -9988,14 +9996,14 @@
                         className: Ae(ur().Icon, ur().Player),
                         src: Ia.getPlayerImageURL(S),
                         fallbackSrc: i.IMG_URL + "portrait_unknown.png",
-                      })
+                      }),
                     ),
                     _.createElement(Ft, {
                       className: Ae(ur().Icon, ur().Hero),
                       src: i.IMG_URL_BASE + "heroes/num_wide/" + B + ".png",
                       fallbackSrc: i.IMG_URL + "team_unknown.png",
                     }),
-                    _.createElement("div", { className: ur().Value }, b)
+                    _.createElement("div", { className: ur().Value }, b),
                   ),
                   _.createElement(
                     "div",
@@ -10003,7 +10011,7 @@
                     _.createElement(
                       "div",
                       { className: ur().Text },
-                      pe("#Series_MostAssists")
+                      pe("#Series_MostAssists"),
                     ),
                     _.createElement(
                       m.rU,
@@ -10013,15 +10021,15 @@
                         className: Ae(ur().Icon, ur().Player),
                         src: Ia.getPlayerImageURL(T),
                         fallbackSrc: i.IMG_URL + "portrait_unknown.png",
-                      })
+                      }),
                     ),
                     _.createElement(Ft, {
                       className: Ae(ur().Icon, ur().Hero),
                       src: i.IMG_URL_BASE + "heroes/num_wide/" + D + ".png",
                       fallbackSrc: i.IMG_URL + "team_unknown.png",
                     }),
-                    _.createElement("div", { className: ur().Value }, N)
-                  )
+                    _.createElement("div", { className: ur().Value }, N),
+                  ),
                 ),
                 _.createElement(
                   "div",
@@ -10029,9 +10037,9 @@
                   _.createElement(
                     "div",
                     { className: ur().Title },
-                    pe("#Series_Matches")
+                    pe("#Series_Matches"),
                   ),
-                  v
+                  v,
                 ),
                 _.createElement(
                   "div",
@@ -10039,7 +10047,7 @@
                   _.createElement(
                     "div",
                     { className: ur().Title },
-                    pe("#Series_TeamRosters")
+                    pe("#Series_TeamRosters"),
                   ),
                   _.createElement(
                     "div",
@@ -10047,12 +10055,16 @@
                     _.createElement(
                       "div",
                       { className: ur().TeamRoster },
-                      w[0]
+                      w[0],
                     ),
-                    _.createElement("div", { className: ur().TeamRoster }, w[1])
-                  )
-                )
-              )
+                    _.createElement(
+                      "div",
+                      { className: ur().TeamRoster },
+                      w[1],
+                    ),
+                  ),
+                ),
+              ),
             );
           }),
           (t.prototype.render = function () {
@@ -10096,7 +10108,7 @@
                   size: "medium",
                   string: pe("#Loading"),
                   position: "center",
-                })
+                }),
               );
             Ia.getProPredictionMaxWager();
             if (o)
@@ -10132,15 +10144,15 @@
                       _.createElement(
                         "div",
                         { className: Cr().ProName },
-                        y ? y.name : ""
+                        y ? y.name : "",
                       ),
                       _.createElement(
                         "div",
                         { className: Cr().RealName },
-                        y ? y.real_name : ""
-                      )
-                    )
-                  )
+                        y ? y.real_name : "",
+                      ),
+                    ),
+                  ),
                 );
               }
             if (l)
@@ -10164,20 +10176,20 @@
                       _.createElement(
                         "div",
                         { className: Cr().ProName },
-                        y ? y.name : ""
+                        y ? y.name : "",
                       ),
                       _.createElement(
                         "div",
                         { className: Cr().RealName },
-                        y ? y.real_name : ""
-                      )
+                        y ? y.real_name : "",
+                      ),
                     ),
                     _.createElement(Ft, {
                       className: Cr().Image,
                       src: Ia.getPlayerImageURL(E),
                       fallbackSrc: i.IMG_URL + "portrait_unknown.png",
-                    })
-                  )
+                    }),
+                  ),
                 );
               }
             return _.createElement(
@@ -10207,7 +10219,7 @@
                     onClick: function () {
                       return window.history.back();
                     },
-                  })
+                  }),
                 ),
                 _.createElement(
                   "div",
@@ -10220,7 +10232,7 @@
                       team_id: n.team_id,
                       size: gt.Medium,
                     }),
-                    _.createElement("div", { className: Cr().Name }, n.name)
+                    _.createElement("div", { className: Cr().Name }, n.name),
                   ),
                   _.createElement("div", { className: Cr().Score }, pe("#VS")),
                   _.createElement(
@@ -10231,9 +10243,9 @@
                       team_id: l.team_id,
                       size: gt.Medium,
                     }),
-                    _.createElement("div", { className: Cr().Name }, l.name)
-                  )
-                )
+                    _.createElement("div", { className: Cr().Name }, l.name),
+                  ),
+                ),
               ),
               _.createElement(
                 "div",
@@ -10244,7 +10256,7 @@
                   _.createElement(
                     "div",
                     { className: Cr().Title },
-                    pe("#Series_TeamRosters")
+                    pe("#Series_TeamRosters"),
                   ),
                   _.createElement(
                     "div",
@@ -10252,13 +10264,17 @@
                     _.createElement(
                       "div",
                       { className: Cr().TeamRoster },
-                      p[0]
+                      p[0],
                     ),
-                    _.createElement("div", { className: Cr().TeamRoster }, p[1])
-                  )
+                    _.createElement(
+                      "div",
+                      { className: Cr().TeamRoster },
+                      p[1],
+                    ),
+                  ),
                 ),
-                undefined
-              )
+                undefined,
+              ),
             );
           }),
           (t = (0, a.gn)([He.Pi], t))
@@ -10285,7 +10301,7 @@
                   size: "medium",
                   string: pe("#Loading"),
                   position: "center",
-                })
+                }),
               );
             if (r.metadata) {
               var a = [],
@@ -10310,7 +10326,7 @@
                   y = (E / 60).toFixed(0),
                   C = (E % 60 < 10 ? "0" : "") + (E % 60).toFixed(0);
                 d.push(
-                  _.createElement("div", { key: "timestamp_" + h }, y, ":", C)
+                  _.createElement("div", { key: "timestamp_" + h }, y, ":", C),
                 );
               }
               var v = function () {
@@ -10318,13 +10334,13 @@
                       Math,
                       a.map(function (e) {
                         return e.value;
-                      })
+                      }),
                     ),
                     t = Math.min.apply(
                       Math,
                       a.map(function (e) {
                         return e.value;
-                      })
+                      }),
                     );
                   return e <= 0 ? 0 : t >= 0 ? 1 : e / (e - t);
                 },
@@ -10332,13 +10348,13 @@
                   Math,
                   a.map(function (e) {
                     return e.value;
-                  })
+                  }),
                 ),
                 f = Math.min.apply(
                   Math,
                   a.map(function (e) {
                     return e.value;
-                  })
+                  }),
                 ),
                 I = Math.abs(k) < Math.abs(f),
                 S = Math.max(Math.abs(k), Math.abs(f)),
@@ -10347,7 +10363,7 @@
                     Math,
                     a.map(function (e) {
                       return Math.abs(e.value);
-                    })
+                    }),
                   ) / 100
                 ).toFixed(0);
               e = _.createElement(
@@ -10356,7 +10372,7 @@
                 _.createElement(
                   "div",
                   { className: fr().Title },
-                  pe("#Match_NetWorth")
+                  pe("#Match_NetWorth"),
                 ),
                 _.createElement(
                   "div",
@@ -10394,26 +10410,26 @@
                             offset: v(),
                             stopColor: "#DF451A",
                             stopOpacity: 1,
-                          })
-                        )
+                          }),
+                        ),
                       ),
                       _.createElement(Ir.uN, {
                         type: "monotone",
                         dataKey: "value",
                         stroke: "url(#splitColor)",
                         fill: "url(#splitColor)",
-                      })
-                    )
+                      }),
+                    ),
                   ),
                   _.createElement(
                     "div",
                     { className: Ae(fr().Legend, I && fr().DireGreater) },
                     b,
                     "K",
-                    _.createElement("div", { className: fr().Arrow }, "▶")
-                  )
+                    _.createElement("div", { className: fr().Arrow }, "▶"),
+                  ),
                 ),
-                _.createElement("div", { className: fr().Bottom }, d)
+                _.createElement("div", { className: fr().Bottom }, d),
               );
             }
             var B = [];
@@ -10445,14 +10461,14 @@
                         _.createElement(
                           "div",
                           { className: fr().HeroName },
-                          T.pro_name.length > 0 ? T.pro_name : T.player_name
+                          T.pro_name.length > 0 ? T.pro_name : T.player_name,
                         ),
                         _.createElement(
                           "div",
                           { className: fr().PlayerName },
-                          pe("#Hero_" + T.hero_id)
-                        )
-                      )
+                          pe("#Hero_" + T.hero_id),
+                        ),
+                      ),
                     ),
                     _.createElement(
                       "div",
@@ -10464,14 +10480,14 @@
                         " / ",
                         T.deaths,
                         " / ",
-                        T.assists
+                        T.assists,
                       ),
                       _.createElement(
                         "div",
                         { className: fr().NetWorth },
                         (T.net_worth / 1e3).toFixed(1),
-                        "K"
-                      )
+                        "K",
+                      ),
                     ),
                     _.createElement(
                       "div",
@@ -10523,9 +10539,9 @@
                           "items/num_small/" +
                           T.item_5 +
                           ".png",
-                      })
-                    )
-                  )
+                      }),
+                    ),
+                  ),
                 );
               }
             var N = [];
@@ -10543,7 +10559,7 @@
                       className: Ae(
                         fr().Player,
                         0 == D && fr().Left,
-                        1 == D && fr().Right
+                        1 == D && fr().Right,
                       ),
                     },
                     _.createElement(Ft, {
@@ -10557,26 +10573,26 @@
                         className: Ae(
                           fr().Name,
                           0 == D && fr().Left,
-                          1 == D && fr().Right
+                          1 == D && fr().Right,
                         ),
                       },
                       _.createElement(
                         "div",
                         { className: fr().ProName },
-                        T.pro_name.length > 0 ? T.pro_name : T.player_name
+                        T.pro_name.length > 0 ? T.pro_name : T.player_name,
                       ),
                       _.createElement(
                         "div",
                         { className: fr().RealName },
-                        T.real_name
-                      )
+                        T.real_name,
+                      ),
                     ),
                     _.createElement(Ft, {
                       className: Ae(fr().Image, 0 == D && fr().Hide),
                       src: Ia.getPlayerImageURL(T.account_id),
                       fallbackSrc: i.IMG_URL + "portrait_unknown.png",
-                    })
-                  )
+                    }),
+                  ),
                 );
               }
             var P = [];
@@ -10592,8 +10608,8 @@
                           key: "pickban_label_" + G,
                           className: Ae(fr().PickOrBanLabel, fr().Pick),
                         },
-                        pe("#Match_Pick")
-                      )
+                        pe("#Match_Pick"),
+                      ),
                     )
                   : A.push(
                       _.createElement(
@@ -10602,8 +10618,8 @@
                           key: "pickban_label_" + G,
                           className: Ae(fr().PickOrBanLabel, fr().Ban),
                         },
-                        pe("#Match_Ban")
-                      )
+                        pe("#Match_Ban"),
+                      ),
                     )),
                 P[M.team].push(
                   _.createElement(
@@ -10613,7 +10629,7 @@
                       className: Ae(
                         fr().PickOrBan,
                         M.is_pick && fr().Pick,
-                        !M.is_pick && fr().Ban
+                        !M.is_pick && fr().Ban,
                       ),
                     },
                     _.createElement("div", { className: fr().Number }, G + 1),
@@ -10628,9 +10644,9 @@
                     _.createElement(
                       "div",
                       { className: fr().HeroName },
-                      pe("#Hero_" + M.hero_id)
-                    )
-                  )
+                      pe("#Hero_" + M.hero_id),
+                    ),
+                  ),
                 );
             }
             return (
@@ -10665,15 +10681,15 @@
                       _.createElement(
                         "div",
                         { className: fr().Name },
-                        r.match.radiant_team_name
-                      )
+                        r.match.radiant_team_name,
+                      ),
                     ),
                     _.createElement(
                       "div",
                       { className: fr().Score },
                       r.match.radiant_team_score,
                       " - ",
-                      r.match.dire_team_score
+                      r.match.dire_team_score,
                     ),
                     _.createElement(
                       m.rU,
@@ -10686,16 +10702,16 @@
                       _.createElement(
                         "div",
                         { className: fr().Name },
-                        r.match.dire_team_name
-                      )
-                    )
-                  )
+                        r.match.dire_team_name,
+                      ),
+                    ),
+                  ),
                 ),
                 _.createElement(
                   "div",
                   { className: fr().RadiantDireBar },
                   _.createElement("div", { className: fr().Radiant }),
-                  _.createElement("div", { className: fr().Dire })
+                  _.createElement("div", { className: fr().Dire }),
                 ),
                 _.createElement(
                   "div",
@@ -10708,7 +10724,7 @@
                     _.createElement(
                       "div",
                       { className: fr().Title },
-                      pe("#Match_HeroStats")
+                      pe("#Match_HeroStats"),
                     ),
                     _.createElement(
                       "div",
@@ -10716,14 +10732,14 @@
                       _.createElement(
                         "div",
                         { className: Ae(fr().TeamHeroStats, fr().Radiant) },
-                        B[0]
+                        B[0],
                       ),
                       _.createElement(
                         "div",
                         { className: Ae(fr().TeamHeroStats, fr().Dire) },
-                        B[1]
-                      )
-                    )
+                        B[1],
+                      ),
+                    ),
                   ),
                   _.createElement(
                     "div",
@@ -10731,7 +10747,7 @@
                     _.createElement(
                       "div",
                       { className: fr().Title },
-                      pe("#Series_TeamRosters")
+                      pe("#Series_TeamRosters"),
                     ),
                     _.createElement(
                       "div",
@@ -10739,14 +10755,14 @@
                       _.createElement(
                         "div",
                         { className: fr().TeamRoster },
-                        N[0]
+                        N[0],
                       ),
                       _.createElement(
                         "div",
                         { className: fr().TeamRoster },
-                        N[1]
-                      )
-                    )
+                        N[1],
+                      ),
+                    ),
                   ),
                   _.createElement(
                     "div",
@@ -10754,7 +10770,7 @@
                     _.createElement(
                       "div",
                       { className: fr().Title },
-                      pe("#Match_PicksAndBans")
+                      pe("#Match_PicksAndBans"),
                     ),
                     _.createElement(
                       "div",
@@ -10762,21 +10778,21 @@
                       _.createElement(
                         "div",
                         { className: Ae(fr().TeamPicksAndBans, fr().Radiant) },
-                        P[0]
+                        P[0],
                       ),
                       _.createElement(
                         "div",
                         { className: fr().PickAndBansLabel },
-                        A
+                        A,
                       ),
                       _.createElement(
                         "div",
                         { className: Ae(fr().TeamPicksAndBans, fr().Dire) },
-                        P[1]
-                      )
-                    )
-                  )
-                )
+                        P[1],
+                      ),
+                    ),
+                  ),
+                ),
               )
             );
           }),
@@ -10800,7 +10816,7 @@
               team_id: t,
               size: gt.Medium,
             }),
-            _.createElement("div", { className: Br().Name }, r)
+            _.createElement("div", { className: Br().Name }, r),
           );
         },
         Tr = function (e) {
@@ -10851,14 +10867,14 @@
                 t.score,
                 " - ",
                 r.score,
-                _.createElement("div", { className: Br().GameTime }, n)
+                _.createElement("div", { className: Br().GameTime }, n),
               ),
               _.createElement(Rr, {
                 teamID: r.team_id,
                 teamLogoURL: r.team_logo_url,
                 teamName: r.team_name,
-              })
-            )
+              }),
+            ),
           );
         },
         Dr = function (e) {
@@ -10875,7 +10891,7 @@
             _.createElement("img", {
               className: Br().HeroIcon,
               src: i.IMG_URL_BASE + "heroes/num_icons/" + t + ".png",
-            })
+            }),
           );
         },
         Pr = function (e) {
@@ -10901,7 +10917,7 @@
                   isRadiant: 0 == l,
                   positionPercentX: d,
                   positionPercentY: g,
-                })
+                }),
               );
             }
           for (var p = [], u = 50, h = 0; h < o.length; h++) {
@@ -10936,9 +10952,9 @@
                   Br().BuildingIcon,
                   2 == E.team && Br().Radiant,
                   3 == E.team && Br().Dire,
-                  E.destroyed && Br().Destroyed
+                  E.destroyed && Br().Destroyed,
                 ),
-              })
+              }),
             ),
               u--;
           }
@@ -10949,7 +10965,7 @@
               style: { backgroundImage: "url(" + i.IMG_URL + "minimap.png )" },
             },
             n,
-            p
+            p,
           );
         },
         Lr = function (e) {
@@ -10979,7 +10995,7 @@
               h = (u / 60).toFixed(0),
               E = (u % 60 < 10 ? "0" : "") + (u % 60).toFixed(0);
             c.push(
-              _.createElement("div", { key: "timestamp_" + p }, h, ":", E)
+              _.createElement("div", { key: "timestamp_" + p }, h, ":", E),
             );
           }
           var y = function () {
@@ -10987,13 +11003,13 @@
                   Math,
                   o.map(function (e) {
                     return e.value;
-                  })
+                  }),
                 ),
                 t = Math.min.apply(
                   Math,
                   o.map(function (e) {
                     return e.value;
-                  })
+                  }),
                 );
               return e <= 0 ? 0 : t >= 0 ? 1 : e / (e - t);
             },
@@ -11001,13 +11017,13 @@
               Math,
               o.map(function (e) {
                 return e.value;
-              })
+              }),
             ),
             v = Math.min.apply(
               Math,
               o.map(function (e) {
                 return e.value;
-              })
+              }),
             ),
             k = Math.abs(C) < Math.abs(v),
             f = Math.max(Math.abs(C), Math.abs(v)),
@@ -11016,7 +11032,7 @@
                 Math,
                 o.map(function (e) {
                   return Math.abs(e.value);
-                })
+                }),
               ) / 1e3
             ).toFixed(0);
           return _.createElement(
@@ -11025,7 +11041,7 @@
             _.createElement(
               "div",
               { className: Br().Title },
-              pe("#Match_NetWorth")
+              pe("#Match_NetWorth"),
             ),
             _.createElement(
               "div",
@@ -11057,26 +11073,26 @@
                         offset: y(),
                         stopColor: "#DF451A",
                         stopOpacity: 1,
-                      })
-                    )
+                      }),
+                    ),
                   ),
                   _.createElement(Ir.uN, {
                     type: "monotone",
                     dataKey: "value",
                     stroke: "url(#splitColor)",
                     fill: "url(#splitColor)",
-                  })
-                )
+                  }),
+                ),
               ),
               _.createElement(
                 "div",
                 { className: Ae(Br().Legend, k && Br().DireGreater) },
                 I,
                 "K",
-                _.createElement("div", { className: Br().Arrow }, "▶")
-              )
+                _.createElement("div", { className: Br().Arrow }, "▶"),
+              ),
             ),
-            _.createElement("div", { className: Br().Bottom }, c)
+            _.createElement("div", { className: Br().Bottom }, c),
           );
         },
         Ar = function (e) {
@@ -11094,7 +11110,7 @@
               className: Ae(
                 Br().SingleHeroStats,
                 !s && Br().Right,
-                c && Br().Recessed
+                c && Br().Recessed,
               ),
             },
             _.createElement(
@@ -11111,9 +11127,9 @@
                 _.createElement(
                   "div",
                   { className: Br().HeroName },
-                  pe("#Hero_" + r)
-                )
-              )
+                  pe("#Hero_" + r),
+                ),
+              ),
             ),
             _.createElement(
               "div",
@@ -11125,15 +11141,15 @@
                 " / ",
                 o,
                 " / ",
-                n
+                n,
               ),
               _.createElement(
                 "div",
                 { className: Br().NetWorth },
                 (l / 1e3).toFixed(1),
-                "K"
-              )
-            )
+                "K",
+              ),
+            ),
           );
         },
         Gr = function (e) {
@@ -11164,14 +11180,14 @@
                     netWorth: s.net_worth,
                     isLeft: 0 == n,
                     isRecessed: (n + l) % 2 == 0,
-                  })
+                  }),
                 );
               }
           return _.createElement(
             "div",
             { className: Br().HeroStatsSection },
             _.createElement("div", { className: Br().TeamHeroStats }, o[0]),
-            _.createElement("div", { className: Br().TeamHeroStats }, o[1])
+            _.createElement("div", { className: Br().TeamHeroStats }, o[1]),
           );
         },
         Mr = function (e) {
@@ -11191,8 +11207,8 @@
               "div",
               { className: Br().Names },
               _.createElement("div", { className: Br().ProName }, t),
-              _.createElement("div", { className: Br().RealName }, r)
-            )
+              _.createElement("div", { className: Br().RealName }, r),
+            ),
           );
         },
         Fr = function (e) {
@@ -11219,7 +11235,7 @@
                     realName: c ? c.real_name : "",
                     accountID: s.accountid,
                     isLeft: 0 == n,
-                  })
+                  }),
                 );
               }
           return _.createElement(
@@ -11228,14 +11244,14 @@
             _.createElement(
               "div",
               { className: Br().Title },
-              pe("#Series_TeamRosters")
+              pe("#Series_TeamRosters"),
             ),
             _.createElement(
               "div",
               { className: Br().TeamRosterTeams },
               _.createElement("div", { className: Br().TeamRoster }, o[0]),
-              _.createElement("div", { className: Br().TeamRoster }, o[1])
-            )
+              _.createElement("div", { className: Br().TeamRoster }, o[1]),
+            ),
           );
         },
         wr = function (e) {
@@ -11265,8 +11281,8 @@
                     key: "pickban_label_ban_" + m,
                     className: Ae(Br().PickOrBanLabel, Br().Ban),
                   },
-                  pe("#Match_Ban")
-                )
+                  pe("#Match_Ban"),
+                ),
               ),
                 (m += 1);
               for (var p = 0; p < 2; p += 1) {
@@ -11288,9 +11304,9 @@
                       _.createElement(
                         "div",
                         { className: Br().HeroName },
-                        pe("#Hero_" + u.hero)
-                      )
-                    )
+                        pe("#Hero_" + u.hero),
+                      ),
+                    ),
                   );
                 }
                 (s += 1), (l += 1);
@@ -11303,8 +11319,8 @@
                     key: "pickban_label_pick_" + m,
                     className: Ae(Br().PickOrBanLabel, Br().Pick),
                   },
-                  pe("#Match_Pick")
-                )
+                  pe("#Match_Pick"),
+                ),
               ),
                 (m += 1);
               for (p = 0; p < 2; p += 1)
@@ -11326,9 +11342,9 @@
                       _.createElement(
                         "div",
                         { className: Br().HeroName },
-                        pe("#Hero_" + h.hero)
-                      )
-                    )
+                        pe("#Hero_" + h.hero),
+                      ),
+                    ),
                   ),
                     (c += 1),
                     (l += 1);
@@ -11341,7 +11357,7 @@
             _.createElement(
               "div",
               { className: Br().Title },
-              pe("#Match_PicksAndBans")
+              pe("#Match_PicksAndBans"),
             ),
             _.createElement(
               "div",
@@ -11349,15 +11365,15 @@
               _.createElement(
                 "div",
                 { className: Ae(Br().TeamPicksAndBans, Br().Radiant) },
-                o[0]
+                o[0],
               ),
               _.createElement("div", { className: Br().PickAndBansLabel }, n),
               _.createElement(
                 "div",
                 { className: Ae(Br().TeamPicksAndBans, Br().Dire) },
-                o[1]
-              )
-            )
+                o[1],
+              ),
+            ),
           );
         };
       const Or = (function (e) {
@@ -11378,7 +11394,7 @@
           }),
           (t.prototype.render = function () {
             var e = Ia.getRealtimeMatchStats(
-              this.props.match.params.serverSteamID
+              this.props.match.params.serverSteamID,
             );
             return e && 0 != e.match.game_state
               ? 6 == e.match.game_state
@@ -11394,13 +11410,13 @@
                         teamDire: e.teams[1],
                         gameState: e.match.game_state,
                         gameTime: e.match.game_time,
-                      })
+                      }),
                     ),
                     _.createElement(
                       "div",
                       { className: Br().RadiantDireBar },
                       _.createElement("div", { className: Br().Radiant }),
-                      _.createElement("div", { className: Br().Dire })
+                      _.createElement("div", { className: Br().Dire }),
                     ),
                     _.createElement(
                       "div",
@@ -11431,8 +11447,8 @@
                         gameState: e.match.game_state,
                         picks: e.match.picks,
                         bans: e.match.bans,
-                      })
-                    )
+                      }),
+                    ),
                   )
               : _.createElement(
                   "div",
@@ -11444,8 +11460,8 @@
                       size: "medium",
                       string: pe("#MatchStatus_NoData"),
                       position: "center",
-                    })
-                  )
+                    }),
+                  ),
                 );
           }),
           (t = (0, a.gn)([He.Pi], t))
@@ -11575,8 +11591,8 @@
                     transformOrigin: "top left",
                   },
                 },
-                this.props.children
-              )
+                this.props.children,
+              ),
             );
           }),
           t
@@ -11607,7 +11623,7 @@
                     size: "medium",
                     string: pe("#Loading"),
                     position: "center",
-                  })
+                  }),
                 );
               var r = [];
               for (var a in t.node_groups) {
@@ -11685,9 +11701,9 @@
                         _.createElement(
                           "div",
                           { className: Ur().TeamName },
-                          d.team_name
-                        )
-                      )
+                          d.team_name,
+                        ),
+                      ),
                     );
                   }
                   l.length > 0 &&
@@ -11699,8 +11715,8 @@
                               key: "phase_header_" + o.node_group_id,
                               className: Ur().PhaseHeader,
                             },
-                            pe("#LeaguePhase_" + E + y + "Teams")
-                          )
+                            pe("#LeaguePhase_" + E + y + "Teams"),
+                          ),
                         ),
                         r.push(
                           _.createElement(
@@ -11709,8 +11725,8 @@
                               key: "phase_list_" + o.node_group_id,
                               className: Ur().PhaseBlock,
                             },
-                            C
-                          )
+                            C,
+                          ),
                         ))
                       : (r.unshift(
                           _.createElement(
@@ -11719,8 +11735,8 @@
                               key: "phase_list_" + o.node_group_id,
                               className: Ur().PhaseBlock,
                             },
-                            C
-                          )
+                            C,
+                          ),
                         ),
                         r.unshift(
                           _.createElement(
@@ -11729,8 +11745,8 @@
                               key: "phase_header_" + o.node_group_id,
                               className: Ur().PhaseHeader,
                             },
-                            pe("#LeaguePhase_" + E + y + "Teams")
-                          )
+                            pe("#LeaguePhase_" + E + y + "Teams"),
+                          ),
                         )));
                 }
               }
@@ -11772,7 +11788,7 @@
               className: Ae(
                 Ur().BracketNode,
                 c && Ur().InProgress,
-                d && Ur().IsCompleted
+                d && Ur().IsCompleted,
               ),
               style: { left: g, top: p },
             },
@@ -11785,7 +11801,7 @@
                 fallbackSrc: i.IMG_URL + "team_unknown.png",
               }),
               _.createElement("div", { className: Ur().TeamName }, t),
-              _.createElement("div", { className: Ur().TeamWins }, a)
+              _.createElement("div", { className: Ur().TeamWins }, a),
             ),
             _.createElement(
               "div",
@@ -11796,8 +11812,8 @@
                 fallbackSrc: i.IMG_URL + "team_unknown.png",
               }),
               _.createElement("div", { className: Ur().TeamName }, o),
-              _.createElement("div", { className: Ur().TeamWins }, l)
-            )
+              _.createElement("div", { className: Ur().TeamWins }, l),
+            ),
           );
         },
         Yr = (function (e) {
@@ -11832,13 +11848,13 @@
                       className: Ae(
                         Ur().Team,
                         n && Ur().Eliminated,
-                        l && Ur().Advancing
+                        l && Ur().Advancing,
                       ),
                     },
                     _.createElement(
                       "div",
                       { className: Ur().Standing },
-                      a.standing
+                      a.standing,
                     ),
                     _.createElement(Ft, {
                       src: a.team_logo_url,
@@ -11847,10 +11863,10 @@
                     _.createElement(
                       "div",
                       { className: Ur().TeamName },
-                      a.team_name
+                      a.team_name,
                     ),
-                    _.createElement("div", { className: Ur().Score }, o)
-                  )
+                    _.createElement("div", { className: Ur().Score }, o),
+                  ),
                 );
               }
               return _.createElement(
@@ -11858,7 +11874,7 @@
                 {
                   className: Ae(
                     Ur().TournamentRoundRobin,
-                    this.props.nodeGroup.is_tiebreaker && Ur().Tiebreak
+                    this.props.nodeGroup.is_tiebreaker && Ur().Tiebreak,
                   ),
                 },
                 _.createElement(
@@ -11866,10 +11882,10 @@
                   { className: Ur().Title },
                   this.props.nodeGroup.is_tiebreaker
                     ? pe("#Tiebreak")
-                    : this.props.nodeGroup.name
+                    : this.props.nodeGroup.name,
                 ),
                 _.createElement("div", { className: Ur().TitleUnderline }),
-                _.createElement("div", { className: Ur().PhaseBlock }, e)
+                _.createElement("div", { className: Ur().PhaseBlock }, e),
               );
             }),
             (t = (0, a.gn)([He.Pi], t))
@@ -11936,7 +11952,7 @@
                         positionY: m,
                         leagueID: this.props.leagueID,
                         seriesID: s.series_id,
-                      })
+                      }),
                     );
                 }
               return _.createElement(
@@ -11945,7 +11961,7 @@
                 _.createElement(
                   "div",
                   { className: Ur().Title, style: { width: r } },
-                  this.props.nodeGroup.name
+                  this.props.nodeGroup.name,
                 ),
                 _.createElement("div", {
                   className: Ur().TitleUnderline,
@@ -11957,8 +11973,8 @@
                     className: Ur().Background,
                     style: { backgroundImage: t, minWidth: r, minHeight: a },
                   },
-                  o
-                )
+                  o,
+                ),
               );
             }),
             (t = (0, a.gn)([He.Pi], t))
@@ -12040,7 +12056,7 @@
                         positionY: m,
                         leagueID: this.props.leagueID,
                         seriesID: s.series_id,
-                      })
+                      }),
                     );
                   }
                   break;
@@ -12145,7 +12161,7 @@
                         positionY: m,
                         leagueID: this.props.leagueID,
                         seriesID: s.series_id,
-                      })
+                      }),
                     );
                   }
               }
@@ -12155,7 +12171,7 @@
                 _.createElement(
                   "div",
                   { className: Ur().Title, style: { width: r } },
-                  this.props.nodeGroup.name
+                  this.props.nodeGroup.name,
                 ),
                 _.createElement("div", {
                   className: Ur().TitleUnderline,
@@ -12167,8 +12183,8 @@
                     className: Ur().Background,
                     style: { backgroundImage: t, minWidth: r, minHeight: a },
                   },
-                  o
-                )
+                  o,
+                ),
               );
             }),
             (t = (0, a.gn)([He.Pi], t))
@@ -12228,7 +12244,7 @@
                       positionY: m,
                       leagueID: this.props.leagueID,
                       seriesID: s.series_id,
-                    })
+                    }),
                   );
                 }
               return _.createElement(
@@ -12237,7 +12253,7 @@
                 _.createElement(
                   "div",
                   { className: Ur().Title, style: { width: r } },
-                  this.props.nodeGroup.name
+                  this.props.nodeGroup.name,
                 ),
                 _.createElement("div", {
                   className: Ur().TitleUnderline,
@@ -12249,8 +12265,8 @@
                     className: Ur().Background,
                     style: { backgroundImage: t, minWidth: r, minHeight: a },
                   },
-                  o
-                )
+                  o,
+                ),
               );
             }),
             (t = (0, a.gn)([He.Pi], t))
@@ -12308,7 +12324,7 @@
                     positionY: l,
                     leagueID: this.props.leagueID,
                     seriesID: o.series_id,
-                  })
+                  }),
                 );
               }
               return _.createElement(
@@ -12317,7 +12333,7 @@
                 _.createElement(
                   "div",
                   { className: Ur().Title, style: { width: 600 } },
-                  this.props.nodeGroup.name
+                  this.props.nodeGroup.name,
                 ),
                 _.createElement("div", {
                   className: Ur().TitleUnderline,
@@ -12333,8 +12349,8 @@
                       minHeight: 473,
                     },
                   },
-                  t
-                )
+                  t,
+                ),
               );
             }),
             (t = (0, a.gn)([He.Pi], t))
@@ -12359,10 +12375,10 @@
                   Ur().Standing,
                   1 == t && Ur().First,
                   2 == t && Ur().Second,
-                  3 == t && Ur().Third
+                  3 == t && Ur().Third,
                 ),
               },
-              t
+              t,
             ),
             _.createElement(
               "div",
@@ -12375,7 +12391,7 @@
                   src: a,
                   fallbackSrc: i.IMG_URL + "team_unknown.png",
                 }),
-                _.createElement("div", { className: Ur().TeamName }, r)
+                _.createElement("div", { className: Ur().TeamName }, r),
               ),
               _.createElement(
                 "div",
@@ -12386,9 +12402,9 @@
                   _.createElement(
                     "div",
                     { className: Ur().Label },
-                    pe("#Earnings")
+                    pe("#Earnings"),
                   ),
-                  _.createElement("div", { className: Ur().Value }, "$", s)
+                  _.createElement("div", { className: Ur().Value }, "$", s),
                 ),
                 o > 0 &&
                   _.createElement(
@@ -12397,12 +12413,12 @@
                     _.createElement(
                       "div",
                       { className: Ur().Label },
-                      pe("#Points")
+                      pe("#Points"),
                     ),
-                    _.createElement("div", { className: Ur().Value }, c)
-                  )
-              )
-            )
+                    _.createElement("div", { className: Ur().Value }, c),
+                  ),
+              ),
+            ),
           );
         },
         jr = (function (e) {
@@ -12430,8 +12446,8 @@
                       size: "medium",
                       string: pe("#Loading"),
                       position: "center",
-                    })
-                  )
+                    }),
+                  ),
                 );
               var a = [],
                 o = 0;
@@ -12456,7 +12472,7 @@
                         points: m,
                         earnings: c.earnings,
                         teamID: c.team_id,
-                      })
+                      }),
                     ),
                       (n = s + 1),
                       (l = !0);
@@ -12474,7 +12490,7 @@
                       points: m,
                       earnings: t.dollars[i - 1],
                       teamID: 0,
-                    })
+                    }),
                   );
                 }
               }
@@ -12490,7 +12506,7 @@
                         key: "bracket_" + n.node_group_id,
                         leagueID: e,
                         nodeGroup: n,
-                      })
+                      }),
                     );
                     break;
                   case 4:
@@ -12499,7 +12515,7 @@
                         key: "bracket_" + n.node_group_id,
                         leagueID: e,
                         nodeGroup: n,
-                      })
+                      }),
                     );
                     break;
                   case 5:
@@ -12508,7 +12524,7 @@
                         key: "bracket_" + n.node_group_id,
                         leagueID: e,
                         nodeGroup: n,
-                      })
+                      }),
                     );
                     break;
                   case 6:
@@ -12517,7 +12533,7 @@
                         key: "bracket_" + n.node_group_id,
                         leagueID: e,
                         nodeGroup: n,
-                      })
+                      }),
                     );
                     break;
                   case 7:
@@ -12528,7 +12544,7 @@
                         key: "bracket_" + n.node_group_id,
                         leagueID: e,
                         nodeGroup: n,
-                      })
+                      }),
                     );
                 }
                 this.renderNodeGroups(e, n, r);
@@ -12539,8 +12555,8 @@
                 Pe(
                   this.props.match.params.leagueID,
                   Ee.Standings,
-                  e.target.value
-                )
+                  e.target.value,
+                ),
               );
             }),
             (t.prototype.render = function () {
@@ -12554,7 +12570,7 @@
                     size: "medium",
                     string: pe("#Loading"),
                     position: "center",
-                  })
+                  }),
                 );
               var r,
                 a = [];
@@ -12563,8 +12579,8 @@
                   "option",
                   { key: "Results", value: "results" },
                   " ",
-                  pe("#LeaguePhase_Results")
-                )
+                  pe("#LeaguePhase_Results"),
+                ),
               );
               for (var o = 0, n = t.node_groups; o < n.length; o++) {
                 var l = (g = n[o]).phase + "_" + g.region,
@@ -12604,8 +12620,8 @@
                     "option",
                     { key: l, value: l },
                     " ",
-                    pe("#LeaguePhase_" + s + "Teams")
-                  )
+                    pe("#LeaguePhase_" + s + "Teams"),
+                  ),
                 );
               }
               if ("results" == this.props.match.params.phase)
@@ -12625,7 +12641,7 @@
                     maxScale: 2,
                     resetOnChanges: !0,
                   },
-                  c
+                  c,
                 );
               }
               return _.createElement(
@@ -12641,9 +12657,9 @@
                       backgroundImage: "url( " + i.IMG_URL + "down_arrow.png )",
                     },
                   },
-                  a
+                  a,
                 ),
-                r
+                r,
               );
             }),
             (0, a.gn)([_e], t.prototype, "onSelectPhaseOption", null),
@@ -12705,7 +12721,7 @@
                     size: "medium",
                     string: pe("#Loading"),
                     position: "center",
-                  })
+                  }),
                 );
               var a = [];
               if (r)
@@ -12721,7 +12737,7 @@
                       data_1: i.dire_team_id,
                       data_2: i.time,
                       server_steam_id: i.server_steam_id,
-                    })
+                    }),
                   );
                 }
               var l = [];
@@ -12735,7 +12751,7 @@
                     timestamp: 0,
                     league_id: e,
                     node_id: m,
-                  })
+                  }),
                 );
               }
               var d = [];
@@ -12753,7 +12769,7 @@
                     data_1: u[1],
                     league_id: e,
                     node_id: u[0],
-                  })
+                  }),
                 );
               }
               for (var h in t.series_infos) {
@@ -12763,7 +12779,7 @@
                     key: E.series_id,
                     nLeagueID: t.info.league_id,
                     nSeriesID: E.series_id,
-                  })
+                  }),
                 );
               }
               return _.createElement("div", { className: Ur().Matches }, a);
@@ -12791,7 +12807,7 @@
                 Pe(
                   this.props.match.params.leagueID,
                   Ee.Standings,
-                  this.props.match.params.phase
+                  this.props.match.params.phase,
                 ),
               a =
                 this.props.location.pathname ==
@@ -12812,8 +12828,8 @@
                     onClick: function () {
                       return window.history.back();
                     },
-                  })
-                )
+                  }),
+                ),
               ),
               _.createElement(
                 "div",
@@ -12827,7 +12843,7 @@
                       to: Pe(this.props.match.params.leagueID, Ee.Teams),
                       className: Ae(Ur().MenuLink, t && Ur().Enabled),
                     },
-                    pe("#Tournament_Teams")
+                    pe("#Tournament_Teams"),
                   ),
                   _.createElement(
                     m.OL,
@@ -12835,7 +12851,7 @@
                       to: Pe(this.props.match.params.leagueID, Ee.Standings),
                       className: Ae(Ur().MenuLink, r && Ur().Enabled),
                     },
-                    pe("#Tournament_Standings")
+                    pe("#Tournament_Standings"),
                   ),
                   _.createElement(
                     m.OL,
@@ -12843,8 +12859,8 @@
                       to: Pe(this.props.match.params.leagueID, Ee.Matchups),
                       className: Ae(Ur().MenuLink, a && Ur().Enabled),
                     },
-                    pe("#Tournament_Matches")
-                  )
+                    pe("#Tournament_Matches"),
+                  ),
                 ),
                 _.createElement(
                   "div",
@@ -12854,9 +12870,9 @@
                       Ur().Underline,
                       t && Ur().OnTeams,
                       r && Ur().OnStandings,
-                      a && Ur().OnMatches
+                      a && Ur().OnMatches,
                     ),
-                  })
+                  }),
                 ),
                 _.createElement(
                   d.rs,
@@ -12872,9 +12888,9 @@
                   _.createElement(d.AW, {
                     path: Pe(":leagueID", Ee.Matchups, ":phase"),
                     component: Qr,
-                  })
-                )
-              )
+                  }),
+                ),
+              ),
             );
           }),
           t
@@ -12893,7 +12909,7 @@
                 this.props.type,
                 this.props.id,
                 this.props.name,
-                this.props.url
+                this.props.url,
               );
             }),
             (t.prototype.render = function () {
@@ -12927,8 +12943,8 @@
                   _.createElement(
                     "div",
                     { className: ta().Name },
-                    this.props.name
-                  )
+                    this.props.name,
+                  ),
                 ),
                 _.createElement("img", {
                   src:
@@ -12936,7 +12952,7 @@
                     (r ? "favorite_star.png" : "favorite_star_empty.png"),
                   className: ta().Favorite,
                   onClick: this.toggle,
-                })
+                }),
               );
             }),
             (0, a.gn)([_e], t.prototype, "toggle", null),
@@ -13000,8 +13016,8 @@
                           key: "YourHeader_" + s.type,
                           className: ta().Category,
                         },
-                        pe("#Search_CategoryYour_" + s.name)
-                      )
+                        pe("#Search_CategoryYour_" + s.name),
+                      ),
                     );
                     for (
                       var c = 0, m = r.types[s.type].favorites;
@@ -13016,7 +13032,7 @@
                           id: d.id,
                           name: d.name,
                           url: d.url,
-                        })
+                        }),
                       ),
                         (a = !0);
                     }
@@ -13027,7 +13043,7 @@
                     _.createElement("div", {
                       key: "divider",
                       className: ta().Divider,
-                    })
+                    }),
                   );
               }
               for (var g in o) {
@@ -13040,9 +13056,9 @@
                       pe(
                         (this.state.bWasEmptySearch
                           ? "#Search_CategoryTop_"
-                          : "#Search_Category_") + s.name
-                      )
-                    )
+                          : "#Search_Category_") + s.name,
+                      ),
+                    ),
                   ),
                   p)) {
                     var h = p[u];
@@ -13054,7 +13070,7 @@
                           id: h.id,
                           name: h.name,
                           url: h.url,
-                        })
+                        }),
                       );
                   }
               }
@@ -13067,8 +13083,8 @@
                     size: "medium",
                     string: "Loading...",
                     position: "center",
-                  })
-                )
+                  }),
+                ),
               );
             return _.createElement(
               "div",
@@ -13097,10 +13113,10 @@
                     className: ta().Close,
                     src: i.IMG_URL + "x_close.png",
                     onClick: this.handleClear,
-                  })
-                )
+                  }),
+                ),
               ),
-              _.createElement("div", { className: ta().Contents }, e)
+              _.createElement("div", { className: ta().Contents }, e),
             );
           }),
           (0, a.gn)([_e], t.prototype, "handleChange", null),
@@ -13136,10 +13152,10 @@
                     to: ke("league", "na"),
                     className: Ae(
                       na().CategoryOption,
-                      t && na().OptionSelected
+                      t && na().OptionSelected,
                     ),
                   },
-                  pe("#Standings_DPCLeague")
+                  pe("#Standings_DPCLeague"),
                 ),
                 _.createElement(
                   m.rU,
@@ -13147,15 +13163,15 @@
                     to: ke("international", "global"),
                     className: Ae(
                       na().CategoryOption,
-                      e && na().OptionSelected
+                      e && na().OptionSelected,
                     ),
                   },
-                  pe("#Standings_International")
-                )
+                  pe("#Standings_International"),
+                ),
               ),
               t &&
                 _.createElement(la, { region: this.props.match.params.region }),
-              e && _.createElement(sa, null)
+              e && _.createElement(sa, null),
             );
           }),
           (t = (0, a.gn)([He.Pi], t))
@@ -13203,8 +13219,8 @@
                       },
                       l,
                       " - ",
-                      s
-                    )
+                      s,
+                    ),
                   );
                   for (var c = 0, d = i.entries; c < d.length; c++) {
                     var g = d[c];
@@ -13221,16 +13237,16 @@
                         _.createElement(
                           "div",
                           { className: na().TeamName },
-                          g.team_name
+                          g.team_name,
                         ),
                         _.createElement(
                           "div",
                           { className: na().WinLoss },
                           g.wins,
                           " - ",
-                          g.losses
-                        )
-                      )
+                          g.losses,
+                        ),
+                      ),
                     );
                   }
                 }
@@ -13247,14 +13263,14 @@
                       to: ke("league", "na"),
                       className: Ae(
                         na().Region,
-                        "na" == this.props.region && na().SelectedRegion
+                        "na" == this.props.region && na().SelectedRegion,
                       ),
                     },
                     _.createElement(
                       "div",
                       { className: na().RegionText },
-                      pe("#Standings_RegionNA")
-                    )
+                      pe("#Standings_RegionNA"),
+                    ),
                   ),
                   _.createElement(
                     m.rU,
@@ -13262,14 +13278,14 @@
                       to: ke("league", "sa"),
                       className: Ae(
                         na().Region,
-                        "sa" == this.props.region && na().SelectedRegion
+                        "sa" == this.props.region && na().SelectedRegion,
                       ),
                     },
                     _.createElement(
                       "div",
                       { className: na().RegionText },
-                      pe("#Standings_RegionSA")
-                    )
+                      pe("#Standings_RegionSA"),
+                    ),
                   ),
                   _.createElement(
                     m.rU,
@@ -13277,14 +13293,14 @@
                       to: ke("league", "eu"),
                       className: Ae(
                         na().Region,
-                        "eu" == this.props.region && na().SelectedRegion
+                        "eu" == this.props.region && na().SelectedRegion,
                       ),
                     },
                     _.createElement(
                       "div",
                       { className: na().RegionText },
-                      pe("#Standings_RegionWEU")
-                    )
+                      pe("#Standings_RegionWEU"),
+                    ),
                   ),
                   _.createElement(
                     m.rU,
@@ -13292,14 +13308,14 @@
                       to: ke("league", "cis"),
                       className: Ae(
                         na().Region,
-                        "cis" == this.props.region && na().SelectedRegion
+                        "cis" == this.props.region && na().SelectedRegion,
                       ),
                     },
                     _.createElement(
                       "div",
                       { className: na().RegionText },
-                      pe("#Standings_RegionEEU")
-                    )
+                      pe("#Standings_RegionEEU"),
+                    ),
                   ),
                   _.createElement(
                     m.rU,
@@ -13307,14 +13323,14 @@
                       to: ke("league", "cn"),
                       className: Ae(
                         na().Region,
-                        "cn" == this.props.region && na().SelectedRegion
+                        "cn" == this.props.region && na().SelectedRegion,
                       ),
                     },
                     _.createElement(
                       "div",
                       { className: na().RegionText },
-                      pe("#Standings_RegionCN")
-                    )
+                      pe("#Standings_RegionCN"),
+                    ),
                   ),
                   _.createElement(
                     m.rU,
@@ -13322,21 +13338,21 @@
                       to: ke("league", "sea"),
                       className: Ae(
                         na().Region,
-                        "sea" == this.props.region && na().SelectedRegion
+                        "sea" == this.props.region && na().SelectedRegion,
                       ),
                     },
                     _.createElement(
                       "div",
                       { className: na().RegionText },
-                      pe("#Standings_RegionSEA")
-                    )
-                  )
+                      pe("#Standings_RegionSEA"),
+                    ),
+                  ),
                 ),
                 _.createElement(
                   "div",
                   { className: na().ScrollableContents },
-                  t
-                )
+                  t,
+                ),
               );
             }),
             (t = (0, a.gn)([He.Pi], t))
@@ -13361,9 +13377,9 @@
                       _.createElement(
                         "span",
                         { className: na().NoPointsDesc },
-                        pe("#Standings_NoPointsYet")
-                      )
-                    )
+                        pe("#Standings_NoPointsYet"),
+                      ),
+                    ),
                   );
                 else
                   for (var a = 1, o = 0, n = e.results; o < n.length; o++) {
@@ -13389,7 +13405,11 @@
                           _.createElement(
                             "span",
                             { className: Ae(na().RankContainer, l) },
-                            _.createElement("span", { className: na().Rank }, a)
+                            _.createElement(
+                              "span",
+                              { className: na().Rank },
+                              a,
+                            ),
                           ),
                           _.createElement(
                             "span",
@@ -13399,20 +13419,20 @@
                               size: gt.Medium,
                               team_logo_url_fallback: i.team_logo_url,
                               className: na().TeamLogo,
-                            })
+                            }),
                           ),
                           _.createElement(
                             "span",
                             { className: na().TeamName },
-                            i.team_name
+                            i.team_name,
                           ),
                           _.createElement("span", { className: na().Spacer }),
                           _.createElement(
                             "span",
                             { className: na().Points },
-                            i.total_points
-                          )
-                        )
+                            i.total_points,
+                          ),
+                        ),
                       ),
                         (a += 1);
                     }
@@ -13426,8 +13446,8 @@
                       size: "medium",
                       string: pe("#Loading"),
                       position: "center",
-                    })
-                  )
+                    }),
+                  ),
                 );
               return _.createElement(
                 "div",
@@ -13446,7 +13466,7 @@
                       _.createElement(
                         "span",
                         { className: na().FooterText },
-                        pe("#Standings_Footer_Clinched")
+                        pe("#Standings_Footer_Clinched"),
                       ),
                       _.createElement("span", { className: na().FooterSpacer }),
                       _.createElement("span", {
@@ -13455,10 +13475,10 @@
                       _.createElement(
                         "span",
                         { className: na().FooterText },
-                        pe("#Standings_Footer_Eliminated")
-                      )
-                    )
-                  )
+                        pe("#Standings_Footer_Eliminated"),
+                      ),
+                    ),
+                  ),
               );
             }),
             (t = (0, a.gn)([He.Pi], t))
@@ -13542,11 +13562,11 @@
                         path: Pe(":leagueID", Ee.Matchups, ":phase"),
                         component: $r,
                       }),
-                      _.createElement(d.AW, { path: Ie(), component: aa })
-                    )
+                      _.createElement(d.AW, { path: Ie(), component: aa }),
+                    ),
                   ),
-                  _.createElement(we, null)
-                )
+                  _.createElement(we, null),
+                ),
               )
             );
           }),
@@ -13768,7 +13788,7 @@
                           4,
                           n().get(
                             i.BASE_URL + "webapi/IDOTA2DPC/" + e + "/v001",
-                            { params: t }
+                            { params: t },
                           ),
                         ]
                       );
@@ -13820,7 +13840,7 @@
                 r = e;
               return this.getOrCreateFromMap(
                 this.m_mapRealtimeGameStateAsync,
-                r
+                r,
               ).getData(15, function () {
                 return t.doAnonymousGet("GetRealtimeMatchStats", {
                   server_steam_id: e,
@@ -13842,9 +13862,9 @@
                   ? this.m_playerProfileInfo.data.disabled_notifications.push(e)
                   : this.m_playerProfileInfo.data.disabled_notifications.splice(
                       this.m_playerProfileInfo.data.disabled_notifications.indexOf(
-                        e
+                        e,
                       ),
-                      1
+                      1,
                     );
             }),
             (e.prototype.getLeagueInfoInternal = function () {
@@ -13876,7 +13896,7 @@
                     }),
                     t
                   );
-                }
+                },
               );
             }),
             (e.prototype.getLeagueInfo = function (e) {
@@ -13896,7 +13916,7 @@
                 r = e;
               return this.getOrCreateFromMap(
                 this.m_mapLeagueResultsAsync,
-                r
+                r,
               ).getData(30, function () {
                 return t.doAnonymousGet("GetLeagueResults", { league_id: e });
               });
@@ -13906,7 +13926,7 @@
                 r = e;
               return this.getOrCreateFromMap(
                 this.m_mapLeagueDataAsync,
-                r
+                r,
               ).getData(30, function () {
                 return t.doAnonymousGet("GetLeagueData", { league_id: e });
               });
@@ -13916,7 +13936,7 @@
                 a = (e << 16) | t;
               return this.getOrCreateFromMap(
                 this.m_mapLeagueNodeDataAsync,
-                a
+                a,
               ).getData(30, function () {
                 return r.doAnonymousGet("GetLeagueNodeData", {
                   league_id: e,
@@ -13929,7 +13949,7 @@
                 a = (e << 16) | t;
               return this.getOrCreateFromMap(
                 this.m_mapLeagueNodeGroupDataAsync,
-                a
+                a,
               ).getData(30, function () {
                 return r.doAnonymousGet("GetLeagueNodeGroupData", {
                   league_id: e,
@@ -13942,7 +13962,7 @@
                 a = t;
               return this.getOrCreateFromMap(
                 this.m_mapSeriesDataAsync,
-                a
+                a,
               ).getData(30, function () {
                 return r.doAnonymousGet("GetLeagueSeries", {
                   league_id: e,
@@ -13955,7 +13975,7 @@
                 a = t;
               return this.getOrCreateFromMap(
                 this.m_mapMatchMinimalDataAsync,
-                a
+                a,
               ).getData(300, function () {
                 return r.doAnonymousGet("GetLeagueMatchMinimal", {
                   league_id: e,
@@ -13968,7 +13988,7 @@
                 r = e;
               return this.getOrCreateFromMap(
                 this.m_mapMatchDataAsync,
-                r
+                r,
               ).getData(300, function () {
                 return t.doAnonymousGet("GetDPCMatch", { match_id: e });
               });
@@ -13984,7 +14004,7 @@
                 r = e;
               return this.getOrCreateFromMap(
                 this.m_mapTeamDataAsync,
-                r
+                r,
               ).getData(60, function () {
                 return t.doAnonymousGet("GetSingleTeamInfo", {
                   team_id: e,
@@ -13997,7 +14017,7 @@
                 r = e;
               return this.getOrCreateFromMap(
                 this.m_mapPlayerDataAsync,
-                r
+                r,
               ).getData(300, function () {
                 return t.doAnonymousGet("GetPlayerInfo", { account_id: e });
               });
@@ -14007,7 +14027,7 @@
                 a = (e << 16) | t;
               return this.getOrCreateFromMap(
                 this.m_mapPlayersInRoleDataAsync,
-                a
+                a,
               ).getData(300, function () {
                 return r.doAnonymousGet("GetLeaguePlayers", {
                   league_id: e,
@@ -14044,9 +14064,9 @@
                         r.id == t &&
                           o.m_rgFavoritesAsync.data.types[e].favorites.splice(
                             a,
-                            1
+                            1,
                           );
-                      }
+                      },
                     )
                   : this.m_rgFavoritesAsync.data.types[e].favorites.push({
                       id: t,
@@ -14102,7 +14122,7 @@
                                 (e.m_selectedPrediction.payoutAmount =
                                   Math.floor(
                                     e.m_selectedPrediction.payout *
-                                      e.m_selectedPrediction.wagerAmount
+                                      e.m_selectedPrediction.wagerAmount,
                                   ));
                               break;
                             }
@@ -14112,7 +14132,7 @@
                       }
                   }
                   return t;
-                }
+                },
               );
             }),
             (e.prototype.getRecentAndUpcomingMatchesRefreshInterval =
@@ -14213,7 +14233,7 @@
             (e.prototype.setSelectedPredictionWagerAmount = function (e) {
               (this.m_selectedPrediction.wagerAmount = e),
                 (this.m_selectedPrediction.payoutAmount = Math.floor(
-                  e * this.m_selectedPrediction.payout
+                  e * this.m_selectedPrediction.payout,
                 ));
             }),
             (e.prototype.getSelectedProPrediction = function () {
@@ -14273,7 +14293,7 @@
                                 payoutOdds: t.payout,
                                 payoutAmount: t.payoutAmount,
                                 state: ha.STATE_INCOMPLETE,
-                              }
+                              },
                             ),
                             (this.m_rgProPredictionStatusAsync.data.TokensLeft =
                               this.m_rgProPredictionStatusAsync.data
@@ -14284,7 +14304,7 @@
                               t.leagueNodeId,
                               o.data
                                 ? o.data.errorCode
-                                : Ea.MAKE_PREDICTION_RESULT_NETWORK_FAILURE
+                                : Ea.MAKE_PREDICTION_RESULT_NETWORK_FAILURE,
                             ),
                         this.m_mapProPredictionInProgress.set(e, !1),
                         this.clearProPredictionToMake(),
@@ -14429,7 +14449,7 @@
                     (t.bRosterNeedsSubmission = r.data.bRosterNeedsSubmission),
                     t
                   );
-                }
+                },
               );
             }),
             (e.prototype.setFantasyRosterSlot = function (e, t, r, a, o) {
@@ -14480,7 +14500,7 @@
                         this.m_rgFantasyLeagueStatusAsync.expireData(),
                           (t = this.getOrCreateFromMap(
                             this.m_rgFantasyLineupsAsync,
-                            e
+                            e,
                           )).expireData(),
                           r = 0,
                           o = t.data.rgRosterSlots;
@@ -14533,7 +14553,7 @@
                   .toString();
               return this.getOrCreateFromMap(
                 this.m_mapFantasyDayScoreAsync,
-                o
+                o,
               ).getData(60, function () {
                 return a.doUserGet("GetFantasyDPCDayScore", {
                   league_id: e,
@@ -14545,7 +14565,7 @@
               var r = this;
               return this.getOrCreateFromMap(
                 this.m_mapFantasyLeaderboardFriendsAsync,
-                e
+                e,
               ).getData(300, function () {
                 return r.doUserGet("GetFantasyDPCFriendLeaderboard", {
                   league_id: e,
@@ -14556,7 +14576,7 @@
               var r = this;
               return this.getOrCreateFromMap(
                 this.m_mapFantasyLeaderboardGlobalAsync,
-                e
+                e,
               ).getData(300, function () {
                 return r.doAnonymousGet("GetFantasyDPCGlobalLeaderboard", {
                   league_id: e,
@@ -14566,14 +14586,14 @@
             (e.prototype.Init = function () {
               ga.render(
                 _.createElement(ca, { app: this }),
-                document.getElementById("dpc_root")
+                document.getElementById("dpc_root"),
               );
             }),
             (0, a.gn)(
               [Qt.LO],
               e.prototype,
               "m_mapProPredictionInProgress",
-              void 0
+              void 0,
             ),
             (0, a.gn)([Qt.LO], e.prototype, "m_mapProPredictionError", void 0),
             (0, a.gn)([Qt.LO], e.prototype, "m_mapHelpState", void 0),

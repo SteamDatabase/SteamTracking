@@ -142,7 +142,7 @@
             const t = `${
               i.De.COMMUNITY_CDN_URL
             }economy/emoticonhoverjson/${encodeURIComponent(
-              e
+              e,
             )}?l=${encodeURIComponent(i.De.LANGUAGE)}&origin=${(0, i.Kc)()}`;
             this.m_inflightRequests[e] = !0;
             try {
@@ -222,12 +222,12 @@
                     e,
                     null === (i = null == d ? void 0 : d.data) || void 0 === i
                       ? void 0
-                      : i.registration
+                      : i.registration,
                   ),
                   this.GetRegistrationChangeCallback(e).Dispatch(
                     null === (s = null == d ? void 0 : d.data) || void 0 === s
                       ? void 0
-                      : s.registration
+                      : s.registration,
                   ),
                   null === (l = null == d ? void 0 : d.data) || void 0 === l
                     ? void 0
@@ -243,7 +243,7 @@
                   e +
                   " error: " +
                   (null == o ? void 0 : o.strErrorMsg),
-                o
+                o,
               ),
               { registered: !1 }
             );
@@ -254,7 +254,7 @@
             this.m_mapCreatePromises.has(e) ||
               this.m_mapCreatePromises.set(
                 e,
-                this.InternalCreateRegistration(e)
+                this.InternalCreateRegistration(e),
               ),
             this.m_mapCreatePromises.get(e)
           );
@@ -284,12 +284,12 @@
                     e,
                     null === (i = null == d ? void 0 : d.data) || void 0 === i
                       ? void 0
-                      : i.registration
+                      : i.registration,
                   ),
                   this.GetRegistrationChangeCallback(e).Dispatch(
                     null === (s = null == d ? void 0 : d.data) || void 0 === s
                       ? void 0
-                      : s.registration
+                      : s.registration,
                   ),
                   null === (l = null == d ? void 0 : d.data) || void 0 === l
                     ? void 0
@@ -305,7 +305,7 @@
                   e +
                   " error: " +
                   (null == o ? void 0 : o.strErrorMsg),
-                o
+                o,
               ),
               { registered: !1 }
             );
@@ -357,7 +357,7 @@
       function l(e) {
         const { text: t, languageOverride: n } = e,
           [s] = (0, i.useState)(
-            new o.Z6(new Map([...Array.from(r.Be.entries())]), c, n)
+            new o.Z6(new Map([...Array.from(r.Be.entries())]), c, n),
           );
         return i.createElement(i.Fragment, null, s.ParseBBCode(t, {}));
       }
@@ -405,7 +405,7 @@
           }
           return (
             console.log(
-              `Error: CopyableText must be the parent of exactly one child:\n\tcopystyle=${this.props.style} copytext=${e}`
+              `Error: CopyableText must be the parent of exactly one child:\n\tcopystyle=${this.props.style} copytext=${e}`,
             ),
             s.createElement(s.Fragment, null, this.props.children)
           );
@@ -443,7 +443,7 @@
                       this.setState({
                         activeIndex: Math.min(
                           e.length - 1,
-                          this.state.activeIndex + 1
+                          this.state.activeIndex + 1,
                         ),
                       });
                 }
@@ -452,7 +452,7 @@
             f.s,
             { className: S.Picker, onButtonDown: i },
             o && s.createElement(P, null, this.RenderTabs()),
-            n
+            n,
           );
         }
         RenderTabs() {
@@ -465,7 +465,7 @@
                 active: n,
                 onClick: () => this.setState({ activeIndex: t }),
               },
-              e(n)
+              e(n),
             );
           });
         }
@@ -474,7 +474,7 @@
         return s.createElement(
           f.s,
           { className: S.Tabs, "flow-children": "row" },
-          e.children
+          e.children,
         );
       }
       function L(e) {
@@ -492,8 +492,8 @@
           s.createElement(
             "div",
             { className: (0, p.Z)(S.TabContent, t && S.Active) },
-            n
-          )
+            n,
+          ),
         );
       }
       function b(e) {
@@ -514,15 +514,15 @@
               autoFocus: 0 === r,
               focusClassName: S.Focus,
             },
-            n(t[r])
-          )
+            n(t[r]),
+          ),
         );
         return (
           0 === t.length && r && (c = r()),
           s.createElement(
             f.s,
             { "flow-children": "grid", className: S.ItemList },
-            c
+            c,
           )
         );
       }
@@ -538,10 +538,10 @@
             s.createElement(
               I,
               { title: t },
-              s.createElement(b, Object.assign({}, c))
-            )
+              s.createElement(b, Object.assign({}, c)),
+            ),
           ),
-          s.createElement(w, { value: i, onChange: n, onSubmit: r })
+          s.createElement(w, { value: i, onChange: n, onSubmit: r }),
         );
       }
       function R(e) {
@@ -559,11 +559,11 @@
               return s.createElement(
                 I,
                 { title: t, key: t },
-                s.createElement(b, Object.assign({}, n))
+                s.createElement(b, Object.assign({}, n)),
               );
-            })
+            }),
           ),
-          s.createElement(w, { value: n, onChange: t })
+          s.createElement(w, { value: n, onChange: t }),
         );
       }
       function I(e) {
@@ -571,7 +571,7 @@
           "div",
           { className: S.Section },
           s.createElement("div", { className: S.SectionTitle }, e.title),
-          s.createElement("div", { className: S.SectionContent }, e.children)
+          s.createElement("div", { className: S.SectionContent }, e.children),
         );
       }
       function w(e) {
@@ -586,7 +586,7 @@
             value: t,
             onChange: (e) => n(e.target.value),
             onSubmit: o,
-          })
+          }),
         );
       }
       function B(e) {
@@ -594,7 +594,7 @@
           n = (0, o._T)(e, ["className"]);
         return s.createElement(
           "div",
-          Object.assign({ className: (0, p.Z)(t, S.AddonPickerMessage) }, n)
+          Object.assign({ className: (0, p.Z)(t, S.AddonPickerMessage) }, n),
         );
       }
       var y = n(28744),
@@ -629,14 +629,14 @@
                 onMouseEnter: this.OnMouseEnter,
                 onMouseLeave: this.OnMouseLeave,
                 ref: this.m_ref,
-              })
+              }),
             ),
             this.state.showHover &&
               s.createElement(T, {
                 target: this.m_ref.current,
                 store: n,
                 emoticon: e,
-              })
+              }),
           );
         }
       }
@@ -656,7 +656,7 @@
               emoticon: o,
               emoticonHoverStore: n,
               large: !0,
-            })
+            }),
           );
         }),
         M = ({ target: e, title: t, subtitle: n, children: o }) =>
@@ -674,14 +674,14 @@
               s.createElement(
                 "div",
                 { className: N().Name },
-                t || s.createElement("span", null, " ")
+                t || s.createElement("span", null, " "),
               ),
               s.createElement(
                 "div",
                 { className: N().AppName },
-                n || s.createElement("span", null, " ")
-              )
-            )
+                n || s.createElement("span", null, " "),
+              ),
+            ),
           );
       function H(e) {
         return e.recent_emoticons;
@@ -709,7 +709,7 @@
               e.UpdateEmoticonList();
               const t = (0, i.gx)(
                 () => e.is_initialized,
-                () => n(e.is_initialized)
+                () => n(e.is_initialized),
               );
               return () => t();
             }
@@ -728,10 +728,10 @@
                     className: (0, p.Z)(
                       N().PickerTab,
                       N().Clock,
-                      e && N().ActiveTab
+                      e && N().ActiveTab,
                     ),
                   },
-                  s.createElement(le, null)
+                  s.createElement(le, null),
                 ),
               renderContent: () =>
                 s.createElement(z, {
@@ -756,7 +756,7 @@
                         title: (0, u.Xx)("#AddonPicker_Emoticons"),
                         className: (0, p.Z)(N().PickerTab, e && N().ActiveTab),
                       },
-                      s.createElement(se, null)
+                      s.createElement(se, null),
                     ),
                   renderContent: () =>
                     s.createElement(j, {
@@ -774,7 +774,7 @@
                         title: (0, u.Xx)("#AddonPicker_Stickers"),
                         className: (0, p.Z)(N().PickerTab, e && N().ActiveTab),
                       },
-                      s.createElement(re, null)
+                      s.createElement(re, null),
                     ),
                   renderContent: () =>
                     s.createElement(J, {
@@ -790,7 +790,7 @@
                         title: (0, u.Xx)("#AddonPicker_RoomEffects"),
                         className: (0, p.Z)(N().PickerTab, e && N().ActiveTab),
                       },
-                      s.createElement(ce, null)
+                      s.createElement(ce, null),
                     ),
                   renderContent: () =>
                     s.createElement(W, {
@@ -800,7 +800,7 @@
                     }),
                 },
               ],
-            })
+            }),
           )
         );
       });
@@ -812,7 +812,7 @@
             (t.UpdateEmoticonList(),
             (this.m_disposeEmoticonStore = (0, i.gx)(
               () => t.is_initialized,
-              () => this.forceUpdate()
+              () => this.forceUpdate(),
             )));
         }
         componentWillUnmount() {
@@ -838,10 +838,10 @@
                       className: (0, p.Z)(
                         N().PickerTab,
                         N().Clock,
-                        e && N().ActiveTab
+                        e && N().ActiveTab,
                       ),
                     },
-                    s.createElement(le, null)
+                    s.createElement(le, null),
                   ),
                 renderContent: () =>
                   s.createElement(z, {
@@ -866,10 +866,10 @@
                           title: (0, u.Xx)("#AddonPicker_Emoticons"),
                           className: (0, p.Z)(
                             N().PickerTab,
-                            e && N().ActiveTab
+                            e && N().ActiveTab,
                           ),
                         },
-                        s.createElement(se, null)
+                        s.createElement(se, null),
                       ),
                     renderContent: () =>
                       s.createElement(j, {
@@ -887,10 +887,10 @@
                           title: (0, u.Xx)("#AddonPicker_Stickers"),
                           className: (0, p.Z)(
                             N().PickerTab,
-                            e && N().ActiveTab
+                            e && N().ActiveTab,
                           ),
                         },
-                        s.createElement(re, null)
+                        s.createElement(re, null),
                       ),
                     renderContent: () =>
                       s.createElement(J, {
@@ -899,7 +899,7 @@
                       }),
                   },
                 ],
-              })
+              }),
             )
           );
         }
@@ -913,7 +913,7 @@
             (t.UpdateEmoticonList(),
             (this.m_disposeEmoticonStore = (0, i.gx)(
               () => t.is_initialized,
-              () => this.forceUpdate()
+              () => this.forceUpdate(),
             )));
         }
         componentWillUnmount() {
@@ -933,7 +933,7 @@
                         title: (0, u.Xx)("#AddonPicker_Emoticons"),
                         className: N().PickerTab,
                       },
-                      s.createElement(se, null)
+                      s.createElement(se, null),
                     ),
                   renderContent: () =>
                     s.createElement(K, {
@@ -944,7 +944,7 @@
                     }),
                 },
               ],
-            })
+            }),
           );
         }
       }
@@ -956,7 +956,7 @@
             (t.UpdateEmoticonList(),
             (this.m_disposeEmoticonStore = (0, i.gx)(
               () => t.is_initialized,
-              () => this.forceUpdate()
+              () => this.forceUpdate(),
             )));
         }
         componentWillUnmount() {
@@ -976,7 +976,7 @@
                         title: (0, u.Xx)("#AddonPicker_Emoticons"),
                         className: N().PickerTab,
                       },
-                      s.createElement(se, null)
+                      s.createElement(se, null),
                     ),
                   renderContent: () =>
                     s.createElement(q, {
@@ -987,7 +987,7 @@
                     }),
                 },
               ],
-            })
+            }),
           );
         }
       }
@@ -1021,8 +1021,8 @@
                       ? (0, u.Xx)("#AddonPicker_NoResults")
                       : (0, u.Xx)(
                           "#AddonPicker_NoRecent",
-                          (0, u.Xx)("#AddonPicker_Emoticons")
-                        )
+                          (0, u.Xx)("#AddonPicker_Emoticons"),
+                        ),
                   ),
               }),
             U(e).length &&
@@ -1040,8 +1040,8 @@
                       ? (0, u.Xx)("#AddonPicker_NoResults")
                       : (0, u.Xx)(
                           "#AddonPicker_NoRecent",
-                          (0, u.Xx)("#AddonPicker_Stickers")
-                        )
+                          (0, u.Xx)("#AddonPicker_Stickers"),
+                        ),
                   ),
               }),
             s.createElement(R, {
@@ -1092,8 +1092,8 @@
             null,
             (0, u.Xx)(
               "#AddonPicker_NoneOwned",
-              (0, u.Xx)("#AddonPicker_Emoticons")
-            )
+              (0, u.Xx)("#AddonPicker_Emoticons"),
+            ),
           ),
           s.createElement(
             B,
@@ -1103,15 +1103,15 @@
               s.createElement(
                 D.ns,
                 { href: `${_.De.STORE_BASE_URL}points/shop/c/emoticons` },
-                (0, u.Xx)("#AddonPicker_AcquireAtPointsShop_Link")
+                (0, u.Xx)("#AddonPicker_AcquireAtPointsShop_Link"),
               ),
               s.createElement(
                 D.ns,
                 { href: `${_.De.COMMUNITY_BASE_URL}market` },
-                (0, u.Xx)("#AddonPicker_AcquireAtPointsShopOrMarket_Link")
-              )
-            )
-          )
+                (0, u.Xx)("#AddonPicker_AcquireAtPointsShopOrMarket_Link"),
+              ),
+            ),
+          ),
         );
       }
       class J extends s.Component {
@@ -1142,8 +1142,8 @@
                       null,
                       (0, u.Xx)(
                         "#AddonPicker_NoneOwned",
-                        (0, u.Xx)("#AddonPicker_Stickers")
-                      )
+                        (0, u.Xx)("#AddonPicker_Stickers"),
+                      ),
                     ),
                     s.createElement(
                       B,
@@ -1155,10 +1155,10 @@
                           {
                             href: `${_.De.STORE_BASE_URL}points/shop/c/stickers`,
                           },
-                          (0, u.Xx)("#AddonPicker_AcquireAtPointsShop_Link")
-                        )
-                      )
-                    )
+                          (0, u.Xx)("#AddonPicker_AcquireAtPointsShop_Link"),
+                        ),
+                      ),
+                    ),
                   ),
           });
         }
@@ -1192,8 +1192,8 @@
                       null,
                       (0, u.Xx)(
                         "#AddonPicker_NoneOwned",
-                        (0, u.Xx)("#AddonPicker_RoomEffects")
-                      )
+                        (0, u.Xx)("#AddonPicker_RoomEffects"),
+                      ),
                     ),
                     s.createElement(
                       B,
@@ -1205,10 +1205,10 @@
                           {
                             href: `${_.De.STORE_BASE_URL}points/shop/c/chateffects`,
                           },
-                          (0, u.Xx)("#AddonPicker_AcquireAtPointsShop_Link")
-                        )
-                      )
-                    )
+                          (0, u.Xx)("#AddonPicker_AcquireAtPointsShop_Link"),
+                        ),
+                      ),
+                    ),
                   ),
           });
         }
@@ -1243,8 +1243,8 @@
                       ? (0, u.Xx)("#AddonPicker_NoResults")
                       : (0, u.Xx)(
                           "#AddonPicker_NoRecent",
-                          (0, u.Xx)("#AddonPicker_Emoticons")
-                        )
+                          (0, u.Xx)("#AddonPicker_Emoticons"),
+                        ),
                   ),
               }),
             s.createElement(R, {
@@ -1264,7 +1264,7 @@
                       ? s.createElement(
                           B,
                           null,
-                          (0, u.Xx)("#AddonPicker_NoResults")
+                          (0, u.Xx)("#AddonPicker_NoResults"),
                         )
                       : s.createElement(Y, null),
                 },
@@ -1302,7 +1302,7 @@
                     ? s.createElement(
                         B,
                         null,
-                        (0, u.Xx)("#AddonPicker_NoResults")
+                        (0, u.Xx)("#AddonPicker_NoResults"),
                       )
                     : s.createElement(Y, null),
               },
@@ -1322,7 +1322,7 @@
             emoticonHoverStore: n,
             large: o,
           }),
-          i && s.createElement(oe, null)
+          i && s.createElement(oe, null),
         );
       };
       class $ extends s.Component {
@@ -1347,11 +1347,11 @@
                 onMouseLeave: () => this.setState({ showHover: !1 }),
                 onBlur: () => this.setState({ showHover: !1 }),
               },
-              i
+              i,
             ),
             s.createElement("img", { style: { width: "100%" }, src: r }),
             this.state.showHover &&
-              s.createElement(ee, { target: this.m_ref.current, sticker: t })
+              s.createElement(ee, { target: this.m_ref.current, sticker: t }),
           );
         }
       }
@@ -1367,7 +1367,7 @@
           s.createElement("img", {
             src: E(_.De.COMMUNITY_CDN_URL, n),
             className: N().StickerHoverSticker,
-          })
+          }),
         );
       });
       class te extends s.Component {
@@ -1392,7 +1392,7 @@
                 onBlur: () => this.setState({ showHover: !1 }),
                 className: (0, p.Z)(i, N().EffectButton),
               },
-              r
+              r,
             ),
             c.renderEffectIcon(),
             this.state.showHover &&
@@ -1400,7 +1400,7 @@
                 target: this.m_ref.current,
                 effect: t,
                 roomEffectSettings: n,
-              })
+              }),
           );
         }
       }
@@ -1418,15 +1418,15 @@
           s.createElement(
             "div",
             { className: N().EffectHoverEffect },
-            r.renderEffectIcon()
-          )
+            r.renderEffectIcon(),
+          ),
         );
       });
       function oe() {
         return s.createElement(
           "div",
           { className: N().NewEmoticonIndicator },
-          s.createElement("div", { className: N().NewEmoticonCircle })
+          s.createElement("div", { className: N().NewEmoticonCircle }),
         );
       }
       class ie extends s.Component {
@@ -1439,7 +1439,7 @@
         componentDidMount() {
           this.props.coordinator.RegisterChild(
             c.findDOMNode(this),
-            this.SetVisible
+            this.SetVisible,
           );
         }
         componentWillUnmount() {
@@ -1466,7 +1466,7 @@
                   emoticon: e.name,
                   large: !0,
                 }),
-              n && s.createElement(oe, null)
+              n && s.createElement(oe, null),
             )
           );
         }
@@ -1481,7 +1481,7 @@
                   fill: "none",
                   xmlns: "http://www.w3.org/2000/svg",
                 },
-                e
+                e,
               ),
               s.createElement("path", {
                 fillRule: "evenodd",
@@ -1512,7 +1512,7 @@
               s.createElement("path", {
                 d: "M29 22.1875V21L31 19V22.1875H29Z",
                 fill: "currentColor",
-              })
+              }),
             )
           : s.createElement(
               "svg",
@@ -1528,9 +1528,9 @@
                     fillRule: "evenodd",
                     clipRule: "evenodd",
                     fill: "#fff",
-                  })
-                )
-              )
+                  }),
+                ),
+              ),
             );
       }
       function se(e) {
@@ -1545,14 +1545,14 @@
                   fill: "none",
                   xmlns: "http://www.w3.org/2000/svg",
                 },
-                e
+                e,
               ),
               s.createElement("path", {
                 fillRule: "evenodd",
                 clipRule: "evenodd",
                 d: "M33 18C33 26.2843 26.2843 33 18 33C15.031 33 12.2636 32.1374 9.93446 30.6492L4.35707 32.4107C3.95174 32.5387 3.58168 32.1347 3.74474 31.7421L5.81718 26.7529C4.04426 24.2896 3 21.2667 3 18C3 9.71573 9.71573 3 18 3C26.2843 3 33 9.71573 33 18ZM18 9.66667C16.3518 9.66667 14.7407 10.1554 13.3703 11.0711C11.9998 11.9868 10.9317 13.2883 10.301 14.811C9.67028 16.3337 9.50525 18.0092 9.82679 19.6258C10.1483 21.2423 10.942 22.7271 12.1074 23.8926C13.2729 25.058 14.7577 25.8517 16.3743 26.1732C17.9908 26.4948 19.6663 26.3297 21.189 25.699C22.7118 25.0683 24.0132 24.0002 24.9289 22.6298C25.8446 21.2593 26.3333 19.6482 26.3333 18C26.3333 16.9057 26.1178 15.822 25.699 14.811C25.2802 13.7999 24.6664 12.8813 23.8926 12.1074C23.1187 11.3336 22.2001 10.7198 21.189 10.301C20.178 9.88222 19.0944 9.66667 18 9.66667ZM13 16.3333C13 16.0037 13.0978 15.6815 13.2809 15.4074C13.464 15.1333 13.7243 14.9197 14.0289 14.7935C14.3334 14.6674 14.6685 14.6344 14.9918 14.6987C15.3151 14.763 15.6121 14.9217 15.8452 15.1548C16.0783 15.3879 16.237 15.6849 16.3013 16.0082C16.3656 16.3315 16.3326 16.6666 16.2065 16.9711C16.0803 17.2757 15.8667 17.536 15.5926 17.7191C15.3185 17.9023 14.9963 18 14.6667 18C14.2246 18 13.8007 17.8244 13.4882 17.5118C13.1756 17.1993 13 16.7754 13 16.3333ZM21.3333 18C21.0037 18 20.6815 17.9023 20.4074 17.7191C20.1333 17.536 19.9197 17.2757 19.7935 16.9711C19.6674 16.6666 19.6344 16.3315 19.6987 16.0082C19.763 15.6849 19.9217 15.3879 20.1548 15.1548C20.3879 14.9217 20.6849 14.763 21.0082 14.6987C21.3315 14.6344 21.6666 14.6674 21.9711 14.7935C22.2757 14.9197 22.536 15.1333 22.7191 15.4074C22.9023 15.6815 23 16.0037 23 16.3333C23 16.7754 22.8244 17.1993 22.5119 17.5118C22.1993 17.8244 21.7754 18 21.3333 18ZM19.9642 22.1864C20.4851 21.6655 20.7778 20.9589 20.7778 20.2222H15.2222C15.2222 20.9589 15.5149 21.6655 16.0358 22.1864C16.5568 22.7073 17.2633 23 18 23C18.7367 23 19.4433 22.7073 19.9642 22.1864Z",
                 fill: "currentColor",
-              })
+              }),
             )
           : s.createElement(
               "svg",
@@ -1562,7 +1562,7 @@
                 fillRule: "evenodd",
                 clipRule: "evenodd",
                 fill: "#fff",
-              })
+              }),
             );
       }
       function ce(e) {
@@ -1575,7 +1575,7 @@
                   fill: "none",
                   xmlns: "http://www.w3.org/2000/svg",
                 },
-                e
+                e,
               ),
               s.createElement("path", {
                 d: "M14.5 7L17.2 15.37C17.5375 16.5175 18.4825 17.395 19.63 17.8L28 20.5L19.63 23.2C18.4825 23.5375 17.605 24.4825 17.2 25.63L14.5 34L11.8 25.63C11.4625 24.4825 10.5175 23.605 9.37 23.2L1 20.5L9.37 17.8C10.5175 17.4625 11.395 16.5175 11.8 15.37L14.5 7Z",
@@ -1596,7 +1596,7 @@
               s.createElement("path", {
                 d: "M26.4615 25L27.1538 27.1913C27.2462 27.471 27.4769 27.7042 27.7538 27.7974L29.9231 28.4968L27.7538 29.1961C27.4769 29.2894 27.2462 29.5225 27.1538 29.8022L26.4615 31.9935L25.7692 29.8022C25.6769 29.5225 25.4462 29.2894 25.1692 29.1961L23 28.4968L25.1692 27.7974C25.4462 27.7042 25.6769 27.471 25.7692 27.1913L26.4615 25Z",
                 fill: "currentColor",
-              })
+              }),
             )
           : s.createElement(
               "svg",
@@ -1606,7 +1606,7 @@
                 fillRule: "evenodd",
                 clipRule: "evenodd",
                 fill: "#fff",
-              })
+              }),
             );
       }
       function le(e) {
@@ -1624,11 +1624,11 @@
               height: "20px",
               viewBox: "0 0 24 24",
             },
-            n
+            n,
           ),
           s.createElement("path", {
             d: "M15.999 15c-.15 0-.303-.034-.446-.105l-4-2A1.001 1.001 0 0111 12V5a1 1 0 012 0v6.382l3.447 1.724A1 1 0 0115.999 15zM12 24C5.383 24 0 18.617 0 12S5.383 0 12 0s12 5.383 12 12-5.383 12-12 12zm0-22C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2z",
-          })
+          }),
         );
       }
       (0, o.gn)([g.ak], ie.prototype, "SetVisible", null);
@@ -1697,7 +1697,7 @@
                 bOverlapHorizontal: !0,
                 bPreferPopLeft: !0,
                 bPreferPopTop: !0,
-              }
+              },
             ),
             this.BHaveUnseenEmoticons() && r)
           ) {
@@ -1731,7 +1731,7 @@
                   {
                     onClick: this.OnEmoticonClick,
                     onOKActionDescription: (0, h.Xx)(
-                      "#ChatEntryButton_Emoticon"
+                      "#ChatEntryButton_Emoticon",
                     ),
                     focusable: !0,
                   },
@@ -1742,7 +1742,7 @@
                       this.props.title ||
                       (0, h.Xx)("#ChatEntryButton_Emoticon"),
                     "data-tooltip-text": n,
-                  })
+                  }),
                 )
               : (r.push(u().chatSubmitButton, u().EmoticonPickerButton),
                 i.createElement(
@@ -1750,7 +1750,7 @@
                   {
                     className: (0, d.Z)(...r),
                     onOKActionDescription: (0, h.Xx)(
-                      "#ChatEntryButton_Emoticon"
+                      "#ChatEntryButton_Emoticon",
                     ),
                     type: "button",
                     onClick: this.OnEmoticonClick,
@@ -1761,7 +1761,7 @@
                     "data-tooltip-text": n,
                   },
                   this.props.buttonIcon || i.createElement(g.tk, null),
-                  s && i.createElement(m.D3, null)
+                  s && i.createElement(m.D3, null),
                 ))
           );
         }
@@ -1809,20 +1809,20 @@
                     r.createElement(
                       "span",
                       { className: u().SpeakerTitle },
-                      e.title
+                      e.title,
                     ),
                   o && i && r.createElement("span", null, ", "),
-                  i && r.createElement("span", null, e.company)
-                )
-            )
+                  i && r.createElement("span", null, e.company),
+                ),
+            ),
           ),
           e.bio &&
             r.createElement(
               "div",
               { className: u().SpeakerBio },
               e.bio,
-              e.bioString && r.createElement(d.N, { text: e.bioString })
-            )
+              e.bioString && r.createElement(d.N, { text: e.bioString }),
+            ),
         );
       });
       class E extends r.Component {
@@ -1864,10 +1864,10 @@
               Object.assign({}, n),
               r.createElement(
                 g,
-                Object.assign({}, this.props, { fnClose: this.OnLeave })
-              )
+                Object.assign({}, this.props, { fnClose: this.OnLeave }),
+              ),
             ),
-            o
+            o,
           );
         }
         OnLeave(e) {
@@ -1884,7 +1884,7 @@
               onMouseLeave: this.OnLeave,
               onBlur: this.OnLeave,
             },
-            this.props.children
+            this.props.children,
           );
         }
       }
@@ -1931,15 +1931,15 @@
                           r.createElement(
                             "span",
                             { className: u().SpeakerTitle },
-                            this.props.title
+                            this.props.title,
                           ),
                         n && o && r.createElement("span", null, ", "),
-                        o && r.createElement("span", null, this.props.company)
-                      )
-                  )
-                )
-              )
-            )
+                        o && r.createElement("span", null, this.props.company),
+                      ),
+                  ),
+                ),
+              ),
+            ),
           );
         }
       }
@@ -2031,7 +2031,7 @@
               onVisibilityChange: this.OnVisibilityChange,
               trigger: d,
             }),
-            m && this.props.children
+            m && this.props.children,
           );
         }
       }
@@ -2120,12 +2120,12 @@
             this.m_listeners.AddEventListener(
               this.m_elLinkRegionBox.ownerDocument.defaultView,
               "mousemove",
-              this.m_fnMouseMove
+              this.m_fnMouseMove,
             ),
             this.m_listeners.AddEventListener(
               this.m_elLinkRegionBox.ownerDocument.defaultView,
               "mouseup",
-              this.m_fnMouseUp
+              this.m_fnMouseUp,
             ),
             e.preventDefault(),
             e.stopPropagation();
@@ -2179,13 +2179,13 @@
                 const t = (0, u.Lh)(
                     this.CalcLeftEdge(e.clientX),
                     0,
-                    100 - this.state.curWidthPct
+                    100 - this.state.curWidthPct,
                   ),
                   n = 100 - (t + this.state.curWidthPct),
                   o = (0, u.Lh)(
                     this.CalcTopEdge(e.clientY),
                     0,
-                    100 - this.state.curHeightPct
+                    100 - this.state.curHeightPct,
                   ),
                   i = {
                     curLeftPosPct: t,
@@ -2223,12 +2223,12 @@
             r = (0, u.Lh)(
               100 - i - o,
               this.props.widthMinPct || 0,
-              this.props.widthMaxPct || 100
+              this.props.widthMaxPct || 100,
             ),
             s = (0, u.Lh)(
               100 - n - t,
               this.props.heightMinPct || 0,
-              this.props.heightMaxPct || 100
+              this.props.heightMaxPct || 100,
             );
           this.props.bLockAspectRatio &&
             (void 0 !== e.curLeftPosPct || void 0 !== e.curRightPosPct
@@ -2276,7 +2276,7 @@
           return (0, u.Lh)(
             100 - (this.GetXPercent(e) + this.state.curWidthPct),
             0,
-            100
+            100,
           );
         }
         CalcTopEdge(e) {
@@ -2286,7 +2286,7 @@
           return (0, u.Lh)(
             100 - (this.GetYPercent(e) + this.state.curHeightPct),
             0,
-            100
+            100,
           );
         }
         OnMouseUp(e, t) {
@@ -2325,7 +2325,7 @@
         }
         validateUrl(e) {
           return /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/i.test(
-            e
+            e,
           );
         }
         OnSaveLink() {
@@ -2408,7 +2408,7 @@
                         className: p().LinkRegionDelete,
                         onClick: this.HandleDelete,
                       },
-                      r.createElement(h.pVO, null)
+                      r.createElement(h.pVO, null),
                     ),
                   !this.props.bDisableLink &&
                     r.createElement(
@@ -2417,15 +2417,15 @@
                         className: p().LinkRegionSettings,
                         onClick: this.OnEditLink,
                       },
-                      r.createElement(h.pkz, null)
+                      r.createElement(h.pkz, null),
                     ),
                   r.createElement(
                     "div",
                     { className: p().LinkText },
                     " ",
                     this.m_strDescription,
-                    " "
-                  )
+                    " ",
+                  ),
                 ),
                 r.createElement("div", {
                   className: `${p().LinkRegionEdge} ${p().Right}`,
@@ -2454,7 +2454,7 @@
                     this.OnMouseDown(e, o.bottomright);
                   },
                   draggable: !1,
-                })
+                }),
               ),
               this.state.bEditingLink &&
                 r.createElement(
@@ -2477,7 +2477,7 @@
                     value: this.state.text_link_description,
                     label: (0, a.Xx)("#SteamTV_LinkDescription"),
                     placeholder: (0, a.Xx)(
-                      "#SteamTV_LinkDescription_Placeholder"
+                      "#SteamTV_LinkDescription_Placeholder",
                     ),
                     onChange: this.OnSetLinkDescriptionChange,
                   }),
@@ -2492,16 +2492,16 @@
                       },
                       " ",
                       (0, a.Xx)("#Button_OK"),
-                      " "
+                      " ",
                     ),
                     r.createElement(
                       m.zx,
                       { onClick: this.OnEditLink },
                       " ",
-                      (0, a.Xx)("#Button_Cancel")
-                    )
-                  )
-                )
+                      (0, a.Xx)("#Button_Cancel"),
+                    ),
+                  ),
+                ),
             )
           );
         }
@@ -2622,7 +2622,7 @@
           return i.createElement(
             "div",
             Object.assign({ ref: this.m_refElement }, c),
-            this.props.children
+            this.props.children,
           );
         }
       }

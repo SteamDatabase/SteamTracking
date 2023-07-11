@@ -69,7 +69,7 @@
               secondary: !0,
               parentEmbeddedNavTree: e,
             }),
-            r.createElement(i.O, null, t)
+            r.createElement(i.O, null, t),
           );
         }
         return r.createElement(r.Fragment, null, t);
@@ -119,7 +119,7 @@
             (t) => {
               m(n, e, i(t) ? String(t) : null);
             },
-            [n, e]
+            [n, e],
           );
         return [s, l];
       }
@@ -179,13 +179,13 @@
                   r.createElement(
                     "div",
                     { className: m().CommunityHomeHeaderTitle },
-                    (0, o.Xx)("#Community_Home_Header_Title")
+                    (0, o.Xx)("#Community_Home_Header_Title"),
                   ),
                   r.createElement(
                     "div",
                     { className: m().CommunityHomeHeaderSubtitle },
-                    (0, o.Xx)("#Community_Home_Header_Subtitle")
-                  )
+                    (0, o.Xx)("#Community_Home_Header_Subtitle"),
+                  ),
                 ),
                 r.createElement(
                   c.IS,
@@ -193,12 +193,12 @@
                     className: m().AddFriendBtn,
                     href: `${s.De.COMMUNITY_BASE_URL}search/users/`,
                   },
-                  (0, o.Xx)("#Community_Home_Header_AddFriend_Button")
-                )
+                  (0, o.Xx)("#Community_Home_Header_AddFriend_Button"),
+                ),
               ),
               r.createElement(E, null),
-              r.createElement(N, null)
-            )
+              r.createElement(N, null),
+            ),
           )
         );
       }
@@ -209,11 +209,11 @@
           H = (function () {
             const e = (0, r.useMemo)(
                 () => (0, s.ip)("personalapps", "application_config") || [],
-                []
+                [],
               ),
               t = (0, r.useMemo)(
                 () => (0, s.ip)("popularapps", "application_config") || [],
-                []
+                [],
               ),
               n = [...e, ...t];
             if (n.length)
@@ -241,9 +241,9 @@
             r.createElement(A, {
               appShortcuts: H.data.popularAppIds,
               sectionTitle: (0, o.Xx)(
-                "#Community_Home_Header_GameHubs_Popular"
+                "#Community_Home_Header_GameHubs_Popular",
               ),
-            })
+            }),
           ),
           r.createElement(
             C.s,
@@ -275,15 +275,15 @@
                   value: e,
                   className: m().Input,
                   placeholder: (0, o.Xx)(
-                    "#Community_Home_Header_FindGame_Placeholder"
+                    "#Community_Home_Header_FindGame_Placeholder",
                   ),
-                })
+                }),
               ),
               r.createElement(
                 "div",
                 { className: m().SearchIcon },
-                r.createElement(l.YtI, null)
-              )
+                r.createElement(l.YtI, null),
+              ),
             ),
             d &&
               r.createElement(
@@ -297,11 +297,11 @@
                       key: e.appid,
                       className: m().SearchResult,
                     },
-                    e.name
-                  )
-                )
-              )
-          )
+                    e.name,
+                  ),
+                ),
+              ),
+          ),
         );
       }
       function A(e) {
@@ -317,11 +317,11 @@
                   "flow-children": "row",
                   className: (0, p.Z)(
                     m().AppHubShortcutLinks,
-                    a ? m().Divider : null
+                    a ? m().Divider : null,
                   ),
                 },
-                t.map((e, t) => r.createElement(g, { key: t, appId: e }))
-              )
+                t.map((e, t) => r.createElement(g, { key: t, appId: e })),
+              ),
             )
           : null;
       }
@@ -337,7 +337,7 @@
               r.createElement("img", {
                 className: m().ShortcutImage,
                 src: t.GetAssets().GetLibraryCapsuleURL(),
-              })
+              }),
             )
           : null;
       }
@@ -351,7 +351,7 @@
           "div",
           null,
           r.createElement(w, { activeTab: t, activeSort: n }),
-          r.createElement($, { activeTab: t, activeSort: n })
+          r.createElement($, { activeTab: t, activeSort: n }),
         );
       }
       function w(e) {
@@ -399,9 +399,9 @@
                 key: e.id,
                 className: (0, p.Z)(m().Tab, i ? m().ActiveTab : null),
               },
-              (0, o.Xx)(e.label)
+              (0, o.Xx)(e.label),
             );
-          })
+          }),
         );
       }
       function $(e) {
@@ -412,7 +412,7 @@
           r.createElement(
             "div",
             { className: m().SortIcon },
-            r.createElement(l.iS8, null)
+            r.createElement(l.iS8, null),
           ),
           [
             { label: "#Community_Home_Header_BrowseFilter_Popular", id: "" },
@@ -434,9 +434,9 @@
                 key: e.id,
                 className: (0, p.Z)(m().Sort, i ? m().ActiveSort : null),
               },
-              (0, o.Xx)(e.label)
+              (0, o.Xx)(e.label),
             );
-          })
+          }),
         );
       }
     },

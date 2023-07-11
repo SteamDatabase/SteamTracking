@@ -222,7 +222,7 @@
         get player_group_size() {
           return this.m_mapRichPresence.has("steam_player_group_size")
             ? Number.parseInt(
-                this.m_mapRichPresence.get("steam_player_group_size")
+                this.m_mapRichPresence.get("steam_player_group_size"),
               )
             : 0;
         }
@@ -343,7 +343,7 @@
                   case "FillArea":
                     return l;
                 }
-              })(a)
+              })(a),
             ),
             r.createElement(
               "div",
@@ -354,10 +354,10 @@
                     "avatarHolder",
                     "no-drag",
                     a || "Medium",
-                    s
+                    s,
                   ),
                 },
-                h
+                h,
               ),
               r.createElement("div", {
                 className: (0, o.Z)(_().avatarStatus, "avatarStatus", m),
@@ -368,7 +368,7 @@
                 rgSources: c,
                 draggable: !1,
               }),
-              p
+              p,
             )
           );
         }
@@ -401,8 +401,8 @@
                   size: a,
                   className: (0, o.Z)((0, n.sB)(t), A),
                 },
-                l
-              )
+                l,
+              ),
             )
           );
         }
@@ -421,9 +421,9 @@
             "div",
             Object.assign(
               { className: (0, o.Z)(_().avatarFrame, a, "avatarFrame") },
-              n
+              n,
             ),
-            r.createElement("img", { className: _().avatarFrameImg, src: A })
+            r.createElement("img", { className: _().avatarFrameImg, src: A }),
           )
         );
       });
@@ -452,7 +452,7 @@
             (this.setState({ bAnimate: "None" != this.props.loopDuration }),
             (this.m_timer = window.setTimeout(
               () => this.setState({ bAnimate: !1 }),
-              e
+              e,
             )));
         }
         StopAnimationTimer() {
@@ -519,8 +519,8 @@
                 r.createElement(u, {
                   profileItem: s,
                   bDisableAnimation: m && !this.state.bAnimate,
-                })
-              )
+                }),
+              ),
             )
           );
         }

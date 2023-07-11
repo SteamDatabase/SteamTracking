@@ -105,7 +105,7 @@
               className: (0, r.Z)(
                 e.className ? e.className : "",
                 c.SectionTitleHeader,
-                c.required_title
+                c.required_title,
               ),
             },
             a.createElement(
@@ -113,19 +113,19 @@
               {
                 className: (0, r.Z)(
                   l.CollapsableSectionTitle,
-                  "EventEditorTextTitle"
+                  "EventEditorTextTitle",
                 ),
               },
               e.title,
-              Boolean(e.tooltip) && a.createElement(v, { tooltip: e.tooltip })
+              Boolean(e.tooltip) && a.createElement(v, { tooltip: e.tooltip }),
             ),
             a.createElement(_, {
               bIsMinimized: e.getMinimized(),
               fnToggleMinimize: e.toggleMinimized,
-            })
+            }),
           ),
-          !e.getMinimized() && a.createElement(u.SV, null, e.children)
-        )
+          !e.getMinimized() && a.createElement(u.SV, null, e.children),
+        ),
       );
       function A(e) {
         const [t, n] = a.useState(Boolean(e.bStartMinimized));
@@ -135,7 +135,7 @@
             getMinimized: () => t,
             toggleMinimized: () => n(!t),
           }),
-          e.children
+          e.children,
         );
       }
       function _(e) {
@@ -146,7 +146,7 @@
           { "data-tooltip-text": (0, o.Xx)(r), onClick: n },
           e.bIsMinimized
             ? a.createElement(i.YqJ, null)
-            : a.createElement(i.gR, null)
+            : a.createElement(i.gR, null),
         );
       }
       function v(e) {
@@ -157,7 +157,7 @@
             className: (0, r.Z)(l.HelperTooltip, "HelperTooltip"),
           },
           " ",
-          a.createElement(i.WWB, null)
+          a.createElement(i.WWB, null),
         );
       }
     },
@@ -273,7 +273,7 @@
           const n = new Set();
           for (const t of e)
             n.add(
-              i.K.InitFromAccountID(t.posterAccountID).ConvertTo64BitString()
+              i.K.InitFromAccountID(t.posterAccountID).ConvertTo64BitString(),
             );
           const s = Array.from(n);
           for (; s.length > 0; ) {
@@ -322,7 +322,7 @@
               console.error(
                 "Could not load question and answer sessions for group",
                 l.strErrorMsg,
-                l
+                l,
               ),
               null !==
                 (i =
@@ -367,7 +367,7 @@
                 return (
                   this.m_mapQAndASessions.set(
                     e.data.qanda.gidSession,
-                    e.data.qanda
+                    e.data.qanda,
                   ),
                   this.m_dashboardCallbackList.Dispatch(this.GetAllSessions()),
                   1
@@ -420,7 +420,7 @@
                 return (
                   (this.m_mapQAndASessions.get(e).strName = t),
                   this.GetQAndACallbackList(e).Dispatch(
-                    this.m_mapQAndASessions.get(e)
+                    this.m_mapQAndASessions.get(e),
                   ),
                   this.m_dashboardCallbackList.Dispatch(this.GetAllSessions()),
                   1
@@ -661,7 +661,7 @@
                 e,
                 t,
                 m.strErrorMsg,
-                m
+                m,
               ),
               null !==
                 (l =
@@ -727,7 +727,7 @@
                 t,
                 n,
                 A.strErrorMsg,
-                A
+                A,
               ),
               null !==
                 (u =
@@ -791,7 +791,7 @@
                 t,
                 n,
                 A.strErrorMsg,
-                A
+                A,
               ),
               null !==
                 (u =
@@ -893,7 +893,7 @@
                   (yield C.Get().AskNewQuestion(e, n, t))
                 );
               }),
-            [e, t]
+            [e, t],
           ),
           i = o.useCallback(
             (n, s) => {
@@ -905,7 +905,7 @@
                 C.Get().VoteOnQuestion(e, n, s, t)
               );
             },
-            [e, t]
+            [e, t],
           ),
           a = o.useCallback(
             (e) => {
@@ -941,22 +941,22 @@
                 l.sort(
                   (e, t) =>
                     C.Get().GetQuestion(t).nVoteCount -
-                    C.Get().GetQuestion(e).nVoteCount
+                    C.Get().GetQuestion(e).nVoteCount,
                 ),
                 u.sort(
                   (e, t) =>
                     C.Get().GetQuestion(t).rtAnswerTime -
-                    C.Get().GetQuestion(e).rtAnswerTime
+                    C.Get().GetQuestion(e).rtAnswerTime,
                 ),
                 d.sort(
                   (e, t) =>
                     C.Get().GetQuestion(t).rtPostTime -
-                    C.Get().GetQuestion(e).rtPostTime
+                    C.Get().GetQuestion(e).rtPostTime,
                 ),
                 c.sort(
                   (e, t) =>
                     C.Get().GetQuestion(t).rtPostTime -
-                    C.Get().GetQuestion(e).rtPostTime
+                    C.Get().GetQuestion(e).rtPostTime,
                 ),
                 {
                   bIsLoaded: s,
@@ -972,7 +972,7 @@
                 }
               );
             },
-            [n, i]
+            [n, i],
           ),
           [r, l] = o.useState(() => a(C.Get().GetSession(e))),
           d = o.useCallback((e) => l(a(e)), [a]);
@@ -1009,7 +1009,7 @@
                     ? (t.current = () => e(...n))
                     : ((t.current = null), e(...n));
                 },
-                [e]
+                [e],
               )
             );
           })(i);
@@ -1034,7 +1034,7 @@
                   : o.bUserCanModerate) && C.Get().AnswerQuestion(e, n, s, t)
               );
             },
-            [e, t]
+            [e, t],
           ),
           s = o.useCallback(
             (n, s) => {
@@ -1045,11 +1045,11 @@
                   : o.bUserCanModerate) && C.Get().ModerateQuestion(e, n, s, t)
               );
             },
-            [e, t]
+            [e, t],
           );
         return o.useMemo(
           () => ({ fnAnswerQuestion: n, fnModerateQuestion: s }),
-          [n, s]
+          [n, s],
         );
       }
       var b = n(57605),
@@ -1090,25 +1090,25 @@
             o.createElement(
               "div",
               { className: B().QAndAName },
-              (0, L.Xx)("#QAndA_Column_Name")
+              (0, L.Xx)("#QAndA_Column_Name"),
             ),
             o.createElement(
               "div",
               { className: B().GIDSession },
-              (0, L.Xx)("#QAndA_Column_GID")
+              (0, L.Xx)("#QAndA_Column_GID"),
             ),
             o.createElement(
               "div",
               { className: B().QuestionCount },
-              (0, L.Xx)("#QAndA_Column_QuestionCount")
+              (0, L.Xx)("#QAndA_Column_QuestionCount"),
             ),
             o.createElement(
               "div",
               { className: B().QAndADeleteColumn },
-              (0, L.Xx)("#QAndA_Column_DeleteButtons")
-            )
+              (0, L.Xx)("#QAndA_Column_DeleteButtons"),
+            ),
           ),
-          t.map((e) => o.createElement(y, { key: e.gidSession, qanda: e }))
+          t.map((e) => o.createElement(y, { key: e.gidSession, qanda: e })),
         );
       }
       function R(e) {
@@ -1117,7 +1117,7 @@
             (0, w.x1)(o.createElement(O, null), window, {
               strTitle: (0, L.Xx)("#QAndA_CreateQAndA_Title"),
             }),
-          []
+          [],
         );
         return o.createElement(
           "div",
@@ -1125,7 +1125,7 @@
           o.createElement(
             "div",
             { className: B().DashboardHeaderTitle },
-            (0, L.Xx)("#QAndA_Dashboard")
+            (0, L.Xx)("#QAndA_Dashboard"),
           ),
           o.createElement(
             "div",
@@ -1133,9 +1133,9 @@
             o.createElement(
               b.zx,
               { onClick: t },
-              (0, L.Xx)("#QAndA_CreateQAndA_Button")
-            )
-          )
+              (0, L.Xx)("#QAndA_CreateQAndA_Button"),
+            ),
+          ),
         );
       }
       const H = 120;
@@ -1164,7 +1164,7 @@
             onFocus: (e) => e.target.select(),
             onChange: (e) => s(e.currentTarget.value),
             maxLength: H,
-          })
+          }),
         );
       }
       function y(e) {
@@ -1183,7 +1183,7 @@
                   strTitle: (0, L.Xx)("#QAndA_CreateQAndA_Title"),
                 });
             },
-            [t]
+            [t],
           );
         return o.createElement(
           "a",
@@ -1193,7 +1193,7 @@
           o.createElement(
             "div",
             { className: B().QuestionCount },
-            t.rgQuestionGIDs.length
+            t.rgQuestionGIDs.length,
           ),
           o.createElement(
             "div",
@@ -1201,9 +1201,9 @@
             o.createElement(
               "div",
               { className: B().DeleteButton, onClick: s },
-              o.createElement(T.rFk, null)
-            )
-          )
+              o.createElement(T.rFk, null),
+            ),
+          ),
         );
       }
       function X(e) {
@@ -1220,7 +1220,7 @@
               : o.createElement(
                   "span",
                   { className: B().Prompt },
-                  (0, L.Xx)("#QAndA_EnterNamePrompt")
+                  (0, L.Xx)("#QAndA_EnterNamePrompt"),
                 ),
           u = o.createElement(
             "div",
@@ -1246,8 +1246,8 @@
                 },
                 className: B().InputButton,
               },
-              (0, L.Xx)("#Button_Save")
-            )
+              (0, L.Xx)("#Button_Save"),
+            ),
           );
         return o.createElement(
           "div",
@@ -1257,7 +1257,7 @@
               e.stopPropagation(), e.preventDefault(), n || s(!0);
             },
           },
-          n ? u : l
+          n ? u : l,
         );
       }
       function F(e) {
@@ -1278,15 +1278,15 @@
           o.createElement(
             "div",
             { className: B().DeleteInfo },
-            (0, L.Xx)("#QAndA_Column_Name") + ": " + t.strName
+            (0, L.Xx)("#QAndA_Column_Name") + ": " + t.strName,
           ),
           o.createElement(
             "div",
             { className: B().DeleteInfo },
             (0, L.Xx)("#QAndA_Column_QuestionCount") +
               ": " +
-              t.rgQuestionGIDs.length
-          )
+              t.rgQuestionGIDs.length,
+          ),
         );
       }
       function z(e) {
@@ -1318,7 +1318,7 @@
             3 == l.eState && B().Hidden,
             1 == l.eState && B().Moderated,
             0 == l.eState && B().Unmoderated,
-            2 == l.eState && B().Answered
+            2 == l.eState && B().Answered,
           );
         return o.createElement(
           "div",
@@ -1336,7 +1336,7 @@
                 o.createElement(
                   "div",
                   { className: B().QuestionTitle },
-                  l.strQuestionText
+                  l.strQuestionText,
                 ),
                 o.createElement(
                   k.HP,
@@ -1354,10 +1354,10 @@
                     o.createElement(
                       "div",
                       { className: B().VoteCount },
-                      Number(l.nVoteCount).toLocaleString()
-                    )
-                  )
-                )
+                      Number(l.nVoteCount).toLocaleString(),
+                    ),
+                  ),
+                ),
               ),
               o.createElement(
                 "div",
@@ -1372,11 +1372,11 @@
                       className: B().PostTime,
                       stylesmodule: B(),
                     },
-                    m
-                  )
-                )
-              )
-            )
+                    m,
+                  ),
+                ),
+              ),
+            ),
           ),
           l.rtAnswerTime && o.createElement(Y, { question: l, rtNow: r }),
           s &&
@@ -1384,7 +1384,7 @@
               gidSession: t,
               gidQuestion: n,
               eState: null == l ? void 0 : l.eState,
-            })
+            }),
         );
       }
       function Y(e) {
@@ -1403,16 +1403,16 @@
                 o.createElement(
                   "div",
                   { className: B().AnswerCheck },
-                  o.createElement(T.mKE, { color: "#67c1f5" })
+                  o.createElement(T.mKE, { color: "#67c1f5" }),
                 ),
-                (0, L.Xx)("#QAndA_ModeratorAnswerTitle")
+                (0, L.Xx)("#QAndA_ModeratorAnswerTitle"),
               ),
               o.createElement(
                 "div",
                 { className: B().AnswerText },
                 " ",
                 t.strAnswerText,
-                " "
+                " ",
               ),
               o.createElement(
                 "div",
@@ -1424,9 +1424,9 @@
                     className: B().PostTime,
                     stylesmodule: B(),
                   },
-                  i
-                )
-              )
+                  i,
+                ),
+              ),
             )
           : o.createElement(
               "div",
@@ -1434,9 +1434,9 @@
               o.createElement(
                 "div",
                 { className: B().AnswerCheck },
-                o.createElement(T.mKE, { color: "#67c1f5" })
+                o.createElement(T.mKE, { color: "#67c1f5" }),
               ),
-              (0, L.Xx)("#QAndA_AlreadyAnsweredTitle")
+              (0, L.Xx)("#QAndA_AlreadyAnsweredTitle"),
             );
       }
       function j(e) {
@@ -1455,7 +1455,7 @@
               },
               null !== (t = null == r ? void 0 : r.persona_name) && void 0 !== t
                 ? t
-                : s
+                : s,
             );
       }
       function Z(e) {
@@ -1474,7 +1474,7 @@
             o.createElement(ee, {
               strPrompt: (0, L.Xx)("#QAndA_AnswerPrompt"),
               fnSubmit: (e) => i(n, e),
-            })
+            }),
           ),
           o.createElement(
             "div",
@@ -1492,8 +1492,8 @@
                   className: B().InputButton,
                   disabled: !r,
                 },
-                (0, L.Xx)("#QAndA_ModerateApproveButton")
-              )
+                (0, L.Xx)("#QAndA_ModerateApproveButton"),
+              ),
             ),
             o.createElement(
               k.HP,
@@ -1505,8 +1505,8 @@
                   className: B().InputButton,
                   disabled: !l,
                 },
-                (0, L.Xx)("#QAndA_ModerateHideButton")
-              )
+                (0, L.Xx)("#QAndA_ModerateHideButton"),
+              ),
             ),
             o.createElement(
               k.HP,
@@ -1518,10 +1518,10 @@
                   className: B().InputButton,
                   disabled: !u,
                 },
-                (0, L.Xx)("#QAndA_QuickAnswerButton")
-              )
-            )
-          )
+                (0, L.Xx)("#QAndA_QuickAnswerButton"),
+              ),
+            ),
+          ),
         );
       }
       function K(e) {
@@ -1535,14 +1535,14 @@
             "div",
             { className: B().QAName },
             (0, L.Xx)("#QAndA_Header") +
-              ((null == n ? void 0 : n.length) > 0 ? ": " + n : "")
+              ((null == n ? void 0 : n.length) > 0 ? ": " + n : ""),
           ),
           o.createElement(
             "div",
             { className: B().QAColumns },
             o.createElement(W, { gidSession: t, bHalfOfFullPage: s }),
-            s && o.createElement(J, { gidSession: t })
-          )
+            s && o.createElement(J, { gidSession: t }),
+          ),
         );
       }
       function J(e) {
@@ -1576,9 +1576,9 @@
                       bUserCanModerate: n,
                       bUserCanVote: !1,
                       rtNow: r,
-                    })
-                  )
-                )
+                    }),
+                  ),
+                ),
               ),
               o.createElement(
                 G.ug,
@@ -1598,10 +1598,10 @@
                       bUserCanModerate: n,
                       bUserCanVote: !1,
                       rtNow: r,
-                    })
-                  )
-                )
-              )
+                    }),
+                  ),
+                ),
+              ),
             )
           : null;
       }
@@ -1636,14 +1636,14 @@
                 className: (0, M.Z)(
                   B().InputButton,
                   B().Reload,
-                  Q && B().Reloading
+                  Q && B().Reloading,
                 ),
               },
               o.createElement(
                 "div",
                 { className: B().ReloadIcon },
-                o.createElement(T.Lao, null)
-              )
+                o.createElement(T.Lao, null),
+              ),
             ),
             g
               ? o.createElement(
@@ -1654,7 +1654,7 @@
                     k.HP,
                     {
                       toolTipContent: (0, L.Xx)(
-                        "#QAndA_ModerateHideAllButton_ttip"
+                        "#QAndA_ModerateHideAllButton_ttip",
                       ),
                     },
                     o.createElement(
@@ -1667,19 +1667,19 @@
                           }),
                         className: B().InputButton,
                       },
-                      (0, L.Xx)("#QAndA_ModerateHideAllButton")
-                    )
-                  )
+                      (0, L.Xx)("#QAndA_ModerateHideAllButton"),
+                    ),
+                  ),
                 )
               : r
               ? o.createElement($, { fnAskQuestion: u })
-              : i && o.createElement(te, null)
+              : i && o.createElement(te, null),
           ),
           c.length + m.length == 0
             ? o.createElement(
                 "div",
                 { className: B().NoQuestions },
-                (0, L.Xx)("#QAndA_NoQuestionsYet")
+                (0, L.Xx)("#QAndA_NoQuestionsYet"),
               )
             : o.createElement(
                 "div",
@@ -1687,7 +1687,7 @@
                 o.createElement(
                   "div",
                   { className: B().InsetShadowTopCtn },
-                  o.createElement("div", { className: B().InsetShadowTop })
+                  o.createElement("div", { className: B().InsetShadowTop }),
                 ),
                 o.createElement(
                   "div",
@@ -1702,9 +1702,9 @@
                           bUserCanVote: r,
                           fnVoteOnQuestion: d,
                           rtNow: p,
-                        })
+                        }),
                       )
-                    : o.createElement(q.V, { position: "center" })
+                    : o.createElement(q.V, { position: "center" }),
                 ),
                 m.length > 0 &&
                   o.createElement(
@@ -1713,7 +1713,7 @@
                     o.createElement(
                       "div",
                       { className: B().AnsweredSectionHeader },
-                      (0, L.Xx)("#QAndA_AnsweredQuestionsHeader")
+                      (0, L.Xx)("#QAndA_AnsweredQuestionsHeader"),
                     ),
                     o.createElement(
                       "div",
@@ -1727,11 +1727,11 @@
                           bUserCanVote: r,
                           fnVoteOnQuestion: d,
                           rtNow: p,
-                        })
-                      )
-                    )
-                  )
-              )
+                        }),
+                      ),
+                    ),
+                  ),
+              ),
         );
       }
       function $(e) {
@@ -1743,7 +1743,7 @@
           o.createElement(
             "div",
             { className: B().Description },
-            (0, L.Xx)("#QAndA_HeaderDescription")
+            (0, L.Xx)("#QAndA_HeaderDescription"),
           ),
           o.createElement(ee, {
             strPrompt: (0, L.Xx)("#QAndA_QuestionPrompt"),
@@ -1764,8 +1764,8 @@
           o.createElement(
             "div",
             { className: (0, M.Z)(B().QuestionACK, t && B().Visible) },
-            (0, L.Xx)("#QAndA_QuestionWasPosted")
-          )
+            (0, L.Xx)("#QAndA_QuestionWasPosted"),
+          ),
         );
       }
       function ee(e) {
@@ -1792,7 +1792,7 @@
                 o.createElement(
                   "div",
                   { className: B().SaveSpinner },
-                  o.createElement(q.V, { size: "small", position: "center" })
+                  o.createElement(q.V, { size: "small", position: "center" }),
                 ),
               o.createElement(
                 b.zx,
@@ -1805,10 +1805,10 @@
                   disabled: r || !i,
                   className: B().InputButton,
                 },
-                (0, L.Xx)("#QAndA_SubmitCommentButton")
-              )
-            )
-          )
+                (0, L.Xx)("#QAndA_SubmitCommentButton"),
+              ),
+            ),
+          ),
         );
       }
       function te(e) {
@@ -1818,7 +1818,7 @@
           o.createElement(
             "div",
             { className: B().LogInPrompt },
-            (0, L.Xx)("#QAndA_LogInPrompt")
+            (0, L.Xx)("#QAndA_LogInPrompt"),
           ),
           !d.L7.logged_in &&
             o.createElement(
@@ -1827,8 +1827,8 @@
                 onClick: D.X,
                 className: (0, M.Z)(B().SignInButton, B().InputButton),
               },
-              (0, L.Xx)("#Login_SignIn")
-            )
+              (0, L.Xx)("#Login_SignIn"),
+            ),
         );
       }
     },

@@ -233,7 +233,7 @@
                   !(
                     l.Z.Get().BHasStoreItem(e, t, a) ||
                     l.Z.Get().BIsStoreItemMissing(e, t)
-                  )
+                  ),
               );
             if (0 == s.length) return;
             const i = r().CancelToken.source(),
@@ -252,12 +252,12 @@
           !e.every(
             (e) =>
               l.Z.Get().BHasStoreItem(e, t, a) ||
-              l.Z.Get().BIsStoreItemMissing(e, t)
+              l.Z.Get().BIsStoreItemMissing(e, t),
           )
         )
           return 1;
         return e.every((e) =>
-          l.Z.Get().GetStoreItemWithLegacyVisibilityCheck(e, t)
+          l.Z.Get().GetStoreItemWithLegacyVisibilityCheck(e, t),
         )
           ? 3
           : 2;
@@ -271,7 +271,7 @@
             l.Z.Get().SetReturnUnavailableItems(!0),
             () => l.Z.Get().SetReturnUnavailableItems(!1)
           ),
-          []
+          [],
         );
       }
     },
@@ -325,7 +325,7 @@
                   }),
                 this.EstimateCosts,
                 (e, t) => e == t,
-                l
+                l,
               ),
               c = yield p.FindPath(e, t, n || 10);
             if (c.path) {
@@ -366,7 +366,7 @@
             let s = yield m().get(a);
             if (s.data && s.data.similarity_scores)
               return s.data.similarity_scores.map((e) =>
-                Math.acos(parseFloat(e))
+                Math.acos(parseFloat(e)),
               );
             throw new Error("Unable to fetch cost estimates");
           });
@@ -481,12 +481,12 @@
               if (a.length > 0) {
                 let o = yield this.m_fnEstimateCosts(
                   a.map((e) => e.node),
-                  t
+                  t,
                 );
                 if (o.length != a.length)
                   return (
                     console.warn(
-                      "Failed to fetch expected number of cost estimates. Failing pathfinding."
+                      "Failed to fetch expected number of cost estimates. Failing pathfinding.",
                     ),
                     {}
                   );
@@ -548,7 +548,7 @@
                     appid: this.props.appidInitial,
                     appinfo: i.Q8.GetAppInfo(this.props.appidInitial),
                   });
-                }
+                },
               ),
               (this.state.appid = this.props.appidInitial));
         }
@@ -604,14 +604,14 @@
                                 "div",
                                 { className: b.AppName },
                                 e.name +
-                                  (this.props.showAppIds ? ` (${e.id})` : "")
-                              )
-                            )
+                                  (this.props.showAppIds ? ` (${e.id})` : ""),
+                              ),
+                            ),
                           )
                         : []),
                         this.setState({ strSearch: t, rgSuggestions: i });
                     }),
-                  250
+                  250,
                 )))
               : this.setState({ strSearch: "", rgSuggestions: null });
           });
@@ -658,7 +658,7 @@
                   src: this.state.appinfo.header_image_url,
                   className: b.LogoImage,
                 }),
-              g.createElement("div", { className: b.AppName }, e)
+              g.createElement("div", { className: b.AppName }, e),
             );
           } else if ("select" == this.state.mode) {
             const e = this.state.strSearch.length > 0;
@@ -670,8 +670,8 @@
                 g.createElement(
                   "div",
                   { className: b.Suggestions },
-                  this.state.rgSuggestions
-                )
+                  this.state.rgSuggestions,
+                ),
             );
           }
           return g.createElement(
@@ -681,7 +681,7 @@
               onClick: this.OnDisplayClicked,
               onKeyUpCapture: this.OnKeyUp,
             },
-            s
+            s,
           );
         }
       }
@@ -702,15 +702,15 @@
                 g.createElement("div", {
                   className: b.Spacer,
                   key: "score-spacer",
-                })
+                }),
               );
               const e = Math.round(100 * this.props.score).toString() + "%";
               t.push(
                 g.createElement(
                   "div",
                   { className: b.Score, key: "score-value" },
-                  e
-                )
+                  e,
+                ),
               );
             }
             const a = e.name + " (" + this.props.appid.toString() + ")",
@@ -723,7 +723,7 @@
                 className: b.LogoImage,
               }),
               g.createElement("div", { className: b.AppName }, a),
-              t
+              t,
             );
           }
         }
@@ -780,7 +780,7 @@
               showAppIds: !0,
               appidInitial: 200510,
               key: "similar_app_b",
-            })
+            }),
           );
         }
       }
@@ -814,7 +814,7 @@
               .then((e) => {
                 if (e.data && e.data.appid == this.selected_app) {
                   let t = new Set(
-                    e.data.similar_appids.slice(0, this.props.max_similar)
+                    e.data.similar_appids.slice(0, this.props.max_similar),
                   );
                   t.add(e.data.appid),
                     i.Q8.EnsureAppInfoForAppIDs(t).then(() => {
@@ -835,7 +835,7 @@
           const a = Math.min(
             this.similar_apps.length,
             this.similarity_scores.length,
-            this.props.max_similar
+            this.props.max_similar,
           );
           for (e = 0; e < a; e++) {
             const a = this.similar_apps[e],
@@ -846,7 +846,7 @@
                 score: s,
                 key: a,
                 fnOnSelected: this.SetSelectedApp,
-              })
+              }),
             );
           }
           let s = [];
@@ -869,7 +869,7 @@
               appidInitial: 268500,
               showAppIds: !0,
             }),
-            g.createElement("div", { className: b.SimilarApps }, t)
+            g.createElement("div", { className: b.SimilarApps }, t),
           );
         }
       };
@@ -918,9 +918,9 @@
                 rgOptions: e,
                 onChange: this.OnSelectedOperator,
                 selectedOption: "Plus",
-              })
+              }),
             ),
-            g.createElement(I, { fnOnSelection: this.OnSelectedApp })
+            g.createElement(I, { fnOnSelection: this.OnSelectedApp }),
           );
         }
       };
@@ -962,7 +962,7 @@
           if (0 == this.operands.length) return;
           const e = this.operands.map((e) => "appid[]=" + e.app.toString()),
             t = `${l.De.STORE_BASE_URL}labs/ajaxgetappvectors?${e.join(
-              "&"
+              "&",
             )}&model=${this.similarity_model}`;
           m()
             .get(t)
@@ -980,7 +980,7 @@
                     : "Minus" == this.operands[a].operator
                     ? (t = t.map((e, t) => e - s[t]))
                     : console.log(
-                        "Unexpected operator " + this.operands[a].operator
+                        "Unexpected operator " + this.operands[a].operator,
                       );
                 }
                 const a = t.map((e) => e * e).reduce((e, t) => e + t, 0),
@@ -995,7 +995,7 @@
                     .get(a)
                     .then((e) => {
                       let t = new Set(
-                        e.data.similar_appids.slice(0, this.props.max_similar)
+                        e.data.similar_appids.slice(0, this.props.max_similar),
                       );
                       i.Q8.EnsureAppInfoForAppIDs(t).then(() => {
                         (this.similar_apps = e.data.similar_appids),
@@ -1022,7 +1022,7 @@
                 key: a,
                 fnOnChange: this.OnOperandChanged,
                 ref: this.operand_refs[a],
-              })
+              }),
             ),
               a++;
           let s = null;
@@ -1030,13 +1030,13 @@
             (s = g.createElement(
               "div",
               { className: b.AddOperand, onClick: this.OnAddOperand },
-              "+"
+              "+",
             ));
           let r = [];
           const i = Math.min(
             this.similar_apps.length,
             this.similarity_scores.length,
-            this.props.max_similar
+            this.props.max_similar,
           );
           for (let e = 0; e < i; e++) {
             const t = this.similar_apps[e],
@@ -1055,7 +1055,7 @@
             t,
             s,
             g.createElement("h1", null, "Games similar to mixture"),
-            g.createElement("div", { className: b.SimilarApps }, r)
+            g.createElement("div", { className: b.SimilarApps }, r),
           );
         }
       };
@@ -1091,19 +1091,19 @@
               3,
               10,
               200,
-              this.IterationCallback
+              this.IterationCallback,
             )
               .then((e) => {
                 (this.in_progress = !1),
                   i.Q8.EnsureAppInfoForAppIDs(e.map((e) => e.appid)).then(
                     () => {
                       this.found_path = e;
-                    }
+                    },
                   );
               })
               .catch((e) => {
                 console.warn(
-                  "Caught pathfinding failure because: " + e.toString()
+                  "Caught pathfinding failure because: " + e.toString(),
                 ),
                   (this.in_progress = !1),
                   (this.found_path = void 0);
@@ -1131,18 +1131,18 @@
             ? g.createElement(
                 "div",
                 { className: b.ProgressMessage },
-                "Finding path, step " + this.progress_iteration
+                "Finding path, step " + this.progress_iteration,
               )
             : this.found_path
             ? g.createElement(
                 "div",
                 { className: b.ProgressMessage },
-                "Found path"
+                "Found path",
               )
             : g.createElement(
                 "div",
                 { className: b.ProgressMessage },
-                "No path found"
+                "No path found",
               );
           let s = [];
           if (this.found_path)
@@ -1153,7 +1153,7 @@
                   appid: t.appid,
                   score: t.similarity,
                   key: "pathstep" + e,
-                })
+                }),
               );
             }
           return g.createElement(
@@ -1169,15 +1169,15 @@
               g.createElement(I, {
                 fnOnSelection: this.OnSelectedEndApp,
                 strPrompt: "Select end game",
-              })
+              }),
             ),
             g.createElement(
               "div",
               { className: t, onClick: e ? this.Pathfind : () => {} },
-              "Pathfind!"
+              "Pathfind!",
             ),
             a,
-            g.createElement("div", { className: b.Path }, s)
+            g.createElement("div", { className: b.Path }, s),
           );
         }
       };
@@ -1195,7 +1195,7 @@
           g.createElement(N, { max_similar: 10, max_operands: 6 }),
           g.createElement("div", { className: b.Spacer }),
           g.createElement("h1", null, "Pathfinder"),
-          g.createElement(B, null)
+          g.createElement(B, null),
         );
       }
       (0, r.gn)([o.LO], B.prototype, "app_start", void 0),
@@ -1679,7 +1679,7 @@
               "StoreAppSimilarity.IdentifyClustersFromPlaytime#1",
               t,
               j,
-              { ePrivilege: 2, eWebAPIKeyRequirement: 2 }
+              { ePrivilege: 2, eWebAPIKeyRequirement: 2 },
             );
           });
       })(q || (q = {}));
@@ -1757,7 +1757,7 @@
               g.createElement(
                 "p",
                 null,
-                "This data is generated by analyzing games based on similar tags, and generating clusters from that.  We then look at your playtime history to see what games are in clusters together, and suggest other popular games in those clusters."
+                "This data is generated by analyzing games based on similar tags, and generating clusters from that.  We then look at your playtime history to see what games are in clusters together, and suggest other popular games in those clusters.",
               ),
               g.createElement(
                 "p",
@@ -1769,12 +1769,12 @@
                     href: "http://store-tc.k.steam.net/graph",
                     target: "_blank",
                   },
-                  "browse the cluster data graphically"
+                  "browse the cluster data graphically",
                 ),
-                " (requires Rack VPN)."
-              )
+                " (requires Rack VPN).",
+              ),
             ),
-            g.createElement(ie, { SimilarityStore: a.current })
+            g.createElement(ie, { SimilarityStore: a.current }),
           )
         );
       }
@@ -1821,7 +1821,7 @@
             { include_assets: !0, include_basic_info: !0 },
             u.current,
             n,
-            _
+            _,
           );
         return g.createElement(
           "div",
@@ -1847,10 +1847,10 @@
               rgOptions: f,
               selectedOption: n,
               onChange: m,
-            })
+            }),
           ),
           d && !S && g.createElement(K.V, null),
-          S && g.createElement(ne, { rgPlaytimeClusters: S })
+          S && g.createElement(ne, { rgPlaytimeClusters: S }),
         );
       }
       function ne(e) {
@@ -1862,9 +1862,9 @@
             g.createElement(
               ae.SV,
               { key: e.nClusterID },
-              g.createElement(le, { cluster: e })
-            )
-          )
+              g.createElement(le, { cluster: e }),
+            ),
+          ),
         );
       }
       function le(e) {
@@ -1895,7 +1895,7 @@
                     g.createElement("b", null, "Total Playtime:"),
                     " ",
                     Math.floor(t.nPlaytimeMinutes / 6) / 10,
-                    "hr"
+                    "hr",
                   ),
                   g.createElement(
                     "div",
@@ -1903,7 +1903,7 @@
                     g.createElement("b", null, "Last Played:"),
                     " ",
                     (0, J.vX)(t.rtLastPlayed),
-                    " "
+                    " ",
                   ),
                   g.createElement(
                     "div",
@@ -1916,9 +1916,9 @@
                           g.Fragment,
                           { key: e },
                           g.createElement(pe, { appid: e }),
-                          ", "
-                        )
-                      )
+                          ", ",
+                        ),
+                      ),
                   ),
                   g.createElement(
                     "div",
@@ -1934,11 +1934,11 @@
                           "Based on the top four items; we might decide not to show clusters if this score is less than some threshold, maybe 90%",
                         style: { cursor: "default" },
                       },
-                      "(?)"
-                    )
-                  )
-                )
-              )
+                      "(?)",
+                    ),
+                  ),
+                ),
+              ),
             ),
             g.createElement(
               "div",
@@ -1955,21 +1955,21 @@
                       ? g.createElement(
                           "li",
                           { key: e.GetUniqueID() },
-                          g.createElement(ce, { item: e })
+                          g.createElement(ce, { item: e }),
                         )
-                      : null
-                  )
-                )
+                      : null,
+                  ),
+                ),
               ),
               !a &&
                 g.createElement(
                   C.zx,
                   { onClick: r },
                   "Show all ",
-                  t.rgSimilarItems.length
-                )
-            )
-          )
+                  t.rgSimilarItems.length,
+                ),
+            ),
+          ),
         );
       }
       const oe = {};
@@ -1980,7 +1980,7 @@
           ? g.createElement(
               "a",
               { className: Y.PlayedGame, href: a.GetStorePageURL() },
-              a.GetName()
+              a.GetName(),
             )
           : null;
       }
@@ -1993,7 +1993,7 @@
             src: t.GetAssets().GetSmallCapsuleURL(),
             loading: "lazy",
           }),
-          t.GetName()
+          t.GetName(),
         );
       }
       var me = a(701),
@@ -2108,7 +2108,7 @@
             let e = yield (0, he.He)(
               this.m_strBaseURL,
               this.m_strOAuthClientID,
-              this.m_userFields
+              this.m_userFields,
             );
             (0, o.z)(() => {
               (this.m_bRequestInFlight = !1), this.UpdateLoginResult(e);
@@ -2120,7 +2120,7 @@
             return (
               console.log("Login timeout"),
               void (this.m_strErrorMessage = (0, J.Xx)(
-                "#ConnectionTrouble_FailedToConnect"
+                "#ConnectionTrouble_FailedToConnect",
               ))
             );
           if (e.login_complete) {
@@ -2140,7 +2140,7 @@
                   this.m_eCurrentStep != ge.TwoFactorCode ||
                     this.m_strErrorMessage ||
                     ((this.m_strErrorMessage = (0, J.Xx)(
-                      "#MobileLogin_IncorrectSteamGuard"
+                      "#MobileLogin_IncorrectSteamGuard",
                     )),
                     (this.m_eSteamGuardCodeError = fe.InvalidCode),
                     (this.m_userFields.strTwoFactorCode = "")),
@@ -2155,7 +2155,7 @@
                   this.m_eCurrentStep != ge.EmailCode ||
                     this.m_strErrorMessage ||
                     ((this.m_strErrorMessage = (0, J.Xx)(
-                      "#MobileLogin_IncorrectSteamGuard"
+                      "#MobileLogin_IncorrectSteamGuard",
                     )),
                     (this.m_eSteamGuardCodeError = fe.InvalidCode),
                     (this.m_userFields.strEmailAuthCode = "")),
@@ -2195,7 +2195,7 @@
             (this.m_manager = new Se(this.props.baseURL)),
             this.props.onLoginComplete &&
               this.m_manager.SetLoginCompleteCallback(
-                this.props.onLoginComplete
+                this.props.onLoginComplete,
               );
         }
         componentWillUnmount() {
@@ -2214,7 +2214,7 @@
             g.createElement(
               "div",
               { className: ue().LoginPanelBackground },
-              g.createElement(me.ui7, null)
+              g.createElement(me.ui7, null),
             ),
             g.createElement(
               "div",
@@ -2239,9 +2239,9 @@
                 g.createElement(
                   "div",
                   { className: ue().LoginComplete },
-                  g.createElement(K.V, null)
-                )
-            )
+                  g.createElement(K.V, null),
+                ),
+            ),
           );
         }
       };
@@ -2301,7 +2301,7 @@
               g.createElement(
                 "div",
                 { className: ue().SigninTitle },
-                (0, J.Xx)("#Login_SignIn")
+                (0, J.Xx)("#Login_SignIn"),
               ),
               g.createElement(
                 "form",
@@ -2340,13 +2340,13 @@
                 g.createElement(
                   C.KM,
                   { disabled: this.props.manager.IsRequestInFlight() },
-                  (0, J.Xx)("#Login_SignIn").toLocaleUpperCase()
-                )
+                  (0, J.Xx)("#Login_SignIn").toLocaleUpperCase(),
+                ),
               ),
               g.createElement(
                 "a",
                 { className: ue().NeedHelpLink, href: l.De.HELP_BASE_URL },
-                (0, J.Xx)("#Login_ForgotPassword")
+                (0, J.Xx)("#Login_ForgotPassword"),
               ),
               g.createElement("div", { className: ue().LoginCreateSeperator }),
               g.createElement(
@@ -2355,7 +2355,7 @@
                 g.createElement(
                   "div",
                   { className: ue().SteamUpsell },
-                  (0, J.Xx)("#Login_NoSteamAccount")
+                  (0, J.Xx)("#Login_NoSteamAccount"),
                 ),
                 g.createElement(
                   "div",
@@ -2363,10 +2363,10 @@
                   g.createElement(
                     "a",
                     { href: `${l.De.STORE_BASE_URL}join/` },
-                    (0, J.Xx)("#Login_CreateAccount")
-                  )
-                )
-              )
+                    (0, J.Xx)("#Login_CreateAccount"),
+                  ),
+                ),
+              ),
             )
           );
         }
@@ -2400,7 +2400,7 @@
                   g.createElement("img", {
                     className: ue().CaptchaImage,
                     src: e.GetCaptchaURL(),
-                  })
+                  }),
                 ),
                 g.createElement(C.II, {
                   className: ue().CaptchaInput,
@@ -2409,13 +2409,13 @@
                   maxLength: 6,
                   value: e.GetCaptchaText(),
                   onChange: this.OnCaptchaText,
-                })
+                }),
               ),
               g.createElement(
                 "div",
                 { className: ue().ErrorMessage },
-                (0, J.Xx)("#Login_CaptchaVerification")
-              )
+                (0, J.Xx)("#Login_CaptchaVerification"),
+              ),
             ),
             g.createElement(
               "div",
@@ -2426,9 +2426,9 @@
                   className: ue().RefreshCaptchaText,
                   onClick: this.RefreshCaptcha,
                 },
-                (0, J.Xx)("#Login_RefreshCaptcha")
-              )
-            )
+                (0, J.Xx)("#Login_RefreshCaptcha"),
+              ),
+            ),
           );
         }
       };
@@ -2466,8 +2466,8 @@
                     "span",
                     { className: ue().Highlight },
                     "@",
-                    t.GetEmailDomain()
-                  )
+                    t.GetEmailDomain(),
+                  ),
                 )),
                 (r = (0, J.Xx)("#Login_EnterSteamguard")),
                 (e = g.createElement(me.wr9, null));
@@ -2479,7 +2479,7 @@
             g.createElement(
               "div",
               { className: ue().SigningInAccountName },
-              t.GetUserName()
+              t.GetUserName(),
             ),
             g.createElement(C.Ac, null, s),
             g.createElement(
@@ -2505,21 +2505,21 @@
                 g.createElement(
                   C.KM,
                   { disabled: this.props.manager.IsRequestInFlight() },
-                  (0, J.Xx)("#Login_SteamguardSubmit").toLocaleUpperCase()
-                )
-              )
+                  (0, J.Xx)("#Login_SteamguardSubmit").toLocaleUpperCase(),
+                ),
+              ),
             ),
             g.createElement(
               "a",
               {
                 className: (0, v.Z)(
                   ue().NeedHelpLink,
-                  i ? ue().NeedHelpHighlight : null
+                  i ? ue().NeedHelpHighlight : null,
                 ),
                 href: "http://help.steampowered.com/",
               },
-              r
-            )
+              r,
+            ),
           );
         }
       };
@@ -2566,8 +2566,8 @@
               g.createElement(
                 "div",
                 { className: b.Body },
-                "Internal testbed page for Steam Labs experiments"
-              )
+                "Internal testbed page for Steam Labs experiments",
+              ),
             ),
             g.createElement(
               "div",
@@ -2581,9 +2581,9 @@
                     className: b.Tab,
                     activeClassName: b.Active,
                   },
-                  e.name
-                )
-              )
+                  e.name,
+                ),
+              ),
             ),
             g.createElement(
               "div",
@@ -2602,12 +2602,12 @@
                         !e.requires_login || r
                           ? e.render(Object.assign(Object.assign({}, t), n))
                           : g.createElement(we, null),
-                    })
-                  )
-                )
-              )
-            )
-          )
+                    }),
+                  ),
+                ),
+              ),
+            ),
+          ),
         );
       }
       function we() {
@@ -2618,7 +2618,7 @@
           g.createElement(be, {
             baseURL: l.De.STORE_BASE_URL,
             onLoginComplete: () => window.location.reload(),
-          })
+          }),
         );
       }
     },

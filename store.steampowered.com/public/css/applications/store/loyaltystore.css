@@ -2009,8 +2009,10 @@ body.v6.rewards .ModalPosition_Content {
   height: 256px;
   border-radius: 5px;
   overflow: hidden;
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14),
-    0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+  box-shadow:
+    0 1px 1px 0 rgba(0, 0, 0, 0.14),
+    0 2px 1px -1px rgba(0, 0, 0, 0.12),
+    0 1px 3px 0 rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
   z-index: 1;
@@ -3625,8 +3627,10 @@ body.v6.rewards .ModalPosition_Content {
   height: 256px;
   border-radius: 5px;
   overflow: hidden;
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14),
-    0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+  box-shadow:
+    0 1px 1px 0 rgba(0, 0, 0, 0.14),
+    0 2px 1px -1px rgba(0, 0, 0, 0.12),
+    0 1px 3px 0 rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
   z-index: 1;
@@ -3992,8 +3996,10 @@ body.v6.rewards .ModalPosition_Content {
 .bundle_ItemCard_1zIyr {
   border-radius: 5px;
   background: linear-gradient(to bottom right, #17335e 40%, #22437e);
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14),
-    0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+  box-shadow:
+    0 1px 1px 0 rgba(0, 0, 0, 0.14),
+    0 2px 1px -1px rgba(0, 0, 0, 0.12),
+    0 1px 3px 0 rgba(0, 0, 0, 0.2);
   position: relative;
 }
 .bundle_ItemCard_1zIyr .bundle_OwnedItem_3Pdrt {
@@ -4011,8 +4017,10 @@ body.v6.rewards .ModalPosition_Content {
   overflow: hidden;
   height: 256px;
   background: linear-gradient(114.67deg, #1e3658 34.26%, #243c67 78.13%);
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14),
-    0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+  box-shadow:
+    0 1px 1px 0 rgba(0, 0, 0, 0.14),
+    0 2px 1px -1px rgba(0, 0, 0, 0.12),
+    0 1px 3px 0 rgba(0, 0, 0, 0.2);
   cursor: pointer;
   margin: 5px;
   position: relative;
@@ -4411,8 +4419,10 @@ body.v6.rewards .ModalPosition_Content {
   overflow: hidden;
   height: 256px;
   background: linear-gradient(114.67deg, #1e3658 34.26%, #243c67 78.13%);
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14),
-    0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+  box-shadow:
+    0 1px 1px 0 rgba(0, 0, 0, 0.14),
+    0 2px 1px -1px rgba(0, 0, 0, 0.12),
+    0 1px 3px 0 rgba(0, 0, 0, 0.2);
   cursor: pointer;
   margin: 5px;
   position: relative;
@@ -5463,8 +5473,10 @@ body.v6.rewards .ModalPosition_Content {
   border-radius: 5px;
   background-position: top left;
   background-size: cover;
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14),
-    0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+  box-shadow:
+    0 1px 1px 0 rgba(0, 0, 0, 0.14),
+    0 2px 1px -1px rgba(0, 0, 0, 0.12),
+    0 1px 3px 0 rgba(0, 0, 0, 0.2);
 }
 .herogroup_Container_go6jL .herogroup_Title_y7h7u {
   font-size: 2.2em;
@@ -5788,7 +5800,8 @@ body.v6.rewards .ModalPosition_Content {
   font-size: 14px;
   font-family: "Motiva Sans", Sans-serif;
   padding: 20px 40px;
-  background: url(../../../images/applications/store/diamonds_tile.png?v=valveisgoodatcaching)
+  background:
+    url(../../../images/applications/store/diamonds_tile.png?v=valveisgoodatcaching)
       no-repeat,
     radial-gradient(100% 1000px at 20% 0px, #182333 5%, #171c22 100%);
   background-size: auto 100%;
@@ -6590,7 +6603,9 @@ body.v6.rewards .ModalPosition_Content {
   .redeempointsmodal_ProfileShowcaseIcon_KPkBe {
   max-height: 200px;
   margin-bottom: 20px;
-  transition: width 1s, height 1s;
+  transition:
+    width 1s,
+    height 1s;
 }
 .redeempointsmodal_ProfileShowcaseContainer_3REq7
   .redeempointsmodal_ProfileShowcasePreviewContainer_22jxu.redeempointsmodal_LoadedPreview_2JkH5
@@ -6617,7 +6632,9 @@ body.v6.rewards .ModalPosition_Content {
   height: 850px;
   width: 652px;
   opacity: 0;
-  transition: height 500ms, opacity 500ms ease-in-out;
+  transition:
+    height 500ms,
+    opacity 500ms ease-in-out;
   transform: scale(0.5);
   transform-origin: top;
 }
@@ -6729,7 +6746,9 @@ body.v6.rewards .ModalPosition_Content {
   height: 500px;
   width: 200%;
   opacity: 0;
-  transition: height 500ms, opacity 500ms ease-in-out;
+  transition:
+    height 500ms,
+    opacity 500ms ease-in-out;
   transform: scale(0.5);
   transform-origin: top left;
 }
@@ -7689,7 +7708,9 @@ body.v6.rewards .ModalPosition_Content {
   left: 0;
   height: 2px;
   background-color: #ecf0f5;
-  transition: transform 0.2s ease-in-out, width 0.2s ease-in-out;
+  transition:
+    transform 0.2s ease-in-out,
+    width 0.2s ease-in-out;
 }
 .scrollabletabs_Item_1cVR_ {
   padding: 8px 0;
@@ -11124,15 +11145,60 @@ body.v6.rewards .ModalPosition_Content {
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  box-shadow: 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff,
-    0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff,
-    0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff,
-    0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff,
-    0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff,
-    0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff,
-    0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff, 0 0 #fff,
-    0 0 #fff, 0 0 #fff, 0 0 #fff;
-  animation: chatroomeffects_bang_11uU_ 1s ease-out 3 backwards,
+  box-shadow:
+    0 0 #fff,
+    0 0 #fff,
+    0 0 #fff,
+    0 0 #fff,
+    0 0 #fff,
+    0 0 #fff,
+    0 0 #fff,
+    0 0 #fff,
+    0 0 #fff,
+    0 0 #fff,
+    0 0 #fff,
+    0 0 #fff,
+    0 0 #fff,
+    0 0 #fff,
+    0 0 #fff,
+    0 0 #fff,
+    0 0 #fff,
+    0 0 #fff,
+    0 0 #fff,
+    0 0 #fff,
+    0 0 #fff,
+    0 0 #fff,
+    0 0 #fff,
+    0 0 #fff,
+    0 0 #fff,
+    0 0 #fff,
+    0 0 #fff,
+    0 0 #fff,
+    0 0 #fff,
+    0 0 #fff,
+    0 0 #fff,
+    0 0 #fff,
+    0 0 #fff,
+    0 0 #fff,
+    0 0 #fff,
+    0 0 #fff,
+    0 0 #fff,
+    0 0 #fff,
+    0 0 #fff,
+    0 0 #fff,
+    0 0 #fff,
+    0 0 #fff,
+    0 0 #fff,
+    0 0 #fff,
+    0 0 #fff,
+    0 0 #fff,
+    0 0 #fff,
+    0 0 #fff,
+    0 0 #fff,
+    0 0 #fff,
+    0 0 #fff;
+  animation:
+    chatroomeffects_bang_11uU_ 1s ease-out 3 backwards,
     chatroomeffects_gravity_2r9Nj 1s ease-in 3 backwards,
     chatroomeffects_position_1oxcH 5s linear 3 backwards;
 }
@@ -11148,31 +11214,57 @@ body.v6.rewards .ModalPosition_Content {
 }
 @keyframes chatroomeffects_bang_11uU_ {
   to {
-    box-shadow: 127px -276.6666666667px #6aff00, -21px -401.6666666667px #00ffa2,
-      247px -374.6666666667px #f50, 139px 12.3333333333px #0cf,
-      -137px -32.6666666667px #48ff00, 128px -300.6666666667px #6200ff,
-      141px -84.6666666667px #4dff00, 112px -174.6666666667px #00ff2b,
-      248px -362.6666666667px #00ff48, -243px 59.3333333333px #9100ff,
-      -150px -201.6666666667px #ff0080, 232px 65.3333333333px #6fff00,
-      114px 66.3333333333px #aeff00, 202px 11.3333333333px #cf0,
-      206px -392.6666666667px #04f, -166px 63.3333333333px #ff0091,
-      -206px -411.6666666667px #00ffc4, -205px -110.6666666667px #40f,
-      44px -324.6666666667px #ff6a00, -249px -344.6666666667px #f04,
-      123px 36.3333333333px #ae00ff, -131px 27.3333333333px #f03,
-      197px -163.6666666667px #ff0073, -184px -327.6666666667px #f70,
-      -67px -256.6666666667px #ff00f7, -242px -242.6666666667px #003cff,
-      -2px -76.6666666667px #f0d, -138px -51.6666666667px #ff0059,
-      59px 42.3333333333px #2bff00, -205px -86.6666666667px #00ff2b,
-      -219px -231.6666666667px #00d9ff, 224px -182.6666666667px #b7ff00,
-      -168px -231.6666666667px #ff00ea, -186px -171.6666666667px #ff00fb,
-      -122px -292.6666666667px #0062ff, 233px -387.6666666667px #00a2ff,
-      87px -247.6666666667px #ffc400, 148px -163.6666666667px #5100ff,
-      124px 71.3333333333px #80f, 224px -333.6666666667px #001eff,
-      156px -169.6666666667px #e600ff, 129px -229.6666666667px #10f,
-      -149px -304.6666666667px #001eff, 30px -186.6666666667px #ffd900,
-      -126px -166.6666666667px #08f, 92px -36.6666666667px #00ff40,
-      -107px -88.6666666667px #ff0051, -16px -113.6666666667px #40f,
-      73px -403.6666666667px #ff8000, -130px -250.6666666667px #00ffe1,
+    box-shadow:
+      127px -276.6666666667px #6aff00,
+      -21px -401.6666666667px #00ffa2,
+      247px -374.6666666667px #f50,
+      139px 12.3333333333px #0cf,
+      -137px -32.6666666667px #48ff00,
+      128px -300.6666666667px #6200ff,
+      141px -84.6666666667px #4dff00,
+      112px -174.6666666667px #00ff2b,
+      248px -362.6666666667px #00ff48,
+      -243px 59.3333333333px #9100ff,
+      -150px -201.6666666667px #ff0080,
+      232px 65.3333333333px #6fff00,
+      114px 66.3333333333px #aeff00,
+      202px 11.3333333333px #cf0,
+      206px -392.6666666667px #04f,
+      -166px 63.3333333333px #ff0091,
+      -206px -411.6666666667px #00ffc4,
+      -205px -110.6666666667px #40f,
+      44px -324.6666666667px #ff6a00,
+      -249px -344.6666666667px #f04,
+      123px 36.3333333333px #ae00ff,
+      -131px 27.3333333333px #f03,
+      197px -163.6666666667px #ff0073,
+      -184px -327.6666666667px #f70,
+      -67px -256.6666666667px #ff00f7,
+      -242px -242.6666666667px #003cff,
+      -2px -76.6666666667px #f0d,
+      -138px -51.6666666667px #ff0059,
+      59px 42.3333333333px #2bff00,
+      -205px -86.6666666667px #00ff2b,
+      -219px -231.6666666667px #00d9ff,
+      224px -182.6666666667px #b7ff00,
+      -168px -231.6666666667px #ff00ea,
+      -186px -171.6666666667px #ff00fb,
+      -122px -292.6666666667px #0062ff,
+      233px -387.6666666667px #00a2ff,
+      87px -247.6666666667px #ffc400,
+      148px -163.6666666667px #5100ff,
+      124px 71.3333333333px #80f,
+      224px -333.6666666667px #001eff,
+      156px -169.6666666667px #e600ff,
+      129px -229.6666666667px #10f,
+      -149px -304.6666666667px #001eff,
+      30px -186.6666666667px #ffd900,
+      -126px -166.6666666667px #08f,
+      92px -36.6666666667px #00ff40,
+      -107px -88.6666666667px #ff0051,
+      -16px -113.6666666667px #40f,
+      73px -403.6666666667px #ff8000,
+      -130px -250.6666666667px #00ffe1,
       83px 53.3333333333px #15ff00;
   }
 }
@@ -12743,8 +12835,10 @@ body.v6.rewards .ModalPosition_Content {
 .salerewarditemhero_SaleRewardContainer_379X4 {
   border-radius: 5px;
   background-repeat: repeat;
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14),
-    0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+  box-shadow:
+    0 1px 1px 0 rgba(0, 0, 0, 0.14),
+    0 2px 1px -1px rgba(0, 0, 0, 0.12),
+    0 1px 3px 0 rgba(0, 0, 0, 0.2);
   background-image: url(../../../images/applications/store/lunar2022_bg_tile.png?v=valveisgoodatcaching);
   width: 100%;
   padding: 0 20px 20px 20px;

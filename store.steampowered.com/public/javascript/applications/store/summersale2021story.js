@@ -90,7 +90,7 @@
             return { strErrorMsg: e.err_msg, errorCode: e.success };
           if ("string" == typeof e && e.length > 1024)
             console.groupCollapsed(
-              "GetMsgAndErrorCodeFromResponse cannot parse: "
+              "GetMsgAndErrorCodeFromResponse cannot parse: ",
             ),
               console.error(e),
               console.groupEnd();
@@ -133,7 +133,7 @@
               t = n.De.STORE_BASE_URL + "sale/" + r.strSalePage;
             let m = (0, o.kQ)(
               "#Summer_21_Story_Enter",
-              s.createElement("span", null, (0, o.Xx)(r.strGenreName))
+              s.createElement("span", null, (0, o.Xx)(r.strGenreName)),
             );
             if (e.has(a)) {
               let o = "";
@@ -150,7 +150,7 @@
                     strTitle: r.strPageTitle,
                     strSaleURL: t,
                     strSummary: o,
-                  })
+                  }),
                 );
             } else {
               let e = "";
@@ -166,7 +166,7 @@
                     strTitle: r.strPageTitle,
                     strSaleURL: t,
                     strSummary: "#Summer_21_Story_Next_Intro",
-                  })
+                  }),
                 );
             }
           });
@@ -189,7 +189,7 @@
                   s.createElement("img", {
                     className: l.LocalizedHeaderMobileImg,
                     src: d,
-                  })
+                  }),
               ),
               s.createElement(
                 "div",
@@ -203,24 +203,24 @@
                     s.createElement(
                       "div",
                       { className: l.HeaderPrefix },
-                      (0, o.Xx)("#Summer_21_Overview_Title_Prefix")
+                      (0, o.Xx)("#Summer_21_Overview_Title_Prefix"),
                     ),
-                    (0, o.Xx)("#Summer_21_Overview_Title")
+                    (0, o.Xx)("#Summer_21_Overview_Title"),
                   ),
                   s.createElement(
                     "div",
                     { className: (0, m.Z)(l.HeaderDesc, l.Noto) },
-                    (0, o.Xx)("#Summer_21_Overview_Description1")
+                    (0, o.Xx)("#Summer_21_Overview_Description1"),
                   ),
                   s.createElement(
                     "div",
                     { className: (0, m.Z)(l.HeaderDesc, l.Noto) },
-                    (0, o.Xx)("#Summer_21_Overview_Description3")
+                    (0, o.Xx)("#Summer_21_Overview_Description3"),
                   ),
                   s.createElement(
                     "div",
                     { className: (0, m.Z)(l.HeaderDesc, l.Noto) },
-                    (0, o.Xx)("#Summer_21_Overview_Description4")
+                    (0, o.Xx)("#Summer_21_Overview_Description4"),
                   ),
                   s.createElement(
                     "a",
@@ -232,32 +232,32 @@
                       className: (0, m.Z)(l.HeaderDesc, l.Noto, l.Wallpapers),
                     },
                     "*",
-                    (0, o.Xx)("#Summer21_Story_DownloadWallpaper")
+                    (0, o.Xx)("#Summer21_Story_DownloadWallpaper"),
                   ),
                   s.createElement(
                     "div",
                     { className: (0, m.Z)(l.HeaderIntro, l.Noto) },
-                    (0, o.Xx)("#Summer_21_Overview_Description2")
+                    (0, o.Xx)("#Summer_21_Overview_Description2"),
                   ),
                   s.createElement(
                     "div",
                     { className: (0, m.Z)(l.HeaderIntro, l.Noto) },
-                    (0, o.Xx)("#Summer_21_Story_Intro")
+                    (0, o.Xx)("#Summer_21_Story_Intro"),
                   ),
                   s.createElement(
                     "div",
                     { className: (0, m.Z)(l.ListHeader, l.Noto) },
-                    (0, o.Xx)("#Summer_21_Story_Next")
+                    (0, o.Xx)("#Summer_21_Story_Next"),
                   ),
                   s.createElement(
                     "div",
                     { className: (0, m.Z)(l.GenreListContainer) },
-                    g
-                  )
+                    g,
+                  ),
                 ),
-                s.createElement(_, null)
-              )
-            )
+                s.createElement(_, null),
+              ),
+            ),
           );
         },
         _ = (e) => {
@@ -304,10 +304,10 @@
                 className: (0, m.Z)(
                   l.HeaderDesc,
                   l.Noto,
-                  l.CompletedSummaryText
+                  l.CompletedSummaryText,
                 ),
               },
-              (0, o.Xx)("#Summer21_Badge_Unlocked_Description")
+              (0, o.Xx)("#Summer21_Badge_Unlocked_Description"),
             ),
             s.createElement(
               "div",
@@ -318,18 +318,18 @@
                 s.createElement(
                   "div",
                   { className: l.SubHeader },
-                  (0, o.Xx)("#Summer21_Badge_Prelude")
+                  (0, o.Xx)("#Summer21_Badge_Prelude"),
                 ),
                 s.createElement(
                   "div",
                   { className: l.BadgeName },
-                  (0, o.Xx)(a.badge_name)
+                  (0, o.Xx)(a.badge_name),
                 ),
                 s.createElement(
                   "div",
                   { className: l.BadgeDesc },
-                  (0, o.Xx)(a.badge_desc)
-                )
+                  (0, o.Xx)(a.badge_desc),
+                ),
               ),
               s.createElement(
                 "div",
@@ -341,12 +341,12 @@
                 s.createElement(
                   "div",
                   { className: l.BadgeText },
-                  (0, o.Xx)("#Summer21_Badge_Congrats1")
+                  (0, o.Xx)("#Summer21_Badge_Congrats1"),
                 ),
                 s.createElement(
                   "div",
                   { className: l.BadgeText },
-                  (0, o.Xx)("#Summer21_Badge_Congrats2")
+                  (0, o.Xx)("#Summer21_Badge_Congrats2"),
                 ),
                 s.createElement(
                   "a",
@@ -354,19 +354,19 @@
                     className: l.BadgeLink,
                     href: n.De.COMMUNITY_BASE_URL + "my/edit/avatar/" + r,
                   },
-                  (0, o.Xx)("#Summer21_Badge_View")
+                  (0, o.Xx)("#Summer21_Badge_View"),
                 ),
                 s.createElement("a", {
                   className: l.FrameExample,
                   href: n.De.COMMUNITY_BASE_URL + "my/edit/avatar/" + r,
-                })
-              )
+                }),
+              ),
             ),
             s.createElement(
               "div",
               { className: (0, m.Z)(l.TheEnd, l.Noto) },
-              (0, o.Xx)("#Summer21_Story_End")
-            )
+              (0, o.Xx)("#Summer21_Story_End"),
+            ),
           );
         },
         c = (e) => {
@@ -385,18 +385,18 @@
               s.createElement(
                 "div",
                 { className: (0, m.Z)(l.GenreSubheader, l.Noto) },
-                e.strSubheader
+                e.strSubheader,
               ),
               s.createElement(
                 "div",
                 { className: l.GenreTitle },
-                (0, o.Xx)(e.strTitle)
+                (0, o.Xx)(e.strTitle),
               ),
               s.createElement(
                 "div",
                 { className: (0, m.Z)(l.GenreStory, l.Noto) },
-                (0, o.Xx)(e.strSummary)
-              )
+                (0, o.Xx)(e.strSummary),
+              ),
             ),
             s.createElement(
               "div",
@@ -409,8 +409,8 @@
               !e.bClaimed &&
                 s.createElement("div", {
                   className: (0, m.Z)(l.StickerPreview, l.Unclaimed),
-                })
-            )
+                }),
+            ),
           );
         };
     },
