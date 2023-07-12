@@ -2652,27 +2652,7 @@ https://steamcommunity.com/sharedfiles/votedown
 https://steamcommunity.com/sharedfiles/votelater
 https://steamcommunity.com/sharedfiles/voteup
 https://steamcommunity.com/sharedfiles/youtube/${}
-https://steamcommunity.com/steamguard/email_done
-https://steamcommunity.com/steamguard/error?msg=${msg}
-https://steamcommunity.com/steamguard/none
-https://steamcommunity.com/steamguard/none_done
-https://steamcommunity.com/steamguard/phone_cantsendsms
-https://steamcommunity.com/steamguard/phone_checkemail?bForTwoFactor=${bForTwoFactor ? 1 : 0}&bRevoke2fOnCancel=
-https://steamcommunity.com/steamguard/phone_checksms?bForTwoFactor=1&bRevoke2fOnCancel=
-https://steamcommunity.com/steamguard/phone_checksms?bForTwoFactor=1&step=1&bRevoke2fOnCancel=
-https://steamcommunity.com/steamguard/phone_checksms?bRevoke2fOnCancel=
-https://steamcommunity.com/steamguard/phone_done
-https://steamcommunity.com/steamguard/phone_number?bForTwoFactor=${sForTwoFactor}&bRevoke2fOnCancel=
-https://steamcommunity.com/steamguard/phone_splash?bRevoke2fOnCancel=false
-https://steamcommunity.com/steamguard/phoneajax
-https://steamcommunity.com/steamguard/prechange
 https://steamcommunity.com/steamguard/reporterror
-https://steamcommunity.com/steamguard/twofactor_done
-https://steamcommunity.com/steamguard/twofactor_recoverycode
-https://steamcommunity.com/steamguard/twofactor_recoverycode?step=${nStep ? _ : 3}
-https://steamcommunity.com/steamguard/twofactor_remove
-https://steamcommunity.com/steamguard/twofactor_splash?phonetime=${now}
-https://steamcommunity.com/steamguard/twofactor_wrongtime?minutesoff=${phoneTimeMinutesOff}
 https://steamcommunity.com/trade/${g_ulTradePartnerSteamID}/
 https://steamcommunity.com/trade/${g_ulTradePartnerSteamID}/additem/
 https://steamcommunity.com/trade/${g_ulTradePartnerSteamID}/cancel/

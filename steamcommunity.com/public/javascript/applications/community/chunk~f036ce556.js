@@ -3654,7 +3654,14 @@
               : "",
           ),
           [p, b] = (0, n.useState)(""),
-          [y, B] = (0, n.useState)(s && !o && "0" != localStorage.getItem(g)),
+          [y, B] = (0, n.useState)(
+            s &&
+              !o &&
+              "0" !=
+                (null === localStorage || void 0 === localStorage
+                  ? void 0
+                  : localStorage.getItem(g)),
+          ),
           [w, S] = (0, n.useState)(!c.De.IN_STEAMUI),
           E = !(0 === u.eStatus || 1 === u.eStatus || 2 === u.eStatus);
         (0, n.useEffect)(() => {
@@ -3693,7 +3700,10 @@
             onPasswordChange: b,
             bRememberMe: y,
             onRememberMeChange: (e) => {
-              B(e), localStorage.setItem(g, e ? "1" : "0");
+              B(e),
+                null === localStorage ||
+                  void 0 === localStorage ||
+                  localStorage.setItem(g, e ? "1" : "0");
             },
             bHaveLastCreds: w,
             onPasswordSubmit: () =>
