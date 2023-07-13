@@ -118,7 +118,7 @@
             console.groupCollapsed(
               "GetMsgAndErrorCodeFromResponse cannot parse: ",
             ),
-              console.error(e),
+              console.warn(e),
               console.groupEnd();
           else {
             if ("object" == typeof e && e instanceof n.gA)
@@ -126,7 +126,7 @@
                 strErrorMsg: "" + e.GetEResult(),
                 errorCode: e.GetEResult(),
               };
-            console.error("GetMsgAndErrorCodeFromResponse cannot parse: ", e);
+            console.warn("GetMsgAndErrorCodeFromResponse cannot parse: ", e);
           }
         }
         return "object" == typeof e && "status" in e
@@ -139,7 +139,7 @@
     },
     14491: (e, t, r) => {
       "use strict";
-      r.r(t), r.d(t, { AccountPreferencesRoutes: () => B, default: () => R });
+      r.r(t), r.d(t, { AccountPreferencesRoutes: () => M, default: () => B });
       var s = r(89526),
         i = r(59934),
         n = r(33940),
@@ -225,16 +225,6 @@
           (this.m_Preferences.valve_analytics.product_impressions_tracking =
             !this.m_Preferences.valve_analytics.product_impressions_tracking),
             this.ProcessToggle();
-        }
-        GetGoogleAnalytics() {
-          return this.m_Preferences.third_party_analytics.google_analytics;
-        }
-        ToggleGoogleAnalytics() {
-          return (0, n.mG)(this, void 0, void 0, function* () {
-            (this.m_Preferences.third_party_analytics.google_analytics =
-              !this.m_Preferences.third_party_analytics.google_analytics),
-              this.ProcessToggle();
-          });
         }
         GetSketchfab() {
           return this.m_Preferences.third_party_content.sketchfab;
@@ -325,7 +315,7 @@
         P = r(66294),
         k = r(44026);
       let E;
-      const y = (0, f.Pi)(() => {
+      const N = (0, f.Pi)(() => {
           let e = (function () {
             if (!E) {
               let e = (0, a.kQ)("cookiepreferences", "application_config");
@@ -386,10 +376,9 @@
                   (0, _.Xx)("#CookiePref_AcceptAll"),
                 ),
               ),
-              s.createElement(N, { settings: e }),
+              s.createElement(y, { settings: e }),
               s.createElement(C, { settings: e }),
               s.createElement(v, { settings: e }),
-              s.createElement(S, { settings: e }),
             ),
             s.createElement(
               "div",
@@ -547,12 +536,12 @@
             s.createElement(
               "div",
               { className: "account_settings_container" },
-              s.createElement(T, { settings: e }),
+              s.createElement(S, { settings: e }),
             ),
             null,
           );
         }),
-        N = (0, f.Pi)((e) => {
+        y = (0, f.Pi)((e) => {
           const { settings: t } = e,
             r = (0, s.useCallback)(() => {
               t.ToggleRecentApps();
@@ -613,46 +602,6 @@
           );
         }),
         v = (0, f.Pi)((e) => {
-          const { settings: t } = e,
-            r = (0, s.useCallback)(() => {
-              t.ToggleGoogleAnalytics();
-            }, [t]);
-          return s.createElement(
-            "div",
-            { className: d.CookieGroup },
-            s.createElement(
-              "div",
-              { className: d.CookieSection },
-              s.createElement(
-                "h2",
-                null,
-                (0, _.Xx)("#CookiePref_GoogleAnalytics_Title"),
-              ),
-              s.createElement(
-                "p",
-                { className: d.SectionDescription },
-                (0, _.Xx)("#CookiePref_GoogleAnalytics_Desc"),
-              ),
-              s.createElement(g.gE, {
-                onChange: r,
-                label: (0, _.Xx)("#CookiePref_GoogleAnalytics_ToggleLabel"),
-                checked: t.GetGoogleAnalytics(),
-                description: (0, _.kQ)(
-                  "#CookiePref_GoogleAnalytics_ToggleDesc",
-                  s.createElement(
-                    "a",
-                    {
-                      href: "https://policies.google.com/privacy",
-                      target: "_blank",
-                    },
-                    (0, _.Xx)("#CookiePref_GoogleAnalytics_TogglePolicyName"),
-                  ),
-                ),
-              }),
-            ),
-          );
-        }),
-        S = (0, f.Pi)((e) => {
           const { settings: t } = e,
             r = (0, s.useCallback)(() => {
               t.ToggleYouTube();
@@ -724,7 +673,7 @@
             ),
           );
         }),
-        T = (0, f.Pi)((e) => {
+        S = (0, f.Pi)((e) => {
           const { settings: t } = e,
             r = (0, s.useCallback)(() => {
               t.ToggleUTMEnabled();
@@ -754,7 +703,7 @@
             ),
           );
         });
-      class b {
+      class T {
         constructor(e) {
           (this.m_bUpdating = !1), (this.m_Preferences = e);
         }
@@ -812,24 +761,24 @@
           });
         }
       }
-      (0, n.gn)([o.LO], b.prototype, "m_Preferences", void 0),
-        (0, n.gn)([o.LO], b.prototype, "m_bUpdating", void 0);
-      var D = r(17560),
-        x = r(16826);
-      let X;
-      function G() {
-        if (!X) {
+      (0, n.gn)([o.LO], T.prototype, "m_Preferences", void 0),
+        (0, n.gn)([o.LO], T.prototype, "m_bUpdating", void 0);
+      var b = r(17560),
+        D = r(16826);
+      let x;
+      function X() {
+        if (!x) {
           let e = (0, a.kQ)("notificationpreferences", "application_config");
-          X = new b(e);
+          x = new T(e);
         }
-        return X;
+        return x;
       }
-      const A = (0, f.Pi)(() => {
-          let e = G();
+      const G = (0, f.Pi)(() => {
+          let e = X();
           const t = (0, h.L)();
           let r = [];
           for (const t of e.GetPreferences())
-            r.push(s.createElement(w, { preferenceSetting: t }));
+            r.push(s.createElement(A, { preferenceSetting: t }));
           return s.createElement(
             P.p,
             { navID: "StoreNotificationSettings", NavigationManager: t },
@@ -837,7 +786,7 @@
               "div",
               {
                 className: (0, p.Z)(
-                  D.NotificationSettingsHeader,
+                  b.NotificationSettingsHeader,
                   "account_header_line noicon",
                 ),
               },
@@ -852,12 +801,12 @@
               { className: "account_settings_container" },
               s.createElement(
                 "p",
-                { className: D.SectionDescription },
+                { className: b.SectionDescription },
                 (0, _.Xx)("#NotificationSettings_Desc1"),
               ),
               s.createElement(
                 "p",
-                { className: D.SectionDescription },
+                { className: b.SectionDescription },
                 (0, _.Xx)("#NotificationSettings_Desc2"),
               ),
               s.createElement(
@@ -873,9 +822,9 @@
             ),
           );
         }),
-        w = (0, f.Pi)((e) => {
+        A = (0, f.Pi)((e) => {
           const { preferenceSetting: t } = e;
-          let r = G();
+          let r = X();
           const i = (0, s.useCallback)(() => {
               r.ToggleTargetPreference(1, t);
             }, [t, r]),
@@ -892,12 +841,12 @@
             d = 8 == (8 & t.notification_targets);
           return s.createElement(
             "div",
-            { className: D.NotificationGroup },
+            { className: b.NotificationGroup },
             s.createElement(
               "div",
-              { className: D.NotificationSection },
+              { className: b.NotificationSection },
               s.createElement(g.fp, {
-                className: D.NotificationFeedToggle,
+                className: b.NotificationFeedToggle,
                 padding: "compact",
                 onChange: i,
                 disabled: l,
@@ -906,7 +855,7 @@
               }),
               s.createElement(
                 "p",
-                { className: D.NotificationDescription },
+                { className: b.NotificationDescription },
                 ((u = t.notification_type),
                 (0, _.Xx)("#SteamNotificationTypeDesc_" + u)),
               ),
@@ -914,18 +863,18 @@
                 g.Yz,
                 {
                   className: (0, p.Z)({
-                    [D.PrefDetailsToggle]: !0,
-                    [D.Selected]: a,
+                    [b.PrefDetailsToggle]: !0,
+                    [b.Selected]: a,
                   }),
                   onClick: () => c(!a),
                 },
-                s.createElement(x.vVQ, { direction: "down" }),
+                s.createElement(D.vVQ, { direction: "down" }),
               ),
             ),
             a &&
               s.createElement(
                 "div",
-                { className: D.NotificationPrefDetails },
+                { className: b.NotificationPrefDetails },
                 s.createElement(g.ji, {
                   label: (0, _.Xx)("#NotificationSettings_SendToast"),
                   disabled: l || !m,
@@ -942,23 +891,23 @@
           );
           var u;
         });
-      var M = r(35993);
-      const B = {
+      var w = r(35993);
+      const M = {
           CookieSettings: () => "/cookiepreferences",
           NotificationSettings: () => "/notificationsettings",
         },
-        R = (e) => {
+        B = (e) => {
           const t = e.match.url,
-            r = B;
+            r = M;
           return s.createElement(
             i.rs,
             null,
             s.createElement(i.AW, {
               path: `${t}${r.CookieSettings()}`,
               render: () =>
-                s.createElement(M.d, {
+                s.createElement(w.d, {
                   config: {
-                    "cookie-preferences": () => s.createElement(y, null),
+                    "cookie-preferences": () => s.createElement(N, null),
                   },
                 }),
             }),
@@ -966,9 +915,9 @@
             s.createElement(i.AW, {
               path: `${t}${r.NotificationSettings()}`,
               render: () =>
-                s.createElement(M.d, {
+                s.createElement(w.d, {
                   config: {
-                    "notification-settings": () => s.createElement(A, null),
+                    "notification-settings": () => s.createElement(G, null),
                   },
                 }),
             }),

@@ -938,6 +938,11 @@
                     br: a.FE.readString,
                     bw: a.Xc.writeString,
                   },
+                  item_internal_name: {
+                    n: 22,
+                    br: a.FE.readString,
+                    bw: a.Xc.writeString,
+                  },
                 },
               }),
             c.sm_m

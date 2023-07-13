@@ -71,18 +71,21 @@
     },
     81039: (e, t, r) => {
       "use strict";
-      r.d(t, { ck: () => i, sC: () => s });
+      r.d(t, { ck: () => C, sC: () => m });
       var l = r(89526),
         n = r(19304),
         o = r(701),
         a = r(59743),
         c = (r(14826), r(32765));
-      function i() {
-        const e = (0, c.id)();
-        return c.De.ON_DECK && e;
+      const i = l.createContext({ bShowCompatInfo: !1 }),
+        s = () => l.useContext(i);
+      function C() {
+        const { bShowCompatInfo: e } = s(),
+          t = (0, c.id)();
+        return e || (c.De.ON_DECK && t);
       }
-      const s = (e) => {
-          const t = ((r = e.category), C[r] || o.z5E);
+      const m = (e) => {
+          const t = ((r = e.category), u[r] || o.z5E);
           var r;
           return l.createElement(
             "div",
@@ -91,7 +94,7 @@
             l.createElement(t, { className: a.SteamDeckCompatIcon }),
           );
         },
-        C = { 1: o.vyu, 2: o.KKY, 3: o.YVI, 0: o.z5E };
+        u = { 1: o.vyu, 2: o.KKY, 3: o.YVI, 0: o.z5E };
     },
     65786: (e, t, r) => {
       "use strict";
@@ -666,7 +669,7 @@
             );
         }
       }
-      var D = r(69338),
+      var D = r(7770),
         R = r(19304),
         Z = r(60161),
         x = r(81349),

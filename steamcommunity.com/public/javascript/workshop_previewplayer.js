@@ -89,6 +89,7 @@ var HighlightPlayer = Class.create( {
 	m_rgScreenshotURLs: null,
 	m_rgSketchfabModels: null,
 	m_bVideoOnlyMode: false,
+    m_bPaused: false,
 
 	m_timerInterval: false,
 	m_bDisableSlider: false,
@@ -424,8 +425,20 @@ var HighlightPlayer = Class.create( {
 
 	StartCycle: function()
 	{
-		if ( this.BIsScreenshot( this.m_activeItem ) )
-    		this.StartTimer();
+		if ( !this.m_bPaused && this.BIsScreenshot( this.m_activeItem ) )
+    			this.StartTimer();
+	},
+
+	PauseCycle: function()
+	{
+		this.StopCycle();
+		this.m_bPaused = true;
+	},
+
+	ResumeCycle: function()
+	{
+		this.m_bPaused = false;
+		this.StartCycle();
 	},
 
 	OnMovieComplete: function( movieItem )

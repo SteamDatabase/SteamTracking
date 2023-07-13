@@ -218,7 +218,6 @@
 .search_result_row .vr_required, .search_result_row .vr_supported {
 	color: #62696e;
 	position: relative;
-	top: -6px;
 	left: 2px;
 }
 
@@ -344,6 +343,14 @@
 .responsive_search_name_combined {
 	display: inline-block;
 	vertical-align: top;
+}
+
+.responsive_search_name_combined .includes_games_results {
+    color: #62696e;
+    vertical-align: top;
+	line-height: 21px;
+	position: relative;
+	left: 6px;
 }
 
 .search_result_row .col.search_capsule {
@@ -474,8 +481,27 @@
     font-size: 11px;
 }
 
-.col.search_discount {
-	width: 40px;
+.col.search_discount_and_price .discount_block {
+	width: 150px;
+	height: 100%;
+	align-items: center;
+}
+.col.search_discount_and_price .discount_block .discount_prices {
+	flex: 100px;
+	align-items: flex-end;
+	background-color: inherit;
+}
+.col.search_discount_and_price .discount_block.no_discount .discount_prices .discount_final_price {
+	font-size: 12px;
+	text-align: right;
+	color: #c6d4df;
+	padding-right: 0;
+}
+.col.search_discount_and_price .discount_block:not(.no_discount) .discount_prices .discount_original_price {
+	color: #888888;
+}
+.col.search_discount_and_price .discount_block:not(.no_discount) .discount_prices .discount_final_price {
+	font-size: 13px;
 }
 .search_discount_icon_ctn {
     height: 100%;
@@ -493,16 +519,12 @@
 .search_discount_icon img {
     display: block;
 }
+.col.search_discount_and_price .bundle_base_discount {
+	display: none;
+}
 
-.col.search_discount span {
-	color: #BEEE11;
-	font-size: 12px;
+.col.search_discount_and_price .discount_pct {
 	padding: 5px;
-	background-color: #4c6b22;
-	display: block;
-	margin-top: 10px;
-	text-align: center;
-    font-weight: 500;
 }
 
 .page_content {
@@ -545,10 +567,6 @@ div.autocomplete ul li {
 
 .block_content_inner {
 	overflow: hidden;
-}
-
-.col.search_price:not(.discounted){
-	line-height: 45px;
 }
 
 .search_pagination_left {
@@ -662,6 +680,20 @@ div.autocomplete ul li {
 	html.responsive .search_result_row .col.search_price_discount_combined {
 		float: right;
 		padding-right: 8px;
+	}
+
+	html.responsive .col.search_discount_and_price .discount_pct {
+		padding: 1px 5px;
+	}
+
+	html.responsive .col.search_discount_and_price .discount_block:not(.no_discount) .discount_prices .discount_original_price {
+		margin-right: 4px;
+	}
+
+	html.responsive .col.search_discount_and_price .discount_block .discount_prices {
+		flex-direction: row;
+		align-items: center;
+		justify-content: flex-end;
 	}
 
 	html.responsive .search_result_row .col.responsive_secondrow.search_discount {

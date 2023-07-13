@@ -4505,7 +4505,7 @@
         "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAtNJREFUeNrsmk1rE0EYgHe19ZBIY2kj4qUQVGjxAz2J4gcVvfmBP8FI8eZF8OJNL4oFPYrGX1CK4lEMiChe/aCClNBeRGxLTTE5GDU+Y2bDJG5rL5lZ950XnsxkE5h9n8zszkw2bDabgeTYEAgPL8AL8AK8AC/AC/AC5EafegnDcM0vMVvMUOyA7bBNswVymgHYDOp7m/SxUNczRlvZdZ5XDX7oeh2+q9OAqq6rY99gRR9TfIXPmk8wS171f+QVhH9eYgRw/BhFEQ7q5MP/7MdVwmbhNZTI8fm6BPBe/XoP4XzKevs0XCDX6qoCdPIvYE9Kh/xbOBpJULl3XwQfpDh5FXt1ju1o9wDKQ7x/KeTif5icX3X3gKKgu18xbh4wLkjAeMcQIPLwRdgcaCssRD1gTOAkcMwcAgWBAgqmgBGBAkZMAfkeN1ZPoIC8KWCox409hePwJkEChmwKCPRi5ABMJOSO0yFg2EaLSPgF96nuhFt6aesqhk0BgzZbRsIKXKU6Co8dCRg0BWRdnAESKnCO6gl4Z7n5rCmg3+VgREKZYj9cUrMzS832mwJyrq9ISPgJ9/T1YRIaPW4y170YSkSozQq4QnU3POl1e4ndFUbCRzhD9RS8FyfAVvQl9cRYpu+iuA2nRQnQG7PX4LKNu1MkoOr6TkDiGykuwnULi7Mo57aAhuPk1RbVncDujnTDvAjWHCVegEdUnwX2t+NrpoBly4kPwE2qH+Cso463bA6BRUuJK+FqS/pG0NqUdBmLpoAlC8mrP1vvwr6E3HCWbAo46bCrrykgugb0egWWSeBca8EUMC9wFjxvCqgIFFAxBcwIFDDTFsCyU42HOUHJz+mcO5bDZUECynH7ASVBAkp/CVBPTFBMCUh+Sufayts/JGWE/uBI0HqkLG0xbSYf2wNi5u7yHpRcZSGT7kdlJYd/XN4L8AK8AC/AC/ACvACx8VuAAQDxke5GRJ5P8AAAAABJRU5ErkJggg==";
       var E = a(17547),
         f = a(71161),
-        b = a(69338),
+        b = a(7770),
         y = a(72213),
         C = a(79586),
         T = a(17318);
@@ -4853,7 +4853,7 @@
         A = a(14826),
         k = a(32765),
         G = a(17547),
-        M = a(69338),
+        M = a(7770),
         L = a(5089),
         B = a.n(L),
         O = a(51441),
@@ -5682,18 +5682,40 @@
               });
         }
         GetMatchCountForFacetValue(e) {
-          var t, a, n, i, l, r, o, s, c, d, m, p, g, h, v, S, E, f, b, y, C, T;
+          var t,
+            a,
+            n,
+            i,
+            l,
+            r,
+            o,
+            s,
+            c,
+            d,
+            m,
+            p,
+            g,
+            h,
+            v,
+            S,
+            E,
+            f,
+            b,
+            y,
+            C,
+            T,
+            I;
           if (this.m_mapMultiFacetCounts) {
-            const T = "402",
-              I = "401",
-              D = "9",
-              w = "28",
-              x = "18",
-              A = "41",
-              k = "42",
-              G = "43",
-              M = "44",
-              L = "37";
+            const I = "402",
+              D = "401",
+              w = "9",
+              x = "28",
+              A = "18",
+              k = "41",
+              G = "42",
+              M = "43",
+              L = "44",
+              B = "37";
             switch (e.facetValue.type) {
               case _.HL.k_ESaleTagFilter:
               case void 0:
@@ -5714,57 +5736,58 @@
                     : n.type) === _.PJ.k_EStoreFilterClauseTypeFeatureTag
                 )
                   switch (e.facetValue.rgStoreTagFilter.value) {
-                    case "linux":
+                    case "windows":
                       return null ===
-                        (i =
-                          this.m_mapMultiFacetCounts.get("platform_linux")) ||
+                        (i = this.m_mapMultiFacetCounts.get("platform_win")) ||
                         void 0 === i
                         ? void 0
                         : i.get("true");
-                    case "mac":
+                    case "linux":
                       return null ===
-                        (l = this.m_mapMultiFacetCounts.get("platform_mac")) ||
+                        (l =
+                          this.m_mapMultiFacetCounts.get("platform_linux")) ||
                         void 0 === l
                         ? void 0
                         : l.get("true");
-                    case "vr":
+                    case "mac":
                       return null ===
-                        (r = this.m_mapMultiFacetCounts.get("vrsupport")) ||
+                        (r = this.m_mapMultiFacetCounts.get("platform_mac")) ||
                         void 0 === r
                         ? void 0
-                        : r.get(T);
-                    case "vr only":
+                        : r.get("true");
+                    case "vr":
                       return null ===
                         (o = this.m_mapMultiFacetCounts.get("vrsupport")) ||
                         void 0 === o
                         ? void 0
                         : o.get(I);
-                    case "full controller":
+                    case "vr only":
                       return null ===
-                        (s = this.m_mapMultiFacetCounts.get("category")) ||
+                        (s = this.m_mapMultiFacetCounts.get("vrsupport")) ||
                         void 0 === s
                         ? void 0
-                        : s.get(w);
+                        : s.get(D);
+                    case "full controller":
+                      return null ===
+                        (c = this.m_mapMultiFacetCounts.get("category")) ||
+                        void 0 === c
+                        ? void 0
+                        : c.get(x);
                     case "any controller":
                       return (
-                        (null ===
-                          (c = this.m_mapMultiFacetCounts.get("category")) ||
-                        void 0 === c
-                          ? void 0
-                          : c.get(w)) ||
                         (null ===
                           (d = this.m_mapMultiFacetCounts.get("category")) ||
                         void 0 === d
                           ? void 0
-                          : d.get(x))
+                          : d.get(x)) ||
+                        (null ===
+                          (m = this.m_mapMultiFacetCounts.get("category")) ||
+                        void 0 === m
+                          ? void 0
+                          : m.get(A))
                       );
                     case "remote play":
                       return Math.max(
-                        null ===
-                          (m = this.m_mapMultiFacetCounts.get("category")) ||
-                          void 0 === m
-                          ? void 0
-                          : m.get(A),
                         null ===
                           (p = this.m_mapMultiFacetCounts.get("category")) ||
                           void 0 === p
@@ -5780,56 +5803,61 @@
                           void 0 === h
                           ? void 0
                           : h.get(M),
+                        null ===
+                          (v = this.m_mapMultiFacetCounts.get("category")) ||
+                          void 0 === v
+                          ? void 0
+                          : v.get(L),
                       );
                     case "remote play together":
                       return null ===
-                        (v = this.m_mapMultiFacetCounts.get("category")) ||
-                        void 0 === v
-                        ? void 0
-                        : v.get(M);
-                    case "free":
-                      return null ===
-                        (S = this.m_mapMultiFacetCounts.get("genre")) ||
+                        (S = this.m_mapMultiFacetCounts.get("category")) ||
                         void 0 === S
                         ? void 0
                         : S.get(L);
-                    case "discounted":
+                    case "free":
                       return null ===
-                        (E = this.m_mapMultiFacetCounts.get("discounted")) ||
+                        (E = this.m_mapMultiFacetCounts.get("genre")) ||
                         void 0 === E
                         ? void 0
-                        : E.get("true");
-                    case "coop":
+                        : E.get(B);
+                    case "discounted":
                       return null ===
-                        (f = this.m_mapMultiFacetCounts.get("category")) ||
+                        (f = this.m_mapMultiFacetCounts.get("discounted")) ||
                         void 0 === f
                         ? void 0
-                        : f.get(D);
+                        : f.get("true");
+                    case "coop":
+                      return null ===
+                        (b = this.m_mapMultiFacetCounts.get("category")) ||
+                        void 0 === b
+                        ? void 0
+                        : b.get(w);
                   }
                 break;
               case _.HL.k_EAppType:
-                return null === (b = this.m_mapMultiFacetCounts.get("type")) ||
-                  void 0 === b
-                  ? void 0
-                  : b.get(e.facetValue.appType);
-              case _.HL.k_ELanguage:
-                const B = (0, u.j_)(e.facetValue.language);
-                return null ===
-                  (y = this.m_mapMultiFacetCounts.get("supportedlang_" + B)) ||
+                return null === (y = this.m_mapMultiFacetCounts.get("type")) ||
                   void 0 === y
                   ? void 0
-                  : y.get("true");
-              case _.HL.k_EContentDescriptor:
+                  : y.get(e.facetValue.appType);
+              case _.HL.k_ELanguage:
+                const O = (0, u.j_)(e.facetValue.language);
                 return null ===
-                  (C = this.m_mapMultiFacetCounts.get("descids")) ||
+                  (C = this.m_mapMultiFacetCounts.get("supportedlang_" + O)) ||
                   void 0 === C
                   ? void 0
-                  : C.get(e.facetValue.contentDescriptor.toString());
+                  : C.get("true");
+              case _.HL.k_EContentDescriptor:
+                return null ===
+                  (T = this.m_mapMultiFacetCounts.get("descids")) ||
+                  void 0 === T
+                  ? void 0
+                  : T.get(e.facetValue.contentDescriptor.toString());
             }
           } else if (this.m_facetCounts)
-            return null === (T = this.m_facetCounts) || void 0 === T
+            return null === (I = this.m_facetCounts) || void 0 === I
               ? void 0
-              : T.get(e.facetValue.nAtomicStoreTagID);
+              : I.get(e.facetValue.nAtomicStoreTagID);
           return null;
         }
         DeactivateFacetValues() {
@@ -6907,7 +6935,7 @@
         E = a(1721),
         f = a.n(E),
         b = a(28106),
-        y = a(69338),
+        y = a(7770),
         C = a(23217),
         T = a(19304),
         I = a(60161),
@@ -7239,7 +7267,7 @@
         s = a(7948),
         c = a(99307),
         d = a(57742),
-        u = a(69338),
+        u = a(7770),
         m = a(23217),
         _ = a(14826),
         p = a(88258),
@@ -7336,7 +7364,7 @@
         m = a(46294),
         _ = a(99307),
         p = a(57742),
-        g = a(69338),
+        g = a(7770),
         h = a(23217),
         v = a(19304),
         S = a(60161),
@@ -8765,7 +8793,7 @@
         d = a(60161),
         u = a(99307),
         m = a(57742),
-        _ = a(69338),
+        _ = a(7770),
         p = a(24334),
         g = a.n(p),
         h = a(56491);
@@ -10211,35 +10239,38 @@
             bHidePrice: y,
             bHidePlatforms: I,
             creatorAccountID: D,
-            bIsHovered: w,
+            bIsHovered: x,
           } = e,
-          [x] = (0, u.jk)(a.id, (0, d.TM)(a.type), { include_platforms: !0 }),
-          A = (0, T.bJ)(),
-          k =
+          [A] = (0, u.jk)(a.id, (0, d.TM)(a.type), { include_platforms: !0 }),
+          k = (0, T.bJ)(),
+          G =
             ((0, f.Dt)(a.type),
             (0, n.useMemo)(
-              () => (null == x ? void 0 : x.GetIncludedAppIDsOrSelf()),
-              [x],
+              () => (null == A ? void 0 : A.GetIncludedAppIDsOrSelf()),
+              [A],
             )),
-          G =
-            x &&
-            (null == x
+          M =
+            A &&
+            (null == A
               ? void 0
-              : x
-                  .GetIncludedAppIDsOrSelf()
-                  .every((e) => c.jg.Get().BOwnsApp(e)));
-        if (!x) return null;
-        const M = G && !r,
-          L = (0, s.Hf)(`${x.GetStorePageURL()}${o || ""}`, A);
-        let B,
-          O = null;
-        if (h && 0 == (null == x ? void 0 : x.GetStoreItemType()))
-          O = n.createElement(b.r, { appid: x.GetAppID(), bIsMuted: w });
+              : A.GetIncludedAppIDsOrSelf().every((e) =>
+                  c.jg.Get().BOwnsApp(e),
+                ));
+        if (!A) return null;
+        const L = M && !r;
+        let B = (0, s.Hf)(`${A.GetStorePageURL()}${o || ""}`, k);
+        w.De.IN_CLIENT &&
+          !B.startsWith("steam://") &&
+          (B = `steam://openurl/${B}`);
+        let O,
+          F = null;
+        if (h && 0 == (null == A ? void 0 : A.GetStoreItemType()))
+          F = n.createElement(b.r, { appid: A.GetAppID(), bIsMuted: x });
         else if (E);
         else {
-          const t = G && i,
-            l = M;
-          O = n.createElement(p.Hl, {
+          const t = M && i,
+            l = L;
+          F = n.createElement(p.Hl, {
             info: a,
             bShowAsMuted: l,
             bHidePrice: y,
@@ -10251,7 +10282,7 @@
         }
         return (
           "overrideNavigation" in a &&
-            (B = (e) => (
+            (O = (e) => (
               a.overrideNavigation(),
               e.preventDefault(),
               e.stopPropagation(),
@@ -10260,22 +10291,22 @@
           n.createElement(
             l.IS,
             {
-              href: B ? null : L,
+              href: O ? null : B,
               style: { display: "block" },
               preferredFocus: g,
-              onClick: B,
+              onClick: O,
             },
-            n.createElement(S.vs, { appids: k, hide_status_banners: r }),
+            n.createElement(S.vs, { appids: G, hide_status_banners: r }),
             n.createElement(p.a4, { imageType: m, info: a }),
             n.createElement(C.y, {
               eDeckCompatibilityCategory:
-                null === (t = null == x ? void 0 : x.GetPlatforms()) ||
+                null === (t = null == A ? void 0 : A.GetPlatforms()) ||
                 void 0 === t
                   ? void 0
                   : t.steam_deck_compat_category,
             }),
-            Boolean(w && !(0, _.Hu)()) && n.createElement(v.v, { appInfo: a }),
-            O,
+            Boolean(x && !(0, _.Hu)()) && n.createElement(v.v, { appInfo: a }),
+            F,
           )
         );
       }
@@ -10777,7 +10808,7 @@
         u = a(17318),
         m = a(99307),
         _ = a(57742),
-        p = a(69338),
+        p = a(7770),
         g = a(23217),
         h = a(19304),
         v = a(14826),
@@ -11587,7 +11618,7 @@
         w = a(50454),
         x = a(95501),
         A = a(49437),
-        k = a(69338),
+        k = a(7770),
         G = a(78913),
         M = a.n(G);
       const L = new w.s("AppRelevance").Debug;
@@ -17983,7 +18014,7 @@
         _ = a.n(m),
         p = a(99307),
         g = a(57742),
-        h = a(69338),
+        h = a(7770),
         v = a(23217),
         S = a(19304),
         E = a(14826),
@@ -18934,7 +18965,7 @@
         g = a(17547),
         h = a(21904),
         v = a(99307),
-        S = a(69338),
+        S = a(7770),
         E = a(24166),
         f = a(14826);
       const b = (0, d.Pi)((e) => {
@@ -19612,7 +19643,7 @@
         c = a(17318),
         d = a(70750),
         u = a(99307),
-        m = a(69338),
+        m = a(7770),
         _ = a(19304),
         p = a(14826),
         g = a(4306);
@@ -19775,7 +19806,7 @@
         y = a(99307),
         C = a(57742),
         T = a(49985),
-        I = a(69338),
+        I = a(7770),
         D = a(84343),
         w = a(24166),
         x = a(9943),
@@ -20480,7 +20511,7 @@
         C = a(99307),
         T = a(57742),
         I = a(49985),
-        D = a(69338),
+        D = a(7770),
         w = a(84343),
         x = a(24166),
         A = a(23217),
@@ -21057,7 +21088,7 @@
         y = a(99307),
         C = a(57742),
         T = a(49985),
-        I = a(69338),
+        I = a(7770),
         D = a(24166),
         w = a(9943),
         x = a(19304),
@@ -24070,7 +24101,7 @@
         F = a(92372),
         N = a(82971),
         R = a(57742),
-        P = a(69338),
+        P = a(7770),
         X = a(84343),
         j = a(24166),
         z = a(11837),
@@ -33125,7 +33156,7 @@
         G = a(57742),
         M = a(1721),
         L = a.n(M),
-        B = a(69338),
+        B = a(7770),
         O = a(75962),
         F = a(24166),
         N = a(9943),

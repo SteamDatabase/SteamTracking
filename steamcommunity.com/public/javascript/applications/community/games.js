@@ -4408,7 +4408,7 @@
         Ne = r(83145),
         Ie = r(57605),
         xe = r(5029),
-        ke = r(69338),
+        ke = r(7770),
         $e = r(84343),
         qe = r(19304);
       var He = r(14826),
@@ -6243,44 +6243,52 @@
       }
       var Kt = r(12671),
         Yt = r.n(Kt);
-      const Jt = n.forwardRef(
-        ({ imgURL: e, glow: t, hidden: r, alt: i, className: a }, s) => {
-          const [l, o] = n.useState(!1);
-          if (r)
-            return n.createElement("div", { className: Yt().HiddenLabel }, "?");
-          const c = l && t;
-          return n.createElement(
-            "div",
-            {
-              ref: s,
-              className: (0, qe.Z)(
-                Yt().AchievementIconWrapper,
-                a,
-                !t && Yt().RareAchievementNoAnimation,
-              ),
-            },
-            c &&
+      const Jt = n.forwardRef(function (
+        {
+          imgURL: e,
+          glow: t,
+          pauseAnimation: r,
+          hidden: i,
+          alt: a,
+          className: s,
+        },
+        l,
+      ) {
+        const [o, c] = n.useState(!1);
+        if (i)
+          return n.createElement("div", { className: Yt().HiddenLabel }, "?");
+        const u = o && t;
+        return n.createElement(
+          "div",
+          {
+            ref: l,
+            className: (0, qe.Z)(
+              Yt().AchievementIconWrapper,
+              s,
+              r && Yt().RareAchievementNoAnimation,
+            ),
+          },
+          u &&
+            n.createElement(
+              "div",
+              { className: Yt().RareAchievementIconGlowContainerRoot },
               n.createElement(
                 "div",
-                { className: Yt().RareAchievementIconGlowContainerRoot },
-                n.createElement(
-                  "div",
-                  { className: Yt().RareAchievementIconGlowContainer },
-                  n.createElement("div", {
-                    className: Yt().RareAchievementIconGlow,
-                  }),
-                ),
+                { className: Yt().RareAchievementIconGlowContainer },
+                n.createElement("div", {
+                  className: Yt().RareAchievementIconGlow,
+                }),
               ),
-            n.createElement("img", {
-              className: (0, qe.Z)(Yt().Icon, c && Yt().IconGlow),
-              src: e,
-              loading: "lazy",
-              alt: i,
-              onLoad: () => o(!0),
-            }),
-          );
-        },
-      );
+            ),
+          n.createElement("img", {
+            className: (0, qe.Z)(Yt().Icon, u && Yt().IconGlow),
+            src: e,
+            loading: "lazy",
+            alt: a,
+            onLoad: () => c(!0),
+          }),
+        );
+      });
       var er = r(69159),
         tr = r(17547),
         rr = r(51441),

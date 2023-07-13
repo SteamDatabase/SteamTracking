@@ -402,11 +402,8 @@ function UpdateCounts()
 	ApplyValueIfSet('#menu_groups_pending_ct', g_rgCounts.cGroupsPending );
 	ApplyValueIfSet('#menu_groups_common_ct', g_rgCounts.cGroupsCommon );
 
-			return;
-	
 	if ( typeof UpdateNotificationCounts != 'undefined' )
 		UpdateNotificationCounts();
-
 }
 
 function OnNavMenuClick( event )

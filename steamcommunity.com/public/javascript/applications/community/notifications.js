@@ -236,7 +236,7 @@
           return e;
         }, []);
       }
-      function I() {
+      function b() {
         const { numActive: t, filters: e } = S(),
           i = v(),
           o = (0, F.M)();
@@ -265,7 +265,7 @@
       }
       (0, _.gn)([h.LO], k.prototype, "rgFilterState", void 0),
         (0, _.gn)([h.LO], k.prototype, "commentFilter", void 0);
-      const b = 300;
+      const I = 300;
       const T = new k(),
         w = new s.tL();
       var R = i(51438),
@@ -314,8 +314,8 @@
               n && !t.includes(o) && t.push(o);
             });
             do {
-              E.y$.LoadProfiles(t.splice(0, b));
-            } while (t.length > b);
+              E.y$.LoadProfiles(t.splice(0, I));
+            } while (t.length > I);
             E.y$.LoadProfiles(t);
           })(),
           w.m_rgNotificationRollups.length
@@ -360,7 +360,7 @@
       }
       function M() {
         const t = (function () {
-            const t = I(),
+            const t = b(),
               e = (0, s.fw)();
             return (
               t.map((t) => {
@@ -382,7 +382,7 @@
         );
       }
       function H() {
-        const t = I();
+        const t = b();
         return o.createElement(
           R.s,
           { className: y().NotificationsList },
@@ -406,7 +406,7 @@
         );
       }
       function U() {
-        const t = I(),
+        const t = b(),
           e = o.useMemo(() => {
             const t = new Map();
             for (const e of w.m_rgNotificationRollups)
@@ -583,8 +583,11 @@
             ),
         );
       }
-      function D(t, e) {
-        e.read || w.MarkItemRead(e.notification_id), t();
+      function D(t, e, i) {
+        e.read ||
+          (i && 0 != i.button && 1 != i.button) ||
+          w.MarkItemRead(e.notification_id),
+          t();
       }
       function Y(t) {
         const { rollup: e } = t,

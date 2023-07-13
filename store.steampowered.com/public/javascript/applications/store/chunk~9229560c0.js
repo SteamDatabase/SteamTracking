@@ -137,6 +137,7 @@
         Danger: "segmentedinputs_Danger_3VXiO",
         BackupCode: "segmentedinputs_BackupCode_3nMX-",
         Loading: "segmentedinputs_Loading_3lU7S",
+        Input: "segmentedinputs_Input_HPSuA",
       };
     },
     79925: (e, t, r) => {
@@ -1346,7 +1347,7 @@
               "anonymous" == e)
             )
               return (
-                this.SetFailureState(m.NZ.AnonymousLogin, I.EResult(12)), 12
+                this.SetFailureState(m.NZ.AnonymousLogin, j.EResult(12)), 12
               );
             try {
               const t = yield (function (e, t) {
@@ -1393,7 +1394,7 @@
                   console.error(
                     "Cannot start auth session without a valid RSA key",
                   ),
-                  this.SetFailureState(m.NZ.Network, I.EResult(20)),
+                  this.SetFailureState(m.NZ.Network, j.EResult(20)),
                   20
                 );
               const g = (0, h.IC)(a, t),
@@ -1435,13 +1436,13 @@
                         case 20:
                         case 3:
                           return (
-                            this.SetFailureState(m.NZ.Network, I.EResult(20)), t
+                            this.SetFailureState(m.NZ.Network, j.EResult(20)), t
                           );
                         case 84:
                           return (
                             this.SetFailureState(
                               m.NZ.RateLimitExceeded,
-                              I.EResult(t),
+                              j.EResult(t),
                             ),
                             t
                           );
@@ -1465,7 +1466,7 @@
                             ),
                             this.SetFailureState(
                               m.NZ.Generic,
-                              I.EResult(t),
+                              j.EResult(t),
                               B.Body().extended_error_message(),
                             ),
                             this.m_onCompleteCallback({ bSuccess: !1 }),
@@ -1513,17 +1514,17 @@
                           return t.response
                             ? (this.SetFailureState(
                                 m.NZ.Network,
-                                I.AjaxFailureWithCode(t.response.status),
+                                j.AjaxFailureWithCode(t.response.status),
                               ),
                               20)
                             : (this.SetFailureState(
                                 m.NZ.Network,
-                                I.AjaxFailureNoCode(),
+                                j.AjaxFailureNoCode(),
                               ),
                               20);
                         }
                         return (
-                          this.SetFailureState(m.NZ.Network, I.EResult(79)), 79
+                          this.SetFailureState(m.NZ.Network, j.EResult(79)), 79
                         );
                       }
                     }
@@ -1566,7 +1567,7 @@
                   )}`,
                 ),
                 console.log(e),
-                this.SetFailureState(m.NZ.Generic, I.FailedToStart()),
+                this.SetFailureState(m.NZ.Generic, j.FailedToStart()),
                 this.m_onCompleteCallback({ bSuccess: !1 }),
                 2
               );
@@ -1642,7 +1643,7 @@
                     return (this.m_eStatus = r ? 10 : 11), a;
                   case 27:
                     return (
-                      this.SetFailureState(m.NZ.Expired, I.EResult(a)),
+                      this.SetFailureState(m.NZ.Expired, j.EResult(a)),
                       this.m_onCompleteCallback({ bSuccess: !1 }),
                       a
                     );
@@ -1650,7 +1651,7 @@
                     return (
                       this.SetFailureState(
                         m.NZ.RateLimitExceeded,
-                        I.EResult(a),
+                        j.EResult(a),
                       ),
                       this.m_onCompleteCallback({ bSuccess: !1 }),
                       a
@@ -1671,7 +1672,7 @@
                       console.error(
                         `Failed to update auth session with SG code. Result: ${a}`,
                       ),
-                      this.SetFailureState(m.NZ.Generic, I.EResult(a)),
+                      this.SetFailureState(m.NZ.Generic, j.EResult(a)),
                       this.m_onCompleteCallback({ bSuccess: !1 }),
                       a
                     );
@@ -1683,7 +1684,7 @@
                 console.error(
                   `Failed to update auth session with SG code. ${e}`,
                 ),
-                this.SetFailureState(m.NZ.Generic, I.FailedToAddCode()),
+                this.SetFailureState(m.NZ.Generic, j.FailedToAddCode()),
                 this.m_onCompleteCallback({ bSuccess: !1 }),
                 2
               );
@@ -1729,7 +1730,7 @@
                   ),
                   this.SetFailureState(
                     m.NZ.MoveAuthenticator,
-                    I.EResult(t.GetEResult()),
+                    j.EResult(t.GetEResult()),
                   ))
                 : (this.m_eStatus = 8);
             } catch (e) {
@@ -1737,7 +1738,7 @@
                 "An unexpected error occured while moving an authenticator",
                 e,
               ),
-                this.SetFailureState(m.NZ.MoveAuthenticator, I.EResult(2));
+                this.SetFailureState(m.NZ.MoveAuthenticator, j.EResult(2));
             }
           });
         }
@@ -1756,7 +1757,7 @@
                 ),
                 this.SetFailureState(
                   m.NZ.MoveAuthenticator,
-                  I.EResult(t.GetEResult()),
+                  j.EResult(t.GetEResult()),
                 ))
               : (this.m_eStatus = 8);
           });
@@ -1787,7 +1788,7 @@
                 ),
                 this.SetFailureState(
                   m.NZ.MoveAuthenticator,
-                  I.EResult(r.GetEResult()),
+                  j.EResult(r.GetEResult()),
                 ));
           });
         }
@@ -1861,10 +1862,10 @@
       function x(e, t) {
         return /[23456789BCDFGHJKMNPQRTVWXY]*/g.test(e) && e.length <= W(t);
       }
-      function j(e, t) {
+      function I(e, t) {
         return x(e, t) && e.length === W(t);
       }
-      const I = {
+      const j = {
         EResult: (e) => `e${e}`,
         FailedToStart: () => "c-fts",
         FailedToAddCode: () => "c-ftac",
@@ -2182,7 +2183,7 @@
         );
       }
       var ne = r(14826),
-        ae = r(69338),
+        ae = r(7770),
         se = r(67727),
         oe = r(701);
       const le =
@@ -2282,6 +2283,7 @@
               autoComplete: "none",
               autoFocus: 0 === e && l,
               disabled: c || u,
+              className: be().Input,
             }),
           );
         return n.createElement(
@@ -2947,10 +2949,10 @@
             },
             className: D().LoginForm,
           },
-          n.createElement(je, {
+          n.createElement(Ie, {
             tone: f ? "danger" : void 0,
             label: n.createElement(
-              Ie,
+              je,
               { highlight: !0 },
               (0, ne.Xx)("#Login_SignIn_WithAccountName"),
             ),
@@ -2961,9 +2963,9 @@
             autoFocus: p,
             disabled: E,
           }),
-          n.createElement(je, {
+          n.createElement(Ie, {
             tone: f ? "danger" : void 0,
-            label: n.createElement(Ie, null, (0, ne.Xx)("#Login_Password")),
+            label: n.createElement(je, null, (0, ne.Xx)("#Login_Password")),
             value: l,
             onChange: (e) => {
               h(!0), u(e);
@@ -3083,7 +3085,7 @@
           "div",
           { className: D().QRCodeContainer },
           n.createElement(
-            Ie,
+            je,
             { highlight: !0 },
             (0, ne.Xx)("#Login_SignIn_OrWithQRCode"),
           ),
@@ -3118,19 +3120,19 @@
           ),
         );
       }
-      function je(e) {
+      function Ie(e) {
         const { label: t, error: r, tone: a, autoFocus: s } = e,
           o = (0, i._T)(e, ["label", "error", "tone", "autoFocus"]),
           l = null != a ? a : r ? "danger" : void 0;
         return n.createElement(
           "div",
           { className: D().TextField },
-          "string" == typeof t ? n.createElement(Ie, null, t) : t,
+          "string" == typeof t ? n.createElement(je, null, t) : t,
           n.createElement(Ue, { type: "error" }, r),
           n.createElement(Xe, Object.assign({ autoFocus: s, tone: l }, o)),
         );
       }
-      function Ie(e) {
+      function je(e) {
         const { children: t, highlight: r } = e;
         return n.createElement(
           "div",
@@ -3423,7 +3425,7 @@
           [b, B] = (0, n.useState)(0),
           w = "mobile" === t,
           f = l.join(""),
-          y = j(f, _),
+          y = I(f, _),
           p = (e) => {
             g(!0),
               r(e).then(() => {
@@ -3474,7 +3476,7 @@
                       onChange: (e) => {
                         u || m(!0), c(e);
                         const t = e.join("");
-                        j(t, _) && p(t);
+                        I(t, _) && p(t);
                       },
                       tone: S ? "danger" : void 0,
                       loading: d,
@@ -3964,7 +3966,7 @@
     62055: (e, t, r) => {
       "use strict";
       r.d(t, {
-        $h: () => I,
+        $h: () => j,
         Am: () => y,
         Uy: () => h,
         _u: () => g,
@@ -5938,58 +5940,58 @@
           return "CCloudGaming_TimeRemaining";
         }
       }
-      class j extends s {
+      class I extends s {
         constructor(e = null) {
           super(),
-            j.prototype.entries || n.aR(j.M()),
+            I.prototype.entries || n.aR(I.M()),
             s.initialize(this, e, 0, -1, [2], null);
         }
         static M() {
           return (
-            j.sm_m ||
-              (j.sm_m = {
-                proto: j,
+            I.sm_m ||
+              (I.sm_m = {
+                proto: I,
                 fields: { entries: { n: 2, c: x, r: !0, q: !0 } },
               }),
-            j.sm_m
+            I.sm_m
           );
         }
         static MBF() {
-          return j.sm_mbf || (j.sm_mbf = n.Bh(j.M())), j.sm_mbf;
+          return I.sm_mbf || (I.sm_mbf = n.Bh(I.M())), I.sm_mbf;
         }
         toObject(e = !1) {
-          return j.toObject(e, this);
+          return I.toObject(e, this);
         }
         static toObject(e, t) {
-          return n.TA(j.M(), e, t);
+          return n.TA(I.M(), e, t);
         }
         static fromObject(e) {
-          return n.aD(j.M(), e);
+          return n.aD(I.M(), e);
         }
         static deserializeBinary(e) {
           let t = new i.BinaryReader(e),
-            r = new j();
-          return j.deserializeBinaryFromReader(r, t);
+            r = new I();
+          return I.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return n.F(j.MBF(), e, t);
+          return n.F(I.MBF(), e, t);
         }
         serializeBinary() {
           var e = new i.BinaryWriter();
-          return j.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return I.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          n.l2(j.M(), e, t);
+          n.l2(I.M(), e, t);
         }
         serializeBase64String() {
           var e = new i.BinaryWriter();
-          return j.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return I.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CCloudGaming_GetTimeRemaining_Response";
         }
       }
-      var I, X, U;
+      var j, X, U;
       !(function (e) {
         (e.GetPasswordRSAPublicKey = function (e, t) {
           return e.SendMsg("Authentication.GetPasswordRSAPublicKey#1", t, l, {
@@ -6078,7 +6080,7 @@
               eWebAPIKeyRequirement: 1,
             });
           });
-      })(I || (I = {})),
+      })(j || (j = {})),
         (function (e) {
           (e.QueryRefreshTokensByAccount = function (e, t) {
             return e.SendMsg(
@@ -6118,7 +6120,7 @@
             });
           }),
             (e.GetTimeRemaining = function (e, t) {
-              return e.SendMsg("CloudGaming.GetTimeRemaining#1", t, j, {
+              return e.SendMsg("CloudGaming.GetTimeRemaining#1", t, I, {
                 bConstMethod: !0,
                 ePrivilege: 1,
               });

@@ -33,65 +33,82 @@
       "use strict";
       n.r(t),
         n.d(t, {
-          GreenEnvelope: () => E,
-          default: () => H,
-          useSteamNotifications: () => b,
+          GreenEnvelope: () => y,
+          default: () => G,
+          useSteamNotifications: () => h,
         });
-      var i = n(89526),
-        o = n(65756),
-        r = n(19304),
-        l = n(14826),
-        s = n(40103),
-        a = n(15937),
-        c = n.n(a),
-        m = n(44973),
-        u = n(77427),
-        d = n(28106),
-        f = n(16826),
-        _ = n(25125),
-        v = n(86770),
-        p = n(27070),
-        N = n(41576);
-      const g = new o.tL();
-      function E(e) {
+      var i = n(33940),
+        o = n(89526),
+        r = n(65756),
+        l = n(19304),
+        s = n(14826),
+        a = n(40103),
+        c = n(15937),
+        m = n.n(c),
+        u = n(44973),
+        d = n(77427),
+        f = n(28106),
+        _ = n(16826),
+        v = n(25125),
+        p = n(86770),
+        N = n(67727),
+        E = n(27070),
+        g = n(41576);
+      const b = new r.tL();
+      function y(e) {
         const { bResponsiveHeader: t, notifications: n } = e;
-        i.useEffect(() => {
-          n && !g.m_bLoaded && g.ProcessNewNotificationPayload(n);
+        o.useEffect(() => {
+          n && !b.m_bLoaded && b.ProcessNewNotificationPayload(n);
         }, [n]);
-        const o = (0, p.bY)();
-        (0, i.useEffect)(() => {
-          g.setTransport(o);
-        }, [o]);
-        const r = b();
+        const l = (0, E.bY)();
+        (0, o.useEffect)(() => {
+          b.setTransport(l),
+            (window.RefreshSteamNotifications = () =>
+              (function (e) {
+                return (0, i.mG)(this, void 0, void 0, function* () {
+                  let t = null;
+                  try {
+                    t = yield (0, r.gQ)(
+                      e,
+                      u.L7.steamid,
+                      (0, N.jM)(u.De.LANGUAGE),
+                      !1,
+                    );
+                  } catch (e) {}
+                  t && b.ProcessNewNotificationPayload(t);
+                });
+              })(l));
+        }, [l]);
+        const s = h();
         return t
-          ? i.createElement(
-              i.Fragment,
+          ? o.createElement(
+              o.Fragment,
               null,
-              i.createElement(U, null),
-              i.createElement(A, null),
+              o.createElement(S, null),
+              o.createElement(T, null),
             )
-          : i.createElement(h, { nTotalUnviewed: r.nUnviewed });
+          : o.createElement(M, { nTotalUnviewed: s.nUnviewed });
       }
-      function b() {
-        return (0, _.SZ)(() => ({
-          notifications: g.m_rgNotificationRollups,
-          summary: Object.assign({}, g.m_summary),
-          loaded: g.m_bLoaded,
-          nUnviewed: g.m_nUnviewed,
+      function h() {
+        return (0, v.SZ)(() => ({
+          notifications: b.m_rgNotificationRollups,
+          summary: Object.assign({}, b.m_summary),
+          loaded: b.m_bLoaded,
+          nUnviewed: b.m_nUnviewed,
         }));
       }
-      function y() {
-        return b().notifications.filter((e) => !(0, o.sA)(e.item));
+      function w() {
+        return h().notifications.filter((e) => !(0, r.sA)(e.item));
       }
-      function h(e) {
+      function M(e) {
         const { nTotalUnviewed: t } = e,
-          n = i.useRef(),
-          o = y(),
-          [l, a] = i.useState(c().AnimateBell);
-        i.useEffect(() => {
+          n = o.useRef(),
+          i = w(),
+          [r, s] = o.useState(m().AnimateBell);
+        o.useEffect(() => {
           n.current ||
-            ((n.current = (0, s.yV)(
-              i.createElement(w, { popupRef: n }),
+            ((n.current = (0, a.yV)(
+              o.createElement(A, { popupRef: n }),
               document.getElementById("green_envelope_menu_root"),
               {
                 bPreferPopLeft: !0,
@@ -100,9 +117,9 @@
               },
             )),
             n.current.Hide()),
-            window.setTimeout(() => a(null), 2e3);
+            window.setTimeout(() => s(null), 2e3);
         }, []);
-        const m = i.useCallback(
+        const c = o.useCallback(
           (e) => {
             var t;
             !e &&
@@ -111,55 +128,55 @@
           },
           [n],
         );
-        return i.createElement(
-          N.U,
-          { trigger: "repeated", onVisibilityChange: m },
-          i.createElement(
+        return o.createElement(
+          g.U,
+          { trigger: "repeated", onVisibilityChange: c },
+          o.createElement(
             "div",
             {
               onClick: () => {
                 if (!n.current.visible) {
                   n.current.Show();
-                  -1 != o.findIndex((e) => !e.item.viewed) &&
-                    g.MarkAllItemsViewed();
+                  -1 != i.findIndex((e) => !e.item.viewed) &&
+                    b.MarkAllItemsViewed();
                 }
               },
               id: "green_envelope_menu_root",
-              className: (0, r.Z)(
-                c().Button,
-                c().NotificationsButton,
-                t ? c().Green : c().Grey,
-                l,
+              className: (0, l.Z)(
+                m().Button,
+                m().NotificationsButton,
+                t ? m().Green : m().Grey,
+                r,
               ),
             },
-            i.createElement(f.Tx5, { className: c().SVGNotifications }),
+            o.createElement(_.Tx5, { className: m().SVGNotifications }),
           ),
         );
       }
-      const w = (e) => {
+      const A = (e) => {
           var t;
           const { popupRef: n } = e,
-            o = i.useRef(),
-            [l, s] = i.useState(!1);
-          i.useEffect(() => {
+            i = o.useRef(),
+            [r, s] = o.useState(!1);
+          o.useEffect(() => {
             var e, t;
             s(
-              (null === (e = o.current) || void 0 === e
+              (null === (e = i.current) || void 0 === e
                 ? void 0
                 : e.scrollHeight) >
-                (null === (t = o.current) || void 0 === t
+                (null === (t = i.current) || void 0 === t
                   ? void 0
                   : t.clientHeight),
             );
           }, [
-            null === (t = o.current) || void 0 === t ? void 0 : t.scrollHeight,
-            l,
+            null === (t = i.current) || void 0 === t ? void 0 : t.scrollHeight,
+            r,
           ]);
-          const a = l ? void 0 : c().MenuScrollbarHidden;
-          return i.createElement(
+          const a = r ? void 0 : m().MenuScrollbarHidden;
+          return o.createElement(
             "div",
             {
-              className: c().NotificationsMenu,
+              className: m().NotificationsMenu,
               onClick: () => {
                 var e;
                 return null === (e = null == n ? void 0 : n.current) ||
@@ -168,108 +185,107 @@
                   : e.Hide();
               },
             },
-            i.createElement(M, null),
-            i.createElement(
+            o.createElement(B, null),
+            o.createElement(
               "div",
               {
-                className: (0, r.Z)(c().NotificationsMenuScrollable, a),
-                ref: o,
+                className: (0, l.Z)(m().NotificationsMenuScrollable, a),
+                ref: i,
               },
-              i.createElement(U, null),
-              i.createElement(T, null),
+              o.createElement(S, null),
+              o.createElement(C, null),
             ),
           );
         },
-        M = () =>
-          i.createElement(
+        B = () =>
+          o.createElement(
             "div",
-            { className: (0, r.Z)(c().NotificationHeader) },
-            i.createElement(
+            { className: (0, l.Z)(m().NotificationHeader) },
+            o.createElement(
               "div",
-              { className: c().AllNotificationsTitle },
-              (0, l.Xx)("#NotificationsMenu_Title"),
+              { className: m().AllNotificationsTitle },
+              (0, s.Xx)("#NotificationsMenu_Title"),
             ),
-            i.createElement(
+            o.createElement(
               "button",
               {
-                className: c().AllNotificationsButton,
+                className: m().AllNotificationsButton,
                 onClick: () =>
                   window.location.assign(
-                    `${m.De.COMMUNITY_BASE_URL}profiles/${m.L7.steamid}/notifications`,
+                    `${u.De.COMMUNITY_BASE_URL}profiles/${u.L7.steamid}/notifications`,
                   ),
               },
-              (0, l.Xx)("#NotificationsMenu_ViewAll"),
+              (0, s.Xx)("#NotificationsMenu_ViewAll"),
             ),
           ),
-        A = () =>
-          i.createElement(
+        T = () =>
+          o.createElement(
             "div",
             {
-              className: (0, r.Z)(
-                c().NotificationHeader,
-                c().ResponsiveViewAll,
+              className: (0, l.Z)(
+                m().NotificationHeader,
+                m().ResponsiveViewAll,
               ),
             },
-            i.createElement(
+            o.createElement(
               "button",
               {
-                className: c().AllNotificationsButton,
+                className: m().AllNotificationsButton,
                 onClick: () =>
                   window.location.assign(
-                    `${m.De.COMMUNITY_BASE_URL}profiles/${m.L7.steamid}/notifications`,
+                    `${u.De.COMMUNITY_BASE_URL}profiles/${u.L7.steamid}/notifications`,
                   ),
               },
-              (0, l.Xx)("#NotificationsMenu_ViewAll"),
+              (0, s.Xx)("#NotificationsMenu_ViewAll"),
             ),
           );
-      function B(e, t) {
-        t.read
-          ? console.log("Not marking notification read")
-          : (console.log("Marking notification read"),
-            g.MarkItemRead(t.notification_id)),
+      function U(e, t, n) {
+        t.read ||
+          (n && 0 != n.button && 1 != n.button) ||
+          b.MarkItemRead(t.notification_id),
           e();
       }
-      function T() {
-        const e = b(),
-          t = y();
-        return t.length || (0, o.ft)(e.summary)
-          ? i.createElement(
+      function C() {
+        const e = h(),
+          t = w();
+        return t.length || (0, r.ft)(e.summary)
+          ? o.createElement(
               "div",
-              { className: c().NotificationsMenuEntriesContainer },
+              { className: m().NotificationsMenuEntriesContainer },
               t.map((e, t) =>
-                i.createElement(v.RW, {
+                o.createElement(p.RW, {
                   key: t,
                   rollup: e,
-                  onNotificationClick: B,
+                  onNotificationClick: U,
                   uimode: 3,
-                  location: u.IS.Tray,
+                  location: d.IS.Tray,
                 }),
               ),
             )
-          : i.createElement(D, null);
+          : o.createElement(P, null);
       }
-      function U() {
-        return i.createElement(
+      function S() {
+        return o.createElement(
           "div",
           null,
-          i.createElement(C, null),
-          i.createElement(L, null),
-          i.createElement(S, null),
-          i.createElement(I, null),
-          i.createElement(k, null),
-          i.createElement(O, null),
-          i.createElement($, null),
-          i.createElement(R, null),
+          o.createElement(L, null),
+          o.createElement(k, null),
+          o.createElement(I, null),
+          o.createElement(O, null),
+          o.createElement(R, null),
+          o.createElement($, null),
+          o.createElement(H, null),
+          o.createElement(D, null),
         );
       }
-      function C() {
-        const e = b();
-        return i.createElement(u.a$, {
-          icon: i.createElement(d.ncs, null),
+      function L() {
+        const e = h();
+        return o.createElement(d.a$, {
+          icon: o.createElement(f.ncs, null),
           count: e.summary.pending_gifts,
           onActivate: () =>
             window.location.assign(
-              `${m.De.COMMUNITY_BASE_URL}profiles/${m.L7.steamid}/inventory/#pending_gifts`,
+              `${u.De.COMMUNITY_BASE_URL}profiles/${u.L7.steamid}/inventory/#pending_gifts`,
             ),
           strLocToken: "#Notification_NewGiftsPinned_Body",
           bAlwaysShow: !1,
@@ -277,14 +293,14 @@
           visible: !0,
         });
       }
-      function S() {
-        const e = b();
-        return i.createElement(u.a$, {
-          icon: i.createElement(d.svY, null),
+      function I() {
+        const e = h();
+        return o.createElement(d.a$, {
+          icon: o.createElement(f.svY, null),
           count: e.summary.comments,
           onActivate: () =>
             window.location.assign(
-              `${m.De.COMMUNITY_BASE_URL}profiles/${m.L7.steamid}/notifications#comments`,
+              `${u.De.COMMUNITY_BASE_URL}profiles/${u.L7.steamid}/notifications#comments`,
             ),
           strLocToken: "#Notification_NewCommentPinned_Body",
           bAlwaysShow: !1,
@@ -292,14 +308,14 @@
           visible: !0,
         });
       }
-      function L() {
-        const e = b();
-        return i.createElement(u.a$, {
-          icon: i.createElement(f.yBp, null),
+      function k() {
+        const e = h();
+        return o.createElement(d.a$, {
+          icon: o.createElement(_.yBp, null),
           count: e.summary.pending_invites,
           onActivate: () =>
             window.location.assign(
-              `${m.De.COMMUNITY_BASE_URL}profiles/${m.L7.steamid}/home/invites`,
+              `${u.De.COMMUNITY_BASE_URL}profiles/${u.L7.steamid}/home/invites`,
             ),
           strLocToken: "#Notification_FriendInvitePinned_Body",
           bAlwaysShow: !1,
@@ -307,14 +323,14 @@
           visible: !0,
         });
       }
-      function I() {
-        const e = b();
-        return i.createElement(u.a$, {
-          icon: i.createElement(d.F8F, null),
+      function O() {
+        const e = h();
+        return o.createElement(d.a$, {
+          icon: o.createElement(f.F8F, null),
           count: e.summary.inventory_items,
           onActivate: () =>
             window.location.assign(
-              `${m.De.COMMUNITY_BASE_URL}profiles/${m.L7.steamid}/inventory`,
+              `${u.De.COMMUNITY_BASE_URL}profiles/${u.L7.steamid}/inventory`,
             ),
           strLocToken: "#Notification_NewItemAnnouncementPinned_Body",
           bAlwaysShow: !1,
@@ -322,77 +338,77 @@
           visible: !0,
         });
       }
-      function k() {
-        const e = b();
-        return i.createElement(u.a$, {
+      function R() {
+        const e = h();
+        return o.createElement(d.a$, {
           count: e.summary.trade_offers,
-          icon: i.createElement(d.hoX, null),
+          icon: o.createElement(f.hoX, null),
           onActivate: () =>
             window.location.assign(
-              `${m.De.COMMUNITY_BASE_URL}profiles/${m.L7.steamid}/tradeoffers`,
+              `${u.De.COMMUNITY_BASE_URL}profiles/${u.L7.steamid}/tradeoffers`,
             ),
           strLocToken: "#Notification_NewTradeOffersPinned_Body",
           eUIMode: 3,
           visible: !0,
         });
       }
-      function O() {
-        const e = b();
-        return i.createElement(u.a$, {
+      function $() {
+        const e = h();
+        return o.createElement(d.a$, {
           count: e.summary.async_game_updates,
-          icon: i.createElement(d.ydL, null),
+          icon: o.createElement(f.ydL, null),
           onActivate: () =>
             window.location.assign(
-              `${m.De.COMMUNITY_BASE_URL}profiles/${m.L7.steamid}/gamenotifications`,
+              `${u.De.COMMUNITY_BASE_URL}profiles/${u.L7.steamid}/gamenotifications`,
             ),
           strLocToken: "#Notification_NewAsyncGamePinned_Body",
           eUIMode: 3,
           visible: !0,
         });
       }
-      function R() {
-        const e = b();
-        return i.createElement(u.a$, {
+      function D() {
+        const e = h();
+        return o.createElement(d.a$, {
           count: e.summary.help_request_replies,
-          icon: i.createElement(d.t6e, null),
+          icon: o.createElement(f.t6e, null),
           onActivate: () =>
-            window.location.assign(`${m.De.HELP_BASE_URL}wizard/HelpRequests`),
+            window.location.assign(`${u.De.HELP_BASE_URL}wizard/HelpRequests`),
           strLocToken: "#Notification_NewHelpRequestRepliesPinned_Body",
           eUIMode: 3,
           visible: !0,
         });
       }
-      function $() {
-        const e = b();
-        return i.createElement(u.a$, {
+      function H() {
+        const e = h();
+        return o.createElement(d.a$, {
           count: e.summary.moderator_messages,
-          icon: i.createElement(f.dqu, null),
+          icon: o.createElement(_.dqu, null),
           onActivate: () =>
             window.location.assign(
-              `${m.De.COMMUNITY_BASE_URL}my/moderatormessages`,
+              `${u.De.COMMUNITY_BASE_URL}my/moderatormessages`,
             ),
           strLocToken: "#Notification_NewModeratorMessagePinned_Body",
           eUIMode: 3,
           visible: !0,
         });
       }
-      function D() {
-        return i.createElement(
+      function P() {
+        return o.createElement(
           "div",
-          { className: c().EmptyNotificationsCtn },
-          i.createElement(
+          { className: m().EmptyNotificationsCtn },
+          o.createElement(
             "div",
-            { className: c().EmptyNotificationsTitle },
-            (0, l.Xx)("#NotificationsList_EmptyTitle_New"),
+            { className: m().EmptyNotificationsTitle },
+            (0, s.Xx)("#NotificationsList_EmptyTitle_New"),
           ),
-          i.createElement(
+          o.createElement(
             "div",
-            { className: c().EmptyNotificationsBody },
-            (0, l.Xx)("#NotificationsList_EmptyBody"),
+            { className: m().EmptyNotificationsBody },
+            (0, s.Xx)("#NotificationsList_EmptyBody"),
           ),
         );
       }
-      const H = E;
+      const G = y;
     },
     41576: (e, t, n) => {
       "use strict";

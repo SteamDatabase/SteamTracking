@@ -2912,6 +2912,7 @@ https://www.google.com/
 https://www.instagram.com/dota2
 https://www.netflix.com/
 https://www.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=%s
+https://www.paypal.com/sdk/js?disable-funding=credit,card,paylater,bancontact,blik&${src}
 https://www.reddit.com/
 https://www.store.steampowered.com
 https://www.twitch.tv/

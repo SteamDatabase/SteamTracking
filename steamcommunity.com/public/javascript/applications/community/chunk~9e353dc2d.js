@@ -654,22 +654,22 @@
               );
         }),
         E = (e) => {
-          var t;
-          const n = r.createElement(h, {
-            dateAndTime: e.rtFullDate,
-            bSingleLine: !0,
-            stylesmodule: e.stylesmodule,
-          });
+          const t = r.createElement(
+            "div",
+            { className: e.stylesmodule.DateToolTip },
+            r.createElement(h, {
+              dateAndTime: e.rtFullDate,
+              bSingleLine: !0,
+              stylesmodule: e.stylesmodule,
+            }),
+          );
           return r.createElement(
             s.HP,
             {
-              toolTipContent: n,
+              toolTipContent: t,
               direction: "top",
               className: e.className,
-              strTooltipClassname:
-                null === (t = e.stylesmodule) || void 0 === t
-                  ? void 0
-                  : t.DateToolTip,
+              bTopmost: !0,
             },
             e.children,
           );

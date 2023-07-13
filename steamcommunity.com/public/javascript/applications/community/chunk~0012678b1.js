@@ -49,98 +49,57 @@
         NewThrobber: "throbber_NewThrobber_tAKvs",
       };
     },
-    69338: (e, r, t) => {
+    7770: (e, r, t) => {
       "use strict";
-      t.d(r, { V: () => n });
+      t.d(r, { V: () => i });
       var o = t(89526),
         c = t(19304),
         b = t(23794),
         l = t.n(b);
       const s =
-          t.p +
-          "images/applications/community/steam_spinner.png?v=valveisgoodatcaching",
-        n = o.memo(function (e) {
-          const {
-            className: r,
-            size: t,
-            string: b,
-            position: n,
-            static: i,
-            msDelayAppear: h,
-          } = e;
-          let f = [l().LoadingWrapper, "SteamLogoThrobber", a(t)];
-          const [m, u] = o.useState(!h);
-          return (
-            (0, o.useEffect)(() => {
-              if (m) return;
-              const e = setTimeout(() => u(!0), h);
-              return () => clearTimeout(e);
-            }, [h, m]),
-            void 0 === b && f.push(l().noString),
-            r && f.push(r),
-            i && f.push(l().Static),
-            o.createElement(
-              "div",
-              {
-                className: (0, c.Z)(
-                  "center" == n && l().throbber_center_wrapper,
-                  h && l().ThrobberDelayAppear,
-                  m && l().Visible,
-                ),
-              },
-              m &&
-                o.createElement(
-                  "div",
-                  { className: f.join(" ") },
-                  o.createElement(
-                    "div",
-                    { className: l().NewThrobber },
-                    o.createElement("img", { src: s }),
-                  ),
-                ),
-              Boolean(b) &&
-                o.createElement("div", { className: l().ThrobberText }, b),
-            )
-          );
-        });
-      o.memo(function (e) {
+        t.p +
+        "images/applications/community/steam_spinner.png?v=valveisgoodatcaching";
+      var n = t(32765),
+        a = t(46132);
+      const i = o.memo(function (e) {
         const {
           className: r,
           size: t,
           string: b,
-          position: s,
-          static: n,
-          msDelayAppear: h,
+          position: i,
+          static: f,
+          msDelayAppear: m,
         } = e;
-        let f = [l().LoadingWrapper, "SteamLogoThrobber", a(t)];
-        const [m, u] = o.useState(!h);
+        let u = [l().LoadingWrapper, "SteamLogoThrobber", h(t)];
+        const [d, _] = o.useState(!m),
+          p = !(n.De.IN_CLIENT && (0, a.px)(n.De.LAUNCHER_TYPE));
         return (
           (0, o.useEffect)(() => {
-            if (m) return;
-            const e = setTimeout(() => u(!0), h);
+            if (d) return;
+            const e = setTimeout(() => _(!0), m);
             return () => clearTimeout(e);
-          }, [h, m]),
-          void 0 === b && f.push(l().noString),
-          r && f.push(r),
-          n && f.push(l().Static),
+          }, [m, d]),
+          void 0 === b && u.push(l().noString),
+          r && u.push(r),
+          f && u.push(l().Static),
           o.createElement(
             "div",
             {
               className: (0, c.Z)(
-                "center" == s && l().throbber_center_wrapper,
-                h && l().ThrobberDelayAppear,
-                m && l().Visible,
+                "center" == i && l().throbber_center_wrapper,
+                m && l().ThrobberDelayAppear,
+                d && l().Visible,
               ),
             },
-            m &&
+            d &&
+              p &&
               o.createElement(
                 "div",
-                { className: f.join(" ") },
+                { className: u.join(" ") },
                 o.createElement(
                   "div",
-                  { className: l().Throbber },
-                  o.createElement(i, { className: l().base }),
-                  o.createElement(i, { className: l().blur }),
+                  { className: l().NewThrobber },
+                  o.createElement("img", { src: s }),
                 ),
               ),
             Boolean(b) &&
@@ -148,7 +107,52 @@
           )
         );
       });
-      function a(e) {
+      o.memo(function (e) {
+        const {
+          className: r,
+          size: t,
+          string: b,
+          position: s,
+          static: n,
+          msDelayAppear: a,
+        } = e;
+        let i = [l().LoadingWrapper, "SteamLogoThrobber", h(t)];
+        const [m, u] = o.useState(!a);
+        return (
+          (0, o.useEffect)(() => {
+            if (m) return;
+            const e = setTimeout(() => u(!0), a);
+            return () => clearTimeout(e);
+          }, [a, m]),
+          void 0 === b && i.push(l().noString),
+          r && i.push(r),
+          n && i.push(l().Static),
+          o.createElement(
+            "div",
+            {
+              className: (0, c.Z)(
+                "center" == s && l().throbber_center_wrapper,
+                a && l().ThrobberDelayAppear,
+                m && l().Visible,
+              ),
+            },
+            m &&
+              o.createElement(
+                "div",
+                { className: i.join(" ") },
+                o.createElement(
+                  "div",
+                  { className: l().Throbber },
+                  o.createElement(f, { className: l().base }),
+                  o.createElement(f, { className: l().blur }),
+                ),
+              ),
+            Boolean(b) &&
+              o.createElement("div", { className: l().ThrobberText }, b),
+          )
+        );
+      });
+      function h(e) {
         switch (e) {
           case "small":
             return l().throbber_small;
@@ -162,7 +166,7 @@
             return l().throbber_large;
         }
       }
-      function i(e) {
+      function f(e) {
         let r = "SVGIcon_Button SVGIcon_Throbber ";
         return (
           e.className && (r += e.className),

@@ -860,7 +860,7 @@ function InitializeTransaction()
 		      	   	// Success...
 		      	   	if ( result.success == 1 && result.transid != -1 )
 		      	   	{
-		      	   		OnInitializeTransactionSuccess( result );
+		      	   		OnInitializeTransactionSuccess( result, bSaveBillingAddress );
 		      	   		return;
 		      	   	}
 		      	   	else
@@ -889,7 +889,25 @@ function BIsBankChoiceMethod( method )
     return method == 'ideal';
 }
 
-function OnInitializeTransactionSuccess( result )
+function LoadAsyncPayPalScript( src ) {
+    return new Promise(function (resolve, reject) {
+        if ( document.querySelector("script[src='https://www.paypal.com/sdk/js?disable-funding=credit,card,paylater,bancontact,blik&" + src + "']") === null )
+        {
+            var script = document.createElement('script');
+            script.dataset.namespace = 'paypal_sdk';
+            script.onload = () => { resolve(); };
+            script.onerror = () => { reject(); };
+            script.src = "https://www.paypal.com/sdk/js?disable-funding=credit,card,paylater,bancontact,blik&" + src;
+            document.body.appendChild(script);
+        }
+        else
+        {
+            resolve();
+        }
+    });
+}
+
+function OnInitializeTransactionSuccess( result, bSaveBillingAddress )
 {
 	try
 	{
@@ -901,7 +919,7 @@ function OnInitializeTransactionSuccess( result )
 		$J('#submit_payment_info_btn').show();
 		$J('#paypal-button').hide();
 
-				if ( result.paymentmethod == 4 && result.transactionprovider != 5 && method.value != 'storedpaypal' )
+				if ( result.paymentmethod == 4 && method.value != 'storedpaypal' )
 		{
 						
 						$J('#payment_row_one').hide();
@@ -931,42 +949,66 @@ function OnInitializeTransactionSuccess( result )
 			}
 			else
 			{
-        $('col_right_payment_info').style.display = 'none';
-        $('col_right_review').style.display = 'block';
+                $('col_right_payment_info').style.display = 'none';
+                $('col_right_review').style.display = 'block';
 				$J('#submit_payment_info_btn').hide();
 				$J('#submit_payment_info_btn_in_progress').hide();
 				$J('#paypal-button').html('');
 
-				paypal.Button.render({
-					env: 'production',
+                // fetch the paypal js sdk appropriate to our checkout type
+                var srcParams = 'client-id=' + result.paypalclientid;
+                var createOrderFn = async (data, actions) => {
+                    g_bPayPalAuthInFlight = true;
+                    return $J('#paypaltoken').val();
+                };
+                var createBillingAgreementFn = async (data, actions) => {
+                    g_bPayPalAuthInFlight = true;
+                    return $J('#paypaltoken').val();
+                };
 
-					commit: true, // Show a 'Pay Now' button
+                if ( bSaveBillingAddress )
+                {
+                    createOrderFn = undefined;
+                    srcParams = srcParams + "&intent=tokenize&vault=true";
+                }
+                else
+                {
+                    createBillingAgreementFn = undefined;
+                }
 
-					style: {
-					color: 'gold',
-					shape: 'rect',
-					size: 'small',
-					label: 'paypal',
-					tagline: false
-					},
+                                    paypal.Button.render({
+                        env: 'production',
 
-					payment: function(data, actions) {
-					g_bPayPalAuthInFlight = true;
-					return $J('#paypaltoken').val();
-					},
+                        commit: true, // Show a 'Pay Now' button
 
-					onAuthorize: function(data, actions) {
-					OnPayPalSuccess( $J('#transaction_id').val() );
-					},
+                        style: {
+                            color: 'gold',
+                            shape: 'rect',
+                            size: 'small',
+                            label: 'paypal',
+                            tagline: false
+                        },
 
-					onCancel: function(data, actions) {
-					OnPayPalCancel( $J('#transaction_id').val() );
-					},
+                        payment: function(data, actions) {
+                            g_bPayPalAuthInFlight = true;
+                            return $J('#paypaltoken').val();
+                        },
 
-					onError: function(err) {
-					OnPayPalCancel( $J('transaction_id').val() );
-					}
-				}, '#paypal-button');
+                        onAuthorize: function(data, actions) {
+                            OnPayPalSuccess( $J('#transaction_id').val() );
+                        },
+
+                        onCancel: function(data, actions) {
+                            OnPayPalCancel( $J('#transaction_id').val() );
+                        },
+
+                        onError: function(err) {
+                            OnPayPalCancel( $J('transaction_id').val() );
+                        }
+                    }, '#paypal-button');
+                
+
+
 
 				$J('#paypal-button').show();
 			}

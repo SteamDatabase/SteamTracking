@@ -203,6 +203,7 @@ input.search_text
 	height: 31px;
 	background: transparent;
 	box-shadow: none;
+    color: white;
 }
 input.search_text.default_text {
 	color: #6d6d6a;
@@ -225,7 +226,6 @@ input.search_text.default_text {
 .workshop_browsing
 {
 	float: left;
-	padding-top: 7px;
 	padding-right: 10px;
 	font-size: 18px;
 	color: #67c1f5;
@@ -234,7 +234,6 @@ input.search_text.default_text {
 
 			font-weight: normal;
 	margin-right: 4px;
-	margin-bottom: 3px;
 }
 
 .workshop_browsing_section

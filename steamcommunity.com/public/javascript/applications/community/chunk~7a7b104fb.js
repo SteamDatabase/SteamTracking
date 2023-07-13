@@ -1181,7 +1181,7 @@
         j = r(80525),
         I = r(25202),
         N = r.n(I),
-        P = r(69338);
+        P = r(7770);
       function U() {
         return l.createElement(
           "div",
@@ -2281,7 +2281,7 @@
                 ),
               );
             }
-            n = -352;
+            n = -292;
           }
           let c = this.props.video.GetSubtitles() || !1;
           return l.createElement(
@@ -2347,7 +2347,7 @@
                   ref: this.m_elSubtitlesPanel,
                   className: "STV_BroadcastSettingsPanel SubtitlesMenu",
                   style: {
-                    maxHeight: "320px",
+                    maxHeight: "260px",
                     left: this.m_SubtitlesButtonPos[0],
                     top: this.m_SubtitlesButtonPos[1],
                     marginTop: n,
@@ -3179,7 +3179,7 @@
     },
     39011: (e, t, r) => {
       "use strict";
-      r.d(t, { Z: () => Ct });
+      r.d(t, { Z: () => Rt });
       var i = r(33940),
         a = r(52868),
         s = r.n(a),
@@ -9797,8 +9797,9 @@
         yt = r(46132),
         St = r(67727),
         wt = r(20830),
-        ft = r(45464);
-      class Mt {
+        ft = r(45464),
+        Mt = r(23801);
+      class Ft {
         constructor(e) {
           (this.m_mapPlayerCache = new Map()),
             (this.m_strBannedWords = ""),
@@ -9809,6 +9810,7 @@
             (this.m_regexBannedWords = null),
             (this.m_regexCleanWords = null),
             (this.m_bShownFilterTip = !1),
+            (this.m_nLoadLanguagesRetryTimeout = void 0),
             (this.m_TextFilterPreferences = new St.t$());
           {
             let e = new wt.n8();
@@ -9831,9 +9833,7 @@
               yield this.LoadTextFilterPreferences(),
               yield this.LoadTextFilterWords(),
               yield this.RequestUpdatedSettings(),
-              yield this.LoadLanguage(pt.De.LANGUAGE),
-              "english" !== pt.De.LANGUAGE &&
-                (yield this.LoadLanguage("english")),
+              yield this.LoadLanguages(),
               this.OnFilterDataChanged();
           });
         }
@@ -9965,37 +9965,68 @@
         UpdateTextFilterWords(e) {
           (this.m_TextFilterWords = e), this.SaveTextFilterWords();
         }
+        LoadLanguages(e = 15) {
+          return (0, i.mG)(this, void 0, void 0, function* () {
+            (this.m_strBannedWords = ""),
+              (this.m_strProfanityWords = ""),
+              (this.m_strCleanWords = "");
+            try {
+              yield this.LoadLanguage(pt.De.LANGUAGE),
+                "english" !== pt.De.LANGUAGE &&
+                  (yield this.LoadLanguage("english"));
+            } catch (t) {
+              this.m_nLoadLanguagesRetryTimeout &&
+                ((0, Mt.X)(
+                  !this.m_nLoadLanguagesRetryTimeout,
+                  "Got two concurrent calls to TextFilteringStore.LoadLanguages",
+                ),
+                window.clearTimeout(this.m_nLoadLanguagesRetryTimeout),
+                (this.m_nLoadLanguagesRetryTimeout = void 0)),
+                (e = Math.min(2 * e, 3600)),
+                console.warn(
+                  "LoadLanguages caught",
+                  t,
+                  "retry in",
+                  e,
+                  "seconds",
+                ),
+                (this.m_nLoadLanguagesRetryTimeout = window.setTimeout(
+                  () =>
+                    (0, i.mG)(this, void 0, void 0, function* () {
+                      (this.m_nLoadLanguagesRetryTimeout = void 0),
+                        yield this.LoadLanguages(e),
+                        this.OnFilterDataChanged();
+                    }),
+                  1e3 * e,
+                ));
+            }
+          });
+        }
         LoadLanguage(e) {
           return (0, i.mG)(this, void 0, void 0, function* () {
             let t = `${
               pt.De.COMMUNITY_CDN_URL
             }textfilter/gettextfilterdictionary?type=banned&language=${e}&v=1&origin=${(0,
             pt.Kc)()}`;
-            try {
+            {
               const e = yield s().get(t);
               this.m_strBannedWords += e.data;
-            } catch (e) {
-              console.error("Failed to load filter dictionary " + t, e);
             }
             t = `${
               pt.De.COMMUNITY_CDN_URL
             }textfilter/gettextfilterdictionary?type=profanity&language=${e}&v=1&origin=${(0,
             pt.Kc)()}`;
-            try {
+            {
               const e = yield s().get(t);
               this.m_strProfanityWords += e.data;
-            } catch (e) {
-              console.error("Failed to load filter dictionary " + t, e);
             }
             t = `${
               pt.De.COMMUNITY_CDN_URL
             }textfilter/gettextfilterdictionary?type=clean_public&language=${e}&v=1&origin=${(0,
             pt.Kc)()}`;
-            try {
+            {
               const e = yield s().get(t);
               this.m_strCleanWords += e.data;
-            } catch (e) {
-              console.error("Failed to load filter dictionary " + t, e);
             }
           });
         }
@@ -10096,9 +10127,9 @@
               );
         }
       }
-      let Ft;
-      function vt() {
-        if (!Ft) {
+      let vt;
+      function Ct() {
+        if (!vt) {
           const e = new Set();
           let t = { sessionid: pt.De.SESSIONID, origin: (0, pt.Kc)() };
           s()
@@ -10111,39 +10142,39 @@
                 (0, yt.my)(r.efriendrelationship) &&
                   e.add(new m.K(r.ulfriendid).GetAccountID());
             }),
-            (Ft = (t) => e.has(t));
+            (vt = (t) => e.has(t));
         }
-        return Ft;
+        return vt;
       }
-      (0, i.gn)([n.LO], Mt.prototype, "m_TextFilterPreferences", void 0),
-        (0, i.gn)([n.LO], Mt.prototype, "m_mapPlayerCache", void 0),
-        (0, i.gn)([n.LO], Mt.prototype, "m_regexBannedWords", void 0),
-        (0, i.gn)([n.LO], Mt.prototype, "m_regexCleanWords", void 0),
-        (0, i.gn)([n.aD], Mt.prototype, "UpdateCommunityPreferences", null),
-        (0, i.gn)([n.aD], Mt.prototype, "BRebuildFilter", null);
-      class Ct {
+      (0, i.gn)([n.LO], Ft.prototype, "m_TextFilterPreferences", void 0),
+        (0, i.gn)([n.LO], Ft.prototype, "m_mapPlayerCache", void 0),
+        (0, i.gn)([n.LO], Ft.prototype, "m_regexBannedWords", void 0),
+        (0, i.gn)([n.LO], Ft.prototype, "m_regexCleanWords", void 0),
+        (0, i.gn)([n.aD], Ft.prototype, "UpdateCommunityPreferences", null),
+        (0, i.gn)([n.aD], Ft.prototype, "BRebuildFilter", null);
+      class Rt {
         GetChat(e, t) {
           return this.m_mapChats.get(e) || this.m_mapChats.get(t);
         }
         GetOrCreateChat(e, t) {
           let r = this.GetChat(e, t);
-          return r || ((r = new Rt()), this.m_mapChats.set(e || t, r)), r;
+          return r || ((r = new zt()), this.m_mapChats.set(e || t, r)), r;
         }
         static Get() {
           return (
-            Ct.s_Singleton ||
-              ((Ct.s_Singleton = new Ct()),
+            Rt.s_Singleton ||
+              ((Rt.s_Singleton = new Rt()),
               "dev" == pt.De.WEB_UNIVERSE &&
-                (window.g_BroadcastChatStore = Ct.s_Singleton)),
-            Ct.s_Singleton
+                (window.g_BroadcastChatStore = Rt.s_Singleton)),
+            Rt.s_Singleton
           );
         }
         constructor() {
           this.m_mapChats = new Map();
         }
       }
-      (0, i.gn)([n.LO], Ct.prototype, "m_mapChats", void 0);
-      class Rt {
+      (0, i.gn)([n.LO], Rt.prototype, "m_mapChats", void 0);
+      class zt {
         constructor() {
           (this.m_ulBroadcastChannelID = ""),
             (this.m_ulChatID = ""),
@@ -10179,7 +10210,7 @@
             ));
         }
         InitTextFilter() {
-          this.m_textFilterStore = new Mt({ BIsFriend: vt() });
+          this.m_textFilterStore = new Ft({ BIsFriend: Ct() });
           let e = 0;
           if ("" !== pt.L7.steamid) {
             e = new m.K(pt.L7.steamid).GetAccountID();
@@ -10816,15 +10847,15 @@
             (this.m_rgChatMessages = []);
         }
       }
-      (0, i.gn)([n.LO], Rt.prototype, "m_mapChannelModeratorUsers", void 0),
-        (0, i.gn)([n.LO], Rt.prototype, "m_mapBroadcastModeratorUsers", void 0),
-        (0, i.gn)([n.LO], Rt.prototype, "m_nRateLimitSeconds", void 0),
-        (0, i.gn)([n.LO], Rt.prototype, "m_bRateLimited", void 0),
-        (0, i.gn)([n.LO], Rt.prototype, "m_rgChatMessages", void 0),
-        (0, i.gn)([n.LO], Rt.prototype, "m_latestAnnouncement", void 0),
-        (0, i.gn)([Bt.a], Rt.prototype, "FetchChatModerators", null),
-        (0, i.gn)([Bt.a], Rt.prototype, "RequestLoop", null),
-        (0, i.gn)([Bt.a], Rt.prototype, "MuteUserForSession", null);
+      (0, i.gn)([n.LO], zt.prototype, "m_mapChannelModeratorUsers", void 0),
+        (0, i.gn)([n.LO], zt.prototype, "m_mapBroadcastModeratorUsers", void 0),
+        (0, i.gn)([n.LO], zt.prototype, "m_nRateLimitSeconds", void 0),
+        (0, i.gn)([n.LO], zt.prototype, "m_bRateLimited", void 0),
+        (0, i.gn)([n.LO], zt.prototype, "m_rgChatMessages", void 0),
+        (0, i.gn)([n.LO], zt.prototype, "m_latestAnnouncement", void 0),
+        (0, i.gn)([Bt.a], zt.prototype, "FetchChatModerators", null),
+        (0, i.gn)([Bt.a], zt.prototype, "RequestLoop", null),
+        (0, i.gn)([Bt.a], zt.prototype, "MuteUserForSession", null);
     },
   },
 ]);

@@ -243,6 +243,7 @@ html.contextmenu_ContextMenuPopup_2GpKT body {
 .contextmenu_ForceDesktop_7K1n9 .contextmenu_contextMenu_LQkrb {
   box-shadow: 0 10px 32px 0px rgba(0, 0, 0, 0.6705882353);
   background: #3d4450;
+  -webkit-app-region: no-drag;
 }
 .DesktopUI .contextmenu_contextMenuItem_pFo3k,
 .contextmenu_ForceDesktop_7K1n9 .contextmenu_contextMenuItem_pFo3k {
@@ -475,7 +476,7 @@ html.contextmenu_ContextMenuPopup_2GpKT body {
   margin-bottom: 2px;
 }
 .hoverposition_HoverPosition_3XUAN {
-  position: fixed;
+  position: absolute;
   z-index: 100;
   opacity: 0;
   transition: opacity 0.25s;
@@ -492,6 +493,15 @@ html.contextmenu_ContextMenuPopup_2GpKT body {
 }
 .hoverposition_HoverAboveModal_1SHX2 {
   z-index: 2000;
+}
+.hoverposition_HoverPositionOuter_EUN4G {
+  position: fixed;
+  width: 200%;
+  height: 200%;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  z-index: 100;
 }
 .tooltip_TextToolTip_29b2a {
   box-sizing: border-box;
@@ -3530,11 +3540,13 @@ div.ModalPosition_TopBar {
   text-align: left;
 }
 .DialogInputRequirementLabel {
-  color: #b80505;
+  color: #c15755;
   margin-left: 15px;
 }
 .DialogRequirementLabel {
-  color: #b80505;
+  color: #c15755;
+  font-weight: 500;
+  font-size: 14px;
 }
 .DialogInputLabelGroup {
   margin-bottom: 22px;

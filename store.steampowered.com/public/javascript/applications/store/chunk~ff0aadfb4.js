@@ -37,10 +37,10 @@
     16468: (t, e, n) => {
       "use strict";
       n.d(e, {
-        Bo: () => L,
+        Bo: () => b,
         FG: () => D,
-        N: () => y,
-        P4: () => I,
+        N: () => I,
+        P4: () => y,
         mb: () => C,
         yS: () => S,
       });
@@ -57,8 +57,8 @@
         p = n(70750),
         m = n(11837),
         v = n(23801),
-        g = n(23217),
-        E = n(4306),
+        E = n(23217),
+        g = n(4306),
         f = n(32765);
       function h(t) {
         t.list_jsondata && "string" == typeof t.list_jsondata
@@ -71,7 +71,7 @@
             (t.list_jsondata = {}));
       }
       const C = "0";
-      function b(t, e) {
+      function L(t, e) {
         (e.localized_flat_title = (0, m.LG)([], 30, null)),
           (e.localized_flat_blurb = (0, m.LG)([], 30, null)),
           (e.localized_flat_link = (0, m.LG)([], 30, null)),
@@ -100,7 +100,7 @@
               (e.localized_flat_link[t.language] = t.localized_string);
           });
       }
-      class L {
+      class b {
         GetListDetails(t) {
           return this.m_mapList.get(t);
         }
@@ -138,14 +138,14 @@
                     "Wanted" + e + "but got" + (null == n ? void 0 : n.listid),
                   ),
                   h(n),
-                  b(r.data.curation_language, n),
+                  L(r.data.curation_language, n),
                   this.m_mapList.set(e, n),
                   this.m_mapListIDToClanAccount.set(e, t.GetAccountID()),
                   n
                 );
               }
             } catch (t) {
-              const e = (0, g.l)(t);
+              const e = (0, E.l)(t);
               console.error(
                 "CCuratorListStore.LoadListDetails: error on load: " +
                   e.strErrorMsg,
@@ -228,7 +228,7 @@
                             e.clan_account_id,
                           ),
                             h(n),
-                            b(e.curation_language, n),
+                            L(e.curation_language, n),
                             this.m_mapList.set(n.listid, n),
                             t.push(n);
                         });
@@ -239,14 +239,14 @@
                 );
               }
             } catch (t) {
-              const e = (0, g.l)(t);
+              const e = (0, E.l)(t);
               console.error(n + ": error on load: " + e.strErrorMsg, e);
             }
             return [];
           });
         }
         static Get() {
-          return L.s_Singleton || (L.s_Singleton = new L()), L.s_Singleton;
+          return b.s_Singleton || (b.s_Singleton = new b()), b.s_Singleton;
         }
         constructor() {
           (this.m_mapList = new Map()),
@@ -265,7 +265,7 @@
                 t.forEach((t) => {
                   t.multi_detail_lists.forEach((e) => {
                     h(e),
-                      b(t.curation_language, e),
+                      L(t.curation_language, e),
                       this.m_mapList.set(e.listid, e);
                   });
                 });
@@ -286,17 +286,17 @@
             : e && Array.isArray(e) && 0 == e.length;
         }
       }
-      function y(t, e) {
-        const n = (0, E.NW)();
+      function I(t, e) {
+        const n = (0, g.NW)();
         return (
           (0, r.useEffect)(() => {
-            if (L.Get().GetListDetails(e) || !t) return;
+            if (b.Get().GetListDetails(e) || !t) return;
             const o = i().CancelToken.source();
             return (
               (() => {
                 (0, a.mG)(this, void 0, void 0, function* () {
                   var a, i;
-                  const l = yield L.Get().LoadListDetails(t, e);
+                  const l = yield b.Get().LoadListDetails(t, e);
                   if (!o.token.reason)
                     if (
                       null === (a = null == l ? void 0 : l.apps) || void 0 === a
@@ -328,10 +328,10 @@
               () => o.cancel("unmounting CuratorList")
             );
           }, [t, e, n]),
-          L.Get().GetListDetails(e)
+          b.Get().GetListDetails(e)
         );
       }
-      function I(t) {
+      function y(t) {
         const e = t && c.sV.GetClanInfoByClanAccountID(t),
           [n, a] = (0, r.useState)(!!e);
         return (
@@ -353,7 +353,7 @@
         );
       }
       function S(t) {
-        const e = (0, E.NW)(),
+        const e = (0, g.NW)(),
           n = D(t) ? t.sale_clan_event_gid : null,
           o = n && _.j1.GetClanEventModel(n);
         return (
@@ -378,7 +378,7 @@
           o
         );
       }
-      (0, a.gn)([l.LO], L.prototype, "m_mapList", void 0);
+      (0, a.gn)([l.LO], b.prototype, "m_mapList", void 0);
     },
     31245: (t, e, n) => {
       "use strict";
@@ -396,15 +396,15 @@
         p = n(51441),
         m = n(44421),
         v = n(23715),
-        g = n.n(v),
-        E = n(67935),
+        E = n.n(v),
+        g = n(67935),
         f = n(21219),
         h = n(87539),
         C = n(3991),
-        b = n(33406),
-        L = n(98389),
-        y = n(42317),
-        I = n(71161),
+        L = n(33406),
+        b = n(98389),
+        I = n(42317),
+        y = n(71161),
         D = n(19304),
         S = n(14826),
         A = n(32765);
@@ -417,14 +417,14 @@
             elElementToAppendToHover: c,
             index: m,
             navKey: v,
-            bHideStoreHover: E,
+            bHideStoreHover: g,
           } = t,
-          [f, b] = a.useState(!1),
-          [y] = (0, d.jk)(e.id, (0, u.TM)(e.type), o.bk),
-          [w] = (0, d.vs)(n && (null == y ? void 0 : y.GetParentAppID()), o.bk),
-          O = (0, I.bJ)(),
+          [f, L] = a.useState(!1),
+          [I] = (0, d.jk)(e.id, (0, u.TM)(e.type), o.bk),
+          [w] = (0, d.vs)(n && (null == I ? void 0 : I.GetParentAppID()), o.bk),
+          O = (0, y.bJ)(),
           P = (0, A.id)();
-        if (!y) return null;
+        if (!I) return null;
         const H = Boolean(w),
           z = a.createElement(
             T,
@@ -438,7 +438,7 @@
           l.s,
           {
             className: (0, D.Z)({
-              [g().OuterCapsuleContainer]: !0,
+              [E().OuterCapsuleContainer]: !0,
               [G + m]: 0 == m,
             }),
             navEntryPreferPosition: r.c4.PREFERRED_CHILD,
@@ -446,13 +446,13 @@
           },
           a.createElement(
             C.zw,
-            { appid: y.GetAppID() },
-            Boolean(E)
+            { appid: I.GetAppID() },
+            Boolean(g)
               ? a.createElement(a.Fragment, null, z)
               : a.createElement(
                   p.ll,
                   {
-                    className: g().CapsuleContainer,
+                    className: E().CapsuleContainer,
                     item: e,
                     elElementToAppend: t.elElementToAppendToHover,
                     bShowDemoButton: t.bShowDemoButton,
@@ -461,7 +461,7 @@
                     bHidePrice: t.bHidePrice,
                     bUseSubscriptionLayout: t.bUseSubscriptionLayout,
                     strExtraParams: t.strExtraParams,
-                    fnOnHoverStateChange: !P && b,
+                    fnOnHoverStateChange: !P && L,
                     nCreatorAccountID: t.creatorAccountID,
                   },
                   z,
@@ -472,7 +472,7 @@
             a.createElement(
               i.Ks,
               Object.assign(
-                { className: g().CapsuleParentInfo },
+                { className: E().CapsuleParentInfo },
                 (0, h.h)(w, O, P, t.strExtraParams),
               ),
               a.createElement(
@@ -480,15 +480,15 @@
                 { appid: w.GetAppID() },
                 a.createElement(
                   "div",
-                  { className: g().ParentType },
+                  { className: E().ParentType },
                   (0, S.Xx)(
-                    11 == y.GetAppType()
+                    11 == I.GetAppType()
                       ? "#SalePage_ParentApp_SoundTrack"
                       : "#SalePage_ParentApp_DLC",
                   ),
                 ),
                 a.createElement(
-                  L._,
+                  b._,
                   {
                     type: "app",
                     id: w.GetAppID(),
@@ -520,43 +520,46 @@
             strExtraParams: r,
             imageType: _,
             bHasParentAppToDisplay: v,
-            bUseSubscriptionLayout: g,
+            bUseSubscriptionLayout: E,
             elElementToAppendToHover: h,
-            bHidePrice: L,
+            bHidePrice: b,
             bHidePlatforms: D,
             creatorAccountID: S,
-            bIsHovered: A,
+            bIsHovered: G,
           } = t,
-          [G] = (0, d.jk)(n.id, (0, u.TM)(n.type), { include_platforms: !0 }),
-          w = (0, I.bJ)(),
-          T =
+          [w] = (0, d.jk)(n.id, (0, u.TM)(n.type), { include_platforms: !0 }),
+          T = (0, y.bJ)(),
+          O =
             ((0, C.Dt)(n.type),
             (0, a.useMemo)(
-              () => (null == G ? void 0 : G.GetIncludedAppIDsOrSelf()),
-              [G],
+              () => (null == w ? void 0 : w.GetIncludedAppIDsOrSelf()),
+              [w],
             )),
-          O =
-            G &&
-            (null == G
+          P =
+            w &&
+            (null == w
               ? void 0
-              : G.GetIncludedAppIDsOrSelf().every((t) =>
-                  c.jg.Get().BOwnsApp(t),
-                ));
-        if (!G) return null;
-        const P = O && !l,
-          H = (0, s.Hf)(`${G.GetStorePageURL()}${r || ""}`, w);
-        let z,
-          j = null;
-        if (g && 0 == (null == G ? void 0 : G.GetStoreItemType()))
-          j = a.createElement(b.r, { appid: G.GetAppID(), bIsMuted: A });
+              : w
+                  .GetIncludedAppIDsOrSelf()
+                  .every((t) => c.jg.Get().BOwnsApp(t)));
+        if (!w) return null;
+        const H = P && !l;
+        let z = (0, s.Hf)(`${w.GetStorePageURL()}${r || ""}`, T);
+        A.De.IN_CLIENT &&
+          !z.startsWith("steam://") &&
+          (z = `steam://openurl/${z}`);
+        let j,
+          k = null;
+        if (E && 0 == (null == w ? void 0 : w.GetStoreItemType()))
+          k = a.createElement(L.r, { appid: w.GetAppID(), bIsMuted: G });
         else if (h);
         else {
-          const e = O && o,
-            i = P;
-          j = a.createElement(m.Hl, {
+          const e = P && o,
+            i = H;
+          k = a.createElement(m.Hl, {
             info: n,
             bShowAsMuted: i,
-            bHidePrice: L,
+            bHidePrice: b,
             bShowInLibraryInsteadOfPrice: e,
             bHidePlatforms: D,
             creatorAccountID: S,
@@ -565,7 +568,7 @@
         }
         return (
           "overrideNavigation" in n &&
-            (z = (t) => (
+            (j = (t) => (
               n.overrideNavigation(),
               t.preventDefault(),
               t.stopPropagation(),
@@ -574,22 +577,22 @@
           a.createElement(
             i.IS,
             {
-              href: z ? null : H,
+              href: j ? null : z,
               style: { display: "block" },
               preferredFocus: v,
-              onClick: z,
+              onClick: j,
             },
-            a.createElement(f.vs, { appids: T, hide_status_banners: l }),
+            a.createElement(f.vs, { appids: O, hide_status_banners: l }),
             a.createElement(m.a4, { imageType: _, info: n }),
-            a.createElement(y.y, {
+            a.createElement(I.y, {
               eDeckCompatibilityCategory:
-                null === (e = null == G ? void 0 : G.GetPlatforms()) ||
+                null === (e = null == w ? void 0 : w.GetPlatforms()) ||
                 void 0 === e
                   ? void 0
                   : e.steam_deck_compat_category,
             }),
-            Boolean(A && !(0, p.Hu)()) && a.createElement(E.v, { appInfo: n }),
-            j,
+            Boolean(G && !(0, p.Hu)()) && a.createElement(g.v, { appInfo: n }),
+            k,
           )
         );
       }

@@ -1261,7 +1261,7 @@
   background-position: 0 -288px;
 }
 .hoverposition_HoverPosition_3vg1v {
-  position: fixed;
+  position: absolute;
   z-index: 100;
   opacity: 0;
   transition: opacity 0.25s;
@@ -1278,6 +1278,15 @@
 }
 .hoverposition_HoverAboveModal_EQqOx {
   z-index: 2000;
+}
+.hoverposition_HoverPositionOuter_2_lmT {
+  position: fixed;
+  width: 200%;
+  height: 200%;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  z-index: 100;
 }
 .mutualFriendsContainer {
   padding: 12px 16px 4px 16px;
@@ -1627,6 +1636,7 @@ html.contextmenu_ContextMenuPopup_14wqd body {
 .contextmenu_ForceDesktop_3qIuY .contextmenu_contextMenu_PP7LM {
   box-shadow: 0 10px 32px 0px #000000ab;
   background: #3d4450;
+  -webkit-app-region: no-drag;
 }
 .DesktopUI .contextmenu_contextMenuItem_1n7Wl,
 .contextmenu_ForceDesktop_3qIuY .contextmenu_contextMenuItem_1n7Wl {
@@ -9647,7 +9657,7 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   justify-content: center;
   align-items: center;
 }
-.segmentedinputs_SegmentedCharacterInput_1gzkm input {
+.segmentedinputs_SegmentedCharacterInput_1gzkm .segmentedinputs_Input_3xcXq {
   background: none;
   outline: none;
   border: none;
@@ -9661,7 +9671,7 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   text-align: center;
 }
 @media screen and (max-width: 700px) {
-  .segmentedinputs_SegmentedCharacterInput_1gzkm input {
+  .segmentedinputs_SegmentedCharacterInput_1gzkm .segmentedinputs_Input_3xcXq {
     width: 20%;
   }
 }
@@ -9840,7 +9850,6 @@ iframe.youtubeembed_PreviewYouTubeVideo_rUASs.youtubeembed_floatRight_om0Rs {
   margin-bottom: 4px;
 }
 .localdateandtime_DateToolTip_2E5LH {
-  z-index: 2000;
   padding: 3px 8px;
   border-radius: 2px;
   background-color: #5e6068;
@@ -10175,9 +10184,6 @@ a.eventreminder_ReminderOption_26nnh
   .DialogCheckbox_Container
   .DialogToggle_Label {
   margin-left: 28px;
-}
-.eventreminder_ReminderOptionTooltip_2SNqE {
-  z-index: 2000;
 }
 .eventreminder_ReminderCheckBox_vPo2j {
   width: fit-content;
@@ -36742,11 +36748,13 @@ div.ModalPosition_TopBar {
   text-align: left;
 }
 .DialogInputRequirementLabel {
-  color: #b80505;
+  color: #c15755;
   margin-left: 15px;
 }
 .DialogRequirementLabel {
-  color: #b80505;
+  color: #c15755;
+  font-weight: 500;
+  font-size: 14px;
 }
 .DialogInputLabelGroup {
   margin-bottom: 22px;

@@ -6463,6 +6463,9 @@ a.storywidget_BadgeFooter_3kBeS:hover {
 .dlcforyou_FullGameHover_i1RBc {
   width: 300px;
 }
+.dlc_for_you {
+  position: relative;
+}
 .dlcforyou_ParentAppSortTabsCtn_HLysW {
   display: flex;
   align-items: center;
@@ -6472,6 +6475,7 @@ a.storywidget_BadgeFooter_3kBeS:hover {
   font-size: 14px;
   font-weight: 800;
   position: sticky;
+  top: 0;
   z-index: 150;
   left: 0px;
   right: 0px;

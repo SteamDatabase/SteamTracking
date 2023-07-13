@@ -92,7 +92,7 @@
             console.groupCollapsed(
               "GetMsgAndErrorCodeFromResponse cannot parse: ",
             ),
-              console.error(e),
+              console.warn(e),
               console.groupEnd();
           else {
             if ("object" == typeof e && e instanceof m.gA)
@@ -100,7 +100,7 @@
                 strErrorMsg: "" + e.GetEResult(),
                 errorCode: e.GetEResult(),
               };
-            console.error("GetMsgAndErrorCodeFromResponse cannot parse: ", e);
+            console.warn("GetMsgAndErrorCodeFromResponse cannot parse: ", e);
           }
         }
         return "object" == typeof e && "status" in e

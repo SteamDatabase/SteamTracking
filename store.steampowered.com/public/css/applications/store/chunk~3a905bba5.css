@@ -647,7 +647,6 @@ iframe.youtubeembed_PreviewYouTubeVideo_2ydks.youtubeembed_floatRight_1VimJ {
   margin-bottom: 4px;
 }
 .localdateandtime_DateToolTip_3zhja {
-  z-index: 2000;
   padding: 3px 8px;
   border-radius: 2px;
   background-color: #5e6068;
@@ -4619,9 +4618,6 @@ a.eventreminder_ReminderOption_RNhWc
   .DialogCheckbox_Container
   .DialogToggle_Label {
   margin-left: 28px;
-}
-.eventreminder_ReminderOptionTooltip_ZL-f2 {
-  z-index: 2000;
 }
 .eventreminder_ReminderCheckBox_2bkmL {
   width: fit-content;

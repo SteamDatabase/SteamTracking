@@ -672,7 +672,7 @@
         k = n(1721),
         A = n.n(k),
         x = n(701),
-        F = n(69338),
+        F = n(7770),
         H = n(4306),
         M = n(1275),
         R = n(45711),
@@ -1618,7 +1618,7 @@
         ee = n(17325),
         te = n(1721),
         ne = n.n(te),
-        ae = n(69338),
+        ae = n(7770),
         re = n(75962),
         le = n(43511),
         oe = n(23801),
@@ -3162,10 +3162,7 @@
             );
           return r.createElement(
             Ze.HP,
-            {
-              toolTipContent: a,
-              strTooltipClassname: at().CuratorHoverToolTip,
-            },
+            { toolTipContent: a, bTopmost: !0 },
             e.children,
           );
         }),

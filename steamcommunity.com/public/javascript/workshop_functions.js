@@ -930,13 +930,24 @@ function toggleAutoPlay()
 	document.cookie="bGameHighlightAutoplayDisabled=" + c_value;
 }
 
-function ShowEnlargedImagePreview( imageURL )
+function ShowEnlargedImagePreview( imageURL, HighlightPlayer )
 {
-	var enlargedImage = $( 'enlargedImage' );
-	enlargedImage.src = "";
-	enlargedImage.src = imageURL;
-	showModal( 'previewImageEnlarged', false, true );
-	Event.stop( event );
+	var enlargedImage = $J( '<img/>', {id: 'enlarged_image_carousel', src:imageURL } );
+
+	if ( HighlightPlayer !== undefined )
+	{
+		HighlightPlayer.PauseCycle();
+	}
+
+	var Dialog = ShowDialog( '', enlargedImage.show() ).done( () => {
+		if ( HighlightPlayer !== undefined )
+		{
+		    HighlightPlayer.ResumeCycle();
+		}
+	} );
+
+	        Event.observe( 'enlarged_image_carousel', 'load', function() { Dialog.AdjustSizing(); } );
+
 	return false;
 }
 
