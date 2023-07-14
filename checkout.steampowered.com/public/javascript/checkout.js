@@ -976,36 +976,28 @@ function OnInitializeTransactionSuccess( result, bSaveBillingAddress )
                     createBillingAgreementFn = undefined;
                 }
 
-                                    paypal.Button.render({
-                        env: 'production',
+                                    LoadAsyncPayPalScript( srcParams ).then(
+                        () => {
+                            paypal_sdk.Buttons({
+                                style: {
+                                    color: 'gold',
+                                    shape: 'rect',
+                                    size: 'small',
+                                    label: 'paypal',
+                                    tagline: false
+                                },
 
-                        commit: true, // Show a 'Pay Now' button
+                                createOrder: createOrderFn,
+                                createBillingAgreement: createBillingAgreementFn,
+                                onApprove: async (data, actions) => {
+                                    OnPayPalSuccess( $J('#transaction_id').val() );
+                                },
+                                onError: async (data, actions) => {
+                                    OnPayPalCancel( $J('transaction_id').val() );
+                                }
 
-                        style: {
-                            color: 'gold',
-                            shape: 'rect',
-                            size: 'small',
-                            label: 'paypal',
-                            tagline: false
-                        },
-
-                        payment: function(data, actions) {
-                            g_bPayPalAuthInFlight = true;
-                            return $J('#paypaltoken').val();
-                        },
-
-                        onAuthorize: function(data, actions) {
-                            OnPayPalSuccess( $J('#transaction_id').val() );
-                        },
-
-                        onCancel: function(data, actions) {
-                            OnPayPalCancel( $J('#transaction_id').val() );
-                        },
-
-                        onError: function(err) {
-                            OnPayPalCancel( $J('transaction_id').val() );
-                        }
-                    }, '#paypal-button');
+                            }).render("#paypal-button");
+                        });
                 
 
 
