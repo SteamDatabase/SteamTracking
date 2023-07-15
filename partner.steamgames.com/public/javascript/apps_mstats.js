@@ -39,24 +39,13 @@ $J.extend( $J.fn.dataTableExt.oSort, {
 	}
 });
 
-const UTM_MAX_CELL_DISPLAY_LENGTH = 20;
-
-// truncate long strings which can otherwise cause the column width to grow
-function ellipsifyUTMCellData( data )
-{
-	if ( data ) 
-	{
-		return data.length > UTM_MAX_CELL_DISPLAY_LENGTH ? '<span title=\"'+ data + '\">' + data.substr(0, UTM_MAX_CELL_DISPLAY_LENGTH - 3) + '...</span>' : data;
-	}
-	return "";
-}
 
 function renderUTMCellData( data, type, row )
 {
 	// only ellipsify what is displayed, not the underlying data
 	if ( type === 'display' )
 	{
-		return ellipsifyUTMCellData( data );
+		return '<span>' + data + '</span><span class=\"expanded\">' + data + '</span>';
 	}
 	return data;
 }

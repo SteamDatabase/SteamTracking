@@ -2156,6 +2156,7 @@ https://community.cloudflare.steamstatic.com/public/shared/javascript/crypto/rsa
 https://confluence.valve.org/display/STEAM/Creator+home+and+Partner+Events+Beta
 https://confluence.valve.org/display/STEAM/How+to+Request+Moderation
 https://confluence.valve.org/display/STEAM/IM+Channel+Guidelines
+https://confluence.valve.org/display/STEAM/Marketing+Message+-+DLC+Fallback+Operations
 https://confluence.valve.org/display/STEAM/Marketing+Message+Template%3A+Featured+Video
 https://confluence.valve.org/display/STEAM/Opt-In+Tech+Custom+Event+type
 https://confluence.valve.org/display/STEAM/Setting+up+an+opt-in+event

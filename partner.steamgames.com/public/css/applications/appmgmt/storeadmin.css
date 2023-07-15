@@ -1305,3 +1305,326 @@ button.Primary.partnereventshared_AddSectionButton_15e-D {
     filter: brightness(1);
   }
 }
+.controllersupportinfo_ReleaseDateInfoCtn_2ocuo {
+  display: flex;
+  flex-direction: row;
+  max-width: 320px;
+}
+.controllersupportinfo_ReleaseDateInfoCtn_2ocuo.controllersupportinfo_GameEditCtn_2o3d5 {
+  max-width: 320px;
+  background: #000;
+  padding: 16px;
+}
+.controllersupportinfo_ReleaseDateInfoCtn_2ocuo
+  .controllersupportinfo_ReleaseDateContent_14jgI {
+  flex: 1;
+}
+.controllersupportinfo_ReleaseDateInfoCtn_2ocuo
+  .controllersupportinfo_EditButton_1FeuJ {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+.controllersupportinfo_ReleaseDateInfoCtn_2ocuo
+  .controllersupportinfo_EditButton_1FeuJ
+  .controllersupportinfo_Spacer_1kzzU {
+  flex: 1;
+  margin-right: 16px;
+}
+.controllersupportinfo_ReleaseDateInfoCtn_2ocuo
+  .controllersupportinfo_EditButton_1FeuJ
+  .controllersupportinfo_Spacer_1kzzU.controllersupportinfo_Top_3M26M {
+  border-right: 1px solid #fff;
+  border-top: 1px solid #fff;
+  margin-bottom: 12px;
+}
+.controllersupportinfo_ReleaseDateInfoCtn_2ocuo
+  .controllersupportinfo_EditButton_1FeuJ
+  .controllersupportinfo_Spacer_1kzzU.controllersupportinfo_Bottom_1qVhc {
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  margin-top: 12px;
+}
+.controllersupportinfo_ReleaseDateInfoCtn_2ocuo
+  .controllersupportinfo_EditButton_1FeuJ
+  .controllersupportinfo_EditButtonIcon_1EzMv {
+  width: 16px;
+  height: 16px;
+  padding: 8px;
+  background: linear-gradient(to right, #47bfff 5%, #1a8cc2 60%);
+  border-radius: 3px;
+}
+.controllersupportinfo_LabelField_15-FO {
+  margin-bottom: 15px;
+}
+.controllersupportinfo_LabelField_15-FO .controllersupportinfo_Label_Tlwzu {
+  font-family: "Motiva Sans", Sans-serif;
+  font-weight: normal;
+  font-size: 12px;
+  color: #808285;
+  margin-bottom: 3px;
+}
+.controllersupportinfo_LabelField_15-FO .controllersupportinfo_BigField_1q70c {
+  line-height: 21px;
+  font-size: 20px;
+}
+.controllersupportinfo_LabelField_15-FO .controllersupportinfo_Set_462we {
+  color: #fff;
+}
+.controllersupportinfo_DescText_1DrWi {
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 23px;
+  margin-bottom: 23px;
+  color: #dedede;
+}
+.controllersupportinfo_StatusText_3j0F2 {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 23px;
+  color: #dedede;
+}
+button.DialogButton.controllersupportinfo_StartWizardButton_3aJmq {
+  width: 140px;
+}
+.controllersupportinfo_ControllerSupportLevelString_29_hh {
+  color: #8f98a0;
+}
+.controllersupportinfo_InfoRow_2EuSd {
+  display: flex;
+  flex-direction: row;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+.controllersupportinfo_LocSection_glzO- {
+  width: 234px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: #162430;
+}
+.controllersupportinfo_LocSection_glzO-.controllersupportinfo_HighlightRow_1o45f {
+  background: #9d8b5e;
+}
+.controllersupportinfo_LocSection_glzO-.controllersupportinfo_HighlightRow_1o45f.controllersupportinfo_HighlightRowRed_1hL1r {
+  background: #a25024;
+}
+.controllersupportinfo_LocString_29T_P {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 17px;
+  margin-left: 8px;
+  color: #66c0f4;
+}
+.controllersupportinfo_LocString_29T_P.controllersupportinfo_HighlightText_3r2CU {
+  color: #82f466;
+}
+.controllersupportinfo_LocString_29T_P.controllersupportinfo_HighlightRow_1o45f {
+  color: #fff;
+}
+.controllersupportinfo_ImgSection_2iy3B {
+  width: 43px;
+  height: 28px;
+  display: grid;
+  background: #101822;
+}
+.controllersupportinfo_ImgSection_2iy3B.controllersupportinfo_HighlightRow_1o45f {
+  background: #7c6e4a;
+}
+.controllersupportinfo_ImgSection_2iy3B.controllersupportinfo_HighlightRow_1o45f.controllersupportinfo_HighlightRowRed_1hL1r {
+  background: #8a441e;
+}
+.controllersupportinfo_ImgContainer_3fVMx {
+  display: flex;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+  justify-self: center;
+  width: 50%;
+  height: auto;
+  color: #fff;
+}
+.controllersupportinfo_PreviewContainer_1WiJc {
+  padding: 5%;
+  background: linear-gradient(90deg, #15202d 0%, #0e141c 100%);
+}
+.controllersupportedit_ReleaseDateModal_1eMmB > .DialogContent_InnerWidth {
+  width: 1200px;
+  min-width: 1200px;
+  height: 920px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 17px;
+  padding-right: 17px;
+}
+.controllersupportedit_ReleaseDateRequestBody_1tqCc {
+  margin-bottom: 16px;
+}
+.controllersupportedit_Column_35X7X {
+  display: flex;
+  flex-direction: column;
+  min-height: 375px;
+}
+.controllersupportedit_ColumnLabel_3xAxL {
+  margin-bottom: 7px;
+  font-family: "Motiva Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 19px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #bfbfbf;
+}
+.controllersupportedit_ReleaseColumnFooter_3qIJU {
+  margin-top: 8px;
+  font-size: 12px;
+}
+.controllersupportedit_ColumnContent_upSja {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  padding: 18px;
+  flex: 1;
+}
+.controllersupportedit_BlueNote_3FlXr {
+  color: #0ea5cf;
+  margin-bottom: 16px;
+}
+.controllersupportedit_PublishNowWarning_GSVWx {
+  position: relative;
+  background: #333;
+  border: 1px solid #c6670e;
+  padding: 9px 12px;
+  font-family: "Motiva Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 17px;
+  margin: 14px 0 20px 0;
+  color: #ff8a1c;
+}
+.controllersupportedit_PublishNowWarning_GSVWx:after {
+  top: 100%;
+  left: 24%;
+  border: solid rgba(0, 0, 0, 0);
+  content: "";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(198, 103, 14, 0);
+  border-top-color: #c6670e;
+  border-width: 10px;
+  margin-left: -10px;
+}
+.controllersupportedit_ErrorBox_1h88U {
+  margin: 4px 0 24px 0;
+  padding: 12px;
+  background: linear-gradient(
+    135deg,
+    rgba(146, 3, 3, 0.8) 5.43%,
+    rgba(112, 49, 20, 0.301) 100%
+  );
+  color: #fff;
+  animation-duration: 1s;
+  animation-name: controllersupportedit_HTMLErrorBoxAppear_XREUs;
+}
+@keyframes controllersupportedit_HTMLErrorBoxAppear_XREUs {
+  from {
+    filter: brightness(1);
+  }
+  25% {
+    filter: brightness(2);
+  }
+  100% {
+    filter: brightness(1);
+  }
+}
+.controllersupportedit_CloudConflictModalContent_Qq753
+  .controllersupportedit_DialogChoiceDescription_37mGY {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+}
+.controllersupportedit_CloudConflictModalContent_Qq753
+  .controllersupportedit_DialogChoiceDescription_37mGY
+  .DialogBodyText {
+  margin-bottom: 8px;
+}
+.controllersupportedit_ReleaseDateModal_1eMmB .Shared_Radio_Group {
+  flex-direction: column;
+  margin-bottom: 70px;
+}
+.controllersupportedit_ReleaseDateModal_1eMmB .Shared_Radio_Group .RadioButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+}
+.controllersupportedit_ReleaseDateModal_1eMmB
+  .Shared_Radio_Group
+  .RadioButton
+  .controllersupportedit_GameName_1wayR {
+  margin-left: 4px;
+}
+.controllersupportedit_RadioButton_1Cqgv {
+  box-sizing: border-box;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #d9d9d9;
+  border: 1px solid #000;
+}
+.controllersupportedit_RadioButton_1Cqgv.controllersupportedit_Selected_1iGfi {
+  background: #23262e;
+  box-shadow: inset 0 0 0 2px #d9d9d9;
+}
+.controllersupportedit_OptionLabel_1CKHm {
+  margin-left: 20px;
+  text-align: left;
+}
+.controllersupportedit_ProgressBar_2FcBz {
+  height: 10px;
+  background: #40474c;
+  position: relative;
+}
+.controllersupportedit_ProgressBar_2FcBz.controllersupportedit_ProgressBarComplete_231x- {
+  background: #73ff70;
+}
+.controllersupportedit_ProgressBarFillComponent_a63k2 {
+  background: #70c3ff;
+  height: 100%;
+}
+.controllersupportedit_WizardTitle_3acfY {
+  position: relative;
+  font-size: 16px;
+  height: 23px;
+  line-height: 23px;
+  color: #dedede;
+  margin-bottom: 9px;
+}
+.controllersupportedit_StepRow_4NsQg {
+  display: flex;
+  flex-direction: row;
+  margin-top: 36px;
+}
+.controllersupportedit_StepLabel_3Q7KP {
+  margin-top: 36px;
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 23px;
+  text-transform: uppercase;
+}
+.controllersupportedit_StepImgContainer_27_A1 {
+  width: 117px;
+  margin-right: 16px;
+}
+.controllersupportedit_StepInstruction_T9eBi {
+  white-space: break-spaces;
+  margin-bottom: 81px;
+}
+.controllersupportedit_ControlsQuestion_86lVB {
+  margin-bottom: 11px;
+}

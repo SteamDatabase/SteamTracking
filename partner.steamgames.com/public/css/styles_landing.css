@@ -1064,6 +1064,13 @@ h2.incomplete {
 	color: #e24044;
 }
 
+.AdminPageContent.Wide {
+    max-width: 1800px;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .AdminPageContent.FullWidth {
 	max-width: none;
 	width: auto;

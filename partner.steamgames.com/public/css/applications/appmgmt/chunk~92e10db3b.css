@@ -1511,7 +1511,7 @@
   justify-content: center;
   align-items: center;
 }
-.segmentedinputs_SegmentedCharacterInput_3PDBF input {
+.segmentedinputs_SegmentedCharacterInput_3PDBF .segmentedinputs_Input_HPSuA {
   background: none;
   outline: none;
   border: none;
@@ -1525,7 +1525,7 @@
   text-align: center;
 }
 @media screen and (max-width: 700px) {
-  .segmentedinputs_SegmentedCharacterInput_3PDBF input {
+  .segmentedinputs_SegmentedCharacterInput_3PDBF .segmentedinputs_Input_HPSuA {
     width: 20%;
   }
 }

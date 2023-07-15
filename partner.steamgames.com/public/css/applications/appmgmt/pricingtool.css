@@ -388,7 +388,8 @@ div.pricinggrid_HoverToolTip_1OS2v {
   );
   color: #e0e1e6;
   padding: 6px 8px;
-  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3333333333),
+  box-shadow:
+    1px 1px 8px rgba(0, 0, 0, 0.3333333333),
     2px 2px 16px 1px rgba(0, 0, 0, 0.3333333333);
   user-select: none;
 }
@@ -427,7 +428,9 @@ div.pricinggrid_HoverToolTip_1OS2v {
   opacity: 0;
 }
 .pricinggridcell_DetailRow_3P_fJ
-  .pricinggridcell_DetailButton_3ILP7:not(.pricinggridcell_Disabled_3mZHs):hover {
+  .pricinggridcell_DetailButton_3ILP7:not(
+    .pricinggridcell_Disabled_3mZHs
+  ):hover {
   background-color: #676d79;
   cursor: pointer;
 }
@@ -725,6 +728,9 @@ div.pricinggridcell_HoverToolTip_36qS7 {
   .tabulator-cell.tabulator-cell.gridcomponents_PackageType_3LZvj {
   color: #fff;
   justify-content: center;
+}
+.gridcomponents_PackagePricesBelowMin_2x4be {
+  background-color: #973620;
 }
 .guidelinespicker_PriceGuidelinesPicker_4Xo2k {
   background-color: #515661;

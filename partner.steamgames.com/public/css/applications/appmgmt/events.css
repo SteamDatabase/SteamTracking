@@ -915,7 +915,9 @@ span.suggestdialog_mentionSearchMatch_mBrO4 {
 }
 .ChatMessageEntryVoice .VoiceControlPanelButton.ToggleMicrophoneButton {
   transform: translateX(-32px) scale(0.5);
-  transition: transform 0.1s ease-in-out, opacity 0.3s ease-in-out;
+  transition:
+    transform 0.1s ease-in-out,
+    opacity 0.3s ease-in-out;
   opacity: 0;
   cursor: pointer;
 }
@@ -923,7 +925,9 @@ span.suggestdialog_mentionSearchMatch_mBrO4 {
 .ChatMessageEntryVoice.Active .VoiceControlPanelButton.ToggleMicrophoneButton {
   opacity: 1;
   transform: translateX(0px) scale(1);
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out,
+  transition:
+    transform 0.3s ease-in-out,
+    opacity 0.3s ease-in-out,
     background-color 0.1s ease-in-out;
 }
 .ChatMessageEntryVoice .VoiceControlPanelButton.chatEndVoiceChat {
@@ -4226,7 +4230,9 @@ html.tablet .partnereventdisplay_EventDetailTitle_2_4FS {
   margin-bottom: 0px;
   transform: scale(1);
   filter: saturate(0.85);
-  transition: transform 0.21s ease-in-out, filter 0.21s ease-in-out;
+  transition:
+    transform 0.21s ease-in-out,
+    filter 0.21s ease-in-out;
 }
 .salebanner_Banner_2df4N:hover {
   filter: saturate(1);
@@ -5106,6 +5112,9 @@ html.tablet .partnereventdisplay_EventDetailTitle_2_4FS {
   .tabulator-cell.tabulator-cell.gridcomponents_PackageType_3LZvj {
   color: #fff;
   justify-content: center;
+}
+.gridcomponents_PackagePricesBelowMin_2x4be {
+  background-color: #973620;
 }
 .discountgrid_DiscountGridCtn_3THze {
   width: 100%;
@@ -9722,11 +9731,11 @@ button.rbc-input::-moz-focus-inner {
   line-height: 17px;
 }
 .promoagendarow_Col_2x28W.promoagendarow_ItemName_K3sWB {
-  font-size: 14px;
-  flex-grow: 1;
+  width: 45%;
+  font-size: 16px;
 }
 .promoagendarow_Col_2x28W.promoagendarow_Type_1hntl {
-  width: 20%;
+  flex-grow: 1;
 }
 .promoagendarow_Col_2x28W.promoagendarow_Type_1hntl.promoagendarow_Deal_1I4-4
   span {
@@ -9734,7 +9743,7 @@ button.rbc-input::-moz-focus-inner {
   padding: 2px 4px;
 }
 .promoagendarow_Col_2x28W.promoagendarow_Date_17dLA {
-  width: 30%;
+  width: 320px;
 }
 .promoagendarow_Col_2x28W.promoagendarow_Creator_3VjL- {
   width: 175px;
@@ -9763,6 +9772,7 @@ button.rbc-input::-moz-focus-inner {
   flex-direction: row;
   align-items: center;
   margin-right: 8px;
+  opacity: 0.5;
 }
 .promoagendarow_CapsulePlatform_2OJsE span {
   margin-left: 8px;
@@ -9771,6 +9781,26 @@ button.rbc-input::-moz-focus-inner {
 .promoagendarow_CapsulePlatform_2OJsE svg {
   height: 14px;
   width: 14px;
+}
+.promoagendarow_ViewsColumn_1Wtq4 {
+  width: 45%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-right: 16px;
+  box-sizing: border-box;
+  font-size: 14px;
+  color: #84d0fb;
+}
+.promoagendarow_ViewsColumn_1Wtq4 .promoagendarow_ViewsCtn_qbvhk {
+  width: 175px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.promoagendarow_ViewsColumn_1Wtq4 span {
+  margin-left: 8px;
+  color: #a7a9af;
 }
 .promoagendarow_WillBecomeVisible_26S-q {
   background-color: #fce6a0;
@@ -9912,9 +9942,6 @@ button.rbc-input::-moz-focus-inner {
 }
 .marketingmessagedashboard_HeaderButtons_1Q4Pq {
   float: right;
-}
-.marketingmessagerow_GroupIcon_3gk0n {
-  width: 20px;
 }
 .marketingmessagestats_DashStatsContainerPlaceholder_2NZrJ {
   height: 210px;

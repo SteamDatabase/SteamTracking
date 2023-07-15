@@ -99,9 +99,9 @@
             return { strErrorMsg: e.err_msg, errorCode: e.success };
           if ("string" == typeof e && e.length > 1024)
             console.groupCollapsed(
-              "GetMsgAndErrorCodeFromResponse cannot parse: "
+              "GetMsgAndErrorCodeFromResponse cannot parse: ",
             ),
-              console.error(e),
+              console.warn(e),
               console.groupEnd();
           else {
             if ("object" == typeof e && e instanceof r.gA)
@@ -109,7 +109,7 @@
                 strErrorMsg: "" + e.GetEResult(),
                 errorCode: e.GetEResult(),
               };
-            console.error("GetMsgAndErrorCodeFromResponse cannot parse: ", e);
+            console.warn("GetMsgAndErrorCodeFromResponse cannot parse: ", e);
           }
         }
         return "object" == typeof e && "status" in e
@@ -134,7 +134,7 @@
         d = n(23217),
         u = n(32765),
         p = n(45194),
-        _ = n(69338),
+        _ = n(7770),
         E = n(72120);
       function f(e) {
         return l.createElement(
@@ -143,9 +143,9 @@
           l.createElement(
             "span",
             { className: p.CxnGenericDataLabel },
-            e.label
+            e.label,
           ),
-          l.createElement("span", { className: p.CxnGenericData }, e.children)
+          l.createElement("span", { className: p.CxnGenericData }, e.children),
         );
       }
       function C(e) {
@@ -163,8 +163,8 @@
               l.createElement(
                 "span",
                 { className: p.GameServerDataCenter },
-                t.data_center
-              )
+                t.data_center,
+              ),
             ));
         else if (t.steam_persona) {
           const e = u.De.COMMUNITY_BASE_URL + "/profiles/" + t.id;
@@ -174,24 +174,24 @@
             l.createElement(
               "span",
               { className: p.host_id },
-              l.createElement("a", { href: e }, t.steam_persona)
+              l.createElement("a", { href: e }, t.steam_persona),
             ),
             " (",
             l.createElement("span", { className: p.host_id }, n),
-            ")"
+            ")",
           );
         } else
           s = l.createElement(
             l.Fragment,
             null,
-            l.createElement("span", { className: p.host_id }, n)
+            l.createElement("span", { className: p.host_id }, n),
           );
         return l.createElement(
           "div",
           {
             className: (0, c.Z)(
               p.ConnectionClientInfo,
-              t.data_center && p.HostIsGameserver
+              t.data_center && p.HostIsGameserver,
             ),
           },
           l.createElement(
@@ -202,8 +202,8 @@
               l.createElement(
                 f,
                 { className: p.HostConnectionID, label: "ConnectionID" },
-                t.connection_id
-              )
+                t.connection_id,
+              ),
           ),
           l.createElement(
             "div",
@@ -214,16 +214,16 @@
               l.createElement(
                 f,
                 { className: "city_name", label: "City" },
-                t.city_name
+                t.city_name,
               ),
             t.country_code &&
               l.createElement(
                 f,
                 { className: "country_code", label: "Country" },
-                t.country_code
+                t.country_code,
               ),
-            t.as && l.createElement(f, { className: "as", label: "AS" }, t.as)
-          )
+            t.as && l.createElement(f, { className: "as", label: "AS" }, t.as),
+          ),
         );
       }
       function g(e, t) {
@@ -275,8 +275,8 @@
               className: p.Bar,
               style: { width: 90 * a + 1 + "px" },
             }),
-            l.createElement("span", { className: p.Num }, g(t))
-          )
+            l.createElement("span", { className: p.Num }, g(t)),
+          ),
         );
       }
       function N(e, t) {
@@ -286,7 +286,7 @@
         return l.createElement(
           "table",
           { className: p.Histogram },
-          l.createElement("tbody", null, n)
+          l.createElement("tbody", null, n),
         );
       }
       function S(e) {
@@ -299,15 +299,15 @@
                 "tr",
                 { key: a },
                 l.createElement("th", { className: p.NTile }, a, "% <="),
-                l.createElement("td", { className: p.Value }, s)
-              )
+                l.createElement("td", { className: p.Value }, s),
+              ),
             );
         }
         return t.length
           ? l.createElement(
               "table",
               { className: p.Distribution },
-              l.createElement("tbody", null, t)
+              l.createElement("tbody", null, t),
             )
           : null;
       }
@@ -330,7 +330,7 @@
                       return l.createElement(
                         "td",
                         { className: p.NumPkts },
-                        t + " pkts"
+                        t + " pkts",
                       );
                     },
                     n = function (e) {
@@ -338,7 +338,7 @@
                       return l.createElement(
                         "td",
                         { className: p.KB },
-                        t + "kb"
+                        t + "kb",
                       );
                     },
                     a = function (e, t) {
@@ -355,13 +355,13 @@
                     {
                       className: (0, c.Z)(
                         p.FlowPacketCounts,
-                        p.FlowStatsSection
+                        p.FlowStatsSection,
                       ),
                     },
                     l.createElement(
                       "div",
                       { className: p.FlowSectionTitle },
-                      "Summary counters"
+                      "Summary counters",
                     ),
                     l.createElement(
                       "table",
@@ -378,7 +378,7 @@
                           l.createElement("td", { className: p.Spacer }),
                           l.createElement("th", null, "Dropped"),
                           t(e.drop),
-                          a(e.drop, e.recv_seq)
+                          a(e.drop, e.recv_seq),
                         ),
                         l.createElement(
                           "tr",
@@ -389,7 +389,7 @@
                           l.createElement("td", { className: p.Spacer }),
                           l.createElement("th", null, "Duplicate"),
                           t(e.dup),
-                          a(e.dup, e.recv_seq)
+                          a(e.dup, e.recv_seq),
                         ),
                         l.createElement(
                           "tr",
@@ -400,7 +400,7 @@
                           l.createElement("td", { className: p.Spacer }),
                           l.createElement("th", null, "Out of order"),
                           t(e.ooo),
-                          a(e.ooo, e.recv_seq)
+                          a(e.ooo, e.recv_seq),
                         ),
                         l.createElement(
                           "tr",
@@ -415,16 +415,16 @@
                                 className:
                                   "flowqualityclass_" + e.quality_class,
                               },
-                              e.quality_class
-                            )
+                              e.quality_class,
+                            ),
                           ),
                           l.createElement("td", { className: p.Spacer }),
                           l.createElement("th", null, "Seq num lurch"),
                           t(e.seqlurch),
-                          a(e.seqlurch, e.recv_seq)
-                        )
-                      )
-                    )
+                          a(e.seqlurch, e.recv_seq),
+                        ),
+                      ),
+                    ),
                   );
                 })(t),
                 (function (e) {
@@ -465,11 +465,11 @@
                     l.createElement(
                       "div",
                       { className: p.FlowSectionTitle },
-                      "Quality interval breakdown"
+                      "Quality interval breakdown",
                     ),
                     l.createElement("div", { className: p.numSamples }, c),
                     t,
-                    n
+                    n,
                   );
                 })(t),
                 (function (e) {
@@ -509,7 +509,7 @@
                       t = l.createElement(
                         "table",
                         { className: p.Histogram },
-                        l.createElement("tbody", null, n)
+                        l.createElement("tbody", null, n),
                       );
                     }
                   }
@@ -552,11 +552,11 @@
                       l.createElement(
                         "div",
                         { className: p.FlowSectionTitle },
-                        "Round Trip Latency"
+                        "Round Trip Latency",
                       ),
                       l.createElement("div", { className: p.NumSamples }, m),
                       t,
-                      s
+                      s,
                     ),
                     l.createElement(
                       "div",
@@ -564,19 +564,19 @@
                       l.createElement(
                         "div",
                         { className: p.FlowSectionTitle },
-                        "Jitter"
+                        "Jitter",
                       ),
                       l.createElement("div", { className: p.NumSamples }, d),
-                      c
-                    )
+                      c,
+                    ),
                   );
-                })(t)
+                })(t),
               )
             : l.createElement(
                 "div",
                 { className: p.NoFlowDataAvailable },
-                "(No data available)"
-              )
+                "(No data available)",
+              ),
         );
       }
       function P(e) {
@@ -596,7 +596,7 @@
             l.createElement(k, {
               title: "Front side statistics reported by relay",
               flow: t.router_front,
-            })
+            }),
           );
         }
         return (
@@ -611,7 +611,7 @@
               l.createElement(k, {
                 title: "Back side statistics reported by gameserver",
                 flow: t.gameserver_back,
-              })
+              }),
             )),
           l.createElement(
             "div",
@@ -622,17 +622,17 @@
               l.createElement(
                 f,
                 { label: "Relay address" },
-                t.client.relay_addr
+                t.client.relay_addr,
               ),
               l.createElement(
                 f,
                 { label: "Relay POP" },
-                t.client.relay_cluster
+                t.client.relay_cluster,
               ),
-              l.createElement(f, { label: "Active" }, (0, E.jA)(t.active_time))
+              l.createElement(f, { label: "Active" }, (0, E.jA)(t.active_time)),
             ),
             a,
-            s
+            s,
           )
         );
       }
@@ -694,7 +694,7 @@
               "span",
               { className: p.CxnTimeAndDuration },
               l.createElement(f, { label: "Time" }, a, " ", s, "--", r),
-              l.createElement(f, { label: "Duration" }, c)
+              l.createElement(f, { label: "Duration" }, c),
             );
           }
           if (
@@ -707,7 +707,7 @@
                 m.close_msg,
                 " (",
                 m.close_code,
-                ")"
+                ")",
               )),
             m.experience_class)
           ) {
@@ -718,9 +718,9 @@
               l.createElement(
                 "span",
                 { className: "experience_" + m.experience_class },
-                m.experience_class
+                m.experience_class,
               ),
-              e
+              e,
             );
           }
         }
@@ -736,9 +736,9 @@
               l.createElement(
                 "span",
                 { className: p.AppFieldsTitle },
-                "Application fields:"
+                "Application fields:",
               ),
-              n
+              n,
             );
           }
         }
@@ -763,7 +763,7 @@
               (N = l.createElement(
                 f,
                 { label: "Packet delivery" },
-                `${_.toFixed(2)}%`
+                `${_.toFixed(2)}%`,
               )),
             c)
           ) {
@@ -776,7 +776,7 @@
               "div",
               { className: p.QualityFlowPairCtr },
               l.createElement(k, { title: e, flow: s }),
-              l.createElement(k, { title: n, flow: r })
+              l.createElement(k, { title: n, flow: r }),
             );
           }
         }
@@ -795,19 +795,19 @@
                   l.createElement(
                     "div",
                     { className: p.SessionsGroupHeader },
-                    "Client relay sessions"
-                  )
+                    "Client relay sessions",
+                  ),
                 )
               : b.push(
                   l.createElement(
                     "div",
                     { className: p.SessionsGroupHeader },
-                    "Relay sessions"
-                  )
+                    "Relay sessions",
+                  ),
                 );
             for (const n of e(t.client_sessions))
               b.push(
-                l.createElement(P, { cxn: t, sess: n, host_role: "client" })
+                l.createElement(P, { cxn: t, sess: n, host_role: "client" }),
               );
           }
           if (a) {
@@ -815,12 +815,12 @@
               l.createElement(
                 "div",
                 { className: p.SessionsGroupHeader },
-                "Peer relay sessions"
-              )
+                "Peer relay sessions",
+              ),
             );
             for (const n of e(t.peer_sessions))
               b.push(
-                l.createElement(P, { cxn: t, sess: n, host_role: "peer" })
+                l.createElement(P, { cxn: t, sess: n, host_role: "peer" }),
               );
           }
         }
@@ -838,23 +838,23 @@
               N,
               _,
               g,
-              u
+              u,
             ),
             l.createElement(i.ji, {
               className: p.ExpandDetailsCheckbox,
               label: "Details",
               checked: c,
               onChange: o,
-            })
+            }),
           ),
           l.createElement(
             "div",
             { className: p.CxnPeersCtr },
             l.createElement(C, { host: t.client, host_role: "client" }),
-            l.createElement(C, { host: t.peer, host_role: "peer" })
+            l.createElement(C, { host: t.peer, host_role: "peer" }),
           ),
           S,
-          b
+          b,
         );
       }
       function x(e) {
@@ -900,7 +900,7 @@
                         (null === (n = null == l ? void 0 : l.data) ||
                         void 0 === n
                           ? void 0
-                          : n.msg)
+                          : n.msg),
                     ),
                     C(
                       (null === (a = null == l ? void 0 : l.data) ||
@@ -911,13 +911,13 @@
                         (null === (s = null == l ? void 0 : l.data) ||
                         void 0 === s
                           ? void 0
-                          : s.msg)
+                          : s.msg),
                     ));
               } catch (e) {
                 const t = (0, d.l)(e);
                 console.error(
                   "sdrsessionsearch: OnPerformSearch " + t.strErrorMsg,
-                  t
+                  t,
                 );
               }
               E(!1);
@@ -940,9 +940,9 @@
               { className: p.SearchResultsTitle },
               "Found ",
               g.length,
-              " connection(s)"
+              " connection(s)",
             ),
-            e
+            e,
           );
         }
         const A = "ded" == b ? "Gameserver" : "Peer",
@@ -958,7 +958,7 @@
               { className: p.SDRConnectionsAppTitle },
               "SDR Connections [BETA] - App ",
               e.appId,
-              " "
+              " ",
             ),
             f && l.createElement("div", { className: p.ErrMsg }, f),
             l.createElement(
@@ -969,21 +969,21 @@
                 {
                   className: (0, c.Z)(
                     "DialogInputLabelGroup",
-                    p.ConnectionKindGroup
+                    p.ConnectionKindGroup,
                   ),
                 },
                 l.createElement(
                   "div",
                   { className: "DialogLabel" },
-                  "Connection kind"
+                  "Connection kind",
                 ),
                 l.createElement(
                   i.SY,
                   { value: b, onChange: (e) => k(e) },
                   l.createElement(i.EU, { value: "" }, "Any"),
                   l.createElement(i.EU, { value: "ded" }, "Dedicated server"),
-                  l.createElement(i.EU, { value: "p2p" }, "Peer-to-Peer")
-                )
+                  l.createElement(i.EU, { value: "p2p" }, "Peer-to-Peer"),
+                ),
               ),
               l.createElement(
                 "div",
@@ -1001,7 +1001,7 @@
                   disabled: G,
                   label: A,
                   onChange: (e) => S(e.currentTarget.value),
-                })
+                }),
               ),
               l.createElement(
                 "div",
@@ -1019,7 +1019,7 @@
                   disabled: G,
                   label: "App field value 1",
                   onChange: (e) => R(e.currentTarget.value),
-                })
+                }),
               ),
               l.createElement(
                 "div",
@@ -1042,13 +1042,13 @@
                     },
                     disabled: s,
                   },
-                  "Search "
-                )
-              )
+                  "Search ",
+                ),
+              ),
             ),
             s && l.createElement(_.V, null),
-            T
-          )
+            T,
+          ),
         );
       }
     },

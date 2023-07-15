@@ -10,19 +10,24 @@
 }
 
 #filter_form {
-	margin-bottom: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    box-shadow: 0 0 10px black;
 }
 
 .filter_controls_container
 {
+    background-color: #2F353C;
+    display: flex;
+    padding: 10px 20px;
 	margin-top: 1px;
 	font-size: 10px;
-	display: flex;
 	justify-content: space-between;
 }
 
-#filter_form input,
-#filter_form select {
+#filter_form select,
+#utm_filter_form select {
 	background-color: #000;
 }
 
@@ -46,10 +51,9 @@
 
 .filter_selector_title
 {
-	font-size: 12px;
-	font-weight: bold;
+	font-size: 13px;
 	text-transform: uppercase;
-	color: #69bff3;
+    color: #929DAA;
 	padding-bottom: 5px;
 }
 
@@ -60,16 +64,19 @@
 
 input.datepicker
 {
-	width: 100px;
-	background-color: #000000;
+	width: 98px;
+    background-color: rgba(0,0,0,0.3);
+    box-shadow: inset 0 0 10px black;
 	margin-top: 4px;
 	position: relative;
 	z-index: 10;
+    border-radius: 3px;
 }
 
 .filtered_header {
 	font-size: 16px;
 	margin-bottom: 25px;
+    margin-top: 20px;
 }
 
 .filtered_header > span, .filtered_header > span > a {
@@ -77,6 +84,9 @@ input.datepicker
 	font-weight: bold;
 }
 
+.breakdownTable .th {
+    top: 80px;
+}
 
 .landingTable .tr.page_stats
 {
@@ -166,7 +176,7 @@ div.jqplot-table-legend-swatch-outline {
 
 /** stats */
 .stats_header {
-	margin-top: 10px;
+	margin-top: 5px;
 	margin-bottom: 30px;
 	display: flex;
 }
@@ -175,7 +185,7 @@ div.jqplot-table-legend-swatch-outline {
 	text-align: center;
 	padding: 10px;
 	min-height: 86px;
-	background-color: #000;
+    background: black;
 }
 .stats_header_section:nth-of-type(2) {
 	margin-left: 5px;
@@ -195,10 +205,12 @@ div.jqplot-table-legend-swatch-outline {
 .stat_total {
 	color: #6A7175;
 }
-.stat_trusted {
+.stat_trusted,
+.stat_allvisitstrusted {
     color: #91b807;
 }
-.stat_tracked {
+.stat_tracked,
+.stat_trackedTrusted {
     color: #69bff3;
 }
 .stat_wishlist {
@@ -270,18 +282,17 @@ div.jqplot-table-legend-swatch-outline {
 
 .countries_container {
 	padding: 16px;
-	background: black;
+    background: linear-gradient(126deg, black, #161616);
 	margin: 16px 0px;
 	height: 100%;
 }
 
 .countries_disclaimer {
-	background: black;
 	color: orange;
 }
 .countries_graph
 {
-	background: black;
+
 }
 
 .jqplot-xaxis-tick,
@@ -292,7 +303,8 @@ div.jqplot-table-legend-swatch-outline {
 
 .owner_summary
 {
-	flex: 1 1 0px;
+	flex: 0 1 0px;
+    min-width: 200px;
 	display: flex;
 	flex-direction: column;
 	margin-right: 36px;
@@ -300,27 +312,35 @@ div.jqplot-table-legend-swatch-outline {
 
 .owners_container
 {
-	background: black;
+    background: linear-gradient(126deg, black, #161616);
 	margin: 16px 0px;
 	height: 100%;
-	padding: 16px;
+}
+
+.owners_container td.jqplot-table-legend {
+    color: white;
+    font-size: 14px;
 }
 
 .owners_graph
 {
-	background: black;
+
+    height: 300px;
+    width: 200px;
+
 }
 
 .impressions_summary
 {
-	flex: 1 1 0px;
+    flex: 0 1 0px;
+    min-width: 333px;
 	display: flex;
 	flex-direction: column;
 }
 
 .impressions_content
 {
-	background: black;
+    background: linear-gradient(126deg, black, #161616);
 	margin: 16px 0px;
 	padding: 16px;
 	height: 100%;
@@ -338,9 +358,44 @@ div.jqplot-table-legend-swatch-outline {
 .impressions_stat
 {
 	flex: 1 1 0px;
+    margin-right: 8px;
 }
 
 .impression_num
 {
 	font-size: 24px;
+}
+
+.csv_download_row {
+    margin: 10px 0 20px 0;
+    padding: 0px 10px;
+    height: 55px;
+    font-size: 14px;
+    background-color: #101214;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .csv_download_title {
+        display: inline-block;
+    }
+
+    .btn_download {
+        padding: 7px 40px 0;
+
+        > img {
+            margin: auto;
+            vertical-align: middle;
+        }
+    }
+}
+
+.download_csv
+{
+	padding: 8px 24px;
+	background: #369DD2;
+}
+
+#learnmore_panel {
+    margin-top: 60px;
 }

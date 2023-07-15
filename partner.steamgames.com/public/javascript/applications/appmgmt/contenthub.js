@@ -46,7 +46,7 @@ License: MIT
                           (a.BLOB_URL = i.createObjectURL(
                             new Blob(["(", r, ")();"], {
                               type: "text/javascript",
-                            })
+                            }),
                           ))),
                       h = new t.Worker(o);
                     return (h.onmessage = m), (h.id = s++), (n[h.id] = h);
@@ -279,7 +279,7 @@ License: MIT
                       "object" == typeof f.config &&
                         (u.instanceConfig = o.extend(
                           u.instanceConfig,
-                          f.config
+                          f.config,
                         ));
                     } else if ("skip" === f) return void s();
                   }
@@ -362,7 +362,7 @@ License: MIT
                       (o && o.meta.aborted) ||
                       (this._config.complete(
                         this._completeResults,
-                        this._input
+                        this._input,
                       ),
                       (this._completed = !0)),
                     u || (o && o.meta.paused) || this._nextChunk(),
@@ -410,7 +410,7 @@ License: MIT
                     t.open(
                       this._config.downloadRequestBody ? "POST" : "GET",
                       this._input,
-                      !i
+                      !i,
                     ),
                     this._config.downloadRequestHeaders)
                   ) {
@@ -421,7 +421,7 @@ License: MIT
                     var n = this._start + this._config.chunkSize - 1;
                     t.setRequestHeader(
                       "Range",
-                      "bytes=" + this._start + "-" + n
+                      "bytes=" + this._start + "-" + n,
                     );
                   }
                   try {
@@ -466,7 +466,7 @@ License: MIT
                 r
                   ? (((t = new FileReader()).onload = k(
                       this._chunkLoaded,
-                      this
+                      this,
                     )),
                     (t.onerror = k(this._chunkError, this)))
                   : (t = new FileReaderSync()),
@@ -483,7 +483,7 @@ License: MIT
                 if (this._config.chunkSize) {
                   var n = Math.min(
                     this._start + this._config.chunkSize,
-                    this._input.size
+                    this._input.size,
                   );
                   e = i.call(e, this._start, n);
                 }
@@ -547,7 +547,9 @@ License: MIT
               (this._streamData = k(function (e) {
                 try {
                   t.push(
-                    "string" == typeof e ? e : e.toString(this._config.encoding)
+                    "string" == typeof e
+                      ? e
+                      : e.toString(this._config.encoding),
                   ),
                     i &&
                       ((i = !1),
@@ -612,7 +614,7 @@ License: MIT
                     "UndetectableDelimiter",
                     "Unable to auto-detect delimiting character; defaulted to '" +
                       a.DefaultDelimiter +
-                      "'"
+                      "'",
                   ),
                   (r = !1)),
                 e.skipEmptyLines &&
@@ -658,7 +660,7 @@ License: MIT
                                 m.length +
                                 " fields but parsed " +
                                 r,
-                              d + i
+                              d + i,
                             )
                           : r < m.length &&
                             R(
@@ -668,7 +670,7 @@ License: MIT
                                 m.length +
                                 " fields but parsed " +
                                 r,
-                              d + i
+                              d + i,
                             )),
                       n
                     );
@@ -782,7 +784,7 @@ License: MIT
                   e.newline,
                   e.skipEmptyLines,
                   e.comments,
-                  e.delimitersToGuess
+                  e.delimitersToGuess,
                 );
                 u.successful
                   ? (e.delimiter = u.bestDelimiter)
@@ -1032,7 +1034,7 @@ License: MIT
                       errors: t.results.errors,
                       meta: t.results.meta,
                     },
-                    s
+                    s,
                   ),
                   !r);
                   a++

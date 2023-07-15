@@ -191,7 +191,7 @@
         }
         getAllElements() {
           return Array.from(this.m_mapKeyToDataWrapper.values()).map((e) =>
-            e.getCachedData()
+            e.getCachedData(),
           );
         }
         getAllElementsAndKeys() {
@@ -227,10 +227,10 @@
             () =>
               (0, o.mG)(this, void 0, void 0, function* () {
                 return yield S().get(
-                  `${d.De.PARTNER_BASE_URL}steamml/get_schemas?appid=${e}&includesteammlapp=${t}&sessionid=${d.De.SESSIONID}`
+                  `${d.De.PARTNER_BASE_URL}steamml/get_schemas?appid=${e}&includesteammlapp=${t}&sessionid=${d.De.SESSIONID}`,
                 );
               }),
-            (e) => e.data.schemas
+            (e) => e.data.schemas,
           );
         }
         GetSchemaDetails(e, t) {
@@ -239,10 +239,10 @@
             () =>
               (0, o.mG)(this, void 0, void 0, function* () {
                 return yield S().get(
-                  `${d.De.PARTNER_BASE_URL}steamml/get_schema_details?appid=${e}&schemaid=${t}&sessionid=${d.De.SESSIONID}`
+                  `${d.De.PARTNER_BASE_URL}steamml/get_schema_details?appid=${e}&schemaid=${t}&sessionid=${d.De.SESSIONID}`,
                 );
               }),
-            (e) => JSON.parse(e.data.schema_description_json)
+            (e) => JSON.parse(e.data.schema_description_json),
           );
         }
         GetProblemList() {
@@ -251,10 +251,10 @@
             () =>
               (0, o.mG)(this, void 0, void 0, function* () {
                 return yield S().get(
-                  `${d.De.PARTNER_BASE_URL}steamml/get_problems?sessionid=${d.De.SESSIONID}`
+                  `${d.De.PARTNER_BASE_URL}steamml/get_problems?sessionid=${d.De.SESSIONID}`,
                 );
               }),
-            (e) => e.data.problems
+            (e) => e.data.problems,
           );
         }
         GetProblemDetails(e) {
@@ -263,10 +263,10 @@
             () =>
               (0, o.mG)(this, void 0, void 0, function* () {
                 return yield S().get(
-                  `${d.De.PARTNER_BASE_URL}steamml/get_problem_details?problemid=${e}&sessionid=${d.De.SESSIONID}`
+                  `${d.De.PARTNER_BASE_URL}steamml/get_problem_details?problemid=${e}&sessionid=${d.De.SESSIONID}`,
                 );
               }),
-            (e) => e.data.problem
+            (e) => e.data.problem,
           );
         }
         CreateProblem(e, t, a) {
@@ -357,8 +357,8 @@
                   { className: r.SchemaID },
                   s.createElement("span", { className: r.Label }, "Schema ID"),
                   " ",
-                  e.schemaid
-                )
+                  e.schemaid,
+                ),
               ),
               s.createElement("div", { className: r.AppID }, "AppID ", e.appid),
               s.createElement(
@@ -369,7 +369,7 @@
                   { className: r.RowCount },
                   s.createElement("span", { className: r.Label }, "Rows:"),
                   " ",
-                  e.row_count
+                  e.row_count,
                 ),
                 s.createElement(
                   "div",
@@ -377,13 +377,13 @@
                   s.createElement(
                     "span",
                     { className: r.Label },
-                    "Keep Count:"
+                    "Keep Count:",
                   ),
                   " ",
-                  e.keep_count.toLocaleString()
-                )
-              )
-            )
+                  e.keep_count.toLocaleString(),
+                ),
+              ),
+            ),
           );
         return s.createElement(
           "div",
@@ -399,11 +399,11 @@
               s.createElement(
                 "option",
                 { key: e.value, value: e.value },
-                e.label
-              )
-            )
+                e.label,
+              ),
+            ),
           ),
-          o
+          o,
         );
       });
       function b(e) {
@@ -451,7 +451,7 @@
                 {
                   className: (0, D.Z)(
                     r.SchemaDetailsElement,
-                    r.SchemaDetailsStruct
+                    r.SchemaDetailsStruct,
                   ),
                 },
                 !e.count &&
@@ -463,14 +463,14 @@
                         a(
                           n
                             ? [...t, e.name]
-                            : t.slice(0, l).concat(t.slice(l + 1))
+                            : t.slice(0, l).concat(t.slice(l + 1)),
                         );
                       },
                     },
                     s.createElement(
                       "div",
                       { className: (0, D.Z)(n && r.Collapsed, r.CollapseIcon) },
-                      "▼"
+                      "▼",
                     ),
                     s.createElement(
                       "div",
@@ -478,14 +478,14 @@
                       s.createElement(
                         "div",
                         { className: r.ElementName },
-                        e.name
+                        e.name,
                       ),
                       s.createElement(
                         "div",
                         { className: r.TypeName },
-                        "STRUCT"
-                      )
-                    )
+                        "STRUCT",
+                      ),
+                    ),
                   ),
                 e.structure.member.map((e) =>
                   s.createElement(
@@ -493,13 +493,13 @@
                     {
                       className: (0, D.Z)(
                         n && r.IndentCollapsed,
-                        r.StructIndent
+                        r.StructIndent,
                       ),
                       key: e.name,
                     },
-                    P(e, t, a)
-                  )
-                )
+                    P(e, t, a),
+                  ),
+                ),
               ))
             : e.array && e.array.primitive
             ? (m = s.createElement(
@@ -507,7 +507,7 @@
                 {
                   className: (0, D.Z)(
                     r.SchemaDetailsElement,
-                    r.SchemaDetailsArray
+                    r.SchemaDetailsArray,
                   ),
                 },
                 s.createElement(
@@ -515,7 +515,7 @@
                   {
                     className: (0, D.Z)(
                       r.SchemaDetailsElementBody,
-                      v(e.array.primitive.type_info.type)
+                      v(e.array.primitive.type_info.type),
                     ),
                   },
                   s.createElement("div", { className: r.ElementName }, e.name),
@@ -525,9 +525,9 @@
                     b(e.array.primitive.type_info.type),
                     " [",
                     e.array.max_length,
-                    "]"
-                  )
-                )
+                    "]",
+                  ),
+                ),
               ))
             : e.array && e.array.structure
             ? (m = s.createElement(
@@ -535,7 +535,7 @@
                 {
                   className: (0, D.Z)(
                     r.SchemaDetailsElement,
-                    r.SchemaDetailsArray
+                    r.SchemaDetailsArray,
                   ),
                 },
                 !e.count &&
@@ -547,14 +547,14 @@
                         a(
                           n
                             ? [...t, e.name]
-                            : t.slice(0, l).concat(t.slice(l + 1))
+                            : t.slice(0, l).concat(t.slice(l + 1)),
                         );
                       },
                     },
                     s.createElement(
                       "div",
                       { className: (0, D.Z)(n && r.Collapsed, r.CollapseIcon) },
-                      "▼"
+                      "▼",
                     ),
                     s.createElement(
                       "div",
@@ -562,16 +562,16 @@
                       s.createElement(
                         "div",
                         { className: r.ElementName },
-                        e.name
+                        e.name,
                       ),
                       s.createElement(
                         "div",
                         { className: r.TypeName },
                         "STRUCT [",
                         e.array.max_length,
-                        "]"
-                      )
-                    )
+                        "]",
+                      ),
+                    ),
                   ),
                 e.array.structure.member.map((e) =>
                   s.createElement(
@@ -579,13 +579,13 @@
                     {
                       className: (0, D.Z)(
                         n && r.IndentCollapsed,
-                        r.StructIndent
+                        r.StructIndent,
                       ),
                       key: e.name,
                     },
-                    P(e, t, a)
-                  )
-                )
+                    P(e, t, a),
+                  ),
+                ),
               ))
             : e.primitive &&
               (m = s.createElement(
@@ -593,7 +593,7 @@
                 {
                   className: (0, D.Z)(
                     r.SchemaDetailsElement,
-                    r.SchemaDetailsArray
+                    r.SchemaDetailsArray,
                   ),
                 },
                 s.createElement(
@@ -601,16 +601,16 @@
                   {
                     className: (0, D.Z)(
                       r.SchemaDetailsElementBody,
-                      v(e.primitive.type_info.type)
+                      v(e.primitive.type_info.type),
                     ),
                   },
                   s.createElement("div", { className: r.ElementName }, e.name),
                   s.createElement(
                     "div",
                     { className: r.TypeName },
-                    b(e.primitive.type_info.type)
-                  )
-                )
+                    b(e.primitive.type_info.type),
+                  ),
+                ),
               )),
           m
         );
@@ -629,7 +629,7 @@
                 s.createElement(
                   n.rU,
                   { to: A.SteamMLSchemas("0"), className: r.Back },
-                  "<< BACK"
+                  "<< BACK",
                 ),
                 s.createElement(
                   "div",
@@ -641,20 +641,20 @@
                       "div",
                       { className: r.SchemaDetailsName },
                       "SCHEMA ",
-                      o.name
+                      o.name,
                     ),
                     s.createElement(
                       "div",
                       { className: r.SchemaDetailsSchemaID },
-                      t.schemaid
-                    )
-                  )
+                      t.schemaid,
+                    ),
+                  ),
                 ),
                 s.createElement(
                   "div",
                   { className: r.SchemaDetailsElements },
-                  P(o, m, l)
-                )
+                  P(o, m, l),
+                ),
               ))
             : null;
         }),
@@ -663,8 +663,8 @@
             "div",
             { className: r.SchemaPage },
             s.createElement(N, null),
-            s.createElement(y, null)
-          )
+            s.createElement(y, null),
+          ),
         ),
         g = (e) =>
           s.createElement(
@@ -674,14 +674,14 @@
                 r.SteamMLButton,
                 e.acceptStyle && r.AcceptButton,
                 e.cancelStyle && r.CancelButton,
-                e.disabled && r.Disabled
+                e.disabled && r.Disabled,
               ),
               style: { minWidth: e.minWidth },
               onClick: (t) => {
                 e.disabled || (e.onClick(), t.stopPropagation());
               },
             },
-            s.createElement("div", { className: r.Inner }, e.children)
+            s.createElement("div", { className: r.Inner }, e.children),
           ),
         C = ({ problem: e }) => (
           console.log((0, c.ZN)(e)),
@@ -694,7 +694,7 @@
             s.createElement(
               "div",
               { className: r.ProblemDescription },
-              e.problem_description
+              e.problem_description,
             ),
             s.createElement("div", { className: r.ProblemID }, e.problemid),
             s.createElement(
@@ -704,15 +704,15 @@
                 "div",
                 { className: r.CreatedDate },
                 "Created ",
-                new Date(1e3 * e.create_time).toLocaleDateString()
+                new Date(1e3 * e.create_time).toLocaleDateString(),
               ),
               s.createElement(
                 "div",
                 { className: r.UpdatedDate },
                 "Last modified ",
-                new Date(1e3 * e.update_time).toLocaleDateString()
-              )
-            )
+                new Date(1e3 * e.update_time).toLocaleDateString(),
+              ),
+            ),
           )
         ),
         I = (e) => {
@@ -736,7 +736,7 @@
               className: (0, D.Z)(
                 r.AddNewProblem,
                 !a && r.IsPrompt,
-                a && r.IsHeader
+                a && r.IsHeader,
               ),
               onClick: () => m(!0),
             },
@@ -750,8 +750,8 @@
               s.createElement(
                 "div",
                 { className: r.AddProblemHeader },
-                "Add New Problem" + (a ? "" : "?")
-              )
+                "Add New Problem" + (a ? "" : "?"),
+              ),
             ),
             s.createElement(
               "div",
@@ -765,7 +765,7 @@
                   type: "text",
                   value: l,
                   onChange: (e) => n(e.target.value),
-                })
+                }),
               ),
               s.createElement(
                 "div",
@@ -776,7 +776,7 @@
                   type: "text",
                   value: i,
                   onChange: (e) => c(e.target.value),
-                })
+                }),
               ),
               h &&
                 s.createElement(
@@ -785,7 +785,7 @@
                   s.createElement(
                     "div",
                     { className: r.SchemaSelectListTitle },
-                    "Select Schemas to Include"
+                    "Select Schemas to Include",
                   ),
                   s.createElement(
                     "div",
@@ -801,13 +801,13 @@
                             p(
                               t
                                 ? o.filter((t) => t != e.schemaid)
-                                : o.concat(e.schemaid)
+                                : o.concat(e.schemaid),
                             ),
                         },
-                        e.name
+                        e.name,
                       );
-                    })
-                  )
+                    }),
+                  ),
                 ),
               s.createElement(
                 "div",
@@ -820,15 +820,15 @@
                     disabled: !_,
                     onClick: () => _ && void u.Get().CreateProblem(l, i, o),
                   },
-                  "Create"
+                  "Create",
                 ),
                 s.createElement(
                   g,
                   { cancelStyle: !0, minWidth: 100, onClick: () => m(!1) },
-                  "Cancel"
-                )
-              )
-            )
+                  "Cancel",
+                ),
+              ),
+            ),
           );
         },
         T = (0, E.Pi)(({ schemaid: e }) => {
@@ -841,7 +841,7 @@
           return s.createElement(
             "div",
             { className: r.SchemaElement },
-            a && s.createElement("div", { className: r.SchemaName }, a.name)
+            a && s.createElement("div", { className: r.SchemaName }, a.name),
           );
         }),
         f = (0, E.Pi)(({ problem: e }) => {
@@ -897,7 +897,7 @@
               s.createElement(
                 n.rU,
                 { to: A.SteamMLProblems(0), className: r.BackButton },
-                "<< BACK "
+                "<< BACK ",
               ),
               s.createElement(
                 "div",
@@ -908,7 +908,7 @@
                     className: (0, D.Z)(r.ProblemName, a && r.Hidden),
                     onClick: (e) => (w(), B(), void m(!0)),
                   },
-                  e.name
+                  e.name,
                 ),
                 s.createElement(
                   "form",
@@ -929,7 +929,7 @@
                     onBlur: () => f(),
                     onFocus: (e) => e.target.select(),
                     onChange: (e) => c(e.target.value),
-                  })
+                  }),
                 ),
                 s.createElement(
                   "div",
@@ -937,7 +937,7 @@
                     className: (0, D.Z)(r.ProblemDescription, o && r.Hidden),
                     onClick: (e) => (f(), B(), void d(!0)),
                   },
-                  e.problem_description
+                  e.problem_description,
                 ),
                 s.createElement(
                   "form",
@@ -958,7 +958,7 @@
                     onBlur: () => w(),
                     onFocus: (e) => e.target.select(),
                     onChange: (e) => S(e.target.value),
-                  })
+                  }),
                 ),
                 s.createElement("div", { className: r.ProblemID }, e.problemid),
                 s.createElement(
@@ -968,15 +968,15 @@
                     "div",
                     { className: r.CreatedDate },
                     "Created ",
-                    new Date(1e3 * e.create_time).toLocaleDateString()
+                    new Date(1e3 * e.create_time).toLocaleDateString(),
                   ),
                   s.createElement(
                     "div",
                     { className: r.UpdatedDate },
                     "Last modified ",
-                    new Date(1e3 * e.update_time).toLocaleDateString()
-                  )
-                )
+                    new Date(1e3 * e.update_time).toLocaleDateString(),
+                  ),
+                ),
               ),
               s.createElement(
                 "div",
@@ -984,7 +984,7 @@
                 s.createElement(
                   "div",
                   { className: r.SchemaListHeader },
-                  "Schemas:"
+                  "Schemas:",
                 ),
                 s.createElement(
                   "div",
@@ -992,21 +992,21 @@
                     className: r.SchemaListEdit,
                     onClick: () => (f(), w(), void _(!0)),
                   },
-                  "Edit"
+                  "Edit",
                 ),
                 s.createElement(
                   "div",
                   { className: (0, D.Z)(r.SchemaList, h && r.Hidden) },
                   e.schemaid.map((e) =>
-                    s.createElement(T, { key: e, schemaid: e })
-                  )
+                    s.createElement(T, { key: e, schemaid: e }),
+                  ),
                 ),
                 s.createElement(
                   "div",
                   {
                     className: (0, D.Z)(
                       r.SchemaSelectList,
-                      (!h || !C) && r.Hidden
+                      (!h || !C) && r.Hidden,
                     ),
                   },
                   C &&
@@ -1021,12 +1021,12 @@
                             N(
                               t
                                 ? E.filter((t) => t != e.schemaid)
-                                : E.concat(e.schemaid)
+                                : E.concat(e.schemaid),
                             ),
                         },
-                        e.name
+                        e.name,
                       );
-                    })
+                    }),
                 ),
                 h &&
                   s.createElement(
@@ -1044,13 +1044,13 @@
                           void _(!1)
                         ),
                       },
-                      "Accept"
+                      "Accept",
                     ),
                     s.createElement(
                       g,
                       { minWidth: 100, cancelStyle: !0, onClick: () => B() },
-                      "Cancel"
-                    )
+                      "Cancel",
+                    ),
                   ),
                 s.createElement(
                   "div",
@@ -1061,9 +1061,9 @@
                       void b.push(A.SteamMLProblems(0))
                     ),
                   },
-                  "Delete Problem"
-                )
-              )
+                  "Delete Problem",
+                ),
+              ),
             )
           );
         }),
@@ -1084,23 +1084,23 @@
                   "div",
                   { className: r.ProblemListContainer },
                   m.map((e) =>
-                    s.createElement(C, { key: e.problemid, problem: e })
+                    s.createElement(C, { key: e.problemid, problem: e }),
                   ),
                   0 == m.length &&
                     s.createElement(
                       "div",
                       { className: r.NoProblems },
-                      "No Existing Problems"
+                      "No Existing Problems",
                     ),
-                  s.createElement(I, null)
+                  s.createElement(I, null),
                 ),
               !a &&
                 l &&
                 s.createElement(
                   "div",
                   { className: r.ProblemDetails },
-                  s.createElement(f, { problem: l })
-                )
+                  s.createElement(f, { problem: l }),
+                ),
             )
           );
         }),
@@ -1141,10 +1141,10 @@
                 s.createElement(
                   i.AW,
                   { exact: !0, path: "/" },
-                  s.createElement(i.l_, { to: A.SteamMLSchemas() })
-                )
-              )
-            )
+                  s.createElement(i.l_, { to: A.SteamMLSchemas() }),
+                ),
+              ),
+            ),
           );
         }
       }
@@ -1168,7 +1168,7 @@
                 to: A.SteamMLSchemas(),
                 className: (0, D.Z)(r.HeaderOption, a && r.Selected),
               },
-              "SCHEMAS"
+              "SCHEMAS",
             ),
             s.createElement(
               n.rU,
@@ -1176,7 +1176,7 @@
                 to: A.SteamMLModels(),
                 className: (0, D.Z)(r.HeaderOption, m && r.Selected),
               },
-              "MODELS"
+              "MODELS",
             ),
             s.createElement(
               n.rU,
@@ -1184,8 +1184,8 @@
                 to: A.SteamMLProblems(),
                 className: (0, D.Z)(r.HeaderOption, l && r.Selected),
               },
-              "PROBLEMS"
-            )
+              "PROBLEMS",
+            ),
           );
         },
         k = (e) => s.createElement("div", null, "MODEL PAGE");

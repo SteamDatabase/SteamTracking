@@ -197,10 +197,10 @@
             o = this.props.updateRate;
           this.m_Context = this.m_elCanvas.getContext("2d");
           let s = Math.floor(
-              this.m_elCanvas.clientWidth / this.props.reductionFactor
+              this.m_elCanvas.clientWidth / this.props.reductionFactor,
             ),
             a = Math.floor(
-              this.m_elCanvas.clientHeight / this.props.reductionFactor
+              this.m_elCanvas.clientHeight / this.props.reductionFactor,
             );
           (this.m_elCanvas.width = s),
             (this.m_elCanvas.height = a),
@@ -251,7 +251,7 @@
               (console.warn(
                 "MultiSourceImage created with no image src",
                 this.props,
-                this.state.nImage
+                this.state.nImage,
               ),
               (e =
                 "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=")),
@@ -266,7 +266,7 @@
             this.props.onIncrementalError(
               e,
               this.props.rgSources[this.state.nImage],
-              this.state.nImage
+              this.state.nImage,
             );
           let t = this.state.nImage + 1;
           t >= this.props.rgSources.length &&
@@ -288,7 +288,7 @@
             "img",
             Object.assign({ src: l, ref: this.m_refImage }, n, {
               onError: this.OnImageError,
-            })
+            }),
           );
         }
       }
@@ -361,10 +361,10 @@
             {
               logoPosition: Object.assign(
                 Object.assign({}, this.GetLogoPosition()),
-                { pinnedPosition: e }
+                { pinnedPosition: e },
               ),
             },
-            this.PostPositionChangeCallback
+            this.PostPositionChangeCallback,
           );
         }
         SetDimensions(e, t) {
@@ -372,10 +372,10 @@
             {
               logoPosition: Object.assign(
                 Object.assign({}, this.GetLogoPosition()),
-                { nWidthPct: e, nHeightPct: t }
+                { nWidthPct: e, nHeightPct: t },
               ),
             },
-            this.PostPositionChangeCallback
+            this.PostPositionChangeCallback,
           );
         }
         OnPositionChanged(e) {
@@ -392,8 +392,8 @@
               { value: { bFullscreen: this.props.bFullscreen } },
               a.createElement(
                 k,
-                Object.assign({ ref: this.m_refTopCapsule }, this.props)
-              )
+                Object.assign({ ref: this.m_refTopCapsule }, this.props),
+              ),
             );
           const e = this.props,
             { children: t, logoPosition: o, editMode: i } = e,
@@ -429,8 +429,8 @@
                 onClick: () => this.SetPinnedPosition("BottomCenter"),
                 title: "Pin to Bottom Center",
               }),
-              t
-            )
+              t,
+            ),
           );
         }
       }
@@ -444,7 +444,7 @@
             (this.m_refLogoImage = a.createRef()),
             (0, h.X)(
               !e.editMode || e.rgLogoImages.length <= 1,
-              "Can't use multiple logo images in edit mode"
+              "Can't use multiple logo images in edit mode",
             ),
             (this.state = {
               bFallbackHeader: 1 == e.rgHeaderImages.length,
@@ -519,7 +519,7 @@
               s,
               !this.state.bHasHeaderImage && P().NoArt,
               (!this.props.hasHeroImage || l) && P().FallbackArt,
-              !d && i
+              !d && i,
             ),
             m = { "--header-height": null == n ? void 0 : n + "px" };
           return a.createElement(
@@ -558,17 +558,17 @@
                     ref: this.m_refLogoImage,
                     className: (0, g.Z)(
                       P().TitleLogo,
-                      this.state.bLogoLoaded && P().Loaded
+                      this.state.bLogoLoaded && P().Loaded,
                     ),
                     rgSources: e,
                     onLoad: this.OnLogoLoad,
                     onIncrementalError: this.OnIncrementalLogoError,
                     onError: this.OnLogoError,
-                  })
+                  }),
                 ),
               this.props.children,
-              a.createElement("div", { className: P().TopGradient })
-            )
+              a.createElement("div", { className: P().TopGradient }),
+            ),
           );
         }
       };
@@ -646,7 +646,7 @@
             !this.props.rgBlurImages ||
               this.props.rgBlurImages.length ==
                 this.props.rgHeaderImages.length,
-            "Blur image count doesn't match header image count"
+            "Blur image count doesn't match header image count",
           );
           let e = null;
           return (
@@ -661,7 +661,7 @@
                   className: (0, g.Z)(
                     P().ImgSrc,
                     P().ImgBlur,
-                    P().ImgBlurBackdrop
+                    P().ImgBlurBackdrop,
                   ),
                   onError: this.OnBlurImageFailed,
                 }),
@@ -672,7 +672,7 @@
                   className: (0, g.Z)(
                     P().ImgSrc,
                     P().ImgBlur,
-                    P().ImgBlurBackdrop
+                    P().ImgBlurBackdrop,
                   ),
                   elementRef: this.m_refCanvasBlurImage,
                   updateRate: 0,
@@ -680,7 +680,7 @@
                   height: 62,
                   reductionFactor: 10,
                   blurAmount: 3,
-                })
+                }),
             )),
             a.createElement(v.Consumer, null, (t) =>
               a.createElement(
@@ -722,11 +722,11 @@
                         onLoad: this.OnHeaderLoad,
                         onIncrementalError: this.OnIncrementalError,
                         onError: this.props.onError,
-                      })
+                      }),
                   ),
-                  e
-                )
-              )
+                  e,
+                ),
+              ),
             )
           );
         }
@@ -770,9 +770,9 @@
                   a.createElement(
                     "div",
                     { className: P().TitleImageContainer },
-                    s
-                  )
-                )
+                    s,
+                  ),
+                ),
               ),
             e.editMode &&
               a.createElement(
@@ -785,9 +785,9 @@
                   heightPct: t.nHeightPct,
                   fnOnPositionChanged: i,
                 },
-                s
-              )
-          )
+                s,
+              ),
+          ),
         );
       }
       function y(e, t, o) {
@@ -892,12 +892,12 @@
             this.m_listeners.AddEventListener(
               this.m_elLinkRegionBox.ownerDocument.defaultView,
               "mousemove",
-              this.m_fnMouseMove
+              this.m_fnMouseMove,
             ),
             this.m_listeners.AddEventListener(
               this.m_elLinkRegionBox.ownerDocument.defaultView,
               "mouseup",
-              this.m_fnMouseUp
+              this.m_fnMouseUp,
             ),
             e.preventDefault(),
             e.stopPropagation();
@@ -911,7 +911,7 @@
           } = y(
             this.m_pinType,
             this.state.curWidthPct,
-            this.state.curHeightPct
+            this.state.curHeightPct,
           );
           this.setState({
             curBottomPosPct: e,
@@ -1116,7 +1116,7 @@
               curHeightPct:
                 100 - this.state.curBottomPosPct - this.state.curTopPosPct,
             },
-            this.OnResizeComplete
+            this.OnResizeComplete,
           ),
             this.setState({ EdgeDown: void 0 }),
             this.m_listeners.Unregister();
@@ -1140,7 +1140,7 @@
               P().BoxSizerDragBox,
               this.state.EdgeDown &&
                 (0, g.Z)(P().EdgeDown, P()[this.state.EdgeDown]),
-              P()[this.props.pinType]
+              P()[this.props.pinType],
             );
           return a.createElement(
             "div",
@@ -1192,8 +1192,8 @@
                 a.createElement(
                   "div",
                   { className: P().TitleImageContainer },
-                  this.props.children
-                )
+                  this.props.children,
+                ),
               ),
               a.createElement("div", {
                 className: `${P().BoxSizerEdge} ${P().Right}`,
@@ -1222,8 +1222,8 @@
                   this.OnMouseDown(e, T.bottomright);
                 },
                 draggable: !1,
-              })
-            )
+              }),
+            ),
           );
         }
       }
@@ -1267,8 +1267,8 @@
                 a.createElement("stop", { stopColor: "#fff", offset: "40%" }),
                 a.createElement("stop", { stopColor: "#eee", offset: "60%" }),
                 a.createElement("stop", { stopColor: "#ddd", offset: "80%" }),
-                a.createElement("stop", { stopColor: "#ccc", offset: "100%" })
-              )
+                a.createElement("stop", { stopColor: "#ccc", offset: "100%" }),
+              ),
             ),
             a.createElement(
               "text",
@@ -1280,8 +1280,8 @@
                 fontWeight: "200",
                 fill: "url(#gradient)",
               },
-              t
-            )
+              t,
+            ),
           )
         );
       };
@@ -1297,10 +1297,10 @@
             a.createElement(
               "div",
               { className: P().TextNameSpace },
-              !!t && a.createElement(x, { title: t })
+              !!t && a.createElement(x, { title: t }),
             ),
-            a.createElement("div", { className: P().Features }, o)
-          )
+            a.createElement("div", { className: P().Features }, o),
+          ),
         );
       }
       var N = o(50265);
@@ -1369,7 +1369,7 @@
                   a.createElement(
                     "div",
                     { className: U().MenuButton },
-                    a.createElement(G.Zrf, null)
+                    a.createElement(G.Zrf, null),
                   ),
                   a.createElement(
                     "div",
@@ -1378,20 +1378,20 @@
                     a.createElement(
                       "div",
                       { className: U().Arrow },
-                      a.createElement(G.V7n, { angle: 180 })
-                    )
-                  )
-                )
-              )
-            )
-          )
+                      a.createElement(G.V7n, { angle: 180 }),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
         );
       }
       function z() {
         return a.createElement(
           "div",
           { className: (0, g.Z)(U().StatusAndStats) },
-          a.createElement(W, null)
+          a.createElement(W, null),
         );
       }
       function W() {
@@ -1407,14 +1407,14 @@
               a.createElement(
                 "div",
                 { className: U().LastPlayedLabel },
-                "LAST PLAYED"
+                "LAST PLAYED",
               ),
               a.createElement(
                 "div",
                 { className: U().LastPlayedInfo },
-                "Mar 24"
-              )
-            )
+                "Mar 24",
+              ),
+            ),
           ),
           a.createElement(
             "div",
@@ -1426,14 +1426,14 @@
               a.createElement(
                 "div",
                 { className: U().PlaytimeLabel },
-                "PLAY TIME"
+                "PLAY TIME",
               ),
               a.createElement(
                 "div",
                 { className: U().PlaytimeInfo },
-                "37 hours"
-              )
-            )
+                "37 hours",
+              ),
+            ),
           ),
           a.createElement(
             "div",
@@ -1445,7 +1445,7 @@
               a.createElement(
                 "div",
                 { className: U().AchievementLabel },
-                "ACHIEVEMENTS"
+                "ACHIEVEMENTS",
               ),
               a.createElement(
                 "div",
@@ -1453,12 +1453,12 @@
                 a.createElement(
                   "div",
                   { className: U().AchievementCountLabel },
-                  "30/47"
+                  "30/47",
                 ),
-                a.createElement(Z, { progressPct: 3e3 / 47 })
-              )
-            )
-          )
+                a.createElement(Z, { progressPct: 3e3 / 47 }),
+              ),
+            ),
+          ),
         );
       }
       class Z extends a.Component {
@@ -1469,7 +1469,7 @@
             a.createElement("div", {
               className: U().DetailsProgressBar,
               style: { width: this.props.progressPct + "%" },
-            })
+            }),
           );
         }
       }
@@ -1483,9 +1483,9 @@
             a.createElement(
               "div",
               { className: (0, g.Z)(U().PlayButton, U().Green) },
-              a.createElement("div", { className: U().ButtonText }, "PLAY")
-            )
-          )
+              a.createElement("div", { className: U().ButtonText }, "PLAY"),
+            ),
+          ),
         );
       }
       var X = o(64122),
@@ -1510,20 +1510,20 @@
                     key: t,
                     className: (0, g.Z)(
                       $().GameListEntry,
-                      o ? $().Selected : $().Uninstalled
+                      o ? $().Selected : $().Uninstalled,
                     ),
                     ref: o && this.OnHighlightRef,
                   },
-                  t
+                  t,
                 );
-              })
+              }),
             )
           );
         }
       }
       var J = o(14826),
         j = o(32765),
-        K = o(69338),
+        K = o(7770),
         Q = o(22444);
       function q(e, t) {
         const o = (0, j.kQ)("editorconfig", t);
@@ -1561,15 +1561,15 @@
                       o.append("sessionid", j.De.SESSIONID),
                       o.append(
                         "app[assets][library_logo][logo_position][pinned_position]",
-                        t.pinnedPosition
+                        t.pinnedPosition,
                       ),
                       o.append(
                         "app[assets][library_logo][logo_position][width_pct]",
-                        "" + t.nWidthPct
+                        "" + t.nWidthPct,
                       ),
                       o.append(
                         "app[assets][library_logo][logo_position][height_pct]",
-                        "" + t.nHeightPct
+                        "" + t.nHeightPct,
                       );
                     yield n().post(e.GetSaveURL(), o);
                     this.setState({
@@ -1582,8 +1582,17 @@
                       alert("There was a problem saving changes"),
                       this.setState({ saving: !1 });
                   }
-                } else window.opener && window.opener.postMessage(Object.assign({ appid: e.GetAppID() }, (0, N.ZN)(e.GetLogoPosition())), "*"), this.OnCancel();
-              })
+                } else
+                  window.opener &&
+                    window.opener.postMessage(
+                      Object.assign(
+                        { appid: e.GetAppID() },
+                        (0, N.ZN)(e.GetLogoPosition()),
+                      ),
+                      "*",
+                    ),
+                    this.OnCancel();
+              }),
             );
           });
         }
@@ -1604,7 +1613,7 @@
               {
                 className: (0, g.Z)(
                   M().LogoEditorPopup,
-                  this.state.saving && M().Saving
+                  this.state.saving && M().Saving,
                 ),
               },
               a.createElement(
@@ -1615,10 +1624,10 @@
                   {
                     className: (0, g.Z)(
                       M().LogoEditorSavedMessage,
-                      this.state.saved && M().Saved
+                      this.state.saved && M().Saved,
                     ),
                   },
-                  (0, J.Xx)("#StoreAdmin_LibraryPlacementTool_ChangesSaved")
+                  (0, J.Xx)("#StoreAdmin_LibraryPlacementTool_ChangesSaved"),
                 ),
                 a.createElement(
                   "div",
@@ -1626,16 +1635,16 @@
                   a.createElement(
                     Q.KM,
                     { onClick: this.OnOK, className: M().LogoEditorButton },
-                    (0, J.Xx)("#Button_Save")
+                    (0, J.Xx)("#Button_Save"),
                   ),
                   a.createElement(
                     Q.zx,
                     { onClick: this.OnCancel, className: M().LogoEditorButton },
                     this.state.unsavedChanges
                       ? (0, J.Xx)("#Button_Cancel")
-                      : (0, J.Xx)("#Button_Close")
-                  )
-                )
+                      : (0, J.Xx)("#Button_Close"),
+                  ),
+                ),
               ),
               a.createElement(
                 "div",
@@ -1643,15 +1652,15 @@
                 a.createElement(K.V, {
                   size: "xlarge",
                   className: M().SavingThrobber,
-                })
+                }),
               ),
               a.createElement(
                 te,
                 Object.assign({}, this.props, {
                   fnOnPositionChanged: this.OnPositionChanged,
-                })
-              )
-            )
+                }),
+              ),
+            ),
           );
         }
       }
@@ -1676,7 +1685,7 @@
             a.createElement(
               "div",
               { className: M().LogoEditorGameListContainer },
-              a.createElement(V, { highlightedName: e.GetAppName() })
+              a.createElement(V, { highlightedName: e.GetAppName() }),
             ),
             a.createElement("div", { className: M().ListDivider }),
             a.createElement(
@@ -1699,8 +1708,8 @@
                   },
                   a.createElement(w, {
                     title: e.GetLogoURL() ? "" : e.GetAppName(),
-                  })
-                )
+                  }),
+                ),
               ),
               a.createElement(F, null),
               a.createElement(
@@ -1710,9 +1719,9 @@
                 a.createElement("br", null),
                 a.createElement("br", null),
                 a.createElement("br", null),
-                a.createElement("br", null)
-              )
-            )
+                a.createElement("br", null),
+              ),
+            ),
           );
         }
       }
@@ -1736,14 +1745,14 @@
             type: "hidden",
             name: "app[assets][library_logo][logo_position][height_pct]",
             value: t.nHeightPct,
-          })
+          }),
         );
       });
     },
     8326: (e) => {
       "use strict";
       e.exports = JSON.parse(
-        '["A Hat in Time","A Plague Tale: Innocence","ARK: Survival Evolved","Arma 3","Assassin\'s Creed® Odyssey","Black Desert Online","Borderlands 2","Borderlands Game of the Year","Borderlands: The Pre-Sequel","Cities: Skylines","Conan Exiles","Counter-Strike: Global Offensive","Crusader Kings II","DARK SOULS™ III","Dead by Daylight","Devil May Cry 5","Divinity: Original Sin 2 - Definitive Edition","Don\'t Starve Together","Dota 2","Dying Light","Euro Truck Simulator 2","FINAL FANTASY XIV Online","Factorio","Fallout 4","Far Cry® 5","Farming Simulator 19","Football Manager 2019","Forager","Grand Theft Auto V","Grim Dawn","Hearts of Iron IV","House Flipper","Human: Fall Flat","Imperator: Rome","MONSTER HUNTER: WORLD","MORDHAU","Mortal Kombat 11","NBA 2K19","No Man\'s Sky","Outward","PLAYERUNKNOWN\'S BATTLEGROUNDS","Paladins®","Path of Exile","Planet Coaster","RAGE 2","RESIDENT EVIL 2 / BIOHAZARD RE:2","RimWorld","Risk of Rain 2","Rocket League®","Rust","SMITE®","Sekiro™: Shadows Die Twice","Sid Meier’s Civilization® VI","Stardew Valley","Stellaris","Surviving Mars","Team Fortress 2","The Elder Scrolls V: Skyrim Special Edition","The Elder Scrolls® Online","The Forest","The Witcher® 3: Wild Hunt","Tom Clancy\'s Ghost Recon® Wildlands","Tom Clancy\'s Rainbow Six® Siege","Total War: THREE KINGDOMS","Total War: WARHAMMER","Total War: WARHAMMER II","Totally Accurate Battle Simulator","Tropico 6","UBOAT","War Thunder","Warframe","Watch_Dogs® 2","World of Warships","XCOM® 2","Yu-Gi-Oh! Duel Links"]'
+        '["A Hat in Time","A Plague Tale: Innocence","ARK: Survival Evolved","Arma 3","Assassin\'s Creed® Odyssey","Black Desert Online","Borderlands 2","Borderlands Game of the Year","Borderlands: The Pre-Sequel","Cities: Skylines","Conan Exiles","Counter-Strike: Global Offensive","Crusader Kings II","DARK SOULS™ III","Dead by Daylight","Devil May Cry 5","Divinity: Original Sin 2 - Definitive Edition","Don\'t Starve Together","Dota 2","Dying Light","Euro Truck Simulator 2","FINAL FANTASY XIV Online","Factorio","Fallout 4","Far Cry® 5","Farming Simulator 19","Football Manager 2019","Forager","Grand Theft Auto V","Grim Dawn","Hearts of Iron IV","House Flipper","Human: Fall Flat","Imperator: Rome","MONSTER HUNTER: WORLD","MORDHAU","Mortal Kombat 11","NBA 2K19","No Man\'s Sky","Outward","PLAYERUNKNOWN\'S BATTLEGROUNDS","Paladins®","Path of Exile","Planet Coaster","RAGE 2","RESIDENT EVIL 2 / BIOHAZARD RE:2","RimWorld","Risk of Rain 2","Rocket League®","Rust","SMITE®","Sekiro™: Shadows Die Twice","Sid Meier’s Civilization® VI","Stardew Valley","Stellaris","Surviving Mars","Team Fortress 2","The Elder Scrolls V: Skyrim Special Edition","The Elder Scrolls® Online","The Forest","The Witcher® 3: Wild Hunt","Tom Clancy\'s Ghost Recon® Wildlands","Tom Clancy\'s Rainbow Six® Siege","Total War: THREE KINGDOMS","Total War: WARHAMMER","Total War: WARHAMMER II","Totally Accurate Battle Simulator","Tropico 6","UBOAT","War Thunder","Warframe","Watch_Dogs® 2","World of Warships","XCOM® 2","Yu-Gi-Oh! Duel Links"]',
       );
     },
   },

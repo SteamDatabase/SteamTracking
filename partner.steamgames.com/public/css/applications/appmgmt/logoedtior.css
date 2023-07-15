@@ -194,7 +194,9 @@ div.HighPerfMode .sharedappdetailsheader_HeaderBackgroundImage_1sarA {
 }
 .sharedappdetailsheader_HeaderBackgroundImage_1sarA.sharedappdetailsheader_FullscreenEnterActive_2FlTp,
 .sharedappdetailsheader_HeaderBackgroundImage_1sarA.sharedappdetailsheader_FullscreenExitActive_1yfFC {
-  transition: opacity 800ms ease, transform 800ms ease;
+  transition:
+    opacity 800ms ease,
+    transform 800ms ease;
 }
 .sharedappdetailsheader_ImgContainer_3VFZB {
   width: 100%;
@@ -636,12 +638,14 @@ div.HighPerfMode .sharedappdetailsheader_HeaderBackgroundImage_1sarA {
 }
 .sharedappdetailsheader_TitleImageContainer_3H5_m.sharedappdetailsheader_FullscreenEnterActive_2FlTp,
 .sharedappdetailsheader_TitleSection_1P_tv.sharedappdetailsheader_FullscreenEnterActive_2FlTp {
-  transition: opacity 266.6666666667ms ease-out,
+  transition:
+    opacity 266.6666666667ms ease-out,
     transform 266.6666666667ms cubic-bezier(0.6, 0, 1, 1);
 }
 .sharedappdetailsheader_TitleImageContainer_3H5_m.sharedappdetailsheader_FullscreenExitActive_1yfFC,
 .sharedappdetailsheader_TitleSection_1P_tv.sharedappdetailsheader_FullscreenExitActive_1yfFC {
-  transition: opacity 800ms cubic-bezier(0, 0, 0.1, 1),
+  transition:
+    opacity 800ms cubic-bezier(0, 0, 0.1, 1),
     transform 800ms cubic-bezier(0, 0, 0.1, 1);
 }
 .sharedappdetailsheader_SVGTitle_2w_Zq {
@@ -650,7 +654,9 @@ div.HighPerfMode .sharedappdetailsheader_HeaderBackgroundImage_1sarA {
   overflow: visible;
 }
 .sharedappdetailsheader_SVGTitle_2w_Zq text {
-  text-shadow: 1px 1px 10px #000, 0px 0px 22px rgba(0, 0, 0, 0.5333333333);
+  text-shadow:
+    1px 1px 10px #000,
+    0px 0px 22px rgba(0, 0, 0, 0.5333333333);
   letter-spacing: 1px;
 }
 .BasicUI .sharedappdetailsheader_SVGTitle_2w_Zq text {
@@ -1240,7 +1246,9 @@ html {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  box-shadow: 0 0px 0px 0px #000, 0 0px 0px 0px #000;
+  box-shadow:
+    0 0px 0px 0px #000,
+    0 0px 0px 0px #000;
   padding: 2px 5px 2px 23px;
   color: #fff;
   user-select: none;
@@ -1255,7 +1263,8 @@ html {
     rgba(53, 55, 63, 0) 110%
   );
   border-right: 0px solid #202127;
-  box-shadow: 0 0px 2px 0px rgba(0, 0, 0, 0.3333333333),
+  box-shadow:
+    0 0px 2px 0px rgba(0, 0, 0, 0.3333333333),
     0 0px 16px 0px rgba(0, 0, 0, 0.2666666667);
 }
 .fakegamelist_GameListEntry_14lr0.fakegamelist_Selected_3QI8h.fakegamelist_Updating_yTNHk {

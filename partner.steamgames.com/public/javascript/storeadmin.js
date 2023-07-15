@@ -275,6 +275,42 @@ function PopulateClusterViaAppIDs( elemAppIDTextArea, elIncludedList, clusterNam
 
 }
 
+// Opens a dialog that outputs all of the appids/packageids/bindleids for a given cluster
+function ExportClusterItemsList( strClusterName )
+{
+	const $elCluster = $J( '#cluster_' + strClusterName + '_included' );
+	const $rgChildren = $elCluster.children( 'div' );
+
+	let rgAppIDs = [];
+	let rgBundles = [];
+	let rgPackages = [];
+	$rgChildren.each( function( id, elItem ) {
+		const appID = $J( elItem ).data( 'appid' );
+		if ( appID )
+			rgAppIDs.push( appID );
+
+		const bundleID = $J( elItem ).data( 'bundleid' );
+		if ( bundleID )
+			rgBundles.push( bundleID );
+
+		const packageID = $J( elItem ).data( 'packageid' );
+		if ( packageID )
+			rgPackages.push( packageID );
+	} );
+
+	let outputHTML = '';
+	if ( rgAppIDs.length > 0 )
+		outputHTML += '<div class="formrow">AppIDs:</div><textarea rows="10" readonly>' + rgAppIDs.join( '\n' ) + '</textarea>';
+
+	if ( rgPackages.length > 0 )
+		outputHTML += '<div class="formrow">PackageIDs:</div><textarea rows="10" readonly>' + rgPackages.join( '\n' ) + '</textarea>';
+
+	if ( rgBundles.length > 0 )
+		outputHTML += '<div class="formrow">BundleIDs:</div><textarea rows="10" readonly>' + rgBundles.join( '\n' ) + '</textarea>';
+
+	ShowAlertDialog( 'Export ' + strClusterName + ' Cluster', outputHTML );
+}
+
 function PopulateClusterLists( rgIncludedItems, clusterName, elemAvailableList, elemIncludedList, clusterType )
 {
 	var elemAllApps = $(elemAvailableList);
@@ -306,19 +342,19 @@ function PopulateClusterLists( rgIncludedItems, clusterName, elemAvailableList, 
 		var rgItem = rgIncludedItems[i];
 		if ( rgItem.itemid )
 		{
-			var opt = new Element('div', {id: clusterName + '_clusteritem_' + rgItem.itemid, 'class': g_rgReferencedItems[rgItem.itemid]['cssClass'] } );
+			var opt = new Element('div', {id: clusterName + '_clusteritem_' + rgItem.itemid, 'class': g_rgReferencedItems[rgItem.itemid]['cssClass'], 'data-appid': rgItem.appid ?? 0 } );
 			opt.innerHTML = g_rgReferencedItems[rgItem.itemid]['name'];
 			elemIncludedApps.appendChild(opt);
 		} 
 		else if ( rgItem.packageid )
 		{
-			var opt = new Element('div', {id: clusterName + '_clusterpackage_' + rgItem.packageid, 'class': 'app_Package' } );
+			var opt = new Element('div', {id: clusterName + '_clusterpackage_' + rgItem.packageid, 'class': 'app_Package', 'data-packageid': rgItem.packageid ?? 0  } );
 			opt.innerHTML = g_rgReferencedPackages[rgItem.packageid];
 			elemIncludedApps.appendChild(opt);
 		}
 		else if ( rgItem.bundleid )
 		{
-			var opt = new Element('div', {id: clusterName + '_clusterbundle_' + rgItem.bundleid, 'class': 'app_Package' } );
+			var opt = new Element('div', {id: clusterName + '_clusterbundle_' + rgItem.bundleid, 'class': 'app_Package','data-bundleid': rgItem.bundleid ?? 0 } );
 			opt.innerHTML = g_rgReferencedBundles[rgItem.bundleid];
 			elemIncludedApps.appendChild(opt);
 		}

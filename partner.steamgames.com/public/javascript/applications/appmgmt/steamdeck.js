@@ -72,9 +72,9 @@
             return { strErrorMsg: r.err_msg, errorCode: r.success };
           if ("string" == typeof r && r.length > 1024)
             console.groupCollapsed(
-              "GetMsgAndErrorCodeFromResponse cannot parse: "
+              "GetMsgAndErrorCodeFromResponse cannot parse: ",
             ),
-              console.error(r),
+              console.warn(r),
               console.groupEnd();
           else {
             if ("object" == typeof r && r instanceof n.gA)
@@ -82,7 +82,7 @@
                 strErrorMsg: "" + r.GetEResult(),
                 errorCode: r.GetEResult(),
               };
-            console.error("GetMsgAndErrorCodeFromResponse cannot parse: ", r);
+            console.warn("GetMsgAndErrorCodeFromResponse cannot parse: ", r);
           }
         }
         return "object" == typeof r && "status" in r

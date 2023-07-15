@@ -75,14 +75,18 @@
   opacity: 1;
   object-fit: contain;
 }
-.sharedappdetailsheader_TopCapsule_10kdV.sharedappdetailsheader_FullscreenEnterStart_16mex:not(.sharedappdetailsheader_FullscreenEnterActive_AGgaM),
+.sharedappdetailsheader_TopCapsule_10kdV.sharedappdetailsheader_FullscreenEnterStart_16mex:not(
+    .sharedappdetailsheader_FullscreenEnterActive_AGgaM
+  ),
 .sharedappdetailsheader_TopCapsule_10kdV.sharedappdetailsheader_FullscreenExitActive_2vwQM,
 .sharedappdetailsheader_TopCapsule_10kdV.sharedappdetailsheader_FullscreenExitDone_2pkrZ {
   height: var(--header-height);
 }
 .sharedappdetailsheader_TopCapsule_10kdV.sharedappdetailsheader_FullscreenEnterActive_AGgaM,
 .sharedappdetailsheader_TopCapsule_10kdV.sharedappdetailsheader_FullscreenEnterDone_2f4iT,
-.sharedappdetailsheader_TopCapsule_10kdV.sharedappdetailsheader_FullscreenExitStart_2cQPf:not(.sharedappdetailsheader_FullscreenExitActive_2vwQM) {
+.sharedappdetailsheader_TopCapsule_10kdV.sharedappdetailsheader_FullscreenExitStart_2cQPf:not(
+    .sharedappdetailsheader_FullscreenExitActive_2vwQM
+  ) {
   height: calc(100vh - 40px);
 }
 .sharedappdetailsheader_TopCapsule_10kdV.sharedappdetailsheader_FullscreenEnterActive_AGgaM,
@@ -177,19 +181,25 @@ div.HighPerfMode .sharedappdetailsheader_HeaderBackgroundImage_ca6pA {
   transform-origin: 0 0;
   transform: translateZ(-1px) scale(2);
 }
-.sharedappdetailsheader_HeaderBackgroundImage_ca6pA.sharedappdetailsheader_FullscreenEnterStart_16mex:not(.sharedappdetailsheader_FullscreenEnterActive_AGgaM),
+.sharedappdetailsheader_HeaderBackgroundImage_ca6pA.sharedappdetailsheader_FullscreenEnterStart_16mex:not(
+    .sharedappdetailsheader_FullscreenEnterActive_AGgaM
+  ),
 .sharedappdetailsheader_HeaderBackgroundImage_ca6pA.sharedappdetailsheader_FullscreenExitActive_2vwQM,
 .sharedappdetailsheader_HeaderBackgroundImage_ca6pA.sharedappdetailsheader_FullscreenExitDone_2pkrZ {
   opacity: 1;
 }
 .sharedappdetailsheader_HeaderBackgroundImage_ca6pA.sharedappdetailsheader_FullscreenEnterActive_AGgaM,
 .sharedappdetailsheader_HeaderBackgroundImage_ca6pA.sharedappdetailsheader_FullscreenEnterDone_2f4iT,
-.sharedappdetailsheader_HeaderBackgroundImage_ca6pA.sharedappdetailsheader_FullscreenExitStart_2cQPf:not(.sharedappdetailsheader_FullscreenExitActive_2vwQM) {
+.sharedappdetailsheader_HeaderBackgroundImage_ca6pA.sharedappdetailsheader_FullscreenExitStart_2cQPf:not(
+    .sharedappdetailsheader_FullscreenExitActive_2vwQM
+  ) {
   opacity: 0.2;
 }
 .sharedappdetailsheader_HeaderBackgroundImage_ca6pA.sharedappdetailsheader_FullscreenEnterActive_AGgaM,
 .sharedappdetailsheader_HeaderBackgroundImage_ca6pA.sharedappdetailsheader_FullscreenExitActive_2vwQM {
-  transition: opacity 800ms ease, transform 800ms ease;
+  transition:
+    opacity 800ms ease,
+    transform 800ms ease;
 }
 .sharedappdetailsheader_ImgContainer_1j1_D {
   width: 100%;
@@ -594,10 +604,14 @@ div.HighPerfMode .sharedappdetailsheader_HeaderBackgroundImage_ca6pA {
   .sharedappdetailsheader_Features_G4h2S {
   display: none;
 }
-.sharedappdetailsheader_TitleImageContainer_1qMOf.sharedappdetailsheader_FullscreenEnterStart_16mex:not(.sharedappdetailsheader_FullscreenEnterActive_AGgaM),
+.sharedappdetailsheader_TitleImageContainer_1qMOf.sharedappdetailsheader_FullscreenEnterStart_16mex:not(
+    .sharedappdetailsheader_FullscreenEnterActive_AGgaM
+  ),
 .sharedappdetailsheader_TitleImageContainer_1qMOf.sharedappdetailsheader_FullscreenExitActive_2vwQM,
 .sharedappdetailsheader_TitleImageContainer_1qMOf.sharedappdetailsheader_FullscreenExitDone_2pkrZ,
-.sharedappdetailsheader_TitleSection_2oAYX.sharedappdetailsheader_FullscreenEnterStart_16mex:not(.sharedappdetailsheader_FullscreenEnterActive_AGgaM),
+.sharedappdetailsheader_TitleSection_2oAYX.sharedappdetailsheader_FullscreenEnterStart_16mex:not(
+    .sharedappdetailsheader_FullscreenEnterActive_AGgaM
+  ),
 .sharedappdetailsheader_TitleSection_2oAYX.sharedappdetailsheader_FullscreenExitActive_2vwQM,
 .sharedappdetailsheader_TitleSection_2oAYX.sharedappdetailsheader_FullscreenExitDone_2pkrZ {
   opacity: 1;
@@ -605,21 +619,27 @@ div.HighPerfMode .sharedappdetailsheader_HeaderBackgroundImage_ca6pA {
 }
 .sharedappdetailsheader_TitleImageContainer_1qMOf.sharedappdetailsheader_FullscreenEnterActive_AGgaM,
 .sharedappdetailsheader_TitleImageContainer_1qMOf.sharedappdetailsheader_FullscreenEnterDone_2f4iT,
-.sharedappdetailsheader_TitleImageContainer_1qMOf.sharedappdetailsheader_FullscreenExitStart_2cQPf:not(.sharedappdetailsheader_FullscreenExitActive_2vwQM),
+.sharedappdetailsheader_TitleImageContainer_1qMOf.sharedappdetailsheader_FullscreenExitStart_2cQPf:not(
+    .sharedappdetailsheader_FullscreenExitActive_2vwQM
+  ),
 .sharedappdetailsheader_TitleSection_2oAYX.sharedappdetailsheader_FullscreenEnterActive_AGgaM,
 .sharedappdetailsheader_TitleSection_2oAYX.sharedappdetailsheader_FullscreenEnterDone_2f4iT,
-.sharedappdetailsheader_TitleSection_2oAYX.sharedappdetailsheader_FullscreenExitStart_2cQPf:not(.sharedappdetailsheader_FullscreenExitActive_2vwQM) {
+.sharedappdetailsheader_TitleSection_2oAYX.sharedappdetailsheader_FullscreenExitStart_2cQPf:not(
+    .sharedappdetailsheader_FullscreenExitActive_2vwQM
+  ) {
   opacity: 0;
   transform: translateY(100px);
 }
 .sharedappdetailsheader_TitleImageContainer_1qMOf.sharedappdetailsheader_FullscreenEnterActive_AGgaM,
 .sharedappdetailsheader_TitleSection_2oAYX.sharedappdetailsheader_FullscreenEnterActive_AGgaM {
-  transition: opacity 266.6666666667ms ease-out,
+  transition:
+    opacity 266.6666666667ms ease-out,
     transform 266.6666666667ms cubic-bezier(0.6, 0, 1, 1);
 }
 .sharedappdetailsheader_TitleImageContainer_1qMOf.sharedappdetailsheader_FullscreenExitActive_2vwQM,
 .sharedappdetailsheader_TitleSection_2oAYX.sharedappdetailsheader_FullscreenExitActive_2vwQM {
-  transition: opacity 800ms cubic-bezier(0, 0, 0.1, 1),
+  transition:
+    opacity 800ms cubic-bezier(0, 0, 0.1, 1),
     transform 800ms cubic-bezier(0, 0, 0.1, 1);
 }
 .sharedappdetailsheader_SVGTitle_gqzkc {
@@ -628,7 +648,9 @@ div.HighPerfMode .sharedappdetailsheader_HeaderBackgroundImage_ca6pA {
   overflow: visible;
 }
 .sharedappdetailsheader_SVGTitle_gqzkc text {
-  text-shadow: 1px 1px 10px #000, 0px 0px 22px #0008;
+  text-shadow:
+    1px 1px 10px #000,
+    0px 0px 22px #0008;
   letter-spacing: 1px;
 }
 .BasicUI .sharedappdetailsheader_SVGTitle_gqzkc text {
@@ -1140,7 +1162,9 @@ div.HighPerfMode .sharedappdetailsheader_HeaderBackgroundImage_ca6pA {
   box-shadow: 0px 0px 3px #000a;
   position: absolute;
   left: 0;
-  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  transition:
+    transform 0.2s ease-in-out,
+    background-color 0.2s ease-in-out;
 }
 .toggle_Toggle_10LNB .toggle_ToggleSwitch_1mv6S.toggle_On_2ma00 {
   background-color: #16a1e1;
@@ -1241,7 +1265,9 @@ div.HighPerfMode .sharedappdetailsheader_HeaderBackgroundImage_ca6pA {
   border-radius: 2px;
   color: #e0e1e6;
   padding: 6px 8px;
-  box-shadow: 1px 1px 8px #0005, 2px 2px 16px 1px #0005;
+  box-shadow:
+    1px 1px 8px #0005,
+    2px 2px 16px 1px #0005;
   max-width: 300px;
   user-select: none;
 }
@@ -1252,7 +1278,9 @@ div.HighPerfMode .sharedappdetailsheader_HeaderBackgroundImage_ca6pA {
   border-radius: 2px;
   color: #e0e1e6;
   padding: 6px 8px;
-  box-shadow: 1px 1px 8px #0005, 2px 2px 16px 1px #0005;
+  box-shadow:
+    1px 1px 8px #0005,
+    2px 2px 16px 1px #0005;
   max-width: 300px;
   user-select: none;
 }
@@ -1400,10 +1428,14 @@ div.HighPerfMode .sharedappdetailsheader_HeaderBackgroundImage_ca6pA {
 }
 .pagedsettings_PagedSettingsDialog_PageListItem_15qhi.pagedsettings_DisabledItem_2CiVW,
 .pagedsettings_PagedSettingsDialog_PageListItem_15qhi.pagedsettings_DisabledItem_2CiVW:hover,
-.pagedsettings_PagedSettingsDialog_PageListItem_15qhi.pagedsettings_DisabledItem_2CiVW:not(.pagedsettings_Active_bTXaV):hover {
+.pagedsettings_PagedSettingsDialog_PageListItem_15qhi.pagedsettings_DisabledItem_2CiVW:not(
+    .pagedsettings_Active_bTXaV
+  ):hover {
   color: #414141;
 }
-.pagedsettings_PagedSettingsDialog_PageListItem_15qhi:not(.pagedsettings_Active_bTXaV):hover {
+.pagedsettings_PagedSettingsDialog_PageListItem_15qhi:not(
+    .pagedsettings_Active_bTXaV
+  ):hover {
   color: #ccc;
 }
 .pagedsettings_PagedSettingsDialog_PageListItem_15qhi.pagedsettings_Active_bTXaV {
@@ -1914,7 +1946,9 @@ button.gamepaddialog_Button_32WBl.DialogButton:enabled:active:hover:before {
   cursor: default;
   color: #67707b;
 }
-.gamepaddialog_Field_BBGW4.gamepaddialog_Clickable_2fjtl:not(.gamepaddialog_Disabled_kT2gh) {
+.gamepaddialog_Field_BBGW4.gamepaddialog_Clickable_2fjtl:not(
+    .gamepaddialog_Disabled_kT2gh
+  ) {
   cursor: pointer;
 }
 .gamepaddialog_Field_BBGW4 .Focusable {
@@ -2532,7 +2566,9 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Ozw- svg {
   box-sizing: content-box;
   pointer-events: none;
 }
-.gamepadslider_SliderControlAndNotches_tyDyU:not(.gamepadslider_Disabled_DE-u8).gpfocus
+.gamepadslider_SliderControlAndNotches_tyDyU:not(
+    .gamepadslider_Disabled_DE-u8
+  ).gpfocus
   .gamepadslider_SliderHandle_55Klw {
   border: solid 3px #0e141b;
   margin: -3px;
@@ -2870,8 +2906,10 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Ozw- svg {
   pointer-events: none;
   outline-offset: 2px;
   outline: 2px solid rgba(255, 255, 255, 0.6);
-  animation: focusring_flash_3YJwx 0.5s ease,
-    focusring_growOutline_3xRIc 0.4s ease, focusring_fadeOutline_2CNye 0.4s ease,
+  animation:
+    focusring_flash_3YJwx 0.5s ease,
+    focusring_growOutline_3xRIc 0.4s ease,
+    focusring_fadeOutline_2CNye 0.4s ease,
     focusring_blinker_y4OFc 1.2s ease-in-out 0.4s 20;
 }
 .focusring_FocusRing_3ARGF.focusring_DebugFocusRing_1HN59 {
@@ -3163,7 +3201,9 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Ozw- svg {
 }
 .gamepadpagedsettings_PagedSettingsDialog_PageListItem_2syih.gamepadpagedsettings_DisabledItem_1DIL_,
 .gamepadpagedsettings_PagedSettingsDialog_PageListItem_2syih.gamepadpagedsettings_DisabledItem_1DIL_:hover,
-.gamepadpagedsettings_PagedSettingsDialog_PageListItem_2syih.gamepadpagedsettings_DisabledItem_1DIL_:not(.gamepadpagedsettings_Active_3Qg3h):hover {
+.gamepadpagedsettings_PagedSettingsDialog_PageListItem_2syih.gamepadpagedsettings_DisabledItem_1DIL_:not(
+    .gamepadpagedsettings_Active_3Qg3h
+  ):hover {
   color: #414141;
   cursor: default;
 }
@@ -4024,7 +4064,9 @@ html {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  box-shadow: 0 0px 0px 0px #000, 0 0px 0px 0px #000;
+  box-shadow:
+    0 0px 0px 0px #000,
+    0 0px 0px 0px #000;
   padding: 2px 5px 2px 23px;
   color: #fff;
   user-select: none;
@@ -4039,7 +4081,9 @@ html {
     rgba(53, 55, 63, 0) 110%
   );
   border-right: 0px solid #202127;
-  box-shadow: 0 0px 2px 0px #0005, 0 0px 16px 0px #0004;
+  box-shadow:
+    0 0px 2px 0px #0005,
+    0 0px 16px 0px #0004;
 }
 .fakegamelist_GameListEntry_14lr0.fakegamelist_Selected_3QI8h.fakegamelist_Updating_yTNHk {
   color: #74d1ff;
@@ -5335,7 +5379,9 @@ img.emoticon_emoticon_qjpFK.emoticon_large_rB2Pc {
 .chatentry_chatSubmitButton_nLfX9.chatentry_EmbedButton_cyYZC:focus {
   background-color: #3d424b;
 }
-.chatentry_chatSubmitButton_nLfX9:not(.chatentry_disabled_25WK3):focus.GamepadMode,
+.chatentry_chatSubmitButton_nLfX9:not(
+    .chatentry_disabled_25WK3
+  ):focus.GamepadMode,
 .GamepadMode
   .chatentry_chatSubmitButton_nLfX9:not(.chatentry_disabled_25WK3):focus {
   background: #fff;
@@ -5416,17 +5462,25 @@ img.emoticon_emoticon_qjpFK.emoticon_large_rB2Pc {
   .chatentry_AudioLines_1_HMB {
   fill: #f5ffd7;
 }
-.chatentry_Active_1GuG1.chatentry_chatSubmitButton_nLfX9:not(.chatentry_disabled_25WK3):focus
+.chatentry_Active_1GuG1.chatentry_chatSubmitButton_nLfX9:not(
+    .chatentry_disabled_25WK3
+  ):focus
   .SVGIcon_VoiceRoom,
-.chatentry_Active_1GuG1.chatentry_chatSubmitButton_nLfX9:not(.chatentry_disabled_25WK3):hover
+.chatentry_Active_1GuG1.chatentry_chatSubmitButton_nLfX9:not(
+    .chatentry_disabled_25WK3
+  ):hover
   .SVGIcon_VoiceRoom {
   fill: #fff;
   stroke: #000;
 }
-.chatentry_Active_1GuG1.chatentry_chatSubmitButton_nLfX9:not(.chatentry_disabled_25WK3):focus
+.chatentry_Active_1GuG1.chatentry_chatSubmitButton_nLfX9:not(
+    .chatentry_disabled_25WK3
+  ):focus
   .SVGIcon_VoiceRoom
   .chatentry_AudioLines_1_HMB,
-.chatentry_Active_1GuG1.chatentry_chatSubmitButton_nLfX9:not(.chatentry_disabled_25WK3):hover
+.chatentry_Active_1GuG1.chatentry_chatSubmitButton_nLfX9:not(
+    .chatentry_disabled_25WK3
+  ):hover
   .SVGIcon_VoiceRoom
   .chatentry_AudioLines_1_HMB {
   fill: #000;
@@ -5535,7 +5589,9 @@ img.emoticon_emoticon_qjpFK.emoticon_large_rB2Pc {
   color: #fff;
 }
 .chatentry_chatEntryControls_SZTCn
-  .chatentry_chatSubmitButton_nLfX9.GamepadMode:not(.chatentry_disabled_25WK3).gpfocus,
+  .chatentry_chatSubmitButton_nLfX9.GamepadMode:not(
+    .chatentry_disabled_25WK3
+  ).gpfocus,
 .GamepadMode
   .chatentry_chatEntryControls_SZTCn
   .chatentry_chatSubmitButton_nLfX9:not(.chatentry_disabled_25WK3).gpfocus {
@@ -5658,7 +5714,9 @@ img.emoticon_emoticon_qjpFK.emoticon_large_rB2Pc {
 }
 .ChatMessageEntryVoice .VoiceControlPanelButton.ToggleMicrophoneButton {
   transform: translateX(-32px) scale(0.5);
-  transition: transform 0.1s ease-in-out, opacity 0.3s ease-in-out;
+  transition:
+    transform 0.1s ease-in-out,
+    opacity 0.3s ease-in-out;
   opacity: 0;
   cursor: pointer;
 }
@@ -5666,7 +5724,9 @@ img.emoticon_emoticon_qjpFK.emoticon_large_rB2Pc {
 .ChatMessageEntryVoice.Active .VoiceControlPanelButton.ToggleMicrophoneButton {
   opacity: 1;
   transform: translateX(0px) scale(1);
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out,
+  transition:
+    transform 0.3s ease-in-out,
+    opacity 0.3s ease-in-out,
     background-color 0.1s ease-in-out;
 }
 .ChatMessageEntryVoice .VoiceControlPanelButton.chatEndVoiceChat {
@@ -6211,7 +6271,9 @@ a.eventreminder_ReminderOption_2RU5s {
   align-items: center;
 }
 .eventreminder_ReminderOption_2RU5s:not(.eventreminder_Unverified_2teRM):hover,
-a.eventreminder_ReminderOption_2RU5s:not(.eventreminder_Unverified_2teRM):hover {
+a.eventreminder_ReminderOption_2RU5s:not(
+    .eventreminder_Unverified_2teRM
+  ):hover {
   background-color: rgba(255, 255, 255, 0.2);
 }
 .eventreminder_ReminderOption_2RU5s.eventreminder_Unverified_2teRM,
@@ -8693,7 +8755,9 @@ div.creatorhomeembed_SocialContainer_25404 {
   z-index: 1;
 }
 @media screen and (max-width: 620px) {
-  .salepreviewwidgets_StoreSaleWidgetContainer_3zqVO:not(.salepreviewwidgets_LibraryAssetExpandedDisplay_2oeoi) {
+  .salepreviewwidgets_StoreSaleWidgetContainer_3zqVO:not(
+      .salepreviewwidgets_LibraryAssetExpandedDisplay_2oeoi
+    ) {
     flex-direction: column;
   }
 }
@@ -13833,7 +13897,9 @@ img {
   .eventcalendartile_TileContainer_c-I2o
     .eventcalendartile_GameSource_3oKC-
     .eventcalendartile_SourceList_18WTB
-    .eventcalendartile_Source_2S1zq:not(.eventcalendartile_RecommendedSource_3NLmT) {
+    .eventcalendartile_Source_2S1zq:not(
+      .eventcalendartile_RecommendedSource_3NLmT
+    ) {
     display: none;
   }
 }
@@ -14220,7 +14286,9 @@ img {
   .eventcalendartile_TileImage_1t9YU {
   filter: blur(0px);
   opacity: 1;
-  transition: filter 0.24s ease-in-out, opacity 0.24s ease-in-out;
+  transition:
+    filter 0.24s ease-in-out,
+    opacity 0.24s ease-in-out;
   height: 0;
   padding-top: 56.25%;
   background: #2d3138 center/cover no-repeat;
@@ -14246,7 +14314,9 @@ img {
   border-radius: 2px;
   padding: 0 6px;
   opacity: 0;
-  transition: opacity 0.24s ease-in-out, transform 0.24s ease-in-out;
+  transition:
+    opacity 0.24s ease-in-out,
+    transform 0.24s ease-in-out;
 }
 .eventcalendartile_TileContainer_c-I2o
   .eventcalendartile_Tile_P0VEt
@@ -14873,12 +14943,16 @@ img {
   margin-left: 0;
 }
 @media screen and (max-width: 800px) {
-  .eventcalendartile_TileContainer_c-I2o.eventcalendartile_UpcomingMode_3dvLm:nth-child(3) {
+  .eventcalendartile_TileContainer_c-I2o.eventcalendartile_UpcomingMode_3dvLm:nth-child(
+      3
+    ) {
     display: none;
   }
 }
 @media screen and (max-width: 500px) {
-  .eventcalendartile_TileContainer_c-I2o.eventcalendartile_UpcomingMode_3dvLm:nth-child(2) {
+  .eventcalendartile_TileContainer_c-I2o.eventcalendartile_UpcomingMode_3dvLm:nth-child(
+      2
+    ) {
     display: none;
   }
 }
@@ -14921,7 +14995,11 @@ img {
   .eventcalendartile_Footer_1CMuj {
   display: none;
 }
-.eventcalendartile_TileContainer_c-I2o.eventcalendartile_EnableHovers_XCSVf:not(.eventcalendartile_EventType12_DoPDC):not(.eventcalendartile_EventType14_3_CKO):not(.eventcalendartile_TileVideoIcon_2xp3K)
+.eventcalendartile_TileContainer_c-I2o.eventcalendartile_EnableHovers_XCSVf:not(
+    .eventcalendartile_EventType12_DoPDC
+  ):not(.eventcalendartile_EventType14_3_CKO):not(
+    .eventcalendartile_TileVideoIcon_2xp3K
+  )
   .eventcalendartile_Tile_P0VEt:hover {
   background: radial-gradient(circle at top left, #4f5764 0%, #454854 140%);
 }
@@ -15201,7 +15279,9 @@ img {
   border-radius: 2px;
   padding: 0 6px;
   opacity: 0;
-  transition: opacity 0.24s ease-in-out, transform 0.24s ease-in-out;
+  transition:
+    opacity 0.24s ease-in-out,
+    transform 0.24s ease-in-out;
 }
 .youtubepreviewimage_YoutubePreviewImage_1hcla:hover img {
   opacity: 1;
@@ -17096,7 +17176,9 @@ html:not(.touch)
 }
 .carousel_carouselNavButton_2aDk- svg {
   opacity: 0.7;
-  transition: opacity 0.2s ease-in-out, filter 0.2s ease-in-out;
+  transition:
+    opacity 0.2s ease-in-out,
+    filter 0.2s ease-in-out;
   fill: #fff;
 }
 .carousel_carouselBtnCtn_2pHZR {
@@ -17939,7 +18021,9 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   z-index: 2;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  transition: filter 0.24s ease-in-out, transform 0.24s ease-in-out,
+  transition:
+    filter 0.24s ease-in-out,
+    transform 0.24s ease-in-out,
     color 0.24s ease-in-out;
 }
 .items_in_row_4 .eventrow_EventSummaryText_1759z {
@@ -17959,7 +18043,9 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   z-index: 2;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  transition: filter 0.24s ease-in-out, transform 0.24s ease-in-out,
+  transition:
+    filter 0.24s ease-in-out,
+    transform 0.24s ease-in-out,
     color 0.24s ease-in-out;
 }
 .eventrow_OtherEvents_EventCtn_plQje.eventrow_HorizontalEvent_2p0Kk {
@@ -18089,7 +18175,9 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local("Jolly Lodger"), local("JollyLodger"),
+  src:
+    local("Jolly Lodger"),
+    local("JollyLodger"),
     url(https://fonts.gstatic.com/s/jollylodger/v7/BXRsvFTAh_bGkA1uQ48dlB3lUODS7Zw.woff2)
       format("woff2");
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
@@ -18100,7 +18188,9 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local("Jolly Lodger"), local("JollyLodger"),
+  src:
+    local("Jolly Lodger"),
+    local("JollyLodger"),
     url(https://fonts.gstatic.com/s/jollylodger/v7/BXRsvFTAh_bGkA1uQ48dlB3lXuDS.woff2)
       format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
@@ -18112,7 +18202,9 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local("New Rocker"), local("NewRocker-Regular"),
+  src:
+    local("New Rocker"),
+    local("NewRocker-Regular"),
     url(https://fonts.gstatic.com/s/newrocker/v8/MwQzbhjp3-HImzcCU_cJoGofiIlP.woff2)
       format("woff2");
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
@@ -18123,7 +18215,9 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local("New Rocker"), local("NewRocker-Regular"),
+  src:
+    local("New Rocker"),
+    local("NewRocker-Regular"),
     url(https://fonts.gstatic.com/s/newrocker/v8/MwQzbhjp3-HImzcCU_cJoGQfiA.woff2)
       format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
@@ -18135,7 +18229,9 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local("Chonburi"), local("Chonburi-Regular"),
+  src:
+    local("Chonburi"),
+    local("Chonburi-Regular"),
     url(https://fonts.gstatic.com/s/chonburi/v4/8AtqGs-wOpGRTBq66LWJHLzriA.woff2)
       format("woff2");
   unicode-range: U+0E01-0E5B, U+200C-200D, U+25CC;
@@ -18145,7 +18241,9 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local("Chonburi"), local("Chonburi-Regular"),
+  src:
+    local("Chonburi"),
+    local("Chonburi-Regular"),
     url(https://fonts.gstatic.com/s/chonburi/v4/8AtqGs-wOpGRTBq66LWSHLzriA.woff2)
       format("woff2");
   unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
@@ -18154,7 +18252,9 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   font-family: "Sigmar One";
   font-style: normal;
   font-weight: 400;
-  src: local("Sigmar One Regular"), local("SigmarOne-Regular"),
+  src:
+    local("Sigmar One Regular"),
+    local("SigmarOne-Regular"),
     url(https://fonts.gstatic.com/s/sigmarone/v10/co3DmWZ8kjZuErj9Ta3do6vppkDi.woff2)
       format("woff2");
   unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
@@ -18163,7 +18263,9 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   font-family: "Sigmar One";
   font-style: normal;
   font-weight: 400;
-  src: local("Sigmar One Regular"), local("SigmarOne-Regular"),
+  src:
+    local("Sigmar One Regular"),
+    local("SigmarOne-Regular"),
     url(https://fonts.gstatic.com/s/sigmarone/v10/co3DmWZ8kjZuErj9Ta3do6rppkDi.woff2)
       format("woff2");
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
@@ -18173,7 +18275,9 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   font-family: "Sigmar One";
   font-style: normal;
   font-weight: 400;
-  src: local("Sigmar One Regular"), local("SigmarOne-Regular"),
+  src:
+    local("Sigmar One Regular"),
+    local("SigmarOne-Regular"),
     url(https://fonts.gstatic.com/s/sigmarone/v10/co3DmWZ8kjZuErj9Ta3do6Tppg.woff2)
       format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
@@ -21946,21 +22050,27 @@ html.tablet .partnereventdisplay_EventDetailTitle_3tRR7 {
   cursor: pointer;
   box-shadow: 3px -6px 5px -6px #23232366;
   transform: rotate(0deg) scale(1);
-  -webkit-transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+  -webkit-transition:
+    transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
     filter 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  -moz-transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+  -moz-transition:
+    transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
     filter 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+  transition:
+    transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
     filter 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .storywidget_BookmarkCtn_3fvV2:hover {
   box-shadow: 3px -6px 10px -6px #23232366;
   transform: rotate(3deg) scale(1.07);
-  -webkit-transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+  -webkit-transition:
+    transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
     filter 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  -moz-transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+  -moz-transition:
+    transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
     filter 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+  transition:
+    transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
     filter 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .storywidget_BookmarkTriangle_2ABiV {
@@ -22160,7 +22270,10 @@ html.tablet .partnereventdisplay_EventDetailTitle_3tRR7 {
   margin: 4px;
   margin-top: 0px;
   margin-bottom: 18px;
-  box-shadow: 0 0 0 2px #23232366, 0 0 0 4px #f7f0e4, 0 0 0 6px #23232366;
+  box-shadow:
+    0 0 0 2px #23232366,
+    0 0 0 4px #f7f0e4,
+    0 0 0 6px #23232366;
 }
 .storywidget_OptionTextNotice_1Unhw {
   text-align: left;
@@ -22204,11 +22317,14 @@ html.tablet .partnereventdisplay_EventDetailTitle_3tRR7 {
   border-radius: 5px;
   box-shadow: 2px 4px 16px #3d3e3899;
   transform: rotateZ(3deg) scale(1);
-  -webkit-transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+  -webkit-transition:
+    transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
     filter 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  -moz-transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+  -moz-transition:
+    transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
     filter 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+  transition:
+    transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
     filter 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .storywidget_ResultBadge_QnhwA.storywidget_Opening_21i2V,
@@ -22218,11 +22334,14 @@ html.tablet .partnereventdisplay_EventDetailTitle_3tRR7 {
 .storywidget_ResultBadge_QnhwA.storywidget_Opening_21i2V:hover,
 .storywidget_ResultBadge_QnhwA.storywidget_Open_Dgz7i:hover {
   transform: rotateZ(1.5deg) scale(1.03);
-  -webkit-transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+  -webkit-transition:
+    transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
     filter 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  -moz-transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+  -moz-transition:
+    transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
     filter 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+  transition:
+    transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
     filter 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .storywidget_BadgeImage_1PVrh {
@@ -22532,14 +22651,17 @@ a.storywidget_BadgeFooter_24Cq8:hover {
   padding: 2px 6px;
   opacity: 0;
   transform: translateX(calc(-100% - 8px));
-  transition: opacity 0.2s cubic-bezier(0.32, 0, 0.67, 0),
+  transition:
+    opacity 0.2s cubic-bezier(0.32, 0, 0.67, 0),
     transform 0.2s cubic-bezier(0.32, 0, 0.67, 0);
 }
 .discoveryqueuewizard_AppVideoCtn_benca
   .discoveryqueuewizard_WishlistBadge_7q6iu.discoveryqueuewizard_Active_m1UQj {
   opacity: 1;
   transform: translateX(0px);
-  transition: opacity 0.1s ease, transform 0.2s ease;
+  transition:
+    opacity 0.1s ease,
+    transform 0.2s ease;
 }
 .discoveryqueuewizard_AppVideoCtn_benca .discoveryqueuewizard_AppVideo_1H-LQ {
   object-fit: fill;
@@ -22768,7 +22890,9 @@ a.storywidget_BadgeFooter_24Cq8:hover {
   color: #fff;
   opacity: 0;
   transform: translateY(32px);
-  transition: opacity 0.1s ease-in, transform 0.15s ease-in;
+  transition:
+    opacity 0.1s ease-in,
+    transform 0.15s ease-in;
 }
 .discoveryqueuewizard_IgnoredCtn_EfzwZ
   .discoveryqueuewizard_IgnoredInfo_322X-
@@ -22804,7 +22928,9 @@ a.storywidget_BadgeFooter_24Cq8:hover {
   .discoveryqueuewizard_IgnoredInfo_322X-.discoveryqueuewizard_Active_m1UQj {
   opacity: 1;
   transform: translateY(0px);
-  transition: opacity 0.3s ease, transform 0.4s ease;
+  transition:
+    opacity 0.3s ease,
+    transform 0.4s ease;
 }
 .discoveryqueuewizard_AppDesc_1CFjV {
   font-size: 12px;
@@ -22917,7 +23043,9 @@ a.storywidget_BadgeFooter_24Cq8:hover {
   color: #1a9fff;
   cursor: pointer;
   padding: 2px 4px;
-  transition: color 0.1s ease, background-color 0.1s ease;
+  transition:
+    color 0.1s ease,
+    background-color 0.1s ease;
 }
 .discoveryqueuewizard_LearnMoreLink_3TrpB:hover {
   color: #fff;
@@ -22950,7 +23078,9 @@ a.storywidget_BadgeFooter_24Cq8:hover {
   user-select: none;
   -webkit-user-select: none;
   padding: 8px 16px;
-  transition: background-color 0.1s ease, border-radius 0.1s ease;
+  transition:
+    background-color 0.1s ease,
+    border-radius 0.1s ease;
 }
 .discoveryqueuewizard_QueueButton_2tLc9.discoveryqueuewizard_Disabled_2r82X {
   opacity: 0.4;
@@ -22961,7 +23091,9 @@ a.storywidget_BadgeFooter_24Cq8:hover {
   color: #fff;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.16);
 }
-.discoveryqueuewizard_QueueButton_2tLc9.discoveryqueuewizard_Primary_2uYEU:hover:not(.discoveryqueuewizard_Disabled_2r82X) {
+.discoveryqueuewizard_QueueButton_2tLc9.discoveryqueuewizard_Primary_2uYEU:hover:not(
+    .discoveryqueuewizard_Disabled_2r82X
+  ) {
   background-color: #0bf;
 }
 .discoveryqueuewizard_QueueButton_2tLc9.discoveryqueuewizard_Wide_1NVlf {
@@ -22971,7 +23103,9 @@ a.storywidget_BadgeFooter_24Cq8:hover {
   width: 16px;
   transition: fill 0.1s ease;
 }
-.discoveryqueuewizard_QueueButton_2tLc9:hover:not(.discoveryqueuewizard_Disabled_2r82X) {
+.discoveryqueuewizard_QueueButton_2tLc9:hover:not(
+    .discoveryqueuewizard_Disabled_2r82X
+  ) {
   background-color: #acb2c947;
 }
 .discoveryqueuewizard_QueueButton_2tLc9.gpfocus {
@@ -22997,9 +23131,13 @@ a.storywidget_BadgeFooter_24Cq8:hover {
   display: none;
   background-color: rgba(103, 112, 123, 0.6);
   backdrop-filter: blur(24px);
-  box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.3),
+  box-shadow:
+    0px 12px 16px rgba(0, 0, 0, 0.3),
     inset 0 0 0 1px rgba(255, 255, 255, 0.1);
-  transition: background-color ease, box-shadow ease, transform ease,
+  transition:
+    background-color ease,
+    box-shadow ease,
+    transform ease,
     opacity ease;
   transition-duration: 0.3s;
 }
@@ -23012,7 +23150,8 @@ a.storywidget_BadgeFooter_24Cq8:hover {
 }
 .discoveryqueuewizard_QueueNavArrow_14jPd:hover {
   background-color: #fff;
-  box-shadow: 0px 16px 18px rgba(0, 0, 0, 0.4),
+  box-shadow:
+    0px 16px 18px rgba(0, 0, 0, 0.4),
     inset 0 0 0 1px rgba(255, 255, 255, 0.1);
   transform: translateY(-50%) scale(1);
   transition-duration: 0.06s;
@@ -23322,7 +23461,10 @@ a.storywidget_BadgeFooter_24Cq8:hover {
   .friendsnooze_SnoozeZ_3hM97 {
   font-size: 14px;
   font-weight: 500;
-  text-shadow: -1px -1px 4px #000, 1px -1px 4px #000, -1px 1px 2px #000,
+  text-shadow:
+    -1px -1px 4px #000,
+    1px -1px 4px #000,
+    -1px 1px 2px #000,
     1px 1px 2px #000;
 }
 .friendsnooze_SnoozeContainer_sR1O9.friendsnooze_Dim_2IdZn
@@ -24204,8 +24346,12 @@ a.storywidget_BadgeFooter_24Cq8:hover {
   margin-top: -1px;
 }
 .ChatTabs
-  .personanameandstatus_compactView_7gBr-:not(.personanameandstatus_twoLine_2QEKA)
-  .personanameandstatus_richPresenceLabel_3JW4b:not(.personanameandstatus_gameName_14jAW) {
+  .personanameandstatus_compactView_7gBr-:not(
+    .personanameandstatus_twoLine_2QEKA
+  )
+  .personanameandstatus_richPresenceLabel_3JW4b:not(
+    .personanameandstatus_gameName_14jAW
+  ) {
   display: none;
 }
 .ChatTabs
@@ -24252,7 +24398,9 @@ a.storywidget_BadgeFooter_24Cq8:hover {
 }
 .titleBarContainer
   .currentUserContainer
-  .personanameandstatus_richPresenceLabel_3JW4b:not(.personanameandstatus_gameName_14jAW) {
+  .personanameandstatus_richPresenceLabel_3JW4b:not(
+    .personanameandstatus_gameName_14jAW
+  ) {
   font-size: 10px;
   margin-top: -1px;
   margin-bottom: 1px;
@@ -27531,7 +27679,9 @@ div.pricinggrid_HoverToolTip_1OS2v {
   );
   color: #e0e1e6;
   padding: 6px 8px;
-  box-shadow: 1px 1px 8px #0005, 2px 2px 16px 1px #0005;
+  box-shadow:
+    1px 1px 8px #0005,
+    2px 2px 16px 1px #0005;
   user-select: none;
 }
 .pricinggridcell_DetailRow_3P_fJ {
@@ -27569,7 +27719,9 @@ div.pricinggrid_HoverToolTip_1OS2v {
   opacity: 0;
 }
 .pricinggridcell_DetailRow_3P_fJ
-  .pricinggridcell_DetailButton_3ILP7:not(.pricinggridcell_Disabled_3mZHs):hover {
+  .pricinggridcell_DetailButton_3ILP7:not(
+    .pricinggridcell_Disabled_3mZHs
+  ):hover {
   background-color: #676d79;
   cursor: pointer;
 }
@@ -28543,22 +28695,30 @@ div.saveprices_HoverToolTip_1yXHp {
 }
 .discountgrid_DiscountGridCtn_3THze
   .discountgrid_DiscountGrid_39Ize
-  .discountgrid_DataCell_3V8Jb.discountgrid_LiveEvent_MJbOk:not(.discountgrid_HasDiscount_16Z51)
+  .discountgrid_DataCell_3V8Jb.discountgrid_LiveEvent_MJbOk:not(
+    .discountgrid_HasDiscount_16Z51
+  )
   .discountgrid_DiscountValueCtn_At0eU
   div,
 .discountgrid_DiscountGridCtn_3THze
   .discountgrid_DiscountGrid_39Ize
-  .discountgrid_DataCell_3V8Jb.discountgrid_LiveEvent_MJbOk:not(.discountgrid_HasDiscount_16Z51)
+  .discountgrid_DataCell_3V8Jb.discountgrid_LiveEvent_MJbOk:not(
+    .discountgrid_HasDiscount_16Z51
+  )
   .discountgrid_DiscountValueCtn_At0eU
   svg,
 .discountgrid_DiscountGridCtn_3THze
   .discountgrid_DiscountGrid_39Ize
-  .discountgrid_DataCell_3V8Jb.discountgrid_LiveEvent_MJbOk:not(.discountgrid_HasDiscount_16Z51)
+  .discountgrid_DataCell_3V8Jb.discountgrid_LiveEvent_MJbOk:not(
+    .discountgrid_HasDiscount_16Z51
+  )
   .discountgrid_ConflictWarning_3ypGB
   div,
 .discountgrid_DiscountGridCtn_3THze
   .discountgrid_DiscountGrid_39Ize
-  .discountgrid_DataCell_3V8Jb.discountgrid_LiveEvent_MJbOk:not(.discountgrid_HasDiscount_16Z51)
+  .discountgrid_DataCell_3V8Jb.discountgrid_LiveEvent_MJbOk:not(
+    .discountgrid_HasDiscount_16Z51
+  )
   .discountgrid_ConflictWarning_3ypGB
   svg {
   filter: opacity(0);
@@ -28694,7 +28854,9 @@ div.saveprices_HoverToolTip_1yXHp {
   .discountgrid_DataCell_3V8Jb.discountgrid_ChangedLocally_zv4km.discountgrid_DiscountTooHigh_GACCx,
 .discountgrid_DiscountGridCtn_3THze
   .discountgrid_DiscountGrid_39Ize
-  .discountgrid_DataCell_3V8Jb.discountgrid_ChangedLocally_zv4km.discountgrid_DiscountTooLow_17g5Z:not(:focus-within) {
+  .discountgrid_DataCell_3V8Jb.discountgrid_ChangedLocally_zv4km.discountgrid_DiscountTooLow_17g5Z:not(
+    :focus-within
+  ) {
   color: #e5af37;
   border: 1px dashed #e5af37;
 }
@@ -28704,7 +28866,9 @@ div.saveprices_HoverToolTip_1yXHp {
   .discountgrid_DiscountRangeWarning_2_w-X,
 .discountgrid_DiscountGridCtn_3THze
   .discountgrid_DiscountGrid_39Ize
-  .discountgrid_DataCell_3V8Jb.discountgrid_ChangedLocally_zv4km.discountgrid_DiscountTooLow_17g5Z:not(:focus-within)
+  .discountgrid_DataCell_3V8Jb.discountgrid_ChangedLocally_zv4km.discountgrid_DiscountTooLow_17g5Z:not(
+    :focus-within
+  )
   .discountgrid_DiscountRangeWarning_2_w-X {
   display: block;
 }

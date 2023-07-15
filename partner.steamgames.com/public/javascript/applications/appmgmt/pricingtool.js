@@ -187,11 +187,11 @@
                   fnOnClick: () => t.current.Hide(),
                 }),
                 e.currentTarget,
-                n
+                n,
               );
             },
           },
-          a.createElement(A.$gZ, null)
+          a.createElement(A.$gZ, null),
         );
       }
       function L(e) {
@@ -204,7 +204,7 @@
           a.createElement(
             "div",
             { className: M().GuidelinesDescription },
-            (0, E.Xx)("#PricingDashboard_GuidelinesPickerDescription")
+            (0, E.Xx)("#PricingDashboard_GuidelinesPickerDescription"),
           ),
           a.createElement(
             "div",
@@ -220,13 +220,13 @@
                     })(e),
                   className: (0, v.Z)(
                     M().GridElement,
-                    c == e && M().CurrentPrice
+                    c == e && M().CurrentPrice,
                   ),
                 },
-                (0, P.HV)(e, "USD")
-              )
-            )
-          )
+                (0, P.HV)(e, "USD"),
+              ),
+            ),
+          ),
         );
       }
       var F = t(7751),
@@ -256,7 +256,7 @@
                   nBodyDistance: 0,
                   onClick: l,
                 },
-                n()
+                n(),
               );
               U.ShowElement(c.current.ownerDocument, t, r);
             },
@@ -264,7 +264,7 @@
               U.HideElement(c.current.ownerDocument, r, 100);
             },
           },
-          a.createElement(A.vJ$, null)
+          a.createElement(A.vJ$, null),
         );
       }
       function z(e) {
@@ -324,22 +324,22 @@
                         key: _,
                         packageID: t,
                         strPriceKey: n,
-                      })
+                      }),
                     ),
-                    _
+                    _,
                   );
               },
               onBlur: () => {
                 window.setTimeout(
                   () => U.HideElement(p.current.ownerDocument, _),
-                  500
+                  500,
                 );
               },
-            })
+            }),
           ),
           g && a.createElement("div", { className: f().PriceSuffix }, g),
           b && a.createElement(W, { packageID: t }),
-          a.createElement(j, { packageID: t, strPriceKey: n })
+          a.createElement(j, { packageID: t, strPriceKey: n }),
         );
       }
       function j(e) {
@@ -356,7 +356,7 @@
               },
               a.createElement(A.ge, {
                 color: i ? "rgb(194, 45, 0)" : "#e5af37",
-              })
+              }),
             )
           : null;
       }
@@ -383,22 +383,22 @@
             (m &&
               (0, E.Xx)(
                 "#PricingDashboard_PriceTooLow",
-                (0, P.HV)(c, r).join("")
+                (0, P.HV)(c, r).join(""),
               )) ||
             (_ &&
               (0, E.Xx)(
                 "#PricingDashboard_PriceMuchHigherThanGuidelines",
-                (0, P.HV)(s, r).join("")
+                (0, P.HV)(s, r).join(""),
               )) ||
             (h &&
               (0, E.Xx)(
                 "#PricingDashboard_PriceMuchLowerThanGuidelines",
-                (0, P.HV)(s, r).join("")
+                (0, P.HV)(s, r).join(""),
               )) ||
             (b &&
               (0, E.Xx)(
                 "#PricingDashboard_PriceCheapAndLowerThanGuidelines",
-                o
+                o,
               )),
           C = p || m,
           x = _ || h,
@@ -413,7 +413,7 @@
             I && f().ApprovedCanPublish,
             N && f().WarningPrice,
             x && f().SevereWarningPrice,
-            C && f().BadPrice
+            C && f().BadPrice,
           );
         return a.useMemo(
           () => ({
@@ -423,7 +423,7 @@
             bShowSevereWarning: x,
             bShowWarningIcon: N,
           }),
-          [D, k, C, x, N]
+          [D, k, C, x, N],
         );
       }
       function $(e) {
@@ -442,7 +442,7 @@
             (i = a.createElement(
               "div",
               { className: f().PriceChangeArrow },
-              a.createElement(A.Ehc, { angle: o ? 0 : 180 })
+              a.createElement(A.Ehc, { angle: o ? 0 : 180 }),
             )),
             (n = e + "%");
         } else n = (0, E.Xx)("#PricingDashboard_PriceIsNew_Short");
@@ -455,7 +455,7 @@
             direction: "top",
           },
           i,
-          n
+          n,
         );
       }
       function q(e) {
@@ -492,18 +492,18 @@
                 className: f().DetailRow,
                 direction: "left",
                 toolTipContent: (0, E.Xx)(
-                  "#PricingDashboard_CurrentPriceOnStore_ttip"
+                  "#PricingDashboard_CurrentPriceOnStore_ttip",
                 ),
               },
               a.createElement(
                 "div",
                 { className: f().DetailLabel },
-                (0, E.Xx)("#PricingDashboard_CurrentPriceOnStore")
+                (0, E.Xx)("#PricingDashboard_CurrentPriceOnStore"),
               ),
               a.createElement(
                 "div",
                 { className: f().DetailPrice },
-                (0, P.HV)(i, t).join("")
+                (0, P.HV)(i, t).join(""),
               ),
               a.createElement(
                 w.HP,
@@ -512,11 +512,11 @@
                   onClick: () => o(i),
                   bDisabled: i == n,
                   toolTipContent: (0, E.Xx)(
-                    "#PricingDashboard_UseThisOldPrice_ttip"
+                    "#PricingDashboard_UseThisOldPrice_ttip",
                   ),
                 },
-                (0, E.Xx)("#PricingDashboard_UseThisPrice_Button")
-              )
+                (0, E.Xx)("#PricingDashboard_UseThisPrice_Button"),
+              ),
             ),
           d &&
             a.createElement(
@@ -527,18 +527,18 @@
                 toolTipContent: (0, E.Xx)(
                   "#PricingDashboard_ProposedPrice_ttip",
                   _,
-                  g
+                  g,
                 ),
               },
               a.createElement(
                 "div",
                 { className: f().DetailLabel },
-                (0, E.Xx)("#PricingDashboard_ProposedPrice")
+                (0, E.Xx)("#PricingDashboard_ProposedPrice"),
               ),
               a.createElement(
                 "div",
                 { className: f().DetailPrice },
-                (0, P.HV)(c, t).join("")
+                (0, P.HV)(c, t).join(""),
               ),
               a.createElement(
                 w.HP,
@@ -547,11 +547,11 @@
                   onClick: () => o(c),
                   bDisabled: c == n,
                   toolTipContent: (0, E.Xx)(
-                    "#PricingDashboard_UseThisNewPrice_ttip"
+                    "#PricingDashboard_UseThisNewPrice_ttip",
                   ),
                 },
-                (0, E.Xx)("#PricingDashboard_UseThisPrice_Button")
-              )
+                (0, E.Xx)("#PricingDashboard_UseThisPrice_Button"),
+              ),
             ),
           !!l &&
             a.createElement(
@@ -561,18 +561,18 @@
                 direction: "left",
                 toolTipContent: (0, E.Xx)(
                   "#PricingDashboard_SuggestedPrice_ttip",
-                  (0, P.HV)(s, "USD").join("")
+                  (0, P.HV)(s, "USD").join(""),
                 ),
               },
               a.createElement(
                 "div",
                 { className: f().DetailLabel },
-                (0, E.Xx)("#PricingDashboard_SuggestedPrice")
+                (0, E.Xx)("#PricingDashboard_SuggestedPrice"),
               ),
               a.createElement(
                 "div",
                 { className: f().DetailPrice },
-                (0, P.HV)(l, t).join("")
+                (0, P.HV)(l, t).join(""),
               ),
               a.createElement(
                 w.HP,
@@ -581,12 +581,12 @@
                   onClick: () => o(l),
                   bDisabled: l == n,
                   toolTipContent: (0, E.Xx)(
-                    "#PricingDashboard_UseThisNewPrice_ttip"
+                    "#PricingDashboard_UseThisNewPrice_ttip",
                   ),
                 },
-                (0, E.Xx)("#PricingDashboard_UseThisPrice_Button")
-              )
-            )
+                (0, E.Xx)("#PricingDashboard_UseThisPrice_Button"),
+              ),
+            ),
         );
       }
       var Y = t(33940),
@@ -595,7 +595,7 @@
         re = t(36998),
         te = t(16169),
         ne = t(85651),
-        ie = t(69338),
+        ie = t(7770),
         ae = t(58218),
         ce = t(25508);
       const le = 30,
@@ -614,7 +614,7 @@
           a.createElement(
             "div",
             { className: ee().ChangeCount },
-            (0, E.kb)("#PackageGrid_PendingChangeCount", n)
+            (0, E.kb)("#PackageGrid_PendingChangeCount", n),
           ),
           a.createElement(
             "div",
@@ -627,7 +627,7 @@
                 disabled: 0 == n,
                 className: (0, v.Z)(ee().Button, ee().SaveButton),
               },
-              (0, E.Xx)("#PackageGrid_SaveChangesDialogButton")
+              (0, E.Xx)("#PackageGrid_SaveChangesDialogButton"),
             ),
             a.createElement(
               s.zx,
@@ -636,9 +636,9 @@
                 onClick: (e) =>
                   (0, _.AM)(a.createElement(he, null), (0, b.RA)(e)),
               },
-              (0, E.Xx)("#PackageGrid_DiscardChangesDialogButton")
-            )
-          )
+              (0, E.Xx)("#PackageGrid_DiscardChangesDialogButton"),
+            ),
+          ),
         );
       }
       function de(e) {
@@ -655,14 +655,14 @@
                   a.createElement(ue, {
                     key: `${e.packageID}_${e.strPriceKey}`,
                     override: e,
-                  })
-                )
+                  }),
+                ),
               )
             : a.createElement(
                 s.zx,
                 { onClick: () => n(!0), className: ee().SeeDetailsButton },
-                (0, E.Xx)("#PackageGrid_SeePendingChanges")
-              )
+                (0, E.Xx)("#PackageGrid_SeePendingChanges"),
+              ),
         );
       }
       function ue(e) {
@@ -690,7 +690,7 @@
               className: ee().Currency,
               strTooltipClassname: ee().HoverToolTip,
             },
-            n
+            n,
           ),
           a.createElement(
             w.HP,
@@ -700,7 +700,7 @@
               className: ee().PackageName,
               strTooltipClassname: ee().HoverToolTip,
             },
-            l
+            l,
           ),
           E
             ? a.createElement(j, { packageID: t, strPriceKey: n })
@@ -710,20 +710,20 @@
             { className: ee().OldPriceCtn },
             a.createElement("div", { className: ee().PricePrefix }, o),
             a.createElement("span", { className: ee().OldPrice }, s),
-            a.createElement("div", { className: ee().PriceSuffix }, d)
+            a.createElement("div", { className: ee().PriceSuffix }, d),
           ),
           a.createElement(
             "span",
             { className: ee().ChangeArrow },
-            a.createElement(A.Ehc, { angle: 90 })
+            a.createElement(A.Ehc, { angle: 90 }),
           ),
           a.createElement(
             "div",
             { className: ee().NewPriceCtn },
             a.createElement("div", { className: ee().PricePrefix }, o),
             a.createElement("span", { className: ee().NewPrice }, m),
-            a.createElement("div", { className: ee().PriceSuffix }, d)
-          )
+            a.createElement("div", { className: ee().PriceSuffix }, d),
+          ),
         );
       }
       function ge(e) {
@@ -772,7 +772,7 @@
           u = (0, E.Xx)(
             d
               ? "#PackageGrid_NavigationWarning_Title"
-              : "#PricingDashboard_SavePricesTitle"
+              : "#PricingDashboard_SavePricesTitle",
           ),
           m = (0, E.kb)("#PricingDashboard_SavePricesExplanation", n.length);
         if (o.loadFailed)
@@ -791,9 +791,9 @@
               (0, E.yu)(
                 "#PricingDashboard_SavePrices_FailedToLoad",
                 a.createElement("div", null),
-                a.createElement("div", null)
-              )
-            )
+                a.createElement("div", null),
+              ),
+            ),
           );
         let h = !1,
           b = !1,
@@ -802,7 +802,7 @@
         for (const e of n) {
           const { nMinPriceInCents: r, nMaxPriceInCents: t } = (0, P.rX)(
             e.packageID,
-            e.strPriceKey
+            e.strPriceKey,
           );
           (h = h || e.nPriceInCents < r),
             (b = b || (!!t && e.nPriceInCents > t)),
@@ -825,7 +825,7 @@
               (e.closeModal(),
               (0, _.AM)(
                 a.createElement(_e, { bAutoPublish: c, fnOnSuccess: S }),
-                window
+                window,
               ));
           };
         return a.createElement(
@@ -847,7 +847,7 @@
                 a.createElement(
                   "div",
                   { className: ee().NavigationWarning },
-                  (0, E.Xx)("#PackageGrid_NavigationWarning")
+                  (0, E.Xx)("#PackageGrid_NavigationWarning"),
                 ),
               m,
               N &&
@@ -856,7 +856,7 @@
                   { className: ee().PricePreviewWarning },
                   " ",
                   (0, E.Xx)("#PricingDashboard_PreviewWarning"),
-                  " "
+                  " ",
                 ),
               C &&
                 a.createElement(
@@ -864,7 +864,7 @@
                   { className: ee().PricePreviewWarning },
                   " ",
                   C,
-                  " "
+                  " ",
                 ),
               a.createElement(de, { rgLocalPriceOverrides: n }),
               a.createElement(me, { priceIncrease: D, nextDiscount: o.days }),
@@ -872,7 +872,7 @@
                 value: c,
                 onChange: l,
                 nextDiscount: o.days,
-              })
+              }),
             ),
             a.createElement(
               s.$_,
@@ -883,7 +883,7 @@
                     onOK: I,
                     bOKDisabled: f,
                     strUpdateText: (0, E.Xx)(
-                      "#PackageGrid_NavigateWithoutSavingButton"
+                      "#PackageGrid_NavigateWithoutSavingButton",
                     ),
                     onUpdate: () => {
                       i(), e.closeModal(), S();
@@ -895,9 +895,9 @@
                     onOK: I,
                     bOKDisabled: f,
                     onCancel: e.closeModal,
-                  })
-            )
-          )
+                  }),
+            ),
+          ),
         );
       }
       function me(e) {
@@ -908,13 +908,13 @@
               n < le
                 ? (0, E.Xx)(
                     "#PricingDashboard_SavePrice_FutureDiscountTooSoon",
-                    le
+                    le,
                   )
                 : n < oe
                 ? (0, E.Xx)(
                     "#PricingDashboard_SavePrice_FutureDiscountSoon",
                     n,
-                    le
+                    le,
                   )
                 : (0, E.Xx)("#PricingDashboard_SavePrice_CooldownWarning", le)),
             a.createElement(
@@ -923,15 +923,15 @@
               a.createElement(
                 "div",
                 { className: ee().PriceChangeSaveWarningArrow },
-                a.createElement(A.Ehc, { angle: 0 })
+                a.createElement(A.Ehc, { angle: 0 }),
               ),
               a.createElement(
                 "div",
                 { className: ee().HigherPriceWarning },
                 " ",
                 r,
-                " "
-              )
+                " ",
+              ),
             ))
           : null;
       }
@@ -953,7 +953,7 @@
             checked: !0 === r,
             onChange: () => t(!0),
             label: (0, E.Xx)("#PricingDashboard_AutoPublish_Enabled"),
-          })
+          }),
         );
       }
       function _e(e) {
@@ -979,7 +979,7 @@
                     return void u(
                       null !== (e = i.msg) && void 0 !== e
                         ? e
-                        : (0, E.Xx)("#PricingDashboard_SavePricesError")
+                        : (0, E.Xx)("#PricingDashboard_SavePricesError"),
                     );
                 }
                 s(t.length), r();
@@ -999,7 +999,7 @@
               bDestructiveWarning: !0,
               closeModal: r,
             },
-            null != d ? d : a.createElement(ie.V, { position: "center" })
+            null != d ? d : a.createElement(ie.V, { position: "center" }),
           )
         );
       }
@@ -1017,7 +1017,7 @@
             closeModal: r,
           },
           (0, E.kb)("#PricingDashboard_DiscardChangesExplanation", t.length),
-          a.createElement(de, { rgLocalPriceOverrides: t })
+          a.createElement(de, { rgLocalPriceOverrides: t }),
         );
       }
       var be, Ee;
@@ -1036,7 +1036,7 @@
                   i([e], void 0, 6e4).then((e) =>
                     (0, Y.mG)(this, void 0, void 0, function* () {
                       n(e);
-                    })
+                    }),
                   ));
               }, [r, e, n, i]),
               r
@@ -1045,7 +1045,7 @@
                   : 1 != t
                   ? be.FailedToLoad
                   : (0, re.co)(e).every(
-                      (e) => e.rtStartDate > c + te.LX || e.rtEndDate < c
+                      (e) => e.rtStartDate > c + te.LX || e.rtEndDate < c,
                     )
                   ? be.OK
                   : be.RequiresCooldown
@@ -1062,7 +1062,7 @@
                     n(Ee.Loading),
                       1 == (yield r(e)).success ? n(Ee.OK) : n(Ee.Failed);
                   }),
-                [n, r, e]
+                [n, r, e],
               ),
               ePublishState: t,
             };
@@ -1072,7 +1072,7 @@
           s = (0, E.yu)(
             "#PricingDashboard_PriceProposal_Publish_FailedToLoad",
             a.createElement("div", null),
-            a.createElement("div", null)
+            a.createElement("div", null),
           );
         else if (c == be.RequiresCooldown) {
           let e = a.createElement(h.ns, {
@@ -1085,31 +1085,31 @@
               "div",
               null,
               (0, E.Xx)(
-                "#PricingDashboard_PriceProposal_Publish_CooldownError1"
-              )
+                "#PricingDashboard_PriceProposal_Publish_CooldownError1",
+              ),
             ),
             a.createElement(
               "div",
               null,
               (0, E.yu)(
                 "#PricingDashboard_PriceProposal_Publish_CooldownError2",
-                e
-              )
-            )
+                e,
+              ),
+            ),
           );
         } else
           o == Ee.Failed &&
             (s = (0, E.yu)(
               "#PricingDashboard_PriceProposal_Publish_FailedToPublish",
               a.createElement("div", null),
-              a.createElement("div", null)
+              a.createElement("div", null),
             ));
         if (s) {
           let e = (0, E.Xx)("#PricingDashboard_PriceProposal_Publish_Title");
           return (
             c == be.RequiresCooldown &&
               (e = (0, E.Xx)(
-                "#PricingDashboard_PriceProposal_Publish_CantPublishTitle"
+                "#PricingDashboard_PriceProposal_Publish_CantPublishTitle",
               )),
             a.createElement(
               p.uH,
@@ -1120,7 +1120,7 @@
                 onCancel: r,
                 closeModal: r,
               },
-              a.createElement("div", { className: ee().PublishErrorDialog }, s)
+              a.createElement("div", { className: ee().PublishErrorDialog }, s),
             )
           );
         }
@@ -1129,11 +1129,11 @@
           p.uH,
           {
             strTitle: (0, E.Xx)(
-              "#PricingDashboard_PriceProposal_Publish_Title"
+              "#PricingDashboard_PriceProposal_Publish_Title",
             ),
             bAlertDialog: !1,
             strOKButtonText: (0, E.Xx)(
-              "#PricingDashboard_PriceProposal_Publish_Button"
+              "#PricingDashboard_PriceProposal_Publish_Button",
             ),
             bOKDisabled: d,
             bCancelDisabled: d,
@@ -1149,18 +1149,18 @@
               null,
               (0, E.kb)(
                 "#PricingDashboard_PriceProposal_Publish_Explanation",
-                n.length
+                n.length,
               ),
               i &&
                 a.createElement(
                   "div",
                   { className: ee().PublishWarning },
                   (0, E.Xx)(
-                    "#PricingDashboard_PriceProposal_Publish_CooldownWarning"
-                  )
+                    "#PricingDashboard_PriceProposal_Publish_CooldownWarning",
+                  ),
                 ),
-              a.createElement(de, { rgLocalPriceOverrides: n })
-            )
+              a.createElement(de, { rgLocalPriceOverrides: n }),
+            ),
         );
       }
       !(function (e) {
@@ -1207,15 +1207,15 @@
               "div",
               { className: x().CurrencyNameCtn },
               t,
-              a.createElement("span", { className: x().CurrencyName }, n)
-            )
+              a.createElement("span", { className: x().CurrencyName }, n),
+            ),
           ),
           i > 0 &&
             a.createElement(V, {
               hoverKey: t,
               className: x().CurrencyMore,
               renderHover: () => a.createElement(ke, { priceKey: t }),
-            })
+            }),
         );
       }
       function Ne(e) {
@@ -1239,10 +1239,10 @@
             (D = (0, E.Xx)(
               "#PricingDashboard_PriceProposal_WaitingForReview_PartnerWillPublish_ttip",
               g,
-              o
+              o,
             )),
             (h = (0, E.Xx)(
-              "#PricingDashboard_PriceProposal_WaitingForReview_PartnerWillPublish"
+              "#PricingDashboard_PriceProposal_WaitingForReview_PartnerWillPublish",
             )))
           : 1 != (null == l ? void 0 : l.eState) || l.bPartnerWillPublish
           ? 4 == (null == l ? void 0 : l.eState)
@@ -1254,23 +1254,23 @@
                   onClick: (e) =>
                     (0, _.AM)(
                       a.createElement(De, { packageID: i }),
-                      (0, b.RA)(e)
+                      (0, b.RA)(e),
                     ),
                 },
                 (0, E.Xx)(
-                  "#PricingDashboard_PriceProposal_PublishDialog_Button"
-                )
+                  "#PricingDashboard_PriceProposal_PublishDialog_Button",
+                ),
               )))
             : ((p = x().NoProposalsInFlight),
               (D = (0, E.Xx)(
-                "#PricingDashboard_PriceProposal_NoneInFlight_ttip"
+                "#PricingDashboard_PriceProposal_NoneInFlight_ttip",
               )),
               (h = (0, E.Xx)("#PricingDashboard_PriceProposal_NoneInFlight")))
           : ((p = x().AutoPublish),
             (D = (0, E.Xx)(
               "#PricingDashboard_PriceProposal_WaitingForReview_AutoPublish_ttip",
               g,
-              o
+              o,
             )),
             (h = a.createElement(
               "div",
@@ -1281,9 +1281,9 @@
                 "span",
                 null,
                 (0, E.Xx)(
-                  "#PricingDashboard_PriceProposal_WaitingForReview_AutoPublish"
-                )
-              )
+                  "#PricingDashboard_PriceProposal_WaitingForReview_AutoPublish",
+                ),
+              ),
             )));
         let C = c || !!l;
         return a.createElement(
@@ -1293,14 +1293,14 @@
             w.HP,
             { toolTipContent: D, className: x().StateText },
             a.createElement("div", { className: x().ProposalStateKey }),
-            h
+            h,
           ),
           C &&
             a.createElement(V, {
               hoverKey: m,
               className: x().PackageMore,
               renderHover: () => a.createElement(Te, { packageID: i }),
-            })
+            }),
         );
       }
       function fe(e) {
@@ -1309,14 +1309,14 @@
             (e, r) =>
               (0, _.AM)(
                 a.createElement(Pe, { strContinueUrl: r }),
-                (0, b.RA)(e)
+                (0, b.RA)(e),
               ),
-            []
+            [],
           ),
           n = (0, ve.useQueryClient)(),
           i = a.useMemo(
             () => ({ client: n, fnBLocalChangesExist: r, fnWarnUser: t }),
-            [r, t, n]
+            [r, t, n],
           ),
           c = (0, X.zV)(i),
           l = (0, X.zQ)(i),
@@ -1331,16 +1331,16 @@
                 field: "proposalState",
                 headerSort: !1,
                 formatter: (0, I.reactFormatter)(
-                  a.createElement(Ne, Object.assign({}, g))
+                  a.createElement(Ne, Object.assign({}, g)),
                 ),
                 cssClass: x().PriceProposalState,
                 width: 200,
                 frozen: !0,
                 headerTooltip: (0, E.Xx)(
-                  "#PricingDashboard_Column_PriceProposalState_ttip"
+                  "#PricingDashboard_Column_PriceProposalState_ttip",
                 ),
               }),
-              [g]
+              [g],
             ));
         var g;
         const { rgSupportedPriceKeys: m } = (0, P.OB)();
@@ -1372,7 +1372,7 @@
           {
             className: (0, v.Z)(x().PricingGridCtn, n > 0 && "PendingVisible"),
           },
-          a.createElement(Ie, Object.assign({}, e))
+          a.createElement(Ie, Object.assign({}, e)),
         );
       }
       const Ie = a.memo(function (e) {
@@ -1395,7 +1395,7 @@
                   (e =
                     i.appids.length > 1
                       ? (0, E.Xx)(
-                          "#PackageGrid_MultipleBaseGamesFoundForPackage"
+                          "#PackageGrid_MultipleBaseGamesFoundForPackage",
                         )
                       : (0, E.Xx)("#PackageGrid_NoBaseGameFoundForPackage"));
                 const a = {
@@ -1417,7 +1417,7 @@
           (e) => {
             c(e.data);
           },
-          [c]
+          [c],
         );
         const _ = new URLSearchParams(window.location.search),
           h = {
@@ -1454,7 +1454,7 @@
               data: "proposed",
             },
           ],
-          []
+          [],
         );
         return a.createElement(
           a.Fragment,
@@ -1474,9 +1474,9 @@
               checked: t,
               onChange: n,
               label: (0, E.Xx)(
-                "#PricingDashboard_ShowCompactModeCheckBoxLabel"
+                "#PricingDashboard_ShowCompactModeCheckBoxLabel",
               ),
-            })
+            }),
           ),
           a.createElement(
             "div",
@@ -1493,10 +1493,10 @@
                   data: d,
                   options: h,
                 }),
-                a.createElement("br", null)
-              )
-            )
-          )
+                a.createElement("br", null),
+              ),
+            ),
+          ),
         );
       });
       function ke(e) {
@@ -1512,9 +1512,9 @@
             a.createElement(
               "div",
               { className: f().DetailLabel, onClick: n },
-              (0, E.Xx)("#PricingDashboard_RevertAllCurrency", t)
-            )
-          )
+              (0, E.Xx)("#PricingDashboard_RevertAllCurrency", t),
+            ),
+          ),
         );
       }
       function Te(e) {
@@ -1533,15 +1533,15 @@
               a.createElement(
                 "div",
                 { className: f().DetailLabel, onClick: n },
-                (0, E.Xx)("#PricingDashboard_RevertAllPackage")
+                (0, E.Xx)("#PricingDashboard_RevertAllPackage"),
               ),
             !!i &&
               a.createElement(
                 "div",
                 { className: f().DetailLabel, onClick: c },
-                (0, E.Xx)("#PricingDashboard_CancelPriceProposal")
-              )
-          )
+                (0, E.Xx)("#PricingDashboard_CancelPriceProposal"),
+              ),
+          ),
         );
       }
       var we = t(36105),
@@ -1574,19 +1574,19 @@
               href: D.De.PARTNER_BASE_URL + "doc/store/pricing/csv",
               target: "_blank",
             },
-            (0, E.Xx)("#PricingDashboard_ImportExport_DocLink")
+            (0, E.Xx)("#PricingDashboard_ImportExport_DocLink"),
           ),
           a.createElement("br", null),
           a.createElement("br", null),
           a.createElement(
             "h3",
             null,
-            (0, E.Xx)("#PricingDashboard_SubtitleExport")
+            (0, E.Xx)("#PricingDashboard_SubtitleExport"),
           ),
           a.createElement(
             "div",
             { className: Ae().Instructions },
-            (0, E.Xx)("#PricingDashboard_ImportExport_DownloadInstructions")
+            (0, E.Xx)("#PricingDashboard_ImportExport_DownloadInstructions"),
           ),
           a.createElement(
             "div",
@@ -1599,8 +1599,8 @@
                   "span",
                   { className: Ae().OptionDesc },
                   (0, E.Xx)(
-                    "#PricingDashboard_ImportExport_DownloadVisible_Desc"
-                  )
+                    "#PricingDashboard_ImportExport_DownloadVisible_Desc",
+                  ),
                 ),
                 a.createElement(
                   s.zx,
@@ -1610,14 +1610,14 @@
                     onClick: () => Ge(c, o),
                   },
                   (0, E.Xx)(
-                    "#PricingDashboard_ImportExport_DownloadVisible_Button"
+                    "#PricingDashboard_ImportExport_DownloadVisible_Button",
                   ),
                   a.createElement(
                     "span",
                     null,
-                    (0, E.Xx)("#PricingDashboard_PackageCount", c.length)
-                  )
-                )
+                    (0, E.Xx)("#PricingDashboard_PackageCount", c.length),
+                  ),
+                ),
               ),
             a.createElement(
               "div",
@@ -1625,7 +1625,7 @@
               a.createElement(
                 "span",
                 { className: Ae().OptionDesc },
-                (0, E.Xx)("#PricingDashboard_ImportExport_DownloadAll_Desc")
+                (0, E.Xx)("#PricingDashboard_ImportExport_DownloadAll_Desc"),
               ),
               a.createElement(
                 s.zx,
@@ -1638,22 +1638,22 @@
                 a.createElement(
                   "span",
                   null,
-                  (0, E.Xx)("#PricingDashboard_PackageCount", i.length)
-                )
-              )
-            )
+                  (0, E.Xx)("#PricingDashboard_PackageCount", i.length),
+                ),
+              ),
+            ),
           ),
           a.createElement("br", null),
           a.createElement("br", null),
           a.createElement(
             "h3",
             null,
-            (0, E.Xx)("#PricingDashboard_SubtitleImport")
+            (0, E.Xx)("#PricingDashboard_SubtitleImport"),
           ),
           a.createElement(
             "div",
             { className: Ae().Instructions },
-            (0, E.Xx)("#PricingDashboard_ImportExport_UploadInstructions")
+            (0, E.Xx)("#PricingDashboard_ImportExport_UploadInstructions"),
           ),
           a.createElement(
             "div",
@@ -1664,7 +1664,7 @@
               a.createElement(
                 "span",
                 { className: Ae().OptionDesc },
-                (0, E.Xx)("#PricingDashboard_ImportExport_Upload_Desc")
+                (0, E.Xx)("#PricingDashboard_ImportExport_Upload_Desc"),
               ),
               a.createElement(
                 s.zx,
@@ -1692,17 +1692,17 @@
                                 strFilename: n.name,
                                 parseResult: i,
                               }),
-                              t
+                              t,
                             ),
                               r();
                           }
                         });
                       })(e, r),
-                  })
-                )
-              )
-            )
-          )
+                  }),
+                ),
+              ),
+            ),
+          ),
         );
       }
       function Ge(e, r) {
@@ -1740,7 +1740,7 @@
               e,
               r,
               t,
-              n
+              n,
             ) {
               var i;
               const a = [],
@@ -1775,11 +1775,11 @@
           p.uH,
           {
             strTitle: (0, E.Xx)(
-              "#PricingDashboard_ImportExport_UploadProgressTitle"
+              "#PricingDashboard_ImportExport_UploadProgressTitle",
             ),
             strDescription: (0, E.Xx)(
               "#PricingDashboard_ImportExport_UploadProgressDetails",
-              m
+              m,
             ),
             bAlertDialog: !b,
             strOKButtonText: D,
@@ -1792,11 +1792,11 @@
           a.createElement(
             "div",
             { className: Ae().ParseResultCount },
-            (0, E.Xx)("#PricingDashboard_ImportExport_UploadResults", d.length)
+            (0, E.Xx)("#PricingDashboard_ImportExport_UploadResults", d.length),
           ),
           b &&
             (0, E.Xx)(
-              "#PricingDashboard_ImportExport_UploadNextStepInstructions"
+              "#PricingDashboard_ImportExport_UploadNextStepInstructions",
             ),
           !!(null === (r = c.errors) || void 0 === r ? void 0 : r.length) &&
             a.createElement(
@@ -1807,8 +1807,8 @@
                 { className: Ae().ErrorHeader },
                 (0, E.Xx)(
                   "#PricingDashboard_ImportExport_UploadErrorsHeader",
-                  null === (t = c.errors) || void 0 === t ? void 0 : t.length
-                )
+                  null === (t = c.errors) || void 0 === t ? void 0 : t.length,
+                ),
               ),
               a.createElement(
                 "div",
@@ -1820,11 +1820,11 @@
                     { key: `${e.message}-${r}`, className: Ae().Error },
                     `${null !== (t = e.row) && void 0 !== t ? t : "-"} ${
                       e.message
-                    }`
+                    }`,
                   );
-                })
-              )
-            )
+                }),
+              ),
+            ),
         );
       }
       function Me(e) {
@@ -1849,7 +1849,7 @@
                   onClick: (e) =>
                     (0, _.AM)(a.createElement(We, null), (0, b.RA)(e)),
                 },
-                (0, E.Xx)("#PricingDashboard_ApplyGuidelinesDialog_Button")
+                (0, E.Xx)("#PricingDashboard_ApplyGuidelinesDialog_Button"),
               ),
               a.createElement(
                 s.zx,
@@ -1857,33 +1857,33 @@
                   onClick: (e) =>
                     (0, _.AM)(a.createElement(Oe, null), (0, b.RA)(e)),
                 },
-                (0, E.Xx)("#PricingDashboard_ImportExportButton")
+                (0, E.Xx)("#PricingDashboard_ImportExportButton"),
               ),
               a.createElement(
                 s.zx,
                 { onClick: (e) => (0, h.b8)(e, t) },
-                (0, E.Xx)("#PricingDashboard_DocumentationButton")
+                (0, E.Xx)("#PricingDashboard_DocumentationButton"),
               ),
               a.createElement(
                 s.zx,
                 { onClick: (e) => (0, h.b8)(e, n) },
-                (0, E.Xx)("#PricingDashboard_ContactUsButton")
-              )
-            )
+                (0, E.Xx)("#PricingDashboard_ContactUsButton"),
+              ),
+            ),
           ),
           0 == r.length &&
             a.createElement(
               "div",
               { className: u().ErrorMessage },
-              (0, E.Xx)("#PricingDashboard_Error_NoPackages")
+              (0, E.Xx)("#PricingDashboard_Error_NoPackages"),
             ),
           r.length > 0 &&
             a.createElement(
               a.Fragment,
               null,
               a.createElement(Se, { packageData: r }),
-              a.createElement(se, null)
-            )
+              a.createElement(se, null),
+            ),
         );
       }
       function We(e) {
@@ -1897,18 +1897,18 @@
             strTitle: (0, E.Xx)("#PricingDashboard_ApplyGuidelines_Header"),
             onOK: t,
             strOKButtonText: (0, E.Xx)(
-              "#PricingDashboard_ApplyGuidelines_Button"
+              "#PricingDashboard_ApplyGuidelines_Button",
             ),
           },
           a.createElement(
             "div",
             { className: u().Instructions },
-            (0, E.Xx)("#PricingDashboard_ApplyGuidelines_Instructions")
+            (0, E.Xx)("#PricingDashboard_ApplyGuidelines_Instructions"),
           ),
           a.createElement(
             "div",
             { className: u().Instructions },
-            (0, E.Xx)("#PricingDashboard_ApplyGuidelines_Instructions2")
+            (0, E.Xx)("#PricingDashboard_ApplyGuidelines_Instructions2"),
           ),
           a.createElement("br", null),
           a.createElement("br", null),
@@ -1918,13 +1918,13 @@
               href: D.De.PARTNER_BASE_URL + "doc/store/pricing#5",
               target: "_blank",
             },
-            (0, E.Xx)("#PricingDashboard_ApplyGuidelines_Link")
+            (0, E.Xx)("#PricingDashboard_ApplyGuidelines_Link"),
           ),
           a.createElement(
             "div",
             { className: u().Instructions },
-            (0, E.Xx)("#PricingDashboard_ApplyGuidelines_Assurance")
-          )
+            (0, E.Xx)("#PricingDashboard_ApplyGuidelines_Assurance"),
+          ),
         );
       }
       var Le = t(70903);
@@ -1945,15 +1945,15 @@
                       o.m,
                       Object.assign({}, e, {
                         strConfigID: "application_config",
-                      })
+                      }),
                     ),
                 }),
                 a.createElement(l.AW, {
                   path: Fe.PricingDashboard(),
                   render: (e) => a.createElement(Me, null),
                 }),
-                a.createElement(l.AW, { component: i.R })
-              )
+                a.createElement(l.AW, { component: i.R }),
+              ),
             )
           : null;
       }

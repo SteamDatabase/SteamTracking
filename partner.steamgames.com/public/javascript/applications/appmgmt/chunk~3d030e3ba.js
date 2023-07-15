@@ -338,7 +338,7 @@
                     else {
                       if (3 != a && 4 != a)
                         throw new Error(
-                          "Not expecting to accumulate buffer in state " + a
+                          "Not expecting to accumulate buffer in state " + a,
                         );
                       r += i;
                     }
@@ -374,9 +374,9 @@
                   language: this.m_renderingLanguage,
                   key: "bbnode_" + a++,
                 }),
-                ...o
+                ...o,
               ),
-            n
+            n,
           );
           return o.length > 1
             ? r.createElement(r.Fragment, null, ...o)
@@ -487,8 +487,8 @@
                       "data-copystyle": "merge-adjacent",
                       "bbcode-text": e,
                     },
-                    e
-                  )
+                    e,
+                  ),
                 )
               : this.reactNodes.push(e));
         }
@@ -574,7 +574,7 @@
       function i(e) {
         let t = new RegExp(
             "^(steam://openurl(_external)?/)?((f|ht)tps?://)?([^@/?#]*@)?([^/#?]+)",
-            "im"
+            "im",
           ),
           n = e.match(t);
         return n && n.length > 5 ? n[6].toString() : e;
@@ -595,46 +595,46 @@
               (e = (e = (e = (e = (e = (e = (e = (e = (e = (e = (e = (e = (e =
                 (e = (e = (e = e.replace(
                   /https:\/\/media.steampowered.com\//g,
-                  r.De.MEDIA_CDN_URL
+                  r.De.MEDIA_CDN_URL,
                 )).replace(
                   /https:\/\/cdn.akamai.steamstatic.com\//g,
-                  r.De.MEDIA_CDN_URL
+                  r.De.MEDIA_CDN_URL,
                 )).replace(
                   /https:\/\/cdn.cloudflare.steamstatic.com\//g,
-                  r.De.MEDIA_CDN_URL
+                  r.De.MEDIA_CDN_URL,
                 )).replace(
                   /https:\/\/cdn.edgecast.steamstatic.com\//g,
-                  r.De.MEDIA_CDN_URL
+                  r.De.MEDIA_CDN_URL,
                 )).replace(
                 /https:\/\/cdn.dota2.com\//g,
-                r.De.MEDIA_CDN_URL
+                r.De.MEDIA_CDN_URL,
               )).replace(
                 /https:\/\/storefront.steampowered.com\/v\/gfx\//g,
-                r.De.MEDIA_CDN_URL + "steam/"
+                r.De.MEDIA_CDN_URL + "steam/",
               )).replace(
                 /https:\/\/clan.akamai.steamstatic.com\//g,
-                r.De.CLAN_CDN_ASSET_URL
+                r.De.CLAN_CDN_ASSET_URL,
               )).replace(
                 /https:\/\/clan.cloudflare.steamstatic.com\//g,
-                r.De.CLAN_CDN_ASSET_URL
+                r.De.CLAN_CDN_ASSET_URL,
               )).replace(
                 /https:\/\/cdn.steamcommunity.com\//g,
-                r.De.COMMUNITY_CDN_URL
+                r.De.COMMUNITY_CDN_URL,
               )).replace(
                 /https:\/\/community.akamai.steamstatic.com\//g,
-                r.De.COMMUNITY_CDN_URL
+                r.De.COMMUNITY_CDN_URL,
               )).replace(
                 /https:\/\/community.cloudflare.steamstatic.com\//g,
-                r.De.COMMUNITY_CDN_URL
+                r.De.COMMUNITY_CDN_URL,
               )).replace(
                 /https:\/\/community.edgecast.steamstatic.com\//g,
-                r.De.COMMUNITY_CDN_URL
+                r.De.COMMUNITY_CDN_URL,
               )).replace(/{IMG_URL}/g, r.De.IMG_URL)).replace(
                 /{MEDIA_CDN_URL}/g,
-                r.De.MEDIA_CDN_URL
+                r.De.MEDIA_CDN_URL,
               )).replace(
                 /{MEDIA_CDN_COMMUNITY_URL}/g,
-                r.De.MEDIA_CDN_COMMUNITY_URL
+                r.De.MEDIA_CDN_COMMUNITY_URL,
               )).replace(/{COMMUNITY_CDN_URL}/g, r.De.COMMUNITY_CDN_URL)),
               (e = (0, o.HZ)(e)))
           : e;

@@ -50,60 +50,64 @@
         NewThrobber: "throbber_NewThrobber_tAKvs",
       };
     },
-    69338: (e, r, t) => {
+    7770: (e, r, t) => {
       "use strict";
-      t.d(r, { V: () => n });
+      t.d(r, { V: () => i });
       var o = t(89526),
         c = t(19304),
         b = t(23794),
         l = t.n(b);
       const s =
-          t.p +
-          "images/applications/appmgmt/steam_spinner.png?v=valveisgoodatcaching",
-        n = o.memo(function (e) {
-          const {
-            className: r,
-            size: t,
-            string: b,
-            position: n,
-            static: i,
-            msDelayAppear: h,
-          } = e;
-          let f = [l().LoadingWrapper, "SteamLogoThrobber", a(t)];
-          const [m, u] = o.useState(!h);
-          return (
-            (0, o.useEffect)(() => {
-              if (m) return;
-              const e = setTimeout(() => u(!0), h);
-              return () => clearTimeout(e);
-            }, [h, m]),
-            void 0 === b && f.push(l().noString),
-            r && f.push(r),
-            i && f.push(l().Static),
-            o.createElement(
-              "div",
-              {
-                className: (0, c.Z)(
-                  "center" == n && l().throbber_center_wrapper,
-                  h && l().ThrobberDelayAppear,
-                  m && l().Visible
-                ),
-              },
-              m &&
+        t.p +
+        "images/applications/appmgmt/steam_spinner.png?v=valveisgoodatcaching";
+      var n = t(32765),
+        a = t(46132);
+      const i = o.memo(function (e) {
+        const {
+          className: r,
+          size: t,
+          string: b,
+          position: i,
+          static: f,
+          msDelayAppear: m,
+        } = e;
+        let u = [l().LoadingWrapper, "SteamLogoThrobber", h(t)];
+        const [d, _] = o.useState(!m),
+          p = !(n.De.IN_CLIENT && (0, a.px)(n.De.LAUNCHER_TYPE));
+        return (
+          (0, o.useEffect)(() => {
+            if (d) return;
+            const e = setTimeout(() => _(!0), m);
+            return () => clearTimeout(e);
+          }, [m, d]),
+          void 0 === b && u.push(l().noString),
+          r && u.push(r),
+          f && u.push(l().Static),
+          o.createElement(
+            "div",
+            {
+              className: (0, c.Z)(
+                "center" == i && l().throbber_center_wrapper,
+                m && l().ThrobberDelayAppear,
+                d && l().Visible,
+              ),
+            },
+            d &&
+              p &&
+              o.createElement(
+                "div",
+                { className: u.join(" ") },
                 o.createElement(
                   "div",
-                  { className: f.join(" ") },
-                  o.createElement(
-                    "div",
-                    { className: l().NewThrobber },
-                    o.createElement("img", { src: s })
-                  )
+                  { className: l().NewThrobber },
+                  o.createElement("img", { src: s }),
                 ),
-              Boolean(b) &&
-                o.createElement("div", { className: l().ThrobberText }, b)
-            )
-          );
-        });
+              ),
+            Boolean(b) &&
+              o.createElement("div", { className: l().ThrobberText }, b),
+          )
+        );
+      });
       o.memo(function (e) {
         const {
           className: r,
@@ -111,45 +115,45 @@
           string: b,
           position: s,
           static: n,
-          msDelayAppear: h,
+          msDelayAppear: a,
         } = e;
-        let f = [l().LoadingWrapper, "SteamLogoThrobber", a(t)];
-        const [m, u] = o.useState(!h);
+        let i = [l().LoadingWrapper, "SteamLogoThrobber", h(t)];
+        const [m, u] = o.useState(!a);
         return (
           (0, o.useEffect)(() => {
             if (m) return;
-            const e = setTimeout(() => u(!0), h);
+            const e = setTimeout(() => u(!0), a);
             return () => clearTimeout(e);
-          }, [h, m]),
-          void 0 === b && f.push(l().noString),
-          r && f.push(r),
-          n && f.push(l().Static),
+          }, [a, m]),
+          void 0 === b && i.push(l().noString),
+          r && i.push(r),
+          n && i.push(l().Static),
           o.createElement(
             "div",
             {
               className: (0, c.Z)(
                 "center" == s && l().throbber_center_wrapper,
-                h && l().ThrobberDelayAppear,
-                m && l().Visible
+                a && l().ThrobberDelayAppear,
+                m && l().Visible,
               ),
             },
             m &&
               o.createElement(
                 "div",
-                { className: f.join(" ") },
+                { className: i.join(" ") },
                 o.createElement(
                   "div",
                   { className: l().Throbber },
-                  o.createElement(i, { className: l().base }),
-                  o.createElement(i, { className: l().blur })
-                )
+                  o.createElement(f, { className: l().base }),
+                  o.createElement(f, { className: l().blur }),
+                ),
               ),
             Boolean(b) &&
-              o.createElement("div", { className: l().ThrobberText }, b)
+              o.createElement("div", { className: l().ThrobberText }, b),
           )
         );
       });
-      function a(e) {
+      function h(e) {
         switch (e) {
           case "small":
             return l().throbber_small;
@@ -163,7 +167,7 @@
             return l().throbber_large;
         }
       }
-      function i(e) {
+      function f(e) {
         let r = "SVGIcon_Button SVGIcon_Throbber ";
         return (
           e.className && (r += e.className),
@@ -206,7 +210,7 @@
                 strokeWidth: "6",
                 strokeMiterlimit: "10",
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754",
-              })
+              }),
             ),
             o.createElement(
               "g",
@@ -362,7 +366,7 @@
                 strokeWidth: "6",
                 strokeMiterlimit: "10",
                 d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-              })
+              }),
             ),
             o.createElement(
               "g",
@@ -370,7 +374,7 @@
               o.createElement("path", {
                 fill: "#ffffff",
                 d: "M89.226,181.579L76.5,176.321c2.256,4.696,6.159,8.628,11.339,10.786 c11.197,4.668,24.11-0.647,28.779-11.854c2.259-5.425,2.274-11.405,0.033-16.841c-2.237-5.436-6.46-9.675-11.886-11.938 c-5.384-2.24-11.151-2.156-16.22-0.244l13.146,5.436c8.261,3.443,12.166,12.93,8.725,21.189 C106.976,181.115,97.486,185.022,89.226,181.579",
-              })
+              }),
             ),
             o.createElement(
               "g",
@@ -383,8 +387,8 @@
                 cx: "161.731",
                 cy: "101.274",
                 r: "23.019",
-              })
-            )
+              }),
+            ),
           )
         );
       }

@@ -27,7 +27,7 @@
                 delete window.g_ShowLoginDialog;
               }
             ),
-            []
+            [],
           ),
           null
         );
@@ -35,7 +35,7 @@
       function u(e) {
         const { redirectUrl: t = s.De.PARTNER_BASE_URL, closeModal: r } = e,
           o = (0, n.useRef)(
-            new l.J(s.De.WEBAPI_BASE_URL).GetServiceTransport()
+            new l.J(s.De.WEBAPI_BASE_URL).GetServiceTransport(),
           ).current,
           [p, u] = (0, n.useState)(!1);
         return n.createElement(
@@ -54,7 +54,7 @@
                 autoFocus: !0,
                 theme: "modal",
                 redirectUrl: t,
-              })
+              }),
         );
       }
     },
