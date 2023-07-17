@@ -49015,7 +49015,8 @@
             null == t ? void 0 : t.GetButtonToken(),
             null == t ? void 0 : t.BExplicitNoAssociationItem(),
             (null == t ? void 0 : t.BHasLegalLinePartner()) ||
-              (null == t ? void 0 : t.BExplicitNoLegalPartnerNeeded()),
+              (null == t ? void 0 : t.BExplicitNoLegalPartnerNeeded()) ||
+              (null == t ? void 0 : t.BUseCustomLegalText()),
           ]),
           [_, g] = (0, fe.jk)((0, s.u$)(r), (0, s.D3)(r), Be);
         return (null == t ? void 0 : t.GetGID()) == e
