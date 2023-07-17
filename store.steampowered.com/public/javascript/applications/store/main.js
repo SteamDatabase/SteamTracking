@@ -6833,7 +6833,7 @@
             i.createElement(o.ET.Provider, { value: I.Root }, g),
           );
         }),
-        d = i.createContext({ focusNavWindow: null, bSupportsFocus: !1 });
+        d = i.createContext({ focusNavWindow: null, bSupportsFocus: !0 });
       function u() {
         var e, t;
         return (

@@ -3996,7 +3996,7 @@
             i.createElement(o.ET.Provider, { value: R.Root }, g),
           );
         }),
-        u = i.createContext({ focusNavWindow: null, bSupportsFocus: !1 });
+        u = i.createContext({ focusNavWindow: null, bSupportsFocus: !0 });
       function d() {
         var e, t;
         return (
