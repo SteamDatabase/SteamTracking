@@ -6162,7 +6162,7 @@
           i.createElement(a.ET.Provider, { value: I.Root }, g),
         );
       });
-      const c = i.createContext({ focusNavWindow: null, bSupportsFocus: !1 });
+      const c = i.createContext({ focusNavWindow: null, bSupportsFocus: !0 });
       function u() {
         var e, t;
         return (

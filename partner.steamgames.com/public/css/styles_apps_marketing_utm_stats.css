@@ -3,6 +3,7 @@
 #utmdetails_table {
 	width: 100%;
     table-layout: fixed;
+    border-collapse: collapse;
 
 	.zero {
 		color: #676767;
@@ -35,8 +36,9 @@
 }
 
 #utmdetails_table thead {
-    position: sticky;
-    top: 110px;
+	position: sticky;
+	top: 110px;
+	z-index: 2;
 }
 
 #utmdetails_table th {
@@ -65,6 +67,10 @@
 	background-color: #303030;
 }
 
+#utmdetails_table tr td {
+    border: 2px solid #1b1e22;
+}
+
 #utmdetails_table tr td.clickable {
 	cursor: pointer;
     position: relative;
@@ -84,7 +90,7 @@
     left: 12px;
     padding: 2px 6px;
     overflow: visible;
-    z-index: 100;
+    z-index: 1;
     width: fit-content;
     box-shadow: 0 0 6px black;
 }

@@ -388,6 +388,10 @@ input.searchAppsInput
 	cursor: pointer;
 }
 
+.joinGroup:hover {
+    filter: brightness(1.1);
+}
+
 .joinGroup.greenlight
 {
 	background-image:url('https://community.cloudflare.steamstatic.com/public/images/sharedfiles/Greenlight_JoinGroup.png');
@@ -395,9 +399,13 @@ input.searchAppsInput
 
 .joinGroupTitle
 {
-	color: #ffffff;
-	padding-top: 16px;
-	margin-left: 56px;
+    color: #ffffff;
+    padding-top: 16px;
+    padding-right: 8px;
+    margin-left: 56px;
+    box-sizing: border-box;
+    position: relative;
+    word-wrap: break-word;
 }
 
 .joinGroupSubtitle

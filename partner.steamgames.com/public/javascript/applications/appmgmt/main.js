@@ -3997,7 +3997,7 @@
           i.createElement(o.ET.Provider, { value: R.Root }, g),
         );
       });
-      const c = i.createContext({ focusNavWindow: null, bSupportsFocus: !1 });
+      const c = i.createContext({ focusNavWindow: null, bSupportsFocus: !0 });
       function u() {
         var e, t;
         return (
@@ -22620,15 +22620,28 @@
         };
       function u(e) {
         const { IN_GAMEPADUI: t, IN_DESKTOPUI: n, IN_VR: i, children: o } = e,
-          a = r.useMemo(
-            () => ({
-              IN_GAMEPADUI: null != t ? t : s.De.IN_GAMEPADUI,
-              IN_DESKTOPUI: null != n && n,
-              IN_VR: null != i && i,
-            }),
-            [t, n, i],
-          );
-        return r.createElement(l.Provider, { value: a }, o);
+          a = c({ bSuppressAssert: !0 }),
+          u = r.useMemo(() => {
+            var e, r, o;
+            return {
+              IN_GAMEPADUI:
+                null !==
+                  (e = null != t ? t : null == a ? void 0 : a.IN_GAMEPADUI) &&
+                void 0 !== e
+                  ? e
+                  : s.De.IN_GAMEPADUI,
+              IN_DESKTOPUI:
+                null !==
+                  (r = null != n ? n : null == a ? void 0 : a.IN_DESKTOPUI) &&
+                void 0 !== r &&
+                r,
+              IN_VR:
+                null !== (o = null != i ? i : null == a ? void 0 : a.IN_VR) &&
+                void 0 !== o &&
+                o,
+            };
+          }, [a, t, n, i]);
+        return r.createElement(l.Provider, { value: u }, o);
       }
       function d(e) {
         const t = c(e);

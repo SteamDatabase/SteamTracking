@@ -720,7 +720,7 @@ p {
 		font-weight: normal;
         position: sticky;
         top: 0;
-		z-index: 1px;
+		z-index: 1;
 	}
 
 	.landingTable tr:not(:first-child), .landingTable .tr:not(:first-child) {

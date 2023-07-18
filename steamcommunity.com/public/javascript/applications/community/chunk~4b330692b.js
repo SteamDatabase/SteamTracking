@@ -1129,6 +1129,9 @@
                   case 21:
                     e = (0, b.Xx)("#GrantAwardError_NotLoggedOn");
                     break;
+                  case 29:
+                    e = (0, b.Xx)("#GrantAwardError_DuplicateRequest");
+                    break;
                   default:
                     e = (0, b.Xx)("#GrantAwardError_Fail");
                 }
