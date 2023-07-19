@@ -956,7 +956,7 @@ function OnInitializeTransactionSuccess( result, bSaveBillingAddress )
 				$J('#paypal-button').html('');
 
                 // fetch the paypal js sdk appropriate to our checkout type
-                var srcParams = 'client-id=' + result.paypalclientid;
+                var srcParams = 'client-id=' + result.paypalclientid + '&currency=' + result.paypalcurrency ;
                 var createOrderFn = async (data, actions) => {
                     g_bPayPalAuthInFlight = true;
                     return $J('#paypaltoken').val();
