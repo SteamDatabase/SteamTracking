@@ -2200,7 +2200,7 @@ Com o modo joystick estilo rato, podes jogar com um comando mas com a precisão 
 	"Library_Details_ControllerAction_BigPicture_Quit" "SAIR DO BIG PICTURE"
 	"Library_Details_ControllerAction_Host_Off"		"DESLIGAR PC TRANSM."
 	"Library_Details_ControllerAction_Host_Suspend"	"SUSPENDER PC TRANSM."
-	"Library_Details_ControllerAction_Host_Restart"	"REINCIAR PC TRANSM."
+	"Library_Details_ControllerAction_Host_Restart"	"REINICIAR PC TRANSM."
 	"Library_Details_ControllerAction_Toggle_HUD"	"HUD DO COMANDO ON/OFF"
 	"Library_Details_ControllerAction_Set_LED"		"DEFINIR LUZ"
 	"Library_Details_ControllerAction_Toggle_Lizard"		"MODO SIMPLES ON/OFF"
@@ -4119,7 +4119,7 @@ Com o modo joystick estilo rato, podes jogar com um comando mas com a precisão 
 	"Library_AddActionSetLayer_Title"	"Adicionar layer de conjunto de ações"
 	"Library_AddActionSetLayer_CodeLabel" "Isto irá adicionar um novo conjunto de ações que será sobreposto no conjunto de ações existente. Designações e modos novos irão substituir os existentes, mas as áreas restantes serão mantidas."
 
-	"Library_ManageActionSet_Title"	"Gerir Conjuntos de Ações"
+	"Library_ManageActionSet_Title"	"Gerir conjuntos de ações"
 	"Library_RenameActionSet_CodeLabel" "Dá um nome novo a este conjunto de ações. Os conjuntos de ações não podem ter um nome vazio."
 
 	"Library_CursorOnActionSet_CodeLabel"	"Se o cursor estiver visível, usar este conjunto:"
@@ -4195,12 +4195,6 @@ Com o modo joystick estilo rato, podes jogar com um comando mas com a precisão 
 	"SteamUI_StreamLaunch_Failed"		"Não foi possível iniciar o streaming."
 	"SteamUI_StreamLaunch_InstallDrivers"	"A função de streaming requer a instalação de drivers adicionais.\nPara tal, segue as instruções que irão aparecer no computador remoto."
 	"SteamUI_StreamLaunch_TransportUnavailable"	"Fazer stream fora da rede doméstica não é possível de momento, tenta de novo mais tarde."
-
-	"Steam_InstallAudioCaptureDriver_Title"	"Atualização de driver de áudio"
-	"Steam_InstallAudioCaptureDriver_Text"	"O driver de áudio do Steam precisa de ser atualizado e pode ser necessário reiniciar o sistema."
-	"Steam_InstallGamepadInputDriver_Title"	"Atualização de driver de comando"
-	"Steam_InstallGamepadInputDriver_Text"	"O driver de comando do Steam precisa de ser atualizado e pode ser necessário reiniciar o sistema."
-	"Steam_InstallGamepadInputDriver_RestartText"	"Vais ter de reiniciar o Steam depois de instalar o driver de comando."
 
 	"SteamUI_RemoteDeviceAuthorization_Title"		"Autorizar dispositivo"
 	"SteamUI_RemoteDeviceAuthorization_Text"		"Introduz o código de autorização visível em \"{s:devicename}\" para permitires que este se conecte e jogue jogos."

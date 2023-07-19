@@ -157,7 +157,7 @@
 "Overlay_MicroTxnAuth_SubscriptionText"	"При обновлении подписки Steam автоматически снимет средства с сохранённого способа оплаты. Если его у вас нет, Steam попытается использовать средства с вашего кошелька."
 "Overlay_MicroTxnAuth_AddFunds"		"Пополнить баланс"
 "Overlay_MicroTxnAuth_Cancel"		"Отмена"
-"Overlay_MicroTxnAuth_Description"	"%game% запрашивает авторизацию для выполнения следующих действий:"
+"Overlay_MicroTxnAuth_Description"	"«%game%» запрашивает авторизацию для выполнения следующих действий:"
 "Overlay_MicroTxnAuth_Total"		"Итого"
 "Overlay_MicroTxnAuth_Header_Name"	"Имя"
 "Overlay_MicroTxnAuth_Header_Price"	"Цена"

@@ -1735,6 +1735,7 @@ Você precisará finalizar a sessão no macOS para que a alteração surta efeit
 "steam_menu_help"	"Ajuda"
 "steam_menu_library"	"Biblioteca"
 "steam_menu_hidden_games"	"Jogos ocultos"
+"steam_menu_soundtracks"	"Trilhas sonoras"
 "steam_menu_downloads"	"Downloads"
 "steam_menu_account"	"Steam"
 "steam_menu_window" "Janela"
@@ -1776,7 +1777,7 @@ Você precisará finalizar a sessão no macOS para que a alteração surta efeit
 
 "steam_menu_minigameslist"	"Alterar para lista compacta de jogos"
 "steam_menu_fullgameslist"	"Alterar para visualização completa"
-"steam_menu_backupgames"	"Cópias de segurança e restauração..."
+"steam_menu_backupgames"	"Restaurar cópia de segurança..."
 "steam_menu_changeuser"		"Trocar conta..."
 "steam_menu_signout"		"Finalizar sessão..."
 "steam_menu_support"		"Suporte Steam"
@@ -2260,6 +2261,7 @@ Você precisará finalizar a sessão no macOS para que a alteração surta efeit
 "Steam_NoLongerOwnsGame_Title"	"Steam — %game%"
 "Steam_NoLongerOwnsGame_Info"		"Este jogo já não está mais disponível gratuitamente."
 
+"steam_menu_systemreport"		"Relatório do sistema"
 "steam_menu_systeminfo"			"Informações do sistema"
 "steam_systeminfo_title"			"Steam — Informações do sistema"
 "steam_systeminfo_surveylink"	"Compare o seu hardware com o de outros usuários Steam"
@@ -3920,7 +3922,7 @@ a partir de agora, você vai precisar deles pra ter acesso aos seus jogos e outr
 "steam_editcontroller"	"Configuração do controle"
 "steam_menu_media" "Mídia"
 "steam_menu_tools" "Ferramentas"
-"steam_menu_friends" "Amigos"
+"steam_menu_friends" "Amigos e conversas"
 "steam_menu_servers" "Servidores"
 "steam_menu_settings" "Configurações"
 "steam_menu_view_friends" "Ver lista de amigos (%friends_online% on-line)"
@@ -4377,11 +4379,6 @@ a partir de agora, você vai precisar deles pra ter acesso aos seus jogos e outr
 "SteamUI_StreamLaunch_InstallDrivers"	"A transmissão exige a instalação de drivers adicionais.\nSiga as instruções do Steam no computador remoto."
 "SteamUI_StreamLaunch_StillDownloading" "Há uma atualização em andamento em %ClientName%. %game% estará disponível para ser transmitido assim que o download for concluído."
 "SteamUI_StreamLaunch_TransportUnavailable"	"Ainda não é possível conectar-se fora de casa. Tente novamente mais tarde."
-
-"Steam_InstallAudioCaptureDriver_Title"	"Atualização do driver de áudio"
-"Steam_InstallAudioCaptureDriver_Text"	"O Steam precisa atualizar o driver de áudio, que pode exigir a reinicialização do sistema.\n\nClique em \"Instalar\" para continuar."
-"Steam_InstallGamepadInputDriver_Title"	"Atualização do driver de controle"
-"Steam_InstallGamepadInputDriver_Text"	"O Steam precisa atualizar o driver de controle, que pode exigir a reinicialização do sistema.\n\nClique em \"Instalar\" para continuar."
 
 "Steam_OtherSessionPlaying_Title" "Erro — Steam"
 "Steam_OtherSessionPlaying_Text" "Você já iniciou a sessão em outro computador, onde \"%existing_app%\" está aberto.\nIniciar \"%launching_app%\" aqui finalizará a outra sessão no Steam."
@@ -4847,7 +4844,7 @@ a partir de agora, você vai precisar deles pra ter acesso aos seus jogos e outr
 "Steam_DualSense_FirmwareUpdate_DisableNotification"	"Não exibir isso novamente"
 
 "RescueDialog_Title" "O SteamWebHelper não está respondendo"
-"RescueDialog_Explanation" "O steamwebhelper.exe, componente essencial do Steam, não está respondendo. A interface do Steam não poderá ser usada. Clique <a href=\"about:blank\">aqui</a> para mais informações."
+"RescueDialog_Explanation" "O steamwebhelper.exe, componente essencial do Steam, não está respondendo. A interface do Steam não poderá ser usada. Clique <a href=steam://openurl_external/https://help.steampowered.com/faqs/view/6C3E-9504-CC20-AF49>aqui</a> para mais informações."
 "RescueDialog_RadioHeader" "Vamos tentar ajudar:"
 "RescueDialog_RestartSteam" "Reiniciar o Steam"
 "RescueDialog_RestartSteam_NoGPU" "Reiniciar o Steam sem aceleração da placa de vídeo"

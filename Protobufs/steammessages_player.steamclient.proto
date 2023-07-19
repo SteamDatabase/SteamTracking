@@ -74,6 +74,7 @@ message CPlayer_GetOwnedGames_Response {
 		optional bool has_dlc = 16;
 		optional bool has_leaderboards = 17;
 		repeated uint32 content_descriptorids = 18;
+		optional int32 playtime_disconnected = 19;
 	}
 
 	optional uint32 game_count = 1;
@@ -533,6 +534,7 @@ message CPlayer_GetLastPlayedTimes_Response {
 		optional uint32 last_windows_playtime = 12;
 		optional uint32 last_mac_playtime = 13;
 		optional uint32 last_linux_playtime = 14;
+		optional uint32 playtime_disconnected = 15;
 	}
 
 	repeated .CPlayer_GetLastPlayedTimes_Response.Game games = 1;

@@ -637,7 +637,7 @@
 	"Steam_AccountLocked_Info"		"To urządzenie zostało zdeautoryzowane. Musisz wprowadzić nowy kod Steam Guard, by dokonać ponownej autoryzacji."
 	"Steam_Login_ErrorTitle" 		"Steam - błąd"
 	"Steam_OfflineMode_NoPersonalInfoError_Title"	"Tryb offline"
-	"Steam_OfflineMode_NoPersonalInfoError_Info"	"Steam wymaga zapisania danych logowania do konta na tym komputerze przed przejściem w tryb offline. Umożliwić taki zapis?"
+	"Steam_OfflineMode_NoPersonalInfoError_Info"	"Steam wymaga zapisania danych logowania do konta na tym komputerze przed przejściem do trybu offline. Umożliwić taki zapis?"
 	"Steam_OfflineMode_NoPersonalInfoError_DoItAnyway"	"ZAPISZ DANE LOGOWANIA"
 	"Steam_ErrorOffline"	"Ta czynność nie może zostać ukończona, gdy Steam jest w trybie offline."
 	"Steam_NotSupported" 	"Nieobsługiwane"
@@ -729,8 +729,8 @@
 	"SettingsAbout_VideoRAM"			"{s:vram_gb} GB"
 	"SettingsAbout_ClientUpdateButton"	"Informacje o aktualizacji"
 	"SettingsAbout_BetaOption"	"Wypróbuj wersję beta klienta"
-	"SettingsAbout_BetaParticipation"	"Uczestnictwo w becie"
-	"SettingsAbout_BetaChange_Title"	"Udział w testach beta"
+	"SettingsAbout_BetaParticipation"	"Udział w wersji beta"
+	"SettingsAbout_BetaChange_Title"	"Udział w wersji beta"
 	"SettingsAbout_BetaChange_Description"	"Aby zmienić ustawienia udziału w testach beta, należy uruchomić ponownie Steam.\n\nCzy uruchomić ponownie teraz?"
 	"SettingsAbout_LegalInformation"	"Informacje prawne"
 
@@ -740,7 +740,7 @@
 	"SettingsAccount_ManageSteamGuard"	"Zarządzaj Steam Guard..."
 	"SettingsAccount_ChangePassword"	"Zmień hasło..."
 	"SettingsAccount_ChangeEmail"		"Zmień kontaktowy adres e-mail..."
-	"SettingsAccount_Beta"				"Udział w testach beta"
+	"SettingsAccount_Beta"				"Udział w wersji beta"
 	"SettingsAccount_Changes"			"Zmiany wymagają ponownego uruchomienia Steam"
 	"SettingsAccount_SaveCredentials"	"Zapisz tutaj moje dane logowania do konta"
 	"SettingsAccount_MustSave"			"Dane logowania do konta muszą zostać zapisane, aby uruchomić tryb offline"
@@ -764,12 +764,12 @@
 	"SettingsAccount_ManageSteamGuardTwoFactor_Title" "Zarządzaj Steam Guard"
 	"SettingsAccount_ManageSteamGuardTwoFactor_Contents" "Używasz Steam Guard z dwuskładnikowym uwierzytelnieniem. Aby zmodyfikować ustawienia Steam Guard, otwórz aplikację Steam w swoim telefonie.\n\nJeśli nie posiadasz już tego telefonu, skontaktuj się z Pomocą techniczną Steam."
 
-	"SettingsAccount_BetaParticipation"		"Udział w testach beta"
+	"SettingsAccount_BetaParticipation"		"Udział w wersji beta"
 	"SettingsAccount_NoBetaAvailable"		"(aktualnie brak testów)"
 	"SettingsAccount_NoBetaChosen"			"Brak (aktualnie dostępnych: {i:numbetas})"
-	"SettingsAccount_NoBetaChosenNonAdmin"	"Aktualnie dostępnych: {i:numbetas} (Tylko użytkownicy, którzy zainstalowali Steam, mogą zmienić stan udziału w wersji Beta)"
+	"SettingsAccount_NoBetaChosenNonAdmin"	"Aktualnie dostępnych: {i:numbetas}. Tylko użytkownicy, którzy zainstalowali Steam, mogą zmienić opcje udziału w wersji beta."
 	"SettingsAccount_InBeta" 				"{s:electedbeta}"
-	"SettingsAccount_UserCantSetBeta" 		"{s:electedbeta} (Tylko użytkownicy, którzy zainstalowali Steam, mogą zmienić stan udziału w wersji Beta)"
+	"SettingsAccount_UserCantSetBeta" 		"{s:electedbeta} Tylko użytkownicy, którzy zainstalowali Steam, mogą zmienić opcje udziału w wersji beta."
 	"VAC_NoBans"	"W dobrym stanie"
 	"VAC_BannedFromServers"	"Zablokowany na bezpiecznych serwerach z powodu oszustwa."
 	"SettingsAccount_StartBPM"			 	"Uruchom Steam w trybie Big Picture"
@@ -1738,7 +1738,7 @@
 	"Controller_NotAttached_Desc"		"Podłącz kontroler, aby go skonfigurować"
 
 	"Controller_Config_Offline_Title"	"Edycja konfiguracji offline"
-	"Controller_Config_Offline_Desc"	"Obecnie jesteś offline. Twoja ostatnio używana konfiguracja jest dostępna i możesz ją edytować, ale zmiany zostaną utracone po przejściu w tryb online. Te zmiany zostaną zapisanie lokalnie."
+	"Controller_Config_Offline_Desc"	"Obecnie jesteś offline. Twoja ostatnio używana konfiguracja jest dostępna i możesz ją edytować, ale zmiany zostaną utracone po przejściu do trybu online. Te zmiany zostaną zapisanie lokalnie."
 
 	"Controller_Config_FailedLoad"			"Konfiguracja zakończona niepowodzeniem"
 	"Controller_Config_FailedLoad_Desc"		"Nie udało się wczytać twojej konfiguracji. Spróbuj ponownie później."
@@ -2983,7 +2983,7 @@
 	"SteamUI_OldClient_Title" "Nieaktualny"
 	"SteamUI_OldClient" "Aby móc uruchomić tę grę, należy zaktualizować klienta Steam."
 	"SteamUI_ParentalControl_Title" "Kontrola rodzicielska systemu Windows"
-	"SteamUI_ParentalControl_Blocked" "Gra została zablokowana dla aktualnego użytkownika przez funkcję Kontrola rodzicielska systemu Windows."
+	"SteamUI_ParentalControl_Blocked" "Gra jest zablokowana dla obecnego użytkownika przez ustawienia kontroli rodzicielskiej systemu Windows."
 	"SteamUI_WrongPlatform_Title" "Gra niedostępna"
 	"SteamUI_WrongPlatform" "Produkt {s:gamename} nie jest dostępny na twojej obecnej platformie."
 	"SteamUI_Game_Requires_NTFS"		"Gra wymaga systemu plików NTFS"
@@ -3494,7 +3494,7 @@
 	"Quit_ExitGame"				"Zamknij aplikację..."
 	"Quit_ChangeUser"			"Wyloguj użytkownika"
 	"Quit_Settings"				"Ustawienia"
-	"Quit_GoOffline"			"Przejdź w tryb offline..."
+	"Quit_GoOffline"			"Przejdź do trybu offline..."
 	"Quit_GoOnline"				"Przejdź w tryb online..."
 	"Quit_Shutdown"				"Wyłącz system"
 	"Quit_Restart"				"Uruchom system ponownie"
@@ -3781,7 +3781,7 @@
 	"Parental_Disable_Cancel"	"ANULUJ"
 
 	"SiteLicense_LockTitle"		"Ograniczone użycie"
-	"SiteLicense_LockInfo"		"Operator sieci dodał ograniczenia w korzystaniu ze Steam. Niektóre funkcjonalności mogą być niedostępne podczas działania w tej lokacji."
+	"SiteLicense_LockInfo"		"Operator sieci dodał ograniczenia w korzystaniu ze Steam. Niektóre funkcje mogą być niedostępne podczas działania w tej lokacji."
 
 	"GoOnline_Header"			"JESTEŚ"
 	"GoOnline_CurrentMode"		"OFFLINE"
@@ -3791,8 +3791,8 @@
 	"GoOnline_Prompt_Info"		"Czy chcesz przejść w tryb online? Konieczne będzie ponowne uruchomienie Steam."
 	"GoOnline_Prompt_YesButton"	"ZRESTARTUJ W TRYBIE ONLINE"
 
-	"GoOffline_Prompt_Title"	"Przejdź w tryb offline"
-	"GoOffline_Prompt_Info"		"Czy chcesz przejść w tryb offline? Wymaga to ponownego uruchomienia Steam."
+	"GoOffline_Prompt_Title"	"Przejdź do trybu offline"
+	"GoOffline_Prompt_Info"		"Czy chcesz przejść do trybu offline? Wymaga to ponownego uruchomienia Steam."
 	"GoOffline_Prompt_YesButton"	"ZRESTARTUJ W TRYBIE OFFLINE"
 
 	"Settings_TimeZone"	"Strefa czasowa"
@@ -4194,19 +4194,13 @@
 	"SteamUI_StreamLaunch_InstallDrivers"	"Strumieniowanie wymaga zainstalowania dodatkowych sterowników.\n\nPostępuj zgodnie ze wskazówkami na zdalnym komputerze."
 	"SteamUI_StreamLaunch_TransportUnavailable"	"Strumieniowanie poza domem nie jest obecnie dostępne, spróbuj ponownie później."
 
-	"Steam_InstallAudioCaptureDriver_Title"	"Aktualizacja sterownika audio"
-	"Steam_InstallAudioCaptureDriver_Text"	"Steam musi zaktualizować sterownik audio, co może wymagać ponownego uruchomienia systemu."
-	"Steam_InstallGamepadInputDriver_Title"	"Aktualizacja sterownika kontrolera"
-	"Steam_InstallGamepadInputDriver_Text"	"Steam musi zaktualizować sterownik kontrolera, co może wymagać ponownego uruchomienia systemu."
-	"Steam_InstallGamepadInputDriver_RestartText"	"Steam będzie musiał zostać uruchomiony ponownie po instalacji sterowników dla kontrolera."
-
 	"SteamUI_RemoteDeviceAuthorization_Title"		"Autoryzuj urządzenie"
 	"SteamUI_RemoteDeviceAuthorization_Text"		"Wprowadź kod autoryzacyjny, aby pozwolić na połączenie się z {s:devicename} i granie w gry."
 
 	"Steam_OtherSessionPlaying_Title" "Steam - błąd"
 	"Steam_OtherSessionPlaying_Text" "Twoje konto jest już zalogowane na innym komputerze z uruchomioną grą „%existing_app%”.\nUruchomienie „%launching_app%” w tym miejscu rozłączy inne sesje od Steam."
 	
-	"SteamUI_JoinDialog_KickSessions_Error" "Błąd odłączania sesji aplikacji „{s:existing_app}”."
+	"SteamUI_JoinDialog_KickSessions_Error" "Nie udało się odłączyć innej sesji korzystającej z aplikacji „{s:existing_app}”."
 
 	"Steam_VideoPlayer_Title"	"Błąd – odtwarzacz wideo"
 	"Steam_VideoPlayer_LaunchError"	"Wystąpił problem podczas uruchamiania odtwarzacza wideo Steam"

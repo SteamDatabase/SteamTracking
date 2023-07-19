@@ -41,7 +41,7 @@
 "vgui_CreateDirectoryFail_Title"	"Δημιουργία φακέλου - Σφάλμα"
 "vgui_CreateDirectoryFail_Info"		"Αποτυχία δημιουργίας φακέλου, αυτός ο δίσκος είναι μόνο για ανάγνωση."
 "vgui_CreateDirectoryFail_AlreadyExists" "Αυτός ο φάκελος υπάρχει ήδη."
-"vgui_ShuttingDown"		"Τερματισμός..."
+"vgui_ShuttingDown"		"Γίνεται τερματισμός…"
 
 "TextEntry_Language"		"Γλώσσα"
 "TextEntry_ConversionMode"	"Λειτουργία μετατροπής"
@@ -61,8 +61,8 @@
 "IME_BiasSpeech"		"Ψευδώνυμο σε συνομιλία"
 "IME_NoConversion"		"Χωρίς μετατροπή"
 
-"IME_0404"			"Κινέζικα (Ταϊβάν)"
-"IME_0804"			"Κινέζικα (ΛΔΚ)"
+"IME_0404"			"Κινεζικά (Ταϊβάν)"
+"IME_0804"			"Κινεζικά (ΛΔΚ)"
 "IME_0409"			"Αγγλικά (Ηνωμένων Πολιτειών)"
 "IME_0411"			"Ιαπωνικά"
 "IME_0412"			"Κορεάτικα"

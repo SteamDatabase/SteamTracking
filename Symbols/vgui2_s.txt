@@ -105,6 +105,7 @@
  NSDefaultRunLoopMode
  NSMenuDidBeginTrackingNotification
  NSMenuDidEndTrackingNotification
+ NSMenuWillSendActionNotification
  NSWorkspaceActiveSpaceDidChangeNotification
  NSWorkspaceDidActivateApplicationNotification
  NSWorkspaceDidDeactivateApplicationNotification

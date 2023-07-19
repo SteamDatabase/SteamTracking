@@ -226,19 +226,19 @@
 "SteamUI_JoinDialog_SharedLicenseLocked_BorrowerText" "Эта общая игра сейчас недоступна. Пожалуйста, повторите попытку позднее или купите игру для своей библиотеки."
 
 "SteamUI_JoinDialog_KickSessions_Text" "Отключение другой сессии игры %dots%"
-"SteamUI_JoinDialog_KickSessions_Error" "Не удалось отключить другую сессию игры %game%"
+"SteamUI_JoinDialog_KickSessions_Error" "Не удалось отключить другую сессию игры «%game%»"
 
-"SteamUI_JoinDialog_VerifyingFiles_Error" "Не удалось проверить подписанные файлы %game%. Необходимо подтвердить их содержимое."
-"SteamUI_JoinDialog_CreateProcess_Error" "Не удалось запустить процесс %game% :\n\n%detail%"
+"SteamUI_JoinDialog_VerifyingFiles_Error" "Не удалось проверить подписанные файлы «%game%». Необходимо подтвердить их содержимое."
+"SteamUI_JoinDialog_CreateProcess_Error" "Не удалось запустить процесс для «%game%»:\n\n%detail%"
 "SteamUI_JoinDialog_CreateProcess_Error_Detail_macOS" "32-битные приложения больше не поддерживаются на macOS версии 10.15 и выше."
 
-"SteamUI_JoinDialog_OpenVRStartupFailure" "Не удалось запустить %game% в режиме виртуальной реальности. Ошибка: %error%"
+"SteamUI_JoinDialog_OpenVRStartupFailure" "Не удалось запустить «%game%» в режиме виртуальной реальности. Ошибка: %error%"
 "SteamUI_JoinDialog_OpenVRWaitingForQuit" "%quitting_game% закрывается %dots%"
 
 "SteamUI_JoinDialog_UpdatingAppInfo" "Обновление настроек %dots%"
 "SteamUI_JoinDialog_UpdatingAppTicket" "Обновление обращения %dots%"
 
-"SteamUI_JoinDialog_TimedTrial_Error" "Не удалось запустить ограниченную пробную версию %game% (ошибка: %error%)"
+"SteamUI_JoinDialog_TimedTrial_Error" "Не удалось запустить ограниченную пробную версию «%game%» (ошибка: %error%)"
 
 "SteamUI_JoinDialog_SyncingCloud_Text" "Синхронизация со Steam Cloud..."
 "SteamUI_JoinDialog_Connecting_Text" "Подключение к Steam..."
@@ -269,15 +269,15 @@
 
 "SteamUI_JoinDialog_DataRequest_Text" "Завершение установки%dots%"
 "SteamUI_JoinDialog_DataRequestFailed_Title" "Steam — Ошибка"
-"SteamUI_JoinDialog_DataRequestFailed_Text" "Серверы Steam перегружены и не могут обработать запрос данных для %game%.
+"SteamUI_JoinDialog_DataRequestFailed_Text" "Серверы Steam перегружены и не могут обработать запрос данных для «%game%».
 Код ошибки: %error%"
 
 "SteamUI_JoinDialog_CloudSyncFailed_Title" "Steam — Предупреждение"
-"SteamUI_JoinDialog_CloudSyncFailed_Text" "Steam не смог синхронизировать ваши файлы для %game% с помощью Steam Cloud"
+"SteamUI_JoinDialog_CloudSyncFailed_Text" "Steam не смог синхронизировать ваши файлы для «%game%» со Steam Cloud"
 "SteamUI_JoinDialog_CloudSyncFailed_Detail" "Если вы запускали это приложение на другом компьютере, ваши настройки приложения и/или прогресс могут не быть синхронизированы с теми, что хранятся на сетевых серверах Cloud. Если вы сейчас запустите приложение, то можете потерять эти изменения и прогресс."
 
 "Steam_CloudConflict_Title" "Steam — Конфликт синхронизации со Steam Cloud"
-"Steam_CloudConflict_Text" "Файлы %game% на этом ПК не совпадают с теми, что располагаются в Steam Cloud."
+"Steam_CloudConflict_Text" "Файлы «%game%» на этом ПК не совпадают с теми, что находятся в Steam Cloud."
 "Steam_CloudConflict_CloudFiles" "Steam Cloud"
 "Steam_CloudConflict_CloudFiles_Time" "Последнее изменение: %remotetime%"
 "Steam_CloudConflict_LocalFiles" "Файлы на ПК"
@@ -291,7 +291,7 @@
 "Steam_CloudConflict_Unknown" "Неизвестно"
 
 "Steam_CloudPendingSessions_Title" "Steam Cloud: загрузки в режиме ожидания"
-"Steam_CloudPendingSessions_Text" "Сессий %game%, не загруженных в Steam Cloud: %pendingops%."
+"Steam_CloudPendingSessions_Text" "Сессий «%game%», не загруженных в Steam Cloud: %pendingops%."
 "Steam_CloudPendingSessions_Sessions" "Последняя сессия:"
 "Steam_CloudPendingSessions_RemoteTime" "Последнее изменение: %remotetime%"
 "Steam_CloudPendingSessions_RemoteMachine" "Устройство: %remotemachine%"
@@ -486,7 +486,7 @@
 "Steam_DeleteCacheConfirmationMulti_Text"	"Эта операция удалит указанные игры с компьютера.\n\nИгры останутся в библиотеке, но для того, чтобы поиграть в них в будущем,\nвам понадобится повторно их установить или загрузить."
 "Steam_DeleteFreeCacheConfirmation_Text"		"Эта операция удалит весь игровой контент %s1\nс этого компьютера."
 "Steam_UninstallAppError_Title"			"Ошибка Steam"
-"Steam_UninstallAppError_Text"			"Не удалось удалить %game% (%reason%)"
+"Steam_UninstallAppError_Text"			"Не удалось удалить «%game%» (%reason%)"
 
 "Steam_DeleteCache_Button"			"Удалить"
 "Steam_DiskUsageNone"				"Использование диска: нет"
@@ -531,7 +531,7 @@
 
 "Steam_AllAppsMustBeClosedToQuit_Title"		"Steam — Ошибка"
 "Steam_AllAppsMustBeClosedToQuit_Info"		"В данный момент запущено одно или более приложений Steam.\nДля выхода из Steam необходимо завершить работу всех приложений."
-"Steam_AppMustBeClosedToQuit_Info"			"Закройте %game%, прежде чем выйти из Steam."
+"Steam_AppMustBeClosedToQuit_Info"			"Закройте «%game%», прежде чем выйти из Steam."
 "Steam_ExitSteam"				"Выход"
 "Steam_ExitLogoutSteam"				"Выход и отключение"
 
@@ -569,8 +569,8 @@
 
 "Steam_ErrorCouldNotConnect" 	"Не удалось подключиться к сети Steam.\nЭто может происходить как из-за проблем с вашим подключением к сети Интернет, так и из-за проблем с сетью Steam.\nБолее подробную информацию вы найдете по адресу www.steampowered.com."
 
-"steam_preload_title"			"Предзагрузить %game%"
-"steam_preloading_title"		"Предварительная загрузка %game% (%preload_amount%%% завершено)"
+"steam_preload_title"			"Предзагрузить «%game%»"
+"steam_preloading_title"		"Предварительная загрузка «%game%» (%preload_amount%%% завершено)"
 "steam_sellpage_title"			"%subscription%"
 
 "Steam_GamesDialog_ComingSoon"	"СКОРО В ПРОДАЖЕ"
@@ -583,18 +583,18 @@
 
 "Steam_PleaseVisitSupportPage"		"Для получения информации о поддержке продукта посетите сайт:"
 "Steam_SteamPoweredURL"			"http://www.steampowered.com"
-"Steam_PurchaseCDKeySuccess"		"Поздравляем! Копия %subscription% была успешно активирована на аккаунт %account%.\n\nДля игры в %game% вам необходимо войти в Steam с данного аккаунта."
+"Steam_PurchaseCDKeySuccess"		"Поздравляем! Копия %subscription% была успешно активирована на аккаунт %account%.\n\nЧтобы поиграть в «%game%», вам необходимо войти в Steam с данного аккаунта."
 "Steam_PurchaseAccount"			"%account%"
 
-"Steam_PurchaseCDKeyIncomplete"		"Вследствие высокого спроса на %subscription% ваша подписка не может быть полностью активизирована в данный момент. Вы сможете играть в %game%, пока заканчивается обработка вашей операции."
+"Steam_PurchaseCDKeyIncomplete"		"Из-за высокого спроса на %subscription% вашу подписку сейчас невозможно активировать полностью. Вы сможете играть в «%game%», пока ваша операция обрабатывается."
 
-"Steam_PreLoadingDescription"	"Вы выбрали предзаказ %game%. Steam обрабатывает подобные покупки в три этапа:"
+"Steam_PreLoadingDescription"	"Вы выбрали предзаказ «%game%». Steam обрабатывает подобные покупки в три этапа:"
 "Steam_PreLoading1"				"1. Предварительная загрузка данных игры"
 "Steam_PreLoading1Detail"		"Загрузка игры без каких-либо обязательств."
 "Steam_PreLoading2"				"2. Оплата с помощью банковской карты"
 "Steam_PreLoading2Detail"		"После загрузки данных игры на компьютер можно оплатить заказ."
 "Steam_PreLoading3"				"3. Получите игру в день ее выхода!"
-"Steam_PreLoading3Detail"		"Как только состоится официальный релиз %game%, ваша копия будет разблокирована и готова к игре."
+"Steam_PreLoading3Detail"		"Как только состоится официальный релиз «%game%», ваша копия будет разблокирована и готова к игре."
 "Steam_StartPreloading"			"Начать предварительную загрузку сейчас"
 
 "Steam_PreloadGameName"			"%game%"
@@ -603,23 +603,23 @@
 "Steam_PreloadContinue"		"Продолжить"
 "Steam_PreloadCancel"		"Вы решили отменить предварительную загрузку. Это приведет к тому, что уже загруженные данные будут удалены.\n\nВыберите \"OK\", чтобы продолжить действие, или \"Отмена\", чтоб сохранить данные."
 "Steam_CancelPreloading"		"Отменить пред. загрузку"
-"Steam_PreloadProgressNotes"	"Идет предварительная загрузка %game% на ваш компьютер.\n\nИгра будет разблокирована и готова к использованию в день официального выхода."
-"Steam_PreloadProgressNotesPayed"	"Идет предварительная загрузка %game% на ваш компьютер.\n\nПодождите, это может занять некоторое время. Вы можете закрыть это окно, оставив Steam работающим, и вернуться позже."
-"Steam_PreloadProgressNotesStart"	"%game% готова к предварительной загрузке на компьютер.\n\nИгра будет разблокирована и готова к запуску в день официального выхода."
-"Steam_PreloadProgressNotesStartPayed"	"%game% готова к предварительной загрузке на компьютер."
+"Steam_PreloadProgressNotes"	"Идёт предварительная загрузка «%game%» на ваш компьютер.\n\nИгра будет разблокирована и готова к использованию в день официального выхода."
+"Steam_PreloadProgressNotesPayed"	"Идёт предварительная загрузка «%game%» на ваш компьютер.\n\nИногда она длится долго, поэтому можете закрыть это окно (но не Steam) и вернуться позже."
+"Steam_PreloadProgressNotesStart"	"«%game%» готова к предварительной загрузке.\n\nИгра будет разблокирована и готова к запуску в день официального выхода."
+"Steam_PreloadProgressNotesStartPayed"	"«%game%» готова к предварительной загрузке на компьютер."
 
 "Steam_PreloadDescription"		"Примечание: вы оформляете предзаказ %subscription%. Игра будет разблокирована и готова к запуску только в день официального выхода."
 
-"Steam_PreloadComplete_Title"	"Предварительная загрузка %game% завершена"
+"Steam_PreloadComplete_Title"	"Предварительная загрузка «%game%» завершена"
 "Steam_PreloadComplete"			"Предварительная загрузка завершена"
-"Steam_PreloadCompletePreOrder"	"У вас уже установлена копия %game%. Оформите предзаказ, и в день официального выхода игра уже будет доступна!"
+"Steam_PreloadCompletePreOrder"	"Заблокированная копия «%game%» установлена на ваш комьютер. Оформите предзаказ, и в день официального выхода игра будет доступна!"
 "Steam_PreloadPrePayNow"		"Завершить предзаказ..."
 "Steam_PreOrderNow"	"Оформить предзаказ..."
 
-"Steam_PreloadCompletePurchase"	"%game% уже установлена на вашем компьютере, но временно недоступна. Приобретите игру и начните играть прямо сейчас!"
+"Steam_PreloadCompletePurchase"	"Заблокированная копия «%game%» уже установлена на ваш компьютер. Приобретите игру и начните играть прямо сейчас!"
 "Steam_PreloadBuyNow"			"Купить эту игру сейчас..."
 
-"Steam_PreloadAndPurchaseComplete_Title"	"Предзаказ %game% оформлен"
+"Steam_PreloadAndPurchaseComplete_Title"	"Предзаказ «%game%» оформлен"
 "Steam_PreorderComplete"		"Предзаказ %subscription% оформлен! Вы сможете играть сразу после официального выхода.\n\nБлагодарим за покупку!"
 "Steam_PreloadCompletePlay"		"Вы сможете сыграть в игру сразу после её официального выхода."
 
@@ -1136,7 +1136,7 @@
 "SteamUI_CZ_InitialPage" "steam/html/condition-zero_preorder.html"
 "SteamUI_CZ_PreloadPage" "steam/html/condition-zero_preloaded.html"
 
-"Steam_PackageChoice"        "%game% доступна для покупки в двух различных вариантах. Выберите тот, который вы хотите заказать."
+"Steam_PackageChoice"        "«%game%» доступна для покупки в двух различных вариантах. Выберите нужный."
 "Steam_PackageIncludes"       "Включает:"
 
 "Steam_CreditCardEncrypted"	"Сведения о банковской карте будут зашифрованы во время передачи и обработки данных."
@@ -1296,9 +1296,9 @@
 "Steam_Receipt_AlreadyPurchased" "На этом аккаунте Steam уже есть продукты, связанные с данным цифровым ключом. Нажмите кнопку «Готово», чтобы установить их."
 "Steam_Receipt_AlreadyPurchased_Headline" "У вас уже есть этот продукт"
 
-"Steam_InstallAppWizard_Title"	"Установка — %game%"
-"Steam_InstallAppWizard_RestoreBackup_Title"	"Восстановление файлов - %game%"
-"Steam_InstallAppWizard_Preload_Title"	"Предзагрузка — %game%"
+"Steam_InstallAppWizard_Title"	"Установка — «%game%»"
+"Steam_InstallAppWizard_RestoreBackup_Title"	"Восстановление файлов — «%game%»"
+"Steam_InstallAppWizard_Preload_Title"	"Предзагрузка — «%game%»"
 
 "Steam_PreloadAppStatus1"	"Подготовка файлов %s1 к установке."
 "Steam_PreloadAppStatus2"	"Подготовка файлов %s1 к установке.."
@@ -1336,30 +1336,30 @@
 "Steam_PurchaseInfo"			"Данное предложение включает следующее."
 "Steam_PurchaseInfo_Preorder"		"Вы совершаете предзаказ. Платёж не будет совершён до тех пор, пока не состоится официальный выход игры."
 
-"Steam_InstallGameInfo"			"Вы собираетесь установить %game%.\n"
-"Steam_InstallGameInfo_Preload"		"Вы собираетесь начать предзагрузку %game%.\n"
+"Steam_InstallGameInfo"			"Вы собираетесь установить «%game%».\n"
+"Steam_InstallGameInfo_Preload"		"Вы собираетесь начать предзагрузку «%game%».\n"
 
 "Steam_App_Install_Failed_Title"	"Steam - Ошибка"
-"Steam_App_Install_Failed_Text"		"При установке %game% произошла ошибка (%reason%)"
-"Steam_App_Install_Failed_Text_Long"	"При установке %game% произошла ошибка (%reason%) :\n\n%detail%"
+"Steam_App_Install_Failed_Text"		"При установке «%game%» произошла ошибка (%reason%)"
+"Steam_App_Install_Failed_Text_Long"	"При установке «%game%» произошла ошибка (%reason%) :\n\n%detail%"
 
 "Steam_App_LegacyKey_Denied_Title" "Steam — Предупреждение"
 
 "Steam_App_LegacyKey_Failed_Text"  "Не удалось запросить ключ товара. Пожалуйста, повторите попытку через несколько минут."
 "Steam_App_LegacyKey_NoResponse_Text" "Не удалось связаться с сервером ключей Steam. Проверьте соединение с интернетом и повторите попытку."
 "Steam_App_LegacyKey_Denied_Text"  "Steam не удалось подтвердить владение цифровым ключом, поэтому его нельзя восстановить. Пожалуйста, обратитесь в службу поддержки Steam."
-"Steam_App_LegacyKey_Denied_Borrowed_Text" "Контент %game% частично или полностью доступен только после подключения к стороннему сервису, например, UPlay или Origin.\nСкорее всего, владелец ключа зарегистрировал его в одном из этих сервисов."
+"Steam_App_LegacyKey_Denied_Borrowed_Text" "Контент игры «%game%» частично или полностью доступен только после подключения к стороннему сервису, например, UPlay или Origin.\nСкорее всего, владелец ключа зарегистрировал его в одном из этих сервисов."
 "Steam_App_LegacyKey_Pending_Text" "Запрос на получение ключа ожидает одобрения поддержкой Steam. Пожалуйста, повторите попытку через несколько часов."
-"Steam_App_LegacyKey_OutOfKeys_Text" "В Steam закончились неиспользованные ключи для %game%.\n\nКак только издатель предоставит нам новые ключи, вы получите один из них.\nПожалуйста, повторите попытку позже или запросите возврат средств."
+"Steam_App_LegacyKey_OutOfKeys_Text" "В Steam временно закончились ключи активации «%game%».\n\nКак только издатель предоставит нам новые ключи, вы получите один из них.\nПожалуйста, повторите попытку позже или запросите возврат средств."
 
 "Steam_App_Update_Failed_Title"	"Steam — Ошибка"
-"Steam_App_Update_Failed_Text" "При обновлении %game% произошла ошибка (%reason%)"
-"Steam_App_Update_Failed_Text_Long" "При обновлении %game% произошла ошибка (%reason%) :\n\n%detail%"
-"Steam_App_Update_NotEnoughDiskSpace" "Недостаточно свободного места на диске для обновления %game% (необходимо %detail%)"
-"Steam_App_Update_NotEnoughDiskQuota" "Недостаточно свободного места на диске для обновления %game% (необходимо %detail%)"
-"Steam_App_Update_LockedByProcess" "Файл %game% заблокирован %program% и не может быть обновлён. Пожалуйста, закройте эту программу и повторите попытку. \n\n Программа: %executable%\n Файл: %detail%"
+"Steam_App_Update_Failed_Text" "При обновлении «%game%» произошла ошибка (%reason%)"
+"Steam_App_Update_Failed_Text_Long" "При обновлении «%game%» произошла ошибка (%reason%) :\n\n%detail%"
+"Steam_App_Update_NotEnoughDiskSpace" "Для обновления «%game%» нужно больше места на диске (%detail%)"
+"Steam_App_Update_NotEnoughDiskQuota" "Для обновления «%game%» нужно больше места по дисковой квоте (%detail%)"
+"Steam_App_Update_LockedByProcess" "Файл «%game%» заблокирован %program% и не может быть обновлён. Пожалуйста, закройте эту программу и повторите попытку. \n\n Программа: %executable%\n Файл: %detail%"
 
-"Steam_PreloadCompleteNoPreorderAvailable" "У вас уже установлена копия %game%."
+"Steam_PreloadCompleteNoPreorderAvailable" "У вас установлена заблокированная копия «%game%»."
 
 "Steam_SubscriptionCancelled_PaymentCardUseLimitHit_Headline" 	"Превышено ограничение на число использований банковской карты"
 "Steam_SubscriptionCancelled_PaymentCardUseLimitHit_Info" 	"Операция не совершена: эту кредитную карту использовали в Steam слишком много раз.\n\nЭто ограничение существует для защиты наших клиентов от мошенничества с кредитными картами. Мошенничество преследуется по всей строгости закона."
@@ -1367,14 +1367,14 @@
 "Steam_SubscriptionCancelled_PaymentCardAlert_Info" 		"Операция не выполнена, поскольку банк, выдавший кредитную карту, пометил её как потенциально мошенническую.\n\nМошенничество преследуется по всей строгости закона."
 
 "Steam_InstallDirectXDialog_Title"	"Steam — Требуется последняя версия DirectX"
-"Steam_InstallDirextX_Info"		"Для запуска игры %game% требуется последняя версия Microsoft DirectX."
+"Steam_InstallDirextX_Info"		"Для запуска игры «%game%» требуется последняя версия Microsoft DirectX."
 "Steam_InstallDirextX_Link"		"Сайт загрузки Microsoft DirectX"
 
 "Steam_PurchaseError_AllAppsInSubscriptionAlreadyOwned"	"У вас уже есть все эти игры.\nВы можете получить к ним доступ через вашу библиотеку игр Steam."
 "SteamUI_ProductRegistrationWizard_Title"	"Активация продукта"
-"Steam_Install_AutoLaunchGame"		"Играть в %game%"
+"Steam_Install_AutoLaunchGame"		"Играть в «%game%»"
 
-"Steam_UnableToPreload" "Серверы Steam в данный момент слишком заняты и не могут осуществить предварительную\nзагрузку %game%.\nПовторите попытку через несколько часов."
+"Steam_UnableToPreload" "Серверы Steam сейчас слишком загружены и не могут обработать предварительную загрузку «%game%».\nПовторите попытку через несколько часов."
 "Steam_Error_Preload_Title" "Предварительная загрузка - Ошибка"
 "Steam_PreloadProgress"			"%preload_amount%%% загружено"
 
@@ -1460,7 +1460,7 @@
 "SteamUI_UnknownDriverURL" "http://store.steampowered.com/privacy_agreement/russian/"
 
 "SteamUI_Syscheck_Success_Title" "Тест на соответствие системным требованиям пройден"
-"SteamUI_Syscheck_Success" "Данный компьютер соответствует минимальным системным требованиям %game%."
+"SteamUI_Syscheck_Success" "Данный компьютер соответствует минимальным системным требованиям «%game%»."
 
 "SteamUI_MBPGPUWarning_Title"	"Steam — Обнаружено несколько видеокарт"
 "Steam_MBPGPUWarning_Info"	"У вашего MacBook Pro есть 2 видеокарты и сейчас он работает в режиме энергосбережения, а не в режиме повышенной производительности.
@@ -1518,7 +1518,7 @@
 "Steam_CloudLabel"					"Steam Cloud"
 "Steam_CloudInfo"					"Steam Cloud хранит ваши данные продукта, чтобы они совпадали на любом ПК."
 "Steam_EnableCloud"					"Включить синхронизацию со Steam Cloud для поддерживаемых приложений"
-"Steam_EnableCloudForApp"			"Включить синхронизацию со Steam Cloud для %game%"
+"Steam_EnableCloudForApp"			"Включить синхронизацию со Steam Cloud для «%game%»"
 "Steam_EnableCloudScreenshots"		"Открывать окно загрузки скриншотов после выхода из игры, если скриншоты были сделаны"
 "Steam_CloudUsage"					"Используется: %used%  / Доступно: %available%"
 "Steam_CloudEnableLink"				"Зайдите в Настройки / Загрузка + Cloud"
@@ -1567,7 +1567,7 @@
 "SteamUI_GamesDialog_RightClick_BackupGame" "Создать резервную копию..."
 "SteamUI_GamesDialog_RightClick_BackupApplication" "Резервная копия файлов приложения…"
 "Steam_BackupRequiresFullCache_Title"	"Steam — Резервная копия"
-"Steam_BackupRequiresFullCache_Info"	"Невозможно выполнить резервное копирование %game% до завершения обновления игры."
+"Steam_BackupRequiresFullCache_Info"	"Невозможно выполнить резервное копирование «%game%» до завершения обновления."
 
 "Steam_BackupSelectGames_Info"		"Выберите программы, для которых хотите сделать резервные копии.\nМожно выбрать только полностью загруженные и обновлённые программы."
 "Steam_BackupStartText"			"Что вы хотите сделать?"
@@ -1732,6 +1732,7 @@
 "steam_menu_help"	"Справка"
 "steam_menu_library"	"Библиотека"
 "steam_menu_hidden_games"	"Скрытые игры"
+"steam_menu_soundtracks"	"Cаундтреки"
 "steam_menu_downloads"	"Загрузки"
 "steam_menu_account"	"Steam"
 "steam_menu_window" "Окно"
@@ -1757,7 +1758,7 @@
 "steam_menu_view_screenshots" "Мои скриншоты"
 "steam_menu_view_videos" "Мои видео"
 "steam_menu_view_recommendations" "Мои обзоры"
-"steam_menu_view_workshop" "Моя Мастерская"
+"steam_menu_view_workshop" "Моя мастерская"
 
 "steam_menu_account_details" "Об аккаунте"
 "steam_menu_account_view_profile" "Мой профиль"
@@ -1773,7 +1774,7 @@
 
 "steam_menu_minigameslist"	"Свернуть"
 "steam_menu_fullgameslist"	"Развернуть"
-"steam_menu_backupgames"	"Резервное копирование и восстановление игр..."
+"steam_menu_backupgames"	"Восстановить файлы игры..."
 "steam_menu_changeuser"		"Войти в другой аккаунт..."
 "steam_menu_signout"		"Выйти из аккаунта..."
 "steam_menu_support"		"Служба поддержки Steam"
@@ -1891,8 +1892,8 @@
 "Steam_SteamSubscriberAgreement_Title"		"Соглашение подписчика Steam"
 "Steam_CybercafeSubscriberAgreement_Title"	"Steam — Создание аккаунта в интернет-кафе"
 
-"Steam_LaunchOptions_Title"		"Параметры запуска — %game%"
-"Steam_GameProperties_Title"		"%game% — свойства"
+"Steam_LaunchOptions_Title"		"Варианты запуска — «%game%»"
+"Steam_GameProperties_Title"		"«%game%» — свойства"
 "Steam_GameProperties_Close"		"Закрыть"
 
 "Steam_GameProperties_GeneralTab"	"Общие"
@@ -1904,7 +1905,7 @@
 "Steam_Game_Developer"			"Разработчик"
 "Steam_Game_Manual"				"Руководство"
 "Steam_Game_NoManual"			"[ отсутствует ]"
-"Steam_Game_DefaultManual" 		"Руководство по %game%"
+"Steam_Game_DefaultManual" 		"Руководство по «%game%»"
 "Steam_Game_SetLaunchOptions"			"Установить параметры запуска..."
 "Steam_Game_CreateDesktopShortcut"	"Создать ярлык на рабочем столе"
 "Steam_Game_AllowOtherDownloads$appType=game"	"Разрешить Steam загружать другие обновления, когда эта игра запущена"
@@ -1917,8 +1918,8 @@
 "Steam_Game_AvailableSeats"					"Число копий продукта, доступных для временного пользования: %seats%"
 "Steam_Game_AvailableSeatsUnlimited"		"Число копий продукта, доступных для временного пользования, не ограничено"
 
-"Steam_Game_DLC_Title"			"Для %game% имеется следующий дополнительный контент.\n\nОн автоматически устанавливается и удаляется вместе с продуктом и может быть использован после его запуска."
-"Steam_Game_DLC_Title2"			"Для %game% имеется следующий доступный контент"
+"Steam_Game_DLC_Title"			"Для «%game%» есть следующий дополнительный контент.\n\nОн автоматически устанавливается и удаляется вместе с продуктом и может быть использован после его запуска."
+"Steam_Game_DLC_Title2"			"Для «%game%» есть следующий дополнительный контент"
 "Steam_Game_FindDLC_URL"		"Просмотреть доступный контент для этого продукта"
 "Steam_Game_DLC_NameColumn"		"Название"
 "Steam_Game_DLC_AcquisitionColumn"	"Способ покупки"
@@ -1946,11 +1947,11 @@
 "Steam_Game_RecommendGame"		"Написать обзор"
 
 "Steam_Automatic_Updates"		"Автоматические обновления"
-"Steam_Game_UpdateHistory"		"Просмотреть историю обновлений %game%"
+"Steam_Game_UpdateHistory"		"Просмотреть историю обновлений «%game%»"
 
 "Steam_Game_DiskUsage"			"Занято"
 
-"Steam_Game_UpdateNewsURL"		"Просмотреть историю обновлений %game%"
+"Steam_Game_UpdateNewsURL"		"Просмотреть историю обновлений «%game%»"
 
 "steam_menu_PrivacyPolicy"		"Политика конфиденциальности"
 "steam_menu_LegalInformation"		"Правовая информация"
@@ -2088,13 +2089,13 @@
 
 "Steam_GameProperties_BackgroundDownloadsWhilePlaying"	"Фоновые загрузки"
 
-"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=game"	        "Разрешить Steam загружать другие игры или программы во время игры в %game%?"
-"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=application"	"Разрешить Steam загружать другие игры или программы во время работы %game%?"
-"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=demo"	        "Разрешить Steam загружать другие игры или программы во время игры в %game%?"
-"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=media"	    "Разрешить Steam загружать другие игры или программы во время просмотра %game%?"
-"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=music"	    "Разрешить Steam загружать другие игры или программы во время воспроизведения %game%?"
-"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=tool"	        "Разрешить Steam загружать другие игры или программы во время использования %game%?"
-"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType"              "Разрешить Steam загружать другие игры или программы, когда запущена %game%?"
+"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=game"	        "Разрешить Steam загружать другие игры или программы, когда вы играете в «%game%»?"
+"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=application"	"Разрешить Steam загружать другие игры или программы, когда вы пользуетесь «%game%»?"
+"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=demo"	        "Разрешить Steam загружать другие игры или программы, когда вы играете в «%game%»?"
+"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=media"	    "Разрешить Steam загружать другие игры или программы, когда вы смотрите «%game%»?"
+"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=music"	    "Разрешить Steam загружать другие игры или программы, когда вы воспроизводите «%game%»?"
+"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType=tool"	        "Разрешить Steam загружать другие игры или программы, когда вы пользуетесь «%game%»?"
+"Steam_GameProperties_BackgroundDownloadsWhilePlayingInfo$appType"              "Разрешить Steam загружать другие игры или программы, когда вы пользуетесь «%game%»?"
 
 "Steam_BackgroundDownloadsDefault_Allow"	"Следовать общим настройкам (разрешить загрузки в фоне)"
 "Steam_BackgroundDownloadsDefault_Deny"	"Следовать общим настройкам (остановить фоновые загрузки)"
@@ -2212,11 +2213,11 @@
 "steam_mymedia"		"Трейлеры"
 "Steam_minigamescolumn_media"			"ТРЕЙЛЕРЫ"
 "SteamUI_GamesDialog_RightClick_BackupMedia" "Создание архивной копии..."
-"SteamUI_CantRunMediaDueToOSVersion"		"Не удается запустить %game%: игра не поддерживает %osversion%."
-"SteamUI_CantRunMediaDueToMediaPlayerVersion"   "Не удается запустить %game%. На компьютере обнаружена версия Windows Media Player [%detectedVersion%], тогда как для игры требуется версия [%requiredVersion%].\nУстановите последнюю версию Windows Media Player отсюда:"
-"SteamUI_CantRunMediaDueToMediaPlayerNotInstalled"   "Не удается запустить %game% - не найден Windows Media Player.\nУстановите последнюю версию Windows Media Player отсюда:"
+"SteamUI_CantRunMediaDueToOSVersion"		"Не удаётся запустить «%game%»: игра не поддерживает %osversion%."
+"SteamUI_CantRunMediaDueToMediaPlayerVersion"   "Не удаётся запустить «%game%». На компьютере обнаружена версия Windows Media Player [%detectedVersion%], тогда как для игры требуется версия [%requiredVersion%].\nСкачать последнюю версию Windows Media Player можно здесь:"
+"SteamUI_CantRunMediaDueToMediaPlayerNotInstalled"   "Не удаётся запустить «%game%» — не найден Windows Media Player.\nУСкачать последнюю версию Windows Media Player можно здесь:"
 "SteamUI_WindowsMediaPlayerInstallURL"		"http://windows.microsoft.com/ru-ru/windows/windows-media"
-"SteamUI_CantRunMediaDueToMediaPlayerNotInstalledOSX"   "Невозможно запустить %game% поскольку не установлены медиа-компоненты для QuickTime.\nУстановите новейшую версию Windows Media Components для QuickTime из:"
+"SteamUI_CantRunMediaDueToMediaPlayerNotInstalledOSX"   "Не удаётся запустить «%game%», поскольку не установлены медиа-компоненты для QuickTime.\nСкачать последнюю версию Windows Media Components для QuickTime можно здесь:"
 "SteamUI_WindowsMediaPlayerInstallURLOSX"	"http://windows.microsoft.com/ru-ru/windows/windows-media-components-quicktime"
 
 "Steam_UnknownErrorLaunchingMedia"		"Неизвестная ошибка запуска."
@@ -2242,21 +2243,22 @@
 "Steam_Countdown_Minutes"				"мин."
 "Steam_Countdown_Seconds"				"сек."
 
-"Steam_PreloadCountdown_UnlockTime"	"%game% станет доступна через:"
+"Steam_PreloadCountdown_UnlockTime"	"«%game%» станет доступна через:"
 
 "Steam_DoDFreeWeekend_BeginsIn"	"Бесплатная игра в Day of Defeat станет доступна через:"
 "Steam_DoDFreeWeekend_Info"		"Когда счётчик обнулится, начнётся 72-часовой период бесплатной игры."
 "Steam_DoDFreeWeekend_URL"		"О бесплатных днях игры в Day of Defeat"
-"Steam_FreeWeekend_BeginsIn"		"Бесплатная игра в %game% станет доступна через:"
+"Steam_FreeWeekend_BeginsIn"		"Поиграть в «%game%» бесплатно можно будет через:"
 "Steam_FreeWeekend_Info"			"Когда счётчик обнулится, начнётся %time% период бесплатной игры."
-"Steam_FreeWeekend_URL"			"О бесплатных днях игры в %game%"
+"Steam_FreeWeekend_URL"			"О бесплатных днях игры «%game%»"
 "Steam_FreeWeekend_48H"			"48 часов"
 "Steam_FreeWeekend_72H"			"72 часа"
 "Steam_FreeWeekend_1W"			"1 неделя"
 
-"Steam_NoLongerOwnsGame_Title"	"Steam — %game%"
+"Steam_NoLongerOwnsGame_Title"	"Steam — «%game%»"
 "Steam_NoLongerOwnsGame_Info"		"Бесплатный доступ закрыт."
 
+"steam_menu_systemreport"		"Системный отчёт"
 "steam_menu_systeminfo"			"Сведения о системе"
 "steam_systeminfo_title"			"Steam — Сведения о системе"
 "steam_systeminfo_surveylink"	"Сравнить с конфигурациями других пользователей Steam"
@@ -2282,10 +2284,10 @@
 "Steam_P2P_LaunchButton"		"Запуск"
 "Steam_P2P_ExploreButton"		"Исследовать"
 "Steam_P2P_AboutURL"			"http://www.valvesoftware.com"
-"Steam_P2P_StatusTitle"			"%game% загрузка - Steam P2P"
-"Steam_P2P_DownloadLabel"		"Загружается: %game%"
-"Steam_P2P_SharingLabel"		"Передача: %game%"
-"Steam_P2P_PausedLabel"			"Приостановлено: %game%"
+"Steam_P2P_StatusTitle"			"Загрузка «%game%» — Steam P2P"
+"Steam_P2P_DownloadLabel"		"Загружается: «%game%»"
+"Steam_P2P_SharingLabel"		"Передача: «%game%»"
+"Steam_P2P_PausedLabel"			"Приостановлено: «%game%»"
 "Steam_P2P_DownloadLabel_Complete"	"%game%"
 "Steam_P2P_ProgressLabel"		"завершено %percentcomplete%; осталось %remainingtime%"
 "Steam_P2P_ProgressLabel_Complete"	"завершено на 100%"
@@ -2310,7 +2312,7 @@
 "Steam_P2P_Graph_Duration30"		"30 минут"
 "Steam_P2P_Graph_Duration60"		"1 час"
 "Steam_P2P_OfflineWithoutAllData_Title"	"Автономный режим"
-"Steam_P2P_OfflineWithoutAllData_Message" "Невозможно запустить игру '%game%'. Данные загружены не на 100%."
+"Steam_P2P_OfflineWithoutAllData_Message" "Не удаётся запустить «%game%». Данные загружены не на 100%."
 "Steam_RightClick_StopSharing"		"Закрыть доступ"
 "Steam_RightClick_ResumeSharing"	"Возобновить доступ"
 "Steam_RightClick_StopChecking"		"Прекратить проверку"
@@ -2361,12 +2363,12 @@
 "Steam_Install_AutoLaunchGameStart"		"Запустить"
 "Steam_Install_DontShowPageAgain"		"Больше не показывать"
 
-"Steam_InstallComplete_DownloadInfo"		"Steam загружает %game%. Процесс загрузки отображается в списке загрузок Steam.\n\nЕсли вы перезапустите Steam, процесс загрузки продолжится автоматически."
-"Steam_InstallComplete_DownloadInfo_Queued"		"Steam поставил загрузку %game% в очередь. Она начнется после завершения других загрузок, которые стоят перед ней. Вы можете менять очередь в окне загрузок Steam."
+"Steam_InstallComplete_DownloadInfo"		"Steam загружает «%game%». Процесс загрузки отображается в списке загрузок Steam.\n\nЕсли вы перезапустите Steam, процесс загрузки продолжится автоматически."
+"Steam_InstallComplete_DownloadInfo_Queued"		"Steam поставил загрузку «%game%» в очередь. Она начнётся после завершения других загрузок, которые стоят перед ней. Вы можете менять очередь в окне загрузок Steam."
 "Steam_InstallComplete_DownloadInfo_Queued_Multiple"		"Steam поставил загрузку ваших игр в очередь. Она начнется после завершения других загрузок, которые стоят перед ней. Вы можете менять очередь в окне загрузок Steam."
 "Steam_InstallComplete_DownloadInfo_Media"		"Выделенные медиафайлы теперь находятся в вашей игровой \nбиблиотеке Steam."
-"Steam_InstallComplete_DownloadInfo_Preload"  "Steam начал предзагрузку %game%. Когда игра будет выпущена, контент будет разблокирован и вы сможете начать играть."
-"Steam_InstallComplete_DownloadInfo_Auto_Run"		"Загрузка %game% завершена. Игра запустится автоматически."
+"Steam_InstallComplete_DownloadInfo_Preload"  "Steam начал предзагрузку «%game%». Когда игра будет выпущена, контент будет разблокирован и вы сможете начать играть."
+"Steam_InstallComplete_DownloadInfo_Auto_Run"		"Загрузка «%game%» завершена. Игра запустится автоматически."
 "Steam_Install_GoToDownloadsPage"			"Управление загрузками"
 
 "Steam_FindContent$appType=application"			"Поиск по приложениям…"
@@ -2389,7 +2391,7 @@
 "Steam_MetascoreColumn"					"Metascore"
 
 "Steam_CancelInstall_Title"				"Steam — Отмена установки"
-"Steam_CancelInstall_Info"				"Вы хотите отменить установку %game%?"
+"Steam_CancelInstall_Info"				"Вы хотите отменить установку «%game%»?"
 "Steam_CancelInstall_ContinueButton"		"Продолжить установку"
 "Steam_CancelInstall_CancelButton"		"Отменить установку"
 
@@ -2403,13 +2405,13 @@
 "Steam_Uninstall_ButtonText"		"Удалить игру"
 
 "Steam_Uninstall_Games_Dialog_Title"	"Steam — Удаление"
-"Steam_Uninstall_Games_Dialog_Text" "Удаление %game%..."
+"Steam_Uninstall_Games_Dialog_Text" "Удаление «%game%»..."
 
 "Steam_Shutdown_Dialog_Title"	"Steam — Выключение"
 "Steam_Shutdown_Dialog_Text" "Выключение Steam..."
-"Steam_Shutdown_Waiting_For_Game" "Ждем, пока %game% закончит свою работу..."
+"Steam_Shutdown_Waiting_For_Game" "Ждём, пока «%game%» закончит свою работу..."
 "Steam_Shutdown_Finishing_Download" "Завершение загрузок..."
-"Steam_Shutdown_Waiting_For_Download" "Останавливается загрузка %game%..."
+"Steam_Shutdown_Waiting_For_Download" "Останавливается загрузка «%game%»..."
 "Steam_Shutdown_Waiting_For_Cloud" "Завершается синхронизация со Steam Cloud..."
 "Steam_Shutdown_Waiting_For_Logoff" "Выход..."
 "Steam_Shutdown_ForceQuit" "Выйти сейчас"
@@ -2471,10 +2473,10 @@
 "Steam_Games"								"Игры"
 
 "Steam_RegionRestricted_Title"			"Steam — Игра недоступна"
-"Steam_RegionRestrictedPurchase_Info"				"Эта игра была активирована с помощью цифрового ключа продукта, который действует только для определенного географического региона. Поскольку вы находитесь в ином регионе, вы не сможете играть в %game%."
+"Steam_RegionRestrictedPurchase_Info"				"Эта игра была активирована с помощью цифрового ключа, который действует только для определённого географического региона. Поскольку вы находитесь в ином регионе, вы не сможете играть в «%game%»."
 "Steam_RegionRestricted_SupportLink"		"Подробности на сайте службы поддержки Steam"
 "Steam_RegionRestrictedPurchase_SupportURL"		"https://support.steampowered.com/kb/1266-QFZC-2141&l=russian/"
-"Steam_RegionRestricted_Info"				"%game% не доступна для вашего региона."
+"Steam_RegionRestricted_Info"				"«%game%» недоступна в вашем регионе."
 "Steam_RegionRestricted_SupportURL"		"https://support.steampowered.com/kb/1266-QFZC-2141&l=russian/"
 
 "Steam_CountryRestricted_Info"				"Эта игра недоступна для покупки в вашей стране."
@@ -2525,7 +2527,7 @@
 "SteamUI_AddGameLabel"  "Выберите программу, которую хотите добавить в свою библиотеку игр."
 
 "Steam_LaunchShortcutFailed_Title"	"Steam — Не удалось запустить при помощи ярлыка"
-"Steam_LaunchShortcutFailed_Info"		"Неудачный запуск %game%."
+"Steam_LaunchShortcutFailed_Info"		"Не удалось запустить «%game%»."
 
 "SteamUI_PlatformMenu_Shortcuts_Cascading" "Быстрые клавиши"
 "SteamUI_PlatformMenu_NoShortcuts"	"(Нет ярлыков)"
@@ -2772,17 +2774,17 @@
 "Steam_HL2Russian_AlreadyRemoved"		"Half-Life 2 Russian Pack не установлен."
 "Steam_HL2Russian_LaunchHalfLifeNow"	"Запустить Half-Life 2"
 
-"Steam_GameLaunchOptions_Title"				"%game% — Steam"
-"Steam_LaunchOption_Game"							"Играть в %game%"
-"Steam_LaunchOption_Application"			"Запустить %game%"
+"Steam_GameLaunchOptions_Title"				"«%game%» — Steam"
+"Steam_LaunchOption_Game"							"Играть в «%game%»"
+"Steam_LaunchOption_Application"			"Запустить «%game%»"
 
-"Steam_LaunchOption_SafeMode"					"Запустить %game% в безопасном режиме"
-"Steam_LaunchOption_Multiplayer"				"Запустить %game% в многопользовательском режиме"
-"Steam_LaunchOption_VR"							"Запустить %game% в режиме Steam VR"
-"Steam_LaunchOption_openxr"						"Запустить %game% в режиме OpenXR"
-"Steam_LaunchOption_othervr"					"Запустить %game% в режиме Oculus VR"
-"Steam_LaunchOption_osvr"						"Запустить %game% в режиме OSVR"
-"Steam_LaunchOption_openvroverlay"				"Запустить %game% с оверлеем SteamVR"
+"Steam_LaunchOption_SafeMode"					"Запустить «%game%» в безопасном режиме"
+"Steam_LaunchOption_Multiplayer"				"Запустить «%game%» в многопользовательском режиме"
+"Steam_LaunchOption_VR"							"Запустить «%game%» в режиме Steam VR"
+"Steam_LaunchOption_openxr"						"Запустить «%game%» в режиме OpenXR"
+"Steam_LaunchOption_othervr"					"Запустить «%game%» в режиме Oculus VR"
+"Steam_LaunchOption_osvr"						"Запустить «%game%» в режиме OSVR"
+"Steam_LaunchOption_openvroverlay"				"Запустить «%game%» с оверлеем SteamVR"
 "Steam_LaunchOption_Server"						"Запустить выделенный сервер"
 "Steam_LaunchOption_Editor"						"Запустить редактор игры"
 "Steam_LaunchOption_Config"						"Запустить настройку"
@@ -2899,7 +2901,7 @@
 "Steam_SubscriptionExpired"		"Срок действия лицензии истек"
 
 "SteamUI_LicenseExpired_Title"	"Срок действия лицензии истек"
-"SteamUI_LicenseExpired_Body"		"Срок действия лицензии %game% истек."
+"SteamUI_LicenseExpired_Body"		"Срок действия лицензии «%game%» истёк."
 
 
 "SteamUI_DurationControl_PlaytimeExceeded_Title"		"Превышено время игры"
@@ -2958,7 +2960,7 @@
 "Steam_LaunchEULA_Info"			"Лицензионное соглашение с конечным пользователем (EULA)"
 "Steam_LaunchEULA_Agree"			"Соглашаюсь"
 "Steam_LaunchEULA_Decline"		"Отмена"
-"Steam_LaunchEULA_Text"			"Прочитайте данное соглашение полностью. Необходимо принять все условия лицензионного соглашения с конечным пользователем, чтобы играть в %game%."
+"Steam_LaunchEULA_Text"			"Прочитайте соглашение полностью. Вы должны принять все его условия, чтобы играть в «%game%»."
 
 "Steam_GuestPasses_LinkText"		"Подробная информация о подарках и гостевых пропусках"
 "Steam_GuestPasses_LinkURL"		"https://support.steampowered.com/kb/6262-QXCN-0755&l=russian/"
@@ -3144,10 +3146,10 @@
 "Steam_MacOSX106_SupportURL" "https://support.steampowered.com/kb_article.php?ref=5953-QTIO-1764&l=russian"
 
 "Steam_CPUSSEWarning_Title"	"Steam — Обнаружен неподдерживаемый ЦП"
-"Steam_CPUSSEWarning_Info"	"Через несколько месяцев %game% будет не в состоянии запускаться на этом компьютере.  
-Причина в том, что поддержка %game% процессоров, не содержащих набор инструкций SSE, заканчивается.
+"Steam_CPUSSEWarning_Info"	"Через несколько месяцев «%game%» будет невозможно запустить на этом компьютере. 
+Причина в том, что поддержка игрой «%game%» процессоров, не содержащих набор инструкций SSE, заканчивается.
 
-Чтобы продолжать играть в %game%, вам понадобится использовать другой компьютер или обновить конфигурацию имеющегося."
+Чтобы продолжать играть в «%game%», вам понадобится использовать другой компьютер или обновить конфигурацию имеющегося."
 
 "SteamUI_InstallScript_Failed_Title" "Steam — Установка не выполнена"
 "SteamUI_InstallScript_Failed_Text" "При настройке игры не удалось установить системные компоненты. Первый запуск этой игры 
@@ -3156,7 +3158,7 @@
 "SteamUI_InstallScript_Continue" "Продолжить"
 
 "Steam_CPUSSERequired_Title"	"Steam — Обнаружен неподдерживаемый ЦП"
-"Steam_CPUSSERequired_Info"	"Для %game% нужен центральный процессор, поддерживающий набор инструкций SSE.
+"Steam_CPUSSERequired_Info"	"Для «%game%» нужен центральный процессор, поддерживающий набор инструкций SSE.
 
 Чтобы играть в эту игру, вам понадобится обновить конфигурацию вашего компьютера или использовать другой."
 
@@ -3199,11 +3201,11 @@
 "Steam_Root_Title" 	"Steam"
 "Steam_Root_Title_Internal" 	"Steam"
 
-"Steam_CDKeyDisplayReason" "Это ваш ключ активации для %game%. Вам понадобится ввести этот ключ после запуска приложения. Запишите ключ или нажмите кнопку «Скопировать в буфер обмена»."
-"Steam_CDKeyDisplayReasonNoCopy" "Это ваш ключ активации для %game%. Вам понадобится ввести этот ключ после запуска приложения. Запишите ключ, чтобы вы могли ввести его позже."
+"Steam_CDKeyDisplayReason" "Это ваш ключ активации «%game%». Он понадобится после запуска приложения, так что запишите его или нажмите кнопку «Скопировать в буфер обмена»."
+"Steam_CDKeyDisplayReasonNoCopy" "Это ваш ключ активации «%game%». Он понадобится после запуска приложения, так что запишите его."
 
 "Steam_RequestingLegacyKey" "Требуется ключ..."
-"Steam_LegacyCDKey_Title" "Цифровой ключ %game%"
+"Steam_LegacyCDKey_Title" "Ключ активации «%game%»"
 "Steam_CopyLegacyKey_ToClipboard" "Скопировать в буфер обмена"
 
 "Steam_CityLifeDeluxe_LaunchBuildingEditor"	"Запустить редактор персональной подстройки"
@@ -3331,13 +3333,13 @@
 "Steam_GiftRevoked_SupportLink"		"Подробности на сайте службы поддержки Steam"
 
 "Steam_ExternalSignupButton" "Перейти на сайт %s1"
-"Steam_ExternalSignupHeadline"	"Ваш аккаунт %game%"
+"Steam_ExternalSignupHeadline"	"Ваш аккаунт «%game%»"
 "Steam_ExternalSignupHeadlineMulti"	"Ваши внешние аккаунты"
-"Steam_ExternalSignupInfo" "Для завершения установки вам необходимо связать вашу покупку в Steam с аккаунтом в %game%.\n\nПосетите ее официальный сайт, чтобы войти в существующий аккаунт %game% или создать новый."
+"Steam_ExternalSignupInfo" "Для завершения установки вам необходимо связать вашу покупку в Steam с аккаунтом в игре «%game%».\n\nПосетите её официальный сайт, чтобы войти в существующий аккаунт «%game%» или создать новый."
 "Steam_ExternalSignupInfoMulti" "Для завершения установок вам необходимо связать ваши покупки с внешними учётными записями.\n\nПосетите их официальные сайты, чтобы войти в нынешние учётные записи или создать новые."
-"Steam_ExternalSignupFinish" "После того, как вы создали аккаунт %game% нажмите «Готово» и начинайте играть."
-"Steam_ExternalSignupPropertiesLabel"	"Требуется активный аккаунт %game%"
-"Steam_ExternalSignupPropertiesButton" "Посетить сайт аккаунта %game%"
+"Steam_ExternalSignupFinish" "После создания аккаунта для «%game%» нажмите «Готово» и начинайте играть."
+"Steam_ExternalSignupPropertiesLabel"	"Требуется активный аккаунт в «%game%»"
+"Steam_ExternalSignupPropertiesButton" "Посетить сайт аккаунта «%game%»"
 
 "Steam_GameAlreadyInAccount" "Игра уже зарегистрирована для этого аккаунта"
 "Steam_FullGameAlreadyInAccount" "Полная игра уже зарегистрирована для этого аккаунта"
@@ -3346,13 +3348,13 @@
 "SteamUI_OldClient" "Для запуска этой игры потребуется обновить клиент."
 
 "SteamUI_WrongPlatform_Title" "Steam — Игра недоступна"
-"SteamUI_WrongPlatform" "%game% недоступна для вашей платформы."
+"SteamUI_WrongPlatform" "«%game%» недоступна для вашей платформы."
 
 
 "SteamUI_AgeOver17" "Да, мне больше 17 лет."
 
 "SteamUI_RootDialog_Start_Problem_Title" "Steam — Не удалось запустить игру"
-"SteamUI_RootDialog_Start_Problem_Text" "%game% не запустилась (код ошибки: %error%)."
+"SteamUI_RootDialog_Start_Problem_Text" "«%game%» не запустилась (код ошибки: %error%)."
 "Steam_ExternalSignup" "Управление игровым аккаунтом..."
 "Steam_ExternalRegistrationURL"			"Зарегистрируйте вашу игру…"
 
@@ -3365,8 +3367,8 @@
 "Steam_WaitingForCloudSyncDebrief" "В данный момент Steam синхронизирует файлы ваших игр с Steam Cloud. Steam автоматически закроется по окончании процесса.\n\nДля принудительного выхода из Steam без синхронизации ваших файлов, нажмите кнопку «Выйти»."
 "Steam_CloudSyncForceQuit" "Выйти"
 
-"Steam_ModNeedsFullGame_Title"	"Steam — Невозможно установить %game%"
-"Steam_ModNeedsFullGame_Info"	"%game% — это модификация. Для её работы требуется основная игра."
+"Steam_ModNeedsFullGame_Title"	"Steam — не удаётся установить «%game%»"
+"Steam_ModNeedsFullGame_Info"	"«%game%» — это модификация. Для её работы требуется основная игра."
 "Steam_ModNeedsFullGame_Button"	"Получить дополнительную информацию"
 
 "Steam_AccountEmail_Title"		"Информация об аккаунте Steam"
@@ -3431,8 +3433,8 @@
 "Steam_InstallAborted_Title"	"Steam — Установка"
 
 "Steam_InstallAborted_InfoAppNoInfo" "Невозможно установить эту игру."
-"Steam_InstallAborted_InfoAppUnreleased"	"На данный момент невозможно установить %game%, так как эта игра еще не вышла."
-"Steam_InstallAborted_InfoAppNoDemo"		"Не удалось установить %game%, так как это демоверсия, а у вас уже есть полная версия. Установите полную версию игры."
+"Steam_InstallAborted_InfoAppUnreleased"	"На данный момент установить «%game%» невозможно, так как эта игра ещё не вышла."
+"Steam_InstallAborted_InfoAppNoDemo"		"Не удалось установить «%game%», так как это демоверсия, а у вас уже есть полная версия. Установите полную версию игры."
 
 "Steam_Startup_SteamChinaRequiredTitle"					"Требуется Steam China"
 "Steam_Startup_GetSteamChina"						"Игра %gamename% теперь должна запускаться через новый клиент Steam China.\n\nВы можете войти со своего аккаунта %gamename% и перенести свой игровой процесс, предметы, уровень персонажа и очки.\n\n"
@@ -3467,10 +3469,10 @@
 "Steam_SettingsInGameScreenshotFolder"	"Папка скриншотов"
 "Steam_SettingsInGameTitle"	"Оверлей Steam"
 
-"SteamUI_JoinDialog_PreparingToPlay" 	"Подготовка к запуску %game% %dots%"
-"SteamUI_JoinDialog_Title"		"%game% — Steam"
-"SteamUI_JoinDialog_Updating_Title" 	"Обновление %game%"
-"SteamUI_JoinDialog_Ready_Title"	"Готово — %game%"
+"SteamUI_JoinDialog_PreparingToPlay" 	"Подготовка к запуску «%game%» %dots%"
+"SteamUI_JoinDialog_Title"		"«%game%» — Steam"
+"SteamUI_JoinDialog_Updating_Title" 	"Обновление «%game%»"
+"SteamUI_JoinDialog_Ready_Title"	"Готово — «%game%»"
 "SteamUI_JoinDialog_NoName_Title" 	"Steam"
 "SteamUI_JoinDialog_InstallScriptInfo"	"Производится первоначальная настройка %dots% \n\nУстановка: %stepname% (шаг %step% из %steptotal%)"
 
@@ -3478,7 +3480,7 @@
 "SteamUI_GameRequires_NTFS_Detail"	"Устанавливаемая вами игра требует наличия диска с файловой системой NTFS и не может быть установлена на диск с файловой системой\n FAT32. Для получения более подробной информации, обратитесь к справочному разделу\n по расположенной ниже ссылке."
 "SteamUI_GameRequires_64BitOS_Detail"	"Для устанавливаемой игры требуется 64-разрядная версия Windows. Если у вас нет компьютера с такой системой, то нажмите ниже, чтобы узнать о возврате средств."
 
-"SteamUI_SiteLicense_LockedDetail"	"В данный момент лицензии на этот продукт недоступны.\nПопробуйте позже или уведомите локального администратора."
+"SteamUI_SiteLicense_LockedDetail"	"В данный момент нет свободных лицензий этого продукта.\nПопробуйте позже или уведомите локального администратора."
 
 "SteamUI_ValveSurvey_Summary_SteamHDUsedMB"	"Дисковое пространство, используемое Steam: %s1 МБ"
 "SteamUI_ValveSurvey_GatheringSystemInformation"	"Сбор информации о системе…"
@@ -3621,7 +3623,7 @@
 "Steam_CannotInstallDownloadsDisabled"	"Невозможно устанавливать игры, если загрузки отключены.\n"
 
 "Steam_CannotInstallApp_Title"	"Ошибка"
-"Steam_CannotInstallApp_Info"	"Не удалось установить %game% (%error%)."
+"Steam_CannotInstallApp_Info"	"Не удалось установить «%game%» (%error%)."
 
 "SteamUI_VideoPlayer_Title"	"Steam — Проигрыватель видео"
 "SteamUI_VideoPlayer_LaunchError"	"При запуске проигрывателя Steam произошла ошибка"
@@ -3878,7 +3880,7 @@
 
 "steam_edittags_menuitem"	"Изменить категории..."
 "steam_edittags_addtag"		"Добавить категорию"
-"steam_edittags_title"		"%game% — Категории"
+"steam_edittags_title"		"«%game%» — категории"
 "steam_edittags_hide"		"Скрыть эту игру из моей библиотеки"
 "steam_edittags_hide_multi"	"Скрыть эти игры из моей библиотеки"
 "steam_usertag_favorites"	"Избранное"
@@ -3918,8 +3920,8 @@
 "steam_editcontroller"	"Настройки контроллера"
 "steam_menu_media" "Трейлеры"
 "steam_menu_tools" "Инструменты"
-"steam_menu_friends" "Друзья"
-"steam_menu_servers" "Серверы"
+"steam_menu_friends" "Друзья и чат"
+"steam_menu_servers" "Игровые серверы"
 "steam_menu_settings" "Настройки"
 "steam_menu_view_friends" "Список друзей (%friends_online% в сети)"
 "steam_menu_view_players" "Игроки"
@@ -4101,7 +4103,7 @@
 "SteamUI_ContentMgr_SelectInstallFolder" "Выберите или создайте новую папку библиотеки Steam:"
 "SteamUI_ContentMgr_RemoveFailed" "Не удалось удалить папку библиотеки Steam."
 "SteamUI_ContentMgr_RemoveFailedDefaultFolder" "Основную папку библиотеки Steam невозможно удалить."
-"SteamUI_ContentMgr_RemoveFailedUsedFolder" "%game% использует эту папку библиотеки Steam, поэтому её нельзя удалить."
+"SteamUI_ContentMgr_RemoveFailedUsedFolder" "«%game%» использует эту папку библиотеки Steam, поэтому её нельзя удалить."
 "SteamUI_ContentMgr_FlushDownloadConfig" "Очистить кэш загрузки"
 "SteamUI_ContentMgr_FlushDownloadConfigInfo" "Очистив кэш, вы можете решить проблемы при загрузке или запуске приложений"
 "SteamUI_ContentMgr_FlushDownloadConfigTip" "Это не повлияет на установленные или сохраненные игры"
@@ -4124,7 +4126,7 @@
 "Steam_MoveAppFolder_Move" "Переместить папку"
 "Steam_MoveAppFolder_Cancel" "Отмена"
 "Steam_MoveAppFolder_Close" "Закрыть"
-"Steam_MoveAppFolder_Info" "Файлы %game% установлены в папке библиотеки «%folder%»."
+"Steam_MoveAppFolder_Info" "Файлы «%game%» установлены в папке библиотеки «%folder%». "
 "Steam_MoveAppFolder_Success" "Файлы (%numfiles%) перемещены в новую папку библиотеки."
 "Steam_MoveAppFolder_Failure" "Не удалось переместить все файлы в новую папку библиотеки (%error%)."
 "Steam_MoveAppFolder_FolderExists" "Папка установки игры уже существует в выбранной директории Steam."
@@ -4144,7 +4146,7 @@
 "steam_gamehub"		"Центр сообщества"
 "steam_details_contributioncount"	"Вклад сообщества"
 
-"steam_subscribed_files" "Работа в Мастерской для %name%"
+"steam_subscribed_files" "Работа в мастерской для %name%"
 "steam_subscribed_files_complete" "Выполнено"
 
 "steam_shader_depots" "%name% — контент кэша шейдеров"
@@ -4264,7 +4266,7 @@
 "Steam_DeviceAuth_RequestDialog_OwnerLoginRequired" "Чтобы предоставить общий доступ к библиотеке, владелец должен войти в свой аккаунт на этом устройстве и включить Family Library Sharing."
 
 "Steam_DeviceAuth_StoppedSharedGame_Title" "Предупреждение общей библиотеки"
-"Steam_DeviceAuth_StoppedSharedGame_Text" "Работа %game% прекращена, так как сейчас данную библиотеку игр использует %owner%."
+"Steam_DeviceAuth_StoppedSharedGame_Text" "Работа «%game%» прекращена, так как сейчас данную библиотеку игр использует %owner%."
 
 "Steam_Settings_Family_Sharing_Title" "Family Library Sharing"
 "Steam_Settings_Family_Sharing_ManageSharing" "Другие компьютеры"
@@ -4316,7 +4318,7 @@
 "steam_inbox_helprequestreply"		"Ответов от службы поддержки: 1"
 "steam_inbox_helprequestreplies"	"Ответов от службы поддержки: %count%"
 
-"Steam_AllowGameLaunch_Info"	"%game% запускается с дополнительными параметрами, указанными ниже."
+"Steam_AllowGameLaunch_Info"	"«%game%» запускается с дополнительными параметрами, указанными ниже."
 "Steam_AllowGameLaunch_Info_args"	"\"%arguments%\"\n"
 "Steam_AllowGameLaunch_Info_Prompt" "Если вы не запускали эту игру или не понимаете, что это за параметры, нажмите «Отмена»."
 "Steam_AllowGameLaunch_Title"	"Разрешить запуск игры?"
@@ -4373,19 +4375,14 @@
 "SteamUI_StreamLaunch_InstallRequiresUI" "Установка этой игры требует участия пользователя.\n\nУстановите эту игру на удалённом компьютере вручную."
 "SteamUI_StreamLaunch_Failed"		"Не удалось запустить трансляцию."
 "SteamUI_StreamLaunch_InstallDrivers"	"Для трансляций требуются дополнительные драйверы.\nПожалуйста, следуйте указаниям Steam на удаленном компьютере."
-"SteamUI_StreamLaunch_StillDownloading" "В данный момент на компьютере %ClientName% идет обновление. %game% можно будет запустить сразу, как только закончится загрузка."
+"SteamUI_StreamLaunch_StillDownloading" "Сейчас на компьютере %ClientName% идёт обновление. «%game%» можно будет запустить, как только закончится загрузка."
 "SteamUI_StreamLaunch_TransportUnavailable"	"Трансляция вне дома сейчас невозможна. Повторите попытку позже."
-
-"Steam_InstallAudioCaptureDriver_Title"	"Обновление драйвера звуковой карты"
-"Steam_InstallAudioCaptureDriver_Text"	"Steam необходимо обновить драйвер звуковой карты. После обновления может потребоваться перезагрузка.\n\nНажмите «Установить», чтобы продолжить."
-"Steam_InstallGamepadInputDriver_Title"	"Обновление драйвера геймпада"
-"Steam_InstallGamepadInputDriver_Text"	"Steam необходимо обновить драйвер геймпада. После обновления может потребоваться перезагрузка.\n\nНажмите «Установить», чтобы продолжить."
 
 "Steam_OtherSessionPlaying_Title" "Ошибка — Steam"
 "Steam_OtherSessionPlaying_Text" "«%existing_app%» уже работает на другом компьютере.\nЗапуск «%launching_app%» на этом устройстве отключит другую сессию от Steam."
 
 "Steam_SystemRequirementWarning_Title" "Предупреждение о производительности"
-"Steam_SystemRequirementWarning_Text" "Ваша система не соответствует минимальным системным требованиям для %game%."
+"Steam_SystemRequirementWarning_Text" "Ваша система не соответствует минимальным системным требованиям для «%game%»."
 "Steam_SystemRequirementWarning_Link" "Показать системные требования"
 
 "Notification_RemoteClientTitle"	"Steam Remote Play"
@@ -4696,9 +4693,9 @@
 "SteamUI_StreamingIntro_Title"		"Добро пожаловать в Steam Remote Play"
 "SteamUI_StreamingIntro"			"Вы собираетесь запустить игру на удалённом компьютере и играть в неё здесь, используя Steam Remote Play."
 "SteamUI_StreamingIntro2"			"Качество игры зависит от используемого оборудования и подключения к сети. Чтобы повысить производительность, проверьте настройки Remote Play."
-"SteamUI_StreamLaunch_ProgressTitle"		"%game% — запуск трансляции"
-"SteamUI_StreamLaunch_ServerProgress"			"Подготовка к трансляции %game%…"
-"SteamUI_StreamLaunch_RemoteStart"				"Подготовка к трансляции %game%…"
+"SteamUI_StreamLaunch_ProgressTitle"		"«%game%» — запуск трансляции"
+"SteamUI_StreamLaunch_ServerProgress"			"Подготовка к трансляции «%game%»…"
+"SteamUI_StreamLaunch_RemoteStart"				"Подготовка к трансляции «%game%»…"
 
 "SteamUI_RemoteDeviceAuthorization_Title"		"Авторизовать устройство"
 "SteamUI_RemoteDeviceAuthorization_Text"		"Введите код авторизации с устройства %devicename%, чтобы позволить ему запускать игры из Steam."
@@ -4845,7 +4842,7 @@
 "Steam_DualSense_FirmwareUpdate_DisableNotification"	"Больше не показывать"
 
 "RescueDialog_Title" "Steamwebhelper не отвечает"
-"RescueDialog_Explanation" "steamwebhelper.exe (критический компонент Steam) не отвечает. Интерфейс Steam невозможно использовать. Узнайте больше <a href=\"about:blank\">здесь</a>."
+"RescueDialog_Explanation" "steamwebhelper.exe (критический компонент Steam) не отвечает. Интерфейс Steam невозможно использовать. Узнайте больше <a href=steam://openurl_external/https://help.steampowered.com/faqs/view/6C3E-9504-CC20-AF49>здесь</a>."
 "RescueDialog_RadioHeader" "Давайте попробуем это исправить:"
 "RescueDialog_RestartSteam" "Перезапустить Steam"
 "RescueDialog_RestartSteam_NoGPU" "Перезапустить Steam с выключенным аппаратным ускорением"

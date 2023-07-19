@@ -33,7 +33,6 @@ __common
 __DATA
 __LINKEDIT
 @loader_path/libtier0_s.dylib
-R]2%
 @loader_path/crashhandler.dylib
 /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
 /usr/lib/libc++.1.dylib
@@ -129,7 +128,7 @@ _l;_|r
 ^_[]
 %UUUU
 3333!
-}';}
+}!;}
 ^_[]
 %UUUU
 3333
@@ -258,7 +257,6 @@ FX;E
 <^_[]
 ^_[]
 l^_[]
-PQh`	
 ^_[]
 8#t#
 ^_[]
@@ -441,8 +439,8 @@ Steam
 steamwebhelper
 Steam Helper
 cefwebhelper
-Jul 10 2023
-16:56:57
+Jul 18 2023
+16:48:26
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 CatchAndWriteContext_t::Invoke with bogus argc/argv
@@ -502,6 +500,8 @@ Thread(0x%p/0x%p/0x%x)
 Tried to create a thread that has already been created!
 Failed to create thread (error 0x%x)
 Thread failed to initialize
+Mismatched thread handle during thread Start()
+Invalid thread id during thread Start()
 Thread cannot be joined with self
 Only thread can stop self: Use a higher-level protocol
 Must Start() thread before setting priority
@@ -772,6 +772,7 @@ A`?Ap
 @_pthread_condattr_destroy
 @_pthread_condattr_init
 @_pthread_create
+@_pthread_equal
 @_pthread_exit
 @_pthread_getspecific
 @_pthread_join$UNIX2003
@@ -1248,7 +1249,7 @@ Vile
 $<$<$q
 yI#WnI
 #	v>,
-@zll
+:zll
 ){c$TII
 789>>8$@'
 RO""@HF
@@ -1783,6 +1784,7 @@ _pthread_cond_wait$UNIX2003
 _pthread_condattr_destroy
 _pthread_condattr_init
 _pthread_create
+_pthread_equal
 _pthread_exit
 _pthread_getspecific
 _pthread_join$UNIX2003
@@ -1843,35 +1845,36 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-L{--K
-PI7R
-KVQ+
-AOg /
-t%*\P
-%|,W8
-Z.]i
-r9i	N
-8SZa
-mbW*
+q'h4
+aF+02A
+LeX";
+{vb:
+bHFO
+gokd
+(z7F#
+zsKr
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-}K^,4
-(hNT
-Z.x/
-0@~SEnf7
--W4,
-jS5i
-H%Q.
-]c8i
-GMDBtu@=1w
-9p(%
-!6:/
-}h`~f
-Vy4"
-5I4A
-Pl<3P*
+}M.]
+l3I{mf
+|8R3,
+\a:X
+Vv,n
+ueFm
+L8mp
+43,i=
+,J @Q
+3)mE
+FEZ&
+EJe)d
+;\GG
+^a;n
+	;@$$=D*
+.wnD
+pD9P
+o ,IG<f~
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -1927,8 +1930,9 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-230710235658Z0/
-gl:3
+230718234828Z0/
+kBok
+-N	X
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -1936,38 +1940,33 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		c9S4D9543OONdSCx1l/eClr6aJA=
+		1JGbcOfbJySTr1CD3BPRJfksKug=
 		</data>
 		<data>
-		/YfyT0m/4K9yWyPcdyePmOVnbDo=
+		J1Htic4AJIGWhknnLU4JWKelURE=
 		</data>
 	</array>
 </dict>
 </plist>
-$O6<
-seL2
-mN'3dm@
-20230710235812Z0
-A'9e
-v):0
+'1Sz
+^)h 
+20230718234829Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-230614203010Z
-230726203009Z0B1
+230712202522Z
+230823202521Z0B1
 Timestamp Signer NWK21
 Apple Inc.1
-z	>3
-r	8/
-`%?/
+gp_Z
+Mqv0i
+m7sc|&
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-:F)D
-tE"#
-.M^S_
+!u{Bi
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -2006,10 +2005,11 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-v):0	
-230710235812Z0#
-.HVMVXk
-<!/X
+230718234829Z0#
+N9ku9
+X\<NI9
+b+_,
+{>cf
 __TEXT
 __text
 __TEXT
@@ -2088,7 +2088,6 @@ AWAVAUATSPE
 [A\A]A^A_]
 AVSH
 [A^]
-9=3V
 AVSH
 [A^]
 AVSH
@@ -2180,7 +2179,6 @@ u$L9
 fffffff
 3333333
 fffffff
-}!D;
 (H;]
 [A\A]A^A_]
 AWAVAUATSPI
@@ -2502,6 +2500,7 @@ D$@H
 d$ M
 X[A\A]A^A_]
 AWAVSH
+Lc5[
 x(Hc
 VUUUH
 X[A^A_]
@@ -2762,8 +2761,8 @@ Steam
 steamwebhelper
 Steam Helper
 cefwebhelper
-Jul 10 2023
-16:56:57
+Jul 18 2023
+16:48:27
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 CatchAndWriteContext_t::Invoke with bogus argc/argv
@@ -2823,6 +2822,8 @@ Thread(0x%p/0x%p/0x%x)
 Tried to create a thread that has already been created!
 Failed to create thread (error 0x%x)
 Thread failed to initialize
+Mismatched thread handle during thread Start()
+Invalid thread id during thread Start()
 Thread cannot be joined with self
 Only thread can stop self: Use a higher-level protocol
 Must Start() thread before setting priority
@@ -2966,7 +2967,7 @@ N(knN
 N10SteamVProf13CVProfManagerE
 Mb@?
 !(RI`
-B`?Ap
+A`?Ap
 RA\ATASAp
 @__ZNSt12length_errorD1Ev
 @__ZTISt12length_error
@@ -3090,6 +3091,7 @@ RA\ATASAp
 @_pthread_condattr_destroy
 @_pthread_condattr_init
 @_pthread_create
+@_pthread_equal
 @_pthread_exit
 @_pthread_getspecific
 @_pthread_join
@@ -3563,8 +3565,8 @@ VllisecondsMultiplier
 ProfilesRunningCount
 VManager
 Wile
-@jtt
-Bvvh
+Bjtt
+Dvvh
 LAA~{
 23.5/+
 GG>.1i1
@@ -4095,6 +4097,7 @@ _pthread_cond_wait
 _pthread_condattr_destroy
 _pthread_condattr_init
 _pthread_create
+_pthread_equal
 _pthread_exit
 _pthread_getspecific
 _pthread_join
@@ -4155,27 +4158,28 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-YP=h
-%~Q	.
-#N"!
-QHVS
-:/?.B
-Q1{[
-1L~|
-VEy^e
-9>_.k,
-zyy4
+k<"5
+xV=!"
+ue=[
+H#(p
+!=1W
+A)zG
+:O-n3
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-DjP5
-jJ;[\
- ^#g
-^|_X4
-UD.k
-n5,j
-cUx:
+q%s$7
+{hc^
+-xQ-
+v[^f
+.qgZ
+b<o 
+'RwC
+.re	m
+p6J8
+x|~u
+*x'<
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -4231,8 +4235,9 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-230710235658Z0/
-!Y^@
+230718234828Z0/
+8,_Y
+aRem
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -4240,37 +4245,34 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		NtRwebSkXIhUFtf/zLDkJNScbZI=
+		JU/dFzHCxhV/jO7Lqeyr5tX9D9Y=
 		</data>
 		<data>
-		s7xxt3HTYFYTCllCa+gvKTLYLHo=
+		Kj6b7vvbikRWWH9i4+4SLfGwL3E=
 		</data>
 	</array>
 </dict>
 </plist>
-]hF{
-2%ll
-[G%Z
-20230710235813Z0
-v):0
+~hgZP
+;P9c8}
+~ */
+20230718234829Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-230614203010Z
-230726203009Z0B1
+230712202522Z
+230823202521Z0B1
 Timestamp Signer NWK21
 Apple Inc.1
-z	>3
-r	8/
-`%?/
+gp_Z
+Mqv0i
+m7sc|&
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-:F)D
-tE"#
-.M^S_
+!u{Bi
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -4309,10 +4311,15 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-v):0	
-230710235813Z0#
-O:s%d
-S75@
+230718234829Z0#
+<Z0+
+Aj/D
+:*\N$
+(mo5^
+JsjL
+x&CC
+xv_<$	M
+-zg9
 __TEXT
 __text
 __TEXT
@@ -4349,21 +4356,18 @@ __common
 __DATA
 __LINKEDIT
 @loader_path/libtier0_s.dylib
-  4F
 @loader_path/crashhandler.dylib
 /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
 /usr/lib/libc++.1.dylib
 /usr/lib/libSystem.B.dylib
 /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
- t	P
-Hk	P
-(k	0
-bU9(
-bU9(
+ x	P
+Ho	P
+(o	0
 T		@9?
 5'qHs
-T .	P
-".	P
+T 2	P
+"2	P
 	(B)J
 ?i(8
 kjh8k
@@ -4371,9 +4375,9 @@ kjh8k
 i+8,
 (a@9
 5(	@
-t	\!
-s	\!
-1[9h
+z	\!
+Az	\!
+Q[9h
 ThZ@
 ThZ@
 TiZ@
@@ -4392,17 +4396,25 @@ ii8J
 <l9@
 +ih8J	
 T+	@
-09@f
+09@j
 @9?q
 @9_q
-@3	X
+h<	X
+ :	X
 jt8 
 h"J9
 h*J9
-BJ9h
-4an	
-hBR9(
+h2J9
+h:J9
+hBJ9
+hJJ9
+bJ9h
+4Au	
+hbR9(
+5`y	
+9`w	
 C9uR
+R	1!9
 RHk88Z
 b2@9
 h6@9
@@ -4451,7 +4463,6 @@ ib@9
 ?k<8
 4j"@
 TW1@
-a^xP
 o( `
 3IYi
 SHYh
@@ -4532,8 +4543,8 @@ Steam
 steamwebhelper
 Steam Helper
 cefwebhelper
-Jul 10 2023
-16:56:57
+Jul 18 2023
+16:48:27
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 CatchAndWriteContext_t::Invoke with bogus argc/argv
@@ -4593,6 +4604,8 @@ Thread(0x%p/0x%p/0x%x)
 Tried to create a thread that has already been created!
 Failed to create thread (error 0x%x)
 Thread failed to initialize
+Mismatched thread handle during thread Start()
+Invalid thread id during thread Start()
 Thread cannot be joined with self
 Only thread can stop self: Use a higher-level protocol
 Must Start() thread before setting priority
@@ -4858,6 +4871,7 @@ Ap S
 @_pthread_condattr_destroy
 @_pthread_condattr_init
 @_pthread_create
+@_pthread_equal
 @_pthread_exit
 @_pthread_getspecific
 @_pthread_join
@@ -5856,6 +5870,7 @@ _pthread_cond_wait
 _pthread_condattr_destroy
 _pthread_condattr_init
 _pthread_create
+_pthread_equal
 _pthread_exit
 _pthread_getspecific
 _pthread_join
@@ -5915,33 +5930,27 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-x_Q!
-  t)
-} qJ
-1L\*
-R[Z|
-(+Q3
-vS6O"
-q|S[
-'Hp4
-NQx*h
-0^@'[
-DG.n
-V/uX4
+viut
+JC;o}*
+`#3R
+%Qg,
+l[wpJ
+BhovN
+5U7!
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-dlG,
-cRDP
-[xZG
-fhaL
-=?X'
-&#`^p@
-U%/"?
-%}Z(&L
-Nh' oJ
-a$w5
+S}4Z
+[P }
+]@4r%bLD
+q~J_[
+c,s{
+~mxv$O
+Tdjr
+@A5B#
+)aoT
+8-}q
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -5997,8 +6006,8 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-230710235658Z0/
-4e0[
+230718234828Z0/
+#!6A
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -6006,41 +6015,35 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		rYfNY1n9sg07N4oVyXeiDX+XpFA=
+		ob3slTNs1I4U+XqVVaLhR1P0Px0=
 		</data>
 		<data>
-		CijyzwUSRKGdkE4s2Ptk+l4gxaM=
+		+yE/JNEUzwPYHRSOxclHnUeC0pk=
 		</data>
 	</array>
 </dict>
 </plist>
-ix[Q
-!tW7
-20230710235813Z0
+d?i;
+/T}t
+O.!D_
+20230718234829Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-230614204508Z
-230726204507Z0B1
+230712204016Z
+230823204015Z0B1
 Timestamp Signer NWK11
 Apple Inc.1
-s76rn
-#tP$
-(3Y2
-{ou_
-ecsT0E5]
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-N8_`
-99K9
-`HBk
-dd^4
-\v"~b
-.eYiR
-Cg>g
+vC9@
+A9EU
+Vq0E
+%GA-4Z2w
+JO(X
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -6079,8 +6082,9 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-230710235813Z0#
-T2e*
-8SKz
-f!*C
->#r[w
+w40	
+230718234829Z0#
+uvx	
+GG?B
+aZ84,S
+@P6|

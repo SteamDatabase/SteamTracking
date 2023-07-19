@@ -39,15 +39,16 @@ __DATA
 0
 __thread_data
 __DATA
+@M'
 @
+@M'
 __thread_bss
 __DATA
 __bss
 __DATA
-Z-
+j-
 __common
 __DATA
-~'
 H
 __LINKEDIT
 
@@ -86,7 +87,7 @@ h
 /usr/lib/libobjc.A.dylib
 &
 )
-@@(
+`@(
 15CCallbackManualI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
 9CCallbackI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
 13CCallbackImplILi16EE
@@ -789,6 +790,8 @@ P
 30CMsgSetForceDeviceScaleFactors
 13CMsgSetUIMode
 16CMsgPopupCreated
+27CMsgSetVRKeyboardVisibility
+NSt3__121__basic_string_commonILb1EEE
 N6google8protobuf8internal16InternalMetadata9ContainerINS0_15UnknownFieldSetEEE
 N6google8protobuf8internal16InternalMetadata13ContainerBaseE
 N4vgui19AnimatingImagePanelE
@@ -923,7 +926,6 @@ N4vgui4HTMLE
 7IHTMLJS
 N4vgui4HTML12CHTMLFindBarE
 22CFrameEventPerfTracker
-NSt3__121__basic_string_commonILb1EEE
 10CUtlVectorIN4vgui4HTML18CustomURLHandler_tE10CUtlMemoryIS2_EE
 10CUtlVectorIN4vgui4HTML19CustomCursorCache_tE10CUtlMemoryIS2_EE
 10CUtlVectorI9CSmartPtrI15CJSCallbackFuncE10CUtlMemoryIS2_EE
@@ -2423,8 +2425,6 @@ Invalid key for map field.
 google/protobuf/unknown_field_set.cc
 CHECK failed: !fields_.empty():
 CHECK failed: (TYPE_LENGTH_DELIMITED) == (type()):
-CHECK failed: *ptr:
-CHECK failed: (overrun) <= (kSlopBytes):
 Can't happen
 google/protobuf/wire_format.cc
 CHECK failed: descriptor:
@@ -2477,6 +2477,8 @@ Set the community URL
 Set the store URL
 -help
 Set the help/support URL
+-devsites
+Use local dev websites
 /
 http://
 https://
@@ -3887,7 +3889,6 @@ j
 j
 j
 j
-F%
 0
 0
 AT=
@@ -3959,9 +3960,10 @@ M9e
 @
 
 
-p
+
 d
 A+M
+D
 j
 j
 j
@@ -4011,6 +4013,7 @@ A+4$A+u
 =
 =
 @
+Z
 j
 j
 j
@@ -4203,10 +4206,8 @@ d
 =*.*
 =
 @
-R
 @
 @
-Z
 @
 @
 @

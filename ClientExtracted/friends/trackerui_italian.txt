@@ -3,7 +3,7 @@
 "Language" "italian" 
 "Tokens" 
 { 
-"TrackerUI_ConnectionSpeed"				"Velocità della connessione a Internet"
+"TrackerUI_ConnectionSpeed"				"Velocità della connessione a internet"
 "TrackerUI_FavoriteWindowLabel_Windows"	"Seleziona quale finestra di Steam apparirà all'avvio del programma e quando si clicca due volte sulla sua icona nell'area di notifica."
 "TrackerUI_FavoriteWindowLabel"			"Seleziona la finestra di Steam da visualizzare all'avvio del programma."
 "TrackerUI_FavoriteWindow"			"Finestra preferita"
@@ -482,9 +482,9 @@
 "Friends_ChatPasswordWarning_DontSend"		"No, non inviarlo"
 
 "Friends_BlockCommunicationWarning_Title"	"Blocca ogni interazione con %username%"
-"Friends_BlockCommunicationWarning_Info"	"Stai per bloccare tutte le comunicazioni con %username%.\n\nSe accetti, non potrai giocare con tale giocatore — e viceversa — in tutti i giochi che fanno uso della Ricerca Avversari Steamworks."
+"Friends_BlockCommunicationWarning_Info"	"Stai per bloccare tutte le comunicazioni con %username%.\n\nCiò impedirà anche di incontrare questo utente nei giochi che fanno uso del sistema di matchmaking di Steamworks."
 "Friends_BlockCommunicationWarning_Info2"	"Stai per bloccare tutte le comunicazioni con %username%.\n\nNon potrai più inviare o ricevere messaggi o inviti da questo giocatore.\n\nPuoi annullare questa decisione visitando il suo profilo di Steam o sbloccandolo attraverso la lista amici."
-"Friends_BlockCommunicationWarning_LinkInfo"	"Maggiori informazioni sulla Ricerca Avversari Steamworks."
+"Friends_BlockCommunicationWarning_LinkInfo"	"Maggiori informazioni sul matchmaking di Steamworks."
 "Friends_BlockCommunicationWarning_DontAskAgainCheck"	"Non visualizzare più questo messaggio."
 "Friends_BlockCommunicationWarning_Block"	"Blocca giocatore"
 "Friends_BlockCommunicationWArning_Cancel"	"Annulla"

@@ -1,0 +1,14 @@
+{
+    "actions": [
+        {
+            "name": "/actions/haptics/out/haptic",
+            "type": "vibration"
+        }
+    ],
+    "action_sets": [
+        {
+            "name": "/actions/haptics",
+            "usage": "single"
+        }
+    ]
+}

@@ -851,7 +851,7 @@ Fare Benzeri Kumanda Kolu ile oyun kumandası girdisi ile oynayarak fare hassasi
 	"SettingsDownloads_ThrottleDownloadsWhileStreaming"	"Yayın sırasında indirmeleri sınırla"
 	"SettingsDownloads_ThrottleDownloadsWhileStreamingDetails"	"Seçili ise, Steam Remote Play deneyiminin yüksek kalitesini korumak için indirme hızınız Steam tarafından sınırlanır."
 	"SettingsDownloads_ShowDownloadRatesInBits"	"İndirme hızını saniyede bit cinsinden göster"
-	"SettingsDownloads_ThrottleShowDownloadRatesInBitsDetails"	"Eğer seçili ise, Steam indirme hızını saniyede bit cinsinden gösterecektir, örneğin \"500 KB/s\" yerine \"4 Mbps\" olarak."
+	"SettingsDownloads_ThrottleShowDownloadRatesInBitsDetails"	"Eğer seçili ise, Steam indirme hızını saniyede bit cinsinden gösterecektir, örneğin \"500 KB/sn\" yerine \"4 Mbit/sn\" olarak."
 	
 	// Settings, network screen
 	//
@@ -4194,12 +4194,6 @@ Fare Benzeri Kumanda Kolu ile oyun kumandası girdisi ile oynayarak fare hassasi
 	"SteamUI_StreamLaunch_Failed"		"Yayın başlatılamıyor."
 	"SteamUI_StreamLaunch_InstallDrivers"	"Yayın yapmak, ek olarak sürücü yüklemesi gerektirir.\n\nLütfen uzak bilgisayardaki Steam yönlendirmelerini takip edin."
 	"SteamUI_StreamLaunch_TransportUnavailable"	"Ev dışı yayın şu an için mevcut değil. Daha sonra tekrar deneyin."
-
-	"Steam_InstallAudioCaptureDriver_Title"	"Ses Sürücüsü Güncellemesi"
-	"Steam_InstallAudioCaptureDriver_Text"	"Steam, sistem yeniden başlatması gerektirebilen bir ses güncellemesine ihtiyaç duyuyor."
-	"Steam_InstallGamepadInputDriver_Title"	"Oyun Kumandası Güncellemesi"
-	"Steam_InstallGamepadInputDriver_Text"	"Steam, sistem yeniden başlatması gerektirebilen bir oyun kumandası güncellemesine ihtiyaç duyuyor."
-	"Steam_InstallGamepadInputDriver_RestartText"	"Oyun kumandası sürücüsünü yükledikten sonra Steam'i yeniden başlatmanız gerekli."
 
 	"SteamUI_RemoteDeviceAuthorization_Title"		"Aygıt Yetkilendirme"
 	"SteamUI_RemoteDeviceAuthorization_Text"		"{s:devicename} aygtının Steam'e bağlanıp oyun oynamasına olanak tanımak için yetkilendirme kodunu giriniz."

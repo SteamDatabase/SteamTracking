@@ -1137,6 +1137,7 @@
     "NotificationSetting_Inherit": "Don't override",
     "NotificationSetting_Indicator": "Display an indicator when there are any unread messages",
     "NotificationSetting_Footer_Desc": "Edit notification alert types from %1$s",
+    "NotificationSetting_Footer_Desc2": "Edit more notification types in %1$s",
     "NotificationSetting_ChannelOverrides": "Channel overrides:",
     "NotificationBrowserWarning": "Welcome to Steam Chat. Please allow notifications for the best chat experience.",
     "InviteLanding_ExpiredOrInvalid": "The invite link you followed is no longer valid.",

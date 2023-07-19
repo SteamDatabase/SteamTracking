@@ -4196,12 +4196,6 @@ wacht even tot dat spel is gestart."
 	"SteamUI_StreamLaunch_InstallDrivers"	"Voor streamen moeten extra stuurprogramma's worden geïnstalleerd.\n\nVolg de aanwijzingen van Steam op de computer op afstand."
 	"SteamUI_StreamLaunch_TransportUnavailable"	"Buitenshuis streamen is op dit moment niet beschikbaar. Probeer het later opnieuw."
 
-	"Steam_InstallAudioCaptureDriver_Title"	"Stuurprogramma-update voor audio"
-	"Steam_InstallAudioCaptureDriver_Text"	"Steam moet het stuurprogramma voor audio bijwerken. Hiervoor kan het systeem opnieuw moeten worden opgestart."
-	"Steam_InstallGamepadInputDriver_Title"	"Stuurprogramma-update voor gamepad"
-	"Steam_InstallGamepadInputDriver_Text"	"Steam moet het stuurprogramma van de gamepad bijwerken. Hiervoor kan het systeem opnieuw moeten worden opgestart."
-	"Steam_InstallGamepadInputDriver_RestartText"	"Je moet Steam opnieuw opstarten na het installeren van het stuurprogramma van de gamepad."
-
 	"SteamUI_RemoteDeviceAuthorization_Title"		"Apparaat machtigen"
 	"SteamUI_RemoteDeviceAuthorization_Text"		"Voer de machtigingscode in om {s:devicename} toe te staan verbinding te maken en spellen te spelen."
 

@@ -4195,12 +4195,6 @@ Com a alavanca similar a mouse, você poderá combinar a configuração padrão 
 	"SteamUI_StreamLaunch_InstallDrivers"	"A transmissão exige a instalação de drivers adicionais.\nSiga as instruções do Steam no computador remoto."
 	"SteamUI_StreamLaunch_TransportUnavailable"	"Ainda não é possível conectar-se fora de casa. Tente novamente mais tarde."
 
-	"Steam_InstallAudioCaptureDriver_Title"	"Atualização do driver de áudio"
-	"Steam_InstallAudioCaptureDriver_Text"	"O Steam precisa atualizar o driver de áudio, que pode exigir a reinicialização do sistema."
-	"Steam_InstallGamepadInputDriver_Title"	"Atualização do driver de controle"
-	"Steam_InstallGamepadInputDriver_Text"	"O Steam precisa atualizar o driver do controle, que pode exigir a reinicialização do sistema."
-	"Steam_InstallGamepadInputDriver_RestartText"	"Você precisará reiniciar o Steam após instalar o driver de controle."
-
 	"SteamUI_RemoteDeviceAuthorization_Title"		"Autorizar dispositivo"
 	"SteamUI_RemoteDeviceAuthorization_Text"		"Informe o código de autorização para permitir que {s:devicename} conecte-se e jogue."
 

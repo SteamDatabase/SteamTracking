@@ -328,8 +328,10 @@
  OBJC_CLASS_$_NSMenuItem
  OBJC_CLASS_$_NSMutableArray
  OBJC_CLASS_$_NSObject
+ OBJC_CLASS_$_NSOpenPanel
  OBJC_CLASS_$_NSProcessInfo
  OBJC_CLASS_$_NSRunningApplication
+ OBJC_CLASS_$_NSSavePanel
  OBJC_CLASS_$_NSScreen
  OBJC_CLASS_$_NSString
  OBJC_CLASS_$_NSURL
@@ -407,6 +409,7 @@
  SDL_GL_SwapWindow
  SDL_GetAudioDeviceName
  SDL_GetAudioDeviceSpec
+ SDL_GetDesktopDisplayMode
  SDL_GetDisplayBounds
  SDL_GetDisplays
  SDL_GetError
@@ -460,6 +463,7 @@
  SDL_QueueAudio
  SDL_QuitSubSystem
  SDL_RaiseWindow
+ SDL_SetEventEnabled
  SDL_SetHint
  SDL_SetWindowPosition
  SDL_ShowCursor
@@ -1650,6 +1654,7 @@
  objc_msgSendSuper2
  objc_msgSend_stret
  objc_release
+ objc_retain
  open
  opendir$INODE64
  operator delete(void*)

@@ -3165,7 +3165,7 @@
 	"Friends_ProfileDetails_Action_InviteToGame"	"게임 초대"
 	"Friends_ProfileDetails_ViewSteamProfile"		"Steam 프로필 보기"
 	"Friends_ProfileDetails_Action_LaunchGame"		"{s:gamename} 시작"
-	"Friends_ProfileDetails_Action_InviteToGroup"	"그룹에 초대하기"
+	"Friends_ProfileDetails_Action_InviteToGroup"	"그룹에 초대"
 	"Friends_ProfileDetails_Action_InviteToTrade"	"거래 요청하기"
 	"Friends_ProfileDetails_Action_TagAs"			"태그 달기..."
 	"Friends_ProfileDetails_Action_ViewAliases"		"별명 보기"
@@ -4195,12 +4195,6 @@
 	"SteamUI_StreamLaunch_Failed"		"스트리밍을 시작할 수 없습니다."
 	"SteamUI_StreamLaunch_InstallDrivers"	"스트리밍을 위해서 드라이버를 추가로 설치해야합니다.\n\n원격 컴퓨터에 뜨는 Steam의 안내를 따르세요."
 	"SteamUI_StreamLaunch_TransportUnavailable"	"현재 홈을 벗어난 곳에서는 스트리밍할 수 없습니다. 나중에 다시 시도하세요."
-
-	"Steam_InstallAudioCaptureDriver_Title"	"오디오 드라이버 업데이트"
-	"Steam_InstallAudioCaptureDriver_Text"	"Steam에서 오디오 드라이버를 업데이트 해야합니다. 시스템을 다시 시작해야 할 수 있습니다."
-	"Steam_InstallGamepadInputDriver_Title"	"게임패드 드라이버 업데이트"
-	"Steam_InstallGamepadInputDriver_Text"	"Steam에서 게임패드 드라이버를 업데이트 해야합니다. 시스템을 다시 시작해야 할 수 있습니다."
-	"Steam_InstallGamepadInputDriver_RestartText"	"게임패드 드라이버를 설치한 후에는 Steam을 다시 시작해야합니다."
 
 	"SteamUI_RemoteDeviceAuthorization_Title"		"장치 인증"
 	"SteamUI_RemoteDeviceAuthorization_Text"		"%devicename%에서 접속하고 게임을 할 수 있도록 인증 코드를 입력하세요."

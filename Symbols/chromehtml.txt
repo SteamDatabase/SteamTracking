@@ -8,6 +8,7 @@
  CValidator::Push(char const*, void*, char const*)
  CreateSimpleProcess
  D typeinfo for std::__1::__basic_string_common<true>
+ D typeinfo for std::__1::bad_function_call
  D typeinfo for std::__1::basic_ostringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> >
  D typeinfo for std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >
  D typeinfo for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> >
@@ -30,8 +31,10 @@
  OBJC_CLASS_$_NSLocale
  OBJC_CLASS_$_NSMutableArray
  OBJC_CLASS_$_NSObject
+ OBJC_CLASS_$_NSOpenPanel
  OBJC_CLASS_$_NSProcessInfo
  OBJC_CLASS_$_NSRunningApplication
+ OBJC_CLASS_$_NSSavePanel
  OBJC_CLASS_$_NSScreen
  OBJC_CLASS_$_NSString
  OBJC_CLASS_$_NSURL
@@ -53,6 +56,7 @@
  Plat_MSTime64
  Plat_RelativeTicks
  R typeinfo name for std::__1::__basic_string_common<true>
+ R typeinfo name for std::__1::bad_function_call
  R typeinfo name for std::__1::basic_ostringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> >
  R typeinfo name for std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >
  R typeinfo name for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> >
@@ -253,6 +257,7 @@
  std::__1::mutex::lock()
  std::__1::mutex::unlock()
  std::__1::mutex::~mutex()
+ std::exception::what() const
  std::exception::~exception()
  std::length_error::~length_error()
  std::logic_error::logic_error(char const*)

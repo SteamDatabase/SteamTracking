@@ -498,6 +498,7 @@
  pthread_condattr_destroy
  pthread_condattr_init
  pthread_create
+ pthread_equal
  pthread_exit
  pthread_getspecific
  pthread_join

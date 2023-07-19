@@ -10,7 +10,7 @@
 "Overlay_SettingsTabTitleApp"	"En una aplicación"
 "Overlay_SettingsDescription"	"Steam puede permanecer activo durante la partida, permitiéndote acceder a las funciones de la Comunidad Steam mientras juegas."
 "Overlay_SettingsDescriptionApp"	"Steam puede permanecer activo y ofrecerte notificaciones de mensajes de la Comunidad Steam, así como una completa interfaz de amigos, mientras estás dentro de tu aplicación."
-"Overlay_SettingsEnable"	"Habilitar la interfaz de Steam mientras estás en el juego"
+"Overlay_SettingsEnable"	"Habilitar la interfaz de Steam durante las partidas"
 "Overlay_SettingsEnableApp"	"Activar Comunidad Steam en la aplicación"
 "Overlay_SettingsSCTenfootEnable"	"Utilizar interfaz de Big Picture al usar un mando compat. con Steam Input desde el escritorio"
 "Overlay_SettingsHotKeyLabel"	"Teclas de acceso directo a la interfaz"

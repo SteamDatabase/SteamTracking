@@ -23,7 +23,7 @@ class CNoiseGateProcessor extends AudioWorkletProcessor {
         (this.parameters.sampleRate = s.sampleRate[0]),
         (a = !0),
         this.port.postMessage(
-          "NoiseGate setup: " + JSON.stringify(this.parameters)
+          "NoiseGate setup: " + JSON.stringify(this.parameters),
         ),
         this.port.postMessage(
           "Inputs: " +
@@ -31,7 +31,7 @@ class CNoiseGateProcessor extends AudioWorkletProcessor {
             " channels: " +
             e[0].length +
             " samples: " +
-            e[0][0].length
+            e[0][0].length,
         ),
         this.port.postMessage(
           "Outputs: " +
@@ -39,7 +39,7 @@ class CNoiseGateProcessor extends AudioWorkletProcessor {
             " channels: " +
             t[0].length +
             " samples: " +
-            t[0][0].length
+            t[0][0].length,
         )),
       this.parameters.attack != s.attack[0] &&
         (this.parameters.attack = s.attack[0]),
@@ -54,12 +54,12 @@ class CNoiseGateProcessor extends AudioWorkletProcessor {
       a)
     ) {
       this.port.postMessage(
-        "Noise gate had to re-initialize due to parameters changing"
+        "Noise gate had to re-initialize due to parameters changing",
       );
       let e = 0.0025;
       (this.alpha_ = this.getAlphaFromTimeConstant_(
         e,
-        this.parameters.sampleRate
+        this.parameters.sampleRate,
       )),
         (this.previousLevel_ = 0),
         (this.previousWeight_ = 1),
@@ -91,7 +91,7 @@ class CNoiseGateProcessor extends AudioWorkletProcessor {
             ? ((this.m_bWasLastCutting = !0),
               (this.m_bWasLastOpen = !1),
               this.port.postMessage(
-                "Mic input below threshold, cutting output."
+                "Mic input below threshold, cutting output.",
               ))
             : s >= 0.9 &&
               !this.m_bWasLastOpen &&

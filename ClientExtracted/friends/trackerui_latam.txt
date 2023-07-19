@@ -92,7 +92,7 @@
 "Friends_Options_SoundsTab"	"Sonidos"
 
 
-"Friends_EnterAccountNameOrEmailAddress"	"Introduce el nombre de cuenta de Steam, O la dirección de email de la persona que deseas añadir a tu lista de amigos."
+"Friends_EnterAccountNameOrEmailAddress"	"Introduce el nombre de cuenta de Steam, O el correo electrónico de la persona que deseas añadir a tu lista de amigos."
 "Friends_SearchingForFriend"				"Buscando a %search%..."
 "Friends_FriendHasBeenAddedToYourListUnderName" "%search% se ha añadido a tu lista de amigos con el nombre '%friend%'."
 "Friends_FriendHasBeenAddedToYourList"		"%friend% se ha añadido a tu lista de amigos."
@@ -161,7 +161,7 @@
 "Friends_TooManyFriends"				"¡Tu lista de amigos está llena! Elimina algunos e inténtalo de nuevo."
 "Friends_TargetHasTooManyFriends"		"¡La lista de amigos de %search% está llena!"
 "Friends_DefaultAddError"	 			"Ha habido un problema al añadir a %search% a tu lista de amigos."
-"Friends_UnableToFindFriendByThatNameInvitePrompt"		"No se ha podido encontrar un usuario de Steam con la dirección de email %search%.\n\nSi quieres invitar a %search% a que se una a Steam y añadirlo a tu lista de Amigos, pulsa 'Siguiente' o pulsa 'Atrás' para repetir la búsqueda."
+"Friends_UnableToFindFriendByThatNameInvitePrompt"		"No se ha podido encontrar un usuario de Steam con el correo electrónico %search%.\n\nSi quieres invitar a %search% a que se una a Steam y añadirlo a tu lista de Amigos, pulsa 'Siguiente' o pulsa 'Atrás' para repetir la búsqueda."
 "Friends_InvitingFriend"				"Enviando invitación a %search%..."
 "Friends_InvitationPending"			"Se ha invitado a %search% a que se una a Steam recientemente; cuando responda, se añadirá a tu lista de amigos.\n"
 "Friends_InvitationSent"				"Se ha enviado a %search% una invitación por email, y se añadirá a tu lista de amigos cuando responda.\n"
@@ -398,7 +398,7 @@
 "Friends_VoiceChatInvitation_Info"		"te ha invitado a un chat de voz"
 "Friends_ChatNotification_Info"			"dice:"
 "Friends_PostNotification_Info"			"publicado:"
-"Friends_GameInvitation_Info"				"te ha invitado a jugar"
+"Friends_GameInvitation_Info"				"te invitó a jugar"
 "Friends_ChatNoTextNotification_Info"		"te envió un mensaje"
 "Friends_BroadcastChannelLive"		"está en directo en SteamTV"
 
@@ -597,7 +597,7 @@
 "Friends_ViewGameHub"		"Ver centro de contenido"
 "Friends_WatchGame"			"Ver partida"
 
-"friends_game_invite"		"%friend% te ha invitado a jugar"
+"friends_game_invite"		"%friend% te inivitó a jugar"
 "friends_game_invite_action"		"PULSA AQUÍ PARA UNIRTE"
 
 "friends_voice_friendendedcall"			"%friend% ha finalizado la llamada."
@@ -625,9 +625,9 @@
 "friends_trade_you_recently_reset_password_long" "Recientemente has olvidado y restablecido tu contraseña de Steam tras varios meses de inactividad. Para proteger los artículos de tu inventario, no podrás intercambiar durante %days% días más."
 "friends_trade_you_recently_reset_password_short" "Recientemente has olvidado y restablecido tu contraseña de Steam. Para proteger los artículos de tu inventario, no podrás intercambiar durante %days% días más."
 "friends_trade_you_recently_reset_password_oneday" "Recientemente has olvidado y restablecido tu contraseña de Steam. Para proteger los artículos de tu inventario, no podrás intercambiar durante un día más."
-"friends_trade_you_recently_changed_email"	"Recientemente has cambiado la dirección de email asociada a tu cuenta de Steam. No podrás realizar intercambios hasta cinco días después de cambiar tu dirección de email."
-"friends_trade_you_recently_changed_email_days"	"Recientemente has cambiado la dirección de email asociada a tu cuenta de Steam. Con el fin de proteger los artículos de tu inventario, no podrás realizar intercambios durante %days% días más."
-"friends_trade_you_recently_changed_email_oneday" "Recientemente has cambiado la dirección de email asociada a tu cuenta de Steam. Con el fin de proteger los artículos de tu inventario, no podrás realizar intercambios durante un día más."
+"friends_trade_you_recently_changed_email"	"Recientemente has cambiado el correo electrónico asociado a tu cuenta de Steam. No podrás realizar intercambios hasta cinco días después de cambiar tu dirección de email."
+"friends_trade_you_recently_changed_email_days"	"Recientemente has cambiado el correo electrónico asociado a tu cuenta de Steam. Con el fin de proteger los artículos de tu inventario, no podrás realizar intercambios durante %days% días más."
+"friends_trade_you_recently_changed_email_oneday" "Recientemente has cambiado el correo electrónico asociado a tu cuenta de Steam. Con el fin de proteger los artículos de tu inventario, no podrás realizar intercambios durante un día más."
 "friends_trade_their_account_cannot_trade"	"%friend% no se encuentra disponible para realizar un intercambio. Dicho usuario recibirá más información en caso de invitarte a intercambiar."
 "friends_trade_trade_hold_for_cleared_trades_initiator"		"No puedes realizar un intercambio con %friend% porque todas tus ofertas de intercambio han sido canceladas recientemente."
 "friends_trade_would_exceed_max_asset_count"		"Este intercambio no se puede completar porque excedería el número máximo de artículos permitidos en tu inventario."

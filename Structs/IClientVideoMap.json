@@ -2,10 +2,6 @@
     "name": "IClientVideoMap",
     "functions": [ 
         {
-            "name": "BGetUserVideoFolder",
-            "argc": "3"
-        },
-        {
             "name": "UnlockH264",
             "argc": "3"
         },
@@ -54,7 +50,7 @@
             "argc": "8"
         },
         {
-            "name": "Unknown_6212416",
+            "name": "Unknown_6239360",
             "argc": "0"
         },
         {
@@ -216,6 +212,26 @@
         {
             "name": "WebRTCGetAnswer",
             "argc": "4"
+        },
+        {
+            "name": "AddTimelineHighlightMarker",
+            "argc": "5"
+        },
+        {
+            "name": "AddTimelineTimestamp",
+            "argc": "2"
+        },
+        {
+            "name": "AddTimelineRangeStart",
+            "argc": "3"
+        },
+        {
+            "name": "AddTimelineRangeEnd",
+            "argc": "2"
+        },
+        {
+            "name": "SetTimelineGameMode",
+            "argc": "2"
         }
     ]
 }

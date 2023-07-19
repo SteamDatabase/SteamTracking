@@ -3030,7 +3030,7 @@
 	"Steam_App_Install_Failed_Title"	"Ошибка"
 	"Steam_App_Install_Failed_Text"	"При установке {s:game} произошла ошибка: ({s:reason})."
 	"Steam_App_Update_Failed_Title"	"Ошибка"
-	"Steam_App_Update_Failed_Text"	"При обновлении {s:game} произошла ошибка ({s:reason})."
+	"Steam_App_Update_Failed_Text"	"При обновлении «{s:game}» произошла ошибка ({s:reason})."
 	"Steam_App_LegacyKey_Denied_Title" "Steam — Предупреждение"
 	"Steam_App_LegacyKey_Denied_Text" "Контент {s:game} частично или полностью доступен только с подключением к сторонним сервисам.\nВладелец этого товара должен зарегистрироваться в стороннем сервисе, чтобы получить доступ к контенту."
 	"SteamUI_JoinDialog_DataRequestFailed_Title" "Ошибка"
@@ -3685,7 +3685,7 @@
 	"Steam_AllowGameLaunch_Title"	"Разрешить запуск игры?"
 
 	"Steam_SiteLicense_LockedDetail_Title"	"Ошибка лицензии игрового клуба"
-	"Steam_SiteLicense_LockedDetail"		"В данный момент лицензии на этот продукт недоступны. Попробуйте позже или уведомите локального администратора."
+	"Steam_SiteLicense_LockedDetail"		"В данный момент нет свободных лицензий этого продукта. Попробуйте позже или уведомите локального администратора."
 
 	"Steam_Parental_GameBlocked_Title"		"Семейный просмотр"
 	"Steam_Parental_GameBlocked"			"Эта игра недоступна в семейном просмотре"
@@ -4196,12 +4196,6 @@
 	"SteamUI_StreamLaunch_Failed"		"Не удалось запустить трансляцию."
 	"SteamUI_StreamLaunch_InstallDrivers"	"Для трансляций требуются дополнительные драйверы.\nПожалуйста, следуйте указаниям Steam на удаленном компьютере."
 	"SteamUI_StreamLaunch_TransportUnavailable"	"Трансляция вне дома сейчас невозможна. Повторите попытку позже."
-
-	"Steam_InstallAudioCaptureDriver_Title"	"Обновление драйвера звуковой карты"
-	"Steam_InstallAudioCaptureDriver_Text"	"Steam необходимо обновить драйвер звуковой карты. После обновления может потребоваться перезагрузка."
-	"Steam_InstallGamepadInputDriver_Title"	"Обновление драйвера геймпада"
-	"Steam_InstallGamepadInputDriver_Text"	"Steam необходимо обновить драйвер геймада. После обновления может потребоваться перезагрузка."
-	"Steam_InstallGamepadInputDriver_RestartText"	"После установки драйвера геймпада потребуется перезапустить Steam."
 
 	"SteamUI_RemoteDeviceAuthorization_Title"		"Авторизовать устройство"
 	"SteamUI_RemoteDeviceAuthorization_Text"		"Введите код авторизации, чтобы позволить устройству «{s:devicename}» запускать игры из Steam."

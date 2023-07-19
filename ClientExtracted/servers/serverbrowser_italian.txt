@@ -87,10 +87,10 @@
 "ServerBrowser_NoLanServers"			"Non ci sono server in esecuzione sulla tua rete locale."
 "ServerBrowser_NoFavoriteServers"		"Attualmente non hai alcun server impostato come preferito."
 "ServerBrowser_NoFriendsServers"		"Nessuno dei tuoi amici sta giocando."
-"ServerBrowser_NoInternetGames"			"Non sono state trovate partite su Internet corrispondenti alle impostazioni di filtraggio utilizzate."
-"ServerBrowser_NoInternetGamesResponded"	"Nessuna partita su Internet rilevata."
+"ServerBrowser_NoInternetGames"			"Non sono state trovate partite su internet corrispondenti alle impostazioni di filtraggio utilizzate."
+"ServerBrowser_NoInternetGamesResponded"	"Nessuna partita su internet rilevata."
 "ServerBrowser_MasterServerNotResponsive"	"Impossibile contattare il master server del gioco per ricevere la lista dei server."
-"ServerBrowser_MasterServerHasNoServersListed"	"Non sono state trovate partite su Internet elencate sul master server corrispondenti alle impostazioni di filtraggio utilizzate."
+"ServerBrowser_MasterServerHasNoServersListed"	"Non sono state trovate partite su internet elencate sul master server corrispondenti alle impostazioni di filtraggio utilizzate."
 "ServerBrowser_Refresh"				"Aggiorna"
 "ServerBrowser_RefreshAll"			"Aggiorna tutti"
 "ServerBrowser_RefreshQuick"			"Aggiorna rapidamente"
@@ -118,7 +118,7 @@
 "ServerBrowser_RemoveServerFromHistory"		"Rimuovi il server dalla cronologia"
 "ServerBrowser_LastPlayed"			"Ultimo avvio"
 
-"ServerBrowser_OfflineMode" 			"Steam si trova attualmente in modalità offline. Non potrai giocare online finché non riavvierai\nSteam con una connessione a Internet attiva."
+"ServerBrowser_OfflineMode" 			"Steam si trova attualmente in modalità offline. Non potrai giocare online finché non riavvierai\nSteam con una connessione internet attiva."
 
 "ServerBrowser_ConnectToServer"		"Connettiti al server"
 "ServerBrowser_ViewServerInfo"		"Mostra informazioni sul server"

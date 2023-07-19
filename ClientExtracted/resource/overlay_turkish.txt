@@ -252,7 +252,7 @@
 "Overlay_Broadcast_ShowSettings" "Ayarlar"
 "Overlay_Broadcast_Stop" "Durdur"
 "Overlay_Broadcast_Chat_Title" "Yayın - Sohbet ( %numviewers%)"
-"Overlay_Broadcast_Live_Debug" "%videosendkbps% kbps, %videosendfps% FPS"
+"Overlay_Broadcast_Live_Debug" "%videosendkbps% Kbit/sn, %videosendfps% FPS"
 
 "SteamChina_Overlay_DurationControl_MessageA"		"You've been playing for one hour."
 "SteamChina_Overlay_DurationControl_MessageB"		"You've been playing for three hours.\nConsider taking a break."

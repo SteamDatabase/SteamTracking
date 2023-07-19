@@ -61,7 +61,7 @@ message CMsgClientSettings {
 	optional bool small_mode = 16 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Software\\Valve\\Steam\\SmallMode"];
 	optional bool skip_steamvr_install_dialog = 19 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "system\\SteamVRHMDVGUIWarning"];
 	optional bool always_show_user_chooser = 20 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "WebStorage\\Auth\\AlwaysShowUserChooser"];
-	optional bool show_family_sharing_notifications = 3000 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "HideSharingNotifications"];
+	optional bool show_family_sharing_notifications = 3000 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional int32 overlay_fps_counter_corner = 4000 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "system\\InGameOverlayShowFPSCorner"];
 	optional bool overlay_fps_counter_high_contrast = 4001 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "system\\InGameOverlayShowFPSContrast"];
 	optional .CMsgHotkey overlay_key = 4002 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "system\\InGameOverlayShortcutKey", (setting_default_string) = "Shift\tKEY_TAB"];
@@ -92,6 +92,7 @@ message CMsgClientSettings {
 	optional bool enable_marketing_messages = 5006 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "news\\NotifyAvailableGames"];
 	optional bool start_in_big_picture_mode = 5007 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional uint32 jumplist_flags = 5008 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "system\\JumplistSettings", (setting_default_uint) = 77680];
+	optional bool enable_ui_sounds = 5009 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "system\\EnableUISounds", (setting_default_bool) = true];
 	optional bool disable_all_toasts = 6000 [(setting_store) = k_EClientSettingStore_ConfigStore_UserRoaming, (setting_name) = "DisableAllToasts"];
 	optional bool disable_toasts_in_game = 6001 [(setting_store) = k_EClientSettingStore_ConfigStore_UserRoaming, (setting_name) = "DisableToastsInGame"];
 	optional bool play_sound_on_toast = 6002 [(setting_store) = k_EClientSettingStore_ConfigStore_UserRoaming, (setting_name) = "PlaySoundOnToast", (setting_default_bool) = true];
@@ -104,6 +105,7 @@ message CMsgClientSettings {
 	optional bool library_disable_community_content = 7006 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "LibraryDisableCommunityContent"];
 	optional bool library_display_icon_in_game_list = 7007 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "LibraryDisplayIconInGameList", (setting_default_bool) = true];
 	optional bool ready_to_play_includes_streaming = 7008 [(setting_store) = k_EClientSettingStore_CustomFunc, (setting_name) = "ReadyToPlayIncludesStreaming"];
+	optional bool show_steam_deck_info = 7009 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "ShowSteamDeckInfoInLibrary"];
 	optional bool enable_shader_precache = 8000 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional bool enable_shader_background_processing = 8001 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional uint64 shader_precached_size = 8002 [(setting_store) = k_EClientSettingStore_CustomFunc, (setting_readonly) = true];
@@ -151,4 +153,8 @@ message CMsgClientSettings {
 	optional bool startup_movie_used_for_resume = 16003 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Customization/StartupMovie/UsedForResume"];
 	optional bool game_notes_enable_spellcheck = 17001 [(setting_store) = k_EClientSettingStore_ConfigStore_UserRoaming, (setting_name) = "GameNotesEnableSpellcheck", (setting_default_bool) = true];
 	optional int32 screenshot_items_per_row = 18000 [(setting_store) = k_EClientSettingStore_ConfigStore_UserRoaming, (setting_name) = "ScreenshotViewItemsPerRow", (setting_default_int) = 1];
+	optional bool g_background_enabled = 18200 [(setting_store) = k_EClientSettingStore_CustomFunc];
+	optional string g_background_path = 18201 [(setting_store) = k_EClientSettingStore_CustomFunc];
+	optional string g_background_max_keep = 18202 [(setting_store) = k_EClientSettingStore_CustomFunc];
+	optional bool show_timestamps_in_console = 20000 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Developer\\ShowTimestampsInConsole"];
 }

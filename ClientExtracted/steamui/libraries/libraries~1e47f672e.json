@@ -1180,7 +1180,7 @@
     "MessageReaction_DescriptionYouAndCount_Plural": "Sinun ja %1$s muun käyttäjän reaktio: %2$s",
     "changeLog_Button": "Muutosloki",
     "changeLog_Value_Button": "Uusia päivityksiä muutoslokiin: %1$s",
-    "changeLog_WhatsNew": "Mitä uutta?",
+    "changeLog_WhatsNew": "Peliuutiset",
     "changeLog_Title": "Muutoslokin betaversio",
     "changeLog_SubTitle": "Steamin kaverilistan ja chatin tuoreet tapahtumat",
     "changeLog_UpdateItem01": "Korjattiiin uuden chatin virhe, joka sulki välillä juuri avatut chatit automaattisesti, jos sitä ennen oli pelattu jotain peliä.",

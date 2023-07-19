@@ -26,7 +26,7 @@
           const n = (0, s.LocalizePlural)(
             "#RewardsReaction_Tooltip",
             this.props.reaction.count || 0,
-            (0, a.C)(this.props.reaction.reaction_type)
+            (0, a.C)(this.props.reaction.reaction_type),
           );
           return o.createElement(
             r.HP,
@@ -42,8 +42,8 @@
               o.createElement(
                 "div",
                 { className: i().ReactionCount },
-                this.props.reaction.count
-              )
+                this.props.reaction.count,
+              ),
           );
         }
       }

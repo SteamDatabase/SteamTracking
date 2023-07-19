@@ -242,6 +242,7 @@ message PublishedFileDetails {
 	repeated .EPublishedFileRevision available_revisions = 69 [(description) = "Available revisions"];
 	repeated .PublishedFileDetails.Reaction reactions = 70 [(description) = "Reactions to this item"];
 	optional .EBanContentCheckResult ban_text_check_result = 71 [default = k_EBanContentCheckResult_NotScanned];
+	optional float search_score = 73 [(description) = "Search score, admin only"];
 }
 
 message CPublishedFile_GetDetails_Response {
@@ -635,6 +636,7 @@ message CPublishedFile_UpdateContentDescriptors_Request {
 }
 
 message CPublishedFile_UpdateContentDescriptors_Response {
+	optional uint32 timestamp_updated = 1;
 }
 
 message CPublishedFile_FileSubscribed_Notification {

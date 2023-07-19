@@ -3012,7 +3012,7 @@
 	"Steam_CannotInstallInOfflineMode"		"Steam phải kết nối mạng để cài trò chơi."
 	"SteamUI_DownloadsDisabled_Title" "Đã hủy tải xuống"
 	"Steam_CannotInstallDownloadsDisabled"	"Không thể cài trò chơi khi chức năng tải xuống bị tắt."
-	"Steam_RegionRestricted_Title"			"Trò chơi không khả dụng"
+	"Steam_RegionRestricted_Title"			"Trò chơi không thể chơi"
 	"Steam_RegionRestrictedPurchase_Info"				"Trò chơi này đã được kích hoạt với một mã sản phẩm chỉ có giá trị trong một vùng địa lý cố định. Vì hiện tại bạn không ở trong vùng đó, {s:gamename} không thể chơi được."
 	"Steam_CannotInstallApp_Title"	"Lỗi"
 	"Steam_CannotInstallApp_Info"	"Steam cài {s:gamename} không thành ({s:error})."
@@ -4193,12 +4193,6 @@
 	"SteamUI_StreamLaunch_Failed"		"Không thể khởi động buổi phát sóng."
 	"SteamUI_StreamLaunch_InstallDrivers"	"Bạn cần tải thêm driver để có thể phát sóng.\n\nVui lòng theo chỉ dẫn từ Steam trên máy tính truy cập từ xa."
 	"SteamUI_StreamLaunch_TransportUnavailable"	"Phát sóng bên ngoài nhà hiện không khả dụng, hãy thử lại sau."
-
-	"Steam_InstallAudioCaptureDriver_Title"	"Cập nhật driver âm thanh"
-	"Steam_InstallAudioCaptureDriver_Text"	"Steam cần phải cập nhật driver âm thanh, có thể sẽ cần khởi động lại hệ thống."
-	"Steam_InstallGamepadInputDriver_Title"	"Cập nhật driver tay cầm"
-	"Steam_InstallGamepadInputDriver_Text"	"Steam cần phải cập nhật driver tay cầm, có thể sẽ cần khởi động lại hệ thống."
-	"Steam_InstallGamepadInputDriver_RestartText"	"Bạn sẽ cần phải khởi động lại Steam sau khi cài driver tay cầm."
 
 	"SteamUI_RemoteDeviceAuthorization_Title"		"Cấp phép cho thiết bị"
 	"SteamUI_RemoteDeviceAuthorization_Text"		"Xin nhập mã xác nhận để cho phép {s:devicename} kết nối và chạy trò chơi."

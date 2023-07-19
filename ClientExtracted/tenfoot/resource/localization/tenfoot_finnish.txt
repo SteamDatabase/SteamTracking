@@ -4196,12 +4196,6 @@ Peli tarvitsee vähintään {s:requiredwidth}m x {s:requireddepth}m kokoisen pel
 	"SteamUI_StreamLaunch_InstallDrivers"	"Lähetyksen aloittaminen vaatii lisäajureiden asentamista.\n\nOle hyvä ja noudata lähdetietokoneelle ilmaantuvia Steamin ohjeita."
 	"SteamUI_StreamLaunch_TransportUnavailable"	"Striimaus kodin ulkopuolella ei ole tällä hetkellä käytettävissä. Yritä myöhemmin uudelleen."
 
-	"Steam_InstallAudioCaptureDriver_Title"	"Ääniajureiden päivitys"
-	"Steam_InstallAudioCaptureDriver_Text"	"Steamin pitää päivittää ääniajurinsa, mikä saattaa vaatia järjestelmän uudelleenkäynnistämisen."
-	"Steam_InstallGamepadInputDriver_Title"	"Ohjainajureiden päivitys"
-	"Steam_InstallGamepadInputDriver_Text"	"Steamin pitää päivittää ohjainajurinsa, mikä saattaa vaatia järjestelmän uudelleenkäynnistämisen."
-	"Steam_InstallGamepadInputDriver_RestartText"	"Sinun pitää uudelleenkäynnistää Steam ohjainajureiden päivityksen jälkeen."
-
 	"SteamUI_RemoteDeviceAuthorization_Title"		"Valtuuta laite"
 	"SteamUI_RemoteDeviceAuthorization_Text"		"Kirjoita valtuutuskoodi, jotta laite {s:devicename} voi yhdistää ja käyttää sovelluksia."
 

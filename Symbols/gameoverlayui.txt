@@ -71,8 +71,10 @@
  OBJC_CLASS_$_NSLocale
  OBJC_CLASS_$_NSMutableArray
  OBJC_CLASS_$_NSObject
+ OBJC_CLASS_$_NSOpenPanel
  OBJC_CLASS_$_NSProcessInfo
  OBJC_CLASS_$_NSRunningApplication
+ OBJC_CLASS_$_NSSavePanel
  OBJC_CLASS_$_NSScreen
  OBJC_CLASS_$_NSString
  OBJC_CLASS_$_NSURL

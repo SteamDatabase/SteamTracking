@@ -142,8 +142,6 @@ enum EMsg {
 	k_EMsgAMReverseChargeback = 536;
 	k_EMsgAMReverseChargebackResponse = 537;
 	k_EMsgAMClanCleanupList = 538;
-	k_EMsgAMGetLicenses = 539;
-	k_EMsgAMGetLicensesResponse = 540;
 	k_EMsgAMSendCartRepurchase = 541;
 	k_EMsgAMSendCartRepurchaseResponse = 542;
 	k_EMsgAllowUserToPlayQuery = 550;
@@ -885,12 +883,8 @@ enum EMsg {
 	k_EMsgAMECommPayPaymentResponse = 4424;
 	k_EMsgAMSetRemoteClientID = 4425;
 	k_EMsgBasePSRange = 5000;
-	k_EMsgPSCreateShoppingCart = 5001;
-	k_EMsgPSCreateShoppingCartResponse = 5002;
 	k_EMsgPSIsValidShoppingCart = 5003;
 	k_EMsgPSIsValidShoppingCartResponse = 5004;
-	k_EMsgPSRemoveLineItemFromShoppingCart = 5007;
-	k_EMsgPSRemoveLineItemFromShoppingCartResponse = 5008;
 	k_EMsgPSGetShoppingCartContents = 5009;
 	k_EMsgPSGetShoppingCartContentsResponse = 5010;
 	k_EMsgPSAddWalletCreditToShoppingCart = 5011;
@@ -1464,6 +1458,7 @@ enum EMsg {
 	k_EMsgClientHello = 9805;
 	k_EMsgClientEnableOrDisableDownloads = 9806;
 	k_EMsgClientEnableOrDisableDownloadsResponse = 9807;
+	k_EMsgClientFeatureGroupInfo = 9808;
 	k_EMsgClientLANP2PBase = 9900;
 	k_EMsgClientLANP2PRequestChunk = 9900;
 	k_EMsgClientLANP2PRequestChunkResponse = 9901;

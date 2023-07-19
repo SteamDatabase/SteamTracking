@@ -134,8 +134,8 @@
 "Friends_PlaySoundWhenFriendComesOnline"		"Издаване на звук, когато приятел дойде на линия"
 "Friends_PlaySoundWhenReceiveAMessage"		"Издаване на звук, когато получа съобщение"
 "Friends_NotifyMeWhenUserComesOnline"			"Известявайте ме, когато този потребител дойде на линия"
-"Friends_PlaySoundWhenUserComesOnline"		"Винаги издавай звук, когато този потребител дойде на линия"
-"Friends_PlaySoundWhenUserJoinsGame"			"Винаги издавай звук, когато този потребител започне да играе"
+"Friends_PlaySoundWhenUserComesOnline"		"Винаги да се издава звук, когато този потребител дойде на линия"
+"Friends_PlaySoundWhenUserJoinsGame"			"Винаги да се издава звук, когато този потребител започне да играе"
 
 "Friends_RemoveUserExplanation"	"Ако премахнете този приятел от списъка си, той няма да може да вижда кога сте на линия или да Ви изпраща съобщения."
 

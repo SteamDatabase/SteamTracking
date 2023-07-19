@@ -110,6 +110,8 @@ enum EStreamControlMessage {
 	k_EStreamControlDisableNeptuneData = 140;
 	k_EStreamControlStartNeptuneData = 141;
 	k_EStreamControlStopNeptuneData = 142;
+	k_EStreamControlPauseControllerInput = 143;
+	k_EStreamControlResumeControllerInput = 144;
 }
 
 enum EStreamVersion {
@@ -631,6 +633,12 @@ message CEnableNeptuneDataMsg {
 }
 
 message CDisableNeptuneDataMsg {
+}
+
+message CPauseControllerInputMsg {
+}
+
+message CResumeControllerInputMsg {
 }
 
 message CToggleMagnificationMsg {

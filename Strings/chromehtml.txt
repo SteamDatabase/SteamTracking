@@ -2,8 +2,8 @@ __TEXT
 
 __text
 __TEXT
-X
-X
+`U
+`U
 __stubs
 __TEXT
 __stub_helper
@@ -16,9 +16,9 @@ __TEXT
 (
 __cstring
 __TEXT
-__gcc_except_tab__TEXT
 __const
 __TEXT
+__gcc_except_tab__TEXT
 __unwind_info
 __TEXT
 __DATA
@@ -63,8 +63,8 @@ __LINKEDIT
 8
 @loader_path/chromehtml.dylib
 "
+8!
 P
-
 
 *
 8
@@ -101,6 +101,7 @@ h
 /usr/lib/libobjc.A.dylib
 &
 )
+NSt3__117bad_function_callE
 N3IPC15BinarySemaphoreE
 N3IPC6IMutexE
 N3IPC11ISyncObjectE
@@ -565,6 +566,8 @@ P
 30CMsgSetForceDeviceScaleFactors
 13CMsgSetUIMode
 16CMsgPopupCreated
+27CMsgSetVRKeyboardVisibility
+NSt3__121__basic_string_commonILb1EEE
 N6google8protobuf8internal16InternalMetadata9ContainerINS0_15UnknownFieldSetEEE
 N6google8protobuf8internal16InternalMetadata13ContainerBaseE
 15CHTMLController
@@ -810,7 +813,6 @@ N6google8protobuf23SourceCodeInfo_LocationE
 N6google8protobuf14SourceCodeInfoE
 N6google8protobuf28GeneratedCodeInfo_AnnotationE
 N6google8protobuf17GeneratedCodeInfoE
-NSt3__121__basic_string_commonILb1EEE
 N6google8protobuf14DynamicMessageE
 N6google8protobuf21DynamicMessageFactoryE
 N6google8protobuf8internal29DescriptorPoolExtensionFinderE
@@ -1124,9 +1126,9 @@ https://crash.steampowered.com/submit
 -steamdeck
 -steamos3
 -chromeos
--vgui
 "
 --proxy-server="%s"
+--proxy-bypass-list="localhost;127.0.0.1"
 -html-perf-monitor
 Draws html perf data
 -steamuniverse=Dev
@@ -2047,8 +2049,6 @@ type() == TYPE_FIXED64
 google/protobuf/unknown_field_set.cc
 CHECK failed: !fields_.empty():
 CHECK failed: (TYPE_LENGTH_DELIMITED) == (type()):
-CHECK failed: *ptr:
-CHECK failed: (overrun) <= (kSlopBytes):
 Can't happen
 google/protobuf/wire_format.cc
 Extensions of MessageSets must be optional messages.
@@ -2387,23 +2387,18 @@ sc_schinese
 @
 @
 
-J
-
 
 
 @
 Ic
-}
-q
-c
-}
-;
-C
-B
-=
-"
+|
+u
+W
+:
 
-=
+
+
+
 0
 0
 Hi
@@ -2453,8 +2448,8 @@ IcE
 @
 V
 =
->
 =
+M
 !
 @
 &

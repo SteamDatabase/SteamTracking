@@ -1,8 +1,8 @@
 __TEXT
 __text
 __TEXT
-0k
-0k
+j
+j
 __stubs
 __TEXT
 __stub_helper
@@ -43,7 +43,6 @@ __bss
 __DATA
 __common
 __DATA
-E
 H
 __LINKEDIT
 
@@ -268,6 +267,8 @@ Set the community URL
 Set the store URL
 -help
 Set the help/support URL
+-devsites
+Use local dev websites
 /
 help
 %s/
@@ -806,21 +807,22 @@ GetInts()
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/convar.cpp
 pName
 m_fnCompletionCallback
+%d
+%llu
+%f
 m_vecCallbacks.Count() == 0 || !callback
 m_pParent == this
 ConVar::InternalSetValue: called with NULL
 Hey, you just set %s's number values to be 0.  Is that what you wanted?If you do `%s = 123`, you will set the convar to `= 123` which becomes `0` for numeric uses.Did you mean to do `%s %s` instead?
-%f
 !( m_nFlags & FCVAR_NEVER_AS_STRING )
 m_vecCallbacks.Count() == 0
-%d
-%llu
 pDefaultValue
 Attempted to change replicated CVar when you are not the GM
 ConVar
 m_configOverride
 m_pVecUlValue
 m_pVecStringValue
+m_strConvertedDefaultValue
 m_vecCallbacks
 ConCommand '%s' not currently supported in config file
 !pszString || pszString[nChars] == '\0'
@@ -1338,3 +1340,4 @@ Ic
 q
 0
 0
+A

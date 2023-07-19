@@ -17,6 +17,7 @@ enum EMarketingMessageType {
 	k_EMarketingMessageEJsKorner = 9;
 	k_EMarketingMessageUpdate = 10;
 	k_EMarketingMessageMidweekDeal = 11;
+	k_EMarketingMessageDailyDeal = 12;
 }
 
 enum EMarketingMessageVisibility {
@@ -53,6 +54,7 @@ enum EMarketingMessageLookupType {
 
 message CMarketingMessages_GetActiveMarketingMessages_Request {
 	optional string country = 1;
+	optional bool anonymous_user = 2 [(description) = "Will not return any marketing message that requires ownership/playtime/wishlist"];
 }
 
 message CMarketingMessageProto {
@@ -191,6 +193,30 @@ message CMarketingMessages_FindMarketingMessages_Response {
 	repeated .CMarketingMessageProto messages = 1;
 }
 
+message CMarketingMessages_GetMarketingMessageViewerStats_Request {
+	optional fixed64 gid = 1;
+}
+
+message CMarketingMessageHourlyStats {
+	optional uint32 rt_time_hour = 1;
+	optional uint32 seen_count = 2 [(description) = "within the hour period"];
+	optional .EMarketingMessageTemplateType template_type = 3 [default = k_EMarketingMessageTemplate_Unknown, (description) = "Which template type was shown, usually just IMAGE"];
+	optional uint32 display_index = 4 [(description) = "Zero is invalid/we don't have information; 1 based index"];
+}
+
+message CMarketingMessages_GetMarketingMessageViewerStats_Response {
+	repeated .CMarketingMessageHourlyStats stats = 1;
+}
+
+message CMarketingMessages_GetMarketingMessagesViewerRangeStats_Request {
+	optional uint32 rt_start_time = 1;
+	optional uint32 rt_end_time = 2;
+}
+
+message CMarketingMessages_GetMarketingMessagesViewerRangeStats_Response {
+	repeated .CMarketingMessageHourlyStats stats = 1 [(description) = "Flatterns results for the range of time"];
+}
+
 service MarketingMessages {
 	option (service_description) = "Marketing message data (\"Steam News\" updates at client startup).";
 
@@ -211,7 +237,7 @@ service MarketingMessages {
 	}
 
 	rpc GetDisplayMarketingMessageAdmin (.CMarketingMessages_GetDisplayMarketingMessage_Request) returns (.CMarketingMessages_GetDisplayMarketingMessage_Response) {
-		option (method_description) = "Get a single marketing message, cacheable.";
+		option (method_description) = "Get a single marketing message for Admin, not cacheable.";
 	}
 
 	rpc MarkMessageSeen (.CMarketingMessages_MarkMessageSeen_Notification) returns (.NoResponse) {
@@ -236,5 +262,13 @@ service MarketingMessages {
 
 	rpc FindMarketingMessages (.CMarketingMessages_FindMarketingMessages_Request) returns (.CMarketingMessages_FindMarketingMessages_Response) {
 		option (method_description) = "Search for marketing messages by name, type, etc.";
+	}
+
+	rpc GetMarketingMessageViewerStats (.CMarketingMessages_GetMarketingMessageViewerStats_Request) returns (.CMarketingMessages_GetMarketingMessageViewerStats_Response) {
+		option (method_description) = "For a specific marketing message, then all of the viewership stats for the date range it was intended to be visible to customers";
+	}
+
+	rpc GetMarketingMessagesViewerRangeStats (.CMarketingMessages_GetMarketingMessagesViewerRangeStats_Request) returns (.CMarketingMessages_GetMarketingMessagesViewerRangeStats_Response) {
+		option (method_description) = "For a time range, return the seen stats across all of the marketing messages";
 	}
 }

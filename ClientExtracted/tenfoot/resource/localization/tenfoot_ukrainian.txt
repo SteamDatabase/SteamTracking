@@ -4194,12 +4194,6 @@
 	"SteamUI_StreamLaunch_InstallDrivers"	"Для транслювання вам необхідно встановити додатковий драйвер.\n\nБудь ласка, дотримуйтеся вказівок від Steam на віддаленому комп’ютері."
 	"SteamUI_StreamLaunch_TransportUnavailable"	"Транслювання з-поза дому зараз не доступне, спробуйте знову пізніше."
 
-	"Steam_InstallAudioCaptureDriver_Title"	"Оновлення драйвера звукової карти"
-	"Steam_InstallAudioCaptureDriver_Text"	"Steam необхідно оновити драйвер звукової карти, після чого може знадобитися перезавантаження ОС."
-	"Steam_InstallGamepadInputDriver_Title"	"Оновлення драйвера ґеймпада"
-	"Steam_InstallGamepadInputDriver_Text"	"Steam необхідно оновити драйвер ґеймпада, після чого може знадобитися перезавантаження ОС."
-	"Steam_InstallGamepadInputDriver_RestartText"	"Після інсталяції драйвера ґеймпада вам буде потрібно перезапустити Steam."
-
 	"SteamUI_RemoteDeviceAuthorization_Title"		"Авторизація пристрою"
 	"SteamUI_RemoteDeviceAuthorization_Text"		"Введіть код авторизації з екрана {s:devicename}, щоб дозволити цьому пристрою підключатися та запускати ігри."
 

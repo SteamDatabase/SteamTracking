@@ -1736,6 +1736,7 @@
 "steam_menu_help"	"Довідка"
 "steam_menu_library"	"Бібліотека"
 "steam_menu_hidden_games"	"Приховані ігри"
+"steam_menu_soundtracks"	"Саундтреки"
 "steam_menu_downloads"	"Завантаження"
 "steam_menu_account"	"Steam"
 "steam_menu_window" "Вікно"
@@ -1777,7 +1778,7 @@
 
 "steam_menu_minigameslist"	"Увімкнути компактний список ігор"
 "steam_menu_fullgameslist"	"Повернути повний вигляд"
-"steam_menu_backupgames"	"Резервне копіювання ігор…"
+"steam_menu_backupgames"	"Відновити резервну копію гри…"
 "steam_menu_changeuser"		"Змінити акаунт…"
 "steam_menu_signout"		"Вийти з акаунта…"
 "steam_menu_support"		"Служба підтримки Steam"
@@ -2261,6 +2262,7 @@
 "Steam_NoLongerOwnsGame_Title"	"Steam — %game%"
 "Steam_NoLongerOwnsGame_Info"		"До цієї гри більше немає безкоштовного доступу."
 
+"steam_menu_systemreport"		"Системний звіт"
 "steam_menu_systeminfo"			"Відомості системи"
 "steam_systeminfo_title"			"Steam — Відомості про систему"
 "steam_systeminfo_surveylink"	"Порівняйте своє обладнання з обладнанням інших користувачів Steam"
@@ -3921,8 +3923,8 @@
 "steam_editcontroller"	"Конфігурація контролера"
 "steam_menu_media" "Матеріали"
 "steam_menu_tools" "Інструменти"
-"steam_menu_friends" "Друзі"
-"steam_menu_servers" "Сервери"
+"steam_menu_friends" "Друзі й чат"
+"steam_menu_servers" "Ігрові сервери"
 "steam_menu_settings" "Налаштування"
 "steam_menu_view_friends" "Переглянути список друзів (%friends_online% у мережі)"
 "steam_menu_view_players" "Гравці"
@@ -4378,11 +4380,6 @@
 "SteamUI_StreamLaunch_InstallDrivers"	"Для транслювання вам необхідно встановити додатковий драйвер.\n\nБудь ласка, дотримуйтеся вказівок від Steam на віддаленому комп’ютері."
 "SteamUI_StreamLaunch_StillDownloading" "На %ClientName% виконується оновлення. %game% буде готова до транслювання, щойно воно завершиться."
 "SteamUI_StreamLaunch_TransportUnavailable"	"Транслювання з-поза дому зараз недоступне, спробуйте знову пізніше."
-
-"Steam_InstallAudioCaptureDriver_Title"	"Оновлення аудіодрайвера"
-"Steam_InstallAudioCaptureDriver_Text"	"Steam необхідно оновити драйвер звукової карти, після чого може знадобитися перезавантаження ОС.\n\nНатисніть «Інсталювати» для продовження."
-"Steam_InstallGamepadInputDriver_Title"	"Оновлення драйвера ґеймпада"
-"Steam_InstallGamepadInputDriver_Text"	"Steam необхідно оновити драйвер ґеймпада; після завершення оновлення може знадобитися перезавантаження ОС.\n\nНатисніть «Інсталювати» для продовження."
 
 "Steam_OtherSessionPlaying_Title" "Помилка — Steam"
 "Steam_OtherSessionPlaying_Text" "З вашого акаунта на іншому комп’ютері вже запущено «%existing_app%».\nЗапуск «%launching_app%» тут призведе до відключення іншого сеансу від Steam."
@@ -4848,7 +4845,7 @@
 "Steam_DualSense_FirmwareUpdate_DisableNotification"	"Більше не показувати"
 
 "RescueDialog_Title" "Steamwebhelper не відповідає"
-"RescueDialog_Explanation" "steamwebhelper.exe, необхідний компонент Steam, не відповідає. Інтерфейс Steam не працюватиме. Клацніть <a href=\"about:blank\">тут</a> для докладнішої інформації."
+"RescueDialog_Explanation" "steamwebhelper.exe, необхідний компонент Steam, не відповідає. Інтерфейс Steam не працюватиме. Клацніть <a href=steam://openurl_external/https://help.steampowered.com/faqs/view/6C3E-9504-CC20-AF49>тут</a> для отримання докладнішої інформації."
 "RescueDialog_RadioHeader" "Спробуймо вирішити цю проблему:"
 "RescueDialog_RestartSteam" "Перезапустити Steam"
 "RescueDialog_RestartSteam_NoGPU" "Перезапустити Steam із вимкненим апаратним прискоренням"

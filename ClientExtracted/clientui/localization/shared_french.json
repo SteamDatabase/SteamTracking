@@ -1175,7 +1175,7 @@
   "AddonPicker_NoResults": "Aucun résultat",
   "AddonPicker_NoRecent": "%1$s récent(e)s : aucun résultat",
   "AddonPicker_NoneOwned": "%1$s : aucun résultat",
-  "AddonPicker_AcquireAtPointsShop": "Vous pouvez en récupérer dans la %1$s",
+  "AddonPicker_AcquireAtPointsShop": "Vous pouvez en acheter dans la %1$s",
   "AddonPicker_AcquireAtPointsShop_Link": "boutique des points",
   "AddonPicker_AcquireAtPointsShopOrMarket": "Vous pouvez en récupérer dans la %1$s ou en acheter sur le %2$s",
   "AddonPicker_AcquireAtPointsShopOrMarket_Link": "marché de la communauté",

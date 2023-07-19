@@ -19,7 +19,7 @@
 "SteamBootstrapper_UpdateCleanup"				"Limpiando..."
 "SteamBootstrapper_UpdateCleanupFail"			"No se ha podido limpiar después de la actualización, continuando..."
 "SteamBootstrapper_UpdateFinalizeFail"		"No se ha podido escribir el archivo declarativo de la instalación."
-"SteamBootstrapper_UpdateComplete"			"Actualización completa, iniciando %appname%..."
+"SteamBootstrapper_UpdateComplete"			"Actualización completa. Iniciando %appname%..."
 "SteamBootstrapper_UpdateChecking"			"Buscando actualizaciones disponibles..."
 "SteamBootstrapper_UpdatePrepare"				"Preparando para actualizar..."
 "SteamBootstrapper_UpdateDownload"			"Bajando actualización..."

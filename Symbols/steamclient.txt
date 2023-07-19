@@ -14,8 +14,10 @@
  .objc_class_name_NSLocale
  .objc_class_name_NSMutableArray
  .objc_class_name_NSObject
+ .objc_class_name_NSOpenPanel
  .objc_class_name_NSProcessInfo
  .objc_class_name_NSRunningApplication
+ .objc_class_name_NSSavePanel
  .objc_class_name_NSScreen
  .objc_class_name_NSString
  .objc_class_name_NSURL
@@ -180,8 +182,10 @@
  OBJC_CLASS_$_NSLocale
  OBJC_CLASS_$_NSMutableArray
  OBJC_CLASS_$_NSObject
+ OBJC_CLASS_$_NSOpenPanel
  OBJC_CLASS_$_NSProcessInfo
  OBJC_CLASS_$_NSRunningApplication
+ OBJC_CLASS_$_NSSavePanel
  OBJC_CLASS_$_NSScreen
  OBJC_CLASS_$_NSString
  OBJC_CLASS_$_NSURL

@@ -43,6 +43,7 @@
  I av_color_range_name
  I av_color_space_name
  I av_color_transfer_name
+ I av_content_light_metadata_create_side_data
  I av_cpu_count
  I av_crc
  I av_crc_get_table
@@ -122,6 +123,10 @@
  I av_map_videotoolbox_format_to_pixfmt
  I av_mastering_display_metadata_create_side_data
  I av_match_list
+ I av_md5_alloc
+ I av_md5_final
+ I av_md5_init
+ I av_md5_update
  I av_memcpy_backptr
  I av_mul_q
  I av_opt_copy
@@ -429,6 +434,7 @@
  av_color_range_name
  av_color_space_name
  av_color_transfer_name
+ av_content_light_metadata_create_side_data
  av_cpu_count
  av_crc
  av_crc_get_table
@@ -508,6 +514,10 @@
  av_map_videotoolbox_format_to_pixfmt
  av_mastering_display_metadata_create_side_data
  av_match_list
+ av_md5_alloc
+ av_md5_final
+ av_md5_init
+ av_md5_update
  av_memcpy_backptr
  av_mul_q
  av_opt_copy

@@ -1,0 +1,17 @@
+import "steammessages_base.proto";
+import "webuimessages_base.proto";
+
+option optimize_for = SPEED;
+option cc_generic_services = true;
+
+message CSystemManager_Hibernate_Request {
+}
+
+message CSystemManager_Hibernate_Response {
+}
+
+service SystemManager {
+	option (webui_service_execution_site) = k_EClientExecutionSiteClientdll;
+
+	rpc Hibernate (.CSystemManager_Hibernate_Request) returns (.CSystemManager_Hibernate_Response);
+}

@@ -4202,12 +4202,6 @@
 	"SteamUI_StreamLaunch_InstallDrivers"	"串流需安裝額外的驅動程式\n\n請依遠端電腦上 Steam 所顯示的指示操作"
 	"SteamUI_StreamLaunch_TransportUnavailable"	"目前無法在家外串流，請稍後再試。"
 
-	"Steam_InstallAudioCaptureDriver_Title"	"音訊驅動程式更新"
-	"Steam_InstallAudioCaptureDriver_Text"	"Steam 必須更新音訊驅動程式，可能需要重新啟動系統。"
-	"Steam_InstallGamepadInputDriver_Title"	"遊戲手把驅動程式更新"
-	"Steam_InstallGamepadInputDriver_Text"	"Steam 必須更新遊戲手把驅動程式，可能需要重新啟動系統。"
-	"Steam_InstallGamepadInputDriver_RestartText"	"手把驅動程式安裝完成後，需重新啟動 Steam。"
-
 	"SteamUI_RemoteDeviceAuthorization_Title"		"授權裝置"
 	"SteamUI_RemoteDeviceAuthorization_Text"		"請輸入授權代碼來允許 {s:devicename} 連接並遊玩遊戲。"
 

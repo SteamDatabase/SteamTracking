@@ -941,11 +941,13 @@ div.ModalPosition_TopBar {
   text-align: left;
 }
 .DialogInputRequirementLabel {
-  color: #b80505;
+  color: #c15755;
   margin-left: 15px;
 }
 .DialogRequirementLabel {
-  color: #b80505;
+  color: #c15755;
+  font-weight: 500;
+  font-size: 14px;
 }
 .DialogInputLabelGroup {
   margin-bottom: 22px;
@@ -2382,4 +2384,4 @@ body.in_global_drag .friendlist_titlebar {
   fill: #ffae00;
 }
 
-/*# sourceMappingURL=friends.css.map?contenthash=d27b620103ed5c3c5f8a*/
+/*# sourceMappingURL=friends.css.map?contenthash=6ac2f675928019e4d771*/

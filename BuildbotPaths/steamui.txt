@@ -34,6 +34,8 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/ipcclient.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/job.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/job.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/jobfuture.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/jobfuture.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/jobmgr.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/jpegloader.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/jpegloader_common.cpp
@@ -255,6 +257,7 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/gamestream/gamestreamsession.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/gamestream/gamestreamsystem.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/gamestream/gamestreamsystemosx.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/gamestream/gamestreamutils.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/gamestream/gamestreamvideoencoder.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/gamestream/gamestreamvideostage.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/gamestream/gamestreamvideostagecomposite.cpp
@@ -280,8 +283,10 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/sharedconnectioncontroller.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/sharedconnectioncontroller.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/shutdowncontroller.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/spewmanager.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/startupmodemanager.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/steamstartuphandlers.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/steamuiapicallhelpers.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/steamuiappcontroller.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/steamuiappiconcontroller.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/steamuibetacontroller.cpp
@@ -547,7 +552,7 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/userlogincontroller.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/valvecontrollermanager.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/valvecontrollermanager.h
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/vr2dgameoverlay.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/vr/vr2dgameoverlay.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/webuitransportcontroller.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/streaming/common/streamframe.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/streaming/common/streamframe.h

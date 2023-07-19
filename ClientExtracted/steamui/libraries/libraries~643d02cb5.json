@@ -35,7 +35,7 @@
     "FriendGroup_IncomingInvites_NoIncomingInvites": "Немає запрошень",
     "FriendGroup_PlayerGroupFooter_Label": "Ще з %1$s гравцями",
     "FriendGroup_PlayerGroupFooter_Label_Singular": "Ще з %1$s гравцем",
-    "FriendGroup_PlayerGroupFooter_Label_PlusYouOnly": "У грі з вами:",
+    "FriendGroup_PlayerGroupFooter_Label_PlusYouOnly": "З вами:",
     "FriendGroup_PlayerGroupFooter_Label_PlusYou_Singular": "З вами та ще %1$s гравцем",
     "FriendGroup_PlayerGroupFooter_Label_PlusYou": "З вами та ще %1$s гравцями",
     "FriendGroup_InGame": "У грі",

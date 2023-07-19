@@ -210,7 +210,7 @@
 "vgui_Webkit_pagetypeunsupported" "Impossibile caricare la pagina, formato della pagina non supportato"
 "vgui_Webkit_cachemiss" "Il tuo modulo di richiesta è scaduto. Clicca su Aggiorna per reinoltrare i dati del modulo."
 "vgui_Webkit_badurl" "Impossibile caricare l'URL, nome dell'host o formato non corretti"
-"vgui_Webkit_connectionproblem" "Impossibile connettersi al server. Il server potrebbe essere offline oppure potresti non essere connesso ad Internet."
+"vgui_Webkit_connectionproblem" "Impossibile connettersi al server. Il server potrebbe essere offline oppure potresti non essere connesso a internet."
 "vgui_Webkit_proxyconnectionproblem" "Impossibile connettersi al proxy HTTP. Il tuo proxy potrebbe essere mal configurato o offline."
 "vgui_Webkit_unknown" "Impossibile caricare la pagina web (errore sconosciuto)."
 "vgui_HTMLBack" "Indietro"

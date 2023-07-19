@@ -846,10 +846,10 @@ Oyunu açmak %borrower% adlı kullanıcıya oyunu bırakma zamanının geldiğin
 "SteamUI_Selection_Vietnamese"		"Tiếng Việt (Vietnamca)"
 
 
-"SteamUI_Modem_33_6k"		"Modem - 33.6kbps"
-"SteamUI_ISDN_112k"		"ISDN - 112kbps"
-"SteamUI_T1"			"T1 > 1Mbps"
-"SteamUI_LAN"			"LAN > 10Mbps"
+"SteamUI_Modem_33_6k"		"Modem - 33,6 Kbit/sn"
+"SteamUI_ISDN_112k"		"ISDN - 112 Kbit/sn"
+"SteamUI_T1"			"T1 > 1 Mbit/sn"
+"SteamUI_LAN"			"LAN > 10 Mbit/sn"
 "SteamUI_PrivacyButton"		"Valve'in Gizlilik Politikasına Bakın"
 
 "Steam_ChangeContactEmail_Working" "İletişim e-posta adresi değiştiriliyor..."
@@ -1739,6 +1739,7 @@ Değişikliklerin etkili olması için OSX platformundan çıkış yapmalısın�
 "steam_menu_help"	"Yardım"
 "steam_menu_library"	"Kütüphane"
 "steam_menu_hidden_games"	"Gizlenmiş Oyunlar"
+"steam_menu_soundtracks"	"Oyun Müzikleri"
 "steam_menu_downloads"	"İndirmeler"
 "steam_menu_account"	"Steam"
 "steam_menu_window" "Pencere"
@@ -1780,7 +1781,7 @@ Değişikliklerin etkili olması için OSX platformundan çıkış yapmalısın�
 
 "steam_menu_minigameslist"	"Mini Oyun Listesine Geç"
 "steam_menu_fullgameslist"	"Tam Görünüme Geç"
-"steam_menu_backupgames"	"Oyunları Yedekle ve Geri Yükle..."
+"steam_menu_backupgames"	"Oyun Yedeğini Geri Yükle..."
 "steam_menu_changeuser"		"Hesap Değiştir..."
 "steam_menu_signout"		"Çıkış Yap..."
 "steam_menu_support"		"Steam Destek"
@@ -2264,6 +2265,7 @@ Değişikliklerin etkili olması için OSX platformundan çıkış yapmalısın�
 "Steam_NoLongerOwnsGame_Title"	"Steam - %game%"
 "Steam_NoLongerOwnsGame_Info"		"Bu oyun artık ücretsiz değil."
 
+"steam_menu_systemreport"		"Sistem Raporu"
 "steam_menu_systeminfo"			"Sistem Bilgisi"
 "steam_systeminfo_title"			"Steam - Sistem Bilgisi"
 "steam_systeminfo_surveylink"	"Donanımınızı diğer Steam kullanıcılarıyla kıyaslayın"
@@ -2433,11 +2435,11 @@ Değişikliklerin etkili olması için OSX platformundan çıkış yapmalısın�
 "steam_status_launching"				"Başlatılıyor"
 "steam_status_launching_progress"		"Başlatılıyor: "
 
-"SteamUI_Modem_56k"		"Modem - 56kbps"
-"SteamUI_DSL_256k"		"DSL > 256kbps"
-"SteamUI_DSL_768k"		"DSL > 768kbps"
-"SteamUI_CABLEDSL_2M"	"DSL/Kablo > 2Mbps"
-"SteamUI_CABLEFIBER_10M"	"Kablo/Fiber > 10Mbps"
+"SteamUI_Modem_56k"		"Modem - 56 Kbit/sn"
+"SteamUI_DSL_256k"		"DSL > 256 Kbit/sn"
+"SteamUI_DSL_768k"		"DSL > 768 Kbit/sn"
+"SteamUI_CABLEDSL_2M"	"DSL/Kablo > 2 Mbit/sn"
+"SteamUI_CABLEFIBER_10M"	"Kablo/Fiber > 10 Mbit/sn"
 
 "Steam_RetailAccountActivating"		"%product% Steam üzerinden etkinleştiriliyor"
 "Steam_RetailAccountChoices"		"Bir kere etkinleştirdiğinizde, oyunlarınıza herhangi bir zamanda, herhangi bir bilgisayardan Steam hesabınızı kullanarak erişebilirsiniz."
@@ -3055,8 +3057,8 @@ Tanıdığınız birine e-posta aracılığıyla bir hediye göndererek arkadaş
 "SteamUI_P2P_PeerList_Col_Outbound"	"T"
 "SteamUI_P2P_PeerList_Col_BytesOut"	"MB Çıkan"
 "SteamUI_P2P_PeerList_Col_BytesIn"	"MB Giren"
-"SteamUI_P2P_PeerList_Col_BandwidthOut"	"Kbps Çıkış"
-"SteamUI_P2P_PeerList_Col_BandwidthIn"	"Kbps Giriş"
+"SteamUI_P2P_PeerList_Col_BandwidthOut"	"Kbit/sn Çıkış"
+"SteamUI_P2P_PeerList_Col_BandwidthIn"	"Kbit/sn Giriş"
 "SteamUI_P2P_PeerList_Col_Blocks"	"Bloklar"
 "SteamUI_P2P_PeerList_Col_State"	"Açıklama"
 
@@ -3066,8 +3068,8 @@ Tanıdığınız birine e-posta aracılığıyla bir hediye göndererek arkadaş
 "SteamUI_P2P_PeerListTip_Outbound"	"Bağlantı Türü\n(Y)erel bağlantı bu eş tarafından başlatıldı, (U)zaktaki bağlantı uzaktaki eş tarafından başlatıldı"
 "SteamUI_P2P_PeerListTip_BytesOut"	"MB Çıkan"
 "SteamUI_P2P_PeerListTip_BytesIn"	"MB Giren"
-"SteamUI_P2P_PeerListTip_BandwidthOut"	"Kbps Çıkış"
-"SteamUI_P2P_PeerListTip_BandwidthIn"	"Kbps Giriş"
+"SteamUI_P2P_PeerListTip_BandwidthOut"	"Kbit/sn Çıkış"
+"SteamUI_P2P_PeerListTip_BandwidthIn"	"Kbit/sn Giriş"
 "SteamUI_P2P_PeerListTip_Blocks"	"Bloklar\nUzaktaki eşin veri yerleşiminin görsel durumu"
 "SteamUI_P2P_PeerListTip_State"		"Bağlantı bilgisi"
 
@@ -3927,8 +3929,8 @@ Bu oyun için bir kategori ayarlamanız, o oyunu çabuk bulmanıza ve Kütüphan
 "steam_editcontroller"	"Kontrolcü Yapılandırması"
 "steam_menu_media" "Medya"
 "steam_menu_tools" "Araçlar"
-"steam_menu_friends" "Arkadaşlar"
-"steam_menu_servers" "Sunucular"
+"steam_menu_friends" "Arkadaşlar ve Sohbet"
+"steam_menu_servers" "Oyun Sunucuları"
 "steam_menu_settings" "Ayarlar"
 "steam_menu_view_friends" "Arkadaş Listesi (%friends_online% Çevrimiçi)"
 "steam_menu_view_players" "Oyuncular"
@@ -3941,7 +3943,7 @@ Bu oyun için bir kategori ayarlamanız, o oyunu çabuk bulmanıza ve Kütüphan
 "Steam_Tooltip_Working" "Steam - çalışıyor"
 "Steam_Tooltip_Offline" "Steam - çevrimdışı"
 "Steam_Tooltip_Syncing" "Steam - eşitleme"
-"Steam_Tooltip_Downloading" "Steam - %s1/s hızında indiriyor"
+"Steam_Tooltip_Downloading" "Steam - %s1/sn hızında indiriyor"
 "Steam_Tooltip_VoiceActive" "Steam - sesli sohbette"
 "Steam_Tooltip_UnreadMessageS" "Steam - okunmayan mesajlar"
 
@@ -4384,11 +4386,6 @@ Bu oyun için bir kategori ayarlamanız, o oyunu çabuk bulmanıza ve Kütüphan
 "SteamUI_StreamLaunch_InstallDrivers"	"Yayın yapmak, ek olarak sürücü yüklemesi gerektirir.\n\nLütfen uzak bilgisayardaki Steam yönlendirmelerini takip edin."
 "SteamUI_StreamLaunch_StillDownloading" "%ClientName% istemcisinde güncelleme devam ediyor. %game% oyunu, indirme tamamlanınca yayın için hazır olacaktır."
 "SteamUI_StreamLaunch_TransportUnavailable"	"Ev dışı yayın şu an için mevcut değil. Daha sonra tekrar deneyin."
-
-"Steam_InstallAudioCaptureDriver_Title"	"Ses Sürücüsü Güncellemesi"
-"Steam_InstallAudioCaptureDriver_Text"	"Steam, sistem yeniden başlatması gerektirebilen bir ses güncellemesine ihtiyaç duyuyor.\n\n\"Yükle\" tuşuna basarak devam edin."
-"Steam_InstallGamepadInputDriver_Title"	"Oyun Kumandası Güncellemesi"
-"Steam_InstallGamepadInputDriver_Text"	"Steam, sistem yeniden başlatması gerektirebilen bir oyun kumandası güncellemesine ihtiyaç duyuyor.\n\n\"Yükle\" tuşuna basarak devam edin."
 
 "Steam_OtherSessionPlaying_Title" "Hata - Steam"
 "Steam_OtherSessionPlaying_Text" "Halihazırda başka bir bilgisayarda giriş yaptınız ve \"%existing_app%\" oyununu oynuyorsunuz.\n\"%launching_app%\" oyununu burada başlatmak, diğer oturumun Steam ile olan bağlantısını kesecektir."
@@ -4855,7 +4852,7 @@ Bu oyun için bir kategori ayarlamanız, o oyunu çabuk bulmanıza ve Kütüphan
 "Steam_DualSense_FirmwareUpdate_DisableNotification"	"Bunu tekrar gösterme"
 
 "RescueDialog_Title" "Steamwebhelper yanıt vermiyor"
-"RescueDialog_Explanation" "Steam'in önemli bir bileşeni olan steamwebhelper.exe yanıt vermiyor. Bu nedenle Steam arayüzü kullanılamıyor. Ayrıntılı bilgi için <a href=\"about:blank\">buraya</a> tıklayın."
+"RescueDialog_Explanation" "Steam'in önemli bir bileşeni olan steamwebhelper.exe yanıt vermiyor. Bu nedenle Steam arayüzü kullanılamıyor. Ayrıntılı bilgi için <a href=steam://openurl_external/https://help.steampowered.com/faqs/view/6C3E-9504-CC20-AF49>buraya</a> tıklayın."
 "RescueDialog_RadioHeader" "Size yardımcı olalım:"
 "RescueDialog_RestartSteam" "Steam'i yeniden başlat"
 "RescueDialog_RestartSteam_NoGPU" "Steam'i GPU hızlandırmasını devre dışı bırakarak yeniden başlat"

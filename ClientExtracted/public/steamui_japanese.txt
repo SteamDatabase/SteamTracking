@@ -1735,6 +1735,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "steam_menu_help"	"ヘルプ"
 "steam_menu_library"	"ライブラリ"
 "steam_menu_hidden_games"	"非表示のゲーム"
+"steam_menu_soundtracks"	"サウンドトラック"
 "steam_menu_downloads"	"ダウンロード"
 "steam_menu_account"	"Steam"
 "steam_menu_window" "ウィンドウ"
@@ -1776,7 +1777,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 
 "steam_menu_minigameslist"	"ミニゲームリストに切り替える"
 "steam_menu_fullgameslist"	"全画面表示に切り替える"
-"steam_menu_backupgames"	"ゲームのバックアップと復元…"
+"steam_menu_backupgames"	"ゲームのバックアップを復元..."
 "steam_menu_changeuser"		"アカウントを変更..."
 "steam_menu_signout"		"サインアウト..."
 "steam_menu_support"		"Steamサポート"
@@ -2260,6 +2261,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_NoLongerOwnsGame_Title"	"Steam - %game%"
 "Steam_NoLongerOwnsGame_Info"		"このゲームを無料でプレイできる期間は終了しました。"
 
+"steam_menu_systemreport"		"システムレポート"
 "steam_menu_systeminfo"			"システム情報"
 "steam_systeminfo_title"			"Steam - システム情報"
 "steam_systeminfo_surveylink"	"自分のハードウェアを他のSteamユーザーと比較"
@@ -3925,8 +3927,8 @@ Betaが終了しました。Steamを再起動し、現在のバージョンに�
 "steam_editcontroller"	"コントローラ設定"
 "steam_menu_media" "メディア"
 "steam_menu_tools" "ツール"
-"steam_menu_friends" "フレンド"
-"steam_menu_servers" "サーバー"
+"steam_menu_friends" "フレンド＆チャット"
+"steam_menu_servers" "ゲームサーバー"
 "steam_menu_settings" "設定"
 "steam_menu_view_friends" "フレンドリストを表示 (オンラインのフレンド:%friends_online%人)"
 "steam_menu_view_players" "プレイヤー"
@@ -4382,11 +4384,6 @@ Betaが終了しました。Steamを再起動し、現在のバージョンに�
 "SteamUI_StreamLaunch_InstallDrivers"	"ストリーミングには追加のドライバインストールが必要です。\n\nリモートコンピューターでSteamプロンプトの指示に従ってください。"
 "SteamUI_StreamLaunch_StillDownloading" "アップデートが %ClientName% で進行中です。 ダウンロード完了時に%game% のストリーミングを始められます。"
 "SteamUI_StreamLaunch_TransportUnavailable"	"自宅外からのストリーミングは現在利用できません。後でもう一度お試しください。"
-
-"Steam_InstallAudioCaptureDriver_Title"	"オーディオドライバのアップデート"
-"Steam_InstallAudioCaptureDriver_Text"	"Steam のオーディオドライバをアップデートする必要があります。また、システム再起動を伴う場合もあります。\n\n\"インストール\"をクリックして続行してください。"
-"Steam_InstallGamepadInputDriver_Title"	"ゲームパッドドライバのアップデート"
-"Steam_InstallGamepadInputDriver_Text"	"Steam のゲームパッドドライバをアップデートする必要があります。また、システム再起動を伴う場合もあります。\n\n\"インストール\"をクリックして続行してください。"
 
 "Steam_OtherSessionPlaying_Title" "エラー - Steam"
 "Steam_OtherSessionPlaying_Text" "別のコンピューターで「%existing_app%」をプレイ中です。\nここで「%launching_app%」を起動すると、Steamからもう一方のセッションが切断されます。"
@@ -4853,7 +4850,7 @@ Betaが終了しました。Steamを再起動し、現在のバージョンに�
 "Steam_DualSense_FirmwareUpdate_DisableNotification"	"次から表示しない"
 
 "RescueDialog_Title" "Steamwebhelperが応答していません"
-"RescueDialog_Explanation" "Steamの重要なコンポーネントであるsteamwebhelper.exeが応答していません。Steam UIが使用できません。詳細は、<a href=\"about:blank\">こちら</a>をクリックしてくだい。"
+"RescueDialog_Explanation" "Steamの重要なコンポーネントであるsteamwebhelper.exeが応答していません。Steam UIが使用できません。詳細は、<a href=steam://openurl_external/https://help.steampowered.com/ja/faqs/view/6C3E-9504-CC20-AF49>こちら</a>をクリックしてくだい。"
 "RescueDialog_RadioHeader" "トラブルシューティング："
 "RescueDialog_RestartSteam" "Steamを再起動"
 "RescueDialog_RestartSteam_NoGPU" "GPUアクセラレーションを無効にしてSteamを再起動"

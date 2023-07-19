@@ -783,7 +783,7 @@
         },
         {
             "name": "NotifyGameOverlayStateChanged",
-            "argc": "4"
+            "argc": "5"
         },
         {
             "name": "NotifyGameServerChangeRequested",

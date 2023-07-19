@@ -227,7 +227,6 @@
  NSFilenamesPboardType
  NSLog
  NSMouseInRect
- NSPasteboardTypeString
  NSPointInRect
  NSRectFill
  NSSearchPathForDirectoriesInDomains
@@ -320,6 +319,7 @@
  T SDL_CaptureMouse
  T SDL_CleanupTLS
  T SDL_ClearAudioStream
+ T SDL_ClearClipboardData
  T SDL_ClearComposition
  T SDL_ClearError
  T SDL_ClearHints
@@ -442,7 +442,6 @@
  T SDL_GetCPUCount
  T SDL_GetClipboardData
  T SDL_GetClipboardText
- T SDL_GetClipboardUserdata
  T SDL_GetClosestFullscreenDisplayMode
  T SDL_GetCurrentAudioDriver
  T SDL_GetCurrentDisplayMode
@@ -478,6 +477,7 @@
  T SDL_GetGamepadFromInstanceID
  T SDL_GetGamepadFromPlayerIndex
  T SDL_GetGamepadInstanceGUID
+ T SDL_GetGamepadInstanceID
  T SDL_GetGamepadInstanceMapping
  T SDL_GetGamepadInstanceName
  T SDL_GetGamepadInstancePath
@@ -493,6 +493,7 @@
  T SDL_GetGamepadName
  T SDL_GetGamepadPath
  T SDL_GetGamepadPlayerIndex
+ T SDL_GetGamepadPowerLevel
  T SDL_GetGamepadProduct
  T SDL_GetGamepadProductVersion
  T SDL_GetGamepadSensorData
@@ -731,6 +732,7 @@
  T SDL_JoystickHasRumble
  T SDL_JoystickHasRumbleTriggers
  T SDL_JoystickIsHaptic
+ T SDL_LoadBMP
  T SDL_LoadBMP_RW
  T SDL_LoadFile
  T SDL_LoadFile_RW
@@ -846,6 +848,7 @@
  T SDL_RumbleJoystickTriggers
  T SDL_RunApp
  T SDL_SIMDGetAlignment
+ T SDL_SaveBMP
  T SDL_SaveBMP_RW
  T SDL_ScreenKeyboardShown
  T SDL_ScreenSaverEnabled
@@ -1097,7 +1100,7 @@
  T SDL_strrev
  T SDL_strstr
  T SDL_strtod
- T SDL_strtokr
+ T SDL_strtok_r
  T SDL_strtol
  T SDL_strtoll
  T SDL_strtoul

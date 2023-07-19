@@ -62,8 +62,6 @@ __bss
 __DATA
 __common
 __DATA
-VD
-xD
 H
 __LINKEDIT
 D
@@ -72,8 +70,8 @@ D
 @loader_path/gameoverlayui.dylib
 "
 D
-x;D
-0lD
+07D
+plD
 P
 k
 l
@@ -123,9 +121,12 @@ h
 8
 /usr/lib/libobjc.A.dylib
 &
-8|D
+x|D
 )
+`EE
 C
+NSt3__117bad_function_callE
+14CParentalCache
 23IClientParentalSettings
 N14CParentalCache35CCallback_OnParentalLockChangeBeginE
 9CCallbackI14CParentalCache25ParentalLockChangeBegin_tLb0EE
@@ -426,7 +427,6 @@ N4vgui16EasyNotificationE
 16CIngameFPSBanner
 41COverlayAsyncNotificationsRequestedDialog
 17CLambdaCallResultI17DurationControl_tE
-NSt3__117bad_function_callE
 17CPanelHideWrapperI24COverlay_Details_FriendsE
 N17CPanelHideWrapperI24COverlay_Details_FriendsE31CCallback_OnParentalLockChangedE
 9CCallbackI17CPanelHideWrapperI24COverlay_Details_FriendsE21ParentalLockChanged_tLb0EE
@@ -7521,6 +7521,8 @@ P
 30CMsgSetForceDeviceScaleFactors
 13CMsgSetUIMode
 16CMsgPopupCreated
+27CMsgSetVRKeyboardVisibility
+NSt3__121__basic_string_commonILb1EEE
 N6google8protobuf8internal16InternalMetadata9ContainerINS0_15UnknownFieldSetEEE
 N6google8protobuf8internal16InternalMetadata13ContainerBaseE
 N4vgui19AnimatingImagePanelE
@@ -7888,7 +7890,6 @@ N4vgui4HTMLE
 7IHTMLJS
 N4vgui4HTML12CHTMLFindBarE
 22CFrameEventPerfTracker
-NSt3__121__basic_string_commonILb1EEE
 10CUtlVectorIN4vgui4HTML18CustomURLHandler_tE10CUtlMemoryIS2_EE
 10CUtlVectorI9CSmartPtrI15CJSCallbackFuncE10CUtlMemoryIS2_EE
 16CHTMLProtoBufMsgI13CMsgScreenDPIE
@@ -8779,6 +8780,8 @@ Set the community URL
 Set the store URL
 -help
 Set the help/support URL
+-devsites
+Use local dev websites
 http://
 https://
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/urlhelper.cpp
@@ -9898,8 +9901,8 @@ developer
 Steam pid that launched us
 VGUI_Application_001
 OK
-Jul 10 2023
-16:58:57
+Jul 18 2023
+16:50:37
 crashhandler004
 gameoverlayui
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/overlay/gameoverlayui/main.cpp
@@ -11119,8 +11122,6 @@ CHECK failed: !fields_.empty():
 CHECK failed: (TYPE_LENGTH_DELIMITED) == (type()):
 ./google/protobuf/message_lite.h
 CHECK failed: (size) <= (static_cast<size_t>(2147483647)):
-CHECK failed: *ptr:
-CHECK failed: (overrun) <= (kSlopBytes):
 Can't happen
 google/protobuf/wire_format.cc
 CHECK failed: descriptor:
@@ -13231,6 +13232,7 @@ ConVar
 m_configOverride
 m_pVecUlValue
 m_pVecStringValue
+m_strConvertedDefaultValue
 m_vecCallbacks
 ConCommand '%s' not currently supported in config file
 ,
@@ -13796,29 +13798,30 @@ Dec
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 0
-9C
+BC
 .
 p
 0
 0
+C
+C
+C
+C
 p
 0
-%
-y%
-g&
-$
-$
-W-
+[.
+MB
+&
+7&
+B
+B
 &
 &
 &
 &
 &
-&
-&
-&
-1&
-&
+!
+!
 !
 j
 j
@@ -13829,32 +13832,27 @@ j
 j
 j
 j
-v%
 Ic
+B
+B
+B
+%$
 0
-p$
-@%
-+%
+u%
+0%
 p
 0
-@%
-K$
+E%
+P$
 j
 j
 j
 j
 j
 j
-1$
-%
-%
-,A
+6$
 j
 j
-,
-%
-%
-%
 %
 %
 %
@@ -13926,22 +13924,18 @@ j
 j
 j
 j
-1@
 j
 j
 j
 j
 j
-$
+#
+#
+\$
 0
++
 A9]
-$
-$
-$
-$
-$
-$
-$
+r#
 O
 d
 j
@@ -13956,6 +13950,8 @@ j
 j
 j
 j
+"
+"
 
 
 
@@ -13964,6 +13960,8 @@ j
 @
 
 0
+#
+s#
 p
 0
 p
@@ -13984,27 +13982,18 @@ p
 0
 p
 p
-*
 p
-)1
 @
-!
-L#
-I"
 Mce
 #
+0"
 
-&
 &
 #
-W)
 "
 "
-!
-!
 0
 0
-(>
 j
 j
 j
@@ -14033,29 +14022,31 @@ j
 j
 j
 j
-k"
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+)
+f"
+\"
+w!
+8"
 "
-"
-d"
-2
-2
 Hi
+S!
 "
 "
 "
-"
-"
-"
-"
-D
-1
++>
 !
-e1
-
-j
-j
-j
-'=
+!
+!
 j
 j
 j
@@ -14066,10 +14057,13 @@ j
 j
 j
 j
+j
+j
+j
+!
 0
 p
 0
-K!
 #
 j
 j
@@ -14091,7 +14085,7 @@ j
 j
 j
 j
-2
+!
 j
 j
 j
@@ -14111,8 +14105,9 @@ AT=
 D
 @
 @
-$<
-Z
+}
+a
+I
 @
 Hc
 Hc
@@ -14148,9 +14143,11 @@ V
 =
 =
 !
+-
 @
-z
 &
+,
+,
 @
 M9e
 @
@@ -14344,34 +14341,41 @@ P
 @
 |
 |
+c"
 @
 @
-E!
-Y
-I
+"
+"
+"
+!
+!
+
 d
-fD9%jy(
-fD9-Ct(
-fD9-/s(
-d
+z(
+fD9%M}(
+fD9-6w(
 
 
 
+/
 A+M
-G
-t7f9z)(
-C'
+
+
+
+t7f975(
+e'
 j
 j
 j
 j
-u'
 j
 j
-\'
+X'
+O'
 =
 0
-l
+~
+z
 j
 j
 j
@@ -14383,6 +14387,7 @@ j
 j
 j
 j
+5
 
 
 
@@ -14400,11 +14405,12 @@ j
 j
 j
 j
+]&
 j
 j
 j
 
-1&
+P&
 d
 &
 &
@@ -14415,8 +14421,7 @@ A+4$A+u
 =
 =
 @
-
-
+D
 j
 j
 j
@@ -14468,6 +14473,7 @@ j
 
 
 
+4#
 j
 j
 j
@@ -14536,10 +14542,10 @@ j
 j
 j
 j
-<!
 j
 j
 j
+.!
 j
 j
 j
@@ -14553,9 +14559,6 @@ j
 j
 j
 j
-!
-!
-!
 @
 @
 &
@@ -14622,6 +14625,7 @@ j
 j
 .
 d
+%
 =
 
 =

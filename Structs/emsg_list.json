@@ -2736,6 +2736,12 @@
         "name": "k_EMsgClientEnableOrDisableDownloadsResponse"
     },
     {
+        "emsg": 9808,
+        "flags": 2,
+        "server_type": -1,
+        "name": "k_EMsgClientFeatureGroupInfo"
+    },
+    {
         "emsg": 9900,
         "flags": 2,
         "server_type": -1,

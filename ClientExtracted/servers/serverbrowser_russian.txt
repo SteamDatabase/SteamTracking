@@ -70,7 +70,7 @@
 "ServerBrowser_HistoryTab"			"История"
 "ServerBrowser_GameInfoTitle"			"Игровая сессия"
 "ServerBrowser_AddToFavorites"			"Добавить в избранное"
-"ServerBrowser_GameInfoWithNameTitle"		"Игровая сессия — %game%"
+"ServerBrowser_GameInfoWithNameTitle"		"Игровая сессия — «%game%»"
 "ServerBrowser_PressJoinToConnect"		"Чтобы подключиться к серверу, нажмите \"Присоединиться к игре\"."
 "ServerBrowser_JoinWhenSlotIsFree"		"Вы подключитесь к серверу, как только освободится место."
 "ServerBrowser_AlertWhenSlotIsFree"		"Вы получите уведомление, когда на сервере освободится место."

@@ -76,7 +76,7 @@
 "ServerBrowser_AlertWhenSlotIsFree"		"Θα ειδοποιηθείτε μόλις μια θέση παίκτη γίνει διαθέσιμη."
 "ServerBrowser_CouldNotConnectServerFull"	"Αδυναμία σύνδεσης - ο διακομιστής είναι γεμάτος."
 "ServerBrowser_ServerNotResponding"		"Ο διακομιστής δεν ανταποκρίνεται."
-"ServerBrowser_RefreshingPercentDone"		"Ανανέωση λίστας διακομιστών... %s1 % ολοκληρώθηκε"
+"ServerBrowser_RefreshingPercentDone"		"Ανανέωση λίστας διακομιστών… %s1 % ολοκληρωμένη"
 "ServerBrowser_ServersResponding"		"Διακομιστές παιχνιδιού ανταποκρίνονται από %s1"
 "ServerBrowser_ServersRespondingLocal"	"Διακομιστές παιχνιδιού αποκρίνονται από τοπικό μηχάνημα"
 "ServerBrowser_RefreshingServerList"		"Ανανέωση λίστας διακομιστών..."

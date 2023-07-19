@@ -16,9 +16,9 @@ __objc_methname
 __TEXT
 __unwind_info
 __TEXT
-tE,
-Dq
-tE,
+lF,
+Lq
+lF,
 __DATA
 __nl_symbol_ptr
 __DATA
@@ -94,7 +94,6 @@ Hc5MX/
 0
 
 
-`%
 
 
 Hi
@@ -104,9 +103,6 @@ H=
 %
 %
 %
-%
-$
-]
 Hc
 Hc
 Hc
@@ -120,6 +116,8 @@ AT=
 D
 @
 @
+G#
+(
 (
 (
 (
@@ -157,8 +155,10 @@ IcE
 IcE
 @
 @
-q'
 ]
+d'
+V'
+;'
 '
 '
 '
@@ -166,15 +166,10 @@ q'
 "
 V
 H;5ri)
+r!
 =
-(&
-!
-!
-!
-!
-!
-!
 =
+_%
 10CIPCServer
 10IIPCServer
 11CPipeWaiter
@@ -7299,6 +7294,7 @@ ringbuf->len > 0
 hd_ringbuf_get
 idx < ringbuf->len
 /index.html
+200
 204
 206
 304
@@ -8574,6 +8570,7 @@ ConVar
 m_configOverride
 m_pVecUlValue
 m_pVecStringValue
+m_strConvertedDefaultValue
 m_vecCallbacks
 FCVAR_NEVER_AS_STRING
 m_p
@@ -8782,8 +8779,8 @@ steamwebhelper
 Steam Helper
 cefwebhelper
 1.0
-Jul 10 2023
-16:56:32
+Jul 18 2023
+16:48:09
 Jan
 Feb
 Mar
@@ -8824,6 +8821,8 @@ Thread(0x%p/0x%p/0x%x)
 Tried to create a thread that has already been created!
 Failed to create thread (error 0x%x)
 Thread failed to initialize
+Mismatched thread handle during thread Start()
+Invalid thread id during thread Start()
 Thread cannot be joined with self
 Probably deadlock or failure waiting for thread to initialize.
 CTSListBase: Misaligned list
@@ -9103,8 +9102,9 @@ nPollRetVal > 0
 m_vecIPFilterRanges
 m_vecIPFilterRangesV6
 @nJobInteryieldMillisecondsAlertThreshold
-200
+120
 @nJobInteryieldMillisecondsLogThreshold
+80
 @nJobNetSendsInsaneThreshold
 15000
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/job.cpp
@@ -9211,8 +9211,16 @@ Comma separated list of metrics catalogs to disable.  This is the last check.
 When we send a message expecting a reply from a job with a deadline, set the timeout on the message to [current time remaining in this job] - N ms.  A negative value prevents propagating caller deadlines down the chain
 @bLogMessageToProtobufClass
 We we first discover the protobuf class used for a particular EMsg, log it
-@bEnableProtobufArenaAllocation
-Kill switch for arena allocation globally
+@nProtobufArenaNumberOfJobsToShare
+128
+Number of Jobs to give a single protobuf Arena before we create a new one
+@nProtobufArenaNumberOfHeadersToShare
+@nProtobufArenaInitialBlockSize
+65536
+Default initial allocation size for PB arena
+@nProtobufArenaMaxBlockSize
+524288
+Max block allocation size for PB arena
 @bCheckMsgProtobufOnJobStackForArenaAlloc
 Should we only use the arena allocator if the protobuf is on the job stack
 @nSpewThrottlePeriodMs
@@ -9232,11 +9240,6 @@ m_pMemoryPoolRecord
 4000
 @cNetEncryptionHandshakeWorkMax_HighPri
 8000
-@bFreeCNetPacketOnThread
-Should we move freeing netpackets to a threaded workitem
-@nFreeCNetPacketOnThreadMaxBatch
-2048
-How many max packets to free per-workitem
 EINTR
 ABADF
 EACCES
@@ -9391,7 +9394,6 @@ Hc5MX/
 0
 
 
-`%
 
 
 Hi
@@ -9401,9 +9403,6 @@ H=
 %
 %
 %
-%
-$
-]
 Hc
 Hc
 Hc
@@ -9417,6 +9416,8 @@ AT=
 D
 @
 @
+G#
+(
 (
 (
 (
@@ -9454,8 +9455,10 @@ IcE
 IcE
 @
 @
-q'
 ]
+d'
+V'
+;'
 '
 '
 '
@@ -9463,16 +9466,13 @@ q'
 "
 V
 H;5ri)
+r!
 =
-(&
-!
-!
-!
-!
-!
-!
 =
-"
+_%
+%
+%
+%
 %
 %
 %
@@ -9482,12 +9482,10 @@ $
 @
 @
 &
-+"
+"
 "
 N$
 !
-8
-B
 @
 M9e
 @
@@ -9887,8 +9885,9 @@ SHA1 block transform for x86_64, CRYPTOGAMS by <appro@openssl.org>
 0
 @
 @
-8
+R
 @
+
 
 d
 @
@@ -9955,8 +9954,6 @@ H=
 
 
 
-
-
 &
 @
 @
@@ -9966,11 +9963,13 @@ H=
 Hi
 E
 0
+0
 
 
 Hc
 Hc
 Hc
+
 0
 @
 @
@@ -9982,7 +9981,7 @@ Hc
 @
 @
 @
-0
+Z
 Hi
 1
 #

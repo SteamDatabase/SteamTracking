@@ -432,7 +432,7 @@
 	"CreateAccount_Credentials_Validation_Title"					"Ověřování"
 	"CreateAccount_Credentials_AccountNameValidation_Description"	"Ověřujeme, zda je Váš název účtu dostupný a splňuje všechny požadavky."
 
-	"CreateAccount_Credentials_AgeLimitNext" "JSEM STARŠÍ 13 LET"
+	"CreateAccount_Credentials_AgeLimitNext" "JE MI 13 NEBO VÍCE LET"
 	"CreateAccount_Credentials_AccountName" "Název účtu"
 	"CreateAccount_Credentials_Password" "Heslo"
 	"CreateAccount_Credentials_PasswordAgain" "Heslo (znovu)"
@@ -4193,12 +4193,6 @@
 	"SteamUI_StreamLaunch_Failed"		"Spuštění streamování se nezdařilo."
 	"SteamUI_StreamLaunch_InstallDrivers"	"Pro streamování je vyžadována instalace dodatečného ovladače.\nNa vzdáleném počítači postupujte dle pokynů na obrazovce."
 	"SteamUI_StreamLaunch_TransportUnavailable"	"Momentálně nelze streamovat hry mimo místní síť. Zkuste to později znovu."
-
-	"Steam_InstallAudioCaptureDriver_Title"	"Aktualizace ovladače zvuku"
-	"Steam_InstallAudioCaptureDriver_Text"	"Klient služby Steam vyžaduje aktualizaci ovladače zvuku. Aktualizace může zahrnovat restartování zařízení."
-	"Steam_InstallGamepadInputDriver_Title"	"Aktualizace ovladače gamepadu"
-	"Steam_InstallGamepadInputDriver_Text"	"Klient služby Steam vyžaduje aktualizaci ovladače gamepadu. Aktualizace může zahrnovat restartování zařízení."
-	"Steam_InstallGamepadInputDriver_RestartText"	"Po nainstalování ovladače gamepadu budete muset restartovat klienta služby Steam."
 
 	"SteamUI_RemoteDeviceAuthorization_Title"		"Autorizovat zařízení"
 	"SteamUI_RemoteDeviceAuthorization_Text"		"Chcete-li umožnit zařízení {s:devicename} připojení a hraní her, zadejte autorizační kód."

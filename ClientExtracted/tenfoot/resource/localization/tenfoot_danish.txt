@@ -4194,12 +4194,6 @@
 	"SteamUI_StreamLaunch_InstallDrivers"	"Streaming kræver installation af en ekstra driver.\n\nFølg Steam-instruktionerne på fjerncomputeren."
 	"SteamUI_StreamLaunch_TransportUnavailable"	"Streaming uden for hjemmet er ikke muligt i øjeblikket. Prøv igen senere."
 
-	"Steam_InstallAudioCaptureDriver_Title"	"Lyddriveropdatering"
-	"Steam_InstallAudioCaptureDriver_Text"	"Steam skal opdatere sin lyddriver, hvilket kan kræve en genstart af systemet."
-	"Steam_InstallGamepadInputDriver_Title"	"Gamepad-driveropdatering"
-	"Steam_InstallGamepadInputDriver_Text"	"Steam skal opdatere sin gamepad-driver, hvilket kan kræve en genstart af systemet."
-	"Steam_InstallGamepadInputDriver_RestartText"	"Du skal genstarte Steam efter at have installeret gamepad-driveren."
-
 	"SteamUI_RemoteDeviceAuthorization_Title"		"Godkend enhed"
 	"SteamUI_RemoteDeviceAuthorization_Text"		"Indtast venligst godkendelseskoden for at tillade {s:devicename} at tilslutte og spille spil."
 

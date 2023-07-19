@@ -4196,12 +4196,6 @@
 	"SteamUI_StreamLaunch_InstallDrivers"	"การสตรีมจำเป็นต้องมีการติดตั้งไดรเวอร์เพิ่มเติม \n\nกรุณาปฏิบัติตามหน้าต่างแจ้งจาก Steam บนคอมพิวเตอร์ระยะไกล"
 	"SteamUI_StreamLaunch_TransportUnavailable"	"การสตรีมภายนอกบ้านยังไม่พร้อมใช้งานในขณะนี้ ลองใหม่อีกครั้งภายหลัง"
 
-	"Steam_InstallAudioCaptureDriver_Title"	"อัปเดตไดรเวอร์เสียง"
-	"Steam_InstallAudioCaptureDriver_Text"	"Steam จำเป็นต้องอัปเดตไดรเวอร์เสียง ซึ่งอาจจำเป็นต้องรีบูตระบบ"
-	"Steam_InstallGamepadInputDriver_Title"	"อัปเดตไดรเวอร์เกมแพด"
-	"Steam_InstallGamepadInputDriver_Text"	"Steam จำเป็นต้องอัปเดตไดรเวอร์เกมแพด ซึ่งอาจจำเป็นต้องรีบูตระบบ"
-	"Steam_InstallGamepadInputDriver_RestartText"	"คุณจำเป็นต้องรีสตาร์ท Steam หลังจากการติดตั้งไดรเวอร์เกมแพด"
-
 	"SteamUI_RemoteDeviceAuthorization_Title"		"อนุญาตสิทธิ์ให้อุปกรณ์"
 	"SteamUI_RemoteDeviceAuthorization_Text"		"กรุณากรอกรหัสอนุญาตสิทธิ์เพื่ออนุญาตให้ {s:devicename} เชื่อมต่อและเล่นเกมได้"
 

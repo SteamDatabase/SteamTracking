@@ -109,7 +109,7 @@
 "ServerBrowser_Secure"				"Защитен"
 "ServerBrowser_IPAddress"			"IP адрес"
 "ServerBrowser_SecureColumn_Tooltip"		"Сървърът е защитен с Valve Anti-Cheat технологията"
-"ServerBrowser_AntiCheat"			"Anti-cheat"
+"ServerBrowser_AntiCheat"			"Противодействане на измами"
 "ServerBrowser_SecureOnly"			"Защитен"
 "ServerBrowser_InsecureOnly"			"Незащитен"
 "ServerBrowser_FilterDescSecureOnly"		"защитен"

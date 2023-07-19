@@ -10,6 +10,10 @@
             "argc": "1"
         },
         {
+            "name": "GetUserBaseFolderPersistentStorage",
+            "argc": "1"
+        },
+        {
             "name": "GetManagedContentRoot",
             "argc": "1"
         },
@@ -211,11 +215,11 @@
         },
         {
             "name": "GetGameOverlayUIInstanceFocusGameID",
-            "argc": "3"
+            "argc": "4"
         },
         {
             "name": "GetFocusedGameWindow",
-            "argc": "3"
+            "argc": "4"
         },
         {
             "name": "SetControllerConfigFileForAppID",

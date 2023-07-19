@@ -4194,12 +4194,6 @@
 	"SteamUI_StreamLaunch_InstallDrivers"	"流式传输需要安装额外的驱动程序。\n\n请按照远程计算机上的 Steam 提示进行操作。"
 	"SteamUI_StreamLaunch_TransportUnavailable"	"目前无法在家庭环境外进行流式传输。请稍后再试。"
 
-	"Steam_InstallAudioCaptureDriver_Title"	"音频驱动程序更新"
-	"Steam_InstallAudioCaptureDriver_Text"	"Steam 需要更新音频驱动程序，这可能会需要系统重启。"
-	"Steam_InstallGamepadInputDriver_Title"	"手柄驱动更新"
-	"Steam_InstallGamepadInputDriver_Text"	"Steam 需要更新手柄驱动程序，这可能会需要系统重启。"
-	"Steam_InstallGamepadInputDriver_RestartText"	"在安装手柄驱动程序后您需要重启 Steam。"
-
 	"SteamUI_RemoteDeviceAuthorization_Title"		"授权设备"
 	"SteamUI_RemoteDeviceAuthorization_Text"		"请输入授权代码以允许 {s:devicename} 连接并运行游戏。"
 

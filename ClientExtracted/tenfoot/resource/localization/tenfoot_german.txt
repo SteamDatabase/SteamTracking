@@ -4197,12 +4197,6 @@ Mit dem mausähnlichen Analogstick können Sie mit dem Gamepad spielen und dabei
 	"SteamUI_StreamLaunch_InstallDrivers"	"Streaming setzt die Installation eines weiteren Treibers voraus.\n\nBitte folgen Sie den Anweisungen auf dem Streamingserver."
 	"SteamUI_StreamLaunch_TransportUnavailable"	"Streaming außerhalb Ihres Zuhauses ist derzeit nicht verfügbar. Versuchen Sie es später erneut."
 
-	"Steam_InstallAudioCaptureDriver_Title"	"Audiotreiber-Update"
-	"Steam_InstallAudioCaptureDriver_Text"	"Steam benötigt ein Update seines Audiotreibers, in dessen Folge ein Systemneustart erforderlich sein könnte."
-	"Steam_InstallGamepadInputDriver_Title"	"Gamepadtreiber-Update"
-	"Steam_InstallGamepadInputDriver_Text"	"Steam benötigt ein Update seines Gamepadtreibers, in dessen Folge ein Systemneustart erforderlich sein könnte."
-	"Steam_InstallGamepadInputDriver_RestartText"	"Sie werden Steam nach der Installation des Gamepadtreibers neu starten müssen."
-
 	"SteamUI_RemoteDeviceAuthorization_Title"		"Gerät autorisieren"
 	"SteamUI_RemoteDeviceAuthorization_Text"		"Bitte geben Sie den Autorisierungscode ein, um {s:devicename} zu erlauben, sich zu verbinden und Spiele zu spielen."
 

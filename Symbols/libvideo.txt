@@ -387,6 +387,7 @@
  T CreateInterface
  T CreateRTMPStream
  T CreateVideoPlayer
+ T CreateVideoRecordingSegmentWriter
  T CumulativeSumToAverageRow_C
  T CumulativeSumToAverageRow_SSE2
  T DES_SPtrans
@@ -402,6 +403,7 @@
  T DeleteVideoDecoder
  T DeleteVideoEncoder
  T DeleteVideoPlayer
+ T DeleteVideoRecordingSegmentWriter
  T DivideRow_16_AVX2
  T DivideRow_16_Any_AVX2
  T DivideRow_16_C
@@ -1487,6 +1489,8 @@
  atexit
  atoi
  atoll
+ av_dict_free
+ av_dict_set
  av_find_best_stream
  av_frame_alloc
  av_frame_free
@@ -1498,8 +1502,10 @@
  av_get_packed_sample_fmt
  av_gettime
  av_init_packet
+ av_interleaved_write_frame
  av_log_set_callback
  av_malloc_tracked
+ av_mallocz_tracked
  av_new_packet
  av_opt_set_int
  av_packet_unref
@@ -1510,7 +1516,9 @@
  av_sample_fmt_is_planar
  av_samples_get_buffer_size
  av_seek_frame
+ av_strdup
  av_write_frame
+ av_write_trailer
  avcodec_alloc_context3
  avcodec_close
  avcodec_decode_audio4
@@ -1533,6 +1541,7 @@
  avformat_write_header
  avio_alloc_context
  avio_close
+ avio_closep
  avio_open2
  avresample_alloc_context
  avresample_close

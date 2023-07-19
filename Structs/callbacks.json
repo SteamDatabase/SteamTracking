@@ -97,7 +97,7 @@
     {
         "id": 331,
         "name": "22GameOverlayActivated_t",
-        "size": 8
+        "size": 12
     },
     {
         "id": 333,
@@ -1147,7 +1147,7 @@
     {
         "id": 1040013,
         "name": "Unknown",
-        "size": 4248
+        "size": 4252
     },
     {
         "id": 1040015,
@@ -1858,6 +1858,31 @@
         "id": 1270031,
         "name": "Unknown",
         "size": 264
+    },
+    {
+        "id": 1270032,
+        "name": "AddTimelineHighlightMarker_t",
+        "size": 300
+    },
+    {
+        "id": 1270033,
+        "name": "AddTimelineTimestamp_t",
+        "size": 136
+    },
+    {
+        "id": 1270034,
+        "name": "Unknown",
+        "size": 201
+    },
+    {
+        "id": 1270035,
+        "name": "AddTimelineRangeEnd_t",
+        "size": 73
+    },
+    {
+        "id": 1270036,
+        "name": "SetTimelineGameMode_t",
+        "size": 12
     },
     {
         "id": 1280001,

@@ -4196,12 +4196,6 @@
 	"SteamUI_StreamLaunch_InstallDrivers"	"ストリーミングには追加のドライバをインストールしてください。\n\nリモートコンピューターでSteamプロンプトの指示に従ってください。"
 	"SteamUI_StreamLaunch_TransportUnavailable"	"自宅外からのストリーミングは現在利用できません。後でもう一度お試しください。"
 
-	"Steam_InstallAudioCaptureDriver_Title"	"オーディオドライバのアップデート"
-	"Steam_InstallAudioCaptureDriver_Text"	"Steam のオーディオドライバをアップデートする必要があり、システム再起動を伴う場合があります。"
-	"Steam_InstallGamepadInputDriver_Title"	"ゲームパッドドライバのアップデート"
-	"Steam_InstallGamepadInputDriver_Text"	"Steam のゲームパッドドライバをアップデートする必要があります。また、システム再起動を伴う場合もあります。"
-	"Steam_InstallGamepadInputDriver_RestartText"	"ゲームパッドドライバのインストール後に Steam を再起動する必要があります。"
-
 	"SteamUI_RemoteDeviceAuthorization_Title"		"デバイスを承認"
 	"SteamUI_RemoteDeviceAuthorization_Text"		"{s:devicename} の接続を許可してゲームをプレイするには、認証コードを入力してください。"
 

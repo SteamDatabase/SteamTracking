@@ -168,6 +168,10 @@
 				"LEFTSTICK_RIGHT"		"#Action_Right"
 				"LBACK"		"#Action_Shift"
 				"RBACK"		"#Action_Alt"
+				"LeftTrackpad"			"#Action_LeftTrackpad"
+				"LeftTrackpadClick"		"#Action_LeftTrackpadClick"
+				"RightTrackpad"			"#Action_RightTrackpad"
+				"RightTrackpadClick"	"#Action_RightTrackpadClick"
 			}
 		}
 	}
@@ -911,11 +915,20 @@
 					{
 						"bindings"
 						{
-							"binding"		"game_action Keyboard LTRIGGER, Press Left Key"
+							"binding"		"game_action Keyboard LeftTrackpadClick"
 						}
-						"settings"
+					}
+				}
+			}
+			"touch"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
 						{
-							"haptic_intensity"		"2"
+							"binding"		"game_action Keyboard LeftTrackpad"
 						}
 					}
 				}
@@ -925,7 +938,7 @@
 		{
 			"virtual_mode"		"1"
 			"haptic_intensity"		"0"
-			"deadzone_outer_radius"		"32000"
+			"deadzone_outer_radius"		"28000"
 			"deadzone_shape"		"1"
 		}
 		"gameactions"
@@ -947,11 +960,20 @@
 					{
 						"bindings"
 						{
-							"binding"		"game_action Keyboard RTRIGGER, Press Right Key"
+							"binding"		"game_action Keyboard RightTrackpadClick"
 						}
-						"settings"
+					}
+				}
+			}
+			"touch"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
 						{
-							"haptic_intensity"		"2"
+							"binding"		"game_action Keyboard RightTrackpad"
 						}
 					}
 				}
@@ -961,7 +983,7 @@
 		{
 			"virtual_mode"		"1"
 			"haptic_intensity"		"0"
-			"deadzone_outer_radius"		"32000"
+			"deadzone_outer_radius"		"28000"
 		}
 		"gameactions"
 		{
@@ -2281,7 +2303,7 @@
 		{
 			"20"		"switch active"
 			"25"		"right_trackpad inactive"
-			"28"		"right_trackpad inactive"
+			"28"		"right_trackpad active"
 			"40"		"right_joystick inactive"
 			"41"		"right_joystick inactive"
 			"30"		"button_diamond inactive"
@@ -2292,7 +2314,7 @@
 			"43"		"joystick inactive"
 			"35"		"dpad active"
 			"26"		"left_trackpad inactive"
-			"27"		"left_trackpad inactive"
+			"27"		"left_trackpad active"
 		}
 	}
 	"preset"

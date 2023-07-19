@@ -225,7 +225,7 @@
 "Overlay_View_Guides" "Afficher tous les guides"
 "Overlay_Guides_Panel_NumGuides" "%num_guides% disponibles"
 
-"Overlay_CommunityHub_Panel_Title" "Hub communautaire"
+"Overlay_CommunityHub_Panel_Title" "Hub de la communauté"
 "Overlay_View_CommunityHub" "Voir le hub de la communauté"
 "Overlay_CommunityHub_Panel_NumContributions" "%num_contributions% contributions de la communauté"
 

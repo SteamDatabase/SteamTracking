@@ -47,7 +47,9 @@
   right: 0;
   opacity: 0;
   cursor: zoom-in;
-  transition: opacity 0.3s, transform 0.3s;
+  transition:
+    opacity 0.3s,
+    transform 0.3s;
 }
 .hover___MYy31,
 .loading___1pvNI,
@@ -562,7 +564,9 @@
   height: 8px;
   background-color: #ffd55f;
   border-radius: 50%;
-  box-shadow: 0 0 6px 1px #ffd55f, 0 0 16px 2px #ef806c;
+  box-shadow:
+    0 0 6px 1px #ffd55f,
+    0 0 16px 2px #ef806c;
   left: 5px;
   top: 18px;
 }
@@ -1278,7 +1282,8 @@
   left: 0;
   top: 0;
   opacity: 0;
-  transition: opacity 0.28s cubic-bezier(0.17, 0.45, 0.14, 0.83),
+  transition:
+    opacity 0.28s cubic-bezier(0.17, 0.45, 0.14, 0.83),
     transform 0.36s cubic-bezier(0.17, 0.45, 0.14, 0.83);
   z-index: 0;
 }
@@ -1886,7 +1891,9 @@
   border-left: 2px solid rgba(103, 112, 123, 0.2);
   margin-top: 6px;
   align-self: center;
-  transition: opacity 0.21s ease-in-out, transform 0.21s ease-in-out;
+  transition:
+    opacity 0.21s ease-in-out,
+    transform 0.21s ease-in-out;
 }
 .SteamDeckChats.gpfocuswithin .chatroom_ChatRoomGroupControlsSteamDeck_imObP {
   border-left: 2px solid rgba(103, 112, 123, 0);
@@ -1895,7 +1902,9 @@
   .chatroom_ChatRoomGroupControlsSteamDeck_imObP
   .ChatUnreadMessageIndicator
   .chatUnreadCircle {
-  box-shadow: 0 0 6px 1px #ffd55f, 0 0 16px 2px #ef806c;
+  box-shadow:
+    0 0 6px 1px #ffd55f,
+    0 0 16px 2px #ef806c;
   background-color: #ffd55f;
   color: #ffd55f;
   transform: translateX(-1px) scale(1);
@@ -2150,11 +2159,14 @@
   background-color: #946d00;
   color: #946d00;
   border-radius: 50%;
-  box-shadow: 0 0 6px 1px rgba(255, 213, 95, 0.5),
+  box-shadow:
+    0 0 6px 1px rgba(255, 213, 95, 0.5),
     0 0 16px 2px rgba(239, 128, 108, 0.5);
   left: 5px;
   top: 18px;
-  transition: background-color 0.12s ease-in-out, color 0.12s ease-in-out,
+  transition:
+    background-color 0.12s ease-in-out,
+    color 0.12s ease-in-out,
     transform 0.12s ease-in-out;
 }
 .DialogContent.GenericConfirmDialog.chatroom_GroupMemberListDialog_45AAE
@@ -2224,7 +2236,9 @@
   line-height: 14px;
 }
 .invitedrop_InviteDropMessage_2f19f {
-  text-shadow: 0px 1px 6px #000, 0px 2px 12px #000;
+  text-shadow:
+    0px 1px 6px #000,
+    0px 2px 12px #000;
   user-select: none;
   text-align: center;
   order: 5;
@@ -2248,7 +2262,9 @@
 .invitedrop_InviteDropName_3jmXx {
   font-size: 24px;
   text-align: center;
-  text-shadow: 0px 6px 6px #000, 0px 2px 12px #000;
+  text-shadow:
+    0px 6px 6px #000,
+    0px 2px 12px #000;
   z-index: 2;
   margin: 10px 0;
 }
@@ -2959,7 +2975,9 @@
   height: 8px;
   background-color: #ffd55f;
   border-radius: 50%;
-  box-shadow: 0 0 6px 1px #ffd55f, 0 0 16px 2px #ef806c;
+  box-shadow:
+    0 0 6px 1px #ffd55f,
+    0 0 16px 2px #ef806c;
   left: 5px;
   top: 18px;
 }
@@ -3675,7 +3693,8 @@
   left: 0;
   top: 0;
   opacity: 0;
-  transition: opacity 0.28s cubic-bezier(0.17, 0.45, 0.14, 0.83),
+  transition:
+    opacity 0.28s cubic-bezier(0.17, 0.45, 0.14, 0.83),
     transform 0.36s cubic-bezier(0.17, 0.45, 0.14, 0.83);
   z-index: 0;
 }
@@ -4876,7 +4895,9 @@
   height: 8px;
   background-color: #ffd55f;
   border-radius: 50%;
-  box-shadow: 0 0 6px 1px #ffd55f, 0 0 16px 2px #ef806c;
+  box-shadow:
+    0 0 6px 1px #ffd55f,
+    0 0 16px 2px #ef806c;
   left: 5px;
   top: 18px;
 }
@@ -5592,7 +5613,8 @@
   left: 0;
   top: 0;
   opacity: 0;
-  transition: opacity 0.28s cubic-bezier(0.17, 0.45, 0.14, 0.83),
+  transition:
+    opacity 0.28s cubic-bezier(0.17, 0.45, 0.14, 0.83),
     transform 0.36s cubic-bezier(0.17, 0.45, 0.14, 0.83);
   z-index: 0;
 }
@@ -6810,7 +6832,9 @@
   height: 8px;
   background-color: #ffd55f;
   border-radius: 50%;
-  box-shadow: 0 0 6px 1px #ffd55f, 0 0 16px 2px #ef806c;
+  box-shadow:
+    0 0 6px 1px #ffd55f,
+    0 0 16px 2px #ef806c;
   left: 5px;
   top: 18px;
 }
@@ -7526,7 +7550,8 @@
   left: 0;
   top: 0;
   opacity: 0;
-  transition: opacity 0.28s cubic-bezier(0.17, 0.45, 0.14, 0.83),
+  transition:
+    opacity 0.28s cubic-bezier(0.17, 0.45, 0.14, 0.83),
     transform 0.36s cubic-bezier(0.17, 0.45, 0.14, 0.83);
   z-index: 0;
 }
@@ -8603,7 +8628,9 @@
   height: 8px;
   background-color: #ffd55f;
   border-radius: 50%;
-  box-shadow: 0 0 6px 1px #ffd55f, 0 0 16px 2px #ef806c;
+  box-shadow:
+    0 0 6px 1px #ffd55f,
+    0 0 16px 2px #ef806c;
   left: 5px;
   top: 18px;
 }
@@ -9319,7 +9346,8 @@
   left: 0;
   top: 0;
   opacity: 0;
-  transition: opacity 0.28s cubic-bezier(0.17, 0.45, 0.14, 0.83),
+  transition:
+    opacity 0.28s cubic-bezier(0.17, 0.45, 0.14, 0.83),
     transform 0.36s cubic-bezier(0.17, 0.45, 0.14, 0.83);
   z-index: 0;
 }
@@ -11652,7 +11680,9 @@ svg.remoteplay_IconMobile_2371n {
   height: 8px;
   background-color: #ffd55f;
   border-radius: 50%;
-  box-shadow: 0 0 6px 1px #ffd55f, 0 0 16px 2px #ef806c;
+  box-shadow:
+    0 0 6px 1px #ffd55f,
+    0 0 16px 2px #ef806c;
   left: 5px;
   top: 18px;
 }
@@ -12368,7 +12398,8 @@ svg.remoteplay_IconMobile_2371n {
   left: 0;
   top: 0;
   opacity: 0;
-  transition: opacity 0.28s cubic-bezier(0.17, 0.45, 0.14, 0.83),
+  transition:
+    opacity 0.28s cubic-bezier(0.17, 0.45, 0.14, 0.83),
     transform 0.36s cubic-bezier(0.17, 0.45, 0.14, 0.83);
   z-index: 0;
 }
@@ -14733,7 +14764,10 @@ a.bbcode_ChatMessageTweet_Body_1RFo5 {
   margin-left: 32px;
   margin-top: 8px;
   color: #fff;
-  text-shadow: -1px -1px 2px #000, 1px -1px 2px #000, 1px 1px 2px #000,
+  text-shadow:
+    -1px -1px 2px #000,
+    1px -1px 2px #000,
+    1px 1px 2px #000,
     1px 1px 1px #000;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -14808,8 +14842,11 @@ a.bbcode_ChatMessageTweet_Body_1RFo5 {
   height: 16px;
 }
 .BBCodeCollapseControl .SVGIcon_Button {
-  transition: opacity 0.21s ease-in-out, transform 0.5s ease-in-out,
-    fill 0.21s ease-in-out, stroke 0.21s ease-in-out;
+  transition:
+    opacity 0.21s ease-in-out,
+    transform 0.5s ease-in-out,
+    fill 0.21s ease-in-out,
+    stroke 0.21s ease-in-out;
   transform-origin: 50% 50%;
 }
 .Minimized .BBCodeCollapseControl .SVGIcon_Button {
@@ -14833,14 +14870,18 @@ a.bbcode_ChatMessageTweet_Body_1RFo5 {
   top: 6px;
   border-radius: 50%;
   border: 2px solid #fff;
-  box-shadow: 0 0 0px 1px #000000aa, 0 0 0px 1px #000000aa inset;
+  box-shadow:
+    0 0 0px 1px #000000aa,
+    0 0 0px 1px #000000aa inset;
   cursor: pointer;
 }
 .BBCodeResizableComponent:hover .BBCodeRestoreControl:hover {
   opacity: 1;
 }
 .BBCodeRestoreControl:hover .restoreSize {
-  box-shadow: 0 0 0px 1px #000, 0 0 0px 1px #000 inset;
+  box-shadow:
+    0 0 0px 1px #000,
+    0 0 0px 1px #000 inset;
   opacity: 1;
 }
 .chatImageURL .SVGIcon_Button {
@@ -15049,7 +15090,10 @@ div:hover > .BBCodeCollapseControl {
   bottom: 16px;
   text-align: center;
   text-transform: uppercase;
-  text-shadow: 1px 1px 2px #000, 1px 1px 12px #000, 1px 1px 6px #000;
+  text-shadow:
+    1px 1px 2px #000,
+    1px 1px 12px #000,
+    1px 1px 6px #000;
   color: #efefef;
   pointer-events: none;
 }
@@ -15449,7 +15493,9 @@ div:hover > .BBCodeCollapseControl {
   height: 8px;
   background-color: #ffd55f;
   border-radius: 50%;
-  box-shadow: 0 0 6px 1px #ffd55f, 0 0 16px 2px #ef806c;
+  box-shadow:
+    0 0 6px 1px #ffd55f,
+    0 0 16px 2px #ef806c;
   left: 5px;
   top: 18px;
 }
@@ -16165,7 +16211,8 @@ div:hover > .BBCodeCollapseControl {
   left: 0;
   top: 0;
   opacity: 0;
-  transition: opacity 0.28s cubic-bezier(0.17, 0.45, 0.14, 0.83),
+  transition:
+    opacity 0.28s cubic-bezier(0.17, 0.45, 0.14, 0.83),
     transform 0.36s cubic-bezier(0.17, 0.45, 0.14, 0.83);
   z-index: 0;
 }
@@ -17161,7 +17208,9 @@ div:hover > .BBCodeCollapseControl {
   height: 8px;
   background-color: #ffd55f;
   border-radius: 50%;
-  box-shadow: 0 0 6px 1px #ffd55f, 0 0 16px 2px #ef806c;
+  box-shadow:
+    0 0 6px 1px #ffd55f,
+    0 0 16px 2px #ef806c;
   left: 5px;
   top: 18px;
 }
@@ -17877,7 +17926,8 @@ div:hover > .BBCodeCollapseControl {
   left: 0;
   top: 0;
   opacity: 0;
-  transition: opacity 0.28s cubic-bezier(0.17, 0.45, 0.14, 0.83),
+  transition:
+    opacity 0.28s cubic-bezier(0.17, 0.45, 0.14, 0.83),
     transform 0.36s cubic-bezier(0.17, 0.45, 0.14, 0.83);
   z-index: 0;
 }
@@ -18723,7 +18773,9 @@ div:hover > .BBCodeCollapseControl {
   height: 8px;
   background-color: #ffd55f;
   border-radius: 50%;
-  box-shadow: 0 0 6px 1px #ffd55f, 0 0 16px 2px #ef806c;
+  box-shadow:
+    0 0 6px 1px #ffd55f,
+    0 0 16px 2px #ef806c;
   left: 5px;
   top: 18px;
 }
@@ -19439,7 +19491,8 @@ div:hover > .BBCodeCollapseControl {
   left: 0;
   top: 0;
   opacity: 0;
-  transition: opacity 0.28s cubic-bezier(0.17, 0.45, 0.14, 0.83),
+  transition:
+    opacity 0.28s cubic-bezier(0.17, 0.45, 0.14, 0.83),
     transform 0.36s cubic-bezier(0.17, 0.45, 0.14, 0.83);
   z-index: 0;
 }
@@ -19969,7 +20022,8 @@ div:hover > .BBCodeCollapseControl {
   width: 100%;
   height: 100%;
   background-color: #236c39;
-  transition: width 2s cubic-bezier(0.17, 0.45, 0.14, 0.83),
+  transition:
+    width 2s cubic-bezier(0.17, 0.45, 0.14, 0.83),
     background-color 2s cubic-bezier(0.17, 0.45, 0.14, 0.83);
   z-index: -1;
 }
@@ -20406,7 +20460,9 @@ div:hover > .BBCodeCollapseControl {
   height: 8px;
   background-color: #ffd55f;
   border-radius: 50%;
-  box-shadow: 0 0 6px 1px #ffd55f, 0 0 16px 2px #ef806c;
+  box-shadow:
+    0 0 6px 1px #ffd55f,
+    0 0 16px 2px #ef806c;
   left: 5px;
   top: 18px;
 }
@@ -21122,7 +21178,8 @@ div:hover > .BBCodeCollapseControl {
   left: 0;
   top: 0;
   opacity: 0;
-  transition: opacity 0.28s cubic-bezier(0.17, 0.45, 0.14, 0.83),
+  transition:
+    opacity 0.28s cubic-bezier(0.17, 0.45, 0.14, 0.83),
     transform 0.36s cubic-bezier(0.17, 0.45, 0.14, 0.83);
   z-index: 0;
 }
@@ -21979,7 +22036,9 @@ div:hover > .BBCodeCollapseControl {
   height: 8px;
   background-color: #ffd55f;
   border-radius: 50%;
-  box-shadow: 0 0 6px 1px #ffd55f, 0 0 16px 2px #ef806c;
+  box-shadow:
+    0 0 6px 1px #ffd55f,
+    0 0 16px 2px #ef806c;
   left: 5px;
   top: 18px;
 }
@@ -22695,7 +22754,8 @@ div:hover > .BBCodeCollapseControl {
   left: 0;
   top: 0;
   opacity: 0;
-  transition: opacity 0.28s cubic-bezier(0.17, 0.45, 0.14, 0.83),
+  transition:
+    opacity 0.28s cubic-bezier(0.17, 0.45, 0.14, 0.83),
     transform 0.36s cubic-bezier(0.17, 0.45, 0.14, 0.83);
   z-index: 0;
 }
@@ -23285,7 +23345,9 @@ html.web_chat_frame body {
 .friendsui-container .SVGIcon_Headphones .HeadphonesStrike,
 .friendsui-container .SVGIcon_Microphone .MicStrike {
   transform: transformY(45px);
-  transition: stroke-width 0.3s linear, stroke 0.3s linear,
+  transition:
+    stroke-width 0.3s linear,
+    stroke 0.3s linear,
     transform 0.3s linear;
   transform-origin: 250px 250px;
 }
@@ -23411,12 +23473,16 @@ html.web_chat_frame body {
 .friendsui-container .SVGIcon_VoiceRoom .AudioLines {
   fill: #686e73;
   stroke: transparent;
-  transition: fill 0.21s ease-in-out, opacity 0.21s ease-in-out,
+  transition:
+    fill 0.21s ease-in-out,
+    opacity 0.21s ease-in-out,
     transform 0.21s ease-in-out;
 }
 .friendsui-container .SVGIcon_VoiceRoom .ExitDoor,
 .friendsui-container .SVGIcon_VoiceRoom .Arrow {
-  transition: opacity 0.21s ease-in-out, transform 0.21s ease-out;
+  transition:
+    opacity 0.21s ease-in-out,
+    transform 0.21s ease-out;
 }
 .friendGroup .groupName.gpfocus {
   background: #3d4450;
@@ -23565,9 +23631,10 @@ body.in_global_drag .friendlist_titlebar {
 .friendListHeaderContainer {
   min-height: 84px;
   background-color: #1c232c;
-  border: 1px solid rgba(0, 0, 0, 0.3);
   border-bottom: none;
-  box-shadow: inset 1px 1px 0px rgba(71, 71, 71, 0.3);
+  box-shadow:
+    inset rgba(61, 68, 80, 0.75) 1px 1px 1px 0px,
+    inset rgba(61, 68, 80, 0.25) -1px 0px 1px 0px;
   position: relative;
   user-select: none;
   cursor: default;
@@ -24629,7 +24696,9 @@ body.in_global_drag .friendlist_titlebar {
   right: -2px;
   top: 0px;
   opacity: 0;
-  transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+  transition:
+    opacity 0.2s ease-in-out,
+    transform 0.2s ease-in-out;
   pointer-events: none;
   cursor: pointer;
   display: flex;
@@ -24652,7 +24721,9 @@ body.in_global_drag .friendlist_titlebar {
   height: 26px;
   right: -2px;
   top: 0px;
-  transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+  transition:
+    opacity 0.2s ease-in-out,
+    transform 0.2s ease-in-out;
   display: flex;
   z-index: 2;
 }
@@ -24704,7 +24775,8 @@ body.in_global_drag .friendlist_titlebar {
 }
 .activeTab {
   background-color: #434953;
-  box-shadow: 0px -2px 3px 0px rgba(0, 0, 0, 0.05),
+  box-shadow:
+    0px -2px 3px 0px rgba(0, 0, 0, 0.05),
     4px -1px 1px 0px rgba(0, 0, 0, 0.05);
   color: #b7ccd5;
 }
@@ -24902,7 +24974,9 @@ body.in_global_drag .friendlist_titlebar {
   font-size: 12px;
 }
 .friendGroup .groupName span {
-  transition: opacity 0.24s ease-in-out, transform 0.24s ease-in-out,
+  transition:
+    opacity 0.24s ease-in-out,
+    transform 0.24s ease-in-out,
     font-weight 0.24s ease-in-out;
   transform-origin: 0% 50%;
 }
@@ -25438,7 +25512,10 @@ body.in_global_drag .friendlist_titlebar {
   margin-top: -6px;
   margin-left: -4px;
   overflow: visible;
-  text-shadow: 1px 1px 1px #000, 1px 1px 2px #000, 1px 1px 3px #000;
+  text-shadow:
+    1px 1px 1px #000,
+    1px 1px 2px #000,
+    1px 1px 3px #000;
 }
 .quickAccessFriends .friend .SnoozeContainer {
   padding-top: 2px;
@@ -26121,7 +26198,9 @@ body.in_global_drag .friendlist_titlebar {
   right: 11%;
   bottom: 11%;
   margin: 0;
-  box-shadow: 0px 0px 14px 1px #ffae00, 0px 0px 32px 1px #da9500;
+  box-shadow:
+    0px 0px 14px 1px #ffae00,
+    0px 0px 32px 1px #da9500;
 }
 .quickAccessFriends:not(.compactQuickAccess)
   .friend.quickAccessFriend
@@ -27413,7 +27492,9 @@ input.InviteFriendToChatDialog_LinkInput {
   opacity: 0;
   height: 0px;
   overflow: hidden;
-  transition: opacity 0.3s ease-out, height 0.3s ease-out;
+  transition:
+    opacity 0.3s ease-out,
+    height 0.3s ease-out;
 }
 .OneOnOneVoice-anim-appear.OneOnOneVoice-anim-appear-active,
 .OneOnOneVoice-anim-enter.OneOnOneVoice-anim-enter-active {
@@ -27425,7 +27506,9 @@ input.InviteFriendToChatDialog_LinkInput {
   opacity: 1;
   height: 40px;
   overflow: hidden;
-  transition: opacity 0.16s ease-out, height 0.3s ease-out;
+  transition:
+    opacity 0.16s ease-out,
+    height 0.3s ease-out;
 }
 .OneOnOneVoice-anim-exit.OneOnOneVoice-anim-exit-active {
   opacity: 0;
@@ -27556,8 +27639,11 @@ input.InviteFriendToChatDialog_LinkInput {
   border: 1px solid transparent;
   border-top: none;
   border-bottom: 1px solid #fff8;
-  box-shadow: inset 1px 1px 4px #000, inset 1px 1px 4px #000,
-    1px 0 1px rgba(255, 255, 255, 0.2), 0 1px 0 rgba(255, 255, 255, 0.2);
+  box-shadow:
+    inset 1px 1px 4px #000,
+    inset 1px 1px 4px #000,
+    1px 0 1px rgba(255, 255, 255, 0.2),
+    0 1px 0 rgba(255, 255, 255, 0.2);
   background-color: #0002;
 }
 .OneOnOneVoiceRoomControls.OneOnOneVoiceActive .friend .avatarHolder img.avatar,
@@ -27565,8 +27651,11 @@ input.InviteFriendToChatDialog_LinkInput {
   .friend.emptyFriend
   .avatarHolder
   img.avatar {
-  box-shadow: inset 1px 1px 4px #000, inset 1px 1px 4px #000,
-    1px 0 1px rgba(65, 189, 121, 0.3), 0 1px 0 rgba(65, 189, 121, 0.3);
+  box-shadow:
+    inset 1px 1px 4px #000,
+    inset 1px 1px 4px #000,
+    1px 0 1px rgba(65, 189, 121, 0.3),
+    0 1px 0 rgba(65, 189, 121, 0.3);
   border-bottom: 1px solid rgba(65, 189, 121, 0.3);
 }
 .SingleUserChat.VoiceRequested
@@ -27745,7 +27834,9 @@ button.DialogButton.copyVoiceLogsButton {
     rgba(122, 245, 91, 0.1) 50%,
     rgba(122, 245, 91, 0) 70%
   );
-  transition: opacity 0.65s ease-in-out, transform 0.65s ease-in-out;
+  transition:
+    opacity 0.65s ease-in-out,
+    transform 0.65s ease-in-out;
   pointer-events: none;
 }
 .CloseActiveVoiceWindowConfirmation .activeVoiceControls {
@@ -27792,7 +27883,9 @@ a.connectionStatus:visited {
   background-color: transparent;
   background: transparent;
   border: 0px solid transparent;
-  transition: margin 0.34s ease-in-out, opacity 0.24s ease-in-out;
+  transition:
+    margin 0.34s ease-in-out,
+    opacity 0.24s ease-in-out;
   opacity: 0;
   pointer-events: none;
 }
@@ -27854,7 +27947,9 @@ a.connectionStatus:visited {
   font-size: 10px;
   color: #5f6f79;
   margin-left: 12px;
-  transition: opacity 0.21s ease-in-out, height 0.21s ease-in-out,
+  transition:
+    opacity 0.21s ease-in-out,
+    height 0.21s ease-in-out,
     margin 0.21s ease-in-out;
 }
 .emptyChannelNotice.Visible {
@@ -28524,7 +28619,9 @@ a.connectionStatus:visited {
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
-  transition: width 0.32s ease-in-out, background-color 0.32s ease-in-out;
+  transition:
+    width 0.32s ease-in-out,
+    background-color 0.32s ease-in-out;
   background-color: rgba(34, 37, 43, 0);
   position: relative;
 }
@@ -28653,7 +28750,10 @@ a.connectionStatus:visited {
   white-space: no-wrap;
   text-overflow: clip;
   transform: translateX(84px) translateY(0px);
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
     1px 1px 0 #000;
   z-index: 2;
   pointer-events: none;
@@ -30115,6 +30215,7 @@ html.web_chat_frame .perf_timing_area {
   min-height: 26px;
   background-color: #22252b;
   flex-shrink: 0;
+  box-shadow: inset rgba(61, 68, 80, 0.3) 1px 1px 0px 0px;
 }
 .insetShadow {
   pointer-events: none;
@@ -30278,7 +30379,9 @@ html.web_chat_frame .perf_timing_area {
 }
 .friendRequestButton .SVGIcon_FriendRequest .redCircle {
   fill: #e64a35;
-  transition: fill 0.21s ease-in-out, transform 0.21s ease-in-out;
+  transition:
+    fill 0.21s ease-in-out,
+    transform 0.21s ease-in-out;
 }
 .friendRequestButton.friendRequestOutgoingOnly
   .SVGIcon_FriendRequest
@@ -30293,7 +30396,9 @@ html.web_chat_frame .perf_timing_area {
 }
 .addFriendButton .SVGIcon_AddFriend .plusCircle {
   fill: #b7ccd5;
-  transition: fill 0.21s ease-in-out, transform 0.21s ease-in-out;
+  transition:
+    fill 0.21s ease-in-out,
+    transform 0.21s ease-in-out;
 }
 .friendRequestButton .SVGIcon_FriendRequest .friendBodyFull,
 .friendRequestButton .SVGIcon_FriendRequest .friendHead,
@@ -31887,7 +31992,9 @@ body.in_global_drag .quickAccessFriends.emptyQuickAccess {
 .ExpandPlusMinus .SVGIcon_PlusCircle .horizontalLine,
 .ExpandPlusMinus .SVGIcon_PlusCircle .verticalLine {
   stroke: #676666;
-  transition: stroke 0.2s ease-in-out, transform 0.2s ease-in-out;
+  transition:
+    stroke 0.2s ease-in-out,
+    transform 0.2s ease-in-out;
 }
 .ExpandPlusMinus .SVGIcon_PlusCircle .verticalLine {
   transform: scaleY(0);
@@ -31951,7 +32058,9 @@ body.in_global_drag .quickAccessFriends.emptyQuickAccess {
 .friendGroup:not(.noTransitions) .friend-anim-enter.friend-anim-enter-active {
   opacity: 1;
   margin-bottom: 0px;
-  transition: opacity 0.3s ease-in-out, margin 0.3s ease-in-out;
+  transition:
+    opacity 0.3s ease-in-out,
+    margin 0.3s ease-in-out;
 }
 .friendGroup:not(.noTransitions) .friend-anim-exit {
   opacity: 1;
@@ -31962,7 +32071,9 @@ body.in_global_drag .quickAccessFriends.emptyQuickAccess {
 .friendGroup:not(.noTransitions) .friend-anim-exit.friend-anim-exit-active {
   opacity: 0;
   margin-bottom: -44px;
-  transition: opacity 0.2s ease-in-out, margin 0.3s ease-in-out;
+  transition:
+    opacity 0.2s ease-in-out,
+    margin 0.3s ease-in-out;
 }
 .friendGroup:not(.noTransitions)
   .awayOrSnooze.friend-anim-appear.friend-anim-appear-active,
@@ -31970,7 +32081,9 @@ body.in_global_drag .quickAccessFriends.emptyQuickAccess {
   .awayOrSnooze.friend-anim-enter.friend-anim-enter-active {
   opacity: 1;
   margin-bottom: 0px;
-  transition: opacity 0.3s ease-in-out, margin 0.3s ease-in-out;
+  transition:
+    opacity 0.3s ease-in-out,
+    margin 0.3s ease-in-out;
 }
 .friendGroup:not(.noTransitions) .lastInGroup.friend-anim-exit,
 .friendGroup:not(.noTransitions) .inGroup.friend-anim-exit,
@@ -32109,7 +32222,9 @@ body.in_global_drag .quickAccessFriends.emptyQuickAccess {
   .friend-anim-enter.friend-anim-enter-active {
   opacity: 1;
   margin-bottom: 2px;
-  transition: opacity 0.2s ease-in-out, margin 0.2s ease-in-out;
+  transition:
+    opacity 0.2s ease-in-out,
+    margin 0.2s ease-in-out;
 }
 .VoiceChannelParticipants.CompactFriendsList .friend-anim-exit {
   opacity: 1;
@@ -32119,7 +32234,9 @@ body.in_global_drag .quickAccessFriends.emptyQuickAccess {
   .friend-anim-exit.friend-anim-exit-active {
   opacity: 0;
   margin-bottom: -32px;
-  transition: opacity 0.1s ease-in-out, margin 0.1s ease-in-out;
+  transition:
+    opacity 0.1s ease-in-out,
+    margin 0.1s ease-in-out;
 }
 .VoiceRoomChatHistory.chatWindow-anim-appear,
 .VoiceRoomChatHistory.chatWindow-anim-enter {
@@ -32138,7 +32255,9 @@ body.in_global_drag .quickAccessFriends.emptyQuickAccess {
 .VoiceRoomChatHistory.chatWindow-anim-exit.chatWindow-anim-exit-active {
   opacity: 0;
   background-color: rgba(0, 0, 0, 0);
-  transition: background-color 0.31s ease-in-out, opacity 0.31s ease-in-out;
+  transition:
+    background-color 0.31s ease-in-out,
+    opacity 0.31s ease-in-out;
 }
 .unread-messages-anim-appear,
 .unread-messages-anim-enter {
@@ -32184,45 +32303,61 @@ body.in_global_drag .quickAccessFriends.emptyQuickAccess {
 .widthcollapseandfade-anim-enter {
   opacity: 0;
   max-width: 0px;
-  transition: opacity 0.4s ease-in-out, max-width 0.4s ease-in-out;
+  transition:
+    opacity 0.4s ease-in-out,
+    max-width 0.4s ease-in-out;
 }
 .widthcollapseandfade-anim-appear.widthcollapseandfade-anim-appear-active,
 .widthcollapseandfade-anim-enter.widthcollapseandfade-anim-enter-active {
   opacity: 1;
   max-width: 150px;
-  transition: opacity 0.4s ease-in-out, max-width 0.4s ease-in-out;
+  transition:
+    opacity 0.4s ease-in-out,
+    max-width 0.4s ease-in-out;
 }
 .widthcollapseandfade-anim-exit {
   opacity: 1;
   max-width: 150px;
-  transition: opacity 0.4s ease-in-out, max-width 0.4s ease-in-out;
+  transition:
+    opacity 0.4s ease-in-out,
+    max-width 0.4s ease-in-out;
 }
 .widthcollapseandfade-anim-exit.widthcollapseandfade-anim-exit-active {
   opacity: 0;
   max-width: 0px;
-  transition: opacity 0.4s ease-in-out, max-width 0.4s ease-in-out;
+  transition:
+    opacity 0.4s ease-in-out,
+    max-width 0.4s ease-in-out;
 }
 .heightcollapseandfade-anim-appear,
 .heightcollapseandfade-anim-enter {
   opacity: 0;
   max-height: 0px;
-  transition: opacity 0.4s ease-in-out, max-height 0.4s ease-in-out;
+  transition:
+    opacity 0.4s ease-in-out,
+    max-height 0.4s ease-in-out;
 }
 .heightcollapseandfade-anim-appear.heightcollapseandfade-anim-appear-active,
 .heightcollapseandfade-anim-enter.heightcollapseandfade-anim-enter-active {
   opacity: 1;
   max-height: 44px;
-  transition: opacity 0.4s ease-in-out, max-height 0.4s ease-in-out;
+  transition:
+    opacity 0.4s ease-in-out,
+    max-height 0.4s ease-in-out;
 }
 .heightcollapseandfade-anim-exit {
   opacity: 1;
   max-height: 44px;
-  transition: opacity 0.4s ease-in-out, max-height 0.4s ease-in-out;
+  transition:
+    opacity 0.4s ease-in-out,
+    max-height 0.4s ease-in-out;
 }
 .heightcollapseandfade-anim-exit.heightcollapseandfade-anim-exit-active {
   opacity: 0;
   max-height: 0px;
-  transition: opacity 0.4s ease-in-out, max-height 0.4s ease-in-out,
+  transition:
+    opacity 0.4s ease-in-out,
+    max-height 0.4s ease-in-out,
     height 0.4s ease-in-out;
 }
 .activevoice-anim-appear,
@@ -32264,7 +32399,9 @@ body.in_global_drag .quickAccessFriends.emptyQuickAccess {
 .chatWindow-anim-appear.chatWindow-anim-appear-active .VoiceRoomChatWindow,
 .chatWindow-anim-enter.chatWindow-anim-enter-active .VoiceRoomChatWindow {
   opacity: 1;
-  transition: opacity 0.31s ease-in-out, transform 0.31s ease-in-out;
+  transition:
+    opacity 0.31s ease-in-out,
+    transform 0.31s ease-in-out;
   transform: translateX(0px) scale(1);
   transform-origin: 0% 50%;
 }
@@ -32276,7 +32413,9 @@ body.in_global_drag .quickAccessFriends.emptyQuickAccess {
 .chatWindow-anim-exit.chatWindow-anim-exit-active .VoiceRoomChatWindow {
   opacity: 0;
   transform: translateX(-320px) scale(0.9);
-  transition: opacity 0.31s ease-in-out, transform 0.31s ease-in-out;
+  transition:
+    opacity 0.31s ease-in-out,
+    transform 0.31s ease-in-out;
   transform-origin: 0% 50%;
 }
 .chatRoomVoiceChannel.channel-anim-appear,
@@ -32288,7 +32427,9 @@ body.in_global_drag .quickAccessFriends.emptyQuickAccess {
 .chatRoomVoiceChannel.channel-anim-enter.channel-anim-enter-active {
   opacity: 1;
   margin-bottom: 4px;
-  transition: opacity 0.2s ease-in-out, margin 0.3s ease-in-out,
+  transition:
+    opacity 0.2s ease-in-out,
+    margin 0.3s ease-in-out,
     height 0.3s ease-in-out;
 }
 .chatRoomVoiceChannel.channel-anim-exit {
@@ -32298,7 +32439,9 @@ body.in_global_drag .quickAccessFriends.emptyQuickAccess {
 .chatRoomVoiceChannel.channel-anim-exit.channel-anim-exit-active {
   opacity: 0;
   margin-bottom: -32px;
-  transition: opacity 0.1s ease-in-out, margin 0.3s ease-in-out,
+  transition:
+    opacity 0.1s ease-in-out,
+    margin 0.3s ease-in-out,
     height 0.3s ease-in-out;
 }
 .YoutubePlayer {
@@ -32436,7 +32579,9 @@ body.in_global_drag .quickAccessFriends.emptyQuickAccess {
 }
 .ChatRoomListGroupItem {
   position: relative;
-  transition: margin 0.21s ease-in-out, background-color 0.1s ease-in-out,
+  transition:
+    margin 0.21s ease-in-out,
+    background-color 0.1s ease-in-out,
     box-shadow 0.21s ease-in-out;
   box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
 }
@@ -33636,13 +33781,15 @@ img.ChatRoomGroupAvatar_Avatar {
   margin-left: 42px;
 }
 .chatRoomVoiceChannel:not(.ActiveVoiceChannel):hover {
-  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.83) inset,
+  box-shadow:
+    1px 1px 4px rgba(0, 0, 0, 0.83) inset,
     1px 2px 0px rgba(0, 0, 0, 0);
   background-color: #17191d;
 }
 .ChatRoomListGroupItemChatRooms
   .chatRoomVoiceChannel:not(.ActiveVoiceChannel):hover {
-  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.83) inset,
+  box-shadow:
+    1px 1px 4px rgba(0, 0, 0, 0.83) inset,
     1px 2px 0px rgba(0, 0, 0, 0);
   border: 0.5px solid rgba(155, 171, 182, 0.5);
   background-color: rgba(23, 25, 29, 0.5);
@@ -33948,7 +34095,9 @@ img.ChatRoomGroupAvatar_Avatar {
     rgba(122, 245, 91, 0.1) 50%,
     rgba(122, 245, 91, 0) 70%
   );
-  transition: opacity 0.65s ease-in-out, transform 0.65s ease-in-out;
+  transition:
+    opacity 0.65s ease-in-out,
+    transform 0.65s ease-in-out;
   pointer-events: none;
 }
 .ActiveVoiceChannel .chatRoomVoiceChannelIconGlow {
@@ -35969,4 +36118,4 @@ body.VR {
   margin-top: 16px;
 }
 
-/*# sourceMappingURL=../sourcemaps\css\libraries/libraries~e8c5e5be4.css.map*/
+/*# sourceMappingURL=../sourcemaps\css\libraries/libraries~2dcc5aaf7.css.map*/

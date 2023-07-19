@@ -4194,12 +4194,6 @@
 	"SteamUI_StreamLaunch_InstallDrivers"	"Strömmande kräver ytterligare installation av drivrutiner.\n\nFölj Steams anvisningar på fjärrdatorn."
 	"SteamUI_StreamLaunch_TransportUnavailable"	"Streaming utanför hemmet är inte tillgängligt just nu, försök igen senare."
 
-	"Steam_InstallAudioCaptureDriver_Title"	"Uppdatering av ljuddrivrutiner"
-	"Steam_InstallAudioCaptureDriver_Text"	"Steam måste uppdatera ljuddrivrutinerna, vilket kan kräva en omstart av datorn."
-	"Steam_InstallGamepadInputDriver_Title"	"Uppdatering av spelkontroll-drivrutiner"
-	"Steam_InstallGamepadInputDriver_Text"	"Steam måste uppdatera spelkontroll-drivrutinerna, vilket kan kräva en omstart av datorn."
-	"Steam_InstallGamepadInputDriver_RestartText"	"Du kommer behöva starta om Steam efter att ha installerat spelkontroll-drivrutinerna."
-
 	"SteamUI_RemoteDeviceAuthorization_Title"		"Auktorisera enhet"
 	"SteamUI_RemoteDeviceAuthorization_Text"		"Ange auktoriseringskoden för att tillåta {s:devicename} att ansluta och spela spel."
 
@@ -4987,7 +4981,7 @@
 	"TimeZoneRegion_WestAsia"			"West Asia Standard Time"
 	"TimeZoneCities_WestAsia"			"Islamabad, Tasjkent"
 	"TimeZoneRegion_India"				"India Standard Time"
-	"TimeZoneCities_India"				"Kolkata, Bombay, Sri Jayawardenapura"
+	"TimeZoneCities_India"				"Kolkata, Mumbai, Sri Jayawardenapura"
 	"TimeZoneRegion_Nepal"				"Nepal Time"
 	"TimeZoneCities_Nepal"				"Katmandu"
 	"TimeZoneRegion_CentralAsia"		"Central Asia Standard Time"

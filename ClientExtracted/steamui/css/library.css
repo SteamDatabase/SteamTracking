@@ -490,11 +490,13 @@ div.ModalPosition_TopBar {
   text-align: left;
 }
 .DialogInputRequirementLabel {
-  color: #b80505;
+  color: #c15755;
   margin-left: 15px;
 }
 .DialogRequirementLabel {
-  color: #b80505;
+  color: #c15755;
+  font-weight: 500;
+  font-size: 14px;
 }
 .DialogInputLabelGroup {
   margin-bottom: 22px;
@@ -2181,17 +2183,18 @@ span:focus {
 .contextmenu_ContextMenuFocusContainer_2qyBZ:focus {
   outline: none;
 }
+.GreenEnvelopeMenu,
 .contextmenu_contextMenu_LQkrb {
   position: absolute;
+  opacity: 1;
   background: radial-gradient(
     ellipse farthest-corner at 50% 0%,
     #3c4047 0%,
     #3c4047 50%,
     #33363d 100%
   );
-  box-shadow: 0 10px 32px 0px #000000ab;
-  opacity: 1;
   transition: opacity 200ms;
+  box-shadow: 0 10px 32px 0px #000000ab;
   z-index: 1600;
   user-select: none;
   padding: 4px;
@@ -2200,6 +2203,13 @@ span:focus {
   max-height: calc(100% - 128px);
   overflow-y: auto;
   overflow-x: hidden;
+}
+.GreenEnvelopeMenu {
+  box-shadow:
+    inset rgba(61, 68, 80, 0.75) 1px 1px 1px 0px,
+    inset rgba(61, 68, 80, 0.25) -1px -1px 1px 0px;
+  border: 1px solid #000;
+  padding: 1px;
 }
 html.contextmenu_ContextMenuPopup_2GpKT .contextmenu_contextMenu_LQkrb {
   position: static;
@@ -2513,7 +2523,9 @@ html.contextmenu_ContextMenuPopup_2GpKT body {
   box-shadow: 0px 0px 3px #000a;
   position: absolute;
   left: 0;
-  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  transition:
+    transform 0.2s ease-in-out,
+    background-color 0.2s ease-in-out;
 }
 .toggle_Toggle_3jXWQ .toggle_ToggleSwitch_2mW8B.toggle_On_1YqUA {
   background-color: #16a1e1;
@@ -2625,7 +2637,9 @@ html.contextmenu_ContextMenuPopup_2GpKT body {
   border-radius: 2px;
   color: #e0e1e6;
   padding: 6px 8px;
-  box-shadow: 1px 1px 8px #0005, 2px 2px 16px 1px #0005;
+  box-shadow:
+    1px 1px 8px #0005,
+    2px 2px 16px 1px #0005;
   max-width: 300px;
   user-select: none;
   overflow: hidden;
@@ -2638,7 +2652,9 @@ html.contextmenu_ContextMenuPopup_2GpKT body {
   border-radius: 2px;
   color: #e0e1e6;
   padding: 6px 8px;
-  box-shadow: 1px 1px 8px #0005, 2px 2px 16px 1px #0005;
+  box-shadow:
+    1px 1px 8px #0005,
+    2px 2px 16px 1px #0005;
   max-width: 300px;
   user-select: none;
 }
@@ -4476,8 +4492,10 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Z-Cc svg {
   pointer-events: none;
   outline-offset: 2px;
   outline: 2px solid rgba(255, 255, 255, 0.6);
-  animation: focusring_flash_1YTKZ 0.5s ease,
-    focusring_growOutline_Z3LxS 0.4s ease, focusring_fadeOutline_2hZu3 0.4s ease,
+  animation:
+    focusring_flash_1YTKZ 0.5s ease,
+    focusring_growOutline_Z3LxS 0.4s ease,
+    focusring_fadeOutline_2hZu3 0.4s ease,
     focusring_blinker_3wFMM 1.2s ease-in-out 0.4s 20;
 }
 .focusring_FocusRing_1IZrQ.focusring_DebugFocusRing_YxeOZ {

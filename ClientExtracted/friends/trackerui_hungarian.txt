@@ -540,7 +540,7 @@
 "controller_unknown"								"Ismeretlen játékvezérlő"
 "controller_steamcontroller_unknown"				"Steam Játékvezérlő"
 "controller_steamcontroller_gordon" 				"Steam Játékvezérlő"
-"controller_generic"								"Általános gamepad"
+"controller_generic"								"Általános játékvezérlő"
 "controller_xbox360"								"Xbox 360 játékvezérlő"
 "controller_xboxone"								"Xbox One játékvezérlő"
 "controller_ps3"									"PlayStation 3 játékvezérlő"

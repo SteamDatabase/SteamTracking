@@ -1,0 +1,21 @@
+import "steammessages_base.proto";
+import "webuimessages_base.proto";
+
+option optimize_for = SPEED;
+option cc_generic_services = true;
+
+message CGameNotes_UploadImage_Request {
+	optional string file_prefix = 1;
+	optional string mime_type = 2;
+	optional bytes data = 3;
+}
+
+message CGameNotes_UploadImage_Response {
+	optional string filename = 1;
+}
+
+service GameNotes {
+	option (webui_service_execution_site) = k_EClientExecutionSiteSteamUI;
+
+	rpc UploadImage (.CGameNotes_UploadImage_Request) returns (.CGameNotes_UploadImage_Response);
+}

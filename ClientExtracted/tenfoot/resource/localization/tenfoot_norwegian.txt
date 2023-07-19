@@ -4194,12 +4194,6 @@
 	"SteamUI_StreamLaunch_InstallDrivers"	"Strømming krever installasjon av ekstra drivere.\n\nFølg Steam-instruksjonene på den eksterne datamaskinen."
 	"SteamUI_StreamLaunch_TransportUnavailable"	"Strømming utenfor hjemmet er ikke tilgjengelig for øyeblikket. Prøv igjen senere."
 
-	"Steam_InstallAudioCaptureDriver_Title"	"Lyddriveroppdatering"
-	"Steam_InstallAudioCaptureDriver_Text"	"Steam må oppdatere lyddriveren, noe som kan kreve en omstart av systemet."
-	"Steam_InstallGamepadInputDriver_Title"	"Oppdatering av spillkontrollerdriver"
-	"Steam_InstallGamepadInputDriver_Text"	"Steam må oppdatere spillkontrollerdriveren, noe som kan kreve en omstart av systemet."
-	"Steam_InstallGamepadInputDriver_RestartText"	"Du må starte Steam på nytt etter installasjon av spillkontrollerdriver."
-
 	"SteamUI_RemoteDeviceAuthorization_Title"		"Autoriser enhet"
 	"SteamUI_RemoteDeviceAuthorization_Text"		"Skriv inn autorisasjonskoden for å tillate {s:devicename} å koble til og spille spill."
 

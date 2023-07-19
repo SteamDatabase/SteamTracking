@@ -47,11 +47,11 @@
         },
         {
             "name": "SetProxyInfo",
-            "argc": "4"
+            "argc": "5"
         },
         {
             "name": "GetProxyInfo",
-            "argc": "5"
+            "argc": "6"
         },
         {
             "name": "GetObviousConnectivityProblem",

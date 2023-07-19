@@ -34,7 +34,7 @@
 "Friends_Chat_ConvertedToMultiUser"	"%friend% 님과의 대화는 이제 여러 사용자 대화입니다.\n"
 "Friends_Chat_AnonymousChatName"		"익명"
 "Friends_Chat_Settings"		"채팅 설정"
-"Friends_Chat_InviteToWatch"		"방송에 초대하기"
+"Friends_Chat_InviteToWatch"		"방송에 초대"
 
 "Friends_Chat_CreateFailed_Title"		"채팅 생성 실패"
 "Friends_Chat_CreateFailed_Generic"		"채팅방 생성 실패"
@@ -191,7 +191,7 @@
 "Friends_Tooltip_GroupOfficer"		"그룹 관리자"
 "Friends_Tooltip_GroupModerator"		"그룹 모더레이터"
 
-"Friends_InviteFriendToGroup"			"그룹에 초대하기"
+"Friends_InviteFriendToGroup"			"그룹에 초대"
 "Friends_InviteToGroupConfirmation_Title"	"친구 네트워크- 초대장 발송"
 "Friends_InviteToGroupConfirmation_Info"	"%friend% 님을 %group% 그룹으로 초대하는 초대장을 발송했습니다."
 
@@ -250,7 +250,7 @@
 "Friends_Chat_ActionResultBanSuccess"     "%user_name% 님을 차단했습니다."
 "Friends_Chat_ActionResultUnBanSuccess"   "%user_name% 님을 더 이상 차단하지 않습니다."
 
-"Friends_Chat_ActionResultLockChatSuccess"	"채팅이 현재 잠겼습니다(그룹 회원 또는 초대받은 사용자만 입장 가능).\n"
+"Friends_Chat_ActionResultLockChatSuccess"	"채팅이 현재 잠겼습니다(그룹 멤버 또는 초대받은 사용자만 입장 가능).\n"
 "Friends_Chat_ActionResultUnlockChatSuccess"	"이제 채팅방이 공개되었습니다. (모든 사용자에게 개방)\n"
 
 "Friends_Chat_ActionResultTitleFailed"    "액션 실패"
@@ -680,7 +680,7 @@
 "Friends_FriendInvitedToBroadcast_Info" "%friend%님을 방송에 초대하였습니다."
 "Friends_BroadcastInvite" "%friend%님이 방송에 초대하였습니다"
 "Friends_BroadcastInviteNotification" "당신을 방송에 초대하였습니다"
-"Friends_Chat_InviteToBroadcast" "방송에 초대하기"
+"Friends_Chat_InviteToBroadcast" "방송에 초대"
 "Friends_BroadcastApproveNotification" "방송을 보길 원합니다"
 "Friends_BroadcastCantStart_Streaming" "홈 스트리밍 중에는 자신의 방송을 시청할 수 없습니다."
 "Friends_BroadcastApprove" "%friend%님이 귀하의 방송을 보길 원합니다"
