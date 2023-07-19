@@ -456,6 +456,10 @@ input.searchAppsInput
 	padding-right: 16px;
 }
 
+.bodytext img {
+    width: 100%;
+}
+
 .commentsLink
 {
 	float: left;
