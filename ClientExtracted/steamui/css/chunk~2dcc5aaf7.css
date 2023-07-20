@@ -51095,13 +51095,9 @@ html.tablet .partnereventdisplay_EventDetailTitle_2_4FS {
   position: absolute;
   top: 0;
   width: 100%;
-  transform-origin: top;
-  transform: scale(2);
-  -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, black 16px);
-  mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, black 16px);
 }
-.marketingmessages_MarketingMessage_28UlE .marketingmessages_Logo_vfjfC {
-  position: absolute;
+.marketingmessages_MarketingMessage_28UlE .marketingmessages_Image_3ogNR video {
+  width: 100%;
 }
 .marketingmessages_MarketingMessage_28UlE.marketingmessages_DLCFallback_HvJtv {
   position: relative;
@@ -51109,6 +51105,20 @@ html.tablet .partnereventdisplay_EventDetailTitle_2_4FS {
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
+}
+.marketingmessages_MarketingMessage_28UlE.marketingmessages_DLCFallback_HvJtv
+  .marketingmessages_Image_3ogNR {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  transform-origin: top;
+  transform: scale(2);
+  -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, black 16px);
+  mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, black 16px);
+}
+.marketingmessages_MarketingMessage_28UlE.marketingmessages_DLCFallback_HvJtv
+  .marketingmessages_Logo_vfjfC {
+  position: absolute;
 }
 .marketingmessages_MarketingMessage_28UlE
   .marketingmessages_CallToAction_tLkri {
@@ -51157,6 +51167,11 @@ html.tablet .partnereventdisplay_EventDetailTitle_2_4FS {
   flex-direction: column;
   width: 624px;
   height: 100%;
+}
+@media screen and (max-height: 540px) {
+  .marketingmessages_BrowserWrapper_2Pg6X {
+    width: 410px;
+  }
 }
 @keyframes deskjobpromo_ItemFocusAnim-darkerGrey-nocolor_3HVm- {
   from {

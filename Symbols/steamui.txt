@@ -413,10 +413,6 @@
  SDL_GetDisplayBounds
  SDL_GetDisplays
  SDL_GetError
- SDL_GetGamepadAxisFromString
- SDL_GetGamepadBindForAxis
- SDL_GetGamepadBindForButton
- SDL_GetGamepadButtonFromString
  SDL_GetGamepadInstanceGUID
  SDL_GetGamepadInstanceMapping
  SDL_GetGamepadInstanceProduct
@@ -463,7 +459,9 @@
  SDL_QueueAudio
  SDL_QuitSubSystem
  SDL_RaiseWindow
+ SDL_ReloadGamepadMappings
  SDL_SetEventEnabled
+ SDL_SetGamepadMapping
  SDL_SetHint
  SDL_SetWindowPosition
  SDL_ShowCursor

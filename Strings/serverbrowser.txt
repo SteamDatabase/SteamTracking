@@ -2,6 +2,8 @@
 __TEXT
 __text
 __TEXT
+`P
+`P
 __stubs
 __TEXT
 __stub_helper
@@ -36,17 +38,17 @@ __data
 __DATA
 __thread_vars
 __DATA
+HN'
 0
+HN'
 __thread_data
 __DATA
-@M'
 @
-@M'
 __thread_bss
 __DATA
 __bss
 __DATA
-j-
+z-
 __common
 __DATA
 H
@@ -87,7 +89,6 @@ h
 /usr/lib/libobjc.A.dylib
 &
 )
-`@(
 15CCallbackManualI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
 9CCallbackI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
 13CCallbackImplILi16EE
@@ -418,9 +419,15 @@ $
 ,
 0
 4
-0
 8
-D
+\
+H
+P
+`
+a
+0
+4
+8
 8
 (
 0
@@ -567,8 +574,9 @@ P
 (
 (
 8
-H
-8
+@
+h
+@
 (
 (
 (
@@ -689,6 +697,7 @@ P
 19CMsgLoadingResource
 14CMsgStatusText
 13CMsgSetCursor
+25CMsgFileLoadDialog_Filter
 18CMsgFileLoadDialog
 26CMsgFileLoadDialogResponse
 15CMsgShowToolTip
@@ -2425,6 +2434,8 @@ Invalid key for map field.
 google/protobuf/unknown_field_set.cc
 CHECK failed: !fields_.empty():
 CHECK failed: (TYPE_LENGTH_DELIMITED) == (type()):
+CHECK failed: *ptr:
+CHECK failed: (overrun) <= (kSlopBytes):
 Can't happen
 google/protobuf/wire_format.cc
 CHECK failed: descriptor:
@@ -3849,6 +3860,13 @@ CUtlStringBuilder::Data::MoveToHeap
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlsymbol.cpp
 s_bAllowStaticSymbolTable
 s_pSymbolTable
+'
+'
+'
+'
+'
+'
+'
 0
 j
 j
@@ -3882,6 +3900,10 @@ j
 j
 j
 j
+&
+&
+&
+&
 0
 p
 0
@@ -3958,12 +3980,14 @@ M9e
 0
 @
 @
+5
 
 
 
 d
+p
+j
 A+M
-D
 j
 j
 j
@@ -4013,7 +4037,7 @@ A+4$A+u
 =
 =
 @
-Z
+\
 j
 j
 j

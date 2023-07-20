@@ -233,6 +233,7 @@
  NSURLIsAliasFileKey
  NSWindowDidBecomeKeyNotification
  NSWindowDidChangeBackingPropertiesNotification
+ NSWindowDidChangeOcclusionStateNotification
  NSWindowDidChangeScreenNotification
  NSWindowDidChangeScreenProfileNotification
  NSWindowDidDeminiaturizeNotification
@@ -296,6 +297,7 @@
  OBJC_METACLASS_$_NSWindow
  T SDL_AddEventWatch
  T SDL_AddGamepadMapping
+ T SDL_AddGamepadMappingsFromFile
  T SDL_AddGamepadMappingsFromRW
  T SDL_AddHintCallback
  T SDL_AddTimer
@@ -469,8 +471,6 @@
  T SDL_GetGamepadAppleSFSymbolsNameForButton
  T SDL_GetGamepadAxis
  T SDL_GetGamepadAxisFromString
- T SDL_GetGamepadBindForAxis
- T SDL_GetGamepadBindForButton
  T SDL_GetGamepadButton
  T SDL_GetGamepadButtonFromString
  T SDL_GetGamepadFirmwareVersion
@@ -501,8 +501,10 @@
  T SDL_GetGamepadSerial
  T SDL_GetGamepadStringForAxis
  T SDL_GetGamepadStringForButton
+ T SDL_GetGamepadStringForType
  T SDL_GetGamepadTouchpadFinger
  T SDL_GetGamepadType
+ T SDL_GetGamepadTypeFromString
  T SDL_GetGamepadVendor
  T SDL_GetGamepads
  T SDL_GetGlobalMouseState
@@ -578,6 +580,8 @@
  T SDL_GetQueuedAudioSize
  T SDL_GetRGB
  T SDL_GetRGBA
+ T SDL_GetRealGamepadInstanceType
+ T SDL_GetRealGamepadType
  T SDL_GetRectAndLineIntersection
  T SDL_GetRectAndLineIntersectionFloat
  T SDL_GetRectEnclosingPoints
@@ -816,6 +820,7 @@
  T SDL_ReadLE64
  T SDL_ReadU8
  T SDL_RegisterEvents
+ T SDL_ReloadGamepadMappings
  T SDL_RemoveTimer
  T SDL_RenderClear
  T SDL_RenderClipEnabled
@@ -864,6 +869,7 @@
  T SDL_SetEventFilter
  T SDL_SetGamepadEventsEnabled
  T SDL_SetGamepadLED
+ T SDL_SetGamepadMapping
  T SDL_SetGamepadPlayerIndex
  T SDL_SetGamepadSensorEnabled
  T SDL_SetHint
@@ -1096,6 +1102,8 @@
  T SDL_strlwr
  T SDL_strncasecmp
  T SDL_strncmp
+ T SDL_strndup
+ T SDL_strnlen
  T SDL_strrchr
  T SDL_strrev
  T SDL_strstr
@@ -1131,6 +1139,7 @@
  T SDL_wcslen
  T SDL_wcsncasecmp
  T SDL_wcsncmp
+ T SDL_wcsnlen
  T SDL_wcsstr
  T SDL_wcstol
  TISCopyCurrentKeyboardLayoutInputSource
@@ -1354,6 +1363,7 @@
  strlen
  strncasecmp
  strncmp
+ strnlen
  strrchr
  strstr
  strtod
@@ -1381,5 +1391,6 @@
  wcsncasecmp
  wcsncmp
  wcsncpy
+ wcsnlen
  wcsstr
  wcstol

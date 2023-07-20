@@ -434,16 +434,27 @@ message CMsgSetCursor {
 }
 
 message CMsgFileLoadDialog {
+	message Filter {
+		optional string name = 1;
+		repeated string patterns = 2;
+		optional bool is_default = 3;
+	}
+
 	optional uint32 browser_handle = 1;
-	optional string title = 2;
-	optional string initialFile = 3;
-	repeated string accept_types = 4;
-	optional bool is_save = 5;
+	optional uint32 owning_browser_handle = 2;
+	optional string title = 3;
+	optional string initialFile = 4;
+	repeated string accept_types = 5;
+	optional bool is_save = 6;
+	optional bool choose_directory = 7;
+	repeated .CMsgFileLoadDialog.Filter filters = 8;
 }
 
 message CMsgFileLoadDialogResponse {
 	optional uint32 browser_handle = 1;
-	repeated string files = 2;
+	optional uint32 owning_browser_handle = 2;
+	optional bool bsuccess = 3;
+	repeated string files = 4;
 }
 
 message CMsgShowToolTip {

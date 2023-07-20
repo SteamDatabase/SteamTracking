@@ -1,7 +1,9 @@
 {
     "Steam_AppMustBeClosedToQuit_Info": "请在退出启动器前关闭 %1$s。",
-    "DisplayStatus_Synchronizing": "正在与云同步",
+    "DisplayStatus_Compact_Synchronizing": "正在与云同步",
+    "DisplayStatus_Compact_CloudError": "云错误",
+    "DisplayStatus_Compact_CloudOutOfDate": "云过期",
     "Steam_Shutdown_Waiting_For_Cloud": "正在完成云同步...",
     "Steam_Shutdown_Generic": "正在关闭启动器…",
-    "SignOut_Description": "这将使您退出启动器。您需要重新输入帐户名、密码和蒸汽平台令牌信息才能再次使用启动器。"
+    "SignOut_Description": "这将使您退出启动器。您需要重新输入帐户名、密码和令牌信息才能再次使用启动器。"
 }

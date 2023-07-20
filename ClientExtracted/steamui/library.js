@@ -1,4 +1,4 @@
-var CLSTAMP = "8199681";
+var CLSTAMP = "8204082";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -4199,9 +4199,9 @@ var CLSTAMP = "8199681";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Jul 18 2023 : 11:38:32",
-                BUILD_TIME_UTC: "Jul 18 2023 : 18:38:32",
-                BUILD_RTIME_UTC: 1689705512,
+                BUILD_TIME_LOCAL: "Jul 19 2023 : 17:35:12",
+                BUILD_TIME_UTC: "Jul 20 2023 : 00:35:12",
+                BUILD_RTIME_UTC: 1689813312,
               }.MOBILE_BUILD)
             ) {
               window.addEventListener("beforeunload", (e) => {
@@ -51797,43 +51797,44 @@ var CLSTAMP = "8199681";
         "use strict";
         r.r(t),
           r.d(t, {
-            AddMissingStylesheetsToWindow: () => A,
-            AddStylesheetsToDocument: () => N,
+            AddMissingStylesheetsToWindow: () => N,
+            AddStylesheetsToDocument: () => Z,
             BElementContainsSelection: () => c,
-            BElementFullscreen: () => E,
+            BElementFullscreen: () => M,
             BIsDragLeaveOutOfElement: () => a,
-            BIsElementScrollableOnAxis: () => F,
+            BIsElementScrollableOnAxis: () => D,
             BIsParent: () => s,
             BIsParentOrSelf: () => l,
-            BlobToFile: () => x,
-            CChildScrolledIntoViewCoordinator: () => k,
-            CancelFullscreen: () => b,
+            BlobToFile: () => R,
+            CChildScrolledIntoViewCoordinator: () => x,
+            CancelFullscreen: () => L,
             ClientRectToScreenCoords: () => m,
-            CopyTextToClipboard: () => _,
-            CopyURLToClipboard: () => w,
+            CopyTextToClipboard: () => w,
+            CopyURLToClipboard: () => v,
             DistanceBetweenRects: () => C,
-            FindAncestorWithAttribute: () => R,
-            FindAncestrally: () => V,
-            FindFirstDescendantsWithAttribute: () => H,
-            FindScrollableAncestor: () => I,
+            FindAncestorWithAttribute: () => H,
+            FindAncestrally: () => F,
+            FindFirstDescendantsWithAttribute: () => I,
+            FindScrollableAncestor: () => V,
+            GetClipboardText: () => _,
             GetDistanceFromRect: () => d,
-            GetFileFromPasteEvent: () => v,
+            GetFileFromPasteEvent: () => E,
             GetOwningWindowForElement: () => f,
             GetOwningWindowForEvent: () => g,
-            GetStyleSheetLinks: () => T,
-            GetStyleSheetLinksForDocument: () => O,
-            HandleMutationAddAndRemove: () => P,
+            GetStyleSheetLinks: () => O,
+            GetStyleSheetLinksForDocument: () => A,
+            HandleMutationAddAndRemove: () => G,
             IsHTMLElement: () => o,
-            IsHTMLElementTextInput: () => S,
-            IsHTMLInputElement: () => L,
-            IsHTMLTextAreaElement: () => y,
+            IsHTMLElementTextInput: () => B,
+            IsHTMLInputElement: () => y,
+            IsHTMLTextAreaElement: () => S,
             RectHeight: () => p,
             RectWidth: () => h,
-            RequestFullscreen: () => M,
-            RunWhenDocumentReady: () => B,
+            RequestFullscreen: () => b,
+            RunWhenDocumentReady: () => k,
             ScrollIntoViewIfNeeded: () => u,
-            UpdateStylesheetsInDocument: () => Z,
-            WaitForNextEvent: () => D,
+            UpdateStylesheetsInDocument: () => P,
+            WaitForNextEvent: () => T,
           });
         var n = r(70655),
           i = r(59071);
@@ -51943,6 +51944,9 @@ var CLSTAMP = "8199681";
           return e && (t = e.ownerDocument.defaultView), t;
         }
         function _(e) {
+          return e.navigator.clipboard.readText();
+        }
+        function w(e) {
           let t = window.document;
           try {
             t = window.top.document;
@@ -51960,11 +51964,11 @@ var CLSTAMP = "8199681";
             t.body.removeChild(r);
           }
         }
-        function w(e) {
-          const t = "steam://openurl/";
-          e.startsWith(t) && (e = e.slice(16)), _(e);
-        }
         function v(e) {
+          const t = "steam://openurl/";
+          e.startsWith(t) && (e = e.slice(16)), w(e);
+        }
+        function E(e) {
           if (!e) return null;
           if (0 == e.clipboardData.files.length) return null;
           return e.clipboardData.types.some(
@@ -51973,7 +51977,7 @@ var CLSTAMP = "8199681";
             ? null
             : e.clipboardData.files[0];
         }
-        function E(e) {
+        function M(e) {
           let t = e.ownerDocument;
           return (
             t.fullscreen ||
@@ -51982,7 +51986,7 @@ var CLSTAMP = "8199681";
             t.msFullscreenElement
           );
         }
-        function M(e, t) {
+        function b(e, t) {
           let r = e;
           r.requestFullscreen
             ? r.requestFullscreen()
@@ -51994,7 +51998,7 @@ var CLSTAMP = "8199681";
             ? r.mozRequestFullScreen()
             : r.msRequestFullscreen && r.msRequestFullscreen();
         }
-        function b(e) {
+        function L(e) {
           let t = e.ownerDocument;
           t.cancelFullscreen
             ? t.cancelFullscreen()
@@ -52004,13 +52008,13 @@ var CLSTAMP = "8199681";
             ? t.mozCancelFullScreen()
             : t.msExitFullscreen && t.msExitFullscreen();
         }
-        function L(e) {
+        function y(e) {
           return "INPUT" === e.nodeName;
         }
-        function y(e) {
+        function S(e) {
           return "TEXTAREA" === e.nodeName;
         }
-        function S(e, t) {
+        function B(e, t) {
           switch (e) {
             case "TEXTAREA":
               return !0;
@@ -52037,12 +52041,12 @@ var CLSTAMP = "8199681";
               return !1;
           }
         }
-        function B(e) {
+        function k(e) {
           "loading" == document.readyState
             ? document.addEventListener("DOMContentLoaded", e)
             : e();
         }
-        class k {
+        class x {
           constructor(e) {
             (this.m_bNeedSort = !1),
               (this.m_bOffsetsInvalidated = !1),
@@ -52107,7 +52111,7 @@ var CLSTAMP = "8199681";
             i.FindAndRemoveWhere(this.m_rgChildren, (t) => t.element == e);
           }
         }
-        function x(e, t) {
+        function R(e, t) {
           const r = e;
           return (
             (r.lastModifiedDate = new Date()),
@@ -52115,12 +52119,12 @@ var CLSTAMP = "8199681";
             e
           );
         }
-        function R(e, t, r) {
+        function H(e, t, r) {
           let n = t.parentElement;
           for (; n && n !== e && !n.hasAttribute(r); ) n = n.parentElement;
           return n || e;
         }
-        function H(e, t) {
+        function I(e, t) {
           const r = [],
             n = Array.prototype.slice.call(e.children).reverse();
           for (; n.length > 0; ) {
@@ -52131,7 +52135,7 @@ var CLSTAMP = "8199681";
           }
           return r;
         }
-        function I(e, t) {
+        function V(e, t) {
           let r = e.parentElement;
           for (; r; ) {
             if (!t || "x" == t) {
@@ -52156,19 +52160,19 @@ var CLSTAMP = "8199681";
           }
           return r;
         }
-        function V(e, t) {
+        function F(e, t) {
           for (; e; ) {
             if (t(e)) return e;
             e = e.parentElement;
           }
         }
-        function F(e, t) {
+        function D(e, t) {
           if (!("ownerDocument" in e)) return !0;
           const r = e.ownerDocument.defaultView.getComputedStyle(e),
             n = "x" === t ? r.overflowX : r.overflowY;
           return "auto" === n || "scroll" === n;
         }
-        function D(e, t) {
+        function T(e, t) {
           return (0, n.mG)(this, void 0, void 0, function* () {
             let r;
             const n = new Promise((n) => {
@@ -52178,10 +52182,10 @@ var CLSTAMP = "8199681";
             return e.removeEventListener(t, r), i;
           });
         }
-        function T() {
-          return O(document);
+        function O() {
+          return A(document);
         }
-        function O(e) {
+        function A(e) {
           const t = {};
           return (
             e.querySelectorAll('link[rel="stylesheet"]').forEach((e) => {
@@ -52190,10 +52194,10 @@ var CLSTAMP = "8199681";
             t
           );
         }
-        function A(e, t) {
-          N(e.document, t, !0);
+        function N(e, t) {
+          Z(e.document, t, !0);
         }
-        function N(e, t, r) {
+        function Z(e, t, r) {
           const n = Object.assign({}, t),
             i = e.getElementsByTagName("head")[0],
             o = i.getElementsByTagName("link"),
@@ -52214,7 +52218,7 @@ var CLSTAMP = "8199681";
           }
           return i.prepend(...l), l;
         }
-        function Z(e, t) {
+        function P(e, t) {
           const r = (e) => decodeURI(e.split("?")[0]).replace(/\\/g, "/"),
             n = Object.keys(t).reduce((e, n) => ((e[r(n)] = [n, t[n]]), e), {}),
             i = e.getElementsByTagName("head")[0].getElementsByTagName("link");
@@ -52231,7 +52235,7 @@ var CLSTAMP = "8199681";
               0, delete n[r(t.href)];
             }
           }
-          N(
+          Z(
             e,
             Object.keys(n).reduce((e, t) => {
               const [r, i] = n[t];
@@ -52239,7 +52243,7 @@ var CLSTAMP = "8199681";
             }, {}),
           );
         }
-        function P(e, t, r) {
+        function G(e, t, r) {
           if ("childList" === e.type) {
             for (let r = 0; r < e.addedNodes.length; r++) {
               const n = e.addedNodes[r];
@@ -54550,9 +54554,9 @@ var CLSTAMP = "8199681";
                 ? !{
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Jul 18 2023 : 11:38:32",
-                    BUILD_TIME_UTC: "Jul 18 2023 : 18:38:32",
-                    BUILD_RTIME_UTC: 1689705512,
+                    BUILD_TIME_LOCAL: "Jul 19 2023 : 17:35:12",
+                    BUILD_TIME_UTC: "Jul 20 2023 : 00:35:12",
+                    BUILD_RTIME_UTC: 1689813312,
                   }.MOBILE_BUILD && document.getElementById(t)
                 : t),
             n)
@@ -55079,7 +55083,7 @@ var CLSTAMP = "8199681";
       {
         27: "01fae04d660df430f1f9",
         33: "2d2bc892ef6e0ca54d7b",
-        58: "279e094303f01e115ddb",
+        58: "b48a263514deff21b1cc",
         131: "2e624424daa2efdbffe7",
         200: "0273f88a1d91abf0685e",
         220: "0355b5539ec987b27c67",
@@ -55176,7 +55180,7 @@ var CLSTAMP = "8199681";
         7781: "9821375343c0d59c2283",
         7832: "35e371c703d65c6c518c",
         7850: "68b0792d044c44ae4211",
-        7962: "953908ee9782e2514c97",
+        7962: "8f83b65ff104c30b897c",
         8011: "2bad8c957b2510d4af07",
         8052: "6f4de79f989a0248e10b",
         8085: "defc47f400418f1b6972",
@@ -55186,11 +55190,11 @@ var CLSTAMP = "8199681";
         8282: "56b46d1f25c4c3e2ec42",
         8319: "bdd10a13b65228b3f0c5",
         8433: "856b8def720da3eafd44",
-        8467: "59a1c4b3b1b4eb5db1ea",
+        8467: "ff0e45d9a188543d9db7",
         8490: "a6f9565ec428a556c271",
         8778: "43a80635ba4afecb34d6",
         8956: "325b308497ebb7e80dab",
-        9116: "3c3595075f7f1bfdf922",
+        9116: "ef9e58be45f3b7cc61ed",
         9125: "6dda54697421891ea10b",
         9365: "28d83d50cbc622d62f8f",
         9399: "686e599aa6750d58e976",

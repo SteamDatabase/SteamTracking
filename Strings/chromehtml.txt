@@ -2,8 +2,6 @@ __TEXT
 
 __text
 __TEXT
-`U
-`U
 __stubs
 __TEXT
 __stub_helper
@@ -21,6 +19,7 @@ __TEXT
 __gcc_except_tab__TEXT
 __unwind_info
 __TEXT
+Df
 __DATA
 __nl_symbol_ptr
 __DATA
@@ -194,9 +193,15 @@ $
 ,
 0
 4
-0
 8
-D
+\
+H
+P
+`
+a
+0
+4
+8
 8
 (
 0
@@ -343,8 +348,9 @@ P
 (
 (
 8
-H
-8
+@
+h
+@
 (
 (
 (
@@ -465,6 +471,7 @@ P
 19CMsgLoadingResource
 14CMsgStatusText
 13CMsgSetCursor
+25CMsgFileLoadDialog_Filter
 18CMsgFileLoadDialog
 26CMsgFileLoadDialogResponse
 15CMsgShowToolTip
@@ -1103,6 +1110,8 @@ Disable GPU accelerated compositing in browsers
 Launch CEF process via sub-shell
 -cef-disable-safe-shutdown-workaround
 Force the usage of the safe browser shutdown workaround for Linux+NV
+-cef-disable-xcomposite-workaround
+Disable the glcomposer workaround applied to some video drivers
 -store
 -community
 -clientui
@@ -1166,7 +1175,8 @@ WebContentsOcclusion
 --disable-gpu-compositing
 --disable-gpu
 --disable-accelerated-video-decode
---use-safe-shutdown-workaround
+-use_safe_shutdown_workaround
+-use_xcomposite_workaround
 --enable-gpu-debugging
 --disablehighdpi
 --force-device-scale-factor=1
@@ -2049,6 +2059,8 @@ type() == TYPE_FIXED64
 google/protobuf/unknown_field_set.cc
 CHECK failed: !fields_.empty():
 CHECK failed: (TYPE_LENGTH_DELIMITED) == (type()):
+CHECK failed: *ptr:
+CHECK failed: (overrun) <= (kSlopBytes):
 Can't happen
 google/protobuf/wire_format.cc
 Extensions of MessageSets must be optional messages.
@@ -2388,14 +2400,12 @@ sc_schinese
 @
 
 
+}
 
 @
 Ic
-|
-u
-W
-:
-
+;
+3
 
 
 
@@ -2413,6 +2423,7 @@ AT=
 D
 @
 @
+
 
 
 @
@@ -2449,7 +2460,6 @@ IcE
 V
 =
 =
-M
 !
 @
 &
