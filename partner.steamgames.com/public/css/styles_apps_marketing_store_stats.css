@@ -4,23 +4,21 @@
 	padding: 12px;
 	margin-bottom: 10px;
 }
-#views_graph
-{
+#views_graph {
 	height: 400px;
 }
 
 #filter_form {
-    position: sticky;
-    top: 0;
-    z-index: 5;
-    box-shadow: 0 0 10px black;
+	position: sticky;
+	top: 0;
+	z-index: 5;
+	box-shadow: 0 0 10px black;
 }
 
-.filter_controls_container
-{
-    background-color: #2F353C;
-    display: flex;
-    padding: 10px 20px;
+.filter_controls_container {
+	background-color: #2F353C;
+	display: flex;
+	padding: 10px 20px;
 	margin-top: 1px;
 	font-size: 10px;
 	justify-content: space-between;
@@ -31,15 +29,13 @@
 	background-color: #000;
 }
 
-.date_range_current_title
-{
+.date_range_current_title {
 	font-size: 10px;
 	text-transform: uppercase;
 	color: #cccccc;
 }
 
-.date_range_current
-{
+.date_range_current {
 	padding-top: 3px;
 	font-size: 16px;
 	color: #989898;
@@ -49,11 +45,10 @@
 	color: #CCCCCC;
 }
 
-.filter_selector_title
-{
+.filter_selector_title {
 	font-size: 13px;
 	text-transform: uppercase;
-    color: #929DAA;
+	color: #929DAA;
 	padding-bottom: 5px;
 }
 
@@ -62,21 +57,20 @@
 	text-align: center;
 }
 
-input.datepicker
-{
+input.datepicker {
 	width: 98px;
-    background-color: rgba(0,0,0,0.3);
-    box-shadow: inset 0 0 10px black;
+	background-color: rgba(0,0,0,0.3);
+	box-shadow: inset 0 0 10px black;
 	margin-top: 4px;
 	position: relative;
 	z-index: 10;
-    border-radius: 3px;
+	border-radius: 3px;
 }
 
 .filtered_header {
 	font-size: 16px;
 	margin-bottom: 25px;
-    margin-top: 20px;
+	margin-top: 20px;
 }
 
 .filtered_header > span, .filtered_header > span > a {
@@ -85,31 +79,30 @@ input.datepicker
 }
 
 .breakdownTable .th {
-    top: 80px;
+	top: 80px;
 }
 
-.landingTable .tr.page_stats
-{
+.landingTable .tr.page_stats {
 	cursor: pointer;
 	border-spacing: 0 5px;
 }
 .landingTable .tr.page_stats .td {
-    font-size: 13px;
-    		font-family: "Motiva Sans", Sans-serif;
+	font-size: 13px;
+			font-family: "Motiva Sans", Sans-serif;
 		font-weight: 300; /* light */
 
 		}
 
 .landingTable .tr.page_stats .td.page_type {
-    max-width: 330px;
-    overflow: hidden;
-    overflow-wrap: anywhere;
+	max-width: 330px;
+	overflow: hidden;
+	overflow-wrap: anywhere;
 }
 
 .landingTable .tr.page_stats .td:hover {
-    background-color: rgba(107, 203, 228, 0.6);
-    color: black;
-    cursor: pointer;
+	background-color: rgba(107, 203, 228, 0.6);
+	color: black;
+	cursor: pointer;
 }
 
 .landingTable .tr.page_stats .td.expander {
@@ -124,17 +117,17 @@ input.datepicker
 .landingTable .tr.feature_stats .td
 {
 	background-color: rgba( 0, 0, 0, 0.6);
-    		font-family: "Motiva Sans", Sans-serif;
+			font-family: "Motiva Sans", Sans-serif;
 		font-weight: 300; /* light */
 
 		}
 .landingTable .tr.feature_stats:hover .td {
-    background-color: rgba( 0, 0, 0, 0.2);
+	background-color: rgba( 0, 0, 0, 0.2);
 }
 .landingTable .tr.feature_stats .td:hover {
-    background-color: rgba(107, 203, 228, 0.6);
-    color: black;
-    cursor: default;
+	background-color: rgba(107, 203, 228, 0.6);
+	color: black;
+	cursor: default;
 }
 
 .landingTable .tr.totals_row .td
@@ -159,15 +152,15 @@ div.jqplot-table-legend-swatch-outline {
 
 .steamworks_traffic_disclaimer {
 	margin-bottom: 20px;
-    border: 1px solid #bd8a43;
-    padding: 12px;
-    border-radius: 4px;
-    margin-top: 8px;
+	border: 1px solid #bd8a43;
+	padding: 12px;
+	border-radius: 4px;
+	margin-top: 8px;
 }
 .steamworks_traffic_disclaimer h3 {
-    color: #bd8a43;
-    font-size: 12px;
-    margin-bottom: 8px;
+	color: #bd8a43;
+	font-size: 12px;
+	margin-bottom: 8px;
 }
 
 .steamworks_traffic_disclaimer ul li {
@@ -185,7 +178,7 @@ div.jqplot-table-legend-swatch-outline {
 	text-align: center;
 	padding: 10px;
 	min-height: 86px;
-    background: black;
+	background: black;
 }
 .stats_header_section:nth-of-type(2) {
 	margin-left: 5px;
@@ -207,20 +200,20 @@ div.jqplot-table-legend-swatch-outline {
 }
 .stat_trusted,
 .stat_allvisitstrusted {
-    color: #91b807;
+	color: #91b807;
 }
 .stat_tracked,
 .stat_trackedTrusted {
-    color: #69bff3;
+	color: #69bff3;
 }
 .stat_wishlist {
-    color: #c1bc20;
+	color: #c1bc20;
 }
 .stat_purchase {
-    color: #7a5eea;
+	color: #7a5eea;
 }
 .stat_activation {
-    color: #c135b0;
+	color: #c135b0;
 }
 .stat_suspect {
 	color: #e35e1c;
@@ -253,27 +246,25 @@ div.jqplot-table-legend-swatch-outline {
 }
 
 .landingTable .page_type strong {
-    color: #ececec;
+	color: #ececec;
 }
 .landingTable .feature_stats strong {
-    color: #cccccc;
+	color: #cccccc;
 }
 .traffic_summary_line {
-    background: black;
-    padding: 4px 8px;
-    box-sizing: border-box;
-    margin-right: 4px;
-    font-size: 17px;
+	background: black;
+	padding: 4px 8px;
+	box-sizing: border-box;
+	margin-right: 4px;
+	font-size: 17px;
 }
 
-.breakdowns_row
-{
+.breakdowns_row {
 	display: flex;
 	padding: 16px 0px;
 }
 
-.geographic_summary
-{
+.geographic_summary {
 	flex: 1 1 0px;
 	display: flex;
 	flex-direction: column;
@@ -282,17 +273,13 @@ div.jqplot-table-legend-swatch-outline {
 
 .countries_container {
 	padding: 16px;
-    background: linear-gradient(126deg, black, #161616);
+	background: linear-gradient(126deg, black, #161616);
 	margin: 16px 0px;
 	height: 100%;
 }
 
 .countries_disclaimer {
 	color: orange;
-}
-.countries_graph
-{
-
 }
 
 .jqplot-xaxis-tick,
@@ -301,46 +288,39 @@ div.jqplot-table-legend-swatch-outline {
 	color: #FFFFFF;
 }
 
-.owner_summary
-{
+.owner_summary {
 	flex: 0 1 0px;
-    min-width: 200px;
+	min-width: 200px;
 	display: flex;
 	flex-direction: column;
 	margin-right: 36px;
 }
 
-.owners_container
-{
-    background: linear-gradient(126deg, black, #161616);
+.owners_container {
+	background: linear-gradient(126deg, black, #161616);
 	margin: 16px 0px;
 	height: 100%;
 }
 
 .owners_container td.jqplot-table-legend {
-    color: white;
-    font-size: 14px;
+	color: white;
+	font-size: 14px;
 }
 
-.owners_graph
-{
-
-    height: 300px;
-    width: 200px;
-
+.owners_graph {
+	height: 300px;
+	width: 200px;
 }
 
-.impressions_summary
-{
-    flex: 0 1 0px;
-    min-width: 333px;
+.impressions_summary {
+	flex: 0 1 0px;
+	min-width: 333px;
 	display: flex;
 	flex-direction: column;
 }
 
-.impressions_content
-{
-    background: linear-gradient(126deg, black, #161616);
+.impressions_content {
+	background: linear-gradient(126deg, black, #161616);
 	margin: 16px 0px;
 	padding: 16px;
 	height: 100%;
@@ -355,47 +335,50 @@ div.jqplot-table-legend-swatch-outline {
 	justify-content: space-between;
 }
 
-.impressions_stat
-{
+.impressions_stat {
 	flex: 1 1 0px;
-    margin-right: 8px;
+	margin-right: 8px;
 }
 
-.impression_num
-{
+.impression_num {
 	font-size: 24px;
 }
 
 .csv_download_row {
-    margin: 10px 0 20px 0;
-    padding: 0px 10px;
-    height: 55px;
-    font-size: 14px;
-    background-color: #101214;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+	margin: 10px 0 20px 0;
+	padding: 0px 10px;
+	height: 55px;
+	font-size: 14px;
+	background-color: #101214;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 
-    .csv_download_title {
-        display: inline-block;
-    }
+	.csv_download_title {
+		display: inline-block;
+	}
 
-    .btn_download {
-        padding: 7px 40px 0;
+	.btn_download {
+		display: flex;
+		align-items: center;
+	}
 
-        > img {
-            margin: auto;
-            vertical-align: middle;
-        }
-    }
+	.csv_download_buttons {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+	}
 }
 
-.download_csv
-{
-	padding: 8px 24px;
-	background: #369DD2;
+.csv_download_row span {
+	padding: 0px 5px;
+}
+
+.csv_download_row img {
+	padding: 5px 0px;
+	vertical-align: middle;
 }
 
 #learnmore_panel {
-    margin-top: 60px;
+	margin-top: 60px;
 }
