@@ -15662,58 +15662,61 @@ and limitations under the License.
         );
       }
       function Co(e) {
-        const { popup: t, bOSX: r } = e,
-          [n, o] = $t.useState(),
-          i = $t.useCallback(() => {
+        const { popup: t, onMaximize: r, bOSX: n } = e,
+          [o, i] = $t.useState(),
+          a = $t.useCallback(() => {
             t.SteamClient.Window.ToggleMaximize();
           }, [t]),
-          a = $t.useCallback(() => {
+          l = $t.useCallback(() => {
             let e = t.screen.availWidth - t.innerWidth,
               r = t.screen.availHeight - t.innerHeight;
             return 0 === e && 0 === r;
           }, [t]),
-          l = $t.useCallback(() => {
+          s = $t.useCallback(() => {
             if (on(t, "Window.IsWindowMaximized"))
               t.SteamClient.Window.IsWindowMaximized((e) => {
-                e != n && o(e);
+                e != o && i(e);
               });
             else {
-              let e = a();
-              e != n && o(e);
+              let e = l();
+              e != o && i(e);
             }
-          }, [t, a, n]);
+          }, [t, l, o]);
         $t.useEffect(
           () => (
-            l(),
-            t.addEventListener("resize", l),
-            () => t.removeEventListener("resize", l)
+            s(),
+            t.addEventListener("resize", s),
+            () => t.removeEventListener("resize", s)
           ),
-          [t, l],
+          [t, s],
         );
-        const s = $t.useCallback(() => {
-          i(), l();
-        }, [i, l]);
+        const u = $t.useCallback(() => {
+          r ? r() : a(), s();
+        }, [r, a, s]);
         return $t.createElement(
           ko,
           {
             className: mn(
-              n ? "restoreButton" : "maximizeButton",
+              o ? "restoreButton" : "maximizeButton",
               "windowControlButton",
             ),
-            onClick: s,
+            onClick: u,
           },
-          !r && (n ? $t.createElement(bn, null) : $t.createElement(yn, null)),
+          !n && (o ? $t.createElement(bn, null) : $t.createElement(yn, null)),
         );
       }
       function Io(e) {
-        const { popup: t, bOSX: r } = e,
-          n = $t.useCallback(() => {
+        const { popup: t, onMinimize: r, bOSX: n } = e,
+          o = $t.useCallback(() => {
             t.SteamClient.Window.Minimize();
           }, [t]);
         return $t.createElement(
           ko,
-          { className: "minimizeButton windowControlButton", onClick: n },
-          !r && $t.createElement(gn, null),
+          {
+            className: "minimizeButton windowControlButton",
+            onClick: null != r ? r : o,
+          },
+          !n && $t.createElement(gn, null),
         );
       }
       function wo(e) {
@@ -15753,15 +15756,18 @@ and limitations under the License.
             style: r,
             hideActions: n,
             hideClose: o,
-            hideMinMax: i,
-            bOSX: a = "macos" == Hr.PLATFORM,
-            bForceWindowFocused: l,
-            onClose: s,
-            extraActions: u,
-            popup: c,
-            children: d,
+            hideMin: i,
+            hideMax: a,
+            bOSX: l = "macos" == Hr.PLATFORM,
+            bForceWindowFocused: s,
+            onMinimize: u,
+            onMaximize: c,
+            onClose: d,
+            extraActions: f,
+            popup: p,
+            children: m,
           } = e,
-          f = (function (e, t = 100) {
+          h = (function (e, t = 100) {
             const [r, n] = Xt().useState(!1),
               o = Xt().useCallback(() => n(!0), [n]),
               i = Xt().useCallback(() => n(!1), [n]);
@@ -15780,37 +15786,39 @@ and limitations under the License.
               ),
               bo(r, t)
             );
-          })(c);
+          })(p);
         return $t.createElement(
           "div",
           {
             className: mn(
               "TitleBar",
               "title-area",
-              a && "OSX",
-              (f || l) && "WindowFocus",
+              l && "OSX",
+              (h || s) && "WindowFocus",
               t,
             ),
             style: r,
           },
           $t.createElement("div", { className: "title-area-highlight" }),
-          $t.createElement("div", { className: "title-area-children" }, d),
+          $t.createElement("div", { className: "title-area-children" }, m),
           !n &&
             $t.createElement(
               $t.Fragment,
               null,
-              u &&
+              f &&
                 $t.createElement(
                   "div",
                   { className: "title-bar-actions extra-actions" },
-                  u,
+                  f,
                 ),
               $t.createElement(
                 "div",
                 { className: "title-bar-actions window-controls" },
-                !o && $t.createElement(wo, { popup: c, onClose: s, bOSX: a }),
-                !i && $t.createElement(Co, { popup: c, bOSX: a }),
-                !i && $t.createElement(Io, { popup: c, bOSX: a }),
+                !o && $t.createElement(wo, { popup: p, onClose: d, bOSX: l }),
+                !a &&
+                  $t.createElement(Co, { popup: p, onMaximize: c, bOSX: l }),
+                !i &&
+                  $t.createElement(Io, { popup: p, onMinimize: u, bOSX: l }),
               ),
             ),
         );
@@ -16820,4 +16828,4 @@ and limitations under the License.
         document.addEventListener("DOMContentLoaded", () => Ei());
     })();
 })();
-//# sourceMappingURL=friends.js.map?contenthash=7124825dfc2bc618463a
+//# sourceMappingURL=friends.js.map?contenthash=63fe323ca72c5d6ccdcc

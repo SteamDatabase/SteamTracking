@@ -1,4 +1,4 @@
-var CLSTAMP = "8204082";
+var CLSTAMP = "8208233";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -4199,9 +4199,9 @@ var CLSTAMP = "8204082";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Jul 19 2023 : 17:35:12",
-                BUILD_TIME_UTC: "Jul 20 2023 : 00:35:12",
-                BUILD_RTIME_UTC: 1689813312,
+                BUILD_TIME_LOCAL: "Jul 21 2023 : 10:49:51",
+                BUILD_TIME_UTC: "Jul 21 2023 : 17:49:51",
+                BUILD_RTIME_UTC: 1689961791,
               }.MOBILE_BUILD)
             ) {
               window.addEventListener("beforeunload", (e) => {
@@ -41213,7 +41213,8 @@ var CLSTAMP = "8204082";
                       onContextMenu: l.OnRootContextMenu,
                     },
                     n.createElement(u.TitleBar, {
-                      hideMinMax: !0,
+                      hideMin: !0,
+                      hideMax: !0,
                       popup: h,
                       hideActions: g,
                       style: f,
@@ -41794,7 +41795,8 @@ var CLSTAMP = "8204082";
           )
             return null;
           const k =
-            null !== (t = e.modal) && void 0 !== t ? t : e.onlyPopoutIfNeeded;
+              null !== (t = e.modal) && void 0 !== t ? t : e.onlyPopoutIfNeeded,
+            x = !e.resizable;
           return n.createElement(
             n.Fragment,
             null,
@@ -41811,7 +41813,8 @@ var CLSTAMP = "8204082";
                   },
                   n.createElement(l.TitleBar, {
                     className: v,
-                    hideMinMax: !e.resizable,
+                    hideMin: x,
+                    hideMax: x,
                     popup: S,
                     hideActions: !g,
                   }),
@@ -50440,61 +50443,64 @@ var CLSTAMP = "8204082";
           l = r(92266),
           s = r(81673);
         function c(e) {
-          const { popup: t, bOSX: r } = e,
-            [l, s] = n.useState(),
-            c = n.useCallback(() => {
+          const { popup: t, onMaximize: r, bOSX: l } = e,
+            [s, c] = n.useState(),
+            u = n.useCallback(() => {
               t.SteamClient.Window.ToggleMaximize();
             }, [t]),
-            u = n.useCallback(() => {
+            d = n.useCallback(() => {
               let e = t.screen.availWidth - t.innerWidth,
                 r = t.screen.availHeight - t.innerHeight;
               return 0 === e && 0 === r;
             }, [t]),
-            d = n.useCallback(() => {
+            m = n.useCallback(() => {
               if ((0, i.w3)(t, "Window.IsWindowMaximized"))
                 t.SteamClient.Window.IsWindowMaximized((e) => {
-                  e != l && s(e);
+                  e != s && c(e);
                 });
               else {
-                let e = u();
-                e != l && s(e);
+                let e = d();
+                e != s && c(e);
               }
-            }, [t, u, l]);
+            }, [t, d, s]);
           n.useEffect(
             () => (
-              d(),
-              t.addEventListener("resize", d),
-              () => t.removeEventListener("resize", d)
+              m(),
+              t.addEventListener("resize", m),
+              () => t.removeEventListener("resize", m)
             ),
-            [t, d],
+            [t, m],
           );
-          const m = n.useCallback(() => {
-            c(), d();
-          }, [c, d]);
+          const h = n.useCallback(() => {
+            r ? r() : u(), m();
+          }, [r, u, m]);
           return n.createElement(
             C,
             {
               className: (0, a.default)(
-                l ? "restoreButton" : "maximizeButton",
+                s ? "restoreButton" : "maximizeButton",
                 "windowControlButton",
               ),
-              onClick: m,
+              onClick: h,
             },
-            !r &&
-              (l
+            !l &&
+              (s
                 ? n.createElement(o.Restore, null)
                 : n.createElement(o.Maximize, null)),
           );
         }
         function u(e) {
-          const { popup: t, bOSX: r } = e,
-            i = n.useCallback(() => {
+          const { popup: t, onMinimize: r, bOSX: i } = e,
+            a = n.useCallback(() => {
               t.SteamClient.Window.Minimize();
             }, [t]);
           return n.createElement(
             C,
-            { className: "minimizeButton windowControlButton", onClick: i },
-            !r && n.createElement(o.Minimize, null),
+            {
+              className: "minimizeButton windowControlButton",
+              onClick: null != r ? r : a,
+            },
+            !i && n.createElement(o.Minimize, null),
           );
         }
         function d(e) {
@@ -50534,45 +50540,50 @@ var CLSTAMP = "8204082";
               style: r,
               hideActions: i,
               hideClose: o,
-              hideMinMax: C,
-              bOSX: m = "macos" == s.Config.PLATFORM,
-              bForceWindowFocused: h,
-              onClose: p,
-              extraActions: g,
-              popup: f,
-              children: _,
+              hideMin: C,
+              hideMax: m,
+              bOSX: h = "macos" == s.Config.PLATFORM,
+              bForceWindowFocused: p,
+              onMinimize: g,
+              onMaximize: f,
+              onClose: _,
+              extraActions: w,
+              popup: v,
+              children: E,
             } = e,
-            w = (0, l.n8)(f);
+            M = (0, l.n8)(v);
           return n.createElement(
             "div",
             {
               className: (0, a.default)(
                 "TitleBar",
                 "title-area",
-                m && "OSX",
-                (w || h) && "WindowFocus",
+                h && "OSX",
+                (M || p) && "WindowFocus",
                 t,
               ),
               style: r,
             },
             n.createElement("div", { className: "title-area-highlight" }),
-            n.createElement("div", { className: "title-area-children" }, _),
+            n.createElement("div", { className: "title-area-children" }, E),
             !i &&
               n.createElement(
                 n.Fragment,
                 null,
-                g &&
+                w &&
                   n.createElement(
                     "div",
                     { className: "title-bar-actions extra-actions" },
-                    g,
+                    w,
                   ),
                 n.createElement(
                   "div",
                   { className: "title-bar-actions window-controls" },
-                  !o && n.createElement(d, { popup: f, onClose: p, bOSX: m }),
-                  !C && n.createElement(c, { popup: f, bOSX: m }),
-                  !C && n.createElement(u, { popup: f, bOSX: m }),
+                  !o && n.createElement(d, { popup: v, onClose: _, bOSX: h }),
+                  !m &&
+                    n.createElement(c, { popup: v, onMaximize: f, bOSX: h }),
+                  !C &&
+                    n.createElement(u, { popup: v, onMinimize: g, bOSX: h }),
                 ),
               ),
           );
@@ -54554,9 +54565,9 @@ var CLSTAMP = "8204082";
                 ? !{
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Jul 19 2023 : 17:35:12",
-                    BUILD_TIME_UTC: "Jul 20 2023 : 00:35:12",
-                    BUILD_RTIME_UTC: 1689813312,
+                    BUILD_TIME_LOCAL: "Jul 21 2023 : 10:49:51",
+                    BUILD_TIME_UTC: "Jul 21 2023 : 17:49:51",
+                    BUILD_RTIME_UTC: 1689961791,
                   }.MOBILE_BUILD && document.getElementById(t)
                 : t),
             n)
@@ -55083,7 +55094,7 @@ var CLSTAMP = "8204082";
       {
         27: "01fae04d660df430f1f9",
         33: "2d2bc892ef6e0ca54d7b",
-        58: "b48a263514deff21b1cc",
+        58: "b2a320755b8ba22a2418",
         131: "2e624424daa2efdbffe7",
         200: "0273f88a1d91abf0685e",
         220: "0355b5539ec987b27c67",
@@ -55180,7 +55191,7 @@ var CLSTAMP = "8204082";
         7781: "9821375343c0d59c2283",
         7832: "35e371c703d65c6c518c",
         7850: "68b0792d044c44ae4211",
-        7962: "8f83b65ff104c30b897c",
+        7962: "f0918665cbba3fbe5c67",
         8011: "2bad8c957b2510d4af07",
         8052: "6f4de79f989a0248e10b",
         8085: "defc47f400418f1b6972",
@@ -55190,7 +55201,7 @@ var CLSTAMP = "8204082";
         8282: "56b46d1f25c4c3e2ec42",
         8319: "bdd10a13b65228b3f0c5",
         8433: "856b8def720da3eafd44",
-        8467: "ff0e45d9a188543d9db7",
+        8467: "a4bb1b01e76074548de1",
         8490: "a6f9565ec428a556c271",
         8778: "43a80635ba4afecb34d6",
         8956: "325b308497ebb7e80dab",
