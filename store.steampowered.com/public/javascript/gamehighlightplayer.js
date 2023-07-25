@@ -634,12 +634,11 @@ HighlightPlayer.prototype.OnWebPanelHidden = function()
 	{
 		var id = this.GetMovieId( this.m_activeItem );
 		var $Movie = $JFromIDOrElement('movie_' + id);
-		if( $Movie.is('video') )
+		if ( !$Movie.prop( 'paused' ) )
+		{
 			$Movie.trigger( 'pause' );
-		else
-			$Movie.trigger( 'callPauseVideo' );
-
-		this.m_bPausedForHidden = true;
+			this.m_bPausedForHidden = true;
+		}
 	}
 }
 

@@ -39,6 +39,7 @@
           "partnereventshared_EventEditorTextTitleLengthInfo_1eoiU",
         CollapsableSectionTitle:
           "partnereventshared_CollapsableSectionTitle_10FD9",
+        SectionTitle: "partnereventshared_SectionTitle_1Wgh0",
         EventSectionTitleCtn: "partnereventshared_EventSectionTitleCtn_1qQl6",
         EventSectionTitle: "partnereventshared_EventSectionTitle_YggHe",
         EventSectionSpacer: "partnereventshared_EventSectionSpacer_1Z2oL",

@@ -1346,7 +1346,7 @@
         M = o.n(D),
         H = o(53738),
         U = o.n(H),
-        G = o(28106);
+        G = o(701);
       function F() {
         return a.createElement(
           a.Fragment,
@@ -1523,7 +1523,7 @@
       }
       var J = o(14826),
         j = o(32765),
-        K = o(7770),
+        K = o(69338),
         Q = o(22444);
       function q(e, t) {
         const o = (0, j.kQ)("editorconfig", t);

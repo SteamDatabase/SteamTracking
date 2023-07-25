@@ -83,7 +83,7 @@
     white-space: nowrap;
     text-overflow: ellipsis;
 }
-#utmdetails_table tr td.clickable span.expanded {
+#utmdetails_table tr td span.expanded {
     visibility: hidden;
     position: absolute;
     top: 24px;

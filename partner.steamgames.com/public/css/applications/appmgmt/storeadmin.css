@@ -213,7 +213,8 @@ b {
   color: #868f98;
   vertical-align: middle;
 }
-.partnereventshared_CollapsableSectionTitle_10FD9 {
+.partnereventshared_CollapsableSectionTitle_10FD9,
+.partnereventshared_SectionTitle_1Wgh0 {
   text-transform: uppercase;
   font-size: 18px;
   letter-spacing: 1px;
@@ -1449,16 +1450,43 @@ button.DialogButton.controllersupportinfo_StartWizardButton_3aJmq {
   padding: 5%;
   background: linear-gradient(90deg, #15202d 0%, #0e141c 100%);
 }
-.controllersupportedit_ReleaseDateModal_1eMmB > .DialogContent_InnerWidth {
-  width: 1200px;
-  min-width: 1200px;
-  height: 920px;
+.controllersupportedit_ControllerWizardModal_2M4zw {
+  height: 100vh;
+  max-height: 920px;
+}
+.controllersupportedit_ControllerWizardModal_2M4zw > .DialogContent_InnerWidth {
+  width: 900px;
+  min-width: 900px;
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 17px;
   padding-right: 17px;
+  box-sizing: border-box;
 }
-.controllersupportedit_ReleaseDateRequestBody_1tqCc {
+.controllersupportedit_ControllerWizardModal_2M4zw .Shared_Radio_Group {
+  flex-direction: column;
+  margin-bottom: 70px;
+}
+.controllersupportedit_ControllerWizardModal_2M4zw
+  .Shared_Radio_Group
+  .RadioButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  position: relative;
+}
+.controllersupportedit_ControllerWizardModal_2M4zw
+  .Shared_Radio_Group
+  .RadioButton
+  .controllersupportedit_GameName_1wayR {
+  margin-left: 4px;
+}
+.controllersupportedit_WizardContainer_1j_e5 {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.controllersupportedit_WizardBody_2Agdm {
   margin-bottom: 16px;
 }
 .controllersupportedit_Column_35X7X {
@@ -1552,21 +1580,6 @@ button.DialogButton.controllersupportinfo_StartWizardButton_3aJmq {
   .DialogBodyText {
   margin-bottom: 8px;
 }
-.controllersupportedit_ReleaseDateModal_1eMmB .Shared_Radio_Group {
-  flex-direction: column;
-  margin-bottom: 70px;
-}
-.controllersupportedit_ReleaseDateModal_1eMmB .Shared_Radio_Group .RadioButton {
-  display: flex;
-  flex-direction: row;
-  justify-content: start;
-}
-.controllersupportedit_ReleaseDateModal_1eMmB
-  .Shared_Radio_Group
-  .RadioButton
-  .controllersupportedit_GameName_1wayR {
-  margin-left: 4px;
-}
 .controllersupportedit_RadioButton_1Cqgv {
   box-sizing: border-box;
   position: absolute;
@@ -1608,6 +1621,7 @@ button.DialogButton.controllersupportinfo_StartWizardButton_3aJmq {
   display: flex;
   flex-direction: row;
   margin-top: 36px;
+  flex-basis: 0;
 }
 .controllersupportedit_StepLabel_3Q7KP {
   margin-top: 36px;
@@ -1621,10 +1635,26 @@ button.DialogButton.controllersupportinfo_StartWizardButton_3aJmq {
   width: 117px;
   margin-right: 16px;
 }
+.controllersupportedit_StepImgContainer_27_A1 svg {
+  color: #fff;
+}
 .controllersupportedit_StepInstruction_T9eBi {
   white-space: break-spaces;
-  margin-bottom: 81px;
+  margin-bottom: 20px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  color: #dedede;
+  max-width: 900px;
+}
+.controllersupportedit_StepInstruction_T9eBi p {
+  color: #dedede;
+  font-size: 16px;
+}
+.controllersupportedit_StepInstruction_T9eBi li {
+  margin-bottom: 4px;
 }
 .controllersupportedit_ControlsQuestion_86lVB {
+  flex-basis: 0;
   margin-bottom: 11px;
+  color: #dedede;
 }

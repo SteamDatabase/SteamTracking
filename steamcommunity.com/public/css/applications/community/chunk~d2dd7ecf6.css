@@ -3507,6 +3507,12 @@ p a:hover {
   justify-content: space-evenly;
   margin-top: 12px;
 }
+.imagedraganddroptarget_ImageUploadBar_3qMiP label {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 .imagedraganddroptarget_SelectImageButton_39lgc {
   color: #dfe3e6;
   transition-property: background, color, box-shadow;
@@ -3516,7 +3522,7 @@ p a:hover {
   background-position: 25%;
   background-size: 330% 100%;
   padding: 8px 25px;
-  line-height: 32px;
+  line-height: 20px;
   border-radius: 2px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }

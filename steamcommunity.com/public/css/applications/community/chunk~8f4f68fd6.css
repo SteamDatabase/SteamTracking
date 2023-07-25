@@ -2779,3 +2779,27 @@ svg.steamtemplates_FriendIndicator_suNJh .Outline {
   fill: #1b2838;
   stroke-width: 2;
 }
+.steamtemplates_HideButton_1E17b {
+  position: absolute;
+  right: 7px;
+  top: 6px;
+  cursor: pointer;
+  display: none;
+}
+.steamtemplates_HideButton_1E17b svg {
+  width: 16px !important;
+  height: 16px !important;
+}
+.steamtemplates_HideButton_1E17b path {
+  stroke: #8b929a;
+}
+.steamtemplates_HideButton_1E17b :hover path {
+  stroke: #8a220f;
+}
+.steamtemplates_SteamNotificationWrapper_wMxeW {
+  position: relative;
+}
+.steamtemplates_SteamNotificationWrapper_wMxeW:hover
+  .steamtemplates_HideButton_1E17b {
+  display: block;
+}

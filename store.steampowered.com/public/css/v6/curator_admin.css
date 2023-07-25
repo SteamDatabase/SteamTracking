@@ -1015,6 +1015,9 @@ background: -webkit-linear-gradient( top, #e3eaef 5%, #c7d5e0 95%);
 	background-color: rgba( 255, 255, 255, 0.075 );
 }
 .overview_section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 	padding: 10px;
 	background-color: rgba( 255, 255, 255, 0.075 );
 }
@@ -1051,11 +1054,7 @@ background: -webkit-linear-gradient( top, #e3eaef 5%, #c7d5e0 95%);
 }
 
 .pending_review_offer_image {
-	width: 226px;
-	padding-right: 4px;
-}
-.pending_review_offer_image:nth-of-type(3) {
-	padding-right: 0px;
+    width: calc((100%/3) - 8px);
 }
 
 .createreview_list {

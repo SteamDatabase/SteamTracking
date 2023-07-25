@@ -803,6 +803,14 @@ div.featuredlc_MessageFooter_2S4fB {
   flex-direction: column;
   align-items: center;
 }
+.BasicUI .image_MessageContent_rohJ- {
+  padding: 13px 13px 0 13px;
+}
+@media screen and (max-height: 540px) {
+  .BasicUI .image_MessageContent_rohJ- {
+    padding: 7px 13px 0 13px;
+  }
+}
 .image_MessageContent_rohJ-:hover .image_IsBlur_2lGtR img {
   filter: brightness(1.6) saturate(1.2);
   box-shadow: inset 0 6px 10px rgba(0, 0, 0, 0.6666666667);
@@ -819,7 +827,7 @@ div.featuredlc_MessageFooter_2S4fB {
 .image_GameImage_2It5b.image_IsBlur_2lGtR {
   pointer-events: none;
   filter: blur(20px);
-  transform: scaleX(1.22) scaleY(1.22);
+  transform: scaleX(1.27) scaleY(1.22);
   position: absolute;
   -webkit-mask-image: linear-gradient(
     to top,
@@ -840,6 +848,9 @@ div.featuredlc_MessageFooter_2S4fB {
   transition-property: filter, transform, box-shadow;
   transition-duration: 0.25s;
   transition-timing-function: ease-out;
+}
+.image_GameImage_2It5b video {
+  width: 100%;
 }
 A:visited {
   color: #fff;
@@ -878,6 +889,15 @@ A:active {
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: 12px;
+}
+@media screen and (max-height: 540px) {
+  .BasicUI .image_MessageFooter_20RJ2 {
+    margin-top: 7px;
+  }
+  .BasicUI .image_MessageFooter_20RJ2 .image_ButtonAndPriceCtn_2FwUG {
+    justify-content: center;
+    margin-bottom: 0;
+  }
 }
 .image_NoButton_1FbSd {
   flex-direction: row-reverse;
@@ -930,6 +950,10 @@ A:active {
   height: 46px;
   margin-top: 0px;
   background: rgba(0, 0, 0, 0.3);
+}
+.image_MessagePriceCtn_ddVk7 .StoreSalePriceWidgetContainer:not(.Discounted) {
+  padding: 4px 8px;
+  box-sizing: border-box;
 }
 .image_Price_KtsI7 {
   height: 59px;
@@ -1013,6 +1037,7 @@ A:active {
   }
   .image_GameImage_2It5b img {
     max-width: 330px;
+    width: 100%;
   }
   .image_TextTop_3cnZM,
   .image_TextBottom_2pJeu {
@@ -1031,6 +1056,12 @@ A:active {
     padding: 9px 12px 0px;
     height: 17px;
     line-height: 9px;
+  }
+  .BasicUI .image_Btn_3YohC {
+    display: none;
+  }
+  .image_MessagePriceCtn_ddVk7 .StoreSalePriceWidgetContainer {
+    height: 30px;
   }
   .image_Btn_3YohC:hover {
     box-shadow: 2px 2px 6px #000;

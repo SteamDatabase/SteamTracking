@@ -5,49 +5,16 @@
   [7942],
   {
     80381: (e, r, t) => {
-      t.d(r, { K9: () => u, Vy: () => m, fG: () => w, tR: () => d });
+      t.d(r, { K9: () => B, Vy: () => b, fG: () => _, tR: () => m });
       var i = t(45878),
-        n = t(29063);
-      const a = i.Message;
-      class s extends a {
-        constructor(e = null) {
-          super(), a.initialize(this, e, 0, -1, void 0, null);
-        }
-        toObject(e = !1) {
-          return s.toObject(e, this);
-        }
-        static toObject(e, r) {
-          return e ? { $jspbMessageInstance: r } : {};
-        }
-        static fromObject(e) {
-          return new s();
-        }
-        static deserializeBinary(e) {
-          let r = new i.BinaryReader(e),
-            t = new s();
-          return s.deserializeBinaryFromReader(t, r);
-        }
-        static deserializeBinaryFromReader(e, r) {
-          return e;
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return s.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, r) {}
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return s.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CUserReviews_Update_Response";
-        }
-      }
-      class o extends a {
+        n = t(29063),
+        a = t(54856);
+      const s = i.Message;
+      class o extends s {
         constructor(e = null) {
           super(),
-            o.prototype.reaction_type || n.aR(o.M()),
-            a.initialize(this, e, 0, -1, void 0, null);
+            o.prototype.recommendationid || n.aR(o.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -55,12 +22,39 @@
               (o.sm_m = {
                 proto: o,
                 fields: {
-                  reaction_type: {
+                  recommendationid: {
                     n: 1,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
+                    br: n.FE.readUint64String,
+                    bw: n.Xc.writeUint64String,
                   },
-                  count: { n: 2, br: n.FE.readUint32, bw: n.Xc.writeUint32 },
+                  review_text: {
+                    n: 2,
+                    br: n.FE.readString,
+                    bw: n.Xc.writeString,
+                  },
+                  voted_up: { n: 3, br: n.FE.readBool, bw: n.Xc.writeBool },
+                  is_public: { n: 4, br: n.FE.readBool, bw: n.Xc.writeBool },
+                  language: { n: 5, br: n.FE.readString, bw: n.Xc.writeString },
+                  is_in_early_access: {
+                    n: 6,
+                    br: n.FE.readBool,
+                    bw: n.Xc.writeBool,
+                  },
+                  received_compensation: {
+                    n: 7,
+                    br: n.FE.readBool,
+                    bw: n.Xc.writeBool,
+                  },
+                  comments_disabled: {
+                    n: 8,
+                    br: n.FE.readBool,
+                    bw: n.Xc.writeBool,
+                  },
+                  hide_in_steam_china: {
+                    n: 9,
+                    br: n.FE.readBool,
+                    bw: n.Xc.writeBool,
+                  },
                 },
               }),
             o.sm_m
@@ -98,20 +92,112 @@
           return o.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CUserReviews_Recommendation_LoyaltyReaction";
+          return "CUserReviews_Update_Request";
         }
       }
-      class c extends a {
+      class c extends s {
+        constructor(e = null) {
+          super(), s.initialize(this, e, 0, -1, void 0, null);
+        }
+        toObject(e = !1) {
+          return c.toObject(e, this);
+        }
+        static toObject(e, r) {
+          return e ? { $jspbMessageInstance: r } : {};
+        }
+        static fromObject(e) {
+          return new c();
+        }
+        static deserializeBinary(e) {
+          let r = new i.BinaryReader(e),
+            t = new c();
+          return c.deserializeBinaryFromReader(t, r);
+        }
+        static deserializeBinaryFromReader(e, r) {
+          return e;
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return c.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, r) {}
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return c.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CUserReviews_Update_Response";
+        }
+      }
+      class l extends s {
         constructor(e = null) {
           super(),
-            c.prototype.recommendationid || n.aR(c.M()),
-            a.initialize(this, e, 0, -1, [40], null);
+            l.prototype.reaction_type || n.aR(l.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            c.sm_m ||
-              (c.sm_m = {
-                proto: c,
+            l.sm_m ||
+              (l.sm_m = {
+                proto: l,
+                fields: {
+                  reaction_type: {
+                    n: 1,
+                    br: n.FE.readUint32,
+                    bw: n.Xc.writeUint32,
+                  },
+                  count: { n: 2, br: n.FE.readUint32, bw: n.Xc.writeUint32 },
+                },
+              }),
+            l.sm_m
+          );
+        }
+        static MBF() {
+          return l.sm_mbf || (l.sm_mbf = n.Bh(l.M())), l.sm_mbf;
+        }
+        toObject(e = !1) {
+          return l.toObject(e, this);
+        }
+        static toObject(e, r) {
+          return n.TA(l.M(), e, r);
+        }
+        static fromObject(e) {
+          return n.aD(l.M(), e);
+        }
+        static deserializeBinary(e) {
+          let r = new i.BinaryReader(e),
+            t = new l();
+          return l.deserializeBinaryFromReader(t, r);
+        }
+        static deserializeBinaryFromReader(e, r) {
+          return n.F(l.MBF(), e, r);
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return l.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, r) {
+          n.l2(l.M(), e, r);
+        }
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return l.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CUserReviews_Recommendation_LoyaltyReaction";
+        }
+      }
+      class d extends s {
+        constructor(e = null) {
+          super(),
+            d.prototype.recommendationid || n.aR(d.M()),
+            s.initialize(this, e, 0, -1, [40], null);
+        }
+        static M() {
+          return (
+            d.sm_m ||
+              (d.sm_m = {
+                proto: d,
                 fields: {
                   recommendationid: {
                     n: 1,
@@ -280,7 +366,7 @@
                     br: n.FE.readInt32,
                     bw: n.Xc.writeInt32,
                   },
-                  reactions: { n: 40, c: o, r: !0, q: !0 },
+                  reactions: { n: 40, c: l, r: !0, q: !0 },
                   ipaddress: {
                     n: 41,
                     br: n.FE.readString,
@@ -296,59 +382,6 @@
                     br: n.FE.readString,
                     bw: n.Xc.writeString,
                   },
-                },
-              }),
-            c.sm_m
-          );
-        }
-        static MBF() {
-          return c.sm_mbf || (c.sm_mbf = n.Bh(c.M())), c.sm_mbf;
-        }
-        toObject(e = !1) {
-          return c.toObject(e, this);
-        }
-        static toObject(e, r) {
-          return n.TA(c.M(), e, r);
-        }
-        static fromObject(e) {
-          return n.aD(c.M(), e);
-        }
-        static deserializeBinary(e) {
-          let r = new i.BinaryReader(e),
-            t = new c();
-          return c.deserializeBinaryFromReader(t, r);
-        }
-        static deserializeBinaryFromReader(e, r) {
-          return n.F(c.MBF(), e, r);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return c.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, r) {
-          n.l2(c.M(), e, r);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return c.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "RecommendationDetails";
-        }
-      }
-      class d extends a {
-        constructor(e = null) {
-          super(),
-            d.prototype.appid || n.aR(d.M()),
-            a.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            d.sm_m ||
-              (d.sm_m = {
-                proto: d,
-                fields: {
-                  appid: { n: 1, br: n.FE.readUint32, bw: n.Xc.writeUint32 },
                 },
               }),
             d.sm_m
@@ -386,89 +419,23 @@
           return d.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CUserReviews_GetFriendsRecommendedApp_Request";
+          return "RecommendationDetails";
         }
       }
-      class l extends a {
+      class m extends s {
         constructor(e = null) {
           super(),
-            l.prototype.accountids_recommended || n.aR(l.M()),
-            a.initialize(this, e, 0, -1, [1, 3], null);
-        }
-        static M() {
-          return (
-            l.sm_m ||
-              (l.sm_m = {
-                proto: l,
-                fields: {
-                  accountids_recommended: {
-                    n: 1,
-                    r: !0,
-                    q: !0,
-                    br: n.FE.readUint32,
-                    pbr: n.FE.readPackedUint32,
-                    bw: n.Xc.writeRepeatedUint32,
-                  },
-                  accountids_not_recommended: {
-                    n: 3,
-                    r: !0,
-                    q: !0,
-                    br: n.FE.readUint32,
-                    pbr: n.FE.readPackedUint32,
-                    bw: n.Xc.writeRepeatedUint32,
-                  },
-                },
-              }),
-            l.sm_m
-          );
-        }
-        static MBF() {
-          return l.sm_mbf || (l.sm_mbf = n.Bh(l.M())), l.sm_mbf;
-        }
-        toObject(e = !1) {
-          return l.toObject(e, this);
-        }
-        static toObject(e, r) {
-          return n.TA(l.M(), e, r);
-        }
-        static fromObject(e) {
-          return n.aD(l.M(), e);
-        }
-        static deserializeBinary(e) {
-          let r = new i.BinaryReader(e),
-            t = new l();
-          return l.deserializeBinaryFromReader(t, r);
-        }
-        static deserializeBinaryFromReader(e, r) {
-          return n.F(l.MBF(), e, r);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return l.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, r) {
-          n.l2(l.M(), e, r);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return l.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CUserReviews_GetFriendsRecommendedApp_Response";
-        }
-      }
-      class m extends a {
-        constructor(e = null) {
-          super(),
-            m.prototype.requests || n.aR(m.M()),
-            a.initialize(this, e, 0, -1, [1], null);
+            m.prototype.appid || n.aR(m.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
             m.sm_m ||
               (m.sm_m = {
                 proto: m,
-                fields: { requests: { n: 1, c: u, r: !0, q: !0 } },
+                fields: {
+                  appid: { n: 1, br: n.FE.readUint32, bw: n.Xc.writeUint32 },
+                },
               }),
             m.sm_m
           );
@@ -505,14 +472,14 @@
           return m.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CUserReviews_GetIndividualRecommendations_Request";
+          return "CUserReviews_GetFriendsRecommendedApp_Request";
         }
       }
-      class u extends a {
+      class u extends s {
         constructor(e = null) {
           super(),
-            u.prototype.steamid || n.aR(u.M()),
-            a.initialize(this, e, 0, -1, void 0, null);
+            u.prototype.accountids_recommended || n.aR(u.M()),
+            s.initialize(this, e, 0, -1, [1, 3], null);
         }
         static M() {
           return (
@@ -520,12 +487,22 @@
               (u.sm_m = {
                 proto: u,
                 fields: {
-                  steamid: {
+                  accountids_recommended: {
                     n: 1,
-                    br: n.FE.readUint64String,
-                    bw: n.Xc.writeUint64String,
+                    r: !0,
+                    q: !0,
+                    br: n.FE.readUint32,
+                    pbr: n.FE.readPackedUint32,
+                    bw: n.Xc.writeRepeatedUint32,
                   },
-                  appid: { n: 2, br: n.FE.readUint32, bw: n.Xc.writeUint32 },
+                  accountids_not_recommended: {
+                    n: 3,
+                    r: !0,
+                    q: !0,
+                    br: n.FE.readUint32,
+                    pbr: n.FE.readPackedUint32,
+                    bw: n.Xc.writeRepeatedUint32,
+                  },
                 },
               }),
             u.sm_m
@@ -563,21 +540,21 @@
           return u.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CUserReviews_GetIndividualRecommendations_Request_RecommendationRequest";
+          return "CUserReviews_GetFriendsRecommendedApp_Response";
         }
       }
-      class b extends a {
+      class b extends s {
         constructor(e = null) {
           super(),
-            b.prototype.recommendations || n.aR(b.M()),
-            a.initialize(this, e, 0, -1, [1], null);
+            b.prototype.requests || n.aR(b.M()),
+            s.initialize(this, e, 0, -1, [1], null);
         }
         static M() {
           return (
             b.sm_m ||
               (b.sm_m = {
                 proto: b,
-                fields: { recommendations: { n: 1, c, r: !0, q: !0 } },
+                fields: { requests: { n: 1, c: B, r: !0, q: !0 } },
               }),
             b.sm_m
           );
@@ -614,29 +591,142 @@
           return b.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
+          return "CUserReviews_GetIndividualRecommendations_Request";
+        }
+      }
+      class B extends s {
+        constructor(e = null) {
+          super(),
+            B.prototype.steamid || n.aR(B.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            B.sm_m ||
+              (B.sm_m = {
+                proto: B,
+                fields: {
+                  steamid: {
+                    n: 1,
+                    br: n.FE.readUint64String,
+                    bw: n.Xc.writeUint64String,
+                  },
+                  appid: { n: 2, br: n.FE.readUint32, bw: n.Xc.writeUint32 },
+                },
+              }),
+            B.sm_m
+          );
+        }
+        static MBF() {
+          return B.sm_mbf || (B.sm_mbf = n.Bh(B.M())), B.sm_mbf;
+        }
+        toObject(e = !1) {
+          return B.toObject(e, this);
+        }
+        static toObject(e, r) {
+          return n.TA(B.M(), e, r);
+        }
+        static fromObject(e) {
+          return n.aD(B.M(), e);
+        }
+        static deserializeBinary(e) {
+          let r = new i.BinaryReader(e),
+            t = new B();
+          return B.deserializeBinaryFromReader(t, r);
+        }
+        static deserializeBinaryFromReader(e, r) {
+          return n.F(B.MBF(), e, r);
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return B.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, r) {
+          n.l2(B.M(), e, r);
+        }
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return B.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CUserReviews_GetIndividualRecommendations_Request_RecommendationRequest";
+        }
+      }
+      class w extends s {
+        constructor(e = null) {
+          super(),
+            w.prototype.recommendations || n.aR(w.M()),
+            s.initialize(this, e, 0, -1, [1], null);
+        }
+        static M() {
+          return (
+            w.sm_m ||
+              (w.sm_m = {
+                proto: w,
+                fields: { recommendations: { n: 1, c: d, r: !0, q: !0 } },
+              }),
+            w.sm_m
+          );
+        }
+        static MBF() {
+          return w.sm_mbf || (w.sm_mbf = n.Bh(w.M())), w.sm_mbf;
+        }
+        toObject(e = !1) {
+          return w.toObject(e, this);
+        }
+        static toObject(e, r) {
+          return n.TA(w.M(), e, r);
+        }
+        static fromObject(e) {
+          return n.aD(w.M(), e);
+        }
+        static deserializeBinary(e) {
+          let r = new i.BinaryReader(e),
+            t = new w();
+          return w.deserializeBinaryFromReader(t, r);
+        }
+        static deserializeBinaryFromReader(e, r) {
+          return n.F(w.MBF(), e, r);
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return w.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, r) {
+          n.l2(w.M(), e, r);
+        }
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return w.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
           return "CUserReviews_GetIndividualRecommendations_Response";
         }
       }
-      var w;
+      var _;
       !(function (e) {
         (e.Update = function (e, r) {
-          return e.SendMsg("UserReviews.Update#1", r, s, { ePrivilege: 3 });
+          return e.SendMsg("UserReviews.Update#1", (0, a.MD)(o, r), c, {
+            ePrivilege: 3,
+          });
         }),
           (e.GetFriendsRecommendedApp = function (e, r) {
-            return e.SendMsg("UserReviews.GetFriendsRecommendedApp#1", r, l, {
-              bConstMethod: !0,
-              ePrivilege: 1,
-            });
+            return e.SendMsg(
+              "UserReviews.GetFriendsRecommendedApp#1",
+              (0, a.MD)(m, r),
+              u,
+              { bConstMethod: !0, ePrivilege: 1 },
+            );
           }),
           (e.GetIndividualRecommendations = function (e, r) {
             return e.SendMsg(
               "UserReviews.GetIndividualRecommendations#1",
-              r,
-              b,
+              (0, a.MD)(b, r),
+              w,
               { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 2 },
             );
           });
-      })(w || (w = {}));
+      })(_ || (_ = {}));
     },
   },
 ]);

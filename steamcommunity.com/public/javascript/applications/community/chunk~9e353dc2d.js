@@ -39,6 +39,7 @@
           "partnereventshared_EventEditorTextTitleLengthInfo_1eoiU",
         CollapsableSectionTitle:
           "partnereventshared_CollapsableSectionTitle_10FD9",
+        SectionTitle: "partnereventshared_SectionTitle_1Wgh0",
         EventSectionTitleCtn: "partnereventshared_EventSectionTitleCtn_1qQl6",
         EventSectionTitle: "partnereventshared_EventSectionTitle_YggHe",
         EventSectionSpacer: "partnereventshared_EventSectionSpacer_1Z2oL",
@@ -571,7 +572,7 @@
         Ai: () => j,
         H6: () => h,
         Kj: () => _,
-        Sw: () => D,
+        Sw: () => g,
         Zg: () => E,
         uv: () => T,
         w$: () => u,
@@ -904,7 +905,7 @@
           return r.createElement("div", { className: a.ShortDateRange }, p, T);
         }
       };
-      function D(e) {
+      function g(e) {
         const {
           rtStartDate: t,
           rtEndDate: n,

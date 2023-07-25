@@ -4867,7 +4867,7 @@
         w = r(42456),
         S = r(49587),
         E = r(32765),
-        M = r(67727),
+        M = r(78423),
         b = r(38975),
         v = r(51438);
       const N = i.createContext(() => {}),
@@ -7608,7 +7608,7 @@
       var ge = r(7323),
         fe = r(50355),
         Ce = r(58961),
-        Ie = r(7770),
+        Ie = r(69338),
         ye = r(42109),
         we = r(46634);
       function Se(e) {
@@ -11155,7 +11155,7 @@
     },
     96322: (e, t, r) => {
       "use strict";
-      r.r(t), r.d(t, { default: () => yr });
+      r.r(t), r.d(t, { default: () => Sr });
       var n = r(33940),
         i = r(89526),
         a = r(59934),
@@ -13084,7 +13084,7 @@
             ),
           );
         };
-      var pt = r(67727);
+      var pt = r(78423);
       const ut =
           r.p +
           "images/applications/store/game_tiles.png?v=valveisgoodatcaching",
@@ -14891,8 +14891,8 @@
       class lr extends Kt {
         constructor(e = null) {
           super(),
-            lr.prototype.item || $t.aR(lr.M()),
-            Kt.initialize(this, e, 0, -1, [4], null);
+            lr.prototype.auctiondescriptionid || $t.aR(lr.M()),
+            Kt.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -14900,18 +14900,11 @@
               (lr.sm_m = {
                 proto: lr,
                 fields: {
-                  item: { n: 1, c: tr },
-                  count_total: {
-                    n: 2,
-                    br: $t.FE.readInt32,
-                    bw: $t.Xc.writeInt32,
+                  auctiondescriptionid: {
+                    n: 1,
+                    br: $t.FE.readUint64String,
+                    bw: $t.Xc.writeUint64String,
                   },
-                  current_user_position: {
-                    n: 3,
-                    br: $t.FE.readInt32,
-                    bw: $t.Xc.writeInt32,
-                  },
-                  winning_bids: { n: 4, c: er, r: !0, q: !0 },
                 },
               }),
             lr.sm_m
@@ -14949,14 +14942,14 @@
           return lr.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CAuction_GetBidsForItem_Response";
+          return "CAuction_GetBidsForItem_Request";
         }
       }
       class cr extends Kt {
         constructor(e = null) {
           super(),
-            cr.prototype.auctiondescriptionid || $t.aR(cr.M()),
-            Kt.initialize(this, e, 0, -1, void 0, null);
+            cr.prototype.item || $t.aR(cr.M()),
+            Kt.initialize(this, e, 0, -1, [4], null);
         }
         static M() {
           return (
@@ -14964,11 +14957,18 @@
               (cr.sm_m = {
                 proto: cr,
                 fields: {
-                  auctiondescriptionid: {
-                    n: 1,
-                    br: $t.FE.readUint64String,
-                    bw: $t.Xc.writeUint64String,
+                  item: { n: 1, c: tr },
+                  count_total: {
+                    n: 2,
+                    br: $t.FE.readInt32,
+                    bw: $t.Xc.writeInt32,
                   },
+                  current_user_position: {
+                    n: 3,
+                    br: $t.FE.readInt32,
+                    bw: $t.Xc.writeInt32,
+                  },
+                  winning_bids: { n: 4, c: er, r: !0, q: !0 },
                 },
               }),
             cr.sm_m
@@ -15006,19 +15006,28 @@
           return cr.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CAuction_GetUserBidForItem_Request";
+          return "CAuction_GetBidsForItem_Response";
         }
       }
       class mr extends Kt {
         constructor(e = null) {
           super(),
-            mr.prototype.bid || $t.aR(mr.M()),
+            mr.prototype.auctiondescriptionid || $t.aR(mr.M()),
             Kt.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
             mr.sm_m ||
-              (mr.sm_m = { proto: mr, fields: { bid: { n: 1, c: er } } }),
+              (mr.sm_m = {
+                proto: mr,
+                fields: {
+                  auctiondescriptionid: {
+                    n: 1,
+                    br: $t.FE.readUint64String,
+                    bw: $t.Xc.writeUint64String,
+                  },
+                },
+              }),
             mr.sm_m
           );
         }
@@ -15054,19 +15063,19 @@
           return mr.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CAuction_GetUserBidForItem_Response";
+          return "CAuction_GetUserBidForItem_Request";
         }
       }
       class dr extends Kt {
         constructor(e = null) {
           super(),
-            dr.prototype.item || $t.aR(dr.M()),
+            dr.prototype.bid || $t.aR(dr.M()),
             Kt.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
             dr.sm_m ||
-              (dr.sm_m = { proto: dr, fields: { item: { n: 1, c: tr } } }),
+              (dr.sm_m = { proto: dr, fields: { bid: { n: 1, c: er } } }),
             dr.sm_m
           );
         }
@@ -15102,21 +15111,42 @@
           return dr.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CAuction_GetItemDetails_Response";
+          return "CAuction_GetUserBidForItem_Response";
         }
       }
       class pr extends Kt {
         constructor(e = null) {
-          super(), Kt.initialize(this, e, 0, -1, void 0, null);
+          super(),
+            pr.prototype.auctiondescriptionid || $t.aR(pr.M()),
+            Kt.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            pr.sm_m ||
+              (pr.sm_m = {
+                proto: pr,
+                fields: {
+                  auctiondescriptionid: {
+                    n: 1,
+                    br: $t.FE.readUint64String,
+                    bw: $t.Xc.writeUint64String,
+                  },
+                },
+              }),
+            pr.sm_m
+          );
+        }
+        static MBF() {
+          return pr.sm_mbf || (pr.sm_mbf = $t.Bh(pr.M())), pr.sm_mbf;
         }
         toObject(e = !1) {
           return pr.toObject(e, this);
         }
         static toObject(e, t) {
-          return e ? { $jspbMessageInstance: t } : {};
+          return $t.TA(pr.M(), e, t);
         }
         static fromObject(e) {
-          return new pr();
+          return $t.aD(pr.M(), e);
         }
         static deserializeBinary(e) {
           let t = new Jt.BinaryReader(e),
@@ -15124,34 +15154,33 @@
           return pr.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return e;
+          return $t.F(pr.MBF(), e, t);
         }
         serializeBinary() {
           var e = new Jt.BinaryWriter();
           return pr.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
-        static serializeBinaryToWriter(e, t) {}
+        static serializeBinaryToWriter(e, t) {
+          $t.l2(pr.M(), e, t);
+        }
         serializeBase64String() {
           var e = new Jt.BinaryWriter();
           return pr.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CAuction_GetAllItems_Request";
+          return "CAuction_GetItemDetails_Request";
         }
       }
       class ur extends Kt {
         constructor(e = null) {
           super(),
-            ur.prototype.items || $t.aR(ur.M()),
-            Kt.initialize(this, e, 0, -1, [1], null);
+            ur.prototype.item || $t.aR(ur.M()),
+            Kt.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
             ur.sm_m ||
-              (ur.sm_m = {
-                proto: ur,
-                fields: { items: { n: 1, c: tr, r: !0, q: !0 } },
-              }),
+              (ur.sm_m = { proto: ur, fields: { item: { n: 1, c: tr } } }),
             ur.sm_m
           );
         }
@@ -15187,61 +15216,156 @@
           return ur.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
+          return "CAuction_GetItemDetails_Response";
+        }
+      }
+      class _r extends Kt {
+        constructor(e = null) {
+          super(), Kt.initialize(this, e, 0, -1, void 0, null);
+        }
+        toObject(e = !1) {
+          return _r.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return e ? { $jspbMessageInstance: t } : {};
+        }
+        static fromObject(e) {
+          return new _r();
+        }
+        static deserializeBinary(e) {
+          let t = new Jt.BinaryReader(e),
+            r = new _r();
+          return _r.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return e;
+        }
+        serializeBinary() {
+          var e = new Jt.BinaryWriter();
+          return _r.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {}
+        serializeBase64String() {
+          var e = new Jt.BinaryWriter();
+          return _r.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CAuction_GetAllItems_Request";
+        }
+      }
+      class hr extends Kt {
+        constructor(e = null) {
+          super(),
+            hr.prototype.items || $t.aR(hr.M()),
+            Kt.initialize(this, e, 0, -1, [1], null);
+        }
+        static M() {
+          return (
+            hr.sm_m ||
+              (hr.sm_m = {
+                proto: hr,
+                fields: { items: { n: 1, c: tr, r: !0, q: !0 } },
+              }),
+            hr.sm_m
+          );
+        }
+        static MBF() {
+          return hr.sm_mbf || (hr.sm_mbf = $t.Bh(hr.M())), hr.sm_mbf;
+        }
+        toObject(e = !1) {
+          return hr.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return $t.TA(hr.M(), e, t);
+        }
+        static fromObject(e) {
+          return $t.aD(hr.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new Jt.BinaryReader(e),
+            r = new hr();
+          return hr.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return $t.F(hr.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new Jt.BinaryWriter();
+          return hr.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          $t.l2(hr.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new Jt.BinaryWriter();
+          return hr.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
           return "CAuction_GetAllItems_Response";
         }
       }
-      var _r;
+      var gr;
       !(function (e) {
         (e.PlaceBid = function (e, t) {
-          return e.SendMsg("Auction.PlaceBid#1", t, nr, { ePrivilege: 3 });
+          return e.SendMsg("Auction.PlaceBid#1", (0, qt.MD)(rr, t), nr, {
+            ePrivilege: 3,
+          });
         }),
           (e.CancelBid = function (e, t) {
-            return e.SendMsg("Auction.CancelBid#1", t, ar, { ePrivilege: 1 });
+            return e.SendMsg("Auction.CancelBid#1", (0, qt.MD)(ir, t), ar, {
+              ePrivilege: 1,
+            });
           }),
           (e.GetBidsForUser = function (e, t) {
-            return e.SendMsg("Auction.GetBidsForUser#1", t, sr, {
-              bConstMethod: !0,
-              ePrivilege: 1,
-            });
+            return e.SendMsg(
+              "Auction.GetBidsForUser#1",
+              (0, qt.MD)(or, t),
+              sr,
+              { bConstMethod: !0, ePrivilege: 1 },
+            );
           }),
           (e.GetBidsForItem = function (e, t) {
-            return e.SendMsg("Auction.GetBidsForItem#1", t, lr, {
-              bConstMethod: !0,
-              ePrivilege: 2,
-              eWebAPIKeyRequirement: 1,
-            });
+            return e.SendMsg(
+              "Auction.GetBidsForItem#1",
+              (0, qt.MD)(lr, t),
+              cr,
+              { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
+            );
           }),
           (e.GetUserBidForItem = function (e, t) {
-            return e.SendMsg("Auction.GetUserBidForItem#1", t, mr, {
-              bConstMethod: !0,
-              ePrivilege: 1,
-            });
+            return e.SendMsg(
+              "Auction.GetUserBidForItem#1",
+              (0, qt.MD)(mr, t),
+              dr,
+              { bConstMethod: !0, ePrivilege: 1 },
+            );
           }),
           (e.GetItemDetails = function (e, t) {
-            return e.SendMsg("Auction.GetItemDetails#1", t, dr, {
-              bConstMethod: !0,
-              ePrivilege: 2,
-              eWebAPIKeyRequirement: 1,
-            });
+            return e.SendMsg(
+              "Auction.GetItemDetails#1",
+              (0, qt.MD)(pr, t),
+              ur,
+              { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
+            );
           }),
           (e.GetAllItems = function (e, t) {
-            return e.SendMsg("Auction.GetAllItems#1", t, ur, {
+            return e.SendMsg("Auction.GetAllItems#1", (0, qt.MD)(_r, t), hr, {
               bConstMethod: !0,
               ePrivilege: 0,
             });
           });
-      })(_r || (_r = {}));
-      var hr = r(50265);
-      class gr {
+      })(gr || (gr = {}));
+      var fr = r(50265);
+      class Cr {
         constructor() {
           (this.m_bLoadedCurrentUserBids = !1),
-            (this.m_rgCurrentUserBids = hr.LO.array([], { deep: !0 })),
+            (this.m_rgCurrentUserBids = fr.LO.array([], { deep: !0 })),
             (this.m_bLoadedAllItems = !1),
             (this.m_mapAuctionItems = new Map());
         }
         static Get() {
           return (
-            this.s_Singleton || (this.s_Singleton = new gr()), this.s_Singleton
+            this.s_Singleton || (this.s_Singleton = new Cr()), this.s_Singleton
           );
         }
         Init(e) {
@@ -15253,7 +15377,7 @@
             if (!_.Vb.Get().BIsLoggedIn()) return [];
             const e = qt.gA.Init(or);
             e.SetBodyFields({ steamid: s.L7.steamid });
-            let t = yield _r.GetBidsForUser(this.m_transport, e);
+            let t = yield gr.GetBidsForUser(this.m_transport, e);
             return 1 == t.GetEResult()
               ? t.Body().toObject().bids
               : (console.error(
@@ -15275,8 +15399,8 @@
         }
         LoadAllItems() {
           return (0, n.mG)(this, void 0, void 0, function* () {
-            const e = qt.gA.Init(pr);
-            let t = yield _r.GetAllItems(this.m_anonymousTransport, e);
+            const e = qt.gA.Init(_r);
+            let t = yield gr.GetAllItems(this.m_anonymousTransport, e);
             return 1 == t.GetEResult()
               ? t.Body().toObject().items
               : (console.error(
@@ -15301,8 +15425,8 @@
         }
         GetUserBidForItem(e) {
           return (0, n.mG)(this, void 0, void 0, function* () {
-            const e = qt.gA.Init(cr);
-            let t = yield _r.GetUserBidForItem(this.m_transport, e);
+            const e = qt.gA.Init(mr);
+            let t = yield gr.GetUserBidForItem(this.m_transport, e);
             return 1 == t.GetEResult()
               ? t.Body().toObject().bid
               : (console.error(
@@ -15322,7 +15446,7 @@
               amount_bid: t,
               expected_amount_remaining: r,
             });
-            const a = yield _r.PlaceBid(this.m_transport, i);
+            const a = yield gr.PlaceBid(this.m_transport, i);
             return (
               (n.eResult = a.GetEResult()),
               1 == a.GetEResult()
@@ -15342,7 +15466,7 @@
               return (t = { eResult: 21, strMessage: "Not logged on" }), t;
             const r = qt.gA.Init(ir);
             r.SetBodyFields({ auctiondescriptionid: e });
-            const n = yield _r.CancelBid(this.m_transport, r);
+            const n = yield gr.CancelBid(this.m_transport, r);
             return (
               (t.eResult = n.GetEResult()),
               1 == n.GetEResult()
@@ -15356,15 +15480,15 @@
           });
         }
       }
-      (0, n.gn)([hr.LO], gr.prototype, "m_rgCurrentUserBids", void 0),
-        (0, n.gn)([hr.LO], gr.prototype, "m_mapAuctionItems", void 0);
-      var fr = r(54671);
-      class Cr extends i.Component {
+      (0, n.gn)([fr.LO], Cr.prototype, "m_rgCurrentUserBids", void 0),
+        (0, n.gn)([fr.LO], Cr.prototype, "m_mapAuctionItems", void 0);
+      var Ir = r(54671);
+      class yr extends i.Component {
         constructor() {
           super(...arguments), (this.state = { bReady: !1 });
         }
         componentDidMount() {
-          Ir.then(() => this.setState({ bReady: !0 }));
+          wr.then(() => this.setState({ bReady: !0 }));
         }
         render() {
           return this.state.bReady
@@ -15409,7 +15533,7 @@
             : i.createElement(y, null);
         }
       }
-      const Ir = (function () {
+      const wr = (function () {
           return (0, n.mG)(this, void 0, void 0, function* () {
             let e = (0, s.kQ)("loyaltystore", "application_config");
             const t = new l.J(s.De.WEBAPI_BASE_URL, e.webapi_token);
@@ -15426,11 +15550,11 @@
                   g.Yt.AddTokens(i.default, a ? a.default : void 0);
                 });
               })(),
-              yield fr.jg.Get().HintLoad(),
+              yield Ir.jg.Get().HintLoad(),
               _.Vb.Get().Init(t, e);
           });
         })(),
-        yr = Cr;
+        Sr = yr;
     },
     49190: (e, t, r) => {
       "use strict";
@@ -15791,6 +15915,7 @@
         "./loyalty_german.json": [21003, 9197],
         "./loyalty_greek.json": [90746, 298],
         "./loyalty_hungarian.json": [645, 9046],
+        "./loyalty_indonesian.json": [7365, 5575],
         "./loyalty_italian.json": [85883, 4566],
         "./loyalty_japanese.json": [48633, 627],
         "./loyalty_koreana.json": [443, 7814],
@@ -15835,6 +15960,7 @@
         "./loyalty_german.json": [21003, 9197],
         "./loyalty_greek.json": [90746, 298],
         "./loyalty_hungarian.json": [645, 9046],
+        "./loyalty_indonesian.json": [7365, 5575],
         "./loyalty_italian.json": [85883, 4566],
         "./loyalty_japanese.json": [48633, 627],
         "./loyalty_koreana.json": [443, 7814],

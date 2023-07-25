@@ -75,7 +75,7 @@
       r.d(t, { sC: () => i });
       var l = r(89526),
         n = r(19304),
-        o = r(28106),
+        o = r(701),
         a = r(59743);
       r(14826), r(32765);
       l.createContext({ bShowCompatInfo: !1 });
@@ -208,9 +208,9 @@
       (0, i.gn)([m.ak], p.prototype, "LoadAppCompabitilityResult", null);
       var g = r(22444),
         f = r(67736),
-        H = r(28106),
+        H = r(701),
         v = r(14965),
-        w = r(7770),
+        w = r(69338),
         h = r(19304),
         L = r(60161),
         V = r(14826),
@@ -375,7 +375,7 @@
         c = r(96469),
         s = r.n(c),
         C = r(34329),
-        u = r(28106),
+        u = r(701),
         m = r(33940),
         d = r(8179),
         p = r(50454),

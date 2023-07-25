@@ -7890,6 +7890,12 @@ html.responsive.touch
   justify-content: space-evenly;
   margin-top: 12px;
 }
+.imagedraganddroptarget_ImageUploadBar_3qMiP label {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 .imagedraganddroptarget_SelectImageButton_39lgc {
   color: #dfe3e6;
   transition-property: background, color, box-shadow;
@@ -7899,7 +7905,7 @@ html.responsive.touch
   background-position: 25%;
   background-size: 330% 100%;
   padding: 8px 25px;
-  line-height: 32px;
+  line-height: 20px;
   border-radius: 2px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
@@ -8159,6 +8165,8 @@ html.responsive.touch
   width: fit-content;
   padding: unset;
   margin-bottom: unset;
+  flex-direction: row;
+  align-items: center;
 }
 .promotionplaneditor_PreviewLinksCtn_298xI
   .promotionplaneditor_PreviewLinkCtn_RacQW
@@ -8290,6 +8298,35 @@ html.responsive.touch
   .promotionplaneditor_SmallText_ytqMO {
   text-align: center;
   color: #86bfee;
+}
+.promotionplaneditor_IncreaseRateInfo_39MX0 {
+  padding: 8px;
+  font-size: 13px;
+  background: #2e475d;
+  border-radius: 4px;
+  position: relative;
+}
+.promotionplaneditor_IncreaseRateInfo_39MX0:after {
+  bottom: 100%;
+  left: 80%;
+  border: solid rgba(0, 0, 0, 0);
+  content: "";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(136, 183, 213, 0);
+  border-bottom-color: #2e475d;
+  border-width: 15px;
+  margin-left: 0;
+}
+.promotionplaneditor_StatusRow_DF-Ee {
+  margin-top: 6px;
+  padding-top: 4px;
+  border-top: 1px solid #3a97e4;
+}
+.promotionplaneditor_StatusRow_DF-Ee span:not(:first-child) {
+  margin-left: 16px;
 }
 .partnersiteappsearch_Results_3mK1P {
   max-height: 35vh;

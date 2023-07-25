@@ -1856,7 +1856,6 @@ html.responsive.touch
 @media screen and (max-width: 940px) {
   .saledisplaylogo_SalePageLogoCtn_2kLRR {
     margin-bottom: 0px;
-    margin-top: -41vw;
   }
 }
 .salequestdisplay_description_22ryq {
@@ -3877,28 +3876,44 @@ a.storywidget_BadgeFooter_3kBeS:hover {
   gap: 5px;
 }
 .saleclaimitem_ClaimCtn_d5PCH .saleclaimitem_ClaimButton_2jLt9 {
-  background: linear-gradient(180deg, #a12080, #6c0c53);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.1490196078),
+    rgba(0, 0, 0, 0.1176470588)
+  );
+  backdrop-filter: blur(30px);
   border-radius: 50px;
-  border: 2px solid #a12080;
+  border: 2px solid rgba(255, 255, 255, 0.0980392157);
   width: fit-content;
   padding: 6px 12px;
   font-size: 20px;
   font-weight: 600;
 }
 .saleclaimitem_ClaimCtn_d5PCH .saleclaimitem_ClaimButton_2jLt9:hover {
-  background: linear-gradient(180deg, #bf2698, #961072);
-  border: 2px solid #bf2698;
+  filter: brightness(1.1);
 }
 .saleclaimitem_ClaimCtn_d5PCH .saleclaimitem_ClaimButton_2jLt9:enabled:active {
-  background: linear-gradient(0deg, #a12080, #6c0c53);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.1490196078),
+    rgba(0, 0, 0, 0.1176470588)
+  );
 }
 .saleclaimitem_ClaimCtn_d5PCH
   .saleclaimitem_ClaimButton_2jLt9:enabled:active:hover {
-  background: linear-gradient(0deg, #a12080, #6c0c53);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.1490196078),
+    rgba(0, 0, 0, 0.1176470588)
+  );
 }
 .saleclaimitem_ClaimCtn_d5PCH
   .saleclaimitem_ClaimButton_2jLt9:enabled:active.saleclaimitem_gpfocus_dF9GZ {
-  background: linear-gradient(0deg, #a12080, #6c0c53);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.1490196078),
+    rgba(0, 0, 0, 0.1176470588)
+  );
 }
 .saleclaimitem_ClaimCtn_d5PCH .saleclaimitem_ClaimButton_2jLt9::before {
   box-shadow: none;
@@ -3907,7 +3922,7 @@ a.storywidget_BadgeFooter_3kBeS:hover {
   font-size: 28px;
   color: #fff;
   font-weight: 600;
-  text-shadow: 0px 2px 2px #350128;
+  text-shadow: 0px 2px 2px #222;
   padding: 16px;
   text-align: center;
 }

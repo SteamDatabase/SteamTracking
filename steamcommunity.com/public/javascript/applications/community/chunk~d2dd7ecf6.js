@@ -1526,7 +1526,7 @@
         r = a(14826),
         o = a(11301),
         s = a(19304),
-        c = a(28106),
+        c = a(701),
         d = a(61204),
         u = a.n(d),
         m = a(93908);
@@ -1605,7 +1605,7 @@
         x$: () => _,
       });
       var n = a(33940),
-        i = a(46875),
+        i = a(54856),
         l = a(20830),
         r = a(80381),
         o = a(5615),
@@ -2841,7 +2841,7 @@
       var n = a(33940),
         i = a(50265),
         l = a(89526),
-        r = a(46875),
+        r = a(54856),
         o = a(23632),
         s = a(10521),
         c = a(85246),
@@ -3989,7 +3989,7 @@
       var n = a(33940),
         i = a(89526),
         l = a(5615),
-        r = a(46875),
+        r = a(54856),
         o = a(3609),
         s = a(11195),
         c = a(43707),
@@ -4505,7 +4505,7 @@
         "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAtNJREFUeNrsmk1rE0EYgHe19ZBIY2kj4qUQVGjxAz2J4gcVvfmBP8FI8eZF8OJNL4oFPYrGX1CK4lEMiChe/aCClNBeRGxLTTE5GDU+Y2bDJG5rL5lZ950XnsxkE5h9n8zszkw2bDabgeTYEAgPL8AL8AK8AC/AC/AC5EafegnDcM0vMVvMUOyA7bBNswVymgHYDOp7m/SxUNczRlvZdZ5XDX7oeh2+q9OAqq6rY99gRR9TfIXPmk8wS171f+QVhH9eYgRw/BhFEQ7q5MP/7MdVwmbhNZTI8fm6BPBe/XoP4XzKevs0XCDX6qoCdPIvYE9Kh/xbOBpJULl3XwQfpDh5FXt1ju1o9wDKQ7x/KeTif5icX3X3gKKgu18xbh4wLkjAeMcQIPLwRdgcaCssRD1gTOAkcMwcAgWBAgqmgBGBAkZMAfkeN1ZPoIC8KWCox409hePwJkEChmwKCPRi5ABMJOSO0yFg2EaLSPgF96nuhFt6aesqhk0BgzZbRsIKXKU6Co8dCRg0BWRdnAESKnCO6gl4Z7n5rCmg3+VgREKZYj9cUrMzS832mwJyrq9ISPgJ9/T1YRIaPW4y170YSkSozQq4QnU3POl1e4ndFUbCRzhD9RS8FyfAVvQl9cRYpu+iuA2nRQnQG7PX4LKNu1MkoOr6TkDiGykuwnULi7Mo57aAhuPk1RbVncDujnTDvAjWHCVegEdUnwX2t+NrpoBly4kPwE2qH+Cso463bA6BRUuJK+FqS/pG0NqUdBmLpoAlC8mrP1vvwr6E3HCWbAo46bCrrykgugb0egWWSeBca8EUMC9wFjxvCqgIFFAxBcwIFDDTFsCyU42HOUHJz+mcO5bDZUECynH7ASVBAkp/CVBPTFBMCUh+Sufayts/JGWE/uBI0HqkLG0xbSYf2wNi5u7yHpRcZSGT7kdlJYd/XN4L8AK8AC/AC/ACvACx8VuAAQDxke5GRJ5P8AAAAABJRU5ErkJggg==";
       var E = a(17547),
         f = a(71161),
-        b = a(7770),
+        b = a(69338),
         y = a(72213),
         C = a(79586),
         T = a(17318);
@@ -4853,13 +4853,13 @@
         A = a(14826),
         k = a(32765),
         G = a(17547),
-        M = a(7770),
+        M = a(69338),
         L = a(5089),
         B = a.n(L),
         O = a(51441),
         F = a(23715),
         N = a.n(F),
-        R = a(28106);
+        R = a(701);
       const P = (0, r.Pi)((e) => {
           const {
               clanAccountID: t,
@@ -5268,7 +5268,7 @@
         s = a(25125),
         c = a(89526),
         d = a(46132),
-        u = a(67727),
+        u = a(78423),
         m = a(52102),
         _ = a(81245),
         p = a(54671),
@@ -5278,7 +5278,7 @@
         S = a(57605),
         E = a(70750),
         f = a(23280),
-        b = a(28106),
+        b = a(701),
         y = a(14826),
         C = a(32765),
         T = a(72799);
@@ -6921,7 +6921,7 @@
         l = a(88464),
         r = a(89526),
         o = a(46132),
-        s = a(67727),
+        s = a(78423),
         c = a(69678),
         d = a(17974),
         u = a(97334),
@@ -6934,8 +6934,8 @@
         S = a(57742),
         E = a(1721),
         f = a.n(E),
-        b = a(28106),
-        y = a(7770),
+        b = a(701),
+        y = a(69338),
         C = a(23217),
         T = a(19304),
         I = a(60161),
@@ -7267,7 +7267,7 @@
         s = a(7948),
         c = a(99307),
         d = a(57742),
-        u = a(7770),
+        u = a(69338),
         m = a(23217),
         _ = a(14826),
         p = a(88258),
@@ -7364,7 +7364,7 @@
         m = a(46294),
         _ = a(99307),
         p = a(57742),
-        g = a(7770),
+        g = a(69338),
         h = a(23217),
         v = a(19304),
         S = a(60161),
@@ -7859,7 +7859,7 @@
         o = a(25871),
         s = a(55290),
         c = a.n(s),
-        d = a(28106),
+        d = a(701),
         u = a(19304),
         m = a(71161),
         _ = a(51441),
@@ -8787,13 +8787,13 @@
         i = a(85886),
         l = a(25871),
         r = a(89526),
-        o = a(28106),
+        o = a(701),
         s = a(66615),
         c = a(19304),
         d = a(60161),
         u = a(99307),
         m = a(57742),
-        _ = a(7770),
+        _ = a(69338),
         p = a(24334),
         g = a.n(p),
         h = a(56491);
@@ -10802,13 +10802,13 @@
         l = a.n(i),
         r = a(89526),
         o = a(46132),
-        s = a(67727),
+        s = a(78423),
         c = a(97334),
         d = a(57605),
         u = a(17318),
         m = a(99307),
         _ = a(57742),
-        p = a(7770),
+        p = a(69338),
         g = a(23217),
         h = a(19304),
         v = a(14826),
@@ -11053,7 +11053,7 @@
         d = a.n(c),
         u = a(1721),
         m = a.n(u),
-        _ = a(28106),
+        _ = a(701),
         p = a(52868),
         g = a.n(p),
         h = a(36041);
@@ -11188,7 +11188,7 @@
         i = a(51438),
         l = a(96164),
         r = a.n(l),
-        o = a(28106),
+        o = a(701),
         s = a(87361),
         c = a(14826),
         d = a(57605),
@@ -11374,7 +11374,7 @@
         m = a(11301),
         _ = a(79271),
         p = a(88763),
-        g = a(28106),
+        g = a(701),
         h = a(19304),
         v = a(27245),
         S = a.n(v);
@@ -11618,7 +11618,7 @@
         w = a(50454),
         x = a(95501),
         A = a(49437),
-        k = a(7770),
+        k = a(69338),
         G = a(78913),
         M = a.n(G);
       const L = new w.s("AppRelevance").Debug;
@@ -12152,7 +12152,7 @@
         d = a(43707),
         u = a(25871),
         m = a(66216),
-        _ = a(28106),
+        _ = a(701),
         p = a(44026),
         g = a(17589),
         h = a(30928),
@@ -12160,7 +12160,7 @@
         S = a(81039),
         E = a(98009),
         f = a(98210),
-        b = a(46875),
+        b = a(54856),
         y = a(19094),
         C = a(27143),
         T = a(32765);
@@ -14012,7 +14012,7 @@
       a.d(t, { bC: () => g, fU: () => p, mY: () => m, ug: () => _ });
       var n = a(57605),
         i = a(14826),
-        l = a(28106),
+        l = a(701),
         r = a(89526),
         o = a(19304),
         s = a(17318),
@@ -14190,7 +14190,7 @@
       a.d(t, { C: () => c, i: () => d });
       var n = a(33940),
         i = a(46132),
-        l = a(67727),
+        l = a(78423),
         r = a(11837),
         o = a(15254),
         s = a(14826);
@@ -15023,7 +15023,7 @@
         s = a(13394),
         c = a(50265),
         d = a(46132),
-        u = a(67727),
+        u = a(78423),
         m = a(53215),
         _ = a(81245),
         p = a(47165),
@@ -16583,7 +16583,7 @@
         l = a(91920),
         r = a(46616),
         o = a(50265),
-        s = a(67727),
+        s = a(78423),
         c = a(98210),
         d = a(43707),
         u = a(85886),
@@ -18014,7 +18014,7 @@
         _ = a.n(m),
         p = a(99307),
         g = a(57742),
-        h = a(7770),
+        h = a(69338),
         v = a(23217),
         S = a(19304),
         E = a(14826),
@@ -18505,11 +18505,11 @@
         l = a(89526),
         r = a(28542),
         o = a(46132),
-        s = a(67727),
+        s = a(78423),
         c = a(1063),
         d = a(99307),
         u = a(57742),
-        m = a(28106),
+        m = a(701),
         _ = a(60161),
         p = a(14826),
         g = a(4306),
@@ -18965,7 +18965,7 @@
         g = a(17547),
         h = a(21904),
         v = a(99307),
-        S = a(7770),
+        S = a(69338),
         E = a(24166),
         f = a(14826);
       const b = (0, d.Pi)((e) => {
@@ -19643,7 +19643,7 @@
         c = a(17318),
         d = a(70750),
         u = a(99307),
-        m = a(7770),
+        m = a(69338),
         _ = a(19304),
         p = a(14826),
         g = a(4306);
@@ -19806,7 +19806,7 @@
         y = a(99307),
         C = a(57742),
         T = a(49985),
-        I = a(7770),
+        I = a(69338),
         D = a(84343),
         w = a(24166),
         x = a(9943),
@@ -20511,7 +20511,7 @@
         C = a(99307),
         T = a(57742),
         I = a(49985),
-        D = a(7770),
+        D = a(69338),
         w = a(84343),
         x = a(24166),
         A = a(23217),
@@ -21088,7 +21088,7 @@
         y = a(99307),
         C = a(57742),
         T = a(49985),
-        I = a(7770),
+        I = a(69338),
         D = a(24166),
         w = a(9943),
         x = a(19304),
@@ -22779,7 +22779,7 @@
       }
       var k = a(99307),
         G = a(57742),
-        M = a(28106),
+        M = a(701),
         L = a(60161),
         B = a(14826),
         O = a(4306),
@@ -24101,7 +24101,7 @@
         F = a(92372),
         N = a(82971),
         R = a(57742),
-        P = a(7770),
+        P = a(69338),
         X = a(84343),
         j = a(24166),
         z = a(11837),
@@ -24110,7 +24110,7 @@
         V = a(32765),
         Z = a(43700),
         W = a(20790),
-        q = a(67727),
+        q = a(78423),
         Q = a(82079),
         J = a(74831);
       class Y {
@@ -24284,20 +24284,26 @@
                   const e = [],
                     n = /app\/(\d+)\/view\/(\d+)\/?$/.exec(t),
                     i = /group\/(\d+)\/view\/(\d+)\/?$/.exec(t),
-                    l = /groups\/(\w+)\/announcements\/detail\/(\d+)+\/?$/.exec(
-                      t,
-                    ),
+                    l =
+                      /groups\/([A-Za-z0-9\-@#!$]+)\/announcements\/detail\/(\d+)+\/?$/.exec(
+                        t,
+                      ),
                     r = /games\/(\d+)\/announcements\/detail\/(\d+)+\/?$/.exec(
                       t,
                     ),
-                    s = /games\/(\w+)\/announcements\/detail\/(\d+)+\/?$/.exec(
-                      t,
-                    ),
-                    c = /groups\/(\w+)\/partnerevents\/edit\/(\d+)+/.exec(t),
+                    s =
+                      /games\/([A-Za-z0-9\-@#!$]+)\/announcements\/detail\/(\d+)+\/?$/.exec(
+                        t,
+                      ),
+                    c =
+                      /groups\/([A-Za-z0-9\-@#!$]+)\/partnerevents\/edit\/(\d+)+/.exec(
+                        t,
+                      ),
                     d = /games\/(\d+)\/partnerevents\/edit\/(\d+)+/.exec(t),
-                    u = /games\/(\w+)\/announcements\/detail\/(\d+)+\/?$/.exec(
-                      t,
-                    );
+                    u =
+                      /games\/([A-Za-z0-9\-@#!$]+)\/announcements\/detail\/(\d+)+\/?$/.exec(
+                        t,
+                      );
                   let m = null,
                     _ = null,
                     p = null,
@@ -27169,7 +27175,7 @@
           t
         );
       }
-      var ct = a(46875),
+      var ct = a(54856),
         dt = a(19094),
         ut = a(27143),
         mt = a(23801);
@@ -28594,7 +28600,7 @@
         Wt = a(70750),
         qt = a(23280),
         Qt = a(46294),
-        Jt = a(28106),
+        Jt = a(701),
         Yt = a(36041),
         Kt = a(58749);
       const $t = (0, f.Pi)((e) =>
@@ -33156,7 +33162,7 @@
         G = a(57742),
         M = a(1721),
         L = a.n(M),
-        B = a(7770),
+        B = a(69338),
         O = a(75962),
         F = a(24166),
         N = a(9943),

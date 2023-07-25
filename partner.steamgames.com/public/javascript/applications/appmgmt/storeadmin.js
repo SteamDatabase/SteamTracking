@@ -34,9 +34,11 @@
     93056: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
-        ReleaseDateModal: "controllersupportedit_ReleaseDateModal_1eMmB",
-        ReleaseDateRequestBody:
-          "controllersupportedit_ReleaseDateRequestBody_1tqCc",
+        ControllerWizardModal:
+          "controllersupportedit_ControllerWizardModal_2M4zw",
+        GameName: "controllersupportedit_GameName_1wayR",
+        WizardContainer: "controllersupportedit_WizardContainer_1j_e5",
+        WizardBody: "controllersupportedit_WizardBody_2Agdm",
         Column: "controllersupportedit_Column_35X7X",
         ColumnLabel: "controllersupportedit_ColumnLabel_3xAxL",
         ReleaseColumnFooter: "controllersupportedit_ReleaseColumnFooter_3qIJU",
@@ -49,7 +51,6 @@
           "controllersupportedit_CloudConflictModalContent_Qq753",
         DialogChoiceDescription:
           "controllersupportedit_DialogChoiceDescription_37mGY",
-        GameName: "controllersupportedit_GameName_1wayR",
         RadioButton: "controllersupportedit_RadioButton_1Cqgv",
         Selected: "controllersupportedit_Selected_1iGfi",
         OptionLabel: "controllersupportedit_OptionLabel_1CKHm",
@@ -400,10 +401,10 @@
         "./zh-tw.js": 85136,
       };
       function o(e) {
-        var t = a(e);
+        var t = l(e);
         return r(t);
       }
-      function a(e) {
+      function l(e) {
         if (!r.o(n, e)) {
           var t = new Error("Cannot find module '" + e + "'");
           throw ((t.code = "MODULE_NOT_FOUND"), t);
@@ -413,7 +414,7 @@
       (o.keys = function () {
         return Object.keys(n);
       }),
-        (o.resolve = a),
+        (o.resolve = l),
         (e.exports = o),
         (o.id = 46700);
     },
@@ -422,8 +423,8 @@
       r.d(t, { F_: () => d, JW: () => c, kl: () => g, zD: () => C });
       var n = r(33940),
         o = r(50265),
-        a = r(36105),
-        l = r.n(a),
+        l = r(36105),
+        a = r.n(l),
         s = r(89526),
         i = r(58218),
         p = r(32765);
@@ -466,7 +467,7 @@
             ("dev" == p.De.WEB_UNIVERSE || "beta" == p.De.WEB_UNIVERSE)
           ) {
             const e = t.get("t");
-            let r = /^\d+$/.test(e) ? l().unix(Number.parseInt(e)) : l()(e);
+            let r = /^\d+$/.test(e) ? a().unix(Number.parseInt(e)) : a()(e);
             (this.nOverrideDateNow = Math.floor(r.unix())),
               console.log(
                 "CEventCalendarDevFeatures overriding partner event time: " +
@@ -514,17 +515,17 @@
     },
     81500: (e, t, r) => {
       "use strict";
-      r.d(t, { M: () => l, y: () => a });
+      r.d(t, { M: () => a, y: () => l });
       var n = r(14826),
         o = r(72120);
-      function a(e) {
-        return l(
+      function l(e) {
+        return a(
           e.coming_soon_display,
           e.steam_release_date,
           e.custom_release_date_message,
         );
       }
-      function l(e, t, r) {
+      function a(e, t, r) {
         switch (e) {
           case "date_full":
             return (0, n.vX)(t);
@@ -548,9 +549,9 @@
       r.d(t, { A: () => h });
       var n = r(33940),
         o = r(88464),
-        a = r(89526),
-        l = r(5556),
-        s = r.n(l),
+        l = r(89526),
+        a = r(5556),
+        s = r.n(a),
         i = r(28542),
         p = r(85651),
         u = r(17318),
@@ -563,7 +564,7 @@
         C = r.n(g),
         b = r(47812),
         E = r.n(b);
-      let h = class extends a.Component {
+      let h = class extends l.Component {
         constructor(e) {
           super(e),
             (this.state = {
@@ -585,21 +586,21 @@
             if (!t.isValid()) return void this.setState({ timeAsString: e });
             e = t;
           }
-          let a = this.props.fnGetTimeToUpdate(),
-            l = 0;
-          if (a) {
-            const t = E().unix(a);
+          let l = this.props.fnGetTimeToUpdate(),
+            a = 0;
+          if (l) {
+            const t = E().unix(l);
             e.year(t.year()),
               e.month(t.month()),
               e.day(t.day()),
-              (l = e.unix());
+              (a = e.unix());
           } else {
-            l =
+            a =
               E().unix(t).hour(0).second(0).minutes(0).unix() +
               3600 * e.hour() +
               60 * e.minutes();
           }
-          r(l);
+          r(a);
           let s = n && !0 === n();
           (null == this.state.timeAsString &&
             s == this.state.bEndTimeBeforeStartTime) ||
@@ -634,13 +635,13 @@
               bWeekdaysOnly: n,
             } = this.props,
             o = E().unix(t).hour(0).seconds(0).minute(0);
-          let a = e.unix() >= o.unix();
-          if (a && r && r >= t) {
+          let l = e.unix() >= o.unix();
+          if (l && r && r >= t) {
             const t = E().unix(r).hour(23).minute(59).seconds(59);
-            a = e.unix() <= t.unix();
+            l = e.unix() <= t.unix();
           }
           return (
-            a && n && ((0 != e.weekday() && 6 != e.weekday()) || (a = !1)), a
+            l && n && ((0 != e.weekday() && 6 != e.weekday()) || (l = !1)), l
           );
         }
         SetToNow() {
@@ -655,19 +656,19 @@
             fnGetTimeToUpdate: r,
             fnIsValidDateTime: n,
             strAlsoShowTimeZone: o,
-            disabled: l,
+            disabled: a,
             bNoDefaultDate: u,
           } = this.props;
           let _ = r(),
             g = _ > 0 ? new Date(1e3 * _) : null,
             b = "h:mm A";
           const h = n && n(),
-            f =
+            T =
               this.state.timeAsString ||
               this.state.dateAsString ||
               "string" == typeof h ||
               !1 === h;
-          let T,
+          let f,
             v,
             P = "#DateTimePicker_Fallback_Invalid_DateTime";
           if (
@@ -679,7 +680,7 @@
             e && t && e == t && t > p.JW.GetTimeNowWithOverride())
           ) {
             let e = E().unix(t);
-            (T = {
+            (f = {
               hours: { max: e.hour(), min: e.hour(), step: 0 },
               minutes: { max: e.minute(), min: e.minute(), step: 0 },
               seconds: { max: e.seconds(), min: e.seconds(), step: 0 },
@@ -688,36 +689,36 @@
               (b = "HH:mm");
           }
           _ || !t || u || (v = E().unix(t));
-          const k = E().tz.guess(),
-            D = E().unix(_).tz(k),
-            x = !!o && k != o && E().unix(_).tz(o);
-          return a.createElement(
+          const x = E().tz.guess(),
+            k = E().unix(_).tz(x),
+            D = !!o && x != o && E().unix(_).tz(o);
+          return l.createElement(
             "div",
             { className: (0, d.Z)(C().EventTimeSection, this.props.className) },
-            a.createElement(
+            l.createElement(
               "div",
               { className: (0, d.Z)(C().EventTimeTitle, "DialogLabel") },
-              a.createElement(
+              l.createElement(
                 S.HP,
                 { toolTipContent: this.props.strDescToolTip, direction: "top" },
                 Boolean(this.props.strDescription) &&
-                  a.createElement("span", null, this.props.strDescription),
+                  l.createElement("span", null, this.props.strDescription),
               ),
-              f &&
-                a.createElement(
+              T &&
+                l.createElement(
                   "span",
                   { className: C().DateErrorCtn },
-                  a.createElement("img", { src: i.Z }),
+                  l.createElement("img", { src: i.Z }),
                   (0, m.Xx)(P),
                 ),
             ),
-            a.createElement(
+            l.createElement(
               "div",
               { className: c().FlexRowContainer },
-              a.createElement(
+              l.createElement(
                 "div",
                 { className: (0, d.Z)(c().InputBorder, C().TimeBlock) },
-                a.createElement(s(), {
+                l.createElement(s(), {
                   onChange: this.OnDateChange,
                   timeFormat: !1,
                   value: this.state.dateAsString ? this.state.dateAsString : g,
@@ -730,24 +731,24 @@
                       "DialogInput",
                       "DialogTextInputBase",
                     ),
-                    disabled: l,
+                    disabled: a,
                   },
                 }),
-                !!x &&
-                  a.createElement(
+                !!D &&
+                  l.createElement(
                     "div",
                     { className: C().PacificTimeHint },
-                    x.format("L"),
+                    D.format("L"),
                   ),
               ),
-              a.createElement(
+              l.createElement(
                 "div",
                 { className: (0, d.Z)(c().InputBorder, C().TimeBlock) },
-                a.createElement(s(), {
+                l.createElement(s(), {
                   onChange: this.OnTimeChange,
                   dateFormat: !1,
                   timeFormat: b,
-                  timeConstraints: T,
+                  timeConstraints: f,
                   value: this.state.timeAsString ? this.state.timeAsString : g,
                   inputProps: {
                     placeholder: (0, m.Xx)("#DateTimePicker_Enter_Time"),
@@ -756,35 +757,35 @@
                       "DialogInput",
                       "DialogTextInputBase",
                     ),
-                    disabled: l,
+                    disabled: a,
                   },
                 }),
-                !!x &&
-                  a.createElement(
+                !!D &&
+                  l.createElement(
                     "div",
                     { className: C().PacificTimeHint },
-                    x.format("LT"),
+                    D.format("LT"),
                   ),
               ),
               this.props.bShowTimeZone &&
-                a.createElement(
+                l.createElement(
                   "div",
                   null,
-                  a.createElement(
+                  l.createElement(
                     "div",
                     { className: C().TimeZone },
-                    D.zoneAbbr(),
+                    k.zoneAbbr(),
                   ),
-                  !!x &&
-                    a.createElement(
+                  !!D &&
+                    l.createElement(
                       "div",
                       { className: C().TimeZone },
-                      x.zoneAbbr(),
+                      D.zoneAbbr(),
                     ),
                 ),
             ),
-            Boolean(T) &&
-              a.createElement(
+            Boolean(f) &&
+              l.createElement(
                 "div",
                 null,
                 (0, m.Xx)("#DateTimePicker_DateTime_Fixed"),
@@ -800,14 +801,14 @@
     },
     58218: (e, t, r) => {
       "use strict";
-      r.d(t, { T: () => l });
+      r.d(t, { T: () => a });
       var n = r(52868),
         o = r.n(n),
-        a = r(89526);
-      function l(e) {
-        const t = a.useRef(o().CancelToken.source());
+        l = r(89526);
+      function a(e) {
+        const t = l.useRef(o().CancelToken.source());
         return (
-          a.useEffect(() => {
+          l.useEffect(() => {
             const r = t.current;
             return () => r.cancel(e ? `${e}: unmounting` : "unmounting");
           }, [e]),
@@ -825,14 +826,14 @@
         CommunityItems: (e) => `/apps/communityitems/${e}`,
       };
       const o = ["edit", "diff", "revert", "prepare", "publish"];
-      var a = r(89526),
-        l = r(59934),
+      var l = r(89526),
+        a = r(59934),
         s = r(35993),
         i = r(81500),
         p = r(14826),
         u = r(72120),
         c = r(81104),
-        d = r(28106),
+        d = r(701),
         m = r(33940),
         _ = r(52868),
         S = r.n(_),
@@ -841,14 +842,14 @@
         b = r(22444),
         E = r(82971),
         h = r(67736),
-        f = r(7770),
-        T = r(86900),
+        T = r(69338),
+        f = r(86900),
         v = r(207),
         P = r(32765);
-      function k(e) {
+      function x(e) {
         const { rtSteamReleaseDate: t, value: r, onChange: n } = e,
           o = !!t,
-          l = a.useMemo(
+          a = l.useMemo(
             () =>
               [
                 "date_full",
@@ -860,7 +861,7 @@
               ].map((e) => ({ label: (0, i.M)(e, t), data: e })),
             [t],
           ),
-          s = a.useCallback(
+          s = l.useCallback(
             (e) => {
               n(e.data);
             },
@@ -869,18 +870,18 @@
           u = t
             ? (0, p.Xx)("#GameEdit_ComingSoon_SelectAnOption")
             : (0, p.Xx)("#App_Landing_NoDateSelected");
-        return a.createElement(b.TW, {
+        return l.createElement(b.TW, {
           disabled: !o,
           strDefaultLabel: u,
-          rgOptions: l,
+          rgOptions: a,
           selectedOption: o ? r : null,
           onChange: s,
         });
       }
-      var D = r(80238);
-      function x(e) {
+      var k = r(80238);
+      function D(e) {
         const { appid: t, onClose: r, onCommit: n } = e,
-          [o, l] = a.useState(null),
+          [o, a] = l.useState(null),
           {
             data: s,
             isLoading: i,
@@ -898,46 +899,46 @@
             );
           })(t),
           c = "prerelease" == (null == s ? void 0 : s.strReleaseState),
-          d = a.useCallback(
+          d = l.useCallback(
             (e, r) => {
-              T.U.invalidateQueries(["ReleaseRequest", t]), n(e, r, c);
+              f.U.invalidateQueries(["ReleaseRequest", t]), n(e, r, c);
             },
             [t, n, c],
           );
-        let _ = a.createElement(R, { setOnOKButton: l, onCommit: d });
+        let _ = l.createElement(I, { setOnOKButton: a, onCommit: d });
         return (
           u
-            ? (_ = a.createElement(I, {
+            ? (_ = l.createElement(R, {
                 strError: (0, p.Xx)("#Error_ErrorCommunicatingWithNetwork"),
               }))
-            : (!i && s) || (_ = a.createElement(f.V, null)),
-          a.createElement(
+            : (!i && s) || (_ = l.createElement(T.V, null)),
+          l.createElement(
             j.Provider,
             { value: s },
-            a.createElement(A, { fnSubmit: o, fnCloseModal: r }, _),
+            l.createElement(A, { fnSubmit: o, fnCloseModal: r }, _),
           )
         );
       }
-      const j = a.createContext(null);
+      const j = l.createContext(null);
       function N() {
-        return a.useContext(j);
+        return l.useContext(j);
       }
-      const R = a.memo(function (e) {
+      const I = l.memo(function (e) {
         const {
             appid: t,
             bCanUpdateComingSoonDate: r,
             rtReleaseDate: n,
             strComingSoonDisplay: o,
           } = N(),
-          { setOnOKButton: l, onCommit: s } = e,
-          [i, u] = a.useState(n),
-          [c, d] = a.useState(o || void 0),
-          [_, g] = a.useState("none"),
-          [C, E] = a.useState(),
-          h = a.useCallback((e) => {
+          { setOnOKButton: a, onCommit: s } = e,
+          [i, u] = l.useState(n),
+          [c, d] = l.useState(o || void 0),
+          [_, g] = l.useState("none"),
+          [C, E] = l.useState(),
+          h = l.useCallback((e) => {
             E(e), g("none");
           }, []),
-          f = a.useCallback(() => {
+          T = l.useCallback(() => {
             i
               ? c
                 ? (g("submitting"),
@@ -948,14 +949,14 @@
                       const {
                           unAppID: n,
                           rtReleaseDate: o,
-                          strComingSoonDisplay: a,
+                          strComingSoonDisplay: l,
                         } = e,
-                        l = `${P.De.PARTNER_BASE_URL}apprelease/ajaxupdatereleaserequest/${n}`,
+                        a = `${P.De.PARTNER_BASE_URL}apprelease/ajaxupdatereleaserequest/${n}`,
                         s = new FormData();
                       s.append("sessionid", P.De.SESSIONID),
                         s.append("release_date", o.toString()),
-                        s.append("coming_soon_display", a);
-                      const i = yield S().post(l, s);
+                        s.append("coming_soon_display", l);
+                      const i = yield S().post(a, s);
                       if (!i.data || 1 != i.data.success)
                         throw (0, p.Xx)(
                           "#Error_Description",
@@ -982,67 +983,67 @@
               : h((0, p.Xx)("#App_Landing_ReleaseDate_Error_NoDate"));
           }, [t, i, c, s, h]);
         return (
-          a.useLayoutEffect(() => {
-            l(r && "none" == _ ? () => f : null);
-          }, [f, r, _, l]),
-          a.createElement(
-            a.Fragment,
+          l.useLayoutEffect(() => {
+            a(r && "none" == _ ? () => T : null);
+          }, [T, r, _, a]),
+          l.createElement(
+            l.Fragment,
             null,
-            C && a.createElement(I, { strError: C }),
-            a.createElement(B, null),
-            a.createElement(
+            C && l.createElement(R, { strError: C }),
+            l.createElement(w, null),
+            l.createElement(
               b.Uq,
               null,
-              a.createElement(
-                w,
+              l.createElement(
+                B,
                 { label: (0, p.Xx)("#App_Landing_IntendedReleaseDateTitle") },
-                a.createElement(y, { rtSelectedDate: i, setSelectedDate: u }),
-                a.createElement(L, null),
+                l.createElement(y, { rtSelectedDate: i, setSelectedDate: u }),
+                l.createElement(L, null),
               ),
-              a.createElement(
-                w,
+              l.createElement(
+                B,
                 { label: (0, p.Xx)("#App_Landing_PublicDateDisplayTitle") },
-                a.createElement(k, {
+                l.createElement(x, {
                   rtSteamReleaseDate: i,
                   value: c,
                   onChange: d,
                 }),
-                a.createElement(
+                l.createElement(
                   "p",
                   null,
                   (0, p.Xx)("#App_Landing_ReleaseDateStorePage"),
                 ),
-                a.createElement(
+                l.createElement(
                   "p",
                   null,
                   (0, p.Xx)("#App_Landing_ReleaseDateStoreListing"),
                 ),
               ),
             ),
-            a.createElement(
+            l.createElement(
               "div",
-              { className: D.ReleaseColumnFooter },
+              { className: k.ReleaseColumnFooter },
               (0, p.yu)(
                 "#App_Landing_NeedHelpWithReleaseDates",
-                a.createElement("a", {
+                l.createElement("a", {
                   target: "_blank",
                   href: `${P.De.PARTNER_BASE_URL}doc/store/coming_soon`,
                 }),
-                a.createElement("a", {
+                l.createElement("a", {
                   target: "_blank",
                   href: `${(0, v.iv)()}wizard/HelpWithPublishing`,
                 }),
               ),
             ),
-            a.createElement(O, null),
+            l.createElement(M, null),
           )
         );
       });
-      function I(e) {
+      function R(e) {
         const { strError: t } = e;
-        return a.createElement("div", { className: D.ErrorBox }, t);
+        return l.createElement("div", { className: k.ErrorBox }, t);
       }
-      function B() {
+      function w() {
         const {
           bIsComingSoon: e,
           bIsStorePageReviewed: t,
@@ -1052,23 +1053,23 @@
         } = N();
         return e && t
           ? r
-            ? a.createElement(
+            ? l.createElement(
                 X,
                 null,
                 (0, p.Xx)("#App_Landing_Release_EarliestDate_BuildReview"),
               )
-            : a.createElement(
+            : l.createElement(
                 X,
                 null,
                 (0, p.Xx)("#App_Landing_Release_EarliestDate", (0, p.vX)(o)),
               )
           : n
-          ? a.createElement(
+          ? l.createElement(
               X,
               null,
               (0, p.Xx)("#App_Landing_Release_EarliestDate_TwoWeeks30Days"),
             )
-          : a.createElement(
+          : l.createElement(
               X,
               null,
               (0, p.Xx)("#App_Landing_Release_EarliestDate_TwoWeeks"),
@@ -1079,10 +1080,10 @@
           { bCanUpdateComingSoonDate: o } = N() || {
             bCanUpdateComingSoonDate: !0,
           };
-        return a.createElement(
+        return l.createElement(
           h.On,
-          { active: !0, className: D.ReleaseDateModal, onDismiss: t },
-          a.createElement(
+          { active: !0, className: k.ReleaseDateModal, onDismiss: t },
+          l.createElement(
             b.h4,
             null,
             (0, p.Xx)(
@@ -1091,8 +1092,8 @@
                 : "#App_Landing_Change_Release_Date",
             ),
           ),
-          a.createElement(b.uT, { className: D.ReleaseDateRequestBody }, n),
-          a.createElement(b.o9, {
+          l.createElement(b.uT, { className: k.ReleaseDateRequestBody }, n),
+          l.createElement(b.o9, {
             bOKDisabled: !r,
             onCancel: t,
             strCancelText: (0, p.Xx)("#App_Landing_Requested_Date_Cancel"),
@@ -1101,29 +1102,29 @@
           }),
         );
       }
-      function w(e) {
+      function B(e) {
         const { label: t, children: r } = e;
-        return a.createElement(
+        return l.createElement(
           b.sg,
-          { className: D.Column },
-          a.createElement("div", { className: D.ColumnLabel }, t, ":"),
-          a.createElement("div", { className: D.ColumnContent }, r),
+          { className: k.Column },
+          l.createElement("div", { className: k.ColumnLabel }, t, ":"),
+          l.createElement("div", { className: k.ColumnContent }, r),
         );
       }
       function y(e) {
         const { rtSelectedDate: t, setSelectedDate: r } = e,
           { bCanUpdateComingSoonDate: n, rtEarliestDate: o } = N();
-        return a.createElement(
-          a.Fragment,
+        return l.createElement(
+          l.Fragment,
           null,
-          a.createElement(E.A, {
+          l.createElement(E.A, {
             bWeekdaysOnly: !0,
             bNoDefaultDate: !0,
             disabled: !n,
             nEarliestTime: o,
             fnGetTimeToUpdate: () => t,
             fnSetTimeToUpdate: r,
-            className: D.DatePicker,
+            className: k.DatePicker,
             bShowTimeZone: !0,
             strAlsoShowTimeZone: g.$,
           }),
@@ -1132,26 +1133,26 @@
       function L(e) {
         const { bCanUpdateComingSoonDate: t, rtReleaseDate: r } = N();
         return t
-          ? a.createElement(
-              a.Fragment,
+          ? l.createElement(
+              l.Fragment,
               null,
-              a.createElement(
+              l.createElement(
                 "p",
                 null,
                 (0, p.Xx)("#App_Landing_Set_Release_Date_SetIntended"),
               ),
-              a.createElement(
+              l.createElement(
                 "p",
                 null,
                 (0, p.Xx)("#App_Landing_Set_Release_Date_Weekends"),
               ),
-              a.createElement(
+              l.createElement(
                 "p",
                 null,
                 (0, p.Xx)("#App_Landing_Set_Release_Date_PacificTime"),
               ),
             )
-          : a.createElement(
+          : l.createElement(
               "p",
               null,
               (0, p.yu)(
@@ -1159,16 +1160,16 @@
                   "#App_Landing_Set_Release_Date_ComingSoonWarning_CantSet_Desc",
                   (0, p.vX)(r),
                 ),
-                a.createElement("a", {
+                l.createElement("a", {
                   href: `${(0, v.iv)()}wizard/HelpWithPublishing?issueid=905`,
                 }),
               ),
             );
       }
       function X(e) {
-        return a.createElement("span", { className: D.BlueNote }, e.children);
+        return l.createElement("span", { className: k.BlueNote }, e.children);
       }
-      function O(e) {
+      function M(e) {
         const {
           rtEarliestDate: t,
           strReleaseState: r,
@@ -1176,126 +1177,126 @@
         } = N();
         return "prerelease" != r || n
           ? null
-          : a.createElement(
+          : l.createElement(
               "div",
-              { className: D.PublishNowWarning },
+              { className: k.PublishNowWarning },
               (0, p.Xx)(
                 "#App_Landing_Set_Release_Date_ComingSoonWarning_CantSet_Note",
                 (0, p.vX)(t),
               ),
             );
       }
-      var M = r(19304);
-      function F(e) {
+      var O = r(19304);
+      function z(e) {
         const { bIsGameEdit: t, unAppID: r } = e,
-          [n, o] = a.useState(e.rtReleaseDate),
-          [l, s] = a.useState(e.strComingSoonDisplay),
-          [u, m] = a.useState(!1),
-          [_, S] = a.useState(!1),
-          g = a.useCallback(() => m(!0), []),
-          C = a.useCallback(() => m(!1), []),
-          b = a.useCallback((e, t, r) => {
+          [n, o] = l.useState(e.rtReleaseDate),
+          [a, s] = l.useState(e.strComingSoonDisplay),
+          [u, m] = l.useState(!1),
+          [_, S] = l.useState(!1),
+          g = l.useCallback(() => m(!0), []),
+          C = l.useCallback(() => m(!1), []),
+          b = l.useCallback((e, t, r) => {
             o(e), s(t), m(!1), r && S(!0);
           }, []);
-        return a.createElement(
-          a.Fragment,
+        return l.createElement(
+          l.Fragment,
           null,
-          u && a.createElement(x, { appid: r, onClose: C, onCommit: b }),
+          u && l.createElement(D, { appid: r, onClose: C, onCommit: b }),
           _ &&
-            a.createElement(G, {
+            l.createElement(G, {
               appid: r,
               bIsGameEdit: t,
               closeModal: () => S(!1),
             }),
-          a.createElement(
+          l.createElement(
             "div",
-            { className: (0, M.Z)(c.ReleaseDateInfoCtn, t && c.GameEditCtn) },
-            a.createElement(
+            { className: (0, O.Z)(c.ReleaseDateInfoCtn, t && c.GameEditCtn) },
+            l.createElement(
               "div",
               { className: c.ReleaseDateContent },
-              a.createElement(
+              l.createElement(
                 W,
                 { label: (0, p.Xx)("#App_Landing_SpecifiedReleaseDate") },
-                a.createElement(z, { rtReleaseDate: n }),
+                l.createElement(F, { rtReleaseDate: n }),
               ),
-              a.createElement(
+              l.createElement(
                 W,
                 { label: (0, p.Xx)("#App_Landing_CustomersSeeReleaseDate") },
-                a.createElement(
+                l.createElement(
                   "div",
-                  { className: (0, M.Z)(c.BigField, l ? c.Set : c.Unset) },
-                  l
-                    ? (0, i.M)(l, n)
+                  { className: (0, O.Z)(c.BigField, a ? c.Set : c.Unset) },
+                  a
+                    ? (0, i.M)(a, n)
                     : (0, p.Xx)("#App_Landing_UnsetReleaseDate"),
                 ),
               ),
             ),
-            a.createElement(
+            l.createElement(
               "div",
               { className: c.EditButton, onClick: g },
-              a.createElement("div", { className: (0, M.Z)(c.Spacer, c.Top) }),
-              a.createElement(
+              l.createElement("div", { className: (0, O.Z)(c.Spacer, c.Top) }),
+              l.createElement(
                 "div",
                 { className: c.EditButtonIcon },
-                a.createElement(d.I8b, null),
+                l.createElement(d.I8b, null),
               ),
-              a.createElement("div", {
-                className: (0, M.Z)(c.Spacer, c.Bottom),
+              l.createElement("div", {
+                className: (0, O.Z)(c.Spacer, c.Bottom),
               }),
             ),
           ),
         );
       }
-      function z(e) {
+      function F(e) {
         const { rtReleaseDate: t } = e;
         return t
-          ? a.createElement(
-              a.Fragment,
+          ? l.createElement(
+              l.Fragment,
               null,
-              a.createElement(
+              l.createElement(
                 "div",
-                { className: (0, M.Z)(c.BigField, c.Set) },
+                { className: (0, O.Z)(c.BigField, c.Set) },
                 (0, p.vX)(t),
               ),
-              a.createElement(
+              l.createElement(
                 "div",
-                { className: (0, M.Z)(c.SubField, c.Set) },
+                { className: (0, O.Z)(c.SubField, c.Set) },
                 (0, u.Sc)(t, {}, { timeZoneName: "short" }),
               ),
             )
-          : a.createElement(
+          : l.createElement(
               "div",
-              { className: (0, M.Z)(c.BigField, c.Unset) },
+              { className: (0, O.Z)(c.BigField, c.Unset) },
               (0, p.Xx)("#App_Landing_UnsetReleaseDate"),
             );
       }
       function W(e) {
-        return a.createElement(
+        return l.createElement(
           "div",
           { className: c.LabelField },
-          a.createElement("div", { className: c.Label }, e.label),
+          l.createElement("div", { className: c.Label }, e.label),
           e.children,
         );
       }
       function G(e) {
         const { appid: t, bIsGameEdit: r, closeModal: o } = e,
-          l = a.useCallback(() => {
+          a = l.useCallback(() => {
             r
               ? (window.TabSelect("tab_publish"), window.scrollTo(0, 0))
               : (window.location.href =
                   n.GameEditByAppID(t.toString()) + "?activetab=tab_publish"),
               o();
           }, [t, r, o]);
-        return a.createElement(
+        return l.createElement(
           h.Yy,
           { active: !0 },
-          a.createElement(h.uH, {
+          l.createElement(h.uH, {
             strTitle: (0, p.Xx)("#App_Landing_ReleaseDate_ChangesSaved"),
             strDescription: (0, p.Xx)(
               "#App_Landing_Release_PublishStorePrompt",
             ),
             strOKButtonText: (0, p.Xx)("#App_Landing_Release_PrepareToPublish"),
-            onOK: l,
+            onOK: a,
             strCancelButtonText: (0, p.Xx)("#Button_OK"),
             closeModal: o,
           }),
@@ -1320,7 +1321,7 @@
             setCurrentValues: n,
             setSkipToEnd: o,
           } = e,
-          l = [
+          a = [
             {
               id: H.k_eMouseKBOnly,
               locString: "#ControllerSupportModal_PgOne_MouseKBOnly",
@@ -1377,33 +1378,33 @@
               ? H.k_eGamepadAndMouse
               : H.k_eMouseKBOnly,
           i = s(),
-          u = a.createElement(
+          u = l.createElement(
             "div",
             null,
-            a.createElement(
+            l.createElement(
               b.SY,
               {
                 value: s(),
                 onChange: (e) => {
                   var t;
-                  const a = l.find((t) => t.id == e);
+                  const l = a.find((t) => t.id == e);
                   n(
                     Object.assign(
                       Object.assign({}, r),
-                      null == a ? void 0 : a.settings,
+                      null == l ? void 0 : l.settings,
                     ),
                   ),
-                    o(null !== (t = a.bSkipToEnd) && void 0 !== t && t);
+                    o(null !== (t = l.bSkipToEnd) && void 0 !== t && t);
                 },
               },
-              l.map((e) =>
-                a.createElement(
+              a.map((e) =>
+                l.createElement(
                   b.EU,
                   { key: e.id, value: e.id },
-                  a.createElement("div", {
-                    className: (0, M.Z)(Z.RadioButton, i == e.id && Z.Selected),
+                  l.createElement("div", {
+                    className: (0, O.Z)(Z.RadioButton, i == e.id && Z.Selected),
                   }),
-                  a.createElement(
+                  l.createElement(
                     "div",
                     { className: Z.OptionLabel },
                     (0, p.Xx)(e.locString),
@@ -1412,7 +1413,7 @@
               ),
             ),
           );
-        return a.createElement(ae, {
+        return l.createElement(le, {
           strStepName: (0, p.Xx)("#ControllerSupportModal_StepString", t + 1),
           strStepSubHeaderToken: "#ControllerSupportModal_PgOne_Header",
           strInstructionsToken: void 0,
@@ -1427,7 +1428,7 @@
             setCurrentValues: n,
             setSkipToEnd: o,
           } = e,
-          l = a.useMemo(
+          a = l.useMemo(
             () => [
               {
                 id: V.k_eFullXboxControllerSupport,
@@ -1449,42 +1450,42 @@
             ],
             [],
           ),
-          s = a.useCallback(
+          s = l.useCallback(
             () =>
               r.bFullXboxControllerSupport
                 ? V.k_eFullXboxControllerSupport
                 : V.k_ePartialXboxControllerSupport,
             [r],
           ),
-          i = a.useCallback(
+          i = l.useCallback(
             (e) => {
               var t;
-              const a = l.find((t) => t.id == e);
+              const l = a.find((t) => t.id == e);
               n(
                 Object.assign(
                   Object.assign({}, r),
-                  null == a ? void 0 : a.settings,
+                  null == l ? void 0 : l.settings,
                 ),
               ),
-                o(null !== (t = a.bSkipToEnd) && void 0 !== t && t);
+                o(null !== (t = l.bSkipToEnd) && void 0 !== t && t);
             },
-            [r, l, n, o],
+            [r, a, n, o],
           ),
           u = s(),
-          c = a.createElement(
+          c = l.createElement(
             "div",
             null,
-            a.createElement(
+            l.createElement(
               b.SY,
               { value: s(), onChange: i },
-              l.map((e) =>
-                a.createElement(
+              a.map((e) =>
+                l.createElement(
                   b.EU,
                   { key: e.id, value: e.id },
-                  a.createElement("div", {
-                    className: (0, M.Z)(Z.RadioButton, u == e.id && Z.Selected),
+                  l.createElement("div", {
+                    className: (0, O.Z)(Z.RadioButton, u == e.id && Z.Selected),
                   }),
-                  a.createElement(
+                  l.createElement(
                     "div",
                     { className: Z.OptionLabel },
                     (0, p.Xx)(e.locString),
@@ -1492,12 +1493,50 @@
                 ),
               ),
             ),
+          ),
+          d = l.createElement(
+            "div",
+            null,
+            l.createElement(
+              "p",
+              null,
+              (0, p.Xx)("#ControllerSupportModal_PgTwo_Instructions"),
+            ),
+            l.createElement(
+              "ol",
+              null,
+              l.createElement(
+                "li",
+                null,
+                (0, p.Xx)("#ControllerSupportModal_PgTwo_Instructions_pt1"),
+              ),
+              l.createElement(
+                "li",
+                null,
+                (0, p.Xx)("#ControllerSupportModal_PgTwo_Instructions_pt2"),
+              ),
+              l.createElement(
+                "li",
+                null,
+                (0, p.Xx)("#ControllerSupportModal_PgTwo_Instructions_pt3"),
+              ),
+              l.createElement(
+                "li",
+                null,
+                (0, p.Xx)("#ControllerSupportModal_PgTwo_Instructions_pt4"),
+              ),
+              l.createElement(
+                "li",
+                null,
+                (0, p.Xx)("#ControllerSupportModal_PgTwo_Instructions_pt5"),
+              ),
+            ),
           );
-        return a.createElement(ae, {
-          stepIMG: a.createElement(K.Qrh, { type: "xbox" }),
+        return l.createElement(le, {
+          stepIMG: l.createElement(K.Qrh, { type: "xbox" }),
           strStepName: (0, p.Xx)("#ControllerSupportModal_StepString", t + 1),
           strStepSubHeaderToken: "#ControllerSupportModal_PgTwo_Header",
-          strInstructionsToken: "#ControllerSupportModal_PgTwo_Instructions",
+          strInstructionsToken: d,
           strQuestionToken: "#ControllerSupportModal_PgTwo_Question",
           leftColumnContent: c,
         });
@@ -1551,11 +1590,11 @@
               ),
             },
           ],
-          l = a.createElement(
+          a = l.createElement(
             "div",
             null,
             o.map((e) =>
-              a.createElement(b.ji, {
+              l.createElement(b.ji, {
                 key: e.id,
                 checked: e.bValue,
                 onChange: (t) => {
@@ -1568,14 +1607,45 @@
                 label: (0, p.Xx)(e.locString),
               }),
             ),
+          ),
+          s = l.createElement(
+            "div",
+            null,
+            l.createElement(
+              "p",
+              null,
+              (0, p.Xx)("#ControllerSupportModal_PgThree_Instructions"),
+            ),
+            l.createElement(
+              "ol",
+              null,
+              l.createElement(
+                "li",
+                null,
+                (0, p.Xx)("#ControllerSupportModal_PgThree_Instructions_pt1"),
+              ),
+              l.createElement(
+                "li",
+                null,
+                (0, p.Xx)("#ControllerSupportModal_PgThree_Instructions_pt2"),
+              ),
+            ),
+            l.createElement(
+              "p",
+              null,
+              (0, p.yu)(
+                "#ControllerSupportModal_PgThree_Instructions_note",
+                l.createElement("span", { style: { fontWeight: "bold" } }),
+              ),
+            ),
           );
-        return a.createElement(ae, {
-          stepIMG: a.createElement(K.Qrh, { type: "ps4" }),
+        return l.createElement(le, {
+          stepIMG: l.createElement(K.Qrh, { type: "ps4" }),
           strStepName: (0, p.Xx)("#ControllerSupportModal_StepString", t + 1),
           strStepSubHeaderToken: "#ControllerSupportModal_PgThree_Header",
-          strInstructionsToken: "#ControllerSupportModal_PgThree_Instructions",
+          strInstructionsToken: s,
           strQuestionToken: "#ControllerSupportModal_PgThree_Question",
-          leftColumnContent: l,
+          leftColumnContent: a,
         });
       }
       function ee(e) {
@@ -1585,7 +1655,7 @@
             setCurrentValues: n,
             setSkipToEnd: o,
           } = e,
-          l = [
+          a = [
             {
               id: U.k_eSteamInputAPISupport,
               locString: "#ControllerSupportModal_PgFour_SIAPI",
@@ -1602,34 +1672,34 @@
           s = r.bSteamInputAPISupport
             ? U.k_eSteamInputAPISupport
             : U.k_eNoSteamInputAPISupport,
-          i = a.createElement(
+          i = l.createElement(
             "div",
             null,
-            a.createElement(
+            l.createElement(
               b.SY,
               {
                 value: s,
                 onChange: (e) => {
                   var t;
-                  const a = l.find((t) => t.id == e);
+                  const l = a.find((t) => t.id == e);
                   n(
                     Object.assign(
                       Object.assign({}, r),
-                      null == a ? void 0 : a.settings,
+                      null == l ? void 0 : l.settings,
                     ),
                   ),
-                    o(null !== (t = a.bSkipToEnd) && void 0 !== t && t);
+                    o(null !== (t = l.bSkipToEnd) && void 0 !== t && t);
                 },
                 classNames: Z.RadioGroup,
               },
-              l.map((e) =>
-                a.createElement(
+              a.map((e) =>
+                l.createElement(
                   b.EU,
                   { key: e.id, value: e.id },
-                  a.createElement("div", {
-                    className: (0, M.Z)(Z.RadioButton, s == e.id && Z.Selected),
+                  l.createElement("div", {
+                    className: (0, O.Z)(Z.RadioButton, s == e.id && Z.Selected),
                   }),
-                  a.createElement(
+                  l.createElement(
                     "div",
                     { className: Z.OptionLabel },
                     (0, p.Xx)(e.locString),
@@ -1637,28 +1707,61 @@
                 ),
               ),
             ),
+          ),
+          u = l.createElement(
+            "div",
+            null,
+            l.createElement(
+              "p",
+              null,
+              (0, p.Xx)("#ControllerSupportModal_PgFour_Instructions"),
+            ),
+            l.createElement(
+              "ol",
+              null,
+              l.createElement(
+                "li",
+                null,
+                (0, p.Xx)("#ControllerSupportModal_PgFour_Instructions_pt1"),
+              ),
+              l.createElement(
+                "li",
+                null,
+                (0, p.Xx)("#ControllerSupportModal_PgFour_Instructions_pt2"),
+              ),
+              l.createElement(
+                "li",
+                null,
+                (0, p.Xx)("#ControllerSupportModal_PgFour_Instructions_pt3"),
+              ),
+            ),
+            l.createElement(
+              "p",
+              null,
+              (0, p.Xx)("#ControllerSupportModal_PgFour_Instructions_note"),
+            ),
           );
-        return a.createElement(ae, {
+        return l.createElement(le, {
           strStepName: (0, p.Xx)("#ControllerSupportModal_StepString", t + 1),
           strStepSubHeaderToken: "#ControllerSupportModal_PgFour_Header",
-          strInstructionsToken: "#ControllerSupportModal_PgFour_Instructions",
+          strInstructionsToken: u,
           strQuestionToken: "#ControllerSupportModal_PgFour_Question",
           leftColumnContent: i,
         });
       }
       function te(e) {
         const { currentValues: t } = e,
-          r = a.createElement(
+          r = l.createElement(
             "div",
             null,
             (t.bFullXboxControllerSupport || t.bPartialXboxControllerSupport) &&
-              a.createElement(ce, Object.assign({}, e.currentValues)),
+              l.createElement(ce, Object.assign({}, e.currentValues)),
           ),
           n =
             t.bFullXboxControllerSupport || t.bPartialXboxControllerSupport
               ? "#ControllerSupportModal_PgFive_Question"
               : "#ControllerSupportModal_PgFive_QuestionNoController";
-        return a.createElement(ae, {
+        return l.createElement(le, {
           strStepName: (0, p.Xx)("#ControllerSupportModal_StepString", 5),
           strStepSubHeaderToken: "#ControllerSupportModal_PgFive_Header",
           strInstructionsToken: void 0,
@@ -1668,11 +1771,11 @@
       }
       function re(e) {
         const { appid: t, onClose: r, onCommit: n, params: o } = e,
-          [l, s] = a.useState(o),
-          [i, u] = a.useState(o),
-          [c, d] = a.useState(!1),
-          [_, S] = a.useState(0),
-          g = a.useCallback(() => {
+          [a, s] = l.useState(o),
+          [i, u] = l.useState(o),
+          [c, d] = l.useState(!1),
+          [_, S] = l.useState(0),
+          g = l.useCallback(() => {
             !(function (e) {
               (0, m.mG)(this, void 0, void 0, function* () {
                 Q("gamepadsupport_input_1", e.bPartialXboxControllerSupport),
@@ -1695,7 +1798,7 @@
         switch (_) {
           default:
           case 0:
-            C = a.createElement($, {
+            C = l.createElement($, {
               nPageNum: _,
               currentValues: i,
               setCurrentValues: u,
@@ -1703,7 +1806,7 @@
             });
             break;
           case 1:
-            C = a.createElement(J, {
+            C = l.createElement(J, {
               nPageNum: _,
               currentValues: i,
               setCurrentValues: u,
@@ -1711,7 +1814,7 @@
             });
             break;
           case 2:
-            C = a.createElement(Y, {
+            C = l.createElement(Y, {
               nPageNum: _,
               currentValues: i,
               setCurrentValues: u,
@@ -1719,7 +1822,7 @@
             });
             break;
           case 3:
-            C = a.createElement(ee, {
+            C = l.createElement(ee, {
               nPageNum: _,
               currentValues: i,
               setCurrentValues: u,
@@ -1727,19 +1830,19 @@
             });
             break;
           case 4:
-            C = a.createElement(te, { currentValues: i });
+            C = l.createElement(te, { currentValues: i });
         }
-        const b = a.createElement(oe, {
+        const b = l.createElement(oe, {
             nPageIdx: _,
             nPages: 5,
             strHeaderText: (0, p.Xx)("#ControllerSupportModal_Title"),
           }),
           E = 4 == _;
-        return a.createElement(
+        return l.createElement(
           ne.Provider,
           { value: i },
-          a.createElement(
-            le,
+          l.createElement(
+            ae,
             {
               fnNext: E
                 ? () => g()
@@ -1749,7 +1852,7 @@
               fnBack:
                 _ > 0
                   ? () => {
-                      u(l), S(_ - 1);
+                      u(a), S(_ - 1);
                     }
                   : r,
               header: b,
@@ -1776,137 +1879,129 @@
             (e[(e.k_eNoSteamInputAPISupport = 1)] =
               "k_eNoSteamInputAPISupport");
         })(U || (U = {}));
-      const ne = a.createContext(null);
+      const ne = l.createContext(null);
       function oe(e) {
         const { nPages: t, nPageIdx: r, strHeaderText: n } = e,
           o = (100 * (r + 1)) / (t + 1);
-        return a.createElement(
+        return l.createElement(
           "div",
-          { className: (0, M.Z)(Z.ModalHeader) },
+          { className: (0, O.Z)(Z.ModalHeader) },
           !1,
-          a.createElement("div", { className: Z.WizardTitle }, (0, p.Xx)(n)),
-          a.createElement(
+          l.createElement("div", { className: Z.WizardTitle }, (0, p.Xx)(n)),
+          l.createElement(
             "div",
             {
-              className: (0, M.Z)(
+              className: (0, O.Z)(
                 Z.ProgressBar,
                 r == t - 1 && Z.ProgressBarComplete,
               ),
             },
             r < t - 1 &&
-              a.createElement("div", {
-                className: (0, M.Z)(Z.ProgressBarFillComponent),
+              l.createElement("div", {
+                className: (0, O.Z)(Z.ProgressBarFillComponent),
                 style: { width: o + "%" },
               }),
           ),
         );
       }
-      const ae = a.memo(function (e) {
+      const le = l.memo(function (e) {
         const {
           strStepName: t,
           strStepSubHeaderToken: r,
           stepIMG: n,
           strInstructionsToken: o,
-          strQuestionToken: l,
+          strQuestionToken: a,
           leftColumnContent: s,
           rightColumnContent: i,
         } = e;
-        return a.createElement(
+        return l.createElement(
           "div",
           { className: Z.WizardContainer },
-          a.createElement(
+          l.createElement(
             "div",
             { className: Z.StepRow },
             n &&
-              a.createElement(
+              l.createElement(
                 "div",
                 { className: Z.StepImgContainer },
                 " ",
                 n,
                 " ",
               ),
-            a.createElement(
+            l.createElement(
               "div",
               { className: Z.StepLabel },
               t,
-              a.createElement(b.bU, null, (0, p.Xx)(r)),
+              l.createElement(b.bU, null, (0, p.Xx)(r)),
             ),
           ),
-          (null == o ? void 0 : o.length) > 0 &&
-            a.createElement(
-              "div",
-              { className: Z.StepInstruction },
-              (0, p.yu)(
-                o,
-                a.createElement("span", { style: { fontWeight: "bold" } }),
-              ),
-            ),
-          a.createElement(
+          o && l.createElement("div", { className: Z.StepInstruction }, o),
+          l.createElement(
             "div",
             { className: Z.ControlsQuestion },
             (0, p.yu)(
-              l,
-              a.createElement("span", { style: { fontWeight: "bold" } }),
+              a,
+              l.createElement("span", { style: { fontWeight: "bold" } }),
             ),
           ),
-          a.createElement(
+          l.createElement(
             b.Uq,
             null,
-            a.createElement(b.sg, null, s),
-            a.createElement(b.sg, null, i),
+            l.createElement(b.sg, null, s),
+            l.createElement(b.sg, null, i),
           ),
         );
       });
-      function le(e) {
+      function ae(e) {
         const {
           fnNext: t,
           fnBack: r,
           children: n,
           header: o,
-          strOkButtonLabel: l,
+          strOkButtonLabel: a,
         } = e;
-        return a.createElement(
+        return l.createElement(
           h.On,
-          { active: !0, className: Z.ReleaseDateModal },
+          { active: !0, className: Z.ControllerWizardModal },
           o,
-          a.createElement(b.uT, { className: Z.ReleaseDateRequestBody }, n),
-          a.createElement(b.o9, {
+          l.createElement(b.uT, { className: Z.WizardBody }, n),
+          l.createElement(b.o9, {
             bCancelDisabled: !r,
             onCancel: r,
             strCancelText: "Back",
             onOK: t,
-            strOKText: l,
+            strOKText: a,
           }),
         );
       }
       function se(e) {
         const { unAppID: t } = e,
-          [r, n] = a.useState(!1),
-          o = a.useCallback(() => n(!0), []),
-          l = a.useCallback(() => n(!1), []),
+          [r, n] = l.useState(!1),
+          o = l.useCallback(() => n(!0), []),
+          a = l.useCallback(() => n(!1), []),
           s =
             e.bControllerSupportWizardComplete &&
             (e.bFullXboxControllerSupport || e.bPartialXboxControllerSupport);
-        return a.createElement(
-          a.Fragment,
+        return l.createElement(
+          l.Fragment,
           null,
           r &&
-            a.createElement(re, {
+            l.createElement(re, {
               appid: t,
-              onClose: l,
-              onCommit: l,
+              onClose: a,
+              onCommit: a,
               params: e,
             }),
-          a.createElement(
+          l.createElement(
             b.uT,
             null,
-            a.createElement(
+            l.createElement(
               "div",
               { className: q.DescText },
               (0, p.Xx)("#App_Landing_ControllerSupport_WizardPrompt_Desc"),
             ),
             e.bControllerSupportWizardComplete &&
-              a.createElement(
+              l.createElement(
                 "div",
                 { className: q.DescText },
                 (0, p.Xx)(
@@ -1914,52 +2009,52 @@
                 ),
               ),
           ),
-          a.createElement(
+          l.createElement(
             "div",
-            { className: (0, M.Z)(q.ReleaseDateInfoCtn) },
-            a.createElement(
+            { className: (0, O.Z)(q.ReleaseDateInfoCtn) },
+            l.createElement(
               "div",
               { className: q.ReleaseDateContent },
               !e.bControllerSupportWizardComplete &&
-                a.createElement(ie, { onClick: o }),
+                l.createElement(ie, { onClick: o }),
               e.bControllerSupportWizardComplete &&
                 !s &&
-                a.createElement(pe, { onClick: o }),
+                l.createElement(pe, { onClick: o }),
               e.bControllerSupportWizardComplete &&
                 s &&
-                a.createElement(ce, Object.assign({}, e)),
+                l.createElement(ce, Object.assign({}, e)),
             ),
             e.bControllerSupportWizardComplete &&
               s &&
-              a.createElement(
+              l.createElement(
                 "div",
                 { className: q.EditButton, onClick: o },
-                a.createElement("div", {
-                  className: (0, M.Z)(q.Spacer, q.Top),
+                l.createElement("div", {
+                  className: (0, O.Z)(q.Spacer, q.Top),
                 }),
-                a.createElement(
+                l.createElement(
                   "div",
                   { className: q.EditButtonIcon },
-                  a.createElement(d.I8b, null),
+                  l.createElement(d.I8b, null),
                 ),
-                a.createElement("div", {
-                  className: (0, M.Z)(q.Spacer, q.Bottom),
+                l.createElement("div", {
+                  className: (0, O.Z)(q.Spacer, q.Bottom),
                 }),
               ),
           ),
         );
       }
       function ie(e) {
-        return a.createElement(
+        return l.createElement(
           "div",
           null,
-          a.createElement(
+          l.createElement(
             b.uT,
             null,
-            a.createElement(
+            l.createElement(
               b.Ac,
               null,
-              a.createElement(
+              l.createElement(
                 "div",
                 { className: q.StatusText },
                 (0, p.Xx)(
@@ -1967,7 +2062,7 @@
                 ),
               ),
             ),
-            a.createElement(
+            l.createElement(
               b.zx,
               { className: q.StartWizardButton, onClick: e.onClick },
               " ",
@@ -1980,16 +2075,16 @@
         );
       }
       function pe(e) {
-        return a.createElement(
+        return l.createElement(
           "div",
           null,
-          a.createElement(
+          l.createElement(
             b.uT,
             null,
-            a.createElement(
+            l.createElement(
               b.Ac,
               null,
-              a.createElement(
+              l.createElement(
                 "div",
                 { className: q.StatusText },
                 (0, p.Xx)(
@@ -1997,7 +2092,7 @@
                 ),
               ),
             ),
-            a.createElement(
+            l.createElement(
               b.zx,
               { className: q.StartWizardButton, onClick: e.onClick },
               " ",
@@ -2010,33 +2105,33 @@
         );
       }
       function ue(e) {
-        return a.createElement(
+        return l.createElement(
           "div",
           { className: q.InfoRow },
-          a.createElement(
+          l.createElement(
             "div",
             {
-              className: (0, M.Z)(
+              className: (0, O.Z)(
                 q.ImgSection,
                 e.bHightlightRow && q.HighlightRow,
                 e.bHighlightRowRed && q.HighlightRowRed,
               ),
             },
-            a.createElement("div", { className: q.ImgContainer }, e.tagImage),
+            l.createElement("div", { className: q.ImgContainer }, e.tagImage),
           ),
-          a.createElement(
+          l.createElement(
             "div",
             {
-              className: (0, M.Z)(
+              className: (0, O.Z)(
                 q.LocSection,
                 e.bHightlightRow && q.HighlightRow,
                 e.bHighlightRowRed && q.HighlightRowRed,
               ),
             },
-            a.createElement(
+            l.createElement(
               "div",
               {
-                className: (0, M.Z)(
+                className: (0, O.Z)(
                   q.LocString,
                   e.bHighlightText && q.HighlightText,
                   e.bHightlightRow && q.HighlightRow,
@@ -2056,7 +2151,7 @@
           bPS5ControllerSupport: r,
           bPS4ControllerBTSupport: n,
           bPS5ControllerBTSupport: o,
-          bFullXboxControllerSupport: l,
+          bFullXboxControllerSupport: a,
           bPartialXboxControllerSupport: s,
           bSteamInputAPISupport: i,
           bGamepadPreferred: u,
@@ -2066,18 +2161,18 @@
         return (
           t && r && n && o
             ? d.push(
-                a.createElement(ue, {
+                l.createElement(ue, {
                   key: "1",
-                  tagImage: a.createElement(K.CtA, { controllerType: 34 }),
+                  tagImage: l.createElement(K.CtA, { controllerType: 34 }),
                   strLocalizationToken: "#App_Landing_ControllerSupport_PS",
                 }),
               )
             : (t &&
                 (n
                   ? d.push(
-                      a.createElement(ue, {
+                      l.createElement(ue, {
                         key: "2",
-                        tagImage: a.createElement(K.CtA, {
+                        tagImage: l.createElement(K.CtA, {
                           controllerType: 34,
                         }),
                         strLocalizationToken:
@@ -2085,9 +2180,9 @@
                       }),
                     )
                   : d.push(
-                      a.createElement(ue, {
+                      l.createElement(ue, {
                         key: "3",
-                        tagImage: a.createElement(K.CtA, {
+                        tagImage: l.createElement(K.CtA, {
                           controllerType: 34,
                         }),
                         strLocalizationToken:
@@ -2097,9 +2192,9 @@
               r &&
                 (o
                   ? d.push(
-                      a.createElement(ue, {
+                      l.createElement(ue, {
                         key: "4",
-                        tagImage: a.createElement(K.CtA, {
+                        tagImage: l.createElement(K.CtA, {
                           controllerType: 45,
                         }),
                         strLocalizationToken:
@@ -2107,54 +2202,54 @@
                       }),
                     )
                   : d.push(
-                      a.createElement(ue, {
+                      l.createElement(ue, {
                         key: "5",
-                        tagImage: a.createElement(K.CtA, {
+                        tagImage: l.createElement(K.CtA, {
                           controllerType: 45,
                         }),
                         strLocalizationToken:
                           "#App_Landing_ControllerSupport_PS5_USB",
                       }),
                     ))),
-          a.createElement(
+          l.createElement(
             "div",
             { className: q.PreviewContainer },
-            (s || l) &&
-              a.createElement(
-                a.Fragment,
+            (s || a) &&
+              l.createElement(
+                l.Fragment,
                 null,
-                a.createElement(
+                l.createElement(
                   "div",
                   { className: q.ControllerSupportLevelString },
                   (0, p.Xx)(
-                    l
+                    a
                       ? "#App_Landing_ControllerSupport_FullController"
                       : "#App_Landing_ControllerSupport_PartialController",
                   ),
                 ),
                 u &&
-                  a.createElement(ue, {
-                    tagImage: a.createElement(K.CtA, { controllerType: 30 }),
+                  l.createElement(ue, {
+                    tagImage: l.createElement(K.CtA, { controllerType: 30 }),
                     strLocalizationToken:
                       "#App_Landing_ControllerSupport_GamepadPreferred",
                     bHightlightRow: !0,
                   }),
                 c &&
-                  a.createElement(ue, {
-                    tagImage: a.createElement(K.CtA, { controllerType: 30 }),
+                  l.createElement(ue, {
+                    tagImage: l.createElement(K.CtA, { controllerType: 30 }),
                     strLocalizationToken:
                       "#App_Landing_ControllerSupport_GamepadRequired",
                     bHightlightRow: !0,
                     bHighlightRowRed: !0,
                   }),
-                a.createElement(ue, {
-                  tagImage: a.createElement(K.CtA, { controllerType: 32 }),
+                l.createElement(ue, {
+                  tagImage: l.createElement(K.CtA, { controllerType: 32 }),
                   strLocalizationToken: "#App_Landing_ControllerSupport_Xbox",
                 }),
                 d,
                 i &&
-                  a.createElement(ue, {
-                    tagImage: a.createElement(K.IRk, { bGreyOutRightSide: !l }),
+                  l.createElement(ue, {
+                    tagImage: l.createElement(K.IRk, { bGreyOutRightSide: !a }),
                     strLocalizationToken:
                       "#App_Landing_ControllerSupport_SIAPI",
                   }),
@@ -2164,7 +2259,7 @@
       }
       var de = r(6531),
         me = r(4306);
-      class _e extends a.Component {
+      class _e extends l.Component {
         constructor() {
           super(...arguments),
             (this.state = {
@@ -2179,7 +2274,7 @@
           this.setState({ color: t }), this.props.onChange(t);
         }
         render() {
-          return a.createElement(de.AI, {
+          return l.createElement(de.AI, {
             onChange: this.OnColorChange,
             color: this.state.color,
           });
@@ -2190,47 +2285,47 @@
       function ge(e) {
         const { rgGameProfileColorDefs: t } = e,
           r = t.map((e) =>
-            a.createElement(
+            l.createElement(
               "div",
               { key: e.strProfileColorKey, className: "form_row_flex" },
-              a.createElement(
+              l.createElement(
                 "div",
                 { className: "form_label_flex" },
                 "*",
                 e.strProfileColorLabel,
               ),
-              a.createElement(
+              l.createElement(
                 "div",
                 { className: "form_data_flex" },
                 (function (e) {
-                  let [t, r] = a.useState(e.strCurrentColor);
-                  const n = a.useRef(),
+                  let [t, r] = l.useState(e.strCurrentColor);
+                  const n = l.useRef(),
                     o = (e) => {
                       const n = (e) => {
                         r(e);
                       };
                       (0, Se.yV)(
-                        a.createElement(_e, { onChange: n, color: t }),
+                        l.createElement(_e, { onChange: n, color: t }),
                         e,
                         { bDisablePopTop: !0 },
                       );
                     },
-                    l = () => {
+                    a = () => {
                       r(n.current.value);
                     };
-                  return a.createElement(
-                    a.Fragment,
+                  return l.createElement(
+                    l.Fragment,
                     null,
-                    a.createElement("input", {
+                    l.createElement("input", {
                       ref: n,
                       type: "text",
                       name: `item[profile_colors][${e.strProfileColorKey}]`,
-                      onChange: l,
+                      onChange: a,
                       placeholder: "rgba(255, 255, 255, .5)",
                       size: 20,
                       value: t,
                     }),
-                    a.createElement("div", {
+                    l.createElement("div", {
                       className: "profile_color_preview",
                       style: { backgroundColor: `${t}` },
                       onClick: o,
@@ -2240,41 +2335,41 @@
               ),
             ),
           );
-        return a.createElement("div", { className: "profile_colors_ctn" }, r);
+        return l.createElement("div", { className: "profile_colors_ctn" }, r);
       }
       function Ce(e) {
-        return a.createElement(
-          l.rs,
+        return l.createElement(
+          a.rs,
           null,
-          a.createElement(
-            l.AW,
+          l.createElement(
+            a.AW,
             { path: n.GameEdit(`:action(${o.join("|")})`, ":itemid") },
-            a.createElement(s.d, {
+            l.createElement(s.d, {
               config: {
                 "storeadmin-releasedateinfo": (e) =>
-                  a.createElement(F, Object.assign({ bIsGameEdit: !0 }, e)),
+                  l.createElement(z, Object.assign({ bIsGameEdit: !0 }, e)),
                 "storeadmin-controllersupportinfo": (e) =>
-                  a.createElement(se, Object.assign({}, e)),
+                  l.createElement(se, Object.assign({}, e)),
               },
             }),
           ),
-          a.createElement(l.AW, {
+          l.createElement(a.AW, {
             path: n.AppLanding(":appid"),
             render: (e) =>
-              a.createElement(s.d, {
+              l.createElement(s.d, {
                 config: {
                   "storeadmin-releasedateinfo": (e) =>
-                    a.createElement(F, Object.assign({}, e)),
+                    l.createElement(z, Object.assign({}, e)),
                 },
               }),
           }),
-          a.createElement(l.AW, {
+          l.createElement(a.AW, {
             path: n.CommunityItems(":appid"),
             render: (e) =>
-              a.createElement(s.d, {
+              l.createElement(s.d, {
                 config: {
                   "storeadmin-profilecolors": (e) =>
-                    a.createElement(ge, Object.assign({}, e)),
+                    l.createElement(ge, Object.assign({}, e)),
                 },
               }),
           }),
