@@ -1,4 +1,4 @@
-var CLSTAMP = "8208233";
+var CLSTAMP = "8214111";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -4199,9 +4199,9 @@ var CLSTAMP = "8208233";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Jul 21 2023 : 10:49:51",
-                BUILD_TIME_UTC: "Jul 21 2023 : 17:49:51",
-                BUILD_RTIME_UTC: 1689961791,
+                BUILD_TIME_LOCAL: "Jul 24 2023 : 19:50:34",
+                BUILD_TIME_UTC: "Jul 25 2023 : 02:50:34",
+                BUILD_RTIME_UTC: 1690253434,
               }.MOBILE_BUILD)
             ) {
               window.addEventListener("beforeunload", (e) => {
@@ -26549,12 +26549,17 @@ var CLSTAMP = "8208233";
           return o.createElement("div", { className: rt().Separator });
         }
         const at = o.forwardRef(function (e, t) {
-          const r = o.useRef();
+          const r = o.useRef(),
+            [n, i] = o.useState(!0);
           o.useEffect(() => {
-            var e;
-            null === (e = r.current) || void 0 === e || e.TakeFocus();
-          }, [e.page]);
-          const n = Boolean(e.showTitle);
+            var t;
+            (n && e.bNoInitialLeftColumnFocus) ||
+              null === (t = r.current) ||
+              void 0 === t ||
+              t.TakeFocus(),
+              i(!1);
+          }, [e.page, e.bNoInitialLeftColumnFocus]);
+          const a = Boolean(e.showTitle);
           return o.createElement(
             nt.Provider,
             { value: r },
@@ -26562,7 +26567,7 @@ var CLSTAMP = "8208233";
               q.Vh,
               Object.assign({}, e, {
                 stylesheet: rt(),
-                showTitle: n,
+                showTitle: a,
                 renderPageListItem: it,
                 renderPageListSeparator: ot,
                 renderPageAnimation: lt,
@@ -26708,7 +26713,11 @@ var CLSTAMP = "8208233";
           })(g);
           const B = i.useRef(),
             k = i.useCallback(() => B.current.TakeFocus(), [B]),
-            x = u.map((t, r) => {
+            x = (e) => {
+              e && H(!0);
+            },
+            [R, H] = i.useState(!1),
+            I = u.map((t, r) => {
               if (t === f) {
                 const t = r === g + 1 || r === g - 1;
                 return i.createElement(
@@ -26734,7 +26743,8 @@ var CLSTAMP = "8208233";
                 }),
                 key: o,
                 onClick: () => {
-                  l.LT.PlayNavSound(l.qr.PagedNavigation),
+                  x(!0),
+                    l.LT.PlayNavSound(l.qr.PagedNavigation),
                     e.onPageRequested && e.onPageRequested(t.identifier),
                     t.click ? t.click() : C && r != m && p(r);
                 },
@@ -26743,19 +26753,19 @@ var CLSTAMP = "8208233";
                 active: n,
               });
             }),
-            R = i.useRef(),
-            H = null == b ? void 0 : b.hideTitle,
-            I = null === (n = e.showTitle) || void 0 === n || n,
-            V = (0, c.default)(
+            V = i.useRef(),
+            F = null == b ? void 0 : b.hideTitle,
+            D = null === (n = e.showTitle) || void 0 === n || n,
+            T = (0, c.default)(
               "DialogContentTransition",
               s.PagedSettingDialog_ContentColumn,
             );
           i.useEffect(() => {
             var t;
             e.focusChild &&
-              (null === (t = R.current) || void 0 === t || t.TakeFocus());
-          }, [R.current]);
-          const F = e.renderPageAnimation && b ? e.renderPageAnimation : S;
+              (null === (t = V.current) || void 0 === t || t.TakeFocus());
+          }, [V.current]);
+          const O = e.renderPageAnimation && b ? e.renderPageAnimation : S;
           return i.createElement(
             o.Panel,
             {
@@ -26774,12 +26784,13 @@ var CLSTAMP = "8208233";
                 onButtonDown: (e) => {
                   var t;
                   e.detail.button == a.EGamepadButton.OK &&
-                    (null === (t = R.current) ||
+                    (null === (t = V.current) ||
                       void 0 === t ||
                       t.TakeFocus(e.detail.button));
                 },
+                onFocusWithin: x,
               },
-              I &&
+              D &&
                 i.createElement(
                   "div",
                   { className: s.PagedSettingsDialog_Title },
@@ -26794,28 +26805,29 @@ var CLSTAMP = "8208233";
                     e.disablePageListScrolling &&
                       s.PagedSettingsDialog_PageList_DisableScrolling,
                   ),
+                  onFocusWithin: x,
                 },
-                x,
+                I,
               ),
               e.bottomControls &&
                 i.createElement("div", null, e.bottomControls),
             ),
             i.createElement(
               o.Panel,
-              { className: V, onCancelButton: k, navRef: R },
+              { className: T, onCancelButton: R ? k : null, navRef: V },
               e.toggleHideList &&
                 i.createElement(y, {
                   hideList: e.hideList,
                   toggleHideList: e.toggleHideList,
                 }),
               i.createElement(
-                F,
+                O,
                 { activePage: b, direction: L },
                 b &&
                   i.createElement(E, {
                     key: b.identifier,
                     stylesheet: s,
-                    hideTitle: H,
+                    hideTitle: F,
                     activePage: b,
                   }),
               ),
@@ -54565,9 +54577,9 @@ var CLSTAMP = "8208233";
                 ? !{
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Jul 21 2023 : 10:49:51",
-                    BUILD_TIME_UTC: "Jul 21 2023 : 17:49:51",
-                    BUILD_RTIME_UTC: 1689961791,
+                    BUILD_TIME_LOCAL: "Jul 24 2023 : 19:50:34",
+                    BUILD_TIME_UTC: "Jul 25 2023 : 02:50:34",
+                    BUILD_RTIME_UTC: 1690253434,
                   }.MOBILE_BUILD && document.getElementById(t)
                 : t),
             n)
@@ -55094,7 +55106,7 @@ var CLSTAMP = "8208233";
       {
         27: "01fae04d660df430f1f9",
         33: "2d2bc892ef6e0ca54d7b",
-        58: "b2a320755b8ba22a2418",
+        58: "9f87d37aced6ff1aad8f",
         131: "2e624424daa2efdbffe7",
         200: "0273f88a1d91abf0685e",
         220: "0355b5539ec987b27c67",
@@ -55191,7 +55203,7 @@ var CLSTAMP = "8208233";
         7781: "9821375343c0d59c2283",
         7832: "35e371c703d65c6c518c",
         7850: "68b0792d044c44ae4211",
-        7962: "f0918665cbba3fbe5c67",
+        7962: "95e60cec0f173a4a4a51",
         8011: "2bad8c957b2510d4af07",
         8052: "6f4de79f989a0248e10b",
         8085: "defc47f400418f1b6972",
