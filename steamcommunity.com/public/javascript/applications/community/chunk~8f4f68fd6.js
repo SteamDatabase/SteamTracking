@@ -2368,6 +2368,7 @@
             r.rgunread.forEach((t) => {
               e.push(t);
             }),
+              r.rgread.push(...r.rgunread),
               (r.rgunread = []),
               this.NotifyServerNotificationsRead(e);
           }
@@ -4092,6 +4093,9 @@
             className: S().HideButton,
             onClick: (t) => {
               e.onHide(), t.stopPropagation(), t.preventDefault();
+            },
+            onMouseDown: (e) => {
+              e.stopPropagation(), e.preventDefault();
             },
           },
           r.createElement(v.ZNm, null),

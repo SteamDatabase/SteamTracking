@@ -1889,67 +1889,10 @@
           return "CEcon_GetTradeOfferAccessToken_Request";
         }
       }
-      class O extends N {
-        constructor(e = null) {
-          super(),
-            O.prototype.trade_offer_access_token || o.aR(O.M()),
-            N.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            O.sm_m ||
-              (O.sm_m = {
-                proto: O,
-                fields: {
-                  trade_offer_access_token: {
-                    n: 1,
-                    br: o.FE.readString,
-                    bw: o.Xc.writeString,
-                  },
-                },
-              }),
-            O.sm_m
-          );
-        }
-        static MBF() {
-          return O.sm_mbf || (O.sm_mbf = o.Bh(O.M())), O.sm_mbf;
-        }
-        toObject(e = !1) {
-          return O.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return o.TA(O.M(), e, t);
-        }
-        static fromObject(e) {
-          return o.aD(O.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new a.BinaryReader(e),
-            i = new O();
-          return O.deserializeBinaryFromReader(i, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return o.F(O.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new a.BinaryWriter();
-          return O.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          o.l2(O.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new a.BinaryWriter();
-          return O.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CEcon_GetTradeOfferAccessToken_Response";
-        }
-      }
       class D extends N {
         constructor(e = null) {
           super(),
-            D.prototype.return_url || o.aR(D.M()),
+            D.prototype.trade_offer_access_token || o.aR(D.M()),
             N.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
@@ -1958,7 +1901,7 @@
               (D.sm_m = {
                 proto: D,
                 fields: {
-                  return_url: {
+                  trade_offer_access_token: {
                     n: 1,
                     br: o.FE.readString,
                     bw: o.Xc.writeString,
@@ -1998,6 +1941,63 @@
         serializeBase64String() {
           var e = new a.BinaryWriter();
           return D.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CEcon_GetTradeOfferAccessToken_Response";
+        }
+      }
+      class O extends N {
+        constructor(e = null) {
+          super(),
+            O.prototype.return_url || o.aR(O.M()),
+            N.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            O.sm_m ||
+              (O.sm_m = {
+                proto: O,
+                fields: {
+                  return_url: {
+                    n: 1,
+                    br: o.FE.readString,
+                    bw: o.Xc.writeString,
+                  },
+                },
+              }),
+            O.sm_m
+          );
+        }
+        static MBF() {
+          return O.sm_mbf || (O.sm_mbf = o.Bh(O.M())), O.sm_mbf;
+        }
+        toObject(e = !1) {
+          return O.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return o.TA(O.M(), e, t);
+        }
+        static fromObject(e) {
+          return o.aD(O.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new a.BinaryReader(e),
+            i = new O();
+          return O.deserializeBinaryFromReader(i, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return o.F(O.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new a.BinaryWriter();
+          return O.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          o.l2(O.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new a.BinaryWriter();
+          return O.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CEcon_ClientGetItemShopOverlayAuthURL_Request";
@@ -2239,14 +2239,14 @@
             return e.SendMsg(
               "Econ.GetTradeOfferAccessToken#1",
               (0, s.MD)(z, t),
-              O,
+              D,
               { ePrivilege: 1 },
             );
           }),
           (e.ClientGetItemShopOverlayAuthURL = function (e, t) {
             return e.SendMsg(
               "Econ.ClientGetItemShopOverlayAuthURL#1",
-              (0, s.MD)(D, t),
+              (0, s.MD)(O, t),
               U,
               { ePrivilege: 1 },
             );
@@ -2376,6 +2376,7 @@
             n.rgunread.forEach((t) => {
               e.push(t);
             }),
+              n.rgread.push(...n.rgunread),
               (n.rgunread = []),
               this.NotifyServerNotificationsRead(e);
           }
@@ -3093,7 +3094,7 @@
         Ae = i.n(Ie),
         ke = i(701);
       const ze = !0;
-      var Oe, De;
+      var De, Oe;
       function Ue(e) {
         let {
             onActivate: t,
@@ -3155,41 +3156,41 @@
           footer: o,
           bNewIndicator: s,
         } = e;
-        const [l, c] = r.useState(a ? De.loadingActive : De.none),
+        const [l, c] = r.useState(a ? Oe.loadingActive : Oe.none),
           [m, d] = r.useState(void 0);
         r.useEffect(() => {
-          l != De.loadingActive || a
-            ? l == De.loadingComplete && a && c(De.loadingActive)
-            : c(De.loadingComplete);
+          l != Oe.loadingActive || a
+            ? l == Oe.loadingComplete && a && c(Oe.loadingActive)
+            : c(Oe.loadingComplete);
         }, [l, a]),
           r.useEffect(() => {
             let e =
               parseInt(Ae().loadinganimationiterationcount) *
               parseInt(Ae().loadinganimationduration) *
               1e3;
-            const t = window.setTimeout(() => c(De.none), e);
+            const t = window.setTimeout(() => c(Oe.none), e);
             return () => window.clearTimeout(t);
           }, []),
           r.useEffect(() => {
             t > 0 &&
             m !== Ae().Unread &&
-            i != Oe.DesktopToast &&
-            i != Oe.GamepadToast
+            i != De.DesktopToast &&
+            i != De.GamepadToast
               ? d(Ae().Unread)
               : t || m != Ae().Unread || d(Ae().MarkedRead);
           }, [t, i, m]);
         let u = e.onActivate;
         u || (u = () => console.log("Missing activate function")),
-          l == De.loadingActive && (u = null);
+          l == Oe.loadingActive && (u = null);
         let _ = Ae().StandardTemplate;
-        i == Oe.AllNotificationsTray
+        i == De.AllNotificationsTray
           ? (_ = Ae().AllNotificationsTemplate)
-          : i == Oe.DesktopToast
+          : i == De.DesktopToast
           ? (_ = Ae().DesktopToastTemplate)
           : (7 != n && 3 != n) || (_ = Ae().StandardTemplateDesktop);
         let p = null;
-        if (l != De.none && i != Oe.DesktopToast && i != Oe.GamepadToast) {
-          let e = l == De.loadingComplete ? Ae().Hide : null;
+        if (l != Oe.none && i != De.DesktopToast && i != De.GamepadToast) {
+          let e = l == Oe.loadingComplete ? Ae().Hide : null;
           p = r.createElement(
             "div",
             { className: (0, we.Z)(Ae().LoadingTemplate, e) },
@@ -3240,7 +3241,7 @@
       }
       function We(e) {
         const { location: t } = e;
-        return ze && t == Oe.Tray
+        return ze && t == De.Tray
           ? r.createElement(
               "div",
               { className: Ae().NewIndicator },
@@ -3256,10 +3257,10 @@
           location: a,
           fnRenderTimestamp: o,
         } = e;
-        const s = !!n && (a == Oe.Tray || a == Oe.AllNotificationsTray);
+        const s = !!n && (a == De.Tray || a == De.AllNotificationsTray);
         let l;
         return (
-          (l = a == Oe.AllNotificationsTray ? He : null != o ? o : qe),
+          (l = a == De.AllNotificationsTray ? He : null != o ? o : qe),
           r.createElement(
             "div",
             { className: Ae().Header },
@@ -3313,12 +3314,12 @@
           (e[(e.DesktopToast = 2)] = "DesktopToast"),
           (e[(e.Tray = 3)] = "Tray"),
           (e[(e.AllNotificationsTray = 4)] = "AllNotificationsTray");
-      })(Oe || (Oe = {})),
+      })(De || (De = {})),
         (function (e) {
           (e[(e.none = 0)] = "none"),
             (e[(e.loadingActive = 1)] = "loadingActive"),
             (e[(e.loadingComplete = 2)] = "loadingComplete");
-        })(De || (De = {}));
+        })(Oe || (Oe = {}));
       var $e = i(16826),
         Ye = i(25125),
         Je = i(47742),
@@ -3326,7 +3327,7 @@
         Ve = i(24448),
         Ke = i(25871);
       function Qe(e) {
-        return e == Oe.GamepadToast;
+        return e == De.GamepadToast;
       }
       var et = i(76239),
         tt = i.n(et);
@@ -3564,7 +3565,7 @@
           f = () => p(!0);
         let g = n;
         if (i && !_) {
-          const e = 3 == a.state && o != Oe.GamepadToast,
+          const e = 3 == a.state && o != De.GamepadToast,
             t = d ? rt().ShortLogoDimensions : rt().StandardLogoDimensions;
           g = r.createElement(
             Re.s,
@@ -3803,11 +3804,11 @@
               (null === (t = d.owner_steam_id) || void 0 === t
                 ? void 0
                 : t.ConvertTo64BitString()) == o
-                ? u == Oe.AllNotificationsTray && M
+                ? u == De.AllNotificationsTray && M
                   ? (0, $.Xx)("#SteamNotifications_Comment_Your_Profile_By", M)
                   : (0, $.Xx)("#SteamNotifications_Comment_Your_Profile")
                 : T
-                ? u == Oe.AllNotificationsTray && M
+                ? u == De.AllNotificationsTray && M
                   ? (0, $.Xx)(
                       "#SteamNotifications_Comment_Player_Profile_By",
                       M,
@@ -3855,7 +3856,7 @@
           I = null;
         if (g > 1) {
           const e = "+" + (g - 1);
-          u == Oe.AllNotificationsTray
+          u == De.AllNotificationsTray
             ? (I = r.createElement(
                 "div",
                 { className: rt().AllNotificationsCommentPlus },
@@ -3867,7 +3868,7 @@
         if (!v) {
           const e = h ? rt().ShortLogoDimensions : rt().StandardLogoDimensions;
           if (c && ce(d)) {
-            const t = d.bhas_friend && u != Oe.GamepadToast;
+            const t = d.bhas_friend && u != De.GamepadToast;
             A = r.createElement(
               "div",
               { style: { position: "relative" } },
@@ -4043,6 +4044,9 @@
             className: rt().HideButton,
             onClick: (t) => {
               e.onHide(), t.stopPropagation(), t.preventDefault();
+            },
+            onMouseDown: (e) => {
+              e.stopPropagation(), e.preventDefault();
             },
           },
           r.createElement(ke.ZNm, null),
@@ -4579,7 +4583,7 @@
                   rollup: e,
                   onNotificationClick: At,
                   uimode: 3,
-                  location: Oe.Tray,
+                  location: De.Tray,
                 }),
               ),
             )
@@ -4589,9 +4593,9 @@
         return r.createElement(
           "div",
           null,
-          r.createElement(Ot, null),
-          r.createElement(Ut, null),
           r.createElement(Dt, null),
+          r.createElement(Ut, null),
+          r.createElement(Ot, null),
           r.createElement(Ct, null),
           r.createElement(Gt, null),
           r.createElement(Wt, null),
@@ -4599,7 +4603,7 @@
           r.createElement(jt, null),
         );
       }
-      function Ot() {
+      function Dt() {
         const e = Et();
         return r.createElement(Ce, {
           icon: r.createElement(ke.ncs, null),
@@ -4614,7 +4618,7 @@
           visible: !0,
         });
       }
-      function Dt() {
+      function Ot() {
         const e = Et();
         return r.createElement(Ce, {
           icon: r.createElement(ke.svY, null),

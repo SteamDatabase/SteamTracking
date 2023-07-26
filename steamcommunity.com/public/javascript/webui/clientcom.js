@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "8216841";
+var CLSTAMP = "8219862";
 (() => {
   "use strict";
   function e(e) {
@@ -161,24 +161,24 @@ var CLSTAMP = "8216841";
       i.is_support &&
         (function () {
           let n = null;
-          t() && (n = e(S));
+          t() && (n = e(m));
           return Boolean(n && 1 === Number.parseInt(n));
         })() &&
         (i.is_support = !1));
-    const m = l("broadcast", _);
-    m && (Object.assign(s, m), (a.broadcastConfig = !0));
-    const h = l("community", _);
-    h && (Object.assign(o, h), (a.communityConfig = !0));
-    const d = l("event", _);
-    return d && (Object.assign(c, d), (a.eventConfig = !0)), a;
+    const S = l("broadcast", _);
+    S && (Object.assign(s, S), (a.broadcastConfig = !0));
+    const d = l("community", _);
+    d && (Object.assign(o, d), (a.communityConfig = !0));
+    const h = l("event", _);
+    return h && (Object.assign(c, h), (a.eventConfig = !0)), a;
   }
   function l(e, t = r) {
     return E(e, t, !0);
   }
   function E(e, t = r, n) {
-    let i;
+    let s;
     if (
-      ((i =
+      ((s =
         "string" == typeof t
           ? !{
               NODE_ENV: "production",
@@ -186,21 +186,28 @@ var CLSTAMP = "8216841";
               VALVE_BUILD: "false",
             }.MOBILE_BUILD && document.getElementById(t)
           : t),
-      i)
+      s)
     )
       try {
-        if (i.hasAttribute("data-" + e)) {
-          return JSON.parse(i.getAttribute("data-" + e));
+        if (s.hasAttribute("data-" + e)) {
+          return JSON.parse(s.getAttribute("data-" + e));
         }
         return null;
       } catch (e) {
-        console.error("Failed to parse config", e);
+        console.error(
+          "Failed to parse config for " +
+            i.steamid +
+            " (" +
+            window.location.href +
+            ")",
+          e,
+        );
       }
     else n && console.error("Missing config element #", t);
   }
-  const S = "presentation_mode";
-  let m = { success: !0, result: 1 };
-  class h {
+  const m = "presentation_mode";
+  let S = { success: !0, result: 1 };
+  class d {
     constructor() {
       (this.m_mapWaitingCallbacks = new Map()),
         (this.m_iCallSeq = 1),
@@ -311,9 +318,9 @@ var CLSTAMP = "8216841";
       );
     }
   }
-  let d = new (class {
+  let h = new (class {
     constructor() {
-      (this.m_connection = new h()),
+      (this.m_connection = new d()),
         (this.m_bAllowAccountMismatch = !1),
         (this.m_mapCacheSubscribedApp = new Map());
     }
@@ -335,7 +342,7 @@ var CLSTAMP = "8216841";
     }
     BClientConnected() {
       return this.m_connection.Connect().then(
-        () => m,
+        () => S,
         () => this.FailureResult(),
       );
     }
@@ -383,15 +390,15 @@ var CLSTAMP = "8216841";
             ? this.m_connection
                 .SendMsgAndAwaitResponse(e)
                 .then((e) =>
-                  1 === e.success ? m : this.FailureResult(e.success),
+                  1 === e.success ? S : this.FailureResult(e.success),
                 )
             : { success: !1, result: 19, account_mismatch: !0 },
         )
         .catch(() => this.FailureResult());
     }
   })();
-  (window.ClientConnectionAPI = d),
+  (window.ClientConnectionAPI = h),
     document.addEventListener("DOMContentLoaded", function () {
-      u(), (window.ClientConnectionAPI = d);
+      u(), (window.ClientConnectionAPI = h);
     });
 })();
