@@ -28301,7 +28301,14 @@
             }
             return null;
           } catch (e) {
-            console.error("Failed to parse config", e);
+            console.error(
+              "Failed to parse config for " +
+                o.L7.steamid +
+                " (" +
+                window.location.href +
+                ")",
+              e,
+            );
           }
         else n && console.error("Missing config element #", t);
       }
