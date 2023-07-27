@@ -1,7 +1,10 @@
 
 body {
 	background: transparent;
-}
+    		font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		}
 
 a, a:hover {
 	text-decoration: none;
@@ -143,12 +146,7 @@ background: -webkit-linear-gradient( 30deg, #395021 5%,#283e18 95%);
 #widget .coming_soon .btn_addtocart {
 	margin-left: 10px;
 }
-.discount_pct {
-    color: #a4d007;
-}
-.discount_final_price {
-    color: #acdbf5;
-}
+
 #widget .btn_addtocart .btn_addtocart_content {
     display: inline-block;
     height: 34px;
