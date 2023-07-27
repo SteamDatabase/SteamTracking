@@ -212,6 +212,10 @@
         {
             "name": "GetAchievementProgressLimits",
             "argc": "5"
+        },
+        {
+            "name": "BAchievementIconLoaded",
+            "argc": "4"
         }
     ]
 }
