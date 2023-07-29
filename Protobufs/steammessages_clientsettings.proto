@@ -90,7 +90,7 @@ message CMsgClientSettings {
 	optional bool enable_hardware_video_decoding = 5003 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional bool run_at_startup = 5004 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional bool enable_dpi_scaling = 5005 [(setting_store) = k_EClientSettingStore_CustomFunc];
-	optional bool enable_marketing_messages = 5006 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "news\\NotifyAvailableGames"];
+	optional bool enable_marketing_messages = 5006 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "news\\NotifyAvailableGames", (setting_default_bool) = true];
 	optional bool start_in_big_picture_mode = 5007 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional uint32 jumplist_flags = 5008 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "system\\JumplistSettings", (setting_default_uint) = 77680];
 	optional bool enable_ui_sounds = 5009 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "system\\EnableUISounds", (setting_default_bool) = true];

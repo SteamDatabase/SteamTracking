@@ -1,4 +1,4 @@
-var CLSTAMP = "8221070";
+var CLSTAMP = "8226802";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -4199,9 +4199,9 @@ var CLSTAMP = "8221070";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Jul 26 2023 : 18:48:56",
-                BUILD_TIME_UTC: "Jul 27 2023 : 01:48:56",
-                BUILD_RTIME_UTC: 1690422536,
+                BUILD_TIME_LOCAL: "Jul 28 2023 : 15:21:12",
+                BUILD_TIME_UTC: "Jul 28 2023 : 22:21:12",
+                BUILD_RTIME_UTC: 1690582872,
               }.MOBILE_BUILD)
             ) {
               window.addEventListener("beforeunload", (e) => {
@@ -53207,10 +53207,10 @@ var CLSTAMP = "8221070";
           }
           Log(e, ...t) {
             var r, n;
-            if (e == s.Debug && !u.Get().IsDebugLogEnabled(this.m_sName))
-              return;
-            let i = this.m_sName;
-            const o =
+            const i = u.Get().IsDebugLogEnabled(this.m_sName);
+            if (e == s.Debug && !i) return;
+            let o = this.m_sName;
+            const a =
               null !==
                 (n =
                   null === (r = this.m_fnIdGenerator) || void 0 === r
@@ -53218,8 +53218,8 @@ var CLSTAMP = "8221070";
                     : r.call(this)) && void 0 !== n
                 ? n
                 : null;
-            null != o && (i += " (" + o + ")");
-            d(e, u.Get().IncludeBacktraceInLog, i, this.m_sName, ...t);
+            null != a && (o += " (" + a + ")");
+            d(e, i, u.Get().IncludeBacktraceInLog, o, this.m_sName, ...t);
           }
         }
         (0, n.gn)([i.a], c.prototype, "Debug", null),
@@ -53242,6 +53242,7 @@ var CLSTAMP = "8221070";
           LogAsLogManager(...e) {
             d(
               s.Info,
+              !0,
               this.IncludeBacktraceInLog,
               "LogManager",
               "LogManager",
@@ -53339,13 +53340,13 @@ var CLSTAMP = "8221070";
             });
           }
         }
-        function d(e, t, r, n, ...i) {
-          const o = (function (e) {
+        function d(e, t, r, n, i, ...o) {
+          const a = (function (e) {
               let t = 0;
               for (let r = 0; r < e.length; r++)
                 t = e.charCodeAt(r) + ((t << 5) - t);
               return [(t >> 0) & 255, (t >> 8) & 255, (t >> 16) & 255];
-            })(n).map((e, t) =>
+            })(i).map((e, t) =>
               Math.round(
                 Math.max(
                   0,
@@ -53353,11 +53354,11 @@ var CLSTAMP = "8221070";
                 ),
               ),
             ),
-            a = (299 * (l = o)[0] + 587 * l[1] + 114 * l[2]) / 1e3 >= 128;
-          var l;
-          let c = r;
-          t &&
-            (c =
+            l = (299 * (c = a)[0] + 587 * c[1] + 114 * c[2]) / 1e3 >= 128;
+          var c;
+          let u = n;
+          r &&
+            (u =
               (function (e) {
                 switch (e) {
                   case s.Debug:
@@ -53371,34 +53372,39 @@ var CLSTAMP = "8221070";
                 }
               })(e) +
               " " +
-              c);
-          const u =
-              i.length >= 1 && "string" == typeof i[0] && i[0].includes("%c"),
-            d = u && i.shift(),
-            C = [
-              `%c${c}%c:${u ? " %c" + d : ""}`,
-              `color: ${a ? "black" : "white"}; background: rgb(${o.join(
-                ",",
-              )}); padding: 0 1ch`,
-              "color: transparent; margin-right: -1ch",
-              ...(u ? [""] : []),
-              ...i,
-            ];
-          if (t)
-            console.groupCollapsed(...C),
+              u);
+          const d =
+              o.length >= 1 && "string" == typeof o[0] && o[0].includes("%c"),
+            C = d && o.shift();
+          let m;
+          if (
+            ((m = t
+              ? [
+                  `%c${u}%c:${d ? " %c" + C : ""}`,
+                  `color: ${l ? "black" : "white"}; background: rgb(${a.join(
+                    ",",
+                  )}); padding: 0 1ch`,
+                  "color: transparent; margin-right: -1ch",
+                  ...(d ? [""] : []),
+                  ...o,
+                ]
+              : o),
+            r)
+          )
+            console.groupCollapsed(...m),
               console.trace("Callstack"),
               console.groupEnd();
           else
             switch (e) {
               case s.Debug:
               case s.Info:
-                console.log(...C);
+                console.log(...m);
                 break;
               case s.Warning:
-                console.warn(...C);
+                console.warn(...m);
                 break;
               case s.Error:
-                console.error(...C);
+                console.error(...m);
             }
         }
         (u.k_EnabledLogNames_StorageKey = "EnabledWebLogs"),
@@ -54577,9 +54583,9 @@ var CLSTAMP = "8221070";
                 ? !{
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Jul 26 2023 : 18:48:56",
-                    BUILD_TIME_UTC: "Jul 27 2023 : 01:48:56",
-                    BUILD_RTIME_UTC: 1690422536,
+                    BUILD_TIME_LOCAL: "Jul 28 2023 : 15:21:12",
+                    BUILD_TIME_UTC: "Jul 28 2023 : 22:21:12",
+                    BUILD_RTIME_UTC: 1690582872,
                   }.MOBILE_BUILD && document.getElementById(t)
                 : t),
             n)
@@ -55106,7 +55112,7 @@ var CLSTAMP = "8221070";
       {
         27: "01fae04d660df430f1f9",
         33: "2d2bc892ef6e0ca54d7b",
-        58: "ebc9b0b6ed8b6e79a868",
+        58: "2aad45a83c6aa1456d4d",
         131: "2e624424daa2efdbffe7",
         200: "0273f88a1d91abf0685e",
         220: "0355b5539ec987b27c67",
@@ -55203,7 +55209,7 @@ var CLSTAMP = "8221070";
         7781: "9821375343c0d59c2283",
         7832: "35e371c703d65c6c518c",
         7850: "68b0792d044c44ae4211",
-        7962: "95e60cec0f173a4a4a51",
+        7962: "6c4d80c48c5e297f22da",
         8011: "2bad8c957b2510d4af07",
         8052: "6f4de79f989a0248e10b",
         8085: "defc47f400418f1b6972",
