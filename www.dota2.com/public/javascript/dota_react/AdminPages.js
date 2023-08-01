@@ -244,7 +244,7 @@
             return "Unknown";
         }
       }
-      function L(e) {
+      function b(e) {
         switch (e) {
           case I._W.DOTA_ACCESS_TOURNAMENT_ADMIN:
             return "Tournament Admin";
@@ -254,7 +254,7 @@
             return "Unknown";
         }
       }
-      function b(e) {
+      function L(e) {
         switch (e) {
           case I.xd.CORE:
             return "Core";
@@ -462,7 +462,7 @@
           },
           {
             key: "beta_access_flags",
-            displayName: L(I._W.DOTA_ACCESS_TOURNAMENT_ADMIN),
+            displayName: b(I._W.DOTA_ACCESS_TOURNAMENT_ADMIN),
             formatFunction: (e = 0) =>
               e & I._W.DOTA_ACCESS_TOURNAMENT_ADMIN
                 ? i.createElement("div", { style: { color: K } }, "YES")
@@ -470,7 +470,7 @@
           },
           {
             key: "beta_access_flags",
-            displayName: L(I._W.DOTA_ACCESS_TOURNAMENT_BROADCASTER),
+            displayName: b(I._W.DOTA_ACCESS_TOURNAMENT_BROADCASTER),
             formatFunction: (e = 0) =>
               e & I._W.DOTA_ACCESS_TOURNAMENT_BROADCASTER
                 ? i.createElement("div", { style: { color: K } }, "YES")
@@ -478,12 +478,6 @@
           },
         ],
         z = [
-          {
-            key: "wins",
-            secondaryKey: "losses",
-            displayName: "Total Games Played",
-            formatFunction: (e, t) => i.createElement("div", null, e + t || 0),
-          },
           {
             key: "behavscore",
             displayName: "Behavior Score",
@@ -494,6 +488,18 @@
                 i.createElement("span", { style: { color: t } }, e)
               );
             },
+          },
+          {
+            key: "plussubscriber",
+            displayName: "Plus Subscriber",
+            formatFunction: (e = 0) =>
+              e ? i.createElement("div", { style: { color: K } }, "YES") : "NO",
+          },
+          {
+            key: "wins",
+            secondaryKey: "losses",
+            displayName: "Total Games Played",
+            formatFunction: (e, t) => i.createElement("div", null, e + t || 0),
           },
           {
             key: "wins",
@@ -524,7 +530,7 @@
           {
             key: "recentwincount",
             secondaryKey: "recentlosscount",
-            displayName: "Win Rate (Last 30)",
+            displayName: "Win Rate (Recent)",
             formatFunction: (e, t) => {
               const a = e + t || 0;
               if (!a) return i.createElement("div", null, "");
@@ -870,13 +876,13 @@
             formatFunction: (e = 0) => {
               switch (e) {
                 case I.xd.CORE:
-                  return b(I.xd.CORE);
+                  return L(I.xd.CORE);
                 case I.xd.SUPPORT:
-                  return b(I.xd.SUPPORT);
+                  return L(I.xd.SUPPORT);
                 case I.xd.OFFLANE:
-                  return b(I.xd.OFFLANE);
+                  return L(I.xd.OFFLANE);
                 case I.xd.MID:
-                  return b(I.xd.MID);
+                  return L(I.xd.MID);
                 default:
                   return "Unknown";
               }
@@ -1056,8 +1062,8 @@
         me = (e) => {
           var t, a, l, s, S;
           const M = (0, o.UO)(),
-            L = null == M ? void 0 : M.id,
-            [b, G] = (0, i.useState)(null),
+            b = null == M ? void 0 : M.id,
+            [L, G] = (0, i.useState)(null),
             [U, K] = (0, i.useState)(null),
             [re, ie] = (0, i.useState)(null),
             [me, de] = (0, i.useState)(null),
@@ -1077,12 +1083,12 @@
               !(function () {
                 var e;
                 (0, n.mG)(this, void 0, void 0, function* () {
-                  if (!T.Y.DOTA_APP_ID || !L) return;
+                  if (!T.Y.DOTA_APP_ID || !b) return;
                   ge(!1), ve(!1), pe(!1), _e(!1);
                   const t = {
                     appid: T.Y.DOTA_APP_ID,
                     u: F(T.Y.DOTA_APP_ID),
-                    account_id: L,
+                    account_id: b,
                   };
                   try {
                     const a = yield r().get(
@@ -1133,7 +1139,7 @@
             } catch (e) {
               console.log("Could not fetch persona info.");
             }
-          }, [L]),
+          }, [b]),
             (0, i.useEffect)(() => {
               if (!re) return;
               let e = re.slice();
@@ -1154,14 +1160,14 @@
             }, [re, ke, Te, he, Ie, Fe]);
           let Me = null;
           if (
-            (L
+            (b
               ? ye && ue
                 ? ye && fe
-                  ? (Me = `Error loading persona information for account ID ${L}.`)
+                  ? (Me = `Error loading persona information for account ID ${b}.`)
                   : ue &&
                     Ee &&
-                    (Me = `Error loading match history for account ID ${L}.`)
-                : (Me = `Loading account ID ${L}...`)
+                    (Me = `Error loading match history for account ID ${b}.`)
+                : (Me = `Loading account ID ${b}...`)
               : (Me = "Must pass in an account ID."),
             Me)
           )
@@ -1182,7 +1188,7 @@
               ),
               i.createElement(h.U, null),
             );
-          const Le = [
+          const be = [
             {
               dataKey: "date",
               label: "Match Date",
@@ -1604,19 +1610,19 @@
               },
             },
           ];
-          let be = !0;
+          let Le = !0;
           for (let e of oe)
-            (null == b ? void 0 : b.persona) &&
-              (null == b ? void 0 : b.persona[e.key]) &&
-              (be = !1);
+            (null == L ? void 0 : L.persona) &&
+              (null == L ? void 0 : L.persona[e.key]) &&
+              (Le = !1);
           let Ge = !0;
           for (let e of ce)
-            (null == b ? void 0 : b.persona) &&
-              (null == b ? void 0 : b.persona[e.key]) &&
-              m()(null == b ? void 0 : b.persona[e.key]).isAfter() &&
+            (null == L ? void 0 : L.persona) &&
+              (null == L ? void 0 : L.persona[e.key]) &&
+              m()(null == L ? void 0 : L.persona[e.key]).isAfter() &&
               (Ge = !1);
           const $e =
-            (null === (t = null == b ? void 0 : b.persona) || void 0 === t
+            (null === (t = null == L ? void 0 : L.persona) || void 0 === t
               ? void 0
               : t.personaname) || "";
           return i.createElement(
@@ -1658,11 +1664,11 @@
                           e.formatFunction
                             ? e.formatFunction.call(
                                 null,
-                                null == b ? void 0 : b.persona[e.key],
-                                null == b ? void 0 : b.persona[e.secondaryKey],
+                                null == L ? void 0 : L.persona[e.key],
+                                null == L ? void 0 : L.persona[e.secondaryKey],
                               )
                             : JSON.stringify(
-                                (null == b ? void 0 : b.persona[e.key]) || "",
+                                (null == L ? void 0 : L.persona[e.key]) || "",
                                 null,
                                 2,
                               ).replace(/['"]+/g, ""),
@@ -1684,12 +1690,12 @@
                           e.formatFunction
                             ? e.formatFunction.call(
                                 null,
-                                null == b ? void 0 : b.persona[e.key],
-                                null == b ? void 0 : b.persona[e.secondaryKey],
-                                null == b ? void 0 : b.persona.compranktier,
+                                null == L ? void 0 : L.persona[e.key],
+                                null == L ? void 0 : L.persona[e.secondaryKey],
+                                null == L ? void 0 : L.persona.compranktier,
                               )
                             : JSON.stringify(
-                                (null == b ? void 0 : b.persona[e.key]) || "",
+                                (null == L ? void 0 : L.persona[e.key]) || "",
                                 null,
                                 2,
                               ).replace(/['"]+/g, ""),
@@ -1711,11 +1717,11 @@
                           e.formatFunction
                             ? e.formatFunction.call(
                                 null,
-                                null == b ? void 0 : b.persona[e.key],
-                                null == b ? void 0 : b.persona[e.secondaryKey],
+                                null == L ? void 0 : L.persona[e.key],
+                                null == L ? void 0 : L.persona[e.secondaryKey],
                               )
                             : JSON.stringify(
-                                (null == b ? void 0 : b.persona[e.key]) || "",
+                                (null == L ? void 0 : L.persona[e.key]) || "",
                                 null,
                                 2,
                               ).replace(/['"]+/g, ""),
@@ -1737,11 +1743,11 @@
                           e.formatFunction
                             ? e.formatFunction.call(
                                 null,
-                                null == b ? void 0 : b.persona[e.key],
-                                null == b ? void 0 : b.persona[e.secondaryKey],
+                                null == L ? void 0 : L.persona[e.key],
+                                null == L ? void 0 : L.persona[e.secondaryKey],
                               )
                             : JSON.stringify(
-                                (null == b ? void 0 : b.persona[e.key]) || "",
+                                (null == L ? void 0 : L.persona[e.key]) || "",
                                 null,
                                 2,
                               ).replace(/['"]+/g, ""),
@@ -1753,7 +1759,7 @@
                   i.createElement(
                     "h2",
                     { className: $().Header },
-                    "Last 30 games (WIP)",
+                    "Recent (WIP)",
                   ),
                   i.createElement(
                     "div",
@@ -1768,11 +1774,11 @@
                           e.formatFunction
                             ? e.formatFunction.call(
                                 null,
-                                null == b ? void 0 : b.persona[e.key],
-                                null == b ? void 0 : b.persona[e.secondaryKey],
+                                null == L ? void 0 : L.persona[e.key],
+                                null == L ? void 0 : L.persona[e.secondaryKey],
                               )
                             : JSON.stringify(
-                                (null == b ? void 0 : b.persona[e.key]) || "",
+                                (null == L ? void 0 : L.persona[e.key]) || "",
                                 null,
                                 2,
                               ).replace(/['"]+/g, ""),
@@ -1880,14 +1886,14 @@
                                 : $().MatchRowOdd
                               : "",
                         },
-                        Le.map((t) =>
+                        be.map((t) =>
                           i.createElement(A.Z, {
                             key: t.dataKey,
                             label: t.label,
                             dataKey: t.dataKey,
                             width: e * t.widthRelative,
                             cellRenderer: t.cellRenderer,
-                            columnData: { strAccountId: L },
+                            columnData: { strAccountId: b },
                             headerRenderer: t.headerRenderer,
                           }),
                         ),
@@ -1945,11 +1951,11 @@
                           e.formatFunction
                             ? e.formatFunction.call(
                                 null,
-                                null == b ? void 0 : b.persona[e.key],
-                                null == b ? void 0 : b.persona[e.secondaryKey],
+                                null == L ? void 0 : L.persona[e.key],
+                                null == L ? void 0 : L.persona[e.secondaryKey],
                               )
                             : JSON.stringify(
-                                (null == b ? void 0 : b.persona[e.key]) || "",
+                                (null == L ? void 0 : L.persona[e.key]) || "",
                                 null,
                                 2,
                               ).replace(/['"]+/g, ""),
@@ -1972,11 +1978,11 @@
                           e.formatFunction
                             ? e.formatFunction.call(
                                 null,
-                                null == b ? void 0 : b.persona[e.key],
-                                null == b ? void 0 : b.persona[e.secondaryKey],
+                                null == L ? void 0 : L.persona[e.key],
+                                null == L ? void 0 : L.persona[e.secondaryKey],
                               )
                             : JSON.stringify(
-                                (null == b ? void 0 : b.persona[e.key]) || "",
+                                (null == L ? void 0 : L.persona[e.key]) || "",
                                 null,
                                 2,
                               ).replace(/['"]+/g, ""),
@@ -2001,11 +2007,11 @@
                           e.formatFunction
                             ? e.formatFunction.call(
                                 null,
-                                null == b ? void 0 : b.persona[e.key],
-                                null == b ? void 0 : b.persona[e.secondaryKey],
+                                null == L ? void 0 : L.persona[e.key],
+                                null == L ? void 0 : L.persona[e.secondaryKey],
                               )
                             : JSON.stringify(
-                                (null == b ? void 0 : b.persona[e.key]) || "",
+                                (null == L ? void 0 : L.persona[e.key]) || "",
                                 null,
                                 2,
                               ).replace(/['"]+/g, ""),
@@ -2013,7 +2019,7 @@
                       ),
                     ),
                   ),
-                  !be && i.createElement("br", null),
+                  !Le && i.createElement("br", null),
                   i.createElement(
                     "div",
                     { className: $().WarningsGrid },
@@ -2021,22 +2027,22 @@
                       i.createElement(
                         i.Fragment,
                         { key: `${e.key}-${e.displayName}-warningsInfo-row` },
-                        !!(null == b ? void 0 : b.persona[e.key]) &&
+                        !!(null == L ? void 0 : L.persona[e.key]) &&
                           i.createElement("div", null, e.displayName || e.key),
-                        !!(null == b ? void 0 : b.persona[e.key]) &&
+                        !!(null == L ? void 0 : L.persona[e.key]) &&
                           i.createElement(
                             "div",
                             null,
                             e.formatFunction
                               ? e.formatFunction.call(
                                   null,
-                                  null == b ? void 0 : b.persona[e.key],
-                                  null == b
+                                  null == L ? void 0 : L.persona[e.key],
+                                  null == L
                                     ? void 0
-                                    : b.persona[e.secondaryKey],
+                                    : L.persona[e.secondaryKey],
                                 )
                               : JSON.stringify(
-                                  (null == b ? void 0 : b.persona[e.key]) || "",
+                                  (null == L ? void 0 : L.persona[e.key]) || "",
                                   null,
                                   2,
                                 ).replace(/['"]+/g, ""),
@@ -2052,14 +2058,14 @@
                       i.createElement(
                         i.Fragment,
                         { key: `${e.key}-${e.displayName}-bansInfo-row` },
-                        !!(null == b ? void 0 : b.persona[e.key]) &&
+                        !!(null == L ? void 0 : L.persona[e.key]) &&
                           m()(
-                            null == b ? void 0 : b.persona[e.key],
+                            null == L ? void 0 : L.persona[e.key],
                           ).isAfter() &&
                           i.createElement("div", null, e.displayName || e.key),
-                        !!(null == b ? void 0 : b.persona[e.key]) &&
+                        !!(null == L ? void 0 : L.persona[e.key]) &&
                           m()(
-                            null == b ? void 0 : b.persona[e.key],
+                            null == L ? void 0 : L.persona[e.key],
                           ).isAfter() &&
                           i.createElement(
                             "div",
@@ -2067,13 +2073,13 @@
                             e.formatFunction
                               ? e.formatFunction.call(
                                   null,
-                                  null == b ? void 0 : b.persona[e.key],
-                                  null == b
+                                  null == L ? void 0 : L.persona[e.key],
+                                  null == L
                                     ? void 0
-                                    : b.persona[e.secondaryKey],
+                                    : L.persona[e.secondaryKey],
                                 )
                               : JSON.stringify(
-                                  (null == b ? void 0 : b.persona[e.key]) || "",
+                                  (null == L ? void 0 : L.persona[e.key]) || "",
                                   null,
                                   2,
                                 ).replace(/['"]+/g, ""),
@@ -2095,11 +2101,11 @@
                           e.formatFunction
                             ? e.formatFunction.call(
                                 null,
-                                null == b ? void 0 : b.persona[e.key],
-                                null == b ? void 0 : b.persona[e.secondaryKey],
+                                null == L ? void 0 : L.persona[e.key],
+                                null == L ? void 0 : L.persona[e.secondaryKey],
                               )
                             : JSON.stringify(
-                                (null == b ? void 0 : b.persona[e.key]) || "",
+                                (null == L ? void 0 : L.persona[e.key]) || "",
                                 null,
                                 2,
                               ).replace(/['"]+/g, ""),
@@ -2119,7 +2125,7 @@
                   i.createElement(
                     "div",
                     { className: $().OfficialProfileOuterGrid },
-                    (null === (a = null == b ? void 0 : b.persona) ||
+                    (null === (a = null == L ? void 0 : L.persona) ||
                     void 0 === a
                       ? void 0
                       : a.official_profile) &&
@@ -2138,17 +2144,17 @@
                               ? e.formatFunction.call(
                                   null,
                                   null ===
-                                    (t = null == b ? void 0 : b.persona) ||
+                                    (t = null == L ? void 0 : L.persona) ||
                                     void 0 === t
                                     ? void 0
                                     : t.official_profile[e.key],
-                                  null == b
+                                  null == L
                                     ? void 0
-                                    : b.persona[e.secondaryKey],
+                                    : L.persona[e.secondaryKey],
                                 )
                               : JSON.stringify(
                                   (null ===
-                                    (a = null == b ? void 0 : b.persona) ||
+                                    (a = null == L ? void 0 : L.persona) ||
                                   void 0 === a
                                     ? void 0
                                     : a.official_profile[e.key]) || "",
@@ -2158,7 +2164,7 @@
                           ),
                         );
                       }),
-                    !(null === (l = null == b ? void 0 : b.persona) ||
+                    !(null === (l = null == L ? void 0 : L.persona) ||
                     void 0 === l
                       ? void 0
                       : l.official_profile) &&
@@ -2177,7 +2183,7 @@
                     { className: $().TeamsInfoInfoOuterGrid },
                     i.createElement("br", null),
                     i.createElement("h2", { className: $().Header }, "Teams"),
-                    (null === (s = null == b ? void 0 : b.persona) ||
+                    (null === (s = null == L ? void 0 : L.persona) ||
                     void 0 === s
                       ? void 0
                       : s.teams) &&
@@ -2191,20 +2197,20 @@
                             e.formatFunction
                               ? e.formatFunction.call(
                                   null,
-                                  null == b ? void 0 : b.persona[e.key],
-                                  null == b
+                                  null == L ? void 0 : L.persona[e.key],
+                                  null == L
                                     ? void 0
-                                    : b.persona[e.secondaryKey],
+                                    : L.persona[e.secondaryKey],
                                 )
                               : JSON.stringify(
-                                  (null == b ? void 0 : b.persona[e.key]) || "",
+                                  (null == L ? void 0 : L.persona[e.key]) || "",
                                   null,
                                   2,
                                 ).replace(/['"]+/g, ""),
                           ),
                         ),
                       ),
-                    !(null === (S = null == b ? void 0 : b.persona) ||
+                    !(null === (S = null == L ? void 0 : L.persona) ||
                     void 0 === S
                       ? void 0
                       : S.teams) &&
@@ -2240,10 +2246,10 @@
                           e.formatFunction
                             ? e.formatFunction.call(
                                 null,
-                                null == b ? void 0 : b.persona[e.key],
+                                null == L ? void 0 : L.persona[e.key],
                               )
                             : JSON.stringify(
-                                (null == b ? void 0 : b.persona[e.key]) || "",
+                                (null == L ? void 0 : L.persona[e.key]) || "",
                                 null,
                                 2,
                               ).replace(/['"]+/g, ""),
@@ -2845,8 +2851,8 @@
             [p, _] = (0, c.useState)(!1),
             [g, A] = (0, c.useState)(!1),
             [T, S] = (0, c.useState)({}),
-            [M, L] = (0, c.useState)(!1),
-            [b, G] = (0, c.useState)(!1),
+            [M, b] = (0, c.useState)(!1),
+            [L, G] = (0, c.useState)(!1),
             [$, P] = (0, c.useState)({}),
             [w, U] = (0, c.useState)([]),
             [K, Y] = (0, c.useState)(!0),
@@ -2945,7 +2951,7 @@
               } catch (e) {
                 console.log("Error fetching individual player info.");
               }
-              a && a.data && S(l), L(!0);
+              a && a.data && S(l), b(!0);
             });
           }
           (0, c.useEffect)(() => {
@@ -3134,7 +3140,7 @@
                 "Error loading registered teams...",
               )),
             M &&
-              (0 == Object.keys(T).length || b) &&
+              (0 == Object.keys(T).length || L) &&
               (j = c.createElement(
                 "div",
                 null,
