@@ -3,7 +3,7 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [9682],
   {
-    95398: (e) => {
+    76603: (e) => {
       e.exports = {
         smallentrywidth: "600px",
         optionswrapwidth: "777px",
@@ -234,7 +234,7 @@
         m = i(19304),
         p = i(14826),
         _ = i(4306),
-        u = i(95398),
+        u = i(76603),
         g = i(80292),
         h = i.n(g),
         E = i(52868),

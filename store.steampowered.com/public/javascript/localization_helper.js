@@ -5,7 +5,7 @@ var CStoreLocalizationHelper = function( nCurrentLanguage )
 
 CStoreLocalizationHelper.prototype.UpdateHighlights = function( rgFieldNames )
 {
-	for( var language=0; language < 30; language++ )
+	for( var language=0; language < 31; language++ )
 	{
 		var bHasLanguage = false;
 		for( var j = 0; j < rgFieldNames.length; ++j )

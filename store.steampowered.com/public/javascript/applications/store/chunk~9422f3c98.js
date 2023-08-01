@@ -3,7 +3,7 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [6633],
   {
-    30120: (e) => {
+    50711: (e) => {
       e.exports = {
         avatarHolder: "steamavatar_avatarHolder_1YGAH",
         avatarStatus: "steamavatar_avatarStatus_1yIzy",
@@ -292,7 +292,7 @@
         (0, i.gn)([a.LO], c.prototype, "m_strBroadcastTitle", void 0),
         (0, i.gn)([a.LO], c.prototype, "m_bCommunityBanned", void 0);
     },
-    50355: (e, t, r) => {
+    68943: (e, t, r) => {
       "use strict";
       r.d(t, { o: () => _, _1: () => p, DY: () => B, vV: () => g });
       var i = r(33940),
@@ -305,7 +305,7 @@
       const u =
         r.p +
         "images/applications/store/avatar_default_full.jpg?v=valveisgoodatcaching";
-      var c = r(30120),
+      var c = r(50711),
         d = r.n(c);
       class _ extends a.Component {
         render() {

@@ -3,7 +3,7 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [9211],
   {
-    5089: (t) => {
+    71: (t) => {
       t.exports = {
         "duration-app-launch": "800ms",
         OtherEventsCtn: "eventrow_OtherEventsCtn_1qNsZ",
@@ -72,9 +72,9 @@
       }
       const C = "0";
       function L(t, e) {
-        (e.localized_flat_title = (0, m.LG)([], 30, null)),
-          (e.localized_flat_blurb = (0, m.LG)([], 30, null)),
-          (e.localized_flat_link = (0, m.LG)([], 30, null)),
+        (e.localized_flat_title = (0, m.LG)([], 31, null)),
+          (e.localized_flat_blurb = (0, m.LG)([], 31, null)),
+          (e.localized_flat_link = (0, m.LG)([], 31, null)),
           e.title !== C && (e.localized_flat_title[t] = e.title),
           e.blurb !== C && (e.localized_flat_blurb[t] = e.blurb),
           e.link !== C && (e.localized_flat_link[t] = e.link),
@@ -392,10 +392,10 @@
         c = n(54671),
         u = n(85886),
         d = n(25871),
-        _ = n(5089),
+        _ = n(71),
         p = n(51441),
         m = n(44421),
-        v = n(23715),
+        v = n(1631),
         E = n.n(v),
         g = n(67935),
         f = n(21219),

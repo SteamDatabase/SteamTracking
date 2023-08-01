@@ -3,7 +3,7 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [8087],
   {
-    12671: (e) => {
+    99718: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         Icon: "achievementiconbase_Icon_2bzHb",
@@ -22,10 +22,10 @@
         HiddenLabel: "achievementiconbase_HiddenLabel_2yMyP",
       };
     },
-    77571: (e) => {
+    56708: (e) => {
       e.exports = { SmallAvatar: "userprofile_SmallAvatar_2cCH3" };
     },
-    80122: (e) => {
+    74286: (e) => {
       e.exports = {
         GraphicalAssetsTabs: "tabbar_GraphicalAssetsTabs_36r8g",
         GraphicalAssetsTab: "tabbar_GraphicalAssetsTab_K1_Tp",
@@ -37,7 +37,7 @@
         StatusCaution: "tabbar_StatusCaution_31Lxu",
       };
     },
-    54010: (e) => {
+    55731: (e) => {
       e.exports = {
         AchievementsCtn: "yirachievements_AchievementsCtn_2LUzg",
         AchievementSectionTitleCtn:
@@ -60,7 +60,7 @@
         BadgeBarFiller: "yirachievements_BadgeBarFiller_30I9Y",
       };
     },
-    79190: (e) => {
+    26075: (e) => {
       e.exports = {
         MonthGridOverallCtn: "yirallgames_MonthGridOverallCtn_2xKPi",
         MonthGroupCtn: "yirallgames_MonthGroupCtn_DMCZI",
@@ -70,7 +70,7 @@
         BGImage: "yirallgames_BGImage_1XJXA",
       };
     },
-    53086: (e) => {
+    49266: (e) => {
       e.exports = {
         ImagesCtn: "yirbackgroundtiles_ImagesCtn_1qcMw",
         AllImages: "yirbackgroundtiles_AllImages_RxFaO",
@@ -80,7 +80,7 @@
         SingleGame: "yirbackgroundtiles_SingleGame_VGWhX",
       };
     },
-    74959: (e) => {
+    20125: (e) => {
       e.exports = {
         TopHonorsCtn: "yirbadges_TopHonorsCtn_1xRuk",
         BadgeBox: "yirbadges_BadgeBox_21Ah2",
@@ -160,7 +160,7 @@
         ElementFadeIn: "yirbadges_ElementFadeIn_rfg_i",
       };
     },
-    27869: (e) => {
+    81363: (e) => {
       e.exports = {
         strGameDetailsTransitionTimeMS: "300ms",
         TotalHoursContainer: "yircomponents_TotalHoursContainer_26dqO",
@@ -223,7 +223,7 @@
         BadgeBarFiller: "yircomponents_BadgeBarFiller_E8NuE",
       };
     },
-    21008: (e) => {
+    78344: (e) => {
       e.exports = {
         FriendCtn: "yirfriends_FriendCtn_1dEBr",
         FriendsSharedSection: "yirfriends_FriendsSharedSection_3zKPE",
@@ -231,7 +231,7 @@
         FriendsGrid: "yirfriends_FriendsGrid_OQcaq",
       };
     },
-    77456: (e) => {
+    15946: (e) => {
       e.exports = {
         DeckContainer: "yirhowyouplayed_DeckContainer_3G2ne",
         StatsRow: "yirhowyouplayed_StatsRow_2kmTj",
@@ -241,7 +241,7 @@
         ScreenContainer: "yirhowyouplayed_ScreenContainer_13EBY",
       };
     },
-    97101: (e) => {
+    75686: (e) => {
       e.exports = {
         YearInReviewContainer: "yirlanding_YearInReviewContainer_1FBH8",
         YearInReviewContent: "yirlanding_YearInReviewContent_2Mj4n",
@@ -327,7 +327,7 @@
         BottomCtn: "yirlanding_BottomCtn_2mhHS",
       };
     },
-    9001: (e) => {
+    35524: (e) => {
       e.exports = {
         Section: "yirlongeststreak_Section_32a0u",
         StreakSubTitle: "yirlongeststreak_StreakSubTitle_6lD5o",
@@ -344,7 +344,7 @@
         BgImage: "yirlongeststreak_BgImage_2dY4F",
       };
     },
-    78050: (e) => {
+    89063: (e) => {
       e.exports = {
         ScreenshotsCtn: "yirscreenshot_ScreenshotsCtn_HFVMb",
         ElementFadeIn: "yirscreenshot_ElementFadeIn_2S3v_",
@@ -356,7 +356,7 @@
         BadgeBarFiller: "yirscreenshot_BadgeBarFiller_axniE",
       };
     },
-    13316: (e) => {
+    97529: (e) => {
       e.exports = {
         ShareCtn: "yirshare_ShareCtn_3wBwg",
         ShareHeader: "yirshare_ShareHeader_j8KV_",
@@ -423,7 +423,7 @@
         DropDownSizer: "yirshare_DropDownSizer_ZrLd2",
       };
     },
-    89224: (e) => {
+    38885: (e) => {
       e.exports = {
         Section: "yirstatsbesidegametiles_Section_3Q6xY",
         Windows: "yirstatsbesidegametiles_Windows_1vF9u",
@@ -447,7 +447,7 @@
         BadgeBarFiller: "yirstatsbesidegametiles_BadgeBarFiller_1TdxY",
       };
     },
-    50668: (e) => {
+    10296: (e) => {
       e.exports = {
         MonthlyChartTooltipCtn: "yirsummarycharts_MonthlyChartTooltipCtn_2XmLn",
         TooltipBackgroundOverlay:
@@ -460,7 +460,7 @@
         TotalPlaytime: "yirsummarycharts_TotalPlaytime_ObTF_",
       };
     },
-    70365: (e) => {
+    94429: (e) => {
       e.exports = {
         Section: "yirtimelinecontainer_Section_389gB",
         ChartContainer: "yirtimelinecontainer_ChartContainer_3X3Ad",
@@ -602,7 +602,7 @@
         return a ? null : n;
       }
     },
-    92823: (e, t, r) => {
+    24176: (e, t, r) => {
       "use strict";
       r.r(t), r.d(t, { YearInReviewRoutes: () => In, default: () => Gn });
       var a = r(89526),
@@ -4355,7 +4355,7 @@
         Te = r.n(Me),
         Ae = r(69513),
         xe = r(14826),
-        ke = r(97101),
+        ke = r(75686),
         Pe = r.n(ke);
       function Ye() {
         return (0, a.useContext)(vn).bIsUser;
@@ -4610,17 +4610,17 @@
           n
         );
       }
-      var $e = r(50355),
+      var $e = r(68943),
         Qe = r(20285),
         Ke = r(57605),
         qe = r(17547),
         Je = r(5029),
-        et = r(17318),
-        tt = r(69338),
+        et = r(52629),
+        tt = r(3301),
         rt = r(19304),
-        at = r(89224),
+        at = r(38885),
         nt = r.n(at),
-        it = r(27869),
+        it = r(81363),
         st = r.n(it),
         lt = r(25871),
         ot = r(88443);
@@ -4786,7 +4786,7 @@
       var ht = r(98009),
         vt = r(85886),
         Bt = r(3991),
-        bt = r(80122),
+        bt = r(74286),
         St = r.n(bt),
         wt = r(84343),
         Et = r(75962);
@@ -4903,7 +4903,7 @@
       }
       const ft = (0, i.EN)(Ct);
       var Rt = r(72120),
-        It = r(79190),
+        It = r(26075),
         Gt = r(41576);
       function Nt(e) {
         const { className: t, children: r, strClassOnFirstVisible: n } = e,
@@ -5109,7 +5109,7 @@
           ),
         );
       }
-      var kt = r(53086),
+      var kt = r(49266),
         Pt = r.n(kt);
       const Yt = 9e3,
         zt = 10,
@@ -5216,7 +5216,7 @@
         );
       }
       var Ot = r(36041),
-        jt = r(74959),
+        jt = r(20125),
         Zt = r.n(jt),
         Ht = r(95408),
         Vt = r(30310),
@@ -5851,7 +5851,7 @@
             (this.m_SteamInterface = new m.J(o.De.WEBAPI_BASE_URL, e));
         }
       }
-      var yr = r(77571);
+      var yr = r(56708);
       function gr(e) {
         const { accountID: t, bHideWhenNotAvailable: r } = e,
           [n] = (0, Qe.F)(t),
@@ -5878,7 +5878,7 @@
         );
       }
       var pr = r(46294),
-        hr = r(21008);
+        hr = r(78344);
       function vr(e) {
         const { userYearInReview: t } = e;
         return o.L7.is_support || o.L7.accountid == t.GetAccountID()
@@ -5971,7 +5971,7 @@
           }),
         );
       }
-      var wr = r(77456),
+      var wr = r(15946),
         Er = r.n(wr),
         Cr = r(57317),
         fr = r(98241);
@@ -6384,7 +6384,7 @@
           )
         );
       }
-      var kr = r(9001),
+      var kr = r(35524),
         Pr = r.n(kr);
       function Yr(e) {
         const { userYearInReview: t } = e,
@@ -6484,15 +6484,15 @@
         }
         return null;
       }
-      var Lr = r(13316),
+      var Lr = r(97529),
         Dr = r(701),
         Ur = r(57742),
         Wr = r(45711),
         Xr = r(5386),
         Or = r(46132),
-        jr = r(82248),
-        Zr = r(15164),
-        Hr = r(75313),
+        jr = r(6726),
+        Zr = r(7787),
+        Hr = r(16947),
         Vr = r(99307);
       class $r {
         get SteamInterface() {
@@ -6543,7 +6543,7 @@
         }
       }
       const Qr = "yir_social_images";
-      var Kr = r(93528),
+      var Kr = r(83992),
         qr = r(7029);
       function Jr(e) {
         const { userYearInReview: t, steamId: r, nYear: n } = e,
@@ -7730,7 +7730,7 @@
         fa = r(58104),
         Ra = r(75018),
         Ia = r(23007),
-        Ga = r(50668);
+        Ga = r(10296);
       const Na = "#1a9ffe",
         Fa = a.memo((e) => {
           const { data: t, topAppsAndColors: r } = e,
@@ -7999,7 +7999,7 @@
         const i = `${r}_Percent`;
         return (0, xe.kQ)(i, a.createElement("b", null, De(e)), t, ...n);
       }
-      var Da = r(70365);
+      var Da = r(94429);
       function Ua(e) {
         var t;
         const { userYearInReview: r } = e,
@@ -8170,7 +8170,7 @@
       }
       var Za = r(73961),
         Ha = r(56491),
-        Va = r(12671),
+        Va = r(99718),
         $a = r.n(Va);
       const Qa = a.forwardRef(function (
         {
@@ -8218,9 +8218,9 @@
           }),
         );
       });
-      var Ka = r(50500),
+      var Ka = r(67009),
         qa = r.n(Ka),
-        Ja = r(54010);
+        Ja = r(55731);
       function en(e) {
         var t;
         const { appid: r, userYearInReview: n } = e,
@@ -8415,7 +8415,7 @@
           )
         );
       }
-      var ln = r(78050);
+      var ln = r(89063);
       function on(e) {
         const { appid: t, bBlurContent: r } = e,
           n = We(t);

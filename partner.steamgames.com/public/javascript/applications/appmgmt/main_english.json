@@ -1012,6 +1012,8 @@
     "SteamLearn_Config_DataSource_Input_Preprocess_NormRange_Desc": "Normalizes all data within the specified min/max range into the 0-1 range, clamping any values outside the range.",
     "SteamLearn_Config_DataSource_Input_Preprocess_NormStdDev": "Std Dev Normalize",
     "SteamLearn_Config_DataSource_Input_Preprocess_NormStdDev_Desc": "Auto-generates a min/max range based on the mean value of the incoming samples and their standard deviation, and normalizes those values into the 0-1 range. Values outside of that standard deviation are clamped.",
+    "SteamLearn_Config_DataSource_Input_Preprocess_NormLogRange": "Log Range Normalize",
+    "SteamLearn_Config_DataSource_Input_Preprocess_NormLogRange_Desc": "Normalizes all data within the specified min/max range into the 0-1 range, logarithmically (smaller values grow faster), clamping any values outside the range.",
     "SteamLearn_Config_DataSource_Input_Preprocess_MinRange": "Minimum Value",
     "SteamLearn_Config_DataSource_Input_Preprocess_MaxRange": "Maximum Value",
     "SteamLearn_Config_DataSource_Input_Preprocess_StdDev": "Std Dev",

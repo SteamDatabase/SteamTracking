@@ -43,6 +43,7 @@ function GetSupportedLanguages()
 				'vietnamese': 'Vietnamese',
 				'latam': 'Spanish - Latin America',
 				'sc_schinese': 'SteamChina - Simplified Chinese',
+				'indonesian': 'Indonesian',
 			};
 	return languages;
 }

@@ -4,7 +4,7 @@
   self.webpackChunkappmgmt_storeadmin || []).push([
   [179],
   {
-    12069: (e) => {
+    60583: (e) => {
       e.exports = {
         FocusRingRoot: "focusring_FocusRingRoot_3PH_X",
         FocusRing: "focusring_FocusRing_1IZrQ",
@@ -16,7 +16,7 @@
         FocusRingOnHiddenItem: "focusring_FocusRingOnHiddenItem_2OusV",
       };
     },
-    35352: (e) => {
+    20525: (e) => {
       e.exports = {
         ScrollPanel: "scrollpanel_ScrollPanel_1CXdi",
         ScrollY: "scrollpanel_ScrollY_313lB",
@@ -24,7 +24,7 @@
         ScrollBoth: "scrollpanel_ScrollBoth_3S2Ko",
       };
     },
-    48410: (e) => {
+    41713: (e) => {
       e.exports = {
         HoverPosition: "hoverposition_HoverPosition_3XUAN",
         Ready: "hoverposition_Ready_qEo88",
@@ -34,7 +34,7 @@
         HoverPositionOuter: "hoverposition_HoverPositionOuter_EUN4G",
       };
     },
-    75402: (e) => {
+    63230: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         carouselNavButton: "carousel_carouselNavButton_1KK5N",
@@ -60,7 +60,7 @@
         DisableSliderMotion: "carousel_DisableSliderMotion_3la_1",
       };
     },
-    93765: (e) => {
+    27713: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         ContextMenuMouseOverlay: "contextmenu_ContextMenuMouseOverlay_pu9cO",
@@ -85,13 +85,13 @@
         PopoutSubMenuItems: "contextmenu_PopoutSubMenuItems_y5L1f",
       };
     },
-    64359: (e) => {
+    20449: (e) => {
       e.exports = {
         DialogDropDownMenu_Item: "dropdown_DialogDropDownMenu_Item_1R-DV",
         DialogDropDownMenu: "dropdown_DialogDropDownMenu_1tiuY",
       };
     },
-    19979: (e) => {
+    27914: (e) => {
       e.exports = {
         DropDownLabelContainer: "dropdownlabel_DropDownLabelContainer_2wVxO",
         DropDownLabelIconContainer:
@@ -104,7 +104,7 @@
           "dropdownlabel_DropDownLabelDescription_1JPcb",
       };
     },
-    40468: (e) => {
+    52559: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         GamepadDialogContent: "gamepaddialog_GamepadDialogContent_3joNk",
@@ -180,13 +180,13 @@
         hoverAnimation: "gamepaddialog_hoverAnimation_22zeK",
       };
     },
-    73364: (e) => {
+    42186: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         DropDownControlButton: "gamepaddropdown_DropDownControlButton_28bny",
       };
     },
-    30113: (e) => {
+    63613: (e) => {
       e.exports = {
         TogglePasswordVisibilityBtn:
           "gamepadinput_TogglePasswordVisibilityBtn_1Z-Cc",
@@ -194,7 +194,7 @@
         PinDigit: "gamepadinput_PinDigit_1oiQ5",
       };
     },
-    91429: (e) => {
+    4532: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         PagedSettingsDialog: "gamepadpagedsettings_PagedSettingsDialog_2P_CG",
@@ -239,7 +239,7 @@
         hoverAnimation: "gamepadpagedsettings_hoverAnimation_vXWdQ",
       };
     },
-    74259: (e) => {
+    67786: (e) => {
       e.exports = {
         "error-shake-duration": "500ms",
         SliderControlPanelGroup: "gamepadslider_SliderControlPanelGroup_MY8iY",
@@ -294,7 +294,7 @@
         DefaultValueTick: "gamepadslider_DefaultValueTick_1WFYb",
       };
     },
-    96777: (e) => {
+    67892: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         PagedSettingsDialog: "pagedsettings_PagedSettingsDialog_3I6h_",
@@ -323,14 +323,14 @@
         HidePageListButton: "pagedsettings_HidePageListButton_3i4Ep",
       };
     },
-    31632: (e) => {
+    47819: (e) => {
       e.exports = {
         Group: "radio_Group_2qYC3",
         Button: "radio_Button_3lwcR",
         Active: "radio_Active_3ZBFo",
       };
     },
-    3367: (e) => {
+    78003: (e) => {
       e.exports = {
         Toggle: "toggle_Toggle_3jXWQ",
         Disabled: "toggle_Disabled_2V_kU",
@@ -343,12 +343,12 @@
         Label: "toggle_Label_2sb8q",
       };
     },
-    68309: (e) => {
+    58452: (e) => {
       e.exports = {
         ScrollSnapCarousel: "scrollsnapcarousel_ScrollSnapCarousel_17m-P",
       };
     },
-    19634: (e) => {
+    40971: (e) => {
       e.exports = {
         Spinner: "gamepadui_svg_library_Spinner_2Hc4f",
         SpinnerSpokeFade: "gamepadui_svg_library_SpinnerSpokeFade_2QBT4",
@@ -366,7 +366,7 @@
           "gamepadui_svg_library_GenericGamepadHighlight_1zfyD",
       };
     },
-    67122: (e) => {
+    78180: (e) => {
       e.exports = {
         BodyNoScroll: "modals_BodyNoScroll_3ItVl",
         BodyNoScrollDialog: "modals_BodyNoScrollDialog_3lrlA",
@@ -375,7 +375,7 @@
         GamepadOnlyPanelWrapper: "modals_GamepadOnlyPanelWrapper_1vgBE",
       };
     },
-    59743: (e) => {
+    99727: (e) => {
       e.exports = {
         EmoticonBow: "shared_svg_library_EmoticonBow_S9_rt",
         EmoticonBow_st0: "shared_svg_library_EmoticonBow_st0_1MS_8",
@@ -393,7 +393,7 @@
           "shared_svg_library_SteamDeckCompatUnknown_15dEs",
       };
     },
-    50500: (e) => {
+    67009: (e) => {
       e.exports = {
         TextToolTip: "tooltip_TextToolTip_29b2a",
         ToolTipCustom: "tooltip_ToolTipCustom_3Dt__",
@@ -402,19 +402,19 @@
         ToolTipInsetContent: "tooltip_ToolTipInsetContent_1nxOn",
       };
     },
-    25887: (e) => {
+    96931: (e) => {
       e.exports = {
         TransitionGroup: "overlappingtransition_TransitionGroup_11Twu",
         ContentWrapper: "overlappingtransition_ContentWrapper_1knAs",
       };
     },
-    62506: (e) => {
+    50986: (e) => {
       e.exports = {
         App: "apps_App_1zK68",
         FillBrowserVertically: "apps_FillBrowserVertically_2JTPt",
       };
     },
-    97705: (e) => {
+    64105: (e) => {
       e.exports = {
         Container: "community_event_Container_2BtrR",
         CarouselItems: "community_event_CarouselItems_3fyQn",
@@ -515,6 +515,8 @@
             return "vi";
           case 29:
             return "sc-sc";
+          case 30:
+            return "id";
           default:
             return t;
         }
@@ -582,6 +584,8 @@
             return "vietnamese";
           case 29:
             return "sc_schinese";
+          case 30:
+            return "indonesian";
           default:
             return t;
         }
@@ -649,6 +653,8 @@
             return 28;
           case "sc_schinese":
             return 29;
+          case "indonesian":
+            return 30;
           default:
             return t;
         }
@@ -1101,11 +1107,10 @@
             (e[(e.Keyboard = 2)] = "Keyboard"),
             (e[(e.ControllerConfigurator = 3)] = "ControllerConfigurator"),
             (e[(e.VR = 4)] = "VR"),
-            (e[(e.SteamLibrary = 5)] = "SteamLibrary"),
-            (e[(e.MainDesktopUI = 6)] = "MainDesktopUI"),
-            (e[(e.DesktopLogin = 7)] = "DesktopLogin"),
-            (e[(e.OverlayDesktopUI = 8)] = "OverlayDesktopUI"),
-            (e[(e.SteamChinaReviewLauncher = 9)] = "SteamChinaReviewLauncher");
+            (e[(e.MainDesktopUI = 5)] = "MainDesktopUI"),
+            (e[(e.DesktopLogin = 6)] = "DesktopLogin"),
+            (e[(e.OverlayDesktopUI = 7)] = "OverlayDesktopUI"),
+            (e[(e.SteamChinaReviewLauncher = 8)] = "SteamChinaReviewLauncher");
         })(m || (m = {}));
       var p;
       !(function (e) {
@@ -2069,7 +2074,7 @@
     },
     54856: (e, t, n) => {
       "use strict";
-      n.d(t, { MD: () => l, gA: () => a, lq: () => s });
+      n.d(t, { K2: () => c, MD: () => l, gA: () => a, lq: () => s });
       var r = n(45878),
         i = (n(47165), n(16244), n(84321)),
         o = n(27527);
@@ -2235,6 +2240,27 @@
       function l(e, t) {
         return t instanceof a ? t : a.InitFromObject(e, t);
       }
+      class c {
+        constructor() {
+          this.m_transport = null;
+        }
+        static Get() {
+          return (
+            null == c.s_Singleton && (c.s_Singleton = new c()), c.s_Singleton
+          );
+        }
+        SetDefaultTransport(e) {
+          null != this.m_transport &&
+            console.error(
+              "Multiple attempts to set a default WebUI transport: overriding previous",
+            ),
+            (this.m_transport = e);
+        }
+        GetDefaultTransport() {
+          return this.m_transport;
+        }
+      }
+      c.s_Singleton = null;
     },
     29063: (e, t, n) => {
       "use strict";
@@ -4234,7 +4260,7 @@
         );
       }
       var v = n(78330),
-        f = n(72566),
+        f = n(71862),
         b = n(19304);
       const E = (0, d.Yt)("GamepadNavigationContext", () =>
           i.createContext(null),
@@ -4567,7 +4593,7 @@
         i = n(19304),
         o = n(50454),
         s = (n(77872), n(31587)),
-        a = n(12069),
+        a = n(60583),
         l = n.n(a),
         c = n(4306),
         u = n(32765),
@@ -4833,7 +4859,7 @@
         u = n(32053),
         d = n(88045);
       const m = (0, i.createContext)(null);
-      var h = n(72566);
+      var h = n(71862);
       const p = i.forwardRef(function (e, t) {
         const {
             "flow-children": n,
@@ -4913,7 +4939,7 @@
         u = n(22612),
         d = n(17589),
         m = n(51438),
-        h = n(35352),
+        h = n(20525),
         p = n.n(h);
       const _ = i.forwardRef(function (e, t) {
           var n;
@@ -8151,7 +8177,7 @@
         s = n(88464),
         a = n(85246),
         l = n(19304),
-        c = n(48410),
+        c = n(41713),
         u = n.n(c);
       let d = class extends i.Component {
         constructor() {
@@ -11524,7 +11550,7 @@
         });
       }
     },
-    72566: (e, t, n) => {
+    71862: (e, t, n) => {
       "use strict";
       n.d(t, { Ze: () => c });
       var r = n(33940),
@@ -11532,7 +11558,7 @@
         o = n(50265),
         s = n(78423),
         a = n(50454);
-      n(4306);
+      n(4306), n(85246);
       new a.s("VR");
       class l {
         constructor() {
@@ -11698,7 +11724,7 @@
       const u = new l();
       window.vrStore = u;
     },
-    54524: (e, t, n) => {
+    5456: (e, t, n) => {
       "use strict";
       n.d(t, { l: () => C });
       var r = n(58638),
@@ -11708,11 +11734,11 @@
         a = n(19304);
       const l =
         "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QUQ5NEMwOTYzRDc4MTFFQUExREZEODRBMDBCNjdENTEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QUQ5NEMwOTczRDc4MTFFQUExREZEODRBMDBCNjdENTEiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpBRDk0QzA5NDNENzgxMUVBQTFERkQ4NEEwMEI2N0Q1MSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpBRDk0QzA5NTNENzgxMUVBQTFERkQ4NEEwMEI2N0Q1MSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Po/TXacAAABMSURBVHjaYvz//z8DNQHjyDMQDICGJgDx3f/kA5DeBJhh8f+pB+JBXr4DNFeZSp69CzLwP7UjZdTAkWAgVdMh1XMK1fPyCCwPAQIMAKf/Y+3dveJlAAAAAElFTkSuQmCC";
-      var c = n(75402),
+      var c = n(63230),
         u = n(46294),
         d = n(41576),
         m = n(32765),
-        h = n(68309);
+        h = n(58452);
       function p(e) {
         const { padded: t, gap: n, children: r } = e;
         return i.createElement(
@@ -12060,7 +12086,7 @@
         b = n(14826),
         E = n(4306),
         S = n(32765),
-        w = n(93765),
+        w = n(27713),
         y = n.n(w);
       const R = (0, h.Yt)("ContextMenuInstanceContext", () =>
         o.createContext(null),
@@ -12920,7 +12946,7 @@
       var r = n(33940),
         i = n(89526),
         o = n(19304),
-        s = n(93765),
+        s = n(27713),
         a = n.n(s);
       const l = i.forwardRef((e, t) => {
         const { className: n, contextMenuStyles: s, disabled: l } = e,
@@ -12993,7 +13019,7 @@
         ),
         m = () => i.useContext(d);
       var h = n(39884),
-        p = n(3367),
+        p = n(78003),
         _ = n.n(p);
       const g = (e) => {
           const t = m();
@@ -14190,7 +14216,7 @@
         (0, r.gn)([z.ak], ne.prototype, "OnTouchMove", null),
         (0, r.gn)([z.ak], ne.prototype, "OnTouchEnd", null),
         (0, r.gn)([z.ak], ne.prototype, "OnKeyDown", null);
-      var re = n(31632),
+      var re = n(47819),
         ie = n.n(re);
       const oe = i.createContext({ setValue: () => {} });
       function se(e) {
@@ -14228,7 +14254,7 @@
         );
       }
       var le = n(40103),
-        ce = n(64359),
+        ce = n(20449),
         ue = n.n(ce),
         de = n(84343);
       function me(e) {
@@ -14590,7 +14616,7 @@
         }
       }
       (0, r.gn)([z.ak], Re.prototype, "OnMenuOpened", null);
-      n(19979);
+      n(27914);
       var Ie = n(50265),
         De = n(894),
         Me = n(11837),
@@ -15216,7 +15242,7 @@
       var Ve = n(8179),
         Ue = n(78330),
         Ge = n(17547),
-        He = n(96777),
+        He = n(67892),
         We = n.n(He),
         je = n(16221),
         ze = n(16826);
@@ -15538,7 +15564,7 @@
         (0, r.gn)([z.ak], Je.prototype, "OnClick", null),
         (0, r.gn)([z.ak], Je.prototype, "OnPaste", null),
         (0, r.gn)([z.ak], Je.prototype, "OnCut", null);
-      var et = n(40468),
+      var et = n(52559),
         tt = n.n(et),
         nt = n(32765);
       const rt = i.forwardRef(function (e, t) {
@@ -15757,7 +15783,7 @@
           }),
         );
       });
-      var ot = n(73364),
+      var ot = n(42186),
         st = n.n(ot),
         at = n(69159),
         lt = n(31587);
@@ -15781,7 +15807,7 @@
           ),
         );
       });
-      var ct = n(30113);
+      var ct = n(63613);
       i.forwardRef(function (e, t) {
         const { className: n } = e,
           o = (0, r._T)(e, ["className"]);
@@ -15863,7 +15889,7 @@
           ),
         );
       });
-      var ut = n(74259),
+      var ut = n(67786),
         dt = n.n(ut),
         mt = n(89855),
         ht = n(34329);
@@ -16738,7 +16764,7 @@
       );
       n(22612);
       var Dt,
-        Mt = n(25887),
+        Mt = n(96931),
         Tt = n.n(Mt),
         Bt = n(32873),
         At = n(1981);
@@ -16860,7 +16886,7 @@
           (e[(e.Up = 3)] = "Up"),
           (e[(e.Down = 4)] = "Down");
       })(Dt || (Dt = {}));
-      var kt = n(91429),
+      var kt = n(4532),
         Nt = n.n(kt);
       const Pt = i.createContext(null);
       function xt(e) {
@@ -17112,7 +17138,7 @@
       });
       var r = n(33940),
         i = n(89526),
-        o = (n(78423), n(19634), n(99825));
+        o = (n(78423), n(40971), n(99825));
       function s(e) {
         const { none: t, partial: n } = e,
           o = (0, r._T)(e, ["none", "partial"]);
@@ -17925,7 +17951,7 @@
         p = n(4306),
         _ = n(84168),
         g = n(52321),
-        C = n(67122);
+        C = n(78180);
       function v(e) {
         i.useEffect(() => {
           if (e)
@@ -18710,7 +18736,7 @@
         (0, m.gn)([p.a], R.prototype, "OnMouseMove", null),
         (0, m.gn)([p.a], R.prototype, "Reset", null);
       n(77872);
-      n(67122);
+      n(78180);
       var I = n(16749),
         D = n(89156);
     },
@@ -18893,7 +18919,7 @@
         m = n(46132),
         h = n(86777),
         p = n(69159),
-        _ = n(93765),
+        _ = n(27713),
         g = n.n(_),
         C = n(17547),
         v = n(60161),
@@ -19754,7 +19780,7 @@
       var r = n(33940),
         i = n(89526),
         o = n(19304),
-        s = n(59743),
+        s = n(99727),
         a = n.n(s),
         l = n(32765),
         c = n(99825),
@@ -21791,7 +21817,7 @@
         a = n(69206),
         l = n(19304),
         c = n(14826),
-        u = n(50500),
+        u = n(67009),
         d = n.n(u);
       function m(e) {
         var t;
@@ -22352,21 +22378,21 @@
         let n = e.findIndex(t);
         return n >= 0 && (e.splice(n, 1), !0);
       }
-      function s(e, t, n) {
-        let r = 0,
-          i = e.length - 1;
-        for (; r <= i; ) {
-          let o = Math.floor((r + i) / 2),
-            s = n(e[o], t);
-          if (s < 0) r = o + 1;
-          else if (s > 0) i = o - 1;
+      function s(e, t) {
+        let n = 0,
+          r = e.length - 1;
+        for (; n <= r; ) {
+          let i = Math.floor((n + r) / 2),
+            o = t(e[i]);
+          if (o > 0) n = i + 1;
+          else if (o < 0) r = i - 1;
           else {
-            if (i == o) return o;
-            if (o == r) return i > o && n(t, e[o + 1]) < 0 ? o : o + 1;
-            r = o;
+            if (r == i) return i;
+            if (i == n) return r > i && t(e[i + 1]) < 0 ? i : i + 1;
+            n = i;
           }
         }
-        return i;
+        return r;
       }
       function a(e, t, n) {
         return (
@@ -22966,7 +22992,7 @@
         }
         static GetLanguageListForRealms(e) {
           const t = new Array();
-          for (let n = 0; n < 30; n++)
+          for (let n = 0; n < 31; n++)
             for (const r of e)
               if (this.IsELanguageValidInRealm(n, r)) {
                 t.push(n);
@@ -23104,7 +23130,7 @@
       class C {
         static Set(e, t, n) {
           if (e.length <= t) {
-            if (t >= 30) return e;
+            if (t >= 31) return e;
             e = (0, a.LG)(e, t + 1, null);
           }
           return (e[t] = n), e;
@@ -23149,6 +23175,7 @@
           greek: "el",
           ukrainian: "uk",
           vietnamese: "vi",
+          indonesian: "id",
           sc_schinese: "zh-cn",
           koreana: "ko",
         },
@@ -23182,6 +23209,7 @@
           "uk-UA": 26,
           "es-419": 27,
           "vi-VN": 28,
+          "id-ID": 30,
         };
       function b() {
         return v[s.De.LANGUAGE] || null;
@@ -23648,9 +23676,10 @@
         }
         Log(e, ...t) {
           var n, r;
-          if (e == l.Debug && !u.Get().IsDebugLogEnabled(this.m_sName)) return;
-          let i = this.m_sName;
-          const o =
+          const i = u.Get().IsDebugLogEnabled(this.m_sName);
+          if (e == l.Debug && !i) return;
+          let o = this.m_sName;
+          const s =
             null !==
               (r =
                 null === (n = this.m_fnIdGenerator) || void 0 === n
@@ -23658,8 +23687,8 @@
                   : n.call(this)) && void 0 !== r
               ? r
               : null;
-          null != o && (i += " (" + o + ")");
-          d(e, u.Get().IncludeBacktraceInLog, i, this.m_sName, ...t);
+          null != s && (o += " (" + s + ")");
+          d(e, i, u.Get().IncludeBacktraceInLog, o, this.m_sName, ...t);
         }
       }
       (0, r.gn)([i.a], c.prototype, "Debug", null),
@@ -23682,6 +23711,7 @@
         LogAsLogManager(...e) {
           d(
             l.Info,
+            !0,
             this.IncludeBacktraceInLog,
             "LogManager",
             "LogManager",
@@ -23779,22 +23809,22 @@
           });
         }
       }
-      function d(e, t, n, r, ...i) {
-        const o = (function (e) {
+      function d(e, t, n, r, i, ...o) {
+        const s = (function (e) {
             let t = 0;
             for (let n = 0; n < e.length; n++)
               t = e.charCodeAt(n) + ((t << 5) - t);
             return [(t >> 0) & 255, (t >> 8) & 255, (t >> 16) & 255];
-          })(r).map((e, t) =>
+          })(i).map((e, t) =>
             Math.round(
               Math.max(0, Math.min(255, 255 * (0.8 * (e / 255 - 0.5) + 0.15))),
             ),
           ),
-          s = (299 * (a = o)[0] + 587 * a[1] + 114 * a[2]) / 1e3 >= 128;
-        var a;
-        let c = n;
-        t &&
-          (c =
+          a = (299 * (c = s)[0] + 587 * c[1] + 114 * c[2]) / 1e3 >= 128;
+        var c;
+        let u = r;
+        n &&
+          (u =
             (function (e) {
               switch (e) {
                 case l.Debug:
@@ -23808,34 +23838,39 @@
               }
             })(e) +
             " " +
-            c);
-        const u =
-            i.length >= 1 && "string" == typeof i[0] && i[0].includes("%c"),
-          d = u && i.shift(),
-          m = [
-            `%c${c}%c:${u ? " %c" + d : ""}`,
-            `color: ${s ? "black" : "white"}; background: rgb(${o.join(
-              ",",
-            )}); padding: 0 1ch`,
-            "color: transparent; margin-right: -1ch",
-            ...(u ? [""] : []),
-            ...i,
-          ];
-        if (t)
-          console.groupCollapsed(...m),
+            u);
+        const d =
+            o.length >= 1 && "string" == typeof o[0] && o[0].includes("%c"),
+          m = d && o.shift();
+        let h;
+        if (
+          ((h = t
+            ? [
+                `%c${u}%c:${d ? " %c" + m : ""}`,
+                `color: ${a ? "black" : "white"}; background: rgb(${s.join(
+                  ",",
+                )}); padding: 0 1ch`,
+                "color: transparent; margin-right: -1ch",
+                ...(d ? [""] : []),
+                ...o,
+              ]
+            : o),
+          n)
+        )
+          console.groupCollapsed(...h),
             console.trace("Callstack"),
             console.groupEnd();
         else
           switch (e) {
             case l.Debug:
             case l.Info:
-              console.log(...m);
+              console.log(...h);
               break;
             case l.Warning:
-              console.warn(...m);
+              console.warn(...h);
               break;
             case l.Error:
-              console.error(...m);
+              console.error(...h);
           }
       }
       (u.k_EnabledLogNames_StorageKey = "EnabledWebLogs"),
@@ -24332,34 +24367,41 @@
         };
       function d(e) {
         var t;
-        const { IN_GAMEPADUI: n, IN_DESKTOPUI: i, IN_VR: o, children: l } = e,
-          d = u({ bSuppressAssert: !0 }),
-          m =
+        const {
+            IN_GAMEPADUI: n,
+            IN_DESKTOPUI: i,
+            IN_VR: o,
+            SIMULATING_VR_ON_DESKTOP: l,
+            children: d,
+          } = e,
+          m = u({ bSuppressAssert: !0 }),
+          h =
             null === (t = (0, a.g3)()) || void 0 === t
               ? void 0
               : t.startsWith("Gamepad VR"),
-          h = r.useMemo(() => {
+          p = r.useMemo(() => {
             var e, t, r;
             return {
               IN_GAMEPADUI:
                 null !==
-                  (e = null != n ? n : null == d ? void 0 : d.IN_GAMEPADUI) &&
+                  (e = null != n ? n : null == m ? void 0 : m.IN_GAMEPADUI) &&
                 void 0 !== e
                   ? e
                   : s.De.IN_GAMEPADUI,
               IN_DESKTOPUI:
                 null !==
-                  (t = null != i ? i : null == d ? void 0 : d.IN_DESKTOPUI) &&
+                  (t = null != i ? i : null == m ? void 0 : m.IN_DESKTOPUI) &&
                 void 0 !== t &&
                 t,
               IN_VR:
-                null !== (r = null != o ? o : null == d ? void 0 : d.IN_VR) &&
+                null !== (r = null != o ? o : null == m ? void 0 : m.IN_VR) &&
                 void 0 !== r
                   ? r
-                  : m,
+                  : h,
+              SIMULATING_VR_ON_DESKTOP: null != l && l,
             };
-          }, [d, n, i, o, m]);
-        return r.createElement(c.Provider, { value: h }, l);
+          }, [m, n, i, o, l, h]);
+        return r.createElement(c.Provider, { value: p }, d);
       }
       function m(e) {
         const t = u(e);
@@ -24589,7 +24631,14 @@
             }
             return null;
           } catch (e) {
-            console.error("Failed to parse config", e);
+            console.error(
+              "Failed to parse config for " +
+                o.L7.steamid +
+                " (" +
+                window.location.href +
+                ")",
+              e,
+            );
           }
         else n && console.error("Missing config element #", t);
       }
@@ -24701,12 +24750,12 @@
         i = (n(34726), n(64403)),
         o = n.n(i),
         s = n(96927),
-        a = n(62506),
+        a = n(50986),
         l = n.n(a),
         c = n(89526),
         u = n(19304),
-        d = n(54524),
-        m = n(97705),
+        d = n(5456),
+        m = n(64105),
         h = n(14826),
         p = n(32765);
       const _ = (e) =>
@@ -24941,7 +24990,7 @@
             n.e(3504),
             n.e(7334),
             n.e(2136),
-          ]).then(n.bind(n, 26863)),
+          ]).then(n.bind(n, 88505)),
         ),
         x = c.lazy(() =>
           Promise.all([
@@ -25001,7 +25050,7 @@
             n.e(3504),
             n.e(7334),
             n.e(2136),
-          ]).then(n.bind(n, 71773)),
+          ]).then(n.bind(n, 47381)),
         ),
         G = c.lazy(() =>
           Promise.all([n.e(4023), n.e(2856), n.e(5117), n.e(5676)]).then(
@@ -25335,36 +25384,36 @@
     },
     78832: (e, t, n) => {
       var r = {
-        "./marketing_brazilian.json": [24421, 4458],
-        "./marketing_bulgarian.json": [7545, 8960],
-        "./marketing_czech.json": [58229, 3453],
-        "./marketing_danish.json": [30114, 2581],
-        "./marketing_dutch.json": [95845, 874],
-        "./marketing_english.json": [5, 4929],
-        "./marketing_finnish.json": [76525, 7942],
-        "./marketing_french.json": [45185, 4199],
-        "./marketing_german.json": [60503, 2824],
-        "./marketing_greek.json": [67395, 7871],
-        "./marketing_hungarian.json": [21507, 8994],
-        "./marketing_indonesian.json": [5725, 8399],
-        "./marketing_italian.json": [14031, 8001],
-        "./marketing_japanese.json": [93191, 7082],
-        "./marketing_koreana.json": [80166, 4171],
-        "./marketing_latam.json": [83212, 9899],
-        "./marketing_norwegian.json": [65973, 6169],
-        "./marketing_polish.json": [5640, 2448],
-        "./marketing_portuguese.json": [46454, 5257],
-        "./marketing_romanian.json": [55238, 8774],
-        "./marketing_russian.json": [10557, 903],
-        "./marketing_sc_schinese.json": [34221, 9919],
-        "./marketing_schinese.json": [40517, 4033],
-        "./marketing_spanish.json": [73425, 2601],
-        "./marketing_swedish.json": [85214, 6019],
-        "./marketing_tchinese.json": [28747, 9903],
-        "./marketing_thai.json": [47822, 4238],
-        "./marketing_turkish.json": [28246, 819],
-        "./marketing_ukrainian.json": [80870, 6035],
-        "./marketing_vietnamese.json": [8467, 6846],
+        "./marketing_brazilian.json": [91141, 4458],
+        "./marketing_bulgarian.json": [82291, 8960],
+        "./marketing_czech.json": [88005, 3453],
+        "./marketing_danish.json": [14784, 2581],
+        "./marketing_dutch.json": [10068, 874],
+        "./marketing_english.json": [32941, 4929],
+        "./marketing_finnish.json": [30973, 7942],
+        "./marketing_french.json": [97007, 4199],
+        "./marketing_german.json": [65582, 2824],
+        "./marketing_greek.json": [90756, 7871],
+        "./marketing_hungarian.json": [3512, 8994],
+        "./marketing_indonesian.json": [75437, 8399],
+        "./marketing_italian.json": [59752, 8001],
+        "./marketing_japanese.json": [46691, 7082],
+        "./marketing_koreana.json": [7534, 4171],
+        "./marketing_latam.json": [72049, 9899],
+        "./marketing_norwegian.json": [81466, 6169],
+        "./marketing_polish.json": [45630, 2448],
+        "./marketing_portuguese.json": [78879, 5257],
+        "./marketing_romanian.json": [55432, 8774],
+        "./marketing_russian.json": [56590, 903],
+        "./marketing_sc_schinese.json": [36296, 9919],
+        "./marketing_schinese.json": [157, 4033],
+        "./marketing_spanish.json": [56738, 2601],
+        "./marketing_swedish.json": [27924, 6019],
+        "./marketing_tchinese.json": [11689, 9903],
+        "./marketing_thai.json": [51717, 4238],
+        "./marketing_turkish.json": [36993, 819],
+        "./marketing_ukrainian.json": [92109, 6035],
+        "./marketing_vietnamese.json": [54424, 6846],
       };
       function i(e) {
         if (!n.o(r, e))
@@ -25380,36 +25429,36 @@
     },
     44444: (e, t, n) => {
       var r = {
-        "./marketing_brazilian.json": [24421, 4458],
-        "./marketing_bulgarian.json": [7545, 8960],
-        "./marketing_czech.json": [58229, 3453],
-        "./marketing_danish.json": [30114, 2581],
-        "./marketing_dutch.json": [95845, 874],
-        "./marketing_english.json": [5, 4929],
-        "./marketing_finnish.json": [76525, 7942],
-        "./marketing_french.json": [45185, 4199],
-        "./marketing_german.json": [60503, 2824],
-        "./marketing_greek.json": [67395, 7871],
-        "./marketing_hungarian.json": [21507, 8994],
-        "./marketing_indonesian.json": [5725, 8399],
-        "./marketing_italian.json": [14031, 8001],
-        "./marketing_japanese.json": [93191, 7082],
-        "./marketing_koreana.json": [80166, 4171],
-        "./marketing_latam.json": [83212, 9899],
-        "./marketing_norwegian.json": [65973, 6169],
-        "./marketing_polish.json": [5640, 2448],
-        "./marketing_portuguese.json": [46454, 5257],
-        "./marketing_romanian.json": [55238, 8774],
-        "./marketing_russian.json": [10557, 903],
-        "./marketing_sc_schinese.json": [34221, 9919],
-        "./marketing_schinese.json": [40517, 4033],
-        "./marketing_spanish.json": [73425, 2601],
-        "./marketing_swedish.json": [85214, 6019],
-        "./marketing_tchinese.json": [28747, 9903],
-        "./marketing_thai.json": [47822, 4238],
-        "./marketing_turkish.json": [28246, 819],
-        "./marketing_ukrainian.json": [80870, 6035],
-        "./marketing_vietnamese.json": [8467, 6846],
+        "./marketing_brazilian.json": [91141, 4458],
+        "./marketing_bulgarian.json": [82291, 8960],
+        "./marketing_czech.json": [88005, 3453],
+        "./marketing_danish.json": [14784, 2581],
+        "./marketing_dutch.json": [10068, 874],
+        "./marketing_english.json": [32941, 4929],
+        "./marketing_finnish.json": [30973, 7942],
+        "./marketing_french.json": [97007, 4199],
+        "./marketing_german.json": [65582, 2824],
+        "./marketing_greek.json": [90756, 7871],
+        "./marketing_hungarian.json": [3512, 8994],
+        "./marketing_indonesian.json": [75437, 8399],
+        "./marketing_italian.json": [59752, 8001],
+        "./marketing_japanese.json": [46691, 7082],
+        "./marketing_koreana.json": [7534, 4171],
+        "./marketing_latam.json": [72049, 9899],
+        "./marketing_norwegian.json": [81466, 6169],
+        "./marketing_polish.json": [45630, 2448],
+        "./marketing_portuguese.json": [78879, 5257],
+        "./marketing_romanian.json": [55432, 8774],
+        "./marketing_russian.json": [56590, 903],
+        "./marketing_sc_schinese.json": [36296, 9919],
+        "./marketing_schinese.json": [157, 4033],
+        "./marketing_spanish.json": [56738, 2601],
+        "./marketing_swedish.json": [27924, 6019],
+        "./marketing_tchinese.json": [11689, 9903],
+        "./marketing_thai.json": [51717, 4238],
+        "./marketing_turkish.json": [36993, 819],
+        "./marketing_ukrainian.json": [92109, 6035],
+        "./marketing_vietnamese.json": [54424, 6846],
       };
       function i(e) {
         if (!n.o(r, e))
@@ -25425,37 +25474,37 @@
     },
     11580: (e, t, n) => {
       var r = {
-        "./shared_arabic.json": [95874, 2431],
-        "./shared_brazilian.json": [60338, 8385],
-        "./shared_bulgarian.json": [25454, 1313],
-        "./shared_czech.json": [44162, 4189],
-        "./shared_danish.json": [1519, 9753],
-        "./shared_dutch.json": [9437, 5925],
-        "./shared_english.json": [44965, 7975],
-        "./shared_finnish.json": [10966, 3557],
-        "./shared_french.json": [37025, 3112],
-        "./shared_german.json": [50515, 6007],
-        "./shared_greek.json": [93579, 4297],
-        "./shared_hungarian.json": [46965, 5948],
-        "./shared_indonesian.json": [13386, 8754],
-        "./shared_italian.json": [42471, 5933],
-        "./shared_japanese.json": [36603, 2844],
-        "./shared_koreana.json": [40931, 6542],
-        "./shared_latam.json": [32620, 2443],
-        "./shared_norwegian.json": [22406, 4108],
-        "./shared_polish.json": [83343, 3252],
-        "./shared_portuguese.json": [17810, 5849],
-        "./shared_romanian.json": [166, 4823],
-        "./shared_russian.json": [66116, 9062],
-        "./shared_sc_schinese.json": [59598, 2029],
-        "./shared_schinese.json": [43124, 2537],
-        "./shared_spanish.json": [48770, 6492],
-        "./shared_swedish.json": [10731, 5625],
-        "./shared_tchinese.json": [57050, 7602],
-        "./shared_thai.json": [8799, 1162],
-        "./shared_turkish.json": [24416, 5438],
-        "./shared_ukrainian.json": [85038, 7781],
-        "./shared_vietnamese.json": [23240, 4964],
+        "./shared_arabic.json": [34532, 2431],
+        "./shared_brazilian.json": [23918, 8385],
+        "./shared_bulgarian.json": [35774, 1313],
+        "./shared_czech.json": [30436, 4189],
+        "./shared_danish.json": [83972, 9753],
+        "./shared_dutch.json": [863, 5925],
+        "./shared_english.json": [57980, 7975],
+        "./shared_finnish.json": [5541, 3557],
+        "./shared_french.json": [1502, 3112],
+        "./shared_german.json": [76407, 6007],
+        "./shared_greek.json": [68470, 4297],
+        "./shared_hungarian.json": [21600, 5948],
+        "./shared_indonesian.json": [29870, 8754],
+        "./shared_italian.json": [19296, 5933],
+        "./shared_japanese.json": [78556, 2844],
+        "./shared_koreana.json": [82514, 6542],
+        "./shared_latam.json": [65219, 2443],
+        "./shared_norwegian.json": [87890, 4108],
+        "./shared_polish.json": [32570, 3252],
+        "./shared_portuguese.json": [38860, 5849],
+        "./shared_romanian.json": [90878, 4823],
+        "./shared_russian.json": [6120, 9062],
+        "./shared_sc_schinese.json": [50703, 2029],
+        "./shared_schinese.json": [80488, 2537],
+        "./shared_spanish.json": [2098, 6492],
+        "./shared_swedish.json": [63255, 5625],
+        "./shared_tchinese.json": [85003, 7602],
+        "./shared_thai.json": [32074, 1162],
+        "./shared_turkish.json": [14370, 5438],
+        "./shared_ukrainian.json": [49336, 7781],
+        "./shared_vietnamese.json": [86173, 4964],
       };
       function i(e) {
         if (!n.o(r, e))
@@ -25471,37 +25520,37 @@
     },
     64050: (e, t, n) => {
       var r = {
-        "./shared_arabic.json": [95874, 2431],
-        "./shared_brazilian.json": [60338, 8385],
-        "./shared_bulgarian.json": [25454, 1313],
-        "./shared_czech.json": [44162, 4189],
-        "./shared_danish.json": [1519, 9753],
-        "./shared_dutch.json": [9437, 5925],
-        "./shared_english.json": [44965, 7975],
-        "./shared_finnish.json": [10966, 3557],
-        "./shared_french.json": [37025, 3112],
-        "./shared_german.json": [50515, 6007],
-        "./shared_greek.json": [93579, 4297],
-        "./shared_hungarian.json": [46965, 5948],
-        "./shared_indonesian.json": [13386, 8754],
-        "./shared_italian.json": [42471, 5933],
-        "./shared_japanese.json": [36603, 2844],
-        "./shared_koreana.json": [40931, 6542],
-        "./shared_latam.json": [32620, 2443],
-        "./shared_norwegian.json": [22406, 4108],
-        "./shared_polish.json": [83343, 3252],
-        "./shared_portuguese.json": [17810, 5849],
-        "./shared_romanian.json": [166, 4823],
-        "./shared_russian.json": [66116, 9062],
-        "./shared_sc_schinese.json": [59598, 2029],
-        "./shared_schinese.json": [43124, 2537],
-        "./shared_spanish.json": [48770, 6492],
-        "./shared_swedish.json": [10731, 5625],
-        "./shared_tchinese.json": [57050, 7602],
-        "./shared_thai.json": [8799, 1162],
-        "./shared_turkish.json": [24416, 5438],
-        "./shared_ukrainian.json": [85038, 7781],
-        "./shared_vietnamese.json": [23240, 4964],
+        "./shared_arabic.json": [34532, 2431],
+        "./shared_brazilian.json": [23918, 8385],
+        "./shared_bulgarian.json": [35774, 1313],
+        "./shared_czech.json": [30436, 4189],
+        "./shared_danish.json": [83972, 9753],
+        "./shared_dutch.json": [863, 5925],
+        "./shared_english.json": [57980, 7975],
+        "./shared_finnish.json": [5541, 3557],
+        "./shared_french.json": [1502, 3112],
+        "./shared_german.json": [76407, 6007],
+        "./shared_greek.json": [68470, 4297],
+        "./shared_hungarian.json": [21600, 5948],
+        "./shared_indonesian.json": [29870, 8754],
+        "./shared_italian.json": [19296, 5933],
+        "./shared_japanese.json": [78556, 2844],
+        "./shared_koreana.json": [82514, 6542],
+        "./shared_latam.json": [65219, 2443],
+        "./shared_norwegian.json": [87890, 4108],
+        "./shared_polish.json": [32570, 3252],
+        "./shared_portuguese.json": [38860, 5849],
+        "./shared_romanian.json": [90878, 4823],
+        "./shared_russian.json": [6120, 9062],
+        "./shared_sc_schinese.json": [50703, 2029],
+        "./shared_schinese.json": [80488, 2537],
+        "./shared_spanish.json": [2098, 6492],
+        "./shared_swedish.json": [63255, 5625],
+        "./shared_tchinese.json": [85003, 7602],
+        "./shared_thai.json": [32074, 1162],
+        "./shared_turkish.json": [14370, 5438],
+        "./shared_ukrainian.json": [49336, 7781],
+        "./shared_vietnamese.json": [86173, 4964],
       };
       function i(e) {
         if (!n.o(r, e))
@@ -25517,35 +25566,35 @@
     },
     89705: (e, t, n) => {
       var r = {
-        "./main_brazilian.json": [69341, 9431],
-        "./main_bulgarian.json": [23206, 3359],
-        "./main_czech.json": [36549, 647],
-        "./main_danish.json": [77127, 3323],
-        "./main_dutch.json": [76209, 698],
-        "./main_english.json": [63336, 6815],
-        "./main_finnish.json": [61289, 3768],
-        "./main_french.json": [58512, 1117],
-        "./main_german.json": [44556, 799],
-        "./main_greek.json": [65805, 9568],
-        "./main_hungarian.json": [27137, 8051],
-        "./main_indonesian.json": [36507, 7072],
-        "./main_italian.json": [34936, 8155],
-        "./main_japanese.json": [4940, 727],
-        "./main_koreana.json": [15873, 4722],
-        "./main_latam.json": [42065, 6087],
-        "./main_norwegian.json": [33242, 7951],
-        "./main_polish.json": [82284, 2767],
-        "./main_portuguese.json": [93067, 7236],
-        "./main_romanian.json": [75623, 3277],
-        "./main_russian.json": [29413, 4860],
-        "./main_schinese.json": [70213, 9980],
-        "./main_spanish.json": [30430, 6817],
-        "./main_swedish.json": [24235, 3185],
-        "./main_tchinese.json": [98532, 2942],
-        "./main_thai.json": [84238, 7890],
-        "./main_turkish.json": [87821, 9663],
-        "./main_ukrainian.json": [26748, 2848],
-        "./main_vietnamese.json": [13835, 8168],
+        "./main_brazilian.json": [56978, 9431],
+        "./main_bulgarian.json": [57630, 3359],
+        "./main_czech.json": [1320, 647],
+        "./main_danish.json": [17238, 3323],
+        "./main_dutch.json": [96829, 698],
+        "./main_english.json": [5271, 6815],
+        "./main_finnish.json": [93390, 3768],
+        "./main_french.json": [13845, 1117],
+        "./main_german.json": [29442, 799],
+        "./main_greek.json": [97304, 9568],
+        "./main_hungarian.json": [93749, 8051],
+        "./main_indonesian.json": [84812, 7072],
+        "./main_italian.json": [972, 8155],
+        "./main_japanese.json": [76878, 727],
+        "./main_koreana.json": [33488, 4722],
+        "./main_latam.json": [16834, 6087],
+        "./main_norwegian.json": [29308, 7951],
+        "./main_polish.json": [53825, 2767],
+        "./main_portuguese.json": [66429, 7236],
+        "./main_romanian.json": [78653, 3277],
+        "./main_russian.json": [55742, 4860],
+        "./main_schinese.json": [92316, 9980],
+        "./main_spanish.json": [81329, 6817],
+        "./main_swedish.json": [20986, 3185],
+        "./main_tchinese.json": [19321, 2942],
+        "./main_thai.json": [88793, 7890],
+        "./main_turkish.json": [72883, 9663],
+        "./main_ukrainian.json": [97797, 2848],
+        "./main_vietnamese.json": [62523, 8168],
       };
       function i(e) {
         if (!n.o(r, e))
@@ -25561,35 +25610,35 @@
     },
     29790: (e, t, n) => {
       var r = {
-        "./main_brazilian.json": [69341, 9431],
-        "./main_bulgarian.json": [23206, 3359],
-        "./main_czech.json": [36549, 647],
-        "./main_danish.json": [77127, 3323],
-        "./main_dutch.json": [76209, 698],
-        "./main_english.json": [63336, 6815],
-        "./main_finnish.json": [61289, 3768],
-        "./main_french.json": [58512, 1117],
-        "./main_german.json": [44556, 799],
-        "./main_greek.json": [65805, 9568],
-        "./main_hungarian.json": [27137, 8051],
-        "./main_indonesian.json": [36507, 7072],
-        "./main_italian.json": [34936, 8155],
-        "./main_japanese.json": [4940, 727],
-        "./main_koreana.json": [15873, 4722],
-        "./main_latam.json": [42065, 6087],
-        "./main_norwegian.json": [33242, 7951],
-        "./main_polish.json": [82284, 2767],
-        "./main_portuguese.json": [93067, 7236],
-        "./main_romanian.json": [75623, 3277],
-        "./main_russian.json": [29413, 4860],
-        "./main_schinese.json": [70213, 9980],
-        "./main_spanish.json": [30430, 6817],
-        "./main_swedish.json": [24235, 3185],
-        "./main_tchinese.json": [98532, 2942],
-        "./main_thai.json": [84238, 7890],
-        "./main_turkish.json": [87821, 9663],
-        "./main_ukrainian.json": [26748, 2848],
-        "./main_vietnamese.json": [13835, 8168],
+        "./main_brazilian.json": [56978, 9431],
+        "./main_bulgarian.json": [57630, 3359],
+        "./main_czech.json": [1320, 647],
+        "./main_danish.json": [17238, 3323],
+        "./main_dutch.json": [96829, 698],
+        "./main_english.json": [5271, 6815],
+        "./main_finnish.json": [93390, 3768],
+        "./main_french.json": [13845, 1117],
+        "./main_german.json": [29442, 799],
+        "./main_greek.json": [97304, 9568],
+        "./main_hungarian.json": [93749, 8051],
+        "./main_indonesian.json": [84812, 7072],
+        "./main_italian.json": [972, 8155],
+        "./main_japanese.json": [76878, 727],
+        "./main_koreana.json": [33488, 4722],
+        "./main_latam.json": [16834, 6087],
+        "./main_norwegian.json": [29308, 7951],
+        "./main_polish.json": [53825, 2767],
+        "./main_portuguese.json": [66429, 7236],
+        "./main_romanian.json": [78653, 3277],
+        "./main_russian.json": [55742, 4860],
+        "./main_schinese.json": [92316, 9980],
+        "./main_spanish.json": [81329, 6817],
+        "./main_swedish.json": [20986, 3185],
+        "./main_tchinese.json": [19321, 2942],
+        "./main_thai.json": [88793, 7890],
+        "./main_turkish.json": [72883, 9663],
+        "./main_ukrainian.json": [97797, 2848],
+        "./main_vietnamese.json": [62523, 8168],
       };
       function i(e) {
         if (!n.o(r, e))

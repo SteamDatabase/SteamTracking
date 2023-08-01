@@ -3,7 +3,7 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [5503],
   {
-    30120: (e) => {
+    50711: (e) => {
       e.exports = {
         avatarHolder: "steamavatar_avatarHolder_1YGAH",
         avatarStatus: "steamavatar_avatarStatus_1yIzy",
@@ -292,7 +292,7 @@
         (0, i.gn)([r.LO], p.prototype, "m_strBroadcastTitle", void 0),
         (0, i.gn)([r.LO], p.prototype, "m_bCommunityBanned", void 0);
     },
-    50355: (e, t, a) => {
+    68943: (e, t, a) => {
       "use strict";
       a.d(t, { o: () => h, vV: () => c });
       var i = a(33940),
@@ -305,7 +305,7 @@
       const l =
         a.p +
         "images/applications/community/avatar_default_full.jpg?v=valveisgoodatcaching";
-      var p = a(30120),
+      var p = a(50711),
         _ = a.n(p);
       class h extends r.Component {
         render() {

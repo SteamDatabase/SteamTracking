@@ -3,7 +3,7 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [5331],
   {
-    59046: (e) => {
+    69103: (e) => {
       e.exports = {
         PageSection: "chartscommon_PageSection_3JAzR",
         SectionTitle: "chartscommon_SectionTitle_f7CCw",
@@ -48,7 +48,7 @@
         GameUnavailable: "chartscommon_GameUnavailable_eEqFi",
       };
     },
-    50143: (e) => {
+    60911: (e) => {
       e.exports = {
         ChartContainerPlaceholder:
           "onlineuserchart_ChartContainerPlaceholder_2XkUV",
@@ -62,7 +62,7 @@
         CurrentStats: "onlineuserchart_CurrentStats_3uEBR",
       };
     },
-    25766: (e) => {
+    12917: (e) => {
       e.exports = {
         PageContainer: "overviewpage_PageContainer_ACgX0",
         ChartItemsCtn: "overviewpage_ChartItemsCtn_3BNYF",
@@ -92,7 +92,7 @@
         Mobile: "overviewpage_Mobile_1cKll",
       };
     },
-    39559: (e) => {
+    26256: (e) => {
       e.exports = {
         SteamChartsPage: "steamchartsshell_SteamChartsPage_2aYDM",
         SteamChartsShell: "steamchartsshell_SteamChartsShell_2rArj",
@@ -121,7 +121,7 @@
         ChartNavNext: "steamchartsshell_ChartNavNext_27ASB",
       };
     },
-    96571: (e) => {
+    71499: (e) => {
       e.exports = {
         HelpRequestChartContainer:
           "supportstats_HelpRequestChartContainer_1dbAl",
@@ -134,12 +134,12 @@
         NumberCol: "supportstats_NumberCol_1GPA-",
       };
     },
-    27617: (e) => {
+    40072: (e) => {
       e.exports = {
         TopReleasesContainer: "topreleasespage_TopReleasesContainer_2ZjmC",
       };
     },
-    2518: (e) => {
+    81240: (e) => {
       e.exports = {
         PageSection: "weeklytopsellers_PageSection_2zGFB",
         SectionTitle: "weeklytopsellers_SectionTitle_1tl1E",
@@ -1985,7 +1985,7 @@
       var ge = r(66216),
         ve = r(19304),
         Ee = r(88443),
-        Be = r(50143),
+        Be = r(60911),
         Te = r.n(Be),
         fe = r(30310),
         be = r(77219),
@@ -1996,7 +1996,7 @@
         Pe = r(48586),
         Ne = r(84343),
         Ge = r(17547),
-        Ie = r(59046),
+        Ie = r(69103),
         We = r.n(Ie);
       const Oe = D.memo((e) => {
           const t = oe();
@@ -2165,9 +2165,9 @@
         return o ? D.createElement(ze.h, { onEnter: d }, _) : _;
       }
       var je = r(12360),
-        Ze = r(39559),
+        Ze = r(26256),
         He = r.n(Ze),
-        Ve = r(25766),
+        Ve = r(12917),
         Ye = r.n(Ve),
         qe = r(13345);
       function $e(e) {
@@ -2862,10 +2862,10 @@
           D.createElement("div", { className: He().MenuLinks }, a),
         );
       }
-      var _t = r(2518),
+      var _t = r(81240),
         pt = r.n(_t),
-        ht = r(11985),
-        Ct = r(10178),
+        ht = r(88987),
+        Ct = r(6199),
         yt = r(69513);
       function St(e) {
         const { Item: t } = e,
@@ -3153,7 +3153,7 @@
         );
       }
       var Mt = r(57605),
-        Pt = r(69338);
+        Pt = r(3301);
       function Nt(e) {
         const { MostPlayedStore: t } = e,
           [r, a] = D.useState(k.ConcurrentUsers);
@@ -3968,7 +3968,7 @@
       });
       var Yt = r(46132),
         qt = r(68818),
-        $t = r(27617),
+        $t = r(40072),
         Qt = r.n($t);
       const Kt = D.lazy(() =>
         Promise.all([
@@ -4029,7 +4029,7 @@
           }),
         );
       }
-      var er = r(96571),
+      var er = r(71499),
         tr = r.n(er),
         rr = r(3397),
         ar = r(52339),

@@ -3,7 +3,7 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [8489],
   {
-    38737: (e) => {
+    66818: (e) => {
       e.exports = {
         DragTarget: "bbcodeeditor_DragTarget_2Mg-b",
         DragOnTopOfMe: "bbcodeeditor_DragOnTopOfMe_3-WTT",
@@ -31,17 +31,17 @@
         BBCodeEditorInputStyles: "bbcodeeditor_BBCodeEditorInputStyles_1Fpu1",
       };
     },
-    18071: (e) => {
+    58998: (e) => {
       e.exports = {
         BBCode_Toggle: "bbcodesuggestions_BBCode_Toggle_1MrSR",
         Active: "bbcodesuggestions_Active_3tFqQ",
         BBCode: "bbcodesuggestions_BBCode_2DSQu",
       };
     },
-    79472: (e) => {
+    88367: (e) => {
       e.exports = { Image: "clanimagepickandresize_Image_2W_Gz" };
     },
-    75402: (e) => {
+    63230: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         carouselNavButton: "carousel_carouselNavButton_1KK5N",
@@ -67,10 +67,10 @@
         DisableSliderMotion: "carousel_DisableSliderMotion_3la_1",
       };
     },
-    59663: (e) => {
+    2851: (e) => {
       e.exports = { Ctn: "cloudfileuploadbutton_Ctn_MKp7i" };
     },
-    71654: (e) => {
+    59015: (e) => {
       e.exports = {
         UploadPreviewContainer:
           "cloudfileuploadprogress_UploadPreviewContainer_2IhGM",
@@ -88,14 +88,14 @@
           "cloudfileuploadprogress_FileUploadProgressName_1c12o",
       };
     },
-    23265: (e) => {
+    86321: (e) => {
       e.exports = {
         Emoticon_Toggle: "emoticonsuggestion_Emoticon_Toggle_3XueY",
         Active: "emoticonsuggestion_Active_2JoNK",
         Emoticon: "emoticonsuggestion_Emoticon_3dAJw",
       };
     },
-    36320: (e) => {
+    12956: (e) => {
       e.exports = {
         ImagesOuterContainer: "clanimagechooser_ImagesOuterContainer_seVYs",
         Hilight: "clanimagechooser_Hilight_1bs5j",
@@ -104,7 +104,7 @@
         ImageFilename: "clanimagechooser_ImageFilename_EazUb",
       };
     },
-    51989: (e) => {
+    91972: (e) => {
       e.exports = {
         sketchfab_play_overlay_image:
           "eventbbcodesketchfab_sketchfab_play_overlay_image_3MwaE",
@@ -118,16 +118,16 @@
         dynamiclink_author: "eventbbcodesketchfab_dynamiclink_author_e66Tt",
       };
     },
-    77555: (e) => {
+    75223: (e) => {
       e.exports = {
         AppSummaryWidgetCtn:
           "eventdescriptionstorecapsule_AppSummaryWidgetCtn_2WIqq",
       };
     },
-    49245: (e) => {
+    26727: (e) => {
       e.exports = { Ctn: "loyaltyrewarditemembed_Ctn_2di0m" };
     },
-    34976: (e) => {
+    93513: (e) => {
       e.exports = {
         ErrorStyles: "partnereventdialog_ErrorStyles_2TszC",
         ErrorStylesWithIcon: "partnereventdialog_ErrorStylesWithIcon_1mcSA",
@@ -147,19 +147,19 @@
         NotTooWideModal: "partnereventdialog_NotTooWideModal_3P6Se",
       };
     },
-    7762: (e) => {
+    39087: (e) => {
       e.exports = {
         CheckMark: "claimitemshared_CheckMark_3HeHP",
         DialogCtn: "claimitemshared_DialogCtn_ltlR6",
         EquipCtn: "claimitemshared_EquipCtn_2_8bZ",
       };
     },
-    68309: (e) => {
+    58452: (e) => {
       e.exports = {
         ScrollSnapCarousel: "scrollsnapcarousel_ScrollSnapCarousel_17m-P",
       };
     },
-    31038: (e) => {
+    99066: (e) => {
       e.exports = {
         Container: "sharewithfriends_Container_8f6EQ",
         SmallAvatar: "sharewithfriends_SmallAvatar_kzjfl",
@@ -167,10 +167,10 @@
         ShareLink: "sharewithfriends_ShareLink_2DzSq",
       };
     },
-    83431: (e) => {
+    21003: (e) => {
       e.exports = { BroadcastCtn: "vodplayer_BroadcastCtn_3YzMi" };
     },
-    45123: (e) => {
+    14730: (e) => {
       e.exports = {
         WhitelistNumber: "reorderablelist_WhitelistNumber_1ZU2Q",
         WhitelistCtn: "reorderablelist_WhitelistCtn_7i0GR",
@@ -182,7 +182,7 @@
         ButtonCtn: "reorderablelist_ButtonCtn_27xG1",
       };
     },
-    1069: (e) => {
+    23557: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         mentionDialogPosition: "suggestdialog_mentionDialogPosition_1bkUR",
@@ -196,7 +196,7 @@
         mentionSearchMatch: "suggestdialog_mentionSearchMatch_mBrO4",
       };
     },
-    82487: (e) => {
+    24331: (e) => {
       e.exports = {
         CropImage: "cropmodal_CropImage_3Mto6",
         CropPreviewGroup: "cropmodal_CropPreviewGroup_1d4RW",
@@ -361,7 +361,7 @@
         }
         constructor() {
           (this.m_eCurLang = (0, r.jM)(l.De.LANGUAGE)),
-            (this.m_rgHasData = (0, o.LG)([], 30, !1)),
+            (this.m_rgHasData = (0, o.LG)([], 31, !1)),
             (this.m_bHasLocalizationContext = !1);
         }
       }
@@ -1163,12 +1163,12 @@
         r = n(51438),
         o = n(701),
         s = n(19304),
-        l = n(26121),
-        c = n(75402),
+        l = n(45718),
+        c = n(63230),
         m = n(46294),
         d = n(41576),
         p = n(32765),
-        u = n(68309);
+        u = n(58452);
       function h(e) {
         const { padded: t, gap: n, children: a } = e;
         return i.createElement(
@@ -1442,9 +1442,9 @@
       n.d(t, { NT: () => c, tx: () => l });
       var a = n(89526),
         i = n(99307),
-        r = n(34976),
+        r = n(93513),
         o = n(14826),
-        s = n(69338);
+        s = n(3301);
       function l() {
         const [e, t] = (0, a.useState)(!1),
           [n, i] = (0, a.useState)(!1),
@@ -1620,7 +1620,7 @@
         _ = n(26412),
         f = n(47165),
         S = n(50653),
-        E = n(4585),
+        E = n(44094),
         v = n.n(E),
         C = n(88464),
         I = n(14826),
@@ -1732,7 +1732,7 @@
         N = n(82079),
         U = n(10412),
         R = n(57858),
-        G = n(69338),
+        G = n(3301),
         F = n(87178),
         P = n(45711);
       let O = class extends i.Component {
@@ -1881,9 +1881,9 @@
         }
       };
       O = (0, a.gn)([C.Pi], O);
-      var H = n(29054),
+      var H = n(99472),
         X = n.n(H),
-        W = n(51989),
+        W = n(91972),
         Y = n.n(W);
       let z = class extends i.Component {
         constructor() {
@@ -1989,7 +1989,7 @@
         (z = (0, a.gn)([C.Pi], z));
       var Z = n(43658),
         V = n(84343),
-        j = n(49245),
+        j = n(26727),
         K = n.n(j);
       function Q(e) {
         const { defid: t, url: n } = e,
@@ -2609,7 +2609,7 @@
         Me = n(57605),
         Ne = n(24591),
         Ue = n(94843),
-        Re = n(43682),
+        Re = n(70499),
         Ge = n.n(Re);
       const Fe = (e) => {
         const [t, n] = (0, i.useState)(!0),
@@ -2679,7 +2679,7 @@
           video: c,
         });
       };
-      var Pe = n(83431),
+      var Pe = n(21003),
         Oe = n(32868),
         He = n(17547);
       const Xe = i.lazy(() =>
@@ -2788,7 +2788,7 @@
         );
       }
       var Qe = n(44026),
-        $e = n(59663);
+        $e = n(2851);
       function Je(e) {
         const { fileUploadManager: t } = e,
           n = (0, i.useRef)();
@@ -2827,7 +2827,7 @@
         );
       }
       var qe = n(25125),
-        et = n(71654);
+        et = n(59015);
       function tt(e) {
         const { fileUploadManager: t } = e,
           n = (0, qe.SZ)(() => t.file_upload_props.eUploadState);
@@ -3478,7 +3478,7 @@
       var a = n(89526),
         i = n(19304),
         r = n(44421),
-        o = n(77555);
+        o = n(75223);
       function s(e) {
         const { inputType: t, id: n } = e;
         let s = "bundle" == t ? "bundle" : "sub" == t ? "sub" : "game";
@@ -3574,7 +3574,7 @@
         r = n(89526),
         o = n(46132),
         s = n(78423),
-        l = (n(7948), n(17318)),
+        l = (n(7948), n(52629)),
         c = n.n(l),
         m = n(19304),
         d = n(14826),
@@ -3696,12 +3696,12 @@
         c = n(77557),
         m = n(57742),
         d = n(701),
-        p = n(69338),
+        p = n(3301),
         u = n(19304),
         h = n(60161),
         g = n(14826),
         _ = n(32765),
-        f = n(7762),
+        f = n(39087),
         S = n(89082);
       function E(e) {
         const t = (0, s.Ax)(),
@@ -4018,7 +4018,7 @@
           r
         );
       }
-      var h = n(69338),
+      var h = n(3301),
         g = n(14826);
       function _(e) {
         const { appid: t, community_item_type: n, bForEdit: a } = e,
@@ -4104,7 +4104,7 @@
         );
       }
     },
-    93528: (e, t, n) => {
+    83992: (e, t, n) => {
       "use strict";
       n.d(t, { D: () => ke });
       var a = n(33940),
@@ -4180,7 +4180,7 @@
         I = n(50304),
         y = n(73961),
         b = n(50265),
-        D = n(1069),
+        D = n(23557),
         x = n.n(D),
         B = n(19304);
       class L extends s.Component {
@@ -4411,7 +4411,7 @@
       (0, a.gn)([C.ak], T.prototype, "OnMouseOver", null),
         (0, a.gn)([C.ak], T.prototype, "OnClick", null);
       const w = L;
-      var k = n(23265),
+      var k = n(86321),
         A = n.n(k);
       const M = class extends w {
         performSearch(e) {
@@ -4459,7 +4459,7 @@
           return Number.MAX_VALUE;
         }
       };
-      var N = n(18071),
+      var N = n(58998),
         U = n.n(N),
         R = n(14826);
       class G extends w {
@@ -4687,24 +4687,24 @@
         (0, a.gn)([C.ak], F.prototype, "GetTextAreaCurrent", null);
       var P = n(57605),
         O = n(60866),
-        H = n(17318),
+        H = n(52629),
         X = n.n(H),
         W = n(99307),
         Y = n(57742),
-        z = n(45123),
+        z = n(14730),
         Z = n.n(z),
         V = n(60161);
       var j = n(69159),
         K = n(24591),
-        Q = n(69338),
+        Q = n(3301),
         $ = n(84343),
-        J = n(38737),
+        J = n(66818),
         q = n.n(J),
         ee = n(25125),
         te = n(23801),
         ne = n(69678),
         ae = n(71937),
-        ie = n(82487);
+        ie = n(24331);
       class re extends s.Component {
         constructor() {
           super(...arguments),
@@ -4860,7 +4860,7 @@
       (0, a.gn)([C.ak], re.prototype, "OnCrop", null),
         (0, a.gn)([C.ak], re.prototype, "UpdateCrop", null);
       var oe = n(17547),
-        se = n(36320);
+        se = n(12956);
       const le = (e) => {
           const { clanSteamID: t, fnImageSelectCallBack: n } = e,
             i = (0, s.useRef)(null),
@@ -5014,7 +5014,7 @@
             ),
           );
         };
-      var me = n(79472),
+      var me = n(88367),
         de = n(26115),
         pe = n(7948),
         ue = n(78423),
@@ -6634,7 +6634,7 @@
         (0, a.gn)([C.ak], Be.prototype, "OnTextAreaChange", null),
         (Be = (0, a.gn)([o.Pi], Be));
       var Le = n(23496),
-        Te = n(31038),
+        Te = n(99066),
         we = n.n(Te);
       const ke = (0, o.Pi)((e) => {
         const { appid: t, eventLink: n } = e,
@@ -6826,7 +6826,7 @@
             );
       });
     },
-    26121: (e, t, n) => {
+    45718: (e, t, n) => {
       "use strict";
       n.d(t, { Z: () => a });
       const a =

@@ -3,23 +3,23 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [3207],
   {
-    16646: (e) => {
+    7994: (e) => {
       e.exports = {
         VideoReviewCtn: "twitchembed_VideoReviewCtn_nNaTz",
         YouTubePreviewImage: "twitchembed_YouTubePreviewImage__mxmF",
         TwitchPlayer: "twitchembed_TwitchPlayer_Ny5PH",
       };
     },
-    95771: (e) => {
+    19806: (e) => {
       e.exports = { BreadContainer: "breadcrumbs_BreadContainer_1QPim" };
     },
-    51857: (e) => {
+    90294: (e) => {
       e.exports = {
         YoutubePreviewImage: "youtubepreviewimage_YoutubePreviewImage_MzScK",
         YoutubePlayer: "youtubepreviewimage_YoutubePlayer_3uK6c",
       };
     },
-    94608: (e) => {
+    6813: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         CuratorListCtn: "curatorlist_CuratorListCtn_2gWFd",
@@ -54,7 +54,7 @@
         FullReviewDomain: "curatorlist_FullReviewDomain_2R37N",
       };
     },
-    11581: (e) => {
+    75707: (e) => {
       e.exports = { BreadContainer: "curatorminiheader_BreadContainer_GkVFI" };
     },
     66294: (e, t, a) => {
@@ -150,7 +150,7 @@
       "use strict";
       a.d(t, { b: () => u });
       var r = a(89526),
-        n = a(95771),
+        n = a(19806),
         l = a(19304),
         o = a(565),
         i = a(44026),
@@ -203,7 +203,7 @@
         o = a(86177),
         i = a(19304),
         s = a(14826),
-        u = a(51857),
+        u = a(90294),
         c = a.n(u);
       const m = (e) => {
           const t = ["maxresdefault", "mqdefault", "default"],
@@ -376,11 +376,11 @@
         R = a(85886),
         y = a(25871),
         T = a(95408),
-        F = a(16646),
+        F = a(7994),
         B = a.n(F),
         k = a(701),
         D = a(19304),
-        P = a(51857);
+        P = a(90294);
       const G = new RegExp(
         "(?:https?://)?(?:www.)?twitch.tv/videos/([0-9]+)S*",
       );
@@ -467,15 +467,15 @@
         A = a(70750),
         M = a(44421),
         U = a(31245),
-        H = a(7770),
+        H = a(3301),
         W = a(66615),
         j = a(6049),
         V = a(14826),
         Z = a(207),
-        O = a(94608),
+        O = a(6813),
         X = a.n(O),
         $ = a(65858),
-        Q = a(11581);
+        Q = a(75707);
       function z(e) {
         const { clanInfo: t } = e,
           { curator_link: a, curator_medium_avatar: r } = (0, E.kQ)(

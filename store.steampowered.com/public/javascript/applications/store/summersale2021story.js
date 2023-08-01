@@ -3,7 +3,7 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [1918],
   {
-    65053: (e) => {
+    38105: (e) => {
       e.exports = {
         PageOuterContainer: "summersale2021story_PageOuterContainer_A1mol",
         LocalizedHeaderImg: "summersale2021story_LocalizedHeaderImg_2ef14",
@@ -119,7 +119,7 @@
         m = a(19304),
         o = a(14826),
         n = a(32765),
-        l = a(65053);
+        l = a(38105);
       const d = () => {
           (0, t.jM)();
           const e = (0, t.Tv)(),

@@ -3,7 +3,7 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [1909],
   {
-    48194: (t) => {
+    33008: (t) => {
       t.exports = {
         notificationRowHeight: "72px",
         NotificationPageCtn: "notifications_NotificationPageCtn_2DCeN",
@@ -51,7 +51,7 @@
         d = i(57605),
         f = i(77427),
         p = i(14826),
-        u = i(48194),
+        u = i(33008),
         _ = i.n(u),
         y = i(33940),
         h = i(50265),

@@ -2080,10 +2080,6 @@ https://cdn.cloudflare.steamstatic.com/store/promo/summer2019/random_drop_attack
 https://cdn.cloudflare.steamstatic.com/store/promo/winter2019/franchise_placeholder.gif
 https://cdn.steamstatic.com/store/promo/spring2023/push_icon.png?v=1
 https://checkout.steampowered.com//checkout/cvv2explain/?webbasedpurchasing=1&type=${type}
-https://checkout.steampowered.com/checkout/addfreebundle/${bundleid}
-https://checkout.steampowered.com/checkout/addfreelicense
-https://checkout.steampowered.com/checkout/addfreelicense/${subid}
-https://checkout.steampowered.com/checkout/addfreelicense/${}
 https://checkout.steampowered.com/checkout/authenticationdetails/
 https://checkout.steampowered.com/checkout/beginauthentication/?transid=${txnid}
 https://checkout.steampowered.com/checkout/canceltransaction/
@@ -2793,6 +2789,10 @@ https://store.steampowered.com/explore/startnew
 https://store.steampowered.com/explore/startnew/${g_eDiscoveryQueueType}/
 https://store.steampowered.com/explore/updatediscoveryqueuesettings
 https://store.steampowered.com/franchise/${vanity_url}
+https://store.steampowered.com/freelicense/addfreebundle/${bundleid}
+https://store.steampowered.com/freelicense/addfreelicense
+https://store.steampowered.com/freelicense/addfreelicense/${subid}
+https://store.steampowered.com/freelicense/addfreelicense/${}
 https://store.steampowered.com/friends/frienddata
 https://store.steampowered.com/friends/recommendgame
 https://store.steampowered.com/friends/renderfriendactivity

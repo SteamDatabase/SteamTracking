@@ -3,7 +3,7 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [2805],
   {
-    83965: (e) => {
+    55201: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         GrantAwardModal: "awardmodal_GrantAwardModal_2vlF5",
@@ -48,7 +48,7 @@
         NotEnoughPoints: "awardmodal_NotEnoughPoints_140Wj",
       };
     },
-    23814: (e) => {
+    93993: (e) => {
       e.exports = { UnstyledButton: "unstyledbutton_UnstyledButton_1cWox" };
     },
     60588: (e, t, a) => {
@@ -187,7 +187,7 @@
       var _ = a(57605),
         f = a(99307),
         v = a(701),
-        y = a(69338),
+        y = a(3301),
         L = a(19304),
         b = a(14826),
         A = a(4306),
@@ -628,11 +628,11 @@
               }),
             ),
         ];
-      var X = a(83965);
+      var X = a(55201);
       function H(e) {
         return (0, b.Xx)(`#RewardsReaction_${e}`);
       }
-      var $ = a(23814);
+      var $ = a(93993);
       const U = (e) => {
         const { className: t } = e,
           a = (0, n._T)(e, ["className"]);

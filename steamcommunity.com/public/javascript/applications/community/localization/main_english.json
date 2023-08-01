@@ -1125,6 +1125,7 @@
     "Sale_HeaderOverlay": "Show special overlay on header (e.g. a component such as the Steam Haunted House for Halloween 2019)",
     "Sale_TitleOverlay": "Show event title and description overlay on header",
     "Sale_HeaderOffset": "Pixel Offset",
+    "Sale_HeaderOffset_disabled": "Pixel offset disabled since Sale Page Logo is provided. The logo automatically handles pixel offset.",
     "Sale_HeaderOffset_Desc": "This is the number of pixels to shift sale page content down to allow room for your artwork.",
     "Sale_HeaderOffset_Max": "Maximum value here should be %1$s",
     "Sale_HeaderOffset_MaxDeck": "This will ensure proper functionality of your sale page when viewed on Steam Deck or tablets.",

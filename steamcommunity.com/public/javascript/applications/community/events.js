@@ -3,7 +3,7 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [2136],
   {
-    41855: (e) => {
+    50732: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         Container: "partnereventwebrowembed_Container_3DZHU",
@@ -280,9 +280,9 @@
         d = n(56368),
         c = n(10412),
         m = n(20790),
-        p = n(1721),
+        p = n(35266),
         u = n.n(p),
-        v = n(69338),
+        v = n(3301),
         h = n(58218),
         E = n(14826),
         S = n(32765),
@@ -383,7 +383,7 @@
         M = n(79233),
         A = n(49234),
         C = n(701),
-        k = n(41855);
+        k = n(50732);
       class P extends r.Component {
         constructor(e) {
           super(e),

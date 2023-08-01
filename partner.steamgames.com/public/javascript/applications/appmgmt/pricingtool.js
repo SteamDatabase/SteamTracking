@@ -4,7 +4,7 @@
   self.webpackChunkappmgmt_storeadmin || []).push([
   [2529],
   {
-    71641: (e) => {
+    11568: (e) => {
       e.exports = {
         PriceGuidelinesPicker: "guidelinespicker_PriceGuidelinesPicker_4Xo2k",
         GuidelinesPanel: "guidelinespicker_GuidelinesPanel_1vwM_",
@@ -14,10 +14,10 @@
         CurrentPrice: "guidelinespicker_CurrentPrice_2Addn",
       };
     },
-    7751: (e) => {
+    3346: (e) => {
       e.exports = { MoreDots: "pricingcomponents_MoreDots_2YpW8" };
     },
-    54149: (e) => {
+    46982: (e) => {
       e.exports = {
         DashboardPage: "pricingdashboard_DashboardPage_fIACD",
         DashTitle: "pricingdashboard_DashTitle_3GHz1",
@@ -29,7 +29,7 @@
         Instructions: "pricingdashboard_Instructions_1mz7G",
       };
     },
-    26231: (e) => {
+    36402: (e) => {
       e.exports = {
         PricingGridCtn: "pricinggrid_PricingGridCtn_2j-z9",
         PricingGridWrapper: "pricinggrid_PricingGridWrapper_185dc",
@@ -53,7 +53,7 @@
         ApprovedCanPublish: "pricinggrid_ApprovedCanPublish_2ejxC",
       };
     },
-    22243: (e) => {
+    72511: (e) => {
       e.exports = {
         PriceCell: "pricinggridcell_PriceCell_1sKIc",
         PricePrefix: "pricinggridcell_PricePrefix_gPcNw",
@@ -80,7 +80,7 @@
         HoverToolTip: "pricinggridcell_HoverToolTip_36qS7",
       };
     },
-    74198: (e) => {
+    10587: (e) => {
       e.exports = {
         Instructions: "pricingimportexport_Instructions_2A9me",
         ButtonRows: "pricingimportexport_ButtonRows_3Bpob",
@@ -93,7 +93,7 @@
         ParseErrors: "pricingimportexport_ParseErrors_1VTD4",
       };
     },
-    46645: (e) => {
+    56730: (e) => {
       e.exports = {
         ToolbarInfo: "saveprices_ToolbarInfo_1bPMN",
         Visible: "saveprices_Visible_CLKT9",
@@ -139,7 +139,7 @@
         l = t(59934),
         o = t(82988),
         s = t(22444),
-        d = t(54149),
+        d = t(46982),
         u = t.n(d),
         g = t(19533),
         P = t(66104),
@@ -151,9 +151,9 @@
         E = t(14826),
         D = t(32765),
         v = t(19304),
-        C = t(26231),
+        C = t(36402),
         x = t.n(C),
-        N = t(22243),
+        N = t(72511),
         f = t.n(N),
         S = t(20614),
         I = t(3073),
@@ -165,9 +165,9 @@
         y = t(69206),
         A = t(701),
         O = t(40103),
-        G = t(93765),
+        G = t(27713),
         R = t.n(G),
-        H = t(71641),
+        H = t(11568),
         M = t.n(H);
       function W(e) {
         const { packageID: r } = e,
@@ -229,7 +229,7 @@
           ),
         );
       }
-      var F = t(7751),
+      var F = t(3346),
         K = t.n(F);
       const U = new (t(894).AN)("price-grid-cell-popout-elements");
       function V(e) {
@@ -590,12 +590,12 @@
         );
       }
       var Y = t(33940),
-        Q = t(46645),
+        Q = t(56730),
         ee = t.n(Q),
         re = t(36998),
         te = t(16169),
         ne = t(85651),
-        ie = t(69338),
+        ie = t(3301),
         ae = t(58218),
         ce = t(25508);
       const le = 30,
@@ -1176,7 +1176,7 @@
             (e[(e.OK = 2)] = "OK"),
             (e[(e.Failed = 3)] = "Failed");
         })(Ee || (Ee = {}));
-      t(65131), t(17661), t(1721);
+      t(22798), t(95568), t(35266);
       var ve = t(5615);
       function Ce(e) {
         return e.contains_game && e.contains_dlc
@@ -1547,7 +1547,7 @@
       var we = t(36105),
         Xe = t.n(we),
         Be = t(15254),
-        ye = t(74198),
+        ye = t(10587),
         Ae = t.n(ye);
       function Oe(e) {
         const { closeModal: r } = e,

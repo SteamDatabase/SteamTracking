@@ -3,7 +3,7 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [1614],
   {
-    96469: (e) => {
+    56473: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         BannerContainer: "deckverified_BannerContainer_2b4eh",
@@ -56,7 +56,7 @@
           "deckverified_DeveloperComments_LinkIcon_1cm6k",
       };
     },
-    78942: (e) => {
+    58833: (e) => {
       e.exports = {
         Dark: "footericons_Dark_2SV_e",
         Background: "footericons_Background_I3P4e",
@@ -75,7 +75,7 @@
       var l = r(89526),
         n = r(19304),
         o = r(701),
-        a = r(59743),
+        a = r(99727),
         c = (r(14826), r(32765));
       const i = l.createContext({ bShowCompatInfo: !1 }),
         s = () => l.useContext(i);
@@ -428,7 +428,7 @@
         w = r(99307),
         h = r(701),
         L = r(14826),
-        E = r(96469),
+        E = r(56473),
         V = r.n(E),
         k = r(34329),
         _ = r(28183),
@@ -669,7 +669,7 @@
             );
         }
       }
-      var D = r(69338),
+      var D = r(3301),
         R = r(19304),
         Z = r(60161),
         x = r(81349),
@@ -975,7 +975,7 @@
         o = r(33940),
         a = r(89526),
         c = r(23186),
-        i = r(78942),
+        i = r(58833),
         s = r.n(i),
         C = r(19304);
       function m(e) {

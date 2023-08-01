@@ -4,7 +4,7 @@
   self.webpackChunkappmgmt_storeadmin || []).push([
   [2360],
   {
-    17318: (e) => {
+    52629: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         PartnerEventFont: "partnereventshared_PartnerEventFont_22_fG",
@@ -679,7 +679,7 @@
         return `${r.De.HELP_BASE_URL}${(0, a.CE)()}/`;
       }
     },
-    28542: (e, t, n) => {
+    70369: (e, t, n) => {
       "use strict";
       n.d(t, { Z: () => r });
       const r =

@@ -3,7 +3,7 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [3068],
   {
-    15937: (e) => {
+    159: (e) => {
       e.exports = {
         NotificationsMenu: "greenenvelope_NotificationsMenu_DHpNP",
         NotificationsMenuEntriesContainer:
@@ -29,7 +29,7 @@
         EmptyNotificationsBody: "greenenvelope_EmptyNotificationsBody_3YAs6",
       };
     },
-    76239: (e) => {
+    49521: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         loadinganimationiterationcount: "20",
@@ -97,7 +97,7 @@
         hoverAnimation: "shorttemplates_hoverAnimation_gYMVd",
       };
     },
-    63e3: (e) => {
+    42535: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         loadinganimationiterationcount: "20",
@@ -168,7 +168,7 @@
         hoverAnimation: "standardtemplates_hoverAnimation_3QUW0",
       };
     },
-    2427: (e) => {
+    89126: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         loadinganimationiterationcount: "20",
@@ -3085,12 +3085,12 @@
       }
       var we = i(19304),
         Ne = i(40103),
-        Ee = i(15937),
+        Ee = i(159),
         Me = i.n(Ee),
         Te = i(44973),
         Re = i(51438),
         Fe = i(72120),
-        Ie = i(63e3),
+        Ie = i(42535),
         Ae = i.n(Ie),
         ke = i(701);
       const ze = !0;
@@ -3329,7 +3329,7 @@
       function Qe(e) {
         return e == De.GamepadToast;
       }
-      var et = i(76239),
+      var et = i(49521),
         tt = i.n(et);
       function it(e) {
         let {
@@ -3377,7 +3377,7 @@
           ),
         );
       }
-      var nt = i(2427),
+      var nt = i(89126),
         rt = i.n(nt),
         at = i(82079);
       function ot(e) {

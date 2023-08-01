@@ -523,7 +523,7 @@
           383, 389, 397, 401, 409, 419, 421, 431, 433, 439, 443, 449, 457, 461,
           463, 467, 479, 487, 491, 499, 503, 509,
         ],
-        M = (1 << 26) / A[A.length - 1];
+        E = (1 << 26) / A[A.length - 1];
       (e.prototype.chunkSize = function (t) {
         return Math.floor((Math.LN2 * this.DB) / Math.log(t));
       }),
@@ -943,15 +943,15 @@
           }
           if (r.isEven()) return !1;
           for (i = 1; i < A.length; ) {
-            for (var o = A[i], e = i + 1; e < A.length && o < M; ) o *= A[e++];
+            for (var o = A[i], e = i + 1; e < A.length && o < E; ) o *= A[e++];
             for (o = r.modInt(o); i < e; ) if (o % A[i++] == 0) return !1;
           }
           return r.millerRabin(t);
         });
-      const E = e;
+      const M = e;
       var x = function (t, i) {
-          (this.modulus = new E(t, 16)),
-            (this.encryptionExponent = new E(i, 16));
+          (this.modulus = new M(t, 16)),
+            (this.encryptionExponent = new M(i, 16));
         },
         O = {
           base64:
@@ -1049,27 +1049,40 @@
             r[--i] = t.charCodeAt(o--);
           for (r[--i] = 0; i > 2; )
             r[--i] = Math.floor(254 * Math.random()) + 1;
-          return (r[--i] = 2), (r[--i] = 0), new E(r);
+          return (r[--i] = 2), (r[--i] = 0), new M(r);
         },
       };
     },
     97277: (t, i, r) => {
-      r.d(i, { He: () => c, IC: () => p, p1: () => a, yI: () => f });
+      r.d(i, {
+        F0: () => p,
+        He: () => v,
+        IC: () => y,
+        Zb: () => a,
+        aF: () => f,
+        p1: () => m,
+        yI: () => d,
+      });
       var o = r(33940),
         e = r(52868),
-        s = r.n(e);
-      const n = r(2229).Z;
-      function h(t, i) {
+        s = r.n(e),
+        n = r(50454);
+      const h = r(2229).Z,
+        u = new n.s("Login"),
+        a = u.Info,
+        f = (u.Debug, u.Warning),
+        p = u.Error;
+      function c(t, i) {
         return t.endsWith("/") || (t += "/"), `${t}login/${i}/`;
       }
-      function u() {
+      function l() {
         let t = new FormData();
         return t.append("donotcache", new Date().getTime().toString()), t;
       }
-      function a(t) {
+      function m(t) {
         return (0, o.mG)(this, void 0, void 0, function* () {
-          let i = u(),
-            r = h(t, "refreshcaptcha"),
+          let i = l(),
+            r = c(t, "refreshcaptcha"),
             o = "";
           try {
             let t = { "Content-Type": "multipart/form-data" },
@@ -1082,15 +1095,15 @@
           return o;
         });
       }
-      function f(t, i) {
-        return h(t, "rendercaptcha") + `?gid=${i}`;
+      function d(t, i) {
+        return c(t, "rendercaptcha") + `?gid=${i}`;
       }
-      function p(t, i) {
-        let r = n.getPublicKey(i.publickey_mod, i.publickey_exp),
-          o = n.encrypt(t, r);
+      function y(t, i) {
+        let r = h.getPublicKey(i.publickey_mod, i.publickey_exp),
+          o = h.encrypt(t, r);
         return !1 === o ? null : o;
       }
-      function c(t, i, r) {
+      function v(t, i, r) {
         return (0, o.mG)(this, void 0, void 0, function* () {
           if (
             ((r = Object.assign({}, r)).strUserName &&
@@ -1101,10 +1114,10 @@
           if (!r.strUserName) return null;
           let e = yield (function (t, i) {
             return (0, o.mG)(this, void 0, void 0, function* () {
-              let r = u();
+              let r = l();
               r.append("username", i);
               let o,
-                e = h(t, "getrsakey");
+                e = c(t, "getrsakey");
               try {
                 let t = { "Content-Type": "multipart/form-data" },
                   i = yield s().post(e, r, { headers: t });
@@ -1139,9 +1152,9 @@
           if (!e) return console.error(`Failed to get RSA key from ${t}`), null;
           let n = yield (function (t, i, r, e) {
             return (0, o.mG)(this, void 0, void 0, function* () {
-              const o = p(r.strPassword, e);
+              const o = y(r.strPassword, e);
               if (!o) return null;
-              let n = u();
+              let n = l();
               n.append("password", o),
                 n.append("username", r.strUserName),
                 n.append("twofactorcode", r.strTwoFactorCode || ""),
@@ -1152,23 +1165,23 @@
                 n.append("emailsteamid", r.emailSteamID || ""),
                 n.append("rsatimestamp", e.timestamp),
                 n.append("remember_login", r.bRememberLogin ? "true" : "false");
-              let a = {};
+              let h = {};
               i &&
                 (n.append("oauth_client_id", i),
                 n.append("mobile_chat_client", "true"));
-              let f,
-                c = h(t, "dologin");
+              let u,
+                a = c(t, "dologin");
               try {
-                a.headers = { "Content-Type": "multipart/form-data" };
-                let t = yield s().post(c, n, a);
+                h.headers = { "Content-Type": "multipart/form-data" };
+                let t = yield s().post(a, n, h);
                 if (200 != t.status) return null;
                 let i = t.data;
                 if (!i) return null;
-                i.oauth && (i.oauth = JSON.parse(i.oauth)), (f = i);
+                i.oauth && (i.oauth = JSON.parse(i.oauth)), (u = i);
               } catch (t) {
                 return null;
               }
-              return f;
+              return u;
             });
           })(t, i, r, e);
           return n;

@@ -262,7 +262,7 @@ function LoadNextDiscoveryQueue( strSessionID, nViewedAppID )
 	// for back compat
 	if ( !pContent.RunScriptInPanelContext )
 		pContent.SetPanelEvent( 'onload', pScript );
-	
+
 	pContent.AddClass( 'ContentPanel' );
 	pContent.SetAttributeString( 'content-title', 'Your Discovery Queue' );
 	pContent.SetAttributeInt( 'content-delete-at-stack-depth', 1 );
@@ -416,7 +416,7 @@ function AddFreeLicense( strSessionID, strPanelID, subid, strDisplayName )
 
 	pPanel.AddClass( 'AddingLicense' );
 
-	$.AsyncWebRequest( 'https://checkout.steampowered.com/checkout/addfreelicense/' + subid,
+	$.AsyncWebRequest( 'https://store.steampowered.com/freelicense/addfreelicense/' + subid,
 	{
 		type: 'POST',
 		data: { sessionid: strSessionID, 'ajax': true },

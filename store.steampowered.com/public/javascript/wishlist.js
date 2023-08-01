@@ -27,8 +27,8 @@ var CWishlistController = function()
 	this.elDragTarget = null;
 	this.nLastPosition = -1;
 	this.nDragAppId = -1;
-	
-	// Requested appid to scroll into view 
+
+	// Requested appid to scroll into view
 	this.scrollToAppID = -1;
 
 	//this.marker = $J('<div style="position: absolute; width: 100px; height: 1px; background-color: red"></div>');
@@ -54,12 +54,12 @@ var CWishlistController = function()
 		'deck_verified': "Deck Compatibility",
 		'deck_playable': "Deck Compatibility"	}
 
-	this.rgValidFilters = [ 
-		'platform', 
+	this.rgValidFilters = [
+		'platform',
 		'type',
 		'sort',
 		'term',
-		'price_1', 'price_2', 'price_wallet', 
+		'price_1', 'price_2', 'price_wallet',
 		'ex_earlyaccess', 'ex_prerelease', 'ex_vr',
 		'discount_any', 'discount_50', 'discount_75',
 		'deck_verified', 'deck_playable'
@@ -118,9 +118,9 @@ var CWishlistController = function()
 
 	// the appid param is used by wishlist notifications so when the user clicks the notification we scroll the page to the appid of the notification
 	const urlParams = new URLSearchParams( window.location.search );
-	if ( urlParams.has( 'appid' ) ) 
+	if ( urlParams.has( 'appid' ) )
 		this.scrollToAppID = urlParams.get( 'appid' );
-	
+
 	// Hook up filter checkboxes
 	$J('.filter_check').change(function(){
 		if( this.checked )
@@ -323,7 +323,7 @@ CWishlistController.prototype.BuildElements = function()
 				.replace(/%2\$s/g,g_sessionID)
 				.replace(/%3\$s/g,GStoreItemData.rgNavParams.wishlist_cart)
 				.replace(/%4\$s/g,strInCartLabel)
-				.replace(/%5\$s/g, rgAppInfo['free_promo']? 'https://checkout.steampowered.com/checkout/addfreelicense' : 'https://store.steampowered.com/cart' )
+				.replace(/%5\$s/g, rgAppInfo['free_promo']? 'https://store.steampowered.com/freelicense/addfreelicense' : 'https://store.steampowered.com/cart' )
 				.replace(/%6\$s/g, subForPurchase.packageid ? 'addToCart' : 'addBundleToCart' );
 			}
 			else if( rgAppInfo['prerelease'] )
@@ -489,7 +489,7 @@ CWishlistController.prototype.LoadSettings = function()
 				$J('input[name=\''+V_EscapeHTML( rgKV[ 0 ] )+'\']').attr('checked',true);
 			}
 		}
-	} 
+	}
 	else if( lsValue != null )
 	{
 		this.rgFilterSettings = lsValue;
@@ -515,7 +515,7 @@ CWishlistController.prototype.LoadSettings = function()
 
 	if( this.rgFilterSettings.term )
 		$J('#wishlist_search').val(this.rgFilterSettings.term);
-	
+
 	if( this.rgFilterSettings.view )
 	{
 		this.SetViewMode ( this.rgFilterSettings.view );
@@ -604,7 +604,7 @@ CWishlistController.prototype.OnScroll = function()
 		nEnd = this.rgVisibleApps.length;
 
 		SetGPFocusRestoreTimeout();
-	
+
 	for( var i=nStart; i < nEnd; i++)
 		this.LoadElement(i);
 

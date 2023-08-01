@@ -3,7 +3,7 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [3499],
   {
-    30132: (e) => {
+    15314: (e) => {
       e.exports = {
         FAQViewPage: "faqsharedviewpage_FAQViewPage_2c-Zv",
         SupportTitle: "faqsharedviewpage_SupportTitle_3nR_5",
@@ -17,10 +17,10 @@
         FAQContent: "faqsharedviewpage_FAQContent_NOvHU",
       };
     },
-    74809: (e) => {
+    17197: (e) => {
       e.exports = { InfoRow: "faqviewadmin_InfoRow_2IuXf" };
     },
-    82755: (e) => {
+    83662: (e) => {
       e.exports = {
         Section: "faqviewsidebar_Section_2GXm0",
         CommunityHelp: "faqviewsidebar_CommunityHelp_1aSK_",
@@ -30,10 +30,10 @@
         CenterButtonCtn: "faqviewsidebar_CenterButtonCtn_aAZul",
       };
     },
-    77571: (e) => {
+    56708: (e) => {
       e.exports = { SmallAvatar: "userprofile_SmallAvatar_2cCH3" };
     },
-    54382: (e) => {
+    44938: (e) => {
       e.exports = {
         ImportToolCtn: "bbcodeimporter_ImportToolCtn_TQZns",
         ToolHeader: "bbcodeimporter_ToolHeader_vr371",
@@ -51,7 +51,7 @@
         ImportFAQsButton: "bbcodeimporter_ImportFAQsButton_2CwpZ",
       };
     },
-    79509: (e) => {
+    50301: (e) => {
       e.exports = {
         FAQDashboardPage: "faqdashboard_FAQDashboardPage_59oO6",
         FAQDashboard: "faqdashboard_FAQDashboard_tIxuP",
@@ -78,7 +78,7 @@
         EntryInternalName: "faqdashboard_EntryInternalName_1sL5y",
       };
     },
-    45090: (e) => {
+    38907: (e) => {
       e.exports = {
         FAQEditPage: "faqeditor_FAQEditPage_2QALa",
         FAQMenuCtn: "faqeditor_FAQMenuCtn_1DISv",
@@ -95,7 +95,7 @@
         EscapeLink: "faqeditor_EscapeLink_3tlrR",
       };
     },
-    59102: (e) => {
+    96550: (e) => {
       e.exports = {
         LanguageListDialog: "faqlocalization_LanguageListDialog_vp5PF",
         ChecklistHeader: "faqlocalization_ChecklistHeader_1Vzmz",
@@ -115,7 +115,7 @@
         UrlCode: "faqlocalization_UrlCode_MxoxU",
       };
     },
-    9275: (e) => {
+    62261: (e) => {
       e.exports = {
         LeftMenu: "faqstatus_LeftMenu_1txme",
         Section: "faqstatus_Section_2j-hh",
@@ -133,13 +133,13 @@
         FaqStatusTable: "faqstatus_FaqStatusTable_pCBfT",
       };
     },
-    24599: (e) => {
+    34993: (e) => {
       e.exports = {
         Never: "faqtimestamp_Never_8rlUG",
         Warning: "faqtimestamp_Warning_pZM2L",
       };
     },
-    13361: (e) => {
+    44886: (e) => {
       e.exports = {
         FAQUnPublished: "faqtoolbar_FAQUnPublished_erZyI",
         FAQPublished: "faqtoolbar_FAQPublished_13Wz0",
@@ -147,7 +147,7 @@
         EditorInternalName: "faqtoolbar_EditorInternalName_3A9ci",
       };
     },
-    6972: (e) => {
+    6201: (e) => {
       e.exports = {
         ErrorCtn: "faqviewpage_ErrorCtn_2Dpwh",
         ErrorMsg: "faqviewpage_ErrorMsg_2dTNx",
@@ -216,7 +216,7 @@
       }
       var y = a(19304),
         b = a(23217),
-        w = a(54382),
+        w = a(44938),
         v = a.n(w);
       const S = [
           [
@@ -7409,7 +7409,7 @@
       function I(e, t) {
         var a, o, s, r, c, u, m, f, g, y;
         return (0, i.mG)(this, void 0, void 0, function* () {
-          const i = new Array(30),
+          const i = new Array(31),
             b = yield h.xP.Get().LoadFAQDraftContent(e),
             w =
               null !==
@@ -7441,7 +7441,7 @@
                     : c.title) && void 0 !== u
                 ? u
                 : "unknown";
-          for (let e = 0; e < 30; e++) {
+          for (let e = 0; e < 31; e++) {
             const t = null == b ? void 0 : b.GetLastSavedDraftVersion(e);
             if (null == t ? void 0 : t.content) {
               const a = t.content,
@@ -7493,8 +7493,8 @@
                 0,
                 m.De.COMMUNITY_BASE_URL.length - 1,
               ) + g(o.k_eCommunityPreview, i.faq_id)),
-          p = new Array(31);
-        for (let e = 0; e < 30; e++) {
+          p = new Array(32);
+        for (let e = 0; e < 31; e++) {
           const a =
               (null !== (t = e < (null == s ? void 0 : s.length)) &&
               void 0 !== t
@@ -7548,25 +7548,25 @@
         T = a(99307),
         P = a(57742),
         D = a(701),
-        q = a(69338),
+        q = a(3301),
         M = a(84343),
         z = a(14826),
         E = a(81349),
-        F = a(79509),
+        F = a(50301),
         W = a.n(F),
         R = a(50265),
-        O = a(48410),
+        O = a(41713),
         N = a.n(O),
         L = a(47165),
         H = a(24448),
-        V = a(17318),
+        V = a(52629),
         G = a.n(V),
         U = a(41200),
         B = a(58218),
         j = a(60161),
         Y = a(72120),
         X = a(11170),
-        $ = a(59102);
+        $ = a(96550);
       const Q = "title",
         K = "content";
       const J = (e) => {
@@ -7716,7 +7716,7 @@
                           (function (e, t) {
                             var a, o;
                             let i = new X.C();
-                            for (let s = 0; s < 30; ++s)
+                            for (let s = 0; s < 31; ++s)
                               (e.BHasSomeTextForLanguage(s) || 0 == t) &&
                                 (i.SetLocalization(
                                   Q,
@@ -8050,9 +8050,9 @@
         );
       }
       var pe = a(21904),
-        de = a(86443),
+        de = a(27930),
         he = a.n(de),
-        ce = a(24599),
+        ce = a(34993),
         ue = a.n(ce);
       const me = (e) => {
           const { rtTimestamp: t, bShowAsWarning: a } = e;
@@ -8428,10 +8428,10 @@
           });
       var Ie = a(26365),
         _e = a(7948),
-        Ae = a(12763),
+        Ae = a(78156),
         Ce = a(17547),
         Te = a(46834),
-        Pe = a(45090),
+        Pe = a(38907),
         De = a.n(Pe);
       const qe = (e) =>
           n.createElement(
@@ -8807,7 +8807,7 @@
             )
           );
         };
-      var Re = a(9275);
+      var Re = a(62261);
       const Oe = (0, s.Pi)((e) => {
           var t, a, o, i, s;
           const { draft: r, eLanguage: l } = e,
@@ -9018,10 +9018,10 @@
         });
       var Le = a(78423),
         He = a(5386),
-        Ve = a(43929),
-        Ge = a(52582),
-        Ue = a(23722),
-        Be = a(43173);
+        Ve = a(26989),
+        Ge = a(79876),
+        Ue = a(90980),
+        Be = a(80691);
       const je = (0, s.Pi)((e) => {
           const { draft: t } = e,
             a = t.BNeedsSaving();
@@ -9123,7 +9123,7 @@
             )
           );
         };
-      var Xe = a(13361),
+      var Xe = a(44886),
         $e = a.n(Xe);
       const Qe = (0, s.Pi)((e) => {
           const { draft: t, bPreview: a } = e,
@@ -9451,7 +9451,7 @@
               (0, z.Xx)("#FAQEditor_GoToDashboard"),
             ),
           );
-      var it = a(30132);
+      var it = a(15314);
       const st = (e) => {
           const { title: t, content: a, bIsPreview: o, elSideBars: i } = e,
             s = (0, c.TH)();
@@ -9581,7 +9581,7 @@
           { cache: !1 },
         ),
         ut = "avatarandpersonas";
-      var mt = a(77571);
+      var mt = a(56708);
       function ft(e) {
         const { accountID: t, bHideWhenNotAvailable: a } = e,
           [o] = (function (e) {
@@ -9612,8 +9612,8 @@
               ),
         );
       }
-      var gt = a(74809),
-        yt = a(82755);
+      var gt = a(17197),
+        yt = a(83662);
       const bt = (e) => {
           const { faqContent: t } = e,
             [a, i] = (0, h.Ky)(t.faq_id, t.version, t.language);
@@ -9762,7 +9762,7 @@
                 ),
               ),
           );
-      var St = a(6972),
+      var St = a(6201),
         kt = a.n(St);
       const xt = (e) => {
           const { faqid: t } = e,

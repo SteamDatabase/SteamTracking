@@ -3,7 +3,7 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [6845],
   {
-    51964: (e) => {
+    4114: (e) => {
       e.exports = {
         SnoozeContainer: "friendsnooze_SnoozeContainer_3EzTy",
         SnoozeZ: "friendsnooze_SnoozeZ_1DArl",
@@ -19,7 +19,7 @@
         Snoring: "friendsnooze_Snoring_YuCwj",
       };
     },
-    92200: (e) => {
+    90010: (e) => {
       e.exports = {
         miniProfile: "miniprofile_miniProfile_1AMAp",
         miniProfileContent: "miniprofile_miniProfileContent_3QoRR",
@@ -76,14 +76,14 @@
         featuredSubTitle: "miniprofile_featuredSubTitle_1IP-p",
       };
     },
-    61204: (e) => {
+    82906: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         PersonaStatusIcon: "personastatusicons_PersonaStatusIcon_1YsWj",
         MobilePhoneIcon: "personastatusicons_MobilePhoneIcon_3pGV8",
       };
     },
-    69005: (e) => {
+    10770: (e) => {
       e.exports = {
         DefaultTheme: "profilethemecolors_DefaultTheme_1qSTn",
         CosmicTheme: "profilethemecolors_CosmicTheme_1H27L",
@@ -118,7 +118,7 @@
         SteamDeckTheme: "profilethemecolors_SteamDeckTheme_3TBj7",
       };
     },
-    10476: (e) => {
+    1099: (e) => {
       e.exports = {
         AvatarRow: "avatar_AvatarRow_2_WvK",
         Avatar: "avatar_Avatar_27tBX",
@@ -138,7 +138,7 @@
         HideDefaultAvatar: "avatar_HideDefaultAvatar_6zU6F",
       };
     },
-    82311: (e) => {
+    25025: (e) => {
       e.exports = {
         AvatarCollectionHeader: "avatarcollection_AvatarCollectionHeader_27Q-8",
         AvatarCollectionName: "avatarcollection_AvatarCollectionName_2pum1",
@@ -161,7 +161,7 @@
         CollectionGroupAvatars: "avatarcollection_CollectionGroupAvatars_wWso7",
       };
     },
-    66187: (e) => {
+    45604: (e) => {
       e.exports = {
         Badge: "favoritebadge_Badge_2ODUB",
         BadgeImage: "favoritebadge_BadgeImage_3M7FE",
@@ -172,7 +172,7 @@
         BadgeOption: "favoritebadge_BadgeOption_P1MG7",
       };
     },
-    38062: (e) => {
+    12294: (e) => {
       e.exports = {
         Group: "favoritegroup_Group_1yHxt",
         GroupAvatar: "favoritegroup_GroupAvatar_1C_n6",
@@ -182,7 +182,7 @@
         GroupOption: "favoritegroup_GroupOption_3neyr",
       };
     },
-    68485: (e) => {
+    42236: (e) => {
       e.exports = {
         MiniProfilePreview: "miniprofilepreview_MiniProfilePreview_1MWlW",
         MiniProfileBackgroundOption:
@@ -197,7 +197,7 @@
         WithVideo: "miniprofilepreview_WithVideo_1BBIS",
       };
     },
-    79112: (e) => {
+    19195: (e) => {
       e.exports = {
         EquippedBackgroundBlock:
           "profilebackground_EquippedBackgroundBlock_1Pihr",
@@ -218,7 +218,7 @@
           "profilebackground_ProfileBackgroundEquipOption_3Hc2R",
       };
     },
-    12209: (e) => {
+    14803: (e) => {
       e.exports = {
         Shell: "profileeditshell_Shell_2kqKZ",
         Navigation: "profileeditshell_Navigation_33Kl1",
@@ -232,7 +232,7 @@
         BackToProfileCtn: "profileeditshell_BackToProfileCtn_1YOt2",
       };
     },
-    59536: (e) => {
+    81565: (e) => {
       e.exports = {
         ProfileModifierPreview: "profilemodifier_ProfileModifierPreview_OhBEt",
         ProfileModifierOption: "profilemodifier_ProfileModifierOption_3NIiY",
@@ -244,7 +244,7 @@
         App: "profilemodifier_App_2SYZ_",
       };
     },
-    90375: (e) => {
+    17088: (e) => {
       e.exports = {
         ProfilePreview: "profilepreview_ProfilePreview_sJ5St",
         PaintRadial0: "profilepreview_PaintRadial0_3ygvj",
@@ -258,7 +258,7 @@
         ProfilePreviewCtn: "profilepreview_ProfilePreviewCtn_uyN_g",
       };
     },
-    94374: (e) => {
+    48771: (e) => {
       e.exports = {
         ProfileThemePicker: "profiletheme_ProfileThemePicker_37I7q",
         ThemePickerDisabled: "profiletheme_ThemePickerDisabled_1gBl2",
@@ -277,14 +277,14 @@
         ProfilePreview: "profiletheme_ProfilePreview_MneEO",
       };
     },
-    58349: (e) => {
+    54448: (e) => {
       e.exports = {
         formattingButtons: "summary_formattingButtons_2T2D7",
         formattingButton: "summary_formattingButton_LhNoI",
         summaryTextArea: "summary_summaryTextArea_2ipSt",
       };
     },
-    88909: (e) => {
+    31350: (e) => {
       e.exports = {
         ProfileEditRoot: "profileedit_ProfileEditRoot_1lBbV",
         ItemPicker: "profileedit_ItemPicker_n1M1o",
@@ -314,7 +314,7 @@
         a = r(89526),
         o = r(88464),
         n = r(19304),
-        s = r(51964),
+        s = r(4114),
         l = r.n(s);
       let m = class extends a.Component {
         static get hoverClass() {
@@ -379,7 +379,7 @@
         s = r(11301),
         l = r(19304),
         m = r(701),
-        c = r(61204),
+        c = r(82906),
         d = r.n(c),
         p = r(93908);
       const u = (0, o.Pi)((e) => {
@@ -468,10 +468,10 @@
         u = r(11301),
         h = r(14826),
         v = r(79271),
-        _ = r(50355),
+        _ = r(68943),
         f = r(88763),
         g = r(19304),
-        P = r(92200),
+        P = r(90010),
         E = r.n(P);
       const y = r(25508)._H.PerMinute;
       class C {
@@ -2623,11 +2623,11 @@
       var le = r(59934),
         me = r(78423),
         ce = r(27070),
-        de = (r(1721), r(73961)),
-        pe = r(10476),
+        de = (r(35266), r(73961)),
+        pe = r(1099),
         ue = r(57605),
         he = r(4306),
-        ve = r(82311);
+        ve = r(25025);
       let _e = class extends c.Component {
         constructor() {
           super(...arguments), (this.state = { bReady: !1 });
@@ -3133,7 +3133,7 @@
               ),
             ),
           );
-      var ke = r(88909),
+      var ke = r(31350),
         we = (r(99307), r(72120));
       const Oe = ({ title: e, className: t, children: r }) =>
           c.createElement(
@@ -3977,7 +3977,7 @@
         (0, i.gn)([he.ak], at.prototype, "OnStateSelected", null),
         (at = (0, i.gn)([d.Pi], at));
       var ot = r(60866),
-        nt = r(58349);
+        nt = r(54448);
       class st extends c.Component {
         constructor() {
           super(...arguments),
@@ -4330,7 +4330,7 @@
       };
       (0, i.gn)([he.ak], _t.prototype, "OnProfileAwardsCheckboxChecked", null),
         (_t = (0, i.gn)([d.Pi], _t));
-      var ft = r(66187);
+      var ft = r(45604);
       let gt = class extends c.Component {
         constructor() {
           super(...arguments), (this.state = { bSaving: !1, strHTMLError: "" });
@@ -4468,7 +4468,7 @@
             ),
           );
         };
-      var At = r(38062);
+      var At = r(12294);
       let Gt = class extends c.Component {
         constructor() {
           super(...arguments), (this.state = { bSaving: !1, strHTMLError: "" });
@@ -4570,7 +4570,7 @@
             ),
           );
         };
-      var bt = r(68485);
+      var bt = r(42236);
       const kt = ({ Item: e, small: t }) => {
           let r = K(e, t);
           return 0 == Object.keys(r).length
@@ -5198,9 +5198,9 @@
           );
         }
       }
-      var rr = r(79112),
-        ir = r(90375),
-        ar = r(69005),
+      var rr = r(19195),
+        ir = r(17088),
+        ar = r(10770),
         or = r(99825);
       const nr = ({ className: e, width: t, height: r, theme: i }) => {
           i || (i = "Default"), (i += "Theme");
@@ -5802,7 +5802,7 @@
                 c.createElement(ur, { Background: null }, i),
               );
       var _r = r(565),
-        fr = r(12209);
+        fr = r(14803);
       class gr extends c.Component {
         render() {
           const {
@@ -5957,7 +5957,7 @@
             );
           },
         );
-      var yr = r(59536);
+      var yr = r(81565);
       let Cr = class extends c.Component {
         constructor() {
           super(...arguments), (this.state = { bDialogActive: !1 });
@@ -6115,7 +6115,7 @@
               t,
             ),
           );
-      var Lr = r(94374);
+      var Lr = r(48771);
       let br = class extends c.Component {
         constructor() {
           super(...arguments), (this.state = { bSaving: !1, strHTMLError: "" });

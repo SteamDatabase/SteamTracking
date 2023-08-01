@@ -3,28 +3,28 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [2301],
   {
-    38869: (e) => {
+    38646: (e) => {
       e.exports = {
         ProfileShowcaseHeaderImage:
           "profileshowcases_ProfileShowcaseHeaderImage_2tjUy",
         ShowcaseSubhead: "profileshowcases_ShowcaseSubhead_2BmNv",
       };
     },
-    21788: (e, t, s) => {
+    55071: (e, t, s) => {
       "use strict";
       s.r(t), s.d(t, { ProfileShowcasesPage: () => S, default: () => C });
       var a = s(33940),
         r = s(89526),
         o = s(88464),
-        l = s(61876),
-        c = s(38869),
+        l = s(44267),
+        c = s(38646),
         n = s(42456),
-        i = s(8188),
+        i = s(16918),
         p = s(14826),
-        h = s(49587),
+        h = s(85446),
         m = s(89469),
         u = s(42109),
-        _ = s(49231);
+        _ = s(44066);
       const d =
           s.p +
           "images/applications/store/showcases_header_image.svg?v=valveisgoodatcaching",

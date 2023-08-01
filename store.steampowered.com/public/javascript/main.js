@@ -1114,7 +1114,7 @@ var k_nStartSearchTimeoutMS = 350;
 // how long we extend the wait after each keypress.  We always time out at 3x the base search timeout ms
 var k_nSearchKeypressTimeoutExtensionMS = 125;
 
-// TODO: only reason for having this here is to support the SNR.  If the mobile app can identify it, or it's not important to include the SNR then 
+// TODO: only reason for having this here is to support the SNR.  If the mobile app can identify it, or it's not important to include the SNR then
 // we'll have the mobile app navigate to the search page without having to post a message to the webview
 function MobileApp_ShowSearchResults( $SNR, $Term )
 {
@@ -1428,7 +1428,7 @@ function AddFreeLicense( subid, strDisplayName )
 
 	for ( var i = 0; i < subids.length; i++ )
 	{
-		posts.push( CrossDomainPost( 'https://checkout.steampowered.com/checkout/addfreelicense/' + subids[i], { ajax: true, sessionid: g_sessionID }) );
+		posts.push( CrossDomainPost( 'https://store.steampowered.com/freelicense/addfreelicense/' + subids[i], { ajax: true, sessionid: g_sessionID }) );
 	}
 
 	$J.when.apply( $J, posts ).done( function() {
@@ -1462,7 +1462,7 @@ function AddFreeBundle( bundleid, strDisplayName )
 	window.g_bAddFreeLicenseInFlight = true;
 
 	var posts = [];
-	posts.push( CrossDomainPost( 'https://checkout.steampowered.com/checkout/addfreebundle/' + bundleid, { ajax: true, sessionid: g_sessionID }) );
+	posts.push( CrossDomainPost( 'https://store.steampowered.com/freelicense/addfreebundle/' + bundleid, { ajax: true, sessionid: g_sessionID }) );
 
 	$J.when.apply( $J, posts ).done( function() {
 		ShowAlertDialog(

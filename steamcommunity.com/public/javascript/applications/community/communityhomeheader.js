@@ -3,7 +3,7 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [312],
   {
-    94513: (e) => {
+    5896: (e) => {
       e.exports = {
         CommunityHomeHeader: "communityhomeheader_CommunityHomeHeader_1C-zu",
         CommunityHomeHeaderTitleSection:
@@ -141,7 +141,7 @@
       var a = n(33940),
         r = n(89526),
         o = n(14826),
-        i = n(94513),
+        i = n(5896),
         m = n.n(i),
         c = n(44026),
         s = n(32765),

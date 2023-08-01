@@ -3,7 +3,7 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [8647],
   {
-    31698: (e) => {
+    20730: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         Heading: "managefriends_Heading_1lIY_",
@@ -182,7 +182,7 @@
         o = n.n(i),
         d = n(57605),
         l = n(14826),
-        c = n(31698),
+        c = n(20730),
         m = n.n(c),
         u = n(32765),
         _ = n(47165),

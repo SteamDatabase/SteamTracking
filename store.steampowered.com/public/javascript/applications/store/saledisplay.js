@@ -3,7 +3,7 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [680],
   {
-    93181: (e) => {
+    87562: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         CategorySectionsCtn: "categoriesapp_CategorySectionsCtn_YuXds",
@@ -156,7 +156,7 @@
         g = n(46294),
         m = n(19304),
         d = n(32765),
-        E = n(93181);
+        E = n(87562);
       class p {
         GetSections() {
           return this.m_rgSections;
@@ -285,9 +285,9 @@
         i = n(83145),
         u = n(10412),
         l = n(72072),
-        g = n(1721),
+        g = n(35266),
         m = n.n(g),
-        d = n(7770),
+        d = n(3301),
         E = n(14826),
         p = n(32765),
         _ = n(71752);

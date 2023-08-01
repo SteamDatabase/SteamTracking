@@ -5615,7 +5615,6 @@ html.responsive.touch .ContentHubSalePage {
 }
 .BasicUI .partnersaledisplay_SaleSection_2NfLq {
   padding: 16px var(--gpSpace-Gutter);
-  margin: unset;
   max-width: 100%;
 }
 .partnersaledisplay_SaleSection_2NfLq.partnersaledisplay_CarouselDisplay_3ez1r {
@@ -5911,6 +5910,14 @@ span.partnersaledisplay_vr_required_1KRF9 {
 }
 html.responsive.touch .partnersaledisplay_SaleSectionTabs_2xKqp {
   top: 62px;
+  left: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  max-width: 100vw;
+  position: relative;
+  right: 50%;
+  width: 100vw;
+  border-radius: 0px;
 }
 html.responsive.touch
   .partnersaledisplay_SaleSectionTabs_2xKqp.partnersaledisplay_DesktopTabs_3ZE2w {
@@ -5919,6 +5926,14 @@ html.responsive.touch
 @media screen and (max-width: 910px) {
   html:not(.force_desktop) .partnersaledisplay_SaleSectionTabs_2xKqp {
     top: 62px;
+    left: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    max-width: 100vw;
+    position: relative;
+    right: 50%;
+    width: 100vw;
+    border-radius: 0px;
   }
   html:not(.force_desktop)
     .partnersaledisplay_SaleSectionTabs_2xKqp.partnersaledisplay_DesktopTabs_3ZE2w {
@@ -5950,6 +5965,7 @@ html.responsive.touch
 .partnersaledisplay_SaleSectionTabs_2xKqp
   .partnersaledisplay_SaleSectionTabContainer_2jFfU {
   display: flex;
+  justify-content: center;
   width: 100%;
   overflow-y: hidden;
   overflow-x: auto;
@@ -5965,35 +5981,16 @@ html.responsive.touch
   scroll-padding: 0px 64px;
   width: 100%;
 }
+html.responsive.touch
+  .partnersaledisplay_SaleSectionTabs_2xKqp
+  .partnersaledisplay_SaleSectionTabContainer_2jFfU {
+  width: 100vw;
+  margin-left: -10px;
+  margin-right: -10px;
+  padding: 0px 10px;
+  overflow-x: scroll;
+}
 @media screen and (max-width: 910px) {
-  html.responsive.touch
-    .partnersaledisplay_SaleSectionTabs_2xKqp
-    .partnersaledisplay_SaleSectionTabContainer_2jFfU {
-    width: 100vw;
-    margin-left: -10px;
-    margin-right: -10px;
-    padding: 0px 10px;
-    overflow-x: scroll;
-  }
-  html.tablet
-    html.responsive.touch
-    .partnersaledisplay_SaleSectionTabs_2xKqp
-    .partnersaledisplay_SaleSectionTabContainer_2jFfU {
-    margin: 0px -24px;
-    padding: 0px;
-    scroll-padding: 0px 64px;
-  }
-}
-@media screen and (max-width: 910px) and (max-width: 910px) {
-  html.responsive.touch
-    .partnersaledisplay_SaleSectionTabs_2xKqp
-    .partnersaledisplay_SaleSectionTabContainer_2jFfU {
-    margin: 0px -24px;
-    padding: 0px;
-    scroll-padding: 0px 64px;
-  }
-}
-@media screen and (max-width: 910px) and (max-width: 910px) {
   html:not(.force_desktop)
     .partnersaledisplay_SaleSectionTabs_2xKqp
     .partnersaledisplay_SaleSectionTabContainer_2jFfU {
@@ -6003,20 +6000,18 @@ html.responsive.touch
     padding: 0px 10px;
     overflow-x: scroll;
   }
-  html.tablet
-    html:not(.force_desktop)
-    .partnersaledisplay_SaleSectionTabs_2xKqp
-    .partnersaledisplay_SaleSectionTabContainer_2jFfU {
-    margin: 0px -24px;
-    padding: 0px;
-    scroll-padding: 0px 64px;
-  }
 }
-@media screen and (max-width: 910px) and (max-width: 910px) and (max-width: 910px) {
-  html:not(.force_desktop)
-    .partnersaledisplay_SaleSectionTabs_2xKqp
+html.tablet
+  .partnersaledisplay_SaleSectionTabs_2xKqp
+  .partnersaledisplay_SaleSectionTabContainer_2jFfU {
+  margin: 0px;
+  padding: 0px;
+  scroll-padding: 0px 64px;
+}
+@media screen and (max-width: 910px) {
+  .partnersaledisplay_SaleSectionTabs_2xKqp
     .partnersaledisplay_SaleSectionTabContainer_2jFfU {
-    margin: 0px -24px;
+    margin: 0px;
     padding: 0px;
     scroll-padding: 0px 64px;
   }
@@ -6030,9 +6025,10 @@ html.responsive.touch
 .BasicUI
   .partnersaledisplay_SaleSectionTabs_2xKqp
   .partnersaledisplay_SaleSectionTabsRow_2Zyym {
-  margin: unset;
+  margin: 0px -24px 0px 0px;
   gap: 6px;
   padding: 16px 0px 16px;
+  max-width: 95vw;
 }
 html.responsive.touch
   .partnersaledisplay_SaleSectionTabs_2xKqp
@@ -6090,10 +6086,10 @@ html.tablet
   .partnersaledisplay_SaleTab_3jWYu {
   margin: unset;
   height: unset;
-  border-radius: var(--gpCorner-Medium);
   padding: 12px 16px;
   scroll-snap-align: start;
   transition: filter 0.2s ease;
+  border-radius: 0px !important;
 }
 .BasicUI
   .partnersaledisplay_SaleSectionTabs_2xKqp

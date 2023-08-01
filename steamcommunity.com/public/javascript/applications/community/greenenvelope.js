@@ -3,7 +3,7 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [3068],
   {
-    15937: (e) => {
+    159: (e) => {
       e.exports = {
         NotificationsMenu: "greenenvelope_NotificationsMenu_DHpNP",
         NotificationsMenuEntriesContainer:
@@ -43,7 +43,7 @@
         l = n(19304),
         s = n(14826),
         a = n(40103),
-        c = n(15937),
+        c = n(159),
         m = n.n(c),
         u = n(44973),
         d = n(77427),

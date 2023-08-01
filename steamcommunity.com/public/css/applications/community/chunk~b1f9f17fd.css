@@ -1841,20 +1841,31 @@ html.responsive.touch
   max-width: 940px;
   margin: 0 auto;
   margin-bottom: 32px;
+  margin-top: 100px;
 }
 .BasicUI .saledisplaylogo_SalePageLogoCtn_2kLRR {
-  max-height: 230px;
+  max-height: 285px;
   margin-bottom: 0px;
+  margin-top: 65px;
+}
+html.tablet .saledisplaylogo_SalePageLogoCtn_2kLRR {
+  margin-top: 65px;
+}
+@media screen and (max-width: 910px) {
+  .saledisplaylogo_SalePageLogoCtn_2kLRR {
+    margin-top: 65px;
+  }
 }
 .saledisplaylogo_SalePageLogoCtn_2kLRR img {
   width: 100%;
 }
 .BasicUI .saledisplaylogo_SalePageLogoCtn_2kLRR img {
-  max-height: 230px;
+  max-height: 285px;
   width: auto;
 }
 @media screen and (max-width: 940px) {
   .saledisplaylogo_SalePageLogoCtn_2kLRR {
+    margin-top: 45px;
     margin-bottom: 0px;
   }
 }

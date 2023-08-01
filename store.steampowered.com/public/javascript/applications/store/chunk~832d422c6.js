@@ -3,7 +3,7 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [2420],
   {
-    6864: (e) => {
+    82204: (e) => {
       e.exports = {
         SteamAwardContainer: "nominationandvote_SteamAwardContainer_jBtX5",
         InLibraryView: "nominationandvote_InLibraryView_1G81P",
@@ -43,7 +43,7 @@
         AwardCategoriesCtn: "nominationandvote_AwardCategoriesCtn_GCwk0",
       };
     },
-    83809: (e) => {
+    99119: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         EventDetailsPageContainer:
@@ -183,7 +183,7 @@
         l = a(89526),
         d = a(57858),
         p = a(57605),
-        m = a(17318),
+        m = a(52629),
         v = a.n(m),
         c = a(23217),
         _ = a(19304),
@@ -192,11 +192,11 @@
         u = a(32765),
         h = a(99307),
         y = a(57742),
-        A = a(7770),
+        A = a(3301),
         E = a(5557),
-        C = a(6864),
+        C = a(82204),
         w = a.n(C),
-        D = a(83809),
+        D = a(99119),
         T = a.n(D),
         k = a(32905);
       function N(e) {

@@ -3,7 +3,7 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [988],
   {
-    83965: (e) => {
+    55201: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         GrantAwardModal: "awardmodal_GrantAwardModal_2vlF5",
@@ -189,12 +189,12 @@
       var A = a(57605),
         v = a(99307),
         y = a(701),
-        C = a(69338),
+        C = a(3301),
         R = a(19304),
         L = a(14826),
         b = a(4306),
         N = a(28133),
-        f = a(83965);
+        f = a(55201);
       function S(e) {
         return (0, L.Xx)(`#RewardsReaction_${e}`);
       }

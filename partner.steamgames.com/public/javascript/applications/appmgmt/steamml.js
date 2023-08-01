@@ -4,7 +4,7 @@
   self.webpackChunkappmgmt_storeadmin || []).push([
   [7762],
   {
-    18753: (e) => {
+    57418: (e) => {
       e.exports = {
         Background: "steamml_Background_msjGf",
         SteamMLButton: "steamml_SteamMLButton_2yReX",
@@ -96,7 +96,7 @@
         s = a(89526),
         n = a(565),
         i = a(59934),
-        r = a(18753),
+        r = a(57418),
         c = a(50265),
         o = a(33940),
         d = a(32765),

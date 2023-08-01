@@ -3,7 +3,7 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [5436],
   {
-    5089: (e) => {
+    71: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         OtherEventsCtn: "eventrow_OtherEventsCtn_1qNsZ",
@@ -34,14 +34,14 @@
         AppCapsulePrice: "eventrow_AppCapsulePrice_Jq75m",
       };
     },
-    42701: (e) => {
+    61386: (e) => {
       e.exports = {
         SubSection: "broadcastdebug_SubSection_3Ac4z",
         Header: "broadcastdebug_Header_2vrXB",
         AppSummaryWidgetCtn: "broadcastdebug_AppSummaryWidgetCtn_35ozI",
       };
     },
-    55395: (e) => {
+    59797: (e) => {
       e.exports = {
         BroadcastPage: "broadcastplayer_BroadcastPage_3IVNU",
         ChatAndVideoContainer: "broadcastplayer_ChatAndVideoContainer_3T2Xh",
@@ -59,7 +59,7 @@
         DebugCtn: "broadcastplayer_DebugCtn_FKW0z",
       };
     },
-    41917: (e) => {
+    97477: (e) => {
       e.exports = {
         ProfileCtn: "broadcastprofile_ProfileCtn__qonR",
         GameAndOptionsCtn: "broadcastprofile_GameAndOptionsCtn_Qo4I3",
@@ -72,10 +72,10 @@
         GameCapsule: "broadcastprofile_GameCapsule_1oJMx",
       };
     },
-    70651: (e) => {
+    37231: (e) => {
       e.exports = { AdminControls: "broadcastsupport_AdminControls_3KL0b" };
     },
-    84436: (e) => {
+    99230: (e) => {
       e.exports = {
         AvatarCtn: "communityavatar_AvatarCtn_3n3n0",
         NameAndProps: "communityavatar_NameAndProps_3Pljh",
@@ -103,7 +103,7 @@
         h = a(25871),
         b = a(1275),
         g = a(20790),
-        f = a(17318),
+        f = a(52629),
         B = a.n(f),
         I = a(87539),
         y = a(21904),
@@ -113,11 +113,11 @@
         N = a(14826),
         w = a(32765),
         T = a(17547),
-        O = a(69338),
-        k = a(5089),
+        O = a(3301),
+        k = a(71),
         x = a.n(k),
         M = a(51441),
-        R = a(23715),
+        R = a(1631),
         U = a.n(R),
         L = a(701);
       const P = (0, l.Pi)((e) => {
@@ -512,7 +512,7 @@
     25911: (e, t, a) => {
       "use strict";
       a.r(t), a.d(t, { default: () => pe });
-      a(1721);
+      a(35266);
       var n = a(89526),
         r = a(59934),
         o = a(71209),
@@ -728,7 +728,7 @@
       var p = a(88464),
         E = a(55844),
         S = a(28388),
-        C = a(43628),
+        C = a(29291),
         h = a.n(C),
         b = a(98889),
         g = a(82079),
@@ -737,7 +737,7 @@
         I = a(17547),
         y = a(49234),
         G = a(5029),
-        D = a(17318),
+        D = a(52629),
         A = a.n(D),
         N = a(44421),
         w = a(99307),
@@ -748,7 +748,7 @@
         M = a(82988),
         R = a(21904),
         U = a(88443),
-        L = a(42701);
+        L = a(61386);
       const P = (e) => {
           const t = (0, n.useRef)(null),
             [a, r] = (0, n.useState)(null);
@@ -1144,11 +1144,11 @@
               ),
           );
         };
-      var H = a(55395),
+      var H = a(59797),
         z = a(11301),
-        F = a(50355),
+        F = a(68943),
         X = a(24448),
-        W = a(84436);
+        W = a(99230);
       function Z(e) {
         const t = X.y$.GetProfileByAccountID(e.GetAccountID());
         if (t) {
@@ -1217,7 +1217,7 @@
         $ = a(701),
         Q = a(75962),
         J = a(207),
-        ee = a(41917);
+        ee = a(97477);
       function te(e) {
         const { broadcasterSteamID: t } = e,
           a = t.ConvertTo64BitString(),
@@ -1369,8 +1369,8 @@
             }),
           );
         };
-      var oe = a(70651),
-        le = a(69338);
+      var oe = a(37231),
+        le = a(3301);
       const se = (e) => {
           if (!_.L7.is_support) return null;
           const t = (t, a) => {

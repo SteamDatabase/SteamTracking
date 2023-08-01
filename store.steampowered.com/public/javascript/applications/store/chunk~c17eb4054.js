@@ -3,7 +3,7 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [72],
   {
-    57800: (e) => {
+    26564: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         Picker: "addonpicker_Picker_3acyH",
@@ -22,7 +22,7 @@
         AddonPickerMessage: "addonpicker_AddonPickerMessage_LGYf8",
       };
     },
-    62404: (e) => {
+    68436: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         chatEntryControls: "chatentry_chatEntryControls_2gP0D",
@@ -39,7 +39,7 @@
         Active: "chatentry_Active_2gzj2",
       };
     },
-    28744: (e) => {
+    26679: (e) => {
       e.exports = {
         NewEmoticonIndicator: "emoticon_NewEmoticonIndicator_3B1SU",
         NewEmoticonCircle: "emoticon_NewEmoticonCircle_2ZOlu",
@@ -71,7 +71,7 @@
         EmoticonItem: "emoticon_EmoticonItem_OfLMJ",
       };
     },
-    25899: (e) => {
+    30204: (e) => {
       e.exports = {
         SpeakerOuter: "presenterpopup_SpeakerOuter_3KAg2",
         Speaker: "presenterpopup_Speaker_2B3rV",
@@ -83,7 +83,7 @@
         SpeakerHover: "presenterpopup_SpeakerHover_1ctFc",
       };
     },
-    44262: (e) => {
+    25640: (e) => {
       e.exports = {
         LinkRegionDragBox: "linkregionbox_LinkRegionDragBox_3riG1",
         EdgeDown: "linkregionbox_EdgeDown_x0k8J",
@@ -423,7 +423,7 @@
         k = n(57605),
         f = n(51438),
         v = n(8179),
-        S = n(57800);
+        S = n(26564);
       class C extends s.Component {
         constructor(e) {
           super(e), (this.state = { activeIndex: e.initialActiveIndex || 0 });
@@ -597,7 +597,7 @@
           Object.assign({ className: (0, p.Z)(t, S.AddonPickerMessage) }, n),
         );
       }
-      var y = n(28744),
+      var y = n(26679),
         N = n.n(y),
         D = n(75962);
       class O extends s.PureComponent {
@@ -1646,7 +1646,7 @@
         m = n(50304),
         h = n(14826),
         d = n(19304),
-        p = n(62404),
+        p = n(68436),
         u = n.n(p),
         g = n(93908);
       const E = 1576780700;
@@ -1783,7 +1783,7 @@
         m = (n(84343), n(4306)),
         h = n(32765),
         d = n(74621),
-        p = n(25899),
+        p = n(30204),
         u = n.n(p);
       const g = (0, i.Pi)((e) => {
         const t = e.photo ? (0, s.vZ)(e.photo, (0, c.jM)(h.De.LANGUAGE)) : null,
@@ -2049,7 +2049,7 @@
         a = n(14826),
         m = n(57605),
         h = n(701),
-        d = n(44262),
+        d = n(25640),
         p = n.n(d),
         u = n(36041);
       !(function (e) {
@@ -2628,20 +2628,20 @@
       }
       (0, o.gn)([s.ak], c.prototype, "OnIntersection", null);
     },
-    82248: (e, t, n) => {
+    6726: (e, t, n) => {
       "use strict";
       n.d(t, { Z: () => o });
       const o =
         "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAc9JREFUeNrsmz1Lw1AUhnP8qB+Qkk0pItbVxcX/IM6Cky7iFH+Jk79BwclBB3+AszgUwdVNBxFaCw1E7fW9cAep5pa0NiT3vgdeLjRJm/Ocm/NRiCilAp9tKvDcCIAACIAAsiyEzqAepCqqnvEhzHJSLGVQX7jvSKDPoYO8ADS9BUcAJNBiXgCudUjCJEgABPDLZip2v12obwIXur4DdBK+MeVrHaqJSB2KzKqT2izUgLZd2wH30CF8bFnTusgnlhdUsjmXAFxBe3Au9TEJ3hXpfNkA9M22T4v80TIBuIbzDz73ARe+9wG31pqo1DSWGNqBlgcO16oO4A3b/3XIOafQ8b9PSCWZBh8BYMMSfd3wvEPzrk6DH0OON8Z0vvLDkHAaJAACIICJJJeCy+Aa1Pnj8y+Uwa6lDOpA1S3fewSdjJJIi26EOnC0nTtKInpQalsALfn+CDQJgAA8BYDnP8IS+bwDmuNcXHQVWDURG7QUmf7ZEmV9nysZh7dcGIdbALBpAaD7h6dJDFRshQmAAAiAAAiAAAiAAAiAAAiAAAiAAAjgpyUO+ZmMAuDSIQCZvtj+E4zNuhtU98WJxDgfZ50gfHOUSZAACIAAPLZvAQYAZ32YkpymkAcAAAAASUVORK5CYII=";
     },
-    15164: (e, t, n) => {
+    7787: (e, t, n) => {
       "use strict";
       n.d(t, { Z: () => o });
       const o =
         n.p +
         "images/applications/store/reddit_large.png?v=valveisgoodatcaching";
     },
-    75313: (e, t, n) => {
+    16947: (e, t, n) => {
       "use strict";
       n.d(t, { Z: () => o });
       const o =

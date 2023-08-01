@@ -3,7 +3,7 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [2832],
   {
-    27618: (e) => {
+    72051: (e) => {
       e.exports = {
         StoreSaleWidgetContainer_mini:
           "broadcastwidgets_StoreSaleWidgetContainer_mini_1Vz-y",
@@ -33,14 +33,14 @@
         d = a(28388),
         m = a(98009),
         p = a(25871),
-        _ = a(23715),
+        _ = a(1631),
         u = a(44865),
         h = a(98389),
         b = a(71161),
-        E = a(69338),
+        E = a(3301),
         g = a(19304),
         S = a(32765),
-        v = a(27618),
+        v = a(72051),
         f = a.n(v);
       const C = (0, o.Pi)((e) => {
         const { appid: t } = e,
@@ -136,7 +136,7 @@
         D = a(45475),
         I = a(98889),
         P = a(43707),
-        G = a(27704),
+        G = a(20144),
         w = a(54297),
         x = a(46294),
         A = a(701),
@@ -147,7 +147,7 @@
         R = a(4306),
         V = a(47165),
         W = a(74831),
-        H = a(43628),
+        H = a(29291),
         M = a.n(H);
       const U = (0, o.Pi)((e) => {
         const { event: t } = e,
@@ -211,16 +211,16 @@
           ),
         );
       });
-      var Z = a(17318),
+      var Z = a(52629),
         j = a.n(Z),
-        F = a(37865),
-        X = a(82248),
-        Y = a(15164),
-        q = a(75313),
+        F = a(76672),
+        X = a(6726),
+        Y = a(7787),
+        q = a(16947),
         z = a(99307),
         $ = a(75962),
         J = a(20790),
-        K = a(43997),
+        K = a(38695),
         Q = a.n(K);
       function ee(e) {
         const { steamid: t, closeModal: a } = e;

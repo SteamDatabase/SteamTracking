@@ -3,7 +3,7 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [938],
   {
-    35350: (e) => {
+    61818: (e) => {
       e.exports = {
         Frame: "replay2022_Frame_1C1Yh",
         SteamLogo: "replay2022_SteamLogo_1pv40",
@@ -372,7 +372,7 @@
       "use strict";
       r.r(t), r.d(t, { default: () => h });
       var n = r(89526),
-        a = r(35350),
+        a = r(61818),
         c = r(20285),
         o = r(32765),
         i = r(14826),

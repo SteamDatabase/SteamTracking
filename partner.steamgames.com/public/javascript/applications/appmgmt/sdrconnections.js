@@ -4,7 +4,7 @@
   self.webpackChunkappmgmt_storeadmin || []).push([
   [4935],
   {
-    45194: (e) => {
+    14986: (e) => {
       e.exports = {
         SDRConnectionsAppCtn: "connections_SDRConnectionsAppCtn_3Vqm_",
         SDRConnectionsAppTitle: "connections_SDRConnectionsAppTitle_1VJcG",
@@ -133,8 +133,8 @@
         m = n(17547),
         d = n(23217),
         u = n(32765),
-        p = n(45194),
-        _ = n(69338),
+        p = n(14986),
+        _ = n(3301),
         E = n(72120);
       function f(e) {
         return l.createElement(

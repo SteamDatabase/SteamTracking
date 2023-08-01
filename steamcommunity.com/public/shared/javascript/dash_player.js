@@ -7593,6 +7593,10 @@ CVTTCaptionLoader.LanguageCountryCodes = {
 		"displayName":"Traditional Chinese",
 		"steamLanguage":"tchinese"
 	},
+	"id-ID":{
+		"displayName":"Indonesian",
+		"steamLanguage":"indonesian"
+	},
 }
 
 //////////////////////////////////////////////////

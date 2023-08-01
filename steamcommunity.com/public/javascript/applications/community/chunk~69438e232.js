@@ -3,7 +3,7 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [9348],
   {
-    38737: (e) => {
+    66818: (e) => {
       e.exports = {
         DragTarget: "bbcodeeditor_DragTarget_2Mg-b",
         DragOnTopOfMe: "bbcodeeditor_DragOnTopOfMe_3-WTT",
@@ -31,24 +31,24 @@
         BBCodeEditorInputStyles: "bbcodeeditor_BBCodeEditorInputStyles_1Fpu1",
       };
     },
-    18071: (e) => {
+    58998: (e) => {
       e.exports = {
         BBCode_Toggle: "bbcodesuggestions_BBCode_Toggle_1MrSR",
         Active: "bbcodesuggestions_Active_3tFqQ",
         BBCode: "bbcodesuggestions_BBCode_2DSQu",
       };
     },
-    79472: (e) => {
+    88367: (e) => {
       e.exports = { Image: "clanimagepickandresize_Image_2W_Gz" };
     },
-    23265: (e) => {
+    86321: (e) => {
       e.exports = {
         Emoticon_Toggle: "emoticonsuggestion_Emoticon_Toggle_3XueY",
         Active: "emoticonsuggestion_Active_2JoNK",
         Emoticon: "emoticonsuggestion_Emoticon_3dAJw",
       };
     },
-    57489: (e) => {
+    37866: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         AppPartnerEventsPage: "apppartnereventspage_AppPartnerEventsPage_1m-hJ",
@@ -99,7 +99,7 @@
         ReadMoreCnt: "apppartnereventspage_ReadMoreCnt_3OLsV",
       };
     },
-    36320: (e) => {
+    12956: (e) => {
       e.exports = {
         ImagesOuterContainer: "clanimagechooser_ImagesOuterContainer_seVYs",
         Hilight: "clanimagechooser_Hilight_1bs5j",
@@ -108,7 +108,7 @@
         ImageFilename: "clanimagechooser_ImageFilename_EazUb",
       };
     },
-    6864: (e) => {
+    82204: (e) => {
       e.exports = {
         SteamAwardContainer: "nominationandvote_SteamAwardContainer_jBtX5",
         InLibraryView: "nominationandvote_InLibraryView_1G81P",
@@ -148,7 +148,7 @@
         AwardCategoriesCtn: "nominationandvote_AwardCategoriesCtn_GCwk0",
       };
     },
-    83809: (e) => {
+    99119: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         EventDetailsPageContainer:
@@ -270,12 +270,12 @@
           "partnereventdisplay_VerticalLocalDateAndTime_1QFMN",
       };
     },
-    38279: (e) => {
+    19983: (e) => {
       e.exports = {
         ReferencedApps: "partnereventreferencedapps_ReferencedApps_2xZM7",
       };
     },
-    31038: (e) => {
+    99066: (e) => {
       e.exports = {
         Container: "sharewithfriends_Container_8f6EQ",
         SmallAvatar: "sharewithfriends_SmallAvatar_kzjfl",
@@ -283,7 +283,7 @@
         ShareLink: "sharewithfriends_ShareLink_2DzSq",
       };
     },
-    45123: (e) => {
+    14730: (e) => {
       e.exports = {
         WhitelistNumber: "reorderablelist_WhitelistNumber_1ZU2Q",
         WhitelistCtn: "reorderablelist_WhitelistCtn_7i0GR",
@@ -295,7 +295,7 @@
         ButtonCtn: "reorderablelist_ButtonCtn_27xG1",
       };
     },
-    1069: (e) => {
+    23557: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         mentionDialogPosition: "suggestdialog_mentionDialogPosition_1bkUR",
@@ -309,7 +309,7 @@
         mentionSearchMatch: "suggestdialog_mentionSearchMatch_mBrO4",
       };
     },
-    82487: (e) => {
+    24331: (e) => {
       e.exports = {
         CropImage: "cropmodal_CropImage_3Mto6",
         CropPreviewGroup: "cropmodal_CropPreviewGroup_1d4RW",
@@ -359,7 +359,7 @@
         }
         constructor() {
           (this.m_eCurLang = (0, s.jM)(c.De.LANGUAGE)),
-            (this.m_rgHasData = (0, o.LG)([], 30, !1)),
+            (this.m_rgHasData = (0, o.LG)([], 31, !1)),
             (this.m_bHasLocalizationContext = !1);
         }
       }
@@ -568,7 +568,7 @@
       }
       window.g_ProfileStore = h;
     },
-    12763: (e, t, n) => {
+    78156: (e, t, n) => {
       "use strict";
       n.d(t, { R: () => de });
       var r = n(33940),
@@ -588,7 +588,7 @@
         v = n(50304),
         E = n(73961),
         S = n(50265),
-        y = n(1069),
+        y = n(23557),
         B = n.n(y),
         C = n(19304);
       class f extends l.Component {
@@ -819,7 +819,7 @@
       (0, r.gn)([_.ak], b.prototype, "OnMouseOver", null),
         (0, r.gn)([_.ak], b.prototype, "OnClick", null);
       const T = f;
-      var D = n(23265),
+      var D = n(86321),
         I = n.n(D);
       const M = class extends T {
         performSearch(e) {
@@ -867,7 +867,7 @@
           return Number.MAX_VALUE;
         }
       };
-      var w = n(18071),
+      var w = n(58998),
         A = n.n(w),
         L = n(14826);
       class x extends T {
@@ -1095,25 +1095,25 @@
         (0, r.gn)([_.ak], N.prototype, "GetTextAreaCurrent", null);
       var k = n(57605),
         R = n(60866),
-        O = n(17318),
+        O = n(52629),
         F = n.n(O),
         G = n(99307),
         z = n(57742),
-        U = n(45123),
+        U = n(14730),
         P = n.n(U),
         j = n(60161),
         W = n(32765);
       var X = n(69159),
         H = n(24591),
-        V = n(69338),
+        V = n(3301),
         Y = n(84343),
-        Z = n(38737),
+        Z = n(66818),
         K = n.n(Z),
         Q = n(25125),
         J = n(23801),
         q = n(89220),
         $ = n(47900),
-        ee = n(79472),
+        ee = n(88367),
         te = n(93414),
         ne = n(7948),
         re = n(78423),
@@ -2759,7 +2759,7 @@
         C = n(14826),
         f = n(207),
         b = n(32765),
-        T = n(57489),
+        T = n(37866),
         D = n.n(T),
         I = n(20790),
         M = n(79586),
@@ -2978,13 +2978,13 @@
       var x = n(85521),
         N = n(92307),
         k = n(4795),
-        R = n(83809),
+        R = n(99119),
         O = n.n(R),
         F = n(65352),
-        G = n(17318),
+        G = n(52629),
         z = n.n(G),
         U = n(87178),
-        P = n(69338),
+        P = n(3301),
         j = n(75962),
         W = n(60729),
         X = n(23801),
@@ -3793,8 +3793,8 @@
         c = n(17547),
         d = n(99307),
         m = n(14826),
-        p = n(69338),
-        u = n(36320);
+        p = n(3301),
+        u = n(12956);
       const h = (e) => {
           const { clanSteamID: t, fnImageSelectCallBack: n } = e,
             a = (0, s.useRef)(null),
@@ -3955,12 +3955,12 @@
         s = n(32765),
         o = n(14826),
         l = n(4306),
-        c = n(17318),
+        c = n(52629),
         d = n.n(c),
         m = n(57742),
         p = n(60161),
         u = n(19304),
-        h = n(43997),
+        h = n(38695),
         g = n.n(h),
         _ = n(99307),
         v = n(36041),
@@ -4125,7 +4125,7 @@
       var w = n(47165),
         A = n(57605),
         L = n(17547),
-        x = n(69338);
+        x = n(3301);
       const N = (0, i.Pi)((e) => {
         const { eventModel: t } = e,
           [n, i] = (0, a.useState)(!0),
@@ -4307,7 +4307,7 @@
       var k = n(51438),
         R = n(44026),
         O = n(88443),
-        F = n(51326),
+        F = n(91711),
         G = n(20790);
       function z(e, t) {
         if (!t.BIsUserLoggedIn())
@@ -4635,10 +4635,10 @@
         c = n(52316),
         d = n(43690),
         m = n(99307),
-        p = n(67122),
-        u = n(1721),
+        p = n(78180),
+        u = n(35266),
         h = n.n(u),
-        g = n(69338),
+        g = n(3301),
         _ = n(23217),
         v = n(32765);
       const E = (e) => {
@@ -4849,7 +4849,7 @@
         i = n(89526),
         s = n(46132),
         o = n(78423),
-        l = (n(7948), n(17318)),
+        l = (n(7948), n(52629)),
         c = n.n(l),
         d = n(19304),
         m = n(14826),
@@ -4970,7 +4970,7 @@
         l = n(89526),
         c = n(43707),
         d = n(57605),
-        m = n(17318),
+        m = n(52629),
         p = n.n(m),
         u = n(23217),
         h = n(19304),
@@ -4979,11 +4979,11 @@
         v = n(32765),
         E = n(99307),
         S = n(57742),
-        y = n(69338),
+        y = n(3301),
         B = n(5557),
-        C = n(6864),
+        C = n(82204),
         f = n.n(C),
-        b = n(83809),
+        b = n(99119),
         T = n.n(b),
         D = n(32905);
       function I(e) {
@@ -7550,12 +7550,12 @@
         })(U || (U = {}));
       var P = n(32765),
         j = n(19094);
-      var W = n(17318),
+      var W = n(52629),
         X = n.n(W),
         H = n(21904),
         V = n(14826),
         Y = n(73406),
-        Z = n(83809),
+        Z = n(99119),
         K = n.n(Z);
       function Q(e) {
         const { appid: t } = e,
@@ -7694,7 +7694,7 @@
         i = n(89526),
         s = n(92307),
         o = n(14826),
-        l = n(38279),
+        l = n(19983),
         c = n.n(l);
       function d(e) {
         const { event: t } = e,
@@ -7742,7 +7742,7 @@
         d = n(14826),
         m = n(207),
         p = n(32765),
-        u = n(17318);
+        u = n(52629);
       function h(e) {
         const { bOn: t } = e;
         return r.createElement(
@@ -7830,28 +7830,28 @@
           : r.createElement(r.Fragment, null, t);
       }
     },
-    51326: (e, t, n) => {
+    91711: (e, t, n) => {
       "use strict";
       n.d(t, { AH: () => W, t6: () => P });
       var r = n(33940),
         a = n(89526),
         i = n(78423),
         s = n(20790),
-        o = n(17318),
+        o = n(52629),
         l = n.n(o),
         c = n(32905),
         d = n(19304),
         m = n(14826),
         p = n(4306),
         u = n(32765),
-        h = n(37865);
-      var g = n(82248),
-        _ = n(15164),
-        v = n(75313),
+        h = n(76672);
+      var g = n(6726),
+        _ = n(7787),
+        v = n(16947),
         E = n(99307),
         S = n(84343),
         y = n(75962),
-        B = n(43997),
+        B = n(38695),
         C = n.n(B),
         f = n(5386),
         b = n(52868),
@@ -7863,11 +7863,11 @@
         A = n(47165),
         L = n(20830),
         x = n(24448),
-        N = n(12763),
+        N = n(78156),
         k = n(23217),
-        R = n(69338),
+        R = n(3301),
         O = n(92307),
-        F = n(31038),
+        F = n(99066),
         G = n.n(F);
       const z = (0, D.Pi)((e) => {
         const { appid: t, eventLink: n } = e,
@@ -8322,7 +8322,7 @@
         c = n(19304),
         d = n(14826),
         m = n(4306),
-        p = n(82487);
+        p = n(24331);
       class u extends a.Component {
         constructor() {
           super(...arguments),

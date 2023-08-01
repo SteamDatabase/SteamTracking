@@ -3,7 +3,7 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [2329],
   {
-    22666: (e) => {
+    23462: (e) => {
       e.exports = {
         AvatarCrop: "avatarcrop_AvatarCrop_UVQKc",
         AvatarCropBound: "avatarcrop_AvatarCropBound_t4p1E",
@@ -20,8 +20,8 @@
         i = a.n(o),
         c = a(60161),
         s = a(14826),
-        l = a(10476),
-        d = a(22666);
+        l = a(1099),
+        d = a(23462);
       const u = 184,
         m = 5,
         g = 1048576,

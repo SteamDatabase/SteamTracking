@@ -4,10 +4,10 @@
   self.webpackChunkappmgmt_storeadmin || []).push([
   [2522],
   {
-    64738: (e) => {
+    63698: (e) => {
       e.exports = { "duration-app-launch": "800ms" };
     },
-    38735: (e) => {
+    9584: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         TopCapsule: "sharedappdetailsheader_TopCapsule_2meE3",
@@ -68,7 +68,7 @@
         TopGradient: "sharedappdetailsheader_TopGradient_2qcOu",
       };
     },
-    53738: (e) => {
+    7134: (e) => {
       e.exports = {
         Container: "fakeappdetailsrow_Container_ImYU5",
         StickyHeader: "fakeappdetailsrow_StickyHeader_2C2bs",
@@ -122,7 +122,7 @@
         ButtonText: "fakeappdetailsrow_ButtonText_3PV-5",
       };
     },
-    64122: (e) => {
+    94565: (e) => {
       e.exports = {
         GameList: "fakegamelist_GameList_2Ke99",
         GameListEntry: "fakegamelist_GameListEntry_14lr0",
@@ -133,7 +133,7 @@
         GameIconPlaceholder: "fakegamelist_GameIconPlaceholder_2AyMQ",
       };
     },
-    72201: (e) => {
+    82306: (e) => {
       e.exports = {
         LogoEditorContainer: "logoeditor_LogoEditorContainer_3G8aW",
         LogoEditorHeaderContainer: "logoeditor_LogoEditorHeaderContainer_31GWs",
@@ -315,9 +315,9 @@
         g = o(19304),
         m = o(95872),
         u = o(85246),
-        _ = o(38735),
+        _ = o(9584),
         P = o.n(_),
-        f = o(64738),
+        f = o(63698),
         L = o.n(f),
         E = o(75962);
       const C = {
@@ -1342,9 +1342,9 @@
         }
       }
       (0, s.gn)([N.LO], A.prototype, "m_logoPosition", void 0);
-      var D = o(72201),
+      var D = o(82306),
         M = o.n(D),
-        H = o(53738),
+        H = o(7134),
         U = o.n(H),
         G = o(701);
       function F() {
@@ -1488,7 +1488,7 @@
           ),
         );
       }
-      var X = o(64122),
+      var X = o(94565),
         $ = o.n(X);
       class V extends a.Component {
         OnHighlightRef(e) {
@@ -1523,7 +1523,7 @@
       }
       var J = o(14826),
         j = o(32765),
-        K = o(69338),
+        K = o(3301),
         Q = o(22444);
       function q(e, t) {
         const o = (0, j.kQ)("editorconfig", t);

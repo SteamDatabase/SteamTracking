@@ -3,7 +3,7 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [4134],
   {
-    22434: (e) => {
+    24803: (e) => {
       e.exports = {
         Login: "newlogindialog_Login_ZOBYq",
         SideBySide: "newlogindialog_SideBySide_1Wl13",
@@ -107,7 +107,7 @@
         Client: "newlogindialog_Client_1ZDxg",
       };
     },
-    60371: (e) => {
+    30984: (e) => {
       e.exports = {
         LoginQR: "qrlogin_LoginQR_1wtS3",
         QRLoginDeck: "qrlogin_QRLoginDeck_3pzmh",
@@ -122,14 +122,14 @@
         Large: "qrlogin_Large_elAzl",
       };
     },
-    78424: (e) => {
+    68404: (e) => {
       e.exports = {
         QRBits: "qrcode_QRBits_3FhhK",
         Bit: "qrcode_Bit_2Yuvr",
         Active: "qrcode_Active_274P1",
       };
     },
-    60143: (e) => {
+    48648: (e) => {
       e.exports = {
         SegmentedCharacterInput:
           "segmentedinputs_SegmentedCharacterInput_3PDBF",
@@ -145,9 +145,9 @@
       r.d(t, {
         NZ: () => i,
         TG: () => n,
-        io: () => B,
-        qO: () => b,
-        tY: () => _,
+        io: () => b,
+        qO: () => h,
+        tY: () => B,
       });
       var i,
         n,
@@ -159,8 +159,9 @@
         u = r(26464),
         m = r(32765),
         d = r(62055),
-        g = r(5155);
-      function _(e) {
+        g = r(5155),
+        _ = r(97277);
+      function B(e) {
         const {
             shared_secret: t,
             identity_secret: r,
@@ -200,7 +201,7 @@
             (e[(e.k_PrimaryDomainFail = 1)] = "k_PrimaryDomainFail"),
             (e[(e.k_SecondaryDomainFail = 2)] = "k_SecondaryDomainFail");
         })(n || (n = {}));
-      class B {
+      class b {
         constructor(e, t, r, n) {
           (this.m_bRemoteInteraction = !1),
             (this.m_eFailureState = i.None),
@@ -238,7 +239,7 @@
                 if (2 === r) {
                   const e = t.Hdr().transport_error();
                   if (
-                    (console.error(
+                    ((0, _.F0)(
                       `Failed to poll auth session. Result ${r}. Transport Error: ${e}`,
                     ),
                     2 === e || 3 === e)
@@ -267,7 +268,7 @@
                     }
                     return this.m_onCompleteCallback({ bSuccess: !1 }), r;
                   }
-                  console.error(`Failed to poll auth session. Result: ${r}`),
+                  (0, _.F0)(`Failed to poll auth session. Result: ${r}`),
                     (this.m_eFailureState = i.Generic);
                 }
                 return this.m_onCompleteCallback({ bSuccess: !1 }), r;
@@ -302,7 +303,7 @@
               );
             } catch (e) {
               return (
-                console.error(`Failed to poll auth session. ${e}`),
+                (0, _.F0)(`Failed to poll auth session. ${e}`),
                 (this.m_eFailureState = i.Generic),
                 this.m_onCompleteCallback({ bSuccess: !1 }),
                 2
@@ -329,7 +330,7 @@
           });
         }
       }
-      function b(e) {
+      function h(e) {
         const t = new FormData();
         t.append("nonce", e), t.append("sessionid", m.De.SESSIONID);
         let r = new URL(document.location.href);
@@ -352,7 +353,7 @@
                 )
               )
                 return (
-                  console.error(
+                  (0, _.F0)(
                     "Result of finalizelogin does not match expectations!",
                   ),
                   n.k_PrimaryDomainFail
@@ -372,19 +373,17 @@
                           timeout: 1e4,
                         });
                         200 !== a.status
-                          ? (console.error(
+                          ? ((0, _.F0)(
                               `Transfer login to ${r.host} failed with status code: ${a.status}`,
                             ),
                             (i = !1))
                           : 1 !== a.data.result &&
-                            (console.error(
+                            ((0, _.F0)(
                               `Transfer login to ${r.host} failed with result: ${a.data.result}`,
                             ),
                             (i = !1));
                       } catch (e) {
-                        console.error(
-                          `Transfer login to ${r.host} failed: "${e}"`,
-                        ),
+                        (0, _.F0)(`Transfer login to ${r.host} failed: "${e}"`),
                           (i = !1);
                       }
                       return { bSuccess: i, domain: r.host };
@@ -410,19 +409,19 @@
               );
             },
             () => (
-              console.error("Failed to finalize login. Initial call failed."),
+              (0, _.F0)("Failed to finalize login. Initial call failed."),
               n.k_PrimaryDomainFail
             ),
           );
       }
-      (0, a.gn)([s.LO], B.prototype, "m_strChallengeURL", void 0),
-        (0, a.gn)([s.LO], B.prototype, "m_bRemoteInteraction", void 0),
-        (0, a.gn)([s.LO], B.prototype, "m_eFailureState", void 0),
-        (0, a.gn)([s.LO], B.prototype, "m_strExtendedErrorMessage", void 0),
-        (0, a.gn)([u.a], B.prototype, "PollForUpdate", null),
-        (0, a.gn)([u.a], B.prototype, "SetTokenToRevoke", null);
+      (0, a.gn)([s.LO], b.prototype, "m_strChallengeURL", void 0),
+        (0, a.gn)([s.LO], b.prototype, "m_bRemoteInteraction", void 0),
+        (0, a.gn)([s.LO], b.prototype, "m_eFailureState", void 0),
+        (0, a.gn)([s.LO], b.prototype, "m_strExtendedErrorMessage", void 0),
+        (0, a.gn)([u.a], b.prototype, "PollForUpdate", null),
+        (0, a.gn)([u.a], b.prototype, "SetTokenToRevoke", null);
     },
-    44839: (e, t, r) => {
+    59100: (e, t, r) => {
       "use strict";
       r.d(t, {
         uU: () => je,
@@ -603,17 +602,17 @@
           return "CTwoFactor_Time_Response";
         }
       }
-      class R extends f {
+      class F extends f {
         constructor(e = null) {
           super(),
-            R.prototype.steamid || w.aR(R.M()),
+            F.prototype.steamid || w.aR(F.M()),
             f.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            R.sm_m ||
-              (R.sm_m = {
-                proto: R,
+            F.sm_m ||
+              (F.sm_m = {
+                proto: F,
                 fields: {
                   steamid: {
                     n: 1,
@@ -622,55 +621,55 @@
                   },
                 },
               }),
-            R.sm_m
+            F.sm_m
           );
         }
         static MBF() {
-          return R.sm_mbf || (R.sm_mbf = w.Bh(R.M())), R.sm_mbf;
+          return F.sm_mbf || (F.sm_mbf = w.Bh(F.M())), F.sm_mbf;
         }
         toObject(e = !1) {
-          return R.toObject(e, this);
+          return F.toObject(e, this);
         }
         static toObject(e, t) {
-          return w.TA(R.M(), e, t);
+          return w.TA(F.M(), e, t);
         }
         static fromObject(e) {
-          return w.aD(R.M(), e);
+          return w.aD(F.M(), e);
         }
         static deserializeBinary(e) {
           let t = new y.BinaryReader(e),
-            r = new R();
-          return R.deserializeBinaryFromReader(r, t);
+            r = new F();
+          return F.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return w.F(R.MBF(), e, t);
+          return w.F(F.MBF(), e, t);
         }
         serializeBinary() {
           var e = new y.BinaryWriter();
-          return R.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return F.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          w.l2(R.M(), e, t);
+          w.l2(F.M(), e, t);
         }
         serializeBase64String() {
           var e = new y.BinaryWriter();
-          return R.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return F.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CTwoFactor_Status_Request";
         }
       }
-      class F extends f {
+      class R extends f {
         constructor(e = null) {
           super(),
-            F.prototype.state || w.aR(F.M()),
+            R.prototype.state || w.aR(R.M()),
             f.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            F.sm_m ||
-              (F.sm_m = {
-                proto: F,
+            R.sm_m ||
+              (R.sm_m = {
+                proto: R,
                 fields: {
                   state: { n: 1, br: w.FE.readUint32, bw: w.Xc.writeUint32 },
                   inactivation_reason: {
@@ -736,39 +735,39 @@
                   version: { n: 14, br: w.FE.readUint32, bw: w.Xc.writeUint32 },
                 },
               }),
-            F.sm_m
+            R.sm_m
           );
         }
         static MBF() {
-          return F.sm_mbf || (F.sm_mbf = w.Bh(F.M())), F.sm_mbf;
+          return R.sm_mbf || (R.sm_mbf = w.Bh(R.M())), R.sm_mbf;
         }
         toObject(e = !1) {
-          return F.toObject(e, this);
+          return R.toObject(e, this);
         }
         static toObject(e, t) {
-          return w.TA(F.M(), e, t);
+          return w.TA(R.M(), e, t);
         }
         static fromObject(e) {
-          return w.aD(F.M(), e);
+          return w.aD(R.M(), e);
         }
         static deserializeBinary(e) {
           let t = new y.BinaryReader(e),
-            r = new F();
-          return F.deserializeBinaryFromReader(r, t);
+            r = new R();
+          return R.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return w.F(F.MBF(), e, t);
+          return w.F(R.MBF(), e, t);
         }
         serializeBinary() {
           var e = new y.BinaryWriter();
-          return F.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return R.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          w.l2(F.M(), e, t);
+          w.l2(R.M(), e, t);
         }
         serializeBase64String() {
           var e = new y.BinaryWriter();
-          return F.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return R.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CTwoFactor_Status_Response";
@@ -1751,7 +1750,7 @@
           });
         }),
           (e.QueryStatus = function (e, t) {
-            return e.SendMsg("TwoFactor.QueryStatus#1", (0, u.MD)(R, t), F, {
+            return e.SendMsg("TwoFactor.QueryStatus#1", (0, u.MD)(F, t), R, {
               ePrivilege: 1,
             });
           }),
@@ -1837,7 +1836,7 @@
           return (0, i.mG)(this, void 0, void 0, function* () {
             if (0 !== this.m_eStatus && 2 !== this.m_eStatus)
               return (
-                console.error(
+                (0, B.F0)(
                   "Cannot start an already started auth session. Create a new session instance.",
                 ),
                 29
@@ -1851,7 +1850,7 @@
               "anonymous" == e)
             )
               return (
-                this.SetFailureState(m.NZ.AnonymousLogin, q.EResult(12)), 12
+                this.SetFailureState(m.NZ.AnonymousLogin, Z.EResult(12)), 12
               );
             try {
               const t = yield (function (e, t) {
@@ -1863,7 +1862,7 @@
                     const t = yield b.$h.GetPasswordRSAPublicKey(e, r);
                     if ((t.DEBUG_LogToConsole(), 1 !== t.GetEResult()))
                       return (
-                        console.error(
+                        (0, B.F0)(
                           `Failed to get RSA key with EResult: ${t.GetEResult()}`,
                         ),
                         null
@@ -1875,7 +1874,7 @@
                     } = t.Body().toObject();
                     return i && n && a
                       ? { publickey_exp: i, publickey_mod: n, timestamp: a }
-                      : (console.error(
+                      : ((0, B.F0)(
                           `Missing expected field in RSA Key: ${JSON.stringify({
                             publickey_exp: i,
                             publickey_mod: n,
@@ -1885,9 +1884,7 @@
                         null);
                   } catch (e) {
                     return (
-                      console.error(
-                        `Failed to get RSA key: ${JSON.stringify(e)}`,
-                      ),
+                      (0, B.F0)(`Failed to get RSA key: ${JSON.stringify(e)}`),
                       null
                     );
                   }
@@ -1895,10 +1892,10 @@
               })(this.m_transport, n);
               if (!t)
                 return (
-                  console.error(
+                  (0, B.F0)(
                     "Cannot start auth session without a valid RSA key",
                   ),
-                  this.SetFailureState(m.NZ.Network, q.EResult(20)),
+                  this.SetFailureState(m.NZ.Network, Z.EResult(20)),
                   20
                 );
               const g = (0, B.IC)(a, t),
@@ -1913,7 +1910,7 @@
               try {
                 _.Body().set_device_details(yield this.GetDeviceDetails());
               } catch (e) {
-                console.error("Failed to GetDeviceDetails"), console.log(e);
+                (0, B.F0)("Failed to GetDeviceDetails"), (0, B.F0)(e);
               }
               if (
                 (_.Body().set_language((0, d.jM)(c.De.LANGUAGE)),
@@ -1940,13 +1937,13 @@
                         case 20:
                         case 3:
                           return (
-                            this.SetFailureState(m.NZ.Network, q.EResult(20)), t
+                            this.SetFailureState(m.NZ.Network, Z.EResult(20)), t
                           );
                         case 84:
                           return (
                             this.SetFailureState(
                               m.NZ.RateLimitExceeded,
-                              q.EResult(t),
+                              Z.EResult(t),
                             ),
                             t
                           );
@@ -1965,12 +1962,12 @@
                           return this.m_onCompleteCallback({ bSuccess: !1 }), t;
                         default:
                           return (
-                            console.error(
+                            (0, B.F0)(
                               `Failed to start auth session. Result: ${t} Transport: ${r}`,
                             ),
                             this.SetFailureState(
                               m.NZ.Generic,
-                              q.EResult(t),
+                              Z.EResult(t),
                               h.Body().extended_error_message(),
                             ),
                             this.m_onCompleteCallback({ bSuccess: !1 }),
@@ -2009,7 +2006,7 @@
                           return (this.m_eStatus = 4), this.StartPolling(!0), 1;
                       } catch (e) {
                         if (
-                          (console.log(
+                          ((0, B.Zb)(
                             `checkdevice ajax to ${t} failed: ${e.message}`,
                           ),
                           e instanceof o.AxiosError)
@@ -2018,17 +2015,17 @@
                           return t.response
                             ? (this.SetFailureState(
                                 m.NZ.Network,
-                                q.AjaxFailureWithCode(t.response.status),
+                                Z.AjaxFailureWithCode(t.response.status),
                               ),
                               20)
                             : (this.SetFailureState(
                                 m.NZ.Network,
-                                q.AjaxFailureNoCode(),
+                                Z.AjaxFailureNoCode(),
                               ),
                               20);
                         }
                         return (
-                          this.SetFailureState(m.NZ.Network, q.EResult(79)), 79
+                          this.SetFailureState(m.NZ.Network, Z.EResult(79)), 79
                         );
                       }
                     }
@@ -2065,13 +2062,13 @@
               );
             } catch (e) {
               return (
-                console.error(
+                (0, B.F0)(
                   `Failed to start auth session. Exception: ${JSON.stringify(
                     e,
                   )}`,
                 ),
-                console.log(e),
-                this.SetFailureState(m.NZ.Generic, q.FailedToStart()),
+                (0, B.Zb)(e),
+                this.SetFailureState(m.NZ.Generic, Z.FailedToStart()),
                 this.m_onCompleteCallback({ bSuccess: !1 }),
                 2
               );
@@ -2134,7 +2131,7 @@
               if (1 !== a) {
                 if (!t)
                   return (
-                    console.error(
+                    (0, B.F0)(
                       `Failed to automatically update session with local SG info. Result ${a}. Transport ${n
                         .Hdr()
                         .transport_error()}`,
@@ -2147,7 +2144,7 @@
                     return (this.m_eStatus = r ? 10 : 11), a;
                   case 27:
                     return (
-                      this.SetFailureState(m.NZ.Expired, q.EResult(a)),
+                      this.SetFailureState(m.NZ.Expired, Z.EResult(a)),
                       this.m_onCompleteCallback({ bSuccess: !1 }),
                       a
                     );
@@ -2155,7 +2152,7 @@
                     return (
                       this.SetFailureState(
                         m.NZ.RateLimitExceeded,
-                        q.EResult(a),
+                        Z.EResult(a),
                       ),
                       this.m_onCompleteCallback({ bSuccess: !1 }),
                       a
@@ -2173,10 +2170,10 @@
                     return this.m_onCompleteCallback({ bSuccess: !1 }), a;
                   default:
                     return (
-                      console.error(
+                      (0, B.F0)(
                         `Failed to update auth session with SG code. Result: ${a}`,
                       ),
-                      this.SetFailureState(m.NZ.Generic, q.EResult(a)),
+                      this.SetFailureState(m.NZ.Generic, Z.EResult(a)),
                       this.m_onCompleteCallback({ bSuccess: !1 }),
                       a
                     );
@@ -2185,10 +2182,8 @@
               return (this.m_eStatus = 13), this.StartPolling(), a;
             } catch (e) {
               return (
-                console.error(
-                  `Failed to update auth session with SG code. ${e}`,
-                ),
-                this.SetFailureState(m.NZ.Generic, q.FailedToAddCode()),
+                (0, B.F0)(`Failed to update auth session with SG code. ${e}`),
+                this.SetFailureState(m.NZ.Generic, Z.FailedToAddCode()),
                 this.m_onCompleteCallback({ bSuccess: !1 }),
                 2
               );
@@ -2206,7 +2201,7 @@
                 (this.m_bUsingCodeOverride = !0), void (this.m_eStatus = 3)
               );
             default:
-              return void console.error(
+              return void (0, B.F0)(
                 `Don't know how to UseCodeOverride from login session status ${this.m_eStatus}`,
               );
           }
@@ -2228,21 +2223,21 @@
                 );
               1 != t.GetEResult()
                 ? (t.DEBUG_LogToConsole(),
-                  console.error(
+                  (0, B.F0)(
                     "An unexpected error occured while adding an authenticator",
                     t.GetEResult(),
                   ),
                   this.SetFailureState(
                     m.NZ.MoveAuthenticator,
-                    q.EResult(t.GetEResult()),
+                    Z.EResult(t.GetEResult()),
                   ))
                 : (this.m_eStatus = 8);
             } catch (e) {
-              console.error(
+              (0, B.F0)(
                 "An unexpected error occured while moving an authenticator",
                 e,
               ),
-                this.SetFailureState(m.NZ.MoveAuthenticator, q.EResult(2));
+                this.SetFailureState(m.NZ.MoveAuthenticator, Z.EResult(2));
             }
           });
         }
@@ -2255,13 +2250,13 @@
               );
             1 != t.GetEResult()
               ? (t.DEBUG_LogToConsole(),
-                console.error(
+                (0, B.F0)(
                   "An unexpected error occured while adding an authenticator",
                   t.GetEResult(),
                 ),
                 this.SetFailureState(
                   m.NZ.MoveAuthenticator,
-                  q.EResult(t.GetEResult()),
+                  Z.EResult(t.GetEResult()),
                 ))
               : (this.m_eStatus = 8);
           });
@@ -2286,13 +2281,13 @@
                 (this.m_eStatus = 9),
                 (this.m_bUsingCodeOverride = !1))
               : (r.DEBUG_LogToConsole(),
-                console.error(
+                (0, B.F0)(
                   "Error when calling RemoveAuthenticatorViaChallengeContinue",
                   r.GetEResult(),
                 ),
                 this.SetFailureState(
                   m.NZ.MoveAuthenticator,
-                  q.EResult(r.GetEResult()),
+                  Z.EResult(r.GetEResult()),
                 ));
           });
         }
@@ -2335,7 +2330,7 @@
               this.m_eStatus = this.m_bUsingCodeOverride ? 4 : 0;
               break;
             default:
-              return void console.error(
+              return void (0, B.F0)(
                 `Don't know how to GoBack from login session status ${this.m_eStatus}`,
               );
           }
@@ -2369,23 +2364,23 @@
       function H(e, t) {
         return P(e, t) && e.length === G(t);
       }
-      const q = {
+      const Z = {
         EResult: (e) => `e${e}`,
         FailedToStart: () => "c-fts",
         FailedToAddCode: () => "c-ftac",
         AjaxFailureNoCode: () => "af",
         AjaxFailureWithCode: (e) => `af-${e}`,
       };
-      var Z,
-        Q = r(22434),
+      var q,
+        Q = r(24803),
         $ = r.n(Q),
         V = r(28545),
         K = r.n(V),
-        J = r(78424),
+        J = r(68404),
         Y = r.n(J);
       function ee(e) {
         let {
-          quality: t = Z.M,
+          quality: t = q.M,
           children: r,
           className: i,
           activeBitColor: s = null,
@@ -2439,7 +2434,7 @@
           (e[(e.M = 0)] = "M"),
           (e[(e.Q = 3)] = "Q"),
           (e[(e.H = 2)] = "H");
-      })(Z || (Z = {}));
+      })(q || (q = {}));
       class te extends m.io {
         constructor(e) {
           super(
@@ -2521,7 +2516,7 @@
         }
       }
       (0, i.gn)([s.LO], te.prototype, "m_eStatus", void 0);
-      var re = r(60371),
+      var re = r(30984),
         ie = r.n(re),
         ne = r(57605);
       function ae(e) {
@@ -2613,7 +2608,7 @@
         );
       }
       function se(e) {
-        return e.length <= 90 ? Z.Q : void 0;
+        return e.length <= 90 ? q.Q : void 0;
       }
       function oe(e) {
         const { size: t } = e;
@@ -2687,7 +2682,7 @@
         );
       }
       var me = r(14826),
-        de = r(69338),
+        de = r(3301),
         ge = r(78423),
         _e = r(701);
       const Be =
@@ -2699,9 +2694,9 @@
         we = r(84343),
         fe = r(44026),
         pe = r(51438),
-        Se = r(60143),
-        Re = r.n(Se);
-      function Fe(e) {
+        Se = r(48648),
+        Fe = r.n(Se);
+      function Re(e) {
         const {
           length: t,
           value: r,
@@ -2787,24 +2782,24 @@
               autoComplete: "none",
               autoFocus: 0 === e && l,
               disabled: c || u,
-              className: Re().Input,
+              className: Fe().Input,
             }),
           );
         return n.createElement(
           pe.s,
           {
             className: (0, a.Z)(
-              Re().SegmentedCharacterInput,
-              "danger" === o && Re().Danger,
-              c && Re().Disabled,
-              m && Re().BackupCode,
+              Fe().SegmentedCharacterInput,
+              "danger" === o && Fe().Danger,
+              c && Fe().Disabled,
+              m && Fe().BackupCode,
             ),
             onClick: h,
           },
           u &&
             n.createElement(
               "div",
-              { className: Re().Loading },
+              { className: Fe().Loading },
               n.createElement(at, { size: "small" }),
             ),
           f,
@@ -2867,7 +2862,7 @@
                       a(e);
                     })
                     .catch((e) => {
-                      console.warn("PerformRefresh exception", e), a(!1);
+                      (0, B.aF)("PerformRefresh exception", e), a(!1);
                     })
                 : a(!1);
             }, [t]),
@@ -3092,7 +3087,7 @@
           }),
           [m, d] = (0, n.useState)(0),
           _ = "Login_RememberMeSetting",
-          [B, b] = (0, n.useState)(
+          [b, h] = (0, n.useState)(
             null !==
               (i =
                 null !==
@@ -3105,8 +3100,8 @@
               ? i
               : "",
           ),
-          [h, y] = (0, n.useState)(""),
-          [w, f] = (0, n.useState)(
+          [y, w] = (0, n.useState)(""),
+          [f, p] = (0, n.useState)(
             s &&
               !o &&
               "0" !=
@@ -3114,7 +3109,7 @@
                   ? void 0
                   : localStorage.getItem(_)),
           ),
-          [p, S] = (0, n.useState)(!c.De.IN_STEAMUI),
+          [S, F] = (0, n.useState)(!c.De.IN_STEAMUI),
           R = !(0 === u.eStatus || 1 === u.eStatus || 2 === u.eStatus);
         (0, n.useEffect)(() => {
           var t;
@@ -3129,41 +3124,41 @@
               !e.refreshInfo && SteamClient.Auth.GetCommandLineCredentials
                 ? SteamClient.Auth.GetCommandLineCredentials().then(
                     (e) => {
-                      if ((e.username && b(e.username), e.password)) {
+                      if ((e.username && h(e.username), e.password)) {
                         const t = !1;
                         u.start(e.username, e.password, t);
                       }
-                      S(!0);
+                      F(!0);
                     },
                     () => {
-                      S(!0);
+                      F(!0);
                     },
                   )
-                : S(!0);
+                : F(!0);
             }, []),
           {
             password: u,
             onComplete: l,
             eQRStatus: m,
             onQRStatusChange: d,
-            strAccountName: B,
-            onAccountNameChange: b,
-            strPassword: h,
-            onPasswordChange: y,
-            bRememberMe: w,
+            strAccountName: b,
+            onAccountNameChange: h,
+            strPassword: y,
+            onPasswordChange: w,
+            bRememberMe: f,
             onRememberMeChange: (e) => {
-              f(e),
+              p(e),
                 null === localStorage ||
                   void 0 === localStorage ||
                   localStorage.setItem(_, e ? "1" : "0");
             },
-            bHaveLastCreds: p,
+            bHaveLastCreds: S,
             onPasswordSubmit: () =>
-              B && h ? u.start(B, h, w) : Promise.resolve(8),
+              b && y ? u.start(b, y, f) : Promise.resolve(8),
             bInPasswordFlow: R,
             onTryOffline: () => {
-              console.log(`Logging in offline with username ${B}`),
-                SteamClient.User.SetLoginCredentials(B, h, w);
+              (0, B.Zb)(`Logging in offline with username ${b}`),
+                SteamClient.User.SetLoginCredentials(b, y, f);
               SteamClient.User.StartOffline(!0);
             },
           }
@@ -3181,10 +3176,10 @@
             joinLinkStyle: d,
             defaultAccountName: g,
             secureComputer: _ = !0,
-            isProbablySharedPC: B = !1,
-            onShowAgreement: b,
+            isProbablySharedPC: b = !1,
+            onShowAgreement: h,
           } = e,
-          h = xe({
+          y = xe({
             transport: t,
             platform: i,
             onSuccess: r,
@@ -3195,10 +3190,10 @@
               : null,
             defaultAccountName: g,
             secureComputer: _,
-            isProbablySharedPC: B,
-            onShowAgreement: b,
+            isProbablySharedPC: b,
+            onShowAgreement: h,
           }),
-          y = Me();
+          w = Me();
         if (null != u && 1 != u)
           return n.createElement(
             "div",
@@ -3207,39 +3202,39 @@
               reset: () => window.location.reload(),
               failure: m.NZ.Generic,
               errorReference: u.toString(),
-              extendedErrorMessage: h.password.strExtendedErrorMessage,
+              extendedErrorMessage: y.password.strExtendedErrorMessage,
             }),
           );
-        if (!h.bHaveLastCreds)
+        if (!y.bHaveLastCreds)
           return n.createElement(Et, null, n.createElement("div", null));
-        const w = !(0, c.h4)();
-        if (!h.bInPasswordFlow) {
+        const f = !(0, c.h4)();
+        if (!y.bInPasswordFlow) {
           const r = n.createElement(
             "div",
-            { className: (0, a.Z)($().SideBySide, y && $().Embedded) },
+            { className: (0, a.Z)($().SideBySide, w && $().Embedded) },
             n.createElement(Xe, {
-              strAccountName: h.strAccountName,
-              onAccountNameChange: h.onAccountNameChange,
-              strPassword: h.strPassword,
-              onPasswordChange: h.onPasswordChange,
-              bRememberMe: h.bRememberMe,
-              onRememberMeChange: h.onRememberMeChange,
-              onSubmit: h.onPasswordSubmit,
-              status: h.password.eStatus,
+              strAccountName: y.strAccountName,
+              onAccountNameChange: y.onAccountNameChange,
+              strPassword: y.strPassword,
+              onPasswordChange: y.onPasswordChange,
+              bRememberMe: y.bRememberMe,
+              onRememberMeChange: y.onRememberMeChange,
+              onSubmit: y.onPasswordSubmit,
+              status: y.password.eStatus,
               autoFocus: s,
               secureComputer: _,
               refreshInfo: e.refreshInfo,
             }),
-            w &&
+            f &&
               n.createElement(Ie, {
                 transport: t,
-                onQRStatusChange: h.onQRStatusChange,
-                onComplete: h.onComplete,
+                onQRStatusChange: y.onQRStatusChange,
+                onComplete: y.onComplete,
                 platform: i,
                 refreshInfo: o,
               }),
           );
-          if (y) {
+          if (w) {
             const t = c.De.IN_STEAMUI,
               i = t ? c.De.LAUNCHER_TYPE : void 0;
             return n.createElement(
@@ -3290,8 +3285,8 @@
           );
           return n.createElement(Et, { title: l }, r);
         }
-        const f = h.password.eStatus;
-        switch (f) {
+        const p = y.password.eStatus;
+        switch (p) {
           case 13:
             return e.renderLoading
               ? n.createElement(n.Fragment, null, e.renderLoading())
@@ -3300,46 +3295,46 @@
           case 11:
           case 3:
           case 10:
-            const t = 5 === f || 11 === f;
+            const t = 5 === p || 11 === p;
             return n.createElement(ct, {
               type: t ? "mobile" : "email",
-              onSubmitCode: h.password.addCode,
-              status: f,
-              associatedLabel: h.password.strConfirmationAssociatedMessage,
-              accountName: h.password.strAccountName,
-              onBack: h.password.goBack,
+              onSubmitCode: y.password.addCode,
+              status: p,
+              associatedLabel: y.password.strConfirmationAssociatedMessage,
+              accountName: y.password.strAccountName,
+              onBack: y.password.goBack,
               onCodeHelp: e.onCodeHelp,
             });
           case 6:
           case 4:
-            const r = 6 === f;
+            const r = 6 === p;
             return n.createElement(yt, {
               type: r ? "mobile" : "email",
-              accountName: h.password.strAccountName,
-              onUseCodeOverride: h.password.useCodeOverride,
+              accountName: y.password.strAccountName,
+              onUseCodeOverride: y.password.useCodeOverride,
               onCodeHelp: e.onCodeHelp,
             });
           case 16:
-            return n.createElement(lt, { reset: h.password.reset });
+            return n.createElement(lt, { reset: y.password.reset });
           case 15:
             return n.createElement(ot, {
-              reset: h.password.reset,
-              failure: h.password.eFailureState,
-              onRequestOffline: h.onTryOffline,
-              errorReference: h.password.strErrorReference,
-              extendedErrorMessage: h.password.strExtendedErrorMessage,
+              reset: y.password.reset,
+              failure: y.password.eFailureState,
+              onRequestOffline: y.onTryOffline,
+              errorReference: y.password.strErrorReference,
+              extendedErrorMessage: y.password.strExtendedErrorMessage,
             });
           case 14:
             return n.createElement(Et, { compact: !0 }, l());
           default:
             return (
-              console.error(`Unknown Phase: ${f}`),
+              (0, B.F0)(`Unknown Phase: ${p}`),
               n.createElement(ot, {
-                reset: h.password.reset,
+                reset: y.password.reset,
                 failure: m.NZ.Generic,
-                onRequestOffline: h.onTryOffline,
-                errorReference: h.password.strErrorReference,
-                extendedErrorMessage: h.password.strExtendedErrorMessage,
+                onRequestOffline: y.onTryOffline,
+                errorReference: y.password.strErrorReference,
+                extendedErrorMessage: y.password.strExtendedErrorMessage,
               })
             );
         }
@@ -3439,7 +3434,7 @@
             : n.createElement(it, null, " "),
           p = i && !s,
           S = i && !!s,
-          R = !!e.refreshInfo;
+          F = !!e.refreshInfo;
         return n.createElement(
           ft,
           {
@@ -3450,10 +3445,10 @@
             },
             className: $().LoginForm,
           },
-          n.createElement(qe, {
+          n.createElement(Ze, {
             tone: w ? "danger" : void 0,
             label: n.createElement(
-              Ze,
+              qe,
               { highlight: !0 },
               (0, me.Xx)("#Login_SignIn_WithAccountName"),
             ),
@@ -3462,11 +3457,11 @@
               B(!0), o(e);
             },
             autoFocus: p,
-            disabled: R,
+            disabled: F,
           }),
-          n.createElement(qe, {
+          n.createElement(Ze, {
             tone: w ? "danger" : void 0,
-            label: n.createElement(Ze, null, (0, me.Xx)("#Login_Password")),
+            label: n.createElement(qe, null, (0, me.Xx)("#Login_Password")),
             value: l,
             onChange: (e) => {
               B(!0), u(e);
@@ -3492,7 +3487,7 @@
                 { className: $().InsecureComputer },
                 (0, me.Xx)("#Login_InsecureComputer"),
               ),
-          n.createElement(Je, { loading: y, refreshLogin: R }),
+          n.createElement(Je, { loading: y, refreshLogin: F }),
           f,
           !b &&
             n.createElement(
@@ -3586,7 +3581,7 @@
           "div",
           { className: $().QRCodeContainer },
           n.createElement(
-            Ze,
+            qe,
             { highlight: !0 },
             (0, me.Xx)("#Login_SignIn_OrWithQRCode"),
           ),
@@ -3621,19 +3616,19 @@
           ),
         );
       }
-      function qe(e) {
+      function Ze(e) {
         const { label: t, error: r, tone: a, autoFocus: s } = e,
           o = (0, i._T)(e, ["label", "error", "tone", "autoFocus"]),
           l = null != a ? a : r ? "danger" : void 0;
         return n.createElement(
           "div",
           { className: $().TextField },
-          "string" == typeof t ? n.createElement(Ze, null, t) : t,
+          "string" == typeof t ? n.createElement(qe, null, t) : t,
           n.createElement($e, { type: "error" }, r),
           n.createElement(Qe, Object.assign({ autoFocus: s, tone: l }, o)),
         );
       }
-      function Ze(e) {
+      function qe(e) {
         const { children: t, highlight: r } = e;
         return n.createElement(
           "div",
@@ -3934,17 +3929,17 @@
               });
           },
           S = !u && (11 === i || 10 === i);
-        let R, F;
+        let F, R;
         return (
           _
             ? "mobile" === t
-              ? ((F = n.createElement(mt, null)), (R = "#Login_UseMobileCode"))
-              : ((F = n.createElement(mt, null)), (R = "#Login_UseEmailCode"))
-            : ((F =
+              ? ((R = n.createElement(mt, null)), (F = "#Login_UseMobileCode"))
+              : ((R = n.createElement(mt, null)), (F = "#Login_UseEmailCode"))
+            : ((R =
                 "mobile" === t
                   ? n.createElement(dt, null)
                   : n.createElement(gt, { emailAddress: s })),
-              (R = "#Login_UseBackupCode")),
+              (F = "#Login_UseBackupCode")),
           n.createElement(
             Et,
             { title: n.createElement(Ct, null), compact: !0 },
@@ -3971,7 +3966,7 @@
                         null,
                         (0, me.Xx)("#Login_IncorrectSteamGuard"),
                       ),
-                    n.createElement(Rt, {
+                    n.createElement(Ft, {
                       key: b,
                       value: l,
                       onChange: (e) => {
@@ -3984,7 +3979,7 @@
                       backupCode: _,
                     }),
                   ),
-                  F,
+                  R,
                 ),
                 y &&
                   n.createElement(
@@ -3995,7 +3990,7 @@
                       },
                       align: "center",
                     },
-                    (0, me.Xx)(R),
+                    (0, me.Xx)(F),
                   ),
                 n.createElement(ut, { type: t, onCodeHelp: e.onCodeHelp }),
               ),
@@ -4070,7 +4065,7 @@
             className: $().EnterCodeFromEmailContainer,
           },
           n.createElement(
-            Ft,
+            Rt,
             { align: "center", spacing: 6 },
             n.createElement(
               "div",
@@ -4260,11 +4255,11 @@
           };
         return n.createElement("div", { style: s, className: a }, t);
       }
-      function Rt(e) {
+      function Ft(e) {
         const { onChange: t, backupCode: r } = e,
           a = (0, i._T)(e, ["onChange", "backupCode"]);
         return n.createElement(
-          Fe,
+          Re,
           Object.assign(
             {
               length: G(r),
@@ -4280,7 +4275,7 @@
           ),
         );
       }
-      function Ft(e) {
+      function Rt(e) {
         const { children: t, spacing: r = 0, align: i } = e;
         return n.createElement(
           pt,
@@ -4469,7 +4464,7 @@
       "use strict";
       r.d(t, {
         $h: () => ee,
-        Am: () => F,
+        Am: () => R,
         Uy: () => b,
         _u: () => _,
         kp: () => l,
@@ -5537,51 +5532,51 @@
           return "CAuthentication_UpdateAuthSessionWithMobileConfirmation_Request";
         }
       }
-      class R extends o {
+      class F extends o {
         constructor(e = null) {
           super(), o.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
-          return R.toObject(e, this);
+          return F.toObject(e, this);
         }
         static toObject(e, t) {
           return e ? { $jspbMessageInstance: t } : {};
         }
         static fromObject(e) {
-          return new R();
+          return new F();
         }
         static deserializeBinary(e) {
           let t = new i.BinaryReader(e),
-            r = new R();
-          return R.deserializeBinaryFromReader(r, t);
+            r = new F();
+          return F.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
           return e;
         }
         serializeBinary() {
           var e = new i.BinaryWriter();
-          return R.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return F.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {}
         serializeBase64String() {
           var e = new i.BinaryWriter();
-          return R.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return F.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CAuthentication_UpdateAuthSessionWithMobileConfirmation_Response";
         }
       }
-      class F extends o {
+      class R extends o {
         constructor(e = null) {
           super(),
-            F.prototype.client_id || n.aR(F.M()),
+            R.prototype.client_id || n.aR(R.M()),
             o.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            F.sm_m ||
-              (F.sm_m = {
-                proto: F,
+            R.sm_m ||
+              (R.sm_m = {
+                proto: R,
                 fields: {
                   client_id: {
                     n: 1,
@@ -5597,39 +5592,39 @@
                   code_type: { n: 4, br: n.FE.readEnum, bw: n.Xc.writeEnum },
                 },
               }),
-            F.sm_m
+            R.sm_m
           );
         }
         static MBF() {
-          return F.sm_mbf || (F.sm_mbf = n.Bh(F.M())), F.sm_mbf;
+          return R.sm_mbf || (R.sm_mbf = n.Bh(R.M())), R.sm_mbf;
         }
         toObject(e = !1) {
-          return F.toObject(e, this);
+          return R.toObject(e, this);
         }
         static toObject(e, t) {
-          return n.TA(F.M(), e, t);
+          return n.TA(R.M(), e, t);
         }
         static fromObject(e) {
-          return n.aD(F.M(), e);
+          return n.aD(R.M(), e);
         }
         static deserializeBinary(e) {
           let t = new i.BinaryReader(e),
-            r = new F();
-          return F.deserializeBinaryFromReader(r, t);
+            r = new R();
+          return R.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return n.F(F.MBF(), e, t);
+          return n.F(R.MBF(), e, t);
         }
         serializeBinary() {
           var e = new i.BinaryWriter();
-          return F.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return R.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          n.l2(F.M(), e, t);
+          n.l2(R.M(), e, t);
         }
         serializeBase64String() {
           var e = new i.BinaryWriter();
-          return F.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return R.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CAuthentication_UpdateAuthSessionWithSteamGuardCode_Request";
@@ -6882,51 +6877,51 @@
           return "CAuthenticationSupport_RevokeToken_Request";
         }
       }
-      class q extends o {
+      class Z extends o {
         constructor(e = null) {
           super(), o.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
-          return q.toObject(e, this);
+          return Z.toObject(e, this);
         }
         static toObject(e, t) {
           return e ? { $jspbMessageInstance: t } : {};
         }
         static fromObject(e) {
-          return new q();
+          return new Z();
         }
         static deserializeBinary(e) {
           let t = new i.BinaryReader(e),
-            r = new q();
-          return q.deserializeBinaryFromReader(r, t);
+            r = new Z();
+          return Z.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
           return e;
         }
         serializeBinary() {
           var e = new i.BinaryWriter();
-          return q.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return Z.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {}
         serializeBase64String() {
           var e = new i.BinaryWriter();
-          return q.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return Z.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CAuthenticationSupport_RevokeToken_Response";
         }
       }
-      class Z extends o {
+      class q extends o {
         constructor(e = null) {
           super(),
-            Z.prototype.token_id || n.aR(Z.M()),
+            q.prototype.token_id || n.aR(q.M()),
             o.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            Z.sm_m ||
-              (Z.sm_m = {
-                proto: Z,
+            q.sm_m ||
+              (q.sm_m = {
+                proto: q,
                 fields: {
                   token_id: {
                     n: 1,
@@ -6935,39 +6930,39 @@
                   },
                 },
               }),
-            Z.sm_m
+            q.sm_m
           );
         }
         static MBF() {
-          return Z.sm_mbf || (Z.sm_mbf = n.Bh(Z.M())), Z.sm_mbf;
+          return q.sm_mbf || (q.sm_mbf = n.Bh(q.M())), q.sm_mbf;
         }
         toObject(e = !1) {
-          return Z.toObject(e, this);
+          return q.toObject(e, this);
         }
         static toObject(e, t) {
-          return n.TA(Z.M(), e, t);
+          return n.TA(q.M(), e, t);
         }
         static fromObject(e) {
-          return n.aD(Z.M(), e);
+          return n.aD(q.M(), e);
         }
         static deserializeBinary(e) {
           let t = new i.BinaryReader(e),
-            r = new Z();
-          return Z.deserializeBinaryFromReader(r, t);
+            r = new q();
+          return q.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return n.F(Z.MBF(), e, t);
+          return n.F(q.MBF(), e, t);
         }
         serializeBinary() {
           var e = new i.BinaryWriter();
-          return Z.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return q.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          n.l2(Z.M(), e, t);
+          n.l2(q.M(), e, t);
         }
         serializeBase64String() {
           var e = new i.BinaryWriter();
-          return Z.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return q.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CAuthenticationSupport_GetTokenHistory_Request";
@@ -7348,14 +7343,14 @@
             return e.SendMsg(
               "Authentication.UpdateAuthSessionWithMobileConfirmation#1",
               (0, a.MD)(S, t),
-              R,
+              F,
               { ePrivilege: 1 },
             );
           }),
           (e.UpdateAuthSessionWithSteamGuardCode = function (e, t) {
             return e.SendMsg(
               "Authentication.UpdateAuthSessionWithSteamGuardCode#1",
-              (0, a.MD)(F, t),
+              (0, a.MD)(R, t),
               E,
               { ePrivilege: 0, eWebAPIKeyRequirement: 1 },
             );
@@ -7430,14 +7425,14 @@
               return e.SendMsg(
                 "AuthenticationSupport.RevokeToken#1",
                 (0, a.MD)(H, t),
-                q,
+                Z,
                 { ePrivilege: 5 },
               );
             }),
             (e.GetTokenHistory = function (e, t) {
               return e.SendMsg(
                 "AuthenticationSupport.GetTokenHistory#1",
-                (0, a.MD)(Z, t),
+                (0, a.MD)(q, t),
                 Q,
                 { bConstMethod: !0, ePrivilege: 5 },
               );

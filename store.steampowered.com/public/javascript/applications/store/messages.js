@@ -3,7 +3,7 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [4158],
   {
-    5089: (e) => {
+    71: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         OtherEventsCtn: "eventrow_OtherEventsCtn_1qNsZ",
@@ -34,7 +34,7 @@
         AppCapsulePrice: "eventrow_AppCapsulePrice_Jq75m",
       };
     },
-    81124: (e) => {
+    15585: (e) => {
       e.exports = {
         MarketingMessagePage: "messagelist_MarketingMessagePage_1HVoK",
         MessageListPage: "messagelist_MessageListPage_1N7O3",
@@ -59,7 +59,7 @@
         ExitDone: "messagelist_ExitDone_3cFXR",
       };
     },
-    37977: (e) => {
+    94047: (e) => {
       e.exports = {
         MainContainer: "featuredlc_MainContainer_T3ysk",
         BackgroundImage: "featuredlc_BackgroundImage_3vQ5a",
@@ -80,7 +80,7 @@
         MessageFooter: "featuredlc_MessageFooter_2S4fB",
       };
     },
-    3028: (e) => {
+    3462: (e) => {
       e.exports = {
         Dummy: "featurevideo_Dummy_Bz-g3",
         PosterCtn: "featurevideo_PosterCtn_24bJJ",
@@ -88,7 +88,7 @@
         Video: "featurevideo_Video_2bH_J",
       };
     },
-    92894: (e) => {
+    64145: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         MessageContent: "image_MessageContent_rohJ-",
@@ -125,10 +125,10 @@
         c = r(54671),
         m = r(85886),
         u = r(25871),
-        g = r(5089),
+        g = r(71),
         d = r(51441),
         _ = r(44421),
-        M = r(23715),
+        M = r(1631),
         p = r.n(M),
         B = r(67935),
         y = r(21219),
@@ -523,7 +523,7 @@
         h = r(71161),
         S = r(14826),
         F = r(29551),
-        R = r(37977),
+        R = r(94047),
         z = r(51438),
         T = r(17547),
         C = r(44865);
@@ -580,7 +580,7 @@
         G = r(60161),
         P = r(701),
         I = r(207),
-        j = r(3028);
+        j = r(3462);
       function x(e) {
         const t = le(),
           [r, s] = (0, a.useState)(!1);
@@ -643,7 +643,7 @@
                   ? void 0
                   : e.last_asset_mtime,
               n = new Array();
-            for (let e = 0; e < 30; ++e) {
+            for (let e = 0; e < 31; ++e) {
               if (!S.LJ.IsELanguageValidInRealm(e, _.De.EREALM)) continue;
               const l = (0, s.j_)(e);
               if (r && r[l]) {
@@ -665,7 +665,7 @@
           }, [t]);
         return a.createElement(a.Fragment, null, r);
       }
-      var U = r(92894),
+      var U = r(64145),
         X = r(25125);
       function V(e) {
         const { bLowBandwidthMode: t } = e,
@@ -3182,12 +3182,12 @@
       var Q = r(57605),
         Y = r(14826),
         ee = r(53853),
-        te = r(81124),
+        te = r(15585),
         re = r(701),
         ae = r(19304),
         se = r(22171),
         ie = r(12360),
-        ne = r(69338),
+        ne = r(3301),
         le = r(10317);
       const oe = 8;
       function ce(e) {

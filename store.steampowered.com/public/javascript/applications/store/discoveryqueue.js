@@ -3,7 +3,7 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [556],
   {
-    47573: (e) => {
+    88090: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         DiscoveryQueueWidgetCtn:
@@ -154,7 +154,7 @@
         d = n(49330),
         g = n(35388),
         p = n(14826),
-        A = n(47573),
+        A = n(88090),
         v = n.n(A),
         E = n(32765);
       function m(e) {
@@ -303,7 +303,7 @@
             );
       }
     },
-    26121: (e, t, n) => {
+    45718: (e, t, n) => {
       "use strict";
       n.d(t, { Z: () => i });
       const i =

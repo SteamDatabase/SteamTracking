@@ -4,7 +4,7 @@
   self.webpackChunkappmgmt_storeadmin || []).push([
   [8974],
   {
-    69409: (e) => {
+    29183: (e) => {
       e.exports = {
         EventTimeSection: "partnereventshareddates_EventTimeSection_27EoU",
         EventTimeTitle: "partnereventshareddates_EventTimeTitle_2sTdT",
@@ -31,7 +31,7 @@
         DateErrorCtn: "partnereventshareddates_DateErrorCtn_Bww9B",
       };
     },
-    93056: (e) => {
+    750: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         ControllerWizardModal:
@@ -66,7 +66,7 @@
         ControlsQuestion: "controllersupportedit_ControlsQuestion_86lVB",
       };
     },
-    19238: (e) => {
+    40661: (e) => {
       e.exports = {
         ReleaseDateInfoCtn: "controllersupportinfo_ReleaseDateInfoCtn_2ocuo",
         GameEditCtn: "controllersupportinfo_GameEditCtn_2o3d5",
@@ -96,7 +96,7 @@
         PreviewContainer: "controllersupportinfo_PreviewContainer_1WiJc",
       };
     },
-    81104: (e) => {
+    39357: (e) => {
       e.exports = {
         ReleaseDateInfoCtn: "releasedateinfo_ReleaseDateInfoCtn_2mHXb",
         GameEditCtn: "releasedateinfo_GameEditCtn_2JigU",
@@ -112,7 +112,7 @@
         Set: "releasedateinfo_Set_eEhAf",
       };
     },
-    80238: (e) => {
+    77996: (e) => {
       e.exports = {
         ReleaseDateModal: "releasedaterequest_ReleaseDateModal_RKE7g",
         ReleaseDateRequestBody:
@@ -552,15 +552,15 @@
         l = r(89526),
         a = r(5556),
         s = r.n(a),
-        i = r(28542),
+        i = r(70369),
         p = r(85651),
-        u = r(17318),
+        u = r(52629),
         c = r.n(u),
         d = r(19304),
         m = r(14826),
         _ = r(4306),
         S = r(84343),
-        g = r(69409),
+        g = r(29183),
         C = r.n(g),
         b = r(47812),
         E = r.n(b);
@@ -832,7 +832,7 @@
         i = r(81500),
         p = r(14826),
         u = r(72120),
-        c = r(81104),
+        c = r(39357),
         d = r(701),
         m = r(33940),
         _ = r(52868),
@@ -842,7 +842,7 @@
         b = r(22444),
         E = r(82971),
         h = r(67736),
-        T = r(69338),
+        T = r(3301),
         f = r(86900),
         v = r(207),
         P = r(32765);
@@ -878,7 +878,7 @@
           onChange: s,
         });
       }
-      var k = r(80238);
+      var k = r(77996);
       function D(e) {
         const { appid: t, onClose: r, onCommit: n } = e,
           [o, a] = l.useState(null),
@@ -915,7 +915,7 @@
           l.createElement(
             j.Provider,
             { value: s },
-            l.createElement(A, { fnSubmit: o, fnCloseModal: r }, _),
+            l.createElement(w, { fnSubmit: o, fnCloseModal: r }, _),
           )
         );
       }
@@ -990,18 +990,18 @@
             l.Fragment,
             null,
             C && l.createElement(R, { strError: C }),
-            l.createElement(w, null),
+            l.createElement(B, null),
             l.createElement(
               b.Uq,
               null,
               l.createElement(
-                B,
+                A,
                 { label: (0, p.Xx)("#App_Landing_IntendedReleaseDateTitle") },
                 l.createElement(y, { rtSelectedDate: i, setSelectedDate: u }),
                 l.createElement(L, null),
               ),
               l.createElement(
-                B,
+                A,
                 { label: (0, p.Xx)("#App_Landing_PublicDateDisplayTitle") },
                 l.createElement(x, {
                   rtSteamReleaseDate: i,
@@ -1043,7 +1043,7 @@
         const { strError: t } = e;
         return l.createElement("div", { className: k.ErrorBox }, t);
       }
-      function w() {
+      function B() {
         const {
           bIsComingSoon: e,
           bIsStorePageReviewed: t,
@@ -1075,7 +1075,7 @@
               (0, p.Xx)("#App_Landing_Release_EarliestDate_TwoWeeks"),
             );
       }
-      function A(e) {
+      function w(e) {
         const { fnCloseModal: t, fnSubmit: r, children: n } = e,
           { bCanUpdateComingSoonDate: o } = N() || {
             bCanUpdateComingSoonDate: !0,
@@ -1102,7 +1102,7 @@
           }),
         );
       }
-      function B(e) {
+      function A(e) {
         const { label: t, children: r } = e;
         return l.createElement(
           b.sg,
@@ -1305,8 +1305,8 @@
       var H,
         V,
         U,
-        q = r(19238),
-        Z = r(93056),
+        q = r(40661),
+        Z = r(750),
         K = r(16826);
       function Q(e, t) {
         const r = document.getElementById(e);
@@ -1377,42 +1377,45 @@
               : r.bFullXboxControllerSupport || r.bPartialXboxControllerSupport
               ? H.k_eGamepadAndMouse
               : H.k_eMouseKBOnly,
-          i = s(),
-          u = l.createElement(
-            "div",
-            null,
-            l.createElement(
-              b.SY,
-              {
-                value: s(),
-                onChange: (e) => {
-                  var t;
-                  const l = a.find((t) => t.id == e);
-                  n(
-                    Object.assign(
-                      Object.assign({}, r),
-                      null == l ? void 0 : l.settings,
-                    ),
+          i = s();
+        l.useEffect(() => {
+          i == H.k_eMouseKBOnly && o(!0);
+        }, [i, o]);
+        const u = l.createElement(
+          "div",
+          null,
+          l.createElement(
+            b.SY,
+            {
+              value: s(),
+              onChange: (e) => {
+                var t;
+                const l = a.find((t) => t.id == e);
+                n(
+                  Object.assign(
+                    Object.assign({}, r),
+                    null == l ? void 0 : l.settings,
                   ),
-                    o(null !== (t = l.bSkipToEnd) && void 0 !== t && t);
-                },
+                ),
+                  o(null !== (t = l.bSkipToEnd) && void 0 !== t && t);
               },
-              a.map((e) =>
+            },
+            a.map((e) =>
+              l.createElement(
+                b.EU,
+                { key: e.id, value: e.id },
+                l.createElement("div", {
+                  className: (0, O.Z)(Z.RadioButton, i == e.id && Z.Selected),
+                }),
                 l.createElement(
-                  b.EU,
-                  { key: e.id, value: e.id },
-                  l.createElement("div", {
-                    className: (0, O.Z)(Z.RadioButton, i == e.id && Z.Selected),
-                  }),
-                  l.createElement(
-                    "div",
-                    { className: Z.OptionLabel },
-                    (0, p.Xx)(e.locString),
-                  ),
+                  "div",
+                  { className: Z.OptionLabel },
+                  (0, p.Xx)(e.locString),
                 ),
               ),
             ),
-          );
+          ),
+        );
         return l.createElement(le, {
           strStepName: (0, p.Xx)("#ControllerSupportModal_StepString", t + 1),
           strStepSubHeaderToken: "#ControllerSupportModal_PgOne_Header",
@@ -1852,7 +1855,9 @@
               fnBack:
                 _ > 0
                   ? () => {
-                      u(a), S(_ - 1);
+                      u(a);
+                      let e = _ - 1;
+                      c && 4 == _ && (e = 0), S(e);
                     }
                   : r,
               header: b,

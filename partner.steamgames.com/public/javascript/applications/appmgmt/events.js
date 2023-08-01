@@ -4,7 +4,7 @@
   self.webpackChunkappmgmt_storeadmin || []).push([
   [2136],
   {
-    57800: (e) => {
+    26564: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         Picker: "addonpicker_Picker_3acyH",
@@ -23,7 +23,7 @@
         AddonPickerMessage: "addonpicker_AddonPickerMessage_LGYf8",
       };
     },
-    38737: (e) => {
+    66818: (e) => {
       e.exports = {
         DragTarget: "bbcodeeditor_DragTarget_2Mg-b",
         DragOnTopOfMe: "bbcodeeditor_DragOnTopOfMe_3-WTT",
@@ -51,17 +51,17 @@
         BBCodeEditorInputStyles: "bbcodeeditor_BBCodeEditorInputStyles_1Fpu1",
       };
     },
-    18071: (e) => {
+    58998: (e) => {
       e.exports = {
         BBCode_Toggle: "bbcodesuggestions_BBCode_Toggle_1MrSR",
         Active: "bbcodesuggestions_Active_3tFqQ",
         BBCode: "bbcodesuggestions_BBCode_2DSQu",
       };
     },
-    79472: (e) => {
+    88367: (e) => {
       e.exports = { Image: "clanimagepickandresize_Image_2W_Gz" };
     },
-    62404: (e) => {
+    68436: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         chatEntryControls: "chatentry_chatEntryControls_2gP0D",
@@ -78,10 +78,10 @@
         Active: "chatentry_Active_2gzj2",
       };
     },
-    59663: (e) => {
+    2851: (e) => {
       e.exports = { Ctn: "cloudfileuploadbutton_Ctn_MKp7i" };
     },
-    71654: (e) => {
+    59015: (e) => {
       e.exports = {
         UploadPreviewContainer:
           "cloudfileuploadprogress_UploadPreviewContainer_2IhGM",
@@ -99,13 +99,13 @@
           "cloudfileuploadprogress_FileUploadProgressName_1c12o",
       };
     },
-    21822: (e) => {
+    8725: (e) => {
       e.exports = {
         ArtPreview: "cloudlocalizedartdisplay_ArtPreview_2V4yU",
         ArtNoArt: "cloudlocalizedartdisplay_ArtNoArt_2_3rg",
       };
     },
-    28744: (e) => {
+    26679: (e) => {
       e.exports = {
         NewEmoticonIndicator: "emoticon_NewEmoticonIndicator_3B1SU",
         NewEmoticonCircle: "emoticon_NewEmoticonCircle_2ZOlu",
@@ -137,14 +137,14 @@
         EmoticonItem: "emoticon_EmoticonItem_OfLMJ",
       };
     },
-    23265: (e) => {
+    86321: (e) => {
       e.exports = {
         Emoticon_Toggle: "emoticonsuggestion_Emoticon_Toggle_3XueY",
         Active: "emoticonsuggestion_Active_2JoNK",
         Emoticon: "emoticonsuggestion_Emoticon_3dAJw",
       };
     },
-    57489: (e) => {
+    37866: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         AppPartnerEventsPage: "apppartnereventspage_AppPartnerEventsPage_1m-hJ",
@@ -195,10 +195,10 @@
         ReadMoreCnt: "apppartnereventspage_ReadMoreCnt_3OLsV",
       };
     },
-    60361: (e) => {
+    24720: (e) => {
       e.exports = { Main: "basicpartnereventrender_Main_2U6-V" };
     },
-    36320: (e) => {
+    12956: (e) => {
       e.exports = {
         ImagesOuterContainer: "clanimagechooser_ImagesOuterContainer_seVYs",
         Hilight: "clanimagechooser_Hilight_1bs5j",
@@ -207,7 +207,7 @@
         ImageFilename: "clanimagechooser_ImageFilename_EazUb",
       };
     },
-    43997: (e) => {
+    38695: (e) => {
       e.exports = {
         Container: "discussionwidget_Container_3BVe_",
         VoteContainer: "discussionwidget_VoteContainer_1uhQY",
@@ -241,7 +241,7 @@
         VoteButtonSelected: "discussionwidget_VoteButtonSelected_2c_5V",
       };
     },
-    51989: (e) => {
+    91972: (e) => {
       e.exports = {
         sketchfab_play_overlay_image:
           "eventbbcodesketchfab_sketchfab_play_overlay_image_3MwaE",
@@ -255,19 +255,19 @@
         dynamiclink_author: "eventbbcodesketchfab_dynamiclink_author_e66Tt",
       };
     },
-    77555: (e) => {
+    75223: (e) => {
       e.exports = {
         AppSummaryWidgetCtn:
           "eventdescriptionstorecapsule_AppSummaryWidgetCtn_2WIqq",
       };
     },
-    65666: (e) => {
+    22370: (e) => {
       e.exports = {
         SearchResults: "eventsearch_SearchResults_1tDRE",
         SmallText: "eventsearch_SmallText_2gsew",
       };
     },
-    72799: (e) => {
+    27033: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         strWidescreenWidth: "1420px",
@@ -300,13 +300,13 @@
         FacetValueSearch: "facetedbrowse_FacetValueSearch_1nSEf",
       };
     },
-    73807: (e) => {
+    57255: (e) => {
       e.exports = {
         HorizontalScrollInDragForceCursor:
           "horizontalscrollcontainer_HorizontalScrollInDragForceCursor_1uftH",
       };
     },
-    85073: (e) => {
+    48501: (e) => {
       e.exports = {
         ArtworkDimensionTooSmall:
           "artworkuploader_ArtworkDimensionTooSmall_8JWUN",
@@ -322,7 +322,7 @@
         PreviewImgInfo: "artworkuploader_PreviewImgInfo_3Iv_t",
       };
     },
-    93907: (e) => {
+    81591: (e) => {
       e.exports = {
         DragAndDropContainer:
           "imagedraganddroptarget_DragAndDropContainer_1BEPN",
@@ -332,10 +332,10 @@
         SelectImageButton: "imagedraganddroptarget_SelectImageButton_39lgc",
       };
     },
-    49245: (e) => {
+    26727: (e) => {
       e.exports = { Ctn: "loyaltyrewarditemembed_Ctn_2di0m" };
     },
-    6864: (e) => {
+    82204: (e) => {
       e.exports = {
         SteamAwardContainer: "nominationandvote_SteamAwardContainer_jBtX5",
         InLibraryView: "nominationandvote_InLibraryView_1G81P",
@@ -375,7 +375,7 @@
         AwardCategoriesCtn: "nominationandvote_AwardCategoriesCtn_GCwk0",
       };
     },
-    34976: (e) => {
+    93513: (e) => {
       e.exports = {
         ErrorStyles: "partnereventdialog_ErrorStyles_2TszC",
         ErrorStylesWithIcon: "partnereventdialog_ErrorStylesWithIcon_1mcSA",
@@ -395,7 +395,7 @@
         NotTooWideModal: "partnereventdialog_NotTooWideModal_3P6Se",
       };
     },
-    83809: (e) => {
+    99119: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         EventDetailsPageContainer:
@@ -517,12 +517,12 @@
           "partnereventdisplay_VerticalLocalDateAndTime_1QFMN",
       };
     },
-    38279: (e) => {
+    19983: (e) => {
       e.exports = {
         ReferencedApps: "partnereventreferencedapps_ReferencedApps_2xZM7",
       };
     },
-    69409: (e) => {
+    29183: (e) => {
       e.exports = {
         EventTimeSection: "partnereventshareddates_EventTimeSection_27EoU",
         EventTimeTitle: "partnereventshareddates_EventTimeTitle_2sTdT",
@@ -549,7 +549,7 @@
         DateErrorCtn: "partnereventshareddates_DateErrorCtn_Bww9B",
       };
     },
-    25899: (e) => {
+    30204: (e) => {
       e.exports = {
         SpeakerOuter: "presenterpopup_SpeakerOuter_3KAg2",
         Speaker: "presenterpopup_Speaker_2B3rV",
@@ -561,7 +561,7 @@
         SpeakerHover: "presenterpopup_SpeakerHover_1ctFc",
       };
     },
-    25479: (e) => {
+    9683: (e) => {
       e.exports = {
         ApprovalRequiredCtn:
           "requirevalvepublishapproval_ApprovalRequiredCtn_800dA",
@@ -570,7 +570,7 @@
         RequireText: "requirevalvepublishapproval_RequireText_rZkfY",
       };
     },
-    19110: (e) => {
+    15525: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         SaleItemBrowserContainer:
@@ -595,14 +595,14 @@
         WGTesterLink: "saleitembrowser_WGTesterLink_2UmRv",
       };
     },
-    7762: (e) => {
+    39087: (e) => {
       e.exports = {
         CheckMark: "claimitemshared_CheckMark_3HeHP",
         DialogCtn: "claimitemshared_DialogCtn_ltlR6",
         EquipCtn: "claimitemshared_EquipCtn_2_8bZ",
       };
     },
-    72775: (e) => {
+    31265: (e) => {
       e.exports = {
         Link: "salebanner_Link_26cHo",
         Banner: "salebanner_Banner_2df4N",
@@ -610,7 +610,7 @@
         Mobile: "salebanner_Mobile_2w3oX",
       };
     },
-    6028: (e) => {
+    20413: (e) => {
       e.exports = {
         GhostCtn: "saleghostsections_GhostCtn_3gdzT",
         PlaceholderCap: "saleghostsections_PlaceholderCap_2BOsP",
@@ -637,7 +637,7 @@
         PlaceholderTags: "saleghostsections_PlaceholderTags_gvNj1",
       };
     },
-    80298: (e) => {
+    94225: (e) => {
       e.exports = {
         SectionLabelCtn: "salelabels_SectionLabelCtn_17xMe",
         SectionLabelRight: "salelabels_SectionLabelRight_3B4Ic",
@@ -645,7 +645,7 @@
         SectionTitleInnerCtn: "salelabels_SectionTitleInnerCtn_2R3H5",
       };
     },
-    87453: (e) => {
+    93851: (e) => {
       e.exports = {
         Ctn: "saleminigames_Ctn_1SGWR",
         DetailText: "saleminigames_DetailText_aLmWP",
@@ -654,7 +654,7 @@
         ImgFullBagde: "saleminigames_ImgFullBagde_2Sm--",
       };
     },
-    31038: (e) => {
+    99066: (e) => {
       e.exports = {
         Container: "sharewithfriends_Container_8f6EQ",
         SmallAvatar: "sharewithfriends_SmallAvatar_kzjfl",
@@ -662,10 +662,10 @@
         ShareLink: "sharewithfriends_ShareLink_2DzSq",
       };
     },
-    83431: (e) => {
+    21003: (e) => {
       e.exports = { BroadcastCtn: "vodplayer_BroadcastCtn_3YzMi" };
     },
-    31698: (e) => {
+    20730: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         Heading: "managefriends_Heading_1lIY_",
@@ -690,10 +690,10 @@
         SendInviteButton: "managefriends_SendInviteButton_3Izq1",
       };
     },
-    77571: (e) => {
+    56708: (e) => {
       e.exports = { SmallAvatar: "userprofile_SmallAvatar_2cCH3" };
     },
-    44262: (e) => {
+    25640: (e) => {
       e.exports = {
         LinkRegionDragBox: "linkregionbox_LinkRegionDragBox_3riG1",
         EdgeDown: "linkregionbox_EdgeDown_x0k8J",
@@ -726,7 +726,7 @@
         LinkText: "linkregionbox_LinkText_27FTj",
       };
     },
-    5303: (e) => {
+    79629: (e) => {
       e.exports = {
         Label: "importexportdialog_Label_RRbwy",
         ImportLocSampleButtonCtn:
@@ -735,10 +735,10 @@
         ImportButton: "importexportdialog_ImportButton_3JC9N",
       };
     },
-    47340: (e) => {
+    81609: (e) => {
       e.exports = { SearchResults: "search_curator_SearchResults_3ao90" };
     },
-    1069: (e) => {
+    23557: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         mentionDialogPosition: "suggestdialog_mentionDialogPosition_1bkUR",
@@ -752,7 +752,7 @@
         mentionSearchMatch: "suggestdialog_mentionSearchMatch_mBrO4",
       };
     },
-    80122: (e) => {
+    74286: (e) => {
       e.exports = {
         GraphicalAssetsTabs: "tabbar_GraphicalAssetsTabs_36r8g",
         GraphicalAssetsTab: "tabbar_GraphicalAssetsTab_K1_Tp",
@@ -764,20 +764,20 @@
         StatusCaution: "tabbar_StatusCaution_31Lxu",
       };
     },
-    67876: (e) => {
+    48705: (e) => {
       e.exports = {
         SectionTitleHeader: "collapseablesection_SectionTitleHeader_1K5gA",
         required_title: "collapseablesection_required_title_29VCz",
       };
     },
-    82487: (e) => {
+    24331: (e) => {
       e.exports = {
         CropImage: "cropmodal_CropImage_3Mto6",
         CropPreviewGroup: "cropmodal_CropPreviewGroup_1d4RW",
         CropPreviewLabel: "cropmodal_CropPreviewLabel_3gxY-",
       };
     },
-    15854: (e) => {
+    2821: (e) => {
       e.exports = {
         BuildNoteCtn: "buildpatchnotes_BuildNoteCtn_cZP-5",
         SplitPanel: "buildpatchnotes_SplitPanel_2TINc",
@@ -803,7 +803,7 @@
         FailedButton: "buildpatchnotes_FailedButton_soZLp",
       };
     },
-    79302: (e) => {
+    77857: (e) => {
       e.exports = {
         CreateCustomDiscountCtn:
           "discountcustomdialog_CreateCustomDiscountCtn_2T8Dy",
@@ -843,7 +843,7 @@
         DiscountPercentCtn: "discountcustomdialog_DiscountPercentCtn_2YPdF",
       };
     },
-    54812: (e) => {
+    15026: (e) => {
       e.exports = {
         DiscountGridCtn: "discountgrid_DiscountGridCtn_3THze",
         Title: "discountgrid_Title_ieZ0L",
@@ -879,7 +879,7 @@
         EventDates: "discountgrid_EventDates_vmimx",
       };
     },
-    13827: (e) => {
+    33935: (e) => {
       e.exports = {
         Instructions: "discountimportexport_Instructions_3XzkB",
         ChoiceSeparator: "discountimportexport_ChoiceSeparator_2MThy",
@@ -893,7 +893,7 @@
         ParseErrors: "discountimportexport_ParseErrors_2sHaV",
       };
     },
-    97942: (e) => {
+    59808: (e) => {
       e.exports = {
         ToolbarInfo: "savetoolbar_ToolbarInfo_5a6kg",
         Visible: "savetoolbar_Visible_3O9re",
@@ -926,7 +926,7 @@
         HoverToolTip: "savetoolbar_HoverToolTip_gba9O",
       };
     },
-    18353: (e) => {
+    1121: (e) => {
       e.exports = {
         SingleEventDetailsCtn: "singleeventdetails_SingleEventDetailsCtn_381ib",
         Visible: "singleeventdetails_Visible_1qjHy",
@@ -944,7 +944,7 @@
         BatchDiscountButton: "singleeventdetails_BatchDiscountButton_2SPUS",
       };
     },
-    33817: (e) => {
+    3737: (e) => {
       e.exports = {
         DashboardCtn: "optin_admin_dashboard_DashboardCtn_24Fut",
         OptInAdminRow: "optin_admin_dashboard_OptInAdminRow_39siH",
@@ -955,14 +955,14 @@
         StatRefresh: "optin_admin_dashboard_StatRefresh_2EDoV",
       };
     },
-    97799: (e) => {
+    53134: (e) => {
       e.exports = {
         Header: "optin_admin_dynamic_sections_Header_1DEtC",
         AddSectionCtn: "optin_admin_dynamic_sections_AddSectionCtn_QTymR",
         optionList: "optin_admin_dynamic_sections_optionList_2QQ6j",
       };
     },
-    28152: (e) => {
+    88938: (e) => {
       e.exports = {
         MainBody: "optin_admin_editor_MainBody_3Qmgl",
         MainCol: "optin_admin_editor_MainCol_1Plts",
@@ -994,7 +994,7 @@
         EligibleGamesTable: "optin_admin_editor_EligibleGamesTable_3sBXw",
       };
     },
-    72165: (e) => {
+    31148: (e) => {
       e.exports = {
         EmailTypesCtn: "optin_admin_email_dashboard_EmailTypesCtn_4xCBy",
         EmailAdmin: "optin_admin_email_dashboard_EmailAdmin_2PhkO",
@@ -1008,7 +1008,7 @@
         Selected: "optin_admin_email_dashboard_Selected_UaNa5",
       };
     },
-    9691: (e) => {
+    26897: (e) => {
       e.exports = {
         CenterAlign: "optin_admin_email_editor_CenterAlign_30g6t",
         EmailEditorContent: "optin_admin_email_editor_EmailEditorContent_BLEK0",
@@ -1062,21 +1062,21 @@
         BigButton: "optin_admin_email_editor_BigButton_2d5qK",
       };
     },
-    79186: (e) => {
+    20565: (e) => {
       e.exports = { Preview: "optin_admin_email_sections_Preview_3fMhG" };
     },
-    54703: (e) => {
+    84036: (e) => {
       e.exports = {
         DownloadRow: "optin_admin_manage_dashboard_DownloadRow_3Bo6G",
       };
     },
-    42064: (e) => {
+    20075: (e) => {
       e.exports = {
         StatsCtn: "optin_admin_manage_refresh_StatsCtn_JtiCe",
         Warning: "optin_admin_manage_refresh_Warning_3cDtw",
       };
     },
-    27499: (e) => {
+    19525: (e) => {
       e.exports = {
         SectionTitle: "optin_app_review_SectionTitle_VM14U",
         Row: "optin_app_review_Row_2db7m",
@@ -1095,7 +1095,7 @@
         TagFilterBar: "optin_app_review_TagFilterBar_sNv3-",
       };
     },
-    11401: (e) => {
+    26032: (e) => {
       e.exports = {
         Dummy: "optin_display_appeal_Dummy_XMLkP",
         ButtonCtn: "optin_display_appeal_ButtonCtn_3QVsd",
@@ -1104,14 +1104,14 @@
         AppealTitle: "optin_display_appeal_AppealTitle_X7wqW",
       };
     },
-    66813: (e) => {
+    91946: (e) => {
       e.exports = {
         Dummy: "optin_display_appeal_dialog_Dummy_2ezUj",
         AppealTextInput: "optin_display_appeal_dialog_AppealTextInput_2g-Q7",
         AppealsEntryForm: "optin_display_appeal_dialog_AppealsEntryForm_1G49-",
       };
     },
-    7993: (e) => {
+    96230: (e) => {
       e.exports = {
         DynamicSection: "optin_display_dynamic_sections_DynamicSection_-H4oQ",
         ListContainer: "optin_display_dynamic_sections_ListContainer_b77rl",
@@ -1122,7 +1122,7 @@
         TextArea: "optin_display_dynamic_sections_TextArea_2GJyI",
       };
     },
-    13184: (e) => {
+    80173: (e) => {
       e.exports = {
         Dummy: "assetportal_Dummy_ldc1a",
         AssetSection: "assetportal_AssetSection_2Sa_-",
@@ -1163,7 +1163,7 @@
         OptionalToggle: "assetportal_OptionalToggle_35eGe",
       };
     },
-    93282: (e) => {
+    26546: (e) => {
       e.exports = {
         DealCapImg: "dailydealadmincreatenew_DealCapImg_29Nw3",
         DealCapCtn: "dailydealadmincreatenew_DealCapCtn_3n8tu",
@@ -1187,13 +1187,13 @@
         NormalPrice: "dailydealadmincreatenew_NormalPrice_3WNQa",
       };
     },
-    15364: (e) => {
+    2090: (e) => {
       e.exports = {
         SearchCtn: "dailydealarchives_SearchCtn_1xsEI",
         ResultRow: "dailydealarchives_ResultRow_ddpG1",
       };
     },
-    37340: (e) => {
+    49497: (e) => {
       e.exports = {
         CalendarGridCtn: "dailydealcalendar_CalendarGridCtn_2smJ3",
         NavBar: "dailydealcalendar_NavBar_3h36H",
@@ -1218,7 +1218,7 @@
         Blocked: "dailydealcalendar_Blocked_E1Gps",
       };
     },
-    11621: (e) => {
+    25773: (e) => {
       e.exports = {
         HoverObject: "dailydealdiscounts_HoverObject_2x-6c",
         HoverCtn: "dailydealdiscounts_HoverCtn_3cend",
@@ -1228,7 +1228,7 @@
         MissingDiscount: "dailydealdiscounts_MissingDiscount_1gz3F",
       };
     },
-    88008: (e) => {
+    60077: (e) => {
       e.exports = {
         PromoTitle: "dailydealeditor_PromoTitle_1rgqM",
         DiscountEventLinks: "dailydealeditor_DiscountEventLinks_1LKk1",
@@ -1249,20 +1249,20 @@
         DiscountEventCtn: "dailydealeditor_DiscountEventCtn_2Pk6W",
       };
     },
-    63629: (e) => {
+    74865: (e) => {
       e.exports = {
         InfoCtn: "dailydealpartnerinfo_InfoCtn_1__uv",
         Title: "dailydealpartnerinfo_Title_2Ttas",
         DDVisibilityExample: "dailydealpartnerinfo_DDVisibilityExample_3OAcn",
       };
     },
-    13383: (e) => {
+    81083: (e) => {
       e.exports = {
         Row: "dailydealsdashboard_Row_2fsEu",
         InfoCtn: "dailydealsdashboard_InfoCtn_3t-3P",
       };
     },
-    94875: (e) => {
+    71030: (e) => {
       e.exports = {
         SelectedAppCtn: "invitesdashboard_SelectedAppCtn_1kLuQ",
         SelectedApp: "invitesdashboard_SelectedApp_3FFre",
@@ -1278,10 +1278,10 @@
         InvitedAppInfo: "invitesdashboard_InvitedAppInfo_2h8se",
       };
     },
-    32612: (e) => {
+    63043: (e) => {
       e.exports = { DialogCtn: "invitesdialog_DialogCtn_3sIyQ" };
     },
-    19194: (e) => {
+    61789: (e) => {
       e.exports = {
         MMArtPreview: "marketingmessageassets_MMArtPreview_uaJWO",
         MMArtNoArt: "marketingmessageassets_MMArtNoArt_1oJlf",
@@ -1291,15 +1291,15 @@
         previewSection: "marketingmessageassets_previewSection_18ctS",
       };
     },
-    14449: (e) => {
+    6580: (e) => {
       e.exports = { DateCtn: "marketingmessagecreatedialog_DateCtn_1mrqJ" };
     },
-    35332: (e) => {
+    75794: (e) => {
       e.exports = {
         HeaderButtons: "marketingmessagedashboard_HeaderButtons_1Q4Pq",
       };
     },
-    2414: (e) => {
+    14176: (e) => {
       e.exports = {
         Dummy: "marketingmessageeditor_Dummy_3x7rO",
         CountryInOut: "marketingmessageeditor_CountryInOut_219uC",
@@ -1310,7 +1310,7 @@
         ScopeNameChina: "marketingmessageeditor_ScopeNameChina_2O5jc",
       };
     },
-    37023: (e) => {
+    81922: (e) => {
       e.exports = {
         Dummy: "marketingmessagefiltersedit_Dummy_3glD2",
         ConditionContainer:
@@ -1343,13 +1343,13 @@
         ItemToAdd: "marketingmessagefiltersedit_ItemToAdd_33Wvv",
       };
     },
-    9611: (e) => {
+    48471: (e) => {
       e.exports = {
         PreviewRow: "marketingmessagepreview_PreviewRow_Wog1G",
         Spacer: "marketingmessagepreview_Spacer_1rAD1",
       };
     },
-    44109: (e) => {
+    25856: (e) => {
       e.exports = {
         DashStatsContainerPlaceholder:
           "marketingmessagestats_DashStatsContainerPlaceholder_2NZrJ",
@@ -1363,7 +1363,7 @@
         CurrentStats: "marketingmessagestats_CurrentStats_20pLu",
       };
     },
-    15647: (e) => {
+    83404: (e) => {
       e.exports = {
         Container: "planningdashboard_Container_1IVr1",
         CalendarCtn: "planningdashboard_CalendarCtn_3reVP",
@@ -1376,7 +1376,7 @@
         OtherLinks: "planningdashboard_OtherLinks_1ePXE",
       };
     },
-    37985: (e) => {
+    34987: (e) => {
       e.exports = {
         RowCtn: "promoagendarow_RowCtn_1Cq0N",
         Public: "promoagendarow_Public_2p_SN",
@@ -1401,10 +1401,10 @@
         Unset: "promoagendarow_Unset_mDhm0",
       };
     },
-    32682: (e) => {
+    80430: (e) => {
       e.exports = { DateCtn: "promotioncreatedialog_DateCtn_13RGK" };
     },
-    717: (e) => {
+    15064: (e) => {
       e.exports = {
         ButtonRow: "promotionplaneditor_ButtonRow_3KhKT",
         ButtonRowSpacer: "promotionplaneditor_ButtonRowSpacer_AWToJ",
@@ -1448,7 +1448,7 @@
         StatusRow: "promotionplaneditor_StatusRow_DF-Ee",
       };
     },
-    85193: (e) => {
+    63546: (e) => {
       e.exports = {
         Featuring: "featuring_Featuring_3T5cu",
         FeaturingMissing: "featuring_FeaturingMissing_22uFY",
@@ -1461,7 +1461,7 @@
         BannerCtn: "featuring_BannerCtn_2dqTs",
       };
     },
-    38369: (e) => {
+    44138: (e) => {
       e.exports = {
         SearchResults: "newsaledialog_SearchResults_3j5hs",
         VerifyCtn: "newsaledialog_VerifyCtn_14bU7",
@@ -1473,7 +1473,7 @@
         StepOneTitle: "newsaledialog_StepOneTitle_21SRB",
       };
     },
-    86871: (e) => {
+    64203: (e) => {
       e.exports = {
         DashboardCtn: "saledashboard_DashboardCtn_3Hft6",
         DashboardSectionActive: "saledashboard_DashboardSectionActive_3SCtU",
@@ -1495,7 +1495,7 @@
         VisualBar: "saledashboard_VisualBar_1wyrg",
       };
     },
-    99519: (e) => {
+    81056: (e) => {
       e.exports = {
         SectionContainer: "salerowsection_SectionContainer_DPwXX",
         SaleSectionTitle: "salerowsection_SaleSectionTitle_jRz_c",
@@ -1520,7 +1520,7 @@
         BrowseLink: "salerowsection_BrowseLink_3isng",
       };
     },
-    3408: (e) => {
+    18561: (e) => {
       e.exports = {
         DetailedStats: "salestats_DetailedStats_z2xIG",
         DetailedStatsTopBar: "salestats_DetailedStatsTopBar_3YStR",
@@ -1542,7 +1542,7 @@
         DetailedStatsButton: "salestats_DetailedStatsButton_2F8AJ",
       };
     },
-    72859: (e) => {
+    17736: (e) => {
       e.exports = {
         AccessLog: "valveaccesslogs_AccessLog_3H6ey",
         AccessLogEntry: "valveaccesslogs_AccessLogEntry_2e3po",
@@ -1550,7 +1550,7 @@
         Timestamp: "valveaccesslogs_Timestamp_3EUlY",
       };
     },
-    63280: (e) => {
+    79889: (e) => {
       e.exports = {
         Results: "partnersiteappsearch_Results_3mK1P",
         ResultRow: "partnersiteappsearch_ResultRow_1QyQu",
@@ -9925,7 +9925,7 @@
         }
         constructor() {
           (this.m_eCurLang = (0, r.jM)(o.De.LANGUAGE)),
-            (this.m_rgHasData = (0, s.LG)([], 30, !1)),
+            (this.m_rgHasData = (0, s.LG)([], 31, !1)),
             (this.m_bHasLocalizationContext = !1);
         }
       }
@@ -10165,7 +10165,7 @@
       }
       (0, a.gn)([c.ak], d.prototype, "CreateRegistration", null);
     },
-    42254: (e, t, n) => {
+    1578: (e, t, n) => {
       "use strict";
       n.d(t, { R: () => pe });
       var a = n(33940),
@@ -10238,7 +10238,7 @@
         y = n(50304),
         S = n(73961),
         f = n(50265),
-        b = n(1069),
+        b = n(23557),
         B = n.n(b),
         D = n(19304);
       class w extends s.Component {
@@ -10469,7 +10469,7 @@
       (0, a.gn)([E.ak], C.prototype, "OnMouseOver", null),
         (0, a.gn)([E.ak], C.prototype, "OnClick", null);
       const I = w;
-      var R = n(23265),
+      var R = n(86321),
         M = n.n(R);
       const T = class extends I {
         performSearch(e) {
@@ -10517,7 +10517,7 @@
           return Number.MAX_VALUE;
         }
       };
-      var A = n(18071),
+      var A = n(58998),
         k = n.n(A),
         P = n(14826);
       class F extends I {
@@ -10745,24 +10745,24 @@
         (0, a.gn)([E.ak], N.prototype, "GetTextAreaCurrent", null);
       var O = n(22444),
         G = n(38278),
-        x = n(17318),
+        x = n(52629),
         L = n.n(x),
         z = n(67736),
         U = n(57742),
-        W = n(45123),
+        W = n(14730),
         j = n.n(W),
         X = n(60161);
       var V = n(69159),
         H = n(77865),
-        q = n(69338),
+        q = n(3301),
         Z = n(84343),
-        K = n(38737),
+        K = n(66818),
         $ = n.n(K),
         Q = n(25125),
         Y = n(23801),
         J = n(89220),
         ee = n(17547),
-        te = n(36320);
+        te = n(12956);
       const ne = (e) => {
           const { clanSteamID: t, fnImageSelectCallBack: n } = e,
             i = (0, s.useRef)(null),
@@ -10916,7 +10916,7 @@
             ),
           );
         };
-      var ie = n(79472),
+      var ie = n(88367),
         re = n(93414),
         se = n(7948),
         le = n(78423),
@@ -12552,7 +12552,7 @@
         p = n(22444),
         _ = n(14826),
         g = n(19304),
-        h = n(93907),
+        h = n(81591),
         v = n.n(h);
       let E = 1;
       function y(e) {
@@ -12648,18 +12648,18 @@
           e.children,
         );
       }
-      var S = n(17318),
+      var S = n(52629),
         f = n.n(S),
         b = n(67736),
         B = n(57742),
-        D = n(1721),
+        D = n(35266),
         w = n.n(D),
         C = n(701),
-        I = n(69338),
+        I = n(3301),
         R = n(23217),
         M = n(60161),
         T = n(89220),
-        A = n(85073),
+        A = n(48501),
         k = n.n(A);
       function P(e) {
         const {
@@ -12971,11 +12971,11 @@
         l = n(69678),
         o = n(71181),
         c = n(7948),
-        m = n(13364),
+        m = n(69818),
         d = n.n(m),
         u = n(701),
         p = n(14826),
-        _ = n(21822),
+        _ = n(8725),
         g = n.n(_);
       function h(e) {
         const {
@@ -13133,9 +13133,9 @@
       n.d(t, { NT: () => c, tx: () => o });
       var a = n(89526),
         i = n(67736),
-        r = n(34976),
+        r = n(93513),
         s = n(14826),
-        l = n(69338);
+        l = n(3301);
       function o() {
         const [e, t] = (0, a.useState)(!1),
           [n, i] = (0, a.useState)(!1),
@@ -13272,7 +13272,7 @@
         E = n(22444),
         y = n(51438),
         S = n(8179),
-        f = n(57800);
+        f = n(26564);
       class b extends s.Component {
         constructor(e) {
           super(e), (this.state = { activeIndex: e.initialActiveIndex || 0 });
@@ -13446,7 +13446,7 @@
           Object.assign({ className: (0, p.Z)(t, f.AddonPickerMessage) }, n),
         );
       }
-      var k = n(28744),
+      var k = n(26679),
         P = n.n(k),
         F = n(75962);
       class N extends s.PureComponent {
@@ -14495,7 +14495,7 @@
         m = n(50304),
         d = n(14826),
         u = n(19304),
-        p = n(62404),
+        p = n(68436),
         _ = n.n(p),
         g = n(701),
         h = n(16826),
@@ -14626,7 +14626,7 @@
         (S = (0, a.gn)([r.Pi], S));
       const f = S;
     },
-    24978: (e, t, n) => {
+    80127: (e, t, n) => {
       "use strict";
       n.d(t, { oZ: () => C, pL: () => R });
       var a = n(89526),
@@ -14650,18 +14650,18 @@
         p = n(14826),
         _ = n(88443),
         g = n(207),
-        h = n(82248);
+        h = n(6726);
       const v =
         "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAgJJREFUeNrsmz9LxDAYxpNyIhzICeIkiLM46KAf4EY9HBzcnDwXJ0cnFxddHdQP4ScQcXJxUvDP7qAOLg5Ot8TnpDhIkja5mL5t3hcechDS9Pmlb3mba6VSSqQcmUg8GAADYAAMgAHoQkr5K8QppGouvU9THZAbF+hvo3mDOjVfbOmbApsNMD/SPaDf5HuANQXQN4+fT4ax79CAqK9ZzSWvTYFWwYF2LH2rgHRP0T0W7rNs2maWg4yj2Uq5DtiAplIG0BcJhA1Al0thBsAAGEDToxVzMtQWL38LFBRTk6HHkAWQG+lEGMMpwAAYAANgAAyAATAABsAAGAADIPUw1POYs/ef5xkVAB5jb2KMSToFlFITaMaSBADzw32DK6idHIDc/CW0klwKlDB/bhtsUlEsUjEP3VrO8wySJp+1BlDWvG2hawvAxXzjALiatwEYpRBad4BwgYLmS2NkGs2ax9y70LKh7wTaw3yqLE3fK8Al5nTmoYfA8xy5+swquoSHK38NLQQ87DFWfZ98KUzJfHQA1MxHBUDRfEwAJM3/PG5bvhkK+THRKzRTpXnjC6GRAISMA5g/9EhB5x2hJY+Tu/MY8whti3Kv3Q5g/jnoLlXR6/KOlJWH+S7m+ohwEya3HxDNPMUNERLmqwJAxnwVAEiZjw2AnPmiOiCJ4D9HUwfwLcAAxHgyaE4johYAAAAASUVORK5CYII=";
-      var E = n(75313);
+      var E = n(16947);
       const y =
         "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAtNJREFUeNrsmk1rE0EYgHe19ZBIY2kj4qUQVGjxAz2J4gcVvfmBP8FI8eZF8OJNL4oFPYrGX1CK4lEMiChe/aCClNBeRGxLTTE5GDU+Y2bDJG5rL5lZ950XnsxkE5h9n8zszkw2bDabgeTYEAgPL8AL8AK8AC/AC/AC5EafegnDcM0vMVvMUOyA7bBNswVymgHYDOp7m/SxUNczRlvZdZ5XDX7oeh2+q9OAqq6rY99gRR9TfIXPmk8wS171f+QVhH9eYgRw/BhFEQ7q5MP/7MdVwmbhNZTI8fm6BPBe/XoP4XzKevs0XCDX6qoCdPIvYE9Kh/xbOBpJULl3XwQfpDh5FXt1ju1o9wDKQ7x/KeTif5icX3X3gKKgu18xbh4wLkjAeMcQIPLwRdgcaCssRD1gTOAkcMwcAgWBAgqmgBGBAkZMAfkeN1ZPoIC8KWCox409hePwJkEChmwKCPRi5ABMJOSO0yFg2EaLSPgF96nuhFt6aesqhk0BgzZbRsIKXKU6Co8dCRg0BWRdnAESKnCO6gl4Z7n5rCmg3+VgREKZYj9cUrMzS832mwJyrq9ISPgJ9/T1YRIaPW4y170YSkSozQq4QnU3POl1e4ndFUbCRzhD9RS8FyfAVvQl9cRYpu+iuA2nRQnQG7PX4LKNu1MkoOr6TkDiGykuwnULi7Mo57aAhuPk1RbVncDujnTDvAjWHCVegEdUnwX2t+NrpoBly4kPwE2qH+Cso463bA6BRUuJK+FqS/pG0NqUdBmLpoAlC8mrP1vvwr6E3HCWbAo46bCrrykgugb0egWWSeBca8EUMC9wFjxvCqgIFFAxBcwIFDDTFsCyU42HOUHJz+mcO5bDZUECynH7ASVBAkp/CVBPTFBMCUh+Sufayts/JGWE/uBI0HqkLG0xbSYf2wNi5u7yHpRcZSGT7kdlJYd/XN4L8AK8AC/AC/ACvACx8VuAAQDxke5GRJ5P8AAAAABJRU5ErkJggg==";
       var S = n(17547),
         f = n(71161),
-        b = n(69338),
-        B = n(72213),
+        b = n(3301),
+        B = n(55079),
         D = n(3896),
-        w = n(17318);
+        w = n(52629);
       function C(e) {
         const {
             creatorID: t,
@@ -15000,7 +15000,7 @@
         h = n(26412),
         v = n(47165),
         E = n(19274),
-        y = n(4585),
+        y = n(44094),
         S = n.n(y),
         f = n(88464),
         b = n(14826),
@@ -15112,7 +15112,7 @@
         F = n(82079),
         N = n(13141),
         O = n(57858),
-        G = n(69338),
+        G = n(3301),
         x = n(87178),
         L = n(20790);
       let z = class extends i.Component {
@@ -15261,9 +15261,9 @@
         }
       };
       z = (0, a.gn)([f.Pi], z);
-      var U = n(29054),
+      var U = n(99472),
         W = n.n(U),
-        j = n(51989),
+        j = n(91972),
         X = n.n(j);
       let V = class extends i.Component {
         constructor() {
@@ -18899,7 +18899,7 @@
         }
       }
       var et = n(84343),
-        tt = n(49245),
+        tt = n(26727),
         nt = n.n(tt);
       function at(e) {
         const { defid: t, url: n } = e,
@@ -18935,7 +18935,7 @@
         );
       }
       var it = n(31936),
-        rt = n(77555);
+        rt = n(75223);
       function st(e) {
         const { inputType: t, id: n } = e;
         let a = "bundle" == t ? "bundle" : "sub" == t ? "sub" : "game";
@@ -19543,7 +19543,7 @@
         Ut = n(22444),
         Wt = n(77865),
         jt = n(94843),
-        Xt = n(43682),
+        Xt = n(70499),
         Vt = n.n(Xt);
       const Ht = (e) => {
         const [t, n] = (0, i.useState)(!0),
@@ -19613,7 +19613,7 @@
           video: c,
         });
       };
-      var qt = n(83431),
+      var qt = n(21003),
         Zt = n(32868),
         Kt = n(17547);
       const $t = i.lazy(() => n.e(4601).then(n.bind(n, 90171))),
@@ -19699,7 +19699,7 @@
           })() >= e
         );
       }
-      var an = n(54524);
+      var an = n(5456);
       function rn(e) {
         const t = (0, w.id)(),
           n = nn(tn),
@@ -19720,7 +19720,7 @@
         );
       }
       var sn = n(44026),
-        ln = n(59663);
+        ln = n(2851);
       function on(e) {
         const { fileUploadManager: t } = e,
           n = (0, i.useRef)();
@@ -19759,7 +19759,7 @@
         );
       }
       var cn = n(25125),
-        mn = n(71654);
+        mn = n(59015);
       function dn(e) {
         const { fileUploadManager: t } = e,
           n = (0, cn.SZ)(() => t.file_upload_props.eUploadState);
@@ -21357,7 +21357,7 @@
       (0, a.gn)([g.ak], xn.prototype, "TEST_OverrideClaimState", null),
         (0, a.gn)([g.ak], xn.prototype, "UserClaimItem", null);
       var Ln = n(77557),
-        zn = n(7762);
+        zn = n(39087);
       class Un {
         GetItemDefForAppID(e) {
           return this.m_mapAppToDefs.get(e);
@@ -22309,7 +22309,7 @@
         l = n(46132),
         o = n(78423),
         c = n(7948),
-        m = n(17318),
+        m = n(52629),
         d = n.n(m),
         u = n(19304),
         p = n(14826),
@@ -22440,7 +22440,7 @@
         );
         const n = (0, r.SZ)(() => {
           const e = [];
-          for (let n = 0; n < 30; ++n) e[n] = t(n);
+          for (let n = 0; n < 31; ++n) e[n] = t(n);
           return e;
         });
         return (
@@ -22459,15 +22459,15 @@
         r = n(89526),
         s = n(5556),
         l = n.n(s),
-        o = n(28542),
+        o = n(70369),
         c = n(85651),
-        m = n(17318),
+        m = n(52629),
         d = n.n(m),
         u = n(19304),
         p = n(14826),
         _ = n(4306),
         g = n(84343),
-        h = n(69409),
+        h = n(29183),
         v = n.n(h),
         E = n(47812),
         y = n.n(E);
@@ -22730,7 +22730,7 @@
           );
         return r.createElement(r.Fragment, null, a.ParseBBCode(t, {}));
       }
-      var h = n(25899),
+      var h = n(30204),
         v = n.n(h);
       const E = (0, i.Pi)((e) => {
         const t = e.photo ? (0, s.vZ)(e.photo, (0, l.jM)(d.De.LANGUAGE)) : null,
@@ -22902,7 +22902,7 @@
         o = n(14826),
         c = n(207),
         m = n(32765),
-        d = n(72775);
+        d = n(31265);
       function u(e) {
         const { gidEvent: t } = e,
           n = (0, r.XC)(t),
@@ -22968,13 +22968,13 @@
         r = n(74831),
         s = n(19304),
         l = n(32765),
-        o = n(17318),
+        o = n(52629),
         c = n.n(o),
         m = n(43946),
         d = n(84343),
         u = n(14826),
-        p = n(80298),
-        _ = n(48294),
+        p = n(94225),
+        _ = n(38520),
         g = n(13345);
       function h(e, t) {
         return (
@@ -23252,7 +23252,7 @@
           { cache: !1 },
         ),
         _ = "avatarandpersonas";
-      var g = n(77571);
+      var g = n(56708);
       function h(e) {
         const { accountID: t, bHideWhenNotAvailable: n } = e,
           [r] = (function (e) {
@@ -23296,7 +23296,7 @@
         c = n(14826),
         m = n(22444),
         d = n(701),
-        u = n(44262),
+        u = n(25640),
         p = n.n(u),
         _ = n(36041);
       !(function (e) {
@@ -23775,16 +23775,16 @@
         o = n(78423),
         c = n(97334),
         m = n(22444),
-        d = n(17318),
+        d = n(52629),
         u = n(67736),
         p = n(57742),
-        _ = n(69338),
+        _ = n(3301),
         g = n(23217),
         h = n(19304),
         v = n(14826),
         E = n(11170),
         y = n(84343),
-        S = n(5303);
+        S = n(79629);
       const f = (e) => {
           const t = (t, n) => {
             t.preventDefault();
@@ -24171,7 +24171,7 @@
         r = n(19304),
         s = n(14826),
         l = n(5029),
-        o = n(80122),
+        o = n(74286),
         c = n.n(o),
         m = n(84343),
         d = n(75962);
@@ -24291,10 +24291,10 @@
         r = n(701),
         s = n(89526),
         l = n(19304),
-        o = n(17318),
+        o = n(52629),
         c = n(17547),
         m = n(88464),
-        d = n(67876);
+        d = n(48705);
       const u = (0, m.Pi)((e) =>
         s.createElement(
           s.Fragment,
@@ -24373,7 +24373,7 @@
         c = n(19304),
         m = n(14826),
         d = n(4306),
-        u = n(82487);
+        u = n(24331);
       class p extends i.Component {
         constructor() {
           super(...arguments),
@@ -24548,7 +24548,7 @@
         }
         SetLocalization(e, t, n) {
           let a = this.m_mapTokens.get(e);
-          a || ((a = (0, s.LG)([], 30, null)), this.m_mapTokens.set(e, a)),
+          a || ((a = (0, s.LG)([], 31, null)), this.m_mapTokens.set(e, a)),
             (a[t] = n);
         }
         GetSortedTokenList() {
@@ -24661,7 +24661,7 @@
           return (
             e.data.forEach((e) => {
               const n = e.field;
-              for (let a = 0; a < 30; ++a) {
+              for (let a = 0; a < 31; ++a) {
                 const r = (0, i.eV)((0, i.j_)(a));
                 t.SetLocalization(n, a, e[r]);
               }
@@ -24673,8 +24673,8 @@
           const t = new c();
           return (
             e.data.forEach((e) => {
-              const n = (0, i.jM)(e.language, 30);
-              if (30 !== n)
+              const n = (0, i.jM)(e.language, 31);
+              if (31 !== n)
                 for (const [a, i] of Object.entries(e))
                   "language" !== a &&
                     "string" == typeof i &&
@@ -24816,7 +24816,7 @@
       }
       function d(e) {
         if (e)
-          for (let t = 0; t < 30; ++t) {
+          for (let t = 0; t < 31; ++t) {
             const n = (0, r.j_)(t);
             null == e[n] ||
               null == e[n] ||
@@ -25679,7 +25679,7 @@
       }
       (0, a.gn)([i.aD], d.prototype, "Init", null);
     },
-    26863: (e, t, n) => {
+    88505: (e, t, n) => {
       "use strict";
       n.r(t), n.d(t, { default: () => mn });
       var a = n(33940),
@@ -25691,7 +25691,7 @@
         c = n(84770),
         m = n(47165),
         d = n(52316),
-        u = n(42254),
+        u = n(1578),
         p = n(22444),
         _ = n(17547),
         g = n(88464),
@@ -25735,7 +25735,7 @@
         A = n(19304),
         k = n(14826),
         P = n(207),
-        F = n(57489),
+        F = n(37866),
         N = n.n(F),
         O = n(20790),
         G = n(3896),
@@ -25952,11 +25952,11 @@
         );
       });
       var U = n(4306),
-        W = n(17318),
+        W = n(52629),
         j = n.n(W),
         X = n(57742),
         V = n(60161),
-        H = n(43997),
+        H = n(38695),
         q = n.n(H),
         Z = n(67736),
         K = n(36041),
@@ -26111,7 +26111,7 @@
         }
       }
       (0, a.gn)([y.LO], J.prototype, "m_mapClanReposted", void 0);
-      var ee = n(69338);
+      var ee = n(3301);
       const te = (0, g.Pi)((e) => {
         const { eventModel: t } = e,
           [n, i] = (0, s.useState)(!0),
@@ -26292,10 +26292,10 @@
       });
       var ne = n(44026),
         ae = n(88443),
-        ie = n(37865);
-      var re = n(82248),
-        se = n(15164),
-        le = n(75313),
+        ie = n(76672);
+      var re = n(6726),
+        se = n(7787),
+        le = n(16947),
         oe = n(84343),
         ce = n(75962),
         me = n(5386),
@@ -26677,7 +26677,7 @@
       var Be = n(20830),
         De = n(24448),
         we = n(86519),
-        Ce = n(31038),
+        Ce = n(99066),
         Ie = n.n(Ce);
       const Re = (0, g.Pi)((e) => {
         const { appid: t, eventLink: n } = e,
@@ -27429,9 +27429,9 @@
         (0, a.gn)([U.ak], Fe.prototype, "GotoDiscussion", null),
         (0, a.gn)([U.ak], Fe.prototype, "OpenRepostDialogs", null),
         (Fe = (0, a.gn)([g.Pi], Fe));
-      var Oe = n(6864),
+      var Oe = n(82204),
         Ge = n.n(Oe),
-        xe = n(83809),
+        xe = n(99119),
         Le = n.n(xe);
       function ze(e) {
         return h.L7.logged_in
@@ -30115,7 +30115,7 @@
       var Ft = n(87178),
         Nt = n(60729),
         Ot = n(97352),
-        Gt = n(38279),
+        Gt = n(19983),
         xt = n.n(Gt);
       function Lt(e) {
         const { event: t } = e,
@@ -30170,7 +30170,7 @@
           : s.createElement(s.Fragment, null, t);
       }
       var jt = n(55330);
-      const Xt = s.lazy(() => n.e(4601).then(n.bind(n, 96564)));
+      const Xt = s.lazy(() => n.e(4601).then(n.bind(n, 22015)));
       function Vt(e) {
         var t;
         const [n, a] = (0, Ut.vs)(e.appid, { include_assets: !0 }),
@@ -30946,7 +30946,7 @@
           s.createElement(z, Object.assign({}, e)),
         ),
       );
-      var Jt = n(60361);
+      var Jt = n(24720);
       let en = class extends s.Component {
         constructor() {
           super(...arguments), (this.m_refFocus = s.createRef());
@@ -30994,7 +30994,7 @@
       var tn = n(41200),
         nn = n(11837),
         an = n(11170),
-        rn = n(15854);
+        rn = n(2821);
       function sn(e, t, n) {
         const a = e && e.length > n ? [...e] : (0, nn.LG)(e || [], n + 1, "");
         return (a[n] = t), a;
@@ -31005,7 +31005,7 @@
       function on(e, t) {
         let n = !1,
           a = !1;
-        for (let i = 0; i < 30; i++) {
+        for (let i = 0; i < 31; i++) {
           const r = ln(e, i).trim(),
             s = ln(t, i).trim();
           if (!r && !s) continue;
@@ -31142,7 +31142,7 @@
                           (n.postTime = Date.now() / 1e3),
                           (n.startTime = Date.now() / 1e3),
                           (n.type = 12);
-                        for (let a = 0; a < 30; a++)
+                        for (let a = 0; a < 31; a++)
                           n.name.set(a, ln(e, a)),
                             n.description.set(a, ln(t, a));
                         return n;
@@ -31295,7 +31295,7 @@
                       const e = new an.C(),
                         t = (0, k.Xx)("#BuildNotes_SampleTitle"),
                         n = (0, k.Xx)("#BuildNotes_SampleDescription");
-                      for (let a = 0; a < 30; a++)
+                      for (let a = 0; a < 31; a++)
                         e.SetLocalization("Title", a, t),
                           e.SetLocalization("Description", a, n);
                       (0, X.AM)(
@@ -31582,7 +31582,7 @@
         };
       }
     },
-    71773: (e, t, n) => {
+    47381: (e, t, n) => {
       "use strict";
       n.r(t), n.d(t, { OptInRoutes: () => As, default: () => Fs });
       var a = n(96927),
@@ -34076,7 +34076,7 @@
           ) {
             let i = this.m_section.lists[e].options[t],
               r = !1;
-            for (let e = 0; e < 30; ++e) {
+            for (let e = 0; e < 31; ++e) {
               if ((0, o.Xj)(n, e) != (0, o.Xj)(i.text, e)) {
                 const t = (0, w.j_)(e);
                 (i.text[t] = n[t]), (r = !0);
@@ -34199,7 +34199,7 @@
       var L = n(565),
         z = n(22444),
         U = n(17547),
-        W = n(17318),
+        W = n(52629),
         j = n.n(W),
         X = n(21904),
         V = n(57742),
@@ -34207,9 +34207,9 @@
         q = n(19304),
         Z = n(60161),
         K = n(85651),
-        $ = n(86871),
+        $ = n(64203),
         Q = n.n($),
-        Y = n(33817),
+        Y = n(3737),
         J = n.n(Y),
         ee = n(43068),
         te = n(5029),
@@ -36271,7 +36271,7 @@
         (0, r.gn)([c.aD], Oe.prototype, "TestFireEmailToSelf", null),
         (0, r.gn)([c.aD], Oe.prototype, "Init", null);
       var Le = n(14826),
-        ze = n(69338);
+        ze = n(3301);
       function Ue(e) {
         const { list: t, bActiveOptIn: n } = e,
           a = (0, D.useMemo)(() => t.map((e) => e.pageid), [t]),
@@ -36448,7 +36448,7 @@
           ),
         );
       }
-      var He = n(34976),
+      var He = n(93513),
         qe = n.n(He);
       function Ze(e) {
         const { def: t, closeModal: n, stats: a } = e,
@@ -36983,12 +36983,12 @@
       var Ye = n(88464),
         Je = n(5386),
         et = n(52316),
-        tt = n(42254),
-        nt = n(49985),
+        tt = n(1578),
+        nt = n(20139),
         at = n(701),
         it = n(84343),
-        rt = n(97799),
-        st = n(28152),
+        rt = n(53134),
+        st = n(88938),
         lt = n.n(st),
         ot = n(24166);
       const ct = (0, Ye.Pi)((e) => {
@@ -37520,7 +37520,7 @@
       };
       var St = n(25125),
         ft = n(18030),
-        bt = n(13364),
+        bt = n(69818),
         Bt = n.n(bt),
         Dt = n(82971),
         wt = n(15039),
@@ -37557,7 +37557,7 @@
           i = (0, D.useCallback)(
             (e, n, a, i, r) => {
               (0, u.X)(
-                null != a && a >= 0 && a < 30,
+                null != a && a >= 0 && a < 31,
                 "Unexpected value for elang: " + a,
               ),
                 t.SetLocalizedOptInBanner(a, e + (0, wt.U)(i));
@@ -37704,13 +37704,18 @@
                 onCancel: a,
               },
               D.createElement("br", null),
+              D.createElement("br", null),
               D.createElement(
                 "div",
                 null,
-                "Note: Remeber after add all of the apps, go to 'Manage' Tab and 'Refresh Stats' to update our list",
+                "Note: Remember after add all of the apps, go to 'Manage' Tab and 'Refresh Stats' to update our list",
               ),
               D.createElement("br", null),
-              D.createElement("div", null, "Enter App IDs:"),
+              D.createElement(
+                "div",
+                null,
+                "Enter App IDs seperated by new lines:",
+              ),
               D.createElement("textarea", {
                 cols: 120,
                 rows: 10,
@@ -37928,7 +37933,7 @@
         Wt = n(47165),
         jt = n(57858),
         Xt = n(25871),
-        Vt = n(31698),
+        Vt = n(20730),
         Ht = n.n(Vt),
         qt = n(24448),
         Zt = n(44026);
@@ -40044,7 +40049,7 @@
           ),
         );
       }
-      var wn = n(42064);
+      var wn = n(20075);
       function Cn(e) {
         const t = N.Get(),
           n = G(),
@@ -41106,7 +41111,7 @@
         const t = e.split("|");
         return { section_id: t[0], list_id: t[1], option_id: t[2] };
       }
-      var Zn = n(54703),
+      var Zn = n(84036),
         Kn = n.n(Zn),
         $n = n(15254);
       class Qn {
@@ -42598,9 +42603,9 @@
       const Ba =
         n.p +
         "images/applications/appmgmt/Logo_Steamworks.png?v=valveisgoodatcaching";
-      var Da = n(9691),
+      var Da = n(26897),
         wa = n.n(Da),
-        Ca = n(79186);
+        Ca = n(20565);
       const Ia = (0, Ye.Pi)((e) => {
           const { section: t, sectionIndex: n, emailDef: a, storeItem: i } = e;
           let r = null;
@@ -43563,7 +43568,7 @@
             r,
           );
         });
-      var ka = n(97942),
+      var ka = n(59808),
         Pa = n.n(ka);
       const Fa = (e) => {
           const { emailDef: t, storeItem: n, partnerInfo: a } = e;
@@ -44364,10 +44369,15 @@
       };
       function La(e) {
         const { emailDef: t } = e,
-          [n, a] = (0, St.SZ)(() => [
-            512 == t.GetEmailTargeting(),
-            t.GetCustomAppTargetList(),
-          ]);
+          [n, a] = (0, St.SZ)(() => {
+            var e;
+            return [
+              512 == t.GetEmailTargeting(),
+              (null === (e = t.GetCustomAppTargetList()) || void 0 === e
+                ? void 0
+                : e.length) || 0,
+            ];
+          });
         return n
           ? D.createElement(
               "div",
@@ -44378,7 +44388,7 @@
                 { className: Da.ConfTitle },
                 "Custom App Target List",
               ),
-              D.createElement("div", null, "Apps List Size: ", a.length),
+              D.createElement("div", null, "Apps List Size: ", a),
               D.createElement(
                 z.zx,
                 {
@@ -44396,9 +44406,9 @@
       }
       function za(e) {
         const { emailDef: t, closeModal: n } = e,
-          [a] = (0, St.SZ)(() => [t.GetCustomAppTargetList()]),
-          [i, r] = (0, D.useState)(0),
-          s = (0, D.useRef)();
+          [a, i] = D.useState(""),
+          [r, s] = D.useState(""),
+          [l] = (0, St.SZ)(() => [t.GetCustomAppTargetList()]);
         return D.createElement(
           Xe.uH,
           {
@@ -44407,34 +44417,58 @@
             onCancel: n,
             bAllowFullSize: !0,
             onOK: () => {
-              n();
+              a.replace(/\n/g, "|")
+                .split("|")
+                .forEach((e) => {
+                  const n = Number.parseInt(e);
+                  n > 0 && t.AddAppToCustomList(n);
+                });
+              r
+                .replace(/\n/g, "|")
+                .split("|")
+                .forEach((e) => {
+                  const n = Number.parseInt(e);
+                  n > 0 && t.RemoveAppToCustomList(n);
+                }),
+                n();
             },
           },
-          D.createElement(z.II, {
-            title: "Add Single AppID",
-            value: i,
-            ref: s,
-            type: "number",
-            onChange: (e) => r(Number.parseInt(e.currentTarget.value)),
+          D.createElement(
+            "div",
+            null,
+            "ADDING: Enter App IDs seperated by new lines:",
+          ),
+          D.createElement("textarea", {
+            cols: 120,
+            rows: 5,
+            onChange: (e) => i(e.currentTarget.value),
+            value: a,
+            autoFocus: !0,
           }),
           D.createElement(
-            z.zx,
-            {
-              onClick: () => {
-                i > 0 &&
-                  (t.AddAppToCustomList(i),
-                  s.current && (s.current.element.value = "0"));
-              },
-            },
-            "Add Above App To List",
+            "div",
+            null,
+            "REMOVE: Enter App IDs seperated by new lines:",
+          ),
+          D.createElement("textarea", {
+            cols: 120,
+            rows: 5,
+            onChange: (e) => s(e.currentTarget.value),
+            value: r,
+            autoFocus: !0,
+          }),
+          D.createElement(
+            "p",
+            null,
+            "After hitting ok, remember to save the optin.",
           ),
           D.createElement(
             ot.ug,
-            { title: `App List: ${a.length} Apps`, bStartMinimized: !0 },
+            { title: `App List: ${l.length} Apps`, bStartMinimized: !0 },
             D.createElement(
               D.Fragment,
               null,
-              a.map((e) =>
+              l.map((e) =>
                 D.createElement(Ua, {
                   key: `app_${e}`,
                   appid: e,
@@ -44522,7 +44556,7 @@
               ),
             );
       };
-      var ja = n(72165);
+      var ja = n(31148);
       const Xa = (e) => {
         const { closeModal: t, emailDef: n } = e,
           [a, i] = D.useState(void 0),
@@ -45851,7 +45885,7 @@
                 (function (e, t, n) {
                   var a;
                   let i = new ci.C();
-                  for (let r = 0; r < 30; ++r)
+                  for (let r = 0; r < 31; ++r)
                     t && Ni(e, i, r),
                       null === (a = e.emails) ||
                         void 0 === a ||
@@ -47078,7 +47112,7 @@
         (0, r.gn)([c.aD.bound], Hi.prototype, "SetGameProfileIntent", null);
       var qi = n(86519),
         Zi = n(36041),
-        Ki = n(7993);
+        Ki = n(96230);
       const $i = (0, Ye.Pi)((e) =>
           e.sections && 0 != e.sections.length
             ? D.createElement(
@@ -48466,7 +48500,7 @@
         fr = n(95408),
         br = n(51441),
         Br = n(46294),
-        Dr = n(27499),
+        Dr = n(19525),
         wr = n(58218);
       const Cr = {
         include_basic_info: !0,
@@ -49495,9 +49529,9 @@
           ),
         );
       }
-      var jr = n(11401),
+      var jr = n(26032),
         Xr = n.n(jr),
-        Vr = n(66813),
+        Vr = n(91946),
         Hr = n.n(Vr);
       function qr(e) {
         const {
@@ -53918,13 +53952,13 @@
         const m = Boolean(1 != t),
           d = Boolean(0 != t);
         let u = 0;
-        for (let t = 0; t < 30; ++t) e && e[(0, g.j_)(t)] && (u += 1);
+        for (let t = 0; t < 31; ++t) e && e[(0, g.j_)(t)] && (u += 1);
         let p,
           _ = 27;
         if ((1 == t ? (_ = 1) : 2 == t && (_ += 1), n)) {
           p = !0;
           let t = 0;
-          for (let n = 0; n < 30; ++n) {
+          for (let n = 0; n < 31; ++n) {
             const r = (0, g.j_)(n);
             if (
               (a && a[r] && i && i[r] && (t += 1),
@@ -53944,7 +53978,7 @@
           v = 0;
         if ("featured_video" == r) {
           p = We(o, ".mp4") && We(c, ".webm");
-          for (let e = 0; e < 30; ++e) {
+          for (let e = 0; e < 31; ++e) {
             const t = (0, g.j_)(e);
             s && s[t] && (h += 1), l && l[t] && (v += 1);
           }
@@ -58718,7 +58752,7 @@
         $t = n(57858),
         Qt = n(5029),
         Yt = n(57742),
-        Jt = n(69338),
+        Jt = n(3301),
         en = n(75962),
         tn = n(58218),
         nn = n(60161),
@@ -58731,7 +58765,7 @@
         mn = n(19304),
         dn = n(81349),
         un = n(25508),
-        pn = n(79302),
+        pn = n(77857),
         _n = n.n(pn);
       const gn = "packageid";
       function hn(e) {
@@ -59344,14 +59378,14 @@
           )
         );
       }
-      var wn = n(65131),
+      var wn = n(22798),
         Cn = n.n(wn),
         In = n(93923),
         Rn = n(20614),
         Mn = n(17547),
-        Tn = n(17318),
+        Tn = n(52629),
         An = n.n(Tn),
-        kn = n(54812),
+        kn = n(15026),
         Pn = n.n(kn),
         Fn = n(66104),
         Nn = n(3073),
@@ -59452,9 +59486,9 @@
           t
         );
       }
-      var Xn = n(34976),
+      var Xn = n(93513),
         Vn = n.n(Xn),
-        Hn = n(97942),
+        Hn = n(59808),
         qn = n.n(Hn);
       function Zn(e) {
         var t;
@@ -60322,7 +60356,7 @@
           ),
         );
       }
-      var da = n(17661),
+      var da = n(95568),
         ua = n.n(da);
       function pa(e) {
         var t;
@@ -60690,7 +60724,7 @@
           ),
         );
       }
-      var Ia = n(18353),
+      var Ia = n(1121),
         Ra = n.n(Ia);
       function Ma(e) {
         const t = "America/Los_Angeles",
@@ -61240,7 +61274,7 @@
       var Oa = n(36105),
         Ga = n.n(Oa),
         xa = n(15254),
-        La = n(13827),
+        La = n(33935),
         za = n.n(La);
       function Ua(e) {
         const { closeModal: t } = e,
@@ -61770,9 +61804,9 @@
           );
       var Za = n(70903),
         Ka = (n(88026), n(39116)),
-        $a = n(13364),
+        $a = n(69818),
         Qa = n.n($a),
-        Ya = n(13184),
+        Ya = n(80173),
         Ja = n.n(Ya),
         ei = n(77557);
       function ti(e, t, n) {
@@ -61792,7 +61826,7 @@
           s = (0, m.useCallback)(
             (e, n, a, r, s) => {
               (0, J.X)(
-                null != a && a >= 0 && a < 30,
+                null != a && a >= 0 && a < 31,
                 "Unexpected value for elang: " + a,
               ),
                 i.SetPreviewArt(a, t, e + (0, ai.U)(r));
@@ -62526,7 +62560,7 @@
         (0, i.gn)([o.ak], Bi.prototype, "AddNewAdminPlan", null),
         (0, i.gn)([o.ak], Bi.prototype, "UpdateAdminPlan", null),
         (0, i.gn)([o.ak], Bi.prototype, "DeletePlan", null);
-      var Ri = n(717);
+      var Ri = n(15064);
       function Mi(e) {
         const { oEditablePlan: t } = e,
           n = kt(),
@@ -64141,11 +64175,11 @@
         );
       }
       var Er = n(21963),
-        yr = n(63280),
+        yr = n(79889),
         Sr = n(36041),
-        fr = n(93282),
+        fr = n(26546),
         br = n(51441),
-        Br = n(11621);
+        Br = n(25773);
       function Dr(e) {
         const t = (0, d.kQ)(
           "package_discount_to_batchload",
@@ -65071,7 +65105,7 @@
           m.createElement(Ut.G, { data: t.GetModel() }),
         );
       }
-      var Vr = n(88008);
+      var Vr = n(60077);
       function Hr(e) {
         const [t] = _(),
           n = p();
@@ -65738,7 +65772,7 @@
             m.createElement("div", { className: Vn().ErrorStyles }, r),
         );
       }
-      var is = n(15364),
+      var is = n(2090),
         rs = n(18114),
         ss = n(16826);
       class ls {
@@ -66331,7 +66365,7 @@
         (0, i.gn)([ie.a], ls.prototype, "ResendInvitationEmail", null),
         (0, i.gn)([ie.a], ls.prototype, "LoadInviteByPromotionPlanID", null),
         (0, i.gn)([ie.a], ls.prototype, "CreateAssetRequestInvite", null);
-      var gs = n(37340);
+      var gs = n(49497);
       const hs = 4;
       function vs(e) {
         const t = (0, rs.Z)(),
@@ -66803,7 +66837,7 @@
             : m.createElement(Jt.V, { string: (0, an.Xx)("#Loading") }),
         );
       }
-      var Is = n(63629);
+      var Is = n(74865);
       function Rs(e) {
         return m.createElement(
           m.Fragment,
@@ -66884,8 +66918,8 @@
           }),
         );
       }
-      var Ts = n(94875),
-        As = n(32612);
+      var Ts = n(71030),
+        As = n(63043);
       function ks(e) {
         const { closeModal: t } = e,
           [n, a] = m.useState({}),
@@ -67150,7 +67184,7 @@
           i && !s && m.createElement(Jt.V, { size: "medium" }),
         );
       }
-      var xs = n(13383);
+      var xs = n(81083);
       function Ls(e) {
         const [t, n] = _();
         return (
@@ -67263,7 +67297,7 @@
           Math.floor(n.getTime() / 1e3)
         );
       }
-      var Hs = n(14449);
+      var Hs = n(6580);
       class qs {
         constructor() {
           (this.m_marketingTokens = null), (this.m_promiseLoad = null);
@@ -67282,7 +67316,9 @@
         }
         InternalLoadDictionary() {
           return (0, i.mG)(this, void 0, void 0, function* () {
-            const [e] = yield Promise.all([n.e(4929).then(n.t.bind(n, 5, 19))]);
+            const [e] = yield Promise.all([
+              n.e(4929).then(n.t.bind(n, 32941, 19)),
+            ]);
             return (this.m_marketingTokens = e), this.m_marketingTokens;
           });
         }
@@ -67304,7 +67340,7 @@
         );
       }
       var Ks = n(18030),
-        $s = n(15647),
+        $s = n(83404),
         Qs = n.n($s);
       class Ys {
         GetAllSpotlights() {
@@ -67686,7 +67722,7 @@
       }
       (0, i.gn)([o.ak], Ys.prototype, "AddSpotlight", null),
         (0, i.gn)([o.ak], Ys.prototype, "InternalAddSpotlight", null);
-      var sl = n(32682);
+      var sl = n(80430);
       const ll = ["Weekend Deal", "Now Available", "Pre-Purchase", ""];
       function ol(e) {
         const { oEditablePlan: t, index: n } = e;
@@ -68537,7 +68573,7 @@
         );
       }
       var Bl = n(24448),
-        Dl = n(37985);
+        Dl = n(34987);
       function wl(e) {
         const t =
             !e.rtStartDate ||
@@ -69206,7 +69242,7 @@
         }
         return { style: { backgroundColor: s, border: l } };
       }
-      var Ol = n(37023),
+      var Ol = n(81922),
         Gl = n.n(Ol);
       function xl(e) {
         const { oEditableMessage: t } = e,
@@ -70105,7 +70141,7 @@
           }),
         );
       }
-      var eo = n(35332);
+      var eo = n(75794);
       function to() {
         const e = (0, On.zD)(),
           { data: t, isLoading: n } = (0, h.useQuery)(
@@ -70372,7 +70408,7 @@
         go = n(57317),
         ho = n(75018),
         vo = n(48586),
-        Eo = n(44109);
+        Eo = n(25856);
       function yo(e) {
         const t = to(),
           [n, a, i] = (0, m.useMemo)(() => {
@@ -71194,7 +71230,7 @@
               string: (0, an.Xx)("#Loading"),
             });
       }
-      var jo = n(2414),
+      var jo = n(14176),
         Xo = n.n(jo),
         Vo = (n(84770), n(57361)),
         Ho = n(10521),
@@ -71821,12 +71857,12 @@
             )
           : null;
       }
-      var Yo = n(9611);
+      var Yo = n(48471);
       function Jo(e) {
         ze();
         const t = (0, m.useMemo)(() => {
           const e = new Array();
-          for (let t = 0; t < 30; ++t) {
+          for (let t = 0; t < 31; ++t) {
             const n = (0, v.j_)(t);
             e.push(
               m.createElement(ec, { key: "lang" + t, cc: "US", l: n, msg: n }),
@@ -72590,7 +72626,7 @@
           c = (0, m.useCallback)(
             (e, n, a, i, r, s, l) => {
               (0, J.X)(
-                null != a && a >= 0 && a < 30,
+                null != a && a >= 0 && a < 31,
                 "Unexpected value for elang: " + a,
               );
               let o = null;
@@ -73190,7 +73226,7 @@
             bAllowUnsetOption: !0,
             fnIsLangSupported: (e) => !r || 29 === e,
             fnOnLanguageChanged: (e) => {
-              e <= -1 || e >= 30 || (r && 29 != e)
+              e <= -1 || e >= 31 || (r && 29 != e)
                 ? t.SetMustUseClientLanguage(void 0)
                 : t.SetMustUseClientLanguage((0, g.j_)(e));
             },
@@ -73253,7 +73289,7 @@
             )
           : null;
       }
-      var Ac = n(19194),
+      var Ac = n(61789),
         kc = n.n(Ac);
       function Pc(e) {
         const t = ze(),
@@ -73505,7 +73541,7 @@
       var Uc = n(13141),
         Wc = n(69159),
         jc = n(73406),
-        Xc = n(65666);
+        Xc = n(22370);
       function Vc(e) {
         const {
             fnSetEvent: t,
@@ -76272,7 +76308,7 @@
           ),
         );
       }
-      var Qm = n(35116);
+      var Qm = n(38936);
       function Ym(e) {
         const t = (0, Em.r7)();
         return m.createElement(
@@ -77270,13 +77306,13 @@
         (0, a.gn)([g.a], S.prototype, "SaveDirtyChanges", null);
       var B = n(22444),
         D = n(17547),
-        w = n(24978),
+        w = n(80127),
         C = n(82971),
-        I = (n(17318), n(67736)),
-        R = (n(57742), n(69338));
+        I = (n(52629), n(67736)),
+        R = (n(57742), n(3301));
       n(56368);
       var M = n(14826);
-      n(25479);
+      n(9683);
       function T(e) {
         const { clanSteamID: t, gidClanEvent: n } = e,
           { bLoading: a } = b(t.GetAccountID(), n);
@@ -77324,9 +77360,9 @@
       }
       var k = n(40103),
         P = n(69159),
-        F = n(1721),
+        F = n(35266),
         N = n(81349),
-        O = n(47340);
+        O = n(81609);
       const G = (e) => {
           const {
               strLabel: t,
@@ -77433,7 +77469,7 @@
         };
       var L = n(701),
         z = n(84343),
-        U = n(38369);
+        U = n(44138);
       const W = (0, l.Pi)((e) => {
           const t = () => e.closeModal && e.closeModal(),
             n = (0, m.useRef)(null),
@@ -78003,12 +78039,12 @@
         g = n(17547),
         h = n(57742),
         v = n(43068),
-        E = n(69338),
+        E = n(3301),
         y = n(60161),
         S = n(14826),
         f = n(27913),
         b = n(90378),
-        B = n(86871),
+        B = n(64203),
         D = n.n(B),
         w = n(26464);
       class C {
@@ -78259,9 +78295,9 @@
       var z,
         U = n(57858),
         W = n(25871),
-        j = n(24978),
+        j = n(80127),
         X = n(51441),
-        V = n(17318),
+        V = n(52629),
         H = n(88464),
         q = n(62983),
         Z = n(44026),
@@ -78815,7 +78851,7 @@
         }
       }
       var ce = n(19304),
-        me = n(6028),
+        me = n(20413),
         de = n.n(me);
       function ue(e) {
         const {
@@ -79051,7 +79087,7 @@
       }
       var fe = n(95408),
         be = n(70750);
-      var Be = n(72799);
+      var Be = n(27033);
       function De(e, t) {
         const n = new Set(e);
         return (
@@ -80520,7 +80556,7 @@
         return !1;
       }
       var Xe = n(5029),
-        Ve = n(73807),
+        Ve = n(57255),
         He = n.n(Ve);
       class qe extends m.Component {
         constructor() {
@@ -80598,11 +80634,11 @@
         (0, a.gn)([ee.ak], qe.prototype, "OnPointerDown", null),
         (0, a.gn)([ee.ak], qe.prototype, "OnPointerUp", null),
         (0, a.gn)([ee.ak], qe.prototype, "OnPointerMove", null);
-      var Ze = n(48294),
-        Ke = n(19110),
+      var Ze = n(38520),
+        Ke = n(15525),
         $e = n.n(Ke),
         Qe = n(31936),
-        Ye = n(23715),
+        Ye = n(1631),
         Je = n.n(Ye);
       function et(e) {
         return m.createElement(
@@ -80617,7 +80653,7 @@
           ),
         );
       }
-      var tt = n(87453),
+      var tt = n(93851),
         nt = n(67736),
         at = n(85651);
       class it {
@@ -82165,7 +82201,7 @@
       }
       (0, a.gn)([i.LO.shallow], ft.prototype, "m_mapSaleDetails", void 0);
       var bt = n(1386),
-        Bt = n(85193),
+        Bt = n(63546),
         Dt = n.n(Bt);
       const wt = (e) => {
         const { event: t } = e;
@@ -82390,7 +82426,7 @@
           ),
         );
       };
-      var Ct = n(99519),
+      var Ct = n(81056),
         It = n.n(Ct);
       function Rt(e) {
         const { eventModel: t, fnBIsPublisherApp: n } = e,
@@ -82415,7 +82451,7 @@
         );
       }
       var Mt = n(81349),
-        Tt = n(3408),
+        Tt = n(18561),
         At = n.n(Tt);
       const kt = (0, H.Pi)((e) => {
           const { saleDesc: t, bDetailsAreVisible: n, fnToggleDetails: a } = e,
@@ -82934,7 +82970,7 @@
         return Vt(e.getValue());
       }
       var qt = n(10441),
-        Zt = n(72859),
+        Zt = n(17736),
         Kt = n.n(Zt);
       function $t(e) {
         const t = e.event.GetValveAccessLog(),
@@ -83908,7 +83944,7 @@
         }
       }
       var d = n(21904),
-        u = n(69338),
+        u = n(3301),
         p = n(10441);
       function _(e) {
         return r.createElement(
@@ -84033,7 +84069,7 @@
         m = n(19304),
         d = n(14826),
         u = n(32765),
-        p = n(63280);
+        p = n(79889);
       function _(e) {
         const { fnSetItemID: t, strLabel: n, itemType: i, fnFilterID: l } = e,
           [m, _] = s.useState(""),
@@ -84211,26 +84247,26 @@
         );
       }
     },
-    37865: (e, t, n) => {
+    76672: (e, t, n) => {
       "use strict";
       n.d(t, { Z: () => a });
       const a =
         "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMTQwMHB4IiBoZWlnaHQ9IjE0MDlweCIgdmlld0JveD0iMCAxODAxLjUgMTQwMCAxNDA5IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMTgwMS41IDE0MDAgMTQwOSIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cGF0aCBpZD0iaWNvbm1vbnN0ci1saW5rLTFfMV8iIGZpbGw9IiNGRkZGRkYiIGQ9Ik0zNjIuMzUzLDIzMTAuNTg4YzE0OC4yMzUtMTQ4LjIzNSwzODcuMDYtMTQ4LjIzNSw1MjcuMDYsMA0KCWMxNi40NzEsMTYuNDcxLDMyLjk0MSw0MS4xNzcsNDkuNDExLDU3LjY0N0w4MDcuMDU5LDI1MDBjLTQxLjE3Ni04Mi4zNTMtMTMxLjc2NS0xMzEuNzY1LTIyMi4zNTMtMTE1LjI5NA0KCWMtNDEuMTc3LDguMjM1LTc0LjExOCwyNC43MDYtOTguODIzLDQ5LjQxMWwtMjQ3LjA1OSwyNDcuMDZjLTc0LjExOCw3NC4xMTctNzQuMTE4LDE5Ny42NDYsMCwyODANCgljNzQuMTE4LDc0LjExNywxOTcuNjQ3LDc0LjExNywyODAsMGwwLDBsNzQuMTE4LTc0LjExOGM3NC4xMTcsMjQuNzA2LDE0OC4yMzUsNDEuMTc3LDIyMi4zNTMsMzIuOTQxbC0xNzIuOTQsMTcyLjk0MQ0KCWMtMTQ4LjIzNSwxNDguMjM1LTM4Ny4wNiwxNDguMjM1LTUyNy4wNiwwcy0xNDguMjM1LTM4Ny4wNTksMC01MjcuMDU5QzEwNy4wNTksMjU1Ny42NDcsMzYyLjM1MywyMzEwLjU4OCwzNjIuMzUzLDIzMTAuNTg4eg0KCSBNNzU3LjY0NiwxOTA3LjA1OUw1OTIuOTQxLDIwODBjNzQuMTE3LTguMjM1LDE0OC4yMzUsOC4yMzUsMjE0LjExNywzMi45NDFsNzQuMTE4LTc0LjExOGM3NC4xMTctNzQuMTE3LDE5Ny42NDYtNzQuMTE3LDI4MCwwDQoJYzgyLjM1Myw3NC4xMTgsNzQuMTE3LDE5Ny42NDcsMCwyODBsLTI1NS4yOTQsMjQ3LjA2Yy03NC4xMTgsNzQuMTE3LTE5Ny42NDcsNzQuMTE3LTI4MCwwDQoJYy04LjIzNS0xNi40NzEtMjQuNzA2LTQxLjE3Ny0zMi45NDEtNjUuODgzbC0xMzEuNzY1LDEzMS43NjVjMTYuNDcxLDI0LjcwNiwzMi45NCw0MS4xNzcsNDkuNDExLDU3LjY0Nw0KCWMxNDguMjM1LDE0OC4yMzUsMzg3LjA1OSwxNDguMjM1LDUyNy4wNiwwbDAsMGwyNDcuMDU5LTI0Ny4wNmMxNDguMjM1LTE0OC4yMzUsMTQ4LjIzNS0zODcuMDU5LDAtNTI3LjA1OQ0KCVM5MDUuODgzLDE3NjcuMDU5LDc1Ny42NDYsMTkwNy4wNTlMNzU3LjY0NiwxOTA3LjA1OUw3NTcuNjQ2LDE5MDcuMDU5eiIvPg0KPC9zdmc+DQo=";
     },
-    82248: (e, t, n) => {
+    6726: (e, t, n) => {
       "use strict";
       n.d(t, { Z: () => a });
       const a =
         "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAc9JREFUeNrsmz1Lw1AUhnP8qB+Qkk0pItbVxcX/IM6Cky7iFH+Jk79BwclBB3+AszgUwdVNBxFaCw1E7fW9cAep5pa0NiT3vgdeLjRJm/Ocm/NRiCilAp9tKvDcCIAACIAAsiyEzqAepCqqnvEhzHJSLGVQX7jvSKDPoYO8ADS9BUcAJNBiXgCudUjCJEgABPDLZip2v12obwIXur4DdBK+MeVrHaqJSB2KzKqT2izUgLZd2wH30CF8bFnTusgnlhdUsjmXAFxBe3Au9TEJ3hXpfNkA9M22T4v80TIBuIbzDz73ARe+9wG31pqo1DSWGNqBlgcO16oO4A3b/3XIOafQ8b9PSCWZBh8BYMMSfd3wvEPzrk6DH0OON8Z0vvLDkHAaJAACIICJJJeCy+Aa1Pnj8y+Uwa6lDOpA1S3fewSdjJJIi26EOnC0nTtKInpQalsALfn+CDQJgAA8BYDnP8IS+bwDmuNcXHQVWDURG7QUmf7ZEmV9nysZh7dcGIdbALBpAaD7h6dJDFRshQmAAAiAAAiAAAiAAAiAAAiAAAiAAAjgpyUO+ZmMAuDSIQCZvtj+E4zNuhtU98WJxDgfZ50gfHOUSZAACIAAPLZvAQYAZ32YkpymkAcAAAAASUVORK5CYII=";
     },
-    15164: (e, t, n) => {
+    7787: (e, t, n) => {
       "use strict";
       n.d(t, { Z: () => a });
       const a =
         n.p +
         "images/applications/appmgmt/reddit_large.png?v=valveisgoodatcaching";
     },
-    75313: (e, t, n) => {
+    16947: (e, t, n) => {
       "use strict";
       n.d(t, { Z: () => a });
       const a =

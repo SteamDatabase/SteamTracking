@@ -3,7 +3,7 @@
 (self.webpackChunkHelp = self.webpackChunkHelp || []).push([
   [3068],
   {
-    5937: (e) => {
+    159: (e) => {
       e.exports = {
         NotificationsMenu: "greenenvelope_NotificationsMenu_DHpNP",
         NotificationsMenuEntriesContainer:
@@ -29,7 +29,7 @@
         EmptyNotificationsBody: "greenenvelope_EmptyNotificationsBody_3YAs6",
       };
     },
-    6239: (e) => {
+    9521: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         loadinganimationiterationcount: "20",
@@ -97,7 +97,7 @@
         hoverAnimation: "shorttemplates_hoverAnimation_gYMVd",
       };
     },
-    3e3: (e) => {
+    2535: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         loadinganimationiterationcount: "20",
@@ -168,7 +168,7 @@
         hoverAnimation: "standardtemplates_hoverAnimation_3QUW0",
       };
     },
-    2427: (e) => {
+    9126: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         loadinganimationiterationcount: "20",
@@ -247,7 +247,7 @@
         i.d(t, {
           GreenEnvelope: () => zt,
           default: () => Kt,
-          useSteamNotifications: () => Ot,
+          useSteamNotifications: () => Dt,
         });
       var n = i(3940),
         r = i(9526),
@@ -1766,67 +1766,10 @@
           return "CEcon_GetTradeOfferAccessToken_Request";
         }
       }
-      class O extends N {
-        constructor(e = null) {
-          super(),
-            O.prototype.trade_offer_access_token || o.aR(O.M()),
-            N.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            O.sm_m ||
-              (O.sm_m = {
-                proto: O,
-                fields: {
-                  trade_offer_access_token: {
-                    n: 1,
-                    br: o.FE.readString,
-                    bw: o.Xc.writeString,
-                  },
-                },
-              }),
-            O.sm_m
-          );
-        }
-        static MBF() {
-          return O.sm_mbf || (O.sm_mbf = o.Bh(O.M())), O.sm_mbf;
-        }
-        toObject(e = !1) {
-          return O.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return o.TA(O.M(), e, t);
-        }
-        static fromObject(e) {
-          return o.aD(O.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new a.BinaryReader(e),
-            i = new O();
-          return O.deserializeBinaryFromReader(i, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return o.F(O.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new a.BinaryWriter();
-          return O.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          o.l2(O.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new a.BinaryWriter();
-          return O.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CEcon_GetTradeOfferAccessToken_Response";
-        }
-      }
       class D extends N {
         constructor(e = null) {
           super(),
-            D.prototype.return_url || o.aR(D.M()),
+            D.prototype.trade_offer_access_token || o.aR(D.M()),
             N.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
@@ -1835,7 +1778,7 @@
               (D.sm_m = {
                 proto: D,
                 fields: {
-                  return_url: {
+                  trade_offer_access_token: {
                     n: 1,
                     br: o.FE.readString,
                     bw: o.Xc.writeString,
@@ -1875,6 +1818,63 @@
         serializeBase64String() {
           var e = new a.BinaryWriter();
           return D.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CEcon_GetTradeOfferAccessToken_Response";
+        }
+      }
+      class O extends N {
+        constructor(e = null) {
+          super(),
+            O.prototype.return_url || o.aR(O.M()),
+            N.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            O.sm_m ||
+              (O.sm_m = {
+                proto: O,
+                fields: {
+                  return_url: {
+                    n: 1,
+                    br: o.FE.readString,
+                    bw: o.Xc.writeString,
+                  },
+                },
+              }),
+            O.sm_m
+          );
+        }
+        static MBF() {
+          return O.sm_mbf || (O.sm_mbf = o.Bh(O.M())), O.sm_mbf;
+        }
+        toObject(e = !1) {
+          return O.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return o.TA(O.M(), e, t);
+        }
+        static fromObject(e) {
+          return o.aD(O.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new a.BinaryReader(e),
+            i = new O();
+          return O.deserializeBinaryFromReader(i, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return o.F(O.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new a.BinaryWriter();
+          return O.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          o.l2(O.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new a.BinaryWriter();
+          return O.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CEcon_ClientGetItemShopOverlayAuthURL_Request";
@@ -2116,14 +2116,14 @@
             return e.SendMsg(
               "Econ.GetTradeOfferAccessToken#1",
               (0, s.MD)(z, t),
-              O,
+              D,
               { ePrivilege: 1 },
             );
           }),
           (e.ClientGetItemShopOverlayAuthURL = function (e, t) {
             return e.SendMsg(
               "Econ.ClientGetItemShopOverlayAuthURL#1",
-              (0, s.MD)(D, t),
+              (0, s.MD)(O, t),
               U,
               { ePrivilege: 1 },
             );
@@ -2253,6 +2253,7 @@
             n.rgunread.forEach((t) => {
               e.push(t);
             }),
+              n.rgread.push(...n.rgunread),
               (n.rgunread = []),
               this.NotifyServerNotificationsRead(e);
           }
@@ -2961,16 +2962,16 @@
       }
       var we = i(9304),
         Ne = i(103),
-        Ee = i(5937),
+        Ee = i(159),
         Me = i.n(Ee),
         Te = i(4973),
         Re = i(1438),
         Fe = i(2120),
-        Ie = i(3e3),
+        Ie = i(2535),
         Ae = i.n(Ie),
         ke = i(701);
       const ze = !0;
-      var Oe, De;
+      var De, Oe;
       function Ue(e) {
         let {
             onActivate: t,
@@ -3032,41 +3033,41 @@
           footer: o,
           bNewIndicator: s,
         } = e;
-        const [l, c] = r.useState(a ? De.loadingActive : De.none),
+        const [l, c] = r.useState(a ? Oe.loadingActive : Oe.none),
           [m, d] = r.useState(void 0);
         r.useEffect(() => {
-          l != De.loadingActive || a
-            ? l == De.loadingComplete && a && c(De.loadingActive)
-            : c(De.loadingComplete);
+          l != Oe.loadingActive || a
+            ? l == Oe.loadingComplete && a && c(Oe.loadingActive)
+            : c(Oe.loadingComplete);
         }, [l, a]),
           r.useEffect(() => {
             let e =
               parseInt(Ae().loadinganimationiterationcount) *
               parseInt(Ae().loadinganimationduration) *
               1e3;
-            const t = window.setTimeout(() => c(De.none), e);
+            const t = window.setTimeout(() => c(Oe.none), e);
             return () => window.clearTimeout(t);
           }, []),
           r.useEffect(() => {
             t > 0 &&
             m !== Ae().Unread &&
-            i != Oe.DesktopToast &&
-            i != Oe.GamepadToast
+            i != De.DesktopToast &&
+            i != De.GamepadToast
               ? d(Ae().Unread)
               : t || m != Ae().Unread || d(Ae().MarkedRead);
           }, [t, i, m]);
         let u = e.onActivate;
         u || (u = () => console.log("Missing activate function")),
-          l == De.loadingActive && (u = null);
+          l == Oe.loadingActive && (u = null);
         let _ = Ae().StandardTemplate;
-        i == Oe.AllNotificationsTray
+        i == De.AllNotificationsTray
           ? (_ = Ae().AllNotificationsTemplate)
-          : i == Oe.DesktopToast
+          : i == De.DesktopToast
           ? (_ = Ae().DesktopToastTemplate)
           : (7 != n && 3 != n) || (_ = Ae().StandardTemplateDesktop);
         let p = null;
-        if (l != De.none && i != Oe.DesktopToast && i != Oe.GamepadToast) {
-          let e = l == De.loadingComplete ? Ae().Hide : null;
+        if (l != Oe.none && i != De.DesktopToast && i != De.GamepadToast) {
+          let e = l == Oe.loadingComplete ? Ae().Hide : null;
           p = r.createElement(
             "div",
             { className: (0, we.Z)(Ae().LoadingTemplate, e) },
@@ -3117,7 +3118,7 @@
       }
       function We(e) {
         const { location: t } = e;
-        return ze && t == Oe.Tray
+        return ze && t == De.Tray
           ? r.createElement(
               "div",
               { className: Ae().NewIndicator },
@@ -3133,10 +3134,10 @@
           location: a,
           fnRenderTimestamp: o,
         } = e;
-        const s = !!n && (a == Oe.Tray || a == Oe.AllNotificationsTray);
+        const s = !!n && (a == De.Tray || a == De.AllNotificationsTray);
         let l;
         return (
-          (l = a == Oe.AllNotificationsTray ? He : null != o ? o : qe),
+          (l = a == De.AllNotificationsTray ? He : null != o ? o : qe),
           r.createElement(
             "div",
             { className: Ae().Header },
@@ -3190,12 +3191,12 @@
           (e[(e.DesktopToast = 2)] = "DesktopToast"),
           (e[(e.Tray = 3)] = "Tray"),
           (e[(e.AllNotificationsTray = 4)] = "AllNotificationsTray");
-      })(Oe || (Oe = {})),
+      })(De || (De = {})),
         (function (e) {
           (e[(e.none = 0)] = "none"),
             (e[(e.loadingActive = 1)] = "loadingActive"),
             (e[(e.loadingComplete = 2)] = "loadingComplete");
-        })(De || (De = {}));
+        })(Oe || (Oe = {}));
       var $e = i(6826),
         Ye = i(5125),
         Ze = i(4738),
@@ -3317,9 +3318,9 @@
       window.g_ProfileStore = nt;
       var at = i(5871);
       function ot(e) {
-        return e == Oe.GamepadToast;
+        return e == De.GamepadToast;
       }
-      var st = i(6239),
+      var st = i(9521),
         lt = i.n(st);
       function ct(e) {
         let {
@@ -3367,7 +3368,7 @@
           ),
         );
       }
-      var mt = i(2427),
+      var mt = i(9126),
         dt = i.n(mt),
         ut = i(2079);
       function _t(e) {
@@ -3555,7 +3556,7 @@
           f = () => p(!0);
         let g = n;
         if (i && !_) {
-          const e = 3 == a.state && o != Oe.GamepadToast,
+          const e = 3 == a.state && o != De.GamepadToast,
             t = d ? dt().ShortLogoDimensions : dt().StandardLogoDimensions;
           g = r.createElement(
             Re.s,
@@ -3794,11 +3795,11 @@
               (null === (t = d.owner_steam_id) || void 0 === t
                 ? void 0
                 : t.ConvertTo64BitString()) == o
-                ? u == Oe.AllNotificationsTray && M
+                ? u == De.AllNotificationsTray && M
                   ? (0, $.Xx)("#SteamNotifications_Comment_Your_Profile_By", M)
                   : (0, $.Xx)("#SteamNotifications_Comment_Your_Profile")
                 : T
-                ? u == Oe.AllNotificationsTray && M
+                ? u == De.AllNotificationsTray && M
                   ? (0, $.Xx)(
                       "#SteamNotifications_Comment_Player_Profile_By",
                       M,
@@ -3846,7 +3847,7 @@
           I = null;
         if (g > 1) {
           const e = "+" + (g - 1);
-          u == Oe.AllNotificationsTray
+          u == De.AllNotificationsTray
             ? (I = r.createElement(
                 "div",
                 { className: dt().AllNotificationsCommentPlus },
@@ -3858,7 +3859,7 @@
         if (!v) {
           const e = h ? dt().ShortLogoDimensions : dt().StandardLogoDimensions;
           if (c && ce(d)) {
-            const t = d.bhas_friend && u != Oe.GamepadToast;
+            const t = d.bhas_friend && u != De.GamepadToast;
             A = r.createElement(
               "div",
               { style: { position: "relative" } },
@@ -4034,6 +4035,9 @@
             className: dt().HideButton,
             onClick: (t) => {
               e.onHide(), t.stopPropagation(), t.preventDefault();
+            },
+            onMouseDown: (e) => {
+              e.stopPropagation(), e.preventDefault();
             },
           },
           r.createElement(ke.ZNm, null),
@@ -4495,7 +4499,7 @@
                 });
               })(a));
         }, [a]);
-        const o = Ot();
+        const o = Dt();
         return t
           ? r.createElement(
               r.Fragment,
@@ -4505,7 +4509,7 @@
             )
           : r.createElement(Ut, { nTotalUnviewed: o.nUnviewed });
       }
-      function Ot() {
+      function Dt() {
         return (0, Ye.SZ)(() => ({
           notifications: kt.m_rgNotificationRollups,
           summary: Object.assign({}, kt.m_summary),
@@ -4513,13 +4517,13 @@
           nUnviewed: kt.m_nUnviewed,
         }));
       }
-      function Dt() {
-        return Ot().notifications.filter((e) => !ve(e.item));
+      function Ot() {
+        return Dt().notifications.filter((e) => !ve(e.item));
       }
       function Ut(e) {
         const { nTotalUnviewed: t } = e,
           i = r.useRef(),
-          n = Dt(),
+          n = Ot(),
           [a, o] = r.useState(Me().AnimateBell);
         r.useEffect(() => {
           i.current ||
@@ -4662,8 +4666,8 @@
           e();
       }
       function Lt() {
-        const e = Ot(),
-          t = Dt();
+        const e = Dt(),
+          t = Ot();
         return t.length || Se(e.summary)
           ? r.createElement(
               "div",
@@ -4674,7 +4678,7 @@
                   rollup: e,
                   onNotificationClick: jt,
                   uimode: 3,
-                  location: Oe.Tray,
+                  location: De.Tray,
                 }),
               ),
             )
@@ -4695,7 +4699,7 @@
         );
       }
       function xt() {
-        const e = Ot();
+        const e = Dt();
         return r.createElement(Ce, {
           icon: r.createElement(ke.ncs, null),
           count: e.summary.pending_gifts,
@@ -4710,7 +4714,7 @@
         });
       }
       function Pt() {
-        const e = Ot();
+        const e = Dt();
         return r.createElement(Ce, {
           icon: r.createElement(ke.svY, null),
           count: e.summary.comments,
@@ -4725,7 +4729,7 @@
         });
       }
       function Ht() {
-        const e = Ot();
+        const e = Dt();
         return r.createElement(Ce, {
           icon: r.createElement($e.yBp, null),
           count: e.summary.pending_invites,
@@ -4740,7 +4744,7 @@
         });
       }
       function qt() {
-        const e = Ot();
+        const e = Dt();
         return r.createElement(Ce, {
           icon: r.createElement(ke.F8F, null),
           count: e.summary.inventory_items,
@@ -4755,7 +4759,7 @@
         });
       }
       function $t() {
-        const e = Ot();
+        const e = Dt();
         return r.createElement(Ce, {
           count: e.summary.trade_offers,
           icon: r.createElement(ke.hoX, null),
@@ -4769,7 +4773,7 @@
         });
       }
       function Yt() {
-        const e = Ot();
+        const e = Dt();
         return r.createElement(Ce, {
           count: e.summary.async_game_updates,
           icon: r.createElement(ke.ydL, null),
@@ -4783,7 +4787,7 @@
         });
       }
       function Zt() {
-        const e = Ot();
+        const e = Dt();
         return r.createElement(Ce, {
           count: e.summary.help_request_replies,
           icon: r.createElement(ke.t6e, null),
@@ -4795,7 +4799,7 @@
         });
       }
       function Vt() {
-        const e = Ot();
+        const e = Dt();
         return r.createElement(Ce, {
           count: e.summary.moderator_messages,
           icon: r.createElement($e.dqu, null),

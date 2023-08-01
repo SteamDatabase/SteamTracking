@@ -3,7 +3,7 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [2449],
   {
-    43628: (e) => {
+    29291: (e) => {
       e.exports = {
         strStreamIconCapsuleArtHeight: "90px",
         strStreamIconScreenshotArtHeight: "90px",
@@ -68,7 +68,7 @@
         rightPanel: "broadcast_embeddable_rightPanel_2Xp5Y",
       };
     },
-    61037: (e) => {
+    81916: (e) => {
       e.exports = {
         BroadcastChat: "broadcastchat_BroadcastChat_37jsi",
         ChatEntry: "broadcastchat_ChatEntry_3o0ss",
@@ -107,7 +107,7 @@
         SignInButton: "broadcastchat_SignInButton_26lxf",
       };
     },
-    91820: (e) => {
+    66938: (e) => {
       e.exports = {
         GiveawayWinnerBox: "broadcastchatannouncement_GiveawayWinnerBox_1iRcs",
         GiveawayWinnerAnnounced:
@@ -131,7 +131,7 @@
           "broadcastchatannouncement_GiveawayAlreadyRegistered_17sxy",
       };
     },
-    25202: (e) => {
+    87008: (e) => {
       e.exports = {
         BroadcastPlayerLite: "broadcastplayer_BroadcastPlayerLite_3YmNP",
         BroadcastPlayerLiteVideo:
@@ -141,7 +141,7 @@
           "broadcastplayer_BroadcastPlaceholderImg_3Hcqn",
       };
     },
-    36315: (e) => {
+    10220: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         FriendsListInsetShadowCtn:
@@ -153,25 +153,25 @@
     },
     55844: (e, t, r) => {
       "use strict";
-      r.d(t, { c: () => A });
+      r.d(t, { c: () => U });
       var i = r(33940),
         a = r(50265),
         s = r(88464),
         n = r(25125),
         o = r(89526),
         l = r(40103),
-        c = r(53876),
+        c = r(28578),
         d = r(52002),
         u = r(90531),
-        m = r(62404),
+        m = r(68436),
         B = r.n(m),
         _ = r(69159),
-        h = r(57605),
-        b = r(50304),
+        b = r(57605),
+        h = r(50304),
         g = r(60866),
         y = r(32905),
         p = r(24591),
-        w = r(36315),
+        w = r(10220),
         S = r.n(w);
       const M = () =>
           o.createElement(
@@ -190,12 +190,12 @@
       var F = r(701),
         z = r(19304),
         R = r(14826),
-        T = r(4306),
-        v = r(32765),
-        C = r(61037),
-        W = r.n(C),
-        O = r(50295),
-        E = r(20069);
+        v = r(4306),
+        C = r(32765),
+        T = r(81916),
+        W = r.n(T),
+        E = r(50295),
+        O = r(20069);
       const x = new RegExp("ː([^ː]*)ː", "g"),
         j = new RegExp(
           "^https?://(?:[^/?#]+?\\.)?(?:valvesoftware|steamcommunity|steampowered)\\.com(?:/?#|$)",
@@ -220,7 +220,7 @@
                   "a",
                   {
                     className: (0, z.Z)(W().MessageName, W().MessagePresenter),
-                    href: v.De.COMMUNITY_BASE_URL + "profiles/" + r.steamid,
+                    href: C.De.COMMUNITY_BASE_URL + "profiles/" + r.steamid,
                     target: "_blank",
                     rel: "noopener noreferrer",
                   },
@@ -241,7 +241,7 @@
                   "a",
                   {
                     className: (0, z.Z)(W().MessageName, e),
-                    href: v.De.COMMUNITY_BASE_URL + "profiles/" + r.steamid,
+                    href: C.De.COMMUNITY_BASE_URL + "profiles/" + r.steamid,
                     "data-miniprofile": "s" + r.steamid,
                     target: "_blank",
                     rel: "noopener noreferrer",
@@ -291,7 +291,7 @@
               return null;
           }
         };
-      let A = class extends o.Component {
+      let U = class extends o.Component {
         constructor() {
           super(...arguments),
             (this.m_chat = null),
@@ -343,7 +343,7 @@
           for (let e = 0; e < i.length; e += 1)
             e % 2 == 1
               ? a.push(
-                  o.createElement(b.tk, {
+                  o.createElement(h.tk, {
                     emoticonHoverStore: u.$,
                     key: e,
                     emoticon: i[e],
@@ -368,14 +368,14 @@
               : this.messagesContainer.current.scrollHeight);
         }
         OnContextMenu(e, t) {
-          if (t.type !== E.gK.Chat) return null;
+          if (t.type !== O.gK.Chat) return null;
           const r = [],
             i = this.m_chat.IsUserBroadcaster(this.m_chat.GetUserSteamID()),
             a = this.m_chat.BIsUserBroadcastModerator(
               this.m_chat.GetUserSteamID(),
             );
           if (
-            ((v.L7 && v.L7.is_support) || i || a
+            ((C.L7 && C.L7.is_support) || i || a
               ? r.push(
                   o.createElement(
                     _.Zo,
@@ -495,7 +495,7 @@
                     (0, R.Xx)("#BroadcastChat_MuteLocal"),
                   ),
                 ),
-            ((v.L7 && v.L7.is_support) ||
+            ((C.L7 && C.L7.is_support) ||
               this.m_chat.IsUserBroadcaster(this.m_chat.GetUserSteamID())) &&
               t.steamid)
           ) {
@@ -554,14 +554,14 @@
             : null;
         }
         GetTypeClassName(e) {
-          return e.type === E.gK.Notification
+          return e.type === O.gK.Notification
             ? W().MessageNotification
-            : e.type === E.gK.Error
+            : e.type === O.gK.Error
             ? W().MessageError
             : W().MessageChat;
         }
         FormatMessage(e, t) {
-          if (e.type === E.gK.Chat) {
+          if (e.type === O.gK.Chat) {
             let r = t ? t.FilterText(e.steamid, e.msg) : e.msg;
             return this.AddLinksEmoticons(r, !1);
           }
@@ -570,7 +570,7 @@
         RenderUserChatLine(e, t, r) {
           let i = r ? r.get(e.steamid) : void 0;
           const a =
-            e.type === E.gK.Chat
+            e.type === O.gK.Chat
               ? (function (e, t, r) {
                   return r
                     ? "presenter"
@@ -588,16 +588,16 @@
               className: this.GetTypeClassName(e),
               onContextMenu: (t) => this.OnContextMenu(t, e),
             },
-            e.type === E.gK.Chat && o.createElement(N, { userType: a }),
+            e.type === O.gK.Chat && o.createElement(N, { userType: a }),
             e.flair &&
               o.createElement(
                 "span",
                 { className: W().FlairContainer },
                 this.AddLinksEmoticons(e.flair, !1),
               ),
-            e.type === E.gK.Chat &&
+            e.type === O.gK.Chat &&
               o.createElement(D, { userType: a, msg: e, presenterInfo: i }),
-            e.type === E.gK.Chat &&
+            e.type === O.gK.Chat &&
               this.m_chat.GetBroadcastSteamID() === e.steamid &&
               o.createElement(
                 "span",
@@ -608,7 +608,7 @@
                 },
                 ` (${(0, R.Xx)("#BroadcastChat_Broadcaster")})`,
               ),
-            e.type === E.gK.Chat &&
+            e.type === O.gK.Chat &&
               this.m_chat.m_mapChannelModeratorUsers.get(e.steamid) &&
               o.createElement(
                 "span",
@@ -630,7 +630,7 @@
                     : W().EmoticonsOnly
                 }`,
               },
-              e.type === E.gK.Chat ? " : " : "",
+              e.type === O.gK.Chat ? " : " : "",
               this.FormatMessage(e, this.m_chat.TextFilterStore),
             ),
           );
@@ -655,10 +655,10 @@
               className: (0, z.Z)(W().ChatPanel, "ChatPanel"),
               style: e ? { display: "none" } : void 0,
             },
-            o.createElement(O.E, { latestAnnouncement: n }),
+            o.createElement(E.E, { latestAnnouncement: n }),
             r &&
               !!this.m_chat &&
-              o.createElement(I, {
+              o.createElement(X, {
                 oChat: this.m_chat,
                 emoticonStore: this.props.emoticonStore,
                 bPartnerMemberOnlyChat: t,
@@ -679,7 +679,7 @@
             o.createElement(f, null),
             !r &&
               !!this.m_chat &&
-              o.createElement(I, {
+              o.createElement(X, {
                 oChat: this.m_chat,
                 emoticonStore: this.props.emoticonStore,
                 bPartnerMemberOnlyChat: t,
@@ -687,19 +687,19 @@
           );
         }
       };
-      function I(e) {
+      function X(e) {
         const { oChat: t, emoticonStore: r, bPartnerMemberOnlyChat: i } = e;
         return !i ||
-          ((null === v.L7 || void 0 === v.L7 ? void 0 : v.L7.logged_in) &&
-            (null === v.L7 || void 0 === v.L7
+          ((null === C.L7 || void 0 === C.L7 ? void 0 : C.L7.logged_in) &&
+            (null === C.L7 || void 0 === C.L7
               ? void 0
-              : v.L7.is_partner_member))
-          ? (null === v.L7 || void 0 === v.L7 ? void 0 : v.L7.logged_in)
-            ? o.createElement(U, { oChat: t, emoticonStore: r })
+              : C.L7.is_partner_member))
+          ? (null === C.L7 || void 0 === C.L7 ? void 0 : C.L7.logged_in)
+            ? o.createElement(I, { oChat: t, emoticonStore: r })
             : null
           : o.createElement(P, null);
       }
-      function U(e) {
+      function I(e) {
         const { oChat: t, emoticonStore: r } = e,
           [i, a] = o.useState(""),
           s = o.useRef(),
@@ -773,13 +773,13 @@
                   emoticonStore: r,
                   emoticonHoverStore: u.$,
                 }),
-                o.createElement(X, Object.assign({}, e, { textInputRef: s })),
+                o.createElement(A, Object.assign({}, e, { textInputRef: s })),
               ),
             ),
           ),
         );
       }
-      function X(e) {
+      function A(e) {
         var t;
         const { oChat: r, emoticonStore: i, textInputRef: a } = e;
         return r.m_strFlairGroupID &&
@@ -803,12 +803,12 @@
             })
           : null;
       }
-      (0, i.gn)([a.LO], A.prototype, "m_chat", void 0),
-        (0, i.gn)([T.ak], A.prototype, "StartChat", null),
-        (0, i.gn)([T.ak], A.prototype, "HandleScroll", null),
-        (0, i.gn)([T.ak], A.prototype, "OnContextMenu", null),
-        (0, i.gn)([T.ak], A.prototype, "RenderUserChatLine", null),
-        (A = (0, i.gn)([s.Pi], A));
+      (0, i.gn)([a.LO], U.prototype, "m_chat", void 0),
+        (0, i.gn)([v.ak], U.prototype, "StartChat", null),
+        (0, i.gn)([v.ak], U.prototype, "HandleScroll", null),
+        (0, i.gn)([v.ak], U.prototype, "OnContextMenu", null),
+        (0, i.gn)([v.ak], U.prototype, "RenderUserChatLine", null),
+        (U = (0, i.gn)([s.Pi], U));
       class k extends o.Component {
         render() {
           return o.createElement(
@@ -842,9 +842,9 @@
             { className: W().LogInPrompt },
             (0, R.Xx)("#Broadcast_PartnerChat_Login"),
           ),
-          !v.L7.logged_in &&
+          !C.L7.logged_in &&
             o.createElement(
-              h.zx,
+              b.zx,
               { onClick: y.X, className: (0, z.Z)(W().SignInButton) },
               (0, R.Xx)("#Login_SignIn"),
             ),
@@ -856,7 +856,7 @@
       r.d(t, { E: () => g, U: () => p });
       var i = r(25125),
         a = r(89526),
-        s = r(53876),
+        s = r(28578),
         n = r(45475),
         o = r(13345),
         l = r(93883),
@@ -866,8 +866,8 @@
         m = r(14826),
         B = r(207),
         _ = r(32765),
-        h = r(91820),
-        b = r.n(h);
+        b = r(66938),
+        h = r.n(b);
       function g(e) {
         const { latestAnnouncement: t } = e;
         return "giveaway_draw" == (null == t ? void 0 : t.type)
@@ -882,13 +882,13 @@
             strActionButton: n,
             strActionClassname: c,
           } = e,
-          h =
+          b =
             (null === (t = i.winners_info) || void 0 === t
               ? void 0
               : t.length) > 0
               ? i.winners_info[0].accountid
               : 0,
-          [g, y] = a.useState(h),
+          [g, y] = a.useState(b),
           p = (0, B.et)(
             `${(0, o.OL)()}4/080b1f163b02a9810fa78f0b32b9396fab012aef.gif`,
           ),
@@ -898,10 +898,10 @@
           S = (0, l.J)(i.giveaway_gid);
         let M =
           S.bLoadingGiveawayInfo || S.closed ? null : S.seconds_until_drawing;
-        const f = h === _.L7.accountid;
+        const f = b === _.L7.accountid;
         a.useEffect(() => {
-          g != h && setTimeout(() => y(h), 1500);
-        }, [h, g]);
+          g != b && setTimeout(() => y(b), 1500);
+        }, [b, g]);
         const F =
           (null === (r = i.winners_info) || void 0 === r ? void 0 : r.length) >
             0 && Boolean(i.winners_info[0].persona)
@@ -917,37 +917,37 @@
             "div",
             {
               className: (0, u.Z)({
-                [b().GiveawayWinnerBox]: !0,
-                [b().GiveawayWinnerAnnounced]: g === h,
+                [h().GiveawayWinnerBox]: !0,
+                [h().GiveawayWinnerAnnounced]: g === b,
               }),
             },
             a.createElement(
               "div",
-              { className: b().GiveawayWinnerBoxLeft },
+              { className: h().GiveawayWinnerBoxLeft },
               a.createElement("img", {
-                className: b().GiveawayWinnerArt,
+                className: h().GiveawayWinnerArt,
                 src: p,
               }),
             ),
             a.createElement(
               "div",
-              { className: b().GiveawayWinnerBoxRight },
-              Boolean(g !== h) &&
+              { className: h().GiveawayWinnerBoxRight },
+              Boolean(g !== b) &&
                 a.createElement(
                   "div",
-                  { className: (0, u.Z)(b().GiveawayWinnerText) },
+                  { className: (0, u.Z)(h().GiveawayWinnerText) },
                   (0, m.kQ)(
                     "#GA2022_Congrats_Deck_Unknown",
                     a.createElement("br", null),
                   ),
                 ),
-              Boolean(g === h) &&
+              Boolean(g === b) &&
                 a.createElement(
                   "div",
                   {
                     className: (0, u.Z)(
-                      b().GiveawayWinnerText,
-                      b().GiveawayWinnerAnnounced,
+                      h().GiveawayWinnerText,
+                      h().GiveawayWinnerAnnounced,
                     ),
                   },
                   (0, m.kQ)(
@@ -961,12 +961,12 @@
               Boolean(M > 0) &&
                 a.createElement(
                   "div",
-                  { className: b().GiveawayWinnerCountdown },
+                  { className: h().GiveawayWinnerCountdown },
                   (0, m.kQ)("#GA2022_Congrats_NextDraw", M),
                 ),
             ),
             a.createElement("img", {
-              className: b().GiveawayWinnerQuestion,
+              className: h().GiveawayWinnerQuestion,
               src: w,
             }),
             Boolean(n) &&
@@ -1016,18 +1016,18 @@
           })(t, r),
           l = (0, c.x)("GameAwardDrop2022");
         let d = null,
-          u = b().GiveawayRegisterButton;
+          u = h().GiveawayRegisterButton;
         return (
           _.L7.logged_in
             ? (null == l ? void 0 : l.registered)
               ? ((d = (0, m.Xx)("#GA2022_AlreadyRegistered")),
-                (u = b().GiveawayAlreadyRegistered))
+                (u = h().GiveawayAlreadyRegistered))
               : (d = (0, m.Xx)("#GA2022_RegisterToWin"))
             : (d = (0, m.Xx)("#GA2022_RegisterLoginToWin")),
           o
             ? a.createElement(y, {
                 latestWinner: o,
-                className: b().InViewerBar,
+                className: h().InViewerBar,
                 strActionButton: d,
                 strActionClassname: u,
               })
@@ -1055,11 +1055,11 @@
         m = r(45475),
         B = r(43707),
         _ = r(4306),
-        h = r(85246);
-      class b extends l.Component {
+        b = r(85246);
+      class h extends l.Component {
         constructor() {
           super(...arguments),
-            (this.m_schUpdate = new h.Ar()),
+            (this.m_schUpdate = new b.Ar()),
             (this.m_bSetupComplete = !1);
         }
         componentDidMount() {
@@ -1111,8 +1111,8 @@
           });
         }
       }
-      (0, i.gn)([_.ak], b.prototype, "BindCanvasRef", null),
-        (0, i.gn)([_.ak], b.prototype, "updateCanvas", null);
+      (0, i.gn)([_.ak], h.prototype, "BindCanvasRef", null),
+        (0, i.gn)([_.ak], h.prototype, "updateCanvas", null);
       var g = r(69159),
         y = r(76476),
         p = r(32873),
@@ -1170,26 +1170,26 @@
       var F = r(44421),
         z = r(55330),
         R = r(71937),
-        T = r(701),
-        v = r(75962),
-        C = r(60161),
+        v = r(701),
+        C = r(75962),
+        T = r(60161),
         W = r(14826),
-        O = r(88443),
-        E = r(36041),
+        E = r(88443),
+        O = r(36041),
         x = r(32765),
         j = r(73762),
         D = r(80525),
-        N = r(25202),
-        A = r.n(N),
-        I = r(69338);
-      function U() {
+        N = r(87008),
+        U = r.n(N),
+        X = r(3301);
+      function I() {
         return l.createElement(
           "div",
           { className: "STV_ReplayBanner" },
           (0, W.Xx)("#DASHPlayerControls_IsReplay"),
         );
       }
-      const X = (0, o.Pi)((e) => {
+      const A = (0, o.Pi)((e) => {
         let t = e.video;
         if (t && (t.IsBroadcastClip() || t.IsBroadcastVOD())) return null;
         let r = m._d.Loading,
@@ -1209,7 +1209,7 @@
             className: "BroadcastVideoWatchState",
             style: { filter: "hue-rotate(40deg)" },
           },
-          a && l.createElement(I.V, null),
+          a && l.createElement(X.V, null),
           !a &&
             l.createElement(
               "div",
@@ -1229,7 +1229,7 @@
               className: "BroadcastVideoUserInputNeeded",
               onClick: this.OnClick,
             },
-            l.createElement(T.shV, null),
+            l.createElement(v.shV, null),
             l.createElement(
               "span",
               null,
@@ -1254,7 +1254,7 @@
             l.createElement(
               "button",
               { className: "dash_stat_close_button", onClick: this.HideStats },
-              l.createElement(T.pVO, null),
+              l.createElement(v.pVO, null),
             ),
             l.createElement(
               "div",
@@ -1542,12 +1542,12 @@
       let L = class extends l.Component {
         constructor(e) {
           super(e),
-            (this.m_schHideControls = new h.Ar()),
-            (this.m_schUnmountControls = new h.Ar()),
+            (this.m_schHideControls = new b.Ar()),
+            (this.m_schUnmountControls = new b.Ar()),
             (this.m_elBroadcastPlayer = null),
             (this.m_bMouseDown = !1),
             (this.m_elMouseDown = null),
-            (this.m_listeners = new h.G_()),
+            (this.m_listeners = new b.G_()),
             (this.m_cancelSignal = s().CancelToken.source()),
             (this.state = {
               bMountControls: !1,
@@ -1777,13 +1777,13 @@
         }
         OnToggleFullscreen() {
           this.m_elBroadcastPlayer &&
-            ((0, C.h9)(this.m_elBroadcastPlayer)
-              ? (0, C.mQ)(this.m_elBroadcastPlayer)
-              : (0, C.RD)(this.m_elBroadcastPlayer, this.m_elVideo));
+            ((0, T.h9)(this.m_elBroadcastPlayer)
+              ? (0, T.mQ)(this.m_elBroadcastPlayer)
+              : (0, T.RD)(this.m_elBroadcastPlayer, this.m_elVideo));
         }
         OnFullscreenChange(e) {
           if (!this.m_elBroadcastPlayer) return;
-          let t = (0, C.h9)(this.m_elBroadcastPlayer);
+          let t = (0, T.h9)(this.m_elBroadcastPlayer);
           this.setState({ bFullscreen: t });
         }
         BHideVideoControls() {
@@ -1849,10 +1849,10 @@
               onContextMenu: this.OnContextMenu,
               onMouseDown: this.OnMouseDown,
             },
-            B && l.createElement("div", { className: A().BroadcastContext }, B),
-            i && l.createElement(U, null),
+            B && l.createElement("div", { className: U().BroadcastContext }, B),
+            i && l.createElement(I, null),
             this.props.showVideoBackgroundBlur &&
-              l.createElement(b, {
+              l.createElement(h, {
                 className: "videoBlur",
                 elementRef: this.m_elVideo,
                 updateRate: 33,
@@ -1881,7 +1881,7 @@
               l.createElement("img", {
                 loading: "lazy",
                 className: (0, S.Z)(
-                  A().BroadcastPlaceholderImg,
+                  U().BroadcastPlaceholderImg,
                   "BroadcastPlaceholderImg",
                 ),
                 src: this.state.strInitialCapsuleImageUrl,
@@ -1900,7 +1900,7 @@
                 stats: e.GetDASHPlayerStats(),
                 closeStats: this.CloseStats,
               }),
-            l.createElement(X, { video: e }),
+            l.createElement(A, { video: e }),
             n && l.createElement(k, { video: e }),
           );
         }
@@ -1971,7 +1971,7 @@
                   className: "STV_BroadcastClose",
                   onClick: this.props.onClick,
                 },
-                l.createElement(T.pVO, null),
+                l.createElement(v.pVO, null),
               )
             : null;
         }
@@ -1997,7 +1997,7 @@
                   className: "videoControlButton videoControlJump controlFlip",
                   onClick: this.OnJumpBackward,
                 },
-                l.createElement(T.P9w, {
+                l.createElement(v.P9w, {
                   bHidePostArrow: !0,
                   bHidePreArrow: !0,
                   bShowJumpAheadBox: !0,
@@ -2013,7 +2013,7 @@
                   className: "videoControlButton videoControlJump",
                   onClick: this.OnJumpForward,
                 },
-                l.createElement(T.P9w, {
+                l.createElement(v.P9w, {
                   bHidePostArrow: !0,
                   bHidePreArrow: !0,
                   bShowJumpAheadBox: !0,
@@ -2045,7 +2045,7 @@
                     e.video.JumpToLiveEdge();
                   },
             },
-            l.createElement(T.P9w, {
+            l.createElement(v.P9w, {
               bHidePreArrow: !0,
               bHidePostArrow: !0,
               bFlipHorizontal: !1,
@@ -2072,7 +2072,7 @@
               className: "videoControlButton buttonPlayPause",
               onClick: this.OnTogglePlayPause,
             },
-            e ? l.createElement(T.shV, null) : l.createElement(T.dzL, null),
+            e ? l.createElement(v.shV, null) : l.createElement(v.dzL, null),
           );
         }
       };
@@ -2104,7 +2104,7 @@
                 (this.has_previous_marker ? "" : " noMarkersInDirection"),
               onClick: this.OnJumpToPreviousMarkerClicked,
             },
-            l.createElement(T.P9w, { bHidePostArrow: !0, bFlipHorizontal: !0 }),
+            l.createElement(v.P9w, { bHidePostArrow: !0, bFlipHorizontal: !0 }),
           );
         }
       };
@@ -2137,7 +2137,7 @@
                 (this.has_next_marker ? "" : " noMarkersInDirection"),
               onClick: this.OnJumpToNextMarkerClicked,
             },
-            l.createElement(T.P9w, { bHidePostArrow: !0, bFlipHorizontal: !1 }),
+            l.createElement(v.P9w, { bHidePostArrow: !0, bFlipHorizontal: !1 }),
           );
         }
       };
@@ -2185,9 +2185,9 @@
             this.OnMouseUp,
             !0,
           ),
-            (0, C.ni)(this.m_elSettingsPanel, e.target) ||
+            (0, T.ni)(this.m_elSettingsPanel, e.target) ||
               this.setState({ bSettingsOpen: !1 }),
-            (0, C.ni)(this.m_elSubtitlesPanel.current, e.target) ||
+            (0, T.ni)(this.m_elSubtitlesPanel.current, e.target) ||
               this.setState({ bSubtitlesOpen: !1 });
         }
         bindSettingsButton(e) {
@@ -2296,7 +2296,7 @@
                     onClick: this.OnSubtitlesClick,
                     ref: this.m_elSubtitlesButton,
                   },
-                  l.createElement(T.Vgm, null),
+                  l.createElement(v.Vgm, null),
                 )
               : null,
             l.createElement(
@@ -2308,7 +2308,7 @@
                 onClick: this.OnVideoControlClick,
                 ref: this.bindSettingsButton,
               },
-              l.createElement(T.Zrf, null),
+              l.createElement(v.Zrf, null),
             ),
             l.createElement(te, { video: r }),
             i &&
@@ -2373,7 +2373,7 @@
           super(...arguments),
             (this.k_nHideSliderTimeout = 1500),
             (this.m_bShowSlider = true),
-            (this.m_schHideSlider = new h.Ar()),
+            (this.m_schHideSlider = new b.Ar()),
             (this.m_bChildDragging = !1),
             (this.m_bMouseOver = !1);
         }
@@ -2433,7 +2433,7 @@
                 l.createElement(
                   "div",
                   { className: i, onClick: this.ToggleMute },
-                  l.createElement(T.ffh, null),
+                  l.createElement(v.ffh, null),
                 ),
                 l.createElement(re, { video: e, onDrag: this.OnChildDrag }),
               ),
@@ -2491,8 +2491,8 @@
         }
         SetVolumeWithCoord(e, t) {
           let r = e.getBoundingClientRect(),
-            i = E.r4(t, r.left, r.right, 0, 1),
-            a = E.Lh(i, 0, 1),
+            i = O.r4(t, r.left, r.right, 0, 1),
+            a = O.Lh(i, 0, 1),
             s = this.props.video;
           s.SetMute(i < 0.01), s.SetVolume(a);
         }
@@ -2541,7 +2541,7 @@
           l.createElement(
             "div",
             { className: "timelineMarkerIcon" },
-            l.createElement(T.$06, null),
+            l.createElement(v.$06, null),
           ),
         );
       function ae(e) {
@@ -2649,10 +2649,10 @@
             i = t.GetTimelineStartPos() + t.GetTimelineDuration(),
             a = t.GetTimeAtMousePosition(e, this.m_rectSlider, r, i);
           if (this.state.bStartMouseDown) {
-            const e = E.Lh(a, r, t.m_editorEndTime - 5);
+            const e = O.Lh(a, r, t.m_editorEndTime - 5);
             t.m_editorStartTime = e;
           } else if (this.state.bEndMouseDown) {
-            const e = E.Lh(a, t.m_editorStartTime + 5, i);
+            const e = O.Lh(a, t.m_editorStartTime + 5, i);
             t.m_editorEndTime = e;
           } else
             a != this.state.nGrabberMouseDownTime &&
@@ -2695,9 +2695,9 @@
               m.QO.Timeline,
             );
           a < 0.05 && (a = 0);
-          let s = E.Lh(r, 0, 100).toFixed(1) + "%",
-            n = E.Lh(i, 0, 100).toFixed(1) + "%",
-            o = E.Lh(a, 0, 100).toFixed(1) + "%",
+          let s = O.Lh(r, 0, 100).toFixed(1) + "%",
+            n = O.Lh(i, 0, 100).toFixed(1) + "%",
+            o = O.Lh(a, 0, 100).toFixed(1) + "%",
             c = {},
             d = {},
             u = {},
@@ -2706,10 +2706,10 @@
             ? ((B.left = s), (c.width = s), (d.width = n), (u.width = o))
             : ((B.left = n), (d.width = n), (u.width = o));
           let _ = (0, D.zB)(e.GetPlaybackTime()),
-            h = (0, D.zB)(this.state.nHoverValue),
-            b = "STV_timelineContainer";
-          this.state.bGrabberMouseDown && (b += " grabberDown"),
-            e.IsTimelineMapActive() && (b += " minimapActive");
+            b = (0, D.zB)(this.state.nHoverValue),
+            h = "STV_timelineContainer";
+          this.state.bGrabberMouseDown && (h += " grabberDown"),
+            e.IsTimelineMapActive() && (h += " minimapActive");
           let g = "";
           (r = t ? r : i),
             r > 100
@@ -2781,7 +2781,7 @@
             },
             l.createElement(
               "div",
-              { className: b },
+              { className: h },
               l.createElement("div", { className: "DialogLabel" }, _),
               l.createElement(
                 "div",
@@ -2844,7 +2844,7 @@
                             className: "STV_timelineGrabberValue",
                             style: { position: "absolute", bottom: "4px" },
                           },
-                          h,
+                          b,
                         ),
                       ),
                     ),
@@ -2857,7 +2857,7 @@
                       l.createElement(
                         "div",
                         { className: "STV_timelineGrabberArrow" },
-                        l.createElement(T.tEX, null),
+                        l.createElement(v.tEX, null),
                       ),
                     ),
                   ),
@@ -2908,7 +2908,7 @@
           let { info: e } = this.state;
           if (!e) return null;
           let t = "";
-          e.m_nViewerCount && (t = (0, O.AV)(e.m_nViewerCount));
+          e.m_nViewerCount && (t = (0, E.AV)(e.m_nViewerCount));
           let r =
               j.rr.bValid && j.rr.stream && j.rr.stream[e.m_steamIDBroadcast],
             i =
@@ -2960,7 +2960,7 @@
                     l.createElement(
                       "div",
                       { className: "BroadcastDetailsHeader_ViewerCount" },
-                      l.createElement(T.lsH, null),
+                      l.createElement(v.lsH, null),
                       (0, W.kb)("#Broadcast_ViewerCount", t),
                     ),
                 ),
@@ -3017,7 +3017,7 @@
             l.createElement(
               "div",
               { className: "ContextMenuButton" },
-              l.createElement(T.$gZ, null),
+              l.createElement(v.$gZ, null),
             ),
           );
         }
@@ -3108,7 +3108,7 @@
                 ? this.props.linkRegions.map((e) => {
                     const t = (0, c.Ah)(e.url);
                     return l.createElement(
-                      v.ns,
+                      C.ns,
                       {
                         key: e.link_index,
                         href: e.url,
@@ -3177,9 +3177,9 @@
         (0, i.gn)([_.ak], le.prototype, "UpdatePanel", null),
         (le = (0, i.gn)([o.Pi], le));
     },
-    53876: (e, t, r) => {
+    28578: (e, t, r) => {
       "use strict";
-      r.d(t, { Z: () => yi });
+      r.d(t, { Z: () => Qr });
       var i = r(33940),
         a = r(52868),
         s = r.n(a),
@@ -3192,17 +3192,17 @@
         m = r(45878),
         B = r(29063);
       const _ = m.Message;
-      class h extends _ {
+      class b extends _ {
         constructor(e = null) {
           super(),
-            h.prototype.permission || B.aR(h.M()),
+            b.prototype.permission || B.aR(b.M()),
             _.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            h.sm_m ||
-              (h.sm_m = {
-                proto: h,
+            b.sm_m ||
+              (b.sm_m = {
+                proto: b,
                 fields: {
                   permission: { n: 1, br: B.FE.readInt32, bw: B.Xc.writeInt32 },
                   gameid: {
@@ -3240,83 +3240,6 @@
                   },
                 },
               }),
-            h.sm_m
-          );
-        }
-        static MBF() {
-          return h.sm_mbf || (h.sm_mbf = B.Bh(h.M())), h.sm_mbf;
-        }
-        toObject(e = !1) {
-          return h.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return B.TA(h.M(), e, t);
-        }
-        static fromObject(e) {
-          return B.aD(h.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new m.BinaryReader(e),
-            r = new h();
-          return h.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return B.F(h.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new m.BinaryWriter();
-          return h.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          B.l2(h.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new m.BinaryWriter();
-          return h.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CBroadcast_BeginBroadcastSession_Request";
-        }
-      }
-      class b extends _ {
-        constructor(e = null) {
-          super(),
-            b.prototype.broadcast_id || B.aR(b.M()),
-            _.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            b.sm_m ||
-              (b.sm_m = {
-                proto: b,
-                fields: {
-                  broadcast_id: {
-                    n: 1,
-                    br: B.FE.readFixed64String,
-                    bw: B.Xc.writeFixed64String,
-                  },
-                  thumbnail_upload_address: {
-                    n: 2,
-                    br: B.FE.readString,
-                    bw: B.Xc.writeString,
-                  },
-                  thumbnail_upload_token: {
-                    n: 3,
-                    br: B.FE.readString,
-                    bw: B.Xc.writeString,
-                  },
-                  thumbnail_interval_seconds: {
-                    n: 4,
-                    br: B.FE.readUint32,
-                    bw: B.Xc.writeUint32,
-                  },
-                  heartbeat_interval_seconds: {
-                    n: 5,
-                    br: B.FE.readUint32,
-                    bw: B.Xc.writeUint32,
-                  },
-                },
-              }),
             b.sm_m
           );
         }
@@ -3350,6 +3273,83 @@
         serializeBase64String() {
           var e = new m.BinaryWriter();
           return b.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CBroadcast_BeginBroadcastSession_Request";
+        }
+      }
+      class h extends _ {
+        constructor(e = null) {
+          super(),
+            h.prototype.broadcast_id || B.aR(h.M()),
+            _.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            h.sm_m ||
+              (h.sm_m = {
+                proto: h,
+                fields: {
+                  broadcast_id: {
+                    n: 1,
+                    br: B.FE.readFixed64String,
+                    bw: B.Xc.writeFixed64String,
+                  },
+                  thumbnail_upload_address: {
+                    n: 2,
+                    br: B.FE.readString,
+                    bw: B.Xc.writeString,
+                  },
+                  thumbnail_upload_token: {
+                    n: 3,
+                    br: B.FE.readString,
+                    bw: B.Xc.writeString,
+                  },
+                  thumbnail_interval_seconds: {
+                    n: 4,
+                    br: B.FE.readUint32,
+                    bw: B.Xc.writeUint32,
+                  },
+                  heartbeat_interval_seconds: {
+                    n: 5,
+                    br: B.FE.readUint32,
+                    bw: B.Xc.writeUint32,
+                  },
+                },
+              }),
+            h.sm_m
+          );
+        }
+        static MBF() {
+          return h.sm_mbf || (h.sm_mbf = B.Bh(h.M())), h.sm_mbf;
+        }
+        toObject(e = !1) {
+          return h.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return B.TA(h.M(), e, t);
+        }
+        static fromObject(e) {
+          return B.aD(h.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new m.BinaryReader(e),
+            r = new h();
+          return h.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return B.F(h.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new m.BinaryWriter();
+          return h.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          B.l2(h.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new m.BinaryWriter();
+          return h.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CBroadcast_BeginBroadcastSession_Response";
@@ -4055,17 +4055,17 @@
           return "CBroadcast_WatchBroadcast_Request";
         }
       }
-      class T extends _ {
+      class v extends _ {
         constructor(e = null) {
           super(),
-            T.prototype.response || B.aR(T.M()),
+            v.prototype.response || B.aR(v.M()),
             _.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            T.sm_m ||
-              (T.sm_m = {
-                proto: T,
+            v.sm_m ||
+              (v.sm_m = {
+                proto: v,
                 fields: {
                   response: { n: 1, br: B.FE.readEnum, bw: B.Xc.writeEnum },
                   mpd_url: { n: 2, br: B.FE.readString, bw: B.Xc.writeString },
@@ -4137,78 +4137,6 @@
                   },
                 },
               }),
-            T.sm_m
-          );
-        }
-        static MBF() {
-          return T.sm_mbf || (T.sm_mbf = B.Bh(T.M())), T.sm_mbf;
-        }
-        toObject(e = !1) {
-          return T.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return B.TA(T.M(), e, t);
-        }
-        static fromObject(e) {
-          return B.aD(T.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new m.BinaryReader(e),
-            r = new T();
-          return T.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return B.F(T.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new m.BinaryWriter();
-          return T.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          B.l2(T.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new m.BinaryWriter();
-          return T.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CBroadcast_WatchBroadcast_Response";
-        }
-      }
-      class v extends _ {
-        constructor(e = null) {
-          super(),
-            v.prototype.steamid || B.aR(v.M()),
-            _.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            v.sm_m ||
-              (v.sm_m = {
-                proto: v,
-                fields: {
-                  steamid: {
-                    n: 1,
-                    br: B.FE.readFixed64String,
-                    bw: B.Xc.writeFixed64String,
-                  },
-                  broadcast_id: {
-                    n: 2,
-                    br: B.FE.readFixed64String,
-                    bw: B.Xc.writeFixed64String,
-                  },
-                  viewer_token: {
-                    n: 3,
-                    br: B.FE.readFixed64String,
-                    bw: B.Xc.writeFixed64String,
-                  },
-                  representation: {
-                    n: 4,
-                    br: B.FE.readUint32,
-                    bw: B.Xc.writeUint32,
-                  },
-                },
-              }),
             v.sm_m
           );
         }
@@ -4244,7 +4172,7 @@
           return v.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CBroadcast_HeartbeatBroadcast_Notification";
+          return "CBroadcast_WatchBroadcast_Response";
         }
       }
       class C extends _ {
@@ -4273,6 +4201,11 @@
                     n: 3,
                     br: B.FE.readFixed64String,
                     bw: B.Xc.writeFixed64String,
+                  },
+                  representation: {
+                    n: 4,
+                    br: B.FE.readUint32,
+                    bw: B.Xc.writeUint32,
                   },
                 },
               }),
@@ -4309,6 +4242,73 @@
         serializeBase64String() {
           var e = new m.BinaryWriter();
           return C.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CBroadcast_HeartbeatBroadcast_Notification";
+        }
+      }
+      class T extends _ {
+        constructor(e = null) {
+          super(),
+            T.prototype.steamid || B.aR(T.M()),
+            _.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            T.sm_m ||
+              (T.sm_m = {
+                proto: T,
+                fields: {
+                  steamid: {
+                    n: 1,
+                    br: B.FE.readFixed64String,
+                    bw: B.Xc.writeFixed64String,
+                  },
+                  broadcast_id: {
+                    n: 2,
+                    br: B.FE.readFixed64String,
+                    bw: B.Xc.writeFixed64String,
+                  },
+                  viewer_token: {
+                    n: 3,
+                    br: B.FE.readFixed64String,
+                    bw: B.Xc.writeFixed64String,
+                  },
+                },
+              }),
+            T.sm_m
+          );
+        }
+        static MBF() {
+          return T.sm_mbf || (T.sm_mbf = B.Bh(T.M())), T.sm_mbf;
+        }
+        toObject(e = !1) {
+          return T.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return B.TA(T.M(), e, t);
+        }
+        static fromObject(e) {
+          return B.aD(T.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new m.BinaryReader(e),
+            r = new T();
+          return T.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return B.F(T.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new m.BinaryWriter();
+          return T.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          B.l2(T.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new m.BinaryWriter();
+          return T.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CBroadcast_StopWatchingBroadcast_Notification";
@@ -4376,63 +4376,10 @@
           return "CBroadcast_InviteToBroadcast_Request";
         }
       }
-      class O extends _ {
-        constructor(e = null) {
-          super(),
-            O.prototype.success || B.aR(O.M()),
-            _.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            O.sm_m ||
-              (O.sm_m = {
-                proto: O,
-                fields: {
-                  success: { n: 1, br: B.FE.readBool, bw: B.Xc.writeBool },
-                },
-              }),
-            O.sm_m
-          );
-        }
-        static MBF() {
-          return O.sm_mbf || (O.sm_mbf = B.Bh(O.M())), O.sm_mbf;
-        }
-        toObject(e = !1) {
-          return O.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return B.TA(O.M(), e, t);
-        }
-        static fromObject(e) {
-          return B.aD(O.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new m.BinaryReader(e),
-            r = new O();
-          return O.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return B.F(O.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new m.BinaryWriter();
-          return O.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          B.l2(O.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new m.BinaryWriter();
-          return O.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CBroadcast_InviteToBroadcast_Response";
-        }
-      }
       class E extends _ {
         constructor(e = null) {
           super(),
-            E.prototype.permission || B.aR(E.M()),
+            E.prototype.success || B.aR(E.M()),
             _.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
@@ -4441,18 +4388,7 @@
               (E.sm_m = {
                 proto: E,
                 fields: {
-                  permission: { n: 1, br: B.FE.readInt32, bw: B.Xc.writeInt32 },
-                  gameid: {
-                    n: 2,
-                    br: B.FE.readUint64String,
-                    bw: B.Xc.writeUint64String,
-                  },
-                  title: { n: 3, br: B.FE.readString, bw: B.Xc.writeString },
-                  game_data_config: {
-                    n: 4,
-                    br: B.FE.readString,
-                    bw: B.Xc.writeString,
-                  },
+                  success: { n: 1, br: B.FE.readBool, bw: B.Xc.writeBool },
                 },
               }),
             E.sm_m
@@ -4488,6 +4424,70 @@
         serializeBase64String() {
           var e = new m.BinaryWriter();
           return E.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CBroadcast_InviteToBroadcast_Response";
+        }
+      }
+      class O extends _ {
+        constructor(e = null) {
+          super(),
+            O.prototype.permission || B.aR(O.M()),
+            _.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            O.sm_m ||
+              (O.sm_m = {
+                proto: O,
+                fields: {
+                  permission: { n: 1, br: B.FE.readInt32, bw: B.Xc.writeInt32 },
+                  gameid: {
+                    n: 2,
+                    br: B.FE.readUint64String,
+                    bw: B.Xc.writeUint64String,
+                  },
+                  title: { n: 3, br: B.FE.readString, bw: B.Xc.writeString },
+                  game_data_config: {
+                    n: 4,
+                    br: B.FE.readString,
+                    bw: B.Xc.writeString,
+                  },
+                },
+              }),
+            O.sm_m
+          );
+        }
+        static MBF() {
+          return O.sm_mbf || (O.sm_mbf = B.Bh(O.M())), O.sm_mbf;
+        }
+        toObject(e = !1) {
+          return O.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return B.TA(O.M(), e, t);
+        }
+        static fromObject(e) {
+          return B.aD(O.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new m.BinaryReader(e),
+            r = new O();
+          return O.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return B.F(O.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new m.BinaryWriter();
+          return O.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          B.l2(O.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new m.BinaryWriter();
+          return O.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CBroadcast_SendBroadcastStateToServer_Request";
@@ -4714,129 +4714,10 @@
           return "CBroadcast_StopBroadcastUpload_Notification";
         }
       }
-      class A extends _ {
-        constructor(e = null) {
-          super(),
-            A.prototype.broadcast_id || B.aR(A.M()),
-            _.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            A.sm_m ||
-              (A.sm_m = {
-                proto: A,
-                fields: {
-                  broadcast_id: {
-                    n: 1,
-                    br: B.FE.readFixed64String,
-                    bw: B.Xc.writeFixed64String,
-                  },
-                },
-              }),
-            A.sm_m
-          );
-        }
-        static MBF() {
-          return A.sm_mbf || (A.sm_mbf = B.Bh(A.M())), A.sm_mbf;
-        }
-        toObject(e = !1) {
-          return A.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return B.TA(A.M(), e, t);
-        }
-        static fromObject(e) {
-          return B.aD(A.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new m.BinaryReader(e),
-            r = new A();
-          return A.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return B.F(A.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new m.BinaryWriter();
-          return A.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          B.l2(A.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new m.BinaryWriter();
-          return A.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CBroadcast_SessionClosed_Notification";
-        }
-      }
-      class I extends _ {
-        constructor(e = null) {
-          super(),
-            I.prototype.broadcast_id || B.aR(I.M()),
-            _.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            I.sm_m ||
-              (I.sm_m = {
-                proto: I,
-                fields: {
-                  broadcast_id: {
-                    n: 1,
-                    br: B.FE.readFixed64String,
-                    bw: B.Xc.writeFixed64String,
-                  },
-                  num_viewers: {
-                    n: 2,
-                    br: B.FE.readInt32,
-                    bw: B.Xc.writeInt32,
-                  },
-                },
-              }),
-            I.sm_m
-          );
-        }
-        static MBF() {
-          return I.sm_mbf || (I.sm_mbf = B.Bh(I.M())), I.sm_mbf;
-        }
-        toObject(e = !1) {
-          return I.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return B.TA(I.M(), e, t);
-        }
-        static fromObject(e) {
-          return B.aD(I.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new m.BinaryReader(e),
-            r = new I();
-          return I.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return B.F(I.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new m.BinaryWriter();
-          return I.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          B.l2(I.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new m.BinaryWriter();
-          return I.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CBroadcast_BroadcastStatus_Notification";
-        }
-      }
       class U extends _ {
         constructor(e = null) {
           super(),
-            U.prototype.broadcast_channel_id || B.aR(U.M()),
+            U.prototype.broadcast_id || B.aR(U.M()),
             _.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
@@ -4845,20 +4726,10 @@
               (U.sm_m = {
                 proto: U,
                 fields: {
-                  broadcast_channel_id: {
+                  broadcast_id: {
                     n: 1,
                     br: B.FE.readFixed64String,
                     bw: B.Xc.writeFixed64String,
-                  },
-                  broadcast_channel_name: {
-                    n: 2,
-                    br: B.FE.readString,
-                    bw: B.Xc.writeString,
-                  },
-                  broadcast_channel_avatar: {
-                    n: 3,
-                    br: B.FE.readString,
-                    bw: B.Xc.writeString,
                   },
                 },
               }),
@@ -4897,13 +4768,13 @@
           return U.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CBroadcast_BroadcastChannelLive_Notification";
+          return "CBroadcast_SessionClosed_Notification";
         }
       }
       class X extends _ {
         constructor(e = null) {
           super(),
-            X.prototype.thumbnail_upload_token || B.aR(X.M()),
+            X.prototype.broadcast_id || B.aR(X.M()),
             _.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
@@ -4912,30 +4783,15 @@
               (X.sm_m = {
                 proto: X,
                 fields: {
-                  thumbnail_upload_token: {
+                  broadcast_id: {
                     n: 1,
-                    br: B.FE.readString,
-                    bw: B.Xc.writeString,
-                  },
-                  thumbnail_broadcast_session_id: {
-                    n: 2,
                     br: B.FE.readFixed64String,
                     bw: B.Xc.writeFixed64String,
                   },
-                  thumbnail_data: {
-                    n: 3,
-                    br: B.FE.readBytes,
-                    bw: B.Xc.writeBytes,
-                  },
-                  thumbnail_width: {
-                    n: 4,
-                    br: B.FE.readUint32,
-                    bw: B.Xc.writeUint32,
-                  },
-                  thumbnail_height: {
-                    n: 5,
-                    br: B.FE.readUint32,
-                    bw: B.Xc.writeUint32,
+                  num_viewers: {
+                    n: 2,
+                    br: B.FE.readInt32,
+                    bw: B.Xc.writeInt32,
                   },
                 },
               }),
@@ -4972,6 +4828,150 @@
         serializeBase64String() {
           var e = new m.BinaryWriter();
           return X.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CBroadcast_BroadcastStatus_Notification";
+        }
+      }
+      class I extends _ {
+        constructor(e = null) {
+          super(),
+            I.prototype.broadcast_channel_id || B.aR(I.M()),
+            _.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            I.sm_m ||
+              (I.sm_m = {
+                proto: I,
+                fields: {
+                  broadcast_channel_id: {
+                    n: 1,
+                    br: B.FE.readFixed64String,
+                    bw: B.Xc.writeFixed64String,
+                  },
+                  broadcast_channel_name: {
+                    n: 2,
+                    br: B.FE.readString,
+                    bw: B.Xc.writeString,
+                  },
+                  broadcast_channel_avatar: {
+                    n: 3,
+                    br: B.FE.readString,
+                    bw: B.Xc.writeString,
+                  },
+                },
+              }),
+            I.sm_m
+          );
+        }
+        static MBF() {
+          return I.sm_mbf || (I.sm_mbf = B.Bh(I.M())), I.sm_mbf;
+        }
+        toObject(e = !1) {
+          return I.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return B.TA(I.M(), e, t);
+        }
+        static fromObject(e) {
+          return B.aD(I.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new m.BinaryReader(e),
+            r = new I();
+          return I.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return B.F(I.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new m.BinaryWriter();
+          return I.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          B.l2(I.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new m.BinaryWriter();
+          return I.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CBroadcast_BroadcastChannelLive_Notification";
+        }
+      }
+      class A extends _ {
+        constructor(e = null) {
+          super(),
+            A.prototype.thumbnail_upload_token || B.aR(A.M()),
+            _.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            A.sm_m ||
+              (A.sm_m = {
+                proto: A,
+                fields: {
+                  thumbnail_upload_token: {
+                    n: 1,
+                    br: B.FE.readString,
+                    bw: B.Xc.writeString,
+                  },
+                  thumbnail_broadcast_session_id: {
+                    n: 2,
+                    br: B.FE.readFixed64String,
+                    bw: B.Xc.writeFixed64String,
+                  },
+                  thumbnail_data: {
+                    n: 3,
+                    br: B.FE.readBytes,
+                    bw: B.Xc.writeBytes,
+                  },
+                  thumbnail_width: {
+                    n: 4,
+                    br: B.FE.readUint32,
+                    bw: B.Xc.writeUint32,
+                  },
+                  thumbnail_height: {
+                    n: 5,
+                    br: B.FE.readUint32,
+                    bw: B.Xc.writeUint32,
+                  },
+                },
+              }),
+            A.sm_m
+          );
+        }
+        static MBF() {
+          return A.sm_mbf || (A.sm_mbf = B.Bh(A.M())), A.sm_mbf;
+        }
+        toObject(e = !1) {
+          return A.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return B.TA(A.M(), e, t);
+        }
+        static fromObject(e) {
+          return B.aD(A.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new m.BinaryReader(e),
+            r = new A();
+          return A.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return B.F(A.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new m.BinaryWriter();
+          return A.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          B.l2(A.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new m.BinaryWriter();
+          return A.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CBroadcast_SendThumbnailToRelay_Notification";
@@ -6709,17 +6709,17 @@
           return "CBroadcast_GetRTMPInfo_Response";
         }
       }
-      class he extends _ {
+      class be extends _ {
         constructor(e = null) {
           super(),
-            he.prototype.row_limit || B.aR(he.M()),
+            be.prototype.row_limit || B.aR(be.M()),
             _.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            he.sm_m ||
-              (he.sm_m = {
-                proto: he,
+            be.sm_m ||
+              (be.sm_m = {
+                proto: be,
                 fields: {
                   row_limit: {
                     n: 1,
@@ -6749,57 +6749,6 @@
                     bw: B.Xc.writeUint64String,
                   },
                 },
-              }),
-            he.sm_m
-          );
-        }
-        static MBF() {
-          return he.sm_mbf || (he.sm_mbf = B.Bh(he.M())), he.sm_mbf;
-        }
-        toObject(e = !1) {
-          return he.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return B.TA(he.M(), e, t);
-        }
-        static fromObject(e) {
-          return B.aD(he.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new m.BinaryReader(e),
-            r = new he();
-          return he.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return B.F(he.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new m.BinaryWriter();
-          return he.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          B.l2(he.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new m.BinaryWriter();
-          return he.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CBroadcast_GetBroadcastUploadStats_Request";
-        }
-      }
-      class be extends _ {
-        constructor(e = null) {
-          super(),
-            be.prototype.upload_stats || B.aR(be.M()),
-            _.initialize(this, e, 0, -1, [1], null);
-        }
-        static M() {
-          return (
-            be.sm_m ||
-              (be.sm_m = {
-                proto: be,
-                fields: { upload_stats: { n: 1, c: ge, r: !0, q: !0 } },
               }),
             be.sm_m
           );
@@ -6834,6 +6783,57 @@
         serializeBase64String() {
           var e = new m.BinaryWriter();
           return be.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CBroadcast_GetBroadcastUploadStats_Request";
+        }
+      }
+      class he extends _ {
+        constructor(e = null) {
+          super(),
+            he.prototype.upload_stats || B.aR(he.M()),
+            _.initialize(this, e, 0, -1, [1], null);
+        }
+        static M() {
+          return (
+            he.sm_m ||
+              (he.sm_m = {
+                proto: he,
+                fields: { upload_stats: { n: 1, c: ge, r: !0, q: !0 } },
+              }),
+            he.sm_m
+          );
+        }
+        static MBF() {
+          return he.sm_mbf || (he.sm_mbf = B.Bh(he.M())), he.sm_mbf;
+        }
+        toObject(e = !1) {
+          return he.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return B.TA(he.M(), e, t);
+        }
+        static fromObject(e) {
+          return B.aD(he.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new m.BinaryReader(e),
+            r = new he();
+          return he.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return B.F(he.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new m.BinaryWriter();
+          return he.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          B.l2(he.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new m.BinaryWriter();
+          return he.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CBroadcast_GetBroadcastUploadStats_Response";
@@ -7477,51 +7477,51 @@
           return "CBroadcast_WebRTCSetAnswer_Request";
         }
       }
-      class Te extends _ {
+      class ve extends _ {
         constructor(e = null) {
           super(), _.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
-          return Te.toObject(e, this);
+          return ve.toObject(e, this);
         }
         static toObject(e, t) {
           return e ? { $jspbMessageInstance: t } : {};
         }
         static fromObject(e) {
-          return new Te();
+          return new ve();
         }
         static deserializeBinary(e) {
           let t = new m.BinaryReader(e),
-            r = new Te();
-          return Te.deserializeBinaryFromReader(r, t);
+            r = new ve();
+          return ve.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
           return e;
         }
         serializeBinary() {
           var e = new m.BinaryWriter();
-          return Te.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return ve.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {}
         serializeBase64String() {
           var e = new m.BinaryWriter();
-          return Te.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return ve.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CBroadcast_WebRTCSetAnswer_Response";
         }
       }
-      class ve extends _ {
+      class Ce extends _ {
         constructor(e = null) {
           super(),
-            ve.prototype.sdp_mid || B.aR(ve.M()),
+            Ce.prototype.sdp_mid || B.aR(Ce.M()),
             _.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            ve.sm_m ||
-              (ve.sm_m = {
-                proto: ve,
+            Ce.sm_m ||
+              (Ce.sm_m = {
+                proto: Ce,
                 fields: {
                   sdp_mid: { n: 1, br: B.FE.readString, bw: B.Xc.writeString },
                   sdp_mline_index: {
@@ -7534,64 +7534,6 @@
                     br: B.FE.readString,
                     bw: B.Xc.writeString,
                   },
-                },
-              }),
-            ve.sm_m
-          );
-        }
-        static MBF() {
-          return ve.sm_mbf || (ve.sm_mbf = B.Bh(ve.M())), ve.sm_mbf;
-        }
-        toObject(e = !1) {
-          return ve.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return B.TA(ve.M(), e, t);
-        }
-        static fromObject(e) {
-          return B.aD(ve.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new m.BinaryReader(e),
-            r = new ve();
-          return ve.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return B.F(ve.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new m.BinaryWriter();
-          return ve.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          B.l2(ve.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new m.BinaryWriter();
-          return ve.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CBroadcast_WebRTC_Candidate";
-        }
-      }
-      class Ce extends _ {
-        constructor(e = null) {
-          super(),
-            Ce.prototype.webrtc_session_id || B.aR(Ce.M()),
-            _.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            Ce.sm_m ||
-              (Ce.sm_m = {
-                proto: Ce,
-                fields: {
-                  webrtc_session_id: {
-                    n: 1,
-                    br: B.FE.readFixed64String,
-                    bw: B.Xc.writeFixed64String,
-                  },
-                  candidate: { n: 2, c: ve },
                 },
               }),
             Ce.sm_m
@@ -7627,6 +7569,64 @@
         serializeBase64String() {
           var e = new m.BinaryWriter();
           return Ce.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CBroadcast_WebRTC_Candidate";
+        }
+      }
+      class Te extends _ {
+        constructor(e = null) {
+          super(),
+            Te.prototype.webrtc_session_id || B.aR(Te.M()),
+            _.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            Te.sm_m ||
+              (Te.sm_m = {
+                proto: Te,
+                fields: {
+                  webrtc_session_id: {
+                    n: 1,
+                    br: B.FE.readFixed64String,
+                    bw: B.Xc.writeFixed64String,
+                  },
+                  candidate: { n: 2, c: Ce },
+                },
+              }),
+            Te.sm_m
+          );
+        }
+        static MBF() {
+          return Te.sm_mbf || (Te.sm_mbf = B.Bh(Te.M())), Te.sm_mbf;
+        }
+        toObject(e = !1) {
+          return Te.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return B.TA(Te.M(), e, t);
+        }
+        static fromObject(e) {
+          return B.aD(Te.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new m.BinaryReader(e),
+            r = new Te();
+          return Te.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return B.F(Te.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new m.BinaryWriter();
+          return Te.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          B.l2(Te.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new m.BinaryWriter();
+          return Te.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CBroadcast_WebRTCAddHostCandidate_Request";
@@ -7666,17 +7666,17 @@
           return "CBroadcast_WebRTCAddHostCandidate_Response";
         }
       }
-      class Oe extends _ {
+      class Ee extends _ {
         constructor(e = null) {
           super(),
-            Oe.prototype.broadcaster_steamid || B.aR(Oe.M()),
+            Ee.prototype.broadcaster_steamid || B.aR(Ee.M()),
             _.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            Oe.sm_m ||
-              (Oe.sm_m = {
-                proto: Oe,
+            Ee.sm_m ||
+              (Ee.sm_m = {
+                proto: Ee,
                 fields: {
                   broadcaster_steamid: {
                     n: 1,
@@ -7688,59 +7688,23 @@
                     br: B.FE.readFixed64String,
                     bw: B.Xc.writeFixed64String,
                   },
-                  candidate: { n: 3, c: ve },
+                  candidate: { n: 3, c: Ce },
                 },
               }),
-            Oe.sm_m
+            Ee.sm_m
           );
         }
         static MBF() {
-          return Oe.sm_mbf || (Oe.sm_mbf = B.Bh(Oe.M())), Oe.sm_mbf;
-        }
-        toObject(e = !1) {
-          return Oe.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return B.TA(Oe.M(), e, t);
-        }
-        static fromObject(e) {
-          return B.aD(Oe.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new m.BinaryReader(e),
-            r = new Oe();
-          return Oe.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return B.F(Oe.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new m.BinaryWriter();
-          return Oe.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          B.l2(Oe.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new m.BinaryWriter();
-          return Oe.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CBroadcast_WebRTCAddViewerCandidate_Request";
-        }
-      }
-      class Ee extends _ {
-        constructor(e = null) {
-          super(), _.initialize(this, e, 0, -1, void 0, null);
+          return Ee.sm_mbf || (Ee.sm_mbf = B.Bh(Ee.M())), Ee.sm_mbf;
         }
         toObject(e = !1) {
           return Ee.toObject(e, this);
         }
         static toObject(e, t) {
-          return e ? { $jspbMessageInstance: t } : {};
+          return B.TA(Ee.M(), e, t);
         }
         static fromObject(e) {
-          return new Ee();
+          return B.aD(Ee.M(), e);
         }
         static deserializeBinary(e) {
           let t = new m.BinaryReader(e),
@@ -7748,16 +7712,52 @@
           return Ee.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return e;
+          return B.F(Ee.MBF(), e, t);
         }
         serializeBinary() {
           var e = new m.BinaryWriter();
           return Ee.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
-        static serializeBinaryToWriter(e, t) {}
+        static serializeBinaryToWriter(e, t) {
+          B.l2(Ee.M(), e, t);
+        }
         serializeBase64String() {
           var e = new m.BinaryWriter();
           return Ee.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CBroadcast_WebRTCAddViewerCandidate_Request";
+        }
+      }
+      class Oe extends _ {
+        constructor(e = null) {
+          super(), _.initialize(this, e, 0, -1, void 0, null);
+        }
+        toObject(e = !1) {
+          return Oe.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return e ? { $jspbMessageInstance: t } : {};
+        }
+        static fromObject(e) {
+          return new Oe();
+        }
+        static deserializeBinary(e) {
+          let t = new m.BinaryReader(e),
+            r = new Oe();
+          return Oe.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return e;
+        }
+        serializeBinary() {
+          var e = new m.BinaryWriter();
+          return Oe.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {}
+        serializeBase64String() {
+          var e = new m.BinaryWriter();
+          return Oe.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CBroadcast_WebRTCAddViewerCandidate_Response";
@@ -7847,7 +7847,7 @@
                     br: B.FE.readUint32,
                     bw: B.Xc.writeUint32,
                   },
-                  candidates: { n: 2, c: ve, r: !0, q: !0 },
+                  candidates: { n: 2, c: Ce, r: !0, q: !0 },
                 },
               }),
             je.sm_m
@@ -7998,129 +7998,10 @@
           return "CBroadcast_WebRTCLookupTURNServer_Request";
         }
       }
-      class Ae extends _ {
-        constructor(e = null) {
-          super(),
-            Ae.prototype.turn_server || B.aR(Ae.M()),
-            _.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            Ae.sm_m ||
-              (Ae.sm_m = {
-                proto: Ae,
-                fields: {
-                  turn_server: {
-                    n: 1,
-                    br: B.FE.readString,
-                    bw: B.Xc.writeString,
-                  },
-                },
-              }),
-            Ae.sm_m
-          );
-        }
-        static MBF() {
-          return Ae.sm_mbf || (Ae.sm_mbf = B.Bh(Ae.M())), Ae.sm_mbf;
-        }
-        toObject(e = !1) {
-          return Ae.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return B.TA(Ae.M(), e, t);
-        }
-        static fromObject(e) {
-          return B.aD(Ae.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new m.BinaryReader(e),
-            r = new Ae();
-          return Ae.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return B.F(Ae.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new m.BinaryWriter();
-          return Ae.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          B.l2(Ae.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new m.BinaryWriter();
-          return Ae.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CBroadcast_WebRTCLookupTURNServer_Response";
-        }
-      }
-      class Ie extends _ {
-        constructor(e = null) {
-          super(),
-            Ie.prototype.broadcast_session_id || B.aR(Ie.M()),
-            _.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            Ie.sm_m ||
-              (Ie.sm_m = {
-                proto: Ie,
-                fields: {
-                  broadcast_session_id: {
-                    n: 1,
-                    br: B.FE.readFixed64String,
-                    bw: B.Xc.writeFixed64String,
-                  },
-                  turn_server: {
-                    n: 2,
-                    br: B.FE.readString,
-                    bw: B.Xc.writeString,
-                  },
-                },
-              }),
-            Ie.sm_m
-          );
-        }
-        static MBF() {
-          return Ie.sm_mbf || (Ie.sm_mbf = B.Bh(Ie.M())), Ie.sm_mbf;
-        }
-        toObject(e = !1) {
-          return Ie.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return B.TA(Ie.M(), e, t);
-        }
-        static fromObject(e) {
-          return B.aD(Ie.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new m.BinaryReader(e),
-            r = new Ie();
-          return Ie.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return B.F(Ie.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new m.BinaryWriter();
-          return Ie.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          B.l2(Ie.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new m.BinaryWriter();
-          return Ie.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CBroadcast_WebRTCHaveTURNServer_Notification";
-        }
-      }
       class Ue extends _ {
         constructor(e = null) {
           super(),
-            Ue.prototype.broadcast_session_id || B.aR(Ue.M()),
+            Ue.prototype.turn_server || B.aR(Ue.M()),
             _.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
@@ -8129,25 +8010,10 @@
               (Ue.sm_m = {
                 proto: Ue,
                 fields: {
-                  broadcast_session_id: {
+                  turn_server: {
                     n: 1,
-                    br: B.FE.readFixed64String,
-                    bw: B.Xc.writeFixed64String,
-                  },
-                  webrtc_session_id: {
-                    n: 2,
-                    br: B.FE.readFixed64String,
-                    bw: B.Xc.writeFixed64String,
-                  },
-                  viewer_steamid: {
-                    n: 3,
-                    br: B.FE.readFixed64String,
-                    bw: B.Xc.writeFixed64String,
-                  },
-                  viewer_token: {
-                    n: 4,
-                    br: B.FE.readFixed64String,
-                    bw: B.Xc.writeFixed64String,
+                    br: B.FE.readString,
+                    bw: B.Xc.writeString,
                   },
                 },
               }),
@@ -8186,7 +8052,7 @@
           return Ue.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CBroadcast_WebRTCStart_Notification";
+          return "CBroadcast_WebRTCLookupTURNServer_Response";
         }
       }
       class Xe extends _ {
@@ -8206,12 +8072,11 @@
                     br: B.FE.readFixed64String,
                     bw: B.Xc.writeFixed64String,
                   },
-                  webrtc_session_id: {
+                  turn_server: {
                     n: 2,
-                    br: B.FE.readFixed64String,
-                    bw: B.Xc.writeFixed64String,
+                    br: B.FE.readString,
+                    bw: B.Xc.writeString,
                   },
-                  answer: { n: 3, br: B.FE.readString, bw: B.Xc.writeString },
                 },
               }),
             Xe.sm_m
@@ -8249,6 +8114,141 @@
           return Xe.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
+          return "CBroadcast_WebRTCHaveTURNServer_Notification";
+        }
+      }
+      class Ie extends _ {
+        constructor(e = null) {
+          super(),
+            Ie.prototype.broadcast_session_id || B.aR(Ie.M()),
+            _.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            Ie.sm_m ||
+              (Ie.sm_m = {
+                proto: Ie,
+                fields: {
+                  broadcast_session_id: {
+                    n: 1,
+                    br: B.FE.readFixed64String,
+                    bw: B.Xc.writeFixed64String,
+                  },
+                  webrtc_session_id: {
+                    n: 2,
+                    br: B.FE.readFixed64String,
+                    bw: B.Xc.writeFixed64String,
+                  },
+                  viewer_steamid: {
+                    n: 3,
+                    br: B.FE.readFixed64String,
+                    bw: B.Xc.writeFixed64String,
+                  },
+                  viewer_token: {
+                    n: 4,
+                    br: B.FE.readFixed64String,
+                    bw: B.Xc.writeFixed64String,
+                  },
+                },
+              }),
+            Ie.sm_m
+          );
+        }
+        static MBF() {
+          return Ie.sm_mbf || (Ie.sm_mbf = B.Bh(Ie.M())), Ie.sm_mbf;
+        }
+        toObject(e = !1) {
+          return Ie.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return B.TA(Ie.M(), e, t);
+        }
+        static fromObject(e) {
+          return B.aD(Ie.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new m.BinaryReader(e),
+            r = new Ie();
+          return Ie.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return B.F(Ie.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new m.BinaryWriter();
+          return Ie.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          B.l2(Ie.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new m.BinaryWriter();
+          return Ie.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CBroadcast_WebRTCStart_Notification";
+        }
+      }
+      class Ae extends _ {
+        constructor(e = null) {
+          super(),
+            Ae.prototype.broadcast_session_id || B.aR(Ae.M()),
+            _.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            Ae.sm_m ||
+              (Ae.sm_m = {
+                proto: Ae,
+                fields: {
+                  broadcast_session_id: {
+                    n: 1,
+                    br: B.FE.readFixed64String,
+                    bw: B.Xc.writeFixed64String,
+                  },
+                  webrtc_session_id: {
+                    n: 2,
+                    br: B.FE.readFixed64String,
+                    bw: B.Xc.writeFixed64String,
+                  },
+                  answer: { n: 3, br: B.FE.readString, bw: B.Xc.writeString },
+                },
+              }),
+            Ae.sm_m
+          );
+        }
+        static MBF() {
+          return Ae.sm_mbf || (Ae.sm_mbf = B.Bh(Ae.M())), Ae.sm_mbf;
+        }
+        toObject(e = !1) {
+          return Ae.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return B.TA(Ae.M(), e, t);
+        }
+        static fromObject(e) {
+          return B.aD(Ae.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new m.BinaryReader(e),
+            r = new Ae();
+          return Ae.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return B.F(Ae.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new m.BinaryWriter();
+          return Ae.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          B.l2(Ae.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new m.BinaryWriter();
+          return Ae.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
           return "CBroadcast_WebRTCSetAnswer_Notification";
         }
       }
@@ -8274,7 +8274,7 @@
                     br: B.FE.readFixed64String,
                     bw: B.Xc.writeFixed64String,
                   },
-                  candidate: { n: 3, c: ve },
+                  candidate: { n: 3, c: Ce },
                 },
               }),
             ke.sm_m
@@ -8320,8 +8320,8 @@
         (e.BeginBroadcastSession = function (e, t) {
           return e.SendMsg(
             "Broadcast.BeginBroadcastSession#1",
-            (0, l.MD)(h, t),
-            b,
+            (0, l.MD)(b, t),
+            h,
             { ePrivilege: 1 },
           );
         }),
@@ -8349,21 +8349,21 @@
             );
           }),
           (e.WatchBroadcast = function (e, t) {
-            return e.SendMsg("Broadcast.WatchBroadcast#1", (0, l.MD)(R, t), T, {
+            return e.SendMsg("Broadcast.WatchBroadcast#1", (0, l.MD)(R, t), v, {
               ePrivilege: 2,
             });
           }),
           (e.HeartbeatBroadcast = function (e, t) {
             return e.SendNotification(
               "Broadcast.HeartbeatBroadcast#1",
-              (0, l.MD)(v, t),
+              (0, l.MD)(C, t),
               { ePrivilege: 2 },
             );
           }),
           (e.StopWatchingBroadcast = function (e, t) {
             return e.SendNotification(
               "Broadcast.StopWatchingBroadcast#1",
-              (0, l.MD)(C, t),
+              (0, l.MD)(T, t),
               { ePrivilege: 2 },
             );
           }),
@@ -8387,14 +8387,14 @@
             return e.SendMsg(
               "Broadcast.InviteToBroadcast#1",
               (0, l.MD)(W, t),
-              O,
+              E,
               { ePrivilege: 1 },
             );
           }),
           (e.SendBroadcastStateToServer = function (e, t) {
             return e.SendMsg(
               "Broadcast.SendBroadcastStateToServer#1",
-              (0, l.MD)(E, t),
+              (0, l.MD)(O, t),
               x,
               { ePrivilege: 1 },
             );
@@ -8500,7 +8500,7 @@
           (e.NotifyWebRTCHaveTURNServer = function (e, t) {
             return e.SendNotification(
               "Broadcast.NotifyWebRTCHaveTURNServer#1",
-              (0, l.MD)(Ie, t),
+              (0, l.MD)(Xe, t),
               { ePrivilege: 1 },
             );
           }),
@@ -8524,7 +8524,7 @@
             return e.SendMsg(
               "Broadcast.WebRTCSetAnswer#1",
               (0, l.MD)(Re, t),
-              Te,
+              ve,
               { ePrivilege: 1 },
             );
           }),
@@ -8532,14 +8532,14 @@
             return e.SendMsg(
               "Broadcast.WebRTCLookupTURNServer#1",
               (0, l.MD)(Ne, t),
-              Ae,
+              Ue,
               { ePrivilege: 1 },
             );
           }),
           (e.WebRTCAddHostCandidate = function (e, t) {
             return e.SendMsg(
               "Broadcast.WebRTCAddHostCandidate#1",
-              (0, l.MD)(Ce, t),
+              (0, l.MD)(Te, t),
               We,
               { ePrivilege: 1 },
             );
@@ -8547,8 +8547,8 @@
           (e.WebRTCAddViewerCandidate = function (e, t) {
             return e.SendMsg(
               "Broadcast.WebRTCAddViewerCandidate#1",
-              (0, l.MD)(Oe, t),
-              Ee,
+              (0, l.MD)(Ee, t),
+              Oe,
               { ePrivilege: 1 },
             );
           }),
@@ -8563,8 +8563,8 @@
           (e.GetBroadcastUploadStats = function (e, t) {
             return e.SendMsg(
               "Broadcast.GetBroadcastUploadStats#1",
-              (0, l.MD)(he, t),
-              be,
+              (0, l.MD)(be, t),
+              he,
               { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 2 },
             );
           }),
@@ -8596,7 +8596,7 @@
             }),
             (e.NotifySessionClosedHandler = {
               name: "BroadcastClient.NotifySessionClosed#1",
-              request: A,
+              request: U,
             }),
             (e.NotifyViewerBroadcastInviteHandler = {
               name: "BroadcastClient.NotifyViewerBroadcastInvite#1",
@@ -8604,15 +8604,15 @@
             }),
             (e.NotifyBroadcastStatusHandler = {
               name: "BroadcastClient.NotifyBroadcastStatus#1",
-              request: I,
+              request: X,
             }),
             (e.NotifyBroadcastChannelLiveHandler = {
               name: "BroadcastClient.NotifyBroadcastChannelLive#1",
-              request: U,
+              request: I,
             }),
             (e.SendThumbnailToRelayHandler = {
               name: "BroadcastClient.SendThumbnailToRelay#1",
-              request: X,
+              request: A,
             }),
             (e.NotifyWebRTCNeedTURNServerHandler = {
               name: "BroadcastClient.NotifyWebRTCNeedTURNServer#1",
@@ -8620,11 +8620,11 @@
             }),
             (e.NotifyWebRTCStartHandler = {
               name: "BroadcastClient.NotifyWebRTCStart#1",
-              request: Ue,
+              request: Ie,
             }),
             (e.NotifyWebRTCSetAnswerHandler = {
               name: "BroadcastClient.NotifyWebRTCSetAnswer#1",
-              request: Xe,
+              request: Ae,
             }),
             (e.NotifyWebRTCAddViewerCandidateHandler = {
               name: "BroadcastClient.NotifyWebRTCAddViewerCandidate#1",
@@ -10119,67 +10119,18 @@
           return "CSteamTV_GetFollowedChannels_Response";
         }
       }
-      class ht extends Ve {
-        constructor(e = null) {
-          super(), Ve.initialize(this, e, 0, -1, void 0, null);
-        }
-        toObject(e = !1) {
-          return ht.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return e ? { $jspbMessageInstance: t } : {};
-        }
-        static fromObject(e) {
-          return new ht();
-        }
-        static deserializeBinary(e) {
-          let t = new m.BinaryReader(e),
-            r = new ht();
-          return ht.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return e;
-        }
-        serializeBinary() {
-          var e = new m.BinaryWriter();
-          return ht.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {}
-        serializeBase64String() {
-          var e = new m.BinaryWriter();
-          return ht.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamTV_GetSubscribedChannels_Request";
-        }
-      }
       class bt extends Ve {
         constructor(e = null) {
-          super(),
-            bt.prototype.results || B.aR(bt.M()),
-            Ve.initialize(this, e, 0, -1, [1], null);
-        }
-        static M() {
-          return (
-            bt.sm_m ||
-              (bt.sm_m = {
-                proto: bt,
-                fields: { results: { n: 1, c: mt, r: !0, q: !0 } },
-              }),
-            bt.sm_m
-          );
-        }
-        static MBF() {
-          return bt.sm_mbf || (bt.sm_mbf = B.Bh(bt.M())), bt.sm_mbf;
+          super(), Ve.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
           return bt.toObject(e, this);
         }
         static toObject(e, t) {
-          return B.TA(bt.M(), e, t);
+          return e ? { $jspbMessageInstance: t } : {};
         }
         static fromObject(e) {
-          return B.aD(bt.M(), e);
+          return new bt();
         }
         static deserializeBinary(e) {
           let t = new m.BinaryReader(e),
@@ -10187,18 +10138,67 @@
           return bt.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return B.F(bt.MBF(), e, t);
+          return e;
         }
         serializeBinary() {
           var e = new m.BinaryWriter();
           return bt.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
-        static serializeBinaryToWriter(e, t) {
-          B.l2(bt.M(), e, t);
-        }
+        static serializeBinaryToWriter(e, t) {}
         serializeBase64String() {
           var e = new m.BinaryWriter();
           return bt.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CSteamTV_GetSubscribedChannels_Request";
+        }
+      }
+      class ht extends Ve {
+        constructor(e = null) {
+          super(),
+            ht.prototype.results || B.aR(ht.M()),
+            Ve.initialize(this, e, 0, -1, [1], null);
+        }
+        static M() {
+          return (
+            ht.sm_m ||
+              (ht.sm_m = {
+                proto: ht,
+                fields: { results: { n: 1, c: mt, r: !0, q: !0 } },
+              }),
+            ht.sm_m
+          );
+        }
+        static MBF() {
+          return ht.sm_mbf || (ht.sm_mbf = B.Bh(ht.M())), ht.sm_mbf;
+        }
+        toObject(e = !1) {
+          return ht.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return B.TA(ht.M(), e, t);
+        }
+        static fromObject(e) {
+          return B.aD(ht.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new m.BinaryReader(e),
+            r = new ht();
+          return ht.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return B.F(ht.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new m.BinaryWriter();
+          return ht.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          B.l2(ht.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new m.BinaryWriter();
+          return ht.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CSteamTV_GetSubscribedChannels_Response";
@@ -10767,73 +10767,18 @@
           return "CSteamTV_GetGames_Request";
         }
       }
-      class Tt extends Ve {
-        constructor(e = null) {
-          super(),
-            Tt.prototype.results || B.aR(Tt.M()),
-            Ve.initialize(this, e, 0, -1, [1], null);
-        }
-        static M() {
-          return (
-            Tt.sm_m ||
-              (Tt.sm_m = {
-                proto: Tt,
-                fields: { results: { n: 1, c: zt, r: !0, q: !0 } },
-              }),
-            Tt.sm_m
-          );
-        }
-        static MBF() {
-          return Tt.sm_mbf || (Tt.sm_mbf = B.Bh(Tt.M())), Tt.sm_mbf;
-        }
-        toObject(e = !1) {
-          return Tt.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return B.TA(Tt.M(), e, t);
-        }
-        static fromObject(e) {
-          return B.aD(Tt.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new m.BinaryReader(e),
-            r = new Tt();
-          return Tt.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return B.F(Tt.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new m.BinaryWriter();
-          return Tt.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          B.l2(Tt.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new m.BinaryWriter();
-          return Tt.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamTV_GetGames_Response";
-        }
-      }
       class vt extends Ve {
         constructor(e = null) {
           super(),
-            vt.prototype.algorithm || B.aR(vt.M()),
-            Ve.initialize(this, e, 0, -1, void 0, null);
+            vt.prototype.results || B.aR(vt.M()),
+            Ve.initialize(this, e, 0, -1, [1], null);
         }
         static M() {
           return (
             vt.sm_m ||
               (vt.sm_m = {
                 proto: vt,
-                fields: {
-                  algorithm: { n: 1, br: B.FE.readEnum, bw: B.Xc.writeEnum },
-                  count: { n: 2, br: B.FE.readUint32, bw: B.Xc.writeUint32 },
-                  appid: { n: 3, br: B.FE.readUint32, bw: B.Xc.writeUint32 },
-                },
+                fields: { results: { n: 1, c: zt, r: !0, q: !0 } },
               }),
             vt.sm_m
           );
@@ -10870,21 +10815,25 @@
           return vt.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CSteamTV_GetChannels_Request";
+          return "CSteamTV_GetGames_Response";
         }
       }
       class Ct extends Ve {
         constructor(e = null) {
           super(),
-            Ct.prototype.results || B.aR(Ct.M()),
-            Ve.initialize(this, e, 0, -1, [1], null);
+            Ct.prototype.algorithm || B.aR(Ct.M()),
+            Ve.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
             Ct.sm_m ||
               (Ct.sm_m = {
                 proto: Ct,
-                fields: { results: { n: 1, c: mt, r: !0, q: !0 } },
+                fields: {
+                  algorithm: { n: 1, br: B.FE.readEnum, bw: B.Xc.writeEnum },
+                  count: { n: 2, br: B.FE.readUint32, bw: B.Xc.writeUint32 },
+                  appid: { n: 3, br: B.FE.readUint32, bw: B.Xc.writeUint32 },
+                },
               }),
             Ct.sm_m
           );
@@ -10919,6 +10868,57 @@
         serializeBase64String() {
           var e = new m.BinaryWriter();
           return Ct.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CSteamTV_GetChannels_Request";
+        }
+      }
+      class Tt extends Ve {
+        constructor(e = null) {
+          super(),
+            Tt.prototype.results || B.aR(Tt.M()),
+            Ve.initialize(this, e, 0, -1, [1], null);
+        }
+        static M() {
+          return (
+            Tt.sm_m ||
+              (Tt.sm_m = {
+                proto: Tt,
+                fields: { results: { n: 1, c: mt, r: !0, q: !0 } },
+              }),
+            Tt.sm_m
+          );
+        }
+        static MBF() {
+          return Tt.sm_mbf || (Tt.sm_mbf = B.Bh(Tt.M())), Tt.sm_mbf;
+        }
+        toObject(e = !1) {
+          return Tt.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return B.TA(Tt.M(), e, t);
+        }
+        static fromObject(e) {
+          return B.aD(Tt.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new m.BinaryReader(e),
+            r = new Tt();
+          return Tt.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return B.F(Tt.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new m.BinaryWriter();
+          return Tt.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          B.l2(Tt.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new m.BinaryWriter();
+          return Tt.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CSteamTV_GetChannels_Response";
@@ -10981,81 +10981,18 @@
           return "CSteamTV_GetBroadcastChannelBroadcasters_Request";
         }
       }
-      class Ot extends Ve {
-        constructor(e = null) {
-          super(),
-            Ot.prototype.broadcasters || B.aR(Ot.M()),
-            Ve.initialize(this, e, 0, -1, [1], null);
-        }
-        static M() {
-          return (
-            Ot.sm_m ||
-              (Ot.sm_m = {
-                proto: Ot,
-                fields: { broadcasters: { n: 1, c: Et, r: !0, q: !0 } },
-              }),
-            Ot.sm_m
-          );
-        }
-        static MBF() {
-          return Ot.sm_mbf || (Ot.sm_mbf = B.Bh(Ot.M())), Ot.sm_mbf;
-        }
-        toObject(e = !1) {
-          return Ot.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return B.TA(Ot.M(), e, t);
-        }
-        static fromObject(e) {
-          return B.aD(Ot.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new m.BinaryReader(e),
-            r = new Ot();
-          return Ot.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return B.F(Ot.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new m.BinaryWriter();
-          return Ot.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          B.l2(Ot.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new m.BinaryWriter();
-          return Ot.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamTV_GetBroadcastChannelBroadcasters_Response";
-        }
-      }
       class Et extends Ve {
         constructor(e = null) {
           super(),
-            Et.prototype.steamid || B.aR(Et.M()),
-            Ve.initialize(this, e, 0, -1, void 0, null);
+            Et.prototype.broadcasters || B.aR(Et.M()),
+            Ve.initialize(this, e, 0, -1, [1], null);
         }
         static M() {
           return (
             Et.sm_m ||
               (Et.sm_m = {
                 proto: Et,
-                fields: {
-                  steamid: {
-                    n: 1,
-                    br: B.FE.readFixed64String,
-                    bw: B.Xc.writeFixed64String,
-                  },
-                  name: { n: 2, br: B.FE.readString, bw: B.Xc.writeString },
-                  rtmp_token: {
-                    n: 3,
-                    br: B.FE.readString,
-                    bw: B.Xc.writeString,
-                  },
-                },
+                fields: { broadcasters: { n: 1, c: Ot, r: !0, q: !0 } },
               }),
             Et.sm_m
           );
@@ -11090,6 +11027,69 @@
         serializeBase64String() {
           var e = new m.BinaryWriter();
           return Et.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CSteamTV_GetBroadcastChannelBroadcasters_Response";
+        }
+      }
+      class Ot extends Ve {
+        constructor(e = null) {
+          super(),
+            Ot.prototype.steamid || B.aR(Ot.M()),
+            Ve.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            Ot.sm_m ||
+              (Ot.sm_m = {
+                proto: Ot,
+                fields: {
+                  steamid: {
+                    n: 1,
+                    br: B.FE.readFixed64String,
+                    bw: B.Xc.writeFixed64String,
+                  },
+                  name: { n: 2, br: B.FE.readString, bw: B.Xc.writeString },
+                  rtmp_token: {
+                    n: 3,
+                    br: B.FE.readString,
+                    bw: B.Xc.writeString,
+                  },
+                },
+              }),
+            Ot.sm_m
+          );
+        }
+        static MBF() {
+          return Ot.sm_mbf || (Ot.sm_mbf = B.Bh(Ot.M())), Ot.sm_mbf;
+        }
+        toObject(e = !1) {
+          return Ot.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return B.TA(Ot.M(), e, t);
+        }
+        static fromObject(e) {
+          return B.aD(Ot.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new m.BinaryReader(e),
+            r = new Ot();
+          return Ot.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return B.F(Ot.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new m.BinaryWriter();
+          return Ot.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          B.l2(Ot.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new m.BinaryWriter();
+          return Ot.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CSteamTV_GetBroadcastChannelBroadcasters_Response_Broadcaster";
@@ -11320,132 +11320,33 @@
           return "CSteamTV_GetChatBans_Request";
         }
       }
-      class At extends Ve {
+      class Ut extends Ve {
         constructor(e = null) {
           super(),
-            At.prototype.results || B.aR(At.M()),
+            Ut.prototype.results || B.aR(Ut.M()),
             Ve.initialize(this, e, 0, -1, [1], null);
         }
         static M() {
           return (
-            At.sm_m ||
-              (At.sm_m = {
-                proto: At,
+            Ut.sm_m ||
+              (Ut.sm_m = {
+                proto: Ut,
                 fields: { results: { n: 1, c: xt, r: !0, q: !0 } },
               }),
-            At.sm_m
+            Ut.sm_m
           );
         }
         static MBF() {
-          return At.sm_mbf || (At.sm_mbf = B.Bh(At.M())), At.sm_mbf;
-        }
-        toObject(e = !1) {
-          return At.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return B.TA(At.M(), e, t);
-        }
-        static fromObject(e) {
-          return B.aD(At.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new m.BinaryReader(e),
-            r = new At();
-          return At.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return B.F(At.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new m.BinaryWriter();
-          return At.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          B.l2(At.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new m.BinaryWriter();
-          return At.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamTV_GetChatBans_Response";
-        }
-      }
-      class It extends Ve {
-        constructor(e = null) {
-          super(),
-            It.prototype.broadcast_channel_id || B.aR(It.M()),
-            Ve.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            It.sm_m ||
-              (It.sm_m = {
-                proto: It,
-                fields: {
-                  broadcast_channel_id: {
-                    n: 1,
-                    br: B.FE.readFixed64String,
-                    bw: B.Xc.writeFixed64String,
-                  },
-                  moderator_steamid: {
-                    n: 2,
-                    br: B.FE.readFixed64String,
-                    bw: B.Xc.writeFixed64String,
-                  },
-                  undo: { n: 3, br: B.FE.readBool, bw: B.Xc.writeBool },
-                },
-              }),
-            It.sm_m
-          );
-        }
-        static MBF() {
-          return It.sm_mbf || (It.sm_mbf = B.Bh(It.M())), It.sm_mbf;
-        }
-        toObject(e = !1) {
-          return It.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return B.TA(It.M(), e, t);
-        }
-        static fromObject(e) {
-          return B.aD(It.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new m.BinaryReader(e),
-            r = new It();
-          return It.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return B.F(It.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new m.BinaryWriter();
-          return It.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          B.l2(It.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new m.BinaryWriter();
-          return It.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamTV_AddChatModerator_Request";
-        }
-      }
-      class Ut extends Ve {
-        constructor(e = null) {
-          super(), Ve.initialize(this, e, 0, -1, void 0, null);
+          return Ut.sm_mbf || (Ut.sm_mbf = B.Bh(Ut.M())), Ut.sm_mbf;
         }
         toObject(e = !1) {
           return Ut.toObject(e, this);
         }
         static toObject(e, t) {
-          return e ? { $jspbMessageInstance: t } : {};
+          return B.TA(Ut.M(), e, t);
         }
         static fromObject(e) {
-          return new Ut();
+          return B.aD(Ut.M(), e);
         }
         static deserializeBinary(e) {
           let t = new m.BinaryReader(e),
@@ -11453,19 +11354,21 @@
           return Ut.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return e;
+          return B.F(Ut.MBF(), e, t);
         }
         serializeBinary() {
           var e = new m.BinaryWriter();
           return Ut.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
-        static serializeBinaryToWriter(e, t) {}
+        static serializeBinaryToWriter(e, t) {
+          B.l2(Ut.M(), e, t);
+        }
         serializeBase64String() {
           var e = new m.BinaryWriter();
           return Ut.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CSteamTV_AddChatModerator_Response";
+          return "CSteamTV_GetChatBans_Response";
         }
       }
       class Xt extends Ve {
@@ -11485,6 +11388,12 @@
                     br: B.FE.readFixed64String,
                     bw: B.Xc.writeFixed64String,
                   },
+                  moderator_steamid: {
+                    n: 2,
+                    br: B.FE.readFixed64String,
+                    bw: B.Xc.writeFixed64String,
+                  },
+                  undo: { n: 3, br: B.FE.readBool, bw: B.Xc.writeBool },
                 },
               }),
             Xt.sm_m
@@ -11520,6 +11429,97 @@
         serializeBase64String() {
           var e = new m.BinaryWriter();
           return Xt.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CSteamTV_AddChatModerator_Request";
+        }
+      }
+      class It extends Ve {
+        constructor(e = null) {
+          super(), Ve.initialize(this, e, 0, -1, void 0, null);
+        }
+        toObject(e = !1) {
+          return It.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return e ? { $jspbMessageInstance: t } : {};
+        }
+        static fromObject(e) {
+          return new It();
+        }
+        static deserializeBinary(e) {
+          let t = new m.BinaryReader(e),
+            r = new It();
+          return It.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return e;
+        }
+        serializeBinary() {
+          var e = new m.BinaryWriter();
+          return It.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {}
+        serializeBase64String() {
+          var e = new m.BinaryWriter();
+          return It.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CSteamTV_AddChatModerator_Response";
+        }
+      }
+      class At extends Ve {
+        constructor(e = null) {
+          super(),
+            At.prototype.broadcast_channel_id || B.aR(At.M()),
+            Ve.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            At.sm_m ||
+              (At.sm_m = {
+                proto: At,
+                fields: {
+                  broadcast_channel_id: {
+                    n: 1,
+                    br: B.FE.readFixed64String,
+                    bw: B.Xc.writeFixed64String,
+                  },
+                },
+              }),
+            At.sm_m
+          );
+        }
+        static MBF() {
+          return At.sm_mbf || (At.sm_mbf = B.Bh(At.M())), At.sm_mbf;
+        }
+        toObject(e = !1) {
+          return At.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return B.TA(At.M(), e, t);
+        }
+        static fromObject(e) {
+          return B.aD(At.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new m.BinaryReader(e),
+            r = new At();
+          return At.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return B.F(At.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new m.BinaryWriter();
+          return At.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          B.l2(At.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new m.BinaryWriter();
+          return At.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CSteamTV_GetChatModerators_Request";
@@ -12994,17 +12994,17 @@
           return "CSteamTV_GetHomePageContents_Response";
         }
       }
-      class hr extends Ve {
+      class br extends Ve {
         constructor(e = null) {
           super(),
-            hr.prototype.broadcast_channel_id || B.aR(hr.M()),
+            br.prototype.broadcast_channel_id || B.aR(br.M()),
             Ve.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            hr.sm_m ||
-              (hr.sm_m = {
-                proto: hr,
+            br.sm_m ||
+              (br.sm_m = {
+                proto: br,
                 fields: {
                   broadcast_channel_id: {
                     n: 1,
@@ -13013,55 +13013,55 @@
                   },
                 },
               }),
-            hr.sm_m
+            br.sm_m
           );
         }
         static MBF() {
-          return hr.sm_mbf || (hr.sm_mbf = B.Bh(hr.M())), hr.sm_mbf;
+          return br.sm_mbf || (br.sm_mbf = B.Bh(br.M())), br.sm_mbf;
         }
         toObject(e = !1) {
-          return hr.toObject(e, this);
+          return br.toObject(e, this);
         }
         static toObject(e, t) {
-          return B.TA(hr.M(), e, t);
+          return B.TA(br.M(), e, t);
         }
         static fromObject(e) {
-          return B.aD(hr.M(), e);
+          return B.aD(br.M(), e);
         }
         static deserializeBinary(e) {
           let t = new m.BinaryReader(e),
-            r = new hr();
-          return hr.deserializeBinaryFromReader(r, t);
+            r = new br();
+          return br.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return B.F(hr.MBF(), e, t);
+          return B.F(br.MBF(), e, t);
         }
         serializeBinary() {
           var e = new m.BinaryWriter();
-          return hr.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return br.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          B.l2(hr.M(), e, t);
+          B.l2(br.M(), e, t);
         }
         serializeBase64String() {
           var e = new m.BinaryWriter();
-          return hr.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return br.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CSteamTV_GetBroadcastChannelClips_Request";
         }
       }
-      class br extends Ve {
+      class hr extends Ve {
         constructor(e = null) {
           super(),
-            br.prototype.broadcast_clip_id || B.aR(br.M()),
+            hr.prototype.broadcast_clip_id || B.aR(hr.M()),
             Ve.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            br.sm_m ||
-              (br.sm_m = {
-                proto: br,
+            hr.sm_m ||
+              (hr.sm_m = {
+                proto: hr,
                 fields: {
                   broadcast_clip_id: {
                     n: 1,
@@ -13106,39 +13106,39 @@
                   },
                 },
               }),
-            br.sm_m
+            hr.sm_m
           );
         }
         static MBF() {
-          return br.sm_mbf || (br.sm_mbf = B.Bh(br.M())), br.sm_mbf;
+          return hr.sm_mbf || (hr.sm_mbf = B.Bh(hr.M())), hr.sm_mbf;
         }
         toObject(e = !1) {
-          return br.toObject(e, this);
+          return hr.toObject(e, this);
         }
         static toObject(e, t) {
-          return B.TA(br.M(), e, t);
+          return B.TA(hr.M(), e, t);
         }
         static fromObject(e) {
-          return B.aD(br.M(), e);
+          return B.aD(hr.M(), e);
         }
         static deserializeBinary(e) {
           let t = new m.BinaryReader(e),
-            r = new br();
-          return br.deserializeBinaryFromReader(r, t);
+            r = new hr();
+          return hr.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return B.F(br.MBF(), e, t);
+          return B.F(hr.MBF(), e, t);
         }
         serializeBinary() {
           var e = new m.BinaryWriter();
-          return br.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return hr.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          B.l2(br.M(), e, t);
+          B.l2(hr.M(), e, t);
         }
         serializeBase64String() {
           var e = new m.BinaryWriter();
-          return br.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return hr.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CSteamTV_BroadcastClipInfo";
@@ -13156,7 +13156,7 @@
               (gr.sm_m = {
                 proto: gr,
                 fields: {
-                  clips: { n: 1, c: br, r: !0, q: !0 },
+                  clips: { n: 1, c: hr, r: !0, q: !0 },
                   thumbnail_host: {
                     n: 2,
                     br: B.FE.readString,
@@ -13450,7 +13450,7 @@
             return e.SendMsg(
               "SteamTV.GetBroadcastChannelBroadcasters#1",
               (0, l.MD)(Wt, t),
-              Ot,
+              Et,
               { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 2 },
             );
           }),
@@ -13465,8 +13465,8 @@
           (e.GetSubscribedChannels = function (e, t) {
             return e.SendMsg(
               "SteamTV.GetSubscribedChannels#1",
-              (0, l.MD)(ht, t),
-              bt,
+              (0, l.MD)(bt, t),
+              ht,
               { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 2 },
             );
           }),
@@ -13497,7 +13497,7 @@
           (e.GetBroadcastChannelClips = function (e, t) {
             return e.SendMsg(
               "SteamTV.GetBroadcastChannelClips#1",
-              (0, l.MD)(hr, t),
+              (0, l.MD)(br, t),
               gr,
               { bConstMethod: !0, ePrivilege: 0 },
             );
@@ -13519,14 +13519,14 @@
             );
           }),
           (e.GetGames = function (e, t) {
-            return e.SendMsg("SteamTV.GetGames#1", (0, l.MD)(Rt, t), Tt, {
+            return e.SendMsg("SteamTV.GetGames#1", (0, l.MD)(Rt, t), vt, {
               bConstMethod: !0,
               ePrivilege: 2,
               eWebAPIKeyRequirement: 1,
             });
           }),
           (e.GetChannels = function (e, t) {
-            return e.SendMsg("SteamTV.GetChannels#1", (0, l.MD)(vt, t), Ct, {
+            return e.SendMsg("SteamTV.GetChannels#1", (0, l.MD)(Ct, t), Tt, {
               bConstMethod: !0,
               ePrivilege: 2,
               eWebAPIKeyRequirement: 1,
@@ -13539,7 +13539,7 @@
             });
           }),
           (e.GetChatBans = function (e, t) {
-            return e.SendMsg("SteamTV.GetChatBans#1", (0, l.MD)(Nt, t), At, {
+            return e.SendMsg("SteamTV.GetChatBans#1", (0, l.MD)(Nt, t), Ut, {
               bConstMethod: !0,
               ePrivilege: 1,
               eWebAPIKeyRequirement: 2,
@@ -13548,15 +13548,15 @@
           (e.AddChatModerator = function (e, t) {
             return e.SendMsg(
               "SteamTV.AddChatModerator#1",
-              (0, l.MD)(It, t),
-              Ut,
+              (0, l.MD)(Xt, t),
+              It,
               { ePrivilege: 1, eWebAPIKeyRequirement: 2 },
             );
           }),
           (e.GetChatModerators = function (e, t) {
             return e.SendMsg(
               "SteamTV.GetChatModerators#1",
-              (0, l.MD)(Xt, t),
+              (0, l.MD)(At, t),
               Pt,
               { bConstMethod: !0, ePrivilege: 0 },
             );
@@ -13630,74 +13630,10 @@
         Fr = r(14826),
         zr = r(32765),
         Rr = r(46132),
-        Tr = r(20830),
-        vr = r(45464),
-        Cr = r(23801);
+        vr = r(20830),
+        Cr = r(45464),
+        Tr = r(23801);
       const Wr = m.Message;
-      class Or extends Wr {
-        constructor(e = null) {
-          super(),
-            Or.prototype.language || B.aR(Or.M()),
-            Wr.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            Or.sm_m ||
-              (Or.sm_m = {
-                proto: Or,
-                fields: {
-                  language: {
-                    n: 1,
-                    q: !0,
-                    br: B.FE.readString,
-                    bw: B.Xc.writeString,
-                  },
-                  type: {
-                    n: 2,
-                    q: !0,
-                    br: B.FE.readString,
-                    bw: B.Xc.writeString,
-                  },
-                },
-              }),
-            Or.sm_m
-          );
-        }
-        static MBF() {
-          return Or.sm_mbf || (Or.sm_mbf = B.Bh(Or.M())), Or.sm_mbf;
-        }
-        toObject(e = !1) {
-          return Or.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return B.TA(Or.M(), e, t);
-        }
-        static fromObject(e) {
-          return B.aD(Or.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new m.BinaryReader(e),
-            r = new Or();
-          return Or.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return B.F(Or.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new m.BinaryWriter();
-          return Or.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          B.l2(Or.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new m.BinaryWriter();
-          return Or.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamEngine_UpdateTextFilterDictionary_Notification";
-        }
-      }
       class Er extends Wr {
         constructor(e = null) {
           super(),
@@ -13757,6 +13693,70 @@
         serializeBase64String() {
           var e = new m.BinaryWriter();
           return Er.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CSteamEngine_UpdateTextFilterDictionary_Notification";
+        }
+      }
+      class Or extends Wr {
+        constructor(e = null) {
+          super(),
+            Or.prototype.language || B.aR(Or.M()),
+            Wr.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            Or.sm_m ||
+              (Or.sm_m = {
+                proto: Or,
+                fields: {
+                  language: {
+                    n: 1,
+                    q: !0,
+                    br: B.FE.readString,
+                    bw: B.Xc.writeString,
+                  },
+                  type: {
+                    n: 2,
+                    q: !0,
+                    br: B.FE.readString,
+                    bw: B.Xc.writeString,
+                  },
+                },
+              }),
+            Or.sm_m
+          );
+        }
+        static MBF() {
+          return Or.sm_mbf || (Or.sm_mbf = B.Bh(Or.M())), Or.sm_mbf;
+        }
+        toObject(e = !1) {
+          return Or.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return B.TA(Or.M(), e, t);
+        }
+        static fromObject(e) {
+          return B.aD(Or.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new m.BinaryReader(e),
+            r = new Or();
+          return Or.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return B.F(Or.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new m.BinaryWriter();
+          return Or.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          B.l2(Or.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new m.BinaryWriter();
+          return Or.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CSteamEngine_GetTextFilterDictionary_Request";
@@ -13887,26 +13887,81 @@
       !(function (e) {
         (e.UpdateTextFilterDictionaryHandler = {
           name: "SteamEngine.UpdateTextFilterDictionary#1",
-          request: Or,
+          request: Er,
         }),
           (e.UpdateTextFilterDictionary = function (e, t) {
-            return e.SendNotification(
-              "SteamEngine.UpdateTextFilterDictionary#1",
-              (0, l.MD)(Or, t),
-              { ePrivilege: 1, eClientExecutionSite: 2 },
+            return (
+              null == t && (t = l.K2.Get().GetDefaultTransport()),
+              null == t
+                ? (console.error(
+                    "Transport Error: no transport is available for request",
+                  ),
+                  !1)
+                : t.SendNotification(
+                    "SteamEngine.UpdateTextFilterDictionary#1",
+                    (0, l.MD)(Er, e),
+                    { ePrivilege: 1, eClientExecutionSite: 2 },
+                  )
+            );
+          }),
+          (e.SendMsgUpdateTextFilterDictionary = function (e, t) {
+            return (
+              null == t && (t = l.K2.Get().GetDefaultTransport()),
+              null == t
+                ? (console.error(
+                    "Transport Error: no transport is available for request",
+                  ),
+                  !1)
+                : t.SendNotification(
+                    "SteamEngine.UpdateTextFilterDictionary#1",
+                    (0, l.MD)(Er, e),
+                    { ePrivilege: 1, eClientExecutionSite: 2 },
+                  )
             );
           }),
           (e.GetTextFilterDictionaryHandler = {
             name: "SteamEngine.GetTextFilterDictionary#1",
-            request: Er,
+            request: Or,
             response: xr,
           }),
           (e.GetTextFilterDictionary = function (e, t) {
-            return e.SendMsg(
-              "SteamEngine.GetTextFilterDictionary#1",
-              (0, l.MD)(Er, t),
-              xr,
-              { ePrivilege: 1, eClientExecutionSite: 2 },
+            return (
+              null == t && (t = l.K2.Get().GetDefaultTransport()),
+              null == t
+                ? new Promise((e, t) => {
+                    console.error(
+                      "Transport Error: no transport is available for request",
+                    ),
+                      t(
+                        "Transport Error: no transport is available for request",
+                      );
+                  })
+                : t.SendMsg(
+                    "SteamEngine.GetTextFilterDictionary#1",
+                    (0, l.MD)(Or, e),
+                    xr,
+                    { ePrivilege: 1, eClientExecutionSite: 2 },
+                  )
+            );
+          }),
+          (e.SendMsgGetTextFilterDictionary = function (e, t) {
+            return (
+              null == t && (t = l.K2.Get().GetDefaultTransport()),
+              null == t
+                ? new Promise((e, t) => {
+                    console.error(
+                      "Transport Error: no transport is available for request",
+                    ),
+                      t(
+                        "Transport Error: no transport is available for request",
+                      );
+                  })
+                : t.SendMsg(
+                    "SteamEngine.GetTextFilterDictionary#1",
+                    (0, l.MD)(Or, e),
+                    xr,
+                    { ePrivilege: 1, eClientExecutionSite: 2 },
+                  )
             );
           }),
           (e.NotifyTextFilterDictionaryChangedHandler = {
@@ -13914,19 +13969,42 @@
             request: jr,
           }),
           (e.NotifyTextFilterDictionaryChanged = function (e, t) {
-            return e.SendNotification(
-              "SteamEngine.NotifyTextFilterDictionaryChanged#1",
-              (0, l.MD)(jr, t),
-              { ePrivilege: 1, eClientExecutionSite: 2 },
+            return (
+              null == t && (t = l.K2.Get().GetDefaultTransport()),
+              null == t
+                ? (console.error(
+                    "Transport Error: no transport is available for request",
+                  ),
+                  !1)
+                : t.SendNotification(
+                    "SteamEngine.NotifyTextFilterDictionaryChanged#1",
+                    (0, l.MD)(jr, e),
+                    { ePrivilege: 1, eClientExecutionSite: 2 },
+                  )
+            );
+          }),
+          (e.SendMsgNotifyTextFilterDictionaryChanged = function (e, t) {
+            return (
+              null == t && (t = l.K2.Get().GetDefaultTransport()),
+              null == t
+                ? (console.error(
+                    "Transport Error: no transport is available for request",
+                  ),
+                  !1)
+                : t.SendNotification(
+                    "SteamEngine.NotifyTextFilterDictionaryChanged#1",
+                    (0, l.MD)(jr, e),
+                    { ePrivilege: 1, eClientExecutionSite: 2 },
+                  )
             );
           });
       })(Dr || (Dr = {}));
       var Nr = r(78423),
-        Ar = r(4306),
-        Ir = r(27527),
-        Ur = r(50454);
+        Ur = r(4306),
+        Xr = r(27527),
+        Ir = r(50454);
       r(16244);
-      class Xr {
+      class Ar {
         constructor() {
           (this.m_mapCallbacks = new Map()),
             (this.m_rgRegisteredEMsgs = []),
@@ -14105,10 +14183,10 @@
           });
         }
       }
-      (0, i.gn)([n.LO], Xr.prototype, "m_rgRegisteredEMsgs", void 0),
+      (0, i.gn)([n.LO], Ar.prototype, "m_rgRegisteredEMsgs", void 0),
         (0, i.gn)(
           [n.LO],
-          Xr.prototype,
+          Ar.prototype,
           "m_rgRegisteredServiceMethodHandlers",
           void 0,
         );
@@ -14208,1360 +14286,50 @@
           response: Gr,
         }),
           (e.Authenticate = function (e, t) {
-            return e.SendMsg(
-              "TransportAuth.Authenticate#1",
-              (0, l.MD)(Pr, t),
-              Gr,
-              { ePrivilege: 1, eClientExecutionSite: 3 },
+            return (
+              null == t && (t = l.K2.Get().GetDefaultTransport()),
+              null == t
+                ? new Promise((e, t) => {
+                    console.error(
+                      "Transport Error: no transport is available for request",
+                    ),
+                      t(
+                        "Transport Error: no transport is available for request",
+                      );
+                  })
+                : t.SendMsg(
+                    "TransportAuth.Authenticate#1",
+                    (0, l.MD)(Pr, e),
+                    Gr,
+                    { ePrivilege: 1, eClientExecutionSite: 3 },
+                  )
+            );
+          }),
+          (e.SendMsgAuthenticate = function (e, t) {
+            return (
+              null == t && (t = l.K2.Get().GetDefaultTransport()),
+              null == t
+                ? new Promise((e, t) => {
+                    console.error(
+                      "Transport Error: no transport is available for request",
+                    ),
+                      t(
+                        "Transport Error: no transport is available for request",
+                      );
+                  })
+                : t.SendMsg(
+                    "TransportAuth.Authenticate#1",
+                    (0, l.MD)(Pr, e),
+                    Gr,
+                    { ePrivilege: 1, eClientExecutionSite: 3 },
+                  )
             );
           });
       })(Vr || (Vr = {}));
       var Lr = r(44973);
-      const qr = m.Message;
-      class Hr extends qr {
-        constructor(e = null) {
-          super(),
-            Hr.prototype.append_strings || B.aR(Hr.M()),
-            qr.initialize(this, e, 0, -1, [1], null);
-        }
-        static M() {
-          return (
-            Hr.sm_m ||
-              (Hr.sm_m = {
-                proto: Hr,
-                fields: {
-                  append_strings: {
-                    n: 1,
-                    r: !0,
-                    q: !0,
-                    br: B.FE.readString,
-                    bw: B.Xc.writeRepeatedString,
-                  },
-                },
-              }),
-            Hr.sm_m
-          );
-        }
-        static MBF() {
-          return Hr.sm_mbf || (Hr.sm_mbf = B.Bh(Hr.M())), Hr.sm_mbf;
-        }
-        toObject(e = !1) {
-          return Hr.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return B.TA(Hr.M(), e, t);
-        }
-        static fromObject(e) {
-          return B.aD(Hr.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new m.BinaryReader(e),
-            r = new Hr();
-          return Hr.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return B.F(Hr.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new m.BinaryWriter();
-          return Hr.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          B.l2(Hr.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new m.BinaryWriter();
-          return Hr.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CTransportValidation_AppendToString_Request";
-        }
-      }
-      class $r extends qr {
-        constructor(e = null) {
-          super(),
-            $r.prototype.combined_text || B.aR($r.M()),
-            qr.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            $r.sm_m ||
-              ($r.sm_m = {
-                proto: $r,
-                fields: {
-                  combined_text: {
-                    n: 1,
-                    br: B.FE.readString,
-                    bw: B.Xc.writeString,
-                  },
-                },
-              }),
-            $r.sm_m
-          );
-        }
-        static MBF() {
-          return $r.sm_mbf || ($r.sm_mbf = B.Bh($r.M())), $r.sm_mbf;
-        }
-        toObject(e = !1) {
-          return $r.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return B.TA($r.M(), e, t);
-        }
-        static fromObject(e) {
-          return B.aD($r.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new m.BinaryReader(e),
-            r = new $r();
-          return $r.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return B.F($r.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new m.BinaryWriter();
-          return $r.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          B.l2($r.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new m.BinaryWriter();
-          return $r.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CTransportValidation_AppendToString_Response";
-        }
-      }
-      class Kr extends qr {
-        constructor(e = null) {
-          super(),
-            Kr.prototype.text || B.aR(Kr.M()),
-            qr.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            Kr.sm_m ||
-              (Kr.sm_m = {
-                proto: Kr,
-                fields: {
-                  text: { n: 1, br: B.FE.readString, bw: B.Xc.writeString },
-                },
-              }),
-            Kr.sm_m
-          );
-        }
-        static MBF() {
-          return Kr.sm_mbf || (Kr.sm_mbf = B.Bh(Kr.M())), Kr.sm_mbf;
-        }
-        toObject(e = !1) {
-          return Kr.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return B.TA(Kr.M(), e, t);
-        }
-        static fromObject(e) {
-          return B.aD(Kr.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new m.BinaryReader(e),
-            r = new Kr();
-          return Kr.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return B.F(Kr.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new m.BinaryWriter();
-          return Kr.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          B.l2(Kr.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new m.BinaryWriter();
-          return Kr.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CTransportValidation_NotifyText_Notification";
-        }
-      }
-      class Zr extends qr {
-        constructor(e = null) {
-          super(),
-            Zr.prototype.number || B.aR(Zr.M()),
-            qr.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            Zr.sm_m ||
-              (Zr.sm_m = {
-                proto: Zr,
-                fields: {
-                  number: { n: 1, br: B.FE.readInt32, bw: B.Xc.writeInt32 },
-                },
-              }),
-            Zr.sm_m
-          );
-        }
-        static MBF() {
-          return Zr.sm_mbf || (Zr.sm_mbf = B.Bh(Zr.M())), Zr.sm_mbf;
-        }
-        toObject(e = !1) {
-          return Zr.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return B.TA(Zr.M(), e, t);
-        }
-        static fromObject(e) {
-          return B.aD(Zr.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new m.BinaryReader(e),
-            r = new Zr();
-          return Zr.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return B.F(Zr.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new m.BinaryWriter();
-          return Zr.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          B.l2(Zr.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new m.BinaryWriter();
-          return Zr.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CTransportValidation_NotifyNumber_Notification";
-        }
-      }
-      class Jr extends qr {
-        constructor(e = null) {
-          super(), qr.initialize(this, e, 0, -1, void 0, null);
-        }
-        toObject(e = !1) {
-          return Jr.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return e ? { $jspbMessageInstance: t } : {};
-        }
-        static fromObject(e) {
-          return new Jr();
-        }
-        static deserializeBinary(e) {
-          let t = new m.BinaryReader(e),
-            r = new Jr();
-          return Jr.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return e;
-        }
-        serializeBinary() {
-          var e = new m.BinaryWriter();
-          return Jr.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {}
-        serializeBase64String() {
-          var e = new m.BinaryWriter();
-          return Jr.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CTransportValidation_GetLastNotifyNumber_Request";
-        }
-      }
-      class Yr extends qr {
-        constructor(e = null) {
-          super(),
-            Yr.prototype.last_notify_number || B.aR(Yr.M()),
-            qr.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            Yr.sm_m ||
-              (Yr.sm_m = {
-                proto: Yr,
-                fields: {
-                  last_notify_number: {
-                    n: 1,
-                    br: B.FE.readInt32,
-                    bw: B.Xc.writeInt32,
-                  },
-                },
-              }),
-            Yr.sm_m
-          );
-        }
-        static MBF() {
-          return Yr.sm_mbf || (Yr.sm_mbf = B.Bh(Yr.M())), Yr.sm_mbf;
-        }
-        toObject(e = !1) {
-          return Yr.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return B.TA(Yr.M(), e, t);
-        }
-        static fromObject(e) {
-          return B.aD(Yr.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new m.BinaryReader(e),
-            r = new Yr();
-          return Yr.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return B.F(Yr.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new m.BinaryWriter();
-          return Yr.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          B.l2(Yr.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new m.BinaryWriter();
-          return Yr.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CTransportValidation_GetLastNotifyNumber_Response";
-        }
-      }
-      class Qr extends qr {
-        constructor(e = null) {
-          super(),
-            Qr.prototype.count || B.aR(Qr.M()),
-            qr.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            Qr.sm_m ||
-              (Qr.sm_m = {
-                proto: Qr,
-                fields: {
-                  count: { n: 1, br: B.FE.readInt32, bw: B.Xc.writeInt32 },
-                },
-              }),
-            Qr.sm_m
-          );
-        }
-        static MBF() {
-          return Qr.sm_mbf || (Qr.sm_mbf = B.Bh(Qr.M())), Qr.sm_mbf;
-        }
-        toObject(e = !1) {
-          return Qr.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return B.TA(Qr.M(), e, t);
-        }
-        static fromObject(e) {
-          return B.aD(Qr.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new m.BinaryReader(e),
-            r = new Qr();
-          return Qr.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return B.F(Qr.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new m.BinaryWriter();
-          return Qr.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          B.l2(Qr.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new m.BinaryWriter();
-          return Qr.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CTransportValidation_TriggerSyntheticEvents_Request";
-        }
-      }
-      class ei extends qr {
-        constructor(e = null) {
-          super(), qr.initialize(this, e, 0, -1, void 0, null);
-        }
-        toObject(e = !1) {
-          return ei.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return e ? { $jspbMessageInstance: t } : {};
-        }
-        static fromObject(e) {
-          return new ei();
-        }
-        static deserializeBinary(e) {
-          let t = new m.BinaryReader(e),
-            r = new ei();
-          return ei.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return e;
-        }
-        serializeBinary() {
-          var e = new m.BinaryWriter();
-          return ei.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {}
-        serializeBase64String() {
-          var e = new m.BinaryWriter();
-          return ei.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CTransportValidation_TriggerSyntheticEvents_Response";
-        }
-      }
-      class ti extends qr {
-        constructor(e = null) {
-          super(),
-            ti.prototype.sequence || B.aR(ti.M()),
-            qr.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            ti.sm_m ||
-              (ti.sm_m = {
-                proto: ti,
-                fields: {
-                  sequence: { n: 1, br: B.FE.readInt32, bw: B.Xc.writeInt32 },
-                },
-              }),
-            ti.sm_m
-          );
-        }
-        static MBF() {
-          return ti.sm_mbf || (ti.sm_mbf = B.Bh(ti.M())), ti.sm_mbf;
-        }
-        toObject(e = !1) {
-          return ti.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return B.TA(ti.M(), e, t);
-        }
-        static fromObject(e) {
-          return B.aD(ti.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new m.BinaryReader(e),
-            r = new ti();
-          return ti.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return B.F(ti.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new m.BinaryWriter();
-          return ti.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          B.l2(ti.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new m.BinaryWriter();
-          return ti.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CTransportValidation_NotifySyntheticEvent_Notification";
-        }
-      }
-      class ri extends qr {
-        constructor(e = null) {
-          super(),
-            ri.prototype.numbers || B.aR(ri.M()),
-            qr.initialize(this, e, 0, -1, [1], null);
-        }
-        static M() {
-          return (
-            ri.sm_m ||
-              (ri.sm_m = {
-                proto: ri,
-                fields: {
-                  numbers: {
-                    n: 1,
-                    r: !0,
-                    q: !0,
-                    br: B.FE.readInt32,
-                    pbr: B.FE.readPackedInt32,
-                    bw: B.Xc.writeRepeatedInt32,
-                  },
-                },
-              }),
-            ri.sm_m
-          );
-        }
-        static MBF() {
-          return ri.sm_mbf || (ri.sm_mbf = B.Bh(ri.M())), ri.sm_mbf;
-        }
-        toObject(e = !1) {
-          return ri.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return B.TA(ri.M(), e, t);
-        }
-        static fromObject(e) {
-          return B.aD(ri.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new m.BinaryReader(e),
-            r = new ri();
-          return ri.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return B.F(ri.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new m.BinaryWriter();
-          return ri.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          B.l2(ri.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new m.BinaryWriter();
-          return ri.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CTransportValidation_AddNumbers_Request";
-        }
-      }
-      class ii extends qr {
-        constructor(e = null) {
-          super(),
-            ii.prototype.accumulated || B.aR(ii.M()),
-            qr.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            ii.sm_m ||
-              (ii.sm_m = {
-                proto: ii,
-                fields: {
-                  accumulated: {
-                    n: 1,
-                    br: B.FE.readInt32,
-                    bw: B.Xc.writeInt32,
-                  },
-                },
-              }),
-            ii.sm_m
-          );
-        }
-        static MBF() {
-          return ii.sm_mbf || (ii.sm_mbf = B.Bh(ii.M())), ii.sm_mbf;
-        }
-        toObject(e = !1) {
-          return ii.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return B.TA(ii.M(), e, t);
-        }
-        static fromObject(e) {
-          return B.aD(ii.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new m.BinaryReader(e),
-            r = new ii();
-          return ii.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return B.F(ii.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new m.BinaryWriter();
-          return ii.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          B.l2(ii.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new m.BinaryWriter();
-          return ii.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CTransportValidation_AddNumbers_Response";
-        }
-      }
-      class ai extends qr {
-        constructor(e = null) {
-          super(),
-            ai.prototype.ordered_bytes || B.aR(ai.M()),
-            qr.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            ai.sm_m ||
-              (ai.sm_m = {
-                proto: ai,
-                fields: {
-                  ordered_bytes: {
-                    n: 1,
-                    br: B.FE.readBytes,
-                    bw: B.Xc.writeBytes,
-                  },
-                },
-              }),
-            ai.sm_m
-          );
-        }
-        static MBF() {
-          return ai.sm_mbf || (ai.sm_mbf = B.Bh(ai.M())), ai.sm_mbf;
-        }
-        toObject(e = !1) {
-          return ai.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return B.TA(ai.M(), e, t);
-        }
-        static fromObject(e) {
-          return B.aD(ai.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new m.BinaryReader(e),
-            r = new ai();
-          return ai.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return B.F(ai.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new m.BinaryWriter();
-          return ai.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          B.l2(ai.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new m.BinaryWriter();
-          return ai.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CTransportValidation_CountOrderedBytes_Request";
-        }
-      }
-      class si extends qr {
-        constructor(e = null) {
-          super(),
-            si.prototype.byte_count || B.aR(si.M()),
-            qr.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            si.sm_m ||
-              (si.sm_m = {
-                proto: si,
-                fields: {
-                  byte_count: { n: 1, br: B.FE.readInt32, bw: B.Xc.writeInt32 },
-                },
-              }),
-            si.sm_m
-          );
-        }
-        static MBF() {
-          return si.sm_mbf || (si.sm_mbf = B.Bh(si.M())), si.sm_mbf;
-        }
-        toObject(e = !1) {
-          return si.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return B.TA(si.M(), e, t);
-        }
-        static fromObject(e) {
-          return B.aD(si.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new m.BinaryReader(e),
-            r = new si();
-          return si.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return B.F(si.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new m.BinaryWriter();
-          return si.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          B.l2(si.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new m.BinaryWriter();
-          return si.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CTransportValidation_CountOrderedBytes_Response";
-        }
-      }
-      class ni extends qr {
-        constructor(e = null) {
-          super(),
-            ni.prototype.numbers || B.aR(ni.M()),
-            qr.initialize(this, e, 0, -1, [1], null);
-        }
-        static M() {
-          return (
-            ni.sm_m ||
-              (ni.sm_m = {
-                proto: ni,
-                fields: {
-                  numbers: {
-                    n: 1,
-                    r: !0,
-                    q: !0,
-                    br: B.FE.readInt32,
-                    pbr: B.FE.readPackedInt32,
-                    bw: B.Xc.writeRepeatedInt32,
-                  },
-                },
-              }),
-            ni.sm_m
-          );
-        }
-        static MBF() {
-          return ni.sm_mbf || (ni.sm_mbf = B.Bh(ni.M())), ni.sm_mbf;
-        }
-        toObject(e = !1) {
-          return ni.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return B.TA(ni.M(), e, t);
-        }
-        static fromObject(e) {
-          return B.aD(ni.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new m.BinaryReader(e),
-            r = new ni();
-          return ni.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return B.F(ni.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new m.BinaryWriter();
-          return ni.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          B.l2(ni.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new m.BinaryWriter();
-          return ni.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CTransportValidationClient_AddNumbers_Request";
-        }
-      }
-      class oi extends qr {
-        constructor(e = null) {
-          super(),
-            oi.prototype.accumulated || B.aR(oi.M()),
-            qr.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            oi.sm_m ||
-              (oi.sm_m = {
-                proto: oi,
-                fields: {
-                  accumulated: {
-                    n: 1,
-                    br: B.FE.readInt32,
-                    bw: B.Xc.writeInt32,
-                  },
-                },
-              }),
-            oi.sm_m
-          );
-        }
-        static MBF() {
-          return oi.sm_mbf || (oi.sm_mbf = B.Bh(oi.M())), oi.sm_mbf;
-        }
-        toObject(e = !1) {
-          return oi.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return B.TA(oi.M(), e, t);
-        }
-        static fromObject(e) {
-          return B.aD(oi.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new m.BinaryReader(e),
-            r = new oi();
-          return oi.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return B.F(oi.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new m.BinaryWriter();
-          return oi.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          B.l2(oi.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new m.BinaryWriter();
-          return oi.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CTransportValidationClient_AddNumbers_Response";
-        }
-      }
-      var li, ci;
-      !(function (e) {
-        (e.AppendToStringHandler = {
-          name: "TransportValidation.AppendToString#1",
-          request: Hr,
-          response: $r,
-        }),
-          (e.AppendToString = function (e, t) {
-            return e.SendMsg(
-              "TransportValidation.AppendToString#1",
-              (0, l.MD)(Hr, t),
-              $r,
-              { ePrivilege: 1, eClientExecutionSite: 1 },
-            );
-          }),
-          (e.AddNumbersHandler = {
-            name: "TransportValidation.AddNumbers#1",
-            request: ri,
-            response: ii,
-          }),
-          (e.AddNumbers = function (e, t) {
-            return e.SendMsg(
-              "TransportValidation.AddNumbers#1",
-              (0, l.MD)(ri, t),
-              ii,
-              { ePrivilege: 1, eClientExecutionSite: 1 },
-            );
-          }),
-          (e.AddNumbersStaticHandler = {
-            name: "TransportValidation.AddNumbersStatic#1",
-            request: ri,
-            response: ii,
-          }),
-          (e.AddNumbersStatic = function (e, t) {
-            return e.SendMsg(
-              "TransportValidation.AddNumbersStatic#1",
-              (0, l.MD)(ri, t),
-              ii,
-              { ePrivilege: 1, eClientExecutionSite: 1 },
-            );
-          }),
-          (e.NotifyTextHandler = {
-            name: "TransportValidation.NotifyText#1",
-            request: Kr,
-          }),
-          (e.NotifyText = function (e, t) {
-            return e.SendNotification(
-              "TransportValidation.NotifyText#1",
-              (0, l.MD)(Kr, t),
-              { ePrivilege: 1, eClientExecutionSite: 1 },
-            );
-          }),
-          (e.NotifyNumberHandler = {
-            name: "TransportValidation.NotifyNumber#1",
-            request: Zr,
-          }),
-          (e.NotifyNumber = function (e, t) {
-            return e.SendNotification(
-              "TransportValidation.NotifyNumber#1",
-              (0, l.MD)(Zr, t),
-              { ePrivilege: 1, eClientExecutionSite: 1 },
-            );
-          }),
-          (e.GetLastNotifyNumberHandler = {
-            name: "TransportValidation.GetLastNotifyNumber#1",
-            request: Jr,
-            response: Yr,
-          }),
-          (e.GetLastNotifyNumber = function (e, t) {
-            return e.SendMsg(
-              "TransportValidation.GetLastNotifyNumber#1",
-              (0, l.MD)(Jr, t),
-              Yr,
-              { ePrivilege: 1, eClientExecutionSite: 1 },
-            );
-          }),
-          (e.NotifySyntheticEventHandler = {
-            name: "TransportValidation.NotifySyntheticEvent#1",
-            request: ti,
-          }),
-          (e.NotifySyntheticEvent = function (e, t) {
-            return e.SendNotification(
-              "TransportValidation.NotifySyntheticEvent#1",
-              (0, l.MD)(ti, t),
-              { ePrivilege: 1, eClientExecutionSite: 1 },
-            );
-          }),
-          (e.TriggerSyntheticEventsHandler = {
-            name: "TransportValidation.TriggerSyntheticEvents#1",
-            request: Qr,
-            response: ei,
-          }),
-          (e.TriggerSyntheticEvents = function (e, t) {
-            return e.SendMsg(
-              "TransportValidation.TriggerSyntheticEvents#1",
-              (0, l.MD)(Qr, t),
-              ei,
-              { ePrivilege: 1, eClientExecutionSite: 1 },
-            );
-          }),
-          (e.CountOrderedBytesHandler = {
-            name: "TransportValidation.CountOrderedBytes#1",
-            request: ai,
-            response: si,
-          }),
-          (e.CountOrderedBytes = function (e, t) {
-            return e.SendMsg(
-              "TransportValidation.CountOrderedBytes#1",
-              (0, l.MD)(ai, t),
-              si,
-              { ePrivilege: 1, eClientExecutionSite: 1 },
-            );
-          });
-      })(li || (li = {})),
-        (function (e) {
-          (e.AddNumbersHandler = {
-            name: "TransportValidationClient.AddNumbers#1",
-            request: ni,
-            response: oi,
-          }),
-            (e.AddNumbers = function (e, t) {
-              return e.SendMsg(
-                "TransportValidationClient.AddNumbers#1",
-                (0, l.MD)(ni, t),
-                oi,
-                { ePrivilege: 1, eClientExecutionSite: 2 },
-              );
-            });
-        })(ci || (ci = {}));
-      class di {
-        static Get() {
-          return (
-            null == di.s_Singleton &&
-              ((di.s_Singleton = new di()),
-              (window.WebUITransportTests = di.s_Singleton)),
-            di.s_Singleton
-          );
-        }
-        constructor() {
-          (this.m_transport = null),
-            (this.m_nSyntheticEventReceiveCount = 0),
-            (this.m_transport = _i.Get());
-        }
-        AssertEq(e, t, r) {
-          if (e === t) return !0;
-          throw Error(`${r} unexpected value: have:'${e}' got:'${t}'`);
-        }
-        AssertNe(e, t, r) {
-          if (e !== t) return !0;
-          throw Error(`${r} unexpected equality: have:'${e}' got:'${t}'`);
-        }
-        AssertLt(e, t, r) {
-          if (e < t) return !0;
-          throw Error(`${r} failed lt test: have:'${e}' got:'${t}'`);
-        }
-        AssertGt(e, t, r) {
-          if (e > t) return !0;
-          throw Error(`${r} failed gt test: have:'${e}' got:'${t}'`);
-        }
-        Test_CallMethod() {
-          return (0, i.mG)(this, void 0, void 0, function* () {
-            const e = l.gA.Init(Hr);
-            e.Body()
-              .append_strings()
-              .push("The ", "most ", "important ", "words");
-            const t = yield li.AppendToString(this.m_transport, e);
-            this.AssertEq(1, t.GetEResult(), "eresult"),
-              this.AssertEq(
-                "The most important words",
-                t.Body().combined_text(),
-                "combined_text",
-              );
-          });
-        }
-        Test_CallMethodClient() {
-          return (0, i.mG)(this, void 0, void 0, function* () {
-            const e = l.gA.Init(ni);
-            e.Body().numbers().push(1, 2, 3, 5, 7, 11, 13);
-            const t = yield ci.AddNumbers(this.m_transport, e);
-            this.AssertEq(1, t.GetEResult(), "eresult"),
-              this.AssertEq(42, t.Body().accumulated(), "accumulated");
-          });
-        }
-        Test_CallMethodClientSimple() {
-          return (0, i.mG)(this, void 0, void 0, function* () {
-            const e = l.gA.Init(ni);
-            e.Body().numbers().push(2, 3);
-            const t = yield ci.AddNumbers(this.m_transport, e);
-            this.AssertEq(1, t.GetEResult(), "eresult"),
-              this.AssertEq(5, t.Body().accumulated(), "accumulated");
-          });
-        }
-        Test_CallMethodSimple() {
-          return (0, i.mG)(this, void 0, void 0, function* () {
-            const e = l.gA.Init(ri);
-            e.Body().numbers().push(2, 3);
-            const t = yield li.AddNumbersStatic(this.m_transport, e);
-            this.AssertEq(5, t.Body().accumulated(), "accumulated");
-          });
-        }
-        Test_CallMethodBoundSimple() {
-          return (0, i.mG)(this, void 0, void 0, function* () {
-            const e = l.gA.Init(ri);
-            e.Body().numbers().push(2, 3);
-            const t = yield li.AddNumbers(this.m_transport, e);
-            this.AssertEq(5, t.Body().accumulated(), "accumulated");
-          });
-        }
-        Test_CallMethodInitFromObjectSimple() {
-          return (0, i.mG)(this, void 0, void 0, function* () {
-            const e = yield li.AppendToString(this.m_transport, {
-              append_strings: ["The ", "most ", "important ", "words"],
-            });
-            this.AssertEq(1, e.GetEResult(), "eresult"),
-              this.AssertEq(
-                "The most important words",
-                e.Body().combined_text(),
-                "combined_text",
-              );
-          });
-        }
-        MeasureTestLatency(e, t, r) {
-          return (0, i.mG)(this, void 0, void 0, function* () {
-            let i = 0,
-              a = Number.MAX_VALUE,
-              s = 0;
-            for (let e = 0; e < t; ++e) {
-              const t = performance.now();
-              yield r();
-              const n = performance.now() - t;
-              (i += (n - i) / (e + 1)),
-                (a = Math.min(n, a)),
-                (s = Math.max(n, s));
-            }
-            return (
-              console.log(
-                `${e}: avg: ${i.toFixed(3)} ms, min: ${a.toFixed(
-                  3,
-                )} ms, max: ${s.toFixed(3)} ms, count: ${t} ops`,
-              ),
-              { nAvgMs: i, nMinMs: a, nMaxMs: s }
-            );
-          });
-        }
-        MeasureTestThroughput(e, t, r) {
-          return (0, i.mG)(this, void 0, void 0, function* () {
-            const i = [],
-              a = performance.now();
-            for (let e = 0; e < t; ++e) i.push(r());
-            for (const e of i) yield e;
-            const s = performance.now() - a,
-              n = s / t,
-              o = (1 / n) * 1e3;
-            return (
-              console.log(
-                `${e}: rate: ${o.toFixed(3)} ops/s, per-op: ${n.toFixed(
-                  3,
-                )} ms, total time: ${s.toFixed(3)} ms, count: ${t} ops`,
-              ),
-              { nElapsedMs: s, nMsPerOperation: n, nOpsPerSec: o }
-            );
-          });
-        }
-        Test_CallMethodLatency() {
-          return (0, i.mG)(this, void 0, void 0, function* () {
-            const e = yield this.MeasureTestLatency(
-              "WebUI steamui transport latency",
-              5e3,
-              this.Test_CallMethodSimple,
-            );
-            this.AssertGt(2, e.nAvgMs, "nAvgMs");
-          });
-        }
-        Test_CallMethodThroughput() {
-          return (0, i.mG)(this, void 0, void 0, function* () {
-            const e = yield this.MeasureTestThroughput(
-              "WebUI steamui transport throughput",
-              1e4,
-              this.Test_CallMethodSimple,
-            );
-            this.AssertLt(5e3, e.nOpsPerSec, "nOpsPerSec");
-          });
-        }
-        Test_CallBoundMethodLatency() {
-          return (0, i.mG)(this, void 0, void 0, function* () {
-            const e = yield this.MeasureTestLatency(
-              "WebUI steamui+bind transport latency",
-              5e3,
-              this.Test_CallMethodBoundSimple,
-            );
-            this.AssertGt(2, e.nAvgMs, "nAvgMs");
-          });
-        }
-        Test_CallBoundMethodThroughput() {
-          return (0, i.mG)(this, void 0, void 0, function* () {
-            const e = yield this.MeasureTestThroughput(
-              "WebUI steamui+bind transport throughput",
-              1e4,
-              this.Test_CallMethodBoundSimple,
-            );
-            this.AssertLt(5e3, e.nOpsPerSec, "nOpsPerSec");
-          });
-        }
-        Test_CallInitFromObjectMethodLatency() {
-          return (0, i.mG)(this, void 0, void 0, function* () {
-            const e = yield this.MeasureTestLatency(
-              "WebUI steamui+init from object transport latency",
-              5e3,
-              this.Test_CallMethodInitFromObjectSimple,
-            );
-            this.AssertGt(2, e.nAvgMs, "nAvgMs");
-          });
-        }
-        Test_CallInitFromObjectMethodThroughput() {
-          return (0, i.mG)(this, void 0, void 0, function* () {
-            const e = yield this.MeasureTestThroughput(
-              "WebUI steamui+init from object transport throughput",
-              1e4,
-              this.Test_CallMethodInitFromObjectSimple,
-            );
-            this.AssertLt(5e3, e.nOpsPerSec, "nOpsPerSec");
-          });
-        }
-        Test_CallClientMethodLatency() {
-          return (0, i.mG)(this, void 0, void 0, function* () {
-            const e = yield this.MeasureTestLatency(
-              "WebUI client transport latency",
-              100,
-              this.Test_CallMethodClientSimple,
-            );
-            this.AssertGt(60, e.nAvgMs, "nAvgMs");
-          });
-        }
-        Test_CallClientMethodThroughput() {
-          return (0, i.mG)(this, void 0, void 0, function* () {
-            const e = yield this.MeasureTestThroughput(
-              "WebUI client transport throughput",
-              1e4,
-              this.Test_CallMethodClientSimple,
-            );
-            this.AssertLt(5e3, e.nOpsPerSec, "nOpsPerSec");
-          });
-        }
-        Test_SendNotification() {
-          return (0, i.mG)(this, void 0, void 0, function* () {
-            const e = l.gA.Init(Kr);
-            e.Body().set_text("Hello from WebUI");
-            const t = li.NotifyText(this.m_transport, e);
-            this.AssertEq(!0, t, "bResult");
-          });
-        }
-        Test_SendNumberNotification() {
-          return (0, i.mG)(this, void 0, void 0, function* () {
-            const e = l.gA.Init(Zr);
-            e.Body().set_number(42);
-            const t = li.NotifyNumber(this.m_transport, e);
-            this.AssertEq(!0, t, "bResult");
-            const r = l.gA.Init(Jr),
-              i = yield li.GetLastNotifyNumber(this.m_transport, r);
-            this.AssertEq(1, i.GetEResult(), "eresult"),
-              this.AssertEq(
-                42,
-                i.Body().last_notify_number(),
-                "last_notify_number",
-              );
-          });
-        }
-        OnSyntheticEvent(e) {
-          return this.m_nSyntheticEventReceiveCount++, 1;
-        }
-        Test_ClientToJSNotification() {
-          return (0, i.mG)(this, void 0, void 0, function* () {
-            const e = _i
-                .Get()
-                .messageHandlers.RegisterServiceNotificationHandler(
-                  li.NotifySyntheticEventHandler,
-                  this.OnSyntheticEvent,
-                ),
-              t = l.gA.Init(Qr);
-            t.Body().set_count(10), (this.m_nSyntheticEventReceiveCount = 0);
-            const r = yield li.TriggerSyntheticEvents(this.m_transport, t);
-            this.AssertEq(1, r.GetEResult(), "eresult"),
-              this.AssertEq(
-                10,
-                this.m_nSyntheticEventReceiveCount,
-                "event count",
-              ),
-              e.unregister();
-          });
-        }
-        Test_TransportError() {
-          return (0, i.mG)(this, void 0, void 0, function* () {
-            const e = l.gA.Init(Hr),
-              t = yield this.m_transport.SendMsg(
-                "Test_TransportError.InvalidService",
-                e,
-                $r,
-                { ePrivilege: 1, eClientExecutionSite: 1 },
-              );
-            this.AssertNe(1, t.Hdr().transport_error(), "transport error"),
-              this.AssertNe(1, t.GetEResult(), "eresult");
-          });
-        }
-        SendBinaryMessage(e) {
-          return (0, i.mG)(this, void 0, void 0, function* () {
-            const t = l.gA.Init(ai);
-            let r = new Uint8Array(e);
-            for (let e = 0; e < r.length; e++) r[e] = e % 256;
-            t.Body().set_ordered_bytes(r);
-            const i = yield li.CountOrderedBytes(this.m_transport, t);
-            this.AssertEq(1, i.GetEResult(), "eresult"),
-              this.AssertEq(e, i.Body().byte_count(), "byte_count");
-          });
-        }
-        Test_BinaryData() {
-          return (0, i.mG)(this, void 0, void 0, function* () {
-            yield this.SendBinaryMessage(32);
-          });
-        }
-        Test_LargeMessageSize() {
-          return (0, i.mG)(this, void 0, void 0, function* () {
-            const e = yield this.MeasureTestLatency("LargeMessageSize", 1, () =>
-              this.SendBinaryMessage(20971520),
-            );
-            this.AssertGt(500, e.nAvgMs, "nAvgMs");
-          });
-        }
-        Test_ErrorRecovery() {
-          return (0, i.mG)(this, void 0, void 0, function* () {
-            const e = yield this.SendBinaryMessage(31457280);
-            console.log(e);
-          });
-        }
-        RunTests(e = !1) {
-          return (0, i.mG)(this, void 0, void 0, function* () {
-            const t = [
-              { fnRunTest: this.Test_CallMethod },
-              { fnRunTest: this.Test_CallMethodClient },
-              { fnRunTest: this.Test_CallMethodSimple },
-              { fnRunTest: this.Test_CallMethodBoundSimple },
-              { fnRunTest: this.Test_CallMethodInitFromObjectSimple },
-              { fnRunTest: this.Test_SendNotification },
-              { fnRunTest: this.Test_SendNumberNotification },
-              { fnRunTest: this.Test_ClientToJSNotification },
-              { fnRunTest: this.Test_CallMethodLatency },
-              { fnRunTest: this.Test_CallMethodThroughput },
-              { fnRunTest: this.Test_CallBoundMethodLatency, bFullOnly: !0 },
-              { fnRunTest: this.Test_CallBoundMethodThroughput, bFullOnly: !0 },
-              {
-                fnRunTest: this.Test_CallInitFromObjectMethodLatency,
-                bFullOnly: !0,
-              },
-              {
-                fnRunTest: this.Test_CallInitFromObjectMethodThroughput,
-                bFullOnly: !0,
-              },
-              { fnRunTest: this.Test_CallClientMethodLatency, bFullOnly: !0 },
-              {
-                fnRunTest: this.Test_CallClientMethodThroughput,
-                bFullOnly: !0,
-              },
-              { fnRunTest: this.Test_TransportError, bFullOnly: !0 },
-              { fnRunTest: this.Test_BinaryData },
-              { fnRunTest: this.Test_LargeMessageSize },
-            ];
-            let r = [],
-              i = [];
-            for (const i of t) {
-              if (!e && !0 === i.bFullOnly) continue;
-              const t = this.RunTest(i, r);
-              yield t;
-            }
-            if ((yield Promise.all(i), r.length > 0)) {
-              console.error(`Failed test count: ${r.length}`);
-              for (const e of r) console.error(`    ${e.fnRunTest.name}`);
-            } else console.log("All tests passed");
-          });
-        }
-        RunTest(e, t) {
-          return (0, i.mG)(this, void 0, void 0, function* () {
-            try {
-              return (
-                console.log(`Running Test: ${e.fnRunTest.name}`),
-                yield e.fnRunTest(),
-                !0
-              );
-            } catch (r) {
-              return (
-                console.error(`Test Failed: ${e.fnRunTest.name}: ${r.message}`),
-                t.push(e),
-                !1
-              );
-            }
-          });
-        }
-      }
-      (di.s_Singleton = null),
-        (0, i.gn)([Ar.ak], di.prototype, "Test_CallMethod", null),
-        (0, i.gn)([Ar.ak], di.prototype, "Test_CallMethodClient", null),
-        (0, i.gn)([Ar.ak], di.prototype, "Test_CallMethodClientSimple", null),
-        (0, i.gn)([Ar.ak], di.prototype, "Test_CallMethodSimple", null),
-        (0, i.gn)([Ar.ak], di.prototype, "Test_CallMethodBoundSimple", null),
-        (0, i.gn)(
-          [Ar.ak],
-          di.prototype,
-          "Test_CallMethodInitFromObjectSimple",
-          null,
-        ),
-        (0, i.gn)([Ar.ak], di.prototype, "Test_CallMethodLatency", null),
-        (0, i.gn)([Ar.ak], di.prototype, "Test_CallMethodThroughput", null),
-        (0, i.gn)([Ar.ak], di.prototype, "Test_CallBoundMethodLatency", null),
-        (0, i.gn)(
-          [Ar.ak],
-          di.prototype,
-          "Test_CallBoundMethodThroughput",
-          null,
-        ),
-        (0, i.gn)(
-          [Ar.ak],
-          di.prototype,
-          "Test_CallInitFromObjectMethodLatency",
-          null,
-        ),
-        (0, i.gn)(
-          [Ar.ak],
-          di.prototype,
-          "Test_CallInitFromObjectMethodThroughput",
-          null,
-        ),
-        (0, i.gn)([Ar.ak], di.prototype, "Test_CallClientMethodLatency", null),
-        (0, i.gn)(
-          [Ar.ak],
-          di.prototype,
-          "Test_CallClientMethodThroughput",
-          null,
-        ),
-        (0, i.gn)([Ar.ak], di.prototype, "Test_SendNotification", null),
-        (0, i.gn)([Ar.ak], di.prototype, "Test_SendNumberNotification", null),
-        (0, i.gn)([Ar.ak], di.prototype, "OnSyntheticEvent", null),
-        (0, i.gn)([Ar.ak], di.prototype, "Test_ClientToJSNotification", null),
-        (0, i.gn)([Ar.ak], di.prototype, "Test_TransportError", null),
-        (0, i.gn)([Ar.ak], di.prototype, "Test_BinaryData", null),
-        (0, i.gn)([Ar.ak], di.prototype, "Test_LargeMessageSize", null),
-        (0, i.gn)([Ar.ak], di.prototype, "Test_ErrorRecovery", null);
-      const ui = "127.0.0.1",
-        mi = new Ur.s("WebUITransport");
-      class Bi {
+      const qr = "127.0.0.1",
+        Hr = new Ir.s("WebUITransport");
+      class $r {
         constructor(e, t) {
           (this.m_socket = null), (this.m_sName = e), (this.m_fnMsghandler = t);
         }
@@ -15575,9 +14343,9 @@
               try {
                 const t = yield this.InternalConnectWithRetry(e);
                 if (1 == t.result) return t;
-                mi.Warning(`WebSocket retry connection ${this.m_sName}.`);
+                Hr.Warning(`WebSocket retry connection ${this.m_sName}.`);
               } catch (e) {
-                mi.Warning(
+                Hr.Warning(
                   `WebSocket Exception Caught ${e.name}; retry connection ${this.m_sName}.`,
                   e,
                 );
@@ -15585,7 +14353,7 @@
               (this.m_socket = null), (t += 1);
             } while (t < 20);
             return (
-              mi.Error("WebSocket Maximum retry exceeeded, failing out"),
+              Hr.Error("WebSocket Maximum retry exceeeded, failing out"),
               { result: 2, message: "not ready, exceeded retry count" }
             );
           });
@@ -15594,7 +14362,7 @@
           return (0, i.mG)(this, void 0, void 0, function* () {
             if (null != this.m_socket)
               return (
-                (0, Cr.X)(
+                (0, Tr.X)(
                   this.m_socket.readyState == WebSocket.OPEN,
                   "Transport MakeReady: Socket in an unexpected state:",
                   this.m_socket.readyState,
@@ -15605,7 +14373,7 @@
               this.m_socket = new WebSocket(e);
             } catch (e) {
               return (
-                mi.Error(
+                Hr.Error(
                   `Failed to initialize websocket connection: ${this.m_sName}`,
                 ),
                 {
@@ -15621,7 +14389,7 @@
               (this.m_socket.onclose = this.OnSocketClose);
             const t = yield this.WaitReady(this.m_socket, 1e3);
             return (
-              mi.Info(
+              Hr.Info(
                 `WebSocket connection ${this.m_sName}:`,
                 t ? "success" : "fail",
               ),
@@ -15645,17 +14413,17 @@
           );
         }
         OnSocketError(e) {
-          mi.Error("WebSocket error:", e);
+          Hr.Error("WebSocket error:", e);
         }
         OnSocketOpen(e) {
-          mi.Debug("WebSocket open:", e);
+          Hr.Debug("WebSocket open:", e);
         }
         OnSocketClose(e) {
-          mi.Error(`WebSocket close: reason:${e.reason}`);
+          Hr.Error(`WebSocket close: reason:${e.reason}`);
         }
         OnSocketMessage(e) {
           return (0, i.mG)(this, void 0, void 0, function* () {
-            const t = new Ir.At(e.data),
+            const t = new Xr.At(e.data),
               r = l.gA.InitHeaderFromPacket(t);
             this.m_fnMsghandler(r);
           });
@@ -15668,26 +14436,27 @@
           }
         }
       }
-      (0, i.gn)([Ar.ak], Bi.prototype, "OnSocketError", null),
-        (0, i.gn)([Ar.ak], Bi.prototype, "OnSocketOpen", null),
-        (0, i.gn)([Ar.ak], Bi.prototype, "OnSocketClose", null),
-        (0, i.gn)([Ar.ak], Bi.prototype, "OnSocketMessage", null);
-      class _i {
+      (0, i.gn)([Ur.ak], $r.prototype, "OnSocketError", null),
+        (0, i.gn)([Ur.ak], $r.prototype, "OnSocketOpen", null),
+        (0, i.gn)([Ur.ak], $r.prototype, "OnSocketClose", null),
+        (0, i.gn)([Ur.ak], $r.prototype, "OnSocketMessage", null);
+      class Kr {
         static Get() {
           return (
-            null == _i.s_Singleton &&
+            null == Kr.s_Singleton &&
               Lr.De.IN_CLIENT &&
-              ((_i.s_Singleton = new _i()),
-              (window.WebUIServiceTransport = _i.s_Singleton)),
-            _i.s_Singleton
+              ((Kr.s_Singleton = new Kr()),
+              (window.WebUIServiceTransport = Kr.s_Singleton)),
+            Kr.s_Singleton
           );
         }
         constructor() {
-          (this.m_connectionSteamUI = new Bi("SteamUI", this.OnMessage)),
-            (this.m_connectionClientdll = new Bi("Clientdll", this.OnMessage)),
+          (this.m_connectionSteamUI = new $r("SteamUI", this.OnMessage)),
+            (this.m_connectionClientdll = new $r("Clientdll", this.OnMessage)),
             (this.m_iMsgSeq = 1),
             (this.m_mapPendingMethodRequests = new Map()),
-            (this.m_messageHandlers = new Xr());
+            (this.m_messageHandlers = new Ar()),
+            l.K2.Get().SetDefaultTransport(this);
         }
         get messageHandlers() {
           return this.m_messageHandlers;
@@ -15697,14 +14466,14 @@
             const n = i.eClientExecutionSite;
             if (null == n || 0 == n)
               return (
-                mi.Error("SendMsg: Invliad client execution site:", n),
+                Hr.Error("SendMsg: Invliad client execution site:", n),
                 void s(`Transport SendMsg: invalid client execution site ${n}`)
               );
             const o =
               2 == n ? this.m_connectionClientdll : this.m_connectionSteamUI;
             if (!o.BIsReady())
               return (
-                mi.Error(
+                Hr.Error(
                   "SendMsg: Attempted to send message but socket wasn't ready:",
                   o.name,
                 ),
@@ -15716,7 +14485,7 @@
               t.Hdr().set_jobid_source("" + l);
             if (1 != o.SendSerializedMessage(t.Serialize()))
               return (
-                mi.Error("SendMsg: Failed to send message"),
+                Hr.Error("SendMsg: Failed to send message"),
                 void s("Transport SendMsg: failed to send message")
               );
             this.m_mapPendingMethodRequests.set(l, {
@@ -15730,12 +14499,12 @@
         SendNotification(e, t, r) {
           const i = r.eClientExecutionSite;
           if (null == i || 0 == i)
-            return mi.Error("SendMsg: Invliad client execution site:", i), !1;
+            return Hr.Error("SendMsg: Invliad client execution site:", i), !1;
           const a =
             2 == i ? this.m_connectionClientdll : this.m_connectionSteamUI;
           if (!a.BIsReady())
             return (
-              mi.Error(
+              Hr.Error(
                 "SendMsg: Attempted to send message but socket wasn't ready",
               ),
               !1
@@ -15746,20 +14515,20 @@
         MakeReady() {
           return (0, i.mG)(this, void 0, void 0, function* () {
             const e = yield SteamClient.WebUITransport.GetTransportInfo(),
-              t = `ws://${ui}:${e.portSteamUI}/transportsocket/`,
-              r = `ws://${ui}:${e.portClientdll}/transportsocket/`;
+              t = `ws://${qr}:${e.portSteamUI}/transportsocket/`,
+              r = `ws://${qr}:${e.portClientdll}/transportsocket/`;
             let i = yield this.m_connectionSteamUI.Connect(t);
             if (1 != i.result)
-              return mi.Error("MakeReady: failed to connect to SteamUI"), i;
+              return Hr.Error("MakeReady: failed to connect to SteamUI"), i;
             let a = yield this.SendAuthMessage(1, e.authKeySteamUI);
             return 1 != a.GetEResult()
-              ? (mi.Error("MakeReady: failed to auth to SteamUI"), i)
+              ? (Hr.Error("MakeReady: failed to auth to SteamUI"), i)
               : ((i = yield this.m_connectionClientdll.Connect(r)),
                 1 != i.result
-                  ? (mi.Error("MakeReady: failed to connect to clientdll"), i)
+                  ? (Hr.Error("MakeReady: failed to connect to clientdll"), i)
                   : ((a = yield this.SendAuthMessage(2, e.authKeyClientdll)),
                     1 != a.GetEResult()
-                      ? (mi.Error("MakeReady: failed to auth to clientdll"), i)
+                      ? (Hr.Error("MakeReady: failed to auth to clientdll"), i)
                       : i));
           });
         }
@@ -15772,11 +14541,11 @@
           const t = parseInt(e.Hdr().jobid_target()),
             r = this.m_mapPendingMethodRequests.get(t);
           if (null == r)
-            return void (0, Cr.X)(
+            return void (0, Tr.X)(
               !1,
               "Transport Error: no pending callback for request",
             );
-          (0, Cr.X)(
+          (0, Tr.X)(
             t == r.m_iSeq,
             "Transport Error: mistmatched request sequence",
           ),
@@ -15786,7 +14555,7 @@
         }
         DispatchNotification(e) {
           this.m_messageHandlers.DispatchMsgToHandlers(e, (e) => {
-            (0, Cr.X)(
+            (0, Tr.X)(
               !1,
               "Transport Error: A notification should not generate a response",
             );
@@ -15801,16 +14570,10 @@
             return yield this.SendMsg(r, a, Vr.AuthenticateHandler.response, i);
           });
         }
-        RunTests(e = !1) {
-          return (0, i.mG)(this, void 0, void 0, function* () {
-            const t = di.Get();
-            return yield t.RunTests(e);
-          });
-        }
       }
-      (_i.s_Singleton = null),
-        (0, i.gn)([Ar.ak], _i.prototype, "OnMessage", null);
-      class hi {
+      (Kr.s_Singleton = null),
+        (0, i.gn)([Ur.ak], Kr.prototype, "OnMessage", null);
+      class Zr {
         constructor(e) {
           (this.m_mapPlayerCache = new Map()),
             (this.m_strBannedWords = ""),
@@ -15823,17 +14586,17 @@
             (this.m_bShownFilterTip = !1),
             (this.m_nLoadLanguagesRetryTimeout = void 0);
           {
-            let e = new Tr.n8();
+            let e = new vr.n8();
             this.m_TextFilterPreferences = {
               eTextFilterSetting: e.text_filter_setting(),
               bIgnoreFriends: e.text_filter_ignore_friends(),
             };
           }
-          (this.m_TextFilterWords = new Tr.No()), (this.m_DataAccess = e);
+          (this.m_TextFilterWords = new vr.No()), (this.m_DataAccess = e);
         }
         Init(e = 0, t = null, r = null) {
           return (0, i.mG)(this, void 0, void 0, function* () {
-            (this.m_WebUIServiceTransport = _i.Get()),
+            (this.m_WebUIServiceTransport = Kr.Get()),
               (this.m_unAccountID = e),
               (this.m_Transport = t),
               (this.m_Storage = r),
@@ -15868,19 +14631,25 @@
           );
         }
         InitSteamEngineLanguage(e) {
-          const t = l.gA.Init(Or);
+          const t = l.gA.Init(Er);
           t.Body().set_language(e),
             t.Body().set_type("profanity"),
-            Dr.UpdateTextFilterDictionary(this.m_WebUIServiceTransport, t),
+            Dr.SendMsgUpdateTextFilterDictionary(
+              t,
+              this.m_WebUIServiceTransport,
+            ),
             t.Body().set_type("banned"),
-            Dr.UpdateTextFilterDictionary(this.m_WebUIServiceTransport, t);
+            Dr.SendMsgUpdateTextFilterDictionary(
+              t,
+              this.m_WebUIServiceTransport,
+            );
         }
         GetSteamEngineTextFilterDictionary(e, t) {
-          const r = l.gA.Init(Er);
+          const r = l.gA.Init(Or);
           return (
             r.Body().set_language(e),
             r.Body().set_type(t),
-            Dr.GetTextFilterDictionary(this.m_WebUIServiceTransport, r)
+            Dr.SendMsgGetTextFilterDictionary(r, this.m_WebUIServiceTransport)
           );
         }
         LoadTextFilterPreferences() {
@@ -15906,7 +14675,7 @@
               let e = yield this.m_Storage.GetObject(
                 "CTextFilterStore_TextFilterWords",
               );
-              e && (this.m_TextFilterWords = Tr.No.fromObject(e));
+              e && (this.m_TextFilterWords = vr.No.fromObject(e));
             }
           });
         }
@@ -15943,12 +14712,12 @@
         }
         RequestUpdatedSettings() {
           return (0, i.mG)(this, void 0, void 0, function* () {
-            let e = new Tr.n8();
+            let e = new vr.n8();
             if (0 !== this.m_unAccountID)
               try {
                 if (this.m_Transport) {
-                  let t = l.gA.Init(Tr.AP);
-                  e = (yield Tr.lk.GetCommunityPreferences(this.m_Transport, t))
+                  let t = l.gA.Init(vr.AP);
+                  e = (yield vr.lk.GetCommunityPreferences(this.m_Transport, t))
                     .Body()
                     .preferences();
                 } else {
@@ -15958,7 +14727,7 @@
                       "textfilter/ajaxgetcommunitypreferences",
                     { params: t, withCredentials: !0 },
                   );
-                  e = Tr.n8.fromObject(r.data.preferences);
+                  e = vr.n8.fromObject(r.data.preferences);
                 }
               } catch (e) {}
             if (
@@ -15966,12 +14735,12 @@
               e.text_filter_words_revision() !==
                 this.m_TextFilterWords.text_filter_words_revision())
             ) {
-              let t = new Tr.No();
+              let t = new vr.No();
               if (0 !== e.text_filter_words_revision())
                 try {
                   if (this.m_Transport) {
-                    let e = l.gA.Init(Tr.Oz);
-                    t = (yield Tr.lk.GetTextFilterWords(this.m_Transport, e))
+                    let e = l.gA.Init(vr.Oz);
+                    t = (yield vr.lk.GetTextFilterWords(this.m_Transport, e))
                       .Body()
                       .words();
                   } else {
@@ -15984,7 +14753,7 @@
                         "textfilter/ajaxgettextfiltercustomwords",
                       { params: e, withCredentials: !0 },
                     );
-                    t = Tr.No.fromObject(r.data.words);
+                    t = vr.No.fromObject(r.data.words);
                   }
                 } catch (e) {}
               this.UpdateTextFilterWords(t);
@@ -16022,7 +14791,7 @@
                   (yield this.LoadLanguage("english"));
             } catch (t) {
               this.m_nLoadLanguagesRetryTimeout &&
-                ((0, Cr.X)(
+                ((0, Tr.X)(
                   !this.m_nLoadLanguagesRetryTimeout,
                   "Got two concurrent calls to TextFilteringStore.LoadLanguages",
                 ),
@@ -16140,7 +14909,7 @@
               this.m_regexBannedWords = new RegExp(e, "ugi");
             } catch (e) {
               console.warn("Couldn't compile textfilter bannedwords regex"),
-                (0, vr.Uh)().ReportError(
+                (0, Cr.Uh)().ReportError(
                   new Error(
                     `Couldn't compile textfilter bannedwords regex: ${e}`,
                   ),
@@ -16151,7 +14920,7 @@
               this.m_regexCleanWords = new RegExp(t, "ugi");
             } catch (e) {
               console.warn("Couldn't compile textfilter cleanwords regex"),
-                (0, vr.Uh)().ReportError(
+                (0, Cr.Uh)().ReportError(
                   new Error(
                     `Couldn't compile textfilter cleanwords regex: ${e}`,
                   ),
@@ -16191,9 +14960,9 @@
               );
         }
       }
-      let bi;
-      function gi() {
-        if (!bi) {
+      let Jr;
+      function Yr() {
+        if (!Jr) {
           const e = new Set();
           let t = { sessionid: zr.De.SESSIONID, origin: (0, zr.Kc)() };
           s()
@@ -16206,40 +14975,40 @@
                 (0, Rr.my)(r.efriendrelationship) &&
                   e.add(new u.K(r.ulfriendid).GetAccountID());
             }),
-            (bi = (t) => e.has(t));
+            (Jr = (t) => e.has(t));
         }
-        return bi;
+        return Jr;
       }
-      (0, i.gn)([n.LO], hi.prototype, "m_TextFilterPreferences", void 0),
-        (0, i.gn)([n.LO], hi.prototype, "m_mapPlayerCache", void 0),
-        (0, i.gn)([n.LO], hi.prototype, "m_regexBannedWords", void 0),
-        (0, i.gn)([n.LO], hi.prototype, "m_regexCleanWords", void 0),
-        (0, i.gn)([Mr.a], hi.prototype, "OnTextFilterDictionaryChanged", null),
-        (0, i.gn)([n.aD], hi.prototype, "UpdateCommunityPreferences", null),
-        (0, i.gn)([n.aD], hi.prototype, "BRebuildFilter", null);
-      class yi {
+      (0, i.gn)([n.LO], Zr.prototype, "m_TextFilterPreferences", void 0),
+        (0, i.gn)([n.LO], Zr.prototype, "m_mapPlayerCache", void 0),
+        (0, i.gn)([n.LO], Zr.prototype, "m_regexBannedWords", void 0),
+        (0, i.gn)([n.LO], Zr.prototype, "m_regexCleanWords", void 0),
+        (0, i.gn)([Mr.a], Zr.prototype, "OnTextFilterDictionaryChanged", null),
+        (0, i.gn)([n.aD], Zr.prototype, "UpdateCommunityPreferences", null),
+        (0, i.gn)([n.aD], Zr.prototype, "BRebuildFilter", null);
+      class Qr {
         GetChat(e, t) {
           return this.m_mapChats.get(e) || this.m_mapChats.get(t);
         }
         GetOrCreateChat(e, t) {
           let r = this.GetChat(e, t);
-          return r || ((r = new pi()), this.m_mapChats.set(e || t, r)), r;
+          return r || ((r = new ei()), this.m_mapChats.set(e || t, r)), r;
         }
         static Get() {
           return (
-            yi.s_Singleton ||
-              ((yi.s_Singleton = new yi()),
+            Qr.s_Singleton ||
+              ((Qr.s_Singleton = new Qr()),
               "dev" == zr.De.WEB_UNIVERSE &&
-                (window.g_BroadcastChatStore = yi.s_Singleton)),
-            yi.s_Singleton
+                (window.g_BroadcastChatStore = Qr.s_Singleton)),
+            Qr.s_Singleton
           );
         }
         constructor() {
           this.m_mapChats = new Map();
         }
       }
-      (0, i.gn)([n.LO], yi.prototype, "m_mapChats", void 0);
-      class pi {
+      (0, i.gn)([n.LO], Qr.prototype, "m_mapChats", void 0);
+      class ei {
         constructor() {
           (this.m_ulBroadcastChannelID = ""),
             (this.m_ulChatID = ""),
@@ -16275,7 +15044,7 @@
             ));
         }
         InitTextFilter() {
-          this.m_textFilterStore = new hi({ BIsFriend: gi() });
+          this.m_textFilterStore = new Zr({ BIsFriend: Yr() });
           let e = 0;
           if ("" !== zr.L7.steamid) {
             e = new u.K(zr.L7.steamid).GetAccountID();
@@ -16482,7 +15251,7 @@
         }
         FetchChatModerators() {
           return (0, i.mG)(this, void 0, void 0, function* () {
-            const e = l.gA.Init(Xt);
+            const e = l.gA.Init(At);
             e.SetBodyFields({
               broadcast_channel_id: this.m_ulBroadcastChannelID,
             });
@@ -16912,15 +15681,15 @@
             (this.m_rgChatMessages = []);
         }
       }
-      (0, i.gn)([n.LO], pi.prototype, "m_mapChannelModeratorUsers", void 0),
-        (0, i.gn)([n.LO], pi.prototype, "m_mapBroadcastModeratorUsers", void 0),
-        (0, i.gn)([n.LO], pi.prototype, "m_nRateLimitSeconds", void 0),
-        (0, i.gn)([n.LO], pi.prototype, "m_bRateLimited", void 0),
-        (0, i.gn)([n.LO], pi.prototype, "m_rgChatMessages", void 0),
-        (0, i.gn)([n.LO], pi.prototype, "m_latestAnnouncement", void 0),
-        (0, i.gn)([Mr.a], pi.prototype, "FetchChatModerators", null),
-        (0, i.gn)([Mr.a], pi.prototype, "RequestLoop", null),
-        (0, i.gn)([Mr.a], pi.prototype, "MuteUserForSession", null);
+      (0, i.gn)([n.LO], ei.prototype, "m_mapChannelModeratorUsers", void 0),
+        (0, i.gn)([n.LO], ei.prototype, "m_mapBroadcastModeratorUsers", void 0),
+        (0, i.gn)([n.LO], ei.prototype, "m_nRateLimitSeconds", void 0),
+        (0, i.gn)([n.LO], ei.prototype, "m_bRateLimited", void 0),
+        (0, i.gn)([n.LO], ei.prototype, "m_rgChatMessages", void 0),
+        (0, i.gn)([n.LO], ei.prototype, "m_latestAnnouncement", void 0),
+        (0, i.gn)([Mr.a], ei.prototype, "FetchChatModerators", null),
+        (0, i.gn)([Mr.a], ei.prototype, "RequestLoop", null),
+        (0, i.gn)([Mr.a], ei.prototype, "MuteUserForSession", null);
     },
   },
 ]);

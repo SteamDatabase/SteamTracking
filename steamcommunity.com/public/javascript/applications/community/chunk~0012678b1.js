@@ -3,7 +3,7 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [6378],
   {
-    23794: (e) => {
+    46289: (e) => {
       e.exports = {
         LoadingWrapper: "throbber_LoadingWrapper_3Z36h",
         Static: "throbber_Static_kwzRJ",
@@ -58,12 +58,12 @@
         return o.De.IN_CLIENT && (0, c.px)(o.De.LAUNCHER_TYPE);
       }
     },
-    69338: (e, r, t) => {
+    3301: (e, r, t) => {
       "use strict";
       t.d(r, { V: () => a });
       var o = t(89526),
         c = t(19304),
-        b = t(23794),
+        b = t(46289),
         l = t.n(b);
       const s =
         t.p +

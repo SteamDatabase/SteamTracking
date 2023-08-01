@@ -3,7 +3,7 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [691],
   {
-    48636: (e) => {
+    12217: (e) => {
       e.exports = {
         fullscreen_bg: "contenthubpartnertakeover_fullscreen_bg_1kVV4",
         fullscreen_bg__video:
@@ -14,7 +14,7 @@
         gradient_width: "contenthubpartnertakeover_gradient_width_2wPYM",
       };
     },
-    31465: (e) => {
+    10128: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         MainCarousel: "contenthubshared_MainCarousel_rKC9i",
@@ -54,7 +54,7 @@
         MenuOptions: "contenthubshared_MenuOptions_1UNUd",
       };
     },
-    39073: (e) => {
+    62881: (e) => {
       e.exports = {
         Container: "greatondeckgriddisplay_Container_1d905",
         FullRow: "greatondeckgriddisplay_FullRow_2VB7_",
@@ -65,7 +65,7 @@
         CompatIconOverride: "greatondeckgriddisplay_CompatIconOverride_2hRdC",
       };
     },
-    99200: (e) => {
+    25745: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         DummyValue: "maincapsule_DummyValue_3dnfO",
@@ -74,7 +74,7 @@
         PlaceholderCompact: "maincapsule_PlaceholderCompact_12-VZ",
       };
     },
-    76315: (e) => {
+    26978: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         FeatureCtn: "animated_featured_capsule_FeatureCtn_1No48",
@@ -112,7 +112,7 @@
           "animated_featured_capsule_DeckCompatIconOverride_on2Le",
       };
     },
-    57489: (e) => {
+    37866: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         AppPartnerEventsPage: "apppartnereventspage_AppPartnerEventsPage_1m-hJ",
@@ -163,10 +163,10 @@
         ReadMoreCnt: "apppartnereventspage_ReadMoreCnt_3OLsV",
       };
     },
-    60361: (e) => {
+    24720: (e) => {
       e.exports = { Main: "basicpartnereventrender_Main_2U6-V" };
     },
-    27028: (e) => {
+    23972: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         ContentHubTitleCtn: "contenthubmaincarousel_ContentHubTitleCtn_61ECB",
@@ -187,7 +187,7 @@
           "contenthubmaincarousel_ReducedMotionToggleCtn_2Ykob",
       };
     },
-    72799: (e) => {
+    27033: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         strWidescreenWidth: "1420px",
@@ -220,7 +220,7 @@
         FacetValueSearch: "facetedbrowse_FacetValueSearch_1nSEf",
       };
     },
-    16947: (e) => {
+    93515: (e) => {
       e.exports = {
         countdownCtn: "giveawaynextdraw_countdownCtn_awreX",
         Closed: "giveawaynextdraw_Closed_26nqf",
@@ -234,13 +234,13 @@
         WinnerText: "giveawaynextdraw_WinnerText_2s2hb",
       };
     },
-    73807: (e) => {
+    57255: (e) => {
       e.exports = {
         HorizontalScrollInDragForceCursor:
           "horizontalscrollcontainer_HorizontalScrollInDragForceCursor_1uftH",
       };
     },
-    10809: (e) => {
+    46291: (e) => {
       e.exports = {
         StoreSalePriceWidget: "packagepricewidget_StoreSalePriceWidget_2ykYV",
         StoreSaleDiscountedPriceCtn:
@@ -252,18 +252,18 @@
         StoreOriginalPrice: "packagepricewidget_StoreOriginalPrice_3h9iQ",
       };
     },
-    38279: (e) => {
+    19983: (e) => {
       e.exports = {
         ReferencedApps: "partnereventreferencedapps_ReferencedApps_2xZM7",
       };
     },
-    71714: (e) => {
+    55301: (e) => {
       e.exports = {
         EventBannerCtn: "partnersalesectionlayout_EventBannerCtn_2drT0",
         EventBannerImg: "partnersalesectionlayout_EventBannerImg_MJdDH",
       };
     },
-    5698: (e) => {
+    14053: (e) => {
       e.exports = {
         description: "reservations_description_VmWUF",
         description2: "reservations_description2_1seHG",
@@ -283,7 +283,7 @@
         Link: "reservations_Link_CzZBM",
       };
     },
-    46215: (e) => {
+    25583: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         CuratorCtn: "salecuratorrecommendations_CuratorCtn_1NvS6",
@@ -307,7 +307,7 @@
         ListLink: "salecuratorrecommendations_ListLink_2vNXt",
       };
     },
-    24334: (e) => {
+    81170: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         strMediumWidth: "800px",
@@ -329,7 +329,7 @@
         VideoLarge: "salehilightplayerembed_VideoLarge_2b5SY",
       };
     },
-    19110: (e) => {
+    15525: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         SaleItemBrowserContainer:
@@ -354,7 +354,7 @@
         WGTesterLink: "saleitembrowser_WGTesterLink_2UmRv",
       };
     },
-    58298: (e) => {
+    98502: (e) => {
       e.exports = {
         QuanityAndPrice: "saleitemdefdisplay_QuanityAndPrice_2BmhS",
         PriceCtn: "saleitemdefdisplay_PriceCtn_2SLvc",
@@ -363,7 +363,7 @@
         ItemActionBtn: "saleitemdefdisplay_ItemActionBtn_3GaOl",
       };
     },
-    69356: (e) => {
+    64154: (e) => {
       e.exports = {
         SectionTitle: "dlcforyou_SectionTitle_22Ren",
         ShowMore: "dlcforyou_ShowMore_1cqMF",
@@ -386,14 +386,14 @@
         DLCStatDesc: "dlcforyou_DLCStatDesc_2FVzA",
       };
     },
-    33803: (e) => {
+    86138: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         SaleBackgroundOverlay:
           "salebackgroundoverlay_SaleBackgroundOverlay_MrIcZ",
       };
     },
-    21534: (e) => {
+    82071: (e) => {
       e.exports = {
         OuterCtn: "salebadgeprogressdisplay_OuterCtn_3yY4b",
         ImgSpread: "salebadgeprogressdisplay_ImgSpread_47-JS",
@@ -408,7 +408,7 @@
           "salebadgeprogressdisplay_DiscoveryQueueBelow_QVX8a",
       };
     },
-    38322: (e) => {
+    29871: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         ClaimCtn: "saleclaimitem_ClaimCtn_d5PCH",
@@ -421,13 +421,13 @@
         Timer: "saleclaimitem_Timer_2zqp4",
       };
     },
-    64084: (e) => {
+    19900: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         SalePageLogoCtn: "saledisplaylogo_SalePageLogoCtn_2kLRR",
       };
     },
-    6028: (e) => {
+    20413: (e) => {
       e.exports = {
         GhostCtn: "saleghostsections_GhostCtn_3gdzT",
         PlaceholderCap: "saleghostsections_PlaceholderCap_2BOsP",
@@ -454,7 +454,7 @@
         PlaceholderTags: "saleghostsections_PlaceholderTags_gvNj1",
       };
     },
-    80298: (e) => {
+    94225: (e) => {
       e.exports = {
         SectionLabelCtn: "salelabels_SectionLabelCtn_17xMe",
         SectionLabelRight: "salelabels_SectionLabelRight_3B4Ic",
@@ -462,7 +462,7 @@
         SectionTitleInnerCtn: "salelabels_SectionTitleInnerCtn_2R3H5",
       };
     },
-    87453: (e) => {
+    93851: (e) => {
       e.exports = {
         Ctn: "saleminigames_Ctn_1SGWR",
         DetailText: "saleminigames_DetailText_aLmWP",
@@ -471,7 +471,7 @@
         ImgFullBagde: "saleminigames_ImgFullBagde_2Sm--",
       };
     },
-    74489: (e) => {
+    39498: (e) => {
       e.exports = {
         RewardCtn: "salepointshopsmartdisplay_RewardCtn_2iyxZ",
         RewardImage: "salepointshopsmartdisplay_RewardImage_21I3G",
@@ -480,14 +480,14 @@
         RewardClass: "salepointshopsmartdisplay_RewardClass_194Jt",
       };
     },
-    97169: (e) => {
+    59026: (e) => {
       e.exports = {
         description: "salequestdisplay_description_22ryq",
         description2: "salequestdisplay_description2_xidiW",
         questCtn: "salequestdisplay_questCtn_14UQz",
       };
     },
-    81162: (e) => {
+    74774: (e) => {
       e.exports = {
         description: "salequiz_description_5YDkS",
         description2: "salequiz_description2_h6YBi",
@@ -498,13 +498,13 @@
         RevealFooterImage: "salequiz_RevealFooterImage_QR_Su",
       };
     },
-    40172: (e) => {
+    54376: (e) => {
       e.exports = {
         RewardContainer: "salerewardshelfdisplay_RewardContainer_10sVo",
         RewardShelfCtn: "salerewardshelfdisplay_RewardShelfCtn_2u8Xp",
       };
     },
-    51192: (e) => {
+    56701: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         ShowContentsContainer: "salesection_ShowContentsContainer_14g7C",
@@ -513,7 +513,7 @@
           "salesection_FacetedBrowseLoadThrobber_1hNUt",
       };
     },
-    97313: (e) => {
+    82734: (e) => {
       e.exports = {
         DoorOptionsContainer:
           "salesocialsharedisplay_DoorOptionsContainer_cP3hd",
@@ -524,7 +524,7 @@
         ShareIcon: "salesocialsharedisplay_ShareIcon_TFbD2",
       };
     },
-    33265: (e) => {
+    60486: (e) => {
       e.exports = {
         strMediumWidth: "800px",
         strMaxMobileWidth: "600px",
@@ -583,7 +583,7 @@
         SpeakerEventTitle: "salesectioneventschedule_SpeakerEventTitle_Uqfjf",
       };
     },
-    16477: (e) => {
+    24476: (e) => {
       e.exports = {
         MainBlock: "salesectionsubscription_MainBlock_2xkU3",
         SelectAPlan: "salesectionsubscription_SelectAPlan_1_1rg",
@@ -606,7 +606,7 @@
         DiscountPriceBlock: "salesectionsubscription_DiscountPriceBlock_2wQcn",
       };
     },
-    36164: (e) => {
+    42942: (e) => {
       e.exports = {
         SaleSection: "storywidget_SaleSection_2lR1Z",
         BookmarkCtn: "storywidget_BookmarkCtn_1YzIh",
@@ -643,7 +643,7 @@
         BadgeFooter: "storywidget_BadgeFooter_3kBeS",
       };
     },
-    72946: (e) => {
+    24132: (e) => {
       e.exports = {
         DiscoveryQueueWidgetCtn:
           "discoveryqueuewidget_DiscoveryQueueWidgetCtn_1iOb7",
@@ -1561,7 +1561,7 @@
         }
       }
     },
-    72709: (e, t, n) => {
+    71768: (e, t, n) => {
       "use strict";
       n.d(t, { U: () => u, V: () => m });
       var a = n(33940),
@@ -3151,14 +3151,14 @@
         v = n(85521),
         h = n(23496),
         S = n(4795),
-        f = n(83809),
+        f = n(99119),
         E = n.n(f),
         b = n(92358),
-        y = n(17318),
+        y = n(52629),
         C = n.n(y),
         D = n(87178),
         I = n(701),
-        w = n(69338),
+        w = n(3301),
         G = n(75962),
         k = n(60729),
         A = n(23801),
@@ -3169,7 +3169,7 @@
         P = n(4306),
         R = n(207),
         x = n(32765),
-        M = n(57489),
+        M = n(37866),
         O = n.n(M),
         F = n(45711),
         U = n(97352),
@@ -3215,7 +3215,7 @@
           n.e(72),
           n.e(1979),
           n.e(4601),
-        ]).then(n.bind(n, 83156)),
+        ]).then(n.bind(n, 82134)),
       );
       function q(e) {
         var t;
@@ -4013,7 +4013,7 @@
         _ = n(14826),
         g = n(207),
         v = n(32765),
-        h = n(57489),
+        h = n(37866),
         S = n.n(h),
         f = n(45711),
         E = n(79586),
@@ -4242,7 +4242,7 @@
         c = n(66012),
         d = n(57742),
         u = n(4306),
-        m = n(60361),
+        m = n(24720),
         p = n(99307);
       function _(e) {
         const { event: t, closeModal: n } = e;
@@ -4307,7 +4307,7 @@
         (0, a.gn)([u.ak], v.prototype, "OnBackgroundClick", null),
         (v = (0, a.gn)([i.Pi], v));
     },
-    93317: (e, t, n) => {
+    19288: (e, t, n) => {
       "use strict";
       n.d(t, { oZ: () => I, sE: () => w });
       var a = n(89526),
@@ -4322,18 +4322,18 @@
         m = n(88443),
         p = n(207),
         _ = n(32765),
-        g = n(82248);
+        g = n(6726);
       const v =
         "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAgJJREFUeNrsmz9LxDAYxpNyIhzICeIkiLM46KAf4EY9HBzcnDwXJ0cnFxddHdQP4ScQcXJxUvDP7qAOLg5Ot8TnpDhIkja5mL5t3hcechDS9Pmlb3mba6VSSqQcmUg8GAADYAAMgAHoQkr5K8QppGouvU9THZAbF+hvo3mDOjVfbOmbApsNMD/SPaDf5HuANQXQN4+fT4ax79CAqK9ZzSWvTYFWwYF2LH2rgHRP0T0W7rNs2maWg4yj2Uq5DtiAplIG0BcJhA1Al0thBsAAGEDToxVzMtQWL38LFBRTk6HHkAWQG+lEGMMpwAAYAANgAAyAATAABsAAGAADIPUw1POYs/ef5xkVAB5jb2KMSToFlFITaMaSBADzw32DK6idHIDc/CW0klwKlDB/bhtsUlEsUjEP3VrO8wySJp+1BlDWvG2hawvAxXzjALiatwEYpRBad4BwgYLmS2NkGs2ax9y70LKh7wTaw3yqLE3fK8Al5nTmoYfA8xy5+swquoSHK38NLQQ87DFWfZ98KUzJfHQA1MxHBUDRfEwAJM3/PG5bvhkK+THRKzRTpXnjC6GRAISMA5g/9EhB5x2hJY+Tu/MY8whti3Kv3Q5g/jnoLlXR6/KOlJWH+S7m+ohwEya3HxDNPMUNERLmqwJAxnwVAEiZjw2AnPmiOiCJ4D9HUwfwLcAAxHgyaE4johYAAAAASUVORK5CYII=";
-      var h = n(75313);
+      var h = n(16947);
       const S =
         "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAtNJREFUeNrsmk1rE0EYgHe19ZBIY2kj4qUQVGjxAz2J4gcVvfmBP8FI8eZF8OJNL4oFPYrGX1CK4lEMiChe/aCClNBeRGxLTTE5GDU+Y2bDJG5rL5lZ950XnsxkE5h9n8zszkw2bDabgeTYEAgPL8AL8AK8AC/AC/AC5EafegnDcM0vMVvMUOyA7bBNswVymgHYDOp7m/SxUNczRlvZdZ5XDX7oeh2+q9OAqq6rY99gRR9TfIXPmk8wS171f+QVhH9eYgRw/BhFEQ7q5MP/7MdVwmbhNZTI8fm6BPBe/XoP4XzKevs0XCDX6qoCdPIvYE9Kh/xbOBpJULl3XwQfpDh5FXt1ju1o9wDKQ7x/KeTif5icX3X3gKKgu18xbh4wLkjAeMcQIPLwRdgcaCssRD1gTOAkcMwcAgWBAgqmgBGBAkZMAfkeN1ZPoIC8KWCox409hePwJkEChmwKCPRi5ABMJOSO0yFg2EaLSPgF96nuhFt6aesqhk0BgzZbRsIKXKU6Co8dCRg0BWRdnAESKnCO6gl4Z7n5rCmg3+VgREKZYj9cUrMzS832mwJyrq9ISPgJ9/T1YRIaPW4y170YSkSozQq4QnU3POl1e4ndFUbCRzhD9RS8FyfAVvQl9cRYpu+iuA2nRQnQG7PX4LKNu1MkoOr6TkDiGykuwnULi7Mo57aAhuPk1RbVncDujnTDvAjWHCVegEdUnwX2t+NrpoBly4kPwE2qH+Cso463bA6BRUuJK+FqS/pG0NqUdBmLpoAlC8mrP1vvwr6E3HCWbAo46bCrrykgugb0egWWSeBca8EUMC9wFjxvCqgIFFAxBcwIFDDTFsCyU42HOUHJz+mcO5bDZUECynH7ASVBAkp/CVBPTFBMCUh+Sufayts/JGWE/uBI0HqkLG0xbSYf2wNi5u7yHpRcZSGT7kdlJYd/XN4L8AK8AC/AC/ACvACx8VuAAQDxke5GRJ5P8AAAAABJRU5ErkJggg==";
       var f = n(17547),
         E = n(71161),
-        b = n(69338),
-        y = n(72213),
+        b = n(3301),
+        y = n(55079),
         C = n(79586),
-        D = n(17318);
+        D = n(52629);
       function I(e) {
         const {
             creatorID: t,
@@ -4596,12 +4596,12 @@
         o = n(32765),
         r = n(14826),
         l = n(4306),
-        c = n(17318),
+        c = n(52629),
         d = n.n(c),
         u = n(57742),
         m = n(60161),
         p = n(19304),
-        _ = n(43997),
+        _ = n(38695),
         g = n.n(_),
         v = n(99307),
         h = n(36041),
@@ -4766,7 +4766,7 @@
       var A = n(47165),
         L = n(57605),
         B = n(17547),
-        T = n(69338);
+        T = n(3301);
       const N = (0, s.Pi)((e) => {
         const { eventModel: t } = e,
           [n, s] = (0, i.useState)(!0),
@@ -4940,7 +4940,7 @@
       var P = n(51438),
         R = n(44026),
         x = n(88443),
-        M = n(82707),
+        M = n(24192),
         O = n(45711);
       function F(e, t) {
         if (!t.BIsUserLoggedIn())
@@ -5274,10 +5274,10 @@
         g = n(99307),
         v = n(14826),
         h = n(4306),
-        S = n(34976),
+        S = n(93513),
         f = n.n(S),
         E = n(46132),
-        b = n(69338),
+        b = n(3301),
         y = n(32765),
         C = n(23217);
       const D = new (class {
@@ -5487,7 +5487,7 @@
         (0, a.gn)([h.ak], I.prototype, "OnDelete", null),
         (0, a.gn)([h.ak], I.prototype, "OnChangeDeleteForum", null);
       var w = n(45711),
-        G = n(17318),
+        G = n(52629),
         k = n(57742),
         A = n(19304),
         L = n(60161),
@@ -5495,7 +5495,7 @@
         T = n(60016),
         N = n(74710),
         P = n(54124),
-        R = n(83809);
+        R = n(99119);
       function x(e) {
         const { eventModel: t } = e,
           n = (0, o.SZ)(() => t.jsondata.sale_sections);
@@ -6109,10 +6109,10 @@
         c = n(52316),
         d = n(66012),
         u = n(99307),
-        m = n(67122),
-        p = n(1721),
+        m = n(78180),
+        p = n(35266),
         _ = n.n(p),
-        g = n(69338),
+        g = n(3301),
         v = n(23217),
         h = n(32765);
       const S = (e) => {
@@ -6277,7 +6277,7 @@
         f = n(25871),
         E = n(1275),
         b = n(45711),
-        y = n(17318),
+        y = n(52629),
         C = n.n(y),
         D = n(87539),
         I = n(21904),
@@ -6287,11 +6287,11 @@
         A = n(14826),
         L = n(32765),
         B = n(17547),
-        T = n(69338),
-        N = n(5089),
+        T = n(3301),
+        N = n(71),
         P = n.n(N),
         R = n(51441),
-        x = n(23715),
+        x = n(1631),
         M = n.n(x),
         O = n(701);
       const F = (0, o.Pi)((e) => {
@@ -6689,7 +6689,7 @@
       var a = n(33940),
         i = n(89526),
         s = n(4306),
-        o = n(73807),
+        o = n(57255),
         r = n.n(o),
         l = n(51438);
       class c extends i.Component {
@@ -6777,13 +6777,13 @@
         s = n(89526),
         o = n(98009),
         r = n(25871),
-        l = n(55290),
+        l = n(7670),
         c = n.n(l),
         d = n(701),
         u = n(19304),
         m = n(71161),
         p = n(51441),
-        _ = n(10809);
+        _ = n(46291);
       !(function (e) {
         (e.k_eBlock = "block"),
           (e.k_eFinal = "final"),
@@ -6966,12 +6966,12 @@
         o = n(32765),
         r = n(54856),
         l = n(19094);
-      var c = n(17318),
+      var c = n(52629),
         d = n.n(c),
         u = n(21904),
         m = n(14826),
         p = n(73406),
-        _ = n(83809),
+        _ = n(99119),
         g = n.n(_);
       function v(e) {
         const { appid: t } = e,
@@ -7110,7 +7110,7 @@
         s = n(89526),
         o = n(23496),
         r = n(14826),
-        l = n(38279),
+        l = n(19983),
         c = n.n(l);
       function d(e) {
         const { event: t } = e,
@@ -7159,17 +7159,17 @@
         u = n(62983),
         m = n(98009),
         p = n(25871),
-        _ = n(29054),
+        _ = n(99472),
         g = n.n(_),
         v = n(23280),
-        h = n(48294),
+        h = n(38520),
         S = n.n(h),
         f = n(99028),
         E = n(70750),
         b = n(46294),
         y = n(701),
         C = n(71161),
-        D = n(69338),
+        D = n(3301),
         I = n(19304),
         w = n(32765),
         G = n(33940),
@@ -8141,9 +8141,9 @@
           }
         );
       }
-      var W = n(31465),
+      var W = n(10128),
         Z = n(45429),
-        q = n(6028),
+        q = n(20413),
         X = n.n(q);
       function Q(e) {
         const {
@@ -8551,7 +8551,7 @@
       }
       var K = n(44026),
         $ = n(66615),
-        ee = n(48636);
+        ee = n(12217);
       function te(e) {
         const {
             hubtype: t,
@@ -8742,7 +8742,7 @@
         de = n(84770),
         ue = n(95408),
         me = n(57605),
-        pe = n(72799);
+        pe = n(27033);
       function _e(e, t) {
         const n = new Set(e);
         return (
@@ -10649,7 +10649,7 @@
       function He(e, t) {
         return Pe(e, V([t])[0]);
       }
-      var je = n(23715),
+      var je = n(1631),
         Ve = n.n(je),
         ze = n(75962);
       function We(e) {
@@ -11155,7 +11155,7 @@
       }
       var et = n(51441),
         tt = n(42317),
-        nt = n(39073);
+        nt = n(62881);
       const at = 4,
         it = 6,
         st = it * at + 3;
@@ -11272,7 +11272,7 @@
         ut = n(82079),
         mt = n(47165),
         pt = n(32009),
-        _t = n(99200),
+        _t = n(25745),
         gt = n(35388),
         vt = n(5615);
       function ht(e) {
@@ -11516,7 +11516,7 @@
         },
         Et = 12;
       var bt = n(17547),
-        yt = n(27028);
+        yt = n(23972);
       const Ct = (e) => {
         const {
             hubtype: t,
@@ -11592,7 +11592,7 @@
         );
         var _;
       };
-      var Dt = n(93317),
+      var Dt = n(19288),
         It = n(5029),
         wt = n(74802),
         Gt = n(59983),
@@ -11618,7 +11618,7 @@
             n.e(72),
             n.e(1979),
             n.e(4601),
-          ]).then(n.bind(n, 83156)),
+          ]).then(n.bind(n, 82134)),
         ),
         Bt = "broadcast-preroll-",
         Tt = "viewed";
@@ -11720,12 +11720,12 @@
       }
       var Pt = n(43946),
         Rt = n(97506),
-        xt = n(17318),
+        xt = n(52629),
         Mt = n.n(xt),
         Ot = n(16468),
         Ft = n(84343),
         Ut = n(79586),
-        Ht = n(46215);
+        Ht = n(25583);
       function jt(e) {
         const { section: t, event: n, bPreviewMode: i } = e;
         return (0, w.h4)() ||
@@ -12040,17 +12040,17 @@
         }
       }
       var qt = n(10412),
-        Xt = n(43997),
+        Xt = n(38695),
         Qt = n.n(Xt),
-        Yt = n(82248),
-        Jt = n(75313),
-        Kt = n(50500),
+        Yt = n(6726),
+        Jt = n(16947),
+        Kt = n(67009),
         $t = n.n(Kt),
         en = n(23496),
-        tn = n(97313),
+        tn = n(82734),
         nn = n.n(tn),
         an = n(57742),
-        sn = n(82707),
+        sn = n(24192),
         on = n(60161),
         rn = n(45711),
         ln = n(52316);
@@ -12480,12 +12480,12 @@
         );
       var yn = n(84646),
         Cn = n(79365),
-        Dn = n(55290),
+        Dn = n(7670),
         In = n.n(Dn),
         wn = n(79946),
         Gn = n(81586),
         kn = n(7894),
-        An = n(5698);
+        An = n(14053);
       function Ln(e) {
         const { section: t, language: n, event: i, bIsPreview: s } = e,
           [o, l] = a.useState(null),
@@ -12672,7 +12672,7 @@
         );
       }
       var Nn = n(34714),
-        Pn = n(83809),
+        Pn = n(99119),
         Rn = n.n(Pn),
         xn = n(32905),
         Mn = n(99307);
@@ -13042,7 +13042,7 @@
       var Xn = n(82588),
         Qn = n(32870),
         Yn = n(207),
-        Jn = n(21534),
+        Jn = n(82071),
         Kn = n(4170);
       function $n(e) {
         var t;
@@ -13463,7 +13463,7 @@
             )
           : null;
       }
-      var ca = n(64084),
+      var ca = n(19900),
         da = n.n(ca);
       function ua(e) {
         const { eventModel: t, language: n } = e,
@@ -13494,7 +13494,7 @@
               )
           : null;
       }
-      var ma = n(97169);
+      var ma = n(59026);
       function pa(e) {
         return (0, d.jK)() ? a.createElement(_a, Object.assign({}, e)) : null;
       }
@@ -13667,11 +13667,11 @@
         ha = n(13345),
         Sa = n(60016),
         fa = n(77557),
-        Ea = n(34976),
+        Ea = n(93513),
         ba = n(58218),
         ya = n(11837),
         Ca = n(94843),
-        Da = n(81162);
+        Da = n(74774);
       function Ia(e) {
         var t, n, i, s, o, l, c, u, m, p, _;
         const { bIsPreview: S, event: f, section: E, language: y } = e,
@@ -14339,7 +14339,7 @@
       }
       var Ta = n(54124),
         Na = n(89082),
-        Pa = n(40172);
+        Pa = n(54376);
       const Ra = 5;
       function xa(e) {
         const { bIsPreview: t, event: n, section: i, language: s } = e,
@@ -14733,10 +14733,10 @@
         (0, G.gn)([se.LO], Ha.prototype, "m_mapSectionToNewEvents", void 0),
         (0, G.gn)([Fa.a], Ha.prototype, "FireRequestNow", null),
         (0, G.gn)([Fa.a], Ha.prototype, "TimerAction", null);
-      var ja = n(51192),
+      var ja = n(56701),
         Va = n.n(ja),
         za = n(39818),
-        Wa = n(1721),
+        Wa = n(35266),
         Za = n.n(Wa);
       const qa = (0, oe.Pi)((e) => {
         const {
@@ -15268,7 +15268,7 @@
         (0, G.gn)([se.aD], ci.prototype, "AddAllRecentEvents", null);
       var di = n(35340),
         ui = n(81362),
-        mi = n(87453);
+        mi = n(93851);
       function pi(e, t, n) {
         if (t.some((t) => t.id == e.appid && "game" == t.type)) return;
         const i = {
@@ -15413,7 +15413,7 @@
           ),
         );
       }
-      var gi = n(72709);
+      var gi = n(71768);
       class vi {
         constructor() {
           this.m_mapMasterAppToBenefitApps = new Map();
@@ -16711,7 +16711,7 @@
         }
       }
       var wi = n(94496),
-        Gi = n(19110),
+        Gi = n(15525),
         ki = n.n(Gi),
         Ai = n(61141);
       let Li = class extends a.Component {
@@ -18057,7 +18057,7 @@
         Ki = n(72120),
         $i = n(74015),
         es = n(5418),
-        ts = n(33265),
+        ts = n(60486),
         ns = n.n(ts);
       const as = (e) => {
           const {
@@ -18252,7 +18252,7 @@
         ds = n(6319),
         us = n(97352),
         ms = n(24591),
-        ps = n(24334),
+        ps = n(81170),
         _s = n.n(ps),
         gs = n(74621);
       const vs = (0, oe.Pi)((e) => {
@@ -19427,7 +19427,7 @@
       const Us = new Fs();
       window.g_PackageInfoStore = Us;
       var Hs = n(87178),
-        js = n(16477),
+        js = n(24476),
         Vs = n.n(js);
       function zs(e, t) {
         let n = [];
@@ -19673,7 +19673,7 @@
       Xs = (0, G.gn)([oe.Pi], Xs);
       var Qs = n(22171),
         Ys = n(90210),
-        Js = n(36164),
+        Js = n(42942),
         Ks = n.n(Js);
       const $s = (0, oe.Pi)((e) => {
           var t, n;
@@ -20608,7 +20608,7 @@
         }
       }
       var lo = n(29551),
-        co = n(69356),
+        co = n(64154),
         uo = n(3991);
       function mo(e) {
         var t, n, i, s, o, r, l;
@@ -21244,7 +21244,7 @@
               ),
         );
       }
-      var vo = n(33803),
+      var vo = n(86138),
         ho = n.n(vo);
       function So(e) {
         const { event: t, language: n, url: i } = e;
@@ -21296,7 +21296,7 @@
       }
       var Do,
         Io = n(15715),
-        wo = n(38322);
+        wo = n(29871);
       function Go(e) {
         var t, n, i, s;
         const { bIsPreview: o, event: l, section: c, language: d } = e,
@@ -21503,43 +21503,44 @@
       })(Do || (Do = {}));
       var Ao = n(1434);
       function Lo(e) {
+        var t;
         const {
-            promotionName: t,
-            eventModel: n,
-            bIsPreview: i,
-            language: s,
+            promotionName: n,
+            eventModel: i,
+            bIsPreview: s,
+            language: o,
           } = e,
-          [o, c] = a.useState(
-            null == n ? void 0 : n.GetDayIndexFromEventStart(),
+          [c, d] = a.useState(
+            null == i ? void 0 : i.GetDayIndexFromEventStart(),
           ),
-          [d, u] = a.useState(null),
-          [m, p] = a.useState((0, r._)()),
-          _ = a.useCallback(() => p((0, r._)()), []);
+          [u, m] = a.useState(null),
+          [p, _] = a.useState((0, r._)()),
+          g = a.useCallback(() => _((0, r._)()), []);
         a.useEffect(
           () => (
-            window.addEventListener("resize", _),
-            () => window.removeEventListener("resize", _)
+            window.addEventListener("resize", g),
+            () => window.removeEventListener("resize", g)
           ),
-          [_],
+          [g],
         );
-        const [g, v] = a.useState(
-          (null == n ? void 0 : n.GetImageURL("sale_overlay", s)) ||
-            (null == n
+        const [v, h] = a.useState(
+          (null == i ? void 0 : i.GetImageURL("sale_overlay", o)) ||
+            (null == i
               ? void 0
-              : n.GetImageURL("sale_overlay", N.LJ.GetELanguageFallback(s))),
+              : i.GetImageURL("sale_overlay", N.LJ.GetELanguageFallback(o))),
         );
         if (
           (a.useEffect(() => {
             if (
-              n.jsondata.sale_custom_css &&
-              !d &&
-              i &&
-              Boolean(n.jsondata.sale_vanity_id_valve_approved_for_sale_subpath)
+              i.jsondata.sale_custom_css &&
+              !u &&
+              s &&
+              Boolean(i.jsondata.sale_vanity_id_valve_approved_for_sale_subpath)
             ) {
               const e = document.getElementsByTagName("HEAD")[0],
                 t = document.createElement("style");
-              (t.innerText = (0, Yn.et)(n.jsondata.sale_custom_css)),
-                u(t),
+              (t.innerText = (0, Yn.et)(i.jsondata.sale_custom_css)),
+                m(t),
                 e.appendChild(t);
             }
             const e = document.getElementsByClassName(
@@ -21552,40 +21553,46 @@
               ),
               e.length >= 1 && (e[0].style.backgroundImage = null),
               () => {
-                d && (d.remove(), u(null));
+                u && (u.remove(), m(null));
               }
             );
-          }, [n, d, i]),
-          n && void 0 !== o)
+          }, [i, u, s]),
+          i && void 0 !== c)
         ) {
           const e = {
-              promotionName: t,
+              promotionName: n,
               clanid: Number(w.JA.CLANACCOUNTID),
-              nAppIDVOD: Number(n.jsondata.broadcast_preroll_vod_appid),
-              event: n,
-              bIsPreview: i,
-              language: s,
-              accountIDs: i ? n.jsondata.broadcast_whitelist : void 0,
+              nAppIDVOD: Number(i.jsondata.broadcast_preroll_vod_appid),
+              event: i,
+              bIsPreview: s,
+              language: o,
+              accountIDs: s ? i.jsondata.broadcast_whitelist : void 0,
               chat_announcement_giveaway:
-                n.jsondata.broadcast_chat_announcement_giveaway,
+                i.jsondata.broadcast_chat_announcement_giveaway,
             },
-            r = n
+            r =
+              (null === (t = i.jsondata.localized_sale_logo) || void 0 === t
+                ? void 0
+                : t.filter(Boolean).length) > 0,
+            u = i
               .GetSaleSections()
               .some((e) => "contenthubtitle" === e.section_type),
-            d =
-              n.BUsesContentHubForItemSource() &&
-              r &&
-              !Boolean(n.jsondata.sale_header_offset)
-                ? 100
-                : n.jsondata.sale_header_offset,
-            u = l.g6
+            m = i.BUsesContentHubForItemSource() && u,
+            _ = r
+              ? 0
+              : m && !Boolean(i.jsondata.sale_header_offset)
+              ? 100
+              : i.jsondata.sale_header_offset,
+            g = l.g6
               .Get()
               .BIsPartnerTakeoverActive(
-                n.GetContentHubType(),
-                n.GetContentHubCategory(),
-                n.GetContentHubTag(),
+                i.GetContentHubType(),
+                i.GetContentHubCategory(),
+                i.GetContentHubTag(),
               ),
-            p = m && !u && !Boolean(n.jsondata.content_hub_restricted_width);
+            f = Boolean(
+              p && !g && !Boolean(i.jsondata.content_hub_restricted_width),
+            );
           return a.createElement(
             bt.SV,
             null,
@@ -21594,37 +21601,37 @@
               null,
               a.createElement(
                 En,
-                { event: n, language: s, bIsPreview: i },
-                p && a.createElement(So, { event: n, language: s, url: g }),
+                { event: i, language: o, bIsPreview: s },
+                f && a.createElement(So, { event: i, language: o, url: v }),
                 a.createElement(
                   "div",
                   {
                     className: (0, I.Z)({
                       [S().SaleOuterContainer]: !0,
-                      [S()[`CustomStyle_${n.jsondata.sale_vanity_id}`]]: !0,
+                      [S()[`CustomStyle_${i.jsondata.sale_vanity_id}`]]: !0,
                       SaleOuterContainer: !0,
                     }),
-                    style: { marginTop: `${d || 0}px` },
+                    style: { marginTop: `${_ || 0}px` },
                   },
-                  a.createElement(ua, { eventModel: n, language: s }),
+                  a.createElement(ua, { eventModel: i, language: o }),
                   a.createElement(Ro, {
-                    rgPresenters: n.jsondata.sale_presenters,
+                    rgPresenters: i.jsondata.sale_presenters,
                   }),
-                  a.createElement(hn, { event: n, broadcastEmbedContext: e }),
+                  a.createElement(hn, { event: i, broadcastEmbedContext: e }),
                   a.createElement(To, {
-                    bIsPreview: i,
-                    event: n,
-                    language: s,
-                    promotionName: t,
-                    nSaleDayIndex: o,
+                    bIsPreview: s,
+                    event: i,
+                    language: o,
+                    promotionName: n,
+                    nSaleDayIndex: c,
                     broadcastEmbedContext: e,
-                    fnUpdateBackgroundOverlay: v,
+                    fnUpdateBackgroundOverlay: h,
                   }),
                   a.createElement(Sn, {
-                    event: n,
-                    bIsPreview: i,
+                    event: i,
+                    bIsPreview: s,
                     fnOnChangeDayIndex: (e) => {
-                      e != o && ((n.m_overrideCurrentDay = e), c(e));
+                      e != c && ((i.m_overrideCurrentDay = e), d(e));
                     },
                   }),
                 ),
@@ -22147,9 +22154,9 @@
         o = n(84770),
         r = n(56368),
         l = n(11491),
-        c = n(5089),
+        c = n(71),
         d = n.n(c),
-        u = n(17318),
+        u = n(52629),
         m = n.n(u),
         p = n(34714),
         _ = n(31245),
@@ -22159,7 +22166,7 @@
         S = n(74015),
         f = n(5418),
         E = n(49234),
-        b = n(48294),
+        b = n(38520),
         y = n.n(b),
         C = n(70750),
         D = n(44421),
@@ -22168,7 +22175,7 @@
         G = n(32009),
         k = n(1434),
         A = n(66615),
-        L = n(71714),
+        L = n(55301),
         B = n(1063);
       function T(e) {
         return (
@@ -22629,9 +22636,9 @@
         r = n(79365),
         l = n(85651),
         c = n(57605),
-        d = n(34976),
+        d = n(93513),
         u = n(21904),
-        m = n(69338),
+        m = n(3301),
         p = n(58218),
         _ = n(19304),
         g = n(60161),
@@ -22641,7 +22648,7 @@
         f = n(57742),
         E = n(71161),
         b = n(32905),
-        y = n(5698);
+        y = n(14053);
       function C(e, t, n) {
         return (
           !n &&
@@ -23140,7 +23147,7 @@
         i = n(79365),
         s = n(14826),
         o = n(17547),
-        r = n(69338),
+        r = n(3301),
         l = n(79946),
         c = n(7894);
       function d(e) {
@@ -23248,16 +23255,16 @@
         i = n.n(a),
         s = n(89526),
         o = n(57605),
-        r = n(17318),
+        r = n(52629),
         l = n.n(r),
-        c = n(69338),
+        c = n(3301),
         d = n(60161),
         u = n(14826),
         m = n(32765),
         p = n(99307),
         _ = n(57742),
         g = n(5029),
-        v = n(5698);
+        v = n(14053);
       function h(e) {
         const [t] = (0, g.Ar)("beta", 0);
         return Boolean(t && m.L7.is_support) || e;
@@ -23374,8 +23381,8 @@
         d = n(60161),
         u = n(99307),
         m = n(57742),
-        p = n(69338),
-        _ = n(24334),
+        p = n(3301),
+        _ = n(81170),
         g = n.n(_),
         v = n(56491);
       function h(e) {
@@ -23570,10 +23577,10 @@
         o = n(13345),
         r = n(8894),
         l = n(57605),
-        c = n(29054),
+        c = n(99472),
         d = n.n(c),
         u = n(61963),
-        m = n(17318),
+        m = n(52629),
         p = n.n(m),
         _ = n(99028),
         g = n(45429),
@@ -23584,9 +23591,9 @@
         E = n(19304),
         b = n(14826),
         y = n(32765),
-        C = n(48294),
+        C = n(38520),
         D = n.n(C),
-        I = n(58298);
+        I = n(98502);
       function w(e) {
         const { event: t, activeTab: n, section: i } = e,
           [s, o] = a.useState(null),
@@ -23746,7 +23753,7 @@
       n.d(t, { a: () => r });
       var a = n(89526),
         i = n(44421),
-        s = n(23715),
+        s = n(1631),
         o = n.n(s);
       function r(e) {
         return a.createElement(
@@ -23769,16 +23776,16 @@
         i = n(5080),
         s = n(82588),
         o = n(46294),
-        r = n(29054),
+        r = n(99472),
         l = n.n(r),
         c = n(23280),
         d = n(6069),
         u = n(19304),
         m = n(14826),
-        p = n(48294),
+        p = n(38520),
         _ = n(32870),
         g = n(32765),
-        v = n(78913),
+        v = n(59666),
         h = n.n(v),
         S = n(23801),
         f = n(207);
@@ -23919,7 +23926,7 @@
         o = n(51438),
         r = n(98009),
         l = n(87108),
-        c = n(76315),
+        c = n(26978),
         d = n(44421),
         u = n(59648),
         m = n(49571),
@@ -23928,7 +23935,7 @@
         g = n(14826),
         v = n(71161),
         h = n(51441),
-        S = n(23715),
+        S = n(1631),
         f = n.n(S),
         E = n(6645),
         b = n(21219),
@@ -24200,7 +24207,7 @@
       };
       var B = n(61141),
         T = n(88464),
-        N = n(55290),
+        N = n(7670),
         P = n.n(N),
         R = n(44865),
         x = n(12681),
@@ -24437,13 +24444,13 @@
         s = n(74831),
         o = n(19304),
         r = n(32765),
-        l = n(17318),
+        l = n(52629),
         c = n.n(l),
         d = n(43946),
         u = n(84343),
         m = n(14826),
-        p = n(80298),
-        _ = n(48294),
+        p = n(94225),
+        _ = n(38520),
         g = n(13345);
       function v(e, t) {
         return (
@@ -24653,7 +24660,7 @@
         s = n(5080),
         o = n(98009),
         r = n(43658),
-        l = n(29054),
+        l = n(99472),
         c = n.n(l),
         d = n(99028),
         u = n(45429),
@@ -24663,9 +24670,9 @@
         g = n(71161),
         v = n(19304),
         h = n(32765),
-        S = n(48294),
+        S = n(38520),
         f = n.n(S),
-        E = n(74489),
+        E = n(39498),
         b = n(25871),
         y = n(62983),
         C = n(14826),
@@ -24988,31 +24995,31 @@
         }
       }
     },
-    82707: (e, t, n) => {
+    24192: (e, t, n) => {
       "use strict";
       n.d(t, { t6: () => w });
       var a = n(33940),
         i = n(89526),
         s = n(78423),
         o = n(45711),
-        r = n(17318),
+        r = n(52629),
         l = n.n(r),
         c = n(32905),
         d = n(19304),
         u = n(14826),
         m = n(4306),
         p = n(32765),
-        _ = n(37865);
-      var g = n(82248),
-        v = n(15164),
-        h = n(75313),
+        _ = n(76672);
+      var g = n(6726),
+        v = n(7787),
+        h = n(16947),
         S = n(99307),
         f = n(84343),
         E = n(75962),
-        b = n(43997),
+        b = n(38695),
         y = n.n(b),
         C = n(5386),
-        D = n(93528),
+        D = n(83992),
         I = n(57605);
       class w extends i.Component {
         constructor() {
@@ -25291,7 +25298,7 @@
         E = n(32765),
         b = n(82588),
         y = n(44865),
-        C = n(72946),
+        C = n(24132),
         D = n.n(C);
       function I(e) {
         return (0, g.g)()
@@ -25663,14 +25670,14 @@
           );
         }
       }
-      var h = n(72709),
+      var h = n(71768),
         S = n(8894),
         f = n(74710),
         E = n(34714),
-        b = n(69338),
-        y = n(29054),
+        b = n(3301),
+        y = n(99472),
         C = n(93883),
-        D = n(16947);
+        D = n(93515);
       function I(e) {
         return e < 10 ? "0" + e : e;
       }
@@ -25752,7 +25759,7 @@
         B = n(32905),
         T = n(72072),
         N = n(59934),
-        P = n(20993),
+        P = n(4102),
         R = n(81362),
         x = n(4170),
         M = n(82588);

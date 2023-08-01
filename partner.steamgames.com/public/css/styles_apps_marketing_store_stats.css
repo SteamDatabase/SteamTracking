@@ -377,6 +377,7 @@ div.jqplot-table-legend-swatch-outline {
 .csv_download_row img {
 	padding: 5px 0px;
 	vertical-align: middle;
+    mix-blend-mode: hard-light;
 }
 
 #learnmore_panel {

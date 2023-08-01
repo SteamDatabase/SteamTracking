@@ -3,10 +3,10 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [3352],
   {
-    47340: (e) => {
+    81609: (e) => {
       e.exports = { SearchResults: "search_curator_SearchResults_3ao90" };
     },
-    47029: (e) => {
+    29640: (e) => {
       e.exports = {
         SectionContainer: "migratesaletool_SectionContainer_3ZElG",
         SectionTitle: "migratesaletool_SectionTitle_1-ftd",
@@ -14,7 +14,7 @@
         RecordInfoCtn: "migratesaletool_RecordInfoCtn_6eQgp",
       };
     },
-    13078: (e) => {
+    65518: (e) => {
       e.exports = {
         MigrateToolCtn: "migratetool_MigrateToolCtn_fGggy",
         ToolHeader: "migratetool_ToolHeader_2cI57",
@@ -206,19 +206,19 @@
         p = a(99307),
         h = a(57742),
         v = a(701),
-        E = a(69338),
+        E = a(3301),
         _ = a(60161),
         f = a(14826),
         S = a(23217),
         I = a(32765),
-        C = a(47029),
+        C = a(29640),
         D = a(40103),
         A = a(74831),
         M = a(69159),
         B = a(17547),
-        T = a(1721),
+        T = a(35266),
         b = a(81349),
-        w = a(47340);
+        w = a(81609);
       const G = (e) => {
           const {
               strLabel: t,
@@ -323,7 +323,7 @@
             ),
           );
         };
-      var P = a(93317);
+      var P = a(19288);
       const y = (0, c.Pi)((e) => {
           const t = (function () {
             const [e, t] = d.useState(!F.Get().BHasLoadCompleted());
@@ -921,7 +921,7 @@
       (0, o.gn)([s.LO.shallow], W.prototype, "m_rgApps", void 0),
         (0, o.gn)([s.LO.shallow], W.prototype, "m_rgClanAccountIDs", void 0);
       var V = a(74314),
-        z = a(13078),
+        z = a(65518),
         q = a.n(z);
       const $ = (0, c.Pi)((e) => {
           const [t, a] = (0, d.useState)(!0);

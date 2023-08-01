@@ -3,7 +3,7 @@
 (self.webpackChunklegacy_web = self.webpackChunklegacy_web || []).push([
   [511],
   {
-    279: (e) => {
+    369: (e) => {
       e.exports = {
         FocusRingRoot: "focusring_FocusRingRoot_3PH_X",
         FocusRing: "focusring_FocusRing_1IZrQ",
@@ -15,12 +15,12 @@
         FocusRingOnHiddenItem: "focusring_FocusRingOnHiddenItem_2OusV",
       };
     },
-    658: (e, t, n) => {
+    502: (e, t, n) => {
       "use strict";
       n.d(t, { Pf: () => r, y5: () => a });
       var i = n(655),
-        o = n(820),
-        s = n(46);
+        o = n(848),
+        s = n(706);
       class r {
         constructor() {
           SteamClient.BrowserView.RegisterForMessageFromParent(this.OnMessage);
@@ -80,7 +80,7 @@
       }
       (0, i.gn)([o.a], a.prototype, "OnMessage", null);
     },
-    46: (e, t, n) => {
+    706: (e, t, n) => {
       "use strict";
       n.d(t, { i: () => o, l: () => i });
       const i = "GamepadInput";
@@ -93,14 +93,14 @@
           (e[(e.Full = 4)] = "Full");
       })(o || (o = {}));
     },
-    991: (e, t, n) => {
+    381: (e, t, n) => {
       "use strict";
       n.r(t), n.d(t, { InitializeGamepadNavigation: () => ht });
       var i,
         o = n(655),
         s = n(311),
         r = n.n(s),
-        a = n(48);
+        a = n(258);
       !(function (e) {
         (e[(e.GAMEPAD = 0)] = "GAMEPAD"),
           (e[(e.KEYBOARD = 1)] = "KEYBOARD"),
@@ -160,10 +160,10 @@
           l
         );
       }
-      var g = n(820),
-        _ = n(46),
-        v = n(307),
-        p = n(658);
+      var g = n(848),
+        _ = n(706),
+        v = n(92),
+        p = n(502);
       class f {
         constructor(e) {
           (this.m_bIsGamepadInputExternallyControlled = !1),
@@ -571,7 +571,7 @@
             : console.assert(!!e, t, ...n)
           : e || console.warn(t, ...n);
       }
-      var y = n(414);
+      var y = n(833);
       class B extends class {
         GetObject(e) {
           return (0, o.mG)(this, void 0, void 0, function* () {
@@ -660,9 +660,10 @@
         }
         Log(e, ...t) {
           var n, i;
-          if (e == P.Debug && !x.Get().IsDebugLogEnabled(this.m_sName)) return;
-          let o = this.m_sName;
-          const s =
+          const o = x.Get().IsDebugLogEnabled(this.m_sName);
+          if (e == P.Debug && !o) return;
+          let s = this.m_sName;
+          const r =
             null !==
               (i =
                 null === (n = this.m_fnIdGenerator) || void 0 === n
@@ -670,8 +671,8 @@
                   : n.call(this)) && void 0 !== i
               ? i
               : null;
-          null != s && (o += " (" + s + ")");
-          k(e, x.Get().IncludeBacktraceInLog, o, this.m_sName, ...t);
+          null != r && (s += " (" + r + ")");
+          k(e, o, x.Get().IncludeBacktraceInLog, s, this.m_sName, ...t);
         }
       }
       (0, o.gn)([g.a], G.prototype, "Debug", null),
@@ -694,6 +695,7 @@
         LogAsLogManager(...e) {
           k(
             P.Info,
+            !0,
             this.IncludeBacktraceInLog,
             "LogManager",
             "LogManager",
@@ -791,22 +793,22 @@
           });
         }
       }
-      function k(e, t, n, i, ...o) {
-        const s = (function (e) {
+      function k(e, t, n, i, o, ...s) {
+        const r = (function (e) {
             let t = 0;
             for (let n = 0; n < e.length; n++)
               t = e.charCodeAt(n) + ((t << 5) - t);
             return [(t >> 0) & 255, (t >> 8) & 255, (t >> 16) & 255];
-          })(i).map((e, t) =>
+          })(o).map((e, t) =>
             Math.round(
               Math.max(0, Math.min(255, 255 * (0.8 * (e / 255 - 0.5) + 0.15))),
             ),
           ),
-          r = (299 * (a = s)[0] + 587 * a[1] + 114 * a[2]) / 1e3 >= 128;
-        var a;
-        let l = n;
-        t &&
-          (l =
+          a = (299 * (l = r)[0] + 587 * l[1] + 114 * l[2]) / 1e3 >= 128;
+        var l;
+        let c = i;
+        n &&
+          (c =
             (function (e) {
               switch (e) {
                 case P.Debug:
@@ -820,34 +822,39 @@
               }
             })(e) +
             " " +
-            l);
-        const c =
-            o.length >= 1 && "string" == typeof o[0] && o[0].includes("%c"),
-          u = c && o.shift(),
-          h = [
-            `%c${l}%c:${c ? " %c" + u : ""}`,
-            `color: ${r ? "black" : "white"}; background: rgb(${s.join(
-              ",",
-            )}); padding: 0 1ch`,
-            "color: transparent; margin-right: -1ch",
-            ...(c ? [""] : []),
-            ...o,
-          ];
-        if (t)
-          console.groupCollapsed(...h),
+            c);
+        const u =
+            s.length >= 1 && "string" == typeof s[0] && s[0].includes("%c"),
+          h = u && s.shift();
+        let d;
+        if (
+          ((d = t
+            ? [
+                `%c${c}%c:${u ? " %c" + h : ""}`,
+                `color: ${a ? "black" : "white"}; background: rgb(${r.join(
+                  ",",
+                )}); padding: 0 1ch`,
+                "color: transparent; margin-right: -1ch",
+                ...(u ? [""] : []),
+                ...s,
+              ]
+            : s),
+          n)
+        )
+          console.groupCollapsed(...d),
             console.trace("Callstack"),
             console.groupEnd();
         else
           switch (e) {
             case P.Debug:
             case P.Info:
-              console.log(...h);
+              console.log(...d);
               break;
             case P.Warning:
-              console.warn(...h);
+              console.warn(...d);
               break;
             case P.Error:
-              console.error(...h);
+              console.error(...d);
           }
       }
       (x.k_EnabledLogNames_StorageKey = "EnabledWebLogs"),
@@ -969,7 +976,7 @@
           );
         }
       }
-      var Y = n(802);
+      var Y = n(862);
       const X = new G("FocusNavigation").Debug,
         z = new G("GamepadEvents").Debug;
       class Q {
@@ -3513,7 +3520,7 @@
         "OnMessage",
         null,
       );
-      var $e = n(279),
+      var $e = n(369),
         je = n.n($e);
       function Ye(e) {
         let t = 0;

@@ -3,10 +3,10 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [400],
   {
-    95771: (e) => {
+    19806: (e) => {
       e.exports = { BreadContainer: "breadcrumbs_BreadContainer_1QPim" };
     },
-    48636: (e) => {
+    12217: (e) => {
       e.exports = {
         fullscreen_bg: "contenthubpartnertakeover_fullscreen_bg_1kVV4",
         fullscreen_bg__video:
@@ -17,7 +17,7 @@
         gradient_width: "contenthubpartnertakeover_gradient_width_2wPYM",
       };
     },
-    31465: (e) => {
+    10128: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         MainCarousel: "contenthubshared_MainCarousel_rKC9i",
@@ -57,7 +57,7 @@
         MenuOptions: "contenthubshared_MenuOptions_1UNUd",
       };
     },
-    39073: (e) => {
+    62881: (e) => {
       e.exports = {
         Container: "greatondeckgriddisplay_Container_1d905",
         FullRow: "greatondeckgriddisplay_FullRow_2VB7_",
@@ -68,7 +68,7 @@
         CompatIconOverride: "greatondeckgriddisplay_CompatIconOverride_2hRdC",
       };
     },
-    99200: (e) => {
+    25745: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         DummyValue: "maincapsule_DummyValue_3dnfO",
@@ -77,7 +77,7 @@
         PlaceholderCompact: "maincapsule_PlaceholderCompact_12-VZ",
       };
     },
-    27028: (e) => {
+    23972: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         ContentHubTitleCtn: "contenthubmaincarousel_ContentHubTitleCtn_61ECB",
@@ -98,14 +98,14 @@
           "contenthubmaincarousel_ReducedMotionToggleCtn_2Ykob",
       };
     },
-    40526: (e) => {
+    35512: (e) => {
       e.exports = {
         ModeratorAuditActionCtn:
           "eventmoderationaudit_ModeratorAuditActionCtn_3Vwtu",
         ExpandModActions: "eventmoderationaudit_ExpandModActions_2alYM",
       };
     },
-    9053: (e) => {
+    31132: (e) => {
       e.exports = {
         TotalsCtn: "partnereventstats_TotalsCtn_19vOo",
         SmallStatsMode: "partnereventstats_SmallStatsMode_kgm3s",
@@ -123,7 +123,7 @@
         DisabledStats: "partnereventstats_DisabledStats_G7mXJ",
       };
     },
-    25479: (e) => {
+    9683: (e) => {
       e.exports = {
         ApprovalRequiredCtn:
           "requirevalvepublishapproval_ApprovalRequiredCtn_800dA",
@@ -132,7 +132,7 @@
         RequireText: "requirevalvepublishapproval_RequireText_rZkfY",
       };
     },
-    5698: (e) => {
+    14053: (e) => {
       e.exports = {
         description: "reservations_description_VmWUF",
         description2: "reservations_description2_1seHG",
@@ -152,7 +152,7 @@
         Link: "reservations_Link_CzZBM",
       };
     },
-    46215: (e) => {
+    25583: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         CuratorCtn: "salecuratorrecommendations_CuratorCtn_1NvS6",
@@ -176,7 +176,7 @@
         ListLink: "salecuratorrecommendations_ListLink_2vNXt",
       };
     },
-    19110: (e) => {
+    15525: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         SaleItemBrowserContainer:
@@ -201,7 +201,7 @@
         WGTesterLink: "saleitembrowser_WGTesterLink_2UmRv",
       };
     },
-    69356: (e) => {
+    64154: (e) => {
       e.exports = {
         SectionTitle: "dlcforyou_SectionTitle_22Ren",
         ShowMore: "dlcforyou_ShowMore_1cqMF",
@@ -224,14 +224,14 @@
         DLCStatDesc: "dlcforyou_DLCStatDesc_2FVzA",
       };
     },
-    33803: (e) => {
+    86138: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         SaleBackgroundOverlay:
           "salebackgroundoverlay_SaleBackgroundOverlay_MrIcZ",
       };
     },
-    21534: (e) => {
+    82071: (e) => {
       e.exports = {
         OuterCtn: "salebadgeprogressdisplay_OuterCtn_3yY4b",
         ImgSpread: "salebadgeprogressdisplay_ImgSpread_47-JS",
@@ -246,7 +246,7 @@
           "salebadgeprogressdisplay_DiscoveryQueueBelow_QVX8a",
       };
     },
-    38322: (e) => {
+    29871: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         ClaimCtn: "saleclaimitem_ClaimCtn_d5PCH",
@@ -259,13 +259,13 @@
         Timer: "saleclaimitem_Timer_2zqp4",
       };
     },
-    64084: (e) => {
+    19900: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         SalePageLogoCtn: "saledisplaylogo_SalePageLogoCtn_2kLRR",
       };
     },
-    6028: (e) => {
+    20413: (e) => {
       e.exports = {
         GhostCtn: "saleghostsections_GhostCtn_3gdzT",
         PlaceholderCap: "saleghostsections_PlaceholderCap_2BOsP",
@@ -292,7 +292,7 @@
         PlaceholderTags: "saleghostsections_PlaceholderTags_gvNj1",
       };
     },
-    87453: (e) => {
+    93851: (e) => {
       e.exports = {
         Ctn: "saleminigames_Ctn_1SGWR",
         DetailText: "saleminigames_DetailText_aLmWP",
@@ -301,14 +301,14 @@
         ImgFullBagde: "saleminigames_ImgFullBagde_2Sm--",
       };
     },
-    97169: (e) => {
+    59026: (e) => {
       e.exports = {
         description: "salequestdisplay_description_22ryq",
         description2: "salequestdisplay_description2_xidiW",
         questCtn: "salequestdisplay_questCtn_14UQz",
       };
     },
-    81162: (e) => {
+    74774: (e) => {
       e.exports = {
         description: "salequiz_description_5YDkS",
         description2: "salequiz_description2_h6YBi",
@@ -319,13 +319,13 @@
         RevealFooterImage: "salequiz_RevealFooterImage_QR_Su",
       };
     },
-    40172: (e) => {
+    54376: (e) => {
       e.exports = {
         RewardContainer: "salerewardshelfdisplay_RewardContainer_10sVo",
         RewardShelfCtn: "salerewardshelfdisplay_RewardShelfCtn_2u8Xp",
       };
     },
-    51192: (e) => {
+    56701: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         ShowContentsContainer: "salesection_ShowContentsContainer_14g7C",
@@ -334,7 +334,7 @@
           "salesection_FacetedBrowseLoadThrobber_1hNUt",
       };
     },
-    97313: (e) => {
+    82734: (e) => {
       e.exports = {
         DoorOptionsContainer:
           "salesocialsharedisplay_DoorOptionsContainer_cP3hd",
@@ -345,7 +345,7 @@
         ShareIcon: "salesocialsharedisplay_ShareIcon_TFbD2",
       };
     },
-    33265: (e) => {
+    60142: (e) => {
       e.exports = {
         strMediumWidth: "800px",
         strMaxMobileWidth: "600px",
@@ -404,7 +404,7 @@
         SpeakerEventTitle: "salesectioneventschedule_SpeakerEventTitle_Uqfjf",
       };
     },
-    16477: (e) => {
+    24476: (e) => {
       e.exports = {
         MainBlock: "salesectionsubscription_MainBlock_2xkU3",
         SelectAPlan: "salesectionsubscription_SelectAPlan_1_1rg",
@@ -427,7 +427,7 @@
         DiscountPriceBlock: "salesectionsubscription_DiscountPriceBlock_2wQcn",
       };
     },
-    36164: (e) => {
+    42942: (e) => {
       e.exports = {
         SaleSection: "storywidget_SaleSection_2lR1Z",
         BookmarkCtn: "storywidget_BookmarkCtn_1YzIh",
@@ -464,7 +464,7 @@
         BadgeFooter: "storywidget_BadgeFooter_3kBeS",
       };
     },
-    31698: (e) => {
+    20730: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         Heading: "managefriends_Heading_1lIY_",
@@ -489,7 +489,7 @@
         SendInviteButton: "managefriends_SendInviteButton_3Izq1",
       };
     },
-    31397: (e) => {
+    85387: (e) => {
       e.exports = {
         SuggestContainer: "storesuggest_SuggestContainer_2n5ab",
         Results: "storesuggest_Results__dpvO",
@@ -501,7 +501,7 @@
         Label: "storesuggest_Label_21GTl",
       };
     },
-    80122: (e) => {
+    74286: (e) => {
       e.exports = {
         GraphicalAssetsTabs: "tabbar_GraphicalAssetsTabs_36r8g",
         GraphicalAssetsTab: "tabbar_GraphicalAssetsTab_K1_Tp",
@@ -513,7 +513,7 @@
         StatusCaution: "tabbar_StatusCaution_31Lxu",
       };
     },
-    60114: (e) => {
+    25151: (e) => {
       e.exports = {
         EventCategory_SteamAwardsNomination:
           "partnereventspecialcategories_EventCategory_SteamAwardsNomination_3QxOk",
@@ -535,10 +535,10 @@
         EventDesc: "partnereventspecialcategories_EventDesc_2aLMq",
       };
     },
-    60621: (e) => {
+    14474: (e) => {
       e.exports = { SearchResults: "partnersaledebug_SearchResults_26iJ3" };
     },
-    89248: (e) => {
+    17584: (e) => {
       e.exports = {
         ValveOnlyGuidelineSummary:
           "saleguidelinedialog_ValveOnlyGuidelineSummary_G_5BB",
@@ -557,7 +557,7 @@
         SectionTitle: "saleguidelinedialog_SectionTitle_3HeMo",
       };
     },
-    61007: (e) => {
+    67160: (e) => {
       e.exports = {
         AssociatedBuildBody:
           "partnereventassociatedbuild_AssociatedBuildBody_1rnVU",
@@ -570,7 +570,7 @@
         BuildIDLink: "partnereventassociatedbuild_BuildIDLink_2-Syn",
       };
     },
-    46139: (e) => {
+    13728: (e) => {
       e.exports = {
         AddTitleButton: "partnereventbroadcast_AddTitleButton_XKHg8",
         CustomTitleCtn: "partnereventbroadcast_CustomTitleCtn_1qoSQ",
@@ -581,7 +581,7 @@
         AccountRow: "partnereventbroadcast_AccountRow_2uIyv",
       };
     },
-    75446: (e) => {
+    42291: (e) => {
       e.exports = {
         EventTimeSection: "partnereventdates_EventTimeSection_O7lDS",
         EventTimeTitle: "partnereventdates_EventTimeTitle_1-4F8",
@@ -602,7 +602,7 @@
           "partnereventdates_EventEditorVisibilityCtn_3hqZR",
       };
     },
-    36814: (e) => {
+    75755: (e) => {
       e.exports = {
         CenterAlign: "partnereventemails_CenterAlign_cMmai",
         ControlBarCtn: "partnereventemails_ControlBarCtn_1RQ0B",
@@ -667,7 +667,7 @@
         SupportCtn: "partnereventemails_SupportCtn_27guD",
       };
     },
-    34736: (e) => {
+    57927: (e) => {
       e.exports = {
         ThemedCtn: "partnereventoptions_ThemedCtn_3JuTN",
         CategoryOption: "partnereventoptions_CategoryOption_4ke28",
@@ -680,7 +680,7 @@
           "partnereventoptions_event_nomination_banner_text_1gePU",
       };
     },
-    348: (e) => {
+    18200: (e) => {
       e.exports = {
         PreviewBarContainer: "partnereventpreview_PreviewBarContainer_2OUix",
         FallBackWarning: "partnereventpreview_FallBackWarning_2x0Ma",
@@ -688,13 +688,13 @@
           "partnereventpreview_StoreNavigationPlaceholder_tHKKN",
       };
     },
-    92685: (e) => {
+    39478: (e) => {
       e.exports = {
         PublishContainer:
           "partnereventpublishingcontrols_PublishContainer_2tCY6",
       };
     },
-    19866: (e) => {
+    73422: (e) => {
       e.exports = {
         SummaryItems: "partnereventpublishingtab_SummaryItems_12a_L",
         ReachItems: "partnereventpublishingtab_ReachItems_H_jRC",
@@ -714,14 +714,14 @@
           "partnereventpublishingtab_ReachPendingVisibilityText_n1wAj",
       };
     },
-    17932: (e) => {
+    58727: (e) => {
       e.exports = {
         VersionListCtn: "partnereventrevisionhistory_VersionListCtn_32hnY",
         VersionCtn: "partnereventrevisionhistory_VersionCtn_3vUSX",
         VersionInfoCtn: "partnereventrevisionhistory_VersionInfoCtn_1sI79",
       };
     },
-    62877: (e) => {
+    22188: (e) => {
       e.exports = {
         SortTierControls: "partnereventsalesorttiers_SortTierControls_1_f_6",
         SortTierExplanation:
@@ -729,13 +729,13 @@
         AutoTierButton: "partnereventsalesorttiers_AutoTierButton_3uDH_",
       };
     },
-    90116: (e) => {
+    91090: (e) => {
       e.exports = {
         ErrorMessaage: "progressutils_ErrorMessaage_13sZc",
         UpdatingMessage: "progressutils_UpdatingMessage_3baPw",
       };
     },
-    10998: (e) => {
+    47e3: (e) => {
       e.exports = {
         TableOfContentsContainer:
           "tableofcontents_TableOfContentsContainer_2VyHw",
@@ -2400,10 +2400,10 @@
         o = a(99307),
         r = a(14826),
         l = a(4306),
-        s = a(34976),
+        s = a(93513),
         c = a.n(s),
         d = a(46132),
-        m = a(69338),
+        m = a(3301),
         u = a(32765),
         _ = a(23217),
         p = a(52868),
@@ -2633,7 +2633,7 @@
         p = a(17547),
         g = a(52932),
         v = a(20790),
-        E = a(17318),
+        E = a(52629),
         h = a(57742),
         S = a(19304),
         b = a(60161),
@@ -2644,7 +2644,7 @@
         G = a(60016),
         w = a(74710),
         T = a(54124),
-        I = a(83809);
+        I = a(99119);
       function A(e) {
         const { eventModel: t } = e,
           a = (0, r.SZ)(() => t.jsondata.sale_sections);
@@ -3421,7 +3421,7 @@
         v = a(14826),
         E = a(72120),
         h = a(73406),
-        S = a(40526);
+        S = a(35512);
       function b(e) {
         const { accountID: t, locToken: a } = e,
           n = i.useMemo(() => o.K.InitFromAccountID(t), [t]),
@@ -3611,7 +3611,7 @@
         p = a(56368),
         g = a(6172),
         v = a(25871),
-        E = a(95771),
+        E = a(19806),
         h = a(19304),
         S = a(565),
         b = a(44026),
@@ -3656,26 +3656,26 @@
       }
       var f = a(17547),
         D = a(43690),
-        G = a(93317),
+        G = a(19288),
         w = a(85521),
         T = a(92307),
         I = a(20790),
         A = a(80361),
         k = a(4795),
-        B = a(83809),
+        B = a(99119),
         x = a.n(B),
         N = a(65352),
         L = a(63266),
-        R = a(17318),
+        R = a(52629),
         M = a.n(R),
         O = a(10340),
         P = a(44421),
         F = a(55330),
         X = a(31245),
         j = a(17325),
-        H = a(1721),
+        H = a(35266),
         U = a.n(H),
-        V = a(69338),
+        V = a(3301),
         z = a(75962),
         Z = a(43511),
         W = a(23801),
@@ -4308,7 +4308,7 @@
         o = a(89526),
         r = a(19304),
         l = a(14826),
-        s = a(9053),
+        s = a(31132),
         c = a(32765),
         d = a(88443);
       let m = class extends o.Component {
@@ -4690,10 +4690,10 @@
         s = a(98889),
         c = a(17547),
         d = a(71161),
-        m = a(69338),
+        m = a(3301),
         u = a(19304),
         _ = a(14826),
-        p = a(48294),
+        p = a(38520),
         g = a.n(p);
       const v = i.lazy(() =>
           Promise.all([
@@ -4817,17 +4817,17 @@
         m = a(62983),
         u = a(98009),
         _ = a(25871),
-        p = a(29054),
+        p = a(99472),
         g = a.n(p),
         v = a(23280),
-        E = a(48294),
+        E = a(38520),
         h = a.n(E),
         S = a(99028),
         b = a(70750),
         y = a(46294),
         C = a(701),
         f = a(71161),
-        D = a(69338),
+        D = a(3301),
         G = a(19304),
         w = a(32765),
         T = a(33940),
@@ -4835,7 +4835,7 @@
         A = a.n(I),
         k = a(43707),
         B = a(85886),
-        x = a(27704),
+        x = a(20144),
         N = a(14826);
       function L(e) {
         return "dev" === w.De.WEB_UNIVERSE
@@ -5799,9 +5799,9 @@
           }
         );
       }
-      var z = a(31465),
+      var z = a(10128),
         Z = a(45429),
-        W = a(6028),
+        W = a(20413),
         q = a.n(W);
       function J(e) {
         const {
@@ -6209,7 +6209,7 @@
       }
       var K = a(44026),
         $ = a(66615),
-        ee = a(48636);
+        ee = a(12217);
       function te(e) {
         const {
             hubtype: t,
@@ -6765,7 +6765,7 @@
       function ue(e, t) {
         return (0, oe.Et)(e, U([t])[0]);
       }
-      var _e = a(23715),
+      var _e = a(1631),
         pe = a.n(_e),
         ge = a(75962);
       function ve(e) {
@@ -7272,7 +7272,7 @@
       var Ge = a(81245);
       var we = a(51441),
         Te = a(42317),
-        Ie = a(39073);
+        Ie = a(62881);
       const Ae = 4,
         ke = 6,
         Be = ke * Ae + 3;
@@ -7389,7 +7389,7 @@
         Oe = a(82079),
         Pe = a(47165),
         Fe = a(32009),
-        Xe = a(99200),
+        Xe = a(25745),
         je = a(35388),
         He = a(5615);
       function Ue(e) {
@@ -7633,7 +7633,7 @@
         },
         Ze = 12;
       var We = a(17547),
-        qe = a(27028);
+        qe = a(23972);
       const Je = (e) => {
         const {
             hubtype: t,
@@ -7709,20 +7709,20 @@
         );
         var p;
       };
-      var Qe = a(93317),
+      var Qe = a(19288),
         Ye = a(5029),
         Ke = a(3628),
         $e = a(2012),
         et = a(84646),
         tt = a(79365),
         at = a(10412),
-        nt = a(55290),
+        nt = a(7670),
         it = a.n(nt),
         ot = a(92307),
         rt = a(79946),
         lt = a(81586),
         st = a(7894),
-        ct = a(5698);
+        ct = a(14053);
       function dt(e) {
         const { section: t, language: a, event: i, bIsPreview: o } = e,
           [r, s] = n.useState(null),
@@ -7910,7 +7910,7 @@
       }
       var _t = a(57480),
         pt = a(34714),
-        gt = a(83809),
+        gt = a(99119),
         vt = a.n(gt),
         Et = a(32905),
         ht = a(99307),
@@ -8285,7 +8285,7 @@
       var Lt = a(82588),
         Rt = a(32870),
         Mt = a(207),
-        Ot = a(21534),
+        Ot = a(82071),
         Pt = a(4170);
       function Ft(e) {
         var t;
@@ -8708,7 +8708,7 @@
           : null;
       }
       var Qt = a(25125),
-        Yt = a(64084),
+        Yt = a(19900),
         Kt = a.n(Yt);
       function $t(e) {
         const { eventModel: t, language: a } = e,
@@ -8739,7 +8739,7 @@
               )
           : null;
       }
-      var ea = a(97169);
+      var ea = a(59026);
       function ta(e) {
         return (0, d.jK)() ? n.createElement(aa, Object.assign({}, e)) : null;
       }
@@ -8912,13 +8912,13 @@
         oa = a(13345),
         ra = a(60016),
         la = a(77557),
-        sa = a(34976),
-        ca = a(17318),
+        sa = a(93513),
+        ca = a(52629),
         da = a.n(ca),
         ma = a(58218),
         ua = a(11837),
         _a = a(94843),
-        pa = a(81162);
+        pa = a(74774);
       function ga(e) {
         var t, a, i, o, r, s, c, m, u, _, p;
         const { bIsPreview: h, event: S, section: b, language: C } = e,
@@ -9586,7 +9586,7 @@
       }
       var Ca = a(54124),
         fa = a(18845),
-        Da = a(40172);
+        Da = a(54376);
       const Ga = 5;
       function wa(e) {
         const { bIsPreview: t, event: a, section: i, language: o } = e,
@@ -9980,11 +9980,11 @@
         (0, T.gn)([yt.LO], Ba.prototype, "m_mapSectionToNewEvents", void 0),
         (0, T.gn)([Aa.a], Ba.prototype, "FireRequestNow", null),
         (0, T.gn)([Aa.a], Ba.prototype, "TimerAction", null);
-      var xa = a(51192),
+      var xa = a(56701),
         Na = a.n(xa),
         La = a(43946),
         Ra = a(39818),
-        Ma = a(1721),
+        Ma = a(35266),
         Oa = a.n(Ma);
       const Pa = (0, bt.Pi)((e) => {
         const {
@@ -10516,7 +10516,7 @@
         (0, T.gn)([yt.aD], en.prototype, "AddAllRecentEvents", null);
       var tn = a(35340),
         an = a(81362),
-        nn = a(87453);
+        nn = a(93851);
       function on(e, t, a) {
         if (t.some((t) => t.id == e.appid && "game" == t.type)) return;
         const i = {
@@ -11939,7 +11939,7 @@
       }
       var hn = a(84343),
         Sn = a(94496),
-        bn = a(19110),
+        bn = a(15525),
         yn = a.n(bn),
         Cn = a(61141);
       let fn = class extends n.Component {
@@ -13003,7 +13003,7 @@
         zn = a(74015),
         Zn = a(5418),
         Wn = a(20790),
-        qn = a(33265),
+        qn = a(60142),
         Jn = a.n(qn);
       const Qn = (e) => {
           const {
@@ -13198,7 +13198,7 @@
         ni = a(6319),
         ii = a(80361),
         oi = a(24591),
-        ri = a(24334),
+        ri = a(81170),
         li = a.n(ri),
         si = a(74621);
       const ci = (0, bt.Pi)((e) => {
@@ -14373,7 +14373,7 @@
       const Ni = new xi();
       window.g_PackageInfoStore = Ni;
       var Li = a(87178),
-        Ri = a(16477),
+        Ri = a(24476),
         Mi = a.n(Ri);
       function Oi(e, t) {
         let a = [];
@@ -14985,7 +14985,7 @@
           strGenreName: "#Summer21_Story_Anime_Genre",
         },
       ];
-      var Wi = a(36164),
+      var Wi = a(42942),
         qi = a.n(Wi);
       const Ji = (0, bt.Pi)((e) => {
           var t, a;
@@ -15929,7 +15929,7 @@
         }
       }
       var oo = a(29551),
-        ro = a(69356),
+        ro = a(64154),
         lo = a(9454);
       function so(e) {
         var t, a, i, o, r, l, s;
@@ -16565,7 +16565,7 @@
               ),
         );
       }
-      var _o = a(33803),
+      var _o = a(86138),
         po = a.n(_o);
       function go(e) {
         const { event: t, language: a, url: i } = e;
@@ -16617,7 +16617,7 @@
       }
       var yo,
         Co = a(15715),
-        fo = a(38322);
+        fo = a(29871);
       function Do(e) {
         var t, a, i, o;
         const { bIsPreview: r, event: s, section: c, language: d } = e,
@@ -16824,43 +16824,44 @@
       })(yo || (yo = {}));
       var wo = a(1434);
       function To(e) {
+        var t;
         const {
-            promotionName: t,
-            eventModel: a,
-            bIsPreview: i,
-            language: o,
+            promotionName: a,
+            eventModel: i,
+            bIsPreview: o,
+            language: r,
           } = e,
-          [r, c] = n.useState(
-            null == a ? void 0 : a.GetDayIndexFromEventStart(),
+          [c, d] = n.useState(
+            null == i ? void 0 : i.GetDayIndexFromEventStart(),
           ),
-          [d, m] = n.useState(null),
-          [u, _] = n.useState((0, l._)()),
-          p = n.useCallback(() => _((0, l._)()), []);
+          [m, u] = n.useState(null),
+          [_, p] = n.useState((0, l._)()),
+          g = n.useCallback(() => p((0, l._)()), []);
         n.useEffect(
           () => (
-            window.addEventListener("resize", p),
-            () => window.removeEventListener("resize", p)
+            window.addEventListener("resize", g),
+            () => window.removeEventListener("resize", g)
           ),
-          [p],
+          [g],
         );
-        const [g, v] = n.useState(
-          (null == a ? void 0 : a.GetImageURL("sale_overlay", o)) ||
-            (null == a
+        const [v, E] = n.useState(
+          (null == i ? void 0 : i.GetImageURL("sale_overlay", r)) ||
+            (null == i
               ? void 0
-              : a.GetImageURL("sale_overlay", N.LJ.GetELanguageFallback(o))),
+              : i.GetImageURL("sale_overlay", N.LJ.GetELanguageFallback(r))),
         );
         if (
           (n.useEffect(() => {
             if (
-              a.jsondata.sale_custom_css &&
-              !d &&
-              i &&
-              Boolean(a.jsondata.sale_vanity_id_valve_approved_for_sale_subpath)
+              i.jsondata.sale_custom_css &&
+              !m &&
+              o &&
+              Boolean(i.jsondata.sale_vanity_id_valve_approved_for_sale_subpath)
             ) {
               const e = document.getElementsByTagName("HEAD")[0],
                 t = document.createElement("style");
-              (t.innerText = (0, Mt.et)(a.jsondata.sale_custom_css)),
-                m(t),
+              (t.innerText = (0, Mt.et)(i.jsondata.sale_custom_css)),
+                u(t),
                 e.appendChild(t);
             }
             const e = document.getElementsByClassName(
@@ -16873,40 +16874,46 @@
               ),
               e.length >= 1 && (e[0].style.backgroundImage = null),
               () => {
-                d && (d.remove(), m(null));
+                m && (m.remove(), u(null));
               }
             );
-          }, [a, d, i]),
-          a && void 0 !== r)
+          }, [i, m, o]),
+          i && void 0 !== c)
         ) {
           const e = {
-              promotionName: t,
+              promotionName: a,
               clanid: Number(w.JA.CLANACCOUNTID),
-              nAppIDVOD: Number(a.jsondata.broadcast_preroll_vod_appid),
-              event: a,
-              bIsPreview: i,
-              language: o,
-              accountIDs: i ? a.jsondata.broadcast_whitelist : void 0,
+              nAppIDVOD: Number(i.jsondata.broadcast_preroll_vod_appid),
+              event: i,
+              bIsPreview: o,
+              language: r,
+              accountIDs: o ? i.jsondata.broadcast_whitelist : void 0,
               chat_announcement_giveaway:
-                a.jsondata.broadcast_chat_announcement_giveaway,
+                i.jsondata.broadcast_chat_announcement_giveaway,
             },
-            l = a
+            l =
+              (null === (t = i.jsondata.localized_sale_logo) || void 0 === t
+                ? void 0
+                : t.filter(Boolean).length) > 0,
+            m = i
               .GetSaleSections()
               .some((e) => "contenthubtitle" === e.section_type),
-            d =
-              a.BUsesContentHubForItemSource() &&
-              l &&
-              !Boolean(a.jsondata.sale_header_offset)
-                ? 100
-                : a.jsondata.sale_header_offset,
-            m = s.g6
+            u = i.BUsesContentHubForItemSource() && m,
+            p = l
+              ? 0
+              : u && !Boolean(i.jsondata.sale_header_offset)
+              ? 100
+              : i.jsondata.sale_header_offset,
+            g = s.g6
               .Get()
               .BIsPartnerTakeoverActive(
-                a.GetContentHubType(),
-                a.GetContentHubCategory(),
-                a.GetContentHubTag(),
+                i.GetContentHubType(),
+                i.GetContentHubCategory(),
+                i.GetContentHubTag(),
               ),
-            _ = u && !m && !Boolean(a.jsondata.content_hub_restricted_width);
+            S = Boolean(
+              _ && !g && !Boolean(i.jsondata.content_hub_restricted_width),
+            );
           return n.createElement(
             We.SV,
             null,
@@ -16915,40 +16922,40 @@
               null,
               n.createElement(
                 $e.M2,
-                { event: a, language: o, bIsPreview: i },
-                _ && n.createElement(go, { event: a, language: o, url: g }),
+                { event: i, language: r, bIsPreview: o },
+                S && n.createElement(go, { event: i, language: r, url: v }),
                 n.createElement(
                   "div",
                   {
                     className: (0, G.Z)({
                       [h().SaleOuterContainer]: !0,
-                      [h()[`CustomStyle_${a.jsondata.sale_vanity_id}`]]: !0,
+                      [h()[`CustomStyle_${i.jsondata.sale_vanity_id}`]]: !0,
                       SaleOuterContainer: !0,
                     }),
-                    style: { marginTop: `${d || 0}px` },
+                    style: { marginTop: `${p || 0}px` },
                   },
-                  n.createElement($t, { eventModel: a, language: o }),
+                  n.createElement($t, { eventModel: i, language: r }),
                   n.createElement(xo, {
-                    rgPresenters: a.jsondata.sale_presenters,
+                    rgPresenters: i.jsondata.sale_presenters,
                   }),
                   n.createElement($e.vC, {
-                    event: a,
+                    event: i,
                     broadcastEmbedContext: e,
                   }),
                   n.createElement(Ao, {
-                    bIsPreview: i,
-                    event: a,
-                    language: o,
-                    promotionName: t,
-                    nSaleDayIndex: r,
+                    bIsPreview: o,
+                    event: i,
+                    language: r,
+                    promotionName: a,
+                    nSaleDayIndex: c,
                     broadcastEmbedContext: e,
-                    fnUpdateBackgroundOverlay: v,
+                    fnUpdateBackgroundOverlay: E,
                   }),
                   n.createElement($e.wL, {
-                    event: a,
-                    bIsPreview: i,
+                    event: i,
+                    bIsPreview: o,
                     fnOnChangeDayIndex: (e) => {
-                      e != r && ((a.m_overrideCurrentDay = e), c(e));
+                      e != c && ((i.m_overrideCurrentDay = e), d(e));
                     },
                   }),
                 ),
@@ -17464,13 +17471,13 @@
         r = a(81245),
         l = a(17547),
         s = a(96798),
-        c = a(17318),
+        c = a(52629),
         d = a.n(c),
         m = a(19304),
         u = a(14826),
         _ = a(32765),
-        p = a(93317),
-        g = a(48294),
+        p = a(19288),
+        g = a(38520),
         v = a.n(g),
         E = a(57480),
         h = a(25125),
@@ -17694,9 +17701,9 @@
         l = a(79365),
         s = a(85651),
         c = a(57605),
-        d = a(34976),
+        d = a(93513),
         m = a(21904),
-        u = a(69338),
+        u = a(3301),
         _ = a(58218),
         p = a(19304),
         g = a(60161),
@@ -17706,7 +17713,7 @@
         S = a(57742),
         b = a(71161),
         y = a(32905),
-        C = a(5698);
+        C = a(14053);
       function f(e, t, a) {
         return (
           !a &&
@@ -18205,7 +18212,7 @@
         i = a(79365),
         o = a(14826),
         r = a(17547),
-        l = a(69338),
+        l = a(3301),
         s = a(79946),
         c = a(7894);
       function d(e) {
@@ -18313,16 +18320,16 @@
         i = a.n(n),
         o = a(89526),
         r = a(57605),
-        l = a(17318),
+        l = a(52629),
         s = a.n(l),
-        c = a(69338),
+        c = a(3301),
         d = a(60161),
         m = a(14826),
         u = a(32765),
         _ = a(99307),
         p = a(57742),
         g = a(5029),
-        v = a(5698);
+        v = a(14053);
       function E(e) {
         const [t] = (0, g.Ar)("beta", 0);
         return Boolean(t && u.L7.is_support) || e;
@@ -18449,8 +18456,8 @@
         b = a(71161),
         y = a(84343),
         C = a(79586),
-        f = a(48294),
-        D = a(46215),
+        f = a(38520),
+        D = a(25583),
         G = a(5080);
       function w(e) {
         const { section: t, event: a, bPreviewMode: n } = e;
@@ -18707,16 +18714,16 @@
         i = a(5080),
         o = a(82588),
         r = a(46294),
-        l = a(29054),
+        l = a(99472),
         s = a.n(l),
         c = a(23280),
         d = a(71461),
         m = a(19304),
         u = a(14826),
-        _ = a(48294),
+        _ = a(38520),
         p = a(32870),
         g = a(32765),
-        v = a(78913),
+        v = a(59666),
         E = a.n(v),
         h = a(23801),
         S = a(207);
@@ -18856,11 +18863,11 @@
         o = a(5080),
         r = a(74710),
         l = a(10412),
-        s = a(43997),
+        s = a(38695),
         c = a.n(s),
-        d = a(29054),
+        d = a(99472),
         m = a.n(d),
-        u = a(17318),
+        u = a(52629),
         _ = a.n(u),
         p = a(46294),
         g = a(71161),
@@ -18869,19 +18876,19 @@
         h = a(19304),
         S = a(14826),
         b = a(32765),
-        y = a(82248),
-        C = a(75313),
-        f = a(50500),
+        y = a(6726),
+        C = a(16947),
+        f = a(67009),
         D = a.n(f),
         G = a(92307),
-        w = a(48294),
+        w = a(38520),
         T = a(23280),
-        I = a(97313),
+        I = a(82734),
         A = a.n(I),
         k = a(701),
         B = a(51438),
         x = a(57742),
-        N = a(51326),
+        N = a(91711),
         L = a(60161),
         R = a(20790),
         M = a(52316);
@@ -19111,7 +19118,7 @@
         l = a.n(r),
         s = a(57605),
         c = a(14826),
-        d = a(31698),
+        d = a(20730),
         m = a.n(d),
         u = a(32765),
         _ = a(47165),
@@ -19557,7 +19564,7 @@
         o = a(19304),
         r = a(14826),
         l = a(5029),
-        s = a(80122),
+        s = a(74286),
         c = a.n(s),
         d = a(84343),
         m = a(75962);
@@ -19937,11 +19944,11 @@
         o = a(23217),
         r = a(32765),
         l = a(13394),
-        s = a(69338),
+        s = a(3301),
         c = a(47165),
         d = a(78443),
         m = a(1063),
-        u = a(1721),
+        u = a(35266),
         _ = a.n(u),
         p = a(56368),
         g = a(82079),
@@ -20020,8 +20027,8 @@
         o = a(13394),
         r = a(51059),
         l = a(2394),
-        s = a(10374),
-        c = a(32020),
+        s = a(17506),
+        c = a(16133),
         d = a.n(c),
         m = a(88464),
         u = a(89526),
@@ -20030,9 +20037,9 @@
         g = a(82079),
         v = a(56368),
         E = a(72449),
-        h = a(17318),
+        h = a(52629),
         S = a.n(h),
-        b = a(69338),
+        b = a(3301),
         y = a(9943),
         C = a(19304),
         f = a(14826);
@@ -20275,9 +20282,9 @@
         u = a(57605),
         _ = a(21904),
         p = a(99307),
-        g = a(1721),
+        g = a(35266),
         v = a.n(g),
-        E = a(69338),
+        E = a(3301),
         h = a(14826),
         S = a(23217),
         b = a(73406),
@@ -20638,8 +20645,8 @@
         i = a(98541),
         o = a(91666),
         r = a(13394),
-        l = a(10374),
-        s = a(32020),
+        l = a(17506),
+        s = a(16133),
         c = a.n(s),
         d = a(50265),
         m = a(88464),
@@ -20649,14 +20656,14 @@
         g = a(82079),
         v = a(85651),
         E = a(41194),
-        h = a(34976),
-        S = a(17318),
+        h = a(93513),
+        S = a(52629),
         b = a.n(S),
-        y = a(69338),
+        y = a(3301),
         C = a(19304),
         f = a(14826),
         D = a(32765),
-        G = a(60114);
+        G = a(25151);
       const w = (e) =>
           p.createElement(
             p.Fragment,
@@ -21148,7 +21155,7 @@
         s = a(53215),
         c = a(56368),
         d = a(57605),
-        m = a(17318),
+        m = a(52629),
         u = a(41200),
         _ = a(99307),
         p = a(57742),
@@ -21199,7 +21206,7 @@
         var i, o;
         let r = new S.C();
         if (t)
-          for (let t = 0; t < 30; ++t) {
+          for (let t = 0; t < 31; ++t) {
             let a = e.GetEventModel();
             (e.BHasLanguageTitle(t) || 0 == t) &&
               r.SetLocalization("title", t, e.GetName(t)),
@@ -21214,13 +21221,13 @@
           const t = e.GetEmailSettings();
           if (y.JA.IS_VALVE_GROUP) {
             let t = new s.FB(e.GetEmailSettings());
-            for (let e = 0; e < 30; ++e)
+            for (let e = 0; e < 31; ++e)
               t.BHasLocalizedSubject(e) &&
                 r.SetLocalization(N, e, t.GetLocalizedSubject(e));
           }
           t.sections.forEach((e, t) => {
             let a = new s.vM(e);
-            for (let e = 0; e < 30; ++e)
+            for (let e = 0; e < 31; ++e)
               a.BHasHeadlineInLanguage(e) &&
                 r.SetLocalization(T + t, e, a.GetHeadline(e)),
                 a.BHasBodyInLanguage(e) &&
@@ -21235,7 +21242,7 @@
             ? void 0
             : i.length) > 0
         )
-          for (let e = 0; e < 30; ++e)
+          for (let e = 0; e < 31; ++e)
             if (Boolean(h.LZ.Get(l.localized_broadcast_title, e))) {
               const t = l.localized_broadcast_title[e];
               r.SetLocalization(X, e, t);
@@ -21247,7 +21254,7 @@
               ? void 0
               : o.length
           )
-            for (let e = 0; e < 30; ++e)
+            for (let e = 0; e < 31; ++e)
               l.sale_presenters.forEach((t) => {
                 if (Boolean(h.LZ.Get(t.localized_presenter_name, e))) {
                   const a = t.localized_presenter_name[e];
@@ -21259,7 +21266,7 @@
             .forEach((t) => {
               var a, n, i, o, l, s, c, d, m, u, _;
               const p = e.GetSaleSectionIndexByID(t.unique_id);
-              for (let g = 0; g < 30; ++g) {
+              for (let g = 0; g < 31; ++g) {
                 if (
                   (e.BHasSaleSectionLabelLocalization(g, p) &&
                     r.SetLocalization(k + t.unique_id, g, t.localized_label[g]),
@@ -22297,16 +22304,16 @@
         s = a(89526),
         c = a(57605),
         d = a(17547),
-        m = a(17318),
+        m = a(52629),
         u = a.n(m),
         _ = a(57742),
-        p = a(69338),
+        p = a(3301),
         g = a(23217),
         v = a(19304),
         E = a(60161),
         h = a(14826),
         S = a(32765),
-        b = a(61007),
+        b = a(67160),
         y = a.n(b);
       function C(e) {
         const { eventModel: t, bAllowUpdate: a } = e,
@@ -22526,7 +22533,7 @@
         );
       };
     },
-    10374: (e, t, a) => {
+    17506: (e, t, a) => {
       "use strict";
       a.d(t, { J: () => A, k: () => B });
       var n = a(33940),
@@ -22539,7 +22546,7 @@
         d = a(81245),
         m = a(85651),
         u = a(41194),
-        _ = a(17318),
+        _ = a(52629),
         p = a.n(_),
         g = a(21904),
         v = a(23801),
@@ -22548,10 +22555,10 @@
         S = a(73406),
         b = a(4306),
         y = a(32765),
-        C = a(23722);
+        C = a(90980);
       const f =
         "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAFo9M/3AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6Q0M1MEE4RDkxREYwMTFFOUJGNjhDQjk4QzYxOUI2RUEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6Q0M1MEE4REExREYwMTFFOUJGNjhDQjk4QzYxOUI2RUEiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpDQzUwQThENzFERjAxMUU5QkY2OENCOThDNjE5QjZFQSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpDQzUwQThEODFERjAxMUU5QkY2OENCOThDNjE5QjZFQSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PkFcBtEAAADkSURBVHjaYvz//z8DCDCBiHfv3v0HCCBGmAgIiIAIgAACizAyMgpABf8wICsBAYAAYsQQAGIeIGaB8j+Aybdv3/6HGYoBAAIIwwx0ADYL6AwRoDGvkSWEhYVFgdQbdGeJoNtF0AqAACKogImBAGCEOpQHi9wXoOl/wAqAPviNLgv0BStIAciKPyAOuiQ45NHDBBqksHBmIOQBsAIWQqoAAoxgOBACTAwUAlhkcwA9+J1YTcBQ4gRSP8DpFZpoYYYJoKcaLCnoAyyI0Q1AdhWKQegaUaIBTyCCDOJAjjds0TTwsQAAEO5yLEGNvDIAAAAASUVORK5CYII=";
-      var D = a(32020),
+      var D = a(16133),
         G = a.n(D);
       function w(e, t, a) {
         if (e.GetCategoryAsType() == t) {
@@ -23093,7 +23100,7 @@
         l = a(89526),
         s = a(85651),
         c = a(57605),
-        d = a(17318),
+        d = a(52629),
         m = a.n(d),
         u = a(82971),
         _ = a(21904),
@@ -23102,7 +23109,7 @@
         v = a(14826),
         E = a(73406),
         h = a(32765),
-        S = a(75446),
+        S = a(42291),
         b = a.n(S),
         y = a(41194);
       function C(e) {
@@ -23728,7 +23735,7 @@
         );
       }
     },
-    74215: (e, t, a) => {
+    15607: (e, t, a) => {
       "use strict";
       a.d(t, { IE: () => Ei, qi: () => gi, Kz: () => hi });
       var n = a(33940),
@@ -23743,7 +23750,7 @@
         u = a(57605),
         _ = a(57681),
         p = a(21904),
-        g = a(69338),
+        g = a(3301),
         v = a(14826),
         E = a(23217),
         h = a(32765),
@@ -24216,18 +24223,18 @@
         M = a(17547),
         O = a(92307),
         P = a(35427),
-        F = a(17318),
+        F = a(52629),
         X = a.n(F),
         j = a(43068),
         H = a(19304),
         U = a(73406),
-        V = a(43929),
+        V = a(26989),
         z = a(51059),
         Z = a(13345),
         W = a(99307),
         q = a(57742),
         J = a(75962),
-        Q = a(94759),
+        Q = a(82797),
         Y = a.n(Q);
       const K = (e) => {
           let t = null;
@@ -24518,7 +24525,7 @@
         ne = a(91920),
         ie = a(844),
         oe = a(46132),
-        re = a(49985),
+        re = a(20139),
         le = a(54056);
       function se(e) {
         const { editModel: t } = e,
@@ -25066,11 +25073,18 @@
         he = a(20876);
       function Se(e) {
         const { editModel: t } = e,
-          [a, n, i] = (0, T.SZ)(() => [
-            t.GetEventModel().jsondata.sale_header_offset,
-            t.GetEventModel().jsondata.sale_background_color,
-            t.GetEventModel().jsondata.sale_background_repeat,
-          ]);
+          [a, n, i, o] = (0, T.SZ)(() => {
+            var e;
+            return [
+              t.GetEventModel().jsondata.sale_header_offset,
+              t.GetEventModel().jsondata.sale_background_color,
+              t.GetEventModel().jsondata.sale_background_repeat,
+              (null === (e = t.GetEventModel().jsondata.localized_sale_logo) ||
+              void 0 === e
+                ? void 0
+                : e.filter(Boolean).length) || 0,
+            ];
+          });
         return d.createElement(
           d.Fragment,
           null,
@@ -25082,39 +25096,58 @@
               { className: "DialogLabel" },
               (0, v.Xx)("#Sale_HeaderOffset"),
             ),
-            d.createElement("div", null, (0, v.Xx)("#Sale_HeaderOffset_Desc")),
-            d.createElement(
-              "div",
-              { className: (0, H.Z)(X().FlexRowContainer, X().PixelOffsetRow) },
-              d.createElement(u.II, {
-                value: a,
-                onChange: (e) => {
-                  var a;
-                  (t.GetEventModel().jsondata.sale_header_offset =
-                    Number(
-                      null === (a = null == e ? void 0 : e.target) ||
-                        void 0 === a
-                        ? void 0
-                        : a.value,
-                    ) || 0),
-                    t.SetDirty(s.jB.jsondata_sales);
-                },
-              }),
-              d.createElement(
-                "div",
-                { className: X().PixelOffsetNote },
-                d.createElement(
-                  "div",
-                  { className: X().PixelOffsetCallout },
-                  (0, v.Xx)("#Sale_HeaderOffset_Max", "386"),
-                ),
-                d.createElement(
+            Boolean(o > 0)
+              ? d.createElement(
                   "div",
                   null,
-                  (0, v.Xx)("#Sale_HeaderOffset_MaxDeck"),
+                  (0, v.Xx)("#Sale_HeaderOffset_disabled"),
+                )
+              : d.createElement(
+                  d.Fragment,
+                  null,
+                  d.createElement(
+                    "div",
+                    null,
+                    (0, v.Xx)("#Sale_HeaderOffset_Desc"),
+                  ),
+                  d.createElement(
+                    "div",
+                    {
+                      className: (0, H.Z)(
+                        X().FlexRowContainer,
+                        X().PixelOffsetRow,
+                      ),
+                    },
+                    d.createElement(u.II, {
+                      value: a,
+                      onChange: (e) => {
+                        var a;
+                        (t.GetEventModel().jsondata.sale_header_offset =
+                          Number(
+                            null === (a = null == e ? void 0 : e.target) ||
+                              void 0 === a
+                              ? void 0
+                              : a.value,
+                          ) || 0),
+                          t.SetDirty(s.jB.jsondata_sales);
+                      },
+                    }),
+                    d.createElement(
+                      "div",
+                      { className: X().PixelOffsetNote },
+                      d.createElement(
+                        "div",
+                        { className: X().PixelOffsetCallout },
+                        (0, v.Xx)("#Sale_HeaderOffset_Max", "386"),
+                      ),
+                      d.createElement(
+                        "div",
+                        null,
+                        (0, v.Xx)("#Sale_HeaderOffset_MaxDeck"),
+                      ),
+                    ),
+                  ),
                 ),
-              ),
-            ),
           ),
           d.createElement(
             u.zx,
@@ -25300,7 +25333,7 @@
       }
       var Ce = a(50265),
         fe = a(86276),
-        De = a(37586),
+        De = a(95833),
         Ge = a(52550);
       function we(e) {
         const { strToggleName: t, strTitle: a, children: n, strToolTip: i } = e,
@@ -25584,7 +25617,7 @@
         Be = a(91970),
         xe = a(60161),
         Ne = a(4306),
-        Le = a(25479);
+        Le = a(9683);
       function Re(e) {
         const { clanSteamID: t, gidClanEvent: a } = e,
           { bLoading: n } = (0, b.bA)(t.GetAccountID(), a);
@@ -25791,7 +25824,7 @@
       }
       var Fe = a(701),
         Xe = a(78443),
-        je = a(89248);
+        je = a(17584);
       const He = !1;
       function Ue(e) {
         const t = l.wk.GetEditModel(),
@@ -26155,7 +26188,7 @@
                   ...o,
                   {
                     unique_id: e,
-                    localized_presenter_name: new Array(30),
+                    localized_presenter_name: new Array(31),
                     url: "",
                   },
                 ]);
@@ -26207,7 +26240,7 @@
         );
       }
       var Ye = a(35809),
-        Ke = a(17932),
+        Ke = a(58727),
         $e = a.n(Ke);
       const et = (0, c.Pi)((e) => {
         const { editModel: t } = e;
@@ -26518,7 +26551,7 @@
           { flag: 16, token: it.ManageLicensedSites },
         ]),
         (ot.MapPubRights = ot.ConstructPubRightsMap());
-      var rt = a(34976),
+      var rt = a(93513),
         lt = a(84343);
       function st(e) {
         const t = l.wk.GetEditModel(),
@@ -27278,7 +27311,7 @@
         );
       }
       var bt = a(32291),
-        yt = a(62877),
+        yt = a(22188),
         Ct = a(45429);
       const ft = (0, c.Pi)((e) => {
           var t, a;
@@ -27448,9 +27481,9 @@
       var wt = a(33674),
         Tt = a(2012),
         It = a(97567),
-        At = a(32020),
+        At = a(16133),
         kt = a.n(At),
-        Bt = a(10998);
+        Bt = a(47e3);
       const xt = (e) => {
         const t = new Array();
         return (
@@ -27518,7 +27551,7 @@
         Rt = a(85886),
         Mt = a(69159),
         Ot = a(15254),
-        Pt = a(60621),
+        Pt = a(14474),
         Ft = a(78788);
       function Xt(e) {
         const t = () => e.closeModal && e.closeModal(),
@@ -28956,16 +28989,16 @@
           "SetChatAnnouncementGiveawayGID",
           null,
         );
-      var la = a(28542),
+      var la = a(70369),
         sa = a(78423),
         ca = a(38512),
         da = a(29770),
         ma = a(24448),
         ua = a(5386),
         _a = a(78307),
-        pa = a(1721),
+        pa = a(35266),
         ga = a.n(pa),
-        va = a(46139),
+        va = a(13728),
         Ea = a.n(va);
       let ha = class extends d.Component {
         constructor() {
@@ -29809,7 +29842,7 @@
         (0, n.gn)([Ne.ak], ha.prototype, "OnOpenGradientOuterColor", null),
         (ha = (0, n.gn)([c.Pi], ha));
       var Ta = a(20790),
-        Ia = a(52582),
+        Ia = a(79876),
         Aa = a(38420);
       const ka = (0, c.Pi)((e) => {
           const t = l.wk.GetEditModel(),
@@ -29924,7 +29957,7 @@
         La = a(26365),
         Ra = a(52316),
         Ma = a(25871),
-        Oa = a(12763),
+        Oa = a(78156),
         Pa = a(54671);
       class Fa {
         constructor() {
@@ -29999,7 +30032,7 @@
         (0, n.gn)([Ce.Fl], Fa.prototype, "allNewsCurators", null),
         (0, n.gn)([Ce.aD], Fa.prototype, "HandleCuratorResponse", null);
       var Xa = a(81349),
-        ja = a(31397),
+        ja = a(85387),
         Ha = a.n(ja);
       function Ua(e) {
         const t = new Set();
@@ -30299,7 +30332,7 @@
             ),
         );
       var Za = a(16785),
-        Wa = a(96501);
+        Wa = a(55526);
       function qa(e) {
         const { editModel: t } = e,
           a = t.GetEventModel(),
@@ -30845,10 +30878,10 @@
       (0, n.gn)([Ce.LO], ln.prototype, "m_mapAppIDToDLCs", void 0);
       var sn = a(1063),
         cn = a(88258),
-        dn = a(36814),
+        dn = a(75755),
         mn = a(63434),
         un = a(93675),
-        _n = a(85073),
+        _n = a(48501),
         pn = a(93414),
         gn = a(22950);
       let vn = class extends d.Component {
@@ -31457,11 +31490,11 @@
           "images/applications/community/Logo_Steam_NoWords_Dark.png?v=valveisgoodatcaching",
         fn =
           "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGcAAAAgCAYAAAAPHGYtAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA8FJREFUeNrsWltIVEEYXs28ZPebEVq+BBGZIl1ALc0LaDd9q8gi6yl66LGgh24PPddDPkVXlCDIzbByqcwoSsEsWB80NKxIpIhKKiTdvh/+iZ/D6ZxZ3KNnaT74dmbOzM6emf8652xCJBIJGPgTiWYLjHAMjHCMcAwmCUn0sXN37VuzFRNCKxgEq8DeG43Xz8dMOMBys78TwmJwNvgLnBNTyxFoBDvMXmvjILia66/AMXDEK+G0wiQvmz3XA8JBiRIO9q0HRU/MY47LDexBMR0cxg20WPoyUZRzM4z+Tod5trD5K1zD+DGN369EsQQcxfgGl7GLUGzlZg/Gd1j681DkcTOE/g+W/vkodthM3Y2x3VOSELjgAFgKfqObt2xoLXiW67vAzn9sWgopFzhTXO4Fn2n8/jGwGPwKNriM/QnWg6lgG7jZ0n8CrAHHLYqisAy8ZHP9FAnIj6l0E5cU8NZZ+sq4HAVbHOYotggmIDQ8ZoDikL8PcbMASjFDKMg0FCXcbMfYzw5TUV+dYNOUpdIuoBRRpYbkwp7zYpNRFPL1B1jsd4c5lCA+gQMs5G3gcQ/WdAvcDiazUtzl6/ngXDHGCSN+iL2JGto4iOKlEI5CAZimuVjlxx8JC1sDAWd5sKbb7LYIFTZWHtCwhEw6+wmu8vMTgqCNq1AuIiL67eINLSxbWZjQ5ABbT6xdG7mkdhtlUvUuVrj4eEKgGXdOcta2CbwnFvsUix12+K4UAAmnn336AnZ39R65NlKeHChHBicThZpWTniPNWX73q2xNtIBSz3iKceC01Gu13QRKt4MYp434LgI2mWYK82Ddcl7qmAXnBqFcFLpDCOY7We3Jl0bWcxGtiLHxfK5oYibs9BuI6K+QW2CJRbEyrWR2+oSwinleh/6whpTZHB8VNzvZ7emtPEImMtnGsJrLLbf4TuVQgHmcfZkZ1l3PHJt+axM7zStZojPNFa0+V04T8AvvMl7NRcr481h8IdonwazeMwhj4RzBlzKdHXBULQhjq1xlRDQjY/BJTWjuk9Yg5NLo0NflXAnFyz9a1lglLbmclxzQjrG2W1uM7570eZ+wxjfh+oKvvQRfBFPz+6ifdkmU+YBlw0tEoe+kE3//ShTalKkahvmuFjP3/MPJyNxg6Qox9OGnuO626uF38J/252DHoq5nFLxmy7PtR479F0BU7h+NRBnSKC/RsH81f+j6swrA32wmyXrDWLfary2nJX8jsJADwsn060dZRrEYUJgMNkxx8BYjoERjhGOgRHO/40/AgwA6Pwl5bmDALcAAAAASUVORK5CYII=";
-      var Dn = a(93907);
+      var Dn = a(81591);
       const Gn = {
-        localized_headline: new Array(30),
-        localized_body: new Array(30),
-        localized_image: new Array(30),
+        localized_headline: new Array(31),
+        localized_body: new Array(31),
+        localized_image: new Array(31),
         button_destination: rn.v.k_EEventPage,
         button_loc_token: "EventEmail_Button_ClickForMoreDetails",
         video_link: "",
@@ -32073,7 +32106,7 @@
       var In = a(36305),
         An = a(61160),
         kn = a(28858),
-        Bn = a(90116);
+        Bn = a(91090);
       const xn = (0, c.Pi)((e) => {
           const { editModel: t } = e;
           d.useEffect(() => {
@@ -33269,7 +33302,7 @@
         (Xn = (0, n.gn)([c.Pi], Xn));
       var jn = a(2394),
         Hn = a(62029),
-        Un = a(34736),
+        Un = a(57927),
         Vn = a.n(Un);
       const zn = (0, c.Pi)((e) => {
           const { editModel: t } = e;
@@ -33814,9 +33847,9 @@
               })
             : null;
         });
-      var ti = a(51326),
+      var ti = a(91711),
         ai = a(72449),
-        ni = a(92685),
+        ni = a(39478),
         ii = a.n(ni);
       function oi(e) {
         const { editModel: t } = e,
@@ -33956,7 +33989,7 @@
           ),
         );
       });
-      var li = a(19866);
+      var li = a(73422);
       class si {
         GetVisibilityRounds(e, t) {
           return 0 == e
@@ -35261,8 +35294,8 @@
         l = a(59934),
         s = a(96927),
         c = a(78443),
-        d = a(69338),
-        m = a(74215),
+        d = a(3301),
+        m = a(15607),
         u = a(88464),
         _ = a(14482),
         p = a(59978),
@@ -35275,7 +35308,7 @@
         y = a(49234),
         C = a(25508),
         f = a(52316),
-        D = a(1721),
+        D = a(35266),
         G = a.n(D),
         w = a(14826),
         T = a(52868),
@@ -35741,12 +35774,12 @@
         v = a(20790),
         E = a(49234),
         h = a(14482),
-        S = a(17318),
+        S = a(52629),
         b = a.n(S),
         y = a(91970),
-        C = a(48294),
+        C = a(38520),
         f = a.n(C),
-        D = a(69338),
+        D = a(3301),
         G = a(14826),
         w = a(58749),
         T = a(25125);
@@ -35848,7 +35881,7 @@
             )
           : null;
       }
-      var A = a(348),
+      var A = a(18200),
         k = a.n(A),
         B = a(38420),
         x = a(78443);
@@ -36060,7 +36093,7 @@
         d = a(78423),
         m = a(85651),
         u = a(41194),
-        _ = a(34976),
+        _ = a(93513),
         p = a.n(_),
         g = a(21904),
         v = a(23217),
@@ -36231,7 +36264,7 @@
             );
         }
         let w = 0;
-        for (let t = 0; t < 30; ++t) {
+        for (let t = 0; t < 31; ++t) {
           const n = e.BIsLanguageValidForRealms(t),
             i = (0, E.Xx)("#Language_" + (0, c.j_)(t));
           if (n && e.BHasLanguage(t) && !e.BHasLanguageRequired(t)) {
@@ -36455,7 +36488,7 @@
           o = 0,
           r = 0,
           l = 0;
-        for (let t = 0; t < 30; ++t) {
+        for (let t = 0; t < 31; ++t) {
           const a = E.LJ.IsELanguageValidInRealm(t, d.IN.k_ESteamRealmGlobal),
             n = E.LJ.IsELanguageValidInRealm(t, d.IN.k_ESteamRealmChina);
           if (!((a && e.BInRealmGlobal()) || (n && e.BInRealmChina())))
@@ -36735,7 +36768,7 @@
           a = new r.F0(e),
           n = S.JA.IS_VALVE_GROUP,
           i = a.GetSectionObj(n ? 0 : 1);
-        for (let e = 0; e < 30; ++e) {
+        for (let e = 0; e < 31; ++e) {
           let a = 0;
           i.GetHeadline(e) && i.GetHeadline(e).trim().length > 0 && (a += 1),
             i.GetBody(e) && i.GetBody(e).trim().length > 0 && (a += 1),
@@ -36849,7 +36882,7 @@
           a = new r.F0(e),
           n = S.JA.IS_VALVE_GROUP,
           i = new Array();
-        for (let e = 0; e < 30; ++e) {
+        for (let e = 0; e < 31; ++e) {
           let t = 0,
             o = a.GetSectionObj(n ? 0 : 1);
           o.GetHeadline(e) && o.GetHeadline(e).trim().length > 0 && (t += 1),
@@ -36924,9 +36957,9 @@
         c = a(57742),
         d = a(60161),
         m = a(14826),
-        u = a(23722),
+        u = a(90980),
         _ = a(35809),
-        p = a(43173);
+        p = a(80691);
       const g = (0, o.Pi)((e) => {
         const { editModel: t } = e,
           [a] = (0, s.Xt)();

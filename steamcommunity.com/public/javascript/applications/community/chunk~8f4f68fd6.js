@@ -3,7 +3,7 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [3520],
   {
-    76239: (e) => {
+    49521: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         loadinganimationiterationcount: "20",
@@ -71,7 +71,7 @@
         hoverAnimation: "shorttemplates_hoverAnimation_gYMVd",
       };
     },
-    63e3: (e) => {
+    42535: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         loadinganimationiterationcount: "20",
@@ -142,7 +142,7 @@
         hoverAnimation: "standardtemplates_hoverAnimation_3QUW0",
       };
     },
-    2427: (e) => {
+    89126: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         loadinganimationiterationcount: "20",
@@ -3132,7 +3132,7 @@
         s = i(14826),
         o = i(72120),
         l = i(25508),
-        m = i(63e3),
+        m = i(42535),
         c = i.n(m),
         d = i(701);
       const u = !0;
@@ -3377,7 +3377,7 @@
       function g(e) {
         return e == f.IS.GamepadToast;
       }
-      var y = i(76239),
+      var y = i(49521),
         B = i.n(y);
       function b(e) {
         let {
@@ -3425,7 +3425,7 @@
           ),
         );
       }
-      var h = i(2427),
+      var h = i(89126),
         S = i.n(h),
         w = i(82079),
         v = i(701);
