@@ -41123,22 +41123,12 @@
         }
       }
       function Yn(e, t, n) {
-        const [a, i] = (0, D.useState)(!1);
-        return (
-          (0, D.useEffect)(() => {
-            const a = new Array(),
-              r = l().CancelToken.source();
-            return (
-              t.forEach((t) => {
-                const i = Ut.qh.Get().LoadOptInRegistration(e, t.appid, r);
-                i.then(() => n.Increment()), a.push(i);
-              }),
-              Promise.all(a).then(() => i(!0)),
-              () => r.cancel("useAllOptInRegistrations unmounted")
-            );
-          }, [n, t, e]),
-          a
-        );
+        const a = (0, D.useMemo)(
+            () => t.filter((e) => e && e.appid).map((e) => e.appid),
+            [t],
+          ),
+          i = (0, Ut.QQ)(e, a);
+        return Boolean(i);
       }
       function Jn(e) {
         const t = N.Get(),
@@ -41226,7 +41216,7 @@
           o = a.length,
           [c, m] = (0, D.useState)(!1),
           [d, u] = (0, D.useState)(new Qn()),
-          p = Yn(i, a, d),
+          p = Yn(i, a),
           _ = (0, D.useRef)(null),
           g =
             (null === (t = e.rgAdditionalData) || void 0 === t
@@ -41591,7 +41581,7 @@
           [p, _] = (0, D.useState)(!1),
           [g, h] = (0, D.useState)(!0),
           [v, E] = (0, D.useState)(new Qn()),
-          y = Yn(a.GetOptInPageID(), n, v),
+          y = Yn(a.GetOptInPageID(), n),
           S = (function (e) {
             const [t, n] = (0, D.useState)(!0);
             return (
