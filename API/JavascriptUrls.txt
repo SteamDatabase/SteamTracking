@@ -451,6 +451,7 @@ ${IMG_URL}applications/community/
 ${IMG_URL}arrow_left.png
 ${IMG_URL}arrow_over.png
 ${IMG_URL}arrow_solid_left.png
+${IMG_URL}arrow_solid_right.png
 ${IMG_URL}back_arrow.png
 ${IMG_URL}characters/${}.png
 ${IMG_URL}characters/heroes-sil.png
