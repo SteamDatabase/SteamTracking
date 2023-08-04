@@ -1031,6 +1031,10 @@ background: -webkit-linear-gradient( 30deg, rgba(117, 176, 34, 0.7) 5%,rgba(88, 
 	height: 24px;
 }
 
+#widget .game_purchase_action .game_purchase_price {
+	color: #c6d4df;
+}
+
 .game_purchase_price {
     position: relative;
 }

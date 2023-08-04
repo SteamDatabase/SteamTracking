@@ -5909,7 +5909,6 @@ span.partnersaledisplay_vr_required_1KRF9 {
   padding: 8px;
 }
 html.responsive.touch .partnersaledisplay_SaleSectionTabs_2xKqp {
-  top: 62px;
   left: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
@@ -5925,7 +5924,6 @@ html.responsive.touch
 }
 @media screen and (max-width: 910px) {
   html:not(.force_desktop) .partnersaledisplay_SaleSectionTabs_2xKqp {
-    top: 62px;
     left: 50%;
     margin-left: -50vw;
     margin-right: -50vw;
