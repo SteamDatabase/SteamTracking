@@ -77350,6 +77350,12 @@ svg.steamtemplates_FriendIndicator_suNJh .Outline {
   background-color: #d75a5a;
   transition: background-color 0.15s ease-out;
 }
+.titlebarcontrols_SupportAlertsButton_32TmR.titlebarcontrols_AckOnlyAlerts_3E5iV {
+  background-color: #bb9d2f;
+}
+.titlebarcontrols_SupportAlertsButton_32TmR.titlebarcontrols_AckOnlyAlerts_3E5iV:hover {
+  background-color: #c1a643;
+}
 .titlebarcontrols_OSEndOfLifeAlertsButton_1AcQ7 {
   font-size: 12px;
   line-height: 16px;
