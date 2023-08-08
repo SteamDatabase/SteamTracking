@@ -1428,6 +1428,8 @@
     "Sale_ClaimableReward_completed_generic": "Congrats! You have claimed a reward.",
     "Sale_ClaimableReward_Login": "Log In to Claim Reward",
     "Sale_ClaimableReward_AlreadyClaimed": "Already Claimed",
+    "Sale_ClaimableReward_animatedavatar": "Claim Animated Avatar",
+    "Sale_ClaimableReward_completed_animatedavatar": "Congrats! You have claimed a community animated avatar.",
     "Sale_default_label_1": "On Sale",
     "Sale_default_label_2": "Top Sellers",
     "Sale_default_label_3": "Free to Play",

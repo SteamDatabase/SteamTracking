@@ -888,6 +888,7 @@
                   rtNextClaimTime: Math.floor(Date.now() / 1e3) + 3600,
                   appid: 2243810,
                   community_item_type: 2,
+                  community_item_class: 11,
                 })
               : (this.m_testNextClaimFakeResponse = null),
             (this.m_claimState = e),
@@ -923,7 +924,7 @@
           });
         }
         InternalLoadCanUserClaimItem() {
-          var e, t, n;
+          var e, t, n, r;
           return (0, a.mG)(this, void 0, void 0, function* () {
             (0, s.X)(
               l.L7.logged_in,
@@ -931,7 +932,7 @@
             );
             const a = i.gA.Init(o.FE);
             a.Body().set_language(l.De.LANGUAGE);
-            let r = null;
+            let c = null;
             try {
               const i = yield o.tE.CanClaimItem(
                 this.m_SteamInterface.GetServiceTransport(),
@@ -959,6 +960,10 @@
                       null === (n = this.m_claimedFreeItemDef) || void 0 === n
                         ? void 0
                         : n.community_item_type,
+                    community_item_class:
+                      null === (r = this.m_claimedFreeItemDef) || void 0 === r
+                        ? void 0
+                        : r.community_item_class,
                     rtNextClaimTime:
                       i.Body().next_claim_time() > 0
                         ? i.Body().next_claim_time()
@@ -971,15 +976,15 @@
                   ),
                   this.m_claimState
                 );
-              r = (0, m.l)(i);
+              c = (0, m.l)(i);
             } catch (e) {
-              r = (0, m.l)(e);
+              c = (0, m.l)(e);
             }
             return (
               console.error(
                 "CSaleItemClaimableRewardsStore.InternalLoadCanUserClaimItem failed: error: " +
-                  (null == r ? void 0 : r.strErrorMsg),
-                r,
+                  (null == c ? void 0 : c.strErrorMsg),
+                c,
               ),
               { bCanClaimNewItem: !1, bAlreadyClaimedCurrentItem: !1 }
             );
@@ -1038,6 +1043,8 @@
                     appid: this.m_claimedFreeItemDef.appid,
                     community_item_type:
                       this.m_claimedFreeItemDef.community_item_type,
+                    community_item_class:
+                      this.m_claimedFreeItemDef.community_item_class,
                     rtNextClaimTime:
                       n.Body().next_claim_time() > 0
                         ? n.Body().next_claim_time()
@@ -3753,33 +3760,45 @@
             ),
           );
         let r = (0, g.Xx)("#Sale_ClaimableReward_generic");
-        switch (a) {
+        switch ((null == t ? void 0 : t.community_item_class) || a) {
           case 11:
             r = (0, g.Xx)("#Sale_ClaimableReward_sticker");
             break;
           case 8:
             r = (0, g.Xx)("#Sale_ClaimableReward_profilemodifier");
+            break;
+          case 15:
+            r = (0, g.Xx)("#Sale_ClaimableReward_animatedavatar");
         }
         return i.createElement("span", { className: "CSSUnclaimedState" }, r);
       }
       function C(e) {
         const { closeModal: t, rewardType: n } = e,
           { fnClaimItem: r } = (0, s.jS)(),
-          o = (0, c.tx)();
+          o = (0, c.tx)(),
+          [l, m] = i.useState(null);
         i.useEffect(() => {
           o.bLoading ||
             (o.fnSetLoading(!0),
             r()
               .then((e) => {
-                if ((console.log("claim response", (0, a.ZN)(e)), e.appid)) {
+                if (
+                  (m(e), console.log("claim response", (0, a.ZN)(e)), e.appid)
+                ) {
                   let t = (0, g.Xx)("#Sale_ClaimableReward_completed_generic");
-                  switch (n) {
+                  const a = (null == l ? void 0 : l.community_item_class) || n;
+                  switch (a) {
                     case 11:
                       t = (0, g.Xx)("#Sale_ClaimableReward_completed_sticker");
                       break;
                     case 8:
                       t = (0, g.Xx)(
                         "#Sale_ClaimableReward_completed_profilemodifier",
+                      );
+                      break;
+                    case 15:
+                      t = (0, g.Xx)(
+                        "#Sale_ClaimableReward_completed_animatedavatar",
                       );
                   }
                   o.fnSetStrSuccess("   "),
@@ -3791,7 +3810,7 @@
                         i.createElement(I, {
                           appid: e.appid,
                           community_item_type: e.community_item_type,
-                          rewardType: n,
+                          rewardType: a,
                         }),
                       ),
                     );
@@ -3800,18 +3819,21 @@
               .catch((e) =>
                 o.fnSetStrError((0, g.Xx)("#Sale_ClaimableReward_Busy")),
               ));
-        }, [o, r, n]);
-        let l = (0, g.Xx)("#Sale_ClaimableReward_generic");
-        switch (n) {
+        }, [null == l ? void 0 : l.community_item_class, o, r, n]);
+        let d = (0, g.Xx)("#Sale_ClaimableReward_generic");
+        switch ((null == l ? void 0 : l.community_item_class) || n) {
           case 11:
-            l = (0, g.Xx)("#Sale_ClaimableReward_sticker");
+            d = (0, g.Xx)("#Sale_ClaimableReward_sticker");
             break;
           case 8:
-            l = (0, g.Xx)("#Sale_ClaimableReward_profilemodifier");
+            d = (0, g.Xx)("#Sale_ClaimableReward_profilemodifier");
+            break;
+          case 15:
+            d = (0, g.Xx)("#Sale_ClaimableReward_animatedavatar");
         }
         return i.createElement(c.NT, {
           state: o,
-          strDialogTitle: l,
+          strDialogTitle: d,
           closeModal: t,
         });
       }

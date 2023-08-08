@@ -33138,6 +33138,7 @@
               1 == (null == h ? void 0 : h.GetStoreItemType()) &&
                 1 == h.GetIncludedAppIDs().length &&
                 (g.id != h.GetIncludedAppIDs()[0] || "game" != g.type) &&
+                10 != h.GetAppType() &&
                 !(null == r ? void 0 : r.current.token.reason))
             ) {
               const e = h.GetIncludedAppIDs()[0];

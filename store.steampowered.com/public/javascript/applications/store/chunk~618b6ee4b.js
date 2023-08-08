@@ -21355,7 +21355,7 @@
                   a.createElement(Io.w, {
                     className: (0, I.Z)(wo.ClaimButton, "ClaimButton"),
                     bPreviewMode: o,
-                    rewardType: 11,
+                    rewardType: 0,
                     strButtonOverride:
                       (null ===
                         (n =
