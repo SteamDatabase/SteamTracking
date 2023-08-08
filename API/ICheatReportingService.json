@@ -102,6 +102,12 @@
                     "type": "uint32",
                     "optional": false,
                     "description": "(Optional) Time when the cheating occured"
+                },
+                {
+                    "name": "raw_report",
+                    "type": "string",
+                    "optional": false,
+                    "description": "(Optional) Raw report data"
                 }
             ]
         },

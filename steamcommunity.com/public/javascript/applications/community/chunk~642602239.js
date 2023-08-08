@@ -421,13 +421,13 @@
         let a = e.match(/{[A-za-z0-9_%#:]+}/g);
         if (a)
           for (let o of a) {
-            let a = m(p(o.slice(1, -1), n), t, r, i, n);
+            let a = m(u(o.slice(1, -1), n), t, r, i, n);
             if (!a) return "";
             e = e.replace(o, a);
           }
-        return (e = p(e, n));
+        return (e = u(e, n));
       }
-      function p(e, t) {
+      function u(e, t) {
         let r = e.match(/%[A-Za-z0-9_:]+%/g);
         if (r)
           for (let i of r) {
@@ -439,7 +439,7 @@
           }
         return e;
       }
-      var u = r(53236),
+      var p = r(53236),
         h = r(23801),
         _ = r(85246);
       class g {
@@ -519,14 +519,14 @@
             if (t.length) {
               console.log("Loading batch of App Info from Steam: ", t),
                 yield this.m_CMInterface.WaitUntilLoggedOn();
-              let e = o.gA.Init(u.Fi);
+              let e = o.gA.Init(p.Fi);
               e.Body().set_language((0, a.jM)(l.De.LANGUAGE));
               const r = 50;
               for (; t.length > 0; ) {
                 const i = Math.min(r, t.length),
                   n = t.slice(0, i);
                 (t = t.slice(i)), e.Body().set_appids(n);
-                const a = yield u.AE.GetApps(
+                const a = yield p.AE.GetApps(
                   this.m_CMInterface.GetServiceTransport(),
                   e,
                 );
@@ -695,11 +695,11 @@
               ((e.m_fetching = this.m_CMInterface
                 .WaitUntilLoggedOn()
                 .then(() => {
-                  let t = o.gA.Init(u.tj);
+                  let t = o.gA.Init(p.tj);
                   return (
                     t.Body().set_appid(e.GetAppID()),
                     t.Body().set_language(l.De.LANGUAGE),
-                    u.AE.GetAppRichPresenceLocalization(
+                    p.AE.GetAppRichPresenceLocalization(
                       this.m_CMInterface.GetServiceTransport(),
                       t,
                     )
@@ -1060,68 +1060,68 @@
           return "CQuest_GetCommunityItemDefinitions_Request";
         }
       }
-      class p extends o {
-        constructor(e = null) {
-          super(),
-            p.prototype.item_definitions || n.aR(p.M()),
-            o.initialize(this, e, 0, -1, [1], null);
-        }
-        static M() {
-          return (
-            p.sm_m ||
-              (p.sm_m = {
-                proto: p,
-                fields: { item_definitions: { n: 1, c: u, r: !0, q: !0 } },
-              }),
-            p.sm_m
-          );
-        }
-        static MBF() {
-          return p.sm_mbf || (p.sm_mbf = n.Bh(p.M())), p.sm_mbf;
-        }
-        toObject(e = !1) {
-          return p.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.TA(p.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.aD(p.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new p();
-          return p.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.F(p.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return p.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.l2(p.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return p.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CQuest_GetCommunityItemDefinitions_Response";
-        }
-      }
       class u extends o {
         constructor(e = null) {
           super(),
-            u.prototype.item_type || n.aR(u.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
+            u.prototype.item_definitions || n.aR(u.M()),
+            o.initialize(this, e, 0, -1, [1], null);
         }
         static M() {
           return (
             u.sm_m ||
               (u.sm_m = {
                 proto: u,
+                fields: { item_definitions: { n: 1, c: p, r: !0, q: !0 } },
+              }),
+            u.sm_m
+          );
+        }
+        static MBF() {
+          return u.sm_mbf || (u.sm_mbf = n.Bh(u.M())), u.sm_mbf;
+        }
+        toObject(e = !1) {
+          return u.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return n.TA(u.M(), e, t);
+        }
+        static fromObject(e) {
+          return n.aD(u.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new i.BinaryReader(e),
+            r = new u();
+          return u.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return n.F(u.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return u.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          n.l2(u.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return u.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CQuest_GetCommunityItemDefinitions_Response";
+        }
+      }
+      class p extends o {
+        constructor(e = null) {
+          super(),
+            p.prototype.item_type || n.aR(p.M()),
+            o.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            p.sm_m ||
+              (p.sm_m = {
+                proto: p,
                 fields: {
                   item_type: {
                     n: 1,
@@ -1223,39 +1223,39 @@
                   },
                 },
               }),
-            u.sm_m
+            p.sm_m
           );
         }
         static MBF() {
-          return u.sm_mbf || (u.sm_mbf = n.Bh(u.M())), u.sm_mbf;
+          return p.sm_mbf || (p.sm_mbf = n.Bh(p.M())), p.sm_mbf;
         }
         toObject(e = !1) {
-          return u.toObject(e, this);
+          return p.toObject(e, this);
         }
         static toObject(e, t) {
-          return n.TA(u.M(), e, t);
+          return n.TA(p.M(), e, t);
         }
         static fromObject(e) {
-          return n.aD(u.M(), e);
+          return n.aD(p.M(), e);
         }
         static deserializeBinary(e) {
           let t = new i.BinaryReader(e),
-            r = new u();
-          return u.deserializeBinaryFromReader(r, t);
+            r = new p();
+          return p.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return n.F(u.MBF(), e, t);
+          return n.F(p.MBF(), e, t);
         }
         serializeBinary() {
           var e = new i.BinaryWriter();
-          return u.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return p.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          n.l2(u.M(), e, t);
+          n.l2(p.M(), e, t);
         }
         serializeBase64String() {
           var e = new i.BinaryWriter();
-          return u.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return p.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CQuest_GetCommunityItemDefinitions_Response_ItemDefinition";
@@ -1803,7 +1803,7 @@
             return e.SendMsg(
               "Quest.GetCommunityItemDefinitions#1",
               (0, a.MD)(d, t),
-              p,
+              u,
               { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 4 },
             );
           }),
@@ -1904,8 +1904,8 @@
         c = r(23217),
         m = r(85246),
         d = r(4306),
-        p = r(32765);
-      class u {
+        u = r(32765);
+      class p {
         GetItem(e) {
           return this.m_mapDefIDtoDefinition.get(e);
         }
@@ -2040,7 +2040,7 @@
                   }),
                   this.m_mapCategoryAndClassToItems.set(i, r),
                   this.GetItemsByCategoryAndClassCallback(e, t).Dispatch(r),
-                  ("dev" != p.De.WEB_UNIVERSE && "beta" != p.De.WEB_UNIVERSE) ||
+                  ("dev" != u.De.WEB_UNIVERSE && "beta" != u.De.WEB_UNIVERSE) ||
                     console.log(
                       "CLoyaltyRewardDefinitionStore.LoadRewardDefinitionByCategoryAndClass loaded " +
                         r.length,
@@ -2064,12 +2064,12 @@
         }
         static Get() {
           return (
-            u.s_Singleton ||
-              ((u.s_Singleton = new u()),
-              u.s_Singleton.Init(),
-              "dev" == p.De.WEB_UNIVERSE &&
-                (window.g_LoyaltyRewardDefinitionStore = u.s_Singleton)),
-            u.s_Singleton
+            p.s_Singleton ||
+              ((p.s_Singleton = new p()),
+              p.s_Singleton.Init(),
+              "dev" == u.De.WEB_UNIVERSE &&
+                (window.g_LoyaltyRewardDefinitionStore = p.s_Singleton)),
+            p.s_Singleton
           );
         }
         constructor() {
@@ -2082,35 +2082,35 @@
             (this.m_SteamInterface = null);
         }
         Init() {
-          this.m_SteamInterface = new o.J(p.De.WEBAPI_BASE_URL);
+          this.m_SteamInterface = new o.J(u.De.WEBAPI_BASE_URL);
         }
       }
       function h(e) {
-        const [t, r] = (0, n.useState)(u.Get().GetItem(e));
+        const [t, r] = (0, n.useState)(p.Get().GetItem(e));
         return (
           (0, n.useEffect)(() => {
-            t || u.Get().LoadRewardDefinition(e);
+            t || p.Get().LoadRewardDefinition(e);
           }, [e, t]),
-          (0, d.Qg)(u.Get().GetItemChangeCallback(e), r),
+          (0, d.Qg)(p.Get().GetItemChangeCallback(e), r),
           t
         );
       }
       function _(e, t) {
         const [r, i] = (0, n.useState)(
-          u.Get().GetItemsByCategoryAndClass(e, t),
+          p.Get().GetItemsByCategoryAndClass(e, t),
         );
         return (
           (0, n.useEffect)(() => {
-            r || u.Get().LoadRewardDefinitionByCategoryAndClass(e, t).then(i);
+            r || p.Get().LoadRewardDefinitionByCategoryAndClass(e, t).then(i);
           }, [e, t, r]),
-          (0, d.Qg)(u.Get().GetItemsByCategoryAndClassCallback(e, t), i),
+          (0, d.Qg)(p.Get().GetItemsByCategoryAndClassCallback(e, t), i),
           r
         );
       }
     },
     20620: (e, t, r) => {
       "use strict";
-      r.d(t, { v: () => u, x: () => p });
+      r.d(t, { v: () => p, x: () => u });
       var i = r(33940),
         n = r(52868),
         a = r.n(n),
@@ -2148,34 +2148,34 @@
                   m.De.STORE_BASE_URL +
                   "saleaction/ajaxgetusergiveawayregistration",
                 d = { giveaway_name: e, sessionid: m.De.SESSIONID },
-                p = yield a().get(c, { params: d, withCredentials: !0 });
+                u = yield a().get(c, { params: d, withCredentials: !0 });
               if (
-                200 == (null == p ? void 0 : p.status) &&
+                200 == (null == u ? void 0 : u.status) &&
                 1 ==
-                  (null === (t = null == p ? void 0 : p.data) || void 0 === t
+                  (null === (t = null == u ? void 0 : u.data) || void 0 === t
                     ? void 0
                     : t.success) &&
-                (null === (r = null == p ? void 0 : p.data) || void 0 === r
+                (null === (r = null == u ? void 0 : u.data) || void 0 === r
                   ? void 0
                   : r.registration)
               )
                 return (
                   this.m_mapRegistrations.set(
                     e,
-                    null === (n = null == p ? void 0 : p.data) || void 0 === n
+                    null === (n = null == u ? void 0 : u.data) || void 0 === n
                       ? void 0
                       : n.registration,
                   ),
                   this.GetRegistrationChangeCallback(e).Dispatch(
-                    null === (o = null == p ? void 0 : p.data) || void 0 === o
+                    null === (o = null == u ? void 0 : u.data) || void 0 === o
                       ? void 0
                       : o.registration,
                   ),
-                  null === (l = null == p ? void 0 : p.data) || void 0 === l
+                  null === (l = null == u ? void 0 : u.data) || void 0 === l
                     ? void 0
                     : l.registration
                 );
-              i = (0, s.l)(p);
+              i = (0, s.l)(u);
             } catch (e) {
               i = (0, s.l)(e);
             }
@@ -2210,34 +2210,34 @@
                   m.De.STORE_BASE_URL +
                   "saleaction/ajaxupdateusergiveawayregistration",
                 d = { giveaway_name: e, sessionid: m.De.SESSIONID },
-                p = yield a().get(c, { params: d, withCredentials: !0 });
+                u = yield a().get(c, { params: d, withCredentials: !0 });
               if (
-                200 == (null == p ? void 0 : p.status) &&
+                200 == (null == u ? void 0 : u.status) &&
                 1 ==
-                  (null === (t = null == p ? void 0 : p.data) || void 0 === t
+                  (null === (t = null == u ? void 0 : u.data) || void 0 === t
                     ? void 0
                     : t.success) &&
-                (null === (r = null == p ? void 0 : p.data) || void 0 === r
+                (null === (r = null == u ? void 0 : u.data) || void 0 === r
                   ? void 0
                   : r.registration)
               )
                 return (
                   this.m_mapRegistrations.set(
                     e,
-                    null === (n = null == p ? void 0 : p.data) || void 0 === n
+                    null === (n = null == u ? void 0 : u.data) || void 0 === n
                       ? void 0
                       : n.registration,
                   ),
                   this.GetRegistrationChangeCallback(e).Dispatch(
-                    null === (o = null == p ? void 0 : p.data) || void 0 === o
+                    null === (o = null == u ? void 0 : u.data) || void 0 === o
                       ? void 0
                       : o.registration,
                   ),
-                  null === (l = null == p ? void 0 : p.data) || void 0 === l
+                  null === (l = null == u ? void 0 : u.data) || void 0 === l
                     ? void 0
                     : l.registration
                 );
-              i = (0, s.l)(p);
+              i = (0, s.l)(u);
             } catch (e) {
               i = (0, s.l)(e);
             }
@@ -2271,7 +2271,7 @@
         }
         Init() {}
       }
-      function p(e) {
+      function u(e) {
         const [t, r] = (0, o.useState)(d.Get().GetRegistration(e));
         return (
           (0, o.useEffect)(() => {
@@ -2281,7 +2281,7 @@
           t
         );
       }
-      function u() {
+      function p() {
         return { fnCreateRegistration: d.Get().CreateRegistration };
       }
       (0, i.gn)([c.ak], d.prototype, "CreateRegistration", null);
@@ -2298,8 +2298,8 @@
         c = r(23217),
         m = r(85246),
         d = r(4306),
-        p = r(32765);
-      class u {
+        u = r(32765);
+      class p {
         GetInventoryForApp(e) {
           return this.m_mapInventoryByApp.get(e);
         }
@@ -2370,12 +2370,12 @@
         }
         static Get() {
           return (
-            u.s_Singleton ||
-              ((u.s_Singleton = new u()),
-              u.s_Singleton.Init(),
-              "dev" == p.De.WEB_UNIVERSE &&
-                (window.g_QuestCommunityInventoryStore = u.s_Singleton)),
-            u.s_Singleton
+            p.s_Singleton ||
+              ((p.s_Singleton = new p()),
+              p.s_Singleton.Init(),
+              "dev" == u.De.WEB_UNIVERSE &&
+                (window.g_QuestCommunityInventoryStore = p.s_Singleton)),
+            p.s_Singleton
           );
         }
         constructor() {
@@ -2385,21 +2385,21 @@
             (this.m_SteamInterface = null);
         }
         Init() {
-          const e = (0, p.kQ)("read_inventory_token", "application_config");
+          const e = (0, u.kQ)("read_inventory_token", "application_config");
           (0, l.X)(
             e,
             "CQuestCommunityInventoryStore: missing read_inventory:steam oauth permission",
           ),
-            (this.m_SteamInterface = new o.J(p.De.WEBAPI_BASE_URL, e));
+            (this.m_SteamInterface = new o.J(u.De.WEBAPI_BASE_URL, e));
         }
       }
       function h(e) {
-        const [t, r] = (0, n.useState)(u.Get().GetInventoryForApp(e));
+        const [t, r] = (0, n.useState)(p.Get().GetInventoryForApp(e));
         return (
           (0, n.useEffect)(() => {
-            e && !u.Get().BHasLoadedDef(e) && u.Get().LoadCommunityInventory(e);
+            e && !p.Get().BHasLoadedDef(e) && p.Get().LoadCommunityInventory(e);
           }, [e]),
-          (0, d.Qg)(u.Get().GetItemDefsChangeForAppID(e), r),
+          (0, d.Qg)(p.Get().GetItemDefsChangeForAppID(e), r),
           t
         );
       }
@@ -2418,9 +2418,9 @@
         );
       }
       function g(e, t) {
-        u.Get().SetTestAppCommunityItems(e, t);
+        p.Get().SetTestAppCommunityItems(e, t);
       }
-      (0, i.gn)([d.ak], u.prototype, "SetTestAppCommunityItems", null);
+      (0, i.gn)([d.ak], p.prototype, "SetTestAppCommunityItems", null);
     },
     21261: (e, t, r) => {
       "use strict";
@@ -2434,8 +2434,8 @@
         c = r(89526),
         m = r(23217),
         d = r(85246),
-        p = r(4306),
-        u = r(50265),
+        u = r(4306),
+        p = r(50265),
         h = r(27143);
       class _ {
         GetClaimItemState() {
@@ -2462,6 +2462,7 @@
                   rtNextClaimTime: Math.floor(Date.now() / 1e3) + 3600,
                   appid: 2243810,
                   community_item_type: 2,
+                  community_item_class: 11,
                 })
               : (this.m_testNextClaimFakeResponse = null),
             (this.m_claimState = e),
@@ -2497,7 +2498,7 @@
           });
         }
         InternalLoadCanUserClaimItem() {
-          var e, t, r;
+          var e, t, r, a;
           return (0, i.mG)(this, void 0, void 0, function* () {
             (0, s.X)(
               l.L7.logged_in,
@@ -2505,7 +2506,7 @@
             );
             const i = n.gA.Init(o.FE);
             i.Body().set_language(l.De.LANGUAGE);
-            let a = null;
+            let c = null;
             try {
               const n = yield o.tE.CanClaimItem(
                 this.m_SteamInterface.GetServiceTransport(),
@@ -2533,6 +2534,10 @@
                       null === (r = this.m_claimedFreeItemDef) || void 0 === r
                         ? void 0
                         : r.community_item_type,
+                    community_item_class:
+                      null === (a = this.m_claimedFreeItemDef) || void 0 === a
+                        ? void 0
+                        : a.community_item_class,
                     rtNextClaimTime:
                       n.Body().next_claim_time() > 0
                         ? n.Body().next_claim_time()
@@ -2545,15 +2550,15 @@
                   ),
                   this.m_claimState
                 );
-              a = (0, m.l)(n);
+              c = (0, m.l)(n);
             } catch (e) {
-              a = (0, m.l)(e);
+              c = (0, m.l)(e);
             }
             return (
               console.error(
                 "CSaleItemClaimableRewardsStore.InternalLoadCanUserClaimItem failed: error: " +
-                  (null == a ? void 0 : a.strErrorMsg),
-                a,
+                  (null == c ? void 0 : c.strErrorMsg),
+                c,
               ),
               { bCanClaimNewItem: !1, bAlreadyClaimedCurrentItem: !1 }
             );
@@ -2565,7 +2570,7 @@
               this.m_testNextClaimFakeResponse &&
                 (console.log(
                   "CSaleItemClaimableRewardsStore - testing, pretending claim action succeeded",
-                  (0, u.ZN)(this.m_testNextClaimFakeResponse),
+                  (0, p.ZN)(this.m_testNextClaimFakeResponse),
                 ),
                 (this.m_claimState = this.m_testNextClaimFakeResponse),
                 this.GetClaimStateChangeCallback().Dispatch(this.m_claimState),
@@ -2612,6 +2617,8 @@
                     appid: this.m_claimedFreeItemDef.appid,
                     community_item_type:
                       this.m_claimedFreeItemDef.community_item_type,
+                    community_item_class:
+                      this.m_claimedFreeItemDef.community_item_class,
                     rtNextClaimTime:
                       r.Body().next_claim_time() > 0
                         ? r.Body().next_claim_time()
@@ -2711,7 +2718,7 @@
               .then(t)
               .finally(() => i(!1));
           }, []),
-          (0, p.Qg)(_.Get().GetClaimStateChangeCallback(), t),
+          (0, u.Qg)(_.Get().GetClaimStateChangeCallback(), t),
           Object.assign(Object.assign({}, e), { bLoading: r })
         );
       }
@@ -2726,12 +2733,12 @@
           return _.Get().ActivateProfileModifier(e);
         });
       }
-      (0, i.gn)([p.ak], _.prototype, "TEST_OverrideClaimState", null),
-        (0, i.gn)([p.ak], _.prototype, "UserClaimItem", null);
+      (0, i.gn)([u.ak], _.prototype, "TEST_OverrideClaimState", null),
+        (0, i.gn)([u.ak], _.prototype, "UserClaimItem", null);
     },
     53155: (e, t, r) => {
       "use strict";
-      r.d(t, { mn: () => p });
+      r.d(t, { mn: () => u });
       var i = r(33940),
         n = r(52868),
         a = r.n(n),
@@ -2840,7 +2847,7 @@
         }
         Init() {}
       }
-      function p(e, t, r) {
+      function u(e, t, r) {
         const i = (function (e, t) {
             const [r, i] = (0, o.useState)(d.Get().GetItemDefForAppID(e));
             return (
@@ -2897,8 +2904,8 @@
         c = r(63230),
         m = r(46294),
         d = r(41576),
-        p = r(32765),
-        u = r(58452);
+        u = r(32765),
+        p = r(58452);
       function h(e) {
         const { padded: t, gap: r, children: i } = e;
         return n.createElement(
@@ -2906,7 +2913,7 @@
           {
             style: { gap: r ? r + "px" : "unset" },
             className: (0, s.Z)({
-              [u.ScrollSnapCarousel]: !0,
+              [p.ScrollSnapCarousel]: !0,
               SaleSectionCarousel: !0,
               SaleSectionCarouselPadding: t,
               [e.className]: !0,
@@ -2925,7 +2932,7 @@
           const l = (100 * a) / r,
             m = 100 * (1 - Math.min(a + t, r) / r),
             d = l + (50 * t) / r,
-            p = 100 - d;
+            u = 100 - d;
           return n.createElement(
             "div",
             { className: c.pipScrollerContainer },
@@ -2967,7 +2974,7 @@
                 "div",
                 {
                   className: c.scrollNavDiv,
-                  style: { right: "0%", width: p + "%" },
+                  style: { right: "0%", width: u + "%" },
                 },
                 n.createElement(
                   i.P1,
@@ -2999,20 +3006,20 @@
         visibleSlides: e.visibleSlides,
       }));
       function f(e) {
-        const t = (0, p.id)();
+        const t = (0, u.id)();
         return e.screenIsWide || t
           ? n.createElement(E, Object.assign({}, e), e.children)
           : n.createElement(h, Object.assign({}, e), e.children);
       }
       function E(e) {
-        const t = (0, p.id)(),
+        const t = (0, u.id)(),
           r = () => n.Children.count(e.children),
           o = r(),
           d = Math.min(r(), e.visibleElements);
         if (!o || !d) return null;
-        const u = d < o,
-          h = e.hideArrows || !u,
-          _ = !u || e.hidePips;
+        const p = d < o,
+          h = e.hideArrows || !p,
+          _ = !p || e.hidePips;
         let f = 4 / 3,
           E = !0;
         e.slideAspectRatio && ((f = e.slideAspectRatio), (E = !1));
@@ -3092,8 +3099,8 @@
       function S(e) {
         const { bHideArrows: t, bAutoAdvance: r, children: a, onSlide: l } = e,
           m = n.useContext(i.ro),
-          p = n.useRef(m.state.currentSlide),
-          [u, h] = n.useState(null),
+          u = n.useRef(m.state.currentSlide),
+          [p, h] = n.useState(null),
           [_, g] = n.useState(!!r),
           f = n.useRef(null),
           E = n.useRef(null);
@@ -3109,13 +3116,13 @@
           };
           _ && e();
           const t = () => {
-            const t = p.current,
+            const t = u.current,
               r = m.state.currentSlide;
             l && l(r), h(r > t ? "Right" : r < t ? "Left" : null), v(E);
             (E.current = window.setTimeout(() => {
               E.current && (h(null), v(E));
             }, 1e3)),
-              (p.current = r),
+              (u.current = r),
               f.current ? (v(f), g(!1)) : _ && e();
           };
           return (
@@ -3125,7 +3132,7 @@
             }
           );
         }, [m, _]);
-        const S = !!u && "CarouselSliding" + u;
+        const S = !!p && "CarouselSliding" + p;
         return n.createElement(
           "div",
           { className: (0, s.Z)(c.sliderBody, "SliderBody", S) },
@@ -3181,15 +3188,15 @@
           [a, o] = (0, i.useState)(!1),
           [s, l] = (0, i.useState)(null),
           [c, m] = (0, i.useState)(null),
-          [d, p] = (0, i.useState)(null),
-          [u, h] = (0, i.useState)(null);
+          [d, u] = (0, i.useState)(null),
+          [p, h] = (0, i.useState)(null);
         return {
           bLoading: e,
           bError: r,
           bSuccess: a,
           strError: s,
           strSuccess: c,
-          elSuccess: u,
+          elSuccess: p,
           elError: d,
           fnSetLoading: t,
           fnSetError: n,
@@ -3197,7 +3204,7 @@
           fnSetStrError: l,
           fnSetStrSuccess: m,
           fnSetElSuccess: h,
-          fnSetElError: p,
+          fnSetElError: u,
         };
       }
       function c(e, t) {
@@ -3213,25 +3220,25 @@
           {
             bLoading: m,
             bError: d,
-            bSuccess: p,
-            strError: u,
+            bSuccess: u,
+            strError: p,
             strSuccess: h,
             elSuccess: _,
             elError: g,
           } = r;
-        return d || u || g
+        return d || p || g
           ? i.createElement(
               n.uH,
               { strTitle: t, bAlertDialog: !0, closeModal: l },
-              Boolean(u) &&
+              Boolean(p) &&
                 i.createElement(
                   "div",
                   { className: a.ErrorStylesWithIcon },
-                  u || (0, o.Xx)("#Error_ErrorCommunicatingWithNetwork"),
+                  p || (0, o.Xx)("#Error_ErrorCommunicatingWithNetwork"),
                 ),
               Boolean(g) && g,
             )
-          : p || h || _
+          : u || h || _
           ? i.createElement(
               n.uH,
               {
@@ -3303,8 +3310,8 @@
         }
       }
       d.defaultProps = { text: "" };
-      var p = r(69159),
-        u = r(19304),
+      var u = r(69159),
+        p = r(19304),
         h = r(14826),
         _ = r(4306);
       function g(e, t) {
@@ -3376,13 +3383,13 @@
         return o.createElement(
           v.s,
           {
-            className: (0, u.Z)(C.Tab, t && C.Active),
+            className: (0, p.Z)(C.Tab, t && C.Active),
             focusClassName: C.Focus,
             onActivate: i,
           },
           o.createElement(
             "div",
-            { className: (0, u.Z)(C.TabContent, t && C.Active) },
+            { className: (0, p.Z)(C.TabContent, t && C.Active) },
             r,
           ),
         );
@@ -3485,7 +3492,7 @@
           r = (0, i._T)(e, ["className"]);
         return o.createElement(
           "div",
-          Object.assign({ className: (0, u.Z)(t, C.AddonPickerMessage) }, r),
+          Object.assign({ className: (0, p.Z)(t, C.AddonPickerMessage) }, r),
         );
       }
       var M = r(26679),
@@ -3515,7 +3522,7 @@
               { text: i, style: "merge-adjacent" },
               o.createElement("img", {
                 src: n,
-                className: (0, u.Z)(U().emoticon, t ? U().large : void 0),
+                className: (0, p.Z)(U().emoticon, t ? U().large : void 0),
                 "data-emoticon": e,
                 onMouseEnter: this.OnMouseEnter,
                 onMouseLeave: this.OnMouseLeave,
@@ -3616,7 +3623,7 @@
                   "span",
                   {
                     title: (0, h.Xx)("#AddonPicker_RecentlyUsed"),
-                    className: (0, u.Z)(
+                    className: (0, p.Z)(
                       U().PickerTab,
                       U().Clock,
                       e && U().ActiveTab,
@@ -3634,7 +3641,7 @@
                 }),
             }),
           o.createElement(
-            p.xV,
+            u.xV,
             null,
             o.createElement(y, {
               config: [
@@ -3645,7 +3652,7 @@
                       "span",
                       {
                         title: (0, h.Xx)("#AddonPicker_Emoticons"),
-                        className: (0, u.Z)(U().PickerTab, e && U().ActiveTab),
+                        className: (0, p.Z)(U().PickerTab, e && U().ActiveTab),
                       },
                       o.createElement(oe, null),
                     ),
@@ -3663,7 +3670,7 @@
                       "span",
                       {
                         title: (0, h.Xx)("#AddonPicker_Stickers"),
-                        className: (0, u.Z)(U().PickerTab, e && U().ActiveTab),
+                        className: (0, p.Z)(U().PickerTab, e && U().ActiveTab),
                       },
                       o.createElement(ae, null),
                     ),
@@ -3679,7 +3686,7 @@
                       "span",
                       {
                         title: (0, h.Xx)("#AddonPicker_RoomEffects"),
-                        className: (0, u.Z)(U().PickerTab, e && U().ActiveTab),
+                        className: (0, p.Z)(U().PickerTab, e && U().ActiveTab),
                       },
                       o.createElement(se, null),
                     ),
@@ -3726,7 +3733,7 @@
                     "span",
                     {
                       title: (0, h.Xx)("#AddonPicker_RecentlyUsed"),
-                      className: (0, u.Z)(
+                      className: (0, p.Z)(
                         U().PickerTab,
                         U().Clock,
                         e && U().ActiveTab,
@@ -3744,7 +3751,7 @@
                   }),
               }),
             o.createElement(
-              p.xV,
+              u.xV,
               null,
               o.createElement(y, {
                 config: [
@@ -3755,7 +3762,7 @@
                         "span",
                         {
                           title: (0, h.Xx)("#AddonPicker_Emoticons"),
-                          className: (0, u.Z)(
+                          className: (0, p.Z)(
                             U().PickerTab,
                             e && U().ActiveTab,
                           ),
@@ -3776,7 +3783,7 @@
                         "span",
                         {
                           title: (0, h.Xx)("#AddonPicker_Stickers"),
-                          className: (0, u.Z)(
+                          className: (0, p.Z)(
                             U().PickerTab,
                             e && U().ActiveTab,
                           ),
@@ -3812,7 +3819,7 @@
         }
         render() {
           return o.createElement(
-            p.xV,
+            u.xV,
             null,
             o.createElement(y, {
               config: [
@@ -3855,7 +3862,7 @@
         }
         render() {
           return o.createElement(
-            p.xV,
+            u.xV,
             null,
             o.createElement(y, {
               config: [
@@ -4232,7 +4239,7 @@
             Object.assign(
               {
                 ref: this.m_ref,
-                className: (0, u.Z)(r, U().StickerButton),
+                className: (0, p.Z)(r, U().StickerButton),
                 onMouseOver: () => this.setState({ showHover: !0 }),
                 onFocus: () => this.setState({ showHover: !0 }),
                 onMouseLeave: () => this.setState({ showHover: !1 }),
@@ -4281,7 +4288,7 @@
                 onFocus: () => this.setState({ showHover: !0 }),
                 onMouseLeave: () => this.setState({ showHover: !1 }),
                 onBlur: () => this.setState({ showHover: !1 }),
-                className: (0, u.Z)(n, U().EffectButton),
+                className: (0, p.Z)(n, U().EffectButton),
               },
               a,
             ),
@@ -4347,7 +4354,7 @@
             o.createElement(
               "div",
               {
-                className: (0, u.Z)(...t),
+                className: (0, p.Z)(...t),
                 "data-emoticon": e.name,
                 onClick: this.props.onClick,
               },
@@ -4507,7 +4514,7 @@
           "svg",
           Object.assign(
             {
-              className: (0, u.Z)("SVGIcon_Button SVGIcon_Clock", t),
+              className: (0, p.Z)("SVGIcon_Button SVGIcon_Clock", t),
               version: "1.1",
               x: "0px",
               y: "0px",
@@ -4536,9 +4543,9 @@
         c = r(40103),
         m = r(50304),
         d = r(14826),
-        p = r(19304),
-        u = r(68436),
-        h = r.n(u),
+        u = r(19304),
+        p = r(68436),
+        h = r.n(p),
         _ = r(93908);
       const g = 1576780700;
       let f = class extends n.Component {
@@ -4628,7 +4635,7 @@
                   },
                   n.createElement("img", {
                     src: this.props.useImg,
-                    className: (0, p.Z)(...a),
+                    className: (0, u.Z)(...a),
                     title:
                       this.props.title ||
                       (0, d.Xx)("#ChatEntryButton_Emoticon"),
@@ -4639,7 +4646,7 @@
                 n.createElement(
                   s.wl,
                   {
-                    className: (0, p.Z)(...a),
+                    className: (0, u.Z)(...a),
                     onOKActionDescription: (0, d.Xx)(
                       "#ChatEntryButton_Emoticon",
                     ),
@@ -4673,9 +4680,9 @@
         c = r(4306),
         m = r(26412),
         d = r(47165),
-        p = r(50653),
-        u = r(44094),
-        h = r.n(u),
+        u = r(50653),
+        p = r(44094),
+        h = r.n(p),
         _ = r(88464),
         g = r(14826),
         f = r(52868),
@@ -4888,8 +4895,8 @@
             );
           o && (m = o(m));
           let d = l.GetNameWithFallback(c),
-            p = l.GetSubTitleWithSummaryFallback(c),
-            u =
+            u = l.GetSubTitleWithSummaryFallback(c),
+            p =
               null === (e = F.Z.Get().GetApp(t)) || void 0 === e
                 ? void 0
                 : e.GetName(),
@@ -4918,7 +4925,7 @@
                   28 == l.type
                     ? "#EventDisplay_Share_Announcement"
                     : "#EventDisplay_Share_Event",
-                  u,
+                  p,
                 ),
                 n.createElement("span", { className: h().DynamicLink_Date }, _),
               ),
@@ -4930,7 +4937,7 @@
               n.createElement(
                 "div",
                 { className: h().DynamicLink_Description },
-                p,
+                u,
               ),
             ),
           );
@@ -5094,7 +5101,7 @@
         if ((0, v.h4)()) return null;
         const r = (0, m.S6)(e);
         return void 0 !== (null == r ? void 0 : r.strVideoID)
-          ? n.createElement(p.O, {
+          ? n.createElement(u.O, {
               videoID: r.strVideoID,
               nStartSeconds: r.nStartSeconds,
               classNameAlign: "",
@@ -5167,7 +5174,7 @@
         }
         return (0, N.hF)(e, null == t ? void 0 : t.event);
       }
-      function pe(e, t) {
+      function ue(e, t) {
         if (me(e)) {
           const t = new RegExp(ne).exec(e);
           if (t && t.length > 1) {
@@ -5182,7 +5189,7 @@
         }
         return (0, N.hF)(e, null == t ? void 0 : t.event);
       }
-      function ue(e, t) {
+      function pe(e, t) {
         if (me(e)) {
           let t = new RegExp(Y).exec(e);
           if (t && t.length > 2) {
@@ -6100,12 +6107,12 @@
         );
       }
       function mt(e) {
-        const t = ut(
+        const t = pt(
             e.args,
             "appid",
             e.context.event.appid ? e.context.event.appid : 0,
           ),
-          r = ut(e.args, "trailerid", 0);
+          r = pt(e.args, "trailerid", 0);
         return n.createElement(Ne, {
           appid: t,
           trailerBaseID: r,
@@ -6113,13 +6120,13 @@
         });
       }
       function dt(e) {
-        const t = ut(e.args, "appid", 0);
+        const t = pt(e.args, "appid", 0);
         return n.createElement(Ge, {
           appid: t,
           bPreviewMode: e.context.showErrorInfo,
         });
       }
-      function pt(e) {
+      function ut(e) {
         const t = (0, s.im)(e.args, "name"),
           r = (0, s.im)(e.args, "title"),
           i = (0, s.im)(e.args, "company"),
@@ -6140,7 +6147,7 @@
               bio: e.children,
             });
       }
-      function ut(e, t, r) {
+      function pt(e, t, r) {
         const i = (0, s.im)(e, t);
         return void 0 === i || null == i ? r : Number.parseInt(i);
       }
@@ -6379,7 +6386,7 @@
                         { urlRegExp: new RegExp(Q), fnBBComponent: de },
                         { urlRegExp: new RegExp(q), fnBBComponent: _e },
                         { urlRegExp: new RegExp($), fnBBComponent: he },
-                        { urlRegExp: new RegExp(Y), fnBBComponent: ue },
+                        { urlRegExp: new RegExp(Y), fnBBComponent: pe },
                         { urlRegExp: new RegExp(ie), fnBBComponent: ve },
                       ]
                     : [
@@ -6396,14 +6403,14 @@
                         { urlRegExp: new RegExp(Q), fnBBComponent: de },
                         { urlRegExp: new RegExp(q), fnBBComponent: _e },
                         { urlRegExp: new RegExp($), fnBBComponent: he },
-                        { urlRegExp: new RegExp(Y), fnBBComponent: ue },
+                        { urlRegExp: new RegExp(Y), fnBBComponent: pe },
                         { urlRegExp: new RegExp(J), fnBBComponent: se },
                         { urlRegExp: new RegExp(K), fnBBComponent: le },
                         { urlRegExp: new RegExp(ee), fnBBComponent: ge },
                         { urlRegExp: new RegExp(te), fnBBComponent: fe },
                         { urlRegExp: new RegExp(re), fnBBComponent: Ee },
                         { urlRegExp: new RegExp(ie), fnBBComponent: ve },
-                        { urlRegExp: new RegExp(ne), fnBBComponent: pe },
+                        { urlRegExp: new RegExp(ne), fnBBComponent: ue },
                       ]),
                 ae),
                 {
@@ -6496,7 +6503,7 @@
               [
                 "speaker",
                 {
-                  Constructor: pt,
+                  Constructor: ut,
                   autocloses: !1,
                   skipInternalNewline: !0,
                   allowWrapTextForCopying: !0,
@@ -6548,9 +6555,9 @@
         c = r(69206),
         m = (r(84343), r(4306)),
         d = r(32765),
-        p = r(74621),
-        u = r(30204),
-        h = r.n(u);
+        u = r(74621),
+        p = r(30204),
+        h = r.n(p);
       const _ = (0, n.Pi)((e) => {
         const t = e.photo ? (0, o.vZ)(e.photo, (0, s.jM)(d.De.LANGUAGE)) : null,
           r = e.photo ? ("string" == typeof t ? t : t[1]) : null,
@@ -6587,7 +6594,7 @@
               "div",
               { className: h().SpeakerBio },
               e.bio,
-              e.bioString && a.createElement(p.N, { text: e.bioString }),
+              e.bioString && a.createElement(u.N, { text: e.bioString }),
             ),
         );
       });
@@ -6722,8 +6729,8 @@
         c = r(77557),
         m = r(57742),
         d = r(701),
-        p = r(3301),
-        u = r(19304),
+        u = r(3301),
+        p = r(19304),
         h = r(60161),
         _ = r(14826),
         g = r(32765),
@@ -6736,7 +6743,7 @@
         return n.createElement(
           l.zx,
           {
-            className: (0, u.Z)("CSSClaimItemButton", a),
+            className: (0, p.Z)("CSSClaimItemButton", a),
             onClick: (e) => {
               t.bCanClaimNewItem
                 ? (0, m.AM)(n.createElement(C, { rewardType: c }), (0, h.RA)(e))
@@ -6755,7 +6762,7 @@
             disabled: r,
           },
           Boolean(r)
-            ? n.createElement(p.V, {
+            ? n.createElement(u.V, {
                 string: (0, _.Xx)("#Loading"),
                 size: "small",
               })
@@ -6767,7 +6774,7 @@
         if (t.bAlreadyClaimedCurrentItem)
           return n.createElement(
             "div",
-            { className: (0, u.Z)(f.CheckMark, "CSSClaimedState") },
+            { className: (0, p.Z)(f.CheckMark, "CSSClaimedState") },
             n.createElement(d.JrY, null),
             n.createElement(
               "span",
@@ -6779,33 +6786,45 @@
             ),
           );
         let a = (0, _.Xx)("#Sale_ClaimableReward_generic");
-        switch (i) {
+        switch ((null == t ? void 0 : t.community_item_class) || i) {
           case 11:
             a = (0, _.Xx)("#Sale_ClaimableReward_sticker");
             break;
           case 8:
             a = (0, _.Xx)("#Sale_ClaimableReward_profilemodifier");
+            break;
+          case 15:
+            a = (0, _.Xx)("#Sale_ClaimableReward_animatedavatar");
         }
         return n.createElement("span", { className: "CSSUnclaimedState" }, a);
       }
       function C(e) {
         const { closeModal: t, rewardType: r } = e,
           { fnClaimItem: a } = (0, s.jS)(),
-          o = (0, c.tx)();
+          o = (0, c.tx)(),
+          [l, m] = n.useState(null);
         n.useEffect(() => {
           o.bLoading ||
             (o.fnSetLoading(!0),
             a()
               .then((e) => {
-                if ((console.log("claim response", (0, i.ZN)(e)), e.appid)) {
+                if (
+                  (m(e), console.log("claim response", (0, i.ZN)(e)), e.appid)
+                ) {
                   let t = (0, _.Xx)("#Sale_ClaimableReward_completed_generic");
-                  switch (r) {
+                  const i = (null == l ? void 0 : l.community_item_class) || r;
+                  switch (i) {
                     case 11:
                       t = (0, _.Xx)("#Sale_ClaimableReward_completed_sticker");
                       break;
                     case 8:
                       t = (0, _.Xx)(
                         "#Sale_ClaimableReward_completed_profilemodifier",
+                      );
+                      break;
+                    case 15:
+                      t = (0, _.Xx)(
+                        "#Sale_ClaimableReward_completed_animatedavatar",
                       );
                   }
                   o.fnSetStrSuccess("   "),
@@ -6817,7 +6836,7 @@
                         n.createElement(y, {
                           appid: e.appid,
                           community_item_type: e.community_item_type,
-                          rewardType: r,
+                          rewardType: i,
                         }),
                       ),
                     );
@@ -6826,18 +6845,21 @@
               .catch((e) =>
                 o.fnSetStrError((0, _.Xx)("#Sale_ClaimableReward_Busy")),
               ));
-        }, [o, a, r]);
-        let l = (0, _.Xx)("#Sale_ClaimableReward_generic");
-        switch (r) {
+        }, [null == l ? void 0 : l.community_item_class, o, a, r]);
+        let d = (0, _.Xx)("#Sale_ClaimableReward_generic");
+        switch ((null == l ? void 0 : l.community_item_class) || r) {
           case 11:
-            l = (0, _.Xx)("#Sale_ClaimableReward_sticker");
+            d = (0, _.Xx)("#Sale_ClaimableReward_sticker");
             break;
           case 8:
-            l = (0, _.Xx)("#Sale_ClaimableReward_profilemodifier");
+            d = (0, _.Xx)("#Sale_ClaimableReward_profilemodifier");
+            break;
+          case 15:
+            d = (0, _.Xx)("#Sale_ClaimableReward_animatedavatar");
         }
         return n.createElement(c.NT, {
           state: o,
-          strDialogTitle: l,
+          strDialogTitle: d,
           closeModal: t,
         });
       }
@@ -7079,12 +7101,12 @@
                 minWidth: e,
               }));
           }
-          const p = this.BLoadAndUnload() ? "repeated" : "once";
+          const u = this.BLoadAndUnload() ? "repeated" : "once";
           return n.createElement(
             o.U,
             Object.assign({ ref: this.m_refContainer, style: d }, c, {
               onVisibilityChange: this.OnVisibilityChange,
-              trigger: p,
+              trigger: u,
             }),
             m && this.props.children,
           );

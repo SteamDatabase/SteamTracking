@@ -3049,14 +3049,6 @@ div.creatorhomeembed_SocialContainer_1MvXz {
   .salepreviewwidgets_StoreActionWidgetContainer_1gO7r {
     position: relative;
   }
-  .salepreviewwidgets_SaleItemDefaultCapsuleDisplay_34o91
-    .salepreviewwidgets_StoreActionWidgetContainer_1gO7r
-    .salepreviewwidgets_Action_3Af0S,
-  .salepreviewwidgets_SaleItemDefaultCapsuleDisplay_34o91
-    .salepreviewwidgets_StoreActionWidgetContainer_1gO7r
-    .salepreviewwidgets_WishList_3LOWb {
-    display: none;
-  }
 }
 .salepreviewwidgets_InGameHover_2uFQ-
   .salepreviewwidgets_StoreSalePriceWidgetContainer_tqNH0,
@@ -5397,6 +5389,9 @@ html.touch
 .salepreviewwidgets_DiscountIconCtn_LpnSX svg path {
   fill: #beee11;
 }
+.addtocartbutton_AddToCartAnchorCtn_2SDuo {
+  color: #fff;
+}
 .gameactions_GotSteamDialog_3omvM .gameactions_DownloadSteamUrl_Glr7k {
   color: #fff;
 }
@@ -6190,7 +6185,6 @@ span.partnersaledisplay_vr_required_1KRF9 {
   padding: 8px;
 }
 html.responsive.touch .partnersaledisplay_SaleSectionTabs_2xKqp {
-  top: 62px;
   left: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
@@ -6206,7 +6200,6 @@ html.responsive.touch
 }
 @media screen and (max-width: 910px) {
   html:not(.force_desktop) .partnersaledisplay_SaleSectionTabs_2xKqp {
-    top: 62px;
     left: 50%;
     margin-left: -50vw;
     margin-right: -50vw;

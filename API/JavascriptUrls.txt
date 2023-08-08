@@ -2606,7 +2606,6 @@ https://steamcommunity.com/sharedfiles/ajaxaddtocollections
 https://steamcommunity.com/sharedfiles/ajaxchangecommercesubmissionstatus/${publishedFileID}/
 https://steamcommunity.com/sharedfiles/ajaxchoosepublishoption/${publishedFileID}/
 https://steamcommunity.com/sharedfiles/ajaxeditcontentdescriptors/
-https://steamcommunity.com/sharedfiles/ajaxgetmaturecontentwarningdialog/
 https://steamcommunity.com/sharedfiles/ajaxgetmycollections
 https://steamcommunity.com/sharedfiles/ajaxgetserviceproviders
 https://steamcommunity.com/sharedfiles/ajaxgetserviceprovidersplits

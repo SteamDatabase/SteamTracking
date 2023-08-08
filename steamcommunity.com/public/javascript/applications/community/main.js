@@ -961,7 +961,7 @@
             (e[(e.GAMEPAD_ANALOG_LAST = 50)] = "GAMEPAD_ANALOG_LAST");
         })(i || (i = {}));
     },
-    78423: (e, t, n) => {
+    36611: (e, t, n) => {
       "use strict";
       n.d(t, {
         e7: () => l,
@@ -1158,21 +1158,6 @@
             (e[(e.AudioPlayback_Idle = 3)] = "AudioPlayback_Idle");
         })(f || (f = {}));
       var v, C, E, b, w, S;
-      function y(e) {
-        return (
-          "game" === e ||
-          "dlc" === e ||
-          "software" === e ||
-          "music" === e ||
-          "application" === e ||
-          "demo" === e ||
-          "hardware" === e ||
-          "mod" === e ||
-          "video" == e ||
-          "beta" === e ||
-          "advertising" === e
-        );
-      }
       !(function (e) {
         (e[(e.Unknown = 0)] = "Unknown"),
           (e[(e.Wired = 1)] = "Wired"),
@@ -1220,6 +1205,21 @@
             (e[(e.k_EClientUINotificationFriendPersonaState = 3)] =
               "k_EClientUINotificationFriendPersonaState");
         })(S || (S = {}));
+      function y(e) {
+        return (
+          "game" === e ||
+          "dlc" === e ||
+          "software" === e ||
+          "music" === e ||
+          "application" === e ||
+          "demo" === e ||
+          "hardware" === e ||
+          "mod" === e ||
+          "video" == e ||
+          "beta" === e ||
+          "advertising" === e
+        );
+      }
       var I, R, D, M;
       !(function (e) {
         (e[(e.k_EComputerActiveStateInvalid = 0)] =
@@ -2571,57 +2571,6 @@
         }
       }
     },
-    59983: (e, t, n) => {
-      "use strict";
-      n.d(t, { _: () => s });
-      var r = n(89526),
-        i = n(85246),
-        o = n(4306);
-      const a = (e) => null != e;
-      function s(e, t) {
-        const [n, i] = r.useState(window.localStorage.getItem(e)),
-          s = r.useRef(e);
-        r.useEffect(() => {
-          e != s.current &&
-            (i(window.localStorage.getItem(e)), (s.current = e));
-        }, [e]);
-        const c = e == s.current ? n : window.localStorage.getItem(e);
-        let u = t;
-        return (
-          a(c) &&
-            (u = a(t)
-              ? "boolean" == typeof t
-                ? t.constructor("false" !== c)
-                : t.constructor(c)
-              : c),
-          (0, o.Qg)(l.Get().GetLocalStoreChangeCallback(e), i),
-          [
-            u,
-            (t) => {
-              const n = a(t) ? String(t) : null;
-              window.localStorage.setItem(e, n),
-                i(n),
-                l.Get().GetLocalStoreChangeCallback(e).Dispatch(n);
-            },
-          ]
-        );
-      }
-      class l {
-        constructor() {
-          this.m_mapChangeCallback = new Map();
-        }
-        GetLocalStoreChangeCallback(e) {
-          return (
-            this.m_mapChangeCallback.has(e) ||
-              this.m_mapChangeCallback.set(e, new i.pB()),
-            this.m_mapChangeCallback.get(e)
-          );
-        }
-        static Get() {
-          return l.s_Singleton || (l.s_Singleton = new l()), l.s_Singleton;
-        }
-      }
-    },
     40103: (e, t, n) => {
       "use strict";
       n.d(t, { Oo: () => s, yV: () => l });
@@ -3145,7 +3094,7 @@
         a = n(60161),
         s = n(37377),
         l = n(26464),
-        c = n(78423),
+        c = n(36611),
         u = n(14826),
         d = n(32765),
         m = n(23801),
@@ -3194,7 +3143,7 @@
         f = n(16383),
         v = n(34433);
       function C() {
-        return "windows" === d.De.PLATFORM ? _.BackgroundTransparent : _.None;
+        return (0, d.Me)() ? _.BackgroundTransparent : _.None;
       }
       function E(e) {
         let t = _.None;
@@ -3318,9 +3267,8 @@
             "popup-created" == e.data && this.OnCreateInternal();
         }
         Show(e = c.IF.k_EWindowBringToFrontAndForceOS) {
-          var t, n;
-          let r;
-          (r =
+          let t;
+          (t =
             "boolean" == typeof e
               ? e
                 ? c.IF.k_EWindowBringToFrontAndForceOS
@@ -3328,66 +3276,59 @@
               : e),
             window.SteamClient && (this.m_rgParams.eCreationFlags |= _.Hidden),
             this.m_rgParams.eCreationFlags & _.NotFocusable &&
-              (r = c.IF.k_EWindowBringToFrontInvalid),
+              (t = c.IF.k_EWindowBringToFrontInvalid),
             this.BIsValid() &&
               (this.BIsClosed()
                 ? ((this.m_popup = void 0), (this.m_element = void 0))
-                : r != c.IF.k_EWindowBringToFrontInvalid && this.Focus(r));
-          let i,
-            o,
-            a,
-            s = R.GetExistingPopup(this.m_strName);
-          (s && !this.m_rgParams.replace_existing_popup) ||
+                : t != c.IF.k_EWindowBringToFrontInvalid && this.Focus(t));
+          let n,
+            r,
+            i,
+            o = R.GetExistingPopup(this.m_strName);
+          (o && !this.m_rgParams.replace_existing_popup) ||
             ((this.m_rgParams = this.UpdateParamsBeforeShow(this.m_rgParams)),
-            s
-              ? ((o = s.m_element),
-                (i = s.m_popup),
-                s.ReleasePopup(),
-                (a = s.m_renderWhenReady),
-                R.RemoveTrackedPopup(s),
-                i.removeEventListener("beforeunload", s.OnBeforeUnloadEvent),
-                i.removeEventListener("unload", s.OnUnload),
-                i.removeEventListener("resize", s.OnResizeEvent),
-                i.removeEventListener("focus", this.OnFocusInternal),
-                i.removeEventListener("blur", this.OnBlurInternal),
-                i.removeEventListener("drop", s.OnDrop),
-                i.removeEventListener("dragover", s.OnDragOver),
-                i.removeEventListener("message", this.OnMessage))
-              : (({ popup: i, element: o } = I.CreatePopup(
+            o
+              ? ((r = o.m_element),
+                (n = o.m_popup),
+                o.ReleasePopup(),
+                (i = o.m_renderWhenReady),
+                R.RemoveTrackedPopup(o),
+                n.removeEventListener("beforeunload", o.OnBeforeUnloadEvent),
+                n.removeEventListener("unload", o.OnUnload),
+                n.removeEventListener("resize", o.OnResizeEvent),
+                n.removeEventListener("focus", this.OnFocusInternal),
+                n.removeEventListener("blur", this.OnBlurInternal),
+                n.removeEventListener("drop", o.OnDrop),
+                n.removeEventListener("dragover", o.OnDragOver),
+                n.removeEventListener("message", this.OnMessage))
+              : (({ popup: n, element: r } = I.CreatePopup(
                   this.m_strName,
                   this.m_rgParams,
                 )),
-                (a = new p(i.document, o))),
-            i &&
-              o &&
-              ((i.document.title = this.m_strTitle),
-              i.addEventListener("beforeunload", this.OnBeforeUnloadEvent),
-              i.addEventListener("unload", this.OnUnload),
-              i.addEventListener("resize", this.OnResizeEvent),
-              i.addEventListener("focus", this.OnFocusInternal),
-              i.addEventListener("blur", this.OnBlurInternal),
-              i.addEventListener("drop", this.OnDrop),
-              i.addEventListener("dragover", this.OnDragOver),
-              i.addEventListener("message", this.OnMessage),
+                (i = new p(n.document, r))),
+            n &&
+              r &&
+              ((n.document.title = this.m_strTitle),
+              n.addEventListener("beforeunload", this.OnBeforeUnloadEvent),
+              n.addEventListener("unload", this.OnUnload),
+              n.addEventListener("resize", this.OnResizeEvent),
+              n.addEventListener("focus", this.OnFocusInternal),
+              n.addEventListener("blur", this.OnBlurInternal),
+              n.addEventListener("drop", this.OnDrop),
+              n.addEventListener("dragover", this.OnDragOver),
+              n.addEventListener("message", this.OnMessage),
               d.De.LANGUAGE &&
-                i.document.documentElement.setAttribute("lang", (0, u.CE)()),
-              (this.m_popup = i),
-              (this.m_element = o),
-              (this.m_renderWhenReady = a),
+                n.document.documentElement.setAttribute("lang", (0, u.CE)()),
+              (this.m_popup = n),
+              (this.m_element = r),
+              (this.m_renderWhenReady = i),
               this.m_renderWhenReady.SetTarget(() =>
-                this.RenderInternal(this.m_popup, this.m_element, r),
+                this.RenderInternal(this.m_popup, this.m_element, t),
               )),
             R.AddTrackedPopup(this),
-            s
-              ? (this.OnCreateInternal(),
-                r != c.IF.k_EWindowBringToFrontInvalid && this.Focus(r))
-              : (null ===
-                  (n =
-                    null === (t = SteamClient.Features) || void 0 === t
-                      ? void 0
-                      : t.SteamInitsPopups) || void 0 === n
-                  ? void 0
-                  : n.call(t)) || this.OnCreateInternal());
+            o &&
+              (this.OnCreateInternal(),
+              t != c.IF.k_EWindowBringToFrontInvalid && this.Focus(t)));
         }
         RemoveEventListeners() {
           this.window.removeEventListener(
@@ -3899,48 +3840,49 @@
     },
     86777: (e, t, n) => {
       "use strict";
-      n.d(t, { B: () => l });
+      n.d(t, { B: () => c });
       var r = n(89526),
         i = n(73070);
       const o = r.createContext({ body_class: "" });
       function a() {
         return r.useContext(o);
       }
-      var s = n(46132);
-      function l(e, t, n) {
+      var s = n(46132),
+        l = n(19304);
+      function c(e, t, n) {
         const i = r.useRef(),
-          [o, l] = r.useState(void 0),
-          u = a();
+          [o, c] = r.useState(void 0),
+          d = a();
         return (
           i.current ||
-            (i.current = new c(
+            (i.current = new u(
               e,
               (function (e, t) {
                 return Object.assign(Object.assign({}, e), {
-                  body_class: e.body_class + " " + t.body_class,
+                  body_class: (0, l.Z)(e.body_class, t.body_class),
                 });
-              })(t, u),
-              l,
+              })(t, d),
+              c,
             )),
           (i.current.m_callbacks = n),
           r.useEffect(() => {
-            let e = t.bNoFocusOnShow
-              ? s.IF.k_EWindowBringToFrontWithoutForcingOS
-              : s.IF.k_EWindowBringToFrontAndForceOS;
-            return (
-              i.current.Show(e),
-              () => {
-                var e, t;
-                (i.current.m_callbacks = void 0),
-                  (null === (e = i.current.window) || void 0 === e
-                    ? void 0
-                    : e.SteamClient.Window.SetHideOnClose) &&
-                    (null === (t = i.current.window) ||
-                      void 0 === t ||
-                      t.SteamClient.Window.SetHideOnClose(!1)),
-                  i.current.Close();
-              }
-            );
+            if (!i.current.params.bNoInitialShow) {
+              let e = i.current.params.bNoFocusOnShow
+                ? s.IF.k_EWindowBringToFrontWithoutForcingOS
+                : s.IF.k_EWindowBringToFrontAndForceOS;
+              i.current.Show(e);
+            }
+            return () => {
+              var e, t;
+              (i.current.m_callbacks = void 0),
+                (null === (e = i.current.window) || void 0 === e
+                  ? void 0
+                  : e.SteamClient.Window.SetHideOnClose) &&
+                  (null === (t = i.current.window) ||
+                    void 0 === t ||
+                    t.SteamClient.Window.SetHideOnClose(!1)),
+                i.current.Close();
+            };
           }, []),
           r.useEffect(() => {
             var e, n;
@@ -3954,7 +3896,7 @@
           { popup: i.current.window, element: o, popupObj: i.current }
         );
       }
-      class c extends i.K3 {
+      class u extends i.K3 {
         constructor(e, t, n) {
           super(e, t), (this.m_fnReadyToRender = n);
         }
@@ -7925,7 +7867,7 @@
       n.d(t, { Wz: () => h, k$: () => p });
       var r = n(33940),
         i = n(89526),
-        o = n(78423),
+        o = n(36611),
         a = n(73070),
         s = n(58123),
         l = n(16383),
@@ -9628,7 +9570,7 @@
       }
       (0, r.gn)([o.a], s.prototype, "PollGamepads", null),
         (0, r.gn)([o.a], s.prototype, "OnWindowRegainedFocus", null);
-      var l = n(78423),
+      var l = n(36611),
         c = n(18061);
       const u = {
           [c.A.GAMEPAD_BUTTON_A]: i.eV.OK,
@@ -12163,9 +12105,9 @@
       var r = n(33940),
         i = n(89526),
         o = n(50265),
-        a = n(78423),
+        a = n(36611),
         s = n(50454);
-      n(4306), n(59983);
+      n(4306);
       new s.s("VR");
       class l {
         constructor() {
@@ -12254,16 +12196,17 @@
       }
       function c(e, t) {
         const [n, r] = i.useState(),
-          o = i.useRef();
+          o = i.useCallback(() => !0, []),
+          s = i.useRef();
         return (
-          (o.current = t),
+          (s.current = null != t ? t : o),
           i.useEffect(() => {
             const t = () => {
                 var t, r, i;
-                const s = o.current && o.current();
-                u.SetInteractionAffordance(n, e, s),
+                const o = s.current && s.current();
+                u.SetInteractionAffordance(n, e, o),
                   2 == e &&
-                    s &&
+                    o &&
                     (null ===
                       (i =
                         null ===
@@ -12285,8 +12228,8 @@
                 var t, r, i;
                 u.SetInteractionAffordance(n, e, !1),
                   2 == e &&
-                    o.current &&
-                    o.current() &&
+                    s.current &&
+                    s.current() &&
                     (null ===
                       (i =
                         null ===
@@ -17813,7 +17756,7 @@
       });
       var r = n(33940),
         i = n(89526);
-      n(78423), n(40971), n(99825);
+      n(36611), n(40971), n(99825);
       function o(e) {
         return i.createElement(
           "svg",
@@ -22899,7 +22842,7 @@
             hideClose: o,
             hideMin: m,
             hideMax: h,
-            bOSX: p = "macos" == l.De.PLATFORM,
+            bOSX: p = (0, l.Uy)(),
             bForceWindowFocused: _,
             onMinimize: g,
             onMaximize: f,
@@ -24014,7 +23957,7 @@
       });
       var r = n(89526),
         i = n(46132),
-        o = n(78423),
+        o = n(36611),
         a = n(32765),
         s = n(11837),
         l = n(85246),
@@ -25104,7 +25047,7 @@
         r.useEffect(() => {
           if (e && n)
             return (
-              e.addEventListener(t, n, i), () => e.removeEventListener(t, n)
+              e.addEventListener(t, n, i), () => e.removeEventListener(t, n, i)
             );
         }, [e, t, n]);
       }
@@ -25405,10 +25348,12 @@
         E_: () => c,
         Ek: () => l.Ek,
         JA: () => a.JA,
-        Kc: () => _,
+        Kc: () => f,
         L7: () => a.L7,
+        Me: () => p,
+        Uy: () => _,
         Wj: () => a.Wj,
-        Zv: () => g,
+        Zv: () => v,
         fI: () => d,
         h4: () => h,
         id: () => m,
@@ -25418,7 +25363,7 @@
         y9: () => l.y9,
       });
       var r = n(89526),
-        i = n(78423),
+        i = n(36611),
         o = n(23801),
         a = n(44973),
         s = n(87458),
@@ -25437,41 +25382,34 @@
         };
       function d(e) {
         var t;
-        const {
-            IN_GAMEPADUI: n,
-            IN_DESKTOPUI: i,
-            IN_VR: o,
-            SIMULATING_VR_ON_DESKTOP: l,
-            children: d,
-          } = e,
-          m = u({ bSuppressAssert: !0 }),
-          h =
+        const { IN_GAMEPADUI: n, IN_DESKTOPUI: i, IN_VR: o, children: l } = e,
+          d = u({ bSuppressAssert: !0 }),
+          m =
             null === (t = (0, s.g3)()) || void 0 === t
               ? void 0
               : t.startsWith("Gamepad VR"),
-          p = r.useMemo(() => {
+          h = r.useMemo(() => {
             var e, t, r;
             return {
               IN_GAMEPADUI:
                 null !==
-                  (e = null != n ? n : null == m ? void 0 : m.IN_GAMEPADUI) &&
+                  (e = null != n ? n : null == d ? void 0 : d.IN_GAMEPADUI) &&
                 void 0 !== e
                   ? e
                   : a.De.IN_GAMEPADUI,
               IN_DESKTOPUI:
                 null !==
-                  (t = null != i ? i : null == m ? void 0 : m.IN_DESKTOPUI) &&
+                  (t = null != i ? i : null == d ? void 0 : d.IN_DESKTOPUI) &&
                 void 0 !== t &&
                 t,
               IN_VR:
-                null !== (r = null != o ? o : null == m ? void 0 : m.IN_VR) &&
+                null !== (r = null != o ? o : null == d ? void 0 : d.IN_VR) &&
                 void 0 !== r
                   ? r
-                  : h,
-              SIMULATING_VR_ON_DESKTOP: null != l && l,
+                  : m,
             };
-          }, [m, n, i, o, l, h]);
-        return r.createElement(c.Provider, { value: p }, d);
+          }, [d, n, i, o, m]);
+        return r.createElement(c.Provider, { value: h }, l);
       }
       function m(e) {
         const t = u(e);
@@ -25480,48 +25418,54 @@
       function h() {
         return a.De.EREALM === i.IN.k_ESteamRealmChina;
       }
-      function p(e, t) {
-        return 0 != t.length && e.startsWith(t);
+      function p() {
+        return "windows" == a.De.PLATFORM;
       }
       function _() {
+        return "macos" == a.De.PLATFORM;
+      }
+      function g(e, t) {
+        return 0 != t.length && e.startsWith(t);
+      }
+      function f() {
         if (!window || !window.location || !window.location.href)
           return console.warn("Unable to determine base url!"), "unknown";
         const e = window.location.href;
-        return p(e, a.De.STORE_BASE_URL)
+        return g(e, a.De.STORE_BASE_URL)
           ? a.De.STORE_BASE_URL
-          : p(e, a.De.COMMUNITY_BASE_URL)
+          : g(e, a.De.COMMUNITY_BASE_URL)
           ? a.De.COMMUNITY_BASE_URL
-          : p(e, a.De.CHAT_BASE_URL)
+          : g(e, a.De.CHAT_BASE_URL)
           ? a.De.CHAT_BASE_URL
-          : p(e, a.De.PARTNER_BASE_URL)
+          : g(e, a.De.PARTNER_BASE_URL)
           ? a.De.PARTNER_BASE_URL
-          : p(e, a.De.HELP_BASE_URL)
+          : g(e, a.De.HELP_BASE_URL)
           ? a.De.HELP_BASE_URL
-          : p(e, a.De.STEAMTV_BASE_URL)
+          : g(e, a.De.STEAMTV_BASE_URL)
           ? a.De.STEAMTV_BASE_URL
-          : p(e, a.De.STATS_BASE_URL)
+          : g(e, a.De.STATS_BASE_URL)
           ? a.De.STATS_BASE_URL
-          : p(e, a.De.INTERNAL_STATS_BASE_URL)
+          : g(e, a.De.INTERNAL_STATS_BASE_URL)
           ? a.De.INTERNAL_STATS_BASE_URL
-          : p(e, a.De.STORE_CHECKOUT_BASE_URL)
+          : g(e, a.De.STORE_CHECKOUT_BASE_URL)
           ? a.De.STORE_CHECKOUT_BASE_URL
-          : p(e, "https://steamloopback.host")
+          : g(e, "https://steamloopback.host")
           ? "https://steamloopback.host"
           : "";
       }
-      function g() {
+      function v() {
         const e = window.location.href;
-        return p(e, a.De.STORE_BASE_URL) || p(e, a.De.STORE_CHECKOUT_BASE_URL)
+        return g(e, a.De.STORE_BASE_URL) || g(e, a.De.STORE_CHECKOUT_BASE_URL)
           ? "store"
-          : p(e, a.De.COMMUNITY_BASE_URL)
+          : g(e, a.De.COMMUNITY_BASE_URL)
           ? "community"
-          : p(e, a.De.PARTNER_BASE_URL)
+          : g(e, a.De.PARTNER_BASE_URL)
           ? "partnerweb"
-          : p(e, a.De.HELP_BASE_URL)
+          : g(e, a.De.HELP_BASE_URL)
           ? "help"
-          : p(e, a.De.STEAMTV_BASE_URL)
+          : g(e, a.De.STEAMTV_BASE_URL)
           ? "steamtv"
-          : p(e, a.De.STATS_BASE_URL) || p(e, a.De.INTERNAL_STATS_BASE_URL)
+          : g(e, a.De.STATS_BASE_URL) || g(e, a.De.INTERNAL_STATS_BASE_URL)
           ? "stats"
           : "";
       }

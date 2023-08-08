@@ -11,25 +11,40 @@ span.leaderboard_displayname_hint {
 
 div.leaderboard_displayname {
 	float: right;
-	width: 15em;
+	width: 7em;
 }
 
 div.leaderboard_sortmethod {
 	float: right;
-	width: 8em;
+	width: 9em;
 }
 
 div.leaderboard_displaytype {
 	float: right;
-	width: 8em;
+	width: 9em;
 }
 
 div.leaderboard_onlytrustedwrites {
 	float: right;
-	width: 5em;
+	width: 6em;
 }
 
 div.leaderboard_onlyfriendsreads {
+	float: right;
+	width: 6em;
+}
+
+div.leaderboard_onlyusersinsameparty {
+	float: right;
+	width: 6em;
+}
+
+div.leaderboard_limitrangearounduser {
+	float: right;
+	width: 5em;
+}
+
+div.leaderboard_limitglobaltopentries {
 	float: right;
 	width: 5em;
 }

@@ -270,6 +270,25 @@
             ]
         },
         {
+            "name": "GetUserAgreementInfo",
+            "version": 2,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "SteamID of user making purchase"
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "AppID of game"
+                }
+            ]
+        },
+        {
             "name": "GetUserInfo",
             "version": 1,
             "httpmethod": "GET",

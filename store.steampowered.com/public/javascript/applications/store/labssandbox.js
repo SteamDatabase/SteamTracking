@@ -526,7 +526,7 @@
         f = a(59934),
         S = a(95184),
         y = a(57605),
-        C = a(78423),
+        C = a(36611),
         E = a(88464),
         v = a(19304);
       class w extends g.Component {

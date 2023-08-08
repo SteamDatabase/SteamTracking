@@ -139,7 +139,7 @@
     },
     14491: (e, t, r) => {
       "use strict";
-      r.r(t), r.d(t, { AccountPreferencesRoutes: () => M, default: () => B });
+      r.r(t), r.d(t, { AccountPreferencesRoutes: () => B, default: () => R });
       var s = r(89526),
         i = r(59934),
         n = r(33940),
@@ -892,13 +892,17 @@
           var u;
         });
       var w = r(35993);
-      const M = {
-          CookieSettings: () => "/cookiepreferences",
-          NotificationSettings: () => "/notificationsettings",
-        },
-        B = (e) => {
+      const M = {},
+        B = Object.assign(
+          {
+            CookieSettings: () => "/cookiepreferences",
+            NotificationSettings: () => "/notificationsettings",
+          },
+          M,
+        ),
+        R = (e) => {
           const t = e.match.url,
-            r = M;
+            r = B;
           return s.createElement(
             i.rs,
             null,
@@ -911,7 +915,6 @@
                   },
                 }),
             }),
-            ";",
             s.createElement(i.AW, {
               path: `${t}${r.NotificationSettings()}`,
               render: () =>
@@ -921,7 +924,7 @@
                   },
                 }),
             }),
-            ";",
+            !1,
           );
         };
     },

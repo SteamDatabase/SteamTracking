@@ -91,6 +91,24 @@
                     "type": "bool",
                     "optional": true,
                     "description": "if this is true the leaderboard scores can only be read for friends by clients, scores can always be read by publisher. Defaults to false."
+                },
+                {
+                    "name": "onlyusersinsameparty",
+                    "type": "bool",
+                    "optional": true,
+                    "description": "if this is true the leaderboard scores for SteamIDs can only be read for party members, scores can always be read by publisher. Defaults to false."
+                },
+                {
+                    "name": "limitrangearounduser",
+                    "type": "int32",
+                    "optional": true,
+                    "description": "limit the range of rows around user. Zero means unlimited. -1 means disabled. Positive is plus/minus limit. Defaults to zero."
+                },
+                {
+                    "name": "limitglobaltopentries",
+                    "type": "int32",
+                    "optional": true,
+                    "description": "limit the top of the leaderboard. Zero means unlimited. -1 means disabled. Positive is limit to TOP(N). Defaults to zero."
                 }
             ]
         },
@@ -140,6 +158,24 @@
                     "type": "bool",
                     "optional": true,
                     "description": "if this is true the leaderboard scores can only be read for friends by clients, scores can always be read by publisher. Defaults to false."
+                },
+                {
+                    "name": "onlyusersinsameparty",
+                    "type": "bool",
+                    "optional": true,
+                    "description": "if this is true the leaderboard scores for SteamIDs can only be read for party members, scores can always be read by publisher. Defaults to false."
+                },
+                {
+                    "name": "limitrangearounduser",
+                    "type": "int32",
+                    "optional": true,
+                    "description": "limit the range of rows around user. Zero means unlimited. -1 means disabled. Positive is plus/minus limit. Defaults to zero."
+                },
+                {
+                    "name": "limitglobaltopentries",
+                    "type": "int32",
+                    "optional": true,
+                    "description": "limit the top of the leaderboard. Zero means unlimited. -1 means disabled. Positive is limit to TOP(N). Defaults to zero."
                 }
             ]
         },

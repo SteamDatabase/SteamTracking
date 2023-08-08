@@ -7388,7 +7388,7 @@
       var Me = a(11491),
         Oe = a(82079),
         Pe = a(47165),
-        Fe = a(32009),
+        Fe = a(48743),
         Xe = a(25745),
         je = a(35388),
         He = a(5615);
@@ -15368,7 +15368,7 @@
           t > 0 ? this.m_mapVisible.set(e, t) : this.m_mapVisible.delete(e);
         }
       }
-      var $i = a(78423),
+      var $i = a(36611),
         eo = a(54856),
         to = a(19094),
         ao = (a(57361), a(53143)),
@@ -16676,7 +16676,7 @@
                   n.createElement(Co.w, {
                     className: (0, G.Z)(fo.ClaimButton, "ClaimButton"),
                     bPreviewMode: r,
-                    rewardType: 11,
+                    rewardType: 0,
                     strButtonOverride:
                       (null ===
                         (a =
@@ -28990,7 +28990,7 @@
           null,
         );
       var la = a(70369),
-        sa = a(78423),
+        sa = a(36611),
         ca = a(38512),
         da = a(29770),
         ma = a(24448),
@@ -36090,7 +36090,7 @@
         l = a(65729),
         s = a(89526),
         c = a(46132),
-        d = a(78423),
+        d = a(36611),
         m = a(85651),
         u = a(41194),
         _ = a(93513),

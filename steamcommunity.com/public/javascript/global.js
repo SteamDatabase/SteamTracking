@@ -994,48 +994,6 @@ function HandleNewDynamicLink( newDynamicLinkElement )
 	}
 }
 
-function ShowAdultContentWarningDialog( $Link, appid, publishedFileID, callbackFunc )
-{
-	$J.get(
-		'https://steamcommunity.com/sharedfiles/ajaxgetmaturecontentwarningdialog/',
-		{
-			'appid': appid,
-			'publishedfileid' : publishedFileID
-		}
-	).done( function( data ) {
-		switch( data.success )
-		{
-			case 1:
-			{
-				if ( callbackFunc )
-				{
-					var dialog = ShowConfirmDialog('Content May Not Be Appropriate For All Ages', data['html'], 'View Content' );
-					dialog.done( function ( action ) {
-						if ( callbackFunc )
-						{
-							callbackFunc();
-						}
-					});
-				}
-				else
-				{
-					ShowAlertDialog('Content May Not Be Appropriate For All Ages', data['html'] );
-				}
-			}
-			break;
-
-			default:
-			{
-				if ( callbackFunc )
-				{
-					callbackFunc();
-				}
-			}
-			break;
-		} // switch
-	} );
-}
-
 function UGCAdultContentPreferencesMenu( elSource )
 {
 	var $El = $J(this);
@@ -1044,17 +1002,6 @@ function UGCAdultContentPreferencesMenu( elSource )
 
 	var appid = $elSource.data('appid');
 	var publishedFileID = $elSource.data('publishedfileid');
-
-	// warning
-	{
-		var fnViewWarning = function ()
-		{
-			ShowAdultContentWarningDialog( $elSource, appid, publishedFileID, null );
-			return true;
-		};
-		var $elViewWarning = $J( '<div/>' ).click( fnViewWarning ).text( 'View Mature Content Warning' ).addClass( 'option' );
-		$El.append( $elViewWarning );
-	}
 
 	// preferences
 	{

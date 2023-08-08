@@ -125,6 +125,11 @@
         floatRight: "youtubeembed_floatRight_1VimJ",
       };
     },
+    22534: (e) => {
+      e.exports = {
+        AddToCartAnchorCtn: "addtocartbutton_AddToCartAnchorCtn_2SDuo",
+      };
+    },
     55079: (e) => {
       e.exports = {
         DevSummaryCtn: "creatorhomeembed_DevSummaryCtn_ekp1E",
@@ -582,7 +587,7 @@
       var i = r(33940),
         n = r(89526),
         a = r(46132),
-        s = r(78423),
+        s = r(36611),
         o = r(44026),
         l = r(51438),
         d = r(98009),
@@ -1431,7 +1436,7 @@
     62983: (e, t, r) => {
       "use strict";
       r.d(t, { bk: () => i });
-      r(78423), r(54671), r(57858), r(85886), r(32765);
+      r(36611), r(54671), r(57858), r(85886), r(32765);
       const i = {
         include_assets: !0,
         include_release: !0,
@@ -1744,7 +1749,7 @@
       var i = r(33940),
         n = r(50265),
         a = r(24174),
-        s = r(78423);
+        s = r(36611);
       const o = {
         bBroadcastEnabled: !1,
         broadcastChatSetting: "hide",
@@ -10794,14 +10799,12 @@
               (this.m_dtAvailabilityStartTime = k(i, "availabilityStartTime")),
               (this.m_dtPublishTime = k(i, "publishTime")),
               (this.m_nMinimumUpdatePeriod = L(i, "minimumUpdatePeriod")),
-              (this.m_nTimeShiftBufferDepth = L(i, "timeShiftBufferDepth")),
-              !(
-                this.m_dtAvailabilityStartTime &&
-                this.m_dtPublishTime &&
-                this.m_nMinimumUpdatePeriod &&
-                this.m_nMinBufferTime &&
-                this.m_nTimeShiftBufferDepth
-              ))
+              (this.m_nTimeShiftBufferDepth =
+                L(i, "timeShiftBufferDepth") || 0),
+              !this.m_dtAvailabilityStartTime ||
+                !this.m_dtPublishTime ||
+                !this.m_nMinimumUpdatePeriod ||
+                null === this.m_nMinBufferTime)
             )
               return !1;
           } else {
@@ -11243,7 +11246,7 @@
               if (!e.IsLiveContent()) return 0;
               let i = H(t);
               return (
-                (r - t.segmentTemplate.nStartNumber) * i -
+                (r - t.segmentTemplate.nStartNumber + 1) * i -
                 e.GetDurationSinceStarted()
               );
             })(this.m_mpd, this.m_representation, this.m_nNextSegment);
@@ -12135,7 +12138,7 @@
             let t = Math.floor(this.m_mpd.GetDurationSinceStarted() / 1e3),
               r = this.GetBufferedLiveEdgeTime(),
               i = this.m_mpd.GetTimeShiftBufferDepth();
-            e = S.Lh(t - i + 10, 0, r);
+            (e = i ? t - i + 10 : 0), (e = S.Lh(e, 0, r));
           } else e = this.m_mpd.GetStartTime();
           return e;
         }
@@ -12165,11 +12168,14 @@
               : this.Seek(this.GetCurrentPlayTime());
         }
         Pause() {
+          var e, t;
           (this.m_bUserLiveEdgeChoice = !1),
-            1.1 == this.m_elVideo.playbackRate &&
-              (this.m_elVideo.playbackRate = 1),
+            1.1 ==
+              (null === (e = this.m_elVideo) || void 0 === e
+                ? void 0
+                : e.playbackRate) && (this.m_elVideo.playbackRate = 1),
             (this.m_bUserPlayChoice = !1),
-            this.m_elVideo.pause();
+            null === (t = this.m_elVideo) || void 0 === t || t.pause();
         }
         GetPlaybackRate() {
           return this.m_elVideo.paused ? 0 : this.m_elVideo.playbackRate;
@@ -12287,25 +12293,28 @@
                 t.ChangeRepresentation(e);
               }
           }
-          let e = -1 != this.m_nSeekingToTime ? this.m_nSeekingToTime : 0;
-          if (((this.m_nSeekingToTime = -1), this.IsLiveContent())) {
+          let e = 0;
+          if (this.IsLiveContent()) {
             let t = this.GetVideoLoader().GetCurrentSegmentDurationMS(),
               r = 1e3 * this.m_mpd.GetMinBufferTime(),
               i = Math.max(t, r);
-            this.SetTrackBufferMS(i),
-              (e = this.GetBufferedLiveEdgeTime()),
+            this.SetTrackBufferMS(i);
+            let n = this.GetBufferedLiveEdgeTime();
+            (e = this.m_nSeekingToTime >= 0 ? this.m_nSeekingToTime : n),
               (0, u.yv)(
-                `Begin playback of live content [this.buffer=${this.m_nTrackBufferMS}][nStartTime=${e}]`,
+                `Begin playback of live content [this.buffer=${this.m_nTrackBufferMS}][nStartTime=${e}][nLiveEdge=${n}]`,
               );
           } else
             this.SetTrackBufferMS(8e3),
+              (e = this.m_nSeekingToTime >= 0 ? this.m_nSeekingToTime : 0),
               this.m_bookMarkAdapter &&
                 ((e = this.m_bookMarkAdapter.GetBeginPlaytime()),
                 this.m_mpd.GetEndTime() - e < 5 && (e = 0)),
               (0, u.yv)(
                 `Begin playback of non-live content [this.buffer=${this.m_nTrackBufferMS}][nStartTime=${e}]`,
               );
-          (0, u.yv)("Starting playback at " + e),
+          (this.m_nSeekingToTime = -1),
+            (0, u.yv)("Starting playback at " + e),
             this.m_stats.SetSegmentDurationMS(
               this.GetVideoLoader().GetCurrentSegmentDurationMS(),
             ),
@@ -12477,7 +12486,12 @@
             bubbles: !0,
             detail: t,
           });
-          this.m_elVideo.dispatchEvent(r);
+          this.m_elVideo
+            ? this.m_elVideo.dispatchEvent(r)
+            : console.error(
+                `dashplayer: attempting to fire ${e} when elVideo not set`,
+                t,
+              );
         }
         IsMuted() {
           return this.m_elVideo.muted;
@@ -14082,7 +14096,7 @@
         n = r(52868),
         a = r.n(n),
         s = r(50265),
-        o = r(78423),
+        o = r(36611),
         l = r(23217),
         d = r(26464),
         m = r(85246),
@@ -14500,7 +14514,7 @@
       "use strict";
       r.d(t, { C: () => s, Z: () => o });
       var i = r(46132),
-        n = r(78423),
+        n = r(36611),
         a = r(14826);
       function s(e, t, r) {
         if (((null != e && null != e) || (e = t), !r || 0 === r.length))
@@ -15921,16 +15935,17 @@
     },
     54671: (e, t, r) => {
       "use strict";
-      r.d(t, { LA: () => u, jg: () => c });
+      r.d(t, { LA: () => p, jg: () => u });
       var i = r(33940),
         n = r(52868),
         a = r.n(n),
         s = r(50265),
         o = r(23217),
         l = r(32765),
-        d = r(89526);
-      const m = "unUserdataVersion";
-      class c {
+        d = r(89526),
+        m = r(60161);
+      const c = "unUserdataVersion";
+      class u {
         BIsLoaded() {
           return this.m_bIsLoaded;
         }
@@ -16071,7 +16086,7 @@
         }
         InternalLoad() {
           return (0, i.mG)(this, void 0, void 0, function* () {
-            let e = window.localStorage.getItem(m) || "0",
+            let e = window.localStorage.getItem(c) || "0",
               t = {
                 v: "0" == e ? void 0 : e,
                 id: "" + l.L7.accountid,
@@ -16274,7 +16289,7 @@
             return o.data;
           });
         }
-        AddToCart(e, t, r, n, s, o) {
+        AddToCart(e, t, r, n, s, o, d) {
           return (0, i.mG)(this, void 0, void 0, function* () {
             const i = new FormData();
             i.append("action", "add_to_cart"),
@@ -16284,14 +16299,15 @@
               s && i.append("snr", s),
               i.append("sessionid", l.De.SESSIONID),
               i.append("quantity", "1");
+            const c = (0, m.RA)(e);
             try {
               yield a().post(r, i, { withCredentials: !0 }),
-                e.preventDefault(),
-                this.InvalidateCache(),
-                (window.location.href = n);
+                this.InvalidateCache(c),
+                d || (e.preventDefault(), (c.location.href = n));
             } catch (e) {
-              console.log("HandleOnAddToCart"), console.log(e);
+              return console.log("HandleOnAddToCart", e), !1;
             }
+            return !0;
           });
         }
         AddLicenseForFreeGame(e) {
@@ -16349,21 +16365,20 @@
         BIsPreferredPlatform(e) {
           return this.m_setPreferredPlatforms.has(e);
         }
-        InvalidateCache() {
-          window.localStorage.setItem(
-            m,
-            (
-              Number.parseInt(window.localStorage.getItem(m) || "0") + 1
-            ).toString(),
+        InvalidateCache(e) {
+          const t = e || window;
+          t.localStorage.setItem(
+            c,
+            (Number.parseInt(t.localStorage.getItem(c) || "0") + 1).toString(),
           );
         }
         static Get() {
           return (
-            c.s_globalSingletonStore ||
-              ((c.s_globalSingletonStore = new c()),
+            u.s_globalSingletonStore ||
+              ((u.s_globalSingletonStore = new u()),
               "dev" == l.De.WEB_UNIVERSE &&
-                (window.DUS = c.s_globalSingletonStore)),
-            c.s_globalSingletonStore
+                (window.DUS = u.s_globalSingletonStore)),
+            u.s_globalSingletonStore
           );
         }
         constructor() {
@@ -16394,56 +16409,56 @@
             (this.m_bAjaxInFlight = !1);
         }
       }
-      function u() {
-        const [e, t] = (0, d.useState)(!c.Get().BIsLoaded());
+      function p() {
+        const [e, t] = (0, d.useState)(!u.Get().BIsLoaded());
         return (
           (0, d.useEffect)(() => {
             e &&
-              c
+              u
                 .Get()
                 .HintLoad()
-                .finally(() => t(!c.Get().BIsLoaded()));
+                .finally(() => t(!u.Get().BIsLoaded()));
           }, [e]),
-          [e, c.Get()]
+          [e, u.Get()]
         );
       }
-      (0, i.gn)([s.LO], c.prototype, "m_setWishList", void 0),
-        (0, i.gn)([s.LO], c.prototype, "m_setOwnedPackages", void 0),
-        (0, i.gn)([s.LO], c.prototype, "m_setOwnedApps", void 0),
-        (0, i.gn)([s.LO], c.prototype, "m_setFollowedApps", void 0),
-        (0, i.gn)([s.LO], c.prototype, "m_setExcludedTagsIds", void 0),
+      (0, i.gn)([s.LO], u.prototype, "m_setWishList", void 0),
+        (0, i.gn)([s.LO], u.prototype, "m_setOwnedPackages", void 0),
+        (0, i.gn)([s.LO], u.prototype, "m_setOwnedApps", void 0),
+        (0, i.gn)([s.LO], u.prototype, "m_setFollowedApps", void 0),
+        (0, i.gn)([s.LO], u.prototype, "m_setExcludedTagsIds", void 0),
         (0, i.gn)(
           [s.LO],
-          c.prototype,
+          u.prototype,
           "m_setExcludedContentDescriptors",
           void 0,
         ),
-        (0, i.gn)([s.LO], c.prototype, "m_setRecommendedApps", void 0),
-        (0, i.gn)([s.LO], c.prototype, "m_mapIgnoredApps", void 0),
-        (0, i.gn)([s.LO], c.prototype, "m_mapIgnoredPackages", void 0),
-        (0, i.gn)([s.LO], c.prototype, "m_setCuratorsFollowed", void 0),
-        (0, i.gn)([s.LO], c.prototype, "m_setCuratorsIgnored", void 0),
+        (0, i.gn)([s.LO], u.prototype, "m_setRecommendedApps", void 0),
+        (0, i.gn)([s.LO], u.prototype, "m_mapIgnoredApps", void 0),
+        (0, i.gn)([s.LO], u.prototype, "m_mapIgnoredPackages", void 0),
+        (0, i.gn)([s.LO], u.prototype, "m_setCuratorsFollowed", void 0),
+        (0, i.gn)([s.LO], u.prototype, "m_setCuratorsIgnored", void 0),
         (0, i.gn)(
           [s.LO],
-          c.prototype,
+          u.prototype,
           "m_bShowFilteredUserReviewScores",
           void 0,
         ),
-        (0, i.gn)([s.LO], c.prototype, "m_primaryLanguage", void 0),
-        (0, i.gn)([s.LO], c.prototype, "m_secondaryLanguages", void 0),
-        (0, i.gn)([s.LO], c.prototype, "m_setRecommendedTags", void 0),
+        (0, i.gn)([s.LO], u.prototype, "m_primaryLanguage", void 0),
+        (0, i.gn)([s.LO], u.prototype, "m_secondaryLanguages", void 0),
+        (0, i.gn)([s.LO], u.prototype, "m_setRecommendedTags", void 0),
         (0, i.gn)(
           [s.LO],
-          c.prototype,
+          u.prototype,
           "m_mapRecommendingCuratorsForApp",
           void 0,
         ),
-        (0, i.gn)([s.LO], c.prototype, "m_setPackagesInCart", void 0),
-        (0, i.gn)([s.LO], c.prototype, "m_setAppsInCart", void 0),
-        (0, i.gn)([s.LO], c.prototype, "m_nCartLineItemCount", void 0),
-        (0, i.gn)([s.LO], c.prototype, "m_bAjaxInFlight", void 0),
-        (0, i.gn)([s.Fl], c.prototype, "ExcludedContentDescriptor", null),
-        (0, i.gn)([s.aD], c.prototype, "UpdateAppIgnore", null);
+        (0, i.gn)([s.LO], u.prototype, "m_setPackagesInCart", void 0),
+        (0, i.gn)([s.LO], u.prototype, "m_setAppsInCart", void 0),
+        (0, i.gn)([s.LO], u.prototype, "m_nCartLineItemCount", void 0),
+        (0, i.gn)([s.LO], u.prototype, "m_bAjaxInFlight", void 0),
+        (0, i.gn)([s.Fl], u.prototype, "ExcludedContentDescriptor", null),
+        (0, i.gn)([s.aD], u.prototype, "UpdateAppIgnore", null);
     },
     72329: (e, t, r) => {
       "use strict";
@@ -20923,7 +20938,7 @@
     },
     17133: (e, t, r) => {
       "use strict";
-      r.d(t, { a: () => R });
+      r.d(t, { a: () => F });
       var i = r(89526),
         n = r(98009),
         a = r(54671),
@@ -20936,163 +20951,165 @@
         u = r(71161),
         p = r(1631),
         h = r.n(p),
-        _ = r(33940),
-        g = r(5615),
-        y = r(54856),
-        S = r(27070),
-        f = r(57361),
-        v = r(45878),
-        b = r(29063);
-      const B = v.Message;
-      class w extends B {
+        _ = r(22534),
+        g = r.n(_),
+        y = r(33940),
+        S = r(5615),
+        f = r(54856),
+        v = r(27070),
+        b = r(57361),
+        B = r(45878),
+        w = r(29063);
+      const E = B.Message;
+      class C extends E {
         constructor(e = null) {
           super(),
-            w.prototype.packageid || b.aR(w.M()),
-            B.initialize(this, e, 0, -1, void 0, null);
+            C.prototype.packageid || w.aR(C.M()),
+            E.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            w.sm_m ||
-              (w.sm_m = {
-                proto: w,
+            C.sm_m ||
+              (C.sm_m = {
+                proto: C,
                 fields: {
-                  packageid: { n: 1, br: b.FE.readInt32, bw: b.Xc.writeInt32 },
+                  packageid: { n: 1, br: w.FE.readInt32, bw: w.Xc.writeInt32 },
                   country_code: {
                     n: 2,
-                    br: b.FE.readString,
-                    bw: b.Xc.writeString,
+                    br: w.FE.readString,
+                    bw: w.Xc.writeString,
                   },
                 },
               }),
-            w.sm_m
+            C.sm_m
           );
         }
         static MBF() {
-          return w.sm_mbf || (w.sm_mbf = b.Bh(w.M())), w.sm_mbf;
+          return C.sm_mbf || (C.sm_mbf = w.Bh(C.M())), C.sm_mbf;
         }
         toObject(e = !1) {
-          return w.toObject(e, this);
+          return C.toObject(e, this);
         }
         static toObject(e, t) {
-          return b.TA(w.M(), e, t);
+          return w.TA(C.M(), e, t);
         }
         static fromObject(e) {
-          return b.aD(w.M(), e);
+          return w.aD(C.M(), e);
         }
         static deserializeBinary(e) {
-          let t = new v.BinaryReader(e),
-            r = new w();
-          return w.deserializeBinaryFromReader(r, t);
+          let t = new B.BinaryReader(e),
+            r = new C();
+          return C.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return b.F(w.MBF(), e, t);
+          return w.F(C.MBF(), e, t);
         }
         serializeBinary() {
-          var e = new v.BinaryWriter();
-          return w.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          var e = new B.BinaryWriter();
+          return C.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          b.l2(w.M(), e, t);
+          w.l2(C.M(), e, t);
         }
         serializeBase64String() {
-          var e = new v.BinaryWriter();
-          return w.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          var e = new B.BinaryWriter();
+          return C.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CPhysicalGoods_CheckInventoryAvailableByPackage_Request";
         }
       }
-      class E extends B {
+      class D extends E {
         constructor(e = null) {
           super(),
-            E.prototype.inventory_available || b.aR(E.M()),
-            B.initialize(this, e, 0, -1, void 0, null);
+            D.prototype.inventory_available || w.aR(D.M()),
+            E.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            E.sm_m ||
-              (E.sm_m = {
-                proto: E,
+            D.sm_m ||
+              (D.sm_m = {
+                proto: D,
                 fields: {
                   inventory_available: {
                     n: 1,
-                    br: b.FE.readBool,
-                    bw: b.Xc.writeBool,
+                    br: w.FE.readBool,
+                    bw: w.Xc.writeBool,
                   },
                   high_pending_orders: {
                     n: 2,
-                    br: b.FE.readBool,
-                    bw: b.Xc.writeBool,
+                    br: w.FE.readBool,
+                    bw: w.Xc.writeBool,
                   },
                 },
               }),
-            E.sm_m
+            D.sm_m
           );
         }
         static MBF() {
-          return E.sm_mbf || (E.sm_mbf = b.Bh(E.M())), E.sm_mbf;
+          return D.sm_mbf || (D.sm_mbf = w.Bh(D.M())), D.sm_mbf;
         }
         toObject(e = !1) {
-          return E.toObject(e, this);
+          return D.toObject(e, this);
         }
         static toObject(e, t) {
-          return b.TA(E.M(), e, t);
+          return w.TA(D.M(), e, t);
         }
         static fromObject(e) {
-          return b.aD(E.M(), e);
+          return w.aD(D.M(), e);
         }
         static deserializeBinary(e) {
-          let t = new v.BinaryReader(e),
-            r = new E();
-          return E.deserializeBinaryFromReader(r, t);
+          let t = new B.BinaryReader(e),
+            r = new D();
+          return D.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return b.F(E.MBF(), e, t);
+          return w.F(D.MBF(), e, t);
         }
         serializeBinary() {
-          var e = new v.BinaryWriter();
-          return E.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          var e = new B.BinaryWriter();
+          return D.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          b.l2(E.M(), e, t);
+          w.l2(D.M(), e, t);
         }
         serializeBase64String() {
-          var e = new v.BinaryWriter();
-          return E.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          var e = new B.BinaryWriter();
+          return D.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CPhysicalGoods_CheckInventoryAvailableByPackage_Response";
         }
       }
-      var C;
+      var I;
       !(function (e) {
         e.CheckInventoryAvailableByPackage = function (e, t) {
           return e.SendMsg(
             "PhysicalGoods.CheckInventoryAvailableByPackage#1",
-            (0, y.MD)(w, t),
-            E,
+            (0, f.MD)(C, t),
+            D,
             { bConstMethod: !0, ePrivilege: 0, eWebAPIKeyRequirement: 1 },
           );
         };
-      })(C || (C = {}));
-      var D = r(44973);
-      const I = { high_pending_orders: !1, inventory_available: !0 };
-      function T(e) {
-        const t = (0, S.sG)(),
-          r = (0, g.useQuery)(
+      })(I || (I = {}));
+      var T = r(44973);
+      const A = { high_pending_orders: !1, inventory_available: !0 };
+      function R(e) {
+        const t = (0, v.sG)(),
+          r = (0, S.useQuery)(
             [
-              (null == e ? void 0 : e.GetID()) || f.kI,
+              (null == e ? void 0 : e.GetID()) || b.kI,
               (null == e ? void 0 : e.GetStoreItemType()) || "invalid",
             ],
             () =>
               (function (e, t) {
-                return (0, _.mG)(this, void 0, void 0, function* () {
+                return (0, y.mG)(this, void 0, void 0, function* () {
                   if (!e || 1 !== e.GetStoreItemType() || 10 !== e.GetAppType())
-                    return I;
-                  const r = y.gA.Init(w);
+                    return A;
+                  const r = f.gA.Init(C);
                   r.Body().set_packageid(e.GetID()),
-                    r.Body().set_country_code(D.L7.country_code);
-                  const i = yield C.CheckInventoryAvailableByPackage(t, r);
+                    r.Body().set_country_code(T.L7.country_code);
+                  const i = yield I.CheckInventoryAvailableByPackage(t, r);
                   if (1 !== i.GetEResult())
                     throw (
                       (console.error(
@@ -21114,68 +21131,39 @@
           );
         return r.isLoading ? null : r.data;
       }
-      var A = r(3301);
-      function R(e) {
+      var G = r(3301);
+      function F(e) {
         var t;
-        const { info: r, className: p } = e,
-          _ = (0, u.bJ)(),
-          g = (0, i.useRef)({ include_release: !0 }),
-          [y] = (0, o.jk)(r.id, (0, s.TM)(r.type), g.current),
-          S = T(y);
+        const { info: r, className: c } = e,
+          p = (0, u.bJ)(),
+          _ = (0, i.useRef)({ include_release: !0 }),
+          [g] = (0, o.jk)(r.id, (0, s.TM)(r.type), _.current),
+          y = R(g);
         (0, i.useEffect)(() => {
           a.jg.Get().HintLoad();
         }, []);
-        const f = (0, i.useCallback)(
-            (e) => {
-              const t = `${c.De.STORE_BASE_URL}cart`,
-                i = `${c.De.STORE_BASE_URL}cart/addtocart`,
-                s = (0, n.mY)(_);
-              if (
-                2 == (null == y ? void 0 : y.GetStoreItemType()) ||
-                (null == y ? void 0 : y.GetBestPurchaseOption().bundleid)
-              ) {
-                const n =
-                  2 == (null == y ? void 0 : y.GetStoreItemType())
-                    ? r.id
-                    : null == y
-                    ? void 0
-                    : y.GetBestPurchaseOption().bundleid;
-                a.jg.Get().AddToCart(e, null, i, t, s, n);
-              } else
-                a.jg
-                  .Get()
-                  .AddToCart(
-                    e,
-                    null == y ? void 0 : y.GetBestPurchaseOption().packageid,
-                    i,
-                    t,
-                    s,
-                  );
-            },
-            [y, _],
-          ),
-          v = (0, i.useCallback)(() => {
-            (0, l.R6)(
-              window,
-              `steam://run/${null == y ? void 0 : y.GetAppIDToRun()}`,
-            );
-          }, [y]);
-        if (!y || 8 == y.GetAppType()) return null;
-        const b =
-          y.BIsFree() ||
-          "0" == y.GetBestPurchasePriceFormatted() ||
-          y.GetBestPurchaseOption().discount_pct >= 100;
-        if (1 == y.GetStoreItemType())
-          if (10 == y.GetAppType()) {
-            if (!S)
-              return i.createElement(A.V, {
+        const S = (0, i.useCallback)(() => {
+          (0, l.R6)(
+            window,
+            `steam://run/${null == g ? void 0 : g.GetAppIDToRun()}`,
+          );
+        }, [g]);
+        if (!g || 8 == g.GetAppType()) return null;
+        const f =
+          g.BIsFree() ||
+          "0" == g.GetBestPurchasePriceFormatted() ||
+          g.GetBestPurchaseOption().discount_pct >= 100;
+        if (1 == g.GetStoreItemType())
+          if (10 == g.GetAppType()) {
+            if (!y)
+              return i.createElement(G.V, {
                 size: "small",
                 position: "center",
               });
-            if (!S.inventory_available)
+            if (!y.inventory_available)
               return i.createElement(
                 "div",
-                { className: (0, d.Z)(h().Action, p) },
+                { className: (0, d.Z)(h().Action, c) },
                 i.createElement(
                   "span",
                   null,
@@ -21183,41 +21171,90 @@
                   (0, m.Xx)("#Sale_ReserveExhausted"),
                 ),
               );
-          } else if (b && y.GetIncludedAppIDs().length > 1) return null;
-        if (0 == y.GetStoreItemType()) {
+          } else if (f && g.GetIncludedAppIDs().length > 1) return null;
+        if (0 == g.GetStoreItemType()) {
           if (
-            y.BIsComingSoon() &&
-            !(null === (t = y.GetBestPurchaseOption()) || void 0 === t
+            g.BIsComingSoon() &&
+            !(null === (t = g.GetBestPurchaseOption()) || void 0 === t
               ? void 0
               : t.packageid)
           )
             return null;
-          const e = a.jg.Get().BOwnsApp(y.GetAppID());
-          if (e && 10 === y.GetAppType()) return null;
-          if (e || b) {
+          const e = a.jg.Get().BOwnsApp(g.GetAppID());
+          if (e && 10 === g.GetAppType()) return null;
+          if (e || f) {
             const t =
               (e && (0, m.Xx)("#EventDisplay_CallToAction_PlayNow")) ||
               (0, m.Xx)("#EventDisplay_CallToAction_PlayNowForFree");
             return i.createElement(
               "div",
-              { className: (0, d.Z)(h().Action, p), onClick: v },
+              { className: (0, d.Z)(h().Action, c), onClick: S },
               i.createElement("span", null, t),
             );
           }
-          if ("" == y.GetBestPurchasePriceFormatted()) {
-            const e = (0, n.Hf)(y.GetStorePageURL(), _);
+          if ("" == g.GetBestPurchasePriceFormatted()) {
+            const e = (0, n.Hf)(g.GetStorePageURL(), p);
             return i.createElement(
               "a",
-              { href: e, className: (0, d.Z)(h().Action, p) },
+              { href: e, className: (0, d.Z)(h().Action, c) },
               (0, m.Xx)("#EventDisplay_CallToAction_VisitStore"),
             );
           }
         }
-        return i.createElement(
-          "div",
-          { className: (0, d.Z)(h().Action, p), onClick: f },
-          i.createElement("span", null, (0, m.Xx)("#Store_AddToCart")),
-        );
+        return i.createElement(M, { className: c, storeItem: g, info: r });
+      }
+      function M(e) {
+        const { className: t, storeItem: r, info: s } = e,
+          o = (0, u.bJ)(),
+          l = !c.De.FROM_WEB && c.De.IN_CLIENT,
+          p = (0, i.useCallback)(
+            (e) => {
+              const t = `${c.De.STORE_BASE_URL}cart`,
+                i = `${c.De.STORE_BASE_URL}cart/addtocart`,
+                d = (0, n.mY)(o),
+                m = l;
+              if (
+                2 == (null == r ? void 0 : r.GetStoreItemType()) ||
+                (null == r ? void 0 : r.GetBestPurchaseOption().bundleid)
+              ) {
+                const n =
+                  2 == (null == r ? void 0 : r.GetStoreItemType())
+                    ? s.id
+                    : null == r
+                    ? void 0
+                    : r.GetBestPurchaseOption().bundleid;
+                a.jg.Get().AddToCart(e, null, i, t, d, n, m);
+              } else
+                a.jg
+                  .Get()
+                  .AddToCart(
+                    e,
+                    null == r ? void 0 : r.GetBestPurchaseOption().packageid,
+                    i,
+                    t,
+                    d,
+                    void 0,
+                    m,
+                  );
+              return !0;
+            },
+            [l, r, o, s.id],
+          );
+        return l
+          ? i.createElement(
+              "div",
+              { className: (0, d.Z)(h().Action, g().AddToCartAnchorCtn, t) },
+              i.createElement(
+                "a",
+                { href: "steam://url/StoreCart", onClick: p },
+                (0, m.Xx)("#Store_AddToCart"),
+              ),
+            )
+          : i.createElement(
+              "div",
+              { className: (0, d.Z)(h().Action, t), onClick: p },
+              i.createElement("span", null, (0, m.Xx)("#Store_AddToCart")),
+            );
       }
     },
     6319: (e, t, r) => {
@@ -24086,7 +24123,7 @@
       var i = r(33940),
         n = r(62983),
         a = r(85886),
-        s = r(78423),
+        s = r(36611),
         o = r(54671),
         l = r(57858),
         d = r(32765),
@@ -24270,7 +24307,7 @@
         b = r.n(v),
         B = r(62983),
         w = r(54671),
-        E = r(78423),
+        E = r(36611),
         C = r(33940),
         D = r(32765),
         I = r(87361),
@@ -24573,6 +24610,7 @@
                     1 == (null == l ? void 0 : l.GetStoreItemType()) &&
                       1 == l.GetIncludedAppIDs().length &&
                       (d.id != l.GetIncludedAppIDs()[0] || "game" != d.type) &&
+                      10 != l.GetAppType() &&
                       !(null == r ? void 0 : r.current.token.reason))
                   ) {
                     const e = l.GetIncludedAppIDs()[0];
@@ -25135,7 +25173,7 @@
         n = r(52868),
         a = r.n(n),
         s = r(89526),
-        o = r(78423),
+        o = r(36611),
         l = r(98210),
         d = r(85886),
         m = r(25871),
@@ -25700,7 +25738,7 @@
       var i = r(33940),
         n = r(89526),
         a = r(46132),
-        s = r(78423),
+        s = r(36611),
         o = r(14826),
         l = r(207),
         d = r(32765),

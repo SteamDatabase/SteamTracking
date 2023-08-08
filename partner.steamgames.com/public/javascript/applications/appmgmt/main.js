@@ -989,7 +989,7 @@
             (e[(e.GAMEPAD_ANALOG_LAST = 50)] = "GAMEPAD_ANALOG_LAST");
         })(i || (i = {}));
     },
-    78423: (e, t, n) => {
+    36611: (e, t, n) => {
       "use strict";
       n.d(t, {
         mU: () => w,
@@ -1182,21 +1182,6 @@
             (e[(e.AudioPlayback_Idle = 3)] = "AudioPlayback_Idle");
         })(g || (g = {}));
       var C, v, f, b, E, S;
-      function w(e) {
-        return (
-          "game" === e ||
-          "dlc" === e ||
-          "software" === e ||
-          "music" === e ||
-          "application" === e ||
-          "demo" === e ||
-          "hardware" === e ||
-          "mod" === e ||
-          "video" == e ||
-          "beta" === e ||
-          "advertising" === e
-        );
-      }
       !(function (e) {
         (e[(e.Unknown = 0)] = "Unknown"),
           (e[(e.Wired = 1)] = "Wired"),
@@ -1244,6 +1229,21 @@
             (e[(e.k_EClientUINotificationFriendPersonaState = 3)] =
               "k_EClientUINotificationFriendPersonaState");
         })(S || (S = {}));
+      function w(e) {
+        return (
+          "game" === e ||
+          "dlc" === e ||
+          "software" === e ||
+          "music" === e ||
+          "application" === e ||
+          "demo" === e ||
+          "hardware" === e ||
+          "mod" === e ||
+          "video" == e ||
+          "beta" === e ||
+          "advertising" === e
+        );
+      }
       var y, R, I, D;
       !(function (e) {
         (e[(e.k_EComputerActiveStateInvalid = 0)] =
@@ -3096,7 +3096,7 @@
         s = n(60161),
         a = n(37377),
         l = n(26464),
-        c = n(78423),
+        c = n(36611),
         u = n(14826),
         d = n(32765),
         m = n(23801),
@@ -3145,7 +3145,7 @@
         C = n(16383),
         v = n(34433);
       function f() {
-        return "windows" === d.De.PLATFORM ? _.BackgroundTransparent : _.None;
+        return (0, d.Me)() ? _.BackgroundTransparent : _.None;
       }
       function b(e) {
         let t = _.None;
@@ -3269,9 +3269,8 @@
             "popup-created" == e.data && this.OnCreateInternal();
         }
         Show(e = c.IF.k_EWindowBringToFrontAndForceOS) {
-          var t, n;
-          let r;
-          (r =
+          let t;
+          (t =
             "boolean" == typeof e
               ? e
                 ? c.IF.k_EWindowBringToFrontAndForceOS
@@ -3279,66 +3278,59 @@
               : e),
             window.SteamClient && (this.m_rgParams.eCreationFlags |= _.Hidden),
             this.m_rgParams.eCreationFlags & _.NotFocusable &&
-              (r = c.IF.k_EWindowBringToFrontInvalid),
+              (t = c.IF.k_EWindowBringToFrontInvalid),
             this.BIsValid() &&
               (this.BIsClosed()
                 ? ((this.m_popup = void 0), (this.m_element = void 0))
-                : r != c.IF.k_EWindowBringToFrontInvalid && this.Focus(r));
-          let i,
-            o,
-            s,
-            a = I.GetExistingPopup(this.m_strName);
-          (a && !this.m_rgParams.replace_existing_popup) ||
+                : t != c.IF.k_EWindowBringToFrontInvalid && this.Focus(t));
+          let n,
+            r,
+            i,
+            o = I.GetExistingPopup(this.m_strName);
+          (o && !this.m_rgParams.replace_existing_popup) ||
             ((this.m_rgParams = this.UpdateParamsBeforeShow(this.m_rgParams)),
-            a
-              ? ((o = a.m_element),
-                (i = a.m_popup),
-                a.ReleasePopup(),
-                (s = a.m_renderWhenReady),
-                I.RemoveTrackedPopup(a),
-                i.removeEventListener("beforeunload", a.OnBeforeUnloadEvent),
-                i.removeEventListener("unload", a.OnUnload),
-                i.removeEventListener("resize", a.OnResizeEvent),
-                i.removeEventListener("focus", this.OnFocusInternal),
-                i.removeEventListener("blur", this.OnBlurInternal),
-                i.removeEventListener("drop", a.OnDrop),
-                i.removeEventListener("dragover", a.OnDragOver),
-                i.removeEventListener("message", this.OnMessage))
-              : (({ popup: i, element: o } = R.CreatePopup(
+            o
+              ? ((r = o.m_element),
+                (n = o.m_popup),
+                o.ReleasePopup(),
+                (i = o.m_renderWhenReady),
+                I.RemoveTrackedPopup(o),
+                n.removeEventListener("beforeunload", o.OnBeforeUnloadEvent),
+                n.removeEventListener("unload", o.OnUnload),
+                n.removeEventListener("resize", o.OnResizeEvent),
+                n.removeEventListener("focus", this.OnFocusInternal),
+                n.removeEventListener("blur", this.OnBlurInternal),
+                n.removeEventListener("drop", o.OnDrop),
+                n.removeEventListener("dragover", o.OnDragOver),
+                n.removeEventListener("message", this.OnMessage))
+              : (({ popup: n, element: r } = R.CreatePopup(
                   this.m_strName,
                   this.m_rgParams,
                 )),
-                (s = new p(i.document, o))),
-            i &&
-              o &&
-              ((i.document.title = this.m_strTitle),
-              i.addEventListener("beforeunload", this.OnBeforeUnloadEvent),
-              i.addEventListener("unload", this.OnUnload),
-              i.addEventListener("resize", this.OnResizeEvent),
-              i.addEventListener("focus", this.OnFocusInternal),
-              i.addEventListener("blur", this.OnBlurInternal),
-              i.addEventListener("drop", this.OnDrop),
-              i.addEventListener("dragover", this.OnDragOver),
-              i.addEventListener("message", this.OnMessage),
+                (i = new p(n.document, r))),
+            n &&
+              r &&
+              ((n.document.title = this.m_strTitle),
+              n.addEventListener("beforeunload", this.OnBeforeUnloadEvent),
+              n.addEventListener("unload", this.OnUnload),
+              n.addEventListener("resize", this.OnResizeEvent),
+              n.addEventListener("focus", this.OnFocusInternal),
+              n.addEventListener("blur", this.OnBlurInternal),
+              n.addEventListener("drop", this.OnDrop),
+              n.addEventListener("dragover", this.OnDragOver),
+              n.addEventListener("message", this.OnMessage),
               d.De.LANGUAGE &&
-                i.document.documentElement.setAttribute("lang", (0, u.CE)()),
-              (this.m_popup = i),
-              (this.m_element = o),
-              (this.m_renderWhenReady = s),
+                n.document.documentElement.setAttribute("lang", (0, u.CE)()),
+              (this.m_popup = n),
+              (this.m_element = r),
+              (this.m_renderWhenReady = i),
               this.m_renderWhenReady.SetTarget(() =>
-                this.RenderInternal(this.m_popup, this.m_element, r),
+                this.RenderInternal(this.m_popup, this.m_element, t),
               )),
             I.AddTrackedPopup(this),
-            a
-              ? (this.OnCreateInternal(),
-                r != c.IF.k_EWindowBringToFrontInvalid && this.Focus(r))
-              : (null ===
-                  (n =
-                    null === (t = SteamClient.Features) || void 0 === t
-                      ? void 0
-                      : t.SteamInitsPopups) || void 0 === n
-                  ? void 0
-                  : n.call(t)) || this.OnCreateInternal());
+            o &&
+              (this.OnCreateInternal(),
+              t != c.IF.k_EWindowBringToFrontInvalid && this.Focus(t)));
         }
         RemoveEventListeners() {
           this.window.removeEventListener(
@@ -3850,48 +3842,49 @@
     },
     86777: (e, t, n) => {
       "use strict";
-      n.d(t, { B: () => l });
+      n.d(t, { B: () => c });
       var r = n(89526),
         i = n(73070);
       const o = r.createContext({ body_class: "" });
       function s() {
         return r.useContext(o);
       }
-      var a = n(46132);
-      function l(e, t, n) {
+      var a = n(46132),
+        l = n(19304);
+      function c(e, t, n) {
         const i = r.useRef(),
-          [o, l] = r.useState(void 0),
-          u = s();
+          [o, c] = r.useState(void 0),
+          d = s();
         return (
           i.current ||
-            (i.current = new c(
+            (i.current = new u(
               e,
               (function (e, t) {
                 return Object.assign(Object.assign({}, e), {
-                  body_class: e.body_class + " " + t.body_class,
+                  body_class: (0, l.Z)(e.body_class, t.body_class),
                 });
-              })(t, u),
-              l,
+              })(t, d),
+              c,
             )),
           (i.current.m_callbacks = n),
           r.useEffect(() => {
-            let e = t.bNoFocusOnShow
-              ? a.IF.k_EWindowBringToFrontWithoutForcingOS
-              : a.IF.k_EWindowBringToFrontAndForceOS;
-            return (
-              i.current.Show(e),
-              () => {
-                var e, t;
-                (i.current.m_callbacks = void 0),
-                  (null === (e = i.current.window) || void 0 === e
-                    ? void 0
-                    : e.SteamClient.Window.SetHideOnClose) &&
-                    (null === (t = i.current.window) ||
-                      void 0 === t ||
-                      t.SteamClient.Window.SetHideOnClose(!1)),
-                  i.current.Close();
-              }
-            );
+            if (!i.current.params.bNoInitialShow) {
+              let e = i.current.params.bNoFocusOnShow
+                ? a.IF.k_EWindowBringToFrontWithoutForcingOS
+                : a.IF.k_EWindowBringToFrontAndForceOS;
+              i.current.Show(e);
+            }
+            return () => {
+              var e, t;
+              (i.current.m_callbacks = void 0),
+                (null === (e = i.current.window) || void 0 === e
+                  ? void 0
+                  : e.SteamClient.Window.SetHideOnClose) &&
+                  (null === (t = i.current.window) ||
+                    void 0 === t ||
+                    t.SteamClient.Window.SetHideOnClose(!1)),
+                i.current.Close();
+            };
           }, []),
           r.useEffect(() => {
             var e, n;
@@ -3905,7 +3898,7 @@
           { popup: i.current.window, element: o, popupObj: i.current }
         );
       }
-      class c extends i.K3 {
+      class u extends i.K3 {
         constructor(e, t, n) {
           super(e, t), (this.m_fnReadyToRender = n);
         }
@@ -4077,7 +4070,7 @@
         s = n(32053),
         a = n(58123),
         l = n(77872),
-        c = n(78423),
+        c = n(36611),
         u = n(73070),
         d = n(16383),
         m = n(4306),
@@ -4260,7 +4253,7 @@
         );
       }
       var v = n(78330),
-        f = n(71862),
+        f = n(72566),
         b = n(19304);
       const E = (0, d.Yt)("GamepadNavigationContext", () =>
           i.createContext(null),
@@ -4859,7 +4852,7 @@
         u = n(32053),
         d = n(88045);
       const m = (0, i.createContext)(null);
-      var h = n(71862);
+      var h = n(72566);
       const p = i.forwardRef(function (e, t) {
         const {
             "flow-children": n,
@@ -11550,15 +11543,15 @@
         });
       }
     },
-    71862: (e, t, n) => {
+    72566: (e, t, n) => {
       "use strict";
       n.d(t, { Ze: () => c });
       var r = n(33940),
         i = n(89526),
         o = n(50265),
-        s = n(78423),
+        s = n(36611),
         a = n(50454);
-      n(4306), n(85246);
+      n(4306);
       new a.s("VR");
       class l {
         constructor() {
@@ -11647,16 +11640,17 @@
       }
       function c(e, t) {
         const [n, r] = i.useState(),
-          o = i.useRef();
+          o = i.useCallback(() => !0, []),
+          a = i.useRef();
         return (
-          (o.current = t),
+          (a.current = null != t ? t : o),
           i.useEffect(() => {
             const t = () => {
                 var t, r, i;
-                const a = o.current && o.current();
-                u.SetInteractionAffordance(n, e, a),
+                const o = a.current && a.current();
+                u.SetInteractionAffordance(n, e, o),
                   2 == e &&
-                    a &&
+                    o &&
                     (null ===
                       (i =
                         null ===
@@ -11678,8 +11672,8 @@
                 var t, r, i;
                 u.SetInteractionAffordance(n, e, !1),
                   2 == e &&
-                    o.current &&
-                    o.current() &&
+                    a.current &&
+                    a.current() &&
                     (null ===
                       (i =
                         null ===
@@ -17138,7 +17132,7 @@
       });
       var r = n(33940),
         i = n(89526),
-        o = (n(78423), n(40971), n(99825));
+        o = (n(36611), n(40971), n(99825));
       function s(e) {
         const { none: t, partial: n } = e,
           o = (0, r._T)(e, ["none", "partial"]);
@@ -18409,7 +18403,7 @@
       }
       (0, m.gn)([p.a], g.prototype, "PollGamepads", null),
         (0, m.gn)([p.a], g.prototype, "OnWindowRegainedFocus", null);
-      var C = n(78423),
+      var C = n(36611),
         v = n(18061);
       const f = {
           [v.A.GAMEPAD_BUTTON_A]: h.eV.OK,
@@ -21762,7 +21756,7 @@
             hideClose: o,
             hideMin: m,
             hideMax: h,
-            bOSX: p = "macos" == l.De.PLATFORM,
+            bOSX: p = (0, l.Uy)(),
             bForceWindowFocused: _,
             onMinimize: g,
             onMaximize: C,
@@ -22964,7 +22958,7 @@
       });
       var r = n(89526),
         i = n(46132),
-        o = n(78423),
+        o = n(36611),
         s = n(32765),
         a = n(11837),
         l = n(85246),
@@ -24052,7 +24046,7 @@
         r.useEffect(() => {
           if (e && n)
             return (
-              e.addEventListener(t, n, i), () => e.removeEventListener(t, n)
+              e.addEventListener(t, n, i), () => e.removeEventListener(t, n, i)
             );
         }, [e, t, n]);
       }
@@ -24335,10 +24329,12 @@
         De: () => s.De,
         Ek: () => l.Ek,
         JA: () => s.JA,
-        Kc: () => _,
+        Kc: () => C,
         L7: () => s.L7,
+        Me: () => p,
+        Uy: () => _,
         Wj: () => s.Wj,
-        Zv: () => g,
+        Zv: () => v,
         fI: () => d,
         h4: () => h,
         id: () => m,
@@ -24348,7 +24344,7 @@
         y9: () => l.y9,
       });
       var r = n(89526),
-        i = n(78423),
+        i = n(36611),
         o = n(23801),
         s = n(44973),
         a = n(87458),
@@ -24367,41 +24363,34 @@
         };
       function d(e) {
         var t;
-        const {
-            IN_GAMEPADUI: n,
-            IN_DESKTOPUI: i,
-            IN_VR: o,
-            SIMULATING_VR_ON_DESKTOP: l,
-            children: d,
-          } = e,
-          m = u({ bSuppressAssert: !0 }),
-          h =
+        const { IN_GAMEPADUI: n, IN_DESKTOPUI: i, IN_VR: o, children: l } = e,
+          d = u({ bSuppressAssert: !0 }),
+          m =
             null === (t = (0, a.g3)()) || void 0 === t
               ? void 0
               : t.startsWith("Gamepad VR"),
-          p = r.useMemo(() => {
+          h = r.useMemo(() => {
             var e, t, r;
             return {
               IN_GAMEPADUI:
                 null !==
-                  (e = null != n ? n : null == m ? void 0 : m.IN_GAMEPADUI) &&
+                  (e = null != n ? n : null == d ? void 0 : d.IN_GAMEPADUI) &&
                 void 0 !== e
                   ? e
                   : s.De.IN_GAMEPADUI,
               IN_DESKTOPUI:
                 null !==
-                  (t = null != i ? i : null == m ? void 0 : m.IN_DESKTOPUI) &&
+                  (t = null != i ? i : null == d ? void 0 : d.IN_DESKTOPUI) &&
                 void 0 !== t &&
                 t,
               IN_VR:
-                null !== (r = null != o ? o : null == m ? void 0 : m.IN_VR) &&
+                null !== (r = null != o ? o : null == d ? void 0 : d.IN_VR) &&
                 void 0 !== r
                   ? r
-                  : h,
-              SIMULATING_VR_ON_DESKTOP: null != l && l,
+                  : m,
             };
-          }, [m, n, i, o, l, h]);
-        return r.createElement(c.Provider, { value: p }, d);
+          }, [d, n, i, o, m]);
+        return r.createElement(c.Provider, { value: h }, l);
       }
       function m(e) {
         const t = u(e);
@@ -24410,48 +24399,54 @@
       function h() {
         return s.De.EREALM === i.IN.k_ESteamRealmChina;
       }
-      function p(e, t) {
-        return 0 != t.length && e.startsWith(t);
+      function p() {
+        return "windows" == s.De.PLATFORM;
       }
       function _() {
+        return "macos" == s.De.PLATFORM;
+      }
+      function g(e, t) {
+        return 0 != t.length && e.startsWith(t);
+      }
+      function C() {
         if (!window || !window.location || !window.location.href)
           return console.warn("Unable to determine base url!"), "unknown";
         const e = window.location.href;
-        return p(e, s.De.STORE_BASE_URL)
+        return g(e, s.De.STORE_BASE_URL)
           ? s.De.STORE_BASE_URL
-          : p(e, s.De.COMMUNITY_BASE_URL)
+          : g(e, s.De.COMMUNITY_BASE_URL)
           ? s.De.COMMUNITY_BASE_URL
-          : p(e, s.De.CHAT_BASE_URL)
+          : g(e, s.De.CHAT_BASE_URL)
           ? s.De.CHAT_BASE_URL
-          : p(e, s.De.PARTNER_BASE_URL)
+          : g(e, s.De.PARTNER_BASE_URL)
           ? s.De.PARTNER_BASE_URL
-          : p(e, s.De.HELP_BASE_URL)
+          : g(e, s.De.HELP_BASE_URL)
           ? s.De.HELP_BASE_URL
-          : p(e, s.De.STEAMTV_BASE_URL)
+          : g(e, s.De.STEAMTV_BASE_URL)
           ? s.De.STEAMTV_BASE_URL
-          : p(e, s.De.STATS_BASE_URL)
+          : g(e, s.De.STATS_BASE_URL)
           ? s.De.STATS_BASE_URL
-          : p(e, s.De.INTERNAL_STATS_BASE_URL)
+          : g(e, s.De.INTERNAL_STATS_BASE_URL)
           ? s.De.INTERNAL_STATS_BASE_URL
-          : p(e, s.De.STORE_CHECKOUT_BASE_URL)
+          : g(e, s.De.STORE_CHECKOUT_BASE_URL)
           ? s.De.STORE_CHECKOUT_BASE_URL
-          : p(e, "https://steamloopback.host")
+          : g(e, "https://steamloopback.host")
           ? "https://steamloopback.host"
           : "";
       }
-      function g() {
+      function v() {
         const e = window.location.href;
-        return p(e, s.De.STORE_BASE_URL) || p(e, s.De.STORE_CHECKOUT_BASE_URL)
+        return g(e, s.De.STORE_BASE_URL) || g(e, s.De.STORE_CHECKOUT_BASE_URL)
           ? "store"
-          : p(e, s.De.COMMUNITY_BASE_URL)
+          : g(e, s.De.COMMUNITY_BASE_URL)
           ? "community"
-          : p(e, s.De.PARTNER_BASE_URL)
+          : g(e, s.De.PARTNER_BASE_URL)
           ? "partnerweb"
-          : p(e, s.De.HELP_BASE_URL)
+          : g(e, s.De.HELP_BASE_URL)
           ? "help"
-          : p(e, s.De.STEAMTV_BASE_URL)
+          : g(e, s.De.STEAMTV_BASE_URL)
           ? "steamtv"
-          : p(e, s.De.STATS_BASE_URL) || p(e, s.De.INTERNAL_STATS_BASE_URL)
+          : g(e, s.De.STATS_BASE_URL) || g(e, s.De.INTERNAL_STATS_BASE_URL)
           ? "stats"
           : "";
       }
@@ -25050,7 +25045,7 @@
             n.e(3504),
             n.e(7334),
             n.e(2136),
-          ]).then(n.bind(n, 47381)),
+          ]).then(n.bind(n, 39607)),
         ),
         G = c.lazy(() =>
           Promise.all([n.e(4023), n.e(2856), n.e(5117), n.e(5676)]).then(

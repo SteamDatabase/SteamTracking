@@ -2248,32 +2248,6 @@ div.apppartnereventspage_EventDetailsBody_AWjK8 {
 .discoveryqueuewidget_Placeholder_3rUZ- {
   height: 200px;
 }
-.salelabels_SectionLabelCtn_17xMe {
-  display: flex;
-  flex-direction: row;
-  flex-grow: 1;
-}
-.salelabels_SectionLabelCtn_17xMe .salelabels_SectionLabelRight_3B4Ic {
-  margin-left: auto;
-  display: flex;
-}
-.salelabels_SectionLabelCtn_17xMe .salelabels_SectionLabelLinkButton_1bw3D {
-  background: #4a2a3c;
-  padding: 4px 10px;
-  border-radius: 3px;
-  border: 1px solid #50484c;
-  height: fit-content;
-  text-transform: uppercase;
-  font-weight: bold;
-}
-.salelabels_SectionLabelCtn_17xMe
-  .salelabels_SectionLabelLinkButton_1bw3D:hover {
-  background: #7a5a6c;
-  border-color: #fff;
-}
-.salelabels_SectionTitleInnerCtn_2R3H5 {
-  margin-bottom: 10px;
-}
 .salehilightplayerembed_MediaContainer_1o87v {
   flex: 1;
   min-width: 284px;
@@ -2449,6 +2423,35 @@ div.apppartnereventspage_EventDetailsBody_AWjK8 {
 }
 .salehilightplayerembed_PresenterEventScreenshotThumbnail_2kvxa {
   height: auto;
+}
+.salelabels_SectionLabelCtn_17xMe {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+}
+.salelabels_SectionLabelCtn_17xMe .salelabels_SectionLabelRight_3B4Ic {
+  margin-left: auto;
+  display: flex;
+}
+.salelabels_SectionLabelCtn_17xMe .salelabels_SectionLabelLinkButton_1bw3D {
+  background: #4a2a3c;
+  padding: 4px 10px;
+  border-radius: 3px;
+  border: 1px solid #50484c;
+  height: fit-content;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.salelabels_SectionLabelCtn_17xMe
+  .salelabels_SectionLabelLinkButton_1bw3D:hover {
+  background: #7a5a6c;
+  border-color: #fff;
+}
+.salelabels_SectionTitleInnerCtn_2R3H5 {
+  margin-bottom: 10px;
+}
+.salepurchaseonlydisplay_Dummy_OWgHc {
+  background-color: hotpink;
 }
 .salepointshopsmartdisplay_RewardCtn_2iyxZ {
   display: flex;

@@ -2621,7 +2621,7 @@
         (0, i.gn)([s.aD], se.prototype, "SetAvatarHash", null),
         (0, i.gn)([s.aD], se.prototype, "RevertToComittedAvatarHash", null);
       var le = r(59934),
-        me = r(78423),
+        me = r(36611),
         ce = r(27070),
         de = (r(35266), r(73961)),
         pe = r(1099),

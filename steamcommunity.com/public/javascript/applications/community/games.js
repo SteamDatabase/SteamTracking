@@ -6713,6 +6713,7 @@
                 sort_as: e.sort_as() || at(e.name()),
                 playtime_forever: e.playtime_forever(),
                 playtime_2weeks: e.playtime_2weeks(),
+                playtime_disconnected: e.playtime_disconnected(),
                 rtime_last_played: st(e.rtime_last_played()),
                 capsule_filename: e.capsule_filename(),
                 has_dlc: e.has_dlc() || !1,
@@ -7078,7 +7079,7 @@
           }),
         );
       }
-      var Nt = r(78423),
+      var Nt = r(36611),
         It = r(40103),
         Lt = r(44026),
         kt = r(30928),
@@ -10699,7 +10700,10 @@
                 { className: qr.FactLabel },
                 (0, Et.Xx)("#GamesList_Header_TotalPlayed"),
               ),
-              (0, kr.W)(e.playtime_forever),
+              (0, kr.W)(
+                e.playtime_forever +
+                  (e.playtime_disconnected ? e.playtime_disconnected : 0),
+              ),
             ),
           r !== hi.RecentlyPlayed &&
             i &&

@@ -3247,7 +3247,7 @@
             (e[(e.GAMEPAD_ANALOG_LAST = 50)] = "GAMEPAD_ANALOG_LAST");
         })(i || (i = {}));
     },
-    6526: (e, t, r) => {
+    4977: (e, t, r) => {
       "use strict";
       r.d(t, {
         Su: () => _,
@@ -5265,7 +5265,7 @@
         s = r(161),
         o = r(7377),
         l = r(6464),
-        c = r(6526),
+        c = r(4977),
         u = r(4826),
         d = r(2765),
         m = r(3801),
@@ -5314,7 +5314,7 @@
         f = r(6383),
         b = r(4433);
       function v() {
-        return "windows" === d.De.PLATFORM ? p.BackgroundTransparent : p.None;
+        return (0, d.Me)() ? p.BackgroundTransparent : p.None;
       }
       function y(e) {
         let t = p.None;
@@ -5438,9 +5438,8 @@
             "popup-created" == e.data && this.OnCreateInternal();
         }
         Show(e = c.IF.k_EWindowBringToFrontAndForceOS) {
-          var t, r;
-          let n;
-          (n =
+          let t;
+          (t =
             "boolean" == typeof e
               ? e
                 ? c.IF.k_EWindowBringToFrontAndForceOS
@@ -5448,66 +5447,59 @@
               : e),
             window.SteamClient && (this.m_rgParams.eCreationFlags |= p.Hidden),
             this.m_rgParams.eCreationFlags & p.NotFocusable &&
-              (n = c.IF.k_EWindowBringToFrontInvalid),
+              (t = c.IF.k_EWindowBringToFrontInvalid),
             this.BIsValid() &&
               (this.BIsClosed()
                 ? ((this.m_popup = void 0), (this.m_element = void 0))
-                : n != c.IF.k_EWindowBringToFrontInvalid && this.Focus(n));
-          let i,
-            a,
-            s,
-            o = R.GetExistingPopup(this.m_strName);
-          (o && !this.m_rgParams.replace_existing_popup) ||
+                : t != c.IF.k_EWindowBringToFrontInvalid && this.Focus(t));
+          let r,
+            n,
+            i,
+            a = R.GetExistingPopup(this.m_strName);
+          (a && !this.m_rgParams.replace_existing_popup) ||
             ((this.m_rgParams = this.UpdateParamsBeforeShow(this.m_rgParams)),
-            o
-              ? ((a = o.m_element),
-                (i = o.m_popup),
-                o.ReleasePopup(),
-                (s = o.m_renderWhenReady),
-                R.RemoveTrackedPopup(o),
-                i.removeEventListener("beforeunload", o.OnBeforeUnloadEvent),
-                i.removeEventListener("unload", o.OnUnload),
-                i.removeEventListener("resize", o.OnResizeEvent),
-                i.removeEventListener("focus", this.OnFocusInternal),
-                i.removeEventListener("blur", this.OnBlurInternal),
-                i.removeEventListener("drop", o.OnDrop),
-                i.removeEventListener("dragover", o.OnDragOver),
-                i.removeEventListener("message", this.OnMessage))
-              : (({ popup: i, element: a } = C.CreatePopup(
+            a
+              ? ((n = a.m_element),
+                (r = a.m_popup),
+                a.ReleasePopup(),
+                (i = a.m_renderWhenReady),
+                R.RemoveTrackedPopup(a),
+                r.removeEventListener("beforeunload", a.OnBeforeUnloadEvent),
+                r.removeEventListener("unload", a.OnUnload),
+                r.removeEventListener("resize", a.OnResizeEvent),
+                r.removeEventListener("focus", this.OnFocusInternal),
+                r.removeEventListener("blur", this.OnBlurInternal),
+                r.removeEventListener("drop", a.OnDrop),
+                r.removeEventListener("dragover", a.OnDragOver),
+                r.removeEventListener("message", this.OnMessage))
+              : (({ popup: r, element: n } = C.CreatePopup(
                   this.m_strName,
                   this.m_rgParams,
                 )),
-                (s = new h(i.document, a))),
-            i &&
-              a &&
-              ((i.document.title = this.m_strTitle),
-              i.addEventListener("beforeunload", this.OnBeforeUnloadEvent),
-              i.addEventListener("unload", this.OnUnload),
-              i.addEventListener("resize", this.OnResizeEvent),
-              i.addEventListener("focus", this.OnFocusInternal),
-              i.addEventListener("blur", this.OnBlurInternal),
-              i.addEventListener("drop", this.OnDrop),
-              i.addEventListener("dragover", this.OnDragOver),
-              i.addEventListener("message", this.OnMessage),
+                (i = new h(r.document, n))),
+            r &&
+              n &&
+              ((r.document.title = this.m_strTitle),
+              r.addEventListener("beforeunload", this.OnBeforeUnloadEvent),
+              r.addEventListener("unload", this.OnUnload),
+              r.addEventListener("resize", this.OnResizeEvent),
+              r.addEventListener("focus", this.OnFocusInternal),
+              r.addEventListener("blur", this.OnBlurInternal),
+              r.addEventListener("drop", this.OnDrop),
+              r.addEventListener("dragover", this.OnDragOver),
+              r.addEventListener("message", this.OnMessage),
               d.De.LANGUAGE &&
-                i.document.documentElement.setAttribute("lang", (0, u.CE)()),
-              (this.m_popup = i),
-              (this.m_element = a),
-              (this.m_renderWhenReady = s),
+                r.document.documentElement.setAttribute("lang", (0, u.CE)()),
+              (this.m_popup = r),
+              (this.m_element = n),
+              (this.m_renderWhenReady = i),
               this.m_renderWhenReady.SetTarget(() =>
-                this.RenderInternal(this.m_popup, this.m_element, n),
+                this.RenderInternal(this.m_popup, this.m_element, t),
               )),
             R.AddTrackedPopup(this),
-            o
-              ? (this.OnCreateInternal(),
-                n != c.IF.k_EWindowBringToFrontInvalid && this.Focus(n))
-              : (null ===
-                  (r =
-                    null === (t = SteamClient.Features) || void 0 === t
-                      ? void 0
-                      : t.SteamInitsPopups) || void 0 === r
-                  ? void 0
-                  : r.call(t)) || this.OnCreateInternal());
+            a &&
+              (this.OnCreateInternal(),
+              t != c.IF.k_EWindowBringToFrontInvalid && this.Focus(t)));
         }
         RemoveEventListeners() {
           this.window.removeEventListener(
@@ -6019,48 +6011,49 @@
     },
     6777: (e, t, r) => {
       "use strict";
-      r.d(t, { B: () => l });
+      r.d(t, { B: () => c });
       var n = r(9526),
         i = r(3070);
       const a = n.createContext({ body_class: "" });
       function s() {
         return n.useContext(a);
       }
-      var o = r(6132);
-      function l(e, t, r) {
+      var o = r(6132),
+        l = r(9304);
+      function c(e, t, r) {
         const i = n.useRef(),
-          [a, l] = n.useState(void 0),
-          u = s();
+          [a, c] = n.useState(void 0),
+          d = s();
         return (
           i.current ||
-            (i.current = new c(
+            (i.current = new u(
               e,
               (function (e, t) {
                 return Object.assign(Object.assign({}, e), {
-                  body_class: e.body_class + " " + t.body_class,
+                  body_class: (0, l.Z)(e.body_class, t.body_class),
                 });
-              })(t, u),
-              l,
+              })(t, d),
+              c,
             )),
           (i.current.m_callbacks = r),
           n.useEffect(() => {
-            let e = t.bNoFocusOnShow
-              ? o.IF.k_EWindowBringToFrontWithoutForcingOS
-              : o.IF.k_EWindowBringToFrontAndForceOS;
-            return (
-              i.current.Show(e),
-              () => {
-                var e, t;
-                (i.current.m_callbacks = void 0),
-                  (null === (e = i.current.window) || void 0 === e
-                    ? void 0
-                    : e.SteamClient.Window.SetHideOnClose) &&
-                    (null === (t = i.current.window) ||
-                      void 0 === t ||
-                      t.SteamClient.Window.SetHideOnClose(!1)),
-                  i.current.Close();
-              }
-            );
+            if (!i.current.params.bNoInitialShow) {
+              let e = i.current.params.bNoFocusOnShow
+                ? o.IF.k_EWindowBringToFrontWithoutForcingOS
+                : o.IF.k_EWindowBringToFrontAndForceOS;
+              i.current.Show(e);
+            }
+            return () => {
+              var e, t;
+              (i.current.m_callbacks = void 0),
+                (null === (e = i.current.window) || void 0 === e
+                  ? void 0
+                  : e.SteamClient.Window.SetHideOnClose) &&
+                  (null === (t = i.current.window) ||
+                    void 0 === t ||
+                    t.SteamClient.Window.SetHideOnClose(!1)),
+                i.current.Close();
+            };
           }, []),
           n.useEffect(() => {
             var e, r;
@@ -6074,7 +6067,7 @@
           { popup: i.current.window, element: a, popupObj: i.current }
         );
       }
-      class c extends i.K3 {
+      class u extends i.K3 {
         constructor(e, t, r) {
           super(e, t), (this.m_fnReadyToRender = r);
         }
@@ -6246,7 +6239,7 @@
         s = r(2053),
         o = r(8123),
         l = r(2154),
-        c = r(6526),
+        c = r(4977),
         u = r(3070),
         d = r(6383),
         m = r(4306),
@@ -6429,7 +6422,7 @@
         );
       }
       var b = r(8330),
-        v = r(1862),
+        v = r(2566),
         y = r(9304);
       const B = (0, d.Yt)("GamepadNavigationContext", () =>
           i.createContext(null),
@@ -7028,7 +7021,7 @@
         u = r(2053),
         d = r(8045);
       const m = (0, i.createContext)(null);
-      var _ = r(1862);
+      var _ = r(2566);
       const h = i.forwardRef(function (e, t) {
         const {
             "flow-children": r,
@@ -14839,7 +14832,7 @@
       var ne = r(3801),
         ie = r(3217),
         ae = r(2765),
-        se = r(6526);
+        se = r(4977);
       const oe = o.Message;
       class le extends oe {
         constructor(e = null) {
@@ -17612,15 +17605,15 @@
         return l(e, 0, t, r);
       }
     },
-    1862: (e, t, r) => {
+    2566: (e, t, r) => {
       "use strict";
       r.d(t, { Ze: () => c });
       var n = r(3940),
         i = r(9526),
         a = r(265),
-        s = r(6526),
+        s = r(4977),
         o = r(454);
-      r(4306), r(5246);
+      r(4306);
       new o.s("VR");
       class l {
         constructor() {
@@ -17709,16 +17702,17 @@
       }
       function c(e, t) {
         const [r, n] = i.useState(),
-          a = i.useRef();
+          a = i.useCallback(() => !0, []),
+          o = i.useRef();
         return (
-          (a.current = t),
+          (o.current = null != t ? t : a),
           i.useEffect(() => {
             const t = () => {
                 var t, n, i;
-                const o = a.current && a.current();
-                u.SetInteractionAffordance(r, e, o),
+                const a = o.current && o.current();
+                u.SetInteractionAffordance(r, e, a),
                   2 == e &&
-                    o &&
+                    a &&
                     (null ===
                       (i =
                         null ===
@@ -17740,8 +17734,8 @@
                 var t, n, i;
                 u.SetInteractionAffordance(r, e, !1),
                   2 == e &&
-                    a.current &&
-                    a.current() &&
+                    o.current &&
+                    o.current() &&
                     (null ===
                       (i =
                         null ===
@@ -23095,7 +23089,7 @@
       });
       var n = r(3940),
         i = r(9526);
-      r(6526), r(971), r(9825);
+      r(4977), r(971), r(9825);
       function a(e) {
         const { direction: t } = e,
           r = (0, n._T)(e, ["direction"]);
@@ -23790,7 +23784,7 @@
       }
       (0, f.gn)([v.a], B.prototype, "PollGamepads", null),
         (0, f.gn)([v.a], B.prototype, "OnWindowRegainedFocus", null);
-      var E = r(6526),
+      var E = r(4977),
         w = r(8061);
       const S = {
           [w.A.GAMEPAD_BUTTON_A]: b.eV.OK,
@@ -26124,7 +26118,7 @@
             hideClose: a,
             hideMin: m,
             hideMax: _,
-            bOSX: h = "macos" == l.De.PLATFORM,
+            bOSX: h = (0, l.Uy)(),
             bForceWindowFocused: p,
             onMinimize: g,
             onMaximize: f,
@@ -27145,7 +27139,7 @@
       });
       var n = r(9526),
         i = r(6132),
-        a = r(6526),
+        a = r(4977),
         s = r(2765),
         o = r(1837),
         l = r(5246),
@@ -27987,7 +27981,7 @@
         n.useEffect(() => {
           if (e && r)
             return (
-              e.addEventListener(t, r, i), () => e.removeEventListener(t, r)
+              e.addEventListener(t, r, i), () => e.removeEventListener(t, r, i)
             );
         }, [e, t, r]);
       }
@@ -28182,9 +28176,11 @@
         De: () => s.De,
         Ek: () => o.Ek,
         JA: () => s.JA,
-        Kc: () => _,
+        Kc: () => p,
         L7: () => s.L7,
-        Zv: () => h,
+        Me: () => m,
+        Uy: () => _,
+        Zv: () => g,
         h4: () => d,
         id: () => u,
         ip: () => o.ip,
@@ -28193,7 +28189,7 @@
         y9: () => o.y9,
       });
       var n = r(9526),
-        i = r(6526),
+        i = r(4977),
         a = r(3801),
         s = r(4973),
         o = r(5006);
@@ -28216,48 +28212,54 @@
       function d() {
         return s.De.EREALM === i.IN.k_ESteamRealmChina;
       }
-      function m(e, t) {
-        return 0 != t.length && e.startsWith(t);
+      function m() {
+        return "windows" == s.De.PLATFORM;
       }
       function _() {
+        return "macos" == s.De.PLATFORM;
+      }
+      function h(e, t) {
+        return 0 != t.length && e.startsWith(t);
+      }
+      function p() {
         if (!window || !window.location || !window.location.href)
           return console.warn("Unable to determine base url!"), "unknown";
         const e = window.location.href;
-        return m(e, s.De.STORE_BASE_URL)
+        return h(e, s.De.STORE_BASE_URL)
           ? s.De.STORE_BASE_URL
-          : m(e, s.De.COMMUNITY_BASE_URL)
+          : h(e, s.De.COMMUNITY_BASE_URL)
           ? s.De.COMMUNITY_BASE_URL
-          : m(e, s.De.CHAT_BASE_URL)
+          : h(e, s.De.CHAT_BASE_URL)
           ? s.De.CHAT_BASE_URL
-          : m(e, s.De.PARTNER_BASE_URL)
+          : h(e, s.De.PARTNER_BASE_URL)
           ? s.De.PARTNER_BASE_URL
-          : m(e, s.De.HELP_BASE_URL)
+          : h(e, s.De.HELP_BASE_URL)
           ? s.De.HELP_BASE_URL
-          : m(e, s.De.STEAMTV_BASE_URL)
+          : h(e, s.De.STEAMTV_BASE_URL)
           ? s.De.STEAMTV_BASE_URL
-          : m(e, s.De.STATS_BASE_URL)
+          : h(e, s.De.STATS_BASE_URL)
           ? s.De.STATS_BASE_URL
-          : m(e, s.De.INTERNAL_STATS_BASE_URL)
+          : h(e, s.De.INTERNAL_STATS_BASE_URL)
           ? s.De.INTERNAL_STATS_BASE_URL
-          : m(e, s.De.STORE_CHECKOUT_BASE_URL)
+          : h(e, s.De.STORE_CHECKOUT_BASE_URL)
           ? s.De.STORE_CHECKOUT_BASE_URL
-          : m(e, "https://steamloopback.host")
+          : h(e, "https://steamloopback.host")
           ? "https://steamloopback.host"
           : "";
       }
-      function h() {
+      function g() {
         const e = window.location.href;
-        return m(e, s.De.STORE_BASE_URL) || m(e, s.De.STORE_CHECKOUT_BASE_URL)
+        return h(e, s.De.STORE_BASE_URL) || h(e, s.De.STORE_CHECKOUT_BASE_URL)
           ? "store"
-          : m(e, s.De.COMMUNITY_BASE_URL)
+          : h(e, s.De.COMMUNITY_BASE_URL)
           ? "community"
-          : m(e, s.De.PARTNER_BASE_URL)
+          : h(e, s.De.PARTNER_BASE_URL)
           ? "partnerweb"
-          : m(e, s.De.HELP_BASE_URL)
+          : h(e, s.De.HELP_BASE_URL)
           ? "help"
-          : m(e, s.De.STEAMTV_BASE_URL)
+          : h(e, s.De.STEAMTV_BASE_URL)
           ? "steamtv"
-          : m(e, s.De.STATS_BASE_URL) || m(e, s.De.INTERNAL_STATS_BASE_URL)
+          : h(e, s.De.STATS_BASE_URL) || h(e, s.De.INTERNAL_STATS_BASE_URL)
           ? "stats"
           : "";
       }
@@ -28515,7 +28517,7 @@
         g = r.n(p),
         f = r(265),
         b = r(6875),
-        v = r(6526),
+        v = r(4977),
         y = r(3801),
         B = r(6464),
         E = r(3217);

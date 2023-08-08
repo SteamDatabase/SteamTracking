@@ -5,16 +5,17 @@
   [7440],
   {
     54671: (e, t, s) => {
-      s.d(t, { LA: () => u, jg: () => l });
+      s.d(t, { LA: () => c, jg: () => u });
       var r = s(33940),
         a = s(52868),
         n = s.n(a),
         o = s(50265),
         i = s(23217),
         d = s(32765),
-        m = s(89526);
-      const p = "unUserdataVersion";
-      class l {
+        m = s(89526),
+        p = s(60161);
+      const l = "unUserdataVersion";
+      class u {
         BIsLoaded() {
           return this.m_bIsLoaded;
         }
@@ -155,7 +156,7 @@
         }
         InternalLoad() {
           return (0, r.mG)(this, void 0, void 0, function* () {
-            let e = window.localStorage.getItem(p) || "0",
+            let e = window.localStorage.getItem(l) || "0",
               t = {
                 v: "0" == e ? void 0 : e,
                 id: "" + d.L7.accountid,
@@ -358,7 +359,7 @@
             return i.data;
           });
         }
-        AddToCart(e, t, s, a, o, i) {
+        AddToCart(e, t, s, a, o, i, m) {
           return (0, r.mG)(this, void 0, void 0, function* () {
             const r = new FormData();
             r.append("action", "add_to_cart"),
@@ -368,14 +369,15 @@
               o && r.append("snr", o),
               r.append("sessionid", d.De.SESSIONID),
               r.append("quantity", "1");
+            const l = (0, p.RA)(e);
             try {
               yield n().post(s, r, { withCredentials: !0 }),
-                e.preventDefault(),
-                this.InvalidateCache(),
-                (window.location.href = a);
+                this.InvalidateCache(l),
+                m || (e.preventDefault(), (l.location.href = a));
             } catch (e) {
-              console.log("HandleOnAddToCart"), console.log(e);
+              return console.log("HandleOnAddToCart", e), !1;
             }
+            return !0;
           });
         }
         AddLicenseForFreeGame(e) {
@@ -433,21 +435,20 @@
         BIsPreferredPlatform(e) {
           return this.m_setPreferredPlatforms.has(e);
         }
-        InvalidateCache() {
-          window.localStorage.setItem(
-            p,
-            (
-              Number.parseInt(window.localStorage.getItem(p) || "0") + 1
-            ).toString(),
+        InvalidateCache(e) {
+          const t = e || window;
+          t.localStorage.setItem(
+            l,
+            (Number.parseInt(t.localStorage.getItem(l) || "0") + 1).toString(),
           );
         }
         static Get() {
           return (
-            l.s_globalSingletonStore ||
-              ((l.s_globalSingletonStore = new l()),
+            u.s_globalSingletonStore ||
+              ((u.s_globalSingletonStore = new u()),
               "dev" == d.De.WEB_UNIVERSE &&
-                (window.DUS = l.s_globalSingletonStore)),
-            l.s_globalSingletonStore
+                (window.DUS = u.s_globalSingletonStore)),
+            u.s_globalSingletonStore
           );
         }
         constructor() {
@@ -478,56 +479,56 @@
             (this.m_bAjaxInFlight = !1);
         }
       }
-      function u() {
-        const [e, t] = (0, m.useState)(!l.Get().BIsLoaded());
+      function c() {
+        const [e, t] = (0, m.useState)(!u.Get().BIsLoaded());
         return (
           (0, m.useEffect)(() => {
             e &&
-              l
+              u
                 .Get()
                 .HintLoad()
-                .finally(() => t(!l.Get().BIsLoaded()));
+                .finally(() => t(!u.Get().BIsLoaded()));
           }, [e]),
-          [e, l.Get()]
+          [e, u.Get()]
         );
       }
-      (0, r.gn)([o.LO], l.prototype, "m_setWishList", void 0),
-        (0, r.gn)([o.LO], l.prototype, "m_setOwnedPackages", void 0),
-        (0, r.gn)([o.LO], l.prototype, "m_setOwnedApps", void 0),
-        (0, r.gn)([o.LO], l.prototype, "m_setFollowedApps", void 0),
-        (0, r.gn)([o.LO], l.prototype, "m_setExcludedTagsIds", void 0),
+      (0, r.gn)([o.LO], u.prototype, "m_setWishList", void 0),
+        (0, r.gn)([o.LO], u.prototype, "m_setOwnedPackages", void 0),
+        (0, r.gn)([o.LO], u.prototype, "m_setOwnedApps", void 0),
+        (0, r.gn)([o.LO], u.prototype, "m_setFollowedApps", void 0),
+        (0, r.gn)([o.LO], u.prototype, "m_setExcludedTagsIds", void 0),
         (0, r.gn)(
           [o.LO],
-          l.prototype,
+          u.prototype,
           "m_setExcludedContentDescriptors",
           void 0,
         ),
-        (0, r.gn)([o.LO], l.prototype, "m_setRecommendedApps", void 0),
-        (0, r.gn)([o.LO], l.prototype, "m_mapIgnoredApps", void 0),
-        (0, r.gn)([o.LO], l.prototype, "m_mapIgnoredPackages", void 0),
-        (0, r.gn)([o.LO], l.prototype, "m_setCuratorsFollowed", void 0),
-        (0, r.gn)([o.LO], l.prototype, "m_setCuratorsIgnored", void 0),
+        (0, r.gn)([o.LO], u.prototype, "m_setRecommendedApps", void 0),
+        (0, r.gn)([o.LO], u.prototype, "m_mapIgnoredApps", void 0),
+        (0, r.gn)([o.LO], u.prototype, "m_mapIgnoredPackages", void 0),
+        (0, r.gn)([o.LO], u.prototype, "m_setCuratorsFollowed", void 0),
+        (0, r.gn)([o.LO], u.prototype, "m_setCuratorsIgnored", void 0),
         (0, r.gn)(
           [o.LO],
-          l.prototype,
+          u.prototype,
           "m_bShowFilteredUserReviewScores",
           void 0,
         ),
-        (0, r.gn)([o.LO], l.prototype, "m_primaryLanguage", void 0),
-        (0, r.gn)([o.LO], l.prototype, "m_secondaryLanguages", void 0),
-        (0, r.gn)([o.LO], l.prototype, "m_setRecommendedTags", void 0),
+        (0, r.gn)([o.LO], u.prototype, "m_primaryLanguage", void 0),
+        (0, r.gn)([o.LO], u.prototype, "m_secondaryLanguages", void 0),
+        (0, r.gn)([o.LO], u.prototype, "m_setRecommendedTags", void 0),
         (0, r.gn)(
           [o.LO],
-          l.prototype,
+          u.prototype,
           "m_mapRecommendingCuratorsForApp",
           void 0,
         ),
-        (0, r.gn)([o.LO], l.prototype, "m_setPackagesInCart", void 0),
-        (0, r.gn)([o.LO], l.prototype, "m_setAppsInCart", void 0),
-        (0, r.gn)([o.LO], l.prototype, "m_nCartLineItemCount", void 0),
-        (0, r.gn)([o.LO], l.prototype, "m_bAjaxInFlight", void 0),
-        (0, r.gn)([o.Fl], l.prototype, "ExcludedContentDescriptor", null),
-        (0, r.gn)([o.aD], l.prototype, "UpdateAppIgnore", null);
+        (0, r.gn)([o.LO], u.prototype, "m_setPackagesInCart", void 0),
+        (0, r.gn)([o.LO], u.prototype, "m_setAppsInCart", void 0),
+        (0, r.gn)([o.LO], u.prototype, "m_nCartLineItemCount", void 0),
+        (0, r.gn)([o.LO], u.prototype, "m_bAjaxInFlight", void 0),
+        (0, r.gn)([o.Fl], u.prototype, "ExcludedContentDescriptor", null),
+        (0, r.gn)([o.aD], u.prototype, "UpdateAppIgnore", null);
     },
     32905: (e, t, s) => {
       s.d(t, { X: () => l, _: () => u });

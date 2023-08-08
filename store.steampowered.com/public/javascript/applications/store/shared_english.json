@@ -2570,6 +2570,8 @@
     "Notification_NewGiftsPinned_Body_Plural": "%1$s New Gifts",
     "Notification_NewCommentPinned_Body": "%1$s New Comment",
     "Notification_NewCommentPinned_Body_Plural": "%1$s New Comments",
+    "Notification_ChatMessagePinned_Body": "%1$s New Chat Message",
+    "Notification_ChatMessagePinned_Body_Plural": "%1$s New Chat Messages",
     "Notification_FriendInvitePinned_Body": "%1$s New Friend Request",
     "Notification_FriendInvitePinned_Body_Plural": "%1$s New Friend Requests",
     "Notification_NewItemAnnouncementPinned_Body": "%1$s New Item in Your Inventory",
