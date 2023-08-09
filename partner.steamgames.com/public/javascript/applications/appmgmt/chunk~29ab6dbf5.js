@@ -1244,15 +1244,18 @@
                 1 ==
                   (null === (a = c.data) || void 0 === a ? void 0 : a.success)
               ) {
-                const n = this.m_mapRegistrations.get(t).get(e.opt_in_name);
-                n.jsondata = e;
-                const i = Object.assign({}, n);
+                const n = e.opt_in_name.startsWith("sale_")
+                    ? e.opt_in_name
+                    : "sale_" + e.opt_in_name,
+                  i = this.m_mapRegistrations.get(t).get(n);
+                i.jsondata = e;
+                const a = Object.assign({}, i);
                 return (
-                  this.m_mapRegistrations.get(t).set(e.opt_in_name, i),
+                  this.m_mapRegistrations.get(t).set(e.opt_in_name, a),
                   this.GetSingleAppRegistrationChange(
                     t,
                     e.opt_in_name,
-                  ).Dispatch(i),
+                  ).Dispatch(a),
                   null
                 );
               }
