@@ -82,6 +82,8 @@
     22534: (e) => {
       e.exports = {
         AddToCartAnchorCtn: "addtocartbutton_AddToCartAnchorCtn_2SDuo",
+        Action: "addtocartbutton_Action_2ECxA",
+        ActionOutOfStock: "addtocartbutton_ActionOutOfStock_I_6Pn",
       };
     },
     55079: (e) => {
@@ -15064,180 +15066,171 @@
         );
       }
     },
-    17133: (e, t, r) => {
+    3251: (e, t, r) => {
       "use strict";
       r.d(t, { a: () => R });
       var n = r(89526),
         a = r(98009),
-        i = r(54671),
-        s = r(85886),
-        o = r(25871),
-        l = r(75962),
-        d = r(19304),
-        c = r(14826),
-        m = r(32765),
-        u = r(71161),
-        p = r(1631),
-        _ = r.n(p),
-        h = r(22534),
-        g = r.n(h),
-        v = r(33940),
-        y = r(5615),
-        b = r(54856),
-        S = r(27070),
-        f = r(57361),
-        E = r(45878),
-        B = r(29063);
-      const w = E.Message;
-      class I extends w {
+        i = r(54671);
+      const s = (0, n.createContext)({}),
+        o = () => (0, n.useContext)(s);
+      var l = r(33940),
+        d = r(5615),
+        c = r(54856),
+        m = r(27070),
+        u = r(57361),
+        p = r(45878),
+        _ = r(29063);
+      const h = p.Message;
+      class g extends h {
         constructor(e = null) {
           super(),
-            I.prototype.packageid || B.aR(I.M()),
-            w.initialize(this, e, 0, -1, void 0, null);
+            g.prototype.packageid || _.aR(g.M()),
+            h.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            I.sm_m ||
-              (I.sm_m = {
-                proto: I,
+            g.sm_m ||
+              (g.sm_m = {
+                proto: g,
                 fields: {
-                  packageid: { n: 1, br: B.FE.readInt32, bw: B.Xc.writeInt32 },
+                  packageid: { n: 1, br: _.FE.readInt32, bw: _.Xc.writeInt32 },
                   country_code: {
                     n: 2,
-                    br: B.FE.readString,
-                    bw: B.Xc.writeString,
+                    br: _.FE.readString,
+                    bw: _.Xc.writeString,
                   },
                 },
               }),
-            I.sm_m
+            g.sm_m
           );
         }
         static MBF() {
-          return I.sm_mbf || (I.sm_mbf = B.Bh(I.M())), I.sm_mbf;
+          return g.sm_mbf || (g.sm_mbf = _.Bh(g.M())), g.sm_mbf;
         }
         toObject(e = !1) {
-          return I.toObject(e, this);
+          return g.toObject(e, this);
         }
         static toObject(e, t) {
-          return B.TA(I.M(), e, t);
+          return _.TA(g.M(), e, t);
         }
         static fromObject(e) {
-          return B.aD(I.M(), e);
+          return _.aD(g.M(), e);
         }
         static deserializeBinary(e) {
-          let t = new E.BinaryReader(e),
-            r = new I();
-          return I.deserializeBinaryFromReader(r, t);
+          let t = new p.BinaryReader(e),
+            r = new g();
+          return g.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return B.F(I.MBF(), e, t);
+          return _.F(g.MBF(), e, t);
         }
         serializeBinary() {
-          var e = new E.BinaryWriter();
-          return I.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          var e = new p.BinaryWriter();
+          return g.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          B.l2(I.M(), e, t);
+          _.l2(g.M(), e, t);
         }
         serializeBase64String() {
-          var e = new E.BinaryWriter();
-          return I.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          var e = new p.BinaryWriter();
+          return g.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CPhysicalGoods_CheckInventoryAvailableByPackage_Request";
         }
       }
-      class C extends w {
+      class v extends h {
         constructor(e = null) {
           super(),
-            C.prototype.inventory_available || B.aR(C.M()),
-            w.initialize(this, e, 0, -1, void 0, null);
+            v.prototype.inventory_available || _.aR(v.M()),
+            h.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            C.sm_m ||
-              (C.sm_m = {
-                proto: C,
+            v.sm_m ||
+              (v.sm_m = {
+                proto: v,
                 fields: {
                   inventory_available: {
                     n: 1,
-                    br: B.FE.readBool,
-                    bw: B.Xc.writeBool,
+                    br: _.FE.readBool,
+                    bw: _.Xc.writeBool,
                   },
                   high_pending_orders: {
                     n: 2,
-                    br: B.FE.readBool,
-                    bw: B.Xc.writeBool,
+                    br: _.FE.readBool,
+                    bw: _.Xc.writeBool,
                   },
                 },
               }),
-            C.sm_m
+            v.sm_m
           );
         }
         static MBF() {
-          return C.sm_mbf || (C.sm_mbf = B.Bh(C.M())), C.sm_mbf;
+          return v.sm_mbf || (v.sm_mbf = _.Bh(v.M())), v.sm_mbf;
         }
         toObject(e = !1) {
-          return C.toObject(e, this);
+          return v.toObject(e, this);
         }
         static toObject(e, t) {
-          return B.TA(C.M(), e, t);
+          return _.TA(v.M(), e, t);
         }
         static fromObject(e) {
-          return B.aD(C.M(), e);
+          return _.aD(v.M(), e);
         }
         static deserializeBinary(e) {
-          let t = new E.BinaryReader(e),
-            r = new C();
-          return C.deserializeBinaryFromReader(r, t);
+          let t = new p.BinaryReader(e),
+            r = new v();
+          return v.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return B.F(C.MBF(), e, t);
+          return _.F(v.MBF(), e, t);
         }
         serializeBinary() {
-          var e = new E.BinaryWriter();
-          return C.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          var e = new p.BinaryWriter();
+          return v.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          B.l2(C.M(), e, t);
+          _.l2(v.M(), e, t);
         }
         serializeBase64String() {
-          var e = new E.BinaryWriter();
-          return C.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          var e = new p.BinaryWriter();
+          return v.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CPhysicalGoods_CheckInventoryAvailableByPackage_Response";
         }
       }
-      var D;
+      var y;
       !(function (e) {
         e.CheckInventoryAvailableByPackage = function (e, t) {
           return e.SendMsg(
             "PhysicalGoods.CheckInventoryAvailableByPackage#1",
-            (0, b.MD)(I, t),
-            C,
+            (0, c.MD)(g, t),
+            v,
             { bConstMethod: !0, ePrivilege: 0, eWebAPIKeyRequirement: 1 },
           );
         };
-      })(D || (D = {}));
-      var T = r(44973);
-      const G = { high_pending_orders: !1, inventory_available: !0 };
-      function A(e) {
-        const t = (0, S.sG)(),
-          r = (0, y.useQuery)(
+      })(y || (y = {}));
+      var b = r(44973);
+      const S = { high_pending_orders: !1, inventory_available: !0 };
+      function f(e) {
+        const t = (0, m.sG)(),
+          r = (0, d.useQuery)(
             [
-              (null == e ? void 0 : e.GetID()) || f.kI,
+              (null == e ? void 0 : e.GetID()) || u.kI,
               (null == e ? void 0 : e.GetStoreItemType()) || "invalid",
             ],
             () =>
               (function (e, t) {
-                return (0, v.mG)(this, void 0, void 0, function* () {
+                return (0, l.mG)(this, void 0, void 0, function* () {
                   if (!e || 1 !== e.GetStoreItemType() || 10 !== e.GetAppType())
-                    return G;
-                  const r = b.gA.Init(I);
+                    return S;
+                  const r = c.gA.Init(g);
                   r.Body().set_packageid(e.GetID()),
-                    r.Body().set_country_code(T.L7.country_code);
-                  const n = yield D.CheckInventoryAvailableByPackage(t, r);
+                    r.Body().set_country_code(b.L7.country_code);
+                  const n = yield y.CheckInventoryAvailableByPackage(t, r);
                   if (1 !== n.GetEResult())
                     throw (
                       (console.error(
@@ -15259,88 +15252,96 @@
           );
         return r.isLoading ? null : r.data;
       }
-      var k = r(3301);
+      var E = r(85886),
+        B = r(25871),
+        w = r(75962),
+        I = r(19304),
+        C = r(14826),
+        D = r(32765),
+        T = r(71161),
+        G = r(3301),
+        A = r(22534),
+        k = r.n(A);
       function R(e) {
         var t;
-        const { info: r, className: m } = e,
-          p = (0, u.bJ)(),
-          h = (0, n.useRef)({ include_release: !0 }),
-          [g] = (0, o.jk)(r.id, (0, s.TM)(r.type), h.current),
-          v = A(g);
+        const { info: r, className: s } = e,
+          o = (0, T.bJ)(),
+          l = (0, n.useRef)({ include_release: !0 }),
+          [d] = (0, B.jk)(r.id, (0, E.TM)(r.type), l.current),
+          c = f(d);
         (0, n.useEffect)(() => {
           i.jg.Get().HintLoad();
         }, []);
-        const y = (0, n.useCallback)(() => {
-          (0, l.R6)(
+        const m = (0, n.useCallback)(() => {
+          (0, w.R6)(
             window,
-            `steam://run/${null == g ? void 0 : g.GetAppIDToRun()}`,
+            `steam://run/${null == d ? void 0 : d.GetAppIDToRun()}`,
           );
-        }, [g]);
-        if (!g || 8 == g.GetAppType()) return null;
-        const b =
-          g.BIsFree() ||
-          "0" == g.GetBestPurchasePriceFormatted() ||
-          g.GetBestPurchaseOption().discount_pct >= 100;
-        if (1 == g.GetStoreItemType())
-          if (10 == g.GetAppType()) {
-            if (!v)
-              return n.createElement(k.V, {
+        }, [d]);
+        if (!d || 8 == d.GetAppType()) return null;
+        const u =
+          d.BIsFree() ||
+          "0" == d.GetBestPurchasePriceFormatted() ||
+          d.GetBestPurchaseOption().discount_pct >= 100;
+        if (1 == d.GetStoreItemType())
+          if (10 == d.GetAppType()) {
+            if (!c)
+              return n.createElement(G.V, {
                 size: "small",
                 position: "center",
               });
-            if (!v.inventory_available)
+            if (!c.inventory_available)
               return n.createElement(
                 "div",
-                { className: (0, d.Z)(_().Action, m) },
+                { className: (0, I.Z)(k().ActionOutOfStock, s) },
                 n.createElement(
                   "span",
                   null,
                   " ",
-                  (0, c.Xx)("#Sale_ReserveExhausted"),
+                  (0, C.Xx)("#Sale_ReserveExhausted"),
                 ),
               );
-          } else if (b && g.GetIncludedAppIDs().length > 1) return null;
-        if (0 == g.GetStoreItemType()) {
+          } else if (u && d.GetIncludedAppIDs().length > 1) return null;
+        if (0 == d.GetStoreItemType()) {
           if (
-            g.BIsComingSoon() &&
-            !(null === (t = g.GetBestPurchaseOption()) || void 0 === t
+            d.BIsComingSoon() &&
+            !(null === (t = d.GetBestPurchaseOption()) || void 0 === t
               ? void 0
               : t.packageid)
           )
             return null;
-          const e = i.jg.Get().BOwnsApp(g.GetAppID());
-          if (e && 10 === g.GetAppType()) return null;
-          if (e || b) {
+          const e = i.jg.Get().BOwnsApp(d.GetAppID());
+          if (e && 10 === d.GetAppType()) return null;
+          if (e || u) {
             const t =
-              (e && (0, c.Xx)("#EventDisplay_CallToAction_PlayNow")) ||
-              (0, c.Xx)("#EventDisplay_CallToAction_PlayNowForFree");
+              (e && (0, C.Xx)("#EventDisplay_CallToAction_PlayNow")) ||
+              (0, C.Xx)("#EventDisplay_CallToAction_PlayNowForFree");
             return n.createElement(
               "div",
-              { className: (0, d.Z)(_().Action, m), onClick: y },
+              { className: (0, I.Z)(k().Action, s), onClick: m },
               n.createElement("span", null, t),
             );
           }
-          if ("" == g.GetBestPurchasePriceFormatted()) {
-            const e = (0, a.Hf)(g.GetStorePageURL(), p);
+          if ("" == d.GetBestPurchasePriceFormatted()) {
+            const e = (0, a.Hf)(d.GetStorePageURL(), o);
             return n.createElement(
               "a",
-              { href: e, className: (0, d.Z)(_().Action, m) },
-              (0, c.Xx)("#EventDisplay_CallToAction_VisitStore"),
+              { href: e, className: (0, I.Z)(k().Action, s) },
+              (0, C.Xx)("#EventDisplay_CallToAction_VisitStore"),
             );
           }
         }
-        return n.createElement(F, { className: m, storeItem: g, info: r });
+        return n.createElement(F, { className: s, storeItem: d, info: r });
       }
       function F(e) {
         const { className: t, storeItem: r, info: s } = e,
-          o = (0, u.bJ)(),
-          l = !m.De.FROM_WEB && m.De.IN_CLIENT,
-          p = (0, n.useCallback)(
+          l = (0, T.bJ)(),
+          d = o(),
+          c = (0, n.useCallback)(
             (e) => {
-              const t = `${m.De.STORE_BASE_URL}cart`,
-                n = `${m.De.STORE_BASE_URL}cart/addtocart`,
-                d = (0, a.mY)(o),
-                c = l;
+              const t = `${D.De.STORE_BASE_URL}cart`,
+                n = `${D.De.STORE_BASE_URL}cart/addtocart`,
+                o = (0, a.mY)(l);
               if (
                 2 == (null == r ? void 0 : r.GetStoreItemType()) ||
                 (null == r ? void 0 : r.GetBestPurchaseOption().bundleid)
@@ -15351,7 +15352,7 @@
                     : null == r
                     ? void 0
                     : r.GetBestPurchaseOption().bundleid;
-                i.jg.Get().AddToCart(e, null, n, t, d, a, c);
+                i.jg.Get().AddToCart(e, null, n, t, o, a, d);
               } else
                 i.jg
                   .Get()
@@ -15360,29 +15361,19 @@
                     null == r ? void 0 : r.GetBestPurchaseOption().packageid,
                     n,
                     t,
-                    d,
+                    o,
                     void 0,
-                    c,
+                    d,
                   );
               return !0;
             },
-            [l, r, o, s.id],
+            [r, l, s.id, d],
           );
-        return l
-          ? n.createElement(
-              "div",
-              { className: (0, d.Z)(_().Action, g().AddToCartAnchorCtn, t) },
-              n.createElement(
-                "a",
-                { href: "steam://url/StoreCart", onClick: p },
-                (0, c.Xx)("#Store_AddToCart"),
-              ),
-            )
-          : n.createElement(
-              "div",
-              { className: (0, d.Z)(_().Action, t), onClick: p },
-              n.createElement("span", null, (0, c.Xx)("#Store_AddToCart")),
-            );
+        return n.createElement(
+          "div",
+          { className: (0, I.Z)(k().Action, t), onClick: c },
+          n.createElement("span", null, (0, C.Xx)("#Store_AddToCart")),
+        );
       }
     },
     6319: (e, t, r) => {
@@ -15396,7 +15387,7 @@
         l = r(84343),
         d = r(19304),
         c = r(14826),
-        m = r(17133),
+        m = r(3251),
         u = r(75701),
         p = r.n(u);
       function _(e) {
@@ -18237,7 +18228,7 @@
         c = r(85886),
         m = r(25871),
         u = r(53913),
-        p = r(17133),
+        p = r(3251),
         _ = r(6319),
         h = r(44421),
         g = r(1631),
@@ -18255,14 +18246,15 @@
             bHidePrice: o,
             bHideWishlistButton: h,
             bShowDeckCompatibilityDialog: g,
+            className: S,
           } = e,
-          b = (0, s.useRef)({ include_release: !0 }),
-          [S] = (0, m.jk)(t.id, (0, c.TM)(t.type), b.current),
-          f = (0, l.mU)(t.type),
-          [E, w] = s.useState(
+          f = (0, s.useRef)({ include_release: !0 }),
+          [E] = (0, m.jk)(t.id, (0, c.TM)(t.type), f.current),
+          w = (0, l.mU)(t.type),
+          [C, D] = s.useState(
             r &&
-              f &&
-              (1 === (null == S ? void 0 : S.GetAppType()) ||
+              w &&
+              (1 === (null == E ? void 0 : E.GetAppType()) ||
                 d.ZP.Get().BHasDemoAppID(t.id)),
           );
         return (
@@ -18270,46 +18262,46 @@
             const e = i().CancelToken.source();
             return (
               r &&
-                f &&
-                (1 === (null == S ? void 0 : S.GetAppType())
-                  ? w(!0)
+                w &&
+                (1 === (null == E ? void 0 : E.GetAppType())
+                  ? D(!0)
                   : d.ZP.Get()
                       .LoadAppIDsBatch([t.id])
                       .then(() => {
-                        e.token.reason || w(d.ZP.Get().BHasDemoAppID(t.id));
+                        e.token.reason || D(d.ZP.Get().BHasDemoAppID(t.id));
                       })),
               () =>
                 null == e
                   ? void 0
                   : e.cancel("StoreSalePriceActionWidget: unmounting")
             );
-          }, [r, f, t.id, S]),
-          S
+          }, [r, w, t.id, E]),
+          E
             ? s.createElement(
                 "div",
-                { className: v().StoreActionWidgetContainer },
+                { className: (0, b.Z)(v().StoreActionWidgetContainer, S) },
                 s.createElement(
                   "div",
                   { className: v().StoreSalePriceActionWidgetContainer },
                   Boolean(!h && (0, l.mU)(t.type)) &&
                     s.createElement(y.s, {
                       appid: t.id,
-                      bIsFree: S.BIsFree(),
-                      bIsComingSoon: S.BIsComingSoon(),
+                      bIsFree: E.BIsFree(),
+                      bIsComingSoon: E.BIsComingSoon(),
                       className: "WishlistBtn",
                     }),
-                  Boolean(E) &&
+                  Boolean(C) &&
                     s.createElement(_.f, { info: t, className: v().Action }),
                   Boolean(!o) &&
-                    1 !== (null == S ? void 0 : S.GetAppType()) &&
-                    (Boolean(n && !S.BIsFree())
+                    1 !== (null == E ? void 0 : E.GetAppType()) &&
+                    (Boolean(n && !E.BIsFree())
                       ? s.createElement(B, { fnOnPurchaseOptionsClick: a })
                       : s.createElement(p.a, {
                           info: t,
                           className: "CartBtn",
                         })),
                   Boolean(!o) && s.createElement(I, { info: t }),
-                  Boolean(g) && s.createElement(u.Ws, { storeItem: S }),
+                  Boolean(g) && s.createElement(u.Ws, { storeItem: E }),
                 ),
               )
             : null

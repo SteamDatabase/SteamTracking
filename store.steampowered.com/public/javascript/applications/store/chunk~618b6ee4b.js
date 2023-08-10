@@ -481,7 +481,14 @@
       };
     },
     22931: (e) => {
-      e.exports = { Dummy: "salepurchaseonlydisplay_Dummy_OWgHc" };
+      e.exports = {
+        "duration-app-launch": "800ms",
+        Name: "salepurchaseonlydisplay_Name_2K2zo",
+        PurchaseOnlyShelf: "salepurchaseonlydisplay_PurchaseOnlyShelf_fd3oZ",
+        PurchaseOnlyCtn: "salepurchaseonlydisplay_PurchaseOnlyCtn_4-0sk",
+        PurchaseOnlyActionCtn:
+          "salepurchaseonlydisplay_PurchaseOnlyActionCtn_2kAdn",
+      };
     },
     59026: (e) => {
       e.exports = {
@@ -24444,32 +24451,38 @@
               autoFocus: d,
               navKey: "purchase_only_" + t.GetID(),
             },
-            a.createElement("div", { className: H.Name }, t.GetName()),
-            Boolean(!l && 10 != t.GetAppType()) &&
-              a.createElement(
-                "div",
-                { className: H.OS },
-                a.createElement(O.a, { item: n }),
-                Boolean(
-                  c &&
-                    0 == (null == t ? void 0 : t.GetStoreItemType()) &&
-                    t.GetPlatforms(),
-                ) &&
-                  a.createElement(j.sC, {
-                    className: H.DeckCompatIcon,
-                    category: t.GetPlatforms().steam_deck_compat_category,
-                  }),
-              ),
+            "\t",
             a.createElement(
               "div",
-              null,
-              a.createElement(R.x1, {
-                info: i,
-                bShowDemoButton: s,
-                bHidePrice: r,
-                bHideWishlistButton: !0,
-                bShowDeckCompatibilityDialog: c,
-              }),
+              { className: H.PurchaseOnlyCtn },
+              a.createElement("div", { className: H.Name }, t.GetName()),
+              Boolean(!l && 10 != t.GetAppType()) &&
+                a.createElement(
+                  "div",
+                  { className: H.OS },
+                  a.createElement(O.a, { item: n }),
+                  Boolean(
+                    c &&
+                      0 == (null == t ? void 0 : t.GetStoreItemType()) &&
+                      t.GetPlatforms(),
+                  ) &&
+                    a.createElement(j.sC, {
+                      className: H.DeckCompatIcon,
+                      category: t.GetPlatforms().steam_deck_compat_category,
+                    }),
+                ),
+              a.createElement(
+                "div",
+                { className: H.Purchase },
+                a.createElement(R.x1, {
+                  info: i,
+                  className: H.PurchaseOnlyActionCtn,
+                  bShowDemoButton: s,
+                  bHidePrice: r,
+                  bHideWishlistButton: !0,
+                  bShowDeckCompatibilityDialog: c,
+                }),
+              ),
             ),
           ),
         );

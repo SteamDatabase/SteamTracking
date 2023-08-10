@@ -370,10 +370,13 @@
               r.append("sessionid", d.De.SESSIONID),
               r.append("quantity", "1");
             const l = (0, p.RA)(e);
+            e.preventDefault();
             try {
               yield n().post(s, r, { withCredentials: !0 }),
                 this.InvalidateCache(l),
-                m || (e.preventDefault(), (l.location.href = a));
+                (null == m ? void 0 : m.fnSetURL)
+                  ? m.fnSetURL(a)
+                  : (l.location.href = a);
             } catch (e) {
               return console.log("HandleOnAddToCart", e), !1;
             }

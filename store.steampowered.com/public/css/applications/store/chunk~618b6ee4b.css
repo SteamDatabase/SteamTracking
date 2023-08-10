@@ -2450,8 +2450,34 @@ div.apppartnereventspage_EventDetailsBody_AWjK8 {
 .salelabels_SectionTitleInnerCtn_2R3H5 {
   margin-bottom: 10px;
 }
-.salepurchaseonlydisplay_Dummy_OWgHc {
-  background-color: hotpink;
+.salepurchaseonlydisplay_Name_2K2zo {
+  font-size: 21px;
+  font-family: "Motiva Sans", Sans-serif;
+  color: #fff;
+  font-weight: normal;
+}
+.salepurchaseonlydisplay_PurchaseOnlyShelf_fd3oZ {
+  display: flex;
+}
+.salepurchaseonlydisplay_PurchaseOnlyCtn_4-0sk {
+  display: flex;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: space-around;
+  width: fit-content;
+  padding: 16px;
+  border-radius: 3px;
+  margin: auto;
+  min-width: 80%;
+  align-items: center;
+}
+.BasicUI .salepurchaseonlydisplay_PurchaseOnlyCtn_4-0sk {
+  flex-direction: column;
+  gap: 12px;
+}
+.salepurchaseonlydisplay_PurchaseOnlyActionCtn_2kAdn {
+  position: relative;
+  right: unset;
+  bottom: unset;
 }
 .salepointshopsmartdisplay_RewardCtn_2iyxZ {
   display: flex;
