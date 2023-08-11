@@ -28193,7 +28193,9 @@
               a &&
                 ((e.label_color = a.label_color),
                 (e.background_gradient_bottom = a.background_gradient_bottom),
-                (e.background_gradient_top = a.background_gradient_top)),
+                (e.background_gradient_top = a.background_gradient_top),
+                (e.border_color = a.border_color),
+                (e.border_width = a.border_width)),
                 t.GetEventModel().jsondata.sale_sections.push(e),
                 t.SetDirty(s.jB.jsondata_sales);
               const n = document.getElementById(

@@ -5498,6 +5498,78 @@ html.touch
 .addtocartbutton_AddToCartAnchorCtn_2SDuo {
   color: #fff;
 }
+.addtocartbutton_Action_2ECxA {
+  background-image: radial-gradient(
+    circle at top left,
+    #85a805 10%,
+    #6a8704 80%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  width: auto;
+  min-width: unset;
+  padding: 9px 20px;
+  transition: box-shadow 0.2s ease-out;
+  height: 38px;
+  box-sizing: border-box;
+  color: #dfe3e6;
+  text-align: center;
+  border-radius: 2px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  align-self: center;
+}
+.addtocartbutton_Action_2ECxA:hover {
+  background-image: radial-gradient(
+    circle at top left,
+    #a3cf06 0%,
+    #6a8704 120%
+  );
+  color: #fff;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+.addtocartbutton_Action_2ECxA svg {
+  width: 20px;
+  height: 20px;
+  margin-left: -7px;
+  margin-right: 4px;
+}
+.addtocartbutton_ActionOutOfStock_I_6Pn {
+  background-image: radial-gradient(
+    circle at top left,
+    #565656 10%,
+    #555555 80%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  width: auto;
+  min-width: unset;
+  padding: 9px 20px;
+  transition: box-shadow 0.2s ease-out;
+  height: 38px;
+  box-sizing: border-box;
+  color: #909090;
+  text-align: center;
+  border-radius: 2px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  align-self: center;
+}
+.addtocartbutton_ActionOutOfStock_I_6Pn svg {
+  width: 20px;
+  height: 20px;
+  margin-left: -7px;
+  margin-right: 4px;
+}
 .gameactions_GotSteamDialog_3omvM .gameactions_DownloadSteamUrl_Glr7k {
   color: #fff;
 }

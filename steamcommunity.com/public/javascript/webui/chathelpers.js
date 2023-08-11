@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "8250251";
+var CLSTAMP = "8259598";
 (() => {
   var e,
     t,
@@ -8,7 +8,7 @@ var CLSTAMP = "8250251";
     n,
     o,
     i = {
-      94210: (e, t, r) => {
+      59346: (e, t, r) => {
         "use strict";
         function n(e, t, r, n) {
           var o,
@@ -62,7 +62,7 @@ var CLSTAMP = "8250251";
         }
         Object.create;
         Object.create;
-        r(28290);
+        r(32030);
         var i = r(87363),
           a = r.n(i),
           s = r(61533);
@@ -2736,7 +2736,7 @@ var CLSTAMP = "8250251";
             });
           });
       },
-      28290: (e, t, r) => {
+      32030: (e, t, r) => {
         "use strict";
         "VALVE_PUBLIC_PATH" in window
           ? (r.p = window.VALVE_PUBLIC_PATH)
@@ -3265,6 +3265,6 @@ var CLSTAMP = "8250251";
           self.webpackChunk_steam_friendsui || []);
       r.forEach(t.bind(null, 0)), (r.push = t.bind(null, r.push.bind(r)));
     })();
-  var _ = s.O(void 0, [5968], () => s(94210));
+  var _ = s.O(void 0, [5968], () => s(59346));
   _ = s.O(_);
 })();
