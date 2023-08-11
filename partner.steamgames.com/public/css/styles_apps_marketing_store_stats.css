@@ -353,21 +353,21 @@ div.jqplot-table-legend-swatch-outline {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+}
 
-	.csv_download_title {
-		display: inline-block;
-	}
+.csv_download_row .csv_download_title {
+	display: inline-block;
+}
 
-	.btn_download {
-		display: flex;
-		align-items: center;
-	}
+.csv_download_row .btn_download {
+	display: flex;
+	align-items: center;
+}
 
-	.csv_download_buttons {
-		display: flex;
-		align-items: center;
-		gap: 10px;
-	}
+.csv_download_row .csv_download_buttons {
+	display: flex;
+	align-items: center;
+	gap: 10px;
 }
 
 .csv_download_row span {
