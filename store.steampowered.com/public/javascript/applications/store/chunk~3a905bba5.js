@@ -19466,7 +19466,7 @@
     },
     82124: (e, t, r) => {
       "use strict";
-      r.d(t, { l: () => m });
+      r.d(t, { l: () => u });
       var n = r(89526),
         a = r(701),
         i = r(19304),
@@ -19474,25 +19474,27 @@
         o = r(66615),
         l = r(57861);
       const d = 1.3,
-        c = 3;
-      function m(e) {
+        c = 3,
+        m = 256;
+      function u(e) {
         const [t, r] = (0, n.useState)(!1),
-          [m, u] = (0, n.useState)({
+          [u, p] = (0, n.useState)({
             naturalWidth: 0,
             naturalHeight: 0,
             displayWidth: 0,
             displayHeight: 0,
           }),
-          p = (0, n.useRef)();
+          _ = (0, n.useRef)();
         return (
           (0, n.useEffect)(() => {
             if (
-              m.naturalWidth > m.displayWidth * d &&
-              m.naturalHeight > m.displayHeight * d
+              u.naturalWidth > u.displayWidth * d &&
+              u.naturalHeight > u.displayHeight * d &&
+              u.naturalWidth > m
             ) {
-              m.naturalWidth / m.naturalHeight < c && r(!0);
+              u.naturalWidth / u.naturalHeight < c && r(!0);
             }
-          }, [m]),
+          }, [u]),
           t
             ? n.createElement(
                 "div",
@@ -19516,7 +19518,7 @@
             : n.createElement(
                 "img",
                 Object.assign({}, e, {
-                  ref: p,
+                  ref: _,
                   onLoad: (e) => {
                     if (!e.currentTarget.closest("a") && !(0, o.p)()) {
                       const {
@@ -19525,7 +19527,7 @@
                         width: n,
                         height: a,
                       } = e.currentTarget;
-                      u({
+                      p({
                         naturalWidth: t,
                         naturalHeight: r,
                         displayWidth: n,
