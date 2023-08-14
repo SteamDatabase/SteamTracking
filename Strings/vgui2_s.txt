@@ -8,11 +8,11 @@ __TEXT
 __stub_helper
 __TEXT
 __gcc_except_tab__TEXT
+05
 __const
 __TEXT
 __objc_methname
 __TEXT
-+$
 __objc_classname__TEXT
 __objc_methtype
 __TEXT
@@ -31,7 +31,6 @@ __mod_init_func
 __DATA
 __const
 __DATA
-H>
 __cfstring
 __DATA
 __objc_classlist__DATA
@@ -111,7 +110,7 @@ h
 8
 /usr/lib/libobjc.A.dylib
 &
-0
+(
 )
 NSt3__117bad_function_callE
 10CUtlVectorIN12CFontAmalgam10TFontRangeE10CUtlMemoryIS1_EE
@@ -1421,6 +1420,7 @@ m_iStart <= m_iEnd
 (unsigned)elem <= (unsigned)m_Size
 IsInList(after)
 !"Current texture not set"
+id
 wide && tall
 activateAppOnNextResize
 TB,V_bActivateAppOnNextResize
@@ -1466,19 +1466,14 @@ steamchinabeta
 steamchina
 steambeta
 steamlink
-URLCommand
-cmd
-ForceQuit
+open
+steam://exit
 WindowsEndSession
-OpenRootDialog
+defaultdialog
 com.valvesoftware.steam.HideWebhelper
-OpenAboutDialog
-OpenSettingsDialog
-OpenUpdatesDialog
-OpenHelpDialog
-Minimize
-CloseFrameHotKeyPressed
-Maximize
+steam://open/about
+steam://settings
+steam://checkforupdates
 COSXSurface::DrawGradientFilledRect
 eGradientDirection == k_EGradientDirectionHorizontal
 !"Unable to find font"
@@ -1953,6 +1948,7 @@ KeyValues Error: %s in file %s [offset: %d]
 %u
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlbuffer.cpp
 info.m_pReplacementString == 0
+nSize != 0
 Expected %lld but got %lld!
 pConv && pConv->GetDelimiterLength() > 0
 nSize >= 0
@@ -2206,6 +2202,12 @@ vietnamese
 vi_VN
 vi
 SteamChina_SChinese
+Indonesian
+indonesian
+#SteamUI_Selection_Indonesian
+#Panorama_Selection_Indonesian
+#Panorama_Lang_Indonesian
+id_ID
 /Steam3PosixRegistryManager
 SteamBootstrapper_GetEUniverse
 /registry.vdf
@@ -2300,12 +2302,11 @@ P
 
 =
 @
-c
 '
-B
 @
 @
 0
+E
 @
 @
 @

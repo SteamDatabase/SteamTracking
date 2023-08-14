@@ -2,19 +2,12 @@
 __TEXT
 __text
 __TEXT
-{
-{
 __stubs
 __TEXT
-Jd'
-Jd'
 __stub_helper
 __TEXT
-Tn'
-Tn'
 __cstring
 __TEXT
-__gcc_except_tab__TEXT
 __const
 __TEXT
 __objc_methname
@@ -23,18 +16,23 @@ __objc_classname__TEXT
 __objc_methtype
 __TEXT
 (
+__gcc_except_tab__TEXT
 __unwind_info
 __TEXT
+8
+!
+8
+!
 __eh_frame
 __TEXT
 __DATA
+@
 __nl_symbol_ptr
 __DATA
 __got
 __DATA
 __la_symbol_ptr
 __DATA
-`
 __mod_init_func
 __DATA
 __const
@@ -56,7 +54,6 @@ __DATA
 P
 __data
 __DATA
-J
 __thread_vars
 __DATA
 0
@@ -69,18 +66,19 @@ __bss
 __DATA
 __common
 __DATA
+XA
 H
 __LINKEDIT
-D
+,
 
 @
 @loader_path/gameoverlayui.dylib
 "
-D
-@7D
+,
+@9
 P
-k
-l
+Y
+Z
 
 *
 8
@@ -127,204 +125,22 @@ h
 8
 /usr/lib/libobjc.A.dylib
 &
+h],
+h6
 )
+-
 C
 NSt3__117bad_function_callE
-14CParentalCache
-23IClientParentalSettings
-N14CParentalCache35CCallback_OnParentalLockChangeBeginE
-9CCallbackI14CParentalCache25ParentalLockChangeBegin_tLb0EE
-13CCallbackImplILi1EE
-N20CBroadcastLiveBanner35CCallback_OnBroadcastSettingsLoadedE
-9CCallbackI20CBroadcastLiveBanner25BroadcastSettingsLoaded_tLb0EE
-N20CBroadcastLiveBanner37CCallback_OnBroadcastMicrophoneStatusE
-9CCallbackI20CBroadcastLiveBanner27BroadcastMicrophoneStatus_tLb0EE
-13CCallbackImplILi2EE
-N20CBroadcastLiveBanner33CCallback_OnBroadcastUploadStatusE
-9CCallbackI20CBroadcastLiveBanner23BroadcastUploadStatus_tLb0EE
-13CCallbackImplILi20EE
-N20CBroadcastLiveBanner27CCallback_OnBroadcastStatusE
-9CCallbackI20CBroadcastLiveBanner17BroadcastStatus_tLb0EE
-13CCallbackImplILi32EE
-20CFriendsImageManager
-7CUtlMapIiPN4vgui6IImageEi8CDefLessE
-15CEmoticonButton
-17CItemImageManager
-8GridMenu
-10CHTTPImage
-11CCallResultI10CHTTPImage22HTTPRequestCompleted_tE
-11CCallResultI17CItemImageManager22HTTPRequestCompleted_tE
-7CUtlMapIPKcii22CDefCaselessStringLessE
-10CUtlRBTreeIN7CUtlMapIPKcii22CDefCaselessStringLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
-10CUtlVectorI10CUtlString10CUtlMemoryIS0_EE
-10CUtlVectorIN17CItemImageManager18ImagesToDownload_tE10CUtlMemoryIS1_EE
-21CReactLoginDialogBase
-24CReactRefreshLoginDialog
-N21CReactLoginDialogBase32CCallbackInternal_OnLogonSuccessE
-N21CReactLoginDialogBase32CCallbackInternal_OnLogonFailureE
-13CCallbackImplILi8EE
-N24CReactRefreshLoginDialog24CCallback_OnLogonSuccessE
-9CCallbackI24CReactRefreshLoginDialog23SteamServersConnected_tLb0EE
-N24CReactRefreshLoginDialog24CCallback_OnLogonFailureE
-9CCallbackI24CReactRefreshLoginDialog27SteamServerConnectFailure_tLb0EE
-20CJSMethodCallHandlerI21CReactLoginDialogBaseJPKcS2_9CSmartPtrI18CJSCallbackPromiseEEE
-20IJSMethodCallHandler
-20CJSMethodCallHandlerI21CReactLoginDialogBaseJ9CSmartPtrI18CJSCallbackPromiseEEE
-20CJSMethodCallHandlerI21CReactLoginDialogBaseJPKc9CSmartPtrI18CJSCallbackPromiseEEE
-20CJSMethodCallHandlerI21CReactLoginDialogBaseJPKcS2_EE
-21CSettingsSubBroadcast
-N21CSettingsSubBroadcast27CCallback_OnBroadcastStatusE
-9CCallbackI21CSettingsSubBroadcast17BroadcastStatus_tLb0EE
-19CSettingsSubBrowser
-19CSettingsSubFriends
-N19CSettingsSubFriends30CCallback_OnPersonaStateChangeE
-9CCallbackI19CSettingsSubFriends20PersonaStateChange_tLb0EE
-13CCallbackImplILi12EE
-10CUtlRBTreeIN7CUtlMapIiPN4vgui6IImageEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiEiE
-11CCallResultI19CSettingsSubFriends24SetPersonaNameResponse_tE
-18CSettingsSubInGame
-N18CSettingsSubInGame47CCallbackInternal_OnCommunityPreferencesUpdatedE
-A17CSettingsSubMusic
-N17CSettingsSubMusic28CCallback_OnVolumeHasChangedE
-9CCallbackI17CSettingsSubMusic18VolumeHasChanged_tLb0EE
-13CCallbackImplILi4EE
-N17CSettingsSubMusic41CCallback_OnLocalLibraryCrawlingWillStartE
-9CCallbackI17CSettingsSubMusic31LocalLibraryCrawlingWillStart_tLb0EE
-N17CSettingsSubMusic43CCallback_OnLocalLibraryCrawlingInterruptedE
-9CCallbackI17CSettingsSubMusic33LocalLibraryCrawlingInterrupted_tLb0EE
-N17CSettingsSubMusic40CCallback_OnLocalLibraryCrawlingFinishedE
-9CCallbackI17CSettingsSubMusic30LocalLibraryCrawlingFinished_tLb0EE
-N17CSettingsSubMusic44CCallback_OnLocalLibraryDatabaseHasBeenResetE
-9CCallbackI17CSettingsSubMusic34LocalLibraryDatabaseHasBeenReset_tLb0EE
-C
-G
-?17CSettingsSubVoice
-N17CSettingsSubVoice35CCallback_OnVoiceInputDeviceChangedE
-9CCallbackI17CSettingsSubVoice25VoiceInputDeviceChanged_tLb0EE
-18CSoundSystemSelect
-16CSteamAuthedHTML
-21CSteamAuthedHTMLPopup
-N16CSteamAuthedHTML35CCallback_OnParentalWebTokenChangedE
-9CCallbackI16CSteamAuthedHTML25ParentalWebTokenChanged_tLb0EE
-20CMultipleCallResultsI16CSteamAuthedHTML26SupportSystemReportReady_tE
-20CJSMethodCallHandlerI16CSteamAuthedHTMLJ9CSmartPtrI15CJSCallbackFuncEEE
-12CTradeDialog
 11CURLManager
 7CUtlMapIPKcN11CURLManager5URL_tEi22CDefCaselessStringLessE
 10CUtlRBTreeIN7CUtlMapIPKcN11CURLManager5URL_tEi22CDefCaselessStringLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
+10CUtlVectorI10CUtlString10CUtlMemoryIS0_EE
 20CMultipleCallResultsI15COverlayVRState24GameStatsSessionIssued_tE
-25CBroadcastFirstTimeDialog
-18CMusicLibraryPanel
-24CMusicPage_Details_Album
-15CTrackItemPanel
-N24CMusicPage_Details_Album28CCallback_OnAlbumCoverLoadedE
-9CCallbackI24CMusicPage_Details_Album18AlbumCoverLoaded_tLb0EE
-N24CMusicPage_Details_Album40CCallback_OnTrackListDataEntryForAlbumIDE
-9CCallbackI24CMusicPage_Details_Album30TrackListDataEntryForAlbumID_tLb0EE
-13CCallbackImplILi3092EE
-11CTrackLabel
-10CUtlVectorIP15CTrackItemPanel10CUtlMemoryIS1_EE
-26CMusicPage_Details_Content
-N26CMusicPage_Details_Content31CCallback_OnArtistListDataEntryE
-9CCallbackI26CMusicPage_Details_Content21ArtistListDataEntry_tLb0EE
-13CCallbackImplILi2056EE
-N26CMusicPage_Details_Content30CCallback_OnAlbumListDataEntryE
-9CCallbackI26CMusicPage_Details_Content20AlbumListDataEntry_tLb0EE
-13CCallbackImplILi4120EE
-N26CMusicPage_Details_Content33CCallback_OnPlaylistListDataEntryE
-9CCallbackI26CMusicPage_Details_Content23PlaylistListDataEntry_tLb0EE
-13CCallbackImplILi2080EE
-N26CMusicPage_Details_Content41CCallback_OnLocalLibraryCrawlingWillStartE
-9CCallbackI26CMusicPage_Details_Content31LocalLibraryCrawlingWillStart_tLb0EE
-N26CMusicPage_Details_Content40CCallback_OnLocalLibraryCrawlingFinishedE
-9CCallbackI26CMusicPage_Details_Content30LocalLibraryCrawlingFinished_tLb0EE
-N26CMusicPage_Details_Content43CCallback_OnLocalLibraryCrawlingInterruptedE
-9CCallbackI26CMusicPage_Details_Content33LocalLibraryCrawlingInterrupted_tLb0EE
-N26CMusicPage_Details_Content39CCallback_OnLocalLibraryCrawlingMessageE
-9CCallbackI26CMusicPage_Details_Content29LocalLibraryCrawlingMessage_tLb0EE
-N26CMusicPage_Details_Content44CCallback_OnLocalLibraryDatabaseHasBeenResetE
-9CCallbackI26CMusicPage_Details_Content34LocalLibraryDatabaseHasBeenReset_tLb0EE
-N26CMusicPage_Details_Content34CCallback_OnPlaylistNameHasChangedE
-9CCallbackI26CMusicPage_Details_Content24PlaylistNameHasChanged_tLb0EE
-13CCallbackImplILi1028EE
-N26CMusicPage_Details_Content25CCallback_OnPlaylistAddedE
-9CCallbackI26CMusicPage_Details_Content15PlaylistAdded_tLb0EE
-N26CMusicPage_Details_Content27CCallback_OnPlaylistDeletedE
-9CCallbackI26CMusicPage_Details_Content17PlaylistDeleted_tLb0EE
-N26CMusicPage_Details_Content25CCallback_OnPlaylistMovedE
-9CCallbackI26CMusicPage_Details_Content15PlaylistMoved_tLb0EE
-10CUtlVectorIP24CMusicPage_Details_Album10CUtlMemoryIS1_EE
-10CUtlVectorIP27CMusicPage_Details_Playlist10CUtlMemoryIS1_EE
-10CUtlVectorIN26CMusicPage_Details_Content14PlaylistData_tE10CUtlMemoryIS1_EE
-27CMusicPage_Details_Playlist
-18CPlaylistItemPanel
-N27CMusicPage_Details_Playlist28CCallback_OnAlbumCoverLoadedE
-9CCallbackI27CMusicPage_Details_Playlist18AlbumCoverLoaded_tLb0EE
-N27CMusicPage_Details_Playlist43CCallback_OnTrackListDataEntryForPlaylistIDE
-9CCallbackI27CMusicPage_Details_Playlist33TrackListDataEntryForPlaylistID_tLb0EE
-13CCallbackImplILi3096EE
-N27CMusicPage_Details_Playlist34CCallback_OnPlaylistNameHasChangedE
-9CCallbackI27CMusicPage_Details_Playlist24PlaylistNameHasChanged_tLb0EE
-N27CMusicPage_Details_Playlist36CCallback_OnPlaylistEntriesHaveMovedE
-9CCallbackI27CMusicPage_Details_Playlist26PlaylistEntriesHaveMoved_tLb0EE
-N27CMusicPage_Details_Playlist34CCallback_OnPlaylistEntriesDeletedE
-9CCallbackI27CMusicPage_Details_Playlist24PlaylistEntriesDeleted_tLb0EE
-N27CMusicPage_Details_Playlist37CCallback_OnPlaylistAllEntriesDeletedE
-9CCallbackI27CMusicPage_Details_Playlist27PlaylistAllEntriesDeleted_tLb0EE
-N27CMusicPage_Details_Playlist38CCallback_OnPlaylistEntriesHaveChangedE
-9CCallbackI27CMusicPage_Details_Playlist28PlaylistEntriesHaveChanged_tLb0EE
-18CPlaylistItemLabel
-17CMusicPlayerLabel
-17CMusicPlayerPanel
-N17CMusicPlayerPanel39CCallback_OnCurrentQueueEntryHasChangedE
-9CCallbackI17CMusicPlayerPanel29CurrentQueueEntryHasChanged_tLb0EE
-N17CMusicPlayerPanel35CCallback_OnQueueEntriesHaveChangedE
-9CCallbackI17CMusicPlayerPanel25QueueEntriesHaveChanged_tLb0EE
-N17CMusicPlayerPanel36CCallback_OnPlaybackStatusHasChangedE
-9CCallbackI17CMusicPlayerPanel26PlaybackStatusHasChanged_tLb0EE
-N17CMusicPlayerPanel50CCallback_OnCurrentQueueEntrySecondsElapsedChangedE
-9CCallbackI17CMusicPlayerPanel40CurrentQueueEntrySecondsElapsedChanged_tLb0EE
-N17CMusicPlayerPanel32CCallback_OnGameOverlayActivatedE
-9CCallbackI17CMusicPlayerPanel22GameOverlayActivated_tLb0EE
-N17CMusicPlayerPanel41CCallback_OnPlayingRepeatStatusHasChangedE
-9CCallbackI17CMusicPlayerPanel31PlayingRepeatStatusHasChanged_tLb0EE
-N17CMusicPlayerPanel37CCallback_OnPlayingShuffledHasChangedE
-9CCallbackI17CMusicPlayerPanel27PlayingShuffledHasChanged_tLb0EE
-N17CMusicPlayerPanel28CCallback_OnVolumeHasChangedE
-9CCallbackI17CMusicPlayerPanel18VolumeHasChanged_tLb0EE
-N17CMusicPlayerPanel28CCallback_OnAlbumCoverLoadedE
-9CCallbackI17CMusicPlayerPanel18AlbumCoverLoaded_tLb0EE
-19CMusicSeekBarSlider
-23CMusicPlayerVolumePanel
-13CVolumeSlider
-21CDialogParentalUnlock
-N21CDialogParentalUnlock45CCallback_OnParentalLockChangeAttemptCompleteE
-9CCallbackI21CDialogParentalUnlock35ParentalLockChangeAttemptComplete_tLb0EE
-N21CDialogParentalUnlock43CCallbackInternal_OnParentalWebTokenChangedE
-Y@23CScreenshotDeleteDialog
-24CScreenshotLoadingThread
-18CScreenshotManager
-18ScreenshotToLoad_t
-23CScreenshotCaptionEntry
-23CScreenshotGameSelector
-7CUtlMapI7CGameIDii8CDefLessE
-10CUtlRBTreeIN7CUtlMapI7CGameIDii8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiES1_E
-13CCallbackImplILi608EE
-13CCallbackImplILi24EE
-23CScreenshotUploadDialog
-11CCallResultI23CScreenshotUploadDialog25ScreenshotBatchComplete_tE
-9CCallbackI23CScreenshotUploadDialog26ScreenshotUploadProgress_tLb0EE
-26CScreenshotImageClickPanel
-7CUtlPtrIN4vgui9RGBAImageEE
-11CCallResultI23CScreenshotDeleteDialog25ScreenshotBatchComplete_tE
-9CCallbackI18CScreenshotManager19ScreenshotWritten_tLb0EE
-9CCallbackI18CScreenshotManager20ScreenshotUploaded_tLb0EE
-9CCallbackI18CScreenshotManager19ScreenshotDeleted_tLb0EE
-10CUtlVectorIP26CScreenshotImageClickPanel10CUtlMemoryIS1_EE
-7CUtlMapIjii8CDefLessE
-10CUtlRBTreeIN7CUtlMapIjii8CDefLessE6Node_tEiNS2_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE
+13CCallbackBase
+10CUtlRBTreeIyi8CDefLess25CDefRBTreeBalanceListenerIiEyE
 15CCallbackManualI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
 9CCallbackI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
+13CCallbackImplILi16EE
 15CCallbackManualI12CCallbackMgr23SteamAPICallCompleted_tLb1EE
 9CCallbackI12CCallbackMgr23SteamAPICallCompleted_tLb1EE
 N3IPC15BinarySemaphoreE
@@ -337,212 +153,34 @@ N3IPC10ISharedMemE
 15CSavedMemStream
 10IMemStream
 16CSharedMemStream
-aE
-zC
-https://www.google.com
-O
-v
-e
-r
-l
-a
-y
-S
-t
-o
-r
-e
-B
-r
-o
-w
-s
-e
-r
-=
-%
-u
-;
-N4vgui12SimpleDialogE
-50COverlayNeedWorkshopLegalAgreementAcceptanceDialog
-19COverlayCDKeyDialog
-N4vgui17NotificationFrameE
-23CScreenshotNotification
-10CBasePanel
-39CSteamInputControllerConfigNotification
-14COverlaySplash
-25COverlayCDKeyNotification
-N4vgui9RGBAImageE
-N4vgui6IImageE
-N10CBasePanel31CCallback_OnMicroTxnAuthRequestE
-9CCallbackI10CBasePanelK29MicroTxnAuthRequestCallback_tLb0EE
-13CCallbackImplILi16EE
 N10CBasePanel40CCallback_OnGameOverlayActivateRequestedE
 9CCallbackI10CBasePanelK30GameOverlayActivateRequested_tLb0EE
 13CCallbackImplILi8476EE
 N10CBasePanel31CCallback_OnOverlayStateChangedE
 9CCallbackI10CBasePanelK14OverlayState_tLb0EE
+13CCallbackImplILi12EE
 N10CBasePanel34CCallback_OnOverlaySettingsChangedE
 9CCallbackI10CBasePanelK24OverlaySettingsChanged_tLb0EE
-N10CBasePanel22CCallback_OnLowBatteryE
-9CCallbackI10CBasePanel17LowBatteryPower_tLb0EE
-N10CBasePanel33CCallback_OnLegacyCDKeyRegisteredE
-9CCallbackI10CBasePanel23LegacyCDKeyRegistered_tLb0EE
-13CCallbackImplILi520EE
-N10CBasePanel21CCallback_OnLoggedOffE
-9CCallbackI10CBasePanel26SteamServersDisconnected_tLb0EE
-N10CBasePanel30CCallback_OnPersonaStateChangeE
-9CCallbackI10CBasePanel20PersonaStateChange_tLb0EE
+13CCallbackImplILi1EE
 N10CBasePanel29CCallback_OnScreenshotWrittenE
 9CCallbackI10CBasePanel19ScreenshotWritten_tLb0EE
-N10CBasePanel25CCallback_OnFilePublishedE
-9CCallbackI10CBasePanel32RemoteStoragePublishFileResult_tLb0EE
-N10CBasePanel32CCallback_OnPublishedFileUpdatedE
-9CCallbackI10CBasePanel40RemoteStorageUpdatePublishedFileResult_tLb0EE
-N10CBasePanel39CCallback_OnAsyncNotificationsRequestedE
-9CCallbackI10CBasePanel35NotifyAsyncNotificationsRequested_tLb0EE
-N10CBasePanel37CCallback_OnBroadcastShowFirstTimeDlgE
-9CCallbackI10CBasePanel27BroadcastShowFirstTimeDlg_tLb0EE
-N10CBasePanel27CCallback_OnBroadcastStatusE
-9CCallbackI10CBasePanel17BroadcastStatus_tLb0EE
-N10CBasePanel35CCallback_OnBroadcastSettingsLoadedE
-9CCallbackI10CBasePanel25BroadcastSettingsLoaded_tLb0EE
-N10CBasePanel34CCallback_OnBroadcastRecorderErrorE
-9CCallbackI10CBasePanel24BroadcastRecorderError_tLb0EE
-N10CBasePanel36CCallback_OnBroadcastUploadsDisabledE
-9CCallbackI10CBasePanel26BroadcastUploadsDisabled_tLb0EE
-N10CBasePanel27CCallback_OnDurationControlE
-9CCallbackI10CBasePanel17DurationControl_tLb0EE
-N10CBasePanel28CCallback_OnTimedTrialStatusE
-9CCallbackI10CBasePanel18TimedTrialStatus_tLb0EE
+13CCallbackImplILi24EE
 N10CBasePanel33CCallbackInternal_OnConfigUpdatedE
 13CCallbackImplILi260EE
-19CBaseDashboardPanel
-17CBaseDesktopPanel
-26CBroadcastAvailableToWatch
-23CTimedTrialNotification
-20CMultipleCallResultsI23CTimedTrialNotification22HTTPRequestCompleted_tE
-36CRemotePlayTogetherAvailableToInvite
-28CDurationControlNotification
-N4vgui16EasyNotificationE
-18COverlayLowBattery
-37COverlayLoggedInElsewhereNotification
-33CBroadcastUploadErrorNotification
+N4vgui12IClientPanelE
 16CIngameFPSBanner
-41COverlayAsyncNotificationsRequestedDialog
-17CLambdaCallResultI17DurationControl_tE
-17CPanelHideWrapperI24COverlay_Details_FriendsE
-N17CPanelHideWrapperI24COverlay_Details_FriendsE31CCallback_OnParentalLockChangedE
-9CCallbackI17CPanelHideWrapperI24COverlay_Details_FriendsE21ParentalLockChanged_tLb0EE
-17CPanelHideWrapperI29COverlay_Details_AchievementsE
-N17CPanelHideWrapperI29COverlay_Details_AchievementsE31CCallback_OnParentalLockChangedE
-9CCallbackI17CPanelHideWrapperI29COverlay_Details_AchievementsE21ParentalLockChanged_tLb0EE
-20CMultipleCallResultsI29COverlay_Details_Achievements35GlobalAchievementPercentagesReady_tE
-13CCallbackImplILi148EE
-21COverlay_Details_News
-17CPanelHideWrapperI21COverlay_Details_NewsE
-N17CPanelHideWrapperI21COverlay_Details_NewsE31CCallback_OnParentalLockChangedE
-9CCallbackI17CPanelHideWrapperI21COverlay_Details_NewsE21ParentalLockChanged_tLb0EE
-11CCallResultI21COverlay_Details_News22HTTPRequestCompleted_tE
-17CPanelHideWrapperI34COverlay_Details_Screenshots_PanelE
-N17CPanelHideWrapperI34COverlay_Details_Screenshots_PanelE31CCallback_OnParentalLockChangedE
-9CCallbackI17CPanelHideWrapperI34COverlay_Details_Screenshots_PanelE21ParentalLockChanged_tLb0EE
-17CPanelHideWrapperI29COverlay_Details_Guides_PanelE
-N17CPanelHideWrapperI29COverlay_Details_Guides_PanelE31CCallback_OnParentalLockChangedE
-9CCallbackI17CPanelHideWrapperI29COverlay_Details_Guides_PanelE21ParentalLockChanged_tLb0EE
-17CPanelHideWrapperI35COverlay_Details_CommunityHub_PanelE
-N17CPanelHideWrapperI35COverlay_Details_CommunityHub_PanelE31CCallback_OnParentalLockChangedE
-9CCallbackI17CPanelHideWrapperI35COverlay_Details_CommunityHub_PanelE21ParentalLockChanged_tLb0EE
-11CCallResultI35COverlay_Details_CommunityHub_Panel22HTTPRequestCompleted_tE
-17CPanelHideWrapperI43COverlay_Details_CommunityDiscussions_PanelE
-N17CPanelHideWrapperI43COverlay_Details_CommunityDiscussions_PanelE31CCallback_OnParentalLockChangedE
-9CCallbackI17CPanelHideWrapperI43COverlay_Details_CommunityDiscussions_PanelE21ParentalLockChanged_tLb0EE
-11CCallResultI43COverlay_Details_CommunityDiscussions_Panel22HTTPRequestCompleted_tE
-17CPanelHideWrapperI29COverlayDetailsBroadcastPanelE
-N17CPanelHideWrapperI29COverlayDetailsBroadcastPanelE31CCallback_OnParentalLockChangedE
-9CCallbackI17CPanelHideWrapperI29COverlayDetailsBroadcastPanelE21ParentalLockChanged_tLb0EE
-17CPanelHideWrapperIN4vgui10ImagePanelEE
-N17CPanelHideWrapperIN4vgui10ImagePanelEE31CCallback_OnParentalLockChangedE
-9CCallbackI17CPanelHideWrapperIN4vgui10ImagePanelEE21ParentalLockChanged_tLb0EE
-17CPanelHideWrapperIN4vgui8URLLabelEE
-N17CPanelHideWrapperIN4vgui8URLLabelEE31CCallback_OnParentalLockChangedE
-9CCallbackI17CPanelHideWrapperIN4vgui8URLLabelEE21ParentalLockChanged_tLb0EE
-17CPanelHideWrapperIN4vgui6ButtonEE
-N17CPanelHideWrapperIN4vgui6ButtonEE31CCallback_OnParentalLockChangedE
-9CCallbackI17CPanelHideWrapperIN4vgui6ButtonEE21ParentalLockChanged_tLb0EE
-NSt3__110__function6__funcIZN10CBasePanel26ShowInitialDurationControlEfE3$_0NS_9allocatorIS3_EEFvP17DurationControl_tbEEE
-NSt3__110__function6__baseIFvP17DurationControl_tbEEE
-ZN10CBasePanel26ShowInitialDurationControlEfE3$_0
-NSt3__110__function6__funcIZN10CBasePanel30OnGameOverlayActivateRequestedEPK30GameOverlayActivateRequested_tE3$_1NS_9allocatorIS6_EEFvvEEE
-NSt3__110__function6__baseIFvvEEE
-ZN10CBasePanel30OnGameOverlayActivateRequestedEPK30GameOverlayActivateRequested_tE3$_1
-NSt3__110__function6__funcIZN10CBasePanel21OnMicroTxnAuthRequestEPK29MicroTxnAuthRequestCallback_tE3$_2NS_9allocatorIS6_EEFvvEEE
-ZN10CBasePanel21OnMicroTxnAuthRequestEPK29MicroTxnAuthRequestCallback_tE3$_2
-NSt3__110__function6__funcIZN10CBasePanel21OnMicroTxnAuthRequestEPK29MicroTxnAuthRequestCallback_tE3$_3NS_9allocatorIS6_EEFvvEEE
-ZN10CBasePanel21OnMicroTxnAuthRequestEPK29MicroTxnAuthRequestCallback_tE3$_3
-23CVGUIApplicationOverlay
 N4vgui20IVGUIHostApplicationE
 10IAppSystem
 16AppModalQueryBox
-12CMainOverlay
-21ICommonOverlayHelpers
 15CConVarAccessor
 23IConCommandBaseAccessor
 15IOverlayOSPumps
+13CCallbackImplILi8EE
 9CCallbackI22SerializedOverlayPumps21ScreenshotTriggered_tLb0EE
-StoreWebMicroTxnPage
-25CMicroTxnAuthorizeHandler
-N25CMicroTxnAuthorizeHandler23CCallback_OnAuthDismissE
-9CCallbackI25CMicroTxnAuthorizeHandler29MicroTxnAuthDismissCallback_tLb0EE
-13CCallbackBase
-20CMultipleCallResultsI25CMicroTxnAuthorizeHandler22MicroTxnAuthResponse_tE
-10CUtlRBTreeIyi8CDefLess25CDefRBTreeBalanceListenerIiEyE
-29COverlay_Details_Achievements
-22CAchievementImagePanel
-21CAchievementInfoPanel
-N22CAchievementImagePanel32CCallback_OnAchievementIconReadyE
-9CCallbackI22CAchievementImagePanel28UserAchievementIconFetched_tLb0EE
-13CCallbackImplILi144EE
-N29COverlay_Details_Achievements29CCallback_OnUserStatsReceivedE
-9CCallbackI29COverlay_Details_Achievements19UserStatsReceived_tLb0EE
-N29COverlay_Details_Achievements27CCallback_OnUserAchievementE
-9CCallbackI29COverlay_Details_Achievements23UserAchievementStored_tLb0EE
-29COverlayDetailsBroadcastPanel
-27COverlayBroadcastChatDialog
-20CBroadcastChatBanner
-N29COverlayDetailsBroadcastPanel27CCallback_OnBroadcastStatusE
-9CCallbackI29COverlayDetailsBroadcastPanel17BroadcastStatus_tLb0EE
-N27COverlayBroadcastChatDialog27CCallback_OnBroadcastStatusE
-9CCallbackI27COverlayBroadcastChatDialog17BroadcastStatus_tLb0EE
-N27COverlayBroadcastChatDialog32CCallback_OnBroadcastChatMessageE
-9CCallbackI27COverlayBroadcastChatDialog22BroadcastChatMessage_tLb0EE
-13CCallbackImplILi296EE
-N20CBroadcastChatBanner32CCallback_OnBroadcastChatMessageE
-9CCallbackI20CBroadcastChatBanner22BroadcastChatMessage_tLb0EE
-43COverlay_Details_CommunityDiscussions_Panel
-35COverlay_Details_CommunityHub_Panel
-24COverlay_Details_Friends
-38COverlayFriendChangeConfirmationDialog
-9CCallbackI24COverlay_Details_Friends20PersonaStateChange_tLb0EE
-9CCallbackI38COverlayFriendChangeConfirmationDialog20PersonaStateChange_tLb0EE
-15CGuideItemPanel
-29COverlay_Details_Guides_Panel
-11CCallResultI15CGuideItemPanel32RemoteStorageDownloadUGCResult_tE
-11CCallResultI29COverlay_Details_Guides_Panel24SteamUGCQueryCompleted_tE
-14CNewsItemPanel
-34COverlay_Details_Screenshots_Panel
-22COverlaySettingsDialog
-33COverlayInGameVoiceSettingsDialog
-https://www.google.com
-22COverlayWebBrowserHTML
-18COverlayWebBrowser
-N18COverlayWebBrowser31CCallback_OnParentalLockChangedE
-9CCallbackI18COverlayWebBrowser21ParentalLockChanged_tLb0EE
-10CUtlVectorIN4vgui4HTML19CustomCursorCache_tE10CUtlMemoryIS2_EE
-14CUtlLinkedListI17BrowserPosition_tiE
 13CEmbeddedHTML
 20COverlayWebVguiFrame
 20CJSMethodCallHandlerI19COverlayHTMLHandlerJbEE
+20IJSMethodCallHandler
 20CJSMethodCallHandlerI19COverlayHTMLHandlerJdEE
 14CRunGameEngine
 14IRunGameEngine
@@ -736,314 +374,11 @@ N6google8protobuf8internal23RepeatedPtrFieldWrapperINSt3__112basic_stringIcNS3_1
 N6google8protobuf8internal16MapFieldAccessorE
 N6google8protobuf8internal31RepeatedPtrFieldMessageAccessorE
 N6google8protobuf8internal23RepeatedPtrFieldWrapperINS0_7MessageEEE
-N6google8protobuf10TextFormat17BaseTextGeneratorE
 N6google8protobuf10TextFormat6FinderE
 N6google8protobuf10TextFormat21FastFieldValuePrinterE
 N6google8protobuf10TextFormat6Parser10ParserImpl20ParserErrorCollectorE
 N6google8protobuf10TextFormat7Printer13TextGeneratorE
 N6google8protobuf2io14ErrorCollectorE
-@
-@
-@
-@
-@
-@
-@
-@
-@
-h
-H
-H
-H
-H
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
->!h
-?"N
-#;
-@&LH
-A':
-QC,A
-TF<)
-VGy#
-KNQ
-M0@
-a\">
-c]$8
-eaFO
-hd=<
-c]^7
-if1R
-kh9F
-gc^A
-okOP
-pm"U
-
-
-
-
-
-
-!
-"
-#
-
-&
-%
-'
-
-$
-(
--
-#
-)
-,
-.
-!
-"
-*
-+
-/
-0
-
-*
-)
-+
-(
-,
-5
-
-'
--
-4
-6
-!
-&
-.
-3
-7
-<
-"
-%
-/
-2
-8
-;
-=
-#
-$
-0
-1
-9
-:
->
-?
-?
-
-C
-
-!
-(
-0
-)
-"
-
-#
-*
-1
-8
-9
-2
-+
-$
-%
-,
-3
-:
-;
-4
--
-&
-'
-.
-5
-<
-=
-6
-/
-7
->
-?
-?
-?
-?
-?
-?
-?
-?
-?
-?
-?
-?
-?
-?
-?
-?
-?
-
-!
-(
-0
-)
-"
-
-#
-*
-1
-2
-+
-$
-%
-,
-3
-4
--
-&
-.
-5
-6
-?
-?
-?
-?
-?
-?
-?
-?
-?
-?
-?
-?
-?
-?
-?
-?
-
-!
-(
-)
-"
-
-#
-*
-+
-$
-%
-,
--
-?
-?
-?
-?
-?
-?
-?
-?
-?
-?
-?
-?
-?
-?
-?
-?
-
-!
-"
-#
-$
-?
-?
-?
-?
-?
-?
-?
-?
-?
-?
-?
-?
-?
-?
-?
-?
-
-?
-?
-?
-?
-?
-?
-?
-?
-?
-?
-?
-?
-?
-?
-?
-?
-
-?
-?
-?
-?
-?
-?
-?
-?
-?
-?
-?
-?
-?
-?
-?
-?
-?
-?
-?
-?
-?
-?
-?
-?
-?
-?
-?
-?
-?
-?
-?
-?
 \b(?<=\w)
 @
 `
@@ -7060,16 +6395,9 @@ m
 >
 ~
 x
-&z
-0u
-UUUUUUUUUUUUUUUU0123456789ABCDEF22CJSCallbackFunc_HTMLJS
-18CJSCallbackPromise
 0C
 0E
 0C
-0E15CJSCallbackFunc
-11CRefCountedI20CRefCountServiceBaseILb1E6CRefMTEE
-20CRefCountServiceBaseILb1E6CRefMTE
 $
 $
 (
@@ -7547,6 +6875,7 @@ N4vgui19AnimatingImagePanelE
 10CUtlVectorIN4vgui19AnimationController13AnimCommand_tE10CUtlMemoryIS2_EE
 10CUtlVectorIN4vgui19AnimationController17ActiveAnimation_tE10CUtlMemoryIS2_EE
 10CUtlVectorIN4vgui19AnimationController15PostedMessage_tE10CUtlMemoryIS2_EE
+A
 e
 l
 e
@@ -7781,19 +7110,14 @@ N4vgui17CBitmapImagePanelE
 15CUtlHandleTableIN4vgui10BuildGroupELi20EE
 10CUtlVectorIN15CUtlHandleTableIN4vgui10BuildGroupELi20EE11EntryType_tE10CUtlMemoryIS4_EE
 19CUtlQueueDeprecatedIiE
+14CUtlLinkedListIiiE
 N4vgui6ButtonE
 N4vgui11CheckButtonE
 N4vgui15CheckButtonListE
 N4vgui14ComboBoxButtonE
 N4vgui8ComboBoxE
-N4vgui21DirectorySelectDialogE
-17DirectoryTreeView
-21CreateDirectoryDialog
-14CUtlLinkedListIiiE
 N4vgui7DividerE
-N4vgui23CNotificationClickPanelE
 N4vgui13EditablePanelE
-N4vgui12IClientPanelE
 7CUtlMapIPKcN4vgui13CLayoutRegionEi22CDefCaselessStringLessE
 10CUtlRBTreeIN7CUtlMapIPKcN4vgui13CLayoutRegionEi22CDefCaselessStringLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
 10CUtlVectorIN4vgui11layoutcmd_tE10CUtlMemoryIS1_EE
@@ -7823,8 +7147,6 @@ N4vgui17FrameSystemButtonE
 N4vgui10GraphPanelE
 14CUtlLinkedListIN4vgui10GraphPanel8Sample_tEiE
 10CUtlVectorIf10CUtlMemoryIfEE
-N4vgui11HotKeyEntryE
-N4vgui22HotkeyEntryClearButtonE
 ?
 ?
 @
@@ -7928,7 +7250,6 @@ N4vgui4HTML12CHTMLFindBarE
 16CHTMLProtoBufMsgI17CMsgImeCommitTextE
 16CHTMLProtoBufMsgI24CMsgImeCancelCompositionE
 16CHTMLProtoBufMsgI15CMsgBrowserSizeE
-16CHTMLProtoBufMsgI13CMsgAddHeaderE
 16CHTMLProtoBufMsgI12CMsgSetFocusE
 16CHTMLProtoBufMsgI13CMsgMouseMoveE
 16CHTMLProtoBufMsgI14CMsgMouseLeaveE
@@ -7952,10 +7273,10 @@ N4vgui4HTML12CHTMLFindBarE
 16CHTMLProtoBufMsgI21CMsgJSExecuteCallbackE
 16CHTMLProtoBufMsgI21CMsgJSReleaseCallbackE
 16CHTMLProtoBufMsgI20CMsgJSRaiseExceptionE
-20CJSMethodCallHandlerIN4vgui4HTMLEJ9CSmartPtrI15CJSCallbackFuncEEE
 16CHTMLProtoBufMsgI13CMsgDisableF5E
 N4vgui18HTMLFramelessPopupE
 20HTMLFramelessWrapper
+10CUtlVectorIN4vgui4HTML19CustomCursorCache_tE10CUtlMemoryIS2_EE
 N4vgui9HTMLPopupE
 N4vgui9HTMLPopup9PopupHTMLE
 N4vgui5ImageE
@@ -7963,7 +7284,6 @@ N4vgui11CStyleImageE
 10BlankImage
 N4vgui9ImageListE
 N4vgui10ImagePanelE
-N4vgui18ThrobberImagePanelE
 %
 i
 %
@@ -7983,6 +7303,7 @@ N4vgui17ListPanelInteriorE
 27ListPanelColumnSelectButton
 N4vgui22ListPanelSectionHeaderE
 N4vgui25ListPanelSectionCollapserE
+N4vgui6IImageE
 14CUtlLinkedListIN4vgui9ListPanel8column_tEhE
 14CUtlLinkedListIPN4vgui13ListPanelItemEiE
 14CUtlLinkedListIP8CUtlDictIb22CDefCaselessStringLessiEiE
@@ -8006,10 +7327,6 @@ N4vgui7MenuBarE
 N4vgui10MenuButtonE
 N4vgui8MenuItemE
 N4vgui18MenuItemCheckImageE
-%
-s
-%
-S
 [
 %
 i
@@ -8033,7 +7350,6 @@ N4vgui32IPanelAnimationPropertyConverterE
 10CUtlVectorIN4vgui16MessageMapItem_tE10CUtlMemoryIS1_EE
 10CUtlVectorIm10CUtlMemoryImEE
 N4vgui11ProgressBarE
-N4vgui14PropertyDialogE
 N4vgui12PropertyPageE
 N4vgui13PropertySheetE
 N4vgui7PageTabE
@@ -8045,7 +7361,6 @@ N4vgui13PageDragPanelE
 N4vgui8QueryBoxE
 N4vgui11RadioButtonE
 @@
-<
 b
 >
 <
@@ -8117,7 +7432,6 @@ N4vgui9TextImageE
 10CUtlVectorIPw10CUtlMemoryIS0_EE
 10CUtlVectorIN4vgui9TextImage22PerLineTrncationData_tE10CUtlMemoryIS2_EE
 N4vgui12ToggleButtonE
-N4vgui7TooltipE
 N4vgui13TooltipWindowE
 N4vgui10ToolWindowE
 N4vgui9ToolPanelE
@@ -8149,7 +7463,6 @@ _
 7CUtlMapI10CUtlStringbi8CDefLessE
 10CUtlRBTreeIN7CUtlMapI10CUtlStringbi8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
 10CUtlVectorIN6ConVar22ConVarChangeCallback_tE10CUtlMemoryIS1_EE
-11CDirWatcher
 19CDirContentsWatcher
 11CPathString
 14CUtlLinkedListI10CUtlStringiE
@@ -8180,41 +7493,21 @@ d
 18CUtlCharConversion
 19CUtlNoEscConversion
 14CUtlMemoryBase
-%Y-%m-%d %H:%M:%S
-NSt3__115basic_stringbufIwNS_11char_traitsIwEENS_9allocatorIwEEEE
-Logger
 -friendsui
 -nofriendsui
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/friendsuihelpers.cpp
 IsARM() || GetCPUInformation().m_bSSE2
 GetBootstrapperVersion
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/imageloadwrapper.cpp
-!bSuccess || bufOutput.TellPut() == width*height*3
-!bSuccess || bufOutput.TellPut() == width*height*4
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/jpegloader.cpp
-libjpeg asking to skip more bytes than exist, and we can't further fill buffer - was a crash before 12/29/21
+IVRSteamPrivate_015
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlvector.h
 !pToCopy || (pToCopy + num <= Base()) || (pToCopy >= (Base() + Count()) )
-row_stride_out >= row_stride
-row_stride == (int)( nImageWidth * jpegInfo.output_components )
-nImageHeight == nOutputHeight
-BResizeImageRGBA
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/jpegloader_common.cpp
-pSrc == pDest || pSrc > pDest + (srcWidth * srcHeight * 4) || pDest > pSrc + (srcWidth * srcHeight * 3)
-pSrc == pDest || pSrc > pDest + (srcWidth * srcHeight * 3) || pDest > pSrc + (srcWidth * srcHeight * 4)
-nWidth >= 0 && nHeight >= 0
-bufRGB.TellPut() == nWidth*nHeight*3
-bufRGBA.TellPut() == nWidth*nHeight * 4
 log_files_always_flush
 0
-...
 %s
 %lld
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlstring.h
 arrURLs
 T@"NSArray",R,N,V_arrURLs
-Steam
-en_US
 HOME
 r
 Unknown
@@ -8225,9 +7518,6 @@ pid %d != %d, re-initing before send; client_port = %d, server_port = %d
 StopJob
 pid %d != %d, skipping dealloc of client_port = %d, server_port = %d
 (&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
-1.5.26
-PNG load error %s
-PNG load warning %s
 [S_API FAIL] SteamAPI_Init() failed; steam path (%s) missing directory separator
 [S_API FAIL] SteamAPI_Init() failed; steam found, but process is dead.
 [S_API FAIL] SteamAPI_Init() failed; ipcserver init failed .
@@ -8281,509 +7571,22 @@ ClientAPI_Init(GlobalInstance): GetIClientShader returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientCompat returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientSTARInternal returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientNetworkingUtils returned NULL.
-CParentalCache::OnParentalLockChangeBegin
-BroadcastLiveBanner
-LiveImage
-DebugLine
-MicrophoneImage
-videosendkbps
-videosendfps
-numviewers
-numrequests
-resource/layout/broadcast_livebanner.layout
-RequestsText
-RequestsImage
-ViewersText
-ViewersImage
-DebugText
-LiveBannerStyleNormal
-LiveBannerStyleDesktop
-NotificationClickPanel
-graphics/broadcast/icon_mic_disabled
-graphics/broadcast/icon_mic_off
-graphics/broadcast/icon_mic_on
-DebugLineStyleGreen
-DebugLineStyleYellow
-DebugLineStyleRed
-graphics/broadcast/broadcast_live_red
-graphics/broadcast/broadcast_live_grey
-open
-steam://settings/broadcast
-CBroadcastLiveBanner
-vgui::EditablePanel
-OverlayHidden
-OverlayShown
-CBroadcastLiveBanner::OnBroadcastSettingsLoaded
-CBroadcastLiveBanner::OnBroadcastMicrophoneStatus
-CBroadcastLiveBanner::OnBroadcastUploadStatus
-CBroadcastLiveBanner::OnBroadcastStatus
-CNotificationClickPanel
-Panel
-EditablePanel
-graphics/avatarBorderOffline
-graphics/avatarBorderOnline
-graphics/avatarBorderInGame
-Friends.InGameColor
-Friends.OnlineColor
-Friends.OfflineColor
-common/name
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/vgui_controls/Image.h
-Invalid image panel position %d %d
-Invalid image panel size %d %d
-m_mapSteamImageToRGBAImage
-m_Tree
-m_Elements
-economy/emoticon/%s
-/inventory/#
-/inventory#
-id/
-profiles/
-%llu
-%u_%llu_%llu
-%seconomy/%s/%u/%llu/%llu/?l=%s&o=%llu
-%seconomy/%s/%u/%llu/%llu/?l=%s&o_url=%s
-%seconomy/%s/%u/%llu/%llu/?l=%s
-item
-/emoticon/
-/emoticonhover/
-?client=1&l=%s
-itemhover
-:
-m_vecChatImages
-m_dictURLToImageID
-m_vecChatImagesToInsert
-m_vecImageDownloadQueue
-m_strBaseURL
-m_strLanguage
-InsertString
-string
-EmoticonMenuItemStyle
-economy/emoticonhover/%s?client=1&l=%s
-!pszString || pszString[nChars] == '\0'
-Menu
-MenuButton
-ToggleButton
-Button
-Label
-CEmoticonButton
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utldict.h
-m_Memory
-CUtlDict
-%s/%s?IN_CLIENT=true&WEBSITE_ID=Client&LOCAL_HOSTNAME=%s&WEBAPI_BASE_URL=%s&STORE_BASE_URL=%s&USE_POPUPS=true&DEV_MODE=%s&LANGUAGE=%s&PLATFORM=%s&COUNTRY=%s&LAUNCHER_TYPE=%d&EREALM=%d
-index.html
-true
-&IN_LOGIN=true
-&IN_LOGIN_REFRESH=true
-&IN_CHROMEOS=true
-LoginDialog
--dev
-resource/layout/login_dialog.layout
-#Steam_Login_Title
-#Steam_RefreshLogin_Title
-HTMLRoot
-steamui
-Close
-Quit
-open_external
-Auth.SetLoginToken
-Auth.GetRefreshInfo
-Auth.IsSecureComputer
-Auth.GetSteamGuardData
-Auth.SetSteamGuardData
-System.GetOSType
-Software\Valve\Steam\NoSavePersonalInfo
-eresult
-data
-Unexpected reentrancy
-reason
-account_name
-login_token_id
-Logon failure
-Failed to connect to servers after login refresh: %d
-Success
-Login failure
-CReactLoginDialogBase
-vgui::Frame
-BrowserDraggableRegionsChanged
-CReactLoginDialogBase::OnLogonSuccess
-CReactLoginDialogBase::OnLogonFailure
--opendevtools
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/refcount.h
-m_iRefs > 0 && m_iRefs < 0x1000000
-CReactRefreshLoginDialog
-CReactRefreshLoginDialog::OnLogonSuccess
-CReactRefreshLoginDialog::OnLogonFailure
-Authentication\RememberedMachineID
-Frame
-m_iRefs >= 0 && m_iRefs < 0x0ffffff
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/smartptr.h
-m_pObj == NULL
-m_p == NULL
-%s requires %d arguments; only %d given
-%s call had invalid argument (arg %d): %s
-SettingsSubBroadcast
-BroadcastStatus
-#Steam_Settings_Broadcast_StatusNotBroadcast
-steam://url/SteamIDBroadcastPage/%llu
-BroadcastDisabledSupportURL
-Permissions
-value
-BitrateLimit
-Dimensions
-EncoderSetting
-IncludeDesktop
-#Steam_Settings_Broadcast_IncludeDesktop
-RecordSystemAudio
-#Steam_Settings_Broadcast_RecordSystemAudio
-RecordMic
-#Steam_Settings_Broadcast_RecordMic
-ShowDebugInfo
-#Steam_Settings_Broadcast_ShowDebugInfo
-ShowReminder
-#Steam_Settings_Broadcast_ShowReminderBanner
-ShowChatCombo
-resource/layout/settingssubbroadcast.layout
-HideWhenDisabled
-#Steam_Settings_Broadcast_StatusBroadcast
-ShowWhenDisabled
-HideWhenUnavailable
-#Steam_Settings_Broadcast_Disabled
-BroadcastDisabledLabel
-#Steam_Settings_Broadcast_Disabled_System
-#Steam_Settings_Broadcast_Disabled_Overlay
-#Steam_Settings_Broadcast_Disabled_User
-%dx%d
-FirstTimeComplete
-MaxKbps
-OutputWidth
-OutputHeight
-ShowChat
-CSettingsSubBroadcast
-vgui::PropertyPage
-CSettingsSubBroadcast::OnBroadcastStatus
-TextChanged
-#Steam_Settings_Broadcast_FriendsApprove
-#Steam_Settings_Broadcast_FriendsAllowed
-#Steam_Settings_Broadcast_FriendsPublic
-#Steam_Settings_Broadcast_Bitrate3500
-#Steam_Settings_Broadcast_Bitrate3000
-#Steam_Settings_Broadcast_Bitrate2500
-#Steam_Settings_Broadcast_Bitrate2000
-#Steam_Settings_Broadcast_Bitrate1500
-#Steam_Settings_Broadcast_Bitrate1000
-#Steam_Settings_Broadcast_Bitrate750
-#Steam_Settings_Broadcast_1080p
-1920x1080
-#Steam_Settings_Broadcast_720p
-1280x720
-#Steam_Settings_Broadcast_480p
-854x480
-#Steam_Settings_Broadcast_360p
-640x360
-#Steam_Settings_Broadcast_EncoderQuality
-#Steam_Settings_Broadcast_EncoderPerformance
-#Steam_Settings_Broadcast_ShowChat_Off
-#Steam_Settings_Broadcast_ShowChat_LeftTop
-#Steam_Settings_Broadcast_ShowChat_RightTop
-#Steam_Settings_Broadcast_ShowChat_RightBottom
-#Steam_Settings_Broadcast_ShowChat_LeftBottom
-PropertyPage
-Page
-PropertyPageControls
-SettingsSubBrowser
-OverlayHomePage
-ClientBrowserAuthHomePage
-#Steam_ClientBrowserAuth_AllowBrowserAuth
-resource/layout/subpaneloptionsbrowser.layout
-GameOverlayHomePage
-about:blank
-GameOverlaySettingsChanged
-ClearAllBrowserData
-#Steam_SettingsBrowserDeleteAllData
-#Steam_SettingsBrowserDeleteAllDataMsg
-Command
-command
-ReallyClearAllBrowserData
-CSettingsSubBrowser
-Software\Valve\Steam\ClientBrowserAuth
-JoinGameNotifyCheck
-Notifications_ShowIngame
-JoinGamePlaySoundCheck
-Sounds_PlayIngame
-FriendOnlineNotifyCheck
-Notifications_ShowOnline
-FriendOnlinePlaySoundCheck
-Sounds_PlayOnline
-ReceiveMessageNotifyCheck
-Notifications_ShowMessage
-ReceiveMessagePlaySoundCheck
-Sounds_PlayMessage
-AutoSignIntoFriendsCheck
-AutoSignIntoFriends
-ShowTimeInChatLogCheck
-HighVisibilityMode
-HighVisibilityModeVR
-AlwaysNewChatCheck
-AlwaysNewChatWindow
-EventsAndAnnouncementsNotifyCheck
-Notifications_EventsAndAnnouncements
-EventsAndAnnouncementsPlaySoundCheck
-Sounds_EventsAndAnnouncements
-HighVisibilityModeScale
-HighVisibilityModeVRScale
-FlashModeAlways
-Always
-FlashModeMinimized
-Minimized
-FlashModeNever
-Never
-ImageAvatar
-ImageAvatarOverlay
-URLLabel2
-steam/cached/SettingsSubFriends.res
-NameEntry
-ChatFlashMode
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/steamui/SettingsSubFriends.cpp
-!m_callbackSetPersonaNameResponse.IsActive()
-#Friends_NameTooShort_Title
-#Friends_NameTooShort_Info
-#Friends_NameChangeFailed_Info
-#Friends_NameChangeThrottled_Info
-#Friends_NameChangeFailed_Title
-CSettingsSubFriends
-CSettingsSubFriends::OnPersonaStateChange
-#Steam_Settings_ShareIPNetworking_Default
-#Steam_Settings_ShareIPNetworking_Never
-#Steam_Settings_ShareIPNetworking_FriendsOnly
-#Steam_Settings_ShareIPNetworking_Always
-EnableOverlayCheck
-HotKeySelector
-ScreenshotHotKeySelector
-ScreenshotLabel
-ScreenshotNotifyCheck
-ScreenshotPlaySoundCheck
-ScreenshotSaveUncompressedCheck
-SetScreenshotFolderButton
-ShowIngameFPSCornerCombo
-ShowIngameFPSContrastCheck
-PingRateCombo
-PingRate
-%d
-TextFilterStatus
-ShareIPNetworkingCombo
-ShareIP
-eValue
-resource/layout/subpaneloptionsingame.layout
-#Steam_TextFilterStatus_Disabled
-#Steam_TextFilterStatus_EnabledAllowProfanity_IgnoreFriends
-#Steam_TextFilterStatus_EnabledAllowProfanity
-#Steam_TextFilterStatus_Enabled_IgnoreFriends
-#Steam_TextFilterStatus_Enabled
-Software\Valve\Steam\Rate
-values
-PingsPerMin
-Steam_ServerBrowserPingRateDefault
-Software\Valve\Steam\MaxServerBrowserPingsPerMin
-EnableGameOverlay
-EnableSCTenFootOverlayCheckNew
-DisableLaunchInVR
-InGameOverlayShortcutKey
-InGameOverlayScreenshotHotKey
-InGameOverlayScreenshotNotification
-InGameOverlayScreenshotPlaySound
-InGameOverlayScreenshotSaveUncompressed
-InGameOverlayShowFPSCorner
-InGameOverlayShowFPSContrast
-InGameOverlayScreenshotSaveUncompressedPath
-#Overlay_SetScreenshotFolder_InvalidFolder
-#Overlay_SetScreenshotFolder_NoDriveRoot
-SetScreenshotFolder
-#Overlay_SetScreenshotFolder
-Screenshots
-CSettingsSubInGame
-DirectorySelected
-dir
-CSettingsSubInGame::OnCommunityPreferencesUpdated
-LibraryList
-AddLibraryButton
-RemoveLibraryButton
-StartCrawlingButton
-ResetDatabaseButton
-DatabaseInfoLabel
-DatabaseCrawlAtStartup
-DatabaseCrawlSteamInstallFolders
-VolumeSlider
-PauseMusicWhenStartingApplicationCheckbox
-PauseMusicWhenVoiceChatCheckbox
-LoggingCrawlingCheckbox
-AdditionalFilesHighQualityCheckbox
-NotificationPlaylistNowPlayingCheckbox
-EnableMediaKeysCheckbox
-resource/layout/settingssubmusic.layout
-directory
-Entry
-#Music_Settings_Database_BuildingMusicLibrary
-albumcount
-trackcount
-#Music_Settings_Database_NoAlbum
-#Music_Settings_Database_OneAlbum
-#Music_Settings_Database_XAlbumsWithYTracks
-Music\MusicVolume
-#Music_Settings_Database_StopCrawling
-#Music_Settings_Library_StartCrawling
-Music\CrawlAtStartup
-Music\CrawlSteamInstallFolders
-Music\PauseOnAppStartedProcess
-Music\PauseOnVoiceChat
-Music\LogCrawling
-Music\DownloadHighQualityAudioSoundtracks
-Music\PlaylistNowPlayingNotification
-Music\EnableMediaKeys
-AddEntryToLibraryAction
-RemoveSelectedEntryFromLibraryAction
-ResetDatabaseAction
-ReallyResetDatabase
-StartCrawlingAction
-#Music_Settings__SelectDirectory_Title
-#Music_Settings_ResetDatabase_Title
-#Music_Settings_ResetDatabase_Text
-CSettingsSubMusic
-SliderMoved
-position
-CSettingsSubMusic::OnVolumeHasChanged
-CSettingsSubMusic::OnLocalLibraryCrawlingWillStart
-CSettingsSubMusic::OnLocalLibraryCrawlingInterrupted
-CSettingsSubMusic::OnLocalLibraryCrawlingFinished
-CSettingsSubMusic::OnLocalLibraryDatabaseHasBeenReset
-SettingsSubVoice
-MicMeter
-MicMeter2
-SpeakerLabel
-#Friends_Voice_Speaker_Volume
-SpeakerVolume
-MicrophoneLabel
-#Friends_Voice_Microphone_Volume
-MicrophoneVolume
-MicBoost
-#Friends_Voice_BoostMicrophone
-TestMicrophone
-#Friends_Voice_TestMicrophone
-ReinitAudio
-#Friends_Voice_ReinitAudio
-ChangeDeviceButton
-#Friends_Voice_ChangeDevice
-ChangeDevice
-PushToTalkKeyEntry
-TransmitMethodRadioButton1
-TransmitMethodRadioButton2
-TransmitMethodRadioButton3
-steam/cached/SettingsSubVoice.res
-VoiceReceiveVolume
-DeviceName
-#Friends_Voice_NoDeviceDetected
-pushtotalk
-PushToTalkKeyLabel
-#Friends_Voice_StopTestMicrophone
-CSettingsSubVoice::OnThink()
-Lost Voice calibration, resetting
-CSettingsSubVoice
-CheckButtonChecked
-state
-RadioButtonChecked
-CSettingsSubVoice::OnVoiceInputDeviceChanged
-SoundSystemSelect
-SoundOptions
-#Friends_NoSoundSystems
-name
-#Friends_SoundSystemName
-System
-steam/cached/soundsystemselect.res
-CSoundSystemSelect
-Set
-ResetData
-RequestSupportSystemReport
-HelpFrontPage
-
-vdf
-zipped_content_base64
-data:text/html
-ParentalBlocked
-steambrowserredirect
-/
-file:
-data:
-%s\steam\cached\offline_%s.html
-english
-file://%s
-+
-%2B
-StoreFrontPage
-StoreCheckout
-CommunityFrontPage
-steamparental
-htmlpopupchild
-CSteamAuthedHTML
-vgui::HTML
-CSteamAuthedHTML::OnParentalWebTokenChanged
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlbuffer.h
-nBytes
-CSteamAuthedHTMLPopup
-vgui::HTMLPopup
-HTML
-m_CustomURLHandlers
-m_sCurrentURL
-m_sLastSearchString
-m_sDragURL
-m_sPendingURLLoad
-m_sPendingPostData
-m_vecHCursor
-m_vecStyleChangedCallbacks
-m_DirWatcherClient
-CIMEPanel
-HTMLPopup
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlrbtree.h
-IsValidIndex( elem )
-_IsValidIndex( elem, unNodeSize, pMemBase )
-_IsValidIndex( y, unNodeSize, pMemBase )
-m_mapAPICalls
-#steam_tradedialog_title
-steam/cached/tradedialog.layout
-CTradeDialog
-OnSetHTMLTitle
-title
-OnCloseWindow
 vars
-urls
-method
 filter
 url
-external
-trade
 ^
-\%p1\%
-.+
-\%p2\%
-http\:
-https?\:
-%%p%d%%
 %store%
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/steamui/urlmanager.cpp
-strURL != "%store%"
 m_dictURLs
 m_pkvVars
 m_dictURLs[i].m_sURL
 m_vecAllWGAuthedURLs
 m_vecAllWGAuthedURLs[i]
-LauncherFrontPage
-Chat
 m_pkv
-checkout_return
-paypal_success
-try { OnPayPalSuccess( %llu ); } catch (e) {}
-paypal_cancel
-try { OnPayPalCancel( %llu ); } catch (e) {}
-LoadTGA: Only type 2 and 10 targa RGB images supported
-Texture_LoadTGA: Only 32 or 24 bit images supported (no colormaps)
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utldict.h
+CUtlDict
+m_Elements
+m_Tree
+m_Memory
 -quicklogin
 Set the base used to construct quick login URLs
 -community
@@ -8794,52 +7597,15 @@ Set the store URL
 Set the help/support URL
 -devsites
 Use local dev websites
+/
 http://
 https://
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/urlhelper.cpp
-eRet != k_ESteamRealmUnknown
-/usr/bin/open
-https://community-china.local.steam.dev/
-https://community.local.steam.dev/
-https://community-china.beta.valve.org/
-https://beta.steamcommunity.com/
-https://community.csgo.com.cn/
-https://my.steamchina.com/
-https://steamcommunity.com/
-https://steam-chat.com/
-https://%s-china.local.steam.dev/
-https://%s.local.steam.dev/
-https://%s-china.beta.valve.org/
-https://%s.beta.steampowered.com/
-https://%s.steamchina.com/
-https://%s.steampowered.com/
-help
-%s/
-store
-checkout
-https://cdn.beta.steampowered.com/steamcommunity/beta/
-https://cdn.steamchina.eccdnx.com/steamcommunity/public/
-https://cdn.steamstatic.com/steamcommunity/public/
-https://steamcommunity-a.akamaihd.net/
-https://cdn.beta.steampowered.com/store
-https://cdn.steamchina.eccdnx.com/store
-https://cdn.steamstatic.com/store
 ://
-https://steamloopback.host
 steam://
 steamlink://
 steamchina://
 steambeta://
 steamchinabeta://
-https://127.0.0.1:8283
-https://api-china.beta.valve.org
-https://api.beta.steampowered.com
-http://10.1.1.18:8282
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/urlhelper_webapihost.cpp
-!bUsePartnerWebAPI
-https://api.steamchina.com
-https://partner.steam-api.com
-https://api.steampowered.com
 VRModeBegin
 VRModeEnd with no matching begin.
 VRModeEnd after %d seconds
@@ -8850,604 +7616,17 @@ UserIpd
 ModelNumberID
 SerialNumber
 Unable to add OpenVRSessionDetails row: %s
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlrbtree.h
+IsValidIndex( elem )
+_IsValidIndex( elem, unNodeSize, pMemBase )
+_IsValidIndex( y, unNodeSize, pMemBase )
+m_mapAPICalls
 %s/filesystem_%s
 steam
 stdio
 %s/vgui2_s
 %s/chromehtml
 VGUI_Setup001
-BroadcastFirstTimeDialog
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/broadcast_firsttime.cpp
-pFriendsUI
-#Broadcast_FirstTime_Title
-PermissionDisabled
-PermissionAccept
-PermissionFriends
-PermissionPublic
-NextButton
-ConfigurationLink
-resource/layout/broadcast_firsttime.layout
-intro
-ContinuePressed
-ViewerAvatar
-friend
-gamename
-activating
-complete
-CBroadcastFirstTimeDialog
-steamtrack:///
-0:00
-%d:%02d
-%d:%02d:%02d
-CMusicLibraryPanel
-#Music_Library_WindowTitle
-MusicPage_Details_Content
-library_search
-library_music_menu
-music_nav_menu
-MusicNavMenuAlbums
-#Music_Nav_Menu_Albums
-SetMusicNavDisplayMode
-nMode
-MusicNavMenuArtists
-#Music_Nav_Menu_Artists
-MusicNavMenuPlaylists
-#Music_Nav_Menu_Playlists
-library_music_add_button
-AddMusicButtonPressed
-library_music_player_icon
-PlayerMusicButtonPressed
-resource/layout/musiclibrarypanel.layout
-music/CMusicLibraryPanel
-musicnavdisplaymodelibrary
-music_add_button
-OpenOverlayMusicPlayerPanel
-steam://open/musicplayer
-TextEscape
-AlbumTitleLabel
-Album
-ArtistLabel
-Artist
-TracksInfoLabel
-CoverImage
-PlayTracksButton
-#Music_Album_Details_PlayTracks
-AddTracksToQueueButton
-#Music_Album_Details_AddTracksToQueue
-AddTracksToPlaylistButton
-#Music_Album_Details_AddTracksToPlaylist
-PlayAlbumButton
-#Music_Album_Details_Play
-AddAlbumToQueueButton
-#Music_Album_Details_AddToQueue
-AddAlbumToPlaylistButton
-#Music_Album_Details_AddToPlaylist
-ShowAlbumButton
-#Music_Album_Details_ShowAlbum
-resource/layout/musicpage_details_album.layout
-AlbumID
-TrackCount
-DiscNumber
-MultipleArtist
-AlbumName
-ArtistName
-%s (%d)
-#Music_Album_Details_NoTracks
-graphics/music_placeholder_album0.png
-MusicPageDetailsTrack
-TrackStyle
-#Music_Album_Details_OneTrack
-tracksduration
-#Music_Album_Details_MultipleTracks
-trackscount
-graphics/music_placeholder_album%d.png
-MusicPlaylistCreateMenu
-CreatePlaylistBasedOnArtistTracks
-nAlbumID
-pchArtistName
-Music_ArtistTracks_Details_Menu_CreatePlaylist
-#Music_ArtistTracks_Details_Menu_CreatePlaylist
-AlbumPlayAction
-AlbumPlayNextAction
-AlbumAddToQueueAction
-AlbumAddToPlaylistAction
-AlbumShowAlbumInSystemAction
-AlbumPlayTracksAction
-AlbumPlayTracksNextAction
-AlbumAddTracksToQueueAction
-AlbumAddTracksToPlaylistAction
-AlbumShowAction
-ShowMusicPlayerIfWanted
-CMusicPage_Details_Album
-m_strAlbum
-m_strArtist
-m_strArtistFilter
-m_vecTracks
-PositionLabel
-TrackLabel
-resource/layout/musicpage_details_playlistitem.layout
-CTrackItemPanel
-m_strArtistname
-m_strTrackKey
-MusicListContextMenu
-Music_Track_Menu_Play_Subsequent
-#Music_Menu_Play
-PlayTrack
-nTrackIndex
-nSubsequent
-Music_Track_Menu_AddToQueue
-#Music_Track_Menu_AddToQueue
-TrackAddToQueue
-#Music_Track_Menu_AddToPlaylist
-Music_Track_Menu_ShowAlbumInUI
-#Music_Track_Menu_ShowAlbumInUI
-ShowAlbumInUI
-PlayTrackNext
-ShowAlbumInSystem
-CMusicPage_Details_Album::OnAlbumCoverLoaded
-CMusicPage_Details_Album::OnTrackListDataEntryForAlbumID
-CTrackLabel
-vgui::Label
-SortName
-Position
-BackgroundImageA
-BackgroundImageB
-BackgroundImageMask
-AlbumList
-ArtistList
-PlaylistList
-EmptyDatabaseText
-CrawlingText
-resource/layout/musicpage_details_content.layout
-graphics/music_details_mask.png
-AlbumOrArtistListStyle
-#Music_Column
-#Music_NoMusicOfThisAlbum
-#Music_NoMusicOfThisArtist
-#Music_NoMusicOfThisPlaylist
-#Music_NoLibrary_Text
-#Music_Crawling_Text
-CMusicPage_Details_Content
-m_strFilter
-m_strCurrentlySelectedArtist
-m_vecAlbumPanels
-m_vecPlaylistPanels
-m_vecPlaylistCache
-CMusicPage_Details_Content::UpdateDetailsData
-ItemSelected
-panel
-PlaylistID
-PlaylistName
-Tag
-TotalTime
-PlayCount
-LastPlayedTime
-CMusicPage_Details::OnItemSelected
-MusicPageDetailsAlbum
-AlbumCount
-MusicPageDetailsPlaylist
-Music_Album_Details_Menu_Play
-#Music_Album_Details_Menu_Play
-PlayAlbum
-Music_Album_Details_Menu_AddToQueue
-#Music_Album_Details_Menu_AddToQueue
-AddAlbumToQueue
-#Music_Album_Details_Menu_AddToPlaylist
-Music_Artist_Details_Menu_Play
-#Music_Artist_Details_Menu_Play
-PlayArtist
-Music_Artist_Details_Menu_AddToQueue
-#Music_Artist_Details_Menu_AddToQueue
-AddArtistToQueue
-#Music_Artist_Details_Menu_AddToPlaylist
-Music_Playlist_Details_Menu_Play
-#Music_Playlist_Details_Menu_Play
-PlayPlaylist
-nPlaylistID
-Music_Playlist_Details_Menu_AddToQueue
-#Music_Playlist_Details_Menu_AddToQueue
-AddPlaylistToQueue
-MusicPlaylistMoveMenu
-Music_Playlist_Details_Menu_MoveBegin
-#Music_Playlist_Details_Menu_MoveBegin
-MovePlaylistUp
-nPosition
-nStep
-Music_Playlist_Details_Menu_MoveUp
-#Music_Playlist_Details_Menu_MoveUp
-#Music_Playlist_Details_Menu_MoveDown
-MovePlaylistDown
-Music_Playlist_Details_Menu_MoveEnd
-#Music_Playlist_Details_Menu_MoveEnd
-#Music_Playlist_Details_Menu_Move
-Music_Playlist_Details_Menu_Rename
-#Music_Playlist_Details_Menu_Rename
-RenamePlaylist
-Music_Playlist_Details_Menu_Delete
-#Music_Playlist_Details_Menu_Delete
-DeletePlaylist
-Music_Playlist_Details_Menu_Duplicate
-#Music_Playlist_Details_Menu_Duplicate
-CreatePlaylistBasedOnPlaylist
-nSourcePlaylistID
-Music_Playlist_Details_Menu_Add
-#Music_Playlist_Details_Menu_Add
-AddPlaylist
-steam://settings/music
-#Music_Playlist_RenameDialog_Title
-#Music_Playlist_RenameDialog_Prompt
-playlistname
-ContextValues
-ItemID
-#Music_Playlist_DeleteDialog_Title
-#Music_Playlist_DeleteDialog_Prompt
-ReallyDeletePlaylist
-#Music_Playlist_Defaultname
-#Music_Playlist_AddDialog_Title
-#Music_Playlist_AddDialog_Prompt
-text
-Unknown command: %s %s
-OnInputCompleted
-Music_Album_Details_Menu_CreatePlaylist
-#Music_Album_Details_Menu_CreatePlaylist
-CreatePlaylistBasedOnAlbum
-Playlist
-AddAlbumToPlaylist
-Music_Artist_Details_Menu_CreatePlaylist
-#Music_Artist_Details_Menu_CreatePlaylist
-CreatePlaylistBasedOnArtist
-AddArtistToPlaylist
-AddArtistTracksToPlaylist
-Music_Track_Menu_CreatePlaylist
-#Music_Track_Menu_CreatePlaylist
-CreatePlaylistBasedOnTrack
-pchTrackKey
-AddTrackToPlaylist
-AddPlaylistToPlaylist
-alpha
-graphics/music_background_%d.png
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/musicpage_details_content.cpp
-Buffer to ApplyHeaderImage is incorrect size given passed width/height
-PlayAlbumNext
-PlayArtistNext
-SetDisplayMode
-PlayPlaylistNext
-AddRandomTracks
-OpenContextMenu
-InputCanceled
-InputCompleted
-CMusicPage_Details_Content::OnArtistListDataEntry
-CMusicPage_Details_Content::OnAlbumListDataEntry
-CMusicPage_Details_Content::OnPlaylistListDataEntry
-CMusicPage_Details_Content::OnLocalLibraryCrawlingWillStart
-CMusicPage_Details_Content::OnLocalLibraryCrawlingFinished
-CMusicPage_Details_Content::OnLocalLibraryCrawlingInterrupted
-CMusicPage_Details_Content::OnLocalLibraryCrawlingMessage
-CMusicPage_Details_Content::OnLocalLibraryDatabaseHasBeenReset
-CMusicPage_Details_Content::OnPlaylistNameHasChanged
-CMusicPage_Details_Content::OnPlaylistAdded
-CMusicPage_Details_Content::OnPlaylistDeleted
-CMusicPage_Details_Content::OnPlaylistMoved
-PlaylistTitleLabel
-#Music_TracksInfoLabel_NoTracks
-PlayPlaylistButton
-#Music_Playlist_Details_Play
-AddPlaylistToQueueButton
-#Music_Playlist_Details_AddToQueue
-AddRandomTracksToPlaylistButton
-#Music_Playlist_Details_AddRandomTrack
-resource/layout/musicpage_details_playlist.layout
-#TracksInfoLabel_NoTracks
-MusicPageDetailsPlaylistTrack
-#Music_TracksInfoLabel_OneTrack
-playlistduration
-#Music_TracksInfoLabel_MultipleTracks
-playlisttrackcount
-PlaylistPlayAction
-PlaylistPlayNextAction
-PlaylistAddToQueueAction
-PlaylistAddRandomTracksAction
-#Music_Playlist_DeleteAllTracksDialog_Title
-#Music_Playlist_DeleteAllTracksDialog_Prompt
-ReallyDeleteAllPlaylistTrack
-CMusicPage_Details_Playlist
-CPlaylistTrackLabel
-PlaylistPlayTrack
-nPlaylistPosition
-PlaylistTrackAddToQueue
-MovePlaylistTrackUp
-MovePlaylistTrackDown
-DeletePlaylistTrack
-Music_Playlist_Details_Menu_DeleteAll
-#Music_Playlist_Details_Menu_DeleteAll
-DeleteAllPlaylistTrack
-PlaylistPlayTrackNext
-CMusicPage_Details_Playlist::OnAlbumCoverLoaded
-CMusicPage_Details_Playlist::OnTrackListDataEntryForPlaylistID
-CMusicPage_Details_Playlist::OnPlaylistNameHasChanged
-CMusicPage_Details_Playlist::OnPlaylistEntriesHaveMoved
-CMusicPage_Details_Playlist::OnPlaylistEntriesDeleted
-CMusicPage_Details_Playlist::OnPlaylistAllEntriesDeleted
-CMusicPage_Details_Playlist::OnPlaylistEntriesHaveChanged
-CPlaylistItemPanel
-CPlaylistItemLabel
-QueueID
-CMusicPlayerPanel
-#Music_Player_WindowTitle
-CurrentAlbumImage
-CurrentStatusLabel
-CurrentTrackLabel
-CurrentArtistLabel
-RepeatButton
-ShuffleButton
-PreviousButton
-PlayPauseButton
-VolumeButton
-BrowseButton
-InfoLabel
-NoTracksLabel
-SeekBar
-TrackList
-CompleteName
-ElapsedSeconds
-SpacerColumn
-resource/layout/musicplayerpanel.layout
-music/CMusicPlayerPanel
-Music\MusicPlayerVisible
-/VGUI/Music/Player
-MusicPlayerContextMenu
-PauseEntry
-#Music_Queue_Pause_Entry
-nEntry
-PlayEntry
-#Music_Queue_Play_Entry
-RemoveEntry
-#Music_Queue_Remove_Track_From_Queue
-ShowEntryInSystem
-#Music_Queue_Show_Track_In_System
-RemoveEntries
-#Music_Queue_Remove_Tracks_From_Queue
-ClearQueue
-#Music_Queue_Clear_Queue
-CreateNewPlaylistBasedOnQueue
-#Music_Queue_Menu_CreatePlaylist
-TogglePlayPause
-ShowCurrentAlbum
-ToggleRepeat
-ToggleShuffle
-PreviousTrack
-NextTrack
-Volume
-BrowseMusic
-OpenOverlayMusicLibraryPanel
-steam://nav/music/details
-steam://nav/games/details/%u
-OnGameOverlayActivated
-%s
-RepeatButtonStyle
-#Music_Tooltip_Repeat
-RepeatOnceButtonStyle
-#Music_Tooltip_RepeatOnce
-%s%s%s
--
-TrackName
-TrackKey
-LengthInMilliseconds
-#Music_Status_Playing
-#Music_Status_Paused
-currentqueueentry
-queuecount
-queueduration
-#Music_Transport_No_Tracks
-#Music_Transport_X_Track
-#Music_Transport_X_Tracks
-#Music_Transport_X_Of_Y
-graphics/music_player_placeholder_album
-graphics/music_placeholder_album%d_50.png
-PauseButtonStyle
-PlayButtonStyle
-MuteVolumeButtonActiveStyle
-VolumeButtonActiveStyle
-MuteVolumeButtonStyle
-VolumeButtonStyle
-MusicPlaylistReplaceMenu
-MusicPlaylistAppendMenu
-MusicPlaylistLoadMenu
-AppendPlaylistFromQueue
-bReplace
-LoadPlaylistIntoQueue
-%s %d
-#Music_Queue_AddPlaylist_Dialog_Title
-#Music_Queue_AddPlaylist_Dialog_Prompt
-CMusicPlayerLabel
-nItemID
-VolumePanelClosed
-CMusicPlayerPanel::OnCurrentQueueEntryHasChanged
-CMusicPlayerPanel::OnQueueEntriesHaveChanged
-CMusicPlayerPanel::OnPlaybackStatusHasChanged
-CMusicPlayerPanel::OnCurrentQueueEntrySecondsElapsedChanged
-CMusicPlayerPanel::OnGameOverlayActivated
-CMusicPlayerPanel::OnPlayingRepeatStatusHasChanged
-CMusicPlayerPanel::OnPlayingShuffledHasChanged
-CMusicPlayerPanel::OnVolumeHasChanged
-CMusicPlayerPanel::OnAlbumCoverLoaded
-Slider
-CMusicPlayerVolumePanel
-resource/layout/musicplayervolumepanel.layout
-CVolumeSlider
-vgui::Slider
-Password
-Recovery
-resource/layout/parentalunlockdialog.layout
-#Steam_Parental_ForgotPIN
-steam://url/ParentalRecovery
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/parental/parentalunlockdialog.cpp
-pfnOnUnlock == NULL || pfnOnWebTokenChanged == NULL
-DoParentalUnlock
-ShowRecoveryDialog
-#Steam_Parental_NoRecoveryEmail
-#Steam_Parental_NoRecoveryEmail_Instructions
-#Steam_Parental_UnlockFailureExceeded
-#Steam_Parental_UnlockFailure
-#Steam_Parental_UnlockFailureTitle
-CDialogParentalUnlock
-CDialogParentalUnlock::OnParentalLockChangeAttemptComplete
-CDialogParentalUnlock::OnParentalWebTokenChanged
-sCommunityShareScreenshotLink
-https://www.facebook.com/dialog/feed?app_id=105386699540688
-common/ReleaseState
-common/ReleaseStateOverride
-CommunitySingleScreenshot
-#Overlay_ScreenshotOnSteamNamed
-%gamename%
-DeleteFromCloudBox
-resource/layout/screenshotdeletedialog.layout
-delete_screenshot_count
-WarningText
-#steam_are_you_sure_delete_screenshots
-Delete
-#Overlay_Publish_Error_Title
-#Overlay_Delete_Screenshot_Error
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/screenshotmanager.cpp
-pScreenshot->m_pOwner != NULL
-CScreenshotManager
-#Overlay_Screenshots_Title
-grid
-details_button
-view_local_library_button
-details_caption
-SSDetails
-publish_caption
-spoiler_checkbox
-publish_button
-delete_button
-publish_charsleft
-no_screenshots
-game_selector
-multiselect_button
-resource/layout/screenshotmanager.layout
-#Overlay_Publish_Offline
-gameid
-timesince
-multi_img
-multi_img_count
-multi_img_selected
-multi_img_upload_size
-multi_img_upload_size_info
-multi_img_storage_remaining
-multi_img_storage_remaining_info
-multi_img_delete
-multi_img_upload
-selected_screenshot_count
-instr_no_selection
-instr_no_selection_title
-file_not_loaded_label
-SSDate
-SSSize
-SSSizeOriginal
-selected_ss_date
-selected_ss_size
-selected_ss_size_original
-file_not_loaded_filename
-steam://url/CommunityScreenshots
-steam://url/CommunitySingleScreenshot/%llu
-#Overlay_Publish_Error_Quota
-#Overlay_Publish_Error_Quota_Plural
-ScreenshotUploadDialog
-ScreenshotDeleteDialog
-Adding screenshot unnecessarily
-SS%d
-screenshot_caption_charsleft
-publishcharsleft
-publishcharsleft_toomanychars
-screenshot_hotkey
-#steam_screenshots_deselect_all
-#steam_screenshots_select_all
-screenshot_remaining_storage
-screenshot_upload_size
-m_sortvecSelectedPanels
-m_mapHandleToItemID
-FCVAR_NEVER_AS_STRING
-CScreenshotDeleteDialog
-DeleteScreenshot
-Cancel
-m_strFullFilename
-m_imgPreview.m_bufData
-m_imgThumb.m_bufData
-MultiSelect
-ViewScreenshots
-ViewSelectedScreenshot
-ViewLocalLibrary
-AskPublishScreenshot
-AskDeleteScreenshot
-GameOverlayScreenshotKeyChanged
-PanelClicked
-code
-WrapPanelItemVisibility
-visible
-DeleteDialogClosed
-EndDrag
-#Overlay_Add_Caption
-CScreenshotCaptionEntry
-vgui::TextEntry
-TextEntry
-CScreenshotGameSelector
-vgui::ComboBox
-ComboBox
-m_mapGameItems
-ThumbnailUploaded
-ThumbnailUnpublished
-ThumbnailSelected
-#steam_screenshotsupload_title
-visibility_options
-privacy
-#steam_private
-#steam_friendsonly
-#steam_public
-upload_progress
-shared_to_facebook_ok_label
-shared_to_facebook_no_multi_label
-shared_to_facebook_no_private_label
-limited_user_upload_label
-facebook_logo
-graphics/facebookLogo12
-share_to_facebook_check_button
-resource/layout/screenshotsuploaddialog.layout
-upload_screenshot_count
-upload_question
-#steam_upload_screenshots
-upload_info
-#steam_screenshots_upload_info
-CScreenshotUploadDialog
-UploadProgress
-ScreenshotsErrors
-SlimProgressBarError
-#steam_screenshots_error_info
-#steam_screenshots_error_accountban
-error_info
-Upload
-changesharetofacebook
-upload_button
-upload_size
-storage_remaining
-upload_size_info
-storage_remaining_info
-visiblity_label
-#steam_screenshotsuploading_title
-CScreenshotUploadDialog::UploadScreenshotsComplete() could not get the panel. Is the handle correct?
-loading_img_throbber
-graphics/minithrobber
-ScreenshotLoadingThrobber
-%s_thumb
-CScreenshotImageClickPanel
-vgui::Panel
-ScreenshotImageClickPanel
-m_pImagePreview
-m_strCaption
-cloud_icon
-steam/cached/icon_cloud_enabled_dark_bg
-resource/icon_warning
-IsValidIndex(elem)
 Steam_BGetCallback
 Steam_FreeLastCallback
 Steam_GetAPICallResult
@@ -9469,6 +7648,7 @@ Failed to post that I was waiting for an event
 %s.BinSemLock
 Failed to force create PosixEvent: %s - %s, m_pLock:%p, m_pPending:%p
 Failed to create PosixAutoResetEvent: %s - %s, m_pLock:%p, m_pPending:%p
+true
 Bad Access flag on shared mem create: %s: %u
 /Shm/%x
 /dev/null
@@ -9498,36 +7678,11 @@ m_pMutex->Wait() failed in ShMemStream::PutInternal
 SHMemStream header is corrupt in PutInternal()
 PutInternal: Not enough space for put when locked
 Asked to unlock memory for write.. but wasn't locked
--reactlogin
-Should we use the react login refresh UI
 @durationControlInitialNotification
 Show initial duration control notification.
-steam://url/CommunityFilePage/%llu
-OverlayCDKeyDialog
-KeyList
-Name
-#Overlay_CDKeyDialog_NameColumn
-Key
-#Overlay_CDKeyDialog_KeyColumn
-#Steam_RequestingLegacyKey
-steam/cached/OverlayCDKeyDialog.res
-%d\OverlayCDKeyDisable
-DontShowAgainCheck
-ReasonLabel
-#Overlay_CDKeyNotification_MessageApp
-#Overlay_CDKeyNotification_Message
-ScreenshotNotification
-LabelInfo
-LabelGame
-ScreenshotImage
-public/ScreenshotNotification.res
-screenshots
-#Friends_ScreenshotNotification_Info_Multiple
 BaseGameOverlayUIPanel
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/overlay/gameoverlayui/BasePanel.cpp
 m_pOverlaySurface
-BaseDashboardPanel
-BaseDesktopPanel
 OverlayWebFrame
 virtualmenus
 notificationtoasts
@@ -9536,385 +7691,84 @@ broadcaststatus
 MainMenu
 QuickAccess
 friendslist
-TaskbarPanel
-FriendsDetailPanel
-AchievementsDetailPanel
-NewsDetailPanel
-ScreenshotsDetailPanel
-GuidesDetailPanel
-CommunityHubDetailPanel
-CommunityDiscussionsDetailPanel
-BroadcastDetailPanel
-GameName
-Clock
-ClockSuffix
-TwoWeeksText
-ForeverText
-TimedTrialText
-SteamLogo
-SettingsButton
-OpenOverlaySettingsDialog
-WebBrowserButton
-OpenOverlayWebBrowserDialog
-view_friends
-#Steam_ViewFriends
-OpenFriendsDialog
-MusicPlayerButton
-FriendsButton
-PlayersButton
-OpenOverlayPlayersDialog
-AchievementsButton
-ViewAchievements
-ScreenshotsButton
-OpenOverlayScreenshotsDialog
-GameGroupsButton
-GameHubButton
-ChatRoomButton
-DLCButton
-#Overlay_Taskbar_DLC
-OpenDlcDialog
-GuideButton
-#Overlay_Taskbar_Guide
-ViewGuide
-LegacyCDKeyButton
-#Overlay_Taskbar_legacycdkey
-ShowLegacyCDKey
-WebSiteButton
-ForumsButton
-RecommendButton
-WorkshopButton
-GuidesButton
-ForceQuitButton
-InitiateForceQuit
-EditControllerConfig
-CloseButton
-DelayedClose
-PowerMeterDim
-PowerMeterBright
-resource/layout/overlaydashboard.layout
-#Overlay_Taskbar_CloseApp
-#Overlay_Taskbar_Close
-resource/layout/overlaydesktop.layout
-resource/layout/overlaytaskbar.layout
-friends_online
-ShowFriendsPanelInOverlay
 -gameid
 Got gameid on commandline: %llu
-public/url_list.txt
-%steamID%
-%mystuff%
-profiles/%llu
-%language%
-%storehttps%
-%checkout%
-%community%
-%communityhttps%
-%chat%
-%buildid%
-%news%
-%help%
-Steam_Language
-#Overlay_MicroTxnCancelDlgTitle
-#Overlay_MicroTxnCancelDlgText
-#Overlay_MicroTxnCancelDlgOK
-CancelMicroTxn
-#Overlay_MicroTxnCancelDlgCancel
-RetryMicroTxn
-CloseImmediately
-resource/steamchina_logo_overlay
-resource/steam_logo_big
-resource/layout/overlaydashboard_lores.layout
-resource/layout/overlaydesktop_lores.layout
-am
-pm
+OverlayHidden
+OverlayShown
 CBasePanel::ShellExecuteHook
 close/
 friends/
-FriendsCommand
 url/
 openexternalforpid/
-checkout_return/
-RunStoreJavascript
-javascript
-settings
-connect
 viewfriendsgame
 joinlobby
-#Overlay_LobbyInvite_WrongGame_Title
-#Overlay_LobbyInvite_WrongGame_Message
+open_external
 open_external/
 http:
 https:
 www.
 openurlforpid
 openurl
-openurl/
-about:
-opening url: %s
 gamewebcallback
 rungame
-completetxn
-broadcast
-watch
-SteamIDBroadcastPage
 run
-TradeDialog
--longtoast
-SteamIDAchievementsPage/%u
-AppNewsPage/%u
-StoreDlcPage
-#Overlay_ForceQuit_Title
-#Overlay_ForceQuit_Description
-ForceQuit
-steamIDControlPage
-WebBrowser
-ParentalUnlockDialog
-hotkey
-#Broadcast_Notification_AvailableToWatch_Friends
-#Broadcast_Notification_AvailableToWatch_Public
-BroadcastPublicStateNotification
-RemotePlayTogetherAvailableNotification
-SteamInputControllerConnectedNotification
-OverlaySplashScreen
-#SteamChina_Overlay_DurationControl_ExitSoon_3h
-#SteamChina_Overlay_DurationControl_ExitSoon_Night
-steam/cached/durationcontrolnotification.layout
-BResizeImageRGB failed
-BConvertRGBToRGBA failed
+open
+InGameOverlayScreenshotHotKey
+InGameOverlayScreenshotPlaySound
+InGameOverlayShortcutKey
+Close
 resource/camera1.wav
 m_GameID.IsSteamApp()
-nSize < (128 * 1024)
 nSize <= buffer.SizeAllocated()
 parent
-extended
-steam://url/GameHubDiscussions/%u
-steam://url/CommunityGroupSearch/%s
-steam://url/GameHub/%u
-ListOfDLC
-DLCAvailableOnStore
-GuideAppID
-homepage
-steam://url/RecommendGame/%u
-steam://url/SteamWorkshopPage/%u
-common/workshop_visible
-1
-steam://url/GameHubGuides/%u
-InstructionText
-#Overlay_Screenshots_Press_HotkeyApp
-#Overlay_Screenshots_Press_Hotkey
-OverlayCDKeyNotification
-lobbyinvite
-remoteplaytogetherinvite
-lobbyinviteconnectstring
-voicesettings
-friendadd
-friendremove
-friendrequestaccept
-friendrequestignore
-friends
-players
-community
-Achievements
-UserAchievementsPage/%llu/%u
-jointrade
-JoinTrade/%llu
-Stats
-UserStatsPage/%llu/%u
-leaderboards
-UserLeaderboardsPage/%llu/%u
-GlobalLeaderboardsPage/%u
-OfficialGameGroup
-OfficialGameGroupPage/%d
-chat/
-steamid/
-SteamIDPage/%llu
-GroupSteamIDPage/%llu
-chat
-chatroomgroup/
-chatroomgroup/%llu/%llu
-tradeinvite
-steamid
-MinimalProfileEdit
-MinimalProfileEdit/%llu
-%u
-StoreAppPageAddToCart
-StoreAppPage
-X-Steam-OverlayStoreBrowser
-steam/cached/OverlaySplash.res
-steam/cached/OverlayCDKeyNotification.res
-cdkey
-LabelMessage
-LabelKey
-#Overlay_CDKeyNotification_Message_MultipleKeyApp
-#Overlay_CDKeyNotification_Message_MultipleKey
-OverlayLowBattery
-LoggedInElsewhere
-steamLogin
-steamLoginSecure
-BroadcastUploadErrorNotification
-Broadcast_Upload_Result_%u
-#Broadcast_RecordingError_General
-#Broadcast_RecordingError_URL_General
-#Broadcast_RecordingError_Razer
-#Broadcast_RecordingError_URL_Razer
-#Broadcast_RecordingError_Title
-#Broadcast_RecordingError_URL_Text
 steamloopback.host
-#Overlay_Current_Session
-minutes_session
-hours_twoweeks
-minutes_twoweeks
-hours_forever
-minutes_forever
-#Overlay_Playtime_TwoWeeksHours
-#Overlay_Playtime_TwoWeeksMinutes
-#Overlay_Playtime_ForeverHours
-#Overlay_Playtime_ForeverMinutes
-hours_trial
-minutes_trial
-#Overlay_Playtime_TimedTrial
-COverlayCDKeyDialog
-NotificationFrame
-CScreenshotNotification
-vgui::NotificationFrame
+%help%
+%community%
+%checkout%
+%communityhttps%
+%storehttps%
+InGameOverlayShowFPSCorner
+InGameOverlayShowFPSContrast
 CBasePanel
 vgui::AppRootPanel
-ViewNews
-OpenOverlayCommunityDialog
+DelayedClose
 WebSteamURL
 cmd
 referrer
 OpenSteamDialog
-OpenBroadcastChatDialog
+ForceQuit
 AddActionSignalTarget
 vpanel
-CBasePanel::OnMicroTxnAuthRequest
+GameOverlaySettingsChanged
 ActivateModule
 moduleIndex
 CBasePanel::OnGameOverlayActivateRequested
 CBasePanel::OnOverlayStateChanged
 CBasePanel::OnOverlaySettingsChanged
-CBasePanel::OnLowBattery
-CBasePanel::OnLegacyCDKeyRegistered
-CBasePanel::OnLoggedOff
-CBasePanel::OnPersonaStateChange
 CBasePanel::OnScreenshotWritten
-CBasePanel::OnFilePublished
-CBasePanel::OnPublishedFileUpdated
-CBasePanel::OnAsyncNotificationsRequested
-CBasePanel::OnBroadcastShowFirstTimeDlg
-CBasePanel::OnBroadcastStatus
-CBasePanel::OnBroadcastSettingsLoaded
-CBasePanel::OnBroadcastRecorderError
-CBasePanel::OnBroadcastUploadsDisabled
-CBasePanel::OnDurationControl
-CBasePanel::OnTimedTrialStatus
 CBasePanel::OnConfigUpdated
-CBaseDashboardPanel
-CloseMenu
-CBaseDesktopPanel
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/netadr.h
-CIPAndPort::GetIPv4 called on IPv6 address
-LabelTitle
-BroadcastImageBlue
-BroadcastImageRed
-friends/broadcastpublicstatenotification.res
-#Broadcast_Notification_AvailableToWatch_Title
-CBroadcastAvailableToWatch
-TimedTrialNotification
-GameImage
-resource/TimedTrialNotification.res
-common/master_sub/notification_icon
-%s/%s
-common/icon
-%simages/apps/%d/%s.jpg
-.png
-game
-minutes
-#Steam_TimedTrial_Over
-#Steam_TimedTrial_CloseNow
-#Steam_TimedTrial_EndSoon
-#Steam_TimedTrial_CloseSoon
-#Steam_TimedTrial_Enjoy
-#Steam_TimedTrial_Minutes
-#Steam_TimedTrial_Hours
-hours
-#Steam_TimedTrial_Offline
-CTimedTrialNotification
-friends/remoteplaytogetheravailablenotification.res
-CRemotePlayTogetherAvailableToInvite
-config_name
-controller_steamcontroller
-controller_xbox_360
-controller_xbox_one
-ControllerImage
-tenfoot/resource/images/controller_icon_%s
-public/SteamInputControllerConfigNotification.res
-CSteamInputControllerConfigNotification
-DurationControlNotification
-CDurationControlNotification
-#Overlay_Publish_NeedWorkshopLegalAgreementAcceptance_Desc
-EasyNotification
-LabelBody
-resource/EasyNotification.res
-NeedWorkshopLegalAgreementAcceptanceDialog
-OKButton
-ViewItem
-steam/cached/NeedWorkshopLegalAgreementAcceptance.res
-SimpleDialog
-FireButton
-iButton
-COverlayNeedWorkshopLegalAgreementAcceptanceDialog
-vgui::SimpleDialog
-COverlaySplash
-COverlayCDKeyNotification
-steam/cached/OverlayBatteryNotification.res
-batteryTime
-COverlayLowBattery
-steam/cached/loggedinelsewherenotification.res
-COverlayLoggedInElsewhereNotification
-friends/broadcastuploaderrornotification.res
-CBroadcastUploadErrorNotification
 IngameFPSBanner
 TextLabel
 99
 resource/layout/ingamefpsbanner.layout
 CIngameFPSBanner
+EditablePanel
 HighContrast
 LowContrast
 CounterTextSmall
 CounterTextLarge
 CounterTextMedium
-AsyncNotificatoinsRequestedDialog
-EnableNotifications
-CancelButton
-DisableNotifications
-steam/cached/AsyncNotificationsRequestedDialog.res
-COverlayAsyncNotificationsRequestedDialog
 %u FPS
 AppRootPanel
-CPanelHideWrapper< TPanel >::OnParentalLockChanged
-COverlay_Details_Friends
-COverlay_Details_Achievements
-COverlay_Details_News
-COverlay_Details_Screenshots_Panel
-COverlay_Details_Guides_Panel
-COverlay_Details_CommunityHub_Panel
-COverlay_Details_CommunityDiscussions_Panel
-COverlayDetailsBroadcastPanel
-ImagePanel
-URLLabel
-m_sURL
-m_pkvCommand
-#SteamChina_Overlay_DurationControl_Init
-steam/cached/durationcontrolinitial.layout
+Panel
 developer
 -steampid
 Steam pid that launched us
 VGUI_Application_001
 OK
-Aug  7 2023
-14:07:27
+Cancel
+Aug 11 2023
+21:41:06
 crashhandler004
 gameoverlayui
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/overlay/gameoverlayui/main.cpp
@@ -9955,9 +7809,7 @@ VGuiModuleLoader004
 g_pVGuiModuleLoader
 Failed to load platform modules (friends, server browser, etc...)
 FriendsUIInterfaceV001
-ServerBrowser003
 g_pFriendsUI
-g_pServerBrowserUI
 GameOverlayUI Thread
 Main Frame Loop
 Sleep for overlay FPS limiting
@@ -9986,6 +7838,7 @@ SteamUniverse
 SteamRealm
 China
 %s/%s%s
+Frame
 MessageBox
 -pid
 Pid that we should be watching for
@@ -10035,253 +7888,9 @@ Warning: The game hasn't rendered a frame from us in over 10 seconds
 Warning: Tried to clear, but game started reading right as we would have done so
 Warning: Game claimed to have rendered after extra time, but render stream is not empty.
 Warning: Game claims to have rendered, but render stream is not empty.
-MicroTxnAuthorizeHandler
-AddFundsButton
-#Overlay_MicroTxnAuth_AddFunds
-AddFunds
-#Overlay_MicroTxnAuth_Cancel
-ErrorLabel
-#Overlay_MicroTxnAuth_ConnectionError_Info
-#Overlay_MicroTxnAuth_ConnectionError
-resource/layout/overlay_microtxn_authmessagebox.layout
-#Overlay_MicroTxnAuth_Insufficient_Funds
-#Overlay_MicroTxnAuth_Insufficient_Funds_Info
-steam://close/authorize
-steam://close/cancel
-CMicroTxnAuthorizeHandler
-CMicroTxnAuthorizeHandler::OnAuthDismiss
-WebBrowserClose
-imagepanel
-icon
-caption
-resource/layout/overlay_achievement_item.layout
-desc
-ViewAchievementsButton
-achievement
-progressbarimage
-progressbackground
-resource/layout/overlay_achievementsdetails.layout
-#Overlay_Achievement_Recent
-#Overlay_Achievement_Soon
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/overlay/gameoverlayui/overlayachievements.cpp
-uAppID != k_uAppIdInvalid
-percent
-earned
-total
-hidden
-CAchievementImagePanel
-CAchievementImagePanel::OnAchievementIconReady
-CAchievementInfoPanel
-COverlay_Details_Achievements::OnUserStatsReceived
-COverlay_Details_Achievements::OnUserAchievement
-resource/layout/overlay_broadcastpanel.layout
-SteamIDBroadcastPage/%llu
-BroadcastChatDialog
-ChatHistory
-EmoticonButton
-resource/layout/overlay_broadcastchat.layout
-friends_chat_name_ingame
-friends_chat_name
-:
-friends_chat_text_self
-friends_chat_text
-friends_chat_url
-#Broadcast_Chat_Muted
-#Broadcast_Chat_Joined
-#Broadcast_Chat_Left
-ChatUserContext
-#Broadcast_Chat_Show_Profile
-ShowUserProfile
-#Broadcast_Chat_Mute_User
-MuteChatUser
-steam://url/SteamIDPage/%llu
-BroadcastChatBanner
-ChatLine%d
-resource/layout/broadcast_chatbanner.layout
-COverlayDetailsBroadcastPanel::OnBroadcastStatus
-ShowBroadcast
-ShowSettings
-StopBroadcast
-COverlayBroadcastChatDialog
-COverlayBroadcastChatDialog::OnBroadcastStatus
-COverlayBroadcastChatDialog::OnBroadcastChatMessage
-PostMessage
-URLClicked
-TextClicked
-vgui::MenuButton
-CBroadcastChatBanner
-CBroadcastChatBanner::OnBroadcastChatMessage
-resource/layout/overlay_communitydiscussionspanel.layout
-num_discussions
-%sactions/DiscussionsCount/%d/
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/overlay/gameoverlayui/overlaycommunitydiscussionspanel.cpp
-count
-ViewCommunityDiscussions
-resource/layout/overlay_communityhubpanel.layout
-num_contributions
-%sactions/ContributionCount/%d/
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/overlay/gameoverlayui/overlaycommunityhubpanel.cpp
-ViewCommunityHub
-TextThisManyFriends
-AllFriendsButton
-ViewPlayersButton
-resource/layout/overlay_friendsdetails.layout
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/overlay/gameoverlayui/overlayfriends.cpp
-m_bPendingTick
-#Friends_NotAvailableInOfflineMode
-numfriends
-#Overlay_Friends_ThisManyInThisGame
-#Overlay_Friends_ThisManyOnline
-FriendChangeConfirmationDialog
-#Overlay_FriendChangeConfirmation_Title
-ConfirmButton
-Confirm
-resource/layout/overlay_friendchangeconfirmationdialog.layout
-#Overlay_FriendChangeConfirmation_Reason_Add
-#Overlay_FriendChangeConfirmation_Button_Add
-#Overlay_FriendChangeConfirmation_Reason_Remove
-#Overlay_FriendChangeConfirmation_Button_Remove
-#Overlay_FriendChangeConfirmation_Reason_RequestAccept
-#Overlay_FriendChangeConfirmation_Button_RequestAccept
-#Overlay_FriendChangeConfirmation_Reason_RequestIgnore
-#Overlay_FriendChangeConfirmation_Button_RequestIgnore
-[unknown]
-persona
-COverlayFriendChangeConfirmationDialog
-count >= 0
-(elem == Count()) || IsValidIndex(elem)
-Background
-resource/layout/overlay_guide_item.layout
-resource/icon_community_preview
-guideitem
-resource/layout/overlay_guidespanel.layout
-num_guides
-CGuideItemPanel
-ViewGuides
-newsitem_title
-newsitem_dateandauthor
-resource/layout/overlay_news_item.layout
-ViewNewsButton
-newsitem
-resource/layout/overlay_newsdetails.layout
-%snews/newsforapp/v0002/
-Cache-Control
-max-stale=111600
-appid
-3
-maxlength
-300
-format
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/overlay/gameoverlayui/overlaynews.cpp
-ClientHTTP()->SetHTTPRequestContextValue( hRequest, m_uAppID )
-HTTP request failed sending? API error, shouldn't happen
-appnews
-newsitems
-date
-feedlabel
-author
-CNewsItemPanel
-resource/layout/overlay_screenshotspanel.layout
-SetShortcut
-OverlaySettingsDialog
-#Friends_Settings_TabTitle
-#Steam_Settings_BroadcastTitle
-www.google.com
-#Steam_Settings_Browser
-#Music_Settings_TabTitle
-common/type
-Application
-#Overlay_SettingsTabTitleApp
-#Overlay_SettingsTabTitle
-Label2
-#Overlay_SettingsDescriptionApp
-#Overlay_SettingsDescription
-#Overlay_SettingsEnableApp
-#Overlay_SettingsEnable
-#Voice_Settings_NewTabTitle
-steam/OverlaySettingsDialog
-#Overlay_Settings_Title
-voice
-ingame
-browser
-#Voice_Settings_TabTitle
-COverlaySettingsDialog
-vgui::PropertyDialog
-COverlayInGameVoiceSettingsDialog
-PropertyDialog
-PageLoadThrobber
-graphics/rampDown_4
-URLBar
-URLStatusImage
-EVCert
-StatusText
-HTMLField
-#Overlay_WebBrowserTitleApp
-#Overlay_WebBrowserTitle
-resource/layout/OverlayWebBrowser.layout
-OverlayWebBrowserNew
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/overlay/gameoverlayui/OverlayWebBrowser.cpp
-Count of overlay web browsers out of sync?
-StopButton
-BackButton
-ForwardButton
-postdata
-ispageload
-ReloadButton
-secure
-isevcert
-certerror
-certname
-URLBarSecure
-graphics/html_lock_broken
-URLBarBrokenSecure
-graphics/html_lock
-store.steampowered.com
-://store.beta.steampowered.com
-/store
-graphics/loop_
-graphics/rampDown_
-%s%d
-http
-https
-chrome
-file
-ftp
-sftp
-imap
-mailto
-rtmp
-ssh
-COverlayWebBrowser
-vgui::ToolPanel
-OnURLChanged
-OnFinishRequest
-SecurityStatus
-WebBack
-WebForward
-WebStop
-WebReload
-WebHome
-TextNewLine
-Go
-HTMLBackRequested
-HTMLForwardRequested
-HTMLCanGoBackAndForward
-PageTitleChange
-OnSetStatusText
-status
-COverlayWebBrowser::OnParentalLockChanged
-#Overlay_WebBrowser_OpenInNewTab
-newtab
-COverlayWebBrowserHTML
-ToolPanel
-TabbedWebBrowser
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utllinkedlist.h
-m_TotalElements != InvalidIndex()
-%s overflow!
-IsInList(after)
-Invalid index %u
 htmlframelesspopupchild
+-dev
+OnCloseWindow
 x
 width
 height
@@ -10293,21 +7902,28 @@ Overlay Web Popup Container
 COverlayWebVguiFrame
 -openalldevtools
 _uid
+about:blank
 browserview
 OverlayWebPopup
 overlay
 pinned
 modal
 CEmbeddedHTML
+vgui::EditablePanel
 OnStartRequest
+OnFinishRequest
 BrowserSetWindowPosition
 BrowserHideWindow
 BrowserShowWindow
 KillFocus
 SetFocus
+vgui::Frame
 Activate
+!pszString || pszString[nChars] == '\0'
 Overlay.SetWindowPinned
 Overlay.SetWindowAlpha
+%s requires %d arguments; only %d given
+%s call had invalid argument (arg %d): %s
 RunGameEngine007
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/overlay/gameoverlayui/screenshotthread.cpp
 m_pStream->BWaitForDataToGet()
@@ -10341,7 +7957,6 @@ t
 y
 false
 f
-no
 CHECK failed: snprintf_result > 0 && snprintf_result < kFloatToBufferSize:
 0123456789abcdef
 CHECK failed: (out) == (begin + result.size()):
@@ -10660,6 +8275,7 @@ option json_name is not allowed on extension fields.
 " uses the same enum value as "
 ". If this is intended, set 'option allow_alias = true;' to the enum definition.
 Files with optimize_for = LITE_RUNTIME cannot define services unless you set both options cc_generic_services and java_generic_services to false.
+Entry
 key
 Key in map fields cannot be enum types.
 Key in map fields cannot be float/double, bytes or message types.
@@ -11069,6 +8685,7 @@ Expected "
 ", found "
 Value of type "
 " stored in google.protobuf.Any has missing required fields
+allocator<T>::allocate(size_t n) 'n' exceeds maximum supported size
 Expected identifier, got:
 Message is too deep, the parser exceeded the configured recursion limit of
 Cannot skip field value, unexpected token:
@@ -11176,136 +8793,6 @@ google/protobuf/io/tokenizer.cc
 Tokenizer::ParseFloat() passed text that could not have been tokenized as a float:
 Tokenizer::ParseStringAppend() passed text that could not have been tokenized as a string:
 \U%08x
-OPENSSL_ia32cap
-Bogus message code %d
-ALIGN_TYPE is wrong, please fix
-MAX_ALLOC_CHUNK is wrong, please fix
-Bogus buffer control mode
-Invalid component ID %d in SOS
-Invalid crop request
-DCT coefficient out of range
-DCT scaled block size %dx%d not supported
-Component index %d: mismatching sampling ratio %d:%d, %d:%d, %c
-Bogus Huffman table definition
-Bogus input colorspace
-Bogus JPEG colorspace
-Bogus marker length
-Wrong JPEG library version: library is %d, caller expects %d
-Sampling factors too large for interleaved scan
-Invalid memory pool code %d
-Unsupported JPEG data precision %d
-Invalid progressive parameters Ss=%d Se=%d Ah=%d Al=%d
-Invalid progressive parameters at scan script entry %d
-Bogus sampling factors
-Invalid scan script at entry %d
-Improper call to JPEG library in state %d
-JPEG parameter struct mismatch: library thinks size is %u, caller expects %u
-Bogus virtual array access
-Buffer passed to JPEG library is too small
-Suspension not allowed here
-CCIR601 sampling not implemented yet
-Too many color components: %d, max %d
-Unsupported color conversion request
-Bogus DAC index %d
-Bogus DAC value 0x%x
-Bogus DHT index %d
-Bogus DQT index %d
-Empty JPEG image (DNL not supported)
-Read from EMS failed
-Write to EMS failed
-Didn't expect more than one scan
-Input file read error
-Output file write error --- out of disk space?
-Fractional sampling not implemented yet
-Huffman code size table overflow
-Missing Huffman code table entry
-Maximum supported image dimension is %u pixels
-Empty input file
-Premature end of input file
-Cannot transcode due to multiple use of quantization table %d
-Scan script does not transmit all data
-Invalid color quantization mode change
-Not implemented yet
-Requested feature was omitted at compile time
-Arithmetic table 0x%02x was not defined
-Backing store not supported
-Huffman table 0x%02x was not defined
-JPEG datastream contains no image
-Quantization table 0x%02x was not defined
-Not a JPEG file: starts with 0x%02x 0x%02x
-Insufficient memory (case %d)
-Cannot quantize more than %d color components
-Cannot quantize to fewer than %d colors
-Cannot quantize to more than %d colors
-Invalid JPEG file structure: two SOF markers
-Invalid JPEG file structure: missing SOS marker
-Unsupported JPEG process: SOF type 0x%02x
-Invalid JPEG file structure: two SOI markers
-Invalid JPEG file structure: SOS before SOF
-Failed to create temporary file %s
-Read failed on temporary file
-Seek failed on temporary file
-Write failed on temporary file --- out of disk space?
-Application transferred too few scanlines
-Unsupported marker type 0x%02x
-Virtual array controller messed up
-Image too wide for this implementation
-Read from XMS failed
-Write to XMS failed
-Copyright (C) 2010, Thomas G. Lane, Guido Vollbeding
-8b  16-May-2010
-Caution: quantization tables are too coarse for baseline JPEG
-Adobe APP14 marker: version %d, flags 0x%04x 0x%04x, transform %d
-Unknown APP0 marker (not JFIF), length %u
-Unknown APP14 marker (not Adobe), length %u
-Define Arithmetic Table 0x%02x: 0x%02x
-Define Huffman Table 0x%02x
-Define Quantization Table %d  precision %d
-Define Restart Interval %u
-Freed EMS handle %u
-Obtained EMS handle %u
-End Of Image
-%3d %3d %3d %3d %3d %3d %3d %3d
-JFIF APP0 marker: version %d.%02d, density %dx%d  %d
-Warning: thumbnail image size does not match data length %u
-JFIF extension marker: type 0x%02x, length %u
-with %d x %d thumbnail image
-Miscellaneous marker 0x%02x, length %u
-Unexpected marker 0x%02x
-%4u %4u %4u %4u %4u %4u %4u %4u
-Quantizing to %d = %d*%d*%d colors
-Quantizing to %d colors
-Selected %d colors for quantization
-At marker 0x%02x, recovery action %d
-RST%d
-Smoothing not supported with nonstandard sampling ratios
-Start Of Frame 0x%02x: width=%u, height=%u, components=%d
-Component %d: %dhx%dv q=%d
-Start of Image
-Start Of Scan: %d components
-Component %d: dc=%d ac=%d
-Ss=%d, Se=%d, Ah=%d, Al=%d
-Closed temporary file %s
-Opened temporary file %s
-JFIF extension marker: JPEG-compressed thumbnail image, length %u
-JFIF extension marker: palette thumbnail image, length %u
-JFIF extension marker: RGB thumbnail image, length %u
-Unrecognized component IDs %d %d %d, assuming YCbCr
-Freed XMS handle %u
-Obtained XMS handle %u
-Unknown Adobe color transform code %d
-Corrupt JPEG data: bad arithmetic code
-Inconsistent progression sequence for component %d coefficient %d
-Corrupt JPEG data: %u extraneous bytes before marker 0x%02x
-Corrupt JPEG data: premature end of data segment
-Corrupt JPEG data: bad Huffman code
-Warning: unknown JFIF revision number %d.%02d
-Premature end of JPEG file
-Corrupt JPEG data: found marker 0x%02x instead of RST%d
-Invalid SOS parameters for sequential JPEG
-Application transferred too many scanlines
-JPEGMEM
-%ld%c
 UTF8)
 UTF)
 UCP)
@@ -11343,429 +8830,19 @@ NumberOfCapturingGroups
 pcre_retval == 0
 NewlineMode
 NULL == "Unexpected return value from pcre_config(NEWLINE)"
-Potential overflow in png_zalloc()
-Application built with libpng-
-but running with
-Ignoring invalid time value
-Ignoring attempt to set negative chromaticity value
-Invalid cHRM white point
-Invalid cHRM red point
-Invalid cHRM green point
-Invalid cHRM blue point
-Ignoring attempt to set cHRM RGB triangle with zero area
-extreme cHRM chunk cannot be converted to tristimulus values
-internal error in png_XYZ_from_xy
-Image width is zero in IHDR
-Invalid image width in IHDR
-Image width exceeds user limit in IHDR
-Image height is zero in IHDR
-Invalid image height in IHDR
-Image height exceeds user limit in IHDR
-Invalid bit depth in IHDR
-Invalid color type in IHDR
-Invalid color type/bit depth combination in IHDR
-Unknown interlace method in IHDR
-Unknown compression method in IHDR
-MNG features are not allowed in a PNG datastream
-Unknown filter method in IHDR
-Invalid filter method in IHDR
-Invalid IHDR data
-gamma table being rebuilt
-Out of range gamma value ignored
-Invalid palette size, hIST allocation skipped
-Insufficient memory for hIST chunk data
-pCAL: invalid purpose keyword
-Invalid pCAL equation type
-Invalid format for pCAL parameter
-Insufficient memory for pCAL purpose
-Insufficient memory for pCAL units
-Insufficient memory for pCAL params
-Insufficient memory for pCAL parameter
-Invalid sCAL unit
-Invalid sCAL width
-Invalid sCAL height
-Memory allocation failed while processing sCAL
-Invalid palette length
-iCCP: invalid keyword
-Insufficient memory to process iCCP chunk
-Insufficient memory to process iCCP profile
-too many text chunks
-text compression mode is out of range
-invalid text keyword
-Ignoring invalid num_trans value
-tRNS chunk has out-of-range samples for bit_depth
-No memory for sPLT palettes
-sPLT: invalid keyword
-Out of memory while processing sPLT chunk
-Out of memory while processing unknown chunk
-PNG unsigned integer out of range
-Not a PNG file
-PNG file corrupted by ASCII conversion
-CRC error
-invalid chunklength
-Exceeded size limit while expanding chunk
-png_inflate logic error
-Not enough memory to decompress chunk
-Unknown compression type @1
-Out of place IHDR
-Invalid IHDR chunk
-Missing IHDR before PLTE
-Invalid PLTE after IDAT
-Duplicate PLTE chunk
-Ignoring PLTE chunk in grayscale PNG
-Invalid palette chunk
-Truncating incorrect tRNS chunk length
-Truncating incorrect info tRNS chunk length
-No image in file
-Incorrect IEND chunk length
-Missing IHDR before gAMA
-Invalid gAMA after IDAT
-Out of place gAMA chunk
-Duplicate gAMA chunk
-Incorrect gAMA chunk length
-Ignoring gAMA chunk with out of range gamma
-Ignoring incorrect gAMA value @1 when sRGB is also present
-Missing IHDR before sBIT
-Invalid sBIT after IDAT
-Out of place sBIT chunk
-Duplicate sBIT chunk
-Incorrect sBIT chunk length
-Missing IHDR before cHRM
-Invalid cHRM after IDAT
-Out of place cHRM chunk
-Duplicate cHRM chunk
-Incorrect cHRM chunk length
-Ignoring cHRM chunk with negative chromaticities
-Ignoring incorrect cHRM white(@1,@2) r(@3,@4)g(@5,@6)b(@7,@8) when sRGB is also present
-internal error handling cHRM coefficients
-internal error handling cHRM->XYZ
-Missing IHDR before sRGB
-Invalid sRGB after IDAT
-Out of place sRGB chunk
-Duplicate sRGB chunk
-Incorrect sRGB chunk length
-Unknown sRGB intent
-Ignoring incorrect cHRM value when sRGB is also present
-Missing IHDR before iCCP
-Invalid iCCP after IDAT
-Out of place iCCP chunk
-Duplicate iCCP chunk
-Malformed iCCP chunk
-Ignoring nonzero compression type in iCCP chunk
-Profile size field missing from iCCP chunk
-Ignoring iCCP chunk with declared size = @1 and actual length = @2
-No space in chunk cache for sPLT
-Missing IHDR before sPLT
-Invalid sPLT after IDAT
-malformed sPLT chunk
-sPLT chunk has bad length
-sPLT chunk requires too much memory
-Missing IHDR before tRNS
-Invalid tRNS after IDAT
-Duplicate tRNS chunk
-Incorrect tRNS chunk length
-Missing PLTE before tRNS
-Zero length tRNS chunk
-tRNS chunk not allowed with alpha channel
-Missing IHDR before bKGD
-Invalid bKGD after IDAT
-Missing PLTE before bKGD
-Duplicate bKGD chunk
-Incorrect bKGD chunk length
-Incorrect bKGD chunk index value
-Missing IHDR before hIST
-Invalid hIST after IDAT
-Missing PLTE before hIST
-Duplicate hIST chunk
-Incorrect hIST chunk length
-Missing IHDR before pHYs
-Invalid pHYs after IDAT
-Duplicate pHYs chunk
-Incorrect pHYs chunk length
-Missing IHDR before oFFs
-Invalid oFFs after IDAT
-Duplicate oFFs chunk
-Incorrect oFFs chunk length
-Missing IHDR before pCAL
-Invalid pCAL after IDAT
-Duplicate pCAL chunk
-No memory for pCAL purpose
-Invalid pCAL data
-Invalid pCAL parameters for equation type
-Unrecognized equation type for pCAL chunk
-No memory for pCAL params
-Missing IHDR before sCAL
-Invalid sCAL after IDAT
-Duplicate sCAL chunk
-sCAL chunk too short
-Out of memory while processing sCAL chunk
-Invalid sCAL ignored: invalid unit
-Invalid sCAL chunk ignored: bad width format
-Invalid sCAL chunk ignored: non-positive width
-Invalid sCAL chunk ignored: bad height format
-Invalid sCAL chunk ignored: non-positive height
-Out of place tIME chunk
-Duplicate tIME chunk
-Incorrect tIME chunk length
-No space in chunk cache for tEXt
-Missing IHDR before tEXt
-No memory to process text chunk
-Not enough memory to process text chunk
-Insufficient memory to process text chunk
-No space in chunk cache for zTXt
-Missing IHDR before zTXt
-Out of memory processing zTXt chunk
-Truncated zTXt chunk
-Unknown compression type in zTXt chunk
-Not enough memory to process zTXt chunk
-Insufficient memory to store zTXt chunk
-No space in chunk cache for iTXt
-Missing IHDR before iTXt
-No memory to process iTXt chunk
-Truncated iTXt chunk
-invalid iTXt compression flag
-unknown iTXt compression type
-Malformed iTXt chunk
-Not enough memory to process iTXt chunk
-Insufficient memory to store iTXt chunk
-No space in chunk cache for unknown chunk
-unknown critical chunk
-error in user chunk
-invalid chunk type
-internal row logic error
-internal row size calculation error
-internal row width error
-invalid user transform pixel depth
-Decompression Error
-Extra compression data
-Row has too many bytes to allocate in memory
-Buffer error in compressed datastream
-Data error in compressed datastream
-Incomplete compressed datastream
-1.2.5
-zlib memory error
-zlib stream error
-zlib version error
-Unknown zlib error
-Missing IHDR before IDAT
-Missing PLTE before IDAT
-Invalid attempt to read row data
-Not enough image data
-Extra compressed data
-Decompression error
-bad adaptive filter value
-sequential row overflow
-internal sequential row size calculation error
-Interlace handling should be turned on when using png_read_image
-Read palette index exceeding num_palette
-Too many IDATs found
-Call to NULL read function
-Read Error
-Can't set both read_data_fn and write_data_fn in the same structure
-libpng does not support gamma+background+rgb_to_gray
-invalid background gamma type
-Palette is NULL in indexed image
-NULL row buffer
-Uninitialized row
-png_do_rgb_to_gray found nongray pixel
-png_do_quantize returned rowbytes=0
-png_do_encode_alpha: unexpected call
-Out of Memory
-0123456789ABCDEF
-123456789
-libpng error: %s
-undefined
-libpng warning: %s
-resolve
-reject
 bool
 int
 double
+string
 bytes
+%d
+%u
 %f
 result
 message
-reply
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/language.cpp
-!"enum ELanguage order mismatched from Language_t s_LanguageNames, fix it!"
-zh_CN
-English
-#SteamUI_Selection_English
-#Panorama_Selection_English
-#Panorama_Lang_English
-German
-german
-#SteamUI_Selection_German
-#Panorama_Selection_German
-#Panorama_Lang_German
-de_DE
-French
-french
-#SteamUI_Selection_French
-#Panorama_Selection_French
-#Panorama_Lang_French
-fr_FR
-Italian
-italian
-#SteamUI_Selection_Italian
-#Panorama_Selection_Italian
-#Panorama_Lang_Italian
-it_IT
-Korean
-koreana
-#SteamUI_Selection_Korean
-#Panorama_Selection_Korean
-#Panorama_Lang_Korean
-ko_KR
-Spanish
-spanish
-#SteamUI_Selection_Spanish
-#Panorama_Selection_Spanish
-#Panorama_Lang_Spanish
-es_ES
-Simplified_Chinese
-schinese
-#SteamUI_Selection_Simplified_Chinese
-#Panorama_Selection_Simplified_Chinese
-#Panorama_Lang_Simplified_Chinese
-zh-cn
-Traditional_Chinese
-tchinese
-#SteamUI_Selection_Traditional_Chinese
-#Panorama_Selection_Traditional_Chinese
-#Panorama_Lang_Traditional_Chinese
-zh_TW
-zh-tw
-Russian
-russian
-#SteamUI_Selection_Russian
-#Panorama_Selection_Russian
-#Panorama_Lang_Russian
-ru_RU
-Thai
-thai
-#SteamUI_Selection_Thai
-#Panorama_Selection_Thai
-#Panorama_Lang_Thai
-th_TH
-Japanese
-japanese
-#SteamUI_Selection_Japanese
-#Panorama_Selection_Japanese
-#Panorama_Lang_Japanese
-ja_JP
-Portuguese
-portuguese
-#SteamUI_Selection_Portuguese
-#Panorama_Selection_Portuguese
-#Panorama_Lang_Portuguese
-pt_PT
-Polish
-polish
-#SteamUI_Selection_Polish
-#Panorama_Selection_Polish
-#Panorama_Lang_Polish
-pl_PL
-Danish
-danish
-#SteamUI_Selection_Danish
-#Panorama_Selection_Danish
-#Panorama_Lang_Danish
-da_DK
-Dutch
-dutch
-#SteamUI_Selection_Dutch
-#Panorama_Selection_Dutch
-#Panorama_Lang_Dutch
-nl_NL
-Finnish
-finnish
-#SteamUI_Selection_Finnish
-#Panorama_Selection_Finnish
-#Panorama_Lang_Finnish
-fi_FI
-Norwegian
-norwegian
-#SteamUI_Selection_Norwegian
-#Panorama_Selection_Norwegian
-#Panorama_Lang_Norwegian
-no_NO
-Swedish
-swedish
-#SteamUI_Selection_Swedish
-#Panorama_Selection_Swedish
-#Panorama_Lang_Swedish
-sv_SE
-Hungarian
-hungarian
-#SteamUI_Selection_Hungarian
-#Panorama_Selection_Hungarian
-#Panorama_Lang_Hungarian
-hu_HU
-Czech
-czech
-#SteamUI_Selection_Czech
-#Panorama_Selection_Czech
-#Panorama_Lang_Czech
-cs_CZ
-Romanian
-romanian
-#SteamUI_Selection_Romanian
-#Panorama_Selection_Romanian
-#Panorama_Lang_Romanian
-ro_RO
-Turkish
-turkish
-#SteamUI_Selection_Turkish
-#Panorama_Selection_Turkish
-#Panorama_Lang_Turkish
-tr_TR
-Brazilian
-brazilian
-#SteamUI_Selection_Brazilian
-#Panorama_Selection_Brazilian
-#Panorama_Lang_Brazilian
-pt_BR
-Bulgarian
-bulgarian
-#SteamUI_Selection_Bulgarian
-#Panorama_Selection_Bulgarian
-#Panorama_Lang_Bulgarian
-bg_BG
-Greek
-greek
-#SteamUI_Selection_Greek
-#Panorama_Selection_Greek
-#Panorama_Lang_Greek
-el_GR
-Arabic
-arabic
-#SteamUI_Selection_Arabic
-#Panorama_Selection_Arabic
-#Panorama_Lang_Arabic
-ar_AE
-ar
-Ukrainian
-ukrainian
-#SteamUI_Selection_Ukrainian
-#Panorama_Selection_Ukrainian
-#Panorama_Lang_Ukrainian
-uk_UA
-Latam_Spanish
-latam
-#SteamUI_Selection_Latam_Spanish
-#Panorama_Selection_Latam_Spanish
-#Panorama_Lang_Latam_Spanish
-es_419
-es-419
-Vietnamese
-vietnamese
-#SteamUI_Selection_Vietnamese
-#Panorama_Selection_Vietnamese
-#Panorama_Lang_Vietnamese
-vi_VN
-SteamChina_SChinese
-sc_schinese
+%llu
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/refcount.h
+m_iRefs > 0 && m_iRefs < 0x1000000
 htmlmessages.proto
 CUIProtoBufMsg::SerializeCrossProc
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/html/htmlprotobuf.cpp
@@ -11773,9 +8850,12 @@ unSize < 128 * 1024 * 1024
 eCmd > 0 && eCmd < eHTMLCommands_None
 pBuffer->TellPut() == 0
 AnimatingImagePanel
+%s%d
+image
 frames
 , string image
 m_Frames
+position
 size
 fgcolor
 bgcolor
@@ -11783,6 +8863,7 @@ xpos
 ypos
 wide
 tall
+alpha
 Couldn't find script file %s
 northwest
 north
@@ -11804,8 +8885,10 @@ se
 event
 Couldn't parse script file: expected 'event', found '%s'
 Couldn't parse script file: expected <event name>, found nothing
+{
 Couldn't parse script sequence '%s': expected '{', found '%s'
 animate
+%f %f %f %f
 Accel
 Deaccel
 Spline
@@ -11865,7 +8948,9 @@ param
 parameters
 groups_list
 group
+visible
 No control groups specified
+file
 style
 file_url
 style_list
@@ -11887,6 +8972,7 @@ error_text
 resource/layout/layoutdebugdialog.layout
 no layout script for this panel
 no associated editable control
+hidden
 container
 %s / %s
 < no direct container >
@@ -11908,25 +8994,42 @@ edit %s
 CheckForLayoutFilesChanges
 ZooDialog
 LayoutDebugDialog
+URLClicked
+TextChanged
 %s="%s"
 %s="..."
 HotKeyPressed
 modifiers
+code
 Frame (vgui panel zoo)
 leftPanel
 PropertySheet
+PropertyPage
 PageTab
 PageTab (empty)
+RadioButton
+ToggleButton
 Divider
 Divider2
+Label
+Button
 Button (disabled)
+CheckButton
 CheckButton (disabled)
 ComboBox scrollbar
+ComboBox
+%s %d
+ProgressBar
+Slider
+left
+right
 MenuBar
+Menu
 MenuItem
 MenuItem (disabled)
 MenuItem (with check)
 MenuItem (cascade)
+MenuButton
 MenuButton2
 MenuButton3
 CheckButtonList
@@ -11941,6 +9044,9 @@ PanelGrid
 item%d
 Grid item #%d
 ZooPropertyPage
+vgui::PropertyPage
+Page
+PropertyPageControls
 CBitmapImagePanel
 imagecolor
 imageAlignment
@@ -11970,8 +9076,8 @@ GetCommand
 , string command, int default
 _actionMessage
 PressButton
-CheckButton
 CheckButton::OnThink()
+CheckButtonChecked
 vgui::CheckButton
 CheckButtonList.CheckButton
 CheckButtonListControls
@@ -11981,6 +9087,8 @@ u
 ButtonClicked
 ComboBoxButton
 ActivateItem
+itemID
+MenuItemSelected
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/controls.cpp
 s_pFileSystemInterface
 en_US.UTF-8
@@ -11991,40 +9099,13 @@ VGUI_Scheme010
 VGUI_System010
 VGUI_Input005
 VGUI_Localize003
-DirTree
-DriveCombo
-SelectButton
-#VGui_Select
-CreateButton
-#VGui_CreateFolder
-Select
-Create
-DirectorySelectDialogClosed
-resource/icon_folder
-resource/icon_folder_selected
-drive
-root
-*.*
-Image
-SelectedImage
-Expand
-#vgui_CreateDirectoryFail_Title
-#vgui_CreateDirectoryFail_AlreadyExists
-#vgui_CreateDirectoryFail_Info
-DirectorySelectDialog
-TreeViewItemSelected
-CreateDirectory
-DirectoryTreeView
-TreeView
-#vgui_choosedirectoryname
-#vgui_ok
-#vgui_cancel
-CreateDirectoryDialog
 Hotkey
 ControlFactory
 PanelPtr
 SetText
+text
 SetState
+state
 GetState
 GetText
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/EditablePanel.cpp
@@ -12077,21 +9158,28 @@ OnFolderUp
 OnNewFolder
 PopulateFileList
 PopulateDriveList
+resource/icon_folder
 resource/icon_folderup
 resource/icon_newfolder
 resource/icon_file
+resource/icon_folder_selected
 #FileOpenDialog_NewFolder_InputTitle
 #FileOpenDialog_NewFolderPrompt
 #FileOpenDialog_NewFolder_DefaultName
 NewFolder
+item
 filterinfo
+%s %s
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/FileOpenDialog.cpp
 Couldn't format time value %llu
+*.*
 curFilter[0] == '*' && curFilter[1] == '.'
 .app
 FileCompletionEdit
 PopulateFileNameCompletion
 ListItemSelected
+InputCanceled
+InputCompleted
 CFileOpenListPanel
 #FileOpenDialog_Col_Name
 filesize
@@ -12104,6 +9192,7 @@ created
 #FileOpenDialog_Col_DateCreated
 attributes
 #FileOpenDialog_Col_Attributes
+directory
 filesize64
 modified64
 created64
@@ -12158,6 +9247,7 @@ CloseModal
 FlashWindow
 CloseFrameHotKeyPressed
 FrameRestoreButton
+CloseImmediately
 CloseExternal
 WindowRestored
 SetTitle
@@ -12168,6 +9258,7 @@ GripPanel
 CaptionGripPanel
 IsResizeBorder
 Frame.AutoSnapRange
+EndDrag
 IsPointInCaptureRegion
 SnapRange
 CaptionGripPanel::OnThink()
@@ -12190,21 +9281,14 @@ FrameSystemButton.DisabledIcon
 lowRange < highRange
 m_Samples
 m_RangeList
-clearbutton
-TextEntry.CursorColor
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/HotKeyEntry.cpp
-nSize > 0
+TextEntry
 Ctrl
 Alt
 Shift
 Win
-HotKeyEntry
 resource/icon_clear_field
-HotkeyEntryClearButton
--toggle-overlay-html-mode
-Disables new faster overlay HTML path (or enables if on a branch it's not on by default)
--html-perf-monitor
-Draws html perf data
+vgui::Panel
+ImagePanel
 resource/webkit.css
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/HTML.cpp
 Failed creating HTML browser %s: %s
@@ -12248,6 +9332,8 @@ toggledevtools
 #vgui_HTMLInspectElement
 inspectelement
 custom_%d
+HTMLBackRequested
+HTMLForwardRequested
 AcceptPanel
 html-findbar
 HTML.SearchAnimationTime
@@ -12274,11 +9360,25 @@ glTextureRangeAPPLE
 CustomURL
 _blank
 _new
+postdata
 isredirect
+OnURLChanged
+ispageload
+PageTitleChange
+title
+SecurityStatus
+secure
+certerror
+isevcert
+certname
+OnSetHTMLTitle
+OnSetStatusText
+status
 .jpg
 JPEG Image (*.jpg)
 .jpeg
 JPEG Image (*.jpeg)
+.png
 PNG Image (*.png)
 .gif
 GIF Image (*.gif)
@@ -12297,6 +9397,7 @@ All files
 findcount
 findactive
 DismissJSDialog
+HTMLCanGoBackAndForward
 profile_on triggered by F1
 profile_off triggered by F2
 SDL_VIDEO_MINIMIZE_ON_FOCUS_LOSS
@@ -12311,13 +9412,13 @@ BrowserExitFullScreen
 Skipping js method registration, already exists: %s
 Unknown method: %s
 Method call failed: %s
-_internal.RegisterForStyleChanges
 css
 map
 Detected file change in %s
 SetCursor
 cursor
 KeyCodeUnhandled
+MenuClose
 FileSelected
 fullpath
 FileSelectionCancelled
@@ -12326,11 +9427,18 @@ ftp:
 steam:
 data:image/
 HTMLComboBoxHost
+-toggle-overlay-html-mode
+Disables new faster overlay HTML path (or enables if on a branch it's not on by default)
+-html-perf-monitor
+Draws html perf data
 CHTMLFindBar
+TextNewLine
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/html/htmlpaintbuffer.h
 m_nLockedIdx >= 0
 m_nLockedIdx == -1
 iNewReadIndex != 3
+-html-enable-tooltips
+Show browser tooltips
 HtmlFramelessPopup
 minwidth
 minheight
@@ -12339,29 +9447,60 @@ maxwidth
 maxheight
 createflags
 HTMLFramelessPopup
+BrowserDraggableRegionsChanged
 BrowserResizeGripChanged
 BrowserBringWindowToFront
 BrowserSetForegroundWindow
 BrowserMaximizeRestoreWindow
 BrowserMinimizeWindow
 HTMLFramelessWrapper
+HTML
+m_CustomURLHandlers
+m_sCurrentURL
+m_sLastSearchString
+m_sDragURL
+m_sPendingURLLoad
+m_sPendingPostData
+m_vecHCursor
+m_vecStyleChangedCallbacks
+m_DirWatcherClient
+CIMEPanel
 HtmlPopup
+PageLoadThrobber
+graphics/rampDown_4
+URLBar
+EVCert
+URLStatusImage
+StatusText
 resource/layout/htmlpopup.layout
+htmlpopupchild
+BackButton
+ForwardButton
+ReloadButton
+StopButton
+URLBarSecure
+graphics/html_lock_broken
+URLBarBrokenSecure
+graphics/html_lock
+graphics/loop_
+graphics/rampDown_
+HTMLPopup
+WebStop
+WebBack
+WebForward
+WebReload
 PopupHTML
+vgui::HTML
 m_Images
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/ImagePanel.cpp
-image
 fillcolor
 gradientStart
 gradientEnd
 gradientVertical
-appearance
 fit
 image-width-only
 image-height-only
 scaling
-left
-right
 horizontal-align
 top
 bottom
@@ -12374,17 +9513,8 @@ m_sImageName
 m_sColorName
 m_sGradientStart
 m_sGradientEnd
-%s%02d
-ThrobberImagePanel
-m_sLoopImagePrefix
-m_sRampUpImagePrefix
-m_sRampDownImagePrefix
-m_sNoActivityImage
-m_sLastImageSet
 candidate
 IMECandidatesMenu
-menuname
-handleValue
 IMECandidateSelected
 IMECandidate
 ImeCompositionString
@@ -12395,8 +9525,8 @@ ShowIMECandidates
 HideIMECandidates
 UpdateIMECandidates
 Prompt
-Text
 #VGui_Cancel
+OKButton
 #VGui_OK
 InputDialog
 LabelDull
@@ -12418,6 +9548,7 @@ textalignment
 dulltext
 brighttext
 , string labelText, string associate, alignment textAlignment, int wrap, string font, string flow_right
+vgui::Label
 _textImage
 _imageDar
 _associateName
@@ -12425,6 +9556,7 @@ m_sTextSetting
 vgui::ListPanelColumnHeader
 vgui::ListPanelItem
 m_pKV
+downarrow
 ListPanelCheckBox
 OpenColumnChoiceMenu
 uparrow
@@ -12447,12 +9579,14 @@ ListPanel::AddItem
 imageSelected
 check
 ItemsChecked
+count
 itemid
 m_vecSections.IsValidIndex(iSection)
 ListPanel::ApplyItemChanges
 ListPanel::RemoveItem
 ItemDeselected
 !m_SelectedItems.HasElement( itemID )
+ItemSelected
 %s_url
 m_pTextImage
 m_pImagePanel
@@ -12463,6 +9597,7 @@ ListPanel::CalculateVisibleRowPositions()
 ListPanel::PaintInterior()
 CustomStyle
 cellcolor
+OpenContextMenu
 m_VisibleItems.IsValidIndex( iItem )
 rowheight
 ListPanel.TextColor
@@ -12508,6 +9643,7 @@ ListPanelCollapserBase
 CollapserChanged
 section
 ListPanelCheckBox::OnThink()
+(unsigned)elem <= (unsigned)m_Size
 different KV data types in a single list column
 ListPanelCollapserBase::OnAppearanceChanged()
 ListViewPanel
@@ -12522,16 +9658,12 @@ m_SeparatorPanels.Count() == 0
 m_MenuItems.IsValidIndex(itemID)
 child
 startItem >= 0
-MenuItemSelected
 MenuScrollBar
-KeyModeSet
 itemNum >= 0
 MenuItemHighlight
-itemID
 row != -1
 MenuSeparator
 m_MenuItems.IsValidIndex( itemID )
-menu
 relative
 vgui::Menu
 m_MenuItems
@@ -12539,11 +9671,10 @@ m_SortedItems
 m_SeparatorPanels
 m_Separators
 m_VisibleSortedItems
-CursorEnteredMenuItem
-CursorExitedMenuItem
+CloseMenu
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/vgui_controls/MenuItem.h
 m_bCheckable
-(unsigned)elem <= (unsigned)m_Size
+menu
 menubar
 Failed to load menu file %s
 divider
@@ -12555,17 +9686,18 @@ MenuBarLoaded
 m_vecMenuButtons
 m_sMenuFile
 vgui::MenuBar
-ShellCmd
-downarrow
-MenuClose
 CursorEnteredMenuButton
 VPanel
+ShellCmd
 showDownArrow
 , int showDownArrow
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/MenuItem.cpp
 !(cascadeMenu && checkable)
 rightarrow
+CursorEnteredMenuItem
+CursorExitedMenuItem
 Menu.TextInset
+KeyModeSet
 vgui::MenuItem
 m_pUserData
 ArmItem
@@ -12574,6 +9706,8 @@ graphics/chk_menu_item
 MessageBoxText
 #MessageBox_OK
 MessageBox.ButtonHeight
+Command
+command
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/Panel.cpp
 OnScreenSizeChanged
 oldwide
@@ -12585,6 +9719,7 @@ SetAlpha
 IsTriplePressAllowed()
 KeyCodePressed
 binding
++
 IsValidKeyBindingsContext()
 !IsValidKeyBindingsContext() || handle == GetKeyBindingsContext()
 KeyCodeTyped
@@ -12603,6 +9738,7 @@ Panel::ScreenToLocal
 Panel::ParentLocalToScreen
 OnRequestFocus
 subFocus
+panel
 buildGroup != NULL
 Panel::InternalPerformLayout()
 DragDrop.DragFrame
@@ -12622,6 +9758,7 @@ PinnedCornerOffsetX
 PinnedCornerOffsetY
 UnpinnedCornerOffsetX
 UnpinnedCornerOffsetY
+tabposition
 enabled
 zpos
 mouseinputenabled
@@ -12636,6 +9773,7 @@ r%d
 c%d
 tabPosition
 paintbackground
+appearance
 string fieldName, int xpos, int ypos, int wide, int tall, bool visible, bool enabled, int tabPosition, corner pinCorner, autoresize autoResize, string tooltiptext, string appearance
 ClearSchemeSettings
 RequestFocus
@@ -12669,12 +9807,17 @@ DragDrop
 m_pTooltips
 _actionSignalTargetDar
 pChild
+$
 %s%s=%s
+format
 !pArray || (Base() >= (pArray + size)) || (pArray >= (Base() + Count()) )
+count >= 0
 Repaint
 MouseCaptureLost
+Delete
 Tick
 OnCursorMoved
+DialogVariables
 CursorMoved
 CursorEntered
 CursorExited
@@ -12693,6 +9836,7 @@ KEY_1
 KEY_2
 2
 KEY_3
+3
 KEY_4
 4
 KEY_5
@@ -12710,6 +9854,7 @@ A
 KEY_B
 B
 KEY_C
+C
 KEY_D
 D
 KEY_E
@@ -12739,6 +9884,7 @@ P
 KEY_Q
 Q
 KEY_R
+R
 KEY_S
 S
 KEY_T
@@ -12932,6 +10078,7 @@ KEY_RCURLY
 KEY_BAR
 |
 KEY_COLON
+:
 KEY_DQUOTE
 KEY_LESS
 KEY_GREATER
@@ -12947,7 +10094,6 @@ Mouse 4
 MOUSE_5
 Mouse 5
 MOUSE_LAST
-+%s
 Can't add Keybindings Context for unnamed panels
 entry
 scheme
@@ -12960,34 +10106,23 @@ m_MessageMaps[ iMessageMap ].map->entries
 m_PanelMessageMapPool
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlhandletable.h
 nIndex < ( unsigned int )m_list.Count()
-ProgressBar
 progress
 continuous
 barinset
 variable
 , string progress, string variable
 SetProgress
-DialogVariables
-Sheet
-#PropertyDialog_OK
-PropertyDialogButton
-#PropertyDialog_Cancel
-ApplyButton
-#PropertyDialog_Apply
-Apply
-#overlay_game
-#overlay_game_lowercase
-apptype
-apptypelower
-ApplyButtonEnable
+ResetData
 ApplyChanges
 PageShow
 PageHide
 PageTabActivated
 AddTabButton
+AddNewTab
 TabMenuButton
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/PropertySheet.cpp
 tab
+PageCountChanged
 TabMenuButtonFlash
 FindDefaultButton
 PropertySheet.TransitionEffectTime
@@ -12996,8 +10131,10 @@ PropertySheet.FlashTabColor
 tabMenuMenu
 OpenTabPage
 TabMenuItemFlash
+PageChanged
 Alpha
 page
+ApplyButtonEnable
 propertypage
 tabname
 toolpanelgroup
@@ -13015,10 +10152,10 @@ PageDragFrame
 DragPropertySheet
 resource/layout/pagedragframe.layout
 PageDragPanel
+CancelButton
 #QueryBox_Cancel
-RadioButton
 RadioButton::OnThink()
-tabposition
+RadioButtonChecked
 subtabposition
 SubTabPosition
 TabPosition
@@ -13042,6 +10179,7 @@ RichTextReceivedUnneededFocus
 m_FormatStream[i].textStreamIndex > cullPos
 Cut
 Copy
+TextClicked
 maxchars
 textfile
 rt
@@ -13054,14 +10192,7 @@ RichText::ParseTextStringForURL
 <a
 href=
 </a>
-TextBlock
-pixelsindent
-textclickable
-textstreamindex
-clickabletextaction
-sections
-lineheight
-cchCharBlock <= m_TextStream.Count()
+tooltip
 vgui::RichText
 m_TextStream
 m_FormatStream
@@ -13090,14 +10221,17 @@ ScrollBarSlider.Horizontal
 ScrollBar.Horizontal
 ScrollBar.Wide
 ScrollButtonPressed
+value
 ScrollBarHandle
 SliderHoriz
+SliderMoved
 leftText
 rightText
 showticks
 showbar
 thumbwidth
 , string leftText, string rightText
+vgui::Slider
 _leftCaption
 _rightCaption
 TextEntry.IMEBGColor
@@ -13107,6 +10241,7 @@ TextKillFocus
 TextEntry field is much too large: %d characters, %f pixels wanted, %d pixels available
 #TextEntry_Cut
 DoDeleteThenPaste
+TextEscape
 Resource\warning.wav
 DoPaste
 DragDroppedText
@@ -13124,12 +10259,15 @@ append
 prepend
 #TextEntry_PrependText
 propertysheet
+vgui::TextEntry
 m_UndoTextStream
 shortname
 flags
 LanguageMenu
+menuname
 DoLanguageChanged
 handle
+handleValue
 #TextEntry_Language
 ConversionModeMenu
 ConversionMode
@@ -13143,6 +10281,7 @@ IMELanguageList
 IMEConversionModes
 IMESentenceModes
 TextEntryClearButton
+(elem == Count()) || IsValidIndex(elem)
 TextImage::Paint()
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/TextImage.cpp
 echar >= schar
@@ -13155,7 +10294,6 @@ pLineEnd >= pLineStart
 vgui::TextImage
 m_PerLineEllipses
 ButtonToggled
-tooltip
 m_sText
 m_sHeadlineText
 m_pkvDialogVariables
@@ -13163,18 +10301,8 @@ tooltip_label
 TooltipWindow
 tooltip_headline
 TooltipHTML
-ToolWindow
-ToolWindowSheet
-InsertTabImage
-steam/cached/icon_tab_placement_arrow
-resource/layout/toolwindow.layout
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/ToolWindow.cpp
 page->m_pToolWindow == this
-tabtitle
-pToolWindow
-PageChanged
-AddNewTab
-PageCountChanged
 TreeNode
 TreeImage
 TreeNodeText
@@ -13182,8 +10310,13 @@ TreeNodeText
 m_pTreeView->IsLabelEditingAllowed()
 original
 changed
+Text
 color
+Expand
+SelectedImage
+Image
 m_pTreeView->m_pFilter
+TreeView
 parentItemIndex == -1 || m_NodeList.IsValidIndex(parentItemIndex)
 droppable
 drophoverdelay
@@ -13191,6 +10324,7 @@ m_pRootNode == NULL
 m_NodeList.IsValidIndex(itemIndex)
 m_NodeList.IsValidIndex( endItem )
 sel
+TreeViewItemSelected
 itemIndex
 IsLabelEditingAllowed()
 sel->IsLabelEditingAllowed()
@@ -13208,17 +10342,22 @@ m_List
 CTreeViewListControl
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/TreeViewListControl.cpp
 m_vecJumpWChars
+URLLabel
 URLText
 , string URLText
 DefaultUnderline
 SetURL
+m_sURL
+m_pkvCommand
 WrapPanel::PerformLayout()
+WrapPanelItemVisibility
 WrapPanelItem
 justify
 alignment
 interiorspacing
 wheelpct
 WrapPanel::Repaint
+PanelClicked
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/wrappanel.cpp
 m_bSorted
 m_vecSortedContents
@@ -13249,6 +10388,7 @@ m_pVecStringValue
 m_strConvertedDefaultValue
 m_vecCallbacks
 ConCommand '%s' not currently supported in config file
+FCVAR_NEVER_AS_STRING
 ,
 m_p
 Key( i )
@@ -13272,6 +10412,7 @@ Unbuffered read should be called with pvData buffer that is aligned to system pa
 Unbuffered read should be called with cubData length that is aligned to system page size (4kb)
 Seeking to a position which is not sector aligned will break unbuffered io
 ..
+%s/%s
 !"Failed to CFStringCreateWithCString watcher path"
 m_listChangedFiles
 File change notification for %s but no file contents changed based on hash
@@ -13279,17 +10420,19 @@ m_strWatchPath
 m_mapFileWatchData
 m_mapFileWatchData.Key( i )
 cbActual < (uint32)nBufSizeWithTerminator
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utllinkedlist.h
+m_TotalElements != InvalidIndex()
+%s overflow!
+IsValidIndex(elem)
 IsInList(before)
+Invalid index %u
 Element( i )
 CPathString
 .dylib
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/interface.cpp
 strlen(pchModuleName) + V_strlen(pModuleExtension) < MAX_UNICODE_PATH_IN_UTF8
 .cpl
-0123456789abcdef
-%%%d
-]:%u
-port
+%s%s
 ReadToken overflow
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/KeyValues.cpp
 filesystem
@@ -13297,10 +10440,9 @@ You should clear the KeyValues instance before calling this function or call Mer
 "
 "
 {
-KeyValues::RecursiveSaveToFile: TODO, missing code for TYPE_COLOR.
 }
 [
-{
+:
 
 ]
 }
@@ -13310,7 +10452,6 @@ GetFloatFromString() did not get correct peCS parameter
 can't convert uint64 to int32 (data loss)
 can't convert int64 to uint64 (negative number)
 RGBA: %.2X %.2X %.2X %.2X
-%f %f %f %f
 $0
 $1
 WINDOWS
@@ -13342,11 +10483,7 @@ RecursiveLoadFromBuffer:  got empty keyname
 RecursiveLoadFromBuffer:  got NULL key
 RecursiveLoadFromBuffer:  got } in key
 RecursiveLoadFromBuffer:  got conditional between key and value
-KeyValues::WriteAsBinary() called with a text buffer
-KeyValues::WriteAsBinary() called with an invalid buffer
-KeyValues::WriteAsBinary() overflowed buffer (%d bytes)
 KeyValues::ReadAsBinary() stack depth > 100
-<empty>
 KeyValues
 NULL
 m_errorIndex>=0
@@ -13357,7 +10494,6 @@ KeyValues Error: %s in file %s [offset: %d]
 *),
 \\
 0123456789ABCDEF
-context.m_vecStack.Count() <= 1
 %.18g
 Memory leak: mempool blocks left in memory: %d
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/mempool.cpp
@@ -13367,15 +10503,6 @@ pBlob
 CMemoryPool::Alloc: ran out of memory
 k_nMemPoolMagic_Free == *(( (int *) returnBlock) - 1)
 CMemoryPool
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/netadr.cpp
-loopback
-%i.%i.%i.%i
-%i.%i.%i.%i:%i
-%d.%d.%d.%d:%d
-m_usType == k_EIPTypeV6
-pvecAddressesOut != nullptr || pSingleOutput != nullptr
-about to perform blocking dns call from the main thread.  consider refactoring.
-BResolveHostString - unexpected DNS lookup flag '%d'
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlbuffer.cpp
 info.m_pReplacementString == 0
 CUtlBuffer::GetStringFast: binary buffers only
@@ -13400,10 +10527,6 @@ m_unSizeOfElements == mem.m_unSizeOfElements
 nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
 num > 0
 num >= 0
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlqueue.cpp
-IsPowerOfTwo( nNewCapacity )
-nPreSplit > 0 && nPreSplit + nPostSplit == nCount
-( m_iHead & nNewCapacityMask ) == nNewCapacity - nPreSplit
 CUtlString::SetValue
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlstring.cpp
 CUtlString::VFormat
@@ -13416,46 +10539,19 @@ CUtlStringBuilder::InternalPrepareBuffer
 nMinCapacity > Capacity()
 nMinCapacity >= nChars
 nMinCapacity <= k_nMaxStringSize
-len > 0 || HasError()
 Error State on string being set.
 CUtlStringBuilder::Data::MoveToHeap
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlsymbol.cpp
 s_bAllowStaticSymbolTable
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/crypto_textencode.cpp
-CCrypto::Base64Encode
-NULL output buffer with non-zero size passed to Base64Encode
-ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
-CCrypto::Base64Encode: insufficient output buffer (up to n*4/3+5 bytes required, plus linebreaks)
 %02d/%02d/%02d
 00:00:00
 01/01/00
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/rtime.cpp
-V_strlen( pchTime ) == 25
-Infinite time value
-Nil time value
-Invalid time value
-%s %s
-$
-R
-%s%s
-C
-allocator<T>::allocate(size_t n) 'n' exceeds maximum supported size
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/amount.h
-Unimplemented rounding method %d. Rounding half up!
 steamclient.dylib
-%s\%x%x
-#Steam_Settings_Ingame_ShowFPS_Off
-#Steam_Settings_Ingame_ShowFPS_LeftTop
-#Steam_Settings_Ingame_ShowFPS_RightTop
-#Steam_Settings_Ingame_ShowFPS_RightBottom
-#Steam_Settings_Ingame_ShowFPS_LeftBottom
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/enum_names.cpp
 Missing String for %s (%d)
 EResult
 unknown
-cs
 EUniverse
-EControllerType
 china
 No Result
 Failure
@@ -13589,7 +10685,6 @@ Beta
 Internal
 Dev
 None
-Kiosk
 Groups
 Language
 =
@@ -13601,78 +10696,12 @@ drm
 Down
 default
 none
-en
-de
-fr
-it
-ko
-es
-ru
-th
-ja
-pt
-pl
-da
-nl
-fi
-sv
-hu
-ro
-tr
-pt-br
-bg
-el
-uk
-vi
 generic
 httpclient
-unavailable
-prerelease
-preloadonly
-released
 disabled
 music
 Default
-Store
-Community
-Profile
-Friends
-News
-Trading
-Settings
-Console
-Browser
-ParentalSetup
-Library
-Test
-SiteLicense
 client
-controller_none
-controller_unknown
-controller_steamcontroller_unknown
-controller_steamcontroller_gordon
-controller_steamcontroller_headcrab
-controller_generic
-controller_xbox360
-controller_xboxone
-controller_ps3
-controller_ps4
-controller_wii
-controller_apple
-controller_android
-controller_switch_pro
-controller_switch_joycon_left
-controller_switch_joycon_right
-controller_switch_joycon_pair
-controller_mobile_touch
-controller_front_panel_board
-controller_keyboard_generic
-controller_mouse_generic
-controller_switch_pro_generic
-controller_neptune
-controller_ps5
-controller_xboxelite
-controller_ps5_edge
 optional
 Windows
 PS3
@@ -13697,6 +10726,8 @@ threads
 test
 filetx
 srvping
+friends
+chat
 guestpass
 license
 p2p
@@ -13713,59 +10744,14 @@ controller
 controller_ui
 metrics
 html
-Invalid spew group
 @bEnableSpewThrottle
+1
 @bEnableLogTearOff
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/logger.cpp
-pLogInstance == sm_pLogInstance
-sm_cRef > 0
-sm_bShuttingDown
 ThreadInMainThread()
-CLogger::PublishLogEvent
-%s\%s
-CLogger::EmitEventInternal
-Hit absolute maximum emit event queue size -- NOT adding this event
-CLogger::FlushEventQueue
-Log event queue grew unreasonably large in a short time!
-sm_bShuttingDown && sm_pLogInstance
-Failed to remove log event from threadsafe queue!
-CLogger::GeneratePrefixFromLogWatchParam
-pchMsg
-%s [%s]%-*s
-[%s]%-*s
-[IP:%s]
-[ID:%s]
-[TXN:%llu]
-*pchMsg && *pchMsg == '%'
-Logger does not handle * char as used for a width specifier (where width is a param)
-Stop using I64/I32 - use lld or d, respectively
-Unsupported format qualifier %c%c
-(null)
-Unrecognized character code (%c) in format string, ignoring
-CLogger::DeserializeVaArgs
-stop using I64/I32, use lld or d respectively
-Unsupported format qualifier z%c
-Unsupported format qualifier l%c
-Unrecognized character code '%c' in format string, ignoring
 pch[cub - 1] != '\0' && pch[cub] == '\0'
 1 == ret
-CLogInstance::WriteToLog
-Failed to close logfile with prefix %s during BTearOffLogFile call!
-NULL == m_pFile
-0 != m_rgchPrefixFileName[0]
-%s.current.txt
-Log started.
-%s-%d
 Log stopped.
-.current.txt
-%s.*.txt
-%s.%%u.txt
-%s.%10u.txt
-Persistent logfile %s is past the keep until date - cleaning up
-Failed to find time in logfile name
-Persistent Logfiles created which have no cleanup limit specified!
-CLogInstance::EmitEventNow
-Last Message Repeated %d times.%s
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/bitstring.h
 bitNum >= 0 && bitNum < this->Size()
 m_vecHashBuckets
@@ -13781,22 +10767,6 @@ m_bitsMigratedBuckets
 @nSpewThrottleUnconditionalResumeMs
 5000
 @nSpewThrottleNagFrequencyMs
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/steamid.cpp
-[A:%u:%u:%u]
-[G:%u:%u]
-[M:%u:%u:%u]
-[P:%u:%u]
-[C:%u:%u]
-[g:%u:%u]
-[c:%u:%u]
-[L:%u:%u]
-[T:%u:%u]
-[I:%u:%u]
-[U:%u:%u]
-[a:%u:%u]
-[i:%u:%u]
-steamIDClan.GetEAccountType() == k_EAccountTypeClan
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/string_misc.cpp
 Jan
 Feb
 Mar
@@ -13811,324 +10781,42 @@ Nov
 Dec
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
-}))
-t%)
-&
-'
-&
-&
-&
 0
-VC
-p
+X+
+J+
+I+
 0
+
+
+
+
+
+@
+
 0
-p
-0
-j%
-Z&
-T&
-'
-P&
-&
-*&
-j
-j
-j
-j
-&
+@
 j
 j
 j
 j
 j
-&
+j
+j
+j
+j
+j
+j*
+m
+j
+j
+j
+j
+j
+j
+j
+j
+j
 Ic
-0
-p
-0
-j
-j
-j
-j
-j
-j
-v%
-j
-j
-%
-%
-$
-$
-$
-$
-$
-$
-,
-<#
-%
-%
-%
-%
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-%
-%
-j
-j
-%
-%
-j
-j
-%
-%
-%
-%
-j
-j
-%
-j
-j
-j
-%
-j
-j
-j
-j
-j
-j
-j
-f%
-p$
-j
-j
-j
-j
-%
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-$
-$
-$
-$
-#
-0
-A9]
-O
-d
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-N#
-0#
-
-
-
-
-#
-
-#
-#
-@
-
-0
-#
-#
-#
-#
-#
-#
-p
-0
-p
-0
-p
-0
-p
-0
-$*
-p
-0
-p
-0
-p
-0
-p
-0
-p
-0
-p
-p
-p
-e/
-J#
-@
-Mce
-#
-
-0
-0
-"
-j
-j
-j
-j
-j
-j
-j
-j
-0>
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
->
->
->
->
->
->
-}!
-s!
-"
-f>
-."
-Hi
-b!
-("
-!
-!
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-0
-0
-p
-0
-Q!
-q!
-Y!
-2
-F!
-S
-#
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-j
-$
-$
-!
-!
-j
-j
-g<
-j
-j
-j
-j
-j
-j
-j
-F'
 0
 0
 AT=
@@ -14170,16 +10858,12 @@ IcE
 IcE
 @
 @
-&
 V
-H;5BE%
 =
 =
 !
--
 @
 &
-g*
 @
 M9e
 @
@@ -14198,33 +10882,6 @@ M9e
 :
 ?
 ?
-?
-SHA1 block transform for x86_64, CRYPTOGAMS by <appro@openssl.org>
-i[
-i[
-Mc}
-Hc]
-HcU
-
-
-
-
-?
-?
-?
-
-?
-?
-?
-
-?
-?
-?
-0
-#
-i[
-~
-B
 ?
 U
 U
@@ -14347,47 +11004,19 @@ P
 @
 @
 ?
-`
-`
-!
-A
 @
 @
-@
-P
-@
-`
-`
-`
-`
-=
-@
-`
-`
-@
-`
-`
-,
-@
-@
-@
-|
-|
-@
-@
-!
-d)
 d
-fD9-F{(
+_
+H
 
 
 
-(
-(
+
+
+8
 A+M
-o
-t7f9G9(
-t7f9*1(
+
 j
 j
 j
@@ -14408,8 +11037,6 @@ j
 j
 j
 
-
-
 j
 j
 j
@@ -14428,7 +11055,6 @@ j
 j
 j
 
-E&
 d
 &
 &
@@ -14438,8 +11064,6 @@ A+4$A+u
 =
 =
 @
-D
-
 j
 j
 j
@@ -14469,7 +11093,6 @@ j
 j
 j
 j
-O$
 j
 j
 j
@@ -14502,7 +11125,6 @@ j
 j
 j
 j
-$#
 E
 j
 j
@@ -14568,11 +11190,6 @@ j
 j
 j
 @
-!
-!
-!
-!
-!
 j
 j
 j
@@ -14604,7 +11221,6 @@ j
 j
 j
 j
-
 
 @
 @
@@ -14648,7 +11264,6 @@ j
 j
 .
 d
-=
 
 =
 @
@@ -14657,7 +11272,7 @@ d
 @
 @
 @
-@
+0
 @
 @
 @
@@ -14669,14 +11284,6 @@ d
 0
 0
 0
-0
-0
-Hc
 0
 E
 0
-m
-\
-0
-0
-p

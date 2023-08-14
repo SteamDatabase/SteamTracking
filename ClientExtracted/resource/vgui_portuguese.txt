@@ -212,7 +212,7 @@
 "vgui_Webkit_badurl" "Não é possível carregar o URL, nome de anfitrião ou formato incorreto"
 "vgui_Webkit_connectionproblem" "Não foi possível ligar ao servidor. Este pode estar offline ou podes não estar conectado à internet."
 "vgui_Webkit_proxyconnectionproblem" "Não foi possível ligar ao Proxy HTTP. O proxy pode estar mal configurado ou offline."
-"vgui_Webkit_unknown" "Falha ao carregar a página Web (erro desconhecido)."
+"vgui_Webkit_unknown" "Falha ao carregar a página da web (erro desconhecido)."
 "vgui_HTMLBack" "Voltar"
 "vgui_HTMLForward" "Avançar"
 "vgui_HTMLReload" "Recarregar"

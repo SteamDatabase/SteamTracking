@@ -76,11 +76,11 @@
 "Friends_RemoveUser"				"이 친구 삭제..."
 
 "Friends_RemoveFriend_Title"			"친구 - 사용자 삭제"
-"Friends_RemoveFriend_Info"				"%friend% 님을 친구 목록에서 삭제하시겠습니까?\n\n(나중에 '친구 추가' 를 사용하여 삭제한 친구를 다시 추가할 수 있습니다.)"
+"Friends_RemoveFriend_Info"				"%friend% 님을 친구 목록에서 삭제할까요?\n\n(나중에 '친구 추가' 를 사용하여 삭제한 친구를 다시 추가할 수 있습니다.)"
 "Friends_RemoveFriend_Button"			"%friend% 삭제"
 
 "Friends_HideFriend_Title"				"친구 - 사용자 무시"
-"Friends_HideFriend_Info"				"정말 %friend% 님을 무시하고 제안된 친구 목록에서 삭제하시겠습니까?\n\n(나중에 다시 \"친구 추가\" 버튼을 이용해 추가할 수 있습니다.)\n"
+"Friends_HideFriend_Info"				"정말 %friend% 님을 무시하고 제안된 친구 목록에서 삭제할까요?\n\n(나중에 다시 \"친구 추가\" 버튼을 이용해 추가할 수 있습니다.)\n"
 "Friends_HideFriend_Button"				"%friend% 님 무시"
 "Friends_HideFriend_Failed"				"%friend% 님을 무시할 수 없습니다"
 
@@ -793,7 +793,7 @@
 "Steam_Settings_Browser"	"웹 브라우저"
 "Overlay_SettingsBrowserDesc" "본 설정은 Steam 클라이언트와 게임 내 Steam 오버레이에 쓰이는 웹 브라우저에 적용됩니다."
 "Steam_SettingsBrowserDeleteAllData"	"웹 브라우저 데이터 삭제"
-"Steam_SettingsBrowserDeleteAllDataMsg"	"모든 Steam 브라우저 캐시 파일, 쿠키 및 기록을 삭제하시겠습니까?"
+"Steam_SettingsBrowserDeleteAllDataMsg"	"모든 Steam 브라우저 캐시 파일, 쿠키 및 기록을 삭제할까요?"
 
 "RemotePlayTogether_Notification_AvailableToInvite_Title" "Remote Play Together"
 "RemotePlayTogether_Notification_AvailableToInvite" "친구 목록에 있는 링크를 통해 누구든지 초대하여 플레이할 수 있습니다."

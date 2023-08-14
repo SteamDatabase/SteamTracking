@@ -167,7 +167,7 @@
 "Friends_InvitationSent"				"Se ha enviado a %search% una invitación por email, y se añadirá a tu lista de amigos cuando responda.\n"
 "Friends_DefaultInviteError"			"Ha habido un problema al enviar la invitación a %search%." 
 "Friends_TooManyPendingInvitations"   "Has enviado demasiadas invitaciones recientemente.  Intenta invitar a %search% de nuevo en uno o dos días."
-"Friends_InvitationBlocking"		"Estás bloqueando toda comunicación con este usuario. Antes de poder comunicarte con él, debes desbloquearlo visitando su perfil de la Comunidad Steam."
+"Friends_InvitationBlocking"		"Estás bloqueando toda comunicación con este usuario. Antes de poder comunicarte con él, debes desbloquearlo visitando su perfil de la Comunidad de Steam."
 
 "Friends_DontGiveOutPassword"			"Nunca reveles tu contraseña a nadie.\n"
 "Friends_DontGiveOutPassword_URL"		"https://support.steampowered.com/kb/1266-OAFV-8478/?l=spanish"
@@ -219,7 +219,7 @@
 "Friends_Chat_MemberIgnored"						"(Bloqueado)"	
 
 "Friends_Chat_InviteToChatRoom"							"Invitar a la sala de chat"
-"Friends_Chat_InviteToChatRoom_Title"					"Comunidad Steam - Invitación a la sala de chat"
+"Friends_Chat_InviteToChatRoom_Title"					"Comunidad de Steam - Invitación a la sala de chat"
 "Friends_Chat_InviteToChatRoom_Info"					"Has sido invitado a unirte al chat %chat% por %patron%."
 "Friends_Chat_InviteToPrivateChatRoom_Info"				"Has sido invitado a unirte a un chat privado con %patron%."
 "Friends_Chat_InviteReceivedTime"						"Invitación recibida: %date% a las %time%"
@@ -383,7 +383,7 @@
 "Friends_FlashWindowAlways"		"Siempre"
 "Friends_FlashWindowMinimized"		"Cuando esté minimizada"
 "Friends_FlashWindowNever"		"Nunca"
-"Friends_ViewSteamCommunityProfile"	"Ver mi perfil de la Comunidad Steam"
+"Friends_ViewSteamCommunityProfile"	"Ver mi perfil de la Comunidad de Steam"
 "Friends_ChangeAvatar"				"Cambiar"
 "Friends_NameTooShort_Title"			"Amigos - Nombre del perfil demasiado corto"
 "Friends_NameTooShort_Info"			"El nombre del perfil debe contener al menos dos caracteres."
@@ -488,8 +488,8 @@
 "Friends_BlockCommunicationWarning_DontAskAgainCheck"	"No volver a mostrar este mensaje."
 "Friends_BlockCommunicationWarning_Block"	"Bloquear jugador"
 "Friends_BlockCommunicationWArning_Cancel"	"Cancelar"
-"Friends_BlockCommunicationResult"	"¡%username% ha sido bloqueado!\n\nPara desbloquear este jugador, visita tu lista de bloqueados en la Comunidad Steam."
-"Friends_BlockCommunicationResultUnblock"	"¡%username% ha sido desbloqueado!\n\nPuedes ver tu lista de bloqueados en la Comunidad Steam."
+"Friends_BlockCommunicationResult"	"¡%username% ha sido bloqueado!\n\nPara desbloquear este jugador, visita tu lista de bloqueados en la Comunidad de Steam."
+"Friends_BlockCommunicationResultUnblock"	"¡%username% ha sido desbloqueado!\n\nPuedes ver tu lista de bloqueados en la Comunidad de Steam."
 "Friends_BlockCommunicationResult_YourBlockedList"	"Ver mi lista de bloqueados"
 "Friends_DefaultBlockCommunicationError" 			"Ha habido un problema al bloquear a %username%."
 
@@ -557,7 +557,7 @@
 "Friends_ScreenshotErrorNotification_Info" "Error al guardar la captura"
 
 "Limited_OpenChat"	"Abrir chat"
-"Friends_SteamCommunity"	"Comunidad Steam"
+"Friends_SteamCommunity"	"Comunidad de Steam"
 "Limited_Explanation"	"Tu cuenta no cumple los requisitos necesarios para utilizar esta característica."
 "Limited_ForDetails"	"Visita el Soporte de Steam para más información."
 "Limited_ForDetails_URL"	"https://help.steampowered.com/es-419/wizard/HelpWithLimitedAccount"

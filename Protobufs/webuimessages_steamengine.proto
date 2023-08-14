@@ -1,0 +1,32 @@
+import "steammessages_base.proto";
+import "webuimessages_base.proto";
+
+option optimize_for = SPEED;
+option cc_generic_services = true;
+
+message CSteamEngine_UpdateTextFilterDictionary_Notification {
+	required string language = 1;
+	required string type = 2;
+}
+
+message CSteamEngine_GetTextFilterDictionary_Request {
+	required string language = 1;
+	required string type = 2;
+}
+
+message CSteamEngine_GetTextFilterDictionary_Response {
+	optional string dictionary = 1;
+}
+
+message CSteamEngine_TextFilterDictionaryChanged_Notification {
+	required string language = 1;
+	required string type = 2;
+}
+
+service SteamEngine {
+	option (webui_service_execution_site) = k_EClientExecutionSiteClientdll;
+
+	rpc UpdateTextFilterDictionary (.CSteamEngine_UpdateTextFilterDictionary_Notification) returns (.WebUINoResponse);
+	rpc GetTextFilterDictionary (.CSteamEngine_GetTextFilterDictionary_Request) returns (.CSteamEngine_GetTextFilterDictionary_Response);
+	rpc NotifyTextFilterDictionaryChanged (.CSteamEngine_TextFilterDictionaryChanged_Notification) returns (.WebUINoResponse);
+}

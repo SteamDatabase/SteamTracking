@@ -286,10 +286,6 @@
             "argc": "3"
         },
         {
-            "name": "BIsAvailableOnPlatform",
-            "argc": "3"
-        },
-        {
             "name": "BCanRemotePlayTogether",
             "argc": "2"
         },

@@ -19,10 +19,6 @@ service RemoteClient {
 		option (method_description) = "Send a reply to a remote client";
 	}
 
-	rpc AllocateTURNServer (.CRemoteClient_AllocateTURNServer_Request) returns (.CRemoteClient_AllocateTURNServer_Response) {
-		option (method_description) = "Allocate a TURN server for a streaming session";
-	}
-
 	rpc AllocateRelayServer (.CRemoteClient_AllocateRelayServer_Request) returns (.CRemoteClient_AllocateRelayServer_Response) {
 		option (method_description) = "Allocate a UDP relay server for a streaming session";
 	}

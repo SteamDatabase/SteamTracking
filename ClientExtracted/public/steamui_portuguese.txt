@@ -3054,7 +3054,7 @@ Precisarás de encerrar a sessão do OSX para que as mudanças tenham efeito."
 "SteamUI_P2P_PeerList_Col_Blocks"	"Blocos"
 "SteamUI_P2P_PeerList_Col_State"	"Distrito"
 
-"SteamUI_P2P_PeerListTip_PeerId"	"ID do peer\nID Steam do peer remoto"
+"SteamUI_P2P_PeerListTip_PeerId"	"ID do peer\nSteamID do peer remoto"
 "SteamUI_P2P_PeerListTip_Choke"		"Bloqueio / Interesse\nMostra se os peers locais e remotos estão a bloquear-se entre si ou interessados em receber dados uns dos outros"
 "SteamUI_P2P_PeerListTip_Status"	"Percentagem do ficheiro completo que o peer remoto tem"
 "SteamUI_P2P_PeerListTip_Outbound"	"Tipo de ligação\nA ligação (L)ocal foi iniciada por este peer, a ligação (R)emota foi iniciada por um peer remoto"

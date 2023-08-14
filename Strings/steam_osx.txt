@@ -8,6 +8,8 @@ __TEXT
 0
 __stubs
 __TEXT
+2I4
+2I4
 __stub_helper
 __TEXT
 __gcc_except_tab__TEXT
@@ -67,6 +69,7 @@ __bss
 __DATA
 __common
 __DATA
+@`G
 H
 __LINKEDIT
 @H
@@ -117,17 +120,13 @@ h
 @kC
 X=
 )
-4
+yB
 0
-G
-G
-G
 G
 G
 G
 *
 9
-*
 *
 0
 G
@@ -140,39 +139,39 @@ g(
 @
 @
 s
-9
+]3
 $
+9
+9
 Hi
 Hi
 Hi
+WF
 (
 3
-3
+P)
+$)
+I)
 )
 )
 )
 
 %
+R8
 ;
 8
-8
-8
-2
 
-2
-2
-2
-2
 0
 5
 (
 (
-|?
-p?
+6'
+g?
 <
 
 0
 Ic
+W1
 0
 0
 AT=
@@ -183,7 +182,11 @@ AT=
 D
 @
 @
-N2
+7
+7
+7
+7
+@;
 @
 Hc
 Hc
@@ -215,12 +218,15 @@ IcE
 IcE
 @
 @
-S0
+6
+6
 6
 6
 6
 6
 0
+0
+61
 NSt3__117bad_function_callE
 15CBaseFileSystem
 11IFileSystem
@@ -2380,7 +2386,7 @@ TempAppCmdLine
 m_nPipeData >= 0
 ReLaunchCmdLine
 ClientLauncherType
-Startup - updater built Aug  7 2023 14:07:16
+Startup - updater built Aug 11 2023 21:40:58
 Startup - Steam Client launched with: %s
 Shutdown
 no hosts found
@@ -2671,8 +2677,8 @@ m_iRefs >= 0 && m_iRefs < 0x0ffffff
 #SteamBootstrapper_UpdatingSteam
 Updating Steam...
 Tahoma
-Aug  7 2023
-14:07:17
+Aug 11 2023
+21:40:58
 crashhandler004
 steam
 Steam Executable Crash
@@ -2769,7 +2775,7 @@ China
 %s/%s%s
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamexe/updateui.h
 ThreadInMainThread()
-14:07:15
+21:40:57
 [%3d%%] %s
 [----] %s
 [%3d%%] !!! Fatal Error: %s
@@ -10789,6 +10795,7 @@ GetFileSystemFreeSpaceForPath failure for %s
 "
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlbuffer.cpp
 info.m_pReplacementString == 0
+nSize != 0
 CUtlBuffer::GetStringFast: binary buffers only
 Expected %lld but got %lld!
 pConv && pConv->GetDelimiterLength() > 0
@@ -10893,7 +10900,7 @@ steamwebhelper
 Steam Helper
 cefwebhelper
 1.0
-14:04:56
+21:38:54
 Jan
 Feb
 Mar
@@ -12455,9 +12462,6 @@ k_EMsgAMGetAccountResetDetailsResponse
 k_EMsgClientNewLoginKey
 k_EMsgClientNewLoginKeyAccepted
 k_EMsgClientLogOnWithHash_Deprecated
-k_EMsgClientActivateOEMLicense
-k_EMsgClientRegisterOEMMachine
-k_EMsgClientRegisterOEMMachineResponse
 k_EMsgClientServersAvailable
 k_EMsgClientServerUnavailable
 k_EMsgClientRegisterAuthTicketWithCM
@@ -13338,21 +13342,19 @@ out of memory
 n <= (size_t)INT_MAX
 file_ofs == pFile->GetBytesWritten()
 
-&:
+H(:
+N(:
+n(:
 
-&:
 0
-4
+FL=
+yB
 0
-G
-G
-G
 G
 G
 G
 *
 9
-*
 *
 0
 G
@@ -13365,39 +13367,39 @@ g(
 @
 @
 s
-9
+]3
 $
+9
+9
 Hi
 Hi
 Hi
+WF
 (
 3
-3
+P)
+$)
+I)
 )
 )
 )
 
 %
+R8
 ;
 8
-8
-8
-2
 
-2
-2
-2
-2
 0
 5
 (
 (
-|?
-p?
+6'
+g?
 <
 
 0
 Ic
+W1
 0
 0
 AT=
@@ -13408,7 +13410,11 @@ AT=
 D
 @
 @
-N2
+7
+7
+7
+7
+@;
 @
 Hc
 Hc
@@ -13440,62 +13446,61 @@ IcE
 IcE
 @
 @
-S0
+6
+6
 6
 6
 6
 6
 0
+0
+61
 V
-U/
+g/
+_/
+S5
+V/
 =
 /
 /
-/
-/
-/
-/
-/
-/
-/
-/
-/
-/
+5
+o9
 =
 .
 .
-b-
+.
+.
+.
+c8
+h-
 -
--
--
--
--
--
--
-3
 3
 3
 3
 !
 @
+L2
 ,
-'2
-2
-2
+,
+,
+,
 @
 &
-J+
-n>
-d>
 1
+p,
++
+j,
+H0
+70
+0
+0
+\4
++)
+)
+)
+&1
 *
 *
-})
-)
-)
-)
-)1
-s(
 @
 M9e
 @
@@ -13524,20 +13529,19 @@ AESNI-CBC+SHA256 stitch for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
 AES for Intel AES-NI, CRYPTOGAMS by <appro@openssl.org>
 @
+-
 %
 1
 1
 `
 `
 @
-0(
+3(
 j
 j
 Pj
 ARj
 j
-E,
-;,
 0
 0
 IcU
@@ -13547,7 +13551,6 @@ M)u
 =
 @
 =
-6$
 =
 %
 =
@@ -13841,6 +13844,9 @@ OO
 expand 32-byte k
 ChaCha20 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
+#
+#
+#
 =
 @
 
@@ -13858,15 +13864,18 @@ j
 j
 
 t$I;M
+z&
+t&
 e
 W
 ,7~5d
-#->/
-#m4/
-#M4/
-#m1/
-#m!/
-T)
+#MA/
+#-4/
+#4/
+#-1/
+#M$/
+#-!/
+"
 H
 0
 
@@ -13883,8 +13892,9 @@ Hc
 %
 %
 %
-H;5L~'
-L)5Kx'
+L95`}'
+}'
+|'
 AES-NI GCM module for x86_64, CRYPTOGAMS by <appro@openssl.org>
 %
 @
@@ -14061,6 +14071,7 @@ H=
 =
 @
 @
+
 =
 |O=
 
@@ -14147,11 +14158,9 @@ H=
 =
 @
 =*.*
-k
 @
 @
 0
-
 @
 @
 @
@@ -14161,6 +14170,7 @@ k
 0
 0
 0
+#
 0
 0
 0
@@ -14179,6 +14189,7 @@ H=
 &
 E
 0
+s
 Hi
 E
 0
@@ -14204,18 +14215,15 @@ j
 
 Hc
 
-
 0
 0
-N
+0
+m
 @
 @
-c
-N
-&
+?
 &
 %
-
 
 @
 c
@@ -14236,7 +14244,6 @@ P
 =a
 0
 Hi
-<
 $
 $
 $

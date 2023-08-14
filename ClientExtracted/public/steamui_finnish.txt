@@ -4195,7 +4195,7 @@ Luo ja valitse luokkia tälle pelille alla, minkä jälkeen voit kokoelman Näyt
 "Steam_AppUpdateError_35"		"tilisi pelaa jo peliä"
 "Steam_AppUpdateError_36"		"vaurioitunut lataus"
 "Steam_AppUpdateError_37"		"vioittunut levy"
-"Steam_AppUpdateError_38"		"tiedostojen oikeudet puuttuvat"
+"Steam_AppUpdateError_38"		"tiedostojen käyttöoikeudet puuttuvat"
 "Steam_AppUpdateError_39"		"lukittu kohdetiedosto"
 "Steam_AppUpdateError_40"		"sisältö ei saatavilla"
 "Steam_AppUpdateError_41"		"vaatii 64-bittisen käyttöjärjestelmän"

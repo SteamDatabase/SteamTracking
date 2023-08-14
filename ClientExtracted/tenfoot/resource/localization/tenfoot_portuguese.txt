@@ -6022,7 +6022,7 @@ Com o modo joystick estilo rato, podes jogar com um comando mas com a precisão 
 	"ControllerBinding_AccelerationGyro_High" "Aceleração - Alta"
 	"ControllerBinding_AccelerationGyro_High_Description" "Com uma aceleração alta, o movimento será muito acelerado, com os movimentos mais rápidos a fazer com que o movimento no jogo seja extremamente rápido para a mesma distância correspondente percorrida com o comando."
 	"ControllerBinding_Momentum2DScroll" "Modo de roda de deslocamento"
-	"ControllerBinding_Momentum2DScroll_Description" "Com o modo de roda de deslocamento ativado, um deslize terá inércia e ativar-se-à várias vezes. Se estiver desativado, a ação só se irá ativar uma vez até que um deslize numa direção diferente aconteça."
+	"ControllerBinding_Momentum2DScroll_Description" "Com o modo de roda de deslocamento ativado, um deslize terá inércia e ativar-se-á várias vezes. Se estiver desativado, a ação só se irá ativar uma vez até que um deslize numa direção diferente aconteça."
 	"ControllerBinding_Momentum2DScroll_On" "Modo de roda de deslocamento - On"
 	"ControllerBinding_Momentum2DScroll_On_Description" "Deslizes terão inércia e irão ativar a ação várias vezes"
 	"ControllerBinding_Momentum2DScroll_Off" "Modo de roda de deslocamento - Off"

@@ -16,18 +16,5 @@
 			"interface"	"VGuiModuleTracker001"
 			"MenuName"	"#App_Friends"
 		}
-		"Servers"
-		{
-			"dll"		"bin/serverbrowser"
-			"interface"	"VGuiModuleServerBrowser001"
-			"MenuName"	"#App_Servers"
-		}
-		"Settings"
-		{
-			"dll"		"steamui"
-			"interface" "VGuiModuleSettings001"
-			"MenuName"  "#App_Settings"
-			"SteamApp"  "1"
-		}
 	}
 }

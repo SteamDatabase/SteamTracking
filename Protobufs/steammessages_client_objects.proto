@@ -47,6 +47,7 @@ enum ESteamDeckKeyboardLayout {
 	k_ESteamDeckKeyboardLayout_Chinese_Traditional_Cangjie = 32;
 	k_ESteamDeckKeyboardLayout_Japanese_Kana = 33;
 	k_ESteamDeckKeyboardLayout_Chinese_Traditional_Quick = 34;
+	k_ESteamDeckKeyboardLayout_Indonesian = 35;
 }
 
 message SteamMessagesClientIClientForcedEnumDependencies {
@@ -517,7 +518,7 @@ message CMsgSystemManagerSettings {
 	optional float display_nightmode_schedule_starttime = 18;
 	optional float display_nightmode_schedule_endtime = 19;
 	optional bool display_diagnostics_enabled = 20;
-	optional float als_lux_latest = 21;
+	optional float als_lux_primary = 21;
 	optional float als_lux_median = 22;
 	optional float display_backlight_raw = 23;
 	optional float display_brightness_adaptivemin = 24;
@@ -528,6 +529,7 @@ message CMsgSystemManagerSettings {
 	optional bool is_display_brightness_available = 29;
 	optional bool is_display_colormanagement_available = 31;
 	optional float display_colorgamut = 32;
+	optional float als_lux_alternate = 33;
 }
 
 message CMsgSelectOSBranchParams {

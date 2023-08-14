@@ -43,6 +43,9 @@ enum EClientNotificationType {
 	k_EClientNotificationType_TimerExpired = 38;
 	k_EClientNotificationType_ModeratorMsg = 39;
 	k_EClientNotificationType_SteamInputActionSetChanged = 40;
+	k_EClientNotificationType_RemoteClientConnection = 41;
+	k_EClientNotificationType_RemoteClientStartStream = 42;
+	k_EClientNotificationType_StreamingClientConnection = 43;
 }
 
 enum ESystemUpdateNotificationType {
@@ -208,4 +211,20 @@ message CClientNotificationTimerExpired {
 message CClientNotificationSteamInputActionSetChanged {
 	optional int32 controller_index = 1;
 	optional string action_set_name = 2;
+}
+
+message CClientNotificationRemoteClientConnection {
+	optional string machine = 1;
+	optional bool connected = 2;
+}
+
+message CClientNotificationRemoteClientStartStream {
+	optional string machine = 1;
+	optional string game_name = 2;
+}
+
+message CClientNotificationStreamingClientConnection {
+	optional string hostname = 1;
+	optional string machine = 2;
+	optional bool connected = 3;
 }

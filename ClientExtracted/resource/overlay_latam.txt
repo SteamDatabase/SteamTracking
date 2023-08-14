@@ -4,14 +4,14 @@
 "Tokens"
 {
 "Overlay_Splash_Hotkey"		"Pulsa %hotkey% para comenzar"
-"Overlay_Splash_Message"		"Accede a la Comunidad Steam mientras juegas."
+"Overlay_Splash_Message"		"Accede a la Comunidad de Steam mientras juegas."
 
 "Overlay_SettingsTabTitle"	"En la partida"
 "Overlay_SettingsTabTitleApp"	"En una aplicación"
-"Overlay_SettingsDescription"	"Steam puede permanecer activo durante la partida, permitiéndote acceder a las funciones de la Comunidad Steam mientras juegas."
-"Overlay_SettingsDescriptionApp"	"Steam puede permanecer activo y ofrecerte notificaciones de mensajes de la Comunidad Steam, así como una completa interfaz de amigos, mientras estás dentro de tu aplicación."
+"Overlay_SettingsDescription"	"Steam puede permanecer activo durante la partida, permitiéndote acceder a las funciones de la Comunidad de Steam mientras juegas."
+"Overlay_SettingsDescriptionApp"	"Steam puede permanecer activo y ofrecerte notificaciones de mensajes de la Comunidad de Steam, así como una completa interfaz de amigos, mientras estás dentro de tu aplicación."
 "Overlay_SettingsEnable"	"Habilitar la interfaz de Steam"
-"Overlay_SettingsEnableApp"	"Activar Comunidad Steam en la aplicación"
+"Overlay_SettingsEnableApp"	"Activar Comunidad de Steam en la aplicación"
 "Overlay_SettingsSCTenfootEnable"	"Utilizar interfaz de Big Picture al usar un control compat. con Steam Input desde el escritorio"
 "Overlay_SettingsHotKeyLabel"	"Teclas de acceso directo a la interfaz"
 "Overlay_SettingsScreenshotHotKeyLabel"	"Teclas de captura de pantalla"
@@ -118,7 +118,7 @@
 "steam_menu_friends_add"					 "Añadir a un amigo..."
 "steam_menu_friends_settings"      "Parámetros"
 
-"friends_searchOnline"				 "Buscar miembros de la Comunidad Steam"
+"friends_searchOnline"				 "Buscar miembros de la Comunidad de Steam"
 
 "Overlay_LowBattery_Message"	"Quedan %batteryTime% minutos de batería"
 
@@ -204,10 +204,10 @@
 "Overlay_Screenshots_Press_Hotkey" "Pulsa %screenshot_hotkey% para realizar capturas de pantalla."
 "Overlay_Screenshots_Press_HotkeyApp" "Pulsa %screenshot_hotkey% mientras estás en una aplicación\npara realizar una captura de pantalla."
 "Overlay_Publish_Error_Title" "Error"
-"Overlay_Publish_Error" "Se ha producido un error al publicar la captura. Por favor, inténtalo de nuevo más tarde."
+"Overlay_Publish_Error" "Se produjo un error al publicar la captura. Por favor, inténtalo de nuevo más tarde."
 "Overlay_Publish_Error_Quota" "No tienes suficiente espacio disponible en Cloud para subir esta captura"
 "Overlay_Publish_Error_Quota_Plural" "No tienes suficiente espacio disponible en Cloud para subir estas capturas"
-"Overlay_Delete_Screenshot_Error" "Se ha producido un error al borrar la captura. Por favor, inténtalo de nuevo más tarde."
+"Overlay_Delete_Screenshot_Error" "Se produjo un error al borrar la captura. Por favor, inténtalo de nuevo más tarde."
 "Overlay_Tag_As_Potential_Spoiler" "Etiquetar como posible spoiler"
 "Overlay_Publish_NeedWorkshopLegalAgreementAcceptance_Title" "Acuerdo Legal de Steam Workshop"
 "Overlay_Publish_NeedWorkshopLegalAgreementAcceptance_Desc" "Debes aceptar la última versión del Acuerdo Legal de Steam Workshop antes de completar la publicación de tu artículo."

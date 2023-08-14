@@ -19984,6 +19984,9 @@ div:hover > .BBCodeCollapseControl {
   color: #67707b;
   font-size: 16px;
 }
+.voicechatheadersteamdeck_PopupBody_1s0kV {
+  -webkit-tap-highlight-color: transparent;
+}
 .voicechatheadersteamdeck_VoiceChatHeader_18snG.GamepadMode,
 .GamepadMode .voicechatheadersteamdeck_VoiceChatHeader_18snG {
   padding-left: 5px;
@@ -20143,6 +20146,28 @@ div:hover > .BBCodeCollapseControl {
 .voicechatheadersteamdeck_VoiceChatHeader_18snG.GamepadMode svg:first-of-type,
 .GamepadMode .voicechatheadersteamdeck_VoiceChatHeader_18snG svg:first-of-type {
   margin-right: 8px;
+}
+.voicechatheadersteamdeck_VoiceChatHeader_18snG.VRDashboardBar {
+  padding: 0 2px;
+  color: #fff;
+}
+.voicechatheadersteamdeck_VoiceChatHeader_18snG.VRDashboardBar
+  svg:last-of-type {
+  margin-right: 0;
+}
+.voicechatheadersteamdeck_VoiceChatHeader_18snG.VRDashboardBar
+  .voicechatheadersteamdeck_VoiceChatStatusBackground_1zp0Z {
+  width: calc(100% + var(--side-item-padding-px) * 2);
+  margin: 0 calc(var(--side-item-padding-px) * -1);
+  transition: background-color 2s cubic-bezier(0.17, 0.45, 0.14, 0.83);
+}
+.VRDashboardBarSideItem:not(:hover)
+  .voicechatheadersteamdeck_VoiceChatHeader_18snG.VRDashboardBar
+  .voicechatheadersteamdeck_VoiceChatStatusBackground_1zp0Z {
+  transition:
+    opacity 0.15s ease-out,
+    background-color 2s cubic-bezier(0.17, 0.45, 0.14, 0.83);
+  opacity: 0.8;
 }
 @keyframes main_ItemFocusAnim-darkerGrey-nocolor_3plWN {
   from {

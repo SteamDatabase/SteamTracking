@@ -314,6 +314,7 @@ ${COMMUNITY_BASE_URL}search/users
 ${COMMUNITY_BASE_URL}search/users/
 ${COMMUNITY_BASE_URL}search/users/#text=${}
 ${COMMUNITY_BASE_URL}sharedfiles/filedetails/?id=${sharedFileID}
+${COMMUNITY_BASE_URL}sharedfiles/filedetails/?id=${url}
 ${COMMUNITY_BASE_URL}sharedfiles/filedetails/?id=${}
 ${COMMUNITY_BASE_URL}stats/${appid}/achievements/
 ${COMMUNITY_BASE_URL}stats/${appid}/leaderboards/
@@ -2416,6 +2417,7 @@ https://play.google.com/store/apps/details?id=com.valvesoftware.android.steam.fr
 https://play.google.com/store/apps/details?id=com.valvesoftware.underlords
 https://player.vimeo.com/video/${videoid}?badge=0&autopause=0&autoplay=1&player_id=0
 https://policies.google.com/privacy
+https://rd.playstation.com/controller/fwupdater/
 https://reactjs.org/docs/error-decoder.html?invariant=${}
 https://s.team/chat/${}
 https://s.team/deck/setup
@@ -2945,7 +2947,6 @@ linear-gradient(90deg, rgba(3, 2, 2, 0) 22.92%, rgba(3, 2, 2, 0.6) 100%), url( $
 steam://
 steam://${path}
 steam://${}
-steam://AddNonSteamGame
 steam://broadcast/watch/${steamid64}
 steam://cdkeys/${appid}
 steam://changeuser
@@ -2964,18 +2965,19 @@ steam://exit
 steam://friends/add
 steam://friends/joinchat/${steamid}
 steam://friends/message/${steamid}
-steam://friends/oldplayers
 steam://friends/players
 steam://friends/status/away
 steam://friends/status/invisible
 steam://friends/status/offline
 steam://friends/status/online
 steam://gamewebcallback/
+steam://helpurl/
 steam://joinlobby/${appID}/${lobbyID}/${}
 steam://joinlobby/${}/${}/${}
 steam://nav/games/details/${}
 steam://oldsettings
 steam://open/about
+steam://open/addnonsteamgame
 steam://open/bigpicture
 steam://open/changeemail
 steam://open/console
@@ -2997,7 +2999,6 @@ steam://open/library/view/soundtracks
 steam://open/library/view/tools
 steam://open/minigameslist
 steam://open/newforyou
-steam://open/oldservers
 steam://open/runtimeinfo
 steam://open/screenshots
 steam://open/screenshots/${}

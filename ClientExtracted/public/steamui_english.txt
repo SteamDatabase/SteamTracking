@@ -848,6 +848,8 @@ This should take less than a minute."
 "SteamUI_Selection_Ukrainian"			"Українська (Ukrainian)"
 "SteamUI_Selection_Latam_Spanish"	"Español-Latinoamérica (Spanish-Latin America)"
 "SteamUI_Selection_Vietnamese"		"Tiếng Việt (Vietnamese)"
+"SteamUI_Selection_Indonesian"		"Bahasa Indonesia (Indonesian)"
+
 
 
 "SteamUI_Modem_33_6k"		"Modem - 33.6kbps"
@@ -4404,14 +4406,6 @@ Set a category for these games to help you find them quickly and organize your L
 "Steam_SystemRequirementWarning_Title" "Performance Warning"
 "Steam_SystemRequirementWarning_Text" "Your system does not meet %game%'s minimum system requirements recommended for this game."
 "Steam_SystemRequirementWarning_Link" "Show system requirements"
-
-"Notification_RemoteClientTitle"	"Steam Remote Play"
-"Notification_RemoteClientConnected"	"%machine% is available for streaming"
-"Notification_RemoteClientDisconnected"	"%machine% is no longer available"
-
-"Notification_StreamingTitle"	"Steam Remote Play"
-"Notification_StreamingStarted"	"Started streaming from %hostname% to %machine%"
-"Notification_StreamingStopped"	"Stopped streaming to %machine%"
 
 "steam_menu_view_music_details" "Music Details"
 "steam_menu_view_musicplayer" "Music Player"

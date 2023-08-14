@@ -127,7 +127,6 @@ enum EMsg {
 	k_EMsgAMSetAccountTrustedRequest = 519;
 	k_EMsgAMCancelPurchase = 522;
 	k_EMsgAMNewChallenge = 523;
-	k_EMsgAMLoadOEMTickets = 524;
 	k_EMsgAMFixPendingPurchase = 525;
 	k_EMsgAMFixPendingPurchaseResponse = 526;
 	k_EMsgAMIsUserBanned = 527;
@@ -511,6 +510,7 @@ enum EMsg {
 	k_EMsgCMSessionRejected = 1703;
 	k_EMsgCMSetSecrets = 1704;
 	k_EMsgCMGetSecrets = 1705;
+	k_EMsgCMRemotePlayReplyPacket = 1706;
 	k_EMsgBaseGC = 2200;
 	k_EMsgGCCmdRevive = 2203;
 	k_EMsgGCCmdDown = 2206;
@@ -591,8 +591,6 @@ enum EMsg {
 	k_EMsgOGSEndSessionResponse = 3404;
 	k_EMsgOGSWriteAppSessionRow = 3406;
 	k_EMsgBaseBRP = 3600;
-	k_EMsgBRPPostTransactionTax = 3629;
-	k_EMsgBRPPostTransactionTaxResponse = 3630;
 	k_EMsgBaseAMRange2 = 4000;
 	k_EMsgAMCreateChat = 4001;
 	k_EMsgAMCreateChatResponse = 4002;
@@ -889,6 +887,8 @@ enum EMsg {
 	k_EMsgPSGetShoppingCartContentsResponse = 5010;
 	k_EMsgPSAddWalletCreditToShoppingCart = 5011;
 	k_EMsgPSAddWalletCreditToShoppingCartResponse = 5012;
+	k_EMsgPSGetAccountCartContents = 5013;
+	k_EMsgPSGetAccountCartContentsResponse = 5014;
 	k_EMsgBaseUFSRange = 5200;
 	k_EMsgClientUFSUploadFileRequest = 5202;
 	k_EMsgClientUFSUploadFileResponse = 5203;
@@ -988,9 +988,6 @@ enum EMsg {
 	k_EMsgClientLogOnWithHash_Deprecated = 5465;
 	k_EMsgClientStoreUserStats2 = 5466;
 	k_EMsgClientStatsUpdated = 5467;
-	k_EMsgClientActivateOEMLicense = 5468;
-	k_EMsgClientRegisterOEMMachine = 5469;
-	k_EMsgClientRegisterOEMMachineResponse = 5470;
 	k_EMsgClientRequestedClientStats = 5480;
 	k_EMsgClientStat2Int32 = 5481;
 	k_EMsgClientStat2 = 5482;

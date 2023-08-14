@@ -46,7 +46,7 @@
 "ServerBrowser_PlayersLabel"			"Παίκτες:"
 "ServerBrowser_LatencyLabel"			"Υστέρηση:"
 "ServerBrowser_EnterIPofServerToAdd"		"Εισάγετε τη διεύθυνση IP του διακομιστή που επιθυμείτε να προσθέσετε."
-"ServerBrowser_OK"				"OK"
+"ServerBrowser_OK"				"Εντάξει"
 "ServerBrowser_Examples"			"Παραδείγματα:\ntfc.valvesoftware.com\ncounterstrike.speakeasy.net:27016\n205.158.143.200:27015"
 "ServerBrowser_AddServersTitle"			"Προσθήκη διακομιστή - Διακομιστές"
 "ServerBrowser_AddServerErrorTitle"		"Προσθήκη διακομιστή - Σφάλμα"

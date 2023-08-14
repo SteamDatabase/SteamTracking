@@ -2752,7 +2752,7 @@
 "Steam_Country_UG"		"Уганда"
 "Steam_Country_UA"		"Украина"
 "Steam_Country_AE"		"Объединенные Арабские Эмираты"
-"Steam_Country_GB"		"Великобритания"
+"Steam_Country_GB"		"Соединённое Королевство"
 "Steam_Country_UM"		"Внешние малые острова США"
 "Steam_Country_UY"		"Уругвай"
 "Steam_Country_UZ"		"Узбекистан"
@@ -3191,7 +3191,7 @@
 "Steam_ContentBetaOptOutOK"	"Вы вышли из программы бета-тестирования."
 "Steam_ContentBetaOptOutProblem"	"Произошла ошибка при попытке выхода из участия в бета-тестировании."
 
-"Steam_Settings_NotifyMeWithSteamInstantMessages"	"Уведомлять меня об изменениях или дополнениях для моих игр, а также о новых и готовящихся к выходу играх."
+"Steam_Settings_NotifyMeWithSteamInstantMessages"	"Уведомлять меня об изменениях или дополнениях для моих игр, а также о новых и готовящихся к выходу продуктах."
 "Steam_Settings_DownloadsTitle"	"Загрузки"
 "Steam_Settings_CloudTitle"	"Cloud"
 "Steam_Settings_FamilyTitle" "Семья"

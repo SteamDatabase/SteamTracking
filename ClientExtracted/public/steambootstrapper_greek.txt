@@ -36,7 +36,7 @@
 "SteamBootstrapper_AlreadyRunningError"		"Η εφαρμογή %appname% ήδη εκτελείται σε αυτό τον υπολογιστή, υπό διαφορετικό όνομα χρήστη."
 "SteamBootstrapper_MoveContentDir_DestExists" "Το %appname% άλλαξε φάκελο αποθήκευσης παιχνιδιών από '~/Documents/Steam Content' σε '~/Library/Application Support/Steam/SteamApps'.  Έχετε αρχεία παιχνιδιών στον αρχικό φάκελο και το %appname% δεν μπόρεσε να μετακινήσει τα αρχεία επειδή τα αρχεία υπάρχουν ήδη στη νέα τοποθεσία.  Μπορεί να χρειαστεί να μετακινήσετε τα αρχεία εσείς, ή να διαγράψετε τα παλιά αρχεία και να κατεβάσετε τα αρχεία ξανά. Θέλετε σίγουρα να συνεχίσετε;"
 "SteamBootstrapper_MoveContentDir_CopyError"  "Το %appname% άλλαξε φάκελο αποθήκευσης παιχνιδιών από '~/Documents/Steam Content' σε '~/Library/Application Support/Steam/SteamApps'.  Έχετε αρχεία παιχνιδιών στον αρχικό φάκελο και το %appname% δεν μπόρεσε να μετακινήσει τα αρχεία.  Μπορεί να χρειαστεί να μετακινήσετε τα αρχεία εσείς, ή να διαγράψετε τα παλιά αρχεία και να κατεβάσετε τα αρχεία ξανά. Θέλετε σίγουρα να συνεχίσετε;"
-"SteamBootstrapper_OK"				"OK"
+"SteamBootstrapper_OK"				"Εντάξει"
 "SteamBootstrapper_Cancel"			"Ακύρωση"
 "SteamBootstrapper_WindowTitle"			"%appname%"
 "SteamBootstrapper_Error_Title"			"%appname% - Aνεπανόρθωτο σφάλμα"

@@ -229,7 +229,7 @@
 
 "Friends_Chat_ToggleAvatars"			"Avatare anzeigen"
 "Friends_Chat_ToggleBeeps"            "Signalton bei Benutzer-Nachrichten"
-"Friends_Chat_ToggleTimestamp"        "Uhrzeiten bei jeder Nachricht anzeigen"
+"Friends_Chat_ToggleTimestamp"        "Zeitstempel bei jeder Nachricht anzeigen"
 
 "Friends_Chat_ManageBanList"			"Ausschlüsse verwalten"
 "Friends_Chat_LockRoom"				"Diesen Chat sperren (privat)"
@@ -370,7 +370,7 @@
 "Friends_Nickname"					"Profilname"
 "Friends_Avatar"						"Avatar"
 "Friends_AutoSignIntoFriendsOnStartup"	"Automatische Anmeldung bei 'Freunde' beim Start von Steam"
-"Friends_ShowTimeInChatLog"	"Uhrzeiten im Chatlog anzeigen"
+"Friends_ShowTimeInChatLog"	"Zeitstempel im Chatlog anzeigen"
 "Friends_AlwaysNewChatCheck" "Immer ein neues Chatfenster öffnen statt eines neuen Tabs"
 "Friends_NotificationsAndSounds"		"Benachrichtigungen & Sounds"
 "Friends_WhenFriendJoinsGame"			"Wenn ein Freund ein Spiel startet"

@@ -57,7 +57,6 @@ message CMsgClientSettings {
 	optional float min_scale_factor = 12 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "UI/Display/Current/MinScaleFactor"];
 	optional float max_scale_factor = 13 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "UI/Display/Current/MaxScaleFactor"];
 	optional float auto_scale_factor = 14 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "UI/Display/Current/AutoScaleFactor"];
-	optional bool enable_test_updaters = 15 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "EnableTestUpdaters"];
 	optional bool small_mode = 16 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Software\\Valve\\Steam\\SmallMode"];
 	optional bool skip_steamvr_install_dialog = 19 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "system\\SteamVRHMDVGUIWarning"];
 	optional bool always_show_user_chooser = 20 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "WebStorage\\Auth\\AlwaysShowUserChooser"];
@@ -157,5 +156,9 @@ message CMsgClientSettings {
 	optional bool g_background_enabled = 18200 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional string g_background_path = 18201 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional string g_background_max_keep = 18202 [(setting_store) = k_EClientSettingStore_CustomFunc];
+	optional int32 g_background_time_resolution = 18203 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional bool show_timestamps_in_console = 20000 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Developer\\ShowTimestampsInConsole"];
+	optional bool force_oobe = 20001 [(setting_store) = k_EClientSettingStore_Registry, (setting_name) = "HKEY_CURRENT_USER\\Software\\Valve\\Steam\\ForceOOBE"];
+	optional int32 override_browser_composer_mode = 20002 [(setting_store) = k_EClientSettingStore_CustomFunc];
+	optional bool cef_remote_debugging_enabled = 20003 [(setting_store) = k_EClientSettingStore_CustomFunc];
 }

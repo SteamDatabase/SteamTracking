@@ -234,10 +234,6 @@
             "argc": "1"
         },
         {
-            "name": "BIsRunningOnAlienwareAlpha",
-            "argc": "1"
-        },
-        {
             "name": "StartVRDashboard",
             "argc": "1"
         },

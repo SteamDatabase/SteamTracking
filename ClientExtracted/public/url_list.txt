@@ -607,30 +607,6 @@ StoreMarketingMessagesAll
 	method		"internal"
 }
 
-CSGOAccountLinkPage
-{
-	url			"%applauncher%/join/pwlink_csgo/?l=%language%"
-	method		"internal"
-}
-
-CSGOAccountIDVerifyPage
-{
-	url			"https://members.csgo.com.cn/steam/indulge2?ticket=%p1%"
-	method		"internal"
-}
-
-DOTAAccountLinkPage
-{
-	url			"http://store.dota2.com.cn/accountlink/perfectworld/?ticket=%p1%"
-	method		"internal"
-}
-
-DOTAIDVerifyPage
-{
-	url			"https://members.dota2.com.cn/steam/indulge2?ticket=%p1%"
-	method		"internal"
-}
-
 GiftActivationPage
 {
 	url			"%community%/actions/RedeemGift"
@@ -1318,6 +1294,12 @@ WorkshopEula
 StoreGreatOnDeck
 {
 	url			"%store%/greatondeck"
+	method		"internal"
+	filter		"store"
+}
+StoreVR
+{
+	url			"%store%/vr"
 	method		"internal"
 	filter		"store"
 }

@@ -36,10 +36,8 @@
  D typeinfo for std::__1::__basic_string_common<true>
  D typeinfo for std::__1::bad_function_call
  D typeinfo for std::__1::basic_ostringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> >
- D typeinfo for std::__1::basic_ostringstream<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >
  D typeinfo for std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >
  D typeinfo for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> >
- D typeinfo for std::__1::basic_stringbuf<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >
  Error
  FSEventStreamCreate
  FSEventStreamInvalidate
@@ -50,14 +48,10 @@
  FSGetVolumeInfo
  GetCPUInformation()
  GetCrashHandlerFactory
- GetLocalHostname
  GetOSType
- GetPlatformName
- GetSpewOutputFunc
  KeyValuesSystemSteam
  Log
  Msg
- NSSearchPathForDirectoriesInDomains
  OBJC_CLASS_$_NSAppleEventManager
  OBJC_CLASS_$_NSApplication
  OBJC_CLASS_$_NSArray
@@ -93,19 +87,15 @@
  Plat_MSTime
  Plat_MSTime64
  Plat_OutputDebugString
- Plat_OutputDebugStringRaw
  Plat_RelativeTickFrequency
  Plat_RelativeTicks
- Plat_ctime
  Plat_gmtime
  Plat_localtime
  R typeinfo name for std::__1::__basic_string_common<true>
  R typeinfo name for std::__1::bad_function_call
  R typeinfo name for std::__1::basic_ostringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> >
- R typeinfo name for std::__1::basic_ostringstream<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >
  R typeinfo name for std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >
  R typeinfo name for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> >
- R typeinfo name for std::__1::basic_stringbuf<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >
  SDL_AddEventWatch
  SDL_CreateWindow
  SDL_DelEventWatch
@@ -148,33 +138,19 @@
  SteamThreadTools::CThread::Start(unsigned long)
  SteamThreadTools::CThread::Yield()
  SteamThreadTools::CThread::~CThread()
- SteamThreadTools::CThreadEvent::Set()
  SteamThreadTools::CThreadLocalBase::CThreadLocalBase()
  SteamThreadTools::CThreadLocalBase::Get() const
- SteamThreadTools::CThreadLocalBase::Set(void*)
  SteamThreadTools::CThreadLocalBase::~CThreadLocalBase()
  SteamThreadTools::CThreadMutex::CThreadMutex()
  SteamThreadTools::CThreadMutex::~CThreadMutex()
- SteamThreadTools::CThreadSpinLock::Lock(unsigned int) volatile
  SteamVProf::CVProfManager::CleanupUnusedProfiles()
  SteamVProf::CVProfManager::DumpAllThreadProfiles(int)
  SteamVProf::CVProfManager::StartProfilingAllThreads(float, int)
  SteamVProf::CVProfManager::StopProfilingAllThreads()
  SteamVProf::CVProfile::MarkFrame(char const*)
  StringAfterPrefix
- T CRYPTO_memcmp
  T CreateInterface
- T OPENSSL_atomic_add
- T OPENSSL_cleanse
- T OPENSSL_ia32_cpuid
- T OPENSSL_ia32_rdrand_bytes
- T OPENSSL_ia32_rdseed_bytes
- T OPENSSL_instrument_bus
- T OPENSSL_instrument_bus2
- T OPENSSL_rdtsc
- T OPENSSL_wipe_cpu
  T WinAppMain
- T md5_block_asm_data_order
  T pcre_compile
  T pcre_compile2
  T pcre_config
@@ -244,28 +220,17 @@
  T pcrecpp::RE::Rewrite(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, pcrecpp::StringPiece const&, pcrecpp::StringPiece const&, int*, int) const
  T pcrecpp::RE::TryMatch(pcrecpp::StringPiece const&, int, pcrecpp::RE::Anchor, bool, int*, int) const
  T pcrecpp::RE::~RE()
- T sha1_block_data_order
- T sha256_block_data_order
- T sha512_block_data_order
- Test_IsActive
- Test_SetFailed
- ThreadGetCurrentId
  ThreadGetCurrentProcessId
  ThreadInMainThread
- ThreadInterlockedAssignIf
  ThreadInterlockedCompareExchange
  ThreadInterlockedDecrement
  ThreadInterlockedExchange
- ThreadInterlockedIncrement
  ThreadIsProcessIdActive
  ThreadShellExecute
  ThreadSleep
  VProfInternalEnterScopeCurrentThread
  VProfInternalGetProfileForCurrentThread
- V_AggressiveStripPrecedingAndTrailingWhitespace
  V_AppendSlash
- V_EscapeShellArgumentAndAppend(CUtlStringBuilder*, char const*)
- V_ExtractDomainFromURL
  V_ExtractFileExtension
  V_ExtractFilePath
  V_FixDoubleSlashes
@@ -275,37 +240,26 @@
  V_IsSteamCloseProtocol
  V_IsValidURLCharacter
  V_MakeAbsolutePath
- V_ParseSteamOpenURLExternalProtocol
  V_ParseURLQueryString
  V_RemoveDotSlashes
  V_SetExtension
- V_SplitNumbers
  V_SplitStringInternal(char const*, char const* const*, char const**, int, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&, bool)
- V_StrSkipArticles
- V_StrSubstInPlace
  V_StripFilename
  V_StripLastDir
  V_StripPrecedingAndTrailingWhitespace
  V_StripTrailingSlash
  V_URLContainsDomain
- V_URLCracker
  V_URLDecodeRaw
- V_URLEncode
- V_URLEncodeRaw
- V_URLParse
  V_UTF16ToUTF32
  V_UTF16ToUTF8
  V_UTF32CharsToUTF8
- V_UTF32ToUTF16
  V_UTF32ToUTF8
- V_UTF8ToUTF16
  V_UTF8ToUTF32
  V_UnqualifiedFileName
  V_WcsSkipArticles
  V_atof
  V_atoi
  V_atoui64
- V_binarytohex
  V_isbreakablewspace
  V_pretifymem
  V_snprintf
@@ -332,7 +286,6 @@
  WeakRandomInt
  _DMsg
  _DefaultRuneLocale
- _SpewMessageType
  _Unwind_Resume
  __CFConstantStringClassReference
  __assert_rtn
@@ -353,35 +306,29 @@
  __gxx_personality_v0
  __maskrune
  __memcpy_chk
- __sprintf_chk
  __stack_chk_fail
  __stack_chk_guard
  __stderrp
  __tolower
  _objc_empty_cache
  _tlv_bootstrap
- abort
  alphasort$INODE64
  atoi
  atoll
  bootstrap_look_up
  bootstrap_port
- ceil
  ceilf
  close
  closedir
  cos
- crc32
  dlclose
  dlopen
  dlsym
  dup
  dyld_stub_binder
- exit
  fclose
  fcntl
  fflush
- fileno
  flock
  floor
  floorf
@@ -389,11 +336,9 @@
  fnmatch
  fopen
  fprintf
- fputc
  fputs
  fread
  free
- freeaddrinfo
  fseek
  fstat$INODE64
  ftello
@@ -403,7 +348,6 @@
  g_VProfProfilesRunningCount
  g_VProfile
  g_pMemAllocSteam
- getaddrinfo
  getcwd
  getenv
  getpid
@@ -429,10 +373,6 @@
  glTexImage2D
  glTexParameteri
  glVertex2f
- inflate
- inflateEnd
- inflateInit_
- inflateReset
  kCFAbsoluteTimeIntervalSince1970
  kCFAllocatorDefault
  kCFPreferencesAnyApplication
@@ -445,9 +385,6 @@
  launch_data_free
  launch_data_new_string
  launch_msg
- localeconv
- log10
- longjmp
  lseek
  lstat$INODE64
  mach_msg
@@ -457,21 +394,16 @@
  mach_port_type
  mach_task_self_
  malloc
- mbtowc
  memchr
  memcmp
  memcpy
  memmove
  memset
  memset_pattern16
- mkdir
- mktime
  mmap
  munmap
- objc_alloc
  objc_msgSend
  objc_msgSendSuper2
- objc_release
  open
  opendir$INODE64
  operator delete(void*)
@@ -479,7 +411,6 @@
  operator new(unsigned long)
  operator new(unsigned long, std::nothrow_t const&)
  operator new[](unsigned long)
- pow
  pthread_mutex_lock
  pthread_mutex_unlock
  pthread_self
@@ -487,7 +418,6 @@
  read
  readdir$INODE64
  realpath$DARWIN_EXTSN
- remove
  rename
  rindex
  round
@@ -499,7 +429,6 @@
  sem_trywait
  sem_unlink
  sem_wait
- setjmp
  setlocale
  shm_open
  shm_unlink
@@ -512,9 +441,7 @@
  std::__1::__next_prime(unsigned long)
  std::__1::__vector_base_common<true>::__throw_length_error() const
  std::__1::basic_ios<char, std::__1::char_traits<char> >::~basic_ios()
- std::__1::basic_ios<wchar_t, std::__1::char_traits<wchar_t> >::~basic_ios()
  std::__1::basic_ostream<char, std::__1::char_traits<char> >::~basic_ostream()
- std::__1::basic_ostream<wchar_t, std::__1::char_traits<wchar_t> >::~basic_ostream()
  std::__1::basic_streambuf<char, std::__1::char_traits<char> >::imbue(std::__1::locale const&)
  std::__1::basic_streambuf<char, std::__1::char_traits<char> >::setbuf(char*, long)
  std::__1::basic_streambuf<char, std::__1::char_traits<char> >::showmanyc()
@@ -523,15 +450,6 @@
  std::__1::basic_streambuf<char, std::__1::char_traits<char> >::xsgetn(char*, long)
  std::__1::basic_streambuf<char, std::__1::char_traits<char> >::xsputn(char const*, long)
  std::__1::basic_streambuf<char, std::__1::char_traits<char> >::~basic_streambuf()
- std::__1::basic_streambuf<wchar_t, std::__1::char_traits<wchar_t> >::basic_streambuf()
- std::__1::basic_streambuf<wchar_t, std::__1::char_traits<wchar_t> >::imbue(std::__1::locale const&)
- std::__1::basic_streambuf<wchar_t, std::__1::char_traits<wchar_t> >::setbuf(wchar_t*, long)
- std::__1::basic_streambuf<wchar_t, std::__1::char_traits<wchar_t> >::showmanyc()
- std::__1::basic_streambuf<wchar_t, std::__1::char_traits<wchar_t> >::sync()
- std::__1::basic_streambuf<wchar_t, std::__1::char_traits<wchar_t> >::uflow()
- std::__1::basic_streambuf<wchar_t, std::__1::char_traits<wchar_t> >::xsgetn(wchar_t*, long)
- std::__1::basic_streambuf<wchar_t, std::__1::char_traits<wchar_t> >::xsputn(wchar_t const*, long)
- std::__1::basic_streambuf<wchar_t, std::__1::char_traits<wchar_t> >::~basic_streambuf()
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > std::__1::operator+<char, std::__1::char_traits<char>, std::__1::allocator<char> >(char const*, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::__grow_by(unsigned long, unsigned long, unsigned long, unsigned long, unsigned long, unsigned long)
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::append(char const*)
@@ -556,9 +474,6 @@
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::resize(unsigned long, char)
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::rfind(char, unsigned long) const
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::~basic_string()
- std::__1::basic_string<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >::push_back(wchar_t)
- std::__1::basic_string<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >::resize(unsigned long, wchar_t)
- std::__1::ios_base::init(void*)
  std::__1::mutex::lock()
  std::__1::mutex::unlock()
  std::__1::mutex::~mutex()
@@ -568,7 +483,6 @@
  std::logic_error::logic_error(char const*)
  std::nothrow
  std::terminate()
- strcasecmp
  strcat
  strchr
  strcmp
@@ -598,9 +512,7 @@
  typeinfo for int
  typeinfo for long long
  typeinfo for std::__1::basic_ostream<char, std::__1::char_traits<char> >
- typeinfo for std::__1::basic_ostream<wchar_t, std::__1::char_traits<wchar_t> >
  typeinfo for std::__1::basic_streambuf<char, std::__1::char_traits<char> >
- typeinfo for std::__1::basic_streambuf<wchar_t, std::__1::char_traits<wchar_t> >
  typeinfo for std::exception
  typeinfo for std::length_error
  typeinfo for unsigned char
@@ -610,7 +522,6 @@
  usleep
  vasprintf
  virtual thunk to std::__1::basic_ostream<char, std::__1::char_traits<char> >::~basic_ostream()
- virtual thunk to std::__1::basic_ostream<wchar_t, std::__1::char_traits<wchar_t> >::~basic_ostream()
  vsnprintf
  vstdlib_wcsicmp
  vstdlib_wcsnicmp
@@ -623,5 +534,4 @@
  wcscpy
  wcslen
  wcstol
- wcstoll
  wctob

@@ -782,7 +782,7 @@ Mit dem mausähnlichen Analogstick können Sie mit dem Gamepad spielen und dabei
 	"SettingsFriends_ChangeAvatar"			"Meinen Avatar ändern"
 	"SettingsFriends_ViewProfile"			"Mein Communityprofil anzeigen"
 	"SettingsFriends_AutoSignIn"			"Automatische Anmeldung"
-	"SettingsFriends_Timestamps"			"Uhrzeiten im Chat anzeigen"
+	"SettingsFriends_Timestamps"			"Zeitstempel im Chat anzeigen"
 	"SettingsFriends_ScalingOverride"		"Chatskalierung"
 	"SettingsFriends_HighVisibilityMode"	"Chatgröße überschreiben"
 	"SettingsFriends_HighVisibilityModeVR"	"VR-Chatgröße überschreiben"

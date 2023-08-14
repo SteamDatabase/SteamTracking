@@ -369,6 +369,13 @@ message CStreamVideoMode {
 	optional uint32 refresh_rate_denominator = 5;
 }
 
+message CStreamVideoLimit {
+	optional .EStreamVideoCodec codec = 1 [default = k_EStreamVideoCodecNone];
+	optional .CStreamVideoMode mode = 2;
+	optional int32 bitrate_kbps = 3;
+	optional int32 burst_bitrate_kbps = 4;
+}
+
 message CStreamingClientCaps {
 	optional string system_info = 1;
 	optional bool system_can_suspend = 2;
@@ -387,11 +394,11 @@ message CStreamingClientCaps {
 
 message CStreamingClientConfig {
 	optional .EStreamQualityPreference quality = 1 [default = k_EStreamQualityBalanced];
-	optional uint32 maximum_resolution_x = 2;
-	optional uint32 maximum_resolution_y = 3;
-	optional uint32 maximum_framerate_numerator = 4;
-	optional uint32 maximum_framerate_denominator = 5;
-	optional int32 maximum_bitrate_kbps = 6 [default = -1];
+	optional uint32 desired_resolution_x = 2;
+	optional uint32 desired_resolution_y = 3;
+	optional uint32 desired_framerate_numerator = 4;
+	optional uint32 desired_framerate_denominator = 5;
+	optional int32 desired_bitrate_kbps = 6 [default = -1];
 	optional bool enable_hardware_decoding = 7 [default = true];
 	optional bool enable_performance_overlay = 8 [default = false];
 	optional bool enable_video_streaming = 9 [default = true];
@@ -405,6 +412,10 @@ message CStreamingClientConfig {
 	optional bool enable_touch_controller_OBSOLETE = 17 [default = false];
 	optional .EStreamP2PScope p2p_scope = 19 [default = k_EStreamP2PScopeAutomatic];
 	optional bool enable_audio_uncompressed = 20 [default = false];
+	optional .CStreamVideoLimit display_limit = 21;
+	optional .CStreamVideoLimit quality_limit = 22;
+	optional .CStreamVideoLimit runtime_limit = 23;
+	repeated .CStreamVideoLimit decoder_limit = 24;
 }
 
 message CStreamingServerConfig {
@@ -423,7 +434,7 @@ message CNegotiatedConfig {
 	optional bool reliable_data = 1;
 	optional .EStreamAudioCodec selected_audio_codec = 2 [default = k_EStreamAudioCodecNone];
 	optional .EStreamVideoCodec selected_video_codec = 3 [default = k_EStreamVideoCodecNone];
-	repeated .CStreamVideoMode available_video_modes = 4;
+	repeated .CStreamVideoMode available_video_modes_OBSOLETE = 4;
 	optional bool enable_remote_hid = 5;
 	optional bool enable_touch_input = 6;
 	optional bool disable_client_cursor = 7;

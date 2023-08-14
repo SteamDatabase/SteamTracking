@@ -142,7 +142,7 @@
 "Friends_FriendInvitedToGame_Title"	"ΠΡΟΣΚΛΗΣΗ - %friend%"
 "Friends_FriendInvitedToGame_Info"	"Μια πρόσκληση για να συνδεθεί στο παιχνίδι σας έχει σταλθεί στον χρήστη %friend%."
 
-"Friends_NotifyFriendOnline_Title"	"%friend% — Ειδοποίηση φίλων σε σύνδεση"
+"Friends_NotifyFriendOnline_Title"	"%friend% – Ειδοποίηση φίλων σε σύνδεση"
 "Friends_NotifyFriendOnline_Info"		"O χρήστης %friend% συνδέθηκε."
 
 "Friends_RefreshLogin_Title"			"Steam - Ανανέωση σύνδεσης"
@@ -431,7 +431,7 @@
 
 "Friends_RetryVoiceConnections"			"Επανάληψη σύνδεσης φωνητικής συνομιλίας"
 
-"Friends_AddRecentPlayerAsFriend"			"Προβολή χρηστών που παίξατε πρόσφατα μαζί τους"
+"Friends_AddRecentPlayerAsFriend"			"Προβολή των πρόσφατων συμπαικτών σας"
 "Friends_NotificationOptions_Title"		"Επιλογές ειδοποίησης - %FriendName%"
 
 "Friends_WhenThisFriendJoinsGame"				"Όταν ο χρήστης %FriendName% συνδέεται σε ένα παιχνίδι"
@@ -517,7 +517,7 @@
 "Friends_Voice_WhenActive"	"Όταν η φωνητική συνομιλία είναι ενεργή:"
 "Friends_Voice_AutoTransmit"	"Αυτόματη μετάδοση της φωνής μου όποτε μιλάω"
 "Friends_Voice_PushToTalk"	"Χρήση πλήκτρου ομιλίας για μετάδοση φωνής"
-"Friends_Voice_PushToMute"	"Χρήση πλήκτρου πάτημα-για-σίγαση για σίγαση φωνής"
+"Friends_Voice_PushToMute"	"Χρήση πλήκτρου «Πάτημα για σίγαση» για σίγαση φωνής"
 
 
 "Friends_DownloadNotification_Steam" "Steam"
@@ -694,7 +694,7 @@
 "Broadcast_FirstTime_FAQ" "Διαβάστε τις συχνές ερωτήσεις για τη Μετάδοση του Steam"
 "Broadcast_FirstTime_FAQLink" "https://support.steampowered.com/kb_article.php?ref=6730-TOAK-6497"
 "Broadcast_FirstTime_Title" "Μετάδοση Steam"
-"Broadcast_FirstTime_OK" "OK"
+"Broadcast_FirstTime_OK" "Εντάξει"
 "Broadcast_FirstTime_Cancel" "Ακύρωση"
 "Broadcast_FirstTime_ViewerRequest" "Ο %friend% θα ήθελε να σας παρακολουθήσει να παίζετε %gamename%"
 "Broadcast_FirstTime_CompleteText" "Σας ευχαριστούμε που επιλέξατε τα δικαιώματα της μετάδοσής σας."
@@ -777,7 +777,7 @@
 
 "Broadcast_UploadError_Notification" "Η μεταφόρτωση του μετάδοσης έχει διακοπεί (%reason%)."
 "Broadcast_Upload_Result_0"  "άγνωστο σφάλμα"
-"Broadcast_Upload_Result_1"  "OK"
+"Broadcast_Upload_Result_1"  "Εντάξει"
 "Broadcast_Upload_Result_2"  "η αρχικοποίηση απέτυχε"
 "Broadcast_Upload_Result_3"  "αποτυχία καρέ"
 "Broadcast_Upload_Result_4"  "λήξη χρονικού ορίου"

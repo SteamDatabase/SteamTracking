@@ -6,6 +6,10 @@ message CRemoteClient_CreateSession_Response {
 	optional int32 euniverse = 2;
 }
 
+message CRemoteClient_DeleteSession_Notification {
+	optional fixed64 session_id = 1;
+}
+
 message CRemoteClient_StartPairing_Request {
 	optional fixed64 session_id = 1;
 }
@@ -73,15 +77,6 @@ message CRemoteClient_GetReplies_Request {
 
 message CRemoteClient_GetReplies_Response {
 	repeated bytes payload = 1;
-}
-
-message CRemoteClient_AllocateTURNServer_Request {
-	optional uint32 cellid = 1;
-	optional string credentials = 2;
-}
-
-message CRemoteClient_AllocateTURNServer_Response {
-	optional string turn_server = 1;
 }
 
 message CRemoteClient_AllocateRelayServer_Request {
@@ -195,4 +190,28 @@ message CRemoteClient_LookupRemotePlayTogetherInvitation_Request {
 
 message CRemoteClient_LookupRemotePlayTogetherInvitation_Response {
 	optional string invitation_url = 1;
+}
+
+message CCMRemoteClient_ClientMessage {
+	oneof Message {
+		.CRemoteClient_CreateSession_Request create_session_request = 1;
+		.CRemoteClient_StartPairing_Request start_pairing_request = 2;
+		.CRemoteClient_SetPairingInfo_Request set_pairing_info_request = 3;
+		.CRemoteClient_CancelPairing_Request cancel_pairing_request = 4;
+		.CRemoteClient_RegisterStatusUpdate_Notification register_status_update = 5;
+		.CRemoteClient_UnregisterStatusUpdate_Notification unregister_status_update = 6;
+		.CRemoteClient_RemotePacket_Notification remote_packet = 7;
+	}
+}
+
+message CCMRemoteClient_ServerMessage {
+	optional int32 result = 1;
+
+	oneof Message {
+		.CRemoteClient_CreateSession_Response create_session_response = 2;
+		.CRemoteClient_StartPairing_Response start_pairing_response = 3;
+		.CRemoteClient_SetPairingInfo_Response set_pairing_info_response = 4;
+		.CRemoteClient_CancelPairing_Response cancel_pairing_response = 5;
+		.CRemoteClient_GetReplies_Response reply_packet = 6;
+	}
 }

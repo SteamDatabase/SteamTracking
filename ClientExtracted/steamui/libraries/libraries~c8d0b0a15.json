@@ -100,7 +100,7 @@
     "VoiceChatConnectingHelp": "Ajuda com problemas de ligação do chat de voz",
     "VoiceChatReconnecting": "A reconectar...",
     "VoiceChatParterConnecting": "À espera que %1$s estabeleça ligação...",
-    "CopyVoiceChatLogs": "Copiar registos de voz para área de transferência",
+    "CopyVoiceChatLogs": "Copiar registos de voz para a área de transferência",
     "ToggleVoiceConsoleLog": "Ativar/desativar registo de voz na consola",
     "ToggleLocalMicEcho": "Ativar/desativar eco do microfone local",
     "Voice_StartChat": "Iniciar chat de voz",

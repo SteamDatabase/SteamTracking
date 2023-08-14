@@ -4877,7 +4877,7 @@
 	"DownloadRegion_jp_sapporo"     "日本 - 札幌"
 	"DownloadRegion_jp_sendai"      "日本 - 仙台"
 	"DownloadRegion_jp_nagoya"      "日本 - 名古屋"
-	"DownloadRegion_jp_osaka"       "日本 - 大版"
+	"DownloadRegion_jp_osaka"       "日本 - 大阪"
 	"DownloadRegion_jp_fukuoka"     "日本 - 福冈"
 	"DownloadRegion_kr_busan"       "韩国 - 釜山"
 	"DownloadRegion_pl_katowice"    "波兰 - 卡托维兹"

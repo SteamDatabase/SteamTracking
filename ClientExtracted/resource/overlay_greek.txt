@@ -241,8 +241,8 @@
 "Overlay_SetScreenshotFolder_InvalidFolder" "Πρέπει να επιλέξετε έναν έγκυρο φάκελο φωτογραφιών"
 
 "Overlay_AsyncNotificatoinsRequestedDialog_Title" "Θέλετε να εμφανίζονται ειδοποιήσεις;"
-"Overlay_AsyncNotificatoinsRequestedDialog_Allow" "Να επιτρέπονται"
-"Overlay_AsyncNotificatoinsRequestedDialog_Disallow" "Απόρριψη"
+"Overlay_AsyncNotificatoinsRequestedDialog_Allow" "Ναι"
+"Overlay_AsyncNotificatoinsRequestedDialog_Disallow" "Όχι"
 "Overlay_AsyncNotificatoinsRequestedDialog_Desc" "Αυτό ο τίτλος υποστηρίζει ασύγχρονο παιχνίδι, που σας επιτρέπει να τερματίζετε το παιχνίδι ενώ περιμένετε το γύρο σας. Θέλετε να λαμβάνετε ειδοποιήσεις στο Steam όταν είναι ο γύρος σας;"
 
 "Overlay_Broadcast_Panel_Title" "Μετάδοση"

@@ -1220,7 +1220,7 @@ Cela devrait prendre moins d'une minute."
 "Steam_SubscriptionCancelled_CDKey_MustOwnOtherApp" "Le code produit que vous avez indiqué nécessite que vous disposiez d'un autre produit avant de pouvoir être activé.\n\nSi vous essayez actuellement d'activer un pack d'extension ou du contenu téléchargeable, activez tout d'abord le jeu original, puis le contenu complémentaire."
 
 "Steam_SubscriptionCancelled_CDKey_MustLoginPS3_Headline" "Ce compte n'a pas été utilisé pour jouer à %gamename% sur PlayStation®3"
-"Steam_SubscriptionCancelled_CDKey_MustLoginPS3" "Le code produit que vous avez entré requiert que vous jouiez d'abord à %gamename% sur PlayStation®3 avant de pouvoir être enregistré.\n\nVeuillez :\n\n- Lancer %gamename% sur votre PlayStation®3\n\n- Associer votre compte Steam à votre compte PlayStation®3 Network\n\n- Vous connecter à Steam lorsque %gamename% est lancé sur votre PlayStation®3\n\n- Enregistrer ce code produit sur Steam"
+"Steam_SubscriptionCancelled_CDKey_MustLoginPS3" "Le code produit que vous avez saisi nécessite que vous jouiez d'abord à %gamename% sur PlayStation®3 avant de pouvoir être enregistré.\n\nVeuillez :\n\n– lancer %gamename% sur votre PlayStation®3 ;\n\n– associer votre compte Steam à votre compte PlayStation Network ;\n\n– vous connecter à Steam lorsque %gamename% est lancé sur votre PlayStation®3 ;\n\n– enregistrer ce code produit sur Steam."
 
 "Steam_SubscriptionSuccess_Headline" "Merci. La transaction a bien été effectuée."
 "Steam_SubscriptionSuccess$purchasetype=regular" "Vous vous êtes abonné à %subscription%. Votre abonnement est associé au compte Steam suivant : %accountname%. A l'avenir, vous devrez vous connecter à ce compte pour accéder à vos jeux. Merci de votre commande !"
@@ -4111,7 +4111,7 @@ Ajoutez un nouveau contact Steam en envoyant un cadeau à une de vos connaissanc
 "SteamUI_ContentMgr_SelectInstallFolder" "Créez ou sélectionnez un nouveau dossier Steam :"
 "SteamUI_ContentMgr_RemoveFailed" "La suppression du dossier Steam sélectionné a échoué."
 "SteamUI_ContentMgr_RemoveFailedDefaultFolder" "Le dossier d'installation par défaut ne peut pas être supprimé."
-"SteamUI_ContentMgr_RemoveFailedUsedFolder" "Ce fichier de la bibliothèque est en cours d'utilisation par le jeu %game% et ne peut être supprimé."
+"SteamUI_ContentMgr_RemoveFailedUsedFolder" "Ce dossier de la bibliothèque est en cours d'utilisation par l'application %game% et ne peut être supprimé."
 "SteamUI_ContentMgr_FlushDownloadConfig" "Effacer le cache de téléch."
 "SteamUI_ContentMgr_FlushDownloadConfigInfo" "Cette opération peut résoudre des problèmes de téléchargement ou de lancement d'applications."
 "SteamUI_ContentMgr_FlushDownloadConfigTip" "Cette opération n'affectera pas les jeux déjà installés ou vos sauvegardes de jeux."

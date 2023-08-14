@@ -1648,6 +1648,7 @@
  lseek
  lstat$INODE64
  mach_absolute_time
+ mach_continuous_time
  mach_timebase_info
  makecontext
  malloc

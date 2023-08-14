@@ -895,11 +895,6 @@
         "size": 12
     },
     {
-        "id": 1020020,
-        "name": "25LogOnCredentialsChanged_t",
-        "size": 1
-    },
-    {
         "id": 1020024,
         "name": "16DRMDataRequest_t",
         "size": 12
@@ -1507,7 +1502,7 @@
     {
         "id": 1110005,
         "name": "Unknown",
-        "size": 16
+        "size": 24
     },
     {
         "id": 1110006,
@@ -1913,11 +1908,6 @@
         "id": 1280010,
         "name": "Unknown",
         "size": 12
-    },
-    {
-        "id": 1280011,
-        "name": "Unknown",
-        "size": 32
     },
     {
         "id": 1280012,

@@ -229,7 +229,7 @@
 
 "Friends_Chat_ToggleAvatars"			"Afișează avatarurile"
 "Friends_Chat_ToggleBeeps"            "Alertează-mă când utilizatorii trimit mesaje"
-"Friends_Chat_ToggleTimestamp"        "Afișează marcajul temporar al fiecărui mesaj"
+"Friends_Chat_ToggleTimestamp"        "Afișează marcajul temporal al fiecărui mesaj"
 
 "Friends_Chat_ManageBanList"			"Gestionează lista de banări"
 "Friends_Chat_LockRoom"				"Blochează această cameră (transform-o în privată)"
@@ -370,7 +370,7 @@
 "Friends_Nickname"					"Nume profil"
 "Friends_Avatar"						"Avatar"
 "Friends_AutoSignIntoFriendsOnStartup"	"Conectează-mă automat la serviciul Prieteni când pornesc Steam"
-"Friends_ShowTimeInChatLog"	"Afișează marcaje temporare în jurnalul de chat"
+"Friends_ShowTimeInChatLog"	"Afișează marcaje temporale în jurnalul de chat"
 "Friends_AlwaysNewChatCheck" "Deschide întotdeauna o nouă fereastră de chat în locul unui tab"
 "Friends_NotificationsAndSounds"		"Notificări și Sunete"
 "Friends_WhenFriendJoinsGame"			"Când orice prieten pornește un joc"

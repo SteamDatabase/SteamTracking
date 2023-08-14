@@ -2,6 +2,8 @@ __TEXT
 
 __text
 __TEXT
+`
+`
 __stubs
 __TEXT
 __stub_helper
@@ -19,7 +21,7 @@ __TEXT
 __gcc_except_tab__TEXT
 __unwind_info
 __TEXT
-Df
+Pf
 __DATA
 __nl_symbol_ptr
 __DATA
@@ -1112,6 +1114,10 @@ Launch CEF process via sub-shell
 Force the usage of the safe browser shutdown workaround for Linux+NV
 -cef-disable-xcomposite-workaround
 Disable the glcomposer workaround applied to some video drivers
+-cef-force-opaque-backgrounds
+Force the usage of opaque backgrounds for CEF
+-cef-no-restart-on-ui-mode-change
+Don't restart the renderer on UI mode changes
 -store
 -community
 -clientui
@@ -1123,6 +1129,7 @@ m_hCEFHandle == INVALID_PROCESS_HANDLE
 wt
 [Config]# Product information.ProductName=cefwebhelperProductVersion=%u# Required to enable crash dump upload.ServerURL=%s# Disable rate limiting so that all crashes are uploaded.RateLimitEnabled=trueMaxUploadsPerDay=5[CrashKeys]Vendor=smallUserID=smallBuildID=smallSteamUniverse=small
 https://crash.steampowered.com/submit
+BREAKPAD_DUMP_LOCATION
 -lang=%s
 -cachedir=%s
 -steampid=%u
@@ -1135,9 +1142,6 @@ https://crash.steampowered.com/submit
 -steamdeck
 -steamos3
 -chromeos
-"
---proxy-server="%s"
---proxy-bypass-list="localhost;127.0.0.1"
 -html-perf-monitor
 Draws html perf data
 -steamuniverse=Dev
@@ -1152,10 +1156,20 @@ clientui
 -steampath=%s
 GetClientActualLauncherType
 -launcher=%d
---ignore-certificate-errors
 -browser-offline
 -fakeoffline
 -disablerendererrestart
+-use_safe_shutdown_workaround
+-use_xcomposite_workaround
+-force-sandbox
+-delaypageload
+-no-restart-on-ui-mode-change
+-disablejslogging
+-verbosejslogging
+--ignore-certificate-errors
+"
+--proxy-server="%s"
+--proxy-bypass-list="localhost;127.0.0.1"
 ResizeObserver
 Worklet
 AudioWorklet
@@ -1175,28 +1189,22 @@ WebContentsOcclusion
 --disable-gpu-compositing
 --disable-gpu
 --disable-accelerated-video-decode
--use_safe_shutdown_workaround
--use_xcomposite_workaround
+-force-opaque-background
 --enable-gpu-debugging
 --disablehighdpi
 --force-device-scale-factor=1
 --device-scale-factor=1
 --no-sandbox
--force-sandbox
 --disable-winh264
 --single-process
 --in-process-gpu
 --ignore-gpu-blocklist
 --ignore-gpu-blacklist
 --disable-d3d11
--disablejslogging
--verbosejslogging
 --enable-logging
 --v=%s
 --v=1
--delaypageload
 --log-file=%s
-BREAKPAD_DUMP_LOCATION
 --full-memory-crash-report
 --disable-breakpad
 --disable-hang-monitor
@@ -2389,6 +2397,13 @@ vi_VN
 vi
 SteamChina_SChinese
 sc_schinese
+Indonesian
+indonesian
+#SteamUI_Selection_Indonesian
+#Panorama_Selection_Indonesian
+#Panorama_Lang_Indonesian
+id_ID
+id
 
 
 
@@ -2400,17 +2415,19 @@ sc_schinese
 @
 
 
-}
+<
 
 @
 Ic
-;
-3
-
+4
+2
 
 
 0
+
 0
+
+
 Hi
 `
 0
@@ -2423,9 +2440,6 @@ AT=
 D
 @
 @
-
-
-
 @
 Hc
 Hc
@@ -2479,7 +2493,6 @@ M9e
 ?
 ?
 :
-L
 ?
 ?
 ?
@@ -2495,3 +2508,4 @@ L
 0
 0
 0
+[

@@ -1,0 +1,18 @@
+import "steammessages_base.proto";
+import "webuimessages_base.proto";
+
+option optimize_for = SPEED;
+option cc_generic_services = true;
+
+message CTransportAuth_Authenticate_Request {
+	optional string auth_key = 1;
+}
+
+message CTransportAuth_Authenticate_Response {
+}
+
+service TransportAuth {
+	option (webui_service_execution_site) = k_EClientExecutionSiteAny;
+
+	rpc Authenticate (.CTransportAuth_Authenticate_Request) returns (.CTransportAuth_Authenticate_Response);
+}

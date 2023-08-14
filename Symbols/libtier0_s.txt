@@ -457,6 +457,7 @@
  kill$UNIX2003
  localtime_r
  mach_absolute_time
+ mach_continuous_time
  mach_host_self
  mach_timebase_info
  malloc

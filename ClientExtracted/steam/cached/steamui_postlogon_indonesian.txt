@@ -1,0 +1,41 @@
+﻿"lang" {
+"Language" "indonesian" 
+"Tokens" 
+{ 
+"Steam_TellTale_EmailPrompt"	"Telltale, penerbit dari %subscription%, ingin tetap terhubung denganmu. Mohon masukkan alamat email-mu di bawah ini untuk mendaftar ke buletin Telltale yang berisikan pengumuman game terbaru, mengintip proses pengembangan, komik, kolom memasak dan saran, juga penawaran khusus. Dijamin kamu tidak akan menyesal!"
+
+"Steam_Football2K9_EmailPrompt"	"SEGA, penerbit dari %subscription%, ingin menawarkan diskon spesial di Subside Sports sebagai ucapan terima kasih untuk pembelianmu. Mohon masukkan alamat email-mu di bawah ini untuk mendapatkan voucher diskon 10% untuk segala produk yang tersedia di toko online Subside Sports."
+
+"Steam_TwoTribes_EmailPrompt"	"Jika kamu ingin tetap terhubung dengan Two Tribes, kamu dapat berlangganan ke buletin kami. Masukkan alamat email-mu dan kami akan mengirim berita terbaru tentang game-game keren yang kami buat secara rutin!"
+
+
+"charity_title" "Sid Meier's Civilization V"
+
+"charity_imagetext" "Berbagi"
+
+"charity_header" "2K Games memberikan total donasi sebesar $250.000 ke empat badan amal berbasis pendidikan dan pilihan dari pengguna akan menentukan bagaimana dana tersebut diberikan. Kami akan menghitung suara dari pelanggan dan membagikan dana sesuai arahan. Kami juga menyambut NVIDIA Foundation yang bergabung dalam inisiatif ini dengan memberikan donasi tambahan sebesar $20.000 untuk program ini."
+
+"charity_choice"	"Badan amal mana yang ingin kamu dukung?"
+
+"charity_asia"		"Central Asia Institute"
+"charity_asia_details"	"Central Asia Institute mendukung pendidikan berbasis komunitas terutama untuk anak perempuan di Pakistan dan Afghanistan. Kami telah membantu membangun lebih dari 150 sekolah dan telah memberikan kesempatan belajar untuk 64.000 murid. Untuk informasi lebih lanjut mengenai Central Asia Institute atau Pennies for Peace, silakan hubungi kami di (+1) 406-585-7841 atau kunjungi www.ikat.org. Nama Central Asia Institute dan Pennies for Peace digunakan atas seizin lembaga tersebut tanpa adanya upaya mendukung produk, layanan, perusahaan, ataupun perseorangan baik secara tersurat maupun tersirat."
+
+"charity_schools"	"Building Schools for Africa"
+"charity_schools_details" "Building Schools for Africa adalah organisasi kemanusiaan kecil yang percaya bahwa cara terbaik untuk membantu orang-orang agar terbebas dari kemiskinan, penyakit, dan eksploitasi adalah dengan melalui pendidikan. Kami membangun sekolah-sekolah dengan toilet dan air bersih dan alat-alat serta benih untuk menghasilkan makanan di pedesaan Kamerun, di mana keluarga petani menghasilkan sekitar $1 per minggu. Kami dapat menyediakan itu semua hanya dengan $20.000 per sekolah. Kemudian, karena kami membayar semua pengeluaran kami sendiri, setiap dana yang kami kumpulkan digunakan untuk membagun sekolah tanpa dikurangi sedikit pun. Terima kasih atas bantuanmu."
+
+"charity_read"		"Room to Read®"
+"charity_read_details"	"Room to Read® berupaya mengubah kehidupan jutaan anak di negara berkembang dengan berfokus pada literasi dan kesetaraan gender dalam pendidikan. Bekerja sama dengan komunitas lokal, organisasi mitra, dan pemerintah, kami mengembangkan keterampilan literasi dan kebiasaan membaca di kalangan anak-anak sekolah dasar dan memastikan bahwa anak perempuan memiliki keterampilan dan dukungan yang dibutuhkan untuk menyelesaikan pendidikan menengah. Pelajari lebih lanjut di www.roomtoread.org."
+
+"charity_scholarship"	"Scholarship America®"
+"charity_scholarship_details"	"Scholarship America® adalah organisasi layanan pendidikan nasional yang menggalang dukungan untuk siswa yang masuk dan lulus dari perguruan tinggi. Kami memiliki tiga program inti yang membantu kami mencapai misi kami: Dollars for Scholars®, Scholarship Management Services®, dan Dreamkeepers. Scholarship America telah mendistribusikan lebih dari $2 miliar untuk bantuan beasiswa kepada lebih dari 1,7 juta siswa sejak 1958. Informasi lebih lanjut tersedia di www.scholarshipamerica.org."
+
+"charity_footer"	"Pemungutan suara ditutup pada 1 Januari 2011, 11.59 WIB. Satu suara per pengguna. Tidak berlaku di semua wilayah. Untuk informasi lebih lanjut tentang NVIDIA Foundation, kunjungan "
+"charity_footer_link"	"http://www.nvidia.com/object/corporate_community.html"
+
+"charity_launchgame"	"Luncurkan game"
+
+
+
+
+}
+)

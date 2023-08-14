@@ -4068,7 +4068,7 @@ Fatti un nuovo amico su Steam inviando un dono via e-mail a qualcuno che conosci
 
 "Steam_EOLAlert"	"Steam non funzionerà più con %OsVer% tra %DaysUntilOSEndOfLife% giorni."
 
-"Steam_SupportAlert"	"Hai un avviso dall'Assistenza"
+"Steam_SupportAlert"	"Hai un avviso sull'account"
 "steam_inventory"	"Inventario"
 "steam_inbox_item"	"1 nuovo oggetto nel tuo inventario"
 "steam_inbox_items"	"%items% nuovi oggetti nel tuo inventario"

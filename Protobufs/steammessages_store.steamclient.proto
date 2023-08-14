@@ -36,6 +36,13 @@ enum EUserReviewScorePreference {
 	k_EUserReviewScorePreference_ExcludeBombs = 2;
 }
 
+enum EPartnerLinkTrackingBackfillSource {
+	k_EPartnerLinkTrackingBackfillSource_None = 0;
+	k_EPartnerLinkTrackingBackfillSource_Web = 1;
+	k_EPartnerLinkTrackingBackfillSource_Mobile = 2;
+	k_EPartnerLinkTrackingBackfillSource_Desktop = 3;
+}
+
 message CStore_RegisterCDKey_Request {
 	optional string activation_code = 1 [(description) = "Key string to register on the logged in user's account"];
 	optional int32 purchase_platform = 2 [(description) = "EPurchasePlatform for platform of request"];
@@ -264,6 +271,12 @@ message CStore_GetTrendingAppsAmongFriends_Response {
 	repeated .CStore_GetTrendingAppsAmongFriends_Response.TrendingAppData trending_apps = 1;
 }
 
+message CStore_MigratePartnerLinkTracking_Notification {
+	optional uint32 accountid = 1;
+	optional uint64 browserid = 2;
+	optional .EPartnerLinkTrackingBackfillSource backfill_source = 3 [default = k_EPartnerLinkTrackingBackfillSource_None];
+}
+
 message CSteamDeckCompatibility_SetFeedback_Request {
 	optional uint32 appid = 1;
 	optional .ESteamDeckCompatibilityFeedback feedback = 2 [default = k_ESteamDeckCompatibilityFeedback_Unset];
@@ -333,6 +346,10 @@ service Store {
 
 	rpc GetTrendingAppsAmongFriends (.CStore_GetTrendingAppsAmongFriends_Request) returns (.CStore_GetTrendingAppsAmongFriends_Response) {
 		option (method_description) = "Get trending apps among friends";
+	}
+
+	rpc MigratePartnerLinkTracking (.CStore_MigratePartnerLinkTracking_Notification) returns (.NoResponse) {
+		option (method_description) = "Move UTM data from the PartnerLinkTrackingLogNoUser table to the PartnerLinkTrackingLogWithUser table";
 	}
 
 	rpc SetCompatibilityFeedback (.CSteamDeckCompatibility_SetFeedback_Request) returns (.CSteamDeckCompatibility_SetFeedback_Response) {

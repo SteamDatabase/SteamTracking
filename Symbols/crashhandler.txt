@@ -93,6 +93,7 @@
  lchmod
  lstat$INODE64
  mach_absolute_time
+ mach_continuous_time
  mach_msg
  mach_port_allocate
  mach_port_deallocate

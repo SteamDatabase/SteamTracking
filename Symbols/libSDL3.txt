@@ -566,7 +566,6 @@
  T SDL_GetNumTouchFingers
  T SDL_GetNumVideoDrivers
  T SDL_GetOriginalMemoryFunctions
- T SDL_GetPath
  T SDL_GetPerformanceCounter
  T SDL_GetPerformanceFrequency
  T SDL_GetPixelFormatEnumForMasks
@@ -644,6 +643,7 @@
  T SDL_GetTouchDeviceType
  T SDL_GetTouchFinger
  T SDL_GetTouchName
+ T SDL_GetUserFolder
  T SDL_GetVersion
  T SDL_GetVideoDriver
  T SDL_GetWindowBordersSize
