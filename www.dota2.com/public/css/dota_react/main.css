@@ -6500,7 +6500,8 @@ a {
   background-repeat: no-repeat;
   background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/steam_icon.svg");
 }
-.battlepasspage_ToolTip_2sWVz {
+.battlepasspage_ToolTip_2sWVz,
+.battlepasspage_PlayerReportTooltip_19PKM {
   background-color: #36363e;
   color: #ddd;
   max-width: 250px;
@@ -6511,6 +6512,9 @@ a {
   line-height: 20px;
   padding: 6px 10px;
   z-index: 99999;
+}
+.battlepasspage_PlayerReportTooltip_19PKM {
+  max-width: none;
 }
 .ReactVirtualized__Table__headerRow {
   font-weight: 700;
@@ -12244,7 +12248,8 @@ a {
   background-repeat: no-repeat;
   background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/steam_icon.svg");
 }
-.oldheader_ToolTip_2BY7t {
+.oldheader_ToolTip_2BY7t,
+.oldheader_PlayerReportTooltip_2RSwM {
   background-color: #36363e;
   color: #ddd;
   max-width: 250px;
@@ -12255,6 +12260,9 @@ a {
   line-height: 20px;
   padding: 6px 10px;
   z-index: 99999;
+}
+.oldheader_PlayerReportTooltip_2RSwM {
+  max-width: none;
 }
 .ReactVirtualized__Table__headerRow {
   font-weight: 700;
@@ -13109,7 +13117,8 @@ a {
   background-repeat: no-repeat;
   background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/steam_icon.svg");
 }
-.rootfooter_ToolTip_20d3q {
+.rootfooter_ToolTip_20d3q,
+.rootfooter_PlayerReportTooltip_3Ufnj {
   background-color: #36363e;
   color: #ddd;
   max-width: 250px;
@@ -13120,6 +13129,9 @@ a {
   line-height: 20px;
   padding: 6px 10px;
   z-index: 99999;
+}
+.rootfooter_PlayerReportTooltip_3Ufnj {
+  max-width: none;
 }
 .ReactVirtualized__Table__headerRow {
   font-weight: 700;
@@ -13933,7 +13945,8 @@ a {
   background-repeat: no-repeat;
   background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/steam_icon.svg");
 }
-.bpimmortalcarouselti11_ToolTip_32nPN {
+.bpimmortalcarouselti11_ToolTip_32nPN,
+.bpimmortalcarouselti11_PlayerReportTooltip_2xDgT {
   background-color: #36363e;
   color: #ddd;
   max-width: 250px;
@@ -13944,6 +13957,9 @@ a {
   line-height: 20px;
   padding: 6px 10px;
   z-index: 99999;
+}
+.bpimmortalcarouselti11_PlayerReportTooltip_2xDgT {
+  max-width: none;
 }
 .ReactVirtualized__Table__headerRow {
   font-weight: 700;
@@ -15058,7 +15074,8 @@ a {
   background-repeat: no-repeat;
   background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/steam_icon.svg");
 }
-.bprivervialcarousel_ToolTip_1zo9C {
+.bprivervialcarousel_ToolTip_1zo9C,
+.bprivervialcarousel_PlayerReportTooltip_3ENoX {
   background-color: #36363e;
   color: #ddd;
   max-width: 250px;
@@ -15069,6 +15086,9 @@ a {
   line-height: 20px;
   padding: 6px 10px;
   z-index: 99999;
+}
+.bprivervialcarousel_PlayerReportTooltip_3ENoX {
+  max-width: none;
 }
 .ReactVirtualized__Table__headerRow {
   font-weight: 700;
@@ -16057,7 +16077,8 @@ a {
   background-repeat: no-repeat;
   background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/steam_icon.svg");
 }
-.bpcountdownti11_ToolTip_1lV4s {
+.bpcountdownti11_ToolTip_1lV4s,
+.bpcountdownti11_PlayerReportTooltip_1Nspe {
   background-color: #36363e;
   color: #ddd;
   max-width: 250px;
@@ -16068,6 +16089,9 @@ a {
   line-height: 20px;
   padding: 6px 10px;
   z-index: 99999;
+}
+.bpcountdownti11_PlayerReportTooltip_1Nspe {
+  max-width: none;
 }
 .ReactVirtualized__Table__headerRow {
   font-weight: 700;
@@ -16892,7 +16916,8 @@ a {
   background-repeat: no-repeat;
   background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/steam_icon.svg");
 }
-.microheader_ToolTip_3cFBj {
+.microheader_ToolTip_3cFBj,
+.microheader_PlayerReportTooltip_3xxyi {
   background-color: #36363e;
   color: #ddd;
   max-width: 250px;
@@ -16903,6 +16928,9 @@ a {
   line-height: 20px;
   padding: 6px 10px;
   z-index: 99999;
+}
+.microheader_PlayerReportTooltip_3xxyi {
+  max-width: none;
 }
 .ReactVirtualized__Table__headerRow {
   font-weight: 700;
@@ -18074,7 +18102,8 @@ a {
   background-repeat: no-repeat;
   background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/steam_icon.svg");
 }
-.languageselector_ToolTip_3LaW0 {
+.languageselector_ToolTip_3LaW0,
+.languageselector_PlayerReportTooltip_1LkNR {
   background-color: #36363e;
   color: #ddd;
   max-width: 250px;
@@ -18085,6 +18114,9 @@ a {
   line-height: 20px;
   padding: 6px 10px;
   z-index: 99999;
+}
+.languageselector_PlayerReportTooltip_1LkNR {
+  max-width: none;
 }
 .ReactVirtualized__Table__headerRow {
   font-weight: 700;
@@ -18755,7 +18787,8 @@ a {
   background-repeat: no-repeat;
   background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/steam_icon.svg");
 }
-.battlepasspageinternational2022_ToolTip_3dcF5 {
+.battlepasspageinternational2022_ToolTip_3dcF5,
+.battlepasspageinternational2022_PlayerReportTooltip_2euXy {
   background-color: #36363e;
   color: #ddd;
   max-width: 250px;
@@ -18766,6 +18799,9 @@ a {
   line-height: 20px;
   padding: 6px 10px;
   z-index: 99999;
+}
+.battlepasspageinternational2022_PlayerReportTooltip_2euXy {
+  max-width: none;
 }
 .ReactVirtualized__Table__headerRow {
   font-weight: 700;
@@ -25815,7 +25851,8 @@ a {
   background-repeat: no-repeat;
   background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/steam_icon.svg");
 }
-.blogentrypage_ToolTip_26Ws8 {
+.blogentrypage_ToolTip_26Ws8,
+.blogentrypage_PlayerReportTooltip_3g4Fr {
   background-color: #36363e;
   color: #ddd;
   max-width: 250px;
@@ -25826,6 +25863,9 @@ a {
   line-height: 20px;
   padding: 6px 10px;
   z-index: 99999;
+}
+.blogentrypage_PlayerReportTooltip_3g4Fr {
+  max-width: none;
 }
 .ReactVirtualized__Table__headerRow {
   font-weight: 700;
@@ -26642,7 +26682,8 @@ a {
   background-repeat: no-repeat;
   background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/steam_icon.svg");
 }
-.blogcapsule_ToolTip_3RzoY {
+.blogcapsule_ToolTip_3RzoY,
+.blogcapsule_PlayerReportTooltip_3s54c {
   background-color: #36363e;
   color: #ddd;
   max-width: 250px;
@@ -26653,6 +26694,9 @@ a {
   line-height: 20px;
   padding: 6px 10px;
   z-index: 99999;
+}
+.blogcapsule_PlayerReportTooltip_3s54c {
+  max-width: none;
 }
 .ReactVirtualized__Table__headerRow {
   font-weight: 700;
@@ -27345,7 +27389,8 @@ a {
   background-repeat: no-repeat;
   background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/steam_icon.svg");
 }
-.updatecapsule_ToolTip_11cb1 {
+.updatecapsule_ToolTip_11cb1,
+.updatecapsule_PlayerReportTooltip_3v0pv {
   background-color: #36363e;
   color: #ddd;
   max-width: 250px;
@@ -27356,6 +27401,9 @@ a {
   line-height: 20px;
   padding: 6px 10px;
   z-index: 99999;
+}
+.updatecapsule_PlayerReportTooltip_3v0pv {
+  max-width: none;
 }
 .ReactVirtualized__Table__headerRow {
   font-weight: 700;
@@ -28001,7 +28049,8 @@ a {
   background-repeat: no-repeat;
   background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/steam_icon.svg");
 }
-.blogoverviewpage_ToolTip_2gxGB {
+.blogoverviewpage_ToolTip_2gxGB,
+.blogoverviewpage_PlayerReportTooltip_1nhVg {
   background-color: #36363e;
   color: #ddd;
   max-width: 250px;
@@ -28012,6 +28061,9 @@ a {
   line-height: 20px;
   padding: 6px 10px;
   z-index: 99999;
+}
+.blogoverviewpage_PlayerReportTooltip_1nhVg {
+  max-width: none;
 }
 .ReactVirtualized__Table__headerRow {
   font-weight: 700;
@@ -29011,7 +29063,8 @@ a {
   background-repeat: no-repeat;
   background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/steam_icon.svg");
 }
-.dpcmenubar_ToolTip_2aps4 {
+.dpcmenubar_ToolTip_2aps4,
+.dpcmenubar_PlayerReportTooltip_3u6ow {
   background-color: #36363e;
   color: #ddd;
   max-width: 250px;
@@ -29022,6 +29075,9 @@ a {
   line-height: 20px;
   padding: 6px 10px;
   z-index: 99999;
+}
+.dpcmenubar_PlayerReportTooltip_3u6ow {
+  max-width: none;
 }
 .ReactVirtualized__Table__headerRow {
   font-weight: 700;
@@ -30196,7 +30252,8 @@ a {
   background-repeat: no-repeat;
   background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/steam_icon.svg");
 }
-.matchesheader_ToolTip_mYdIh {
+.matchesheader_ToolTip_mYdIh,
+.matchesheader_PlayerReportTooltip_2kaD7 {
   background-color: #36363e;
   color: #ddd;
   max-width: 250px;
@@ -30207,6 +30264,9 @@ a {
   line-height: 20px;
   padding: 6px 10px;
   z-index: 99999;
+}
+.matchesheader_PlayerReportTooltip_2kaD7 {
+  max-width: none;
 }
 .ReactVirtualized__Table__headerRow {
   font-weight: 700;
@@ -31347,7 +31407,8 @@ a {
   background-repeat: no-repeat;
   background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/steam_icon.svg");
 }
-.dpctooltips_ToolTip_1MUeG {
+.dpctooltips_ToolTip_1MUeG,
+.dpctooltips_PlayerReportTooltip_XbFkK {
   background-color: #36363e;
   color: #ddd;
   max-width: 250px;
@@ -31358,6 +31419,9 @@ a {
   line-height: 20px;
   padding: 6px 10px;
   z-index: 99999;
+}
+.dpctooltips_PlayerReportTooltip_XbFkK {
+  max-width: none;
 }
 .ReactVirtualized__Table__headerRow {
   font-weight: 700;
@@ -32079,7 +32143,8 @@ a {
   background-repeat: no-repeat;
   background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/steam_icon.svg");
 }
-.aboutpage_ToolTip_1HhV5 {
+.aboutpage_ToolTip_1HhV5,
+.aboutpage_PlayerReportTooltip_y3WJs {
   background-color: #36363e;
   color: #ddd;
   max-width: 250px;
@@ -32090,6 +32155,9 @@ a {
   line-height: 20px;
   padding: 6px 10px;
   z-index: 99999;
+}
+.aboutpage_PlayerReportTooltip_y3WJs {
+  max-width: none;
 }
 .ReactVirtualized__Table__headerRow {
   font-weight: 700;
@@ -33291,7 +33359,8 @@ a {
   background-repeat: no-repeat;
   background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/steam_icon.svg");
 }
-.dpcroot_ToolTip_3EWbN {
+.dpcroot_ToolTip_3EWbN,
+.dpcroot_PlayerReportTooltip_2muPd {
   background-color: #36363e;
   color: #ddd;
   max-width: 250px;
@@ -33302,6 +33371,9 @@ a {
   line-height: 20px;
   padding: 6px 10px;
   z-index: 99999;
+}
+.dpcroot_PlayerReportTooltip_2muPd {
+  max-width: none;
 }
 .ReactVirtualized__Table__headerRow {
   font-weight: 700;
@@ -37870,7 +37942,8 @@ a {
   background-repeat: no-repeat;
   background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/steam_icon.svg");
 }
-.schedulepage_ToolTip_3lL54 {
+.schedulepage_ToolTip_3lL54,
+.schedulepage_PlayerReportTooltip_NzHZ4 {
   background-color: #36363e;
   color: #ddd;
   max-width: 250px;
@@ -37881,6 +37954,9 @@ a {
   line-height: 20px;
   padding: 6px 10px;
   z-index: 99999;
+}
+.schedulepage_PlayerReportTooltip_NzHZ4 {
+  max-width: none;
 }
 .ReactVirtualized__Table__headerRow {
   font-weight: 700;
@@ -39169,7 +39245,8 @@ a {
   background-repeat: no-repeat;
   background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/steam_icon.svg");
 }
-.aboutbanner_ToolTip_2wzzK {
+.aboutbanner_ToolTip_2wzzK,
+.aboutbanner_PlayerReportTooltip_swiSQ {
   background-color: #36363e;
   color: #ddd;
   max-width: 250px;
@@ -39180,6 +39257,9 @@ a {
   line-height: 20px;
   padding: 6px 10px;
   z-index: 99999;
+}
+.aboutbanner_PlayerReportTooltip_swiSQ {
+  max-width: none;
 }
 .ReactVirtualized__Table__headerRow {
   font-weight: 700;
@@ -39873,7 +39953,8 @@ a {
   background-repeat: no-repeat;
   background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/steam_icon.svg");
 }
-.internationalstandingspage_ToolTip_2MLxq {
+.internationalstandingspage_ToolTip_2MLxq,
+.internationalstandingspage_PlayerReportTooltip_3baYg {
   background-color: #36363e;
   color: #ddd;
   max-width: 250px;
@@ -39884,6 +39965,9 @@ a {
   line-height: 20px;
   padding: 6px 10px;
   z-index: 99999;
+}
+.internationalstandingspage_PlayerReportTooltip_3baYg {
+  max-width: none;
 }
 .ReactVirtualized__Table__headerRow {
   font-weight: 700;
@@ -41377,7 +41461,8 @@ a {
   background-repeat: no-repeat;
   background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/steam_icon.svg");
 }
-.standingspage_ToolTip_3NrsF {
+.standingspage_ToolTip_3NrsF,
+.standingspage_PlayerReportTooltip_GNkeQ {
   background-color: #36363e;
   color: #ddd;
   max-width: 250px;
@@ -41388,6 +41473,9 @@ a {
   line-height: 20px;
   padding: 6px 10px;
   z-index: 99999;
+}
+.standingspage_PlayerReportTooltip_GNkeQ {
+  max-width: none;
 }
 .ReactVirtualized__Table__headerRow {
   font-weight: 700;
@@ -42475,7 +42563,8 @@ a {
   background-repeat: no-repeat;
   background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/steam_icon.svg");
 }
-.international2021_ToolTip_zGTKQ {
+.international2021_ToolTip_zGTKQ,
+.international2021_PlayerReportTooltip_bZEOH {
   background-color: #36363e;
   color: #ddd;
   max-width: 250px;
@@ -42486,6 +42575,9 @@ a {
   line-height: 20px;
   padding: 6px 10px;
   z-index: 99999;
+}
+.international2021_PlayerReportTooltip_bZEOH {
+  max-width: none;
 }
 .ReactVirtualized__Table__headerRow {
   font-weight: 700;
@@ -43710,7 +43802,8 @@ a {
   background-repeat: no-repeat;
   background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/steam_icon.svg");
 }
-.international2022_ToolTip_3kfUr {
+.international2022_ToolTip_3kfUr,
+.international2022_PlayerReportTooltip_3BZm3 {
   background-color: #36363e;
   color: #ddd;
   max-width: 250px;
@@ -43721,6 +43814,9 @@ a {
   line-height: 20px;
   padding: 6px 10px;
   z-index: 99999;
+}
+.international2022_PlayerReportTooltip_3BZm3 {
+  max-width: none;
 }
 .ReactVirtualized__Table__headerRow {
   font-weight: 700;
@@ -45486,7 +45582,8 @@ a {
   background-repeat: no-repeat;
   background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/steam_icon.svg");
 }
-.seriesdetails_ToolTip_1eBSw {
+.seriesdetails_ToolTip_1eBSw,
+.seriesdetails_PlayerReportTooltip_30Esj {
   background-color: #36363e;
   color: #ddd;
   max-width: 250px;
@@ -45497,6 +45594,9 @@ a {
   line-height: 20px;
   padding: 6px 10px;
   z-index: 99999;
+}
+.seriesdetails_PlayerReportTooltip_30Esj {
+  max-width: none;
 }
 .ReactVirtualized__Table__headerRow {
   font-weight: 700;
@@ -47714,7 +47814,8 @@ a {
   background-repeat: no-repeat;
   background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/steam_icon.svg");
 }
-.teamlist_ToolTip_3ACSo {
+.teamlist_ToolTip_3ACSo,
+.teamlist_PlayerReportTooltip_1IRmG {
   background-color: #36363e;
   color: #ddd;
   max-width: 250px;
@@ -47725,6 +47826,9 @@ a {
   line-height: 20px;
   padding: 6px 10px;
   z-index: 99999;
+}
+.teamlist_PlayerReportTooltip_1IRmG {
+  max-width: none;
 }
 .ReactVirtualized__Table__headerRow {
   font-weight: 700;
@@ -48876,7 +48980,8 @@ a {
   background-repeat: no-repeat;
   background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/steam_icon.svg");
 }
-.watchpage_ToolTip_3A2aO {
+.watchpage_ToolTip_3A2aO,
+.watchpage_PlayerReportTooltip_Cww0u {
   background-color: #36363e;
   color: #ddd;
   max-width: 250px;
@@ -48887,6 +48992,9 @@ a {
   line-height: 20px;
   padding: 6px 10px;
   z-index: 99999;
+}
+.watchpage_PlayerReportTooltip_Cww0u {
+  max-width: none;
 }
 .ReactVirtualized__Table__headerRow {
   font-weight: 700;
@@ -49485,7 +49593,8 @@ a {
   background-repeat: no-repeat;
   background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/steam_icon.svg");
 }
-.internationalrulespage_ToolTip_3_--m {
+.internationalrulespage_ToolTip_3_--m,
+.internationalrulespage_PlayerReportTooltip_dP_ek {
   background-color: #36363e;
   color: #ddd;
   max-width: 250px;
@@ -49496,6 +49605,9 @@ a {
   line-height: 20px;
   padding: 6px 10px;
   z-index: 99999;
+}
+.internationalrulespage_PlayerReportTooltip_dP_ek {
+  max-width: none;
 }
 .ReactVirtualized__Table__headerRow {
   font-weight: 700;
@@ -50209,7 +50321,8 @@ a {
   background-repeat: no-repeat;
   background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/steam_icon.svg");
 }
-.herogridpage_ToolTip_1T15E {
+.herogridpage_ToolTip_1T15E,
+.herogridpage_PlayerReportTooltip_YF454 {
   background-color: #36363e;
   color: #ddd;
   max-width: 250px;
@@ -50220,6 +50333,9 @@ a {
   line-height: 20px;
   padding: 6px 10px;
   z-index: 99999;
+}
+.herogridpage_PlayerReportTooltip_YF454 {
+  max-width: none;
 }
 .ReactVirtualized__Table__headerRow {
   font-weight: 700;
@@ -51232,7 +51348,8 @@ a {
   background-repeat: no-repeat;
   background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/steam_icon.svg");
 }
-.heropage_ToolTip_2-HzQ {
+.heropage_ToolTip_2-HzQ,
+.heropage_PlayerReportTooltip_1bbBh {
   background-color: #36363e;
   color: #ddd;
   max-width: 250px;
@@ -51243,6 +51360,9 @@ a {
   line-height: 20px;
   padding: 6px 10px;
   z-index: 99999;
+}
+.heropage_PlayerReportTooltip_1bbBh {
+  max-width: none;
 }
 .ReactVirtualized__Table__headerRow {
   font-weight: 700;
@@ -53845,7 +53965,8 @@ a {
   background-repeat: no-repeat;
   background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/steam_icon.svg");
 }
-.homepage_ToolTip_2SLY1 {
+.homepage_ToolTip_2SLY1,
+.homepage_PlayerReportTooltip_1gG8F {
   background-color: #36363e;
   color: #ddd;
   max-width: 250px;
@@ -53856,6 +53977,9 @@ a {
   line-height: 20px;
   padding: 6px 10px;
   z-index: 99999;
+}
+.homepage_PlayerReportTooltip_1gG8F {
+  max-width: none;
 }
 .ReactVirtualized__Table__headerRow {
   font-weight: 700;
@@ -55366,7 +55490,8 @@ a {
   background-repeat: no-repeat;
   background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/steam_icon.svg");
 }
-.springcleaning_ToolTip_2K2iR {
+.springcleaning_ToolTip_2K2iR,
+.springcleaning_PlayerReportTooltip_1Via0 {
   background-color: #36363e;
   color: #ddd;
   max-width: 250px;
@@ -55377,6 +55502,9 @@ a {
   line-height: 20px;
   padding: 6px 10px;
   z-index: 99999;
+}
+.springcleaning_PlayerReportTooltip_1Via0 {
+  max-width: none;
 }
 .ReactVirtualized__Table__headerRow {
   font-weight: 700;
@@ -56104,7 +56232,8 @@ a {
   background-repeat: no-repeat;
   background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/steam_icon.svg");
 }
-.internationalbadgebindingpage_ToolTip_28QoU {
+.internationalbadgebindingpage_ToolTip_28QoU,
+.internationalbadgebindingpage_PlayerReportTooltip_1KL8E {
   background-color: #36363e;
   color: #ddd;
   max-width: 250px;
@@ -56115,6 +56244,9 @@ a {
   line-height: 20px;
   padding: 6px 10px;
   z-index: 99999;
+}
+.internationalbadgebindingpage_PlayerReportTooltip_1KL8E {
+  max-width: none;
 }
 .ReactVirtualized__Table__headerRow {
   font-weight: 700;
@@ -56937,7 +57069,8 @@ a {
   background-repeat: no-repeat;
   background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/steam_icon.svg");
 }
-.internationalfaqpage_ToolTip_32SMb {
+.internationalfaqpage_ToolTip_32SMb,
+.internationalfaqpage_PlayerReportTooltip_2WgTk {
   background-color: #36363e;
   color: #ddd;
   max-width: 250px;
@@ -56948,6 +57081,9 @@ a {
   line-height: 20px;
   padding: 6px 10px;
   z-index: 99999;
+}
+.internationalfaqpage_PlayerReportTooltip_2WgTk {
+  max-width: none;
 }
 .ReactVirtualized__Table__headerRow {
   font-weight: 700;
@@ -57631,7 +57767,8 @@ a {
   background-repeat: no-repeat;
   background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/steam_icon.svg");
 }
-.requestforproposalpage_ToolTip_EemRm {
+.requestforproposalpage_ToolTip_EemRm,
+.requestforproposalpage_PlayerReportTooltip_2xDdE {
   background-color: #36363e;
   color: #ddd;
   max-width: 250px;
@@ -57642,6 +57779,9 @@ a {
   line-height: 20px;
   padding: 6px 10px;
   z-index: 99999;
+}
+.requestforproposalpage_PlayerReportTooltip_2xDdE {
+  max-width: none;
 }
 .ReactVirtualized__Table__headerRow {
   font-weight: 700;
@@ -58341,7 +58481,8 @@ a {
   background-repeat: no-repeat;
   background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/steam_icon.svg");
 }
-.majorsregistrationautographspage_ToolTip_3Dr-T {
+.majorsregistrationautographspage_ToolTip_3Dr-T,
+.majorsregistrationautographspage_PlayerReportTooltip_3BTr6 {
   background-color: #36363e;
   color: #ddd;
   max-width: 250px;
@@ -58352,6 +58493,9 @@ a {
   line-height: 20px;
   padding: 6px 10px;
   z-index: 99999;
+}
+.majorsregistrationautographspage_PlayerReportTooltip_3BTr6 {
+  max-width: none;
 }
 .ReactVirtualized__Table__headerRow {
   font-weight: 700;
@@ -59402,7 +59546,8 @@ a {
   background-repeat: no-repeat;
   background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/steam_icon.svg");
 }
-.autographguidelines_ToolTip_1hCeO {
+.autographguidelines_ToolTip_1hCeO,
+.autographguidelines_PlayerReportTooltip_3N2lh {
   background-color: #36363e;
   color: #ddd;
   max-width: 250px;
@@ -59413,6 +59558,9 @@ a {
   line-height: 20px;
   padding: 6px 10px;
   z-index: 99999;
+}
+.autographguidelines_PlayerReportTooltip_3N2lh {
+  max-width: none;
 }
 .ReactVirtualized__Table__headerRow {
   font-weight: 700;
@@ -60265,7 +60413,8 @@ a {
   background-repeat: no-repeat;
   background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/steam_icon.svg");
 }
-.portraitguidelines_ToolTip_3RN-L {
+.portraitguidelines_ToolTip_3RN-L,
+.portraitguidelines_PlayerReportTooltip_3oK9d {
   background-color: #36363e;
   color: #ddd;
   max-width: 250px;
@@ -60276,6 +60425,9 @@ a {
   line-height: 20px;
   padding: 6px 10px;
   z-index: 99999;
+}
+.portraitguidelines_PlayerReportTooltip_3oK9d {
+  max-width: none;
 }
 .ReactVirtualized__Table__headerRow {
   font-weight: 700;
@@ -61114,7 +61266,8 @@ a {
   background-repeat: no-repeat;
   background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/steam_icon.svg");
 }
-.controllerfaqpage_ToolTip_2xLmv {
+.controllerfaqpage_ToolTip_2xLmv,
+.controllerfaqpage_PlayerReportTooltip_2uJFl {
   background-color: #36363e;
   color: #ddd;
   max-width: 250px;
@@ -61125,6 +61278,9 @@ a {
   line-height: 20px;
   padding: 6px 10px;
   z-index: 99999;
+}
+.controllerfaqpage_PlayerReportTooltip_2uJFl {
+  max-width: none;
 }
 .ReactVirtualized__Table__headerRow {
   font-weight: 700;
@@ -61803,7 +61959,8 @@ a {
   background-repeat: no-repeat;
   background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/steam_icon.svg");
 }
-.pastupdates_ToolTip_1dExL {
+.pastupdates_ToolTip_1dExL,
+.pastupdates_PlayerReportTooltip_28yGL {
   background-color: #36363e;
   color: #ddd;
   max-width: 250px;
@@ -61814,6 +61971,9 @@ a {
   line-height: 20px;
   padding: 6px 10px;
   z-index: 99999;
+}
+.pastupdates_PlayerReportTooltip_28yGL {
+  max-width: none;
 }
 .ReactVirtualized__Table__headerRow {
   font-weight: 700;
@@ -62542,7 +62702,8 @@ a {
   background-repeat: no-repeat;
   background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/steam_icon.svg");
 }
-.patchnotespage_ToolTip_1onjl {
+.patchnotespage_ToolTip_1onjl,
+.patchnotespage_PlayerReportTooltip_2MWXo {
   background-color: #36363e;
   color: #ddd;
   max-width: 250px;
@@ -62553,6 +62714,9 @@ a {
   line-height: 20px;
   padding: 6px 10px;
   z-index: 99999;
+}
+.patchnotespage_PlayerReportTooltip_2MWXo {
+  max-width: none;
 }
 .ReactVirtualized__Table__headerRow {
   font-weight: 700;
@@ -63596,7 +63760,8 @@ a {
   background-repeat: no-repeat;
   background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/steam_icon.svg");
 }
-.shortfilmcontest_ToolTip_37ts1 {
+.shortfilmcontest_ToolTip_37ts1,
+.shortfilmcontest_PlayerReportTooltip_1fApf {
   background-color: #36363e;
   color: #ddd;
   max-width: 250px;
@@ -63607,6 +63772,9 @@ a {
   line-height: 20px;
   padding: 6px 10px;
   z-index: 99999;
+}
+.shortfilmcontest_PlayerReportTooltip_1fApf {
+  max-width: none;
 }
 .ReactVirtualized__Table__headerRow {
   font-weight: 700;

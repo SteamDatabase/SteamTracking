@@ -76,6 +76,7 @@ ${BASE_URL}webapi/IDOTA2Teams/RemoveTeamMember/v0001?u=${}&appid=${DOTA_APP_ID}&
 ${BASE_URL}webapi/IDOTA2Teams/SetTeamAdmin/v0001?u=${}&appid=${DOTA_APP_ID}&team_id=${}&account_id=${account_id}
 ${BASE_URL}webapi/IDOTA2Teams/UpdateRegisteredTeamData/v0001?u=${}&appid=${DOTA_APP_ID}
 ${BASE_URL}workshop/builds
+${CDN_URL}/apps/dota2/images/
 ${CDN_URL}/apps/dota2/images/small_ranks/ranked_icons_emoticon_${}.png
 ${CDN_URL}apps/${}/header.jpg
 ${CDN_URL}apps/dota2/images/leagues/${leagueID}/images/image_8.png
