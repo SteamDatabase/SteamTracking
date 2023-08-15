@@ -1765,13 +1765,23 @@
               strErrorMsg: e.response.data.message,
               errorCode: e.response.data.success,
             };
+          if ("success" in e.response.data)
+            return {
+              strErrorMsg: "error code: " + e.response.data.success,
+              errorCode: e.response.data.success,
+            };
         } else if ("object" == typeof e.data) {
           if ("msg" in e.data)
             return { strErrorMsg: e.data.msg, errorCode: e.data.success };
           if ("err_msg" in e.data)
             return { strErrorMsg: e.data.err_msg, errorCode: e.data.success };
-          if ("message" in e.response.data)
+          if ("message" in e.data)
             return { strErrorMsg: e.data.message, errorCode: e.data.success };
+          if ("success" in e.data)
+            return {
+              strErrorMsg: "error code: " + e.data.success,
+              errorCode: e.data.success,
+            };
         } else {
           if (void 0 !== e.success && void 0 !== e.msg)
             return { strErrorMsg: e.msg, errorCode: e.success };

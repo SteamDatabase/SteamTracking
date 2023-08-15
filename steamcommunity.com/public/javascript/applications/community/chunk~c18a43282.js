@@ -20267,7 +20267,7 @@
               1 != this.m_elVideo.playbackRate &&
               (this.m_elVideo.playbackRate = 1);
           for (let e of this.m_rgLoaders) e.Close();
-          this.m_bIsBuffering = !0;
+          (this.m_rgLoaders = []), (this.m_bIsBuffering = !0);
         }
         IsBuffering() {
           return this.m_bIsBuffering;
@@ -36045,7 +36045,7 @@
     },
     82124: (e, t, r) => {
       "use strict";
-      r.d(t, { l: () => m });
+      r.d(t, { l: () => u });
       var i = r(89526),
         n = r(701),
         a = r(19304),
@@ -36053,25 +36053,27 @@
         o = r(66615),
         l = r(57861);
       const d = 1.3,
-        c = 3;
-      function m(e) {
+        c = 3,
+        m = 256;
+      function u(e) {
         const [t, r] = (0, i.useState)(!1),
-          [m, u] = (0, i.useState)({
+          [u, p] = (0, i.useState)({
             naturalWidth: 0,
             naturalHeight: 0,
             displayWidth: 0,
             displayHeight: 0,
           }),
-          p = (0, i.useRef)();
+          _ = (0, i.useRef)();
         return (
           (0, i.useEffect)(() => {
             if (
-              m.naturalWidth > m.displayWidth * d &&
-              m.naturalHeight > m.displayHeight * d
+              u.naturalWidth > u.displayWidth * d &&
+              u.naturalHeight > u.displayHeight * d &&
+              u.naturalWidth > m
             ) {
-              m.naturalWidth / m.naturalHeight < c && r(!0);
+              u.naturalWidth / u.naturalHeight < c && r(!0);
             }
-          }, [m]),
+          }, [u]),
           t
             ? i.createElement(
                 "div",
@@ -36095,7 +36097,7 @@
             : i.createElement(
                 "img",
                 Object.assign({}, e, {
-                  ref: p,
+                  ref: _,
                   onLoad: (e) => {
                     if (!e.currentTarget.closest("a") && !(0, o.p)()) {
                       const {
@@ -36104,7 +36106,7 @@
                         width: i,
                         height: n,
                       } = e.currentTarget;
-                      u({
+                      p({
                         naturalWidth: t,
                         naturalHeight: r,
                         displayWidth: i,

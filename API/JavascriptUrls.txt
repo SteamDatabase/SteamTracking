@@ -2108,6 +2108,7 @@ https://community.cloudflare.steamstatic.com/economy/emoticon/${strEmoticonName}
 https://community.cloudflare.steamstatic.com/economy/image/${icon_url_hash}/128fx128f
 https://community.cloudflare.steamstatic.com/economy/image/${imageName}${strSize}
 https://community.cloudflare.steamstatic.com/economy/image/${}${strSize}
+https://community.cloudflare.steamstatic.com/economy/image/${}${strSize}?allow_animated=1
 https://community.cloudflare.steamstatic.com/economy/image/${}/96fx96f
 https://community.cloudflare.steamstatic.com/economy/profilebackground/${strBackgroundImage}?size=${strSize}&v=2
 https://community.cloudflare.steamstatic.com/public/images/${newImg}

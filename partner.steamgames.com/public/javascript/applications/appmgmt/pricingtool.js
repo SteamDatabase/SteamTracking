@@ -373,7 +373,7 @@
           d = (0, P.ps)(e),
           u = "USD" == r,
           g = t != (null != i ? i : n),
-          m = g && t < c,
+          m = t < c,
           p = !!l && t > l,
           _ = !!s && t > 2 * s,
           h = !!s && t < s / 2,
@@ -1322,7 +1322,7 @@
           l = (0, X.zQ)(i),
           o = (0, X.O7)(i),
           s = (0, X.Ii)(i),
-          d = (0, X.UA)(i),
+          d = (0, X.UA)(i, !1),
           u =
             ((g = i),
             a.useMemo(

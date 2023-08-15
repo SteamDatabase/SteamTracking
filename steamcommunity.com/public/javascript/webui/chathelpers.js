@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "8259598";
+var CLSTAMP = "8268196";
 (() => {
   var e,
     t,
@@ -8,7 +8,7 @@ var CLSTAMP = "8259598";
     n,
     o,
     i = {
-      59346: (e, t, r) => {
+      25867: (e, t, r) => {
         "use strict";
         function n(e, t, r, n) {
           var o,
@@ -62,7 +62,7 @@ var CLSTAMP = "8259598";
         }
         Object.create;
         Object.create;
-        r(32030);
+        r(36762);
         var i = r(87363),
           a = r.n(i),
           s = r(61533);
@@ -387,7 +387,7 @@ var CLSTAMP = "8259598";
             (e[(e.k_BluetoothDeviceType_Keyboard = 11)] =
               "k_BluetoothDeviceType_Keyboard");
         })(k || (k = {}));
-        var P, F, M, b;
+        var P, F, M, B;
         !(function (e) {
           (e[(e.EBrowserType_OffScreen = 0)] = "EBrowserType_OffScreen"),
             (e[(e.EBrowserType_OpenVROverlay = 1)] =
@@ -438,13 +438,13 @@ var CLSTAMP = "8259598";
               (e[(e.OverlayDesktopUI = 7)] = "OverlayDesktopUI"),
               (e[(e.SteamChinaReviewLauncher = 8)] =
                 "SteamChinaReviewLauncher");
-          })(b || (b = {}));
-        var B, N, L;
+          })(B || (B = {}));
+        var N, b, L;
         !(function (e) {
           (e[(e.k_EPending = 0)] = "k_EPending"),
             (e[(e.k_EAccepted = 1)] = "k_EAccepted"),
             (e[(e.k_ERejected = 2)] = "k_ERejected");
-        })(B || (B = {})),
+        })(N || (N = {})),
           (function (e) {
             (e[(e.k_EControllerBindingType_None = 0)] =
               "k_EControllerBindingType_None"),
@@ -462,7 +462,7 @@ var CLSTAMP = "8259598";
                 "k_EControllerBindingType_GameAction"),
               (e[(e.k_EControllerBindingType_ControllerAction = 7)] =
                 "k_EControllerBindingType_ControllerAction");
-          })(N || (N = {})),
+          })(b || (b = {})),
           (function (e) {
             (e[(e.GAMEPAD_BUTTON_A = 0)] = "GAMEPAD_BUTTON_A"),
               (e[(e.GAMEPAD_BUTTON_B = 1)] = "GAMEPAD_BUTTON_B"),
@@ -2369,9 +2369,9 @@ var CLSTAMP = "8259598";
           }
         }
         var Me = r(42238);
-        class be extends Ve {
+        class Be extends Ve {
           BIsExpired() {
-            return Be.sm_rtTimeCur >= this.m_rtTimeExpires;
+            return Ne.sm_rtTimeCur >= this.m_rtTimeExpires;
           }
           InitFromPHPInviteLinkInfo(e) {
             this.m_ulChatID = e.chat_id;
@@ -2387,11 +2387,11 @@ var CLSTAMP = "8259598";
               (this.m_bReady = !0);
           }
         }
-        n([ye.aD], be.prototype, "InitFromPHPInviteLinkInfo", null);
-        class Be {
+        n([ye.aD], Be.prototype, "InitFromPHPInviteLinkInfo", null);
+        class Ne {
           constructor(e) {
             (this.m_bConnectingToClient = !1),
-              (this.m_invite = new be(e.strInviteCode)),
+              (this.m_invite = new Be(e.strInviteCode)),
               e.Invite
                 ? this.m_invite.InitFromPHPInviteLinkInfo(e.Invite)
                 : this.m_invite.InitInvalid(),
@@ -2468,9 +2468,9 @@ var CLSTAMP = "8259598";
                 }));
           }
         }
-        n([ye.LO], Be.prototype, "m_bConnectingToClient", void 0),
-          n([ye.LO], Be.prototype, "m_connectResult", void 0);
-        let Ne = class extends i.Component {
+        n([ye.LO], Ne.prototype, "m_bConnectingToClient", void 0),
+          n([ye.LO], Ne.prototype, "m_connectResult", void 0);
+        let be = class extends i.Component {
           render() {
             return i.createElement(
               "div",
@@ -2481,7 +2481,7 @@ var CLSTAMP = "8259598";
             );
           }
         };
-        Ne = n([ve.Pi], Ne);
+        be = n([ve.Pi], be);
         let Le = class extends i.Component {
           constructor() {
             super(...arguments), (this.m_bTriedToLaunchSteam = !1);
@@ -2699,9 +2699,9 @@ var CLSTAMP = "8259598";
           try {
             t = JSON.parse(e.getAttribute("data-inviteinfo"));
           } catch (e) {}
-          Be.sm_rtTimeCur = t.rtTimeCur;
-          let r = new Be(t);
-          s.render(i.createElement(Ne, { controller: r }), e);
+          Ne.sm_rtTimeCur = t.rtTimeCur;
+          let r = new Ne(t);
+          s.render(i.createElement(be, { controller: r }), e);
         }
         (window.ClientConnectionAPI = Ge),
           document.addEventListener("DOMContentLoaded", function () {
@@ -2736,7 +2736,7 @@ var CLSTAMP = "8259598";
             });
           });
       },
-      32030: (e, t, r) => {
+      36762: (e, t, r) => {
         "use strict";
         "VALVE_PUBLIC_PATH" in window
           ? (r.p = window.VALVE_PUBLIC_PATH)
@@ -2871,7 +2871,7 @@ var CLSTAMP = "8259598";
           "./shared_tchinese.json": [92869, 7602],
           "./shared_thai.json": [34720, 1162],
           "./shared_turkish.json": [3347, 5438],
-          "./shared_ukrainian.json": [46150, 7781],
+          "./shared_ukrainian.json": [81930, 7781],
           "./shared_vietnamese.json": [12315, 4964],
         };
         function o(e) {
@@ -2917,7 +2917,7 @@ var CLSTAMP = "8259598";
           "./shared_tchinese.json": [92869, 7602],
           "./shared_thai.json": [34720, 1162],
           "./shared_turkish.json": [3347, 5438],
-          "./shared_ukrainian.json": [46150, 7781],
+          "./shared_ukrainian.json": [81930, 7781],
           "./shared_vietnamese.json": [12315, 4964],
         };
         function o(e) {
@@ -3070,65 +3070,65 @@ var CLSTAMP = "8259598";
       ".js?contenthash=" +
       {
         699: "e520ea8eb741214a85ed",
-        1162: "ba92c1c09035dce72aaa",
-        1313: "f08ed92f67724bcdcc83",
+        1162: "1015a4b2785642c694d6",
+        1313: "e471d6faac2365b641a0",
         1471: "c07d4585eb89cc2df11e",
         1635: "327b0ab06e9918b8ba12",
         2029: "6c4ad79e585988cc71d5",
         2431: "faf493c0d081b4c4473c",
-        2443: "a6295b500f4d506a04d3",
-        2537: "91697cd95959990418ca",
+        2443: "a1e01651c955bebb2947",
+        2537: "b634e94046a42cd0a4b0",
         2822: "1930acba561078a18a98",
-        2844: "299f33527cf7379224e9",
+        2844: "9af4d2410fa1b079ac38",
         2862: "919b0f8467aa4d0dd8af",
         2913: "57a19c6ffdaede13c040",
-        3112: "c5bdfbc9d400fac82e7c",
+        3112: "683a8b75f805af0b71a1",
         3140: "67232a94c8f87bf86abf",
         3182: "626a386cb26ef9f94014",
-        3252: "49014aefb08197fb7ffd",
+        3252: "b9040efa52424378ef05",
         3471: "3d722f5b01571f009d05",
         3500: "97f103206f5759b7ea62",
-        3557: "72e73ed76df7a96e7c88",
-        4108: "9253e9bf363001f85d5a",
-        4189: "2ef4aa667dadd7ae68ae",
+        3557: "b374f8cf07df7b3c1ec6",
+        4108: "e615576c1c520d6464a5",
+        4189: "0a221349558ac7a3182c",
         4264: "3f7370d48d57123da3f4",
-        4297: "2387d6701ce5055619c8",
+        4297: "c663d80c24be8e107406",
         4448: "78e23706de09c7356d89",
         4596: "b64463f287913ed1b4f2",
         4716: "0d03a3ed1cc805af2770",
-        4823: "11102ea4ff9bd30944fe",
+        4823: "42843867d1b1419f8256",
         4964: "c25e5af4285230a09305",
         4989: "7080a6ac094d0c96366d",
-        5438: "20d4aab95e226038c42d",
-        5625: "c102358d40b9efb96fb1",
+        5438: "ade04a318ba5c9680d9b",
+        5625: "7c8f8ae8efffd38d0629",
         5632: "28c76b782d6cb20a5de6",
         5802: "debc3461bbf286c8c1df",
         5849: "da5a63a0c4b93768be61",
-        5925: "f66adae99857d4977e02",
-        5933: "3f3503812a1d281d98e9",
+        5925: "92d29cfda3f63a2a90e6",
+        5933: "4eb9a74c77d01de47de9",
         5948: "e0f9cea2df84f96abbcf",
-        6007: "d28e861633dbe803fae2",
-        6492: "e2f777842cea0c346824",
-        6542: "dacb6f96229428d5f3c9",
-        6646: "63612174c43a4655258c",
+        6007: "4b84a934b562484b15f1",
+        6492: "5094c3859284a93f34cb",
+        6542: "ef5c0d7a493e06f7663f",
+        6646: "e989b047f9364b936817",
         6727: "5397cc56d81a1b5aed19",
         6986: "c54148885851b5b1f61d",
         6992: "3b30a7e01544619acb07",
         7340: "dd947cee9875884305e1",
         7575: "3e33390f518ecc16c2e0",
-        7602: "4fed0963b09a21d3195f",
+        7602: "b9e56a66100f2a3337fc",
         7651: "fcccbe2e0a52e2070a56",
         7706: "415e651d68936074233f",
-        7781: "dcd7fa1fc4d7008239bb",
-        7975: "6b00711f0df2c7f2024a",
+        7781: "6f8ae573fa4dcbde8b4d",
+        7975: "8259aacd98566af8dacb",
         8247: "f25e033938692b5767ad",
-        8385: "61da87dce7fb2e6c07c8",
+        8385: "1798e6ad50adc8466855",
         8518: "4a0aecf8c58aa429e523",
-        8754: "1700548f49140df6c6ac",
+        8754: "d3e09925e9c34cb6b769",
         8815: "1f786d86346bdbc68758",
-        9062: "23ef7c4d7a9711a08069",
+        9062: "46e82e18d2b40fbfeeee",
         9263: "0faea3edd3efa407123d",
-        9753: "afbf10ddc8574232fe19",
+        9753: "783852e605f66fdaa98c",
         9775: "660b7785225eab50cda3",
         9818: "f7b856f8c101aa9cae33",
       }[e]),
@@ -3265,6 +3265,6 @@ var CLSTAMP = "8259598";
           self.webpackChunk_steam_friendsui || []);
       r.forEach(t.bind(null, 0)), (r.push = t.bind(null, r.push.bind(r)));
     })();
-  var _ = s.O(void 0, [5968], () => s(59346));
+  var _ = s.O(void 0, [5968], () => s(25867));
   _ = s.O(_);
 })();

@@ -3892,16 +3892,23 @@ a.storywidget_BadgeFooter_3kBeS:hover {
     rgba(255, 255, 255, 0.1490196078),
     rgba(0, 0, 0, 0.1176470588)
   );
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(30px);
   border-radius: 50px;
-  border: 2px solid rgba(255, 255, 255, 0.0980392157);
+  border: 2px solid #fff;
   width: fit-content;
   padding: 6px 12px;
   font-size: 20px;
   font-weight: 600;
 }
 .saleclaimitem_ClaimCtn_d5PCH .saleclaimitem_ClaimButton_2jLt9:hover {
-  filter: brightness(1.1);
+  filter: brightness(1.35);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.1490196078),
+    rgba(0, 0, 0, 0.1176470588)
+  );
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
 }
 .saleclaimitem_ClaimCtn_d5PCH .saleclaimitem_ClaimButton_2jLt9:enabled:active {
   background: linear-gradient(
@@ -3909,6 +3916,7 @@ a.storywidget_BadgeFooter_3kBeS:hover {
     rgba(255, 255, 255, 0.1490196078),
     rgba(0, 0, 0, 0.1176470588)
   );
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
 }
 .saleclaimitem_ClaimCtn_d5PCH
   .saleclaimitem_ClaimButton_2jLt9:enabled:active:hover {
@@ -3917,6 +3925,7 @@ a.storywidget_BadgeFooter_3kBeS:hover {
     rgba(255, 255, 255, 0.1490196078),
     rgba(0, 0, 0, 0.1176470588)
   );
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
 }
 .saleclaimitem_ClaimCtn_d5PCH
   .saleclaimitem_ClaimButton_2jLt9:enabled:active.saleclaimitem_gpfocus_dF9GZ {
@@ -3925,6 +3934,7 @@ a.storywidget_BadgeFooter_3kBeS:hover {
     rgba(255, 255, 255, 0.1490196078),
     rgba(0, 0, 0, 0.1176470588)
   );
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
 }
 .saleclaimitem_ClaimCtn_d5PCH .saleclaimitem_ClaimButton_2jLt9::before {
   box-shadow: none;

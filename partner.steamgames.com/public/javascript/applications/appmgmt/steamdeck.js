@@ -5,21 +5,21 @@
   self.webpackChunkappmgmt_storeadmin || []).push([
   [6699],
   {
-    96405: (r, e, s) => {
-      s.r(e), s.d(e, { default: () => n });
-      var o = s(89526),
-        t = s(14965);
+    96405: (r, s, e) => {
+      e.r(s), e.d(s, { default: () => n });
+      var o = e(89526),
+        t = e(14965);
       function n(r) {
-        var e, s;
+        var s, e;
         const { dataprops: n, results: a } = r;
         let d = null;
         if (a && a.length > 0) {
-          const r = null !== (e = n.appid) && void 0 !== e ? e : null;
+          const r = null !== (s = n.appid) && void 0 !== s ? s : null;
           if (r) {
-            let e = a.findIndex((e) => e.appid == r);
-            d = -1 != e ? a[e] : null;
+            let s = a.findIndex((s) => s.appid == r);
+            d = -1 != s ? a[s] : null;
           }
-          const o = null !== (s = n.search_id) && void 0 !== s ? s : null;
+          const o = null !== (e = n.search_id) && void 0 !== e ? e : null;
           if (!d && o) {
             let r = a.findIndex((r) => r.search_id == o);
             d = -1 != r ? a[r] : null;
@@ -28,11 +28,11 @@
         return d ? o.createElement(t.default, { results: d }) : null;
       }
     },
-    23217: (r, e, s) => {
-      s.d(e, { l: () => a });
-      var o = s(52868),
-        t = s.n(o),
-        n = s(54856);
+    23217: (r, s, e) => {
+      e.d(s, { l: () => a });
+      var o = e(52868),
+        t = e.n(o),
+        n = e(54856);
       function a(r) {
         if (t().isCancel(r))
           return { strErrorMsg: "Action Cancelled:" + r, errorCode: 52 };
@@ -56,13 +56,23 @@
               strErrorMsg: r.response.data.message,
               errorCode: r.response.data.success,
             };
+          if ("success" in r.response.data)
+            return {
+              strErrorMsg: "error code: " + r.response.data.success,
+              errorCode: r.response.data.success,
+            };
         } else if ("object" == typeof r.data) {
           if ("msg" in r.data)
             return { strErrorMsg: r.data.msg, errorCode: r.data.success };
           if ("err_msg" in r.data)
             return { strErrorMsg: r.data.err_msg, errorCode: r.data.success };
-          if ("message" in r.response.data)
+          if ("message" in r.data)
             return { strErrorMsg: r.data.message, errorCode: r.data.success };
+          if ("success" in r.data)
+            return {
+              strErrorMsg: "error code: " + r.data.success,
+              errorCode: r.data.success,
+            };
         } else {
           if (void 0 !== r.success && void 0 !== r.msg)
             return { strErrorMsg: r.msg, errorCode: r.success };

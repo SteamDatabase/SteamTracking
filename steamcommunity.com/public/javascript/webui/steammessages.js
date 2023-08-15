@@ -1,14 +1,14 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "8259598";
+var CLSTAMP = "8268196";
 (self.webpackChunk_steam_friendsui =
   self.webpackChunk_steam_friendsui || []).push([
   [5140],
   {
-    20214: (e, r, t) => {
+    16340: (e, r, t) => {
       t.d(r, { _v: () => s });
       var i = t(33019),
-        a = t(94067);
+        a = t(51122);
       const n = i.Message;
       class s extends n {
         constructor(e = null) {
@@ -318,7 +318,7 @@ var CLSTAMP = "8259598";
         }
       }
     },
-    6254: (e, r, t) => {
+    2688: (e, r, t) => {
       t.d(r, { SR: () => a });
       var i = t(33019);
       i.Message;
@@ -326,11 +326,11 @@ var CLSTAMP = "8259598";
         return "unknown EMsg ( " + e + " )";
       }
     },
-    26576: (e, r, t) => {
+    67723: (e, r, t) => {
       t.d(r, { Lj: () => b, nS: () => B });
       var i = t(33019),
-        a = t(94067),
-        n = t(92894);
+        a = t(51122),
+        n = t(9285);
       const s = i.Message;
       class o extends s {
         constructor(e = null) {
@@ -717,7 +717,7 @@ var CLSTAMP = "8259598";
         };
       })(b || (b = {}));
     },
-    54972: (e, r, t) => {
+    19385: (e, r, t) => {
       t.d(r, {
         $h: () => ee,
         Am: () => h,
@@ -728,9 +728,9 @@ var CLSTAMP = "8259598";
         up: () => u,
       });
       var i = t(33019),
-        a = t(94067),
-        n = t(92894),
-        s = t(29417);
+        a = t(51122),
+        n = t(9285),
+        s = t(86076);
       const o = i.Message;
       class l extends o {
         constructor(e = null) {
@@ -3711,7 +3711,7 @@ var CLSTAMP = "8259598";
             });
         })(te || (te = {}));
     },
-    29417: (e, r, t) => {
+    86076: (e, r, t) => {
       t.d(r, {
         Cu: () => l,
         VJ: () => u,
@@ -3721,7 +3721,7 @@ var CLSTAMP = "8259598";
         uV: () => B,
       });
       var i = t(33019),
-        a = t(94067);
+        a = t(51122);
       const n = i.Message;
       class s extends n {
         constructor(e = null) {
@@ -4490,7 +4490,7 @@ var CLSTAMP = "8259598";
         }
       }
     },
-    37795: (e, r, t) => {
+    17714: (e, r, t) => {
       t.d(r, {
         $m: () => q,
         Mr: () => Xe,
@@ -4501,8 +4501,8 @@ var CLSTAMP = "8259598";
         qZ: () => _,
       });
       var i = t(33019),
-        a = t(94067),
-        n = t(92894);
+        a = t(51122),
+        n = t(9285);
       const s = i.Message;
       class o extends s {
         constructor(e = null) {
@@ -9942,7 +9942,7 @@ var CLSTAMP = "8259598";
             });
         })(Ue || (Ue = {}));
     },
-    91011: (e, r, t) => {
+    29203: (e, r, t) => {
       t.d(r, {
         $n: () => ie,
         $r: () => wr,
@@ -10003,9 +10003,9 @@ var CLSTAMP = "8259598";
         zw: () => Ne,
       });
       var i = t(33019),
-        a = t(94067),
-        n = t(92894),
-        s = t(37095);
+        a = t(51122),
+        n = t(9285),
+        s = t(34611);
       const o = i.Message;
       function l(e) {
         return "unknown EChatRoomMemberStateChange ( " + e + " )";
@@ -19688,11 +19688,11 @@ var CLSTAMP = "8259598";
           };
         })(it || (it = {}));
     },
-    17071: (e, r, t) => {
+    86186: (e, r, t) => {
       t.d(r, { NA: () => o, Zh: () => d });
       var i = t(33019),
-        a = t(94067),
-        n = t(92894);
+        a = t(51122),
+        n = t(9285);
       const s = i.Message;
       class o extends s {
         constructor(e = null) {
@@ -20055,7 +20055,7 @@ var CLSTAMP = "8259598";
           });
       })(d || (d = {}));
     },
-    11782: (e, r, t) => {
+    61515: (e, r, t) => {
       t.d(r, {
         $4: () => f,
         kb: () => R,
@@ -20066,8 +20066,8 @@ var CLSTAMP = "8259598";
         TF: () => E,
       });
       var i = t(33019),
-        a = t(94067),
-        n = t(92894);
+        a = t(51122),
+        n = t(9285);
       const s = i.Message;
       class o extends s {
         constructor(e = null) {
@@ -21911,7 +21911,7 @@ var CLSTAMP = "8259598";
           });
       })(E || (E = {}));
     },
-    68254: (e, r, t) => {
+    91760: (e, r, t) => {
       t.d(r, {
         $Z: () => s,
         RI: () => o,
@@ -21920,7 +21920,7 @@ var CLSTAMP = "8259598";
         tj: () => m,
       });
       var i = t(33019),
-        a = t(94067);
+        a = t(51122);
       const n = i.Message;
       class s extends n {
         constructor(e = null) {
@@ -22324,7 +22324,7 @@ var CLSTAMP = "8259598";
         }
       }
     },
-    37095: (e, r, t) => {
+    34611: (e, r, t) => {
       t.d(r, {
         $K: () => u,
         Ek: () => F,
@@ -22345,7 +22345,7 @@ var CLSTAMP = "8259598";
         wr: () => y,
       });
       var i = t(33019),
-        a = t(94067);
+        a = t(51122);
       const n = i.Message;
       class s extends n {
         constructor(e = null) {
@@ -23884,7 +23884,7 @@ var CLSTAMP = "8259598";
         }
       }
     },
-    88473: (e, r, t) => {
+    30008: (e, r, t) => {
       t.d(r, {
         Cm: () => B,
         Rt: () => b,
@@ -23895,8 +23895,8 @@ var CLSTAMP = "8259598";
         p$: () => m,
       });
       var i = t(33019),
-        a = t(94067),
-        n = t(29417);
+        a = t(51122),
+        n = t(86076);
       const s = i.Message;
       class o extends (267 == t.j ? s : null) {
         constructor(e = null) {
@@ -24796,11 +24796,11 @@ var CLSTAMP = "8259598";
         }
       }
     },
-    60198: (e, r, t) => {
+    81571: (e, r, t) => {
       t.d(r, { BQ: () => s });
       var i = t(33019),
-        a = t(94067);
-      t(29417);
+        a = t(51122);
+      t(86076);
       const n = i.Message;
       class s extends n {
         constructor(e = null) {
@@ -24866,7 +24866,7 @@ var CLSTAMP = "8259598";
         }
       }
     },
-    96600: (e, r, t) => {
+    19449: (e, r, t) => {
       t.d(r, {
         x0: () => c,
         Km: () => m,
@@ -24875,8 +24875,8 @@ var CLSTAMP = "8259598";
         f9: () => o,
       });
       var i = t(33019),
-        a = t(94067);
-      t(29417);
+        a = t(51122);
+      t(86076);
       i.Message;
       const n = i.Message;
       class s extends n {
@@ -25607,7 +25607,7 @@ var CLSTAMP = "8259598";
         }
       }
     },
-    75059: (e, r, t) => {
+    66705: (e, r, t) => {
       t.d(r, {
         AE: () => te,
         DI: () => Q,
@@ -25618,9 +25618,9 @@ var CLSTAMP = "8259598";
         tj: () => u,
       });
       var i = t(33019),
-        a = t(94067),
-        n = t(92894),
-        s = t(29417);
+        a = t(51122),
+        n = t(9285),
+        s = t(86076);
       const o = i.Message;
       class l extends o {
         constructor(e = null) {
@@ -28650,11 +28650,11 @@ var CLSTAMP = "8259598";
           });
       })(te || (te = {}));
     },
-    67499: (e, r, t) => {
+    70938: (e, r, t) => {
       t.d(r, { $n: () => f, OE: () => y, T4: () => z });
       var i = t(33019),
-        a = t(94067),
-        n = t(92894);
+        a = t(51122),
+        n = t(9285);
       const s = i.Message;
       class o extends s {
         constructor(e = null) {
@@ -29720,11 +29720,11 @@ var CLSTAMP = "8259598";
           });
       })(f || (f = {}));
     },
-    68960: (e, r, t) => {
+    13052: (e, r, t) => {
       t.d(r, { KZ: () => c, XX: () => o });
       var i = t(33019),
-        a = t(94067),
-        n = t(92894);
+        a = t(51122),
+        n = t(9285);
       const s = i.Message;
       class o extends s {
         constructor(e = null) {
@@ -29847,7 +29847,7 @@ var CLSTAMP = "8259598";
         };
       })(c || (c = {}));
     },
-    47292: (e, r, t) => {
+    22376: (e, r, t) => {
       t.d(r, {
         F5: () => w,
         Pt: () => R,
@@ -29859,8 +29859,8 @@ var CLSTAMP = "8259598";
         yq: () => o,
       });
       var i = t(33019),
-        a = t(94067),
-        n = t(92894);
+        a = t(51122),
+        n = t(9285);
       const s = i.Message;
       class o extends s {
         constructor(e = null) {
@@ -31015,7 +31015,7 @@ var CLSTAMP = "8259598";
             });
         })(h || (h = {}));
     },
-    99129: (e, r, t) => {
+    98682: (e, r, t) => {
       t.d(r, {
         Fi: () => w,
         Zi: () => B,
@@ -31025,9 +31025,9 @@ var CLSTAMP = "8259598";
         u: () => c,
       });
       var i = t(33019),
-        a = t(94067),
-        n = t(92894),
-        s = t(37095);
+        a = t(51122),
+        n = t(9285),
+        s = t(34611);
       const o = i.Message;
       class l extends o {
         constructor(e = null) {
@@ -31580,7 +31580,7 @@ var CLSTAMP = "8259598";
           };
         })(F || (F = {}));
     },
-    49295: (e, r, t) => {
+    30112: (e, r, t) => {
       t.d(r, {
         DB: () => M,
         LD: () => z,
@@ -31589,8 +31589,8 @@ var CLSTAMP = "8259598";
         pR: () => C,
       });
       var i = t(33019),
-        a = t(94067),
-        n = t(92894);
+        a = t(51122),
+        n = t(9285);
       const s = i.Message;
       class o extends s {
         constructor(e = null) {
@@ -32991,12 +32991,12 @@ var CLSTAMP = "8259598";
             });
         })(E || (E = {}));
     },
-    42992: (e, r, t) => {
+    91206: (e, r, t) => {
       t.d(r, { n: () => c, z: () => l });
       var i = t(33019),
-        a = t(94067),
-        n = t(92894),
-        s = t(14872);
+        a = t(51122),
+        n = t(9285),
+        s = t(1155);
       const o = i.Message;
       class l extends o {
         constructor(e = null) {
@@ -33068,11 +33068,11 @@ var CLSTAMP = "8259598";
         };
       })(c || (c = {}));
     },
-    97396: (e, r, t) => {
+    33419: (e, r, t) => {
       t.d(r, { I3: () => c, yl: () => o });
       var i = t(33019),
-        a = t(94067),
-        n = t(92894);
+        a = t(51122),
+        n = t(9285);
       const s = i.Message;
       class o extends s {
         constructor(e = null) {
@@ -33206,7 +33206,7 @@ var CLSTAMP = "8259598";
         };
       })(c || (c = {}));
     },
-    46139: (e, r, t) => {
+    71588: (e, r, t) => {
       t.d(r, {
         AP: () => mr,
         B: () => m,
@@ -33225,9 +33225,9 @@ var CLSTAMP = "8259598";
         pl: () => ar,
       });
       var i = t(33019),
-        a = t(94067),
-        n = t(92894),
-        s = t(29417);
+        a = t(51122),
+        n = t(9285),
+        s = t(86076);
       const o = i.Message;
       class l extends o {
         constructor(e = null) {
@@ -41251,11 +41251,11 @@ var CLSTAMP = "8259598";
             });
         })(xr || (xr = {}));
     },
-    42774: (e, r, t) => {
+    7426: (e, r, t) => {
       t.d(r, { Ly: () => Ae, kX: () => te, mm: () => Q, q5: () => ce });
       var i = t(33019),
-        a = t(94067),
-        n = t(92894);
+        a = t(51122),
+        n = t(9285);
       const s = i.Message;
       class o extends s {
         constructor(e = null) {
@@ -46251,7 +46251,7 @@ var CLSTAMP = "8259598";
           });
       })(Ae || (Ae = {}));
     },
-    10458: (e, r, t) => {
+    53442: (e, r, t) => {
       t.d(r, {
         $2: () => p,
         $J: () => j,
@@ -46286,7 +46286,7 @@ var CLSTAMP = "8259598";
         tV: () => _,
       });
       var i = t(33019),
-        a = t(94067);
+        a = t(51122);
       const n = i.Message;
       class s extends n {
         constructor(e = null) {
@@ -48149,13 +48149,13 @@ var CLSTAMP = "8259598";
             });
         })(I || (I = {}));
     },
-    59621: (e, r, t) => {
+    37902: (e, r, t) => {
       t.d(r, { GJ: () => z, Ug: () => U, d6: () => $ });
       var i = t(33019),
-        a = t(94067),
-        n = t(92894),
-        s = t(20214),
-        o = t(29417);
+        a = t(51122),
+        n = t(9285),
+        s = t(16340),
+        o = t(86076);
       const l = i.Message;
       class c extends l {
         constructor(e = null) {
@@ -50736,7 +50736,7 @@ var CLSTAMP = "8259598";
           };
         })(K || (K = {}));
     },
-    14872: (e, r, t) => {
+    1155: (e, r, t) => {
       t.d(r, {
         Qn: () => v,
         VJ: () => V,
@@ -50747,9 +50747,9 @@ var CLSTAMP = "8259598";
         oY: () => C,
       });
       var i = t(33019),
-        a = t(94067),
-        n = t(92894),
-        s = t(20214);
+        a = t(51122),
+        n = t(9285),
+        s = t(16340);
       const o = i.Message;
       class l extends o {
         constructor(e = null) {
@@ -53379,12 +53379,12 @@ var CLSTAMP = "8259598";
           });
       })(V || (V = {}));
     },
-    15721: (e, r, t) => {
+    70277: (e, r, t) => {
       var i = t(33019),
-        a = t(94067),
-        n = t(92894),
-        s = t(20214),
-        o = t(14872);
+        a = t(51122),
+        n = t(9285),
+        s = t(16340),
+        o = t(1155);
       const l = i.Message;
       class c extends l {
         constructor(e = null) {
@@ -54139,11 +54139,11 @@ var CLSTAMP = "8259598";
           });
       })(z || (z = {}));
     },
-    74865: (e, r, t) => {
+    38232: (e, r, t) => {
       t.d(r, { AX: () => M, Sz: () => S, _w: () => z });
       var i = t(33019),
-        a = t(94067),
-        n = t(92894);
+        a = t(51122),
+        n = t(9285);
       const s = i.Message;
       class o extends s {
         constructor(e = null) {
@@ -55506,11 +55506,11 @@ var CLSTAMP = "8259598";
           });
       })(S || (S = {}));
     },
-    5325: (e, r, t) => {
+    66410: (e, r, t) => {
       t.d(r, { A_: () => d, Q_: () => B, kI: () => W });
       var i = t(33019),
-        a = t(94067),
-        n = t(92894);
+        a = t(51122),
+        n = t(9285);
       const s = i.Message;
       class o extends s {
         constructor(e = null) {
@@ -56828,7 +56828,7 @@ var CLSTAMP = "8259598";
           };
         })(j || (j = {}));
     },
-    31752: (e, r, t) => {
+    25817: (e, r, t) => {
       t.d(r, {
         Jv: () => g,
         Ky: () => y,
@@ -56841,8 +56841,8 @@ var CLSTAMP = "8259598";
         zQ: () => o,
       });
       var i = t(33019),
-        a = t(94067),
-        n = t(92894);
+        a = t(51122),
+        n = t(9285);
       const s = i.Message;
       class o extends s {
         constructor(e = null) {
@@ -58201,11 +58201,11 @@ var CLSTAMP = "8259598";
             });
         })(j || (j = {}));
     },
-    30053: (e, r, t) => {
+    9658: (e, r, t) => {
       t.d(r, { Kp: () => b, Mm: () => o, VG: () => B, dF: () => y });
       var i = t(33019),
-        a = t(94067),
-        n = t(92894);
+        a = t(51122),
+        n = t(9285);
       const s = i.Message;
       class o extends s {
         constructor(e = null) {
@@ -58662,81 +58662,18 @@ var CLSTAMP = "8259598";
             });
         })(y || (y = {}));
     },
-    16725: (e, r, t) => {
-      t.d(r, { du: () => l, gi: () => m, iR: () => o });
+    86720: (e, r, t) => {
+      t.d(r, { du: () => c, gi: () => B, iR: () => l });
       var i = t(33019),
-        a = t(94067),
-        n = t(92894);
-      const s = i.Message;
-      class o extends s {
-        constructor(e = null) {
-          super(),
-            o.prototype.language || a.aR(o.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            o.sm_m ||
-              (o.sm_m = {
-                proto: o,
-                fields: {
-                  language: {
-                    n: 1,
-                    q: !0,
-                    br: a.FE.readString,
-                    bw: a.Xc.writeString,
-                  },
-                  type: {
-                    n: 2,
-                    q: !0,
-                    br: a.FE.readString,
-                    bw: a.Xc.writeString,
-                  },
-                },
-              }),
-            o.sm_m
-          );
-        }
-        static MBF() {
-          return o.sm_mbf || (o.sm_mbf = a.Bh(o.M())), o.sm_mbf;
-        }
-        toObject(e = !1) {
-          return o.toObject(e, this);
-        }
-        static toObject(e, r) {
-          return a.TA(o.M(), e, r);
-        }
-        static fromObject(e) {
-          return a.aD(o.M(), e);
-        }
-        static deserializeBinary(e) {
-          let r = new i.BinaryReader(e),
-            t = new o();
-          return o.deserializeBinaryFromReader(t, r);
-        }
-        static deserializeBinaryFromReader(e, r) {
-          return a.F(o.MBF(), e, r);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return o.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, r) {
-          a.l2(o.M(), e, r);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return o.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamEngine_UpdateTextFilterDictionary_Notification";
-        }
-      }
-      class l extends s {
+        a = t(51122),
+        n = t(9285),
+        s = t(95077);
+      const o = i.Message;
+      class l extends o {
         constructor(e = null) {
           super(),
             l.prototype.language || a.aR(l.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
+            o.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -58793,14 +58730,14 @@ var CLSTAMP = "8259598";
           return l.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CSteamEngine_GetTextFilterDictionary_Request";
+          return "CSteamEngine_UpdateTextFilterDictionary_Notification";
         }
       }
-      class c extends s {
+      class c extends o {
         constructor(e = null) {
           super(),
-            c.prototype.dictionary || a.aR(c.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
+            c.prototype.language || a.aR(c.M()),
+            o.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -58808,8 +58745,15 @@ var CLSTAMP = "8259598";
               (c.sm_m = {
                 proto: c,
                 fields: {
-                  dictionary: {
+                  language: {
                     n: 1,
+                    q: !0,
+                    br: a.FE.readString,
+                    bw: a.Xc.writeString,
+                  },
+                  type: {
+                    n: 2,
+                    q: !0,
                     br: a.FE.readString,
                     bw: a.Xc.writeString,
                   },
@@ -58850,14 +58794,14 @@ var CLSTAMP = "8259598";
           return c.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CSteamEngine_GetTextFilterDictionary_Response";
+          return "CSteamEngine_GetTextFilterDictionary_Request";
         }
       }
-      class u extends s {
+      class u extends o {
         constructor(e = null) {
           super(),
-            u.prototype.language || a.aR(u.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
+            u.prototype.dictionary || a.aR(u.M()),
+            o.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -58865,15 +58809,8 @@ var CLSTAMP = "8259598";
               (u.sm_m = {
                 proto: u,
                 fields: {
-                  language: {
+                  dictionary: {
                     n: 1,
-                    q: !0,
-                    br: a.FE.readString,
-                    bw: a.Xc.writeString,
-                  },
-                  type: {
-                    n: 2,
-                    q: !0,
                     br: a.FE.readString,
                     bw: a.Xc.writeString,
                   },
@@ -58914,197 +58851,226 @@ var CLSTAMP = "8259598";
           return u.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CSteamEngine_TextFilterDictionaryChanged_Notification";
+          return "CSteamEngine_GetTextFilterDictionary_Response";
         }
       }
-      var m;
-      !(function (e) {
-        (e.UpdateTextFilterDictionaryHandler = {
-          name: "SteamEngine.UpdateTextFilterDictionary#1",
-          request: o,
-        }),
-          (e.UpdateTextFilterDictionary = function (e, r) {
-            return (
-              null == r && (r = n.K2.Get().GetDefaultTransport()),
-              null == r
-                ? (console.error(
-                    "Transport Error: no transport is available for request",
-                  ),
-                  !1)
-                : r.SendNotification(
-                    "SteamEngine.UpdateTextFilterDictionary#1",
-                    (0, n.MD)(o, e),
-                    { ePrivilege: 1, eClientExecutionSite: 2 },
-                  )
-            );
-          }),
-          (e.SendMsgUpdateTextFilterDictionary = function (e, r) {
-            return (
-              null == r && (r = n.K2.Get().GetDefaultTransport()),
-              null == r
-                ? (console.error(
-                    "Transport Error: no transport is available for request",
-                  ),
-                  !1)
-                : r.SendNotification(
-                    "SteamEngine.UpdateTextFilterDictionary#1",
-                    (0, n.MD)(o, e),
-                    { ePrivilege: 1, eClientExecutionSite: 2 },
-                  )
-            );
-          }),
-          (e.GetTextFilterDictionaryHandler = {
-            name: "SteamEngine.GetTextFilterDictionary#1",
-            request: l,
-            response: c,
-          }),
-          (e.GetTextFilterDictionary = function (e, r) {
-            return (
-              null == r && (r = n.K2.Get().GetDefaultTransport()),
-              null == r
-                ? new Promise((e, r) => {
-                    console.error(
-                      "Transport Error: no transport is available for request",
-                    ),
-                      r(
-                        "Transport Error: no transport is available for request",
-                      );
-                  })
-                : r.SendMsg(
-                    "SteamEngine.GetTextFilterDictionary#1",
-                    (0, n.MD)(l, e),
-                    c,
-                    { ePrivilege: 1, eClientExecutionSite: 2 },
-                  )
-            );
-          }),
-          (e.SendMsgGetTextFilterDictionary = function (e, r) {
-            return (
-              null == r && (r = n.K2.Get().GetDefaultTransport()),
-              null == r
-                ? new Promise((e, r) => {
-                    console.error(
-                      "Transport Error: no transport is available for request",
-                    ),
-                      r(
-                        "Transport Error: no transport is available for request",
-                      );
-                  })
-                : r.SendMsg(
-                    "SteamEngine.GetTextFilterDictionary#1",
-                    (0, n.MD)(l, e),
-                    c,
-                    { ePrivilege: 1, eClientExecutionSite: 2 },
-                  )
-            );
-          }),
-          (e.NotifyTextFilterDictionaryChangedHandler = {
-            name: "SteamEngine.NotifyTextFilterDictionaryChanged#1",
-            request: u,
-          }),
-          (e.NotifyTextFilterDictionaryChanged = function (e, r) {
-            return (
-              null == r && (r = n.K2.Get().GetDefaultTransport()),
-              null == r
-                ? (console.error(
-                    "Transport Error: no transport is available for request",
-                  ),
-                  !1)
-                : r.SendNotification(
-                    "SteamEngine.NotifyTextFilterDictionaryChanged#1",
-                    (0, n.MD)(u, e),
-                    { ePrivilege: 1, eClientExecutionSite: 2 },
-                  )
-            );
-          }),
-          (e.SendMsgNotifyTextFilterDictionaryChanged = function (e, r) {
-            return (
-              null == r && (r = n.K2.Get().GetDefaultTransport()),
-              null == r
-                ? (console.error(
-                    "Transport Error: no transport is available for request",
-                  ),
-                  !1)
-                : r.SendNotification(
-                    "SteamEngine.NotifyTextFilterDictionaryChanged#1",
-                    (0, n.MD)(u, e),
-                    { ePrivilege: 1, eClientExecutionSite: 2 },
-                  )
-            );
-          });
-      })(m || (m = {}));
-    },
-    26912: (e, r, t) => {
-      t.d(r, { np: () => o, zw: () => c });
-      var i = t(33019),
-        a = t(94067),
-        n = t(92894);
-      const s = i.Message;
-      class o extends s {
+      class m extends o {
         constructor(e = null) {
           super(),
-            o.prototype.auth_key || a.aR(o.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
+            m.prototype.language || a.aR(m.M()),
+            o.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            o.sm_m ||
-              (o.sm_m = {
-                proto: o,
+            m.sm_m ||
+              (m.sm_m = {
+                proto: m,
+                fields: {
+                  language: {
+                    n: 1,
+                    q: !0,
+                    br: a.FE.readString,
+                    bw: a.Xc.writeString,
+                  },
+                  type: {
+                    n: 2,
+                    q: !0,
+                    br: a.FE.readString,
+                    bw: a.Xc.writeString,
+                  },
+                },
+              }),
+            m.sm_m
+          );
+        }
+        static MBF() {
+          return m.sm_mbf || (m.sm_mbf = a.Bh(m.M())), m.sm_mbf;
+        }
+        toObject(e = !1) {
+          return m.toObject(e, this);
+        }
+        static toObject(e, r) {
+          return a.TA(m.M(), e, r);
+        }
+        static fromObject(e) {
+          return a.aD(m.M(), e);
+        }
+        static deserializeBinary(e) {
+          let r = new i.BinaryReader(e),
+            t = new m();
+          return m.deserializeBinaryFromReader(t, r);
+        }
+        static deserializeBinaryFromReader(e, r) {
+          return a.F(m.MBF(), e, r);
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return m.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, r) {
+          a.l2(m.M(), e, r);
+        }
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return m.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CSteamEngine_TextFilterDictionaryChanged_Notification";
+        }
+      }
+      var B;
+      !(function (e) {
+        (e.UpdateTextFilterDictionaryHandler = {
+          name: "SteamEngine.UpdateTextFilterDictionary#1",
+          request: l,
+        }),
+          (e.RegisterForUpdateTextFilterDictionary = function (r, t) {
+            return null == (t = t || (0, s.S)().GetDefaultHandlerRegistry())
+              ? (console.error(
+                  "Transport Error: no default registry is available for request",
+                ),
+                null)
+              : t.RegisterServiceNotificationHandler(
+                  e.UpdateTextFilterDictionaryHandler,
+                  r,
+                );
+          }),
+          (e.UpdateTextFilterDictionary = function (e, r) {
+            return null == (r = r || (0, s.S)().GetDefaultTransport())
+              ? (console.error(
+                  "Transport Error: no transport is available for request",
+                ),
+                !1)
+              : r.SendNotification(
+                  "SteamEngine.UpdateTextFilterDictionary#1",
+                  (0, n.MD)(l, e),
+                  { ePrivilege: 1, eClientExecutionSite: 2 },
+                );
+          }),
+          (e.SendMsgUpdateTextFilterDictionary = function (e, r) {
+            return null == (r = r || (0, s.S)().GetDefaultTransport())
+              ? (console.error(
+                  "Transport Error: no transport is available for request",
+                ),
+                !1)
+              : r.SendNotification(
+                  "SteamEngine.UpdateTextFilterDictionary#1",
+                  (0, n.MD)(l, e),
+                  { ePrivilege: 1, eClientExecutionSite: 2 },
+                );
+          }),
+          (e.GetTextFilterDictionaryHandler = {
+            name: "SteamEngine.GetTextFilterDictionary#1",
+            request: c,
+            response: u,
+          }),
+          (e.GetTextFilterDictionary = function (e, r) {
+            return null == (r = r || (0, s.S)().GetDefaultTransport())
+              ? new Promise((e, r) => {
+                  console.error(
+                    "Transport Error: no transport is available for request",
+                  ),
+                    r("Transport Error: no transport is available for request");
+                })
+              : r.SendMsg(
+                  "SteamEngine.GetTextFilterDictionary#1",
+                  (0, n.MD)(c, e),
+                  u,
+                  { ePrivilege: 1, eClientExecutionSite: 2 },
+                );
+          }),
+          (e.SendMsgGetTextFilterDictionary = function (e, r) {
+            return null == (r = r || (0, s.S)().GetDefaultTransport())
+              ? new Promise((e, r) => {
+                  console.error(
+                    "Transport Error: no transport is available for request",
+                  ),
+                    r("Transport Error: no transport is available for request");
+                })
+              : r.SendMsg(
+                  "SteamEngine.GetTextFilterDictionary#1",
+                  (0, n.MD)(c, e),
+                  u,
+                  { ePrivilege: 1, eClientExecutionSite: 2 },
+                );
+          }),
+          (e.NotifyTextFilterDictionaryChangedHandler = {
+            name: "SteamEngine.NotifyTextFilterDictionaryChanged#1",
+            request: m,
+          }),
+          (e.RegisterForNotifyTextFilterDictionaryChanged = function (r, t) {
+            return null == (t = t || (0, s.S)().GetDefaultHandlerRegistry())
+              ? (console.error(
+                  "Transport Error: no default registry is available for request",
+                ),
+                null)
+              : t.RegisterServiceNotificationHandler(
+                  e.NotifyTextFilterDictionaryChangedHandler,
+                  r,
+                );
+          }),
+          (e.NotifyTextFilterDictionaryChanged = function (e, r) {
+            return null == (r = r || (0, s.S)().GetDefaultTransport())
+              ? (console.error(
+                  "Transport Error: no transport is available for request",
+                ),
+                !1)
+              : r.SendNotification(
+                  "SteamEngine.NotifyTextFilterDictionaryChanged#1",
+                  (0, n.MD)(m, e),
+                  { ePrivilege: 1, eClientExecutionSite: 2 },
+                );
+          }),
+          (e.SendMsgNotifyTextFilterDictionaryChanged = function (e, r) {
+            return null == (r = r || (0, s.S)().GetDefaultTransport())
+              ? (console.error(
+                  "Transport Error: no transport is available for request",
+                ),
+                !1)
+              : r.SendNotification(
+                  "SteamEngine.NotifyTextFilterDictionaryChanged#1",
+                  (0, n.MD)(m, e),
+                  { ePrivilege: 1, eClientExecutionSite: 2 },
+                );
+          });
+      })(B || (B = {}));
+    },
+    28054: (e, r, t) => {
+      t.d(r, { np: () => l, zw: () => u });
+      var i = t(33019),
+        a = t(51122),
+        n = t(9285),
+        s = t(95077);
+      const o = i.Message;
+      class l extends o {
+        constructor(e = null) {
+          super(),
+            l.prototype.auth_key || a.aR(l.M()),
+            o.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            l.sm_m ||
+              (l.sm_m = {
+                proto: l,
                 fields: {
                   auth_key: { n: 1, br: a.FE.readString, bw: a.Xc.writeString },
                 },
               }),
-            o.sm_m
+            l.sm_m
           );
         }
         static MBF() {
-          return o.sm_mbf || (o.sm_mbf = a.Bh(o.M())), o.sm_mbf;
-        }
-        toObject(e = !1) {
-          return o.toObject(e, this);
-        }
-        static toObject(e, r) {
-          return a.TA(o.M(), e, r);
-        }
-        static fromObject(e) {
-          return a.aD(o.M(), e);
-        }
-        static deserializeBinary(e) {
-          let r = new i.BinaryReader(e),
-            t = new o();
-          return o.deserializeBinaryFromReader(t, r);
-        }
-        static deserializeBinaryFromReader(e, r) {
-          return a.F(o.MBF(), e, r);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return o.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, r) {
-          a.l2(o.M(), e, r);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return o.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CTransportAuth_Authenticate_Request";
-        }
-      }
-      class l extends s {
-        constructor(e = null) {
-          super(), s.initialize(this, e, 0, -1, void 0, null);
+          return l.sm_mbf || (l.sm_mbf = a.Bh(l.M())), l.sm_mbf;
         }
         toObject(e = !1) {
           return l.toObject(e, this);
         }
         static toObject(e, r) {
-          return e ? { $jspbMessageInstance: r } : {};
+          return a.TA(l.M(), e, r);
         }
         static fromObject(e) {
-          return new l();
+          return a.aD(l.M(), e);
         }
         static deserializeBinary(e) {
           let r = new i.BinaryReader(e),
@@ -59112,69 +59078,91 @@ var CLSTAMP = "8259598";
           return l.deserializeBinaryFromReader(t, r);
         }
         static deserializeBinaryFromReader(e, r) {
-          return e;
+          return a.F(l.MBF(), e, r);
         }
         serializeBinary() {
           var e = new i.BinaryWriter();
           return l.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
-        static serializeBinaryToWriter(e, r) {}
+        static serializeBinaryToWriter(e, r) {
+          a.l2(l.M(), e, r);
+        }
         serializeBase64String() {
           var e = new i.BinaryWriter();
           return l.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
+          return "CTransportAuth_Authenticate_Request";
+        }
+      }
+      class c extends o {
+        constructor(e = null) {
+          super(), o.initialize(this, e, 0, -1, void 0, null);
+        }
+        toObject(e = !1) {
+          return c.toObject(e, this);
+        }
+        static toObject(e, r) {
+          return e ? { $jspbMessageInstance: r } : {};
+        }
+        static fromObject(e) {
+          return new c();
+        }
+        static deserializeBinary(e) {
+          let r = new i.BinaryReader(e),
+            t = new c();
+          return c.deserializeBinaryFromReader(t, r);
+        }
+        static deserializeBinaryFromReader(e, r) {
+          return e;
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return c.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, r) {}
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return c.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
           return "CTransportAuth_Authenticate_Response";
         }
       }
-      var c;
+      var u;
       !(function (e) {
         (e.AuthenticateHandler = {
           name: "TransportAuth.Authenticate#1",
-          request: o,
-          response: l,
+          request: l,
+          response: c,
         }),
           (e.Authenticate = function (e, r) {
-            return (
-              null == r && (r = n.K2.Get().GetDefaultTransport()),
-              null == r
-                ? new Promise((e, r) => {
-                    console.error(
-                      "Transport Error: no transport is available for request",
-                    ),
-                      r(
-                        "Transport Error: no transport is available for request",
-                      );
-                  })
-                : r.SendMsg(
-                    "TransportAuth.Authenticate#1",
-                    (0, n.MD)(o, e),
-                    l,
-                    { ePrivilege: 1, eClientExecutionSite: 3 },
-                  )
-            );
+            return null == (r = r || (0, s.S)().GetDefaultTransport())
+              ? new Promise((e, r) => {
+                  console.error(
+                    "Transport Error: no transport is available for request",
+                  ),
+                    r("Transport Error: no transport is available for request");
+                })
+              : r.SendMsg("TransportAuth.Authenticate#1", (0, n.MD)(l, e), c, {
+                  ePrivilege: 1,
+                  eClientExecutionSite: 3,
+                });
           }),
           (e.SendMsgAuthenticate = function (e, r) {
-            return (
-              null == r && (r = n.K2.Get().GetDefaultTransport()),
-              null == r
-                ? new Promise((e, r) => {
-                    console.error(
-                      "Transport Error: no transport is available for request",
-                    ),
-                      r(
-                        "Transport Error: no transport is available for request",
-                      );
-                  })
-                : r.SendMsg(
-                    "TransportAuth.Authenticate#1",
-                    (0, n.MD)(o, e),
-                    l,
-                    { ePrivilege: 1, eClientExecutionSite: 3 },
-                  )
-            );
+            return null == (r = r || (0, s.S)().GetDefaultTransport())
+              ? new Promise((e, r) => {
+                  console.error(
+                    "Transport Error: no transport is available for request",
+                  ),
+                    r("Transport Error: no transport is available for request");
+                })
+              : r.SendMsg("TransportAuth.Authenticate#1", (0, n.MD)(l, e), c, {
+                  ePrivilege: 1,
+                  eClientExecutionSite: 3,
+                });
           });
-      })(c || (c = {}));
+      })(u || (u = {}));
     },
   },
 ]);

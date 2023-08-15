@@ -2568,6 +2568,18 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:before {
 .gamepaddialog_Field_eKmEX .Focusable {
   scroll-margin: 20px 0 55px 0;
 }
+.gamepaddialog_Field_eKmEX.DesktopUI .gamepaddialog_FieldChildrenWithIcon_1aw7c,
+.gamepaddialog_Field_eKmEX.DesktopUI .gamepaddialog_FieldChildrenInner_2o2fX,
+.DesktopUI
+  .gamepaddialog_Field_eKmEX
+  .gamepaddialog_FieldChildrenWithIcon_1aw7c,
+.DesktopUI .gamepaddialog_Field_eKmEX .gamepaddialog_FieldChildrenInner_2o2fX {
+  flex-shrink: 0;
+}
+.gamepaddialog_Field_eKmEX.DesktopUI .gamepaddialog_FieldChildrenInner_2o2fX,
+.DesktopUI .gamepaddialog_Field_eKmEX .gamepaddialog_FieldChildrenInner_2o2fX {
+  display: flex;
+}
 .gamepaddialog_FieldClickTarget_1cGG5 {
   position: absolute;
   left: 0;
@@ -2578,23 +2590,33 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:before {
   background: red;
   opacity: 0.1;
 }
-.gamepaddialog_FieldChildren_2rhav > svg {
+.gamepaddialog_FieldChildrenInner_2o2fX {
+  flex-grow: 1;
+}
+.gamepaddialog_FieldChildrenInner_2o2fX > svg {
   height: 1em;
   width: auto;
 }
-.gamepaddialog_FieldChildren_2rhav > svg:not(:first-child) {
+.gamepaddialog_FieldChildrenInner_2o2fX > svg:not(:first-child) {
   margin-left: 16px;
 }
-.gamepaddialog_FieldChildren_2rhav .DialogInputLabelGroup {
+.gamepaddialog_FieldChildrenInner_2o2fX .DialogInputLabelGroup {
   margin-bottom: 0px;
 }
-.gamepaddialog_FieldLeadIcon_3CGpa {
-  margin-right: 16px;
+.gamepaddialog_FieldIcon_2DM37 {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-shrink: 0;
+  flex-grow: 0;
 }
-.gamepaddialog_FieldLeadIcon_3CGpa svg {
+.gamepaddialog_FieldIcon_2DM37.gamepaddialog_Front_2sj0i {
+  padding-right: 10px;
+}
+.gamepaddialog_FieldIcon_2DM37.gamepaddialog_BeforeChildren_1mbHa {
+  padding-right: max(10px, var(--field-row-children-spacing));
+}
+.gamepaddialog_FieldIcon_2DM37 svg {
   height: 20px;
 }
 .gamepaddialog_FieldLabelRow_2VcTl {
@@ -2616,34 +2638,39 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:before {
   .gamepaddialog_FieldLabelRow_2VcTl {
   row-gap: var(--field-row-children-spacing);
 }
+#QuickAccess-Menu
+  .gamepaddialog_Field_eKmEX.gamepaddialog_ChildrenWidthFixed_ljcbL
+  .gamepaddialog_FieldChildrenWithIcon_1aw7c {
+  min-width: 270px;
+}
 .gamepaddialog_Field_eKmEX.gamepaddialog_ChildrenWidthFixed_ljcbL
-  .gamepaddialog_FieldChildren_2rhav {
+  .gamepaddialog_FieldChildrenInner_2o2fX {
   min-width: var(--gamepad-field-control-min-width, 250px);
 }
 .gamepaddialog_Field_eKmEX.gamepaddialog_ChildrenWidthFixed_ljcbL
-  .gamepaddialog_FieldChildren_2rhav.DesktopUI,
+  .gamepaddialog_FieldChildrenInner_2o2fX.DesktopUI,
 .DesktopUI
   .gamepaddialog_Field_eKmEX.gamepaddialog_ChildrenWidthFixed_ljcbL
-  .gamepaddialog_FieldChildren_2rhav {
+  .gamepaddialog_FieldChildrenInner_2o2fX {
   min-width: 0px;
 }
 #QuickAccess-Menu
   .gamepaddialog_Field_eKmEX.gamepaddialog_ChildrenWidthFixed_ljcbL
-  .gamepaddialog_FieldChildren_2rhav {
-  min-width: 270px;
+  .gamepaddialog_FieldChildrenInner_2o2fX {
+  min-width: 0px;
+}
+.gamepaddialog_FieldChildrenWithIcon_1aw7c {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
 }
 .gamepaddialog_Field_eKmEX.gamepaddialog_ChildrenWidthGrow_Jgod1
-  .gamepaddialog_FieldChildren_2rhav {
+  .gamepaddialog_FieldChildrenWithIcon_1aw7c {
   flex-grow: 1;
 }
 .gamepaddialog_Field_eKmEX.gamepaddialog_WithFirstRow_2bDqk.gamepaddialog_WithChildrenBelow_37xzV.gamepaddialog_ExtraPaddingOnChildrenBelow_3nLNL
-  .gamepaddialog_FieldChildren_2rhav {
+  .gamepaddialog_FieldChildrenWithIcon_1aw7c {
   padding-top: var(--field-row-children-spacing);
-}
-.gamepaddialog_FieldChildren_2rhav.DesktopUI,
-.DesktopUI .gamepaddialog_FieldChildren_2rhav {
-  display: flex;
-  flex-shrink: 0;
 }
 .gamepaddialog_FieldLabel_3jMlJ {
   font-size: 16px;
@@ -2700,7 +2727,7 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:before {
   line-height: 18px;
 }
 .gamepaddialog_Field_eKmEX.gamepaddialog_WithChildrenBelow_37xzV
-  .gamepaddialog_FieldChildren_2rhav
+  .gamepaddialog_FieldChildrenWithIcon_1aw7c
   + .gamepaddialog_FieldDescription_1W1to {
   margin-top: 6px;
 }
@@ -3155,18 +3182,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   position: relative;
   right: 5px;
 }
-.gamepadslider_SliderControlWithIcon_32O-U {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-}
-.gamepadslider_SliderControlWithIcon_32O-U.gpfocuswithin {
-  color: #fff;
-}
-.gamepadslider_SliderControlWithIcon_32O-U .gamepadslider_SliderControl_1udlG {
-  flex-grow: 1;
-}
-.gamepadslider_SliderControlWithIcon_32O-U .gamepadslider_Icon_K9V_G {
+.gamepadslider_Icon_K9V_G {
   height: 24px;
   width: 24px;
   margin: auto 0;
@@ -3174,7 +3190,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   flex-grow: 0;
   flex-shrink: 0;
 }
-.gamepadslider_SliderControlWithIcon_32O-U .gamepadslider_Icon_K9V_G svg {
+.gamepadslider_Icon_K9V_G svg {
   width: 100%;
   height: 100%;
 }

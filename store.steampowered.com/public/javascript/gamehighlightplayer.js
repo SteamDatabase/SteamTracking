@@ -891,7 +891,7 @@ HighlightPlayer.prototype.ShowScreenshotPopup = function( screenshotid )
 			$(wrapper).append(overlay);
 
 			var titleBar = $(titleBarSrc);
-			if ( $(wrapper).data( 'video-category' ).length )
+			if ( $(wrapper).data( 'video-category' )?.length )
 				$(wrapper).append(titleBar);
 
 			function setup()
@@ -931,10 +931,10 @@ HighlightPlayer.prototype.ShowScreenshotPopup = function( screenshotid )
 				$('.fullscreen_button',overlay).bind('click', function(e) { toggleFullscreen(); });
 				$('.progress_bar_container',overlay).bind('click', function(e) { progressClick(e, this); });
 
-				if ( $(wrapper).data( 'video-category' ).length )
+				if ( $(wrapper).data( 'video-category' )?.length )
 					$('.video_category', titleBar).text( $(wrapper).data( 'video-category' ) );
 
-				if ( $(wrapper).data( 'video-title' ).length )
+				if ( $(wrapper).data( 'video-title' )?.length )
 					$('.video_title', titleBar).text( ' | ' + $(wrapper).data( 'video-title' ) );
 
 				updateVolume();

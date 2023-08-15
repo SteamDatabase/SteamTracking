@@ -4657,13 +4657,12 @@ html.tablet .partnereventdisplay_EventDetailTitle_2_4FS {
 }
 .discountcustomdialog_AvailableRange_trSI7 {
   color: #fff;
-}
-.discountcustomdialog_AvailableRange_trSI7 .discountcustomdialog_Dates_6Z2m0 {
-  flex-basis: 35%;
+  background: #515865;
 }
 .discountcustomdialog_AvailableRange_trSI7
-  .discountcustomdialog_AvailableLabel_VN_up {
-  flex-basis: 20%;
+  .discountcustomdialog_AvailableText_1METe {
+  display: flex;
+  flex-grow: 1;
 }
 .discountcustomdialog_AvailableRange_trSI7
   .discountcustomdialog_DiscountEventSelectDropDown_1TuVi {
@@ -5002,6 +5001,7 @@ html.tablet .partnereventdisplay_EventDetailTitle_2_4FS {
   display: flex;
   flex-direction: row;
   align-items: center;
+  padding: 0;
 }
 .tabulator.tabulator .tabulator-cell.tabulator-cell.tabulator-frozen-left {
   border-right: 3px solid #303238;
@@ -5087,10 +5087,8 @@ html.tablet .partnereventdisplay_EventDetailTitle_2_4FS {
   z-index: 400;
   background: #2c2f35;
   width: fit-content !important;
+  min-width: 100%;
   box-shadow: 2px 2px 10px #000;
-  margin-left: -8px;
-  padding-left: 8px;
-  padding-right: 8px;
   box-sizing: border-box;
   border-radius: 2px;
 }
@@ -5098,6 +5096,7 @@ html.tablet .partnereventdisplay_EventDetailTitle_2_4FS {
   .tabulator-cell.tabulator-cell.gridcomponents_PackageName_t8fSj
   .formatterCell {
   display: block;
+  height: 100%;
 }
 .tabulator.tabulator
   .tabulator-cell.tabulator-cell.gridcomponents_PackageName_t8fSj
@@ -5107,14 +5106,32 @@ html.tablet .partnereventdisplay_EventDetailTitle_2_4FS {
   line-height: 33px;
   overflow: hidden;
   text-overflow: ellipsis;
+  text-shadow: 1px 1px #000;
 }
 .tabulator.tabulator
   .tabulator-cell.tabulator-cell.gridcomponents_PackageType_3LZvj {
   color: #fff;
   justify-content: center;
 }
-.gridcomponents_PackagePricesBelowMin_2x4be {
-  background-color: #973620;
+.gridcomponents_PackageNameColumn_2pjx8 {
+  padding: 4px 8px;
+}
+.gridcomponents_PackageNameColumn_2pjx8.gridcomponents_PackagePricesBelowMin_2x4be {
+  position: relative;
+  border: 1px dashed #c22d00;
+  box-sizing: border-box;
+  height: 100%;
+}
+.gridcomponents_PackageNameColumn_2pjx8.gridcomponents_PackagePricesBelowMin_2x4be:after {
+  position: absolute;
+  right: 5px;
+  top: 8px;
+  content: "!";
+  color: #000;
+  font-weight: 800;
+  background: #c22d00;
+  border-radius: 25px;
+  padding: 1px 9px;
 }
 .discountgrid_DiscountGridCtn_3THze {
   width: 100%;
@@ -5401,22 +5418,22 @@ html.tablet .partnereventdisplay_EventDetailTitle_2_4FS {
 }
 .discountgrid_DiscountGridCtn_3THze
   .discountgrid_DiscountGrid_39Ize
-  .discountgrid_DataCell_3V8Jb.discountgrid_ChangedLocally_zv4km.discountgrid_DiscountTooHigh_GACCx,
+  .discountgrid_DataCell_3V8Jb.discountgrid_DiscountTooHigh_GACCx,
 .discountgrid_DiscountGridCtn_3THze
   .discountgrid_DiscountGrid_39Ize
-  .discountgrid_DataCell_3V8Jb.discountgrid_ChangedLocally_zv4km.discountgrid_DiscountTooLow_17g5Z:not(
+  .discountgrid_DataCell_3V8Jb.discountgrid_DiscountTooLow_17g5Z:not(
     :focus-within
   ) {
   color: #e5af37;
-  border: 1px dashed #e5af37;
+  border: 1px dashed #c22d00;
 }
 .discountgrid_DiscountGridCtn_3THze
   .discountgrid_DiscountGrid_39Ize
-  .discountgrid_DataCell_3V8Jb.discountgrid_ChangedLocally_zv4km.discountgrid_DiscountTooHigh_GACCx
+  .discountgrid_DataCell_3V8Jb.discountgrid_DiscountTooHigh_GACCx
   .discountgrid_DiscountRangeWarning_2_w-X,
 .discountgrid_DiscountGridCtn_3THze
   .discountgrid_DiscountGrid_39Ize
-  .discountgrid_DataCell_3V8Jb.discountgrid_ChangedLocally_zv4km.discountgrid_DiscountTooLow_17g5Z:not(
+  .discountgrid_DataCell_3V8Jb.discountgrid_DiscountTooLow_17g5Z:not(
     :focus-within
   )
   .discountgrid_DiscountRangeWarning_2_w-X {

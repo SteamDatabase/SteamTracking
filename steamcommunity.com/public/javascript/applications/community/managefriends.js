@@ -60,8 +60,8 @@
         d = n(4556),
         l = n(47165),
         c = n(23801),
-        m = n(23217),
-        u = n(32765);
+        u = n(23217),
+        m = n(32765);
       class _ {
         constructor() {
           (this.m_mapProfiles = new Map()),
@@ -78,7 +78,7 @@
                 !this.m_mapProfiles.has(e) && !this.m_mapProfilesLoading.has(e),
             );
             if (0 == n.length) return this.m_mapProfilesLoading.get(e[0]);
-            let r = u.De.COMMUNITY_BASE_URL + "actions/ajaxresolveusers",
+            let r = m.De.COMMUNITY_BASE_URL + "actions/ajaxresolveusers",
               s = a().get(r, {
                 params: { steamids: n.join(",") },
                 withCredentials: !0,
@@ -126,8 +126,8 @@
         GetProfileURLBySteamID(e) {
           const t = this.GetProfileBySteamID(e);
           return t && t.profile_url
-            ? u.De.COMMUNITY_BASE_URL + "id/" + t.profile_url
-            : u.De.COMMUNITY_BASE_URL + "profiles/" + e.ConvertTo64BitString();
+            ? m.De.COMMUNITY_BASE_URL + "id/" + t.profile_url
+            : m.De.COMMUNITY_BASE_URL + "profiles/" + e.ConvertTo64BitString();
         }
         GetPersonaNameBySteamID(e) {
           const t = this.GetProfileBySteamID(e);
@@ -150,7 +150,7 @@
               p
                 .LoadProfiles([t.ConvertTo64BitString()])
                 .catch((e) => {
-                  const n = (0, m.l)(e);
+                  const n = (0, u.l)(e);
                   console.error(
                     "useUserProfile failed to load profile for " +
                       t.ConvertTo64BitString() +
@@ -183,8 +183,8 @@
         d = n(57605),
         l = n(14826),
         c = n(20730),
-        m = n.n(c),
-        u = n(32765),
+        u = n.n(c),
+        m = n(32765),
         _ = n(47165),
         p = n(60161),
         f = n(24448),
@@ -203,8 +203,8 @@
         componentDidMount() {
           return (0, r.mG)(this, void 0, void 0, function* () {
             const e = yield o().get(
-              u.De.COMMUNITY_BASE_URL + "invites/ajaxgetall",
-              { params: { sessionid: u.De.SESSIONID } },
+              m.De.COMMUNITY_BASE_URL + "invites/ajaxgetall",
+              { params: { sessionid: m.De.SESSIONID } },
             );
             if (e && e.data && e.data.tokens) {
               const t = e.data.tokens.filter((e) => e.valid);
@@ -217,11 +217,11 @@
         OnCreateInviteLink() {
           return (0, r.mG)(this, void 0, void 0, function* () {
             const e = new FormData();
-            e.append("sessionid", u.De.SESSIONID),
-              e.append("steamid_user", u.L7.steamid),
+            e.append("sessionid", m.De.SESSIONID),
+              e.append("steamid_user", m.L7.steamid),
               e.append("duration", (2592e3).toString());
             const t = yield o().post(
-              u.De.COMMUNITY_BASE_URL + "invites/ajaxcreate",
+              m.De.COMMUNITY_BASE_URL + "invites/ajaxcreate",
               e,
             );
             t &&
@@ -242,12 +242,12 @@
         OnAddFriend(e) {
           return (0, r.mG)(this, void 0, void 0, function* () {
             const t = new FormData();
-            t.append("sessionID", u.De.SESSIONID),
+            t.append("sessionID", m.De.SESSIONID),
               t.append("steamid", e),
               t.append("accept_invite", "0");
             try {
               const e = yield o().post(
-                u.De.COMMUNITY_BASE_URL + "actions/AddFriendAjax",
+                m.De.COMMUNITY_BASE_URL + "actions/AddFriendAjax",
                 t,
               );
               return e && e.data && 1 == e.data.success;
@@ -264,41 +264,41 @@
         }
         OnSearchSubmit() {
           window.open(
-            u.De.COMMUNITY_BASE_URL +
+            m.De.COMMUNITY_BASE_URL +
               "search/users/#text=" +
               encodeURIComponent(this.state.input_search),
             "_self",
           );
         }
         render() {
-          const e = u.L7.short_url + "/" + this.state.invite_token;
+          const e = m.L7.short_url + "/" + this.state.invite_token;
           return s.createElement(
             "div",
             null,
             s.createElement(
               "div",
-              { className: m().HeaderBlock },
+              { className: u().HeaderBlock },
               (0, l.Xx)("#ManageFriends_AddAFriend"),
             ),
             s.createElement(
               "div",
-              { className: m().Background },
+              { className: u().Background },
               s.createElement(
                 "h1",
-                { className: m().Heading },
+                { className: u().Heading },
                 (0, l.Xx)("#ManageFriends_YourFriendCode"),
               ),
               s.createElement(
                 "div",
-                { className: m().CopyContainer },
-                s.createElement("h1", { className: m().Text }, u.L7.accountid),
+                { className: u().CopyContainer },
+                s.createElement("h1", { className: u().Text }, m.L7.accountid),
                 s.createElement(
                   d.KM,
                   {
                     autoFocus: !0,
-                    className: m().Button,
+                    className: u().Button,
                     onClick: () =>
-                      this.OnCopy("friend_code", String(u.L7.accountid)),
+                      this.OnCopy("friend_code", String(m.L7.accountid)),
                   },
                   this.state.friend_code_copied
                     ? (0, l.Xx)("#ManageFriends_Copied")
@@ -307,7 +307,7 @@
               ),
               s.createElement(
                 "p",
-                { className: m().Body },
+                { className: u().Body },
                 (0, l.Xx)("#ManageFriends_EnterFriendCode"),
               ),
               s.createElement(C, {
@@ -320,31 +320,31 @@
             ),
             s.createElement(
               "div",
-              { className: m().DimBackground },
+              { className: u().DimBackground },
               s.createElement(
                 "h1",
-                { className: m().Heading },
+                { className: u().Heading },
                 (0, l.Xx)("#ManageFriends_OrSendQuickInvite"),
               ),
               s.createElement(
                 "p",
-                { className: m().Body },
+                { className: u().Body },
                 (0, l.Xx)("#ManageFriends_QuickInviteDescription"),
               ),
               s.createElement(
                 "p",
-                { className: m().Body },
+                { className: u().Body },
                 (0, l.Xx)("#ManageFriends_QuickInviteNote"),
               ),
               s.createElement(
                 "div",
-                { className: m().CopyContainer },
+                { className: u().CopyContainer },
                 Boolean(this.state.invite_token) &&
-                  s.createElement("div", { className: m().Link }, e),
+                  s.createElement("div", { className: u().Link }, e),
                 s.createElement(
                   d.KM,
                   {
-                    className: m().Button,
+                    className: u().Button,
                     onClick: () => this.OnCopy("invite", e),
                   },
                   this.state.invite_copied
@@ -355,7 +355,7 @@
               s.createElement(
                 d.zx,
                 {
-                  className: m().GenerateLinkButton,
+                  className: u().GenerateLinkButton,
                   onClick: this.OnCreateInviteLink,
                 },
                 (0, l.Xx)("#ManageFriends_CreateInviteLink"),
@@ -363,10 +363,10 @@
             ),
             s.createElement(
               "div",
-              { className: m().Background },
+              { className: u().Background },
               s.createElement(
                 "h1",
-                { className: m().Heading },
+                { className: u().Heading },
                 (0, l.Xx)("#ManageFriends_OrSearch"),
               ),
               s.createElement("br", null),
@@ -384,7 +384,7 @@
                   "div",
                   { style: { width: "100%" } },
                   s.createElement(d.II, {
-                    className: m().Input,
+                    className: u().Input,
                     onKeyDown: this.OnSearchKeyDown,
                     value: this.state.input_search,
                     onChange: this.OnSearchChange,
@@ -447,10 +447,10 @@
                 ? this.setState({
                     searchResult: n,
                     disable_send_invite:
-                      u.L7.is_limited ||
+                      m.L7.is_limited ||
                       (this.props.bDisableForFriends && n.is_friend) ||
                       (this.props.bDisableForSelf &&
-                        n.steamid === u.L7.steamid),
+                        n.steamid === m.L7.steamid),
                   })
                 : this.setState({ searchResult: null });
             } else this.setState({ searchResult: null });
@@ -459,7 +459,7 @@
         OnActionClick(e) {
           return (0, r.mG)(this, void 0, void 0, function* () {
             const t = new FormData();
-            t.append("sessionID", u.De.SESSIONID),
+            t.append("sessionID", m.De.SESSIONID),
               t.append("steamid", e),
               t.append("accept_invite", "0"),
               this.setState({ disable_send_invite: !0 });
@@ -478,9 +478,9 @@
         render() {
           return s.createElement(
             "div",
-            { className: m().FriendCodeSelector },
+            { className: u().FriendCodeSelector },
             s.createElement(d.II, {
-              className: m().Input,
+              className: u().Input,
               value: this.state.input_friend_code,
               onChange: this.OnFriendCodeChange,
               placeholder: (0, l.Xx)(
@@ -497,7 +497,7 @@
               s.createElement(
                 d.KM,
                 {
-                  className: m().SendInviteButton,
+                  className: u().SendInviteButton,
                   onClick: () =>
                     this.OnActionClick(this.state.searchResult.steamid),
                   disabled: this.state.disable_send_invite,
@@ -518,17 +518,17 @@
             bShowStatus: r,
             children: a,
           } = e,
-          i = (0, u.id)();
+          i = (0, m.id)();
         return Boolean(t)
           ? s.createElement(
               "div",
-              { className: m().ProfileCard },
+              { className: u().ProfileCard },
               s.createElement(
                 "div",
-                { className: m().UserContainer },
+                { className: u().UserContainer },
                 s.createElement(
                   "div",
-                  { className: m().Image },
+                  { className: u().Image },
                   s.createElement("img", {
                     style: { width: "100%", height: "100%" },
                     src: t.avatar_url_full,
@@ -536,27 +536,27 @@
                 ),
                 s.createElement(
                   "div",
-                  { className: m().ProfileContent },
+                  { className: u().ProfileContent },
                   s.createElement(
                     "h1",
-                    { className: m().Heading },
+                    { className: u().Heading },
                     t.persona_name,
                   ),
                   s.createElement(
                     "div",
-                    { className: m().ProfileLink },
+                    { className: u().ProfileLink },
                     s.createElement(
                       h.IS,
                       {
                         target: i ? void 0 : "_blank",
-                        href: u.De.COMMUNITY_BASE_URL + "profiles/" + t.steamid,
+                        href: m.De.COMMUNITY_BASE_URL + "profiles/" + t.steamid,
                       },
                       (0, l.Xx)("#ManageFriends_ProfileLink"),
                     ),
                     s.createElement("br", null),
                     s.createElement(
                       "span",
-                      { className: m().Body },
+                      { className: u().Body },
                       t.real_name,
                       s.createElement("br", null),
                       `${t.city}${t.city ? "," : ""} ${t.state}${
@@ -569,7 +569,7 @@
               ),
               s.createElement(
                 "div",
-                { className: m().ProfileLink },
+                { className: u().ProfileLink },
                 t.is_friend &&
                   s.createElement(
                     "div",
@@ -585,7 +585,7 @@
                       {
                         target: i ? void 0 : "_blank",
                         href:
-                          u.De.COMMUNITY_BASE_URL +
+                          m.De.COMMUNITY_BASE_URL +
                           "profiles/" +
                           t.steamid +
                           "/friendscommon",
@@ -605,14 +605,14 @@
                   "failure" === n &&
                   s.createElement(
                     "div",
-                    { className: m().Failure },
+                    { className: u().Failure },
                     (0, l.Xx)("#ManageFriends_InviteFailure"),
                   ),
                 r &&
                   "success" === n &&
                   s.createElement(
                     "div",
-                    { className: m().Success },
+                    { className: u().Success },
                     (0, l.Xx)("#ManageFriends_InviteSuccess", t.persona_name),
                   ),
               ),
@@ -649,13 +649,23 @@
               strErrorMsg: e.response.data.message,
               errorCode: e.response.data.success,
             };
+          if ("success" in e.response.data)
+            return {
+              strErrorMsg: "error code: " + e.response.data.success,
+              errorCode: e.response.data.success,
+            };
         } else if ("object" == typeof e.data) {
           if ("msg" in e.data)
             return { strErrorMsg: e.data.msg, errorCode: e.data.success };
           if ("err_msg" in e.data)
             return { strErrorMsg: e.data.err_msg, errorCode: e.data.success };
-          if ("message" in e.response.data)
+          if ("message" in e.data)
             return { strErrorMsg: e.data.message, errorCode: e.data.success };
+          if ("success" in e.data)
+            return {
+              strErrorMsg: "error code: " + e.data.success,
+              errorCode: e.data.success,
+            };
         } else {
           if (void 0 !== e.success && void 0 !== e.msg)
             return { strErrorMsg: e.msg, errorCode: e.success };

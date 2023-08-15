@@ -3083,7 +3083,7 @@ function ImageURL( imageName, x, y, bEnableHighDPI )
 			if ( bEnableHighDPI && window.devicePixelRatio >= 2 && g_bAllowHighDPIItemImages )
 				strSize += 'dpx2x';
 		}
-		return 'https://community.cloudflare.steamstatic.com/economy/image/' + v_trim(imageName) + strSize;
+		return 'https://community.cloudflare.steamstatic.com/economy/image/' + v_trim(imageName) + strSize + '?allow_animated=1';
 	}
 	else
 		return 'https://community.cloudflare.steamstatic.com/public/images/trans.gif';

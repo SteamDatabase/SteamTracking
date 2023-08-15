@@ -61,6 +61,7 @@
         LastRow: "gridcomponents_LastRow_18dUc",
         AppCount: "gridcomponents_AppCount_2J3kN",
         PackageID: "gridcomponents_PackageID_1E3TV",
+        PackageNameColumn: "gridcomponents_PackageNameColumn_2pjx8",
         PackagePricesBelowMin: "gridcomponents_PackagePricesBelowMin_2x4be",
       };
     },
@@ -273,13 +274,13 @@
       "use strict";
       n.d(e, {
         J7: () => _,
-        K$: () => E,
+        K$: () => k,
         Lr: () => I,
         fH: () => f,
         i4: () => D,
         o: () => h,
         vc: () => P,
-        z8: () => k,
+        z8: () => E,
       });
       var i = n(33940),
         a = n(52868),
@@ -722,7 +723,7 @@
           e
         );
       }
-      function E(t) {
+      function k(t) {
         const [e, n] = (0, o.useState)(v.Get().GetDiscountEvent(t)),
           [i, a] = (0, o.useState)(v.Get().GetAppList(t));
         return (
@@ -740,7 +741,7 @@
           i ? { oDiscountEvent: e, rgAppList: i } : null
         );
       }
-      function k() {
+      function E() {
         return { fnCreateDiscountEvent: v.Get().CreateDiscountEvent };
       }
       function I() {
@@ -763,11 +764,11 @@
       "use strict";
       n.d(e, {
         A0: () => D,
-        Cy: () => k,
+        Cy: () => E,
         PV: () => _,
         QQ: () => f,
         Rz: () => S,
-        V7: () => E,
+        V7: () => k,
         ZW: () => P,
         _l: () => b,
         dS: () => C,
@@ -1437,7 +1438,7 @@
           (0, m.Qg)(h.Get().GetOptInNameRegistrationsCallbackList(t), n), e
         );
       }
-      function E(t) {
+      function k(t) {
         const e = P(t),
           [n, i] = r.useState({
             nAppOptedIn: 0,
@@ -1469,7 +1470,7 @@
           n
         );
       }
-      function k(t, e) {
+      function E(t, e) {
         const n = (0, c.useQuery)(
           ["useAllOptInRegistrationByName", t, Boolean(e)],
           () => h.Get().FetchOptInRegistrationForOptIn(t, e),
@@ -1491,7 +1492,7 @@
         };
       }
       function G(t, e) {
-        const n = k(t, !1),
+        const n = E(t, !1),
           [i, a] = (0, r.useState)(
             null == n ? void 0 : n.find((t) => t.appid == e),
           );
@@ -1551,8 +1552,8 @@
         hd: () => C,
         k1: () => b,
         kk: () => v,
-        v6: () => E,
-        yI: () => k,
+        v6: () => k,
+        yI: () => E,
       });
       var i = n(33940),
         a = n(52868),
@@ -1994,10 +1995,10 @@
       function P() {
         return g.Get().GetAllDiscountsForAllPackages();
       }
-      function E() {
+      function k() {
         return g.Get().GetGlobalCallbackList();
       }
-      function k() {
+      function E() {
         return o.useCallback(
           (t, e, n) => g.Get().LoadPackageDiscounts(t, e, n),
           [],
@@ -2181,16 +2182,16 @@
       n.d(e, {
         $w: () => B,
         AN: () => H,
-        FR: () => E,
+        FR: () => k,
         HV: () => _,
-        HX: () => j,
+        HX: () => x,
         OB: () => V,
-        OG: () => x,
+        OG: () => j,
         Ol: () => S,
         PP: () => I,
-        R2: () => M,
+        R2: () => N,
         Rs: () => F,
-        Tj: () => k,
+        Tj: () => E,
         We: () => W,
         X1: () => L,
         _w: () => D,
@@ -2207,7 +2208,7 @@
         sN: () => q,
         uT: () => K,
         xm: () => X,
-        yh: () => N,
+        yh: () => M,
       });
       var i = n(33940),
         a = n(52868),
@@ -2241,173 +2242,120 @@
             (this.m_mapPriceKeyDescriptions = new Map()),
             (this.m_mapPriceGuidelines = new Map()),
             (this.m_rgPriceLevels = []),
-            (this.m_mapMinPrices = new Map()),
-            (this.m_mapMinDiscountedPrices = new Map()),
             (this.m_strDisplayPriceKey = "USD"),
             (this.m_displayPriceKeyCallbackList = new l.pB()),
             "dev" == p.De.WEB_UNIVERSE && (window.g_PackagePricingStore = this);
         }
         Init() {
-          var t, e, n, i, a, s, o, r, c, l;
-          const u = new Set(),
-            g = (0, p.kQ)("base_prices", "application_config");
+          const t = new Set(),
+            e = (0, p.kQ)("base_prices", "application_config");
           if (
             (("dev" != p.De.WEB_UNIVERSE && "beta" != p.De.WEB_UNIVERSE) ||
               console.log(
                 "DEV_DEBUG: CPackagePricingStore loading base price payload: ",
-                g,
+                e,
               ),
-            g)
+            e)
           )
-            if (this.BIsPricePayloadValid(g))
-              for (let t in g) {
-                const e = g[t],
-                  n = parseInt(t),
-                  i = new Map();
-                this.m_mapPackagePrice.set(n, i);
-                for (let t in e) u.add(t.toUpperCase()), i.set(t, e[t]);
+            if (this.BIsPricePayloadValid(e))
+              for (let n in e) {
+                const i = e[n],
+                  a = parseInt(n),
+                  s = new Map();
+                this.m_mapPackagePrice.set(a, s);
+                for (let e in i) t.add(e.toUpperCase()), s.set(e, i[e]);
               }
             else
               "dev" == p.De.WEB_UNIVERSE &&
                 console.error("Invalid base price payload");
-          const m = (0, p.kQ)("recurring_subs", "application_config");
+          const n = (0, p.kQ)("recurring_subs", "application_config");
           if (
             (("dev" != p.De.WEB_UNIVERSE && "beta" != p.De.WEB_UNIVERSE) ||
               console.log(
                 "DEV_DEBUG: CPackagePricingStore loading recurring subscriptions payload: ",
-                m,
+                n,
               ),
-            m)
+            n)
           )
-            if (Array.isArray(m))
-              for (const t of m) this.m_setRecurringSubscriptions.add(t);
+            if (Array.isArray(n))
+              for (const t of n) this.m_setRecurringSubscriptions.add(t);
             else
               "dev" == p.De.WEB_UNIVERSE &&
                 console.error("Invalid recurring subscriptions payload");
-          const v = (0, p.kQ)("pending_proposals", "application_config");
+          const i = (0, p.kQ)("pending_proposals", "application_config");
           if (
             (("dev" != p.De.WEB_UNIVERSE && "beta" != p.De.WEB_UNIVERSE) ||
               console.log(
                 "DEV_DEBUG: CPackagePricingStore loading pending price proposal payload: ",
-                v,
+                i,
               ),
-            v)
+            i)
           )
-            if (this.BIsPendingPricePayloadValid(v))
-              for (let t in v) {
-                const e = v[t],
+            if (this.BIsPendingPricePayloadValid(i))
+              for (let t in i) {
+                const e = i[t],
                   n = parseInt(t);
                 this.m_mapPriceProposals.set(n, e);
               }
             else
               "dev" == p.De.WEB_UNIVERSE &&
                 console.error("Invalid pending price proposal payload");
-          const h = (0, p.kQ)("pricing_guidelines", "application_config");
+          const a = (0, p.kQ)("pricing_guidelines", "application_config");
           if (
             (("dev" != p.De.WEB_UNIVERSE && "beta" != p.De.WEB_UNIVERSE) ||
               console.log(
                 "DEV_DEBUG: CPackagePricingStore loading pricing guidelines payload: ",
-                h,
+                a,
               ),
-            h)
+            a)
           )
-            if (this.BIsGuidelinesPayloadValid(h)) {
-              for (let t in h) {
-                const e = h[t],
-                  n = new Map(),
-                  i = 100 * parseInt(t.substring(3));
-                this.m_rgPriceLevels.push(i),
-                  this.m_mapPriceGuidelines.set(i, n);
-                for (let t in e)
-                  u.add(t.toUpperCase()),
-                    n.set(t.toUpperCase(), parseInt(e[t]));
+            if (this.BIsGuidelinesPayloadValid(a)) {
+              for (let e in a) {
+                const n = a[e],
+                  i = new Map(),
+                  s = 100 * parseInt(e.substring(3));
+                this.m_rgPriceLevels.push(s),
+                  this.m_mapPriceGuidelines.set(s, i);
+                for (let e in n)
+                  t.add(e.toUpperCase()),
+                    i.set(e.toUpperCase(), parseInt(n[e]));
               }
               this.m_rgPriceLevels.sort((t, e) => t - e);
             } else
               "dev" == p.De.WEB_UNIVERSE &&
                 console.error("Invalid pricing guidelines payload");
-          this.m_rgKnownPriceKeys = Array.from(u).sort((t, e) =>
+          this.m_rgKnownPriceKeys = Array.from(t).sort((t, e) =>
             (0, d.eT)(P(t), P(e)),
           );
-          for (const u of this.m_rgKnownPriceKeys) {
-            const d =
-                null !==
-                  (e =
-                    null === (t = this.m_mapPriceGuidelines.get(100)) ||
-                    void 0 === t
-                      ? void 0
-                      : t.get(u)) && void 0 !== e
-                  ? e
-                  : 0,
-              p =
-                null !==
-                  (i =
-                    null === (n = this.m_mapPriceGuidelines.get(200)) ||
-                    void 0 === n
-                      ? void 0
-                      : n.get(u)) && void 0 !== i
-                  ? i
-                  : 0,
-              g =
-                null !==
-                  (s =
-                    null === (a = this.m_mapPriceGuidelines.get(300)) ||
-                    void 0 === a
-                      ? void 0
-                      : a.get(u)) && void 0 !== s
-                  ? s
-                  : 0,
-              m =
-                null !==
-                  (r =
-                    null === (o = this.m_mapPriceGuidelines.get(400)) ||
-                    void 0 === o
-                      ? void 0
-                      : o.get(u)) && void 0 !== r
-                  ? r
-                  : 0,
-              v =
-                null !==
-                  (l =
-                    null === (c = this.m_mapPriceGuidelines.get(500)) ||
-                    void 0 === c
-                      ? void 0
-                      : c.get(u)) && void 0 !== l
-                  ? l
-                  : 0;
-            this.m_mapMinPrices.set(u, Math.ceil(0.9 * d));
-            const h = Math.floor(Math.min(d / 2, p / 4, g / 6, m / 8, v / 10));
-            this.m_mapMinDiscountedPrices.set(u, h);
-          }
-          const D = (0, p.kQ)("currency_data", "application_config");
+          const s = (0, p.kQ)("currency_data", "application_config");
           if (
             (("dev" != p.De.WEB_UNIVERSE && "beta" != p.De.WEB_UNIVERSE) ||
               console.log(
                 "DEV_DEBUG: CPackagePricingStore loading currency payload: ",
-                D,
+                s,
               ),
-            D)
+            s)
           )
-            if (this.BIsCurrencyPayloadValid(D))
-              for (let t in D) {
-                const e = D[t];
+            if (this.BIsCurrencyPayloadValid(s))
+              for (let t in s) {
+                const e = s[t];
                 this.m_mapCurrencyData.set(t, e);
               }
             else
               "dev" == p.De.WEB_UNIVERSE &&
                 console.error("Invalid currency payload");
-          const _ = (0, p.kQ)("currency_descriptions", "application_config");
+          const o = (0, p.kQ)("currency_descriptions", "application_config");
           if (
             (("dev" != p.De.WEB_UNIVERSE && "beta" != p.De.WEB_UNIVERSE) ||
               console.log(
                 "DEV_DEBUG: CPackagePricingStore loading currency descriptions: ",
-                D,
+                o,
               ),
-            _)
+            o)
           )
-            if (this.BIsCurrencyDescriptionPayloadValid(_))
-              for (let t in _) {
-                const e = _[t];
+            if (this.BIsCurrencyDescriptionPayloadValid(o))
+              for (let t in o) {
+                const e = o[t];
                 this.m_mapPriceKeyDescriptions.set(t, e);
               }
             else
@@ -2488,6 +2436,24 @@
                   : e.bRequired) &&
             void 0 !== n &&
             n
+          );
+        }
+        GetMinimumBasePrice(t) {
+          var e;
+          return (
+            (null === (e = this.m_mapPriceKeyDescriptions.get(t)) ||
+            void 0 === e
+              ? void 0
+              : e.nLowestBase) || 0
+          );
+        }
+        GetMinimumDiscountPrice(t) {
+          var e;
+          return (
+            (null === (e = this.m_mapPriceKeyDescriptions.get(t)) ||
+            void 0 === e
+              ? void 0
+              : e.nLowestDiscount) || 0
           );
         }
         GetPublishedPrice(t, e) {
@@ -2898,10 +2864,10 @@
       function P(t) {
         return f.has(t) ? f.get(t) : t.indexOf("_") > 0 ? "ZZZ" + t : t;
       }
-      function E(t, e) {
+      function k(t, e) {
         return v.Get().GetPrice(t, e);
       }
-      function k(t) {
+      function E(t) {
         const e = v.Get().m_strDisplayPriceKey;
         return _(v.Get().GetPrice(t, e), e).join("");
       }
@@ -2956,35 +2922,30 @@
         );
       }
       function b(t, e) {
-        var n;
-        const i = (0, u.NW)();
-        (0, u.Qg)(v.Get().GetPriceGridCellCallbackList(t, e), i);
-        const a = v.Get().GetPrice(t, e);
-        (0, u.Qg)(v.Get().GetPriceGridCellCallbackList(t, "USD"), i);
-        const { nSuggestedPriceInCents: s, nGuidelinesLevel: r } = G(t, e),
-          c = o.useCallback((n) => v.Get().OverridePrice(t, e, n), [t, e]),
-          l = v.Get().GetPublishedPrice(t, e),
-          d = v.Get().GetProposedPrice(t, e),
-          { nMinPriceInCents: p, nMaxPriceInCents: g } = y(t, e),
-          m =
-            null !== (n = v.Get().m_mapMinDiscountedPrices.get(e)) &&
-            void 0 !== n
-              ? n
-              : 0,
-          h = a ? Math.floor((100 * (a - m)) / a) : 90,
-          D = h < Math.min(90, Math.floor((100 * (r - 50)) / r)) ? h : null;
+        const n = (0, u.NW)();
+        (0, u.Qg)(v.Get().GetPriceGridCellCallbackList(t, e), n);
+        const i = v.Get().GetPrice(t, e);
+        (0, u.Qg)(v.Get().GetPriceGridCellCallbackList(t, "USD"), n);
+        const { nSuggestedPriceInCents: a, nGuidelinesLevel: s } = G(t, e),
+          r = o.useCallback((n) => v.Get().OverridePrice(t, e, n), [t, e]),
+          c = v.Get().GetPublishedPrice(t, e),
+          l = v.Get().GetProposedPrice(t, e),
+          { nMinPriceInCents: d, nMaxPriceInCents: p } = y(t, e),
+          g = v.Get().GetMinimumDiscountPrice(e),
+          m = i ? Math.floor((100 * (i - g)) / i) : 90,
+          h = m < Math.min(90, Math.floor((100 * (s - 50)) / s)) ? m : null;
         return o.useMemo(
           () => ({
-            nPriceInCents: a,
-            nProposedPriceInCents: d,
-            nPublishedPriceInCents: l,
-            nMinPriceInCents: p,
-            nMaxPriceInCents: g,
-            nMaxDiscountPercentage: D,
-            nSuggestedPriceInCents: s,
-            fnSetPrice: c,
+            nPriceInCents: i,
+            nProposedPriceInCents: l,
+            nPublishedPriceInCents: c,
+            nMinPriceInCents: d,
+            nMaxPriceInCents: p,
+            nMaxDiscountPercentage: h,
+            nSuggestedPriceInCents: a,
+            fnSetPrice: r,
           }),
-          [a, d, l, p, g, D, s, c],
+          [i, l, c, d, p, h, a, r],
         );
       }
       function C(t) {
@@ -2996,14 +2957,11 @@
         return (0, u.Qg)(v.Get().GetPackageOverridesCallbackList(t), i), e;
       }
       function y(t, e) {
-        var n;
+        let n = v.Get();
         return {
-          nMinPriceInCents:
-            null !== (n = v.Get().m_mapMinPrices.get(e)) && void 0 !== n
-              ? n
-              : 0,
-          nMaxPriceInCents: v.Get().m_setRecurringSubscriptions.has(t)
-            ? v.Get().GetPublishedPrice(t, e)
+          nMinPriceInCents: n.GetMinimumBasePrice(e),
+          nMaxPriceInCents: n.m_setRecurringSubscriptions.has(t)
+            ? n.GetPublishedPrice(t, e)
             : null,
         };
       }
@@ -3056,11 +3014,11 @@
       function O() {
         return v.Get().m_rgKnownPriceKeys;
       }
-      function M(t) {
+      function N(t) {
         let e = v.Get().m_mapPriceKeyDescriptions.get(t);
         return e ? e.strDescription : "";
       }
-      function N(t) {
+      function M(t) {
         return o.useCallback(() => {
           v.Get().DiscardAllLocalPriceOverridesForKey(t);
         }, [t]);
@@ -3092,10 +3050,10 @@
           v.Get().BHasLocalPriceOverrides(t)
         );
       }
-      function j(t) {
+      function x(t) {
         return v.Get().BHasLocalPriceOverrides(t);
       }
-      function x() {
+      function j() {
         const [t, e] = o.useState(() => v.Get().GetAllLocalPriceOverrides());
         return (0, u.Qg)(v.Get().m_allPriceOverridesCallbackList, e), t;
       }
@@ -3166,20 +3124,21 @@
       n.d(e, {
         B6: () => R,
         E5: () => F,
-        E_: () => N,
+        E_: () => M,
         Eh: () => P,
         HU: () => O,
         JW: () => U,
-        LX: () => E,
+        LX: () => k,
         TB: () => B,
         _9: () => A,
         dy: () => T,
+        ho: () => K,
         hr: () => y,
-        k: () => j,
+        k: () => x,
         pl: () => L,
         s$: () => w,
-        yn: () => M,
-        z$: () => x,
+        yn: () => N,
+        z$: () => j,
       });
       var i = n(65395),
         a = n(16586),
@@ -3235,8 +3194,8 @@
         );
       }
       const P = 30,
-        E = P * v._H.PerDay - 1.5 * v._H.PerHour,
-        k = 10 * v._H.PerMinute;
+        k = P * v._H.PerDay - 1.5 * v._H.PerHour,
+        E = 10 * v._H.PerMinute;
       class I {
         static Get() {
           return (
@@ -3250,6 +3209,7 @@
         constructor() {
           (this.m_mapPackageStateForDiscountEvents = new Map()),
             (this.m_mapLocalPackageDiscountOverrides = new Map()),
+            (this.m_mapDiscountPackageCallbackList = new Map()),
             (this.m_mapDiscountGridCellCallbackList = new Map()),
             (this.m_mapDiscountEventColumnCallbackList = new Map()),
             (this.m_localPackageDiscountOverrideCallbackList = new p.pB()),
@@ -3306,6 +3266,24 @@
               ),
               r);
         }
+        GetHighestPackageDiscount(t) {
+          let e = this.m_mapPackageStateForDiscountEvents.get(t);
+          if (!e) return 0;
+          let n = 0;
+          return (
+            e.forEach((t, e) => {
+              var i;
+              1 == t.eState &&
+                (n = Math.max(
+                  n,
+                  (null === (i = t.discount) || void 0 === i
+                    ? void 0
+                    : i.nDiscountPct) || 0,
+                ));
+            }),
+            n
+          );
+        }
         GetLocalPackageDiscountOverrides() {
           const t = [];
           return (
@@ -3342,7 +3320,7 @@
         }
         GetPackageDiscountsIncludingOverrides(t) {
           var e;
-          const n = (0, u.kl)() - E,
+          const n = (0, u.kl)() - k,
             i = (0, s.co)(t);
           if (!i) return null;
           const a = new Map(
@@ -3363,6 +3341,16 @@
             this.m_mapDiscountGridCellCallbackList.set(t, new Map());
           const n = this.m_mapDiscountGridCellCallbackList.get(t);
           return n.has(e) || n.set(e, new p.pB()), n.get(e);
+        }
+        GetDiscountPackageCallbackList(t) {
+          if (!t) return null;
+          let e = this.m_mapDiscountPackageCallbackList.get(t);
+          return (
+            e ||
+              ((e = new p.pB()),
+              this.m_mapDiscountPackageCallbackList.set(t, e)),
+            e
+          );
         }
         GetDiscountEventColumnCallbackList(t) {
           return t
@@ -3459,6 +3447,7 @@
             }
             _(r, h.get(a.id)) ||
               (h.set(a.id, r),
+              this.GetDiscountPackageCallbackList(t).Dispatch(),
               this.GetDiscountGridCellCallbackList(t, a.id).Dispatch(r),
               this.GetDiscountEventColumnCallbackList(a.id).Dispatch(
                 this.GetAllPackageStatesForDiscountEvent(a.id),
@@ -3485,7 +3474,7 @@
               (t, e) => t.rtStartDate - e.rtStartDate,
             ),
             s = (0, u.kl)(),
-            o = Math.max(s, e.GetReleaseDateRTime() + E, (0, D.QM)(t) + E),
+            o = Math.max(s, e.GetReleaseDateRTime() + k, (0, D.QM)(t) + k),
             r = [],
             l = new Set();
           let p = o;
@@ -3493,13 +3482,13 @@
             const n = a[e];
             if (0 == n.nDiscountPct) continue;
             const s = (0, i.fH)(n.discountEventID);
-            let o = n.rtStartDate - E;
+            let o = n.rtStartDate - k;
             const u = "unique" == (null == s ? void 0 : s.collision_type);
-            if (u && ((o = n.rtStartDate + k), e + 1 < a.length)) {
+            if (u && ((o = n.rtStartDate + E), e + 1 < a.length)) {
               const t = a[e + 1],
                 n = (0, D.f0)(t.discountEventID);
               "unique" != (null == n ? void 0 : n.collision_type) &&
-                (o = Math.min(o, t.rtStartDate - E));
+                (o = Math.min(o, t.rtStartDate - k));
             }
             if (p + v._H.PerDay < o) {
               const e = {
@@ -3524,13 +3513,13 @@
             if (
               (r.push(d),
               l.add(n.discountEventID),
-              (p = n.rtEndDate + E),
-              u && ((p = n.rtEndDate - k), e - 1 >= 0))
+              (p = n.rtEndDate + k),
+              u && ((p = n.rtEndDate - E), e - 1 >= 0))
             ) {
               const t = a[e - 1],
                 n = (0, D.f0)(t.discountEventID);
               "unique" != (null == n ? void 0 : n.collision_type) &&
-                (p = Math.max(p, t.rtEndDate + E));
+                (p = Math.max(p, t.rtEndDate + k));
             }
             const g = (0, c._)(p);
             g - p <= 2 * v._H.PerHour && (p = g);
@@ -3580,7 +3569,7 @@
         const s = [];
         let o = !1;
         const r = d.Z.Get().GetPackage(t);
-        if ((null == r ? void 0 : r.GetReleaseDateRTime()) > e.start_date - E)
+        if ((null == r ? void 0 : r.GetReleaseDateRTime()) > e.start_date - k)
           return (
             (a = 6),
             {
@@ -3589,7 +3578,7 @@
               bChangedLocally: o,
             }
           );
-        if ((0, D.QM)(t) > e.start_date - E)
+        if ((0, D.QM)(t) > e.start_date - k)
           return (
             (a = 7),
             {
@@ -3604,8 +3593,8 @@
             r =
               "unique" == e.collision_type ||
               "unique" == (null == n ? void 0 : n.collision_type),
-            c = r ? e.start_date + k : e.start_date - E,
-            l = r ? e.end_date - k : e.end_date + E;
+            c = r ? e.start_date + E : e.start_date - k,
+            l = r ? e.end_date - E : e.end_date + k;
           if (t.rtEndDate > c && l > t.rtStartDate) {
             if (((o = o || t.bChangedLocally), 0 == t.nDiscountPct)) continue;
             s.push(t), (a = r ? 9 : 8);
@@ -3745,7 +3734,7 @@
             : 0
           : null;
       }
-      function M(t, e) {
+      function N(t, e) {
         const [n, i] = l.useState(() => {
           var n;
           return null ===
@@ -3765,7 +3754,7 @@
           ),
         };
       }
-      function N() {
+      function M() {
         return l.useCallback((t, e, n) => {
           const i = [];
           for (const a of n) {
@@ -3863,7 +3852,7 @@
           )
         );
       }
-      function j(t) {
+      function x(t) {
         if ((0, s.kk)(t)) return !0;
         const e = (0, i.fH)(t);
         if (!(null == e ? void 0 : e.opt_in_name)) return !0;
@@ -3873,7 +3862,7 @@
           n.some((t) => !t.restricted && !t.pruned)
         );
       }
-      function x(t) {
+      function j(t) {
         const e = (function () {
             const [t, e] = l.useState(I.IsInitialized());
             return (0, g.Qg)(I.s_initializationCallbackList, e), t;
@@ -3893,6 +3882,13 @@
           n
         );
       }
+      function K(t) {
+        let [e, n] = l.useState(() => I.Get().GetHighestPackageDiscount(t)),
+          i = l.useCallback(() => {
+            n(I.Get().GetHighestPackageDiscount(t));
+          }, [t, n]);
+        return (0, g.Qg)(I.Get().GetDiscountPackageCallbackList(t), i), e;
+      }
       I.s_initializationCallbackList = new p.pB();
     },
     86873: (t, e, n) => {
@@ -3900,7 +3896,7 @@
       n.d(e, {
         $f: () => f,
         D_: () => I,
-        P6: () => k,
+        P6: () => E,
         QM: () => g,
         Zq: () => P,
         f0: () => v,
@@ -3908,7 +3904,7 @@
         ix: () => h,
         wQ: () => m,
         x9: () => _,
-        y4: () => E,
+        y4: () => k,
       });
       var i = n(89526),
         a = n(85651),
@@ -4139,12 +4135,12 @@
           e
         );
       }
-      function E(t = !0) {
+      function k(t = !0) {
         const [e, n] = i.useState(p.Get().GetEventSelectionParameters()),
           a = t ? p.Get().m_gridEventSelectionParametersCallbackList : null;
         return (0, o.Qg)(a, n), e;
       }
-      function k() {
+      function E() {
         const [t, e] = i.useState(p.Get().m_eRelatedDiscountView);
         (0, o.Qg)(p.Get().m_RelatedDiscountViewCallbackList, e);
         return [
@@ -4165,14 +4161,14 @@
     93923: (t, e, n) => {
       "use strict";
       n.d(e, {
-        A$: () => E,
-        Eg: () => S,
-        Ii: () => I,
-        JP: () => G,
-        O7: () => P,
-        UA: () => _,
-        zQ: () => h,
-        zV: () => f,
+        A$: () => G,
+        Eg: () => y,
+        Ii: () => b,
+        JP: () => C,
+        O7: () => I,
+        UA: () => k,
+        zQ: () => f,
+        zV: () => E,
       });
       var i = n(89526),
         a = n(84343),
@@ -4184,44 +4180,67 @@
         u = n(61785),
         d = n(66104),
         p = n(64403),
-        g = n.n(p);
-      function m(t) {
+        g = n.n(p),
+        m = n(36998),
+        v = n(16169);
+      function h(t) {
+        const { cell: e } = t,
+          n = e.getRow().getData().packageID || 0,
+          a = (0, v.ho)(n);
+        let s = (0, m.Qy)(n) < a,
+          r = g()(c().PackageNameColumn, s && c().PackagePricesBelowMin),
+          l = s
+            ? (0, o.Xx)("#PackageGrid_VisitPackageDiscount_Tooltip_Error")
+            : (0, o.Xx)("#PackageGrid_VisitPackagePricing_Tooltip");
+        return i.createElement(
+          _,
+          Object.assign({ className: r, toolTip: l }, t),
+        );
+      }
+      function D(t) {
         const { cell: e } = t,
           n = e.getRow().getData().packageID || 0,
           a = (0, d.qH)(n);
-        let s = g()(c().PackageNameColumn, a && c().PackagePricesBelowMin);
-        return i.createElement(v, Object.assign({ className: s }, t));
+        let s = g()(c().PackageNameColumn, a && c().PackagePricesBelowMin),
+          r = a
+            ? (0, o.Xx)("#PackageGrid_VisitPackagePricing_Tooltip_Error")
+            : (0, o.Xx)("#PackageGrid_VisitPackagePricing_Tooltip");
+        return i.createElement(
+          _,
+          Object.assign({ className: s, toolTip: r }, t),
+        );
       }
-      function v(t) {
+      function _(t) {
         var e;
         const {
             fnBLocalChangesExist: n,
             fnWarnUser: a,
             cell: r,
             className: l,
+            toolTip: u,
           } = t,
-          u = r.getRow().getData().packageID,
-          d =
+          d = r.getRow().getData().packageID,
+          p =
             null !== (e = r.getValue()) && void 0 !== e
               ? e
               : i.createElement(
                   "span",
                   { className: c().UnknownValue },
-                  (0, o.Xx)("#PackageGrid_PackageID", u),
+                  (0, o.Xx)("#PackageGrid_PackageID", d),
                 );
         return i.createElement(
-          S,
+          y,
           {
             fnBLocalChangesExist: n,
             fnWarnUser: a,
-            href: `${s.De.PARTNER_BASE_URL}store/packagelanding/${u}`,
-            strToolTip: (0, o.Xx)("#PackageGrid_VisitPackagePricing_Tooltip"),
+            href: `${s.De.PARTNER_BASE_URL}store/packagelanding/${d}`,
+            strToolTip: u,
             strClassName: l,
           },
-          d,
+          p,
         );
       }
-      function h(t) {
+      function f(t) {
         return i.useMemo(
           () => ({
             visible: !0,
@@ -4229,7 +4248,7 @@
             field: "packageID",
             headerSort: !1,
             formatter: (0, l.reactFormatter)(
-              i.createElement(v, Object.assign({}, t)),
+              i.createElement(_, Object.assign({}, t)),
             ),
             cssClass: c().PackageID,
             hozAlign: "right",
@@ -4239,7 +4258,7 @@
           [t],
         );
       }
-      function D(t, e, n, i) {
+      function P(t, e, n, i) {
         return (
           !!(
             /^\d+$/.test(t) &&
@@ -4248,14 +4267,16 @@
           ) || e.toLowerCase().includes(t.toLowerCase())
         );
       }
-      function _(t) {
+      function k(t, e) {
         return i.useMemo(
           () => ({
             title: (0, o.Xx)("#PackageGrid_Column_PackageName"),
             field: "packageName",
             headerSort: !1,
             formatter: (0, l.reactFormatter)(
-              i.createElement(m, Object.assign({}, t)),
+              e
+                ? i.createElement(h, Object.assign({}, t))
+                : i.createElement(D, Object.assign({}, t)),
             ),
             cssClass: c().PackageName,
             width: 300,
@@ -4266,12 +4287,12 @@
             headerFilterPlaceholder: (0, o.Xx)(
               "#PackageGrid_PackageNameFilterInputPrompt",
             ),
-            headerFilterFunc: D,
+            headerFilterFunc: P,
           }),
-          [t],
+          [t, e],
         );
       }
-      function f(t) {
+      function E(t) {
         return i.useMemo(
           () => ({
             visible: !1,
@@ -4283,7 +4304,7 @@
           [],
         );
       }
-      function P(t) {
+      function I(t) {
         return i.useMemo(
           () => ({
             visible: !1,
@@ -4297,13 +4318,13 @@
           [],
         );
       }
-      function E(t) {
+      function G(t) {
         const e = t.getCell("packageType"),
           n = e && "function" == typeof e.getValue && e.getValue();
         n && t.getElement().classList.add(n),
           t.getNextRow() || t.getElement().classList.add(c().LastRow);
       }
-      function k(t) {
+      function S(t) {
         var e;
         const { fnBLocalChangesExist: n, fnWarnUser: a, cell: r } = t,
           c = r.getRow().getData().appids,
@@ -4313,7 +4334,7 @@
               : 0,
           u = r.getRow().getData().packageID;
         return i.createElement(
-          S,
+          y,
           {
             fnBLocalChangesExist: n,
             fnWarnUser: a,
@@ -4323,7 +4344,7 @@
           1 == l ? "1 appid" : l + " appids",
         );
       }
-      function I(t) {
+      function b(t) {
         return i.useMemo(
           () => ({
             title: (0, o.Xx)("#PackageGrid_Column_AppName"),
@@ -4331,7 +4352,7 @@
             sorter: u.yh,
             headerSort: !1,
             formatter: (0, l.reactFormatter)(
-              i.createElement(k, Object.assign({}, t)),
+              i.createElement(S, Object.assign({}, t)),
             ),
             cssClass: c().AppCount,
             width: 80,
@@ -4341,7 +4362,7 @@
           [t],
         );
       }
-      function G(t, e, n, i) {
+      function C(t, e, n, i) {
         return t == (0, o.Xx)("#PackageGrid_NoBaseGameFoundForPackage")
           ? `<div title='${(0, o.Xx)(
               "#PackageGrid_NoBaseGameExplanation",
@@ -4354,7 +4375,7 @@
               e,
             )})</span></div>`;
       }
-      function S(t) {
+      function y(t) {
         const {
           fnBLocalChangesExist: e,
           fnWarnUser: n,

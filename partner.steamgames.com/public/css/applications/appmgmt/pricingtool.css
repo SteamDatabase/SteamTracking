@@ -618,6 +618,7 @@ div.pricinggridcell_HoverToolTip_36qS7 {
   display: flex;
   flex-direction: row;
   align-items: center;
+  padding: 0;
 }
 .tabulator.tabulator .tabulator-cell.tabulator-cell.tabulator-frozen-left {
   border-right: 3px solid #303238;
@@ -703,10 +704,8 @@ div.pricinggridcell_HoverToolTip_36qS7 {
   z-index: 400;
   background: #2c2f35;
   width: fit-content !important;
+  min-width: 100%;
   box-shadow: 2px 2px 10px #000;
-  margin-left: -8px;
-  padding-left: 8px;
-  padding-right: 8px;
   box-sizing: border-box;
   border-radius: 2px;
 }
@@ -714,6 +713,7 @@ div.pricinggridcell_HoverToolTip_36qS7 {
   .tabulator-cell.tabulator-cell.gridcomponents_PackageName_t8fSj
   .formatterCell {
   display: block;
+  height: 100%;
 }
 .tabulator.tabulator
   .tabulator-cell.tabulator-cell.gridcomponents_PackageName_t8fSj
@@ -723,14 +723,32 @@ div.pricinggridcell_HoverToolTip_36qS7 {
   line-height: 33px;
   overflow: hidden;
   text-overflow: ellipsis;
+  text-shadow: 1px 1px #000;
 }
 .tabulator.tabulator
   .tabulator-cell.tabulator-cell.gridcomponents_PackageType_3LZvj {
   color: #fff;
   justify-content: center;
 }
-.gridcomponents_PackagePricesBelowMin_2x4be {
-  background-color: #973620;
+.gridcomponents_PackageNameColumn_2pjx8 {
+  padding: 4px 8px;
+}
+.gridcomponents_PackageNameColumn_2pjx8.gridcomponents_PackagePricesBelowMin_2x4be {
+  position: relative;
+  border: 1px dashed #c22d00;
+  box-sizing: border-box;
+  height: 100%;
+}
+.gridcomponents_PackageNameColumn_2pjx8.gridcomponents_PackagePricesBelowMin_2x4be:after {
+  position: absolute;
+  right: 5px;
+  top: 8px;
+  content: "!";
+  color: #000;
+  font-weight: 800;
+  background: #c22d00;
+  border-radius: 25px;
+  padding: 1px 9px;
 }
 .guidelinespicker_PriceGuidelinesPicker_4Xo2k {
   background-color: #515661;

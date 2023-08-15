@@ -100,13 +100,23 @@
               strErrorMsg: e.response.data.message,
               errorCode: e.response.data.success,
             };
+          if ("success" in e.response.data)
+            return {
+              strErrorMsg: "error code: " + e.response.data.success,
+              errorCode: e.response.data.success,
+            };
         } else if ("object" == typeof e.data) {
           if ("msg" in e.data)
             return { strErrorMsg: e.data.msg, errorCode: e.data.success };
           if ("err_msg" in e.data)
             return { strErrorMsg: e.data.err_msg, errorCode: e.data.success };
-          if ("message" in e.response.data)
+          if ("message" in e.data)
             return { strErrorMsg: e.data.message, errorCode: e.data.success };
+          if ("success" in e.data)
+            return {
+              strErrorMsg: "error code: " + e.data.success,
+              errorCode: e.data.success,
+            };
         } else {
           if (void 0 !== e.success && void 0 !== e.msg)
             return { strErrorMsg: e.msg, errorCode: e.success };
@@ -376,8 +386,8 @@
                   (0, _.Xx)("#CookiePref_AcceptAll"),
                 ),
               ),
-              s.createElement(y, { settings: e }),
               s.createElement(C, { settings: e }),
+              s.createElement(y, { settings: e }),
               s.createElement(v, { settings: e }),
             ),
             s.createElement(
@@ -541,7 +551,7 @@
             null,
           );
         }),
-        y = (0, f.Pi)((e) => {
+        C = (0, f.Pi)((e) => {
           const { settings: t } = e,
             r = (0, s.useCallback)(() => {
               t.ToggleRecentApps();
@@ -571,7 +581,7 @@
             ),
           );
         }),
-        C = (0, f.Pi)((e) => {
+        y = (0, f.Pi)((e) => {
           const { settings: t } = e,
             r = (0, s.useCallback)(() => {
               t.ToggleImpressions();

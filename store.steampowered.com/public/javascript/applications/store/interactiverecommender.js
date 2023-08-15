@@ -144,13 +144,23 @@
               strErrorMsg: e.response.data.message,
               errorCode: e.response.data.success,
             };
+          if ("success" in e.response.data)
+            return {
+              strErrorMsg: "error code: " + e.response.data.success,
+              errorCode: e.response.data.success,
+            };
         } else if ("object" == typeof e.data) {
           if ("msg" in e.data)
             return { strErrorMsg: e.data.msg, errorCode: e.data.success };
           if ("err_msg" in e.data)
             return { strErrorMsg: e.data.err_msg, errorCode: e.data.success };
-          if ("message" in e.response.data)
+          if ("message" in e.data)
             return { strErrorMsg: e.data.message, errorCode: e.data.success };
+          if ("success" in e.data)
+            return {
+              strErrorMsg: "error code: " + e.data.success,
+              errorCode: e.data.success,
+            };
         } else {
           if (void 0 !== e.success && void 0 !== e.msg)
             return { strErrorMsg: e.msg, errorCode: e.success };
@@ -754,12 +764,12 @@
         (0, a.gn)([_.ak], R.prototype, "shouldUseMicrotrailers", null);
       const f = new R();
       window.g_InteractiveRecommender = f;
-      var A = i(32905);
+      var C = i(32905);
       !(function () {
         let e = (0, n.kQ)("ir_config", "application_config");
         e && (Object.assign(T, e), f.Init());
       })();
-      const L = ({ accountID: e }) => {
+      const A = ({ accountID: e }) => {
           const t = f.getInputApps(),
             i = Object.keys(t).length;
           let s = 0;
@@ -796,7 +806,7 @@
             )
           );
         },
-        C = ({ appID: e, name: t, hours: i, lastPlayed: s, ignored: a }) => {
+        L = ({ appID: e, name: t, hours: i, lastPlayed: s, ignored: a }) => {
           const n = `${T.CDN_URL}apps/${e}/header.jpg`,
             r = Date.now() / 1e3 - s;
           let o = "",
@@ -865,7 +875,7 @@
             Object.keys(i).map((e) => {
               const s = i[e];
               t.push(
-                l.createElement(C, {
+                l.createElement(L, {
                   key: "PlayedGame_" + s.a,
                   appID: s.a,
                   name: s.t,
@@ -883,7 +893,7 @@
                 { className: u.Header },
                 (0, p.Xx)("#PlaytimeList_Header"),
               ),
-              l.createElement(L, { accountID: this.props.accountID }),
+              l.createElement(A, { accountID: this.props.accountID }),
               l.createElement("div", { className: u.List }, t),
             )
           );
@@ -1232,9 +1242,9 @@
             y = Math.min(Number(t) / 10, 1e3);
           Math.max(1, t);
           let R = !1,
-            A = !1,
-            L = !0,
-            C = "",
+            C = !1,
+            A = !0,
+            L = "",
             N = "",
             I = "",
             D = "";
@@ -1245,8 +1255,8 @@
             const e = f.getDetails(this.props.appID);
             e &&
               ((R = !0),
-              (A = e.discount_pct > 0),
-              (L = "0" == e.discount_price),
+              (C = e.discount_pct > 0),
+              (A = "0" == e.discount_price),
               "probably" ==
               document
                 .createElement("video")
@@ -1257,9 +1267,9 @@
                 : f.shouldUseMicrotrailers() && e.microtrailer_mp4
                 ? ((x = e.microtrailer_mp4), (P = !0), (U = !1))
                 : (x = e.video_mp4),
-              (C = `-${e.discount_pct}%`),
+              (L = `-${e.discount_pct}%`),
               (N = e.base_price),
-              (I = L ? (0, p.Xx)("#FreeToPlay") : e.discount_price),
+              (I = A ? (0, p.Xx)("#FreeToPlay") : e.discount_price),
               (D = e.description));
           }
           const M = x && x.length > 0;
@@ -1387,7 +1397,7 @@
                               u.PurchaseBG,
                             ),
                           },
-                          A &&
+                          C &&
                             l.createElement(
                               "div",
                               {
@@ -1397,7 +1407,7 @@
                               l.createElement(
                                 "div",
                                 { className: "discount_pct" },
-                                C,
+                                L,
                               ),
                               l.createElement(
                                 "div",
@@ -1414,7 +1424,7 @@
                                 ),
                               ),
                             ),
-                          !A &&
+                          !C &&
                             l.createElement(
                               "div",
                               {
@@ -1426,7 +1436,7 @@
                               },
                               I,
                             ),
-                          !L &&
+                          !A &&
                             l.createElement(
                               "div",
                               {
@@ -1449,7 +1459,7 @@
                         ),
                       ),
                       !this.state.wishlisted &&
-                        !L &&
+                        !A &&
                         l.createElement(
                           "div",
                           {
@@ -1468,7 +1478,7 @@
                           ),
                         ),
                       this.state.wishlisted &&
-                        !L &&
+                        !A &&
                         l.createElement(
                           "div",
                           {
@@ -1627,7 +1637,7 @@
           window.addEventListener("resize", this.updateDimensions);
         }
         ShowLoginDialog() {
-          (0, A.X)();
+          (0, C.X)();
         }
         render() {
           return n.L7.logged_in

@@ -3,7 +3,7 @@
 (self.webpackChunklegacy_web = self.webpackChunklegacy_web || []).push([
   [511],
   {
-    279: (e) => {
+    369: (e) => {
       e.exports = {
         FocusRingRoot: "focusring_FocusRingRoot_3PH_X",
         FocusRing: "focusring_FocusRing_1IZrQ",
@@ -15,12 +15,12 @@
         FocusRingOnHiddenItem: "focusring_FocusRingOnHiddenItem_2OusV",
       };
     },
-    369: (e, t, n) => {
+    259: (e, t, n) => {
       "use strict";
       n.d(t, { Pf: () => r, y5: () => a });
       var i = n(655),
-        o = n(823),
-        s = n(184);
+        o = n(931),
+        s = n(50);
       class r {
         constructor() {
           SteamClient.BrowserView.RegisterForMessageFromParent(this.OnMessage);
@@ -80,7 +80,7 @@
       }
       (0, i.gn)([o.a], a.prototype, "OnMessage", null);
     },
-    184: (e, t, n) => {
+    50: (e, t, n) => {
       "use strict";
       n.d(t, { i: () => o, l: () => i });
       const i = "GamepadInput";
@@ -93,14 +93,14 @@
           (e[(e.Full = 4)] = "Full");
       })(o || (o = {}));
     },
-    560: (e, t, n) => {
+    177: (e, t, n) => {
       "use strict";
       n.r(t), n.d(t, { InitializeGamepadNavigation: () => ht });
       var i,
         o = n(655),
         s = n(311),
         r = n.n(s),
-        a = n(337);
+        a = n(95);
       !(function (e) {
         (e[(e.GAMEPAD = 0)] = "GAMEPAD"),
           (e[(e.KEYBOARD = 1)] = "KEYBOARD"),
@@ -160,10 +160,10 @@
           l
         );
       }
-      var g = n(823),
-        _ = n(184),
-        v = n(601),
-        p = n(369);
+      var g = n(931),
+        _ = n(50),
+        v = n(657),
+        p = n(259);
       class f {
         constructor(e) {
           (this.m_bIsGamepadInputExternallyControlled = !1),
@@ -571,7 +571,7 @@
             : console.assert(!!e, t, ...n)
           : e || console.warn(t, ...n);
       }
-      var y = n(757);
+      var y = n(115);
       class B extends class {
         GetObject(e) {
           return (0, o.mG)(this, void 0, void 0, function* () {
@@ -976,7 +976,7 @@
           );
         }
       }
-      var Y = n(216);
+      var Y = n(841);
       const X = new G("FocusNavigation").Debug,
         z = new G("GamepadEvents").Debug;
       class Q {
@@ -3520,7 +3520,7 @@
         "OnMessage",
         null,
       );
-      var $e = n(279),
+      var $e = n(369),
         je = n.n($e);
       function Ye(e) {
         let t = 0;
