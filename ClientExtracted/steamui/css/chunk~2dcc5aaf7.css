@@ -5461,6 +5461,25 @@ button.controllerconfiguratormapping_Button_hv-G3.DialogButton:enabled:active:ho
 .controllerconfiguratormapping_Field_1LWDA .Focusable {
   scroll-margin: 20px 0 55px 0;
 }
+.controllerconfiguratormapping_Field_1LWDA.DesktopUI
+  .controllerconfiguratormapping_FieldChildrenWithIcon_c62fh,
+.controllerconfiguratormapping_Field_1LWDA.DesktopUI
+  .controllerconfiguratormapping_FieldChildrenInner_FevXG,
+.DesktopUI
+  .controllerconfiguratormapping_Field_1LWDA
+  .controllerconfiguratormapping_FieldChildrenWithIcon_c62fh,
+.DesktopUI
+  .controllerconfiguratormapping_Field_1LWDA
+  .controllerconfiguratormapping_FieldChildrenInner_FevXG {
+  flex-shrink: 0;
+}
+.controllerconfiguratormapping_Field_1LWDA.DesktopUI
+  .controllerconfiguratormapping_FieldChildrenInner_FevXG,
+.DesktopUI
+  .controllerconfiguratormapping_Field_1LWDA
+  .controllerconfiguratormapping_FieldChildrenInner_FevXG {
+  display: flex;
+}
 .controllerconfiguratormapping_FieldClickTarget_2E3QT {
   position: absolute;
   left: 0;
@@ -5471,23 +5490,34 @@ button.controllerconfiguratormapping_Button_hv-G3.DialogButton:enabled:active:ho
   background: red;
   opacity: 0.1;
 }
-.controllerconfiguratormapping_FieldChildren_1OBro > svg {
+.controllerconfiguratormapping_FieldChildrenInner_FevXG {
+  flex-grow: 1;
+}
+.controllerconfiguratormapping_FieldChildrenInner_FevXG > svg {
   height: 1em;
   width: auto;
 }
-.controllerconfiguratormapping_FieldChildren_1OBro > svg:not(:first-child) {
+.controllerconfiguratormapping_FieldChildrenInner_FevXG
+  > svg:not(:first-child) {
   margin-left: 16px;
 }
-.controllerconfiguratormapping_FieldChildren_1OBro .DialogInputLabelGroup {
+.controllerconfiguratormapping_FieldChildrenInner_FevXG .DialogInputLabelGroup {
   margin-bottom: 0px;
 }
-.controllerconfiguratormapping_FieldLeadIcon_2DiD3 {
-  margin-right: 16px;
+.controllerconfiguratormapping_FieldIcon_3SulS {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-shrink: 0;
+  flex-grow: 0;
 }
-.controllerconfiguratormapping_FieldLeadIcon_2DiD3 svg {
+.controllerconfiguratormapping_FieldIcon_3SulS.controllerconfiguratormapping_Front_2dPAC {
+  padding-right: 10px;
+}
+.controllerconfiguratormapping_FieldIcon_3SulS.controllerconfiguratormapping_BeforeChildren_jT9C4 {
+  padding-right: max(10px, var(--field-row-children-spacing));
+}
+.controllerconfiguratormapping_FieldIcon_3SulS svg {
   height: 20px;
 }
 .controllerconfiguratormapping_FieldLabelRow_12K-G {
@@ -5509,34 +5539,39 @@ button.controllerconfiguratormapping_Button_hv-G3.DialogButton:enabled:active:ho
   .controllerconfiguratormapping_FieldLabelRow_12K-G {
   row-gap: var(--field-row-children-spacing);
 }
+#QuickAccess-Menu
+  .controllerconfiguratormapping_Field_1LWDA.controllerconfiguratormapping_ChildrenWidthFixed_YecsL
+  .controllerconfiguratormapping_FieldChildrenWithIcon_c62fh {
+  min-width: 270px;
+}
 .controllerconfiguratormapping_Field_1LWDA.controllerconfiguratormapping_ChildrenWidthFixed_YecsL
-  .controllerconfiguratormapping_FieldChildren_1OBro {
+  .controllerconfiguratormapping_FieldChildrenInner_FevXG {
   min-width: var(--gamepad-field-control-min-width, 250px);
 }
 .controllerconfiguratormapping_Field_1LWDA.controllerconfiguratormapping_ChildrenWidthFixed_YecsL
-  .controllerconfiguratormapping_FieldChildren_1OBro.DesktopUI,
+  .controllerconfiguratormapping_FieldChildrenInner_FevXG.DesktopUI,
 .DesktopUI
   .controllerconfiguratormapping_Field_1LWDA.controllerconfiguratormapping_ChildrenWidthFixed_YecsL
-  .controllerconfiguratormapping_FieldChildren_1OBro {
+  .controllerconfiguratormapping_FieldChildrenInner_FevXG {
   min-width: 0px;
 }
 #QuickAccess-Menu
   .controllerconfiguratormapping_Field_1LWDA.controllerconfiguratormapping_ChildrenWidthFixed_YecsL
-  .controllerconfiguratormapping_FieldChildren_1OBro {
-  min-width: 270px;
+  .controllerconfiguratormapping_FieldChildrenInner_FevXG {
+  min-width: 0px;
+}
+.controllerconfiguratormapping_FieldChildrenWithIcon_c62fh {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
 }
 .controllerconfiguratormapping_Field_1LWDA.controllerconfiguratormapping_ChildrenWidthGrow_2s0cl
-  .controllerconfiguratormapping_FieldChildren_1OBro {
+  .controllerconfiguratormapping_FieldChildrenWithIcon_c62fh {
   flex-grow: 1;
 }
 .controllerconfiguratormapping_Field_1LWDA.controllerconfiguratormapping_WithFirstRow_1NBbg.controllerconfiguratormapping_WithChildrenBelow_7IoKb.controllerconfiguratormapping_ExtraPaddingOnChildrenBelow_3yqnX
-  .controllerconfiguratormapping_FieldChildren_1OBro {
+  .controllerconfiguratormapping_FieldChildrenWithIcon_c62fh {
   padding-top: var(--field-row-children-spacing);
-}
-.controllerconfiguratormapping_FieldChildren_1OBro.DesktopUI,
-.DesktopUI .controllerconfiguratormapping_FieldChildren_1OBro {
-  display: flex;
-  flex-shrink: 0;
 }
 .controllerconfiguratormapping_FieldLabel_kUF-O {
   font-size: 16px;
@@ -5594,7 +5629,7 @@ button.controllerconfiguratormapping_Button_hv-G3.DialogButton:enabled:active:ho
   line-height: 18px;
 }
 .controllerconfiguratormapping_Field_1LWDA.controllerconfiguratormapping_WithChildrenBelow_7IoKb
-  .controllerconfiguratormapping_FieldChildren_1OBro
+  .controllerconfiguratormapping_FieldChildrenWithIcon_c62fh
   + .controllerconfiguratormapping_FieldDescription_Moi6v {
   margin-top: 6px;
 }
@@ -34427,7 +34462,18 @@ a.appdetailsbroadcastsection_ViewBroadcastOnWeb_1Z3B4:hover {
   transition-delay: 0.2s;
   pointer-events: none;
 }
+.appactivityday_CarouselThumb_1Lot-
+  .appactivityday_ImageWrapper_rRIYi
+  .appactivityday_SpoilerOverlay_1oYvb {
+  top: 15px;
+  bottom: 15px;
+  font-size: 11px;
+  text-align: center;
+}
 .appactivityday_ActiveScreenshot_290Dq:hover
+  .appactivityday_ImageWrapper_rRIYi
+  .appactivityday_SpoilerOverlay_1oYvb,
+.appactivityday_CarouselThumb_1Lot-:hover
   .appactivityday_ImageWrapper_rRIYi
   .appactivityday_SpoilerOverlay_1oYvb {
   opacity: 0;
@@ -57667,7 +57713,7 @@ button.appdetailsheader_ExitEditModeButton_i7jBC.appdetailsheader_ExitEditModeBu
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: baseline;
+  align-items: stretch;
 }
 .gyroscopenoisebar_NoiseMeterBase_4EsG0
   .gyroscopenoisebar_Row_3EvK-

@@ -2,8 +2,8 @@ __TEXT
 
 __text
 __TEXT
-`
-`
+@
+@
 __stubs
 __TEXT
 __stub_helper
@@ -1127,7 +1127,7 @@ GetCPUInformation().m_bSSE2 || IsARM()
 !"Failed to kill existing helper process"
 m_hCEFHandle == INVALID_PROCESS_HANDLE
 wt
-[Config]# Product information.ProductName=cefwebhelperProductVersion=%u# Required to enable crash dump upload.ServerURL=%s# Disable rate limiting so that all crashes are uploaded.RateLimitEnabled=trueMaxUploadsPerDay=5[CrashKeys]Vendor=smallUserID=smallBuildID=smallSteamUniverse=small
+[Config]# Product information.ProductName=cefwebhelperProductVersion=%u# Required to enable crash dump upload.ServerURL=%s# Disable rate limiting so that all crashes are uploaded.RateLimitEnabled=trueMaxUploadsPerDay=5[CrashKeys]Vendor=smallUserID=smallBuildID=smallPlatform=smallSteamUniverse=small
 https://crash.steampowered.com/submit
 BREAKPAD_DUMP_LOCATION
 -lang=%s
@@ -2429,6 +2429,7 @@ Ic
 
 
 Hi
+)
 `
 0
 0
@@ -2473,6 +2474,7 @@ IcE
 @
 V
 =
+F
 =
 !
 @
@@ -2508,4 +2510,3 @@ M9e
 0
 0
 0
-[

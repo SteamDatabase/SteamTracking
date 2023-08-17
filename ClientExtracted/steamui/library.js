@@ -1,4 +1,4 @@
-var CLSTAMP = "8263200";
+var CLSTAMP = "8275212";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -108,9 +108,12 @@ var CLSTAMP = "8263200";
           WithBottomSeparator: "gamepaddialog_WithBottomSeparator_1lUZx",
           Disabled: "gamepaddialog_Disabled_1pmyx",
           Clickable: "gamepaddialog_Clickable_27UVY",
+          FieldChildrenWithIcon: "gamepaddialog_FieldChildrenWithIcon_2ZQ9w",
+          FieldChildrenInner: "gamepaddialog_FieldChildrenInner_3N47t",
           FieldClickTarget: "gamepaddialog_FieldClickTarget_TN6vN",
-          FieldChildren: "gamepaddialog_FieldChildren_14_HB",
-          FieldLeadIcon: "gamepaddialog_FieldLeadIcon_OKYIj",
+          FieldIcon: "gamepaddialog_FieldIcon_1sC68",
+          Front: "gamepaddialog_Front_YngiU",
+          BeforeChildren: "gamepaddialog_BeforeChildren_1qtqB",
           FieldLabelRow: "gamepaddialog_FieldLabelRow_H9WOq",
           VerticalAlignCenter: "gamepaddialog_VerticalAlignCenter_3XNvA",
           InlineWrapShiftsChildrenBelow:
@@ -242,7 +245,6 @@ var CLSTAMP = "8263200";
             "gamepadslider_VerticalLineSliderHandle_i3l9t",
           ParenSliderHandle: "gamepadslider_ParenSliderHandle_3ZGME",
           Left: "gamepadslider_Left_1PL0a",
-          SliderControlWithIcon: "gamepadslider_SliderControlWithIcon_2M8Pt",
           Icon: "gamepadslider_Icon_21uKi",
           SliderNotchContainer: "gamepadslider_SliderNotchContainer_2N-a5",
           SliderNotch: "gamepadslider_SliderNotch_3x6ve",
@@ -4050,9 +4052,9 @@ var CLSTAMP = "8263200";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Aug 14 2023 : 12:04:59",
-                BUILD_TIME_UTC: "Aug 14 2023 : 19:04:59",
-                BUILD_RTIME_UTC: 1692039899,
+                BUILD_TIME_LOCAL: "Aug 17 2023 : 14:01:35",
+                BUILD_TIME_UTC: "Aug 17 2023 : 21:01:35",
+                BUILD_RTIME_UTC: 1692306095,
               }.MOBILE_BUILD)
             ) {
               window.addEventListener("beforeunload", (e) => {
@@ -23211,7 +23213,7 @@ var CLSTAMP = "8263200";
             CDragDropCoordinator: () => Y.yu,
             CheckboxField: () => n.ji,
             Column: () => n.sg,
-            CompoundSliderField: () => Xe,
+            CompoundSliderField: () => je,
             Content: () => n.VY,
             ContentForm: () => n.oX,
             ControlsList: () => ae,
@@ -23240,18 +23242,17 @@ var CLSTAMP = "8263200";
             FlattenedDropDownOptions: () => T,
             Footer: () => n.$_,
             Form: () => n.l0,
-            GamepadContent: () => Qe,
+            GamepadContent: () => Je,
             GamepadDialogPresentationContext: () => Ce,
             GamepadDropDownControlButton: () => Me,
             GamepadDropDownField: () => we,
             GamepadDropDownMenu: () => Ee,
             GamepadInputField: () => oe,
-            GamepadPagedSettings: () => at,
+            GamepadPagedSettings: () => ot,
             GamepadSliderControl: () => Ge,
-            GamepadSliderControlWithIcon: () => ze,
-            GamepadSliderField: () => Ue,
-            GamepadToggleControl: () => qe,
-            GamepadToggleField: () => $e,
+            GamepadSliderField: () => ze,
+            GamepadToggleControl: () => Ye,
+            GamepadToggleField: () => qe,
             HBar: () => n.tr,
             Header: () => n.h4,
             IPv4InputField: () => ye,
@@ -24544,9 +24545,10 @@ var CLSTAMP = "8263200";
               highlightOnFocus: w,
               indentLevel: v,
               verticalAlignment: E,
-              tooltip: M,
+              iconLocation: M,
+              tooltip: b,
             } = e,
-            b = (0, i._T)(e, [
+            L = (0, i._T)(e, [
               "label",
               "description",
               "icon",
@@ -24562,91 +24564,134 @@ var CLSTAMP = "8263200";
               "highlightOnFocus",
               "indentLevel",
               "verticalAlignment",
+              "iconLocation",
               "tooltip",
             ]),
-            L = (0, te.useInGamepadUI)(),
-            y = null != c ? c : "inline",
-            S = "inline" == y && !!s,
-            B = "below" == y && !!s,
-            k = null != u ? u : L ? "shift-children-below" : "keep-inline",
-            x = !!(b.onClick || b.onActivate || b.focusable),
-            R = null != a || null != r || (S && null != s),
-            H = null != C ? C : "min",
-            V = null != m ? m : "standard",
-            I = null != h ? h : "standard",
-            F = null != f ? f : "standard",
-            D = null == w || w,
-            T = null != v ? v : 0,
-            O = null != E ? E : "center",
-            A = o.useRef(),
-            N = (0, l.useMultipleRefs)(A, e.navRef),
-            Z = o.useCallback(
+            y = (0, te.useInGamepadUI)(),
+            S = null != c ? c : "inline",
+            B = null != M ? M : "front",
+            k = "front" == B && !!a,
+            x = "before-children" == B && !!a,
+            R = "inline" == S && !!s,
+            H = "below" == S && !!s,
+            V = null != u ? u : y ? "shift-children-below" : "keep-inline",
+            I = !!(L.onClick || L.onActivate || L.focusable),
+            F = (null != a && k) || null != r || (R && null != s),
+            D = null != C ? C : "min",
+            T = null != m ? m : "standard",
+            O = null != h ? h : "standard",
+            A = null != f ? f : "standard",
+            N = null == w || w,
+            Z = null != v ? v : 0,
+            G = null != E ? E : "center",
+            P = o.useRef(),
+            W = (0, l.useMultipleRefs)(P, e.navRef),
+            z = o.useCallback(
               (e) => {
                 var t;
-                null === (t = A.current) || void 0 === t || t.TakeFocus(),
+                null === (t = P.current) || void 0 === t || t.TakeFocus(),
                   e.preventDefault();
               },
-              [A],
+              [P],
             );
           return o.createElement(
             d.Panel,
             Object.assign(
               {
-                focusable: x,
+                focusable: I,
                 noFocusRing: !0,
                 scrollIntoViewWhenChildFocused: !0,
-                onActivate: b.onClick,
+                onActivate: L.onClick,
                 ref: t,
-                onMouseDown: x ? void 0 : Z,
+                onMouseDown: I ? void 0 : z,
               },
-              b,
+              L,
               {
-                navRef: N,
+                navRef: W,
                 className: (0, p.default)(
                   _,
                   ee().Field,
                   g && ee().Disabled,
-                  R && ee().WithFirstRow,
-                  S && ee().WithChildrenInline,
-                  B && ee().WithChildrenBelow,
-                  "center" == O && ee().VerticalAlignCenter,
-                  "shift-children-below" == k &&
+                  F && ee().WithFirstRow,
+                  R && ee().WithChildrenInline,
+                  H && ee().WithChildrenBelow,
+                  "center" == G && ee().VerticalAlignCenter,
+                  "shift-children-below" == V &&
                     ee().InlineWrapShiftsChildrenBelow,
                   !!n && ee().WithDescription,
-                  "standard" == F && ee().WithBottomSeparatorStandard,
-                  "thick" == F && ee().WithBottomSeparatorThick,
-                  "fixed" == H && ee().ChildrenWidthFixed,
-                  "max" == H && ee().ChildrenWidthGrow,
-                  "standard" == V && ee().ExtraPaddingOnChildrenBelow,
-                  "standard" == I && ee().StandardPadding,
-                  "compact" == I && ee().CompactPadding,
-                  x && ee().Clickable,
-                  D && ee().HighlightOnFocus,
+                  "standard" == A && ee().WithBottomSeparatorStandard,
+                  "thick" == A && ee().WithBottomSeparatorThick,
+                  "fixed" == D && ee().ChildrenWidthFixed,
+                  "max" == D && ee().ChildrenWidthGrow,
+                  "standard" == T && ee().ExtraPaddingOnChildrenBelow,
+                  "standard" == O && ee().StandardPadding,
+                  "compact" == O && ee().CompactPadding,
+                  I && ee().Clickable,
+                  N && ee().HighlightOnFocus,
                 ),
-                style: { "--indent-level": T },
+                style: { "--indent-level": Z },
               },
             ),
-            R &&
+            F &&
               o.createElement(
                 "div",
                 { className: ee().FieldLabelRow },
                 o.createElement(
                   "div",
                   { className: ee().FieldLabel },
-                  a &&
+                  k &&
                     o.createElement(
                       "div",
-                      { className: ee().FieldLeadIcon },
+                      { className: (0, p.default)(ee().FieldIcon, ee().Front) },
                       a,
                     ),
                   r,
-                  M &&
-                    o.createElement("span", { "data-tooltip-text": M }, " (?)"),
+                  b &&
+                    o.createElement("span", { "data-tooltip-text": b }, " (?)"),
                 ),
-                S &&
-                  o.createElement("div", { className: ee().FieldChildren }, s),
+                R &&
+                  o.createElement(
+                    "div",
+                    { className: ee().FieldChildrenWithIcon },
+                    x &&
+                      o.createElement(
+                        "div",
+                        {
+                          className: (0, p.default)(
+                            ee().FieldIcon,
+                            ee().BeforeChildren,
+                          ),
+                        },
+                        a,
+                      ),
+                    o.createElement(
+                      "div",
+                      { className: ee().FieldChildrenInner },
+                      s,
+                    ),
+                  ),
               ),
-            B && o.createElement("div", { className: ee().FieldChildren }, s),
+            H &&
+              o.createElement(
+                "div",
+                { className: ee().FieldChildrenWithIcon },
+                x &&
+                  o.createElement(
+                    "div",
+                    {
+                      className: (0, p.default)(
+                        ee().FieldIcon,
+                        ee().BeforeChildren,
+                      ),
+                    },
+                    a,
+                  ),
+                o.createElement(
+                  "div",
+                  { className: ee().FieldChildrenInner },
+                  s,
+                ),
+              ),
             n &&
               o.createElement("div", { className: ee().FieldDescription }, n),
           );
@@ -24855,15 +24900,15 @@ var CLSTAMP = "8263200";
             m.R.Provider,
             {
               value: {
-                PagedSettings: at,
-                Content: Qe,
+                PagedSettings: ot,
+                Content: Je,
                 DropDownControlButton: Me,
                 DropDownField: de,
                 DropDownMenu: Ee,
-                ToggleField: $e,
-                ToggleControl: qe,
+                ToggleField: qe,
+                ToggleControl: Ye,
                 InputElement: ue,
-                SliderField: Ue,
+                SliderField: ze,
                 strButtonClassName: ee().Button,
               },
             },
@@ -25839,48 +25884,7 @@ var CLSTAMP = "8263200";
               ),
           );
         }
-        (0, i.gn)([l.bind], Ge.prototype, "RecomputeSliderBounds", null),
-          (0, i.gn)([l.bind], Ge.prototype, "SetDragMode", null),
-          (0, i.gn)([l.bind], Ge.prototype, "OnGamepadDirection", null),
-          (0, i.gn)(
-            [l.bind],
-            Ge.prototype,
-            "UpdateSliderValueForPosition",
-            null,
-          ),
-          (0, i.gn)([l.bind], Ge.prototype, "OnWindowMouseMove", null),
-          (0, i.gn)([l.bind], Ge.prototype, "OnWindowMouseUp", null),
-          (0, i.gn)([l.bind], Ge.prototype, "OnMouseDown", null),
-          (0, i.gn)([l.bind], Ge.prototype, "OnTouchStart", null),
-          (0, i.gn)([l.bind], Ge.prototype, "OnWindowTouchMove", null),
-          (0, i.gn)([l.bind], Ge.prototype, "OnWindowTouchEnd", null),
-          (0, i.gn)([l.bind], Ge.prototype, "Complete", null),
-          (0, i.gn)([l.bind], Ge.prototype, "BlurInnerSlider", null),
-          (0, i.gn)([l.bind], Ge.prototype, "OnInnerSliderFocus", null),
-          (0, i.gn)([l.bind], Ge.prototype, "OnInnerSliderBlur", null),
-          (0, i.gn)([l.bind], Ge.prototype, "ResetToDefault", null),
-          (0, i.gn)([l.bind], Ge.prototype, "OnContextMenu", null);
-        const ze = o.forwardRef((e, t) => {
-          const { className: r } = e,
-            n = (0, i._T)(e, ["className"]);
-          return o.createElement(
-            d.Panel,
-            { className: (0, p.default)(ke().SliderControlWithIcon, r) },
-            e.icon &&
-              o.createElement(
-                d.Panel,
-                {
-                  onTouchStart: (t) => e.onIconTouch && e.onIconTouch(t),
-                  onClick: e.onIconClick,
-                  focusable: !1,
-                  className: (0, p.default)(ke().Icon, "GamepadSliderIcon"),
-                },
-                e.icon,
-              ),
-            o.createElement(Ge, Object.assign({}, n, { ref: t })),
-          );
-        });
-        function Ue(e) {
+        function ze(e) {
           const {
               label: t,
               description: r,
@@ -25900,8 +25904,10 @@ var CLSTAMP = "8263200";
               parentSliderRef: E,
               onOptionsButton: M,
               onOptionsActionDescription: b,
+              iconLocation: L,
+              childrenContainerWidth: y,
             } = e,
-            L = (0, i._T)(e, [
+            S = (0, i._T)(e, [
               "label",
               "description",
               "tabIndex",
@@ -25920,12 +25926,16 @@ var CLSTAMP = "8263200";
               "parentSliderRef",
               "onOptionsButton",
               "onOptionsActionDescription",
+              "iconLocation",
+              "childrenContainerWidth",
             ]),
-            y = o.useRef(),
-            S = o.useRef(),
-            B = o.useRef(),
-            k = (null != u ? u : w)(e.value, e.valueSuffix),
-            x = (function (e) {
+            { icon: B } = S,
+            k = (0, i._T)(S, ["icon"]),
+            x = o.useRef(),
+            R = o.useRef(),
+            H = o.useRef(),
+            V = (null != u ? u : w)(e.value, e.valueSuffix),
+            I = (function (e) {
               var t, r;
               const { min: n, max: i } = e,
                 a = null !== (t = e.validValues) && void 0 !== t ? t : "steps",
@@ -25954,101 +25964,103 @@ var CLSTAMP = "8263200";
                   return d;
               }
             })(e),
-            [R, H] = o.useState(!1),
-            V = () => {
-              e.onChangeStart && e.onChangeStart(3), H(!0);
+            [F, D] = o.useState(!1),
+            T = () => {
+              e.onChangeStart && e.onChangeStart(3), D(!0);
             },
-            I = (t) => {
-              x(t) &&
+            O = (t) => {
+              I(t) &&
                 (e.onChange && e.onChange(t, 3),
                 e.onChangeComplete && e.onChangeComplete(t, 3)),
-                H(!1);
+                D(!1);
             };
           o.useLayoutEffect(() => {
             var e, t;
-            !R &&
-              (null === (e = B.current) || void 0 === e
+            !F &&
+              (null === (e = H.current) || void 0 === e
                 ? void 0
                 : e.BHasFocus()) &&
-              (null === (t = S.current) || void 0 === t || t.TakeFocus());
-          }, [B, S, R]);
-          let F = t;
+              (null === (t = R.current) || void 0 === t || t.TakeFocus());
+          }, [H, R, F]);
+          let A = t;
           _
-            ? (F = o.createElement(
+            ? (A = o.createElement(
                 o.Fragment,
                 null,
                 o.createElement("div", { className: ke().LabelText }, e.label),
-                o.createElement(je, {
-                  navRef: B,
-                  editing: R,
-                  renderedValue: k,
+                o.createElement(Ue, {
+                  navRef: H,
+                  editing: F,
+                  renderedValue: V,
                   valueSuffix: e.valueSuffix,
-                  onClick: V,
-                  onChangeComplete: I,
-                  validator: x,
+                  onClick: T,
+                  onChangeComplete: O,
+                  validator: I,
                 }),
               ))
             : c &&
-              (F = o.createElement(
+              (A = o.createElement(
                 o.Fragment,
                 null,
                 o.createElement("div", { className: ke().LabelText }, e.label),
-                o.createElement("div", { className: ke().DescriptionValue }, k),
+                o.createElement("div", { className: ke().DescriptionValue }, V),
               ));
-          const D = o.useRef(null),
-            T = o.useCallback(
+          const N = o.useRef(null),
+            Z = o.useCallback(
               (e) => {
                 var t;
-                null === (t = D.current) ||
+                null === (t = N.current) ||
                   void 0 === t ||
                   t.OnTouchStart(e.nativeEvent);
               },
-              [D],
+              [N],
             ),
-            O = o.useCallback(
+            G = o.useCallback(
               (e) => {
                 var t;
-                null === (t = D.current) || void 0 === t || t.OnContextMenu(e);
+                null === (t = N.current) || void 0 === t || t.OnContextMenu(e);
               },
-              [D],
+              [N],
             ),
-            A = (0, l.useMultipleRefs)(D, E),
-            N = _ ? V : void 0,
-            Z = _ ? (0, s.Localize)("#Slider_EditValue") : void 0;
-          let G = M || N,
-            P = M ? b : Z,
-            W = M ? N : void 0,
-            z = M ? Z : void 0;
+            P = (0, l.useMultipleRefs)(N, E),
+            W = _ ? T : void 0,
+            z = _ ? (0, s.Localize)("#Slider_EditValue") : void 0;
+          let U = M || W,
+            j = M ? b : z,
+            X = M ? W : void 0,
+            K = M ? z : void 0;
           return o.createElement(
             re,
             {
               childrenLayout: null != m ? m : "below",
               padding: h,
               bottomSeparator: p,
-              childrenContainerWidth: "fixed",
-              label: F,
+              childrenContainerWidth: null != y ? y : "fixed",
+              label: A,
               description: r,
-              ref: y,
+              ref: x,
               className: a,
-              onTouchStart: T,
-              onContextMenu: O,
+              onTouchStart: Z,
+              onContextMenu: G,
               indentLevel: f,
-              onMenuActionDescription: z,
-              onMenuButton: W,
+              onMenuActionDescription: K,
+              onMenuButton: X,
               highlightOnFocus: v,
-              onOptionsButton: G,
-              onOptionsActionDescription: P,
+              onOptionsButton: U,
+              onOptionsActionDescription: j,
+              icon: B,
+              iconLocation: null != L ? L : "before-children",
             },
             o.createElement(
-              ze,
+              Ge,
               Object.assign(
-                { ref: A, notchCount: g, focusable: !R, navRef: S },
-                L,
+                { ref: P, notchCount: g, focusable: !F, navRef: R },
+                k,
               ),
             ),
           );
         }
-        function je(e) {
+        function Ue(e) {
           const {
               editing: t,
               renderedValue: r,
@@ -26177,7 +26189,7 @@ var CLSTAMP = "8263200";
             }),
           );
         }
-        function Xe(e) {
+        function je(e) {
           const {
               label: t,
               description: r,
@@ -26201,7 +26213,7 @@ var CLSTAMP = "8263200";
               h && !e.noLabel && (r = 0 == t ? "rightparen" : "leftparen"),
                 f.push(
                   o.createElement(
-                    Ue,
+                    ze,
                     Object.assign(
                       {
                         key: t,
@@ -26230,12 +26242,33 @@ var CLSTAMP = "8263200";
                 indentLevel: d,
                 highlightOnFocus: m,
               },
-              o.createElement(Ye, { key: "labels", sliders: C, sliderRefs: g }),
+              o.createElement(Ke, { key: "labels", sliders: C, sliderRefs: g }),
               f,
             )
           );
         }
-        const Ke = o.forwardRef((e, t) => {
+        (0, i.gn)([l.bind], Ge.prototype, "RecomputeSliderBounds", null),
+          (0, i.gn)([l.bind], Ge.prototype, "SetDragMode", null),
+          (0, i.gn)([l.bind], Ge.prototype, "OnGamepadDirection", null),
+          (0, i.gn)(
+            [l.bind],
+            Ge.prototype,
+            "UpdateSliderValueForPosition",
+            null,
+          ),
+          (0, i.gn)([l.bind], Ge.prototype, "OnWindowMouseMove", null),
+          (0, i.gn)([l.bind], Ge.prototype, "OnWindowMouseUp", null),
+          (0, i.gn)([l.bind], Ge.prototype, "OnMouseDown", null),
+          (0, i.gn)([l.bind], Ge.prototype, "OnTouchStart", null),
+          (0, i.gn)([l.bind], Ge.prototype, "OnWindowTouchMove", null),
+          (0, i.gn)([l.bind], Ge.prototype, "OnWindowTouchEnd", null),
+          (0, i.gn)([l.bind], Ge.prototype, "Complete", null),
+          (0, i.gn)([l.bind], Ge.prototype, "BlurInnerSlider", null),
+          (0, i.gn)([l.bind], Ge.prototype, "OnInnerSliderFocus", null),
+          (0, i.gn)([l.bind], Ge.prototype, "OnInnerSliderBlur", null),
+          (0, i.gn)([l.bind], Ge.prototype, "ResetToDefault", null),
+          (0, i.gn)([l.bind], Ge.prototype, "OnContextMenu", null);
+        const Xe = o.forwardRef((e, t) => {
           const {
             label: r,
             labelIndex: n,
@@ -26271,7 +26304,7 @@ var CLSTAMP = "8263200";
             ),
           );
         });
-        function Ye(e) {
+        function Ke(e) {
           const { sliders: t, sliderRefs: r } = e,
             n = o.useRef(),
             i = t.length,
@@ -26322,7 +26355,7 @@ var CLSTAMP = "8263200";
               const n = "" + Math.round(100 * h[t]),
                 i = r.current[t];
               p.push(
-                o.createElement(Ke, {
+                o.createElement(Xe, {
                   key: t,
                   ref: (e) => (a.current[t] = e),
                   labelIndex: t,
@@ -26345,7 +26378,7 @@ var CLSTAMP = "8263200";
             )
           );
         }
-        const qe = o.forwardRef(function (e, t) {
+        const Ye = o.forwardRef(function (e, t) {
           const { value: r, onChange: n, disabled: i, navRef: a } = e;
           return o.createElement(
             C.FocusableDiv,
@@ -26369,7 +26402,7 @@ var CLSTAMP = "8263200";
             o.createElement("div", { className: ee().ToggleSwitch }),
           );
         });
-        class $e extends n.iN {
+        class qe extends n.iN {
           OnToggleChange(e) {
             this.props.disabled || e === this.checked || this.Toggle();
           }
@@ -26396,7 +26429,7 @@ var CLSTAMP = "8263200";
                 },
                 r,
               ),
-              o.createElement(qe, {
+              o.createElement(Ye, {
                 onChange: this.OnToggleChange,
                 value: this.checked,
                 disabled: e,
@@ -26405,9 +26438,9 @@ var CLSTAMP = "8263200";
             );
           }
         }
-        (0, i.gn)([l.bind], $e.prototype, "OnToggleChange", null);
-        var Je = r(39043);
-        function Qe(e) {
+        (0, i.gn)([l.bind], qe.prototype, "OnToggleChange", null);
+        var $e = r(39043);
+        function Je(e) {
           const { children: t, bCenterVertically: r } = e,
             n = (0, i._T)(e, ["children", "bCenterVertically"]),
             a = (0, p.default)(
@@ -26416,7 +26449,7 @@ var CLSTAMP = "8263200";
               e.className,
               r && " _DialogCenterVertically",
             ),
-            { ref: l, navRef: s } = (0, Je.$1)();
+            { ref: l, navRef: s } = (0, $e.$1)();
           return o.createElement(
             d.Panel,
             Object.assign({}, n, { className: a, ref: l, navRef: s }),
@@ -26432,12 +26465,12 @@ var CLSTAMP = "8263200";
             ),
           );
         }
-        var et = r(51452),
-          tt = r(77323),
-          rt = r.n(tt);
-        const nt = o.createContext(null);
-        function it(e) {
-          const t = o.useContext(nt),
+        var Qe = r(51452),
+          et = r(77323),
+          tt = r.n(et);
+        const rt = o.createContext(null);
+        function nt(e) {
+          const t = o.useContext(rt),
             { title: r, icon: n, active: a } = e,
             l = (0, i._T)(e, ["title", "icon", "active"]);
           return o.createElement(
@@ -26453,14 +26486,14 @@ var CLSTAMP = "8263200";
               l,
             ),
             n &&
-              o.createElement("div", { className: rt().PageListItem_Icon }, n),
-            o.createElement("div", { className: rt().PageListItem_Title }, r),
+              o.createElement("div", { className: tt().PageListItem_Icon }, n),
+            o.createElement("div", { className: tt().PageListItem_Title }, r),
           );
         }
-        function ot(e) {
-          return o.createElement("div", { className: rt().Separator });
+        function it(e) {
+          return o.createElement("div", { className: tt().Separator });
         }
-        const at = o.forwardRef(function (e, t) {
+        const ot = o.forwardRef(function (e, t) {
           const r = o.useRef(),
             [n, i] = o.useState(!0);
           o.useEffect(() => {
@@ -26473,33 +26506,33 @@ var CLSTAMP = "8263200";
           }, [e.page, e.bNoInitialLeftColumnFocus]);
           const a = Boolean(e.showTitle);
           return o.createElement(
-            nt.Provider,
+            rt.Provider,
             { value: r },
             o.createElement(
               q.Vh,
               Object.assign({}, e, {
-                stylesheet: rt(),
+                stylesheet: tt(),
                 showTitle: a,
-                renderPageListItem: it,
-                renderPageListSeparator: ot,
-                renderPageAnimation: lt,
+                renderPageListItem: nt,
+                renderPageListSeparator: it,
+                renderPageAnimation: at,
               }),
             ),
           );
         });
-        function lt(e) {
-          let t = et.sk.None;
+        function at(e) {
+          let t = Qe.sk.None;
           "up" == e.direction
-            ? (t = et.sk.Up)
-            : "down" == e.direction && (t = et.sk.Down);
-          let r = (0, et.mz)(rt(), t);
+            ? (t = Qe.sk.Up)
+            : "down" == e.direction && (t = Qe.sk.Down);
+          let r = (0, Qe.mz)(tt(), t);
           return o.createElement(
-            et.Cv,
+            Qe.Cv,
             {
               childrenKey: e.activePage.identifier,
-              childrenClasses: (0, et.qh)(rt(), rt().ContentTransition),
+              childrenClasses: (0, Qe.qh)(tt(), tt().ContentTransition),
               directionClass: r,
-              animate: t != et.sk.None,
+              animate: t != Qe.sk.None,
             },
             e.children,
           );
@@ -54538,9 +54571,9 @@ var CLSTAMP = "8263200";
                 ? !{
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Aug 14 2023 : 12:04:59",
-                    BUILD_TIME_UTC: "Aug 14 2023 : 19:04:59",
-                    BUILD_RTIME_UTC: 1692039899,
+                    BUILD_TIME_LOCAL: "Aug 17 2023 : 14:01:35",
+                    BUILD_TIME_UTC: "Aug 17 2023 : 21:01:35",
+                    BUILD_RTIME_UTC: 1692306095,
                   }.MOBILE_BUILD && document.getElementById(t)
                 : t),
             n)
@@ -55088,7 +55121,7 @@ var CLSTAMP = "8263200";
       {
         27: "40c178e2d00b36f39a64",
         33: "38ad6e8cae334784f4d0",
-        58: "47b2cbff5d854ed21bd9",
+        58: "edb64972562036bf639d",
         131: "0cef9a1bcae10c1661e8",
         146: "9a1084379d38104b4033",
         200: "0273f88a1d91abf0685e",
@@ -55189,7 +55222,7 @@ var CLSTAMP = "8263200";
         7781: "e6a58d678b49e89ea6ef",
         7832: "35e371c703d65c6c518c",
         7850: "68b0792d044c44ae4211",
-        7962: "56e8fd915149ff17feb1",
+        7962: "e00389256d0250b320d7",
         8011: "2bad8c957b2510d4af07",
         8052: "6f4de79f989a0248e10b",
         8085: "210499e0e11d56053c27",
@@ -55199,7 +55232,7 @@ var CLSTAMP = "8263200";
         8282: "875546c2bbae272d6f04",
         8319: "4d675b72d082fcbdd01d",
         8433: "3ffeb161179fdc6eeada",
-        8467: "18a18763a7bf760b9a6e",
+        8467: "5d5cd0953fd96aa218a3",
         8490: "a6f9565ec428a556c271",
         8778: "5c8f726719f08d0b92a4",
         8956: "087336020c5543e6c3ad",

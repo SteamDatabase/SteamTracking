@@ -530,6 +530,9 @@ message CMsgSystemManagerSettings {
 	optional bool is_display_colormanagement_available = 31;
 	optional float display_colorgamut = 32;
 	optional float als_lux_alternate = 33;
+	optional bool is_display_colortemp_available = 34;
+	optional float display_colortemp = 35;
+	optional float display_colortemp_default = 36;
 }
 
 message CMsgSelectOSBranchParams {
