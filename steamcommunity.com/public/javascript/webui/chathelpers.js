@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "8268196";
+var CLSTAMP = "8274554";
 (() => {
   var e,
     t,
@@ -8,7 +8,7 @@ var CLSTAMP = "8268196";
     n,
     o,
     i = {
-      25867: (e, t, r) => {
+      11478: (e, t, r) => {
         "use strict";
         function n(e, t, r, n) {
           var o,
@@ -62,7 +62,7 @@ var CLSTAMP = "8268196";
         }
         Object.create;
         Object.create;
-        r(36762);
+        r(39632);
         var i = r(87363),
           a = r.n(i),
           s = r(61533);
@@ -439,12 +439,12 @@ var CLSTAMP = "8268196";
               (e[(e.SteamChinaReviewLauncher = 8)] =
                 "SteamChinaReviewLauncher");
           })(B || (B = {}));
-        var N, b, L;
+        var b, N, L;
         !(function (e) {
           (e[(e.k_EPending = 0)] = "k_EPending"),
             (e[(e.k_EAccepted = 1)] = "k_EAccepted"),
             (e[(e.k_ERejected = 2)] = "k_ERejected");
-        })(N || (N = {})),
+        })(b || (b = {})),
           (function (e) {
             (e[(e.k_EControllerBindingType_None = 0)] =
               "k_EControllerBindingType_None"),
@@ -462,7 +462,7 @@ var CLSTAMP = "8268196";
                 "k_EControllerBindingType_GameAction"),
               (e[(e.k_EControllerBindingType_ControllerAction = 7)] =
                 "k_EControllerBindingType_ControllerAction");
-          })(b || (b = {})),
+          })(N || (N = {})),
           (function (e) {
             (e[(e.GAMEPAD_BUTTON_A = 0)] = "GAMEPAD_BUTTON_A"),
               (e[(e.GAMEPAD_BUTTON_B = 1)] = "GAMEPAD_BUTTON_B"),
@@ -2371,7 +2371,7 @@ var CLSTAMP = "8268196";
         var Me = r(42238);
         class Be extends Ve {
           BIsExpired() {
-            return Ne.sm_rtTimeCur >= this.m_rtTimeExpires;
+            return be.sm_rtTimeCur >= this.m_rtTimeExpires;
           }
           InitFromPHPInviteLinkInfo(e) {
             this.m_ulChatID = e.chat_id;
@@ -2388,7 +2388,7 @@ var CLSTAMP = "8268196";
           }
         }
         n([ye.aD], Be.prototype, "InitFromPHPInviteLinkInfo", null);
-        class Ne {
+        class be {
           constructor(e) {
             (this.m_bConnectingToClient = !1),
               (this.m_invite = new Be(e.strInviteCode)),
@@ -2468,9 +2468,9 @@ var CLSTAMP = "8268196";
                 }));
           }
         }
-        n([ye.LO], Ne.prototype, "m_bConnectingToClient", void 0),
-          n([ye.LO], Ne.prototype, "m_connectResult", void 0);
-        let be = class extends i.Component {
+        n([ye.LO], be.prototype, "m_bConnectingToClient", void 0),
+          n([ye.LO], be.prototype, "m_connectResult", void 0);
+        let Ne = class extends i.Component {
           render() {
             return i.createElement(
               "div",
@@ -2481,7 +2481,7 @@ var CLSTAMP = "8268196";
             );
           }
         };
-        be = n([ve.Pi], be);
+        Ne = n([ve.Pi], Ne);
         let Le = class extends i.Component {
           constructor() {
             super(...arguments), (this.m_bTriedToLaunchSteam = !1);
@@ -2699,9 +2699,9 @@ var CLSTAMP = "8268196";
           try {
             t = JSON.parse(e.getAttribute("data-inviteinfo"));
           } catch (e) {}
-          Ne.sm_rtTimeCur = t.rtTimeCur;
-          let r = new Ne(t);
-          s.render(i.createElement(be, { controller: r }), e);
+          be.sm_rtTimeCur = t.rtTimeCur;
+          let r = new be(t);
+          s.render(i.createElement(Ne, { controller: r }), e);
         }
         (window.ClientConnectionAPI = Ge),
           document.addEventListener("DOMContentLoaded", function () {
@@ -2736,7 +2736,7 @@ var CLSTAMP = "8268196";
             });
           });
       },
-      36762: (e, t, r) => {
+      39632: (e, t, r) => {
         "use strict";
         "VALVE_PUBLIC_PATH" in window
           ? (r.p = window.VALVE_PUBLIC_PATH)
@@ -2871,7 +2871,7 @@ var CLSTAMP = "8268196";
           "./shared_tchinese.json": [92869, 7602],
           "./shared_thai.json": [34720, 1162],
           "./shared_turkish.json": [3347, 5438],
-          "./shared_ukrainian.json": [81930, 7781],
+          "./shared_ukrainian.json": [46150, 7781],
           "./shared_vietnamese.json": [12315, 4964],
         };
         function o(e) {
@@ -2917,7 +2917,7 @@ var CLSTAMP = "8268196";
           "./shared_tchinese.json": [92869, 7602],
           "./shared_thai.json": [34720, 1162],
           "./shared_turkish.json": [3347, 5438],
-          "./shared_ukrainian.json": [81930, 7781],
+          "./shared_ukrainian.json": [46150, 7781],
           "./shared_vietnamese.json": [12315, 4964],
         };
         function o(e) {
@@ -3119,7 +3119,7 @@ var CLSTAMP = "8268196";
         7602: "b9e56a66100f2a3337fc",
         7651: "fcccbe2e0a52e2070a56",
         7706: "415e651d68936074233f",
-        7781: "6f8ae573fa4dcbde8b4d",
+        7781: "7fa609384f850872880c",
         7975: "8259aacd98566af8dacb",
         8247: "f25e033938692b5767ad",
         8385: "1798e6ad50adc8466855",
@@ -3265,6 +3265,6 @@ var CLSTAMP = "8268196";
           self.webpackChunk_steam_friendsui || []);
       r.forEach(t.bind(null, 0)), (r.push = t.bind(null, r.push.bind(r)));
     })();
-  var _ = s.O(void 0, [5968], () => s(25867));
+  var _ = s.O(void 0, [5968], () => s(11478));
   _ = s.O(_);
 })();

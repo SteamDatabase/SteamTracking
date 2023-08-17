@@ -13529,12 +13529,24 @@
           );
         }
         GetScheduleCalendarStore() {
-          const { event: e, section: t } = this.props;
+          var e, t;
+          const { event: a, section: n } = this.props;
+          let i;
           return (
+            1 ==
+              (null === (e = n.event_schedule_categories) || void 0 === e
+                ? void 0
+                : e.length) &&
+              (null === (t = n.event_schedule_categories[0].tags) ||
+              void 0 === t
+                ? void 0
+                : t.length) >= 1 &&
+              (i = n.event_schedule_categories[0].tags),
             (0, Fn.PC)({
-              saleid: e.GID,
+              saleid: a.GID,
               bSectionByDay: !0,
-              rtCalendarEnd: t.event_schedule_rtime_end || e.endTime,
+              rtCalendarEnd: n.event_schedule_rtime_end || a.endTime,
+              rgTags: i,
             }),
             (0, Fn.vY)()
           );
@@ -23786,20 +23798,21 @@
           [n, i] = (a.GetClanSteamID(), d.useState(!0)),
           [o, r] = (0, d.useState)(!0),
           [l, c] = (0, d.useState)(!0),
-          [g, v] = (0, d.useState)(
+          [g, v] = (0, d.useState)(!0),
+          [E, b] = (0, d.useState)(
             (null === (t = a.GetEventModel().jsondata.tagged_items) ||
             void 0 === t
               ? void 0
               : t.length) > 100,
           );
         if (!h.L7.logged_in || !h.L7.is_support) return null;
-        const E = new Array(),
-          b = a.GetAllTags();
-        b &&
-          b.forEach((e) => {
-            E.push(d.createElement("div", { key: e }, e));
+        const y = new Array(),
+          f = a.GetAllTags();
+        f &&
+          f.forEach((e) => {
+            y.push(d.createElement("div", { key: e }, e));
           });
-        let y = a.GetEventModel().jsondata;
+        let G = a.GetEventModel().jsondata;
         if (n) {
           const e = (t) => {
               for (let a in t)
@@ -23807,6 +23820,7 @@
                   let n = -1;
                   t[a].forEach((i, o) => {
                     null != i &&
+                      "" !== i &&
                       ((n = o), "object" == typeof i && (t[a][o] = e(i)));
                   }),
                     -1 == n
@@ -23818,56 +23832,63 @@
               return t;
             },
             t = JSON.parse(JSON.stringify(a.GetEventModel().jsondata));
-          y = e(t);
+          G = e(t);
         }
-        o &&
-          (y = C(
-            y,
-            "sale_sections.facets.facetValues.name",
-            "... and localized versions ...",
-            !0,
-          )),
-          l &&
-            (y = C(
-              y,
+        l
+          ? (G = C(
+              G,
+              "sale_sections.facets",
+              "... collapsed due to setting above ...",
+              !1,
+            ))
+          : o &&
+            (G = C(
+              G,
+              "sale_sections.facets.facetValues.name",
+              "... and localized versions ...",
+              !0,
+            )),
+          g &&
+            (G = C(
+              G,
               "tagged_items.tags",
               "... %1$s sale tags hidden ...",
               !1,
             )),
-          g &&
-            ((y = C(
-              y,
+          E &&
+            ((G = C(
+              G,
               "sale_sections.capsules",
               "... %1$s section sale items hidden ...",
               !1,
             )),
-            (y = C(
-              y,
+            (G = C(
+              G,
               "sale_sections.tabs.capsules",
               "... %1$s tab sale items hidden ...",
               !1,
             )),
-            (y = C(
-              y,
+            (G = C(
+              G,
               "tagged_items",
               "... %1$s tagged sale items AND tags hidden ...",
               !1,
             )),
-            (y = C(
-              y,
+            (G = C(
+              G,
               "sorting_tiers",
               "... %1$s sorting tier sale items hidden ...",
               !1,
             )),
-            (y = C(
-              y,
+            (G = C(
+              G,
               "sale_sections.facets.facetValues.matchingCapsules",
               "... %1$s facet sale items hidden ...",
               !1,
             )));
-        const f = a.GetCreatorUserSteamID(),
-          G = a.GetLastUpdater(),
-          [w, T] = (0, S.ai)(a.GetEventModel());
+        const w = a.GetCreatorUserSteamID(),
+          T = a.GetLastUpdater(),
+          [I, A] = (0, S.ai)(a.GetEventModel());
         return d.createElement(
           "div",
           null,
@@ -23880,19 +23901,25 @@
               onChange: i,
             }),
             d.createElement(u.ji, {
-              label: "collapse facet value names",
-              checked: o,
-              onChange: r,
-            }),
-            d.createElement(u.ji, {
-              label: "collapse sale tags",
+              label: "collapse facets",
               checked: l,
               onChange: c,
             }),
+            Boolean(!l) &&
+              d.createElement(u.ji, {
+                label: "collapse facet value names",
+                checked: o,
+                onChange: r,
+              }),
             d.createElement(u.ji, {
-              label: "collapse sale items",
+              label: "collapse sale tags",
               checked: g,
               onChange: v,
+            }),
+            d.createElement(u.ji, {
+              label: "collapse sale items",
+              checked: E,
+              onChange: b,
             }),
             d.createElement("h1", null, "Data:"),
             d.createElement(
@@ -23910,9 +23937,9 @@
             d.createElement(
               "div",
               null,
-              f.BIsValid()
+              w.BIsValid()
                 ? d.createElement(_.K, {
-                    accountID: f.GetAccountID(),
+                    accountID: w.GetAccountID(),
                     locToken: "#EventModTile_EventCreator",
                   })
                 : "Original Poster: not set",
@@ -23920,9 +23947,9 @@
             d.createElement(
               "div",
               null,
-              G.BIsValid()
+              T.BIsValid()
                 ? d.createElement(_.K, {
-                    accountID: G.GetAccountID(),
+                    accountID: T.GetAccountID(),
                     locToken: "#EventModTile_EventLastUpdator",
                   })
                 : "Last Updater: not set",
@@ -24082,12 +24109,12 @@
               "div",
               null,
               "Build and Branch Association: ",
-              w,
+              I,
               " -",
-              T || "default",
+              A || "default",
             ),
             d.createElement("h1", null, "Tags:"),
-            E,
+            y,
             d.createElement("br", null),
             d.createElement(_.x, { eventModel: a.GetEventModel() }),
             d.createElement("br", null),
@@ -24097,7 +24124,7 @@
             }),
             d.createElement("br", null),
             d.createElement("h1", null, "Json Body"),
-            d.createElement(m.G, { data: y }),
+            d.createElement(m.G, { data: G }),
           ),
         );
       });
@@ -24526,7 +24553,7 @@
         ie = a(844),
         oe = a(46132),
         re = a(20139),
-        le = a(54056);
+        le = a(33634);
       function se(e) {
         const { editModel: t } = e,
           a = t.GetEventModel(),

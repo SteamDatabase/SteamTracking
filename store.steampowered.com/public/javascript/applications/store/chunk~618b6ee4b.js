@@ -18593,12 +18593,24 @@
           );
         }
         GetScheduleCalendarStore() {
-          const { event: e, section: t } = this.props;
+          var e, t;
+          const { event: n, section: a } = this.props;
+          let i;
           return (
+            1 ==
+              (null === (e = a.event_schedule_categories) || void 0 === e
+                ? void 0
+                : e.length) &&
+              (null === (t = a.event_schedule_categories[0].tags) ||
+              void 0 === t
+                ? void 0
+                : t.length) >= 1 &&
+              (i = a.event_schedule_categories[0].tags),
             (0, Qi.PC)({
-              saleid: e.GID,
+              saleid: n.GID,
               bSectionByDay: !0,
-              rtCalendarEnd: t.event_schedule_rtime_end || e.endTime,
+              rtCalendarEnd: a.event_schedule_rtime_end || n.endTime,
+              rgTags: i,
             }),
             (0, Qi.vY)()
           );
