@@ -2024,6 +2024,7 @@
     "Settings_InGame_Overlay": "The Steam Overlay",
     "Settings_InGame_EnableOverlay": "Enable the Steam Overlay while in-game",
     "Settings_InGame_Overlay_ToolBar_ListView": "Show toolbar as list view",
+    "Settings_InGame_Overlay_Restore_Browser_Tabs": "Restore my previous browser tabs when starting a game",
     "Settings_InGame_UseGamepadOverlay": "Use the Big Picture Overlay when using a controller",
     "Settings_InGame_ScaleInterface": "Scale Steam Overlay text and icons to match monitor settings",
     "Settings_InGame_EnableDesktopGameTheater": "Use Desktop Game Theater when launching desktop games while SteamVR is active",

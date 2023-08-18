@@ -41,6 +41,7 @@
         RankInfoGrid: "personadetails_RankInfoGrid_xI5E6",
         GeneralInfoGrid: "personadetails_GeneralInfoGrid_1fxrH",
         Header: "personadetails_Header_DQGCO",
+        HeaderFixedHeight: "personadetails_HeaderFixedHeight_2VaZt",
         HeaderNoMargin: "personadetails_HeaderNoMargin_26vpY",
         HeaderClickable: "personadetails_HeaderClickable_2OwWX",
         TopContent: "personadetails_TopContent_22K2A",
@@ -313,9 +314,9 @@
         U = a.n(P);
       const Y = "red",
         x = "orange",
-        B = "goldenrod",
-        K = "#adff2f",
-        H = "darkgray",
+        H = "goldenrod",
+        B = "#adff2f",
+        K = "darkgray",
         W = "forestgreen",
         V = "crimson",
         j = "#fa002e",
@@ -394,7 +395,7 @@
                       r,
                     ),
                   )
-                : i.createElement("span", { style: { color: H } }, "No Guild");
+                : i.createElement("span", { style: { color: K } }, "No Guild");
             },
           },
         ],
@@ -460,7 +461,7 @@
                   a.push(
                     i.createElement(
                       "span",
-                      { style: { color: B } },
+                      { style: { color: H } },
                       `${M(O.PW.RETURNING_PLAYER)}${t}`,
                     ),
                   ),
@@ -480,9 +481,9 @@
             key: "behavscore",
             displayName: "Behavior Score",
             formatFunction: (e = 1e4) => {
-              let t = K;
+              let t = B;
               return (
-                e < 1500 ? (t = Y) : e < 3e3 ? (t = x) : e < 7e3 && (t = B),
+                e < 1500 ? (t = Y) : e < 3e3 ? (t = x) : e < 7e3 && (t = H),
                 i.createElement("span", { style: { color: t } }, e)
               );
             },
@@ -583,7 +584,7 @@
                 case O.n4.UNCLEAR:
                   return i.createElement(
                     "span",
-                    { style: { color: B } },
+                    { style: { color: H } },
                     L(O.n4.UNCLEAR),
                   );
                 case O.n4.SOMEWHAT_UNLIKELY:
@@ -607,7 +608,7 @@
             key: "plussubscriber",
             displayName: "Plus Subscriber",
             formatFunction: (e = 0) =>
-              e ? i.createElement("div", { style: { color: K } }, "YES") : "NO",
+              e ? i.createElement("div", { style: { color: B } }, "YES") : "NO",
           },
           {
             key: "wins",
@@ -625,7 +626,7 @@
               const n = Math.round((e / a) * 1e4) / 100;
               let l = "none";
               return (
-                n >= 70 || n <= 30 ? (l = x) : (n >= 60 || n <= 40) && (l = B),
+                n >= 70 || n <= 30 ? (l = x) : (n >= 60 || n <= 40) && (l = H),
                 i.createElement(
                   i.Fragment,
                   null,
@@ -651,7 +652,7 @@
               const n = Math.round((e / a) * 1e4) / 100;
               let l = "none";
               return (
-                n >= 70 || n <= 30 ? (l = x) : (n >= 60 || n <= 40) && (l = B),
+                n >= 70 || n <= 30 ? (l = x) : (n >= 60 || n <= 40) && (l = H),
                 i.createElement(
                   i.Fragment,
                   null,
@@ -677,9 +678,9 @@
                 (t = ((t >> 4) + t) & 252645135),
                 (t = ((t >> 8) + t) & 16711935),
                 (t = ((t >> 16) + t) & 65535);
-              let a = K;
+              let a = B;
               return (
-                t > 20 ? (a = Y) : t > 10 ? (a = x) : t > 5 && (a = B),
+                t > 20 ? (a = Y) : t > 10 ? (a = x) : t > 5 && (a = H),
                 i.createElement(
                   "span",
                   { style: { color: a } },
@@ -722,7 +723,7 @@
                         !r && i.createElement("div", null, `${n[e][0]}`),
                         i.createElement(
                           "div",
-                          { style: { color: H } },
+                          { style: { color: K } },
                           `(${n[e][1]} / ${l})`,
                         ),
                       ),
@@ -787,7 +788,7 @@
             displayName: G(O._W.DOTA_ACCESS_TOURNAMENT_ADMIN),
             formatFunction: (e = 0) =>
               e & O._W.DOTA_ACCESS_TOURNAMENT_ADMIN
-                ? i.createElement("div", { style: { color: K } }, "YES")
+                ? i.createElement("div", { style: { color: B } }, "YES")
                 : "NO",
           },
           {
@@ -795,7 +796,7 @@
             displayName: G(O._W.DOTA_ACCESS_TOURNAMENT_BROADCASTER),
             formatFunction: (e = 0) =>
               e & O._W.DOTA_ACCESS_TOURNAMENT_BROADCASTER
-                ? i.createElement("div", { style: { color: K } }, "YES")
+                ? i.createElement("div", { style: { color: B } }, "YES")
                 : "NO",
           },
         ],
@@ -904,7 +905,7 @@
                       `${c} `,
                       i.createElement(
                         "span",
-                        { style: { color: H } },
+                        { style: { color: K } },
                         `[${s}]`,
                       ),
                     ),
@@ -1065,8 +1066,8 @@
           var t, a, l, s, M, L;
           const G = (0, o.UO)(),
             $ = null == G ? void 0 : G.id,
-            [P, B] = (0, i.useState)(null),
-            [K, ue] = (0, i.useState)(null),
+            [P, H] = (0, i.useState)(null),
+            [B, ue] = (0, i.useState)(null),
             [Ee, ge] = (0, i.useState)(null),
             [ve, fe] = (0, i.useState)(null),
             [Ae, he] = (0, i.useState)(!1),
@@ -1131,7 +1132,7 @@
                     } catch (e) {
                       Te(!0);
                     }
-                    a && a.data && B(n);
+                    a && a.data && H(n);
                   } catch (e) {
                     console.log("Error fetching individual persona info."),
                       Oe(!0);
@@ -1163,18 +1164,18 @@
               )),
                 fe(e);
             }, [Ee, De, Se, be, Le, $e]);
-          let Be = null;
+          let He = null;
           if (
             ($
               ? Ne && Ae
                 ? Ne && Ie
-                  ? (Be = `Error loading persona information for account ID ${$}. Double check universe & account ID (or try refreshing).`)
+                  ? (He = `Error loading persona information for account ID ${$}. Double check universe & account ID (or try refreshing).`)
                   : Ae &&
                     ke &&
-                    (Be = `Error loading match history for account ID ${$}.`)
-                : (Be = `Loading account ID ${$}...`)
-              : (Be = "Must pass in an account ID."),
-            Be)
+                    (He = `Error loading match history for account ID ${$}.`)
+                : (He = `Loading account ID ${$}...`)
+              : (He = "Must pass in an account ID."),
+            He)
           )
             return i.createElement(
               "div",
@@ -1189,11 +1190,11 @@
               i.createElement(
                 "div",
                 { className: U().ContentFrame },
-                i.createElement("h2", { className: U().Header }, Be),
+                i.createElement("h2", { className: U().Header }, He),
               ),
               i.createElement(R.U, null),
             );
-          const Ke = [
+          const Be = [
             {
               dataKey: "date",
               label: "Match Date",
@@ -2089,11 +2090,11 @@
               },
             },
           ];
-          let He = !0;
+          let Ke = !0;
           for (let e of pe)
             (null == P ? void 0 : P.persona) &&
               (null == P ? void 0 : P.persona[e.key]) &&
-              (He = !1);
+              (Ke = !1);
           let We = !0;
           for (let e of _e)
             (null == P ? void 0 : P.persona) &&
@@ -2128,7 +2129,11 @@
                 i.createElement(
                   "div",
                   { className: U().TopContentLeft },
-                  i.createElement("h1", { className: U().Header }, `${Ve}`),
+                  i.createElement(
+                    "h1",
+                    { className: (0, T.Z)(U().Header, U().HeaderFixedHeight) },
+                    `${Ve}`,
+                  ),
                   i.createElement(
                     "div",
                     { className: U().GeneralInfoGrid },
@@ -2272,11 +2277,11 @@
                   i.createElement(
                     "div",
                     { className: U().ChartContainer },
-                    K &&
+                    B &&
                       i.createElement(
                         "div",
                         { className: U().ChartTitle },
-                        `Last ${K.length} games`,
+                        `Last ${B.length} games`,
                       ),
                     i.createElement(
                       d.h,
@@ -2284,7 +2289,7 @@
                       i.createElement(
                         u.w,
                         {
-                          data: K,
+                          data: B,
                           margin: { top: 5, right: 30, left: 20, bottom: 5 },
                         },
                         i.createElement(p.q, {
@@ -2445,7 +2450,7 @@
                       ),
                     ),
                   ),
-                  !He && i.createElement("br", null),
+                  !Ke && i.createElement("br", null),
                   i.createElement(
                     "div",
                     { className: U().WarningsGrid },
@@ -2599,7 +2604,7 @@
                         null,
                         i.createElement(
                           "span",
-                          { style: { color: H } },
+                          { style: { color: K } },
                           "(None)",
                         ),
                       ),
@@ -2645,7 +2650,7 @@
                         null,
                         i.createElement(
                           "span",
-                          { style: { color: H } },
+                          { style: { color: K } },
                           "(None)",
                         ),
                       ),
@@ -2794,7 +2799,7 @@
                               : "",
                           overscanRowCount: 50,
                         },
-                        Ke.map((t) =>
+                        Be.map((t) =>
                           i.createElement(h.Z, {
                             key: t.dataKey,
                             label: t.label,
@@ -3430,8 +3435,8 @@
             [$, w] = (0, c.useState)({}),
             [P, U] = (0, c.useState)([]),
             [Y, x] = (0, c.useState)(!0),
-            [B, K] = (0, c.useState)([]);
-          function H() {
+            [H, B] = (0, c.useState)([]);
+          function K() {
             var e, t;
             return (0, n.mG)(this, void 0, void 0, function* () {
               if (
@@ -3557,7 +3562,7 @@
           }, [t]),
             (0, c.useEffect)(() => {
               try {
-                H();
+                K();
               } catch (e) {
                 console.log("Could not fetch registered teams."), h(!0);
               }
@@ -3608,7 +3613,7 @@
                         }),
                       ),
                     ),
-                      a && a.data && l.actions && K(l.actions);
+                      a && a.data && l.actions && B(l.actions);
                   });
                 })();
               } catch (e) {
@@ -4037,7 +4042,7 @@
                                 `${o.Y.BASE_URL}webapi/IDOTA2Teams/UpdateRegisteredTeamData/v0001?u=${g}&appid=${o.Y.DOTA_APP_ID}`,
                                 { params: a },
                               );
-                              H(), setTimeout(() => m(!1), v);
+                              K(), setTimeout(() => m(!1), v);
                             }),
                         },
                         c.createElement(
@@ -4169,8 +4174,8 @@
                 c.createElement(
                   c.Fragment,
                   null,
-                  !!B.length &&
-                    B.map((e) =>
+                  !!H.length &&
+                    H.map((e) =>
                       D.map((t) =>
                         c.createElement(
                           "div",
@@ -4189,7 +4194,7 @@
                         ),
                       ),
                     ),
-                  !B.length &&
+                  !H.length &&
                     c.createElement("div", null, "No audit actions."),
                 ),
               ),
