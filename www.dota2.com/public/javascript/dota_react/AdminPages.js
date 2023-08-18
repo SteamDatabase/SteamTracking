@@ -313,8 +313,8 @@
         U = a.n(P);
       const Y = "red",
         x = "orange",
-        K = "goldenrod",
-        B = "#adff2f",
+        B = "goldenrod",
+        K = "#adff2f",
         H = "darkgray",
         W = "forestgreen",
         V = "crimson",
@@ -460,7 +460,7 @@
                   a.push(
                     i.createElement(
                       "span",
-                      { style: { color: K } },
+                      { style: { color: B } },
                       `${M(O.PW.RETURNING_PLAYER)}${t}`,
                     ),
                   ),
@@ -480,9 +480,9 @@
             key: "behavscore",
             displayName: "Behavior Score",
             formatFunction: (e = 1e4) => {
-              let t = B;
+              let t = K;
               return (
-                e < 1500 ? (t = Y) : e < 3e3 ? (t = x) : e < 7e3 && (t = K),
+                e < 1500 ? (t = Y) : e < 3e3 ? (t = x) : e < 7e3 && (t = B),
                 i.createElement("span", { style: { color: t } }, e)
               );
             },
@@ -583,7 +583,7 @@
                 case O.n4.UNCLEAR:
                   return i.createElement(
                     "span",
-                    { style: { color: K } },
+                    { style: { color: B } },
                     L(O.n4.UNCLEAR),
                   );
                 case O.n4.SOMEWHAT_UNLIKELY:
@@ -607,7 +607,7 @@
             key: "plussubscriber",
             displayName: "Plus Subscriber",
             formatFunction: (e = 0) =>
-              e ? i.createElement("div", { style: { color: B } }, "YES") : "NO",
+              e ? i.createElement("div", { style: { color: K } }, "YES") : "NO",
           },
           {
             key: "wins",
@@ -625,7 +625,7 @@
               const n = Math.round((e / a) * 1e4) / 100;
               let l = "none";
               return (
-                n >= 70 || n <= 30 ? (l = x) : (n >= 60 || n <= 40) && (l = K),
+                n >= 70 || n <= 30 ? (l = x) : (n >= 60 || n <= 40) && (l = B),
                 i.createElement(
                   i.Fragment,
                   null,
@@ -651,7 +651,7 @@
               const n = Math.round((e / a) * 1e4) / 100;
               let l = "none";
               return (
-                n >= 70 || n <= 30 ? (l = x) : (n >= 60 || n <= 40) && (l = K),
+                n >= 70 || n <= 30 ? (l = x) : (n >= 60 || n <= 40) && (l = B),
                 i.createElement(
                   i.Fragment,
                   null,
@@ -677,9 +677,9 @@
                 (t = ((t >> 4) + t) & 252645135),
                 (t = ((t >> 8) + t) & 16711935),
                 (t = ((t >> 16) + t) & 65535);
-              let a = B;
+              let a = K;
               return (
-                t > 20 ? (a = Y) : t > 10 ? (a = x) : t > 5 && (a = K),
+                t > 20 ? (a = Y) : t > 10 ? (a = x) : t > 5 && (a = B),
                 i.createElement(
                   "span",
                   { style: { color: a } },
@@ -784,7 +784,7 @@
             displayName: G(O._W.DOTA_ACCESS_TOURNAMENT_ADMIN),
             formatFunction: (e = 0) =>
               e & O._W.DOTA_ACCESS_TOURNAMENT_ADMIN
-                ? i.createElement("div", { style: { color: B } }, "YES")
+                ? i.createElement("div", { style: { color: K } }, "YES")
                 : "NO",
           },
           {
@@ -792,7 +792,7 @@
             displayName: G(O._W.DOTA_ACCESS_TOURNAMENT_BROADCASTER),
             formatFunction: (e = 0) =>
               e & O._W.DOTA_ACCESS_TOURNAMENT_BROADCASTER
-                ? i.createElement("div", { style: { color: B } }, "YES")
+                ? i.createElement("div", { style: { color: K } }, "YES")
                 : "NO",
           },
         ],
@@ -1020,7 +1020,7 @@
           },
         ],
         ye = (e) => {
-          if (!e || !e.length) return null;
+          if (!e || !e.length) return "(No Bans)";
           e = e.slice(0, 5);
           return e.map((e) => {
             return i.createElement(
@@ -1062,8 +1062,8 @@
           var t, a, l, s, M, L;
           const G = (0, o.UO)(),
             $ = null == G ? void 0 : G.id,
-            [P, K] = (0, i.useState)(null),
-            [B, ue] = (0, i.useState)(null),
+            [P, B] = (0, i.useState)(null),
+            [K, ue] = (0, i.useState)(null),
             [Ee, ge] = (0, i.useState)(null),
             [ve, fe] = (0, i.useState)(null),
             [Ae, ke] = (0, i.useState)(!1),
@@ -1128,7 +1128,7 @@
                     } catch (e) {
                       Te(!0);
                     }
-                    a && a.data && K(n);
+                    a && a.data && B(n);
                   } catch (e) {
                     console.log("Error fetching individual persona info."),
                       Oe(!0);
@@ -1160,18 +1160,18 @@
               )),
                 fe(e);
             }, [Ee, De, Se, be, Le, $e]);
-          let Ke = null;
+          let Be = null;
           if (
             ($
               ? Ne && Ae
                 ? Ne && Ie
-                  ? (Ke = `Error loading persona information for account ID ${$}. Double check universe & account ID (or try refreshing).`)
+                  ? (Be = `Error loading persona information for account ID ${$}. Double check universe & account ID (or try refreshing).`)
                   : Ae &&
                     he &&
-                    (Ke = `Error loading match history for account ID ${$}.`)
-                : (Ke = `Loading account ID ${$}...`)
-              : (Ke = "Must pass in an account ID."),
-            Ke)
+                    (Be = `Error loading match history for account ID ${$}.`)
+                : (Be = `Loading account ID ${$}...`)
+              : (Be = "Must pass in an account ID."),
+            Be)
           )
             return i.createElement(
               "div",
@@ -1186,11 +1186,11 @@
               i.createElement(
                 "div",
                 { className: U().ContentFrame },
-                i.createElement("h2", { className: U().Header }, Ke),
+                i.createElement("h2", { className: U().Header }, Be),
               ),
               i.createElement(R.U, null),
             );
-          const Be = [
+          const Ke = [
             {
               dataKey: "date",
               label: "Match Date",
@@ -2257,11 +2257,11 @@
                   i.createElement(
                     "div",
                     { className: U().ChartContainer },
-                    B &&
+                    K &&
                       i.createElement(
                         "div",
                         { className: U().ChartTitle },
-                        `Last ${B.length} games`,
+                        `Last ${K.length} games`,
                       ),
                     i.createElement(
                       d.h,
@@ -2269,7 +2269,7 @@
                       i.createElement(
                         u.w,
                         {
-                          data: B,
+                          data: K,
                           margin: { top: 5, right: 30, left: 20, bottom: 5 },
                         },
                         i.createElement(p.q, {
@@ -2778,7 +2778,7 @@
                                 : U().MatchRowOdd
                               : "",
                         },
-                        Be.map((t) =>
+                        Ke.map((t) =>
                           i.createElement(k.Z, {
                             key: t.dataKey,
                             label: t.label,
@@ -3414,7 +3414,7 @@
             [$, w] = (0, c.useState)({}),
             [P, U] = (0, c.useState)([]),
             [Y, x] = (0, c.useState)(!0),
-            [K, B] = (0, c.useState)([]);
+            [B, K] = (0, c.useState)([]);
           function H() {
             var e, t;
             return (0, n.mG)(this, void 0, void 0, function* () {
@@ -3592,7 +3592,7 @@
                         }),
                       ),
                     ),
-                      a && a.data && l.actions && B(l.actions);
+                      a && a.data && l.actions && K(l.actions);
                   });
                 })();
               } catch (e) {
@@ -4153,8 +4153,8 @@
                 c.createElement(
                   c.Fragment,
                   null,
-                  !!K.length &&
-                    K.map((e) =>
+                  !!B.length &&
+                    B.map((e) =>
                       D.map((t) =>
                         c.createElement(
                           "div",
@@ -4173,7 +4173,7 @@
                         ),
                       ),
                     ),
-                  !K.length &&
+                  !B.length &&
                     c.createElement("div", null, "No audit actions."),
                 ),
               ),
