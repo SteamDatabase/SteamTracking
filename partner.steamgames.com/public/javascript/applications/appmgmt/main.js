@@ -25046,7 +25046,7 @@
             n.e(3504),
             n.e(7334),
             n.e(2136),
-          ]).then(n.bind(n, 39607)),
+          ]).then(n.bind(n, 18516)),
         ),
         G = c.lazy(() =>
           Promise.all([n.e(4023), n.e(2856), n.e(5117), n.e(5676)]).then(

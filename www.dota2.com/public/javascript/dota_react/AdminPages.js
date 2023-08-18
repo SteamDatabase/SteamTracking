@@ -135,8 +135,8 @@
         v = a(52339),
         f = a(13169),
         A = a(93115),
-        k = a(28772),
-        h = a(54013),
+        h = a(28772),
+        k = a(54013),
         T = a(22396),
         N = a(29706),
         R = a(70894),
@@ -326,7 +326,7 @@
         X = "#FF8042",
         Q = (e) => {
           let t = "";
-          const a = `${h.Y.CDN_URL}/apps/dota2/images/`;
+          const a = `${k.Y.CDN_URL}/apps/dota2/images/`;
           return (
             (1 & e) > 0 &&
               (t = `${a}player_reports/button_report_voice_on.png`),
@@ -415,7 +415,7 @@
                   i.createElement("img", {
                     className: U().RankedBadgeIcon,
                     src: `${
-                      h.Y.CDN_URL
+                      k.Y.CDN_URL
                     }/apps/dota2/images/small_ranks/ranked_icons_emoticon_${Math.floor(
                       a / 10,
                     )}.png`,
@@ -696,13 +696,16 @@
             formatFunction: (e = {}) => {
               const t = [];
               for (let a in e) {
-                const n = Object.entries(e[a]).reverse(),
-                  l = n.length ? n.reduce((e, t) => e + Number(t[0]), 0) : 0;
+                const n = Object.entries(e[a]).reverse();
+                n.sort((e, t) => (e[1] > t[1] ? -1 : 1));
+                const l = n.length
+                  ? n.reduce((e, t) => e + Number(t[1]), 0)
+                  : 0;
                 if (l)
                   for (let e = 0; e < Math.min(n.length, 2); e++) {
                     const r =
-                        !!n[e][1] && /<\/?[a-z][\s\S]*>/i.test("" + n[e][1]),
-                      o = "string" == typeof n[e][1] ? n[e][1] : "";
+                        !!n[e][0] && /<\/?[a-z][\s\S]*>/i.test("" + n[e][0]),
+                      o = "string" == typeof n[e][0] ? n[e][0] : "";
                     t.push(
                       i.createElement(
                         i.Fragment,
@@ -716,11 +719,11 @@
                           i.createElement("div", {
                             dangerouslySetInnerHTML: { __html: o },
                           }),
-                        !r && i.createElement("div", null, `${n[e][1]}`),
+                        !r && i.createElement("div", null, `${n[e][0]}`),
                         i.createElement(
                           "div",
                           { style: { color: H } },
-                          `(${n[e][0]} / ${l})`,
+                          `(${n[e][1]} / ${l})`,
                         ),
                       ),
                     );
@@ -1066,8 +1069,8 @@
             [K, ue] = (0, i.useState)(null),
             [Ee, ge] = (0, i.useState)(null),
             [ve, fe] = (0, i.useState)(null),
-            [Ae, ke] = (0, i.useState)(!1),
-            [he, Te] = (0, i.useState)(!1),
+            [Ae, he] = (0, i.useState)(!1),
+            [ke, Te] = (0, i.useState)(!1),
             [Ne, Re] = (0, i.useState)(!1),
             [Ie, Oe] = (0, i.useState)(!1),
             [De, Ce] = (0, i.useState)(!0),
@@ -1083,16 +1086,16 @@
               !(function () {
                 var e;
                 (0, n.mG)(this, void 0, void 0, function* () {
-                  if (!h.Y.DOTA_APP_ID || !$) return;
-                  Oe(!1), Re(!1), ke(!1), Te(!1);
+                  if (!k.Y.DOTA_APP_ID || !$) return;
+                  Oe(!1), Re(!1), he(!1), Te(!1);
                   const t = {
-                    appid: h.Y.DOTA_APP_ID,
-                    u: C(h.Y.DOTA_APP_ID),
+                    appid: k.Y.DOTA_APP_ID,
+                    u: C(k.Y.DOTA_APP_ID),
                     account_id: $,
                   };
                   try {
                     const a = yield r().get(
-                        h.Y.BASE_URL + "persona/showplayerreact/",
+                        k.Y.BASE_URL + "persona/showplayerreact/",
                         { params: t },
                       ),
                       n = null == a ? void 0 : a.data;
@@ -1133,7 +1136,7 @@
                     console.log("Error fetching individual persona info."),
                       Oe(!0);
                   }
-                  Re(!0), ke(!0);
+                  Re(!0), he(!0);
                 });
               })();
             } catch (e) {
@@ -1167,7 +1170,7 @@
                 ? Ne && Ie
                   ? (Be = `Error loading persona information for account ID ${$}. Double check universe & account ID (or try refreshing).`)
                   : Ae &&
-                    he &&
+                    ke &&
                     (Be = `Error loading match history for account ID ${$}.`)
                 : (Be = `Loading account ID ${$}...`)
               : (Be = "Must pass in an account ID."),
@@ -1208,9 +1211,9 @@
                     "a",
                     {
                       key: e,
-                      href: `${h.Y.BASE_URL}matches/match/${e}?u=${C(
-                        h.Y.DOTA_APP_ID,
-                      )}&appid=${h.Y.DOTA_APP_ID}&highlight=${t}`,
+                      href: `${k.Y.BASE_URL}matches/match/${e}?u=${C(
+                        k.Y.DOTA_APP_ID,
+                      )}&appid=${k.Y.DOTA_APP_ID}&highlight=${t}`,
                     },
                     a || e,
                   ))(e.cellData, e.columnData.strAccountId),
@@ -1232,12 +1235,12 @@
                 return n
                   ? i.createElement("img", {
                       className: U().HeroImage,
-                      src: `${h.Y.IMG_URL}heroes/wide/${n}.png`,
+                      src: `${k.Y.IMG_URL}heroes/wide/${n}.png`,
                       alt: e.cellData,
                     })
                   : i.createElement("img", {
                       className: U().HeroImage,
-                      src: `${h.Y.IMG_URL}heroes/wide/unknown.png`,
+                      src: `${k.Y.IMG_URL}heroes/wide/unknown.png`,
                     });
               },
             },
@@ -1475,7 +1478,7 @@
             {
               dataKey: "kills",
               label: "K/D/A",
-              widthRelative: 8,
+              widthRelative: 7,
               cellRenderer: (e) => {
                 var t, a, n, l;
                 return isNaN(e.cellData) ||
@@ -1506,9 +1509,64 @@
               },
             },
             {
+              dataKey: "goldspent",
+              label: "NW",
+              widthRelative: 6,
+              cellRenderer: (e) => {
+                var t;
+                let a =
+                  e.cellData +
+                  (null === (t = null == e ? void 0 : e.rowData) || void 0 === t
+                    ? void 0
+                    : t.gold);
+                return (
+                  isNaN(a) && (a = "-"),
+                  i.createElement(
+                    "span",
+                    { style: { color: "darkgoldenrod" } },
+                    `${a}`,
+                  )
+                );
+              },
+            },
+            {
+              dataKey: "item0",
+              label: "Items",
+              widthRelative: 17,
+              cellRenderer: (e) => {
+                const t = [];
+                for (let a = 0; a < 6; a++) {
+                  const n =
+                    null == xe
+                      ? void 0
+                      : xe.itemabilities.find(
+                          (t) =>
+                            t.id ==
+                            (null == e ? void 0 : e.rowData[`item${a}`]),
+                        );
+                  let l = null == n ? void 0 : n.name.replace("item_", "");
+                  (n && l) || (l = "emptyitembg"),
+                    t.push(
+                      i.createElement("img", {
+                        key: `${e.rowIndex}_item${a}`,
+                        className: U().ItemIcon,
+                        src: `${k.Y.IMG_URL}items/${l}.png`,
+                        alt: e.cellData,
+                      }),
+                    );
+                }
+                return i.createElement(
+                  "div",
+                  { className: U().ItemContainer },
+                  t,
+                  " ",
+                );
+              },
+            },
+            {
               dataKey: "role_assignment",
               label: "Role",
-              widthRelative: 7,
+              widthRelative: 6,
               cellRenderer: (e) => {
                 switch (e.cellData) {
                   case 1:
@@ -1528,51 +1586,56 @@
             },
             {
               dataKey: "reports",
-              label: "Reports",
-              widthRelative: 12,
+              label: "Reports / Notes",
+              widthRelative: 22,
               cellRenderer: (e) => {
-                var t, a, n, l, r, o;
-                const c = Object.values(e.cellData || []),
-                  s = Object.values(
+                var t, a, n, l, r, o, c;
+                const s = Object.values(e.cellData || []),
+                  d = Object.values(
                     (null === (t = null == e ? void 0 : e.rowData) ||
                     void 0 === t
                       ? void 0
                       : t.leaver) || [],
                   ),
-                  d = Object.values(
+                  u = Object.values(
                     (null === (a = null == e ? void 0 : e.rowData) ||
                     void 0 === a
                       ? void 0
                       : a.detections) || [],
                   ),
-                  u = Object.values(
+                  p = Object.values(
                     (null === (n = null == e ? void 0 : e.rowData) ||
                     void 0 === n
                       ? void 0
                       : n.lowpribans) || [],
                   ),
-                  p =
+                  E =
                     null === (l = null == e ? void 0 : e.rowData) ||
                     void 0 === l
                       ? void 0
                       : l.hwidchange,
-                  E =
+                  _ =
                     null === (r = null == e ? void 0 : e.rowData) ||
                     void 0 === r
                       ? void 0
-                      : r.geolocchange,
-                  _ =
+                      : r.hwidchangelink,
+                  y =
                     null === (o = null == e ? void 0 : e.rowData) ||
                     void 0 === o
                       ? void 0
-                      : o.languagechange,
-                  y = [],
-                  g = [];
-                for (const e of c) 3840 & e.reportflags ? y.push(e) : g.push(e);
-                const v = [];
+                      : o.geolocchange,
+                  g =
+                    null === (c = null == e ? void 0 : e.rowData) ||
+                    void 0 === c
+                      ? void 0
+                      : c.languagechange,
+                  v = [],
+                  f = [];
+                for (const e of s) 3840 & e.reportflags ? v.push(e) : f.push(e);
+                const A = [];
                 return (
-                  s.length &&
-                    v.push(
+                  d.length &&
+                    A.push(
                       i.createElement(
                         w.HP,
                         {
@@ -1621,7 +1684,7 @@
                             i.createElement(
                               "tbody",
                               null,
-                              s.map((e) =>
+                              d.map((e) =>
                                 i.createElement(
                                   "tr",
                                   { key: `${e.time}` },
@@ -1673,8 +1736,8 @@
                         ),
                       ),
                     ),
-                  y.length &&
-                    v.push(
+                  v.length &&
+                    A.push(
                       i.createElement(
                         w.HP,
                         {
@@ -1709,7 +1772,7 @@
                             i.createElement(
                               "tbody",
                               null,
-                              y.map((e) => {
+                              v.map((e) => {
                                 const t = Q(e.reportflags),
                                   a = ee(e.reportflags);
                                 return i.createElement(
@@ -1739,12 +1802,12 @@
                         i.createElement(
                           "span",
                           { key: "playerCommends", style: { color: W } },
-                          `[${y.length}] `,
+                          `[${v.length}] `,
                         ),
                       ),
                     ),
-                  g.length &&
-                    v.push(
+                  f.length &&
+                    A.push(
                       i.createElement(
                         w.HP,
                         {
@@ -1779,7 +1842,7 @@
                             i.createElement(
                               "tbody",
                               null,
-                              g.map((e) => {
+                              f.map((e) => {
                                 const t = Q(e.reportflags),
                                   a = ee(e.reportflags);
                                 return i.createElement(
@@ -1809,12 +1872,12 @@
                         i.createElement(
                           "span",
                           { key: "playerReports", style: { color: Y } },
-                          `[${g.length}]`,
+                          `[${f.length}]`,
                         ),
                       ),
                     ),
-                  d.length &&
-                    v.push(
+                  u.length &&
+                    A.push(
                       i.createElement(
                         w.HP,
                         {
@@ -1853,7 +1916,7 @@
                             i.createElement(
                               "tbody",
                               null,
-                              d.map((e, t) =>
+                              u.map((e, t) =>
                                 i.createElement(
                                   "tr",
                                   { key: `${e.matchid}-${t}` },
@@ -1891,8 +1954,8 @@
                         ),
                       ),
                     ),
-                  u.length &&
-                    v.push(
+                  p.length &&
+                    A.push(
                       i.createElement(
                         w.HP,
                         {
@@ -1921,7 +1984,7 @@
                             i.createElement(
                               "tbody",
                               null,
-                              u.map((e, t) =>
+                              p.map((e, t) =>
                                 i.createElement(
                                   "tr",
                                   { key: `lp-${t}` },
@@ -1951,13 +2014,13 @@
                         ),
                       ),
                     ),
-                  p &&
-                    v.push(
+                  g &&
+                    A.push(
                       i.createElement(
                         w.HP,
                         {
-                          key: "hwchange",
-                          toolTipContent: p,
+                          key: "langchange",
+                          toolTipContent: g,
                           direction: "left",
                           nBodyAlignment: 1,
                           nAllowOffscreenPx: 1200,
@@ -1965,18 +2028,18 @@
                         },
                         i.createElement(
                           "span",
-                          { key: "hwidChange", style: { color: x } },
-                          "[HW]",
+                          { key: "langChange", style: { color: x } },
+                          `[${g.slice(-2)}]`,
                         ),
                       ),
                     ),
-                  E &&
-                    v.push(
+                  y &&
+                    A.push(
                       i.createElement(
                         w.HP,
                         {
                           key: "geochange",
-                          toolTipContent: E,
+                          toolTipContent: y,
                           direction: "left",
                           nBodyAlignment: 1,
                           nAllowOffscreenPx: 1200,
@@ -1989,13 +2052,13 @@
                         ),
                       ),
                     ),
-                  _ &&
-                    v.push(
+                  E &&
+                    A.push(
                       i.createElement(
                         w.HP,
                         {
-                          key: "langchange",
-                          toolTipContent: _,
+                          key: "hwchange",
+                          toolTipContent: E,
                           direction: "left",
                           nBodyAlignment: 1,
                           nAllowOffscreenPx: 1200,
@@ -2003,73 +2066,25 @@
                         },
                         i.createElement(
                           "span",
-                          { key: "langChange", style: { color: x } },
-                          `[${_.slice(-2)}]`,
+                          { key: "hwidChange", style: { color: x } },
+                          "[HW]",
                         ),
                       ),
                     ),
-                  0 == v.length
+                  _ &&
+                    A.push(
+                      i.createElement("div", {
+                        key: "hwidChange",
+                        dangerouslySetInnerHTML: { __html: _ },
+                      }),
+                    ),
+                  0 == A.length
                     ? ""
                     : i.createElement(
                         "div",
                         { className: U().ReportRowElement },
-                        v,
+                        A,
                       )
-                );
-              },
-            },
-            {
-              dataKey: "goldspent",
-              label: "NW",
-              widthRelative: 6,
-              cellRenderer: (e) => {
-                var t;
-                let a =
-                  e.cellData +
-                  (null === (t = null == e ? void 0 : e.rowData) || void 0 === t
-                    ? void 0
-                    : t.gold);
-                return (
-                  isNaN(a) && (a = "-"),
-                  i.createElement(
-                    "span",
-                    { style: { color: "darkgoldenrod" } },
-                    `${a}`,
-                  )
-                );
-              },
-            },
-            {
-              dataKey: "item0",
-              label: "Items",
-              widthRelative: 23,
-              cellRenderer: (e) => {
-                const t = [];
-                for (let a = 0; a < 6; a++) {
-                  const n =
-                    null == xe
-                      ? void 0
-                      : xe.itemabilities.find(
-                          (t) =>
-                            t.id ==
-                            (null == e ? void 0 : e.rowData[`item${a}`]),
-                        );
-                  let l = null == n ? void 0 : n.name.replace("item_", "");
-                  (n && l) || (l = "emptyitembg"),
-                    t.push(
-                      i.createElement("img", {
-                        key: `${e.rowIndex}_item${a}`,
-                        className: U().ItemIcon,
-                        src: `${h.Y.IMG_URL}items/${l}.png`,
-                        alt: e.cellData,
-                      }),
-                    );
-                }
-                return i.createElement(
-                  "div",
-                  { className: U().ItemContainer },
-                  t,
-                  " ",
                 );
               },
             },
@@ -2347,7 +2362,7 @@
                     "Support, Bans, & Other Info",
                     i.createElement("img", {
                       className: (0, T.Z)(U().ArrowIcon, U().ArrowIconRight),
-                      src: `${h.Y.IMG_URL}arrow_solid_right.png`,
+                      src: `${k.Y.IMG_URL}arrow_solid_right.png`,
                     }),
                   ),
                 ),
@@ -2372,7 +2387,7 @@
                     "Support, Bans, & Other Info",
                     i.createElement("img", {
                       className: (0, T.Z)(U().ArrowIcon, U().ArrowIconDown),
-                      src: `${h.Y.IMG_URL}arrow_over.png`,
+                      src: `${k.Y.IMG_URL}arrow_over.png`,
                     }),
                   ),
                   i.createElement(
@@ -2777,9 +2792,10 @@
                                 ? U().MatchRowEven
                                 : U().MatchRowOdd
                               : "",
+                          overscanRowCount: 50,
                         },
                         Ke.map((t) =>
-                          i.createElement(k.Z, {
+                          i.createElement(h.Z, {
                             key: t.dataKey,
                             label: t.label,
                             dataKey: t.dataKey,
@@ -2875,7 +2891,7 @@
           (e[(e.kTRAA_ValveUpdateTeamName = 16)] = "kTRAA_ValveUpdateTeamName"),
           (e[(e.kTRAA_Penalty20 = 20)] = "kTRAA_Penalty20");
       })(A || (A = {}));
-      const k = {
+      const h = {
           0: "kTRAA_RegisterTeam",
           1: "kTRAA_InvitePlayer",
           2: "kTRAA_RemovePlayer",
@@ -2895,7 +2911,7 @@
           16: "kTRAA_ValveUpdateTeamName",
           20: "kTRAA_Penalty20",
         },
-        h = [
+        k = [
           {
             enum: A.kTRAA_RegisterTeam,
             formatFunction: () =>
@@ -3288,13 +3304,13 @@
           {
             key: "action",
             displayName: "Action Enum",
-            formatFunction: (e) => `${k[e]} (${e})`,
+            formatFunction: (e) => `${h[e]} (${e})`,
           },
           {
             key: "action",
             displayName: "Audit Action",
             formatFunction: (e, t = "", a = "") =>
-              h.find((t) => t.enum === e).formatFunction.call(null, t, a),
+              k.find((t) => t.enum === e).formatFunction.call(null, t, a),
           },
         ],
         C = [
@@ -3407,8 +3423,8 @@
           const t = (0, i.UO)().id,
             [a, l] = (0, c.useState)([]),
             [p, _] = (0, c.useState)(!1),
-            [f, k] = (0, c.useState)(!1),
-            [h, F] = (0, c.useState)({}),
+            [f, h] = (0, c.useState)(!1),
+            [k, F] = (0, c.useState)({}),
             [b, M] = (0, c.useState)(!1),
             [L, G] = (0, c.useState)(!1),
             [$, w] = (0, c.useState)({}),
@@ -3543,7 +3559,7 @@
               try {
                 H();
               } catch (e) {
-                console.log("Could not fetch registered teams."), k(!0);
+                console.log("Could not fetch registered teams."), h(!0);
               }
             }, []),
             (0, c.useEffect)(() => {
@@ -3698,7 +3714,7 @@
                 "Error loading registered teams...",
               )),
             b &&
-              (0 == Object.keys(h).length || L) &&
+              (0 == Object.keys(k).length || L) &&
               (j = c.createElement(
                 "div",
                 null,
@@ -3719,7 +3735,7 @@
               c.createElement("div", { className: y().ContentFrame }, j),
               c.createElement(u.U, null),
             );
-          const q = h.members || [];
+          const q = k.members || [];
           q.forEach((e) => {
             (e.kick_link = `${o.Y.BASE_URL}webapi/IDOTA2Teams/RemoveTeamMember/v0001?u=${g}&appid=${o.Y.DOTA_APP_ID}&team_id=${t}&account_id=${e.account_id}`),
               (e.make_admin_link = e.admin
@@ -3746,8 +3762,8 @@
               c.createElement(
                 "h1",
                 { className: y().Header },
-                `Team Details for ${null == h ? void 0 : h.name} (${
-                  h.team_id
+                `Team Details for ${null == k ? void 0 : k.name} (${
+                  k.team_id
                 })`,
               ),
               c.createElement(
@@ -3762,8 +3778,8 @@
                       "div",
                       null,
                       e.formatFunction
-                        ? e.formatFunction.call(null, h[e.key])
-                        : JSON.stringify(h[e.key] || "", null, 2).replace(
+                        ? e.formatFunction.call(null, k[e.key])
+                        : JSON.stringify(k[e.key] || "", null, 2).replace(
                             /['"]+/g,
                             "",
                           ),
@@ -4081,8 +4097,8 @@
                       "div",
                       null,
                       e.formatFunction
-                        ? e.formatFunction.call(null, h[e.key], h.team_id)
-                        : JSON.stringify(h[e.key] || "", null, 2).replace(
+                        ? e.formatFunction.call(null, k[e.key], k.team_id)
+                        : JSON.stringify(k[e.key] || "", null, 2).replace(
                             /['"]+/g,
                             "",
                           ),
@@ -4116,8 +4132,8 @@
                       "div",
                       { key: `${e.key}-ugc-logo` },
                       e.formatFunction
-                        ? e.formatFunction.call(null, h[e.key])
-                        : JSON.stringify(h[e.key] || "", null, 2).replace(
+                        ? e.formatFunction.call(null, k[e.key])
+                        : JSON.stringify(k[e.key] || "", null, 2).replace(
                             /['"]+/g,
                             "",
                           ),

@@ -331,7 +331,13 @@ HighlightPlayer.prototype.LoadMovie = function( $Container, bUserAction )
 		$Video.videoControls();
 
 		$Video[0].load();
-		$Video[0].play();
+
+		// Don't start playing the video if the page is already hidden. The
+		// visibilityState hooks will start it once we go visible.
+		if ( document.visibilityState !== 'hidden' )
+			$Video[0].play();
+		else
+			this.m_bPausedForHidden = true;
 
 		$Video.on( 'ended', function() {
 			_this.Transition();
@@ -410,7 +416,7 @@ HighlightPlayer.prototype.TransitionTo = function( elem, bSkipAnimation, bUserAc
 		this.LoadMovie( $Elem, bUserAction );
 		this.bScreenshotsOnly = false;
 	}
-	
+
 	$Elem.stop();
 
 	if ( bSkipAnimation )
@@ -1241,7 +1247,7 @@ function BCanPlayMPEG4()
 {
 	var ele = document.createElement('video');
 
-	return ele.canPlayType('video/mp4; codecs="avc1.4D401E, mp4a.40.2"') == "probably"; 
+	return ele.canPlayType('video/mp4; codecs="avc1.4D401E, mp4a.40.2"') == "probably";
 
 }
 
