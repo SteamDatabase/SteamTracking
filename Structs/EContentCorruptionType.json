@@ -1,0 +1,13 @@
+{
+    "name": "EContentCorruptionType",
+    "items":
+        [
+            ["Unknown", "0"],
+            ["Unexpected_size", "1"],
+            ["Crc_header_mismatch", "2"],
+            ["Sha_header_mismatch", "3"],
+            ["Decompress_failed", "4"],
+            ["Checksum_error", "5"],
+            ["Parsing_failed", "6"]
+        ]
+}

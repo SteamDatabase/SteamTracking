@@ -1,0 +1,13 @@
+{
+    "name": "EConnectivityTestResult",
+    "items":
+        [
+            ["Unknown", "0"],
+            ["Connected", "1"],
+            ["CaptivePortal", "2"],
+            ["TimedOut", "3"],
+            ["Failed", "4"],
+            ["WifiDisabled", "5"],
+            ["NoLAN", "6"]
+        ]
+}

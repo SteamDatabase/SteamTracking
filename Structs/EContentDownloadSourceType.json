@@ -1,0 +1,17 @@
+{
+    "name": "EContentDownloadSourceType",
+    "items":
+        [
+            ["Invalid", "0"],
+            ["CS", "1"],
+            ["CDN", "2"],
+            ["LCS", "3"],
+            ["Proxy", "4"],
+            ["LANPeer", "5"],
+            ["SLS", "6"],
+            ["SteamCache", "7"],
+            ["OpenCache", "8"],
+            ["LANCache", "9"],
+            ["PeerServer", "10"]
+        ]
+}
