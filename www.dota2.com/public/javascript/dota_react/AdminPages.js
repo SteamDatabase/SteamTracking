@@ -1222,7 +1222,7 @@
             {
               dataKey: "heroid",
               label: "Hero",
-              widthRelative: 6,
+              widthRelative: 5,
               cellRenderer: (e) => {
                 var t;
                 const a =
@@ -1322,13 +1322,13 @@
             {
               dataKey: "previousrank",
               label: "MMR",
-              widthRelative: 7,
+              widthRelative: 6,
               cellRenderer: (e) => e.cellData,
             },
             {
               dataKey: "duration",
-              label: "Duration",
-              widthRelative: 7,
+              label: "Dur",
+              widthRelative: 6,
               cellRenderer: (e) => {
                 const t = e.cellData;
                 return t
