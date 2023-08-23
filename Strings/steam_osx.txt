@@ -8,10 +8,12 @@ __TEXT
 0
 __stubs
 __TEXT
-2I4
-2I4
+BI4
+BI4
 __stub_helper
 __TEXT
+$R4
+$R4
 __gcc_except_tab__TEXT
 __const
 __TEXT
@@ -139,30 +141,27 @@ g(
 @
 @
 s
-]3
 $
-9
 9
 Hi
 Hi
 Hi
 WF
 (
+"3
 3
-P)
-$)
-I)
+8)
 )
 )
 )
 
 %
-R8
+_8
 ;
-8
 
 0
 5
+(
 (
 (
 6'
@@ -171,7 +170,6 @@ g?
 
 0
 Ic
-W1
 0
 0
 AT=
@@ -182,6 +180,7 @@ AT=
 D
 @
 @
+@1
 7
 7
 7
@@ -218,6 +217,7 @@ IcE
 IcE
 @
 @
+9
 6
 6
 6
@@ -225,8 +225,6 @@ IcE
 6
 6
 0
-0
-61
 NSt3__117bad_function_callE
 15CBaseFileSystem
 11IFileSystem
@@ -2386,7 +2384,7 @@ TempAppCmdLine
 m_nPipeData >= 0
 ReLaunchCmdLine
 ClientLauncherType
-Startup - updater built Aug 18 2023 12:40:01
+Startup - updater built Aug 23 2023 13:22:19
 Startup - Steam Client launched with: %s
 Shutdown
 no hosts found
@@ -2677,8 +2675,8 @@ m_iRefs >= 0 && m_iRefs < 0x0ffffff
 #SteamBootstrapper_UpdatingSteam
 Updating Steam...
 Tahoma
-Aug 18 2023
-12:40:02
+Aug 23 2023
+13:22:20
 crashhandler004
 steam
 Steam Executable Crash
@@ -2775,7 +2773,7 @@ China
 %s/%s%s
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamexe/updateui.h
 ThreadInMainThread()
-12:40:00
+13:22:18
 [%3d%%] %s
 [----] %s
 [%3d%%] !!! Fatal Error: %s
@@ -10900,7 +10898,7 @@ steamwebhelper
 Steam Helper
 cefwebhelper
 1.0
-12:37:53
+13:20:14
 Jan
 Feb
 Mar
@@ -13342,12 +13340,8 @@ out of memory
 n <= (size_t)INT_MAX
 file_ofs == pFile->GetBytesWritten()
 
-H(:
-N(:
-n(:
 
 0
-FL=
 yB
 0
 G
@@ -13367,30 +13361,27 @@ g(
 @
 @
 s
-]3
 $
-9
 9
 Hi
 Hi
 Hi
 WF
 (
+"3
 3
-P)
-$)
-I)
+8)
 )
 )
 )
 
 %
-R8
+_8
 ;
-8
 
 0
 5
+(
 (
 (
 6'
@@ -13399,7 +13390,6 @@ g?
 
 0
 Ic
-W1
 0
 0
 AT=
@@ -13410,6 +13400,7 @@ AT=
 D
 @
 @
+@1
 7
 7
 7
@@ -13446,6 +13437,7 @@ IcE
 IcE
 @
 @
+9
 6
 6
 6
@@ -13453,13 +13445,8 @@ IcE
 6
 6
 0
-0
-61
 V
-g/
-_/
-S5
-V/
+j/
 =
 /
 /
@@ -13472,14 +13459,15 @@ o9
 .
 .
 c8
-h-
+t-
+`-
 -
+3
 3
 3
 3
 !
 @
-L2
 ,
 ,
 ,
@@ -13487,18 +13475,19 @@ L2
 @
 &
 1
-p,
 +
-j,
-H0
-70
 0
 0
 \4
-+)
+8)
+2
+@/
+i/
 )
 )
-&1
+)
+(/
+*
 *
 *
 @
@@ -13530,13 +13519,13 @@ AESNI-CBC+SHA256 stitch for x86_64, CRYPTOGAMS by <appro@openssl.org>
 AES for Intel AES-NI, CRYPTOGAMS by <appro@openssl.org>
 @
 -
+-
 %
 1
 1
 `
 `
 @
-3(
 j
 j
 Pj
@@ -13546,6 +13535,7 @@ j
 0
 IcU
 E;e
+s%
 M)u
 =
 =
@@ -13844,6 +13834,7 @@ OO
 expand 32-byte k
 ChaCha20 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
++
 #
 #
 #
@@ -13864,8 +13855,6 @@ j
 j
 
 t$I;M
-z&
-t&
 e
 W
 ,7~5d
@@ -13876,7 +13865,9 @@ W
 #M$/
 #-!/
 "
+"
 H
+o!
 0
 
 
@@ -14160,13 +14151,16 @@ H=
 =*.*
 @
 @
+E
 0
+{
 @
 @
 @
 @
 @
 @
+K
 0
 0
 0
@@ -14217,13 +14211,14 @@ Hc
 
 0
 0
-0
-m
 @
 @
-?
+c
+[
 &
+'
 %
+
 
 @
 c

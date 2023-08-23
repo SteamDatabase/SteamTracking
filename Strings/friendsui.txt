@@ -11,8 +11,6 @@ __TEXT
 __cstring
 __TEXT
 __gcc_except_tab__TEXT
-|0!
-|0!
 __const
 __TEXT
 __objc_methname
@@ -5696,7 +5694,6 @@ d
 @
 @
 0
-+
 @
 @
 @

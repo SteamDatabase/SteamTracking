@@ -1,4 +1,4 @@
-var CLSTAMP = "8278179";
+var CLSTAMP = "8287473";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -4052,9 +4052,9 @@ var CLSTAMP = "8278179";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Aug 18 2023 : 13:21:42",
-                BUILD_TIME_UTC: "Aug 18 2023 : 20:21:42",
-                BUILD_RTIME_UTC: 1692390102,
+                BUILD_TIME_LOCAL: "Aug 23 2023 : 13:28:27",
+                BUILD_TIME_UTC: "Aug 23 2023 : 20:28:27",
+                BUILD_RTIME_UTC: 1692822507,
               }.MOBILE_BUILD)
             ) {
               window.addEventListener("beforeunload", (e) => {
@@ -50746,51 +50746,54 @@ var CLSTAMP = "8278179";
         "use strict";
         r.r(t),
           r.d(t, {
-            CSSTimeToMS: () => x,
-            CheckEResult: () => y,
-            ConditionalWrapper: () => E,
-            GetZoomFromParents: () => R,
-            ImageContextMenuItems: () => f,
-            LinkContextMenuItems: () => p,
-            LinkInNewWindow: () => h,
-            LocalizeOrdinal: () => k,
-            MakeDivClassComponent: () => L,
-            NullComponent: () => H,
-            ObservablePromise: () => M,
-            OnImgContextMenu: () => _,
-            OnImgContextMenuFullSize: () => w,
-            OnLinkContextMenu: () => g,
-            OpenLinkInNewWindow: () => v,
-            OpenLinkInNewWindowWebOnly: () => m,
-            RangeArray: () => B,
-            StringComparator: () => S,
-            useObservablePromise: () => b,
+            CSSTimeToMS: () => R,
+            CheckEResult: () => S,
+            ConditionalWrapper: () => M,
+            GetZoomFromParents: () => H,
+            ImageContextMenuItems: () => _,
+            LinkContextMenuItems: () => g,
+            LinkInNewWindow: () => p,
+            LocalizeOrdinal: () => x,
+            MakeDivClassComponent: () => y,
+            NullComponent: () => V,
+            ObservablePromise: () => b,
+            OnImgContextMenu: () => w,
+            OnImgContextMenuFullSize: () => v,
+            OnLinkContextMenu: () => f,
+            OpenLinkInNewWindow: () => E,
+            OpenLinkInNewWindowWebOnly: () => h,
+            RangeArray: () => k,
+            StringComparator: () => B,
+            useObservablePromise: () => L,
           });
         var n = r(70655),
           i = r(22188),
           o = r(13271),
           a = r(67294),
           l = r(43224),
-          s = r(51878),
-          c = r(49358),
-          u = r(92312),
-          d = r(81673),
-          C = r(56982);
-        function m(e, t) {
+          s = r(91276),
+          c = r(51878),
+          u = r(49358),
+          d = r(92312),
+          C = r(81673),
+          m = r(56982);
+        function h(e, t) {
           let r;
           (r =
             "currentTarget" in e
               ? e.currentTarget.ownerDocument.defaultView
               : e),
             0 == t.indexOf("steam://")
-              ? (r.location.href = t)
+              ? (0, s.w3)(r, "URL.ExecuteSteamURL")
+                ? r.SteamClient.URL.ExecuteSteamURL(t)
+                : (r.location.href = t)
               : r.open(
                   t,
                   null,
                   "menubar,location,resizable,scrollbars,status,noopener",
                 );
         }
-        function h(e) {
+        function p(e) {
           let {
               bDisableContextMenu: t,
               onContextMenu: r,
@@ -50808,12 +50811,12 @@ var CLSTAMP = "8278179";
               "getPIDFromEvent",
             ]);
           return (
-            t || r || (r = g),
+            t || r || (r = f),
             l &&
               o &&
               (o =
-                (d.Config.IN_CLIENT ? "steam://openurl_external/" : "") +
-                d.Config.COMMUNITY_BASE_URL +
+                (C.Config.IN_CLIENT ? "steam://openurl_external/" : "") +
+                C.Config.COMMUNITY_BASE_URL +
                 "linkfilter/?url=" +
                 o),
             s || (s = () => 0),
@@ -50823,7 +50826,7 @@ var CLSTAMP = "8278179";
                 href: o,
                 onClick: (e) => {
                   e.preventDefault(),
-                    v(window, o, {
+                    E(window, o, {
                       bForceExternal: !!i,
                       bUseLinkFilter: !!l,
                       unPID: s(e),
@@ -50836,82 +50839,82 @@ var CLSTAMP = "8278179";
             )
           );
         }
-        function p(e) {
+        function g(e) {
           const { strURL: t, unPID: r } = e;
           return a.createElement(
             a.Fragment,
             null,
             a.createElement(
-              C.ContextMenuItem,
+              m.ContextMenuItem,
               {
                 onSelected: () => {
-                  c.CopyURLToClipboard(t);
+                  u.CopyURLToClipboard(t);
                 },
               },
-              (0, u.Localize)("#ContextMenu_CopyLinkURL"),
+              (0, d.Localize)("#ContextMenu_CopyLinkURL"),
             ),
             a.createElement(
-              C.ContextMenuItem,
+              m.ContextMenuItem,
               {
                 onSelected: (e) => {
-                  v(e, t, { unPID: r });
+                  E(e, t, { unPID: r });
                 },
               },
-              (0, u.Localize)("#ContextMenu_OpenLinkInNewWindow"),
+              (0, d.Localize)("#ContextMenu_OpenLinkInNewWindow"),
             ),
           );
         }
-        function g(e, t) {
+        function f(e, t) {
           let r = e.currentTarget;
           return (0, l.CreateContextMenu)(
             a.createElement(
-              C.ContextMenu,
+              m.ContextMenu,
               null,
-              a.createElement(p, { strURL: r.href, unPID: t }),
+              a.createElement(g, { strURL: r.href, unPID: t }),
             ),
             e,
           );
         }
-        function f(e) {
+        function _(e) {
           const { strFullImageURL: t, unPID: r } = e;
           return a.createElement(
             a.Fragment,
             null,
             a.createElement(
-              C.ContextMenuItem,
+              m.ContextMenuItem,
               {
                 onSelected: () => {
-                  c.CopyURLToClipboard(t);
+                  u.CopyURLToClipboard(t);
                 },
               },
-              (0, u.Localize)("#ContextMenu_CopyImageURL"),
+              (0, d.Localize)("#ContextMenu_CopyImageURL"),
             ),
             a.createElement(
-              C.ContextMenuItem,
+              m.ContextMenuItem,
               {
                 onSelected: (e) => {
-                  v(e, t, { unPID: r });
+                  E(e, t, { unPID: r });
                 },
               },
-              (0, u.Localize)("#ContextMenu_OpenImageInNewWindow"),
+              (0, d.Localize)("#ContextMenu_OpenImageInNewWindow"),
             ),
           );
         }
-        function _(e, t, r) {
-          return w(e, e.currentTarget.src, t, r);
+        function w(e, t, r) {
+          return v(e, e.currentTarget.src, t, r);
         }
-        function w(e, t, r, n) {
+        function v(e, t, r, n) {
           return (0, l.CreateContextMenu)(
             a.createElement(
-              C.ContextMenu,
+              m.ContextMenu,
               null,
-              r && a.createElement(p, { strURL: r }),
-              a.createElement(f, { strFullImageURL: t, unPID: n }),
+              r && a.createElement(g, { strURL: r }),
+              a.createElement(_, { strFullImageURL: t, unPID: n }),
             ),
             e,
           );
         }
-        function v(e, t, r = {}) {
+        function E(e, t, r = {}) {
           const { bForceExternal: n, unPID: i, bUseLinkFilter: o } = r;
           let a;
           (a =
@@ -50930,13 +50933,13 @@ var CLSTAMP = "8278179";
                     (o ? ",noreferrer" : ""),
                 );
         }
-        const E = (e) =>
+        const M = (e) =>
           a.createElement(
             a.Fragment,
             null,
             Boolean(e.condition) ? e.wrap(e.children) : e.children,
           );
-        class M {
+        class b {
           constructor(e) {
             this.promise = e;
           }
@@ -50955,21 +50958,21 @@ var CLSTAMP = "8278179";
             return this.m_Value;
           }
         }
-        function b(e) {
+        function L(e) {
           return (0, o.SZ)(() => e.value);
         }
-        function L(e) {
+        function y(e) {
           return a.forwardRef((t, r) =>
             a.createElement(
               "div",
               Object.assign({}, t, {
-                className: (0, s.default)(e, t.className),
+                className: (0, c.default)(e, t.className),
                 ref: r,
               }),
             ),
           );
         }
-        function y(e) {
+        function S(e) {
           1 != e.result &&
             console.error(
               "Error",
@@ -50978,35 +50981,35 @@ var CLSTAMP = "8278179";
               "message" in e ? e.message : "No message.",
             );
         }
-        function S(e, t) {
+        function B(e, t) {
           return e < t ? -1 : e > t ? 1 : 0;
         }
-        function B(e, t) {
+        function k(e, t) {
           return Array.from(
             Array.from(Array(t - e + 1).keys()).map((t) => t + e),
           );
         }
-        function k(e) {
+        function x(e) {
           const t = e % 100,
             r = "#LOC_Ordinal_Prefix_" + t;
-          let n = (0, u.Localize)(r);
-          n === r && (n = (0, u.Localize)("#LOC_Ordinal_Prefix_Default")),
+          let n = (0, d.Localize)(r);
+          n === r && (n = (0, d.Localize)("#LOC_Ordinal_Prefix_Default")),
             "<none>" === n && (n = "");
           const i = "#LOC_Ordinal_Suffix_" + t;
-          let o = (0, u.Localize)(i);
+          let o = (0, d.Localize)(i);
           return (
-            o === i && (o = (0, u.Localize)("#LOC_Ordinal_Suffix_Default")),
+            o === i && (o = (0, d.Localize)("#LOC_Ordinal_Suffix_Default")),
             "<none>" === o && (o = ""),
             n + e + o
           );
         }
-        function x(e) {
+        function R(e) {
           if ("string" != typeof e) return NaN;
           const t = !e.includes("ms") && e.includes("s");
           let r = Number.parseFloat(e);
           return t && (r *= 1e3), r;
         }
-        function R(e, t = 1) {
+        function H(e, t = 1) {
           for (; e; ) {
             let t = (e.ownerDocument.defaultView || window).getComputedStyle(e),
               r = parseFloat(t.zoom);
@@ -51015,10 +51018,10 @@ var CLSTAMP = "8278179";
           }
           return t;
         }
-        function H(e) {
+        function V(e) {
           return null;
         }
-        (0, n.gn)([i.observable], M.prototype, "m_Value", void 0);
+        (0, n.gn)([i.observable], b.prototype, "m_Value", void 0);
       },
       51452: (e, t, r) => {
         "use strict";
@@ -53357,7 +53360,9 @@ var CLSTAMP = "8278179";
                 console.warn(...m);
                 break;
               case s.Error:
-                console.error(...m);
+                console.clogerror
+                  ? console.clogerror(3, ...m)
+                  : console.error(...m);
             }
         }
         (u.k_EnabledLogNames_StorageKey = "EnabledWebLogs"),
@@ -54571,9 +54576,9 @@ var CLSTAMP = "8278179";
                 ? !{
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Aug 18 2023 : 13:21:42",
-                    BUILD_TIME_UTC: "Aug 18 2023 : 20:21:42",
-                    BUILD_RTIME_UTC: 1692390102,
+                    BUILD_TIME_LOCAL: "Aug 23 2023 : 13:28:27",
+                    BUILD_TIME_UTC: "Aug 23 2023 : 20:28:27",
+                    BUILD_RTIME_UTC: 1692822507,
                   }.MOBILE_BUILD && document.getElementById(t)
                 : t),
             n)
@@ -55121,7 +55126,7 @@ var CLSTAMP = "8278179";
       {
         27: "40c178e2d00b36f39a64",
         33: "38ad6e8cae334784f4d0",
-        58: "a0af7226d51ef3f3e5d4",
+        58: "382c607377d9594d901a",
         131: "0cef9a1bcae10c1661e8",
         146: "9a1084379d38104b4033",
         200: "0273f88a1d91abf0685e",
@@ -55222,7 +55227,7 @@ var CLSTAMP = "8278179";
         7781: "e6a58d678b49e89ea6ef",
         7832: "35e371c703d65c6c518c",
         7850: "68b0792d044c44ae4211",
-        7962: "3b42a9fc07c5a522bde1",
+        7962: "e42e1535356f89d21255",
         8011: "2bad8c957b2510d4af07",
         8052: "6f4de79f989a0248e10b",
         8085: "210499e0e11d56053c27",
@@ -55232,7 +55237,7 @@ var CLSTAMP = "8278179";
         8282: "875546c2bbae272d6f04",
         8319: "4d675b72d082fcbdd01d",
         8433: "3ffeb161179fdc6eeada",
-        8467: "1e21be0f28ca4b6bcd9a",
+        8467: "06eaa9dec88b8ca54085",
         8490: "a6f9565ec428a556c271",
         8778: "5c8f726719f08d0b92a4",
         8956: "087336020c5543e6c3ad",

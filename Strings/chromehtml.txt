@@ -2,8 +2,8 @@ __TEXT
 
 __text
 __TEXT
-@
-@
+`}
+`}
 __stubs
 __TEXT
 __stub_helper
@@ -21,7 +21,7 @@ __TEXT
 __gcc_except_tab__TEXT
 __unwind_info
 __TEXT
-Pf
+Lf
 __DATA
 __nl_symbol_ptr
 __DATA
@@ -1057,6 +1057,8 @@ disables sandboxing in CEF
 disables CEF seccomp-bpf sandbox on Linux
 -cef-force-sandbox
 force sandboxing in CEF
+-cef-log-sandbox
+Enable sandbox logging in CEF
 -disable-winh264
 disables loading winh264.dll
 -disablehighdpi
@@ -1195,6 +1197,7 @@ WebContentsOcclusion
 --force-device-scale-factor=1
 --device-scale-factor=1
 --no-sandbox
+--enable-sandbox-logging
 --disable-winh264
 --single-process
 --in-process-gpu
@@ -2414,22 +2417,19 @@ id
 @
 @
 
-
-<
-
 @
 Ic
-4
-2
+|
+>
+1
+U
 
 
 0
 
 0
-
 
 Hi
-)
 `
 0
 0
@@ -2474,7 +2474,6 @@ IcE
 @
 V
 =
-F
 =
 !
 @
