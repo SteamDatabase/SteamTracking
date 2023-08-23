@@ -29626,16 +29626,12 @@
                 .broadcast_dispaly_wide_player_allow_chat,
           );
         return d.createElement(
-          ve.s,
-          {
-            requireAdmin: !0,
-            clanSteamID: t.GetClanSteamID(),
-            className: (0, H.Z)(X().ValveOnlyBackground),
-          },
+          d.Fragment,
+          null,
           d.createElement(
             "div",
             { className: X().EventEditorTextTitle },
-            "(VO) " + (0, v.Xx)("#Broadcast_WidePlayer"),
+            (0, v.Xx)("#Broadcast_WidePlayer"),
           ),
           d.createElement(u.ji, {
             onChange: (e) => a.SetWidePlayerLayout(e),
@@ -29651,15 +29647,23 @@
             disabled: !n,
           }),
           d.createElement(
-            lt.HP,
-            { toolTipContent: (0, v.Xx)("#Broadcast_ContentType_Desc") },
+            ve.s,
+            {
+              requireAdmin: !0,
+              clanSteamID: t.GetClanSteamID(),
+              className: (0, H.Z)(X().ValveOnlyBackground),
+            },
             d.createElement(
-              "div",
-              { className: X().EventEditorTextTitle },
-              "(VO) " + (0, v.Xx)("#Broadcast_ContentType"),
+              lt.HP,
+              { toolTipContent: (0, v.Xx)("#Broadcast_ContentType_Desc") },
+              d.createElement(
+                "div",
+                { className: X().EventEditorTextTitle },
+                "(VO) " + (0, v.Xx)("#Broadcast_ContentType"),
+              ),
             ),
+            d.createElement(wa, null),
           ),
-          d.createElement(wa, null),
         );
       }
       function fa(e) {

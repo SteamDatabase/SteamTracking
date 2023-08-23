@@ -1581,10 +1581,10 @@ html.tablet .video_placeholder_trgt {
 html.tablet .notice_box_content {
 	border: 2px solid var(--gpColor-Orange);
 	border-radius: var(--gpCorner-Large);
-	color: var(--gpStoreLighterGrey);
 	margin-bottom: 12px;
 	color: unset;
 	padding: 8px 12px;
+	width: auto;
 }
 
 html.tablet .notice_box_content b {

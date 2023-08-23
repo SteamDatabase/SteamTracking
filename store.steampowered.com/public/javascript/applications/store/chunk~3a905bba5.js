@@ -15444,16 +15444,16 @@
     45711: (e, t, r) => {
       "use strict";
       r.d(t, {
-        Ij: () => S,
-        JW: () => E,
+        Ij: () => E,
+        JW: () => w,
         Ue: () => n,
-        iC: () => f,
-        jV: () => p,
-        pq: () => _,
-        q: () => b,
+        iC: () => B,
+        jV: () => h,
+        pq: () => g,
+        q: () => f,
         u_: () => a,
-        wK: () => h,
-        x3: () => v,
+        wK: () => v,
+        x3: () => b,
       });
       var n,
         a,
@@ -15462,7 +15462,9 @@
         o = r(44026),
         l = r(23801),
         d = r(32765),
-        c = r(87338);
+        c = r(87338),
+        m = r(71161),
+        u = r(98009);
       !(function (e) {
         (e.k_eView = "view"),
           (e.k_eViewWebSiteHub = "websitehub"),
@@ -15486,12 +15488,12 @@
             (e.k_eTwitter = "twitter"),
             (e.k_eReddit = "reddit");
         })(a || (a = {}));
-      const m =
+      const p =
         /(?:steampowered\.com|community\.\S+\.steam\.dev|store\.\S+\.steam\.dev|valve\.org\/store|steam\.dev\/store|\.steamchina\.com|steamcommunity\.com|valve\.org\/community|steam\.dev\/community)\/(\w+)(\/|$)/i;
-      function u(e, t) {
+      function _(e, t) {
         const r = "store" === (0, d.Zv)(),
           a = (function (e) {
-            const t = e.match(m);
+            const t = e.match(p);
             return null == t ? void 0 : t[1];
           })(window.location.href),
           i = r && "news" == a,
@@ -15529,7 +15531,7 @@
             return (0, l.X)(!1, "Unknown route specified for link: " + e), !1;
         }
       }
-      function p(e, t) {
+      function h(e, t) {
         const r =
           d.De.COMMUNITY_BASE_URL +
           "gid/" +
@@ -15540,13 +15542,13 @@
           t;
         return t === a.k_eFacebook ? r + "&t=" + Math.random() : r;
       }
-      function _(e) {
-        return y(e, n.k_eStoreSalePage, "absolute");
+      function g(e) {
+        return S(e, n.k_eStoreSalePage, "absolute");
       }
-      function h(e) {
-        return y(e, n.k_eStoreView, "absolute");
+      function v(e) {
+        return S(e, n.k_eStoreView, "absolute");
       }
-      function g(e, t, r) {
+      function y(e, t, r) {
         if (r)
           return (
             (e ? "/games/" + d.JA.VANITY_ID : "/groups/" + d.JA.VANITY_ID) + "/"
@@ -15554,14 +15556,14 @@
         const n = e ? "ogg/" + e : "gid/" + t.ConvertTo64BitString();
         return d.De.COMMUNITY_BASE_URL + n + "/";
       }
-      function v() {
+      function b() {
         return "news";
       }
-      function y(e, t, r) {
+      function S(e, t, r) {
         const a = "relative" === r,
           i = "community" === (0, d.Zv)(),
           s = a ? "/" : d.De.STORE_BASE_URL,
-          o = g(e.appid, e.clanSteamID, a);
+          o = y(e.appid, e.clanSteamID, a);
         t === n.k_eView
           ? (t = i ? n.k_eCommunityView : n.k_eStoreView)
           : t === n.k_eViewWebSiteHub &&
@@ -15644,44 +15646,46 @@
             return (0, l.X)(!1, "Unknown route specified for link"), "";
         }
       }
-      function b(e, t, r) {
-        return y(
+      function f(e, t, r) {
+        return S(
           e,
           t,
-          "forceAbsolute" === r || !u(t, e) ? "absolute" : "relative",
+          "forceAbsolute" === r || !_(t, e) ? "absolute" : "relative",
         );
       }
-      function S(e, t) {
-        const r = u(t, e),
-          n = y(e, t, r ? "relative" : "absolute");
+      function E(e, t) {
+        const r = _(t, e),
+          n = S(e, t, r ? "relative" : "absolute");
         return r
           ? i.createElement(s.l_, { push: !0, to: n })
           : (window.open(n), null);
       }
-      function f(e, t, r) {
-        const n = g(e, t, !1);
+      function B(e, t, r) {
+        const n = y(e, t, !1);
         return "admin" === r ? n + "partnerevents" : "";
       }
-      function E(e) {
+      function w(e) {
         const { preferredFocus: t } = e,
           { bCanUseLink: r } = i.useContext(c.u),
-          n = (0, s.k6)();
+          n = (0, m.bJ)(),
+          a = (0, s.k6)();
         if (!e.eventModel) return null;
-        const a = r && u(e.route, e.eventModel),
-          l =
-            (d.De.IN_CLIENT && !a ? "steam://openurl/" : "") +
-            y(e.eventModel, e.route, a ? "relative" : "absolute");
-        return a
+        const l = r && _(e.route, e.eventModel),
+          p =
+            (d.De.IN_CLIENT && !l ? "steam://openurl/" : "") +
+            S(e.eventModel, e.route, l ? "relative" : "absolute"),
+          h = (0, u.Hf)(p, n);
+        return l
           ? i.createElement(
               o.IS,
               {
                 style: e.style,
                 className: e.className,
-                href: n.createHref({ pathname: l }),
+                href: a.createHref({ pathname: h }),
                 onClick: (t) => {
                   var r;
                   null === (r = e.onClick) || void 0 === r || r.call(e, t),
-                    n.push(l),
+                    a.push(h),
                     t.preventDefault();
                 },
                 preferredFocus: t,
@@ -15691,7 +15695,7 @@
           : i.createElement(
               o.IS,
               {
-                href: l,
+                href: h,
                 style: e.style,
                 className: e.className,
                 onClick: e.onClick,
@@ -17973,6 +17977,7 @@
           {
             url: e.link.url,
             className: e.strClassName ? e.strClassName : void 0,
+            bSkipForcingStoreLink: !0,
           },
           a.createElement(
             "div",
@@ -18812,29 +18817,35 @@
       "use strict";
       r.d(t, { K: () => u, r: () => p });
       var n = r(89526),
-        a = r(14826),
-        i = r(44026),
-        s = r(98009),
-        o = r(71161),
-        l = r(207),
-        d = r(32765),
-        c = r(38520),
-        m = r.n(c);
+        a = r(44026),
+        i = r(98009),
+        s = r(38520),
+        o = r.n(s),
+        l = r(71161),
+        d = r(14826),
+        c = r(207),
+        m = r(32765);
       function u(e) {
-        const { className: t, url: r, style: a, children: c } = e,
-          m = (0, o.bJ)(),
-          u = (0, l.md)(r, d.De.STORE_BASE_URL);
-        if (u) {
-          const e = (0, s.Hf)(u, m);
+        const {
+            className: t,
+            url: r,
+            style: s,
+            children: o,
+            bSkipForcingStoreLink: d,
+          } = e,
+          u = (0, l.bJ)(),
+          p = d ? r : (0, c.md)(r, m.De.STORE_BASE_URL);
+        if (p) {
+          const e = (0, i.Hf)(p, u);
           return n.createElement(
-            i.IS,
+            a.IS,
             {
               href: e,
-              target: d.De.IN_CLIENT ? void 0 : "_blank",
+              target: m.De.IN_CLIENT ? void 0 : "_blank",
               className: t,
-              style: a,
+              style: s,
             },
-            c,
+            o,
           );
         }
         return n.createElement(n.Fragment, null, e.children);
@@ -18844,11 +18855,11 @@
         return t.label_link && !t.label_link_style
           ? n.createElement(
               "div",
-              { className: m().SaleViewAll },
+              { className: o().SaleViewAll },
               n.createElement(
                 u,
                 { url: t.label_link },
-                (0, a.Xx)("#btn_live_streams_all"),
+                (0, d.Xx)("#btn_live_streams_all"),
               ),
             )
           : null;

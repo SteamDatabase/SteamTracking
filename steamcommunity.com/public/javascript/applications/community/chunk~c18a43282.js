@@ -30516,15 +30516,15 @@
       r.d(t, {
         Ue: () => d,
         u_: () => c,
-        JW: () => v,
+        JW: () => C,
         uX: () => l,
-        q: () => b,
-        iC: () => w,
-        x3: () => y,
-        jV: () => p,
-        wK: () => h,
-        pq: () => _,
-        Ij: () => f,
+        q: () => w,
+        iC: () => S,
+        x3: () => b,
+        jV: () => h,
+        wK: () => y,
+        pq: () => g,
+        Ij: () => v,
       });
       var i = r(89526),
         n = r(59934),
@@ -30532,7 +30532,10 @@
         s = r(23801),
         o = r(32765);
       const l = i.createContext({ bCanUseLink: !1 });
-      var d, c;
+      var d,
+        c,
+        m = r(71161),
+        u = r(98009);
       !(function (e) {
         (e.k_eView = "view"),
           (e.k_eViewWebSiteHub = "websitehub"),
@@ -30556,12 +30559,12 @@
             (e.k_eTwitter = "twitter"),
             (e.k_eReddit = "reddit");
         })(c || (c = {}));
-      const m =
+      const p =
         /(?:steampowered\.com|community\.\S+\.steam\.dev|store\.\S+\.steam\.dev|valve\.org\/store|steam\.dev\/store|\.steamchina\.com|steamcommunity\.com|valve\.org\/community|steam\.dev\/community)\/(\w+)(\/|$)/i;
-      function u(e, t) {
+      function _(e, t) {
         const r = "store" === (0, o.Zv)(),
           i = (function (e) {
-            const t = e.match(m);
+            const t = e.match(p);
             return null == t ? void 0 : t[1];
           })(window.location.href),
           n = r && "news" == i,
@@ -30599,7 +30602,7 @@
             return (0, s.X)(!1, "Unknown route specified for link: " + e), !1;
         }
       }
-      function p(e, t) {
+      function h(e, t) {
         const r =
           o.De.COMMUNITY_BASE_URL +
           "gid/" +
@@ -30610,13 +30613,13 @@
           t;
         return t === c.k_eFacebook ? r + "&t=" + Math.random() : r;
       }
-      function _(e) {
-        return B(e, d.k_eStoreSalePage, "absolute");
+      function g(e) {
+        return f(e, d.k_eStoreSalePage, "absolute");
       }
-      function h(e) {
-        return B(e, d.k_eStoreView, "absolute");
+      function y(e) {
+        return f(e, d.k_eStoreView, "absolute");
       }
-      function g(e, t, r) {
+      function B(e, t, r) {
         if (r)
           return (
             (e ? "/games/" + o.JA.VANITY_ID : "/groups/" + o.JA.VANITY_ID) + "/"
@@ -30624,14 +30627,14 @@
         const i = e ? "ogg/" + e : "gid/" + t.ConvertTo64BitString();
         return o.De.COMMUNITY_BASE_URL + i + "/";
       }
-      function y() {
+      function b() {
         return "news";
       }
-      function B(e, t, r) {
+      function f(e, t, r) {
         const i = "relative" === r,
           n = "community" === (0, o.Zv)(),
           a = i ? "/" : o.De.STORE_BASE_URL,
-          l = g(e.appid, e.clanSteamID, i);
+          l = B(e.appid, e.clanSteamID, i);
         t === d.k_eView
           ? (t = n ? d.k_eCommunityView : d.k_eStoreView)
           : t === d.k_eViewWebSiteHub &&
@@ -30714,44 +30717,46 @@
             return (0, s.X)(!1, "Unknown route specified for link"), "";
         }
       }
-      function b(e, t, r) {
-        return B(
+      function w(e, t, r) {
+        return f(
           e,
           t,
-          "forceAbsolute" === r || !u(t, e) ? "absolute" : "relative",
+          "forceAbsolute" === r || !_(t, e) ? "absolute" : "relative",
         );
       }
-      function f(e, t) {
-        const r = u(t, e),
-          a = B(e, t, r ? "relative" : "absolute");
+      function v(e, t) {
+        const r = _(t, e),
+          a = f(e, t, r ? "relative" : "absolute");
         return r
           ? i.createElement(n.l_, { push: !0, to: a })
           : (window.open(a), null);
       }
-      function w(e, t, r) {
-        const i = g(e, t, !1);
+      function S(e, t, r) {
+        const i = B(e, t, !1);
         return "admin" === r ? i + "partnerevents" : "";
       }
-      function v(e) {
+      function C(e) {
         const { preferredFocus: t } = e,
           { bCanUseLink: r } = i.useContext(l),
-          s = (0, n.k6)();
+          s = (0, m.bJ)(),
+          d = (0, n.k6)();
         if (!e.eventModel) return null;
-        const d = r && u(e.route, e.eventModel),
-          c =
-            (o.De.IN_CLIENT && !d ? "steam://openurl/" : "") +
-            B(e.eventModel, e.route, d ? "relative" : "absolute");
-        return d
+        const c = r && _(e.route, e.eventModel),
+          p =
+            (o.De.IN_CLIENT && !c ? "steam://openurl/" : "") +
+            f(e.eventModel, e.route, c ? "relative" : "absolute"),
+          h = (0, u.Hf)(p, s);
+        return c
           ? i.createElement(
               a.IS,
               {
                 style: e.style,
                 className: e.className,
-                href: s.createHref({ pathname: c }),
+                href: d.createHref({ pathname: h }),
                 onClick: (t) => {
                   var r;
                   null === (r = e.onClick) || void 0 === r || r.call(e, t),
-                    s.push(c),
+                    d.push(h),
                     t.preventDefault();
                 },
                 preferredFocus: t,
@@ -30761,7 +30766,7 @@
           : i.createElement(
               a.IS,
               {
-                href: c,
+                href: h,
                 style: e.style,
                 className: e.className,
                 onClick: e.onClick,
@@ -32980,6 +32985,7 @@
           {
             url: e.link.url,
             className: e.strClassName ? e.strClassName : void 0,
+            bSkipForcingStoreLink: !0,
           },
           n.createElement(
             "div",
@@ -33837,29 +33843,35 @@
       "use strict";
       r.d(t, { K: () => u, r: () => p });
       var i = r(89526),
-        n = r(14826),
-        a = r(44026),
-        s = r(98009),
-        o = r(71161),
-        l = r(207),
-        d = r(32765),
-        c = r(38520),
-        m = r.n(c);
+        n = r(44026),
+        a = r(98009),
+        s = r(38520),
+        o = r.n(s),
+        l = r(71161),
+        d = r(14826),
+        c = r(207),
+        m = r(32765);
       function u(e) {
-        const { className: t, url: r, style: n, children: c } = e,
-          m = (0, o.bJ)(),
-          u = (0, l.md)(r, d.De.STORE_BASE_URL);
-        if (u) {
-          const e = (0, s.Hf)(u, m);
+        const {
+            className: t,
+            url: r,
+            style: s,
+            children: o,
+            bSkipForcingStoreLink: d,
+          } = e,
+          u = (0, l.bJ)(),
+          p = d ? r : (0, c.md)(r, m.De.STORE_BASE_URL);
+        if (p) {
+          const e = (0, a.Hf)(p, u);
           return i.createElement(
-            a.IS,
+            n.IS,
             {
               href: e,
-              target: d.De.IN_CLIENT ? void 0 : "_blank",
+              target: m.De.IN_CLIENT ? void 0 : "_blank",
               className: t,
-              style: n,
+              style: s,
             },
-            c,
+            o,
           );
         }
         return i.createElement(i.Fragment, null, e.children);
@@ -33869,11 +33881,11 @@
         return t.label_link && !t.label_link_style
           ? i.createElement(
               "div",
-              { className: m().SaleViewAll },
+              { className: o().SaleViewAll },
               i.createElement(
                 u,
                 { url: t.label_link },
-                (0, n.Xx)("#btn_live_streams_all"),
+                (0, d.Xx)("#btn_live_streams_all"),
               ),
             )
           : null;
