@@ -602,10 +602,8 @@
   .newlogindialog_StandardLayout_286eh
   .newlogindialog_PrimaryHeader_39uMK {
   color: #fff;
-  font-size: 32px;
-  text-transform: uppercase;
-  letter-spacing: 0.055em;
-  font-weight: 200;
+  font-size: 28px;
+  font-weight: 800;
 }
 @media screen and (max-width: 700px) {
   .newlogindialog_Login_ZOBYq

@@ -3865,7 +3865,7 @@
           );
         }
         FillInPersonaState(e) {
-          let t = new o.Pv(e.steamid);
+          let t = new o.Pv(new c.K(e.steamid));
           return (
             (t.m_bInitialized = !0),
             (t.m_ePersonaState = e.personastate),

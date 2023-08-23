@@ -44,11 +44,28 @@ function OnFreeGameCheck( checkbox, appid )
 	if ( checkbox.value )
 	{
 		$('alt_appid_input').value = appid;
+
+		// If f2p genre checkbox is unchecked, check it.
+		if ( !$( 'checkbox_rgGenres_37__input' ).value )
+		{
+			ToggleCheckbox( 'checkbox_rgGenres_37_' );
+		}
+
+		// Set primary genre to f2p.
+		$( 'primary_genre_select' ).value = 37;
+
 		new Effect.BlindDown( 'free_game_settings', {duration: 0.25} );
 	}
 	else
 	{
 		$('alt_appid_input').value = '';
+
+        // If f2p genre checkbox is checked, uncheck it.
+		if ( $( 'checkbox_rgGenres_37__input' ).value )
+		{
+			ToggleCheckbox( 'checkbox_rgGenres_37_' );
+		}
+
 		new Effect.BlindUp( 'free_game_settings', {duration: 0.25} );
 	}
 }

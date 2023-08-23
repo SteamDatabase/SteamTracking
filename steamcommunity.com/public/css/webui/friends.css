@@ -9165,10 +9165,8 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   .newlogindialog_StandardLayout_2EuR6
   .newlogindialog_PrimaryHeader_g5L61 {
   color: #fff;
-  font-size: 32px;
-  text-transform: uppercase;
-  letter-spacing: 0.055em;
-  font-weight: 200;
+  font-size: 28px;
+  font-weight: 800;
 }
 @media screen and (max-width: 700px) {
   .newlogindialog_Login_lat0M

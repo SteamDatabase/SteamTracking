@@ -568,6 +568,16 @@ body.login.global .page_content {
 	padding: 3px 80px;
 }
 
+.login_create_btn {
+	padding: 3px 20px;
+	color: white;
+	text-shadow: none;
+}
+
+.login_create_btn > span {
+	padding: 0 20px;
+}
+
 .login .input_title {
 	font-size: 14px;
 	color: #b8b6b4;
@@ -579,6 +589,12 @@ body.login.global .page_content {
 	color: #b8b6b4;
 }
 
+.login .headline {
+	font-size: 20px;
+	font-weight: 800;
+	color: white;
+}
+
 .login .login_join_desc {
 	max-width: 60%;
 	text-align: center;
@@ -587,7 +603,12 @@ body.login.global .page_content {
 
 .about_link {
 	margin-top: 10px;
-	color: #FFFFFF;
+	color: #b8b6b4;
+	text-decoration: underline;
+}
+
+.about_link:hover {
+	color: white;
 }
 
 .login .text_field, .login select {
@@ -620,7 +641,7 @@ body.login.global .page_content {
 }
 
 .login_btn_ctn a {
-	margin: 20px 0 10px 0;
+	margin: 10px 0 10px 0;
 	display: block;
 	text-align: center;
 }
@@ -865,7 +886,7 @@ html.responsive body.v6.steamtv .responsive_page_template_content
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	max-width: 200px;
+	max-width: 300px;
 }
 
 @media screen and ( max-width: 640px )
@@ -922,8 +943,13 @@ html.responsive body.v6.steamtv .responsive_page_template_content
 		width: 100%;
 	}
 
+	html.responsive .login_btn_ctn {
+		margin-top: 0px;
+		margin-bottom: 20px;
+	}
+
 	html.responsive .login_bottom_row {
-		flex-direction: column-reverse;
+		flex-direction: column;
 	}
 
 	html.responsive body.login.global .page_content {

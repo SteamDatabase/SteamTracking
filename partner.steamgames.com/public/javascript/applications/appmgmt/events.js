@@ -31703,7 +31703,7 @@
         };
       }
     },
-    18516: (e, t, n) => {
+    67060: (e, t, n) => {
       "use strict";
       n.r(t), n.d(t, { OptInRoutes: () => Ns, default: () => xs });
       var a = n(96927),
@@ -33346,13 +33346,17 @@
             (this.m_model.external_app_reviewer.push(e), this.SetDirty(!0), !0)
           );
         }
-        GetKVLang(e, t) {
-          const n = (0, w.j_)(t);
-          return e ? e[n] : "";
-        }
         SetKVLang(e, t, n) {
-          const a = (0, w.j_)(t);
-          e[a] != n && ((e[a] = n), this.SetDirty(!0));
+          (function (e, t, n) {
+            const a = (0, m.j_)(t);
+            return e[a] != n && ((e[a] = n), !0);
+          })(e, t, n) && this.SetDirty(!0);
+        }
+        GetKVLang(e, t) {
+          return (function (e, t) {
+            const n = (0, m.j_)(t);
+            return e ? e[n] : "";
+          })(e, t);
         }
         AddDynamicSection() {
           this.m_model.dynamic_sections || (this.m_model.dynamic_sections = []),

@@ -3265,7 +3265,8 @@
         VR: () => n,
       });
       var n = {};
-      r.r(n), r.d(n, { wb: () => C, sH: () => I.sH });
+      r.r(n),
+        r.d(n, { wb: () => C, $6: () => I.$6, vS: () => I.vS, sH: () => I.sH });
       var i = r(6132);
       var a, s, o;
       !(function (e) {
@@ -3983,8 +3984,8 @@
     },
     763: (e, t, r) => {
       "use strict";
-      var n, i, a;
-      r.d(t, { sH: () => i }),
+      var n, i, a, s;
+      r.d(t, { $6: () => s, sH: () => i, vS: () => a }),
         (function (e) {
           (e[(e.Invalid = 0)] = "Invalid"),
             (e[(e.TrackingSystemName_String = 1e3)] =
@@ -4313,7 +4314,15 @@
             (e[(e.Rich = 4)] = "Rich"),
             (e[(e.ShowArrowKeys = 8)] = "ShowArrowKeys"),
             (e[(e.ShowDoneKey = 16)] = "ShowDoneKey");
-        })(a || (a = {}));
+        })(a || (a = {})),
+        (function (e) {
+          (e[(e.Unknown = -1)] = "Unknown"),
+            (e[(e.Idle = 0)] = "Idle"),
+            (e[(e.UserInteraction = 1)] = "UserInteraction"),
+            (e[(e.UserInteraction_Timeout = 2)] = "UserInteraction_Timeout"),
+            (e[(e.Standby = 3)] = "Standby"),
+            (e[(e.Idle_Timeout = 4)] = "Idle_Timeout");
+        })(s || (s = {}));
     },
     4738: (e, t, r) => {
       "use strict";
@@ -4589,7 +4598,7 @@
                 : n.Message.setField(t, e, i);
             } else
               console.assert(
-                c,
+                !!c,
                 `Reader func not set for field number ${e} in class ${a}`,
               ),
                 r.skipField();
@@ -4615,7 +4624,7 @@
             void 0 !== e && u.call(r, a, e);
           } else
             console.assert(
-              u,
+              !!u,
               `Writer func not set for field number ${a} in class ${s}`,
             );
         }
@@ -9918,8 +9927,8 @@
                     })(h(this.m_webApiAccessToken)) &&
                       ((this.m_refreshAccessTokenPromise =
                         this.m_fnRequestNewAccessToken()),
-                      (this.m_webApiAccessToken = yield this
-                        .m_refreshAccessTokenPromise),
+                      (this.m_webApiAccessToken =
+                        yield this.m_refreshAccessTokenPromise),
                       (this.m_refreshAccessTokenPromise = null)));
               }
               let l = yield this.Send(e, t, r, o);
@@ -17601,7 +17610,7 @@
           this.m_mapAffordanceElems = new Map();
         }
         Init() {
-          var e, t, r, n, i, a, s, o, l;
+          var e, t, r, n, i, a, s, o, l, c, u;
           null ===
             (t =
               null ===
@@ -17636,16 +17645,27 @@
               void 0 === a ||
               a.call(i, this.OnStartupError),
             null ===
-              (l =
+              (o =
                 null ===
                   (s =
                     null === SteamClient || void 0 === SteamClient
                       ? void 0
                       : SteamClient.OpenVR) || void 0 === s
                   ? void 0
-                  : (o = s.Keyboard).RegisterForStatus) ||
-              void 0 === l ||
-              l.call(o, this.OnKeyboardStatus);
+                  : s.RegisterForHMDActivityLevelChanged) ||
+              void 0 === o ||
+              o.call(s, this.OnHMDActivityLevelChanged),
+            null ===
+              (u =
+                null ===
+                  (l =
+                    null === SteamClient || void 0 === SteamClient
+                      ? void 0
+                      : SteamClient.OpenVR) || void 0 === l
+                  ? void 0
+                  : (c = l.Keyboard).RegisterForStatus) ||
+              void 0 === u ||
+              u.call(c, this.OnKeyboardStatus);
         }
         OnVRHardwareDetected(e, t, r) {
           (this.m_bHMDPresent = e),
@@ -17661,14 +17681,30 @@
             (n = { eClient: e, eInit: t, strInit: r }),
             (this.m_error = n);
         }
+        OnHMDActivityLevelChanged(e) {
+          this.m_eHMDActivityLevel = e;
+        }
         OnKeyboardStatus(e, t) {
           this.m_eKeyboardFlags = t;
         }
-        get isVRHMDPresent() {
+        get IsVRHMDPresent() {
           return this.m_bHMDPresent || this.m_bHMDHardwareDetected;
         }
-        get isSteamVRRunning() {
+        get IsSteamVRRunning() {
           return this.m_bIsVRRunning;
+        }
+        get IsVRHMDAwake() {
+          return this.m_eHMDActivityLevel == s.VR.$6.UserInteraction;
+        }
+        get VRKeyboardStatus() {
+          return {
+            bShowArrowKeys:
+              0 != (this.m_eKeyboardFlags & s.VR.vS.ShowArrowKeys),
+            bShowDoneKey: 0 != (this.m_eKeyboardFlags & s.VR.vS.ShowDoneKey),
+          };
+        }
+        get VRHMDActivityLevel() {
+          return this.m_eHMDActivityLevel;
         }
         get VRKeyboardDisplayFlags() {
           return this.m_eKeyboardFlags;
@@ -17752,10 +17788,12 @@
         (0, n.gn)([a.LO], l.prototype, "m_strHMDName", void 0),
         (0, n.gn)([a.LO], l.prototype, "m_bIsVRRunning", void 0),
         (0, n.gn)([a.LO], l.prototype, "m_error", void 0),
+        (0, n.gn)([a.LO], l.prototype, "m_eHMDActivityLevel", void 0),
         (0, n.gn)([a.LO], l.prototype, "m_eKeyboardFlags", void 0),
         (0, n.gn)([a.aD.bound], l.prototype, "OnVRHardwareDetected", null),
         (0, n.gn)([a.aD.bound], l.prototype, "OnVRModeChanged", null),
         (0, n.gn)([a.aD.bound], l.prototype, "OnStartupError", null),
+        (0, n.gn)([a.aD.bound], l.prototype, "OnHMDActivityLevelChanged", null),
         (0, n.gn)([a.aD.bound], l.prototype, "OnKeyboardStatus", null),
         (0, n.gn)([a.aD.bound], l.prototype, "ClearError", null);
       const u = new l();
@@ -19932,7 +19970,9 @@
             !e.disabled &&
               i.createElement(
                 "div",
-                { className: "DialogDropDown_Arrow" },
+                {
+                  className: (0, l.Z)(e.arrowClassName, "DialogDropDown_Arrow"),
+                },
                 i.createElement(o.$gZ, null),
               ),
           );
@@ -20029,6 +20069,7 @@
               onCancel: s,
               selectedValue:
                 null === (t = this.value) || void 0 === t ? void 0 : t.data,
+              strDropDownMenuCtnClass: this.props.strDropDownMenuCtnClass,
               strDropDownItemClassName: this.props.strDropDownItemClassName,
             }),
             this.m_elInput,
@@ -20086,6 +20127,7 @@
                   : null,
               componentRef: this.OnInputRef,
               className: this.props.strDropDownButtonClassName,
+              arrowClassName: this.props.arrowClassName,
             },
             o,
           );
@@ -20149,6 +20191,7 @@
             className: (0, l.Z)(
               Y().DialogDropDownMenu,
               "_DialogInputContainer",
+              e.strDropDownMenuCtnClass,
             ),
           },
           n,

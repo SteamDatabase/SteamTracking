@@ -693,6 +693,9 @@
               ((o.nWidth = E(e, "width")),
               (o.nHeight = E(e, "height")),
               (o.nFrameRate = E(e, "frameRate")),
+              (0, _.yv)(
+                `representation: ${o.nWidth}w x ${o.nHeight}h x ${o.nFrameRate} fps`,
+              ),
               !(o.strID && o.strMimeType && o.strCodecs && o.nBandwidth))
             )
               return (0, _.yv)("MPD - Representation Video Data Missing"), null;
@@ -950,13 +953,13 @@
           );
         }
       }
-      var O;
+      var k;
       !(function (e) {
         (e[(e.None = 0)] = "None"),
           (e[(e.Append = 1)] = "Append"),
           (e[(e.Remove = 2)] = "Remove");
-      })(O || (O = {}));
-      class k {
+      })(k || (k = {}));
+      class O {
         constructor(e, t, n, r) {
           (this.m_callbacks = null),
             (this.m_mpd = null),
@@ -965,7 +968,7 @@
             (this.m_sourceBuffer = null),
             (this.m_nTrackBufferMS = 0),
             (this.m_representation = null),
-            (this.m_eBufferUpdate = O.None),
+            (this.m_eBufferUpdate = k.None),
             (this.m_rgBufferedSegments = []),
             (this.m_bNeedInitSegment = !0),
             (this.m_nNextSegment = 0),
@@ -1109,7 +1112,7 @@
           this.m_listeners.Unregister(),
             (this.m_sourceBuffer = null),
             this.ForceStopDownloads(),
-            (this.m_eBufferUpdate = O.None),
+            (this.m_eBufferUpdate = k.None),
             (this.m_bRemoveBufferState = !1),
             (this.m_callbacks = null),
             (this.m_mpd = null),
@@ -1140,16 +1143,17 @@
             `${this.GetDebugName()} OnSourceBufferUpdateEnd: [playback=${t}][buffered=${n}][start=${this.GetBufferedStart()}][end=${this.GetBufferedEnd()}]`,
           );
           let r = this.m_eBufferUpdate;
-          (this.m_eBufferUpdate = O.None),
-            r == O.Append && this.m_callbacks.OnSegmentDownloaded(this),
+          (this.m_eBufferUpdate = k.None),
+            r == k.Append && this.m_callbacks.OnSegmentDownloaded(this),
             this.m_bSeekInProgress &&
-              r == O.Remove &&
+              r == k.Remove &&
               !this.m_bRemoveBufferState &&
               this.ContinueSeek(),
             this.UpdateBuffer();
         }
         OnSourceBufferError(e) {
-          console.log("OnSourceBufferError", this.GetDebugName(), e);
+          console.log("OnSourceBufferError", this.GetDebugName(), e),
+            this.m_callbacks && this.m_callbacks.OnMediaSourceError(this);
         }
         OnSourceBufferAbort(e) {
           console.log("OnSourceBufferAbort", this.GetDebugName(), e);
@@ -1205,27 +1209,26 @@
         DownloadNextSegment() {
           this.m_schNextDownload.Cancel();
           let e = "",
-            t = 0;
+            t = 0,
+            n = !1;
           if (this.m_bNeedInitSegment)
-            (this.m_bNeedInitSegment = !1),
-              (e = A(this.m_representation)),
-              (t = 0);
+            (e = A(this.m_representation)), (t = 0), (n = !0);
           else {
             if (this.m_nNextSegment < 0)
               return void console.error(
                 "Attempting to download negative segment:",
                 this.m_nNextSegment,
               );
-            (n = this.m_representation),
-              (r = this.m_nNextSegment),
-              (e = D(n.segmentTemplate.strMedia, n.strID, r)),
+            (r = this.m_representation),
+              (i = this.m_nNextSegment),
+              (e = D(r.segmentTemplate.strMedia, r.strID, i)),
               (t = B(this.m_representation)),
               this.m_nNextSegment++;
           }
-          var n, r;
-          this.DownloadSegment(this.m_representation.strID, e, t);
+          var r, i;
+          this.DownloadSegment(this.m_representation.strID, n, e, t);
         }
-        DownloadSegment(e, t, n, i = performance.now()) {
+        DownloadSegment(e, t, n, i, s = performance.now()) {
           return (0, r.mG)(this, void 0, void 0, function* () {
             (0, l.X)(
               null === this.m_xhrDownload,
@@ -1233,12 +1236,14 @@
             ),
               this.m_schNextDownload.Cancel();
             const r = this.m_callbacks.GetCDNAuthURLParameter();
-            r && (t += r), (0, _.yv)("Downloading: " + t);
-            let s = null,
-              a = performance.now(),
-              c = o().CancelToken.source();
+            r && (n += r),
+              (0, _.yv)(`${this.GetDebugName()} Downloading: ` + n);
+            let a,
+              c = null,
+              d = performance.now(),
+              u = o().CancelToken.source();
             try {
-              (this.m_nCurDownloadProgress = 0), (this.m_xhrDownload = c);
+              (this.m_nCurDownloadProgress = 0), (this.m_xhrDownload = u);
               let e = {
                 cancelToken: this.m_xhrDownload.token,
                 timeout: 15e3,
@@ -1247,89 +1252,99 @@
                   (this.m_nCurDownloadProgress = e.loaded / e.total),
                     (this.m_nCurDownloadBitrate =
                       (8 * e.loaded * 1e3) /
-                      Math.max(1, performance.now() - a));
+                      Math.max(1, performance.now() - d));
                 },
               };
               this.ContainsGame() && (e.responseType = "json"),
-                (s = yield o().get(t, e));
+                (c = yield o().get(n, e));
             } catch (e) {
-              (0, _.yv)("Failed to download segment: " + e), (s = e.response);
+              (a = e), (c = e.response);
             }
-            if (!this.m_xhrDownload || this.m_xhrDownload != c) return;
-            let d = performance.now(),
-              u = Math.floor(performance.now() - a),
-              m = s ? s.status : 0;
+            if (!this.m_xhrDownload || this.m_xhrDownload != u)
+              return void (0, _.yv)(`Throwing away cancelled download: ${n}`);
+            a &&
+              (0, _.yv)(
+                `${this.GetDebugName()} Failed to download segment: ${n}`,
+                a,
+              );
+            let m = performance.now(),
+              h = Math.floor(performance.now() - d),
+              p = c ? c.status : 0;
             if (((this.m_xhrDownload = null), this.m_bSeekInProgress))
-              this.ContinueSeek();
-            else {
-              if (!s || 200 != s.status)
-                return this.ContainsGame()
-                  ? void this.ScheduleNextDownload()
-                  : (this.m_stats.LogSegmentDownloadFailure(
-                      u,
-                      s ? s.status : 444,
-                    ),
-                    d - i > 9e3
-                      ? ((0, _.yv)(
-                          `${this.GetDebugName()} HTTP download failed.. stopping loader: ${
-                            d - i
-                          }ms`,
-                        ),
-                        void this.DownloadFailed())
-                      : 410 == m
-                      ? ((this.m_nNumConsecutiveDownloadGones += 1),
-                        (0, _.yv)(
-                          `${this.GetDebugName()} HTTP download gone.. informing the player: ${
-                            d - i
-                          }ms`,
-                        ),
-                        void this.DownloadGone())
-                      : void this.m_schNextDownload.Schedule(500, () =>
-                          this.DownloadSegment(e, t, n, i),
-                        ));
-              if (
-                ((this.m_nNumConsecutiveDownloadGones = 0), this.ContainsGame())
-              ) {
-                let e = s.data;
-                this.m_rgGameDataFrames || (this.m_rgGameDataFrames = []);
-                let t = Number.MIN_VALUE,
-                  n = Number.MIN_VALUE;
-                this.m_rgGameDataFrames.length > 0 &&
-                  ((t =
-                    this.m_rgGameDataFrames[this.m_rgGameDataFrames.length - 1]
-                      .pts),
-                  (n =
-                    this.m_rgGameDataFrames[this.m_rgGameDataFrames.length - 1]
-                      .gdi));
-                const r = e.frame;
-                r &&
-                  (r.pts && r.gamedata && r.gdi
-                    ? r.pts <= t
-                      ? (0, _.yv)("Invalid game pts")
-                      : r.gdi != n && this.m_rgGameDataFrames.push(r)
-                    : (0, _.yv)("Invalid game data")),
-                  this.TrimGameDataIfNecessary(),
-                  (this.m_statsGameData = {
-                    nAppID: e.appid,
-                    ulBroadcastRelayID: e.broadcastrelayid,
-                    nSegmentID: e.segmentid,
-                  });
-              } else {
-                let r = new Uint8Array(s.data);
-                this.m_rgBufferedSegments.push({
-                  nDurationMS: n,
-                  data: r,
-                  representationStrID: e,
-                }),
-                  this.LogDownload(a, r.length),
-                  this.UpdateBuffer();
-                {
-                  let e = r.length / 1e3;
-                  (0, _.yv)(`HTTP ${m} (${u}ms, ${Math.floor(e)}k): ${t}`);
-                }
-              }
-              this.ScheduleNextDownload();
+              return (
+                (0, _.yv)(
+                  `${this.GetDebugName()} Throwing away download due to seek: ${n}`,
+                ),
+                void this.ContinueSeek()
+              );
+            if (!c || 200 != c.status)
+              return this.ContainsGame()
+                ? void this.ScheduleNextDownload()
+                : (this.m_stats.LogSegmentDownloadFailure(
+                    h,
+                    c ? c.status : 444,
+                  ),
+                  m - s > 9e3
+                    ? ((0, _.yv)(
+                        `${this.GetDebugName()} HTTP download failed.. stopping loader: ${
+                          m - s
+                        }ms`,
+                      ),
+                      void this.DownloadFailed())
+                    : 410 == p
+                    ? ((this.m_nNumConsecutiveDownloadGones += 1),
+                      (0, _.yv)(
+                        `${this.GetDebugName()} HTTP download gone.. informing the player: ${
+                          m - s
+                        }ms`,
+                      ),
+                      void this.DownloadGone())
+                    : void this.m_schNextDownload.Schedule(500, () =>
+                        this.DownloadSegment(e, t, n, i, s),
+                      ));
+            if (
+              ((this.m_nNumConsecutiveDownloadGones = 0),
+              t && (this.m_bNeedInitSegment = !1),
+              this.ContainsGame())
+            ) {
+              let e = c.data;
+              this.m_rgGameDataFrames || (this.m_rgGameDataFrames = []);
+              let t = Number.MIN_VALUE,
+                n = Number.MIN_VALUE;
+              this.m_rgGameDataFrames.length > 0 &&
+                ((t =
+                  this.m_rgGameDataFrames[this.m_rgGameDataFrames.length - 1]
+                    .pts),
+                (n =
+                  this.m_rgGameDataFrames[this.m_rgGameDataFrames.length - 1]
+                    .gdi));
+              const r = e.frame;
+              r &&
+                (r.pts && r.gamedata && r.gdi
+                  ? r.pts <= t
+                    ? (0, _.yv)("Invalid game pts")
+                    : r.gdi != n && this.m_rgGameDataFrames.push(r)
+                  : (0, _.yv)("Invalid game data")),
+                this.TrimGameDataIfNecessary(),
+                (this.m_statsGameData = {
+                  nAppID: e.appid,
+                  ulBroadcastRelayID: e.broadcastrelayid,
+                  nSegmentID: e.segmentid,
+                });
+            } else {
+              let t = new Uint8Array(c.data);
+              this.m_rgBufferedSegments.push({
+                nDurationMS: i,
+                data: t,
+                representationStrID: e,
+              }),
+                this.LogDownload(d, t.length),
+                this.UpdateBuffer(),
+                (0, _.yv)(
+                  `HTTP ${p} (${h}ms, ${Math.floor(t.length / 1e3)}k): ${n}`,
+                );
             }
+            this.ScheduleNextDownload();
           });
         }
         DownloadFailed() {
@@ -1340,18 +1355,18 @@
         }
         TrimGameDataIfNecessary() {}
         UpdateBuffer() {
-          if (this.m_eBufferUpdate != O.None) return;
+          if (this.m_eBufferUpdate != k.None) return;
           if (this.m_bRemoveBufferState) return void this.RemoveAllBuffers();
           if (!this.m_sourceBuffer) return void (0, _.yv)("No source buffer?");
           if (this.m_rgBufferedSegments.length > 0) {
             try {
-              this.m_eBufferUpdate = O.Append;
+              this.m_eBufferUpdate = k.Append;
               let e = this.m_rgBufferedSegments[0];
               this.m_sourceBuffer.appendBuffer(e.data),
                 this.m_rgBufferedSegments.splice(0, 1);
             } catch (e) {
               "QuotaExceededError" === e.name
-                ? ((this.m_eBufferUpdate = O.None),
+                ? ((this.m_eBufferUpdate = k.None),
                   (0, _.yv)(
                     `${this.GetDebugName()} Buffer - QuotaExceededError`,
                   ))
@@ -1367,7 +1382,7 @@
               let r = Math.min(this.GetBufferedEnd(), n);
               return void (
                 r != t &&
-                ((this.m_eBufferUpdate = O.Remove),
+                ((this.m_eBufferUpdate = k.Remove),
                 this.m_sourceBuffer.remove(t, r),
                 (this.m_tsLastBufferRemove = e))
               );
@@ -1382,7 +1397,7 @@
             for (let n = 0; n < t.length; n++) e < t.end(n) && (e = t.end(n));
           }
           (this.m_bRemoveBufferState = !1),
-            (this.m_eBufferUpdate = O.Remove),
+            (this.m_eBufferUpdate = k.Remove),
             0 != e
               ? this.m_sourceBuffer.remove(0, e + 1)
               : this.OnSourceBufferUpdateEnd(null);
@@ -1424,9 +1439,10 @@
           )
             return void this.ScheduleNextDownload();
           (this.m_bSeekInProgress = !0), this.ForceStopDownloads();
-          let i = L(this.m_representation, 1e3 * e);
+          const i = e - this.m_mpd.GetStartTime();
+          let o = L(this.m_representation, 1e3 * i);
           if (
-            ((this.m_nNextSegment = Math.min(i, this.GetMaxSegment())),
+            ((this.m_nNextSegment = Math.min(o, this.GetMaxSegment())),
             (0, _.yv)(
               "Seek To Next Segment: " +
                 this.m_nNextSegment +
@@ -1449,7 +1465,7 @@
         }
         ContinueSeek() {
           this.m_bSeekInProgress &&
-            (this.m_eBufferUpdate == O.Remove ||
+            (this.m_eBufferUpdate == k.Remove ||
               this.m_bRemoveBufferState ||
               ((this.m_bSeekInProgress = !1), this.ScheduleNextDownload()));
         }
@@ -1494,13 +1510,13 @@
             : 0;
         }
       }
-      (0, r.gn)([m.a], k.prototype, "OnSourceBufferUpdateEnd", null),
-        (0, r.gn)([m.a], k.prototype, "OnSourceBufferError", null),
-        (0, r.gn)([m.a], k.prototype, "OnSourceBufferAbort", null),
-        (0, r.gn)([m.a], k.prototype, "ScheduleNextDownload", null),
-        (0, r.gn)([m.a], k.prototype, "DownloadNextSegment", null),
-        (0, r.gn)([m.a], k.prototype, "DownloadFailed", null),
-        (0, r.gn)([m.a], k.prototype, "DownloadGone", null);
+      (0, r.gn)([m.a], O.prototype, "OnSourceBufferUpdateEnd", null),
+        (0, r.gn)([m.a], O.prototype, "OnSourceBufferError", null),
+        (0, r.gn)([m.a], O.prototype, "OnSourceBufferAbort", null),
+        (0, r.gn)([m.a], O.prototype, "ScheduleNextDownload", null),
+        (0, r.gn)([m.a], O.prototype, "DownloadNextSegment", null),
+        (0, r.gn)([m.a], O.prototype, "DownloadFailed", null),
+        (0, r.gn)([m.a], O.prototype, "DownloadGone", null);
       const P = 5,
         x = "auto";
       var N, V;
@@ -1534,6 +1550,7 @@
             (this.m_nSeekingToTime = -1),
             (this.m_listeners = new c.G_()),
             (this.m_bFirstPlay = !0),
+            (this.m_bPlaybackStarted = !1),
             (this.m_schGameDataEventTrigger = new c.Ar()),
             (this.m_schReportPlayerTrigger = new c.Ar()),
             (this.m_nGameDataLastFramePTS = -1),
@@ -1692,7 +1709,8 @@
             (this.m_nAudioRepresentationIndex = 0),
             this.m_stats && this.m_stats.GetFPSMonitor().Close(),
             (this.m_stats = null),
-            (this.m_bFirstPlay = !0);
+            (this.m_bFirstPlay = !0),
+            (this.m_bPlaybackStarted = !1);
         }
         StopDownloads() {
           this.m_xhrUpdateMPD &&
@@ -1797,7 +1815,7 @@
                 ((t = e), (this.m_strGameAdaptationID = e.strID)),
               t)
             ) {
-              let e = new k(this, this.m_mpd, t, this.m_stats);
+              let e = new O(this, this.m_mpd, t, this.m_stats);
               this.m_rgLoaders.push(e);
             }
           }
@@ -2177,6 +2195,9 @@
               ),
               this.OnSegmentDownloadFailed(e, V.StreamGone));
         }
+        OnMediaSourceError(e) {
+          this.DispatchEvent("valve-playbackerror");
+        }
         GetCurrentAudioAdaptationfunction() {
           return this.m_mpd
             ? this.m_mpd.GetAdaptationByTrackID(this.m_strAudioAdaptationID)
@@ -2222,6 +2243,7 @@
                 t.ChangeRepresentation(e);
               }
           }
+          this.m_bPlaybackStarted = !0;
           let e = 0;
           if (this.IsLiveContent()) {
             let t = this.GetVideoLoader().GetCurrentSegmentDurationMS(),
@@ -2361,7 +2383,7 @@
           return (this.m_bUserPlayChoice = !0), this.Seek(e);
         }
         Seek(e) {
-          if (!this.m_mpd) return (this.m_nSeekingToTime = e), e;
+          if (!this.m_bPlaybackStarted) return (this.m_nSeekingToTime = e), e;
           let t = this.GetAvailableVideoStartTime(),
             n = this.GetBufferedLiveEdgeTime();
           (e = u.Lh(e, t, n)), (this.m_bUserLiveEdgeChoice = e >= n - P);
@@ -2560,6 +2582,7 @@
         (0, r.gn)([m.a], G.prototype, "PlayOnElement", null),
         (0, r.gn)([m.a], G.prototype, "OnSegmentDownloadFailed", null),
         (0, r.gn)([m.a], G.prototype, "OnSegmentDownloadGone", null),
+        (0, r.gn)([m.a], G.prototype, "OnMediaSourceError", null),
         (0, r.gn)(
           [m.a],
           G.prototype,
@@ -3831,7 +3854,8 @@
         Z3: () => i.Z3,
       });
       var r = {};
-      n.r(r), n.d(r, { wb: () => I, sH: () => T.sH });
+      n.r(r),
+        n.d(r, { wb: () => I, $6: () => T.$6, vS: () => T.vS, sH: () => T.sH });
       var i = n(46132);
       var o, s, a;
       function l(e) {
@@ -4567,8 +4591,8 @@
     },
     20763: (e, t, n) => {
       "use strict";
-      var r, i, o;
-      n.d(t, { sH: () => i }),
+      var r, i, o, s;
+      n.d(t, { $6: () => s, sH: () => i, vS: () => o }),
         (function (e) {
           (e[(e.Invalid = 0)] = "Invalid"),
             (e[(e.TrackingSystemName_String = 1e3)] =
@@ -4897,7 +4921,15 @@
             (e[(e.Rich = 4)] = "Rich"),
             (e[(e.ShowArrowKeys = 8)] = "ShowArrowKeys"),
             (e[(e.ShowDoneKey = 16)] = "ShowDoneKey");
-        })(o || (o = {}));
+        })(o || (o = {})),
+        (function (e) {
+          (e[(e.Unknown = -1)] = "Unknown"),
+            (e[(e.Idle = 0)] = "Idle"),
+            (e[(e.UserInteraction = 1)] = "UserInteraction"),
+            (e[(e.UserInteraction_Timeout = 2)] = "UserInteraction_Timeout"),
+            (e[(e.Standby = 3)] = "Standby"),
+            (e[(e.Idle_Timeout = 4)] = "Idle_Timeout");
+        })(s || (s = {}));
     },
     47742: (e, t, n) => {
       "use strict";
@@ -5171,7 +5203,7 @@
                 : r.Message.setField(t, e, i);
             } else
               console.assert(
-                c,
+                !!c,
                 `Reader func not set for field number ${e} in class ${o}`,
               ),
                 n.skipField();
@@ -5197,7 +5229,7 @@
             void 0 !== e && d.call(n, o, e);
           } else
             console.assert(
-              d,
+              !!d,
               `Writer func not set for field number ${o} in class ${s}`,
             );
         }
@@ -8983,7 +9015,7 @@
       n.d(t, {
         Vp: () => V,
         zE: () => N,
-        gj: () => k,
+        gj: () => O,
         c4: () => P,
         mz: () => x,
       });
@@ -9413,8 +9445,8 @@
           ? { scrollLeft: t.scrollLeft, scrollTop: t.scrollTop }
           : { scrollLeft: e.scrollLeft, scrollTop: e.scrollTop };
       }
-      const O = new c.s("FocusNavigationMovement").Debug;
-      var k, P, x, N;
+      const k = new c.s("FocusNavigationMovement").Debug;
+      var O, P, x, N;
       !(function (e) {
         (e[(e.NONE = 0)] = "NONE"),
           (e[(e.COLUMN = 1)] = "COLUMN"),
@@ -9423,7 +9455,7 @@
           (e[(e.ROW_REVERSE = 4)] = "ROW_REVERSE"),
           (e[(e.GRID = 5)] = "GRID"),
           (e[(e.GEOMETRIC = 6)] = "GEOMETRIC");
-      })(k || (k = {})),
+      })(O || (O = {})),
         (function (e) {
           (e[(e.FIRST = 0)] = "FIRST"),
             (e[(e.LAST = 1)] = "LAST"),
@@ -9668,7 +9700,7 @@
             (this.m_bMounted = !1);
           const t = this.Tree.DeferredFocus.BIsQueuedFocusNode(this);
           (this.m_bFocused || t) &&
-            (O(
+            (k(
               `The focused node is unmounting, ${
                 this.m_RetainFocusParent
                   ? "will transfer to retain focus ancestor"
@@ -9691,7 +9723,7 @@
         RegisterDOMEvents() {
           !this.m_rgNavigationHandlers.length &&
             (this.m_rgChildren.length >= 2 ||
-              this.m_Properties.layout != k.NONE ||
+              this.m_Properties.layout != O.NONE ||
               this.m_Properties.onMoveUp ||
               this.m_Properties.onMoveRight ||
               this.m_Properties.onMoveDown ||
@@ -9853,8 +9885,8 @@
               const e = this.GetLayout();
               l =
                 l >= this.m_rgChildren.length ||
-                e == k.ROW_REVERSE ||
-                e == k.COLUMN_REVERSE ||
+                e == O.ROW_REVERSE ||
+                e == O.COLUMN_REVERSE ||
                 i == P.LAST
                   ? this.m_rgChildren.length - 1
                   : 0;
@@ -9864,11 +9896,11 @@
               i == P.MAINTAIN_X ? (r = "x") : i == P.MAINTAIN_Y && (r = "y"),
                 r == o.TP[n] &&
                   (s = this.m_Tree.GetLastFocusedMovementRect(o.TP[n])),
-                O(
+                k(
                   `Taking focus while preserving ${P[i]} preserved: ${r} movement: ${n}, node:`,
                   s || t,
                 );
-              const l = this.ComputeRelativeDirection(e, k.GRID);
+              const l = this.ComputeRelativeDirection(e, O.GRID);
               if (s || t) {
                 const i = l == N.BACKWARD ? this.m_rgChildren.length - 1 : 0;
                 a = this.FindClosestChildInNextAxiallyAlignedSet(
@@ -9931,7 +9963,7 @@
               bottom: o.innerHeight,
             });
           return (
-            O(
+            k(
               `Focusing visible child, best child match is ${
                 null === (i = null == s ? void 0 : s.child) || void 0 === i
                   ? void 0
@@ -9943,7 +9975,7 @@
         }
         GetLayout() {
           if (this.m_Properties.layout) return this.m_Properties.layout;
-          if (this.m_rgChildren.length < 2) return k.NONE;
+          if (this.m_rgChildren.length < 2) return O.NONE;
           return (0, u.Ii)(this.m_element);
         }
         OnNavigationEvent(e) {
@@ -9980,16 +10012,16 @@
           let o,
             s = this.ComputeRelativeDirection(e, r);
           if (
-            (O(
-              `Handling navigation event ${i.eV[e]} - ${k[r]} - ${N[s]}`,
+            (k(
+              `Handling navigation event ${i.eV[e]} - ${O[r]} - ${N[s]}`,
               this.m_element,
             ),
             s == N.INVALID)
           )
             return !1;
           if (this.m_Properties.focusable && this.m_bFocused)
-            return O("Skipping navigation within focused element"), !1;
-          if ((this.EnsureChildrenSorted(!0), r == k.GRID))
+            return k("Skipping navigation within focused element"), !1;
+          if ((this.EnsureChildrenSorted(!0), r == O.GRID))
             o = this.FindNextFocusableChildInGrid(
               this.GetActiveChildIndex(),
               s,
@@ -10018,7 +10050,7 @@
                 (s.right < 0 && s.left < -i)
               )
                 return (
-                  O(`Element too far away, scrolling ${i} on ${r} axis `),
+                  k(`Element too far away, scrolling ${i} on ${r} axis `),
                   T(o.Element, o.Element, "smooth", r, i),
                   !0
                 );
@@ -10043,10 +10075,10 @@
           return this.ComputeRelativeDirection(e, this.GetLayout());
         }
         ComputeRelativeDirection(e, t) {
-          let n = t == k.ROW_REVERSE || t == k.COLUMN_REVERSE;
+          let n = t == O.ROW_REVERSE || t == O.COLUMN_REVERSE;
           switch (t) {
-            case k.ROW:
-            case k.ROW_REVERSE:
+            case O.ROW:
+            case O.ROW_REVERSE:
               switch (e) {
                 case i.eV.DIR_LEFT:
                   return n ? N.FORWARD : N.BACKWARD;
@@ -10055,8 +10087,8 @@
                 default:
                   return N.INVALID;
               }
-            case k.COLUMN:
-            case k.COLUMN_REVERSE:
+            case O.COLUMN:
+            case O.COLUMN_REVERSE:
               switch (e) {
                 case i.eV.DIR_UP:
                   return n ? N.FORWARD : N.BACKWARD;
@@ -10065,7 +10097,7 @@
                 default:
                   return N.INVALID;
               }
-            case k.GRID:
+            case O.GRID:
               switch (e) {
                 case i.eV.DIR_LEFT:
                 case i.eV.DIR_UP:
@@ -10221,7 +10253,7 @@
                 ),
                 this.m_element.focus({ preventScroll: !0 }))
               : this.m_Tree.BUseVirtualFocus() ||
-                O(
+                k(
                   `Didn't move focus to element as tree ${this.m_Tree.id} is not active focus tree`,
                 ),
             (function (e, t) {
@@ -11003,8 +11035,8 @@
                     })(h(this.m_webApiAccessToken)) &&
                       ((this.m_refreshAccessTokenPromise =
                         this.m_fnRequestNewAccessToken()),
-                      (this.m_webApiAccessToken = yield this
-                        .m_refreshAccessTokenPromise),
+                      (this.m_webApiAccessToken =
+                        yield this.m_refreshAccessTokenPromise),
                       (this.m_refreshAccessTokenPromise = null)));
               }
               let l = yield this.Send(e, t, n, a);
@@ -14547,7 +14579,7 @@
           return "CClientMetrics_ReportClientArgs_Notification";
         }
       }
-      var O;
+      var k;
       !(function (e) {
         (e.ClientAppInterfaceStatsReport = function (e, t) {
           return e.SendNotification(
@@ -14626,8 +14658,8 @@
               { ePrivilege: 1 },
             );
           });
-      })(O || (O = {}));
-      var k = n(17547),
+      })(k || (k = {}));
+      var O = n(17547),
         P = n(14826);
       const x =
         window.addEventListener || (n.g && n.g.addEventListener) || (() => {});
@@ -14866,7 +14898,7 @@
           t.Body().set_product(this.m_strProduct),
             t.Body().set_version(this.m_strVersion),
             t.Body().set_errors(r),
-            O.ReportClientError(this.m_transport, t);
+            k.ReportClientError(this.m_transport, t);
         }
         get version() {
           return this.m_strVersion;
@@ -14914,7 +14946,7 @@
       const Q = () => ($ || J(new j()), $),
         J = (e) => {
           ($ = e),
-            k.SV.InstallErrorReportingStore($),
+            O.SV.InstallErrorReportingStore($),
             i.lq.InstallErrorReportingStore($),
             P.LJ.InstallErrorReportingStore($);
         };
@@ -14957,7 +14989,7 @@
           this.m_mapAffordanceElems = new Map();
         }
         Init() {
-          var e, t, n, r, i, o, s, a, l;
+          var e, t, n, r, i, o, s, a, l, c, d;
           null ===
             (t =
               null ===
@@ -14992,16 +15024,27 @@
               void 0 === o ||
               o.call(i, this.OnStartupError),
             null ===
-              (l =
+              (a =
                 null ===
                   (s =
                     null === SteamClient || void 0 === SteamClient
                       ? void 0
                       : SteamClient.OpenVR) || void 0 === s
                   ? void 0
-                  : (a = s.Keyboard).RegisterForStatus) ||
-              void 0 === l ||
-              l.call(a, this.OnKeyboardStatus);
+                  : s.RegisterForHMDActivityLevelChanged) ||
+              void 0 === a ||
+              a.call(s, this.OnHMDActivityLevelChanged),
+            null ===
+              (d =
+                null ===
+                  (l =
+                    null === SteamClient || void 0 === SteamClient
+                      ? void 0
+                      : SteamClient.OpenVR) || void 0 === l
+                  ? void 0
+                  : (c = l.Keyboard).RegisterForStatus) ||
+              void 0 === d ||
+              d.call(c, this.OnKeyboardStatus);
         }
         OnVRHardwareDetected(e, t, n) {
           (this.m_bHMDPresent = e),
@@ -15017,14 +15060,30 @@
             (r = { eClient: e, eInit: t, strInit: n }),
             (this.m_error = r);
         }
+        OnHMDActivityLevelChanged(e) {
+          this.m_eHMDActivityLevel = e;
+        }
         OnKeyboardStatus(e, t) {
           this.m_eKeyboardFlags = t;
         }
-        get isVRHMDPresent() {
+        get IsVRHMDPresent() {
           return this.m_bHMDPresent || this.m_bHMDHardwareDetected;
         }
-        get isSteamVRRunning() {
+        get IsSteamVRRunning() {
           return this.m_bIsVRRunning;
+        }
+        get IsVRHMDAwake() {
+          return this.m_eHMDActivityLevel == s.VR.$6.UserInteraction;
+        }
+        get VRKeyboardStatus() {
+          return {
+            bShowArrowKeys:
+              0 != (this.m_eKeyboardFlags & s.VR.vS.ShowArrowKeys),
+            bShowDoneKey: 0 != (this.m_eKeyboardFlags & s.VR.vS.ShowDoneKey),
+          };
+        }
+        get VRHMDActivityLevel() {
+          return this.m_eHMDActivityLevel;
         }
         get VRKeyboardDisplayFlags() {
           return this.m_eKeyboardFlags;
@@ -15108,10 +15167,12 @@
         (0, r.gn)([o.LO], l.prototype, "m_strHMDName", void 0),
         (0, r.gn)([o.LO], l.prototype, "m_bIsVRRunning", void 0),
         (0, r.gn)([o.LO], l.prototype, "m_error", void 0),
+        (0, r.gn)([o.LO], l.prototype, "m_eHMDActivityLevel", void 0),
         (0, r.gn)([o.LO], l.prototype, "m_eKeyboardFlags", void 0),
         (0, r.gn)([o.aD.bound], l.prototype, "OnVRHardwareDetected", null),
         (0, r.gn)([o.aD.bound], l.prototype, "OnVRModeChanged", null),
         (0, r.gn)([o.aD.bound], l.prototype, "OnStartupError", null),
+        (0, r.gn)([o.aD.bound], l.prototype, "OnHMDActivityLevelChanged", null),
         (0, r.gn)([o.aD.bound], l.prototype, "OnKeyboardStatus", null),
         (0, r.gn)([o.aD.bound], l.prototype, "ClearError", null);
       const d = new l();
@@ -15583,7 +15644,7 @@
             this.state.ready &&
             this.props.instance.visible
           ) {
-            const e = k() ? 150 : 0;
+            const e = O() ? 150 : 0;
             this.props.instance.Hide(e);
           }
         }
@@ -16003,10 +16064,10 @@
         (0, r.gn)([b.ak], L.prototype, "OnBlur", null),
         (0, r.gn)([b.ak], L.prototype, "OnKeyDown", null),
         (L = (0, r.gn)([i.Pi], L));
-      const O = "EnableContextMenuBlurDelay3";
-      function k() {
+      const k = "EnableContextMenuBlurDelay3";
+      function O() {
         return (
-          "true" === (window.localStorage && window.localStorage.getItem(O))
+          "true" === (window.localStorage && window.localStorage.getItem(k))
         );
       }
     },
@@ -16053,7 +16114,7 @@
         uT: () => D,
         V5: () => R,
         Ac: () => y,
-        zx: () => k,
+        zx: () => O,
         ji: () => U,
         VY: () => T,
         oX: () => A,
@@ -16067,7 +16128,7 @@
         __: () => w,
         o9: () => x,
         $0: () => N,
-        KM: () => O,
+        KM: () => k,
         EU: () => ae,
         SY: () => se,
         BQ: () => H,
@@ -16248,7 +16309,7 @@
             e.children,
           );
         }),
-        O = i.forwardRef(function (e, t) {
+        k = i.forwardRef(function (e, t) {
           return i.createElement(
             F,
             Object.assign(
@@ -16266,7 +16327,7 @@
             ),
           );
         }),
-        k = i.forwardRef(function (e, t) {
+        O = i.forwardRef(function (e, t) {
           return i.createElement(
             F,
             Object.assign({ type: "button" }, e, {
@@ -16306,7 +16367,7 @@
           I,
           null,
           i.createElement(
-            O,
+            k,
             {
               onClick: e.onOK,
               disabled: e.bOKDisabled,
@@ -16316,7 +16377,7 @@
             " ",
           ),
           i.createElement(
-            k,
+            O,
             {
               onClick: e.onCancel,
               disabled: e.bCancelDisabled,
@@ -16327,8 +16388,8 @@
         );
       }
       function N(e) {
-        const t = e.bOKDisabled ? k : O,
-          n = e.bOKDisabled ? O : k;
+        const t = e.bOKDisabled ? O : k,
+          n = e.bOKDisabled ? k : O;
         return i.createElement(
           M,
           null,
@@ -16345,7 +16406,7 @@
             " ",
           ),
           i.createElement(
-            k,
+            O,
             { onClick: e.onCancel, disabled: e.bCancelDisabled },
             e.strCancelText || (0, c.Xx)("#Button_Cancel"),
           ),
@@ -16871,7 +16932,7 @@
                   "div",
                   { className: "displayRow" },
                   i.createElement(
-                    k,
+                    O,
                     {
                       className: "DialogInput_CopyAction Primary",
                       onClick: this.OnCopyClick,
@@ -17427,7 +17488,9 @@
             !e.disabled &&
               i.createElement(
                 "div",
-                { className: "DialogDropDown_Arrow" },
+                {
+                  className: (0, l.Z)(e.arrowClassName, "DialogDropDown_Arrow"),
+                },
                 i.createElement(a.$gZ, null),
               ),
           );
@@ -17524,6 +17587,7 @@
               onCancel: s,
               selectedValue:
                 null === (t = this.value) || void 0 === t ? void 0 : t.data,
+              strDropDownMenuCtnClass: this.props.strDropDownMenuCtnClass,
               strDropDownItemClassName: this.props.strDropDownItemClassName,
             }),
             this.m_elInput,
@@ -17581,6 +17645,7 @@
                   : null,
               componentRef: this.OnInputRef,
               className: this.props.strDropDownButtonClassName,
+              arrowClassName: this.props.arrowClassName,
             },
             a,
           );
@@ -17644,6 +17709,7 @@
             className: (0, l.Z)(
               de().DialogDropDownMenu,
               "_DialogInputContainer",
+              e.strDropDownMenuCtnClass,
             ),
           },
           r,
@@ -17715,7 +17781,7 @@
                 o = n + 1;
               e.push(
                 i.createElement(
-                  Oe,
+                  ke,
                   { coordinator: this.m_coordinator, data: n, key: r },
                   t,
                 ),
@@ -17905,7 +17971,7 @@
         }
       }
       (0, r.gn)([z.ak], Fe.prototype, "OnDragGhostRef", null);
-      class Oe extends i.Component {
+      class ke extends i.Component {
         constructor() {
           super(...arguments),
             (this.m_DragInfo = {
@@ -18110,7 +18176,7 @@
         renderDropGhost() {
           return this.props.fnRenderDropGhost
             ? this.props.fnRenderDropGhost()
-            : i.createElement(ke, { elContent: this.GetClone() });
+            : i.createElement(Oe, { elContent: this.GetClone() });
         }
         renderDragGhost() {
           return this.props.fnRenderDragGhost
@@ -18136,16 +18202,16 @@
           return t;
         }
       }
-      (0, r.gn)([z.ak], Oe.prototype, "ProcessDragMove", null),
-        (0, r.gn)([z.ak], Oe.prototype, "OnMouseDown", null),
-        (0, r.gn)([z.ak], Oe.prototype, "OnMouseUp", null),
-        (0, r.gn)([z.ak], Oe.prototype, "OnTouchStart", null),
-        (0, r.gn)([z.ak], Oe.prototype, "OnTouchEnd", null),
-        (0, r.gn)([Re.aD], Oe.prototype, "ResetDragState", null),
-        (0, r.gn)([z.ak], Oe.prototype, "OnHTMLDragStart", null),
-        (0, r.gn)([z.ak], Oe.prototype, "OnHTMLDrag", null),
-        (0, r.gn)([z.ak], Oe.prototype, "OnHTMLDragEnd", null);
-      class ke extends i.Component {
+      (0, r.gn)([z.ak], ke.prototype, "ProcessDragMove", null),
+        (0, r.gn)([z.ak], ke.prototype, "OnMouseDown", null),
+        (0, r.gn)([z.ak], ke.prototype, "OnMouseUp", null),
+        (0, r.gn)([z.ak], ke.prototype, "OnTouchStart", null),
+        (0, r.gn)([z.ak], ke.prototype, "OnTouchEnd", null),
+        (0, r.gn)([Re.aD], ke.prototype, "ResetDragState", null),
+        (0, r.gn)([z.ak], ke.prototype, "OnHTMLDragStart", null),
+        (0, r.gn)([z.ak], ke.prototype, "OnHTMLDrag", null),
+        (0, r.gn)([z.ak], ke.prototype, "OnHTMLDragEnd", null);
+      class Oe extends i.Component {
         OnRef(e) {
           e && e.appendChild(this.props.elContent);
         }
@@ -18156,7 +18222,7 @@
           });
         }
       }
-      (0, r.gn)([z.ak], ke.prototype, "OnRef", null);
+      (0, r.gn)([z.ak], Oe.prototype, "OnRef", null);
       class Pe extends i.Component {
         constructor() {
           super(...arguments),
@@ -18686,8 +18752,8 @@
           L = null != u ? u : y ? "shift-children-below" : "keep-inline",
           A = !!(w.onClick || w.onActivate || w.focusable),
           F = (null != a && I) || null != n || (T && null != c),
-          O = null != m ? m : "min",
-          k = null != h ? h : "standard",
+          k = null != m ? m : "min",
+          O = null != h ? h : "standard",
           P = null != p ? p : "standard",
           x = null != g ? g : "standard",
           N = null == v || v,
@@ -18730,9 +18796,9 @@
                 !!o && tt().WithDescription,
                 "standard" == x && tt().WithBottomSeparatorStandard,
                 "thick" == x && tt().WithBottomSeparatorThick,
-                "fixed" == O && tt().ChildrenWidthFixed,
-                "max" == O && tt().ChildrenWidthGrow,
-                "standard" == k && tt().ExtraPaddingOnChildrenBelow,
+                "fixed" == k && tt().ChildrenWidthFixed,
+                "max" == k && tt().ChildrenWidthGrow,
+                "standard" == O && tt().ExtraPaddingOnChildrenBelow,
                 "standard" == P && tt().StandardPadding,
                 "compact" == P && tt().CompactPadding,
                 A && tt().Clickable,
@@ -18837,7 +18903,7 @@
             padding: u,
             inlineWrap: m,
           },
-          i.createElement(k, Object.assign({}, h, { ref: _ })),
+          i.createElement(O, Object.assign({}, h, { ref: _ })),
         );
       });
       const it = i.forwardRef(function (e, t) {
@@ -18899,7 +18965,7 @@
         lt = n(44673);
       i.forwardRef(function (e, t) {
         return i.createElement(
-          k,
+          O,
           {
             className: (0, l.Z)(st().DropDownControlButton, e.className),
             focusable: e.focusable,
@@ -18943,7 +19009,7 @@
                 autoComplete: "off",
                 ref: l,
                 inlineControls: i.createElement(
-                  k,
+                  O,
                   {
                     className: ct.TogglePasswordVisibilityBtn,
                     onPointerDown: m,
@@ -19875,10 +19941,10 @@
           (e[(e.Down = 4)] = "Down");
       })(Dt || (Dt = {}));
       var Ft = n(4532),
-        Ot = n.n(Ft);
-      const kt = i.createContext(null);
+        kt = n.n(Ft);
+      const Ot = i.createContext(null);
       function Pt(e) {
-        const t = i.useContext(kt),
+        const t = i.useContext(Ot),
           { title: n, icon: o, active: a } = e,
           l = (0, r._T)(e, ["title", "icon", "active"]);
         return i.createElement(
@@ -19893,12 +19959,12 @@
             },
             l,
           ),
-          o && i.createElement("div", { className: Ot().PageListItem_Icon }, o),
-          i.createElement("div", { className: Ot().PageListItem_Title }, n),
+          o && i.createElement("div", { className: kt().PageListItem_Icon }, o),
+          i.createElement("div", { className: kt().PageListItem_Title }, n),
         );
       }
       function xt(e) {
-        return i.createElement("div", { className: Ot().Separator });
+        return i.createElement("div", { className: kt().Separator });
       }
       i.forwardRef(function (e, t) {
         const n = i.useRef(),
@@ -19913,12 +19979,12 @@
         }, [e.page, e.bNoInitialLeftColumnFocus]);
         const s = Boolean(e.showTitle);
         return i.createElement(
-          kt.Provider,
+          Ot.Provider,
           { value: n },
           i.createElement(
             qe,
             Object.assign({}, e, {
-              stylesheet: Ot(),
+              stylesheet: kt(),
               showTitle: s,
               renderPageListItem: Pt,
               renderPageListSeparator: xt,
@@ -19933,7 +19999,7 @@
           ? (t = Dt.Up)
           : "down" == e.direction && (t = Dt.Down);
         let n =
-          ((r = Ot()),
+          ((r = kt()),
           (o = t) == Dt.Left
             ? r.Left
             : o == Dt.Right
@@ -19948,7 +20014,7 @@
           Bt,
           {
             childrenKey: e.activePage.identifier,
-            childrenClasses: At(Ot(), Ot().ContentTransition),
+            childrenClasses: At(kt(), kt().ContentTransition),
             directionClass: n,
             animate: t != Dt.None,
           },
@@ -20718,9 +20784,9 @@
       n.d(t, {
         On: () => S,
         Pv: () => I,
-        uH: () => O,
+        uH: () => k,
         RG: () => F,
-        JX: () => k,
+        JX: () => O,
         BL: () => a.BL,
         e1: () => g,
         D2: () => b,
@@ -20939,7 +21005,7 @@
           ),
         );
       });
-      let O = class extends r.Component {
+      let k = class extends r.Component {
         Cancel() {
           this.props.onCancel && this.props.onCancel(),
             this.props.closeModal && this.props.closeModal();
@@ -21010,9 +21076,9 @@
           );
         }
       };
-      (0, M.gn)([v.ak], O.prototype, "Cancel", null),
-        (O = (0, M.gn)([T.Pi], O));
-      let k = class extends r.Component {
+      (0, M.gn)([v.ak], k.prototype, "Cancel", null),
+        (k = (0, M.gn)([T.Pi], k));
+      let O = class extends r.Component {
         render() {
           const e = Object.assign(
             {
@@ -21025,10 +21091,10 @@
             },
             this.props,
           );
-          return r.createElement(O, Object.assign({}, e));
+          return r.createElement(k, Object.assign({}, e));
         }
       };
-      k = (0, M.gn)([T.Pi], k);
+      O = (0, M.gn)([T.Pi], O);
     },
     37494: (e, t, n) => {
       "use strict";
@@ -21943,7 +22009,7 @@
         GhU: () => L,
         IF0: () => Ce,
         IWH: () => ie,
-        JrY: () => k,
+        JrY: () => O,
         KJh: () => Ae,
         KKY: () => Je,
         Lao: () => $,
@@ -21953,7 +22019,7 @@
         NP6: () => j,
         P7E: () => w,
         P9w: () => te,
-        Q1v: () => ke,
+        Q1v: () => Oe,
         SK8: () => be,
         SUY: () => S,
         SjW: () => xe,
@@ -21977,7 +22043,7 @@
         dCe: () => rt,
         dLw: () => Ie,
         doA: () => Ue,
-        dzL: () => O,
+        dzL: () => k,
         faS: () => P,
         ffh: () => B,
         g0p: () => Ve,
@@ -21987,7 +22053,7 @@
         k4K: () => E,
         k6n: () => F,
         kL2: () => x,
-        kqV: () => Oe,
+        kqV: () => ke,
         ktE: () => Pe,
         lBf: () => p,
         lsH: () => re,
@@ -22721,7 +22787,7 @@
           }),
         );
       }
-      function O() {
+      function k() {
         return i.createElement(
           "svg",
           {
@@ -22743,7 +22809,7 @@
           }),
         );
       }
-      function k(e) {
+      function O(e) {
         var t;
         return i.createElement(
           "svg",
@@ -24447,7 +24513,7 @@
           ),
         );
       }
-      function Oe(e) {
+      function ke(e) {
         const { className: t } = e;
         (0, r._T)(e, ["className"]);
         return i.createElement(
@@ -24468,7 +24534,7 @@
           }),
         );
       }
-      function ke(e) {
+      function Oe(e) {
         const { className: t } = e,
           n = (0, r._T)(e, ["className"]);
         return i.createElement(
@@ -28857,7 +28923,7 @@
         L = n(19304),
         A = n(81349);
       const F = parseInt(D().nTimelineHoverEdgePadding);
-      function O(e) {
+      function k(e) {
         let { manifest: t, forcePause: n } = e,
           [r, i] = (function (e) {
             let t = o.useRef(new T());
@@ -28883,11 +28949,11 @@
           "div",
           { className: D().TrailerPlayer },
           o.createElement("video", { ref: r }),
-          o.createElement(k, { player: i }),
+          o.createElement(O, { player: i }),
           s && o.createElement(U, { player: i }),
         );
       }
-      function k(e) {
+      function O(e) {
         let { player: t } = e,
           n = o.useCallback(() => {
             t.TogglePlayPause();
@@ -29048,7 +29114,7 @@
             e || (t.current = !0);
             return t.current;
           })(r);
-        return i ? o.createElement(O, { manifest: n, forcePause: r }) : null;
+        return i ? o.createElement(k, { manifest: n, forcePause: r }) : null;
       }
       class W {
         constructor() {

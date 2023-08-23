@@ -1081,7 +1081,7 @@
 	}
 		html.responsive .app_header_grid_container .grid_label,
 		html.responsive .app_header_grid_container .grid_content {
-			font-size: 16px;
+			font-size: 13px;
             max-height: 43px;
             overflow: hidden;
 		}

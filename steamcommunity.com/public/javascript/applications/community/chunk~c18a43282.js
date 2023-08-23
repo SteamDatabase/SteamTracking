@@ -19254,6 +19254,9 @@
               ((a.nWidth = L(e, "width")),
               (a.nHeight = L(e, "height")),
               (a.nFrameRate = L(e, "frameRate")),
+              (0, u.yv)(
+                `representation: ${a.nWidth}w x ${a.nHeight}h x ${a.nFrameRate} fps`,
+              ),
               !(a.strID && a.strMimeType && a.strCodecs && a.nBandwidth))
             )
               return (0, u.yv)("MPD - Representation Video Data Missing"), null;
@@ -19710,7 +19713,8 @@
             this.UpdateBuffer();
         }
         OnSourceBufferError(e) {
-          console.log("OnSourceBufferError", this.GetDebugName(), e);
+          console.log("OnSourceBufferError", this.GetDebugName(), e),
+            this.m_callbacks && this.m_callbacks.OnMediaSourceError(this);
         }
         OnSourceBufferAbort(e) {
           console.log("OnSourceBufferAbort", this.GetDebugName(), e);
@@ -19766,27 +19770,26 @@
         DownloadNextSegment() {
           this.m_schNextDownload.Cancel();
           let e = "",
-            t = 0;
+            t = 0,
+            r = !1;
           if (this.m_bNeedInitSegment)
-            (this.m_bNeedInitSegment = !1),
-              (e = Z(this.m_representation)),
-              (t = 0);
+            (e = Z(this.m_representation)), (t = 0), (r = !0);
           else {
             if (this.m_nNextSegment < 0)
               return void console.error(
                 "Attempting to download negative segment:",
                 this.m_nNextSegment,
               );
-            (r = this.m_representation),
-              (i = this.m_nNextSegment),
-              (e = j(r.segmentTemplate.strMedia, r.strID, i)),
+            (i = this.m_representation),
+              (n = this.m_nNextSegment),
+              (e = j(i.segmentTemplate.strMedia, i.strID, n)),
               (t = H(this.m_representation)),
               this.m_nNextSegment++;
           }
-          var r, i;
-          this.DownloadSegment(this.m_representation.strID, e, t);
+          var i, n;
+          this.DownloadSegment(this.m_representation.strID, r, e, t);
         }
-        DownloadSegment(e, t, r, n = performance.now()) {
+        DownloadSegment(e, t, r, n, s = performance.now()) {
           return (0, i.mG)(this, void 0, void 0, function* () {
             (0, h.X)(
               null === this.m_xhrDownload,
@@ -19794,12 +19797,14 @@
             ),
               this.m_schNextDownload.Cancel();
             const i = this.m_callbacks.GetCDNAuthURLParameter();
-            i && (t += i), (0, u.yv)("Downloading: " + t);
-            let s = null,
-              o = performance.now(),
-              l = a().CancelToken.source();
+            i && (r += i),
+              (0, u.yv)(`${this.GetDebugName()} Downloading: ` + r);
+            let o,
+              l = null,
+              d = performance.now(),
+              c = a().CancelToken.source();
             try {
-              (this.m_nCurDownloadProgress = 0), (this.m_xhrDownload = l);
+              (this.m_nCurDownloadProgress = 0), (this.m_xhrDownload = c);
               let e = {
                 cancelToken: this.m_xhrDownload.token,
                 timeout: 15e3,
@@ -19808,89 +19813,99 @@
                   (this.m_nCurDownloadProgress = e.loaded / e.total),
                     (this.m_nCurDownloadBitrate =
                       (8 * e.loaded * 1e3) /
-                      Math.max(1, performance.now() - o));
+                      Math.max(1, performance.now() - d));
                 },
               };
               this.ContainsGame() && (e.responseType = "json"),
-                (s = yield a().get(t, e));
+                (l = yield a().get(r, e));
             } catch (e) {
-              (0, u.yv)("Failed to download segment: " + e), (s = e.response);
+              (o = e), (l = e.response);
             }
-            if (!this.m_xhrDownload || this.m_xhrDownload != l) return;
-            let d = performance.now(),
-              c = Math.floor(performance.now() - o),
-              m = s ? s.status : 0;
+            if (!this.m_xhrDownload || this.m_xhrDownload != c)
+              return void (0, u.yv)(`Throwing away cancelled download: ${r}`);
+            o &&
+              (0, u.yv)(
+                `${this.GetDebugName()} Failed to download segment: ${r}`,
+                o,
+              );
+            let m = performance.now(),
+              p = Math.floor(performance.now() - d),
+              _ = l ? l.status : 0;
             if (((this.m_xhrDownload = null), this.m_bSeekInProgress))
-              this.ContinueSeek();
-            else {
-              if (!s || 200 != s.status)
-                return this.ContainsGame()
-                  ? void this.ScheduleNextDownload()
-                  : (this.m_stats.LogSegmentDownloadFailure(
-                      c,
-                      s ? s.status : 444,
-                    ),
-                    d - n > 9e3
-                      ? ((0, u.yv)(
-                          `${this.GetDebugName()} HTTP download failed.. stopping loader: ${
-                            d - n
-                          }ms`,
-                        ),
-                        void this.DownloadFailed())
-                      : 410 == m
-                      ? ((this.m_nNumConsecutiveDownloadGones += 1),
-                        (0, u.yv)(
-                          `${this.GetDebugName()} HTTP download gone.. informing the player: ${
-                            d - n
-                          }ms`,
-                        ),
-                        void this.DownloadGone())
-                      : void this.m_schNextDownload.Schedule(500, () =>
-                          this.DownloadSegment(e, t, r, n),
-                        ));
-              if (
-                ((this.m_nNumConsecutiveDownloadGones = 0), this.ContainsGame())
-              ) {
-                let e = s.data;
-                this.m_rgGameDataFrames || (this.m_rgGameDataFrames = []);
-                let t = Number.MIN_VALUE,
-                  r = Number.MIN_VALUE;
-                this.m_rgGameDataFrames.length > 0 &&
-                  ((t =
-                    this.m_rgGameDataFrames[this.m_rgGameDataFrames.length - 1]
-                      .pts),
-                  (r =
-                    this.m_rgGameDataFrames[this.m_rgGameDataFrames.length - 1]
-                      .gdi));
-                const i = e.frame;
-                i &&
-                  (i.pts && i.gamedata && i.gdi
-                    ? i.pts <= t
-                      ? (0, u.yv)("Invalid game pts")
-                      : i.gdi != r && this.m_rgGameDataFrames.push(i)
-                    : (0, u.yv)("Invalid game data")),
-                  this.TrimGameDataIfNecessary(),
-                  (this.m_statsGameData = {
-                    nAppID: e.appid,
-                    ulBroadcastRelayID: e.broadcastrelayid,
-                    nSegmentID: e.segmentid,
-                  });
-              } else {
-                let i = new Uint8Array(s.data);
-                this.m_rgBufferedSegments.push({
-                  nDurationMS: r,
-                  data: i,
-                  representationStrID: e,
-                }),
-                  this.LogDownload(o, i.length),
-                  this.UpdateBuffer();
-                {
-                  let e = i.length / 1e3;
-                  (0, u.yv)(`HTTP ${m} (${c}ms, ${Math.floor(e)}k): ${t}`);
-                }
-              }
-              this.ScheduleNextDownload();
+              return (
+                (0, u.yv)(
+                  `${this.GetDebugName()} Throwing away download due to seek: ${r}`,
+                ),
+                void this.ContinueSeek()
+              );
+            if (!l || 200 != l.status)
+              return this.ContainsGame()
+                ? void this.ScheduleNextDownload()
+                : (this.m_stats.LogSegmentDownloadFailure(
+                    p,
+                    l ? l.status : 444,
+                  ),
+                  m - s > 9e3
+                    ? ((0, u.yv)(
+                        `${this.GetDebugName()} HTTP download failed.. stopping loader: ${
+                          m - s
+                        }ms`,
+                      ),
+                      void this.DownloadFailed())
+                    : 410 == _
+                    ? ((this.m_nNumConsecutiveDownloadGones += 1),
+                      (0, u.yv)(
+                        `${this.GetDebugName()} HTTP download gone.. informing the player: ${
+                          m - s
+                        }ms`,
+                      ),
+                      void this.DownloadGone())
+                    : void this.m_schNextDownload.Schedule(500, () =>
+                        this.DownloadSegment(e, t, r, n, s),
+                      ));
+            if (
+              ((this.m_nNumConsecutiveDownloadGones = 0),
+              t && (this.m_bNeedInitSegment = !1),
+              this.ContainsGame())
+            ) {
+              let e = l.data;
+              this.m_rgGameDataFrames || (this.m_rgGameDataFrames = []);
+              let t = Number.MIN_VALUE,
+                r = Number.MIN_VALUE;
+              this.m_rgGameDataFrames.length > 0 &&
+                ((t =
+                  this.m_rgGameDataFrames[this.m_rgGameDataFrames.length - 1]
+                    .pts),
+                (r =
+                  this.m_rgGameDataFrames[this.m_rgGameDataFrames.length - 1]
+                    .gdi));
+              const i = e.frame;
+              i &&
+                (i.pts && i.gamedata && i.gdi
+                  ? i.pts <= t
+                    ? (0, u.yv)("Invalid game pts")
+                    : i.gdi != r && this.m_rgGameDataFrames.push(i)
+                  : (0, u.yv)("Invalid game data")),
+                this.TrimGameDataIfNecessary(),
+                (this.m_statsGameData = {
+                  nAppID: e.appid,
+                  ulBroadcastRelayID: e.broadcastrelayid,
+                  nSegmentID: e.segmentid,
+                });
+            } else {
+              let t = new Uint8Array(l.data);
+              this.m_rgBufferedSegments.push({
+                nDurationMS: n,
+                data: t,
+                representationStrID: e,
+              }),
+                this.LogDownload(d, t.length),
+                this.UpdateBuffer(),
+                (0, u.yv)(
+                  `HTTP ${_} (${p}ms, ${Math.floor(t.length / 1e3)}k): ${r}`,
+                );
             }
+            this.ScheduleNextDownload();
           });
         }
         DownloadFailed() {
@@ -19985,9 +20000,10 @@
           )
             return void this.ScheduleNextDownload();
           (this.m_bSeekInProgress = !0), this.ForceStopDownloads();
-          let n = X(this.m_representation, 1e3 * e);
+          const n = e - this.m_mpd.GetStartTime();
+          let a = X(this.m_representation, 1e3 * n);
           if (
-            ((this.m_nNextSegment = Math.min(n, this.GetMaxSegment())),
+            ((this.m_nNextSegment = Math.min(a, this.GetMaxSegment())),
             (0, u.yv)(
               "Seek To Next Segment: " +
                 this.m_nNextSegment +
@@ -20094,6 +20110,7 @@
             (this.m_nSeekingToTime = -1),
             (this.m_listeners = new g.G_()),
             (this.m_bFirstPlay = !0),
+            (this.m_bPlaybackStarted = !1),
             (this.m_schGameDataEventTrigger = new g.Ar()),
             (this.m_schReportPlayerTrigger = new g.Ar()),
             (this.m_nGameDataLastFramePTS = -1),
@@ -20252,7 +20269,8 @@
             (this.m_nAudioRepresentationIndex = 0),
             this.m_stats && this.m_stats.GetFPSMonitor().Close(),
             (this.m_stats = null),
-            (this.m_bFirstPlay = !0);
+            (this.m_bFirstPlay = !0),
+            (this.m_bPlaybackStarted = !1);
         }
         StopDownloads() {
           this.m_xhrUpdateMPD &&
@@ -20737,6 +20755,9 @@
               ),
               this.OnSegmentDownloadFailed(e, J.StreamGone));
         }
+        OnMediaSourceError(e) {
+          this.DispatchEvent("valve-playbackerror");
+        }
         GetCurrentAudioAdaptationfunction() {
           return this.m_mpd
             ? this.m_mpd.GetAdaptationByTrackID(this.m_strAudioAdaptationID)
@@ -20782,6 +20803,7 @@
                 t.ChangeRepresentation(e);
               }
           }
+          this.m_bPlaybackStarted = !0;
           let e = 0;
           if (this.IsLiveContent()) {
             let t = this.GetVideoLoader().GetCurrentSegmentDurationMS(),
@@ -20921,7 +20943,7 @@
           return (this.m_bUserPlayChoice = !0), this.Seek(e);
         }
         Seek(e) {
-          if (!this.m_mpd) return (this.m_nSeekingToTime = e), e;
+          if (!this.m_bPlaybackStarted) return (this.m_nSeekingToTime = e), e;
           let t = this.GetAvailableVideoStartTime(),
             r = this.GetBufferedLiveEdgeTime();
           (e = B.Lh(e, t, r)), (this.m_bUserLiveEdgeChoice = e >= r - 5);
@@ -21120,6 +21142,7 @@
         (0, i.gn)([b.a], ee.prototype, "PlayOnElement", null),
         (0, i.gn)([b.a], ee.prototype, "OnSegmentDownloadFailed", null),
         (0, i.gn)([b.a], ee.prototype, "OnSegmentDownloadGone", null),
+        (0, i.gn)([b.a], ee.prototype, "OnMediaSourceError", null),
         (0, i.gn)(
           [b.a],
           ee.prototype,

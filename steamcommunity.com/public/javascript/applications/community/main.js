@@ -982,7 +982,8 @@
         Z3: () => i.Z3,
       });
       var r = {};
-      n.r(r), n.d(r, { wb: () => D, sH: () => T.sH });
+      n.r(r),
+        n.d(r, { wb: () => D, $6: () => T.$6, vS: () => T.vS, sH: () => T.sH });
       var i = n(46132);
       var o, a, s;
       function l(e) {
@@ -1718,8 +1719,8 @@
     },
     20763: (e, t, n) => {
       "use strict";
-      var r, i, o;
-      n.d(t, { sH: () => i }),
+      var r, i, o, a;
+      n.d(t, { $6: () => a, sH: () => i, vS: () => o }),
         (function (e) {
           (e[(e.Invalid = 0)] = "Invalid"),
             (e[(e.TrackingSystemName_String = 1e3)] =
@@ -2048,7 +2049,15 @@
             (e[(e.Rich = 4)] = "Rich"),
             (e[(e.ShowArrowKeys = 8)] = "ShowArrowKeys"),
             (e[(e.ShowDoneKey = 16)] = "ShowDoneKey");
-        })(o || (o = {}));
+        })(o || (o = {})),
+        (function (e) {
+          (e[(e.Unknown = -1)] = "Unknown"),
+            (e[(e.Idle = 0)] = "Idle"),
+            (e[(e.UserInteraction = 1)] = "UserInteraction"),
+            (e[(e.UserInteraction_Timeout = 2)] = "UserInteraction_Timeout"),
+            (e[(e.Standby = 3)] = "Standby"),
+            (e[(e.Idle_Timeout = 4)] = "Idle_Timeout");
+        })(a || (a = {}));
     },
     47742: (e, t, n) => {
       "use strict";
@@ -2322,7 +2331,7 @@
                 : r.Message.setField(t, e, i);
             } else
               console.assert(
-                c,
+                !!c,
                 `Reader func not set for field number ${e} in class ${o}`,
               ),
                 n.skipField();
@@ -2348,7 +2357,7 @@
             void 0 !== e && u.call(n, o, e);
           } else
             console.assert(
-              u,
+              !!u,
               `Writer func not set for field number ${o} in class ${a}`,
             );
         }
@@ -8145,8 +8154,8 @@
                     })(h(this.m_webApiAccessToken)) &&
                       ((this.m_refreshAccessTokenPromise =
                         this.m_fnRequestNewAccessToken()),
-                      (this.m_webApiAccessToken = yield this
-                        .m_refreshAccessTokenPromise),
+                      (this.m_webApiAccessToken =
+                        yield this.m_refreshAccessTokenPromise),
                       (this.m_refreshAccessTokenPromise = null)));
               }
               let l = yield this.Send(e, t, n, s);
@@ -11771,22 +11780,22 @@
         window.addEventListener || (n.g && n.g.addEventListener) || (() => {});
       let P,
         V = [],
-        G = (e, t) => V.push({ error: e, cCallsitesToIgnore: t });
-      const U = !0;
+        U = (e, t) => V.push({ error: e, cCallsitesToIgnore: t });
+      const G = !0;
       {
         const e = console.assert;
         console.assert = (t, n, ...r) => {
-          t || G(new Error(z(n, ...r)), 2), e.apply(console, [t, n, ...r]);
+          t || U(new Error(z(n, ...r)), 2), e.apply(console, [t, n, ...r]);
         };
         const t = console.error;
         (console.error = (e, ...n) => {
-          G(new Error(z(e, ...n)), 1), t.apply(console, [e, ...n]);
+          U(new Error(z(e, ...n)), 1), t.apply(console, [e, ...n]);
         }),
           x("error", (e) => {
-            G(e.error, 0);
+            U(e.error, 0);
           }),
           (P = window.setTimeout(() => {
-            (V = []), (G = () => {});
+            (V = []), (U = () => {});
           }, 3e4));
       }
       const H = { cCallsitesToIgnore: 0, bIncludeMessageInIdentifier: !1 },
@@ -11802,8 +11811,8 @@
               ? (V.forEach(({ error: e, cCallsitesToIgnore: t }) =>
                   this.ReportError(e, { cCallsitesToIgnore: t }),
                 ),
-                (G = (e, t) => this.ReportError(e, { cCallsitesToIgnore: t })))
-              : (G = () => {}),
+                (U = (e, t) => this.ReportError(e, { cCallsitesToIgnore: t })))
+              : (U = () => {}),
             (V = []),
             clearTimeout(P),
             window.setTimeout(() => {
@@ -12013,7 +12022,7 @@
           return this.m_strProduct;
         }
         get reporting_enabled() {
-          return U;
+          return G;
         }
       }
       function z(e, ...t) {
@@ -12095,7 +12104,7 @@
           this.m_mapAffordanceElems = new Map();
         }
         Init() {
-          var e, t, n, r, i, o, a, s, l;
+          var e, t, n, r, i, o, a, s, l, c, u;
           null ===
             (t =
               null ===
@@ -12130,16 +12139,27 @@
               void 0 === o ||
               o.call(i, this.OnStartupError),
             null ===
-              (l =
+              (s =
                 null ===
                   (a =
                     null === SteamClient || void 0 === SteamClient
                       ? void 0
                       : SteamClient.OpenVR) || void 0 === a
                   ? void 0
-                  : (s = a.Keyboard).RegisterForStatus) ||
-              void 0 === l ||
-              l.call(s, this.OnKeyboardStatus);
+                  : a.RegisterForHMDActivityLevelChanged) ||
+              void 0 === s ||
+              s.call(a, this.OnHMDActivityLevelChanged),
+            null ===
+              (u =
+                null ===
+                  (l =
+                    null === SteamClient || void 0 === SteamClient
+                      ? void 0
+                      : SteamClient.OpenVR) || void 0 === l
+                  ? void 0
+                  : (c = l.Keyboard).RegisterForStatus) ||
+              void 0 === u ||
+              u.call(c, this.OnKeyboardStatus);
         }
         OnVRHardwareDetected(e, t, n) {
           (this.m_bHMDPresent = e),
@@ -12155,14 +12175,30 @@
             (r = { eClient: e, eInit: t, strInit: n }),
             (this.m_error = r);
         }
+        OnHMDActivityLevelChanged(e) {
+          this.m_eHMDActivityLevel = e;
+        }
         OnKeyboardStatus(e, t) {
           this.m_eKeyboardFlags = t;
         }
-        get isVRHMDPresent() {
+        get IsVRHMDPresent() {
           return this.m_bHMDPresent || this.m_bHMDHardwareDetected;
         }
-        get isSteamVRRunning() {
+        get IsSteamVRRunning() {
           return this.m_bIsVRRunning;
+        }
+        get IsVRHMDAwake() {
+          return this.m_eHMDActivityLevel == a.VR.$6.UserInteraction;
+        }
+        get VRKeyboardStatus() {
+          return {
+            bShowArrowKeys:
+              0 != (this.m_eKeyboardFlags & a.VR.vS.ShowArrowKeys),
+            bShowDoneKey: 0 != (this.m_eKeyboardFlags & a.VR.vS.ShowDoneKey),
+          };
+        }
+        get VRHMDActivityLevel() {
+          return this.m_eHMDActivityLevel;
         }
         get VRKeyboardDisplayFlags() {
           return this.m_eKeyboardFlags;
@@ -12246,10 +12282,12 @@
         (0, r.gn)([o.LO], l.prototype, "m_strHMDName", void 0),
         (0, r.gn)([o.LO], l.prototype, "m_bIsVRRunning", void 0),
         (0, r.gn)([o.LO], l.prototype, "m_error", void 0),
+        (0, r.gn)([o.LO], l.prototype, "m_eHMDActivityLevel", void 0),
         (0, r.gn)([o.LO], l.prototype, "m_eKeyboardFlags", void 0),
         (0, r.gn)([o.aD.bound], l.prototype, "OnVRHardwareDetected", null),
         (0, r.gn)([o.aD.bound], l.prototype, "OnVRModeChanged", null),
         (0, r.gn)([o.aD.bound], l.prototype, "OnStartupError", null),
+        (0, r.gn)([o.aD.bound], l.prototype, "OnHMDActivityLevelChanged", null),
         (0, r.gn)([o.aD.bound], l.prototype, "OnKeyboardStatus", null),
         (0, r.gn)([o.aD.bound], l.prototype, "ClearError", null);
       const u = new l();
@@ -13237,7 +13275,7 @@
         V5: () => R,
         Ac: () => y,
         zx: () => k,
-        ji: () => U,
+        ji: () => G,
         VY: () => T,
         oX: () => O,
         Vh: () => Ye,
@@ -13632,7 +13670,7 @@
       (0, r.gn)([u.a], V.prototype, "Toggle", null),
         (0, r.gn)([u.a], V.prototype, "KeyDown", null),
         (0, r.gn)([u.a], V.prototype, "SetChecked", null);
-      class G extends V {
+      class U extends V {
         render() {
           let e = "DialogCheckbox" + (this.checked ? " Active" : "");
           return (
@@ -13685,15 +13723,15 @@
           );
         }
       }
-      class U extends V {
+      class G extends V {
         render() {
           return i.createElement(
             h.T,
-            Object.assign({ fallback: G }, this.props),
+            Object.assign({ fallback: U }, this.props),
           );
         }
       }
-      U.contextType = d;
+      G.contextType = d;
       class H extends V {
         render() {
           let e = this.checked ? " Active" : "";
@@ -14624,7 +14662,9 @@
             !e.disabled &&
               i.createElement(
                 "div",
-                { className: "DialogDropDown_Arrow" },
+                {
+                  className: (0, l.Z)(e.arrowClassName, "DialogDropDown_Arrow"),
+                },
                 i.createElement(s.$gZ, null),
               ),
           );
@@ -14721,6 +14761,7 @@
               onCancel: a,
               selectedValue:
                 null === (t = this.value) || void 0 === t ? void 0 : t.data,
+              strDropDownMenuCtnClass: this.props.strDropDownMenuCtnClass,
               strDropDownItemClassName: this.props.strDropDownItemClassName,
             }),
             this.m_elInput,
@@ -14778,6 +14819,7 @@
                   : null,
               componentRef: this.OnInputRef,
               className: this.props.strDropDownButtonClassName,
+              arrowClassName: this.props.arrowClassName,
             },
             s,
           );
@@ -14841,6 +14883,7 @@
             className: (0, l.Z)(
               ue().DialogDropDownMenu,
               "_DialogInputContainer",
+              e.strDropDownMenuCtnClass,
             ),
           },
           r,
@@ -15507,8 +15550,8 @@
         }
       }
       var Ve = n(8179),
-        Ge = n(78330),
-        Ue = n(17547),
+        Ue = n(78330),
+        Ge = n(17547),
         He = n(67892),
         We = n.n(He),
         je = n(16221),
@@ -15551,7 +15594,7 @@
           e.activePage.header,
           !e.hideTitle && i.createElement(E, null, e.activePage.title),
           i.createElement(
-            Ue.SV,
+            Ge.SV,
             { errorKey: e.activePage.title },
             e.activePage.content,
           ),
@@ -15627,7 +15670,7 @@
               key: a,
               onClick: () => {
                 v(!0),
-                  Ge.LT.PlayNavSound(Ge.qr.PagedNavigation),
+                  Ue.LT.PlayNavSound(Ue.qr.PagedNavigation),
                   e.onPageRequested && e.onPageRequested(t.identifier),
                   t.click ? t.click() : u && n != d && m(n);
               },
@@ -15889,16 +15932,16 @@
           x = null != g ? g : "standard",
           P = null == v || v,
           V = null != C ? C : 0,
-          G = null != E ? E : "center",
-          U = i.useRef(),
-          H = (0, z.BE)(U, e.navRef),
+          U = null != E ? E : "center",
+          G = i.useRef(),
+          H = (0, z.BE)(G, e.navRef),
           W = i.useCallback(
             (e) => {
               var t;
-              null === (t = U.current) || void 0 === t || t.TakeFocus(),
+              null === (t = G.current) || void 0 === t || t.TakeFocus(),
                 e.preventDefault();
             },
-            [U],
+            [G],
           );
         return i.createElement(
           a.s,
@@ -15921,7 +15964,7 @@
                 F && tt().WithFirstRow,
                 T && tt().WithChildrenInline,
                 B && tt().WithChildrenBelow,
-                "center" == G && tt().VerticalAlignCenter,
+                "center" == U && tt().VerticalAlignCenter,
                 "shift-children-below" == A &&
                   tt().InlineWrapShiftsChildrenBelow,
                 !!o && tt().WithDescription,
@@ -16528,10 +16571,10 @@
             m != this.props.value)
           ) {
             const e = m > this.m_fLatestUserValue;
-            Ge.LT.PlayNavSound(e ? Ge.qr.SliderUp : Ge.qr.SliderDown),
+            Ue.LT.PlayNavSound(e ? Ue.qr.SliderUp : Ue.qr.SliderDown),
               (this.m_fLatestUserValue = m),
               this.props.onChange && this.props.onChange(m, 2);
-          } else Ge.LT.PlayNavSound(Ge.qr.FailedNav);
+          } else Ue.LT.PlayNavSound(Ue.qr.FailedNav);
           return !0;
         }
         ComputeNormalizedValueForMousePosition(e) {
@@ -16586,7 +16629,7 @@
             const e = o > this.props.value,
               t = 0 == this.step;
             (this.m_eDragMode == Dt.None || !t) &&
-              Ge.LT.PlayNavSound(e ? Ge.qr.SliderUp : Ge.qr.SliderDown),
+              Ue.LT.PlayNavSound(e ? Ue.qr.SliderUp : Ue.qr.SliderDown),
               (this.m_fLatestUserValue = o),
               this.props.onChange &&
                 this.props.onChange(o, this.SliderChangeSource);
@@ -16660,7 +16703,7 @@
           const t = 0 == this.step;
           if (this.m_fLatestUserValue != this.m_fStartValue && t && e) {
             const e = this.m_fLatestUserValue > this.m_fStartValue;
-            Ge.LT.PlayNavSound(e ? Ge.qr.SliderUp : Ge.qr.SliderDown);
+            Ue.LT.PlayNavSound(e ? Ue.qr.SliderUp : Ue.qr.SliderDown);
           }
         }
         RemoveDocumentEventListeners() {
@@ -16725,7 +16768,7 @@
               : ((e = this.props.resetValue > this.props.value),
                 this.props.onChangeComplete &&
                   this.props.onChangeComplete(this.props.resetValue, 4)),
-            Ge.LT.PlayNavSound(e ? Ge.qr.SliderUp : Ge.qr.SliderDown);
+            Ue.LT.PlayNavSound(e ? Ue.qr.SliderUp : Ue.qr.SliderDown);
         }
         OnContextMenu(e) {
           if (null != this.props.resetValue) {
@@ -16789,7 +16832,7 @@
                 childFocusDisabled: this.props.disabled || !r,
                 onContextMenu: this.OnContextMenu,
                 onOKButton: this.props.disabled
-                  ? () => Ge.LT.PlayNavSound(Ge.qr.FailedNav)
+                  ? () => Ue.LT.PlayNavSound(Ue.qr.FailedNav)
                   : null,
                 onSecondaryButton: this.CanResetToDefault
                   ? this.ResetToDefault
@@ -17080,12 +17123,12 @@
             },
             [x],
           ),
-          G = (0, z.BE)(x, C),
-          U = f ? L : void 0,
+          U = (0, z.BE)(x, C),
+          G = f ? L : void 0,
           H = f ? (0, c.Xx)("#Slider_EditValue") : void 0;
-        let W = E || U,
+        let W = E || G,
           j = E ? b : H,
-          K = E ? U : void 0,
+          K = E ? G : void 0,
           X = E ? H : void 0;
         return i.createElement(
           rt,
@@ -17112,7 +17155,7 @@
           i.createElement(
             Mt,
             Object.assign(
-              { ref: G, notchCount: _, focusable: !O, navRef: M },
+              { ref: U, notchCount: _, focusable: !O, navRef: M },
               R,
             ),
           ),
@@ -17308,7 +17351,7 @@
             onClick: () => {
               if (!a && r) {
                 const e = !n;
-                r(e), Ge.LT.PlayNavSound(e ? Ge.qr.ToggleOn : Ge.qr.ToggleOff);
+                r(e), Ue.LT.PlayNavSound(e ? Ue.qr.ToggleOn : Ue.qr.ToggleOff);
               }
             },
             ref: t,
@@ -17384,8 +17427,8 @@
       var xt,
         Pt = n(96931),
         Vt = n.n(Pt),
-        Gt = n(32873),
-        Ut = n(26171);
+        Ut = n(32873),
+        Gt = n(26171);
       function Ht(e) {
         const {
             childrenKey: t,
@@ -17396,7 +17439,7 @@
           } = e,
           s = (0, l.Z)(Vt().TransitionGroup, o);
         return i.createElement(
-          Gt.Z,
+          Ut.Z,
           { className: s, appear: !1, enter: a, exit: a },
           i.createElement(Wt, { key: t, childrenClasses: n }, r),
         );
@@ -17464,7 +17507,7 @@
         return c.current && !c.current.ownerDocument.defaultView
           ? null
           : i.createElement(
-              Ut.Z,
+              Gt.Z,
               Object.assign(
                 {
                   nodeRef: c,
@@ -19618,7 +19661,7 @@
         ZNm: () => Y,
         Zrf: () => g,
         _GE: () => _e,
-        c7E: () => Ue,
+        c7E: () => Ge,
         chI: () => se,
         dCe: () => Ze,
         dLw: () => Ie,
@@ -19634,7 +19677,7 @@
         k4K: () => w,
         lBf: () => p,
         lsH: () => ne,
-        mBz: () => Ge,
+        mBz: () => Ue,
         mKE: () => N,
         mKt: () => be,
         miF: () => xe,
@@ -19653,14 +19696,14 @@
         t6e: () => d,
         tEX: () => oe,
         tLe: () => de,
-        thP: () => U,
+        thP: () => G,
         tkI: () => b,
         uZu: () => we,
         ui7: () => te,
         vJ$: () => ye,
         vyu: () => ze,
         wn$: () => fe,
-        wx$: () => G,
+        wx$: () => U,
         x0L: () => Ne,
         xg: () => Te,
         yBp: () => R,
@@ -20595,7 +20638,7 @@
           }),
         );
       }
-      function G(e) {
+      function U(e) {
         const { direction: t } = e,
           n = (0, r._T)(e, ["direction"]);
         switch (t) {
@@ -20673,7 +20716,7 @@
             );
         }
       }
-      function U() {
+      function G() {
         return i.createElement(
           "svg",
           {
@@ -22514,12 +22557,12 @@
           }),
         );
       }
-      function Ge(e) {
+      function Ue(e) {
         return (0, u.RY)()
           ? i.createElement(Ve, Object.assign({}, e))
           : i.createElement(Pe, Object.assign({}, e));
       }
-      function Ue() {
+      function Ge() {
         return i.createElement(
           "svg",
           {
@@ -26016,7 +26059,7 @@
         render() {
           return i.createElement(
             o.VK,
-            { basename: U() },
+            { basename: G() },
             i.createElement(
               P,
               null,
@@ -26224,7 +26267,7 @@
           f.fI,
           null,
           i.createElement(
-            G,
+            U,
             null,
             i.createElement(g.R, null, i.createElement(m.Y0, null, e.children)),
           ),
@@ -26234,7 +26277,7 @@
         const e = (0, f.kQ)("loyalty_webapi_token", "application_config");
         return new u.J(f.De.WEBAPI_BASE_URL, e);
       }
-      function G(e) {
+      function U(e) {
         const t = (0, _.kD)(V),
           n = (0, _.kD)(i.useCallback(() => new c.Z(), [])),
           r = (0, i.useMemo)(
@@ -26251,7 +26294,7 @@
           ),
         );
       }
-      function U() {
+      function G() {
         let e = document.createElement("a");
         e.href = f.De.COMMUNITY_BASE_URL;
         let t = e.pathname;
