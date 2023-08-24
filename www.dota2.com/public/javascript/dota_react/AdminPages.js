@@ -315,8 +315,8 @@
       const Y = "red",
         x = "orange",
         H = "goldenrod",
-        B = "#adff2f",
-        K = "darkgray",
+        K = "#adff2f",
+        B = "darkgray",
         W = "forestgreen",
         V = "crimson",
         j = "#fa002e",
@@ -395,7 +395,7 @@
                       r,
                     ),
                   )
-                : i.createElement("span", { style: { color: K } }, "No Guild");
+                : i.createElement("span", { style: { color: B } }, "No Guild");
             },
           },
         ],
@@ -481,7 +481,7 @@
             key: "behavscore",
             displayName: "Behavior Score",
             formatFunction: (e = 1e4) => {
-              let t = B;
+              let t = K;
               return (
                 e < 1500 ? (t = Y) : e < 3e3 ? (t = x) : e < 7e3 && (t = H),
                 i.createElement("span", { style: { color: t } }, e)
@@ -608,7 +608,7 @@
             key: "plussubscriber",
             displayName: "Plus Subscriber",
             formatFunction: (e = 0) =>
-              e ? i.createElement("div", { style: { color: B } }, "YES") : "NO",
+              e ? i.createElement("div", { style: { color: K } }, "YES") : "NO",
           },
           {
             key: "wins",
@@ -678,7 +678,7 @@
                 (t = ((t >> 4) + t) & 252645135),
                 (t = ((t >> 8) + t) & 16711935),
                 (t = ((t >> 16) + t) & 65535);
-              let a = B;
+              let a = K;
               return (
                 t > 20 ? (a = Y) : t > 10 ? (a = x) : t > 5 && (a = H),
                 i.createElement(
@@ -723,7 +723,7 @@
                         !r && i.createElement("div", null, `${n[e][0]}`),
                         i.createElement(
                           "div",
-                          { style: { color: K } },
+                          { style: { color: B } },
                           `(${n[e][1]} / ${l})`,
                         ),
                       ),
@@ -788,7 +788,7 @@
             displayName: G(O._W.DOTA_ACCESS_TOURNAMENT_ADMIN),
             formatFunction: (e = 0) =>
               e & O._W.DOTA_ACCESS_TOURNAMENT_ADMIN
-                ? i.createElement("div", { style: { color: B } }, "YES")
+                ? i.createElement("div", { style: { color: K } }, "YES")
                 : "NO",
           },
           {
@@ -796,7 +796,7 @@
             displayName: G(O._W.DOTA_ACCESS_TOURNAMENT_BROADCASTER),
             formatFunction: (e = 0) =>
               e & O._W.DOTA_ACCESS_TOURNAMENT_BROADCASTER
-                ? i.createElement("div", { style: { color: B } }, "YES")
+                ? i.createElement("div", { style: { color: K } }, "YES")
                 : "NO",
           },
         ],
@@ -905,7 +905,7 @@
                       `${c} `,
                       i.createElement(
                         "span",
-                        { style: { color: K } },
+                        { style: { color: B } },
                         `[${s}]`,
                       ),
                     ),
@@ -1066,29 +1066,29 @@
           var t, a, l, s, M, L;
           const G = (0, o.UO)(),
             $ = null == G ? void 0 : G.id,
-            [P, H] = (0, i.useState)(null),
-            [B, ue] = (0, i.useState)(null),
-            [Ee, ge] = (0, i.useState)(null),
-            [ve, fe] = (0, i.useState)(null),
-            [Ae, he] = (0, i.useState)(!1),
-            [ke, Te] = (0, i.useState)(!1),
-            [Ne, Re] = (0, i.useState)(!1),
-            [Ie, Oe] = (0, i.useState)(!1),
-            [De, Ce] = (0, i.useState)(!0),
-            [Se, Fe] = (0, i.useState)(!0),
-            [be, Me] = (0, i.useState)(!1),
-            [Le, Ge] = (0, i.useState)(!0),
-            [$e, we] = (0, i.useState)(!0),
-            [Pe, Ue] = (0, i.useState)(!1),
-            Ye = I.L.Get().getHeroList(),
-            xe = I.L.Get().getItemList();
+            [P, K] = (0, i.useState)(null),
+            [ue, Ee] = (0, i.useState)(null),
+            [ge, ve] = (0, i.useState)(null),
+            [fe, Ae] = (0, i.useState)(null),
+            [he, ke] = (0, i.useState)(!1),
+            [Te, Ne] = (0, i.useState)(!1),
+            [Re, Ie] = (0, i.useState)(!1),
+            [Oe, De] = (0, i.useState)(!1),
+            [Ce, Se] = (0, i.useState)(!0),
+            [Fe, be] = (0, i.useState)(!0),
+            [Me, Le] = (0, i.useState)(!1),
+            [Ge, $e] = (0, i.useState)(!0),
+            [we, Pe] = (0, i.useState)(!0),
+            [Ue, Ye] = (0, i.useState)(!1),
+            xe = I.L.Get().getHeroList(),
+            He = I.L.Get().getItemList();
           (0, i.useEffect)(() => {
             try {
               !(function () {
                 var e;
                 (0, n.mG)(this, void 0, void 0, function* () {
                   if (!k.Y.DOTA_APP_ID || !$) return;
-                  Oe(!1), Re(!1), he(!1), Te(!1);
+                  De(!1), Ie(!1), ke(!1), Ne(!1);
                   const t = {
                     appid: k.Y.DOTA_APP_ID,
                     u: C(k.Y.DOTA_APP_ID),
@@ -1114,7 +1114,7 @@
                       n &&
                         n.persona &&
                         n.persona.elodatajson &&
-                        ue(JSON.parse(n.persona.elodatajson).aggregate);
+                        Ee(JSON.parse(n.persona.elodatajson).aggregate);
                     } catch (e) {}
                     try {
                       if (
@@ -1127,17 +1127,17 @@
                         const e = Object.values(
                           n.persona.history.matches,
                         ).reverse();
-                        ge(e), fe(e);
+                        ve(e), Ae(e);
                       }
                     } catch (e) {
-                      Te(!0);
+                      Ne(!0);
                     }
-                    a && a.data && H(n);
+                    a && a.data && K(n);
                   } catch (e) {
                     console.log("Error fetching individual persona info."),
-                      Oe(!0);
+                      De(!0);
                   }
-                  Re(!0), he(!0);
+                  Ie(!0), ke(!0);
                 });
               })();
             } catch (e) {
@@ -1145,37 +1145,37 @@
             }
           }, [$]),
             (0, i.useEffect)(() => {
-              if (!Ee) return;
-              let e = Ee.slice();
+              if (!ge) return;
+              let e = ge.slice();
               (e = e.filter(
                 (e) =>
-                  !(!Se && e.lobby_type == O.Eq.CASUAL_MATCH) &&
-                  !(!De && e.lobby_type == O.Eq.COMPETITIVE_MATCH) &&
+                  !(!Fe && e.lobby_type == O.Eq.CASUAL_MATCH) &&
+                  !(!Ce && e.lobby_type == O.Eq.COMPETITIVE_MATCH) &&
                   !(
-                    !be &&
+                    !Me &&
                     ![
                       O.Eq.CASUAL_MATCH,
                       O.Eq.COMPETITIVE_MATCH,
                       O.Eq.WEEKEND_TOURNEY,
                     ].includes(e.lobby_type)
                   ) &&
-                  !(!Le && e.rankwassolo) &&
-                  !(!$e && !e.rankwassolo),
+                  !(!Ge && e.rankwassolo) &&
+                  !(!we && !e.rankwassolo),
               )),
-                fe(e);
-            }, [Ee, De, Se, be, Le, $e]);
-          let He = null;
+                Ae(e);
+            }, [ge, Ce, Fe, Me, Ge, we]);
+          let Ke = null;
           if (
             ($
-              ? Ne && Ae
-                ? Ne && Ie
-                  ? (He = `Error loading persona information for account ID ${$}. Double check universe & account ID (or try refreshing).`)
-                  : Ae &&
-                    ke &&
-                    (He = `Error loading match history for account ID ${$}.`)
-                : (He = `Loading account ID ${$}...`)
-              : (He = "Must pass in an account ID."),
-            He)
+              ? Re && he
+                ? Re && Oe
+                  ? (Ke = `Error loading persona information for account ID ${$}. Double check universe & account ID (or try refreshing).`)
+                  : he &&
+                    Te &&
+                    (Ke = `Error loading match history for account ID ${$}.`)
+                : (Ke = `Loading account ID ${$}...`)
+              : (Ke = "Must pass in an account ID."),
+            Ke)
           )
             return i.createElement(
               "div",
@@ -1190,7 +1190,7 @@
               i.createElement(
                 "div",
                 { className: U().ContentFrame },
-                i.createElement("h2", { className: U().Header }, He),
+                i.createElement("h2", { className: U().Header }, Ke),
               ),
               i.createElement(R.U, null),
             );
@@ -1226,9 +1226,9 @@
               cellRenderer: (e) => {
                 var t;
                 const a =
-                    null == Ye
+                    null == xe
                       ? void 0
-                      : Ye.heroes.find((t) => t.id == e.cellData),
+                      : xe.heroes.find((t) => t.id == e.cellData),
                   n =
                     null === (t = null == a ? void 0 : a.name) || void 0 === t
                       ? void 0
@@ -1322,8 +1322,25 @@
             {
               dataKey: "previousrank",
               label: "MMR",
-              widthRelative: 6,
+              widthRelative: 5,
               cellRenderer: (e) => e.cellData,
+            },
+            {
+              dataKey: "overperformance_score",
+              label: "Perf",
+              widthRelative: 4,
+              cellRenderer: (e) => {
+                const t = e.cellData || 0;
+                let a = "";
+                return (
+                  t >= 300 ? (a = Y) : t >= 175 ? (a = x) : t >= 100 && (a = H),
+                  i.createElement(
+                    "span",
+                    { key: "op", style: { color: a } },
+                    `${t}`,
+                  )
+                );
+              },
             },
             {
               dataKey: "duration",
@@ -1365,8 +1382,8 @@
                       type: "checkbox",
                       name: "ranked",
                       id: "ranked",
-                      onChange: () => Ce(!De),
-                      checked: De,
+                      onChange: () => Se(!Ce),
+                      checked: Ce,
                     }),
                     i.createElement(
                       "label",
@@ -1385,8 +1402,8 @@
                       type: "checkbox",
                       name: "unranked",
                       id: "unranked",
-                      onChange: () => Fe(!Se),
-                      checked: Se,
+                      onChange: () => be(!Fe),
+                      checked: Fe,
                     }),
                     i.createElement(
                       "label",
@@ -1403,7 +1420,7 @@
             {
               dataKey: "rankwassolo",
               label: "Solo/Party (this label isn't used, check headerRenderer)",
-              widthRelative: 7,
+              widthRelative: 6,
               cellRenderer: (e) => {
                 var t;
                 return e.cellData &&
@@ -1424,8 +1441,8 @@
                       type: "checkbox",
                       name: "solo",
                       id: "solo",
-                      onChange: () => Ge(!Le),
-                      checked: Le,
+                      onChange: () => $e(!Ge),
+                      checked: Ge,
                     }),
                     i.createElement(
                       "label",
@@ -1440,8 +1457,8 @@
                       type: "checkbox",
                       name: "party",
                       id: "party",
-                      onChange: () => we(!$e),
-                      checked: $e,
+                      onChange: () => Pe(!we),
+                      checked: we,
                     }),
                     i.createElement(
                       "label",
@@ -1533,14 +1550,14 @@
             {
               dataKey: "item0",
               label: "Items",
-              widthRelative: 17,
+              widthRelative: 20,
               cellRenderer: (e) => {
                 const t = [];
                 for (let a = 0; a < 6; a++) {
                   const n =
-                    null == xe
+                    null == He
                       ? void 0
-                      : xe.itemabilities.find(
+                      : He.itemabilities.find(
                           (t) =>
                             t.id ==
                             (null == e ? void 0 : e.rowData[`item${a}`]),
@@ -2090,18 +2107,18 @@
               },
             },
           ];
-          let Ke = !0;
+          let We = !0;
           for (let e of pe)
             (null == P ? void 0 : P.persona) &&
               (null == P ? void 0 : P.persona[e.key]) &&
-              (Ke = !1);
-          let We = !0;
+              (We = !1);
+          let Ve = !0;
           for (let e of _e)
             (null == P ? void 0 : P.persona) &&
               (null == P ? void 0 : P.persona[e.key]) &&
               m()(null == P ? void 0 : P.persona[e.key]).isAfter() &&
-              (We = !1);
-          const Ve =
+              (Ve = !1);
+          const je =
             (null === (t = null == P ? void 0 : P.persona) || void 0 === t
               ? void 0
               : t.personaname) || "";
@@ -2115,7 +2132,7 @@
               i.createElement(
                 "title",
                 null,
-                "Dota 2 Player" + (Ve ? " - " + Ve : ""),
+                "Dota 2 Player" + (je ? " - " + je : ""),
               ),
             ),
             i.createElement(D.Z, null),
@@ -2132,7 +2149,7 @@
                   i.createElement(
                     "h1",
                     { className: (0, T.Z)(U().Header, U().HeaderFixedHeight) },
-                    `${Ve}`,
+                    `${je}`,
                   ),
                   i.createElement(
                     "div",
@@ -2277,11 +2294,11 @@
                   i.createElement(
                     "div",
                     { className: U().ChartContainer },
-                    B &&
+                    ue &&
                       i.createElement(
                         "div",
                         { className: U().ChartTitle },
-                        `Last ${B.length} games`,
+                        `Last ${ue.length} games`,
                       ),
                     i.createElement(
                       d.h,
@@ -2289,7 +2306,7 @@
                       i.createElement(
                         u.w,
                         {
-                          data: B,
+                          data: ue,
                           margin: { top: 5, right: 30, left: 20, bottom: 5 },
                         },
                         i.createElement(p.q, {
@@ -2350,12 +2367,12 @@
                 {
                   className: (0, T.Z)(
                     U().SupportGrid,
-                    Pe && U().SupportGridHidden,
+                    Ue && U().SupportGridHidden,
                   ),
                 },
                 i.createElement(
                   "div",
-                  { className: U().SupportColumn, onClick: () => Ue(!0) },
+                  { className: U().SupportColumn, onClick: () => Ye(!0) },
                   i.createElement(
                     "h2",
                     {
@@ -2377,7 +2394,7 @@
                 {
                   className: (0, T.Z)(
                     U().SupportGrid,
-                    !Pe && U().SupportGridHidden,
+                    !Ue && U().SupportGridHidden,
                   ),
                 },
                 i.createElement(
@@ -2387,7 +2404,7 @@
                     "h2",
                     {
                       className: (0, T.Z)(U().Header, U().HeaderClickable),
-                      onClick: () => Ue(!1),
+                      onClick: () => Ye(!1),
                     },
                     "Support, Bans, & Other Info",
                     i.createElement("img", {
@@ -2450,7 +2467,7 @@
                       ),
                     ),
                   ),
-                  !Ke && i.createElement("br", null),
+                  !We && i.createElement("br", null),
                   i.createElement(
                     "div",
                     { className: U().WarningsGrid },
@@ -2481,7 +2498,7 @@
                       ),
                     ),
                   ),
-                  !We && i.createElement("br", null),
+                  !Ve && i.createElement("br", null),
                   i.createElement(
                     "div",
                     { className: U().BansGrid },
@@ -2604,7 +2621,7 @@
                         null,
                         i.createElement(
                           "span",
-                          { style: { color: K } },
+                          { style: { color: B } },
                           "(None)",
                         ),
                       ),
@@ -2650,7 +2667,7 @@
                         null,
                         i.createElement(
                           "span",
-                          { style: { color: K } },
+                          { style: { color: B } },
                           "(None)",
                         ),
                       ),
@@ -2692,7 +2709,7 @@
               ),
               i.createElement(
                 "div",
-                { className: (0, T.Z)(!Pe && U().SupportGridHidden) },
+                { className: (0, T.Z)(!Ue && U().SupportGridHidden) },
                 i.createElement("div", { className: U().SmoothLine }),
                 i.createElement(
                   "table",
@@ -2779,8 +2796,8 @@
                 i.createElement(
                   "div",
                   { className: U().MatchHistoryInnerContainer },
-                  Ee &&
-                    Ee.length &&
+                  ge &&
+                    ge.length &&
                     i.createElement(f.Z, null, ({ width: e, height: t }) =>
                       i.createElement(
                         A.Z,
@@ -2789,8 +2806,8 @@
                           height: t,
                           width: e,
                           rowHeight: 33.33,
-                          rowCount: ve.length,
-                          rowGetter: ({ index: e }) => ve[e],
+                          rowCount: fe.length,
+                          rowGetter: ({ index: e }) => fe[e],
                           rowClassName: ({ index: e }) =>
                             -1 != e
                               ? e % 2
@@ -2798,6 +2815,12 @@
                                 : U().MatchRowOdd
                               : "",
                           overscanRowCount: 50,
+                          noRowsRenderer: () =>
+                            i.createElement(
+                              "h3",
+                              null,
+                              "No Matches Found. Toggle the checkbox at the bottom of the page for custom games and other modes.",
+                            ),
                         },
                         Be.map((t) =>
                           i.createElement(h.Z, {
@@ -2812,12 +2835,12 @@
                         ),
                       ),
                     ),
-                  (!Ee || !Ee.length) &&
+                  (!ge || !ge.length) &&
                     i.createElement("div", null, "No matches"),
                 ),
               ),
-              Ee &&
-                Ee.length &&
+              ge &&
+                ge.length &&
                 i.createElement(
                   "div",
                   { className: U().OtherModesCheckBox },
@@ -2825,8 +2848,8 @@
                     type: "checkbox",
                     name: "othermode",
                     id: "othermode",
-                    onChange: () => Me(!be),
-                    checked: be,
+                    onChange: () => Le(!Me),
+                    checked: Me,
                   }),
                   i.createElement(
                     "label",
@@ -2834,7 +2857,7 @@
                     i.createElement(
                       "span",
                       null,
-                      "Include custom & practice games",
+                      "Include custom games, practice games, and uncommon game modes",
                     ),
                   ),
                 ),
@@ -2871,7 +2894,7 @@
           c.createElement(
             "a",
             {
-              href: `${o.Y.BASE_URL}persona/showplayer/${e}?u=${g}&appid=${o.Y.DOTA_APP_ID}`,
+              href: `${o.Y.BASE_URL}personadetails/${e}?u=${g}&appid=${o.Y.DOTA_APP_ID}`,
             },
             e,
           );
@@ -3435,8 +3458,8 @@
             [$, w] = (0, c.useState)({}),
             [P, U] = (0, c.useState)([]),
             [Y, x] = (0, c.useState)(!0),
-            [H, B] = (0, c.useState)([]);
-          function K() {
+            [H, K] = (0, c.useState)([]);
+          function B() {
             var e, t;
             return (0, n.mG)(this, void 0, void 0, function* () {
               if (
@@ -3562,7 +3585,7 @@
           }, [t]),
             (0, c.useEffect)(() => {
               try {
-                K();
+                B();
               } catch (e) {
                 console.log("Could not fetch registered teams."), h(!0);
               }
@@ -3613,7 +3636,7 @@
                         }),
                       ),
                     ),
-                      a && a.data && l.actions && B(l.actions);
+                      a && a.data && l.actions && K(l.actions);
                   });
                 })();
               } catch (e) {
@@ -4042,7 +4065,7 @@
                                 `${o.Y.BASE_URL}webapi/IDOTA2Teams/UpdateRegisteredTeamData/v0001?u=${g}&appid=${o.Y.DOTA_APP_ID}`,
                                 { params: a },
                               );
-                              K(), setTimeout(() => m(!1), v);
+                              B(), setTimeout(() => m(!1), v);
                             }),
                         },
                         c.createElement(
