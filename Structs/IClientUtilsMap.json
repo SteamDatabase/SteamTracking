@@ -436,6 +436,10 @@
         {
             "name": "BGetMachineID",
             "argc": "2"
+        },
+        {
+            "name": "NotifyMissingInterface",
+            "argc": "2"
         }
     ]
 }
