@@ -15674,7 +15674,7 @@
           p =
             (d.De.IN_CLIENT && !l ? "steam://openurl/" : "") +
             S(e.eventModel, e.route, l ? "relative" : "absolute"),
-          h = (0, u.Hf)(p, n);
+          h = l ? p : (0, u.Hf)(p, n);
         return l
           ? i.createElement(
               o.IS,
