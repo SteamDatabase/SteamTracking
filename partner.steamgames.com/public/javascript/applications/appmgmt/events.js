@@ -50076,53 +50076,60 @@
             });
       }
       function is(e) {
-        const { optInDef: t } = e,
-          n = (0, o.Xj)(t.event_title, (0, w.jM)(It.De.LANGUAGE)),
-          a = Tt(t);
-        return D.createElement(
-          "div",
-          { className: Bt().ColumnCtn },
+        const { optInDef: t, optInRegistration: n } = e,
+          a = (0, o.Xj)(t.event_title, (0, w.jM)(It.De.LANGUAGE)),
+          i = Tt(t);
+        let r = "#OptIn_Appeals_Title_Pruned";
+        return (
+          n.accountid_appeal &&
+          1 != n.accountid_appeal &&
+          2 != n.accountid_appeal
+            ? (r = "#OptIn_Appeals_Title_AppealProcess")
+            : (!n.pending_review && n.pruned) ||
+              (r = "#OptIn_Appeals_Title_NotReviewed"),
           D.createElement(
             "div",
-            { className: Bt().LeftCol },
+            { className: Bt().ColumnCtn },
             D.createElement(
               "div",
-              { className: Bt().ColHeader },
-              Boolean(a)
-                ? D.createElement("div", {
-                    className: Bt().ColHeaderImg,
-                    style: { backgroundImage: `url( '${a}' )` },
-                  })
-                : Boolean(n) && D.createElement("div", null, n),
-            ),
-            D.createElement(
-              "div",
-              { className: Bt().SectionCtn },
+              { className: Bt().LeftCol },
               D.createElement(
-                "h1",
-                { className: Zr().AppealTitle },
-                (0, Le.Xx)("#OptIn_Appeals_Title_Pruned"),
+                "div",
+                { className: Bt().ColHeader },
+                Boolean(i)
+                  ? D.createElement("div", {
+                      className: Bt().ColHeaderImg,
+                      style: { backgroundImage: `url( '${i}' )` },
+                    })
+                  : Boolean(a) && D.createElement("div", null, a),
               ),
+              D.createElement(
+                "div",
+                { className: Bt().SectionCtn },
+                D.createElement(
+                  "h1",
+                  { className: Zr().AppealTitle },
+                  (0, Le.Xx)(r),
+                ),
+              ),
+              D.createElement(rs, Object.assign({}, e)),
+              D.createElement(ss, Object.assign({}, e)),
             ),
-            D.createElement(rs, Object.assign({}, e)),
-            D.createElement(ss, Object.assign({}, e)),
-          ),
-          D.createElement(Jr, Object.assign({}, e)),
+            D.createElement(Jr, Object.assign({}, e)),
+          )
         );
       }
       function rs(e) {
-        const { optInDef: t, storeItem: n } = e,
-          a = (0, o.Xj)(t.event_title, (0, w.jM)(It.De.LANGUAGE)),
-          i = (0, o.Xj)(t.appeals_text, (0, w.jM)(It.De.LANGUAGE), null);
-        Tt(t);
+        const { optInDef: t, storeItem: n, optInRegistration: a } = e;
+        let i = "#OptIn_Appeals_ReviewLine";
+        (!a.pending_review && a.pruned) ||
+          (i = "#OptIn_Appears_NotReviewed_ReviewLine");
+        const r = (0, o.Xj)(t.event_title, (0, w.jM)(It.De.LANGUAGE)),
+          s = (0, o.Xj)(t.appeals_text, (0, w.jM)(It.De.LANGUAGE), null);
         return D.createElement(
           "div",
           { className: Bt().SectionCtn },
-          D.createElement(
-            "h1",
-            null,
-            (0, Le.Xx)("#OptIn_Appeals_ReviewLine", n.GetName()),
-          ),
+          D.createElement("h1", null, (0, Le.Xx)(i, n.GetName())),
           D.createElement("p", null, (0, Le.Xx)("#OptIn_Appeals_ReviewLine_1")),
           D.createElement(
             "p",
@@ -50136,16 +50143,16 @@
               }),
             ),
           ),
-          Boolean(i) &&
+          Boolean(s) &&
             D.createElement(
               D.Fragment,
               null,
               D.createElement(
                 "h1",
                 null,
-                (0, Le.Xx)("#OptIn_Appeals_EligibilityTitle", a),
+                (0, Le.Xx)("#OptIn_Appeals_EligibilityTitle", r),
               ),
-              D.createElement(qi.d, { text: i }),
+              D.createElement(qi.d, { text: s }),
             ),
         );
       }
@@ -50243,96 +50250,101 @@
           ),
           l = Boolean(2 === a.appeal_state),
           c = (0, o.Xj)(n.event_title, (0, w.jM)(It.De.LANGUAGE));
-        return D.createElement(
-          "div",
-          { className: Bt().SectionCtn },
+        let m = "#OptIn_Appeals_Control_Title",
+          d = "#OptIn_Appeals_Control_Desc";
+        return (
+          2 == a.appeal_state
+            ? ((m = "#OptIn_Appeals_Control_Rejected_Title"),
+              (d = "#OptIn_Appeals_Control_Rejected_Desc"))
+            : (!a.pending_review && a.pruned) ||
+              (m = "#OptIn_Appeals_Control_NotReviewed_Title"),
           D.createElement(
-            "h1",
-            null,
-            (0, Le.Xx)("#OptIn_Appeals_Control_Title", i.GetName()),
-          ),
-          D.createElement("p", null, (0, Le.Xx)("#OptIn_Appeals_Control_Desc")),
-          Boolean(r) &&
-            D.createElement(
-              "div",
-              { className: Bt().warning },
+            "div",
+            { className: Bt().SectionCtn },
+            D.createElement("h1", null, (0, Le.Xx)(m, i.GetName())),
+            D.createElement("p", null, (0, Le.Xx)(d)),
+            Boolean(r) &&
               D.createElement(
-                "h3",
-                null,
-                (0, Le.Xx)("#OptIn_Appeals_Possible_WarningTitle"),
-              ),
-              D.createElement(
-                "p",
-                null,
-                (0, Le.Xx)("#OptIn_Appeals_Possible_warning"),
-              ),
-              D.createElement(
-                "p",
-                null,
-                (0, Le.yu)(
-                  "#OptIn_Appeals_NotPossible_Desc3",
-                  D.createElement("a", {
-                    href: It.De.PARTNER_BASE_URL + "doc/store/release_dates",
-                  }),
+                "div",
+                { className: Bt().warning },
+                D.createElement(
+                  "h3",
+                  null,
+                  (0, Le.Xx)("#OptIn_Appeals_Possible_WarningTitle"),
+                ),
+                D.createElement(
+                  "p",
+                  null,
+                  (0, Le.Xx)("#OptIn_Appeals_Possible_warning"),
+                ),
+                D.createElement(
+                  "p",
+                  null,
+                  (0, Le.yu)(
+                    "#OptIn_Appeals_NotPossible_Desc3",
+                    D.createElement("a", {
+                      href: It.De.PARTNER_BASE_URL + "doc/store/release_dates",
+                    }),
+                  ),
                 ),
               ),
-            ),
-          Boolean(!s) &&
-            D.createElement(
-              "div",
-              { className: Zr().ButtonCtn },
+            Boolean(!s) &&
               D.createElement(
-                z.zx,
-                {
-                  onClick: (t) =>
-                    (0, V.AM)(
-                      D.createElement(Qr, Object.assign({}, e)),
-                      (0, Z.RA)(t),
-                    ),
-                },
-                (0, Le.Xx)("#OptIn_Appeals_Control_Button"),
-              ),
-            ),
-          Boolean(s && !l) &&
-            D.createElement(
-              "div",
-              { className: Zr().AppealResults },
-              D.createElement(
-                "h2",
-                null,
-                (0, Le.Xx)("#OptIn_Appeals_Control_Submitted_Title"),
-              ),
-              D.createElement(
-                "p",
-                null,
-                (0, Le.Xx)("#OptIn_Appeals_Control_Submitted_Desc", c),
-              ),
-            ),
-          Boolean(l) &&
-            D.createElement(
-              "div",
-              { className: (0, q.Z)(Zr().AppealResults, Zr().Declined) },
-              D.createElement(
-                "h2",
-                null,
-                (0, Le.Xx)("#OptIn_Appeals_Control_Declined"),
-              ),
-              D.createElement(
-                "p",
-                null,
-                (0, Le.Xx)("#OptIn_Appeals_Control_Declined_Desc1", c),
-              ),
-              D.createElement(
-                "p",
-                null,
-                (0, Le.yu)(
-                  "#OptIn_Appeals_Control_Declined_Desc2",
-                  D.createElement("a", {
-                    href: "https://partner.steamgames.com/doc/marketing/upcoming_events",
-                  }),
+                "div",
+                { className: Zr().ButtonCtn },
+                D.createElement(
+                  z.zx,
+                  {
+                    onClick: (t) =>
+                      (0, V.AM)(
+                        D.createElement(Qr, Object.assign({}, e)),
+                        (0, Z.RA)(t),
+                      ),
+                  },
+                  (0, Le.Xx)("#OptIn_Appeals_Control_Button"),
                 ),
               ),
-            ),
+            Boolean(s && !l) &&
+              D.createElement(
+                "div",
+                { className: Zr().AppealResults },
+                D.createElement(
+                  "h2",
+                  null,
+                  (0, Le.Xx)("#OptIn_Appeals_Control_Submitted_Title"),
+                ),
+                D.createElement(
+                  "p",
+                  null,
+                  (0, Le.Xx)("#OptIn_Appeals_Control_Submitted_Desc", c),
+                ),
+              ),
+            Boolean(l) &&
+              D.createElement(
+                "div",
+                { className: (0, q.Z)(Zr().AppealResults, Zr().Declined) },
+                D.createElement(
+                  "h2",
+                  null,
+                  (0, Le.Xx)("#OptIn_Appeals_Control_Declined"),
+                ),
+                D.createElement(
+                  "p",
+                  null,
+                  (0, Le.Xx)("#OptIn_Appeals_Control_Declined_Desc1", c),
+                ),
+                D.createElement(
+                  "p",
+                  null,
+                  (0, Le.yu)(
+                    "#OptIn_Appeals_Control_Declined_Desc2",
+                    D.createElement("a", {
+                      href: "https://partner.steamgames.com/doc/marketing/upcoming_events",
+                    }),
+                  ),
+                ),
+              ),
+          )
         );
       }
       function os(e) {
