@@ -123,9 +123,9 @@
         r = a.n(l),
         o = a(65092),
         i = a(89526),
-        c = a(53672),
-        s = a(36105),
-        m = a.n(s),
+        s = a(53672),
+        c = a(36105),
+        m = a.n(c),
         d = a(30310),
         u = a(79534),
         p = a(42333),
@@ -136,8 +136,8 @@
         v = a(52339),
         f = a(13169),
         A = a(93115),
-        h = a(28772),
-        k = a(54013),
+        k = a(28772),
+        h = a(54013),
         T = a(22396),
         N = a(29706),
         R = a(70894),
@@ -285,7 +285,7 @@
             return "Unknown";
         }
       }
-      function G(e) {
+      function $(e) {
         switch (e) {
           case O._W.DOTA_ACCESS_TOURNAMENT_ADMIN:
             return "Tournament Admin";
@@ -295,7 +295,7 @@
             return "Unknown";
         }
       }
-      function $(e) {
+      function G(e) {
         switch (e) {
           case O.xd.CORE:
             return "Core";
@@ -327,7 +327,7 @@
         X = "#FF8042",
         Q = (e) => {
           let t = "";
-          const a = `${k.Y.CDN_URL}/apps/dota2/images/`;
+          const a = `${h.Y.CDN_URL}/apps/dota2/images/`;
           return (
             (1 & e) > 0 &&
               (t = `${a}player_reports/button_report_voice_on.png`),
@@ -416,7 +416,7 @@
                   i.createElement("img", {
                     className: U().RankedBadgeIcon,
                     src: `${
-                      k.Y.CDN_URL
+                      h.Y.CDN_URL
                     }/apps/dota2/images/small_ranks/ranked_icons_emoticon_${Math.floor(
                       a / 10,
                     )}.png`,
@@ -785,7 +785,7 @@
         ie = [
           {
             key: "beta_access_flags",
-            displayName: G(O._W.DOTA_ACCESS_TOURNAMENT_ADMIN),
+            displayName: $(O._W.DOTA_ACCESS_TOURNAMENT_ADMIN),
             formatFunction: (e = 0) =>
               e & O._W.DOTA_ACCESS_TOURNAMENT_ADMIN
                 ? i.createElement("div", { style: { color: K } }, "YES")
@@ -793,14 +793,14 @@
           },
           {
             key: "beta_access_flags",
-            displayName: G(O._W.DOTA_ACCESS_TOURNAMENT_BROADCASTER),
+            displayName: $(O._W.DOTA_ACCESS_TOURNAMENT_BROADCASTER),
             formatFunction: (e = 0) =>
               e & O._W.DOTA_ACCESS_TOURNAMENT_BROADCASTER
                 ? i.createElement("div", { style: { color: K } }, "YES")
                 : "NO",
           },
         ],
-        ce = [
+        se = [
           {
             key: "vac",
             displayName: " ",
@@ -825,7 +825,7 @@
             },
           },
         ],
-        se = [
+        ce = [
           { key: "name", displayName: "Name" },
           { key: "real_name", displayName: "Real Name" },
           {
@@ -834,13 +834,13 @@
             formatFunction: (e = 0) => {
               switch (e) {
                 case O.xd.CORE:
-                  return $(O.xd.CORE);
+                  return G(O.xd.CORE);
                 case O.xd.SUPPORT:
-                  return $(O.xd.SUPPORT);
+                  return G(O.xd.SUPPORT);
                 case O.xd.OFFLANE:
-                  return $(O.xd.OFFLANE);
+                  return G(O.xd.OFFLANE);
                 case O.xd.MID:
-                  return $(O.xd.MID);
+                  return G(O.xd.MID);
                 default:
                   return "Unknown";
               }
@@ -893,8 +893,8 @@
                 const l = e[n],
                   r = l.team_id,
                   o = `${t}${r}`,
-                  c = l.team_name,
-                  s = l.team_tag;
+                  s = l.team_name,
+                  c = l.team_tag;
                 a.push(
                   i.createElement(
                     i.Fragment,
@@ -902,11 +902,11 @@
                     i.createElement(
                       "div",
                       null,
-                      `${c} `,
+                      `${s} `,
                       i.createElement(
                         "span",
                         { style: { color: B } },
-                        `[${s}]`,
+                        `[${c}]`,
                       ),
                     ),
                     i.createElement(
@@ -934,17 +934,17 @@
                 const l = n.event_id,
                   o =
                     null === (t = e[l]) || void 0 === t ? void 0 : t.event_name,
-                  c =
+                  s =
                     (null === (a = e[l]) || void 0 === a
                       ? void 0
                       : a.points_per_level) || 1e3,
-                  s = Math.floor(n.event_points / c);
+                  c = Math.floor(n.event_points / s);
                 r.unshift(
                   i.createElement(
                     i.Fragment,
                     { key: o },
                     i.createElement("div", null, o),
-                    i.createElement("div", null, s),
+                    i.createElement("div", null, c),
                   ),
                 );
               }
@@ -998,7 +998,7 @@
             i.createElement(
               "span",
               { style: { color: Y } },
-              m()(e).format("MMMM Do YYYY, h:mm:ss a"),
+              m()(1e3 * e).format("MMMM Do YYYY, h:mm:ss a"),
             ),
           ),
         _e = [
@@ -1063,21 +1063,21 @@
           });
         },
         ge = (e) => {
-          var t, a, l, s, M, L;
-          const G = (0, o.UO)(),
-            $ = null == G ? void 0 : G.id,
+          var t, a, l, c, M, L;
+          const $ = (0, o.UO)(),
+            G = null == $ ? void 0 : $.id,
             [P, K] = (0, i.useState)(null),
             [ue, Ee] = (0, i.useState)(null),
             [ge, ve] = (0, i.useState)(null),
             [fe, Ae] = (0, i.useState)(null),
-            [he, ke] = (0, i.useState)(!1),
+            [ke, he] = (0, i.useState)(!1),
             [Te, Ne] = (0, i.useState)(!1),
             [Re, Ie] = (0, i.useState)(!1),
             [Oe, De] = (0, i.useState)(!1),
             [Ce, Se] = (0, i.useState)(!0),
             [Fe, be] = (0, i.useState)(!0),
             [Me, Le] = (0, i.useState)(!1),
-            [Ge, $e] = (0, i.useState)(!0),
+            [$e, Ge] = (0, i.useState)(!0),
             [we, Pe] = (0, i.useState)(!0),
             [Ue, Ye] = (0, i.useState)(!1),
             xe = I.L.Get().getHeroList(),
@@ -1087,16 +1087,16 @@
               !(function () {
                 var e;
                 (0, n.mG)(this, void 0, void 0, function* () {
-                  if (!k.Y.DOTA_APP_ID || !$) return;
-                  De(!1), Ie(!1), ke(!1), Ne(!1);
+                  if (!h.Y.DOTA_APP_ID || !G) return;
+                  De(!1), Ie(!1), he(!1), Ne(!1);
                   const t = {
-                    appid: k.Y.DOTA_APP_ID,
-                    u: C(k.Y.DOTA_APP_ID),
-                    account_id: $,
+                    appid: h.Y.DOTA_APP_ID,
+                    u: C(h.Y.DOTA_APP_ID),
+                    account_id: G,
                   };
                   try {
                     const a = yield r().get(
-                        k.Y.BASE_URL + "persona/showplayerreact/",
+                        h.Y.BASE_URL + "persona/showplayerreact/",
                         { params: t },
                       ),
                       n = null == a ? void 0 : a.data;
@@ -1137,13 +1137,13 @@
                     console.log("Error fetching individual persona info."),
                       De(!0);
                   }
-                  Ie(!0), ke(!0);
+                  Ie(!0), he(!0);
                 });
               })();
             } catch (e) {
               console.log("Could not fetch persona info.");
             }
-          }, [$]),
+          }, [G]),
             (0, i.useEffect)(() => {
               if (!ge) return;
               let e = ge.slice();
@@ -1159,21 +1159,21 @@
                       O.Eq.WEEKEND_TOURNEY,
                     ].includes(e.lobby_type)
                   ) &&
-                  !(!Ge && e.rankwassolo) &&
+                  !(!$e && e.rankwassolo) &&
                   !(!we && !e.rankwassolo),
               )),
                 Ae(e);
-            }, [ge, Ce, Fe, Me, Ge, we]);
+            }, [ge, Ce, Fe, Me, $e, we]);
           let Ke = null;
           if (
-            ($
-              ? Re && he
+            (G
+              ? Re && ke
                 ? Re && Oe
-                  ? (Ke = `Error loading persona information for account ID ${$}. Double check universe & account ID (or try refreshing).`)
-                  : he &&
+                  ? (Ke = `Error loading persona information for account ID ${G}. Double check universe & account ID (or try refreshing).`)
+                  : ke &&
                     Te &&
-                    (Ke = `Error loading match history for account ID ${$}.`)
-                : (Ke = `Loading account ID ${$}...`)
+                    (Ke = `Error loading match history for account ID ${G}.`)
+                : (Ke = `Loading account ID ${G}...`)
               : (Ke = "Must pass in an account ID."),
             Ke)
           )
@@ -1182,7 +1182,7 @@
               { className: U().PersonaDetails },
               i.createElement(N.j, { bOverlapping: !1 }),
               i.createElement(
-                c.q,
+                s.q,
                 null,
                 i.createElement("title", null, "Dota 2 - Persona Details"),
               ),
@@ -1212,9 +1212,9 @@
                     "a",
                     {
                       key: e,
-                      href: `${k.Y.BASE_URL}matches/match/${e}?u=${C(
-                        k.Y.DOTA_APP_ID,
-                      )}&appid=${k.Y.DOTA_APP_ID}&highlight=${t}`,
+                      href: `${h.Y.BASE_URL}matches/match/${e}?u=${C(
+                        h.Y.DOTA_APP_ID,
+                      )}&appid=${h.Y.DOTA_APP_ID}&highlight=${t}`,
                     },
                     a || e,
                   ))(e.cellData, e.columnData.strAccountId),
@@ -1236,12 +1236,12 @@
                 return n
                   ? i.createElement("img", {
                       className: U().HeroImage,
-                      src: `${k.Y.IMG_URL}heroes/wide/${n}.png`,
+                      src: `${h.Y.IMG_URL}heroes/wide/${n}.png`,
                       alt: e.cellData,
                     })
                   : i.createElement("img", {
                       className: U().HeroImage,
-                      src: `${k.Y.IMG_URL}heroes/wide/unknown.png`,
+                      src: `${h.Y.IMG_URL}heroes/wide/unknown.png`,
                     });
               },
             },
@@ -1282,12 +1282,12 @@
                       void 0 === n
                         ? void 0
                         : n.rankchange;
-                  let c = t ? (o >= 35 ? "#68c529" : W) : o <= -35 ? j : V;
+                  let s = t ? (o >= 35 ? "#68c529" : W) : o <= -35 ? j : V;
                   return (
                     a.push(
                       i.createElement(
                         "span",
-                        { key: "W-L", style: { color: c } },
+                        { key: "W-L", style: { color: s } },
                         t ? "W" : "L",
                       ),
                     ),
@@ -1295,7 +1295,7 @@
                       ? a.push(
                           i.createElement(
                             "span",
-                            { key: "rankChange", style: { color: c } },
+                            { key: "rankChange", style: { color: s } },
                             ` (+${o})`,
                           ),
                         )
@@ -1303,14 +1303,14 @@
                       ? a.push(
                           i.createElement(
                             "span",
-                            { key: "rankChange", style: { color: c } },
+                            { key: "rankChange", style: { color: s } },
                             ` (${o})`,
                           ),
                         )
                       : a.push(
                           i.createElement(
                             "span",
-                            { key: "rankChange", style: { color: c } },
+                            { key: "rankChange", style: { color: s } },
                             ` (-${o})`,
                           ),
                         ),
@@ -1441,8 +1441,8 @@
                       type: "checkbox",
                       name: "solo",
                       id: "solo",
-                      onChange: () => $e(!Ge),
-                      checked: Ge,
+                      onChange: () => Ge(!$e),
+                      checked: $e,
                     }),
                     i.createElement(
                       "label",
@@ -1568,7 +1568,7 @@
                       i.createElement("img", {
                         key: `${e.rowIndex}_item${a}`,
                         className: U().ItemIcon,
-                        src: `${k.Y.IMG_URL}items/${l}.png`,
+                        src: `${h.Y.IMG_URL}items/${l}.png`,
                         alt: e.cellData,
                       }),
                     );
@@ -1607,8 +1607,8 @@
               label: "Reports / Notes",
               widthRelative: 22,
               cellRenderer: (e) => {
-                var t, a, n, l, r, o, c;
-                const s = Object.values(e.cellData || []),
+                var t, a, n, l, r, o, s;
+                const c = Object.values(e.cellData || []),
                   d = Object.values(
                     (null === (t = null == e ? void 0 : e.rowData) ||
                     void 0 === t
@@ -1643,13 +1643,13 @@
                       ? void 0
                       : o.geolocchange,
                   g =
-                    null === (c = null == e ? void 0 : e.rowData) ||
-                    void 0 === c
+                    null === (s = null == e ? void 0 : e.rowData) ||
+                    void 0 === s
                       ? void 0
-                      : c.languagechange,
+                      : s.languagechange,
                   v = [],
                   f = [];
-                for (const e of s) 3840 & e.reportflags ? v.push(e) : f.push(e);
+                for (const e of c) 3840 & e.reportflags ? v.push(e) : f.push(e);
                 const A = [];
                 return (
                   d.length &&
@@ -2109,15 +2109,23 @@
           ];
           let We = !0;
           for (let e of pe)
-            (null == P ? void 0 : P.persona) &&
-              (null == P ? void 0 : P.persona[e.key]) &&
-              (We = !1);
-          let Ve = !0;
+            if (
+              (null == P ? void 0 : P.persona) &&
+              (null == P ? void 0 : P.persona[e.key])
+            ) {
+              We = !1;
+              break;
+            }
+          let Ve = !1;
           for (let e of _e)
-            (null == P ? void 0 : P.persona) &&
+            if (
+              (null == P ? void 0 : P.persona) &&
               (null == P ? void 0 : P.persona[e.key]) &&
-              m()(null == P ? void 0 : P.persona[e.key]).isAfter() &&
-              (Ve = !1);
+              m()(1e3 * (null == P ? void 0 : P.persona[e.key])).isAfter()
+            ) {
+              Ve = !0;
+              break;
+            }
           const je =
             (null === (t = null == P ? void 0 : P.persona) || void 0 === t
               ? void 0
@@ -2127,7 +2135,7 @@
             { className: U().PersonaDetails },
             i.createElement(N.j, { bOverlapping: !1 }),
             i.createElement(
-              c.q,
+              s.q,
               null,
               i.createElement(
                 "title",
@@ -2154,6 +2162,42 @@
                   i.createElement(
                     "div",
                     { className: U().GeneralInfoGrid },
+                    _e.map((e) =>
+                      i.createElement(
+                        i.Fragment,
+                        { key: `${e.key}-${e.displayName}-bansInfo-row` },
+                        !!(null == P ? void 0 : P.persona[e.key]) &&
+                          m()(
+                            1e3 * (null == P ? void 0 : P.persona[e.key]),
+                          ).isAfter() &&
+                          i.createElement(
+                            "div",
+                            { style: { color: Y } },
+                            e.displayName || e.key,
+                          ),
+                        !!(null == P ? void 0 : P.persona[e.key]) &&
+                          m()(
+                            1e3 * (null == P ? void 0 : P.persona[e.key]),
+                          ).isAfter() &&
+                          i.createElement(
+                            "div",
+                            null,
+                            e.formatFunction
+                              ? e.formatFunction.call(
+                                  null,
+                                  null == P ? void 0 : P.persona[e.key],
+                                  null == P
+                                    ? void 0
+                                    : P.persona[e.secondaryKey],
+                                )
+                              : JSON.stringify(
+                                  (null == P ? void 0 : P.persona[e.key]) || "",
+                                  null,
+                                  2,
+                                ).replace(/['"]+/g, ""),
+                          ),
+                      ),
+                    ),
                     te.map((e) =>
                       i.createElement(
                         i.Fragment,
@@ -2384,7 +2428,7 @@
                     "Support, Bans, & Other Info",
                     i.createElement("img", {
                       className: (0, T.Z)(U().ArrowIcon, U().ArrowIconRight),
-                      src: `${k.Y.IMG_URL}arrow_solid_right.png`,
+                      src: `${h.Y.IMG_URL}arrow_solid_right.png`,
                     }),
                   ),
                 ),
@@ -2409,7 +2453,7 @@
                     "Support, Bans, & Other Info",
                     i.createElement("img", {
                       className: (0, T.Z)(U().ArrowIcon, U().ArrowIconDown),
-                      src: `${k.Y.IMG_URL}arrow_over.png`,
+                      src: `${h.Y.IMG_URL}arrow_over.png`,
                     }),
                   ),
                   i.createElement(
@@ -2498,7 +2542,7 @@
                       ),
                     ),
                   ),
-                  !Ve && i.createElement("br", null),
+                  i.createElement("br", null),
                   i.createElement(
                     "div",
                     { className: U().BansGrid },
@@ -2508,12 +2552,12 @@
                         { key: `${e.key}-${e.displayName}-bansInfo-row` },
                         !!(null == P ? void 0 : P.persona[e.key]) &&
                           m()(
-                            null == P ? void 0 : P.persona[e.key],
+                            1e3 * (null == P ? void 0 : P.persona[e.key]),
                           ).isAfter() &&
                           i.createElement("div", null, e.displayName || e.key),
                         !!(null == P ? void 0 : P.persona[e.key]) &&
                           m()(
-                            null == P ? void 0 : P.persona[e.key],
+                            1e3 * (null == P ? void 0 : P.persona[e.key]),
                           ).isAfter() &&
                           i.createElement(
                             "div",
@@ -2539,7 +2583,7 @@
                   i.createElement(
                     "div",
                     { className: U().VacInfoOuterGrid },
-                    ce.map((e) =>
+                    se.map((e) =>
                       i.createElement(
                         i.Fragment,
                         { key: `${e.key}-${e.displayName}-vacInfo-row` },
@@ -2577,7 +2621,7 @@
                     void 0 === a
                       ? void 0
                       : a.official_profile) &&
-                      se.map((e) => {
+                      ce.map((e) => {
                         var t, a;
                         return i.createElement(
                           i.Fragment,
@@ -2631,10 +2675,10 @@
                     { className: U().TeamsInfoInfoOuterGrid },
                     i.createElement("br", null),
                     i.createElement("h2", { className: U().Header }, "Teams"),
-                    (null === (s = null == P ? void 0 : P.persona) ||
-                    void 0 === s
+                    (null === (c = null == P ? void 0 : P.persona) ||
+                    void 0 === c
                       ? void 0
-                      : s.teams) &&
+                      : c.teams) &&
                       me.map((e) =>
                         i.createElement(
                           i.Fragment,
@@ -2823,13 +2867,13 @@
                             ),
                         },
                         Be.map((t) =>
-                          i.createElement(h.Z, {
+                          i.createElement(k.Z, {
                             key: t.dataKey,
                             label: t.label,
                             dataKey: t.dataKey,
                             width: e * t.widthRelative,
                             cellRenderer: t.cellRenderer,
-                            columnData: { strAccountId: $ },
+                            columnData: { strAccountId: G },
                             headerRenderer: t.headerRenderer,
                           }),
                         ),
@@ -2879,8 +2923,8 @@
         r = a.n(l),
         o = a(54013),
         i = a(65092),
-        c = a(89526),
-        s = a(53672),
+        s = a(89526),
+        c = a(53672),
         m = a(22396),
         d = a(29706),
         u = a(70894),
@@ -2891,7 +2935,7 @@
       const g = "public",
         v = 5e3,
         f = (e) =>
-          c.createElement(
+          s.createElement(
             "a",
             {
               href: `${o.Y.BASE_URL}personadetails/${e}?u=${g}&appid=${o.Y.DOTA_APP_ID}`,
@@ -2919,7 +2963,7 @@
           (e[(e.kTRAA_ValveUpdateTeamName = 16)] = "kTRAA_ValveUpdateTeamName"),
           (e[(e.kTRAA_Penalty20 = 20)] = "kTRAA_Penalty20");
       })(A || (A = {}));
-      const h = {
+      const k = {
           0: "kTRAA_RegisterTeam",
           1: "kTRAA_InvitePlayer",
           2: "kTRAA_RemovePlayer",
@@ -2939,7 +2983,7 @@
           16: "kTRAA_ValveUpdateTeamName",
           20: "kTRAA_Penalty20",
         },
-        k = [
+        h = [
           {
             enum: A.kTRAA_RegisterTeam,
             formatFunction: () =>
@@ -2948,62 +2992,62 @@
           {
             enum: A.kTRAA_InvitePlayer,
             formatFunction: (e = "") =>
-              c.createElement(
-                c.Fragment,
+              s.createElement(
+                s.Fragment,
                 null,
                 "Invited a new/legacy player ",
-                c.createElement("b", null, `${e}`),
+                s.createElement("b", null, `${e}`),
                 ".",
               ),
           },
           {
             enum: A.kTRAA_RemovePlayer,
             formatFunction: (e = "") =>
-              c.createElement(
-                c.Fragment,
+              s.createElement(
+                s.Fragment,
                 null,
                 "Removed a legacy player ",
-                c.createElement("b", null, `${e}`),
+                s.createElement("b", null, `${e}`),
                 ".",
               ),
           },
           {
             enum: A.kTRAA_CancelInvite,
             formatFunction: (e = "") =>
-              c.createElement(
-                c.Fragment,
+              s.createElement(
+                s.Fragment,
                 null,
-                c.createElement("b", null, `${e}`),
+                s.createElement("b", null, `${e}`),
                 " cancelled an issued invite.",
               ),
           },
           {
             enum: A.kTRAA_RegisterPlayer,
             formatFunction: (e = "") =>
-              c.createElement(
-                c.Fragment,
+              s.createElement(
+                s.Fragment,
                 null,
-                c.createElement("b", null, `${e}`),
+                s.createElement("b", null, `${e}`),
                 " registered a new player.",
               ),
           },
           {
             enum: A.kTRAA_AcceptInvite,
             formatFunction: (e = "") =>
-              c.createElement(
-                c.Fragment,
+              s.createElement(
+                s.Fragment,
                 null,
-                c.createElement("b", null, `${e}`),
+                s.createElement("b", null, `${e}`),
                 " accepted an invite.",
               ),
           },
           {
             enum: A.kTRAA_RejectInvite,
             formatFunction: (e = "") =>
-              c.createElement(
-                c.Fragment,
+              s.createElement(
+                s.Fragment,
                 null,
-                c.createElement("b", null, `${e}`),
+                s.createElement("b", null, `${e}`),
                 " rejected an invite.",
               ),
           },
@@ -3019,73 +3063,73 @@
           {
             enum: A.kTRAA_TransferTeamAdmin,
             formatFunction: (e = "", t = "") =>
-              c.createElement(
-                c.Fragment,
+              s.createElement(
+                s.Fragment,
                 null,
                 "Manager transferred management to a new manager ",
-                c.createElement("b", null, `${t}`, "."),
+                s.createElement("b", null, `${t}`, "."),
               ),
           },
           {
             enum: A.kTRAA_InviteCoach,
             formatFunction: (e = "") =>
-              c.createElement(
-                c.Fragment,
+              s.createElement(
+                s.Fragment,
                 null,
                 "Invited a coach ",
-                c.createElement("b", null, `${e}`),
+                s.createElement("b", null, `${e}`),
                 ".",
               ),
           },
           {
             enum: A.kTRAA_RemoveCoach,
             formatFunction: (e = "") =>
-              c.createElement(
-                c.Fragment,
+              s.createElement(
+                s.Fragment,
                 null,
                 "Removed a coach ",
-                c.createElement("b", null, `${e}`),
+                s.createElement("b", null, `${e}`),
                 ".",
               ),
           },
           {
             enum: A.kTRAA_CancelInviteCoach,
             formatFunction: (e = "") =>
-              c.createElement(
-                c.Fragment,
+              s.createElement(
+                s.Fragment,
                 null,
-                c.createElement("b", null, `${e}`),
+                s.createElement("b", null, `${e}`),
                 " cancelled an issued coach invite.",
               ),
           },
           {
             enum: A.kTRAA_AcceptCoachInvite,
             formatFunction: (e = "") =>
-              c.createElement(
-                c.Fragment,
+              s.createElement(
+                s.Fragment,
                 null,
-                c.createElement("b", null, `${e}`),
+                s.createElement("b", null, `${e}`),
                 " (coach) accepted an invite.",
               ),
           },
           {
             enum: A.kTRAA_RejectCoachInvite,
             formatFunction: (e = "") =>
-              c.createElement(
-                c.Fragment,
+              s.createElement(
+                s.Fragment,
                 null,
-                c.createElement("b", null, `${e}`),
+                s.createElement("b", null, `${e}`),
                 " (coach) rejected an invite.",
               ),
           },
           {
             enum: A.kTRAA_ValveUpdateName,
             formatFunction: (e = "") =>
-              c.createElement(
-                c.Fragment,
+              s.createElement(
+                s.Fragment,
                 null,
                 "Valve fixed a name for player ",
-                c.createElement("b", null, `${e}`),
+                s.createElement("b", null, `${e}`),
                 ".",
               ),
           },
@@ -3122,10 +3166,10 @@
             displayName: "URL",
             formatFunction: (e) =>
               e
-                ? c.createElement(
-                    c.Fragment,
+                ? s.createElement(
+                    s.Fragment,
                     null,
-                    c.createElement("a", { href: e }, e),
+                    s.createElement("a", { href: e }, e),
                   )
                 : "",
           },
@@ -3157,7 +3201,7 @@
             key: "kick_link",
             displayName: "KICK",
             formatFunction: (e, t) =>
-              c.createElement(
+              s.createElement(
                 "div",
                 {
                   className: y().Link,
@@ -3174,7 +3218,7 @@
             displayName: "MAKE ADMIN",
             formatFunction: (e, t) =>
               !!e &&
-              c.createElement(
+              s.createElement(
                 "div",
                 {
                   className: y().Link,
@@ -3200,14 +3244,14 @@
             key: "color_primary",
             displayName: "Color (Primary)",
             formatFunction: (e = "") =>
-              c.createElement(
-                c.Fragment,
+              s.createElement(
+                s.Fragment,
                 null,
                 e &&
-                  c.createElement(
+                  s.createElement(
                     "div",
                     null,
-                    c.createElement("span", {
+                    s.createElement("span", {
                       className: y().ColorBox,
                       style: { backgroundColor: e },
                     }),
@@ -3220,14 +3264,14 @@
             key: "color_secondary",
             displayName: "Color (Secondary)",
             formatFunction: (e = "") =>
-              c.createElement(
-                c.Fragment,
+              s.createElement(
+                s.Fragment,
                 null,
                 e &&
-                  c.createElement(
+                  s.createElement(
                     "div",
                     null,
-                    c.createElement("span", {
+                    s.createElement("span", {
                       className: y().ColorBox,
                       style: { backgroundColor: e },
                     }),
@@ -3240,15 +3284,15 @@
             key: "url_logo",
             displayName: "DPC Logo",
             formatFunction: (e = "", t = 0) =>
-              c.createElement(
-                c.Fragment,
+              s.createElement(
+                s.Fragment,
                 null,
                 e &&
                   t &&
-                  c.createElement(
+                  s.createElement(
                     "div",
                     { className: y().DPCLogoContainer },
-                    c.createElement("img", {
+                    s.createElement("img", {
                       onError: ({ currentTarget: e }) => {
                         (e.onerror = null),
                           (e.src = `${o.Y.IMG_URL}teams_override/team_unknown_web.png`);
@@ -3264,13 +3308,13 @@
             key: "ugc_logo_url",
             displayName: "Logo",
             formatFunction: (e = "") =>
-              c.createElement(
-                c.Fragment,
+              s.createElement(
+                s.Fragment,
                 null,
-                c.createElement(
+                s.createElement(
                   "div",
                   { className: y().URLLogoContainer },
-                  e && c.createElement("img", { src: e }),
+                  e && s.createElement("img", { src: e }),
                 ),
               ),
           },
@@ -3278,13 +3322,13 @@
             key: "ugc_base_logo_url",
             displayName: "Base Logo",
             formatFunction: (e = "") =>
-              c.createElement(
-                c.Fragment,
+              s.createElement(
+                s.Fragment,
                 null,
-                c.createElement(
+                s.createElement(
                   "div",
                   { className: y().URLLogoContainer },
-                  e && c.createElement("img", { src: e }),
+                  e && s.createElement("img", { src: e }),
                 ),
               ),
           },
@@ -3292,13 +3336,13 @@
             key: "ugc_banner_logo_url",
             displayName: "Banner Logo",
             formatFunction: (e = "") =>
-              c.createElement(
-                c.Fragment,
+              s.createElement(
+                s.Fragment,
                 null,
-                c.createElement(
+                s.createElement(
                   "div",
                   { className: y().URLLogoContainer },
-                  e && c.createElement("img", { src: e }),
+                  e && s.createElement("img", { src: e }),
                 ),
               ),
           },
@@ -3306,13 +3350,13 @@
             key: "ugc_sponsor_logo_url",
             displayName: "Sponsor Logo",
             formatFunction: (e = "") =>
-              c.createElement(
-                c.Fragment,
+              s.createElement(
+                s.Fragment,
                 null,
-                c.createElement(
+                s.createElement(
                   "div",
                   { className: y().URLLogoContainer },
-                  e && c.createElement("img", { src: e }),
+                  e && s.createElement("img", { src: e }),
                 ),
               ),
           },
@@ -3332,13 +3376,13 @@
           {
             key: "action",
             displayName: "Action Enum",
-            formatFunction: (e) => `${h[e]} (${e})`,
+            formatFunction: (e) => `${k[e]} (${e})`,
           },
           {
             key: "action",
             displayName: "Audit Action",
             formatFunction: (e, t = "", a = "") =>
-              k.find((t) => t.enum === e).formatFunction.call(null, t, a),
+              h.find((t) => t.enum === e).formatFunction.call(null, t, a),
           },
         ],
         C = [
@@ -3377,7 +3421,7 @@
             key: "outcome",
             displayName: "Outcome",
             formatFunction: (e) =>
-              c.createElement(
+              s.createElement(
                 "div",
                 {
                   style: {
@@ -3400,12 +3444,12 @@
             key: "opponent_team_id",
             displayName: "Opponent",
             formatFunction: (e, t) => {
-              return c.createElement(
-                c.Fragment,
+              return s.createElement(
+                s.Fragment,
                 null,
                 `${t} ( `,
                 ((a = e),
-                c.createElement(
+                s.createElement(
                   "a",
                   { href: `${o.Y.BASE_URL}${p._.teamdetails(a).substr(1)}` },
                   a,
@@ -3425,7 +3469,7 @@
                   e.map((e) => {
                     return [
                       ((t = e.match_id),
-                      c.createElement(
+                      s.createElement(
                         "a",
                         {
                           key: t,
@@ -3433,7 +3477,7 @@
                         },
                         t,
                       )),
-                      c.createElement(
+                      s.createElement(
                         "span",
                         { key: `${e.match_id}-tab` },
                         " ",
@@ -3449,16 +3493,16 @@
         ],
         F = (e) => {
           const t = (0, i.UO)().id,
-            [a, l] = (0, c.useState)([]),
-            [p, _] = (0, c.useState)(!1),
-            [f, h] = (0, c.useState)(!1),
-            [k, F] = (0, c.useState)({}),
-            [b, M] = (0, c.useState)(!1),
-            [L, G] = (0, c.useState)(!1),
-            [$, w] = (0, c.useState)({}),
-            [P, U] = (0, c.useState)([]),
-            [Y, x] = (0, c.useState)(!0),
-            [H, K] = (0, c.useState)([]);
+            [a, l] = (0, s.useState)([]),
+            [p, _] = (0, s.useState)(!1),
+            [f, k] = (0, s.useState)(!1),
+            [h, F] = (0, s.useState)({}),
+            [b, M] = (0, s.useState)(!1),
+            [L, $] = (0, s.useState)(!1),
+            [G, w] = (0, s.useState)({}),
+            [P, U] = (0, s.useState)([]),
+            [Y, x] = (0, s.useState)(!0),
+            [H, K] = (0, s.useState)([]);
           function B() {
             var e, t;
             return (0, n.mG)(this, void 0, void 0, function* () {
@@ -3526,11 +3570,11 @@
                             void 0 === n
                               ? void 0
                               : n.name) || "");
-                        const c = yield r().get(
+                        const s = yield r().get(
                           o.Y.BASE_URL + "teams/getpersonaname/",
                           { params: { account_id: e.account_id } },
                         );
-                        i[t].persona_name = (null == c ? void 0 : c.data) || "";
+                        i[t].persona_name = (null == s ? void 0 : s.data) || "";
                       }),
                     ),
                   );
@@ -3556,7 +3600,7 @@
               a && a.data && F(l), M(!0);
             });
           }
-          (0, c.useEffect)(() => {
+          (0, s.useEffect)(() => {
             try {
               !(function () {
                 var e;
@@ -3583,21 +3627,21 @@
               console.log("Could not fetch fan content status.");
             }
           }, [t]),
-            (0, c.useEffect)(() => {
+            (0, s.useEffect)(() => {
               try {
                 B();
               } catch (e) {
-                console.log("Could not fetch registered teams."), h(!0);
+                console.log("Could not fetch registered teams."), k(!0);
               }
             }, []),
-            (0, c.useEffect)(() => {
+            (0, s.useEffect)(() => {
               try {
                 W();
               } catch (e) {
-                console.log("Could not fetch single team info."), G(!0);
+                console.log("Could not fetch single team info."), $(!0);
               }
             }, [t]),
-            (0, c.useEffect)(() => {
+            (0, s.useEffect)(() => {
               try {
                 !(function () {
                   (0, n.mG)(this, void 0, void 0, function* () {
@@ -3640,10 +3684,10 @@
                   });
                 })();
               } catch (e) {
-                console.log("Could not fetch single team info."), G(!0);
+                console.log("Could not fetch single team info."), $(!0);
               }
             }, [t]),
-            (0, c.useEffect)(() => {
+            (0, s.useEffect)(() => {
               let e;
               try {
                 e = JSON.parse(o.Y.DPC_DATA).events;
@@ -3674,7 +3718,7 @@
                       ),
                       l = null == n ? void 0 : n.data,
                       i = null == l ? void 0 : l.leagues,
-                      c = [];
+                      s = [];
                     for (let e of i)
                       for (let a of e.node_groups)
                         for (let n of a.node_groups)
@@ -3704,22 +3748,22 @@
                                 a.scheduled_time &&
                                 new Date().getTime() < 1e3 * a.scheduled_time &&
                                 (a.outcome = "Upcoming"),
-                              c.push(a));
-                    var s;
-                    c.sort((e, t) =>
+                              s.push(a));
+                    var c;
+                    s.sort((e, t) =>
                       e.scheduled_time > t.scheduled_time
                         ? -1
                         : e.scheduled_time < t.scheduled_time
                         ? 1
                         : 0,
                     ),
-                      c.length &&
+                      s.length &&
                         U(
-                          ((s = "league_name"),
-                          c.reduce(
+                          ((c = "league_name"),
+                          s.reduce(
                             (e, t) =>
                               Object.assign(Object.assign({}, e), {
-                                [t[s]]: [...(e[t[s]] || []), t],
+                                [t[c]]: [...(e[t[c]] || []), t],
                               }),
                             {},
                           )),
@@ -3733,37 +3777,37 @@
           const V = a.find((e) => e.team_id == t) || {};
           let j;
           if (
-            ((p && b) || (j = c.createElement("div", null, "Loading...")),
+            ((p && b) || (j = s.createElement("div", null, "Loading...")),
             p &&
               (0 == a.length || f) &&
-              (j = c.createElement(
+              (j = s.createElement(
                 "div",
                 null,
                 "Error loading registered teams...",
               )),
             b &&
-              (0 == Object.keys(k).length || L) &&
-              (j = c.createElement(
+              (0 == Object.keys(h).length || L) &&
+              (j = s.createElement(
                 "div",
                 null,
                 `Error loading single team info for teamId ${t} `,
               )),
             j)
           )
-            return c.createElement(
+            return s.createElement(
               "div",
               { className: y().TeamDetails },
-              c.createElement(d.j, { bOverlapping: !1 }),
-              c.createElement(
-                s.q,
+              s.createElement(d.j, { bOverlapping: !1 }),
+              s.createElement(
+                c.q,
                 null,
-                c.createElement("title", null, "Dota 2 - Team Details"),
+                s.createElement("title", null, "Dota 2 - Team Details"),
               ),
-              c.createElement(E.Z, null),
-              c.createElement("div", { className: y().ContentFrame }, j),
-              c.createElement(u.U, null),
+              s.createElement(E.Z, null),
+              s.createElement("div", { className: y().ContentFrame }, j),
+              s.createElement(u.U, null),
             );
-          const q = k.members || [];
+          const q = h.members || [];
           q.forEach((e) => {
             (e.kick_link = `${o.Y.BASE_URL}webapi/IDOTA2Teams/RemoveTeamMember/v0001?u=${g}&appid=${o.Y.DOTA_APP_ID}&team_id=${t}&account_id=${e.account_id}`),
               (e.make_admin_link = e.admin
@@ -3774,40 +3818,40 @@
             const t = a.find((t) => t.team_id == e);
             return t ? t.team_name : "";
           };
-          return c.createElement(
+          return s.createElement(
             "div",
             { className: y().TeamDetails },
-            c.createElement(d.j, { bOverlapping: !1 }),
-            c.createElement(
-              s.q,
+            s.createElement(d.j, { bOverlapping: !1 }),
+            s.createElement(
+              c.q,
               null,
-              c.createElement("title", null, "Dota 2 - Team Details"),
+              s.createElement("title", null, "Dota 2 - Team Details"),
             ),
-            c.createElement(E.Z, null),
-            c.createElement(
+            s.createElement(E.Z, null),
+            s.createElement(
               "div",
               { className: y().ContentFrame },
-              c.createElement(
+              s.createElement(
                 "h1",
                 { className: y().Header },
-                `Team Details for ${null == k ? void 0 : k.name} (${
-                  k.team_id
+                `Team Details for ${null == h ? void 0 : h.name} (${
+                  h.team_id
                 })`,
               ),
-              c.createElement(
+              s.createElement(
                 "div",
                 { className: y().MiscInfoGrid },
                 T.map((e) =>
-                  c.createElement(
-                    c.Fragment,
+                  s.createElement(
+                    s.Fragment,
                     { key: `${e.key}-misc-row` },
-                    c.createElement("div", null, e.displayName || e.key),
-                    c.createElement(
+                    s.createElement("div", null, e.displayName || e.key),
+                    s.createElement(
                       "div",
                       null,
                       e.formatFunction
-                        ? e.formatFunction.call(null, k[e.key])
-                        : JSON.stringify(k[e.key] || "", null, 2).replace(
+                        ? e.formatFunction.call(null, h[e.key])
+                        : JSON.stringify(h[e.key] || "", null, 2).replace(
                             /['"]+/g,
                             "",
                           ),
@@ -3815,40 +3859,40 @@
                   ),
                 ),
                 !Y &&
-                  c.createElement(
-                    c.Fragment,
+                  s.createElement(
+                    s.Fragment,
                     null,
-                    c.createElement(
+                    s.createElement(
                       "div",
                       { className: y().Link, onClick: () => x(!0) },
                       "Update Info / Add Member",
                     ),
-                    c.createElement("div", null),
+                    s.createElement("div", null),
                   ),
               ),
               Y &&
-                c.createElement(
-                  c.Fragment,
+                s.createElement(
+                  s.Fragment,
                   null,
-                  c.createElement("div", { className: y().SmoothLine }),
-                  c.createElement(
+                  s.createElement("div", { className: y().SmoothLine }),
+                  s.createElement(
                     ({ strTeamId: e }) => {
-                      const [t, a] = (0, c.useState)(""),
-                        [l, i] = (0, c.useState)(""),
-                        [s, m] = (0, c.useState)(""),
-                        [d, u] = (0, c.useState)(!1);
-                      return c.createElement(
+                      const [t, a] = (0, s.useState)(""),
+                        [l, i] = (0, s.useState)(""),
+                        [c, m] = (0, s.useState)(""),
+                        [d, u] = (0, s.useState)(!1);
+                      return s.createElement(
                         "form",
                         {
                           onSubmit: (a) =>
                             (0, n.mG)(void 0, void 0, void 0, function* () {
-                              if ((a.preventDefault(), !t && !l && !s)) return;
+                              if ((a.preventDefault(), !t && !l && !c)) return;
                               u(!0);
                               const n = {
                                 team_id: e,
                                 team_name: t,
                                 team_tag: l,
-                                team_abbreviation: s,
+                                team_abbreviation: c,
                               };
                               yield r().get(
                                 `${o.Y.BASE_URL}webapi/IDOTA2Teams/EditTeamName/v0001`,
@@ -3857,42 +3901,42 @@
                               W(), setTimeout(() => u(!1), v);
                             }),
                         },
-                        c.createElement(
+                        s.createElement(
                           "h2",
                           { className: y().Header },
                           "Update Team Information",
                         ),
-                        c.createElement(
+                        s.createElement(
                           "div",
                           { className: y().EditInfoGrid },
-                          c.createElement("div", null, "Team Name"),
-                          c.createElement("input", {
+                          s.createElement("div", null, "Team Name"),
+                          s.createElement("input", {
                             className: y().MediumTextField,
                             type: "text",
                             name: "teamName",
                             maxLength: 32,
                             onChange: (e) => a(e.target.value),
                           }),
-                          c.createElement("div", null, "Tag"),
-                          c.createElement("input", {
+                          s.createElement("div", null, "Tag"),
+                          s.createElement("input", {
                             className: y().SmallTextField,
                             type: "text",
                             name: "teamTag",
                             maxLength: 8,
                             onChange: (e) => i(e.target.value),
                           }),
-                          c.createElement("div", null, "Abbreviation"),
-                          c.createElement("input", {
+                          s.createElement("div", null, "Abbreviation"),
+                          s.createElement("input", {
                             className: y().SmallTextField,
                             type: "text",
                             name: "teamAbbreviation",
                             maxLength: 4,
                             onChange: (e) => m(e.target.value),
                           }),
-                          c.createElement(
+                          s.createElement(
                             "div",
                             null,
-                            c.createElement(
+                            s.createElement(
                               "button",
                               { className: y().SubmitButton, disabled: d },
                               d ? "Updating..." : "Update",
@@ -3903,12 +3947,12 @@
                     },
                     { strTeamId: t },
                   ),
-                  c.createElement("div", { className: y().SmoothLine }),
-                  c.createElement(
+                  s.createElement("div", { className: y().SmoothLine }),
+                  s.createElement(
                     ({ strTeamId: e }) => {
-                      const [t, a] = (0, c.useState)(""),
-                        [l, i] = (0, c.useState)(!1);
-                      return c.createElement(
+                      const [t, a] = (0, s.useState)(""),
+                        [l, i] = (0, s.useState)(!1);
+                      return s.createElement(
                         "form",
                         {
                           onSubmit: (a) =>
@@ -3923,26 +3967,26 @@
                               W(), setTimeout(() => i(!1), v);
                             }),
                         },
-                        c.createElement(
+                        s.createElement(
                           "h2",
                           { className: y().Header },
                           "Add Team Member",
                         ),
-                        c.createElement(
+                        s.createElement(
                           "div",
                           { className: y().EditInfoGrid },
-                          c.createElement("div", null, "Account ID"),
-                          c.createElement("input", {
+                          s.createElement("div", null, "Account ID"),
+                          s.createElement("input", {
                             className: y().MediumTextField,
                             type: "text",
                             name: "accountId",
                             maxLength: 20,
                             onChange: (e) => a(e.target.value),
                           }),
-                          c.createElement(
+                          s.createElement(
                             "div",
                             null,
-                            c.createElement(
+                            s.createElement(
                               "button",
                               { className: y().SubmitButton, disabled: l },
                               l ? "Adding..." : "Add Account",
@@ -3954,9 +3998,9 @@
                     { strTeamId: t },
                   ),
                 ),
-              c.createElement("div", { className: y().SmoothLine }),
-              c.createElement("h2", { className: y().Header }, "Members"),
-              c.createElement(
+              s.createElement("div", { className: y().SmoothLine }),
+              s.createElement("h2", { className: y().Header }, "Members"),
+              s.createElement(
                 "div",
                 {
                   className: y().MembersGrid,
@@ -3964,24 +4008,24 @@
                     gridTemplateColumns: `250px repeat(${N.length - 1}, auto)`,
                   },
                 },
-                c.createElement(
-                  c.Fragment,
+                s.createElement(
+                  s.Fragment,
                   null,
                   N.map((e) =>
-                    c.createElement(
+                    s.createElement(
                       "div",
                       { key: `${e.key}-members-grid-header}` },
-                      c.createElement("b", null, e.displayName || e.key),
+                      s.createElement("b", null, e.displayName || e.key),
                     ),
                   ),
                 ),
-                c.createElement(
-                  c.Fragment,
+                s.createElement(
+                  s.Fragment,
                   null,
                   !!q.length &&
                     q.map((e) =>
                       N.map((t) =>
-                        c.createElement(
+                        s.createElement(
                           "div",
                           { key: `${t.key}-member-row-${e.account_id}` },
                           t.formatFunction
@@ -3993,11 +4037,11 @@
                         ),
                       ),
                     ),
-                  !q.length && c.createElement("div", null, "No team members."),
+                  !q.length && s.createElement("div", null, "No team members."),
                 ),
               ),
-              c.createElement("br", null),
-              c.createElement(
+              s.createElement("br", null),
+              s.createElement(
                 "div",
                 {
                   className: y().ManagerGrid,
@@ -4005,25 +4049,25 @@
                     gridTemplateColumns: `250px repeat(${R.length - 1}, auto)`,
                   },
                 },
-                c.createElement(
-                  c.Fragment,
+                s.createElement(
+                  s.Fragment,
                   null,
                   R.map((e) =>
-                    c.createElement(
+                    s.createElement(
                       "div",
                       { key: `${e.key}-manager-grid-header}` },
-                      c.createElement("b", null, e.displayName || e.key),
+                      s.createElement("b", null, e.displayName || e.key),
                     ),
                   ),
                 ),
-                c.createElement(
-                  c.Fragment,
+                s.createElement(
+                  s.Fragment,
                   null,
                   R.map((e) =>
-                    c.createElement(
-                      c.Fragment,
+                    s.createElement(
+                      s.Fragment,
                       { key: `${e.key}-manager-row` },
-                      c.createElement(
+                      s.createElement(
                         "div",
                         null,
                         e.formatFunction
@@ -4035,20 +4079,20 @@
                       ),
                     ),
                   ),
-                  !R.length && c.createElement("div", null, "No manager."),
+                  !R.length && s.createElement("div", null, "No manager."),
                 ),
               ),
               Y &&
-                c.createElement(
-                  c.Fragment,
+                s.createElement(
+                  s.Fragment,
                   null,
-                  c.createElement("div", { className: y().SmoothLine }),
-                  c.createElement(
+                  s.createElement("div", { className: y().SmoothLine }),
+                  s.createElement(
                     ({ strTeamId: e }) => {
-                      const [t, a] = (0, c.useState)(""),
-                        [l, i] = (0, c.useState)(""),
-                        [s, m] = (0, c.useState)(!1);
-                      return c.createElement(
+                      const [t, a] = (0, s.useState)(""),
+                        [l, i] = (0, s.useState)(""),
+                        [c, m] = (0, s.useState)(!1);
+                      return s.createElement(
                         "form",
                         {
                           onSubmit: (e) =>
@@ -4068,37 +4112,37 @@
                               B(), setTimeout(() => m(!1), v);
                             }),
                         },
-                        c.createElement(
+                        s.createElement(
                           "h2",
                           { className: y().Header },
                           "Update Manager Email",
                         ),
-                        c.createElement(
+                        s.createElement(
                           "div",
                           { className: y().EditInfoGrid },
-                          c.createElement("div", null, "Manager Account ID"),
-                          c.createElement("input", {
+                          s.createElement("div", null, "Manager Account ID"),
+                          s.createElement("input", {
                             className: y().MediumTextField,
                             type: "text",
                             name: "adminAccountId",
                             maxLength: 20,
                             onChange: (e) => a(e.target.value),
                           }),
-                          c.createElement("div", null, "Manager Email"),
-                          c.createElement("input", {
+                          s.createElement("div", null, "Manager Email"),
+                          s.createElement("input", {
                             className: y().MediumTextField,
                             type: "email",
                             name: "adminEmail",
                             maxLength: 255,
                             onChange: (e) => i(e.target.value),
                           }),
-                          c.createElement(
+                          s.createElement(
                             "div",
                             null,
-                            c.createElement(
+                            s.createElement(
                               "button",
-                              { className: y().SubmitButton, disabled: s },
-                              s ? "Updating..." : "Update Manager Email",
+                              { className: y().SubmitButton, disabled: c },
+                              c ? "Updating..." : "Update Manager Email",
                             ),
                           ),
                         ),
@@ -4107,26 +4151,26 @@
                     { strTeamId: t },
                   ),
                 ),
-              c.createElement("div", { className: y().SmoothLine }),
-              c.createElement(
+              s.createElement("div", { className: y().SmoothLine }),
+              s.createElement(
                 "h2",
                 { className: y().Header },
                 "Logos & Colors",
               ),
-              c.createElement(
+              s.createElement(
                 "div",
                 { className: y().LogoAndColorsGrid },
                 I.map((e) =>
-                  c.createElement(
-                    c.Fragment,
+                  s.createElement(
+                    s.Fragment,
                     { key: `${e.key}-logo-colors-row` },
-                    c.createElement("div", null, e.displayName || e.key),
-                    c.createElement(
+                    s.createElement("div", null, e.displayName || e.key),
+                    s.createElement(
                       "div",
                       null,
                       e.formatFunction
-                        ? e.formatFunction.call(null, k[e.key], k.team_id)
-                        : JSON.stringify(k[e.key] || "", null, 2).replace(
+                        ? e.formatFunction.call(null, h[e.key], h.team_id)
+                        : JSON.stringify(h[e.key] || "", null, 2).replace(
                             /['"]+/g,
                             "",
                           ),
@@ -4134,34 +4178,34 @@
                   ),
                 ),
               ),
-              c.createElement("br", null),
-              c.createElement(
+              s.createElement("br", null),
+              s.createElement(
                 "div",
                 {
                   className: y().UGCLogosGrid,
                   style: { gridTemplateColumns: `repeat(${O.length}, auto)` },
                 },
-                c.createElement(
-                  c.Fragment,
+                s.createElement(
+                  s.Fragment,
                   null,
                   O.map((e) =>
-                    c.createElement(
+                    s.createElement(
                       "div",
                       { key: `${e.key}-ugc-grid-header}` },
-                      c.createElement("b", null, e.displayName || e.key),
+                      s.createElement("b", null, e.displayName || e.key),
                     ),
                   ),
                 ),
-                c.createElement(
-                  c.Fragment,
+                s.createElement(
+                  s.Fragment,
                   null,
                   O.map((e) =>
-                    c.createElement(
+                    s.createElement(
                       "div",
                       { key: `${e.key}-ugc-logo` },
                       e.formatFunction
-                        ? e.formatFunction.call(null, k[e.key])
-                        : JSON.stringify(k[e.key] || "", null, 2).replace(
+                        ? e.formatFunction.call(null, h[e.key])
+                        : JSON.stringify(h[e.key] || "", null, 2).replace(
                             /['"]+/g,
                             "",
                           ),
@@ -4169,38 +4213,38 @@
                   ),
                 ),
               ),
-              c.createElement("div", { className: y().SmoothLine }),
-              c.createElement(
+              s.createElement("div", { className: y().SmoothLine }),
+              s.createElement(
                 "h2",
                 { className: y().Header },
                 "Audit Action History",
               ),
-              c.createElement(
+              s.createElement(
                 "div",
                 {
                   className: y().AuditActionsGrid,
                   style: { gridTemplateColumns: `repeat(${D.length}, auto)` },
                 },
-                c.createElement(
-                  c.Fragment,
+                s.createElement(
+                  s.Fragment,
                   null,
                   D.map((e) =>
-                    c.createElement(
+                    s.createElement(
                       "div",
                       {
                         key: `${e.key}-${e.displayName}-audit-action-grid-header`,
                       },
-                      c.createElement("b", null, e.displayName || e.key),
+                      s.createElement("b", null, e.displayName || e.key),
                     ),
                   ),
                 ),
-                c.createElement(
-                  c.Fragment,
+                s.createElement(
+                  s.Fragment,
                   null,
                   !!H.length &&
                     H.map((e) =>
                       D.map((t) =>
-                        c.createElement(
+                        s.createElement(
                           "div",
                           { key: `${t.key}-${t.displayName}-${e.timestamp}` },
                           t.formatFunction
@@ -4218,29 +4262,29 @@
                       ),
                     ),
                   !H.length &&
-                    c.createElement("div", null, "No audit actions."),
+                    s.createElement("div", null, "No audit actions."),
                 ),
               ),
-              c.createElement("div", { className: y().SmoothLine }),
-              c.createElement(
+              s.createElement("div", { className: y().SmoothLine }),
+              s.createElement(
                 "h2",
                 { className: y().Header },
                 "Supporters Club / Workshop Status",
               ),
-              c.createElement(
+              s.createElement(
                 "div",
                 { className: y().WorkshopStatusGrid },
                 C.map((e) =>
-                  c.createElement(
-                    c.Fragment,
+                  s.createElement(
+                    s.Fragment,
                     { key: `${e.key}-workshop-status-row` },
-                    c.createElement("div", null, e.displayName || e.key),
-                    c.createElement(
+                    s.createElement("div", null, e.displayName || e.key),
+                    s.createElement(
                       "div",
                       null,
                       e.formatFunction
-                        ? e.formatFunction.call(null, $[e.key])
-                        : JSON.stringify($[e.key] || "", null, 2).replace(
+                        ? e.formatFunction.call(null, G[e.key])
+                        : JSON.stringify(G[e.key] || "", null, 2).replace(
                             /['"]+/g,
                             "",
                           ),
@@ -4248,43 +4292,43 @@
                   ),
                 ),
               ),
-              c.createElement("div", { className: y().SmoothLine }),
-              c.createElement(
+              s.createElement("div", { className: y().SmoothLine }),
+              s.createElement(
                 "h2",
                 { className: (0, m.Z)(y().Header, y().SeasonMatchHeader) },
                 `Season ${o.Y.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD} Matches`,
               ),
-              c.createElement(
+              s.createElement(
                 "div",
                 {
                   className: y().MatchesGrid,
                   style: { gridTemplateColumns: `repeat(${S.length}, auto)` },
                 },
-                c.createElement(
-                  c.Fragment,
+                s.createElement(
+                  s.Fragment,
                   null,
                   (() => {
                     const e = [];
                     return (
                       Object.keys(P).forEach((t, a) => {
                         e.push(
-                          c.createElement(
+                          s.createElement(
                             "h3",
                             {
                               key: `league-name-row-${a}`,
                               style: { gridColumn: `span ${S.length}` },
                             },
-                            c.createElement("b", null, t),
+                            s.createElement("b", null, t),
                           ),
                         ),
                           e.push(
                             S.map((e) =>
-                              c.createElement(
+                              s.createElement(
                                 "div",
                                 {
                                   key: `${e.key}-${e.displayName}-matches-grid-header-league-${a}`,
                                 },
-                                c.createElement(
+                                s.createElement(
                                   "b",
                                   null,
                                   e.displayName || e.key,
@@ -4295,7 +4339,7 @@
                         for (let a of P[t])
                           e.push(
                             S.map((e) =>
-                              c.createElement(
+                              s.createElement(
                                 "div",
                                 {
                                   key: `${e.key}-${e.displayName}-${a.series_id}`,
@@ -4319,22 +4363,22 @@
                     );
                   })(),
                   !Object.keys(P).length &&
-                    c.createElement(
+                    s.createElement(
                       "div",
                       null,
-                      c.createElement("br", null),
+                      s.createElement("br", null),
                       "No league matches.",
                     ),
                 ),
               ),
-              c.createElement("br", null),
+              s.createElement("br", null),
             ),
-            c.createElement(u.U, null),
+            s.createElement(u.U, null),
           );
         };
-      class b extends c.Component {
+      class b extends s.Component {
         render() {
-          return c.createElement(F, null);
+          return s.createElement(F, null);
         }
       }
     },
