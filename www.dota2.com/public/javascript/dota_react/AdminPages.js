@@ -269,7 +269,7 @@
             return "Unknown";
         }
       }
-      function L(e) {
+      function $(e) {
         switch (e) {
           case O.n4.VERY_LIKELY:
             return "Very Likely";
@@ -285,7 +285,7 @@
             return "Unknown";
         }
       }
-      function $(e) {
+      function L(e) {
         switch (e) {
           case O._W.DOTA_ACCESS_TOURNAMENT_ADMIN:
             return "Tournament Admin";
@@ -314,8 +314,8 @@
         U = a.n(P);
       const Y = "red",
         x = "orange",
-        H = "goldenrod",
-        K = "#adff2f",
+        K = "goldenrod",
+        H = "#adff2f",
         B = "darkgray",
         W = "forestgreen",
         V = "crimson",
@@ -403,6 +403,7 @@
           {
             key: "comprank",
             secondaryKey: "comprankuncertainty",
+            tertiaryKey: "compranktier",
             displayName: "Ranked",
             formatFunction: (e, t, a = 0) =>
               i.createElement(
@@ -461,7 +462,7 @@
                   a.push(
                     i.createElement(
                       "span",
-                      { style: { color: H } },
+                      { style: { color: K } },
                       `${M(O.PW.RETURNING_PLAYER)}${t}`,
                     ),
                   ),
@@ -479,12 +480,34 @@
           },
           {
             key: "behavscore",
-            displayName: "Behavior Score",
-            formatFunction: (e = 1e4) => {
-              let t = K;
+            secondaryKey: "commscore",
+            tertiaryKey: "trustscore",
+            displayName: "Behav, Comms, Trust",
+            formatFunction: (e = 8e3, t = -1, a = -1) => {
+              let n = H;
+              e < 0
+                ? (n = H)
+                : e <= 2e3
+                ? (n = Y)
+                : e <= 4e3
+                ? (n = x)
+                : e <= 6e3 && (n = K);
+              let l = H;
               return (
-                e < 1500 ? (t = Y) : e < 3e3 ? (t = x) : e < 7e3 && (t = H),
-                i.createElement("span", { style: { color: t } }, e)
+                t < 0
+                  ? (l = H)
+                  : t <= 2e3
+                  ? (l = Y)
+                  : t <= 4e3
+                  ? (l = x)
+                  : t <= 6e3 && (l = K),
+                i.createElement(
+                  "div",
+                  null,
+                  i.createElement("span", { style: { color: n } }, `${e}, `),
+                  i.createElement("span", { style: { color: l } }, `${t}, `),
+                  i.createElement("span", { style: { color: H } }, `${a}`),
+                )
               );
             },
           },
@@ -573,34 +596,34 @@
                   return i.createElement(
                     "span",
                     { style: { color: Y } },
-                    L(O.n4.VERY_LIKELY),
+                    $(O.n4.VERY_LIKELY),
                   );
                 case O.n4.SOMEWHAT_LIKELY:
                   return i.createElement(
                     "span",
                     { style: { color: x } },
-                    L(O.n4.SOMEWHAT_LIKELY),
+                    $(O.n4.SOMEWHAT_LIKELY),
                   );
                 case O.n4.UNCLEAR:
                   return i.createElement(
                     "span",
-                    { style: { color: H } },
-                    L(O.n4.UNCLEAR),
+                    { style: { color: K } },
+                    $(O.n4.UNCLEAR),
                   );
                 case O.n4.SOMEWHAT_UNLIKELY:
                   return i.createElement(
                     "span",
                     { style: {} },
-                    L(O.n4.SOMEWHAT_UNLIKELY),
+                    $(O.n4.SOMEWHAT_UNLIKELY),
                   );
                 case O.n4.VERY_UNLIKELY:
                   return i.createElement(
                     "span",
                     { style: {} },
-                    L(O.n4.VERY_UNLIKELY),
+                    $(O.n4.VERY_UNLIKELY),
                   );
                 default:
-                  return i.createElement("span", null, L(O.n4.INVALID));
+                  return i.createElement("span", null, $(O.n4.INVALID));
               }
             },
           },
@@ -608,7 +631,7 @@
             key: "plussubscriber",
             displayName: "Plus Subscriber",
             formatFunction: (e = 0) =>
-              e ? i.createElement("div", { style: { color: K } }, "YES") : "NO",
+              e ? i.createElement("div", { style: { color: H } }, "YES") : "NO",
           },
           {
             key: "wins",
@@ -626,7 +649,7 @@
               const n = Math.round((e / a) * 1e4) / 100;
               let l = "none";
               return (
-                n >= 70 || n <= 30 ? (l = x) : (n >= 60 || n <= 40) && (l = H),
+                n >= 70 || n <= 30 ? (l = x) : (n >= 60 || n <= 40) && (l = K),
                 i.createElement(
                   i.Fragment,
                   null,
@@ -652,7 +675,7 @@
               const n = Math.round((e / a) * 1e4) / 100;
               let l = "none";
               return (
-                n >= 70 || n <= 30 ? (l = x) : (n >= 60 || n <= 40) && (l = H),
+                n >= 70 || n <= 30 ? (l = x) : (n >= 60 || n <= 40) && (l = K),
                 i.createElement(
                   i.Fragment,
                   null,
@@ -678,9 +701,9 @@
                 (t = ((t >> 4) + t) & 252645135),
                 (t = ((t >> 8) + t) & 16711935),
                 (t = ((t >> 16) + t) & 65535);
-              let a = K;
+              let a = H;
               return (
-                t > 20 ? (a = Y) : t > 10 ? (a = x) : t > 5 && (a = H),
+                t > 20 ? (a = Y) : t > 10 ? (a = x) : t > 5 && (a = K),
                 i.createElement(
                   "span",
                   { style: { color: a } },
@@ -785,18 +808,18 @@
         ie = [
           {
             key: "beta_access_flags",
-            displayName: $(O._W.DOTA_ACCESS_TOURNAMENT_ADMIN),
+            displayName: L(O._W.DOTA_ACCESS_TOURNAMENT_ADMIN),
             formatFunction: (e = 0) =>
               e & O._W.DOTA_ACCESS_TOURNAMENT_ADMIN
-                ? i.createElement("div", { style: { color: K } }, "YES")
+                ? i.createElement("div", { style: { color: H } }, "YES")
                 : "NO",
           },
           {
             key: "beta_access_flags",
-            displayName: $(O._W.DOTA_ACCESS_TOURNAMENT_BROADCASTER),
+            displayName: L(O._W.DOTA_ACCESS_TOURNAMENT_BROADCASTER),
             formatFunction: (e = 0) =>
               e & O._W.DOTA_ACCESS_TOURNAMENT_BROADCASTER
-                ? i.createElement("div", { style: { color: K } }, "YES")
+                ? i.createElement("div", { style: { color: H } }, "YES")
                 : "NO",
           },
         ],
@@ -1027,9 +1050,13 @@
           if (!e || !e.length) return "(No Bans)";
           e = e.slice(0, 5);
           return e.map((e) => {
+            const t = "Admin Permanent" == e.bantype;
             return i.createElement(
               "tr",
-              { key: `${e.bantype} - ${e.starttime}` },
+              {
+                key: `${e.bantype} - ${e.starttime}`,
+                style: { color: t ? Y : "" },
+              },
               i.createElement("td", null, e.bantype),
               i.createElement(
                 "td",
@@ -1046,27 +1073,29 @@
               i.createElement(
                 "td",
                 null,
-                (t = e.duration)
-                  ? t < 60
-                    ? `${m().duration(t, "seconds").asSeconds()} seconds`
-                    : t < 3600
-                    ? `${m().duration(t, "seconds").asMinutes()} min`
-                    : t < 864e3
-                    ? `${m().duration(t, "seconds").asHours()} hours`
-                    : `${m().duration(t, "seconds").asDays()} days`
+                t
+                  ? "Permanent"
+                  : (a = e.duration)
+                  ? a < 60
+                    ? `${m().duration(a, "seconds").asSeconds()} seconds`
+                    : a < 3600
+                    ? `${m().duration(a, "seconds").asMinutes()} min`
+                    : a < 864e3
+                    ? `${m().duration(a, "seconds").asHours()} hours`
+                    : `${m().duration(a, "seconds").asDays()} days`
                   : "",
               ),
               i.createElement("td", null, e.admin ? "ADMIN" : "Automated"),
               i.createElement("td", null, e.comment),
             );
-            var t;
+            var a;
           });
         },
         ge = (e) => {
-          var t, a, l, c, M, L;
-          const $ = (0, o.UO)(),
-            G = null == $ ? void 0 : $.id,
-            [P, K] = (0, i.useState)(null),
+          var t, a, l, c, M, $;
+          const L = (0, o.UO)(),
+            G = null == L ? void 0 : L.id,
+            [P, H] = (0, i.useState)(null),
             [ue, Ee] = (0, i.useState)(null),
             [ge, ve] = (0, i.useState)(null),
             [fe, Ae] = (0, i.useState)(null),
@@ -1076,12 +1105,12 @@
             [Oe, De] = (0, i.useState)(!1),
             [Ce, Se] = (0, i.useState)(!0),
             [Fe, be] = (0, i.useState)(!0),
-            [Me, Le] = (0, i.useState)(!1),
-            [$e, Ge] = (0, i.useState)(!0),
+            [Me, $e] = (0, i.useState)(!1),
+            [Le, Ge] = (0, i.useState)(!0),
             [we, Pe] = (0, i.useState)(!0),
             [Ue, Ye] = (0, i.useState)(!1),
             xe = I.L.Get().getHeroList(),
-            He = I.L.Get().getItemList();
+            Ke = I.L.Get().getItemList();
           (0, i.useEffect)(() => {
             try {
               !(function () {
@@ -1132,7 +1161,7 @@
                     } catch (e) {
                       Ne(!0);
                     }
-                    a && a.data && K(n);
+                    a && a.data && H(n);
                   } catch (e) {
                     console.log("Error fetching individual persona info."),
                       De(!0);
@@ -1159,23 +1188,23 @@
                       O.Eq.WEEKEND_TOURNEY,
                     ].includes(e.lobby_type)
                   ) &&
-                  !(!$e && e.rankwassolo) &&
+                  !(!Le && e.rankwassolo) &&
                   !(!we && !e.rankwassolo),
               )),
                 Ae(e);
-            }, [ge, Ce, Fe, Me, $e, we]);
-          let Ke = null;
+            }, [ge, Ce, Fe, Me, Le, we]);
+          let He = null;
           if (
             (G
               ? Re && ke
                 ? Re && Oe
-                  ? (Ke = `Error loading persona information for account ID ${G}. Double check universe & account ID (or try refreshing).`)
+                  ? (He = `Error loading persona information for account ID ${G}. Double check universe & account ID (or try refreshing).`)
                   : ke &&
                     Te &&
-                    (Ke = `Error loading match history for account ID ${G}.`)
-                : (Ke = `Loading account ID ${G}...`)
-              : (Ke = "Must pass in an account ID."),
-            Ke)
+                    (He = `Error loading match history for account ID ${G}.`)
+                : (He = `Loading account ID ${G}...`)
+              : (He = "Must pass in an account ID."),
+            He)
           )
             return i.createElement(
               "div",
@@ -1190,7 +1219,7 @@
               i.createElement(
                 "div",
                 { className: U().ContentFrame },
-                i.createElement("h2", { className: U().Header }, Ke),
+                i.createElement("h2", { className: U().Header }, He),
               ),
               i.createElement(R.U, null),
             );
@@ -1333,7 +1362,7 @@
                 const t = e.cellData || 0;
                 let a = "";
                 return (
-                  t >= 300 ? (a = Y) : t >= 175 ? (a = x) : t >= 100 && (a = H),
+                  t >= 300 ? (a = Y) : t >= 175 ? (a = x) : t >= 100 && (a = K),
                   i.createElement(
                     "span",
                     { key: "op", style: { color: a } },
@@ -1441,8 +1470,8 @@
                       type: "checkbox",
                       name: "solo",
                       id: "solo",
-                      onChange: () => Ge(!$e),
-                      checked: $e,
+                      onChange: () => Ge(!Le),
+                      checked: Le,
                     }),
                     i.createElement(
                       "label",
@@ -1555,9 +1584,9 @@
                 const t = [];
                 for (let a = 0; a < 6; a++) {
                   const n =
-                    null == He
+                    null == Ke
                       ? void 0
-                      : He.itemabilities.find(
+                      : Ke.itemabilities.find(
                           (t) =>
                             t.id ==
                             (null == e ? void 0 : e.rowData[`item${a}`]),
@@ -2237,7 +2266,7 @@
                                 null,
                                 null == P ? void 0 : P.persona[e.key],
                                 null == P ? void 0 : P.persona[e.secondaryKey],
-                                null == P ? void 0 : P.persona.compranktier,
+                                null == P ? void 0 : P.persona[e.tertiaryKey],
                               )
                             : JSON.stringify(
                                 (null == P ? void 0 : P.persona[e.key]) || "",
@@ -2264,6 +2293,7 @@
                                 null,
                                 null == P ? void 0 : P.persona[e.key],
                                 null == P ? void 0 : P.persona[e.secondaryKey],
+                                null == P ? void 0 : P.persona[e.tertiaryKey],
                               )
                             : JSON.stringify(
                                 (null == P ? void 0 : P.persona[e.key]) || "",
@@ -2825,10 +2855,10 @@
                     null,
                     i.createElement("tr", null, i.createElement("td", null)),
                     ye(
-                      null === (L = null == P ? void 0 : P.persona) ||
-                        void 0 === L
+                      null === ($ = null == P ? void 0 : P.persona) ||
+                        void 0 === $
                         ? void 0
-                        : L.banhistory,
+                        : $.banhistory,
                     ),
                   ),
                 ),
@@ -2892,7 +2922,7 @@
                     type: "checkbox",
                     name: "othermode",
                     id: "othermode",
-                    onChange: () => Le(!Me),
+                    onChange: () => $e(!Me),
                     checked: Me,
                   }),
                   i.createElement(
@@ -3498,11 +3528,11 @@
             [f, k] = (0, s.useState)(!1),
             [h, F] = (0, s.useState)({}),
             [b, M] = (0, s.useState)(!1),
-            [L, $] = (0, s.useState)(!1),
+            [$, L] = (0, s.useState)(!1),
             [G, w] = (0, s.useState)({}),
             [P, U] = (0, s.useState)([]),
             [Y, x] = (0, s.useState)(!0),
-            [H, K] = (0, s.useState)([]);
+            [K, H] = (0, s.useState)([]);
           function B() {
             var e, t;
             return (0, n.mG)(this, void 0, void 0, function* () {
@@ -3638,7 +3668,7 @@
               try {
                 W();
               } catch (e) {
-                console.log("Could not fetch single team info."), $(!0);
+                console.log("Could not fetch single team info."), L(!0);
               }
             }, [t]),
             (0, s.useEffect)(() => {
@@ -3680,11 +3710,11 @@
                         }),
                       ),
                     ),
-                      a && a.data && l.actions && K(l.actions);
+                      a && a.data && l.actions && H(l.actions);
                   });
                 })();
               } catch (e) {
-                console.log("Could not fetch single team info."), $(!0);
+                console.log("Could not fetch single team info."), L(!0);
               }
             }, [t]),
             (0, s.useEffect)(() => {
@@ -3786,7 +3816,7 @@
                 "Error loading registered teams...",
               )),
             b &&
-              (0 == Object.keys(h).length || L) &&
+              (0 == Object.keys(h).length || $) &&
               (j = s.createElement(
                 "div",
                 null,
@@ -4241,8 +4271,8 @@
                 s.createElement(
                   s.Fragment,
                   null,
-                  !!H.length &&
-                    H.map((e) =>
+                  !!K.length &&
+                    K.map((e) =>
                       D.map((t) =>
                         s.createElement(
                           "div",
@@ -4261,7 +4291,7 @@
                         ),
                       ),
                     ),
-                  !H.length &&
+                  !K.length &&
                     s.createElement("div", null, "No audit actions."),
                 ),
               ),
