@@ -50081,9 +50081,7 @@
           i = Tt(t);
         let r = "#OptIn_Appeals_Title_Pruned";
         return (
-          n.accountid_appeal &&
-          1 != n.accountid_appeal &&
-          2 != n.accountid_appeal
+          n.accountid_appeal && 1 != n.appeal_state && 2 != n.appeal_state
             ? (r = "#OptIn_Appeals_Title_AppealProcess")
             : (!n.pending_review && n.pruned) ||
               (r = "#OptIn_Appeals_Title_NotReviewed"),
