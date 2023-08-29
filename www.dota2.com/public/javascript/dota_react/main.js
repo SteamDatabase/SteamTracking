@@ -6342,7 +6342,7 @@
             )
           );
         },
-        Y = ({ video: e, index: t }) => {
+        J = ({ video: e, index: t }) => {
           const a = (0, i.useContext)(w.ro),
             r = (0, i.useRef)();
           return (
@@ -6374,7 +6374,7 @@
             )
           );
         },
-        J = ({ consumable: e }) =>
+        Y = ({ consumable: e }) =>
           i.createElement(
             "div",
             { className: h().ConsumableDot },
@@ -8927,22 +8927,22 @@
                     i.createElement(
                       w.oT,
                       { slide: 0 },
-                      i.createElement(J, { consumable: 1 }),
+                      i.createElement(Y, { consumable: 1 }),
                     ),
                     i.createElement(
                       w.oT,
                       { slide: 1 },
-                      i.createElement(J, { consumable: 2 }),
+                      i.createElement(Y, { consumable: 2 }),
                     ),
                     i.createElement(
                       w.oT,
                       { slide: 2 },
-                      i.createElement(J, { consumable: 3 }),
+                      i.createElement(Y, { consumable: 3 }),
                     ),
                     i.createElement(
                       w.oT,
                       { slide: 3 },
-                      i.createElement(J, { consumable: 4 }),
+                      i.createElement(Y, { consumable: 4 }),
                     ),
                   ),
                   i.createElement(
@@ -8951,22 +8951,22 @@
                     i.createElement(
                       w.Mi,
                       { index: 0 },
-                      i.createElement(Y, { index: 0, video: "portal" }),
+                      i.createElement(J, { index: 0, video: "portal" }),
                     ),
                     i.createElement(
                       w.Mi,
                       { index: 1 },
-                      i.createElement(Y, { index: 1, video: "ball" }),
+                      i.createElement(J, { index: 1, video: "ball" }),
                     ),
                     i.createElement(
                       w.Mi,
                       { index: 2 },
-                      i.createElement(Y, { index: 2, video: "disco" }),
+                      i.createElement(J, { index: 2, video: "disco" }),
                     ),
                     i.createElement(
                       w.Mi,
                       { index: 3 },
-                      i.createElement(Y, { index: 3, video: "pepper" }),
+                      i.createElement(J, { index: 3, video: "pepper" }),
                     ),
                   ),
                   i.createElement(
@@ -11717,14 +11717,14 @@
           "lang_packs/russian/hit_more_ru",
           "lang_packs/russian/i_saw_everything_its_his_fault_ru",
         ],
-        Ye = [
+        Je = [
           "chat_wheel_sfx/chicken",
           "chat_wheel_sfx/elephant",
           "chat_wheel_sfx/horn",
           "chat_wheel_sfx/ricochet",
           "chat_wheel_sfx/tick-tock",
         ],
-        Je = [
+        Ye = [
           { level: 20, filename: "ti11_phantom_lancer" },
           { level: 41, filename: "ti11_pudge" },
           { level: 85, filename: "ti11_shadow_demon" },
@@ -12282,7 +12282,7 @@
                     Ge().SprayDesc,
                   ),
                 },
-                (0, v.Jr)("#ti11_bp_unlocks_at_level", Je[t].level),
+                (0, v.Jr)("#ti11_bp_unlocks_at_level", Ye[t].level),
               ),
             )
           );
@@ -15967,7 +15967,7 @@
                     className: Ge().SprayCarousel,
                     naturalSlideWidth: 155,
                     naturalSlideHeight: 100,
-                    totalSlides: Je.length,
+                    totalSlides: Ye.length,
                   },
                   i.createElement(
                     "div",
@@ -15975,7 +15975,7 @@
                     i.createElement(
                       w.iR,
                       null,
-                      Je.map((e, t) =>
+                      Ye.map((e, t) =>
                         i.createElement(
                           w.Mi,
                           { key: `SpraySlide-${t}`, index: t },
@@ -15991,7 +15991,7 @@
                   i.createElement(
                     "div",
                     { className: Ge().CarouselDots },
-                    Je.map((e, t) =>
+                    Ye.map((e, t) =>
                       i.createElement(
                         w.oT,
                         { key: `SprayDot-${t}`, slide: t },
@@ -16223,23 +16223,23 @@
                       "div",
                       { className: (0, E.Z)(Ge().SoundPackList) },
                       i.createElement(_t, {
-                        audiofiles: [Ye[0]],
+                        audiofiles: [Je[0]],
                         name: "#ti11_bp_chat_wheel_sfx_1",
                       }),
                       i.createElement(_t, {
-                        audiofiles: [Ye[1]],
+                        audiofiles: [Je[1]],
                         name: "#ti11_bp_chat_wheel_sfx_2",
                       }),
                       i.createElement(_t, {
-                        audiofiles: [Ye[2]],
+                        audiofiles: [Je[2]],
                         name: "#ti11_bp_chat_wheel_sfx_3",
                       }),
                       i.createElement(_t, {
-                        audiofiles: [Ye[3]],
+                        audiofiles: [Je[3]],
                         name: "#ti11_bp_chat_wheel_sfx_4",
                       }),
                       i.createElement(_t, {
-                        audiofiles: [Ye[4]],
+                        audiofiles: [Je[4]],
                         name: "#ti11_bp_chat_wheel_sfx_5",
                       }),
                     ),
@@ -17789,14 +17789,14 @@
             i.createElement("div", { className: Ft().Selector }),
           );
       var jt = a(83600),
-        Yt = a(9704),
-        Jt = a(79585),
+        Jt = a(9704),
+        Yt = a(79585),
         $t = a(49213);
       const Zt = (0, c.Pi)(() => {
           const e = kn(),
             t = jt.f.Get().GetEventInfo(e),
             a = t && t.is_event_completed,
-            r = jt.f.Get().GetSpoilerBlockState(e) == Jt.rE.BLOCKED;
+            r = jt.f.Get().GetSpoilerBlockState(e) == Yt.rE.BLOCKED;
           return i.createElement(
             "div",
             {
@@ -17859,112 +17859,112 @@
             a = jt.f.Get().GetEventInfo(e),
             r = (0, m.k6)(),
             n = (0, m.TH)(),
-            o = (0, Yt.B2)(e),
+            o = (0, Jt.B2)(e),
             s = (0, l.w)(e, n),
             c = [
               {
-                value: Jt._A.SPRING_2021_LEAGUE,
+                value: Yt._A.SPRING_2021_LEAGUE,
                 strLabel: "#dpc_event_spring21",
                 strLabelSub: "#dpc_event_spring21_dates",
               },
               {
-                value: Jt._A.SPRING_2021_MAJOR,
+                value: Yt._A.SPRING_2021_MAJOR,
                 strLabel: "#dpc_event_springmajor21",
                 strLabelSub: "#dpc_event_springmajor21_dates",
               },
               {
-                value: Jt._A.INTERNATIONAL_2021_QUALIFIERS,
+                value: Yt._A.INTERNATIONAL_2021_QUALIFIERS,
                 strLabel: "#dpc_event_ti10qual",
                 strLabelSub: "#dpc_event_ti10qual_dates",
               },
               {
-                value: Jt._A.INTERNATIONAL_2021,
+                value: Yt._A.INTERNATIONAL_2021,
                 strLabel: "#dpc_event_ti10",
                 strLabelSub: "#dpc_event_ti10_dates",
               },
-              { value: Jt._A.INVALID, strLabel: "2020 - 2021", bSeparator: !0 },
+              { value: Yt._A.INVALID, strLabel: "2020 - 2021", bSeparator: !0 },
               {
-                value: Jt._A.WINTER_2021_LEAGUE,
+                value: Yt._A.WINTER_2021_LEAGUE,
                 strLabel: "#dpc_event_winter21",
                 strLabelSub: "#dpc_event_winter21_dates",
               },
               {
-                value: Jt._A.WINTER_2021_LEAGUE_FINALS,
+                value: Yt._A.WINTER_2021_LEAGUE_FINALS,
                 strLabel: "#dpc_event_winter21_major",
                 strLabelSub: "#dpc_event_winter21_major_dates",
               },
               {
-                value: Jt._A.SPRING_2022_LEAGUE,
+                value: Yt._A.SPRING_2022_LEAGUE,
                 strLabel: "#dpc_event_spring22",
                 strLabelSub: "#dpc_event_spring22_dates",
               },
               {
-                value: Jt._A.SPRING_2022_MAJOR,
+                value: Yt._A.SPRING_2022_MAJOR,
                 strLabel: "#dpc_event_spring22_major",
                 strLabelSub: "#dpc_event_spring22_major_dates",
               },
               {
-                value: Jt._A.CHINA_SPRING_2022_LEAGUE_FINALS,
+                value: Yt._A.CHINA_SPRING_2022_LEAGUE_FINALS,
                 strLabel: "#dpc_event_chinafinals22",
                 strLabelSub: "#dpc_event_chinafinals22_dates",
               },
               {
-                value: Jt._A.SUMMER_2022_LEAGUE,
+                value: Yt._A.SUMMER_2022_LEAGUE,
                 strLabel: "#dpc_event_summer22",
                 strLabelSub: "#dpc_event_summer22_dates",
               },
               {
-                value: Jt._A.SUMMER_2022_MAJOR,
+                value: Yt._A.SUMMER_2022_MAJOR,
                 strLabel: "#dpc_event_summer22_major",
                 strLabelSub: "#dpc_event_summer22_major_dates",
               },
               {
-                value: Jt._A.INTERNATIONAL_2022_LASTCHANCE,
+                value: Yt._A.INTERNATIONAL_2022_LASTCHANCE,
                 strLabel: "#dpc_event_ti11lastchance",
                 strLabelSub: "#dpc_event_ti11_dates",
               },
               {
-                value: Jt._A.INTERNATIONAL_2022,
+                value: Yt._A.INTERNATIONAL_2022,
                 strLabel: "#dpc_event_ti11",
                 strLabelSub: "#dpc_event_ti11_dates",
               },
-              { value: Jt._A.INVALID, strLabel: "2021 - 2022", bSeparator: !0 },
+              { value: Yt._A.INVALID, strLabel: "2021 - 2022", bSeparator: !0 },
               {
-                value: Jt._A.WINTER_2023_LEAGUE,
+                value: Yt._A.WINTER_2023_LEAGUE,
                 strLabel: "#dpc_event_winter23",
                 strLabelSub: "#dpc_event_winter23_dates",
               },
               {
-                value: Jt._A.WINTER_2023_MAJOR,
+                value: Yt._A.WINTER_2023_MAJOR,
                 strLabel: "#dpc_event_wintermajor23",
                 strLabelSub: "#dpc_event_wintermajor23_dates",
               },
               {
-                value: Jt._A.SPRING_2023_LEAGUE,
+                value: Yt._A.SPRING_2023_LEAGUE,
                 strLabel: "#dpc_event_spring23",
                 strLabelSub: "#dpc_event_spring23_dates",
               },
               {
-                value: Jt._A.SPRING_2023_MAJOR,
+                value: Yt._A.SPRING_2023_MAJOR,
                 strLabel: "#dpc_event_springmajor23",
                 strLabelSub: "#dpc_event_springmajor23_dates",
               },
               {
-                value: Jt._A.SUMMER_2023_LEAGUE,
+                value: Yt._A.SUMMER_2023_LEAGUE,
                 strLabel: "#dpc_event_summer23",
                 strLabelSub: "#dpc_event_summer23_dates",
               },
               {
-                value: Jt._A.SUMMER_2023_MAJOR,
+                value: Yt._A.SUMMER_2023_MAJOR,
                 strLabel: "#dpc_event_summermajor23",
                 strLabelSub: "#dpc_event_summermajor23_dates",
               },
               {
-                value: Jt._A.INTERNATIONAL_2023,
+                value: Yt._A.INTERNATIONAL_2023,
                 strLabel: "#dpc_event_ti12",
                 strLabelSub: "#dpc_event_ti12_dates",
               },
-              { value: Jt._A.INVALID, strLabel: "2023", bSeparator: !0 },
+              { value: Yt._A.INVALID, strLabel: "2023", bSeparator: !0 },
             ].reverse();
           return i.createElement(
             "div",
@@ -17987,23 +17987,23 @@
                   selectedOption: e,
                   setOption: (t) => {
                     switch ((0, l.w)(e, n)) {
-                      case Jt.RU.WATCH:
-                        r.push(l._.dpc_watch((0, Yt.B2)(t)));
+                      case Yt.RU.WATCH:
+                        r.push(l._.dpc_watch((0, Jt.B2)(t)));
                         break;
-                      case Jt.RU.SCHEDULE:
-                        r.push(l._.dpc_schedule((0, Yt.B2)(t)));
+                      case Yt.RU.SCHEDULE:
+                        r.push(l._.dpc_schedule((0, Jt.B2)(t)));
                         break;
-                      case Jt.RU.STANDINGS:
-                        r.push(l._.dpc_standings((0, Yt.B2)(t)));
+                      case Yt.RU.STANDINGS:
+                        r.push(l._.dpc_standings((0, Jt.B2)(t)));
                         break;
-                      case Jt.RU.ABOUT:
-                        r.push(l._.dpc_about((0, Yt.B2)(t)));
+                      case Yt.RU.ABOUT:
+                        r.push(l._.dpc_about((0, Jt.B2)(t)));
                         break;
-                      case Jt.RU.TISTANDINGS:
-                        r.push(l._.dpc_ti_standings((0, Yt.B2)(t)));
+                      case Yt.RU.TISTANDINGS:
+                        r.push(l._.dpc_ti_standings((0, Jt.B2)(t)));
                         break;
-                      case Jt.RU.TIRULES:
-                        r.push(l._.dpc_ti_rules((0, Yt.B2)(t)));
+                      case Yt.RU.TIRULES:
+                        r.push(l._.dpc_ti_rules((0, Jt.B2)(t)));
                     }
                   },
                   nWidth: 250,
@@ -18022,15 +18022,15 @@
                           o,
                           `${t ? t.nLeagueID : 0}`,
                           `${t ? t.nNodeID : 0}`,
-                          (0, Yt.k8)(
+                          (0, Jt.k8)(
                             t ? t.nSeriesGame : 0,
-                            t ? t.eSeriesDisplay : Yt.Uz.VOD,
+                            t ? t.eSeriesDisplay : Jt.Uz.VOD,
                           ),
                         ),
                       },
                       className: (0, E.Z)(
                         Ot().DPCLink,
-                        s == Jt.RU.WATCH && Ot().Active,
+                        s == Yt.RU.WATCH && Ot().Active,
                       ),
                     },
                     i.createElement(
@@ -18049,7 +18049,7 @@
                       },
                       className: (0, E.Z)(
                         Ot().DPCLink,
-                        s == Jt.RU.SCHEDULE && Ot().Active,
+                        s == Yt.RU.SCHEDULE && Ot().Active,
                       ),
                     },
                     i.createElement(
@@ -18068,7 +18068,7 @@
                       },
                       className: (0, E.Z)(
                         Ot().DPCLink,
-                        s == Jt.RU.STANDINGS && Ot().Active,
+                        s == Yt.RU.STANDINGS && Ot().Active,
                       ),
                     },
                     i.createElement(
@@ -18077,7 +18077,7 @@
                       (0, v.Jr)("#dpc_header_standings"),
                     ),
                   ),
-                a.event_type == Jt.f5.INTERNATIONAL &&
+                a.event_type == Yt.f5.INTERNATIONAL &&
                   a.is_event_upcoming &&
                   i.createElement(
                     d.rU,
@@ -18088,7 +18088,7 @@
                       },
                       className: (0, E.Z)(
                         Ot().DPCLink,
-                        s == Jt.RU.TISTANDINGS && Ot().Active,
+                        s == Yt.RU.TISTANDINGS && Ot().Active,
                       ),
                     },
                     i.createElement(
@@ -18106,7 +18106,7 @@
                     },
                     className: (0, E.Z)(
                       Ot().DPCLink,
-                      s == Jt.RU.ABOUT && Ot().Active,
+                      s == Yt.RU.ABOUT && Ot().Active,
                     ),
                   },
                   i.createElement(
@@ -18160,11 +18160,11 @@
         ca = (0, c.Pi)(({ nTeamID: e }) => {
           const t = jt.f.Get().GetTeamInfo(e),
             a = [
-              Jt.xd.CORE,
-              Jt.xd.CORE,
-              Jt.xd.MID,
-              Jt.xd.SUPPORT,
-              Jt.xd.SUPPORT,
+              Yt.xd.CORE,
+              Yt.xd.CORE,
+              Yt.xd.MID,
+              Yt.xd.SUPPORT,
+              Yt.xd.SUPPORT,
             ];
           let r = [];
           return i.createElement(
@@ -18187,16 +18187,16 @@
                 let n,
                   o = "";
                 switch (e) {
-                  case Jt.xd.CORE:
+                  case Yt.xd.CORE:
                     o = "#dpc_role_core";
                     break;
-                  case Jt.xd.SUPPORT:
+                  case Yt.xd.SUPPORT:
                     o = "#dpc_role_support";
                     break;
-                  case Jt.xd.OFFLANE:
+                  case Yt.xd.OFFLANE:
                     o = "#dpc_role_offlane";
                     break;
-                  case Jt.xd.MID:
+                  case Yt.xd.MID:
                     o = "#dpc_role_mid";
                 }
                 return (
@@ -18348,19 +18348,19 @@
             r = jt.f.Get().GetEventInfo(a),
             n = jt.f.Get().GetWatchPageContext(),
             o = [
-              { value: Jt.sd.UNSET, strLabel: "#dpc_division_all" },
-              { value: Jt.sd.DIVISION_I, strLabel: "#dpc_division_i" },
-              { value: Jt.sd.DIVISION_II, strLabel: "#dpc_division_ii" },
+              { value: Yt.sd.UNSET, strLabel: "#dpc_division_all" },
+              { value: Yt.sd.DIVISION_I, strLabel: "#dpc_division_i" },
+              { value: Yt.sd.DIVISION_II, strLabel: "#dpc_division_ii" },
             ],
             s =
               jt.f.Get().EventHasDivisions(a) &&
               !r.is_event_completed &&
               !r.is_event_upcoming,
             c = l._.dpc_watch(
-              (0, Yt.B2)(a),
+              (0, Jt.B2)(a),
               n ? `${n.nLeagueID}` : void 0,
               n ? `${n.nNodeID}` : void 0,
-              (0, Yt.k8)(
+              (0, Jt.k8)(
                 null == n ? void 0 : n.nSeriesGame,
                 null == n ? void 0 : n.eSeriesDisplay,
               ),
@@ -18458,8 +18458,8 @@
                 void 0 === n
                   ? void 0
                   : n.length) > 0,
-              w = (null == p ? void 0 : p.eNodeGroupType) == Jt.L$.ROUND_ROBIN,
-              D = jt.f.Get().GetNodeLabelStrings(o, e, t, Jt.FH.SHORT),
+              w = (null == p ? void 0 : p.eNodeGroupType) == Yt.L$.ROUND_ROBIN,
+              D = jt.f.Get().GetNodeLabelStrings(o, e, t, Yt.FH.SHORT),
               R =
                 _ && r
                   ? r
@@ -18471,7 +18471,7 @@
                   ? void 0
                   : u.scheduled_time,
               B = a.findIndex((e) => (r || R) >= e && (r || R) < e + 86400),
-              L = jt.f.Get().GetSpoilerBlockState(o) == Jt.rE.BLOCKED,
+              L = jt.f.Get().GetSpoilerBlockState(o) == Yt.rE.BLOCKED,
               A =
                 !L ||
                 !jt.f.Get().IsLeagueNodeBracket(e, t) ||
@@ -18506,7 +18506,7 @@
             const H =
                 ((null == c ? void 0 : c.nLeagueID) == e &&
                   c.nNodeID == t &&
-                  (0, l.w)(o, s) == Jt.RU.WATCH) ||
+                  (0, l.w)(o, s) == Yt.RU.WATCH) ||
                 (_ &&
                   1 == (null == c ? void 0 : c.nLeagueID) &&
                   1 == (null == c ? void 0 : c.nNodeID)),
@@ -18610,7 +18610,7 @@
                         to: {
                           state: { bAutoScroll: !0 },
                           pathname: l._.dpc_watch(
-                            (0, Yt.B2)(o),
+                            (0, Jt.B2)(o),
                             `${V}`,
                             `${W}`,
                           ),
@@ -18628,10 +18628,10 @@
                         to: {
                           state: { bAutoScroll: !0 },
                           pathname: l._.dpc_watch(
-                            (0, Yt.B2)(o),
+                            (0, Jt.B2)(o),
                             `${V}`,
                             `${W}`,
-                            (0, Yt.k8)(I, Yt.Uz.VOD),
+                            (0, Jt.k8)(I, Jt.Uz.VOD),
                           ),
                         },
                         className: Kt().HoverOption,
@@ -18645,7 +18645,7 @@
                         to: {
                           state: { bAutoScroll: !0 },
                           pathname: l._.dpc_watch(
-                            (0, Yt.B2)(o),
+                            (0, Jt.B2)(o),
                             `${V}`,
                             `${W}`,
                           ),
@@ -18662,7 +18662,7 @@
                         to: {
                           state: { bAutoScroll: !1 },
                           pathname: l._.dpc_schedule(
-                            (0, Yt.B2)(o),
+                            (0, Jt.B2)(o),
                             `${e}`,
                             `${t}`,
                           ),
@@ -18679,7 +18679,7 @@
           const e = kn(),
             t = jt.f.Get().GetEventInfo(e),
             a = jt.f.Get().GetWatchPageContext(),
-            [r, n] = (0, i.useState)(Jt.sd.UNSET),
+            [r, n] = (0, i.useState)(Yt.sd.UNSET),
             [o, s] = (0, i.useState)(!1),
             c = (0, i.useRef)(null),
             m = (0, i.useRef)(null),
@@ -18691,7 +18691,7 @@
             const t = jt.f.Get().GetLeagueNode(e.nLeagueID, e.nNodeID);
             if (0 == (null == t ? void 0 : t.scheduled_time)) return !1;
             const a = jt.f.Get().GetLeagueNodeInfo(e.nLeagueID, e.nNodeID);
-            return r == Jt.sd.UNSET || a.eDivision == r;
+            return r == Yt.sd.UNSET || a.eDivision == r;
           });
           const b = p
               .filter((e) => {
@@ -18732,7 +18732,7 @@
               return r;
             });
           let S = 0;
-          t.event_type == Jt.f5.INTERNATIONAL &&
+          t.event_type == Yt.f5.INTERNATIONAL &&
             f.forEach((e) => {
               const t = jt.f.Get().GetLeagueNode(e.nLeagueID, e.nNodeID);
               if (!t || t.is_completed) return;
@@ -18746,7 +18746,7 @@
                     null == a ? void 0 : a.parent_node_group_id,
                   );
               (null == r ? void 0 : r.phase) ==
-                Jt.g5.LEAGUE_PHASE_GROUP_STAGE &&
+                Yt.g5.LEAGUE_PHASE_GROUP_STAGE &&
                 (S = 0 == S ? t.scheduled_time : Math.min(S, t.scheduled_time));
             }),
             0 != S &&
@@ -18880,7 +18880,7 @@
                             i.createElement(
                               d.rU,
                               {
-                                to: l._.dpc_schedule((0, Yt.B2)(e)),
+                                to: l._.dpc_schedule((0, Jt.B2)(e)),
                                 className: Kt().ScheduleLink,
                               },
                               (0, v.Jr)("#dpc_go_to_schedule"),
@@ -18904,7 +18904,7 @@
                             i.createElement(
                               d.rU,
                               {
-                                to: l._.dpc_schedule((0, Yt.B2)(e)),
+                                to: l._.dpc_schedule((0, Jt.B2)(e)),
                                 className: Kt().ScheduleLink,
                               },
                               (0, v.Jr)("#dpc_go_to_schedule"),
@@ -19048,130 +19048,130 @@
       const Ia = 1668931200,
         Na = 1669104e3,
         wa = [
-          { eRegion: Jt.dO.CN, nTimestamp: Ia },
-          { eRegion: Jt.dO.CN, nTimestamp: 1668942e3 },
-          { eRegion: Jt.dO.EEU, nTimestamp: 1668952800 },
-          { eRegion: Jt.dO.SA, nTimestamp: 1668963600 },
-          { eRegion: Jt.dO.SA, nTimestamp: 1668974400 },
-          { eRegion: Jt.dO.SA, nTimestamp: 1668985200 },
-          { eRegion: Jt.dO.SEA, nTimestamp: 1669006800 },
-          { eRegion: Jt.dO.SEA, nTimestamp: 1669017600 },
-          { eRegion: Jt.dO.SEA, nTimestamp: 1669028400 },
-          { eRegion: Jt.dO.WEU, nTimestamp: 1669039200 },
-          { eRegion: Jt.dO.WEU, nTimestamp: 166905e4 },
-          { eRegion: Jt.dO.WEU, nTimestamp: 1669060800 },
-          { eRegion: Jt.dO.NA, nTimestamp: 1669071600 },
-          { eRegion: Jt.dO.NA, nTimestamp: 1669082400 },
-          { eRegion: Jt.dO.CN, nTimestamp: 1669093200 },
-          { eRegion: Jt.dO.CN, nTimestamp: 1669104e3 },
-          { eRegion: Jt.dO.EEU, nTimestamp: 1669114800 },
-          { eRegion: Jt.dO.EEU, nTimestamp: 1669125600 },
-          { eRegion: Jt.dO.SA, nTimestamp: 1669136400 },
-          { eRegion: Jt.dO.SA, nTimestamp: 1669147200 },
-          { eRegion: Jt.dO.SA, nTimestamp: 1669158e3 },
-          { eRegion: Jt.dO.SEA, nTimestamp: 1669179600 },
-          { eRegion: Jt.dO.SEA, nTimestamp: 1669190400 },
-          { eRegion: Jt.dO.SEA, nTimestamp: 1669201200 },
-          { eRegion: Jt.dO.WEU, nTimestamp: 1669212e3 },
-          { eRegion: Jt.dO.WEU, nTimestamp: 1669222800 },
-          { eRegion: Jt.dO.WEU, nTimestamp: 1669233600 },
-          { eRegion: Jt.dO.NA, nTimestamp: 1669244400 },
-          { eRegion: Jt.dO.NA, nTimestamp: 1669255200 },
-          { eRegion: Jt.dO.CN, nTimestamp: 1669266e3 },
-          { eRegion: Jt.dO.CN, nTimestamp: 1669276800 },
-          { eRegion: Jt.dO.EEU, nTimestamp: 1669287600 },
-          { eRegion: Jt.dO.EEU, nTimestamp: 1669298400 },
-          { eRegion: Jt.dO.SA, nTimestamp: 1669309200 },
-          { eRegion: Jt.dO.SA, nTimestamp: 166932e4 },
-          { eRegion: Jt.dO.SA, nTimestamp: 1669330800 },
-          { eRegion: Jt.dO.SEA, nTimestamp: 1669352400 },
-          { eRegion: Jt.dO.SEA, nTimestamp: 1669363200 },
-          { eRegion: Jt.dO.SEA, nTimestamp: 1669374e3 },
-          { eRegion: Jt.dO.WEU, nTimestamp: 1669384800 },
-          { eRegion: Jt.dO.WEU, nTimestamp: 1669395600 },
-          { eRegion: Jt.dO.WEU, nTimestamp: 1669406400 },
-          { eRegion: Jt.dO.NA, nTimestamp: 1669417200 },
-          { eRegion: Jt.dO.NA, nTimestamp: 1669428e3 },
-          { eRegion: Jt.dO.CN, nTimestamp: 1669438800 },
-          { eRegion: Jt.dO.CN, nTimestamp: 1669449600 },
-          { eRegion: Jt.dO.EEU, nTimestamp: 1669460400 },
-          { eRegion: Jt.dO.EEU, nTimestamp: 1669471200 },
-          { eRegion: Jt.dO.EEU, nTimestamp: 1669482e3 },
-          { eRegion: Jt.dO.NA, nTimestamp: 1669492800 },
-          { eRegion: Jt.dO.NA, nTimestamp: 1669503600 },
-          { eRegion: Jt.dO.NA, nTimestamp: 1669514400 },
-          { eRegion: Jt.dO.CN, nTimestamp: 1669525200 },
-          { eRegion: Jt.dO.CN, nTimestamp: 1669536e3 },
-          { eRegion: Jt.dO.CN, nTimestamp: 1669546800 },
-          { eRegion: Jt.dO.EEU, nTimestamp: 1669557600 },
-          { eRegion: Jt.dO.EEU, nTimestamp: 1669568400 },
-          { eRegion: Jt.dO.WEU, nTimestamp: 1669579200 },
-          { eRegion: Jt.dO.SA, nTimestamp: 166959e4 },
-          { eRegion: Jt.dO.NA, nTimestamp: 1669600800 },
-          { eRegion: Jt.dO.SEA, nTimestamp: 1669611600 },
+          { eRegion: Yt.dO.CN, nTimestamp: Ia },
+          { eRegion: Yt.dO.CN, nTimestamp: 1668942e3 },
+          { eRegion: Yt.dO.EEU, nTimestamp: 1668952800 },
+          { eRegion: Yt.dO.SA, nTimestamp: 1668963600 },
+          { eRegion: Yt.dO.SA, nTimestamp: 1668974400 },
+          { eRegion: Yt.dO.SA, nTimestamp: 1668985200 },
+          { eRegion: Yt.dO.SEA, nTimestamp: 1669006800 },
+          { eRegion: Yt.dO.SEA, nTimestamp: 1669017600 },
+          { eRegion: Yt.dO.SEA, nTimestamp: 1669028400 },
+          { eRegion: Yt.dO.WEU, nTimestamp: 1669039200 },
+          { eRegion: Yt.dO.WEU, nTimestamp: 166905e4 },
+          { eRegion: Yt.dO.WEU, nTimestamp: 1669060800 },
+          { eRegion: Yt.dO.NA, nTimestamp: 1669071600 },
+          { eRegion: Yt.dO.NA, nTimestamp: 1669082400 },
+          { eRegion: Yt.dO.CN, nTimestamp: 1669093200 },
+          { eRegion: Yt.dO.CN, nTimestamp: 1669104e3 },
+          { eRegion: Yt.dO.EEU, nTimestamp: 1669114800 },
+          { eRegion: Yt.dO.EEU, nTimestamp: 1669125600 },
+          { eRegion: Yt.dO.SA, nTimestamp: 1669136400 },
+          { eRegion: Yt.dO.SA, nTimestamp: 1669147200 },
+          { eRegion: Yt.dO.SA, nTimestamp: 1669158e3 },
+          { eRegion: Yt.dO.SEA, nTimestamp: 1669179600 },
+          { eRegion: Yt.dO.SEA, nTimestamp: 1669190400 },
+          { eRegion: Yt.dO.SEA, nTimestamp: 1669201200 },
+          { eRegion: Yt.dO.WEU, nTimestamp: 1669212e3 },
+          { eRegion: Yt.dO.WEU, nTimestamp: 1669222800 },
+          { eRegion: Yt.dO.WEU, nTimestamp: 1669233600 },
+          { eRegion: Yt.dO.NA, nTimestamp: 1669244400 },
+          { eRegion: Yt.dO.NA, nTimestamp: 1669255200 },
+          { eRegion: Yt.dO.CN, nTimestamp: 1669266e3 },
+          { eRegion: Yt.dO.CN, nTimestamp: 1669276800 },
+          { eRegion: Yt.dO.EEU, nTimestamp: 1669287600 },
+          { eRegion: Yt.dO.EEU, nTimestamp: 1669298400 },
+          { eRegion: Yt.dO.SA, nTimestamp: 1669309200 },
+          { eRegion: Yt.dO.SA, nTimestamp: 166932e4 },
+          { eRegion: Yt.dO.SA, nTimestamp: 1669330800 },
+          { eRegion: Yt.dO.SEA, nTimestamp: 1669352400 },
+          { eRegion: Yt.dO.SEA, nTimestamp: 1669363200 },
+          { eRegion: Yt.dO.SEA, nTimestamp: 1669374e3 },
+          { eRegion: Yt.dO.WEU, nTimestamp: 1669384800 },
+          { eRegion: Yt.dO.WEU, nTimestamp: 1669395600 },
+          { eRegion: Yt.dO.WEU, nTimestamp: 1669406400 },
+          { eRegion: Yt.dO.NA, nTimestamp: 1669417200 },
+          { eRegion: Yt.dO.NA, nTimestamp: 1669428e3 },
+          { eRegion: Yt.dO.CN, nTimestamp: 1669438800 },
+          { eRegion: Yt.dO.CN, nTimestamp: 1669449600 },
+          { eRegion: Yt.dO.EEU, nTimestamp: 1669460400 },
+          { eRegion: Yt.dO.EEU, nTimestamp: 1669471200 },
+          { eRegion: Yt.dO.EEU, nTimestamp: 1669482e3 },
+          { eRegion: Yt.dO.NA, nTimestamp: 1669492800 },
+          { eRegion: Yt.dO.NA, nTimestamp: 1669503600 },
+          { eRegion: Yt.dO.NA, nTimestamp: 1669514400 },
+          { eRegion: Yt.dO.CN, nTimestamp: 1669525200 },
+          { eRegion: Yt.dO.CN, nTimestamp: 1669536e3 },
+          { eRegion: Yt.dO.CN, nTimestamp: 1669546800 },
+          { eRegion: Yt.dO.EEU, nTimestamp: 1669557600 },
+          { eRegion: Yt.dO.EEU, nTimestamp: 1669568400 },
+          { eRegion: Yt.dO.WEU, nTimestamp: 1669579200 },
+          { eRegion: Yt.dO.SA, nTimestamp: 166959e4 },
+          { eRegion: Yt.dO.NA, nTimestamp: 1669600800 },
+          { eRegion: Yt.dO.SEA, nTimestamp: 1669611600 },
         ],
         Da = [
-          { eRegion: Jt.dO.CN, nTimestamp: Na },
-          { eRegion: Jt.dO.CN, nTimestamp: 1669114800 },
-          { eRegion: Jt.dO.EEU, nTimestamp: 1669125600 },
-          { eRegion: Jt.dO.SA, nTimestamp: 1669136400 },
-          { eRegion: Jt.dO.SA, nTimestamp: 1669147200 },
-          { eRegion: Jt.dO.SA, nTimestamp: 1669158e3 },
-          { eRegion: Jt.dO.SEA, nTimestamp: 1669179600 },
-          { eRegion: Jt.dO.SEA, nTimestamp: 1669190400 },
-          { eRegion: Jt.dO.SEA, nTimestamp: 1669201200 },
-          { eRegion: Jt.dO.WEU, nTimestamp: 1669212e3 },
-          { eRegion: Jt.dO.WEU, nTimestamp: 1669222800 },
-          { eRegion: Jt.dO.WEU, nTimestamp: 1669233600 },
-          { eRegion: Jt.dO.NA, nTimestamp: 1669244400 },
-          { eRegion: Jt.dO.NA, nTimestamp: 1669255200 },
-          { eRegion: Jt.dO.CN, nTimestamp: 1669266e3 },
-          { eRegion: Jt.dO.CN, nTimestamp: 1669276800 },
-          { eRegion: Jt.dO.EEU, nTimestamp: 1669287600 },
-          { eRegion: Jt.dO.EEU, nTimestamp: 1669298400 },
-          { eRegion: Jt.dO.SA, nTimestamp: 1669309200 },
-          { eRegion: Jt.dO.SA, nTimestamp: 166932e4 },
-          { eRegion: Jt.dO.SA, nTimestamp: 1669330800 },
-          { eRegion: Jt.dO.SEA, nTimestamp: 1669352400 },
-          { eRegion: Jt.dO.SEA, nTimestamp: 1669363200 },
-          { eRegion: Jt.dO.SEA, nTimestamp: 1669374e3 },
-          { eRegion: Jt.dO.WEU, nTimestamp: 1669384800 },
-          { eRegion: Jt.dO.WEU, nTimestamp: 1669395600 },
-          { eRegion: Jt.dO.WEU, nTimestamp: 1669406400 },
-          { eRegion: Jt.dO.NA, nTimestamp: 1669417200 },
-          { eRegion: Jt.dO.NA, nTimestamp: 1669428e3 },
-          { eRegion: Jt.dO.CN, nTimestamp: 1669438800 },
-          { eRegion: Jt.dO.CN, nTimestamp: 1669449600 },
-          { eRegion: Jt.dO.EEU, nTimestamp: 1669460400 },
-          { eRegion: Jt.dO.EEU, nTimestamp: 1669471200 },
-          { eRegion: Jt.dO.SA, nTimestamp: 1669482e3 },
-          { eRegion: Jt.dO.SA, nTimestamp: 1669492800 },
-          { eRegion: Jt.dO.SA, nTimestamp: 1669503600 },
-          { eRegion: Jt.dO.SEA, nTimestamp: 1669525200 },
-          { eRegion: Jt.dO.SEA, nTimestamp: 1669536e3 },
-          { eRegion: Jt.dO.SEA, nTimestamp: 1669546800 },
-          { eRegion: Jt.dO.WEU, nTimestamp: 1669557600 },
-          { eRegion: Jt.dO.WEU, nTimestamp: 1669568400 },
-          { eRegion: Jt.dO.WEU, nTimestamp: 1669579200 },
-          { eRegion: Jt.dO.NA, nTimestamp: 166959e4 },
-          { eRegion: Jt.dO.NA, nTimestamp: 1669600800 },
-          { eRegion: Jt.dO.CN, nTimestamp: 1669611600 },
-          { eRegion: Jt.dO.CN, nTimestamp: 1669622400 },
-          { eRegion: Jt.dO.EEU, nTimestamp: 1669633200 },
-          { eRegion: Jt.dO.EEU, nTimestamp: 1669644e3 },
-          { eRegion: Jt.dO.EEU, nTimestamp: 1669654800 },
-          { eRegion: Jt.dO.NA, nTimestamp: 1669665600 },
-          { eRegion: Jt.dO.NA, nTimestamp: 1669676400 },
-          { eRegion: Jt.dO.NA, nTimestamp: 1669687200 },
-          { eRegion: Jt.dO.CN, nTimestamp: 1669698e3 },
-          { eRegion: Jt.dO.CN, nTimestamp: 1669708800 },
-          { eRegion: Jt.dO.CN, nTimestamp: 1669719600 },
-          { eRegion: Jt.dO.EEU, nTimestamp: 1669730400 },
-          { eRegion: Jt.dO.EEU, nTimestamp: 1669741200 },
-          { eRegion: Jt.dO.WEU, nTimestamp: 1669752e3 },
-          { eRegion: Jt.dO.SA, nTimestamp: 1669762800 },
-          { eRegion: Jt.dO.NA, nTimestamp: 1669773600 },
-          { eRegion: Jt.dO.SEA, nTimestamp: 1669784400 },
+          { eRegion: Yt.dO.CN, nTimestamp: Na },
+          { eRegion: Yt.dO.CN, nTimestamp: 1669114800 },
+          { eRegion: Yt.dO.EEU, nTimestamp: 1669125600 },
+          { eRegion: Yt.dO.SA, nTimestamp: 1669136400 },
+          { eRegion: Yt.dO.SA, nTimestamp: 1669147200 },
+          { eRegion: Yt.dO.SA, nTimestamp: 1669158e3 },
+          { eRegion: Yt.dO.SEA, nTimestamp: 1669179600 },
+          { eRegion: Yt.dO.SEA, nTimestamp: 1669190400 },
+          { eRegion: Yt.dO.SEA, nTimestamp: 1669201200 },
+          { eRegion: Yt.dO.WEU, nTimestamp: 1669212e3 },
+          { eRegion: Yt.dO.WEU, nTimestamp: 1669222800 },
+          { eRegion: Yt.dO.WEU, nTimestamp: 1669233600 },
+          { eRegion: Yt.dO.NA, nTimestamp: 1669244400 },
+          { eRegion: Yt.dO.NA, nTimestamp: 1669255200 },
+          { eRegion: Yt.dO.CN, nTimestamp: 1669266e3 },
+          { eRegion: Yt.dO.CN, nTimestamp: 1669276800 },
+          { eRegion: Yt.dO.EEU, nTimestamp: 1669287600 },
+          { eRegion: Yt.dO.EEU, nTimestamp: 1669298400 },
+          { eRegion: Yt.dO.SA, nTimestamp: 1669309200 },
+          { eRegion: Yt.dO.SA, nTimestamp: 166932e4 },
+          { eRegion: Yt.dO.SA, nTimestamp: 1669330800 },
+          { eRegion: Yt.dO.SEA, nTimestamp: 1669352400 },
+          { eRegion: Yt.dO.SEA, nTimestamp: 1669363200 },
+          { eRegion: Yt.dO.SEA, nTimestamp: 1669374e3 },
+          { eRegion: Yt.dO.WEU, nTimestamp: 1669384800 },
+          { eRegion: Yt.dO.WEU, nTimestamp: 1669395600 },
+          { eRegion: Yt.dO.WEU, nTimestamp: 1669406400 },
+          { eRegion: Yt.dO.NA, nTimestamp: 1669417200 },
+          { eRegion: Yt.dO.NA, nTimestamp: 1669428e3 },
+          { eRegion: Yt.dO.CN, nTimestamp: 1669438800 },
+          { eRegion: Yt.dO.CN, nTimestamp: 1669449600 },
+          { eRegion: Yt.dO.EEU, nTimestamp: 1669460400 },
+          { eRegion: Yt.dO.EEU, nTimestamp: 1669471200 },
+          { eRegion: Yt.dO.SA, nTimestamp: 1669482e3 },
+          { eRegion: Yt.dO.SA, nTimestamp: 1669492800 },
+          { eRegion: Yt.dO.SA, nTimestamp: 1669503600 },
+          { eRegion: Yt.dO.SEA, nTimestamp: 1669525200 },
+          { eRegion: Yt.dO.SEA, nTimestamp: 1669536e3 },
+          { eRegion: Yt.dO.SEA, nTimestamp: 1669546800 },
+          { eRegion: Yt.dO.WEU, nTimestamp: 1669557600 },
+          { eRegion: Yt.dO.WEU, nTimestamp: 1669568400 },
+          { eRegion: Yt.dO.WEU, nTimestamp: 1669579200 },
+          { eRegion: Yt.dO.NA, nTimestamp: 166959e4 },
+          { eRegion: Yt.dO.NA, nTimestamp: 1669600800 },
+          { eRegion: Yt.dO.CN, nTimestamp: 1669611600 },
+          { eRegion: Yt.dO.CN, nTimestamp: 1669622400 },
+          { eRegion: Yt.dO.EEU, nTimestamp: 1669633200 },
+          { eRegion: Yt.dO.EEU, nTimestamp: 1669644e3 },
+          { eRegion: Yt.dO.EEU, nTimestamp: 1669654800 },
+          { eRegion: Yt.dO.NA, nTimestamp: 1669665600 },
+          { eRegion: Yt.dO.NA, nTimestamp: 1669676400 },
+          { eRegion: Yt.dO.NA, nTimestamp: 1669687200 },
+          { eRegion: Yt.dO.CN, nTimestamp: 1669698e3 },
+          { eRegion: Yt.dO.CN, nTimestamp: 1669708800 },
+          { eRegion: Yt.dO.CN, nTimestamp: 1669719600 },
+          { eRegion: Yt.dO.EEU, nTimestamp: 1669730400 },
+          { eRegion: Yt.dO.EEU, nTimestamp: 1669741200 },
+          { eRegion: Yt.dO.WEU, nTimestamp: 1669752e3 },
+          { eRegion: Yt.dO.SA, nTimestamp: 1669762800 },
+          { eRegion: Yt.dO.NA, nTimestamp: 1669773600 },
+          { eRegion: Yt.dO.SEA, nTimestamp: 1669784400 },
         ];
       const Ra = (e) => {
           const t = Math.min(...e.arrMatches.map((e) => e.nTimestamp)),
@@ -20295,7 +20295,7 @@
                   {
                     to: {
                       state: { bAutoScroll: !0 },
-                      pathname: `${l._.dpc_about((0, Yt.B2)(t))}`,
+                      pathname: `${l._.dpc_about((0, Jt.B2)(t))}`,
                     },
                     className: xa().Button,
                   },
@@ -20312,41 +20312,41 @@
           let n = !1,
             o = !1;
           switch (jt.f.Get().GetEventType(t)) {
-            case Jt.f5.LEAGUE:
+            case Yt.f5.LEAGUE:
               (n = !0), (o = !0);
               break;
-            case Jt.f5.INTERNATIONAL_QUALIFIERS:
+            case Yt.f5.INTERNATIONAL_QUALIFIERS:
               o = !0;
           }
           const s = [
-              { value: Jt.sd.UNSET, strLabel: "#dpc_division_filter_all" },
-              { value: Jt.sd.DIVISION_I, strLabel: "#dpc_division_i" },
-              { value: Jt.sd.DIVISION_II, strLabel: "#dpc_division_ii" },
+              { value: Yt.sd.UNSET, strLabel: "#dpc_division_filter_all" },
+              { value: Yt.sd.DIVISION_I, strLabel: "#dpc_division_i" },
+              { value: Yt.sd.DIVISION_II, strLabel: "#dpc_division_ii" },
             ],
             l = [
-              { value: Jt.dO.UNSET, strLabel: "#dpc_region_all" },
-              jt.f.Get().BEventHasRegion(t, Jt.dO.NA)
-                ? { value: Jt.dO.NA, strLabel: "#dpc_region_na" }
+              { value: Yt.dO.UNSET, strLabel: "#dpc_region_all" },
+              jt.f.Get().BEventHasRegion(t, Yt.dO.NA)
+                ? { value: Yt.dO.NA, strLabel: "#dpc_region_na" }
                 : void 0,
-              jt.f.Get().BEventHasRegion(t, Jt.dO.SA)
-                ? { value: Jt.dO.SA, strLabel: "#dpc_region_sa" }
+              jt.f.Get().BEventHasRegion(t, Yt.dO.SA)
+                ? { value: Yt.dO.SA, strLabel: "#dpc_region_sa" }
                 : void 0,
-              jt.f.Get().BEventHasRegion(t, Jt.dO.WEU)
-                ? { value: Jt.dO.WEU, strLabel: "#dpc_region_weu" }
+              jt.f.Get().BEventHasRegion(t, Yt.dO.WEU)
+                ? { value: Yt.dO.WEU, strLabel: "#dpc_region_weu" }
                 : void 0,
-              jt.f.Get().BEventHasRegion(t, Jt.dO.EEU)
-                ? { value: Jt.dO.EEU, strLabel: "#dpc_region_eeu" }
+              jt.f.Get().BEventHasRegion(t, Yt.dO.EEU)
+                ? { value: Yt.dO.EEU, strLabel: "#dpc_region_eeu" }
                 : void 0,
-              jt.f.Get().BEventHasRegion(t, Jt.dO.CN)
-                ? { value: Jt.dO.CN, strLabel: "#dpc_region_cn" }
+              jt.f.Get().BEventHasRegion(t, Yt.dO.CN)
+                ? { value: Yt.dO.CN, strLabel: "#dpc_region_cn" }
                 : void 0,
-              jt.f.Get().BEventHasRegion(t, Jt.dO.SEA)
-                ? { value: Jt.dO.SEA, strLabel: "#dpc_region_sea" }
+              jt.f.Get().BEventHasRegion(t, Yt.dO.SEA)
+                ? { value: Yt.dO.SEA, strLabel: "#dpc_region_sea" }
                 : void 0,
             ];
           let c = [],
             d = [];
-          if ((null == a ? void 0 : a.event_type) == Jt.f5.INTERNATIONAL)
+          if ((null == a ? void 0 : a.event_type) == Yt.f5.INTERNATIONAL)
             for (const e of r) {
               let a = !1;
               const r = jt.f.Get().GetEventNodesForDate(t, e);
@@ -20366,7 +20366,7 @@
                     );
                 if (
                   (null == n ? void 0 : n.phase) ==
-                  Jt.g5.LEAGUE_PHASE_GROUP_STAGE
+                  Yt.g5.LEAGUE_PHASE_GROUP_STAGE
                 ) {
                   a = !0;
                   break;
@@ -20382,7 +20382,7 @@
                 a.is_event_completed && Ma().IsEventCompleted,
               ),
             },
-            (null == a ? void 0 : a.event_type) == Jt.f5.INTERNATIONAL &&
+            (null == a ? void 0 : a.event_type) == Yt.f5.INTERNATIONAL &&
               i.createElement(
                 "div",
                 { className: Ma().InternationalDaySelector },
@@ -20512,9 +20512,9 @@
                 const a = jt.f.Get().GetLeagueNode(t.nLeagueID, t.nNodeID);
                 if (0 == (null == a ? void 0 : a.scheduled_time)) return !1;
                 const r = jt.f.Get().GetLeagueNodeInfo(t.nLeagueID, t.nNodeID);
-                if (e.eDivision != Jt.sd.UNSET && r.eDivision != e.eDivision)
+                if (e.eDivision != Yt.sd.UNSET && r.eDivision != e.eDivision)
                   return !1;
-                if (e.eRegion != Jt.dO.UNSET && r.eRegion != e.eRegion)
+                if (e.eRegion != Yt.dO.UNSET && r.eRegion != e.eRegion)
                   return !1;
                 if (!e.strTeamSearch) return !0;
                 const n = jt.f.Get().FindTeamIDsFromSubstr(e.strTeamSearch);
@@ -20615,7 +20615,7 @@
                       }),
                     500,
                   ),
-                r.replace(l._.dpc_schedule((0, Yt.B2)(t))));
+                r.replace(l._.dpc_schedule((0, Jt.B2)(t))));
             }, [e.nScrollToTimestamp, e.scrollToLeagueNode, _, u, d, t, r]),
             i.createElement(
               "div",
@@ -20681,10 +20681,10 @@
                 ? void 0
                 : a.actual_time
               : a.scheduled_time,
-            o = (null == r ? void 0 : r.eNodeGroupType) == Jt.L$.ROUND_ROBIN,
+            o = (null == r ? void 0 : r.eNodeGroupType) == Yt.L$.ROUND_ROBIN,
             s = jt.f
               .Get()
-              .GetNodeLabelStrings(t, e.nLeagueID, e.nNodeID, Jt.FH.VERYLONG),
+              .GetNodeLabelStrings(t, e.nLeagueID, e.nNodeID, Yt.FH.VERYLONG),
             c = jt.f.Get().GetTeamNames(null == a ? void 0 : a.team_id_1),
             m = jt.f.Get().GetTeamNames(null == a ? void 0 : a.team_id_2),
             _ = jt.f
@@ -20718,7 +20718,7 @@
               f &&
               (null == a ? void 0 : a.team_2_wins) >
                 (null == a ? void 0 : a.team_1_wins),
-            C = jt.f.Get().GetSpoilerBlockState(t) == Jt.rE.BLOCKED,
+            C = jt.f.Get().GetSpoilerBlockState(t) == Yt.rE.BLOCKED,
             T =
               !C ||
               !jt.f.Get().IsLeagueNodeBracket(e.nLeagueID, e.nNodeID) ||
@@ -20825,10 +20825,10 @@
                         to: {
                           state: { bAutoScroll: !0 },
                           pathname: l._.dpc_watch(
-                            (0, Yt.B2)(t),
+                            (0, Jt.B2)(t),
                             `${e.nLeagueID}`,
                             `${e.nNodeID}`,
-                            (0, Yt.k8)(0, Yt.Uz.SERIES),
+                            (0, Jt.k8)(0, Jt.Uz.SERIES),
                           ),
                         },
                         className: Ma().LiveBanner,
@@ -20944,16 +20944,16 @@
             h = Ga.L.Get().getHeroList();
           c && !m && _(!0);
           const b = jt.f.Get().IsGameWatched(a, r, o),
-            f = jt.f.Get().GetSpoilerBlockState(t) == Jt.rE.BLOCKED && !b,
+            f = jt.f.Get().GetSpoilerBlockState(t) == Yt.rE.BLOCKED && !b,
             S = g.vods.length > 0,
             y = -1 != g.vods.findIndex((e) => e.series_game == o),
             C = f ? S : y;
           let T = 0;
           switch (null == u ? void 0 : u.match_outcome) {
-            case Jt.cu.RADIANT_VICTORY:
+            case Yt.cu.RADIANT_VICTORY:
               T = null == u ? void 0 : u.tourney.radiant_team_id;
               break;
-            case Jt.cu.DIRE_VICTORY:
+            case Yt.cu.DIRE_VICTORY:
               T = null == u ? void 0 : u.tourney.dire_team_id;
           }
           const I = jt.f.Get().GetTeamNames(T),
@@ -21045,10 +21045,10 @@
                   to: {
                     state: { bAutoScroll: !0 },
                     pathname: l._.dpc_watch(
-                      (0, Yt.B2)(t),
+                      (0, Jt.B2)(t),
                       `${a}`,
                       `${r}`,
-                      (0, Yt.k8)(o, Yt.Uz.GAME),
+                      (0, Jt.k8)(o, Jt.Uz.GAME),
                     ),
                   },
                   className: Ma().FirstLine,
@@ -21136,10 +21136,10 @@
                   to: {
                     state: { bAutoScroll: !0 },
                     pathname: l._.dpc_watch(
-                      (0, Yt.B2)(t),
+                      (0, Jt.B2)(t),
                       `${a}`,
                       `${r}`,
-                      (0, Yt.k8)(o, y ? Yt.Uz.VOD : Yt.Uz.GAME),
+                      (0, Jt.k8)(o, y ? Jt.Uz.VOD : Jt.Uz.GAME),
                     ),
                   },
                   className: (0, E.Z)(Ma().WatchVODButton, C && Ma().Enabled),
@@ -21152,13 +21152,13 @@
         za = (0, c.Pi)(() => {
           const e = kn(),
             [t, a] = (0, i.useState)(""),
-            [r, n] = (0, i.useState)(Jt.sd.UNSET),
-            [o, s] = (0, i.useState)(Jt.dO.UNSET),
+            [r, n] = (0, i.useState)(Yt.sd.UNSET),
+            [o, s] = (0, i.useState)(Yt.dO.UNSET),
             [l, c] = (0, i.useState)(0);
           let d, _;
           const u = (0, m.UO)();
-          if (Yt.ak.includes(u.strMonthOrLeague)) {
-            const t = Yt.ak.indexOf(u.strMonthOrLeague) + 1,
+          if (Jt.ak.includes(u.strMonthOrLeague)) {
+            const t = Jt.ak.indexOf(u.strMonthOrLeague) + 1,
               a = parseInt(u.strDayOrNode);
             if (t && a) {
               d = jt.f
@@ -21218,8 +21218,8 @@
           );
         });
       var ja = a(14707),
-        Ya = a.n(ja);
-      const Ja = (0, c.Pi)(() => {
+        Ja = a.n(ja);
+      const Ya = (0, c.Pi)(() => {
         const e = kn(),
           t = jt.f.Get().GetEventInfo(e),
           [a, r] = (0, i.useState)(0),
@@ -21228,11 +21228,11 @@
             .GetDPCStandings(null == t ? void 0 : t.registration_period);
         return i.createElement(
           "div",
-          { className: Ya().DPCTIStandingsPage },
+          { className: Ja().DPCTIStandingsPage },
           0 == (null == n ? void 0 : n.results.length) &&
             i.createElement(
               "div",
-              { className: Ya().NoResults },
+              { className: Ja().NoResults },
               (0, v.Jr)("#dpc_ti_results_empty"),
             ),
           null == n
@@ -21243,12 +21243,12 @@
                   "div",
                   {
                     key: `${t.team_id}`,
-                    className: Ya().TeamEntry,
+                    className: Ja().TeamEntry,
                     onClick: () => r(a == t.team_id ? 0 : t.team_id),
                   },
                   i.createElement(
                     "div",
-                    { className: Ya().TeamBody },
+                    { className: Ja().TeamBody },
                     i.createElement(ma, {
                       nTeamID: t.team_id,
                       nSize: 48,
@@ -21256,12 +21256,12 @@
                     }),
                     i.createElement(
                       "div",
-                      { className: Ya().TeamName },
+                      { className: Ja().TeamName },
                       t.team_name,
                     ),
                     i.createElement(
                       "div",
-                      { className: Ya().Points },
+                      { className: Ja().Points },
                       t.total_points,
                     ),
                   ),
@@ -21269,8 +21269,8 @@
                     "div",
                     {
                       className: (0, E.Z)(
-                        Ya().TeamExpansion,
-                        n && Ya().Expanded,
+                        Ja().TeamExpansion,
+                        n && Ja().Expanded,
                       ),
                     },
                     t.league_results.map((a) => {
@@ -21285,26 +21285,26 @@
                           "div",
                           {
                             key: `p15_${a.timestamp}`,
-                            className: Ya().LeagueResult,
+                            className: Ja().LeagueResult,
                           },
                           i.createElement(ta(), {
-                            className: Ya().Timestamp,
+                            className: Ja().Timestamp,
                             date: 1e3 * a.timestamp,
                             format: "MMM DD YYYY",
                           }),
                           i.createElement(
                             "div",
-                            { className: Ya().PlayerLeft },
+                            { className: Ja().PlayerLeft },
                             (0, v.Jr)("#dpc_player_left"),
                             i.createElement(
                               "div",
-                              { className: Ya().PlayerName },
+                              { className: Ja().PlayerName },
                               null == e ? void 0 : e.name,
                             ),
                           ),
                           i.createElement(
                             "div",
-                            { className: Ya().PointPenalty },
+                            { className: Ja().PointPenalty },
                             (0, v.Jr)("#dpc_penalty_20pct"),
                           ),
                         );
@@ -21314,21 +21314,21 @@
                             "div",
                             {
                               key: `p20_${a.timestamp}`,
-                              className: Ya().LeagueResult,
+                              className: Ja().LeagueResult,
                             },
                             i.createElement(ta(), {
-                              className: Ya().Timestamp,
+                              className: Ja().Timestamp,
                               date: 1e3 * a.timestamp,
                               format: "MMM DD YYYY",
                             }),
                             i.createElement(
                               "div",
-                              { className: Ya().PlayerLeft },
+                              { className: Ja().PlayerLeft },
                               (0, v.Jr)("#dpc_penalty"),
                             ),
                             i.createElement(
                               "div",
-                              { className: Ya().PointPenalty },
+                              { className: Ja().PointPenalty },
                               (0, v.Jr)("#dpc_penalty_20pct"),
                             ),
                           )
@@ -21337,32 +21337,32 @@
                             "div",
                             {
                               key: `l_${t.team_id}_${a.timestamp}`,
-                              className: Ya().LeagueResult,
+                              className: Ja().LeagueResult,
                             },
                             i.createElement(ta(), {
-                              className: Ya().Timestamp,
+                              className: Ja().Timestamp,
                               date: 1e3 * a.timestamp,
                               format: "MMM DD YYYY",
                             }),
                             i.createElement("div", {
-                              className: Ya().LeagueLogo,
+                              className: Ja().LeagueLogo,
                               style: {
                                 backgroundImage: `url( ${p.Y.CDN_URL}apps/dota2/images/leagues/${a.league_id}/images/image_8.png`,
                               },
                             }),
                             i.createElement(
                               "div",
-                              { className: Ya().LeaguePlace },
+                              { className: Ja().LeaguePlace },
                               (0, ka.jc)(a.standing),
                             ),
                             i.createElement(
                               "div",
-                              { className: Ya().LeagueName },
+                              { className: Ja().LeagueName },
                               (0, v.Jr)(null == r ? void 0 : r.info.name),
                             ),
                             i.createElement(
                               "div",
-                              { className: Ya().Points },
+                              { className: Ja().Points },
                               a.points,
                             ),
                           )
@@ -21381,7 +21381,7 @@
       const Qa = (0, c.Pi)((e) => {
         const t = kn(),
           a = jt.f.Get().GetLeagueNode(e.nLeagueID, e.nNodeID),
-          r = jt.f.Get().GetSpoilerBlockState(t) == Jt.rE.BLOCKED,
+          r = jt.f.Get().GetSpoilerBlockState(t) == Yt.rE.BLOCKED,
           n = !r || jt.f.Get().IsAnyGameWatched(e.nLeagueID, e.nNodeID),
           o = !r || jt.f.Get().AreAllGamesWatched(e.nLeagueID, e.nNodeID),
           s = jt.f.Get().GetTeamNames(null == a ? void 0 : a.team_id_1),
@@ -21453,7 +21453,7 @@
           P = N ? -Xa.OQ / 3 : 0,
           M = N ? -Xa.GJ / 2 : 0,
           G = jt.f.Get().GetNodeTypeString(null == a ? void 0 : a.node_type);
-        return t === Jt._A.INTERNATIONAL_2022_LASTCHANCE &&
+        return t === Yt._A.INTERNATIONAL_2022_LASTCHANCE &&
           "#dpc_bracket_grand_final_abbrev" === e.strNodeTitle
           ? null
           : e.bAlwaysRender ||
@@ -21618,16 +21618,16 @@
                             .GetLeagueNodeVODs(e.nLeagueID, e.nNodeID, r)
                             .length > 0 || !o,
                         c = l._.dpc_watch(
-                          (0, Yt.B2)(t),
+                          (0, Jt.B2)(t),
                           `${e.nLeagueID}`,
                           `${e.nNodeID}`,
-                          (0, Yt.k8)(r, s ? Yt.Uz.VOD : Yt.Uz.GAME),
+                          (0, Jt.k8)(r, s ? Jt.Uz.VOD : Jt.Uz.GAME),
                         ),
                         m = l._.dpc_watch(
-                          (0, Yt.B2)(t),
+                          (0, Jt.B2)(t),
                           `${e.nLeagueID}`,
                           `${e.nNodeID}`,
-                          (0, Yt.k8)(r, Yt.Uz.SERIES),
+                          (0, Jt.k8)(r, Jt.Uz.SERIES),
                         ),
                         _ = D
                           ? "#dpc_watch_live"
@@ -21671,10 +21671,10 @@
                           to: {
                             state: { bAutoScroll: !0 },
                             pathname: l._.dpc_watch(
-                              (0, Yt.B2)(t),
+                              (0, Jt.B2)(t),
                               `${e.nLeagueID}`,
                               `${e.nNodeID}`,
-                              (0, Yt.k8)(0, Yt.Uz.SERIES),
+                              (0, Jt.k8)(0, Jt.Uz.SERIES),
                             ),
                           },
                           className: Ka().DetailsButton,
@@ -21701,7 +21701,7 @@
           if (null == a) return null;
           const n = (function (e, t) {
             switch (`${e}_${t}`) {
-              case `${Jt.L$.BRACKET_DOUBLE_SEED_LOSER}_12`:
+              case `${Yt.L$.BRACKET_DOUBLE_SEED_LOSER}_12`:
                 return {
                   nLeftOffset: Xa.OQ + Xa.Bq,
                   nWidth: 1160,
@@ -21709,7 +21709,7 @@
                   arrBracketNodeLocations: Xa._1,
                   arrBracketNodeConnectors: Xa.oJ,
                 };
-              case `${Jt.L$.BRACKET_DOUBLE_SEED_LOSER}_16`:
+              case `${Yt.L$.BRACKET_DOUBLE_SEED_LOSER}_16`:
                 return {
                   nLeftOffset: 0,
                   nWidth: 1350,
@@ -21717,7 +21717,7 @@
                   arrBracketNodeLocations: Xa._1,
                   arrBracketNodeConnectors: Xa.oJ,
                 };
-              case `${Jt.L$.BRACKET_DOUBLE_ALL_WINNER}_4`:
+              case `${Yt.L$.BRACKET_DOUBLE_ALL_WINNER}_4`:
                 return {
                   nLeftOffset: 0,
                   nWidth: 610,
@@ -21809,7 +21809,7 @@
                 }
               }
               return o || c
-                ? t === Jt._A.INTERNATIONAL_2022_LASTCHANCE &&
+                ? t === Yt._A.INTERNATIONAL_2022_LASTCHANCE &&
                   r === n.arrBracketNodeConnectors.length - 1
                   ? null
                   : i.createElement(
@@ -22033,8 +22033,8 @@
                     ? void 0
                     : r.leagues.find(
                         (t) =>
-                          t.division == (e.eDivision || Jt.sd.UNSET) &&
-                          t.region == (e.eRegion || Jt.dO.UNSET),
+                          t.division == (e.eDivision || Yt.sd.UNSET) &&
+                          t.region == (e.eRegion || Yt.dO.UNSET),
                       )) || void 0 === t
                 ? void 0
                 : t.league_id,
@@ -22087,7 +22087,7 @@
       const pr = (0, c.Pi)((e) => {
         var t, a;
         const r = kn(),
-          n = jt.f.Get().GetSpoilerBlockState(r) == Jt.rE.BLOCKED,
+          n = jt.f.Get().GetSpoilerBlockState(r) == Yt.rE.BLOCKED,
           [o, s] = (0, i.useState)({
             nRow: -1,
             nColumn: -1,
@@ -22279,21 +22279,21 @@
                             null == g ? void 0 : g.nNodeID,
                           );
                       let I = l._.dpc_watch(
-                        (0, Yt.B2)(r),
+                        (0, Jt.B2)(r),
                         `${null == g ? void 0 : g.nLeagueID}`,
                         `${null == g ? void 0 : g.nNodeID}`,
-                        (0, Yt.k8)(0, Yt.Uz.SERIES),
+                        (0, Jt.k8)(0, Jt.Uz.SERIES),
                       );
                       return (
                         !T &&
                           C &&
                           (I = l._.dpc_schedule(
-                            (0, Yt.B2)(r),
+                            (0, Jt.B2)(r),
                             `${null == g ? void 0 : g.nLeagueID}`,
                             `${null == g ? void 0 : g.nNodeID}`,
                           )),
                         i.createElement(
-                          Yt.RL,
+                          Jt.RL,
                           {
                             key: `c${c}`,
                             className: ur().LinkWrapper,
@@ -22473,7 +22473,7 @@
       const br = (0, c.Pi)((e) => {
           var t, a;
           const r = kn(),
-            n = jt.f.Get().GetSpoilerBlockState(r) == Jt.rE.BLOCKED,
+            n = jt.f.Get().GetSpoilerBlockState(r) == Yt.rE.BLOCKED,
             o = e.nTiebreak >= 0,
             s = jt.f
               .Get()
@@ -22640,7 +22640,7 @@
         }),
         fr = (0, c.Pi)((e) => {
           const t = kn(),
-            a = jt.f.Get().GetSpoilerBlockState(t) == Jt.rE.BLOCKED,
+            a = jt.f.Get().GetSpoilerBlockState(t) == Yt.rE.BLOCKED,
             r = jt.f
               .Get()
               .GetTeamStanding(e.nLeagueID, e.nNodeGroupID, e.nTeamID),
@@ -22729,12 +22729,12 @@
               .GetEventPhaseNodeGroupID(a, e.ePhase, e.eDivision, e.eRegion);
           let o = "";
           switch (jt.f.Get().GetEventType(a)) {
-            case Jt.f5.LEAGUE:
+            case Yt.f5.LEAGUE:
               o = jt.f.Get().GetRegionString(e.eRegion, !1);
               break;
-            case Jt.f5.MAJOR:
-            case Jt.f5.INTERNATIONAL:
-            case Jt.f5.INTERNATIONAL_QUALIFIERS:
+            case Yt.f5.MAJOR:
+            case Yt.f5.INTERNATIONAL:
+            case Yt.f5.INTERNATIONAL_QUALIFIERS:
               o = jt.f.Get().GetEventPhaseString(e.ePhase);
           }
           const s = jt.f
@@ -22819,51 +22819,51 @@
           const e = kn(),
             t = (0, m.k6)(),
             a = (0, m.UO)(),
-            r = (0, Yt.UP)(a.strPhase);
-          if (jt.f.Get().GetEventType(e) != Jt.f5.LEAGUE) return null;
+            r = (0, Jt.UP)(a.strPhase);
+          if (jt.f.Get().GetEventType(e) != Yt.f5.LEAGUE) return null;
           const n = [
-              jt.f.Get().BEventHasRegion(e, Jt.dO.NA)
-                ? { value: Jt.dO.NA, strLabel: "#dpc_region_na" }
+              jt.f.Get().BEventHasRegion(e, Yt.dO.NA)
+                ? { value: Yt.dO.NA, strLabel: "#dpc_region_na" }
                 : void 0,
-              jt.f.Get().BEventHasRegion(e, Jt.dO.SA)
-                ? { value: Jt.dO.SA, strLabel: "#dpc_region_sa" }
+              jt.f.Get().BEventHasRegion(e, Yt.dO.SA)
+                ? { value: Yt.dO.SA, strLabel: "#dpc_region_sa" }
                 : void 0,
-              jt.f.Get().BEventHasRegion(e, Jt.dO.WEU)
-                ? { value: Jt.dO.WEU, strLabel: "#dpc_region_weu" }
+              jt.f.Get().BEventHasRegion(e, Yt.dO.WEU)
+                ? { value: Yt.dO.WEU, strLabel: "#dpc_region_weu" }
                 : void 0,
-              jt.f.Get().BEventHasRegion(e, Jt.dO.EEU)
-                ? { value: Jt.dO.EEU, strLabel: "#dpc_region_eeu" }
+              jt.f.Get().BEventHasRegion(e, Yt.dO.EEU)
+                ? { value: Yt.dO.EEU, strLabel: "#dpc_region_eeu" }
                 : void 0,
-              jt.f.Get().BEventHasRegion(e, Jt.dO.CN)
-                ? { value: Jt.dO.CN, strLabel: "#dpc_region_cn" }
+              jt.f.Get().BEventHasRegion(e, Yt.dO.CN)
+                ? { value: Yt.dO.CN, strLabel: "#dpc_region_cn" }
                 : void 0,
-              jt.f.Get().BEventHasRegion(e, Jt.dO.SEA)
-                ? { value: Jt.dO.SEA, strLabel: "#dpc_region_sea" }
+              jt.f.Get().BEventHasRegion(e, Yt.dO.SEA)
+                ? { value: Yt.dO.SEA, strLabel: "#dpc_region_sea" }
                 : void 0,
             ],
             o = [
-              { value: Jt.sd.DIVISION_I, strLabel: "#dpc_division_i" },
-              { value: Jt.sd.DIVISION_II, strLabel: "#dpc_division_ii" },
+              { value: Yt.sd.DIVISION_I, strLabel: "#dpc_division_i" },
+              { value: Yt.sd.DIVISION_II, strLabel: "#dpc_division_ii" },
             ],
             s = [
-              { value: Jt.BY.OVERALL, strLabel: "#dpc_header_standings" },
-              { value: Jt.BY.RESULTS, strLabel: "#dpc_results" },
+              { value: Yt.BY.OVERALL, strLabel: "#dpc_header_standings" },
+              { value: Yt.BY.RESULTS, strLabel: "#dpc_results" },
             ];
           if (!a.strSelection)
             return i.createElement(m.l_, {
               to: l._.dpc_standings(
-                (0, Yt.B2)(e),
+                (0, Jt.B2)(e),
                 a.strPhase,
-                `${jt.f.Get().GetDefaultRegion(e)}_${Jt.sd.DIVISION_I}`,
+                `${jt.f.Get().GetDefaultRegion(e)}_${Yt.sd.DIVISION_I}`,
               ),
             });
           const [c, d] = a.strSelection.split("_").map((e) => parseInt(e));
-          if (!c || !d || r == Jt.BY.INVALID)
+          if (!c || !d || r == Yt.BY.INVALID)
             return i.createElement(m.l_, {
               to: l._.dpc_standings(
-                (0, Yt.B2)(e),
-                (0, Yt.o5)(r == Jt.BY.INVALID ? Jt.BY.OVERALL : r),
-                `${jt.f.Get().GetDefaultRegion(e)}_${Jt.sd.DIVISION_I}`,
+                (0, Jt.B2)(e),
+                (0, Jt.o5)(r == Yt.BY.INVALID ? Yt.BY.OVERALL : r),
+                `${jt.f.Get().GetDefaultRegion(e)}_${Yt.sd.DIVISION_I}`,
               ),
             });
           return i.createElement(
@@ -22877,7 +22877,7 @@
                 selectedOption: c,
                 setOption: (r) => {
                   t.push(
-                    l._.dpc_standings((0, Yt.B2)(e), a.strPhase, `${r}_${d}`),
+                    l._.dpc_standings((0, Jt.B2)(e), a.strPhase, `${r}_${d}`),
                   );
                 },
                 eStyle: Ht.NORMAL,
@@ -22887,7 +22887,7 @@
                 selectedOption: d,
                 setOption: (r) => {
                   t.push(
-                    l._.dpc_standings((0, Yt.B2)(e), a.strPhase, `${c}_${r}`),
+                    l._.dpc_standings((0, Jt.B2)(e), a.strPhase, `${c}_${r}`),
                   );
                 },
                 eStyle: Ht.NORMAL,
@@ -22898,8 +22898,8 @@
                 setOption: (a) => {
                   t.push(
                     l._.dpc_standings(
-                      (0, Yt.B2)(e),
-                      (0, Yt.o5)(a),
+                      (0, Jt.B2)(e),
+                      (0, Jt.o5)(a),
                       `${c}_${d}`,
                     ),
                   );
@@ -22907,7 +22907,7 @@
                 eStyle: Ht.NORMAL,
               }),
             ),
-            r == Jt.BY.OVERALL &&
+            r == Yt.BY.OVERALL &&
               i.createElement(Sr, {
                 ePhase: r,
                 eDivision: d,
@@ -22919,7 +22919,7 @@
                 bNarrowList: !1,
                 bShowTiebreakers: !0,
               }),
-            r == Jt.BY.RESULTS &&
+            r == Yt.BY.RESULTS &&
               i.createElement(cr, {
                 eDivision: d,
                 eRegion: c,
@@ -22935,7 +22935,7 @@
           let n = !1;
           for (const e of r.leagues)
             for (const t of e.phases)
-              (t.phase != Jt.BY.GROUP_A && t.phase != Jt.BY.GROUP_B) ||
+              (t.phase != Yt.BY.GROUP_A && t.phase != Yt.BY.GROUP_B) ||
                 (n = !0);
           let o;
           o = n
@@ -22982,22 +22982,22 @@
           const s = [
               n
                 ? void 0
-                : { value: Jt.BY.WILD_CARD, strLabel: "#dpc_wild_card" },
+                : { value: Yt.BY.WILD_CARD, strLabel: "#dpc_wild_card" },
               n
                 ? void 0
-                : { value: Jt.BY.GROUP_STAGE, strLabel: "#dpc_group_stage" },
-              n ? { value: Jt.BY.GROUP_A, strLabel: "#dpc_group_a" } : void 0,
-              n ? { value: Jt.BY.GROUP_B, strLabel: "#dpc_group_b" } : void 0,
-              { value: Jt.BY.PLAYOFF, strLabel: "#dpc_playoff" },
-              e != Jt._A.INTERNATIONAL_2022_LASTCHANCE
-                ? { value: Jt.BY.RESULTS, strLabel: "#dpc_results" }
+                : { value: Yt.BY.GROUP_STAGE, strLabel: "#dpc_group_stage" },
+              n ? { value: Yt.BY.GROUP_A, strLabel: "#dpc_group_a" } : void 0,
+              n ? { value: Yt.BY.GROUP_B, strLabel: "#dpc_group_b" } : void 0,
+              { value: Yt.BY.PLAYOFF, strLabel: "#dpc_playoff" },
+              e != Yt._A.INTERNATIONAL_2022_LASTCHANCE
+                ? { value: Yt.BY.RESULTS, strLabel: "#dpc_results" }
                 : void 0,
             ],
-            c = (0, Yt.UP)(a.strPhase);
-          return jt.f.Get().GetEventType(e) != Jt.f5.MAJOR &&
-            e != Jt._A.INTERNATIONAL_2022_LASTCHANCE
+            c = (0, Jt.UP)(a.strPhase);
+          return jt.f.Get().GetEventType(e) != Yt.f5.MAJOR &&
+            e != Yt._A.INTERNATIONAL_2022_LASTCHANCE
             ? null
-            : Jt.BY[c] && c != Jt.BY.INVALID
+            : Yt.BY[c] && c != Yt.BY.INVALID
             ? i.createElement(
                 "div",
                 { className: mr().DPCStandingsPageMajor },
@@ -23009,15 +23009,15 @@
                     options: s,
                     selectedOption: c,
                     setOption: (a) => {
-                      t.push(l._.dpc_standings((0, Yt.B2)(e), (0, Yt.o5)(a)));
+                      t.push(l._.dpc_standings((0, Jt.B2)(e), (0, Jt.o5)(a)));
                     },
                   }),
                 ),
-                c == Jt.BY.WILD_CARD &&
+                c == Yt.BY.WILD_CARD &&
                   i.createElement(Sr, {
-                    ePhase: Jt.BY.WILD_CARD,
-                    eRegion: Jt.dO.UNSET,
-                    eDivision: Jt.sd.UNSET,
+                    ePhase: Yt.BY.WILD_CARD,
+                    eRegion: Yt.dO.UNSET,
+                    eDivision: Yt.sd.UNSET,
                     arrHighlights: [
                       {
                         nMin: 1,
@@ -23039,11 +23039,11 @@
                     bNarrowList: !1,
                     bShowTiebreakers: !0,
                   }),
-                c == Jt.BY.GROUP_STAGE &&
+                c == Yt.BY.GROUP_STAGE &&
                   i.createElement(Sr, {
-                    ePhase: Jt.BY.GROUP_STAGE,
-                    eRegion: Jt.dO.UNSET,
-                    eDivision: Jt.sd.UNSET,
+                    ePhase: Yt.BY.GROUP_STAGE,
+                    eRegion: Yt.dO.UNSET,
+                    eDivision: Yt.sd.UNSET,
                     arrHighlights: o,
                     bShowLegend: !0,
                     bShowHeader: !1,
@@ -23052,11 +23052,11 @@
                     bNarrowList: !1,
                     bShowTiebreakers: !0,
                   }),
-                c == Jt.BY.GROUP_A &&
+                c == Yt.BY.GROUP_A &&
                   i.createElement(Sr, {
-                    ePhase: Jt.BY.GROUP_A,
-                    eRegion: Jt.dO.UNSET,
-                    eDivision: Jt.sd.UNSET,
+                    ePhase: Yt.BY.GROUP_A,
+                    eRegion: Yt.dO.UNSET,
+                    eDivision: Yt.sd.UNSET,
                     arrHighlights: o,
                     bShowLegend: !0,
                     bShowHeader: !1,
@@ -23065,11 +23065,11 @@
                     bNarrowList: !1,
                     bShowTiebreakers: !0,
                   }),
-                c == Jt.BY.GROUP_B &&
+                c == Yt.BY.GROUP_B &&
                   i.createElement(Sr, {
-                    ePhase: Jt.BY.GROUP_B,
-                    eRegion: Jt.dO.UNSET,
-                    eDivision: Jt.sd.UNSET,
+                    ePhase: Yt.BY.GROUP_B,
+                    eRegion: Yt.dO.UNSET,
+                    eDivision: Yt.sd.UNSET,
                     arrHighlights: o,
                     bShowLegend: !0,
                     bShowHeader: !1,
@@ -23078,16 +23078,16 @@
                     bNarrowList: !1,
                     bShowTiebreakers: !0,
                   }),
-                c == Jt.BY.PLAYOFF &&
+                c == Yt.BY.PLAYOFF &&
                   i.createElement(ir, {
-                    ePhase: Jt.BY.PLAYOFF,
-                    eRegion: Jt.dO.UNSET,
-                    eDivision: Jt.sd.UNSET,
+                    ePhase: Yt.BY.PLAYOFF,
+                    eRegion: Yt.dO.UNSET,
+                    eDivision: Yt.sd.UNSET,
                   }),
-                c == Jt.BY.RESULTS &&
+                c == Yt.BY.RESULTS &&
                   i.createElement(cr, {
-                    eRegion: Jt.dO.UNSET,
-                    eDivision: Jt.sd.UNSET,
+                    eRegion: Yt.dO.UNSET,
+                    eDivision: Yt.sd.UNSET,
                     bStyleTopThree: !0,
                   }),
               )
@@ -23095,8 +23095,8 @@
                 to: {
                   state: { bAutoScroll: !0 },
                   pathname: l._.dpc_standings(
-                    (0, Yt.B2)(e),
-                    (0, Yt.o5)(r.leagues[0].phases[0].phase),
+                    (0, Jt.B2)(e),
+                    (0, Jt.o5)(r.leagues[0].phases[0].phase),
                   ),
                 },
               });
@@ -23106,35 +23106,35 @@
             t = (0, m.k6)(),
             a = (0, m.UO)(),
             r = [
-              jt.f.Get().BEventHasRegion(e, Jt.dO.NA)
-                ? { value: Jt.dO.NA, strLabel: "#dpc_region_na" }
+              jt.f.Get().BEventHasRegion(e, Yt.dO.NA)
+                ? { value: Yt.dO.NA, strLabel: "#dpc_region_na" }
                 : void 0,
-              jt.f.Get().BEventHasRegion(e, Jt.dO.SA)
-                ? { value: Jt.dO.SA, strLabel: "#dpc_region_sa" }
+              jt.f.Get().BEventHasRegion(e, Yt.dO.SA)
+                ? { value: Yt.dO.SA, strLabel: "#dpc_region_sa" }
                 : void 0,
-              jt.f.Get().BEventHasRegion(e, Jt.dO.WEU)
-                ? { value: Jt.dO.WEU, strLabel: "#dpc_region_weu" }
+              jt.f.Get().BEventHasRegion(e, Yt.dO.WEU)
+                ? { value: Yt.dO.WEU, strLabel: "#dpc_region_weu" }
                 : void 0,
-              jt.f.Get().BEventHasRegion(e, Jt.dO.EEU)
-                ? { value: Jt.dO.EEU, strLabel: "#dpc_region_eeu" }
+              jt.f.Get().BEventHasRegion(e, Yt.dO.EEU)
+                ? { value: Yt.dO.EEU, strLabel: "#dpc_region_eeu" }
                 : void 0,
-              jt.f.Get().BEventHasRegion(e, Jt.dO.CN)
-                ? { value: Jt.dO.CN, strLabel: "#dpc_region_cn" }
+              jt.f.Get().BEventHasRegion(e, Yt.dO.CN)
+                ? { value: Yt.dO.CN, strLabel: "#dpc_region_cn" }
                 : void 0,
-              jt.f.Get().BEventHasRegion(e, Jt.dO.SEA)
-                ? { value: Jt.dO.SEA, strLabel: "#dpc_region_sea" }
+              jt.f.Get().BEventHasRegion(e, Yt.dO.SEA)
+                ? { value: Yt.dO.SEA, strLabel: "#dpc_region_sea" }
                 : void 0,
             ],
             n = parseInt(a.strSelection);
-          return jt.f.Get().GetEventType(e) != Jt.f5.INTERNATIONAL_QUALIFIERS ||
-            e == Jt._A.INTERNATIONAL_2022_LASTCHANCE
+          return jt.f.Get().GetEventType(e) != Yt.f5.INTERNATIONAL_QUALIFIERS ||
+            e == Yt._A.INTERNATIONAL_2022_LASTCHANCE
             ? null
-            : Jt.dO[n] && n != Jt.dO.UNSET
-            ? (0, Yt.UP)(a.strPhase) == Jt.BY.INVALID
+            : Yt.dO[n] && n != Yt.dO.UNSET
+            ? (0, Jt.UP)(a.strPhase) == Yt.BY.INVALID
               ? i.createElement(m.l_, {
                   to: l._.dpc_standings(
-                    (0, Yt.B2)(e),
-                    (0, Yt.o5)(Jt.BY.PLAYOFF),
+                    (0, Jt.B2)(e),
+                    (0, Jt.o5)(Yt.BY.PLAYOFF),
                     `${jt.f.Get().GetDefaultRegion(e)}`,
                   ),
                 })
@@ -23150,20 +23150,20 @@
                       selectedOption: n,
                       setOption: (r) => {
                         t.push(
-                          l._.dpc_standings((0, Yt.B2)(e), a.strPhase, `${r}`),
+                          l._.dpc_standings((0, Jt.B2)(e), a.strPhase, `${r}`),
                         );
                       },
                     }),
                   ),
                   i.createElement(ir, {
-                    ePhase: Jt.BY.PLAYOFF,
+                    ePhase: Yt.BY.PLAYOFF,
                     eRegion: n,
-                    eDivision: Jt.sd.UNSET,
+                    eDivision: Yt.sd.UNSET,
                   }),
                 )
             : i.createElement(m.l_, {
                 to: l._.dpc_standings(
-                  (0, Yt.B2)(e),
+                  (0, Jt.B2)(e),
                   a.strPhase,
                   `${jt.f.Get().GetDefaultRegion(e)}`,
                 ),
@@ -23174,34 +23174,34 @@
             t = (0, m.k6)(),
             a = (0, m.UO)(),
             r = [
-              jt.f.Get().BEventHasRegion(e, Jt.dO.NA)
-                ? { value: Jt.dO.NA, strLabel: "#dpc_region_na" }
+              jt.f.Get().BEventHasRegion(e, Yt.dO.NA)
+                ? { value: Yt.dO.NA, strLabel: "#dpc_region_na" }
                 : void 0,
-              jt.f.Get().BEventHasRegion(e, Jt.dO.SA)
-                ? { value: Jt.dO.SA, strLabel: "#dpc_region_sa" }
+              jt.f.Get().BEventHasRegion(e, Yt.dO.SA)
+                ? { value: Yt.dO.SA, strLabel: "#dpc_region_sa" }
                 : void 0,
-              jt.f.Get().BEventHasRegion(e, Jt.dO.WEU)
-                ? { value: Jt.dO.WEU, strLabel: "#dpc_region_weu" }
+              jt.f.Get().BEventHasRegion(e, Yt.dO.WEU)
+                ? { value: Yt.dO.WEU, strLabel: "#dpc_region_weu" }
                 : void 0,
-              jt.f.Get().BEventHasRegion(e, Jt.dO.EEU)
-                ? { value: Jt.dO.EEU, strLabel: "#dpc_region_eeu" }
+              jt.f.Get().BEventHasRegion(e, Yt.dO.EEU)
+                ? { value: Yt.dO.EEU, strLabel: "#dpc_region_eeu" }
                 : void 0,
-              jt.f.Get().BEventHasRegion(e, Jt.dO.CN)
-                ? { value: Jt.dO.CN, strLabel: "#dpc_region_cn" }
+              jt.f.Get().BEventHasRegion(e, Yt.dO.CN)
+                ? { value: Yt.dO.CN, strLabel: "#dpc_region_cn" }
                 : void 0,
-              jt.f.Get().BEventHasRegion(e, Jt.dO.SEA)
-                ? { value: Jt.dO.SEA, strLabel: "#dpc_region_sea" }
+              jt.f.Get().BEventHasRegion(e, Yt.dO.SEA)
+                ? { value: Yt.dO.SEA, strLabel: "#dpc_region_sea" }
                 : void 0,
             ],
             n = parseInt(a.strSelection);
-          return jt.f.Get().GetEventType(e) != Jt.f5.LEAGUE_FINALS
+          return jt.f.Get().GetEventType(e) != Yt.f5.LEAGUE_FINALS
             ? null
-            : Jt.dO[n] && n != Jt.dO.UNSET
-            ? (0, Yt.UP)(a.strPhase) == Jt.BY.INVALID
+            : Yt.dO[n] && n != Yt.dO.UNSET
+            ? (0, Jt.UP)(a.strPhase) == Yt.BY.INVALID
               ? i.createElement(m.l_, {
                   to: l._.dpc_standings(
-                    (0, Yt.B2)(e),
-                    (0, Yt.o5)(Jt.BY.PLAYOFF),
+                    (0, Jt.B2)(e),
+                    (0, Jt.o5)(Yt.BY.PLAYOFF),
                     `${jt.f.Get().GetDefaultRegion(e)}`,
                   ),
                 })
@@ -23217,20 +23217,20 @@
                       selectedOption: n,
                       setOption: (r) => {
                         t.push(
-                          l._.dpc_standings((0, Yt.B2)(e), a.strPhase, `${r}`),
+                          l._.dpc_standings((0, Jt.B2)(e), a.strPhase, `${r}`),
                         );
                       },
                     }),
                   ),
                   i.createElement(ir, {
-                    ePhase: Jt.BY.PLAYOFF,
+                    ePhase: Yt.BY.PLAYOFF,
                     eRegion: n,
-                    eDivision: Jt.sd.UNSET,
+                    eDivision: Yt.sd.UNSET,
                   }),
                 )
             : i.createElement(m.l_, {
                 to: l._.dpc_standings(
-                  (0, Yt.B2)(e),
+                  (0, Jt.B2)(e),
                   a.strPhase,
                   `${jt.f.Get().GetDefaultRegion(e)}`,
                 ),
@@ -23262,21 +23262,21 @@
               },
             ],
             n = [
-              e === Jt._A.INTERNATIONAL_2022 || e === Jt._A.INTERNATIONAL_2023
+              e === Yt._A.INTERNATIONAL_2022 || e === Yt._A.INTERNATIONAL_2023
                 ? {
-                    value: Jt.BY.DPC_POINT_STANDINGS,
+                    value: Yt.BY.DPC_POINT_STANDINGS,
                     strLabel: "#dpc_point_standings",
                   }
                 : void 0,
-              { value: Jt.BY.GROUP_A, strLabel: "#dpc_group_a" },
-              { value: Jt.BY.GROUP_B, strLabel: "#dpc_group_b" },
-              { value: Jt.BY.PLAYOFF, strLabel: "#dpc_playoff" },
-              { value: Jt.BY.RESULTS, strLabel: "#dpc_results" },
+              { value: Yt.BY.GROUP_A, strLabel: "#dpc_group_a" },
+              { value: Yt.BY.GROUP_B, strLabel: "#dpc_group_b" },
+              { value: Yt.BY.PLAYOFF, strLabel: "#dpc_playoff" },
+              { value: Yt.BY.RESULTS, strLabel: "#dpc_results" },
             ],
-            o = (0, Yt.UP)(a.strPhase);
-          return jt.f.Get().GetEventType(e) != Jt.f5.INTERNATIONAL
+            o = (0, Jt.UP)(a.strPhase);
+          return jt.f.Get().GetEventType(e) != Yt.f5.INTERNATIONAL
             ? null
-            : Jt.BY[o] && o != Jt.BY.INVALID
+            : Yt.BY[o] && o != Yt.BY.INVALID
             ? i.createElement(
                 "div",
                 { className: mr().DPCStandingsPageMajor },
@@ -23288,16 +23288,16 @@
                     options: n,
                     selectedOption: o,
                     setOption: (a) => {
-                      t.push(l._.dpc_standings((0, Yt.B2)(e), (0, Yt.o5)(a)));
+                      t.push(l._.dpc_standings((0, Jt.B2)(e), (0, Jt.o5)(a)));
                     },
                   }),
                 ),
-                o == Jt.BY.DPC_POINT_STANDINGS && i.createElement(Ja, null),
-                o == Jt.BY.GROUP_A &&
+                o == Yt.BY.DPC_POINT_STANDINGS && i.createElement(Ya, null),
+                o == Yt.BY.GROUP_A &&
                   i.createElement(Sr, {
-                    ePhase: Jt.BY.GROUP_A,
-                    eRegion: Jt.dO.UNSET,
-                    eDivision: Jt.sd.UNSET,
+                    ePhase: Yt.BY.GROUP_A,
+                    eRegion: Yt.dO.UNSET,
+                    eDivision: Yt.sd.UNSET,
                     arrHighlights: r,
                     bShowLegend: !0,
                     bShowHeader: !1,
@@ -23306,11 +23306,11 @@
                     bNarrowList: !1,
                     bShowTiebreakers: !0,
                   }),
-                o == Jt.BY.GROUP_B &&
+                o == Yt.BY.GROUP_B &&
                   i.createElement(Sr, {
-                    ePhase: Jt.BY.GROUP_B,
-                    eRegion: Jt.dO.UNSET,
-                    eDivision: Jt.sd.UNSET,
+                    ePhase: Yt.BY.GROUP_B,
+                    eRegion: Yt.dO.UNSET,
+                    eDivision: Yt.sd.UNSET,
                     arrHighlights: r,
                     bShowLegend: !0,
                     bShowHeader: !1,
@@ -23319,25 +23319,25 @@
                     bNarrowList: !1,
                     bShowTiebreakers: !0,
                   }),
-                o == Jt.BY.PLAYOFF &&
+                o == Yt.BY.PLAYOFF &&
                   i.createElement(ir, {
-                    ePhase: Jt.BY.PLAYOFF,
-                    eRegion: Jt.dO.UNSET,
-                    eDivision: Jt.sd.UNSET,
+                    ePhase: Yt.BY.PLAYOFF,
+                    eRegion: Yt.dO.UNSET,
+                    eDivision: Yt.sd.UNSET,
                   }),
-                o == Jt.BY.RESULTS &&
+                o == Yt.BY.RESULTS &&
                   i.createElement(cr, {
-                    eRegion: Jt.dO.UNSET,
-                    eDivision: Jt.sd.UNSET,
+                    eRegion: Yt.dO.UNSET,
+                    eDivision: Yt.sd.UNSET,
                     bStyleTopThree: !0,
                   }),
               )
             : new Date().getTime() < 16661088e5
             ? i.createElement(m.l_, {
-                to: l._.dpc_standings((0, Yt.B2)(e), (0, Yt.o5)(Jt.BY.GROUP_A)),
+                to: l._.dpc_standings((0, Jt.B2)(e), (0, Jt.o5)(Yt.BY.GROUP_A)),
               })
             : i.createElement(m.l_, {
-                to: l._.dpc_standings((0, Yt.B2)(e), (0, Yt.o5)(Jt.BY.PLAYOFF)),
+                to: l._.dpc_standings((0, Jt.B2)(e), (0, Jt.o5)(Yt.BY.PLAYOFF)),
               });
         }),
         wr = (0, c.Pi)(() =>
@@ -23362,7 +23362,7 @@
       (0, c.Pi)(() => {
         const e = kn(),
           t = jt.f.Get().GetEventInfo(e);
-        if (t.event != Jt._A.INTERNATIONAL_2021) return null;
+        if (t.event != Yt._A.INTERNATIONAL_2021) return null;
         const a = jt.f.Get().GetLeagueData(e, t.leagues[0].league_id);
         return i.createElement(
           "div",
@@ -23386,7 +23386,7 @@
       const Br = (0, c.Pi)(() => {
           const e = kn(),
             t = jt.f.Get().GetEventInfo(e);
-          if (t.event != Jt._A.INTERNATIONAL_2021) return null;
+          if (t.event != Yt._A.INTERNATIONAL_2021) return null;
           const a = jt.f.Get().GetLeagueData(e, t.leagues[0].league_id);
           let r = [];
           return (
@@ -23726,7 +23726,7 @@
         }),
         Lr = (0, c.Pi)(() => {
           const e = kn();
-          return jt.f.Get().GetEventInfo(e).event != Jt._A.INTERNATIONAL_2021
+          return jt.f.Get().GetEventInfo(e).event != Yt._A.INTERNATIONAL_2021
             ? null
             : i.createElement(
                 "div",
@@ -23760,7 +23760,7 @@
                       to: {
                         state: { bAutoScroll: !0 },
                         pathname: l._.dpc_schedule(
-                          (0, Yt.B2)(Jt._A.INTERNATIONAL_2021),
+                          (0, Jt.B2)(Yt._A.INTERNATIONAL_2021),
                         ),
                       },
                       className: Rr().LearnMoreButton,
@@ -23887,7 +23887,7 @@
         ),
         Pr = (0, c.Pi)(() => {
           const e = kn();
-          if (jt.f.Get().GetEventInfo(e).event != Jt._A.INTERNATIONAL_2021)
+          if (jt.f.Get().GetEventInfo(e).event != Yt._A.INTERNATIONAL_2021)
             return null;
           const t = [
             {
@@ -24033,7 +24033,7 @@
           var e;
           const t = kn(),
             a = jt.f.Get().GetEventInfo(t);
-          if (a.event != Jt._A.INTERNATIONAL_2022) return null;
+          if (a.event != Yt._A.INTERNATIONAL_2022) return null;
           const r = jt.f.Get().GetLeagueData(t, a.leagues[0].league_id),
             n =
               (null === (e = null == r ? void 0 : r.prize_pool) ||
@@ -24157,7 +24157,7 @@
             var e;
             const t = kn(),
               a = jt.f.Get().GetEventInfo(t);
-            if (a.event != Jt._A.INTERNATIONAL_2022) return null;
+            if (a.event != Yt._A.INTERNATIONAL_2022) return null;
             const r = jt.f.Get().GetLeagueData(t, a.leagues[0].league_id);
             let n = [];
             const o =
@@ -24503,7 +24503,7 @@
           }),
           (0, c.Pi)(() => {
             const e = kn();
-            return jt.f.Get().GetEventInfo(e).event != Jt._A.INTERNATIONAL_2022
+            return jt.f.Get().GetEventInfo(e).event != Yt._A.INTERNATIONAL_2022
               ? null
               : i.createElement(
                   "div",
@@ -24831,7 +24831,7 @@
         ),
         Hr = (0, c.Pi)(() => {
           const e = kn();
-          if (jt.f.Get().GetEventInfo(e).event != Jt._A.INTERNATIONAL_2022)
+          if (jt.f.Get().GetEventInfo(e).event != Yt._A.INTERNATIONAL_2022)
             return null;
           const t = [
             {
@@ -24994,7 +24994,7 @@
             .GetNextLeagueNode(e, null, null),
           r = jt.f.Get().GetLeagueNode(t, a);
         if (!r) return null;
-        if (jt.f.Get().GetSpoilerBlockState(e) == Jt.rE.BLOCKED) return null;
+        if (jt.f.Get().GetSpoilerBlockState(e) == Yt.rE.BLOCKED) return null;
         const n = jt.f.Get().GetTeamNames(r.team_id_1),
           o = jt.f.Get().GetTeamNames(r.team_id_2);
         if (!n || !o) return null;
@@ -25067,7 +25067,7 @@
               i.createElement(
                 d.rU,
                 {
-                  to: l._.dpc_schedule((0, Yt.B2)(e), `${t}`, `${a}`),
+                  to: l._.dpc_schedule((0, Jt.B2)(e), `${t}`, `${a}`),
                   className: zr().ScheduleButton,
                 },
                 i.createElement(
@@ -25080,9 +25080,9 @@
           ),
         );
       });
-      var Yr = a(38614),
-        Jr = a(36984),
-        $r = a.n(Jr);
+      var Jr = a(38614),
+        Yr = a(36984),
+        $r = a.n(Yr);
       function Zr(e, t) {
         return Array.from(
           Array.from(Array(t - e + 1).keys()).map((t) => t + e),
@@ -25137,10 +25137,10 @@
                   t &&
                     r.replace(
                       l._.dpc_watch(
-                        (0, Yt.B2)(e),
+                        (0, Jt.B2)(e),
                         `${t.nLeagueID}`,
                         `${t.nNodeID}`,
-                        (0, Yt.k8)(1, Yt.Uz.VOD),
+                        (0, Jt.k8)(1, Jt.Uz.VOD),
                       ),
                     );
                 } else if (a.length > 0) {
@@ -25161,10 +25161,10 @@
                   t &&
                     r.replace(
                       l._.dpc_watch(
-                        (0, Yt.B2)(e),
+                        (0, Jt.B2)(e),
                         `${t.nLeagueID}`,
                         `${t.nNodeID}`,
-                        (0, Yt.k8)(n, Yt.Uz.VOD),
+                        (0, Jt.k8)(n, Jt.Uz.VOD),
                       ),
                     );
                 }
@@ -25240,7 +25240,7 @@
           let u = "",
             g = "";
           switch (r.eSeriesDisplay) {
-            case Yt.Uz.SERIES:
+            case Jt.Uz.SERIES:
               if (
                 (null == s ||
                   s.forEach((e, t) => {
@@ -25250,10 +25250,10 @@
                       (11 == e.language && (e.language = 22),
                       e.broadcast_provider)
                     ) {
-                      case Jt.eQ.LEAGUE_BROADCAST_STEAM:
+                      case Yt.eQ.LEAGUE_BROADCAST_STEAM:
                         a = "#dpc_steam";
                         break;
-                      case Jt.eQ.LEAGUE_BROADCAST_TWITCH:
+                      case Yt.eQ.LEAGUE_BROADCAST_TWITCH:
                         a = "#dpc_twitch";
                     }
                     m.push({
@@ -25266,13 +25266,13 @@
                 (null == s ? void 0 : s.length) > e.nSelectedVideo)
               )
                 switch (s[e.nSelectedVideo].broadcast_provider) {
-                  case Jt.eQ.LEAGUE_BROADCAST_STEAM:
+                  case Yt.eQ.LEAGUE_BROADCAST_STEAM:
                     u = "#dpc_steam";
                     break;
-                  case Jt.eQ.LEAGUE_BROADCAST_TWITCH:
+                  case Yt.eQ.LEAGUE_BROADCAST_TWITCH:
                     u = "#dpc_twitch";
                     break;
-                  case Jt.eQ.LEAGUE_BROADCAST_YOUTUBE:
+                  case Yt.eQ.LEAGUE_BROADCAST_YOUTUBE:
                     u = "#dpc_youtube";
                 }
               g =
@@ -25280,7 +25280,7 @@
                   ? s[e.nSelectedVideo].stream_url
                   : "";
               break;
-            case Yt.Uz.VOD:
+            case Jt.Uz.VOD:
               null == c ||
                 c.forEach((e, t) => {
                   const a =
@@ -25294,10 +25294,10 @@
                       (11 == a.language && (a.language = 22),
                       a.broadcast_provider)
                     ) {
-                      case Jt.eQ.LEAGUE_BROADCAST_STEAM:
+                      case Yt.eQ.LEAGUE_BROADCAST_STEAM:
                         e = "#dpc_steam";
                         break;
-                      case Jt.eQ.LEAGUE_BROADCAST_TWITCH:
+                      case Yt.eQ.LEAGUE_BROADCAST_TWITCH:
                         e = "#dpc_twitch";
                     }
                     m.push({
@@ -25313,27 +25313,27 @@
                     : "");
           }
           const h = (null == c ? void 0 : c.length) > 0,
-            b = r.eSeriesDisplay == Yt.Uz.VOD,
+            b = r.eSeriesDisplay == Jt.Uz.VOD,
             f = l._.dpc_watch(
-              (0, Yt.B2)(a),
+              (0, Jt.B2)(a),
               `${r.nLeagueID}`,
               `${r.nNodeID}`,
-              (0, Yt.k8)(o, Yt.Uz.VOD),
+              (0, Jt.k8)(o, Jt.Uz.VOD),
             ),
-            S = r.eSeriesDisplay == Yt.Uz.DETAILS,
+            S = r.eSeriesDisplay == Jt.Uz.DETAILS,
             y = l._.dpc_watch(
-              (0, Yt.B2)(a),
+              (0, Jt.B2)(a),
               `${r.nLeagueID}`,
               `${r.nNodeID}`,
-              (0, Yt.k8)(o, Yt.Uz.DETAILS),
+              (0, Jt.k8)(o, Jt.Uz.DETAILS),
             ),
             C =
               _ &&
-              r.eSeriesDisplay == Yt.Uz.SERIES &&
+              r.eSeriesDisplay == Jt.Uz.SERIES &&
               (null == s ? void 0 : s.length) > 0 &&
               (null === (t = s[e.nSelectedVideo]) || void 0 === t
                 ? void 0
-                : t.broadcast_provider) == Jt.eQ.LEAGUE_BROADCAST_TWITCH;
+                : t.broadcast_provider) == Yt.eQ.LEAGUE_BROADCAST_TWITCH;
           return i.createElement(
             "div",
             { className: $r().DPCSeriesFooter },
@@ -25341,7 +25341,7 @@
               "div",
               { className: (0, E.Z)($r().LeftTabs, _ && $r().Hidden) },
               i.createElement(
-                Yt.RL,
+                Jt.RL,
                 {
                   to: f,
                   condition: h,
@@ -25451,7 +25451,7 @@
             a = jt.f.Get().GetWatchPageContext(),
             r = jt.f.Get().GetLeagueNode(a.nLeagueID, a.nNodeID),
             n = jt.f.Get().GetLeagueNodeInfo(a.nLeagueID, a.nNodeID),
-            o = (null == n ? void 0 : n.eNodeGroupType) == Jt.L$.ROUND_ROBIN,
+            o = (null == n ? void 0 : n.eNodeGroupType) == Yt.L$.ROUND_ROBIN,
             s =
               (null == r ? void 0 : r.is_completed) &&
               (null == r ? void 0 : r.team_1_wins) >
@@ -25463,19 +25463,19 @@
             m = 0 == (null == a ? void 0 : a.nNodeID);
           let _ = 0;
           switch (null == r ? void 0 : r.node_type) {
-            case Jt.bz.BEST_OF_ONE:
+            case Yt.bz.BEST_OF_ONE:
               _ = 1;
               break;
-            case Jt.bz.BEST_OF_TWO:
-            case Jt.bz.BEST_OF_THREE:
+            case Yt.bz.BEST_OF_TWO:
+            case Yt.bz.BEST_OF_THREE:
               _ = 2;
               break;
-            case Jt.bz.BEST_OF_FIVE:
+            case Yt.bz.BEST_OF_FIVE:
               _ = 3;
           }
           const u = jt.f
               .Get()
-              .GetNodeLabelStrings(e, a.nLeagueID, a.nNodeID, Jt.FH.LONG),
+              .GetNodeLabelStrings(e, a.nLeagueID, a.nNodeID, Yt.FH.LONG),
             p = !(null == r ? void 0 : r.has_started),
             g = jt.f.Get().IsLeagueNodeLive(e, a.nLeagueID, a.nNodeID),
             h = null == r ? void 0 : r.is_completed;
@@ -25500,7 +25500,7 @@
               d.rU,
               {
                 to: l._.dpc_schedule(
-                  (0, Yt.B2)(e),
+                  (0, Jt.B2)(e),
                   `${a.nLeagueID}`,
                   `${a.nNodeID}`,
                 ),
@@ -25559,7 +25559,7 @@
             r = null == a ? void 0 : a.is_completed;
           let n = a ? a.matches.length : 0;
           return (
-            jt.f.Get().GetSpoilerBlockState(e) == Jt.rE.BLOCKED &&
+            jt.f.Get().GetSpoilerBlockState(e) == Yt.rE.BLOCKED &&
               (n = jt.f
                 .Get()
                 .GetNodeTypeGameCount(null == a ? void 0 : a.node_type)),
@@ -25574,15 +25574,15 @@
               Zr(1, n).map((a) => {
                 const r = t.nSeriesGame == a,
                   o =
-                    t.eSeriesDisplay == Yt.Uz.SERIES
-                      ? Yt.Uz.GAME
+                    t.eSeriesDisplay == Jt.Uz.SERIES
+                      ? Jt.Uz.GAME
                       : t.eSeriesDisplay,
-                  s = r ? (0, Yt.k8)(0, Yt.Uz.SERIES) : (0, Yt.k8)(a, o);
+                  s = r ? (0, Jt.k8)(0, Jt.Uz.SERIES) : (0, Jt.k8)(a, o);
                 return i.createElement(
                   d.rU,
                   {
                     to: l._.dpc_watch(
-                      (0, Yt.B2)(e),
+                      (0, Jt.B2)(e),
                       `${t.nLeagueID}`,
                       `${t.nNodeID}`,
                       s,
@@ -25636,7 +25636,7 @@
                   e,
                 ),
               g = p ? `${p.wins} - ${p.losses}` : "",
-              h = jt.f.Get().GetSpoilerBlockState(l) == Jt.rE.BLOCKED;
+              h = jt.f.Get().GetSpoilerBlockState(l) == Yt.rE.BLOCKED;
             return i.createElement(
               "div",
               {
@@ -25699,7 +25699,7 @@
             t = qr(),
             a = jt.f.Get().GetWatchPageContext();
           return (
-            jt.f.Get().GetSpoilerBlockState(e) == Jt.rE.UNBLOCKED &&
+            jt.f.Get().GetSpoilerBlockState(e) == Yt.rE.UNBLOCKED &&
               jt.f.Get().SetGameWatched(a.nLeagueID, a.nNodeID, a.nSeriesGame),
             i.createElement(
               "div",
@@ -25722,7 +25722,7 @@
             t = jt.f.Get().GetWatchPageContext(),
             a = jt.f.Get().GetLeagueNode(t.nLeagueID, t.nNodeID),
             r =
-              t.eSeriesDisplay == Yt.Uz.SERIES &&
+              t.eSeriesDisplay == Jt.Uz.SERIES &&
               (null == a ? void 0 : a.is_completed) &&
               !jt.f.Get().IsLeagueNodeLive(e, t.nLeagueID, t.nNodeID),
             n = a && a.team_1_wins == a.team_2_wins,
@@ -25746,10 +25746,10 @@
             ),
             d = jt.f.Get().GetTeamNames(s),
             m = n ? "" : null == d ? void 0 : d.name,
-            _ = jt.f.Get().GetSpoilerBlockState(e) == Jt.rE.BLOCKED;
+            _ = jt.f.Get().GetSpoilerBlockState(e) == Yt.rE.BLOCKED;
           return r
-            ? jt.f.Get().GetSpoilerBlockState(e) == Jt.rE.UNKNOWN ||
-              jt.f.Get().GetSpoilerBlockState(e) == Jt.rE.PENDING
+            ? jt.f.Get().GetSpoilerBlockState(e) == Yt.rE.UNKNOWN ||
+              jt.f.Get().GetSpoilerBlockState(e) == Yt.rE.PENDING
               ? null
               : i.createElement(
                   "div",
@@ -25836,7 +25836,7 @@
             t = jt.f.Get().GetWatchPageContext(),
             a = jt.f.Get().GetLeagueNode(t.nLeagueID, t.nNodeID),
             r =
-              t.eSeriesDisplay == Yt.Uz.GAME &&
+              t.eSeriesDisplay == Jt.Uz.GAME &&
               (null == a ? void 0 : a.is_completed),
             n = t.nSeriesGame - 1,
             o =
@@ -25845,7 +25845,7 @@
                 : void 0,
             s = o ? jt.f.Get().GetMatchData(t.nLeagueID, o.match_id) : void 0,
             c =
-              (null == s ? void 0 : s.match_outcome) == Jt.cu.RADIANT_VICTORY
+              (null == s ? void 0 : s.match_outcome) == Yt.cu.RADIANT_VICTORY
                 ? null == s
                   ? void 0
                   : s.tourney.radiant_team_id
@@ -25856,12 +25856,12 @@
             _ = (null == a ? void 0 : a.vods.length) > 0;
           if (!r) return null;
           if (
-            jt.f.Get().GetSpoilerBlockState(e) == Jt.rE.UNKNOWN ||
-            jt.f.Get().GetSpoilerBlockState(e) == Jt.rE.PENDING
+            jt.f.Get().GetSpoilerBlockState(e) == Yt.rE.UNKNOWN ||
+            jt.f.Get().GetSpoilerBlockState(e) == Yt.rE.PENDING
           )
             return null;
           const u =
-            !(jt.f.Get().GetSpoilerBlockState(e) == Jt.rE.BLOCKED) ||
+            !(jt.f.Get().GetSpoilerBlockState(e) == Yt.rE.BLOCKED) ||
             jt.f.Get().AreAllGamesWatched(t.nLeagueID, t.nNodeID);
           return i.createElement(
             "div",
@@ -25895,10 +25895,10 @@
                 d.rU,
                 {
                   to: l._.dpc_watch(
-                    (0, Yt.B2)(e),
+                    (0, Jt.B2)(e),
                     `${t.nLeagueID}`,
                     `${t.nNodeID}`,
-                    (0, Yt.k8)(t.nSeriesGame, Yt.Uz.VOD),
+                    (0, Jt.k8)(t.nSeriesGame, Jt.Uz.VOD),
                   ),
                   className: (0, E.Z)($r().WatchVod, !_ && $r().Disabled),
                 },
@@ -25908,10 +25908,10 @@
                 d.rU,
                 {
                   to: l._.dpc_watch(
-                    (0, Yt.B2)(e),
+                    (0, Jt.B2)(e),
                     `${t.nLeagueID}`,
                     `${t.nNodeID}`,
-                    (0, Yt.k8)(t.nSeriesGame, Yt.Uz.DETAILS),
+                    (0, Jt.k8)(t.nSeriesGame, Jt.Uz.DETAILS),
                   ),
                   className: $r().Details,
                 },
@@ -25925,13 +25925,13 @@
             t = jt.f.Get().GetWatchPageContext(),
             a = jt.f.Get().GetLeagueNode(t.nLeagueID, t.nNodeID),
             r =
-              t.eSeriesDisplay == Yt.Uz.DETAILS &&
+              t.eSeriesDisplay == Jt.Uz.DETAILS &&
               (null == a ? void 0 : a.is_completed),
             [n, o] = (0, i.useState)(0),
             s = t.nSeriesGame > (null == a ? void 0 : a.matches.length);
           return r
-            ? jt.f.Get().GetSpoilerBlockState(e) == Jt.rE.UNKNOWN ||
-              jt.f.Get().GetSpoilerBlockState(e) == Jt.rE.PENDING
+            ? jt.f.Get().GetSpoilerBlockState(e) == Yt.rE.UNKNOWN ||
+              jt.f.Get().GetSpoilerBlockState(e) == Yt.rE.PENDING
               ? null
               : i.createElement(
                   "div",
@@ -26132,12 +26132,12 @@
               _ =
                 (m &&
                   (null == c ? void 0 : c.match_outcome) ==
-                    Jt.cu.RADIANT_VICTORY) ||
+                    Yt.cu.RADIANT_VICTORY) ||
                 (!m &&
-                  (null == c ? void 0 : c.match_outcome) == Jt.cu.DIRE_VICTORY),
+                  (null == c ? void 0 : c.match_outcome) == Yt.cu.DIRE_VICTORY),
               u = c ? (m ? "#radiant" : "#dire") : "",
               p =
-                jt.f.Get().GetSpoilerBlockState(o) == Jt.rE.BLOCKED &&
+                jt.f.Get().GetSpoilerBlockState(o) == Yt.rE.BLOCKED &&
                 !jt.f
                   .Get()
                   .IsGameWatched(s.nLeagueID, s.nNodeID, s.nSeriesGame);
@@ -26260,7 +26260,7 @@
               C = l ? (0, v.Jr)("#dpc_hero_level", c) : void 0,
               T = r == s || (0 == r && t == s),
               I =
-                jt.f.Get().GetSpoilerBlockState(g) == Jt.rE.BLOCKED &&
+                jt.f.Get().GetSpoilerBlockState(g) == Yt.rE.BLOCKED &&
                 !jt.f
                   .Get()
                   .IsGameWatched(h.nLeagueID, h.nNodeID, h.nSeriesGame);
@@ -26333,7 +26333,7 @@
             const e = c.split("?t=");
             (c = e[0]), (d = parseInt(e[1]));
           }
-          const _ = r.eSeriesDisplay == Yt.Uz.VOD;
+          const _ = r.eSeriesDisplay == Jt.Uz.VOD;
           return (
             c &&
               jt.f.Get().SetGameWatched(r.nLeagueID, r.nNodeID, r.nSeriesGame),
@@ -26343,16 +26343,16 @@
                 !c &&
                 t.replace(
                   l._.dpc_watch(
-                    (0, Yt.B2)(e),
+                    (0, Jt.B2)(e),
                     `${r.nLeagueID}`,
                     `${r.nNodeID}`,
-                    (0, Yt.k8)(r.nSeriesGame, Yt.Uz.DETAILS),
+                    (0, Jt.k8)(r.nSeriesGame, Jt.Uz.DETAILS),
                   ),
                 );
             }, [_, t, r, e, c, n]),
             _
-              ? jt.f.Get().GetSpoilerBlockState(e) == Jt.rE.UNKNOWN ||
-                jt.f.Get().GetSpoilerBlockState(e) == Jt.rE.PENDING
+              ? jt.f.Get().GetSpoilerBlockState(e) == Yt.rE.UNKNOWN ||
+                jt.f.Get().GetSpoilerBlockState(e) == Yt.rE.PENDING
                 ? null
                 : i.createElement(
                     "div",
@@ -26366,7 +26366,7 @@
                       "div",
                       { key: `${c}_${d}`, className: $r().VideoContainer },
                       c &&
-                        i.createElement(Yr.e, {
+                        i.createElement(Jr.e, {
                           classnames: $r().YouTubePlayer,
                           video: c,
                           autoplay: !1,
@@ -26401,7 +26401,7 @@
           const c = "www.dota2.com";
           if (o)
             switch (null == o ? void 0 : o.broadcast_provider) {
-              case Jt.eQ.LEAGUE_BROADCAST_TWITCH:
+              case Yt.eQ.LEAGUE_BROADCAST_TWITCH:
                 (s = `https://player.twitch.tv/?video-with-chat=true&channel=${
                   null == o
                     ? void 0
@@ -26417,7 +26417,7 @@
                           .replace("https://twitch.tv/", "")
                   }/chat?darkpopout&parent=${c}`);
                 break;
-              case Jt.eQ.LEAGUE_BROADCAST_STEAM:
+              case Yt.eQ.LEAGUE_BROADCAST_STEAM:
                 s = `${p.Y.COMMUNITY_URL}broadcast/watchnew/${
                   null == o
                     ? void 0
@@ -26431,8 +26431,8 @@
             s &&
               jt.f.Get().SetGameWatched(a.nLeagueID, a.nNodeID, a.nSeriesGame),
             r
-              ? jt.f.Get().GetSpoilerBlockState(e) == Jt.rE.UNKNOWN ||
-                jt.f.Get().GetSpoilerBlockState(e) == Jt.rE.PENDING
+              ? jt.f.Get().GetSpoilerBlockState(e) == Yt.rE.UNKNOWN ||
+                jt.f.Get().GetSpoilerBlockState(e) == Yt.rE.PENDING
                 ? null
                 : i.createElement(
                     "div",
@@ -26508,7 +26508,7 @@
                 : t.filter((e) => (null == l ? void 0 : l.includes(e))),
             g = r < (null == u ? void 0 : u.length);
           return (u && 0 != u.length) || d === pn.FAVORITE
-            ? a === Jt._A.INTERNATIONAL_2022
+            ? a === Yt._A.INTERNATIONAL_2022
               ? null
               : i.createElement(
                   "div",
@@ -26617,7 +26617,7 @@
                 t,
                 null == f ? void 0 : f.nLeagueID,
                 null == f ? void 0 : f.nNodeID,
-                Jt.FH.LONG,
+                Yt.FH.LONG,
               ),
             D = jt.f
               .Get()
@@ -26625,7 +26625,7 @@
                 t,
                 null == S ? void 0 : S.nLeagueID,
                 null == S ? void 0 : S.nNodeID,
-                Jt.FH.LONG,
+                Yt.FH.LONG,
               ),
             R = jt.f
               .Get()
@@ -26671,7 +26671,7 @@
                 : R.team_1_wins,
             O = null == r ? void 0 : r.includes(e),
             x = 0 != p.Y.ACCOUNT_ID,
-            F = jt.f.Get().GetSpoilerBlockState(t) == Jt.rE.BLOCKED,
+            F = jt.f.Get().GetSpoilerBlockState(t) == Yt.rE.BLOCKED,
             U =
               F &&
               jt.f
@@ -26706,17 +26706,17 @@
                 .IsLeagueNodeBracket(
                   null == S ? void 0 : S.nLeagueID,
                   null == S ? void 0 : S.nNodeID,
-                ) || a.event_type == Jt.f5.MAJOR;
+                ) || a.event_type == Yt.f5.MAJOR;
           let W = "";
           return (
             U ||
               y ||
               !R ||
               (W = l._.dpc_watch(
-                (0, Yt.B2)(t),
+                (0, Jt.B2)(t),
                 `${null == S ? void 0 : S.nLeagueID}`,
                 `${null == S ? void 0 : S.nNodeID}`,
-                (0, Yt.k8)(0, Yt.Uz.VOD),
+                (0, Jt.k8)(0, Jt.Uz.VOD),
               )),
             i.createElement(
               "div",
@@ -26922,7 +26922,7 @@
                   (null == a ? void 0 : a.actual_time)
                 );
               });
-          return a.length < 3 || e === Jt._A.INTERNATIONAL_2022
+          return a.length < 3 || e === Yt._A.INTERNATIONAL_2022
             ? null
             : i.createElement(
                 "div",
@@ -26972,10 +26972,10 @@
             r = null == a ? void 0 : a.actual_time,
             n = jt.f
               .Get()
-              .GetNodeLabelStrings(t, e.nLeagueID, e.nNodeID, Jt.FH.LONG),
+              .GetNodeLabelStrings(t, e.nLeagueID, e.nNodeID, Yt.FH.LONG),
             o = jt.f.Get().GetTeamInfo(null == a ? void 0 : a.team_id_1),
             s = jt.f.Get().GetTeamInfo(null == a ? void 0 : a.team_id_2),
-            c = jt.f.Get().GetSpoilerBlockState(t) == Jt.rE.BLOCKED,
+            c = jt.f.Get().GetSpoilerBlockState(t) == Yt.rE.BLOCKED,
             m = jt.f.Get().IsAnyGameWatched(e.nLeagueID, e.nNodeID),
             _ = jt.f.Get().AreAllGamesWatched(e.nLeagueID, e.nNodeID),
             u =
@@ -27042,10 +27042,10 @@
                     to: {
                       state: { bAutoScroll: !0 },
                       pathname: l._.dpc_watch(
-                        (0, Yt.B2)(t),
+                        (0, Jt.B2)(t),
                         `${e.nLeagueID}`,
                         `${e.nNodeID}`,
-                        (0, Yt.k8)(1, Yt.Uz.VOD),
+                        (0, Jt.k8)(1, Jt.Uz.VOD),
                       ),
                     },
                     className: fn().WatchVod,
@@ -27061,14 +27061,14 @@
       const In = (0, c.Pi)(({ ePhase: e, eDivision: t }) => {
         const a = kn();
         let r = [];
-        t == Jt.sd.DIVISION_I &&
+        t == Yt.sd.DIVISION_I &&
           r.push({
             nMin: 7,
             nMax: 8,
             strColor: "#922820",
             strDescription: "#dpc_relegated_to_div_ii",
           }),
-          t == Jt.sd.DIVISION_II &&
+          t == Yt.sd.DIVISION_II &&
             (r.push({
               nMin: 1,
               nMax: 2,
@@ -27089,7 +27089,7 @@
           i.createElement(
             "div",
             { className: (0, E.Z)(Tn().TeamLists, !o && Tn().NoData) },
-            Object.values(Jt.dO).map((n) =>
+            Object.values(Yt.dO).map((n) =>
               jt.f.Get().BEventHasRegion(a, n)
                 ? i.createElement(Sr, {
                     key: n,
@@ -27141,13 +27141,13 @@
       const Dn = (0, c.Pi)(() => {
         const e = kn(),
           t = jt.f.Get().GetEventInfo(e),
-          [a, r] = (0, i.useState)(Jt.sd.DIVISION_I);
-        if (jt.f.Get().GetEventType(e) != Jt.f5.LEAGUE) return null;
-        if (jt.f.Get().GetSpoilerBlockState(e) == Jt.rE.BLOCKED) return null;
+          [a, r] = (0, i.useState)(Yt.sd.DIVISION_I);
+        if (jt.f.Get().GetEventType(e) != Yt.f5.LEAGUE) return null;
+        if (jt.f.Get().GetSpoilerBlockState(e) == Yt.rE.BLOCKED) return null;
         if (t.is_event_upcoming) return null;
         const n = [
-          { value: Jt.sd.DIVISION_I, strLabel: "#dpc_division_i" },
-          { value: Jt.sd.DIVISION_II, strLabel: "#dpc_division_ii" },
+          { value: Yt.sd.DIVISION_I, strLabel: "#dpc_division_i" },
+          { value: Yt.sd.DIVISION_II, strLabel: "#dpc_division_ii" },
         ];
         return i.createElement(
           "div",
@@ -27172,7 +27172,7 @@
               setOption: r,
             }),
           ),
-          i.createElement(In, { ePhase: Jt.BY.OVERALL, eDivision: a }),
+          i.createElement(In, { ePhase: Yt.BY.OVERALL, eDivision: a }),
           i.createElement(I.p, {
             bottom: !0,
             color: "#161618",
@@ -27190,10 +27190,10 @@
         if (!e.strLeagueID || !e.strNodeID || !e.strSeriesDisplay)
           return i.createElement(m.l_, {
             to: l._.dpc_watch(
-              (0, Yt.B2)(t),
-              e.strLeagueID || (0, Yt.Mt)(t),
-              e.strNodeID || (0, Yt.tP)(t),
-              e.strSeriesDisplay || (0, Yt.HL)(),
+              (0, Jt.B2)(t),
+              e.strLeagueID || (0, Jt.Mt)(t),
+              e.strNodeID || (0, Jt.tP)(t),
+              e.strSeriesDisplay || (0, Jt.HL)(),
             ),
           });
         if ("0" == e.strLeagueID) {
@@ -27201,14 +27201,14 @@
           if (a.nLeagueID && a.nNodeID)
             return i.createElement(m.l_, {
               to: l._.dpc_watch(
-                (0, Yt.B2)(t),
+                (0, Jt.B2)(t),
                 `${a.nLeagueID}`,
                 `${a.nNodeID}`,
-                e.strSeriesDisplay || (0, Yt.HL)(),
+                e.strSeriesDisplay || (0, Jt.HL)(),
               ),
             });
         }
-        const a = (0, Yt.e)(e.strSeriesDisplay);
+        const a = (0, Jt.e)(e.strSeriesDisplay);
         return (
           jt.f
             .Get()
@@ -27698,7 +27698,7 @@
       }
       const xn = (0, c.Pi)(() => {
           const e = kn();
-          return e != Jt._A.SPRING_2021_LEAGUE
+          return e != Yt._A.SPRING_2021_LEAGUE
             ? null
             : i.createElement(
                 "div",
@@ -27758,10 +27758,10 @@
                       to: {
                         state: { bAutoScroll: !0 },
                         pathname: l._.dpc_standings(
-                          (0, Yt.B2)(e),
-                          (0, Yt.o5)(Jt.BY.RESULTS),
+                          (0, Jt.B2)(e),
+                          (0, Jt.o5)(Yt.BY.RESULTS),
                           `${jt.f.Get().GetDefaultRegion(e)}_${
-                            Jt.sd.DIVISION_I
+                            Yt.sd.DIVISION_I
                           }`,
                         ),
                       },
@@ -27774,7 +27774,7 @@
         }),
         Fn = (0, c.Pi)(() => {
           const e = kn();
-          return e != Jt._A.SPRING_2021_MAJOR
+          return e != Yt._A.SPRING_2021_MAJOR
             ? null
             : i.createElement(
                 "div",
@@ -27897,10 +27897,10 @@
                       to: {
                         state: { bAutoScroll: !0 },
                         pathname: l._.dpc_standings(
-                          (0, Yt.B2)(e),
-                          (0, Yt.o5)(Jt.BY.RESULTS),
+                          (0, Jt.B2)(e),
+                          (0, Jt.o5)(Yt.BY.RESULTS),
                           `${jt.f.Get().GetDefaultRegion(e)}_${
-                            Jt.sd.DIVISION_I
+                            Yt.sd.DIVISION_I
                           }`,
                         ),
                       },
@@ -27913,7 +27913,7 @@
         }),
         Un = (0, c.Pi)(() => {
           const e = kn();
-          return e != Jt._A.INTERNATIONAL_2021_QUALIFIERS
+          return e != Yt._A.INTERNATIONAL_2021_QUALIFIERS
             ? null
             : i.createElement(
                 "div",
@@ -27926,7 +27926,7 @@
                     {
                       to: {
                         state: { bAutoScroll: !0 },
-                        pathname: l._.dpc_watch((0, Yt.B2)(e)),
+                        pathname: l._.dpc_watch((0, Jt.B2)(e)),
                       },
                       className: Aa().CenterContent,
                       "data-aos": "zoom-out",
@@ -27985,10 +27985,10 @@
                       to: {
                         state: { bAutoScroll: !0 },
                         pathname: l._.dpc_standings(
-                          (0, Yt.B2)(e),
-                          (0, Yt.o5)(Jt.BY.RESULTS),
+                          (0, Jt.B2)(e),
+                          (0, Jt.o5)(Yt.BY.RESULTS),
                           `${jt.f.Get().GetDefaultRegion(e)}_${
-                            Jt.sd.DIVISION_I
+                            Yt.sd.DIVISION_I
                           }`,
                         ),
                       },
@@ -28001,7 +28001,7 @@
         }),
         Hn = (0, c.Pi)(() => {
           const e = kn();
-          return e != Jt._A.INTERNATIONAL_2021
+          return e != Yt._A.INTERNATIONAL_2021
             ? null
             : i.createElement(
                 "div",
@@ -28014,7 +28014,7 @@
                     {
                       to: {
                         state: { bAutoScroll: !0 },
-                        pathname: l._.dpc_watch((0, Yt.B2)(e)),
+                        pathname: l._.dpc_watch((0, Jt.B2)(e)),
                       },
                       className: Aa().CenterContent,
                       "data-aos": "zoom-out",
@@ -28096,7 +28096,7 @@
               );
         }),
         Vn = (0, c.Pi)(() =>
-          kn() != Jt._A.WINTER_2021_LEAGUE
+          kn() != Yt._A.WINTER_2021_LEAGUE
             ? null
             : i.createElement(
                 "div",
@@ -28149,7 +28149,7 @@
               ),
         ),
         Wn = (0, c.Pi)(() =>
-          kn() != Jt._A.WINTER_2021_LEAGUE_FINALS
+          kn() != Yt._A.WINTER_2021_LEAGUE_FINALS
             ? null
             : i.createElement(
                 "div",
@@ -28202,7 +28202,7 @@
               ),
         ),
         zn = (0, c.Pi)(() =>
-          kn() != Jt._A.SPRING_2022_LEAGUE
+          kn() != Yt._A.SPRING_2022_LEAGUE
             ? null
             : i.createElement(
                 "div",
@@ -28255,7 +28255,7 @@
               ),
         ),
         jn = (0, c.Pi)(() =>
-          kn() != Jt._A.SPRING_2022_MAJOR
+          kn() != Yt._A.SPRING_2022_MAJOR
             ? null
             : i.createElement(
                 "div",
@@ -28347,8 +28347,8 @@
                 ),
               ),
         ),
-        Yn = (0, c.Pi)(() =>
-          kn() != Jt._A.CHINA_SPRING_2022_LEAGUE_FINALS
+        Jn = (0, c.Pi)(() =>
+          kn() != Yt._A.CHINA_SPRING_2022_LEAGUE_FINALS
             ? null
             : i.createElement(
                 "div",
@@ -28400,9 +28400,9 @@
                 ),
               ),
         ),
-        Jn = (0, c.Pi)(() => {
+        Yn = (0, c.Pi)(() => {
           const e = kn();
-          return e != Jt._A.SUMMER_2022_LEAGUE
+          return e != Yt._A.SUMMER_2022_LEAGUE
             ? null
             : i.createElement(
                 "div",
@@ -28472,10 +28472,10 @@
                           to: {
                             state: { bAutoScroll: !0 },
                             pathname: l._.dpc_standings(
-                              (0, Yt.B2)(e),
-                              (0, Yt.o5)(Jt.BY.RESULTS),
+                              (0, Jt.B2)(e),
+                              (0, Jt.o5)(Yt.BY.RESULTS),
                               `${jt.f.Get().GetDefaultRegion(e)}_${
-                                Jt.sd.DIVISION_I
+                                Yt.sd.DIVISION_I
                               }`,
                             ),
                           },
@@ -28490,7 +28490,7 @@
         }),
         $n = (0, c.Pi)(() => {
           const e = kn();
-          return e != Jt._A.SUMMER_2022_MAJOR
+          return e != Yt._A.SUMMER_2022_MAJOR
             ? null
             : i.createElement(
                 "div",
@@ -28623,10 +28623,10 @@
                           to: {
                             state: { bAutoScroll: !0 },
                             pathname: l._.dpc_standings(
-                              (0, Yt.B2)(e),
-                              (0, Yt.o5)(Jt.BY.RESULTS),
+                              (0, Jt.B2)(e),
+                              (0, Jt.o5)(Yt.BY.RESULTS),
                               `${jt.f.Get().GetDefaultRegion(e)}_${
-                                Jt.sd.DIVISION_I
+                                Yt.sd.DIVISION_I
                               }`,
                             ),
                           },
@@ -28641,7 +28641,7 @@
         }),
         Zn = (0, c.Pi)(() => {
           const e = kn();
-          return e != Jt._A.INTERNATIONAL_2022_LASTCHANCE
+          return e != Yt._A.INTERNATIONAL_2022_LASTCHANCE
             ? null
             : i.createElement(
                 "div",
@@ -28714,7 +28714,7 @@
                         {
                           to: {
                             state: { bAutoScroll: !0 },
-                            pathname: l._.dpc_watch((0, Yt.B2)(e)),
+                            pathname: l._.dpc_watch((0, Jt.B2)(e)),
                           },
                           className: Aa().CenterContent,
                         },
@@ -28748,8 +28748,8 @@
                           to: {
                             state: { bAutoScroll: !0 },
                             pathname: l._.dpc_standings(
-                              (0, Yt.B2)(e),
-                              (0, Yt.o5)(Jt.BY.PLAYOFF),
+                              (0, Jt.B2)(e),
+                              (0, Jt.o5)(Yt.BY.PLAYOFF),
                             ),
                           },
                           className: Aa().EventResultsButton,
@@ -28764,9 +28764,9 @@
         Xn = (0, c.Pi)(() => {
           var e;
           const t = kn();
-          if (t != Jt._A.INTERNATIONAL_2022) return null;
+          if (t != Yt._A.INTERNATIONAL_2022) return null;
           const a = jt.f.Get().GetEventInfo(t);
-          if (a.event != Jt._A.INTERNATIONAL_2022) return null;
+          if (a.event != Yt._A.INTERNATIONAL_2022) return null;
           const r = jt.f.Get().GetLeagueData(t, a.leagues[0].league_id),
             n =
               (null === (e = null == r ? void 0 : r.prize_pool) || void 0 === e
@@ -28857,7 +28857,7 @@
                     {
                       to: {
                         state: { bAutoScroll: !0 },
-                        pathname: l._.dpc_watch((0, Yt.B2)(t)),
+                        pathname: l._.dpc_watch((0, Jt.B2)(t)),
                       },
                       className: Aa().CenterContent,
                       "data-aos": "zoom-out",
@@ -28898,8 +28898,8 @@
                       to: {
                         state: { bAutoScroll: !0 },
                         pathname: l._.dpc_standings(
-                          (0, Yt.B2)(t),
-                          (0, Yt.o5)(Jt.BY.RESULTS),
+                          (0, Jt.B2)(t),
+                          (0, Jt.o5)(Yt.BY.RESULTS),
                         ),
                       },
                       className: Aa().EventResultsButton,
@@ -28913,7 +28913,7 @@
         }),
         qn = (0, c.Pi)(() => {
           const e = kn();
-          return e != Jt._A.WINTER_2023_LEAGUE
+          return e != Yt._A.WINTER_2023_LEAGUE
             ? null
             : i.createElement(
                 "div",
@@ -29001,8 +29001,8 @@
                               to: {
                                 state: { bAutoScroll: !0 },
                                 pathname: l._.dpc_standings(
-                                  (0, Yt.B2)(e),
-                                  (0, Yt.o5)(Jt.BY.RESULTS),
+                                  (0, Jt.B2)(e),
+                                  (0, Jt.o5)(Yt.BY.RESULTS),
                                 ),
                               },
                               className: Aa().W23EventResultsButton,
@@ -29017,7 +29017,7 @@
         }),
         Kn = (0, c.Pi)(() => {
           const e = kn();
-          return e != Jt._A.WINTER_2023_MAJOR
+          return e != Yt._A.WINTER_2023_MAJOR
             ? null
             : i.createElement(
                 "div",
@@ -29167,8 +29167,8 @@
                               to: {
                                 state: { bAutoScroll: !0 },
                                 pathname: l._.dpc_standings(
-                                  (0, Yt.B2)(e),
-                                  (0, Yt.o5)(Jt.BY.RESULTS),
+                                  (0, Jt.B2)(e),
+                                  (0, Jt.o5)(Yt.BY.RESULTS),
                                 ),
                               },
                               className: Aa().W23EventResultsButton,
@@ -29183,7 +29183,7 @@
         }),
         Qn = (0, c.Pi)(() => {
           const e = kn();
-          return e != Jt._A.SPRING_2023_LEAGUE
+          return e != Yt._A.SPRING_2023_LEAGUE
             ? null
             : i.createElement(
                 "div",
@@ -29271,8 +29271,8 @@
                               to: {
                                 state: { bAutoScroll: !0 },
                                 pathname: l._.dpc_standings(
-                                  (0, Yt.B2)(e),
-                                  (0, Yt.o5)(Jt.BY.RESULTS),
+                                  (0, Jt.B2)(e),
+                                  (0, Jt.o5)(Yt.BY.RESULTS),
                                 ),
                               },
                               className: Aa().Spring23EventResultsButton,
@@ -29287,7 +29287,7 @@
         }),
         ei = (0, c.Pi)(() => {
           const e = kn();
-          return e != Jt._A.SPRING_2023_MAJOR
+          return e != Yt._A.SPRING_2023_MAJOR
             ? null
             : i.createElement(
                 "div",
@@ -29438,8 +29438,8 @@
                               to: {
                                 state: { bAutoScroll: !0 },
                                 pathname: l._.dpc_standings(
-                                  (0, Yt.B2)(e),
-                                  (0, Yt.o5)(Jt.BY.RESULTS),
+                                  (0, Jt.B2)(e),
+                                  (0, Jt.o5)(Yt.BY.RESULTS),
                                 ),
                               },
                               className: Aa().SpringMajor23EventResultsButton,
@@ -29454,7 +29454,7 @@
         }),
         ti = (0, c.Pi)(() => {
           const e = kn();
-          return e != Jt._A.SUMMER_2023_LEAGUE
+          return e != Yt._A.SUMMER_2023_LEAGUE
             ? null
             : i.createElement(
                 "div",
@@ -29542,8 +29542,8 @@
                               to: {
                                 state: { bAutoScroll: !0 },
                                 pathname: l._.dpc_standings(
-                                  (0, Yt.B2)(e),
-                                  (0, Yt.o5)(Jt.BY.RESULTS),
+                                  (0, Jt.B2)(e),
+                                  (0, Jt.o5)(Yt.BY.RESULTS),
                                 ),
                               },
                               className: Aa().Summer23EventResultsButton,
@@ -29558,7 +29558,7 @@
         }),
         ai = (0, c.Pi)(() => {
           const e = kn();
-          return e != Jt._A.SUMMER_2023_MAJOR
+          return e != Yt._A.SUMMER_2023_MAJOR
             ? null
             : i.createElement(
                 "div",
@@ -29704,8 +29704,8 @@
                               to: {
                                 state: { bAutoScroll: !0 },
                                 pathname: l._.dpc_standings(
-                                  (0, Yt.B2)(e),
-                                  (0, Yt.o5)(Jt.BY.RESULTS),
+                                  (0, Jt.B2)(e),
+                                  (0, Jt.o5)(Yt.BY.RESULTS),
                                 ),
                               },
                               className: Aa().SummerMajor23EventResultsButton,
@@ -29720,8 +29720,8 @@
         }),
         ri = (0, c.Pi)(() => {
           const e = kn();
-          if (e != Jt._A.INTERNATIONAL_2023) return null;
-          return jt.f.Get().GetEventInfo(e).event != Jt._A.INTERNATIONAL_2023
+          if (e != Yt._A.INTERNATIONAL_2023) return null;
+          return jt.f.Get().GetEventInfo(e).event != Yt._A.INTERNATIONAL_2023
             ? null
             : i.createElement(i.Fragment, null);
         }),
@@ -29730,50 +29730,50 @@
           let t = "#212026",
             a = "#212026";
           switch (e) {
-            case Jt._A.SPRING_2021_LEAGUE:
+            case Yt._A.SPRING_2021_LEAGUE:
               (t = "#0E4830"), (a = "#142030");
               break;
-            case Jt._A.SPRING_2021_MAJOR:
+            case Yt._A.SPRING_2021_MAJOR:
               (t = "#081121"), (a = "#081121");
               break;
-            case Jt._A.INTERNATIONAL_2021_QUALIFIERS:
-            case Jt._A.INTERNATIONAL_2021:
+            case Yt._A.INTERNATIONAL_2021_QUALIFIERS:
+            case Yt._A.INTERNATIONAL_2021:
               (t = "#141416"), (a = "#141416");
               break;
-            case Jt._A.WINTER_2021_LEAGUE:
-            case Jt._A.WINTER_2021_LEAGUE_FINALS:
+            case Yt._A.WINTER_2021_LEAGUE:
+            case Yt._A.WINTER_2021_LEAGUE_FINALS:
               (t = "#39445a"), (a = "#39445a");
               break;
-            case Jt._A.SPRING_2022_LEAGUE:
+            case Yt._A.SPRING_2022_LEAGUE:
               (t = "#456462"), (a = "#42605e");
               break;
-            case Jt._A.SPRING_2022_MAJOR:
+            case Yt._A.SPRING_2022_MAJOR:
               (t = "#bbde04"), (a = "#c2cdcf");
               break;
-            case Jt._A.CHINA_SPRING_2022_LEAGUE_FINALS:
+            case Yt._A.CHINA_SPRING_2022_LEAGUE_FINALS:
               (t = "#456462"), (a = "#42605e");
               break;
-            case Jt._A.SUMMER_2022_LEAGUE:
+            case Yt._A.SUMMER_2022_LEAGUE:
               (t = "#c0317d"), (a = "#439594");
               break;
-            case Jt._A.SUMMER_2022_MAJOR:
+            case Yt._A.SUMMER_2022_MAJOR:
               (t = "#ffa800"), (a = "#d9d9d9");
               break;
-            case Jt._A.INTERNATIONAL_2022_LASTCHANCE:
-            case Jt._A.INTERNATIONAL_2022:
+            case Yt._A.INTERNATIONAL_2022_LASTCHANCE:
+            case Yt._A.INTERNATIONAL_2022:
               (t = "#101216"), (a = "#101216");
               break;
-            case Jt._A.WINTER_2023_MAJOR:
+            case Yt._A.WINTER_2023_MAJOR:
               (t = "#000000"), (a = "#000000");
               break;
-            case Jt._A.WINTER_2023_LEAGUE:
-            case Jt._A.SPRING_2023_LEAGUE:
-            case Jt._A.SPRING_2023_MAJOR:
-            case Jt._A.SUMMER_2023_LEAGUE:
-            case Jt._A.SUMMER_2023_MAJOR:
+            case Yt._A.WINTER_2023_LEAGUE:
+            case Yt._A.SPRING_2023_LEAGUE:
+            case Yt._A.SPRING_2023_MAJOR:
+            case Yt._A.SUMMER_2023_LEAGUE:
+            case Yt._A.SUMMER_2023_MAJOR:
               (t = "#10033F"), (a = "#10033F");
               break;
-            case Jt._A.INTERNATIONAL_2023:
+            case Yt._A.INTERNATIONAL_2023:
               (t = "#222127"), (a = "#222127");
           }
           return i.createElement(
@@ -29784,7 +29784,7 @@
                 height: 400,
                 backgroundImage: `url( ${
                   p.Y.IMG_URL
-                }dpc/headers/dpc_header_event_${(0, Yt.B2)(
+                }dpc/headers/dpc_header_event_${(0, Jt.B2)(
                   e,
                 )}.jpg ), linear-gradient( to right, ${t} 49%, ${a} 51% )`,
               },
@@ -29797,8 +29797,8 @@
             i.createElement(Wn, null),
             i.createElement(zn, null),
             i.createElement(jn, null),
-            i.createElement(Yn, null),
             i.createElement(Jn, null),
+            i.createElement(Yn, null),
             i.createElement($n, null),
             i.createElement(Zn, null),
             i.createElement(Xn, null),
@@ -29813,7 +29813,7 @@
         }),
         ii = (0, c.Pi)(() => {
           const e = kn();
-          return jt.f.Get().GetSpoilerBlockState(e) != Jt.rE.UNKNOWN
+          return jt.f.Get().GetSpoilerBlockState(e) != Yt.rE.UNKNOWN
             ? null
             : i.createElement(
                 "div",
@@ -29938,32 +29938,32 @@
             })(),
             [t, a] = (0, i.useState)(0),
             [r, n] = (0, i.useState)(0),
-            [o, s] = (0, i.useState)(Jt._A.INVALID),
+            [o, s] = (0, i.useState)(Yt._A.INVALID),
             c = (0, m.k6)(),
             d = (0, m.TH)(),
             _ = (0, m.UO)(),
-            u = (0, Yt.ox)(_.strEvent),
+            u = (0, Jt.ox)(_.strEvent),
             p = jt.f.Get().GetEventInfo(u);
           (0, i.useEffect)(() => {
             setInterval(() => n(Date.now() / 1e3), 5e3);
           }, []);
-          let g = l._.dpc_schedule((0, Yt.B2)(u));
+          let g = l._.dpc_schedule((0, Jt.B2)(u));
           if (
-            ((null == p ? void 0 : p.event_type) == Jt.f5.INTERNATIONAL &&
+            ((null == p ? void 0 : p.event_type) == Yt.f5.INTERNATIONAL &&
             (null == p ? void 0 : p.is_event_upcoming)
-              ? (g = l._.dpc_ti_standings((0, Yt.B2)(u)))
-              : jt.f.Get().GetSpoilerBlockState(u) == Jt.rE.UNBLOCKED
+              ? (g = l._.dpc_ti_standings((0, Jt.B2)(u)))
+              : jt.f.Get().GetSpoilerBlockState(u) == Yt.rE.UNBLOCKED
               ? (g = l._.dpc_watch(
-                  u == Jt._A.INVALID ? (0, Yt.PS)() : (0, Yt.B2)(u),
+                  u == Yt._A.INVALID ? (0, Jt.PS)() : (0, Jt.B2)(u),
                 ))
               : (null == p ? void 0 : p.is_event_completed) &&
                 (g = l._.dpc_standings(
-                  (0, Yt.B2)(u),
-                  (0, Yt.o5)(Jt.BY.RESULTS),
+                  (0, Jt.B2)(u),
+                  (0, Jt.o5)(Yt.BY.RESULTS),
                 )),
             (0, i.useEffect)(() => {
               ((e && (0 == t || r - t > 30)) || u != o) &&
-                (u != o && (o != Jt._A.INVALID && c.push(g), s(u)),
+                (u != o && (o != Yt._A.INVALID && c.push(g), s(u)),
                 a(r),
                 jt.f
                   .Get()
@@ -29971,7 +29971,7 @@
                     nLeagueID: 0,
                     nNodeID: 0,
                     nSeriesGame: 0,
-                    eSeriesDisplay: Yt.Uz.DETAILS,
+                    eSeriesDisplay: Jt.Uz.DETAILS,
                   }),
                 jt.f.Get().CacheDPCLeagueData(u));
             }, [c, g, u, o, r, t, s, a, e]),
@@ -29983,7 +29983,7 @@
                 (window.scrollTo({ top: 490, left: 0, behavior: "smooth" }),
                 window.history.replaceState({}, document.title));
             }, [d]),
-            u == Jt._A.INVALID)
+            u == Yt._A.INVALID)
           )
             return i.createElement(m.l_, { to: g });
           const h = jt.f.Get().IsGCDown();
@@ -30044,7 +30044,7 @@
                   }),
                   i.createElement(ya, {
                     path: l._.dpc_ti_standings(":strEvent?"),
-                    component: Ja,
+                    component: Ya,
                   }),
                   i.createElement(ya, {
                     path: l._.dpc_ti_rules(":strEvent?"),
@@ -31930,27 +31930,27 @@
           [c, d] = (0, i.useState)([]),
           [m, _] = (0, i.useState)([]),
           [u, g] = (0, i.useState)(!1),
-          [h, v] = (0, i.useState)([]),
-          [b, f] = (0, i.useState)([]),
-          [S, y] = (0, i.useState)([]);
-        function C() {
+          [h, b] = (0, i.useState)([]),
+          [f, S] = (0, i.useState)([]),
+          [y, C] = (0, i.useState)([]);
+        function I() {
           return (0, r.mG)(this, void 0, void 0, function* () {
             const e = yield Ri().get(
               p.Y.BASE_URL + l._.majorsregistration_getautographs(),
               { params: { season: p.Y.DOTA_TEAM_FAN_UPLOAD_CONTENT_SEASON } },
             );
-            if (e && e.data && (v(e.data), e.data.team_autographs)) {
+            if (e && e.data && (b(e.data), e.data.team_autographs)) {
               const t = e.data.team_autographs
                 .map((e) => e.autographs)
                 .flat()
                 .map((e) => (e.account_id ? e.account_id.toString() : ""));
-              t.length && f(t);
+              t.length && S(t);
             }
           });
         }
         (0, i.useEffect)(() => {
           try {
-            C();
+            I();
           } catch (e) {
             console.log("Could not fetch get autographs.");
           }
@@ -31971,7 +31971,7 @@
                   return !(
                     "string" != typeof t ||
                     !/^-?\d+$/.test(t) ||
-                    (b.length > 0 && !b.includes(t))
+                    (f.length > 0 && !f.includes(t))
                   );
                 })(c.name) || a.push(c.name);
                 const m = new FileReader();
@@ -31989,7 +31989,7 @@
                         l++,
                           (1024 === m.width && 512 === m.height) ||
                             r.push(c.name),
-                          I(m) && o.push(c.name),
+                          N(m) && o.push(c.name),
                           l === e.length && (n(a), s(r), d(i), _(o), g(!0));
                       }),
                       (m.onerror = () => {
@@ -32007,20 +32007,20 @@
                 });
             }
           );
-        }, [e, b]);
-        const I = (e) => {
+        }, [e, f]);
+        const N = (e) => {
             const t = document.querySelector("canvas"),
               a = t.getContext("2d");
             (t.width = e.width), (t.height = e.height), a.drawImage(e, 0, 0);
             return a.getImageData(0, 0, t.width, t.height).data[3] > 0;
           },
-          N =
+          w =
             "Image files must be named <friend id>.png, and the id must be a valid id",
-          w = "Image dimensions must be 1024x512 pixels",
-          D = "Image must be a compatible .png file",
-          B = "Image must have a transparent background",
-          L = [N, w, D, B],
-          A = (() => {
+          D = "Image dimensions must be 1024x512 pixels",
+          B = "Image must be a compatible .png file",
+          L = "Image must have a transparent background",
+          A = [w, D, B, L],
+          P = (() => {
             const t = [];
             return (
               a.length > 0 &&
@@ -32037,7 +32037,7 @@
                   i.createElement(
                     "div",
                     { key: "FileNameWarning" },
-                    i.createElement("b", null, N),
+                    i.createElement("b", null, w),
                     " ",
                   ),
                   i.createElement("br", { key: "FileNameWarningBreak" }),
@@ -32056,7 +32056,7 @@
                   i.createElement(
                     "div",
                     { key: "FileDimensionsWarning" },
-                    i.createElement("b", null, w),
+                    i.createElement("b", null, D),
                     " ",
                   ),
                   i.createElement("br", { key: "FileDimensionsWarningBreak" }),
@@ -32075,7 +32075,7 @@
                   i.createElement(
                     "div",
                     { key: "FileLoadingWarning" },
-                    i.createElement("b", null, D),
+                    i.createElement("b", null, B),
                     " ",
                   ),
                   i.createElement("br", { key: "FileLoadingWarningBreak" }),
@@ -32094,7 +32094,7 @@
                   i.createElement(
                     "div",
                     { key: "FileTransparencyWarning" },
-                    i.createElement("b", null, B),
+                    i.createElement("b", null, L),
                     " ",
                   ),
                   i.createElement("br", {
@@ -32105,27 +32105,27 @@
               t
             );
           })(),
-          P = (() => {
-            if (0 === S.length) return null;
+          M = (() => {
+            if (0 === y.length) return null;
             const e = [
               i.createElement("br", {
                 key: "AutographResponseDescriptionsBreak",
               }),
             ];
-            for (let t = 0; t < S.length; t++) {
-              const a = S[t].error,
+            for (let t = 0; t < y.length; t++) {
+              const a = y[t].error,
                 r = a ? `Error: ${a}` : "";
               e.push(
                 i.createElement(
                   "div",
                   { key: `autographResponse${t}` },
-                  `Filename: ${S[t].name}.\t${a ? r : "Upload success!"}`,
+                  `Filename: ${y[t].name}.\t${a ? r : "Upload success!"}`,
                 ),
               );
             }
             return e;
           })(),
-          M = ({
+          G = ({
             proName: e,
             accountId: t,
             pos: a,
@@ -32187,7 +32187,7 @@
               ),
             );
           },
-          G = (e, t) =>
+          k = (e, t) =>
             e.hasUploadedAutograph && !t.hasUploadedAutograph
               ? -1
               : (!e.hasUploadedAutograph && t.hasUploadedAutograph) ||
@@ -32198,7 +32198,7 @@
                 (null == t ? void 0 : t.name.toLowerCase())
               ? -1
               : 0,
-          k = 0 == p.Y.ACCOUNT_ID && !p.Y.VALVE_INTERNAL;
+          O = 0 == p.Y.ACCOUNT_ID && !p.Y.VALVE_INTERNAL;
         return i.createElement(
           "div",
           { className: Ui().MajorsRegistrationAutographsPage },
@@ -32225,7 +32225,9 @@
                 i.createElement(
                   "div",
                   { className: Ui().Title },
-                  "Dota 2 2021-2022 Season",
+                  `${(0, v.Jr)("#home_title")} ${(0, v.Jr)(
+                    "#dpc_event_2023season",
+                  )}`,
                   i.createElement("br", null),
                   "Dota Pro Circuit Registration",
                 ),
@@ -32234,7 +32236,7 @@
                   { className: (0, E.Z)(Ui().Header) },
                   "Player Autographs",
                 ),
-                k &&
+                O &&
                   i.createElement(
                     "div",
                     { className: Ui().NeedToLogin },
@@ -32256,7 +32258,7 @@
                       "Sign in",
                     ),
                   ),
-                !k &&
+                !O &&
                   i.createElement(
                     "div",
                     { className: Ui().SubmitAutographs },
@@ -32271,7 +32273,7 @@
                       i.createElement(
                         "ul",
                         null,
-                        L.map((e, t) =>
+                        A.map((e, t) =>
                           i.createElement(
                             "li",
                             { key: `specification-${t}` },
@@ -32341,7 +32343,7 @@
                               );
                               (r[t] = n.data), (r[t].name = e[t].name);
                             }
-                            y(r), t([]), setTimeout(() => C(), 1500);
+                            C(r), t([]), setTimeout(() => I(), 1500);
                           }),
                       },
                       i.createElement("input", {
@@ -32352,7 +32354,7 @@
                         accept: ".png",
                         multiple: !0,
                         onChange: (e) => {
-                          y([]), g(!1);
+                          C([]), g(!1);
                           const a = e.target.files,
                             r = [];
                           for (let e = 0; e < a.length; e++) {
@@ -32368,7 +32370,7 @@
                           "div",
                           null,
                           i.createElement("br", null),
-                          0 === A.length &&
+                          0 === P.length &&
                             i.createElement(
                               "div",
                               { className: Ui().FileInput },
@@ -32378,8 +32380,8 @@
                                 src: `${p.Y.IMG_URL}international2020/icon_check.png`,
                               }),
                             ),
-                          0 === A.length && i.createElement("br", null),
-                          A.length > 0 &&
+                          0 === P.length && i.createElement("br", null),
+                          P.length > 0 &&
                             i.createElement(
                               "div",
                               null,
@@ -32390,12 +32392,12 @@
                               }),
                               " ",
                             ),
-                          A.length > 0 &&
+                          P.length > 0 &&
                             i.createElement(
                               "div",
                               { className: Ui().FileErrors },
                               i.createElement("br", null),
-                              A,
+                              P,
                             ),
                         ),
                       i.createElement(
@@ -32403,7 +32405,7 @@
                         null,
                         i.createElement("input", {
                           type:
-                            0 === e.length || A.length > 0 || !u
+                            0 === e.length || P.length > 0 || !u
                               ? "hidden"
                               : "submit",
                           value: "Upload Files",
@@ -32411,13 +32413,13 @@
                         }),
                       ),
                     ),
-                    i.createElement("div", null, P),
+                    i.createElement("div", null, M),
                     i.createElement("br", null),
                     i.createElement("div", { className: Ui().SmoothLine }),
                   ),
                 i.createElement("canvas", { id: "canvas", hidden: !0 }),
               ),
-              !k &&
+              !O &&
                 i.createElement(
                   "div",
                   { className: Ui().ViewAutographs },
@@ -32446,7 +32448,7 @@
                                 : t.length) >= 4
                             );
                           })),
-                          e.sort(G),
+                          e.sort(k),
                           e.map((e, t) =>
                             i.createElement(
                               "div",
@@ -32471,7 +32473,7 @@
                                     file: o,
                                     timestamp: s,
                                   } = e;
-                                  return i.createElement(M, {
+                                  return i.createElement(G, {
                                     key: n,
                                     proName: r,
                                     accountId: n,
@@ -32557,7 +32559,7 @@
             bullets: 5,
           },
         ],
-        Yi = ({ rowInfo: e, orderedListStart: t }) =>
+        Ji = ({ rowInfo: e, orderedListStart: t }) =>
           i.createElement(
             "div",
             { className: Wi().ImagePreparationContainer },
@@ -32607,7 +32609,7 @@
               ),
             ),
           ),
-        Ji = () =>
+        Yi = () =>
           i.createElement(
             "div",
             { className: Wi().AutographGuidelines },
@@ -32683,7 +32685,7 @@
                     (0, v.Jr)("#autograph_creation_header"),
                   ),
                   zi.map((e, t) =>
-                    i.createElement(Yi, {
+                    i.createElement(Ji, {
                       key: `ImagePreparationContainer${t}`,
                       rowInfo: e,
                       orderedListStart: t + 1,
@@ -32739,7 +32741,7 @@
                     (0, v.Jr)("#autograph_preparation_header"),
                   ),
                   ji.map((e, t) =>
-                    i.createElement(Yi, {
+                    i.createElement(Ji, {
                       key: `ImagePreparationContainer${t}`,
                       rowInfo: e,
                       orderedListStart: t + zi.length + 1,
@@ -34347,7 +34349,7 @@
                     }),
                     i.createElement(ya, {
                       path: l._.autographguidelines(),
-                      component: Ji,
+                      component: Yi,
                     }),
                     i.createElement(ya, {
                       path: l._.portraitguidelines(),
@@ -40999,8 +41001,8 @@
           V.k_ESteam,
           V.k_ECurator,
         ],
-        Y = [...j, V.k_EFeatured],
-        J = [V.k_EFeatured];
+        J = [...j, V.k_EFeatured],
+        Y = [V.k_EFeatured];
       var $;
       !(function (e) {
         (e.k_ENews = "news"),
@@ -41077,8 +41079,8 @@
         InitDefaultCheckboxes(e, t, a) {
           (this.m_bInitializedForUpdatesOnly = t),
             (this.m_mapEventTypeGroupsAllowed = q(t ? [$.k_EUpdates] : Z));
-          const r = (0, d.h4)() ? Y : j;
-          (this.m_mapGameSources = q(e ? r : J)),
+          const r = (0, d.h4)() ? J : j;
+          (this.m_mapGameSources = q(e ? r : Y)),
             a && this.m_mapGameSources.set(V.k_EFeatured, !0);
         }
         Init(e, t, a, r, n) {
@@ -41201,9 +41203,9 @@
           );
         }
         BAreAnyEventsFiltered(e) {
-          const t = (0, d.h4)() ? Y : j;
+          const t = (0, d.h4)() ? J : j;
           return (
-            (e ? t : J).some((e) => !this.BIsGameSourceAllowed(e)) ||
+            (e ? t : Y).some((e) => !this.BIsGameSourceAllowed(e)) ||
             Z.some((e) => !this.BIsEventTypeGroupAllowed(e))
           );
         }
@@ -43888,8 +43890,8 @@
         (0, r.gn)([C.LO], We.prototype, "m_nMobileDeviceCount", void 0);
       let ze = new We();
       var je = a(51179),
-        Ye = a(50038),
-        Je = a(49213),
+        Je = a(50038),
+        Ye = a(49213),
         $e = a(69565),
         Ze = a(39672),
         Xe = a.n(Ze);
@@ -43965,7 +43967,7 @@
             }),
           );
           return n.createElement(
-            Je.HP,
+            Ye.HP,
             {
               toolTipContent: t,
               direction: "top",
@@ -46209,72 +46211,18 @@
           return "CAuthenticationSupport_RevokeToken_Response";
         }
       }
-      class Yt extends Et {
-        constructor(e = null) {
-          super(),
-            Yt.prototype.history || re.aR(Yt.M()),
-            Et.initialize(this, e, 0, -1, [1], null);
-        }
-        static M() {
-          return (
-            Yt.sm_m ||
-              (Yt.sm_m = {
-                proto: Yt,
-                fields: { history: { n: 1, c: Vt, r: !0, q: !0 } },
-              }),
-            Yt.sm_m
-          );
-        }
-        static MBF() {
-          return Yt.sm_mbf || (Yt.sm_mbf = re.Bh(Yt.M())), Yt.sm_mbf;
-        }
-        toObject(e = !1) {
-          return Yt.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return re.TA(Yt.M(), e, t);
-        }
-        static fromObject(e) {
-          return re.aD(Yt.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new ae.BinaryReader(e),
-            a = new Yt();
-          return Yt.deserializeBinaryFromReader(a, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return re.F(Yt.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new ae.BinaryWriter();
-          return Yt.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          re.l2(Yt.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new ae.BinaryWriter();
-          return Yt.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CAuthenticationSupport_GetTokenHistory_Response";
-        }
-      }
       class Jt extends Et {
         constructor(e = null) {
           super(),
-            Jt.prototype.nonce || re.aR(Jt.M()),
-            Et.initialize(this, e, 0, -1, void 0, null);
+            Jt.prototype.history || re.aR(Jt.M()),
+            Et.initialize(this, e, 0, -1, [1], null);
         }
         static M() {
           return (
             Jt.sm_m ||
               (Jt.sm_m = {
                 proto: Jt,
-                fields: {
-                  nonce: { n: 1, br: re.FE.readString, bw: re.Xc.writeString },
-                  expiry: { n: 2, br: re.FE.readUint32, bw: re.Xc.writeUint32 },
-                },
+                fields: { history: { n: 1, c: Vt, r: !0, q: !0 } },
               }),
             Jt.sm_m
           );
@@ -46309,6 +46257,60 @@
         serializeBase64String() {
           var e = new ae.BinaryWriter();
           return Jt.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CAuthenticationSupport_GetTokenHistory_Response";
+        }
+      }
+      class Yt extends Et {
+        constructor(e = null) {
+          super(),
+            Yt.prototype.nonce || re.aR(Yt.M()),
+            Et.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            Yt.sm_m ||
+              (Yt.sm_m = {
+                proto: Yt,
+                fields: {
+                  nonce: { n: 1, br: re.FE.readString, bw: re.Xc.writeString },
+                  expiry: { n: 2, br: re.FE.readUint32, bw: re.Xc.writeUint32 },
+                },
+              }),
+            Yt.sm_m
+          );
+        }
+        static MBF() {
+          return Yt.sm_mbf || (Yt.sm_mbf = re.Bh(Yt.M())), Yt.sm_mbf;
+        }
+        toObject(e = !1) {
+          return Yt.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return re.TA(Yt.M(), e, t);
+        }
+        static fromObject(e) {
+          return re.aD(Yt.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new ae.BinaryReader(e),
+            a = new Yt();
+          return Yt.deserializeBinaryFromReader(a, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return re.F(Yt.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new ae.BinaryWriter();
+          return Yt.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          re.l2(Yt.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new ae.BinaryWriter();
+          return Yt.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CCloudGaming_CreateNonce_Response";
@@ -46539,14 +46541,14 @@
               return e.SendMsg(
                 "AuthenticationSupport.GetTokenHistory#1",
                 t,
-                Yt,
+                Jt,
                 { bConstMethod: !0, ePrivilege: 5 },
               );
             });
         })(qt || (qt = {})),
         (function (e) {
           (e.CreateNonce = function (e, t) {
-            return e.SendMsg("CloudGaming.CreateNonce#1", t, Jt, {
+            return e.SendMsg("CloudGaming.CreateNonce#1", t, Yt, {
               bConstMethod: !0,
               ePrivilege: 1,
             });
@@ -48508,7 +48510,7 @@
       }
       function Va(e) {
         return n.createElement(
-          Ye.zx,
+          Je.zx,
           { onClick: e.reset, className: xa().QRFailure },
           n.createElement(Wa, null),
         );
@@ -48568,8 +48570,8 @@
       }
       const ja =
         a.p + "images/dota_react/login_mobile_auth.png?v=valveisgoodatcaching";
-      var Ya = a(65092),
-        Ja = a(29404),
+      var Ja = a(65092),
+        Ya = a(29404),
         $a = a(12923),
         Za = a(44521),
         Xa = a.n(Za);
@@ -48699,7 +48701,7 @@
           const t = (0, n.useRef)(e);
           t.current = e;
           const [a, i] = (0, n.useState)(!0),
-            o = (0, Ya.TH)(),
+            o = (0, Ja.TH)(),
             s = new URLSearchParams(o.search);
           return (
             (0, n.useEffect)(() => {
@@ -48764,7 +48766,7 @@
         const { embedded: t } = e,
           a = (0, r._T)(e, ["embedded"]);
         return n.createElement(
-          Ja.SV,
+          Ya.SV,
           null,
           n.createElement(
             Ka.Provider,
@@ -49101,7 +49103,7 @@
             const t = d.De.IN_STEAMUI,
               r = t ? d.De.LAUNCHER_TYPE : void 0;
             return n.createElement(
-              Jr,
+              Yr,
               { className: (0, R.Z)(Ba().EmbeddedRoot, t && Ba().InClient) },
               !t && !1,
               !e.refreshInfo &&
@@ -49302,7 +49304,7 @@
           C = r && !!o,
           T = !!e.refreshInfo;
         return n.createElement(
-          Yr,
+          Jr,
           {
             onSubmit: () => {
               t().then(() => {
@@ -49337,7 +49339,7 @@
           }),
           p
             ? n.createElement(
-                Je.HP,
+                Ye.HP,
                 {
                   toolTipContent: "#Login_RememberMe_Tooltip",
                   direction: "bottom",
@@ -49631,7 +49633,7 @@
           qr,
           { compact: !0 },
           n.createElement(
-            Jr,
+            Yr,
             {
               alignItems: "center",
               className: (0, R.Z)(
@@ -49734,7 +49736,7 @@
           qr,
           { compact: !0 },
           n.createElement(
-            Jr,
+            Yr,
             { alignItems: "center", gap: 12 },
             n.createElement("div", { className: Ba().FailureTitle }, s),
             n.createElement("div", { className: Ba().FailureDescription }, l),
@@ -49806,21 +49808,21 @@
             qr,
             { title: n.createElement(Kr, null), compact: !0 },
             n.createElement(
-              Yr,
+              Jr,
               {
                 onSubmit: () => {
                   S && y(f);
                 },
               },
               n.createElement(
-                Jr,
+                Yr,
                 { alignItems: "center", gap: 14 },
                 n.createElement(Ur, { type: t, accountName: i }),
                 n.createElement(
                   "div",
                   { className: Ba().ConfirmationEntryContainer },
                   n.createElement(
-                    Jr,
+                    Yr,
                     { alignItems: "center", gap: 2 },
                     C &&
                       n.createElement(
@@ -49886,7 +49888,7 @@
             className: Ba().EnterBackupCodeContainer,
           },
           n.createElement(
-            Jr,
+            Yr,
             null,
             n.createElement(
               "div",
@@ -49967,7 +49969,7 @@
       }
       function Hr() {
         return n.createElement(
-          Jr,
+          Yr,
           { alignItems: "center" },
           n.createElement(
             "div",
@@ -50054,7 +50056,7 @@
           qr,
           { title: n.createElement(Kr, null), compact: !0 },
           n.createElement(
-            Jr,
+            Yr,
             { gap: d.De.IN_STEAMUI ? 24 : 40 },
             n.createElement(Ur, { type: t, accountName: a }),
             n.createElement(Hr, null),
@@ -50076,7 +50078,7 @@
           return n.createElement(a, { className: i, onClick: e.onClick }, t);
         }
       }
-      function Yr(e) {
+      function Jr(e) {
         const { onSubmit: t, children: a, className: r } = e;
         return n.createElement(
           "form",
@@ -50084,7 +50086,7 @@
           a,
         );
       }
-      function Jr(e) {
+      function Yr(e) {
         const {
             alignItems: t,
             justifyContent: a,
@@ -50139,7 +50141,7 @@
       function Xr(e) {
         const { children: t, spacing: a = 0, align: r } = e;
         return n.createElement(
-          Jr,
+          Yr,
           { alignItems: r },
           n.Children.map(t, (e, t) =>
             e
@@ -50156,7 +50158,7 @@
         const { title: t, children: a, compact: r } = e,
           i = Qa();
         return n.createElement(
-          Jr,
+          Yr,
           {
             gap: d.De.IN_STEAMUI ? 0 : 32,
             className: (0, R.Z)(
@@ -50315,7 +50317,7 @@
       }
       function an() {
         return n.createElement(
-          Jr,
+          Yr,
           { alignItems: "center", justifyContent: "center" },
           n.createElement(N.V, null),
         );
@@ -50760,7 +50762,7 @@
                 "div",
                 { className: (0, R.Z)(gt.ReminderOption, !s && gt.Unverified) },
                 n.createElement(
-                  Je.HP,
+                  Ye.HP,
                   {
                     className: gt.CheckboxWrapper,
                     bTopmost: !0,
@@ -50770,7 +50772,7 @@
                         : "#EventReminder_NotifyByEmail_Missing",
                     ),
                   },
-                  n.createElement(Ye.ji, {
+                  n.createElement(Je.ji, {
                     label: (0, m.Xx)("#EventDisplay_Reminder_ViaEmail"),
                     disabled: !s,
                     checked: Ve.Get().BFollowsEventAndNotifiedBy(
@@ -50801,7 +50803,7 @@
                 "div",
                 { className: (0, R.Z)(gt.ReminderOption, !l && gt.Unverified) },
                 n.createElement(
-                  Je.HP,
+                  Ye.HP,
                   {
                     className: gt.CheckboxWrapper,
                     bTopmost: !0,
@@ -50811,7 +50813,7 @@
                         : "#EventReminder_NotifyByMobile_Missing",
                     ),
                   },
-                  n.createElement(Ye.ji, {
+                  n.createElement(Je.ji, {
                     label: (0, m.Xx)("#EventDisplay_Reminder_ViaMobileApp"),
                     disabled: !l,
                     checked: Ve.Get().BFollowsEventAndNotifiedBy(
@@ -59110,8 +59112,8 @@
                     })(u(this.m_webApiAccessToken)) &&
                       ((this.m_refreshAccessTokenPromise =
                         this.m_fnRequestNewAccessToken()),
-                      (this.m_webApiAccessToken = yield this
-                        .m_refreshAccessTokenPromise),
+                      (this.m_webApiAccessToken =
+                        yield this.m_refreshAccessTokenPromise),
                       (this.m_refreshAccessTokenPromise = null)));
               }
               let l = yield this.Send(e, t, a, s);
@@ -66517,17 +66519,17 @@
           });
       })(z || (z = {}));
       const j = s.Message;
-      class Y extends j {
+      class J extends j {
         constructor(e = null) {
           super(),
-            Y.prototype.request || l.aR(Y.M()),
+            J.prototype.request || l.aR(J.M()),
             j.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            Y.sm_m ||
-              (Y.sm_m = {
-                proto: Y,
+            J.sm_m ||
+              (J.sm_m = {
+                proto: J,
                 fields: {
                   request: { n: 1, c: G },
                   include_unpublished: {
@@ -66537,45 +66539,45 @@
                   },
                 },
               }),
-            Y.sm_m
+            J.sm_m
           );
         }
         static MBF() {
-          return Y.sm_mbf || (Y.sm_mbf = l.Bh(Y.M())), Y.sm_mbf;
+          return J.sm_mbf || (J.sm_mbf = l.Bh(J.M())), J.sm_mbf;
         }
         toObject(e = !1) {
-          return Y.toObject(e, this);
+          return J.toObject(e, this);
         }
         static toObject(e, t) {
-          return l.TA(Y.M(), e, t);
+          return l.TA(J.M(), e, t);
         }
         static fromObject(e) {
-          return l.aD(Y.M(), e);
+          return l.aD(J.M(), e);
         }
         static deserializeBinary(e) {
           let t = new s.BinaryReader(e),
-            a = new Y();
-          return Y.deserializeBinaryFromReader(a, t);
+            a = new J();
+          return J.deserializeBinaryFromReader(a, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return l.F(Y.MBF(), e, t);
+          return l.F(J.MBF(), e, t);
         }
         serializeBinary() {
           var e = new s.BinaryWriter();
-          return Y.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return J.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          l.l2(Y.M(), e, t);
+          l.l2(J.M(), e, t);
         }
         serializeBase64String() {
           var e = new s.BinaryWriter();
-          return Y.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return J.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CPartnerStoreBrowse_GetItems_Request";
         }
       }
-      var J;
+      var Y;
       !(function (e) {
         e.GetItems = function (e, t) {
           return e.SendMsg("PartnerStoreBrowse.GetItems#1", t, k, {
@@ -66583,7 +66585,7 @@
             ePrivilege: 1,
           });
         };
-      })(J || (J = {}));
+      })(Y || (Y = {}));
       var $ = a(43212),
         Z = a(72333),
         X = a(4573),
@@ -68452,13 +68454,13 @@
               for (; t.length > 0; ) {
                 const r = t.splice(0, this.k_nMaxBatchSize);
                 if ((s.push(r), this.m_bUsePartnerAPI)) {
-                  const t = i.gA.Init(Y);
+                  const t = i.gA.Init(J);
                   t.Body().set_include_unpublished(!1);
                   const n = t.Body().request(!0);
                   n.set_context(oe(this.m_bUsePartnerAPI)),
                     n.set_data_request(A.fromObject(a)),
                     n.set_ids(r),
-                    o.push(J.GetItems(e.GetServiceTransport(), t));
+                    o.push(Y.GetItems(e.GetServiceTransport(), t));
                 } else {
                   const t = i.gA.Init(G);
                   ie(t, this.m_bUsePartnerAPI),
@@ -69848,7 +69850,7 @@
         Vh: () => je,
         $_: () => S,
         h4: () => f,
-        II: () => Y,
+        II: () => J,
         o9: () => P,
         $0: () => M,
         KM: () => L,
@@ -70412,7 +70414,7 @@
           ),
         );
       });
-      class Y extends n.PureComponent {
+      class J extends n.PureComponent {
         constructor(e) {
           super(e),
             this.CheckProps(e),
@@ -70471,10 +70473,10 @@
               1 == this.props.mustBeNumeric &&
               isNaN(Number(this.m_elInput.value)),
             m_bIsInvalidURL:
-              1 == this.props.mustBeURL && !Y.validateUrl(this.m_elInput.value),
+              1 == this.props.mustBeURL && !J.validateUrl(this.m_elInput.value),
             m_bIsInvalidEmail:
               1 == this.props.mustBeEmail &&
-              !Y.validateEmail(this.m_elInput.value),
+              !J.validateEmail(this.m_elInput.value),
             m_bAboveMaxChars:
               null !== this.props.maxChars &&
               this.m_elInput.value.length > this.props.maxChars,
@@ -70703,11 +70705,11 @@
             : N;
         }
       }
-      (0, r.gn)([F.ak], Y.prototype, "OnInputRef", null),
-        (0, r.gn)([F.ak], Y.prototype, "OnChanged", null),
-        (0, r.gn)([F.ak], Y.prototype, "OnCopyClick", null),
-        (0, r.gn)([F.ak], Y.prototype, "OnClearClick", null);
-      class J extends Y {
+      (0, r.gn)([F.ak], J.prototype, "OnInputRef", null),
+        (0, r.gn)([F.ak], J.prototype, "OnChanged", null),
+        (0, r.gn)([F.ak], J.prototype, "OnCopyClick", null),
+        (0, r.gn)([F.ak], J.prototype, "OnClearClick", null);
+      class Y extends J {
         OnBackgroundClick() {
           this.m_elInput && this.m_elInput.focus();
         }
@@ -70779,9 +70781,9 @@
           );
         }
       }
-      (0, r.gn)([F.ak], J.prototype, "OnBackgroundClick", null),
-        (0, r.gn)([F.ak], J.prototype, "OnInputFocus", null),
-        (0, r.gn)([F.ak], J.prototype, "OnInputBlur", null);
+      (0, r.gn)([F.ak], Y.prototype, "OnBackgroundClick", null),
+        (0, r.gn)([F.ak], Y.prototype, "OnInputFocus", null),
+        (0, r.gn)([F.ak], Y.prototype, "OnInputBlur", null);
       const $ = (e, t) =>
         "" +
         (null != e ? Number.parseFloat(e.toFixed(3)) : null) +
@@ -72377,7 +72379,7 @@
           e.focusChild &&
             (null === (t = b.current) || void 0 === t || t.TakeFocus());
         }, [b.current]);
-        const C = e.renderPageAnimation && p ? e.renderPageAnimation : Je;
+        const C = e.renderPageAnimation && p ? e.renderPageAnimation : Ye;
         return n.createElement(
           o.s,
           { className: (0, l.Z)(i.PagedSettingsDialog, e.className), ref: t },
@@ -72422,7 +72424,7 @@
             o.s,
             { className: y, onCancelButton: E, navRef: b },
             e.toggleHideList &&
-              n.createElement(Ye, {
+              n.createElement(Je, {
                 hideList: e.hideList,
                 toggleHideList: e.toggleHideList,
               }),
@@ -72440,7 +72442,7 @@
           ),
         );
       });
-      function Ye(e) {
+      function Je(e) {
         const { hideList: t, toggleHideList: a } = e;
         return n.createElement(
           "div",
@@ -72453,7 +72455,7 @@
             : n.createElement(ke, { direction: "left" }),
         );
       }
-      function Je(e) {
+      function Ye(e) {
         return n.createElement(n.Fragment, null, e.children);
       }
       class $e extends n.Component {
@@ -72764,7 +72766,7 @@
                 e.preventDefault();
             },
           },
-          n.createElement(Y, Object.assign({}, d, { ref: _ })),
+          n.createElement(J, Object.assign({}, d, { ref: _ })),
         );
       });
       n.forwardRef(function (e, t) {
@@ -72821,7 +72823,7 @@
             ),
           },
           n.createElement(
-            Y,
+            J,
             Object.assign(
               {
                 autoComplete: "off",
@@ -75138,11 +75140,11 @@
           c && c.length
             ? (u = c.map((e) =>
                 e instanceof b
-                  ? r.createElement(Y, {
+                  ? r.createElement(J, {
                       key: e.key,
                       modal: e,
                       active: e == m,
-                      Component: null != n ? n : J,
+                      Component: null != n ? n : Y,
                     })
                   : e instanceof f
                   ? r.createElement(j, { key: e.key, modal: e, active: e == m })
@@ -75189,7 +75191,7 @@
           )
         );
       }
-      function Y(e) {
+      function J(e) {
         const { modal: t, active: a, Component: n } = e,
           i = (0, T.NW)();
         return (
@@ -75212,7 +75214,7 @@
           )
         );
       }
-      const J = r.forwardRef(function (e, t) {
+      const Y = r.forwardRef(function (e, t) {
         const { className: a, active: n, children: i } = e,
           o = r.useRef();
         r.useEffect(() => {
