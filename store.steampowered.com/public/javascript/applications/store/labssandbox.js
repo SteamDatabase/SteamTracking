@@ -122,7 +122,7 @@
             include_reviews: C,
             include_basic_info: E,
             include_supported_languages: v,
-            include_full_description: w,
+            include_full_description: I,
           } = a;
         if (
           ((0, i.useEffect)(() => {
@@ -138,7 +138,7 @@
               include_reviews: C,
               include_basic_info: E,
               include_supported_languages: v,
-              include_full_description: w,
+              include_full_description: I,
             };
             let i = null;
             return (
@@ -161,8 +161,8 @@
         if (!1 === m) return [void 0, 2];
         if (l.Z.Get().BIsStoreItemMissing(e, t)) return [void 0, 2];
         if (!l.Z.Get().BHasStoreItem(e, t, a)) return [void 0, 1];
-        const I = l.Z.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
-        return I ? [I, 3] : [null, 2];
+        const w = l.Z.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
+        return w ? [w, 3] : [null, 2];
       }
       function p(e, t, a) {
         return o(e, 0, t, a);
@@ -529,7 +529,7 @@
         C = a(36611),
         E = a(88464),
         v = a(19304);
-      class w extends g.Component {
+      class I extends g.Component {
         constructor(e) {
           super(e),
             (this.state = {
@@ -685,10 +685,10 @@
           );
         }
       }
-      (0, s.gn)([p.ak], w.prototype, "OnDisplayClicked", null),
-        (0, s.gn)([p.ak], w.prototype, "UpdateAppSuggestions", null),
-        (0, s.gn)([p.ak], w.prototype, "OnKeyUp", null);
-      class I extends g.Component {
+      (0, s.gn)([p.ak], I.prototype, "OnDisplayClicked", null),
+        (0, s.gn)([p.ak], I.prototype, "UpdateAppSuggestions", null),
+        (0, s.gn)([p.ak], I.prototype, "OnKeyUp", null);
+      class w extends g.Component {
         render() {
           if (0 == this.props.appid)
             return g.createElement("div", { className: S.SimilarApp });
@@ -764,7 +764,7 @@
           return g.createElement(
             "div",
             { className: S.LabsSimilarity },
-            g.createElement(w, {
+            g.createElement(I, {
               fnOnSelection: this.OnAppSelected,
               ref: this.ref_app_a,
               showAppIds: !0,
@@ -774,7 +774,7 @@
             g.createElement("div", { className: S.HorizontalSpacer }),
             g.createElement("div", { className: S.Score }, e),
             g.createElement("div", { className: S.HorizontalSpacer }),
-            g.createElement(w, {
+            g.createElement(I, {
               fnOnSelection: this.OnAppSelected,
               ref: this.ref_app_b,
               showAppIds: !0,
@@ -841,7 +841,7 @@
             const a = this.similar_apps[e],
               r = this.similarity_scores[e];
             t.push(
-              g.createElement(I, {
+              g.createElement(w, {
                 appid: a,
                 score: r,
                 key: a,
@@ -863,7 +863,7 @@
               selectedOption: "default",
             }),
             g.createElement("h1", null, "Games similar to:"),
-            g.createElement(w, {
+            g.createElement(I, {
               fnOnSelection: this.OnSelectedApp,
               ref: this.app_selector_ref,
               appidInitial: 268500,
@@ -920,7 +920,7 @@
                 selectedOption: "Plus",
               }),
             ),
-            g.createElement(w, { fnOnSelection: this.OnSelectedApp }),
+            g.createElement(I, { fnOnSelection: this.OnSelectedApp }),
           );
         }
       };
@@ -1041,7 +1041,7 @@
           for (let e = 0; e < i; e++) {
             const t = this.similar_apps[e],
               a = this.similarity_scores[e];
-            s.push(g.createElement(I, { appid: t, score: a, key: t }));
+            s.push(g.createElement(w, { appid: t, score: a, key: t }));
           }
           return g.createElement(
             "div",
@@ -1149,7 +1149,7 @@
             for (let e = 0; e < this.found_path.length; e++) {
               const t = this.found_path[e];
               r.push(
-                g.createElement(I, {
+                g.createElement(w, {
                   appid: t.appid,
                   score: t.similarity,
                   key: "pathstep" + e,
@@ -1162,11 +1162,11 @@
             g.createElement(
               "div",
               { className: S.SelectEndpoints },
-              g.createElement(w, {
+              g.createElement(I, {
                 fnOnSelection: this.OnSelectedStartApp,
                 strPrompt: "Select start game",
               }),
-              g.createElement(w, {
+              g.createElement(I, {
                 fnOnSelection: this.OnSelectedEndApp,
                 strPrompt: "Select end game",
               }),
@@ -1216,6 +1216,7 @@
         T = a(53143);
       const z = P.Message;
       class D extends z {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             D.prototype.tag_score_factor || k.aR(D.M()),
@@ -1310,6 +1311,7 @@
         }
       }
       class G extends z {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             G.prototype.steamid || k.aR(G.M()),
@@ -1375,6 +1377,7 @@
         }
       }
       class U extends z {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             U.prototype.items || k.aR(U.M()),
@@ -1426,6 +1429,7 @@
         }
       }
       class W extends z {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             W.prototype.id || k.aR(W.M()),
@@ -1492,6 +1496,7 @@
         }
       }
       class j extends z {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             j.prototype.source_app || k.aR(j.M()),
@@ -1551,6 +1556,7 @@
         }
       }
       class H extends z {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             H.prototype.rank || k.aR(H.M()),
@@ -1614,6 +1620,7 @@
         }
       }
       class X extends z {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             X.prototype.steamid || k.aR(X.M()),
@@ -1684,6 +1691,7 @@
         }
       }
       class q extends z {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             q.prototype.clusters || k.aR(q.M()),
@@ -1735,6 +1743,7 @@
         }
       }
       class $ extends z {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             $.prototype.cluster_id || k.aR($.M()),
@@ -2386,12 +2395,12 @@
                   autoFocus: this.props.autoFocus,
                 }),
               l == fe.TwoFactorCode &&
-                g.createElement(Ie, {
+                g.createElement(we, {
                   manager: this.m_manager,
                   authtype: fe.TwoFactorCode,
                 }),
               l == fe.EmailCode &&
-                g.createElement(Ie, {
+                g.createElement(we, {
                   manager: this.m_manager,
                   authtype: fe.EmailCode,
                 }),
@@ -2496,7 +2505,7 @@
                   onChange: () => this.OnChangeRememberPass,
                   checked: a.GetRememberPassword(),
                 }),
-                a.GetCaptchaURL() && g.createElement(we, { manager: a }),
+                a.GetCaptchaURL() && g.createElement(Ie, { manager: a }),
                 g.createElement(
                   y.KM,
                   { disabled: this.props.manager.IsRequestInFlight() },
@@ -2536,7 +2545,7 @@
         (0, s.gn)([p.ak], ve.prototype, "OnChangePassword", null),
         (0, s.gn)([p.ak], ve.prototype, "OnChangeRememberPass", null),
         (ve = (0, s.gn)([E.Pi], ve));
-      let we = class extends g.Component {
+      let Ie = class extends g.Component {
         OnCaptchaText(e) {
           this.props.manager.SetCaptchaText(e.target.value);
         }
@@ -2592,10 +2601,10 @@
           );
         }
       };
-      (0, s.gn)([p.ak], we.prototype, "OnCaptchaText", null),
-        (0, s.gn)([p.ak], we.prototype, "RefreshCaptcha", null),
-        (we = (0, s.gn)([E.Pi], we));
-      let Ie = class extends g.Component {
+      (0, s.gn)([p.ak], Ie.prototype, "OnCaptchaText", null),
+        (0, s.gn)([p.ak], Ie.prototype, "RefreshCaptcha", null),
+        (Ie = (0, s.gn)([E.Pi], Ie));
+      let we = class extends g.Component {
         OnSubmit(e) {
           e.preventDefault(), this.props.manager.DoLogin();
         }
@@ -2683,9 +2692,9 @@
           );
         }
       };
-      (0, s.gn)([p.ak], Ie.prototype, "OnSubmit", null),
-        (0, s.gn)([p.ak], Ie.prototype, "OnChangeAuthCode", null),
-        (Ie = (0, s.gn)([E.Pi], Ie));
+      (0, s.gn)([p.ak], we.prototype, "OnSubmit", null),
+        (0, s.gn)([p.ak], we.prototype, "OnChangeAuthCode", null),
+        (we = (0, s.gn)([E.Pi], we));
       var Be = a(27070);
       const Ae = [
         {

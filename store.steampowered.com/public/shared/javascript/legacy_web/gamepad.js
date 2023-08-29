@@ -15,12 +15,12 @@
         FocusRingOnHiddenItem: "focusring_FocusRingOnHiddenItem_2OusV",
       };
     },
-    448: (e, t, n) => {
+    646: (e, t, n) => {
       "use strict";
       n.d(t, { Pf: () => r, y5: () => a });
       var i = n(655),
-        o = n(53),
-        s = n(881);
+        o = n(992),
+        s = n(614);
       class r {
         constructor() {
           SteamClient.BrowserView.RegisterForMessageFromParent(this.OnMessage);
@@ -80,7 +80,7 @@
       }
       (0, i.gn)([o.a], a.prototype, "OnMessage", null);
     },
-    881: (e, t, n) => {
+    614: (e, t, n) => {
       "use strict";
       n.d(t, { i: () => o, l: () => i });
       const i = "GamepadInput";
@@ -93,14 +93,14 @@
           (e[(e.Full = 4)] = "Full");
       })(o || (o = {}));
     },
-    554: (e, t, n) => {
+    752: (e, t, n) => {
       "use strict";
       n.r(t), n.d(t, { InitializeGamepadNavigation: () => ht });
       var i,
         o = n(655),
         s = n(311),
         r = n.n(s),
-        a = n(343);
+        a = n(79);
       !(function (e) {
         (e[(e.GAMEPAD = 0)] = "GAMEPAD"),
           (e[(e.KEYBOARD = 1)] = "KEYBOARD"),
@@ -160,10 +160,10 @@
           l
         );
       }
-      var g = n(53),
-        _ = n(881),
-        v = n(422),
-        p = n(448);
+      var g = n(992),
+        _ = n(614),
+        v = n(246),
+        p = n(646);
       class f {
         constructor(e) {
           (this.m_bIsGamepadInputExternallyControlled = !1),
@@ -571,7 +571,7 @@
             : console.assert(!!e, t, ...n)
           : e || console.warn(t, ...n);
       }
-      var y = n(965);
+      var y = n(208);
       class B extends class {
         GetObject(e) {
           return (0, o.mG)(this, void 0, void 0, function* () {
@@ -854,7 +854,9 @@
               console.warn(...d);
               break;
             case P.Error:
-              console.error(...d);
+              console.clogerror
+                ? console.clogerror(3, ...d)
+                : console.error(...d);
           }
       }
       (x.k_EnabledLogNames_StorageKey = "EnabledWebLogs"),
@@ -976,7 +978,7 @@
           );
         }
       }
-      var Y = n(421);
+      var Y = n(63);
       const X = new G("FocusNavigation").Debug,
         z = new G("GamepadEvents").Debug;
       class Q {

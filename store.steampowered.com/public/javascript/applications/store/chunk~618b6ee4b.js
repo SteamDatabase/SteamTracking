@@ -4581,7 +4581,7 @@
           case 6:
             n = S;
         }
-        const s = (_.De.IN_CLIENT ? "steam://openurl/" : "") + t.external_url;
+        const s = (0, p.bk)(t.external_url);
         return a.createElement(
           i.IS,
           {
@@ -5094,7 +5094,7 @@
               Number.MAX_SAFE_INTEGER,
             ),
             n = e.GetForumTopicURL(),
-            a = o.De.IN_CLIENT ? "steam://openurl/" + n : n,
+            a = (0, w.bk)(n),
             s = (0, o.h4)(),
             l = o.L7.logged_in && k.Get().BCanRepostPartnerEvent();
           return i.createElement(
@@ -6968,7 +6968,7 @@
     },
     92358: (e, t, n) => {
       "use strict";
-      n.d(t, { HQ: () => v, wM: () => S, jd: () => f });
+      n.d(t, { HQ: () => h, wM: () => f, jd: () => E });
       var a = n(25125),
         i = n(89526),
         s = n(54507),
@@ -6981,8 +6981,9 @@
         m = n(14826),
         p = n(73406),
         _ = n(99119),
-        g = n.n(_);
-      function v(e) {
+        g = n.n(_),
+        v = n(207);
+      function h(e) {
         const { appid: t } = e,
           n = (function (e) {
             const [t, n] = (0, i.useState)(void 0),
@@ -7034,7 +7035,7 @@
                 n
                   .filter((e) => 3 != e.external_type)
                   .map((e) =>
-                    i.createElement(h, {
+                    i.createElement(S, {
                       key: "app_social_link_" + t + "_" + e.external_type,
                       social: e,
                     }),
@@ -7043,7 +7044,7 @@
             )
           : null;
       }
-      function h(e) {
+      function S(e) {
         const { social: t } = e,
           n =
             o.De.IMG_URL +
@@ -7055,7 +7056,7 @@
         return i.createElement(
           "a",
           {
-            href: (o.De.IN_CLIENT ? "steam://openurl/" : "") + t.external_url,
+            href: (0, v.bk)(t.external_url),
             "data-tooltip-text": t.external_user_name,
             target: o.De.IN_CLIENT ? void 0 : "_blank",
             rel: "noopener noreferrer",
@@ -7063,7 +7064,7 @@
           i.createElement("img", { className: g().AppSocialLink, src: n }),
         );
       }
-      function S(e) {
+      function f(e) {
         const { event: t, nOverrideStartTime: n, nOverrideEndTime: s } = e,
           o = e.stylesmodule
             ? Object.assign(Object.assign({}, g()), e.stylesmodule)
@@ -7088,7 +7089,7 @@
           }),
         );
       }
-      function f(e) {
+      function E(e) {
         const { event: t, dateRangeLayout: n = "horizontal" } = e,
           [s, o, r] = (0, a.SZ)(() => [
             t.GetStartTimeAndDateUnixSeconds(),
@@ -23964,7 +23965,7 @@
         h = n(51441),
         S = n(1631),
         f = n.n(S),
-        E = n(6645),
+        E = n(85366),
         b = n(21219),
         y = n(42317),
         C = n(33406),
@@ -25419,21 +25420,20 @@
         const {
           eStoreDiscoveryQueueType: n,
           storePageFilter: i,
-          fnGetFriendState: o,
-          strQueueDescriptionOverride: l,
+          strQueueDescriptionOverride: o,
         } = e;
-        let [u, g] = (0, s.useState)([]);
-        const [y, C] = (0, s.useState)(!1),
-          [I, w] = (0, s.useState)(!1),
-          G = (0, E.id)(),
-          [A, B] = (0, s.useState)(!G),
-          L = s.useRef(),
-          T = s.useRef(0),
-          N = s.useRef(performance.now()),
-          [P, R] = (0, s.useState)([]),
-          x = (0, h.T)("DiscoveryQueueWidget"),
-          M = (0, b.hc)(n, i);
-        let O = (function (e) {
+        let [l, u] = (0, s.useState)([]);
+        const [g, y] = (0, s.useState)(!1),
+          [C, I] = (0, s.useState)(!1),
+          w = (0, E.id)(),
+          [G, A] = (0, s.useState)(!w),
+          B = s.useRef(),
+          L = s.useRef(0),
+          T = s.useRef(performance.now()),
+          [N, P] = (0, s.useState)([]),
+          R = (0, h.T)("DiscoveryQueueWidget"),
+          x = (0, b.hc)(n, i);
+        let M = (function (e) {
           let { data: t } = (0, m.cs)(
             "DiscoveryQueueWidget",
             {
@@ -25447,104 +25447,104 @@
           );
           return t ? t.GetItemIDs().map((e) => e.appid) : void 0;
         })(!E.L7.logged_in);
-        u || E.L7.logged_in || (u = O),
+        l || E.L7.logged_in || (l = M),
           s.useEffect(() => {
-            I ||
+            C ||
               (() => {
                 (0, a.mG)(this, void 0, void 0, function* () {
                   var e, t, a;
                   let o = !1;
-                  if (E.L7.logged_in && !u.length) {
+                  if (E.L7.logged_in && !l.length) {
                     const { appids: t, exhausted: a } =
                       yield b.Wb.Get().GetDiscoveryQueueAppsOfType(n, !0, i);
-                    (null === (e = null == x ? void 0 : x.token) || void 0 === e
+                    (null === (e = null == R ? void 0 : R.token) || void 0 === e
                       ? void 0
-                      : e.reason) || g([...t]),
+                      : e.reason) || u([...t]),
                       (o = a);
                   }
-                  if (u.length) {
+                  if (l.length) {
                     let e = _.Vw;
                     (e.include_screenshots = !0),
-                      yield d.Z.Get().QueueMultipleAppRequests(u, e),
+                      yield d.Z.Get().QueueMultipleAppRequests(l, e),
                       c.jg.Get().HintLoad();
-                    const n = u.map((e) =>
+                    const n = l.map((e) =>
                       s.createElement(k, { key: "Capsule_" + e, appID: e }),
                     );
                     n.push(
                       s.createElement(k, {
-                        key: "Capsule2_" + u[0],
-                        appID: u[0],
+                        key: "Capsule2_" + l[0],
+                        appID: l[0],
                       }),
                     ),
-                      (null === (t = null == x ? void 0 : x.token) ||
+                      (null === (t = null == R ? void 0 : R.token) ||
                       void 0 === t
                         ? void 0
-                        : t.reason) || (R(n), w(!0));
+                        : t.reason) || (P(n), I(!0));
                   }
                   o &&
-                    !(null === (a = null == x ? void 0 : x.token) ||
+                    !(null === (a = null == R ? void 0 : R.token) ||
                     void 0 === a
                       ? void 0
                       : a.reason) &&
-                    w(!0);
+                    I(!0);
                 });
               })();
           }, [
             n,
-            u,
-            I,
+            l,
+            C,
             i,
-            null === (t = null == x ? void 0 : x.token) || void 0 === t
+            null === (t = null == R ? void 0 : R.token) || void 0 === t
               ? void 0
               : t.reason,
           ]),
           s.useEffect(() => {
-            if (!I || !A || y) return void cancelAnimationFrame(T.current);
+            if (!C || !G || g) return void cancelAnimationFrame(L.current);
             const e = () => {
-              if (!L.current) return;
+              if (!B.current) return;
               const t =
-                ((performance.now() - N.current) / 40) %
-                (L.current.offsetWidth - 320);
-              (L.current.style.transform = `translateX( -${t}px )`),
-                (T.current = requestAnimationFrame(e));
+                ((performance.now() - T.current) / 40) %
+                (B.current.offsetWidth - 320);
+              (B.current.style.transform = `translateX( -${t}px )`),
+                (L.current = requestAnimationFrame(e));
             };
             return (
-              (T.current = requestAnimationFrame(e)),
-              () => cancelAnimationFrame(T.current)
+              (L.current = requestAnimationFrame(e)),
+              () => cancelAnimationFrame(L.current)
             );
-          }, [L, I, A, y, T]);
-        const F = s.useCallback(
+          }, [B, C, G, g, L]);
+        const O = s.useCallback(
           (e) => {
-            G || B(e);
+            w || A(e);
           },
-          [G],
+          [w],
         );
-        if (!I || !P || 0 === P.length) return null;
-        const U = () => {
+        if (!C || !N || 0 === N.length) return null;
+        const F = () => {
             E.L7.logged_in
-              ? M || C(!0)
+              ? x || y(!0)
               : (window.location.href = `${
                   E.De.STORE_BASE_URL
                 }login?redir=${encodeURIComponent(document.location.href)}`);
           },
-          H = null != l ? l : (0, f.Xx)("#DiscoveryQueue_WidgetHeader");
+          U = null != o ? o : (0, f.Xx)("#DiscoveryQueue_WidgetHeader");
         return s.createElement(
           v.U,
-          { trigger: "repeated", onVisibilityChange: F },
+          { trigger: "repeated", onVisibilityChange: O },
           s.createElement(
             r.s,
             {
               focusable: !0,
-              onGamepadFocus: () => B(!0),
-              onMouseEnter: () => G && B(!0),
-              onGamepadBlur: () => B(!1),
-              onMouseLeave: () => G && B(!1),
-              onOKButton: U,
+              onGamepadFocus: () => A(!0),
+              onMouseEnter: () => w && A(!0),
+              onGamepadBlur: () => A(!1),
+              onMouseLeave: () => w && A(!1),
+              onOKButton: F,
               onOKActionDescription: (0, f.Xx)("#DiscoveryQueue_OpenWizard"),
-              onClick: U,
+              onClick: F,
               className: D().DiscoveryQueueWidgetCtn,
             },
-            Boolean(!M) &&
+            Boolean(!x) &&
               s.createElement(
                 s.Fragment,
                 null,
@@ -25557,7 +25557,7 @@
                     "div",
                     { className: D().WidgetHeaderText },
                     E.L7.logged_in
-                      ? H
+                      ? U
                       : (0, f.Xx)("#DiscoveryQueue_WidgetHeader_LoggedOut"),
                   ),
                   E.L7.logged_in &&
@@ -25581,23 +25581,22 @@
                   s.createElement(
                     "div",
                     {
-                      ref: L,
+                      ref: B,
                       className: (0, S.Z)(D().AppCarouselCtn, "vt-scrollable"),
                     },
-                    P,
+                    N,
                   ),
                 ),
               ),
-            y &&
+            g &&
               s.createElement(
                 _.MS,
                 Object.assign({}, e, {
-                  bWizardVisible: y,
+                  bWizardVisible: g,
                   fnCloseModal: (e) => {
-                    C(!1), null == e || e.stopPropagation();
+                    y(!1), null == e || e.stopPropagation();
                   },
                   eStoreDiscoveryQueueType: n,
-                  fnGetFriendState: o,
                 }),
               ),
           ),

@@ -267,6 +267,67 @@
             ]
         },
         {
+            "name": "ModifyLeaderboardScoreMulti",
+            "version": 1,
+            "httpmethod": "POST",
+            "parameters": [
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "appid of game"
+                },
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "steamID to set the score for"
+                },
+                {
+                    "name": "score",
+                    "type": "int32",
+                    "optional": true,
+                    "description": "the score to set for this user"
+                },
+                {
+                    "name": "scoremethod",
+                    "type": "string",
+                    "optional": true,
+                    "description": "update method to use. Can be \"KeepBest\" or \"ForceUpdate\""
+                },
+                {
+                    "name": "details",
+                    "type": "rawbinary",
+                    "optional": true,
+                    "description": "game-specific details for how the score was earned. Up to 256 bytes."
+                },
+                {
+                    "name": "leaderboardid_del[0]",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "Numeric ID of the target leaderboard to delete user scores from. Multiple leaderboards supported by numbering sequentially [0], [1], [2], ... Leaderboards be retrieved from GetLeaderboardsForGame."
+                },
+                {
+                    "name": "leaderboardid_del[1]",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "Numeric ID of the target leaderboard to delete user scores from. Multiple leaderboards supported by numbering sequentially [0], [1], [2], ... Leaderboards be retrieved from GetLeaderboardsForGame."
+                },
+                {
+                    "name": "leaderboardid_set[0]",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "Numeric ID of the target leaderboard to set user scores into. Multiple leaderboards supported by numbering sequentially [0], [1], [2], ... Scores are set after all delete operations complete. Leaderboards be retrieved from GetLeaderboardsForGame."
+                },
+                {
+                    "name": "leaderboardid_set[1]",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "Numeric ID of the target leaderboard to set user scores into. Multiple leaderboards supported by numbering sequentially [0], [1], [2], ... Scores are set after all delete operations complete. Leaderboards be retrieved from GetLeaderboardsForGame."
+                }
+            ]
+        },
+        {
             "name": "ResetLeaderboard",
             "version": 1,
             "httpmethod": "POST",

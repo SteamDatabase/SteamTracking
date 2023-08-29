@@ -212,6 +212,7 @@
         OL: () => L,
         Pm: () => i,
         XW: () => c,
+        bk: () => C,
         dK: () => u,
         et: () => m,
         k6: () => _,
@@ -333,6 +334,14 @@
         } catch (e) {
           return "";
         }
+      }
+      function C(e) {
+        return (
+          r.De.IN_STEAMUI &&
+            !e.startsWith("steam://") &&
+            (e = `steam://openurl/${e}`),
+          e
+        );
       }
     },
   },

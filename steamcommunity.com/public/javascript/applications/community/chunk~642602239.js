@@ -743,6 +743,7 @@
         a = r(54856);
       const o = i.Message;
       class s extends o {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             s.prototype.communityitemid || n.aR(s.M()),
@@ -819,6 +820,7 @@
         }
       }
       class l extends o {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             l.prototype.attributeid || n.aR(l.M()),
@@ -881,6 +883,7 @@
         }
       }
       class c extends o {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             c.prototype.filter_appids || n.aR(c.M()),
@@ -941,6 +944,7 @@
         }
       }
       class m extends o {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             m.prototype.items || n.aR(m.M()),
@@ -992,6 +996,7 @@
         }
       }
       class d extends o {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             d.prototype.appid || n.aR(d.M()),
@@ -1061,6 +1066,7 @@
         }
       }
       class u extends o {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             u.prototype.item_definitions || n.aR(u.M()),
@@ -1112,6 +1118,7 @@
         }
       }
       class p extends o {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             p.prototype.item_type || n.aR(p.M()),
@@ -1262,6 +1269,7 @@
         }
       }
       class h extends o {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             h.prototype.appid || n.aR(h.M()),
@@ -1321,6 +1329,7 @@
         }
       }
       class _ extends o {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(), o.initialize(this, e, 0, -1, void 0, null);
         }
@@ -1355,6 +1364,7 @@
         }
       }
       class g extends o {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             g.prototype.timestamp_start || n.aR(g.M()),
@@ -1419,6 +1429,7 @@
         }
       }
       class f extends o {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             f.prototype.num_trading_cards || n.aR(f.M()),
@@ -1476,6 +1487,7 @@
         }
       }
       class E extends o {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             E.prototype.eventid || n.aR(E.M()),
@@ -1534,6 +1546,7 @@
         }
       }
       class v extends o {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             v.prototype.eventid || n.aR(v.M()),
@@ -1650,6 +1663,7 @@
         }
       }
       class S extends o {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             S.prototype.rewards || n.aR(S.M()),
@@ -1701,6 +1715,7 @@
         }
       }
       class C extends o {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             C.prototype.eventid || n.aR(C.M()),
@@ -1756,6 +1771,7 @@
         }
       }
       class y extends o {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(), o.initialize(this, e, 0, -1, void 0, null);
         }
@@ -3357,7 +3373,7 @@
           return this.props.config.map(({ renderTab: e }, t) => {
             const r = this.state.activeIndex === t;
             return o.createElement(
-              I,
+              w,
               {
                 key: t,
                 active: r,
@@ -3375,10 +3391,10 @@
           e.children,
         );
       }
-      function w(e) {
+      function I(e) {
         return o.createElement("div", { className: C.Content }, e.children);
       }
-      function I(e) {
+      function w(e) {
         const { active: t, children: r, onClick: i } = e;
         return o.createElement(
           v.s,
@@ -3431,7 +3447,7 @@
           o.Fragment,
           null,
           o.createElement(
-            w,
+            I,
             null,
             o.createElement(
               D,
@@ -3448,7 +3464,7 @@
           o.Fragment,
           null,
           o.createElement(
-            w,
+            I,
             null,
             a && o.createElement("div", { className: C.SectionedPageTitle }, a),
             n.map((e) => {
@@ -4779,9 +4795,9 @@
       }
       var y = r(701),
         b = r(19304),
-        w = r(207),
-        I = r(52868),
-        B = r.n(I),
+        I = r(207),
+        w = r(52868),
+        B = r.n(w),
         A = r(88464),
         R = r(46132),
         D = r(1063),
@@ -5146,12 +5162,12 @@
           : (0, L.hF)(e, null == t ? void 0 : t.event);
       }
       function ue(e) {
-        let t = (0, w.FM)(e).toLocaleLowerCase(),
-          r = (0, w.FM)(v.De.STORE_BASE_URL),
-          i = (0, w.FM)(v.De.COMMUNITY_BASE_URL);
+        let t = (0, I.FM)(e).toLocaleLowerCase(),
+          r = (0, I.FM)(v.De.STORE_BASE_URL),
+          i = (0, I.FM)(v.De.COMMUNITY_BASE_URL);
         const n =
           "dev" === v.De.WEB_UNIVERSE ||
-          (0, w.FM)(v.De.STORE_BASE_URL).endsWith(".steam.dev");
+          (0, I.FM)(v.De.STORE_BASE_URL).endsWith(".steam.dev");
         return (
           t == r ||
           t == i ||
@@ -5289,8 +5305,8 @@
         }
         return (0, L.hF)(t, null == r ? void 0 : r.event);
       }
-      var we = r(81245),
-        Ie = r(23801);
+      var Ie = r(81245),
+        we = r(23801);
       class Be {
         constructor() {
           (this.timestamp = 0),
@@ -5414,7 +5430,7 @@
             let t = this.m_fileUploadProps.file;
             if (!t)
               throw (
-                ((0, Ie.X)(
+                ((0, we.X)(
                   !1,
                   "Must SetImageFileToUpload before calling BeginFileUpload",
                 ),
@@ -6028,7 +6044,7 @@
         return (
           "dev" == v.De.WEB_UNIVERSE &&
             "store" == (0, v.Zv)() &&
-            "store.steampowered.com" == (0, w.FM)(i) &&
+            "store.steampowered.com" == (0, I.FM)(i) &&
             ((i = i.replace(
               "https://store.steampowered.com/",
               v.De.STORE_BASE_URL,
@@ -6073,8 +6089,8 @@
           let e;
           return (
             (i = a),
-            (e = (!r || !r.BHasTag("auto_rssfeed")) && !(0, w.dK)(i)),
-            t || (i = (0, w.et)(i)),
+            (e = (!r || !r.BHasTag("auto_rssfeed")) && !(0, I.dK)(i)),
+            t || (i = (0, I.et)(i)),
             t
               ? n.createElement(Xe.e, {
                   src: i,
@@ -6349,10 +6365,10 @@
               })(i),
             ),
           );
-        return i == we.sq ||
-          i == we.RQ ||
-          (2 == v.De.EUNIVERSE && i == we.$Y) ||
-          (1 == v.De.EUNIVERSE && i == we._L)
+        return i == Ie.sq ||
+          i == Ie.RQ ||
+          (2 == v.De.EUNIVERSE && i == Ie.$Y) ||
+          (1 == v.De.EUNIVERSE && i == Ie._L)
           ? n.createElement(
               "div",
               null,

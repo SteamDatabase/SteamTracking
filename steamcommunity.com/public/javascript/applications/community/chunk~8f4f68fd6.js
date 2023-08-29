@@ -371,6 +371,7 @@
         s = i(54856);
       const o = a.Message;
       class l extends o {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             l.prototype.notification_id || n.aR(l.M()),
@@ -452,6 +453,7 @@
         }
       }
       class m extends o {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             m.prototype.include_hidden || n.aR(m.M()),
@@ -540,6 +542,7 @@
         }
       }
       class c extends o {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             c.prototype.notifications || n.aR(c.M()),
@@ -613,6 +616,7 @@
         }
       }
       class d extends o {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             d.prototype.timestamp || n.aR(d.M()),
@@ -688,6 +692,7 @@
         }
       }
       class u extends o {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(), o.initialize(this, e, 0, -1, void 0, null);
         }
@@ -722,6 +727,7 @@
         }
       }
       class _ extends o {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             _.prototype.notification_type || n.aR(_.M()),
@@ -784,6 +790,7 @@
         }
       }
       class p extends o {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             p.prototype.preferences || n.aR(p.M()),
@@ -835,6 +842,7 @@
         }
       }
       class f extends o {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(), o.initialize(this, e, 0, -1, void 0, null);
         }
@@ -869,6 +877,7 @@
         }
       }
       class g extends o {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(), o.initialize(this, e, 0, -1, void 0, null);
         }
@@ -903,6 +912,7 @@
         }
       }
       class y extends o {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             y.prototype.preferences || n.aR(y.M()),
@@ -954,6 +964,7 @@
         }
       }
       class B extends o {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             B.prototype.notification_ids || n.aR(B.M()),
@@ -1014,6 +1025,7 @@
         }
       }
       class b extends o {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             b.prototype.notifications || n.aR(b.M()),
@@ -1077,6 +1089,7 @@
         }
       }
       class h extends o {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             h.prototype.preferences || n.aR(h.M()),
@@ -1187,6 +1200,7 @@
         })(w || (w = {}));
       const v = a.Message;
       class N extends v {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             N.prototype.type || n.aR(N.M()),
@@ -1243,6 +1257,7 @@
         }
       }
       class M extends v {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             M.prototype.link || n.aR(M.M()),
@@ -1297,6 +1312,7 @@
         }
       }
       class E extends v {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             E.prototype.appid || n.aR(E.M()),
@@ -1367,6 +1383,7 @@
         }
       }
       class T extends v {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             T.prototype.appid || n.aR(T.M()),
@@ -1510,17 +1527,18 @@
           return "CEconItem_Description";
         }
       }
-      class R extends v {
+      class I extends v {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            R.prototype.appid || n.aR(R.M()),
+            I.prototype.appid || n.aR(I.M()),
             v.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            R.sm_m ||
-              (R.sm_m = {
-                proto: R,
+            I.sm_m ||
+              (I.sm_m = {
+                proto: I,
                 fields: {
                   appid: { n: 1, br: n.FE.readUint32, bw: n.Xc.writeUint32 },
                   contextid: {
@@ -1561,6 +1579,88 @@
                   },
                 },
               }),
+            I.sm_m
+          );
+        }
+        static MBF() {
+          return I.sm_mbf || (I.sm_mbf = n.Bh(I.M())), I.sm_mbf;
+        }
+        toObject(e = !1) {
+          return I.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return n.TA(I.M(), e, t);
+        }
+        static fromObject(e) {
+          return n.aD(I.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new a.BinaryReader(e),
+            i = new I();
+          return I.deserializeBinaryFromReader(i, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return n.F(I.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new a.BinaryWriter();
+          return I.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          n.l2(I.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new a.BinaryWriter();
+          return I.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CEcon_Asset";
+        }
+      }
+      class R extends v {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            R.prototype.steamid || n.aR(R.M()),
+            v.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            R.sm_m ||
+              (R.sm_m = {
+                proto: R,
+                fields: {
+                  steamid: {
+                    n: 1,
+                    br: n.FE.readFixed64String,
+                    bw: n.Xc.writeFixed64String,
+                  },
+                  appid: { n: 2, br: n.FE.readUint32, bw: n.Xc.writeUint32 },
+                  contextid: {
+                    n: 3,
+                    br: n.FE.readUint64String,
+                    bw: n.Xc.writeUint64String,
+                  },
+                  get_descriptions: {
+                    n: 4,
+                    br: n.FE.readBool,
+                    bw: n.Xc.writeBool,
+                  },
+                  for_trade_offer_verification: {
+                    n: 10,
+                    br: n.FE.readBool,
+                    bw: n.Xc.writeBool,
+                  },
+                  language: { n: 5, br: n.FE.readString, bw: n.Xc.writeString },
+                  filters: { n: 6, c: F },
+                  start_assetid: {
+                    n: 8,
+                    br: n.FE.readUint64String,
+                    bw: n.Xc.writeUint64String,
+                  },
+                  count: { n: 9, br: n.FE.readInt32, bw: n.Xc.writeInt32 },
+                },
+              }),
             R.sm_m
           );
         }
@@ -1596,14 +1696,15 @@
           return R.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CEcon_Asset";
+          return "CEcon_GetInventoryItemsWithDescriptions_Request";
         }
       }
       class F extends v {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            F.prototype.steamid || n.aR(F.M()),
-            v.initialize(this, e, 0, -1, void 0, null);
+            F.prototype.assetids || n.aR(F.M()),
+            v.initialize(this, e, 0, -1, [1, 2], null);
         }
         static M() {
           return (
@@ -1611,35 +1712,32 @@
               (F.sm_m = {
                 proto: F,
                 fields: {
-                  steamid: {
+                  assetids: {
                     n: 1,
-                    br: n.FE.readFixed64String,
-                    bw: n.Xc.writeFixed64String,
-                  },
-                  appid: { n: 2, br: n.FE.readUint32, bw: n.Xc.writeUint32 },
-                  contextid: {
-                    n: 3,
+                    r: !0,
+                    q: !0,
                     br: n.FE.readUint64String,
-                    bw: n.Xc.writeUint64String,
+                    pbr: n.FE.readPackedUint64String,
+                    bw: n.Xc.writeRepeatedUint64String,
                   },
-                  get_descriptions: {
+                  currencyids: {
+                    n: 2,
+                    r: !0,
+                    q: !0,
+                    br: n.FE.readUint32,
+                    pbr: n.FE.readPackedUint32,
+                    bw: n.Xc.writeRepeatedUint32,
+                  },
+                  tradable_only: {
+                    n: 3,
+                    br: n.FE.readBool,
+                    bw: n.Xc.writeBool,
+                  },
+                  marketable_only: {
                     n: 4,
                     br: n.FE.readBool,
                     bw: n.Xc.writeBool,
                   },
-                  for_trade_offer_verification: {
-                    n: 10,
-                    br: n.FE.readBool,
-                    bw: n.Xc.writeBool,
-                  },
-                  language: { n: 5, br: n.FE.readString, bw: n.Xc.writeString },
-                  filters: { n: 6, c: I },
-                  start_assetid: {
-                    n: 8,
-                    br: n.FE.readUint64String,
-                    bw: n.Xc.writeUint64String,
-                  },
-                  count: { n: 9, br: n.FE.readInt32, bw: n.Xc.writeInt32 },
                 },
               }),
             F.sm_m
@@ -1677,88 +1775,11 @@
           return F.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CEcon_GetInventoryItemsWithDescriptions_Request";
-        }
-      }
-      class I extends v {
-        constructor(e = null) {
-          super(),
-            I.prototype.assetids || n.aR(I.M()),
-            v.initialize(this, e, 0, -1, [1, 2], null);
-        }
-        static M() {
-          return (
-            I.sm_m ||
-              (I.sm_m = {
-                proto: I,
-                fields: {
-                  assetids: {
-                    n: 1,
-                    r: !0,
-                    q: !0,
-                    br: n.FE.readUint64String,
-                    pbr: n.FE.readPackedUint64String,
-                    bw: n.Xc.writeRepeatedUint64String,
-                  },
-                  currencyids: {
-                    n: 2,
-                    r: !0,
-                    q: !0,
-                    br: n.FE.readUint32,
-                    pbr: n.FE.readPackedUint32,
-                    bw: n.Xc.writeRepeatedUint32,
-                  },
-                  tradable_only: {
-                    n: 3,
-                    br: n.FE.readBool,
-                    bw: n.Xc.writeBool,
-                  },
-                  marketable_only: {
-                    n: 4,
-                    br: n.FE.readBool,
-                    bw: n.Xc.writeBool,
-                  },
-                },
-              }),
-            I.sm_m
-          );
-        }
-        static MBF() {
-          return I.sm_mbf || (I.sm_mbf = n.Bh(I.M())), I.sm_mbf;
-        }
-        toObject(e = !1) {
-          return I.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.TA(I.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.aD(I.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new a.BinaryReader(e),
-            i = new I();
-          return I.deserializeBinaryFromReader(i, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.F(I.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new a.BinaryWriter();
-          return I.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.l2(I.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new a.BinaryWriter();
-          return I.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
           return "CEcon_GetInventoryItemsWithDescriptions_Request_FilterOptions";
         }
       }
       class z extends v {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             z.prototype.assets || n.aR(z.M()),
@@ -1770,9 +1791,9 @@
               (z.sm_m = {
                 proto: z,
                 fields: {
-                  assets: { n: 1, c: R, r: !0, q: !0 },
+                  assets: { n: 1, c: I, r: !0, q: !0 },
                   descriptions: { n: 2, c: T, r: !0, q: !0 },
-                  missing_assets: { n: 3, c: R, r: !0, q: !0 },
+                  missing_assets: { n: 3, c: I, r: !0, q: !0 },
                   more_items: { n: 4, br: n.FE.readBool, bw: n.Xc.writeBool },
                   last_assetid: {
                     n: 5,
@@ -1825,6 +1846,7 @@
         }
       }
       class A extends v {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             A.prototype.generate_new_token || n.aR(A.M()),
@@ -1882,6 +1904,7 @@
         }
       }
       class k extends v {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             k.prototype.trade_offer_access_token || n.aR(k.M()),
@@ -1939,6 +1962,7 @@
         }
       }
       class D extends v {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             D.prototype.return_url || n.aR(D.M()),
@@ -1996,6 +2020,7 @@
         }
       }
       class O extends v {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             O.prototype.url || n.aR(O.M()),
@@ -2049,6 +2074,7 @@
         }
       }
       class G extends v {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             G.prototype.language || n.aR(G.M()),
@@ -2105,6 +2131,7 @@
         }
       }
       class U extends v {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             U.prototype.classid || n.aR(U.M()),
@@ -2167,6 +2194,7 @@
         }
       }
       class C extends v {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             C.prototype.descriptions || n.aR(C.M()),
@@ -2222,7 +2250,7 @@
         (e.GetInventoryItemsWithDescriptions = function (e, t) {
           return e.SendMsg(
             "Econ.GetInventoryItemsWithDescriptions#1",
-            (0, s.MD)(F, t),
+            (0, s.MD)(R, t),
             z,
             { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 2 },
           );
@@ -2772,12 +2800,12 @@
                     return (
                       V("Item notification missing required attributes"), null
                     );
-                  const i = s.gA.Init(F);
+                  const i = s.gA.Init(R);
                   i.Body().set_steamid(e.steamid),
                     i.Body().set_contextid(e.contextid),
                     i.Body().set_appid(parseInt(e.appid)),
                     i.Body().set_get_descriptions(!0);
-                  let r = new I();
+                  let r = new F();
                   r.add_assetids(e.assetid), i.Body().set_filters(r);
                   const a = yield W.GetInventoryItemsWithDescriptions(t, i);
                   if (1 !== a.GetEResult())
@@ -3586,7 +3614,7 @@
               ),
             );
       }
-      function R(e) {
+      function I(e) {
         let {
           requestorName: t,
           requestorAvatarURL: i,
@@ -3655,7 +3683,7 @@
               ),
             );
       }
-      function F(e) {
+      function R(e) {
         var t, i;
         let {
           itemState: a,
@@ -3715,7 +3743,7 @@
           )
             ? a.item_data.name
             : (0, _.Xx)("#Notification_Item_Body_Generic"),
-          R = !a || !a.item_data;
+          I = !a || !a.item_data;
         if (v) {
           let t = "";
           return (
@@ -3746,7 +3774,7 @@
           null,
           r.createElement(
             f.gd,
-            Object.assign({ logo: N, bLoading: R }, e),
+            Object.assign({ logo: N, bLoading: I }, e),
             r.createElement(f.bc, {
               icon: l,
               title: (0, _.Xx)("#Notification_ItemAnnouncement_TitleLong"),
@@ -3760,7 +3788,7 @@
           ),
         );
       }
-      function I(e) {
+      function F(e) {
         let {
           fallbackLogo: t,
           app: i,
@@ -3840,9 +3868,9 @@
             onHide: E,
           } = e,
           T = u.title;
-        const R = g(p),
-          [F, I] = r.useState(!1),
-          z = () => I(!0),
+        const I = g(p),
+          [R, F] = r.useState(!1),
+          z = () => F(!0),
           [A, k] = (0, w.KU)(
             u.bclan_account ? u.owner_steam_id.GetAccountID() : void 0,
           ),
@@ -3914,8 +3942,8 @@
             : (W = W + " " + e);
         }
         let X = o;
-        if (!F) {
-          const e = R ? S().ShortLogoDimensions : S().StandardLogoDimensions;
+        if (!R) {
+          const e = I ? S().ShortLogoDimensions : S().StandardLogoDimensions;
           if (c && (0, l.rc)(u)) {
             const t = u.bhas_friend && p != f.IS.GamepadToast;
             X = r.createElement(
@@ -3932,7 +3960,7 @@
                 onError: z,
               }));
         }
-        return R
+        return I
           ? r.createElement(
               b,
               Object.assign({}, e, {
@@ -4222,7 +4250,7 @@
           return r.createElement(
             "a",
             { href: _, onMouseDown: (e) => i(() => {}, t.item, e) },
-            r.createElement(R, {
+            r.createElement(I, {
               fallbackLogo: r.createElement(v.pUF, null),
               icon: r.createElement(v.yBp, null),
               onActivate: () => i(() => window.location.assign(_), t.item),
@@ -4254,7 +4282,7 @@
           return r.createElement(
             "a",
             { href: f, onMouseDown: (e) => i(() => {}, t.item, e) },
-            r.createElement(F, {
+            r.createElement(R, {
               icon: r.createElement(v.F8F, null),
               fallbackLogo: r.createElement(v.ui7, null),
               onActivate: () => i(() => window.location.assign(f), t.item),
@@ -4346,7 +4374,7 @@
           return r.createElement(
             "a",
             { href: o, onMouseDown: (e) => i(() => {}, t.item, e) },
-            r.createElement(I, {
+            r.createElement(F, {
               icon: r.createElement(v.ui7, null),
               fallbackLogo: r.createElement(v.ydL, null),
               onActivate: () => i(() => window.location.assign(o), t.item),

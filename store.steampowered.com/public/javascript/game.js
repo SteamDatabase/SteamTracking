@@ -2222,12 +2222,11 @@ function GamepadShowModalMediaCarousel( elementID )
 	$Content.detach();
 	$Content.css( 'display', 'flex' );
 
-	// scroll to the selected image after the dialog is shown
+	// set focus on the selected image after the dialog is shown
 	window.setTimeout( function () {
-		var image = document.getElementById( elementID + k_id_modal_media );
-		if ( image )
-			image.focus();
-	}, 0 );
+		if ( typeof GPNavFocusChild !== 'undefined' )
+			GPNavFocusChild( $J( '#' + elementID + k_id_modal_media ) );
+	}, 10 );
 
 	modalMediaCarousel = GPShowFullScreenModal( $Content ).always(
 		function() {

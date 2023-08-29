@@ -2460,7 +2460,7 @@
     },
     27527: (e, t, n) => {
       "use strict";
-      n.d(t, { At: () => r });
+      n.d(t, { At: () => r, BH: () => o });
       class r {
         constructor(e, t = 0, n) {
           (this.m_nOffset = t || 0),
@@ -2526,6 +2526,32 @@
         GetCountBytesRemaining() {
           return this.m_viewPacket.byteLength - this.m_iGet;
         }
+      }
+      const i = [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+      ];
+      function o(e) {
+        let t = "";
+        for (let n = 0; n < e.length; n++) {
+          let r = e[n];
+          t += i[r >>> 4] + i[15 & r];
+        }
+        return t;
       }
     },
     65406: (e, t, n) => {
@@ -3205,7 +3231,9 @@
           (e[(e.IgnoreSavedSize = 131072)] = "IgnoreSavedSize"),
           (e[(e.NoRoundedCorners = 262144)] = "NoRoundedCorners"),
           (e[(e.ForceRoundedCorners = 524288)] = "ForceRoundedCorners"),
-          (e[(e.OverrideRedirect = 1048576)] = "OverrideRedirect");
+          (e[(e.OverrideRedirect = 1048576)] = "OverrideRedirect"),
+          (e[(e.IgnoreSteamDisplayScale = 2097152)] =
+            "IgnoreSteamDisplayScale");
       })(_ || (_ = {})),
         (function (e) {
           (e[(e.Overlay = 0)] = "Overlay"),
@@ -8740,6 +8768,7 @@
         i = n(29063);
       const o = r.Message;
       class a extends o {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             a.prototype.v4 || i.aR(a.M()),
@@ -8794,6 +8823,7 @@
         }
       }
       class s extends o {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             s.prototype.dst_gcid_queue || i.aR(s.M()),
@@ -8856,6 +8886,7 @@
         }
       }
       class l extends o {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             l.prototype.steamid || i.aR(l.M()),
@@ -9065,6 +9096,7 @@
         }
       }
       class c extends o {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             c.prototype.appid || i.aR(c.M()),
@@ -9171,6 +9203,7 @@
         }
       }
       class u extends o {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             u.prototype.clanid || i.aR(u.M()),
@@ -9261,6 +9294,7 @@
         }
       }
       class d extends o {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             d.prototype.rtime_before || i.aR(d.M()),
@@ -9329,6 +9363,7 @@
         }
       }
       class m extends o {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             m.prototype.content_descriptors_to_exclude || i.aR(m.M()),
@@ -9382,6 +9417,7 @@
         }
       }
       class h extends o {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             h.prototype.content_descriptorid || i.aR(h.M()),
@@ -9935,6 +9971,7 @@
         a = n(29063);
       const s = o.Message;
       class l extends s {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             l.prototype.original_hostname || a.aR(l.M()),
@@ -10029,6 +10066,7 @@
         }
       }
       class c extends s {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             c.prototype.launcher_type || a.aR(c.M()),
@@ -10108,6 +10146,7 @@
         }
       }
       class u extends s {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             u.prototype.class_100 || a.aR(u.M()),
@@ -10195,6 +10234,7 @@
         }
       }
       class d extends s {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             d.prototype.hostname || a.aR(d.M()),
@@ -10254,6 +10294,7 @@
         }
       }
       class m extends s {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             m.prototype.hosts || a.aR(m.M()),
@@ -10306,6 +10347,7 @@
       }
       const h = o.Message;
       class p extends h {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             p.prototype.raw_version || a.aR(p.M()),
@@ -10368,6 +10410,7 @@
         }
       }
       class _ extends h {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             _.prototype.interface_name || a.aR(_.M()),
@@ -10435,6 +10478,7 @@
         }
       }
       class g extends h {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             g.prototype.game_id || a.aR(g.M()),
@@ -10499,6 +10543,7 @@
         }
       }
       class f extends h {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             f.prototype.protocol_tested || a.aR(f.M()),
@@ -10561,6 +10606,7 @@
         }
       }
       class v extends h {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             v.prototype.cell_id || a.aR(v.M()),
@@ -10620,6 +10666,7 @@
         }
       }
       class C extends h {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             C.prototype.product || a.aR(C.M()),
@@ -10677,6 +10724,7 @@
         }
       }
       class E extends h {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             E.prototype.route || a.aR(E.M()),
@@ -10731,6 +10779,7 @@
         }
       }
       class b extends h {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             b.prototype.component || a.aR(b.M()),
@@ -10789,6 +10838,7 @@
         }
       }
       class w extends h {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             w.prototype.action || a.aR(w.M()),
@@ -10843,6 +10893,7 @@
         }
       }
       class S extends h {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             S.prototype.product || a.aR(S.M()),
@@ -10898,6 +10949,7 @@
         }
       }
       class y extends h {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             y.prototype.identifier || a.aR(y.M()),
@@ -10957,6 +11009,7 @@
         }
       }
       class I extends h {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             I.prototype.type || a.aR(I.M()),
@@ -11036,6 +11089,7 @@
         }
       }
       class R extends h {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             R.prototype.appid || a.aR(R.M()),
@@ -11097,6 +11151,7 @@
         }
       }
       class D extends h {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             D.prototype.summary || a.aR(D.M()),
@@ -11144,6 +11199,7 @@
         }
       }
       class M extends h {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             M.prototype.cell_id || a.aR(M.M()),
@@ -11203,6 +11259,7 @@
         }
       }
       class T extends h {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             T.prototype.source_type || a.aR(T.M()),
@@ -11303,6 +11360,7 @@
         }
       }
       class B extends h {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             B.prototype.validation_result || a.aR(B.M()),
@@ -11393,6 +11451,7 @@
         }
       }
       class A extends h {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             A.prototype.app_id || a.aR(A.M()),
@@ -11542,6 +11601,7 @@
         }
       }
       class O extends h {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             O.prototype.cell_id || a.aR(O.M()),
@@ -11596,6 +11656,7 @@
         }
       }
       class F extends h {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             F.prototype.client_args || a.aR(F.M()),
@@ -11791,6 +11852,9 @@
         (console.error = (e, ...n) => {
           U(new Error(z(e, ...n)), 1), t.apply(console, [e, ...n]);
         }),
+          (console.clogerror = (e, n, ...r) => {
+            U(new Error(z(n, ...r)), e + 1), t.apply(console, [n, ...r]);
+          }),
           x("error", (e) => {
             U(e.error, 0);
           }),
@@ -23087,33 +23151,36 @@
     75962: (e, t, n) => {
       "use strict";
       n.d(t, {
-        M2: () => g,
-        Qc: () => f,
-        R6: () => d,
-        b8: () => _,
-        ns: () => m,
+        M2: () => f,
+        Qc: () => v,
+        R6: () => m,
+        b8: () => g,
+        ns: () => h,
       });
       var r = n(33940),
         i = n(50265),
         o = n(89526),
         a = n(40103),
-        s = n(60161),
-        l = n(14826),
-        c = n(32765),
-        u = n(69159);
-      function d(e, t) {
+        s = n(34433),
+        l = n(60161),
+        c = n(14826),
+        u = n(32765),
+        d = n(69159);
+      function m(e, t) {
         let n;
         (n =
           "currentTarget" in e ? e.currentTarget.ownerDocument.defaultView : e),
           0 == t.indexOf("steam://")
-            ? (n.location.href = t)
+            ? (0, s.w3)(n, "URL.ExecuteSteamURL")
+              ? n.SteamClient.URL.ExecuteSteamURL(t)
+              : (n.location.href = t)
             : n.open(
                 t,
                 null,
                 "menubar,location,resizable,scrollbars,status,noopener",
               );
       }
-      function m(e) {
+      function h(e) {
         let {
             bDisableContextMenu: t,
             onContextMenu: n,
@@ -23122,7 +23189,7 @@
             bUseLinkFilter: s,
             getPIDFromEvent: l,
           } = e,
-          u = (0, r._T)(e, [
+          c = (0, r._T)(e, [
             "bDisableContextMenu",
             "onContextMenu",
             "bForceExternal",
@@ -23131,22 +23198,22 @@
             "getPIDFromEvent",
           ]);
         return (
-          t || n || (n = p),
+          t || n || (n = _),
           s &&
             a &&
             (a =
-              (c.De.IN_CLIENT ? "steam://openurl_external/" : "") +
-              c.De.COMMUNITY_BASE_URL +
+              (u.De.IN_CLIENT ? "steam://openurl_external/" : "") +
+              u.De.COMMUNITY_BASE_URL +
               "linkfilter/?url=" +
               a),
           l || (l = () => 0),
           o.createElement(
             "a",
-            Object.assign({}, u, {
+            Object.assign({}, c, {
               href: a,
               onClick: (e) => {
                 e.preventDefault(),
-                  _(window, a, {
+                  g(window, a, {
                     bForceExternal: !!i,
                     bUseLinkFilter: !!s,
                     unPID: l(e),
@@ -23159,43 +23226,43 @@
           )
         );
       }
-      function h(e) {
+      function p(e) {
         const { strURL: t, unPID: n } = e;
         return o.createElement(
           o.Fragment,
           null,
           o.createElement(
-            u.Zo,
+            d.Zo,
             {
               onSelected: () => {
-                s.J$(t);
+                l.J$(t);
               },
             },
-            (0, l.Xx)("#ContextMenu_CopyLinkURL"),
+            (0, c.Xx)("#ContextMenu_CopyLinkURL"),
           ),
           o.createElement(
-            u.Zo,
+            d.Zo,
             {
               onSelected: (e) => {
-                _(e, t, { unPID: n });
+                g(e, t, { unPID: n });
               },
             },
-            (0, l.Xx)("#ContextMenu_OpenLinkInNewWindow"),
+            (0, c.Xx)("#ContextMenu_OpenLinkInNewWindow"),
           ),
         );
       }
-      function p(e, t) {
+      function _(e, t) {
         let n = e.currentTarget;
         return (0, a.yV)(
           o.createElement(
-            u.xV,
+            d.xV,
             null,
-            o.createElement(h, { strURL: n.href, unPID: t }),
+            o.createElement(p, { strURL: n.href, unPID: t }),
           ),
           e,
         );
       }
-      function _(e, t, n = {}) {
+      function g(e, t, n = {}) {
         const { bForceExternal: r, unPID: i, bUseLinkFilter: o } = n;
         let a;
         (a =
@@ -23212,13 +23279,13 @@
                   (o ? ",noreferrer" : ""),
               );
       }
-      const g = (e) =>
+      const f = (e) =>
         o.createElement(
           o.Fragment,
           null,
           Boolean(e.condition) ? e.wrap(e.children) : e.children,
         );
-      function f(e) {
+      function v(e) {
         if ("string" != typeof e) return NaN;
         const t = !e.includes("ms") && e.includes("s");
         let n = Number.parseFloat(e);
@@ -24905,7 +24972,9 @@
               console.warn(...h);
               break;
             case l.Error:
-              console.error(...h);
+              console.clogerror
+                ? console.clogerror(3, ...h)
+                : console.error(...h);
           }
       }
       (u.k_EnabledLogNames_StorageKey = "EnabledWebLogs"),

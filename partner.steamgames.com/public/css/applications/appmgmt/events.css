@@ -11294,6 +11294,35 @@ table.optin_admin_editor_EligibleGamesTable_3sBXw td {
 h1.optin_display_appeal_AppealTitle_X7wqW {
   font-weight: 600;
 }
+.optin_display_appeal_AppealsEntryPointCtn_o0-VK {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+.optin_display_appeal_AppealsEntryPointCtn_o0-VK
+  .optin_display_appeal_AppealSelectedApp_2JcBf {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: #1e1f24;
+  padding: 8px 16px 8px 8px;
+}
+.optin_display_appeal_AppealsEntryPointCtn_o0-VK
+  .optin_display_appeal_AppealSelectedApp_2JcBf
+  .optin_display_appeal_SelectedApp_DZyHh {
+  margin-right: 20px;
+  display: flex;
+  background: #000;
+  flex-direction: column;
+  align-items: center;
+}
+.optin_display_appeal_AppealsEntryPointCtn_o0-VK
+  .optin_display_appeal_AppealSelectedApp_2JcBf
+  .optin_display_appeal_SelectedApp_DZyHh
+  img {
+  height: 100px;
+  width: auto;
+  max-width: unset;
+}
 .optin_display_appeal_dialog_Dummy_2ezUj {
   background-color: hotpink;
 }

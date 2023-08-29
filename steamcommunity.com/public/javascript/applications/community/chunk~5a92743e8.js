@@ -11,6 +11,7 @@
         a = t(54856);
       const s = i.Message;
       class o extends s {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             o.prototype.recommendationid || n.aR(o.M()),
@@ -96,6 +97,7 @@
         }
       }
       class c extends s {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(), s.initialize(this, e, 0, -1, void 0, null);
         }
@@ -130,6 +132,7 @@
         }
       }
       class l extends s {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             l.prototype.reaction_type || n.aR(l.M()),
@@ -188,6 +191,7 @@
         }
       }
       class d extends s {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             d.prototype.recommendationid || n.aR(d.M()),
@@ -423,6 +427,7 @@
         }
       }
       class m extends s {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             m.prototype.appid || n.aR(m.M()),
@@ -476,6 +481,7 @@
         }
       }
       class u extends s {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             u.prototype.accountids_recommended || n.aR(u.M()),
@@ -544,6 +550,7 @@
         }
       }
       class b extends s {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             b.prototype.requests || n.aR(b.M()),
@@ -595,6 +602,7 @@
         }
       }
       class B extends s {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             B.prototype.steamid || n.aR(B.M()),
@@ -653,6 +661,7 @@
         }
       }
       class w extends s {
+        static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             w.prototype.recommendations || n.aR(w.M()),

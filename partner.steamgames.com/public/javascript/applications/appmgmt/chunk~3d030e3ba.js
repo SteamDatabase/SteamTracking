@@ -562,6 +562,7 @@
         OL: () => h,
         Pm: () => d,
         XW: () => l,
+        bk: () => g,
         dK: () => _,
         et: () => c,
         iv: () => v,
@@ -677,6 +678,14 @@
       }
       function v() {
         return `${r.De.HELP_BASE_URL}${(0, a.CE)()}/`;
+      }
+      function g(e) {
+        return (
+          r.De.IN_STEAMUI &&
+            !e.startsWith("steam://") &&
+            (e = `steam://openurl/${e}`),
+          e
+        );
       }
     },
     70369: (e, t, n) => {
