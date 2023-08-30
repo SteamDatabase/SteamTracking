@@ -397,6 +397,8 @@ ${HELP_BASE_URL}wizard/HelpWithSteamGuardCode
 ${HELP_BASE_URL}wizard/HelpWithSteamMobileChat
 ${IMG_URL}${_ ? "favorite_star.png" : "favorite_star_empty.png"}
 ${IMG_URL}${image}
+${IMG_URL}${img_after}
+${IMG_URL}${img_before}
 ${IMG_URL}${titleButtonImage}
 ${IMG_URL}${}
 ${IMG_URL}${}/icons/scroll_arrow.png
@@ -456,6 +458,19 @@ ${IMG_URL}arrow_left.png
 ${IMG_URL}arrow_over.png
 ${IMG_URL}arrow_solid_left.png
 ${IMG_URL}arrow_solid_right.png
+${IMG_URL}augupdate23/FinalMapAfter.jpg
+${IMG_URL}augupdate23/FinalMapBefore.jpg
+${IMG_URL}augupdate23/armory_browse.png
+${IMG_URL}augupdate23/armory_global_items.png
+${IMG_URL}augupdate23/armory_item_combos.png
+${IMG_URL}augupdate23/armory_item_highlight.png
+${IMG_URL}augupdate23/armory_sort_market_value.png
+${IMG_URL}augupdate23/armory_stack_duplicates.png
+${IMG_URL}augupdate23/behavior_good_reports.png
+${IMG_URL}augupdate23/behavior_matchmaking.png
+${IMG_URL}augupdate23/behavior_reporting.png
+${IMG_URL}augupdate23/behavior_summary.png
+${IMG_URL}augupdate23/behavior_toxic_chat.png
 ${IMG_URL}back_arrow.png
 ${IMG_URL}characters/${}.png
 ${IMG_URL}characters/heroes-sil.png
@@ -1379,6 +1394,8 @@ ${VIDEO_URL}${video}.mp4
 ${VIDEO_URL}${video}.webm
 ${VIDEO_URL}${}.mp4
 ${VIDEO_URL}${}.webm
+${VIDEO_URL}/augupdate23/${}.png
+${VIDEO_URL}/augupdate23/${}.webm
 ${VIDEO_URL}abilities/${}/${name}.jpg
 ${VIDEO_URL}abilities/${}/${name}.mp4
 ${VIDEO_URL}abilities/${}/${name}.webm
@@ -3139,6 +3156,8 @@ url( ${IMG_URL}/pastupdates/wr_social.png )
 url( ${IMG_URL}/pastupdates/wraith_social.jpg )
 url( ${IMG_URL}abilities/${name}.png )
 url( ${IMG_URL}arrow_solid_left.png )
+url( ${IMG_URL}augupdate23/loadout_armory_2023_web_header_cropped.jpg )
+url( ${IMG_URL}augupdate23/repeater_grey_alt.jpg )
 url( ${IMG_URL}backgrounds/bg_granite_texture.jpg )
 url( ${IMG_URL}backgrounds/bg_granite_texture_sched.jpg )
 url( ${IMG_URL}backgrounds/bg_granite_texture_teams.jpg )

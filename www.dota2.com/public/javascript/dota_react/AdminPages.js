@@ -3,7 +3,7 @@
 (self.webpackChunkdota_react = self.webpackChunkdota_react || []).push([
   [1510],
   {
-    33916: (e) => {
+    14080: (e) => {
       e.exports = {
         Tooltip: "personadetails_Tooltip_3OELh",
         CarouselFade: "personadetails_CarouselFade_31I4l",
@@ -80,7 +80,7 @@
         TextUppercase: "personadetails_TextUppercase_1zyxl",
       };
     },
-    37233: (e) => {
+    41847: (e) => {
       e.exports = {
         Tooltip: "teamdetails_Tooltip_31hC1",
         CarouselFade: "teamdetails_CarouselFade_2UcOF",
@@ -311,7 +311,7 @@
         }
       }
       var P = a(49213),
-        U = a(33916),
+        U = a(14080),
         Y = a.n(U);
       const x = "red",
         K = "orange",
@@ -2964,7 +2964,7 @@
         u = a(70894),
         p = a(36250),
         E = a(39375),
-        _ = a(37233),
+        _ = a(41847),
         y = a.n(_);
       const g = "public",
         v = 5e3,
