@@ -34118,7 +34118,7 @@
                       "data-aos-duration": "2000",
                     },
                     i.createElement("img", {
-                      src: `${p.Y.IMG_URL}augupdate23/armory_browse.png`,
+                      src: `${p.Y.IMG_URL}augupdate23/browse_armory.png`,
                       className: ls().XLImageSpecs,
                     }),
                   ),
@@ -34197,7 +34197,7 @@
                       "div",
                       { className: ls().RowImage },
                       i.createElement("img", {
-                        src: `${p.Y.IMG_URL}augupdate23/armory_global_items.png`,
+                        src: `${p.Y.IMG_URL}augupdate23/global_armory_items.png`,
                         className: ls().RowImageSpecs,
                       }),
                     ),
@@ -34915,7 +34915,7 @@
                       "div",
                       { className: ls().RowImage },
                       i.createElement("img", {
-                        src: `${p.Y.IMG_URL}augupdate23/behavior_summary.png`,
+                        src: `${p.Y.IMG_URL}augupdate23/summary_behavior.png`,
                         className: ls().RowImageSpecs,
                       }),
                     ),
@@ -35770,12 +35770,7 @@
         }
         PurchaseOnSteamStore(e, t, a) {
           return (0, r.mG)(this, void 0, void 0, function* () {
-            if (0 != p.Y.ACCOUNT_ID)
-              window.location.href = `${p.Y.STORE_BASE_URL}buyitem/${p.Y.DOTA_APP_ID}/${e}/${t}`;
-            else {
-              const e = window.location.pathname.substr(1);
-              window.location.href = `${p.Y.COMMUNITY_URL}oauth/login?client_id=${p.Y.CLIENT_ID}&response_type=token&state=${e}`;
-            }
+            window.location.href = `${p.Y.STORE_BASE_URL}buyitem/${p.Y.DOTA_APP_ID}/${e}/${t}`;
           });
         }
         RequestBPPrices(e) {

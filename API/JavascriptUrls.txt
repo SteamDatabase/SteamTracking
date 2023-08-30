@@ -460,8 +460,6 @@ ${IMG_URL}arrow_solid_left.png
 ${IMG_URL}arrow_solid_right.png
 ${IMG_URL}augupdate23/FinalMapAfter.jpg
 ${IMG_URL}augupdate23/FinalMapBefore.jpg
-${IMG_URL}augupdate23/armory_browse.png
-${IMG_URL}augupdate23/armory_global_items.png
 ${IMG_URL}augupdate23/armory_item_combos.png
 ${IMG_URL}augupdate23/armory_item_highlight.png
 ${IMG_URL}augupdate23/armory_sort_market_value.png
@@ -469,8 +467,10 @@ ${IMG_URL}augupdate23/armory_stack_duplicates.png
 ${IMG_URL}augupdate23/behavior_good_reports.png
 ${IMG_URL}augupdate23/behavior_matchmaking.png
 ${IMG_URL}augupdate23/behavior_reporting.png
-${IMG_URL}augupdate23/behavior_summary.png
 ${IMG_URL}augupdate23/behavior_toxic_chat.png
+${IMG_URL}augupdate23/browse_armory.png
+${IMG_URL}augupdate23/global_armory_items.png
+${IMG_URL}augupdate23/summary_behavior.png
 ${IMG_URL}back_arrow.png
 ${IMG_URL}characters/${}.png
 ${IMG_URL}characters/heroes-sil.png
