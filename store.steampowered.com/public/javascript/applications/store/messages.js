@@ -702,7 +702,7 @@
           i = (0, V.U)();
         return a.createElement(
           h.ZP,
-          { submethod: i ? "prioritized_list" : void 0 },
+          { submethod: i ? "prioritized_list" : "default_list" },
           a.createElement(
             "div",
             { className: U.All },
