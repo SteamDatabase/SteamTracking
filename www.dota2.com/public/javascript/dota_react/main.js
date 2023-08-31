@@ -55579,6 +55579,7 @@
             a !== i &&
             "support.steampowered.com" !== a &&
             a !== s &&
+            "www.dota2.com" !== a &&
             (!t || 0 == t.filter((e) => a == e).length)
           );
         })(s)
