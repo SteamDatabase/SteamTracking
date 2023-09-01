@@ -27,7 +27,7 @@
 "ServerBrowser_Map"				"Peta"
 "ServerBrowser_Latency"				"Latensi"
 "ServerBrowser_ChangeFilters"			"Ubah filter"
-"ServerBrowser_HasUsersPlaying"			"Pemain dalam game"
+"ServerBrowser_HasUsersPlaying"			"Ada pemainnya"
 "ServerBrowser_ServerNotFull"			"Server tidak penuh"
 "ServerBrowser_IsNotPasswordProtected"		"Tidak terlindungi kata sandi"
 "ServerBrowser_Location"			"Lokasi"

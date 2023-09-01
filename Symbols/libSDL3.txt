@@ -913,6 +913,7 @@
  T SDL_SetWindowAlwaysOnTop
  T SDL_SetWindowBordered
  T SDL_SetWindowData
+ T SDL_SetWindowFocusable
  T SDL_SetWindowFullscreen
  T SDL_SetWindowFullscreenMode
  T SDL_SetWindowGrab
