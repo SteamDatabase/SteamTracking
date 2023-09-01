@@ -355,6 +355,7 @@
         ListBody: "beta_source2_ListBody_3YBBg",
         ContentSection: "beta_source2_ContentSection_1zKcw",
         TicksContainer: "beta_source2_TicksContainer_3i5dw",
+        MMContainer: "beta_source2_MMContainer_gX9kQ",
         MapsContainer: "beta_source2_MapsContainer_3S5FI",
         SmokesContainer: "beta_source2_SmokesContainer_vJUjW",
         VFXContainer: "beta_source2_VFXContainer_32xoP",
@@ -8181,8 +8182,8 @@
                     })(bn(this.m_webApiAccessToken)) &&
                       ((this.m_refreshAccessTokenPromise =
                         this.m_fnRequestNewAccessToken()),
-                      (this.m_webApiAccessToken = yield this
-                        .m_refreshAccessTokenPromise),
+                      (this.m_webApiAccessToken =
+                        yield this.m_refreshAccessTokenPromise),
                       (this.m_refreshAccessTokenPromise = null)));
               }
               let s = yield this.Send(e, t, r, a);
@@ -15995,6 +15996,65 @@
                   "div",
                   { className: na().IntroDesc },
                   Mr("#cs2beta_intro_desc"),
+                ),
+              ),
+            ),
+            a.createElement(
+              "div",
+              { className: na().MMContainer },
+              a.createElement(
+                "div",
+                {
+                  className: na().ContentSection,
+                  "data-aos": "fade-right",
+                  "data-aos-delay": "100",
+                  "data-aos-duration": "1500",
+                },
+                a.createElement(
+                  "div",
+                  { className: na().InlineVideoContainer },
+                  a.createElement(wa, {
+                    strBackgroundVideo: "cs2/video_matchmaking",
+                    strPlayButton: "global/play_button.svg",
+                    strPlayButtonLabel: "#cs2beta_videos_play",
+                    strYouTubeVideoID: "s6BNHro0vSg",
+                    labelColors: ["#ffffff", "#FFFFFF", "#ffffff"],
+                    glowDetails: [
+                      { size: 3, color: "#000000" },
+                      { size: 10, color: "#0066ff" },
+                      { size: 8, color: "#b566ff" },
+                    ],
+                    eLogoPosition: Ea.CENTER,
+                    logoElement: a.createElement(
+                      "div",
+                      { className: na().VideoTitleContainer },
+                      a.createElement(
+                        "div",
+                        { className: na().VideoSubHeaderText },
+                        Mr("#cs2beta_videos_subtitle"),
+                      ),
+                      a.createElement(
+                        "div",
+                        { className: na().VideoHeaderText },
+                        "BEYOND GLOBAL",
+                      ),
+                    ),
+                  }),
+                ),
+                a.createElement(
+                  "div",
+                  { className: na().HeaderText },
+                  "New CS Rating",
+                ),
+                a.createElement(
+                  "div",
+                  { className: na().SubHeaderText },
+                  "Go Beyond Global With the New CS Rating",
+                ),
+                a.createElement(
+                  "div",
+                  { className: na().BodyText },
+                  "Your CS Rating is a visible measurement of your Counter-Strike performance, and it will determine where you stand on global and regional leaderboards. To get your CS Rating, play matches in the updated Premier mode (our Active Duty Pick-Ban competitive mode) either on your own or with your friends.",
                 ),
               ),
             ),
