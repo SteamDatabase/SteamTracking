@@ -1789,6 +1789,7 @@
                   Q("controllersupport_input_6", e.bPS5ControllerBTSupport),
                   Q("controllersupport_input_7", e.bSteamInputAPISupport),
                   Q("controllersupport_input_8", e.bNoKeyboardSupport),
+                  Q("controllersupport_input_8_input", e.bNoKeyboardSupport),
                   Q("controllersupport_input_9", e.bGamepadPreferred),
                   Q("controllersupport_input_10", !0);
                 const t = document.getElementById("submitBtn");
