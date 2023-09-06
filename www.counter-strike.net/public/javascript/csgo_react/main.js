@@ -16036,7 +16036,7 @@
                       a.createElement(
                         "div",
                         { className: na().VideoHeaderText },
-                        "BEYOND GLOBAL",
+                        Mr("#cs2beta_videos_title"),
                       ),
                     ),
                   }),
@@ -16044,17 +16044,17 @@
                 a.createElement(
                   "div",
                   { className: na().HeaderText },
-                  "New CS Rating",
+                  Mr("#cs2beta_matchmaking_title"),
                 ),
                 a.createElement(
                   "div",
                   { className: na().SubHeaderText },
-                  "Go Beyond Global With the New CS Rating",
+                  Mr("#cs2beta_matchmaking_subtitle"),
                 ),
                 a.createElement(
                   "div",
                   { className: na().BodyText },
-                  "Your CS Rating is a visible measurement of your Counter-Strike performance, and it will determine where you stand on global and regional leaderboards. To get your CS Rating, play matches in the updated Premier mode (our Active Duty Pick-Ban competitive mode) either on your own or with your friends.",
+                  Mr("#cs2beta_matchmaking_desc"),
                 ),
               ),
             ),
