@@ -5392,8 +5392,7 @@
         }
         SetFileToUpload(e) {
           if (
-            (console.log("SetFileToUpload()"),
-            (this.m_fileUploadProps.file = e),
+            ((this.m_fileUploadProps.file = e),
             (this.m_fileUploadProps.dataURL = null),
             (this.m_fileUploadProps.hmac = null),
             (this.m_fileUploadProps.sha1 = null),
