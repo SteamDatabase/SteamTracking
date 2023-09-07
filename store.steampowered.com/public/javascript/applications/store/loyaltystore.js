@@ -1815,12 +1815,12 @@
     85446: (e, t, r) => {
       "use strict";
       r.d(t, {
-        Wy: () => j,
-        Vb: () => D,
-        QU: () => V,
-        gl: () => N,
-        kj: () => B,
-        UA: () => x,
+        Wy: () => F,
+        Vb: () => B,
+        QU: () => W,
+        gl: () => x,
+        kj: () => L,
+        UA: () => A,
       });
       var n = r(33940),
         i = r(38072),
@@ -1837,18 +1837,19 @@
         h = r(27143),
         g = r(20830),
         f = r(54507),
-        I = r(32905),
-        C = r(11301),
-        y = r(47165);
-      const w =
+        I = r(36611),
+        C = r(32905),
+        y = r(11301),
+        w = r(47165);
+      const S =
         r.p +
         "images/applications/store/RewardsSeason1Hero.png?v=valveisgoodatcaching";
-      var S = r(96927),
-        E = r(23801),
-        M = r(58961),
-        b = r(54671),
-        v = r(25508);
-      function N(e, t = !1) {
+      var E = r(96927),
+        M = r(23801),
+        b = r(58961),
+        v = r(54671),
+        N = r(25508);
+      function x(e, t = !1) {
         const r = (e) => (0, s.Xx)(t ? `${e}_Plural` : e);
         switch (e) {
           case 4:
@@ -1876,13 +1877,13 @@
         }
         return "Unknown ECommunityItemClass";
       }
-      const x = "home";
-      class A {
+      const A = "home";
+      class D {
         constructor() {
           (this.items = []), (this.mapItemOwnership = new Map());
         }
       }
-      class D {
+      class B {
         constructor() {
           (this.m_lPointsAvailable = new (a())(0, 0)),
             (this.m_bLoadedCouponPromosForUser = !1),
@@ -1915,14 +1916,14 @@
             (this.m_bLoadedAwardCost = !1),
             (this.m_unAwardPointsTransferred = 0),
             (this.m_bIsSaleActive = !1),
-            (this.m_HeroImageFallbackLoader = new Z(
+            (this.m_HeroImageFallbackLoader = new V(
               (e) =>
                 fetch(`${m.De.STORE_BASE_URL}points/heroimage?appid=${e}`)
                   .then((e) => e.json())
                   .then((e) => e.img_url),
               (e) => e.toString(),
             )),
-            (this.m_batchedRewardItemLoader = new H(
+            (this.m_batchedRewardItemLoader = new U(
               (e) => _.pQ.BatchedQueryRewardItems(this.m_anonymousTransport, e),
               (e) => {
                 const t = u.gA.Init(_.Nl);
@@ -1939,7 +1940,7 @@
                     ),
                     []),
             )),
-            (this.m_batchedCommunityInventoryLoader = new H(
+            (this.m_batchedCommunityInventoryLoader = new U(
               (e) => h.Ts.GetCommunityInventory(this.m_transport, e),
               (e) => {
                 const t = u.gA.Init(h.o0);
@@ -1974,8 +1975,8 @@
             (this.m_config = t),
             this.BIsLoggedIn())
           ) {
-            const e = new y.K(m.L7.steamid);
-            (this.m_persona = new C.Pv(e)), this.RetrievePersonaState();
+            const e = new w.K(m.L7.steamid);
+            (this.m_persona = new y.Pv(e)), this.RetrievePersonaState();
           }
           t.eligible_apps
             ? ((this.m_bLoadedEligibleApps = !0),
@@ -2010,7 +2011,7 @@
             t.golden_profiles &&
               (this.m_goldenProfileConfigs = t.golden_profiles || []),
             t.can_claim_sale_reward &&
-              V.Get().InitFreeItemReward(t.can_claim_sale_reward),
+              W.Get().InitFreeItemReward(t.can_claim_sale_reward),
             t.is_sale_active && (this.m_bIsSaleActive = t.is_sale_active),
             t.free_item_header &&
               (this.m_strFreeItemHeader = t.free_item_header),
@@ -2018,7 +2019,7 @@
         }
         static Get() {
           return (
-            this.s_RewardsStore || (this.s_RewardsStore = new D()),
+            this.s_RewardsStore || (this.s_RewardsStore = new B()),
             this.s_RewardsStore
           );
         }
@@ -2089,7 +2090,7 @@
               : t.endsWith("/") && (t = t.slice(0, t.length - 1)),
               (t += "/reward/" + e);
           }
-          (0, I._)(t);
+          (0, C._)(t);
         }
         BHasAutumnSaleStarted() {
           let e = Date.now() / 1e3;
@@ -2193,7 +2194,7 @@
         QueryRewardDefinitions(e, t, r) {
           var n;
           const i = null !== (n = e.rewardtype) && void 0 !== n ? n : [1],
-            a = b.jg.Get().ExcludedContentDescriptor;
+            a = v.jg.Get().ExcludedContentDescriptor;
           let o = this.QueryLoyaltyRewardDefinitions(
             Object.assign(Object.assign({}, e), {
               excludedContentDescriptors: a,
@@ -2248,7 +2249,7 @@
               searchLanguage: e.searchLanguage,
               searchTerm: e.searchTerm,
             },
-            s = T(a);
+            s = R(a);
           a.maxToReturn &&
             t + r > a.maxToReturn &&
             (r = Math.max(0, a.maxToReturn - t));
@@ -2356,7 +2357,7 @@
                     this.m_mapLoyaltyRewardDefs.set(t.defid, t),
                       e.push(t.appid);
                   }),
-                  M.Q8.EnsureAppInfoForAppIDs(e);
+                  b.Q8.EnsureAppInfoForAppIDs(e);
               });
             });
           }
@@ -2383,7 +2384,7 @@
                 excludedAppIDs: d,
                 searchTerm: p,
               } = e,
-              u = R(a),
+              u = k(a),
               h = new _.eQ();
             n.forEach((e) => h.add_appids(e)),
               h.set_language(m.De.LANGUAGE),
@@ -2529,7 +2530,7 @@
           });
         }
         GetBundleOfferForUser(e) {
-          let t = new A();
+          let t = new D();
           if (
             ((t.original_point_cost = 0),
             (t.point_cost = 0),
@@ -2630,7 +2631,7 @@
           );
           return (
             t || this.GetCommunityItemInventory(e.appid),
-            (0, E.X)(
+            (0, M.X)(
               t.has(e.community_item_type),
               `Missing owned item ${e.community_item_type}`,
             ),
@@ -3063,7 +3064,7 @@
             if (((this.m_bLoadedRecentlyPlayed = !0), !this.BIsLoggedIn()))
               return [];
             const e = u.gA.Init(g.Q0),
-              t = Math.floor(Date.now() / 1e3) - 14 * v._H.PerDay;
+              t = Math.floor(Date.now() / 1e3) - 14 * N._H.PerDay;
             e.Body().set_min_last_played(t);
             const r = yield g.lk.ClientGetLastPlayedTimes(this.m_transport, e);
             return 1 == r.GetEResult()
@@ -3209,7 +3210,7 @@
               is_custom: !0,
             };
           return {
-            img_url: this.m_HeroImageFallbackLoader.Get(e) || w,
+            img_url: this.m_HeroImageFallbackLoader.Get(e) || S,
             is_custom: !1,
           };
         }
@@ -3232,22 +3233,22 @@
         }
         GetPageDescriptor(e) {
           return (
-            this.m_mapPages.has(L(e)) ||
-              this.m_mapPages.set(L(e), this.BuildPage(e)),
-            this.m_mapPages.get(L(e))
+            this.m_mapPages.has(P(e)) ||
+              this.m_mapPages.set(P(e), this.BuildPage(e)),
+            this.m_mapPages.get(P(e))
           );
         }
         BuildPage(e) {
           switch (e.type) {
             case "app":
-              return new G(
+              return new O(
                 e.appid,
                 e.appid === this.GetCurrentSeasonalAppID()
                   ? (0, s.Xx)("#HeroCluster_Premier_Collection_Subtitle")
                   : void 0,
               );
             case "event":
-              return new F(e.eventname);
+              return new G(e.eventname);
             case "custom":
               return console.error("Cannot dynamically build page type"), null;
             default:
@@ -3259,7 +3260,7 @@
         }
         HydrateCustomPages() {
           const e = (e, t, r) => {
-              const n = new k(
+              const n = new j(
                 e,
                 t,
                 Object.assign({ grouping: 2, maxToReturn: 0 }, r),
@@ -3270,7 +3271,7 @@
               );
             },
             t = (e, t, r) => {
-              const n = new j(e, t, U({ grouping: 2 }, r));
+              const n = new F(e, t, Z({ grouping: 2 }, r));
               return (
                 this.m_mapClusters.has(n.id) || this.m_mapClusters.set(n.id, n),
                 n
@@ -3285,7 +3286,7 @@
                   return (0, s.Xx)("#HeroCluster_AppTitle", a.title);
                 },
                 get strImage() {
-                  return r || D.Get().GetAppHeroImage(e).img_url;
+                  return r || B.Get().GetAppHeroImage(e).img_url;
                 },
                 get bFullBleedImage() {
                   return !!r;
@@ -3300,7 +3301,7 @@
                 },
               };
             },
-            n = (e) => this.m_mapPages.set(L(e.params), e),
+            n = (e) => this.m_mapPages.set(P(e.params), e),
             i = e(
               (0, s.Xx)(
                 "#RewardCluster_Popular_Title",
@@ -3309,7 +3310,7 @@
               (0, s.Xx)("#RewardCluster_Popular_Subtitle"),
             ),
             a = e(
-              N(13, !0),
+              x(13, !0),
               (0, s.Xx)("#RewardCluster_MiniProfileBackgrounds_Subtitle"),
               { itemclass: [13] },
             ),
@@ -3318,10 +3319,10 @@
               (0, s.Xx)("#RewardCluster_AvatarItems_Subtitle"),
               { itemclass: [15, 14] },
             ),
-            c = e(N(3, !0), (0, s.Xx)("#RewardCluster_Backgrounds_Subtitle"), {
+            c = e(x(3, !0), (0, s.Xx)("#RewardCluster_Backgrounds_Subtitle"), {
               itemclass: [3],
             }),
-            m = e(
+            d = e(
               (0, s.Xx)(
                 "#RewardCluster_Popular_Title",
                 (0, s.Xx)("#ShopNav_ChatEffectsLink"),
@@ -3329,7 +3330,7 @@
               (0, s.Xx)("#RewardCluster_ChatEffect_Subtitle"),
               { itemclass: [12] },
             ),
-            d = e(
+            p = e(
               (0, s.Xx)(
                 "#RewardCluster_Popular_Title",
                 (0, s.Xx)("#ShopNav_StickersLink"),
@@ -3337,7 +3338,7 @@
               (0, s.Xx)("#RewardCluster_Popular_Subtitle"),
               { itemclass: [11] },
             ),
-            p = e(
+            u = e(
               (0, s.Xx)(
                 "#RewardCluster_Popular_Title",
                 (0, s.Xx)("#ShopNav_EmoticonsLink"),
@@ -3345,27 +3346,27 @@
               (0, s.Xx)("#RewardCluster_Popular_Subtitle"),
               { itemclass: [4] },
             ),
-            u = e(
-              (0, s.Xx)("#RewardCluster_All_Title", N(15, !0)),
+            _ = e(
+              (0, s.Xx)("#RewardCluster_All_Title", x(15, !0)),
               (0, s.Xx)("#RewardCluster_AnimatedAvatar_Subtitle"),
               { itemclass: [15] },
             ),
-            _ = e(
-              (0, s.Xx)("#RewardCluster_All_Title", N(14, !0)),
+            h = e(
+              (0, s.Xx)("#RewardCluster_All_Title", x(14, !0)),
               (0, s.Xx)("#RewardCluster_AvatarFrames_Subtitle"),
               { itemclass: [14] },
             ),
-            h = e(
-              (0, s.Xx)("#RewardCluster_All_Title", N(16, !0)),
+            g = e(
+              (0, s.Xx)("#RewardCluster_All_Title", x(16, !0)),
               (0, s.Xx)("#RewardCluster_SteamDeckKeyboardSkins_Subtitle"),
               { itemclass: [16] },
             ),
-            g = e(
-              (0, s.Xx)("#RewardCluster_All_Title", N(17, !0)),
+            f = e(
+              (0, s.Xx)("#RewardCluster_All_Title", x(17, !0)),
               (0, s.Xx)("#RewardCluster_SteamDeckStartupMovies_Subtitle"),
               { itemclass: [17] },
             ),
-            f = e(
+            C = e(
               (0, s.Xx)(
                 "#RewardCluster_All_Title",
                 (0, s.Xx)("#RewardItemType_Bundle_plural"),
@@ -3373,7 +3374,7 @@
               "",
               { rewardtype: [5, 6] },
             ),
-            I = e(
+            y = e(
               (0, s.Xx)(
                 "#RewardCluster_All_Title",
                 (0, s.Xx)("#RewardItemType_ProfileBundle_plural"),
@@ -3381,7 +3382,7 @@
               "",
               { itemclass: [8], queryFilter: [3], grouping: 1 },
             ),
-            C = e(
+            w = e(
               (0, s.Xx)(
                 "#RewardCluster_Popular_Title",
                 (0, s.Xx)("#RewardItemType_ProfileBundle_plural"),
@@ -3389,7 +3390,7 @@
               "",
               { itemclass: [8], queryFilter: [3], grouping: 2 },
             ),
-            y = e(
+            E = e(
               (0, s.Xx)(
                 "#RewardCluster_All_Title",
                 (0, s.Xx)("#RewardItemType_ArtistProfile_plural"),
@@ -3401,7 +3402,7 @@
                 categoryTag: ["artist_profile"],
               },
             ),
-            S =
+            M =
               (e(
                 (0, s.Xx)("#RewardCluster_TabletopFest2021Profiles_Title"),
                 void 0,
@@ -3413,7 +3414,7 @@
               ),
               [
                 {
-                  cluster: g,
+                  cluster: f,
                   type: 1,
                   linkedPage: {
                     type: "custom",
@@ -3422,9 +3423,9 @@
                   },
                 },
                 {
-                  cluster: I,
+                  cluster: y,
                   type: 2,
-                  strImage: w,
+                  strImage: S,
                   bFullBleedImage: !0,
                   linkedPage: { type: "custom", pageid: "profilebundles" },
                 },
@@ -3435,7 +3436,7 @@
                   bHideHiddenItemCount: !0,
                 },
                 {
-                  cluster: d,
+                  cluster: p,
                   type: 1,
                   linkedPage: { type: "custom", pageid: "stickers" },
                 },
@@ -3446,76 +3447,76 @@
                   type: 1,
                   linkedPage: { type: "custom", pageid: "backgrounds" },
                 },
-                { cluster: m, type: 1 },
+                { cluster: d, type: 1 },
                 {
-                  cluster: p,
+                  cluster: u,
                   type: 1,
                   linkedPage: { type: "custom", pageid: "emoticons" },
                 },
               ]),
-            E = [];
-          E.push(r(2459330));
-          const M = [],
-            b = [E, S];
-          for (let e = 0; e < Math.max(b[0].length, b[1].length); e++)
-            e < b[0].length && M.push({ type: "clusterview", view: b[0][e] }),
-              e < b[1].length && M.push({ type: "clusterview", view: b[1][e] });
-          n(new O(x, M));
+            b = [];
+          (0, I.e7)(m.De.EREALM) || b.push(r(1716740)), b.push(r(2459330));
+          const v = [],
+            N = [b, M];
+          for (let e = 0; e < Math.max(N[0].length, N[1].length); e++)
+            e < N[0].length && v.push({ type: "clusterview", view: N[0][e] }),
+              e < N[1].length && v.push({ type: "clusterview", view: N[1][e] });
+          n(new z(A, v));
           n(
-            new z(
+            new H(
               "stickers",
-              [{ cluster: d, type: 0 }],
+              [{ cluster: p, type: 0 }],
               (0, s.Xx)("#ShopPageTitle_Stickers"),
               void 0,
               (0, s.Xx)("#SearchPlaceholder_Stickers"),
             ),
           );
           n(
-            new z(
+            new H(
               "emoticons",
-              [{ cluster: p, type: 0 }],
+              [{ cluster: u, type: 0 }],
               (0, s.Xx)("#ShopPageTitle_Emoticons"),
               void 0,
               (0, s.Xx)("#SearchPlaceholder_Emoticons"),
             ),
           ),
             n(
-              new z(
+              new H(
                 "chateffects",
-                [{ cluster: m, type: 0 }],
-                N(12, !0),
+                [{ cluster: d, type: 0 }],
+                x(12, !0),
                 void 0,
                 (0, s.Xx)("#SearchPlaceholder_ChatEffects"),
               ),
             );
-          const v = e(
+          const D = e(
               (0, s.Xx)("#RewardCluster_AnimatedProfileBackgrounds_Title"),
               (0, s.Xx)("#RewardCluster_Backgrounds_Subtitle"),
               { itemclass: [3], queryFilter: [1] },
             ),
-            A = e(
+            L = e(
               (0, s.Xx)("#RewardCluster_AnimatedMiniProfileBackgrounds_Title"),
               (0, s.Xx)("#RewardCluster_MiniProfileBackgrounds_Subtitle"),
               { itemclass: [13], queryFilter: [1] },
             ),
-            B = e(
+            T = e(
               (0, s.Xx)("#RewardCluster_StillProfileBackgrounds_Title"),
               (0, s.Xx)("#RewardCluster_Backgrounds_Subtitle"),
               { itemclass: [3], queryFilter: [2] },
             ),
-            P = e(
+            R = e(
               (0, s.Xx)("#RewardCluster_StillMiniProfileBackgrounds_Title"),
               (0, s.Xx)("#RewardCluster_MiniProfileBackgrounds_Subtitle"),
               { itemclass: [13], queryFilter: [2] },
             );
           n(
-            new z(
+            new H(
               "backgrounds",
               [
-                { cluster: v, type: 1 },
-                { cluster: A, type: 1 },
-                { cluster: B, type: 1 },
-                { cluster: P, type: 1 },
+                { cluster: D, type: 1 },
+                { cluster: L, type: 1 },
+                { cluster: T, type: 1 },
+                { cluster: R, type: 1 },
               ],
               (0, s.Xx)("#ShopPageTitle_Backgrounds"),
               void 0,
@@ -3523,11 +3524,11 @@
             ),
           ),
             n(
-              new z(
+              new H(
                 "avatar",
                 [
-                  { cluster: u, type: 1 },
                   { cluster: _, type: 1 },
+                  { cluster: h, type: 1 },
                 ],
                 (0, s.Xx)("#ShopPageTitle_Avatar"),
                 void 0,
@@ -3535,11 +3536,11 @@
               ),
             );
           n(
-            new z(
+            new H(
               "steamdeck",
               [
-                { cluster: h, type: 1 },
                 { cluster: g, type: 1 },
+                { cluster: f, type: 1 },
               ],
               (0, s.Xx)("#ShopPageTitle_SteamDeckItems"),
               void 0,
@@ -3547,39 +3548,39 @@
             ),
           ),
             n(
-              new z(
+              new H(
                 "keyboard",
-                [{ cluster: h, type: 0 }],
+                [{ cluster: g, type: 0 }],
                 (0, s.Xx)("#ShopPageTitle_SteamDeckKeyboardSkin"),
                 void 0,
                 (0, s.Xx)("#SearchPlaceholder_SteamDeckKeyboardSkin"),
               ),
             ),
             n(
-              new z(
+              new H(
                 "startupmovie",
-                [{ cluster: g, type: 0 }],
+                [{ cluster: f, type: 0 }],
                 (0, s.Xx)("#ShopPageTitle_SteamDeckStartupMovie"),
                 void 0,
                 (0, s.Xx)("#SearchPlaceholder_SteamDeckStartupMovie"),
               ),
             ),
             n(
-              new z(
+              new H(
                 "itembundles",
-                [{ cluster: f, type: 0 }],
+                [{ cluster: C, type: 0 }],
                 (0, s.Xx)("#ShopPageTitle_ItemBundles"),
                 (0, s.Xx)("#ShopPageTitle_ItemBundles_Subtitle"),
                 (0, s.Xx)("#SearchPlaceholder_ItemBundles"),
               ),
             );
           n(
-            new z(
+            new H(
               "profilebundles",
               [
-                { cluster: C, type: 1 },
-                { cluster: y, type: 1 },
-                { cluster: I, type: 0 },
+                { cluster: w, type: 1 },
+                { cluster: E, type: 1 },
+                { cluster: y, type: 0 },
               ],
               (0, s.Xx)("#ShopPageTitle_ProfileBundles"),
               (0, s.Xx)("#ShopPageTitle_ProfileBundles_Subtitle"),
@@ -3587,9 +3588,9 @@
             ),
           );
           n(
-            new z(
+            new H(
               "artistprofiles",
-              [{ cluster: y, type: 0, bHomogeneous: !0 }],
+              [{ cluster: E, type: 0, bHomogeneous: !0 }],
               (0, s.Xx)("#ShopPageTitle_ArtistProfiles"),
               (0, s.Xx)("#ShopPageTitle_ArtistProfiles_Subtitle"),
               (0, s.Xx)("#SearchPlaceholder_ArtistProfiles"),
@@ -3597,14 +3598,14 @@
           ),
             this.BIsLoggedIn() &&
               (0, o.gx)(
-                () => !!D.Get().GetSortedGamesWithRewards().length,
+                () => !!B.Get().GetSortedGamesWithRewards().length,
               ).then(() => {
-                const e = new k(
+                const e = new j(
                   (0, s.Xx)("#HeroCluster_YourGamesTitle"),
                   void 0,
                   {
                     get appid() {
-                      return D.Get().GetSortedGamesWithRewards().slice(0, 10);
+                      return B.Get().GetSortedGamesWithRewards().slice(0, 10);
                     },
                     grouping: 2,
                   },
@@ -3614,43 +3615,43 @@
                   type: 2,
                   linkedPage: { type: "custom", pageid: "games" },
                   cluster: e.id,
-                  strImage: w,
+                  strImage: S,
                   bFullBleedImage: !0,
                 };
-                M.push({ type: "clusterview", view: t });
-                const n = D.Get().GetSortedGamesWithRewards(),
+                v.push({ type: "clusterview", view: t });
+                const n = B.Get().GetSortedGamesWithRewards(),
                   i = (e) => {
                     const t = this.m_mapClusters.get(e);
-                    return t && t instanceof j ? t.appid : null;
+                    return t && t instanceof F ? t.appid : null;
                   };
                 let a = 0;
                 for (const e of n) {
                   if (
                     -1 !=
-                    M.findIndex(
+                    v.findIndex(
                       (t) =>
                         "clusterview" === t.type && i(t.view.cluster) === e,
                     )
                   )
                     continue;
                   const t = r(e),
-                    n = E.length + 3;
+                    n = b.length + 3;
                   if (
-                    (M.splice(n + a * n, 0, { type: "clusterview", view: t }),
+                    (v.splice(n + a * n, 0, { type: "clusterview", view: t }),
                     (a += 1),
                     a >= 3)
                   )
                     break;
                 }
                 this.m_mapPages.set(
-                  L({ type: "custom", pageid: x }),
-                  new O(x, M),
+                  P({ type: "custom", pageid: A }),
+                  new z(A, v),
                 );
               });
         }
       }
-      function B(e) {
-        const t = S.Z.LoyaltyStore();
+      function L(e) {
+        const t = E.Z.LoyaltyStore();
         switch (e.type) {
           case "app":
             return `${t}/app/${e.appid}${
@@ -3670,13 +3671,13 @@
             return console.error(`Unknown page type ${e.type}`), t;
         }
       }
-      function L(e) {
+      function P(e) {
         return btoa(JSON.stringify(e));
       }
-      function P(e, t) {
-        return `${e.join("_")}__${T(t)}`;
+      function T(e, t) {
+        return `${e.join("_")}__${R(t)}`;
       }
-      function T(e) {
+      function R(e) {
         if (!e) return "";
         const {
             appid: t,
@@ -3689,7 +3690,7 @@
             searchLanguage: l,
             searchTerm: c,
           } = e,
-          m = R(i);
+          m = k(i);
         return [
           t ? [...t].sort().join("_") : "",
           r ? r.join("_") : "",
@@ -3703,7 +3704,7 @@
           c ? encodeURI(c.substring(0, 200)) : "",
         ].join("__");
       }
-      function R(e) {
+      function k(e) {
         const t = { sort: 1, sort_descending: !0 };
         switch (e) {
           case 1:
@@ -3714,41 +3715,41 @@
         }
         return t;
       }
-      (0, n.gn)([o.LO.ref], D.prototype, "m_lPointsAvailable", void 0),
-        (0, n.gn)([o.LO], D.prototype, "m_mapCouponPromos", void 0),
-        (0, n.gn)([o.LO], D.prototype, "m_nAppIDFiltersInUseCount", void 0),
-        (0, n.gn)([o.LO], D.prototype, "m_mapAppIDFilters", void 0),
-        (0, n.gn)([o.LO], D.prototype, "m_strAppFilterText", void 0),
-        (0, n.gn)([o.LO], D.prototype, "m_strSearchTerm", void 0),
-        (0, n.gn)([o.LO], D.prototype, "m_strSearchPlaceholder", void 0),
-        (0, n.gn)([o.LO], D.prototype, "m_mapCouponDefinitons", void 0),
-        (0, n.gn)([o.LO], D.prototype, "m_mapLoyaltyRewardDefs", void 0),
-        (0, n.gn)([o.LO], D.prototype, "m_mapOwnedCommunityItems", void 0),
-        (0, n.gn)([o.LO], D.prototype, "m_mapAppRewards", void 0),
-        (0, n.gn)([o.LO], D.prototype, "m_seasonalBadgeDefinition", void 0),
-        (0, n.gn)([o.LO], D.prototype, "m_goldenProfileDefinition", void 0),
-        (0, n.gn)([o.LO], D.prototype, "m_goldenProfileConfigs", void 0),
-        (0, n.gn)([o.LO], D.prototype, "m_rgSortedAppsWithRewards", void 0),
-        (0, n.gn)([o.LO], D.prototype, "m_rgEligibleApps", void 0),
-        (0, n.gn)([o.LO], D.prototype, "m_mapEligibleApps", void 0),
+      (0, n.gn)([o.LO.ref], B.prototype, "m_lPointsAvailable", void 0),
+        (0, n.gn)([o.LO], B.prototype, "m_mapCouponPromos", void 0),
+        (0, n.gn)([o.LO], B.prototype, "m_nAppIDFiltersInUseCount", void 0),
+        (0, n.gn)([o.LO], B.prototype, "m_mapAppIDFilters", void 0),
+        (0, n.gn)([o.LO], B.prototype, "m_strAppFilterText", void 0),
+        (0, n.gn)([o.LO], B.prototype, "m_strSearchTerm", void 0),
+        (0, n.gn)([o.LO], B.prototype, "m_strSearchPlaceholder", void 0),
+        (0, n.gn)([o.LO], B.prototype, "m_mapCouponDefinitons", void 0),
+        (0, n.gn)([o.LO], B.prototype, "m_mapLoyaltyRewardDefs", void 0),
+        (0, n.gn)([o.LO], B.prototype, "m_mapOwnedCommunityItems", void 0),
+        (0, n.gn)([o.LO], B.prototype, "m_mapAppRewards", void 0),
+        (0, n.gn)([o.LO], B.prototype, "m_seasonalBadgeDefinition", void 0),
+        (0, n.gn)([o.LO], B.prototype, "m_goldenProfileDefinition", void 0),
+        (0, n.gn)([o.LO], B.prototype, "m_goldenProfileConfigs", void 0),
+        (0, n.gn)([o.LO], B.prototype, "m_rgSortedAppsWithRewards", void 0),
+        (0, n.gn)([o.LO], B.prototype, "m_rgEligibleApps", void 0),
+        (0, n.gn)([o.LO], B.prototype, "m_mapEligibleApps", void 0),
         (0, n.gn)(
           [o.LO],
-          D.prototype,
+          B.prototype,
           "m_rgProfileCustomizationsConfig",
           void 0,
         ),
-        (0, n.gn)([o.LO], D.prototype, "m_persona", void 0),
-        (0, n.gn)([o.LO], D.prototype, "m_equippedItems", void 0),
-        (0, n.gn)([o.LO], D.prototype, "m_rgPurchasedCustomizations", void 0),
-        (0, n.gn)([o.LO], D.prototype, "m_rgUpgradedCustomizations", void 0),
-        (0, n.gn)([o.LO], D.prototype, "m_unAwardPointsTransferred", void 0),
-        (0, n.gn)([p.ak], D.prototype, "ShowLoginDialog", null);
-      class k {
+        (0, n.gn)([o.LO], B.prototype, "m_persona", void 0),
+        (0, n.gn)([o.LO], B.prototype, "m_equippedItems", void 0),
+        (0, n.gn)([o.LO], B.prototype, "m_rgPurchasedCustomizations", void 0),
+        (0, n.gn)([o.LO], B.prototype, "m_rgUpgradedCustomizations", void 0),
+        (0, n.gn)([o.LO], B.prototype, "m_unAwardPointsTransferred", void 0),
+        (0, n.gn)([p.ak], B.prototype, "ShowLoginDialog", null);
+      class j {
         constructor(e, t, r = {}) {
           (this.m_filter = r),
             (this.m_strTitle = e),
             (this.m_strSubtitle = t),
-            (this.m_strId = P([], r));
+            (this.m_strId = T([], r));
         }
         get id() {
           return this.m_strId;
@@ -3760,18 +3761,18 @@
           return this.m_strSubtitle;
         }
         GetRewards(e, t, r) {
-          const n = U(this.m_filter, r);
-          return D.Get().QueryRewardDefinitions(n, e, t);
+          const n = Z(this.m_filter, r);
+          return B.Get().QueryRewardDefinitions(n, e, t);
         }
       }
-      (0, n.gn)([p.ak], k.prototype, "GetRewards", null);
-      class j {
+      (0, n.gn)([p.ak], j.prototype, "GetRewards", null);
+      class F {
         constructor(e, t, r) {
           (this.m_appid = e),
             (this.m_strSubtitle = t || ""),
             (this.m_additionalFilter = r || {}),
-            M.Q8.GetAppInfo(this.m_appid),
-            (this.m_strId = P([this.m_appid], this.m_additionalFilter));
+            b.Q8.GetAppInfo(this.m_appid),
+            (this.m_strId = T([this.m_appid], this.m_additionalFilter));
         }
         get id() {
           return this.m_strId;
@@ -3780,18 +3781,18 @@
           return this.m_appid;
         }
         get title() {
-          return M.Q8.GetAppInfo(this.m_appid).name;
+          return b.Q8.GetAppInfo(this.m_appid).name;
         }
         get subtitle() {
           return this.m_strSubtitle;
         }
         GetRewards(e, t, r) {
-          const n = U({ appid: [this.m_appid] }, this.m_additionalFilter, r);
-          return D.Get().QueryRewardDefinitions(n, e, t);
+          const n = Z({ appid: [this.m_appid] }, this.m_additionalFilter, r);
+          return B.Get().QueryRewardDefinitions(n, e, t);
         }
       }
-      (0, n.gn)([p.ak], j.prototype, "GetRewards", null);
-      class F {
+      (0, n.gn)([p.ak], F.prototype, "GetRewards", null);
+      class G {
         constructor(e) {
           this.m_strEventName = e;
         }
@@ -3808,12 +3809,12 @@
               view: {
                 type: 0,
                 cluster: {
-                  id: L({ eventname: this.m_strEventName, type: "event" }),
+                  id: P({ eventname: this.m_strEventName, type: "event" }),
                   title: "",
                   subtitle: "",
                   GetRewards: (e, t, r) =>
-                    D.Get().QueryRewardDefinitions(
-                      U({ grouping: 2, categoryTag: [this.m_strEventName] }, r),
+                    B.Get().QueryRewardDefinitions(
+                      Z({ grouping: 2, categoryTag: [this.m_strEventName] }, r),
                       e,
                       t,
                     ),
@@ -3823,17 +3824,17 @@
           ];
         }
       }
-      class G {
+      class O {
         constructor(e, t = "") {
           (this.m_appid = e),
             (this.m_strSubtitle = t),
-            M.Q8.GetAppInfo(this.m_appid);
+            b.Q8.GetAppInfo(this.m_appid);
         }
         get params() {
           return { type: "app", appid: this.m_appid };
         }
         get title() {
-          return M.Q8.GetAppInfo(this.m_appid).name;
+          return b.Q8.GetAppInfo(this.m_appid).name;
         }
         get subtitle() {
           return this.m_strSubtitle;
@@ -3846,12 +3847,12 @@
               view: {
                 type: 1,
                 cluster: {
-                  id: P([this.m_appid], { rewardtype: [5] }),
+                  id: T([this.m_appid], { rewardtype: [5] }),
                   title: (0, s.Xx)("#RewardItemType_Bundle_plural"),
                   subtitle: "",
                   GetRewards: (e, t, r) =>
-                    D.Get().QueryRewardDefinitions(
-                      U({ appid: [this.m_appid], rewardtype: [5, 6] }, r),
+                    B.Get().QueryRewardDefinitions(
+                      Z({ appid: [this.m_appid], rewardtype: [5, 6] }, r),
                       e,
                       t,
                     ),
@@ -3865,12 +3866,12 @@
             view: {
               type: 1,
               cluster: {
-                id: P([this.m_appid], { itemclass: [e] }),
-                title: N(e, !0),
+                id: T([this.m_appid], { itemclass: [e] }),
+                title: x(e, !0),
                 subtitle: "",
                 GetRewards: (t, r, n) =>
-                  D.Get().QueryRewardDefinitions(
-                    U({ appid: [this.m_appid], itemclass: [e] }, n),
+                  B.Get().QueryRewardDefinitions(
+                    Z({ appid: [this.m_appid], itemclass: [e] }, n),
                     t,
                     r,
                   ),
@@ -3880,7 +3881,7 @@
           return (e = e.concat(t)), e;
         }
       }
-      class O {
+      class z {
         constructor(e, t, r, n, i, a) {
           (this.m_pageid = e),
             (this.m_strTitle = r),
@@ -3914,7 +3915,7 @@
                   return {
                     type: "clusterview",
                     view: Object.assign(Object.assign({}, e.view), {
-                      cluster: D.Get().GetClusterDescriptor(e.view.cluster),
+                      cluster: B.Get().GetClusterDescriptor(e.view.cluster),
                     }),
                   };
               }
@@ -3922,7 +3923,7 @@
           );
         }
       }
-      class z extends O {
+      class H extends z {
         constructor(e, t, r, n, i, a) {
           super(
             e,
@@ -3934,7 +3935,7 @@
           );
         }
       }
-      class H {
+      class U {
         constructor(e, t, r) {
           (this.m_rgRequestParts = []),
             (this.m_fnMakeRequest = e),
@@ -3959,7 +3960,7 @@
           (this.m_rootPromise = void 0), (this.m_rgRequestParts = []);
         }
       }
-      function U(e, ...t) {
+      function Z(e, ...t) {
         return t && t.length
           ? [e, ...t].reduce((e, t) => {
               if (!t) return e;
@@ -4014,7 +4015,7 @@
             })
           : e;
       }
-      class Z {
+      class V {
         constructor(e, t) {
           (this.m_fnRequest = e), (this.m_fnBuildRequestKey = t), this.Reset();
         }
@@ -4038,14 +4039,14 @@
           return !!this.m_mapInflightRequests.get(t);
         }
       }
-      class V {
+      class W {
         constructor() {
           this.m_bCanClaimFreeItem = !1;
         }
         static Get() {
           return (
             this.s_SaleItemRewardsStore ||
-              (this.s_SaleItemRewardsStore = new V()),
+              (this.s_SaleItemRewardsStore = new W()),
             this.s_SaleItemRewardsStore
           );
         }
@@ -4056,7 +4057,7 @@
             this.SetClaimTimer();
         }
         BCanClaimFreeSaleReward() {
-          return !D.Get().BIsLoggedIn() || this.m_bCanClaimFreeItem;
+          return !B.Get().BIsLoggedIn() || this.m_bCanClaimFreeItem;
         }
         GetCurrentSaleRewardAppID() {
           return 1880140;
@@ -4066,9 +4067,9 @@
         }
         LoadCanClaimFreeSticker() {
           return (0, n.mG)(this, void 0, void 0, function* () {
-            if (!D.Get().BIsLoggedIn()) return;
+            if (!B.Get().BIsLoggedIn()) return;
             const e = u.gA.Init(_.FE);
-            let t = yield _.tE.CanClaimItem(D.Get().GetServiceTransport(), e);
+            let t = yield _.tE.CanClaimItem(B.Get().GetServiceTransport(), e);
             1 == t.GetEResult()
               ? this.InitFreeItemReward(t.Body().toObject())
               : console.error(
@@ -4079,13 +4080,13 @@
         ClaimFreeSaleItem() {
           return (0, n.mG)(this, void 0, void 0, function* () {
             let e = { eResult: 2, strMessage: "" };
-            if (!D.Get().BIsLoggedIn())
+            if (!B.Get().BIsLoggedIn())
               return (
                 (e = { eResult: 21, strMessage: (0, s.Xx)("#Redeem_SignIn") }),
                 e
               );
             const t = u.gA.Init(_.xs),
-              r = yield _.tE.ClaimItem(D.Get().GetServiceTransport(), t);
+              r = yield _.tE.ClaimItem(B.Get().GetServiceTransport(), t);
             return (
               (e.eResult = r.GetEResult()),
               1 == r.GetEResult()
@@ -4093,7 +4094,7 @@
                     .Body()
                     .reward_item()
                     .toObject()),
-                  D.Get().GetCommunityItemInventory(
+                  B.Get().GetCommunityItemInventory(
                     this.m_claimedFreeItemDef.appid,
                   ),
                   (this.m_bCanClaimFreeItem = !1),
@@ -4129,9 +4130,9 @@
           );
         }
       }
-      (0, n.gn)([o.LO], V.prototype, "m_bCanClaimFreeItem", void 0),
-        (0, n.gn)([o.LO], V.prototype, "m_claimedFreeItemDef", void 0),
-        (0, n.gn)([o.LO], V.prototype, "m_rtNextClaimTime", void 0);
+      (0, n.gn)([o.LO], W.prototype, "m_bCanClaimFreeItem", void 0),
+        (0, n.gn)([o.LO], W.prototype, "m_claimedFreeItemDef", void 0),
+        (0, n.gn)([o.LO], W.prototype, "m_rtNextClaimTime", void 0);
     },
     54560: (e, t, r) => {
       "use strict";
