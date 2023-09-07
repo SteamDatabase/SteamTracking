@@ -154,10 +154,6 @@
             "argc": "2"
         },
         {
-            "name": "GetIClientStorageDeviceManager",
-            "argc": "2"
-        },
-        {
             "name": "GetIClientSystemPerfManager",
             "argc": "2"
         },
@@ -178,7 +174,7 @@
             "argc": "2"
         },
         {
-            "name": "Unknown_44",
+            "name": "Unknown_43",
             "argc": "0"
         },
         {
@@ -190,7 +186,7 @@
             "argc": "3"
         },
         {
-            "name": "Unknown_47",
+            "name": "Unknown_46",
             "argc": "0"
         },
         {
@@ -202,11 +198,11 @@
             "argc": "3"
         },
         {
-            "name": "Unknown_50",
+            "name": "Unknown_49",
             "argc": "0"
         },
         {
-            "name": "Unknown_51",
+            "name": "Unknown_50",
             "argc": "0"
         },
         {
@@ -230,7 +226,7 @@
             "argc": "3"
         },
         {
-            "name": "Unknown_57",
+            "name": "Unknown_56",
             "argc": "0"
         },
         {
@@ -254,7 +250,7 @@
             "argc": "3"
         },
         {
-            "name": "Unknown_63",
+            "name": "Unknown_62",
             "argc": "0"
         },
         {
@@ -278,15 +274,15 @@
             "argc": "2"
         },
         {
+            "name": "Unknown_68",
+            "argc": "0"
+        },
+        {
             "name": "Unknown_69",
             "argc": "0"
         },
         {
             "name": "Unknown_70",
-            "argc": "0"
-        },
-        {
-            "name": "Unknown_71",
             "argc": "0"
         },
         {
@@ -298,12 +294,16 @@
             "argc": "3"
         },
         {
-            "name": "Unknown_74",
+            "name": "Unknown_73",
             "argc": "0"
         },
         {
             "name": "GetIClientCompat",
             "argc": "3"
+        },
+        {
+            "name": "Unknown_75",
+            "argc": "0"
         },
         {
             "name": "Unknown_76",
@@ -323,10 +323,6 @@
         },
         {
             "name": "Unknown_80",
-            "argc": "0"
-        },
-        {
-            "name": "Unknown_81",
             "argc": "0"
         },
         {

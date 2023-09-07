@@ -424,6 +424,10 @@
         {
             "name": "GetPeerContentServerForApp",
             "argc": "4"
+        },
+        {
+            "name": "NotifyDriveRemoved",
+            "argc": "2"
         }
     ]
 }

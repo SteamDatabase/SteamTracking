@@ -1,0 +1,108 @@
+import "enums.proto";
+import "steammessages_base.proto";
+import "webuimessages_base.proto";
+
+option optimize_for = SPEED;
+option cc_generic_services = true;
+
+message CStorageDeviceManager_IsServiceAvailable_Request {
+}
+
+message CStorageDeviceManager_IsServiceAvailable_Response {
+	optional bool is_available = 1;
+}
+
+message CStorageDeviceManagerDrive {
+	optional uint32 id = 1 [default = 0];
+	optional string model = 2;
+	optional string vendor = 3;
+	optional string serial = 4;
+	optional bool is_ejectable = 5;
+	optional uint64 size_bytes = 6;
+	optional .EStorageDriveMediaType media_type = 7 [default = k_EStorageDriveMediaType_Invalid];
+	optional bool is_unformatted = 8;
+	optional .EStorageFormatStage adopt_stage = 9 [default = k_EStorageFormatStage_Invalid];
+}
+
+message CStorageDeviceManagerBlockDevice {
+	optional uint32 id = 1 [default = 0];
+	optional uint32 drive_id = 2 [default = 0];
+	optional string path = 3;
+	optional string friendly_path = 4;
+	optional string label = 5;
+	optional uint64 size_bytes = 6;
+	optional bool is_formattable = 7;
+	optional bool is_read_only = 8;
+	optional bool is_root_device = 9;
+	optional .EStorageBlockContentType content_type = 10 [default = k_EStorageBlockContentType_Invalid];
+	optional .EStorageBlockFileSystemType filesystem_type = 11 [default = k_EStorageBlockFileSystemType_Invalid];
+	repeated string mount_paths = 12;
+	optional bool is_unmounting = 13;
+}
+
+message CStorageDeviceManagerState {
+	repeated .CStorageDeviceManagerDrive drives = 1;
+	repeated .CStorageDeviceManagerBlockDevice block_devices = 2;
+	optional bool is_unmount_supported = 3;
+	optional bool is_trim_supported = 4;
+	optional bool is_trim_running = 5;
+	optional bool is_adopt_supported = 6;
+}
+
+message CStorageDeviceManager_GetState_Request {
+}
+
+message CStorageDeviceManager_GetState_Response {
+	optional .CStorageDeviceManagerState state = 1;
+}
+
+message CStorageDeviceManager_StateChanged_Notification {
+}
+
+message CStorageDeviceManager_Eject_Request {
+	optional uint32 drive_id = 1;
+}
+
+message CStorageDeviceManager_Eject_Response {
+}
+
+message CStorageDeviceManager_Adopt_Request {
+	optional uint32 drive_id = 1;
+	optional string label = 2;
+}
+
+message CStorageDeviceManager_Adopt_Response {
+}
+
+message CStorageDeviceManager_Format_Request {
+	optional uint32 block_device_id = 1;
+}
+
+message CStorageDeviceManager_Format_Response {
+}
+
+message CStorageDeviceManager_Unmount_Request {
+	optional uint32 block_device_id = 1;
+}
+
+message CStorageDeviceManager_Unmount_Response {
+}
+
+message CStorageDeviceManager_TrimAll_Request {
+}
+
+message CStorageDeviceManager_TrimAll_Response {
+}
+
+service StorageDeviceManager {
+	option (webui_service_execution_site) = k_EClientExecutionSiteSteamUI;
+
+	rpc IsServiceAvailable (.CStorageDeviceManager_IsServiceAvailable_Request) returns (.CStorageDeviceManager_IsServiceAvailable_Response);
+	rpc GetState (.CStorageDeviceManager_GetState_Request) returns (.CStorageDeviceManager_GetState_Response);
+	rpc NotifyStateChanged (.CStorageDeviceManager_StateChanged_Notification) returns (.WebUINoResponse);
+	rpc Adopt (.CStorageDeviceManager_Adopt_Request) returns (.CStorageDeviceManager_Adopt_Response);
+	rpc Eject (.CStorageDeviceManager_Eject_Request) returns (.CStorageDeviceManager_Eject_Response);
+	rpc Format (.CStorageDeviceManager_Format_Request) returns (.CStorageDeviceManager_Format_Response);
+	rpc Unmount (.CStorageDeviceManager_Unmount_Request) returns (.CStorageDeviceManager_Unmount_Response);
+	rpc TrimAll (.CStorageDeviceManager_TrimAll_Request) returns (.CStorageDeviceManager_TrimAll_Response);
+}

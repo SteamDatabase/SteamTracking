@@ -533,6 +533,8 @@ message CMsgSystemManagerSettings {
 	optional bool is_display_colortemp_available = 34;
 	optional float display_colortemp = 35;
 	optional float display_colortemp_default = 36;
+	optional bool display_colortemp_enabled = 37;
+	optional .EColorGamutLabelSet display_colorgamut_labelset = 38 [default = k_ColorGamutLabelSet_Default];
 }
 
 message CMsgSelectOSBranchParams {

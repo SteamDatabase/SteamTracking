@@ -19,9 +19,9 @@ __TEXT
 __gcc_except_tab__TEXT
 __unwind_info
 __TEXT
-8
+H
 !
-8
+H
 !
 __eh_frame
 __TEXT
@@ -7534,7 +7534,6 @@ ClientAPI_Init(GlobalInstance): GetIClientFriends returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientBilling returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientUtils returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientNetworkDeviceManager returned NULL.
-ClientAPI_Init(GlobalInstance): GetIClientStorageDeviceManager returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientSystemPerfManager returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientSystemManager returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientSystemDockManager returned NULL.
@@ -7767,8 +7766,8 @@ Steam pid that launched us
 VGUI_Application_001
 OK
 Cancel
-Aug 31 2023
-14:03:58
+Sep  6 2023
+16:26:53
 crashhandler004
 gameoverlayui
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/overlay/gameoverlayui/main.cpp
@@ -10782,10 +10781,10 @@ Dec
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 0
-X+
-J+
-I+
+K+
 0
+b+
+'+
 
 
 
@@ -10806,7 +10805,6 @@ j
 j
 j
 j*
-m
 j
 j
 j

@@ -2,22 +2,16 @@
 __TEXT
 __text
 __TEXT
-~h1
+>h1
 __stubs
 __TEXT
 __stub_helper
 __TEXT
-d!2
-d!2
 __cstring
 __TEXT
-p=2
-p=2
 __const
 __TEXT
 __gcc_except_tab__TEXT
-`@8
-`@8
 __objc_methname
 __TEXT
 __objc_classname__TEXT
@@ -155,22 +149,27 @@ h
 )
 P%?
 HB
-u=
+e4
+S3
 0
-A1
-.
+'=
+H1
+L0
 1
 1
-
-
-
-
 1
+1
+1
+
+
+
+
 
 @
 
 @
 @
+:
 @
 8
 HC
@@ -2903,7 +2902,6 @@ ClientAPI_Init(GlobalInstance): GetIClientFriends returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientBilling returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientUtils returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientNetworkDeviceManager returned NULL.
-ClientAPI_Init(GlobalInstance): GetIClientStorageDeviceManager returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientSystemPerfManager returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientSystemManager returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientSystemDockManager returned NULL.
@@ -5379,8 +5377,8 @@ linux
 Linux;tenfoot
 X-ValveUserAgent
 panorama %s %s
-Aug 31 2023
-14:04:54
+Sep  6 2023
+16:27:45
 X-SteamClientVersion
 hostName
 pchRemoteHost
@@ -8294,35 +8292,44 @@ q.IsValid()
 angles.IsValid()
 SSE is required.
 src.IsValid()
+HB2
+RB2
 
+]B2
+gB2
+mB2
+}B2
 HB
-u=
+e4
+S3
 0
-A1
-.
+'=
+H1
+L0
 1
 1
-
-
-
-
 1
+1
+1
+
+
+
+
 
 @
 
 @
 @
-N0
-0
 :
+0
 '
 Y'
 /
+7/
 (&
-.
+Y.
 &
 #
-8
 -
 
 k$
@@ -8330,19 +8337,23 @@ k$
 ;
 -
 -
--
 7
 7
 7
-w,
+7
+[,
+%.
 j
 ,
 ,
 ,
 ,
+,
 "
 "
+%,
 ?
+A/
 )
 >
 ;
@@ -8352,11 +8363,23 @@ F
 +
 !
 &
-5
-G(
+H+
++-
++
 j
-{*
-w*
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+}6
 @
 @
 @
@@ -8385,18 +8408,7 @@ w*
 @
 @
 @
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
+8*
 @
 @
 @
@@ -8407,9 +8419,10 @@ w*
 @
 d
 Uk/
-K
 Q6
+K
 P6
+O6
 @
 @
 @
@@ -8440,15 +8453,16 @@ P6
 @
 0
 *
-*
 @
 @
+i)
+])
+F)
++
 +
 )
 )
 )
-)
-G)
 @
 @
 @
@@ -8457,15 +8471,16 @@ G)
 @
 @
 @
+T)
 0
 @
 @
-)
 0
 0
 2
+2
 =
-w(
+)
 @
 @
 H=
@@ -8473,11 +8488,9 @@ H=
 (
 (
 (
+(
+2'
 )
-$
-!'
-'
-'
 '
 '
 '
@@ -8490,18 +8503,19 @@ $
 &
 @
 @
-0
-x$
 %
-/
-/
+0
+R$
+w0
 @
 @
 ?
-/
+m#
+.
 .
 .
 @
+-#
 P
 #
 #
@@ -8523,14 +8537,14 @@ A
 A
 (
 &
-t"
--
--
-_"
+z"
+=$
+`"
 @
 E9u
 E9u
-0"
+#
+."
 @
 A
 A
@@ -8545,23 +8559,22 @@ A
 A
 A
 Ic
-"
-T.
-n!
-h!
-!
-!
-!
-!
+W.
 $
-V
-P
-J
+$
+!
+!
+!
+!
+u-
+]
+$
 !
 !
 !
 !
 !
+.
 .
 .
 .
@@ -8570,21 +8583,22 @@ J
 .
 .
 @
-M+
-(
+"
 "
 
+
 }
 "
 @
-'
+?(
 (
-(
-'&
+B%
 (
 Hi
 %
 (
+r%
+$
 $
 @
 @
@@ -8592,14 +8606,12 @@ $
 0
 
 
+L9%tE&
 
 0
-!
 
 
 0
-S%
-=%
 IcE
 @
 @
@@ -8777,7 +8789,6 @@ IcE
 @
 @
 @
-4#
 @
 @
 @
@@ -8842,6 +8853,7 @@ IcE
 @
 @
 @
+#
 @
 @
 @
@@ -8892,7 +8904,14 @@ IcE
 @
 @
 @
-!
+fD;=M5!
+"
+"
+"
+"
+"
+"
+"
 "
 "
 "
@@ -8900,7 +8919,6 @@ IcE
 "
 @
 j
-"
 @
 @
 j
@@ -8908,7 +8926,6 @@ j
 @
 @
 j
--
 =
 =
 @
@@ -9000,14 +9017,11 @@ V
 
 @
 &
-r
-P
-
-
-
-
-l
-d
+p
+@
+&
+e
+6
 
 @
 M9e
@@ -9028,7 +9042,6 @@ M9e
 ?
 ?
 ?
-
 
 @
 ,
@@ -9136,4 +9149,3 @@ E
 @
 @
 
-Lc5#P

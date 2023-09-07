@@ -11,6 +11,8 @@ __TEXT
 __cstring
 __TEXT
 __gcc_except_tab__TEXT
+l0!
+l0!
 __const
 __TEXT
 __objc_methname
@@ -2139,7 +2141,6 @@ ClientAPI_Init(GlobalInstance): GetIClientFriends returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientBilling returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientUtils returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientNetworkDeviceManager returned NULL.
-ClientAPI_Init(GlobalInstance): GetIClientStorageDeviceManager returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientSystemPerfManager returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientSystemManager returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientSystemDockManager returned NULL.
@@ -5300,30 +5301,19 @@ k_EChatInstanceFlagClan & steamIDChat.GetUnAccountInstance()
 -
 -
 -
--
--
--
--
--
--
--
--
--
--
--
+x$
 $
-
 ?
 @
 ?
 ?
-#
 x
-C#
+
 "
 @
-*
+"
 x
+N!
 p
 0
 p
@@ -5340,7 +5330,6 @@ p
 0
 p
 0
-;
 H=
 p
 0
@@ -5391,6 +5380,8 @@ V
 !
 @
 &
+I!
+?!
 @
 M9e
 @
@@ -5473,9 +5464,10 @@ j
 j
 j
 j
+
+
 =
 0
-
 j
 j
 j
@@ -5562,7 +5554,6 @@ j
 j
 j
 E
-%
 j
 j
 j
@@ -5703,6 +5694,7 @@ d
 @
 @
 0
+j
 0
 0
 0
@@ -5712,4 +5704,3 @@ Hc
 E
 0
 p
-v

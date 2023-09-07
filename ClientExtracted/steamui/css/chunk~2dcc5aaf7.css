@@ -282,6 +282,9 @@
 .loadingthrobber_ContainerBackground_2ngG3 {
   background: #0e141b;
 }
+.loadingthrobber_ContainerBackground_2ngG3.loadingthrobber_Black_2cCoh {
+  background: #000;
+}
 .pininput_ErrorText_1E9uc.pininput_ErrorText_1E9uc {
   color: #de3618;
 }
@@ -54299,7 +54302,7 @@ html.tablet .partnereventdisplay_EventDetailTitle_2_4FS {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #0e141b;
+  background-color: #000;
   z-index: 10;
 }
 .steamdeckbootupthrobber_Container_j78ib::after {
@@ -58313,6 +58316,65 @@ button.settings_BuiltInLayoutButton_30Og7 svg {
 .contentmanagement_AddFolder_3C0_9:hover svg {
   color: #fff;
 }
+.contentmanagement_DriveDropdownControl_18pPl {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.contentmanagement_DriveDropdownControl_18pPl .DialogDropDown_CurrentDisplay {
+  flex: 1 1 0;
+}
+.contentmanagement_DriveDropdownControl_18pPl
+  .contentmanagement_DropdownOptionCtn_iFalJ {
+  flex: 1 1 0;
+}
+.contentmanagement_DriveDropdownControl_18pPl
+  .contentmanagement_InstallFolder_12aBP {
+  margin: 0px 8px;
+}
+.contentmanagement_AddFolderDropdownOption_uKeuM {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.contentmanagement_AddFolderDropdownOption_uKeuM svg {
+  width: 20px;
+  margin-right: 12px;
+}
+.contentmanagement_InstallDropdownOption_3YelW {
+  color: #67707b;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 0;
+}
+.contentmanagement_InstallDropdownOption_3YelW.contentmanagement_IsSelectedDropdownOption_1TyV2
+  .contentmanagement_DriveName_1rihl,
+.contentmanagement_InstallDropdownOption_3YelW.contentmanagement_IsSelectedDropdownOption_1TyV2
+  .contentmanagement_DriveSize_5bG9I,
+.contentmanagement_InstallDropdownOption_3YelW.contentmanagement_IsSelectedDropdownOption_1TyV2
+  svg {
+  color: #fff;
+}
+.contentmanagement_InstallDropdownOption_3YelW svg {
+  width: 50px;
+  margin-right: 12px;
+}
+.contentmanagement_InstallDropdownOption_3YelW
+  .contentmanagement_DriveName_1rihl
+  svg {
+  width: 14px;
+  height: 14px;
+  color: #ffc82c;
+  margin-right: 0px;
+  margin-left: 4px;
+}
+.contentmanagement_InstallDropdownOption_3YelW
+  .contentmanagement_DriveSize_5bG9I {
+  text-align: right;
+}
 .contentmanagement_FolderInfo_2ylO_ {
   display: flex;
   flex-direction: column;
@@ -58531,7 +58593,6 @@ button.settings_BuiltInLayoutButton_30Og7 svg {
 .contentmanagement_AppsGrid_2n6FN .contentmanagement_LibraryInventory_299aN {
   display: flex;
   flex-direction: column;
-  max-height: 402px;
   flex-grow: 1;
 }
 .contentmanagement_AppsGrid_2n6FN
@@ -58915,6 +58976,42 @@ button.settings_BuiltInLayoutButton_30Og7 svg {
   font-weight: bold;
   color: #fff;
   margin-bottom: 8px;
+}
+.contentmanagement_StorageDriveInfo_21tSo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 60%;
+}
+.contentmanagement_StorageDriveInfo_21tSo
+  .contentmanagement_MessageContainer_1x_xY {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  text-align: center;
+  line-height: unset;
+}
+.contentmanagement_StorageDriveInfo_21tSo
+  .contentmanagement_MessageContainer_1x_xY
+  .contentmanagement_HowTo_3QxL6 {
+  color: #ffc82c;
+}
+.contentmanagement_StorageDriveInfo_21tSo
+  .contentmanagement_MessageContainer_1x_xY
+  .contentmanagement_HowTo_3QxL6
+  .contentmanagement_Glyph_1NvWf {
+  height: 1.2em;
+  vertical-align: text-bottom;
 }
 @keyframes activateproductdialog_ItemFocusAnim-darkerGrey-nocolor_3monw {
   from {
@@ -61854,6 +61951,75 @@ div.LowPerfMode
   border-radius: 3px;
   height: 23px;
   cursor: pointer;
+}
+:root {
+  --image-url: none;
+}
+.colorsettings_PageContainer_1IT6p {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  justify-content: flex-end;
+}
+.colorsettings_PreviewImage_2ebm0 {
+  background-image: var(--image-url);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  flex-grow: 1;
+}
+.colorsettings_FloatingControls_3nhqv {
+  display: flex;
+  flex-direction: row;
+  background: #0e141b;
+  gap: 20px;
+  padding: 20px 20px 10px 20px;
+  justify-content: center;
+  box-shadow: 0px -2px 10px 0px rgba(0, 0, 0, 0.3);
+  --field-negative-horizontal-margin: 0;
+}
+.colorsettings_Floating_16m0E .colorsettings_FloatingControls_3nhqv {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 3px 3px 0 0;
+}
+.colorsettings_FloatingControls_3nhqv .colorsettings_Section_1BFoQ {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  min-width: 0;
+  max-width: 400px;
+  width: 0;
+}
+.colorsettings_FloatingControls_3nhqv
+  .colorsettings_Section_1BFoQ.colorsettings_Buttons_2XUCe {
+  flex-direction: column;
+  min-width: 120px;
+  flex-shrink: 1;
+  flex-grow: 0;
+  gap: 20px;
+}
+.colorsettings_Label_2eZY9 {
+  font-size: 16px;
+  line-height: 20px;
+  color: #dcdedf;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+  word-break: break-word;
+}
+.colorsettings_FloatingControls_3nhqv
+  .colorsettings_Section_1BFoQ
+  button.DialogButton {
+  min-width: 0;
 }
 .installrequest_FolderSelector_vaNI8 {
   padding: 16px 0px 8px;
