@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "8317355";
+var CLSTAMP = "8320444";
 (() => {
   var e,
     t,
@@ -8,7 +8,7 @@ var CLSTAMP = "8317355";
     n,
     o,
     i = {
-      35115: (e, t, r) => {
+      57950: (e, t, r) => {
         "use strict";
         function n(e, t, r, n) {
           var o,
@@ -62,7 +62,7 @@ var CLSTAMP = "8317355";
         }
         Object.create;
         Object.create;
-        r(5963);
+        r(99026);
         var i = r(87363),
           a = r.n(i),
           s = r(61533);
@@ -1495,9 +1495,8 @@ var CLSTAMP = "8317355";
           (function (e) {
             (e[(e.Minimal = 1)] = "Minimal"),
               (e[(e.Modal = 2)] = "Modal"),
-              (e[(e.Rich = 4)] = "Rich"),
-              (e[(e.ShowArrowKeys = 8)] = "ShowArrowKeys"),
-              (e[(e.ShowDoneKey = 16)] = "ShowDoneKey");
+              (e[(e.ShowArrowKeys = 4)] = "ShowArrowKeys"),
+              (e[(e.HideDoneKey = 8)] = "HideDoneKey");
           })(J || (J = {})),
           (function (e) {
             (e[(e.Unknown = -1)] = "Unknown"),
@@ -2744,7 +2743,7 @@ var CLSTAMP = "8317355";
             });
           });
       },
-      5963: (e, t, r) => {
+      99026: (e, t, r) => {
         "use strict";
         "VALVE_PUBLIC_PATH" in window
           ? (r.p = window.VALVE_PUBLIC_PATH)
@@ -3080,7 +3079,7 @@ var CLSTAMP = "8317355";
         699: "e520ea8eb741214a85ed",
         1162: "1015a4b2785642c694d6",
         1313: "7cbc6d3446e9254d6243",
-        1471: "5a33c94f5ce4328cc6b5",
+        1471: "e491f179032daccddabc",
         1635: "327b0ab06e9918b8ba12",
         2029: "f2f66029da6eadd7fd14",
         2431: "faf493c0d081b4c4473c",
@@ -3089,25 +3088,25 @@ var CLSTAMP = "8317355";
         2822: "1930acba561078a18a98",
         2844: "c989776cd54a2a8e0ebc",
         2862: "919b0f8467aa4d0dd8af",
-        2913: "57a19c6ffdaede13c040",
+        2913: "9caa9f9765f6b6fbfe0d",
         3112: "4303d4d8c4f1512e1fb3",
         3140: "67232a94c8f87bf86abf",
         3182: "626a386cb26ef9f94014",
-        3252: "97ab0fcdb9c2c9e6a911",
+        3252: "f0128c88356fe05cbdf2",
         3471: "3d722f5b01571f009d05",
         3500: "97f103206f5759b7ea62",
-        3557: "b374f8cf07df7b3c1ec6",
+        3557: "55894d30cef7ce0c5ee8",
         4108: "08a1d573761ed09331a6",
         4189: "ce14c9cdc5779c3fb185",
         4264: "3f7370d48d57123da3f4",
-        4297: "0ea137e08c5d2649f646",
+        4297: "da557179fe1e5a10f22e",
         4448: "4af230686cd895cba71c",
         4596: "b64463f287913ed1b4f2",
         4716: "0d03a3ed1cc805af2770",
         4823: "42843867d1b1419f8256",
         4964: "c25e5af4285230a09305",
         4989: "7080a6ac094d0c96366d",
-        5438: "7ef88443380c9c2d58d9",
+        5438: "6e79e4e7ac632ab421d6",
         5625: "7c8f8ae8efffd38d0629",
         5632: "28c76b782d6cb20a5de6",
         5802: "debc3461bbf286c8c1df",
@@ -3124,7 +3123,7 @@ var CLSTAMP = "8317355";
         6992: "3b30a7e01544619acb07",
         7340: "dd947cee9875884305e1",
         7575: "3e33390f518ecc16c2e0",
-        7602: "b9e56a66100f2a3337fc",
+        7602: "a41819721faa21ad3474",
         7651: "fcccbe2e0a52e2070a56",
         7706: "415e651d68936074233f",
         7781: "7fa609384f850872880c",
@@ -3132,9 +3131,9 @@ var CLSTAMP = "8317355";
         8247: "f25e033938692b5767ad",
         8385: "1798e6ad50adc8466855",
         8518: "4a0aecf8c58aa429e523",
-        8754: "fa1818baccca652e4dd7",
+        8754: "b5e523d7d0091df72368",
         8815: "1f786d86346bdbc68758",
-        9062: "46e82e18d2b40fbfeeee",
+        9062: "41856e1eda05301de6bc",
         9263: "0faea3edd3efa407123d",
         9753: "7b403b0779a63ba9b8ee",
         9775: "660b7785225eab50cda3",
@@ -3273,6 +3272,6 @@ var CLSTAMP = "8317355";
           self.webpackChunk_steam_friendsui || []);
       r.forEach(t.bind(null, 0)), (r.push = t.bind(null, r.push.bind(r)));
     })();
-  var _ = s.O(void 0, [5968], () => s(35115));
+  var _ = s.O(void 0, [5968], () => s(57950));
   _ = s.O(_);
 })();

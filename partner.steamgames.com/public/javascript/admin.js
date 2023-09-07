@@ -1547,10 +1547,10 @@ function ChangePrimaryPublisher()
 	} );
 }
 
-function CloseEmailReminder()
+function CloseMailingAddressReminder()
 {
 	$J( '.address_reminder_ctn' ).slideUp();
-	V_SetCookie( "hideEmailAddressReminder", 1, 30 );
+	V_SetCookie( "hideEmailAddressReminder", 1, 30 ); // term email is misleading here
 }
 
 function RetireAppInternal( nAppID, nPubID, bDMCARetire, strNotes, strRetireAction, bRemoveCommunityPresence, bPurgeContent, bVerboseOutput )

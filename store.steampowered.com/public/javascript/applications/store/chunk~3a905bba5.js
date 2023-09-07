@@ -1366,6 +1366,7 @@
           r !== i &&
           "support.steampowered.com" !== r &&
           r !== s &&
+          "www.dota2.com" !== r &&
           (!t || 0 == t.filter((e) => r == e).length)
         );
       }

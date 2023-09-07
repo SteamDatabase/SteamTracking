@@ -343,15 +343,17 @@ body.v6 .wishlist_header h2 {
 	height: 20px;
 	transition: background-color 300ms;
 	order: 10;
+	background: #3d4450;
+    border-radius: 2px;
+	display: flex;
+	align-items: center;
 }
 
 .wishlist .controls div.filter_tab.hover{
-	background-color: #808a9c;
-	color: #000;
+	background-color: #3D4450;
 }
 
 .wishlist .controls div.filter_tab.hover > span {
-	color: #000;
 
 }
 
@@ -362,12 +364,8 @@ body.v6 .wishlist_header h2 {
 		font-weight: normal; /* normal */
 
 		
-	background-color: #808a9c;
-	padding: 0px 15px 15px 15px;
-	text-transform: uppercase;
-	letter-spacing: 1px;
+	background-color: #3D4450;
 
-	transition: opacity 300ms;
 	opacity: 0;
 	pointer-events: none;
 }
@@ -379,14 +377,15 @@ body.v6 .wishlist_header h2 {
 
 .dropdown_container .item {
 	font-size: 12px;
-	color: #fff;
-	padding: 5px 0;
+	color: #dcdedf;
+	padding: 8px 18px;
 	cursor: pointer;
 	display: block;
 }
 
 .dropdown_container .item:hover {
-	color: #000;
+	background-color: #dcdedf;
+    color: #3D4450;
 }
 
 .dropdown_spacer {
@@ -401,12 +400,14 @@ body.v6 .wishlist_header h2 {
 	transition: opacity 300ms;
 	position: absolute;
 	width: calc(100% - 52px);
-	background-color: #808a9c;
-	padding: 30px 22px 30px 30px;
-	margin-top: -16px;
+	background-color: #3D4450;
+	padding: 20px 22px 20px 30px;
+	margin-top: -7px;
 	z-index: 2;
 	pointer-events: none;
     display: none;
+	border-radius: 2px;
+	box-shadow: 10px 10px 5px #0000003b;
 }
 
 .checkbox_wrapper {
@@ -424,7 +425,7 @@ body.v6 .wishlist_header h2 {
 
 body.v6 .filter_section h3, body.v6 .category h3 {
 	text-transform: uppercase;
-	color: #222d3d;
+	color: #1a9fff;
 	font-size: 13px;
 	margin: 5px 0;
 	font-weight: bold;
@@ -485,26 +486,34 @@ body.v6 .filter_section label, body.v6 .filter_section input {
 	opacity: 1;
 }
 
-.wishlist .controls  div:hover {
+.wishlist .controls div:first-child {
+	margin: 0px 15px 0px 0px;
+}
+
+.wishlist .controls div #tab_filters {
 	color: #fff;
 }
 
-.wishlist .controls  div {
+.wishlist .controls div {
 	padding: 10px 14px 8px 14px;
-	margin: 0px 15px 0px 0px;
-	color: #9099a1;
+	margin: 0px;
+	color: #1a9fff;
 	font-size: 13px;
-	letter-spacing: 1px;
-	text-transform: uppercase;
 	white-space: nowrap;
 }
 
-.wishlist .controls  div span,
-#tab_filters {
+.wishlist .controls div span {
 	color: #fff;
+	margin-left: 4px;
 }
+
+.wishlist .dropdownimg {
+	width: 19px;
+	height: 12px;
+}
+
 .wishlist .controls  .filter_tab:hover {
-	background: rgba(255,255,255,0.1);
+	background: #464d58;
 }
 
 .wishlist .hr {
@@ -695,6 +704,7 @@ body.v6 .filter_section label, body.v6 .filter_section input {
 	display: flex;
 	flex-direction: row;
 	padding: unset;
+	margin: unset;
 }
 
 @media screen and (max-width: 910px)
@@ -798,7 +808,7 @@ body.v6 .filter_section label, body.v6 .filter_section input {
 		margin: 0;
 	}
 	.wishlist .controls .control_row {
-		padding-top: 5px;
+		padding: 10px 0px;
 		flex-wrap: wrap-reverse;
 	}
 
@@ -886,10 +896,10 @@ body.v6 .filter_section label, body.v6 .filter_section input {
 }
 
 body.v6 .game_page_background {
-    background: #202326 !important;
+    background: #1b2838 !important;
 }
 body.v6.game_bg {
-    background: #202326;
+    background: #1b2838;
 }
 .grandprix_ctn {
     		font-family: "Motiva Sans", Sans-serif;

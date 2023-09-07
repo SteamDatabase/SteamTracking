@@ -5459,37 +5459,41 @@
                   this.file_upload_props.additionalProps,
                 );
             try {
-              let e = yield B().post(
-                this.m_Callbacks.GetBeginFileUploadURL(),
-                r,
-                { params: { l: v.De.LANGUAGE } },
+              let e = yield fetch(
+                this.m_Callbacks.GetBeginFileUploadURL() +
+                  `?l=${v.De.LANGUAGE}`,
+                { method: "POST", body: r, credentials: "include" },
               );
+              const t = yield e.json();
               return (
-                (this.m_fileUploadProps.timestamp = e.data.timestamp),
-                (this.m_fileUploadProps.hmac = e.data.hmac),
-                this.DoFileUpload(e.data.result)
+                (this.m_fileUploadProps.timestamp = t.timestamp),
+                (this.m_fileUploadProps.hmac = t.hmac),
+                this.DoFileUpload(t.result)
               );
             } catch (e) {
-              let t = null;
+              const t = null == e ? void 0 : e.response;
+              let r = null;
               throw (
                 ((0, W.z)(() => {
                   if (
                     ((this.m_fileUploadProps.eUploadState = 3),
-                    this.LogFileUploadMessage(e.response),
-                    e.response)
+                    this.LogFileUploadMessage(t),
+                    t)
                   ) {
-                    let r = e.response.data;
-                    e.response.status, r && r.success;
-                    t = r.message
-                      ? r.message
+                    let e = t.data;
+                    t.status, e && e.success;
+                    r = (null == e ? void 0 : e.message)
+                      ? null == e
+                        ? void 0
+                        : e.message
                       : (0, E.Xx)("#Chat_Settings_Error_ServerError");
-                  } else t = (0, E.Xx)("#ConnectionTrouble_FailedToConnect");
+                  } else r = (0, E.Xx)("#ConnectionTrouble_FailedToConnect");
                   this.m_fileUploadProps.strErrorDescription = (0, E.Xx)(
                     "#Chat_Upload_ErrorStart",
-                    t,
+                    r,
                   );
                 }),
-                t)
+                r)
               );
             }
           });
@@ -5564,10 +5568,10 @@
                 this.file_upload_props.additionalProps,
               );
             try {
-              let t = yield B().post(
-                this.m_Callbacks.GetCommitFileUploadURL(),
-                n,
-              );
+              let t = yield fetch(this.m_Callbacks.GetCommitFileUploadURL(), {
+                method: "POST",
+                body: n,
+              });
               return (
                 e
                   ? ((this.m_fileUploadProps.uploadProgress = 0),

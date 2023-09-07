@@ -578,7 +578,7 @@
       function A(e) {
         return D(e.segmentTemplate.strInitialization, e.strID, 0);
       }
-      class F {
+      class O {
         constructor() {
           (this.m_nMinBufferTime = 0),
             (this.m_dtAvailabilityStartTime = null),
@@ -955,13 +955,13 @@
           );
         }
       }
-      var k;
+      var F;
       !(function (e) {
         (e[(e.None = 0)] = "None"),
           (e[(e.Append = 1)] = "Append"),
           (e[(e.Remove = 2)] = "Remove");
-      })(k || (k = {}));
-      class O {
+      })(F || (F = {}));
+      class k {
         constructor(e, t, n, r) {
           (this.m_callbacks = null),
             (this.m_mpd = null),
@@ -970,7 +970,7 @@
             (this.m_sourceBuffer = null),
             (this.m_nTrackBufferMS = 0),
             (this.m_representation = null),
-            (this.m_eBufferUpdate = k.None),
+            (this.m_eBufferUpdate = F.None),
             (this.m_rgBufferedSegments = []),
             (this.m_bNeedInitSegment = !0),
             (this.m_nNextSegment = 0),
@@ -1116,7 +1116,7 @@
           this.m_listeners.Unregister(),
             (this.m_sourceBuffer = null),
             this.ForceStopDownloads(),
-            (this.m_eBufferUpdate = k.None),
+            (this.m_eBufferUpdate = F.None),
             (this.m_bRemoveBufferState = !1),
             (this.m_callbacks = null),
             (this.m_mpd = null),
@@ -1147,10 +1147,10 @@
             `${this.GetDebugName()} OnSourceBufferUpdateEnd: [playback=${t}][buffered=${n}][start=${this.GetBufferedStart()}][end=${this.GetBufferedEnd()}]`,
           );
           let r = this.m_eBufferUpdate;
-          (this.m_eBufferUpdate = k.None),
-            r == k.Append && this.m_callbacks.OnSegmentDownloaded(this),
+          (this.m_eBufferUpdate = F.None),
+            r == F.Append && this.m_callbacks.OnSegmentDownloaded(this),
             this.m_bSeekInProgress &&
-              r == k.Remove &&
+              r == F.Remove &&
               !this.m_bRemoveBufferState &&
               this.ContinueSeek(),
             this.UpdateBuffer();
@@ -1359,18 +1359,18 @@
         }
         TrimGameDataIfNecessary() {}
         UpdateBuffer() {
-          if (this.m_eBufferUpdate != k.None) return;
+          if (this.m_eBufferUpdate != F.None) return;
           if (this.m_bRemoveBufferState) return void this.RemoveAllBuffers();
           if (!this.m_sourceBuffer) return void (0, _.hB)("No source buffer?");
           if (this.m_rgBufferedSegments.length > 0) {
             try {
-              this.m_eBufferUpdate = k.Append;
+              this.m_eBufferUpdate = F.Append;
               let e = this.m_rgBufferedSegments[0];
               this.m_sourceBuffer.appendBuffer(e.data),
                 this.m_rgBufferedSegments.splice(0, 1);
             } catch (e) {
               "QuotaExceededError" === e.name
-                ? ((this.m_eBufferUpdate = k.None),
+                ? ((this.m_eBufferUpdate = F.None),
                   (0, _.hB)(
                     `${this.GetDebugName()} Buffer - QuotaExceededError`,
                   ))
@@ -1386,7 +1386,7 @@
               let r = Math.min(this.GetBufferedEnd(), n);
               return void (
                 r != t &&
-                ((this.m_eBufferUpdate = k.Remove),
+                ((this.m_eBufferUpdate = F.Remove),
                 this.m_sourceBuffer.remove(t, r),
                 (this.m_tsLastBufferRemove = e))
               );
@@ -1401,7 +1401,7 @@
             for (let n = 0; n < t.length; n++) e < t.end(n) && (e = t.end(n));
           }
           (this.m_bRemoveBufferState = !1),
-            (this.m_eBufferUpdate = k.Remove),
+            (this.m_eBufferUpdate = F.Remove),
             0 != e
               ? this.m_sourceBuffer.remove(0, e + 1)
               : this.OnSourceBufferUpdateEnd(null);
@@ -1469,7 +1469,7 @@
         }
         ContinueSeek() {
           this.m_bSeekInProgress &&
-            (this.m_eBufferUpdate == k.Remove ||
+            (this.m_eBufferUpdate == F.Remove ||
               this.m_bRemoveBufferState ||
               ((this.m_bSeekInProgress = !1), this.ScheduleNextDownload()));
         }
@@ -1514,13 +1514,13 @@
             : 0;
         }
       }
-      (0, r.gn)([m.a], O.prototype, "OnSourceBufferUpdateEnd", null),
-        (0, r.gn)([m.a], O.prototype, "OnSourceBufferError", null),
-        (0, r.gn)([m.a], O.prototype, "OnSourceBufferAbort", null),
-        (0, r.gn)([m.a], O.prototype, "ScheduleNextDownload", null),
-        (0, r.gn)([m.a], O.prototype, "DownloadNextSegment", null),
-        (0, r.gn)([m.a], O.prototype, "DownloadFailed", null),
-        (0, r.gn)([m.a], O.prototype, "DownloadGone", null);
+      (0, r.gn)([m.a], k.prototype, "OnSourceBufferUpdateEnd", null),
+        (0, r.gn)([m.a], k.prototype, "OnSourceBufferError", null),
+        (0, r.gn)([m.a], k.prototype, "OnSourceBufferAbort", null),
+        (0, r.gn)([m.a], k.prototype, "ScheduleNextDownload", null),
+        (0, r.gn)([m.a], k.prototype, "DownloadNextSegment", null),
+        (0, r.gn)([m.a], k.prototype, "DownloadFailed", null),
+        (0, r.gn)([m.a], k.prototype, "DownloadGone", null);
       const P = 5,
         x = "auto";
       var N, V;
@@ -1588,7 +1588,7 @@
               (this.m_strCDNAuthURLParameters = t);
             let r = yield this.DownloadMPD();
             if (r)
-              if (((this.m_mpd = new F()), this.m_mpd.BParse(r.data, e))) {
+              if (((this.m_mpd = new O()), this.m_mpd.BParse(r.data, e))) {
                 if (
                   (this.IsLiveContent() &&
                     (this.m_mpd.GetMinimumUpdatePeriod() > 0 &&
@@ -1819,7 +1819,7 @@
                 ((t = e), (this.m_strGameAdaptationID = e.strID)),
               t)
             ) {
-              let e = new O(this, this.m_mpd, t, this.m_stats);
+              let e = new k(this, this.m_mpd, t, this.m_stats);
               this.m_rgLoaders.push(e);
             }
           }
@@ -4925,9 +4925,8 @@
         (function (e) {
           (e[(e.Minimal = 1)] = "Minimal"),
             (e[(e.Modal = 2)] = "Modal"),
-            (e[(e.Rich = 4)] = "Rich"),
-            (e[(e.ShowArrowKeys = 8)] = "ShowArrowKeys"),
-            (e[(e.ShowDoneKey = 16)] = "ShowDoneKey");
+            (e[(e.ShowArrowKeys = 4)] = "ShowArrowKeys"),
+            (e[(e.HideDoneKey = 8)] = "HideDoneKey");
         })(o || (o = {})),
         (function (e) {
           (e[(e.Unknown = -1)] = "Unknown"),
@@ -9050,7 +9049,7 @@
       n.d(t, {
         Vp: () => V,
         zE: () => N,
-        gj: () => O,
+        gj: () => k,
         c4: () => P,
         mz: () => x,
       });
@@ -9193,7 +9192,7 @@
           r = r.offsetParent;
         }
         for (r = null == e ? void 0 : e.parentElement; r; ) {
-          const { scrollTop: e, scrollLeft: i } = F(r);
+          const { scrollTop: e, scrollLeft: i } = O(r);
           if (((t -= e), (n -= i), "ownerDocument" in r)) {
             if ("fixed" === window.getComputedStyle(r).position) break;
           }
@@ -9474,14 +9473,14 @@
         let t = L.get(e);
         return t || ((t = new B(e)), L.set(e, t)), t;
       }
-      function F(e) {
+      function O(e) {
         const t = L.get(e);
         return t
           ? { scrollLeft: t.scrollLeft, scrollTop: t.scrollTop }
           : { scrollLeft: e.scrollLeft, scrollTop: e.scrollTop };
       }
-      const k = new c.s("FocusNavigationMovement").Debug;
-      var O, P, x, N;
+      const F = new c.s("FocusNavigationMovement").Debug;
+      var k, P, x, N;
       !(function (e) {
         (e[(e.NONE = 0)] = "NONE"),
           (e[(e.COLUMN = 1)] = "COLUMN"),
@@ -9490,7 +9489,7 @@
           (e[(e.ROW_REVERSE = 4)] = "ROW_REVERSE"),
           (e[(e.GRID = 5)] = "GRID"),
           (e[(e.GEOMETRIC = 6)] = "GEOMETRIC");
-      })(O || (O = {})),
+      })(k || (k = {})),
         (function (e) {
           (e[(e.FIRST = 0)] = "FIRST"),
             (e[(e.LAST = 1)] = "LAST"),
@@ -9735,7 +9734,7 @@
             (this.m_bMounted = !1);
           const t = this.Tree.DeferredFocus.BIsQueuedFocusNode(this);
           (this.m_bFocused || t) &&
-            (k(
+            (F(
               `The focused node is unmounting, ${
                 this.m_RetainFocusParent
                   ? "will transfer to retain focus ancestor"
@@ -9758,7 +9757,7 @@
         RegisterDOMEvents() {
           !this.m_rgNavigationHandlers.length &&
             (this.m_rgChildren.length >= 2 ||
-              this.m_Properties.layout != O.NONE ||
+              this.m_Properties.layout != k.NONE ||
               this.m_Properties.onMoveUp ||
               this.m_Properties.onMoveRight ||
               this.m_Properties.onMoveDown ||
@@ -9920,8 +9919,8 @@
               const e = this.GetLayout();
               l =
                 l >= this.m_rgChildren.length ||
-                e == O.ROW_REVERSE ||
-                e == O.COLUMN_REVERSE ||
+                e == k.ROW_REVERSE ||
+                e == k.COLUMN_REVERSE ||
                 i == P.LAST
                   ? this.m_rgChildren.length - 1
                   : 0;
@@ -9931,11 +9930,11 @@
               i == P.MAINTAIN_X ? (r = "x") : i == P.MAINTAIN_Y && (r = "y"),
                 r == o.TP[n] &&
                   (s = this.m_Tree.GetLastFocusedMovementRect(o.TP[n])),
-                k(
+                F(
                   `Taking focus while preserving ${P[i]} preserved: ${r} movement: ${n}, node:`,
                   s || t,
                 );
-              const l = this.ComputeRelativeDirection(e, O.GRID);
+              const l = this.ComputeRelativeDirection(e, k.GRID);
               if (s || t) {
                 const i = l == N.BACKWARD ? this.m_rgChildren.length - 1 : 0;
                 a = this.FindClosestChildInNextAxiallyAlignedSet(
@@ -9998,7 +9997,7 @@
               bottom: o.innerHeight,
             });
           return (
-            k(
+            F(
               `Focusing visible child, best child match is ${
                 null === (i = null == s ? void 0 : s.child) || void 0 === i
                   ? void 0
@@ -10010,7 +10009,7 @@
         }
         GetLayout() {
           if (this.m_Properties.layout) return this.m_Properties.layout;
-          if (this.m_rgChildren.length < 2) return O.NONE;
+          if (this.m_rgChildren.length < 2) return k.NONE;
           return (0, u.Ii)(this.m_element);
         }
         OnNavigationEvent(e) {
@@ -10047,16 +10046,16 @@
           let o,
             s = this.ComputeRelativeDirection(e, r);
           if (
-            (k(
-              `Handling navigation event ${i.eV[e]} - ${O[r]} - ${N[s]}`,
+            (F(
+              `Handling navigation event ${i.eV[e]} - ${k[r]} - ${N[s]}`,
               this.m_element,
             ),
             s == N.INVALID)
           )
             return !1;
           if (this.m_Properties.focusable && this.m_bFocused)
-            return k("Skipping navigation within focused element"), !1;
-          if ((this.EnsureChildrenSorted(!0), r == O.GRID))
+            return F("Skipping navigation within focused element"), !1;
+          if ((this.EnsureChildrenSorted(!0), r == k.GRID))
             o = this.FindNextFocusableChildInGrid(
               this.GetActiveChildIndex(),
               s,
@@ -10085,7 +10084,7 @@
                 (s.right < 0 && s.left < -i)
               )
                 return (
-                  k(`Element too far away, scrolling ${i} on ${r} axis `),
+                  F(`Element too far away, scrolling ${i} on ${r} axis `),
                   T(o.Element, o.Element, "smooth", r, i),
                   !0
                 );
@@ -10110,10 +10109,10 @@
           return this.ComputeRelativeDirection(e, this.GetLayout());
         }
         ComputeRelativeDirection(e, t) {
-          let n = t == O.ROW_REVERSE || t == O.COLUMN_REVERSE;
+          let n = t == k.ROW_REVERSE || t == k.COLUMN_REVERSE;
           switch (t) {
-            case O.ROW:
-            case O.ROW_REVERSE:
+            case k.ROW:
+            case k.ROW_REVERSE:
               switch (e) {
                 case i.eV.DIR_LEFT:
                   return n ? N.FORWARD : N.BACKWARD;
@@ -10122,8 +10121,8 @@
                 default:
                   return N.INVALID;
               }
-            case O.COLUMN:
-            case O.COLUMN_REVERSE:
+            case k.COLUMN:
+            case k.COLUMN_REVERSE:
               switch (e) {
                 case i.eV.DIR_UP:
                   return n ? N.FORWARD : N.BACKWARD;
@@ -10132,7 +10131,7 @@
                 default:
                   return N.INVALID;
               }
-            case O.GRID:
+            case k.GRID:
               switch (e) {
                 case i.eV.DIR_LEFT:
                 case i.eV.DIR_UP:
@@ -10288,7 +10287,7 @@
                 ),
                 this.m_element.focus({ preventScroll: !0 }))
               : this.m_Tree.BUseVirtualFocus() ||
-                k(
+                F(
                   `Didn't move focus to element as tree ${this.m_Tree.id} is not active focus tree`,
                 ),
             (function (e, t) {
@@ -14547,18 +14546,18 @@
           return "CClientMetrics_ContentDownloadResponse_Counts_Notification";
         }
       }
-      class F extends h {
+      class O extends h {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            F.prototype.client_args || s.aR(F.M()),
+            O.prototype.client_args || s.aR(O.M()),
             h.initialize(this, e, 0, -1, [1], null);
         }
         static M() {
           return (
-            F.sm_m ||
-              (F.sm_m = {
-                proto: F,
+            O.sm_m ||
+              (O.sm_m = {
+                proto: O,
                 fields: {
                   client_args: {
                     n: 1,
@@ -14609,45 +14608,45 @@
                   },
                 },
               }),
-            F.sm_m
+            O.sm_m
           );
         }
         static MBF() {
-          return F.sm_mbf || (F.sm_mbf = s.Bh(F.M())), F.sm_mbf;
+          return O.sm_mbf || (O.sm_mbf = s.Bh(O.M())), O.sm_mbf;
         }
         toObject(e = !1) {
-          return F.toObject(e, this);
+          return O.toObject(e, this);
         }
         static toObject(e, t) {
-          return s.TA(F.M(), e, t);
+          return s.TA(O.M(), e, t);
         }
         static fromObject(e) {
-          return s.aD(F.M(), e);
+          return s.aD(O.M(), e);
         }
         static deserializeBinary(e) {
           let t = new o.BinaryReader(e),
-            n = new F();
-          return F.deserializeBinaryFromReader(n, t);
+            n = new O();
+          return O.deserializeBinaryFromReader(n, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return s.F(F.MBF(), e, t);
+          return s.F(O.MBF(), e, t);
         }
         serializeBinary() {
           var e = new o.BinaryWriter();
-          return F.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return O.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          s.l2(F.M(), e, t);
+          s.l2(O.M(), e, t);
         }
         serializeBase64String() {
           var e = new o.BinaryWriter();
-          return F.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return O.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CClientMetrics_ReportClientArgs_Notification";
         }
       }
-      var k;
+      var F;
       !(function (e) {
         (e.ClientAppInterfaceStatsReport = function (e, t) {
           return e.SendNotification(
@@ -14722,12 +14721,12 @@
           (e.ReportClientArgs = function (e, t) {
             return e.SendNotification(
               "ClientMetrics.ReportClientArgs#1",
-              (0, i.MD)(F, t),
+              (0, i.MD)(O, t),
               { ePrivilege: 1 },
             );
           });
-      })(k || (k = {}));
-      var O = n(17547),
+      })(F || (F = {}));
+      var k = n(17547),
         P = n(14826);
       const x =
         window.addEventListener || (n.g && n.g.addEventListener) || (() => {});
@@ -14969,7 +14968,7 @@
           t.Body().set_product(this.m_strProduct),
             t.Body().set_version(this.m_strVersion),
             t.Body().set_errors(r),
-            k.ReportClientError(this.m_transport, t);
+            F.ReportClientError(this.m_transport, t);
         }
         get version() {
           return this.m_strVersion;
@@ -15017,7 +15016,7 @@
       const Q = () => ($ || J(new j()), $),
         J = (e) => {
           ($ = e),
-            O.SV.InstallErrorReportingStore($),
+            k.SV.InstallErrorReportingStore($),
             i.lq.InstallErrorReportingStore($),
             P.LJ.InstallErrorReportingStore($);
         };
@@ -15134,8 +15133,10 @@
         OnHMDActivityLevelChanged(e) {
           this.m_eHMDActivityLevel = e;
         }
-        OnKeyboardStatus(e, t) {
-          this.m_eKeyboardFlags = t;
+        OnKeyboardStatus(e, t, n) {
+          (this.m_bIsKeyboardOpen = e),
+            (this.m_eKeyboardFlags = t),
+            (this.m_sInitialKeyboardText = n);
         }
         get IsVRHMDPresent() {
           return this.m_bHMDPresent || this.m_bHMDHardwareDetected;
@@ -15147,10 +15148,14 @@
           return this.m_eHMDActivityLevel == s.VR.$6.UserInteraction;
         }
         get VRKeyboardStatus() {
+          const e = 0 != (this.m_eKeyboardFlags & s.VR.vS.Minimal);
           return {
+            bIsOpen: this.m_bIsKeyboardOpen,
+            sInitialText: this.m_sInitialKeyboardText,
+            bMinimal: e,
             bShowArrowKeys:
-              0 != (this.m_eKeyboardFlags & s.VR.vS.ShowArrowKeys),
-            bShowDoneKey: 0 != (this.m_eKeyboardFlags & s.VR.vS.ShowDoneKey),
+              !e || 0 != (this.m_eKeyboardFlags & s.VR.vS.ShowArrowKeys),
+            bShowDoneKey: 0 == (this.m_eKeyboardFlags & s.VR.vS.HideDoneKey),
           };
         }
         get VRHMDActivityLevel() {
@@ -15239,7 +15244,9 @@
         (0, r.gn)([o.LO], l.prototype, "m_bIsVRRunning", void 0),
         (0, r.gn)([o.LO], l.prototype, "m_error", void 0),
         (0, r.gn)([o.LO], l.prototype, "m_eHMDActivityLevel", void 0),
+        (0, r.gn)([o.LO], l.prototype, "m_bIsKeyboardOpen", void 0),
         (0, r.gn)([o.LO], l.prototype, "m_eKeyboardFlags", void 0),
+        (0, r.gn)([o.LO], l.prototype, "m_sInitialKeyboardText", void 0),
         (0, r.gn)([o.aD.bound], l.prototype, "OnVRHardwareDetected", null),
         (0, r.gn)([o.aD.bound], l.prototype, "OnVRModeChanged", null),
         (0, r.gn)([o.aD.bound], l.prototype, "OnStartupError", null),
@@ -15258,7 +15265,7 @@
         Zo: () => R,
         Vc: () => A,
         Wn: () => L,
-        T: () => F,
+        T: () => O,
       });
       var r = n(33940),
         i = n(88464),
@@ -15715,7 +15722,7 @@
             this.state.ready &&
             this.props.instance.visible
           ) {
-            const e = O() ? 150 : 0;
+            const e = k() ? 150 : 0;
             this.props.instance.Hide(e);
           }
         }
@@ -15978,7 +15985,7 @@
           className: y().ContextMenuMouseOverlay,
         });
       }
-      function F(e) {
+      function O(e) {
         let t = [],
           n = C.RA(e),
           r = n.getSelection(),
@@ -16135,10 +16142,10 @@
         (0, r.gn)([b.ak], L.prototype, "OnBlur", null),
         (0, r.gn)([b.ak], L.prototype, "OnKeyDown", null),
         (L = (0, r.gn)([i.Pi], L));
-      const k = "EnableContextMenuBlurDelay3";
-      function O() {
+      const F = "EnableContextMenuBlurDelay3";
+      function k() {
         return (
-          "true" === (window.localStorage && window.localStorage.getItem(k))
+          "true" === (window.localStorage && window.localStorage.getItem(F))
         );
       }
     },
@@ -16185,7 +16192,7 @@
         uT: () => D,
         V5: () => I,
         Ac: () => y,
-        zx: () => O,
+        zx: () => k,
         ji: () => U,
         VY: () => T,
         oX: () => A,
@@ -16199,7 +16206,7 @@
         __: () => w,
         o9: () => x,
         $0: () => N,
-        KM: () => k,
+        KM: () => F,
         EU: () => ae,
         SY: () => se,
         BQ: () => H,
@@ -16336,7 +16343,7 @@
         );
       }
       (0, r.gn)([d.a], L.prototype, "OnSubmit", null);
-      const F = i.forwardRef(function (e, t) {
+      const O = i.forwardRef(function (e, t) {
           const n = m(),
             { svgicon: s } = e,
             a = (0, r._T)(e, ["svgicon"]),
@@ -16380,9 +16387,9 @@
             e.children,
           );
         }),
-        k = i.forwardRef(function (e, t) {
+        F = i.forwardRef(function (e, t) {
           return i.createElement(
-            F,
+            O,
             Object.assign(
               { preferredFocus: !0, type: e.onClick ? "button" : "submit" },
               e,
@@ -16398,9 +16405,9 @@
             ),
           );
         }),
-        O = i.forwardRef(function (e, t) {
+        k = i.forwardRef(function (e, t) {
           return i.createElement(
-            F,
+            O,
             Object.assign({ type: "button" }, e, {
               ref: t,
               className: (0, l.Z)(
@@ -16414,7 +16421,7 @@
         }),
         P = i.forwardRef(function (e, t) {
           return i.createElement(
-            F,
+            O,
             Object.assign({ type: "button" }, e, {
               ref: t,
               className: (0, l.Z)(
@@ -16426,7 +16433,7 @@
         });
       i.forwardRef(function (e, t) {
         return i.createElement(
-          F,
+          O,
           Object.assign({ type: "button" }, e, {
             ref: t,
             className: (0, l.Z)(e.className, "TextButton"),
@@ -16438,7 +16445,7 @@
           R,
           null,
           i.createElement(
-            k,
+            F,
             {
               onClick: e.onOK,
               disabled: e.bOKDisabled,
@@ -16448,7 +16455,7 @@
             " ",
           ),
           i.createElement(
-            O,
+            k,
             {
               onClick: e.onCancel,
               disabled: e.bCancelDisabled,
@@ -16459,8 +16466,8 @@
         );
       }
       function N(e) {
-        const t = e.bOKDisabled ? O : k,
-          n = e.bOKDisabled ? k : O;
+        const t = e.bOKDisabled ? k : F,
+          n = e.bOKDisabled ? F : k;
         return i.createElement(
           M,
           null,
@@ -16477,7 +16484,7 @@
             " ",
           ),
           i.createElement(
-            O,
+            k,
             { onClick: e.onCancel, disabled: e.bCancelDisabled },
             e.strCancelText || (0, c.Xx)("#Button_Cancel"),
           ),
@@ -17003,7 +17010,7 @@
                   "div",
                   { className: "displayRow" },
                   i.createElement(
-                    O,
+                    k,
                     {
                       className: "DialogInput_CopyAction Primary",
                       onClick: this.OnCopyClick,
@@ -17831,7 +17838,7 @@
       const Be = new (n(50454).s)("DragDrop").Debug;
       class Le extends i.Component {
         constructor() {
-          super(...arguments), (this.m_coordinator = new Fe());
+          super(...arguments), (this.m_coordinator = new Oe());
         }
         OnDrop(e, t) {
           t > e && t--, t != e && this.props.onReorder(e, t);
@@ -17852,7 +17859,7 @@
                 o = n + 1;
               e.push(
                 i.createElement(
-                  ke,
+                  Fe,
                   { coordinator: this.m_coordinator, data: n, key: r },
                   t,
                 ),
@@ -17876,7 +17883,7 @@
           : n && e >= n.left && e <= n.right && t >= n.top && t <= n.bottom;
       }
       (0, r.gn)([z.ak], Le.prototype, "OnDrop", null);
-      class Fe {
+      class Oe {
         constructor() {
           (this.m_embeddedElement = new Re.AN("DragGhosts")),
             (this.m_rgDropRegions = []),
@@ -18041,8 +18048,8 @@
               this.m_activeDropRegion.OnDragMove(r, i, this.m_activeDraggable);
         }
       }
-      (0, r.gn)([z.ak], Fe.prototype, "OnDragGhostRef", null);
-      class ke extends i.Component {
+      (0, r.gn)([z.ak], Oe.prototype, "OnDragGhostRef", null);
+      class Fe extends i.Component {
         constructor() {
           super(...arguments),
             (this.m_DragInfo = {
@@ -18247,7 +18254,7 @@
         renderDropGhost() {
           return this.props.fnRenderDropGhost
             ? this.props.fnRenderDropGhost()
-            : i.createElement(Oe, { elContent: this.GetClone() });
+            : i.createElement(ke, { elContent: this.GetClone() });
         }
         renderDragGhost() {
           return this.props.fnRenderDragGhost
@@ -18273,16 +18280,16 @@
           return t;
         }
       }
-      (0, r.gn)([z.ak], ke.prototype, "ProcessDragMove", null),
-        (0, r.gn)([z.ak], ke.prototype, "OnMouseDown", null),
-        (0, r.gn)([z.ak], ke.prototype, "OnMouseUp", null),
-        (0, r.gn)([z.ak], ke.prototype, "OnTouchStart", null),
-        (0, r.gn)([z.ak], ke.prototype, "OnTouchEnd", null),
-        (0, r.gn)([Ie.aD], ke.prototype, "ResetDragState", null),
-        (0, r.gn)([z.ak], ke.prototype, "OnHTMLDragStart", null),
-        (0, r.gn)([z.ak], ke.prototype, "OnHTMLDrag", null),
-        (0, r.gn)([z.ak], ke.prototype, "OnHTMLDragEnd", null);
-      class Oe extends i.Component {
+      (0, r.gn)([z.ak], Fe.prototype, "ProcessDragMove", null),
+        (0, r.gn)([z.ak], Fe.prototype, "OnMouseDown", null),
+        (0, r.gn)([z.ak], Fe.prototype, "OnMouseUp", null),
+        (0, r.gn)([z.ak], Fe.prototype, "OnTouchStart", null),
+        (0, r.gn)([z.ak], Fe.prototype, "OnTouchEnd", null),
+        (0, r.gn)([Ie.aD], Fe.prototype, "ResetDragState", null),
+        (0, r.gn)([z.ak], Fe.prototype, "OnHTMLDragStart", null),
+        (0, r.gn)([z.ak], Fe.prototype, "OnHTMLDrag", null),
+        (0, r.gn)([z.ak], Fe.prototype, "OnHTMLDragEnd", null);
+      class ke extends i.Component {
         OnRef(e) {
           e && e.appendChild(this.props.elContent);
         }
@@ -18293,7 +18300,7 @@
           });
         }
       }
-      (0, r.gn)([z.ak], Oe.prototype, "OnRef", null);
+      (0, r.gn)([z.ak], ke.prototype, "OnRef", null);
       class Pe extends i.Component {
         constructor() {
           super(...arguments),
@@ -18822,9 +18829,9 @@
           B = "below" == D && !!c,
           L = null != u ? u : y ? "shift-children-below" : "keep-inline",
           A = !!(w.onClick || w.onActivate || w.focusable),
-          F = (null != a && R) || null != n || (T && null != c),
-          k = null != m ? m : "min",
-          O = null != h ? h : "standard",
+          O = (null != a && R) || null != n || (T && null != c),
+          F = null != m ? m : "min",
+          k = null != h ? h : "standard",
           P = null != p ? p : "standard",
           x = null != g ? g : "standard",
           N = null == v || v,
@@ -18858,7 +18865,7 @@
                 f,
                 tt().Field,
                 _ && tt().Disabled,
-                F && tt().WithFirstRow,
+                O && tt().WithFirstRow,
                 T && tt().WithChildrenInline,
                 B && tt().WithChildrenBelow,
                 "center" == G && tt().VerticalAlignCenter,
@@ -18867,9 +18874,9 @@
                 !!o && tt().WithDescription,
                 "standard" == x && tt().WithBottomSeparatorStandard,
                 "thick" == x && tt().WithBottomSeparatorThick,
-                "fixed" == k && tt().ChildrenWidthFixed,
-                "max" == k && tt().ChildrenWidthGrow,
-                "standard" == O && tt().ExtraPaddingOnChildrenBelow,
+                "fixed" == F && tt().ChildrenWidthFixed,
+                "max" == F && tt().ChildrenWidthGrow,
+                "standard" == k && tt().ExtraPaddingOnChildrenBelow,
                 "standard" == P && tt().StandardPadding,
                 "compact" == P && tt().CompactPadding,
                 A && tt().Clickable,
@@ -18878,7 +18885,7 @@
               style: { "--indent-level": V },
             },
           ),
-          F &&
+          O &&
             i.createElement(
               "div",
               { className: tt().FieldLabelRow },
@@ -18974,7 +18981,7 @@
             padding: u,
             inlineWrap: m,
           },
-          i.createElement(O, Object.assign({}, h, { ref: _ })),
+          i.createElement(k, Object.assign({}, h, { ref: _ })),
         );
       });
       const it = i.forwardRef(function (e, t) {
@@ -19036,7 +19043,7 @@
         lt = n(44673);
       i.forwardRef(function (e, t) {
         return i.createElement(
-          O,
+          k,
           {
             className: (0, l.Z)(st().DropDownControlButton, e.className),
             focusable: e.focusable,
@@ -19080,7 +19087,7 @@
                 autoComplete: "off",
                 ref: l,
                 inlineControls: i.createElement(
-                  O,
+                  k,
                   {
                     className: ct.TogglePasswordVisibilityBtn,
                     onPointerDown: m,
@@ -19751,9 +19758,9 @@
       function Et(e) {
         var t;
         const n = e.notchIndex <= (e.notchCount - 1) * e.sliderValue,
-          r = 2 == e.notchCount && !e.notchTicksVisible,
+          r = e.notchCount <= 3 && !e.notchTicksVisible,
           o = r && 0 == e.notchIndex,
-          s = r && 1 == e.notchIndex;
+          s = r && e.notchIndex == e.notchCount - 1;
         return i.createElement(
           "div",
           { className: (0, l.Z)(ut().SliderNotch, r && ut().AlignToEnds) },
@@ -20011,11 +20018,11 @@
           (e[(e.Up = 3)] = "Up"),
           (e[(e.Down = 4)] = "Down");
       })(Dt || (Dt = {}));
-      var Ft = n(4532),
-        kt = n.n(Ft);
-      const Ot = i.createContext(null);
+      var Ot = n(4532),
+        Ft = n.n(Ot);
+      const kt = i.createContext(null);
       function Pt(e) {
-        const t = i.useContext(Ot),
+        const t = i.useContext(kt),
           { title: n, icon: o, active: a } = e,
           l = (0, r._T)(e, ["title", "icon", "active"]);
         return i.createElement(
@@ -20030,12 +20037,12 @@
             },
             l,
           ),
-          o && i.createElement("div", { className: kt().PageListItem_Icon }, o),
-          i.createElement("div", { className: kt().PageListItem_Title }, n),
+          o && i.createElement("div", { className: Ft().PageListItem_Icon }, o),
+          i.createElement("div", { className: Ft().PageListItem_Title }, n),
         );
       }
       function xt(e) {
-        return i.createElement("div", { className: kt().Separator });
+        return i.createElement("div", { className: Ft().Separator });
       }
       i.forwardRef(function (e, t) {
         const n = i.useRef(),
@@ -20050,12 +20057,12 @@
         }, [e.page, e.bNoInitialLeftColumnFocus]);
         const s = Boolean(e.showTitle);
         return i.createElement(
-          Ot.Provider,
+          kt.Provider,
           { value: n },
           i.createElement(
             qe,
             Object.assign({}, e, {
-              stylesheet: kt(),
+              stylesheet: Ft(),
               showTitle: s,
               renderPageListItem: Pt,
               renderPageListSeparator: xt,
@@ -20070,7 +20077,7 @@
           ? (t = Dt.Up)
           : "down" == e.direction && (t = Dt.Down);
         let n =
-          ((r = kt()),
+          ((r = Ft()),
           (o = t) == Dt.Left
             ? r.Left
             : o == Dt.Right
@@ -20085,7 +20092,7 @@
           Bt,
           {
             childrenKey: e.activePage.identifier,
-            childrenClasses: At(kt(), kt().ContentTransition),
+            childrenClasses: At(Ft(), Ft().ContentTransition),
             directionClass: n,
             animate: t != Dt.None,
           },
@@ -20855,9 +20862,9 @@
       n.d(t, {
         On: () => S,
         Pv: () => R,
-        uH: () => k,
-        RG: () => F,
-        JX: () => O,
+        uH: () => F,
+        RG: () => O,
+        JX: () => k,
         BL: () => a.BL,
         e1: () => g,
         D2: () => b,
@@ -21035,7 +21042,7 @@
         B = n(14826),
         L = n(23801),
         A = n(19304);
-      const F = (0, T.Pi)((e) => {
+      const O = (0, T.Pi)((e) => {
         const { onCancel: t, closeModal: n, bOKDisabled: o, onOK: s } = e,
           a = (0, C.id)();
         (0, L.X)(
@@ -21076,7 +21083,7 @@
           ),
         );
       });
-      let k = class extends r.Component {
+      let F = class extends r.Component {
         Cancel() {
           this.props.onCancel && this.props.onCancel(),
             this.props.closeModal && this.props.closeModal();
@@ -21128,7 +21135,7 @@
                   bUpdateDisabled: this.props.bMiddleDisabled,
                 })),
             r.createElement(
-              F,
+              O,
               Object.assign({}, u),
               r.createElement(
                 i.h4,
@@ -21147,9 +21154,9 @@
           );
         }
       };
-      (0, M.gn)([v.ak], k.prototype, "Cancel", null),
-        (k = (0, M.gn)([T.Pi], k));
-      let O = class extends r.Component {
+      (0, M.gn)([v.ak], F.prototype, "Cancel", null),
+        (F = (0, M.gn)([T.Pi], F));
+      let k = class extends r.Component {
         render() {
           const e = Object.assign(
             {
@@ -21162,10 +21169,10 @@
             },
             this.props,
           );
-          return r.createElement(k, Object.assign({}, e));
+          return r.createElement(F, Object.assign({}, e));
         }
       };
-      O = (0, M.gn)([T.Pi], O);
+      k = (0, M.gn)([T.Pi], k);
     },
     37494: (e, t, n) => {
       "use strict";
@@ -22070,7 +22077,7 @@
         $06: () => ae,
         $gZ: () => f,
         BKy: () => z,
-        BNo: () => Fe,
+        BNo: () => Oe,
         Bh5: () => ye,
         Cdc: () => nt,
         Cts: () => Ne,
@@ -22080,7 +22087,7 @@
         GhU: () => L,
         IF0: () => Ce,
         IWH: () => ie,
-        JrY: () => O,
+        JrY: () => k,
         KJh: () => Ae,
         KKY: () => Je,
         Lao: () => $,
@@ -22090,7 +22097,7 @@
         NP6: () => j,
         P7E: () => w,
         P9w: () => te,
-        Q1v: () => Oe,
+        Q1v: () => ke,
         SK8: () => be,
         SUY: () => S,
         SjW: () => xe,
@@ -22114,7 +22121,7 @@
         dCe: () => rt,
         dLw: () => Re,
         doA: () => Ue,
-        dzL: () => k,
+        dzL: () => F,
         faS: () => P,
         ffh: () => B,
         g0p: () => Ve,
@@ -22122,9 +22129,9 @@
         hoX: () => q,
         j7C: () => Ye,
         k4K: () => E,
-        k6n: () => F,
+        k6n: () => O,
         kL2: () => x,
-        kqV: () => ke,
+        kqV: () => Fe,
         ktE: () => Pe,
         lBf: () => p,
         lsH: () => re,
@@ -22838,7 +22845,7 @@
           }),
         );
       }
-      function F() {
+      function O() {
         return i.createElement(
           "svg",
           {
@@ -22858,7 +22865,7 @@
           }),
         );
       }
-      function k() {
+      function F() {
         return i.createElement(
           "svg",
           {
@@ -22880,7 +22887,7 @@
           }),
         );
       }
-      function O(e) {
+      function k(e) {
         var t;
         return i.createElement(
           "svg",
@@ -24547,7 +24554,7 @@
           }),
         );
       }
-      function Fe(e) {
+      function Oe(e) {
         return i.createElement(
           "svg",
           {
@@ -24584,7 +24591,7 @@
           ),
         );
       }
-      function ke(e) {
+      function Fe(e) {
         const { className: t } = e;
         (0, r._T)(e, ["className"]);
         return i.createElement(
@@ -24605,7 +24612,7 @@
           }),
         );
       }
-      function Oe(e) {
+      function ke(e) {
         const { className: t } = e,
           n = (0, r._T)(e, ["className"]);
         return i.createElement(
@@ -28607,186 +28614,193 @@
                                           Object.assign(
                                             Object.assign(
                                               Object.assign(
+                                                Object.assign(
+                                                  {
+                                                    Home: () => "/",
+                                                    Login: () => "/login",
+                                                    OAuthLogin: () =>
+                                                      "/oauth/loginform",
+                                                    AppStorePage: () =>
+                                                      "/app/:appid(\\d+)/:gamename?",
+                                                    PackageStorePage: () =>
+                                                      "/sub/:subid(\\d+)/:packagename?",
+                                                    BundleStorePage: () =>
+                                                      "/bundle/:bundleid(\\d+)/:bundlename?",
+                                                    SaleLandingPage: () =>
+                                                      "/:prefix(sale|deckverified)/:salePageName",
+                                                    RemotePlay: () =>
+                                                      "/remoteplay_hub/",
+                                                    VRHardware: () =>
+                                                      "/vrhardware/",
+                                                    RemotePlayTogether: () =>
+                                                      "/together/",
+                                                    SteamDeck: () =>
+                                                      "/steamdeck/",
+                                                    SteamDeckDock: () =>
+                                                      "/steamdeckdock/",
+                                                    CreatorSaleLandingPage:
+                                                      () =>
+                                                        "/:prefix(curator|publisher|pub|dev|developer|franchise)/:creatorPageName/sale/:salePageName?",
+                                                    SubscriptionPlanLandingPage:
+                                                      () =>
+                                                        "/subscriptions/:salePageName",
+                                                    CuratorHomePage: () => [
+                                                      "/:prefix(publisher|pub|dev|developer|franchise|subscriptions|curator)/:curatorPageName",
+                                                      "/:prefix(dlc)/:appid(\\d+)/:curatorPageName",
+                                                    ],
+                                                    CuratorListPage: () => [
+                                                      "/:prefix(publisher|pub|dev|developer|franchise|subscriptions|curator)/:curatorPageName/:infix(list)?/:listid(\\d+)?",
+                                                      "/:prefix(dlc)/:appid(\\d+)/:curatorPageName/:infix(list)?/:listid(\\d+)?",
+                                                    ],
+                                                    CuratorAdminPage: () =>
+                                                      "/:prefix(publisher|pub|dev|developer|franchise|subscriptions|curator)/:curatorVanity/admin",
+                                                  },
+                                                  {
+                                                    NewsHub: () =>
+                                                      "/:prefix(news|newshub|events)",
+                                                    NewsHubApp: (e, t) =>
+                                                      `/:prefix(news|newshub|events)/app/${e}/${t}`,
+                                                    NewsHubGroup: (e, t) =>
+                                                      `/:prefix(news|newshub|events)/group/${e}/${t}`,
+                                                    NewsHubCollection: (e, t) =>
+                                                      `/:prefix(news|newshub|events)/collection/${e}/${t}`,
+                                                    NewsHubSale: (e, t) =>
+                                                      `/:prefix(news|newshub|events)/sale/${e}/${t}`,
+                                                    NewsHubContentHub: (
+                                                      e,
+                                                      t,
+                                                      n,
+                                                    ) =>
+                                                      `/:prefix(news|newshub|events)/${e}/${t}/${n}`,
+                                                    EventViewByApp: (e, t, n) =>
+                                                      `/:prefix(news|newshub|events)/app/${e}/:viewtype(view|inline)/${t}/${n}`,
+                                                    EventViewByGroup: (
+                                                      e,
+                                                      t,
+                                                      n,
+                                                    ) =>
+                                                      `/:prefix(news|newshub|events)/group/${e}/:viewtype(view|inline)/${t}/${n}`,
+                                                    OldAnnouncementViewByApp: (
+                                                      e,
+                                                      t,
+                                                      n,
+                                                    ) =>
+                                                      `/:prefix(news|newshub|events)/app/${e}/:viewtype(old_view|old_inline)/${t}/${n}`,
+                                                    OldAnnouncementViewByGroup:
+                                                      (e, t, n) =>
+                                                        `/:prefix(news|newshub|events)/group/${e}/:viewtype(old_view|old_inline)/${t}/${n}`,
+                                                  },
+                                                ),
                                                 {
-                                                  Home: () => "/",
-                                                  Login: () => "/login",
-                                                  OAuthLogin: () =>
-                                                    "/oauth/loginform",
-                                                  AppStorePage: () =>
-                                                    "/app/:appid(\\d+)/:gamename?",
-                                                  PackageStorePage: () =>
-                                                    "/sub/:subid(\\d+)/:packagename?",
-                                                  BundleStorePage: () =>
-                                                    "/bundle/:bundleid(\\d+)/:bundlename?",
-                                                  SaleLandingPage: () =>
-                                                    "/:prefix(sale|deckverified)/:salePageName",
-                                                  RemotePlay: () =>
-                                                    "/remoteplay_hub/",
-                                                  VRHardware: () =>
-                                                    "/vrhardware/",
-                                                  RemotePlayTogether: () =>
-                                                    "/together/",
-                                                  SteamDeck: () =>
-                                                    "/steamdeck/",
-                                                  SteamDeckDock: () =>
-                                                    "/steamdeckdock/",
-                                                  CreatorSaleLandingPage: () =>
-                                                    "/:prefix(curator|publisher|pub|dev|developer|franchise)/:creatorPageName/sale/:salePageName?",
-                                                  SubscriptionPlanLandingPage:
-                                                    () =>
-                                                      "/subscriptions/:salePageName",
-                                                  CuratorHomePage: () => [
-                                                    "/:prefix(publisher|pub|dev|developer|franchise|subscriptions|curator)/:curatorPageName",
-                                                    "/:prefix(dlc)/:appid(\\d+)/:curatorPageName",
-                                                  ],
-                                                  CuratorListPage: () => [
-                                                    "/:prefix(publisher|pub|dev|developer|franchise|subscriptions|curator)/:curatorPageName/:infix(list)?/:listid(\\d+)?",
-                                                    "/:prefix(dlc)/:appid(\\d+)/:curatorPageName/:infix(list)?/:listid(\\d+)?",
-                                                  ],
-                                                  CuratorAdminPage: () =>
-                                                    "/:prefix(publisher|pub|dev|developer|franchise|subscriptions|curator)/:curatorVanity/admin",
-                                                },
-                                                {
-                                                  NewsHub: () =>
-                                                    "/:prefix(news|newshub|events)",
-                                                  NewsHubApp: (e, t) =>
-                                                    `/:prefix(news|newshub|events)/app/${e}/${t}`,
-                                                  NewsHubGroup: (e, t) =>
-                                                    `/:prefix(news|newshub|events)/group/${e}/${t}`,
-                                                  NewsHubCollection: (e, t) =>
-                                                    `/:prefix(news|newshub|events)/collection/${e}/${t}`,
-                                                  NewsHubSale: (e, t) =>
-                                                    `/:prefix(news|newshub|events)/sale/${e}/${t}`,
-                                                  NewsHubContentHub: (
-                                                    e,
-                                                    t,
-                                                    n,
-                                                  ) =>
-                                                    `/:prefix(news|newshub|events)/${e}/${t}/${n}`,
-                                                  EventViewByApp: (e, t, n) =>
-                                                    `/:prefix(news|newshub|events)/app/${e}/:viewtype(view|inline)/${t}/${n}`,
-                                                  EventViewByGroup: (e, t, n) =>
-                                                    `/:prefix(news|newshub|events)/group/${e}/:viewtype(view|inline)/${t}/${n}`,
-                                                  OldAnnouncementViewByApp: (
-                                                    e,
-                                                    t,
-                                                    n,
-                                                  ) =>
-                                                    `/:prefix(news|newshub|events)/app/${e}/:viewtype(old_view|old_inline)/${t}/${n}`,
-                                                  OldAnnouncementViewByGroup: (
-                                                    e,
-                                                    t,
-                                                    n,
-                                                  ) =>
-                                                    `/:prefix(news|newshub|events)/group/${e}/:viewtype(old_view|old_inline)/${t}/${n}`,
+                                                  EventAdmin: () =>
+                                                    "/events_admin",
+                                                  EventModeration: () =>
+                                                    "/events_admin/(moderate)?/:appid(\\d+)?/",
+                                                  EventBackfill: () =>
+                                                    "/events_admin/backfill/",
                                                 },
                                               ),
                                               {
-                                                EventAdmin: () =>
-                                                  "/events_admin",
                                                 EventModeration: () =>
-                                                  "/events_admin/(moderate)?/:appid(\\d+)?/",
+                                                  "/events_admin/:infix(moderate)?/:appid(\\d+)?/",
                                                 EventBackfill: () =>
                                                   "/events_admin/backfill/",
+                                                EventGameFestivalDebug: () =>
+                                                  "/events_admin/gamefestival/:clanacountid(\\d+)/:claneventgid(\\d+)",
+                                                EventRSSModeration: () =>
+                                                  "/events_admin/rss_admin/",
+                                                InteractiveRecommender: () =>
+                                                  "/recommender/:steamid(\\d+)?/",
+                                                LabsSandbox: () =>
+                                                  "/labs/sandbox",
+                                                LabsHome: () => "/labs",
+                                                AccountPreferences: () =>
+                                                  "/account/",
                                               },
                                             ),
-                                            {
-                                              EventModeration: () =>
-                                                "/events_admin/:infix(moderate)?/:appid(\\d+)?/",
-                                              EventBackfill: () =>
-                                                "/events_admin/backfill/",
-                                              EventGameFestivalDebug: () =>
-                                                "/events_admin/gamefestival/:clanacountid(\\d+)/:claneventgid(\\d+)",
-                                              EventRSSModeration: () =>
-                                                "/events_admin/rss_admin/",
-                                              InteractiveRecommender: () =>
-                                                "/recommender/:steamid(\\d+)?/",
-                                              LabsSandbox: () =>
-                                                "/labs/sandbox",
-                                              LabsHome: () => "/labs",
-                                              AccountPreferences: () =>
-                                                "/account/",
-                                              ShoppingCart: () => "/cart/",
-                                            },
+                                            l,
                                           ),
-                                          l,
+                                          {
+                                            Loyalty: () => "/points",
+                                            LoyaltyStore: () => "/points/shop",
+                                            LoyaltyGetPoints: () =>
+                                              "/points/getpoints",
+                                            LoyaltyHowItWorks: () =>
+                                              "/points/howitworks",
+                                            LoyaltyStickers: () =>
+                                              "/points/shop/c/stickers",
+                                            LoyaltyEmoticons: () =>
+                                              "/points/shop/c/emoticons",
+                                            LoyaltyChatEffects: () =>
+                                              "/points/shop/c/chateffects",
+                                            LoyaltyBackgrounds: () =>
+                                              "/points/shop/c/backgrounds",
+                                            LoyaltyProfile: () =>
+                                              "/points/shop/c/profile",
+                                            LoyaltyAvatar: () =>
+                                              "/points/shop/c/avatar",
+                                            LoyaltyByGame: () =>
+                                              "/points/shop/c/games",
+                                            LoyaltyGiveawayRules: () =>
+                                              "/points/giveawayrules",
+                                            LoyaltyEvents: (e) =>
+                                              `/points/shop/event/${e}`,
+                                          },
                                         ),
                                         {
-                                          Loyalty: () => "/points",
-                                          LoyaltyStore: () => "/points/shop",
-                                          LoyaltyGetPoints: () =>
-                                            "/points/getpoints",
-                                          LoyaltyHowItWorks: () =>
-                                            "/points/howitworks",
-                                          LoyaltyStickers: () =>
-                                            "/points/shop/c/stickers",
-                                          LoyaltyEmoticons: () =>
-                                            "/points/shop/c/emoticons",
-                                          LoyaltyChatEffects: () =>
-                                            "/points/shop/c/chateffects",
-                                          LoyaltyBackgrounds: () =>
-                                            "/points/shop/c/backgrounds",
-                                          LoyaltyProfile: () =>
-                                            "/points/shop/c/profile",
-                                          LoyaltyAvatar: () =>
-                                            "/points/shop/c/avatar",
-                                          LoyaltyByGame: () =>
-                                            "/points/shop/c/games",
-                                          LoyaltyGiveawayRules: () =>
-                                            "/points/giveawayrules",
-                                          LoyaltyEvents: (e) =>
-                                            `/points/shop/event/${e}`,
+                                          LoyaltySteamDeck: () =>
+                                            "/points/shop/c/steamdeck",
                                         },
                                       ),
                                       {
-                                        LoyaltySteamDeck: () =>
-                                          "/points/shop/c/steamdeck",
+                                        LoyaltyKeyboard: () =>
+                                          "/points/shop/c/keyboard",
                                       },
                                     ),
                                     {
-                                      LoyaltyKeyboard: () =>
-                                        "/points/shop/c/keyboard",
+                                      LoyaltyStartupMovie: () =>
+                                        "/points/shop/c/startupmovie",
                                     },
                                   ),
-                                  {
-                                    LoyaltyStartupMovie: () =>
-                                      "/points/shop/c/startupmovie",
-                                  },
+                                  i,
                                 ),
-                                i,
+                                s,
                               ),
-                              s,
+                              a,
                             ),
-                            a,
+                            {
+                              LoyaltyProfileBundles: () =>
+                                "/points/shop/c/profilebundles",
+                              LoyaltyArtistProfiles: () =>
+                                "/points/shop/c/artistprofiles",
+                            },
                           ),
-                          {
-                            LoyaltyProfileBundles: () =>
-                              "/points/shop/c/profilebundles",
-                            LoyaltyArtistProfiles: () =>
-                              "/points/shop/c/artistprofiles",
-                          },
+                          o,
                         ),
-                        o,
+                        {
+                          ContentHubHome: () =>
+                            "/:prefix(tags|category|genre|videos|weekly|vr|software|macos|linux|freetoplay|earlyaccess|pccafe|demos|specials|remoteplay_phone|remoteplay_tablet|remoteplay_tv|remoteplay_together|games|adultonly|soundtracks|greatondeck|controller|dlcforyou)",
+                        },
                       ),
-                      {
-                        ContentHubHome: () =>
-                          "/:prefix(tags|category|genre|videos|weekly|vr|software|macos|linux|freetoplay|earlyaccess|pccafe|demos|specials|remoteplay_phone|remoteplay_tablet|remoteplay_tv|remoteplay_together|games|adultonly|soundtracks|greatondeck|controller|dlcforyou)",
-                      },
+                      { Categories: () => "/categories/" },
                     ),
-                    { Categories: () => "/categories/" },
+                    { SummerSale2021Story: () => "/forgeyourfate" },
                   ),
-                  { SummerSale2021Story: () => "/forgeyourfate" },
+                  { MarketingMessages: () => "/marketingmessages/" },
                 ),
-                { MarketingMessages: () => "/marketingmessages/" },
+                {
+                  YearInReview: (e, t) =>
+                    `/:prefix(yearinreview|replay)${e ? "/" + e : "/"}${
+                      t ? "/" + t : ""
+                    }`,
+                },
               ),
-              {
-                YearInReview: (e, t) =>
-                  `/:prefix(yearinreview|replay)${e ? "/" + e : "/"}${
-                    t ? "/" + t : ""
-                  }`,
-              },
+              c,
             ),
-            c,
+            {
+              ShoppingCart: () => "/cart/",
+              ShoppingCartGifts: () => "/cart/gifts/",
+            },
           ),
           { DiagData: () => "/:anything*/diagdata" },
         );
@@ -28998,8 +29012,8 @@
       var B = n(25125),
         L = n(19304),
         A = n(81349);
-      const F = parseInt(D().nTimelineHoverEdgePadding);
-      function k(e) {
+      const O = parseInt(D().nTimelineHoverEdgePadding);
+      function F(e) {
         let { manifest: t, forcePause: n } = e,
           [r, i] = (function (e) {
             let t = o.useRef(new T());
@@ -29025,11 +29039,11 @@
           "div",
           { className: D().TrailerPlayer },
           o.createElement("video", { ref: r }),
-          o.createElement(O, { player: i }),
+          o.createElement(k, { player: i }),
           s && o.createElement(U, { player: i }),
         );
       }
-      function O(e) {
+      function k(e) {
         let { player: t } = e,
           n = o.useCallback(() => {
             t.TogglePlayPause();
@@ -29102,7 +29116,7 @@
                     l = t.current.getBoundingClientRect(),
                     c = r.right - r.left,
                     d = l.right - l.left,
-                    u = w.Lh(i - d / 2, 0 + F, c - d - F);
+                    u = w.Lh(i - d / 2, 0 + O, c - d - O);
                   s({ nTickOffset: i, nHoverOffset: u, nPlaybackSeconds: a });
                 },
                 [e, s],
@@ -29190,7 +29204,7 @@
             e || (t.current = !0);
             return t.current;
           })(r);
-        return i ? o.createElement(k, { manifest: n, forcePause: r }) : null;
+        return i ? o.createElement(F, { manifest: n, forcePause: r }) : null;
       }
       class W {
         constructor() {
@@ -30053,6 +30067,7 @@
                       path: d.Z.YearInReview(),
                       render: (e) => o.createElement(Se, Object.assign({}, e)),
                     }),
+                    !1,
                     !1,
                     !1,
                     o.createElement(p.AW, null, o.createElement(K, null)),

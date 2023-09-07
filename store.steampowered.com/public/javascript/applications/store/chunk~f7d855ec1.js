@@ -2320,8 +2320,7 @@
         }
         SetFileToUpload(e) {
           if (
-            (console.log("SetFileToUpload()"),
-            (this.m_fileUploadProps.file = e),
+            ((this.m_fileUploadProps.file = e),
             (this.m_fileUploadProps.dataURL = null),
             (this.m_fileUploadProps.hmac = null),
             (this.m_fileUploadProps.sha1 = null),
@@ -2388,37 +2387,41 @@
                   this.file_upload_props.additionalProps,
                 );
             try {
-              let e = yield k().post(
-                this.m_Callbacks.GetBeginFileUploadURL(),
-                n,
-                { params: { l: D.De.LANGUAGE } },
+              let e = yield fetch(
+                this.m_Callbacks.GetBeginFileUploadURL() +
+                  `?l=${D.De.LANGUAGE}`,
+                { method: "POST", body: n, credentials: "include" },
               );
+              const t = yield e.json();
               return (
-                (this.m_fileUploadProps.timestamp = e.data.timestamp),
-                (this.m_fileUploadProps.hmac = e.data.hmac),
-                this.DoFileUpload(e.data.result)
+                (this.m_fileUploadProps.timestamp = t.timestamp),
+                (this.m_fileUploadProps.hmac = t.hmac),
+                this.DoFileUpload(t.result)
               );
             } catch (e) {
-              let t = null;
+              const t = null == e ? void 0 : e.response;
+              let n = null;
               throw (
                 ((0, V.z)(() => {
                   if (
                     ((this.m_fileUploadProps.eUploadState = 3),
-                    this.LogFileUploadMessage(e.response),
-                    e.response)
+                    this.LogFileUploadMessage(t),
+                    t)
                   ) {
-                    let n = e.response.data;
-                    e.response.status, n && n.success;
-                    t = n.message
-                      ? n.message
+                    let e = t.data;
+                    t.status, e && e.success;
+                    n = (null == e ? void 0 : e.message)
+                      ? null == e
+                        ? void 0
+                        : e.message
                       : (0, b.Xx)("#Chat_Settings_Error_ServerError");
-                  } else t = (0, b.Xx)("#ConnectionTrouble_FailedToConnect");
+                  } else n = (0, b.Xx)("#ConnectionTrouble_FailedToConnect");
                   this.m_fileUploadProps.strErrorDescription = (0, b.Xx)(
                     "#Chat_Upload_ErrorStart",
-                    t,
+                    n,
                   );
                 }),
-                t)
+                n)
               );
             }
           });
@@ -2493,10 +2496,10 @@
                 this.file_upload_props.additionalProps,
               );
             try {
-              let t = yield k().post(
-                this.m_Callbacks.GetCommitFileUploadURL(),
-                i,
-              );
+              let t = yield fetch(this.m_Callbacks.GetCommitFileUploadURL(), {
+                method: "POST",
+                body: i,
+              });
               return (
                 e
                   ? ((this.m_fileUploadProps.uploadProgress = 0),
@@ -5281,6 +5284,7 @@
                   onOK: this.props.closeModal,
                   onCancel: this.props.closeModal,
                   bAlertDialog: !0,
+                  className: "ModernBBStyles",
                 },
                 s.createElement("div", {
                   dangerouslySetInnerHTML: this.state.formattingHelp,

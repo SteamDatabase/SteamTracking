@@ -2070,9 +2070,8 @@
         (function (e) {
           (e[(e.Minimal = 1)] = "Minimal"),
             (e[(e.Modal = 2)] = "Modal"),
-            (e[(e.Rich = 4)] = "Rich"),
-            (e[(e.ShowArrowKeys = 8)] = "ShowArrowKeys"),
-            (e[(e.ShowDoneKey = 16)] = "ShowDoneKey");
+            (e[(e.ShowArrowKeys = 4)] = "ShowArrowKeys"),
+            (e[(e.HideDoneKey = 8)] = "HideDoneKey");
         })(o || (o = {})),
         (function (e) {
           (e[(e.Unknown = -1)] = "Unknown"),
@@ -11660,8 +11659,10 @@
         OnHMDActivityLevelChanged(e) {
           this.m_eHMDActivityLevel = e;
         }
-        OnKeyboardStatus(e, t) {
-          this.m_eKeyboardFlags = t;
+        OnKeyboardStatus(e, t, n) {
+          (this.m_bIsKeyboardOpen = e),
+            (this.m_eKeyboardFlags = t),
+            (this.m_sInitialKeyboardText = n);
         }
         get IsVRHMDPresent() {
           return this.m_bHMDPresent || this.m_bHMDHardwareDetected;
@@ -11673,10 +11674,14 @@
           return this.m_eHMDActivityLevel == s.VR.$6.UserInteraction;
         }
         get VRKeyboardStatus() {
+          const e = 0 != (this.m_eKeyboardFlags & s.VR.vS.Minimal);
           return {
+            bIsOpen: this.m_bIsKeyboardOpen,
+            sInitialText: this.m_sInitialKeyboardText,
+            bMinimal: e,
             bShowArrowKeys:
-              0 != (this.m_eKeyboardFlags & s.VR.vS.ShowArrowKeys),
-            bShowDoneKey: 0 != (this.m_eKeyboardFlags & s.VR.vS.ShowDoneKey),
+              !e || 0 != (this.m_eKeyboardFlags & s.VR.vS.ShowArrowKeys),
+            bShowDoneKey: 0 == (this.m_eKeyboardFlags & s.VR.vS.HideDoneKey),
           };
         }
         get VRHMDActivityLevel() {
@@ -11765,7 +11770,9 @@
         (0, r.gn)([o.LO], l.prototype, "m_bIsVRRunning", void 0),
         (0, r.gn)([o.LO], l.prototype, "m_error", void 0),
         (0, r.gn)([o.LO], l.prototype, "m_eHMDActivityLevel", void 0),
+        (0, r.gn)([o.LO], l.prototype, "m_bIsKeyboardOpen", void 0),
         (0, r.gn)([o.LO], l.prototype, "m_eKeyboardFlags", void 0),
+        (0, r.gn)([o.LO], l.prototype, "m_sInitialKeyboardText", void 0),
         (0, r.gn)([o.aD.bound], l.prototype, "OnVRHardwareDetected", null),
         (0, r.gn)([o.aD.bound], l.prototype, "OnVRModeChanged", null),
         (0, r.gn)([o.aD.bound], l.prototype, "OnStartupError", null),
@@ -16698,9 +16705,9 @@
       function It(e) {
         var t;
         const n = e.notchIndex <= (e.notchCount - 1) * e.sliderValue,
-          r = 2 == e.notchCount && !e.notchTicksVisible,
+          r = e.notchCount <= 3 && !e.notchTicksVisible,
           o = r && 0 == e.notchIndex,
-          s = r && 1 == e.notchIndex;
+          s = r && e.notchIndex == e.notchCount - 1;
         return i.createElement(
           "div",
           { className: (0, l.Z)(dt().SliderNotch, r && dt().AlignToEnds) },

@@ -1336,6 +1336,11 @@
                   ids: { n: 3, c: T.oY, r: !0, q: !0 },
                   options: { n: 4, c: D },
                   debug: { n: 5, br: k.FE.readBool, bw: k.Xc.writeBool },
+                  include_owned_games: {
+                    n: 6,
+                    br: k.FE.readBool,
+                    bw: k.Xc.writeBool,
+                  },
                 },
               }),
             G.sm_m

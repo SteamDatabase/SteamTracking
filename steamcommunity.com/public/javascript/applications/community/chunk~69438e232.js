@@ -1361,6 +1361,7 @@
                   onOK: this.props.closeModal,
                   onCancel: this.props.closeModal,
                   bAlertDialog: !0,
+                  className: "ModernBBStyles",
                 },
                 l.createElement("div", {
                   dangerouslySetInnerHTML: this.state.formattingHelp,

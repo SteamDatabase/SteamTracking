@@ -3348,7 +3348,7 @@ div .cdkey_request_details_row
 	padding: 8px 6px 8px 6px;
 }
 
-.close_email_reminder {
+.close_address_reminder {
 	background-image: url( 'https://partner.steamgames.com/public/images/home/icon-close.svg' );
 	background-repeat: no-repeat;
 	width: 20px;
@@ -3357,7 +3357,7 @@ div .cdkey_request_details_row
 	display: block;
 }
 
-.close_email_reminder:hover {
+.close_address_reminder:hover {
 	background-image: url( 'https://partner.steamgames.com/public/images/home/icon-close--black.svg' );
 }
 

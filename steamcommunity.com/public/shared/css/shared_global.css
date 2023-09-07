@@ -2316,6 +2316,35 @@ div.bb_h3, .bb_wysiwyg h3 {
 	clear:both;
 }
 
+.ModernBBStyles .DialogBodyText .tagexample {
+    color: #cfd2d3;
+    font-size: 14px;
+}
+
+.ModernBBStyles div.bb_h1 {
+    font-size: 32px;
+    line-height: 33px;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.ModernBBStyles div.bb_h2 {
+    font-size: 26px;
+    line-height: 29px;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+.ModernBBStyles div.bb_h3 {
+    font-size: 19px;
+    line-height: 22px;
+    font-weight: 300;
+    color: #ffffff;
+}
+.ModernBBStyles a.bb_link {
+    color: #80bcd2;
+}
+
 
 span.bb_strike {
 	text-decoration: line-through;

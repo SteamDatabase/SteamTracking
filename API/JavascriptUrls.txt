@@ -818,14 +818,14 @@ ${IMG_URL}valve_logo.png
 ${IMG_URL}webui/storeadmin/plus.png
 ${IMG_URL}x_close.png
 ${IMG_URL}x_red.png
-${IMG_URL}yearinreview/2022/achievement_grid_02.webp
-${IMG_URL}yearinreview/2022/bg_2.png
-${IMG_URL}yearinreview/2022/controllers.png
-${IMG_URL}yearinreview/2022/keyboard.png
-${IMG_URL}yearinreview/2022/screenshot_placeholder.png
-${IMG_URL}yearinreview/2022/steamControllerGrid_02.png
-${IMG_URL}yearinreview/2022/streak_bg.jpg
-${IMG_URL}yearinreview/2022/vr_background6.webp
+${IMG_URL}yearinreview/${}/achievement_grid_02.webp
+${IMG_URL}yearinreview/${}/bg_2.png
+${IMG_URL}yearinreview/${}/controllers.png
+${IMG_URL}yearinreview/${}/keyboard.png
+${IMG_URL}yearinreview/${}/screenshot_placeholder.png
+${IMG_URL}yearinreview/${}/steamControllerGrid_02.png
+${IMG_URL}yearinreview/${}/streak_bg.jpg
+${IMG_URL}yearinreview/${}/vr_background6.webp
 ${INTERNAL_STATS_BASE_URL}sales/details/?gid=${}&clanid=${}&dateStart=${}-${}1-${}&dateEnd=${}-${}1-${}
 ${IN_CLIENT ? "steam://openurl_external/" : ""}${STORE_BASE_URL}appofficialsite/${appid}
 ${IN_CLIENT ? "steam://openurl_external/" : ""}${STORE_BASE_URL}forum/${appid}
@@ -3274,7 +3274,7 @@ url( ${IMG_URL}springcleaning22/keyart.jpg )
 url( ${IMG_URL}springcleaning22/list.jpg )
 url( ${IMG_URL}units/${name}.png )
 url( '${thumb_url}' )
-url(${IMG_URL}yearinreview/2022/steamDeckBackground.jpg)
+url(${IMG_URL}yearinreview/${}/steamDeckBackground.jpg)
 url(${avatar_full_url})
 url(${dataUrl})
 url(${preview_url})
