@@ -1620,7 +1620,7 @@ HelpWizard = {
 
 		$J.ajax({
 			type: "POST",
-			url: "https://store.steampowered.com/checkout/submitproofofpurchase",
+			url: "https://checkout.steampowered.com/checkout/submitproofofpurchase",
 			crossDomain:  true,
 			dataType: "json",
 			data: {
