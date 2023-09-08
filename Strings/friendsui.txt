@@ -4,6 +4,8 @@ __TEXT
 %
 __text
 __TEXT
+@q
+@q
 __stubs
 __TEXT
 __stub_helper
@@ -11,8 +13,8 @@ __TEXT
 __cstring
 __TEXT
 __gcc_except_tab__TEXT
-l0!
-l0!
+L0!
+L0!
 __const
 __TEXT
 __objc_methname
@@ -5299,21 +5301,20 @@ k_EChatInstanceFlagClan & steamIDChat.GetUnAccountInstance()
 0
 0
 -
--
--
-x$
 $
 ?
 @
 ?
 ?
+$
 x
 
+2#
 "
 @
 "
+*
 x
-N!
 p
 0
 p
@@ -5325,6 +5326,7 @@ p
 p
 0
 p
+0
 0
 p
 0
@@ -5380,8 +5382,6 @@ V
 !
 @
 &
-I!
-?!
 @
 M9e
 @
@@ -5457,7 +5457,9 @@ B
 @
 d
 
+~
 A+M
+
 j
 j
 j
@@ -5502,6 +5504,7 @@ d
 &
 &
 d
+
 0
 A+4$A+u
 =

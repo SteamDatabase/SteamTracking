@@ -203,7 +203,7 @@
         },
         {
             "name": "SetItemTags",
-            "argc": "4"
+            "argc": "5"
         },
         {
             "name": "SetItemContent",

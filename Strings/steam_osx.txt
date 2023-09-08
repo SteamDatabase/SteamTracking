@@ -8,13 +8,11 @@ __TEXT
 0
 __stubs
 __TEXT
-BI4
-BI4
 __stub_helper
 __TEXT
-$R4
-$R4
 __gcc_except_tab__TEXT
+p`4
+p`4
 __const
 __TEXT
 __objc_methname
@@ -122,6 +120,10 @@ h
 @kC
 X=
 )
+f*
+4
+4
+4
 yB
 0
 G
@@ -129,8 +131,8 @@ G
 G
 *
 9
-*
 0
+*
 G
 @
 @
@@ -143,28 +145,37 @@ g(
 s
 $
 9
+9
+9
 Hi
 Hi
 Hi
 WF
 (
-"3
+)
++3
+()
 3
-8)
-)
-)
 )
 
 %
-_8
+)
+)
 ;
+8
+8
 
+2
 0
 5
 (
-(
-(
+-
 6'
+(
+(
+(
+(
+(
 g?
 <
 
@@ -180,11 +191,11 @@ AT=
 D
 @
 @
-@1
 7
 7
 7
 7
+1
 @;
 @
 Hc
@@ -217,14 +228,12 @@ IcE
 IcE
 @
 @
-9
-6
-6
-6
 6
 6
 6
 0
+0
+-1
 NSt3__117bad_function_callE
 15CBaseFileSystem
 11IFileSystem
@@ -2384,7 +2393,7 @@ TempAppCmdLine
 m_nPipeData >= 0
 ReLaunchCmdLine
 ClientLauncherType
-Startup - updater built Sep  6 2023 16:26:45
+Startup - updater built Sep  7 2023 14:37:28
 Startup - Steam Client launched with: %s
 Shutdown
 no hosts found
@@ -2675,8 +2684,8 @@ m_iRefs >= 0 && m_iRefs < 0x0ffffff
 #SteamBootstrapper_UpdatingSteam
 Updating Steam...
 Tahoma
-Sep  6 2023
-16:26:46
+Sep  7 2023
+14:37:29
 crashhandler004
 steam
 Steam Executable Crash
@@ -2773,7 +2782,7 @@ China
 %s/%s%s
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamexe/updateui.h
 ThreadInMainThread()
-16:26:44
+14:37:27
 [%3d%%] %s
 [----] %s
 [%3d%%] !!! Fatal Error: %s
@@ -10686,14 +10695,13 @@ pNode && pNode->Next == QueueEnd()
 m_queueItemsPending
 m_vecRegisteredWriters
 static_cast<Node_t*>(pNode)->elem
-m_queueItemsPending.Count() == 0
-m_vecRegisteredWriters.Count() == 0
 CFileWriterThread already exited
 %s.async%u.tmp
 Invalid FileWriterItem_t
 m_buffer
 m_strFileName
 CUtlBuffer
+m_queueItemsPending.Count() == 0
 m_unInCounter == m_unOutCounter
 pFile
 cubData < FIO_MAX_IO_BYTES
@@ -10898,7 +10906,7 @@ steamwebhelper
 Steam Helper
 cefwebhelper
 1.0
-16:24:32
+14:35:05
 Jan
 Feb
 Mar
@@ -13340,8 +13348,18 @@ out of memory
 n <= (size_t)INT_MAX
 file_ofs == pFile->GetBytesWritten()
 
+Z(:
+.(:
+E(:
 
+P(:
+d(:
+m(:
 0
+f*
+4
+4
+4
 yB
 0
 G
@@ -13349,8 +13367,8 @@ G
 G
 *
 9
-*
 0
+*
 G
 @
 @
@@ -13363,28 +13381,37 @@ g(
 s
 $
 9
+9
+9
 Hi
 Hi
 Hi
 WF
 (
-"3
+)
++3
+()
 3
-8)
-)
-)
 )
 
 %
-_8
+)
+)
 ;
+8
+8
 
+2
 0
 5
 (
-(
-(
+-
 6'
+(
+(
+(
+(
+(
 g?
 <
 
@@ -13400,11 +13427,11 @@ AT=
 D
 @
 @
-@1
 7
 7
 7
 7
+1
 @;
 @
 Hc
@@ -13437,65 +13464,67 @@ IcE
 IcE
 @
 @
-9
-6
-6
-6
 6
 6
 6
 0
+0
+-1
 V
-j/
+f/
+:/
 =
+/
 /
 /
 5
 o9
 =
-.
-.
-.
+@.
 .
 .
 c8
-t-
 `-
+$-
 -
-3
-3
+-
+-
+-
 3
 3
 !
 @
 ,
-,
-,
-,
+$
 @
 &
+;+
 1
-+
+1
+,
+*
+>0
 0
 0
 \4
-8)
-2
-@/
-i/
+w)
 )
 )
 )
-(/
-*
 *
 *
 @
+Z(
 M9e
 @
 @
 (
 (
+(
+M.
+2.
+1.
+0.
 ?
 ?
 ?
@@ -13531,11 +13560,12 @@ j
 Pj
 ARj
 j
+>,
+;,
 0
 0
 IcU
 E;e
-s%
 M)u
 =
 =
@@ -13834,8 +13864,6 @@ OO
 expand 32-byte k
 ChaCha20 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
-+
-#
 #
 #
 =
@@ -13855,6 +13883,8 @@ j
 j
 
 t$I;M
+z&
+u&
 e
 W
 ,7~5d
@@ -13865,9 +13895,7 @@ W
 #M$/
 #-!/
 "
-"
 H
-o!
 0
 
 
@@ -14151,7 +14179,6 @@ H=
 =*.*
 @
 @
-E
 0
 {
 @
@@ -14208,17 +14235,14 @@ j
 
 
 Hc
+u
 
 0
 0
 @
 @
-c
-[
 &
-'
 %
-
 
 @
 c
@@ -14227,6 +14251,7 @@ P
 P
 @
 @
+A
 @
 @
 ?

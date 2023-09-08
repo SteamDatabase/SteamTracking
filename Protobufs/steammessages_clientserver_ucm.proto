@@ -106,6 +106,7 @@ message CMsgClientUCMUpdatePublishedFile {
 	optional bool remove_all_kvtags = 28;
 	repeated int32 content_descriptors_to_add = 29;
 	repeated int32 content_descriptors_to_remove = 30;
+	optional bool allow_admin_tags = 31 [default = false];
 }
 
 message CMsgClientUCMUpdatePublishedFileResponse {

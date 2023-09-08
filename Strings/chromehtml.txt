@@ -2,8 +2,8 @@ __TEXT
 
 __text
 __TEXT
-`}
-`}
+@}
+@}
 __stubs
 __TEXT
 __stub_helper
@@ -21,7 +21,7 @@ __TEXT
 __gcc_except_tab__TEXT
 __unwind_info
 __TEXT
-Lf
+@f
 __DATA
 __nl_symbol_ptr
 __DATA
@@ -2417,18 +2417,20 @@ id
 @
 @
 
+
 @
 Ic
-|
->
-1
-U
+A
+l
+
+<
+g
+N
+
 
 
 0
-
 0
-
 Hi
 `
 0
@@ -2441,6 +2443,10 @@ AT=
 D
 @
 @
+
+
+
+
 @
 Hc
 Hc
@@ -2493,11 +2499,13 @@ M9e
 ?
 ?
 ?
+P
 :
 ?
 ?
 ?
 
+9
 @
 @
 @
