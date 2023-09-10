@@ -61952,6 +61952,62 @@ div.LowPerfMode
   height: 23px;
   cursor: pointer;
 }
+@keyframes colorsettings_ItemFocusAnim-darkerGrey-nocolor_3j0Gn {
+  from {
+    background: #3d4450;
+  }
+  to {
+    background: #23262e;
+  }
+}
+@keyframes colorsettings_ItemFocusAnim-darkerGrey_2FvRA {
+  from {
+    background: #3d4450;
+    color: #8b929a;
+  }
+  to {
+    background: #23262e;
+    color: #fff;
+  }
+}
+@keyframes colorsettings_ItemFocusAnim-darkGrey_m7dwY {
+  from {
+    background: #67707b;
+    color: #8b929a;
+  }
+  to {
+    background: #3d4450;
+    color: #fff;
+  }
+}
+@keyframes colorsettings_ItemFocusAnim-grey_Smeqx {
+  from {
+    background: #8b929a;
+    color: #fff;
+  }
+  to {
+    background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes colorsettings_ItemFocusAnimBorder-darkGrey_1LsUR {
+  from {
+    border-color: #67707b;
+  }
+  to {
+    border-color: #3d4450;
+  }
+}
+@keyframes colorsettings_ItemFocusAnim-green_1M5rO {
+  from {
+    background: #c9ffc9;
+    color: #8b929a;
+  }
+  to {
+    background: #59bf40;
+    color: #fff;
+  }
+}
 :root {
   --image-url: none;
 }
@@ -61976,8 +62032,6 @@ div.LowPerfMode
   display: flex;
   flex-direction: row;
   background: #0e141b;
-  gap: 20px;
-  padding: 20px 20px 10px 20px;
   justify-content: center;
   box-shadow: 0px -2px 10px 0px rgba(0, 0, 0, 0.3);
   --field-negative-horizontal-margin: 0;
@@ -61997,6 +62051,16 @@ div.LowPerfMode
   min-width: 0;
   max-width: 400px;
   width: 0;
+  padding: 20px;
+  padding-bottom: calc(20px - 10px);
+}
+.colorsettings_FloatingControls_3nhqv
+  .colorsettings_Section_1BFoQ:not(:first-child) {
+  padding-right: 10px;
+}
+.colorsettings_FloatingControls_3nhqv
+  .colorsettings_Section_1BFoQ:not(:last-child) {
+  padding-left: 10px;
 }
 .colorsettings_FloatingControls_3nhqv
   .colorsettings_Section_1BFoQ.colorsettings_Buttons_2XUCe {
@@ -62005,6 +62069,20 @@ div.LowPerfMode
   flex-shrink: 1;
   flex-grow: 0;
   gap: 20px;
+}
+.colorsettings_FloatingControls_3nhqv
+  .colorsettings_Section_1BFoQ.gpfocuswithin {
+  transition-property: transform, background-color;
+  transition-duration: 0.32s, 0s;
+  transition-timing-function: cubic-bezier(0.17, 0.45, 0.14, 0.83);
+  transform-origin: 12% 50%;
+  animation-timing-function: cubic-bezier(0.17, 0.45, 0.14, 0.83);
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  transform: scale(1) rotateX(0deg);
+  animation-name: colorsettings_ItemFocusAnim-darkerGrey_2FvRA;
+  z-index: 1;
+  animation-name: colorsettings_ItemFocusAnim-darkGrey_m7dwY;
 }
 .colorsettings_Label_2eZY9 {
   font-size: 16px;

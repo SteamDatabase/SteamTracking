@@ -2112,6 +2112,7 @@ https://checkout.steampowered.com/checkout/inittransaction/
 https://checkout.steampowered.com/checkout/qiwiinvoice/
 https://checkout.steampowered.com/checkout/sendgiftsubmit/
 https://checkout.steampowered.com/checkout/ssapopup
+https://checkout.steampowered.com/checkout/submitproofofpurchase
 https://checkout.steampowered.com/checkout/transactionstatus/
 https://checkout.steampowered.com/checkout/unsendgiftsubmit/
 https://checkout.steampowered.com/checkout/updatebillingaddress/
@@ -2778,7 +2779,6 @@ https://store.steampowered.com/checkout/?purchasetype=updatebillinginfo&agreemen
 https://store.steampowered.com/checkout/cvv2explain/?webbasedpurchasing=1&type=${type}
 https://store.steampowered.com/checkout/emailvalidationstatus
 https://store.steampowered.com/checkout/ssapopup
-https://store.steampowered.com/checkout/submitproofofpurchase
 https://store.steampowered.com/checkout/updateemail
 https://store.steampowered.com/communityrecommendations/ajaxgetrecentreviews
 https://store.steampowered.com/communityrecommendations/ajaxsavetrendingreviewspreferences/
