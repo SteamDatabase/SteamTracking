@@ -1,8 +1,6 @@
 __TEXT
 __text
 __TEXT
-0i
-0i
 __stubs
 __TEXT
 __stub_helper
@@ -865,7 +863,6 @@ m_queueItemsPending
 m_vecRegisteredWriters
 static_cast<Node_t*>(pNode)->elem
 m_Memory
-CFileWriterThread already exited
 %s.async%u.tmp
 Invalid FileWriterItem_t
 m_buffer
@@ -1322,6 +1319,7 @@ Ic
 =
 @
 =*.*
+T
 @
 @
 0

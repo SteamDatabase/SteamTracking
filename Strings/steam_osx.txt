@@ -8,11 +8,13 @@ __TEXT
 0
 __stubs
 __TEXT
+bH4
+bH4
 __stub_helper
 __TEXT
+DQ4
+DQ4
 __gcc_except_tab__TEXT
-p`4
-p`4
 __const
 __TEXT
 __objc_methname
@@ -120,7 +122,6 @@ h
 @kC
 X=
 )
-f*
 4
 4
 4
@@ -129,15 +130,15 @@ yB
 G
 G
 G
-*
+9*
 9
 0
-*
 G
 @
 @
 v(
 g(
+f*
 @
 @
 @
@@ -152,22 +153,23 @@ Hi
 Hi
 WF
 (
-)
-+3
-()
-3
+"3
 )
 
 %
 )
 )
+^8
 ;
+(
 8
 8
 
 2
+2
 0
 5
+(
 (
 -
 6'
@@ -191,10 +193,6 @@ AT=
 D
 @
 @
-7
-7
-7
-7
 1
 @;
 @
@@ -228,12 +226,7 @@ IcE
 IcE
 @
 @
-6
-6
-6
 0
-0
--1
 NSt3__117bad_function_callE
 15CBaseFileSystem
 11IFileSystem
@@ -2393,7 +2386,7 @@ TempAppCmdLine
 m_nPipeData >= 0
 ReLaunchCmdLine
 ClientLauncherType
-Startup - updater built Sep 10 2023 22:58:09
+Startup - updater built Sep 11 2023 13:49:25
 Startup - Steam Client launched with: %s
 Shutdown
 no hosts found
@@ -2684,8 +2677,8 @@ m_iRefs >= 0 && m_iRefs < 0x0ffffff
 #SteamBootstrapper_UpdatingSteam
 Updating Steam...
 Tahoma
-Sep 10 2023
-22:58:09
+Sep 11 2023
+13:49:26
 crashhandler004
 steam
 Steam Executable Crash
@@ -2782,7 +2775,7 @@ China
 %s/%s%s
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamexe/updateui.h
 ThreadInMainThread()
-22:58:07
+13:49:24
 [%3d%%] %s
 [----] %s
 [%3d%%] !!! Fatal Error: %s
@@ -10695,7 +10688,6 @@ pNode && pNode->Next == QueueEnd()
 m_queueItemsPending
 m_vecRegisteredWriters
 static_cast<Node_t*>(pNode)->elem
-CFileWriterThread already exited
 %s.async%u.tmp
 Invalid FileWriterItem_t
 m_buffer
@@ -10906,7 +10898,7 @@ steamwebhelper
 Steam Helper
 cefwebhelper
 1.0
-22:55:56
+13:47:22
 Jan
 Feb
 Mar
@@ -13348,15 +13340,9 @@ out of memory
 n <= (size_t)INT_MAX
 file_ofs == pFile->GetBytesWritten()
 
-Z(:
-.(:
-E(:
 
-P(:
-d(:
-m(:
 0
-f*
+FK=
 4
 4
 4
@@ -13365,15 +13351,15 @@ yB
 G
 G
 G
-*
+9*
 9
 0
-*
 G
 @
 @
 v(
 g(
+f*
 @
 @
 @
@@ -13388,22 +13374,23 @@ Hi
 Hi
 WF
 (
-)
-+3
-()
-3
+"3
 )
 
 %
 )
 )
+^8
 ;
+(
 8
 8
 
 2
+2
 0
 5
+(
 (
 -
 6'
@@ -13427,10 +13414,6 @@ AT=
 D
 @
 @
-7
-7
-7
-7
 1
 @;
 @
@@ -13464,67 +13447,58 @@ IcE
 IcE
 @
 @
-6
-6
-6
 0
-0
--1
 V
-f/
-:/
+o/
 =
 /
 /
 /
-5
+/
+/
 o9
 =
-@.
+5.
+.
 .
 .
 c8
-`-
-$-
+6
+\-
 -
 -
 -
 -
-3
+-
+-
 3
 !
 @
+{$
 ,
+$
 $
 @
 &
-;+
-1
 1
 ,
 *
->0
+*
 0
 0
 \4
-w)
++
+?/
+h/
 )
-)
-)
-*
-*
+'/
+%1
 @
-Z(
 M9e
 @
 @
 (
 (
-(
-M.
-2.
-1.
-0.
 ?
 ?
 ?
@@ -13548,7 +13522,6 @@ AESNI-CBC+SHA256 stitch for x86_64, CRYPTOGAMS by <appro@openssl.org>
 AES for Intel AES-NI, CRYPTOGAMS by <appro@openssl.org>
 @
 -
--
 %
 1
 1
@@ -13560,8 +13533,7 @@ j
 Pj
 ARj
 j
->,
-;,
+&
 0
 0
 IcU
@@ -13864,8 +13836,6 @@ OO
 expand 32-byte k
 ChaCha20 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
-#
-#
 =
 @
 
@@ -13879,12 +13849,13 @@ j
 j
 j
 j
+"
 j
 j
 
 t$I;M
-z&
-u&
+"
+"
 e
 W
 ,7~5d
@@ -13894,8 +13865,8 @@ W
 #-1/
 #M$/
 #-!/
-"
 H
+n!
 0
 
 
@@ -14090,7 +14061,6 @@ H=
 =
 @
 @
-
 =
 |O=
 
@@ -14241,6 +14211,8 @@ u
 0
 @
 @
+@
+<
 &
 %
 
@@ -14251,7 +14223,6 @@ P
 P
 @
 @
-A
 @
 @
 ?

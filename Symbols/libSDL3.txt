@@ -217,10 +217,12 @@
  KBGetLayoutType
  LMGetKbdType
  LSOpenCFURLRef
+ MTLCreateSystemDefaultDevice
  NSApp
  NSAppKitVersionNumber
  NSApplicationDidBecomeActiveNotification
  NSBackingPropertyOldScaleFactorKey
+ NSClassFromString
  NSCurrentLocaleDidChangeNotification
  NSDefaultRunLoopMode
  NSDeviceRGBColorSpace
@@ -249,6 +251,12 @@
  NSWindowWillExitFullScreenNotification
  NSZeroPoint
  NSZeroRect
+ OBJC_CLASS_$_CAMetalLayer
+ OBJC_CLASS_$_MTLRenderPassDescriptor
+ OBJC_CLASS_$_MTLRenderPipelineDescriptor
+ OBJC_CLASS_$_MTLSamplerDescriptor
+ OBJC_CLASS_$_MTLTextureDescriptor
+ OBJC_CLASS_$_MTLVertexDescriptor
  OBJC_CLASS_$_NSAlert
  OBJC_CLASS_$_NSAppleEventManager
  OBJC_CLASS_$_NSApplication
@@ -1189,6 +1197,8 @@
  cos
  cosf
  dispatch_async
+ dispatch_data_create
+ dispatch_get_global_queue
  dispatch_once_f
  dispatch_sync
  dlclose
