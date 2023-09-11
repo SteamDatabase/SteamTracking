@@ -33788,7 +33788,8 @@
             : "";
         }
         SetLocalizedOptInBanner(e, t) {
-          this.m_model.localized_optin_banner ||
+          (this.m_model.localized_optin_banner &&
+            !Array.isArray(this.m_model.localized_optin_banner)) ||
             (this.m_model.localized_optin_banner = {});
           const n = (0, w.j_)(e);
           this.m_model.localized_optin_banner[n] != t &&
