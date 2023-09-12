@@ -611,6 +611,12 @@ body.v6.rewards .ModalPosition_Content {
   color: #fff;
   background-position: 0 0;
 }
+.styles_EventPageHeaderImg_144Kf {
+  max-width: 60vw;
+}
+.BasicUI .styles_EventPageHeaderImg_144Kf {
+  max-width: 35vw;
+}
 .layout_InlineContainer_3nHer {
   display: flex;
   justify-content: flex-start;

@@ -1451,6 +1451,7 @@
         BlueButton: "styles_BlueButton_9H0RW",
         BlueButtonSmall: "styles_BlueButtonSmall_3U87j",
         PageHomeHowItWorks: "styles_PageHomeHowItWorks_2bWxo",
+        EventPageHeaderImg: "styles_EventPageHeaderImg_144Kf",
       };
     },
     66294: (e, t, r) => {
@@ -1819,7 +1820,7 @@
         Vb: () => B,
         QU: () => W,
         gl: () => x,
-        kj: () => L,
+        kj: () => P,
         UA: () => A,
       });
       var n = r(33940),
@@ -3233,9 +3234,9 @@
         }
         GetPageDescriptor(e) {
           return (
-            this.m_mapPages.has(P(e)) ||
-              this.m_mapPages.set(P(e), this.BuildPage(e)),
-            this.m_mapPages.get(P(e))
+            this.m_mapPages.has(L(e)) ||
+              this.m_mapPages.set(L(e), this.BuildPage(e)),
+            this.m_mapPages.get(L(e))
           );
         }
         BuildPage(e) {
@@ -3301,7 +3302,7 @@
                 },
               };
             },
-            n = (e) => this.m_mapPages.set(P(e.params), e),
+            n = (e) => this.m_mapPages.set(L(e.params), e),
             i = e(
               (0, s.Xx)(
                 "#RewardCluster_Popular_Title",
@@ -3495,7 +3496,7 @@
               (0, s.Xx)("#RewardCluster_Backgrounds_Subtitle"),
               { itemclass: [3], queryFilter: [1] },
             ),
-            L = e(
+            P = e(
               (0, s.Xx)("#RewardCluster_AnimatedMiniProfileBackgrounds_Title"),
               (0, s.Xx)("#RewardCluster_MiniProfileBackgrounds_Subtitle"),
               { itemclass: [13], queryFilter: [1] },
@@ -3515,7 +3516,7 @@
               "backgrounds",
               [
                 { cluster: D, type: 1 },
-                { cluster: L, type: 1 },
+                { cluster: P, type: 1 },
                 { cluster: T, type: 1 },
                 { cluster: R, type: 1 },
               ],
@@ -3645,13 +3646,13 @@
                     break;
                 }
                 this.m_mapPages.set(
-                  P({ type: "custom", pageid: A }),
+                  L({ type: "custom", pageid: A }),
                   new z(A, v),
                 );
               });
         }
       }
-      function L(e) {
+      function P(e) {
         const t = E.Z.LoyaltyStore();
         switch (e.type) {
           case "app":
@@ -3672,7 +3673,7 @@
             return console.error(`Unknown page type ${e.type}`), t;
         }
       }
-      function P(e) {
+      function L(e) {
         return btoa(JSON.stringify(e));
       }
       function T(e, t) {
@@ -3810,7 +3811,7 @@
               view: {
                 type: 0,
                 cluster: {
-                  id: P({ eventname: this.m_strEventName, type: "event" }),
+                  id: L({ eventname: this.m_strEventName, type: "event" }),
                   title: "",
                   subtitle: "",
                   GetRewards: (e, t, r) =>
@@ -4511,9 +4512,9 @@
               flexBasis: A,
               flex: D,
               className: B,
-              style: L,
+              style: P,
             } = e,
-            P = (0, n._T)(e, [
+            L = (0, n._T)(e, [
               "component",
               "padding",
               "paddingX",
@@ -4564,16 +4565,16 @@
                 flexBasis: A,
                 flex: D,
               },
-              L,
+              P,
             ),
-            k = Object.assign({ className: T, style: R, ref: t }, P);
+            k = Object.assign({ className: T, style: R, ref: t }, L);
           if (r) {
             const e = r;
             return i.createElement(e, Object.assign({}, k));
           }
           return i.createElement(
             s.s,
-            Object.assign({ className: T, style: R, ref: t }, P),
+            Object.assign({ className: T, style: R, ref: t }, L),
           );
         }),
         m = (0, i.forwardRef)(function (e, t) {
@@ -4974,10 +4975,10 @@
         };
       var D = r(44026),
         B = r(16826);
-      const L = "#CommunityAwards",
-        P = (e) => (t, r) => {
+      const P = "#CommunityAwards",
+        L = (e) => (t, r) => {
           if (!t) return !1;
-          return (r.hash === L) === e;
+          return (r.hash === P) === e;
         },
         T = () => {
           const e = [
@@ -5080,7 +5081,7 @@
                       iconComponent: f.n7,
                       children: (0, y.Xx)("#HowItWorksLink"),
                       to: { pathname: h.Z.LoyaltyHowItWorks(), hash: "#Title" },
-                      isActive: P(!1),
+                      isActive: L(!1),
                     },
                   },
                 ],
@@ -5094,8 +5095,8 @@
                 props: {
                   iconComponent: f.uR,
                   children: (0, y.Xx)("#ShopNav_AwardsLink"),
-                  to: { pathname: h.Z.LoyaltyHowItWorks(), hash: `${L}` },
-                  isActive: P(!0),
+                  to: { pathname: h.Z.LoyaltyHowItWorks(), hash: `${P}` },
+                  isActive: L(!0),
                 },
               }),
             t ||
@@ -6100,7 +6101,7 @@
         Nn: () => C,
         Dj: () => y,
         OC: () => M,
-        _f: () => L,
+        _f: () => P,
       });
       var n = r(33940),
         i = r(89526),
@@ -6285,7 +6286,7 @@
           i.createElement(N, { appid: r }, i.createElement(E, null, t)),
         );
       }
-      const L = ({ title: e, subtitle: t, headerImage: r }) =>
+      const P = ({ title: e, subtitle: t, headerImage: r }) =>
         i.createElement(
           i.Fragment,
           null,
@@ -6562,7 +6563,7 @@
         _J: () => Re,
         hY: () => ke,
         s1: () => Te,
-        wS: () => Pe,
+        wS: () => Le,
       });
       var n,
         i,
@@ -6725,8 +6726,8 @@
       const A = x;
       var D = r(22171),
         B = r(23801),
-        L = r(13997),
-        P = r(86146),
+        P = r(13997),
+        L = r(86146),
         T = r(96927),
         R = r(701),
         k = r(19304),
@@ -7672,8 +7673,8 @@
       var Ae = r(49190),
         De = r(42456),
         Be = r(34329),
-        Le = r(88443);
-      function Pe(e, t) {
+        Pe = r(88443);
+      function Le(e, t) {
         (0, f.x1)(
           o.createElement(Oe, { definitionid: t }),
           e ? (0, I.RA)(e) : window,
@@ -8289,7 +8290,7 @@
                     o.createElement(
                       "div",
                       { className: u.CurrentPoints },
-                      (0, Le.AV)(g.Vb.Get().GetPointsAvailable().getLowBits()),
+                      (0, Pe.AV)(g.Vb.Get().GetPointsAvailable().getLowBits()),
                     ),
                   ),
                 ),
@@ -9853,7 +9854,7 @@
             className: a,
           } = e;
           if (r) {
-            const e = r ? (0, Le.AV)(n) : "",
+            const e = r ? (0, Pe.AV)(n) : "",
               l = g.Vb.Get().BIsLoggedIn()
                 ? o.createElement(
                     o.Fragment,
@@ -9868,7 +9869,7 @@
                       " ",
                     ),
                     o.createElement(
-                      L.L,
+                      P.L,
                       { amount: t },
                       " ",
                       t > 0 && (0, h.Xx)("#Rewards_Points"),
@@ -9890,7 +9891,7 @@
           }
           const l = g.Vb.Get().BIsLoggedIn()
             ? o.createElement(
-                L.L,
+                P.L,
                 { size: 1.125, amount: t },
                 " ",
                 t > 0 && (0, h.Xx)("#Rewards_Points"),
@@ -10162,7 +10163,7 @@
                   o.createElement("div", {
                     className: u.BadgeImage,
                     style: {
-                      backgroundImage: `url( ${(0, P._)(t.appid, i)} )`,
+                      backgroundImage: `url( ${(0, L._)(t.appid, i)} )`,
                     },
                   }),
                 ),
@@ -10449,7 +10450,7 @@
             }),
           ),
         ),
-        L = (0, a.Pi)((e) =>
+        P = (0, a.Pi)((e) =>
           i.createElement(
             F,
             Object.assign({}, M(e), {
@@ -10486,7 +10487,7 @@
             ),
           ),
         ),
-        P = (0, a.Pi)((e) =>
+        L = (0, a.Pi)((e) =>
           i.createElement(
             G,
             Object.assign({}, M(e), { iconComponent: _.F1 }),
@@ -10863,9 +10864,9 @@
           4: N,
           12: x,
           3: A,
-          13: L,
+          13: P,
           8: R,
-          14: P,
+          14: L,
           15: T,
           16: k,
           17: j,
@@ -11307,7 +11308,7 @@
           return i.createElement(
             i.Fragment,
             null,
-            i.createElement(L, {
+            i.createElement(P, {
               className: (0, I.Z)(f.LeftArrow, !r && f.Disabled),
               onClick: a,
             }),
@@ -11378,13 +11379,13 @@
               }),
             ),
           ),
-        L = (e) => {
+        P = (e) => {
           const { style: t } = e,
             r = (0, n._T)(e, ["style"]),
             a = Object.assign({ transform: "scaleX(-1)" }, t || {});
           return i.createElement(B, Object.assign({ style: a }, r));
         };
-      function P(e) {
+      function L(e) {
         const {
           items: t,
           renderItem: r,
@@ -11633,7 +11634,7 @@
             i.createElement(
               Z.zu,
               null,
-              i.createElement(P, {
+              i.createElement(L, {
                 items: u,
                 loadMore: () => m(c + 10),
                 bLoadingMore: _,
@@ -11836,7 +11837,7 @@
                   ),
                 ),
               },
-              i.createElement(P, {
+              i.createElement(L, {
                 items: f(0, 6, r).rewards,
                 loadMore: () => {},
                 renderItem: (e) =>
@@ -12269,8 +12270,8 @@
         Be =
           r.p +
           "images/applications/store/csgoChat_128_hugs.png?v=valveisgoodatcaching",
-        Le = r.p + "images/applications/store/dance.png?v=valveisgoodatcaching",
-        Pe =
+        Pe = r.p + "images/applications/store/dance.png?v=valveisgoodatcaching",
+        Le =
           r.p +
           "images/applications/store/icons_floor.png?v=valveisgoodatcaching";
       var Te = r(98231);
@@ -12498,7 +12499,7 @@
                 }),
                 i.createElement("img", {
                   className: u.PageHomeBannerFloor,
-                  src: Pe,
+                  src: Le,
                 }),
                 i.createElement(
                   "div",
@@ -12525,7 +12526,7 @@
                   }),
                   i.createElement("img", {
                     className: u.PageHomeBannerDance,
-                    src: Le,
+                    src: Pe,
                   }),
                 ),
               ),
@@ -12807,52 +12808,53 @@
           : null;
       }
       function at(e) {
-        var t, r, a, o, l, c, d, p, u, h, g;
-        const { eventname: f } = e,
-          I = (0, m.SZ)(() =>
-            _.Vb.Get().GetPageDescriptor({ type: "event", eventname: f }),
+        var t, r, a, o, l, c, d, p, h, g, f;
+        const { eventname: I } = e,
+          C = (0, m.SZ)(() =>
+            _.Vb.Get().GetPageDescriptor({ type: "event", eventname: I }),
           ),
-          C = (0, ye.bJ)(),
-          y = (0, Ue.useQuery)(
-            ["EventDetails", f],
+          y = (0, ye.bJ)(),
+          w = (0, Ue.useQuery)(
+            ["EventDetails", I],
             () =>
               (0, n.mG)(this, void 0, void 0, function* () {
                 return (yield Ve().get(
                   s.De.STORE_BASE_URL +
                     "points/ajaxgeteventdetails?event_name=" +
-                    f,
+                    I,
                 )).data;
               }),
             { staleTime: 1 / 0 },
           );
-        if (!y.data) return null;
-        if (!I || !y.isSuccess)
-          return console.error(`Failed to get event page for ${f}`), null;
-        let w = i.createElement(ve._f, {
+        if (!w.data) return null;
+        if (!C || !w.isSuccess)
+          return console.error(`Failed to get event page for ${I}`), null;
+        let S = i.createElement(ve._f, {
           title:
             null !==
               (a =
                 null ===
                   (r =
-                    null === (t = y.data) || void 0 === t
+                    null === (t = w.data) || void 0 === t
                       ? void 0
                       : t.details) || void 0 === r
                   ? void 0
                   : r.title) && void 0 !== a
               ? a
-              : f,
+              : I,
         });
         return (
           (null ===
-            (l = null === (o = y.data) || void 0 === o ? void 0 : o.details) ||
+            (l = null === (o = w.data) || void 0 === o ? void 0 : o.details) ||
           void 0 === l
             ? void 0
             : l.strPageHeader) &&
-            (w = i.createElement("img", {
+            (S = i.createElement("img", {
+              className: u.EventPageHeaderImg,
               src:
                 null ===
                   (d =
-                    null === (c = y.data) || void 0 === c
+                    null === (c = w.data) || void 0 === c
                       ? void 0
                       : c.details) || void 0 === d
                   ? void 0
@@ -12863,12 +12865,12 @@
             {
               background:
                 null ===
-                  (u =
-                    null === (p = y.data) || void 0 === p
+                  (h =
+                    null === (p = w.data) || void 0 === p
                       ? void 0
-                      : p.details) || void 0 === u
+                      : p.details) || void 0 === h
                   ? void 0
-                  : u.strPageBackground,
+                  : h.strPageBackground,
             },
             i.createElement(rt, {
               header: i.createElement(
@@ -12877,18 +12879,18 @@
                   href: (0, We.Hf)(
                     s.De.STORE_BASE_URL +
                       (null ===
-                        (g =
-                          null === (h = y.data) || void 0 === h
+                        (f =
+                          null === (g = w.data) || void 0 === g
                             ? void 0
-                            : h.details) || void 0 === g
+                            : g.details) || void 0 === f
                         ? void 0
-                        : g.url),
-                    C,
+                        : f.url),
+                    y,
                   ),
                 },
-                w,
+                S,
               ),
-              descriptor: I,
+              descriptor: C,
             }),
           )
         );
@@ -13177,7 +13179,7 @@
             ),
           );
         },
-        Lt = (e) =>
+        Pt = (e) =>
           i.createElement(
             h.xu,
             {
@@ -13204,7 +13206,7 @@
               (0, g.Xx)("#HowItWorks_SteamPoints_Desc2"),
             ),
           ),
-        Pt = (e) => {
+        Lt = (e) => {
           let t = (0, g.kQ)(
             "#HowItWorks_Conversion",
             i.createElement("span", null, e.numPoints.toLocaleString()),
@@ -13800,8 +13802,8 @@
                   style: { width: "100%" },
                   id: "Title",
                 },
-                i.createElement(Lt, null),
-                i.createElement(Pt, { dollarConversion: e, numPoints: t }),
+                i.createElement(Pt, null),
+                i.createElement(Lt, { dollarConversion: e, numPoints: t }),
                 i.createElement(Tt, null),
                 i.createElement(Rt, null),
                 !(0, pt.e7)(s.De.EREALM) && i.createElement(kt, null),
