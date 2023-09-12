@@ -3455,7 +3455,8 @@
                 },
               ]),
             b = [];
-          (0, I.e7)(m.De.EREALM) || b.push(r(1716740)), b.push(r(2459330));
+          (0, I.e7)(m.De.EREALM) || b.push(r(2598440), r(1716740)),
+            b.push(r(2459330));
           const v = [],
             N = [b, M];
           for (let e = 0; e < Math.max(N[0].length, N[1].length); e++)
@@ -12824,6 +12825,7 @@
               }),
             { staleTime: 1 / 0 },
           );
+        if (!y.data) return null;
         if (!I || !y.isSuccess)
           return console.error(`Failed to get event page for ${f}`), null;
         let w = i.createElement(ve._f, {
