@@ -319,7 +319,8 @@ div.pricinggrid_HoverToolTip_1OS2v {
   border: 1px dashed #c22d00;
   color: #c22d00;
 }
-.pricinggridcell_PriceCell_1sKIc .pricinggridcell_PriceChange_w-K7q {
+.pricinggridcell_PriceCell_1sKIc .pricinggridcell_PriceChange_w-K7q,
+.pricinggridcell_PriceCell_1sKIc .pricinggridcell_NewPrice_3sgbt {
   position: absolute;
   left: 4px;
 }
@@ -1864,7 +1865,14 @@ img {
 }
 .pricingimportexport_ButtonRows_3Bpob
   .pricingimportexport_ImportButtonLabel_3OJwY {
-  display: block;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  min-height: 57px;
 }
 .pricingimportexport_ButtonRows_3Bpob .pricingimportexport_OptionCtn_3zj1I {
   display: flex;

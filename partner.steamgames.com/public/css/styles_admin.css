@@ -1987,6 +1987,11 @@ html, body { height:100%; }
 	display: inline-block;
 }
 
+.SysReqRowLabel.wide {
+    width: unset;
+    display: block;
+}
+
 .SysReqRowDescription
 {
 	font-style: italic;

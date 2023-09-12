@@ -705,7 +705,7 @@
     "PricingDashboard_ImportExport_DownloadAll_Button": "Download all",
     "PricingDashboard_ImportExport_DownloadVisible_Desc": "Download prices for visible packages, excluding any that you have hidden by collapsing rows or entering a text filter.",
     "PricingDashboard_ImportExport_DownloadVisible_Button": "Download visible",
-    "PricingDashboard_ImportExport_UploadInstructions": "Upload a CSV file with an updated table of prices. Any entries that do not match current prices will be entered into the dashboard as pending changes. You can preview before submitting.",
+    "PricingDashboard_ImportExport_UploadInstructions": "Upload a CSV file with an updated table of prices. Any entries that do not match current prices will be entered into the dashboard as pending changes. You can preview and specify your publish timing before submitting.",
     "PricingDashboard_ImportExport_Upload_Button": "Upload .csv",
     "PricingDashboard_ImportExport_Upload_Desc": "Upload and preview new prices.",
     "PricingDashboard_ImportExport_UploadProgressTitle": "Import complete",

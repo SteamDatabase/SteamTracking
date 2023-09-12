@@ -2117,6 +2117,7 @@ https://checkout.steampowered.com/checkout/transactionstatus/
 https://checkout.steampowered.com/checkout/unsendgiftsubmit/
 https://checkout.steampowered.com/checkout/updatebillingaddress/
 https://checkout.steampowered.com/checkout/verifyshippingaddress/
+https://checkout.steampowered.com/parental/ajaxlock
 https://checkout.steampowered.com/paypal/launchauth/?webbasedpurchasing=1&transid=${transID}&authurl=${escapedUrl}&s=${g_sessionID}
 https://checkout.steampowered.com/paypal/launchauth/?webbasedpurchasing=1&transid=${transID}&authurl=${paypal_url}${}&s=${g_sessionID}
 https://checkout.steampowered.com/paypal/launchauth/?webbasedpurchasing=1&transid=${txnid}&authurl=${auth_url}&s=${g_sessionID}

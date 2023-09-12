@@ -60,7 +60,9 @@
 }
 
 body.v6 #curator_popup_body .popup_body.popup_menu {
-	background: #fdfdfc;
+	background-color: #3D4450;
+	padding: 5px;
+	border-radius: 2px;
 }
 
 

@@ -368,6 +368,7 @@ body.v6 .wishlist_header h2 {
 
 	opacity: 0;
 	pointer-events: none;
+	box-shadow: 10px 10px 5px #0000003b;
 }
 
 .dropdown_container.hover {
@@ -407,7 +408,7 @@ body.v6 .wishlist_header h2 {
 	pointer-events: none;
     display: none;
 	border-radius: 2px;
-	box-shadow: 10px 10px 5px #0000003b;
+	box-shadow: 5px 5px 5px #0000003b;
 }
 
 .checkbox_wrapper {

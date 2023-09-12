@@ -52,15 +52,15 @@
         v = n(25125),
         p = n(86770),
         N = n(36611),
-        E = n(27070),
-        g = n(41576);
+        g = n(27070),
+        E = n(41576);
       const b = new r.tL();
       function y(e) {
         const { bResponsiveHeader: t, notifications: n } = e;
         o.useEffect(() => {
           n && !b.m_bLoaded && b.ProcessNewNotificationPayload(n);
         }, [n]);
-        const l = (0, E.bY)();
+        const l = (0, g.bY)();
         (0, o.useEffect)(() => {
           b.setTransport(l),
             (window.RefreshSteamNotifications = () =>
@@ -116,7 +116,9 @@
                 strClassName: "GreenEnvelopeMenu",
               },
             )),
-            n.current.Hide()),
+            n.current.Hide());
+          const e = document.getElementById("header_notification_link");
+          e && (e.style.cssText = "background-color: rgba(0,0,0,0)"),
             window.setTimeout(() => s(null), 2e3);
         }, []);
         const c = o.useCallback(
@@ -129,7 +131,7 @@
           [n],
         );
         return o.createElement(
-          g.U,
+          E.U,
           { trigger: "repeated", onVisibilityChange: c },
           o.createElement(
             "div",

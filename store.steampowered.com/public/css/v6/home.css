@@ -4551,12 +4551,12 @@ background: -webkit-linear-gradient( top, rgba(42,71,94,1.0) 5%, rgba(42,71,94,0
 }
 
 .store_main_capsule .ds_options {
-	right: 325px;
+	right: 320px;
 	z-index: 50;
 }
 
 .store_main_capsule:hover .ds_options {
-	right: 330px;
+	right: 324px;
 }
 
 .store_main_capsule .platforms {

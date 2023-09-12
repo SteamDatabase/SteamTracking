@@ -68,6 +68,7 @@
         SevereWarningPrice: "pricinggridcell_SevereWarningPrice_1o6zP",
         BadPrice: "pricinggridcell_BadPrice_18aiu",
         PriceChange: "pricinggridcell_PriceChange_w-K7q",
+        NewPrice: "pricinggridcell_NewPrice_3sgbt",
         PriceAlert: "pricinggridcell_PriceAlert_2eadU",
         PriceChangeArrow: "pricinggridcell_PriceChangeArrow_1z0l2",
         PriceIncrease: "pricinggridcell_PriceIncrease_2jQyP",
@@ -445,7 +446,9 @@
               a.createElement(A.Ehc, { angle: o ? 0 : 180 }),
             )),
             (n = e + "%");
-        } else n = (0, E.Xx)("#PricingDashboard_PriceIsNew_Short");
+        } else
+          (n = (0, E.Xx)("#PricingDashboard_PriceIsNew_Short")),
+            (l = (0, v.Z)(f().NewPrice));
         return a.createElement(
           w.HP,
           {

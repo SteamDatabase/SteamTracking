@@ -3770,6 +3770,7 @@ function LockFamilyView( bStore )
 
 		CrossDomainPost( urlFirst + '/parental/ajaxlock', {} ).then( function() {
 			$J.when(
+									CrossDomainPost( 'https://checkout.steampowered.com/parental/ajaxlock', {} ),
 								CrossDomainPost( urlSecond + 'parental/ajaxlock', {} )
 			).done( function()
 			{

@@ -5521,10 +5521,13 @@ body.modals_BodyNoScrollDialog_3jhMI {
   stroke-width: 10px;
   stroke: #8f9e9c;
 }
-.DialogContent.GenericConfirmDialog.chatroom_ManageVoiceChannelsModal_1e0x4 {
+.DialogContent.GenericConfirmDialog.chatroom_ManageVoiceChannelsModal_1e0x4,
+.DialogContent.GenericConfirmDialog.chatroom_ManageTextChannelsModal_3XLA3 {
   scroll-padding-top: 100px;
 }
 .DialogContent.GenericConfirmDialog.chatroom_ManageVoiceChannelsModal_1e0x4
+  .DialogContent_InnerWidth,
+.DialogContent.GenericConfirmDialog.chatroom_ManageTextChannelsModal_3XLA3
   .DialogContent_InnerWidth {
   min-width: 30vw;
   width: 30vw;

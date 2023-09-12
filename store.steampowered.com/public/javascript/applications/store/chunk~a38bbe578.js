@@ -5,7 +5,7 @@
   [9057],
   {
     82079: (t, e, n) => {
-      n.d(e, { KU: () => _, sV: () => d });
+      n.d(e, { KU: () => p, sV: () => _ });
       var a = n(33940),
         o = n(52868),
         i = n.n(o),
@@ -15,7 +15,7 @@
         u = n(23801),
         c = n(32765),
         m = n(74831);
-      class p {
+      class d {
         constructor() {
           (this.m_mapAppIDToClanInfo = new Map()),
             (this.m_mapVanityToClanInfo = new Map()),
@@ -306,28 +306,28 @@
           );
         }
       }
-      (0, a.gn)([r.LO], p.prototype, "m_mapAppIDToClanInfo", void 0),
-        (0, a.gn)([r.LO], p.prototype, "m_mapVanityToClanInfo", void 0),
-        (0, a.gn)([r.LO], p.prototype, "m_mapClanAccountIDToClanInfo", void 0),
-        (0, a.gn)([r.aD], p.prototype, "RegisterClanData", null),
-        (0, a.gn)([r.aD], p.prototype, "InternalSetupValue", null);
-      const d = new p();
-      function _(t) {
+      (0, a.gn)([r.LO], d.prototype, "m_mapAppIDToClanInfo", void 0),
+        (0, a.gn)([r.LO], d.prototype, "m_mapVanityToClanInfo", void 0),
+        (0, a.gn)([r.LO], d.prototype, "m_mapClanAccountIDToClanInfo", void 0),
+        (0, a.gn)([r.aD], d.prototype, "RegisterClanData", null),
+        (0, a.gn)([r.aD], d.prototype, "InternalSetupValue", null);
+      const _ = new d();
+      function p(t) {
         const [e, n] = (0, s.useState)(
-            t ? d.GetClanInfoByClanAccountID(t) : void 0,
+            t ? _.GetClanInfoByClanAccountID(t) : void 0,
           ),
-          [a, o] = (0, s.useState)(!!t && !d.BHasClanInfoLoadedByAccountID(t));
+          [a, o] = (0, s.useState)(!!t && !_.BHasClanInfoLoadedByAccountID(t));
         return (
           (0, s.useEffect)(() => {
             if (t)
-              if (d.BHasClanInfoLoadedByAccountID(t))
-                n(d.GetClanInfoByClanAccountID(t)), o(!1);
+              if (_.BHasClanInfoLoadedByAccountID(t))
+                n(_.GetClanInfoByClanAccountID(t)), o(!1);
               else {
                 o(!0);
                 const e = l.K.InitFromClanID(
                   "string" == typeof t ? Number.parseInt(t) : t,
                 );
-                d.LoadClanInfoForClanSteamID(e).then((t) => {
+                _.LoadClanInfoForClanSteamID(e).then((t) => {
                   n(t), o(!1);
                 });
               }
@@ -336,10 +336,10 @@
           [a, e]
         );
       }
-      window.g_ClanStore = d;
+      window.g_ClanStore = _;
     },
     74831: (t, e, n) => {
-      n.d(e, { bq: () => d, iG: () => _ });
+      n.d(e, { bq: () => _, iG: () => p });
       var a = n(33940),
         o = n(58218),
         i = n(52868),
@@ -494,7 +494,7 @@
         (0, a.gn)([s.LO], c.prototype, "m_nFollowers", void 0),
         (0, a.gn)([s.LO], c.prototype, "m_clanAccountFlags", void 0);
       var m = n(47165);
-      class p {
+      class d {
         constructor() {
           (this.m_mapClanToCreatorHome = new Map()),
             (this.m_mapAppToCreatorIDList = new Map()),
@@ -509,7 +509,7 @@
                   n = m.K.InitFromClanID(e),
                   a = new c(n);
                 a.Initialize(t),
-                  (a.m_promise = p.GetAsPromise(a)),
+                  (a.m_promise = d.GetAsPromise(a)),
                   this.m_mapClanToCreatorHome.set(e, a);
               });
             let e = (0, u.kQ)("creatorhomeforapp", "application_config");
@@ -643,25 +643,25 @@
             : [];
         }
       }
-      (0, a.gn)([s.LO], p.prototype, "m_mapClanToCreatorHome", void 0),
-        (0, a.gn)([s.LO], p.prototype, "m_mapAppToCreatorIDList", void 0),
-        (0, a.gn)([s.aD], p.prototype, "LazyInit", null);
-      const d = new p();
-      function _(t) {
+      (0, a.gn)([s.LO], d.prototype, "m_mapClanToCreatorHome", void 0),
+        (0, a.gn)([s.LO], d.prototype, "m_mapAppToCreatorIDList", void 0),
+        (0, a.gn)([s.aD], d.prototype, "LazyInit", null);
+      const _ = new d();
+      function p(t) {
         var e;
         const n = m.K.InitFromClanID(t),
-          [a, i] = l.useState(d.GetCreatorHome(n)),
+          [a, i] = l.useState(_.GetCreatorHome(n)),
           r = (0, o.T)("useCreatorHome");
         return (
           l.useEffect(() => {
             const e = m.K.InitFromClanID(t);
-            d.BHasCreatorHomeLoaded(e)
-              ? a || i(d.GetCreatorHome(e))
-              : d.LoadCreatorHome(e).then(() => {
+            _.BHasCreatorHomeLoaded(e)
+              ? a || i(_.GetCreatorHome(e))
+              : _.LoadCreatorHome(e).then(() => {
                   var t;
                   (null === (t = null == r ? void 0 : r.token) || void 0 === t
                     ? void 0
-                    : t.reason) || i(d.GetCreatorHome(e));
+                    : t.reason) || i(_.GetCreatorHome(e));
                 });
           }, [
             null === (e = null == r ? void 0 : r.token) || void 0 === e
@@ -673,16 +673,16 @@
           a
         );
       }
-      window.g_CreatorHomeStore = d;
+      window.g_CreatorHomeStore = _;
     },
     25871: (t, e, n) => {
       n.d(e, {
         Vm: () => m,
         ie: () => c,
         jk: () => l,
-        oA: () => _,
+        oA: () => p,
         vs: () => u,
-        wZ: () => d,
+        wZ: () => _,
       });
       var a = n(52868),
         o = n.n(a),
@@ -694,10 +694,10 @@
           u = (0, i.useRef)(void 0),
           c = (0, r.NW)();
         l.current = t;
-        const [m, p] = (0, i.useState)(void 0),
+        const [m, d] = (0, i.useState)(void 0),
           {
-            include_assets: d,
-            include_release: _,
+            include_assets: _,
+            include_release: p,
             include_platforms: h,
             include_all_purchase_options: I,
             include_screenshots: f,
@@ -708,12 +708,13 @@
             include_basic_info: D,
             include_supported_languages: A,
             include_full_description: y,
+            include_included_items: G,
           } = n;
         if (
           ((0, i.useEffect)(() => {
             const n = {
-              include_assets: d,
-              include_release: _,
+              include_assets: _,
+              include_release: p,
               include_platforms: h,
               include_all_purchase_options: I,
               include_screenshots: f,
@@ -724,30 +725,31 @@
               include_basic_info: D,
               include_supported_languages: A,
               include_full_description: y,
+              include_included_items: G,
             };
             let i = null;
             return (
               !t ||
                 s.Z.Get().BHasStoreItem(t, e, n) ||
                 (void 0 !== m && a && a == u.current) ||
-                (a !== u.current && (p(void 0), (u.current = a)),
+                (a !== u.current && (d(void 0), (u.current = a)),
                 (i = o().CancelToken.source()),
                 s.Z.Get()
                   .QueueStoreItemRequest(t, e, n)
                   .then((e) => {
-                    i.token.reason || l.current !== t || p(1 == e), c();
+                    i.token.reason || l.current !== t || d(1 == e), c();
                   })),
               () => i && i.cancel("useStoreItemCache: unmounting")
             );
-          }, [t, e, a, m, d, _, h, I, f, C, g, L, v, D, A, c]),
+          }, [t, e, a, m, _, p, h, I, f, C, g, L, v, D, A, y, G, c]),
           !t)
         )
           return [null, 2];
         if (!1 === m) return [void 0, 2];
         if (s.Z.Get().BIsStoreItemMissing(t, e)) return [void 0, 2];
         if (!s.Z.Get().BHasStoreItem(t, e, n)) return [void 0, 1];
-        const G = s.Z.Get().GetStoreItemWithLegacyVisibilityCheck(t, e);
-        return G ? [G, 3] : [null, 2];
+        const S = s.Z.Get().GetStoreItemWithLegacyVisibilityCheck(t, e);
+        return S ? [S, 3] : [null, 2];
       }
       function u(t, e, n) {
         return l(t, 0, e, n);
@@ -758,7 +760,7 @@
       function m(t, e, n) {
         const [a, r] = l(t, e, n),
           [s, c] = (0, i.useState)(null),
-          [m, p] = u(s, n);
+          [m, d] = u(s, n);
         return (
           (0, i.useEffect)(() => {
             var t;
@@ -777,24 +779,25 @@
             return () =>
               e.cancel("useStoreItemCacheOrPackageSingleApp: unmounting");
           }, [s, a]),
-          s ? [m, p] : [a, r]
+          s ? [m, d] : [a, r]
         );
       }
-      function p(t, e, n, a) {
+      function d(t, e, n, a) {
         const l = (0, r.NW)(),
           {
             include_assets: u,
             include_release: c,
             include_platforms: m,
-            include_all_purchase_options: p,
-            include_screenshots: d,
-            include_trailers: _,
+            include_all_purchase_options: d,
+            include_screenshots: _,
+            include_trailers: p,
             include_ratings: h,
             include_tag_count: I,
             include_reviews: f,
             include_basic_info: C,
             include_supported_languages: g,
             include_full_description: L,
+            include_included_items: v,
           } = n;
         if (
           ((0, i.useEffect)(() => {
@@ -803,15 +806,16 @@
                 include_assets: u,
                 include_release: c,
                 include_platforms: m,
-                include_all_purchase_options: p,
-                include_screenshots: d,
-                include_trailers: _,
+                include_all_purchase_options: d,
+                include_screenshots: _,
+                include_trailers: p,
                 include_ratings: h,
                 include_tag_count: I,
                 include_reviews: f,
                 include_basic_info: C,
                 include_supported_languages: g,
                 include_full_description: L,
+                include_included_items: v,
               },
               a = t.filter(
                 (t) =>
@@ -829,7 +833,7 @@
               }),
               () => i.cancel("useStoreItemCacheMultiplePackages: unmounting")
             );
-          }, [t, e, a, l, u, c, m, p, d, _, h, I, f, C, g]),
+          }, [t, e, a, l, u, c, m, d, _, p, h, I, f, C, g, L, v]),
           !t)
         )
           return 2;
@@ -847,10 +851,10 @@
           ? 3
           : 2;
       }
-      function d(t, e, n) {
-        return p(t, 0, e, n);
+      function _(t, e, n) {
+        return d(t, 0, e, n);
       }
-      function _() {
+      function p() {
         i.useEffect(
           () => (
             s.Z.Get().SetReturnUnavailableItems(!0),

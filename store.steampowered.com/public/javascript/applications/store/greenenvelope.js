@@ -2323,6 +2323,7 @@
               pending_gifts: 0,
               pending_invites: 0,
               major_sale: 0,
+              fi: 0,
             }),
             (this.m_bLoaded = !1),
             (this.m_nUnviewed = 0),
@@ -2465,6 +2466,7 @@
                   pending_gifts: 0,
                   pending_invites: 0,
                   major_sale: 0,
+                  fi: 0,
                 },
                 {
                   pending_gifts: this.m_summary.pending_gifts,
@@ -2537,6 +2539,7 @@
               pending_gifts: 0,
               pending_invites: 0,
               major_sale: 0,
+              fi: 0,
             },
             a = 0;
           null === (e = this.m_currentNotificationsData.notifications) ||
@@ -3035,6 +3038,7 @@
           },
           bBasic: !0,
         },
+        16: null,
       };
       function Be(e) {
         var t;
@@ -3086,6 +3090,9 @@
             break;
           case 14:
             e.moderator_messages = Math.max(0, e.moderator_messages + i);
+            break;
+          case 16:
+            e.fi = Math.max(0, e.fi + i);
         }
       }
       function he(e) {
@@ -4341,6 +4348,7 @@
             }),
           );
         },
+        16: null,
       };
       function bt(e) {
         const { rollup: t } = e,
@@ -4469,7 +4477,9 @@
                 strClassName: "GreenEnvelopeMenu",
               },
             )),
-            i.current.Hide()),
+            i.current.Hide());
+          const e = document.getElementById("header_notification_link");
+          e && (e.style.cssText = "background-color: rgba(0,0,0,0)"),
             window.setTimeout(() => o(null), 2e3);
         }, []);
         const s = r.useCallback(

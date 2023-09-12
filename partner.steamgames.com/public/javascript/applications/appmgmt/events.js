@@ -70204,7 +70204,7 @@
         const { strTitle: t, onOK: n, strTooltip: a } = e;
         return m.createElement(
           Gn.HP,
-          { toolTipContent: a || t },
+          { toolTipContent: m.createElement(Gn.vd, null, a || t) },
           m.createElement(cn.X, {
             onClick: (e) =>
               (0, Yt.AM)(
@@ -70415,22 +70415,46 @@
       function jl(e) {
         const { filter_type: t, id: n, fnRemoveItem: a } = e,
           i = de(t) ? 1 : 0,
-          [r] = (0, De.jk)(n, i, {}),
-          s = r ? `${r.GetName()} (${n})` : `${n} type: ${i}`;
-        return m.createElement(
-          "div",
-          { className: Gl().SelectedProductCtn },
+          [r] = (0, De.jk)(n, i, {});
+        let s;
+        return (
+          (s = r
+            ? `${r.GetName()} (${n})`
+            : m.createElement(
+                m.Fragment,
+                null,
+                m.createElement(
+                  "i",
+                  null,
+                  "Hidden " + (0 == i ? "App" : "Package"),
+                ),
+                " ",
+                `(${n})`,
+              )),
           m.createElement(
             "div",
-            { className: Gl().SelectedProduct },
-            s,
+            { className: Gl().SelectedProductCtn },
             m.createElement(
               "div",
-              { className: Gl().RemoveSelectedProductBtn },
-              m.createElement(zl, { strTitle: `Remove ${s}?`, onOK: a }),
+              { className: Gl().SelectedProduct },
+              s,
+              m.createElement(
+                "div",
+                { className: Gl().RemoveSelectedProductBtn },
+                m.createElement(zl, {
+                  strTitle: m.createElement(
+                    m.Fragment,
+                    null,
+                    "Remove ",
+                    s,
+                    "?",
+                  ),
+                  onOK: a,
+                }),
+              ),
             ),
-          ),
-          m.createElement("span", null, "Or"),
+            m.createElement("span", null, "Or"),
+          )
         );
       }
       function Xl(e) {

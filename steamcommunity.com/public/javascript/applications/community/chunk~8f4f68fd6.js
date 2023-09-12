@@ -2193,59 +2193,59 @@
           return "CEcon_GetAssetClassInfo_Request_Class";
         }
       }
-      class C extends v {
+      class W extends v {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            C.prototype.descriptions || n.aR(C.M()),
+            W.prototype.descriptions || n.aR(W.M()),
             v.initialize(this, e, 0, -1, [1], null);
         }
         static M() {
           return (
-            C.sm_m ||
-              (C.sm_m = {
-                proto: C,
+            W.sm_m ||
+              (W.sm_m = {
+                proto: W,
                 fields: { descriptions: { n: 1, c: T, r: !0, q: !0 } },
               }),
-            C.sm_m
+            W.sm_m
           );
         }
         static MBF() {
-          return C.sm_mbf || (C.sm_mbf = n.Bh(C.M())), C.sm_mbf;
+          return W.sm_mbf || (W.sm_mbf = n.Bh(W.M())), W.sm_mbf;
         }
         toObject(e = !1) {
-          return C.toObject(e, this);
+          return W.toObject(e, this);
         }
         static toObject(e, t) {
-          return n.TA(C.M(), e, t);
+          return n.TA(W.M(), e, t);
         }
         static fromObject(e) {
-          return n.aD(C.M(), e);
+          return n.aD(W.M(), e);
         }
         static deserializeBinary(e) {
           let t = new a.BinaryReader(e),
-            i = new C();
-          return C.deserializeBinaryFromReader(i, t);
+            i = new W();
+          return W.deserializeBinaryFromReader(i, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return n.F(C.MBF(), e, t);
+          return n.F(W.MBF(), e, t);
         }
         serializeBinary() {
           var e = new a.BinaryWriter();
-          return C.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return W.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          n.l2(C.M(), e, t);
+          n.l2(W.M(), e, t);
         }
         serializeBase64String() {
           var e = new a.BinaryWriter();
-          return C.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return W.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CEcon_GetAssetClassInfo_Response";
         }
       }
-      var W;
+      var C;
       !(function (e) {
         (e.GetInventoryItemsWithDescriptions = function (e, t) {
           return e.SendMsg(
@@ -2272,11 +2272,11 @@
             );
           }),
           (e.GetAssetClassInfo = function (e, t) {
-            return e.SendMsg("Econ.GetAssetClassInfo#1", (0, s.MD)(G, t), C, {
+            return e.SendMsg("Econ.GetAssetClassInfo#1", (0, s.MD)(G, t), W, {
               ePrivilege: 1,
             });
           });
-      })(W || (W = {}));
+      })(C || (C = {}));
       var j,
         X = i(5615),
         x = i(50265),
@@ -2285,18 +2285,18 @@
         H = i(32765),
         q = i(14826),
         J = i(25508),
-        Z = i(50454);
+        Q = i(50454);
       !(function (e) {
         (e[(e.New = 0)] = "New"),
           (e[(e.Update = 1)] = "Update"),
           (e[(e.Remove = 2)] = "Remove");
       })(j || (j = {}));
-      const $ = 172800,
-        Y = 600,
-        Q = new Z.s("SteamNotificationStore"),
-        K = Q.Debug,
-        V = Q.Error,
-        ee = Q.Warning;
+      const Z = 172800,
+        $ = 600,
+        Y = new Q.s("SteamNotificationStore"),
+        K = Y.Debug,
+        V = Y.Error,
+        ee = Y.Warning;
       class te {
         constructor() {
           (this.m_rgNotificationRollups = []),
@@ -2315,6 +2315,7 @@
               pending_gifts: 0,
               pending_invites: 0,
               major_sale: 0,
+              fi: 0,
             }),
             (this.m_bLoaded = !1),
             (this.m_nUnviewed = 0),
@@ -2457,6 +2458,7 @@
                   pending_gifts: 0,
                   pending_invites: 0,
                   major_sale: 0,
+                  fi: 0,
                 },
                 {
                   pending_gifts: this.m_summary.pending_gifts,
@@ -2529,6 +2531,7 @@
               pending_gifts: 0,
               pending_invites: 0,
               major_sale: 0,
+              fi: 0,
             },
             n = 0;
           null === (e = this.m_currentNotificationsData.notifications) ||
@@ -2754,6 +2757,7 @@
           pending_gifts: 0,
           pending_invites: 0,
           major_sale: 0,
+          fi: 0,
         };
       }
       function re(e, t, i, a = !0) {
@@ -2807,7 +2811,7 @@
                     i.Body().set_get_descriptions(!0);
                   let r = new F();
                   r.add_assetids(e.assetid), i.Body().set_filters(r);
-                  const a = yield W.GetInventoryItemsWithDescriptions(t, i);
+                  const a = yield C.GetInventoryItemsWithDescriptions(t, i);
                   if (1 !== a.GetEResult())
                     return (
                       V(
@@ -3071,6 +3075,7 @@
           },
           bBasic: !0,
         },
+        16: null,
       };
       function Se(e) {
         var t;
@@ -3132,13 +3137,16 @@
             break;
           case 14:
             e.moderator_messages = Math.max(0, e.moderator_messages + i);
+            break;
+          case 16:
+            e.fi = Math.max(0, e.fi + i);
         }
       }
       function Ne(e) {
-        return !e.viewed || e.viewed + Y > (0, J.QU)();
+        return !e.viewed || e.viewed + $ > (0, J.QU)();
       }
       function Me(e) {
-        return e.viewed && e.viewed + $ < (0, J.QU)();
+        return e.viewed && e.viewed + Z < (0, J.QU)();
       }
       function Ee(e) {
         return we(e) + e.pending_gifts + e.pending_invites > 0;
@@ -3148,10 +3156,10 @@
       "use strict";
       i.d(t, {
         IS: () => _,
+        QW: () => v,
         a$: () => g,
         bc: () => b,
         gd: () => y,
-        pv: () => v,
         ur: () => w,
       });
       var r = i(89526),
@@ -3388,7 +3396,7 @@
     },
     86770: (e, t, i) => {
       "use strict";
-      i.d(t, { PO: () => C, RW: () => U, k6: () => G });
+      i.d(t, { PO: () => W, RW: () => U, k6: () => G });
       var r = i(89526),
         a = i(47742),
         n = i(27070),
@@ -3519,7 +3527,7 @@
                   fnRenderTimestamp: c,
                 }),
                 r.createElement(f.ur, { multiline: !y }, p),
-                !!y && r.createElement(f.pv, null, y),
+                !!y && r.createElement(f.QW, null, y),
                 d ? r.createElement(D, { onHide: d }) : null,
               ),
             );
@@ -3564,7 +3572,7 @@
                   fnRenderTimestamp: s,
                 }),
                 r.createElement(f.ur, null, c),
-                r.createElement(f.pv, null, d),
+                r.createElement(f.QW, null, d),
                 o ? r.createElement(D, { onHide: o }) : null,
               ),
             );
@@ -3609,7 +3617,7 @@
                   fnRenderTimestamp: s,
                 }),
                 r.createElement(f.ur, { multiline: !c }, m),
-                !!c && r.createElement(f.pv, null, c),
+                !!c && r.createElement(f.QW, null, c),
                 o ? r.createElement(D, { onHide: o }) : null,
               ),
             );
@@ -3678,7 +3686,7 @@
                   fnRenderTimestamp: m,
                 }),
                 r.createElement(f.ur, { multiline: !p }, N),
-                !!p && r.createElement(f.pv, null, p),
+                !!p && r.createElement(f.QW, null, p),
                 c ? r.createElement(D, { onHide: c }) : null,
               ),
             );
@@ -3783,7 +3791,7 @@
               fnRenderTimestamp: c,
             }),
             r.createElement(f.ur, { multiline: !E }, T),
-            !!E && r.createElement(f.pv, null, E),
+            !!E && r.createElement(f.QW, null, E),
             y ? r.createElement(D, { onHide: y }) : null,
           ),
         );
@@ -3844,7 +3852,7 @@
                     fnRenderTimestamp: m,
                   }),
                   r.createElement(f.ur, null, y),
-                  r.createElement(f.pv, null, null == i ? void 0 : i.GetName()),
+                  r.createElement(f.QW, null, null == i ? void 0 : i.GetName()),
                   c ? r.createElement(D, { onHide: c }) : null,
                 ),
               )
@@ -3917,19 +3925,19 @@
           : !T &&
             (null === (n = u.json_data) || void 0 === n ? void 0 : n.title) &&
             (T = u.json_data.title);
-        let C = null;
-        C =
+        let W = null;
+        W =
           7 == u.comment_type && u.bis_forum && u.comment
             ? r.createElement(
-                f.pv,
+                f.QW,
                 null,
                 (0, _.Xx)(
                   "#SteamNotifications_Comment_NewDiscussion",
                   u.comment,
                 ),
               )
-            : r.createElement(f.pv, null, '"', u.comment, '"');
-        let W = (0, _.Xx)("#SteamNotifications_Comment"),
+            : r.createElement(f.QW, null, '"', u.comment, '"');
+        let C = (0, _.Xx)("#SteamNotifications_Comment"),
           j = null;
         if (N > 1) {
           const e = "+" + (N - 1);
@@ -3939,7 +3947,7 @@
                 { className: S().AllNotificationsCommentPlus },
                 e,
               ))
-            : (W = W + " " + e);
+            : (C = C + " " + e);
         }
         let X = o;
         if (!R) {
@@ -3966,7 +3974,7 @@
               Object.assign({}, e, {
                 logo: X,
                 icon: e.icon,
-                title: W,
+                title: C,
                 body: T,
               }),
             )
@@ -3978,13 +3986,13 @@
                 Object.assign({ logo: X }, e),
                 r.createElement(f.bc, {
                   icon: y,
-                  title: W,
+                  title: C,
                   timestamp: B,
                   location: p,
                   fnRenderTimestamp: h,
                 }),
                 r.createElement(f.ur, null, T),
-                C,
+                W,
                 j,
                 E ? r.createElement(D, { onHide: E }) : null,
               ),
@@ -4072,7 +4080,7 @@
                     fnRenderTimestamp: l,
                   }),
                   r.createElement(f.ur, { multiline: !y }, p),
-                  !!y && r.createElement(f.pv, null, y),
+                  !!y && r.createElement(f.QW, null, y),
                   m ? r.createElement(D, { onHide: m }) : null,
                 ),
               )
@@ -4389,13 +4397,14 @@
             }),
           );
         },
+        16: null,
       };
       function U(e) {
         const { rollup: t } = e,
-          i = l.Zm[t.type].bBasic ? C : G[t.type];
+          i = l.Zm[t.type].bBasic ? W : G[t.type];
         return i ? r.createElement(i, Object.assign({}, e)) : null;
       }
-      function C(e) {
+      function W(e) {
         var t, i;
         const {
             rollup: a,

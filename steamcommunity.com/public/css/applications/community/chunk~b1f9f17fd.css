@@ -4023,7 +4023,6 @@ a.storywidget_BadgeFooter_3kBeS:hover {
   background-color: #2e3138;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
 }
 .saleguidelinedialog_GuidelinesNoticeCtn_2vRv8
@@ -4051,12 +4050,20 @@ a.storywidget_BadgeFooter_3kBeS:hover {
   display: flex;
   flex-direction: column;
 }
+.saleguidelinedialog_GuidelinesDoneCtn_-bMPu
+  .saleguidelinedialog_ProcessButtons_3d-Yu
+  button {
+  padding-left: 8px;
+  padding-right: 8px;
+}
 .saleguidelinedialog_PresenterInfoCtn_Ltbsl {
   display: flex;
+  width: 100%;
 }
 .saleguidelinedialog_PresenterInfoCtn_Ltbsl .DialogInputLabelGroup {
   margin-right: 4px;
   margin-bottom: 2px;
+  flex-grow: 1;
 }
 .saleguidelinedialog_PresenterPreviewCtn_2Hk4r {
   border-top: 1px solid #444955;
@@ -4072,10 +4079,26 @@ a.storywidget_BadgeFooter_3kBeS:hover {
 .saleguidelinedialog_Intro_yYvoX {
   display: flex;
   align-items: center;
-  margin-bottom: 8px;
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 15px;
+}
+.saleguidelinedialog_Intro_yYvoX .saleguidelinedialog_State_3m-uJ {
+  position: relative;
+  height: 20px;
+  width: 20px;
+  margin-right: 20px;
+  flex-shrink: 0;
+  align-self: start;
+  border: 1px solid #abb2bd;
+  border-radius: 2px;
 }
 .saleguidelinedialog_Intro_yYvoX svg {
-  width: 32px;
+  position: absolute;
+  top: -8px;
+  width: 29px;
+  height: 29px;
+  stroke: #a4d007;
 }
 .saleguidelinedialog_AgreementsCtn_1TWap {
   margin: 12px 0px;

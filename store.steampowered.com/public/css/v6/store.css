@@ -4699,13 +4699,15 @@ a.cluster_capsule:hover {
 }
 
 .ds_options > div {
-	width: 15px;
+	width: 30px;
 	height: 15px;
+	position: absolute;
+	right: 4px;
 
 	background-color: #e5e5e5;
-	background-image: url('/public/images/v6/icon_expand_dark.png');
-	background-position: 4px 4px;
-	border-radius: 3px;
+	background-image: url('/public/shared/images/v6/moremenudark.png');
+	background-position: 6px 4px;
+	border-radius: 2px;
 	background-repeat: no-repeat;
 	box-shadow: 0 0 3px #000;
 }
@@ -4713,8 +4715,9 @@ a.cluster_capsule:hover {
 .ds_options:hover > div {
 	background-color: #67c1f5;
 	color: #fff;
-	background-image: url('/public/images/v6/icon_expand_white.png');
+	background-image: url('/public/shared/images/v6/moremenu.png');
 }
+
 
 *:hover > .ds_options, .ds_hover.ds_options {
 	opacity: 1;
@@ -4722,11 +4725,10 @@ a.cluster_capsule:hover {
 }
 
 .ds_options_tooltip {
-	background: -webkit-linear-gradient( top, #e3eaef 5%, #c7d5e0 95%);
-	background: linear-gradient( to bottom, #e3eaef 5%, #c7d5e0 95%);
+	background-color: #3D4450;
 	padding: 2px 8px;
 	color: #fff;
-	border-radius: 3px;
+	border-radius: 2px;
 	box-shadow: 0 0 3px #000;
 }
 
@@ -4734,16 +4736,16 @@ a.cluster_capsule:hover {
 	margin: 5px 0;
 	display: block;
 	cursor: pointer;
-	background-color: rgba(0,0,0,0.1);
+	/*background-color: rgba(0,0,0,0.1);*/
 	border-radius: 2px;
-	padding: 4px 8px;
+	padding: 8px 16px;
 	line-height: normal;
-	font-size: 11px;
-	color: #407898;
+	font-size: 13px;
+	color: white;
 }
 .ds_options_tooltip > .option:hover {
 	color: #ffffff;
-	background-color: #67c1f5;
+	background-color: #464d58;
 }
 
 /* Temporary state for when we want to hide something but don't want to force a reload or risk breaking the layout */
@@ -5104,12 +5106,19 @@ body.v6 .store_nav .popup_block_new .popup_body {
 }
 
 .store_nav .popup_menu .popup_menu_item,
-.creator .responsive_page_template_content .popup_menu .popup_menu_item,
-.curator .responsive_page_template_content .popup_menu .popup_menu_item,
 .footer_content .popup_menu .popup_menu_item,
 .search_area .popup_body .match,
 .search_area .popup_body .match .match_name {
 	color: #D8D8D8;
+	cursor: pointer;
+	padding: 5px 6px;
+}
+
+
+.creator .responsive_page_template_content .popup_menu .popup_menu_item,
+.curator .responsive_page_template_content .popup_menu .popup_menu_item,{
+	color: #D8D8D8;
+	background-color: #3D4450;
 	cursor: pointer;
 	padding: 5px 6px;
 }
@@ -5135,7 +5144,8 @@ body.v6 .store_nav .popup_block_new .popup_body {
 }
 
 
-.store_nav #genre_flyout .popup_menu .popup_menu_item {
+.store_nav #genre_flyout .popup_menu .popup_menu_item,
+.store_nav #noteworthy_flyout .popup_menu .popup_menu_item {
 
 	border-bottom: 2px solid #ffffff00;
 	padding: 3px 1px;
@@ -5146,16 +5156,13 @@ body.v6 .store_nav .popup_block_new .popup_body {
     white-space: normal;
 }
 
-html:not(.responsive.touch) .store_nav #genre_flyout .popup_menu .popup_genre_expand_content .popup_menu_item {
+html:not(.responsive.touch) .store_nav #genre_flyout .popup_menu .popup_genre_expand_content .popup_menu_item,
+html:not(.responsive.touch) .store_nav #noteworthy_flyout .popup_menu .popup_genre_expand_content .popup_menu_item {
     margin-left: 2px;
 }
 
 .store_nav .popup_menu .popup_menu_item:hover,
 .store_nav .popup_menu .popup_menu_item.focus,
-.creator .popup_menu .popup_menu_item:hover,
-.creator .popup_menu .popup_menu_item.focus,
-.curator .popup_menu .popup_menu_item:hover,
-.curator .popup_menu .popup_menu_item.focus,
 .footer_content .popup_menu .popup_menu_item:hover,
 .footer_content .popup_menu .popup_menu_item.focus,
 .search_area .popup_body .match.hover,
@@ -5163,8 +5170,14 @@ html:not(.responsive.touch) .store_nav #genre_flyout .popup_menu .popup_genre_ex
 .search_area .popup_body .match.focus,
 .search_area .popup_body .match.focus .match_name {
 	color: #fff;
+}
 
-
+.creator .popup_menu .popup_menu_item:hover,
+.creator .popup_menu .popup_menu_item.focus,
+.curator .popup_menu .popup_menu_item:hover,
+.curator .popup_menu .popup_menu_item.focus {
+	color: #fff;
+	background-color: #464d58;
 }
 
 .store_nav .popup_menu .popup_menu_item:hover,
@@ -5193,7 +5206,8 @@ body.v6 .spacer {
 	margin: 0;
 }
 
-body.v6 .store_nav #genre_flyout .popup_menu_subheader {
+body.v6 .store_nav #genre_flyout .popup_menu_subheader,
+body.v6 .store_nav #noteworthy_flyout .popup_menu_subheader {
 	padding: 5px 5px 10px 2px;
 	text-transform: uppercase;
 	letter-spacing: 0.06em;
@@ -5224,11 +5238,6 @@ body.v6 .store_nav #foryou_flyout .popup_menu_subheader {
 	padding: 0px 5px 5px 0px;
 }
 
-body.v6 .store_nav #noteworthy_flyout .popup_menu_subheader {
-	padding: 10px 5px 0px 10px;
-
-}
-
 body.v6 .store_nav #foryou_flyout .popup_menu_subheader {
 	margin-left: 14px;
 }
@@ -5255,7 +5264,8 @@ body.v6 .store_nav .popup_menu_subheader .popup_menu_item {
 	width: 100%;
 }
 
-body.v6 .store_nav #genre_flyout .popup_menu_subheader .popup_menu_item {
+body.v6 .store_nav #genre_flyout .popup_menu_subheader .popup_menu_item,
+body.v6 .store_nav #noteworthy_flyout .popup_menu_subheader .popup_menu_item {
 	margin-left: -2px;
 	border-bottom: 2px solid #ffffff00;
 	color: rgb(228, 227, 227);
@@ -5268,19 +5278,9 @@ body.v6 .store_nav #genre_flyout .popup_menu_subheader .popup_menu_item {
 	transition-timing-function: ease-in-out;
 }
 
-body.v6 .store_nav #noteworthy_flyout .popup_menu_subheader {
-    margin-top: 8px;
-    margin-left: 3px;
-	margin-bottom: 8px;
-	border-bottom: 2px solid #ffffff00;
-	transition-property: border, color;
-	transition-duration: 0.15s;
-	transition-timing-function: ease-in-out;
-}
 
-
-
-body.v6 .store_nav #genre_flyout .popup_menu_subheader .popup_menu_item:hover {
+body.v6 .store_nav #genre_flyout .popup_menu_subheader .popup_menu_item:hover,
+body.v6 .store_nav #noteworthy_flyout .popup_menu_subheader .popup_menu_item:hover {
 	color: white;
 	border-bottom: 2px solid #ffffffff;
 	transition-property: border, color;
@@ -5288,7 +5288,8 @@ body.v6 .store_nav #genre_flyout .popup_menu_subheader .popup_menu_item:hover {
 	transition-timing-function: ease-in-out;
 }
 
-body.v6 .store_nav #genre_flyout .popup_menu_item:hover {
+body.v6 .store_nav #genre_flyout .popup_menu_item:hover,
+body.v6 .store_nav #noteworthy_flyout .popup_menu_item:hover {
 	color: white;
 	border-bottom: 2px solid #ffffffff;
 	transition-property: border, color;
@@ -5297,7 +5298,8 @@ body.v6 .store_nav #genre_flyout .popup_menu_item:hover {
 }
 
 
-body.v6 .store_nav #genre_flyout .popup_menu_subheader.players {
+body.v6 .store_nav #genre_flyout .popup_menu_subheader.players,
+body.v6 .store_nav #noteworthy_flyout .popup_menu_subheader.players {
 	margin-top: 18px;
 	padding-top: 0px;
 }

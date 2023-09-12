@@ -79,7 +79,7 @@ background: -webkit-linear-gradient( left, rgba(27,40,56,0) 5%,rgba(27,40,56,1.0
 }
 
 
-.store_capsule_frame.highlighted_app {	
+.store_capsule_frame.highlighted_app {
 	background: #1b2838;
 	background: -webkit-linear-gradient( top, rgba(0,0,0,1) 5%, rgba(27,40,56,1) 50%);
 	background: linear-gradient( to bottom, rgba(0,0,0,1) 5%, rgba(27,40,56,1) 50%);
@@ -135,7 +135,7 @@ background: -webkit-linear-gradient( left, rgba(27,40,56,0) 5%,rgba(27,40,56,1.0
 .highlighted_app_curator_image img {
 	box-shadow: 0 0 4px #000;
 	border-radius: 2px;
-	
+
 }
 .highlighted_app_curator_image:hover img {
 	box-shadow: 0 0 4px #66c0f4;
@@ -332,10 +332,11 @@ background: -webkit-linear-gradient( top, rgba(255,255,255,0.1) 5%, rgba(255,255
 	border: 1px solid #2a3e59;
 	border-radius: 3px;
 
-	padding: 53px 20px;
+	padding: 50px 20px;
 
 	flex: 1;
 	z-index: 0;
+	height: 20px;
 }
 .curator_page_button:nth-of-type(1) {
 	margin-right: 10px;
