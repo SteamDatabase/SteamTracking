@@ -1092,7 +1092,7 @@
             [Ge, $e] = (0, i.useState)(!1),
             [we, Pe] = (0, i.useState)(!0),
             [Ue, Ye] = (0, i.useState)(!0),
-            [xe, Ke] = (0, i.useState)(!0),
+            [xe, Ke] = (0, i.useState)(!1),
             He = O.L.Get().getHeroList(),
             Be = O.L.Get().getItemList();
           (0, i.useEffect)(() => {
