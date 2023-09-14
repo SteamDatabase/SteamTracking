@@ -254,7 +254,7 @@
             return "-";
         }
       }
-      function $(e) {
+      function L(e) {
         switch (e) {
           case D.PW.RANK_ELIGIBLE:
             return "Rank Eligible";
@@ -270,7 +270,7 @@
             return "Unknown";
         }
       }
-      function L(e) {
+      function G(e) {
         switch (e) {
           case D.n4.VERY_LIKELY:
             return "Very Likely";
@@ -286,7 +286,7 @@
             return "Unknown";
         }
       }
-      function G(e) {
+      function $(e) {
         switch (e) {
           case D._W.DOTA_ACCESS_TOURNAMENT_ADMIN:
             return "Tournament Admin";
@@ -330,42 +330,25 @@
           let t = "";
           const a = `${k.Y.CDN_URL}/apps/dota2/images/`;
           return (
-            (1 & e) > 0 &&
-              (t = `${a}player_reports/button_report_voice_on.png`),
-            (2 & e) > 0 && (t = `${a}player_reports/button_report_text_on.png`),
-            (4 & e) > 0 &&
-              (t = `${a}player_reports/button_report_actions_on.png`),
-            (8 & e) > 0 &&
-              (t = `${a}player_reports/button_report_feeding_on.png`),
-            (16 & e) > 0 &&
+            2 == e && (t = `${a}player_reports/button_report_text_on.png`),
+            3 == e && (t = `${a}player_reports/button_report_voice_on.png`),
+            4 == e && (t = `${a}player_reports/smurf_icon.png`),
+            5 == e && (t = `${a}player_reports/disruptive_icon.png`),
+            6 == e && (t = `${a}player_reports/cheating_icon.png`),
+            7 == e &&
               (t = `${a}player_reports/button_report_pre_game_role.png`),
-            (32 & e) > 0 && (t = `${a}player_reports/button_report_avoid.png`),
-            (128 & e) > 0 &&
-              (t = `${a}player_reports/button_report_post_game_role.png`),
-            (512 & e) > 0 &&
-              (t = `${a}player_reports/button_commend_teaching_on.png`),
-            (4096 & e) > 0 && (t = `${a}player_reports/cheating_icon.png`),
-            (8192 & e) > 0 && (t = `${a}player_reports/disruptive_icon.png`),
-            (16384 & e) > 0 && (t = `${a}player_reports/cheating_icon.png`),
-            (32768 & e) > 0 && (t = `${a}player_reports/smurf_icon.png`),
             t
           );
         },
         te = (e) => {
           let t = "";
           return (
-            (1 & e) > 0 && (t = "Voice abuse"),
-            (2 & e) > 0 && (t = "Text abuse"),
-            (4 & e) > 0 && (t = "Ability abuse"),
-            (8 & e) > 0 && (t = "Feeding"),
-            (16 & e) > 0 && (t = "Pre-game Role"),
-            (32 & e) > 0 && (t = "Avoid Player"),
-            (128 & e) > 0 && (t = "Pre-game Role"),
-            (512 & e) > 0 && (t = "Teaching"),
-            (4096 & e) > 0 && (t = "Cheating"),
-            (8192 & e) > 0 && (t = "Disruptive"),
-            (16384 & e) > 0 && (t = "Enemy Cheating"),
-            (32768 & e) > 0 && (t = "Smurfing"),
+            2 == e && (t = "Text abuse"),
+            3 == e && (t = "Voice abuse"),
+            4 == e && (t = "Smurfing"),
+            5 == e && (t = "Griefing"),
+            6 == e && (t = "Cheating"),
+            7 == e && (t = "Did not play role"),
             t
           );
         },
@@ -449,14 +432,14 @@
               return (
                 0 == e && a.push("None"),
                 (e & D.PW.RANK_ELIGIBLE) > 0 &&
-                  a.push(`${$(D.PW.RANK_ELIGIBLE)}${t}`),
-                (e & D.PW.BATTLECUP) > 0 && a.push(`${$(D.PW.BATTLECUP)}${t}`),
+                  a.push(`${L(D.PW.RANK_ELIGIBLE)}${t}`),
+                (e & D.PW.BATTLECUP) > 0 && a.push(`${L(D.PW.BATTLECUP)}${t}`),
                 (e & D.PW.BAN_WARNING) > 0 &&
                   a.push(
                     i.createElement(
                       "span",
                       { style: { color: x } },
-                      `${$(D.PW.BAN_WARNING)}${t}`,
+                      `${L(D.PW.BAN_WARNING)}${t}`,
                     ),
                   ),
                 (e & D.PW.RETURNING_PLAYER) > 0 &&
@@ -464,7 +447,7 @@
                     i.createElement(
                       "span",
                       { style: { color: H } },
-                      `${$(D.PW.RETURNING_PLAYER)}${t}`,
+                      `${L(D.PW.RETURNING_PLAYER)}${t}`,
                     ),
                   ),
                 (e & D.PW.COMMS_DISRUPTIVE) > 0 &&
@@ -472,7 +455,7 @@
                     i.createElement(
                       "span",
                       { style: { color: x } },
-                      `${$(D.PW.COMMS_DISRUPTIVE)}${t}`,
+                      `${L(D.PW.COMMS_DISRUPTIVE)}${t}`,
                     ),
                   ),
                 i.createElement("div", null, a)
@@ -597,34 +580,34 @@
                   return i.createElement(
                     "span",
                     { style: { color: x } },
-                    L(D.n4.VERY_LIKELY),
+                    G(D.n4.VERY_LIKELY),
                   );
                 case D.n4.SOMEWHAT_LIKELY:
                   return i.createElement(
                     "span",
                     { style: { color: K } },
-                    L(D.n4.SOMEWHAT_LIKELY),
+                    G(D.n4.SOMEWHAT_LIKELY),
                   );
                 case D.n4.UNCLEAR:
                   return i.createElement(
                     "span",
                     { style: { color: H } },
-                    L(D.n4.UNCLEAR),
+                    G(D.n4.UNCLEAR),
                   );
                 case D.n4.SOMEWHAT_UNLIKELY:
                   return i.createElement(
                     "span",
                     { style: {} },
-                    L(D.n4.SOMEWHAT_UNLIKELY),
+                    G(D.n4.SOMEWHAT_UNLIKELY),
                   );
                 case D.n4.VERY_UNLIKELY:
                   return i.createElement(
                     "span",
                     { style: {} },
-                    L(D.n4.VERY_UNLIKELY),
+                    G(D.n4.VERY_UNLIKELY),
                   );
                 default:
-                  return i.createElement("span", null, L(D.n4.INVALID));
+                  return i.createElement("span", null, G(D.n4.INVALID));
               }
             },
           },
@@ -809,7 +792,7 @@
         ce = [
           {
             key: "beta_access_flags",
-            displayName: G(D._W.DOTA_ACCESS_TOURNAMENT_ADMIN),
+            displayName: $(D._W.DOTA_ACCESS_TOURNAMENT_ADMIN),
             formatFunction: (e = 0) =>
               e & D._W.DOTA_ACCESS_TOURNAMENT_ADMIN
                 ? i.createElement("div", { style: { color: B } }, "YES")
@@ -817,7 +800,7 @@
           },
           {
             key: "beta_access_flags",
-            displayName: G(D._W.DOTA_ACCESS_TOURNAMENT_BROADCASTER),
+            displayName: $(D._W.DOTA_ACCESS_TOURNAMENT_BROADCASTER),
             formatFunction: (e = 0) =>
               e & D._W.DOTA_ACCESS_TOURNAMENT_BROADCASTER
                 ? i.createElement("div", { style: { color: B } }, "YES")
@@ -1093,7 +1076,7 @@
           });
         },
         ve = (e) => {
-          var t, a, l, s, $, L, G;
+          var t, a, l, s, L, G, $;
           const w = (0, o.UO)(),
             U = null == w ? void 0 : w.id,
             [B, pe] = (0, i.useState)(null),
@@ -1105,8 +1088,8 @@
             [Oe, De] = (0, i.useState)(!1),
             [Ce, Se] = (0, i.useState)(!1),
             [Fe, be] = (0, i.useState)(!0),
-            [Me, $e] = (0, i.useState)(!0),
-            [Le, Ge] = (0, i.useState)(!1),
+            [Me, Le] = (0, i.useState)(!0),
+            [Ge, $e] = (0, i.useState)(!1),
             [we, Pe] = (0, i.useState)(!0),
             [Ue, Ye] = (0, i.useState)(!0),
             [xe, Ke] = (0, i.useState)(!0),
@@ -1182,7 +1165,7 @@
                   !(!Me && e.lobby_type == D.Eq.CASUAL_MATCH) &&
                   !(!Fe && e.lobby_type == D.Eq.COMPETITIVE_MATCH) &&
                   !(
-                    !Le &&
+                    !Ge &&
                     ![
                       D.Eq.CASUAL_MATCH,
                       D.Eq.COMPETITIVE_MATCH,
@@ -1193,7 +1176,7 @@
                   !(!Ue && !e.rankwassolo),
               )),
                 ke(e);
-            }, [fe, Fe, Me, Le, we, Ue]);
+            }, [fe, Fe, Me, Ge, we, Ue]);
           let We = null;
           if (
             (U
@@ -1432,7 +1415,7 @@
                       type: "checkbox",
                       name: "unranked",
                       id: "unranked",
-                      onChange: () => $e(!Me),
+                      onChange: () => Le(!Me),
                       checked: Me,
                     }),
                     i.createElement(
@@ -1679,7 +1662,7 @@
                       : c.languagechange,
                   v = [],
                   f = [];
-                for (const e of s) 3840 & e.reportflags ? v.push(e) : f.push(e);
+                for (const e of s) f.push(e);
                 const A = [];
                 return (
                   d.length &&
@@ -1821,8 +1804,8 @@
                               "tbody",
                               null,
                               v.map((e) => {
-                                const t = ee(e.reportflags),
-                                  a = te(e.reportflags);
+                                const t = ee(e.reportreason),
+                                  a = te(e.reportreason);
                                 return i.createElement(
                                   "tr",
                                   { key: `${e.reporteraccountid}` },
@@ -1873,17 +1856,12 @@
                                 i.createElement(
                                   "th",
                                   { align: "left" },
-                                  "Report",
+                                  "Reason",
                                 ),
                                 i.createElement(
                                   "th",
                                   { align: "left" },
-                                  "Player",
-                                ),
-                                i.createElement(
-                                  "th",
-                                  { align: "left" },
-                                  "Comment",
+                                  "Reporter",
                                 ),
                               ),
                             ),
@@ -1891,8 +1869,8 @@
                               "tbody",
                               null,
                               f.map((e) => {
-                                const t = ee(e.reportflags),
-                                  a = te(e.reportflags);
+                                const t = ee(e.reportreason),
+                                  a = te(e.reportreason);
                                 return i.createElement(
                                   "tr",
                                   { key: `${e.reporteraccountid}` },
@@ -1907,7 +1885,6 @@
                                     null,
                                     e.reporteraccountid,
                                   ),
-                                  i.createElement("td", null, e.comment || ""),
                                 );
                               }),
                             ),
@@ -2709,10 +2686,10 @@
                     { className: Y().TeamsInfoInfoOuterGrid },
                     i.createElement("br", null),
                     i.createElement("h2", { className: Y().Header }, "Teams"),
-                    (null === ($ = null == B ? void 0 : B.persona) ||
-                    void 0 === $
+                    (null === (L = null == B ? void 0 : B.persona) ||
+                    void 0 === L
                       ? void 0
-                      : $.teams) &&
+                      : L.teams) &&
                       de.map((e) =>
                         i.createElement(
                           i.Fragment,
@@ -2736,10 +2713,10 @@
                           ),
                         ),
                       ),
-                    !(null === (L = null == B ? void 0 : B.persona) ||
-                    void 0 === L
+                    !(null === (G = null == B ? void 0 : B.persona) ||
+                    void 0 === G
                       ? void 0
-                      : L.teams) &&
+                      : G.teams) &&
                       i.createElement(
                         i.Fragment,
                         null,
@@ -2859,10 +2836,10 @@
                     null,
                     i.createElement("tr", null, i.createElement("td", null)),
                     ge(
-                      null === (G = null == B ? void 0 : B.persona) ||
-                        void 0 === G
+                      null === ($ = null == B ? void 0 : B.persona) ||
+                        void 0 === $
                         ? void 0
-                        : G.banhistory,
+                        : $.banhistory,
                     ),
                   ),
                 ),
@@ -2926,8 +2903,8 @@
                     type: "checkbox",
                     name: "othermode",
                     id: "othermode",
-                    onChange: () => Ge(!Le),
-                    checked: Le,
+                    onChange: () => $e(!Ge),
+                    checked: Ge,
                   }),
                   i.createElement(
                     "label",
@@ -3532,8 +3509,8 @@
             [f, h] = (0, c.useState)(!1),
             [k, F] = (0, c.useState)({}),
             [b, M] = (0, c.useState)(!1),
-            [$, L] = (0, c.useState)(!1),
-            [G, w] = (0, c.useState)({}),
+            [L, G] = (0, c.useState)(!1),
+            [$, w] = (0, c.useState)({}),
             [P, U] = (0, c.useState)([]),
             [Y, x] = (0, c.useState)(!0),
             [K, H] = (0, c.useState)([]);
@@ -3672,7 +3649,7 @@
               try {
                 W();
               } catch (e) {
-                console.log("Could not fetch single team info."), L(!0);
+                console.log("Could not fetch single team info."), G(!0);
               }
             }, [t]),
             (0, c.useEffect)(() => {
@@ -3718,7 +3695,7 @@
                   });
                 })();
               } catch (e) {
-                console.log("Could not fetch single team info."), L(!0);
+                console.log("Could not fetch single team info."), G(!0);
               }
             }, [t]),
             (0, c.useEffect)(() => {
@@ -3820,7 +3797,7 @@
                 "Error loading registered teams...",
               )),
             b &&
-              (0 == Object.keys(k).length || $) &&
+              (0 == Object.keys(k).length || L) &&
               (j = c.createElement(
                 "div",
                 null,
@@ -4317,8 +4294,8 @@
                       "div",
                       null,
                       e.formatFunction
-                        ? e.formatFunction.call(null, G[e.key])
-                        : JSON.stringify(G[e.key] || "", null, 2).replace(
+                        ? e.formatFunction.call(null, $[e.key])
+                        : JSON.stringify($[e.key] || "", null, 2).replace(
                             /['"]+/g,
                             "",
                           ),
