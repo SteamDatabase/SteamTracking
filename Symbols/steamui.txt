@@ -265,6 +265,7 @@
  FSMakeFSRefUnicode
  FSPathMakeRef
  FSRefMakePath
+ FreeImageYUV
  Gestalt
  GetCPUInformation()
  GetFrameFromVideo
@@ -420,11 +421,11 @@
  SCDynamicStoreKeyCreateProxies
  SDL_AddEventWatch
  SDL_AddGamepadMapping
- SDL_CloseAudioDevice
  SDL_CloseGamepad
  SDL_CloseJoystick
  SDL_CreateWindow
  SDL_DelEventWatch
+ SDL_DestroyAudioStream
  SDL_DestroyWindow
  SDL_DisableScreenSaver
  SDL_EnableScreenSaver
@@ -435,8 +436,13 @@
  SDL_GL_MakeCurrent
  SDL_GL_SetAttribute
  SDL_GL_SwapWindow
+ SDL_GetAudioCaptureDevices
+ SDL_GetAudioDeviceFormat
  SDL_GetAudioDeviceName
- SDL_GetAudioDeviceSpec
+ SDL_GetAudioOutputDevices
+ SDL_GetAudioStreamAvailable
+ SDL_GetAudioStreamData
+ SDL_GetAudioStreamDevice
  SDL_GetDesktopDisplayMode
  SDL_GetDisplayBounds
  SDL_GetDisplays
@@ -465,11 +471,9 @@
  SDL_GetJoystickProduct
  SDL_GetJoystickVendor
  SDL_GetJoysticks
- SDL_GetNumAudioDevices
  SDL_GetNumJoystickAxes
  SDL_GetPlatform
  SDL_GetPrimaryDisplay
- SDL_GetQueuedAudioSize
  SDL_GetRectIntersection
  SDL_GetRectUnion
  SDL_GetRevision
@@ -480,14 +484,14 @@
  SDL_InitSubSystem
  SDL_IsGamepad
  SDL_LockJoysticks
- SDL_OpenAudioDevice
+ SDL_OpenAudioDeviceStream
  SDL_OpenGamepad
  SDL_OpenJoystick
- SDL_PlayAudioDevice
- SDL_QueueAudio
+ SDL_PutAudioStreamData
  SDL_QuitSubSystem
  SDL_RaiseWindow
  SDL_ReloadGamepadMappings
+ SDL_ResumeAudioDevice
  SDL_SetGamepadMapping
  SDL_SetHint
  SDL_SetWindowPosition
@@ -1793,10 +1797,12 @@
  kRgbH709Constants
  kRgbI601Constants
  kRgbJPEGConstants
+ kYuv2020Constants
  kYuvF709Constants
  kYuvH709Constants
  kYuvI601Constants
  kYuvJPEGConstants
+ kYuvV2020Constants
  kevent
  kill
  kqueue

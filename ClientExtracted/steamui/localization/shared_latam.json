@@ -1746,11 +1746,9 @@
     "Sale_Reservation_CancelAuto": "Si no finalizas la compra antes de la fecha de vencimiento indicada arriba, cancelaremos tu reserva y te reembolsaremos el depósito.",
     "Sale_Reservation_Expired": "La reserva caducó.",
     "Sale_Reservation_ExpectedDate": "Disponibilidad estimada para hacer pedidos:",
-    "__STEAM_DECK_IN_STOCK__": {
-        "Sale_Reservation_ExpectedShipDate": "Fecha esperada de envío:",
-        "Sale_Reservation_ExpectedDeliveryDate": "Fecha de entrega estimada:",
-        "dummy_for_ease_of_use": "dummy"
-    },
+    "Sale_Reservation_ExpectedShipDate": "Fecha esperada de envío:",
+    "Sale_Reservation_ExpectedDeliveryDate": "Fecha de entrega estimada:",
+    "dummy_for_ease_of_use": "dummy",
     "Sale_Reservation_YourExpectedDate": "Puedes realizar tu pedido a partir de:",
     "Sale_Reservation_Komodo": "Steam Deck puede adquirirse en Japón, Corea del Sur, Taiwán y Hong Kong a través de Komodo en <1>steamdeck.komodo.jp</1>.",
     "Sale_BrowserSortOption_TopWishlisted": "Próximos juegos más deseados",
@@ -2333,7 +2331,7 @@
     "DiscoveryQueue_Error_Login": "Debes iniciar sesión en Steam para poder abrir la nueva lista de descubrimientos.",
     "DiscoveryQueue_Error_Login_Title": "Iniciar sesión",
     "DiscoveryQueue_LabsHeader": "<1>LABORATORIOS DE STEAM</1> <2>Déjanos tus comentarios</2>",
-    "DiscoveryQueue_WidgetHeader": "Una nueva forma de descubrir lo más vendido, lo nuevo y productos similares a lo que juegas y usas en Steam.",
+    "DiscoveryQueue_WidgetHeader": "Explora tu lista de productos más vendidos, nuevos y similares a los que juegas y usas en Steam.",
     "DiscoveryQueue_WidgetHeader_LoggedOut": "Inicia sesión para descubrir lo más vendido, lo nuevo y productos similares a lo que juegas y usas en Steam.",
     "DiscoveryQueue_LaunchAction": "Iniciar la lista de descubrimientos",
     "DiscoveryQueue_SalePage_Exhausted": "Completaste esta lista de descubrimientos. Vuelve más tarde para ver si hay nuevos juegos por descubrir.",

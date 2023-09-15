@@ -2333,7 +2333,7 @@
   "DiscoveryQueue_Error_Login": "Debes iniciar sesión en Steam para poder abrir la nueva lista de descubrimientos.",
   "DiscoveryQueue_Error_Login_Title": "Iniciar sesión",
   "DiscoveryQueue_LabsHeader": "<1>LABORATORIOS DE STEAM</1> <2>Déjanos tus comentarios</2>",
-  "DiscoveryQueue_WidgetHeader": "Una nueva forma de descubrir lo más vendido, lo nuevo y productos similares a lo que juegas y usas en Steam.",
+  "DiscoveryQueue_WidgetHeader": "Explora tu lista de productos más vendidos, nuevos y similares a los que juegas y usas en Steam.",
   "DiscoveryQueue_WidgetHeader_LoggedOut": "Inicia sesión para descubrir lo más vendido, lo nuevo y productos similares a lo que juegas y usas en Steam.",
   "DiscoveryQueue_LaunchAction": "Iniciar la lista de descubrimientos",
   "DiscoveryQueue_SalePage_Exhausted": "Completaste esta lista de descubrimientos. Vuelve más tarde para ver si hay nuevos juegos por descubrir.",
@@ -2636,5 +2636,9 @@
   "NotificationsList_EmptyTitle": "En este momento no tienes notificaciones.",
   "NotificationsList_EmptyTitle_New": "En este momento no tienes notificaciones nuevas.",
   "NotificationsList_EmptyBody": "Aquí podrás ver las notificaciones de Steam sobre tu lista de deseados, tus amigos, tus juegos, el inventario y mucho más.",
-  "SDRPOPID_GenericCode": "Centro de datos \"%1$s\""
+  "SDRPOPID_GenericCode": "Centro de datos \"%1$s\"",
+  "__FAMILY_GROUPS__": {
+    "SteamNotifications_FamilyInviteTitle": "Invitación familiar",
+    "SteamNotifications_FamilyInviteBody": "%1$s te envió una invitación a un grupo familiar"
+  }
 }

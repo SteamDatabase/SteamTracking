@@ -217,6 +217,7 @@
  KBGetLayoutType
  LMGetKbdType
  LSOpenCFURLRef
+ MTLCopyAllDevices
  MTLCreateSystemDefaultDevice
  NSApp
  NSAppKitVersionNumber
@@ -321,6 +322,8 @@
  T SDL_AtomicUnlock
  T SDL_AttachVirtualJoystick
  T SDL_AttachVirtualJoystickEx
+ T SDL_BindAudioStream
+ T SDL_BindAudioStreams
  T SDL_BlitSurface
  T SDL_BlitSurfaceScaled
  T SDL_BlitSurfaceUnchecked
@@ -333,7 +336,6 @@
  T SDL_ClearComposition
  T SDL_ClearError
  T SDL_ClearHints
- T SDL_ClearQueuedAudio
  T SDL_CloseAudioDevice
  T SDL_CloseGamepad
  T SDL_CloseJoystick
@@ -376,7 +378,6 @@
  T SDL_DelHintCallback
  T SDL_Delay
  T SDL_DelayNS
- T SDL_DequeueAudio
  T SDL_DestroyAudioStream
  T SDL_DestroyCondition
  T SDL_DestroyCursor
@@ -440,13 +441,16 @@
  T SDL_GamepadSensorEnabled
  T SDL_GetAssertionHandler
  T SDL_GetAssertionReport
+ T SDL_GetAudioCaptureDevices
+ T SDL_GetAudioDeviceFormat
  T SDL_GetAudioDeviceName
- T SDL_GetAudioDeviceSpec
- T SDL_GetAudioDeviceStatus
  T SDL_GetAudioDriver
+ T SDL_GetAudioOutputDevices
  T SDL_GetAudioStreamAvailable
  T SDL_GetAudioStreamData
+ T SDL_GetAudioStreamDevice
  T SDL_GetAudioStreamFormat
+ T SDL_GetAudioStreamFrequencyRatio
  T SDL_GetBasePath
  T SDL_GetCPUCacheLineSize
  T SDL_GetCPUCount
@@ -460,7 +464,6 @@
  T SDL_GetCurrentVideoDriver
  T SDL_GetCursor
  T SDL_GetDefaultAssertionHandler
- T SDL_GetDefaultAudioInfo
  T SDL_GetDefaultCursor
  T SDL_GetDesktopDisplayMode
  T SDL_GetDisplayBounds
@@ -561,7 +564,6 @@
  T SDL_GetMouseState
  T SDL_GetNaturalDisplayOrientation
  T SDL_GetNumAllocations
- T SDL_GetNumAudioDevices
  T SDL_GetNumAudioDrivers
  T SDL_GetNumGamepadMappings
  T SDL_GetNumGamepadTouchpadFingers
@@ -584,7 +586,6 @@
  T SDL_GetPreferredLocales
  T SDL_GetPrimaryDisplay
  T SDL_GetPrimarySelectionText
- T SDL_GetQueuedAudioSize
  T SDL_GetRGB
  T SDL_GetRGBA
  T SDL_GetRealGamepadInstanceType
@@ -630,6 +631,7 @@
  T SDL_GetSensorType
  T SDL_GetSensors
  T SDL_GetShapedWindowMode
+ T SDL_GetSilenceValueForFormat
  T SDL_GetSurfaceAlphaMod
  T SDL_GetSurfaceBlendMode
  T SDL_GetSurfaceClipRect
@@ -734,6 +736,7 @@
  T SDL_HideWindow
  T SDL_Init
  T SDL_InitSubSystem
+ T SDL_IsAudioDevicePaused
  T SDL_IsGamepad
  T SDL_IsJoystickVirtual
  T SDL_IsShapedWindow
@@ -750,8 +753,9 @@
  T SDL_LoadFile_RW
  T SDL_LoadFunction
  T SDL_LoadObject
+ T SDL_LoadWAV
  T SDL_LoadWAV_RW
- T SDL_LockAudioDevice
+ T SDL_LockAudioStream
  T SDL_LockJoysticks
  T SDL_LockMutex
  T SDL_LockRWLockForReading
@@ -793,13 +797,13 @@
  T SDL_OnApplicationWillResignActive
  T SDL_OnApplicationWillTerminate
  T SDL_OpenAudioDevice
+ T SDL_OpenAudioDeviceStream
  T SDL_OpenGamepad
  T SDL_OpenJoystick
  T SDL_OpenSensor
  T SDL_OpenURL
  T SDL_PauseAudioDevice
  T SDL_PeepEvents
- T SDL_PlayAudioDevice
  T SDL_PollEvent
  T SDL_PostSemaphore
  T SDL_PremultiplyAlpha
@@ -807,7 +811,6 @@
  T SDL_PushEvent
  T SDL_PutAudioStreamData
  T SDL_QueryTexture
- T SDL_QueueAudio
  T SDL_Quit
  T SDL_QuitSubSystem
  T SDL_RWFromConstMem
@@ -820,12 +823,18 @@
  T SDL_RWtell
  T SDL_RWwrite
  T SDL_RaiseWindow
- T SDL_ReadBE16
- T SDL_ReadBE32
- T SDL_ReadBE64
- T SDL_ReadLE16
- T SDL_ReadLE32
- T SDL_ReadLE64
+ T SDL_ReadS16BE
+ T SDL_ReadS16LE
+ T SDL_ReadS32BE
+ T SDL_ReadS32LE
+ T SDL_ReadS64BE
+ T SDL_ReadS64LE
+ T SDL_ReadU16BE
+ T SDL_ReadU16LE
+ T SDL_ReadU32BE
+ T SDL_ReadU32LE
+ T SDL_ReadU64BE
+ T SDL_ReadU64LE
  T SDL_ReadU8
  T SDL_RegisterEvents
  T SDL_ReloadGamepadMappings
@@ -855,6 +864,7 @@
  T SDL_ResetHints
  T SDL_ResetKeyboard
  T SDL_RestoreWindow
+ T SDL_ResumeAudioDevice
  T SDL_RumbleGamepad
  T SDL_RumbleGamepadTriggers
  T SDL_RumbleJoystick
@@ -868,7 +878,11 @@
  T SDL_SendGamepadEffect
  T SDL_SendJoystickEffect
  T SDL_SetAssertionHandler
+ T SDL_SetAudioPostmixCallback
  T SDL_SetAudioStreamFormat
+ T SDL_SetAudioStreamFrequencyRatio
+ T SDL_SetAudioStreamGetCallback
+ T SDL_SetAudioStreamPutCallback
  T SDL_SetClipboardData
  T SDL_SetClipboardText
  T SDL_SetCursor
@@ -945,6 +959,7 @@
  T SDL_ShowMessageBox
  T SDL_ShowSimpleMessageBox
  T SDL_ShowWindow
+ T SDL_ShowWindowSystemMenu
  T SDL_SignalCondition
  T SDL_SoftStretch
  T SDL_SoftStretchLinear
@@ -959,8 +974,10 @@
  T SDL_TryLockRWLockForReading
  T SDL_TryLockRWLockForWriting
  T SDL_TryWaitSemaphore
+ T SDL_UnbindAudioStream
+ T SDL_UnbindAudioStreams
  T SDL_UnloadObject
- T SDL_UnlockAudioDevice
+ T SDL_UnlockAudioStream
  T SDL_UnlockJoysticks
  T SDL_UnlockMutex
  T SDL_UnlockRWLock
@@ -989,12 +1006,18 @@
  T SDL_WarpMouseGlobal
  T SDL_WarpMouseInWindow
  T SDL_WasInit
- T SDL_WriteBE16
- T SDL_WriteBE32
- T SDL_WriteBE64
- T SDL_WriteLE16
- T SDL_WriteLE32
- T SDL_WriteLE64
+ T SDL_WriteS16BE
+ T SDL_WriteS16LE
+ T SDL_WriteS32BE
+ T SDL_WriteS32LE
+ T SDL_WriteS64BE
+ T SDL_WriteS64LE
+ T SDL_WriteU16BE
+ T SDL_WriteU16LE
+ T SDL_WriteU32BE
+ T SDL_WriteU32LE
+ T SDL_WriteU64BE
+ T SDL_WriteU64LE
  T SDL_WriteU8
  T SDL_abs
  T SDL_acos
@@ -1236,6 +1259,7 @@
  kCFBooleanFalse
  kCFBooleanTrue
  kCFCopyStringDictionaryKeyCallBacks
+ kCFCoreFoundationVersionNumber
  kCFRunLoopDefaultMode
  kCFTypeArrayCallBacks
  kCFTypeDictionaryKeyCallBacks

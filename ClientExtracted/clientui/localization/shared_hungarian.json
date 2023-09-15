@@ -1755,7 +1755,7 @@
   "Sale_Reservation_Komodo": "A Steam Deck már megvásárolható Japánban, Dél-Koreában, Tajvanon és Hongkongban a Komodón keresztül, a <1>steamdeck.komodo.jp</1> weboldalon.",
   "Sale_BrowserSortOption_TopWishlisted": "Legtöbbet kívánságlistázott közelgő játékok",
   "Sale_BrowserSortOption_TopWishlisted_ttip": "Közelgő játékok összes (minden idők) kívánságlistázás-száma alapján rendezve. Csak a Steamen még meg nem jelent játékokat tartalmaz.",
-  "Sale_BrowserSortOption_TrendingWishlisted": "Népszerű közelgők",
+  "Sale_BrowserSortOption_TrendingWishlisted": "Felkapott közelgő",
   "Sale_BrowserSortOption_TrendingWishlisted_ttip": "Közelgő játékok felkapottságra vagy közelmúltbeli kívánságlistázásra rendezve. Csak a Steamen még meg nem jelent játékokat tartalmaz.",
   "Sale_BrowserSortOption_PopularComingSoon": "Hamarosan megjelenő",
   "Sale_BrowserSortOption_PopularComingSoon_ttip": "Gyakran kívánságlistázott játékok, megjelenési dátumra rendezve. Csak a Steamen még meg nem jelent játékokat tartalmaz.",
@@ -2332,7 +2332,7 @@
   "DiscoveryQueue_Error_Login": "Az új felfedezési várólista megnyitásához be kell lépned a Steambe.",
   "DiscoveryQueue_Error_Login_Title": "Belépés",
   "DiscoveryQueue_LabsHeader": "<1>STEAM LABOR</1> <2>Visszajelzés küldése</2>",
-  "DiscoveryQueue_WidgetHeader": "Új mód kelendő, új és az általad Steamen játszottakhoz és használtakhoz hasonló termékek felfedezésére.",
+  "DiscoveryQueue_WidgetHeader": "Fedezd fel a legkelendőbb, új és az általad a Steamen játszottakhoz és használtakhoz hasonló termékek várólistáját.",
   "DiscoveryQueue_WidgetHeader_LoggedOut": "Jelentkezz be kelendő, új és az általad Steamen játszottakhoz és használtakhoz hasonló termékek felfedezéséhez.",
   "DiscoveryQueue_LaunchAction": "Felfedezési várólista indítása",
   "DiscoveryQueue_SalePage_Exhausted": "Befejezted ezt a felfedezési várólistát. Kérjük, nézz vissza később új, felfedezésre váró játékokért.",
@@ -2635,5 +2635,9 @@
   "NotificationsList_EmptyTitle": "Jelenleg nincsenek értesítéseid.",
   "NotificationsList_EmptyTitle_New": "Jelenleg nincsenek új értesítéseid.",
   "NotificationsList_EmptyBody": "Itt fogod látni a Steam értesítéseket a kívánságlistád, barátaid, játékaid, raktárad és egyebek kapcsán.",
-  "SDRPOPID_GenericCode": "„%1$s” adatközpont"
+  "SDRPOPID_GenericCode": "„%1$s” adatközpont",
+  "__FAMILY_GROUPS__": {
+    "SteamNotifications_FamilyInviteTitle": "Családi meghívó",
+    "SteamNotifications_FamilyInviteBody": "%1$s családi meghívót küldött neked."
+  }
 }

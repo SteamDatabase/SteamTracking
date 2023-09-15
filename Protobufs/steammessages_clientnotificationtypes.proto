@@ -46,6 +46,7 @@ enum EClientNotificationType {
 	k_EClientNotificationType_RemoteClientConnection = 41;
 	k_EClientNotificationType_RemoteClientStartStream = 42;
 	k_EClientNotificationType_StreamingClientConnection = 43;
+	k_EClientNotificationType_FamilyInvite = 44;
 }
 
 enum ESystemUpdateNotificationType {

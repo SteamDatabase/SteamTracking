@@ -840,6 +840,8 @@ Công đoạn này nên hoàn thành dưới một phút."
 "SteamUI_Selection_Ukrainian"			"Українська (Ukraina)"
 "SteamUI_Selection_Latam_Spanish"	"Español-Latinoamérica (Tây Ban Nha cho Mỹ Latin)"
 "SteamUI_Selection_Vietnamese"		"Tiếng Việt (Vietnamese)"
+"SteamUI_Selection_Indonesian"		"Bahasa Indonesia (Tiếng Indonesia)"
+
 
 
 "SteamUI_Modem_33_6k"		"Modem - 33.6kbps"
@@ -1032,7 +1034,7 @@ Công đoạn này nên hoàn thành dưới một phút."
 "SteamUI_ValveSurvey_Summary_KernelVersion"				"Phiên bản Kernel: %s1"
 "SteamUI_ValveSurvey_Summary_XServerVendorName"				"Nhà cung cấp máy chủ X: %s1"
 "SteamUI_ValveSurvey_Summary_XServerVendorRelease"			"Phiên bản máy chủ X: %s1"
-"SteamUI_ValveSurvey_Summary_XWindowManagerName"			"Phần mềm quản lý cửa sổ X: %s1"
+"SteamUI_ValveSurvey_Summary_XWindowManagerName"			"Window Manager cho X11: %s1"
 "SteamUI_ValveSurvey_Summary_SteamRuntimeVersion"			"Phiên bản Steam Runtime: %s1"
 
 "SteamUI_ValveSurvey_Summary_SoundCard"						"Thiết bị âm thanh: %s1"
@@ -4392,14 +4394,6 @@ Cuộc thử nghiệm beta đã kết thúc - xin vui lòng khởi động lại
 "Steam_SystemRequirementWarning_Text" "Hệ thống của bạn không đáp ứng đủ các yêu cầu cấu hình tối thiểu của %game%."
 "Steam_SystemRequirementWarning_Link" "Hiện yêu cầu hệ thống"
 
-"Notification_RemoteClientTitle"	"Steam Remote Play"
-"Notification_RemoteClientConnected"	"%machine% đã sẵn sàng để phát sóng"
-"Notification_RemoteClientDisconnected"	"%machine% không còn khả dụng"
-
-"Notification_StreamingTitle"	"Steam Remote Play"
-"Notification_StreamingStarted"	"Bắt đầu phát sóng từ %hostname% đến %machine%"
-"Notification_StreamingStopped"	"Dừng phát sóng đến %machine%"
-
 "steam_menu_view_music_details" "Thông tin nhạc"
 "steam_menu_view_musicplayer" "Trình phát nhạc"
 "Music_Player_WindowTitle" "Trình phát nhạc"
@@ -4849,12 +4843,12 @@ Cuộc thử nghiệm beta đã kết thúc - xin vui lòng khởi động lại
 "Steam_DualSense_FirmwareUpdate_DisableNotification"	"Không hiện lần sau"
 
 "RescueDialog_Title" "Steamwebhelper không phản hồi"
-"RescueDialog_Explanation" "steamwebhelper.exe, một bộ phận Steam thiết yếu, không phản hồi. Giao diện Steam sẽ không dùng được. Nhấp <a href=steam://openurl_external/https://help.steampowered.com/en/faqs/view/6C3E-9504-CC20-AF49>vào đây</a> để biết thêm chi tiết."
+"RescueDialog_Explanation" "steamwebhelper, một bộ phận Steam thiết yếu, không phản hồi. Giao diện Steam sẽ không dùng được. Nhấp <a href=steam://openurl_external/https://help.steampowered.com/en/faqs/view/6C3E-9504-CC20-AF49>vào đây</a> để biết thêm chi tiết."
 "RescueDialog_RadioHeader" "Cùng khắc phục sự cố nào:"
 "RescueDialog_RestartSteam" "Khởi động lại Steam"
 "RescueDialog_RestartSteam_NoGPU" "Khởi động lại Steam sau khi tắt tăng tốc dựng đồ họa qua GPU"
 "RescueDialog_RestartSteam_NoSandbox" "Khởi động lại Steam sau khi tắt ảo hóa trình duyệt"
-"RescueDialog_RestartSteamWebHelper" "Khởi động lại steamwebhelper.exe"
+"RescueDialog_RestartSteamWebHelper" "Khởi động lại steamwebhelper"
 "RescueDialog_ExitSteam" "Thoát Steam"
 
 "DownloadRegion_default"				 "Không rõ"

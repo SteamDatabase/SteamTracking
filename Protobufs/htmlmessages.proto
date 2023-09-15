@@ -709,14 +709,6 @@ message CMsgZoomToFocusedElement {
 	optional uint32 browser_handle = 1;
 }
 
-message CMsgCloseFullScreenFlashIfOpen {
-	optional uint32 browser_handle = 1;
-}
-
-message CMsgPauseFullScreenFlashMovieIfOpen {
-	optional uint32 browser_handle = 1;
-}
-
 message CMsgFocusedNodeText {
 	optional uint32 browser_handle = 1;
 }

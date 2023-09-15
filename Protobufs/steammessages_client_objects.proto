@@ -633,3 +633,13 @@ message CMsgWebUITransportInfo {
 	optional uint32 port = 1;
 	optional string auth_key = 2;
 }
+
+message CMsgClientShaderHitCacheEntry {
+	optional bytes key_sha = 1;
+	optional bytes code_sha = 2;
+	optional uint64 time_last_reported = 3;
+}
+
+message CMsgClientShaderHitCache {
+	repeated .CMsgClientShaderHitCacheEntry entries = 1;
+}

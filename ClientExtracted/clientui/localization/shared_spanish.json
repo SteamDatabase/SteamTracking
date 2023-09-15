@@ -1756,7 +1756,7 @@
   "Sale_BrowserSortOption_TopWishlisted": "Juegos más deseados que saldrán próximamente",
   "Sale_BrowserSortOption_TopWishlisted_ttip": "Próximos juegos ordenados por el total (histórico) de inclusiones en listas de deseados. Solo se incluyen juegos que aún no se han lanzado en Steam.",
   "Sale_BrowserSortOption_TrendingWishlisted": "Próximos lanzamientos populares",
-  "Sale_BrowserSortOption_TrendingWishlisted_ttip": "Próximos juegos ordenados por popularidad o el total de inclusiones en listas de deseados. Solo incluye juegos que aún no se han lanzado en Steam.",
+  "Sale_BrowserSortOption_TrendingWishlisted_ttip": "Próximos lanzamientos ordenados por popularidad o el total de inclusiones en listas de deseados. Solo incluye juegos que aún no se han lanzado en Steam.",
   "Sale_BrowserSortOption_PopularComingSoon": "Próximo lanzamiento",
   "Sale_BrowserSortOption_PopularComingSoon_ttip": "Juegos incluidos en muchas listas de deseados, ordenados por fecha de lanzamiento. Solo incluye juegos que aún no se han lanzado en Steam.",
   "Sale_BrowserSortOption_PopularUpcoming": "Próximos lanzamientos populares",
@@ -2333,7 +2333,7 @@
   "DiscoveryQueue_Error_Login": "Tienes que haber iniciado sesión en Steam antes de poder abrir la nueva lista de descubrimientos.",
   "DiscoveryQueue_Error_Login_Title": "Iniciar sesión",
   "DiscoveryQueue_LabsHeader": "<1>LABORATORIOS DE STEAM</1> <2>Déjanos tus comentarios</2>",
-  "DiscoveryQueue_WidgetHeader": "Una nueva forma de descubrir lo más vendido, lo nuevo y productos similares a lo que juegas y usas en Steam.",
+  "DiscoveryQueue_WidgetHeader": "Explora tu lista de productos más vendidos, nuevos y similares a los que juegas y usas en Steam.",
   "DiscoveryQueue_WidgetHeader_LoggedOut": "Inicia sesión para descubrir lo más vendido, lo nuevo y productos similares a lo que juegas y usas en Steam.",
   "DiscoveryQueue_LaunchAction": "Iniciar la lista de descubrimientos",
   "DiscoveryQueue_SalePage_Exhausted": "Has completado esta lista de descubrimientos. Vuelve más tarde para ver si hay nuevos juegos por descubrir.",
@@ -2636,5 +2636,9 @@
   "NotificationsList_EmptyTitle": "En este momento no tienes notificaciones.",
   "NotificationsList_EmptyTitle_New": "En este momento no tienes notificaciones nuevas.",
   "NotificationsList_EmptyBody": "Aquí es donde puedes ver las notificaciones de Steam sobre la lista de deseados, tus amigos, tus juegos, el inventario, etc.",
-  "SDRPOPID_GenericCode": "Centro de datos «%1$s»"
+  "SDRPOPID_GenericCode": "Centro de datos «%1$s»",
+  "__FAMILY_GROUPS__": {
+    "SteamNotifications_FamilyInviteTitle": "Invitación a grupo familiar",
+    "SteamNotifications_FamilyInviteBody": "%1$s te envió una invitación a un grupo familiar"
+  }
 }

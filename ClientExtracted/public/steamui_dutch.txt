@@ -844,8 +844,6 @@ Dit duurt niet langer dan een minuut."
 "SteamUI_Selection_Ukrainian"			"Українська (Oekraïens)"
 "SteamUI_Selection_Latam_Spanish"	"Español-Latinoamérica (Spaans, Latijns-Amerika)"
 "SteamUI_Selection_Vietnamese"		"Tiếng Việt (Vietnamees)"
-
-
 "SteamUI_Modem_33_6k"		"Modem - 33,6 kbps"
 "SteamUI_ISDN_112k"		"ISDN - 112 kbps"
 "SteamUI_T1"			"T1 > 1 Mbps"
@@ -4396,14 +4394,6 @@ Stel een categorie in voor dit spel, zodat je het snel kunt vinden en je spellen
 "Steam_SystemRequirementWarning_Text" "Je systeem voldoet niet aan een of meer van de aanbevolen systeemvereisten voor %game%."
 "Steam_SystemRequirementWarning_Link" "Systeemeisen tonen"
 
-"Notification_RemoteClientTitle"	"Steam Remote Play"
-"Notification_RemoteClientConnected"	"%machine% is beschikbaar voor streamen"
-"Notification_RemoteClientDisconnected"	"%machine% is niet meer beschikbaar"
-
-"Notification_StreamingTitle"	"Steam Remote Play"
-"Notification_StreamingStarted"	"Streamen van %hostname% naar %machine% gestart"
-"Notification_StreamingStopped"	"Streamen naar %machine% gestopt"
-
 "steam_menu_view_music_details" "Muziekdetails"
 "steam_menu_view_musicplayer" "Muziekspeler"
 "Music_Player_WindowTitle" "Muziekspeler"
@@ -4853,12 +4843,10 @@ Stel een categorie in voor dit spel, zodat je het snel kunt vinden en je spellen
 "Steam_DualSense_FirmwareUpdate_DisableNotification"	"Niet meer weergeven"
 
 "RescueDialog_Title" "Steamwebhelper reageert niet"
-"RescueDialog_Explanation" "Steamwebhelper.exe, een belangrijk onderdeel van Steam, reageert niet. De Steam-gebruikersinterface wordt hierdoor onbruikbaar.  Klik <a href=steam://openurl_external/https://help.steampowered.com/nl/faqs/view/6C3E-9504-CC20-AF49>hier</a> voor meer informatie."
 "RescueDialog_RadioHeader" "Probeer het volgende om dit probleem op te lossen:"
 "RescueDialog_RestartSteam" "Herstart Steam"
 "RescueDialog_RestartSteam_NoGPU" "Herstart Steam met GPU-versnelling uitgeschakeld"
 "RescueDialog_RestartSteam_NoSandbox" "Herstart Steam met browsersandboxing uitgeschakeld"
-"RescueDialog_RestartSteamWebHelper" "Herstart Steamwebhelper.exe"
 "RescueDialog_ExitSteam" "Sluit Steam af"
 
 "DownloadRegion_default"				 "Onbekend"

@@ -844,6 +844,8 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "SteamUI_Selection_Ukrainian"			"Українська (ウクライナ語)"
 "SteamUI_Selection_Latam_Spanish"	"Español-Latinoamérica (スペイン語 - ラテンアメリカ)"
 "SteamUI_Selection_Vietnamese"		"Tiếng Việt (ベトナム語)"
+"SteamUI_Selection_Indonesian"		"Bahasa Indonesia（インドネシア語）"
+
 
 
 "SteamUI_Modem_33_6k"		"モデム - 33.6kbps"
@@ -4392,14 +4394,6 @@ Betaが終了しました。Steamを再起動し、現在のバージョンに�
 "Steam_SystemRequirementWarning_Text" "ご利用のシステムは %game% をプレイするための必要最低要件を満たしていません。"
 "Steam_SystemRequirementWarning_Link" "システム要件を表示"
 
-"Notification_RemoteClientTitle"	"Steam Remote Play"
-"Notification_RemoteClientConnected"	"%machine% のストリーミングが可能です"
-"Notification_RemoteClientDisconnected"	"%machine% は利用できなくなりました"
-
-"Notification_StreamingTitle"	"Steam Remote Play"
-"Notification_StreamingStarted"	"%hostname% から %machine% へのストリーミングを開始しました"
-"Notification_StreamingStopped"	"%machine% へのストリーミングを停止しました"
-
 "steam_menu_view_music_details" "音楽の詳細"
 "steam_menu_view_musicplayer" "ミュージックプレイヤー"
 "Music_Player_WindowTitle" "ミュージックプレイヤー"
@@ -4850,12 +4844,12 @@ Betaが終了しました。Steamを再起動し、現在のバージョンに�
 "Steam_DualSense_FirmwareUpdate_DisableNotification"	"次から表示しない"
 
 "RescueDialog_Title" "Steamwebhelperが応答していません"
-"RescueDialog_Explanation" "Steamの重要なコンポーネントであるsteamwebhelper.exeが応答していません。Steam UIが使用できません。詳細は、<a href=steam://openurl_external/https://help.steampowered.com/ja/faqs/view/6C3E-9504-CC20-AF49>こちら</a>をクリックしてくだい。"
+"RescueDialog_Explanation" "Steamの重要なコンポーネントであるsteamwebhelperが応答していません。Steam UIが使用できません。詳細は、<a href=steam://openurl_external/https://help.steampowered.com/ja/faqs/view/6C3E-9504-CC20-AF49>こちら</a>をクリックしてくだい。"
 "RescueDialog_RadioHeader" "トラブルシューティング："
 "RescueDialog_RestartSteam" "Steamを再起動"
 "RescueDialog_RestartSteam_NoGPU" "GPUアクセラレーションを無効にしてSteamを再起動"
 "RescueDialog_RestartSteam_NoSandbox" "ブラウザーのサンドボックス機能を無効にしてSteamを再起動"
-"RescueDialog_RestartSteamWebHelper" "steamwebhelper.exeを再起動"
+"RescueDialog_RestartSteamWebHelper" "steamwebhelperを再起動"
 "RescueDialog_ExitSteam" "Steamを終了"
 
 "DownloadRegion_default"				 "不明"

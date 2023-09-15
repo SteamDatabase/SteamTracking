@@ -845,6 +845,8 @@ Mohon tunggu sebentar."
 "SteamUI_Selection_Ukrainian"			"Українська (Bahasa Ukraina)"
 "SteamUI_Selection_Latam_Spanish"	"Español – Latinoamérica (Spanyol – Amerika Latin)"
 "SteamUI_Selection_Vietnamese"		"Tiếng Việt (Bahasa Vietnam)"
+"SteamUI_Selection_Indonesian"		"Bahasa Indonesia"
+
 
 
 "SteamUI_Modem_33_6k"		"Modem - 33.6kbps"
@@ -1418,7 +1420,7 @@ Mohon tunggu sebentar."
 "SteamUI_Add_Package_Repository_Button" "Tambahkan"
 
 "SteamUI_Update_Package_Index_Title" "Pengelolaan Paket"
-"SteamUI_Update_Package_Index_Info" "Indeks paket sistemmu telah kedaluwarsa. Kami menyarankan untuk memperbaruinya agar paket driver grafis yang lebih baik dapat terdeteksi."
+"SteamUI_Update_Package_Index_Info" "Indeks paket sistemmu sudah kedaluwarsa. Kami menyarankan untuk memperbaruinya agar paket driver grafis yang lebih baik dapat terdeteksi."
 "SteamUI_Update_Package_Index_Button" "Memperbarui"
 "SteamUI_Learn_More" "Pelajari Lebih Lanjut"
 
@@ -4395,14 +4397,6 @@ Pilih kategori untuk game-game ini agar kamu dapat mencarinya secara cepat dan m
 "Steam_SystemRequirementWarning_Text" "Sistemmu tidak memenuhi persyaratan minimum sistem yang direkomendasikan oleh %game%."
 "Steam_SystemRequirementWarning_Link" "Tampilkan persyaratan sistem"
 
-"Notification_RemoteClientTitle"	"Steam Remote Play"
-"Notification_RemoteClientConnected"	"%machine% tersedia untuk streaming"
-"Notification_RemoteClientDisconnected"	"%machine% tidak lagi dapat digunakan"
-
-"Notification_StreamingTitle"	"Steam Remote Play"
-"Notification_StreamingStarted"	"Memulai streaming dari %hostname% ke %machine%"
-"Notification_StreamingStopped"	"Menghentikan stream ke %machine%"
-
 "steam_menu_view_music_details" "Rincian Musik"
 "steam_menu_view_musicplayer" "Pemutar Musik"
 "Music_Player_WindowTitle" "Pemutar Musik"
@@ -4722,7 +4716,7 @@ Pilih kategori untuk game-game ini agar kamu dapat mencarinya secara cepat dan m
 "SteamUI_UpdateControllerFirmware_Disconnect"	"Hubungan ke Kontroler Steam terputus saat proses pembaruan firmware. Kamu dapat meng-upgrade firmware lagi setelah kontroler kembali terhubung."
 "SteamUI_UpdateControllerFirmware_WiredUpdate"	"Pembaruan firmware tersedia untuk Kontroler Steam-mu. Koneksi kabel satu kali diperlukan untuk pembaruan kontrolermu.\nSaat kamu siap, sambungkan kontroler melalui USB dan proses pembaruan akan dimulai secara otomatis."
 "SteamUI_UpdateControllerFirmware_WiredUpdate_Title" "Pembaruan Firmware Kontroler"
-"SteamUI_UpdateControllerFirmware_HardFailure" "Peringatan: Salah satu kontroler Steam-mu telah dinonaktifkan dan tidak akan dikonfigurasi ulang atau diprogram untuk bermain game karena firmware-nya telah kedaluwarsa dan Steam tidak bisa mendapatkan informasi pembaruan firmware."
+"SteamUI_UpdateControllerFirmware_HardFailure" "Peringatan: Salah satu kontroler Steam-mu telah dinonaktifkan dan tidak akan dikonfigurasi ulang atau diprogram untuk bermain game karena firmware-nya sudah kedaluwarsa dan Steam tidak bisa mendapatkan informasi pembaruan firmware."
 "SteamUI_UpdateControllerFirmware_Required_Title" "Firmware Kontroler Baru Tersedia"
 "SteamUI_UpdateControllerFirmware_Required" "Ada firmware baru untuk Kontroler Steam-mu. Mohon ganti ke mode Big Picture untuk memulai proses pembaruan."
 "SteamUI_UpdateControllerMigration_Title"	"Migrasi Ulang Kontroler Diperlukan"
@@ -4852,12 +4846,12 @@ Pilih kategori untuk game-game ini agar kamu dapat mencarinya secara cepat dan m
 "Steam_DualSense_FirmwareUpdate_DisableNotification"	"Jangan tunjukkan ini lagi"
 
 "RescueDialog_Title" "Stemawebhelper tidak merespons"
-"RescueDialog_Explanation" "Steam UI tidak bisa digunakan karena steamwebhelper.exe (sebuah komponen penting Steam) tidak merespons. Klik <a href=steam://openurl_external/https://help.steampowered.com/en/faqs/view/6C3E-9504-CC20-AF49>di sini</a> untuk info lebih lanjut."
+"RescueDialog_Explanation" "Steam UI tidak bisa digunakan karena steamwebhelper (sebuah komponen penting Steam) tidak merespons. Klik <a href=steam://openurl_external/https://help.steampowered.com/en/faqs/view/6C3E-9504-CC20-AF49>di sini</a> untuk info lebih lanjut."
 "RescueDialog_RadioHeader" "Bantuan:"
 "RescueDialog_RestartSteam" "Restart Steam"
-"RescueDialog_RestartSteam_NoGPU" "Restart Steam dengan Percepatan GPU nonaktif"
-"RescueDialog_RestartSteam_NoSandbox" "Restart Steam dengan Sandbox Peramban nonaktif"
-"RescueDialog_RestartSteamWebHelper" "Restart steamwebhelper.exe"
+"RescueDialog_RestartSteam_NoGPU" "Restart Steam dengan nonaktifkan Percepatan GPU"
+"RescueDialog_RestartSteam_NoSandbox" "Restart Steam dengan nonaktifkan Sandbox Peramban"
+"RescueDialog_RestartSteamWebHelper" "Restart steamwebhelper"
 "RescueDialog_ExitSteam" "Keluar dari Steam"
 
 "DownloadRegion_default"				 "Tidak diketahui"

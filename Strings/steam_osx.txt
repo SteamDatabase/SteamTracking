@@ -8,13 +8,11 @@ __TEXT
 0
 __stubs
 __TEXT
-bH4
-bH4
 __stub_helper
 __TEXT
-DQ4
-DQ4
 __gcc_except_tab__TEXT
+0]4
+0]4
 __const
 __TEXT
 __objc_methname
@@ -71,7 +69,7 @@ __bss
 __DATA
 __common
 __DATA
-@`G
+`G
 H
 __LINKEDIT
 @H
@@ -123,47 +121,45 @@ h
 X=
 )
 4
-4
-4
-yB
 0
 G
 G
 G
-9*
+*
 9
+*
 0
 G
 @
 @
 v(
 g(
-f*
+"9
 @
 @
 @
 @
 s
+9
+X3
 $
-9
-9
-9
 Hi
 Hi
 Hi
-WF
 (
-"3
-)
+*
+p)
+`0
+3
+V)
+;)
 
 %
-)
-)
-^8
 ;
 (
-8
-8
+\(
+h(
+2
 
 2
 2
@@ -171,18 +167,14 @@ WF
 5
 (
 (
--
 6'
-(
-(
-(
-(
-(
 g?
 <
 
+o1
 0
 Ic
+P1
 0
 0
 AT=
@@ -194,7 +186,7 @@ D
 @
 @
 1
-@;
+M2
 @
 Hc
 Hc
@@ -226,6 +218,10 @@ IcE
 IcE
 @
 @
+X0
+6
+6
+0
 0
 NSt3__117bad_function_callE
 15CBaseFileSystem
@@ -2386,7 +2382,7 @@ TempAppCmdLine
 m_nPipeData >= 0
 ReLaunchCmdLine
 ClientLauncherType
-Startup - updater built Sep 11 2023 13:49:25
+Startup - updater built Sep 15 2023 12:37:38
 Startup - Steam Client launched with: %s
 Shutdown
 no hosts found
@@ -2677,8 +2673,8 @@ m_iRefs >= 0 && m_iRefs < 0x0ffffff
 #SteamBootstrapper_UpdatingSteam
 Updating Steam...
 Tahoma
-Sep 11 2023
-13:49:26
+Sep 15 2023
+12:37:39
 crashhandler004
 steam
 Steam Executable Crash
@@ -2775,7 +2771,7 @@ China
 %s/%s%s
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamexe/updateui.h
 ThreadInMainThread()
-13:49:24
+12:37:37
 [%3d%%] %s
 [----] %s
 [%3d%%] !!! Fatal Error: %s
@@ -10898,7 +10894,7 @@ steamwebhelper
 Steam Helper
 cefwebhelper
 1.0
-13:47:22
+12:35:25
 Jan
 Feb
 Mar
@@ -12255,7 +12251,6 @@ k_EMsgClientSetClientAppUpdateState
 k_EMsgClientSetClientAppUpdateStateResponse
 k_EMsgClientEnableOrDisableDownloads
 k_EMsgClientEnableOrDisableDownloadsResponse
-k_EMsgClientFeatureGroupInfo
 k_EMsgClientStartPeerContentServer
 k_EMsgClientStartPeerContentServerResponse
 k_EMsgClientGetPeerContentInfo
@@ -13341,50 +13336,49 @@ n <= (size_t)INT_MAX
 file_ofs == pFile->GetBytesWritten()
 
 
+$%:
+-%:
 0
-FK=
 4
-4
-4
-yB
 0
 G
 G
 G
-9*
+*
 9
+*
 0
 G
 @
 @
 v(
 g(
-f*
+"9
 @
 @
 @
 @
 s
+9
+X3
 $
-9
-9
-9
 Hi
 Hi
 Hi
-WF
 (
-"3
-)
+*
+p)
+`0
+3
+V)
+;)
 
 %
-)
-)
-^8
 ;
 (
-8
-8
+\(
+h(
+2
 
 2
 2
@@ -13392,18 +13386,14 @@ WF
 5
 (
 (
--
 6'
-(
-(
-(
-(
-(
 g?
 <
 
+o1
 0
 Ic
+P1
 0
 0
 AT=
@@ -13415,7 +13405,7 @@ D
 @
 @
 1
-@;
+M2
 @
 Hc
 Hc
@@ -13447,57 +13437,64 @@ IcE
 IcE
 @
 @
+X0
+6
+6
+0
 0
 V
-o/
 =
 /
 /
 /
 /
 /
-o9
+/
+/
+/
 =
-5.
+$.
 .
 .
 .
-c8
-6
-\-
+.
+4
+4
+4
+4
+v3
+D-
 -
 -
--
--
--
--
-3
 !
 @
-{$
-,
-$
-$
+y$
+7,
+2
+2
 @
 &
+m>
+c>
 1
-,
-*
-*
-0
-0
-\4
 +
-?/
-h/
+y0
+*
+*
+*
+*
+90
+})
+7)
 )
-'/
-%1
+)
+)
+)
+)
 @
 M9e
 @
 @
-(
 (
 ?
 ?
@@ -13521,24 +13518,28 @@ AESNI-CBC+SHA256 stitch for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
 AES for Intel AES-NI, CRYPTOGAMS by <appro@openssl.org>
 @
--
 %
+1
 1
 1
 `
 `
 @
+,
+/(
+1
 j
 j
 Pj
 ARj
 j
-&
 0
 0
 IcU
 E;e
 M)u
+0
+0
 =
 =
 @
@@ -13836,6 +13837,11 @@ OO
 expand 32-byte k
 ChaCha20 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
+#
+#
+#
+#
+(
 =
 @
 
@@ -13849,24 +13855,20 @@ j
 j
 j
 j
-"
 j
 j
 
+'
+D+
 t$I;M
-"
-"
+v&
+p&
 e
 W
 ,7~5d
-#MA/
-#-4/
-#4/
-#-1/
-#M$/
-#-!/
+#A/
+#$/
 H
-n!
 0
 
 
@@ -13878,13 +13880,12 @@ n!
 
 
 
+[
 Hc
 %
 %
 %
-L95`}'
-}'
-|'
+L95 }'
 AES-NI GCM module for x86_64, CRYPTOGAMS by <appro@openssl.org>
 %
 @
@@ -13897,8 +13898,6 @@ AES-NI GCM module for x86_64, CRYPTOGAMS by <appro@openssl.org>
 
 @
 Poly1305 for x86_64, CRYPTOGAMS by <appro@openssl.org>
-&
-&
 0
 0
 N
@@ -14149,8 +14148,8 @@ H=
 =*.*
 @
 @
-0
 {
+
 @
 @
 @
@@ -14183,6 +14182,8 @@ E
 s
 Hi
 E
+-
+0
 0
 0
 
@@ -14205,19 +14206,24 @@ j
 
 
 Hc
-u
+o
+0
 
-0
-0
+
+
+
+p
 @
 @
-@
+a
+a
+a
 <
 &
 %
-
+F
 @
-c
+i
 =h2
 P
 P

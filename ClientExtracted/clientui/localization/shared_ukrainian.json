@@ -1755,7 +1755,7 @@
   "Sale_Reservation_Komodo": "Steam Deck тепер можна придбати в Японії, Південній Кореї, Гонконгу й на Тайвані через сайт Komodo: <1>steamdeck.komodo.jp</1>",
   "Sale_BrowserSortOption_TopWishlisted": "Найбажаніші майбутні ігри",
   "Sale_BrowserSortOption_TopWishlisted_ttip": "Майбутні ігри, відсортовані за кількістю додавань до списку бажаного (за весь час). Включено лише ігри, які ще не вийшли в Steam.",
-  "Sale_BrowserSortOption_TrendingWishlisted": "Популярні майбутні релізи",
+  "Sale_BrowserSortOption_TrendingWishlisted": "Актуальні майбутні",
   "Sale_BrowserSortOption_TrendingWishlisted_ttip": "Майбутні ігри, відсортовані за популярністю чи кількістю нещодавніх додавань до списку бажаного. Включено лише ігри, які ще не вийшли в Steam.",
   "Sale_BrowserSortOption_PopularComingSoon": "Незабаром випуск",
   "Sale_BrowserSortOption_PopularComingSoon_ttip": "Найбажаніші ігри, відсортовані за датою випуску. Включено лише ігри, які ще не вийшли в Steam.",
@@ -2333,7 +2333,7 @@
   "DiscoveryQueue_Error_Login": "Щоб відкрити нову чергу знахідок, треба ввійти до акаунта Steam.",
   "DiscoveryQueue_Error_Login_Title": "Увійдіть до акаунта",
   "DiscoveryQueue_LabsHeader": "<1>ЛАБОРАТОРІЇ STEAM</1> <2>Залишити відгук</2>",
-  "DiscoveryQueue_WidgetHeader": "Новий спосіб дізнатися про хіти продажу, нові продукти та схожі на ті, в які ви граєте чи якими користуєтеся в Steam.",
+  "DiscoveryQueue_WidgetHeader": "Перегляньте свою чергу хітів продажу, нових продуктів і схожих на ті, в які ви граєте чи якими користуєтеся в Steam.",
   "DiscoveryQueue_WidgetHeader_LoggedOut": "Увійдіть, щоб дізнатися про хіти продажу, нові продукти та схожі на ті, в які ви граєте чи якими користуєтеся в Steam.",
   "DiscoveryQueue_LaunchAction": "Переглянути чергу знахідок",
   "DiscoveryQueue_SalePage_Exhausted": "Ви завершили чергу знахідок. Повертайтеся пізніше й перегляньте нові ігри.",
@@ -2636,5 +2636,9 @@
   "NotificationsList_EmptyTitle": "Наразі у вас немає жодних сповіщень.",
   "NotificationsList_EmptyTitle_New": "Наразі у вас немає нових сповіщень.",
   "NotificationsList_EmptyBody": "Тут будуть з’являтися сповіщення Steam про список бажаного, друзів, ігри, інвентар та інше.",
-  "SDRPOPID_GenericCode": "Центр даних: «%1$s»"
+  "SDRPOPID_GenericCode": "Центр даних: «%1$s»",
+  "__FAMILY_GROUPS__": {
+    "SteamNotifications_FamilyInviteTitle": "Запрошення до сімейної групи",
+    "SteamNotifications_FamilyInviteBody": "%1$s запрошує вас до сімейної групи"
+  }
 }

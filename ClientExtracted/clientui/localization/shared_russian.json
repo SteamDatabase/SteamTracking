@@ -892,7 +892,7 @@
   "PersonaStateOffline": "Не в сети",
   "PersonaStateAway": "Нет на месте",
   "PersonaStateOnline": "В сети",
-  "PersonaStateBlocked": "В чёрном списке",
+  "PersonaStateBlocked": "Заблокирован(-а)",
   "PersonaStateInGame": "В игре",
   "PersonaStateBusy": "Не беспокоить",
   "PersonaStateSnooze": "Нет на месте",
@@ -2333,7 +2333,7 @@
   "DiscoveryQueue_Error_Login": "Вам нужно войти в свой аккаунт Steam, чтобы увидеть новый список рекомендаций.",
   "DiscoveryQueue_Error_Login_Title": "Вход в аккаунт",
   "DiscoveryQueue_LabsHeader": "<1>ЛАБОРАТОРИИ STEAM</1> <2>Оставить отзыв</2>",
-  "DiscoveryQueue_WidgetHeader": "Новый способ узнать о популярных, новых и актуальных для вас продуктах в Steam.",
+  "DiscoveryQueue_WidgetHeader": "Просмотрите список популярных, новых и актуальных для вас продуктов в Steam.",
   "DiscoveryQueue_WidgetHeader_LoggedOut": "Войдите в аккаунт, чтобы узнать о популярных, новых и актуальных для вас продуктах в Steam.",
   "DiscoveryQueue_LaunchAction": "Запустить список рекомендаций",
   "DiscoveryQueue_SalePage_Exhausted": "Вы просмотрели все игры из списка рекомендаций. Заходите снова, чтобы посмотреть, не появилось ли чего-нибудь новенького!",
@@ -2636,5 +2636,9 @@
   "NotificationsList_EmptyTitle": "Уведомлений нет.",
   "NotificationsList_EmptyTitle_New": "Новых уведомлений нет.",
   "NotificationsList_EmptyBody": "Здесь вы найдёте уведомления Steam — о списке желаемого, друзьях, играх, инвентаре и не только.",
-  "SDRPOPID_GenericCode": "Дата-центр «%1$s»"
+  "SDRPOPID_GenericCode": "Дата-центр «%1$s»",
+  "__FAMILY_GROUPS__": {
+    "SteamNotifications_FamilyInviteTitle": "Приглашение в семейную группу",
+    "SteamNotifications_FamilyInviteBody": "%1$s приглашает вас в семейную группу"
+  }
 }

@@ -2333,7 +2333,7 @@
   "DiscoveryQueue_Error_Login": "Trebuie să fii conectat la Steam pentru a deschide noua listă de descoperiri.",
   "DiscoveryQueue_Error_Login_Title": "Conectează-te",
   "DiscoveryQueue_LabsHeader": "<1>LABORATOARELE STEAM</1> <2>Oferă feedback</2>",
-  "DiscoveryQueue_WidgetHeader": "O nouă modalitate de a descoperi atât cele mai bine vândute produse, cât și articolele noi și similare cu ceea ce joci și utilizezi pe Steam.",
+  "DiscoveryQueue_WidgetHeader": "Explorează lista ta de descoperire care conține cele mai bine vândute produse, produse noi, dar și similare cu ceea ce joci și utilizezi pe Steam.",
   "DiscoveryQueue_WidgetHeader_LoggedOut": "Conectează-te pentru a descoperi atât cele mai bine vândute produse, cât și articolele noi și similare cu ceea ce joci și utilizezi pe Steam.",
   "DiscoveryQueue_LaunchAction": "Începe lista de descoperiri",
   "DiscoveryQueue_SalePage_Exhausted": "Ai finalizat această listă de descoperiri. Te rugăm să revii mai târziu pentru a vedea dacă există jocuri noi pe care să le descoperi.",
@@ -2636,5 +2636,9 @@
   "NotificationsList_EmptyTitle": "Momentan nu ai nicio notificare.",
   "NotificationsList_EmptyTitle_New": "Momentan nu ai nicio notificare nouă.",
   "NotificationsList_EmptyBody": "Aici vei vedea notificările tale Steam despre lista de dorințe, prieteni, jocuri, inventar și multe altele.",
-  "SDRPOPID_GenericCode": "Centrul de date „%1$s”"
+  "SDRPOPID_GenericCode": "Centrul de date „%1$s”",
+  "__FAMILY_GROUPS__": {
+    "SteamNotifications_FamilyInviteTitle": "Invitație de familie",
+    "SteamNotifications_FamilyInviteBody": "%1$s ți-a trimis o invitație de familie"
+  }
 }

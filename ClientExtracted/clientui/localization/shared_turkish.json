@@ -1659,7 +1659,7 @@
   "Sale_default_label_230": "Karo Eşleştirme",
   "Sale_default_label_231": "İndirimler ve Özel Etkinlikler",
   "Sale_default_label_232": "Kart Oyunları",
-  "Sale_default_label_233": "Masa Oyunları",
+  "Sale_default_label_233": "Kutu Oyunları",
   "Sale_default_label_234": "Büyük Strateji",
   "Sale_default_label_235": "4X",
   "Sale_default_label_236": "Gerçek Zamanlı Strateji",
@@ -1731,7 +1731,7 @@
   "SalePage_Quiz_RedoResponse": "Yanıtları Değiştir",
   "SalePage_Correct": "Doğru",
   "SalePage_Wrong": "Yanlış!",
-  "SalePage_TryAgain": "Tekrar Deneyin",
+  "SalePage_TryAgain": "Tekrar Dene",
   "SalePage_Quiz_LoginPrompt": "Katılmak için giriş yapın",
   "SalePage_BadgeProgress_LoginPrompt": "Başlamak için <1>giriş yapın</1>",
   "SalePage_BadgeProgress_YourBadge": "Rozetiniz",
@@ -1755,7 +1755,7 @@
   "Sale_Reservation_Komodo": "Steam Deck'i Japonya, Güney Kore, Tayvan ve Hong Kong'da <1>steamdeck.komodo.jp</1> adresinden Komodo aracılığıyla satın alabilirsiniz.",
   "Sale_BrowserSortOption_TopWishlisted": "En Çok İstenen Henüz Çıkmamış Oyunlar",
   "Sale_BrowserSortOption_TopWishlisted_ttip": "İstek listelerine (tüm zamanlarda) toplam eklenme sayısına göre sıralanmış, henüz çıkmamış oyunlar. Yalnızca gelecekte Steam'de çıkacak oyunları içerir.",
-  "Sale_BrowserSortOption_TrendingWishlisted": "Popüler ve Yakında",
+  "Sale_BrowserSortOption_TrendingWishlisted": "Yeni Çıkacak Popüler Oyunlar",
   "Sale_BrowserSortOption_TrendingWishlisted_ttip": "Popülerlik veya yakın zamanda istek listelerine eklenme sayılarına göre sıralanmış, henüz çıkmamış oyunlar. Yalnızca gelecekte Steam'de çıkacak oyunları içerir.",
   "Sale_BrowserSortOption_PopularComingSoon": "Yakında Çıkacaklar",
   "Sale_BrowserSortOption_PopularComingSoon_ttip": "Çıkış tarihlerine göre sıralanmış, istek listelerine en çok eklenen oyunlar. Yalnızca gelecekte Steam'de çıkacak oyunları içerir.",
@@ -2333,7 +2333,7 @@
   "DiscoveryQueue_Error_Login": "Yeni keşif kuyruğunu açabilmek için Steam'e giriş yapmalısınız.",
   "DiscoveryQueue_Error_Login_Title": "Giriş Yapın",
   "DiscoveryQueue_LabsHeader": "<1>STEAM LABORATUVARI</1> <2>Geri Bildirim Bırakın</2>",
-  "DiscoveryQueue_WidgetHeader": "Steam'de oynadığınız ya da kullandığınız ürünlere benzer çok satan, yeni ve benzer ürünleri keşfetmenin yeni bir yolu.",
+  "DiscoveryQueue_WidgetHeader": "En çok satan, yeni ve Steam'de oynadığınız ya da kullandığınız ürünlere benzer ürünlerin olduğu kuyruğunuzu keşfetmek için giriş yapın.",
   "DiscoveryQueue_WidgetHeader_LoggedOut": "En çok satan, yeni ve Steam'de oynadığınız ya da kullandığınız ürünlere benzer ürünleri keşfetmek için giriş yapın.",
   "DiscoveryQueue_LaunchAction": "Keşif Kuyruğunu Başlat",
   "DiscoveryQueue_SalePage_Exhausted": "Bu keşif kuyruğunu tamamladınız. Keşfedilebilecek yeni oyunları görmek için daha sonra bu sayfaya geri dönebilirsiniz.",
@@ -2636,5 +2636,9 @@
   "NotificationsList_EmptyTitle": "An itibarıyla bir bildiriminiz yok.",
   "NotificationsList_EmptyTitle_New": "An itibarıyla yeni bir bildiriminiz yok.",
   "NotificationsList_EmptyBody": "Burada istek listenize, arkadaşlarınıza, oyunlarınıza, envanterinize ve daha fazlasına dair Steam bildirimlerini görüntülersiniz.",
-  "SDRPOPID_GenericCode": "Veri merkezi \"%1$s\""
+  "SDRPOPID_GenericCode": "Veri merkezi \"%1$s\"",
+  "__FAMILY_GROUPS__": {
+    "SteamNotifications_FamilyInviteTitle": "Aile Daveti",
+    "SteamNotifications_FamilyInviteBody": "%1$s, size bir aile daveti gönderdi"
+  }
 }

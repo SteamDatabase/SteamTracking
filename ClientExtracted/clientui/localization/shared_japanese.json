@@ -1711,7 +1711,7 @@
   "Sale_Section_PointShop_class_13": "ミニプロフィール背景",
   "Sale_Section_PointShop_class_14": "アバターフレーム",
   "Sale_Section_PointShop_class_15": "動くアバター",
-  "Sale_Section_Redeem_Countdown": "次に取得可能なアイテム：",
+  "Sale_Section_Redeem_Countdown": "次のアイテム取得まで：",
   "Sale_Section_Redeem_NoItem": "取得可能なアイテムはありません（プレビューモードでのみ表示されます）",
   "Sale_Section_Redeem_AlreadyRedeemed": "取得済みのアイテム",
   "Sale_Section_Redeem_Message": "セール期間中に日替わりの無料リワードを手に入れよう！",
@@ -1755,7 +1755,7 @@
   "Sale_Reservation_Komodo": "日本、韓国、台湾、香港でのSteam Deckのご購入は、<1>steamdeck.komodo.jp</1>から",
   "Sale_BrowserSortOption_TopWishlisted": "ウィッシュリストで最も人気の近日登場ゲーム",
   "Sale_BrowserSortOption_TopWishlisted_ttip": "合計（累積総計）ウィッシュリスト数で並べ替えた近日登場ゲーム。Steamでまだリリースされていないゲームのみが含まれます。",
-  "Sale_BrowserSortOption_TrendingWishlisted": "人気の近日登場",
+  "Sale_BrowserSortOption_TrendingWishlisted": "話題の近日登場",
   "Sale_BrowserSortOption_TrendingWishlisted_ttip": "近日登場ゲーム－トレンド、または合計（累積総計）ウィッシュリスト数で並べ替え。Steamでまだリリースされていないゲームのみが含まれます。",
   "Sale_BrowserSortOption_PopularComingSoon": "リリース間近",
   "Sale_BrowserSortOption_PopularComingSoon_ttip": "ウィッシュリストで人気のゲーム－リリース日で並べ替え。Steamでまだリリースされていないゲームのみが含まれます。",
@@ -2333,7 +2333,7 @@
   "DiscoveryQueue_Error_Login": "新しいディスカバリーキューを開くには、Steamにサインインしてください。",
   "DiscoveryQueue_Error_Login_Title": "サインイン",
   "DiscoveryQueue_LabsHeader": "<1>Steamラボ</1> <2>フィードバックを送信</2>",
-  "DiscoveryQueue_WidgetHeader": "Steamでの売上上位作品や新作、以前プレイ／利用したことのある作品に似たタイトルを見つける新しい方法です。",
+  "DiscoveryQueue_WidgetHeader": "キューを探索して、Steamでの売上上位作品や新作、以前プレイ／利用したことのある作品に似たタイトルを見つけましょう。",
   "DiscoveryQueue_WidgetHeader_LoggedOut": "サインインして、Steamでの売上上位作品や新作、以前プレイ／利用したことのある作品に似たタイトルを見つけましょう。",
   "DiscoveryQueue_LaunchAction": "ディスカバリーキューを開く",
   "DiscoveryQueue_SalePage_Exhausted": "このディスカバリーキューを完了しました。後でまた戻ってくると、新しいゲームが発見できるかもしれません。",
@@ -2636,5 +2636,9 @@
   "NotificationsList_EmptyTitle": "現在通知はありません。",
   "NotificationsList_EmptyTitle_New": "現在新しい通知はありません。",
   "NotificationsList_EmptyBody": "ここでは、ウィッシュリスト、フレンド、ゲーム、インベントリなどに関するSteam通知を確認できます。",
-  "SDRPOPID_GenericCode": "データセンター「%1$s」"
+  "SDRPOPID_GenericCode": "データセンター「%1$s」",
+  "__FAMILY_GROUPS__": {
+    "SteamNotifications_FamilyInviteTitle": "ファミリーへの招待",
+    "SteamNotifications_FamilyInviteBody": "%1$sからファミリーへの招待を受け取りました"
+  }
 }

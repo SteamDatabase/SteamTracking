@@ -844,6 +844,8 @@ Dette burde vare mindre end et minut."
 "SteamUI_Selection_Ukrainian"			"Українська (ukrainsk)"
 "SteamUI_Selection_Latam_Spanish"	"Español-Latinoamérica (spansk-Latinamerika)"
 "SteamUI_Selection_Vietnamese"		"Tiếng Việt (vietnamesisk)"
+"SteamUI_Selection_Indonesian"		"Bahasa indonesia (indonesisk)"
+
 
 
 "SteamUI_Modem_33_6k"		"Modem – 33,6kbps"
@@ -4387,14 +4389,6 @@ Få en ny ven på Steam ved at e-maile en gave til én, du kender."
 "Steam_SystemRequirementWarning_Text" "Dit system overholder ikke %game%'s minimale systemkrav, der er anbefalet for dette spil."
 "Steam_SystemRequirementWarning_Link" "Vis systemkrav"
 
-"Notification_RemoteClientTitle"	"Steam Remote Play"
-"Notification_RemoteClientConnected"	"%machine% er tilgængelig til streaming"
-"Notification_RemoteClientDisconnected"	"%machine% er ikke længere tilgængelig"
-
-"Notification_StreamingTitle"	"Steam Remote Play"
-"Notification_StreamingStarted"	"Startede streaming fra %hostname% til %machine%"
-"Notification_StreamingStopped"	"Stoppede streaming til %machine%"
-
 "steam_menu_view_music_details" "Musikoplysninger"
 "steam_menu_view_musicplayer" "Musikafspiller"
 "Music_Player_WindowTitle" "Musikafspiller"
@@ -4844,12 +4838,12 @@ Få en ny ven på Steam ved at e-maile en gave til én, du kender."
 "Steam_DualSense_FirmwareUpdate_DisableNotification"	"Vis ikke dette igen"
 
 "RescueDialog_Title" "Steamwebhelper svarer ikke"
-"RescueDialog_Explanation" "steamwebhelper.exe (en vigtig komponent i Steam) svarer ikke. Steams brugergrænseflade kan ikke bruges. Klik <a href=steam://openurl_external/https://help.steampowered.com/faqs/view/6C3E-9504-CC20-AF49>her</a> for flere oplysninger."
+"RescueDialog_Explanation" "steamwebhelper (en vigtig komponent i Steam) svarer ikke. Steams brugergrænseflade kan ikke bruges. Klik <a href=steam://openurl_external/https://help.steampowered.com/faqs/view/6C3E-9504-CC20-AF49>her</a> for flere oplysninger."
 "RescueDialog_RadioHeader" "Lad os prøve at hjælpe:"
 "RescueDialog_RestartSteam" "Genstart Steam"
 "RescueDialog_RestartSteam_NoGPU" "Genstart Steam med GPU-accelereret gengivelse deaktiveret"
 "RescueDialog_RestartSteam_NoSandbox" "Genstart Steam med browsersandkassen deaktiveret"
-"RescueDialog_RestartSteamWebHelper" "Genstart steamwebhelper.exe"
+"RescueDialog_RestartSteamWebHelper" "Genstart steamwebhelper"
 "RescueDialog_ExitSteam" "Afslut Steam"
 
 "DownloadRegion_default"				 "Ukendt"

@@ -838,6 +838,8 @@
 "SteamUI_Selection_Ukrainian"			"Українська (украинский)"
 "SteamUI_Selection_Latam_Spanish"	"Español-Latinoamérica (испанский Лат. Ам.)"
 "SteamUI_Selection_Vietnamese"		"Tiếng Việt (вьетнамский)"
+"SteamUI_Selection_Indonesian"		"Bahasa Indonesia (индонезийский)"
+
 
 
 "SteamUI_Modem_33_6k"		"Модем — 33,6 Кбит/с"
@@ -4385,14 +4387,6 @@
 "Steam_SystemRequirementWarning_Text" "Ваша система не соответствует минимальным системным требованиям для «%game%»."
 "Steam_SystemRequirementWarning_Link" "Показать системные требования"
 
-"Notification_RemoteClientTitle"	"Steam Remote Play"
-"Notification_RemoteClientConnected"	"%machine%: готово к трансляции"
-"Notification_RemoteClientDisconnected"	"%machine%: недоступно"
-
-"Notification_StreamingTitle"	"Steam Remote Play"
-"Notification_StreamingStarted"	"Трансляция с %hostname% на %machine% запущена"
-"Notification_StreamingStopped"	"Трансляция для %machine% остановлена"
-
 "steam_menu_view_music_details" "Подробнее о музыке"
 "steam_menu_view_musicplayer" "Проигрыватель"
 "Music_Player_WindowTitle" "Музыкальный проигрыватель"
@@ -4842,12 +4836,12 @@
 "Steam_DualSense_FirmwareUpdate_DisableNotification"	"Больше не показывать"
 
 "RescueDialog_Title" "Steamwebhelper не отвечает"
-"RescueDialog_Explanation" "steamwebhelper.exe (критический компонент Steam) не отвечает. Интерфейс Steam невозможно использовать. Узнайте больше <a href=steam://openurl_external/https://help.steampowered.com/faqs/view/6C3E-9504-CC20-AF49>здесь</a>."
+"RescueDialog_Explanation" "steamwebhelper (критический компонент Steam) не отвечает. Интерфейс Steam будет недоступен. Узнайте больше <a href=steam://openurl_external/https://help.steampowered.com/faqs/view/6C3E-9504-CC20-AF49>здесь</a>."
 "RescueDialog_RadioHeader" "Давайте попробуем это исправить:"
 "RescueDialog_RestartSteam" "Перезапустить Steam"
 "RescueDialog_RestartSteam_NoGPU" "Перезапустить Steam с выключенным аппаратным ускорением"
 "RescueDialog_RestartSteam_NoSandbox" "Перезапустить Steam с выключенной «песочницей» для браузера"
-"RescueDialog_RestartSteamWebHelper" "Перезапустить steamwebhelper.exe"
+"RescueDialog_RestartSteamWebHelper" "Перезапустить steamwebhelper"
 "RescueDialog_ExitSteam" "Выйти из Steam"
 
 "DownloadRegion_default"				 "Неизвестно"

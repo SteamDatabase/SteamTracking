@@ -843,6 +843,8 @@ Steam ให้คลิกขวาที่ไอคอนนี้"
 "SteamUI_Selection_Ukrainian"			"Українська (ยูเครน)"
 "SteamUI_Selection_Latam_Spanish"	"Español-Latinoamérica (สเปน - ลาตินอเมริกา)"
 "SteamUI_Selection_Vietnamese"		"Tiếng Việt (เวียดนาม)"
+"SteamUI_Selection_Indonesian"		"Bahasa Indonesia (อินโดนีเซีย)"
+
 
 
 "SteamUI_Modem_33_6k"		"โมเด็ม - 33.6kbps"
@@ -4390,14 +4392,6 @@ Steam ให้คลิกขวาที่ไอคอนนี้"
 "Steam_SystemRequirementWarning_Text" "ระบบของคุณไม่ผ่านความต้องการระบบขั้นต่ำของ %game% ที่แนะนำสำหรับเกมนี้"
 "Steam_SystemRequirementWarning_Link" "แสดงความต้องการระบบ"
 
-"Notification_RemoteClientTitle"	"Steam Remote Play"
-"Notification_RemoteClientConnected"	"%machine% พร้อมสำหรับการสตรีมแล้ว"
-"Notification_RemoteClientDisconnected"	"%machine% ไม่พร้อมใช้งานอีกต่อไป"
-
-"Notification_StreamingTitle"	"Steam Remote Play"
-"Notification_StreamingStarted"	"เริ่มการสตรีมจาก %hostname% ไปยัง %machine% แล้ว"
-"Notification_StreamingStopped"	"หยุดการสตรีมไปยัง %machine% แล้ว"
-
 "steam_menu_view_music_details" "รายละเอียดเพลง"
 "steam_menu_view_musicplayer" "เครื่องเล่นเพลง"
 "Music_Player_WindowTitle" "เครื่องเล่นเพลง"
@@ -4847,12 +4841,12 @@ Steam ให้คลิกขวาที่ไอคอนนี้"
 "Steam_DualSense_FirmwareUpdate_DisableNotification"	"อย่าแสดงข้อความนี้อีก"
 
 "RescueDialog_Title" "Steamwebhelper ไม่ตอบสนองในขณะนี้"
-"RescueDialog_Explanation" "ขณะนี้ steamwebhelper.exe ซึ่งเป็นส่วนประกอบที่สำคัญอย่างยิ่งของ Steam ไม่ตอบสนอง ดังนั้นจึงไม่สามารถใช้งาน Steam UI ได้ โปรดคลิก<a href=steam://openurl_external/https://help.steampowered.com/en/faqs/view/6C3E-9504-CC20-AF49>ที่นี่</a>เพื่ออ่านข้อมูลเพิ่มเติม"
+"RescueDialog_Explanation" "ขณะนี้ steamwebhelper ซึ่งเป็นส่วนประกอบที่สำคัญอย่างยิ่งของ Steam ไม่ตอบสนอง ดังนั้นจึงไม่สามารถใช้งาน Steam UI ได้ โปรดคลิก<a href=steam://openurl_external/https://help.steampowered.com/en/faqs/view/6C3E-9504-CC20-AF49>ที่นี่</a>เพื่ออ่านข้อมูลเพิ่มเติม"
 "RescueDialog_RadioHeader" "โปรดลองดำเนินการต่อไปนี้:"
 "RescueDialog_RestartSteam" "รีสตาร์ท Steam"
 "RescueDialog_RestartSteam_NoGPU" "รีสตาร์ท Steam โดยปิดใช้งานการเร่ง GPU"
 "RescueDialog_RestartSteam_NoSandbox" "รีสตาร์ท Steam โดยปิดใช้งานการทำ Sandbox ของเบราว์เซอร์"
-"RescueDialog_RestartSteamWebHelper" "รีสตาร์ท steamwebhelper.exe"
+"RescueDialog_RestartSteamWebHelper" "รีสตาร์ท steamwebhelper"
 "RescueDialog_ExitSteam" "ออกจาก Steam"
 
 "DownloadRegion_default"				 "ไม่ทราบ"

@@ -839,6 +839,8 @@ tela. Para acessar o Steam, clique com o botão direito no seu ícone."
 "SteamUI_Selection_Ukrainian"			"Українська (Ucraniano)"
 "SteamUI_Selection_Latam_Spanish"	"Español-Latinoamérica (Espanhol — América Latina)"
 "SteamUI_Selection_Vietnamese"		"Tiếng Việt (Vietnamita)"
+"SteamUI_Selection_Indonesian"		"Bahasa Indonesia (Indonésio)"
+
 
 
 "SteamUI_Modem_33_6k"		"Modem - 33,6kb/s"
@@ -4387,14 +4389,6 @@ a partir de agora, você vai precisar deles pra ter acesso aos seus jogos e outr
 "Steam_SystemRequirementWarning_Text" "O seu sistema não atende aos requisitos mínimos do sistema listados por %game%."
 "Steam_SystemRequirementWarning_Link" "Exibir requisitos do sistema"
 
-"Notification_RemoteClientTitle"	"Steam Remote Play"
-"Notification_RemoteClientConnected"	"%machine% disponível para transmissão"
-"Notification_RemoteClientDisconnected"	"%machine% não mais disponível para transmissão"
-
-"Notification_StreamingTitle"	"Steam Remote Play"
-"Notification_StreamingStarted"	"Transmissão iniciada de %hostname% a %machine%"
-"Notification_StreamingStopped"	"Transmissão a %machine% interrompida"
-
 "steam_menu_view_music_details" "Biblioteca musical"
 "steam_menu_view_musicplayer" "Reprodutor de música"
 "Music_Player_WindowTitle" "Reprodutor de música"
@@ -4844,12 +4838,12 @@ a partir de agora, você vai precisar deles pra ter acesso aos seus jogos e outr
 "Steam_DualSense_FirmwareUpdate_DisableNotification"	"Não exibir isso novamente"
 
 "RescueDialog_Title" "O SteamWebHelper não está respondendo"
-"RescueDialog_Explanation" "O steamwebhelper.exe, componente essencial do Steam, não está respondendo. A interface do Steam não poderá ser usada. Clique <a href=steam://openurl_external/https://help.steampowered.com/faqs/view/6C3E-9504-CC20-AF49>aqui</a> para mais informações."
+"RescueDialog_Explanation" "O steamwebhelper, componente essencial do Steam, não está respondendo. A interface do Steam não poderá ser usada. Clique <a href=steam://openurl_external/https://help.steampowered.com/faqs/view/6C3E-9504-CC20-AF49>aqui</a> para mais informações."
 "RescueDialog_RadioHeader" "Vamos tentar ajudar:"
 "RescueDialog_RestartSteam" "Reiniciar o Steam"
 "RescueDialog_RestartSteam_NoGPU" "Reiniciar o Steam sem aceleração da placa de vídeo"
 "RescueDialog_RestartSteam_NoSandbox" "Reiniciar o Steam sem isolamento do navegador"
-"RescueDialog_RestartSteamWebHelper" "Reiniciar o steamwebhelper.exe"
+"RescueDialog_RestartSteamWebHelper" "Reiniciar o steamwebhelper"
 "RescueDialog_ExitSteam" "Sair do Steam"
 
 "DownloadRegion_default"				 "Desconhecida"

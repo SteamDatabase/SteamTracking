@@ -1746,11 +1746,9 @@
     "Sale_Reservation_CancelAuto": "如果您未在上述失效时间前完成购买，我们将取消您的预订并退回您的订金。",
     "Sale_Reservation_Expired": "预订已失效。",
     "Sale_Reservation_ExpectedDate": "预计可下单时间： ",
-    "__STEAM_DECK_IN_STOCK__": {
-        "Sale_Reservation_ExpectedShipDate": "预计发货日期：",
-        "Sale_Reservation_ExpectedDeliveryDate": "预计送达日期：",
-        "dummy_for_ease_of_use": "dummy"
-    },
+    "Sale_Reservation_ExpectedShipDate": "预计发货日期：",
+    "Sale_Reservation_ExpectedDeliveryDate": "预计送达日期：",
+    "dummy_for_ease_of_use": "dummy",
     "Sale_Reservation_YourExpectedDate": "您的预计可下单时间：",
     "Sale_Reservation_Komodo": "Steam Deck 现可通过 Komodo 在日本、韩国、台湾和香港购买：<1>https://steamdeck.komodo.jp/product/steam-deck/?lang=zh-hans</1>",
     "Sale_BrowserSortOption_TopWishlisted": "即将推出的最热愿望单游戏",
@@ -2334,7 +2332,7 @@
     "DiscoveryQueue_Error_Login": "您必须登录至 Steam 才能打开新探索队列。",
     "DiscoveryQueue_Error_Login_Title": "登录",
     "DiscoveryQueue_LabsHeader": "<1>STEAM 实验室</1> <2>留下反馈</2>",
-    "DiscoveryQueue_WidgetHeader": "全新探索方式！将 Steam 上的热销佳作、精选新品和与您玩过的游戏或使用过的软件相似的产品一网打尽。",
+    "DiscoveryQueue_WidgetHeader": "探索您队列中的热销佳作、精选新品，以及与您在 Steam 上玩过的游戏或使用过的软件相似的产品。",
     "DiscoveryQueue_WidgetHeader_LoggedOut": "登录以体验全新探索方式！将 Steam 上的热销佳作、精选新品和与您玩过的游戏或使用过的软件相似的产品一网打尽。",
     "DiscoveryQueue_LaunchAction": "开启探索队列",
     "DiscoveryQueue_SalePage_Exhausted": "您已经完成了此探索队列。请稍后回来，看看是否有可以探索的新游戏。",

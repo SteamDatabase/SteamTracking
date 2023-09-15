@@ -370,6 +370,7 @@ message CPublishedFile_Update_Response {
 
 message CPublishedFile_Delete_Request {
 	optional fixed64 publishedfileid = 1 [(description) = "Published file id of the file we'd like to delete."];
+	optional uint32 appid = 5;
 }
 
 message CPublishedFile_Delete_Response {

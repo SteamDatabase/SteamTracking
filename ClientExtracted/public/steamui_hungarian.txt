@@ -837,6 +837,8 @@
 "SteamUI_Selection_Ukrainian"			"Українська (ukrán)"
 "SteamUI_Selection_Latam_Spanish"	"Español - Latinoamérica (latin-amerikai spanyol)"
 "SteamUI_Selection_Vietnamese"		"Tiếng Việt (vietnámi)"
+"SteamUI_Selection_Indonesian"		"Bahasa Indonesia (indonéz)"
+
 
 
 "SteamUI_Modem_33_6k"		"Modem - 33,6 kbps"
@@ -4368,14 +4370,6 @@ kell Mac OS X 10.7 vagy magasabb verzióra."
 "Steam_SystemRequirementWarning_Text" "A rendszered nem felel meg a(z) %game% játékhoz ajánlott minimális rendszerkövetelményeknek."
 "Steam_SystemRequirementWarning_Link" "Rendszerkövetelmények mutatása"
 
-"Notification_RemoteClientTitle"	"Steam Remote Play"
-"Notification_RemoteClientConnected"	"A(z) %machine% elérhető továbbításra"
-"Notification_RemoteClientDisconnected"	"A(z) %machine% már nem elérhető"
-
-"Notification_StreamingTitle"	"Steam Remote Play"
-"Notification_StreamingStarted"	"Továbbítás megkezdve: %hostname% > %machine%"
-"Notification_StreamingStopped"	"Továbbítás leállítva: %machine%"
-
 "steam_menu_view_music_details" "Zenék"
 "steam_menu_view_musicplayer" "Zenelejátszó"
 "Music_Player_WindowTitle" "Zenelejátszó"
@@ -4825,12 +4819,12 @@ kell Mac OS X 10.7 vagy magasabb verzióra."
 "Steam_DualSense_FirmwareUpdate_DisableNotification"	"Ezt ne mutassa többször"
 
 "RescueDialog_Title" "A steamwebhelper nem válaszol"
-"RescueDialog_Explanation" "A steamwebhelper.exe, a Steam egy fontos összetevője nem válaszol. A Steam kezelőfelület nem lesz használható. További információkért <a href=steam://openurl_external/https://help.steampowered.com/hu/faqs/view/6C3E-9504-CC20-AF49>kattints ide</a>."
+"RescueDialog_Explanation" "A steamwebhelper, a Steam egy fontos összetevője nem válaszol. A Steam kezelőfelület nem lesz használható. További információkért <a href=steam://openurl_external/https://help.steampowered.com/hu/faqs/view/6C3E-9504-CC20-AF49>kattints ide</a>."
 "RescueDialog_RadioHeader" "Hadd próbáljunk segíteni:"
 "RescueDialog_RestartSteam" "Steam újraindítása"
 "RescueDialog_RestartSteam_NoGPU" "Steam újraindítása kikapcsolt GPU-gyorsítással"
 "RescueDialog_RestartSteam_NoSandbox" "Steam újraindítása kikapcsolt webböngésző-elszigeteléssel"
-"RescueDialog_RestartSteamWebHelper" "steamwebhelper.exe újraindítása"
+"RescueDialog_RestartSteamWebHelper" "A steamwebhelper újraindítása"
 "RescueDialog_ExitSteam" "Kilépés a Steamből"
 
 "DownloadRegion_default"				 "Ismeretlen"

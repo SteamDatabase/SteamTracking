@@ -849,6 +849,8 @@ Vänligen skriv in SMS-koden nedan."
 "SteamUI_Selection_Ukrainian"			"Українська (Ukrainska)"
 "SteamUI_Selection_Latam_Spanish"	"Español-Latinoamérica (spanska - Latinamerika)"
 "SteamUI_Selection_Vietnamese"		"Tiếng Việt (vietnamesiska)"
+"SteamUI_Selection_Indonesian"		"Bahasa Indonesia (indonesiska)"
+
 
 
 "SteamUI_Modem_33_6k"		"Modem – 33,6 kbit/s"
@@ -4396,14 +4398,6 @@ Ange en kategori för det här spelet så kan du hitta det snabbare och sortera 
 "Steam_SystemRequirementWarning_Text" "Ditt system uppfyller inte de lägsta systemkraven som rekommenderas för %game%."
 "Steam_SystemRequirementWarning_Link" "Visa systemkrav"
 
-"Notification_RemoteClientTitle"	"Steam Remote Play"
-"Notification_RemoteClientConnected"	"%machine% är tillgänglig för strömmning"
-"Notification_RemoteClientDisconnected"	"%machine% är ej längre tillgänglig"
-
-"Notification_StreamingTitle"	"Steam Remote Play"
-"Notification_StreamingStarted"	"Började strömma från %hostname% till %machine%"
-"Notification_StreamingStopped"	"Slutade strömma till %machine%"
-
 "steam_menu_view_music_details" "Musikdetaljer"
 "steam_menu_view_musicplayer" "Musikspelare"
 "Music_Player_WindowTitle" "Musikspelare"
@@ -4853,12 +4847,12 @@ Ange en kategori för det här spelet så kan du hitta det snabbare och sortera 
 "Steam_DualSense_FirmwareUpdate_DisableNotification"	"Visa inte detta igen"
 
 "RescueDialog_Title" "Steamwebhelper svarar inte"
-"RescueDialog_Explanation" "En väsentlig Steam-komponent, steamwebhelper.exe, svarar inte. Steam-gränssnittet kan inte användas. Klicka <a href=steam://openurl_external/https://help.steampowered.com/faqs/view/6C3E-9504-CC20-AF49>här</a> för mer information."
+"RescueDialog_Explanation" "En väsentlig Steam-komponent, steamwebhelper, svarar inte. Steam-gränssnittet kan inte användas. Klicka <a href=steam://openurl_external/https://help.steampowered.com/faqs/view/6C3E-9504-CC20-AF49>här</a> för mer information."
 "RescueDialog_RadioHeader" "Låt oss försöka att hjälpa med detta:"
 "RescueDialog_RestartSteam" "Starta om Steam"
 "RescueDialog_RestartSteam_NoGPU" "Starta om Steam med GPU-acceleration inaktiverad"
 "RescueDialog_RestartSteam_NoSandbox" "Starta om Steam med webbläsarsandbox inaktiverad"
-"RescueDialog_RestartSteamWebHelper" "Starta om steamwebhelper.exe"
+"RescueDialog_RestartSteamWebHelper" "Starta om steamwebhelper"
 "RescueDialog_ExitSteam" "Avsluta Steam"
 
 "DownloadRegion_default"				 "Okänd"

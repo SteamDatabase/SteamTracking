@@ -66,7 +66,7 @@
 "ServerBrowser_FavoritesTab"			"ΑΓΑΠΗΜΕΝΑ"
 "ServerBrowser_SpectateTab"			"ΠΑΡΑΚΟΛΟΥΘΗΣΗ"
 "ServerBrowser_LanTab"				"ΤΟΠΙΚΟΥ ΔΙΚΤΥΟΥ"
-"ServerBrowser_FriendsTab"			"ΦΙΛΟΙ"
+"ServerBrowser_FriendsTab"			"Φίλοι"
 "ServerBrowser_HistoryTab"			"ΙΣΤΟΡΙΚΟ"
 "ServerBrowser_GameInfoTitle"			"Πληροφορίες Παιχνιδιού"
 "ServerBrowser_AddToFavorites"			"Προσθήκη στα αγαπημένα"

@@ -1755,7 +1755,7 @@
   "Sale_Reservation_Komodo": "Có thể mua Steam Deck ở Nhật Bản, Hàn Quốc, Đài Loan, và Hồng Kông qua Komodo tại <1>steamdeck.komodo.jp</1>",
   "Sale_BrowserSortOption_TopWishlisted": "Trò chơi sắp ra mắt được ao ước nhất",
   "Sale_BrowserSortOption_TopWishlisted_ttip": "Trò chơi sắp ra mắt, sắp xếp theo tổng số lượt thêm vào danh sách ước (từ trước đến nay). Chỉ bao gồm những trò chưa phát hành trên Steam.",
-  "Sale_BrowserSortOption_TrendingWishlisted": "Phổ biến và Sắp ra mắt",
+  "Sale_BrowserSortOption_TrendingWishlisted": "Sắp ra mắt đang thịnh hành",
   "Sale_BrowserSortOption_TrendingWishlisted_ttip": "Trò chơi sắp ra mắt xếp theo lượng thêm vào danh sách ước gần đây hoặc đang thịnh hành. Chỉ gồm những trò chưa phát hành trên Steam.",
   "Sale_BrowserSortOption_PopularComingSoon": "Sớm ra mắt",
   "Sale_BrowserSortOption_PopularComingSoon_ttip": "Trò chơi được ao ước nhiều, xếp theo ngày phát hành. Chỉ gồm trò chưa ra mắt trên Steam.",
@@ -2333,7 +2333,7 @@
   "DiscoveryQueue_Error_Login": "Bạn phải đăng nhập vào Steam để mở hàng khám phá mới.",
   "DiscoveryQueue_Error_Login_Title": "Đăng nhập",
   "DiscoveryQueue_LabsHeader": "<1>STEAM LABS</1> <2>Để lại phản hồi</2>",
-  "DiscoveryQueue_WidgetHeader": "Cách mới để khám phá trò chơi bán chạy nhất, sản phẩm mới và giống với những gì bạn chơi và dùng trên Steam.",
+  "DiscoveryQueue_WidgetHeader": "Khám phá trò chơi bán chạy nhất, sản phẩm mới và giống với những gì bạn chơi và dùng trên Steam.",
   "DiscoveryQueue_WidgetHeader_LoggedOut": "Đăng nhập để khám phá trò chơi bán chạy nhất, sản phẩm mới và giống với những gì bạn chơi và dùng trên Steam.",
   "DiscoveryQueue_LaunchAction": "Mở hàng khám phá",
   "DiscoveryQueue_SalePage_Exhausted": "Bạn đã hoàn tất hàng chờ khám phá này. Vui lòng quay lại sau xem có trò chơi mới gì để khám phá.",
@@ -2636,5 +2636,9 @@
   "NotificationsList_EmptyTitle": "Bạn không có thông báo nào vào lúc này.",
   "NotificationsList_EmptyTitle_New": "Bạn không có thông báo mới nào vào lúc này.",
   "NotificationsList_EmptyBody": "Đây là nơi bạn sẽ tìm thấy thông báo Steam về danh sách ước, bạn bè, trò chơi, kho đồ, và nhiều nữa.",
-  "SDRPOPID_GenericCode": "Trung tâm dữ liệu '%1$s'"
+  "SDRPOPID_GenericCode": "Trung tâm dữ liệu '%1$s'",
+  "__FAMILY_GROUPS__": {
+    "SteamNotifications_FamilyInviteTitle": "Mời vào nhóm gia đình",
+    "SteamNotifications_FamilyInviteBody": "%1$s gửi bạn lời mời vào nhóm gia đình"
+  }
 }

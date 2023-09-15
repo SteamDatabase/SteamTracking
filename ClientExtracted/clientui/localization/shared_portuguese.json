@@ -1755,7 +1755,7 @@
   "Sale_Reservation_Komodo": "Clientes situados no Japão, na Coreia do Sul, em Taiwan e em Hong Kong podem encomendar um Steam Deck na página da Komodo, em <1>steamdeck.komodo.jp</1>",
   "Sale_BrowserSortOption_TopWishlisted": "Próximos jogos mais desejados",
   "Sale_BrowserSortOption_TopWishlisted_ttip": "Jogos com lançamento no futuro, ordenados pelo total de presenças em listas de desejos (desde o início). Apenas inclui jogos que ainda não foram lançados no Steam.",
-  "Sale_BrowserSortOption_TrendingWishlisted": "Mais antecipados",
+  "Sale_BrowserSortOption_TrendingWishlisted": "Próximos lançamentos populares",
   "Sale_BrowserSortOption_TrendingWishlisted_ttip": "Jogos com lançamento no futuro, ordenados por popularidade ou pelo número recente de presenças em listas de desejos. Apenas inclui jogos que ainda não foram lançados no Steam.",
   "Sale_BrowserSortOption_PopularComingSoon": "Lançamentos em breve",
   "Sale_BrowserSortOption_PopularComingSoon_ttip": "Os jogos mais desejados, ordenados por data de lançamento. Apenas inclui jogos que ainda não foram lançados no Steam.",
@@ -2333,7 +2333,7 @@
   "DiscoveryQueue_Error_Login": "Precisas de ter sessão iniciada no Steam para poderes abrir a nova Fila de Descoberta.",
   "DiscoveryQueue_Error_Login_Title": "Inicia sessão",
   "DiscoveryQueue_LabsHeader": "<1>LABORATÓRIO STEAM</1> <2>Dá-nos o teu feedback</2>",
-  "DiscoveryQueue_WidgetHeader": "Uma nova forma de descobrir os produtos mais vendidos, as novidades e os jogos semelhantes aos que costumas jogar no Steam.",
+  "DiscoveryQueue_WidgetHeader": "Explora a tua fila com os produtos mais vendidos, as novidades e os jogos semelhantes aos que costumas jogar no Steam.",
   "DiscoveryQueue_WidgetHeader_LoggedOut": "Inicia sessão para descobrires os produtos mais vendidos, as novidades e os jogos semelhantes aos que costumas jogar no Steam.",
   "DiscoveryQueue_LaunchAction": "Iniciar Fila de Descoberta",
   "DiscoveryQueue_SalePage_Exhausted": "Completaste esta Fila de Descoberta. Volta mais tarde para veres se há mais jogos para descobrir.",
@@ -2636,5 +2636,9 @@
   "NotificationsList_EmptyTitle": "Nenhuma notificação de momento.",
   "NotificationsList_EmptyTitle_New": "Nenhuma notificação nova de momento.",
   "NotificationsList_EmptyBody": "Aqui poderás encontrar notificações acerca da tua lista de desejos, amigos, jogos, inventário e muito mais.",
-  "SDRPOPID_GenericCode": "Datacenter \"%1$s\""
+  "SDRPOPID_GenericCode": "Datacenter \"%1$s\"",
+  "__FAMILY_GROUPS__": {
+    "SteamNotifications_FamilyInviteTitle": "Convite para família",
+    "SteamNotifications_FamilyInviteBody": "%1$s convidou-te para uma família"
+  }
 }

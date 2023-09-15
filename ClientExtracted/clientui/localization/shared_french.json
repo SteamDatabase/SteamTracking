@@ -1196,7 +1196,7 @@
   "Broadcast_VideoContext_ToggleStats": "Afficher/masquer les statistiques",
   "Broadcast_VideoContext_OpenStore": "Visiter la page du magasin",
   "Broadcast_None": "Aucune",
-  "Broadcast_Playing": "Joue à : ",
+  "Broadcast_Playing": "Diffusion : ",
   "BroadcastWatch_MinBrowser": "Votre navigateur ne prend pas en charge les fonctionnalités de base requises pour regarder cette diffusion",
   "BroadcastWatch_RequestFailed": "Impossible de charger cette diffusion",
   "BroadcastWatch_NotAvailable": "Diffusion hors ligne",
@@ -1660,7 +1660,7 @@
   "Sale_default_label_231": "Offres et évènements spéciaux",
   "Sale_default_label_232": "Jeux de cartes",
   "Sale_default_label_233": "Jeux de société",
-  "Sale_default_label_234": "Stratégie importante",
+  "Sale_default_label_234": "Stratégie complexe",
   "Sale_default_label_235": "4X",
   "Sale_default_label_236": "Stratégie en temps réel",
   "Sale_default_label_237": "Action et stratégie en temps réel",
@@ -1755,7 +1755,7 @@
   "Sale_Reservation_Komodo": "Les personnes résidant au Japon, en Corée du Sud, à Taïwan et à Hong Kong peuvent maintenant commander leur Steam Deck chez Komodo sur <1>steamdeck.komodo.jp</1>.",
   "Sale_BrowserSortOption_TopWishlisted": "Prochaines sorties les plus souhaitées",
   "Sale_BrowserSortOption_TopWishlisted_ttip": "Voici les prochaines sorties, classées selon le nombre total d'ajouts aux listes de souhaits. N'inclut que les jeux qui n'ont pas encore été publiés sur Steam.",
-  "Sale_BrowserSortOption_TrendingWishlisted": "Sorties attendues",
+  "Sale_BrowserSortOption_TrendingWishlisted": "Prochaines sorties populaires",
   "Sale_BrowserSortOption_TrendingWishlisted_ttip": "Voici les prochaines sorties, classées par popularité ou par le nombre d'ajouts récents aux listes de souhaits. N'inclut que les jeux qui n'ont pas encore été publiés sur Steam.",
   "Sale_BrowserSortOption_PopularComingSoon": "Bientôt disponibles",
   "Sale_BrowserSortOption_PopularComingSoon_ttip": "Titres populaires dans les listes de souhaits, classés par date de sortie. N'inclut que les jeux qui n'ont pas encore été publiés sur Steam.",
@@ -2333,7 +2333,7 @@
   "DiscoveryQueue_Error_Login": "Vous devez vous connecter à Steam pour accéder à la nouvelle liste de découvertes.",
   "DiscoveryQueue_Error_Login_Title": "Connexion",
   "DiscoveryQueue_LabsHeader": "<1>STEAM LABS</1> <2>Donner son avis</2>",
-  "DiscoveryQueue_WidgetHeader": "Un nouveau moyen de découvrir des produits populaires, nouveaux et similaires à ceux auxquels vous jouez et que vous utilisez sur Steam.",
+  "DiscoveryQueue_WidgetHeader": "Parcourez votre liste de découvertes pour trouver des produits populaires, nouveaux et similaires à ceux auxquels vous jouez et que vous utilisez sur Steam.",
   "DiscoveryQueue_WidgetHeader_LoggedOut": "Connectez-vous pour découvrir des produits populaires, nouveaux et similaires à ceux auxquels vous jouez et utilisez sur Steam.",
   "DiscoveryQueue_LaunchAction": "Démarrer votre liste de découvertes",
   "DiscoveryQueue_SalePage_Exhausted": "Vous avez terminé cette liste de découvertes. Revenez plus tard pour découvrir de nouveaux jeux.",
@@ -2636,5 +2636,9 @@
   "NotificationsList_EmptyTitle": "Vous n'avez aucune notification pour le moment.",
   "NotificationsList_EmptyTitle_New": "Vous n'avez aucune nouvelle notification pour le moment.",
   "NotificationsList_EmptyBody": "Toutes les notifications Steam vous concernant s'afficheront ici : liste de souhaits, contacts, jeux, inventaire et plus encore.",
-  "SDRPOPID_GenericCode": "Centre de données « %1$s »"
+  "SDRPOPID_GenericCode": "Centre de données « %1$s »",
+  "__FAMILY_GROUPS__": {
+    "SteamNotifications_FamilyInviteTitle": "Invitation de famille",
+    "SteamNotifications_FamilyInviteBody": "%1$s vous invite à rejoindre sa famille"
+  }
 }

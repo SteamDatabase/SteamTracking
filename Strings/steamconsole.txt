@@ -1,6 +1,8 @@
 __TEXT
 __text
 __TEXT
+Pg
+Pg
 __stubs
 __TEXT
 __stub_helper
@@ -10,6 +12,7 @@ __TEXT
 __cstring
 __TEXT
 __gcc_except_tab__TEXT
+<#
 __objc_methname
 __TEXT
 __unwind_info
@@ -110,6 +113,8 @@ N10CSteamUser43CCallbackInternal_OnPeerContentServerChangeE
 10CUtlString
 9CCallbackI20CAppInstallerBuilder17AppBackupStatus_tLb0EE
 13CCallbackImplILi40EE
+N16CCallbackHandler21CCallback_OnLoggedOffE
+9CCallbackI16CCallbackHandler26SteamServersDisconnected_tLb0EE
 25SteamClientConVarAccessor
 23IConCommandBaseAccessor
 10CUtlRBTreeIyi8CDefLess25CDefRBTreeBalanceListenerIiEyE
@@ -208,7 +213,7 @@ ClientAPI_Init(GlobalInstance): GetIClientInventory returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientBluetoothManager returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientParties returned NULL.
 ClientAPI_RunCallbacks
-IVRSteamPrivate_015
+IVRSteamPrivate_016
 com.valvesoftware.steam.ipctool
 ipcserver restart: expected: %d, got: %d
 pid %d != %d, clearing client_port = %d, server_port = %d
@@ -560,6 +565,7 @@ Non-user command %s received at console; ignoring
 %s
 Failed to load script file '%s'
 SteamExe::RunFrame()
+steamcmd has been disconnected from steam with result %d (%s)
 ConVars:
 %40s
 "%s"
@@ -625,6 +631,7 @@ Could not find GUI file
 You must login to Steam for the Site License functionality to work.
 Steam>
 -nodebug
+CCallbackHandler::OnLoggedOff
 running profile for %d seconds...
 Help topics - type "help <topic>" or run with "--help <topic>" for more information:
 You can also type "find <string>" to see a list of all commands and convars that contain or reference <string>.
@@ -1333,8 +1340,5 @@ T
 0
 0
 0
-0
-|
-q
 0
 0

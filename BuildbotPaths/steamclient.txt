@@ -1,7 +1,6 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientcommon/include/clientcommon/webui_job_dispatcher.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientcommon/webui_job_dispatcher.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientcommon/webui_transport.cpp
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/../common/hiddevicesdl.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/ClientJobRemoteStorageSync.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/appdatacache.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/appdatacache.h
@@ -226,6 +225,7 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/shadercache/shadercacheimplmesa.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/shadercache/shadercacheimplnvidia.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/shadercache/shadercacheimplsteamdepot.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/shadercache/shaderlocalhitcache.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/sharedchatfilter.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/singleprocesspipe_any.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/socket.cpp

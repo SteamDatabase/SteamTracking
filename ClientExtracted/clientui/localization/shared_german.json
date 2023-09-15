@@ -1338,7 +1338,7 @@
   "Sale_SeeEventDetails": "Eventdetails anzeigen",
   "Sale_WatchNow": "Jetzt ansehen",
   "Sale_PlayNow": "Jetzt spielen",
-  "Sale_WatchTheNewVideo": "Unser neues Video jetzt anschauen  ▶",
+  "Sale_WatchTheNewVideo": "Video ansehen  ▶",
   "Sale_EventSchedule": "Event-Zeitplan",
   "Sale_SaleEvent_Section": "Sonderevents",
   "Sale_BroadcastSchedule": "Zeitplan für Übertragungen",
@@ -1755,7 +1755,7 @@
   "Sale_Reservation_Komodo": "Das Steam Deck ist in Japan, Südkorea, Taiwan und Hongkong bei Komodo unter <1>steamdeck.komodo.jp</1> zum Kauf verfügbar.",
   "Sale_BrowserSortOption_TopWishlisted": "Meistgewünschte bevorstehende Spiele",
   "Sale_BrowserSortOption_TopWishlisted_ttip": "Bevorstehende Steam-Titel sortiert nach der Gesamtzahl ihrer Wunschlisteneinträge. (Ohne zeitliche Einschränkung, nur unveröffentlichte Spiele)",
-  "Sale_BrowserSortOption_TrendingWishlisted": "Beliebt und bald verfügbar",
+  "Sale_BrowserSortOption_TrendingWishlisted": "Angesagte bevorstehende Spiele",
   "Sale_BrowserSortOption_TrendingWishlisted_ttip": "Bevorstehende Steam-Titel sortiert nach der Gesamtzahl neuerer Wunschlisteneinträge. (Nur unveröffentlichte Spiele)",
   "Sale_BrowserSortOption_PopularComingSoon": "Bald verfügbar",
   "Sale_BrowserSortOption_PopularComingSoon_ttip": "Bevorstehende Steam-Titel mit vielen Wunschlisteneinträgen sortiert nach Veröffentlichungsdatum. (Nur unveröffentlichte Spiele)",
@@ -2333,7 +2333,7 @@
   "DiscoveryQueue_Error_Login": "Sie müssen bei Steam angemeldet sein, um die neue Entdeckungsliste öffnen zu können.",
   "DiscoveryQueue_Error_Login_Title": "Anmelden",
   "DiscoveryQueue_LabsHeader": "<1>STEAM LABORATORIEN</1> <2>Feedback teilen</2>",
-  "DiscoveryQueue_WidgetHeader": "Eine neue Art erfolgreiche, neue und ähnliche Produkte zu den Titeln zu entdecken, die Sie bereits auf Steam spielen.",
+  "DiscoveryQueue_WidgetHeader": "Entdecken Sie Ihre Liste neuer und ähnlicher Topseller zu Titeln, die Sie bereits auf Steam spielen.",
   "DiscoveryQueue_WidgetHeader_LoggedOut": "Melden Sie sich an und entdecken Sie neue und ähnliche Produkte zu Titeln, die Sie bereits auf Steam spielen.",
   "DiscoveryQueue_LaunchAction": "Entdeckungsliste starten",
   "DiscoveryQueue_SalePage_Exhausted": "Sie haben diese Entdeckungsliste abgeschlossen. Kommen Sie wieder, sobald es neue Spiele zu entdecken gibt.",
@@ -2636,5 +2636,9 @@
   "NotificationsList_EmptyTitle": "Sie haben zurzeit keine Benachrichtigungen.",
   "NotificationsList_EmptyTitle_New": "Sie haben zurzeit keine neuen Benachrichtigungen.",
   "NotificationsList_EmptyBody": "Hier finden Sie Benachrichtigungen bezüglich Ihrer Wunschliste, Freunde, Spiele etc.",
-  "SDRPOPID_GenericCode": "Datenzentrum „%1$s“"
+  "SDRPOPID_GenericCode": "Datenzentrum „%1$s“",
+  "__FAMILY_GROUPS__": {
+    "SteamNotifications_FamilyInviteTitle": "Familieneinladung",
+    "SteamNotifications_FamilyInviteBody": "Familieneinladung von %1$s erhalten"
+  }
 }

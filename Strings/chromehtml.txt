@@ -2,8 +2,6 @@ __TEXT
 
 __text
 __TEXT
-@}
-@}
 __stubs
 __TEXT
 __stub_helper
@@ -21,7 +19,6 @@ __TEXT
 __gcc_except_tab__TEXT
 __unwind_info
 __TEXT
-Df
 __DATA
 __nl_symbol_ptr
 __DATA
@@ -518,8 +515,6 @@ P
 28CMsgGetCookiesForURLResponse
 16CMsgNodeHasFocus
 24CMsgZoomToFocusedElement
-30CMsgCloseFullScreenFlashIfOpen
-35CMsgPauseFullScreenFlashMovieIfOpen
 19CMsgFocusedNodeText
 27CMsgFocusedNodeTextResponse
 11CMsgBuildID
@@ -576,9 +571,7 @@ P
 13CMsgSetUIMode
 16CMsgPopupCreated
 27CMsgSetVRKeyboardVisibility
-NSt3__121__basic_string_commonILb1EEE
-N6google8protobuf8internal16InternalMetadata9ContainerINS0_15UnknownFieldSetEEE
-N6google8protobuf8internal16InternalMetadata13ContainerBaseE
+NSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE
 15CHTMLController
 21IHTMLChromeController
 10CUtlString
@@ -674,7 +667,6 @@ type.googleapis.com/
 type.googleprod.com/
 N6google8protobuf8internal15ExtensionFinderE
 N6google8protobuf8internal24GeneratedExtensionFinderE
-NSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE
 N6google8protobuf8internal12ExtensionSet8KeyValueE
 N6google8protobuf13RepeatedFieldIiEE
 N6google8protobuf13RepeatedFieldIxEE
@@ -822,6 +814,9 @@ N6google8protobuf23SourceCodeInfo_LocationE
 N6google8protobuf14SourceCodeInfoE
 N6google8protobuf28GeneratedCodeInfo_AnnotationE
 N6google8protobuf17GeneratedCodeInfoE
+NSt3__121__basic_string_commonILb1EEE
+N6google8protobuf8internal16InternalMetadata9ContainerINS0_15UnknownFieldSetEEE
+N6google8protobuf8internal16InternalMetadata13ContainerBaseE
 N6google8protobuf14DynamicMessageE
 N6google8protobuf21DynamicMessageFactoryE
 N6google8protobuf8internal29DescriptorPoolExtensionFinderE
@@ -1231,8 +1226,12 @@ newConnection.m_eCmd != 0
 CChromeIPCClient::RunFrame
 Webhelper crashing too often, stopping restart
 CChromeIPCClient::PushCommand
+PushCommand: Trying to push too large command: browser:%u cmd:%d size:%d
 Trying to push insane command size to steamwebhelper.exe (> 32MB)
+PushCommand: Restarting CEF master process due to IPC timeout
 Failure pushing command to steamwebhelper.exe
+PushCommand: Failed to send browser:%u cmd:%d %u/%u
+PushCommand: Trying to push too small command: browser:%u cmd:%d size:%d
 Trying to push too small command size to steamwebhelper.exe (< sizeof(uint32))
 Command stream from chrome is corrupt
 Command stream from chrome is corrupt, got larger than 128M individaul cmd!
@@ -2416,23 +2415,20 @@ id
 
 @
 @
-w
-
+$
 
 
 @
 Ic
-z
-<
-/
-
-S
-
-
+o
+*
+"
 
 
 0
+
 0
+
 Hi
 `
 0
@@ -2445,8 +2441,6 @@ AT=
 D
 @
 @
-
-
 
 
 
@@ -2507,6 +2501,7 @@ M9e
 ?
 ?
 
+/
 @
 @
 @

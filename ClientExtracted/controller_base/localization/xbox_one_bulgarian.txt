@@ -29,9 +29,9 @@
 	"origin_xboxone_button_menu"					"Бутон „Меню“"
 	"origin_xboxone_button_view"					"Бутон „Преглед“"
 	"origin_xboxone_button_dpad_move"				"Движение на Д-пада"
-	"origin_xboxone_button_paddle_1"				"Гребло P1"
-	"origin_xboxone_button_paddle_2"				"Гребло P2"
-	"origin_xboxone_button_paddle_3"				"Гребло P3"
-	"origin_xboxone_button_paddle_4"				"Гребло P4"
+	"origin_xboxone_button_paddle_1"				"Лопатка P1"
+	"origin_xboxone_button_paddle_2"				"Лопатка P2"
+	"origin_xboxone_button_paddle_3"				"Лопатка P3"
+	"origin_xboxone_button_paddle_4"				"Лопатка P4"
 	"origin_xboxone_button_share"					"Бутон „Споделяне“"
 }

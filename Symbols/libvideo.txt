@@ -407,6 +407,7 @@
  T DivideRow_16_AVX2
  T DivideRow_16_Any_AVX2
  T DivideRow_16_C
+ T EGetFramesFromVideo
  T FixedDiv1_C
  T FixedDiv1_X86
  T FixedDiv_C

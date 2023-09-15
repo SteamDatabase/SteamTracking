@@ -12,7 +12,7 @@
 "App_Account"	"Účet"
 "App_Settings"	"Nastavení"
 "App_Monitor"	"Sledování"
-"App_News"		"Novinky"
+"App_News"		"Akční nabídky"
 
 "app_task_games"	"Moje hry"	
 "app_task_store"	"Obchod"

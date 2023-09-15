@@ -2334,7 +2334,7 @@
   "DiscoveryQueue_Error_Login": "您必须登录至 Steam 才能打开新探索队列。",
   "DiscoveryQueue_Error_Login_Title": "登录",
   "DiscoveryQueue_LabsHeader": "<1>STEAM 实验室</1> <2>留下反馈</2>",
-  "DiscoveryQueue_WidgetHeader": "全新探索方式！将 Steam 上的热销佳作、精选新品和与您玩过的游戏或使用过的软件相似的产品一网打尽。",
+  "DiscoveryQueue_WidgetHeader": "探索您队列中的热销佳作、精选新品，以及与您在 Steam 上玩过的游戏或使用过的软件相似的产品。",
   "DiscoveryQueue_WidgetHeader_LoggedOut": "登录以体验全新探索方式！将 Steam 上的热销佳作、精选新品和与您玩过的游戏或使用过的软件相似的产品一网打尽。",
   "DiscoveryQueue_LaunchAction": "开启探索队列",
   "DiscoveryQueue_SalePage_Exhausted": "您已经完成了此探索队列。请稍后回来，看看是否有可以探索的新游戏。",
@@ -2637,5 +2637,9 @@
   "NotificationsList_EmptyTitle": "您当前没有任何通知。",
   "NotificationsList_EmptyTitle_New": "您当前没有任何新通知。",
   "NotificationsList_EmptyBody": "您可以在此处看到有关您的愿望单、好友、游戏、库存等的 Steam 通知。",
-  "SDRPOPID_GenericCode": "“%1$s”数据中心"
+  "SDRPOPID_GenericCode": "“%1$s”数据中心",
+  "__FAMILY_GROUPS__": {
+    "SteamNotifications_FamilyInviteTitle": "家庭邀请",
+    "SteamNotifications_FamilyInviteBody": "%1$s 向您发送了家庭邀请"
+  }
 }

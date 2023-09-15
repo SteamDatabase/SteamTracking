@@ -1642,7 +1642,7 @@
   "Sale_default_label_213": "Populære spill med demoer",
   "Sale_default_label_214": "Morsomt",
   "Sale_default_label_215": "Gratis demoer",
-  "Sale_default_label_216": "Bybygger",
+  "Sale_default_label_216": "Bybygging",
   "Sale_default_label_217": "Kolonisimulering",
   "Sale_default_label_218": "Automatisering",
   "Sale_default_label_219": "Konstruksjon",
@@ -1755,7 +1755,7 @@
   "Sale_Reservation_Komodo": "Steam Deck er tilgjengelig for kjøp i Japan, Sør-Korea, Taiwan og Hongkong via Komodo på <1>steamdeck.komodo.jp</1>",
   "Sale_BrowserSortOption_TopWishlisted": "Mest ønskede kommende spill",
   "Sale_BrowserSortOption_TopWishlisted_ttip": "Kommende spill sortert etter totalt antall ganger det er blitt lagt til på ønskelister. Inkluderer kun spill som ikke er utgitt på Steam enda.",
-  "Sale_BrowserSortOption_TrendingWishlisted": "Populære kommende",
+  "Sale_BrowserSortOption_TrendingWishlisted": "Populære kommende spill",
   "Sale_BrowserSortOption_TrendingWishlisted_ttip": "Kommende spill sortert etter popularitet eller antall ganger det nylig er blitt lagt til på ønskelister. Inkluderer kun spill som ikke er utgitt på Steam enda.",
   "Sale_BrowserSortOption_PopularComingSoon": "Kommer snart",
   "Sale_BrowserSortOption_PopularComingSoon_ttip": "Mest ønskede spill sortert etter utgivelsesdato. Inkluderer kun spill som ikke er utgitt på Steam enda.",
@@ -2105,7 +2105,7 @@
   "FacetedBrowse_MatchCountPartial_Plural": "%1$s+ treff",
   "FacetedBrowse_Reset": "Tilbakestill",
   "FacetedBrowse_ReturnToTop": "Tilbake til toppen",
-  "FacetedBrowse_SelectedFacetValues": "Filtre påført",
+  "FacetedBrowse_SelectedFacetValues": "Filtre i bruk",
   "FacetedBrowse_SearchFacetValues": "Skriv inn søkeord",
   "Platform": "Plattform",
   "Platform_Windows": "Windows",
@@ -2333,7 +2333,7 @@
   "DiscoveryQueue_Error_Login": "Du må være innlogget på Steam for å kunne åpne den nye oppdagelseskøen.",
   "DiscoveryQueue_Error_Login_Title": "Logg inn",
   "DiscoveryQueue_LabsHeader": "<1>STEAM-LABEN</1> <2>Gi tilbakemelding</2>",
-  "DiscoveryQueue_WidgetHeader": "En ny måte å oppdage bestselgere, nyheter og produkter som ligner på de du spiller og bruker på Steam.",
+  "DiscoveryQueue_WidgetHeader": "Utforsk køen av bestselgere, nyheter og produkter som ligner på de du spiller og bruker på Steam.",
   "DiscoveryQueue_WidgetHeader_LoggedOut": "Logg inn for å oppdage bestselgere, nyheter og produkter som ligner på de du spiller og bruker på Steam.",
   "DiscoveryQueue_LaunchAction": "Start oppdagelseskø",
   "DiscoveryQueue_SalePage_Exhausted": "Du har fullført denne oppdagelseskøen. Kom tilbake senere for å se om det finnes nye spill å oppdage.",
@@ -2636,5 +2636,9 @@
   "NotificationsList_EmptyTitle": "Du har ingen varsler akkurat nå.",
   "NotificationsList_EmptyTitle_New": "Du har ingen nye varsler akkurat nå.",
   "NotificationsList_EmptyBody": "Her kan du se Steam-varsler som omhandler ønskelisten, venner, spill, lager og mer.",
-  "SDRPOPID_GenericCode": "Datasenter: %1$s"
+  "SDRPOPID_GenericCode": "Datasenter: %1$s",
+  "__FAMILY_GROUPS__": {
+    "SteamNotifications_FamilyInviteTitle": "Familieinvitasjon",
+    "SteamNotifications_FamilyInviteBody": "%1$s sendte deg en familieinvitasjon"
+  }
 }

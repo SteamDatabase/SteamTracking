@@ -371,7 +371,7 @@
 "Friends_Avatar"						"Avatar"
 "Friends_AutoSignIntoFriendsOnStartup"	"Automaticky přihlásit do funkce Přátelé po spuštění klienta Steam"
 "Friends_ShowTimeInChatLog"	"Zobrazovat v konverzaci časy zpráv"
-"Friends_AlwaysNewChatCheck" "Konverzace vždy otevírat v novém okně místo záložky"
+"Friends_AlwaysNewChatCheck" "Konverzace vždy otevírat v novém okně místo panelu"
 "Friends_NotificationsAndSounds"		"Upozornění a zvuky"
 "Friends_WhenFriendJoinsGame"			"Jakmile se libovolný přítel připojí do hry"
 "Friends_WhenFriendComesOnline"		"Jakmile se libovolný přítel přihlásí"

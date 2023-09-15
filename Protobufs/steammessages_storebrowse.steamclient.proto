@@ -86,6 +86,8 @@ message StoreBrowseItemDataRequest {
 	optional bool include_basic_info = 10 [(description) = "Include short description, publisher, developers"];
 	optional bool include_supported_languages = 11 [(description) = "includes the games support for languages: supported, full_audio, subtitles"];
 	optional bool include_full_description = 12;
+	optional bool include_included_items = 13 [(description) = "For packages and bundles, return the apps and packages included as well.  Pass included_item_data_request for more details on the included items."];
+	optional .StoreBrowseItemDataRequest included_item_data_request = 14 [(description) = "The data to return for included items."];
 }
 
 message CStoreBrowse_GetItems_Request {
@@ -94,20 +96,14 @@ message CStoreBrowse_GetItems_Request {
 	optional .StoreBrowseItemDataRequest data_request = 3;
 }
 
-message StoreGameRating {
-	optional string type = 1 [(description) = "'esrb', 'pegi', ..."];
-	optional string rating = 2 [(description) = "'t' for teen, 'm' for mature, ..."];
-	repeated string descriptors = 3 [(description) = "Additional descriptors like 'Intense Violence', 'Strong Language',..."];
-	optional string interactive_elements = 4 [(description) = "ESRB-specific"];
-	optional int32 required_age = 10 [(description) = "Age in years.  Store pages will prompt with an age gate"];
-	optional bool use_age_gate = 11;
-	optional string image_url = 20 [(description) = "An image corresponding to the rating."];
-	optional string image_target = 21 [(description) = "URL where the image should link for more information."];
-}
-
 message StoreItem {
 	message RelatedItems {
 		optional uint32 parent_appid = 1 [(description) = "For DLC, Demos, etc, this is the main app."];
+	}
+
+	message IncludedItems {
+		repeated .StoreItem included_apps = 1 [(description) = "All apps included, if this is a package or bundle"];
+		repeated .StoreItem included_packages = 2 [(description) = "All packages included, if this is a bundle"];
 	}
 
 	message Categories {
@@ -282,6 +278,7 @@ message StoreItem {
 	optional bool is_free = 13;
 	optional bool is_early_access = 14;
 	optional .StoreItem.RelatedItems related_items = 15;
+	optional .StoreItem.IncludedItems included_items = 16 [(description) = "Items included in this package/bundle, if included_items datarequest was passed."];
 	repeated .EContentDescriptorID content_descriptorids = 20;
 	repeated uint32 tagids = 21;
 	optional .StoreItem.Categories categories = 22;
@@ -304,6 +301,17 @@ message StoreItem {
 	optional uint32 game_count = 56 [(description) = "For creators and tags, how many games belong to them"];
 	optional string internal_name = 57 [(description) = "For hub categories, the internal name (handle) of the category"];
 	optional string full_description = 58 [(description) = "About this game section on the store page"];
+}
+
+message StoreGameRating {
+	optional string type = 1 [(description) = "'esrb', 'pegi', ..."];
+	optional string rating = 2 [(description) = "'t' for teen, 'm' for mature, ..."];
+	repeated string descriptors = 3 [(description) = "Additional descriptors like 'Intense Violence', 'Strong Language',..."];
+	optional string interactive_elements = 4 [(description) = "ESRB-specific"];
+	optional int32 required_age = 10 [(description) = "Age in years.  Store pages will prompt with an age gate"];
+	optional bool use_age_gate = 11;
+	optional string image_url = 20 [(description) = "An image corresponding to the rating."];
+	optional string image_target = 21 [(description) = "URL where the image should link for more information."];
 }
 
 message CStoreBrowse_GetItems_Response {

@@ -844,6 +844,8 @@
 "SteamUI_Selection_Ukrainian"			"Українська (우크라이나어)"
 "SteamUI_Selection_Latam_Spanish"	"Español-Latinoamérica (스페인어-중남미)"
 "SteamUI_Selection_Vietnamese"		"Tiếng Việt (베트남어)"
+"SteamUI_Selection_Indonesian"		"Bahasa Indonesia(인도네시아어)"
+
 
 
 "SteamUI_Modem_33_6k"		"모뎀 - 33.6kbps"
@@ -4393,14 +4395,6 @@ Windows에 관리자로 로그인해야 합니다.
 "Steam_SystemRequirementWarning_Text" "사용하는 시스템이 %game%에서 요구하는 최소 사양을 충족하지 않습니다."
 "Steam_SystemRequirementWarning_Link" "시스템 요구 사항 표시"
 
-"Notification_RemoteClientTitle"	"Steam Remote Play"
-"Notification_RemoteClientConnected"	"현재 %machine%에서 스트리밍 가능"
-"Notification_RemoteClientDisconnected"	"%machine% 사용 불가"
-
-"Notification_StreamingTitle"	"Steam Remote Play"
-"Notification_StreamingStarted"	"%hostname% 에서 %machine% 기기로 스트리밍을 시작했습니다."
-"Notification_StreamingStopped"	"%machine% 기기로 스트리밍을 중단했습니다."
-
 "steam_menu_view_music_details" "음악 상세정보"
 "steam_menu_view_musicplayer" "음악 플레이어"
 "Music_Player_WindowTitle" "음악 플레이어"
@@ -4850,12 +4844,12 @@ Windows에 관리자로 로그인해야 합니다.
 "Steam_DualSense_FirmwareUpdate_DisableNotification"	"다시 보지 않기"
 
 "RescueDialog_Title" "Steamwebhelper가 응답하지 않습니다"
-"RescueDialog_Explanation" "핵심적인 Steam 구성 요소인 steamwebhelper.exe가 응답하지 않습니다. Steam UI를 사용할 수 없습니다. <a href=steam://openurl_external/https://help.steampowered.com/en/faqs/view/6C3E-9504-CC20-AF49>여기</a>를 클릭하여 더 자세한 정보를 확인하세요."
+"RescueDialog_Explanation" "핵심적인 Steam 구성 요소인 steamwebhelper가 응답하지 않습니다. Steam UI를 사용할 수 없습니다. <a href=steam://openurl_external/https://help.steampowered.com/en/faqs/view/6C3E-9504-CC20-AF49>여기</a>를 클릭하여 더 자세한 정보를 확인하세요."
 "RescueDialog_RadioHeader" "문제 해결 방법:"
 "RescueDialog_RestartSteam" "Steam 다시 시작해 보세요."
 "RescueDialog_RestartSteam_NoGPU" "GPU 가속 기능을 비활성화한 상태로 Steam을 다시 시작해 보세요."
 "RescueDialog_RestartSteam_NoSandbox" "브라우저 샌드박싱을 비활성화한 상태로 Steam을 다시 시작해 보세요."
-"RescueDialog_RestartSteamWebHelper" "steamwebhelper.exe를 다시 실행해 보세요."
+"RescueDialog_RestartSteamWebHelper" "steamwebhelper 다시 시작"
 "RescueDialog_ExitSteam" "Steam을 종료하세요."
 
 "DownloadRegion_default"				 "알 수 없음"

@@ -792,7 +792,7 @@
 
 "Steam_Settings_Browser"	"Navigateur Internet"
 "Overlay_SettingsBrowserDesc" "Les paramètres suivants s'appliquent au navigateur Internet utilisé dans le client et l'overlay en jeu de Steam."
-"Steam_SettingsBrowserDeleteAllData"	"Effacer l'historique de navigation"
+"Steam_SettingsBrowserDeleteAllData"	"Effacer les données du navigateur"
 "Steam_SettingsBrowserDeleteAllDataMsg"	"Supprimer tous les fichiers de cache, les cookies et l'historique du navigateur Steam ?"
 
 "RemotePlayTogether_Notification_AvailableToInvite_Title" "Remote Play Together"

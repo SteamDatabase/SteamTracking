@@ -837,6 +837,8 @@
 "SteamUI_Selection_Ukrainian"			"Українська (ucraniano)"
 "SteamUI_Selection_Latam_Spanish"	"Español de Hispanoamérica"
 "SteamUI_Selection_Vietnamese"		"Tiếng Việt (vietnamita)"
+"SteamUI_Selection_Indonesian"		"Bahasa Indonesia (indonesio)"
+
 
 
 "SteamUI_Modem_33_6k"		"Módem - 33.6 kbps"
@@ -4387,14 +4389,6 @@ Haz nuevos amigos en Steam enviando un regalo por correo electrónico a alguien 
 "Steam_SystemRequirementWarning_Text" "Tu sistema no cumple los requisitos mínimos recomendados para %game%."
 "Steam_SystemRequirementWarning_Link" "Mostrar los requisitos del sistema"
 
-"Notification_RemoteClientTitle"	"Steam Remote Play"
-"Notification_RemoteClientConnected"	"%machine% está disponible para retransmitir"
-"Notification_RemoteClientDisconnected"	"%machine% ya no está disponible"
-
-"Notification_StreamingTitle"	"Steam Remote Play"
-"Notification_StreamingStarted"	"Se ha iniciado la retransmisión desde %hostname% a %machine%"
-"Notification_StreamingStopped"	"La retransmisión a %machine% se ha detenido"
-
 "steam_menu_view_music_details" "Detalles de la música"
 "steam_menu_view_musicplayer" "Reproductor de música"
 "Music_Player_WindowTitle" "Reproductor de música"
@@ -4844,12 +4838,12 @@ Haz nuevos amigos en Steam enviando un regalo por correo electrónico a alguien 
 "Steam_DualSense_FirmwareUpdate_DisableNotification"	"No mostrar esto de nuevo"
 
 "RescueDialog_Title" "Steamwebhelper no responde"
-"RescueDialog_Explanation" "Steamwebhelper.exe, un componente crítico de Steam, no responde. No será posible utilizar la IU de Steam. Haz clic <a href=https://help.steampowered.com/es/faqs/view/6C3E-9504-CC20-AF49>aquí</a> para obtener más información."
+"RescueDialog_Explanation" "Steamwebhelper, un componente crítico de Steam, no responde. No será posible utilizar la IU de Steam. Haz clic <a href=https://help.steampowered.com/es/faqs/view/6C3E-9504-CC20-AF49>aquí</a> para obtener más información."
 "RescueDialog_RadioHeader" "Opciones que pueden ayudar:"
 "RescueDialog_RestartSteam" "Reiniciar Steam"
 "RescueDialog_RestartSteam_NoGPU" "Reiniciar Steam con la aceleración por GPU desactivada"
 "RescueDialog_RestartSteam_NoSandbox" "Reiniciar Steam con el entorno aislado del navegador desactivado"
-"RescueDialog_RestartSteamWebHelper" "Reiniciar steamwebhelper.exe"
+"RescueDialog_RestartSteamWebHelper" "Reiniciar steamwebhelper"
 "RescueDialog_ExitSteam" "Salir de Steam"
 
 "DownloadRegion_default"				 "Desconocida"

@@ -1755,7 +1755,7 @@
   "Sale_Reservation_Komodo": "<1>steamdeck.komodo.jp</1>에서 Komodo를 통해 한국, 대만, 일본 및 홍콩에서 Steam Deck을 구매할 수 있습니다.",
   "Sale_BrowserSortOption_TopWishlisted": "가장 많이 찜한 출시 예정 게임",
   "Sale_BrowserSortOption_TopWishlisted_ttip": "역대 총 찜 목록 개수를 기준으로 정렬된 출시 예정 게임입니다. Steam에 아직 출시되지 않은 게임만 포함됩니다.",
-  "Sale_BrowserSortOption_TrendingWishlisted": "인기 출시 예정 제품",
+  "Sale_BrowserSortOption_TrendingWishlisted": "떠오르는 출시 예정 게임",
   "Sale_BrowserSortOption_TrendingWishlisted_ttip": "떠오르는 게임 또는 최신 찜 목록 개수 기준으로 출시 예정 게임을 정렬합니다. Steam에 아직 출시되지 않은 게임만 포함됩니다.",
   "Sale_BrowserSortOption_PopularComingSoon": "곧 출시되는 게임",
   "Sale_BrowserSortOption_PopularComingSoon_ttip": "가장 많이 찜한 게임을 출시일 순으로 정렬합니다. Steam에 아직 출시되지 않은 게임만 포함됩니다.",
@@ -2333,7 +2333,7 @@
   "DiscoveryQueue_Error_Login": "새로운 맞춤 대기열을 열기 위해서는 Steam에 먼저 로그인해야 합니다.",
   "DiscoveryQueue_Error_Login_Title": "로그인",
   "DiscoveryQueue_LabsHeader": "<1>STEAM 실험실</1> <2>피드백 남기기</2>",
-  "DiscoveryQueue_WidgetHeader": "맞춤 대기열은 Steam의 인기 제품과 신제품 그리고 평소에 즐기는 게임과 비슷한 제품을 살펴볼 수 있는 새로운 검색 방법입니다.",
+  "DiscoveryQueue_WidgetHeader": "Steam의 인기 게임과 신규 출시 게임 그리고 평소에 즐기는 게임과 비슷한 게임을 살펴보세요.",
   "DiscoveryQueue_WidgetHeader_LoggedOut": "Steam의 인기 제품과 신제품 그리고 평소에 즐기는 게임과 비슷한 제품을 살펴볼 수 있도록 로그인하세요.",
   "DiscoveryQueue_LaunchAction": "맞춤 대기열 시작",
   "DiscoveryQueue_SalePage_Exhausted": "이 맞춤 대기열을 모두 확인했습니다. 여러 다양한 새로운 게임을 나중에 다시 살펴보세요.",
@@ -2637,5 +2637,9 @@
   "NotificationsList_EmptyTitle_New": "현재 새로운 알림이 없습니다.",
   "NotificationsList_EmptyBody": "찜 목록, 친구, 게임, 보관함 등에 대한 Steam 알림이 여기에 표시됩니다.",
   "SDRPOPID_GenericCode": "데이터센터: %1$s",
+  "__FAMILY_GROUPS__": {
+    "SteamNotifications_FamilyInviteTitle": "가족 초대",
+    "SteamNotifications_FamilyInviteBody": "%1$s 님이 가족 초대장을 보냈습니다."
+  },
   "shared_dummy": "dont translate"
 }

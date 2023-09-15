@@ -112,6 +112,8 @@ enum EStreamControlMessage {
 	k_EStreamControlStopNeptuneData = 142;
 	k_EStreamControlPauseControllerInput = 143;
 	k_EStreamControlResumeControllerInput = 144;
+	k_EStreamControlVRConnectionReady = 145;
+	k_EStreamControlSetCursorScale = 146;
 }
 
 enum EStreamVersion {
@@ -157,6 +159,8 @@ enum EStreamColorspace {
 	k_EStreamColorspace_BT601_Full = 2;
 	k_EStreamColorspace_BT709 = 3;
 	k_EStreamColorspace_BT709_Full = 4;
+	k_EStreamColorspace_BT2020 = 5;
+	k_EStreamColorspace_BT2020_Full = 6;
 }
 
 enum EStreamP2PScope {
@@ -416,6 +420,7 @@ message CStreamingClientConfig {
 	optional .CStreamVideoLimit quality_limit = 22;
 	optional .CStreamVideoLimit runtime_limit = 23;
 	repeated .CStreamVideoLimit decoder_limit = 24;
+	optional bool enable_unreliable_fec = 25 [default = false];
 }
 
 message CStreamingServerConfig {
@@ -617,6 +622,10 @@ message CSetCursorImageMsg {
 	optional int32 hot_x = 4;
 	optional int32 hot_y = 5;
 	optional bytes image = 6;
+}
+
+message CSetCursorScaleMsg {
+	optional float scale = 1;
 }
 
 message CVideoDecoderInfoMsg {
@@ -835,6 +844,10 @@ message CControllerPersonalizationUpdateMsg {
 	optional bool reverse_diamond_button_layout = 3;
 }
 
+message CVRConnectionReady {
+	optional string connect_params = 1;
+}
+
 message CStreamDataLostMsg {
 	repeated uint32 packets = 1;
 }
@@ -889,6 +902,7 @@ message CStreamingSessionStats {
 	optional float frame_loss_percentage = 1;
 	optional float average_network_time_ms = 2;
 	optional float stddev_network_time_ms = 3;
+	optional string test_data = 4;
 }
 
 message CDebugDumpMsg {

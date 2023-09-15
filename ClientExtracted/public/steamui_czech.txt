@@ -843,6 +843,8 @@ Tato operace zabere jenom okamžik."
 "SteamUI_Selection_Ukrainian"			"Українська (Ukrajinština)"
 "SteamUI_Selection_Latam_Spanish"	"Español-Latinoamérica (Latin. španělština)"
 "SteamUI_Selection_Vietnamese"		"Tiếng Việt (Vietnamština)"
+"SteamUI_Selection_Indonesian"		"Bahasa Indonesia (Indonéština)"
+
 
 
 "SteamUI_Modem_33_6k"		"Modem – 33,6 kb/s"
@@ -4396,14 +4398,6 @@ Udělejte si nového přítele tím, že svému známému pošlete e-mailem dár
 "Steam_SystemRequirementWarning_Text" "Váš systém nesplňuje minimální požadavky hry %game%."
 "Steam_SystemRequirementWarning_Link" "Zobrazit systémové požadavky"
 
-"Notification_RemoteClientTitle"	"Steam Remote Play"
-"Notification_RemoteClientConnected"	"Zařízení %machine% je dostupné ke streamování"
-"Notification_RemoteClientDisconnected"	"Zařízení %machine% již není dostupné"
-
-"Notification_StreamingTitle"	"Steam Remote Play"
-"Notification_StreamingStarted"	"Zahájeno streamování ze zařízení %hostname% na zařízení %machine%"
-"Notification_StreamingStopped"	"Zastaveno streamování na zařízení %machine%"
-
 "steam_menu_view_music_details" "Hudba"
 "steam_menu_view_musicplayer" "Hudební přehrávač"
 "Music_Player_WindowTitle" "Hudební přehrávač"
@@ -4853,12 +4847,12 @@ Udělejte si nového přítele tím, že svému známému pošlete e-mailem dár
 "Steam_DualSense_FirmwareUpdate_DisableNotification"	"Znovu nezobrazovat"
 
 "RescueDialog_Title" "Steamwebhelper neodpovídá"
-"RescueDialog_Explanation" "Program „steamwebhelper.exe“, kriticky důležitý komponent klienta služby Steam, neodpovídá, takže není možné používat rozhraní klienta. Pro více informací klikněte <a href=steam://openurl_external/https://help.steampowered.com/cs/faqs/view/6C3E-9504-CC20-AF49>zde</a>."
+"RescueDialog_Explanation" "Program „steamwebhelper“, kriticky důležitý komponent klienta služby Steam, neodpovídá, takže není možné používat rozhraní klienta. Pro více informací klikněte <a href=steam://openurl_external/https://help.steampowered.com/cs/faqs/view/6C3E-9504-CC20-AF49>zde</a>."
 "RescueDialog_RadioHeader" "Co můžete udělat:"
 "RescueDialog_RestartSteam" "Restartovat klienta"
 "RescueDialog_RestartSteam_NoGPU" "Restartovat klienta bez GPU akcelerace"
 "RescueDialog_RestartSteam_NoSandbox" "Restartovat klienta bez sandboxingu prohlížeče"
-"RescueDialog_RestartSteamWebHelper" "Restartovat steamwebhelper.exe"
+"RescueDialog_RestartSteamWebHelper" "Restartovat program steamwebhelper"
 "RescueDialog_ExitSteam" "Ukončit klienta"
 
 "DownloadRegion_default"				 "Neznámý"

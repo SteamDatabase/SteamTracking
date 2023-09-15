@@ -32,6 +32,56 @@ enum ETextFilterSetting {
 	k_ETextFilterSettingDisabled = 3;
 }
 
+message CPlayer_GetPlayerLinkDetails_Request {
+	repeated uint64 steamids = 1;
+}
+
+message CPlayer_GetPlayerLinkDetails_Response {
+	message PlayerLinkDetails {
+		message AccountPublicData {
+			required fixed64 steamid = 1;
+			optional int32 visibility_state = 2;
+			optional int32 privacy_state = 3;
+			optional int32 profile_state = 4;
+			optional uint32 ban_expires_time = 7;
+			optional uint32 account_flags = 8;
+			optional bytes sha_digest_avatar = 9;
+			optional string persona_name = 10;
+			optional string profile_url = 11;
+			optional bool content_country_restricted = 12;
+		}
+
+		message AccountPrivateData {
+			optional int32 persona_state = 1;
+			optional uint32 persona_state_flags = 2;
+			optional uint32 time_created = 3;
+			optional fixed64 game_id = 4;
+			optional fixed64 game_server_steam_id = 5;
+			optional uint32 game_server_ip_address = 6;
+			optional uint32 game_server_port = 7;
+			optional string game_extra_info = 8;
+			optional string account_name = 9;
+			optional fixed64 lobby_steam_id = 10;
+			optional string rich_presence_kv = 11;
+			optional fixed64 broadcast_session_id = 12;
+			optional uint32 watching_broadcast_accountid = 13;
+			optional uint32 watching_broadcast_appid = 14;
+			optional uint32 watching_broadcast_viewers = 15;
+			optional string watching_broadcast_title = 16;
+			optional uint32 last_logoff_time = 17;
+			optional uint32 last_seen_online = 18;
+			optional int32 game_os_type = 19;
+			optional int32 game_device_type = 20;
+			optional string game_device_name = 21;
+		}
+
+		optional .CPlayer_GetPlayerLinkDetails_Response.PlayerLinkDetails.AccountPublicData public_data = 1;
+		optional .CPlayer_GetPlayerLinkDetails_Response.PlayerLinkDetails.AccountPrivateData private_data = 2;
+	}
+
+	repeated .CPlayer_GetPlayerLinkDetails_Response.PlayerLinkDetails accounts = 1;
+}
+
 message CPlayer_GetMutualFriendsForIncomingInvites_Request {
 }
 
@@ -715,6 +765,7 @@ message CPlayer_RecordDisconnectedPlaytime_Request {
 		optional uint32 session_time_start = 2;
 		optional uint32 seconds = 3;
 		optional bool offline = 4;
+		optional uint32 owner = 5;
 	}
 
 	repeated .CPlayer_RecordDisconnectedPlaytime_Request.PlayHistory play_sessions = 3;
@@ -765,6 +816,10 @@ message CPlayer_PrivacySettingsChanged_Notification {
 
 service Player {
 	option (service_description) = "A service for accessing Steam player data";
+
+	rpc GetPlayerLinkDetails (.CPlayer_GetPlayerLinkDetails_Request) returns (.CPlayer_GetPlayerLinkDetails_Response) {
+		option (method_description) = "Replacement for WG GetPlayerLinkDetails";
+	}
 
 	rpc GetMutualFriendsForIncomingInvites (.CPlayer_GetMutualFriendsForIncomingInvites_Request) returns (.CPlayer_GetMutualFriendsForIncomingInvites_Response) {
 		option (method_description) = "Get me the mutual friends for each of my pending incoming invites (individuals and clans).";

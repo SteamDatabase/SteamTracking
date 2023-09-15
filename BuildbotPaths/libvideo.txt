@@ -71,6 +71,7 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlstring.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlsymbol.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlvector.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/dbg.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/memblockhdr.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/memstd.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/minidump.cpp

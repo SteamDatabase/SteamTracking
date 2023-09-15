@@ -842,6 +842,8 @@ Dies dauert in der Regel nicht länger als eine Minute."
 "SteamUI_Selection_Ukrainian"			"Українська (Ukrainisch)"
 "SteamUI_Selection_Latam_Spanish"	"Español-Latinoamérica (Lateinamerikanisches Spanisch)"
 "SteamUI_Selection_Vietnamese"		"Tiếng Việt (Vietnamesisch)"
+"SteamUI_Selection_Indonesian"		"Bahasa Indonesia (Indonesisch)"
+
 
 
 "SteamUI_Modem_33_6k"		"Modem - 33,6 kbit/s"
@@ -4391,14 +4393,6 @@ Senden Sie einem Bekannten ein Geschenk und werden Sie Freunde auf Steam."
 "Steam_SystemRequirementWarning_Text" "Ihr System erfüllt zum Spielen von %game% nicht die empfohlenen Mindestsystemanforderungen."
 "Steam_SystemRequirementWarning_Link" "Systemanforderungen anzeigen"
 
-"Notification_RemoteClientTitle"	"Steam Remote Play"
-"Notification_RemoteClientConnected"	"%machine% ist zum Streamen verfügbar"
-"Notification_RemoteClientDisconnected"	"%machine% ist nicht mehr verfügbar"
-
-"Notification_StreamingTitle"	"Steam Remote Play"
-"Notification_StreamingStarted"	"Stream von %hostname% zu %machine% gestartet"
-"Notification_StreamingStopped"	"Stream zu %machine% beendet"
-
 "steam_menu_view_music_details" "Musikübersicht"
 "steam_menu_view_musicplayer" "Musikplayer"
 "Music_Player_WindowTitle" "Musikplayer"
@@ -4848,12 +4842,12 @@ Senden Sie einem Bekannten ein Geschenk und werden Sie Freunde auf Steam."
 "Steam_DualSense_FirmwareUpdate_DisableNotification"	"Nicht mehr anzeigen"
 
 "RescueDialog_Title" "Steamwebhelper reagiert nicht"
-"RescueDialog_Explanation" "Da die essenzielle Steam-Komponente steamwebhelper.exe nicht reagiert, kann die Steam-Benutzeroberfläche nicht verwendet werden. Weitere Informationen erhalten Sie <a href=steam://openurl_external/https://help.steampowered.com/faqs/view/6C3E-9504-CC20-AF49>hier</a>."
+"RescueDialog_Explanation" "Da die essenzielle Steam-Komponente steamwebhelper nicht reagiert, kann die Steam-Benutzeroberfläche nicht verwendet werden. Weitere Informationen erhalten Sie <a href=steam://openurl_external/https://help.steampowered.com/faqs/view/6C3E-9504-CC20-AF49>hier</a>."
 "RescueDialog_RadioHeader" "Mögliche Lösungen:"
 "RescueDialog_RestartSteam" "Steam neu starten"
 "RescueDialog_RestartSteam_NoGPU" "Steam mit deaktivierter GPU-Beschleunigung neu starten"
 "RescueDialog_RestartSteam_NoSandbox" "Steam mit deaktiviertem Browser-Sandboxing neu starten"
-"RescueDialog_RestartSteamWebHelper" "steamwebhelper.exe neu starten"
+"RescueDialog_RestartSteamWebHelper" "steamwebhelper neu starten"
 "RescueDialog_ExitSteam" "Steam beenden"
 
 "DownloadRegion_default"				 "Unbekannt"

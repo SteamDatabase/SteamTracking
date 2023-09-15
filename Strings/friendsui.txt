@@ -4,8 +4,6 @@ __TEXT
 %
 __text
 __TEXT
-@q
-@q
 __stubs
 __TEXT
 __stub_helper
@@ -13,8 +11,8 @@ __TEXT
 __cstring
 __TEXT
 __gcc_except_tab__TEXT
-L0!
-L0!
+l/!
+l/!
 __const
 __TEXT
 __objc_methname
@@ -49,6 +47,7 @@ __DATA
 __objc_classrefs__DATA
 __data
 __DATA
+M
 __thread_vars
 __DATA
 0
@@ -70,8 +69,8 @@ __LINKEDIT
 "
 
 0#
-HY.
-`}.
+XY.
+p}.
 (%
 P
 
@@ -243,7 +242,7 @@ v
 w
 x
 a
-i
+j
 b
 0
 c
@@ -252,6 +251,7 @@ h
 8
 @
 H
+i
 
 
 $
@@ -328,6 +328,8 @@ X
 $
 0
 L
+$
+(
 (
 @
 @
@@ -395,7 +397,7 @@ P
 `
 (
 P
-(
+0
 (
 (
 0
@@ -451,6 +453,7 @@ P
 13CSetCursorMsg
 18CGetCursorImageMsg
 18CSetCursorImageMsg
+18CSetCursorScaleMsg
 20CVideoDecoderInfoMsg
 20CVideoEncoderInfoMsg
 9CPauseMsg
@@ -498,6 +501,7 @@ P
 22CSetBitrateOverrideMsg
 24CShowOnScreenKeyboardMsg
 35CControllerPersonalizationUpdateMsg
+18CVRConnectionReady
 18CStreamDataLostMsg
 12CAudioFormat
 12CVideoFormat
@@ -731,7 +735,6 @@ type.googleapis.com/
 type.googleprod.com/
 N6google8protobuf8internal15ExtensionFinderE
 N6google8protobuf8internal24GeneratedExtensionFinderE
-NSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE
 N6google8protobuf8internal12ExtensionSet8KeyValueE
 N6google8protobuf13RepeatedFieldIiEE
 N6google8protobuf13RepeatedFieldIxEE
@@ -879,6 +882,7 @@ N6google8protobuf23SourceCodeInfo_LocationE
 N6google8protobuf14SourceCodeInfoE
 N6google8protobuf28GeneratedCodeInfo_AnnotationE
 N6google8protobuf17GeneratedCodeInfoE
+NSt3__121__basic_string_commonILb1EEE
 N6google8protobuf14DynamicMessageE
 N6google8protobuf21DynamicMessageFactoryE
 N6google8protobuf8internal29DescriptorPoolExtensionFinderE
@@ -1354,8 +1358,6 @@ P
 28CMsgGetCookiesForURLResponse
 16CMsgNodeHasFocus
 24CMsgZoomToFocusedElement
-30CMsgCloseFullScreenFlashIfOpen
-35CMsgPauseFullScreenFlashMovieIfOpen
 19CMsgFocusedNodeText
 27CMsgFocusedNodeTextResponse
 11CMsgBuildID
@@ -1412,7 +1414,7 @@ P
 13CMsgSetUIMode
 16CMsgPopupCreated
 27CMsgSetVRKeyboardVisibility
-NSt3__121__basic_string_commonILb1EEE
+NSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE
 N4vgui19AnimatingImagePanelE
 10CUtlVectorIPN4vgui6IImageE10CUtlMemoryIS2_EE
 25CPanelAnimationDictionary
@@ -2086,7 +2088,7 @@ none
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/friendsuihelpers.cpp
 IsARM() || GetCPUInformation().m_bSSE2
 GetBootstrapperVersion
-IVRSteamPrivate_015
+IVRSteamPrivate_016
 resolve
 reject
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/refcount.h
@@ -5300,20 +5302,22 @@ steamIDChat.GetEAccountType() == k_EAccountTypeChat
 k_EChatInstanceFlagClan & steamIDChat.GetUnAccountInstance()
 0
 0
--
+%
 $
-?
+f
+
+
 @
-?
-?
-$
+@
+
+
 x
 
-2#
+
 "
 @
-"
-*
+=!
+>!
 x
 p
 0
@@ -5321,12 +5325,14 @@ p
 0
 p
 0
+!
+!
+!
 p
 0
 p
 0
 p
-0
 0
 p
 0
@@ -5382,6 +5388,7 @@ V
 !
 @
 &
+!
 @
 M9e
 @
@@ -5455,19 +5462,15 @@ B
 B
 @
 @
+
 d
-
-~
 A+M
-
 j
 j
 j
 j
 j
 j
-
-
 =
 0
 j
@@ -5507,6 +5510,7 @@ d
 
 0
 A+4$A+u
+
 =
 =
 @
@@ -5688,6 +5692,7 @@ d
 @
 @
 0
+)
 @
 @
 @
@@ -5697,7 +5702,6 @@ d
 @
 @
 0
-j
 0
 0
 0
@@ -5705,5 +5709,4 @@ j
 &
 Hc
 E
-0
 p

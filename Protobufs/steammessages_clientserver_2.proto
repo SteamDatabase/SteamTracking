@@ -758,8 +758,3 @@ message CMsgClientGetPeerContentInfoResponse {
 	optional uint32 result = 1;
 	repeated uint32 apps = 2;
 }
-
-message CMsgClientFeatureGroupInfo {
-	optional uint64 groupid = 1;
-	repeated uint32 members = 2;
-}

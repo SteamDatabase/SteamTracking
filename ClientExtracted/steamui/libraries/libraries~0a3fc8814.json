@@ -1108,7 +1108,7 @@
     "ChatMentionSuggest_ManyMatchesPlural": "+ %1$s Kecocokan Lainnya",
     "ChatMentionSuggest_NoPermission": "kamu tidak memiliki izin untuk mention siapa pun",
     "TextFilterStatus_ChangeSettings": "Ubah preferensi filter obrolan",
-    "TextFilterStatus_SteamLabOptedOut": "Sekarang tersedia di Steam Labs",
+    "TextFilterStatus_SteamLabOptedOut": "Sekarang tersedia di Steam Lab",
     "TextFilterStatus_Enabled": "Saat ini memfilter kata-kata kasar dan hinaan",
     "TextFilterStatus_Enabled_IgnoreFriends": "Saat ini memfilter kata-kata kasar dan hinaan dari siapa pun kecuali teman",
     "TextFilterStatus_EnabledAllowProfanity": "Saat ini memperbolehkan kata-kata kasar dan memfilter hinaan",

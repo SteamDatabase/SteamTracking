@@ -2333,7 +2333,7 @@
   "DiscoveryQueue_Error_Login": "É necessário iniciar a sessão no Steam para abrir a nova lista de descobrimento.",
   "DiscoveryQueue_Error_Login_Title": "Iniciar sessão",
   "DiscoveryQueue_LabsHeader": "<1>LABORATÓRIO STEAM</1> <2>Deixar comentário</2>",
-  "DiscoveryQueue_WidgetHeader": "Uma nova forma de descobrir produtos entre os mais vendidos, novos e similares ao que você joga e usa no Steam.",
+  "DiscoveryQueue_WidgetHeader": "Explore a sua lista de produtos mais vendidos, novos e similares ao que você joga e usa no Steam.",
   "DiscoveryQueue_WidgetHeader_LoggedOut": "Inicie a sessão para descobrir os produtos mais vendidos, novos e similares ao que você joga e usa no Steam.",
   "DiscoveryQueue_LaunchAction": "Acessar a lista de descobrimento",
   "DiscoveryQueue_SalePage_Exhausted": "Você completou esta lista de descobrimento. Volte mais tarde para ver se há jogos novos para conhecer.",
@@ -2636,5 +2636,9 @@
   "NotificationsList_EmptyTitle": "Não há notificações no momento.",
   "NotificationsList_EmptyTitle_New": "Não há notificações novas no momento.",
   "NotificationsList_EmptyBody": "Aqui, você poderá ver notificações do Steam relacionadas à sua lista de desejos, amigos, jogos, inventário e mais.",
-  "SDRPOPID_GenericCode": "Datacenter: %1$s"
+  "SDRPOPID_GenericCode": "Datacenter: %1$s",
+  "__FAMILY_GROUPS__": {
+    "SteamNotifications_FamilyInviteTitle": "Convite para família",
+    "SteamNotifications_FamilyInviteBody": "%1$s convidou você para uma família"
+  }
 }

@@ -742,7 +742,7 @@
 "Steam_Settings_Broadcast_ShowReminderBanner" "Selalu tampilkan status Live"
 "Steam_Settings_Broadcast_ShowChat" "Tampilkan obrolan penonton di game:"
 "Steam_Settings_Broadcast_StatusHeader" "Status Siaran:"
-"Steam_Settings_Broadcast_HelpHeader" "Butuh bantuan?"
+"Steam_Settings_Broadcast_HelpHeader" "Perlu bantuan?"
 "Steam_Settings_Broadcast_HelpURL_Desc" "Lihat Halaman Bantuan Siaran"
 "Steam_Settings_Broadcast_HelpURL_URL" "https://support.steampowered.com/kb_article.php?ref=6730-TOAK-6497"
 "Steam_Settings_Broadcast_PermissionsHeader" "Pengaturan privasi:"

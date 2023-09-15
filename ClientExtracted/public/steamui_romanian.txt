@@ -840,6 +840,8 @@ Te rugăm să reintroduci parola dorită."
 "SteamUI_Selection_Ukrainian"			"Українська (Ucraineană)"
 "SteamUI_Selection_Latam_Spanish"	"Español-Latinoamérica (Spaniolă - America Latină)"
 "SteamUI_Selection_Vietnamese"		"Tiếng Việt (Vietnameză)"
+"SteamUI_Selection_Indonesian"		"Bahasa Indonesia (indoneziană)"
+
 
 
 "SteamUI_Modem_33_6k"		"Modem - 33.6kbps"
@@ -4382,14 +4384,6 @@ Fă-ți un prieten nou pe Steam, trimițând un cadou prin e-mail către cineva 
 "Steam_SystemRequirementWarning_Text" "Sistemul tău nu îndeplinește cerințele minime de sistem recomandate pentru %game%."
 "Steam_SystemRequirementWarning_Link" "Afișează cerințele de sistem"
 
-"Notification_RemoteClientTitle"	"Steam Remote Play"
-"Notification_RemoteClientConnected"	"%machine% este disponibil pentru transmisiune"
-"Notification_RemoteClientDisconnected"	"%machine% nu mai este disponibil"
-
-"Notification_StreamingTitle"	"Steam Remote Play"
-"Notification_StreamingStarted"	"S-a pornit transmisiunea de la %hostname% către %machine%"
-"Notification_StreamingStopped"	"S-a oprit transmisiunea pe %machine%"
-
 "steam_menu_view_music_details" "Detalii despre muzică"
 "steam_menu_view_musicplayer" "Player de muzică"
 "Music_Player_WindowTitle" "Player muzical"
@@ -4840,12 +4834,12 @@ Artiști"
 "Steam_DualSense_FirmwareUpdate_DisableNotification"	"Nu mai afișa aceasta din nou"
 
 "RescueDialog_Title" "Steamwebhelper nu răspunde"
-"RescueDialog_Explanation" "steamwebhelper.exe, o componentă importantă a clientului Steam, nu răspunde. Interfața Steam nu va putea fi folosită. Apasă <a href=steam://openurl_external/https://help.steampowered.com/ro/faqs/view/6C3E-9504-CC20-AF49>aici</a> pentru mai multe informații."
+"RescueDialog_Explanation" "steamwebhelper, o componentă importantă a clientului Steam, nu răspunde. Interfața Steam nu va putea fi folosită. Apasă <a href=steam://openurl_external/https://help.steampowered.com/ro/faqs/view/6C3E-9504-CC20-AF49>aici</a> pentru mai multe informații."
 "RescueDialog_RadioHeader" "Să încercăm să rezolvăm problema:"
 "RescueDialog_RestartSteam" "Repornește Steam"
 "RescueDialog_RestartSteam_NoGPU" "Repornește Steam fără randarea accelerată activată pentru placa video"
 "RescueDialog_RestartSteam_NoSandbox" "Repornește Steam fără ca browserul să fie izolat"
-"RescueDialog_RestartSteamWebHelper" "Repornește steamwebhelper.exe"
+"RescueDialog_RestartSteamWebHelper" "Repornește steamwebhelper"
 "RescueDialog_ExitSteam" "Închide Steam"
 
 "DownloadRegion_default"				 "Necunoscut"

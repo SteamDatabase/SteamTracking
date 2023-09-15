@@ -2,8 +2,6 @@
 __TEXT
 __text
 __TEXT
-`~
-`~
 __stubs
 __TEXT
 __stub_helper
@@ -21,9 +19,7 @@ __TEXT
 __gcc_except_tab__TEXT
 __unwind_info
 __TEXT
-H
 !
-H
 !
 __eh_frame
 __TEXT
@@ -127,9 +123,10 @@ h
 8
 /usr/lib/libobjc.A.dylib
 &
-h],
-h6
+`],
+@6
 )
+p
 -
 C
 NSt3__117bad_function_callE
@@ -195,7 +192,6 @@ type.googleapis.com/
 type.googleprod.com/
 N6google8protobuf8internal15ExtensionFinderE
 N6google8protobuf8internal24GeneratedExtensionFinderE
-NSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE
 N6google8protobuf8internal12ExtensionSet8KeyValueE
 N6google8protobuf13RepeatedFieldIiEE
 N6google8protobuf13RepeatedFieldIxEE
@@ -344,6 +340,8 @@ N6google8protobuf23SourceCodeInfo_LocationE
 N6google8protobuf14SourceCodeInfoE
 N6google8protobuf28GeneratedCodeInfo_AnnotationE
 N6google8protobuf17GeneratedCodeInfoE
+N6google8protobuf8internal16InternalMetadata9ContainerINS0_15UnknownFieldSetEEE
+N6google8protobuf8internal16InternalMetadata13ContainerBaseE
 N6google8protobuf14DynamicMessageE
 N6google8protobuf21DynamicMessageFactoryE
 N6google8protobuf8internal29DescriptorPoolExtensionFinderE
@@ -6806,8 +6804,6 @@ P
 28CMsgGetCookiesForURLResponse
 16CMsgNodeHasFocus
 24CMsgZoomToFocusedElement
-30CMsgCloseFullScreenFlashIfOpen
-35CMsgPauseFullScreenFlashMovieIfOpen
 19CMsgFocusedNodeText
 27CMsgFocusedNodeTextResponse
 11CMsgBuildID
@@ -6864,9 +6860,7 @@ P
 13CMsgSetUIMode
 16CMsgPopupCreated
 27CMsgSetVRKeyboardVisibility
-NSt3__121__basic_string_commonILb1EEE
-N6google8protobuf8internal16InternalMetadata9ContainerINS0_15UnknownFieldSetEEE
-N6google8protobuf8internal16InternalMetadata13ContainerBaseE
+NSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE
 N4vgui19AnimatingImagePanelE
 10CUtlVectorIPN4vgui6IImageE10CUtlMemoryIS2_EE
 25CPanelAnimationDictionary
@@ -7226,6 +7220,7 @@ N4vgui4HTMLE
 7IHTMLJS
 N4vgui4HTML12CHTMLFindBarE
 22CFrameEventPerfTracker
+NSt3__121__basic_string_commonILb1EEE
 10CUtlVectorIN4vgui4HTML18CustomURLHandler_tE10CUtlMemoryIS2_EE
 10CUtlVectorI9CSmartPtrI15CJSCallbackFuncE10CUtlMemoryIS2_EE
 16CHTMLProtoBufMsgI13CMsgScreenDPIE
@@ -7500,7 +7495,7 @@ d
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/friendsuihelpers.cpp
 IsARM() || GetCPUInformation().m_bSSE2
 GetBootstrapperVersion
-IVRSteamPrivate_015
+IVRSteamPrivate_016
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlvector.h
 !pToCopy || (pToCopy + num <= Base()) || (pToCopy >= (Base() + Count()) )
 log_files_always_flush
@@ -7768,8 +7763,8 @@ Steam pid that launched us
 VGUI_Application_001
 OK
 Cancel
-Sep 11 2023
-13:49:34
+Sep 15 2023
+12:37:47
 crashhandler004
 gameoverlayui
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/overlay/gameoverlayui/main.cpp
@@ -10783,15 +10778,16 @@ Dec
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 0
-S+
-S+
-S+
+F+
+F+
+F+
 0
-'+
+U+
 
 
 
 
+!
 
 @
 
@@ -10807,6 +10803,8 @@ j
 j
 j
 j
+!
+^*
 j
 j
 j
@@ -10817,7 +10815,6 @@ j
 j
 j
 Ic
-+
 0
 0
 AT=
@@ -10828,7 +10825,6 @@ AT=
 D
 @
 @
-(
 @
 Hc
 Hc
@@ -10862,10 +10858,11 @@ IcE
 @
 V
 =
+'
 =
 !
 @
-b$
+U$
 &
 @
 M9e
@@ -11009,17 +11006,14 @@ P
 ?
 @
 @
-i
+_
 d
-X
-
-
 
 
 
 
 A+M
-{
+
 j
 j
 j
@@ -11273,6 +11267,7 @@ d
 =*.*
 =
 @
+:
 @
 @
 0
@@ -11287,6 +11282,6 @@ d
 0
 0
 0
+;
 0
 E
-0

@@ -844,6 +844,8 @@ Oyunu açmak %borrower% adlı kullanıcıya oyunu bırakma zamanının geldiğin
 "SteamUI_Selection_Ukrainian"			"Українська (Ukraynaca)"
 "SteamUI_Selection_Latam_Spanish"	"Español-Latinoamérica (Latin Amerika İspanyolcası)"
 "SteamUI_Selection_Vietnamese"		"Tiếng Việt (Vietnamca)"
+"SteamUI_Selection_Indonesian"		"Bahasa Indonesia (Endonezce)"
+
 
 
 "SteamUI_Modem_33_6k"		"Modem - 33,6 Kbit/sn"
@@ -2430,7 +2432,7 @@ Değişikliklerin etkili olması için OSX platformundan çıkış yapmalısın�
 "Steam_status_installing"			"Yükleniyor"
 "Steam_status_decrypting"			"Çözülüyor:"
 "Steam_status_validating"			"Doğrulanıyor: "
-"Steam_status_verifying"			"Onaylanıyor: "
+"Steam_status_verifying"			"Doğrulanıyor: "
 
 "steam_status_launching"				"Başlatılıyor"
 "steam_status_launching_progress"		"Başlatılıyor: "
@@ -3715,7 +3717,7 @@ Steam üzerinden yeni bir arkadaş edinmek istiyorsanız tanıdığınız birine
 "steam_downloads_workshop_update"	"Atölye Güncellemesi"
 "steam_downloads_installing"	"Yükleniyor"
 "steam_downloads_starting"	"Başlatılıyor"
-"steam_downloads_validating"	"Onaylanıyor"
+"steam_downloads_validating"	"Doğrulanıyor"
 "steam_downloads_verifying"	"Doğrulanıyor"
 "steam_downloads_preallocating" "Alan ayrılıyor"
 "steam_downloads_uninstalling"	"Kaldırılıyor"
@@ -4394,14 +4396,6 @@ Bu oyun için bir kategori ayarlamanız, o oyunu çabuk bulmanıza ve Kütüphan
 "Steam_SystemRequirementWarning_Text" "Sisteminiz %game% oyununun tavsiye edilen asgari sistem gereksinimlerini karşılamıyor."
 "Steam_SystemRequirementWarning_Link" "Sistem gereksinimlerini göster"
 
-"Notification_RemoteClientTitle"	"Steam Remote Play"
-"Notification_RemoteClientConnected"	"%machine% yayın için kullanılabilir"
-"Notification_RemoteClientDisconnected"	"%machine% artık kullanılabilir değil"
-
-"Notification_StreamingTitle"	"Steam Remote Play"
-"Notification_StreamingStarted"	"%hostname% aygıtından %machine% aygıtına yayın başlatıldı"
-"Notification_StreamingStopped"	"%machine% aygıtına yayın durduruldu"
-
 "steam_menu_view_music_details" "Müzik Detayları"
 "steam_menu_view_musicplayer" "Müzik Çalar"
 "Music_Player_WindowTitle" "Müzik Çalar"
@@ -4852,12 +4846,12 @@ Bu oyun için bir kategori ayarlamanız, o oyunu çabuk bulmanıza ve Kütüphan
 "Steam_DualSense_FirmwareUpdate_DisableNotification"	"Bunu tekrar gösterme"
 
 "RescueDialog_Title" "Steamwebhelper yanıt vermiyor"
-"RescueDialog_Explanation" "Steam'in önemli bir bileşeni olan steamwebhelper.exe yanıt vermiyor. Bu nedenle Steam arayüzü kullanılamıyor. Ayrıntılı bilgi için <a href=steam://openurl_external/https://help.steampowered.com/faqs/view/6C3E-9504-CC20-AF49>buraya</a> tıklayın."
+"RescueDialog_Explanation" "Steam'in önemli bir bileşeni olan steamwebhelper yanıt vermiyor. Bu nedenle Steam arayüzü kullanılamıyor. Ayrıntılı bilgi için <a href=steam://openurl_external/https://help.steampowered.com/faqs/view/6C3E-9504-CC20-AF49>buraya</a> tıklayın."
 "RescueDialog_RadioHeader" "Size yardımcı olalım:"
 "RescueDialog_RestartSteam" "Steam'i yeniden başlat"
 "RescueDialog_RestartSteam_NoGPU" "Steam'i GPU hızlandırmasını devre dışı bırakarak yeniden başlat"
 "RescueDialog_RestartSteam_NoSandbox" "Steam'i tarayıcı sandbox'ını devre dışı bırakarak yeniden başlat"
-"RescueDialog_RestartSteamWebHelper" "Steamwebhelper.exe'yi yeniden başlat"
+"RescueDialog_RestartSteamWebHelper" "Steamwebhelper'ı yeniden başlat"
 "RescueDialog_ExitSteam" "Steam'den çık"
 
 "DownloadRegion_default"				 "Bilinmiyor"

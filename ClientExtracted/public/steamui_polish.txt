@@ -207,7 +207,7 @@ Potrwa to niecałą minutę."
 "SteamUI_JoinDialog_OverrideThrottle"	"Obejdź obecne ograniczenie przepustowości"
 "SteamUI_JoinDialog_SkipUpdateInfo" "Pomiń aktualizację i graj teraz"
 
-"SteamUI_JoinDialog_ProcessingShaderCache" "Przetwarzanie shaderów API Vulkan..."
+"SteamUI_JoinDialog_ProcessingShaderCache" "Przetwarzanie shaderów interfejsu Vulkan..."
 "SteamUI_JoinDialog_SkipShaderProcessing" "Pomiń"
 
 "SteamUI_JoinDialog_UpdateAvailable_Title"				"Dostępna aktualizacja"
@@ -841,6 +841,8 @@ Potrwa to niecałą minutę."
 "SteamUI_Selection_Ukrainian"			"Українська (ukraiński)"
 "SteamUI_Selection_Latam_Spanish"	"Español – Latinoamérica (hiszpański latynoamerykański)"
 "SteamUI_Selection_Vietnamese"		"Tiếng Việt (wietnamski)"
+"SteamUI_Selection_Indonesian"		"Bahasa Indonesia (indonezyjski)"
+
 
 
 "SteamUI_Modem_33_6k"		"Modem - 33,6 Kb/s"
@@ -1512,7 +1514,7 @@ Aby dokonane zmiany zostały uwzględnione, konieczne będzie wylogowanie się z
 "Steam_DownloadRatesInBits"			"Wyświetlaj prędkość pobierania w bitach na sekundę"
 
 "Steam_PeerContentTitle"			"Przesyłanie plików gry poprzez sieć lokalną"
-"Steam_PeerContentInfo"			"Ta funkcja umożliwia transferowanie plików gier z innych komputerów w twojej sieci lokalnej, zmniejszając tym samym obciążenie połączenia internetowego przy pobieraniu gry. Możesz także zezwolić innym użytkownikom na transferowanie gier z tego komputera."
+"Steam_PeerContentInfo"			"Ta funkcja umożliwia przesyłanie plików gier z innych komputerów w twojej sieci lokalnej, zmniejszając tym samym obciążenie połączenia internetowego przy pobieraniu gry. Możesz także zezwolić innym użytkownikom na przesyłanie gier z tego komputera."
 "Steam_PeerContentOff"			"Wyłączone – nie zezwalaj na przesyłanie"
 "Steam_PeerContentSameUser"		"Zezwalaj na transfery tylko na moje urządzenia"
 "Steam_PeerContentFriends"		"Zezwalaj na transfery do moich znajomych na Steam"
@@ -4378,14 +4380,6 @@ zaktualizować system do wersji Mac OS X 10.7 lub wyższej."
 "Steam_SystemRequirementWarning_Text" "Twój komputer nie spełnia minimalnych wymagań systemowych %game%."
 "Steam_SystemRequirementWarning_Link" "Wyświetl wymagania systemowe"
 
-"Notification_RemoteClientTitle"	"Steam Remote Play"
-"Notification_RemoteClientConnected"	"Urządzenie %machine% jest dostępne do strumieniowania"
-"Notification_RemoteClientDisconnected"	"Urządzenie %machine% nie jest już dostępne"
-
-"Notification_StreamingTitle"	"Steam Remote Play"
-"Notification_StreamingStarted"	"Rozpoczęto strumieniowanie z %hostname% do %machine%"
-"Notification_StreamingStopped"	"Przerwano strumieniowanie do %machine%"
-
 "steam_menu_view_music_details" "Szczegóły muzyki"
 "steam_menu_view_musicplayer" "Odtwarzacz muzyki"
 "Music_Player_WindowTitle" "Odtwarzacz muzyki"
@@ -4835,12 +4829,12 @@ zaktualizować system do wersji Mac OS X 10.7 lub wyższej."
 "Steam_DualSense_FirmwareUpdate_DisableNotification"	"Nie pokazuj tego ponownie"
 
 "RescueDialog_Title" "Steamwebhelper nie odpowiada"
-"RescueDialog_Explanation" "Plik steamwebhelper.exe – składnik o krytycznym znaczeniu Steam – nie odpowiada. Nie będzie można używać interfejsu Steam. Kliknij <a href=steam://openurl_external/https://help.steampowered.com/pl/faqs/view/6C3E-9504-CC20-AF49>tutaj</a>, by dowiedzieć się więcej."
+"RescueDialog_Explanation" "Plik steamwebhelper – składnik o krytycznym znaczeniu Steam – nie odpowiada. Nie będzie można używać interfejsu Steam. Kliknij <a href=steam://openurl_external/https://help.steampowered.com/pl/faqs/view/6C3E-9504-CC20-AF49>tutaj</a>, by dowiedzieć się więcej."
 "RescueDialog_RadioHeader" "Spróbujmy pomóc:"
 "RescueDialog_RestartSteam" "Zrestartuj Steam."
 "RescueDialog_RestartSteam_NoGPU" "Zrestartuj Steam z wyłączoną akceleracją GPU."
 "RescueDialog_RestartSteam_NoSandbox" "Zrestartuj Steam z wyłączonym trybem izolacji przeglądarki."
-"RescueDialog_RestartSteamWebHelper" "Zrestartuj steamwebhelper.exe."
+"RescueDialog_RestartSteamWebHelper" "Zrestartuj steamwebhelper"
 "RescueDialog_ExitSteam" "Wyjdź ze Steam."
 
 "DownloadRegion_default"				 "Nieznany"

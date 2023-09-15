@@ -842,6 +842,8 @@ L'operazione dovrebbe richiedere meno di un minuto."
 "SteamUI_Selection_Ukrainian"			"Українська (ucraino)"
 "SteamUI_Selection_Latam_Spanish"	"Español-Latinoamérica (Spagnolo latinoamericano)"
 "SteamUI_Selection_Vietnamese"		"Tiếng Việt (vietnamita)"
+"SteamUI_Selection_Indonesian"		"Indonesiano"
+
 
 
 "SteamUI_Modem_33_6k"		"Modem - 33,6 Kbps"
@@ -4391,14 +4393,6 @@ Fatti un nuovo amico su Steam inviando un dono via e-mail a qualcuno che conosci
 "Steam_SystemRequirementWarning_Text" "Il tuo sistema non soddisfa i requisiti minimi di sistema consigliati per %game%."
 "Steam_SystemRequirementWarning_Link" "Mostra i requisiti di sistema"
 
-"Notification_RemoteClientTitle"	"Steam Remote Play"
-"Notification_RemoteClientConnected"	"%machine% è disponibile per lo streaming"
-"Notification_RemoteClientDisconnected"	"%machine% non è più disponibile"
-
-"Notification_StreamingTitle"	"Steam Remote Play"
-"Notification_StreamingStarted"	"Streaming avviato da %hostname% a %machine%"
-"Notification_StreamingStopped"	"Streaming verso %machine% interrotto"
-
 "steam_menu_view_music_details" "Dettagli sulla musica"
 "steam_menu_view_musicplayer" "Lettore musicale"
 "Music_Player_WindowTitle" "Lettore musicale"
@@ -4849,12 +4843,12 @@ Fatti un nuovo amico su Steam inviando un dono via e-mail a qualcuno che conosci
 "Steam_DualSense_FirmwareUpdate_DisableNotification"	"Non mostrare più"
 
 "RescueDialog_Title" "Steamwebhelper non risponde"
-"RescueDialog_Explanation" "steamwebhelper.exe, un componente essenziale di Steam, non risponde. L'interfaccia di Steam non sarà utilizzabile. Clicca <a href=steam://openurl_external/https://help.steampowered.com/faqs/view/6C3E-9504-CC20-AF49>qui</a> per maggiori informazioni."
+"RescueDialog_Explanation" "steamwebhelper, un componente essenziale di Steam, non risponde. L'interfaccia di Steam non sarà utilizzabile. Clicca <a href=steam://openurl_external/https://help.steampowered.com/faqs/view/6C3E-9504-CC20-AF49>qui</a> per maggiori informazioni."
 "RescueDialog_RadioHeader" "Vediamo di risolvere il problema:"
 "RescueDialog_RestartSteam" "Riavvia Steam"
 "RescueDialog_RestartSteam_NoGPU" "Riavvia Steam dopo aver disattivato l'accelerazione della GPU"
 "RescueDialog_RestartSteam_NoSandbox" "Riavvia Steam dopo aver disattivato il sandboxing del browser"
-"RescueDialog_RestartSteamWebHelper" "Riavvia steamwebhelper.exe"
+"RescueDialog_RestartSteamWebHelper" "Riavvia steamwebhelper"
 "RescueDialog_ExitSteam" "Esci da Steam"
 
 "DownloadRegion_default"				 "Sconosciuta"

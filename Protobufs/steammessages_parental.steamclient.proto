@@ -8,6 +8,17 @@ message ParentalApp {
 	optional bool is_allowed = 2;
 }
 
+message ParentalPlaytimeDay {
+	optional uint64 allowed_time_windows = 1 [(description) = "A bitfield where each bit represents a thirty minute window into the day, with bit 0 being midnight-12:30AM"];
+	optional uint32 allowed_daily_minutes = 2 [(description) = "Total number of minutes of playtime for the day"];
+}
+
+message ParentalPlaytimeRestrictions {
+	optional int32 tz_offset = 1 [(description) = "Time zone offset to use to determine when days roll over"];
+	optional bool apply_playtime_restrictions = 2 [(description) = "If true, apply the playtime restrictions described here"];
+	repeated .ParentalPlaytimeDay playtime_days = 15 [(description) = "Playtime restrictions for each day of the week. This will either be empty or will be 7 items long"];
+}
+
 message ParentalSettings {
 	optional fixed64 steamid = 1;
 	optional uint32 applist_base_id = 2;
@@ -23,6 +34,7 @@ message ParentalSettings {
 	optional bool is_site_license_lock = 12;
 	optional uint32 temporary_enabled_features = 13;
 	optional uint32 rtime_temporary_feature_expiration = 14;
+	optional .ParentalPlaytimeRestrictions playtime_restrictions = 15;
 }
 
 message CParental_EnableParentalSettings_Request {
@@ -110,6 +122,26 @@ message CParental_DisableWithRecoveryCode_Request {
 message CParental_DisableWithRecoveryCode_Response {
 }
 
+message CParental_RequestFeatureAccess_Request {
+	optional uint32 features = 1;
+	optional fixed64 steamid = 10;
+}
+
+message CParental_RequestFeatureAccess_Response {
+	optional fixed64 requestid = 1;
+}
+
+message CParental_ApproveFeatureAccess_Request {
+	optional bool approve = 1;
+	optional fixed64 requestid = 2;
+	optional uint32 features = 3;
+	optional uint32 duration = 4;
+	optional fixed64 steamid = 10;
+}
+
+message CParental_ApproveFeatureAccess_Response {
+}
+
 message CParental_ParentalSettingsChange_Notification {
 	optional bytes serialized_settings = 1;
 	optional bytes signature = 2;
@@ -167,6 +199,14 @@ service Parental {
 
 	rpc DisableWithRecoveryCode (.CParental_DisableWithRecoveryCode_Request) returns (.CParental_DisableWithRecoveryCode_Response) {
 		option (method_description) = "Attempt a recovery unlock on the specified account";
+	}
+
+	rpc RequestFeatureAccess (.CParental_RequestFeatureAccess_Request) returns (.CParental_RequestFeatureAccess_Response) {
+		option (method_description) = "Request temporary access to a feature from a parent account";
+	}
+
+	rpc ApproveFeatureAccess (.CParental_ApproveFeatureAccess_Request) returns (.CParental_ApproveFeatureAccess_Response) {
+		option (method_description) = "Approve or deny temporary access to a feature from a child account";
 	}
 }
 

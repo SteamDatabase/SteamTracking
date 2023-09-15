@@ -526,7 +526,7 @@
   "Sale_EnterEventsURL_Tooltip_Common": "Wpisz pełny adres URL wydarzenia, a następnie wybierz z menu autouzupełniania. Wydarzenie musi być publicznie widoczne, by mogło zostać dodane.",
   "EventRepost_Dialog_Title": "Podaj wydarzenie dalej",
   "EventRepost_Dialog_OK": "Podaj dalej",
-  "EventRepost_Dialog_Desc": "Podanie dalej to odwołanie się do wydarzenia w centrum aktualności na osi czasu wybranych poniżej grup. Są to inne grupy społeczności lub aplikacje, w obrębie których to wydarzenie może zostać podane dalej. Wybierz przynajmniej jedną grupę, do której chcesz podać dalej.",
+  "EventRepost_Dialog_Desc": "Podanie dalej to odwołanie się do wydarzenia w centrum aktualności na osi czasu wybranych poniżej grup. Są to inne grupy społeczności lub aplikacje, w których obrębie to wydarzenie może zostać podane dalej. Wybierz przynajmniej jedną grupę, do której chcesz podać dalej.",
   "EventRepost_Dialog_Existing": "%1$s – grupa już podała dalej",
   "EventRepost_Dialog_Action_Desc": "Po kliknięciu „OK” wydarzy się, co następuje:",
   "EventRepost_Dialog_Action_Add": "Podanie dalej w wybranej liczbie grup (%1$s)",
@@ -1474,7 +1474,7 @@
   "Sale_default_label_44": "Strategiczne",
   "Sale_default_label_45": "Dla jednego gracza",
   "Sale_default_label_46": "Tryb wieloosobowy",
-  "Sale_default_label_47": "Bogata historia",
+  "Sale_default_label_47": "Bogata fabuła",
   "Sale_default_label_48": "Otwarty świat",
   "Sale_default_label_49": "Platformowe",
   "Sale_default_label_50": "Powieści wizualne",
@@ -1517,7 +1517,7 @@
   "Sale_default_label_87": "Fizyka",
   "Sale_default_label_88": "Ukryty obiekt",
   "Sale_default_label_89": "Wskaż i kliknij",
-  "Sale_default_label_90": "Logiczne z bogatą historią",
+  "Sale_default_label_90": "Logiczne z bogatą fabułą",
   "Sale_default_label_91": "Logiczne minimalistyczne",
   "Sale_default_label_92": "Survival horror",
   "Sale_default_label_93": "Horror psychologiczny",
@@ -2333,7 +2333,7 @@
   "DiscoveryQueue_Error_Login": "Musisz zalogować się do Steam, by otworzyć nową kolejkę odkryć.",
   "DiscoveryQueue_Error_Login_Title": "Zaloguj się",
   "DiscoveryQueue_LabsHeader": "<1>LABORATORIA STEAM</1> <2>Zostaw opinię</2>",
-  "DiscoveryQueue_WidgetHeader": "Nowy sposób odkrywania bestsellerów oraz nowych i podobnych produktów do tego, w co grasz i używasz na Steam.",
+  "DiscoveryQueue_WidgetHeader": "Odkrywaj swoją kolejkę bestsellerów oraz nowych i podobnych produktów do tego, w co grasz i używasz na Steam.",
   "DiscoveryQueue_WidgetHeader_LoggedOut": "Zaloguj się, by odkryć bestsellery oraz nowe i podobne produkty do tego, w co grasz i używasz na Steam.",
   "DiscoveryQueue_LaunchAction": "Otwórz kolejkę odkryć",
   "DiscoveryQueue_SalePage_Exhausted": "Kolejka odkryć została ukończona. Wróć później, by sprawdzić, czy są nowe gry do odkrycia.",
@@ -2636,5 +2636,9 @@
   "NotificationsList_EmptyTitle": "W tej chwili nie masz powiadomień.",
   "NotificationsList_EmptyTitle_New": "W tej chwili nie masz nowych powiadomień.",
   "NotificationsList_EmptyBody": "Tutaj możesz zobaczyć powiadomienia Steam dotyczące listy życzeń, znajomych, gier, ekwipunku i nie tylko.",
-  "SDRPOPID_GenericCode": "Centrum danych „%1$s”"
+  "SDRPOPID_GenericCode": "Centrum danych „%1$s”",
+  "__FAMILY_GROUPS__": {
+    "SteamNotifications_FamilyInviteTitle": "Zaproszenie do rodziny",
+    "SteamNotifications_FamilyInviteBody": "%1$s wysyła ci zaproszenie do rodziny"
+  }
 }

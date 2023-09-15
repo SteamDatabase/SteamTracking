@@ -842,6 +842,8 @@
 "SteamUI_Selection_Ukrainian"			"Українська（乌克兰语）"
 "SteamUI_Selection_Latam_Spanish"	"Español-Latinoamérica（西班牙语 - 拉丁美洲）"
 "SteamUI_Selection_Vietnamese"		"Tiếng Việt（越南语）"
+"SteamUI_Selection_Indonesian"		"Bahasa Indonesia（印度尼西亚语）"
+
 
 
 "SteamUI_Modem_33_6k"		"调制解调器 - 33.6kbit/s"
@@ -4389,14 +4391,6 @@ Mac OS X 版本升级至 10.7 或更高版本。"
 "Steam_SystemRequirementWarning_Text" "您的系统不能满足 %game% 推荐的游戏最低系统需求。"
 "Steam_SystemRequirementWarning_Link" "显示系统需求"
 
-"Notification_RemoteClientTitle"	"Steam 远程畅玩"
-"Notification_RemoteClientConnected"	"%machine% 可用于流式传输"
-"Notification_RemoteClientDisconnected"	"%machine% 不再可用"
-
-"Notification_StreamingTitle"	"Steam 远程畅玩"
-"Notification_StreamingStarted"	"已开始从 %hostname% 流式传输到 %machine%"
-"Notification_StreamingStopped"	"已停止流式传输到 %machine%"
-
 "steam_menu_view_music_details" "音乐详情"
 "steam_menu_view_musicplayer" "音乐播放器"
 "Music_Player_WindowTitle" "音乐播放器"
@@ -4846,12 +4840,12 @@ Mac OS X 版本升级至 10.7 或更高版本。"
 "Steam_DualSense_FirmwareUpdate_DisableNotification"	"不再显示此信息"
 
 "RescueDialog_Title" "Steamwebhelper 未响应"
-"RescueDialog_Explanation" "steamwebhelper.exe，一个关键的 Steam 组件，没有响应。 Steam UI 将无法使用。 点击<a href=steam://openurl_external/https://help.steampowered.com/faqs/view/6C3E-9504-CC20-AF49>此处</a>了解更多信息。"
+"RescueDialog_Explanation" "Steam 的一个关键组件“steamwebhelper”没有响应。 Steam UI 将无法使用。 点击<a href=steam://openurl_external/https://help.steampowered.com/faqs/view/6C3E-9504-CC20-AF49>此处</a>了解更多信息。"
 "RescueDialog_RadioHeader" "让我们试着提供帮助："
 "RescueDialog_RestartSteam" "重启 Steam"
 "RescueDialog_RestartSteam_NoGPU" "在禁用 GPU 加速的情况下重新启动 Steam"
 "RescueDialog_RestartSteam_NoSandbox" "在禁用浏览器沙盒的情况下重新启动 Steam"
-"RescueDialog_RestartSteamWebHelper" "重新启动 steamwebhelper.exe"
+"RescueDialog_RestartSteamWebHelper" "重新启动 steamwebhelper"
 "RescueDialog_ExitSteam" "退出 Steam"
 
 "DownloadRegion_default"				 "未知"
