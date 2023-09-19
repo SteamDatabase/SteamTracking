@@ -322,6 +322,7 @@
  T SDL_AtomicUnlock
  T SDL_AttachVirtualJoystick
  T SDL_AttachVirtualJoystickEx
+ T SDL_AudioDevicePaused
  T SDL_BindAudioStream
  T SDL_BindAudioStreams
  T SDL_BlitSurface
@@ -482,6 +483,7 @@
  T SDL_GetGamepadAppleSFSymbolsNameForButton
  T SDL_GetGamepadAxis
  T SDL_GetGamepadAxisFromString
+ T SDL_GetGamepadBindings
  T SDL_GetGamepadButton
  T SDL_GetGamepadButtonFromString
  T SDL_GetGamepadFirmwareVersion
@@ -736,7 +738,6 @@
  T SDL_HideWindow
  T SDL_Init
  T SDL_InitSubSystem
- T SDL_IsAudioDevicePaused
  T SDL_IsGamepad
  T SDL_IsJoystickVirtual
  T SDL_IsShapedWindow

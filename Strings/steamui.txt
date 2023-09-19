@@ -136,7 +136,7 @@ h
 /usr/lib/libobjc.A.dylib
 &
 )
-WV
+=N
 Ic
 '
 0
@@ -16498,6 +16498,7 @@ VAAPI
 CGameStreamVideoStageEncoderBase::ProcessData
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/gamestream/gamestreamvideostageh264base.cpp
 (( int )pData->m_Header.m_unWidth == Output.m_Header.m_unWidth && ( int )pData->m_Header.m_unHeight == Output.m_Header.m_unHeight)
+encodedFrame.m_lPTS == m_lWaitingOnKeyframePTS
 %s: Hardware encoding is too slow, disabling
 GetEncoder()->BSupportsCaptureResolutionChange()
 m_bufFrameData
@@ -22154,9 +22155,9 @@ ShowLegalInformation
 SettingsPanel_About
 file://{resources}/layout/settings/settings_about.xml
 build_date
-Sep 15 2023
+Sep 18 2023
 build_time
-12:39:09
+16:58:46
 package_version
 local
 SteamClient020
@@ -29793,7 +29794,7 @@ sOSBuildId
 System details: codename:%s variant:%s version:%s build:%s cef_debugging:%d
 nSteamVersion
 sSteamBuildDate
-Sep 15 2023 12:39:55
+Sep 18 2023 16:59:27
 sSteamAPI
 sCPUVendor
 sCPUName
@@ -45498,7 +45499,7 @@ SSE is required.
 
 
 0
-WV
+=N
 Ic
 '
 0
@@ -45515,16 +45516,16 @@ H=
 0
 @
 =
-~J
+}R
 =
 =
-J
+6K
 ?
 ?
 ?
 @
 I
-~H
+I
 
 @
 @
@@ -45532,12 +45533,11 @@ I
 
 x
 x
-0N
+mO
 O
-F
-kE
+hM
 @
-<E
+M
 x
 E
 0
@@ -45561,7 +45561,6 @@ u{
 A
 
 0
-/C
 z
 z
 z
@@ -45569,6 +45568,7 @@ z
 P
 0
 
+z,
 p
 0
 y
@@ -45881,7 +45881,6 @@ p
 @
 @
 @
-Ct
 p
 0
 @
@@ -45960,6 +45959,7 @@ p
 @
 @
 %
+yr
 @
 @
 @
@@ -46019,7 +46019,6 @@ m
 m
 +
 j
-bq
 )
 )
 )
@@ -46061,7 +46060,7 @@ p
 @
 m
 +
-:p
+Ap
 @
 @
 @
@@ -46070,7 +46069,7 @@ m
 @
 m
 +
-%p
+&p
 0
 @
 @
@@ -46092,8 +46091,6 @@ m
 @
 @
 @
-;o
-Bo
 @
 @
 @
@@ -46177,6 +46174,7 @@ e
 @
 @
 @
+\m
 0
 @
 @
@@ -46241,8 +46239,6 @@ p
 @
 m
 +
-l
-l
 l
 l
 l
@@ -46370,7 +46366,6 @@ j
 @
 j
 j
-j
 @
 @
 j
@@ -46382,9 +46377,7 @@ j
 @
 @
 @
-w
 
-m
 @
 @
 @
@@ -46416,6 +46409,7 @@ m
 @
 @
 j
+I~
 @
 @
 @
@@ -46607,6 +46601,7 @@ j
 @
 @
 ASAVAWh
+_{
 ARASATh
 @
 @
@@ -46632,7 +46627,6 @@ ARASATh
 @
 @
 @
-|
 @
 @
 @
@@ -46780,7 +46774,6 @@ z
 @
 @
 @
-Jz
 ARASAWh
 @
 @
@@ -46937,7 +46930,6 @@ j
 x
 p
 0
-(b
 m
 +
 @
@@ -47106,7 +47098,6 @@ j
 @
 @
 j
-p_
 0
 
 @
@@ -47207,8 +47198,6 @@ j
 @
 @
 @
-v^
-Lu
 @
 @
 @
@@ -47252,6 +47241,8 @@ j
 @
 @
 @
+Q
+H
 @
 @
 @
@@ -47266,6 +47257,7 @@ j
 @
 @
 j
+Yu
 
 
 @
@@ -47297,27 +47289,24 @@ j
 @
 @
 j
-M~
-L\
-\
 p
 0
 p
 0
 ~
 ~
-5j
 \
 p
 0
-@[
+Q[
 @
 @
 @
 @
 @
 @
-\}
+m}
+d}
 @
 @
 @
@@ -47326,6 +47315,10 @@ p
 @
 @
 @
+:}
+<[
+={
+}
 @
 @
 j
@@ -47354,6 +47347,7 @@ x
 @
 @
 @
+-|
 @
 @
 j
@@ -47368,7 +47362,6 @@ j
 @
 @
 @
-Fo
 @
 @
 j
@@ -47426,8 +47419,6 @@ j
 {
 @
 @
-{
-Y
 Y
 Y
 Y
@@ -47444,9 +47435,8 @@ p
 
 
 z
-Tq
-mW
 0
+Ky
 y
 y
 y
@@ -47570,6 +47560,7 @@ w
 @
 @
 @
+|v
 
 
 @
@@ -47586,6 +47577,7 @@ w
 @
 0
 x
+V
 @
 @
 @
@@ -47605,12 +47597,13 @@ x
 @
 @
 z
+7w
+]i
 w
 @
 @
 @
 @
-8u
 @
 @
 @
@@ -47658,6 +47651,7 @@ w
 u
 @
 @
+u
 @
 @
 @
@@ -47675,10 +47669,11 @@ u
 @
 @
 j
+v
 @
 @
 j
-fv
+mv
 j
 ASh
 v
@@ -47757,7 +47752,6 @@ $
 @
 @
 @
-Vu
 @
 @
 @
@@ -47768,7 +47762,6 @@ Vu
 @
 @
 @
-(u
 u
 u
 @
@@ -47790,10 +47783,8 @@ p
 
 p
 0
-SQ
 @
 @
-Qt
 @
 @
 @
@@ -47806,7 +47797,6 @@ Qt
 @
 p
 0
-"t
 
 p
 0
@@ -47817,8 +47807,6 @@ h
 
 R
 R
-R
-@w
 @
 @
 @
@@ -47827,10 +47815,12 @@ R
 @
 @
 @
+}B
 p
 0
 p
 0
+*B
 p
 0
 p
@@ -47842,14 +47832,17 @@ p
 s
 s
 s
-s
-Q
+B
+B
 Q
 d
 ~m=
 =
 =
-{P
+@O
+/r
+r
+r
 r
 r
 r
@@ -47859,10 +47852,10 @@ P
 P
 P
 P
-P
 
 =
 Hc
+U]
 q
 q
 q
@@ -47874,9 +47867,9 @@ A#E
 A#E
 A#u
 "
-sp
 "
 0
+cp
 @
 @
 p
@@ -47906,8 +47899,6 @@ j
 @
 @
 @
-No
-Ko
 p
 0
 p
@@ -47926,6 +47917,7 @@ p
 0
 M
 M
+ln
 =
 =
 =
@@ -47934,7 +47926,6 @@ M
 =
 =
 @
-#n
 =
 =
 =
@@ -47954,7 +47945,8 @@ H=
 H=
 E
 i
-<m
+oK
+.m
 p
 0
 m
@@ -47962,19 +47954,19 @@ p
 0
 <
 =
-EI
-OJ
 @
-LI
-2I
+]I
+nI
+\I
 =
-?I
+.I
 p
 0
 n
-/k
+JW
 0
 0
+sH
 p
 0
 I
@@ -47986,10 +47978,8 @@ p
 p
 0
 j
-]G
 
 0
-j
 p
 0
 I
@@ -48000,6 +47990,7 @@ p
 Hc
 8
 8
+i
 8
 G
 G
@@ -48007,25 +47998,32 @@ G
 Hc
 p
 0
+X7
+nF
 Hc
 Hc
-SF
 Hc
 p
 0
-i<
 T
 T
 T
 T
-s{
+tg
+^g
 D
-D
+AE
 g
 g
+J
 Hi
 E8u
 Hc
+cD
+85
+-f
++f
+(5
 f
 f
 f
@@ -48038,31 +48036,30 @@ D
 K
 y
 =
-4
+o~
 e
+C
 ~
 ~
 
-l3
-6x
-c3
-O3
-L3
 d
 d
 d
+3
 3
 B
 B
 &
 &
+w{
+GA
 c
 c
 c
 c
 H=
-p@
-N@
+-|
+T@
 @
 @
 g
@@ -48071,26 +48068,20 @@ p
 v
 v
 v
-Vb
+rb
+Gb
 p
 0
 /
-[N
-/@
+%b
 p
 0
 @
 @
 @
-T{
-R{
-Tu
 AVj
 p
 0
-Xa
-Na
-V?
 =
 A#u
 @
@@ -48099,31 +48090,31 @@ u
 j
 a
 a
+tj
 M
 M
 M
-v/
-[`
-h>
+M
+M
+u>
 `
+?>
 `
 /
 /
+`
 `
 `
 `
 `
 >
-v<
-H_
-D_
-<_
+@y
 _
 @
 @
 j
 {x
-kc
+yr
 4
 p
 0
@@ -48131,33 +48122,31 @@ p
 0
 ~
 8
-C^
-I^
 x
-x
-7-
+e<
 r
 r
 L
 Q
-u^
+)<
 H=
+b]
 p
 0
 }
-pv
+}
 `
 v
 w
 w
 w
 w
-8;
 E
 =
 =
 p
 0
+]
 p
 0
 I
@@ -48165,7 +48154,9 @@ I
 ;
 ;
 ;
-Dv
+;
+w
+w
 @
 @
 @
@@ -48173,7 +48164,6 @@ Dv
 @
 @
 p
-p
 @
 @
 @
@@ -48186,8 +48176,9 @@ p
 @
 @
 @
-9:
-5:
+8:
+4:
+%:
 \
 \
 \
@@ -48195,22 +48186,24 @@ p
 \
 \
 =
+9
+i[
 p
 0
+{G
 o
 o
-5[
 0
 0
 AT=
 AT5
 AT5
 AT=
-u
 ?
 D
 @
 @
+wt
 @
 Hc
 Hc
@@ -48242,17 +48235,16 @@ IcE
 IcE
 @
 @
-%Z
-t
+$Z
 Z
 Z
 Z
+f
 V
-LY
 Y
 =
 s
-<X
+Yr
 =
 X
 X
@@ -48260,34 +48252,37 @@ X
 X
 X
 X
+`W
+PW
+HW
+BW
 W
 W
 W
 W
-W
+k
 !
+pV
 V
 p
 p
 @
 =
 =
-{o
 &
+o(
 U
 Y
-bT
-Pn
-Cn
 T
-5n
 T
-)n
 S
-.m
 m
 m
+QR
+SR
+RR
 @
+9R
 M9e
 @
 @
@@ -48309,11 +48304,8 @@ l
 ?
 ?
 ?
-mQ
 -
-PQ
 H=
-yk
 Q
 Q
 
@@ -48322,7 +48314,7 @@ Q
 
 
 `
-EP
+aP
 @
 @
 P
@@ -48332,10 +48324,11 @@ P
 P
 P
 P
-.}
+P
 d
 e
 H
+S
 
 (
 (
@@ -48345,38 +48338,38 @@ H
 `
 `
 @
-/i
+Ui
 j
 j
 Pj
 ARj
 j
 i
+I
+jr
 0
 0
 IcU
 E;e
 N
 N
-N
 M)u
 S
 S
-S
+h
 =
 =
 @
 =
-=R
+wg
 =
 @
+4L
 
 @
 @
 @
 0
-M
-(f
 H=
 Ic]
 j
@@ -48388,25 +48381,33 @@ f
 f
 f
 f
-AK
+IK
+Q
 j
 j
 o
+Q
 
-^d
-5d
+gd
 t$I;M
 d
 d
++I
+2N
+Ok
 N
+G
 H
 0
+_a
+iF
 
 
-[j
+uj
+BF
 
 
-M
+)j
 
 
 
@@ -48414,10 +48415,12 @@ M
 
 
 Hc
-N`
-`
+_E
 `
 _
+_
+Q_
+(K
 @
 ,
 *
@@ -48430,9 +48433,10 @@ Poly1305 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 N
 N
 N
-zH
 j
 j
+]^
+R^
 $
 $
 0
@@ -48497,7 +48501,6 @@ K
 i[
 i[
 @
-F
 Mc}
 Hc]
 HcU
@@ -48648,6 +48651,7 @@ B
 @
 @
 @
+A
 }
 }
 n<
@@ -48702,7 +48706,6 @@ x
 @
 8
 8
-_A
 U
 U
 U
@@ -48713,6 +48716,7 @@ P
 (
 =
 U
+OA
 @
 @
 @
@@ -48826,7 +48830,6 @@ S
 @
 @
 ?
-j:
 `
 `
 !
@@ -48857,7 +48860,6 @@ B
 B
 "
 B
-?R
 "
 B
 "
@@ -48885,7 +48887,6 @@ B
 B
 "
 B
-,R
 R
 R
 R
@@ -48913,8 +48914,6 @@ P
 |
 |
 
-GQ
->Q
 @
 @
 
@@ -48947,10 +48946,8 @@ IcE
 `
 `
 @
->P
 >
 =
-hP
 >
 =
 
@@ -48960,6 +48957,7 @@ P
 @
 @
 G
+8P
 j
 j
 j
@@ -49075,10 +49073,8 @@ j-
 -
 -
 B]
-HI
 d
-I
-I
+/I
 I
 I
 I
@@ -49114,7 +49110,6 @@ j
 j
 p+
 =
-H
 cO
 j
 j
@@ -49170,7 +49165,6 @@ d
 0
 G
 A+4$A+u
-OF
 D
 =
 =
@@ -49197,7 +49191,6 @@ j
 j
 j
 j
-,=
 M
 j
 j
@@ -49231,6 +49224,7 @@ j
 j
 j
 j
+B
 E
 J
 J'
@@ -49244,6 +49238,7 @@ j
 j
 j
 j
+h;
 '
 '
 '
@@ -49254,6 +49249,7 @@ j
 j
 j
 j
+iC
 5&
 j
 j
@@ -49277,7 +49273,6 @@ j
 j
 j
 j
-;=
 j
 j
 j
@@ -49352,6 +49347,7 @@ j
 @
 @
 @
+XD
 @
 @
 @
@@ -49398,7 +49394,6 @@ e
 =
 @
 @
-g=
 Hc9)b
 #
 
@@ -49410,7 +49405,6 @@ G
 =
 @
 !d
-{?
 8
 @
 @
@@ -49437,9 +49431,8 @@ F
 0
 0
 &
+5
 Hc
-5
-5
 5
 5
 Hc
@@ -49453,16 +49446,18 @@ E
 `
 `
 t
+#@
 M
 "
 Hi
 E
-%=
+.=
 u
 :
 :
 %
-@<
+z<
+;<
 
 
 
@@ -49472,7 +49467,6 @@ u
 
 
 <
-f7
 <
 <
 <
@@ -49483,10 +49477,10 @@ j
 @
 OB
 @
+x8
 B
-`8
+a1
 0
-[6
 8
 8
 @
@@ -49506,7 +49500,9 @@ Hc
 Hc
 Hc
 Hc
+:
 0
+/
 /
 @
 @
@@ -49523,7 +49519,6 @@ Hc
 P
 P
 @
-28
 >
 @
 `
@@ -49531,6 +49526,7 @@ P
 p
 @
 p
+8
 p
 @
 S
@@ -49559,12 +49555,12 @@ E
 W
 0
 0
+g3
 0
 9
 Hi
 0
 
-V2
 S2
 @
 @
@@ -49593,12 +49589,14 @@ U
 @
 @
 lP
+^1
 @
 @
 @
 @
 @
 @
+,
 <P
 &P
 1
@@ -49620,6 +49618,7 @@ T
 @
 @
 @
+r%
 0
 @
 @
@@ -49628,7 +49627,10 @@ T
 \O
 @
 @
+P0
+A0
 %
+)0
 \S
 jS
 0
@@ -49650,7 +49652,6 @@ jS
 @
 @
 j
-a%
 1
 K
 @
@@ -49667,7 +49668,6 @@ K
 @
 @
 @
-H&
 @
 @
 @
@@ -49689,7 +49689,6 @@ R
 @
 @
 @
-E$
 4
 $
 $
@@ -49869,7 +49868,6 @@ EI
 @
 @
 j
-w(
 pK
 #D
 @
@@ -49979,14 +49977,10 @@ C
 @
 @
 iF
-n#
-O#
-#
 ED
 :D
-s#
-?#
 {E
+o"
 @
 @
 
@@ -50015,7 +50009,6 @@ F'
 @
 @
 >
-"
 +D
 @
 @
@@ -50323,6 +50316,8 @@ C
 @
 @
 @
+j
+d
 m>
 gB
 @
