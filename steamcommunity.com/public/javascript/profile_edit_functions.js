@@ -395,8 +395,8 @@ function AchievementsCompletionistGameShowcaseOnGameChange( elSlot, eShowcase, p
 {
 	SetShowcaseConfig(
 		eShowcase, purchaseid, iSlot, {appid: game.appid }
-	).done( function() {
-		$J(elSlot).find('img').attr( 'src', game.header );
+	).done( function( data ) {
+		$J(elSlot).find('img.game_capsule').attr( 'src', data.header );
 		$J(elSlot).find('a').attr( 'href', 'https://steamcommunity.com/app/' + game.appid);
 		$J(elSlot).find('.showcase_achievementscompletionist_game_num_achievements').text( game.num_achievements + ' / ' + game.num_achievements + ' Achievements' );
 		$J(elSlot).removeClass( 'openslot' );
