@@ -94,13 +94,43 @@
   display: flex;
   flex-direction: row;
   margin: 0px 40px 8px 40px;
+  justify-content: space-between;
 }
-.pricinggrid_PricingGridCtn_2j-z9 .DialogDropDown {
+.pricinggrid_PricingGridCtn_2j-z9
+  .pricinggrid_GridHeaderButtons_1Z7LL
+  .DialogDropDown {
   padding-right: 40px;
 }
-.pricinggrid_PricingGridCtn_2j-z9 .pricinggrid_CompactOption_1mXo4 {
-  margin-left: auto;
+.pricinggrid_PricingGridCtn_2j-z9
+  .pricinggrid_GridHeaderButtons_1Z7LL
+  .pricinggrid_OptionCtn_1PrsC {
+  margin-left: 8px;
+}
+.pricinggrid_PricingGridCtn_2j-z9
+  .pricinggrid_GridHeaderButtons_1Z7LL
+  .pricinggrid_OptionCtn_1PrsC.pricinggrid_PriceLowOption_39j_Z {
+  flex-grow: 1;
+}
+.pricinggrid_PricingGridCtn_2j-z9
+  .pricinggrid_GridHeaderButtons_1Z7LL
+  .pricinggrid_OptionCtn_1PrsC.pricinggrid_PriceLowOption_39j_Z
+  ._DialogLayout {
   background-color: #303238;
+  border: 1px solid #e63600;
+  padding: 4px 8px;
+  margin-bottom: 0;
+  width: fit-content;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+.pricinggrid_PricingGridCtn_2j-z9
+  .pricinggrid_GridHeaderButtons_1Z7LL
+  .pricinggrid_OptionCtn_1PrsC.pricinggrid_CompactOption_1mXo4
+  ._DialogLayout {
+  background-color: #303238;
+  margin-bottom: 0;
 }
 .pricinggrid_CurrencyHeader_1kvIF {
   height: 100%;
@@ -848,8 +878,16 @@ div.pricinggridcell_HoverToolTip_36qS7 {
   margin-bottom: 8px;
 }
 .saveprices_PricePreviewWarning_IxZAj {
-  margin: 8px;
-  color: #c22d00;
+  margin-top: 8px;
+  padding: 4px 6px;
+  color: #d94c20;
+  background: #401507;
+  font-size: 14px;
+  line-height: 19px;
+}
+.saveprices_PricePreviewWarning_IxZAj a {
+  color: #e76c47 !important;
+  text-decoration: underline !important;
 }
 .saveprices_SeeDetailsSection_36-JC {
   margin-top: 12px;

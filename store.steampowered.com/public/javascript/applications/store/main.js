@@ -11168,15 +11168,25 @@
                 i.deserializeBinaryFromReader(r.Body(), t);
               }
               0;
-            } catch (e) {
-              const t =
-                401 ===
-                (null === (l = null == e ? void 0 : e.response) || void 0 === l
-                  ? void 0
-                  : l.status)
-                  ? "Unauthorized"
-                  : null;
-              r = this.CreateFailedMsgProtobuf(i, 3, t);
+            } catch (t) {
+              const n =
+                  401 ===
+                  (null === (l = null == t ? void 0 : t.response) ||
+                  void 0 === l
+                    ? void 0
+                    : l.status),
+                o = n ? "Unauthorized" : null;
+              (r = this.CreateFailedMsgProtobuf(i, 3, o)),
+                n &&
+                  !this.m_refreshAccessTokenPromise &&
+                  this.m_bJWTToken &&
+                  e.bSendAuth &&
+                  this.m_fnRequestNewAccessToken &&
+                  ((this.m_refreshAccessTokenPromise =
+                    this.m_fnRequestNewAccessToken()),
+                  (this.m_webApiAccessToken =
+                    yield this.m_refreshAccessTokenPromise),
+                  (this.m_refreshAccessTokenPromise = null));
             }
             return r;
           });
@@ -15129,7 +15139,8 @@
       new a.s("VR");
       class l {
         constructor() {
-          this.m_mapAffordanceElems = new Map();
+          (this.m_bSimulatingVROnDesktop = !1),
+            (this.m_mapAffordanceElems = new Map());
         }
         Init() {
           var e, t, n, r, i, o, s, a, l, c, u;
@@ -15212,13 +15223,20 @@
             (this.m_sInitialKeyboardText = n);
         }
         get IsVRHMDPresent() {
-          return this.m_bHMDPresent || this.m_bHMDHardwareDetected;
+          return (
+            this.m_bSimulatingVROnDesktop ||
+            this.m_bHMDPresent ||
+            this.m_bHMDHardwareDetected
+          );
         }
         get IsSteamVRRunning() {
-          return this.m_bIsVRRunning;
+          return this.m_bSimulatingVROnDesktop || this.m_bIsVRRunning;
         }
         get IsVRHMDAwake() {
-          return this.m_eHMDActivityLevel == s.VR.$6.UserInteraction;
+          return (
+            this.m_bSimulatingVROnDesktop ||
+            this.m_eHMDActivityLevel == s.VR.$6.UserInteraction
+          );
         }
         get VRKeyboardStatus() {
           const e = 0 != (this.m_eKeyboardFlags & s.VR.vS.Minimal);
@@ -15232,7 +15250,9 @@
           };
         }
         get VRHMDActivityLevel() {
-          return this.m_eHMDActivityLevel;
+          return this.m_bSimulatingVROnDesktop
+            ? s.VR.$6.UserInteraction
+            : this.m_eHMDActivityLevel;
         }
         get VRKeyboardDisplayFlags() {
           return this.m_eKeyboardFlags;
@@ -15242,6 +15262,9 @@
         }
         ClearError() {
           this.m_error = void 0;
+        }
+        SetSimulatingVROnDesktop(e) {
+          this.m_bSimulatingVROnDesktop = e;
         }
         SetInteractionAffordance(e, t, n) {}
       }
@@ -15320,6 +15343,7 @@
         (0, r.gn)([o.LO], l.prototype, "m_bIsKeyboardOpen", void 0),
         (0, r.gn)([o.LO], l.prototype, "m_eKeyboardFlags", void 0),
         (0, r.gn)([o.LO], l.prototype, "m_sInitialKeyboardText", void 0),
+        (0, r.gn)([o.LO], l.prototype, "m_bSimulatingVROnDesktop", void 0),
         (0, r.gn)([o.aD.bound], l.prototype, "OnVRHardwareDetected", null),
         (0, r.gn)([o.aD.bound], l.prototype, "OnVRModeChanged", null),
         (0, r.gn)([o.aD.bound], l.prototype, "OnStartupError", null),
@@ -15327,7 +15351,6 @@
         (0, r.gn)([o.aD.bound], l.prototype, "OnKeyboardStatus", null),
         (0, r.gn)([o.aD.bound], l.prototype, "ClearError", null);
       const u = new l();
-      window.vrStore = u;
     },
     69159: (e, t, n) => {
       "use strict";
@@ -20575,34 +20598,80 @@
         );
       }
       function d(e) {
-        return i.createElement(
-          "svg",
-          Object.assign(
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              viewBox: "0 0 36 36",
-              fill: "none",
-            },
-            e,
-          ),
-          i.createElement(
-            "g",
-            { className: "SVGIcon_Notification" },
-            i.createElement("path", {
-              fillRule: "evenodd",
-              clipRule: "evenodd",
-              d: "M32 24V26H4V24L8 19V12C8 9.34784 9.05357 6.8043 10.9289 4.92893C12.8043 3.05357 15.3478 2 18 2C20.6522 2 23.1957 3.05357 25.0711 4.92893C26.9464 6.8043 28 9.34784 28 12V19L32 24Z",
-              fill: "currentColor",
-            }),
-            i.createElement("path", {
-              className: "SVGIcon_Notification_Uvula",
-              fillRule: "evenodd",
-              clipRule: "evenodd",
-              d: "M18 34C19.2396 33.9986 20.4483 33.6133 21.46 32.897C22.4718 32.1807 23.2368 31.1687 23.65 30H12.35C12.7632 31.1687 13.5282 32.1807 14.54 32.897C15.5517 33.6133 16.7604 33.9986 18 34Z",
-              fill: "currentColor",
-            }),
-          ),
-        );
+        const { alert: t, urgent: n } = e,
+          o = (0, r._T)(e, ["alert", "urgent"]);
+        return n
+          ? i.createElement(
+              "svg",
+              Object.assign(
+                {
+                  xmlns: "http://www.w3.org/2000/svg",
+                  viewBox: "0 0 36 36",
+                  fill: "none",
+                },
+                o,
+              ),
+              i.createElement("path", {
+                fill: "currentColor",
+                fillRule: "evenodd",
+                clipRule: "evenodd",
+                d: "M21.1862 2.52116C20.1687 2.17914 19.0936 2 18 2C15.3478 2 12.8043 3.05357 10.9289 4.92893C9.05357 6.8043 8 9.34784 8 12V19L4 24V26H32V24L28 19V14.4025C23.9218 12.9611 21 9.07177 21 4.5C21 3.82354 21.064 3.16202 21.1862 2.52116ZM21.46 32.897C20.4483 33.6133 19.2396 33.9986 18 34C16.7604 33.9986 15.5517 33.6133 14.54 32.897C13.5282 32.1807 12.7632 31.1687 12.35 30H23.65C23.2368 31.1687 22.4718 32.1807 21.46 32.897Z",
+              }),
+              i.createElement("path", {
+                fill: "#FFC82C",
+                d: "M36 4.5C36 6.98528 33.9853 9 31.5 9C29.0147 9 27 6.98528 27 4.5C27 2.01472 29.0147 0 31.5 0C33.9853 0 36 2.01472 36 4.5Z",
+              }),
+            )
+          : t
+          ? i.createElement(
+              "svg",
+              Object.assign(
+                {
+                  xmlns: "http://www.w3.org/2000/svg",
+                  viewBox: "0 0 36 36",
+                  fill: "none",
+                },
+                o,
+              ),
+              i.createElement("path", {
+                fill: "currentColor",
+                fillRule: "evenodd",
+                clipRule: "evenodd",
+                d: "M21.1862 2.52116C20.1687 2.17914 19.0936 2 18 2C15.3478 2 12.8043 3.05357 10.9289 4.92893C9.05357 6.8043 8 9.34784 8 12V19L4 24V26H32V24L28 19V14.4025C23.9218 12.9611 21 9.07177 21 4.5C21 3.82354 21.064 3.16202 21.1862 2.52116ZM21.46 32.897C20.4483 33.6133 19.2396 33.9986 18 34C16.7604 33.9986 15.5517 33.6133 14.54 32.897C13.5282 32.1807 12.7632 31.1687 12.35 30H23.65C23.2368 31.1687 22.4718 32.1807 21.46 32.897Z",
+              }),
+              i.createElement("path", {
+                fill: "#1A9FFF",
+                d: "M36 4.5C36 6.98528 33.9853 9 31.5 9C29.0147 9 27 6.98528 27 4.5C27 2.01472 29.0147 0 31.5 0C33.9853 0 36 2.01472 36 4.5Z",
+              }),
+            )
+          : i.createElement(
+              "svg",
+              Object.assign(
+                {
+                  xmlns: "http://www.w3.org/2000/svg",
+                  viewBox: "0 0 36 36",
+                  fill: "none",
+                },
+                o,
+              ),
+              i.createElement(
+                "g",
+                { className: "SVGIcon_Notification" },
+                i.createElement("path", {
+                  fillRule: "evenodd",
+                  clipRule: "evenodd",
+                  d: "M32 24V26H4V24L8 19V12C8 9.34784 9.05357 6.8043 10.9289 4.92893C12.8043 3.05357 15.3478 2 18 2C20.6522 2 23.1957 3.05357 25.0711 4.92893C26.9464 6.8043 28 9.34784 28 12V19L32 24Z",
+                  fill: "currentColor",
+                }),
+                i.createElement("path", {
+                  className: "SVGIcon_Notification_Uvula",
+                  fillRule: "evenodd",
+                  clipRule: "evenodd",
+                  d: "M18 34C19.2396 33.9986 20.4483 33.6133 21.46 32.897C22.4718 32.1807 23.2368 31.1687 23.65 30H12.35C12.7632 31.1687 13.5282 32.1807 14.54 32.897C15.5517 33.6133 16.7604 33.9986 18 34Z",
+                  fill: "currentColor",
+                }),
+              ),
+            );
       }
       function m(e) {
         return i.createElement(
@@ -22541,53 +22610,26 @@
         );
       }
       function E(e) {
-        return (0, l.id)()
-          ? i.createElement(
-              "svg",
-              Object.assign(
-                {
-                  width: "24",
-                  height: "24",
-                  viewBox: "0 0 36 36",
-                  fill: "none",
-                  xmlns: "http://www.w3.org/2000/svg",
-                  className: "SVGIcon_Button SVGIcon_Submit",
-                },
-                e,
-              ),
-              i.createElement("path", {
-                fillRule: "evenodd",
-                clipRule: "evenodd",
-                d: "M4.16683 8.982C4.10732 8.3908 3.83847 7.42693 4.15486 7.17995C4.46877 6.93489 4.7797 6.90487 5.90123 7.31306L31.1931 17.2282C32.2693 17.6503 32.2686 18.335 31.1931 18.7564L5.90123 28.6715C4.77972 29.1235 4.46864 29.0497 4.15487 28.8049C3.83836 28.5579 4.0953 27.5939 4.15484 27.0028L4.7797 21.2151C4.89862 20.0374 5.92644 18.9801 7.0706 18.854L15.467 18.4429C24.1686 17.9924 24.1686 17.9924 15.467 17.5419L7.0706 17.1313C5.92423 17.0053 4.89825 15.9476 4.7797 14.7706L4.16683 8.982Z",
-                fill: "currentColor",
-              }),
-            )
-          : i.createElement(
-              "svg",
-              {
-                fill: "#FFFFFF",
-                xmlns: "http://www.w3.org/2000/svg",
-                className: "SVGIcon_Button SVGIcon_Submit",
-                version: "1.1",
-                x: "0px",
-                y: "0px",
-                viewBox: "0 0 100 100",
-              },
-              i.createElement(
-                "g",
-                { transform: "translate(0,-952.36218)" },
-                i.createElement("path", {
-                  d: "m 92.115057,974.14842 a 2.0001999,2.0001999 0 0 0 -1.96764,2.02965 l 0.0376,31.19553 -77.475501,0 16.161909,-15.73013 a 2.0002746,2.0002746 0 1 0 -2.790355,-2.8667 L 6.3913393,1007.9405 a 2.0001999,2.0001999 0 0 0 -0.0011,2.8646 l 19.6896957,19.2036 a 2.0002671,2.0002671 0 1 0 2.792551,-2.8646 l -16.170767,-15.771 79.153048,0 a 2.0001999,2.0001999 0 0 0 1.72959,-0.5437 2.0001999,2.0001999 0 0 0 0.0598,-0.058 2.0001999,2.0001999 0 0 0 0.54259,-1.7218 l -0.0388,-32.87638 a 2.0001999,2.0001999 0 0 0 -2.03297,-2.02522 z",
-                  fill: "#FFFFFF",
-                  fillOpacity: "1",
-                  fillRule: "evenodd",
-                  stroke: "none",
-                  visibility: "visible",
-                  display: "inline",
-                  overflow: "visible",
-                }),
-              ),
-            );
+        return i.createElement(
+          "svg",
+          Object.assign(
+            {
+              width: "24",
+              height: "24",
+              viewBox: "0 0 36 36",
+              fill: "none",
+              xmlns: "http://www.w3.org/2000/svg",
+              className: "SVGIcon_Button SVGIcon_Submit",
+            },
+            e,
+          ),
+          i.createElement("path", {
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            d: "M4.16683 8.982C4.10732 8.3908 3.83847 7.42693 4.15486 7.17995C4.46877 6.93489 4.7797 6.90487 5.90123 7.31306L31.1931 17.2282C32.2693 17.6503 32.2686 18.335 31.1931 18.7564L5.90123 28.6715C4.77972 29.1235 4.46864 29.0497 4.15487 28.8049C3.83836 28.5579 4.0953 27.5939 4.15484 27.0028L4.7797 21.2151C4.89862 20.0374 5.92644 18.9801 7.0706 18.854L15.467 18.4429C24.1686 17.9924 24.1686 17.9924 15.467 17.5419L7.0706 17.1313C5.92423 17.0053 4.89825 15.9476 4.7797 14.7706L4.16683 8.982Z",
+            fill: "currentColor",
+          }),
+        );
       }
       function w() {
         const [e, t] = (0, c.y)();
@@ -27533,6 +27575,8 @@
         "FriendsUI/RemotePlay",
         "SalePage",
         "VR",
+        "VRDashboardPopupStore",
+        "VRGamepadUIMessages",
       ];
       var l;
       !(function (e) {
@@ -27915,6 +27959,7 @@
         kD: () => d,
       });
       var r = n(89526);
+      n(74082);
       function i(e, t, n) {
         return [e, t, n];
       }
@@ -28818,6 +28863,8 @@
                                               "/points/shop/c/avatar",
                                             LoyaltyByGame: () =>
                                               "/points/shop/c/games",
+                                            LoyaltyByEvent: () =>
+                                              "/points/shop/c/events",
                                             LoyaltyGiveawayRules: () =>
                                               "/points/giveawayrules",
                                             LoyaltyEvents: (e) =>

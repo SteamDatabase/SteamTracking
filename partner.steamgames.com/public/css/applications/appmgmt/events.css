@@ -5529,6 +5529,12 @@ html.tablet .partnereventdisplay_EventDetailTitle_2_4FS {
   margin-top: 8px;
   color: #e5af37;
 }
+.savetoolbar_DiscountStartImmediately_1kasl {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffe6af;
+  color: #e5af37;
+}
 .savetoolbar_DiscountTooLow_3bgrT,
 .savetoolbar_DiscountTooHigh_3rdrE {
   color: #e5af37;
@@ -5593,6 +5599,10 @@ html.tablet .partnereventdisplay_EventDetailTitle_2_4FS {
 }
 .savetoolbar_ProgressIcon_24b4e {
   min-width: 18px;
+}
+.savetoolbar_StarIcon_1rGdi {
+  width: 16px;
+  height: 16px;
 }
 .savetoolbar_ProgressIconBlank_3QeQi,
 .savetoolbar_ProgressIconCheck_32a73,

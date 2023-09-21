@@ -8253,6 +8253,7 @@
                   },
                   seconds: { n: 3, br: n.FE.readUint32, bw: n.Xc.writeUint32 },
                   offline: { n: 4, br: n.FE.readBool, bw: n.Xc.writeBool },
+                  owner: { n: 5, br: n.FE.readUint32, bw: n.Xc.writeUint32 },
                 },
               }),
             E.sm_m

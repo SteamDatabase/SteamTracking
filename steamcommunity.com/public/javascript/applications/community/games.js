@@ -3007,6 +3007,7 @@
                     br: m.FE.readFixed64String,
                     bw: m.Xc.writeFixed64String,
                   },
+                  appid: { n: 5, br: m.FE.readUint32, bw: m.Xc.writeUint32 },
                 },
               }),
             Q.sm_m
@@ -6431,6 +6432,7 @@
           (e.Delete = function (e, t) {
             return e.SendMsg("PublishedFile.Delete#1", (0, s.MD)(Q, t), V, {
               ePrivilege: 3,
+              eWebAPIKeyRequirement: 5,
             });
           }),
           (e.GetChangeHistoryEntry = function (e, t) {

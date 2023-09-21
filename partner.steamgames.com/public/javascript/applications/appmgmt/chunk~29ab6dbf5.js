@@ -270,6 +270,66 @@
         );
       }
     },
+    5029: (t, e, n) => {
+      "use strict";
+      n.d(e, { Ar: () => c, Wo: () => l, i9: () => r, ks: () => s });
+      var i = n(89526),
+        a = n(59934);
+      function s(t, e) {
+        let n;
+        "string" == typeof t
+          ? (n = t)
+          : "location" in t
+          ? (n = t.location.search)
+          : "search" in t && (n = t.search);
+        const i = new URLSearchParams(n.substring(1));
+        if (i.has(e)) {
+          const t = i.getAll(e);
+          return t[t.length - 1];
+        }
+      }
+      const o = (t) => null != t;
+      function r(t, e, n, i = !1) {
+        const a = new URLSearchParams(t.location.search.substring(1));
+        a.delete(e),
+          o(n) && a.append(e, n),
+          i
+            ? t.replace(`?${a.toString()}`, Object.assign({}, t.location.state))
+            : t.push(`?${a.toString()}`);
+      }
+      function c(t, e) {
+        const n = (0, a.k6)(),
+          c = (0, a.TH)(),
+          l = (0, i.useMemo)(() => {
+            const n = s(c.search, t);
+            return o(n)
+              ? o(e)
+                ? "boolean" == typeof e
+                  ? e.constructor("false" !== n)
+                  : e.constructor(n)
+                : n
+              : e;
+          }, [c.search, t, e]),
+          u = (0, i.useCallback)(
+            (e) => {
+              r(n, t, o(e) ? String(e) : null);
+            },
+            [n, t],
+          );
+        return [l, u];
+      }
+      function l(t, e, n = !1) {
+        const i = new URLSearchParams(t.location.search.substring(1));
+        for (const t in e)
+          if (e.hasOwnProperty(t)) {
+            const n = e[t];
+            i.delete(t), o(n) && i.append(t, n);
+          }
+        n
+          ? t.replace(`?${i.toString()}`, Object.assign({}, t.location.state))
+          : t.push(`?${i.toString()}`);
+      }
+    },
     65395: (t, e, n) => {
       "use strict";
       n.d(e, {
@@ -2180,35 +2240,36 @@
     66104: (t, e, n) => {
       "use strict";
       n.d(e, {
-        $w: () => O,
-        AN: () => q,
+        $w: () => N,
+        AN: () => z,
         FR: () => E,
         HV: () => f,
-        HX: () => j,
-        OB: () => T,
-        OG: () => K,
+        HX: () => K,
+        OB: () => j,
+        OG: () => W,
         Ol: () => b,
         PP: () => G,
-        R2: () => M,
-        Rs: () => V,
+        R2: () => U,
+        Rs: () => T,
         Tj: () => I,
-        We: () => Q,
-        X1: () => R,
+        We: () => H,
+        X1: () => A,
         _w: () => _,
-        bS: () => F,
+        bS: () => V,
         dU: () => C,
         df: () => x,
-        j_: () => H,
-        ju: () => w,
-        np: () => X,
-        on: () => N,
-        ps: () => A,
+        j_: () => q,
+        ju: () => B,
+        np: () => $,
+        on: () => M,
+        ps: () => w,
         qH: () => y,
-        rX: () => L,
-        sN: () => z,
-        uT: () => W,
-        xm: () => $,
-        yh: () => U,
+        rX: () => R,
+        sN: () => X,
+        tu: () => L,
+        uT: () => Q,
+        xm: () => J,
+        yh: () => F,
       });
       var i = n(33940),
         a = n(52868),
@@ -2825,7 +2886,7 @@
           for (let e of this.m_rgKnownPriceKeys) {
             let n = this.GetPrice(t, e);
             if (void 0 === n) continue;
-            let { nMinPriceInCents: i, nMaxPriceInCents: a } = L(t, e);
+            let { nMinPriceInCents: i, nMaxPriceInCents: a } = R(t, e);
             if (n < i) return !0;
           }
           return !1;
@@ -2959,7 +3020,7 @@
           r = o.useCallback((n) => h.Get().OverridePrice(t, e, n), [t, e]),
           c = h.Get().GetPublishedPrice(t, e),
           l = h.Get().GetProposedPrice(t, e),
-          { nMinPriceInCents: d, nMaxPriceInCents: p } = L(t, e),
+          { nMinPriceInCents: d, nMaxPriceInCents: p } = R(t, e),
           g = h.Get().GetMinimumDiscountPrice(e),
           m = i ? Math.floor((100 * (i - g)) / i) : 90,
           v = m < Math.min(90, Math.floor((100 * (s - 50)) / s)) ? m : null;
@@ -2985,7 +3046,10 @@
           }, [t, n]);
         return (0, u.Qg)(h.Get().GetPackageOverridesCallbackList(t), i), e;
       }
-      function L(t, e) {
+      function L(t) {
+        return h.Get().BAnyPackagePriceBelowMin(t);
+      }
+      function R(t, e) {
         let n = h.Get();
         return {
           nMinPriceInCents: n.GetMinimumBasePrice(e),
@@ -2994,7 +3058,7 @@
             : null,
         };
       }
-      function R() {
+      function A() {
         return o.useCallback((t, e, n) => {
           const i = h.Get().GetPrice(t, e);
           return (
@@ -3010,13 +3074,13 @@
           );
         }, []);
       }
-      function A(t) {
-        return h.Get().m_mapPriceProposals.get(t);
-      }
       function w(t) {
         return h.Get().m_mapPriceProposals.get(t);
       }
       function B(t) {
+        return h.Get().m_mapPriceProposals.get(t);
+      }
+      function O(t) {
         let e = !1;
         for (const n of h.Get().m_rgKnownPriceKeys) {
           let i = h.Get().GetPublishedPrice(t, n);
@@ -3024,8 +3088,8 @@
         }
         return e;
       }
-      function O(t) {
-        const e = A(t),
+      function N(t) {
+        const e = w(t),
           n = [];
         for (const i of h.Get().m_rgKnownPriceKeys) {
           const a = e.prices[i],
@@ -3040,29 +3104,29 @@
         }
         return n;
       }
-      function N() {
+      function M() {
         return h.Get().m_rgKnownPriceKeys;
       }
-      function M(t) {
+      function U(t) {
         let e = h.Get().m_mapPriceKeyDescriptions.get(t);
         return e ? e.strDescription : "";
       }
-      function U(t) {
+      function F(t) {
         return o.useCallback(() => {
           h.Get().DiscardAllLocalPriceOverridesForKey(t);
         }, [t]);
       }
-      function F(t) {
+      function V(t) {
         return o.useCallback(() => {
           h.Get().DiscardLocalPriceOverridesForPackage(t);
         }, [t]);
       }
-      function V(t) {
+      function T(t) {
         return o.useCallback(() => {
           h.Get().CancelProposal(t);
         }, [t]);
       }
-      function T() {
+      function j() {
         const [t, e] = o.useState(h.Get().m_strDisplayPriceKey),
           n = h.Get().m_rgKnownPriceKeys,
           i = o.useCallback((t) => {
@@ -3079,17 +3143,17 @@
           h.Get().BHasLocalPriceOverrides(t)
         );
       }
-      function j(t) {
+      function K(t) {
         return h.Get().BHasLocalPriceOverrides(t);
       }
-      function K() {
+      function W() {
         const [t, e] = o.useState(() => h.Get().GetAllLocalPriceOverrides());
         return (0, u.Qg)(h.Get().m_allPriceOverridesCallbackList, e), t;
       }
-      function W(t) {
+      function Q(t) {
         return (0, m.SZ)(() => h.Get().GetLocalOverrideCountForPriceKey(t));
       }
-      function Q() {
+      function H() {
         return o.useCallback(() => {
           var t;
           return (
@@ -3099,10 +3163,10 @@
           );
         }, []);
       }
-      function H() {
+      function q() {
         return o.useCallback(() => h.Get().DiscardAllLocalPriceOverrides(), []);
       }
-      function q() {
+      function z() {
         const t = [],
           e = o.useRef(new Map());
         h.Get().m_mapPriceGuidelines.forEach((n, i) => {
@@ -3118,23 +3182,23 @@
         }, []);
         return { rgUSDPricesInCents: t, fnApplyGuidelines: n };
       }
-      function z() {
+      function X() {
         return o.useCallback(
           (t, e, n) => h.Get().SubmitProposalToServer(t, e, n),
           [],
         );
       }
-      function X() {
+      function $() {
         return o.useCallback(
           (t, e) => h.Get().PublishApprovedProposal(t, e, 6e4),
           [],
         );
       }
-      function $(t) {
+      function J(t) {
         let e = [];
         const n = h.Get().m_rgKnownPriceKeys;
         for (let i of t) {
-          if (B(i)) continue;
+          if (O(i)) continue;
           let t = !1;
           for (const e of n) {
             if (!h.Get().BPriceKeyRequired(e)) continue;
@@ -3163,11 +3227,11 @@
         dy: () => T,
         ho: () => K,
         hr: () => y,
-        k: () => x,
+        k: () => j,
         pl: () => L,
         s$: () => w,
         yn: () => N,
-        z$: () => j,
+        z$: () => x,
       });
       var i = n(65395),
         a = n(16586),
@@ -3881,7 +3945,7 @@
           )
         );
       }
-      function x(t) {
+      function j(t) {
         if ((0, s.kk)(t)) return !0;
         const e = (0, i.fH)(t);
         if (!(null == e ? void 0 : e.opt_in_name)) return !0;
@@ -3891,7 +3955,7 @@
           n.some((t) => !t.restricted && !t.pruned)
         );
       }
-      function j(t) {
+      function x(t) {
         const e = (function () {
             const [t, e] = l.useState(I.IsInitialized());
             return (0, g.Qg)(I.s_initializationCallbackList, e), t;

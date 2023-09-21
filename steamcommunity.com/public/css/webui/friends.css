@@ -23509,9 +23509,17 @@ a.bbcodes_LinkButton_jPpgc:hover {
 .quickaccesscontrols_QuickAccessNotifications_2qO6x > div {
   position: relative;
 }
-.quickaccesscontrols_QuickAccessNotifications_2qO6x
+.quickaccesscontrols_QuickAccessNotifications_2qO6x:not(
+    .quickaccesscontrols_VR_1sOgl
+  )
   > div:not(:focus)
-  + div:not(:focus):before {
+  + div:not(:focus):before,
+.quickaccesscontrols_QuickAccessNotifications_2qO6x
+  > div:not(:hover)
+  + div:not(:hover):before,
+.quickaccesscontrols_QuickAccessNotifications_2qO6x
+  > div:not(:hover)
+  + div.quickaccesscontrols_EmptyNotifications_1W8Ty:before {
   content: "";
   position: absolute;
   top: 0;
@@ -23769,9 +23777,15 @@ a.bbcodes_LinkButton_jPpgc:hover {
 .remoteplay_QuickAccessNotifications_3EHGW > div {
   position: relative;
 }
-.remoteplay_QuickAccessNotifications_3EHGW
+.remoteplay_QuickAccessNotifications_3EHGW:not(.remoteplay_VR_3zGD_)
   > div:not(:focus)
-  + div:not(:focus):before {
+  + div:not(:focus):before,
+.remoteplay_QuickAccessNotifications_3EHGW
+  > div:not(:hover)
+  + div:not(:hover):before,
+.remoteplay_QuickAccessNotifications_3EHGW
+  > div:not(:hover)
+  + div.remoteplay_EmptyNotifications_2H2il:before {
   content: "";
   position: absolute;
   top: 0;

@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "8334598";
+var CLSTAMP = "8350899";
 (() => {
   "use strict";
   var e,
@@ -156,19 +156,19 @@ var CLSTAMP = "8334598";
         2557: "eb5bd7a4caf4dd05fcf9",
         2603: "6dd6f22ab89ad8ba0b78",
         2738: "314ad3ea7d47498d0205",
-        2822: "a6e2e9c8edf926f0c565",
+        2822: "2275da7e3c35879b5aef",
         3038: "34388b715f750eaeb721",
         3068: "8465111ee344073a0e30",
         3298: "c557829a3114136b368c",
-        3602: "6cec62ad63c09beef96e",
+        3602: "c3b09df89c9c180eb793",
         4097: "ec547021f41841b9b6c5",
         4183: "2704a3cdbaa1f365b120",
         4358: "6c6197fe3b5cf018021e",
-        4445: "3b10add9daab726eadeb",
+        4445: "58310917faba470796df",
         4469: "5a6f8020165cdbde9873",
-        4487: "c6b96bb274e4a62e4b29",
+        4487: "6869e9eb364de1ba5cd8",
         4513: "3b736d659c17b08b548c",
-        4729: "ffee70e25c6e51130300",
+        4729: "a63cb3d2a130b0575ce4",
         5012: "388fe80aa4bcea5a2d07",
         5277: "720c1b788fec0f79ace8",
         5279: "b689f294f61a2551b4a7",
@@ -181,7 +181,7 @@ var CLSTAMP = "8334598";
         6844: "854c65e7cce7b9a452cf",
         6962: "6178035caddad9ad6cd9",
         7629: "9376d43b96c2261850f8",
-        7660: "386e9287bad7ec1b895f",
+        7660: "71bb5778678dcb992688",
         7769: "3e3fa97d5f6152d2502c",
         7781: "f958c6cfdc95664f61a5",
         7832: "29fd6d9d173a1c6e1379",
@@ -196,13 +196,13 @@ var CLSTAMP = "8334598";
         8592: "f0cff1d2329d13ad7556",
         9233: "cd3dd761267e89820a23",
         9389: "7819710f483b4651448b",
-        9547: "0c66de5d301d6d983935",
+        9547: "bb5b8983b2b057de60aa",
         9665: "5e042a69bdde05d584cf",
-        9854: "53fb33da5289fc558c11",
+        9854: "9c7a3ff61416c45ea86a",
         9951: "2afc38b306cb9133f6c3",
       }[e]),
     (s.miniCssF = (e) =>
-      "css/applications/help/greenenvelope.css?contenthash=ef5f0a736fe8b753606c"),
+      "css/applications/help/greenenvelope.css?contenthash=0fcd8a05f7753c894cd0"),
     (s.g = (function () {
       if ("object" == typeof globalThis) return globalThis;
       try {
@@ -241,8 +241,8 @@ var CLSTAMP = "8334598";
           r.setAttribute("data-webpack", i + n),
           (r.src = e)),
           (o[e] = [a]);
-        var b = (a, n) => {
-            (r.onerror = r.onload = null), clearTimeout(h);
+        var h = (a, n) => {
+            (r.onerror = r.onload = null), clearTimeout(b);
             var i = o[e];
             if (
               (delete o[e],
@@ -252,12 +252,12 @@ var CLSTAMP = "8334598";
             )
               return a(n);
           },
-          h = setTimeout(
-            b.bind(null, void 0, { type: "timeout", target: r }),
+          b = setTimeout(
+            h.bind(null, void 0, { type: "timeout", target: r }),
             12e4,
           );
-        (r.onerror = b.bind(null, r.onerror)),
-          (r.onload = b.bind(null, r.onload)),
+        (r.onerror = h.bind(null, r.onerror)),
+          (r.onload = h.bind(null, r.onload)),
           c && document.head.appendChild(r);
       }
     }),

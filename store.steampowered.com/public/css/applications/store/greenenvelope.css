@@ -304,11 +304,14 @@
     background-position: 50% 0%;
   }
 }
+.standardtemplates_StandardTemplateContainer_1adpx:hover,
 .standardtemplates_StandardTemplateContainer_1adpx.gpfocus {
   background-color: #3d4450;
   animation-name: standardtemplates_ItemFocusAnim-darkerGrey_3uRWs;
   z-index: 1;
 }
+.standardtemplates_StandardTemplateContainer_1adpx:hover
+  .standardtemplates_Timestamp_2vSvC,
 .standardtemplates_StandardTemplateContainer_1adpx.gpfocus
   .standardtemplates_Timestamp_2vSvC {
   color: #67707b;
@@ -330,7 +333,9 @@
   animation-fill-mode: forwards;
   transform: scale(1) rotateX(0deg);
 }
+.standardtemplates_StandardTemplate_3e_DB:hover,
 .standardtemplates_StandardTemplate_3e_DB.gpfocus,
+.standardtemplates_PinnedTemplate_2eBei:hover,
 .standardtemplates_PinnedTemplate_2eBei.gpfocus {
   background-color: #3d4450;
   animation-name: standardtemplates_ItemFocusAnim-darkerGrey_3uRWs;
@@ -474,7 +479,11 @@
   color: #3d4450;
   flex-shrink: 0;
 }
+.standardtemplates_StandardTemplate_3e_DB:hover
+  .standardtemplates_Timestamp_2vSvC,
 .standardtemplates_StandardTemplate_3e_DB.gpfocus
+  .standardtemplates_Timestamp_2vSvC,
+.standardtemplates_PinnedTemplate_2eBei:hover
   .standardtemplates_Timestamp_2vSvC,
 .standardtemplates_PinnedTemplate_2eBei.gpfocus
   .standardtemplates_Timestamp_2vSvC {
@@ -1220,11 +1229,14 @@
     background-position: 50% 0%;
   }
 }
+.shorttemplates_StandardTemplateContainer_3y65Y:hover,
 .shorttemplates_StandardTemplateContainer_3y65Y.gpfocus {
   background-color: #3d4450;
   animation-name: shorttemplates_ItemFocusAnim-darkerGrey_11elP;
   z-index: 1;
 }
+.shorttemplates_StandardTemplateContainer_3y65Y:hover
+  .shorttemplates_Timestamp_3OOgm,
 .shorttemplates_StandardTemplateContainer_3y65Y.gpfocus
   .shorttemplates_Timestamp_3OOgm {
   color: #67707b;
@@ -1246,7 +1258,9 @@
   animation-fill-mode: forwards;
   transform: scale(1) rotateX(0deg);
 }
+.shorttemplates_StandardTemplate_WgSlJ:hover,
 .shorttemplates_StandardTemplate_WgSlJ.gpfocus,
+.shorttemplates_PinnedTemplate_3T_a6:hover,
 .shorttemplates_PinnedTemplate_3T_a6.gpfocus {
   background-color: #3d4450;
   animation-name: shorttemplates_ItemFocusAnim-darkerGrey_11elP;
@@ -1390,7 +1404,9 @@
   color: #3d4450;
   flex-shrink: 0;
 }
+.shorttemplates_StandardTemplate_WgSlJ:hover .shorttemplates_Timestamp_3OOgm,
 .shorttemplates_StandardTemplate_WgSlJ.gpfocus .shorttemplates_Timestamp_3OOgm,
+.shorttemplates_PinnedTemplate_3T_a6:hover .shorttemplates_Timestamp_3OOgm,
 .shorttemplates_PinnedTemplate_3T_a6.gpfocus .shorttemplates_Timestamp_3OOgm {
   color: #67707b;
 }
@@ -2187,11 +2203,14 @@
     background-position: 50% 0%;
   }
 }
+.steamtemplates_StandardTemplateContainer_3zt0r:hover,
 .steamtemplates_StandardTemplateContainer_3zt0r.gpfocus {
   background-color: #3d4450;
   animation-name: steamtemplates_ItemFocusAnim-darkerGrey_glTTS;
   z-index: 1;
 }
+.steamtemplates_StandardTemplateContainer_3zt0r:hover
+  .steamtemplates_Timestamp_3L215,
 .steamtemplates_StandardTemplateContainer_3zt0r.gpfocus
   .steamtemplates_Timestamp_3L215 {
   color: #67707b;
@@ -2213,7 +2232,9 @@
   animation-fill-mode: forwards;
   transform: scale(1) rotateX(0deg);
 }
+.steamtemplates_StandardTemplate_1zIGL:hover,
 .steamtemplates_StandardTemplate_1zIGL.gpfocus,
+.steamtemplates_PinnedTemplate_F_L0c:hover,
 .steamtemplates_PinnedTemplate_F_L0c.gpfocus {
   background-color: #3d4450;
   animation-name: steamtemplates_ItemFocusAnim-darkerGrey_glTTS;
@@ -2357,7 +2378,9 @@
   color: #3d4450;
   flex-shrink: 0;
 }
+.steamtemplates_StandardTemplate_1zIGL:hover .steamtemplates_Timestamp_3L215,
 .steamtemplates_StandardTemplate_1zIGL.gpfocus .steamtemplates_Timestamp_3L215,
+.steamtemplates_PinnedTemplate_F_L0c:hover .steamtemplates_Timestamp_3L215,
 .steamtemplates_PinnedTemplate_F_L0c.gpfocus .steamtemplates_Timestamp_3L215 {
   color: #67707b;
 }
