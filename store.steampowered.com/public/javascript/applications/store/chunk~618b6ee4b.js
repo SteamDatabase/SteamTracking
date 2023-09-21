@@ -16459,7 +16459,7 @@
             if (s === (null == e ? void 0 : e.nNextSolrIndex)) {
               const u = yield this.GetItemsFiltered(t, n, a, i, s, o, r, l, c);
               (d = Object.assign(Object.assign({}, u), {
-                rgItems: e.rgItems.concat(u.rgItems),
+                rgItems: this.DedupeItems(e.rgItems.concat(u.rgItems)),
               })),
                 Di.Debug(
                   `GetItemsSoFar (continuing) start ${s} count ${o} items ${d.rgItems.length} next ${d.nNextSolrIndex}`,
@@ -16546,14 +16546,18 @@
             );
           });
         }
+        DedupeItems(e) {
+          const t = [],
+            n = new Set();
+          for (const a of e) {
+            const e = `${a.type}_${a.id}`;
+            n.has(e) || (t.push(a), n.add(e));
+          }
+          return t;
+        }
         FilterItems(e, t) {
           return (0, G.mG)(this, void 0, void 0, function* () {
-            const n = [],
-              a = new Set();
-            for (const t of e) {
-              const e = `${t.type}_${t.id}`;
-              a.has(e) || (n.push(t), a.add(e));
-            }
+            const n = this.DedupeItems(e);
             return t(n);
           });
         }
