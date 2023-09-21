@@ -1,4 +1,4 @@
-var CLSTAMP = "8347823";
+var CLSTAMP = "8357907";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -4119,9 +4119,9 @@ var CLSTAMP = "8347823";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Sep 18 2023 : 16:56:25",
-                BUILD_TIME_UTC: "Sep 18 2023 : 23:56:25",
-                BUILD_RTIME_UTC: 1695081385,
+                BUILD_TIME_LOCAL: "Sep 21 2023 : 14:49:44",
+                BUILD_TIME_UTC: "Sep 21 2023 : 21:49:44",
+                BUILD_RTIME_UTC: 1695332984,
               }.MOBILE_BUILD)
             ) {
               window.addEventListener("beforeunload", (e) => {
@@ -20633,15 +20633,16 @@ var CLSTAMP = "8347823";
       18082: (e, t, r) => {
         "use strict";
         r.d(t, {
-          KI: () => g,
-          WX: () => m,
-          Ze: () => d,
-          aC: () => v,
-          g$: () => h,
-          oy: () => f,
-          u1: () => C,
-          x3: () => E,
-          y1: () => p,
+          HZ: () => u,
+          KI: () => f,
+          WX: () => h,
+          Ze: () => C,
+          aC: () => w,
+          g$: () => p,
+          oy: () => _,
+          u1: () => m,
+          x3: () => M,
+          y1: () => g,
         });
         var n = r(70655),
           i = r(67294),
@@ -20650,10 +20651,11 @@ var CLSTAMP = "8347823";
           l = r(22125),
           s = r(2102),
           c = r(48287);
-        new s.CLog("VR");
-        class u {
+        const u = new s.CLog("VR");
+        class d {
           constructor() {
-            this.m_mapAffordanceElems = new Map();
+            (this.m_bSimulatingVROnDesktop = !1),
+              (this.m_mapAffordanceElems = new Map());
           }
           Init() {
             var e, t, r, n, i, o, a, l, s, c, u;
@@ -20736,15 +20738,20 @@ var CLSTAMP = "8347823";
               (this.m_sInitialKeyboardText = r);
           }
           get IsVRHMDPresent() {
-            return this.m_bHMDPresent || this.m_bHMDHardwareDetected;
+            return (
+              this.m_bSimulatingVROnDesktop ||
+              this.m_bHMDPresent ||
+              this.m_bHMDHardwareDetected
+            );
           }
           get IsSteamVRRunning() {
-            return this.m_bIsVRRunning;
+            return this.m_bSimulatingVROnDesktop || this.m_bIsVRRunning;
           }
           get IsVRHMDAwake() {
             return (
+              this.m_bSimulatingVROnDesktop ||
               this.m_eHMDActivityLevel ==
-              l.VR.EDeviceActivityLevel.UserInteraction
+                l.VR.EDeviceActivityLevel.UserInteraction
             );
           }
           get VRKeyboardStatus() {
@@ -20763,7 +20770,9 @@ var CLSTAMP = "8347823";
             };
           }
           get VRHMDActivityLevel() {
-            return this.m_eHMDActivityLevel;
+            return this.m_bSimulatingVROnDesktop
+              ? l.VR.EDeviceActivityLevel.UserInteraction
+              : this.m_eHMDActivityLevel;
           }
           get VRKeyboardDisplayFlags() {
             return this.m_eKeyboardFlags;
@@ -20774,9 +20783,12 @@ var CLSTAMP = "8347823";
           ClearError() {
             this.m_error = void 0;
           }
+          SetSimulatingVROnDesktop(e) {
+            this.m_bSimulatingVROnDesktop = e;
+          }
           SetInteractionAffordance(e, t, r) {}
         }
-        function d(e, t) {
+        function C(e, t) {
           const [r, n] = i.useState(),
             o = i.useCallback(() => !0, []),
             a = i.useRef();
@@ -20786,7 +20798,7 @@ var CLSTAMP = "8347823";
               const t = () => {
                   var t, n, i;
                   const o = a.current && a.current();
-                  w.SetInteractionAffordance(r, e, o),
+                  E.SetInteractionAffordance(r, e, o),
                     2 == e &&
                       o &&
                       (null ===
@@ -20808,7 +20820,7 @@ var CLSTAMP = "8347823";
                 },
                 n = () => {
                   var t, n, i;
-                  w.SetInteractionAffordance(r, e, !1),
+                  E.SetInteractionAffordance(r, e, !1),
                     2 == e &&
                       a.current &&
                       a.current() &&
@@ -20835,38 +20847,38 @@ var CLSTAMP = "8347823";
                 () => {
                   null == r || r.removeEventListener("mouseenter", t),
                     null == r || r.removeEventListener("mouseleave", n),
-                    w.SetInteractionAffordance(r, e, !1);
+                    E.SetInteractionAffordance(r, e, !1);
                 }
               );
             }, [r, e]),
             n
           );
         }
-        function C() {
-          return (0, a.SZ)(() => w.IsVRHMDPresent);
-        }
         function m() {
-          return (0, a.SZ)(() => w.IsSteamVRRunning);
+          return (0, a.SZ)(() => E.IsVRHMDPresent);
         }
         function h() {
-          return (0, a.SZ)(() => w.IsVRHMDAwake);
+          return (0, a.SZ)(() => E.IsSteamVRRunning);
         }
         function p() {
-          return (0, a.SZ)(() => w.VRKeyboardStatus);
+          return (0, a.SZ)(() => E.IsVRHMDAwake);
         }
         function g() {
-          w.Init();
+          return (0, a.SZ)(() => E.VRKeyboardStatus);
         }
         function f() {
+          E.Init();
+        }
+        function _() {
           return Object.assign(
             Object.assign(
               {},
-              (0, a.SZ)(() => w.error),
+              (0, a.SZ)(() => E.error),
             ),
-            { clearError: w.ClearError },
+            { clearError: E.ClearError },
           );
         }
-        function _(e, t) {
+        function v(e, t) {
           const r = i.useRef(void 0),
             o = (0, c.useIsUnmounted)(),
             a = (0, c.useForceUpdate)(),
@@ -20910,9 +20922,9 @@ var CLSTAMP = "8347823";
             r.current
           );
         }
-        function v(e) {
+        function w(e) {
           const t = e.getVRPathPropertyKey(),
-            r = _(t, (e) => {
+            r = v(t, (e) => {
               var t, r, n;
               return null ===
                 (n =
@@ -20932,44 +20944,49 @@ var CLSTAMP = "8347823";
             });
           return r ? e.deserializeBinary(r) : void 0;
         }
-        (0, n.gn)([o.observable], u.prototype, "m_bHMDPresent", void 0),
+        (0, n.gn)([o.observable], d.prototype, "m_bHMDPresent", void 0),
           (0, n.gn)(
             [o.observable],
-            u.prototype,
+            d.prototype,
             "m_bHMDHardwareDetected",
             void 0,
           ),
-          (0, n.gn)([o.observable], u.prototype, "m_strHMDName", void 0),
-          (0, n.gn)([o.observable], u.prototype, "m_bIsVRRunning", void 0),
-          (0, n.gn)([o.observable], u.prototype, "m_error", void 0),
-          (0, n.gn)([o.observable], u.prototype, "m_eHMDActivityLevel", void 0),
-          (0, n.gn)([o.observable], u.prototype, "m_bIsKeyboardOpen", void 0),
-          (0, n.gn)([o.observable], u.prototype, "m_eKeyboardFlags", void 0),
+          (0, n.gn)([o.observable], d.prototype, "m_strHMDName", void 0),
+          (0, n.gn)([o.observable], d.prototype, "m_bIsVRRunning", void 0),
+          (0, n.gn)([o.observable], d.prototype, "m_error", void 0),
+          (0, n.gn)([o.observable], d.prototype, "m_eHMDActivityLevel", void 0),
+          (0, n.gn)([o.observable], d.prototype, "m_bIsKeyboardOpen", void 0),
+          (0, n.gn)([o.observable], d.prototype, "m_eKeyboardFlags", void 0),
           (0, n.gn)(
             [o.observable],
-            u.prototype,
+            d.prototype,
             "m_sInitialKeyboardText",
             void 0,
           ),
           (0, n.gn)(
+            [o.observable],
+            d.prototype,
+            "m_bSimulatingVROnDesktop",
+            void 0,
+          ),
+          (0, n.gn)(
             [o.action.bound],
-            u.prototype,
+            d.prototype,
             "OnVRHardwareDetected",
             null,
           ),
-          (0, n.gn)([o.action.bound], u.prototype, "OnVRModeChanged", null),
-          (0, n.gn)([o.action.bound], u.prototype, "OnStartupError", null),
+          (0, n.gn)([o.action.bound], d.prototype, "OnVRModeChanged", null),
+          (0, n.gn)([o.action.bound], d.prototype, "OnStartupError", null),
           (0, n.gn)(
             [o.action.bound],
-            u.prototype,
+            d.prototype,
             "OnHMDActivityLevelChanged",
             null,
           ),
-          (0, n.gn)([o.action.bound], u.prototype, "OnKeyboardStatus", null),
-          (0, n.gn)([o.action.bound], u.prototype, "ClearError", null);
-        const w = new u(),
-          E = w;
-        window.vrStore = w;
+          (0, n.gn)([o.action.bound], d.prototype, "OnKeyboardStatus", null),
+          (0, n.gn)([o.action.bound], d.prototype, "ClearError", null);
+        const E = new d(),
+          M = E;
       },
       56982: (e, t, r) => {
         "use strict";
@@ -27496,6 +27513,7 @@ var CLSTAMP = "8347823";
             Idle: () => Jt,
             Image: () => Zr,
             InGame: () => Lo,
+            InGameVR: () => Io,
             IncomingVoiceCall: () => Nr,
             Information: () => Z,
             Instagram: () => sn,
@@ -27617,6 +27635,7 @@ var CLSTAMP = "8347823";
             Specials: () => Jr,
             SpellCheck: () => yo,
             Spinner: () => Gt,
+            Standing: () => Ho,
             Star: () => T,
             SteamAchievements: () => xr,
             SteamControllerRightPadHighlighted: () => Oi,
@@ -32848,34 +32867,80 @@ var CLSTAMP = "8347823";
           );
         }
         function vn(e) {
-          return i.createElement(
-            "svg",
-            Object.assign(
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                viewBox: "0 0 36 36",
-                fill: "none",
-              },
-              e,
-            ),
-            i.createElement(
-              "g",
-              { className: "SVGIcon_Notification" },
-              i.createElement("path", {
-                fillRule: "evenodd",
-                clipRule: "evenodd",
-                d: "M32 24V26H4V24L8 19V12C8 9.34784 9.05357 6.8043 10.9289 4.92893C12.8043 3.05357 15.3478 2 18 2C20.6522 2 23.1957 3.05357 25.0711 4.92893C26.9464 6.8043 28 9.34784 28 12V19L32 24Z",
-                fill: "currentColor",
-              }),
-              i.createElement("path", {
-                className: "SVGIcon_Notification_Uvula",
-                fillRule: "evenodd",
-                clipRule: "evenodd",
-                d: "M18 34C19.2396 33.9986 20.4483 33.6133 21.46 32.897C22.4718 32.1807 23.2368 31.1687 23.65 30H12.35C12.7632 31.1687 13.5282 32.1807 14.54 32.897C15.5517 33.6133 16.7604 33.9986 18 34Z",
-                fill: "currentColor",
-              }),
-            ),
-          );
+          const { alert: t, urgent: r } = e,
+            o = (0, n._T)(e, ["alert", "urgent"]);
+          return r
+            ? i.createElement(
+                "svg",
+                Object.assign(
+                  {
+                    xmlns: "http://www.w3.org/2000/svg",
+                    viewBox: "0 0 36 36",
+                    fill: "none",
+                  },
+                  o,
+                ),
+                i.createElement("path", {
+                  fill: "currentColor",
+                  fillRule: "evenodd",
+                  clipRule: "evenodd",
+                  d: "M21.1862 2.52116C20.1687 2.17914 19.0936 2 18 2C15.3478 2 12.8043 3.05357 10.9289 4.92893C9.05357 6.8043 8 9.34784 8 12V19L4 24V26H32V24L28 19V14.4025C23.9218 12.9611 21 9.07177 21 4.5C21 3.82354 21.064 3.16202 21.1862 2.52116ZM21.46 32.897C20.4483 33.6133 19.2396 33.9986 18 34C16.7604 33.9986 15.5517 33.6133 14.54 32.897C13.5282 32.1807 12.7632 31.1687 12.35 30H23.65C23.2368 31.1687 22.4718 32.1807 21.46 32.897Z",
+                }),
+                i.createElement("path", {
+                  fill: "#FFC82C",
+                  d: "M36 4.5C36 6.98528 33.9853 9 31.5 9C29.0147 9 27 6.98528 27 4.5C27 2.01472 29.0147 0 31.5 0C33.9853 0 36 2.01472 36 4.5Z",
+                }),
+              )
+            : t
+            ? i.createElement(
+                "svg",
+                Object.assign(
+                  {
+                    xmlns: "http://www.w3.org/2000/svg",
+                    viewBox: "0 0 36 36",
+                    fill: "none",
+                  },
+                  o,
+                ),
+                i.createElement("path", {
+                  fill: "currentColor",
+                  fillRule: "evenodd",
+                  clipRule: "evenodd",
+                  d: "M21.1862 2.52116C20.1687 2.17914 19.0936 2 18 2C15.3478 2 12.8043 3.05357 10.9289 4.92893C9.05357 6.8043 8 9.34784 8 12V19L4 24V26H32V24L28 19V14.4025C23.9218 12.9611 21 9.07177 21 4.5C21 3.82354 21.064 3.16202 21.1862 2.52116ZM21.46 32.897C20.4483 33.6133 19.2396 33.9986 18 34C16.7604 33.9986 15.5517 33.6133 14.54 32.897C13.5282 32.1807 12.7632 31.1687 12.35 30H23.65C23.2368 31.1687 22.4718 32.1807 21.46 32.897Z",
+                }),
+                i.createElement("path", {
+                  fill: "#1A9FFF",
+                  d: "M36 4.5C36 6.98528 33.9853 9 31.5 9C29.0147 9 27 6.98528 27 4.5C27 2.01472 29.0147 0 31.5 0C33.9853 0 36 2.01472 36 4.5Z",
+                }),
+              )
+            : i.createElement(
+                "svg",
+                Object.assign(
+                  {
+                    xmlns: "http://www.w3.org/2000/svg",
+                    viewBox: "0 0 36 36",
+                    fill: "none",
+                  },
+                  o,
+                ),
+                i.createElement(
+                  "g",
+                  { className: "SVGIcon_Notification" },
+                  i.createElement("path", {
+                    fillRule: "evenodd",
+                    clipRule: "evenodd",
+                    d: "M32 24V26H4V24L8 19V12C8 9.34784 9.05357 6.8043 10.9289 4.92893C12.8043 3.05357 15.3478 2 18 2C20.6522 2 23.1957 3.05357 25.0711 4.92893C26.9464 6.8043 28 9.34784 28 12V19L32 24Z",
+                    fill: "currentColor",
+                  }),
+                  i.createElement("path", {
+                    className: "SVGIcon_Notification_Uvula",
+                    fillRule: "evenodd",
+                    clipRule: "evenodd",
+                    d: "M18 34C19.2396 33.9986 20.4483 33.6133 21.46 32.897C22.4718 32.1807 23.2368 31.1687 23.65 30H12.35C12.7632 31.1687 13.5282 32.1807 14.54 32.897C15.5517 33.6133 16.7604 33.9986 18 34Z",
+                    fill: "currentColor",
+                  }),
+                ),
+              );
         }
         function wn(e) {
           return i.createElement(
@@ -40700,7 +40765,9 @@ var CLSTAMP = "8347823";
               );
         }
         function Ro(e) {
-          return "left" == e.hand
+          const { hand: t } = e,
+            r = (0, n._T)(e, ["hand"]);
+          return "left" == t
             ? i.createElement(
                 "svg",
                 Object.assign(
@@ -40709,13 +40776,15 @@ var CLSTAMP = "8347823";
                     viewBox: "0 0 36 36",
                     fill: "none",
                   },
-                  e,
+                  r,
                 ),
                 i.createElement("path", {
                   fill: "currentColor",
-                  fillRule: "evenodd",
-                  clipRule: "evenodd",
-                  d: "M18 33C26.2843 33 33 26.2843 33 18C33 9.71573 26.2843 3 18 3C9.71573 3 3 9.71573 3 18C3 26.2843 9.71573 33 18 33ZM13.1533 26.3334H24.12V23.2534H16.5833V10H13.1533V26.3334Z",
+                  d: "M31.2427 7.2625C27.5902 3.60402 21.6624 3.59803 18.0039 7.25052L17.9919 7.2625C12.5372 12.861 7.48954 18.8367 2.89698 25.1657C1.53179 26.8003 1.74735 29.2433 3.38797 30.6085C4.75915 31.7581 6.74707 31.806 8.17812 30.7342L19.8182 21.9383C24.2551 24.6028 30.0092 23.1658 32.6738 18.7289C34.8772 15.0285 34.2904 10.3042 31.2427 7.2625ZM29.0572 18.3457C26.6561 20.8306 22.6983 20.9025 20.2134 18.5014C18.1596 16.5195 17.7105 13.4059 19.1176 10.921C19.405 10.3881 19.7703 9.89708 20.1954 9.47195C22.6444 7.02299 26.6142 7.02898 29.0632 9.48393C31.5121 11.9269 31.5062 15.9027 29.0572 18.3457Z",
+                }),
+                i.createElement("path", {
+                  fill: "currentColor",
+                  d: "M24.6142 17.6272C26.6778 17.6272 28.3506 15.9544 28.3506 13.8909C28.3506 11.8273 26.6778 10.1545 24.6142 10.1545C22.5507 10.1545 20.8779 11.8273 20.8779 13.8909C20.8779 15.9544 22.5507 17.6272 24.6142 17.6272Z",
                 }),
               )
             : i.createElement(
@@ -40726,15 +40795,57 @@ var CLSTAMP = "8347823";
                     viewBox: "0 0 36 36",
                     fill: "none",
                   },
-                  e,
+                  r,
                 ),
                 i.createElement("path", {
                   fill: "currentColor",
-                  fillRule: "evenodd",
-                  clipRule: "evenodd",
-                  d: "M18 33C26.2843 33 33 26.2843 33 18C33 9.71573 26.2843 3 18 3C9.71573 3 3 9.71573 3 18C3 26.2843 9.71573 33 18 33ZM21.5231 26.3334H25.3264L21.4764 20.15C22.472 19.7145 23.242 19.0767 23.7864 18.2367C24.3464 17.3967 24.6264 16.3467 24.6264 15.0867C24.6264 13.4845 24.0975 12.24 23.0397 11.3534C21.982 10.4511 20.3331 10 18.0931 10H11.9797V26.3334H15.4097V20.8267H18.2331L21.5231 26.3334ZM15.4097 17.8867V12.9167H17.8831C18.9564 12.9167 19.7342 13.1189 20.2164 13.5234C20.7142 13.9122 20.9631 14.5034 20.9631 15.2967C20.9631 16.1056 20.7064 16.7434 20.1931 17.21C19.6953 17.6611 18.9953 17.8867 18.0931 17.8867H15.4097Z",
+                  d: "M4.75681 7.2625C8.4093 3.60402 14.3371 3.59803 17.9956 7.25052L18.0076 7.2625C23.4624 12.861 28.51 18.8367 33.1025 25.1657C34.4677 26.8003 34.2522 29.2433 32.6115 30.6085C31.2404 31.7581 29.2524 31.806 27.8214 30.7342L16.1813 21.9383C11.7444 24.6028 5.99027 23.1658 3.32575 18.7289C1.12228 15.0285 1.70908 10.3042 4.75681 7.2625ZM6.94232 18.3457C9.34338 20.8306 13.3012 20.9025 15.7861 18.5014C17.8399 16.5195 18.289 13.4059 16.8819 10.921C16.5945 10.3881 16.2292 9.89708 15.8041 9.47195C13.3551 7.02299 9.38529 7.02898 6.93633 9.48393C4.48737 11.9269 4.49335 15.9027 6.94232 18.3457Z",
+                }),
+                i.createElement("path", {
+                  fill: "currentColor",
+                  d: "M11.3853 17.6272C9.32175 17.6272 7.64895 15.9544 7.64895 13.8909C7.64895 11.8273 9.32175 10.1545 11.3853 10.1545C13.4488 10.1545 15.1216 11.8273 15.1216 13.8909C15.1216 15.9544 13.4488 17.6272 11.3853 17.6272Z",
                 }),
               );
+        }
+        function Ho(e) {
+          return i.createElement(
+            "svg",
+            Object.assign(
+              {
+                xmlns: "http://www.w3.org/2000/svg",
+                viewBox: "0 0 36 36",
+                fill: "none",
+              },
+              e,
+            ),
+            i.createElement("path", {
+              fill: "currentColor",
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              d: "M14.7261 2.74994C14.2934 3.39746 14.0625 4.15874 14.0625 4.9375C14.0613 5.45491 14.1624 5.96744 14.3599 6.44568C14.5573 6.92392 14.8473 7.35845 15.2132 7.72431C15.5791 8.09017 16.0136 8.38016 16.4918 8.57763C16.9701 8.7751 17.4826 8.87616 18 8.875C18.7788 8.875 19.54 8.64407 20.1876 8.21141C20.8351 7.77876 21.3398 7.1638 21.6378 6.44432C21.9358 5.72483 22.0138 4.93313 21.8618 4.16933C21.7099 3.40553 21.3349 2.70394 20.7842 2.15327C20.2336 1.6026 19.532 1.22759 18.7682 1.07566C18.0044 0.92373 17.2127 1.00171 16.4932 1.29973C15.7737 1.59775 15.1587 2.10243 14.7261 2.74994ZM13.0503 13.5503C14.363 12.2375 16.1435 11.5 18 11.5C19.8565 11.5 21.637 12.2375 22.9497 13.5503C24.2625 14.863 25 16.6435 25 18.5V22H22.2L21.5 29H14.5L13.8 22H11V18.5C11 16.6435 11.7375 14.863 13.0503 13.5503ZM3 29C3 26.5645 5.66517 24.4196 9.70869 23.1656L10.0112 26.224C9.52728 26.393 9.07639 26.5754 8.66205 26.7688C6.18364 27.9254 6 28.9249 6 29C6 29.0751 6.18364 30.0746 8.66205 31.2312C10.8969 32.2741 14.1952 33 18 33C21.8048 33 25.1031 32.2741 27.3379 31.2312C29.8164 30.0746 30 29.0751 30 29C30 28.9249 29.8164 27.9254 27.3379 26.7688C26.9236 26.5754 26.4727 26.393 25.9888 26.224L26.2913 23.1656C30.3348 24.4196 33 26.5645 33 29C33 32.866 26.2843 36 18 36C9.71573 36 3 32.866 3 29Z",
+            }),
+          );
+        }
+        function Io(e) {
+          return i.createElement(
+            "svg",
+            Object.assign(
+              {
+                xmlns: "http://www.w3.org/2000/svg",
+                viewBox: "0 0 36 36",
+                fill: "none",
+              },
+              e,
+            ),
+            i.createElement("path", {
+              fill: "currentColor",
+              d: "M5 9H27V14.219C28.349 14.3875 29.6858 14.6529 31 15.0138V5H1V27H8V23H5V9Z",
+            }),
+            i.createElement("path", {
+              fill: "currentColor",
+              d: "M32.6676 21.1123C32.6751 20.4336 32.472 19.7693 32.0864 19.2107C31.7007 18.6522 31.1514 18.227 30.514 17.9935C28.0145 17.2731 25.4191 16.9409 22.8187 17.0086C20.2183 16.9409 17.6229 17.2731 15.1234 17.9935C14.4861 18.227 13.9368 18.6522 13.5511 19.2107C13.1654 19.7693 12.9623 20.4336 12.9698 21.1123L11 21.6048V25.5443L12.9698 26.0434C13.0256 26.8858 13.3093 27.6973 13.7903 28.3911C14.2714 29.085 14.9319 29.6352 15.7012 29.9829L17.671 30.8168C18.0712 30.9809 18.5149 31.0053 18.9307 30.8862C19.3465 30.7671 19.71 30.5113 19.9625 30.1602C20.2739 29.7008 20.7038 29.3344 21.2067 29.0997C21.7096 28.865 22.2666 28.7709 22.8187 28.8273C23.3735 28.7763 23.9317 28.877 24.4336 29.1187C24.9356 29.3604 25.3624 29.734 25.6683 30.1996C25.9209 30.5507 26.2844 30.8064 26.7002 30.9256C27.1159 31.0447 27.5597 31.0203 27.9599 30.8562L29.9296 30.0223C30.699 29.6746 31.3595 29.1244 31.8405 28.4305C32.3216 27.7367 32.6052 26.9252 32.6611 26.0828L34.6309 25.5837V21.6442L32.6676 21.1123ZM25.5502 20.9154C24.7525 20.7343 23.9385 20.6353 23.1207 20.6199C22.1013 20.5926 21.0823 20.6918 20.0873 20.9154L19.6408 18.9981C20.7997 18.7386 21.986 18.6218 23.1733 18.6501C24.124 18.6668 25.0703 18.7834 25.9966 18.9981L25.5502 20.9154Z",
+            }),
+          );
         }
       },
       8285: (e, t, r) => {
@@ -53821,6 +53932,7 @@ var CLSTAMP = "8347823";
             useDisjointedValue: () => n.rA,
             useEffectWithDependencyDebugging: () => n.w2,
             useEventListener: () => n.OR,
+            useEventListenerRef: () => n.eF,
             useForceUpdate: () => n.NW,
             useForceUpdateOnResizeObserved: () => u,
             useGlobalEventListener: () => n.JI,
@@ -53833,6 +53945,7 @@ var CLSTAMP = "8347823";
             useLazyMemoizedValue: () => n.kD,
             useMemoWithDependencyDebugging: () => n.S,
             useModalState: () => n.X9,
+            useMouseDownOrTouchStartRef: () => n.yx,
             useMultipleRefs: () => i.BE,
             usePreventVerticalShrinking: () => h,
             usePreviousValue: () => n.zP,
@@ -53960,47 +54073,50 @@ var CLSTAMP = "8347823";
       55594: (e, t, r) => {
         "use strict";
         r.d(t, {
-          B: () => B,
-          B8: () => o,
-          Dc: () => k,
-          J7: () => u,
-          JI: () => _,
-          KM: () => h,
-          KS: () => l,
-          L8: () => i,
-          Me: () => H,
-          NW: () => C,
-          OR: () => f,
-          Qg: () => w,
-          S: () => S,
-          Sd: () => m,
-          U4: () => M,
-          X9: () => x,
-          Yz: () => c,
-          e1: () => E,
-          fB: () => g,
-          fJ: () => d,
-          kD: () => I,
-          l4: () => s,
-          m4: () => a,
-          ok: () => p,
-          rA: () => b,
-          vK: () => v,
-          w2: () => y,
-          yX: () => V,
-          zP: () => L,
+          B: () => x,
+          B8: () => a,
+          Dc: () => R,
+          J7: () => d,
+          JI: () => w,
+          KM: () => p,
+          KS: () => s,
+          L8: () => o,
+          Me: () => V,
+          NW: () => m,
+          OR: () => _,
+          Qg: () => M,
+          S: () => k,
+          Sd: () => h,
+          U4: () => L,
+          X9: () => H,
+          Yz: () => u,
+          e1: () => b,
+          eF: () => v,
+          fB: () => f,
+          fJ: () => C,
+          kD: () => F,
+          l4: () => c,
+          m4: () => l,
+          ok: () => g,
+          rA: () => y,
+          vK: () => E,
+          w2: () => B,
+          yX: () => D,
+          yx: () => T,
+          zP: () => S,
         });
-        var n = r(67294);
-        function i(e, t) {
+        var n = r(67294),
+          i = r(2403);
+        function o(e, t) {
           return (e, t, r) => r;
         }
-        function o(e, t, r) {
+        function a(e, t, r) {
           return [e, t, r];
         }
-        function a(e, t, r, n) {
+        function l(e, t, r, n) {
           return [e, t, r, n];
         }
-        function l(e, t, r = []) {
+        function s(e, t, r = []) {
           const i = n.useCallback(e, []);
           n.useEffect(() => {
             if (!i) return null;
@@ -54008,7 +54124,7 @@ var CLSTAMP = "8347823";
             return () => clearTimeout(e);
           }, [t, ...r]);
         }
-        function s(e, t, r = []) {
+        function c(e, t, r = []) {
           const i = n.useRef(e);
           (i.current = e),
             n.useEffect(() => {
@@ -54019,7 +54135,7 @@ var CLSTAMP = "8347823";
               return () => clearTimeout(e);
             }, [t, ...r]);
         }
-        function c(e, t, r = []) {
+        function u(e, t, r = []) {
           const i = n.useRef(e);
           (i.current = e),
             n.useEffect(() => {
@@ -54030,7 +54146,7 @@ var CLSTAMP = "8347823";
               return () => clearInterval(e);
             }, [t, ...r]);
         }
-        function u(e, t, r = !0) {
+        function d(e, t, r = !0) {
           const i = n.useRef(t);
           i.current = t;
           const [o, a] = n.useState(!1),
@@ -54053,7 +54169,7 @@ var CLSTAMP = "8347823";
             { bTimerCompleted: o, fnStopTimer: c, fnRestartTimer: u }
           );
         }
-        function d(e, t, r) {
+        function C(e, t, r) {
           const [i, o] = n.useState(r);
           return (
             n.useEffect(() => {
@@ -54072,11 +54188,11 @@ var CLSTAMP = "8347823";
             i
           );
         }
-        function C() {
+        function m() {
           const [, e] = n.useState(0);
           return n.useCallback(() => e((e) => e + 1), []);
         }
-        function m() {
+        function h() {
           const e = n.useRef(!1);
           n.useEffect(
             () => () => {
@@ -54086,7 +54202,7 @@ var CLSTAMP = "8347823";
           );
           return n.useCallback(() => e.current, []);
         }
-        function h(e) {
+        function p(e) {
           let t = 1;
           for (; null != e && "HTML" != e.tagName; ) {
             const r = getComputedStyle(e);
@@ -54098,11 +54214,11 @@ var CLSTAMP = "8347823";
           }
           return t;
         }
-        function p(e) {
-          const [t, r] = n.useState(1);
-          return n.useEffect(() => r(h(e.current)), [e]), t;
-        }
         function g(e) {
+          const [t, r] = n.useState(1);
+          return n.useEffect(() => r(p(e.current)), [e]), t;
+        }
+        function f(e) {
           const [t] = n.useState({
               flLastExecutionTimeMs: 0,
               fnLatestCallback: null,
@@ -54127,7 +54243,7 @@ var CLSTAMP = "8347823";
             }
           );
         }
-        function f(e, t, r, i) {
+        function _(e, t, r, i) {
           n.useEffect(() => {
             const n = null == e ? void 0 : e.current;
             if (n && r)
@@ -54136,7 +54252,27 @@ var CLSTAMP = "8347823";
               );
           }, [e, t, r]);
         }
-        function _(e, t, r, i) {
+        function v(e, t, r) {
+          const i = n.useRef();
+          i.current = r;
+          const o = n.useRef(),
+            a = n.useCallback(() => {
+              var e;
+              null === (e = o.current) || void 0 === e || e.call(o),
+                (o.current = void 0);
+            }, []),
+            l = n.useCallback(
+              (r) => {
+                a(),
+                  r &&
+                    (r.addEventListener(e, t, i.current),
+                    (o.current = () => r.removeEventListener(e, t)));
+              },
+              [e, t, a],
+            );
+          return n.useEffect(() => a, [a]), l;
+        }
+        function w(e, t, r, i) {
           n.useEffect(() => {
             if (e && r)
               return (
@@ -54145,8 +54281,8 @@ var CLSTAMP = "8347823";
               );
           }, [e, t, r]);
         }
-        function v(e, t, r, n) {
-          return _(
+        function E(e, t, r, n) {
+          return w(
             e,
             "message",
             function (e) {
@@ -54155,14 +54291,14 @@ var CLSTAMP = "8347823";
             n,
           );
         }
-        function w(e, t) {
+        function M(e, t) {
           n.useLayoutEffect(() => {
             if (!t || !e) return;
             let r = e.Register(t);
             return () => r.Unregister();
           }, [e, t]);
         }
-        function E(e) {
+        function b(e) {
           const [t, r] = n.useState(null == e ? void 0 : e.Value);
           return (
             n.useEffect(() => {
@@ -54175,14 +54311,14 @@ var CLSTAMP = "8347823";
             t
           );
         }
-        function M(e, t) {
+        function L(e, t) {
           n.useEffect(() => {
             if (null == e) return () => {};
             const r = e.Subscribe(t);
             return null == r ? void 0 : r.Unsubscribe;
           }, [e, t]);
         }
-        function b(e, t, r = 1e3) {
+        function y(e, t, r = 1e3) {
           const i = n.useRef(t);
           i.current = t;
           const [o, a] = n.useState(e),
@@ -54190,7 +54326,7 @@ var CLSTAMP = "8347823";
             c = n.useCallback(() => {
               a(e), s(!1);
             }, [e, a]),
-            { fnStopTimer: d, fnRestartTimer: C } = u(r, c, !1),
+            { fnStopTimer: u, fnRestartTimer: C } = d(r, c, !1),
             m = n.useCallback(
               (e) => {
                 C(), a(e), s(!0), i.current && i.current(e);
@@ -54199,7 +54335,7 @@ var CLSTAMP = "8347823";
             );
           return [l ? o : e, m, c];
         }
-        function L(e) {
+        function S(e) {
           const t = n.useRef(null);
           return (
             n.useEffect(() => {
@@ -54208,9 +54344,9 @@ var CLSTAMP = "8347823";
             t.current
           );
         }
-        function y(e, t, r = "") {
+        function B(e, t, r = "") {
           var i;
-          const o = null !== (i = L(t)) && void 0 !== i ? i : [];
+          const o = null !== (i = S(t)) && void 0 !== i ? i : [];
           for (let e = 0; e < o.length; e++)
             o[e] !== t[e] &&
               console.log(
@@ -54220,9 +54356,9 @@ var CLSTAMP = "8347823";
               );
           n.useEffect(e, t);
         }
-        function S(e, t, r = "") {
+        function k(e, t, r = "") {
           var i;
-          const o = null !== (i = L(t)) && void 0 !== i ? i : [];
+          const o = null !== (i = S(t)) && void 0 !== i ? i : [];
           for (let e = 0; e < o.length; e++)
             o[e] !== t[e] &&
               console.log(
@@ -54232,7 +54368,7 @@ var CLSTAMP = "8347823";
               );
           return n.useMemo(e, t);
         }
-        function B(e, t) {
+        function x(e, t) {
           const [r, i] = n.useState(e);
           return (
             n.useEffect(() => {
@@ -54245,10 +54381,10 @@ var CLSTAMP = "8347823";
             r
           );
         }
-        function k(e, t) {
-          return B(e, t) || e;
+        function R(e, t) {
+          return x(e, t) || e;
         }
-        function x(e = !1) {
+        function H(e = !1) {
           const [t, r] = n.useState(e);
           return [
             t,
@@ -54256,12 +54392,12 @@ var CLSTAMP = "8347823";
             n.useCallback(() => r(!1), []),
           ];
         }
-        let R = 0;
-        function H() {
-          const [e] = n.useState(() => `:valve${(R++).toString(32)}:`);
+        let I = 0;
+        function V() {
+          const [e] = n.useState(() => `:valve${(I++).toString(32)}:`);
           return e;
         }
-        function I(e) {
+        function F(e) {
           const t = n.useRef();
           return n.useCallback(
             () => (
@@ -54272,7 +54408,7 @@ var CLSTAMP = "8347823";
             [e],
           );
         }
-        function V(e, t) {
+        function D(e, t) {
           const r = n.useRef();
           return null == e
             ? ((r.current = e), e)
@@ -54280,6 +54416,26 @@ var CLSTAMP = "8347823";
               (r.current = Math.min(r.current, e + t)),
               (r.current = Math.max(r.current, e - t)),
               r.current);
+        }
+        function T(e) {
+          const t = n.useRef();
+          t.current = e;
+          const r = n.useRef(!1),
+            o = n.useCallback((e) => {
+              var n;
+              r.current ||
+                null === (n = t.current) ||
+                void 0 === n ||
+                n.call(t, e),
+                (r.current = !1);
+            }, []),
+            a = n.useCallback((e) => {
+              var n;
+              null === (n = t.current) || void 0 === n || n.call(t, e),
+                (r.current = !0);
+            }, []),
+            l = [v("mousedown", o), v("touchstart", a)];
+          return (0, i.BE)(...l);
         }
       },
       2403: (e, t, r) => {
@@ -54954,9 +55110,9 @@ var CLSTAMP = "8347823";
                 ? !{
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Sep 18 2023 : 16:56:25",
-                    BUILD_TIME_UTC: "Sep 18 2023 : 23:56:25",
-                    BUILD_RTIME_UTC: 1695081385,
+                    BUILD_TIME_LOCAL: "Sep 21 2023 : 14:49:44",
+                    BUILD_TIME_UTC: "Sep 21 2023 : 21:49:44",
+                    BUILD_RTIME_UTC: 1695332984,
                   }.MOBILE_BUILD && document.getElementById(t)
                 : t),
             n)
@@ -55504,7 +55660,7 @@ var CLSTAMP = "8347823";
       {
         27: "b4f6be816f6ec7053600",
         33: "b316208b79f5fdd3fd5e",
-        58: "4bfe9fe0729a7fb4b45d",
+        58: "74b72195dbac7a74189c",
         131: "9974ba5878825f26a832",
         146: "c79acac9416f8b4b4171",
         200: "0273f88a1d91abf0685e",
@@ -55580,7 +55736,7 @@ var CLSTAMP = "8347823";
         5513: "b5cab11bb3cb7268c194",
         5547: "6b157316b3f7b25496fd",
         5590: "e4e52e7b32128569c713",
-        5742: "06741550325905efd8fb",
+        5742: "86791155e67c3e4eeaa4",
         5895: "8d033a90cec87046660a",
         5936: "6627f8623164ff607132",
         5984: "c69b0381e5fcd88e54f3",
@@ -55605,7 +55761,7 @@ var CLSTAMP = "8347823";
         7781: "291c6c537dfb8abda2ed",
         7832: "9d6d3d860dea2a65797b",
         7850: "a6909cef024c42b9aef0",
-        7962: "74ea244942933d1c4460",
+        7962: "00d5d41cc1020d8b3f7a",
         8011: "2bad8c957b2510d4af07",
         8052: "3c9692cd984f39cac597",
         8085: "20d2a55ada2f9e220464",
@@ -55615,7 +55771,7 @@ var CLSTAMP = "8347823";
         8282: "615d859ca6a0d3ccc95e",
         8319: "713735f64ff619ad7900",
         8433: "7fd7c965c30cb28d24ed",
-        8467: "a6d5db8fbce0e76b9680",
+        8467: "eebb5938b72c5ffea874",
         8490: "665cefdd02e2d5673874",
         8778: "4bff12427b35236c9541",
         8956: "dad815591864c06316f3",

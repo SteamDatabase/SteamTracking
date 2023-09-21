@@ -2703,6 +2703,7 @@ https://steamcommunity.com/userreviews/clearcontentcheckresults/${id}
 https://steamcommunity.com/userreviews/markassuspicious/${id}
 https://steamcommunity.com/workshop/ajaxfindworkshops/?searchText=${}
 https://steamcommunity.com/workshop/ajaxmanagesuggestedserviceproviders
+https://steamdeck-packages.steamos.cloud/archlinux-mirror/sources
 https://steamdeck.komodo.jp
 https://steamloopback.host
 https://steamloopback.host/

@@ -10438,9 +10438,15 @@
 .remoteplay_QuickAccessNotifications_3EHGW > div {
   position: relative;
 }
-.remoteplay_QuickAccessNotifications_3EHGW
+.remoteplay_QuickAccessNotifications_3EHGW:not(.remoteplay_VR_3zGD_)
   > div:not(:focus)
-  + div:not(:focus):before {
+  + div:not(:focus):before,
+.remoteplay_QuickAccessNotifications_3EHGW
+  > div:not(:hover)
+  + div:not(:hover):before,
+.remoteplay_QuickAccessNotifications_3EHGW
+  > div:not(:hover)
+  + div.remoteplay_EmptyNotifications_2H2il:before {
   content: "";
   position: absolute;
   top: 0;

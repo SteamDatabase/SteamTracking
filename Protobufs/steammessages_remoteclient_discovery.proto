@@ -45,6 +45,7 @@ enum EStreamDeviceFormFactor {
 	k_EStreamDeviceFormFactorTablet = 2;
 	k_EStreamDeviceFormFactorComputer = 3;
 	k_EStreamDeviceFormFactorTV = 4;
+	k_EStreamDeviceFormFactorVRHeadset = 5;
 }
 
 enum EStreamTransport {
@@ -62,6 +63,7 @@ enum EStreamInterface {
 	k_EStreamInterfaceRecentGames = 1;
 	k_EStreamInterfaceBigPicture = 2;
 	k_EStreamInterfaceDesktop = 3;
+	k_EStreamInterfaceSteamVR = 4;
 }
 
 enum ERemoteDeviceStreamingResult {
