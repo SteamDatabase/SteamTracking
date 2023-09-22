@@ -16,6 +16,7 @@
         BorderedContainerPromotion:
           "broadcast_embeddable_BorderedContainerPromotion_6w9mo",
         bordered_title: "broadcast_embeddable_bordered_title_1X5ll",
+        streamTitle: "broadcast_embeddable_streamTitle_2_cAT",
         bordered_subtitle: "broadcast_embeddable_bordered_subtitle_2-kGj",
         bordered_corner_container:
           "broadcast_embeddable_bordered_corner_container_38qcY",
@@ -14344,7 +14345,7 @@
                       ),
                     },
                     l.createElement(oa.xP, null),
-                    n,
+                    l.createElement("div", { className: ba().streamTitle }, n),
                     l.createElement(
                       "div",
                       { className: ba().bordered_corner_container },

@@ -6012,7 +6012,6 @@ body.v6 .page_content.notes {
 
 .open_in_steam_container {
     position: relative;
-    margin-bottom: 4px;
 	display: flex;
 	flex-direction: row;
 	padding: 5px;
@@ -6057,10 +6056,13 @@ body.v6 .page_content.notes {
     box-shadow: 2px 2px 20px rgba(0,0,0,0.3);
 	color: #eeeeee;
 }
+a.open_in_steam_body:hover {
+    color: #eeeeee;
+}
 .open_in_steam_img {
     height: 31px;
     margin-right: 10px;
     padding: 2px;
-    background: #ffffff61;
+    background: #ffffff;
     border-radius: 4px;
 }
