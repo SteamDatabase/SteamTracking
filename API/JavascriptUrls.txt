@@ -880,6 +880,8 @@ ${PARTNER_BASE_URL}
 ${PARTNER_BASE_URL}${_ ? "optin/ajaxadmincloneinvites" : "optin/ajaxadmincloneoptinpage"}
 ${PARTNER_BASE_URL}${}${}
 ${PARTNER_BASE_URL}/admin/store/pagecreate
+${PARTNER_BASE_URL}/packages/ajaxgetmultipackageprices
+${PARTNER_BASE_URL}/packages/ajaxgetpackageforapp
 ${PARTNER_BASE_URL}/promotion${}
 ${PARTNER_BASE_URL}/promotion/${}
 ${PARTNER_BASE_URL}actions/ajaxgetpartnereventssaledetails
@@ -916,6 +918,7 @@ ${PARTNER_BASE_URL}apps/landing/${}
 ${PARTNER_BASE_URL}apps/suggestapps
 ${PARTNER_BASE_URL}bundles/suggestbundle
 ${PARTNER_BASE_URL}bundles/view/${}
+${PARTNER_BASE_URL}cluster/ajaxcreatecluster
 ${PARTNER_BASE_URL}dailydeals/ajaxacceptinvite
 ${PARTNER_BASE_URL}dailydeals/ajaxinviteapptopromo
 ${PARTNER_BASE_URL}dailydeals/ajaxremoveappinvite
@@ -987,6 +990,7 @@ ${PARTNER_BASE_URL}optin/sale/${}/100
 ${PARTNER_BASE_URL}optin/sale/${}/220
 ${PARTNER_BASE_URL}optin/salepreview/${}/20
 ${PARTNER_BASE_URL}packages/createoreditdiscount/${packageID}
+${PARTNER_BASE_URL}packages/discounts/${packageID}
 ${PARTNER_BASE_URL}packages/discounts/${}
 ${PARTNER_BASE_URL}packages/removepackagediscount/${}
 ${PARTNER_BASE_URL}partnerevents/ajaxgetpartnereventpermissions
@@ -1288,6 +1292,7 @@ ${STORE_BASE_URL}points/howitworks
 ${STORE_BASE_URL}points/shop/c/chateffects
 ${STORE_BASE_URL}points/shop/c/emoticons
 ${STORE_BASE_URL}points/shop/c/stickers
+${STORE_BASE_URL}points/shop/event/${}
 ${STORE_BASE_URL}points/shop/event/${}/reward/${defid}
 ${STORE_BASE_URL}pointssummary/
 ${STORE_BASE_URL}privacy_agreement

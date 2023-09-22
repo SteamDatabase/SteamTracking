@@ -428,7 +428,7 @@
     "DailyDeals_New_SelectGame": "Select game",
     "DailyDeals_New_SelectPackage": "Select Package",
     "DailyDeals_New_SelectBundle": "Select Bundle",
-    "DailyDeals_New_LastDiscount": "Last Discount: %1$s @ %2$s%",
+    "DailyDeals_New_LastDiscount": "Last Discount: %1$s @ %2$s%  PackageID (%3$s)",
     "DailyDeals_New_NoLastDiscount": "No previous discount info available",
     "DailyDeals_New_CurrentPrice": "Current price: %1$s",
     "DailyDeals_App_NotAvailable": "App is not available on Steam Store",
