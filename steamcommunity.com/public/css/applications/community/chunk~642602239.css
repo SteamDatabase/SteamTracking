@@ -50,6 +50,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  color: #fff;
   opacity: 0.8;
 }
 .addonpicker_Tab_1F8Bh
@@ -62,6 +63,7 @@
   width: 28px;
   height: 28px;
   opacity: 1;
+  color: #fff;
 }
 .addonpicker_Content_1c-qe {
   display: flex;
@@ -1151,7 +1153,6 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
 }
 .chatentry_chatSubmitButton_1IEiK {
   position: relative;
-  background-color: #3d424b;
   border: 1px solid #1b1c20;
   color: #c9c9c9;
   margin: 0px;
@@ -1159,7 +1160,6 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   max-width: 46px;
   max-height: 46px;
   padding: 0;
-  background-image: none;
   background-size: 22px 22px;
   background-position: center;
   background-repeat: no-repeat;
@@ -1171,7 +1171,6 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   flex: 0;
   min-width: 46px;
   position: relative;
-  color: #898989;
   background-color: #2c3036;
   margin: 0px;
   margin-top: 0px;
@@ -1180,6 +1179,12 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+}
+.chatentry_chatSubmitButton_1IEiK.chatentry_EmbedButton_24xNx SVG,
+.chatentry_chatSubmitButton_1IEiK.chatentry_EmoticonPickerButton_K-lPM SVG {
+  width: 24px;
+  height: 24px;
+  color: #898989;
 }
 .chatentry_chatSubmitButton_1IEiK.chatentry_EmbedButton_24xNx {
   max-width: 46px;
@@ -1191,6 +1196,7 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
 .chatentry_chatSubmitButton_1IEiK.chatentry_EmbedButton_24xNx:hover,
 .chatentry_chatSubmitButton_1IEiK.chatentry_EmbedButton_24xNx:focus {
   background-color: #3d424b;
+  color: #fff;
 }
 .chatentry_chatSubmitButton_1IEiK:not(
     .chatentry_disabled_2GM2k
@@ -1213,9 +1219,11 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   path,
 .chatentry_chatSubmitButton_1IEiK:not(.chatentry_disabled_2GM2k):hover
   .SVGIcon_Button.SVGIcon_Submit
+  path,
+.chatentry_chatSubmitButton_1IEiK:not(.chatentry_disabled_2GM2k)
+  .SVGIcon_Button.SVGIcon_Submit
   path {
   fill: #fff;
-  stroke: #fff;
 }
 .chatentry_chatSubmitButton_1IEiK:not(.chatentry_disabled_2GM2k):focus
   .SVGIcon_Button.SVGIcon_Submit
@@ -1229,6 +1237,13 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   path.GamepadMode,
 .GamepadMode
   .chatentry_chatSubmitButton_1IEiK:not(.chatentry_disabled_2GM2k):hover
+  .SVGIcon_Button.SVGIcon_Submit
+  path,
+.chatentry_chatSubmitButton_1IEiK:not(.chatentry_disabled_2GM2k)
+  .SVGIcon_Button.SVGIcon_Submit
+  path.GamepadMode,
+.GamepadMode
+  .chatentry_chatSubmitButton_1IEiK:not(.chatentry_disabled_2GM2k)
   .SVGIcon_Button.SVGIcon_Submit
   path {
   fill: #000;
@@ -1299,15 +1314,15 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   fill: #000;
 }
 .chatentry_chatSubmitButton_1IEiK .SVGIcon_Submit {
-  width: 24px;
-  height: 24px;
-  margin-top: 6px;
+  width: 26px;
+  height: 26px;
+  margin-top: 4px;
 }
 .compactView .chatentry_chatSubmitButton_1IEiK .SVGIcon_Submit {
   margin-top: 3px;
 }
 .chatentry_chatSubmitButton_1IEiK .SVGIcon_Submit path {
-  fill: #8592a5;
+  fill: #5f5f5f;
   stroke-width: 2px;
 }
 .chatentry_chatSubmitButton_1IEiK .SVGIcon_Submit path.GamepadMode,
@@ -1347,6 +1362,7 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
 .chatentry_EmoticonPickerButton_K-lPM:hover,
 .chatentry_EmoticonPickerButton_K-lPM:focus {
   background-color: #3d424b;
+  color: #fff;
 }
 .chatentry_EmoticonPickerButton_K-lPM .SVGIcon_Emoticon {
   width: 26px;
@@ -1380,6 +1396,16 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   align-self: flex-end;
   min-height: 46px;
   margin-bottom: 2px;
+  background: #24272b;
+  transition: background 0.3s ease;
+}
+.chatentry_chatEntryControls_2gP0D
+  .chatentry_chatSubmitButton_1IEiK:not(.chatentry_disabled_2GM2k) {
+  background: linear-gradient(
+    136deg,
+    rgb(0, 86, 214) 1%,
+    rgb(26, 159, 255) 60%
+  );
 }
 .chatentry_chatEntryControls_2gP0D
   .chatentry_chatSubmitButton_1IEiK.GamepadMode,
@@ -1453,6 +1479,7 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   background-color: #1b1c20;
   background-repeat: no-repeat;
   background-size: 256px 128px;
+  overflow: hidden;
 }
 .friendListHeaderContainer .activeVoicePushToTalk,
 .ChatMessageEntryVoice .activeVoicePushToTalk {
@@ -1506,7 +1533,6 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
 }
 .ChatMessageEntryVoice .activeVoiceControls {
   min-width: 0px;
-  width: 84px;
   border-top: 0px solid rgba(0, 0, 0, 0);
   border-bottom: 0px solid rgba(0, 0, 0, 0);
   background: none;
@@ -1515,24 +1541,32 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   pointer-events: none;
 }
 .ChatMessageEntryVoice.Active
+  .VoiceControlPanelButton.ToggleMicrophoneButton.NoMicrophone
+  SVG,
+.VoiceControlPanelButton.ToggleMicrophoneButton.NoMicrophone SVG {
+  color: #e64a35;
+}
+.ChatMessageEntryVoice.Active
   .VoiceControlPanelButton.ToggleMicrophoneButton.NoMicrophone:active,
 .VoiceControlPanelButton.ToggleMicrophoneButton.NoMicrophone:active {
   background-color: rgba(197, 23, 11, 0.5);
   transition-duration: 0s;
 }
+.ChatMessageEntryVoice.Active
+  .VoiceControlPanelButton.ToggleMicrophoneButton.NoMicrophone:active
+  SVG,
+.VoiceControlPanelButton.ToggleMicrophoneButton.NoMicrophone:active SVG {
+  color: #e64a35;
+}
 .ChatMessageEntryVoice .VoiceControlPanelButton.ToggleVoiceOutputButton {
-  transform: translateX(-64px) scale(0.7);
+  transform: translateX(-64px) scale(0.5);
   transition-property: transform, opacity;
-  transition-duration: 0.16s;
-  transition-timing-function: ease-in-out;
   opacity: 0;
   cursor: pointer;
 }
 .ChatMessageEntryVoice .VoiceControlPanelButton.ToggleMicrophoneButton {
   transform: translateX(-32px) scale(0.5);
-  transition:
-    transform 0.1s ease-in-out,
-    opacity 0.3s ease-in-out;
+  transition-property: transform, opacity;
   opacity: 0;
   cursor: pointer;
 }
@@ -1540,10 +1574,6 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
 .ChatMessageEntryVoice.Active .VoiceControlPanelButton.ToggleMicrophoneButton {
   opacity: 1;
   transform: translateX(0px) scale(1);
-  transition:
-    transform 0.3s ease-in-out,
-    opacity 0.3s ease-in-out,
-    background-color 0.1s ease-in-out;
 }
 .ChatMessageEntryVoice .VoiceControlPanelButton.chatEndVoiceChat {
   display: none;
@@ -1590,6 +1620,25 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
 }
 .chatEntry.compactView .VoiceToggle {
   height: 28px;
+}
+.VoiceIconCtn {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  margin: auto;
+  color: #c8f1c2;
+}
+.VoiceIconCtn:hover SVG {
+  color: #fff;
+}
+.VoiceIconCtn .NoMicrophone SVG {
+  color: #f43;
+}
+.VoiceToggleIconCtn {
+  color: #898989;
+}
+.VoiceControlPanelButton.chatEndVoiceChat:hover .VoiceIconCtn {
+  color: #fff;
 }
 .chatEntry.compactView .VoiceToggleIconCtn {
   height: 24px;

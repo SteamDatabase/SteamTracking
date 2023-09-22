@@ -5509,17 +5509,9 @@ body.modals_BodyNoScrollDialog_3jhMI {
   border-bottom: 1px solid #236c39;
   margin-bottom: 10px;
 }
-.chatroom_VoiceChatQuickChatChannelOption_sV-rY .SVGIcon_TextRoom .TextLines,
-.chatroom_VoiceChatQuickChatChannelOption_sV-rY
-  .SVGIcon_TextRoom
-  .ScratchPad
-  path,
-.chatroom_VoiceChatQuickChatChannelOption_sV-rY
-  .SVGIcon_TextRoom
-  .ScratchPad
-  line {
-  stroke-width: 10px;
-  stroke: #8f9e9c;
+.chatroom_VoiceChatQuickChatChannelOption_sV-rY .SVGIcon_ScratchpadFilled {
+  color: #8f9e9c;
+  fill: #8f9e9c;
 }
 .DialogContent.GenericConfirmDialog.chatroom_ManageVoiceChannelsModal_1e0x4,
 .DialogContent.GenericConfirmDialog.chatroom_ManageTextChannelsModal_3XLA3 {
@@ -7426,7 +7418,6 @@ body.modals_BodyNoScrollDialog_3jhMI {
 }
 .chatentry_chatSubmitButton_RVIs8 {
   position: relative;
-  background-color: #3d424b;
   border: 1px solid #1b1c20;
   color: #c9c9c9;
   margin: 0px;
@@ -7434,7 +7425,6 @@ body.modals_BodyNoScrollDialog_3jhMI {
   max-width: 46px;
   max-height: 46px;
   padding: 0;
-  background-image: none;
   background-size: 22px 22px;
   background-position: center;
   background-repeat: no-repeat;
@@ -7446,7 +7436,6 @@ body.modals_BodyNoScrollDialog_3jhMI {
   flex: 0;
   min-width: 46px;
   position: relative;
-  color: #898989;
   background-color: #2c3036;
   margin: 0px;
   margin-top: 0px;
@@ -7455,6 +7444,12 @@ body.modals_BodyNoScrollDialog_3jhMI {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+}
+.chatentry_chatSubmitButton_RVIs8.chatentry_EmbedButton_3zOBe SVG,
+.chatentry_chatSubmitButton_RVIs8.chatentry_EmoticonPickerButton_Aupsw SVG {
+  width: 24px;
+  height: 24px;
+  color: #898989;
 }
 .chatentry_chatSubmitButton_RVIs8.chatentry_EmbedButton_3zOBe {
   max-width: 46px;
@@ -7466,6 +7461,7 @@ body.modals_BodyNoScrollDialog_3jhMI {
 .chatentry_chatSubmitButton_RVIs8.chatentry_EmbedButton_3zOBe:hover,
 .chatentry_chatSubmitButton_RVIs8.chatentry_EmbedButton_3zOBe:focus {
   background-color: #3d424b;
+  color: #fff;
 }
 .chatentry_chatSubmitButton_RVIs8:not(
     .chatentry_disabled_jaQN2
@@ -7488,9 +7484,11 @@ body.modals_BodyNoScrollDialog_3jhMI {
   path,
 .chatentry_chatSubmitButton_RVIs8:not(.chatentry_disabled_jaQN2):hover
   .SVGIcon_Button.SVGIcon_Submit
+  path,
+.chatentry_chatSubmitButton_RVIs8:not(.chatentry_disabled_jaQN2)
+  .SVGIcon_Button.SVGIcon_Submit
   path {
   fill: #fff;
-  stroke: #fff;
 }
 .chatentry_chatSubmitButton_RVIs8:not(.chatentry_disabled_jaQN2):focus
   .SVGIcon_Button.SVGIcon_Submit
@@ -7504,6 +7502,13 @@ body.modals_BodyNoScrollDialog_3jhMI {
   path.GamepadMode,
 .GamepadMode
   .chatentry_chatSubmitButton_RVIs8:not(.chatentry_disabled_jaQN2):hover
+  .SVGIcon_Button.SVGIcon_Submit
+  path,
+.chatentry_chatSubmitButton_RVIs8:not(.chatentry_disabled_jaQN2)
+  .SVGIcon_Button.SVGIcon_Submit
+  path.GamepadMode,
+.GamepadMode
+  .chatentry_chatSubmitButton_RVIs8:not(.chatentry_disabled_jaQN2)
   .SVGIcon_Button.SVGIcon_Submit
   path {
   fill: #000;
@@ -7574,15 +7579,15 @@ body.modals_BodyNoScrollDialog_3jhMI {
   fill: #000;
 }
 .chatentry_chatSubmitButton_RVIs8 .SVGIcon_Submit {
-  width: 24px;
-  height: 24px;
-  margin-top: 6px;
+  width: 26px;
+  height: 26px;
+  margin-top: 4px;
 }
 .compactView .chatentry_chatSubmitButton_RVIs8 .SVGIcon_Submit {
   margin-top: 3px;
 }
 .chatentry_chatSubmitButton_RVIs8 .SVGIcon_Submit path {
-  fill: #8592a5;
+  fill: #5f5f5f;
   stroke-width: 2px;
 }
 .chatentry_chatSubmitButton_RVIs8 .SVGIcon_Submit path.GamepadMode,
@@ -7622,6 +7627,7 @@ body.modals_BodyNoScrollDialog_3jhMI {
 .chatentry_EmoticonPickerButton_Aupsw:hover,
 .chatentry_EmoticonPickerButton_Aupsw:focus {
   background-color: #3d424b;
+  color: #fff;
 }
 .chatentry_EmoticonPickerButton_Aupsw .SVGIcon_Emoticon {
   width: 26px;
@@ -7655,6 +7661,12 @@ body.modals_BodyNoScrollDialog_3jhMI {
   align-self: flex-end;
   min-height: 46px;
   margin-bottom: 2px;
+  background: #24272b;
+  transition: background 0.3s ease;
+}
+.chatentry_chatEntryControls_3Ule3
+  .chatentry_chatSubmitButton_RVIs8:not(.chatentry_disabled_jaQN2) {
+  background: linear-gradient(136deg, #0056d6 1%, #1a9fff 60%);
 }
 .chatentry_chatEntryControls_3Ule3
   .chatentry_chatSubmitButton_RVIs8.GamepadMode,
@@ -7728,6 +7740,7 @@ body.modals_BodyNoScrollDialog_3jhMI {
   background-color: #1b1c20;
   background-repeat: no-repeat;
   background-size: 256px 128px;
+  overflow: hidden;
 }
 .friendListHeaderContainer .activeVoicePushToTalk,
 .ChatMessageEntryVoice .activeVoicePushToTalk {
@@ -7781,7 +7794,6 @@ body.modals_BodyNoScrollDialog_3jhMI {
 }
 .ChatMessageEntryVoice .activeVoiceControls {
   min-width: 0px;
-  width: 84px;
   border-top: 0px solid transparent;
   border-bottom: 0px solid transparent;
   background: none;
@@ -7790,24 +7802,32 @@ body.modals_BodyNoScrollDialog_3jhMI {
   pointer-events: none;
 }
 .ChatMessageEntryVoice.Active
+  .VoiceControlPanelButton.ToggleMicrophoneButton.NoMicrophone
+  SVG,
+.VoiceControlPanelButton.ToggleMicrophoneButton.NoMicrophone SVG {
+  color: #e64a35;
+}
+.ChatMessageEntryVoice.Active
   .VoiceControlPanelButton.ToggleMicrophoneButton.NoMicrophone:active,
 .VoiceControlPanelButton.ToggleMicrophoneButton.NoMicrophone:active {
   background-color: rgba(197, 23, 11, 0.5);
   transition-duration: 0s;
 }
+.ChatMessageEntryVoice.Active
+  .VoiceControlPanelButton.ToggleMicrophoneButton.NoMicrophone:active
+  SVG,
+.VoiceControlPanelButton.ToggleMicrophoneButton.NoMicrophone:active SVG {
+  color: #e64a35;
+}
 .ChatMessageEntryVoice .VoiceControlPanelButton.ToggleVoiceOutputButton {
-  transform: translateX(-64px) scale(0.7);
+  transform: translateX(-64px) scale(0.5);
   transition-property: transform, opacity;
-  transition-duration: 0.16s;
-  transition-timing-function: ease-in-out;
   opacity: 0;
   cursor: pointer;
 }
 .ChatMessageEntryVoice .VoiceControlPanelButton.ToggleMicrophoneButton {
   transform: translateX(-32px) scale(0.5);
-  transition:
-    transform 0.1s ease-in-out,
-    opacity 0.3s ease-in-out;
+  transition-property: transform, opacity;
   opacity: 0;
   cursor: pointer;
 }
@@ -7815,10 +7835,6 @@ body.modals_BodyNoScrollDialog_3jhMI {
 .ChatMessageEntryVoice.Active .VoiceControlPanelButton.ToggleMicrophoneButton {
   opacity: 1;
   transform: translateX(0px) scale(1);
-  transition:
-    transform 0.3s ease-in-out,
-    opacity 0.3s ease-in-out,
-    background-color 0.1s ease-in-out;
 }
 .ChatMessageEntryVoice .VoiceControlPanelButton.chatEndVoiceChat {
   display: none;
@@ -7865,6 +7881,25 @@ body.modals_BodyNoScrollDialog_3jhMI {
 }
 .chatEntry.compactView .VoiceToggle {
   height: 28px;
+}
+.VoiceIconCtn {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  margin: auto;
+  color: #c8f1c2;
+}
+.VoiceIconCtn:hover SVG {
+  color: #fff;
+}
+.VoiceIconCtn .NoMicrophone SVG {
+  color: #f43;
+}
+.VoiceToggleIconCtn {
+  color: #898989;
+}
+.VoiceControlPanelButton.chatEndVoiceChat:hover .VoiceIconCtn {
+  color: #fff;
 }
 .chatEntry.compactView .VoiceToggleIconCtn {
   height: 24px;
@@ -7993,6 +8028,7 @@ body.modals_BodyNoScrollDialog_3jhMI {
   justify-content: center;
   align-items: center;
   text-align: center;
+  color: #fff;
   opacity: 0.8;
 }
 .addonpicker_Tab_2CJ0L
@@ -8005,6 +8041,7 @@ body.modals_BodyNoScrollDialog_3jhMI {
   width: 28px;
   height: 28px;
   opacity: 1;
+  color: #fff;
 }
 .addonpicker_Content_dUQIH {
   display: flex;
@@ -19258,6 +19295,10 @@ a.bbcodes_LinkButton_jPpgc:hover {
 }
 .chattabs_ChatTab_2Vrcp svg {
   stroke-width: 0;
+  width: 20px;
+  display: flex;
+  position: relative;
+  color: #fff;
 }
 .chattabs_ChatTab_2Vrcp.chattabs_VoiceActive_33vMa {
   padding-left: 26px;
@@ -19302,8 +19343,8 @@ a.bbcodes_LinkButton_jPpgc:hover {
 }
 .chattabs_ChatTab_2Vrcp .chattabs_MicStatus_30H7N {
   position: absolute;
-  left: -2px;
-  top: -3px;
+  left: 0px;
+  top: -1px;
   padding-top: 4px;
   padding-left: 4px;
   width: 40px;
@@ -19314,11 +19355,17 @@ a.bbcodes_LinkButton_jPpgc:hover {
   transition: all 0.2s ease-in-out;
   overflow: visible;
 }
+.chattabs_ChatTab_2Vrcp .chattabs_MicStatus_30H7N svg {
+  width: 16px;
+  height: 16px;
+  padding: 7px 2px;
+}
 .chattabs_ChatTab_2Vrcp .chattabs_MicStatus_30H7N.GamepadMode,
 .GamepadMode .chattabs_ChatTab_2Vrcp .chattabs_MicStatus_30H7N {
   width: 24px;
   height: 24px;
-  top: 7px;
+  top: 1px;
+  left: -5px;
 }
 .chattabs_ChatTab_2Vrcp .chattabs_MicStatus_30H7N.GamepadMode svg,
 .GamepadMode .chattabs_ChatTab_2Vrcp .chattabs_MicStatus_30H7N svg {
@@ -19327,7 +19374,7 @@ a.bbcodes_LinkButton_jPpgc:hover {
 }
 .chattabs_ChatTab_2Vrcp.chattabs_Active_Lrqoj .chattabs_MicStatus_30H7N {
   background: radial-gradient(
-    ellipse farthest-corner at 16.4px 20px,
+    ellipse farthest-corner at 14px 20px,
     #7af55b 0%,
     rgba(122, 245, 91, 0.3) 30%,
     rgba(122, 245, 91, 0.1) 50%,
@@ -19495,7 +19542,6 @@ a.bbcodes_LinkButton_jPpgc:hover {
   margin-left: 8px;
   flex-shrink: 0;
   cursor: pointer;
-  transform: translate(0px, -6px);
 }
 .chattabs_CloseButton_7gMwY .SVGIcon_X_Line line {
   stroke: #71767f;
@@ -39741,9 +39787,8 @@ html.web_chat_frame body {
 .friendsui-container .SVGIcon_Button.SVGIcon_VoiceRoom {
   width: 24px;
   height: 24px;
-  margin-right: 4px;
-  fill: rgba(0, 0, 0, 0);
-  stroke: rgba(104, 110, 115, 0.4);
+  margin-top: 2px;
+  color: #898989;
 }
 .friendsui-container .SVGIcon_TextRoom.GamepadMode,
 .GamepadMode .friendsui-container .SVGIcon_TextRoom,
@@ -41481,6 +41526,9 @@ body.in_global_drag .friendlist_titlebar {
 .friend.online {
   color: #6dcff6;
 }
+.VoiceChannelParticipants .friend.online:last-of-type {
+  padding-bottom: 10px;
+}
 .friend.ingame {
   color: #e3ffc2;
 }
@@ -42345,6 +42393,7 @@ body.in_global_drag .friendlist_titlebar {
 .ChatTabsContextMenu.CompactFriendsList .friend {
   margin-top: 3px;
   height: 24px;
+  padding: 4px 0px;
 }
 .ChatTabsContextMenu .ChatUnreadMessageIndicator.ChatTabUnread {
   top: 14px;
@@ -43865,9 +43914,12 @@ input.InviteFriendToChatDialog_LinkInput {
 .OneOnOneVoiceRoomControls .VoiceToggleIconCtn {
   position: relative;
   left: 0px;
-  top: 5px;
+  top: 1px;
   margin-left: 10px;
   margin-right: 10px;
+}
+.OneOnOneVoiceRoomControls .VoiceToggleIconCtn:hover {
+  color: #fff;
 }
 .OneOnOneVoiceRoomControls.OneOnOneVoiceActive .VoiceToggleIconCtn .AudioLines {
   fill: #000;
@@ -43902,12 +43954,13 @@ input.InviteFriendToChatDialog_LinkInput {
   bottom: 0;
 }
 .OneOnOneVoiceStatusLabel {
-  margin-top: 12px;
+  margin-top: 10px;
   margin-left: 8px;
   user-select: none;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+  font-size: 12px;
 }
 .OneOnOneVoiceActive .OneOnOneVoiceStatusLabel {
   color: #87dfa3;
@@ -44031,8 +44084,8 @@ input.InviteFriendToChatDialog_LinkInput {
 }
 .VoiceToggleIconCtn {
   position: relative;
-  width: 28px;
-  height: 28px;
+  width: 26px;
+  height: 26px;
   left: 12px;
   position: absolute;
   top: 11px;
@@ -44071,9 +44124,16 @@ button.DialogButton.copyVoiceLogsButton {
   border-bottom: 0.5px solid #1c852f;
   background-color: rgba(36, 39, 46, 0.5);
 }
+.VoiceToggle.Active svg {
+  color: #c8f1c2;
+}
 .VoiceToggle.Active:focus,
 .VoiceToggle.Active:hover {
   background-color: rgba(97, 253, 151, 0.3);
+}
+.VoiceToggle.Active:focus svg,
+.VoiceToggle.Active:hover svg {
+  color: #fff;
 }
 .chatWindow .chatHeader {
   flex-shrink: 0;
@@ -44154,7 +44214,6 @@ button.DialogButton.copyVoiceLogsButton {
   height: 58px;
 }
 .activeVoiceFlexBox {
-  height: 44px;
   display: flex;
   justify-content: space-between;
 }
@@ -44293,11 +44352,6 @@ a.connectionStatus:visited {
   stroke: #c8f1c2;
 }
 .chatRoomVoiceChannel.ActiveVoiceChannel
-  .VoiceControlPanelButton.chatEndVoiceChat
-  .SVGIcon_Button {
-  fill: rgba(0, 0, 0, 0);
-}
-.chatRoomVoiceChannel.ActiveVoiceChannel
   .VoiceControlPanelButton
   .SVGIcon_Button.SVGIcon_VoiceRoom {
   width: 25px;
@@ -44313,8 +44367,6 @@ a.connectionStatus:visited {
   .SVGIcon_Button {
   fill: #fff;
 }
-.VoiceControlPanelButton .SVGIcon_Microphone.SVGIcon_Shadow line,
-.VoiceControlPanelButton .SVGIcon_Headphones.SVGIcon_Shadow line,
 .VoiceControlPanelButton:hover .SVGIcon_Microphone.SVGIcon_Shadow,
 .VoiceControlPanelButton:hover .SVGIcon_Headphones.SVGIcon_Shadow {
   fill: #000;
@@ -44340,27 +44392,6 @@ a.connectionStatus:visited {
 .chatRoomVoiceChannel.ActiveVoiceChannel
   .VoiceControlPanelButton.chatEndVoiceChat {
   min-width: 48px;
-  border-left: 0.5px solid #2e3c44;
-}
-.chatRoomVoiceChannel.ActiveVoiceChannel
-  .VoiceControlPanelButton.chatEndVoiceChat
-  .SVGIcon_VoiceRoom
-  .ExitDoor,
-.chatRoomVoiceChannel.ActiveVoiceChannel
-  .VoiceControlPanelButton.chatEndVoiceChat
-  .SVGIcon_VoiceRoom
-  .Arrow {
-  stroke: #8f9e9c;
-}
-.chatRoomVoiceChannel.ActiveVoiceChannel
-  .VoiceControlPanelButton.chatEndVoiceChat:hover
-  .SVGIcon_VoiceRoom
-  .ExitDoor,
-.chatRoomVoiceChannel.ActiveVoiceChannel
-  .VoiceControlPanelButton.chatEndVoiceChat:hover
-  .SVGIcon_VoiceRoom
-  .Arrow {
-  stroke: #fff;
 }
 .chatRoomVoiceChannel.ActiveVoiceChannel .activeVoiceButtons {
   min-width: 100%;
@@ -44380,7 +44411,6 @@ a.connectionStatus:visited {
   align-self: center;
   padding: 0px;
   margin-top: 2px;
-  border-radius: 2px;
   margin: 2px;
   margin-top: 2px;
   margin-right: 0px;
@@ -44435,11 +44465,7 @@ a.connectionStatus:visited {
 }
 .VoiceControlPanelButton.ToggleMicrophoneButton.NoMicrophone
   .SVGIcon_Microphone {
-  fill: #f43;
-}
-.VoiceControlPanelButton.ToggleMicrophoneButton.NoMicrophone
-  .SVGIcon_Microphone {
-  fill: #f43;
+  color: #f43;
 }
 .VoiceControlPanelButton.ToggleMicrophoneButton.NoMicrophone
   .SVGIcon_Microphone.SVGIcon_Microphone.SVGIcon_Shadow {
@@ -44876,7 +44902,6 @@ a.connectionStatus:visited {
 }
 .inviteAnotherFriendButton:hover .SVGIcon_Button,
 .inviteAnotherFriendButton:hover .SVGIcon_Button line {
-  stroke: #fff;
   fill: #fff;
 }
 .chatHistoryScroll {
@@ -46787,8 +46812,11 @@ html.web_chat_frame .perf_timing_area {
 }
 .friendCollapseButton,
 .friendSettingsButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 24px;
-  height: 24px;
+  height: 100%;
   cursor: pointer;
 }
 .friendSettingsButton {
@@ -48901,6 +48929,12 @@ body.in_global_drag .quickAccessFriends.emptyQuickAccess {
   .chatRoomTextChannel {
   bottom: 0px;
 }
+.ChatRoomListGroupItem
+  .chatRoomVoiceChannel.ActiveVoiceChannel
+  .chatRoomTextChannel:hover
+  .chatRoomTextChannelIcon {
+  color: #fff;
+}
 .ChatRoomListGroupItem.expanded {
   background-color: #2f3844;
   margin-top: 8px;
@@ -48928,7 +48962,7 @@ body.in_global_drag .quickAccessFriends.emptyQuickAccess {
   padding-bottom: 6px;
   padding-top: 6px;
 }
-.ChatRoomListGroupItem:hover {
+.ChatRoomListGroupItem:hover .ChatRoomListGroupItem {
   background-color: rgba(47, 56, 68, 0.5);
 }
 .ChatRoomListGroupItem:not(.NonGroupHovered)
@@ -49043,15 +49077,15 @@ body.in_global_drag .quickAccessFriends.emptyQuickAccess {
 }
 .ChatRoomListGroupItem.ShowAllChannels .detailsView {
   padding-top: 4px;
-  box-shadow: inset 2px 2px 18px #0000003f;
+  border-bottom: 0.5px solid rgba(55, 71, 82, 0.5);
   background-color: #0002;
   padding-bottom: 4px;
 }
 .ChatRoomListGroupItem.NoChannels .detailsView {
   padding: 0px;
 }
-.ChatRoomListGroupItem:hover .detailsView {
-  background-color: #0002;
+.ChatRoomListGroupItem:hover .ChatRoomListGroupItem_header {
+  background-color: rgba(47, 56, 68, 0.5);
 }
 .expanded .detailsView {
   background-color: #0002;
@@ -49070,11 +49104,9 @@ body.in_global_drag .quickAccessFriends.emptyQuickAccess {
 }
 .ChatRoomListGroupItem .membersInVoice .SVGIcon_VoiceRoom {
   margin-top: 0px;
-  margin-left: -6px;
-  margin-right: -2px;
+  margin-left: -2px;
   width: 22px;
   height: 22px;
-  stroke: #c8f1c2;
 }
 .ChatRoomListGroupItem .membersInVoice .SVGIcon_VoiceRoom .Bubble {
   opacity: 1;
@@ -50063,9 +50095,10 @@ img.ChatRoomGroupAvatar_Avatar {
   padding-bottom: 3px;
   background-color: transparent;
   transition: all 0.4s ease-in-out;
-  border-radius: 0px;
+  border-radius: 2px;
   margin: 2px 4px 4px 2px;
   border: 0.5px solid rgba(55, 71, 82, 0.5);
+  cursor: pointer;
 }
 .ChatRoomGroupDialog_contents:not(.InsetWindowOpen) .chatRoomVoiceChannel {
   overflow: hidden;
@@ -50092,14 +50125,17 @@ img.ChatRoomGroupAvatar_Avatar {
 }
 .ChatRoomListGroupItemChatRooms
   .chatRoomVoiceChannel:not(.ActiveVoiceChannel):hover {
-  box-shadow:
-    1px 1px 4px rgba(0, 0, 0, 0.83) inset,
-    1px 2px 0px rgba(0, 0, 0, 0);
-  border: 0.5px solid rgba(155, 171, 182, 0.5);
+  box-shadow: none;
   background-color: rgba(23, 25, 29, 0.5);
 }
 .chatRoomVoiceChannelsGroup .chatRoomVoiceChannel.ActiveVoiceChannel {
   margin: 10px 0px 12px 0px;
+}
+.chatRoomVoiceChannelsGroup
+  .chatRoomVoiceChannel.ActiveVoiceChannel
+  .chatRoomTextChannel:hover
+  .chatRoomTextChannelIcon {
+  color: #fff;
 }
 .chatRoomVoiceChannel.ActiveVoiceChannel {
   background-color: #2e3c44;
@@ -50122,10 +50158,10 @@ img.ChatRoomGroupAvatar_Avatar {
   fill: #9198a1;
   fill: #fff;
 }
-.chatRoomVoiceChannel .chatRoomTextChannel {
+.chatRoomVoiceChannel .chatRoomTextChannel,
+.chatRoomVoiceChannel .chatRoomVoiceChannel {
   opacity: 0;
-  height: 0px;
-  transition-property: height, opacity, transform;
+  transition-property: opacity;
   transition-duration: 0.14s;
   transition-timing-function: ease-in-out;
 }
@@ -50133,6 +50169,9 @@ img.ChatRoomGroupAvatar_Avatar {
   cursor: pointer;
   opacity: 1;
   height: 28px;
+}
+.VoiceChannelParticipants:last-of-type {
+  margin-bottom: 4px;
 }
 .VoiceChannelParticipants .friend {
   filter: brightness(0.7);
@@ -50167,8 +50206,9 @@ img.ChatRoomGroupAvatar_Avatar {
 .output_muted_remotely .voicestatusIcon.voiceStatusOutput,
 .mic_muted_self .voicestatusIcon.voiceStatusMic,
 .mic_muted_remotely .voicestatusIcon.voiceStatusMic {
-  width: unset;
+  width: 20px;
   opacity: 0.4;
+  color: #e64a35;
 }
 .output_muted_self .voicestatusIcon.voiceStatusMic,
 .output_muted_remotely .voicestatusIcon.voiceStatusMic {
@@ -50321,7 +50361,6 @@ img.ChatRoomGroupAvatar_Avatar {
   padding-left: 12px;
   border-top: 1px solid transparent;
   border-bottom: 1px solid transparent;
-  transition: all 0.32s ease-in-out;
   user-select: none;
 }
 .chatRoomTextChannel:hover,
@@ -50340,7 +50379,6 @@ img.ChatRoomGroupAvatar_Avatar {
 .chatRoomTextChannel:hover .SVGIcon_TextRoom .TextLines {
   stroke: #fff;
 }
-.chatRoomVoiceChannel .chatRoomTextChannel,
 .chatRoomVoiceChannelName,
 .chatRoomTextChannelName {
   white-space: nowrap;
@@ -50348,7 +50386,6 @@ img.ChatRoomGroupAvatar_Avatar {
   text-overflow: ellipsis;
   min-width: 0;
   flex: 1;
-  transition: all 0.4s ease-in-out;
 }
 .chatRoomVoiceChannelName.unsavedVoiceChannel {
   font-style: italic;
@@ -50381,8 +50418,18 @@ img.ChatRoomGroupAvatar_Avatar {
   margin-left: 10px;
   margin-right: -12px;
   z-index: 1;
-  transition: all 0.4s ease-in-out;
+  transition: all 0.2s ease-in-out;
   cursor: default;
+}
+.chatRoomVoiceChannelIcon .SVGIcon_Button.SVGIcon_VoiceRoom {
+  width: 20px;
+  height: 20px;
+  padding-right: 4px;
+}
+.ActiveVoiceChannel
+  .chatRoomVoiceChannelIcon
+  .SVGIcon_Button.SVGIcon_VoiceRoom {
+  color: #fff;
 }
 .chatRoomVoiceChannelIconGlow {
   width: 94px;
@@ -50476,12 +50523,7 @@ img.ChatRoomGroupAvatar_Avatar {
 .OneOnOneVoiceRoomControls.OneOnOneVoiceActive .SVGIcon_VoiceRoom .Bubble,
 .chatRoomVoiceChannel.ActiveVoiceChannel .SVGIcon_VoiceRoom .Bubble,
 .VoiceToggle.Active .SVGIcon_VoiceRoom .Bubble {
-  fill: #c8f1c2;
   transition-delay: 0s;
-}
-.VoiceChannelInvite .leftInviteContainer .SVGIcon_VoiceRoom .Bubble {
-  stroke: #12a325;
-  stroke: #000;
 }
 .VoiceChannelInvite .leftInviteContainer .SVGIcon_VoiceRoom .AudioLines {
   fill: #000;
@@ -50495,15 +50537,6 @@ img.ChatRoomGroupAvatar_Avatar {
   width: 100%;
   height: 100%;
   margin: 0px;
-  stroke: #8492a4;
-}
-.Active .VoiceToggle:not(.Disabled):focus .SVGIcon_VoiceRoom,
-.Active .VoiceToggle:not(.Disabled):hover .SVGIcon_VoiceRoom {
-  stroke: #000;
-}
-.VoiceToggle:not(.Disabled):focus .SVGIcon_VoiceRoom,
-.VoiceToggle:not(.Disabled):hover .SVGIcon_VoiceRoom {
-  stroke: #fff;
 }
 .VoiceToggle:not(.Disabled):focus .SVGIcon_VoiceRoom .Microphone,
 .VoiceToggle:not(.Disabled):hover .SVGIcon_VoiceRoom .Microphone,
@@ -50524,17 +50557,14 @@ img.ChatRoomGroupAvatar_Avatar {
 }
 .Active .VoiceToggleIconCtn .SVGIcon_VoiceRoom {
   fill: #c8f1c2;
-  stroke: #000;
 }
 .Active .VoiceToggleIconCtn .SVGIcon_VoiceRoom .AudioLines {
   fill: #000;
 }
 .ActiveVoiceChannel .SVGIcon_VoiceRoom {
-  stroke: #000;
-  fill: #c8f1c2;
+  fill: #fff;
 }
 .ActiveVoiceChannel .activeVoiceControls .SVGIcon_VoiceRoom {
-  stroke: #fff;
   fill: transparent;
 }
 .CloseActiveVoiceWindowConfirmation .SVGIcon_VoiceRoom .Bubble,
@@ -50564,16 +50594,6 @@ img.ChatRoomGroupAvatar_Avatar {
 .ActiveTextChannel .SVGIcon_TextRoom {
   fill: #97b0c0;
   stroke: #000;
-}
-.chatRoomVoiceChannel .SVGIcon_TextRoom .TextLines,
-.chatRoomVoiceChannel .SVGIcon_TextRoom .ScratchPad path,
-.chatRoomVoiceChannel .SVGIcon_TextRoom .ScratchPad line {
-  stroke-width: 10px;
-  stroke: #8f9e9c;
-}
-.chatRoomVoiceChannel .chatRoomTextChannel:hover .ScratchPad path,
-.chatRoomVoiceChannel .chatRoomTextChannel:hover .ScratchPad line {
-  stroke: #fff;
 }
 .ActiveTextChannel .SVGIcon_TextRoom .TextLines {
   stroke: #fff;
@@ -50649,10 +50669,12 @@ img.ChatRoomGroupAvatar_Avatar {
   margin: 0px;
   border: 0px;
   padding: 0px;
-  border-left: 0.5px solid #2e3c44;
 }
 .chatRoomVoiceChannel .chatRoomTextChannel .chatRoomTextChannelIcon {
   margin: auto;
+  height: 26px;
+  width: 26px;
+  color: #686e73;
 }
 .chatRoomVoiceChannel
   .chatRoomTextChannel
@@ -50774,6 +50796,10 @@ img.ChatRoomGroupAvatar_Avatar {
   .chatRoomVoiceChannelNameContainer
   .VoiceControlPanelButton {
   display: block;
+}
+.chatRoomVoiceChannel.ActiveVoiceChannel
+  .chatRoomVoiceChannelNameContainer.chatRoomVoiceChannel.SVGIcon_Button.SVGIcon_VoiceRoom {
+  color: #898989;
 }
 .chatRoomVoiceChannel.ActiveVoiceChannel .activeVoiceControls {
   background: #0004;
@@ -51022,7 +51048,6 @@ a.general_btn:hover {
   height: 72px;
 }
 .dropGroupInviteDialog .SVGIcon_VoiceRoom .Bubble {
-  stroke: #000;
   fill: #c8f1c2;
 }
 .dropGroupInviteDialog .SVGIcon_VoiceRoom .Microphone {
