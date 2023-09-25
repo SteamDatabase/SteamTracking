@@ -6541,13 +6541,12 @@
     98889: (e, t, r) => {
       "use strict";
       r.d(t, {
-        A$: () => _,
-        D$: () => f,
-        VA: () => g,
-        ai: () => h,
-        rg: () => y,
-        te: () => b,
-        wx: () => S,
+        A$: () => h,
+        D$: () => S,
+        ai: () => g,
+        rg: () => b,
+        te: () => v,
+        wx: () => y,
       });
       var n = r(33940),
         a = r(57858),
@@ -6559,11 +6558,12 @@
         c = r(85651),
         m = r(52316),
         u = r(23217),
-        p = r(32765);
-      function _(e) {
+        p = r(32765),
+        _ = r(75687);
+      function h(e) {
         return Boolean(e && e.thumbnail_http_address);
       }
-      class h {
+      class g {
         constructor() {
           (this.m_inFlightRequests = new Map()),
             (this.m_lookupKeyToEmbedStreamDef = new Map()),
@@ -6611,7 +6611,7 @@
         }
         GetConcurrentStreams(e) {
           const t = this.GetStreams(e);
-          return t ? t.filter((e) => _(e)).length : 0;
+          return t ? t.filter((e) => h(e)).length : 0;
         }
         GetChatVisibility() {
           return "remove" === this.m_pageChatStatus ||
@@ -6724,12 +6724,12 @@
                 include_trailers: !0,
               });
             const r = a.Z.Get().GetApp(e.nAppIDVOD),
-              n = new v();
+              n = new _.nc();
             if (
               ((n.accountid = 0),
               (n.nAppIDVOD = e.nAppIDVOD),
-              (n.default_selection_priority = g.k_ePrimary),
-              (n.current_selection_priority = g.k_ePrimary),
+              (n.default_selection_priority = _.VA.k_ePrimary),
+              (n.current_selection_priority = _.VA.k_ePrimary),
               (n.thumbnail_http_address =
                 (null == r ? void 0 : r.GetAssets().GetHeaderURL()) || ""),
               (n.title = (null == r ? void 0 : r.GetName()) || ""),
@@ -6897,19 +6897,7 @@
             ),
             s = new Map();
           for (let e = 0; e < a.length && !(e >= i.length); e++)
-            switch (i[e]) {
-              case "primary":
-                s.set(a[e], g.k_ePrimary);
-                break;
-              case "featured":
-                s.set(a[e], g.k_eFeatured);
-                break;
-              case "default_featured":
-                s.set(a[e], g.k_eDefaultFeatured);
-                break;
-              default:
-                s.set(a[e], g.k_eGeneral);
-            }
+            s.set(a[e], (0, _.mv)(i[e]));
           t.forEach((e) => {
             const t = Number(e.accountid);
             s.has(t) && (e.current_selection_priority = s.get(t));
@@ -6924,8 +6912,8 @@
                 const e = {
                   accountid: 0,
                   thumbnail_http_address: "",
-                  default_selection_priority: g.k_eGeneral,
-                  current_selection_priority: g.k_eGeneral,
+                  default_selection_priority: _.VA.k_eGeneral,
+                  current_selection_priority: _.VA.k_eGeneral,
                 };
                 this.m_playReadyStream.set(r, e);
               }
@@ -6968,7 +6956,7 @@
                   ? (this.m_streamChatStatus = "hide")
                   : (this.m_streamChatStatus = t.broadcast_chat_visibility),
                 this.m_setStreamChangedListeners.forEach((e) => e(t));
-              S(d.c9.GetOrCreateBroadcastInfo(t.steamid).m_nAppID, 1, t.snr);
+              y(d.c9.GetOrCreateBroadcastInfo(t.steamid).m_nAppID, 1, t.snr);
             }
             return t;
           });
@@ -6997,9 +6985,9 @@
         }
         GetAutoStartStream(e) {
           if (!e) return null;
-          const t = e.filter((e) => _(e)),
-            r = t.reduce((e, t) => Math.max(e, b(t)), 0),
-            n = t.filter((e) => b(e) === r);
+          const t = e.filter((e) => h(e)),
+            r = t.reduce((e, t) => Math.max(e, v(t)), 0),
+            n = t.filter((e) => v(e) === r);
           if (0 === n.length) return null;
           return n[Math.floor(Math.random() * n.length)];
         }
@@ -7052,61 +7040,29 @@
         }
         static Get() {
           return (
-            h.s_GlobalStore ||
-              ((h.s_GlobalStore = new h()),
+            g.s_GlobalStore ||
+              ((g.s_GlobalStore = new g()),
               "dev" == p.De.WEB_UNIVERSE &&
-                (window.g_BroadcastEmbeddableStore = h.s_GlobalStore),
-              h.s_GlobalStore.Init()),
-            h.s_GlobalStore
+                (window.g_BroadcastEmbeddableStore = g.s_GlobalStore),
+              g.s_GlobalStore.Init()),
+            g.s_GlobalStore
           );
         }
         Init() {}
       }
-      var g;
-      (0, n.gn)([o.LO], h.prototype, "m_lookupStreams", void 0),
-        (0, n.gn)([o.LO], h.prototype, "m_playReadyStream", void 0),
-        (0, n.gn)([o.LO], h.prototype, "m_pageChatStatus", void 0),
-        (0, n.gn)([o.LO], h.prototype, "m_streamChatStatus", void 0),
-        (0, n.gn)([o.LO], h.prototype, "m_bUserChatExpanded", void 0),
-        (0, n.gn)(
-          [o.LO],
-          h.prototype,
-          "m_bUserPreferenceHideBroadcastByDefault",
-          void 0,
-        ),
-        (0, n.gn)([o.LO], h.prototype, "m_bCollapsed", void 0),
-        (0, n.gn)(
-          [o.aD],
-          h.prototype,
-          "HintLoadEmbeddablePreviewStreams",
-          null,
-        ),
-        (0, n.gn)([o.aD], h.prototype, "AttemptToPlayStream", null),
-        (function (e) {
-          (e[(e.k_ePrimary = 3)] = "k_ePrimary"),
-            (e[(e.k_eFeatured = 2)] = "k_eFeatured"),
-            (e[(e.k_eDefaultFeatured = 1)] = "k_eDefaultFeatured"),
-            (e[(e.k_eGeneral = 0)] = "k_eGeneral");
-        })(g || (g = {}));
-      class v {
-        constructor() {
-          (this.default_selection_priority = g.k_eGeneral),
-            (this.current_selection_priority = g.k_eGeneral);
-        }
+      function v(e) {
+        return e.current_selection_priority || _.VA.k_eGeneral;
       }
       function b(e) {
-        return e.current_selection_priority || g.k_eGeneral;
-      }
-      function y(e) {
         e.sort((e, t) =>
-          b(e) != b(t)
-            ? b(t) - b(e)
+          v(e) != v(t)
+            ? v(t) - v(e)
             : e.viewer_count != t.viewer_count
             ? t.viewer_count - e.viewer_count
             : t.accountid - e.accountid,
         );
       }
-      function S(e, t, r) {
+      function y(e, t, r) {
         return (0, n.mG)(this, void 0, void 0, function* () {
           if (e > 0 && 7 != e && r) {
             let n = new URLSearchParams();
@@ -7119,11 +7075,64 @@
           }
         });
       }
-      (0, n.gn)([o.LO], v.prototype, "title", void 0),
-        (0, n.gn)([o.LO], v.prototype, "viewer_count", void 0),
-        (0, n.gn)([o.LO], v.prototype, "gamedata_subtitle", void 0),
-        (0, n.gn)([o.LO], v.prototype, "current_selection_priority", void 0);
-      const f = new m.M();
+      (0, n.gn)([o.LO], g.prototype, "m_lookupStreams", void 0),
+        (0, n.gn)([o.LO], g.prototype, "m_playReadyStream", void 0),
+        (0, n.gn)([o.LO], g.prototype, "m_pageChatStatus", void 0),
+        (0, n.gn)([o.LO], g.prototype, "m_streamChatStatus", void 0),
+        (0, n.gn)([o.LO], g.prototype, "m_bUserChatExpanded", void 0),
+        (0, n.gn)(
+          [o.LO],
+          g.prototype,
+          "m_bUserPreferenceHideBroadcastByDefault",
+          void 0,
+        ),
+        (0, n.gn)([o.LO], g.prototype, "m_bCollapsed", void 0),
+        (0, n.gn)(
+          [o.aD],
+          g.prototype,
+          "HintLoadEmbeddablePreviewStreams",
+          null,
+        ),
+        (0, n.gn)([o.aD], g.prototype, "AttemptToPlayStream", null);
+      const S = new m.M();
+    },
+    75687: (e, t, r) => {
+      "use strict";
+      r.d(t, { VA: () => l, mv: () => d, nc: () => c });
+      var n = r(33940),
+        a = r(50265);
+      const i = "primary",
+        s = "featured",
+        o = "default_featured";
+      var l;
+      function d(e) {
+        switch (e) {
+          case i:
+            return l.k_ePrimary;
+          case s:
+            return l.k_eFeatured;
+          case o:
+            return l.k_eDefaultFeatured;
+          default:
+            return l.k_eGeneral;
+        }
+      }
+      !(function (e) {
+        (e[(e.k_ePrimary = 3)] = "k_ePrimary"),
+          (e[(e.k_eFeatured = 2)] = "k_eFeatured"),
+          (e[(e.k_eDefaultFeatured = 1)] = "k_eDefaultFeatured"),
+          (e[(e.k_eGeneral = 0)] = "k_eGeneral");
+      })(l || (l = {}));
+      class c {
+        constructor() {
+          (this.default_selection_priority = l.k_eGeneral),
+            (this.current_selection_priority = l.k_eGeneral);
+        }
+      }
+      (0, n.gn)([a.LO], c.prototype, "title", void 0),
+        (0, n.gn)([a.LO], c.prototype, "viewer_count", void 0),
+        (0, n.gn)([a.LO], c.prototype, "gamedata_subtitle", void 0),
+        (0, n.gn)([a.LO], c.prototype, "current_selection_priority", void 0);
     },
     46486: (e, t, r) => {
       "use strict";
