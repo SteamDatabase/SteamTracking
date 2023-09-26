@@ -85,6 +85,7 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/panorama/uipbmsgbase.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/panorama/uitoplevelwindowopenvroverlay.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/panorama/uitoplevelwindowoverlay.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/panorama/vrevents.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/dbg.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/memblockhdr.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/tslist.h

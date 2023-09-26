@@ -1109,6 +1109,7 @@
   justify-content: center;
   color: #3d4450;
   color: #3d4450;
+  transition: color 50ms ease-out;
 }
 .GamepadMode.friendlist .FriendsListTab svg {
   fill: currentColor;
@@ -1122,6 +1123,10 @@
 .GamepadMode.friendlist .FriendsListTab svg polygon {
   stroke: currentColor;
   fill: currentColor;
+}
+.GamepadMode.friendlist .FriendsListTab:hover {
+  color: #67707b;
+  transition: color 150ms ease-in;
 }
 .GamepadMode.friendlist .FriendsListTab.Active {
   color: #8b929a;
@@ -1465,12 +1470,19 @@
   color: #67707b;
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
+  transition: background-color 50ms ease-out;
 }
 .RightSideButtonContainer .AddFriendButton svg,
 .RightSideButtonContainer .oneOnOneVoiceChatButton svg,
 .RightSideButtonContainer .inviteAnotherFriendButton svg {
   width: 20px;
   height: 20px;
+}
+.RightSideButtonContainer .AddFriendButton:hover,
+.RightSideButtonContainer .oneOnOneVoiceChatButton:hover,
+.RightSideButtonContainer .inviteAnotherFriendButton:hover {
+  background-color: #2b333f;
+  transition: background-color 150ms ease-in;
 }
 .RightSideButtonContainer .oneOnOneVoiceChatButton {
   position: relative;
@@ -3523,6 +3535,7 @@
   justify-content: center;
   color: #3d4450;
   color: #3d4450;
+  transition: color 50ms ease-out;
 }
 .GamepadMode.friendlist .FriendsListTab svg {
   fill: currentColor;
@@ -3536,6 +3549,10 @@
 .GamepadMode.friendlist .FriendsListTab svg polygon {
   stroke: currentColor;
   fill: currentColor;
+}
+.GamepadMode.friendlist .FriendsListTab:hover {
+  color: #67707b;
+  transition: color 150ms ease-in;
 }
 .GamepadMode.friendlist .FriendsListTab.Active {
   color: #8b929a;
@@ -3879,12 +3896,19 @@
   color: #67707b;
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
+  transition: background-color 50ms ease-out;
 }
 .RightSideButtonContainer .AddFriendButton svg,
 .RightSideButtonContainer .oneOnOneVoiceChatButton svg,
 .RightSideButtonContainer .inviteAnotherFriendButton svg {
   width: 20px;
   height: 20px;
+}
+.RightSideButtonContainer .AddFriendButton:hover,
+.RightSideButtonContainer .oneOnOneVoiceChatButton:hover,
+.RightSideButtonContainer .inviteAnotherFriendButton:hover {
+  background-color: #2b333f;
+  transition: background-color 150ms ease-in;
 }
 .RightSideButtonContainer .oneOnOneVoiceChatButton {
   position: relative;
@@ -4254,7 +4278,7 @@
 .quickaccessvoicecontrolssteamdeck_VoiceChatList_3Ri6R
   .quickaccessvoicecontrolssteamdeck_SliderPadding_1xn70 {
   width: 100%;
-  padding: 0px 8px;
+  padding: 8px 8px;
 }
 .quickaccessvoicecontrolssteamdeck_VoiceChatList_3Ri6R
   .quickaccessvoicecontrolssteamdeck_FriendVoiceChatContainer_303Rc {
@@ -4362,6 +4386,8 @@
   border-bottom: 1px solid #23262e;
   color: #fff;
   padding: 8px;
+  transition: background-color 150ms ease-in;
+  user-select: none;
   transition-property: transform, background-color;
   transition-duration: 0.32s, 0s;
   transition-timing-function: cubic-bezier(0.17, 0.45, 0.14, 0.83);
@@ -4380,6 +4406,11 @@
   .quickaccessvoicecontrolssteamdeck_LeaveVoiceChat_1DSas
   svg {
   width: 16px;
+}
+.quickaccessvoicecontrolssteamdeck_VoiceChatList_3Ri6R
+  .quickaccessvoicecontrolssteamdeck_LeaveVoiceChat_1DSas:hover {
+  background-color: #23262e;
+  transition: background-color 150ms ease-in;
 }
 .quickaccessvoicecontrolssteamdeck_GroupRoomContainer_2MbsP {
   flex-grow: 1;
@@ -5443,6 +5474,7 @@
   justify-content: center;
   color: #3d4450;
   color: #3d4450;
+  transition: color 50ms ease-out;
 }
 .GamepadMode.friendlist .FriendsListTab svg {
   fill: currentColor;
@@ -5456,6 +5488,10 @@
 .GamepadMode.friendlist .FriendsListTab svg polygon {
   stroke: currentColor;
   fill: currentColor;
+}
+.GamepadMode.friendlist .FriendsListTab:hover {
+  color: #67707b;
+  transition: color 150ms ease-in;
 }
 .GamepadMode.friendlist .FriendsListTab.Active {
   color: #8b929a;
@@ -5799,12 +5835,19 @@
   color: #67707b;
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
+  transition: background-color 50ms ease-out;
 }
 .RightSideButtonContainer .AddFriendButton svg,
 .RightSideButtonContainer .oneOnOneVoiceChatButton svg,
 .RightSideButtonContainer .inviteAnotherFriendButton svg {
   width: 20px;
   height: 20px;
+}
+.RightSideButtonContainer .AddFriendButton:hover,
+.RightSideButtonContainer .oneOnOneVoiceChatButton:hover,
+.RightSideButtonContainer .inviteAnotherFriendButton:hover {
+  background-color: #2b333f;
+  transition: background-color 150ms ease-in;
 }
 .RightSideButtonContainer .oneOnOneVoiceChatButton {
   position: relative;
@@ -7380,6 +7423,7 @@
   justify-content: center;
   color: #3d4450;
   color: #3d4450;
+  transition: color 50ms ease-out;
 }
 .GamepadMode.friendlist .FriendsListTab svg {
   fill: currentColor;
@@ -7393,6 +7437,10 @@
 .GamepadMode.friendlist .FriendsListTab svg polygon {
   stroke: currentColor;
   fill: currentColor;
+}
+.GamepadMode.friendlist .FriendsListTab:hover {
+  color: #67707b;
+  transition: color 150ms ease-in;
 }
 .GamepadMode.friendlist .FriendsListTab.Active {
   color: #8b929a;
@@ -7736,12 +7784,19 @@
   color: #67707b;
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
+  transition: background-color 50ms ease-out;
 }
 .RightSideButtonContainer .AddFriendButton svg,
 .RightSideButtonContainer .oneOnOneVoiceChatButton svg,
 .RightSideButtonContainer .inviteAnotherFriendButton svg {
   width: 20px;
   height: 20px;
+}
+.RightSideButtonContainer .AddFriendButton:hover,
+.RightSideButtonContainer .oneOnOneVoiceChatButton:hover,
+.RightSideButtonContainer .inviteAnotherFriendButton:hover {
+  background-color: #2b333f;
+  transition: background-color 150ms ease-in;
 }
 .RightSideButtonContainer .oneOnOneVoiceChatButton {
   position: relative;
@@ -9176,6 +9231,7 @@
   justify-content: center;
   color: #3d4450;
   color: #3d4450;
+  transition: color 50ms ease-out;
 }
 .GamepadMode.friendlist .FriendsListTab svg {
   fill: currentColor;
@@ -9189,6 +9245,10 @@
 .GamepadMode.friendlist .FriendsListTab svg polygon {
   stroke: currentColor;
   fill: currentColor;
+}
+.GamepadMode.friendlist .FriendsListTab:hover {
+  color: #67707b;
+  transition: color 150ms ease-in;
 }
 .GamepadMode.friendlist .FriendsListTab.Active {
   color: #8b929a;
@@ -9532,12 +9592,19 @@
   color: #67707b;
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
+  transition: background-color 50ms ease-out;
 }
 .RightSideButtonContainer .AddFriendButton svg,
 .RightSideButtonContainer .oneOnOneVoiceChatButton svg,
 .RightSideButtonContainer .inviteAnotherFriendButton svg {
   width: 20px;
   height: 20px;
+}
+.RightSideButtonContainer .AddFriendButton:hover,
+.RightSideButtonContainer .oneOnOneVoiceChatButton:hover,
+.RightSideButtonContainer .inviteAnotherFriendButton:hover {
+  background-color: #2b333f;
+  transition: background-color 150ms ease-in;
 }
 .RightSideButtonContainer .oneOnOneVoiceChatButton {
   position: relative;
@@ -12234,6 +12301,7 @@ svg.remoteplay_IconMobile_2371n {
   justify-content: center;
   color: #3d4450;
   color: #3d4450;
+  transition: color 50ms ease-out;
 }
 .GamepadMode.friendlist .FriendsListTab svg {
   fill: currentColor;
@@ -12247,6 +12315,10 @@ svg.remoteplay_IconMobile_2371n {
 .GamepadMode.friendlist .FriendsListTab svg polygon {
   stroke: currentColor;
   fill: currentColor;
+}
+.GamepadMode.friendlist .FriendsListTab:hover {
+  color: #67707b;
+  transition: color 150ms ease-in;
 }
 .GamepadMode.friendlist .FriendsListTab.Active {
   color: #8b929a;
@@ -12590,12 +12662,19 @@ svg.remoteplay_IconMobile_2371n {
   color: #67707b;
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
+  transition: background-color 50ms ease-out;
 }
 .RightSideButtonContainer .AddFriendButton svg,
 .RightSideButtonContainer .oneOnOneVoiceChatButton svg,
 .RightSideButtonContainer .inviteAnotherFriendButton svg {
   width: 20px;
   height: 20px;
+}
+.RightSideButtonContainer .AddFriendButton:hover,
+.RightSideButtonContainer .oneOnOneVoiceChatButton:hover,
+.RightSideButtonContainer .inviteAnotherFriendButton:hover {
+  background-color: #2b333f;
+  transition: background-color 150ms ease-in;
 }
 .RightSideButtonContainer .oneOnOneVoiceChatButton {
   position: relative;
@@ -16047,6 +16126,7 @@ div:hover > .BBCodeCollapseControl {
   justify-content: center;
   color: #3d4450;
   color: #3d4450;
+  transition: color 50ms ease-out;
 }
 .GamepadMode.friendlist .FriendsListTab svg {
   fill: currentColor;
@@ -16060,6 +16140,10 @@ div:hover > .BBCodeCollapseControl {
 .GamepadMode.friendlist .FriendsListTab svg polygon {
   stroke: currentColor;
   fill: currentColor;
+}
+.GamepadMode.friendlist .FriendsListTab:hover {
+  color: #67707b;
+  transition: color 150ms ease-in;
 }
 .GamepadMode.friendlist .FriendsListTab.Active {
   color: #8b929a;
@@ -16403,12 +16487,19 @@ div:hover > .BBCodeCollapseControl {
   color: #67707b;
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
+  transition: background-color 50ms ease-out;
 }
 .RightSideButtonContainer .AddFriendButton svg,
 .RightSideButtonContainer .oneOnOneVoiceChatButton svg,
 .RightSideButtonContainer .inviteAnotherFriendButton svg {
   width: 20px;
   height: 20px;
+}
+.RightSideButtonContainer .AddFriendButton:hover,
+.RightSideButtonContainer .oneOnOneVoiceChatButton:hover,
+.RightSideButtonContainer .inviteAnotherFriendButton:hover {
+  background-color: #2b333f;
+  transition: background-color 150ms ease-in;
 }
 .RightSideButtonContainer .oneOnOneVoiceChatButton {
   position: relative;
@@ -17762,6 +17853,7 @@ div:hover > .BBCodeCollapseControl {
   justify-content: center;
   color: #3d4450;
   color: #3d4450;
+  transition: color 50ms ease-out;
 }
 .GamepadMode.friendlist .FriendsListTab svg {
   fill: currentColor;
@@ -17775,6 +17867,10 @@ div:hover > .BBCodeCollapseControl {
 .GamepadMode.friendlist .FriendsListTab svg polygon {
   stroke: currentColor;
   fill: currentColor;
+}
+.GamepadMode.friendlist .FriendsListTab:hover {
+  color: #67707b;
+  transition: color 150ms ease-in;
 }
 .GamepadMode.friendlist .FriendsListTab.Active {
   color: #8b929a;
@@ -18118,12 +18214,19 @@ div:hover > .BBCodeCollapseControl {
   color: #67707b;
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
+  transition: background-color 50ms ease-out;
 }
 .RightSideButtonContainer .AddFriendButton svg,
 .RightSideButtonContainer .oneOnOneVoiceChatButton svg,
 .RightSideButtonContainer .inviteAnotherFriendButton svg {
   width: 20px;
   height: 20px;
+}
+.RightSideButtonContainer .AddFriendButton:hover,
+.RightSideButtonContainer .oneOnOneVoiceChatButton:hover,
+.RightSideButtonContainer .inviteAnotherFriendButton:hover {
+  background-color: #2b333f;
+  transition: background-color 150ms ease-in;
 }
 .RightSideButtonContainer .oneOnOneVoiceChatButton {
   position: relative;
@@ -19327,6 +19430,7 @@ div:hover > .BBCodeCollapseControl {
   justify-content: center;
   color: #3d4450;
   color: #3d4450;
+  transition: color 50ms ease-out;
 }
 .GamepadMode.friendlist .FriendsListTab svg {
   fill: currentColor;
@@ -19340,6 +19444,10 @@ div:hover > .BBCodeCollapseControl {
 .GamepadMode.friendlist .FriendsListTab svg polygon {
   stroke: currentColor;
   fill: currentColor;
+}
+.GamepadMode.friendlist .FriendsListTab:hover {
+  color: #67707b;
+  transition: color 150ms ease-in;
 }
 .GamepadMode.friendlist .FriendsListTab.Active {
   color: #8b929a;
@@ -19683,12 +19791,19 @@ div:hover > .BBCodeCollapseControl {
   color: #67707b;
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
+  transition: background-color 50ms ease-out;
 }
 .RightSideButtonContainer .AddFriendButton svg,
 .RightSideButtonContainer .oneOnOneVoiceChatButton svg,
 .RightSideButtonContainer .inviteAnotherFriendButton svg {
   width: 20px;
   height: 20px;
+}
+.RightSideButtonContainer .AddFriendButton:hover,
+.RightSideButtonContainer .oneOnOneVoiceChatButton:hover,
+.RightSideButtonContainer .inviteAnotherFriendButton:hover {
+  background-color: #2b333f;
+  transition: background-color 150ms ease-in;
 }
 .RightSideButtonContainer .oneOnOneVoiceChatButton {
   position: relative;
@@ -21039,6 +21154,7 @@ div:hover > .BBCodeCollapseControl {
   justify-content: center;
   color: #3d4450;
   color: #3d4450;
+  transition: color 50ms ease-out;
 }
 .GamepadMode.friendlist .FriendsListTab svg {
   fill: currentColor;
@@ -21052,6 +21168,10 @@ div:hover > .BBCodeCollapseControl {
 .GamepadMode.friendlist .FriendsListTab svg polygon {
   stroke: currentColor;
   fill: currentColor;
+}
+.GamepadMode.friendlist .FriendsListTab:hover {
+  color: #67707b;
+  transition: color 150ms ease-in;
 }
 .GamepadMode.friendlist .FriendsListTab.Active {
   color: #8b929a;
@@ -21393,12 +21513,19 @@ div:hover > .BBCodeCollapseControl {
   color: #67707b;
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
+  transition: background-color 50ms ease-out;
 }
 .RightSideButtonContainer .AddFriendButton svg,
 .RightSideButtonContainer .oneOnOneVoiceChatButton svg,
 .RightSideButtonContainer .inviteAnotherFriendButton svg {
   width: 20px;
   height: 20px;
+}
+.RightSideButtonContainer .AddFriendButton:hover,
+.RightSideButtonContainer .oneOnOneVoiceChatButton:hover,
+.RightSideButtonContainer .inviteAnotherFriendButton:hover {
+  background-color: #2b333f;
+  transition: background-color 150ms ease-in;
 }
 .RightSideButtonContainer .oneOnOneVoiceChatButton {
   position: relative;
@@ -22615,6 +22742,7 @@ div:hover > .BBCodeCollapseControl {
   justify-content: center;
   color: #3d4450;
   color: #3d4450;
+  transition: color 50ms ease-out;
 }
 .GamepadMode.friendlist .FriendsListTab svg {
   fill: currentColor;
@@ -22628,6 +22756,10 @@ div:hover > .BBCodeCollapseControl {
 .GamepadMode.friendlist .FriendsListTab svg polygon {
   stroke: currentColor;
   fill: currentColor;
+}
+.GamepadMode.friendlist .FriendsListTab:hover {
+  color: #67707b;
+  transition: color 150ms ease-in;
 }
 .GamepadMode.friendlist .FriendsListTab.Active {
   color: #8b929a;
@@ -22969,12 +23101,19 @@ div:hover > .BBCodeCollapseControl {
   color: #67707b;
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
+  transition: background-color 50ms ease-out;
 }
 .RightSideButtonContainer .AddFriendButton svg,
 .RightSideButtonContainer .oneOnOneVoiceChatButton svg,
 .RightSideButtonContainer .inviteAnotherFriendButton svg {
   width: 20px;
   height: 20px;
+}
+.RightSideButtonContainer .AddFriendButton:hover,
+.RightSideButtonContainer .oneOnOneVoiceChatButton:hover,
+.RightSideButtonContainer .inviteAnotherFriendButton:hover {
+  background-color: #2b333f;
+  transition: background-color 150ms ease-in;
 }
 .RightSideButtonContainer .oneOnOneVoiceChatButton {
   position: relative;
@@ -27729,6 +27868,7 @@ input.InviteFriendToChatDialog_LinkInput {
   border-width: 2px;
   animation-name: SonarPingGamepadUI;
   opacity: 1;
+  filter: blur(1px);
   mix-blend-mode: screen;
   transform-origin: center;
   box-sizing: border-box;

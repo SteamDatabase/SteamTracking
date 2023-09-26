@@ -82,6 +82,7 @@ enum ERemoteDeviceStreamingResult {
 	k_ERemoteDeviceStreamingTransportUnavailable = 12;
 	k_ERemoteDeviceStreamingInvisible = 13;
 	k_ERemoteDeviceStreamingGameLaunchFailed = 14;
+	k_ERemoteDeviceStreamingSteamVRNotInstalled = 15;
 }
 
 message CMsgRemoteClientBroadcastHeader {

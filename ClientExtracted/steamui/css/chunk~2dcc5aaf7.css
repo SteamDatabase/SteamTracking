@@ -4683,7 +4683,6 @@ button.controllerconfiguratormapping_Button_hv-G3.DialogButton.controllerconfigu
 button.controllerconfiguratormapping_Button_hv-G3.DialogButton,
 button.controllerconfiguratormapping_Button_hv-G3.DialogButton:enabled,
 button.controllerconfiguratormapping_Button_hv-G3.DialogButton:active,
-button.controllerconfiguratormapping_Button_hv-G3.DialogButton:hover,
 button.controllerconfiguratormapping_Button_hv-G3.DialogButton:enabled:active:hover {
   color: #dcdedf;
   font-size: 16px;
@@ -4700,8 +4699,6 @@ button.controllerconfiguratormapping_Button_hv-G3.DialogButton:enabled,
 button.controllerconfiguratormapping_Button_hv-G3.DialogButton:enabled.Primary,
 button.controllerconfiguratormapping_Button_hv-G3.DialogButton:active,
 button.controllerconfiguratormapping_Button_hv-G3.DialogButton:active.Primary,
-button.controllerconfiguratormapping_Button_hv-G3.DialogButton:hover,
-button.controllerconfiguratormapping_Button_hv-G3.DialogButton:hover.Primary,
 button.controllerconfiguratormapping_Button_hv-G3.DialogButton:enabled:active:hover,
 button.controllerconfiguratormapping_Button_hv-G3.DialogButton:enabled:active:hover.Primary {
   background: #23262e;
@@ -4709,7 +4706,6 @@ button.controllerconfiguratormapping_Button_hv-G3.DialogButton:enabled:active:ho
 button.controllerconfiguratormapping_Button_hv-G3.DialogButton.BarButton,
 button.controllerconfiguratormapping_Button_hv-G3.DialogButton:enabled.BarButton,
 button.controllerconfiguratormapping_Button_hv-G3.DialogButton:active.BarButton,
-button.controllerconfiguratormapping_Button_hv-G3.DialogButton:hover.BarButton,
 button.controllerconfiguratormapping_Button_hv-G3.DialogButton:enabled:active:hover.BarButton {
   background: #0000001a;
   color: #fff;
@@ -4717,9 +4713,21 @@ button.controllerconfiguratormapping_Button_hv-G3.DialogButton:enabled:active:ho
 button.controllerconfiguratormapping_Button_hv-G3.DialogButton.controllerconfiguratormapping_ActiveAndUnfocused_28xxo,
 button.controllerconfiguratormapping_Button_hv-G3.DialogButton:enabled.controllerconfiguratormapping_ActiveAndUnfocused_28xxo,
 button.controllerconfiguratormapping_Button_hv-G3.DialogButton:active.controllerconfiguratormapping_ActiveAndUnfocused_28xxo,
-button.controllerconfiguratormapping_Button_hv-G3.DialogButton:hover.controllerconfiguratormapping_ActiveAndUnfocused_28xxo,
 button.controllerconfiguratormapping_Button_hv-G3.DialogButton:enabled:active:hover.controllerconfiguratormapping_ActiveAndUnfocused_28xxo {
   background: #0e141b;
+}
+button.controllerconfiguratormapping_Button_hv-G3.DialogButton:hover,
+button.controllerconfiguratormapping_Button_hv-G3.DialogButton:enabled:hover,
+button.controllerconfiguratormapping_Button_hv-G3.DialogButton:active:hover,
+button.controllerconfiguratormapping_Button_hv-G3.DialogButton:enabled:active:hover:hover {
+  background: #3d4450;
+  transition: background-color 150ms ease-in;
+}
+button.controllerconfiguratormapping_Button_hv-G3.DialogButton.Primary:hover,
+button.controllerconfiguratormapping_Button_hv-G3.DialogButton:enabled.Primary:hover,
+button.controllerconfiguratormapping_Button_hv-G3.DialogButton:active.Primary:hover,
+button.controllerconfiguratormapping_Button_hv-G3.DialogButton:enabled:active:hover.Primary:hover {
+  background: #1aa0ff53;
 }
 button.controllerconfiguratormapping_Button_hv-G3.DialogButton.gpfocus,
 button.controllerconfiguratormapping_Button_hv-G3.DialogButton:active,
@@ -4727,8 +4735,6 @@ button.controllerconfiguratormapping_Button_hv-G3.DialogButton:enabled.gpfocus,
 button.controllerconfiguratormapping_Button_hv-G3.DialogButton:enabled:active,
 button.controllerconfiguratormapping_Button_hv-G3.DialogButton:active.gpfocus,
 button.controllerconfiguratormapping_Button_hv-G3.DialogButton:active:active,
-button.controllerconfiguratormapping_Button_hv-G3.DialogButton:hover.gpfocus,
-button.controllerconfiguratormapping_Button_hv-G3.DialogButton:hover:active,
 button.controllerconfiguratormapping_Button_hv-G3.DialogButton:enabled:active:hover.gpfocus,
 button.controllerconfiguratormapping_Button_hv-G3.DialogButton:enabled:active:hover:active {
   background: #fff;
@@ -4741,8 +4747,6 @@ button.controllerconfiguratormapping_Button_hv-G3.DialogButton:enabled.gpfocus.P
 button.controllerconfiguratormapping_Button_hv-G3.DialogButton:enabled:active.Primary,
 button.controllerconfiguratormapping_Button_hv-G3.DialogButton:active.gpfocus.Primary,
 button.controllerconfiguratormapping_Button_hv-G3.DialogButton:active:active.Primary,
-button.controllerconfiguratormapping_Button_hv-G3.DialogButton:hover.gpfocus.Primary,
-button.controllerconfiguratormapping_Button_hv-G3.DialogButton:hover:active.Primary,
 button.controllerconfiguratormapping_Button_hv-G3.DialogButton:enabled:active:hover.gpfocus.Primary,
 button.controllerconfiguratormapping_Button_hv-G3.DialogButton:enabled:active:hover:active.Primary {
   background: #1a9fff;
@@ -4754,8 +4758,6 @@ button.controllerconfiguratormapping_Button_hv-G3.DialogButton:enabled.gpfocus.D
 button.controllerconfiguratormapping_Button_hv-G3.DialogButton:enabled:active.Destructive,
 button.controllerconfiguratormapping_Button_hv-G3.DialogButton:active.gpfocus.Destructive,
 button.controllerconfiguratormapping_Button_hv-G3.DialogButton:active:active.Destructive,
-button.controllerconfiguratormapping_Button_hv-G3.DialogButton:hover.gpfocus.Destructive,
-button.controllerconfiguratormapping_Button_hv-G3.DialogButton:hover:active.Destructive,
 button.controllerconfiguratormapping_Button_hv-G3.DialogButton:enabled:active:hover.gpfocus.Destructive,
 button.controllerconfiguratormapping_Button_hv-G3.DialogButton:enabled:active:hover:active.Destructive {
   background: #de3618;
@@ -4767,8 +4769,6 @@ button.controllerconfiguratormapping_Button_hv-G3.DialogButton:enabled.gpfocus.B
 button.controllerconfiguratormapping_Button_hv-G3.DialogButton:enabled:active.BarButton,
 button.controllerconfiguratormapping_Button_hv-G3.DialogButton:active.gpfocus.BarButton,
 button.controllerconfiguratormapping_Button_hv-G3.DialogButton:active:active.BarButton,
-button.controllerconfiguratormapping_Button_hv-G3.DialogButton:hover.gpfocus.BarButton,
-button.controllerconfiguratormapping_Button_hv-G3.DialogButton:hover:active.BarButton,
 button.controllerconfiguratormapping_Button_hv-G3.DialogButton:enabled:active:hover.gpfocus.BarButton,
 button.controllerconfiguratormapping_Button_hv-G3.DialogButton:enabled:active:hover:active.BarButton {
   background: #fff;
@@ -4781,8 +4781,6 @@ button.controllerconfiguratormapping_Button_hv-G3.DialogButton:enabled:active:ho
 .controllerconfiguratormapping_Field_1LWDA
   button.controllerconfiguratormapping_Button_hv-G3.DialogButton:active.gpfocus,
 .controllerconfiguratormapping_Field_1LWDA
-  button.controllerconfiguratormapping_Button_hv-G3.DialogButton:hover.gpfocus,
-.controllerconfiguratormapping_Field_1LWDA
   button.controllerconfiguratormapping_Button_hv-G3.DialogButton:enabled:active:hover.gpfocus {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -4792,8 +4790,6 @@ button.controllerconfiguratormapping_Button_hv-G3.DialogButton:enabled.Disabled,
 button.controllerconfiguratormapping_Button_hv-G3.DialogButton:enabled[disabled],
 button.controllerconfiguratormapping_Button_hv-G3.DialogButton:active.Disabled,
 button.controllerconfiguratormapping_Button_hv-G3.DialogButton:active[disabled],
-button.controllerconfiguratormapping_Button_hv-G3.DialogButton:hover.Disabled,
-button.controllerconfiguratormapping_Button_hv-G3.DialogButton:hover[disabled],
 button.controllerconfiguratormapping_Button_hv-G3.DialogButton:enabled:active:hover.Disabled,
 button.controllerconfiguratormapping_Button_hv-G3.DialogButton:enabled:active:hover[disabled] {
   opacity: 0.4;
@@ -4804,7 +4800,6 @@ button.controllerconfiguratormapping_Button_hv-G3.DialogButton:enabled:active:ho
 button.controllerconfiguratormapping_Button_hv-G3.DialogButton:before,
 button.controllerconfiguratormapping_Button_hv-G3.DialogButton:enabled:before,
 button.controllerconfiguratormapping_Button_hv-G3.DialogButton:active:before,
-button.controllerconfiguratormapping_Button_hv-G3.DialogButton:hover:before,
 button.controllerconfiguratormapping_Button_hv-G3.DialogButton:enabled:active:hover:before {
   content: none;
 }
@@ -5055,7 +5050,9 @@ button.controllerconfiguratormapping_Button_hv-G3.DialogButton:enabled:active:ho
   .controllerconfiguratormapping_FieldLabel_kUF-O {
   flex-shrink: 0;
 }
-.controllerconfiguratormapping_Field_1LWDA.controllerconfiguratormapping_ChildrenWidthGrow_2s0cl
+.controllerconfiguratormapping_Field_1LWDA:not(
+    .controllerconfiguratormapping_WithChildrenBelow_7IoKb
+  ).controllerconfiguratormapping_ChildrenWidthGrow_2s0cl
   .controllerconfiguratormapping_FieldLabel_kUF-O {
   flex-grow: 0;
 }
@@ -5199,6 +5196,8 @@ button.controllerconfiguratormapping_Button_hv-G3.DialogButton:enabled:active:ho
   height: 22px;
   position: relative;
   margin-right: 4px;
+  border-radius: 16px;
+  transition: box-shadow 50ms ease-out;
 }
 .controllerconfiguratormapping_Toggle_2__eU.gpfocus {
   outline: none;
@@ -5212,12 +5211,20 @@ button.controllerconfiguratormapping_Button_hv-G3.DialogButton:enabled:active:ho
   height: 132%;
   border-radius: 16px;
   background-color: #8b929a;
+  opacity: 1;
   z-index: -1;
 }
 .controllerconfiguratormapping_Toggle_2__eU:not(
     .controllerconfiguratormapping_Disabled_hBJA7
   ) {
   cursor: pointer;
+}
+.controllerconfiguratormapping_Toggle_2__eU:not(
+    .controllerconfiguratormapping_Disabled_hBJA7
+  ):hover {
+  box-shadow: 0px 0px 0px 4px rgba(255, 255, 255, 0.3);
+  border-radius: 16px;
+  transition: box-shadow 100ms ease-in;
 }
 .controllerconfiguratormapping_ToggleRail_2kcv1 {
   position: absolute;
@@ -5943,6 +5950,7 @@ svg.controllerconfiguratormapping_DropDownStarSVG_2hQvm {
 .gamepadtabbedpage_Tab_3eEbS:hover {
   background-color: #acb2c947;
   color: #fff;
+  transition: background-color 150ms ease-in;
 }
 .gamepadtabbedpage_Tab_3eEbS.gamepadtabbedpage_HasAddon_2tufx {
   max-height: 22px;
@@ -47036,6 +47044,9 @@ div.NarrowWindow
 .friendslist_VoiceChatStatusHeader_1UV9k {
   height: 100%;
 }
+.friendslist_VoiceChatStatusHeader_1UV9k:hover {
+  background-color: none;
+}
 .friendslist_StatusChangeHint_3bLMb {
   position: absolute;
   top: -40px;
@@ -49066,6 +49077,62 @@ html.tablet .partnereventdisplay_EventDetailTitle_2_4FS {
     background-position: 50% 0%;
   }
 }
+@keyframes recentlycompleted_ItemFocusAnim-darkerGrey-nocolor_1X6_f {
+  from {
+    background: #3d4450;
+  }
+  to {
+    background: #23262e;
+  }
+}
+@keyframes recentlycompleted_ItemFocusAnim-darkerGrey_3tXYZ {
+  from {
+    background: #3d4450;
+    color: #8b929a;
+  }
+  to {
+    background: #23262e;
+    color: #fff;
+  }
+}
+@keyframes recentlycompleted_ItemFocusAnim-darkGrey_2g3ZY {
+  from {
+    background: #67707b;
+    color: #8b929a;
+  }
+  to {
+    background: #3d4450;
+    color: #fff;
+  }
+}
+@keyframes recentlycompleted_ItemFocusAnim-grey_1xxUQ {
+  from {
+    background: #8b929a;
+    color: #fff;
+  }
+  to {
+    background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes recentlycompleted_ItemFocusAnimBorder-darkGrey_37rsF {
+  from {
+    border-color: #67707b;
+  }
+  to {
+    border-color: #3d4450;
+  }
+}
+@keyframes recentlycompleted_ItemFocusAnim-green_2njQL {
+  from {
+    background: #c9ffc9;
+    color: #8b929a;
+  }
+  to {
+    background: #59bf40;
+    color: #fff;
+  }
+}
 .recentlycompleted_RecentlyCompletedCarousel_2jcru {
   padding: 0px 2.8vw;
   scroll-snap-type: x mandatory;
@@ -49074,6 +49141,7 @@ html.tablet .partnereventdisplay_EventDetailTitle_2_4FS {
 .recentlycompleted_RecentlyCompleted_3fDIR {
   display: flex;
   flex-direction: column;
+  margin-top: -16px;
 }
 .BasicUI
   .recentlycompleted_RecentlyCompleted_3fDIR
@@ -49101,7 +49169,12 @@ html.tablet .partnereventdisplay_EventDetailTitle_2_4FS {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
+  cursor: pointer;
   background: #23262e;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0);
+  transition-property: box-shadow, transform;
+  transition-duration: 0.6s;
+  transition-timing-function: cubic-bezier(0, 0.73, 0.48, 1);
 }
 .recentlycompleted_RecentlyCompletedItem_3OC7i.recentlycompleted_MajorUpdate_2OGtB {
   background: linear-gradient(
@@ -49109,6 +49182,13 @@ html.tablet .partnereventdisplay_EventDetailTitle_2_4FS {
     #23262e 63.23%,
     rgba(245, 222, 179, 0.42) 209.82%
   );
+}
+.recentlycompleted_RecentlyCompletedItem_3OC7i:hover {
+  transform: scale(1.02);
+  transition:
+    box-shadow,
+    transform 0.3s cubic-bezier(0.16, 0.86, 0.43, 0.99);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.25);
 }
 .recentlycompleted_TopSection_2wVB- {
   height: 60%;
@@ -49270,6 +49350,62 @@ html.tablet .partnereventdisplay_EventDetailTitle_2_4FS {
     background-position: 50% 0%;
   }
 }
+@keyframes gamecapsule_ItemFocusAnim-darkerGrey-nocolor_2VXBF {
+  from {
+    background: #3d4450;
+  }
+  to {
+    background: #23262e;
+  }
+}
+@keyframes gamecapsule_ItemFocusAnim-darkerGrey_3CTF3 {
+  from {
+    background: #3d4450;
+    color: #8b929a;
+  }
+  to {
+    background: #23262e;
+    color: #fff;
+  }
+}
+@keyframes gamecapsule_ItemFocusAnim-darkGrey_3a3rS {
+  from {
+    background: #67707b;
+    color: #8b929a;
+  }
+  to {
+    background: #3d4450;
+    color: #fff;
+  }
+}
+@keyframes gamecapsule_ItemFocusAnim-grey_JclHv {
+  from {
+    background: #8b929a;
+    color: #fff;
+  }
+  to {
+    background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes gamecapsule_ItemFocusAnimBorder-darkGrey_2v-py {
+  from {
+    border-color: #67707b;
+  }
+  to {
+    border-color: #3d4450;
+  }
+}
+@keyframes gamecapsule_ItemFocusAnim-green_1Pxdv {
+  from {
+    background: #c9ffc9;
+    color: #8b929a;
+  }
+  to {
+    background: #59bf40;
+    color: #fff;
+  }
+}
 .gamecapsule_GameCapsule_fXdhj {
   background-color: #23262e;
   display: flex;
@@ -49277,6 +49413,10 @@ html.tablet .partnereventdisplay_EventDetailTitle_2_4FS {
   box-sizing: border-box;
   position: relative;
   cursor: pointer;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0);
+  transition-property: box-shadow, transform;
+  transition-duration: 0.6s;
+  transition-timing-function: cubic-bezier(0, 0.73, 0.48, 1);
 }
 .gamecapsule_GameCapsule_fXdhj .gamecapsule_BottomBar_3-GyQ {
   display: flex;
@@ -49296,6 +49436,13 @@ html.tablet .partnereventdisplay_EventDetailTitle_2_4FS {
 }
 .gamecapsule_GameCapsule_fXdhj.gpfocus .gamecapsule_DeckCompat_Tl-6l {
   display: flex;
+}
+.gamecapsule_GameCapsule_fXdhj:hover {
+  transform: scale(1.02);
+  transition:
+    box-shadow,
+    transform 0.3s cubic-bezier(0.16, 0.86, 0.43, 0.99);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.25);
 }
 .gamecapsule_PriceCtn_2E-mS {
   margin-left: auto;
@@ -49442,14 +49589,14 @@ html.tablet .partnereventdisplay_EventDetailTitle_2_4FS {
   }
 }
 .homestorecarousel_ItemsCarousel_q4IC9 {
-  padding: 0px 2.8vw;
+  padding: 1px 2.8vw;
   scroll-snap-type: x mandatory;
   scroll-padding: 0px 2.8vw;
 }
 .homestorecarousel_StoreCarouselCtn_3zVCV {
   display: flex;
   flex-direction: column;
-  margin: 15px 0;
+  margin-top: -16px;
 }
 .homestorecarousel_StoreCarouselCtn_3zVCV .homestorecarousel_Header_xpRXv {
   margin-bottom: 18px;
@@ -49556,10 +49703,71 @@ html.tablet .partnereventdisplay_EventDetailTitle_2_4FS {
     background-position: 50% 0%;
   }
 }
+@keyframes marketingmessages_ItemFocusAnim-darkerGrey-nocolor_3Pmz_ {
+  from {
+    background: #3d4450;
+  }
+  to {
+    background: #23262e;
+  }
+}
+@keyframes marketingmessages_ItemFocusAnim-darkerGrey_1iTRl {
+  from {
+    background: #3d4450;
+    color: #8b929a;
+  }
+  to {
+    background: #23262e;
+    color: #fff;
+  }
+}
+@keyframes marketingmessages_ItemFocusAnim-darkGrey_LW2yW {
+  from {
+    background: #67707b;
+    color: #8b929a;
+  }
+  to {
+    background: #3d4450;
+    color: #fff;
+  }
+}
+@keyframes marketingmessages_ItemFocusAnim-grey_3OIqN {
+  from {
+    background: #8b929a;
+    color: #fff;
+  }
+  to {
+    background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes marketingmessages_ItemFocusAnimBorder-darkGrey_3c2FW {
+  from {
+    border-color: #67707b;
+  }
+  to {
+    border-color: #3d4450;
+  }
+}
+@keyframes marketingmessages_ItemFocusAnim-green_2M1-F {
+  from {
+    background: #c9ffc9;
+    color: #8b929a;
+  }
+  to {
+    background: #59bf40;
+    color: #fff;
+  }
+}
 .marketingmessages_MarketingMessage_28UlE {
   overflow: hidden;
   background: #000;
   position: relative;
+  cursor: pointer;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0);
+  transition-property: box-shadow, transform;
+  transition-duration: 0.6s;
+  transition-timing-function: cubic-bezier(0, 0.73, 0.48, 1);
 }
 .marketingmessages_MarketingMessage_28UlE.marketingmessages_Seen_1FblM {
   filter: saturate(0.1);
@@ -49606,14 +49814,22 @@ html.tablet .partnereventdisplay_EventDetailTitle_2_4FS {
   color: #fff;
   margin-bottom: 12px;
 }
+.marketingmessages_MarketingMessage_28UlE:hover {
+  transform: scale(1.02);
+  transition:
+    box-shadow,
+    transform 0.3s cubic-bezier(0.16, 0.86, 0.43, 0.99);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.25);
+}
 .marketingmessages_MarketingMessagesCarousel_28SEj {
-  padding: 0px 2.8vw;
+  padding: 2px 2.8vw;
   scroll-snap-type: x mandatory;
   scroll-padding: 0px 2.8vw;
 }
 .marketingmessages_MarketingMessages_jdr42 {
   display: flex;
   flex-direction: column;
+  margin-top: -16px;
 }
 .BasicUI
   .marketingmessages_MarketingMessages_jdr42
@@ -49946,6 +50162,18 @@ html.tablet .partnereventdisplay_EventDetailTitle_2_4FS {
   width: 100%;
   display: flex;
   flex-direction: column;
+  cursor: pointer;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0);
+  transition-property: box-shadow, transform;
+  transition-duration: 0.6s;
+  transition-timing-function: cubic-bezier(0, 0.73, 0.48, 1);
+}
+.gamepadhomewhatsnew_EventPreviewContainer_1ltOY:hover {
+  transform: scale(1.02);
+  transition:
+    box-shadow,
+    transform 0.3s cubic-bezier(0.16, 0.86, 0.43, 0.99);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.25);
 }
 .gamepadhomewhatsnew_EventImage_116GS {
   width: 300px;
@@ -53473,6 +53701,12 @@ body {
   align-items: center;
   cursor: pointer;
   padding: 5px 8px 5px 8px;
+  border-radius: 6px;
+  transition: background-color 50ms ease-out;
+}
+.actionbuttonlegenditem_ActionButtonLegend_Mbyhb:hover {
+  background-color: #23262e;
+  transition: background-color 150ms ease-in;
 }
 .actionbuttonlegenditem_ActionButtonLegend_Mbyhb
   .actionbuttonlegenditem_ActionButtonGlyph_3Jfd8 {
@@ -54319,6 +54553,18 @@ body {
   box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.32);
   transition: transform cubic-bezier(0.16, 0.86, 0.43, 0.99) 0.3s;
   min-height: 76px;
+  cursor: pointer;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0);
+  transition-property: box-shadow, transform;
+  transition-duration: 0.6s;
+  transition-timing-function: cubic-bezier(0, 0.73, 0.48, 1);
+}
+.gamepadsearch_ResultTemplateImage_3K3Bx:hover {
+  transform: scale(1.02);
+  transition:
+    box-shadow,
+    transform 0.3s cubic-bezier(0.16, 0.86, 0.43, 0.99);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.25);
 }
 .gamepadsearch_ResultTemplate_2Aspd.gpfocuswithin
   .gamepadsearch_ResultTemplateImage_3K3Bx {
@@ -56287,6 +56533,62 @@ button.appdetailsheader_ExitEditModeButton_i7jBC.appdetailsheader_ExitEditModeBu
     background-position: 50% 0%;
   }
 }
+@keyframes mediapage_ItemFocusAnim-darkerGrey-nocolor_LlCzD {
+  from {
+    background: #3d4450;
+  }
+  to {
+    background: #23262e;
+  }
+}
+@keyframes mediapage_ItemFocusAnim-darkerGrey_1dDbM {
+  from {
+    background: #3d4450;
+    color: #8b929a;
+  }
+  to {
+    background: #23262e;
+    color: #fff;
+  }
+}
+@keyframes mediapage_ItemFocusAnim-darkGrey_3-9dY {
+  from {
+    background: #67707b;
+    color: #8b929a;
+  }
+  to {
+    background: #3d4450;
+    color: #fff;
+  }
+}
+@keyframes mediapage_ItemFocusAnim-grey_RCdiH {
+  from {
+    background: #8b929a;
+    color: #fff;
+  }
+  to {
+    background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes mediapage_ItemFocusAnimBorder-darkGrey_tCJeT {
+  from {
+    border-color: #67707b;
+  }
+  to {
+    border-color: #3d4450;
+  }
+}
+@keyframes mediapage_ItemFocusAnim-green_1o4lq {
+  from {
+    background: #c9ffc9;
+    color: #8b929a;
+  }
+  to {
+    background: #59bf40;
+    color: #fff;
+  }
+}
 .mediapage_MediaPage_gG1JN {
   margin-top: 40px;
   height: calc(100% - 40px);
@@ -56357,6 +56659,17 @@ button.appdetailsheader_ExitEditModeButton_i7jBC.appdetailsheader_ExitEditModeBu
   padding: 4px;
   border-radius: 6px;
   position: relative;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0);
+  transition-property: box-shadow, transform;
+  transition-duration: 0.6s;
+  transition-timing-function: cubic-bezier(0, 0.73, 0.48, 1);
+}
+.mediapage_Screenshot_3Qh8h:hover {
+  transform: scale(1.02);
+  transition:
+    box-shadow,
+    transform 0.3s cubic-bezier(0.16, 0.86, 0.43, 0.99);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.25);
 }
 .mediapage_Screenshot_3Qh8h.mediapage_HalfWidth_1lHbI .mediapage_Image_dmMTv {
   max-width: 100%;
@@ -56411,6 +56724,7 @@ button.appdetailsheader_ExitEditModeButton_i7jBC.appdetailsheader_ExitEditModeBu
   display: flex;
   flex-direction: column;
   justify-content: center;
+  cursor: pointer;
 }
 .mediapage_Screenshot_3Qh8h
   .mediapage_ImageContainer_120HU
@@ -64625,6 +64939,7 @@ img {
   width: 0px;
 }
 .mainmenu_Menu_23IDi {
+  background-color: #0e141b;
   height: calc(100% - var(--basicui-header-height) - 40px);
   margin-top: 40px;
   margin-bottom: 40px;
@@ -64634,9 +64949,8 @@ img {
   flex-direction: column;
   justify-content: center;
   position: relative;
-  background: #0e141b;
   overflow: hidden;
-  transition-property: width, transform, opacity;
+  transition-property: width, transform, background-color;
   transition-duration: 320ms, 300ms, 0.5s;
   transition-timing-function: ease-in-out, cubic-bezier(0.16, 0.86, 0.43, 0.99),
     ease-out;
@@ -64651,7 +64965,7 @@ img {
   margin: 0;
 }
 .mainmenu_Menu_23IDi.mainmenu_VR_1ABsh.mainmenu_Collapsed_3I23q:not(:hover) {
-  opacity: 0.8;
+  background-color: rgba(14, 20, 27, 0.85);
 }
 .mainmenu_Menu_23IDi.mainmenu_IsVirtualKeyboardShown_2V0dd {
   visibility: hidden;
@@ -64683,6 +64997,7 @@ img {
 }
 .mainmenu_Menu_23IDi.mainmenu_Collapsed_3I23q.mainmenu_VR_1ABsh {
   width: 54px;
+  transition: width 300ms ease;
 }
 .mainmenu_Menu_23IDi.mainmenu_Collapsed_3I23q.mainmenu_VR_1ABsh
   .mainmenu_ItemLabel_3x-ZK {
@@ -64714,6 +65029,7 @@ img {
   width: 100%;
   outline: none;
   padding: 0 16px 0 24px;
+  transition: background-color 50ms ease-out;
   transition-property: transform, background-color;
   transition-duration: 0.32s, 0s;
   transition-timing-function: cubic-bezier(0.17, 0.45, 0.14, 0.83);
@@ -64723,6 +65039,7 @@ img {
   animation-fill-mode: forwards;
   transform: scale(1) rotateX(1deg);
   cursor: pointer;
+  user-select: none;
 }
 .mainmenu_Item_2w9Tp.mainmenu_Active_10bq5 {
   z-index: 2;
@@ -66525,11 +66842,11 @@ img.mainmenuapprunning_CurrentGameLogo_3V3VK {
   width: auto;
   pointer-events: none;
 }
-.vrdashboard_QuickAccessPopupContents_3JcTK {
+.vrdashboard_DashboardBarPopupContents_21TZj {
   width: 100%;
-  min-height: 150px;
   max-height: 100vh;
   max-width: 100vw;
+  box-sizing: border-box;
   background: #0e141b;
   color: #8b929a;
   border: 1px solid rgba(255, 255, 255, 0.05);
@@ -66541,8 +66858,15 @@ img.mainmenuapprunning_CurrentGameLogo_3V3VK {
   flex-direction: column;
   position: relative;
 }
-.vrdashboard_QuickAccessPopupContents_3JcTK.vrdashboard_FullHeight_3C46j {
+.vrdashboard_DashboardBarPopupContents_21TZj.vrdashboard_FullHeight_3C46j {
   height: 100vh;
+}
+.vrdashboard_DashboardBarPopupContents_21TZj.vrdashboard_QuickAccessPopupContents_3JcTK {
+  min-height: 150px;
+}
+.vrdashboard_DashboardBarPopupContents_21TZj.vrdashboard_VolumePopup_2AVp7 {
+  width: 100vw;
+  padding: 0 20px;
 }
 .vrdashboard_QuickAccessPopupTitle_1NX9S:empty {
   display: none;
@@ -66564,6 +66888,54 @@ img.mainmenuapprunning_CurrentGameLogo_3V3VK {
   right: 0;
   bottom: 0;
   pointer-events: none;
+}
+.vrdashboard_ClickableSliderIcon_2a82u {
+  display: flex;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  transition:
+    color 0.15s ease-out,
+    transform 0.15s ease-out;
+}
+.vrdashboard_ClickableSliderIcon_2a82u::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 9001px;
+  z-index: -1;
+  transform: scale(1);
+  background: #23262e;
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    opacity 0.15s ease-out,
+    transform 0.15s ease-out;
+}
+.vrdashboard_ClickableSliderIcon_2a82u.vrdashboard_Clickable_bMtzo {
+  cursor: pointer;
+}
+.vrdashboard_ClickableSliderIcon_2a82u.vrdashboard_Clickable_bMtzo:hover::before,
+.vrdashboard_ClickableSliderIcon_2a82u.vrdashboard_Clickable_bMtzo:active::before {
+  opacity: 0.5;
+}
+.vrdashboard_ClickableSliderIcon_2a82u.vrdashboard_Clickable_bMtzo:hover {
+  color: #fff;
+}
+.vrdashboard_ClickableSliderIcon_2a82u.vrdashboard_Clickable_bMtzo:hover::before {
+  transform: scale(1.5);
+}
+.vrdashboard_ClickableSliderIcon_2a82u.vrdashboard_Clickable_bMtzo:active {
+  transform: scale(0.8);
+}
+.vrdashboard_ClickableSliderIcon_2a82u.vrdashboard_Clickable_bMtzo:active::before {
+  transform: scale(2);
+}
+.vrdashboard_ClickableSliderIcon_2a82u > * {
+  margin: auto;
 }
 @keyframes vrdashboardpopups_ItemFocusAnim-darkerGrey-nocolor_2MZC9 {
   from {
@@ -73926,10 +74298,14 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
   transform: scale(1) rotateX(0deg);
+  transition: filter 50ms ease-in;
 }
 .notificationcontent_StandardTemplate_5HZT7:hover,
+.notificationcontent_PinnedTemplate_1X-O1:hover {
+  background-color: #23262e;
+  transition: background-color 150ms ease-in;
+}
 .notificationcontent_StandardTemplate_5HZT7.gpfocus,
-.notificationcontent_PinnedTemplate_1X-O1:hover,
 .notificationcontent_PinnedTemplate_1X-O1.gpfocus {
   background-color: #3d4450;
   animation-name: notificationcontent_ItemFocusAnim-darkerGrey_OjFFd;
@@ -75285,10 +75661,14 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
   transform: scale(1) rotateX(0deg);
+  transition: filter 50ms ease-in;
 }
 .standardtemplates_StandardTemplate_3e_DB:hover,
+.standardtemplates_PinnedTemplate_2eBei:hover {
+  background-color: #23262e;
+  transition: background-color 150ms ease-in;
+}
 .standardtemplates_StandardTemplate_3e_DB.gpfocus,
-.standardtemplates_PinnedTemplate_2eBei:hover,
 .standardtemplates_PinnedTemplate_2eBei.gpfocus {
   background-color: #3d4450;
   animation-name: standardtemplates_ItemFocusAnim-darkerGrey_3uRWs;
@@ -76210,10 +76590,14 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
   transform: scale(1) rotateX(0deg);
+  transition: filter 50ms ease-in;
 }
 .shorttemplates_StandardTemplate_WgSlJ:hover,
+.shorttemplates_PinnedTemplate_3T_a6:hover {
+  background-color: #23262e;
+  transition: background-color 150ms ease-in;
+}
 .shorttemplates_StandardTemplate_WgSlJ.gpfocus,
-.shorttemplates_PinnedTemplate_3T_a6:hover,
 .shorttemplates_PinnedTemplate_3T_a6.gpfocus {
   background-color: #3d4450;
   animation-name: shorttemplates_ItemFocusAnim-darkerGrey_11elP;
@@ -77001,6 +77385,11 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
   width: 300px;
   height: 40px;
+  transition: background-color 50ms ease-out;
+}
+.shorttemplates_ShortTemplate_29NLb:hover {
+  background-color: #23262e;
+  transition: background-color 200ms ease-in;
 }
 .shorttemplates_ShortTemplate_29NLb.shorttemplates_IncomingCallToast_1hUOA {
   background: radial-gradient(
@@ -77184,10 +77573,14 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
   transform: scale(1) rotateX(0deg);
+  transition: filter 50ms ease-in;
 }
 .steamtemplates_StandardTemplate_1zIGL:hover,
+.steamtemplates_PinnedTemplate_F_L0c:hover {
+  background-color: #23262e;
+  transition: background-color 150ms ease-in;
+}
 .steamtemplates_StandardTemplate_1zIGL.gpfocus,
-.steamtemplates_PinnedTemplate_F_L0c:hover,
 .steamtemplates_PinnedTemplate_F_L0c.gpfocus {
   background-color: #3d4450;
   animation-name: steamtemplates_ItemFocusAnim-darkerGrey_glTTS;
@@ -107139,11 +107532,16 @@ svg.steamtemplates_FriendIndicator_suNJh .Outline {
   animation-fill-mode: forwards;
   transform: scale(1) rotateX(1deg);
   transform-origin: 50% 50%;
+  transition: background-color 50ms ease-out;
 }
 .gpfocus .quickaccessmenu_Tab_1S76C,
 .quickaccessmenu_Tab_1S76C.gpfocus {
   background: #fff;
   color: #0e141b;
+}
+.quickaccessmenu_Tab_1S76C:hover {
+  background-color: #23262e;
+  transition: background-color 150ms ease-in;
 }
 .quickaccessmenu_Tab_1S76C.quickaccessmenu_Selected_2QHMu {
   background-color: #3d4450;
@@ -107617,6 +108015,35 @@ svg.steamtemplates_FriendIndicator_suNJh .Outline {
   color: #dcdedf;
   text-transform: none;
   letter-spacing: 0px;
+}
+.gamepadcontextmenu_contextMenuItem_1sdvo:hover {
+  background: #3d4450;
+  transition: background 100ms ease-in;
+}
+.gamepadcontextmenu_contextMenuItem_1sdvo:hover.gamepadcontextmenu_Destructive_3aIFv,
+.gamepadcontextmenu_contextMenuItem_1sdvo:hover.Stop,
+.gamepadcontextmenu_contextMenuItem_1sdvo:hover.Cancel {
+  background: #8a220f;
+}
+.gamepadcontextmenu_contextMenuItem_1sdvo:hover.gamepadcontextmenu_Positive_2gJWj,
+.gamepadcontextmenu_contextMenuItem_1sdvo:hover.Stream,
+.gamepadcontextmenu_contextMenuItem_1sdvo:hover.Connect,
+.gamepadcontextmenu_contextMenuItem_1sdvo:hover.Launch,
+.gamepadcontextmenu_contextMenuItem_1sdvo:hover.PlayMusic,
+.gamepadcontextmenu_contextMenuItem_1sdvo:hover.Play,
+.gamepadcontextmenu_contextMenuItem_1sdvo:hover.Resume,
+.gamepadcontextmenu_contextMenuItem_1sdvo:hover.BorrowApp {
+  background: #236c39;
+  color: #fff;
+}
+.gamepadcontextmenu_contextMenuItem_1sdvo:hover.gamepadcontextmenu_Emphasis_1viOG,
+.gamepadcontextmenu_contextMenuItem_1sdvo:hover.Download,
+.gamepadcontextmenu_contextMenuItem_1sdvo:hover.Update,
+.gamepadcontextmenu_contextMenuItem_1sdvo:hover.PreLoad,
+.gamepadcontextmenu_contextMenuItem_1sdvo:hover.Install,
+.gamepadcontextmenu_contextMenuItem_1sdvo:hover.Pause {
+  background: #1aa0ff53;
+  color: #fff;
 }
 .gamepadcontextmenu_contextMenuItem_1sdvo.gamepadcontextmenu_active_2Pk-x {
   background: #fff;
@@ -108247,6 +108674,37 @@ svg.steamtemplates_FriendIndicator_suNJh .Outline {
   overflow: hidden;
   position: relative;
   min-width: 38px;
+  transition: background-color 50ms ease-out;
+}
+.searchbar_SearchContainer_161Tj
+  input[type="search"]::-webkit-search-cancel-button {
+  display: flex;
+  position: relative;
+  right: 0px;
+  -webkit-appearance: none;
+  height: 26px;
+  width: 26px;
+  border-radius: 13px;
+  background-color: #000;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url('data:image/svg+xml,<svg width="14" height="14" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.8445 4.11667L15.8834 2.15556L10 8.03334L4.11669 2.15556L2.15558 4.11667L8.03336 10L2.15558 15.8833L4.11669 17.8445L10 11.9667L15.8834 17.8445L17.8445 15.8833L11.9667 10L17.8445 4.11667Z" fill="white"/></svg>');
+  transition: background-color 50ms ease-out;
+  cursor: pointer;
+}
+.searchbar_SearchContainer_161Tj
+  input[type="search"]::-webkit-search-cancel-button:hover {
+  background-color: #3d4450;
+  transition: background-color 150ms ease-in;
+}
+.searchbar_SearchContainer_161Tj
+  input[type="search"]::-webkit-search-cancel-button:active {
+  background-color: #23262e;
+  transition: background-color 150ms ease-in;
+}
+.searchbar_SearchContainer_161Tj:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  transition: background-color 150ms ease-in;
 }
 .FlexGrowUniversalSearch .searchbar_SearchContainer_161Tj {
   flex-grow: 1;
@@ -108294,12 +108752,14 @@ svg.steamtemplates_FriendIndicator_suNJh .Outline {
   transition-duration: 0.2s;
 }
 .searchbar_SearchContainer_161Tj.gpfocuswithin,
-.searchbar_SearchContainer_161Tj.searchbar_ForceExpanded_1bmuJ {
+.searchbar_SearchContainer_161Tj.searchbar_ForceExpanded_1bmuJ,
+.searchbar_SearchContainer_161Tj:hover {
   color: #0e141b;
 }
 .searchbar_SearchContainer_161Tj.gpfocuswithin input::placeholder,
 .searchbar_SearchContainer_161Tj.searchbar_ForceExpanded_1bmuJ
-  input::placeholder {
+  input::placeholder,
+.searchbar_SearchContainer_161Tj:hover input::placeholder {
   opacity: 1;
   transform: translateX(0px);
   transition-delay: 0.08s;
@@ -108308,19 +108768,23 @@ svg.steamtemplates_FriendIndicator_suNJh .Outline {
 .searchbar_SearchContainer_161Tj.gpfocuswithin
   input.searchbar_WhiteBackground_1l8js::placeholder,
 .searchbar_SearchContainer_161Tj.searchbar_ForceExpanded_1bmuJ
+  input.searchbar_WhiteBackground_1l8js::placeholder,
+.searchbar_SearchContainer_161Tj:hover
   input.searchbar_WhiteBackground_1l8js::placeholder {
   transition-delay: 0s;
 }
 .searchbar_SearchContainer_161Tj.gpfocuswithin
   .searchbar_SearchFieldBackground_3F4YR,
 .searchbar_SearchContainer_161Tj.searchbar_ForceExpanded_1bmuJ
-  .searchbar_SearchFieldBackground_3F4YR {
+  .searchbar_SearchFieldBackground_3F4YR,
+.searchbar_SearchContainer_161Tj:hover .searchbar_SearchFieldBackground_3F4YR {
   transform: scaleX(1);
   transition-delay: 0s;
 }
 .searchbar_SearchContainer_161Tj.gpfocuswithin .searchbar_SearchIconLeft_2Ya83,
 .searchbar_SearchContainer_161Tj.searchbar_ForceExpanded_1bmuJ
-  .searchbar_SearchIconLeft_2Ya83 {
+  .searchbar_SearchIconLeft_2Ya83,
+.searchbar_SearchContainer_161Tj:hover .searchbar_SearchIconLeft_2Ya83 {
   opacity: 1;
   transform: translateX(5px);
   transition-duration: 0.4s;
@@ -108330,12 +108794,15 @@ svg.steamtemplates_FriendIndicator_suNJh .Outline {
 .searchbar_SearchContainer_161Tj.gpfocuswithin
   .searchbar_SearchIconLeft_2Ya83.searchbar_WhiteBackground_1l8js,
 .searchbar_SearchContainer_161Tj.searchbar_ForceExpanded_1bmuJ
+  .searchbar_SearchIconLeft_2Ya83.searchbar_WhiteBackground_1l8js,
+.searchbar_SearchContainer_161Tj:hover
   .searchbar_SearchIconLeft_2Ya83.searchbar_WhiteBackground_1l8js {
   transition-delay: 0s;
 }
 .searchbar_SearchContainer_161Tj.gpfocuswithin .searchbar_SearchIconRight_1Ka4T,
 .searchbar_SearchContainer_161Tj.searchbar_ForceExpanded_1bmuJ
-  .searchbar_SearchIconRight_1Ka4T {
+  .searchbar_SearchIconRight_1Ka4T,
+.searchbar_SearchContainer_161Tj:hover .searchbar_SearchIconRight_1Ka4T {
   opacity: 0;
   transform: translateX(-18px);
   transition-property: opacity, transform;
@@ -108346,6 +108813,8 @@ svg.steamtemplates_FriendIndicator_suNJh .Outline {
 .searchbar_SearchContainer_161Tj.gpfocuswithin
   .searchbar_SearchIconRight_1Ka4T.searchbar_WhiteBackground_1l8js,
 .searchbar_SearchContainer_161Tj.searchbar_ForceExpanded_1bmuJ
+  .searchbar_SearchIconRight_1Ka4T.searchbar_WhiteBackground_1l8js,
+.searchbar_SearchContainer_161Tj:hover
   .searchbar_SearchIconRight_1Ka4T.searchbar_WhiteBackground_1l8js {
   transition-duration: 0.1s, 0.6s;
   color: #000;
@@ -108795,6 +109264,7 @@ svg.steamtemplates_FriendIndicator_suNJh .Outline {
   height: 100%;
   align-items: center;
   padding: 0 10px;
+  transition: background-color 50ms ease-out;
 }
 .header_Header_1E_SL.header_VR_m2Zys .header_HeaderItem_2HnVd {
   padding: 0 15px;
@@ -108802,6 +109272,10 @@ svg.steamtemplates_FriendIndicator_suNJh .Outline {
 }
 .header_HeaderItem_2HnVd.header_Clickable_8sPcK {
   cursor: pointer;
+}
+.header_HeaderItem_2HnVd.header_Clickable_8sPcK:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  transition: background-color 150ms ease-in;
 }
 .header_HeaderItem_2HnVd.gpfocus,
 .header_HeaderItem_2HnVd.gpfocuswithin {
@@ -108921,6 +109395,10 @@ svg.steamtemplates_FriendIndicator_suNJh .Outline {
 }
 .header_VoiceChatStatus_32nVD {
   position: relative;
+  cursor: pointer;
+}
+.header_VoiceChatStatus_32nVD:hover {
+  background-color: none;
 }
 .header_UnreadChatMessages_3gfH2 {
   position: relative;
@@ -108981,7 +109459,6 @@ svg.steamtemplates_FriendIndicator_suNJh .Outline {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  left: -2px;
 }
 .header_HeaderDownloadContainer_2ssr3
   .header_HeaderAppPortraitContainer_1PbL3
