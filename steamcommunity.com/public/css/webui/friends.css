@@ -1,3 +1,39 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
 .crossfade {
   position: relative;
   overflow: hidden;
@@ -2329,7 +2365,6 @@ button.gamepaddialog_Button_cXzBZ.DialogButton.gamepaddialog_NoMinWidth_R7OZb {
 button.gamepaddialog_Button_cXzBZ.DialogButton,
 button.gamepaddialog_Button_cXzBZ.DialogButton:enabled,
 button.gamepaddialog_Button_cXzBZ.DialogButton:active,
-button.gamepaddialog_Button_cXzBZ.DialogButton:hover,
 button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover {
   color: #dcdedf;
   font-size: 16px;
@@ -2346,8 +2381,6 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled,
 button.gamepaddialog_Button_cXzBZ.DialogButton:enabled.Primary,
 button.gamepaddialog_Button_cXzBZ.DialogButton:active,
 button.gamepaddialog_Button_cXzBZ.DialogButton:active.Primary,
-button.gamepaddialog_Button_cXzBZ.DialogButton:hover,
-button.gamepaddialog_Button_cXzBZ.DialogButton:hover.Primary,
 button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover,
 button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover.Primary {
   background: #23262e;
@@ -2355,7 +2388,6 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover.Primary {
 button.gamepaddialog_Button_cXzBZ.DialogButton.BarButton,
 button.gamepaddialog_Button_cXzBZ.DialogButton:enabled.BarButton,
 button.gamepaddialog_Button_cXzBZ.DialogButton:active.BarButton,
-button.gamepaddialog_Button_cXzBZ.DialogButton:hover.BarButton,
 button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover.BarButton {
   background: #0000001a;
   color: #fff;
@@ -2363,9 +2395,21 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover.BarButton {
 button.gamepaddialog_Button_cXzBZ.DialogButton.gamepaddialog_ActiveAndUnfocused_28cXJ,
 button.gamepaddialog_Button_cXzBZ.DialogButton:enabled.gamepaddialog_ActiveAndUnfocused_28cXJ,
 button.gamepaddialog_Button_cXzBZ.DialogButton:active.gamepaddialog_ActiveAndUnfocused_28cXJ,
-button.gamepaddialog_Button_cXzBZ.DialogButton:hover.gamepaddialog_ActiveAndUnfocused_28cXJ,
 button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover.gamepaddialog_ActiveAndUnfocused_28cXJ {
   background: #0e141b;
+}
+button.gamepaddialog_Button_cXzBZ.DialogButton:hover,
+button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:hover,
+button.gamepaddialog_Button_cXzBZ.DialogButton:active:hover,
+button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:hover {
+  background: #3d4450;
+  transition: background-color 150ms ease-in;
+}
+button.gamepaddialog_Button_cXzBZ.DialogButton.Primary:hover,
+button.gamepaddialog_Button_cXzBZ.DialogButton:enabled.Primary:hover,
+button.gamepaddialog_Button_cXzBZ.DialogButton:active.Primary:hover,
+button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover.Primary:hover {
+  background: #1aa0ff53;
 }
 button.gamepaddialog_Button_cXzBZ.DialogButton.gpfocus,
 button.gamepaddialog_Button_cXzBZ.DialogButton:active,
@@ -2373,8 +2417,6 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled.gpfocus,
 button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active,
 button.gamepaddialog_Button_cXzBZ.DialogButton:active.gpfocus,
 button.gamepaddialog_Button_cXzBZ.DialogButton:active:active,
-button.gamepaddialog_Button_cXzBZ.DialogButton:hover.gpfocus,
-button.gamepaddialog_Button_cXzBZ.DialogButton:hover:active,
 button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover.gpfocus,
 button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:active {
   background: #fff;
@@ -2387,8 +2429,6 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled.gpfocus.Primary,
 button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active.Primary,
 button.gamepaddialog_Button_cXzBZ.DialogButton:active.gpfocus.Primary,
 button.gamepaddialog_Button_cXzBZ.DialogButton:active:active.Primary,
-button.gamepaddialog_Button_cXzBZ.DialogButton:hover.gpfocus.Primary,
-button.gamepaddialog_Button_cXzBZ.DialogButton:hover:active.Primary,
 button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover.gpfocus.Primary,
 button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:active.Primary {
   background: #1a9fff;
@@ -2400,8 +2440,6 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled.gpfocus.Destructive,
 button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active.Destructive,
 button.gamepaddialog_Button_cXzBZ.DialogButton:active.gpfocus.Destructive,
 button.gamepaddialog_Button_cXzBZ.DialogButton:active:active.Destructive,
-button.gamepaddialog_Button_cXzBZ.DialogButton:hover.gpfocus.Destructive,
-button.gamepaddialog_Button_cXzBZ.DialogButton:hover:active.Destructive,
 button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover.gpfocus.Destructive,
 button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:active.Destructive {
   background: #de3618;
@@ -2413,8 +2451,6 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled.gpfocus.BarButton,
 button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active.BarButton,
 button.gamepaddialog_Button_cXzBZ.DialogButton:active.gpfocus.BarButton,
 button.gamepaddialog_Button_cXzBZ.DialogButton:active:active.BarButton,
-button.gamepaddialog_Button_cXzBZ.DialogButton:hover.gpfocus.BarButton,
-button.gamepaddialog_Button_cXzBZ.DialogButton:hover:active.BarButton,
 button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover.gpfocus.BarButton,
 button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:active.BarButton {
   background: #fff;
@@ -2427,8 +2463,6 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:active.BarBu
 .gamepaddialog_Field_eKmEX
   button.gamepaddialog_Button_cXzBZ.DialogButton:active.gpfocus,
 .gamepaddialog_Field_eKmEX
-  button.gamepaddialog_Button_cXzBZ.DialogButton:hover.gpfocus,
-.gamepaddialog_Field_eKmEX
   button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover.gpfocus {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -2438,8 +2472,6 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled.Disabled,
 button.gamepaddialog_Button_cXzBZ.DialogButton:enabled[disabled],
 button.gamepaddialog_Button_cXzBZ.DialogButton:active.Disabled,
 button.gamepaddialog_Button_cXzBZ.DialogButton:active[disabled],
-button.gamepaddialog_Button_cXzBZ.DialogButton:hover.Disabled,
-button.gamepaddialog_Button_cXzBZ.DialogButton:hover[disabled],
 button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover.Disabled,
 button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover[disabled] {
   opacity: 0.4;
@@ -2450,7 +2482,6 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover[disabled] {
 button.gamepaddialog_Button_cXzBZ.DialogButton:before,
 button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:before,
 button.gamepaddialog_Button_cXzBZ.DialogButton:active:before,
-button.gamepaddialog_Button_cXzBZ.DialogButton:hover:before,
 button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:before {
   content: none;
 }
@@ -2691,7 +2722,9 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:before {
   .gamepaddialog_FieldLabel_3jMlJ {
   flex-shrink: 0;
 }
-.gamepaddialog_Field_eKmEX.gamepaddialog_ChildrenWidthGrow_Jgod1
+.gamepaddialog_Field_eKmEX:not(
+    .gamepaddialog_WithChildrenBelow_37xzV
+  ).gamepaddialog_ChildrenWidthGrow_Jgod1
   .gamepaddialog_FieldLabel_3jMlJ {
   flex-grow: 0;
 }
@@ -2831,6 +2864,8 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:before {
   height: 22px;
   position: relative;
   margin-right: 4px;
+  border-radius: 16px;
+  transition: box-shadow 50ms ease-out;
 }
 .gamepaddialog_Toggle_9Ql-o.gpfocus {
   outline: none;
@@ -2844,10 +2879,16 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:before {
   height: 132%;
   border-radius: 16px;
   background-color: #8b929a;
+  opacity: 1;
   z-index: -1;
 }
 .gamepaddialog_Toggle_9Ql-o:not(.gamepaddialog_Disabled_aIeh3) {
   cursor: pointer;
+}
+.gamepaddialog_Toggle_9Ql-o:not(.gamepaddialog_Disabled_aIeh3):hover {
+  box-shadow: 0px 0px 0px 4px rgba(255, 255, 255, 0.3);
+  border-radius: 16px;
+  transition: box-shadow 100ms ease-in;
 }
 .gamepaddialog_ToggleRail_2bl0i {
   position: absolute;
@@ -3036,6 +3077,62 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
 .gamepadinput_PinDigit_15-eR {
   text-align: center;
 }
+@keyframes gamepadslider_ItemFocusAnim-darkerGrey-nocolor_3uBtl {
+  from {
+    background: #3d4450;
+  }
+  to {
+    background: #23262e;
+  }
+}
+@keyframes gamepadslider_ItemFocusAnim-darkerGrey_1so9R {
+  from {
+    background: #3d4450;
+    color: #8b929a;
+  }
+  to {
+    background: #23262e;
+    color: #fff;
+  }
+}
+@keyframes gamepadslider_ItemFocusAnim-darkGrey_3rHHM {
+  from {
+    background: #67707b;
+    color: #8b929a;
+  }
+  to {
+    background: #3d4450;
+    color: #fff;
+  }
+}
+@keyframes gamepadslider_ItemFocusAnim-grey_3bS2Y {
+  from {
+    background: #8b929a;
+    color: #fff;
+  }
+  to {
+    background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes gamepadslider_ItemFocusAnimBorder-darkGrey_2Pzyj {
+  from {
+    border-color: #67707b;
+  }
+  to {
+    border-color: #3d4450;
+  }
+}
+@keyframes gamepadslider_ItemFocusAnim-green_2C-5C {
+  from {
+    background: #c9ffc9;
+    color: #8b929a;
+  }
+  to {
+    background: #59bf40;
+    color: #fff;
+  }
+}
 .gamepadslider_SliderControlPanelGroup_198v6 {
   flex-grow: 1;
 }
@@ -3055,9 +3152,14 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   display: flex;
   height: 24px;
   min-width: 100px;
+  transition: filter 50ms ease-in;
 }
 .gamepadslider_SliderControl_1udlG:not(.gamepadslider_Disabled_35GyZ) {
   cursor: pointer;
+}
+.gamepadslider_SliderControl_1udlG:hover .gamepadslider_SliderTrack_2_vG6 {
+  background: #3d4450;
+  --left-track-color: #00bbff;
 }
 .gamepadslider_SliderTrack_2_vG6 {
   background: #23262e;
@@ -3071,6 +3173,9 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
 }
 .gamepadslider_SliderTrack_2_vG6.gamepadslider_SliderHasNotches_1Lr71 {
   width: calc(100% - 20px);
+}
+.gamepadslider_SliderTrack_2_vG6.gamepadslider_Disabled_35GyZ {
+  pointer-events: none;
 }
 .gamepadslider_SliderTrack_2_vG6::before {
   content: "";
@@ -3097,6 +3202,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
 .gamepadslider_SliderControlAndNotches_23hjX.gamepadslider_Disabled_35GyZ
   .gamepadslider_SliderTrack_2_vG6::before {
   background: #67707b;
+  pointer-events: none;
 }
 .gamepadslider_SliderTrackDark_20c10 {
   background: #000;
@@ -3157,6 +3263,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
 .gamepadslider_SliderControlAndNotches_23hjX.gamepadslider_Disabled_35GyZ
   .gamepadslider_SliderHandle_11PBf {
   background: #8b929a;
+  pointer-events: none;
 }
 .gamepadslider_VerticalLineSliderHandle_3zRgr {
   background: #ffffff60;
@@ -3805,6 +3912,9 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   transform: scale(1.1);
   z-index: 1;
   animation-name: gamepadpagedsettings_ItemFocusAnim-darkGrey_2x0HR;
+}
+.gamepadpagedsettings_PagedSettingsDialog_PageListItem_2mL2H:hover {
+  background-color: #3d4450;
 }
 .gamepadpagedsettings_PageListItem_Icon_3f2IO {
   height: 20px;
@@ -4830,6 +4940,7 @@ body.modals_BodyNoScrollDialog_3jhMI {
   justify-content: center;
   color: #3d4450;
   color: #3d4450;
+  transition: color 50ms ease-out;
 }
 .GamepadMode.friendlist .FriendsListTab svg {
   fill: currentColor;
@@ -4843,6 +4954,10 @@ body.modals_BodyNoScrollDialog_3jhMI {
 .GamepadMode.friendlist .FriendsListTab svg polygon {
   stroke: currentColor;
   fill: currentColor;
+}
+.GamepadMode.friendlist .FriendsListTab:hover {
+  color: #67707b;
+  transition: color 150ms ease-in;
 }
 .GamepadMode.friendlist .FriendsListTab.Active {
   color: #8b929a;
@@ -5186,12 +5301,19 @@ body.modals_BodyNoScrollDialog_3jhMI {
   color: #67707b;
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
+  transition: background-color 50ms ease-out;
 }
 .RightSideButtonContainer .AddFriendButton svg,
 .RightSideButtonContainer .oneOnOneVoiceChatButton svg,
 .RightSideButtonContainer .inviteAnotherFriendButton svg {
   width: 20px;
   height: 20px;
+}
+.RightSideButtonContainer .AddFriendButton:hover,
+.RightSideButtonContainer .oneOnOneVoiceChatButton:hover,
+.RightSideButtonContainer .inviteAnotherFriendButton:hover {
+  background-color: #2b333f;
+  transition: background-color 150ms ease-in;
 }
 .RightSideButtonContainer .oneOnOneVoiceChatButton {
   position: relative;
@@ -11072,9 +11194,13 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   color: #06beff;
   font-size: 14px;
 }
+.partnereventshared_HelperTooltip_3T6MQ {
+  display: flex;
+}
 .partnereventshared_HelperTooltip_3T6MQ > svg {
   width: 16px;
   fill: #aaa;
+  margin-left: 4px;
 }
 .partnereventshared_HelperTooltip_3T6MQ > svg:hover {
   fill: #fff;
@@ -16606,6 +16732,7 @@ a.bbcodes_LinkButton_jPpgc:hover {
   justify-content: center;
   color: #3d4450;
   color: #3d4450;
+  transition: color 50ms ease-out;
 }
 .GamepadMode.friendlist .FriendsListTab svg {
   fill: currentColor;
@@ -16619,6 +16746,10 @@ a.bbcodes_LinkButton_jPpgc:hover {
 .GamepadMode.friendlist .FriendsListTab svg polygon {
   stroke: currentColor;
   fill: currentColor;
+}
+.GamepadMode.friendlist .FriendsListTab:hover {
+  color: #67707b;
+  transition: color 150ms ease-in;
 }
 .GamepadMode.friendlist .FriendsListTab.Active {
   color: #8b929a;
@@ -16962,12 +17093,19 @@ a.bbcodes_LinkButton_jPpgc:hover {
   color: #67707b;
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
+  transition: background-color 50ms ease-out;
 }
 .RightSideButtonContainer .AddFriendButton svg,
 .RightSideButtonContainer .oneOnOneVoiceChatButton svg,
 .RightSideButtonContainer .inviteAnotherFriendButton svg {
   width: 20px;
   height: 20px;
+}
+.RightSideButtonContainer .AddFriendButton:hover,
+.RightSideButtonContainer .oneOnOneVoiceChatButton:hover,
+.RightSideButtonContainer .inviteAnotherFriendButton:hover {
+  background-color: #2b333f;
+  transition: background-color 150ms ease-in;
 }
 .RightSideButtonContainer .oneOnOneVoiceChatButton {
   position: relative;
@@ -17337,7 +17475,7 @@ a.bbcodes_LinkButton_jPpgc:hover {
 .quickaccessvoicecontrolssteamdeck_VoiceChatList_3Ri6R
   .quickaccessvoicecontrolssteamdeck_SliderPadding_1xn70 {
   width: 100%;
-  padding: 0px 8px;
+  padding: 8px 8px;
 }
 .quickaccessvoicecontrolssteamdeck_VoiceChatList_3Ri6R
   .quickaccessvoicecontrolssteamdeck_FriendVoiceChatContainer_303Rc {
@@ -17445,6 +17583,8 @@ a.bbcodes_LinkButton_jPpgc:hover {
   border-bottom: 1px solid #23262e;
   color: #fff;
   padding: 8px;
+  transition: background-color 150ms ease-in;
+  user-select: none;
   transition-property: transform, background-color;
   transition-duration: 0.32s, 0s;
   transition-timing-function: cubic-bezier(0.17, 0.45, 0.14, 0.83);
@@ -17463,6 +17603,11 @@ a.bbcodes_LinkButton_jPpgc:hover {
   .quickaccessvoicecontrolssteamdeck_LeaveVoiceChat_1DSas
   svg {
   width: 16px;
+}
+.quickaccessvoicecontrolssteamdeck_VoiceChatList_3Ri6R
+  .quickaccessvoicecontrolssteamdeck_LeaveVoiceChat_1DSas:hover {
+  background-color: #23262e;
+  transition: background-color 150ms ease-in;
 }
 .quickaccessvoicecontrolssteamdeck_GroupRoomContainer_2MbsP {
   flex-grow: 1;
@@ -18526,6 +18671,7 @@ a.bbcodes_LinkButton_jPpgc:hover {
   justify-content: center;
   color: #3d4450;
   color: #3d4450;
+  transition: color 50ms ease-out;
 }
 .GamepadMode.friendlist .FriendsListTab svg {
   fill: currentColor;
@@ -18539,6 +18685,10 @@ a.bbcodes_LinkButton_jPpgc:hover {
 .GamepadMode.friendlist .FriendsListTab svg polygon {
   stroke: currentColor;
   fill: currentColor;
+}
+.GamepadMode.friendlist .FriendsListTab:hover {
+  color: #67707b;
+  transition: color 150ms ease-in;
 }
 .GamepadMode.friendlist .FriendsListTab.Active {
   color: #8b929a;
@@ -18882,12 +19032,19 @@ a.bbcodes_LinkButton_jPpgc:hover {
   color: #67707b;
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
+  transition: background-color 50ms ease-out;
 }
 .RightSideButtonContainer .AddFriendButton svg,
 .RightSideButtonContainer .oneOnOneVoiceChatButton svg,
 .RightSideButtonContainer .inviteAnotherFriendButton svg {
   width: 20px;
   height: 20px;
+}
+.RightSideButtonContainer .AddFriendButton:hover,
+.RightSideButtonContainer .oneOnOneVoiceChatButton:hover,
+.RightSideButtonContainer .inviteAnotherFriendButton:hover {
+  background-color: #2b333f;
+  transition: background-color 150ms ease-in;
 }
 .RightSideButtonContainer .oneOnOneVoiceChatButton {
   position: relative;
@@ -20472,6 +20629,7 @@ a.bbcodes_LinkButton_jPpgc:hover {
   justify-content: center;
   color: #3d4450;
   color: #3d4450;
+  transition: color 50ms ease-out;
 }
 .GamepadMode.friendlist .FriendsListTab svg {
   fill: currentColor;
@@ -20485,6 +20643,10 @@ a.bbcodes_LinkButton_jPpgc:hover {
 .GamepadMode.friendlist .FriendsListTab svg polygon {
   stroke: currentColor;
   fill: currentColor;
+}
+.GamepadMode.friendlist .FriendsListTab:hover {
+  color: #67707b;
+  transition: color 150ms ease-in;
 }
 .GamepadMode.friendlist .FriendsListTab.Active {
   color: #8b929a;
@@ -20828,12 +20990,19 @@ a.bbcodes_LinkButton_jPpgc:hover {
   color: #67707b;
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
+  transition: background-color 50ms ease-out;
 }
 .RightSideButtonContainer .AddFriendButton svg,
 .RightSideButtonContainer .oneOnOneVoiceChatButton svg,
 .RightSideButtonContainer .inviteAnotherFriendButton svg {
   width: 20px;
   height: 20px;
+}
+.RightSideButtonContainer .AddFriendButton:hover,
+.RightSideButtonContainer .oneOnOneVoiceChatButton:hover,
+.RightSideButtonContainer .inviteAnotherFriendButton:hover {
+  background-color: #2b333f;
+  transition: background-color 150ms ease-in;
 }
 .RightSideButtonContainer .oneOnOneVoiceChatButton {
   position: relative;
@@ -22293,6 +22462,7 @@ a.bbcodes_LinkButton_jPpgc:hover {
   justify-content: center;
   color: #3d4450;
   color: #3d4450;
+  transition: color 50ms ease-out;
 }
 .GamepadMode.friendlist .FriendsListTab svg {
   fill: currentColor;
@@ -22306,6 +22476,10 @@ a.bbcodes_LinkButton_jPpgc:hover {
 .GamepadMode.friendlist .FriendsListTab svg polygon {
   stroke: currentColor;
   fill: currentColor;
+}
+.GamepadMode.friendlist .FriendsListTab:hover {
+  color: #67707b;
+  transition: color 150ms ease-in;
 }
 .GamepadMode.friendlist .FriendsListTab.Active {
   color: #8b929a;
@@ -22649,12 +22823,19 @@ a.bbcodes_LinkButton_jPpgc:hover {
   color: #67707b;
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
+  transition: background-color 50ms ease-out;
 }
 .RightSideButtonContainer .AddFriendButton svg,
 .RightSideButtonContainer .oneOnOneVoiceChatButton svg,
 .RightSideButtonContainer .inviteAnotherFriendButton svg {
   width: 20px;
   height: 20px;
+}
+.RightSideButtonContainer .AddFriendButton:hover,
+.RightSideButtonContainer .oneOnOneVoiceChatButton:hover,
+.RightSideButtonContainer .inviteAnotherFriendButton:hover {
+  background-color: #2b333f;
+  transition: background-color 150ms ease-in;
 }
 .RightSideButtonContainer .oneOnOneVoiceChatButton {
   position: relative;
@@ -25865,6 +26046,7 @@ svg.reorderablelist_ReorderArrow_1jEeo {
   justify-content: center;
   color: #3d4450;
   color: #3d4450;
+  transition: color 50ms ease-out;
 }
 .GamepadMode.friendlist .FriendsListTab svg {
   fill: currentColor;
@@ -25878,6 +26060,10 @@ svg.reorderablelist_ReorderArrow_1jEeo {
 .GamepadMode.friendlist .FriendsListTab svg polygon {
   stroke: currentColor;
   fill: currentColor;
+}
+.GamepadMode.friendlist .FriendsListTab:hover {
+  color: #67707b;
+  transition: color 150ms ease-in;
 }
 .GamepadMode.friendlist .FriendsListTab.Active {
   color: #8b929a;
@@ -26221,12 +26407,19 @@ svg.reorderablelist_ReorderArrow_1jEeo {
   color: #67707b;
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
+  transition: background-color 50ms ease-out;
 }
 .RightSideButtonContainer .AddFriendButton svg,
 .RightSideButtonContainer .oneOnOneVoiceChatButton svg,
 .RightSideButtonContainer .inviteAnotherFriendButton svg {
   width: 20px;
   height: 20px;
+}
+.RightSideButtonContainer .AddFriendButton:hover,
+.RightSideButtonContainer .oneOnOneVoiceChatButton:hover,
+.RightSideButtonContainer .inviteAnotherFriendButton:hover {
+  background-color: #2b333f;
+  transition: background-color 150ms ease-in;
 }
 .RightSideButtonContainer .oneOnOneVoiceChatButton {
   position: relative;
@@ -29956,6 +30149,7 @@ div:hover > .BBCodeCollapseControl {
   justify-content: center;
   color: #3d4450;
   color: #3d4450;
+  transition: color 50ms ease-out;
 }
 .GamepadMode.friendlist .FriendsListTab svg {
   fill: currentColor;
@@ -29969,6 +30163,10 @@ div:hover > .BBCodeCollapseControl {
 .GamepadMode.friendlist .FriendsListTab svg polygon {
   stroke: currentColor;
   fill: currentColor;
+}
+.GamepadMode.friendlist .FriendsListTab:hover {
+  color: #67707b;
+  transition: color 150ms ease-in;
 }
 .GamepadMode.friendlist .FriendsListTab.Active {
   color: #8b929a;
@@ -30312,12 +30510,19 @@ div:hover > .BBCodeCollapseControl {
   color: #67707b;
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
+  transition: background-color 50ms ease-out;
 }
 .RightSideButtonContainer .AddFriendButton svg,
 .RightSideButtonContainer .oneOnOneVoiceChatButton svg,
 .RightSideButtonContainer .inviteAnotherFriendButton svg {
   width: 20px;
   height: 20px;
+}
+.RightSideButtonContainer .AddFriendButton:hover,
+.RightSideButtonContainer .oneOnOneVoiceChatButton:hover,
+.RightSideButtonContainer .inviteAnotherFriendButton:hover {
+  background-color: #2b333f;
+  transition: background-color 150ms ease-in;
 }
 .RightSideButtonContainer .oneOnOneVoiceChatButton {
   position: relative;
@@ -31671,6 +31876,7 @@ div:hover > .BBCodeCollapseControl {
   justify-content: center;
   color: #3d4450;
   color: #3d4450;
+  transition: color 50ms ease-out;
 }
 .GamepadMode.friendlist .FriendsListTab svg {
   fill: currentColor;
@@ -31684,6 +31890,10 @@ div:hover > .BBCodeCollapseControl {
 .GamepadMode.friendlist .FriendsListTab svg polygon {
   stroke: currentColor;
   fill: currentColor;
+}
+.GamepadMode.friendlist .FriendsListTab:hover {
+  color: #67707b;
+  transition: color 150ms ease-in;
 }
 .GamepadMode.friendlist .FriendsListTab.Active {
   color: #8b929a;
@@ -32027,12 +32237,19 @@ div:hover > .BBCodeCollapseControl {
   color: #67707b;
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
+  transition: background-color 50ms ease-out;
 }
 .RightSideButtonContainer .AddFriendButton svg,
 .RightSideButtonContainer .oneOnOneVoiceChatButton svg,
 .RightSideButtonContainer .inviteAnotherFriendButton svg {
   width: 20px;
   height: 20px;
+}
+.RightSideButtonContainer .AddFriendButton:hover,
+.RightSideButtonContainer .oneOnOneVoiceChatButton:hover,
+.RightSideButtonContainer .inviteAnotherFriendButton:hover {
+  background-color: #2b333f;
+  transition: background-color 150ms ease-in;
 }
 .RightSideButtonContainer .oneOnOneVoiceChatButton {
   position: relative;
@@ -33236,6 +33453,7 @@ div:hover > .BBCodeCollapseControl {
   justify-content: center;
   color: #3d4450;
   color: #3d4450;
+  transition: color 50ms ease-out;
 }
 .GamepadMode.friendlist .FriendsListTab svg {
   fill: currentColor;
@@ -33249,6 +33467,10 @@ div:hover > .BBCodeCollapseControl {
 .GamepadMode.friendlist .FriendsListTab svg polygon {
   stroke: currentColor;
   fill: currentColor;
+}
+.GamepadMode.friendlist .FriendsListTab:hover {
+  color: #67707b;
+  transition: color 150ms ease-in;
 }
 .GamepadMode.friendlist .FriendsListTab.Active {
   color: #8b929a;
@@ -33592,12 +33814,19 @@ div:hover > .BBCodeCollapseControl {
   color: #67707b;
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
+  transition: background-color 50ms ease-out;
 }
 .RightSideButtonContainer .AddFriendButton svg,
 .RightSideButtonContainer .oneOnOneVoiceChatButton svg,
 .RightSideButtonContainer .inviteAnotherFriendButton svg {
   width: 20px;
   height: 20px;
+}
+.RightSideButtonContainer .AddFriendButton:hover,
+.RightSideButtonContainer .oneOnOneVoiceChatButton:hover,
+.RightSideButtonContainer .inviteAnotherFriendButton:hover {
+  background-color: #2b333f;
+  transition: background-color 150ms ease-in;
 }
 .RightSideButtonContainer .oneOnOneVoiceChatButton {
   position: relative;
@@ -34948,6 +35177,7 @@ div:hover > .BBCodeCollapseControl {
   justify-content: center;
   color: #3d4450;
   color: #3d4450;
+  transition: color 50ms ease-out;
 }
 .GamepadMode.friendlist .FriendsListTab svg {
   fill: currentColor;
@@ -34961,6 +35191,10 @@ div:hover > .BBCodeCollapseControl {
 .GamepadMode.friendlist .FriendsListTab svg polygon {
   stroke: currentColor;
   fill: currentColor;
+}
+.GamepadMode.friendlist .FriendsListTab:hover {
+  color: #67707b;
+  transition: color 150ms ease-in;
 }
 .GamepadMode.friendlist .FriendsListTab.Active {
   color: #8b929a;
@@ -35302,12 +35536,19 @@ div:hover > .BBCodeCollapseControl {
   color: #67707b;
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
+  transition: background-color 50ms ease-out;
 }
 .RightSideButtonContainer .AddFriendButton svg,
 .RightSideButtonContainer .oneOnOneVoiceChatButton svg,
 .RightSideButtonContainer .inviteAnotherFriendButton svg {
   width: 20px;
   height: 20px;
+}
+.RightSideButtonContainer .AddFriendButton:hover,
+.RightSideButtonContainer .oneOnOneVoiceChatButton:hover,
+.RightSideButtonContainer .inviteAnotherFriendButton:hover {
+  background-color: #2b333f;
+  transition: background-color 150ms ease-in;
 }
 .RightSideButtonContainer .oneOnOneVoiceChatButton {
   position: relative;
@@ -38931,6 +39172,7 @@ body.in_global_drag .title-area {
   justify-content: center;
   color: #3d4450;
   color: #3d4450;
+  transition: color 50ms ease-out;
 }
 .GamepadMode.friendlist .FriendsListTab svg {
   fill: currentColor;
@@ -38944,6 +39186,10 @@ body.in_global_drag .title-area {
 .GamepadMode.friendlist .FriendsListTab svg polygon {
   stroke: currentColor;
   fill: currentColor;
+}
+.GamepadMode.friendlist .FriendsListTab:hover {
+  color: #67707b;
+  transition: color 150ms ease-in;
 }
 .GamepadMode.friendlist .FriendsListTab.Active {
   color: #8b929a;
@@ -39285,12 +39531,19 @@ body.in_global_drag .title-area {
   color: #67707b;
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
+  transition: background-color 50ms ease-out;
 }
 .RightSideButtonContainer .AddFriendButton svg,
 .RightSideButtonContainer .oneOnOneVoiceChatButton svg,
 .RightSideButtonContainer .inviteAnotherFriendButton svg {
   width: 20px;
   height: 20px;
+}
+.RightSideButtonContainer .AddFriendButton:hover,
+.RightSideButtonContainer .oneOnOneVoiceChatButton:hover,
+.RightSideButtonContainer .inviteAnotherFriendButton:hover {
+  background-color: #2b333f;
+  transition: background-color 150ms ease-in;
 }
 .RightSideButtonContainer .oneOnOneVoiceChatButton {
   position: relative;
@@ -44052,6 +44305,7 @@ input.InviteFriendToChatDialog_LinkInput {
   border-width: 2px;
   animation-name: SonarPingGamepadUI;
   opacity: 1;
+  filter: blur(1px);
   mix-blend-mode: screen;
   transform-origin: center;
   box-sizing: border-box;

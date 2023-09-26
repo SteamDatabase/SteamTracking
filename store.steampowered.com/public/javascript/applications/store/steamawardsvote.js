@@ -148,24 +148,25 @@
     },
     32905: (e, t, n) => {
       "use strict";
-      n.d(t, { X: () => v, _: () => p });
+      n.d(t, { X: () => v, _: () => h });
       var r = n(89526),
         a = n(57742),
         o = n(14826),
         i = n(32765),
-        d = n(59100),
-        l = n(19094),
-        _ = n(79925);
-      function s(e) {
+        d = n(88390),
+        l = n(7786),
+        _ = n(19094),
+        s = n(79925);
+      function p(e) {
         return r.createElement(
           a.e1,
           { onEscKeypress: e.closeModal, bDisableBackgroundDismiss: !0 },
-          r.createElement(h, { redirectURL: e.redirectURL }),
+          r.createElement(c, { redirectURL: e.redirectURL }),
         );
       }
       function v() {
         (0, a.AM)(
-          r.createElement(s, {
+          r.createElement(p, {
             ownerWin: window,
             redirectURL: window.location.href,
           }),
@@ -173,17 +174,17 @@
           { strTitle: (0, o.Xx)("#Login_SignIn") },
         );
       }
-      function p(e) {
+      function h(e) {
         (0, a.AM)(
-          r.createElement(s, { ownerWin: window, redirectURL: e }),
+          r.createElement(p, { ownerWin: window, redirectURL: e }),
           window,
           { strTitle: (0, o.Xx)("#Login_SignIn") },
         );
       }
-      function h(e) {
+      function c(e) {
         const { redirectURL: t } = e,
           [n] = (0, r.useState)(
-            new l.J(i.De.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
+            new _.J(i.De.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
           ),
           [a, o] = (0, r.useState)(!1);
         return r.createElement(
@@ -194,9 +195,9 @@
             : r.createElement(d.wK, {
                 autoFocus: !0,
                 transport: n,
-                platform: 2,
+                platform: l.hn.k_EAuthTokenPlatformType_WebBrowser,
                 onComplete: (e) => {
-                  e == _.TG.k_PrimaryDomainFail
+                  e == s.TG.k_PrimaryDomainFail
                     ? o(!0)
                     : window.location.assign(t);
                 },

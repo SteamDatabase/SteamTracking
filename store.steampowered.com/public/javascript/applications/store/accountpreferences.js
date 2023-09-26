@@ -37,128 +37,468 @@
     66294: (e, t, r) => {
       "use strict";
       r.d(t, { p: () => _ });
-      var s = r(33940),
-        i = r(89526),
-        n = r(44026),
-        o = r(17589),
-        a = r(4306),
+      var i = r(33940),
+        n = r(89526),
+        a = r(44026),
+        s = r(17589),
+        o = r(4306),
         c = r(32765),
         l = r(94952);
       function _(e) {
         const { children: t, navTreeRef: r } = e,
-          _ = (0, s._T)(e, ["children", "navTreeRef"]),
-          m = i.useRef(),
-          f = (0, a.BE)(m, r),
-          g = (0, c.id)(),
-          d = window.__virtual_keyboard_client;
+          _ = (0, i._T)(e, ["children", "navTreeRef"]),
+          m = n.useRef(),
+          f = (0, o.BE)(m, r),
+          u = (0, c.id)(),
+          g = window.__virtual_keyboard_client;
         if (
-          ((0, i.useEffect)(() => {
-            l.Wz.SetHookFactory(() => d);
-          }, [d]),
-          g)
+          ((0, n.useEffect)(() => {
+            l.Wz.SetHookFactory(() => g);
+          }, [g]),
+          u)
         ) {
           const e = window.__nav_tree_root;
-          return i.createElement(
-            n.Fe,
+          return n.createElement(
+            a.Fe,
             Object.assign({}, _, {
               navTreeRef: f,
               secondary: !0,
               parentEmbeddedNavTree: e,
             }),
-            i.createElement(o.O, null, t),
+            n.createElement(s.O, null, t),
           );
         }
-        return i.createElement(i.Fragment, null, t);
+        return n.createElement(n.Fragment, null, t);
       }
     },
-    23217: (e, t, r) => {
+    38977: (e, t, r) => {
       "use strict";
-      r.d(t, { l: () => o });
-      var s = r(52868),
-        i = r.n(s),
-        n = r(54856);
-      function o(e) {
-        if (i().isCancel(e))
-          return { strErrorMsg: "Action Cancelled:" + e, errorCode: 52 };
-        if (
-          void 0 !== e.response &&
-          e.response.data &&
-          "object" == typeof e.response.data
-        ) {
-          if ("msg" in e.response.data)
-            return {
-              strErrorMsg: e.response.data.msg,
-              errorCode: e.response.data.success,
-            };
-          if ("err_msg" in e.response.data)
-            return {
-              strErrorMsg: e.response.data.err_msg,
-              errorCode: e.response.data.success,
-            };
-          if ("message" in e.response.data)
-            return {
-              strErrorMsg: e.response.data.message,
-              errorCode: e.response.data.success,
-            };
-          if ("success" in e.response.data)
-            return {
-              strErrorMsg: "error code: " + e.response.data.success,
-              errorCode: e.response.data.success,
-            };
-        } else if ("object" == typeof e.data) {
-          if ("msg" in e.data)
-            return { strErrorMsg: e.data.msg, errorCode: e.data.success };
-          if ("err_msg" in e.data)
-            return { strErrorMsg: e.data.err_msg, errorCode: e.data.success };
-          if ("message" in e.data)
-            return { strErrorMsg: e.data.message, errorCode: e.data.success };
-          if ("success" in e.data)
-            return {
-              strErrorMsg: "error code: " + e.data.success,
-              errorCode: e.data.success,
-            };
-        } else {
-          if (void 0 !== e.success && void 0 !== e.msg)
-            return { strErrorMsg: e.msg, errorCode: e.success };
-          if (void 0 !== e.success && void 0 !== e.message)
-            return { strErrorMsg: e.message, errorCode: e.success };
-          if (void 0 !== e.success && void 0 !== e.err_msg)
-            return { strErrorMsg: e.err_msg, errorCode: e.success };
-          if ("string" == typeof e && e.length > 1024)
-            console.groupCollapsed(
-              "GetMsgAndErrorCodeFromResponse cannot parse: ",
-            ),
-              console.warn(e),
-              console.groupEnd();
-          else {
-            if ("object" == typeof e && e instanceof n.gA)
-              return {
-                strErrorMsg: "" + e.GetEResult(),
-                errorCode: e.GetEResult(),
-              };
-            console.warn("GetMsgAndErrorCodeFromResponse cannot parse: ", e);
-          }
+      r.r(t), r.d(t, { AccountPreferencesRoutes: () => $, default: () => q });
+      var i = r(89526),
+        n = r(59934),
+        a = r(33940),
+        s = r(50265),
+        o = r(42735),
+        c = (r(23217), r(32765)),
+        l = r(45878),
+        _ = r(43898),
+        m = r(67328);
+      const f = l.Message;
+      var u, g, d;
+      !(function (e) {
+        (e[(e.k_EPrivacyCookiePreferenceState_DefaultAllowAll = 0)] =
+          "k_EPrivacyCookiePreferenceState_DefaultAllowAll"),
+          (e[(e.k_EPrivacyCookiePreferenceState_AllowAll = 1)] =
+            "k_EPrivacyCookiePreferenceState_AllowAll"),
+          (e[(e.k_EPrivacyCookiePreferenceState_RejectAll = 2)] =
+            "k_EPrivacyCookiePreferenceState_RejectAll"),
+          (e[(e.k_EPrivacyCookiePreferenceState_Customized = 3)] =
+            "k_EPrivacyCookiePreferenceState_Customized"),
+          (e[(e.k_EPrivacyCookiePreferenceState_DefaultRejectAll = 4)] =
+            "k_EPrivacyCookiePreferenceState_DefaultRejectAll");
+      })(u || (u = {})),
+        (function (e) {
+          (e[(e.k_EPrivacyCookiePreferencesVersion_Invalid = 0)] =
+            "k_EPrivacyCookiePreferencesVersion_Invalid"),
+            (e[(e.k_EPrivacyCookiePreferencesVersion_InitialRelease = 1)] =
+              "k_EPrivacyCookiePreferencesVersion_InitialRelease"),
+            (e[(e.k_EPrivacyCookiePreferencesVersion_LATEST = 1)] =
+              "k_EPrivacyCookiePreferencesVersion_LATEST");
+        })(g || (g = {}));
+      class y extends f {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            y.prototype.version || _.aR(y.M()),
+            f.initialize(this, e, 0, -1, void 0, null);
         }
-        return "object" == typeof e && "status" in e
-          ? {
-              strErrorMsg: "Unknown Error: " + e + "\nStatus Code:" + e.status,
-              errorCode: 2,
-            }
-          : { strErrorMsg: "Unknown Error: " + e, errorCode: 2 };
+        static M() {
+          return (
+            y.sm_m ||
+              (y.sm_m = {
+                proto: y,
+                fields: {
+                  version: { n: 1, br: _.FE.readEnum, bw: _.Xc.writeEnum },
+                  preference_state: {
+                    n: 2,
+                    br: _.FE.readEnum,
+                    bw: _.Xc.writeEnum,
+                  },
+                  content_customization: { n: 3, c: p },
+                  valve_analytics: { n: 4, c: P },
+                  third_party_analytics: { n: 5, c: k },
+                  third_party_content: { n: 6, c: h },
+                  utm_enabled: {
+                    n: 7,
+                    d: !0,
+                    br: _.FE.readBool,
+                    bw: _.Xc.writeBool,
+                  },
+                },
+              }),
+            y.sm_m
+          );
+        }
+        static MBF() {
+          return y.sm_mbf || (y.sm_mbf = _.Bh(y.M())), y.sm_mbf;
+        }
+        toObject(e = !1) {
+          return y.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return _.TA(y.M(), e, t);
+        }
+        static fromObject(e) {
+          return _.aD(y.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new l.BinaryReader(e),
+            r = new y();
+          return y.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return _.F(y.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new l.BinaryWriter();
+          return y.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          _.l2(y.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new l.BinaryWriter();
+          return y.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CAccountPrivacyCookiePreferences";
+        }
       }
-    },
-    14491: (e, t, r) => {
-      "use strict";
-      r.r(t), r.d(t, { AccountPreferencesRoutes: () => B, default: () => R });
-      var s = r(89526),
-        i = r(59934),
-        n = r(33940),
-        o = r(50265),
-        a = (r(23217), r(32765)),
-        c = r(52868),
-        l = r.n(c),
-        _ = r(14826);
-      class m {
+      class p extends f {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            p.prototype.recentapps || _.aR(p.M()),
+            f.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            p.sm_m ||
+              (p.sm_m = {
+                proto: p,
+                fields: {
+                  recentapps: { n: 1, br: _.FE.readBool, bw: _.Xc.writeBool },
+                },
+              }),
+            p.sm_m
+          );
+        }
+        static MBF() {
+          return p.sm_mbf || (p.sm_mbf = _.Bh(p.M())), p.sm_mbf;
+        }
+        toObject(e = !1) {
+          return p.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return _.TA(p.M(), e, t);
+        }
+        static fromObject(e) {
+          return _.aD(p.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new l.BinaryReader(e),
+            r = new p();
+          return p.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return _.F(p.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new l.BinaryWriter();
+          return p.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          _.l2(p.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new l.BinaryWriter();
+          return p.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CAccountPrivacyCookiePreferences_ContentCustomization";
+        }
+      }
+      class P extends f {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            P.prototype.product_impressions_tracking || _.aR(P.M()),
+            f.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            P.sm_m ||
+              (P.sm_m = {
+                proto: P,
+                fields: {
+                  product_impressions_tracking: {
+                    n: 1,
+                    br: _.FE.readBool,
+                    bw: _.Xc.writeBool,
+                  },
+                },
+              }),
+            P.sm_m
+          );
+        }
+        static MBF() {
+          return P.sm_mbf || (P.sm_mbf = _.Bh(P.M())), P.sm_mbf;
+        }
+        toObject(e = !1) {
+          return P.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return _.TA(P.M(), e, t);
+        }
+        static fromObject(e) {
+          return _.aD(P.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new l.BinaryReader(e),
+            r = new P();
+          return P.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return _.F(P.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new l.BinaryWriter();
+          return P.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          _.l2(P.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new l.BinaryWriter();
+          return P.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CAccountPrivacyCookiePreferences_ValveAnalytics";
+        }
+      }
+      class k extends f {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            k.prototype.google_analytics || _.aR(k.M()),
+            f.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            k.sm_m ||
+              (k.sm_m = {
+                proto: k,
+                fields: {
+                  google_analytics: {
+                    n: 1,
+                    br: _.FE.readBool,
+                    bw: _.Xc.writeBool,
+                  },
+                },
+              }),
+            k.sm_m
+          );
+        }
+        static MBF() {
+          return k.sm_mbf || (k.sm_mbf = _.Bh(k.M())), k.sm_mbf;
+        }
+        toObject(e = !1) {
+          return k.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return _.TA(k.M(), e, t);
+        }
+        static fromObject(e) {
+          return _.aD(k.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new l.BinaryReader(e),
+            r = new k();
+          return k.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return _.F(k.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new l.BinaryWriter();
+          return k.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          _.l2(k.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new l.BinaryWriter();
+          return k.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CAccountPrivacyCookiePreferences_ThirdPartyAnalytics";
+        }
+      }
+      class h extends f {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            h.prototype.youtube || _.aR(h.M()),
+            f.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            h.sm_m ||
+              (h.sm_m = {
+                proto: h,
+                fields: {
+                  youtube: { n: 1, br: _.FE.readBool, bw: _.Xc.writeBool },
+                  vimeo: { n: 2, br: _.FE.readBool, bw: _.Xc.writeBool },
+                  sketchfab: { n: 3, br: _.FE.readBool, bw: _.Xc.writeBool },
+                  twitter: { n: 4, br: _.FE.readBool, bw: _.Xc.writeBool },
+                },
+              }),
+            h.sm_m
+          );
+        }
+        static MBF() {
+          return h.sm_mbf || (h.sm_mbf = _.Bh(h.M())), h.sm_mbf;
+        }
+        toObject(e = !1) {
+          return h.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return _.TA(h.M(), e, t);
+        }
+        static fromObject(e) {
+          return _.aD(h.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new l.BinaryReader(e),
+            r = new h();
+          return h.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return _.F(h.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new l.BinaryWriter();
+          return h.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          _.l2(h.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new l.BinaryWriter();
+          return h.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CAccountPrivacyCookiePreferences_ThirdPartyContent";
+        }
+      }
+      class E extends f {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(), f.initialize(this, e, 0, -1, void 0, null);
+        }
+        toObject(e = !1) {
+          return E.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return e ? { $jspbMessageInstance: t } : {};
+        }
+        static fromObject(e) {
+          return new E();
+        }
+        static deserializeBinary(e) {
+          let t = new l.BinaryReader(e),
+            r = new E();
+          return E.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return e;
+        }
+        serializeBinary() {
+          var e = new l.BinaryWriter();
+          return E.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {}
+        serializeBase64String() {
+          var e = new l.BinaryWriter();
+          return E.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CAccountPrivacy_GetCookiePreferences_Request";
+        }
+      }
+      class v extends f {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            v.prototype.preferences || _.aR(v.M()),
+            f.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            v.sm_m ||
+              (v.sm_m = { proto: v, fields: { preferences: { n: 1, c: y } } }),
+            v.sm_m
+          );
+        }
+        static MBF() {
+          return v.sm_mbf || (v.sm_mbf = _.Bh(v.M())), v.sm_mbf;
+        }
+        toObject(e = !1) {
+          return v.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return _.TA(v.M(), e, t);
+        }
+        static fromObject(e) {
+          return _.aD(v.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new l.BinaryReader(e),
+            r = new v();
+          return v.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return _.F(v.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new l.BinaryWriter();
+          return v.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          _.l2(v.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new l.BinaryWriter();
+          return v.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CAccountPrivacy_GetCookiePreferences_Response";
+        }
+      }
+      !(function (e) {
+        e.GetCookiePreferences = function (e, t) {
+          return e.SendMsg(
+            "AccountPrivacy.GetCookiePreferences#1",
+            (0, m.MD)(E, t),
+            v,
+            { ePrivilege: 1 },
+          );
+        };
+      })(d || (d = {}));
+      var C = r(52868),
+        S = r.n(C),
+        N = r(14826);
+      class T {
         constructor(e) {
           (this.m_Preferences = e),
             (this.m_Preferences.content_customization &&
@@ -176,8 +516,10 @@
             (void 0 !== this.m_Preferences.utm_enabled &&
               null !== this.m_Preferences.utm_enabled) ||
               (this.m_Preferences.utm_enabled = !0),
-            (0 != this.m_Preferences.preference_state &&
-              1 != this.m_Preferences.preference_state) ||
+            (this.m_Preferences.preference_state !=
+              u.k_EPrivacyCookiePreferenceState_DefaultAllowAll &&
+              this.m_Preferences.preference_state !=
+                u.k_EPrivacyCookiePreferenceState_AllowAll) ||
               ((this.m_Preferences.valve_analytics.product_impressions_tracking =
                 !0),
               (this.m_Preferences.content_customization.recentapps = !0),
@@ -186,7 +528,10 @@
               (this.m_Preferences.third_party_content.twitter = !0),
               (this.m_Preferences.third_party_content.vimeo = !0),
               (this.m_Preferences.third_party_content.youtube = !0)),
-            0 == this.m_Preferences.version && (this.m_Preferences.version = 1);
+            this.m_Preferences.version ==
+              g.k_EPrivacyCookiePreferencesVersion_Invalid &&
+              (this.m_Preferences.version =
+                g.k_EPrivacyCookiePreferencesVersion_LATEST);
         }
         GetVersion() {
           return this.m_Preferences.version;
@@ -196,17 +541,26 @@
         }
         BIsAllowAll() {
           return (
-            1 == this.m_Preferences.preference_state ||
-            0 == this.m_Preferences.preference_state
+            this.m_Preferences.preference_state ==
+              u.k_EPrivacyCookiePreferenceState_AllowAll ||
+            this.m_Preferences.preference_state ==
+              u.k_EPrivacyCookiePreferenceState_DefaultAllowAll
           );
         }
         BIsRejectAll() {
-          return 2 == this.m_Preferences.preference_state;
+          return (
+            this.m_Preferences.preference_state ==
+            u.k_EPrivacyCookiePreferenceState_RejectAll
+          );
         }
         SetPreferenceState(e) {
           if (this.m_Preferences.preference_state != e) {
-            if (((this.m_Preferences.preference_state = e), 1 == e || 2 == e)) {
-              let t = 1 == e;
+            if (
+              ((this.m_Preferences.preference_state = e),
+              e == u.k_EPrivacyCookiePreferenceState_AllowAll ||
+                e == u.k_EPrivacyCookiePreferenceState_RejectAll)
+            ) {
+              let t = e == u.k_EPrivacyCookiePreferenceState_AllowAll;
               (this.m_Preferences.content_customization.recentapps = t),
                 (this.m_Preferences.third_party_analytics.google_analytics = t),
                 (this.m_Preferences.third_party_content.sketchfab = t),
@@ -268,43 +622,43 @@
             this.PostCookieSettings();
         }
         ProcessToggle() {
-          (this.m_Preferences.preference_state = 3), this.PostCookieSettings();
+          (this.m_Preferences.preference_state =
+            u.k_EPrivacyCookiePreferenceState_Customized),
+            this.PostCookieSettings();
         }
         PostCookieSettings() {
           var e, t;
-          return (0, n.mG)(this, void 0, void 0, function* () {
-            const r = a.De.STORE_BASE_URL + "account/ajaxsetcookiepreferences",
-              s = new FormData();
-            s.set("sessionid", a.De.SESSIONID),
-              s.append("cookiepreferences", JSON.stringify(this.m_Preferences));
+          return (0, a.mG)(this, void 0, void 0, function* () {
+            const r = c.De.STORE_BASE_URL + "account/ajaxsetcookiepreferences",
+              i = new FormData();
+            i.set("sessionid", c.De.SESSIONID),
+              i.append("cookiepreferences", JSON.stringify(this.m_Preferences));
             try {
-              let i = yield l().post(r, s, { withCredentials: !0 });
+              let n = yield S().post(r, i, { withCredentials: !0 });
               if (
-                200 != i.status ||
-                1 !=
-                  (null === (e = null == i ? void 0 : i.data) || void 0 === e
-                    ? void 0
-                    : e.success)
+                200 != n.status ||
+                (null === (e = null == n ? void 0 : n.data) || void 0 === e
+                  ? void 0
+                  : e.success) != o.s.k_EResultOK
               )
                 window.ShowAlertDialog(
-                  (0, _.Xx)("#CookiePref_Error"),
-                  (0, _.Xx)("#CookiePref_ErrorNotSaved"),
+                  (0, N.Xx)("#CookiePref_Error"),
+                  (0, N.Xx)("#CookiePref_ErrorNotSaved"),
                 );
               else if (
-                1 ==
-                (null === (t = null == i ? void 0 : i.data) || void 0 === t
+                (null === (t = null == n ? void 0 : n.data) || void 0 === t
                   ? void 0
-                  : t.success)
+                  : t.success) == o.s.k_EResultOK
               ) {
                 0;
-                const { transfer_urls: e, transfer_params: t } = i.data;
+                const { transfer_urls: e, transfer_params: t } = n.data;
                 e && t && this.TransferCookiePreferencesToSites(e, t);
               }
             } catch (e) {
               0,
                 window.ShowAlertDialog(
-                  (0, _.Xx)("#CookiePref_Error"),
-                  (0, _.Xx)("#CookiePref_ErrorNotSaved"),
+                  (0, N.Xx)("#CookiePref_Error"),
+                  (0, N.Xx)("#CookiePref_ErrorNotSaved"),
                 );
             }
           });
@@ -312,408 +666,409 @@
         TransferCookiePreferencesToSites(e, t) {
           const r = new FormData();
           r.set("transfer_params", t);
-          for (const t of e) l().post(t, r);
+          for (const t of e) S().post(t, r);
         }
       }
-      (0, n.gn)([o.LO], m.prototype, "m_Preferences", void 0);
-      var f = r(88464),
-        g = r(57605),
-        d = r(74929),
-        p = r(19304),
-        u = r(51438),
-        h = r(83145),
-        P = r(66294),
-        k = r(44026);
-      let E;
-      const N = (0, f.Pi)(() => {
+      (0, a.gn)([s.LO], T.prototype, "m_Preferences", void 0);
+      var B = r(88464),
+        b = r(57605),
+        w = r(74929),
+        A = r(19304),
+        z = r(51438),
+        D = r(83145),
+        R = r(66294),
+        X = r(44026);
+      let x;
+      const M = (0, B.Pi)(() => {
           let e = (function () {
-            if (!E) {
-              let e = (0, a.kQ)("cookiepreferences", "application_config");
-              E = new m(e);
+            if (!x) {
+              let e = (0, c.kQ)("cookiepreferences", "application_config");
+              x = new T(e);
             }
-            return E;
+            return x;
           })();
-          const t = (0, h.L)(),
-            r = (0, s.useCallback)(() => {
-              e.SetPreferenceState(1);
+          const t = (0, D.L)(),
+            r = (0, i.useCallback)(() => {
+              e.SetPreferenceState(u.k_EPrivacyCookiePreferenceState_AllowAll);
             }, [e]),
-            i = (0, s.useCallback)(() => {
-              e.SetPreferenceState(2);
+            n = (0, i.useCallback)(() => {
+              e.SetPreferenceState(u.k_EPrivacyCookiePreferenceState_RejectAll);
             }, [e]);
-          return s.createElement(
-            P.p,
+          return i.createElement(
+            R.p,
             { navID: "StoreCookiesSettings", NavigationManager: t },
-            s.createElement(
+            i.createElement(
               "div",
               {
-                className: (0, p.Z)(
-                  d.CookieSettingsHeader,
+                className: (0, A.Z)(
+                  w.CookieSettingsHeader,
                   "account_header_line noicon",
                 ),
               },
-              s.createElement(
+              i.createElement(
                 "div",
                 null,
-                (0, _.Xx)("#CookiePref_OptionalCookies_Title"),
+                (0, N.Xx)("#CookiePref_OptionalCookies_Title"),
               ),
             ),
-            s.createElement(
+            i.createElement(
               "div",
               { className: "account_settings_container" },
-              s.createElement(
-                u.s,
-                { "flow-children": "row", className: d.ButtonGroup },
-                s.createElement(
-                  k.Ks,
+              i.createElement(
+                z.s,
+                { "flow-children": "row", className: w.ButtonGroup },
+                i.createElement(
+                  X.Ks,
                   {
-                    className: (0, p.Z)(
-                      d.AllButton,
-                      e.BIsRejectAll() ? d.ButtonHighlight : "",
+                    className: (0, A.Z)(
+                      w.AllButton,
+                      e.BIsRejectAll() ? w.ButtonHighlight : "",
                     ),
-                    onClick: i,
+                    onClick: n,
                   },
-                  (0, _.Xx)("#CookiePref_RejectAll"),
+                  (0, N.Xx)("#CookiePref_RejectAll"),
                 ),
-                s.createElement(
-                  k.Ks,
+                i.createElement(
+                  X.Ks,
                   {
-                    className: (0, p.Z)(
-                      d.AllButton,
-                      e.BIsAllowAll() ? d.ButtonHighlight : "",
+                    className: (0, A.Z)(
+                      w.AllButton,
+                      e.BIsAllowAll() ? w.ButtonHighlight : "",
                     ),
                     onClick: r,
                   },
-                  (0, _.Xx)("#CookiePref_AcceptAll"),
+                  (0, N.Xx)("#CookiePref_AcceptAll"),
                 ),
               ),
-              s.createElement(C, { settings: e }),
-              s.createElement(y, { settings: e }),
-              s.createElement(v, { settings: e }),
+              i.createElement(F, { settings: e }),
+              i.createElement(O, { settings: e }),
+              i.createElement(G, { settings: e }),
             ),
-            s.createElement(
+            i.createElement(
               "div",
               {
-                className: (0, p.Z)(
-                  d.CookieSettingsHeader,
+                className: (0, A.Z)(
+                  w.CookieSettingsHeader,
                   "account_header_line noicon",
                 ),
               },
-              s.createElement(
+              i.createElement(
                 "div",
                 null,
-                (0, _.Xx)("#CookiePref_TechnicallyNeccesary_Title"),
+                (0, N.Xx)("#CookiePref_TechnicallyNeccesary_Title"),
               ),
             ),
-            s.createElement(
+            i.createElement(
               "div",
               { className: "account_settings_container" },
-              s.createElement(
+              i.createElement(
                 "p",
                 null,
-                (0, _.Xx)("#CookiePref_TechnicallyNeccesary_Desc"),
+                (0, N.Xx)("#CookiePref_TechnicallyNeccesary_Desc"),
               ),
-              s.createElement(
+              i.createElement(
                 "div",
-                { className: d.CookieGroup },
-                s.createElement(
+                { className: w.CookieGroup },
+                i.createElement(
                   "div",
-                  { className: d.NecessaryGroup },
-                  s.createElement(
+                  { className: w.NecessaryGroup },
+                  i.createElement(
                     "span",
-                    { className: d.NecessaryTitle },
-                    (0, _.Xx)("#CookiePref_SessionID_Title"),
+                    { className: w.NecessaryTitle },
+                    (0, N.Xx)("#CookiePref_SessionID_Title"),
                   ),
-                  s.createElement(
+                  i.createElement(
                     "span",
-                    { className: d.NecessaryDesc },
-                    (0, _.Xx)("#CookiePref_SessionID_Desc"),
+                    { className: w.NecessaryDesc },
+                    (0, N.Xx)("#CookiePref_SessionID_Desc"),
                   ),
                 ),
-                s.createElement(
+                i.createElement(
                   "div",
-                  { className: d.NecessaryGroup },
-                  s.createElement(
+                  { className: w.NecessaryGroup },
+                  i.createElement(
                     "span",
-                    { className: d.NecessaryTitle },
-                    (0, _.Xx)("#CookiePref_ShoppingCart_Title"),
+                    { className: w.NecessaryTitle },
+                    (0, N.Xx)("#CookiePref_ShoppingCart_Title"),
                   ),
-                  s.createElement(
+                  i.createElement(
                     "span",
-                    { className: d.NecessaryDesc },
-                    (0, _.Xx)("#CookiePref_ShoppingCart_Desc"),
+                    { className: w.NecessaryDesc },
+                    (0, N.Xx)("#CookiePref_ShoppingCart_Desc"),
                   ),
                 ),
-                s.createElement(
+                i.createElement(
                   "div",
-                  { className: d.NecessaryGroup },
-                  s.createElement(
+                  { className: w.NecessaryGroup },
+                  i.createElement(
                     "span",
-                    { className: d.NecessaryTitle },
-                    (0, _.Xx)("#CookiePref_SteamCountry_Title"),
+                    { className: w.NecessaryTitle },
+                    (0, N.Xx)("#CookiePref_SteamCountry_Title"),
                   ),
-                  s.createElement(
+                  i.createElement(
                     "span",
-                    { className: d.NecessaryDesc },
-                    (0, _.Xx)("#CookiePref_SteamCountry_Desc"),
+                    { className: w.NecessaryDesc },
+                    (0, N.Xx)("#CookiePref_SteamCountry_Desc"),
                   ),
                 ),
-                s.createElement(
+                i.createElement(
                   "div",
-                  { className: d.NecessaryGroup },
-                  s.createElement(
+                  { className: w.NecessaryGroup },
+                  i.createElement(
                     "span",
-                    { className: d.NecessaryTitle },
-                    (0, _.Xx)("#CookiePref_Timezone_Title"),
+                    { className: w.NecessaryTitle },
+                    (0, N.Xx)("#CookiePref_Timezone_Title"),
                   ),
-                  s.createElement(
+                  i.createElement(
                     "span",
-                    { className: d.NecessaryDesc },
-                    (0, _.Xx)("#CookiePref_Timezone_Desc"),
+                    { className: w.NecessaryDesc },
+                    (0, N.Xx)("#CookiePref_Timezone_Desc"),
                   ),
                 ),
-                s.createElement(
+                i.createElement(
                   "div",
-                  { className: d.NecessaryGroup },
-                  s.createElement(
+                  { className: w.NecessaryGroup },
+                  i.createElement(
                     "span",
-                    { className: d.NecessaryTitle },
-                    (0, _.Xx)("#CookiePref_BirthTime_Title"),
+                    { className: w.NecessaryTitle },
+                    (0, N.Xx)("#CookiePref_BirthTime_Title"),
                   ),
-                  s.createElement(
+                  i.createElement(
                     "span",
-                    { className: d.NecessaryDesc },
-                    (0, _.Xx)("#CookiePref_BirthTime_Desc"),
+                    { className: w.NecessaryDesc },
+                    (0, N.Xx)("#CookiePref_BirthTime_Desc"),
                   ),
                 ),
-                s.createElement(
+                i.createElement(
                   "div",
-                  { className: d.NecessaryGroup },
-                  s.createElement(
+                  { className: w.NecessaryGroup },
+                  i.createElement(
                     "span",
-                    { className: d.NecessaryTitle },
-                    (0, _.Xx)("#CookiePref_Login_Title"),
+                    { className: w.NecessaryTitle },
+                    (0, N.Xx)("#CookiePref_Login_Title"),
                   ),
-                  s.createElement(
+                  i.createElement(
                     "span",
-                    { className: d.NecessaryDesc },
-                    (0, _.Xx)("#CookiePref_Login_Desc"),
+                    { className: w.NecessaryDesc },
+                    (0, N.Xx)("#CookiePref_Login_Desc"),
                   ),
                 ),
-                s.createElement(
+                i.createElement(
                   "div",
-                  { className: d.NecessaryGroup },
-                  s.createElement(
+                  { className: w.NecessaryGroup },
+                  i.createElement(
                     "span",
-                    { className: d.NecessaryTitle },
-                    (0, _.Xx)("#CookiePref_Language_Title"),
+                    { className: w.NecessaryTitle },
+                    (0, N.Xx)("#CookiePref_Language_Title"),
                   ),
-                  s.createElement(
+                  i.createElement(
                     "span",
-                    { className: d.NecessaryDesc },
-                    (0, _.Xx)("#CookiePref_Language_Desc"),
+                    { className: w.NecessaryDesc },
+                    (0, N.Xx)("#CookiePref_Language_Desc"),
                   ),
                 ),
-                s.createElement(
+                i.createElement(
                   "div",
-                  { className: d.NecessaryGroup },
-                  s.createElement(
+                  { className: w.NecessaryGroup },
+                  i.createElement(
                     "span",
-                    { className: d.NecessaryTitle },
-                    (0, _.Xx)("#CookiePref_CookieSettings_Title"),
+                    { className: w.NecessaryTitle },
+                    (0, N.Xx)("#CookiePref_CookieSettings_Title"),
                   ),
-                  s.createElement(
+                  i.createElement(
                     "span",
-                    { className: d.NecessaryDesc },
-                    (0, _.Xx)("#CookiePref_CookieSettings_Desc"),
+                    { className: w.NecessaryDesc },
+                    (0, N.Xx)("#CookiePref_CookieSettings_Desc"),
                   ),
                 ),
               ),
             ),
-            s.createElement(
+            i.createElement(
               "div",
               {
-                className: (0, p.Z)(
-                  d.CookieSettingsHeader,
+                className: (0, A.Z)(
+                  w.CookieSettingsHeader,
                   "account_header_line noicon",
                 ),
               },
-              s.createElement(
+              i.createElement(
                 "div",
                 null,
-                (0, _.Xx)("#PrivacySettings_Marketing_Header"),
+                (0, N.Xx)("#PrivacySettings_Marketing_Header"),
               ),
             ),
-            s.createElement(
+            i.createElement(
               "div",
               { className: "account_settings_container" },
-              s.createElement(S, { settings: e }),
+              i.createElement(j, { settings: e }),
             ),
             null,
           );
         }),
-        C = (0, f.Pi)((e) => {
+        F = (0, B.Pi)((e) => {
           const { settings: t } = e,
-            r = (0, s.useCallback)(() => {
+            r = (0, i.useCallback)(() => {
               t.ToggleRecentApps();
             }, [t]);
-          return s.createElement(
+          return i.createElement(
             "div",
-            { className: d.CookieGroup },
-            s.createElement(
+            { className: w.CookieGroup },
+            i.createElement(
               "div",
-              { className: d.CookieSection },
-              s.createElement(
+              { className: w.CookieSection },
+              i.createElement(
                 "h2",
                 null,
-                (0, _.Xx)("#CookiePref_Content_Title"),
+                (0, N.Xx)("#CookiePref_Content_Title"),
               ),
-              s.createElement(
+              i.createElement(
                 "p",
-                { className: d.SectionDescription },
-                (0, _.Xx)("#CookiePref_Content_Desc"),
+                { className: w.SectionDescription },
+                (0, N.Xx)("#CookiePref_Content_Desc"),
               ),
-              s.createElement(g.gE, {
+              i.createElement(b.gE, {
                 onChange: r,
-                label: (0, _.Xx)("#CookiePref_Content_ToggleTitle"),
+                label: (0, N.Xx)("#CookiePref_Content_ToggleTitle"),
                 checked: t.GetRecentApps(),
-                description: (0, _.Xx)("#CookiePref_Content_ToggleDesc"),
+                description: (0, N.Xx)("#CookiePref_Content_ToggleDesc"),
               }),
             ),
           );
         }),
-        y = (0, f.Pi)((e) => {
+        O = (0, B.Pi)((e) => {
           const { settings: t } = e,
-            r = (0, s.useCallback)(() => {
+            r = (0, i.useCallback)(() => {
               t.ToggleImpressions();
             }, [t]);
-          return s.createElement(
+          return i.createElement(
             "div",
-            { className: d.CookieGroup },
-            s.createElement(
+            { className: w.CookieGroup },
+            i.createElement(
               "div",
-              { className: d.CookieSection },
-              s.createElement(
+              { className: w.CookieSection },
+              i.createElement(
                 "h2",
                 null,
-                (0, _.Xx)("#CookiePref_ValveAnalytics_Title"),
+                (0, N.Xx)("#CookiePref_ValveAnalytics_Title"),
               ),
-              s.createElement(
+              i.createElement(
                 "p",
-                { className: d.SectionDescription },
-                (0, _.Xx)("#CookiePref_ValveAnalytics_Desc"),
+                { className: w.SectionDescription },
+                (0, N.Xx)("#CookiePref_ValveAnalytics_Desc"),
               ),
-              s.createElement(g.gE, {
+              i.createElement(b.gE, {
                 onChange: r,
-                label: (0, _.Xx)("#CookiePref_ValveAnalytics_ToggleTitle"),
+                label: (0, N.Xx)("#CookiePref_ValveAnalytics_ToggleTitle"),
                 checked: t.GetImpressions(),
-                description: (0, _.Xx)("#CookiePref_ValveAnalytics_ToggleDesc"),
+                description: (0, N.Xx)("#CookiePref_ValveAnalytics_ToggleDesc"),
               }),
             ),
           );
         }),
-        v = (0, f.Pi)((e) => {
+        G = (0, B.Pi)((e) => {
           const { settings: t } = e,
-            r = (0, s.useCallback)(() => {
+            r = (0, i.useCallback)(() => {
               t.ToggleYouTube();
             }, [t]),
-            i = (0, s.useCallback)(() => {
+            n = (0, i.useCallback)(() => {
               t.ToggleVimeo();
             }, [t]),
-            n = (0, s.useCallback)(() => {
+            a = (0, i.useCallback)(() => {
               t.ToggleSketchfab();
             }, [t]);
-          return s.createElement(
+          return i.createElement(
             "div",
-            { className: d.CookieGroup },
-            s.createElement(
+            { className: w.CookieGroup },
+            i.createElement(
               "div",
-              { className: d.CookieSection },
-              s.createElement(
+              { className: w.CookieSection },
+              i.createElement(
                 "h2",
                 null,
-                (0, _.Xx)("#CookiePref_ThirdParty_Title"),
+                (0, N.Xx)("#CookiePref_ThirdParty_Title"),
               ),
-              s.createElement(
+              i.createElement(
                 "p",
-                { className: d.SectionDescription },
-                (0, _.Xx)("#CookiePref_ThirdParty_Desc"),
+                { className: w.SectionDescription },
+                (0, N.Xx)("#CookiePref_ThirdParty_Desc"),
               ),
-              s.createElement(g.gE, {
+              i.createElement(b.gE, {
                 onChange: r,
-                label: (0, _.Xx)("#CookiePref_YouTube_Title"),
+                label: (0, N.Xx)("#CookiePref_YouTube_Title"),
                 checked: t.GetYouTube(),
-                description: (0, _.kQ)(
+                description: (0, N.kQ)(
                   "#CookiePref_YouTube_Desc",
-                  s.createElement(
+                  i.createElement(
                     "a",
                     {
                       href: "https://policies.google.com/privacy",
                       target: "_blank",
                     },
-                    (0, _.Xx)("#CookiePref_YouTube_TogglePolicyName"),
+                    (0, N.Xx)("#CookiePref_YouTube_TogglePolicyName"),
                   ),
                 ),
               }),
-              s.createElement(g.gE, {
-                onChange: i,
-                label: (0, _.Xx)("#CookiePref_Vimeo_Title"),
+              i.createElement(b.gE, {
+                onChange: n,
+                label: (0, N.Xx)("#CookiePref_Vimeo_Title"),
                 checked: t.GetVimeo(),
-                description: (0, _.kQ)(
+                description: (0, N.kQ)(
                   "#CookiePref_Vimeo_Desc",
-                  s.createElement(
+                  i.createElement(
                     "a",
                     { href: "https://vimeo.com/privacy", target: "_blank" },
-                    (0, _.Xx)("#CookiePref_Vimeo_TogglePolicyName"),
+                    (0, N.Xx)("#CookiePref_Vimeo_TogglePolicyName"),
                   ),
                 ),
               }),
-              s.createElement(g.gE, {
-                onChange: n,
-                label: (0, _.Xx)("#CookiePref_Sketchfab_Title"),
+              i.createElement(b.gE, {
+                onChange: a,
+                label: (0, N.Xx)("#CookiePref_Sketchfab_Title"),
                 checked: t.GetSketchfab(),
-                description: (0, _.kQ)(
+                description: (0, N.kQ)(
                   "#CookiePref_Sketchfab_Desc",
-                  s.createElement(
+                  i.createElement(
                     "a",
                     { href: "https://sketchfab.com/privacy", target: "_blank" },
-                    (0, _.Xx)("#CookiePref_Sketchfab_TogglePolicyName"),
+                    (0, N.Xx)("#CookiePref_Sketchfab_TogglePolicyName"),
                   ),
                 ),
               }),
             ),
           );
         }),
-        S = (0, f.Pi)((e) => {
+        j = (0, B.Pi)((e) => {
           const { settings: t } = e,
-            r = (0, s.useCallback)(() => {
+            r = (0, i.useCallback)(() => {
               t.ToggleUTMEnabled();
             }, [t]);
-          return s.createElement(
+          return i.createElement(
             "div",
-            { className: d.CookieGroup },
-            s.createElement(
+            { className: w.CookieGroup },
+            i.createElement(
               "div",
-              { className: d.CookieSection },
-              s.createElement(
+              { className: w.CookieSection },
+              i.createElement(
                 "h2",
                 null,
-                (0, _.Xx)("#PrivacySettings_Marketing_Title"),
+                (0, N.Xx)("#PrivacySettings_Marketing_Title"),
               ),
-              s.createElement(
+              i.createElement(
                 "p",
-                { className: d.SectionDescription },
-                (0, _.Xx)("#PrivacySettings_Marketing_Desc"),
+                { className: w.SectionDescription },
+                (0, N.Xx)("#PrivacySettings_Marketing_Desc"),
               ),
-              s.createElement(g.gE, {
+              i.createElement(b.gE, {
                 onChange: r,
-                label: (0, _.Xx)("#PrivacySettings_UTM_ToggleLabel"),
+                label: (0, N.Xx)("#PrivacySettings_UTM_ToggleLabel"),
                 checked: t.GetUTMEnabled(),
-                description: (0, _.Xx)("#PrivacySettings_UTM_ToggleDesc"),
+                description: (0, N.Xx)("#PrivacySettings_UTM_ToggleDesc"),
               }),
             ),
           );
         });
-      class T {
+      var W = r(70534);
+      class I {
         constructor(e) {
           (this.m_bUpdating = !1), (this.m_Preferences = e);
         }
@@ -726,11 +1081,14 @@
         ToggleTargetPreference(e, t) {
           this.m_bUpdating = !0;
           let r = !1;
-          for (let s of this.m_Preferences)
-            if (t.notification_type == s.notification_type) {
-              (s.notification_targets ^= e),
-                1 != (1 & s.notification_targets) &&
-                  (s.notification_targets = 0),
+          for (let i of this.m_Preferences)
+            if (t.notification_type == i.notification_type) {
+              (i.notification_targets ^= e),
+                (i.notification_targets &
+                  W._C.k_ESteamNotificationTarget_NotificationFeed) !=
+                  W._C.k_ESteamNotificationTarget_NotificationFeed &&
+                  (i.notification_targets =
+                    W._C.k_ESteamNotificationTarget_Invalid),
                 (r = !0);
               break;
             }
@@ -738,199 +1096,217 @@
         }
         PostNotificationSettings() {
           var e, t;
-          return (0, n.mG)(this, void 0, void 0, function* () {
+          return (0, a.mG)(this, void 0, void 0, function* () {
             const r =
-                a.De.STORE_BASE_URL + "account/ajaxsetnotificationsettings",
-              s = new FormData();
-            s.set("sessionid", a.De.SESSIONID),
-              s.append(
+                c.De.STORE_BASE_URL + "account/ajaxsetnotificationsettings",
+              i = new FormData();
+            i.set("sessionid", c.De.SESSIONID),
+              i.append(
                 "notificationpreferences",
                 JSON.stringify(this.m_Preferences),
               );
             try {
-              let i = yield l().post(r, s, { withCredentials: !0 });
-              200 != i.status ||
-              1 !=
-                (null === (e = null == i ? void 0 : i.data) || void 0 === e
-                  ? void 0
-                  : e.success)
+              let n = yield S().post(r, i, { withCredentials: !0 });
+              200 != n.status ||
+              (null === (e = null == n ? void 0 : n.data) || void 0 === e
+                ? void 0
+                : e.success) != o.s.k_EResultOK
                 ? window.ShowAlertDialog(
-                    (0, _.Xx)("#NotificationPref_Error"),
-                    (0, _.Xx)("#NotificationPref_ErrorNotSaved"),
+                    (0, N.Xx)("#NotificationPref_Error"),
+                    (0, N.Xx)("#NotificationPref_ErrorNotSaved"),
                   )
-                : null === (t = null == i ? void 0 : i.data) ||
-                  void 0 === t ||
-                  t.success;
+                : (null === (t = null == n ? void 0 : n.data) ||
+                    void 0 === t ||
+                    t.success,
+                  o.s.k_EResultOK);
             } catch (e) {
               0,
                 window.ShowAlertDialog(
-                  (0, _.Xx)("#NotificationPref_Error"),
-                  (0, _.Xx)("#NotificationPref_ErrorNotSaved"),
+                  (0, N.Xx)("#NotificationPref_Error"),
+                  (0, N.Xx)("#NotificationPref_ErrorNotSaved"),
                 );
             }
           });
         }
       }
-      (0, n.gn)([o.LO], T.prototype, "m_Preferences", void 0),
-        (0, n.gn)([o.LO], T.prototype, "m_bUpdating", void 0);
-      var b = r(16480),
-        D = r(16826);
-      let x;
-      function X() {
-        if (!x) {
-          let e = (0, a.kQ)("notificationpreferences", "application_config");
-          x = new T(e);
+      (0, a.gn)([s.LO], I.prototype, "m_Preferences", void 0),
+        (0, a.gn)([s.LO], I.prototype, "m_bUpdating", void 0);
+      var V = r(16480),
+        H = r(16826);
+      let L;
+      function U() {
+        if (!L) {
+          let e = (0, c.kQ)("notificationpreferences", "application_config");
+          L = new I(e);
         }
-        return x;
+        return L;
       }
-      const G = (0, f.Pi)(() => {
-          let e = X();
-          const t = (0, h.L)();
+      const Y = (0, B.Pi)(() => {
+          let e = U();
+          const t = (0, D.L)();
           let r = [];
           for (const t of e.GetPreferences())
-            r.push(s.createElement(A, { preferenceSetting: t }));
-          return s.createElement(
-            P.p,
+            r.push(i.createElement(Z, { preferenceSetting: t }));
+          return i.createElement(
+            R.p,
             { navID: "StoreNotificationSettings", NavigationManager: t },
-            s.createElement(
+            i.createElement(
               "div",
               {
-                className: (0, p.Z)(
-                  b.NotificationSettingsHeader,
+                className: (0, A.Z)(
+                  V.NotificationSettingsHeader,
                   "account_header_line noicon",
                 ),
               },
-              s.createElement(
+              i.createElement(
                 "div",
                 null,
-                (0, _.Xx)("#NotificationSettings_Title"),
+                (0, N.Xx)("#NotificationSettings_Title"),
               ),
             ),
-            s.createElement(
+            i.createElement(
               "div",
               { className: "account_settings_container" },
-              s.createElement(
+              i.createElement(
                 "p",
-                { className: b.SectionDescription },
-                (0, _.Xx)("#NotificationSettings_Desc1"),
+                { className: V.SectionDescription },
+                (0, N.Xx)("#NotificationSettings_Desc1"),
               ),
-              s.createElement(
+              i.createElement(
                 "p",
-                { className: b.SectionDescription },
-                (0, _.Xx)("#NotificationSettings_Desc2"),
+                { className: V.SectionDescription },
+                (0, N.Xx)("#NotificationSettings_Desc2"),
               ),
-              s.createElement(
+              i.createElement(
                 "div",
                 { className: "notification_settings_container" },
-                s.createElement(
+                i.createElement(
                   "p",
                   null,
-                  (0, _.Xx)("#NotificationSettings_SendMeWhen"),
+                  (0, N.Xx)("#NotificationSettings_SendMeWhen"),
                 ),
                 r,
               ),
             ),
           );
         }),
-        A = (0, f.Pi)((e) => {
+        Z = (0, B.Pi)((e) => {
           const { preferenceSetting: t } = e;
-          let r = X();
-          const i = (0, s.useCallback)(() => {
-              r.ToggleTargetPreference(1, t);
+          let r = U();
+          const n = (0, i.useCallback)(() => {
+              r.ToggleTargetPreference(
+                W._C.k_ESteamNotificationTarget_NotificationFeed,
+                t,
+              );
             }, [t, r]),
-            n = (0, s.useCallback)(() => {
-              r.ToggleTargetPreference(8, t);
+            a = (0, i.useCallback)(() => {
+              r.ToggleTargetPreference(
+                W._C.k_ESteamNotificationTarget_Steam,
+                t,
+              );
             }, [t, r]),
-            o = (0, s.useCallback)(() => {
-              r.ToggleTargetPreference(2, t);
+            s = (0, i.useCallback)(() => {
+              r.ToggleTargetPreference(
+                W._C.k_ESteamNotificationTarget_PushNotification,
+                t,
+              );
             }, [t, r]),
-            [a, c] = (0, s.useState)(!1),
+            [o, c] = (0, i.useState)(!1),
             l = r.BUpdatingPreferences(),
-            m = 1 == (1 & t.notification_targets),
-            f = 2 == (2 & t.notification_targets),
-            d = 8 == (8 & t.notification_targets);
-          return s.createElement(
+            _ =
+              (t.notification_targets &
+                W._C.k_ESteamNotificationTarget_NotificationFeed) ==
+              W._C.k_ESteamNotificationTarget_NotificationFeed,
+            m =
+              (t.notification_targets &
+                W._C.k_ESteamNotificationTarget_PushNotification) ==
+              W._C.k_ESteamNotificationTarget_PushNotification,
+            f =
+              (t.notification_targets &
+                W._C.k_ESteamNotificationTarget_Steam) ==
+              W._C.k_ESteamNotificationTarget_Steam;
+          return i.createElement(
             "div",
-            { className: b.NotificationGroup },
-            s.createElement(
+            { className: V.NotificationGroup },
+            i.createElement(
               "div",
-              { className: b.NotificationSection },
-              s.createElement(g.fp, {
-                className: b.NotificationFeedToggle,
+              { className: V.NotificationSection },
+              i.createElement(b.fp, {
+                className: V.NotificationFeedToggle,
                 padding: "compact",
-                onChange: i,
+                onChange: n,
                 disabled: l,
                 bottomSeparator: "none",
-                checked: m,
+                checked: _,
               }),
-              s.createElement(
+              i.createElement(
                 "p",
-                { className: b.NotificationDescription },
+                { className: V.NotificationDescription },
                 ((u = t.notification_type),
-                (0, _.Xx)("#SteamNotificationTypeDesc_" + u)),
+                (0, N.Xx)("#SteamNotificationTypeDesc_" + u)),
               ),
-              s.createElement(
-                g.Yz,
+              i.createElement(
+                b.Yz,
                 {
-                  className: (0, p.Z)({
-                    [b.PrefDetailsToggle]: !0,
-                    [b.Selected]: a,
+                  className: (0, A.Z)({
+                    [V.PrefDetailsToggle]: !0,
+                    [V.Selected]: o,
                   }),
-                  onClick: () => c(!a),
+                  onClick: () => c(!o),
                 },
-                s.createElement(D.vVQ, { direction: "down" }),
+                i.createElement(H.vVQ, { direction: "down" }),
               ),
             ),
-            a &&
-              s.createElement(
+            o &&
+              i.createElement(
                 "div",
-                { className: b.NotificationPrefDetails },
-                s.createElement(g.ji, {
-                  label: (0, _.Xx)("#NotificationSettings_SendToast"),
-                  disabled: l || !m,
-                  checked: d,
-                  onChange: n,
-                }),
-                s.createElement(g.ji, {
-                  label: (0, _.Xx)("#NotificationSettings_PushNotification"),
-                  disabled: l || !m,
+                { className: V.NotificationPrefDetails },
+                i.createElement(b.ji, {
+                  label: (0, N.Xx)("#NotificationSettings_SendToast"),
+                  disabled: l || !_,
                   checked: f,
-                  onChange: o,
+                  onChange: a,
+                }),
+                i.createElement(b.ji, {
+                  label: (0, N.Xx)("#NotificationSettings_PushNotification"),
+                  disabled: l || !_,
+                  checked: m,
+                  onChange: s,
                 }),
               ),
           );
           var u;
         });
-      var w = r(35993);
-      const M = {},
-        B = Object.assign(
+      var K = r(35993);
+      const Q = {},
+        $ = Object.assign(
           {
             CookieSettings: () => "/cookiepreferences",
             NotificationSettings: () => "/notificationsettings",
           },
-          M,
+          Q,
         ),
-        R = (e) => {
+        q = (e) => {
           const t = e.match.url,
-            r = B;
-          return s.createElement(
-            i.rs,
+            r = $;
+          return i.createElement(
+            n.rs,
             null,
-            s.createElement(i.AW, {
+            i.createElement(n.AW, {
               path: `${t}${r.CookieSettings()}`,
               render: () =>
-                s.createElement(w.d, {
+                i.createElement(K.d, {
                   config: {
-                    "cookie-preferences": () => s.createElement(N, null),
+                    "cookie-preferences": () => i.createElement(M, null),
                   },
                 }),
             }),
-            s.createElement(i.AW, {
+            i.createElement(n.AW, {
               path: `${t}${r.NotificationSettings()}`,
               render: () =>
-                s.createElement(w.d, {
+                i.createElement(K.d, {
                   config: {
-                    "notification-settings": () => s.createElement(G, null),
+                    "notification-settings": () => i.createElement(Y, null),
                   },
                 }),
             }),

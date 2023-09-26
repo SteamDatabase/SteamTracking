@@ -1537,119 +1537,126 @@ function getBestAvailNavData()
 // Function to add a package to a cart, assumes form setup on the page
 function addToCart( subid, dedupe )
 {
-	try
+	if ( typeof g_bUseNewCartAPI != 'undefined' && g_bUseNewCartAPI && typeof window.AddItemToCart !== 'undefined' )
 	{
-		// Find all of the add to cart buttons displayed on the page
-		var filterAllButtons='a.btn_addtocart_content';
-		// the filterString can be used to find the element that invoked us, since the subid appears within it
-		// note that href*= specifies that href contains the string
-		var filterString = 'a[href*=' + subid + ']';
-		// within the set of all buttons, get the index of the one that we are dealing with!
-		// To do that, we find the anchor that invoked us within the larger set of add to cart buttons!
-		var allButtons = jQuery( filterAllButtons );
-
-		// Check for quantity
-		var idx = ( dedupe !== undefined ) ? dedupe : 0;
-		var filterStringForm = 'form[name=add_to_cart_'+subid+']';
-		var $Form = jQuery( filterStringForm );
-
-		if ( !$Form.length )
+		window.AddItemToCart( subid );
+	}
+	else
+	{
+		try
 		{
-			$Form= $J('<form/>', { name: 'add_to_cart_' + subid, action: 'https://store.steampowered.com/cart/', method: 'POST', style: 'display: none;' } );
-			$Form.append( $J('<input/>', { type: 'hidden', name: 'action', value: 'add_to_cart' } ) );
-			$Form.append( $J('<input/>', { type: 'hidden', name: 'subid', value: subid } ) );
-			$Form.append( $J('<input/>', { type: 'hidden', name: 'sessionid', value: g_sessionID } ) );
+			// Find all of the add to cart buttons displayed on the page
+			var filterAllButtons='a.btn_addtocart_content';
+			// the filterString can be used to find the element that invoked us, since the subid appears within it
+			// note that href*= specifies that href contains the string
+			var filterString = 'a[href*=' + subid + ']';
+			// within the set of all buttons, get the index of the one that we are dealing with!
+			// To do that, we find the anchor that invoked us within the larger set of add to cart buttons!
+			var allButtons = jQuery( filterAllButtons );
 
-			if ( typeof GStoreItemData !== 'undefined' )
-				$Form.append( $J('<input/>', { type: 'hidden', name: 'snr', value: GStoreItemData.GetCurrentPageNavParams() } ) );
+			// Check for quantity
+			var idx = ( dedupe !== undefined ) ? dedupe : 0;
+			var filterStringForm = 'form[name=add_to_cart_'+subid+']';
+			var $Form = jQuery( filterStringForm );
 
-			$J(document.body).append( $Form );
-		}
-
-		var quantity = jQuery( '#quantity_update_'+subid+'_'+idx ).val();
-		if ( quantity !== undefined )
-		{
-			jQuery('<input type="hidden">').attr({name: 'quantity', 'value': quantity}).appendTo($Form);
-		}
-
-		// do we have anything to examine?
-		if ( allButtons.length > 0 )
-		{
-
-			var navData = getBestAvailNavData();
-			var button;
-			var buttonOffset = { top : 0, left : 0 };
-			var buttonIndex = allButtons.index( jQuery( filterString ) );
-			//
-			//  Subscription pages have ambiguous add to cart buttons - we will try to 'dedupe' it !
-			//
-			if ( buttonIndex === -1 )
+			if ( !$Form.length )
 			{
-				if ( dedupe !== undefined )
-				{
-					buttonIndex = dedupe;
-				}
-				else
-				{
-					//  There is a chance this we're mistaken if the .php generation of the page
-					//  didn't generate the addToCart() calls as we expect !
-					buttonIndex = 0;
-				}
+				$Form= $J('<form/>', { name: 'add_to_cart_' + subid, action: 'https://store.steampowered.com/cart/', method: 'POST', style: 'display: none;' } );
+				$Form.append( $J('<input/>', { type: 'hidden', name: 'action', value: 'add_to_cart' } ) );
+				$Form.append( $J('<input/>', { type: 'hidden', name: 'subid', value: subid } ) );
+				$Form.append( $J('<input/>', { type: 'hidden', name: 'sessionid', value: g_sessionID } ) );
+
+				if ( typeof GStoreItemData !== 'undefined' )
+					$Form.append( $J('<input/>', { type: 'hidden', name: 'snr', value: GStoreItemData.GetCurrentPageNavParams() } ) );
+
+				$J(document.body).append( $Form );
 			}
-						button = allButtons.eq(buttonIndex);
 
-			//
-			//  If we are certain we know what button was clicked, then we'll provide info on the form!
-			//
-			if ( button != null &&  button.length === 1 && typeof button.offset == 'function' )
+			var quantity = jQuery( '#quantity_update_'+subid+'_'+idx ).val();
+			if ( quantity !== undefined )
 			{
-				buttonOffset = button.offset();
-				var height = jQuery(window).height();
-				var width = jQuery(window).width();
-				//
-				//  We have all the components we want the standard button to submit to the server!
-				//  we will now add input fields to the form we intend to submit.
-				//
+				jQuery('<input type="hidden">').attr({name: 'quantity', 'value': quantity}).appendTo($Form);
+			}
 
-				var begintime = jQuery.data(document, 'x_readytime');
+			// do we have anything to examine?
+			if ( allButtons.length > 0 )
+			{
 
-				var selecttime = 0.0;
-				if ( begintime !== undefined )
+				var navData = getBestAvailNavData();
+				var button;
+				var buttonOffset = { top : 0, left : 0 };
+				var buttonIndex = allButtons.index( jQuery( filterString ) );
+				//
+				//  Subscription pages have ambiguous add to cart buttons - we will try to 'dedupe' it !
+				//
+				if ( buttonIndex === -1 )
 				{
-					selecttime = new Date().getTime() - begintime;
-				}
-				if ( $Form.length === 1 )
-				{
-					//  We include the 'hidden' attribute at this point, because of a believe compatibility issue with Internet Explorer!
-					jQuery( '<input type="hidden">' ).attr( { name: 'x_selection', 'value' : buttonIndex } ).appendTo( $Form  );
-					jQuery( '<input type="hidden">' ).attr( { name: 'x_choices', 'value' : allButtons.length } ).appendTo( $Form );
-					jQuery( '<input type="hidden">' ).attr( { name: 'x_top', 'value' : buttonOffset.top } ).appendTo( $Form  );
-					jQuery( '<input type="hidden">' ).attr( { name: 'x_left', 'value' : buttonOffset.left } ).appendTo( $Form );
-					jQuery( '<input type="hidden">' ).attr( { name: 'x_window_height', 'value' : height } ).appendTo( $Form );
-					jQuery( '<input type="hidden">' ).attr( { name: 'x_window_width', 'value' : width } ).appendTo( $Form );
-					jQuery( '<input type="hidden">' ).attr( { name: 'x_select_time', 'value' : selecttime } ).appendTo( $Form );
-					if ( navData )
+					if ( dedupe !== undefined )
 					{
-						var pipeSplit = new RegExp( /\|/ );
-						var resultString = navData.split( pipeSplit )[0];
-						jQuery( '<input type="hidden">' ).attr( { name: 'x_oldnav', 'value' : resultString } ).appendTo( $Form );
+						buttonIndex = dedupe;
+					}
+					else
+					{
+						//  There is a chance this we're mistaken if the .php generation of the page
+						//  didn't generate the addToCart() calls as we expect !
+						buttonIndex = 0;
+					}
+				}
+								button = allButtons.eq(buttonIndex);
+
+				//
+				//  If we are certain we know what button was clicked, then we'll provide info on the form!
+				//
+				if ( button != null &&  button.length === 1 && typeof button.offset == 'function' )
+				{
+					buttonOffset = button.offset();
+					var height = jQuery(window).height();
+					var width = jQuery(window).width();
+					//
+					//  We have all the components we want the standard button to submit to the server!
+					//  we will now add input fields to the form we intend to submit.
+					//
+
+					var begintime = jQuery.data(document, 'x_readytime');
+
+					var selecttime = 0.0;
+					if ( begintime !== undefined )
+					{
+						selecttime = new Date().getTime() - begintime;
+					}
+					if ( $Form.length === 1 )
+					{
+						//  We include the 'hidden' attribute at this point, because of a believe compatibility issue with Internet Explorer!
+						jQuery( '<input type="hidden">' ).attr( { name: 'x_selection', 'value' : buttonIndex } ).appendTo( $Form  );
+						jQuery( '<input type="hidden">' ).attr( { name: 'x_choices', 'value' : allButtons.length } ).appendTo( $Form );
+						jQuery( '<input type="hidden">' ).attr( { name: 'x_top', 'value' : buttonOffset.top } ).appendTo( $Form  );
+						jQuery( '<input type="hidden">' ).attr( { name: 'x_left', 'value' : buttonOffset.left } ).appendTo( $Form );
+						jQuery( '<input type="hidden">' ).attr( { name: 'x_window_height', 'value' : height } ).appendTo( $Form );
+						jQuery( '<input type="hidden">' ).attr( { name: 'x_window_width', 'value' : width } ).appendTo( $Form );
+						jQuery( '<input type="hidden">' ).attr( { name: 'x_select_time', 'value' : selecttime } ).appendTo( $Form );
+						if ( navData )
+						{
+							var pipeSplit = new RegExp( /\|/ );
+							var resultString = navData.split( pipeSplit )[0];
+							jQuery( '<input type="hidden">' ).attr( { name: 'x_oldnav', 'value' : resultString } ).appendTo( $Form );
+						}
 					}
 				}
 			}
 		}
-	}
-	catch( e )
-	{
-		//console.log( e );
-			}
-	// Regardless of instrumentation failures, try to submit the form for the user.
-	try
-	{
-		$Form.submit();
-	}
-	catch( e )
-	{
-		// swallow exceptions !
+		catch( e )
+		{
+			//console.log( e );
+					}
+		// Regardless of instrumentation failures, try to submit the form for the user.
+		try
+		{
+			$Form.submit();
+		}
+		catch( e )
+		{
+			// swallow exceptions !
+		}
 	}
 
 }
@@ -1733,120 +1740,126 @@ function updateQtyCart( formName, id )
 // Function to add a bundle to a cart, assumes form setup on the page
 function addBundleToCart( bundleid, dedupe )
 {
-	try
+	if ( typeof g_bUseNewCartAPI != 'undefined' && g_bUseNewCartAPI && typeof window.AddItemToCart !== 'undefined' )
 	{
-		// Find all of the add to cart buttons displayed on the page
-		var filterAllButtons='a.btn_addtocart_content';
-		// the filterString can be used to find the element that invoked us, since the subid appears within it
-		// note that href*= specifies that href contains the string
-		var filterString = 'a[href*=' + bundleid + ']';
-		// within the set of all buttons, get the index of the one that we are dealing with!
-		// To do that, we find the anchor that invoked us within the larger set of add to cart buttons!
-		var allButtons = jQuery( filterAllButtons );
-
-
-		var filterStringForm = 'form[name=add_bundle_to_cart_'+bundleid+']';
-		var $Form = jQuery( filterStringForm );
-
-		if ( !$Form.length )
+		window.AddItemToCart( null, bundleid );
+	}
+	else
+	{
+		try
 		{
-			$Form= $J('<form/>', { name: 'add_bundle_to_cart_' + bundleid, action: 'https://store.steampowered.com/cart/', method: 'POST', style: 'display: none;' } );
-			$Form.append( $J('<input/>', { type: 'hidden', name: 'action', value: 'add_to_cart' } ) );
-			$Form.append( $J('<input/>', { type: 'hidden', name: 'bundleid', value: bundleid } ) );
-			$Form.append( $J('<input/>', { type: 'hidden', name: 'sessionid', value: g_sessionID } ) );
+			// Find all of the add to cart buttons displayed on the page
+			var filterAllButtons='a.btn_addtocart_content';
+			// the filterString can be used to find the element that invoked us, since the subid appears within it
+			// note that href*= specifies that href contains the string
+			var filterString = 'a[href*=' + bundleid + ']';
+			// within the set of all buttons, get the index of the one that we are dealing with!
+			// To do that, we find the anchor that invoked us within the larger set of add to cart buttons!
+			var allButtons = jQuery( filterAllButtons );
 
-			$J(document.body).append( $Form );
-		}
 
-		// Check for quantity
-		var idx = ( dedupe !== undefined ) ? dedupe : 0;
-		var quantity = jQuery( '#quantity_update_'+bundleid+'_'+idx ).val();
-		if ( quantity !== undefined )
-		{
-			if ( $Form.length === 1 )
+			var filterStringForm = 'form[name=add_bundle_to_cart_'+bundleid+']';
+			var $Form = jQuery( filterStringForm );
+
+			if ( !$Form.length )
 			{
-				jQuery('<input type="hidden">').attr({name: 'quantity', 'value': quantity}).appendTo($Form);
+				$Form= $J('<form/>', { name: 'add_bundle_to_cart_' + bundleid, action: 'https://store.steampowered.com/cart/', method: 'POST', style: 'display: none;' } );
+				$Form.append( $J('<input/>', { type: 'hidden', name: 'action', value: 'add_to_cart' } ) );
+				$Form.append( $J('<input/>', { type: 'hidden', name: 'bundleid', value: bundleid } ) );
+				$Form.append( $J('<input/>', { type: 'hidden', name: 'sessionid', value: g_sessionID } ) );
+
+				$J(document.body).append( $Form );
 			}
-		}
 
-		// do we have anything to examine?
-		if ( allButtons.length > 0 )
-		{
-
-			var navData = getBestAvailNavData();
-			var button;
-			var buttonOffset = { top : 0, left : 0 };
-			var buttonIndex = allButtons.index( jQuery( filterString ) );
-			//
-			//  Subscription pages have ambiguous add to cart buttons - we will try to 'dedupe' it !
-			//
-			if ( buttonIndex === -1 )
+			// Check for quantity
+			var idx = ( dedupe !== undefined ) ? dedupe : 0;
+			var quantity = jQuery( '#quantity_update_'+bundleid+'_'+idx ).val();
+			if ( quantity !== undefined )
 			{
-				if ( dedupe !== undefined )
-				{
-					buttonIndex = dedupe;
-				}
-				else
-				{
-					//  There is a chance this we're mistaken if the .php generation of the page
-					//  didn't generate the addToCart() calls as we expect !
-					buttonIndex = 0;
-				}
-			}
-						button = allButtons.eq(buttonIndex);
-
-			//
-			//  If we are certain we know what button was clicked, then we'll provide info on the form!
-			//
-			if ( button != null &&  button.length === 1 && typeof button.offset == 'function' )
-			{
-				buttonOffset = button.offset();
-				var height = jQuery(window).height();
-				var width = jQuery(window).width();
-				//
-				//  We have all the components we want the standard button to submit to the server!
-				//  we will now add input fields to the form we intend to submit.
-				//
-				var begintime = jQuery.data(document, 'x_readytime');
-				var selecttime = 0.0;
-				if ( begintime !== undefined )
-				{
-					selecttime = new Date().getTime() - begintime;
-				}
 				if ( $Form.length === 1 )
 				{
-					//  We include the 'hidden' attribute at this point, because of a believe compatibility issue with Internet Explorer!
-					jQuery( '<input type="hidden">' ).attr( { name: 'x_selection', 'value' : buttonIndex } ).appendTo( $Form  );
-					jQuery( '<input type="hidden">' ).attr( { name: 'x_choices', 'value' : allButtons.length } ).appendTo( $Form );
-					jQuery( '<input type="hidden">' ).attr( { name: 'x_top', 'value' : buttonOffset.top } ).appendTo( $Form  );
-					jQuery( '<input type="hidden">' ).attr( { name: 'x_left', 'value' : buttonOffset.left } ).appendTo( $Form );
-					jQuery( '<input type="hidden">' ).attr( { name: 'x_window_height', 'value' : height } ).appendTo( $Form );
-					jQuery( '<input type="hidden">' ).attr( { name: 'x_window_width', 'value' : width } ).appendTo( $Form );
-					jQuery( '<input type="hidden">' ).attr( { name: 'x_select_time', 'value' : selecttime } ).appendTo( $Form );
-					if ( navData )
+					jQuery('<input type="hidden">').attr({name: 'quantity', 'value': quantity}).appendTo($Form);
+				}
+			}
+
+			// do we have anything to examine?
+			if ( allButtons.length > 0 )
+			{
+
+				var navData = getBestAvailNavData();
+				var button;
+				var buttonOffset = { top : 0, left : 0 };
+				var buttonIndex = allButtons.index( jQuery( filterString ) );
+				//
+				//  Subscription pages have ambiguous add to cart buttons - we will try to 'dedupe' it !
+				//
+				if ( buttonIndex === -1 )
+				{
+					if ( dedupe !== undefined )
 					{
-						var pipeSplit = new RegExp( /\|/ );
-						var resultString = navData.split( pipeSplit )[0];
-						jQuery( '<input type="hidden">' ).attr( { name: 'x_oldnav', 'value' : resultString } ).appendTo( $Form );
+						buttonIndex = dedupe;
+					}
+					else
+					{
+						//  There is a chance this we're mistaken if the .php generation of the page
+						//  didn't generate the addToCart() calls as we expect !
+						buttonIndex = 0;
+					}
+				}
+								button = allButtons.eq(buttonIndex);
+
+				//
+				//  If we are certain we know what button was clicked, then we'll provide info on the form!
+				//
+				if ( button != null &&  button.length === 1 && typeof button.offset == 'function' )
+				{
+					buttonOffset = button.offset();
+					var height = jQuery(window).height();
+					var width = jQuery(window).width();
+					//
+					//  We have all the components we want the standard button to submit to the server!
+					//  we will now add input fields to the form we intend to submit.
+					//
+					var begintime = jQuery.data(document, 'x_readytime');
+					var selecttime = 0.0;
+					if ( begintime !== undefined )
+					{
+						selecttime = new Date().getTime() - begintime;
+					}
+					if ( $Form.length === 1 )
+					{
+						//  We include the 'hidden' attribute at this point, because of a believe compatibility issue with Internet Explorer!
+						jQuery( '<input type="hidden">' ).attr( { name: 'x_selection', 'value' : buttonIndex } ).appendTo( $Form  );
+						jQuery( '<input type="hidden">' ).attr( { name: 'x_choices', 'value' : allButtons.length } ).appendTo( $Form );
+						jQuery( '<input type="hidden">' ).attr( { name: 'x_top', 'value' : buttonOffset.top } ).appendTo( $Form  );
+						jQuery( '<input type="hidden">' ).attr( { name: 'x_left', 'value' : buttonOffset.left } ).appendTo( $Form );
+						jQuery( '<input type="hidden">' ).attr( { name: 'x_window_height', 'value' : height } ).appendTo( $Form );
+						jQuery( '<input type="hidden">' ).attr( { name: 'x_window_width', 'value' : width } ).appendTo( $Form );
+						jQuery( '<input type="hidden">' ).attr( { name: 'x_select_time', 'value' : selecttime } ).appendTo( $Form );
+						if ( navData )
+						{
+							var pipeSplit = new RegExp( /\|/ );
+							var resultString = navData.split( pipeSplit )[0];
+							jQuery( '<input type="hidden">' ).attr( { name: 'x_oldnav', 'value' : resultString } ).appendTo( $Form );
+						}
 					}
 				}
 			}
 		}
+		catch( e )
+		{
+			//console.log( e );
+					}
+		// Regardless of instrumentation failures, try to submit the form for the user.
+		try
+		{
+			$Form.submit();
+		}
+		catch( e )
+		{
+			// swallow exceptions !
+		}
 	}
-	catch( e )
-	{
-		//console.log( e );
-			}
-	// Regardless of instrumentation failures, try to submit the form for the user.
-	try
-	{
-		$Form.submit();
-	}
-	catch( e )
-	{
-		// swallow exceptions !
-	}
-
 }
 
 function addAllDlcToCart()

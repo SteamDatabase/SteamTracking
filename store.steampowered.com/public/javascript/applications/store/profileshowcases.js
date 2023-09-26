@@ -24,7 +24,7 @@
         h = s(85446),
         m = s(89469),
         u = s(42109),
-        _ = s(44066);
+        _ = s(66415);
       const d =
           s.p +
           "images/applications/store/showcases_header_image.svg?v=valveisgoodatcaching",

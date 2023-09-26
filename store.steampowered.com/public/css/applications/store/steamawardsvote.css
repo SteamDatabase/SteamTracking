@@ -619,9 +619,13 @@ button.Primary.partnereventshared_AddSectionButton_15e-D {
   color: #06beff;
   font-size: 14px;
 }
+.partnereventshared_HelperTooltip_3UCPo {
+  display: flex;
+}
 .partnereventshared_HelperTooltip_3UCPo > svg {
   width: 16px;
   fill: #aaa;
+  margin-left: 4px;
 }
 .partnereventshared_HelperTooltip_3UCPo > svg:hover {
   fill: #fff;

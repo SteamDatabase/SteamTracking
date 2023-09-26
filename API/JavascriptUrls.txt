@@ -1303,7 +1303,7 @@ ${STORE_BASE_URL}promotion/ajaxhasclaimedgenresticker
 ${STORE_BASE_URL}publisher/${m_strVanity}/
 ${STORE_BASE_URL}recommended/ignorerecommendation
 ${STORE_BASE_URL}remoteplay#anywhere_how
-${STORE_BASE_URL}replay/${steamid}/${}?src=9
+${STORE_BASE_URL}replay/${steamid}/${}?src=${k_EYearInReviewAccessSource_FriendsReplay}
 ${STORE_BASE_URL}replay/${}/${}
 ${STORE_BASE_URL}reservation/ajaxcancelreservation
 ${STORE_BASE_URL}reservation/ajaxdirectreservation

@@ -1,3 +1,7 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
 .contextmenu_ContextMenuMouseOverlay_pu9cO {
   position: fixed;
   top: 0;
@@ -1194,7 +1198,6 @@ button.gamepaddialog_Button_1kn70.DialogButton.gamepaddialog_NoMinWidth_21cih {
 button.gamepaddialog_Button_1kn70.DialogButton,
 button.gamepaddialog_Button_1kn70.DialogButton:enabled,
 button.gamepaddialog_Button_1kn70.DialogButton:active,
-button.gamepaddialog_Button_1kn70.DialogButton:hover,
 button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover {
   color: #dcdedf;
   font-size: 16px;
@@ -1211,8 +1214,6 @@ button.gamepaddialog_Button_1kn70.DialogButton:enabled,
 button.gamepaddialog_Button_1kn70.DialogButton:enabled.Primary,
 button.gamepaddialog_Button_1kn70.DialogButton:active,
 button.gamepaddialog_Button_1kn70.DialogButton:active.Primary,
-button.gamepaddialog_Button_1kn70.DialogButton:hover,
-button.gamepaddialog_Button_1kn70.DialogButton:hover.Primary,
 button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover,
 button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover.Primary {
   background: #23262e;
@@ -1220,7 +1221,6 @@ button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover.Primary {
 button.gamepaddialog_Button_1kn70.DialogButton.BarButton,
 button.gamepaddialog_Button_1kn70.DialogButton:enabled.BarButton,
 button.gamepaddialog_Button_1kn70.DialogButton:active.BarButton,
-button.gamepaddialog_Button_1kn70.DialogButton:hover.BarButton,
 button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover.BarButton {
   background: rgba(0, 0, 0, 0.1019607843);
   color: #fff;
@@ -1228,9 +1228,21 @@ button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover.BarButton {
 button.gamepaddialog_Button_1kn70.DialogButton.gamepaddialog_ActiveAndUnfocused_11tOP,
 button.gamepaddialog_Button_1kn70.DialogButton:enabled.gamepaddialog_ActiveAndUnfocused_11tOP,
 button.gamepaddialog_Button_1kn70.DialogButton:active.gamepaddialog_ActiveAndUnfocused_11tOP,
-button.gamepaddialog_Button_1kn70.DialogButton:hover.gamepaddialog_ActiveAndUnfocused_11tOP,
 button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover.gamepaddialog_ActiveAndUnfocused_11tOP {
   background: #0e141b;
+}
+button.gamepaddialog_Button_1kn70.DialogButton:hover,
+button.gamepaddialog_Button_1kn70.DialogButton:enabled:hover,
+button.gamepaddialog_Button_1kn70.DialogButton:active:hover,
+button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover:hover {
+  background: #3d4450;
+  transition: background-color 150ms ease-in;
+}
+button.gamepaddialog_Button_1kn70.DialogButton.Primary:hover,
+button.gamepaddialog_Button_1kn70.DialogButton:enabled.Primary:hover,
+button.gamepaddialog_Button_1kn70.DialogButton:active.Primary:hover,
+button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover.Primary:hover {
+  background: rgba(26, 160, 255, 0.3254901961);
 }
 button.gamepaddialog_Button_1kn70.DialogButton.gpfocus,
 button.gamepaddialog_Button_1kn70.DialogButton:active,
@@ -1238,8 +1250,6 @@ button.gamepaddialog_Button_1kn70.DialogButton:enabled.gpfocus,
 button.gamepaddialog_Button_1kn70.DialogButton:enabled:active,
 button.gamepaddialog_Button_1kn70.DialogButton:active.gpfocus,
 button.gamepaddialog_Button_1kn70.DialogButton:active:active,
-button.gamepaddialog_Button_1kn70.DialogButton:hover.gpfocus,
-button.gamepaddialog_Button_1kn70.DialogButton:hover:active,
 button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover.gpfocus,
 button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover:active {
   background: #fff;
@@ -1252,8 +1262,6 @@ button.gamepaddialog_Button_1kn70.DialogButton:enabled.gpfocus.Primary,
 button.gamepaddialog_Button_1kn70.DialogButton:enabled:active.Primary,
 button.gamepaddialog_Button_1kn70.DialogButton:active.gpfocus.Primary,
 button.gamepaddialog_Button_1kn70.DialogButton:active:active.Primary,
-button.gamepaddialog_Button_1kn70.DialogButton:hover.gpfocus.Primary,
-button.gamepaddialog_Button_1kn70.DialogButton:hover:active.Primary,
 button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover.gpfocus.Primary,
 button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover:active.Primary {
   background: #1a9fff;
@@ -1265,8 +1273,6 @@ button.gamepaddialog_Button_1kn70.DialogButton:enabled.gpfocus.Destructive,
 button.gamepaddialog_Button_1kn70.DialogButton:enabled:active.Destructive,
 button.gamepaddialog_Button_1kn70.DialogButton:active.gpfocus.Destructive,
 button.gamepaddialog_Button_1kn70.DialogButton:active:active.Destructive,
-button.gamepaddialog_Button_1kn70.DialogButton:hover.gpfocus.Destructive,
-button.gamepaddialog_Button_1kn70.DialogButton:hover:active.Destructive,
 button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover.gpfocus.Destructive,
 button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover:active.Destructive {
   background: #de3618;
@@ -1278,8 +1284,6 @@ button.gamepaddialog_Button_1kn70.DialogButton:enabled.gpfocus.BarButton,
 button.gamepaddialog_Button_1kn70.DialogButton:enabled:active.BarButton,
 button.gamepaddialog_Button_1kn70.DialogButton:active.gpfocus.BarButton,
 button.gamepaddialog_Button_1kn70.DialogButton:active:active.BarButton,
-button.gamepaddialog_Button_1kn70.DialogButton:hover.gpfocus.BarButton,
-button.gamepaddialog_Button_1kn70.DialogButton:hover:active.BarButton,
 button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover.gpfocus.BarButton,
 button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover:active.BarButton {
   background: #fff;
@@ -1292,8 +1296,6 @@ button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover:active.BarBu
 .gamepaddialog_Field_S-_La
   button.gamepaddialog_Button_1kn70.DialogButton:active.gpfocus,
 .gamepaddialog_Field_S-_La
-  button.gamepaddialog_Button_1kn70.DialogButton:hover.gpfocus,
-.gamepaddialog_Field_S-_La
   button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover.gpfocus {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -1303,8 +1305,6 @@ button.gamepaddialog_Button_1kn70.DialogButton:enabled.Disabled,
 button.gamepaddialog_Button_1kn70.DialogButton:enabled[disabled],
 button.gamepaddialog_Button_1kn70.DialogButton:active.Disabled,
 button.gamepaddialog_Button_1kn70.DialogButton:active[disabled],
-button.gamepaddialog_Button_1kn70.DialogButton:hover.Disabled,
-button.gamepaddialog_Button_1kn70.DialogButton:hover[disabled],
 button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover.Disabled,
 button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover[disabled] {
   opacity: 0.4;
@@ -1315,7 +1315,6 @@ button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover[disabled] {
 button.gamepaddialog_Button_1kn70.DialogButton:before,
 button.gamepaddialog_Button_1kn70.DialogButton:enabled:before,
 button.gamepaddialog_Button_1kn70.DialogButton:active:before,
-button.gamepaddialog_Button_1kn70.DialogButton:hover:before,
 button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover:before {
   content: none;
 }
@@ -1556,7 +1555,9 @@ button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover:before {
   .gamepaddialog_FieldLabel_3b0U- {
   flex-shrink: 0;
 }
-.gamepaddialog_Field_S-_La.gamepaddialog_ChildrenWidthGrow__Oeqv
+.gamepaddialog_Field_S-_La:not(
+    .gamepaddialog_WithChildrenBelow_1u5FT
+  ).gamepaddialog_ChildrenWidthGrow__Oeqv
   .gamepaddialog_FieldLabel_3b0U- {
   flex-grow: 0;
 }
@@ -1696,6 +1697,8 @@ button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover:before {
   height: 22px;
   position: relative;
   margin-right: 4px;
+  border-radius: 16px;
+  transition: box-shadow 50ms ease-out;
 }
 .gamepaddialog_Toggle_24G4g.gpfocus {
   outline: none;
@@ -1709,10 +1712,16 @@ button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover:before {
   height: 132%;
   border-radius: 16px;
   background-color: #8b929a;
+  opacity: 1;
   z-index: -1;
 }
 .gamepaddialog_Toggle_24G4g:not(.gamepaddialog_Disabled_1pmyx) {
   cursor: pointer;
+}
+.gamepaddialog_Toggle_24G4g:not(.gamepaddialog_Disabled_1pmyx):hover {
+  box-shadow: 0px 0px 0px 4px rgba(255, 255, 255, 0.3);
+  border-radius: 16px;
+  transition: box-shadow 100ms ease-in;
 }
 .gamepaddialog_ToggleRail_2JtC3 {
   position: absolute;
@@ -1901,6 +1910,62 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Z-Cc svg {
 .gamepadinput_PinDigit_1oiQ5 {
   text-align: center;
 }
+@keyframes gamepadslider_ItemFocusAnim-darkerGrey-nocolor_2ieuB {
+  from {
+    background: #3d4450;
+  }
+  to {
+    background: #23262e;
+  }
+}
+@keyframes gamepadslider_ItemFocusAnim-darkerGrey_rV8ed {
+  from {
+    background: #3d4450;
+    color: #8b929a;
+  }
+  to {
+    background: #23262e;
+    color: #fff;
+  }
+}
+@keyframes gamepadslider_ItemFocusAnim-darkGrey_3mh_q {
+  from {
+    background: #67707b;
+    color: #8b929a;
+  }
+  to {
+    background: #3d4450;
+    color: #fff;
+  }
+}
+@keyframes gamepadslider_ItemFocusAnim-grey_v4-Mh {
+  from {
+    background: #8b929a;
+    color: #fff;
+  }
+  to {
+    background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes gamepadslider_ItemFocusAnimBorder-darkGrey_3Kc9j {
+  from {
+    border-color: #67707b;
+  }
+  to {
+    border-color: #3d4450;
+  }
+}
+@keyframes gamepadslider_ItemFocusAnim-green_8o7mU {
+  from {
+    background: #c9ffc9;
+    color: #8b929a;
+  }
+  to {
+    background: #59bf40;
+    color: #fff;
+  }
+}
 .gamepadslider_SliderControlPanelGroup_MY8iY {
   flex-grow: 1;
 }
@@ -1920,9 +1985,14 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Z-Cc svg {
   display: flex;
   height: 24px;
   min-width: 100px;
+  transition: filter 50ms ease-in;
 }
 .gamepadslider_SliderControl_3o137:not(.gamepadslider_Disabled_1lI1N) {
   cursor: pointer;
+}
+.gamepadslider_SliderControl_3o137:hover .gamepadslider_SliderTrack_Mq25N {
+  background: #3d4450;
+  --left-track-color: #00bbff;
 }
 .gamepadslider_SliderTrack_Mq25N {
   background: #23262e;
@@ -1936,6 +2006,9 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Z-Cc svg {
 }
 .gamepadslider_SliderTrack_Mq25N.gamepadslider_SliderHasNotches_2XiAy {
   width: calc(100% - 20px);
+}
+.gamepadslider_SliderTrack_Mq25N.gamepadslider_Disabled_1lI1N {
+  pointer-events: none;
 }
 .gamepadslider_SliderTrack_Mq25N::before {
   content: "";
@@ -1962,6 +2035,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Z-Cc svg {
 .gamepadslider_SliderControlAndNotches_1Cccx.gamepadslider_Disabled_1lI1N
   .gamepadslider_SliderTrack_Mq25N::before {
   background: #67707b;
+  pointer-events: none;
 }
 .gamepadslider_SliderTrackDark_3UIUD {
   background: #000;
@@ -2022,6 +2096,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Z-Cc svg {
 .gamepadslider_SliderControlAndNotches_1Cccx.gamepadslider_Disabled_1lI1N
   .gamepadslider_SliderHandle_2yVKj {
   background: #8b929a;
+  pointer-events: none;
 }
 .gamepadslider_VerticalLineSliderHandle_i3l9t {
   background: rgba(255, 255, 255, 0.3764705882);
@@ -2670,6 +2745,9 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Z-Cc svg {
   transform: scale(1.1);
   z-index: 1;
   animation-name: gamepadpagedsettings_ItemFocusAnim-darkGrey_3qFxl;
+}
+.gamepadpagedsettings_PagedSettingsDialog_PageListItem_1ix7r:hover {
+  background-color: #3d4450;
 }
 .gamepadpagedsettings_PageListItem_Icon_1F_5Q {
   height: 20px;

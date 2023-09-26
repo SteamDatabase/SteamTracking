@@ -8,31 +8,32 @@
     },
     86401: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => c });
+      n.r(t), n.d(t, { default: () => u });
       var r = n(89526),
-        o = n(59100),
-        a = n(19094),
+        o = n(88390),
+        a = n(7786),
+        s = n(19094),
         i = n(32765),
-        s = n(79925),
-        l = n(82152);
-      function c(e) {
+        l = n(79925),
+        c = n(82152);
+      function u(e) {
         const { redirectUrl: t = i.De.STORE_BASE_URL } = e,
           [n] = (0, r.useState)(
-            new a.J(i.De.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
+            new s.J(i.De.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
           ),
-          [c, u] = (0, r.useState)(!1);
+          [u, m] = (0, r.useState)(!1);
         return r.createElement(
           "div",
-          { className: l.LoginContainer },
-          c
+          { className: c.LoginContainer },
+          u
             ? r.createElement(o.pT, null)
             : r.createElement(o.wK, {
                 autoFocus: !0,
                 transport: n,
-                platform: 2,
+                platform: a.hn.k_EAuthTokenPlatformType_WebBrowser,
                 onComplete: (e) => {
-                  e == s.TG.k_PrimaryDomainFail
-                    ? u(!0)
+                  e == l.TG.k_PrimaryDomainFail
+                    ? m(!0)
                     : window.location.assign(t);
                 },
                 redirectUrl: t,

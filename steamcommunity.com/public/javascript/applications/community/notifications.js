@@ -39,33 +39,34 @@
     },
     6914: (t, e, i) => {
       "use strict";
-      i.r(e), i.d(e, { default: () => W });
+      i.r(e), i.d(e, { default: () => K });
       var n,
         o = i(89526),
-        s = i(65756),
-        a = i(32765),
+        s = i(70534),
+        a = i(26),
+        c = i(32765),
         l = i(44973),
         r = i(701),
-        c = i(46132),
-        m = i(27070),
+        m = i(75457),
+        f = i(27070),
         d = i(57605),
-        f = i(77427),
-        p = i(14826),
-        u = i(33008),
-        _ = i.n(u),
-        y = i(33940),
+        p = i(77427),
+        _ = i(14826),
+        y = i(33008),
+        u = i.n(y),
+        N = i(33940),
         h = i(50265),
-        N = i(25125),
-        F = i(47742),
-        g = i(47165),
-        E = i(24448),
-        C = i(36041);
+        g = i(25125),
+        E = i(47742),
+        F = i(47165),
+        k = i(24448),
+        S = i(36041);
       !(function (t) {
         (t[(t.k_All = 0)] = "k_All"),
           (t[(t.k_Owned = 1)] = "k_Owned"),
           (t[(t.k_Subscribed = 2)] = "k_Subscribed");
       })(n || (n = {}));
-      class k {
+      class C {
         constructor() {
           (this.rgFilterState = new Map()),
             (this.commentFilter = {
@@ -75,67 +76,67 @@
             }),
             (this.k_rgFilterCheckboxes = [
               {
-                type: 3,
-                display: (0, p.Xx)("#NotificationsFilters_Comments"),
+                type: s.gH.k_ESteamNotificationType_Comment,
+                display: (0, _.Xx)("#NotificationsFilters_Comments"),
                 hash: "comments",
               },
               {
-                type: 8,
-                display: (0, p.Xx)("#NotificationsFilters_Wishlist"),
+                type: s.gH.k_ESteamNotificationType_Wishlist,
+                display: (0, _.Xx)("#NotificationsFilters_Wishlist"),
                 hash: "wishlist",
               },
               {
-                type: 5,
-                display: (0, p.Xx)("#NotificationsFilters_FriendRequest"),
+                type: s.gH.k_ESteamNotificationType_FriendInvite,
+                display: (0, _.Xx)("#NotificationsFilters_FriendRequest"),
                 hash: "invites",
               },
               {
-                type: 2,
-                display: (0, p.Xx)("#NotificationsFilters_Gifts"),
+                type: s.gH.k_ESteamNotificationType_Gift,
+                display: (0, _.Xx)("#NotificationsFilters_Gifts"),
                 hash: "gifts",
               },
               {
-                type: 4,
-                display: (0, p.Xx)("#NotificationsFilters_Inventory"),
+                type: s.gH.k_ESteamNotificationType_Item,
+                display: (0, _.Xx)("#NotificationsFilters_Inventory"),
                 hash: "inventory",
               },
               {
-                type: 12,
-                display: (0, p.Xx)("#NotificationsFilters_AsyncGame"),
+                type: s.gH.k_ESteamNotificationType_AsyncGame,
+                display: (0, _.Xx)("#NotificationsFilters_AsyncGame"),
                 hash: "asyncgame",
               },
               {
-                type: 11,
-                display: (0, p.Xx)("#NotificationsFilters_HelpRequest"),
+                type: s.gH.k_ESteamNotificationType_HelpRequest,
+                display: (0, _.Xx)("#NotificationsFilters_HelpRequest"),
                 hash: "help",
               },
               {
-                type: 9,
-                display: (0, p.Xx)("#NotificationsFilters_TradeOffer"),
+                type: s.gH.k_ESteamNotificationType_TradeOffer,
+                display: (0, _.Xx)("#NotificationsFilters_TradeOffer"),
                 hash: "trade",
               },
               {
-                type: 10,
-                display: (0, p.Xx)("#NotificationsFilters_General"),
+                type: s.gH.k_ESteamNotificationType_General,
+                display: (0, _.Xx)("#NotificationsFilters_General"),
                 hash: "general",
               },
             ]),
             (this.k_rgCommentFilters = [
               {
                 type: n.k_All,
-                display: (0, p.Xx)("#NotificationsList_CommentFilters_All"),
+                display: (0, _.Xx)("#NotificationsList_CommentFilters_All"),
                 fnFilter: () => !0,
               },
               {
                 type: n.k_Owned,
-                display: (0, p.Xx)(
+                display: (0, _.Xx)(
                   "#NotificationsList_CommentFilters_YourItems",
                 ),
                 fnFilter: this.IsCommentOwned,
               },
               {
                 type: n.k_Subscribed,
-                display: (0, p.Xx)(
+                display: (0, _.Xx)(
                   "#NotificationsList_CommentFilters_Subscribed",
                 ),
                 fnFilter: this.IsCommentSubscribed,
@@ -158,8 +159,10 @@
               const e = this.k_rgFilterCheckboxes.findIndex((e) => e.hash == t);
               -1 !== e
                 ? this.rgFilterState.set(this.k_rgFilterCheckboxes[e].type, !0)
-                : (0, C.kE)(t) &&
-                  this.rgFilterState.has(3) &&
+                : (0, S.kE)(t) &&
+                  this.rgFilterState.has(
+                    s.gH.k_ESteamNotificationType_Comment,
+                  ) &&
                   this.commentFilter.setItemTypes.add(parseInt(t));
             });
           }
@@ -170,7 +173,9 @@
             this.commentFilter.setItemTypes.clear()),
             t &&
               (this.rgFilterState.set(t, e),
-              3 != t || e || this.commentFilter.setItemTypes.clear()),
+              t != s.gH.k_ESteamNotificationType_Comment ||
+                e ||
+                this.commentFilter.setItemTypes.clear()),
             this.UpdateLocationHash();
         }
         SetCommentFilter(t) {
@@ -197,7 +202,7 @@
                   ? void 0
                   : n.hash));
           }),
-            this.rgFilterState.has(3) &&
+            this.rgFilterState.has(s.gH.k_ESteamNotificationType_Comment) &&
               this.commentFilter.setItemTypes.forEach(
                 (e) => (t += (t ? "," : "") + e),
               ),
@@ -208,27 +213,27 @@
             );
         }
       }
-      function S() {
-        (0, N.SZ)(() => [...T.rgFilterState]);
+      function T() {
+        (0, g.SZ)(() => [...H.rgFilterState]);
         let t = 0;
         return (
-          T.rgFilterState.forEach((e) => {
+          H.rgFilterState.forEach((e) => {
             t += e ? 1 : 0;
           }),
-          { numActive: t, filters: T.rgFilterState }
+          { numActive: t, filters: H.rgFilterState }
         );
       }
       function v() {
-        return (0, N.SZ)(() => T.commentFilter);
+        return (0, g.SZ)(() => H.commentFilter);
       }
-      function b() {
+      function I() {
         return o.useMemo(() => {
           var t;
           const e = new Map();
           for (const i of w.m_rgNotificationRollups.filter(
-            (t) => 3 == t.type,
+            (t) => t.type == s.gH.k_ESteamNotificationType_Comment,
           )) {
-            const n = (0, s.dh)(
+            const n = (0, a.dh)(
               null === (t = i.item) || void 0 === t ? void 0 : t.body_data,
             );
             e.set(n.comment_type, 1 + (e.get(n.comment_type) || 0));
@@ -236,20 +241,20 @@
           return e;
         }, []);
       }
-      function x() {
-        const { numActive: t, filters: e } = S(),
+      function b() {
+        const { numActive: t, filters: e } = T(),
           i = v(),
-          o = (0, F.M)();
+          o = (0, E.M)();
         return (
-          (0, N.SZ)(() => (0, s.RY)(w.m_summary)),
+          (0, g.SZ)(() => (0, a.RY)(w.m_summary)),
           t
             ? w.m_rgNotificationRollups.filter((t) => {
                 if (!e.get(t.type)) return !1;
                 if (
-                  3 == t.type &&
+                  t.type == s.gH.k_ESteamNotificationType_Comment &&
                   (i.type != n.k_All || i.setItemTypes.size > 0)
                 ) {
-                  const e = (0, s.dh)(t.item.body_data);
+                  const e = (0, a.dh)(t.item.body_data);
                   let n = !i.fnFilter || i.fnFilter(e, o);
                   return (
                     i.setItemTypes.size > 0 &&
@@ -263,11 +268,11 @@
             : w.m_rgNotificationRollups
         );
       }
-      (0, y.gn)([h.LO], k.prototype, "rgFilterState", void 0),
-        (0, y.gn)([h.LO], k.prototype, "commentFilter", void 0);
-      const I = 300;
-      const T = new k(),
-        w = new s.tL();
+      (0, N.gn)([h.LO], C.prototype, "rgFilterState", void 0),
+        (0, N.gn)([h.LO], C.prototype, "commentFilter", void 0);
+      const x = 300;
+      const H = new C(),
+        w = new a.tL();
       var R = i(51438),
         A = i(4306),
         L = i(19304),
@@ -275,13 +280,13 @@
       function X(t) {
         const { hash: e } = t;
         (0, o.useEffect)(() => {
-          T.ProcessHash(e);
+          H.ProcessHash(e);
         }, [e]);
-        const i = (0, m.bY)();
+        const i = (0, f.bY)();
         (0, o.useEffect)(() => {
           w.setTransport(i), w.m_nUnviewed > 0 && w.MarkAllItemsViewed();
         }, [i]);
-        const n = (0, a.kQ)("notifications", "application_config");
+        const n = (0, c.kQ)("notifications", "application_config");
         return (
           w.ProcessNewNotificationPayload(n),
           (function () {
@@ -289,9 +294,9 @@
             w.m_rgNotificationRollups.forEach((e) => {
               var i;
               let n = null;
-              if (3 == e.type) {
-                const o = (0, s.dh)(e.item.body_data);
-                if ((0, s.gt)(o)) {
+              if (e.type == s.gH.k_ESteamNotificationType_Comment) {
+                const o = (0, a.dh)(e.item.body_data);
+                if ((0, a.gt)(o)) {
                   let e =
                     null === (i = null == o ? void 0 : o.account_steam_id) ||
                     void 0 === i
@@ -299,24 +304,24 @@
                       : i.ConvertTo64BitString();
                   e && !t.includes(e) && t.push(e);
                 }
-                (0, s.g1)(o) && (n = null == o ? void 0 : o.owner_steam_id);
-              } else if (5 == e.type) {
-                const t = (0, s.gs)(e.item.body_data);
-                n = g.K.InitFromAccountID(parseInt(t.requestorID));
-              } else if (9 == e.type) {
-                const t = (0, s.VE)(e.item.body_data);
-                n = g.K.InitFromAccountID(parseInt(t));
-              } else if (2 == e.type) {
-                const t = (0, s.sS)(e.item.body_data);
-                n = g.K.InitFromAccountID(parseInt(t));
+                (0, a.g1)(o) && (n = null == o ? void 0 : o.owner_steam_id);
+              } else if (e.type == s.gH.k_ESteamNotificationType_FriendInvite) {
+                const t = (0, a.gs)(e.item.body_data);
+                n = F.K.InitFromAccountID(parseInt(t.requestorID));
+              } else if (e.type == s.gH.k_ESteamNotificationType_TradeOffer) {
+                const t = (0, a.VE)(e.item.body_data);
+                n = F.K.InitFromAccountID(parseInt(t));
+              } else if (e.type == s.gH.k_ESteamNotificationType_Gift) {
+                const t = (0, a.sS)(e.item.body_data);
+                n = F.K.InitFromAccountID(parseInt(t));
               }
               let o = null == n ? void 0 : n.ConvertTo64BitString();
               n && !t.includes(o) && t.push(o);
             });
             do {
-              E.y$.LoadProfiles(t.splice(0, I));
-            } while (t.length > I);
-            E.y$.LoadProfiles(t);
+              k.y$.LoadProfiles(t.splice(0, x));
+            } while (t.length > x);
+            k.y$.LoadProfiles(t);
           })(),
           w.m_rgNotificationRollups.length
             ? o.createElement(
@@ -324,49 +329,49 @@
                 null,
                 o.createElement(
                   "div",
-                  { className: _().NotificationPageCtn },
+                  { className: u().NotificationPageCtn },
                   o.createElement(
                     "div",
-                    { className: _().NotificationsHeader },
+                    { className: u().NotificationsHeader },
                     o.createElement(
                       "span",
-                      { className: _().NotificationsHeaderTitle },
-                      (0, p.Xx)("#NotificationsList_Header"),
+                      { className: u().NotificationsHeaderTitle },
+                      (0, _.Xx)("#NotificationsList_Header"),
                     ),
                     o.createElement(M, null),
                   ),
                   o.createElement(
                     "div",
-                    { className: _().NotificationsBody },
+                    { className: u().NotificationsBody },
                     o.createElement(
                       "div",
-                      { className: _().NotificationListCtn },
-                      o.createElement(H, null),
+                      { className: u().NotificationListCtn },
+                      o.createElement(O, null),
                     ),
                     o.createElement(
                       "div",
-                      { className: _().NotificationFiltersCtn },
-                      o.createElement(U, null),
+                      { className: u().NotificationFiltersCtn },
+                      o.createElement(G, null),
                     ),
                   ),
                 ),
               )
             : o.createElement(
                 "div",
-                { className: _().NotificationPageCtn },
-                o.createElement(O, null),
+                { className: u().NotificationPageCtn },
+                o.createElement(U, null),
               )
         );
       }
       function M() {
         const t = (function () {
-            const t = x(),
-              e = (0, s.fw)();
+            const t = b(),
+              e = (0, a.fw)();
             return (
               t.map((t) => {
                 var i;
                 t.item.hidden ||
-                  (0, s.UN)(
+                  (0, a.UN)(
                     e,
                     t.type,
                     null === (i = t.rgunread) || void 0 === i
@@ -374,42 +379,42 @@
                       : i.length,
                   );
               }),
-              (0, s.RY)(e)
+              (0, a.RY)(e)
             );
           })(),
-          e = (0, p.Xx)("#NotificationsList_Unread", t);
+          e = (0, _.Xx)("#NotificationsList_Unread", t);
         return o.createElement(
           "span",
-          { className: _().NotificationsHeaderUnread },
+          { className: u().NotificationsHeaderUnread },
           e,
         );
       }
-      function H() {
-        const t = x();
+      function O() {
+        const t = b();
         return o.createElement(
           R.s,
-          { className: _().NotificationsList },
+          { className: u().NotificationsList },
           t.map((t, e) => o.createElement(Y, { key: e, rollup: t })),
         );
       }
-      function O() {
+      function U() {
         return o.createElement(
           R.s,
-          { className: _().EmptyNotifications },
+          { className: u().EmptyNotifications },
           o.createElement(
             R.s,
-            { className: _().EmptyNotificationsTitle },
-            (0, p.Xx)("#NotificationsList_EmptyTitle"),
+            { className: u().EmptyNotificationsTitle },
+            (0, _.Xx)("#NotificationsList_EmptyTitle"),
           ),
           o.createElement(
             R.s,
-            { className: _().EmptyNotificationsBody },
-            (0, p.Xx)("#NotificationsList_EmptyBody"),
+            { className: u().EmptyNotificationsBody },
+            (0, _.Xx)("#NotificationsList_EmptyBody"),
           ),
         );
       }
-      function U() {
-        const t = x(),
+      function G() {
+        const t = b(),
           e = o.useMemo(() => {
             const t = new Map();
             for (const e of w.m_rgNotificationRollups)
@@ -418,44 +423,44 @@
           }, []);
         return o.createElement(
           "div",
-          { className: _().NotificationsFilterCtn },
+          { className: u().NotificationsFilterCtn },
           o.createElement(
             "div",
-            { className: _().SettingsButtons },
+            { className: u().SettingsButtons },
             o.createElement(
               "div",
-              { className: _().SettingsTooltip },
+              { className: u().SettingsTooltip },
               o.createElement(
                 d.zx,
                 {
-                  className: _().MarkAllReadButton,
+                  className: u().MarkAllReadButton,
                   onClick: () => w.MarkAllItemsRead(t),
                 },
-                (0, p.Xx)("#NotificationsList_MarkAllRead"),
+                (0, _.Xx)("#NotificationsList_MarkAllRead"),
               ),
             ),
             o.createElement(
               d.zx,
               {
-                className: _().SettingsButton,
+                className: u().SettingsButton,
                 onClick: () =>
                   window.location.assign(
                     `${l.De.STORE_BASE_URL}account/notificationsettings`,
                   ),
               },
-              o.createElement(r.Zrf, { className: _().SettingsImg }),
-              (0, p.Xx)("#NotificationsList_Settings"),
+              o.createElement(r.Zrf, { className: u().SettingsImg }),
+              (0, _.Xx)("#NotificationsList_Settings"),
             ),
           ),
           o.createElement(
             "div",
-            { className: _().SettingsFiltersTitle },
-            (0, p.Xx)("#NotificationsList_FilterTo"),
+            { className: u().SettingsFiltersTitle },
+            (0, _.Xx)("#NotificationsList_FilterTo"),
           ),
           o.createElement(
             "div",
-            { className: _().SettingsFilters },
-            T.k_rgFilterCheckboxes
+            { className: u().SettingsFilters },
+            H.k_rgFilterCheckboxes
               .filter((t) => e.has(t.type))
               .map((t) =>
                 o.createElement(Z, { key: t.type, filterOptions: t }),
@@ -464,60 +469,60 @@
           o.createElement(
             d.zx,
             {
-              className: _().ResetButton,
-              onClick: () => T.SetFilter(null, !1, !0),
+              className: u().ResetButton,
+              onClick: () => H.SetFilter(null, !1, !0),
             },
-            (0, p.Xx)("#NotificationsList_Reset"),
+            (0, _.Xx)("#NotificationsList_Reset"),
           ),
         );
       }
       function Z(t) {
         const { filterOptions: e } = t,
-          { filters: i } = S();
-        return 3 == e.type
-          ? o.createElement(z, { filterOptions: e, checked: i.get(e.type) })
+          { filters: i } = T();
+        return e.type == s.gH.k_ESteamNotificationType_Comment
+          ? o.createElement(q, { filterOptions: e, checked: i.get(e.type) })
           : o.createElement(d.ji, {
-              className: _().FilterCheckbox,
+              className: u().FilterCheckbox,
               key: e.type,
               label: e.display,
               checked: i.get(e.type),
-              onChange: (t) => T.SetFilter(e.type, t),
+              onChange: (t) => H.SetFilter(e.type, t),
             });
       }
       function P(t) {
         const { threadType: e } = t,
           i = v();
         return o.createElement(d.ji, {
-          className: _().AdvancedCommentFilterCheckbox,
-          label: (0, p.Xx)("#CommentThreadType_" + e),
+          className: u().AdvancedCommentFilterCheckbox,
+          label: (0, _.Xx)("#CommentThreadType_" + e),
           checked: i.setItemTypes.has(e),
           onChange: (t) => {
             t
               ? (i.setItemTypes.add(Number(e)),
-                T.SetCommentFilter({
+                H.SetCommentFilter({
                   type: i.type,
                   setItemTypes: i.setItemTypes,
                 }))
               : (i.setItemTypes.delete(Number(e)),
-                T.SetCommentFilter({
+                H.SetCommentFilter({
                   type: i.type,
                   setItemTypes: i.setItemTypes,
                 }));
           },
         });
       }
-      function G(t) {
+      function j(t) {
         const { className: e } = t,
-          i = b();
+          i = I();
         return o.createElement(
           "div",
-          { className: (0, L.Z)(_().AdvancedCommentFilters, e) },
+          { className: (0, L.Z)(u().AdvancedCommentFilters, e) },
           Array.from(i.keys()).map((t) =>
             o.createElement(P, { key: t, threadType: t }),
           ),
         );
       }
-      function j(t) {
+      function D(t) {
         const { expanded: e, children: i } = t,
           [n, s] = (0, o.useState)(void 0),
           a = (0, A.yU)((t) => {
@@ -527,66 +532,66 @@
         return o.createElement(
           "div",
           {
-            className: (0, L.Z)(_().Expander, _().Expanded),
+            className: (0, L.Z)(u().Expander, u().Expanded),
             style: { height: e ? n : 0 },
           },
           o.createElement("div", { ref: a }, i),
         );
       }
-      function z(t) {
+      function q(t) {
         const { filterOptions: e, checked: i } = t,
           n = (function () {
-            const t = (0, F.M)();
+            const t = (0, E.M)();
             return o.useMemo(() => {
               var e;
               const i = new Map();
-              for (const n of T.k_rgCommentFilters)
+              for (const n of H.k_rgCommentFilters)
                 for (const o of w.m_rgNotificationRollups.filter(
-                  (t) => 3 == t.type,
+                  (t) => t.type == s.gH.k_ESteamNotificationType_Comment,
                 )) {
-                  const a = (0, s.dh)(
+                  const s = (0, a.dh)(
                     null === (e = o.item) || void 0 === e
                       ? void 0
                       : e.body_data,
                   );
-                  n.fnFilter(a, t) && i.set(n.type, 1 + (i.get(n.type) || 0));
+                  n.fnFilter(s, t) && i.set(n.type, 1 + (i.get(n.type) || 0));
                 }
               return i;
             }, [t]);
           })(),
-          a = b(),
+          c = I(),
           l = n.size > 2,
-          r = a.size > 1,
-          c = l || r;
+          r = c.size > 1,
+          m = l || r;
         return o.createElement(
           o.Fragment,
           null,
           o.createElement(d.ji, {
-            className: _().FilterCheckbox,
+            className: u().FilterCheckbox,
             key: e.type,
             label: e.display,
             checked: i,
             onChange: (t) => {
-              T.SetFilter(e.type, t);
+              H.SetFilter(e.type, t);
             },
           }),
-          c &&
+          m &&
             o.createElement(
               "div",
-              { className: (0, L.Z)(_().CommentFilterCtn, i && _().Expanded) },
+              { className: (0, L.Z)(u().CommentFilterCtn, i && u().Expanded) },
               o.createElement(
-                j,
+                D,
                 { expanded: i },
                 o.createElement(
                   "div",
-                  { className: _().CommentFilters },
-                  r && o.createElement(G, { className: _().Expanded }),
+                  { className: u().CommentFilters },
+                  r && o.createElement(j, { className: u().Expanded }),
                 ),
               ),
             ),
         );
       }
-      function D(t, e, i) {
+      function z(t, e, i) {
         e.read ||
           (i && 0 != i.button && 1 != i.button) ||
           w.MarkItemRead(e.notification_id),
@@ -594,12 +599,12 @@
       }
       function Y(t) {
         const { rollup: e } = t;
-        (0, N.SZ)(() => e.item.hidden);
-        const i = s.Zm[e.type],
-          [n, a] = o.useState(!1),
+        (0, g.SZ)(() => e.item.hidden);
+        const i = a.Zm[e.type],
+          [n, c] = o.useState(!1),
           l = (0, A.S1)(
             (0, o.useCallback)((t) => {
-              t.isIntersecting && a(!0);
+              t.isIntersecting && c(!0);
             }, []),
             { rootMargin: "600px" },
           ),
@@ -607,34 +612,41 @@
             w.MarkItemHidden(e.item.notification_id);
           }, [e.item.notification_id]);
         if (e.item.hidden) return null;
-        if (e.item.hidden && 5 == e.type) {
-          const t = (0, s.gs)(e.item.body_data);
-          if ((0, c.fk)(t.state) || 1 == t.state) return null;
+        if (
+          e.item.hidden &&
+          e.type == s.gH.k_ESteamNotificationType_FriendInvite
+        ) {
+          const t = (0, a.gs)(e.item.body_data);
+          if (
+            (0, m.fk)(t.state) ||
+            t.state == m.of.k_EFriendRelationshipBlocked
+          )
+            return null;
         }
-        const m = i.bBasic ? B.PO : B.k6[e.type];
-        return m
+        const f = i.bBasic ? B.oj : B.k6[e.type];
+        return f
           ? o.createElement(
-              q,
+              W,
               { ref: l },
               n &&
-                o.createElement(m, {
+                o.createElement(f, {
                   rollup: e,
-                  onNotificationClick: D,
+                  onNotificationClick: z,
                   onHide: r,
-                  location: f.IS.AllNotificationsTray,
-                  uimode: 7,
+                  location: p.IS.AllNotificationsTray,
+                  uimode: m.se.k_EUIMode_DesktopUI,
                 }),
             )
           : null;
       }
-      const q = o.forwardRef((t, e) =>
+      const W = o.forwardRef((t, e) =>
         o.createElement(
           "div",
-          { className: _().AllNotificationsRowCtn, ref: e },
+          { className: u().AllNotificationsRowCtn, ref: e },
           t.children,
         ),
       );
-      function W(t) {
+      function K(t) {
         let e = t.location.hash;
         return (
           e && e.startsWith("#") && (e = e.slice(1)),

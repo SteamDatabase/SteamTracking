@@ -2,7 +2,7 @@
  ****/
 (self.webpackChunkappmgmt_storeadmin =
   self.webpackChunkappmgmt_storeadmin || []).push([
-  [2360],
+  [6608],
   {
     52629: (e) => {
       e.exports = {
@@ -118,169 +118,181 @@
     24174: (e, t, n) => {
       "use strict";
       n.d(t, {
-        Z6: () => d,
-        p8: () => g,
-        NO: () => m,
+        Z6: () => _,
+        p8: () => A,
+        NO: () => g,
         UC: () => v,
         A1: () => u,
         yp: () => c,
-        iP: () => _,
+        iP: () => h,
       });
-      var r = n(89526),
-        a = n(46132),
-        o = n(32765),
-        s = n(4116);
-      class i {
+      var r,
+        a = n(89526),
+        o = n(75457),
+        s = n(32765),
+        i = n(4116);
+      !(function (e) {
+        (e[(e.UNKNOWN = 0)] = "UNKNOWN"),
+          (e[(e.TEXT = 1)] = "TEXT"),
+          (e[(e.OPENTAG = 2)] = "OPENTAG"),
+          (e[(e.CLOSETAG = 3)] = "CLOSETAG");
+      })(r || (r = {}));
+      class l {
         constructor() {
-          (this.type = 0), (this.text = "");
+          (this.type = r.UNKNOWN), (this.text = "");
         }
         ConvertMalformedNodeToText() {
-          3 == this.type
+          this.type == r.CLOSETAG
             ? (this.text = "[/" + this.text)
-            : 2 == this.type && (this.text = "[" + this.text),
-            (this.type = 1);
+            : this.type == r.OPENTAG && (this.text = "[" + this.text),
+            (this.type = r.TEXT);
         }
       }
-      class l {
+      class p {
         constructor(e, t) {
           (this.m_dictComponents = void 0),
             (this.m_dictComponents = e),
             (this.m_fnAccumulatorFactory = t);
         }
         Parse(e, t, n = !1) {
-          const r = (function (e, t) {
+          const a = (function (e, t) {
             const n = [];
-            let r = new i(),
-              a = !1,
+            let a = new l(),
               o = !1,
-              s = !1;
-            for (let i = 0; i < e.length; i++) {
-              let l = e[i];
-              switch (r.type) {
-                case 0:
-                  "[" == l
-                    ? ((r.type = 2), (o = !0))
-                    : ((r.type = 1), "\\" == l && t ? (a = !a) : (r.text += l));
+              s = !1,
+              i = !1;
+            for (let l = 0; l < e.length; l++) {
+              let p = e[l];
+              switch (a.type) {
+                case r.UNKNOWN:
+                  "[" == p
+                    ? ((a.type = r.OPENTAG), (s = !0))
+                    : ((a.type = r.TEXT),
+                      "\\" == p && t ? (o = !o) : (a.text += p));
                   break;
-                case 2:
-                case 3:
-                  if ("/" == l && o) (r.type = 3), (r.text = ""), (o = !1);
-                  else if ("[" != l || a)
-                    if ("]" != l || a)
-                      "\\" == l && t
-                        ? ((r.text += l), (a = !a), (o = !1))
-                        : ((r.text += l), (a = !1), (o = !1));
+                case r.OPENTAG:
+                case r.CLOSETAG:
+                  if ("/" == p && s)
+                    (a.type = r.CLOSETAG), (a.text = ""), (s = !1);
+                  else if ("[" != p || o)
+                    if ("]" != p || o)
+                      "\\" == p && t
+                        ? ((a.text += p), (o = !o), (s = !1))
+                        : ((a.text += p), (o = !1), (s = !1));
                     else {
                       const e =
-                          2 == r.type &&
-                          "noparse" == r.text.toLocaleLowerCase(),
+                          a.type == r.OPENTAG &&
+                          "noparse" == a.text.toLocaleLowerCase(),
                         t =
-                          3 == r.type &&
-                          "noparse" == r.text.toLocaleLowerCase();
-                      o || (s && !t)
-                        ? (r.ConvertMalformedNodeToText(), (r.text += l))
+                          a.type == r.CLOSETAG &&
+                          "noparse" == a.text.toLocaleLowerCase();
+                      s || (i && !t)
+                        ? (a.ConvertMalformedNodeToText(), (a.text += p))
                         : e
-                        ? (s = !0)
-                        : t && (s = !1),
-                        (r = p(n, r)),
-                        (o = !1);
+                        ? (i = !0)
+                        : t && (i = !1),
+                        (a = d(n, a)),
+                        (s = !1);
                     }
                   else
-                    r.ConvertMalformedNodeToText(), (r = p(n, r, 2)), (o = !0);
+                    a.ConvertMalformedNodeToText(),
+                      (a = d(n, a, r.OPENTAG)),
+                      (s = !0);
                   break;
-                case 1:
-                  "[" != l || a
-                    ? "\\" == l && t
-                      ? (a && (r.text += l), (a = !a))
-                      : ((r.text += l), (a = !1))
-                    : ((r = p(n, r, 2)), (o = !0));
+                case r.TEXT:
+                  "[" != p || o
+                    ? "\\" == p && t
+                      ? (o && (a.text += p), (o = !o))
+                      : ((a.text += p), (o = !1))
+                    : ((a = d(n, a, r.OPENTAG)), (s = !0));
               }
             }
-            0 != r.type &&
-              ((2 != r.type && 3 != r.type) || r.ConvertMalformedNodeToText(),
-              n.push(r));
+            a.type != r.UNKNOWN &&
+              ((a.type != r.OPENTAG && a.type != r.CLOSETAG) ||
+                a.ConvertMalformedNodeToText(),
+              n.push(a));
             return n;
           })(e, n);
-          return this.Parse_BuildElements(r, t);
+          return this.Parse_BuildElements(a, t);
         }
         Parse_BuildElements(e, t) {
           let n = this.m_fnAccumulatorFactory(void 0),
-            r = [],
-            a = function () {
-              return r.length < 1 ? void 0 : r[r.length - 1];
+            a = [],
+            o = function () {
+              return a.length < 1 ? void 0 : a[a.length - 1];
             },
-            o = this.m_dictComponents,
-            s = !1,
-            i = !0,
-            l = function (e, a, l) {
-              if (e && e.node.tag === a.text && o.get(e.node.tag)) {
-                const a = o.get(e.node.tag),
-                  l = r.map((e) => e.node.tag),
-                  p = { parentTags: l, tagname: e.node.tag, args: e.node.args },
-                  d = t(a.Constructor, p, ...n.GetElements());
+            s = this.m_dictComponents,
+            i = !1,
+            l = !0,
+            p = function (e, r, o) {
+              if (e && e.node.tag === r.text && s.get(e.node.tag)) {
+                const r = s.get(e.node.tag),
+                  o = a.map((e) => e.node.tag),
+                  p = { parentTags: o, tagname: e.node.tag, args: e.node.args },
+                  d = t(r.Constructor, p, ...n.GetElements());
                 (n = e.accumulator),
                   n.AppendNode(d),
-                  (s = a.skipFollowingNewline),
-                  (i = e.bWrapTextForCopying);
+                  (i = r.skipFollowingNewline),
+                  (l = e.bWrapTextForCopying);
               } else if (e) {
                 let t = e.accumulator;
                 t.AppendText("[" + e.node.text + "]", !1),
                   n.GetElements().forEach((e) => t.AppendNode(e)),
-                  t.AppendText("[/" + a.text + "]", !1),
+                  t.AppendText("[/" + r.text + "]", !1),
                   (n = t),
-                  (i = e.bWrapTextForCopying);
+                  (l = e.bWrapTextForCopying);
               }
             };
           for (
             e.forEach((e, t) => {
-              var p, d;
-              if (1 == e.type) {
-                const t = s ? e.text.replace(/^[\t\r ]*\n/g, "") : e.text;
-                n.AppendText(t, i), (s = !1);
-              } else if (2 == e.type) {
-                const t = o.get(e.tag);
+              var d, _;
+              if (e.type == r.TEXT) {
+                const t = i ? e.text.replace(/^[\t\r ]*\n/g, "") : e.text;
+                n.AppendText(t, l), (i = !1);
+              } else if (e.type == r.OPENTAG) {
+                const t = s.get(e.tag);
                 if (t) {
-                  const d = a();
-                  if (void 0 !== d) {
-                    const t = o.get(d.node.tag);
+                  const r = o();
+                  if (void 0 !== r) {
+                    const t = s.get(r.node.tag);
                     t &&
                       t.autocloses &&
-                      e.tag === d.node.tag &&
-                      l(r.pop(), d.node);
+                      e.tag === r.node.tag &&
+                      p(a.pop(), r.node);
                   }
-                  r.push({ accumulator: n, node: e, bWrapTextForCopying: i }),
+                  a.push({ accumulator: n, node: e, bWrapTextForCopying: l }),
                     (n = this.m_fnAccumulatorFactory(e)),
-                    (s = t.skipInternalNewline),
-                    (i =
-                      null !== (p = t.allowWrapTextForCopying) &&
-                      void 0 !== p &&
-                      p);
-                } else n.AppendText("[" + e.text + "]", 0 == r.length);
-              } else if (3 == e.type) {
+                    (i = t.skipInternalNewline),
+                    (l =
+                      null !== (d = t.allowWrapTextForCopying) &&
+                      void 0 !== d &&
+                      d);
+                } else n.AppendText("[" + e.text + "]", 0 == a.length);
+              } else if (e.type == r.CLOSETAG) {
                 for (
                   ;
-                  a() &&
-                  a().node.tag !== e.text &&
-                  o.get(a().node.tag) &&
-                  o.get(a().node.tag).autocloses;
+                  o() &&
+                  o().node.tag !== e.text &&
+                  s.get(o().node.tag) &&
+                  s.get(o().node.tag).autocloses;
 
                 ) {
-                  const e = r.pop();
-                  l(e, e.node);
+                  const e = a.pop();
+                  p(e, e.node);
                 }
                 if (
-                  (null === (d = a()) || void 0 === d ? void 0 : d.node.tag) ==
+                  (null === (_ = o()) || void 0 === _ ? void 0 : _.node.tag) ==
                   e.text
                 ) {
-                  const t = r.pop();
-                  l(t, e);
-                } else n.AppendText("[/" + e.text + "]", 0 == r.length);
+                  const t = a.pop();
+                  p(t, e);
+                } else n.AppendText("[/" + e.text + "]", 0 == a.length);
               }
             });
-            r.length > 0;
+            a.length > 0;
 
           ) {
-            let e = r.pop(),
+            let e = a.pop(),
               t = e.accumulator;
             t.AppendText("[" + e.node.text + "]", !1),
               n.GetElements().forEach((e) => t.AppendNode(e)),
@@ -289,8 +301,8 @@
           return n.GetElements();
         }
       }
-      function p(e, t, n = 0) {
-        if (2 == t.type) {
+      function d(e, t, n = r.UNKNOWN) {
+        if (t.type == r.OPENTAG) {
           let e = t.text.indexOf("="),
             n = t.text.indexOf(" ");
           if ((-1 != n && (-1 == e || n < e) && (e = n), e > 0)) {
@@ -298,89 +310,100 @@
             let n = t.text.substr(e);
             t.args = (function (e) {
               if (!e || e.length < 1) return {};
-              let t = {},
-                n = "",
+              let t,
+                n = {},
                 r = "",
-                a = 0,
-                o = 0;
-              "=" == e[0] && (a = 2);
-              let s = !1;
-              for (o++; o < e.length; o++) {
-                let i = e[o],
-                  l = !0,
-                  p = !1;
-                switch (a) {
-                  case 0:
-                    if ("=" == i) return {};
-                    if (" " == i) continue;
-                    a = 1;
+                a = "";
+              !(function (e) {
+                (e[(e.PRE_NAME = 0)] = "PRE_NAME"),
+                  (e[(e.IN_NAME = 1)] = "IN_NAME"),
+                  (e[(e.POST_NAME = 2)] = "POST_NAME"),
+                  (e[(e.IN_VALUE = 3)] = "IN_VALUE"),
+                  (e[(e.IN_QUOTED_VALUE = 4)] = "IN_QUOTED_VALUE");
+              })(t || (t = {}));
+              let o = t.PRE_NAME,
+                s = 0;
+              "=" == e[0] && (o = t.POST_NAME);
+              let i = !1;
+              for (s++; s < e.length; s++) {
+                let l = e[s],
+                  p = !0,
+                  d = !1;
+                switch (o) {
+                  case t.PRE_NAME:
+                    if ("=" == l) return {};
+                    if (" " == l) continue;
+                    o = t.IN_NAME;
                     break;
-                  case 1:
-                    ("=" != i && " " != i) ||
-                      s ||
-                      (" " == i ? ((a = 0), (p = !0)) : (a = 2), (l = !1));
+                  case t.IN_NAME:
+                    ("=" != l && " " != l) ||
+                      i ||
+                      (" " == l
+                        ? ((o = t.PRE_NAME), (d = !0))
+                        : (o = t.POST_NAME),
+                      (p = !1));
                     break;
-                  case 2:
-                    " " == i
-                      ? ((a = 0), (l = !1), (p = !0))
-                      : '"' == i
-                      ? ((a = 4), (l = !1))
-                      : (a = 3);
+                  case t.POST_NAME:
+                    " " == l
+                      ? ((o = t.PRE_NAME), (p = !1), (d = !0))
+                      : '"' == l
+                      ? ((o = t.IN_QUOTED_VALUE), (p = !1))
+                      : (o = t.IN_VALUE);
                     break;
-                  case 3:
-                  case 4:
-                    ((" " == i && 4 != a && !s) ||
-                      ('"' == i && 4 == a && !s)) &&
-                      ((a = 0), (l = !1), (p = !0));
+                  case t.IN_VALUE:
+                  case t.IN_QUOTED_VALUE:
+                    ((" " == l && o != t.IN_QUOTED_VALUE && !i) ||
+                      ('"' == l && o == t.IN_QUOTED_VALUE && !i)) &&
+                      ((o = t.PRE_NAME), (p = !1), (d = !0));
                 }
-                if (l)
-                  if ("\\" != i || s)
-                    if (((s = !1), 1 == a)) n += i;
+                if (p)
+                  if ("\\" != l || i)
+                    if (((i = !1), o == t.IN_NAME)) r += l;
                     else {
-                      if (3 != a && 4 != a)
+                      if (o != t.IN_VALUE && o != t.IN_QUOTED_VALUE)
                         throw new Error(
-                          "Not expecting to accumulate buffer in state " + a,
+                          "Not expecting to accumulate buffer in state " + o,
                         );
-                      r += i;
+                      a += l;
                     }
-                  else s = !0;
-                p && ((t[n] = r), (n = ""), (r = ""));
+                  else i = !0;
+                d && ((n[r] = a), (r = ""), (a = ""));
               }
-              0 != a && (t[n] = r);
-              return t;
+              o != t.PRE_NAME && (n[r] = a);
+              return n;
             })(n);
           } else (t.args = {}), (t.tag = t.text.toLocaleLowerCase());
         }
         e.push(t);
-        let r = new i();
-        return (r.type = n), r;
+        let a = new l();
+        return (a.type = n), a;
       }
-      class d extends l {
+      class _ extends p {
         constructor(e, t, n) {
-          super(e, null != t ? t : () => new s.LT()),
-            (this.m_renderingLanguage = n || (0, a.jM)(o.De.LANGUAGE));
+          super(e, null != t ? t : () => new i.LT()),
+            (this.m_renderingLanguage = n || (0, o.jM)(s.De.LANGUAGE));
         }
         UpdateOverrideLanguage(e) {
-          this.m_renderingLanguage = e || (0, a.jM)(o.De.LANGUAGE);
+          this.m_renderingLanguage = e || (0, o.jM)(s.De.LANGUAGE);
         }
         ParseBBCode(e, t, n = !1) {
-          let a = 0;
+          let r = 0;
           const o = this.Parse(
             e,
             (e, n, ...o) =>
-              r.createElement(
+              a.createElement(
                 e,
                 Object.assign(Object.assign({}, n), {
                   context: t,
                   language: this.m_renderingLanguage,
-                  key: "bbnode_" + a++,
+                  key: "bbnode_" + r++,
                 }),
                 ...o,
               ),
             n,
           );
           return o.length > 1
-            ? r.createElement(r.Fragment, null, ...o)
+            ? a.createElement(a.Fragment, null, ...o)
             : 1 == o.length
             ? o[0]
             : null;
@@ -430,7 +453,7 @@
           "uploadfilebutton",
           "docimg",
         ],
-        _ = [
+        h = [
           "h1",
           "h2",
           "h3",
@@ -442,7 +465,7 @@
           "noparse",
           "url",
         ],
-        h = [
+        E = [
           "img",
           "previewyoutube",
           "looping_media",
@@ -453,15 +476,15 @@
           "youtubeorvideo",
           "docimg",
         ],
-        u = (c.filter((e) => -1 == h.indexOf(e)), "{STEAM_CLAN_IMAGE}"),
+        u = (c.filter((e) => -1 == E.indexOf(e)), "{STEAM_CLAN_IMAGE}"),
         v = "{STEAM_CLAN_LOC_IMAGE}";
-      function g(e, t = null, n = " ") {
+      function A(e, t = null, n = " ") {
         let r = null == t ? void 0 : t.join("|");
         r || (r = c.join("|") + "|\\*");
         let a = new RegExp("\\[(" + r + ")\\b[^\\]]*\\].*?\\[/\\1\\]", "gi");
         return e.replace(a, n);
       }
-      function m(e, t = null, n = "") {
+      function g(e, t = null, n = "") {
         let r = null == t ? void 0 : t.join("|");
         r || (r = c.join("|") + "|\\*");
         let a = "\\[\\/?(?:" + r + "){1,}.*?]";
@@ -557,23 +580,24 @@
     207: (e, t, n) => {
       "use strict";
       n.d(t, {
-        FM: () => i,
-        H7: () => s,
-        OL: () => h,
-        Pm: () => d,
-        XW: () => l,
-        bk: () => g,
-        dK: () => _,
+        FM: () => l,
+        H7: () => i,
+        OL: () => E,
+        Pm: () => _,
+        XW: () => p,
+        bk: () => A,
+        dK: () => h,
         et: () => c,
         iv: () => v,
         md: () => u,
       });
       var r = n(32765),
-        a = n(14826),
-        o = n(13345);
-      const s =
+        a = n(75457),
+        o = n(14826),
+        s = n(13345);
+      const i =
         /((?:(?:https?:)|(?:www[.,])|(?:[!#-;=?-Z\\\^-~]+[\.,](?:(?:[a-zA-Z]{2,4}[\.?]*[\/\\\?#])|(?:(?:biz|com|gallery|in|name|net|online|org|tech|trade|xyz)(?=\W|$)))))(?:[^ː\s"<>\[\]]*[^\\s"<>\[\],.ː:])?)/;
-      function i(e) {
+      function l(e) {
         let t = new RegExp(
             "^(steam://openurl(_external)?/)?((f|ht)tps?://)?([^@/?#]*@)?([^/#?]+)",
             "im",
@@ -581,17 +605,17 @@
           n = e.match(t);
         return n && n.length > 5 ? n[6].toString() : e;
       }
-      function l(e) {
-        let t = i(e);
+      function p(e) {
+        let t = l(e);
         return t.startsWith("www.") && (t = t.slice(4)), t;
       }
-      const p = /^(steam|ftp|https?):\/\//;
-      function d(e) {
-        return p.test(e) ? e : "https://" + e;
+      const d = /^(steam|ftp|https?):\/\//;
+      function _(e) {
+        return d.test(e) ? e : "https://" + e;
       }
       function c(e) {
         return e
-          ? 1 != r.De.EUNIVERSE
+          ? r.De.EUNIVERSE != a.xO.k_EUniversePublic
             ? e
             : ("http:" == e.substring(0, 5) && (e = "https:" + e.substring(5)),
               (e = (e = (e = (e = (e = (e = (e = (e = (e = (e = (e = (e = (e =
@@ -638,20 +662,20 @@
                 /{MEDIA_CDN_COMMUNITY_URL}/g,
                 r.De.MEDIA_CDN_COMMUNITY_URL,
               )).replace(/{COMMUNITY_CDN_URL}/g, r.De.COMMUNITY_CDN_URL)),
-              (e = (0, o.HZ)(e)))
+              (e = (0, s.HZ)(e)))
           : e;
       }
-      function _(e) {
+      function h(e) {
         if (!e) return !0;
-        const t = i(e).toLocaleLowerCase();
+        const t = l(e).toLocaleLowerCase();
         return (
           [
-            i(r.De.COMMUNITY_CDN_URL).toLocaleLowerCase(),
-            i(r.De.MEDIA_CDN_URL).toLocaleLowerCase(),
-            i(r.De.MEDIA_CDN_COMMUNITY_URL).toLocaleLowerCase(),
-            i(r.De.STORE_CDN_URL).toLocaleLowerCase(),
-            i(r.De.BASE_URL_SHARED_CDN).toLocaleLowerCase(),
-            i(r.De.CLAN_CDN_ASSET_URL).toLocaleLowerCase(),
+            l(r.De.COMMUNITY_CDN_URL).toLocaleLowerCase(),
+            l(r.De.MEDIA_CDN_URL).toLocaleLowerCase(),
+            l(r.De.MEDIA_CDN_COMMUNITY_URL).toLocaleLowerCase(),
+            l(r.De.STORE_CDN_URL).toLocaleLowerCase(),
+            l(r.De.BASE_URL_SHARED_CDN).toLocaleLowerCase(),
+            l(r.De.CLAN_CDN_ASSET_URL).toLocaleLowerCase(),
             "support.steampowered.com",
             "steamcdn-a.akamaihd.net",
             "cdn.cloudflare.steamstatic.com",
@@ -659,7 +683,7 @@
           ].indexOf(t) >= 0
         );
       }
-      function h(e) {
+      function E(e) {
         return r.De.SNR &&
           r.De.SNR.length > 0 &&
           e &&
@@ -677,9 +701,9 @@
         }
       }
       function v() {
-        return `${r.De.HELP_BASE_URL}${(0, a.CE)()}/`;
+        return `${r.De.HELP_BASE_URL}${(0, o.CE)()}/`;
       }
-      function g(e) {
+      function A(e) {
         return (
           r.De.IN_STEAMUI &&
             !e.startsWith("steam://") &&

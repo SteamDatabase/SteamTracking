@@ -2,7 +2,7 @@
  ****/
 (self.webpackChunkappmgmt_storeadmin =
   self.webpackChunkappmgmt_storeadmin || []).push([
-  [1254],
+  [8591],
   {
     46289: (e) => {
       e.exports = {
@@ -54,7 +54,7 @@
       "use strict";
       t.d(r, { J: () => b });
       var o = t(32765),
-        c = t(46132);
+        c = t(75457);
       function b() {
         return o.De.IN_CLIENT && (0, c.px)(o.De.LAUNCHER_TYPE);
       }

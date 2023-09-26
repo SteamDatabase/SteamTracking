@@ -468,6 +468,10 @@ a.store_header_btn_content:hover {
 
 }
 
+.cart_status_flex {
+	display: flex;
+}
+
 .store_header_btn_green {
 	background-color: rgba( 164, 208, 7, 0.4 );
 }

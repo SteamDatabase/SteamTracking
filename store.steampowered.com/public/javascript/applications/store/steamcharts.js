@@ -92,7 +92,7 @@
         Mobile: "overviewpage_Mobile_1cKll",
       };
     },
-    26256: (e) => {
+    54856: (e) => {
       e.exports = {
         SteamChartsPage: "steamchartsshell_SteamChartsPage_2aYDM",
         SteamChartsShell: "steamchartsshell_SteamChartsShell_2rArj",
@@ -197,13 +197,14 @@
         TopReleasesContainer: "weeklytopsellers_TopReleasesContainer_HVGCL",
       };
     },
-    69513: (e, t, r) => {
+    69513: (e, t, a) => {
       "use strict";
-      r.d(t, { C: () => s });
-      var a = r(54671),
-        n = r(89526);
+      a.d(t, { C: () => s });
+      var r = a(54671),
+        n = a(89526),
+        l = a(68562);
       function s(e) {
-        const t = a.jg.Get().BIsLoaded() && a.jg.Get();
+        const t = r.jg.Get().BIsLoaded() && r.jg.Get();
         return n.useMemo(
           () =>
             (function (e, t) {
@@ -212,10 +213,10 @@
               if (e.BExcludesContentDescriptor(t.GetContentDescriptorIDs()))
                 return !0;
               switch (t.GetStoreItemType()) {
-                case 0:
+                case l.vn.k_EStoreItemType_App:
                   if (e.BIsGameIgnored(t.GetID())) return !0;
                   break;
-                case 1:
+                case l.vn.k_EStoreItemType_Package:
                   if (e.BIsPackageIgnored(t.GetID())) return !0;
               }
               return !1;
@@ -224,40 +225,41 @@
         );
       }
     },
-    66216: (e, t, r) => {
+    66216: (e, t, a) => {
       "use strict";
-      r.d(t, { cs: () => h, qX: () => _ });
-      var a = r(33940),
-        n = r(89526),
-        s = r(5615),
-        l = r(54856),
-        i = r(3609),
-        o = r(11195),
-        c = r(57858),
-        m = r(23801);
-      const u = n.createContext({}),
-        d = () => n.useContext(u);
-      function _(e) {
-        let { transport: t, defaultOptions: r, children: a } = e,
-          s = n.useMemo(
-            () => ({ defaultOptions: r || {}, transport: t }),
-            [r, t],
+      a.d(t, { cs: () => C, qX: () => p });
+      var r = a(33940),
+        n = a(89526),
+        l = a(5615),
+        s = a(42735),
+        o = a(67328),
+        c = a(66262),
+        i = a(11195),
+        m = a(92616),
+        u = a(23801);
+      const d = n.createContext({}),
+        _ = () => n.useContext(d);
+      function p(e) {
+        let { transport: t, defaultOptions: a, children: r } = e,
+          l = n.useMemo(
+            () => ({ defaultOptions: a || {}, transport: t }),
+            [a, t],
           );
-        return n.createElement(u.Provider, { value: s }, a);
+        return n.createElement(d.Provider, { value: l }, r);
       }
-      const p = "StoreQueryStore";
-      function h(e, t, r, c) {
-        let u = d();
-        (u && u.transport) ||
-          (0, m.X)(!1, "useStoreQuery called outside of a <StoreQueryRoot>");
-        let _ = u.defaultOptions;
-        const h = n.useMemo(() => {
+      const h = "StoreQueryStore";
+      function C(e, t, a, m) {
+        let d = _();
+        (d && d.transport) ||
+          (0, u.X)(!1, "useStoreQuery called outside of a <StoreQueryRoot>");
+        let p = d.defaultOptions;
+        const C = n.useMemo(() => {
           let e = [];
           return (
-            (null == c ? void 0 : c.content_descriptors_excluded)
-              ? (e = c.content_descriptors_excluded)
-              : (null == _ ? void 0 : _.content_descriptors_excluded) &&
-                (e = _.content_descriptors_excluded),
+            (null == m ? void 0 : m.content_descriptors_excluded)
+              ? (e = m.content_descriptors_excluded)
+              : (null == p ? void 0 : p.content_descriptors_excluded) &&
+                (e = p.content_descriptors_excluded),
             Object.assign(Object.assign({}, t), {
               filters: Object.assign(
                 { content_descriptors_excluded: e },
@@ -265,37 +267,37 @@
               ),
             })
           );
-        }, [t, c, _]);
-        let y;
-        void 0 !== (null == c ? void 0 : c.override_country_code)
-          ? (y = c.override_country_code)
-          : void 0 !== (null == _ ? void 0 : _.override_country_code) &&
-            (y = _.override_country_code);
-        let S = { staleTime: 36e5 };
-        (null == c ? void 0 : c.reactQuery) &&
-          (S = Object.assign(Object.assign({}, S), c.reactQuery));
-        const g = [p, h, r, c];
-        return (0, s.useQuery)(
-          g,
+        }, [t, m, p]);
+        let E;
+        void 0 !== (null == m ? void 0 : m.override_country_code)
+          ? (E = m.override_country_code)
+          : void 0 !== (null == p ? void 0 : p.override_country_code) &&
+            (E = p.override_country_code);
+        let v = { staleTime: 36e5 };
+        (null == m ? void 0 : m.reactQuery) &&
+          (v = Object.assign(Object.assign({}, v), m.reactQuery));
+        const y = [h, C, a, m];
+        return (0, l.useQuery)(
+          y,
           () =>
-            (function (e, t, r, n, s) {
-              return (0, a.mG)(this, void 0, void 0, function* () {
-                const a = l.gA.Init(i.e8);
-                (0, o.pA)(a),
-                  n && (0, o.De)(a, n),
-                  s && a.Body().set_override_country_code(s),
-                  a.Body().set_query(i.$2.fromObject(r)),
-                  a.Body().set_query_name(t);
-                const c = yield i.Ax.Query(e, a);
-                if (1 != c.GetEResult())
-                  throw `Error executing StoreQuery "${t}", EResult: ${c.GetEResult()}`;
-                return new C(c, n);
+            (function (e, t, a, n, l) {
+              return (0, r.mG)(this, void 0, void 0, function* () {
+                const r = o.gA.Init(c.e8);
+                (0, i.pA)(r),
+                  n && (0, i.De)(r, n),
+                  l && r.Body().set_override_country_code(l),
+                  r.Body().set_query(c.$2.fromObject(a)),
+                  r.Body().set_query_name(t);
+                const m = yield c.Ax.Query(e, r);
+                if (m.GetEResult() != s.s.k_EResultOK)
+                  throw `Error executing StoreQuery "${t}", EResult: ${m.GetEResult()}`;
+                return new S(m, n);
               });
-            })(u.transport, e, h, r, y),
-          S,
+            })(d.transport, e, C, a, E),
+          v,
         );
       }
-      class C {
+      class S {
         constructor(e, t) {
           this.ReadResults(e, t);
         }
@@ -310,30 +312,30 @@
         }
         ReadResults(e, t) {
           this.m_Items ||
-            ((0, m.X)(
+            ((0, u.X)(
               0 == e.Body().metadata().start(),
               "Empty item list - expected to start at 0",
             ),
             (this.m_Items = []));
-          const r = e.Body().ids() || [];
+          const a = e.Body().ids() || [];
           if (
-            ((this.m_rgItemIDs = r.map((e) => e.toObject())),
+            ((this.m_rgItemIDs = a.map((e) => e.toObject())),
             e.Body().store_items())
           )
-            for (const r of e.Body().store_items())
-              this.m_Items.push(c.Z.Get().ReadItem(r, t));
+            for (const a of e.Body().store_items())
+              this.m_Items.push(m.Z.Get().ReadItem(a, t));
           this.m_metadata = e.Body().metadata().toObject();
         }
       }
     },
-    12360: (e, t, r) => {
+    12360: (e, t, a) => {
       "use strict";
-      r.d(t, { P: () => n, h: () => s });
-      var a = r(89526);
+      a.d(t, { P: () => n, h: () => l });
+      var r = a(89526);
       function n(e) {
-        const { title: t, bodyClassName: r, children: n } = e;
+        const { title: t, bodyClassName: a, children: n } = e;
         return (
-          a.useEffect(() => {
+          r.useEffect(() => {
             const e = document.title;
             return (
               (document.title = t),
@@ -342,16 +344,16 @@
               }
             );
           }, [t]),
-          s(r),
+          l(a),
           n
         );
       }
-      function s(e) {
-        a.useEffect(() => {
+      function l(e) {
+        r.useEffect(() => {
           if (!e) return;
           const t = [];
-          for (const r of e.split(/ /))
-            document.body.classList.contains(r) || t.push(r);
+          for (const a of e.split(/ /))
+            document.body.classList.contains(a) || t.push(a);
           return (
             document.body.classList.add(...t),
             () => document.body.classList.remove(...t)
@@ -359,748 +361,38 @@
         }, [e]);
       }
     },
-    49747: (e, t, r) => {
+    55331: (e, t, a) => {
       "use strict";
-      r.r(t), r.d(t, { SteamChartsRoutes: () => Sr, default: () => gr });
-      var a = r(33940),
-        n = r(96927),
-        s = r(52868),
-        l = r.n(s),
-        i = r(5615),
-        o = r(54856),
-        c = r(45878),
-        m = r(29063),
-        u = r(53143);
-      const d = c.Message;
-      class _ extends d {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            _.prototype.context || m.aR(_.M()),
-            d.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  context: { n: 1, c: u.WJ },
-                  data_request: { n: 2, c: u.Qn },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = m.Bh(_.M())), _.sm_mbf;
-        }
-        toObject(e = !1) {
-          return _.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return m.TA(_.M(), e, t);
-        }
-        static fromObject(e) {
-          return m.aD(_.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new c.BinaryReader(e),
-            r = new _();
-          return _.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return m.F(_.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new c.BinaryWriter();
-          return _.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          m.l2(_.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new c.BinaryWriter();
-          return _.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamCharts_GetMostPlayedGames_Request";
-        }
-      }
-      class p extends d {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            p.prototype.rollup_date || m.aR(p.M()),
-            d.initialize(this, e, 0, -1, [2], null);
-        }
-        static M() {
-          return (
-            p.sm_m ||
-              (p.sm_m = {
-                proto: p,
-                fields: {
-                  rollup_date: {
-                    n: 1,
-                    br: m.FE.readUint32,
-                    bw: m.Xc.writeUint32,
-                  },
-                  ranks: { n: 2, c: h, r: !0, q: !0 },
-                },
-              }),
-            p.sm_m
-          );
-        }
-        static MBF() {
-          return p.sm_mbf || (p.sm_mbf = m.Bh(p.M())), p.sm_mbf;
-        }
-        toObject(e = !1) {
-          return p.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return m.TA(p.M(), e, t);
-        }
-        static fromObject(e) {
-          return m.aD(p.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new c.BinaryReader(e),
-            r = new p();
-          return p.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return m.F(p.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new c.BinaryWriter();
-          return p.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          m.l2(p.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new c.BinaryWriter();
-          return p.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamCharts_GetMostPlayedGames_Response";
-        }
-      }
-      class h extends d {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            h.prototype.rank || m.aR(h.M()),
-            d.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            h.sm_m ||
-              (h.sm_m = {
-                proto: h,
-                fields: {
-                  rank: { n: 1, br: m.FE.readInt32, bw: m.Xc.writeInt32 },
-                  appid: { n: 2, br: m.FE.readUint32, bw: m.Xc.writeUint32 },
-                  item: { n: 3, c: u.VL },
-                  last_week_rank: {
-                    n: 4,
-                    br: m.FE.readInt32,
-                    bw: m.Xc.writeInt32,
-                  },
-                  peak_in_game: {
-                    n: 5,
-                    br: m.FE.readUint32,
-                    bw: m.Xc.writeUint32,
-                  },
-                  daily_active_players: {
-                    n: 6,
-                    br: m.FE.readUint32,
-                    bw: m.Xc.writeUint32,
-                  },
-                },
-              }),
-            h.sm_m
-          );
-        }
-        static MBF() {
-          return h.sm_mbf || (h.sm_mbf = m.Bh(h.M())), h.sm_mbf;
-        }
-        toObject(e = !1) {
-          return h.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return m.TA(h.M(), e, t);
-        }
-        static fromObject(e) {
-          return m.aD(h.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new c.BinaryReader(e),
-            r = new h();
-          return h.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return m.F(h.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new c.BinaryWriter();
-          return h.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          m.l2(h.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new c.BinaryWriter();
-          return h.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamCharts_GetMostPlayedGames_Response_MostPlayedRank";
-        }
-      }
-      class C extends d {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            C.prototype.context || m.aR(C.M()),
-            d.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            C.sm_m ||
-              (C.sm_m = {
-                proto: C,
-                fields: {
-                  context: { n: 1, c: u.WJ },
-                  data_request: { n: 2, c: u.Qn },
-                },
-              }),
-            C.sm_m
-          );
-        }
-        static MBF() {
-          return C.sm_mbf || (C.sm_mbf = m.Bh(C.M())), C.sm_mbf;
-        }
-        toObject(e = !1) {
-          return C.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return m.TA(C.M(), e, t);
-        }
-        static fromObject(e) {
-          return m.aD(C.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new c.BinaryReader(e),
-            r = new C();
-          return C.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return m.F(C.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new c.BinaryWriter();
-          return C.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          m.l2(C.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new c.BinaryWriter();
-          return C.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamCharts_GetGamesByConcurrentPlayers_Request";
-        }
-      }
-      class y extends d {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            y.prototype.last_update || m.aR(y.M()),
-            d.initialize(this, e, 0, -1, [2], null);
-        }
-        static M() {
-          return (
-            y.sm_m ||
-              (y.sm_m = {
-                proto: y,
-                fields: {
-                  last_update: {
-                    n: 1,
-                    br: m.FE.readUint32,
-                    bw: m.Xc.writeUint32,
-                  },
-                  ranks: { n: 2, c: S, r: !0, q: !0 },
-                },
-              }),
-            y.sm_m
-          );
-        }
-        static MBF() {
-          return y.sm_mbf || (y.sm_mbf = m.Bh(y.M())), y.sm_mbf;
-        }
-        toObject(e = !1) {
-          return y.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return m.TA(y.M(), e, t);
-        }
-        static fromObject(e) {
-          return m.aD(y.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new c.BinaryReader(e),
-            r = new y();
-          return y.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return m.F(y.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new c.BinaryWriter();
-          return y.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          m.l2(y.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new c.BinaryWriter();
-          return y.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamCharts_GetGamesByConcurrentPlayers_Response";
-        }
-      }
-      class S extends d {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            S.prototype.rank || m.aR(S.M()),
-            d.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            S.sm_m ||
-              (S.sm_m = {
-                proto: S,
-                fields: {
-                  rank: { n: 1, br: m.FE.readInt32, bw: m.Xc.writeInt32 },
-                  appid: { n: 2, br: m.FE.readUint32, bw: m.Xc.writeUint32 },
-                  item: { n: 3, c: u.VL },
-                  concurrent_in_game: {
-                    n: 4,
-                    br: m.FE.readUint32,
-                    bw: m.Xc.writeUint32,
-                  },
-                  peak_in_game: {
-                    n: 5,
-                    br: m.FE.readUint32,
-                    bw: m.Xc.writeUint32,
-                  },
-                },
-              }),
-            S.sm_m
-          );
-        }
-        static MBF() {
-          return S.sm_mbf || (S.sm_mbf = m.Bh(S.M())), S.sm_mbf;
-        }
-        toObject(e = !1) {
-          return S.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return m.TA(S.M(), e, t);
-        }
-        static fromObject(e) {
-          return m.aD(S.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new c.BinaryReader(e),
-            r = new S();
-          return S.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return m.F(S.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new c.BinaryWriter();
-          return S.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          m.l2(S.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new c.BinaryWriter();
-          return S.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamCharts_GetGamesByConcurrentPlayers_Response_MostPlayedRank";
-        }
-      }
-      class g extends d {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(), d.initialize(this, e, 0, -1, void 0, null);
-        }
-        toObject(e = !1) {
-          return g.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return e ? { $jspbMessageInstance: t } : {};
-        }
-        static fromObject(e) {
-          return new g();
-        }
-        static deserializeBinary(e) {
-          let t = new c.BinaryReader(e),
-            r = new g();
-          return g.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return e;
-        }
-        serializeBinary() {
-          var e = new c.BinaryWriter();
-          return g.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {}
-        serializeBase64String() {
-          var e = new c.BinaryWriter();
-          return g.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamCharts_GetTopReleasesPages_Request";
-        }
-      }
-      class v extends d {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            v.prototype.pages || m.aR(v.M()),
-            d.initialize(this, e, 0, -1, [1], null);
-        }
-        static M() {
-          return (
-            v.sm_m ||
-              (v.sm_m = {
-                proto: v,
-                fields: { pages: { n: 1, c: E, r: !0, q: !0 } },
-              }),
-            v.sm_m
-          );
-        }
-        static MBF() {
-          return v.sm_mbf || (v.sm_mbf = m.Bh(v.M())), v.sm_mbf;
-        }
-        toObject(e = !1) {
-          return v.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return m.TA(v.M(), e, t);
-        }
-        static fromObject(e) {
-          return m.aD(v.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new c.BinaryReader(e),
-            r = new v();
-          return v.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return m.F(v.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new c.BinaryWriter();
-          return v.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          m.l2(v.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new c.BinaryWriter();
-          return v.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamCharts_GetTopReleasesPages_Response";
-        }
-      }
-      class E extends d {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            E.prototype.name || m.aR(E.M()),
-            d.initialize(this, e, 0, -1, [4], null);
-        }
-        static M() {
-          return (
-            E.sm_m ||
-              (E.sm_m = {
-                proto: E,
-                fields: {
-                  name: { n: 1, br: m.FE.readString, bw: m.Xc.writeString },
-                  start_of_month: {
-                    n: 2,
-                    br: m.FE.readUint32,
-                    bw: m.Xc.writeUint32,
-                  },
-                  url_path: { n: 3, br: m.FE.readString, bw: m.Xc.writeString },
-                  item_ids: { n: 4, c: u.oY, r: !0, q: !0 },
-                },
-              }),
-            E.sm_m
-          );
-        }
-        static MBF() {
-          return E.sm_mbf || (E.sm_mbf = m.Bh(E.M())), E.sm_mbf;
-        }
-        toObject(e = !1) {
-          return E.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return m.TA(E.M(), e, t);
-        }
-        static fromObject(e) {
-          return m.aD(E.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new c.BinaryReader(e),
-            r = new E();
-          return E.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return m.F(E.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new c.BinaryWriter();
-          return E.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          m.l2(E.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new c.BinaryWriter();
-          return E.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamCharts_GetTopReleasesPages_Response_TopReleasesPage";
-        }
-      }
-      class B extends d {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(), d.initialize(this, e, 0, -1, void 0, null);
-        }
-        toObject(e = !1) {
-          return B.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return e ? { $jspbMessageInstance: t } : {};
-        }
-        static fromObject(e) {
-          return new B();
-        }
-        static deserializeBinary(e) {
-          let t = new c.BinaryReader(e),
-            r = new B();
-          return B.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return e;
-        }
-        serializeBinary() {
-          var e = new c.BinaryWriter();
-          return B.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {}
-        serializeBase64String() {
-          var e = new c.BinaryWriter();
-          return B.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamCharts_GetBestOfYearPages_Request";
-        }
-      }
-      class f extends d {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            f.prototype.pages || m.aR(f.M()),
-            d.initialize(this, e, 0, -1, [1], null);
-        }
-        static M() {
-          return (
-            f.sm_m ||
-              (f.sm_m = {
-                proto: f,
-                fields: { pages: { n: 1, c: T, r: !0, q: !0 } },
-              }),
-            f.sm_m
-          );
-        }
-        static MBF() {
-          return f.sm_mbf || (f.sm_mbf = m.Bh(f.M())), f.sm_mbf;
-        }
-        toObject(e = !1) {
-          return f.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return m.TA(f.M(), e, t);
-        }
-        static fromObject(e) {
-          return m.aD(f.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new c.BinaryReader(e),
-            r = new f();
-          return f.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return m.F(f.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new c.BinaryWriter();
-          return f.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          m.l2(f.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new c.BinaryWriter();
-          return f.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamCharts_GetBestOfYearPages_Response";
-        }
-      }
-      class T extends d {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            T.prototype.name || m.aR(T.M()),
-            d.initialize(this, e, 0, -1, [3, 4], null);
-        }
-        static M() {
-          return (
-            T.sm_m ||
-              (T.sm_m = {
-                proto: T,
-                fields: {
-                  name: { n: 1, br: m.FE.readString, bw: m.Xc.writeString },
-                  url_path: { n: 2, br: m.FE.readString, bw: m.Xc.writeString },
-                  banner_url: {
-                    n: 3,
-                    r: !0,
-                    q: !0,
-                    br: m.FE.readString,
-                    bw: m.Xc.writeRepeatedString,
-                  },
-                  banner_url_mobile: {
-                    n: 4,
-                    r: !0,
-                    q: !0,
-                    br: m.FE.readString,
-                    bw: m.Xc.writeRepeatedString,
-                  },
-                  start_date: {
-                    n: 5,
-                    br: m.FE.readUint32,
-                    bw: m.Xc.writeUint32,
-                  },
-                },
-              }),
-            T.sm_m
-          );
-        }
-        static MBF() {
-          return T.sm_mbf || (T.sm_mbf = m.Bh(T.M())), T.sm_mbf;
-        }
-        toObject(e = !1) {
-          return T.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return m.TA(T.M(), e, t);
-        }
-        static fromObject(e) {
-          return m.aD(T.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new c.BinaryReader(e),
-            r = new T();
-          return T.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return m.F(T.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new c.BinaryWriter();
-          return T.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          m.l2(T.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new c.BinaryWriter();
-          return T.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamCharts_GetBestOfYearPages_Response_BestOfYearPage";
-        }
-      }
-      var b;
-      !(function (e) {
-        (e.GetMostPlayedGames = function (e, t) {
-          return e.SendMsg(
-            "SteamCharts.GetMostPlayedGames#1",
-            (0, o.MD)(_, t),
-            p,
-            { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
-          );
-        }),
-          (e.GetGamesByConcurrentPlayers = function (e, t) {
-            return e.SendMsg(
-              "SteamCharts.GetGamesByConcurrentPlayers#1",
-              (0, o.MD)(C, t),
-              y,
-              { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
-            );
-          }),
-          (e.GetTopReleasesPages = function (e, t) {
-            return e.SendMsg(
-              "SteamCharts.GetTopReleasesPages#1",
-              (0, o.MD)(g, t),
-              v,
-              { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
-            );
-          }),
-          (e.GetBestOfYearPages = function (e, t) {
-            return e.SendMsg(
-              "SteamCharts.GetBestOfYearPages#1",
-              (0, o.MD)(B, t),
-              f,
-              { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
-            );
-          });
-      })(b || (b = {}));
-      var k,
-        w = r(11195),
-        R = r(57858);
+      a.r(t), a.d(t, { SteamChartsRoutes: () => Qt, default: () => zt });
+      var r,
+        n = a(33940),
+        l = a(96927),
+        s = a(52868),
+        o = a.n(s),
+        c = a(5615),
+        i = a(42735),
+        m = a(67328),
+        u = a(72082),
+        d = a(11195),
+        _ = a(92616);
       !(function (e) {
         (e.DailyActiveUsers = "DailyActiveUsers"),
           (e.ConcurrentUsers = "ConcurrentUsers");
-      })(k || (k = {}));
-      class M {
+      })(r || (r = {}));
+      class p {
         constructor(e) {
           this.m_WebAPI = e;
         }
         LoadMostPlayedByDAU() {
-          return (0, a.mG)(this, void 0, void 0, function* () {
-            let e = o.gA.Init(_);
-            (0, w.pA)(e), (0, w.De)(e, ce);
-            let t = yield b.GetMostPlayedGames(
+          return (0, n.mG)(this, void 0, void 0, function* () {
+            let e = m.gA.Init(u.pM);
+            (0, d.pA)(e), (0, d.De)(e, H);
+            let t = yield u.TC.GetMostPlayedGames(
               this.m_WebAPI.GetAnonymousServiceTransport(),
               e,
             );
-            if (1 != t.GetEResult()) throw "error loading most played by dau";
+            if (t.GetEResult() != i.s.k_EResultOK)
+              throw "error loading most played by dau";
             return {
               rgRanks: this.ReadMostPlayedByDAU(
                 t,
@@ -1110,14 +402,14 @@
           });
         }
         LoadMostPlayedByConcurrent() {
-          return (0, a.mG)(this, void 0, void 0, function* () {
-            let e = o.gA.Init(_);
-            (0, w.pA)(e), (0, w.De)(e, ce);
-            let t = yield b.GetGamesByConcurrentPlayers(
+          return (0, n.mG)(this, void 0, void 0, function* () {
+            let e = m.gA.Init(u.pM);
+            (0, d.pA)(e), (0, d.De)(e, H);
+            let t = yield u.TC.GetGamesByConcurrentPlayers(
               this.m_WebAPI.GetAnonymousServiceTransport(),
               e,
             );
-            if (1 != t.GetEResult())
+            if (t.GetEResult() != i.s.k_EResultOK)
               throw "error loading most played by concurrent";
             return {
               rgRanks: this.ReadMostPlayedByConcurrent(
@@ -1128,464 +420,79 @@
           });
         }
         ReadMostPlayedByDAU(e, t) {
-          let r = [];
+          let a = [];
           if (e.Body().ranks().length > 0)
-            for (let a of e.Body().ranks())
-              r.push({
-                nRank: a.rank(),
-                Item: R.Z.Get().ReadItem(a.item(), t),
-                nRankLastWeek: a.last_week_rank(),
-                nPeakInGame: a.peak_in_game(),
+            for (let r of e.Body().ranks())
+              a.push({
+                nRank: r.rank(),
+                Item: _.Z.Get().ReadItem(r.item(), t),
+                nRankLastWeek: r.last_week_rank(),
+                nPeakInGame: r.peak_in_game(),
               });
-          return r;
+          return a;
         }
         ReadMostPlayedByConcurrent(e, t) {
-          let r = [];
+          let a = [];
           if (e.Body().ranks().length > 0)
-            for (let a of e.Body().ranks())
-              r.push({
-                nRank: a.rank(),
-                Item: R.Z.Get().ReadItem(a.item(), t),
-                nConcurrentInGame: a.concurrent_in_game(),
-                nPeakInGame: a.peak_in_game(),
+            for (let r of e.Body().ranks())
+              a.push({
+                nRank: r.rank(),
+                Item: _.Z.Get().ReadItem(r.item(), t),
+                nConcurrentInGame: r.concurrent_in_game(),
+                nPeakInGame: r.peak_in_game(),
               });
-          return r;
+          return a;
         }
       }
-      const I = "MostPlayedDAU",
-        P = "MostPlayedByConcurrent";
-      function N(e) {
-        return (0, i.useQuery)([P], () => e.LoadMostPlayedByConcurrent(), {
+      const h = "MostPlayedDAU",
+        C = "MostPlayedByConcurrent";
+      function S(e) {
+        return (0, c.useQuery)([C], () => e.LoadMostPlayedByConcurrent(), {
           staleTime: 3e5,
         });
       }
-      var G = r(25871);
-      class W {
+      var E = a(25871);
+      class v {
         constructor(e) {
           this.m_WebAPI = e;
         }
         LoadTopReleases() {
-          return (0, a.mG)(this, void 0, void 0, function* () {
-            let e = o.gA.Init(g),
-              t = yield b.GetTopReleasesPages(
+          return (0, n.mG)(this, void 0, void 0, function* () {
+            let e = m.gA.Init(u.Cg),
+              t = yield u.TC.GetTopReleasesPages(
                 this.m_WebAPI.GetAnonymousServiceTransport(),
                 e,
               );
-            if (1 != t.GetEResult()) throw "error loading top releases";
+            if (t.GetEResult() != i.s.k_EResultOK)
+              throw "error loading top releases";
             return { rgPages: this.ReadTopReleases(t) };
           });
         }
         ReadTopReleases(e) {
           let t = [];
           if (e.Body().pages().length > 0)
-            for (let r of e.Body().pages())
+            for (let a of e.Body().pages())
               t.push({
-                strName: r.name(),
-                rtMonthStart: r.start_of_month(),
-                strUrlPath: r.url_path(),
-                rgItems: r.item_ids().map((e) => e.appid()),
+                strName: a.name(),
+                rtMonthStart: a.start_of_month(),
+                strUrlPath: a.url_path(),
+                rgItems: a.item_ids().map((e) => e.appid()),
               });
           return t;
         }
       }
-      const O = "TopReleases";
-      function L(e) {
-        const { data: t } = (0, i.useQuery)([O], () => e.LoadTopReleases());
+      const y = "TopReleases";
+      function g(e) {
+        const { data: t } = (0, c.useQuery)([y], () => e.LoadTopReleases());
         return t;
       }
-      var D = r(89526);
-      const x = c.Message;
-      class z extends x {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            z.prototype.country_code || m.aR(z.M()),
-            x.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            z.sm_m ||
-              (z.sm_m = {
-                proto: z,
-                fields: {
-                  country_code: {
-                    n: 1,
-                    br: m.FE.readString,
-                    bw: m.Xc.writeString,
-                  },
-                  context: { n: 2, c: u.WJ },
-                  data_request: { n: 3, c: u.Qn },
-                  start_date: {
-                    n: 4,
-                    br: m.FE.readUint32,
-                    bw: m.Xc.writeUint32,
-                  },
-                  page_start: { n: 5, br: m.FE.readInt32, bw: m.Xc.writeInt32 },
-                  page_count: {
-                    n: 6,
-                    d: 20,
-                    br: m.FE.readInt32,
-                    bw: m.Xc.writeInt32,
-                  },
-                },
-              }),
-            z.sm_m
-          );
-        }
-        static MBF() {
-          return z.sm_mbf || (z.sm_mbf = m.Bh(z.M())), z.sm_mbf;
-        }
-        toObject(e = !1) {
-          return z.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return m.TA(z.M(), e, t);
-        }
-        static fromObject(e) {
-          return m.aD(z.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new c.BinaryReader(e),
-            r = new z();
-          return z.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return m.F(z.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new c.BinaryWriter();
-          return z.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          m.l2(z.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new c.BinaryWriter();
-          return z.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CStoreTopSellers_GetWeeklyTopSellers_Request";
-        }
-      }
-      class A extends x {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            A.prototype.start_date || m.aR(A.M()),
-            x.initialize(this, e, 0, -1, [2], null);
-        }
-        static M() {
-          return (
-            A.sm_m ||
-              (A.sm_m = {
-                proto: A,
-                fields: {
-                  start_date: {
-                    n: 1,
-                    br: m.FE.readUint32,
-                    bw: m.Xc.writeUint32,
-                  },
-                  ranks: { n: 2, c: F, r: !0, q: !0 },
-                  next_page_start: {
-                    n: 3,
-                    br: m.FE.readInt32,
-                    bw: m.Xc.writeInt32,
-                  },
-                },
-              }),
-            A.sm_m
-          );
-        }
-        static MBF() {
-          return A.sm_mbf || (A.sm_mbf = m.Bh(A.M())), A.sm_mbf;
-        }
-        toObject(e = !1) {
-          return A.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return m.TA(A.M(), e, t);
-        }
-        static fromObject(e) {
-          return m.aD(A.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new c.BinaryReader(e),
-            r = new A();
-          return A.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return m.F(A.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new c.BinaryWriter();
-          return A.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          m.l2(A.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new c.BinaryWriter();
-          return A.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CStoreTopSellers_GetWeeklyTopSellers_Response";
-        }
-      }
-      class F extends x {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            F.prototype.rank || m.aR(F.M()),
-            x.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            F.sm_m ||
-              (F.sm_m = {
-                proto: F,
-                fields: {
-                  rank: { n: 1, br: m.FE.readInt32, bw: m.Xc.writeInt32 },
-                  appid: { n: 2, br: m.FE.readInt32, bw: m.Xc.writeInt32 },
-                  item: { n: 3, c: u.VL },
-                  last_week_rank: {
-                    n: 4,
-                    br: m.FE.readInt32,
-                    bw: m.Xc.writeInt32,
-                  },
-                  consecutive_weeks: {
-                    n: 5,
-                    br: m.FE.readInt32,
-                    bw: m.Xc.writeInt32,
-                  },
-                  first_top100: { n: 6, br: m.FE.readBool, bw: m.Xc.writeBool },
-                },
-              }),
-            F.sm_m
-          );
-        }
-        static MBF() {
-          return F.sm_mbf || (F.sm_mbf = m.Bh(F.M())), F.sm_mbf;
-        }
-        toObject(e = !1) {
-          return F.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return m.TA(F.M(), e, t);
-        }
-        static fromObject(e) {
-          return m.aD(F.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new c.BinaryReader(e),
-            r = new F();
-          return F.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return m.F(F.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new c.BinaryWriter();
-          return F.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          m.l2(F.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new c.BinaryWriter();
-          return F.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CStoreTopSellers_GetWeeklyTopSellers_Response_TopSellersRank";
-        }
-      }
-      class U extends x {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            U.prototype.language || m.aR(U.M()),
-            x.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            U.sm_m ||
-              (U.sm_m = {
-                proto: U,
-                fields: {
-                  language: { n: 1, br: m.FE.readString, bw: m.Xc.writeString },
-                },
-              }),
-            U.sm_m
-          );
-        }
-        static MBF() {
-          return U.sm_mbf || (U.sm_mbf = m.Bh(U.M())), U.sm_mbf;
-        }
-        toObject(e = !1) {
-          return U.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return m.TA(U.M(), e, t);
-        }
-        static fromObject(e) {
-          return m.aD(U.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new c.BinaryReader(e),
-            r = new U();
-          return U.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return m.F(U.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new c.BinaryWriter();
-          return U.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          m.l2(U.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new c.BinaryWriter();
-          return U.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CStoreTopSellers_GetCountryList_Request";
-        }
-      }
-      class X extends x {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            X.prototype.countries || m.aR(X.M()),
-            x.initialize(this, e, 0, -1, [1], null);
-        }
-        static M() {
-          return (
-            X.sm_m ||
-              (X.sm_m = {
-                proto: X,
-                fields: { countries: { n: 1, c: j, r: !0, q: !0 } },
-              }),
-            X.sm_m
-          );
-        }
-        static MBF() {
-          return X.sm_mbf || (X.sm_mbf = m.Bh(X.M())), X.sm_mbf;
-        }
-        toObject(e = !1) {
-          return X.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return m.TA(X.M(), e, t);
-        }
-        static fromObject(e) {
-          return m.aD(X.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new c.BinaryReader(e),
-            r = new X();
-          return X.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return m.F(X.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new c.BinaryWriter();
-          return X.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          m.l2(X.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new c.BinaryWriter();
-          return X.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CStoreTopSellers_GetCountryList_Response";
-        }
-      }
-      class j extends x {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            j.prototype.country_code || m.aR(j.M()),
-            x.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            j.sm_m ||
-              (j.sm_m = {
-                proto: j,
-                fields: {
-                  country_code: {
-                    n: 1,
-                    br: m.FE.readString,
-                    bw: m.Xc.writeString,
-                  },
-                  name: { n: 2, br: m.FE.readString, bw: m.Xc.writeString },
-                },
-              }),
-            j.sm_m
-          );
-        }
-        static MBF() {
-          return j.sm_mbf || (j.sm_mbf = m.Bh(j.M())), j.sm_mbf;
-        }
-        toObject(e = !1) {
-          return j.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return m.TA(j.M(), e, t);
-        }
-        static fromObject(e) {
-          return m.aD(j.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new c.BinaryReader(e),
-            r = new j();
-          return j.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return m.F(j.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new c.BinaryWriter();
-          return j.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          m.l2(j.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new c.BinaryWriter();
-          return j.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CStoreTopSellers_GetCountryList_Response_Country";
-        }
-      }
-      var Z;
-      !(function (e) {
-        (e.GetWeeklyTopSellers = function (e, t) {
-          return e.SendMsg(
-            "StoreTopSellers.GetWeeklyTopSellers#1",
-            (0, o.MD)(z, t),
-            A,
-            { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
-          );
-        }),
-          (e.GetCountryList = function (e, t) {
-            return e.SendMsg(
-              "StoreTopSellers.GetCountryList#1",
-              (0, o.MD)(U, t),
-              X,
-              { bConstMethod: !0, ePrivilege: 0, eWebAPIKeyRequirement: 1 },
-            );
-          });
-      })(Z || (Z = {}));
-      var H = r(23801),
-        V = r(32765);
-      const Y = 20;
-      class q {
+      var k = a(89526),
+        T = a(75457),
+        f = a(70790),
+        N = a(23801),
+        P = a(32765);
+      const I = 20;
+      class b {
         constructor(e, t) {
           (this.m_WebAPI = e), (this.m_Storage = t);
         }
@@ -1593,44 +500,45 @@
           return { type_filters: { include_apps: !0, include_hardware: !1 } };
         }
         Initialize(e) {
-          return (0, a.mG)(this, void 0, void 0, function* () {
+          return (0, n.mG)(this, void 0, void 0, function* () {
             return (
               this.m_promiseInitialize ||
-                (this.m_promiseInitialize = new Promise((t, r) => {
-                  let a;
-                  (2 != V.De.EUNIVERSE && 4 != V.De.EUNIVERSE) ||
-                    (a = 1539068400),
+                (this.m_promiseInitialize = new Promise((t, a) => {
+                  let r;
+                  (P.De.EUNIVERSE != T.xO.k_EUniverseBeta &&
+                    P.De.EUNIVERSE != T.xO.k_EUniverseDev) ||
+                    (r = 1539068400),
                     this.LoadCountryList()
-                      .then((r) =>
-                        this.LoadTopSellersForWeek(a, e, Y).then((e) => {
+                      .then((a) =>
+                        this.LoadTopSellersForWeek(r, e, I).then((e) => {
                           (this.m_rtCurrentWeek = e.rtWeekStart), t(e);
                         }),
                       )
-                      .catch(r);
+                      .catch(a);
                 })),
               this.m_promiseInitialize
             );
           });
         }
         LoadCountryList() {
-          return (0, a.mG)(this, void 0, void 0, function* () {
+          return (0, n.mG)(this, void 0, void 0, function* () {
             if (!this.m_rgCountryList) {
-              const e = "TopSellersCountryList_" + V.De.LANGUAGE;
+              const e = "TopSellersCountryList_" + P.De.LANGUAGE;
               if (
                 ((this.m_rgCountryList = yield this.m_Storage.GetObject(e)),
                 !this.m_rgCountryList ||
                   this.m_rgCountryList.dtTimeStored +
-                    q.k_nCountryListMaxCacheTime <
+                    b.k_nCountryListMaxCacheTime <
                     Date.now())
               ) {
-                const t = o.gA.Init(U);
-                t.Body().set_language(V.De.LANGUAGE);
-                const r = yield Z.GetCountryList(
+                const t = m.gA.Init(f.QG);
+                t.Body().set_language(P.De.LANGUAGE);
+                const a = yield f.XD.GetCountryList(
                   this.m_WebAPI.GetServiceTransport(),
                   t,
                 );
-                if (1 == r.GetEResult()) {
-                  let t = r
+                if (a.GetEResult() == i.s.k_EResultOK) {
+                  let t = a
                     .Body()
                     .countries()
                     .map((e) => e.toObject());
@@ -1670,7 +578,7 @@
         }
         ValidateCountryCode(e) {
           return (
-            (0, H.X)(
+            (0, N.X)(
               this.m_rgCountryList,
               "Country list should already be loaded",
             ),
@@ -1685,63 +593,64 @@
         GetPreviousWeek() {
           return this.m_rtCurrentWeek ? this.m_rtCurrentWeek - 604800 : void 0;
         }
-        LoadTopSellersForWeek(e, t, r) {
-          return (0, a.mG)(this, void 0, void 0, function* () {
-            const a = this.ValidateCountryCode(t);
-            let n = o.gA.Init(z);
-            (0, w.pA)(n),
-              (0, w.De)(n, ce),
-              a && n.Body().set_country_code(a),
+        LoadTopSellersForWeek(e, t, a) {
+          return (0, n.mG)(this, void 0, void 0, function* () {
+            const r = this.ValidateCountryCode(t);
+            let n = m.gA.Init(f.pz);
+            (0, d.pA)(n),
+              (0, d.De)(n, H),
+              r && n.Body().set_country_code(r),
               e && n.Body().set_start_date(e),
-              n.Body().set_page_count(r);
-            let s = yield Z.GetWeeklyTopSellers(
+              n.Body().set_page_count(a);
+            let l = yield f.XD.GetWeeklyTopSellers(
               this.m_WebAPI.GetAnonymousServiceTransport(),
               n,
             );
-            if (1 != s.GetEResult()) throw "error loading top sellers";
+            if (l.GetEResult() != i.s.k_EResultOK)
+              throw "error loading top sellers";
             return {
-              strCountryCode: a,
-              rtWeekStart: s.Body().start_date(),
+              strCountryCode: r,
+              rtWeekStart: l.Body().start_date(),
               rgRanks: this.ReadTopSellers(
-                s,
+                l,
                 n.Body().data_request().toObject(),
               ),
             };
           });
         }
         ReadTopSellers(e, t) {
-          let r = [];
+          let a = [];
           if (e.Body().ranks().length > 0)
-            for (let a of e.Body().ranks())
-              r.push({
-                nRank: a.rank(),
-                Item: R.Z.Get().ReadItem(a.item(), t),
-                nRankLastWeek: a.last_week_rank(),
-                nConsecutiveWeeks: a.consecutive_weeks(),
-                bFirstTop100: a.first_top100(),
+            for (let r of e.Body().ranks())
+              a.push({
+                nRank: r.rank(),
+                Item: _.Z.Get().ReadItem(r.item(), t),
+                nRankLastWeek: r.last_week_rank(),
+                nConsecutiveWeeks: r.consecutive_weeks(),
+                bFirstTop100: r.first_top100(),
               });
-          return r;
+          return a;
         }
       }
-      q.k_nCountryListMaxCacheTime = 864e5;
-      const $ = "TopSellers";
-      function Q(e, t) {
-        const r = (0, i.useQueryClient)(),
+      b.k_nCountryListMaxCacheTime = 864e5;
+      const G = "TopSellers";
+      function R(e, t) {
+        const a = (0, c.useQueryClient)(),
           {
-            isLoading: a,
+            isLoading: r,
             error: n,
-            data: s,
-          } = (0, i.useQuery)(
-            [$, "Initialization"],
+            data: l,
+          } = (0, c.useQuery)(
+            [G, "Initialization"],
             () =>
               e.Initialize(t).then((t) => {
-                const a = {
+                const r = {
                   rtWeekStart: t.rtWeekStart,
                   strCountryCode: t.strCountryCode,
-                  cListSize: Y,
+                  cListSize: I,
                 };
                 return (
-                  r.setQueryData([$, "Weekly", a], t),
+                  a.setQueryData([G, "Weekly", r], t),
                   {
                     rtCurrentWeek: e.GetCurrentWeek(),
                     bCountryListInitialized: !0,
@@ -1750,63 +659,65 @@
               }),
             { staleTime: 1 / 0 },
           );
-        return s || { rtCurrentWeek: void 0, bCountryListInitialized: !1 };
+        return l || { rtCurrentWeek: void 0, bCountryListInitialized: !1 };
       }
-      function K(e, t, r = !1) {
-        return t ? "error" : e || r ? "loading" : "loaded";
+      function w(e, t, a = !1) {
+        return t ? "error" : e || a ? "loading" : "loaded";
       }
-      function J(e, t, r, a, n = Y, s = !0) {
-        const l = {
-            rtWeekStart: r,
+      function B(e, t, a, r, n = I, l = !0) {
+        const s = {
+            rtWeekStart: a,
             strCountryCode: e.BIsCountryListLoaded()
-              ? e.ValidateCountryCode(a)
+              ? e.ValidateCountryCode(r)
               : "",
             cListSize: n,
           },
-          o = (0, D.useRef)(),
-          c = o.current;
+          o = (0, k.useRef)(),
+          i = o.current;
         let m = !1;
-        c &&
-          l.rtWeekStart === c.rtWeekStart &&
-          l.strCountryCode === c.strCountryCode &&
+        i &&
+          s.rtWeekStart === i.rtWeekStart &&
+          s.strCountryCode === i.strCountryCode &&
           (m = !0);
         const {
           isLoading: u,
           isPreviousData: d,
           error: _,
           data: p,
-        } = (0, i.useQuery)(
-          [$, "Weekly", l],
-          () => e.LoadTopSellersForWeek(l.rtWeekStart, l.strCountryCode, n),
+        } = (0, c.useQuery)(
+          [G, "Weekly", s],
+          () => e.LoadTopSellersForWeek(s.rtWeekStart, s.strCountryCode, n),
           {
-            enabled: !!t && s,
-            staleTime: r == t ? 36e5 : 1 / 0,
+            enabled: !!t && l,
+            staleTime: a == t ? 36e5 : 1 / 0,
             keepPreviousData: m,
           },
         );
         return (
-          !u && p && (o.current = l),
-          { TopSellers: s ? p : null, status: K(u, _, d) }
+          !u && p && (o.current = s),
+          { TopSellers: l ? p : null, status: w(u, _, d) }
         );
       }
-      function ee(e, t, r, a = Y, n = !0) {
-        const { rtCurrentWeek: s } = Q(e, r);
-        return J(e, s, t, r, a, n);
+      function L(e, t, a, r = I, n = !0) {
+        const { rtCurrentWeek: l } = R(e, a);
+        return B(e, l, t, a, r, n);
       }
-      var te = r(54671),
-        re = r(14826);
-      class ae {
+      var D = a(66262),
+        O = a(54671),
+        x = a(14826);
+      class W {
         constructor(e) {
           this.m_WebAPI = e;
         }
         LoadBestOfYear() {
-          return (0, a.mG)(this, void 0, void 0, function* () {
-            let e = o.gA.Init(B),
-              t = yield b.GetBestOfYearPages(
+          return (0, n.mG)(this, void 0, void 0, function* () {
+            let e = m.gA.Init(u.dc),
+              t = yield u.TC.GetBestOfYearPages(
                 this.m_WebAPI.GetAnonymousServiceTransport(),
                 e,
               );
-            if (1 != t.GetEResult()) throw "error loading best of year";
+            if (t.GetEResult() != i.s.k_EResultOK)
+              throw "error loading best of year";
             return { rgPages: this.ReadBestOfYear(t) };
           });
         }
@@ -1828,30 +739,30 @@
         }
         GetBannerUrlsOrBackup(e) {
           if (e && e.length) {
-            const t = re.Yt.GetELanguageFallbackOrder();
-            for (const r of t)
-              if (r < e.length) {
-                const t = e[r];
+            const t = x.Yt.GetELanguageFallbackOrder();
+            for (const a of t)
+              if (a < e.length) {
+                const t = e[a];
                 if (t) return t;
               }
           }
           return null;
         }
       }
-      const ne = "BestOfYear";
-      function se(e) {
-        const { data: t } = (0, i.useQuery)([ne], () => e.LoadBestOfYear());
+      const A = "BestOfYear";
+      function M(e) {
+        const { data: t } = (0, c.useQuery)([A], () => e.LoadBestOfYear());
         return t;
       }
-      class le {
+      class U {
         Initialize(e, t) {
-          return (0, a.mG)(this, void 0, void 0, function* () {
+          return (0, n.mG)(this, void 0, void 0, function* () {
             (this.m_WebAPI = e),
-              (this.m_TopSellersStore = new q(this.m_WebAPI, t)),
-              (this.m_MostPlayedStore = new M(this.m_WebAPI)),
-              (this.m_TopReleasesStore = new W(this.m_WebAPI)),
-              (this.m_BestOfYearStore = new ae(this.m_WebAPI)),
-              (this.m_DynamicUserStore = yield te.jg.Get().HintLoad());
+              (this.m_TopSellersStore = new b(this.m_WebAPI, t)),
+              (this.m_MostPlayedStore = new p(this.m_WebAPI)),
+              (this.m_TopReleasesStore = new v(this.m_WebAPI)),
+              (this.m_BestOfYearStore = new W(this.m_WebAPI)),
+              (this.m_DynamicUserStore = yield O.jg.Get().HintLoad());
           });
         }
         get TopSellersStore() {
@@ -1873,19 +784,19 @@
           return [
             "SteamCharts Overview Top Sellers",
             {
-              sort: 10,
+              sort: D.h_.k_EStoreQuerySort_Regional24hSalesRank,
               start: 0,
               count: 5,
               filters: this.m_TopSellersStore.GetDefaultTopSellersFilters(),
             },
-            le.overview_data_request,
+            U.overview_data_request,
           ];
         }
         GetRealTimeMostPlayedQuery() {
           return [
             "SteamCharts Overview Most Played",
             {
-              sort: 32,
+              sort: D.h_.k_EStoreQuerySort_ConcurrentPlayers,
               start: 0,
               count: 5,
               filters: {
@@ -1897,53 +808,53 @@
                 },
               },
             },
-            le.overview_data_request,
+            U.overview_data_request,
           ];
         }
         get DynamicUserStore() {
           return this.m_DynamicUserStore;
         }
       }
-      le.overview_data_request = { include_basic_info: !0, include_assets: !0 };
-      const ie = 3;
-      function oe() {
-        return (0, i.useQuery)(
+      U.overview_data_request = { include_basic_info: !0, include_assets: !0 };
+      const X = 3;
+      function Z() {
+        return (0, c.useQuery)(
           ["OnlineUserCount"],
           () =>
             (function () {
               var e;
-              return (0, a.mG)(this, void 0, void 0, function* () {
-                const t = yield l().get(
-                    `${V.De.STORE_BASE_URL}stats/userdata.json?days_back=${ie}`,
+              return (0, n.mG)(this, void 0, void 0, function* () {
+                const t = yield o().get(
+                    `${P.De.STORE_BASE_URL}stats/userdata.json?days_back=${X}`,
                   ),
-                  r =
+                  a =
                     t.data &&
                     (null === (e = t.data[0]) || void 0 === e
                       ? void 0
                       : e.data);
-                if (!r) throw "Failed to load";
-                let a,
+                if (!a) throw "Failed to load";
+                let r,
                   n,
-                  s = [];
-                for (let [e, t] of r) {
-                  const r = 18e5,
-                    l = Math.floor(e / r) * r;
-                  l != n &&
-                    (s.push({ date: new Date(l), users: t }),
-                    (n = l),
-                    (!a || t > a) && (a = t));
+                  l = [];
+                for (let [e, t] of a) {
+                  const a = 18e5,
+                    s = Math.floor(e / a) * a;
+                  s != n &&
+                    (l.push({ date: new Date(s), users: t }),
+                    (n = s),
+                    (!r || t > r) && (r = t));
                 }
                 return {
-                  history: s,
-                  peak: a,
-                  current: s.length ? s[s.length - 1].users : 0,
+                  history: l,
+                  peak: r,
+                  current: l.length ? l[l.length - 1].users : 0,
                 };
               });
             })(),
           { staleTime: 6e5 },
         );
       }
-      const ce = {
+      const H = {
         include_basic_info: !0,
         include_assets: !0,
         include_trailers: !0,
@@ -1953,127 +864,127 @@
         include_screenshots: !0,
         include_tag_count: 20,
       };
-      var me = r(59934),
-        ue = r(72120);
-      const de = 1079395200;
-      function _e(e) {
-        return (0, re.Xx)(
+      var V = a(59934),
+        Y = a(72120);
+      const $ = 1079395200;
+      function F(e) {
+        return (0, x.Xx)(
           "#SteamCharts_TopSellers_WeeklyRange",
-          (0, ue.$1)(e, { timeZone: "UTC" }),
-          (0, ue.$1)(e + 604800, { timeZone: "UTC" }),
+          (0, Y.$1)(e, { timeZone: "UTC" }),
+          (0, Y.$1)(e + 604800, { timeZone: "UTC" }),
         );
       }
-      function pe(e) {
+      function j(e) {
         if (!e) return "";
         const t = new Date(1e3 * e);
         return `${t.getUTCFullYear()}-${t.getUTCMonth() + 1}-${t.getUTCDate()}`;
       }
-      function he(e) {
+      function q(e) {
         return e || "global";
       }
-      function Ce(e) {
+      function Q(e) {
         return "global" == e ? "" : e;
       }
-      function ye(e, t) {
-        let r = "",
-          a = "";
+      function z(e, t) {
+        let a = "",
+          r = "";
         return (
-          e > t ? ((r = "Up"), (a = "▲")) : e < t && ((r = "Down"), (a = "▼")),
-          { direction: r, symbol: a }
+          e > t ? ((a = "Up"), (r = "▲")) : e < t && ((a = "Down"), (r = "▼")),
+          { direction: a, symbol: r }
         );
       }
-      function Se(e, t, r, a) {
-        const n = (0, me.k6)();
+      function K(e, t, a, r) {
+        const n = (0, V.k6)();
         return (
-          D.useEffect(() => {
+          k.useEffect(() => {
             if (
               t &&
-              !("global" == r || (r && e.BIsValidTopSellersCountry(r)))
+              !("global" == a || (a && e.BIsValidTopSellersCountry(a)))
             ) {
               let t = "";
-              (t = e.BIsValidTopSellersCountry(V.De.COUNTRY)
-                ? V.De.COUNTRY
+              (t = e.BIsValidTopSellersCountry(P.De.COUNTRY)
+                ? P.De.COUNTRY
                 : "global"),
-                n.replace(a(he(t)));
+                n.replace(r(q(t)));
             }
-          }, [e, t, r, n, a]),
-          t && ("global" == r || e.BIsValidTopSellersCountry(r))
+          }, [e, t, a, n, r]),
+          t && ("global" == a || e.BIsValidTopSellersCountry(a))
         );
       }
-      var ge = r(66216),
-        ve = r(19304),
-        Ee = r(88443),
-        Be = r(60911),
-        fe = r.n(Be),
-        Te = r(30310),
-        be = r(77219),
-        ke = r(42333),
-        we = r(58104),
-        Re = r(57317),
-        Me = r(75018),
-        Ie = r(48586),
-        Pe = r(84343),
-        Ne = r(17547),
-        Ge = r(69103),
-        We = r.n(Ge);
-      const Oe = D.memo((e) => {
-          const t = oe();
+      var J = a(66216),
+        ee = a(19304),
+        te = a(88443),
+        ae = a(60911),
+        re = a.n(ae),
+        ne = a(30310),
+        le = a(77219),
+        se = a(42333),
+        oe = a(58104),
+        ce = a(57317),
+        ie = a(75018),
+        me = a(48586),
+        ue = a(84343),
+        de = a(17547),
+        _e = a(69103),
+        pe = a.n(_e);
+      const he = k.memo((e) => {
+          const t = Z();
           return t.isLoading
-            ? D.createElement("div", {
-                className: (0, ve.Z)(
-                  fe().ChartContainerPlaceholder,
-                  We().Placeholder,
+            ? k.createElement("div", {
+                className: (0, ee.Z)(
+                  re().ChartContainerPlaceholder,
+                  pe().Placeholder,
                 ),
               })
             : t.data
-            ? D.createElement(
+            ? k.createElement(
                 "div",
-                { className: fe().ChartContainer },
-                D.createElement(
+                { className: re().ChartContainer },
+                k.createElement(
                   "div",
-                  { className: fe().Chart },
-                  D.createElement(
-                    Ne.SV,
+                  { className: re().Chart },
+                  k.createElement(
+                    de.SV,
                     null,
-                    D.createElement(Le, { Data: t.data }),
+                    k.createElement(Ce, { Data: t.data }),
                   ),
                 ),
-                D.createElement(
+                k.createElement(
                   "div",
-                  { className: fe().Stats },
-                  D.createElement(
+                  { className: re().Stats },
+                  k.createElement(
                     "div",
-                    { className: fe().PeakStats },
-                    D.createElement(
+                    { className: re().PeakStats },
+                    k.createElement(
                       "div",
-                      { className: fe().StatsTitle },
-                      (0, Ee.AV)(t.data.peak),
+                      { className: re().StatsTitle },
+                      (0, te.AV)(t.data.peak),
                     ),
-                    D.createElement(
+                    k.createElement(
                       "div",
-                      { className: fe().StatSubtitle },
-                      D.createElement(
+                      { className: re().StatSubtitle },
+                      k.createElement(
                         "span",
-                        { className: fe().Concurrent },
-                        (0, re.Xx)("#SteamCharts_Graph_PeakConcurrent"),
+                        { className: re().Concurrent },
+                        (0, x.Xx)("#SteamCharts_Graph_PeakConcurrent"),
                       ),
                     ),
                   ),
-                  D.createElement(
+                  k.createElement(
                     "div",
-                    { className: fe().CurrentStats },
-                    D.createElement(
+                    { className: re().CurrentStats },
+                    k.createElement(
                       "div",
-                      { className: fe().StatsTitle },
-                      (0, Ee.AV)(t.data.current),
+                      { className: re().StatsTitle },
+                      (0, te.AV)(t.data.current),
                     ),
-                    D.createElement(
+                    k.createElement(
                       "div",
-                      { className: fe().StatSubtitle },
-                      D.createElement(
+                      { className: re().StatSubtitle },
+                      k.createElement(
                         "span",
-                        { className: fe().Now },
-                        (0, re.Xx)("#SteamCharts_Graph_OnlineNow"),
+                        { className: re().Now },
+                        (0, x.Xx)("#SteamCharts_Graph_OnlineNow"),
                       ),
                     ),
                   ),
@@ -2081,54 +992,54 @@
               )
             : null;
         }),
-        Le = D.memo((e) => {
+        Ce = k.memo((e) => {
           const { Data: t } = e;
-          return D.createElement(
-            Te.h,
+          return k.createElement(
+            ne.h,
             { width: "100%", height: "100%" },
-            D.createElement(
-              be.c,
+            k.createElement(
+              le.c,
               {
                 data: t.history,
                 margin: { top: 25, left: 0, right: 0, bottom: 0 },
                 barGap: 10,
               },
-              D.createElement(
+              k.createElement(
                 "defs",
                 null,
-                D.createElement(
+                k.createElement(
                   "linearGradient",
                   { id: "bar_linear", x1: "0", x2: "0", y1: "0", y2: "1" },
-                  D.createElement("stop", { stopColor: "#1A9FFF" }),
-                  D.createElement("stop", {
+                  k.createElement("stop", { stopColor: "#1A9FFF" }),
+                  k.createElement("stop", {
                     offset: "0.01",
                     stopColor: "#1A9FFF",
                   }),
-                  D.createElement("stop", {
+                  k.createElement("stop", {
                     offset: "0.0101",
                     stopColor: "#1A9FFF",
                     stopOpacity: "0.5",
                   }),
-                  D.createElement("stop", {
+                  k.createElement("stop", {
                     offset: "1",
                     stopColor: "#30363D",
                     stopOpacity: "0.5",
                   }),
                 ),
               ),
-              D.createElement(ke.q, { vertical: !1, stroke: "#a0aab6" }),
-              D.createElement(we.B, {
-                tickFormatter: Ee.X_,
+              k.createElement(se.q, { vertical: !1, stroke: "#a0aab6" }),
+              k.createElement(oe.B, {
+                tickFormatter: te.X_,
                 tick: { fill: "white" },
                 axisLine: !1,
               }),
-              D.createElement(Re.u, { content: D.createElement(De, null) }),
-              D.createElement(Me.$, {
+              k.createElement(ce.u, { content: k.createElement(Se, null) }),
+              k.createElement(ie.$, {
                 dataKey: "users",
                 barSize: 2,
                 fill: "url( #bar_linear )",
               }),
-              D.createElement(Ie.d, {
+              k.createElement(me.d, {
                 y: t.peak,
                 stroke: "#82FF01",
                 strokeDasharray: "6",
@@ -2136,125 +1047,129 @@
             ),
           );
         });
-      function De({ active: e, payload: t }) {
+      function Se({ active: e, payload: t }) {
         if (e && t && t.length) {
           const e = t[0].payload;
-          return D.createElement(
-            Pe.gz,
+          return k.createElement(
+            ue.gz,
             null,
-            (0, re.kQ)(
+            (0, x.kQ)(
               "#SteamCharts_OverviewGraph_Tooltip_OnlineAt",
-              D.createElement("b", null, (0, Ee.AV)(e.users)),
+              k.createElement("b", null, (0, te.AV)(e.users)),
               e.date.toLocaleString(),
             ),
           );
         }
         return null;
       }
-      var xe = r(565),
-        ze = r(74802),
-        Ae = r(98009),
-        Fe = r(45437),
-        Ue = r(71161);
-      function Xe(e) {
-        const { item: t, feature: r, depth: n, children: s } = e,
-          l = (0, a._T)(e, ["item", "feature", "depth", "children"]),
-          i = D.useRef(0),
-          o = 0 == t.GetStoreItemType() ? t.GetAppID() : null,
-          c = (0, Ue.bJ)(),
-          m = D.useMemo(
+      var Ee = a(565),
+        ve = a(74802),
+        ye = a(98009),
+        ge = a(68562),
+        ke = a(45437),
+        Te = a(71161);
+      function fe(e) {
+        const { item: t, feature: a, depth: r, children: l } = e,
+          s = (0, n._T)(e, ["item", "feature", "depth", "children"]),
+          o = k.useRef(0),
+          c =
+            t.GetStoreItemType() == ge.vn.k_EStoreItemType_App
+              ? t.GetAppID()
+              : null,
+          i = (0, Te.bJ)(),
+          m = k.useMemo(
             () =>
-              Ae.ZP.GetLinkParam(
-                Object.assign(Object.assign({}, c), {
-                  feature: r || c.feature,
+              ye.ZP.GetLinkParam(
+                Object.assign(Object.assign({}, i), {
+                  feature: a || i.feature,
                 }),
-                n,
+                r,
               ),
-            [c, r, n],
+            [i, a, r],
           ),
-          u = D.useMemo(
-            () => Ae.ZP.AddNavParamToURL(t.GetStorePageURL(), m),
+          u = k.useMemo(
+            () => ye.ZP.AddNavParamToURL(t.GetStorePageURL(), m),
             [t, m],
           ),
-          d = D.useCallback(() => {
-            o && i.current != o && (Fe.E.AddImpression(o, m), (i.current = o));
-          }, [o, m, i]),
-          _ = D.createElement("a", Object.assign({}, l, { href: u }), s);
-        return o ? D.createElement(ze.h, { onEnter: d }, _) : _;
+          d = k.useCallback(() => {
+            c && o.current != c && (ke.E.AddImpression(c, m), (o.current = c));
+          }, [c, m, o]),
+          _ = k.createElement("a", Object.assign({}, s, { href: u }), l);
+        return c ? k.createElement(ve.h, { onEnter: d }, _) : _;
       }
-      var je = r(12360),
-        Ze = r(26256),
-        He = r.n(Ze),
-        Ve = r(12917),
-        Ye = r.n(Ve),
-        qe = r(13345);
-      function $e(e) {
+      var Ne = a(12360),
+        Pe = a(54856),
+        Ie = a.n(Pe),
+        be = a(12917),
+        Ge = a.n(be),
+        Re = a(13345);
+      function we(e) {
         const { SteamCharts: t } = e;
-        return D.createElement(
-          je.P,
+        return k.createElement(
+          Ne.P,
           {
-            title: (0, re.Xx)(
+            title: (0, x.Xx)(
               "#SteamCharts_Menu_SteamCharts",
-              (0, re.Xx)("#SteamCharts_Menu_Charts"),
+              (0, x.Xx)("#SteamCharts_Menu_Charts"),
             ),
           },
-          D.createElement(
+          k.createElement(
             "div",
-            { className: Ye().PageContainer },
-            D.createElement(
+            { className: Ge().PageContainer },
+            k.createElement(
               "div",
-              { className: (0, ve.Z)(He().HeaderCtn, He().WithSubtitle) },
-              D.createElement(
+              { className: (0, ee.Z)(Ie().HeaderCtn, Ie().WithSubtitle) },
+              k.createElement(
                 "h1",
                 null,
-                (0, re.Xx)("#SteamCharts_PageTitle_Overview"),
+                (0, x.Xx)("#SteamCharts_PageTitle_Overview"),
               ),
             ),
-            D.createElement(
+            k.createElement(
               "div",
-              { className: He().PageSubtitle },
-              (0, re.Xx)("#SteamCharts_PageSubTitle_Overview"),
+              { className: Ie().PageSubtitle },
+              (0, x.Xx)("#SteamCharts_PageSubTitle_Overview"),
             ),
-            D.createElement(
+            k.createElement(
               "div",
-              { className: We().PageSection },
-              D.createElement(
+              { className: pe().PageSection },
+              k.createElement(
                 "div",
-                { className: We().SectionTitle },
-                (0, re.Xx)("#SteamCharts_OverviewGraph_Title_PlayersOnline"),
+                { className: pe().SectionTitle },
+                (0, x.Xx)("#SteamCharts_OverviewGraph_Title_PlayersOnline"),
               ),
-              D.createElement(Ne.SV, null, D.createElement(Oe, null)),
+              k.createElement(de.SV, null, k.createElement(he, null)),
             ),
-            D.createElement(
+            k.createElement(
               "div",
-              { className: (0, ve.Z)(We().PageSection, Ye().SideBySideCharts) },
-              D.createElement(
+              { className: (0, ee.Z)(pe().PageSection, Ge().SideBySideCharts) },
+              k.createElement(
                 "div",
-                { className: Ye().Chart },
-                D.createElement(
-                  Ne.SV,
+                { className: Ge().Chart },
+                k.createElement(
+                  de.SV,
                   null,
-                  D.createElement(
-                    Ue.ZP,
+                  k.createElement(
+                    Te.ZP,
                     { feature: "topsellers" },
-                    D.createElement(
-                      Qe,
+                    k.createElement(
+                      Be,
                       {
                         SteamCharts: t,
-                        name: (0, re.Xx)(
+                        name: (0, x.Xx)(
                           "#SteamCharts_OverviewGraph_Title_TopSellers",
                         ),
-                        strTopItemDesc: (0, re.Xx)(
+                        strTopItemDesc: (0, x.Xx)(
                           "#SteamCharts_OverviewGraph_Desc_TopSelling",
                         ),
                       },
-                      D.createElement(
-                        xe.OL,
+                      k.createElement(
+                        Ee.OL,
                         {
-                          className: Ye().ChartMoreBtn,
-                          to: Sr.TopSelling(V.De.COUNTRY),
+                          className: Ge().ChartMoreBtn,
+                          to: Qt.TopSelling(P.De.COUNTRY),
                         },
-                        (0, re.Xx)(
+                        (0, x.Xx)(
                           "#SteamCharts_OverviewGraph_Button_TopSelling",
                         ),
                       ),
@@ -2262,30 +1177,30 @@
                   ),
                 ),
               ),
-              D.createElement(
+              k.createElement(
                 "div",
-                { className: Ye().Chart },
-                D.createElement(
-                  Ne.SV,
+                { className: Ge().Chart },
+                k.createElement(
+                  de.SV,
                   null,
-                  D.createElement(
-                    Ue.ZP,
+                  k.createElement(
+                    Te.ZP,
                     { feature: "mostplayed" },
-                    D.createElement(
-                      Ke,
+                    k.createElement(
+                      Le,
                       {
                         SteamCharts: t,
-                        name: (0, re.Xx)(
+                        name: (0, x.Xx)(
                           "#SteamCharts_OverviewGraph_Title_MostPlayed",
                         ),
-                        strTopItemDesc: (0, re.Xx)(
+                        strTopItemDesc: (0, x.Xx)(
                           "#SteamCharts_OverviewGraph_Desc_MostPlayed",
                         ),
                       },
-                      D.createElement(
-                        xe.OL,
-                        { className: Ye().ChartMoreBtn, to: Sr.MostPlayed() },
-                        (0, re.Xx)(
+                      k.createElement(
+                        Ee.OL,
+                        { className: Ge().ChartMoreBtn, to: Qt.MostPlayed() },
+                        (0, x.Xx)(
                           "#SteamCharts_OverviewGraph_Button_MostPlayed",
                         ),
                       ),
@@ -2294,107 +1209,107 @@
                 ),
               ),
             ),
-            D.createElement(
+            k.createElement(
               "div",
-              { className: (0, ve.Z)(We().PageSection, Ye().SideBySideCharts) },
-              D.createElement(
+              { className: (0, ee.Z)(pe().PageSection, Ge().SideBySideCharts) },
+              k.createElement(
                 "div",
-                { className: Ye().Chart },
-                D.createElement(
-                  Ne.SV,
+                { className: Ge().Chart },
+                k.createElement(
+                  de.SV,
                   null,
-                  D.createElement(et, { TopSellersStore: t.TopSellersStore }),
+                  k.createElement(Oe, { TopSellersStore: t.TopSellersStore }),
                 ),
               ),
-              D.createElement(
+              k.createElement(
                 "div",
-                { className: (0, ve.Z)(Ye().Chart, Ye().Monthly) },
-                D.createElement(
-                  Ne.SV,
+                { className: (0, ee.Z)(Ge().Chart, Ge().Monthly) },
+                k.createElement(
+                  de.SV,
                   null,
-                  D.createElement(tt, { TopReleaseStore: t.TopReleasesStore }),
+                  k.createElement(xe, { TopReleaseStore: t.TopReleasesStore }),
                 ),
               ),
             ),
-            D.createElement(
+            k.createElement(
               "div",
               null,
-              D.createElement(
-                Ne.SV,
+              k.createElement(
+                de.SV,
                 null,
-                D.createElement(nt, { BestOfYearStore: t.BestOfYearStore }),
+                k.createElement(Me, { BestOfYearStore: t.BestOfYearStore }),
               ),
             ),
-            D.createElement(
+            k.createElement(
               "div",
-              { className: We().PageSection },
-              D.createElement(
+              { className: pe().PageSection },
+              k.createElement(
                 "div",
-                { className: We().SectionTitle },
-                D.createElement(
+                { className: pe().SectionTitle },
+                k.createElement(
                   "b",
                   null,
-                  (0, re.Xx)("#SteamCharts_Overview_Title_More"),
+                  (0, x.Xx)("#SteamCharts_Overview_Title_More"),
                 ),
               ),
-              D.createElement(
+              k.createElement(
                 "div",
-                { className: Ye().MoreLinksCtn },
-                D.createElement(
+                { className: Ge().MoreLinksCtn },
+                k.createElement(
                   "a",
-                  { href: `${V.De.STORE_BASE_URL}hwsurvey/` },
-                  (0, re.Xx)("#SteamCharts_Overview_Link_Hardware"),
+                  { href: `${P.De.STORE_BASE_URL}hwsurvey/` },
+                  (0, x.Xx)("#SteamCharts_Overview_Link_Hardware"),
                 ),
-                D.createElement(
+                k.createElement(
                   "a",
-                  { href: `${V.De.STORE_BASE_URL}stats/content/` },
-                  (0, re.Xx)("#SteamCharts_Overview_Link_Download"),
+                  { href: `${P.De.STORE_BASE_URL}stats/content/` },
+                  (0, x.Xx)("#SteamCharts_Overview_Link_Download"),
                 ),
-                D.createElement(
+                k.createElement(
                   "a",
-                  { href: `${V.De.STORE_BASE_URL}stats/support/` },
-                  (0, re.Xx)("#SteamCharts_Overview_Link_Support"),
+                  { href: `${P.De.STORE_BASE_URL}stats/support/` },
+                  (0, x.Xx)("#SteamCharts_Overview_Link_Support"),
                 ),
               ),
             ),
           ),
         );
       }
-      function Qe(e) {
-        const { SteamCharts: t, name: r, strTopItemDesc: a, children: n } = e,
-          { data: s } = (0, ge.cs)(...t.GetRealTimeTopSellersQuery());
-        if (!s || !s.GetItems().length)
-          return D.createElement("div", {
-            className: (0, ve.Z)(
-              Ye().OverviewChartPlaceholder,
-              We().Placeholder,
+      function Be(e) {
+        const { SteamCharts: t, name: a, strTopItemDesc: r, children: n } = e,
+          { data: l } = (0, J.cs)(...t.GetRealTimeTopSellersQuery());
+        if (!l || !l.GetItems().length)
+          return k.createElement("div", {
+            className: (0, ee.Z)(
+              Ge().OverviewChartPlaceholder,
+              pe().Placeholder,
             ),
           });
-        const [l, ...i] = s.GetItems();
-        return D.createElement(
+        const [s, ...o] = l.GetItems();
+        return k.createElement(
           "div",
           null,
-          D.createElement("div", { className: We().SectionTitle }, " ", r),
-          D.createElement(
+          k.createElement("div", { className: pe().SectionTitle }, " ", a),
+          k.createElement(
             "div",
-            { className: Ye().ChartItemsCtn },
-            D.createElement(
+            { className: Ge().ChartItemsCtn },
+            k.createElement(
               "div",
-              { className: Ye().TopItem },
-              D.createElement(
-                Xe,
-                { item: l },
-                D.createElement("img", {
-                  className: Ye().Capsule,
-                  src: l.GetAssets().GetHeaderURL(),
+              { className: Ge().TopItem },
+              k.createElement(
+                fe,
+                { item: s },
+                k.createElement("img", {
+                  className: Ge().Capsule,
+                  src: s.GetAssets().GetHeaderURL(),
                 }),
               ),
-              D.createElement(Je, { rank: 1, item: l, itemDesc: a }),
+              k.createElement(De, { rank: 1, item: s, itemDesc: r }),
             ),
-            i
+            o
               .slice(0, 4)
               .map((e, t) =>
-                D.createElement(Je, {
+                k.createElement(De, {
                   key: e.GetUniqueID(),
                   rank: t + 2,
                   item: e,
@@ -2404,149 +1319,150 @@
           ),
         );
       }
-      function Ke(e) {
-        const { SteamCharts: t, name: r, strTopItemDesc: a, children: n } = e,
-          s = N(t.MostPlayedStore);
-        if (!s || s.isLoading)
-          return D.createElement("div", {
-            className: (0, ve.Z)(
-              Ye().OverviewChartPlaceholder,
-              We().Placeholder,
+      function Le(e) {
+        const { SteamCharts: t, name: a, strTopItemDesc: r, children: n } = e,
+          l = S(t.MostPlayedStore);
+        if (!l || l.isLoading)
+          return k.createElement("div", {
+            className: (0, ee.Z)(
+              Ge().OverviewChartPlaceholder,
+              pe().Placeholder,
             ),
           });
-        const [l, ...i] = s.data.rgRanks;
-        return D.createElement(
+        const [s, ...o] = l.data.rgRanks;
+        return k.createElement(
           "div",
           null,
-          D.createElement("div", { className: We().SectionTitle }, " ", r),
-          D.createElement(
+          k.createElement("div", { className: pe().SectionTitle }, " ", a),
+          k.createElement(
             "div",
-            { className: Ye().ChartItemsCtn },
-            D.createElement(
+            { className: Ge().ChartItemsCtn },
+            k.createElement(
               "div",
-              { className: Ye().TopItem },
-              D.createElement(
-                Xe,
-                { item: l.Item },
-                D.createElement("img", {
-                  className: Ye().Capsule,
-                  src: l.Item.GetAssets().GetHeaderURL(),
+              { className: Ge().TopItem },
+              k.createElement(
+                fe,
+                { item: s.Item },
+                k.createElement("img", {
+                  className: Ge().Capsule,
+                  src: s.Item.GetAssets().GetHeaderURL(),
                 }),
               ),
-              D.createElement(Je, {
+              k.createElement(De, {
                 rank: 1,
-                item: l.Item,
-                itemDesc: a,
-                addData: (0, Ee.AV)(l.nConcurrentInGame),
-                addDataDesc: (0, re.Xx)(
+                item: s.Item,
+                itemDesc: r,
+                addData: (0, te.AV)(s.nConcurrentInGame),
+                addDataDesc: (0, x.Xx)(
                   "#SteamCharts_OverviewGraph_Desc_InGame",
                 ),
               }),
             ),
-            i
+            o
               .slice(0, 4)
               .map((e, t) =>
-                D.createElement(Je, {
+                k.createElement(De, {
                   key: e.Item.GetUniqueID(),
                   rank: t + 2,
                   item: e.Item,
-                  addData: (0, Ee.AV)(e.nConcurrentInGame),
+                  addData: (0, te.AV)(e.nConcurrentInGame),
                 }),
               ),
             n,
           ),
         );
       }
-      function Je(e) {
-        const { rank: t, item: r, itemDesc: a, addData: n, addDataDesc: s } = e;
-        return D.createElement(
-          Xe,
-          { key: r.GetUniqueID(), className: Ye().ItemRow, item: r, depth: t },
-          D.createElement("div", { className: Ye().Rank }, t),
-          D.createElement(
+      function De(e) {
+        const { rank: t, item: a, itemDesc: r, addData: n, addDataDesc: l } = e;
+        return k.createElement(
+          fe,
+          { key: a.GetUniqueID(), className: Ge().ItemRow, item: a, depth: t },
+          k.createElement("div", { className: Ge().Rank }, t),
+          k.createElement(
             "div",
-            { className: Ye().ItemNameCtn },
-            D.createElement("div", { className: Ye().ItemName }, r.GetName()),
-            a && D.createElement("div", { className: Ye().ItemDesc }, a),
+            { className: Ge().ItemNameCtn },
+            k.createElement("div", { className: Ge().ItemName }, a.GetName()),
+            r && k.createElement("div", { className: Ge().ItemDesc }, r),
           ),
-          D.createElement(
+          k.createElement(
             "div",
-            { className: Ye().TopReason },
-            n && D.createElement("div", { className: Ye().AddData }, n),
-            s && D.createElement("div", { className: Ye().AddDataDesc }, s),
+            { className: Ge().TopReason },
+            n && k.createElement("div", { className: Ge().AddData }, n),
+            l && k.createElement("div", { className: Ge().AddDataDesc }, l),
           ),
         );
       }
-      function et(e) {
+      function Oe(e) {
         const { TopSellersStore: t } = e,
-          { TopSellers: r } = (function (e, t, r = Y) {
-            const { rtCurrentWeek: a } = Q(e, t);
-            return J(e, a, a, t, r);
-          })(t, V.De.COUNTRY);
-        return D.createElement(at, {
-          name: r ? (0, re.vX)(r.rtWeekStart) : "",
-          range: (0, re.Xx)("#SteamCharts_Overview_Title_Weekly"),
-          rgItems: null == r ? void 0 : r.rgRanks.map((e) => e.Item),
+          { TopSellers: a } = (function (e, t, a = I) {
+            const { rtCurrentWeek: r } = R(e, t);
+            return B(e, r, r, t, a);
+          })(t, P.De.COUNTRY);
+        return k.createElement(Ae, {
+          name: a ? (0, x.vX)(a.rtWeekStart) : "",
+          range: (0, x.Xx)("#SteamCharts_Overview_Title_Weekly"),
+          rgItems: null == a ? void 0 : a.rgRanks.map((e) => e.Item),
           renderLink: () =>
-            D.createElement(
-              xe.OL,
+            k.createElement(
+              Ee.OL,
               {
-                className: Ye().ImageButtonLink,
-                to: Sr.TopSellers(he(V.De.COUNTRY), pe(t.GetCurrentWeek())),
+                className: Ge().ImageButtonLink,
+                to: Qt.TopSellers(q(P.De.COUNTRY), j(t.GetCurrentWeek())),
               },
-              (0, re.Xx)("#SteamCharts_TopSellers_PageTitle"),
+              (0, x.Xx)("#SteamCharts_TopSellers_PageTitle"),
             ),
         });
       }
-      function tt(e) {
+      function xe(e) {
         var t;
-        const { TopReleaseStore: r } = e,
-          a = L(r),
+        const { TopReleaseStore: a } = e,
+          r = g(a),
           n = (function (e) {
             var t;
-            let r = [];
-            const a = (null == e ? void 0 : e.rgPages[0])
+            let a = [];
+            const r = (null == e ? void 0 : e.rgPages[0])
               ? e.rgPages[0].rgItems.slice(0, 9)
               : [];
             return (
-              1 !== (0, G.wZ)(a, { include_assets: !0 }) &&
-                (r =
+              (0, E.wZ)(r, { include_assets: !0 }) !==
+                E.Y0.k_EStoreItemCacheState_Loading &&
+                (a =
                   null === (t = null == e ? void 0 : e.rgPages[0]) ||
                   void 0 === t
                     ? void 0
-                    : t.rgItems.map((e) => R.Z.Get().GetApp(e))),
-              r
+                    : t.rgItems.map((e) => _.Z.Get().GetApp(e))),
+              a
             );
-          })(a),
-          s = null == a ? void 0 : a.rgPages[0],
-          l =
-            (null !== (t = null == s ? void 0 : s.rtMonthStart) && void 0 !== t
+          })(r),
+          l = null == r ? void 0 : r.rgPages[0],
+          s =
+            (null !== (t = null == l ? void 0 : l.rtMonthStart) && void 0 !== t
               ? t
               : 0) +
             86400 +
             1,
-          i = (0, ue.Ti)(l);
-        return D.createElement(at, {
-          name: a ? i : "",
-          range: (0, re.Xx)("#SteamCharts_Overview_Title_Monthly"),
+          o = (0, Y.Ti)(s);
+        return k.createElement(Ae, {
+          name: r ? o : "",
+          range: (0, x.Xx)("#SteamCharts_Overview_Title_Monthly"),
           rgItems: n,
           renderLink: () =>
-            D.createElement(
+            k.createElement(
               "a",
               {
-                className: Ye().ImageButtonLink,
-                href: Sr.TopNewReleases(null == s ? void 0 : s.strUrlPath),
+                className: Ge().ImageButtonLink,
+                href: Qt.TopNewReleases(null == l ? void 0 : l.strUrlPath),
               },
-              (0, re.Xx)("#SteamCharts_Overview_Title_MonthlyTop"),
+              (0, x.Xx)("#SteamCharts_Overview_Title_MonthlyTop"),
             ),
         });
       }
-      const rt = 9;
-      function at(e) {
-        const { name: t, range: r, rgItems: a, renderLink: n } = e,
-          s = D.useMemo(() => {
-            const e = (null == a ? void 0 : a.slice(0, rt)) || [];
-            for (; e.length < rt; ) e.push(void 0);
+      const We = 9;
+      function Ae(e) {
+        const { name: t, range: a, rgItems: r, renderLink: n } = e,
+          l = k.useMemo(() => {
+            const e = (null == r ? void 0 : r.slice(0, We)) || [];
+            for (; e.length < We; ) e.push(void 0);
             return [
               e[5],
               e[2],
@@ -2561,27 +1477,27 @@
               e[7],
               e[5],
             ];
-          }, [a]);
-        return D.createElement(
+          }, [r]);
+        return k.createElement(
           "div",
           null,
-          D.createElement(
+          k.createElement(
             "div",
-            { className: We().SectionTitle },
-            D.createElement("b", null, r),
+            { className: pe().SectionTitle },
+            k.createElement("b", null, a),
             " ",
             t,
           ),
-          D.createElement(
+          k.createElement(
             "div",
-            { className: Ye().ImageButtonCtn },
-            D.createElement(
+            { className: Ge().ImageButtonCtn },
+            k.createElement(
               "div",
-              { className: Ye().ImageGridCtn },
-              s.map(
+              { className: Ge().ImageGridCtn },
+              l.map(
                 (e, t) =>
                   e &&
-                  D.createElement("img", {
+                  k.createElement("img", {
                     key: `${e.GetUniqueID()}-${t}`,
                     src: e.GetAssets().GetHeaderURL(),
                   }),
@@ -2591,73 +1507,73 @@
           ),
         );
       }
-      function nt(e) {
+      function Me(e) {
         const { BestOfYearStore: t } = e,
-          r = se(t);
-        if (!r || !r.rgPages || !r.rgPages.length) return null;
-        const a = r.rgPages[0];
-        if (!a) return null;
+          a = M(t);
+        if (!a || !a.rgPages || !a.rgPages.length) return null;
+        const r = a.rgPages[0];
+        if (!r) return null;
         const {
             bannerUrlPath: n,
-            mobileBannerUrlPath: s,
-            strName: l,
-            strUrlPath: i,
-            rtStartDate: o,
-          } = a,
-          c = (0, ue.o9)(o);
-        let m = D.createElement(
+            mobileBannerUrlPath: l,
+            strName: s,
+            strUrlPath: o,
+            rtStartDate: c,
+          } = r,
+          i = (0, Y.o9)(c);
+        let m = k.createElement(
           "div",
-          { className: Ye().BestOfYearButton },
-          D.createElement("span", { className: Ye().BackupBestOfYearText }, l),
+          { className: Ge().BestOfYearButton },
+          k.createElement("span", { className: Ge().BackupBestOfYearText }, s),
         );
-        if (n && s) {
-          const e = `${(0, qe.OL)()}${n}`,
-            t = `${(0, qe.OL)()}${s}`;
-          m = D.createElement(
-            D.Fragment,
+        if (n && l) {
+          const e = `${(0, Re.OL)()}${n}`,
+            t = `${(0, Re.OL)()}${l}`;
+          m = k.createElement(
+            k.Fragment,
             null,
-            D.createElement("img", {
+            k.createElement("img", {
               src: e,
-              className: (0, ve.Z)(Ye().BestOfYearBanner, Ye().Big),
+              className: (0, ee.Z)(Ge().BestOfYearBanner, Ge().Big),
             }),
-            D.createElement("img", {
+            k.createElement("img", {
               src: t,
-              className: (0, ve.Z)(Ye().BestOfYearBanner, Ye().Mobile),
+              className: (0, ee.Z)(Ge().BestOfYearBanner, Ge().Mobile),
             }),
           );
         }
-        return D.createElement(
+        return k.createElement(
           "div",
-          { className: We().PageSection },
-          D.createElement(
+          { className: pe().PageSection },
+          k.createElement(
             "div",
-            { className: We().SectionTitle },
-            D.createElement(
+            { className: pe().SectionTitle },
+            k.createElement(
               "b",
               null,
-              (0, re.Xx)("#SteamCharts_Overview_Title_Yearly"),
+              (0, x.Xx)("#SteamCharts_Overview_Title_Yearly"),
             ),
             " ",
-            c,
+            i,
           ),
-          D.createElement("a", { href: Sr.BestOfYear(i) }, m),
+          k.createElement("a", { href: Qt.BestOfYear(o) }, m),
         );
       }
-      var st = r(73961),
-        lt = r(701),
-        it = r(25125);
-      function ot(e) {
+      var Ue = a(73961),
+        Xe = a(701),
+        Ze = a(25125);
+      function He(e) {
         var t;
         const {
-            TopSellersStore: r,
-            TopReleasesStore: a,
+            TopSellersStore: a,
+            TopReleasesStore: r,
             BestOfYearStore: n,
-            SteamInterface: s,
-            DynamicUserStore: l,
-            children: i,
+            SteamInterface: l,
+            DynamicUserStore: s,
+            children: o,
           } = e,
-          o = D.useRef();
-        if (!o.current) {
+          c = k.useRef();
+        if (!c.current) {
           let e = document.getElementById("steam_charts_root_content");
           e ||
             ((e = document.createElement("div")),
@@ -2665,409 +1581,409 @@
             null === (t = document.getElementById("page_root")) ||
               void 0 === t ||
               t.prepend(e)),
-            (o.current = e);
+            (c.current = e);
         }
-        (0, je.h)(He().SteamChartsPage);
-        const c = (function (e) {
-          return (0, it.SZ)(() => e.ExcludedContentDescriptor);
-        })(l);
-        let m = D.useMemo(() => ({ content_descriptors_excluded: c }), [c]);
-        return D.createElement(
+        (0, Ne.h)(Ie().SteamChartsPage);
+        const i = (function (e) {
+          return (0, Ze.SZ)(() => e.ExcludedContentDescriptor);
+        })(s);
+        let m = k.useMemo(() => ({ content_descriptors_excluded: i }), [i]);
+        return k.createElement(
           "div",
-          { className: He().SteamChartsShell },
-          st.createPortal(
-            D.createElement(
+          { className: Ie().SteamChartsShell },
+          Ue.createPortal(
+            k.createElement(
               "div",
-              { className: He().SteamChartsRootPosition },
-              D.createElement(
+              { className: Ie().SteamChartsRootPosition },
+              k.createElement(
                 "div",
-                { className: He().AlignWithMenu },
-                D.createElement(
+                { className: Ie().AlignWithMenu },
+                k.createElement(
                   "div",
-                  { className: He().SteamChartsMenu },
-                  D.createElement(
+                  { className: Ie().SteamChartsMenu },
+                  k.createElement(
                     "div",
-                    { className: He().MenuGroup },
-                    D.createElement(
+                    { className: Ie().MenuGroup },
+                    k.createElement(
                       "div",
-                      { className: He().MenuLinks },
-                      D.createElement(
-                        xe.OL,
+                      { className: Ie().MenuLinks },
+                      k.createElement(
+                        Ee.OL,
                         {
-                          to: Sr.Overview(),
+                          to: Qt.Overview(),
                           exact: !0,
-                          activeClassName: He().ActiveLink,
+                          activeClassName: Ie().ActiveLink,
                         },
-                        D.createElement(
+                        k.createElement(
                           "span",
-                          { className: (0, ve.Z)(He().MenuItemIcon) },
-                          D.createElement(lt.SK8, null),
+                          { className: (0, ee.Z)(Ie().MenuItemIcon) },
+                          k.createElement(Xe.SK8, null),
                         ),
-                        (0, re.Xx)("#SteamCharts_Menu_Overview"),
+                        (0, x.Xx)("#SteamCharts_Menu_Overview"),
                       ),
                     ),
                   ),
-                  D.createElement(Ne.SV, null, D.createElement(ct, null)),
-                  D.createElement(
-                    Ne.SV,
+                  k.createElement(de.SV, null, k.createElement(Ve, null)),
+                  k.createElement(
+                    de.SV,
                     null,
-                    D.createElement(mt, { TopSellersStore: r }),
+                    k.createElement(Ye, { TopSellersStore: a }),
                   ),
-                  D.createElement(
-                    Ne.SV,
+                  k.createElement(
+                    de.SV,
                     null,
-                    D.createElement(ut, { TopReleaseStore: a }),
+                    k.createElement($e, { TopReleaseStore: r }),
                   ),
-                  D.createElement(
-                    Ne.SV,
+                  k.createElement(
+                    de.SV,
                     null,
-                    D.createElement(dt, { BestOfYearStore: n }),
+                    k.createElement(Fe, { BestOfYearStore: n }),
                   ),
                 ),
               ),
             ),
-            o.current,
+            c.current,
           ),
-          D.createElement(
+          k.createElement(
             "div",
-            { className: He().SteamChartsContent },
-            D.createElement(
-              ge.qX,
-              { transport: s.GetServiceTransport(), defaultOptions: m },
-              D.createElement(Ne.SV, null, i),
+            { className: Ie().SteamChartsContent },
+            k.createElement(
+              J.qX,
+              { transport: l.GetServiceTransport(), defaultOptions: m },
+              k.createElement(de.SV, null, o),
             ),
           ),
         );
       }
-      function ct() {
-        return D.createElement(
+      function Ve() {
+        return k.createElement(
           "div",
-          { className: He().MenuGroup },
-          D.createElement(
+          { className: Ie().MenuGroup },
+          k.createElement(
             "div",
-            { className: He().MenuHeader },
-            (0, re.Xx)("#SteamCharts_Menu_LiveCharts"),
+            { className: Ie().MenuHeader },
+            (0, x.Xx)("#SteamCharts_Menu_LiveCharts"),
           ),
-          D.createElement(
+          k.createElement(
             "div",
-            { className: He().MenuLinks },
-            D.createElement(
-              xe.OL,
+            { className: Ie().MenuLinks },
+            k.createElement(
+              Ee.OL,
               {
-                className: He().MenuItemIcon,
-                to: Sr.TopSelling(V.De.COUNTRY),
-                activeClassName: He().ActiveLink,
+                className: Ie().MenuItemIcon,
+                to: Qt.TopSelling(P.De.COUNTRY),
+                activeClassName: Ie().ActiveLink,
               },
-              D.createElement(lt.kL2, null),
-              (0, re.Xx)("#SteamCharts_Menu_TopSelling"),
+              k.createElement(Xe.kL2, null),
+              (0, x.Xx)("#SteamCharts_Menu_TopSelling"),
             ),
-            D.createElement(
-              xe.OL,
+            k.createElement(
+              Ee.OL,
               {
-                className: He().MenuItemIcon,
-                to: Sr.MostPlayed(),
-                activeClassName: He().ActiveLink,
+                className: Ie().MenuItemIcon,
+                to: Qt.MostPlayed(),
+                activeClassName: Ie().ActiveLink,
               },
-              D.createElement(lt.k6n, null),
-              (0, re.Xx)("#SteamCharts_Menu_MostPlayed"),
+              k.createElement(Xe.k6n, null),
+              (0, x.Xx)("#SteamCharts_Menu_MostPlayed"),
             ),
           ),
         );
       }
-      function mt(e) {
+      function Ye(e) {
         const { TopSellersStore: t } = e,
-          r = (0, me.$B)(Sr.TopSellers(":country", ":week?"));
-        let a = V.De.COUNTRY;
-        r && r.params && r.params.country && (a = Ce(r.params.country));
-        const { rtCurrentWeek: n, bCountryListInitialized: s } = Q(
+          a = (0, V.$B)(Qt.TopSellers(":country", ":week?"));
+        let r = P.De.COUNTRY;
+        a && a.params && a.params.country && (r = Q(a.params.country));
+        const { rtCurrentWeek: n, bCountryListInitialized: l } = R(
           t,
-          V.De.COUNTRY,
+          P.De.COUNTRY,
         );
-        if (!n || !s) return null;
-        const l = he(t.BIsValidTopSellersCountry(a) ? a : "");
-        let i = [];
+        if (!n || !l) return null;
+        const s = q(t.BIsValidTopSellersCountry(r) ? r : "");
+        let o = [];
         for (let e = 0; e < 3; e++) {
           const t = n - 60 * e * 60 * 24 * 7;
-          i.push(
-            D.createElement(
-              xe.OL,
+          o.push(
+            k.createElement(
+              Ee.OL,
               {
-                to: Sr.TopSellers(l, pe(t)),
+                to: Qt.TopSellers(s, j(t)),
                 key: t,
-                activeClassName: He().ActiveLink,
+                activeClassName: Ie().ActiveLink,
               },
-              D.createElement(
+              k.createElement(
                 "span",
-                { className: (0, ve.Z)(He().MenuItemIcon) },
-                D.createElement(lt.faS, null),
+                { className: (0, ee.Z)(Ie().MenuItemIcon) },
+                k.createElement(Xe.faS, null),
               ),
-              (0, re.vX)(t, { timeZone: "UTC" }),
+              (0, x.vX)(t, { timeZone: "UTC" }),
             ),
           );
         }
-        return D.createElement(
+        return k.createElement(
           "div",
-          { className: (0, ve.Z)(He().MenuGroup, He().Weekly) },
-          D.createElement(
+          { className: (0, ee.Z)(Ie().MenuGroup, Ie().Weekly) },
+          k.createElement(
             "div",
-            { className: He().MenuHeader },
-            (0, re.Xx)("#SteamCharts_Menu_WeeklyCharts"),
+            { className: Ie().MenuHeader },
+            (0, x.Xx)("#SteamCharts_Menu_WeeklyCharts"),
           ),
-          D.createElement("div", { className: He().MenuLinks }, i),
+          k.createElement("div", { className: Ie().MenuLinks }, o),
         );
       }
-      function ut(e) {
+      function $e(e) {
         const { TopReleaseStore: t } = e,
-          r = L(t);
-        if (!r) return null;
-        const a = r.rgPages.map((e) => {
+          a = g(t);
+        if (!a) return null;
+        const r = a.rgPages.map((e) => {
           const t = e.rtMonthStart + 86400 + 1,
-            r = Sr.TopNewReleases(null == e ? void 0 : e.strUrlPath),
-            a = window.location.pathname === r;
-          return D.createElement(
+            a = Qt.TopNewReleases(null == e ? void 0 : e.strUrlPath),
+            r = window.location.pathname === a;
+          return k.createElement(
             "a",
             {
-              className: a ? He().ActiveLink : "",
-              href: r,
+              className: r ? Ie().ActiveLink : "",
+              href: a,
               key: e.rtMonthStart,
             },
-            D.createElement(
+            k.createElement(
               "span",
-              { className: (0, ve.Z)(He().MenuItemIcon) },
-              D.createElement(lt.faS, null),
+              { className: (0, ee.Z)(Ie().MenuItemIcon) },
+              k.createElement(Xe.faS, null),
             ),
-            (0, ue.Ti)(t),
+            (0, Y.Ti)(t),
           );
         });
-        return D.createElement(
+        return k.createElement(
           "div",
-          { className: (0, ve.Z)(He().MenuGroup, He().Monthly) },
-          D.createElement(
+          { className: (0, ee.Z)(Ie().MenuGroup, Ie().Monthly) },
+          k.createElement(
             "div",
-            { className: He().MenuHeader },
-            (0, re.Xx)("#SteamCharts_Menu_MonthlyCharts"),
+            { className: Ie().MenuHeader },
+            (0, x.Xx)("#SteamCharts_Menu_MonthlyCharts"),
           ),
-          D.createElement("div", { className: He().MenuLinks }, a),
+          k.createElement("div", { className: Ie().MenuLinks }, r),
         );
       }
-      function dt(e) {
+      function Fe(e) {
         const { BestOfYearStore: t } = e,
-          r = se(t);
-        if (!r) return null;
-        const a = r.rgPages.map((e) => {
+          a = M(t);
+        if (!a) return null;
+        const r = a.rgPages.map((e) => {
           const t = e.rtStartDate,
-            r = Sr.BestOfYear(null == e ? void 0 : e.strUrlPath),
-            a = window.location.pathname === r;
-          return D.createElement(
+            a = Qt.BestOfYear(null == e ? void 0 : e.strUrlPath),
+            r = window.location.pathname === a;
+          return k.createElement(
             "a",
-            { className: a ? He().ActiveLink : "", href: r, key: t },
-            D.createElement(
+            { className: r ? Ie().ActiveLink : "", href: a, key: t },
+            k.createElement(
               "span",
-              { className: (0, ve.Z)(He().MenuItemIcon) },
-              D.createElement(lt.faS, null),
+              { className: (0, ee.Z)(Ie().MenuItemIcon) },
+              k.createElement(Xe.faS, null),
             ),
-            (0, ue.o9)(t),
+            (0, Y.o9)(t),
           );
         });
-        return D.createElement(
+        return k.createElement(
           "div",
-          { className: (0, ve.Z)(He().MenuGroup, He().Monthly) },
-          D.createElement(
+          { className: (0, ee.Z)(Ie().MenuGroup, Ie().Monthly) },
+          k.createElement(
             "div",
-            { className: He().MenuHeader },
-            (0, re.Xx)("#SteamCharts_Menu_YearlyCharts"),
+            { className: Ie().MenuHeader },
+            (0, x.Xx)("#SteamCharts_Menu_YearlyCharts"),
           ),
-          D.createElement("div", { className: He().MenuLinks }, a),
+          k.createElement("div", { className: Ie().MenuLinks }, r),
         );
       }
-      var _t = r(81240),
-        pt = r.n(_t),
-        ht = r(88987),
-        Ct = r(6199),
-        yt = r(69513);
-      function St(e) {
+      var je = a(81240),
+        qe = a.n(je),
+        Qe = a(88987),
+        ze = a(6199),
+        Ke = a(69513);
+      function Je(e) {
         const { Item: t } = e,
-          r = (0, yt.C)(t),
-          a = t.BIsVisible() && !r;
-        return D.createElement(
-          Xe,
-          { item: t, feature: "topchartlist", className: pt().TopChartItem },
-          a
-            ? D.createElement(gt, { Item: t })
-            : D.createElement(vt, {
+          a = (0, Ke.C)(t),
+          r = t.BIsVisible() && !a;
+        return k.createElement(
+          fe,
+          { item: t, feature: "topchartlist", className: qe().TopChartItem },
+          r
+            ? k.createElement(et, { Item: t })
+            : k.createElement(tt, {
                 strName: t.GetName(),
-                bExcludedByPreferences: r,
+                bExcludedByPreferences: a,
               }),
         );
       }
-      function gt(e) {
+      function et(e) {
         const { Item: t } = e,
-          r = t.GetAppID(),
-          a = te.jg.Get().BOwnsApp(r),
-          n = te.jg.Get().BIsGameWishlisted(r);
-        return D.createElement(
-          D.Fragment,
+          a = t.GetAppID(),
+          r = O.jg.Get().BOwnsApp(a),
+          n = O.jg.Get().BIsGameWishlisted(a);
+        return k.createElement(
+          k.Fragment,
           null,
-          (a || n) &&
-            D.createElement(
+          (r || n) &&
+            k.createElement(
               "div",
-              { className: pt().CapsuleDecorator },
-              D.createElement(
+              { className: qe().CapsuleDecorator },
+              k.createElement(
                 "span",
-                { className: (0, ve.Z)(pt().Banner) },
-                D.createElement("img", {
-                  src: a ? ht.Z : Ct.Z,
-                  className: pt().LinesImg,
+                { className: (0, ee.Z)(qe().Banner) },
+                k.createElement("img", {
+                  src: r ? Qe.Z : ze.Z,
+                  className: qe().LinesImg,
                 }),
-                D.createElement(
+                k.createElement(
                   "div",
-                  { className: pt().BannerText },
-                  (0, re.Xx)(a ? "#Sale_InLibrary" : "#Sale_OnWishlist"),
+                  { className: qe().BannerText },
+                  (0, x.Xx)(r ? "#Sale_InLibrary" : "#Sale_OnWishlist"),
                 ),
               ),
             ),
-          D.createElement("img", {
-            className: pt().CapsuleArt,
+          k.createElement("img", {
+            className: qe().CapsuleArt,
             src: t.GetAssets().GetSmallCapsuleURL(),
           }),
-          D.createElement("div", { className: pt().GameName }, t.GetName()),
+          k.createElement("div", { className: qe().GameName }, t.GetName()),
         );
       }
-      function vt(e) {
-        const { strName: t, bExcludedByPreferences: r } = e;
-        return D.createElement(
+      function tt(e) {
+        const { strName: t, bExcludedByPreferences: a } = e;
+        return k.createElement(
           "div",
-          { className: pt().GameName },
-          t || (0, re.Xx)("#SteamCharts_UnknownGameTitle"),
-          D.createElement(
+          { className: qe().GameName },
+          t || (0, x.Xx)("#SteamCharts_UnknownGameTitle"),
+          k.createElement(
             "span",
-            { className: pt().GameUnavailable },
-            r
-              ? (0, re.Xx)("#SteamCharts_BlockedByPreferences")
-              : (0, re.Xx)("#SteamCharts_UnavailableCountryRestriction"),
+            { className: qe().GameUnavailable },
+            a
+              ? (0, x.Xx)("#SteamCharts_BlockedByPreferences")
+              : (0, x.Xx)("#SteamCharts_UnavailableCountryRestriction"),
           ),
         );
       }
-      var Et = r(44865),
-        Bt = r(85886),
-        ft = r(51441);
-      function Tt(e) {
-        const { children: t, mostPlayedOption: r } = e;
-        return D.createElement(
+      var at = a(44865),
+        rt = a(85886),
+        nt = a(51441);
+      function lt(e) {
+        const { children: t, mostPlayedOption: a } = e;
+        return k.createElement(
           "table",
-          { className: pt().ChartTable },
-          D.createElement(
+          { className: qe().ChartTable },
+          k.createElement(
             "thead",
-            { className: pt().ColumnHeaders },
-            D.createElement(
+            { className: qe().ColumnHeaders },
+            k.createElement(
               "tr",
               null,
-              D.createElement("th", { className: pt().HoverCell }),
-              D.createElement(
+              k.createElement("th", { className: qe().HoverCell }),
+              k.createElement(
                 "th",
-                { className: pt().Rank, colSpan: 2 },
-                D.createElement(
+                { className: qe().Rank, colSpan: 2 },
+                k.createElement(
                   "span",
                   null,
-                  (0, re.Xx)("#SteamCharts_TopSellers_TableRank"),
+                  (0, x.Xx)("#SteamCharts_TopSellers_TableRank"),
                 ),
               ),
-              D.createElement(
+              k.createElement(
                 "th",
-                { className: (0, ve.Z)(pt().RightCell, pt().Price) },
-                (0, re.Xx)("#SteamCharts_TopSellers_TablePrice"),
+                { className: (0, ee.Z)(qe().RightCell, qe().Price) },
+                (0, x.Xx)("#SteamCharts_TopSellers_TablePrice"),
               ),
-              D.createElement(bt, { mostPlayedOption: r }),
-              D.createElement(
+              k.createElement(st, { mostPlayedOption: a }),
+              k.createElement(
                 "th",
-                { className: (0, ve.Z)(pt().RightCell, pt().PeakInGame) },
-                D.createElement(
-                  Pe.HP,
+                { className: (0, ee.Z)(qe().RightCell, qe().PeakInGame) },
+                k.createElement(
+                  ue.HP,
                   {
-                    className: pt().Tooltip,
-                    toolTipContent: (0, re.Xx)(
+                    className: qe().Tooltip,
+                    toolTipContent: (0, x.Xx)(
                       "#SteamCharts_TopSellers_TablePeakInGame_Tooltip",
                     ),
                     direction: "top",
                   },
-                  (0, re.Xx)("#SteamCharts_TopSellers_TablePeakInGame"),
+                  (0, x.Xx)("#SteamCharts_TopSellers_TablePeakInGame"),
                   " ",
-                  D.createElement(lt.WWB, null),
+                  k.createElement(Xe.WWB, null),
                 ),
               ),
             ),
           ),
-          D.createElement("tbody", { className: pt().ListRowsCtn }, t),
+          k.createElement("tbody", { className: qe().ListRowsCtn }, t),
         );
       }
-      function bt(e) {
-        return e.mostPlayedOption === k.DailyActiveUsers
-          ? D.createElement(
+      function st(e) {
+        return e.mostPlayedOption === r.DailyActiveUsers
+          ? k.createElement(
               "th",
-              { className: pt().Change, align: "right" },
-              D.createElement(
-                Pe.HP,
+              { className: qe().Change, align: "right" },
+              k.createElement(
+                ue.HP,
                 {
-                  className: pt().Tooltip,
-                  toolTipContent: (0, re.Xx)(
+                  className: qe().Tooltip,
+                  toolTipContent: (0, x.Xx)(
                     "#SteamCharts_TopSellers_TableChangeTooltip",
                   ),
                   direction: "top",
                 },
-                D.createElement(
+                k.createElement(
                   "span",
                   null,
-                  (0, re.Xx)("#SteamCharts_TopSellers_TableChange"),
+                  (0, x.Xx)("#SteamCharts_TopSellers_TableChange"),
                 ),
                 " ",
-                D.createElement(lt.WWB, null),
+                k.createElement(Xe.WWB, null),
               ),
             )
-          : D.createElement(
+          : k.createElement(
               "th",
-              { className: (0, ve.Z)(pt().RightCell, pt().Concurrent) },
-              D.createElement(
-                Pe.HP,
+              { className: (0, ee.Z)(qe().RightCell, qe().Concurrent) },
+              k.createElement(
+                ue.HP,
                 {
-                  className: pt().Tooltip,
-                  toolTipContent: (0, re.Xx)(
+                  className: qe().Tooltip,
+                  toolTipContent: (0, x.Xx)(
                     "#SteamCharts_TopSellers_TableCurrentPlayersTooltip",
                   ),
                   direction: "top",
                 },
-                (0, re.Xx)("#SteamCharts_TopSellers_TableCurrentPlayers"),
+                (0, x.Xx)("#SteamCharts_TopSellers_TableCurrentPlayers"),
                 " ",
-                D.createElement(lt.WWB, null),
+                k.createElement(Xe.WWB, null),
               ),
             );
       }
-      function kt(e) {
+      function ot(e) {
         const {
             nRank: t,
-            Item: r,
-            strPeakInGame: a,
+            Item: a,
+            strPeakInGame: r,
             renderOptionBasedCell: n,
           } = e,
-          s = (0, yt.C)(r),
-          l = {
-            id: r.GetAppID() || r.GetID(),
-            type: (0, Bt.Ds)(
-              null == r ? void 0 : r.GetStoreItemType(),
-              null == r ? void 0 : r.GetAppType(),
+          l = (0, Ke.C)(a),
+          s = {
+            id: a.GetAppID() || a.GetID(),
+            type: (0, rt.Ds)(
+              null == a ? void 0 : a.GetStoreItemType(),
+              null == a ? void 0 : a.GetAppType(),
             ),
           };
-        return D.createElement(
-          D.Fragment,
+        return k.createElement(
+          k.Fragment,
           null,
-          D.createElement(
+          k.createElement(
             "td",
-            { className: pt().HoverCell },
-            !s &&
-              D.createElement(
-                ft.ll,
+            { className: qe().HoverCell },
+            !l &&
+              k.createElement(
+                nt.ll,
                 {
-                  className: pt().HoverSource,
-                  item: l,
+                  className: qe().HoverSource,
+                  item: s,
                   hoverProps: {
                     direction: "right",
                     nBodyAlignment: 0,
@@ -3075,212 +1991,210 @@
                     style: { width: "400px", height: "250px" },
                   },
                 },
-                D.createElement("div", { className: pt().HoverMask }),
+                k.createElement("div", { className: qe().HoverMask }),
               ),
           ),
-          D.createElement("td", { className: pt().RankCell }, t),
-          D.createElement(
+          k.createElement("td", { className: qe().RankCell }, t),
+          k.createElement(
             "td",
             {
-              className: (0, ve.Z)(
-                pt().CapsuleCell,
-                !r.BIsVisible() && pt().Unavailable,
+              className: (0, ee.Z)(
+                qe().CapsuleCell,
+                !a.BIsVisible() && qe().Unavailable,
               ),
             },
-            D.createElement(St, { Item: r }),
+            k.createElement(Je, { Item: a }),
           ),
-          D.createElement(
+          k.createElement(
             "td",
-            { className: pt().PriceCell },
-            D.createElement(
+            { className: qe().PriceCell },
+            k.createElement(
               "div",
-              { className: pt().PriceWidget },
-              D.createElement(Et.Jc, { info: l }),
+              { className: qe().PriceWidget },
+              k.createElement(at.Jc, { info: s }),
             ),
           ),
           n(),
-          D.createElement("td", { className: pt().PeakInGameCell }, a),
+          k.createElement("td", { className: qe().PeakInGameCell }, r),
         );
       }
-      function wt(e) {
+      function ct(e) {
         const { rank: t } = e,
-          { nRank: r, Item: a, nRankLastWeek: n, nPeakInGame: s } = t,
-          { direction: l, symbol: i } = ye(n, r),
-          o = (0, Ee.AV)(s),
-          c = (0, Ue.bJ)(),
-          m = (0, Ae.Hf)(a.GetStorePageURL(), c);
-        return D.createElement(
+          { nRank: a, Item: r, nRankLastWeek: n, nPeakInGame: l } = t,
+          { direction: s, symbol: o } = z(n, a),
+          c = (0, te.AV)(l),
+          i = (0, Te.bJ)(),
+          m = (0, ye.Hf)(r.GetStorePageURL(), i);
+        return k.createElement(
           "tr",
           {
             onClick: () => (window.location.href = m),
-            className: pt().TableRow,
+            className: qe().TableRow,
           },
-          D.createElement(kt, {
-            nRank: r,
-            Item: a,
-            strPeakInGame: o,
+          k.createElement(ot, {
+            nRank: a,
+            Item: r,
+            strPeakInGame: c,
             renderOptionBasedCell: () =>
-              D.createElement(
+              k.createElement(
                 "td",
-                { className: (0, ve.Z)(pt().ChangeCell, l) },
-                D.createElement(
-                  Pe.HP,
+                { className: (0, ee.Z)(qe().ChangeCell, s) },
+                k.createElement(
+                  ue.HP,
                   {
-                    className: pt().Tooltip,
-                    toolTipContent: (0, re.Xx)(
+                    className: qe().Tooltip,
+                    toolTipContent: (0, x.Xx)(
                       "#SteamCharts_TopSellers_ChangeTooltip",
                     ),
                     direction: "top",
                   },
                   n && n > 0 && n <= 100
-                    ? `${i} ${Math.abs(n - r)}`
-                    : D.createElement(
+                    ? `${o} ${Math.abs(n - a)}`
+                    : k.createElement(
                         "span",
-                        { className: pt().ListWeeksDebut },
-                        (0, re.Xx)("#SteamCharts_TopSellers_TableNew"),
+                        { className: qe().ListWeeksDebut },
+                        (0, x.Xx)("#SteamCharts_TopSellers_TableNew"),
                       ),
                 ),
               ),
           }),
         );
       }
-      function Rt(e) {
+      function it(e) {
         const { rank: t } = e,
-          { nRank: r, Item: a, nConcurrentInGame: n, nPeakInGame: s } = t,
-          l = (0, Ee.AV)(n),
-          i = (0, Ee.AV)(s),
-          o = (0, Ue.bJ)(),
-          c = (0, Ae.Hf)(a.GetStorePageURL(), o);
-        return D.createElement(
+          { nRank: a, Item: r, nConcurrentInGame: n, nPeakInGame: l } = t,
+          s = (0, te.AV)(n),
+          o = (0, te.AV)(l),
+          c = (0, Te.bJ)(),
+          i = (0, ye.Hf)(r.GetStorePageURL(), c);
+        return k.createElement(
           "tr",
           {
-            onClick: () => (window.location.href = c),
-            className: pt().TableRow,
+            onClick: () => (window.location.href = i),
+            className: qe().TableRow,
           },
-          D.createElement(kt, {
-            nRank: r,
-            Item: a,
-            strPeakInGame: i,
+          k.createElement(ot, {
+            nRank: a,
+            Item: r,
+            strPeakInGame: o,
             renderOptionBasedCell: () =>
-              D.createElement(
+              k.createElement(
                 "td",
-                { className: (0, ve.Z)(pt().ConcurrentCell) },
-                l,
+                { className: (0, ee.Z)(qe().ConcurrentCell) },
+                s,
               ),
           }),
         );
       }
-      var Mt = r(57605),
-        It = r(3301);
-      function Pt(e) {
+      var mt = a(57605),
+        ut = a(3301);
+      function dt(e) {
         const { MostPlayedStore: t } = e,
-          [r, a] = D.useState(k.ConcurrentUsers);
-        return D.createElement(
-          je.P,
-          { title: (0, re.Xx)("#SteamCharts_Menu_MostPlayed") },
-          D.createElement(
+          [a, n] = k.useState(r.ConcurrentUsers);
+        return k.createElement(
+          Ne.P,
+          { title: (0, x.Xx)("#SteamCharts_Menu_MostPlayed") },
+          k.createElement(
             "div",
-            { className: We().ChartPage },
-            D.createElement(
+            { className: pe().ChartPage },
+            k.createElement(
               "div",
-              { className: (0, ve.Z)(He().HeaderCtn, He().WithSubtitle) },
-              D.createElement(
+              { className: (0, ee.Z)(Ie().HeaderCtn, Ie().WithSubtitle) },
+              k.createElement(
                 "h1",
                 null,
-                (0, re.Xx)("#SteamCharts_Menu_MostPlayed"),
+                (0, x.Xx)("#SteamCharts_Menu_MostPlayed"),
               ),
             ),
-            D.createElement(
+            k.createElement(
               "div",
-              { className: He().PageSubtitle },
-              (0, re.Xx)("#SteamCharts_Menu_MostPlayed_Subtitle"),
-              D.createElement(Nt, { selected: r, setOptionState: a }),
+              { className: Ie().PageSubtitle },
+              (0, x.Xx)("#SteamCharts_Menu_MostPlayed_Subtitle"),
+              k.createElement(_t, { selected: a, setOptionState: n }),
             ),
-            D.createElement(
+            k.createElement(
               "div",
-              { className: pt().ChartPlaceholder },
-              r === k.DailyActiveUsers
-                ? D.createElement(Gt, { MostPlayedStore: t })
-                : D.createElement(Wt, { MostPlayedStore: t }),
+              { className: qe().ChartPlaceholder },
+              a === r.DailyActiveUsers
+                ? k.createElement(pt, { MostPlayedStore: t })
+                : k.createElement(ht, { MostPlayedStore: t }),
             ),
           ),
         );
       }
-      function Nt(e) {
-        const { selected: t, setOptionState: r } = e,
-          a = [
+      function _t(e) {
+        const { selected: t, setOptionState: a } = e,
+          n = [
             {
-              data: k.ConcurrentUsers,
-              label: (0, re.Xx)(
-                "#SteamCharts_Menu_ByConcurrentPlayersSubtitle",
-              ),
+              data: r.ConcurrentUsers,
+              label: (0, x.Xx)("#SteamCharts_Menu_ByConcurrentPlayersSubtitle"),
             },
             {
-              data: k.DailyActiveUsers,
-              label: (0, re.Xx)("#SteamCharts_Menu_ByDailyActiveUsersSubtitle"),
+              data: r.DailyActiveUsers,
+              label: (0, x.Xx)("#SteamCharts_Menu_ByDailyActiveUsersSubtitle"),
             },
           ];
-        return D.createElement(
+        return k.createElement(
           "div",
-          { className: pt().MostPlayedOptionsControl },
-          D.createElement(
+          { className: qe().MostPlayedOptionsControl },
+          k.createElement(
             "div",
-            { className: pt().DropDownContainer },
-            D.createElement(Mt.TW, {
-              rgOptions: a,
+            { className: qe().DropDownContainer },
+            k.createElement(mt.TW, {
+              rgOptions: n,
               selectedOption: t,
               onChange: (e) => {
-                r(e.data);
+                a(e.data);
               },
             }),
           ),
         );
       }
-      function Gt(e) {
-        var t, r;
-        const { MostPlayedStore: a } = e,
-          n = (function (e) {
-            return (0, i.useQuery)([I], () => e.LoadMostPlayedByDAU(), {
+      function pt(e) {
+        var t, a;
+        const { MostPlayedStore: n } = e,
+          l = (function (e) {
+            return (0, c.useQuery)([h], () => e.LoadMostPlayedByDAU(), {
               staleTime: 36e5,
             });
-          })(a);
-        if (n.isLoading) return D.createElement(It.V, { position: "center" });
-        if (n.isError)
-          return D.createElement(
+          })(n);
+        if (l.isLoading) return k.createElement(ut.V, { position: "center" });
+        if (l.isError)
+          return k.createElement(
             "div",
             null,
-            D.createElement("h3", null, "Error loading  most played"),
+            k.createElement("h3", null, "Error loading  most played"),
             ";",
           );
-        if (!n.data) return null;
+        if (!l.data) return null;
         const s =
-          null === (t = n.data.rgRanks[0]) || void 0 === t ? void 0 : t.Item;
-        let l;
+          null === (t = l.data.rgRanks[0]) || void 0 === t ? void 0 : t.Item;
+        let o;
         return (
           s &&
-            (l =
-              (null === (r = s.GetAssets().GetLibraryHeroURL()) || void 0 === r
+            (o =
+              (null === (a = s.GetAssets().GetLibraryHeroURL()) || void 0 === a
                 ? void 0
-                : r.trim().length) > 0
+                : a.trim().length) > 0
                 ? s.GetAssets().GetLibraryHeroURL()
                 : s.GetAssets().GetPageBackgroundURL()),
-          D.createElement(
-            D.Fragment,
+          k.createElement(
+            k.Fragment,
             null,
-            D.createElement("img", {
-              src: l,
-              className: pt().TopGameBackground,
+            k.createElement("img", {
+              src: o,
+              className: qe().TopGameBackground,
             }),
-            D.createElement(
-              Tt,
-              { mostPlayedOption: k.DailyActiveUsers },
-              n.data.rgRanks.map((e, t) => {
-                var r;
-                return D.createElement(wt, {
+            k.createElement(
+              lt,
+              { mostPlayedOption: r.DailyActiveUsers },
+              l.data.rgRanks.map((e, t) => {
+                var a;
+                return k.createElement(ct, {
                   key:
-                    (null === (r = e.Item) || void 0 === r
+                    (null === (a = e.Item) || void 0 === a
                       ? void 0
-                      : r.GetUniqueID()) || t,
+                      : a.GetUniqueID()) || t,
                   rank: {
                     nRank: t + 1,
                     Item: e.Item,
@@ -3293,46 +2207,46 @@
           )
         );
       }
-      function Wt(e) {
-        var t, r;
-        const { MostPlayedStore: a } = e,
-          n = N(a);
-        if (n.isLoading) return D.createElement(It.V, { position: "center" });
-        if (n.isError)
-          return D.createElement(
+      function ht(e) {
+        var t, a;
+        const { MostPlayedStore: n } = e,
+          l = S(n);
+        if (l.isLoading) return k.createElement(ut.V, { position: "center" });
+        if (l.isError)
+          return k.createElement(
             "div",
             null,
-            D.createElement("h3", null, "Error loading most played"),
+            k.createElement("h3", null, "Error loading most played"),
           );
-        if (!n.data) return null;
+        if (!l.data) return null;
         const s =
-          null === (t = n.data.rgRanks[0]) || void 0 === t ? void 0 : t.Item;
-        let l;
+          null === (t = l.data.rgRanks[0]) || void 0 === t ? void 0 : t.Item;
+        let o;
         return (
           s &&
-            (l =
-              (null === (r = s.GetAssets().GetLibraryHeroURL()) || void 0 === r
+            (o =
+              (null === (a = s.GetAssets().GetLibraryHeroURL()) || void 0 === a
                 ? void 0
-                : r.trim().length) > 0
+                : a.trim().length) > 0
                 ? s.GetAssets().GetLibraryHeroURL()
                 : s.GetAssets().GetPageBackgroundURL()),
-          D.createElement(
-            D.Fragment,
+          k.createElement(
+            k.Fragment,
             null,
-            D.createElement("img", {
-              src: l,
-              className: pt().TopGameBackground,
+            k.createElement("img", {
+              src: o,
+              className: qe().TopGameBackground,
             }),
-            D.createElement(
-              Tt,
-              { mostPlayedOption: k.ConcurrentUsers },
-              n.data.rgRanks.map((e, t) => {
-                var r;
-                return D.createElement(Rt, {
+            k.createElement(
+              lt,
+              { mostPlayedOption: r.ConcurrentUsers },
+              l.data.rgRanks.map((e, t) => {
+                var a;
+                return k.createElement(it, {
                   key:
-                    (null === (r = e.Item) || void 0 === r
+                    (null === (a = e.Item) || void 0 === a
                       ? void 0
-                      : r.GetUniqueID()) || t,
+                      : a.GetUniqueID()) || t,
                   rank: {
                     nRank: t + 1,
                     Item: e.Item,
@@ -3345,120 +2259,120 @@
           )
         );
       }
-      function Ot(e) {
+      function Ct(e) {
         const { children: t } = e;
-        return D.createElement(
+        return k.createElement(
           "table",
-          { className: pt().ChartTable },
-          D.createElement(
+          { className: qe().ChartTable },
+          k.createElement(
             "thead",
-            { className: pt().ColumnHeaders },
-            D.createElement(
+            { className: qe().ColumnHeaders },
+            k.createElement(
               "tr",
               null,
-              D.createElement("th", { className: pt().HoverCell }),
-              D.createElement(
+              k.createElement("th", { className: qe().HoverCell }),
+              k.createElement(
                 "th",
-                { className: pt().Rank, colSpan: 2 },
-                D.createElement(
+                { className: qe().Rank, colSpan: 2 },
+                k.createElement(
                   "span",
                   null,
-                  (0, re.Xx)("#SteamCharts_TopSellers_TableRank"),
+                  (0, x.Xx)("#SteamCharts_TopSellers_TableRank"),
                 ),
               ),
-              D.createElement(
+              k.createElement(
                 "th",
-                { className: (0, ve.Z)(pt().RightCell, pt().Price) },
-                D.createElement(
-                  Pe.HP,
+                { className: (0, ee.Z)(qe().RightCell, qe().Price) },
+                k.createElement(
+                  ue.HP,
                   {
-                    className: pt().Tooltip,
-                    toolTipContent: (0, re.Xx)(
+                    className: qe().Tooltip,
+                    toolTipContent: (0, x.Xx)(
                       "#SteamCharts_TopSellers_TablePriceTooltip",
                     ),
                     direction: "top",
                   },
-                  (0, re.Xx)("#SteamCharts_TopSellers_TablePrice"),
+                  (0, x.Xx)("#SteamCharts_TopSellers_TablePrice"),
                   " ",
-                  D.createElement(lt.WWB, null),
+                  k.createElement(Xe.WWB, null),
                 ),
               ),
-              D.createElement(
+              k.createElement(
                 "th",
-                { className: pt().Change, align: "right" },
-                D.createElement(
-                  Pe.HP,
+                { className: qe().Change, align: "right" },
+                k.createElement(
+                  ue.HP,
                   {
-                    className: pt().Tooltip,
-                    toolTipContent: (0, re.Xx)(
+                    className: qe().Tooltip,
+                    toolTipContent: (0, x.Xx)(
                       "#SteamCharts_TopSellers_TableChangeTooltip",
                     ),
                     direction: "top",
                   },
-                  D.createElement(
+                  k.createElement(
                     "span",
                     null,
-                    (0, re.Xx)("#SteamCharts_TopSellers_TableChange"),
+                    (0, x.Xx)("#SteamCharts_TopSellers_TableChange"),
                   ),
                   " ",
-                  D.createElement(lt.WWB, null),
+                  k.createElement(Xe.WWB, null),
                 ),
               ),
-              D.createElement(
+              k.createElement(
                 "th",
-                { className: pt().Weeks, align: "right" },
-                D.createElement(
-                  Pe.HP,
+                { className: qe().Weeks, align: "right" },
+                k.createElement(
+                  ue.HP,
                   {
-                    className: pt().Tooltip,
-                    toolTipContent: (0, re.Xx)(
+                    className: qe().Tooltip,
+                    toolTipContent: (0, x.Xx)(
                       "#SteamCharts_TopSellers_TableWeeksTooltip",
                     ),
                     direction: "top",
                   },
-                  (0, re.Xx)("#SteamCharts_TopSellers_TableWeeks"),
+                  (0, x.Xx)("#SteamCharts_TopSellers_TableWeeks"),
                   " ",
-                  D.createElement(lt.WWB, null),
+                  k.createElement(Xe.WWB, null),
                 ),
               ),
             ),
           ),
-          D.createElement("tbody", { className: pt().ListRowsCtn }, t),
+          k.createElement("tbody", { className: qe().ListRowsCtn }, t),
         );
       }
-      function Lt(e) {
+      function St(e) {
         const { rank: t } = e,
-          { nRank: r, Item: a, nRankLastWeek: n, nConsecutiveWeeks: s } = t,
-          l = (0, yt.C)(a),
-          i = (0, Ue.bJ)(),
-          o = (0, Ae.Hf)(a.GetStorePageURL(), i),
-          c = a.GetBestPurchaseOption();
+          { nRank: a, Item: r, nRankLastWeek: n, nConsecutiveWeeks: l } = t,
+          s = (0, Ke.C)(r),
+          o = (0, Te.bJ)(),
+          c = (0, ye.Hf)(r.GetStorePageURL(), o),
+          i = r.GetBestPurchaseOption();
         let m = "";
-        a.BIsFree()
-          ? (m = (0, re.Xx)("#SteamCharts_TopSellers_TableFree"))
-          : c && (m = c.formatted_final_price);
-        const u = (0, Ee.AV)(s),
+        r.BIsFree()
+          ? (m = (0, x.Xx)("#SteamCharts_TopSellers_TableFree"))
+          : i && (m = i.formatted_final_price);
+        const u = (0, te.AV)(l),
           d = {
-            id: a.GetAppID() || a.GetID(),
-            type: (0, Bt.Ds)(
-              null == a ? void 0 : a.GetStoreItemType(),
-              null == a ? void 0 : a.GetAppType(),
+            id: r.GetAppID() || r.GetID(),
+            type: (0, rt.Ds)(
+              null == r ? void 0 : r.GetStoreItemType(),
+              null == r ? void 0 : r.GetAppType(),
             ),
           };
-        return D.createElement(
+        return k.createElement(
           "tr",
           {
-            className: pt().TableRow,
-            onClick: () => (window.location.href = o),
+            className: qe().TableRow,
+            onClick: () => (window.location.href = c),
           },
-          D.createElement(
+          k.createElement(
             "td",
-            { className: pt().HoverCell },
-            !l &&
-              D.createElement(
-                ft.ll,
+            { className: qe().HoverCell },
+            !s &&
+              k.createElement(
+                nt.ll,
                 {
-                  className: pt().HoverSource,
+                  className: qe().HoverSource,
                   item: d,
                   hoverProps: {
                     direction: "right",
@@ -3467,40 +2381,38 @@
                     style: { width: "400px", height: "250px" },
                   },
                 },
-                D.createElement("div", { className: pt().HoverMask }),
+                k.createElement("div", { className: qe().HoverMask }),
               ),
           ),
-          D.createElement("td", { className: pt().RankCell }, r),
-          D.createElement(
+          k.createElement("td", { className: qe().RankCell }, a),
+          k.createElement(
             "td",
             {
-              className: (0, ve.Z)(
-                pt().CapsuleCell,
-                !a.BIsVisible() && pt().Unavailable,
+              className: (0, ee.Z)(
+                qe().CapsuleCell,
+                !r.BIsVisible() && qe().Unavailable,
               ),
             },
-            D.createElement(St, { Item: a }),
+            k.createElement(Je, { Item: r }),
           ),
-          D.createElement(
+          k.createElement(
             "td",
-            { className: pt().PriceCell },
-            D.createElement(
+            { className: qe().PriceCell },
+            k.createElement(
               "div",
-              { className: pt().PriceWidget },
-              D.createElement(Et.nk, { storeItem: a }),
+              { className: qe().PriceWidget },
+              k.createElement(at.nk, { storeItem: r }),
             ),
           ),
-          D.createElement(Dt, { rank: t }),
-          D.createElement(
+          k.createElement(Et, { rank: t }),
+          k.createElement(
             "td",
-            { className: pt().WeeksCell },
-            D.createElement(
-              Pe.HP,
+            { className: qe().WeeksCell },
+            k.createElement(
+              ue.HP,
               {
-                className: pt().Tooltip,
-                toolTipContent: (0, re.Xx)(
-                  "#SteamCharts_TopSellers_NumTooltip",
-                ),
+                className: qe().Tooltip,
+                toolTipContent: (0, x.Xx)("#SteamCharts_TopSellers_NumTooltip"),
                 direction: "top",
               },
               u,
@@ -3508,55 +2420,55 @@
           ),
         );
       }
-      function Dt(e) {
+      function Et(e) {
         const { rank: t } = e,
-          { nRank: r, nRankLastWeek: a, bFirstTop100: n } = t,
-          { direction: s, symbol: l } = ye(a, r);
-        let i;
+          { nRank: a, nRankLastWeek: r, bFirstTop100: n } = t,
+          { direction: l, symbol: s } = z(r, a);
+        let o;
         return (
-          (i =
-            a && a <= 100
-              ? `${l} ${Math.abs(a - r)}`
+          (o =
+            r && r <= 100
+              ? `${s} ${Math.abs(r - a)}`
               : n
-              ? D.createElement(
+              ? k.createElement(
                   "span",
-                  { className: pt().ListWeeksDebut },
-                  (0, re.Xx)("#SteamCharts_TopSellers_TableNew"),
+                  { className: qe().ListWeeksDebut },
+                  (0, x.Xx)("#SteamCharts_TopSellers_TableNew"),
                 )
-              : D.createElement(
+              : k.createElement(
                   "span",
-                  { className: pt().ListWeeksReturning },
-                  (0, re.Xx)("#SteamCharts_TopSellers_TableReturning"),
+                  { className: qe().ListWeeksReturning },
+                  (0, x.Xx)("#SteamCharts_TopSellers_TableReturning"),
                 )),
-          D.createElement(
+          k.createElement(
             "td",
-            { className: (0, ve.Z)(pt().ChangeCell, s) },
-            D.createElement(
-              Pe.HP,
+            { className: (0, ee.Z)(qe().ChangeCell, l) },
+            k.createElement(
+              ue.HP,
               {
-                className: pt().Tooltip,
-                toolTipContent: (0, re.Xx)(
+                className: qe().Tooltip,
+                toolTipContent: (0, x.Xx)(
                   "#SteamCharts_TopSellers_ChangeTooltip",
                 ),
                 direction: "top",
               },
-              i,
+              o,
             ),
           )
         );
       }
-      function xt(e) {
+      function vt(e) {
         const {
             TopSellersStore: t,
-            strCountryCode: r,
-            onCountryCodeChanged: a,
+            strCountryCode: a,
+            onCountryCodeChanged: r,
           } = e,
           n = t.GetCountryList(),
-          s = D.useMemo(
+          l = k.useMemo(
             () => [
               {
                 data: "",
-                label: (0, re.Xx)("#SteamCharts_TopSellers_GlobalTopSellers"),
+                label: (0, x.Xx)("#SteamCharts_TopSellers_GlobalTopSellers"),
               },
               ...n.map(({ country_code: e, name: t }) => ({
                 data: e,
@@ -3565,162 +2477,168 @@
             ],
             [n],
           );
-        return D.createElement(
+        return k.createElement(
           "div",
-          { className: pt().CountryControl },
-          D.createElement(
+          { className: qe().CountryControl },
+          k.createElement(
             "div",
-            { className: pt().DropDownContainer },
-            D.createElement(Mt.TW, {
-              rgOptions: s,
-              selectedOption: r,
-              onChange: a,
+            { className: qe().DropDownContainer },
+            k.createElement(mt.TW, {
+              rgOptions: l,
+              selectedOption: a,
+              onChange: r,
             }),
           ),
         );
       }
-      function zt(e) {
-        const { TopSellersStore: t, overrideCountry: r } = e,
-          a = Ce(r),
-          n = (0, me.k6)(),
-          s = D.useCallback(
+      function yt(e) {
+        const { TopSellersStore: t, overrideCountry: a } = e,
+          r = Q(a),
+          n = (0, V.k6)(),
+          l = k.useCallback(
             (e) => {
               const t = e.data;
-              n.replace(Sr.TopSelling(he(t)));
+              n.replace(Qt.TopSelling(q(t)));
             },
             [n],
           ),
-          { rtCurrentWeek: l, bCountryListInitialized: i } = Q(t, V.De.COUNTRY),
-          o = Se(t, i, r, Sr.TopSelling);
-        return D.createElement(
-          je.P,
-          { title: (0, re.Xx)("#SteamCharts_Menu_TopSelling") },
-          D.createElement(
+          { rtCurrentWeek: s, bCountryListInitialized: o } = R(t, P.De.COUNTRY),
+          c = K(t, o, a, Qt.TopSelling);
+        return k.createElement(
+          Ne.P,
+          { title: (0, x.Xx)("#SteamCharts_Menu_TopSelling") },
+          k.createElement(
             "div",
-            { className: We().ChartPage },
-            D.createElement(
+            { className: pe().ChartPage },
+            k.createElement(
               "div",
-              { className: (0, ve.Z)(He().HeaderCtn, He().WithSubtitle) },
-              D.createElement(
+              { className: (0, ee.Z)(Ie().HeaderCtn, Ie().WithSubtitle) },
+              k.createElement(
                 "h1",
                 null,
-                (0, re.Xx)("#SteamCharts_Menu_TopSelling"),
+                (0, x.Xx)("#SteamCharts_Menu_TopSelling"),
               ),
-              D.createElement(
-                Ne.SV,
+              k.createElement(
+                de.SV,
                 null,
-                D.createElement(xt, {
+                k.createElement(vt, {
                   TopSellersStore: t,
-                  strCountryCode: a,
-                  onCountryCodeChanged: s,
+                  strCountryCode: r,
+                  onCountryCodeChanged: l,
                 }),
               ),
             ),
-            D.createElement(
+            k.createElement(
               "div",
-              { className: He().PageSubtitle },
-              (0, re.Xx)("#SteamCharts_Menu_TopSelling_Subtitle"),
+              { className: Ie().PageSubtitle },
+              (0, x.Xx)("#SteamCharts_Menu_TopSelling_Subtitle"),
             ),
-            D.createElement(
+            k.createElement(
               "div",
-              { className: pt().ChartPlaceholder },
-              D.createElement(
-                Ne.SV,
+              { className: qe().ChartPlaceholder },
+              k.createElement(
+                de.SV,
                 null,
-                l &&
-                  o &&
-                  D.createElement(At, {
+                s &&
+                  c &&
+                  k.createElement(gt, {
                     TopSellersStore: t,
-                    overrideCountry: a,
+                    overrideCountry: r,
                   }),
               ),
             ),
           ),
         );
       }
-      function At(e) {
-        var t, r;
-        const { TopSellersStore: a, overrideCountry: n } = e,
-          { TopSellers: s, status: l } = ee(a, a.GetPreviousWeek(), n, 100),
-          i = (0, ge.cs)(
+      function gt(e) {
+        var t, a;
+        const { TopSellersStore: r, overrideCountry: n } = e,
+          { TopSellers: l, status: s } = L(r, r.GetPreviousWeek(), n, 100),
+          o = (0, J.cs)(
             "SteamCharts Live Top Sellers",
-            { sort: n ? 10 : 11, start: 0, count: 100 },
-            ce,
+            {
+              sort: n
+                ? D.h_.k_EStoreQuerySort_Regional24hSalesRank
+                : D.h_.k_EStoreQuerySort_Global24hSalesRank,
+              start: 0,
+              count: 100,
+            },
+            H,
             { override_country_code: n, content_descriptors_excluded: [] },
           ),
-          o = D.useMemo(
+          c = k.useMemo(
             () =>
-              s && i.data
+              l && o.data
                 ? (function (e, t) {
-                    const r = new Map();
-                    for (const t of e.rgRanks) r.set(t.Item.GetUniqueID(), t);
+                    const a = new Map();
+                    for (const t of e.rgRanks) a.set(t.Item.GetUniqueID(), t);
                     return t.map((e, t) => {
-                      const a = r.get(e.GetUniqueID());
+                      const r = a.get(e.GetUniqueID());
                       return {
                         nRank: t + 1,
                         Item: e,
-                        nRankLastWeek: null == a ? void 0 : a.nRank,
-                        nConsecutiveWeeks: a ? a.nConsecutiveWeeks + 1 : 1,
-                        bFirstTop100: !a,
+                        nRankLastWeek: null == r ? void 0 : r.nRank,
+                        nConsecutiveWeeks: r ? r.nConsecutiveWeeks + 1 : 1,
+                        bFirstTop100: !r,
                       };
                     });
-                  })(s, i.data.GetItems())
+                  })(l, o.data.GetItems())
                 : null,
-            [s, i],
+            [l, o],
           );
-        if (!o)
-          return "loading" === l || i.isLoading
-            ? D.createElement(It.V, { position: "center" })
+        if (!c)
+          return "loading" === s || o.isLoading
+            ? k.createElement(ut.V, { position: "center" })
             : null;
-        const c = null === (t = o[0]) || void 0 === t ? void 0 : t.Item;
+        const i = null === (t = c[0]) || void 0 === t ? void 0 : t.Item;
         let m;
         return (
-          c &&
+          i &&
             (m =
-              (null === (r = c.GetAssets().GetLibraryHeroURL()) || void 0 === r
+              (null === (a = i.GetAssets().GetLibraryHeroURL()) || void 0 === a
                 ? void 0
-                : r.trim().length) > 0
-                ? c.GetAssets().GetLibraryHeroURL()
-                : c.GetAssets().GetPageBackgroundURL()),
-          D.createElement(
-            D.Fragment,
+                : a.trim().length) > 0
+                ? i.GetAssets().GetLibraryHeroURL()
+                : i.GetAssets().GetPageBackgroundURL()),
+          k.createElement(
+            k.Fragment,
             null,
-            D.createElement("img", {
+            k.createElement("img", {
               src: m,
-              className: pt().TopGameBackground,
+              className: qe().TopGameBackground,
             }),
-            D.createElement(
-              Ot,
+            k.createElement(
+              Ct,
               null,
-              o.map((e) =>
-                D.createElement(
-                  Ne.SV,
+              c.map((e) =>
+                k.createElement(
+                  de.SV,
                   { key: e.nRank },
-                  D.createElement(Lt, { rank: e }),
+                  k.createElement(St, { rank: e }),
                 ),
               ),
             ),
-            D.createElement(
+            k.createElement(
               "div",
-              { className: pt().BrowseTopSellersButton },
-              D.createElement(
-                Mt.KM,
+              { className: qe().BrowseTopSellersButton },
+              k.createElement(
+                mt.KM,
                 {
                   onClick: () => {
                     window.location.href = `${
-                      V.De.STORE_BASE_URL
+                      P.De.STORE_BASE_URL
                     }search/?filter=${n ? "topsellers" : "globaltopsellers"}`;
                   },
                 },
-                (0, re.Xx)("#SteamCharts_TopSellers_Browse"),
+                (0, x.Xx)("#SteamCharts_TopSellers_Browse"),
               ),
             ),
           )
         );
       }
-      var Ft = r(45820);
-      function Ut(e) {
-        const { TopSellersStore: t, week: r, country: a } = e;
+      var kt = a(45820);
+      function Tt(e) {
+        const { TopSellersStore: t, week: a, country: r } = e;
         let n = (function (e) {
             if (e) {
               const t = e.match(/(\d+)-(\d+)-(\d+)/);
@@ -3740,80 +2658,78 @@
                 return e.getTime() / 1e3;
               }
             }
-          })(r),
-          s = Ce(a);
-        const { rtCurrentWeek: l, bCountryListInitialized: i } = Q(t, s);
-        l && (!n || n > l) && (n = l), n < de && (n = de);
-        const o = D.useCallback((e) => Sr.TopSellers(e, pe(n)), [n]),
-          c = Se(t, i, a, o),
-          m = (0, me.k6)(),
-          u = r && pe(n) == r;
+          })(a),
+          l = Q(r);
+        const { rtCurrentWeek: s, bCountryListInitialized: o } = R(t, l);
+        s && (!n || n > s) && (n = s), n < $ && (n = $);
+        const c = k.useCallback((e) => Qt.TopSellers(e, j(n)), [n]),
+          i = K(t, o, r, c),
+          m = (0, V.k6)(),
+          u = a && j(n) == a;
         return (
-          (0, D.useEffect)(() => {
-            c && !u && m.replace(Sr.TopSellers(a, pe(n)));
-          }, [m, u, n, c, a]),
-          n && c && u
-            ? D.createElement(
-                je.P,
+          (0, k.useEffect)(() => {
+            i && !u && m.replace(Qt.TopSellers(r, j(n)));
+          }, [m, u, n, i, r]),
+          n && i && u
+            ? k.createElement(
+                Ne.P,
                 {
                   title:
-                    (0, re.Xx)("#SteamCharts_TopSellers_PageTitle") +
+                    (0, x.Xx)("#SteamCharts_TopSellers_PageTitle") +
                     " - " +
-                    _e(n),
+                    F(n),
                 },
-                D.createElement(
+                k.createElement(
                   "div",
-                  { className: We().ChartPage },
-                  D.createElement(
+                  { className: pe().ChartPage },
+                  k.createElement(
                     "div",
-                    { className: (0, ve.Z)(He().HeaderCtn, He().WithSubtitle) },
-                    D.createElement(
+                    { className: (0, ee.Z)(Ie().HeaderCtn, Ie().WithSubtitle) },
+                    k.createElement(
                       "h1",
                       null,
-                      (0, re.Xx)("#SteamCharts_TopSellers_PageTitle"),
+                      (0, x.Xx)("#SteamCharts_TopSellers_PageTitle"),
                     ),
-                    D.createElement(
-                      Ne.SV,
+                    k.createElement(
+                      de.SV,
                       null,
-                      D.createElement(Zt, {
+                      k.createElement(Pt, {
                         TopSellersStore: t,
                         rtWeekStart: n,
-                        strCountryCode: s,
+                        strCountryCode: l,
                       }),
                     ),
                   ),
-                  D.createElement(
+                  k.createElement(
                     "div",
-                    { className: He().PageSubtitle },
-                    (0, re.Xx)("#SteamCharts_TopSellers_PageSubTitle"),
+                    { className: Ie().PageSubtitle },
+                    (0, x.Xx)("#SteamCharts_TopSellers_PageSubTitle"),
                     " ",
-                    D.createElement(
+                    k.createElement(
                       "span",
                       null,
-                      (0, re.Xx)(
-                        "#SteamCharts_TopSellers_PageSubTitle_subtext",
-                      ),
+                      (0, x.Xx)("#SteamCharts_TopSellers_PageSubTitle_subtext"),
                     ),
                   ),
-                  D.createElement(
-                    Ne.SV,
+                  k.createElement(
+                    de.SV,
                     null,
-                    D.createElement(Xt, {
+                    k.createElement(ft, {
                       rtWeekStart: n,
-                      strCountryCode: s,
+                      strCountryCode: l,
                       rtMaxWeekStart: t.GetCurrentWeek(),
                     }),
                   ),
-                  D.createElement(
+                  k.createElement(
                     "div",
-                    { className: pt().ChartPlaceholder },
-                    D.createElement(
-                      Ne.SV,
+                    { className: qe().ChartPlaceholder },
+                    k.createElement(
+                      de.SV,
                       null,
-                      D.createElement(Ht, {
+                      k.createElement(It, {
                         TopSellersStore: t,
                         rtWeekStart: n,
-                        strCountryCode: s,
+                        strCountryCode: l,
                       }),
                     ),
                   ),
@@ -3822,68 +2738,68 @@
             : null
         );
       }
-      function Xt(e) {
-        const { rtWeekStart: t, strCountryCode: r, rtMaxWeekStart: a } = e,
+      function ft(e) {
+        const { rtWeekStart: t, strCountryCode: a, rtMaxWeekStart: r } = e,
           n = 604800;
-        let s, l;
+        let l, s;
         return (
-          (s = t - n < de ? void 0 : Sr.TopSellers(he(r), pe(t - n))),
-          (l = t >= a ? void 0 : Sr.TopSellers(he(r), pe(t + n))),
-          D.createElement(
+          (l = t - n < $ ? void 0 : Qt.TopSellers(q(a), j(t - n))),
+          (s = t >= r ? void 0 : Qt.TopSellers(q(a), j(t + n))),
+          k.createElement(
             "div",
-            { className: He().ChartRangeCtn },
-            D.createElement(
-              jt,
-              { strLink: s },
-              D.createElement("div", { className: He().ChartNavPrev }, " "),
-            ),
-            D.createElement(
-              jt,
+            { className: Ie().ChartRangeCtn },
+            k.createElement(
+              Nt,
               { strLink: l },
-              D.createElement("div", { className: He().ChartNavNext }, " "),
+              k.createElement("div", { className: Ie().ChartNavPrev }, " "),
             ),
-            D.createElement(
-              "div",
-              { className: (0, ve.Z)(He().ChartRangeText, He().LongDate) },
-              _e(t),
+            k.createElement(
+              Nt,
+              { strLink: s },
+              k.createElement("div", { className: Ie().ChartNavNext }, " "),
             ),
-            D.createElement(
+            k.createElement(
               "div",
-              { className: (0, ve.Z)(He().ChartRangeText, He().ShortDate) },
+              { className: (0, ee.Z)(Ie().ChartRangeText, Ie().LongDate) },
+              F(t),
+            ),
+            k.createElement(
+              "div",
+              { className: (0, ee.Z)(Ie().ChartRangeText, Ie().ShortDate) },
               (function (e) {
-                return (0, re.Xx)(
+                return (0, x.Xx)(
                   "#SteamCharts_TopSellers_WeeklyRangeShort",
-                  (0, ue.$1)(e, { timeZone: "UTC" }),
+                  (0, Y.$1)(e, { timeZone: "UTC" }),
                 );
               })(t),
             ),
           )
         );
       }
-      function jt(e) {
-        const { strLink: t, children: r } = e;
-        return D.createElement(
+      function Nt(e) {
+        const { strLink: t, children: a } = e;
+        return k.createElement(
           "div",
-          { className: (0, ve.Z)(He().ChartNavCtn, t ? "" : He().Disabled) },
-          D.createElement(
-            xe.rU,
+          { className: (0, ee.Z)(Ie().ChartNavCtn, t ? "" : Ie().Disabled) },
+          k.createElement(
+            Ee.rU,
             {
-              to: null != t ? t : Sr.Overview(),
+              to: null != t ? t : Qt.Overview(),
               onClick: t ? void 0 : (e) => e.preventDefault(),
             },
-            r,
+            a,
           ),
         );
       }
-      function Zt(e) {
-        const { TopSellersStore: t, strCountryCode: r, rtWeekStart: a } = e,
+      function Pt(e) {
+        const { TopSellersStore: t, strCountryCode: a, rtWeekStart: r } = e,
           n = t.GetCountryList(),
-          s = (0, me.k6)(),
-          l = D.useMemo(
+          l = (0, V.k6)(),
+          s = k.useMemo(
             () => [
               {
                 data: "",
-                label: (0, re.Xx)("#SteamCharts_TopSellers_GlobalTopSellers"),
+                label: (0, x.Xx)("#SteamCharts_TopSellers_GlobalTopSellers"),
               },
               ...n.map(({ country_code: e, name: t }) => ({
                 data: e,
@@ -3892,84 +2808,84 @@
             ],
             [n],
           ),
-          i = D.useCallback(
+          o = k.useCallback(
             (e) => {
               const t = e.data;
-              s.replace(Sr.TopSellers(he(t), pe(a)), s.location.state);
+              l.replace(Qt.TopSellers(q(t), j(r)), l.location.state);
             },
-            [s, a],
+            [l, r],
           );
-        return D.createElement(
+        return k.createElement(
           "div",
-          { className: pt().CountryControl },
-          D.createElement(
+          { className: qe().CountryControl },
+          k.createElement(
             "div",
-            { className: pt().DropDownContainer },
-            D.createElement(Mt.TW, {
-              rgOptions: l,
-              selectedOption: r,
-              onChange: i,
+            { className: qe().DropDownContainer },
+            k.createElement(mt.TW, {
+              rgOptions: s,
+              selectedOption: a,
+              onChange: o,
             }),
           ),
         );
       }
-      function Ht(e) {
+      function It(e) {
         var t;
-        const { TopSellersStore: r, rtWeekStart: a, strCountryCode: n } = e,
-          [s, l] = (0, Ft.i4)("TopSellersExpanded", !1),
-          { TopSellers: i, status: o } = ee(r, a, n, s ? 100 : 20),
-          c = D.useCallback(() => l(!0), [l]);
-        return "error" === o
-          ? D.createElement(
+        const { TopSellersStore: a, rtWeekStart: r, strCountryCode: n } = e,
+          [l, s] = (0, kt.i4)("TopSellersExpanded", !1),
+          { TopSellers: o, status: c } = L(a, r, n, l ? 100 : 20),
+          i = k.useCallback(() => s(!0), [s]);
+        return "error" === c
+          ? k.createElement(
               "div",
               null,
-              D.createElement("h3", null, "Error loading top sellers"),
+              k.createElement("h3", null, "Error loading top sellers"),
             )
-          : D.createElement(
-              D.Fragment,
+          : k.createElement(
+              k.Fragment,
               null,
-              D.createElement(Vt, { TopSellers: i }),
-              i &&
-                D.createElement(
-                  Ot,
+              k.createElement(bt, { TopSellers: o }),
+              o &&
+                k.createElement(
+                  Ct,
                   null,
-                  i.rgRanks.map((e) =>
-                    D.createElement(
-                      Ne.SV,
+                  o.rgRanks.map((e) =>
+                    k.createElement(
+                      de.SV,
                       { key: e.nRank },
-                      D.createElement(Lt, { rank: e }),
+                      k.createElement(St, { rank: e }),
                     ),
                   ),
                 ),
               20 ===
-                (null === (t = null == i ? void 0 : i.rgRanks) || void 0 === t
+                (null === (t = null == o ? void 0 : o.rgRanks) || void 0 === t
                   ? void 0
                   : t.length) &&
-                D.createElement(
+                k.createElement(
                   "div",
-                  { className: pt().WeeklyFooterControls },
-                  ((!s && "loaded" == o) || (s && "loading" == o)) &&
-                    D.createElement(
-                      Mt.KM,
-                      { onClick: c, disabled: "loading" == o },
-                      (0, re.Xx)(
+                  { className: qe().WeeklyFooterControls },
+                  ((!l && "loaded" == c) || (l && "loading" == c)) &&
+                    k.createElement(
+                      mt.KM,
+                      { onClick: i, disabled: "loading" == c },
+                      (0, x.Xx)(
                         "#SteamCharts_TopSellers_SeeAllNTopSellers",
                         100,
                       ),
                     ),
                 ),
-              "loading" == o && D.createElement(It.V, { position: "center" }),
+              "loading" == c && k.createElement(ut.V, { position: "center" }),
             );
       }
-      const Vt = D.memo((e) => {
+      const bt = k.memo((e) => {
         var t;
-        const { TopSellers: r } = e,
-          a = D.useRef();
-        if (r && r.rgRanks.length) {
-          const e = r.rgRanks;
+        const { TopSellers: a } = e,
+          r = k.useRef();
+        if (a && a.rgRanks.length) {
+          const e = a.rgRanks;
           let n = e.find((e) => 1 === e.nConsecutiveWeeks);
           n || (n = e[0]),
-            (a.current =
+            (r.current =
               (null === (t = n.Item.GetAssets().GetLibraryHeroURL()) ||
               void 0 === t
                 ? void 0
@@ -3977,101 +2893,87 @@
                 ? n.Item.GetAssets().GetLibraryHeroURL()
                 : n.Item.GetAssets().GetPageBackgroundURL());
         }
-        return a.current
-          ? D.createElement("img", {
-              src: a.current,
-              className: pt().TopGameBackground,
+        return r.current
+          ? k.createElement("img", {
+              src: r.current,
+              className: qe().TopGameBackground,
             })
           : null;
       });
-      var Yt = r(46132),
-        qt = r(68818),
-        $t = r(40072),
-        Qt = r.n($t);
-      const Kt = D.lazy(() =>
+      var Gt = a(68818),
+        Rt = a(40072),
+        wt = a.n(Rt);
+      const Bt = k.lazy(() =>
         Promise.all([
-          r.e(6499),
-          r.e(3388),
-          r.e(3184),
-          r.e(9177),
-          r.e(5378),
-          r.e(2675),
-          r.e(6364),
-          r.e(4134),
-          r.e(7404),
-          r.e(5394),
-          r.e(990),
-          r.e(7440),
-          r.e(1614),
-          r.e(9057),
-          r.e(4994),
-          r.e(4193),
-          r.e(615),
-          r.e(3943),
-          r.e(6108),
-          r.e(6633),
-          r.e(72),
-          r.e(8489),
-          r.e(3238),
-          r.e(7998),
-          r.e(2420),
-          r.e(1979),
-          r.e(9211),
-          r.e(477),
-          r.e(691),
-          r.e(680),
-        ]).then(r.bind(r, 11513)),
+          a.e(6499),
+          a.e(3388),
+          a.e(9982),
+          a.e(6429),
+          a.e(3184),
+          a.e(2919),
+          a.e(1634),
+          a.e(9177),
+          a.e(7383),
+          a.e(5378),
+          a.e(4674),
+          a.e(2675),
+          a.e(6364),
+          a.e(4134),
+          a.e(7440),
+          a.e(1614),
+          a.e(9057),
+          a.e(4193),
+          a.e(72),
+          a.e(8489),
+          a.e(3238),
+          a.e(2420),
+          a.e(9211),
+          a.e(1979),
+          a.e(477),
+          a.e(691),
+          a.e(680),
+        ]).then(a.bind(a, 11513)),
       );
-      function Jt(e) {
-        var t, r;
-        const { salePagename: a } = e;
-        (0, je.h)(Qt().TopReleasesPage);
-        const n = (0, qt.Me)(V.Wj.ANNOUNCEMENT_GID);
-        return D.createElement(
+      function Lt(e) {
+        var t, a;
+        const { salePagename: r } = e;
+        (0, Ne.h)(wt().TopReleasesPage);
+        const n = (0, Gt.Me)(P.Wj.ANNOUNCEMENT_GID);
+        return k.createElement(
           "div",
-          { className: Qt().TopReleasesContainer },
+          { className: wt().TopReleasesContainer },
           (null === (t = null == n ? void 0 : n.jsondata) || void 0 === t
             ? void 0
             : t.sale_custom_css) &&
-            D.createElement(
+            k.createElement(
               "style",
               null,
-              null === (r = null == n ? void 0 : n.jsondata) || void 0 === r
+              null === (a = null == n ? void 0 : n.jsondata) || void 0 === a
                 ? void 0
-                : r.sale_custom_css,
+                : a.sale_custom_css,
             ),
-          D.createElement(Kt, {
-            key: `sale_${a}`,
-            promotionName: `sale_${a}`,
-            language: (0, Yt.jM)(V.De.LANGUAGE),
+          k.createElement(Bt, {
+            key: `sale_${r}`,
+            promotionName: `sale_${r}`,
+            language: (0, T.jM)(P.De.LANGUAGE),
           }),
         );
       }
-      var er = r(71499),
-        tr = r.n(er),
-        rr = r(3397),
-        ar = r(52339),
-        nr = r(23007),
-        sr = r(87210),
-        lr = (0, rr.z)({
-          chartName: "LineChart",
-          GraphicalChild: ar.x,
-          axisComponents: [
-            { axisType: "xAxis", AxisComp: nr.K },
-            { axisType: "yAxis", AxisComp: we.B },
-          ],
-          formatAxisMap: sr.t9,
-        }),
-        ir = r(98241);
-      function or() {
+      var Dt = a(71499),
+        Ot = a.n(Dt),
+        xt = a(95424),
+        Wt = a(23007),
+        At = a(98241),
+        Mt = a(52339);
+      function Ut() {
         var e;
         const t = (function () {
-          return (0, i.useQuery)(
+          return (0, c.useQuery)(
             ["SupportStatsPage"],
             () =>
-              (0, a.mG)(this, void 0, void 0, function* () {
-                const e = yield l().get(
-                  `${V.De.STORE_BASE_URL}stats/support?json=1`,
+              (0, n.mG)(this, void 0, void 0, function* () {
+                const e = yield o().get(
+                  `${P.De.STORE_BASE_URL}stats/support?json=1`,
                 );
                 if ("string" == typeof e.data)
                   throw "Error loading release status";
@@ -4080,95 +2982,95 @@
             { staleTime: 9e5 },
           );
         })();
-        return D.createElement(
-          je.P,
-          { title: (0, re.Xx)("#SteamCharts_SupportStats") },
-          D.createElement(
+        return k.createElement(
+          Ne.P,
+          { title: (0, x.Xx)("#SteamCharts_SupportStats") },
+          k.createElement(
             "div",
-            { className: We().ChartPage },
-            D.createElement(
+            { className: pe().ChartPage },
+            k.createElement(
               "div",
-              { className: (0, ve.Z)(He().HeaderCtn, He().WithSubtitle) },
-              D.createElement(
+              { className: (0, ee.Z)(Ie().HeaderCtn, Ie().WithSubtitle) },
+              k.createElement(
                 "h1",
                 null,
-                (0, re.Xx)("#SteamCharts_SupportStats"),
+                (0, x.Xx)("#SteamCharts_SupportStats"),
               ),
             ),
-            D.createElement(
+            k.createElement(
               "div",
-              { className: He().PageSubtitle },
-              D.createElement(cr, {
+              { className: Ie().PageSubtitle },
+              k.createElement(Xt, {
                 rtLastUpdated:
                   null === (e = t.data) || void 0 === e
                     ? void 0
                     : e.rtLastUpdated,
               }),
             ),
-            D.createElement(
+            k.createElement(
               "div",
-              { className: We().PageSection },
-              D.createElement(
+              { className: pe().PageSection },
+              k.createElement(
                 "p",
                 null,
-                (0, re.yu)(
+                (0, x.yu)(
                   "#SupportStats_Header_Desc",
-                  D.createElement("a", {
+                  k.createElement("a", {
                     href: "http://steamcommunity.com/games/593110/announcements/detail/1301948399251160549",
                   }),
                 ),
               ),
             ),
-            D.createElement(
+            k.createElement(
               "div",
-              { className: (0, ve.Z)(We().PageSection) },
-              D.createElement(
+              { className: (0, ee.Z)(pe().PageSection) },
+              k.createElement(
                 "div",
-                { className: (0, ve.Z)(We().SectionTitle) },
-                D.createElement(
+                { className: (0, ee.Z)(pe().SectionTitle) },
+                k.createElement(
                   "b",
                   null,
-                  (0, re.Xx)("#SupportStats_RequestsAndBacklog_Title"),
+                  (0, x.Xx)("#SupportStats_RequestsAndBacklog_Title"),
                 ),
                 " ",
-                (0, re.Xx)("#SuportStats_MostRecent90Days"),
-                D.createElement(Ne.SV, null, D.createElement(mr, null)),
+                (0, x.Xx)("#SuportStats_MostRecent90Days"),
+                k.createElement(de.SV, null, k.createElement(Zt, null)),
               ),
             ),
-            D.createElement(
+            k.createElement(
               "div",
-              { className: (0, ve.Z)(We().PageSection) },
-              D.createElement(
+              { className: (0, ee.Z)(pe().PageSection) },
+              k.createElement(
                 "div",
-                { className: (0, ve.Z)(We().SectionTitle) },
-                D.createElement(
+                { className: (0, ee.Z)(pe().SectionTitle) },
+                k.createElement(
                   "b",
                   null,
-                  (0, re.Xx)("#SupportStats_RecentSupportActivity_Title"),
+                  (0, x.Xx)("#SupportStats_RecentSupportActivity_Title"),
                 ),
               ),
-              D.createElement(
+              k.createElement(
                 "div",
-                { className: (0, ve.Z)(tr().CategoryBlock) },
-                D.createElement(
-                  Ne.SV,
+                { className: (0, ee.Z)(Ot().CategoryBlock) },
+                k.createElement(
+                  de.SV,
                   null,
-                  D.createElement(pr, { SupportStats: t.data }),
+                  k.createElement($t, { SupportStats: t.data }),
                 ),
               ),
             ),
           ),
         );
       }
-      const cr = D.memo(function (e) {
+      const Xt = k.memo(function (e) {
         const t = new Date(1e3 * e.rtLastUpdated);
-        return D.createElement(
+        return k.createElement(
           "span",
           null,
-          (0, re.Xx)(
+          (0, x.Xx)(
             "#SupportStats_Header_Title_Updated",
             e.rtLastUpdated
-              ? t.toLocaleString(re.Yt.GetPreferredLocales(), {
+              ? t.toLocaleString(x.Yt.GetPreferredLocales(), {
                   day: "numeric",
                   month: "long",
                   year: "numeric",
@@ -4180,65 +3082,65 @@
           ),
         );
       });
-      function mr() {
+      function Zt() {
         const e = (function () {
-          return (0, i.useQuery)(
+          return (0, c.useQuery)(
             ["HelpRequestChartData"],
             () =>
-              (0, a.mG)(this, void 0, void 0, function* () {
-                const e = yield l().get(
-                  `${V.De.STORE_BASE_URL}stats/supportdata.json`,
+              (0, n.mG)(this, void 0, void 0, function* () {
+                const e = yield o().get(
+                  `${P.De.STORE_BASE_URL}stats/supportdata.json`,
                 );
                 if ("string" == typeof e.data)
                   throw "Error loading release status";
                 const t = new Map(),
-                  r = [],
-                  a = [];
+                  a = [],
+                  r = [];
                 for (const n of e.data) {
-                  r.push({ dataKey: n.label, color: n.color });
+                  a.push({ dataKey: n.label, color: n.color });
                   for (const e of n.data) {
                     if (!t.has(e[0])) {
-                      const r = { date: new Date(e[0]) };
-                      t.set(e[0], r), a.push(r);
+                      const a = { date: new Date(e[0]) };
+                      t.set(e[0], a), r.push(a);
                     }
                     t.get(e[0])[n.label] = e[1];
                   }
                 }
-                return { rgSeries: r, data: a };
+                return { rgSeries: a, data: r };
               }),
             { staleTime: 216e5 },
           );
         })();
-        return D.createElement(
+        return k.createElement(
           "div",
           {
-            className: (0, ve.Z)(
-              tr().HelpRequestChartContainer,
-              !e.data && We().Placeholder,
+            className: (0, ee.Z)(
+              Ot().HelpRequestChartContainer,
+              !e.data && pe().Placeholder,
             ),
           },
-          e.data && D.createElement(ur, { ChartData: e.data }),
+          e.data && k.createElement(Ht, { ChartData: e.data }),
         );
       }
-      const ur = D.memo(function (e) {
+      const Ht = k.memo(function (e) {
         const { ChartData: t } = e,
-          { rgSeries: r, data: a } = t;
-        return D.createElement(
-          Te.h,
+          { rgSeries: a, data: r } = t;
+        return k.createElement(
+          ne.h,
           { width: "100%", height: "100%" },
-          D.createElement(
-            lr,
-            { data: a, margin: { top: 20, left: 30, right: 30, bottom: 0 } },
-            D.createElement(nr.K, {
+          k.createElement(
+            xt.w,
+            { data: r, margin: { top: 20, left: 30, right: 30, bottom: 0 } },
+            k.createElement(Wt.K, {
               dataKey: "date",
-              tickFormatter: _r,
+              tickFormatter: Yt,
               interval: 7,
             }),
-            D.createElement(we.B, { type: "number", tickFormatter: Ee.AV }),
-            D.createElement(Re.u, { content: D.createElement(dr, null) }),
-            D.createElement(ir.D, null),
-            r.map((e) =>
-              D.createElement(ar.x, {
+            k.createElement(oe.B, { type: "number", tickFormatter: te.AV }),
+            k.createElement(ce.u, { content: k.createElement(Vt, null) }),
+            k.createElement(At.D, null),
+            a.map((e) =>
+              k.createElement(Mt.x, {
                 key: e.dataKey,
                 type: "monotone",
                 dataKey: e.dataKey,
@@ -4249,280 +3151,280 @@
           ),
         );
       });
-      function dr(e) {
-        const { active: t, payload: r } = e;
-        if (t && r && r.length) {
-          const e = r[0].payload,
+      function Vt(e) {
+        const { active: t, payload: a } = e;
+        if (t && a && a.length) {
+          const e = a[0].payload,
             { date: t } = e,
-            n = (0, a._T)(e, ["date"]);
-          return D.createElement(
-            Pe.gz,
+            r = (0, n._T)(e, ["date"]);
+          return k.createElement(
+            ue.gz,
             null,
-            D.createElement("div", null, _r(t), ":"),
-            Object.keys(n).map((e) =>
-              D.createElement("div", { key: e }, e, ": ", (0, Ee.AV)(n[e])),
+            k.createElement("div", null, Yt(t), ":"),
+            Object.keys(r).map((e) =>
+              k.createElement("div", { key: e }, e, ": ", (0, te.AV)(r[e])),
             ),
           );
         }
         return null;
       }
-      function _r(e) {
-        return e.toLocaleString(re.Yt.GetPreferredLocales(), {
+      function Yt(e) {
+        return e.toLocaleString(x.Yt.GetPreferredLocales(), {
           month: "short",
           day: "numeric",
         });
       }
-      function pr(e) {
+      function $t(e) {
         var t;
-        const r =
+        const a =
           null === (t = e.SupportStats) || void 0 === t
             ? void 0
             : t.rgReportData;
-        return r
-          ? D.createElement(
+        return a
+          ? k.createElement(
               "table",
-              { className: We().ChartTable },
-              D.createElement(
+              { className: pe().ChartTable },
+              k.createElement(
                 "thead",
-                { className: We().ColumnHeaders },
-                D.createElement(
+                { className: pe().ColumnHeaders },
+                k.createElement(
                   "tr",
                   null,
-                  D.createElement(
+                  k.createElement(
                     "th",
-                    { className: tr().Category },
-                    D.createElement(
+                    { className: Ot().Category },
+                    k.createElement(
                       "span",
                       null,
-                      (0, re.Xx)("#SupportStats_TicketsByCategory"),
+                      (0, x.Xx)("#SupportStats_TicketsByCategory"),
                     ),
                   ),
-                  D.createElement(
+                  k.createElement(
                     "th",
-                    { className: tr().Submitted24h },
-                    D.createElement(
+                    { className: Ot().Submitted24h },
+                    k.createElement(
                       "span",
                       null,
-                      (0, re.Xx)("#SupportStats_TicketsLast24Hours"),
+                      (0, x.Xx)("#SupportStats_TicketsLast24Hours"),
                     ),
                   ),
-                  D.createElement(
+                  k.createElement(
                     "th",
-                    { className: tr().ResponseTimes },
-                    D.createElement(
+                    { className: Ot().ResponseTimes },
+                    k.createElement(
                       "span",
                       null,
-                      (0, re.Xx)("#SupportStats_TimeToResponse"),
+                      (0, x.Xx)("#SupportStats_TimeToResponse"),
                     ),
                   ),
                 ),
               ),
-              D.createElement(
+              k.createElement(
                 "tbody",
                 null,
-                r.map((e) => D.createElement(hr, { key: e.name, row: e })),
+                a.map((e) => k.createElement(Ft, { key: e.name, row: e })),
               ),
             )
-          : D.createElement("div", {
-              className: (0, ve.Z)(We().Placeholder, tr().Placeholder),
+          : k.createElement("div", {
+              className: (0, ee.Z)(pe().Placeholder, Ot().Placeholder),
             });
       }
-      function hr(e) {
+      function Ft(e) {
         const { row: t } = e;
-        return D.createElement(
+        return k.createElement(
           "tr",
-          { className: (0, ve.Z)(We().TableRow, tr().TableRow) },
-          D.createElement("td", { className: tr().Category }, t.name),
-          D.createElement(
+          { className: (0, ee.Z)(pe().TableRow, Ot().TableRow) },
+          k.createElement("td", { className: Ot().Category }, t.name),
+          k.createElement(
             "td",
-            { className: tr().Submitted24h },
-            (0, Ee.AV)(t.last24),
+            { className: Ot().Submitted24h },
+            (0, te.AV)(t.last24),
           ),
-          D.createElement(
+          k.createElement(
             "td",
-            { className: tr().ResponseTimes },
-            (0, re.Xx)(
+            { className: Ot().ResponseTimes },
+            (0, x.Xx)(
               "#SupportStats_RecentWaitTimeData",
-              Cr(t["30pct"]),
-              Cr(t["90pct"]),
+              jt(t["30pct"]),
+              jt(t["90pct"]),
             ),
           ),
         );
       }
-      function Cr(e) {
-        return (0, re.yW)(e, { eSuffix: ue.U$.None, bAllowDecimal: !0 });
+      function jt(e) {
+        return (0, x.yW)(e, { eSuffix: Y.U$.None, bAllowDecimal: !0 });
       }
-      var yr = r(27070);
-      const Sr = {
-        Overview: () => `${n.Z.SteamCharts()}`,
-        MostPlayed: () => `${n.Z.SteamCharts()}mostplayed`,
-        TopSelling: (e) => `${n.Z.SteamCharts()}topselling/${e}`,
+      var qt = a(27070);
+      const Qt = {
+        Overview: () => `${l.Z.SteamCharts()}`,
+        MostPlayed: () => `${l.Z.SteamCharts()}mostplayed`,
+        TopSelling: (e) => `${l.Z.SteamCharts()}topselling/${e}`,
         TopSellers: (e, t) =>
-          `${n.Z.SteamCharts()}topsellers/${e}${t ? "/" + t : ""}`,
-        TopNewReleases: (e) => `${n.Z.SteamCharts()}topnewreleases/${e}`,
-        BestOfYear: (e) => `${n.Z.SteamCharts()}bestofyear/${e}`,
-        SupportStats: () => `${n.Z.SteamCharts()}support/`,
+          `${l.Z.SteamCharts()}topsellers/${e}${t ? "/" + t : ""}`,
+        TopNewReleases: (e) => `${l.Z.SteamCharts()}topnewreleases/${e}`,
+        BestOfYear: (e) => `${l.Z.SteamCharts()}bestofyear/${e}`,
+        SupportStats: () => `${l.Z.SteamCharts()}support/`,
       };
-      function gr(e) {
-        const [t, r] = (0, D.useState)(void 0),
-          n = (0, yr.lS)(),
-          s = (0, yr.y$)();
+      function zt(e) {
+        const [t, a] = (0, k.useState)(void 0),
+          r = (0, qt.lS)(),
+          l = (0, qt.y$)();
         if (
-          ((0, D.useEffect)(() => {
+          ((0, k.useEffect)(() => {
             (function (e, t) {
-              return (0, a.mG)(this, void 0, void 0, function* () {
-                const r = new le();
-                return yield r.Initialize(e, t), r;
+              return (0, n.mG)(this, void 0, void 0, function* () {
+                const a = new U();
+                return yield a.Initialize(e, t), a;
               });
-            })(n, s).then((e) => r(e));
-          }, [n, s]),
+            })(r, l).then((e) => a(e));
+          }, [r, l]),
           !t)
         )
           return null;
-        const l = Sr,
+        const s = Qt,
           {
-            TopSellersStore: i,
-            MostPlayedStore: o,
-            TopReleasesStore: c,
+            TopSellersStore: o,
+            MostPlayedStore: c,
+            TopReleasesStore: i,
             SteamInterface: m,
             DynamicUserStore: u,
             BestOfYearStore: d,
           } = t;
-        return D.createElement(
-          ot,
+        return k.createElement(
+          He,
           {
-            TopSellersStore: i,
-            TopReleasesStore: c,
+            TopSellersStore: o,
+            TopReleasesStore: i,
             SteamInterface: m,
             DynamicUserStore: u,
             BestOfYearStore: d,
           },
-          D.createElement(vr, null),
-          D.createElement(
-            Ue.ZP,
+          k.createElement(Kt, null),
+          k.createElement(
+            Te.ZP,
             { domain: "store.steampowered.com", controller: "steamcharts" },
-            D.createElement(
-              me.rs,
+            k.createElement(
+              V.rs,
               null,
-              D.createElement(
-                me.AW,
-                { path: `${l.MostPlayed()}` },
-                D.createElement(
-                  Ue.ZP,
+              k.createElement(
+                V.AW,
+                { path: `${s.MostPlayed()}` },
+                k.createElement(
+                  Te.ZP,
                   { method: "mostplayed" },
-                  D.createElement(
-                    Ne.SV,
+                  k.createElement(
+                    de.SV,
                     null,
-                    D.createElement(Pt, { MostPlayedStore: o }),
+                    k.createElement(dt, { MostPlayedStore: c }),
                   ),
                 ),
               ),
-              D.createElement(me.AW, {
-                path: `${l.TopSelling(":country?")}`,
+              k.createElement(V.AW, {
+                path: `${s.TopSelling(":country?")}`,
                 render: (e) =>
-                  D.createElement(
-                    Ue.ZP,
+                  k.createElement(
+                    Te.ZP,
                     { method: "topselling" },
-                    D.createElement(
-                      Ne.SV,
+                    k.createElement(
+                      de.SV,
                       null,
-                      D.createElement(zt, {
-                        TopSellersStore: i,
+                      k.createElement(yt, {
+                        TopSellersStore: o,
                         overrideCountry: e.match.params.country,
                       }),
                     ),
                   ),
               }),
-              D.createElement(me.AW, {
-                path: `${l.TopSellers(":country?", ":week?")}`,
+              k.createElement(V.AW, {
+                path: `${s.TopSellers(":country?", ":week?")}`,
                 render: (e) =>
-                  D.createElement(
-                    Ue.ZP,
+                  k.createElement(
+                    Te.ZP,
                     { method: "weeklytopsellers" },
-                    D.createElement(
-                      Ne.SV,
+                    k.createElement(
+                      de.SV,
                       null,
-                      D.createElement(Ut, {
-                        TopSellersStore: i,
+                      k.createElement(Tt, {
+                        TopSellersStore: o,
                         week: e.match.params.week,
                         country: e.match.params.country,
                       }),
                     ),
                   ),
               }),
-              D.createElement(
-                me.AW,
-                { path: `${l.Overview()}`, exact: !0 },
-                D.createElement(
-                  Ue.ZP,
+              k.createElement(
+                V.AW,
+                { path: `${s.Overview()}`, exact: !0 },
+                k.createElement(
+                  Te.ZP,
                   { method: "overview" },
-                  D.createElement(
-                    Ne.SV,
+                  k.createElement(
+                    de.SV,
                     null,
-                    D.createElement($e, { SteamCharts: t }),
+                    k.createElement(we, { SteamCharts: t }),
                   ),
                 ),
               ),
-              D.createElement(
-                me.AW,
-                { path: `${l.SupportStats()}` },
-                D.createElement(
-                  Ue.ZP,
+              k.createElement(
+                V.AW,
+                { path: `${s.SupportStats()}` },
+                k.createElement(
+                  Te.ZP,
                   { method: "supportstats" },
-                  D.createElement(Ne.SV, null, D.createElement(or, null)),
+                  k.createElement(de.SV, null, k.createElement(Ut, null)),
                 ),
               ),
-              D.createElement(me.AW, {
-                path: `${l.TopNewReleases(":salePagename")}`,
+              k.createElement(V.AW, {
+                path: `${s.TopNewReleases(":salePagename")}`,
                 render: (e) => {
                   const {
                     match: {
                       params: { salePagename: t },
                     },
                   } = e;
-                  return D.createElement(
-                    Ue.ZP,
+                  return k.createElement(
+                    Te.ZP,
                     { method: "topnewreleases" },
-                    D.createElement(
-                      Ne.SV,
+                    k.createElement(
+                      de.SV,
                       null,
-                      D.createElement(Jt, { salePagename: t }),
+                      k.createElement(Lt, { salePagename: t }),
                     ),
                   );
                 },
               }),
-              D.createElement(me.AW, {
-                path: `${l.BestOfYear(":salePagename")}`,
+              k.createElement(V.AW, {
+                path: `${s.BestOfYear(":salePagename")}`,
                 render: (e) => {
                   const {
                     match: {
                       params: { salePagename: t },
                     },
                   } = e;
-                  return D.createElement(
-                    Ue.ZP,
+                  return k.createElement(
+                    Te.ZP,
                     { method: "bestofyear" },
-                    D.createElement(
-                      Ne.SV,
+                    k.createElement(
+                      de.SV,
                       null,
-                      D.createElement(Jt, { salePagename: t }),
+                      k.createElement(Lt, { salePagename: t }),
                     ),
                   );
                 },
               }),
-              D.createElement(
-                me.AW,
+              k.createElement(
+                V.AW,
                 null,
-                D.createElement(me.l_, { to: `${l.Overview()}` }),
+                k.createElement(V.l_, { to: `${s.Overview()}` }),
               ),
             ),
           ),
         );
       }
-      function vr() {
-        const { pathname: e } = (0, me.TH)();
+      function Kt() {
+        const { pathname: e } = (0, V.TH)();
         return (
-          D.useEffect(() => {
+          k.useEffect(() => {
             void 0 !== window.ScrollToTopStoreMobileAware
               ? window.ScrollToTopStoreMobileAware()
               : window.scrollTo(0, 0);

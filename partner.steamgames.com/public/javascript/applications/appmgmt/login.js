@@ -6,20 +6,21 @@
   [4535],
   {
     19058: (e, t, r) => {
-      r.r(t), r.d(t, { default: () => p });
-      var n = r(89526),
-        o = r(57742),
+      r.r(t), r.d(t, { default: () => u });
+      var o = r(89526),
+        n = r(57742),
         a = r(67736),
-        i = r(59100),
-        l = r(19094),
-        s = r(32765),
-        c = r(79925);
-      function p() {
+        i = r(88390),
+        l = r(7786),
+        s = r(19094),
+        c = r(32765),
+        p = r(79925);
+      function u() {
         return (
-          (0, n.useEffect)(
+          (0, o.useEffect)(
             () => (
               (window.g_ShowLoginDialog = (e) =>
-                (0, o.AM)(n.createElement(u, { redirectUrl: e }), window, {
+                (0, n.AM)(o.createElement(m, { redirectUrl: e }), window, {
                   popupWidth: 700,
                   popupHeight: 440,
                 })),
@@ -32,23 +33,23 @@
           null
         );
       }
-      function u(e) {
-        const { redirectUrl: t = s.De.PARTNER_BASE_URL, closeModal: r } = e,
-          o = (0, n.useRef)(
-            new l.J(s.De.WEBAPI_BASE_URL).GetServiceTransport(),
+      function m(e) {
+        const { redirectUrl: t = c.De.PARTNER_BASE_URL, closeModal: r } = e,
+          n = (0, o.useRef)(
+            new s.J(c.De.WEBAPI_BASE_URL).GetServiceTransport(),
           ).current,
-          [p, u] = (0, n.useState)(!1);
-        return n.createElement(
+          [u, m] = (0, o.useState)(!1);
+        return o.createElement(
           a.e1,
           { onEscKeypress: r, hideTopBar: !0, bDisableBackgroundDismiss: !0 },
-          p
-            ? n.createElement(i.pT, null)
-            : n.createElement(i.wK, {
-                platform: 2,
-                transport: o,
+          u
+            ? o.createElement(i.pT, null)
+            : o.createElement(i.wK, {
+                platform: l.hn.k_EAuthTokenPlatformType_WebBrowser,
+                transport: n,
                 onComplete: (e) => {
-                  e == c.TG.k_PrimaryDomainFail
-                    ? u(!0)
+                  e == p.TG.k_PrimaryDomainFail
+                    ? m(!0)
                     : window.location.assign(t);
                 },
                 autoFocus: !0,

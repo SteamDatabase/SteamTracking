@@ -151,7 +151,7 @@
         _ = n.n(d),
         h = n(25871);
       var p = n(19304),
-        H = n(43707),
+        H = n(69485),
         S = n(5029),
         y = n(59934),
         C = n(51438),
@@ -218,7 +218,9 @@
               n = [...e, ...t];
             if (n.length)
               return {
-                isLoading: 1 === (0, h.wZ)(n, { include_assets: !0 }),
+                isLoading:
+                  (0, h.wZ)(n, { include_assets: !0 }) ===
+                  h.Y0.k_EStoreItemCacheState_Loading,
                 data: { personalAppIds: e, popularAppIds: t },
               };
             return {

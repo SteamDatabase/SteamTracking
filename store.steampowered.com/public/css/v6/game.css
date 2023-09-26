@@ -6013,7 +6013,7 @@ body.v6 .page_content.notes {
 .open_in_steam_container {
     position: relative;
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	padding: 5px;
 	color: #b8e0fd;
 	font-size: 13px;
@@ -6065,4 +6065,10 @@ a.open_in_steam_body:hover {
     padding: 2px;
     background: #ffffff;
     border-radius: 4px;
+}
+.get_the_app_container {
+    margin-left: 10px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    font-weight: 600;
 }

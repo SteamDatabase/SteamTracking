@@ -163,13 +163,17 @@
       }
     },
     23217: (e, r, s) => {
-      s.d(r, { l: () => n });
-      var t = s(52868),
-        o = s.n(t),
-        a = s(54856);
-      function n(e) {
-        if (o().isCancel(e))
-          return { strErrorMsg: "Action Cancelled:" + e, errorCode: 52 };
+      s.d(r, { l: () => i });
+      var t = s(42735),
+        o = s(52868),
+        a = s.n(o),
+        n = s(67328);
+      function i(e) {
+        if (a().isCancel(e))
+          return {
+            strErrorMsg: "Action Cancelled:" + e,
+            errorCode: t.s.k_EResultCancelled,
+          };
         if (
           void 0 !== e.response &&
           e.response.data &&
@@ -221,7 +225,7 @@
               console.warn(e),
               console.groupEnd();
           else {
-            if ("object" == typeof e && e instanceof a.gA)
+            if ("object" == typeof e && e instanceof n.gA)
               return {
                 strErrorMsg: "" + e.GetEResult(),
                 errorCode: e.GetEResult(),
@@ -232,9 +236,12 @@
         return "object" == typeof e && "status" in e
           ? {
               strErrorMsg: "Unknown Error: " + e + "\nStatus Code:" + e.status,
-              errorCode: 2,
+              errorCode: t.s.k_EResultFail,
             }
-          : { strErrorMsg: "Unknown Error: " + e, errorCode: 2 };
+          : {
+              strErrorMsg: "Unknown Error: " + e,
+              errorCode: t.s.k_EResultFail,
+            };
       }
     },
     47471: (e, r, s) => {

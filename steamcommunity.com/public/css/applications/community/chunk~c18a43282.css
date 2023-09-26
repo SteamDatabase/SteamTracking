@@ -619,9 +619,13 @@ button.Primary.partnereventshared_AddSectionButton_15e-D {
   color: #06beff;
   font-size: 14px;
 }
+.partnereventshared_HelperTooltip_3UCPo {
+  display: flex;
+}
 .partnereventshared_HelperTooltip_3UCPo > svg {
   width: 16px;
   fill: #aaa;
+  margin-left: 4px;
 }
 .partnereventshared_HelperTooltip_3UCPo > svg:hover {
   fill: #fff;
@@ -3119,6 +3123,7 @@ html.touch .gamehover_WishlistButton_1l89v .gamehover_WishlistButtonText_-ne-j,
   flex-grow: 1;
   align-items: flex-end;
   min-height: 44px;
+  font-size: 14px;
 }
 .BasicUI .salepreviewwidgets_StoreActionWidgetContainer_1gO7r {
   right: 12px;
@@ -5505,6 +5510,8 @@ html.touch
     #6a8704 80%
   );
   display: flex;
+  flex-basis: 50%;
+  flex-grow: 1;
   align-items: center;
   justify-content: center;
   margin: 0;
@@ -5659,6 +5666,7 @@ html.touch
   cursor: pointer;
   white-space: nowrap;
   padding: 0 10px;
+  margin-left: 4px;
 }
 .demobutton_DemoButton_1GAs9.demobutton_DisabledButton_2TQ4l,
 .demobutton_DemoButton_1GAs9.demobutton_DisabledButton_2TQ4l:hover {
@@ -6330,7 +6338,7 @@ html.tablet
 }
 .partnersaledisplay_TabButtonsCtn_2jMTe .partnersaledisplay_TabButton_3ZFfZ {
   display: flex;
-  background: linear-gradient(0deg, #3d5244 0%, #324336 100%);
+  background: linear-gradient(0deg, rgb(34, 31, 42) 0%, rgb(40, 56, 75) 100%);
   border-radius: 3px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
   padding: 20px 40px;

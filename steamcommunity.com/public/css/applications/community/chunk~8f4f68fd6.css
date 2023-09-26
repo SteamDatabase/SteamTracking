@@ -1,3 +1,6 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
 @keyframes standardtemplates_ItemFocusAnim-darkerGrey-nocolor_MYSYJ {
   from {
     background: #3d4450;
@@ -100,10 +103,14 @@
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
   transform: scale(1) rotateX(0deg);
+  transition: filter 50ms ease-in;
 }
 .standardtemplates_StandardTemplate_3e_DB:hover,
+.standardtemplates_PinnedTemplate_2eBei:hover {
+  background-color: #23262e;
+  transition: background-color 150ms ease-in;
+}
 .standardtemplates_StandardTemplate_3e_DB.gpfocus,
-.standardtemplates_PinnedTemplate_2eBei:hover,
 .standardtemplates_PinnedTemplate_2eBei.gpfocus {
   background-color: #3d4450;
   animation-name: standardtemplates_ItemFocusAnim-darkerGrey_3uRWs;
@@ -286,6 +293,7 @@
 .standardtemplates_AllNotificationsTemplate_2m9JU,
 .standardtemplates_StandardTemplateDesktop_1tsEf,
 .standardtemplates_DesktopToastTemplate_3CGHg,
+.standardtemplates_PinnedTemplateWeb_MmdBj,
 .standardtemplates_PinnedTemplateDesktop_2caCr {
   padding: 10px 10px;
   display: flex;
@@ -305,6 +313,7 @@
 .standardtemplates_AllNotificationsTemplate_2m9JU:hover,
 .standardtemplates_StandardTemplateDesktop_1tsEf:hover,
 .standardtemplates_DesktopToastTemplate_3CGHg:hover,
+.standardtemplates_PinnedTemplateWeb_MmdBj:hover,
 .standardtemplates_PinnedTemplateDesktop_2caCr:hover {
   cursor: pointer;
 }
@@ -313,6 +322,8 @@
 .standardtemplates_StandardTemplateDesktop_1tsEf
   .standardtemplates_StandardLogoDimensions_28AhG,
 .standardtemplates_DesktopToastTemplate_3CGHg
+  .standardtemplates_StandardLogoDimensions_28AhG,
+.standardtemplates_PinnedTemplateWeb_MmdBj
   .standardtemplates_StandardLogoDimensions_28AhG,
 .standardtemplates_PinnedTemplateDesktop_2caCr
   .standardtemplates_StandardLogoDimensions_28AhG {
@@ -325,6 +336,7 @@
 .standardtemplates_StandardTemplateDesktop_1tsEf
   .standardtemplates_Content_1MZiz,
 .standardtemplates_DesktopToastTemplate_3CGHg .standardtemplates_Content_1MZiz,
+.standardtemplates_PinnedTemplateWeb_MmdBj .standardtemplates_Content_1MZiz,
 .standardtemplates_PinnedTemplateDesktop_2caCr
   .standardtemplates_Content_1MZiz {
   margin-left: 12px;
@@ -338,6 +350,7 @@
 .standardtemplates_StandardTemplateDesktop_1tsEf
   .standardtemplates_Header_39ZAW,
 .standardtemplates_DesktopToastTemplate_3CGHg .standardtemplates_Header_39ZAW,
+.standardtemplates_PinnedTemplateWeb_MmdBj .standardtemplates_Header_39ZAW,
 .standardtemplates_PinnedTemplateDesktop_2caCr .standardtemplates_Header_39ZAW {
   display: flex;
   flex-direction: row;
@@ -346,6 +359,7 @@
 .standardtemplates_AllNotificationsTemplate_2m9JU .standardtemplates_Icon_19g_L,
 .standardtemplates_StandardTemplateDesktop_1tsEf .standardtemplates_Icon_19g_L,
 .standardtemplates_DesktopToastTemplate_3CGHg .standardtemplates_Icon_19g_L,
+.standardtemplates_PinnedTemplateWeb_MmdBj .standardtemplates_Icon_19g_L,
 .standardtemplates_PinnedTemplateDesktop_2caCr .standardtemplates_Icon_19g_L {
   width: 13px;
   height: 13px;
@@ -363,6 +377,7 @@
 .standardtemplates_DesktopToastTemplate_3CGHg
   .standardtemplates_Icon_19g_L
   > svg,
+.standardtemplates_PinnedTemplateWeb_MmdBj .standardtemplates_Icon_19g_L > svg,
 .standardtemplates_PinnedTemplateDesktop_2caCr
   .standardtemplates_Icon_19g_L
   > svg {
@@ -374,6 +389,7 @@
   .standardtemplates_Title_1WlRE,
 .standardtemplates_StandardTemplateDesktop_1tsEf .standardtemplates_Title_1WlRE,
 .standardtemplates_DesktopToastTemplate_3CGHg .standardtemplates_Title_1WlRE,
+.standardtemplates_PinnedTemplateWeb_MmdBj .standardtemplates_Title_1WlRE,
 .standardtemplates_PinnedTemplateDesktop_2caCr .standardtemplates_Title_1WlRE {
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   font-style: normal;
@@ -409,6 +425,14 @@
   .standardtemplates_StandardNotificationSubText_2XcN2:not(
     .standardtemplates_Multiline_2v77K
   ),
+.standardtemplates_PinnedTemplateWeb_MmdBj
+  .standardtemplates_StandardNotificationDescription_1Ldq1:not(
+    .standardtemplates_Multiline_2v77K
+  ),
+.standardtemplates_PinnedTemplateWeb_MmdBj
+  .standardtemplates_StandardNotificationSubText_2XcN2:not(
+    .standardtemplates_Multiline_2v77K
+  ),
 .standardtemplates_PinnedTemplateDesktop_2caCr
   .standardtemplates_StandardNotificationDescription_1Ldq1:not(
     .standardtemplates_Multiline_2v77K
@@ -433,6 +457,10 @@
   .standardtemplates_StandardNotificationDescription_1Ldq1.standardtemplates_Multiline_2v77K,
 .standardtemplates_DesktopToastTemplate_3CGHg
   .standardtemplates_StandardNotificationSubText_2XcN2.standardtemplates_Multiline_2v77K,
+.standardtemplates_PinnedTemplateWeb_MmdBj
+  .standardtemplates_StandardNotificationDescription_1Ldq1.standardtemplates_Multiline_2v77K,
+.standardtemplates_PinnedTemplateWeb_MmdBj
+  .standardtemplates_StandardNotificationSubText_2XcN2.standardtemplates_Multiline_2v77K,
 .standardtemplates_PinnedTemplateDesktop_2caCr
   .standardtemplates_StandardNotificationDescription_1Ldq1.standardtemplates_Multiline_2v77K,
 .standardtemplates_PinnedTemplateDesktop_2caCr
@@ -449,6 +477,8 @@
   .standardtemplates_StandardNotificationDescription_1Ldq1,
 .standardtemplates_DesktopToastTemplate_3CGHg
   .standardtemplates_StandardNotificationDescription_1Ldq1,
+.standardtemplates_PinnedTemplateWeb_MmdBj
+  .standardtemplates_StandardNotificationDescription_1Ldq1,
 .standardtemplates_PinnedTemplateDesktop_2caCr
   .standardtemplates_StandardNotificationDescription_1Ldq1 {
   color: #fff;
@@ -461,6 +491,8 @@
   .standardtemplates_StandardNotificationSubText_2XcN2,
 .standardtemplates_DesktopToastTemplate_3CGHg
   .standardtemplates_StandardNotificationSubText_2XcN2,
+.standardtemplates_PinnedTemplateWeb_MmdBj
+  .standardtemplates_StandardNotificationSubText_2XcN2,
 .standardtemplates_PinnedTemplateDesktop_2caCr
   .standardtemplates_StandardNotificationSubText_2XcN2 {
   color: #8b929a;
@@ -470,6 +502,7 @@
   .standardtemplates_Count_FyFTb,
 .standardtemplates_StandardTemplateDesktop_1tsEf .standardtemplates_Count_FyFTb,
 .standardtemplates_DesktopToastTemplate_3CGHg .standardtemplates_Count_FyFTb,
+.standardtemplates_PinnedTemplateWeb_MmdBj .standardtemplates_Count_FyFTb,
 .standardtemplates_PinnedTemplateDesktop_2caCr .standardtemplates_Count_FyFTb {
   background-color: #1a9fff;
   color: #fff;
@@ -488,6 +521,7 @@
   .standardtemplates_Timestamp_2vSvC,
 .standardtemplates_DesktopToastTemplate_3CGHg
   .standardtemplates_Timestamp_2vSvC,
+.standardtemplates_PinnedTemplateWeb_MmdBj .standardtemplates_Timestamp_2vSvC,
 .standardtemplates_PinnedTemplateDesktop_2caCr
   .standardtemplates_Timestamp_2vSvC {
   font-size: 11px;
@@ -551,6 +585,7 @@
 .standardtemplates_StandardTemplateDesktop_1tsEf.standardtemplates_Unread_2GC8q:hover {
   background: #3d4450;
 }
+.standardtemplates_PinnedTemplateWeb_MmdBj,
 .standardtemplates_PinnedTemplateDesktop_2caCr {
   height: 36px;
   padding: 0px;
@@ -559,12 +594,11 @@
   border-radius: 2px;
   margin: 0 auto 2px auto;
 }
-.standardtemplates_PinnedTemplateDesktop_2caCr:last-child {
-  margin-bottom: 8px;
-}
+.standardtemplates_PinnedTemplateWeb_MmdBj:hover,
 .standardtemplates_PinnedTemplateDesktop_2caCr:hover {
   background: #474f5c;
 }
+.standardtemplates_PinnedTemplateWeb_MmdBj .standardtemplates_Icon_19g_L,
 .standardtemplates_PinnedTemplateDesktop_2caCr .standardtemplates_Icon_19g_L {
   width: 18px;
   height: 18px;
@@ -572,12 +606,14 @@
   padding-left: 2px;
   color: #dcdedf;
 }
+.standardtemplates_PinnedTemplateWeb_MmdBj .standardtemplates_Icon_19g_L > svg,
 .standardtemplates_PinnedTemplateDesktop_2caCr
   .standardtemplates_Icon_19g_L
   > svg {
   width: 18px;
   height: 18px;
 }
+.standardtemplates_PinnedTemplateWeb_MmdBj .standardtemplates_PinnedBody_1Ljgv,
 .standardtemplates_PinnedTemplateDesktop_2caCr
   .standardtemplates_PinnedBody_1Ljgv {
   display: flex;
@@ -591,6 +627,9 @@
   color: #dcdedf;
   font-size: 12px;
   font-weight: 400;
+}
+.standardtemplates_PinnedTemplateDesktop_2caCr:last-child {
+  margin-bottom: 8px;
 }
 .standardtemplates_AllNotificationsTemplate_2m9JU {
   background: rgba(0, 0, 0, 0.2);
@@ -1025,10 +1064,14 @@
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
   transform: scale(1) rotateX(0deg);
+  transition: filter 50ms ease-in;
 }
 .shorttemplates_StandardTemplate_WgSlJ:hover,
+.shorttemplates_PinnedTemplate_3T_a6:hover {
+  background-color: #23262e;
+  transition: background-color 150ms ease-in;
+}
 .shorttemplates_StandardTemplate_WgSlJ.gpfocus,
-.shorttemplates_PinnedTemplate_3T_a6:hover,
 .shorttemplates_PinnedTemplate_3T_a6.gpfocus {
   background-color: #3d4450;
   animation-name: shorttemplates_ItemFocusAnim-darkerGrey_11elP;
@@ -1207,6 +1250,7 @@
 .shorttemplates_AllNotificationsTemplate_yn7qi,
 .shorttemplates_StandardTemplateDesktop_3B-l9,
 .shorttemplates_DesktopToastTemplate_PhN5d,
+.shorttemplates_PinnedTemplateWeb_2hqAw,
 .shorttemplates_PinnedTemplateDesktop_3iJFa {
   padding: 10px 10px;
   display: flex;
@@ -1226,6 +1270,7 @@
 .shorttemplates_AllNotificationsTemplate_yn7qi:hover,
 .shorttemplates_StandardTemplateDesktop_3B-l9:hover,
 .shorttemplates_DesktopToastTemplate_PhN5d:hover,
+.shorttemplates_PinnedTemplateWeb_2hqAw:hover,
 .shorttemplates_PinnedTemplateDesktop_3iJFa:hover {
   cursor: pointer;
 }
@@ -1234,6 +1279,8 @@
 .shorttemplates_StandardTemplateDesktop_3B-l9
   .shorttemplates_StandardLogoDimensions_2D2Mo,
 .shorttemplates_DesktopToastTemplate_PhN5d
+  .shorttemplates_StandardLogoDimensions_2D2Mo,
+.shorttemplates_PinnedTemplateWeb_2hqAw
   .shorttemplates_StandardLogoDimensions_2D2Mo,
 .shorttemplates_PinnedTemplateDesktop_3iJFa
   .shorttemplates_StandardLogoDimensions_2D2Mo {
@@ -1244,6 +1291,7 @@
 .shorttemplates_AllNotificationsTemplate_yn7qi .shorttemplates_Content_23dSW,
 .shorttemplates_StandardTemplateDesktop_3B-l9 .shorttemplates_Content_23dSW,
 .shorttemplates_DesktopToastTemplate_PhN5d .shorttemplates_Content_23dSW,
+.shorttemplates_PinnedTemplateWeb_2hqAw .shorttemplates_Content_23dSW,
 .shorttemplates_PinnedTemplateDesktop_3iJFa .shorttemplates_Content_23dSW {
   margin-left: 12px;
   min-width: 0;
@@ -1254,6 +1302,7 @@
 .shorttemplates_AllNotificationsTemplate_yn7qi .shorttemplates_Header_2wU4t,
 .shorttemplates_StandardTemplateDesktop_3B-l9 .shorttemplates_Header_2wU4t,
 .shorttemplates_DesktopToastTemplate_PhN5d .shorttemplates_Header_2wU4t,
+.shorttemplates_PinnedTemplateWeb_2hqAw .shorttemplates_Header_2wU4t,
 .shorttemplates_PinnedTemplateDesktop_3iJFa .shorttemplates_Header_2wU4t {
   display: flex;
   flex-direction: row;
@@ -1262,6 +1311,7 @@
 .shorttemplates_AllNotificationsTemplate_yn7qi .shorttemplates_Icon_2TlJy,
 .shorttemplates_StandardTemplateDesktop_3B-l9 .shorttemplates_Icon_2TlJy,
 .shorttemplates_DesktopToastTemplate_PhN5d .shorttemplates_Icon_2TlJy,
+.shorttemplates_PinnedTemplateWeb_2hqAw .shorttemplates_Icon_2TlJy,
 .shorttemplates_PinnedTemplateDesktop_3iJFa .shorttemplates_Icon_2TlJy {
   width: 13px;
   height: 13px;
@@ -1273,6 +1323,7 @@
 .shorttemplates_AllNotificationsTemplate_yn7qi .shorttemplates_Icon_2TlJy > svg,
 .shorttemplates_StandardTemplateDesktop_3B-l9 .shorttemplates_Icon_2TlJy > svg,
 .shorttemplates_DesktopToastTemplate_PhN5d .shorttemplates_Icon_2TlJy > svg,
+.shorttemplates_PinnedTemplateWeb_2hqAw .shorttemplates_Icon_2TlJy > svg,
 .shorttemplates_PinnedTemplateDesktop_3iJFa .shorttemplates_Icon_2TlJy > svg {
   width: 13px;
   height: 13px;
@@ -1281,6 +1332,7 @@
 .shorttemplates_AllNotificationsTemplate_yn7qi .shorttemplates_Title_BkpSl,
 .shorttemplates_StandardTemplateDesktop_3B-l9 .shorttemplates_Title_BkpSl,
 .shorttemplates_DesktopToastTemplate_PhN5d .shorttemplates_Title_BkpSl,
+.shorttemplates_PinnedTemplateWeb_2hqAw .shorttemplates_Title_BkpSl,
 .shorttemplates_PinnedTemplateDesktop_3iJFa .shorttemplates_Title_BkpSl {
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   font-style: normal;
@@ -1316,6 +1368,14 @@
   .shorttemplates_StandardNotificationSubText_2AQNp:not(
     .shorttemplates_Multiline_1DSpL
   ),
+.shorttemplates_PinnedTemplateWeb_2hqAw
+  .shorttemplates_StandardNotificationDescription_Dacpy:not(
+    .shorttemplates_Multiline_1DSpL
+  ),
+.shorttemplates_PinnedTemplateWeb_2hqAw
+  .shorttemplates_StandardNotificationSubText_2AQNp:not(
+    .shorttemplates_Multiline_1DSpL
+  ),
 .shorttemplates_PinnedTemplateDesktop_3iJFa
   .shorttemplates_StandardNotificationDescription_Dacpy:not(
     .shorttemplates_Multiline_1DSpL
@@ -1340,6 +1400,10 @@
   .shorttemplates_StandardNotificationDescription_Dacpy.shorttemplates_Multiline_1DSpL,
 .shorttemplates_DesktopToastTemplate_PhN5d
   .shorttemplates_StandardNotificationSubText_2AQNp.shorttemplates_Multiline_1DSpL,
+.shorttemplates_PinnedTemplateWeb_2hqAw
+  .shorttemplates_StandardNotificationDescription_Dacpy.shorttemplates_Multiline_1DSpL,
+.shorttemplates_PinnedTemplateWeb_2hqAw
+  .shorttemplates_StandardNotificationSubText_2AQNp.shorttemplates_Multiline_1DSpL,
 .shorttemplates_PinnedTemplateDesktop_3iJFa
   .shorttemplates_StandardNotificationDescription_Dacpy.shorttemplates_Multiline_1DSpL,
 .shorttemplates_PinnedTemplateDesktop_3iJFa
@@ -1356,6 +1420,8 @@
   .shorttemplates_StandardNotificationDescription_Dacpy,
 .shorttemplates_DesktopToastTemplate_PhN5d
   .shorttemplates_StandardNotificationDescription_Dacpy,
+.shorttemplates_PinnedTemplateWeb_2hqAw
+  .shorttemplates_StandardNotificationDescription_Dacpy,
 .shorttemplates_PinnedTemplateDesktop_3iJFa
   .shorttemplates_StandardNotificationDescription_Dacpy {
   color: #fff;
@@ -1368,6 +1434,8 @@
   .shorttemplates_StandardNotificationSubText_2AQNp,
 .shorttemplates_DesktopToastTemplate_PhN5d
   .shorttemplates_StandardNotificationSubText_2AQNp,
+.shorttemplates_PinnedTemplateWeb_2hqAw
+  .shorttemplates_StandardNotificationSubText_2AQNp,
 .shorttemplates_PinnedTemplateDesktop_3iJFa
   .shorttemplates_StandardNotificationSubText_2AQNp {
   color: #8b929a;
@@ -1376,6 +1444,7 @@
 .shorttemplates_AllNotificationsTemplate_yn7qi .shorttemplates_Count_3tGYZ,
 .shorttemplates_StandardTemplateDesktop_3B-l9 .shorttemplates_Count_3tGYZ,
 .shorttemplates_DesktopToastTemplate_PhN5d .shorttemplates_Count_3tGYZ,
+.shorttemplates_PinnedTemplateWeb_2hqAw .shorttemplates_Count_3tGYZ,
 .shorttemplates_PinnedTemplateDesktop_3iJFa .shorttemplates_Count_3tGYZ {
   background-color: #1a9fff;
   color: #fff;
@@ -1391,6 +1460,7 @@
 .shorttemplates_AllNotificationsTemplate_yn7qi .shorttemplates_Timestamp_3OOgm,
 .shorttemplates_StandardTemplateDesktop_3B-l9 .shorttemplates_Timestamp_3OOgm,
 .shorttemplates_DesktopToastTemplate_PhN5d .shorttemplates_Timestamp_3OOgm,
+.shorttemplates_PinnedTemplateWeb_2hqAw .shorttemplates_Timestamp_3OOgm,
 .shorttemplates_PinnedTemplateDesktop_3iJFa .shorttemplates_Timestamp_3OOgm {
   font-size: 11px;
   white-space: nowrap;
@@ -1452,6 +1522,7 @@
 .shorttemplates_StandardTemplateDesktop_3B-l9.shorttemplates_Unread_3Kkjo:hover {
   background: #3d4450;
 }
+.shorttemplates_PinnedTemplateWeb_2hqAw,
 .shorttemplates_PinnedTemplateDesktop_3iJFa {
   height: 36px;
   padding: 0px;
@@ -1460,12 +1531,11 @@
   border-radius: 2px;
   margin: 0 auto 2px auto;
 }
-.shorttemplates_PinnedTemplateDesktop_3iJFa:last-child {
-  margin-bottom: 8px;
-}
+.shorttemplates_PinnedTemplateWeb_2hqAw:hover,
 .shorttemplates_PinnedTemplateDesktop_3iJFa:hover {
   background: #474f5c;
 }
+.shorttemplates_PinnedTemplateWeb_2hqAw .shorttemplates_Icon_2TlJy,
 .shorttemplates_PinnedTemplateDesktop_3iJFa .shorttemplates_Icon_2TlJy {
   width: 18px;
   height: 18px;
@@ -1473,10 +1543,12 @@
   padding-left: 2px;
   color: #dcdedf;
 }
+.shorttemplates_PinnedTemplateWeb_2hqAw .shorttemplates_Icon_2TlJy > svg,
 .shorttemplates_PinnedTemplateDesktop_3iJFa .shorttemplates_Icon_2TlJy > svg {
   width: 18px;
   height: 18px;
 }
+.shorttemplates_PinnedTemplateWeb_2hqAw .shorttemplates_PinnedBody_a6Bjh,
 .shorttemplates_PinnedTemplateDesktop_3iJFa .shorttemplates_PinnedBody_a6Bjh {
   display: flex;
   flex-direction: row;
@@ -1489,6 +1561,9 @@
   color: #dcdedf;
   font-size: 12px;
   font-weight: 400;
+}
+.shorttemplates_PinnedTemplateDesktop_3iJFa:last-child {
+  margin-bottom: 8px;
 }
 .shorttemplates_AllNotificationsTemplate_yn7qi {
   background: rgba(0, 0, 0, 0.2);
@@ -1816,6 +1891,11 @@
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
   width: 300px;
   height: 40px;
+  transition: background-color 50ms ease-out;
+}
+.shorttemplates_ShortTemplate_29NLb:hover {
+  background-color: #23262e;
+  transition: background-color 200ms ease-in;
 }
 .shorttemplates_ShortTemplate_29NLb.shorttemplates_IncomingCallToast_1hUOA {
   background: radial-gradient(
@@ -1999,10 +2079,14 @@
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
   transform: scale(1) rotateX(0deg);
+  transition: filter 50ms ease-in;
 }
 .steamtemplates_StandardTemplate_1zIGL:hover,
+.steamtemplates_PinnedTemplate_F_L0c:hover {
+  background-color: #23262e;
+  transition: background-color 150ms ease-in;
+}
 .steamtemplates_StandardTemplate_1zIGL.gpfocus,
-.steamtemplates_PinnedTemplate_F_L0c:hover,
 .steamtemplates_PinnedTemplate_F_L0c.gpfocus {
   background-color: #3d4450;
   animation-name: steamtemplates_ItemFocusAnim-darkerGrey_glTTS;
@@ -2181,6 +2265,7 @@
 .steamtemplates_AllNotificationsTemplate_3diaj,
 .steamtemplates_StandardTemplateDesktop_4vJlU,
 .steamtemplates_DesktopToastTemplate_NDrdY,
+.steamtemplates_PinnedTemplateWeb_2HEFf,
 .steamtemplates_PinnedTemplateDesktop_2lHUy {
   padding: 10px 10px;
   display: flex;
@@ -2200,6 +2285,7 @@
 .steamtemplates_AllNotificationsTemplate_3diaj:hover,
 .steamtemplates_StandardTemplateDesktop_4vJlU:hover,
 .steamtemplates_DesktopToastTemplate_NDrdY:hover,
+.steamtemplates_PinnedTemplateWeb_2HEFf:hover,
 .steamtemplates_PinnedTemplateDesktop_2lHUy:hover {
   cursor: pointer;
 }
@@ -2208,6 +2294,8 @@
 .steamtemplates_StandardTemplateDesktop_4vJlU
   .steamtemplates_StandardLogoDimensions_1kh-M,
 .steamtemplates_DesktopToastTemplate_NDrdY
+  .steamtemplates_StandardLogoDimensions_1kh-M,
+.steamtemplates_PinnedTemplateWeb_2HEFf
   .steamtemplates_StandardLogoDimensions_1kh-M,
 .steamtemplates_PinnedTemplateDesktop_2lHUy
   .steamtemplates_StandardLogoDimensions_1kh-M {
@@ -2218,6 +2306,7 @@
 .steamtemplates_AllNotificationsTemplate_3diaj .steamtemplates_Content_1MImw,
 .steamtemplates_StandardTemplateDesktop_4vJlU .steamtemplates_Content_1MImw,
 .steamtemplates_DesktopToastTemplate_NDrdY .steamtemplates_Content_1MImw,
+.steamtemplates_PinnedTemplateWeb_2HEFf .steamtemplates_Content_1MImw,
 .steamtemplates_PinnedTemplateDesktop_2lHUy .steamtemplates_Content_1MImw {
   margin-left: 12px;
   min-width: 0;
@@ -2228,6 +2317,7 @@
 .steamtemplates_AllNotificationsTemplate_3diaj .steamtemplates_Header_2OO1v,
 .steamtemplates_StandardTemplateDesktop_4vJlU .steamtemplates_Header_2OO1v,
 .steamtemplates_DesktopToastTemplate_NDrdY .steamtemplates_Header_2OO1v,
+.steamtemplates_PinnedTemplateWeb_2HEFf .steamtemplates_Header_2OO1v,
 .steamtemplates_PinnedTemplateDesktop_2lHUy .steamtemplates_Header_2OO1v {
   display: flex;
   flex-direction: row;
@@ -2236,6 +2326,7 @@
 .steamtemplates_AllNotificationsTemplate_3diaj .steamtemplates_Icon_17goX,
 .steamtemplates_StandardTemplateDesktop_4vJlU .steamtemplates_Icon_17goX,
 .steamtemplates_DesktopToastTemplate_NDrdY .steamtemplates_Icon_17goX,
+.steamtemplates_PinnedTemplateWeb_2HEFf .steamtemplates_Icon_17goX,
 .steamtemplates_PinnedTemplateDesktop_2lHUy .steamtemplates_Icon_17goX {
   width: 13px;
   height: 13px;
@@ -2247,6 +2338,7 @@
 .steamtemplates_AllNotificationsTemplate_3diaj .steamtemplates_Icon_17goX > svg,
 .steamtemplates_StandardTemplateDesktop_4vJlU .steamtemplates_Icon_17goX > svg,
 .steamtemplates_DesktopToastTemplate_NDrdY .steamtemplates_Icon_17goX > svg,
+.steamtemplates_PinnedTemplateWeb_2HEFf .steamtemplates_Icon_17goX > svg,
 .steamtemplates_PinnedTemplateDesktop_2lHUy .steamtemplates_Icon_17goX > svg {
   width: 13px;
   height: 13px;
@@ -2255,6 +2347,7 @@
 .steamtemplates_AllNotificationsTemplate_3diaj .steamtemplates_Title_1GZ_n,
 .steamtemplates_StandardTemplateDesktop_4vJlU .steamtemplates_Title_1GZ_n,
 .steamtemplates_DesktopToastTemplate_NDrdY .steamtemplates_Title_1GZ_n,
+.steamtemplates_PinnedTemplateWeb_2HEFf .steamtemplates_Title_1GZ_n,
 .steamtemplates_PinnedTemplateDesktop_2lHUy .steamtemplates_Title_1GZ_n {
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   font-style: normal;
@@ -2290,6 +2383,14 @@
   .steamtemplates_StandardNotificationSubText_spHL-:not(
     .steamtemplates_Multiline_g-tIk
   ),
+.steamtemplates_PinnedTemplateWeb_2HEFf
+  .steamtemplates_StandardNotificationDescription_3Zk4B:not(
+    .steamtemplates_Multiline_g-tIk
+  ),
+.steamtemplates_PinnedTemplateWeb_2HEFf
+  .steamtemplates_StandardNotificationSubText_spHL-:not(
+    .steamtemplates_Multiline_g-tIk
+  ),
 .steamtemplates_PinnedTemplateDesktop_2lHUy
   .steamtemplates_StandardNotificationDescription_3Zk4B:not(
     .steamtemplates_Multiline_g-tIk
@@ -2314,6 +2415,10 @@
   .steamtemplates_StandardNotificationDescription_3Zk4B.steamtemplates_Multiline_g-tIk,
 .steamtemplates_DesktopToastTemplate_NDrdY
   .steamtemplates_StandardNotificationSubText_spHL-.steamtemplates_Multiline_g-tIk,
+.steamtemplates_PinnedTemplateWeb_2HEFf
+  .steamtemplates_StandardNotificationDescription_3Zk4B.steamtemplates_Multiline_g-tIk,
+.steamtemplates_PinnedTemplateWeb_2HEFf
+  .steamtemplates_StandardNotificationSubText_spHL-.steamtemplates_Multiline_g-tIk,
 .steamtemplates_PinnedTemplateDesktop_2lHUy
   .steamtemplates_StandardNotificationDescription_3Zk4B.steamtemplates_Multiline_g-tIk,
 .steamtemplates_PinnedTemplateDesktop_2lHUy
@@ -2330,6 +2435,8 @@
   .steamtemplates_StandardNotificationDescription_3Zk4B,
 .steamtemplates_DesktopToastTemplate_NDrdY
   .steamtemplates_StandardNotificationDescription_3Zk4B,
+.steamtemplates_PinnedTemplateWeb_2HEFf
+  .steamtemplates_StandardNotificationDescription_3Zk4B,
 .steamtemplates_PinnedTemplateDesktop_2lHUy
   .steamtemplates_StandardNotificationDescription_3Zk4B {
   color: #fff;
@@ -2342,6 +2449,8 @@
   .steamtemplates_StandardNotificationSubText_spHL-,
 .steamtemplates_DesktopToastTemplate_NDrdY
   .steamtemplates_StandardNotificationSubText_spHL-,
+.steamtemplates_PinnedTemplateWeb_2HEFf
+  .steamtemplates_StandardNotificationSubText_spHL-,
 .steamtemplates_PinnedTemplateDesktop_2lHUy
   .steamtemplates_StandardNotificationSubText_spHL- {
   color: #8b929a;
@@ -2350,6 +2459,7 @@
 .steamtemplates_AllNotificationsTemplate_3diaj .steamtemplates_Count_Ujqy5,
 .steamtemplates_StandardTemplateDesktop_4vJlU .steamtemplates_Count_Ujqy5,
 .steamtemplates_DesktopToastTemplate_NDrdY .steamtemplates_Count_Ujqy5,
+.steamtemplates_PinnedTemplateWeb_2HEFf .steamtemplates_Count_Ujqy5,
 .steamtemplates_PinnedTemplateDesktop_2lHUy .steamtemplates_Count_Ujqy5 {
   background-color: #1a9fff;
   color: #fff;
@@ -2365,6 +2475,7 @@
 .steamtemplates_AllNotificationsTemplate_3diaj .steamtemplates_Timestamp_3L215,
 .steamtemplates_StandardTemplateDesktop_4vJlU .steamtemplates_Timestamp_3L215,
 .steamtemplates_DesktopToastTemplate_NDrdY .steamtemplates_Timestamp_3L215,
+.steamtemplates_PinnedTemplateWeb_2HEFf .steamtemplates_Timestamp_3L215,
 .steamtemplates_PinnedTemplateDesktop_2lHUy .steamtemplates_Timestamp_3L215 {
   font-size: 11px;
   white-space: nowrap;
@@ -2426,6 +2537,7 @@
 .steamtemplates_StandardTemplateDesktop_4vJlU.steamtemplates_Unread_3E3kr:hover {
   background: #3d4450;
 }
+.steamtemplates_PinnedTemplateWeb_2HEFf,
 .steamtemplates_PinnedTemplateDesktop_2lHUy {
   height: 36px;
   padding: 0px;
@@ -2434,12 +2546,11 @@
   border-radius: 2px;
   margin: 0 auto 2px auto;
 }
-.steamtemplates_PinnedTemplateDesktop_2lHUy:last-child {
-  margin-bottom: 8px;
-}
+.steamtemplates_PinnedTemplateWeb_2HEFf:hover,
 .steamtemplates_PinnedTemplateDesktop_2lHUy:hover {
   background: #474f5c;
 }
+.steamtemplates_PinnedTemplateWeb_2HEFf .steamtemplates_Icon_17goX,
 .steamtemplates_PinnedTemplateDesktop_2lHUy .steamtemplates_Icon_17goX {
   width: 18px;
   height: 18px;
@@ -2447,10 +2558,12 @@
   padding-left: 2px;
   color: #dcdedf;
 }
+.steamtemplates_PinnedTemplateWeb_2HEFf .steamtemplates_Icon_17goX > svg,
 .steamtemplates_PinnedTemplateDesktop_2lHUy .steamtemplates_Icon_17goX > svg {
   width: 18px;
   height: 18px;
 }
+.steamtemplates_PinnedTemplateWeb_2HEFf .steamtemplates_PinnedBody_2YrM_,
 .steamtemplates_PinnedTemplateDesktop_2lHUy .steamtemplates_PinnedBody_2YrM_ {
   display: flex;
   flex-direction: row;
@@ -2463,6 +2576,9 @@
   color: #dcdedf;
   font-size: 12px;
   font-weight: 400;
+}
+.steamtemplates_PinnedTemplateDesktop_2lHUy:last-child {
+  margin-bottom: 8px;
 }
 .steamtemplates_AllNotificationsTemplate_3diaj {
   background: rgba(0, 0, 0, 0.2);
@@ -2825,4 +2941,7 @@ svg.steamtemplates_FriendIndicator_suNJh .Outline {
 .steamtemplates_SteamNotificationWrapper_wMxeW:hover
   .steamtemplates_HideButton_1E17b {
   display: block;
+}
+.webtemplates_WebPinnedNotification_2_G4b:last-child > div {
+  margin-bottom: 8px;
 }

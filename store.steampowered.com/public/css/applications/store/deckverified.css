@@ -700,3 +700,159 @@
 .throbber_NewThrobber_tAKvs img {
   width: 100%;
 }
+.controllersupportinfo_ReleaseDateInfoCtn_MjesD {
+  display: flex;
+  flex-direction: row;
+  max-width: 320px;
+}
+.controllersupportinfo_ReleaseDateInfoCtn_MjesD.controllersupportinfo_GameEditCtn_22e4A {
+  max-width: 320px;
+  background: #000;
+  padding: 16px;
+}
+.controllersupportinfo_ReleaseDateInfoCtn_MjesD
+  .controllersupportinfo_ReleaseDateContent_3l1i_ {
+  flex: 1;
+}
+.controllersupportinfo_ReleaseDateInfoCtn_MjesD
+  .controllersupportinfo_EditButton_2Go5e {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+.controllersupportinfo_ReleaseDateInfoCtn_MjesD
+  .controllersupportinfo_EditButton_2Go5e
+  .controllersupportinfo_Spacer_z4dAW {
+  flex: 1;
+  margin-right: 16px;
+}
+.controllersupportinfo_ReleaseDateInfoCtn_MjesD
+  .controllersupportinfo_EditButton_2Go5e
+  .controllersupportinfo_Spacer_z4dAW.controllersupportinfo_Top_2Bw1I {
+  border-right: 1px solid #fff;
+  border-top: 1px solid #fff;
+  margin-bottom: 12px;
+}
+.controllersupportinfo_ReleaseDateInfoCtn_MjesD
+  .controllersupportinfo_EditButton_2Go5e
+  .controllersupportinfo_Spacer_z4dAW.controllersupportinfo_Bottom_3LE9R {
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  margin-top: 12px;
+}
+.controllersupportinfo_ReleaseDateInfoCtn_MjesD
+  .controllersupportinfo_EditButton_2Go5e
+  .controllersupportinfo_EditButtonIcon_314E_ {
+  width: 16px;
+  height: 16px;
+  padding: 8px;
+  background: linear-gradient(to right, #47bfff 5%, #1a8cc2 60%);
+  border-radius: 3px;
+}
+.controllersupportinfo_LabelField_19qBN {
+  margin-bottom: 15px;
+}
+.controllersupportinfo_LabelField_19qBN .controllersupportinfo_Label_3eHSM {
+  font-family: "Motiva Sans", Sans-serif;
+  font-weight: normal;
+  font-size: 12px;
+  color: #808285;
+  margin-bottom: 3px;
+}
+.controllersupportinfo_LabelField_19qBN .controllersupportinfo_BigField_nZkW2 {
+  line-height: 21px;
+  font-size: 20px;
+}
+.controllersupportinfo_LabelField_19qBN .controllersupportinfo_Set_1oP0w {
+  color: #fff;
+}
+.controllersupportinfo_DescText_3-olb {
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 23px;
+  margin-bottom: 23px;
+  color: #dedede;
+}
+.controllersupportinfo_StatusText_3Th0V {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 23px;
+  color: #dedede;
+}
+button.DialogButton.controllersupportinfo_StartWizardButton_lKVYB {
+  width: 140px;
+}
+.controllersupportinfo_ControllerSupportLevelString_x6aCt {
+  color: #8f98a0;
+}
+.controllersupportinfo_InfoRow_1NUmC {
+  display: flex;
+  flex-direction: row;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.controllersupportinfo_LocSection_38m8D {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: rgba(103, 193, 245, 0.1);
+}
+.controllersupportinfo_LocSection_38m8D.controllersupportinfo_HighlightRow_zD5C0 {
+  background: #9d8b5e;
+}
+.controllersupportinfo_LocSection_38m8D.controllersupportinfo_HighlightRow_zD5C0.controllersupportinfo_HighlightRowRed_1_692 {
+  background: #a25024;
+}
+.controllersupportinfo_LocString_5bHD6 {
+  font-weight: 400;
+  font-size: 12px;
+  padding: 6px 8px;
+  height: 100%;
+  color: #66c0f4;
+}
+.controllersupportinfo_LocString_5bHD6.controllersupportinfo_HighlightText_3InqR {
+  color: #82f466;
+}
+.controllersupportinfo_LocString_5bHD6.controllersupportinfo_HighlightRow_zD5C0 {
+  color: #fff;
+}
+.controllersupportinfo_LocString_5bHD6.controllersupportinfo_Personalized_3Q8sx {
+  color: #82f466;
+}
+.controllersupportinfo_ImgSection_28V2e {
+  padding: 0px 6px;
+  display: flex;
+  background: #101822;
+}
+.controllersupportinfo_ImgSection_28V2e.controllersupportinfo_HighlightRow_zD5C0 {
+  background: #7c6e4a;
+}
+.controllersupportinfo_ImgSection_28V2e.controllersupportinfo_HighlightRow_zD5C0.controllersupportinfo_HighlightRowRed_1_692 {
+  background: #8a441e;
+}
+.controllersupportinfo_ImgSection_28V2e > svg {
+  width: 26px;
+  height: 16px;
+  align-self: center;
+}
+.controllersupportinfo_ImgSection_28V2e
+  > svg.controllersupportinfo_SmallerSVG_BOCK_ {
+  height: 20px;
+}
+.controllersupportinfo_ImgSection_28V2e
+  > svg.controllersupportinfo_BiggerSVG_2xOzF {
+  width: 22px;
+  padding-left: 2px;
+  padding-right: 2px;
+  transition: none;
+}
+.controllersupportinfo_PreviewContainer_1F4_s {
+  padding: 5%;
+  background: linear-gradient(90deg, #15202d 0%, #0e141c 100%);
+}
+.controllersupportinfo_StoreSidebarContainer_2Z38- {
+  margin-top: 12px;
+}

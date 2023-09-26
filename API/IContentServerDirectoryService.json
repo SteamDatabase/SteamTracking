@@ -35,6 +35,12 @@
                     "type": "string",
                     "optional": true,
                     "description": "client public ipv6 address if it knows it"
+                },
+                {
+                    "name": "current_connections",
+                    "type": "{message}",
+                    "optional": false,
+                    "description": "what sources is the client currently using"
                 }
             ]
         },

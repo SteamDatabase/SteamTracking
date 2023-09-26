@@ -3,6 +3,15 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [556],
   {
+    50711: (e) => {
+      e.exports = {
+        avatarHolder: "steamavatar_avatarHolder_1YGAH",
+        avatarStatus: "steamavatar_avatarStatus_1yIzy",
+        avatar: "steamavatar_avatar_1p_Qr",
+        avatarFrame: "steamavatar_avatarFrame_3atbN",
+        avatarFrameImg: "steamavatar_avatarFrameImg_338kJ",
+      };
+    },
     88090: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
@@ -14,299 +23,608 @@
         Y: "discoveryqueueappwidget_Y_1FD7r",
       };
     },
-    66294: (e, t, n) => {
+    66294: (e, t, a) => {
       "use strict";
-      n.d(t, { p: () => u });
-      var i = n(33940),
-        r = n(89526),
-        c = n(44026),
-        o = n(17589),
-        s = n(4306),
-        a = n(32765),
-        l = n(94952);
-      function u(e) {
-        const { children: t, navTreeRef: n } = e,
-          u = (0, i._T)(e, ["children", "navTreeRef"]),
-          d = r.useRef(),
-          g = (0, s.BE)(d, n),
-          p = (0, a.id)(),
-          A = window.__virtual_keyboard_client;
+      a.d(t, { p: () => c });
+      var r = a(33940),
+        i = a(89526),
+        s = a(44026),
+        n = a(17589),
+        o = a(4306),
+        A = a(32765),
+        l = a(94952);
+      function c(e) {
+        const { children: t, navTreeRef: a } = e,
+          c = (0, r._T)(e, ["children", "navTreeRef"]),
+          m = i.useRef(),
+          u = (0, o.BE)(m, a),
+          p = (0, A.id)(),
+          g = window.__virtual_keyboard_client;
         if (
-          ((0, r.useEffect)(() => {
-            l.Wz.SetHookFactory(() => A);
-          }, [A]),
+          ((0, i.useEffect)(() => {
+            l.Wz.SetHookFactory(() => g);
+          }, [g]),
           p)
         ) {
           const e = window.__nav_tree_root;
-          return r.createElement(
-            c.Fe,
-            Object.assign({}, u, {
-              navTreeRef: g,
+          return i.createElement(
+            s.Fe,
+            Object.assign({}, c, {
+              navTreeRef: u,
               secondary: !0,
               parentEmbeddedNavTree: e,
             }),
-            r.createElement(o.O, null, t),
+            i.createElement(n.O, null, t),
           );
         }
-        return r.createElement(r.Fragment, null, t);
+        return i.createElement(i.Fragment, null, t);
       }
     },
-    5029: (e, t, n) => {
+    68943: (e, t, a) => {
       "use strict";
-      n.d(t, {
-        Ar: () => l,
-        Wo: () => u,
-        i9: () => s,
-        ks: () => c,
-        nQ: () => a,
-        ni: () => d,
+      a.d(t, { o: () => p, _1: () => h, DY: () => d, vV: () => g });
+      var r = a(33940),
+        i = a(89526),
+        s = a(88464),
+        n = a(11301),
+        o = a(19304),
+        A = a(32765),
+        l = a(87178);
+      const c =
+        a.p +
+        "images/applications/store/avatar_default_full.jpg?v=valveisgoodatcaching";
+      var m = a(50711),
+        u = a.n(m);
+      class p extends i.Component {
+        render() {
+          const e = this.props,
+            {
+              strAvatarURL: t,
+              size: a,
+              className: s,
+              statusStyle: n,
+              statusPosition: A,
+              children: m,
+            } = e,
+            p = (0, r._T)(e, [
+              "strAvatarURL",
+              "size",
+              "className",
+              "statusStyle",
+              "statusPosition",
+              "children",
+            ]),
+            g = [];
+          return (
+            t && g.push(t),
+            g.push(
+              (function (e) {
+                switch (e) {
+                  case "X-Small":
+                  case "Small":
+                    return "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gOTAK/9sAQwADAgIDAgIDAwMDBAMDBAUIBQUEBAUKBwcGCAwKDAwLCgsLDQ4SEA0OEQ4LCxAWEBETFBUVFQwPFxgWFBgSFBUU/9sAQwEDBAQFBAUJBQUJFA0LDRQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQU/8AAEQgAIAAgAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A/P4mW5nmllmeSR3LMzMSSc1a07R73V72KzsILi9u5TiOC2RpJHPoFGSarQ/ef6n+de4fAn9oaL4D+DfGX9i6Uf8AhO9XSKDT9eZY3WxiDZcBGByTkn0JCZBxQB41qeiX+iXslnqNtdWF3H9+3uo2jkX6q2CKpgy208MsUzxyI4ZWViCDmvsr9rrUdT1j9nb4T6h8RBbH4qXUs0zMsSxXJ04hivnKoAU5MPGBg7uM7q+NpvvJ9R/OgAh+8/1P867T4POI/iz4Mc6U+u7NZtG/suPbuu8TKfKG4hct93njnmuKIltp5opYXjkRyrKykEHNWbDVbvSr63vbKaezvLeRZYbi3ZkkidTlWVhyCCMgjpQB6l+1F411nx58dPFWpa5a3mnXaXP2ZNOvXVpLKNBhYflJUY5PB5JJ6k15LN95PqP51a1PWr7WtQnvtRuLm/vrhzJNc3TtJLIx6lmbJJ9zVQCW5nhiiheSR3CqqqSSc0Af/9k=";
+                  case "Medium":
+                  case "MediumLarge":
+                    return "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gODAK/9sAQwAGBAUGBQQGBgUGBwcGCAoQCgoJCQoUDg8MEBcUGBgXFBYWGh0lHxobIxwWFiAsICMmJykqKRkfLTAtKDAlKCko/9sAQwEHBwcKCAoTCgoTKBoWGigoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgo/8AAEQgAQABAAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A8Inmk8+T94/3j/EfWmedJ/z0f/vo0T/6+T/eP86ZQA/zpP8Ano//AH0aPOk/56P/AN9GmVo6Loeq65M0Wj6ddXrr94QRF9v1I6fjQBR86T/no/8A30aPOk/56P8A99GtHW/Dus6GV/tjS7yyD8K00RVW+h6GsugB/nSf89H/AO+jT4JpPPj/AHj/AHh/EfWoafB/r4/94fzoAJ/9fJ/vH+dMp8/+vk/3j/OmUAXdE099W1mw06Jgsl3PHApPYswUH9a+qPF3iHSPhF4S0+003TxK0hMcEAbZvIA3SO2OvIz6k18nW88ttcRz28jxTRMHSRGKsrA5BBHQg1b1TWdT1fy/7V1G8vfLzs+0TNJtz1xknHQUAfUXw+8c6Z8UdN1HS9V0xIpUTM1s7eYkiE43KcAgg/lxg180+NtEHhzxZqmkqxdLWcojHqUPK598EV9CfBbwpF4G8J3fiLxA4trm5hEsnmceRCOQD/tHqR9B1r568a63/wAJH4r1TVghRLqYuinqE6KD74AoAxafB/r4/wDeH86ZT4P9fH/vD+dABP8A6+T/AHj/ADplPn/18n+8f50ygArt/gtpltq/xK0e2vYxJArPMUYZDFEZhn2yBXEV0/w203VNX8YWdloOoHTtQkWQx3IZl2gISeV55AI/GgD1H9pvxPdi/s/DcDGOz8pbqfHWRizBQfYbc/U+1eD12PxW0fWtE8Tpa+I9UOqXpt0cTl2bCEthctz1B/OuOoAKfB/r4/8AeH86ZT4P9fH/ALw/nQAT/wCvk/3j/OmVNPDJ58n7t/vH+E+tM8mT/nm//fJoAZV7Q9Xv9C1KLUNJuGtryMEJIoBIyCD1BHQmqnkyf883/wC+TR5Mn/PN/wDvk0AaHiHXtT8RX4vdau2u7oIIxIygHaCSBwB6msyn+TJ/zzf/AL5NHkyf883/AO+TQAynwf6+P/eH86PJk/55v/3yafBDJ58f7t/vD+E+tAH/2Q==";
+                  case "Large":
+                  case "X-Large":
+                  case "FillArea":
+                    return c;
+                }
+              })(a),
+            ),
+            i.createElement(
+              "div",
+              Object.assign(
+                {
+                  className: (0, o.Z)(
+                    u().avatarHolder,
+                    "avatarHolder",
+                    "no-drag",
+                    a || "Medium",
+                    s,
+                  ),
+                },
+                p,
+              ),
+              i.createElement("div", {
+                className: (0, o.Z)(u().avatarStatus, "avatarStatus", A),
+                style: n,
+              }),
+              i.createElement(l.j, {
+                className: (0, o.Z)(u().avatar, "avatar"),
+                rgSources: g,
+                draggable: !1,
+              }),
+              m,
+            )
+          );
+        }
+      }
+      let g = class extends i.Component {
+        render() {
+          const e = this.props,
+            { persona: t, size: a, animatedAvatar: s, className: l } = e,
+            c = (0, r._T)(e, [
+              "persona",
+              "size",
+              "animatedAvatar",
+              "className",
+            ]);
+          let m = "";
+          return (
+            s && s.image_small && 0 != s.image_small.length
+              ? (m = A.De.MEDIA_CDN_COMMUNITY_URL + "images/" + s.image_small)
+              : t &&
+                ((m = t.avatar_url_medium),
+                "Small" == a || "X-Small" == a
+                  ? (m = t.avatar_url)
+                  : ("Large" != a && "X-Large" != a && "FillArea" != a) ||
+                    (m = t.avatar_url_full)),
+            i.createElement(
+              p,
+              Object.assign(
+                {
+                  strAvatarURL: m,
+                  size: a,
+                  className: (0, o.Z)((0, n.sB)(t), l),
+                },
+                c,
+              ),
+            )
+          );
+        }
+      };
+      g = (0, r.gn)([s.Pi], g);
+      const d = (0, s.Pi)((e) => {
+        const { profileItem: t, className: a, bDisableAnimation: s } = e,
+          n = (0, r._T)(e, ["profileItem", "className", "bDisableAnimation"]);
+        if (!t || !t.image_small || 0 == t.image_small.length) return null;
+        let l = s ? t.image_large : t.image_small;
+        return (
+          l || (l = t.image_small),
+          l.startsWith("https://") ||
+            (l = A.De.MEDIA_CDN_COMMUNITY_URL + "images/" + l),
+          i.createElement(
+            "div",
+            Object.assign(
+              { className: (0, o.Z)(u().avatarFrame, a, "avatarFrame") },
+              n,
+            ),
+            i.createElement("img", { className: u().avatarFrameImg, src: l }),
+          )
+        );
       });
-      var i = n(89526),
-        r = n(59934);
-      function c(e, t) {
-        let n;
+      let h = class extends i.Component {
+        constructor(e) {
+          super(e),
+            (this.state = { bAnimate: "None" != this.props.loopDuration }),
+            (this.m_timer = 0);
+        }
+        componentDidMount() {
+          this.props.bParentHovered || this.SetupAnimationTimer();
+        }
+        SetupAnimationTimer() {
+          let e = 0;
+          switch (this.props.loopDuration) {
+            case "Short":
+              e = 2500;
+              break;
+            case "Medium":
+              e = 5e3;
+              break;
+            case "Long":
+              e = 1e4;
+          }
+          0 != e &&
+            (this.setState({ bAnimate: "None" != this.props.loopDuration }),
+            (this.m_timer = window.setTimeout(
+              () => this.setState({ bAnimate: !1 }),
+              e,
+            )));
+        }
+        StopAnimationTimer() {
+          this.m_timer &&
+            (window.clearTimeout(this.m_timer), (this.m_timer = 0));
+        }
+        onHover() {
+          this.SetupAnimationTimer();
+        }
+        componentWillUnmount() {
+          this.StopAnimationTimer();
+        }
+        componentDidUpdate(e) {
+          this.props.loopDuration != e.loopDuration &&
+            ("None" == this.props.loopDuration
+              ? (this.setState({ bAnimate: !1 }), this.StopAnimationTimer())
+              : "Infinite" == this.props.loopDuration
+              ? (this.setState({ bAnimate: !0 }), this.StopAnimationTimer())
+              : (this.setState({ bAnimate: !0 }), this.SetupAnimationTimer())),
+            this.props.bParentHovered != e.bParentHovered &&
+              (this.props.bParentHovered &&
+              "None" != this.props.loopDuration &&
+              "Infinite" != this.props.loopDuration
+                ? (this.setState({ bAnimate: !0 }), this.StopAnimationTimer())
+                : this.state.bAnimate && this.SetupAnimationTimer());
+        }
+        render() {
+          let e = this.props,
+            {
+              loopDuration: t,
+              animatedAvatar: a,
+              avatarFrame: s,
+              children: n,
+              style: o,
+              bLimitProfileFrameAnimationTime: A,
+              bParentHovered: l,
+            } = e,
+            c = (0, r._T)(e, [
+              "loopDuration",
+              "animatedAvatar",
+              "avatarFrame",
+              "children",
+              "style",
+              "bLimitProfileFrameAnimationTime",
+              "bParentHovered",
+            ]);
+          return (
+            c.onClick &&
+              (o = Object.assign(Object.assign({}, o), { cursor: "pointer" })),
+            this.state.bAnimate || (a = null),
+            i.createElement(
+              "div",
+              {
+                onMouseEnter: () =>
+                  this.setState({
+                    bAnimate: "None" != this.props.loopDuration,
+                  }),
+                onMouseLeave: () => this.SetupAnimationTimer(),
+              },
+              i.createElement(
+                g,
+                Object.assign({ animatedAvatar: a }, c),
+                n,
+                i.createElement(d, {
+                  profileItem: s,
+                  bDisableAnimation: A && !this.state.bAnimate,
+                }),
+              ),
+            )
+          );
+        }
+      };
+      h = (0, r.gn)([s.Pi], h);
+    },
+    5029: (e, t, a) => {
+      "use strict";
+      a.d(t, {
+        Ar: () => l,
+        Wo: () => c,
+        i9: () => o,
+        ks: () => s,
+        nQ: () => A,
+        ni: () => m,
+      });
+      var r = a(89526),
+        i = a(59934);
+      function s(e, t) {
+        let a;
         "string" == typeof e
-          ? (n = e)
+          ? (a = e)
           : "location" in e
-          ? (n = e.location.search)
-          : "search" in e && (n = e.search);
-        const i = new URLSearchParams(n.substring(1));
-        if (i.has(t)) {
-          const e = i.getAll(t);
+          ? (a = e.location.search)
+          : "search" in e && (a = e.search);
+        const r = new URLSearchParams(a.substring(1));
+        if (r.has(t)) {
+          const e = r.getAll(t);
           return e[e.length - 1];
         }
       }
-      const o = (e) => null != e;
-      function s(e, t, n, i = !1) {
-        const r = new URLSearchParams(e.location.search.substring(1));
-        r.delete(t),
-          o(n) && r.append(t, n),
-          i
-            ? e.replace(`?${r.toString()}`, Object.assign({}, e.location.state))
-            : e.push(`?${r.toString()}`);
+      const n = (e) => null != e;
+      function o(e, t, a, r = !1) {
+        const i = new URLSearchParams(e.location.search.substring(1));
+        i.delete(t),
+          n(a) && i.append(t, a),
+          r
+            ? e.replace(`?${i.toString()}`, Object.assign({}, e.location.state))
+            : e.push(`?${i.toString()}`);
       }
-      function a(e, t, n) {
-        s(e, t, n, !0);
+      function A(e, t, a) {
+        o(e, t, a, !0);
       }
       function l(e, t) {
-        const n = (0, r.k6)(),
-          a = (0, r.TH)(),
-          l = (0, i.useMemo)(() => {
-            const n = c(a.search, e);
-            return o(n)
-              ? o(t)
+        const a = (0, i.k6)(),
+          A = (0, i.TH)(),
+          l = (0, r.useMemo)(() => {
+            const a = s(A.search, e);
+            return n(a)
+              ? n(t)
                 ? "boolean" == typeof t
-                  ? t.constructor("false" !== n)
-                  : t.constructor(n)
-                : n
+                  ? t.constructor("false" !== a)
+                  : t.constructor(a)
+                : a
               : t;
-          }, [a.search, e, t]),
-          u = (0, i.useCallback)(
+          }, [A.search, e, t]),
+          c = (0, r.useCallback)(
             (t) => {
-              s(n, e, o(t) ? String(t) : null);
+              o(a, e, n(t) ? String(t) : null);
             },
-            [n, e],
+            [a, e],
           );
-        return [l, u];
+        return [l, c];
       }
-      function u(e, t, n = !1) {
-        const i = new URLSearchParams(e.location.search.substring(1));
+      function c(e, t, a = !1) {
+        const r = new URLSearchParams(e.location.search.substring(1));
         for (const e in t)
           if (t.hasOwnProperty(e)) {
-            const n = t[e];
-            i.delete(e), o(n) && i.append(e, n);
+            const a = t[e];
+            r.delete(e), n(a) && r.append(e, a);
           }
-        n
-          ? e.replace(`?${i.toString()}`, Object.assign({}, e.location.state))
-          : e.push(`?${i.toString()}`);
+        a
+          ? e.replace(`?${r.toString()}`, Object.assign({}, e.location.state))
+          : e.push(`?${r.toString()}`);
       }
-      function d(e, t) {
-        u(e, t, !0);
-      }
-    },
-    93908: (e, t, n) => {
-      "use strict";
-      n.d(t, { Mr: () => s, tk: () => a });
-      var i = n(89526),
-        r = n(701),
-        c = n(16826),
-        o = n(32765);
-      function s() {
-        return i.createElement(r.MrB, null);
-      }
-      function a() {
-        return (0, o.id)()
-          ? i.createElement(c.tkI, null)
-          : i.createElement(r.tkI, null);
+      function m(e, t) {
+        c(e, t, !0);
       }
     },
-    89350: (e, t, n) => {
+    93908: (e, t, a) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => m });
-      var i = n(89526),
-        r = n(66294),
-        c = n(51438),
-        o = n(83145),
-        s = n(82588),
-        a = n(25871),
-        l = n(5029),
-        u = n(701),
-        d = n(49330),
-        g = n(35388),
-        p = n(14826),
-        A = n(88090),
-        v = n.n(A),
-        E = n(32765);
-      function m(e) {
+      a.d(t, { Mr: () => o, tk: () => A });
+      var r = a(89526),
+        i = a(701),
+        s = a(16826),
+        n = a(32765);
+      function o() {
+        return r.createElement(i.MrB, null);
+      }
+      function A() {
+        return (0, n.id)()
+          ? r.createElement(s.tkI, null)
+          : r.createElement(i.j5H, null);
+      }
+    },
+    87178: (e, t, a) => {
+      "use strict";
+      a.d(t, { j: () => n });
+      var r = a(33940),
+        i = a(89526),
+        s = a(4306);
+      class n extends i.Component {
+        constructor(e) {
+          super(e),
+            (this.m_refImage = i.createRef()),
+            (this.state = { nImage: 0 });
+        }
+        componentDidUpdate(e) {
+          JSON.stringify(this.props.rgSources) != JSON.stringify(e.rgSources) &&
+            this.setState({ nImage: 0 });
+        }
+        get src() {
+          let e = "";
+          return (
+            this.props.rgSources &&
+              this.props.rgSources.length > this.state.nImage &&
+              (e = this.props.rgSources[this.state.nImage]),
+            e ||
+              (console.warn(
+                "MultiSourceImage created with no image src",
+                this.props,
+                this.state.nImage,
+              ),
+              (e =
+                "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=")),
+            e
+          );
+        }
+        get imgRef() {
+          return this.m_refImage;
+        }
+        OnImageError(e) {
+          this.props.onIncrementalError &&
+            this.props.onIncrementalError(
+              e,
+              this.props.rgSources[this.state.nImage],
+              this.state.nImage,
+            );
+          let t = this.state.nImage + 1;
+          t >= this.props.rgSources.length &&
+            this.props.onError &&
+            this.props.onError(e),
+            t < this.props.rgSources.length && this.setState({ nImage: t });
+        }
+        render() {
+          const e = this.props,
+            { src: t, rgSources: a, onIncrementalError: s, onError: n } = e,
+            o = (0, r._T)(e, [
+              "src",
+              "rgSources",
+              "onIncrementalError",
+              "onError",
+            ]),
+            A = this.src;
+          return i.createElement(
+            "img",
+            Object.assign({ src: A, ref: this.m_refImage }, o, {
+              onError: this.OnImageError,
+            }),
+          );
+        }
+      }
+      (0, r.gn)([s.ak], n.prototype, "OnImageError", null);
+    },
+    89350: (e, t, a) => {
+      "use strict";
+      a.r(t), a.d(t, { default: () => B });
+      var r = a(89526),
+        i = a(66294),
+        s = a(51438),
+        n = a(74158),
+        o = a(83145),
+        A = a(82588),
+        l = a(25871),
+        c = a(5029),
+        m = a(701),
+        u = a(49330),
+        p = a(35388),
+        g = a(14826),
+        d = a(88090),
+        h = a.n(d),
+        E = a(32765);
+      function B(e) {
         const { appID: t } = e,
-          n = (0, g.g)(),
-          [A] = (0, l.Ar)("inqueue", "0"),
-          [m, D] = (0, i.useState)(!1),
-          [y, b] = (0, i.useState)(!1),
-          [R] = (0, a.vs)(t, { include_assets: !0 }),
-          h = (0, o.L)(),
-          N = i.useRef();
-        i.useEffect(() => {
+          a = (0, p.g)(),
+          [d] = (0, c.Ar)("inqueue", "" + n.lV.k_EStoreDiscoveryQueueTypeNew),
+          [B, Q] = (0, r.useState)(!1),
+          [v, S] = (0, r.useState)(!1),
+          [D] = (0, l.vs)(t, { include_assets: !0 }),
+          C = (0, o.L)(),
+          I = r.useRef();
+        r.useEffect(() => {
           var e;
-          return null === (e = N.current) || void 0 === e
+          return null === (e = I.current) || void 0 === e
             ? void 0
             : e.Activate(!0);
         }, []);
-        const S = (0, E.id)(),
-          { eStoreDiscoveryQueueType: M, storePageFilter: w } =
-            i.useMemo(() => {
-              if ((null == A ? void 0 : A.length) > 0) {
-                const e = A.split("_"),
+        const T = (0, E.id)(),
+          { eStoreDiscoveryQueueType: f, storePageFilter: N } =
+            r.useMemo(() => {
+              if ((null == d ? void 0 : d.length) > 0) {
+                const e = d.split("_"),
                   t = Number(e[0]);
-                let n;
+                let a;
                 return (
-                  e.length > 1 && (n = (0, s.M_)(e[1])),
-                  { eStoreDiscoveryQueueType: t, storePageFilter: n }
+                  e.length > 1 && (a = (0, A.M_)(e[1])),
+                  { eStoreDiscoveryQueueType: t, storePageFilter: a }
                 );
               }
-              return { eStoreDiscoveryQueueType: 0, storePageFilter: void 0 };
-            }, [A]),
-          f = i.useCallback(() => {
-            b(!0);
+              return {
+                eStoreDiscoveryQueueType: n.lV.k_EStoreDiscoveryQueueTypeNew,
+                storePageFilter: void 0,
+              };
+            }, [d]),
+          R = r.useCallback(() => {
+            S(!0);
           }, []),
-          Q = i.useCallback(() => {
-            D(!0);
+          b = r.useCallback(() => {
+            Q(!0);
           }, []),
-          Z = (0, s.ZP)(M, w);
-        return n && R
-          ? y
+          y = (0, A.ZP)(f, N);
+        return a && D
+          ? v
             ? null
-            : i.createElement(
-                r.p,
+            : r.createElement(
+                i.p,
                 {
-                  NavigationManager: h,
-                  navTreeRef: N,
+                  NavigationManager: C,
+                  navTreeRef: I,
                   navID: "DiscoveryQueueAppWidget",
                 },
-                i.createElement(
-                  c.s,
+                r.createElement(
+                  s.s,
                   {
                     focusable: !0,
-                    className: v().DiscoveryQueueWidgetCtn,
-                    onSecondaryButton: f,
-                    onOKButton: Q,
-                    onOKActionDescription: (0, p.Xx)(
+                    className: h().DiscoveryQueueWidgetCtn,
+                    onSecondaryButton: R,
+                    onOKButton: b,
+                    onOKActionDescription: (0, g.Xx)(
                       "#DiscoveryQueue_ResumeWizard",
                     ),
-                    onSecondaryActionDescription: (0, p.Xx)("#Button_Close"),
+                    onSecondaryActionDescription: (0, g.Xx)("#Button_Close"),
                   },
-                  i.createElement("img", {
-                    className: v().WidgetCapsule,
+                  r.createElement("img", {
+                    className: h().WidgetCapsule,
                     src:
-                      null == R ? void 0 : R.GetAssets().GetSmallCapsuleURL(),
+                      null == D ? void 0 : D.GetAssets().GetSmallCapsuleURL(),
                   }),
-                  i.createElement(
+                  r.createElement(
                     "div",
-                    { onClick: Q, className: v().WidgetText },
-                    (0, p.Xx)("#DiscoveryQueue_ResumeWizard"),
-                    (null == Z ? void 0 : Z.length) > 0 && ": " + Z,
+                    { onClick: b, className: h().WidgetText },
+                    (0, g.Xx)("#DiscoveryQueue_ResumeWizard"),
+                    (null == y ? void 0 : y.length) > 0 && ": " + y,
                   ),
-                  !S &&
-                    i.createElement(
+                  !T &&
+                    r.createElement(
                       "div",
-                      { className: v().CloseButton, onClick: f },
-                      i.createElement(u.X, null),
+                      { className: h().CloseButton, onClick: R },
+                      r.createElement(m.X, null),
                     ),
-                  m &&
-                    i.createElement(d.MS, {
+                  B &&
+                    r.createElement(u.MS, {
                       includeAppID: t,
-                      bWizardVisible: m,
-                      fnCloseModal: () => D(!1),
-                      eStoreDiscoveryQueueType: M,
-                      storePageFilter: w,
+                      bWizardVisible: B,
+                      fnCloseModal: () => Q(!1),
+                      eStoreDiscoveryQueueType: f,
+                      storePageFilter: N,
                     }),
                 ),
               )
           : null;
       }
     },
-    77091: (e, t, n) => {
+    77091: (e, t, a) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => d });
-      var i = n(89526),
-        r = n(14826),
-        c = n(49330),
-        o = n(35388),
-        s = n(51438),
-        a = n(32765),
-        l = n(99307),
-        u = n(57742);
-      function d(e) {
+      a.r(t), a.d(t, { default: () => u });
+      var r = a(89526),
+        i = a(74158),
+        s = a(14826),
+        n = a(49330),
+        o = a(35388),
+        A = a(51438),
+        l = a(32765),
+        c = a(99307),
+        m = a(57742);
+      function u(e) {
         const t = (0, o.g)(),
-          [n, d] = (0, i.useState)(!1),
-          g = i.useCallback(() => {
-            a.L7.logged_in
-              ? d(!0)
-              : (0, u.AM)(
-                  i.createElement(l.JX, {
+          [a, u] = (0, r.useState)(!1),
+          p = r.useCallback(() => {
+            l.L7.logged_in
+              ? u(!0)
+              : (0, m.AM)(
+                  r.createElement(c.JX, {
                     onOK: () => {
                       window.location.href = `${
-                        a.De.STORE_BASE_URL
+                        l.De.STORE_BASE_URL
                       }login?redir=${encodeURIComponent(
                         document.location.href,
                       )}`;
                     },
-                    strOKButtonText: (0, r.Xx)(
+                    strOKButtonText: (0, s.Xx)(
                       "#DiscoveryQueue_Error_Login_Title",
                     ),
-                    strDescription: (0, r.Xx)("#DiscoveryQueue_Error_Login"),
-                    strTitle: (0, r.Xx)("#DiscoveryQueue_Error_Login_Title"),
+                    strDescription: (0, s.Xx)("#DiscoveryQueue_Error_Login"),
+                    strTitle: (0, s.Xx)("#DiscoveryQueue_Error_Login_Title"),
                   }),
                   window,
                 );
           }, []);
         return t
-          ? i.createElement(
-              s.s,
+          ? r.createElement(
+              A.s,
               null,
-              i.createElement(
+              r.createElement(
                 "a",
-                { onClick: g, className: "experiment-button" },
-                (0, r.Xx)("#DiscoveryQueue_OpenWizard"),
+                { onClick: p, className: "experiment-button" },
+                (0, s.Xx)("#DiscoveryQueue_OpenWizard"),
               ),
-              n &&
-                i.createElement(c.MS, {
-                  bWizardVisible: n,
-                  fnCloseModal: () => d(!1),
-                  eStoreDiscoveryQueueType: 0,
+              a &&
+                r.createElement(n.MS, {
+                  bWizardVisible: a,
+                  fnCloseModal: () => u(!1),
+                  eStoreDiscoveryQueueType: i.lV.k_EStoreDiscoveryQueueTypeNew,
                 }),
             )
-          : i.createElement(
+          : r.createElement(
               "div",
               { className: "experiment-button-placeholder" },
               " ",
             );
       }
     },
-    45718: (e, t, n) => {
+    45718: (e, t, a) => {
       "use strict";
-      n.d(t, { Z: () => i });
-      const i =
+      a.d(t, { Z: () => r });
+      const r =
         "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QUQ5NEMwOTYzRDc4MTFFQUExREZEODRBMDBCNjdENTEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QUQ5NEMwOTczRDc4MTFFQUExREZEODRBMDBCNjdENTEiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpBRDk0QzA5NDNENzgxMUVBQTFERkQ4NEEwMEI2N0Q1MSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpBRDk0QzA5NTNENzgxMUVBQTFERkQ4NEEwMEI2N0Q1MSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Po/TXacAAABMSURBVHjaYvz//z8DNQHjyDMQDICGJgDx3f/kA5DeBJhh8f+pB+JBXr4DNFeZSp69CzLwP7UjZdTAkWAgVdMh1XMK1fPyCCwPAQIMAKf/Y+3dveJlAAAAAElFTkSuQmCC";
     },
   },

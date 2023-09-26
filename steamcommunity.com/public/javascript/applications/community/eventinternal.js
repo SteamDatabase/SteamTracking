@@ -191,7 +191,7 @@
     },
     53376: (e, t, a) => {
       "use strict";
-      a.r(t), a.d(t, { default: () => X });
+      a.r(t), a.d(t, { default: () => Q });
       var n = a(96927),
         r = a(13394),
         o = a(33940),
@@ -200,26 +200,27 @@
         s = a(50265),
         c = a(88464),
         d = a(89526),
-        m = a(47165),
-        u = a(16468),
-        g = a(57605),
-        p = a(99307),
-        h = a(57742),
-        v = a(701),
+        m = a(42735),
+        u = a(47165),
+        g = a(16468),
+        p = a(57605),
+        h = a(99307),
+        v = a(57742),
+        _ = a(701),
         E = a(3301),
-        _ = a(60161),
-        f = a(14826),
-        S = a(23217),
-        I = a(32765),
-        C = a(29640),
-        D = a(40103),
-        A = a(74831),
-        M = a(69159),
-        B = a(17547),
-        T = a(35266),
-        b = a(81349),
-        w = a(81609);
-      const G = (e) => {
+        f = a(60161),
+        S = a(14826),
+        I = a(23217),
+        C = a(32765),
+        D = a(29640),
+        A = a(40103),
+        M = a(74831),
+        B = a(69159),
+        T = a(17547),
+        b = a(35266),
+        w = a(81349),
+        G = a(81609);
+      const L = (e) => {
           const {
               strLabel: t,
               strToolTip: a,
@@ -252,10 +253,10 @@
                         const e = i().CancelToken.source();
                         l.current = e.cancel;
                         try {
-                          const a = yield A.bq.SearchCreatorHomeStore(t, r, e);
+                          const a = yield M.bq.SearchCreatorHomeStore(t, r, e);
                           if (e.token.reason) return;
-                          s.current = (0, D.yV)(
-                            d.createElement(L, { list: a, fnSetCurator: n }),
+                          s.current = (0, A.yV)(
+                            d.createElement(P, { list: a, fnSetCurator: n }),
                             m.current.element,
                             {
                               bOverlapHorizontal: !0,
@@ -266,7 +267,7 @@
                           );
                         } catch (t) {
                           if (e.token.reason) return;
-                          const a = (0, S.l)(t);
+                          const a = (0, I.l)(t);
                           console.log(
                             "SearchForCurator.SearchCreatorHomeStore error " +
                               a.strErrorMsg,
@@ -280,9 +281,9 @@
             [n, r],
           );
           return d.createElement(
-            B.SV,
+            T.SV,
             null,
-            d.createElement(g.II, {
+            d.createElement(p.II, {
               type: "text",
               label: t,
               onChange: u,
@@ -294,14 +295,14 @@
             }),
           );
         },
-        L = (e) => {
+        P = (e) => {
           const { list: t, fnSetCurator: a } = e;
           return d.createElement(
-            M.xV,
-            { className: w.SearchResults },
+            B.xV,
+            { className: G.SearchResults },
             t.map((e) =>
               d.createElement(
-                M.Zo,
+                B.Zo,
                 {
                   key: "curatorresult" + e.GetClanAccountID(),
                   onSelected: () => a(e),
@@ -311,35 +312,35 @@
                   { style: { display: "flex", alignItems: "center" } },
                   d.createElement(
                     "div",
-                    { className: T.GameImageContainer },
+                    { className: b.GameImageContainer },
                     d.createElement("img", {
                       src: e.GetAvatarURLFullSize(),
-                      className: T.AvatarImage,
+                      className: b.AvatarImage,
                     }),
                   ),
-                  (0, b.HA)(e.GetName()),
+                  (0, w.HA)(e.GetName()),
                 ),
               ),
             ),
           );
         };
-      var P = a(19288);
+      var R = a(19288);
       const y = (0, c.Pi)((e) => {
           const t = (function () {
-            const [e, t] = d.useState(!F.Get().BHasLoadCompleted());
+            const [e, t] = d.useState(!H.Get().BHasLoadCompleted());
             return (
               d.useEffect(() => {
-                F.Get().BHasLoadCompleted() ||
-                  F.Get()
+                H.Get().BHasLoadCompleted() ||
+                  H.Get()
                     .LoadSalePageMigrationInfo()
                     .finally(() => t(!1));
               }, []),
-              e ? void 0 : F.Get().GetMigrationRecords()
+              e ? void 0 : H.Get().GetMigrationRecords()
             );
           })();
           if (!t)
             return d.createElement(E.V, {
-              string: (0, f.Xx)("#Loading"),
+              string: (0, S.Xx)("#Loading"),
               position: "center",
               size: "medium",
             });
@@ -363,77 +364,77 @@
               null,
               "For unmigrated or migrated but unpublished pages, you can view the existing sale page using a not logged in browser (or incognito mode). You can see the new sale page being built on the store if logged in using a Valve Admin account.",
             ),
-            d.createElement(R, {
+            d.createElement(N, {
               strName: "Unmigrated Franchises",
               records: n,
             }),
-            d.createElement(R, {
+            d.createElement(N, {
               strName: "Unmigrated Generic Sale PAges",
               records: r,
               bHideByDefault: !0,
             }),
-            d.createElement(R, { strName: "Migrated but Hidden", records: o }),
-            d.createElement(R, {
+            d.createElement(N, { strName: "Migrated but Hidden", records: o }),
+            d.createElement(N, {
               strName: "Migrated and Visible",
               records: l,
               bHideByDefault: !0,
             }),
           );
         }),
-        R = (e) => {
+        N = (e) => {
           const { strName: t, records: a, bHideByDefault: n } = e,
             [r, o] = (0, d.useState)(n);
           return d.createElement(
             "div",
-            { className: C.SectionContainer },
+            { className: D.SectionContainer },
             d.createElement(
               "h2",
-              { className: C.SectionTitle, onDoubleClick: () => o(!r) },
+              { className: D.SectionTitle, onDoubleClick: () => o(!r) },
               t,
               " (",
               a.length,
               ")",
               d.createElement("span", null, " "),
               d.createElement(
-                g.zx,
+                p.zx,
                 { onClick: () => o(!r) },
-                r ? d.createElement(v.YqJ, null) : d.createElement(v.gR, null),
+                r ? d.createElement(_.YqJ, null) : d.createElement(_.gR, null),
               ),
             ),
             d.createElement("hr", null),
             Boolean(r)
               ? d.createElement(
-                  g.zx,
+                  p.zx,
                   { onClick: () => o(!1) },
-                  (0, f.Xx)("#Sale_ShowContents"),
+                  (0, S.Xx)("#Sale_ShowContents"),
                 )
               : d.createElement(
                   d.Fragment,
                   null,
                   a.map((e) =>
-                    d.createElement(N, { key: e.sale_page_id, record: e }),
+                    d.createElement(O, { key: e.sale_page_id, record: e }),
                   ),
                 ),
           );
         },
-        N = (0, c.Pi)((e) => {
+        O = (0, c.Pi)((e) => {
           const { record: t } = e,
-            a = (0, u.P4)(t.clan_account_id);
+            a = (0, g.P4)(t.clan_account_id);
           return d.createElement(
             d.Fragment,
             null,
             d.createElement(
               "div",
-              { className: C.RecordCtn },
+              { className: D.RecordCtn },
               d.createElement(
                 "div",
-                { className: C.RecordInfoCtn },
+                { className: D.RecordInfoCtn },
                 d.createElement(
                   "div",
                   null,
                   d.createElement(
                     "a",
-                    { href: I.De.STORE_BASE_URL + "sale/" + t.vanity },
+                    { href: C.De.STORE_BASE_URL + "sale/" + t.vanity },
                     d.createElement(
                       "b",
                       null,
@@ -460,9 +461,9 @@
                       "a",
                       {
                         href:
-                          I.De.COMMUNITY_BASE_URL +
+                          C.De.COMMUNITY_BASE_URL +
                           "gid/" +
-                          m.K.InitFromClanID(
+                          u.K.InitFromClanID(
                             t.clan_account_id,
                           ).ConvertTo64BitString() +
                           "/partnerevents/edit/" +
@@ -474,12 +475,12 @@
               ),
               Boolean(!t.gid_clan_event || (t.hidden && !t.published)) &&
                 d.createElement(
-                  g.zx,
+                  p.zx,
                   {
                     onClick: (e) =>
-                      (0, h.AM)(
-                        d.createElement(O, { record: t }),
-                        (0, _.RA)(e),
+                      (0, v.AM)(
+                        d.createElement(k, { record: t }),
+                        (0, f.RA)(e),
                       ),
                   },
                   "Migrate Sale Page",
@@ -488,30 +489,30 @@
             d.createElement("hr", null),
           );
         }),
-        O = (e) => {
+        k = (e) => {
           const { record: t, closeModal: a } = e,
             [n, r] = (0, d.useState)(t.clan_account_id),
             [o, l] = (0, d.useState)(!1),
             [i, s] = (0, d.useState)(void 0),
-            [c, u] = (0, d.useState)(!1),
-            [g, h] = (0, d.useState)(t.gid_clan_event),
+            [c, m] = (0, d.useState)(!1),
+            [g, p] = (0, d.useState)(t.gid_clan_event),
             [v, _] = (0, d.useState)(null);
           return d.createElement(
-            p.uH,
+            h.uH,
             {
               strTitle: "Migrate Sale page",
               strDescription: `Will migrate the sale page ${t.vanity} to the below clan `,
               bOKDisabled: !n || o,
               onOK: () => {
                 l(!0),
-                  F.Get()
+                  H.Get()
                     .MigrateOrUpdateSalePage(
                       t.sale_page_id,
                       n,
                       t.gid_clan_event,
                     )
                     .then(([e, t, a]) => {
-                      s(e), u(t), h(a);
+                      s(e), m(t), p(a);
                     });
               },
               onCancel: a,
@@ -531,7 +532,7 @@
               : d.createElement(
                   d.Fragment,
                   null,
-                  d.createElement(G, {
+                  d.createElement(L, {
                     bLimitToCreatorHome: !0,
                     strLabel: "Search for Creator Home to house the Sale Event",
                     strToolTip:
@@ -540,7 +541,7 @@
                       r(e.GetClanAccountID()), _(e);
                     },
                   }),
-                  Boolean(v) && d.createElement(k, { creatorHome: v }),
+                  Boolean(v) && d.createElement(F, { creatorHome: v }),
                 ),
             Boolean(o && !i) &&
               d.createElement(E.V, { position: "center", size: "medium" }),
@@ -555,7 +556,7 @@
                   d.createElement(
                     "a",
                     {
-                      href: I.De.STORE_BASE_URL + "sale/" + t.vanity,
+                      href: C.De.STORE_BASE_URL + "sale/" + t.vanity,
                       target: "_blank",
                     },
                     "Sale Page",
@@ -568,9 +569,9 @@
                     "a",
                     {
                       href:
-                        I.De.COMMUNITY_BASE_URL +
+                        C.De.COMMUNITY_BASE_URL +
                         "gid/" +
-                        m.K.InitFromClanID(n).ConvertTo64BitString() +
+                        u.K.InitFromClanID(n).ConvertTo64BitString() +
                         "/partnerevents/edit/" +
                         g,
                       target: "_blank",
@@ -581,9 +582,9 @@
               ),
           );
         },
-        k = (e) => {
+        F = (e) => {
           const { creatorHome: t } = e,
-            a = m.K.InitFromClanID(t.GetClanAccountID()),
+            a = u.K.InitFromClanID(t.GetClanAccountID()),
             n = t.GetClanAccountID();
           return t
             ? d.createElement(
@@ -624,14 +625,14 @@
                       "Read more about the state here.",
                     ),
                   ),
-                d.createElement(P.oZ, {
+                d.createElement(R.oZ, {
                   creatorID: t.GetCreatorHomeIdentifier(),
                   bHideCreatorType: !0,
                 }),
               )
             : null;
         };
-      class F {
+      class H {
         BHasLoadCompleted() {
           return this.m_bLoadComplete;
         }
@@ -657,19 +658,18 @@
               ];
             try {
               const l =
-                I.De.COMMUNITY_BASE_URL + "migrate/ajaxcreateupdatesalepage";
+                C.De.COMMUNITY_BASE_URL + "migrate/ajaxcreateupdatesalepage";
               let c = new URLSearchParams();
-              c.append("sessionid", I.De.SESSIONID),
+              c.append("sessionid", C.De.SESSIONID),
                 c.append("salePageID", e),
                 c.append("clanAccountID", "" + t),
                 a && c.append("gidClanEvent", a);
               const d = yield i().post(l, c, { withCredentials: !0 });
               if (
                 200 == (null == d ? void 0 : d.status) &&
-                1 ==
-                  (null === (n = null == d ? void 0 : d.data) || void 0 === n
-                    ? void 0
-                    : n.success) &&
+                (null === (n = null == d ? void 0 : d.data) || void 0 === n
+                  ? void 0
+                  : n.success) == m.s.k_EResultOK &&
                 (null === (r = null == d ? void 0 : d.data) || void 0 === r
                   ? void 0
                   : r.gidClanEvent)
@@ -686,7 +686,7 @@
                   [d.data.msg || "Success", !0, d.data.gidClanEvent]
                 );
               {
-                const e = (0, S.l)(d);
+                const e = (0, I.l)(d);
                 return (
                   console.error(
                     "CMigrateSaleStore.LoadSalePageMigrationInfo: failed with " +
@@ -697,7 +697,7 @@
                 );
               }
             } catch (e) {
-              const t = (0, S.l)(e);
+              const t = (0, I.l)(e);
               console.error(
                 "CMigrateSaleStore.MigrateOrUpdateSalePage: caught error with " +
                   t.strErrorMsg,
@@ -722,16 +722,15 @@
           return (0, o.mG)(this, void 0, void 0, function* () {
             try {
               const a =
-                  I.De.COMMUNITY_BASE_URL + "migrate/ajaxgetsalepagestomigrate",
-                n = { sessionid: I.De.SESSIONID },
+                  C.De.COMMUNITY_BASE_URL + "migrate/ajaxgetsalepagestomigrate",
+                n = { sessionid: C.De.SESSIONID },
                 r = yield i().get(a, { params: n, withCredentials: !0 });
               if (
                 ((this.m_bLoadComplete = !0),
                 200 == (null == r ? void 0 : r.status) &&
-                  1 ==
-                    (null === (e = null == r ? void 0 : r.data) || void 0 === e
-                      ? void 0
-                      : e.success) &&
+                  (null === (e = null == r ? void 0 : r.data) || void 0 === e
+                    ? void 0
+                    : e.success) == m.s.k_EResultOK &&
                   (null === (t = null == r ? void 0 : r.data) || void 0 === t
                     ? void 0
                     : t.data))
@@ -752,7 +751,7 @@
                   this.m_listSaleState
                 );
               {
-                const e = (0, S.l)(r);
+                const e = (0, I.l)(r);
                 console.error(
                   "CMigrateSaleStore.LoadSalePageMigrationInfo: failed with " +
                     e.strErrorMsg,
@@ -760,7 +759,7 @@
                 );
               }
             } catch (e) {
-              const t = (0, S.l)(e);
+              const t = (0, I.l)(e);
               console.error(
                 "CMigrateSaleStore.LoadSalePageMigrationInfo: caught error with " +
                   t.strErrorMsg,
@@ -772,11 +771,11 @@
         }
         static Get() {
           return (
-            F.s_Singleton ||
-              ((F.s_Singleton = new F()),
-              ("dev" != I.De.WEB_UNIVERSE && "beta" != I.De.WEB_UNIVERSE) ||
-                (window.g_MigrateSaleStore = F.s_Singleton)),
-            F.s_Singleton
+            H.s_Singleton ||
+              ((H.s_Singleton = new H()),
+              ("dev" != C.De.WEB_UNIVERSE && "beta" != C.De.WEB_UNIVERSE) ||
+                (window.g_MigrateSaleStore = H.s_Singleton)),
+            H.s_Singleton
           );
         }
         constructor() {
@@ -786,12 +785,13 @@
             (this.m_bLoadComplete = !1);
         }
       }
-      (0, o.gn)([s.LO], F.prototype, "m_mapSaleIDToInfo", void 0),
-        (0, o.gn)([s.LO], F.prototype, "m_listSaleState", void 0);
-      var H = a(82079),
-        x = a(56368),
-        U = a(5029);
-      class W {
+      (0, o.gn)([s.LO], H.prototype, "m_mapSaleIDToInfo", void 0),
+        (0, o.gn)([s.LO], H.prototype, "m_listSaleState", void 0);
+      var x = a(75457),
+        U = a(82079),
+        W = a(56368),
+        V = a(5029);
+      class z {
         constructor() {
           (this.m_rgApps = []),
             (this.m_rgClanAccountIDs = []),
@@ -800,10 +800,10 @@
         }
         static Get() {
           return (
-            W.s_globalSingletonStore ||
-              ((W.s_globalSingletonStore = new W()),
-              W.s_globalSingletonStore.Init()),
-            W.s_globalSingletonStore
+            z.s_globalSingletonStore ||
+              ((z.s_globalSingletonStore = new z()),
+              z.s_globalSingletonStore.Init()),
+            z.s_globalSingletonStore
           );
         }
         Init() {}
@@ -835,7 +835,7 @@
             ) {
               const t = Math.min(o, 100),
                 l = { offset: e, nBatchSize: t, start_appid: a },
-                c = I.De.COMMUNITY_BASE_URL + "migrate/ajaxgetallapps";
+                c = C.De.COMMUNITY_BASE_URL + "migrate/ajaxgetallapps";
               let d = null;
               try {
                 const a = yield i().get(c, {
@@ -844,10 +844,9 @@
                   cancelToken: null == n ? void 0 : n.token,
                 });
                 if (
-                  1 ==
-                    (null === (r = null == a ? void 0 : a.data) || void 0 === r
-                      ? void 0
-                      : r.success) &&
+                  (null === (r = null == a ? void 0 : a.data) || void 0 === r
+                    ? void 0
+                    : r.success) == m.s.k_EResultOK &&
                   a.data.apps
                 ) {
                   (0, s.z)(() => {
@@ -861,9 +860,9 @@
                     (o -= t);
                   continue;
                 }
-                d = (0, S.l)(null == a ? void 0 : a.data);
+                d = (0, I.l)(null == a ? void 0 : a.data);
               } catch (e) {
-                d = (0, S.l)(e);
+                d = (0, I.l)(e);
               }
               throw new Error(
                 "ajax request failed with error " +
@@ -888,7 +887,7 @@
           return (0, o.mG)(this, void 0, void 0, function* () {
             this.m_nHighestClanOffsetRequested = e + t;
             const r = { offset: e, count: t },
-              o = I.De.COMMUNITY_BASE_URL + "migrate/ajaxgetallclans";
+              o = C.De.COMMUNITY_BASE_URL + "migrate/ajaxgetallclans";
             let l = null;
             try {
               const e = yield i().get(o, {
@@ -897,19 +896,18 @@
                 cancelToken: null == a ? void 0 : a.token,
               });
               if (
-                1 ==
-                  (null === (n = null == e ? void 0 : e.data) || void 0 === n
-                    ? void 0
-                    : n.success) &&
+                (null === (n = null == e ? void 0 : e.data) || void 0 === n
+                  ? void 0
+                  : n.success) == m.s.k_EResultOK &&
                 e.data.accountids
               )
                 return void (this.m_rgClanAccountIDs =
                   this.m_rgClanAccountIDs.concat(
                     e.data.accountids.map(Number),
                   ));
-              l = (0, S.l)(null == e ? void 0 : e.data);
+              l = (0, I.l)(null == e ? void 0 : e.data);
             } catch (e) {
-              l = (0, S.l)(e);
+              l = (0, I.l)(e);
             }
             console.error(
               "FetchClans: ajax request failed with error",
@@ -918,27 +916,27 @@
           });
         }
       }
-      (0, o.gn)([s.LO.shallow], W.prototype, "m_rgApps", void 0),
-        (0, o.gn)([s.LO.shallow], W.prototype, "m_rgClanAccountIDs", void 0);
-      var V = a(74314),
-        z = a(65518),
-        q = a.n(z);
-      const $ = (0, c.Pi)((e) => {
+      (0, o.gn)([s.LO.shallow], z.prototype, "m_rgApps", void 0),
+        (0, o.gn)([s.LO.shallow], z.prototype, "m_rgClanAccountIDs", void 0);
+      var q = a(74314),
+        $ = a(65518),
+        j = a.n($);
+      const K = (0, c.Pi)((e) => {
           const [t, a] = (0, d.useState)(!0);
           (0, d.useEffect)(() => {
-            Promise.all([x.cb.InitGlobal(), r.wk.Init()]).then(() => a(!1));
+            Promise.all([W.cb.InitGlobal(), r.wk.Init()]).then(() => a(!1));
           }, []);
-          const [n, o] = (0, U.Ar)("start", 0),
-            [l, i] = (0, U.Ar)("start_appid", 0),
-            [s, c] = (0, U.Ar)("count", 10),
-            [m, u] = (0, U.Ar)("autoload", !0),
-            [g, p] = (0, U.Ar)("batch_size", 1),
-            [h, v] = (0, U.Ar)("automigrate", !1),
+          const [n, o] = (0, V.Ar)("start", 0),
+            [l, i] = (0, V.Ar)("start_appid", 0),
+            [s, c] = (0, V.Ar)("count", 10),
+            [m, u] = (0, V.Ar)("autoload", !0),
+            [g, p] = (0, V.Ar)("batch_size", 1),
+            [h, v] = (0, V.Ar)("automigrate", !1),
             [_, f] = (0, d.useState)(!1),
-            [S, I] = (0, U.Ar)("rolling", 0),
+            [S, I] = (0, V.Ar)("rolling", 0),
             [C, D] = (0, d.useState)(new Set()),
             A = (0, d.useRef)(0),
-            M = W.Get().GetApps(n, s, l),
+            M = z.Get().GetApps(n, s, l),
             B = 0 == S ? M : M.filter((e) => !C.has(Number(e.id))).slice(0, S),
             T = (e, t) => {
               C.has(e) ||
@@ -949,14 +947,14 @@
             };
           return d.createElement(
             "div",
-            { className: q().MigrateToolCtn },
+            { className: j().MigrateToolCtn },
             d.createElement(
               "div",
-              { className: q().ToolHeader },
+              { className: j().ToolHeader },
               "Partner Events Migration Tools",
             ),
             B.map((e) =>
-              d.createElement(j, {
+              d.createElement(Y, {
                 key: e.id,
                 app: e,
                 bAutoLoad: m,
@@ -980,7 +978,7 @@
             d.createElement(
               "div",
               {
-                className: q().LoadEventsButton,
+                className: j().LoadEventsButton,
                 onClick: () => {
                   f(!1), D(new Set()), o(n + s);
                 },
@@ -990,12 +988,12 @@
             !h &&
               d.createElement(
                 "div",
-                { className: q().LoadEventsButton, onClick: () => f(!0) },
+                { className: j().LoadEventsButton, onClick: () => f(!0) },
                 "MIGRATE ALL ON PAGE",
               ),
             d.createElement(
               "div",
-              { className: q().StatusMessage },
+              { className: j().StatusMessage },
               C.size +
                 " OF " +
                 M.length +
@@ -1004,7 +1002,7 @@
             ),
           );
         }),
-        j = (0, c.Pi)((e) => {
+        Y = (0, c.Pi)((e) => {
           const t = Number(e.app.id),
             [a, n] = (0, d.useState)(0),
             [l, i] = (0, d.useState)([]),
@@ -1012,7 +1010,7 @@
             m = (0, d.useRef)(new Set()),
             u = (0, d.useRef)(0);
           (0, d.useEffect)(() => {
-            H.sV.LoadOGGClanInfoForAppID(t).then((e) => {
+            U.sV.LoadOGGClanInfoForAppID(t).then((e) => {
               var a;
               return console.log(
                 "Loaded app",
@@ -1025,15 +1023,15 @@
               );
             });
           }, [t]);
-          const g = H.sV.GetOGGClanInfo(t),
+          const g = U.sV.GetOGGClanInfo(t),
             p = g ? g.group_name : e.app.name,
-            h = `${I.De.COMMUNITY_BASE_URL}games/${
+            h = `${C.De.COMMUNITY_BASE_URL}games/${
               g ? g.vanity_url : t
             }/partnerevents/`,
             v = l.length,
             _ = a == v,
             f = l.filter((e) => e.BIsVisibleEvent()),
-            C = f.length,
+            S = f.length,
             D = f.filter(
               (e) =>
                 e.bOldAnnouncement &&
@@ -1077,11 +1075,11 @@
                           "Migrating",
                           a,
                           o.AnnouncementGID,
-                          o.GetNameWithFallback(0),
+                          o.GetNameWithFallback(x.Df.k_Lang_English),
                           o,
                         );
                         try {
-                          const e = yield (0, V.HO)(o.AnnouncementGID, a, n);
+                          const e = yield (0, q.HO)(o.AnnouncementGID, a, n);
                           if (e) console.warn("Already migrated to event", e);
                           else {
                             const e = r.wk.GetEditModel();
@@ -1094,7 +1092,7 @@
                               l(o.AnnouncementGID, !0);
                           }
                         } catch (e) {
-                          const t = (0, S.l)(e);
+                          const t = (0, I.l)(e);
                           console.error(
                             "MigrateEvents: " + t.strErrorMsg.slice(0, 512),
                             t,
@@ -1115,24 +1113,24 @@
             }),
             d.createElement(
               "div",
-              { className: q().ClanRow },
-              d.createElement("div", { className: q().ID }, t),
-              d.createElement("a", { className: q().ClanName, href: h }, p),
+              { className: j().ClanRow },
+              d.createElement("div", { className: j().ID }, t),
+              d.createElement("a", { className: j().ClanName, href: h }, p),
               d.createElement(
                 "div",
-                { className: q().Counts },
-                `Loaded: ${v}\tVisible: ${C}\tOld: ${M}`,
+                { className: j().Counts },
+                `Loaded: ${v}\tVisible: ${S}\tOld: ${M}`,
                 D > 0 &&
                   d.createElement(
                     "span",
-                    { className: q().LinkedAnnouncements },
+                    { className: j().LinkedAnnouncements },
                     `Linked: ${D}`,
                   ),
               ),
               _
                 ? d.createElement(
                     "div",
-                    { className: q().LoadEventsButton, onClick: T },
+                    { className: j().LoadEventsButton, onClick: T },
                     "LOAD EVENTS",
                   )
                 : s
@@ -1140,40 +1138,40 @@
                 : B
                 ? d.createElement(
                     "div",
-                    { className: q().MigrateEventsButton, onClick: w },
+                    { className: j().MigrateEventsButton, onClick: w },
                     "MIGRATE EVENTS",
                   )
                 : d.createElement(
                     "div",
-                    { className: q().CompleteMessage },
+                    { className: j().CompleteMessage },
                     "NOTHING TO MIGRATE",
                   ),
             )
           );
         });
-      var Y = a(59934),
-        K = a(10412),
-        Z = (a(88026), a(71209));
-      function X(e) {
+      var Z = a(59934),
+        X = a(10412),
+        J = (a(88026), a(71209));
+      function Q(e) {
         const [t, a] = d.useState(!0);
         return (
           d.useEffect(() => {
-            K.j1.Init(), Promise.all([]).then(() => a(!1));
+            X.j1.Init(), Promise.all([]).then(() => a(!1));
           }, []),
           t
             ? d.createElement(E.V, { position: "center", size: "medium" })
             : d.createElement(
-                Y.rs,
+                Z.rs,
                 null,
-                d.createElement(Y.AW, {
+                d.createElement(Z.AW, {
                   path: n.wZ.MigrateSaleEvents(),
                   component: y,
                 }),
-                d.createElement(Y.AW, {
+                d.createElement(Z.AW, {
                   path: n.wZ.MigrateEvents(),
-                  component: $,
+                  component: K,
                 }),
-                d.createElement(Y.AW, { component: Z.R }),
+                d.createElement(Z.AW, { component: J.R }),
               )
         );
       }

@@ -6,32 +6,35 @@
   {
     90210: (e, r, t) => {
       t.d(r, {
-        BO: () => d,
-        Re: () => a,
-        Tv: () => y,
-        Y2: () => p,
-        bM: () => l,
-        h1: () => O,
-        jM: () => h,
-        rO: () => c,
-        rn: () => g,
+        BO: () => O,
+        Re: () => g,
+        Tv: () => d,
+        Y2: () => A,
+        bM: () => P,
+        h1: () => h,
+        jM: () => B,
+        rO: () => y,
+        rn: () => p,
       });
       var o = t(33940),
-        m = t(52868),
-        _ = t.n(m),
+        _ = t(52868),
+        m = t.n(_),
         u = t(50265),
         S = t(89526),
-        s = t(23217),
-        n = t(32765);
-      class i {
+        s = t(42735),
+        n = t(94738),
+        i = t(72985),
+        a = t(23217),
+        c = t(32765);
+      class l {
         static Get() {
-          return i.s_Singleton || (i.s_Singleton = new i()), i.s_Singleton;
+          return l.s_Singleton || (l.s_Singleton = new l()), l.s_Singleton;
         }
         constructor() {
           (this.m_mapGenreToStickerResponse = new Map()),
-            (this.m_eStoryBadgeGranted = 0),
-            "dev" == n.De.WEB_UNIVERSE && (window.g_SummerSale2021Store = this);
-          const e = (0, n.kQ)("summerstory", "application_config");
+            (this.m_eStoryBadgeGranted = n.Jj.k_EUserBadgeInvalid),
+            "dev" == c.De.WEB_UNIVERSE && (window.g_SummerSale2021Store = this);
+          const e = (0, c.kQ)("summerstory", "application_config");
           if (e) {
             if (e.story_choices) {
               const r = e.story_choices;
@@ -62,15 +65,15 @@
           return this.m_mapGenreToStickerResponse.get(e);
         }
         LoadClaimForGenre(e, r) {
-          var t, m;
+          var t, _;
           return (0, o.mG)(this, void 0, void 0, function* () {
             if (this.m_mapGenreToStickerResponse.has(e)) return;
-            if (!n.L7.logged_in) return;
+            if (!c.L7.logged_in) return;
             this.m_mapGenreToStickerResponse.set(e, {});
             let o = null;
             try {
-              const u = yield _().get(
-                n.De.STORE_BASE_URL + "promotion/ajaxhasclaimedgenresticker",
+              const u = yield m().get(
+                c.De.STORE_BASE_URL + "promotion/ajaxhasclaimedgenresticker",
                 {
                   params: { genre: e },
                   cancelToken: null == r ? void 0 : r.token,
@@ -78,11 +81,9 @@
               );
               if (
                 200 == (null == u ? void 0 : u.status) &&
-                1 ==
-                  (null === (t = u.data) || void 0 === t
-                    ? void 0
-                    : t.success) &&
-                (null === (m = u.data) || void 0 === m ? void 0 : m.results)
+                (null === (t = u.data) || void 0 === t ? void 0 : t.success) ==
+                  s.s.k_EResultOK &&
+                (null === (_ = u.data) || void 0 === _ ? void 0 : _.results)
               ) {
                 const r = u.data.results;
                 return void this.m_mapGenreToStickerResponse.set(e, r);
@@ -91,7 +92,7 @@
             } catch (e) {
               o = e;
             }
-            const u = (0, s.l)(o);
+            const u = (0, a.l)(o);
             console.error(
               "Could not check claim on genre",
               e,
@@ -101,17 +102,17 @@
           });
         }
         MakeClaimForGenre(e, r, t) {
-          var m, u, S;
+          var _, u, S;
           return (0, o.mG)(this, void 0, void 0, function* () {
-            if (!n.L7.logged_in) return 21;
+            if (!c.L7.logged_in) return s.s.k_EResultNotLoggedOn;
             const o = new FormData();
             o.append("genre", e.toString()),
               o.append("choice", r.toString()),
-              o.append("sessionid", n.De.SESSIONID);
-            let i = null;
+              o.append("sessionid", c.De.SESSIONID);
+            let n = null;
             try {
-              const S = yield _().post(
-                n.De.STORE_BASE_URL + "promotion/ajaxclaimstickerforgenre",
+              const S = yield m().post(
+                c.De.STORE_BASE_URL + "promotion/ajaxclaimstickerforgenre",
                 o,
                 {
                   withCredentials: !0,
@@ -120,10 +121,8 @@
               );
               if (
                 200 == (null == S ? void 0 : S.status) &&
-                1 ==
-                  (null === (m = S.data) || void 0 === m
-                    ? void 0
-                    : m.success) &&
+                (null === (_ = S.data) || void 0 === _ ? void 0 : _.success) ==
+                  s.s.k_EResultOK &&
                 (null === (u = S.data) || void 0 === u ? void 0 : u.results)
               ) {
                 const t = S.data.results,
@@ -135,71 +134,71 @@
                   S.data.success
                 );
               }
-              i = { response: S };
+              n = { response: S };
             } catch (e) {
-              i = e;
+              n = e;
             }
-            const a = (0, s.l)(i);
+            const i = (0, a.l)(n);
             return (
               console.error(
                 "Could not make claim on genre",
                 e,
-                a.strErrorMsg,
-                a,
+                i.strErrorMsg,
+                i,
               ),
-              (null === (S = null == i ? void 0 : i.data) || void 0 === S
+              (null === (S = null == n ? void 0 : n.data) || void 0 === S
                 ? void 0
-                : S.success) || 2
+                : S.success) || s.s.k_EResultFail
             );
           });
         }
       }
-      function a() {
-        return i.Get().GetStoryBadgeGranted();
-      }
-      function c() {
-        return i.Get().GetLocalizedStoryHeader();
-      }
-      function l() {
-        return i.Get().GetLocalizedStoryHeaderMobile();
+      function g() {
+        return l.Get().GetStoryBadgeGranted();
       }
       function y() {
-        return i.Get().GetAllGenreChoices();
+        return l.Get().GetLocalizedStoryHeader();
       }
-      function g(e) {
+      function P() {
+        return l.Get().GetLocalizedStoryHeaderMobile();
+      }
+      function d() {
+        return l.Get().GetAllGenreChoices();
+      }
+      function p(e) {
         const r = S.useRef(null);
         S.useEffect(() => {
-          const e = _().CancelToken.source();
+          const e = m().CancelToken.source();
           return (r.current = e), () => e.cancel("useGenreClaim: unmounting");
         }, []),
-          i.Get().LoadClaimForGenre(e, r.current);
+          l.Get().LoadClaimForGenre(e, r.current);
         return [
-          i.Get().GetClaimForGenre(e),
+          l.Get().GetClaimForGenre(e),
           (t) =>
             (0, o.mG)(this, void 0, void 0, function* () {
-              yield i.Get().MakeClaimForGenre(e, t, r.current);
+              yield l.Get().MakeClaimForGenre(e, t, r.current);
             }),
         ];
       }
-      (0, o.gn)([u.LO], i.prototype, "m_mapGenreToStickerResponse", void 0),
-        (0, o.gn)([u.LO], i.prototype, "m_eStoryBadgeGranted", void 0);
-      const P = 1658760;
-      function d(e) {
-        const [r] = g(e);
+      (0, o.gn)([u.LO], l.prototype, "m_mapGenreToStickerResponse", void 0),
+        (0, o.gn)([u.LO], l.prototype, "m_eStoryBadgeGranted", void 0);
+      const G = 1658760;
+      function O(e) {
+        const [r] = p(e);
         return (null == r ? void 0 : r.sticker_def)
-          ? `${n.De.MEDIA_CDN_COMMUNITY_URL}images/items/${P}/${r.sticker_def.item_image_small}`
+          ? `${c.De.MEDIA_CDN_COMMUNITY_URL}images/items/${G}/${r.sticker_def.item_image_small}`
           : null;
       }
-      function p(e) {
-        return !e || e >= G.length ? null : G[e];
+      function A(e) {
+        return !e || e >= k.length ? null : k[e];
       }
-      function O() {
-        return G.slice(1);
+      function h() {
+        return k.slice(1);
       }
-      const G = [
+      const k = [
         null,
         {
-          eGenre: 1,
+          eGenre: i.qF.k_ESummerSale2021Genre_Action,
           strPageTitle: "#Summer21_Story_Action_Title",
           strPageNumber: "#Summer21_Story_Action_Pg",
           strPageText: "#Summer21_Story_Action_Intro",
@@ -214,7 +213,7 @@
           strGenreName: "#Summer21_Story_Action_Genre",
         },
         {
-          eGenre: 2,
+          eGenre: i.qF.k_ESummerSale2021Genre_AdventureAndCasual,
           strPageTitle: "#Summer21_Story_Adventure_Title",
           strPageNumber: "#Summer21_Story_Adventure_Pg",
           strPageText: "#Summer21_Story_Adventure_Intro",
@@ -229,7 +228,7 @@
           strGenreName: "#Summer21_Story_Adventure_Genre",
         },
         {
-          eGenre: 3,
+          eGenre: i.qF.k_ESummerSale2021Genre_RolePlaying,
           strPageTitle: "#Summer21_Story_RPG_Title",
           strPageNumber: "#Summer21_Story_RPG_Pg",
           strPageText: "#Summer21_Story_RPG_Intro",
@@ -244,7 +243,7 @@
           strGenreName: "#Summer21_Story_RPG_Genre",
         },
         {
-          eGenre: 4,
+          eGenre: i.qF.k_ESummerSale2021Genre_Strategy,
           strPageTitle: "#Summer21_Story_Strategy_Title",
           strPageNumber: "#Summer21_Story_Strategy_Pg",
           strPageText: "#Summer21_Story_Strategy_Intro",
@@ -259,7 +258,7 @@
           strGenreName: "#Summer21_Story_Strategy_Genre",
         },
         {
-          eGenre: 5,
+          eGenre: i.qF.k_ESummerSale2021Genre_Simulation,
           strPageTitle: "#Summer21_Story_Sim_Title",
           strPageNumber: "#Summer21_Story_Sim_Pg",
           strPageText: "#Summer21_Story_Sim_Intro",
@@ -274,7 +273,7 @@
           strGenreName: "#Summer21_Story_Sim_Genre",
         },
         {
-          eGenre: 6,
+          eGenre: i.qF.k_ESummerSale2021Genre_SportsAndRacing,
           strPageTitle: "#Summer21_Story_Sports_Title",
           strPageNumber: "#Summer21_Story_Sports_Pg",
           strPageText: "#Summer21_Story_Sports_Intro",
@@ -289,7 +288,7 @@
           strGenreName: "#Summer21_Story_Sports_Genre",
         },
         {
-          eGenre: 7,
+          eGenre: i.qF.k_ESummerSale2021Genre_Horror,
           strPageTitle: "#Summer21_Story_Horror_Title",
           strPageNumber: "#Summer21_Story_Horror_Pg",
           strPageText: "#Summer21_Story_Horror_Intro",
@@ -304,7 +303,7 @@
           strGenreName: "#Summer21_Story_Horror_Genre",
         },
         {
-          eGenre: 8,
+          eGenre: i.qF.k_ESummerSale2021Genre_Survival,
           strPageTitle: "#Summer21_Story_Survival_Title",
           strPageNumber: "#Summer21_Story_Survival_Pg",
           strPageText: "#Summer21_Story_Survival_Intro",
@@ -319,7 +318,7 @@
           strGenreName: "#Summer21_Story_Survival_Genre",
         },
         {
-          eGenre: 9,
+          eGenre: i.qF.k_ESummerSale2021Genre_OpenWorld,
           strPageTitle: "#Summer21_Story_Open_Title",
           strPageNumber: "#Summer21_Story_Open_Pg",
           strPageText: "#Summer21_Story_Open_Intro",
@@ -334,7 +333,7 @@
           strGenreName: "#Summer21_Story_Open_Genre",
         },
         {
-          eGenre: 10,
+          eGenre: i.qF.k_ESummerSale2021Genre_ScifiAndCyberpunk,
           strPageTitle: "#Summer21_Story_SciFi_Title",
           strPageNumber: "#Summer21_Story_SciFi_Pg",
           strPageText: "#Summer21_Story_SciFi_Intro",
@@ -349,7 +348,7 @@
           strGenreName: "#Summer21_Story_SciFi_Genre",
         },
         {
-          eGenre: 11,
+          eGenre: i.qF.k_ESummerSale2021Genre_MysteryAndDetective,
           strPageTitle: "#Summer21_Story_Mystery_Title",
           strPageNumber: "#Summer21_Story_Mystery_Pg",
           strPageText: "#Summer21_Story_Mystery_Intro",
@@ -364,7 +363,7 @@
           strGenreName: "#Summer21_Story_Mystery_Genre",
         },
         {
-          eGenre: 12,
+          eGenre: i.qF.k_ESummerSale2021Genre_Space,
           strPageTitle: "#Summer21_Story_Space_Title",
           strPageNumber: "#Summer21_Story_Space_Pg",
           strPageText: "#Summer21_Story_Space_Intro",
@@ -379,7 +378,7 @@
           strGenreName: "#Summer21_Story_Space_Genre",
         },
         {
-          eGenre: 13,
+          eGenre: i.qF.k_ESummerSale2021Genre_RogueLike,
           strPageTitle: "#Summer21_Story_Roguelike_Title",
           strPageNumber: "#Summer21_Story_Roguelike_Pg",
           strPageText: "#Summer21_Story_Roguelike_Intro",
@@ -394,7 +393,7 @@
           strGenreName: "#Summer21_Story_Roguelike_Genre",
         },
         {
-          eGenre: 14,
+          eGenre: i.qF.k_ESummerSale2021Genre_Anime,
           strPageTitle: "#Summer21_Story_Anime_Title",
           strPageNumber: "#Summer21_Story_Anime_Pg",
           strPageText: "#Summer21_Story_Anime_Intro",
@@ -409,7 +408,7 @@
           strGenreName: "#Summer21_Story_Anime_Genre",
         },
       ];
-      function h() {
+      function B() {
         S.useEffect(() => {
           const e = document.createElement("link");
           (e.rel = "stylesheet"),

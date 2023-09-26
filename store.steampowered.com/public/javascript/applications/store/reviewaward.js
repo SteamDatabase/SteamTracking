@@ -52,26 +52,27 @@
       "use strict";
       a.r(t),
         a.d(t, {
-          CheckmarkCircle: () => M,
-          LibraryLoyaltyAwardModal: () => P,
-          default: () => B,
+          CheckmarkCircle: () => x,
+          LibraryLoyaltyAwardModal: () => D,
+          default: () => P,
         });
       var r = a(33940),
         n = a(52868),
         o = a.n(n),
         s = a(88464),
         i = a(89526),
-        l = a(44026),
-        c = a(51438),
-        d = a(34329),
-        m = a(19094),
-        u = a(38072),
-        _ = a.n(u),
-        g = a(50265),
-        E = a(54856),
-        h = a(32765),
-        p = a(16899);
-      class w {
+        l = a(42735),
+        c = a(44026),
+        d = a(51438),
+        m = a(34329),
+        u = a(19094),
+        _ = a(38139),
+        E = a(38072),
+        g = a.n(E),
+        p = a(50265),
+        w = a(67328),
+        h = a(32765);
+      class y {
         constructor(e) {
           (this.m_lPointsAvailable = null),
             (this.m_bPointsBalanceLoadedOrInFlight = !1),
@@ -95,17 +96,20 @@
         AddReaction(e) {
           return (0, r.mG)(this, void 0, void 0, function* () {
             if (!this.BIsLoggedIn())
-              return { eResult: 21, strMessage: "Not logged on" };
-            let t = E.gA.Init(p.HW);
+              return {
+                eResult: l.s.k_EResultNotLoggedOn,
+                strMessage: "Not logged on",
+              };
+            let t = w.gA.Init(_.HW);
             t.Body().set_target_type(this.m_eTargetType),
               t.Body().set_targetid(this.m_targetID),
               t.Body().set_reactionid(e),
               console.log(" ProtoBuf sending..."),
               console.log(t),
               console.log("Target ID is..." + t.Body().targetid());
-            let a = yield p.pQ.AddReaction(this.m_transport, t);
+            let a = yield _.pQ.AddReaction(this.m_transport, t);
             return (
-              1 == a.GetEResult() &&
+              a.GetEResult() == l.s.k_EResultOK &&
                 (this.m_bPointsBalanceLoadedOrInFlight = !1),
               { eResult: a.GetEResult(), strMessage: "" }
             );
@@ -122,11 +126,11 @@
           return (0, r.mG)(this, void 0, void 0, function* () {
             if (!this.BIsLoggedIn()) return Promise.resolve(null);
             this.m_bPointsBalanceLoadedOrInFlight = !0;
-            const e = E.gA.Init(p.aO);
+            const e = w.gA.Init(_.aO);
             e.SetBodyFields({ steamid: h.L7.steamid });
-            let t = yield p.pQ.GetSummary(this.m_transport, e);
-            1 == t.GetEResult()
-              ? (this.m_lPointsAvailable = _().fromString(
+            let t = yield _.pQ.GetSummary(this.m_transport, e);
+            t.GetEResult() == l.s.k_EResultOK
+              ? (this.m_lPointsAvailable = g().fromString(
                   t.Body().summary().points(),
                 ))
               : console.error(
@@ -144,9 +148,9 @@
         LoadAwardsConfiguration() {
           return (0, r.mG)(this, void 0, void 0, function* () {
             this.m_bReactionConfigurationLoadedOrInFlight = !0;
-            const e = E.gA.Init(p.f_);
-            let t = yield p.pQ.GetReactionConfig(this.m_transport, e);
-            if (1 == t.GetEResult()) {
+            const e = w.gA.Init(_.f_);
+            let t = yield _.pQ.GetReactionConfig(this.m_transport, e);
+            if (t.GetEResult() == l.s.k_EResultOK) {
               let e = t.Body().toObject().reactions;
               for (const t of e)
                 this.m_mapReactionConfiguration.set(t.reactionid, t);
@@ -161,14 +165,14 @@
         }
         LoadExistingReactions() {
           return (0, r.mG)(this, void 0, void 0, function* () {
-            if (!this.BIsLoggedIn()) return 21;
+            if (!this.BIsLoggedIn()) return l.s.k_EResultNotLoggedOn;
             this.m_mapExistingReactions.clear();
-            const e = E.gA.Init(p.Yl);
+            const e = w.gA.Init(_.Yl);
             e.Body().set_target_type(this.m_eTargetType),
               e.Body().set_targetid(this.m_targetID);
-            let t = yield p.pQ.GetReactions(this.m_transport, e);
+            let t = yield _.pQ.GetReactions(this.m_transport, e);
             return (
-              1 == t.GetEResult() &&
+              t.GetEResult() == l.s.k_EResultOK &&
                 t
                   .Body()
                   .reactionids()
@@ -178,30 +182,30 @@
           });
         }
       }
-      (0, r.gn)([g.LO.ref], w.prototype, "m_lPointsAvailable", void 0),
+      (0, r.gn)([p.LO.ref], y.prototype, "m_lPointsAvailable", void 0),
         (0, r.gn)(
-          [g.LO.deep],
-          w.prototype,
+          [p.LO.deep],
+          y.prototype,
           "m_mapReactionConfiguration",
           void 0,
         ),
-        (0, r.gn)([g.LO.deep], w.prototype, "m_mapExistingReactions", void 0);
-      var A = a(57605),
-        v = a(99307),
-        y = a(701),
-        C = a(3301),
-        R = a(19304),
-        L = a(14826),
-        b = a(4306),
-        N = a(28133),
-        f = a(55201);
-      function S(e) {
-        return (0, L.Xx)(`#RewardsReaction_${e}`);
+        (0, r.gn)([p.LO.deep], y.prototype, "m_mapExistingReactions", void 0);
+      var R = a(57605),
+        L = a(99307),
+        v = a(701),
+        A = a(3301),
+        T = a(19304),
+        C = a(14826),
+        N = a(4306),
+        f = a(28133),
+        k = a(55201);
+      function b(e) {
+        return (0, C.Xx)(`#RewardsReaction_${e}`);
       }
       var G,
+        S,
         I,
-        T,
-        x = a(93718);
+        O = a(93718);
       !(function (e) {
         (e[(e.LOADING = 0)] = "LOADING"),
           (e[(e.SELECTING = 1)] = "SELECTING"),
@@ -210,8 +214,8 @@
           (e[(e.DONE = 4)] = "DONE"),
           (e[(e.ERROR = 5)] = "ERROR"),
           (e[(e.LOADING_ERROR = 6)] = "LOADING_ERROR");
-      })(T || (T = {}));
-      const M = (e) =>
+      })(I || (I = {}));
+      const x = (e) =>
         i.createElement(
           "svg",
           Object.assign(
@@ -229,7 +233,7 @@
             d: "M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24ZM10.9577 17.254L18.8038 10.0384L16.773 7.83022L10.0706 13.9941L7.71092 11.2399L5.43271 13.1918L8.80323 17.1259C9.06802 17.4349 9.44701 17.6231 9.85327 17.6473C10.2595 17.6715 10.6582 17.5295 10.9577 17.254Z",
           }),
         );
-      class O extends i.PureComponent {
+      class M extends i.PureComponent {
         constructor(e) {
           super(e), (this.state = { bHovered: !1 });
         }
@@ -257,13 +261,13 @@
           });
         }
       }
-      (0, r.gn)([b.ak], O.prototype, "handleMouseOver", null),
-        (0, r.gn)([b.ak], O.prototype, "handleMouseOut", null);
-      let k = (G = class extends i.Component {
+      (0, r.gn)([N.ak], M.prototype, "handleMouseOver", null),
+        (0, r.gn)([N.ak], M.prototype, "handleMouseOut", null);
+      let B = (G = class extends i.Component {
         constructor(e) {
           super(e),
             (window.fnLoyalty_ShowAwardModal = (t, a, r, n, o) => {
-              o || (o = 0),
+              o || (o = _.ms.k_ELoyaltyRewardReactionType_Invalid),
                 this.Init(e.serviceTransport),
                 this.setState({
                   bShowModal: !0,
@@ -279,7 +283,7 @@
         Init(e) {
           return (0, r.mG)(this, void 0, void 0, function* () {
             if (G.s_LoyaltyAwardModalStore) return;
-            if (e) return void (G.s_LoyaltyAwardModalStore = new w(e));
+            if (e) return void (G.s_LoyaltyAwardModalStore = new y(e));
             const t = (0, h.kQ)("loyaltystore", "application_config"),
               a = yield (function () {
                 return (0, r.mG)(this, void 0, void 0, function* () {
@@ -288,7 +292,7 @@
                       `${(0, h.Kc)()}pointssummary/ajaxgetasyncconfig`,
                       { withCredentials: !0 },
                     );
-                    return 1 === e.data.success
+                    return e.data.success === l.s.k_EResultOK
                       ? e.data.data
                       : (console.error(
                           `Failed to load async config: ${e.data.success}`,
@@ -305,8 +309,8 @@
                 });
               })(),
               n = Object.assign(Object.assign({}, t), a),
-              s = new m.J(h.De.WEBAPI_BASE_URL, n.webapi_token);
-            (G.s_LoyaltyAwardModalStore = new w(s.GetServiceTransport())),
+              s = new u.J(h.De.WEBAPI_BASE_URL, n.webapi_token);
+            (G.s_LoyaltyAwardModalStore = new y(s.GetServiceTransport())),
               this.setState({ bLoading: !1 });
           });
         }
@@ -324,26 +328,26 @@
           if (!t) return null;
           if (e)
             return i.createElement(
-              v.On,
+              L.On,
               {
-                className: f.GrantAwardModal,
+                className: k.GrantAwardModal,
                 active: !0,
                 onDismiss: () => this.setState({ bShowModal: !1 }),
               },
-              i.createElement(F, null),
-              i.createElement(U, null),
+              i.createElement(X, null),
+              i.createElement(H, null),
               i.createElement(
                 "div",
-                { className: f.InitialLoading },
+                { className: k.InitialLoading },
                 i.createElement(
                   "div",
-                  { className: (0, R.Z)(f.LoadingContainer, f.Visible) },
-                  i.createElement(Z, null),
+                  { className: (0, T.Z)(k.LoadingContainer, k.Visible) },
+                  i.createElement(j, null),
                 ),
               ),
             );
           l.GetAwardConfigurations();
-          return i.createElement(D, {
+          return i.createElement(F, {
             key: n,
             targetid: n,
             active: t,
@@ -356,12 +360,15 @@
           });
         }
       });
-      (k.defaultProps = { targetType: 1 }), (k = G = (0, r.gn)([s.Pi], k));
-      const B = k;
-      let P = (I = class extends i.Component {
+      (B.defaultProps = {
+        targetType: _.Lp.k_ELoyaltyRewardReactionTargetType_UserReview,
+      }),
+        (B = G = (0, r.gn)([s.Pi], B));
+      const P = B;
+      let D = (S = class extends i.Component {
         static Initialize(e) {
           null === this.s_LoyaltyAwardModalStore &&
-            (this.s_LoyaltyAwardModalStore = new w(e.GetServiceTransport()));
+            (this.s_LoyaltyAwardModalStore = new y(e.GetServiceTransport()));
         }
         constructor(e) {
           super(e);
@@ -375,11 +382,11 @@
               initialSelectedReaction: n,
               onDismiss: o,
             } = this.props,
-            s = I.s_LoyaltyAwardModalStore;
+            s = S.s_LoyaltyAwardModalStore;
           if (null === s)
             return console.log("Store not initialized yet."), null;
           s.GetAwardConfigurations();
-          return i.createElement(D, {
+          return i.createElement(F, {
             key: t,
             targetid: t,
             active: a,
@@ -387,18 +394,20 @@
             ugcType: r,
             onDismiss: o,
             onSuccess: o,
-            store: I.s_LoyaltyAwardModalStore,
+            store: S.s_LoyaltyAwardModalStore,
             initialSelectedReaction: n,
           });
         }
       });
-      (P.s_LoyaltyAwardModalStore = null), (P = I = (0, r.gn)([s.Pi], P));
-      let D = class extends i.Component {
+      (D.s_LoyaltyAwardModalStore = null), (D = S = (0, r.gn)([s.Pi], D));
+      let F = class extends i.Component {
         constructor(e) {
           super(e),
             (this.state = {
-              selectedReaction: e.initialSelectedReaction || 0,
-              ePhase: T.LOADING,
+              selectedReaction:
+                e.initialSelectedReaction ||
+                _.ms.k_ELoyaltyRewardReactionType_Invalid,
+              ePhase: I.LOADING,
             });
         }
         componentDidMount() {
@@ -407,9 +416,9 @@
               this.props.targetid,
               this.props.targetType,
             );
-            1 == e
-              ? this.setState({ ePhase: T.SELECTING })
-              : this.setState({ ePhase: T.LOADING_ERROR, eResult: e });
+            e == l.s.k_EResultOK
+              ? this.setState({ ePhase: I.SELECTING })
+              : this.setState({ ePhase: I.LOADING_ERROR, eResult: e });
           });
         }
         render() {
@@ -420,136 +429,143 @@
               store: r,
               onDismiss: n,
             } = this.props,
-            { selectedReaction: o, ePhase: s, celebrate: c } = this.state;
+            { selectedReaction: o, ePhase: s, celebrate: d } = this.state;
           if (!e) return null;
-          const m = r.GetExistingReactions(),
-            u = r.GetAwardConfigurations(),
-            _ = r.GetUserPointBalance(),
-            g = (function (e, t, a) {
+          const u = r.GetExistingReactions(),
+            E = r.GetAwardConfigurations(),
+            g = r.GetUserPointBalance(),
+            p = (function (e, t, a) {
               let r = [];
               return (
                 e.forEach(function (e) {
                   if (e.valid_target_types.includes(t))
                     switch (t) {
-                      case 1:
-                      case 3:
-                      case 4:
-                      case 5:
+                      case _.Lp.k_ELoyaltyRewardReactionTargetType_UserReview:
                         r.push(e.reactionid);
                         break;
-                      case 2:
+                      case _.Lp.k_ELoyaltyRewardReactionTargetType_UGC:
                         e.valid_ugc_types.includes(a) && r.push(e.reactionid);
+                        break;
+                      case _.Lp.k_ELoyaltyRewardReactionTargetType_Profile:
+                      case _.Lp.k_ELoyaltyRewardReactionTargetType_ForumTopic:
+                      case _.Lp.k_ELoyaltyRewardReactionTargetType_Comment:
+                        r.push(e.reactionid);
                     }
                 }),
                 r
               );
-            })(u, t, a),
-            E = 0 === o ? null : u.get(o),
-            p = E ? E.points_cost : 0,
-            w = E ? E.points_transferred : 0;
-          let y,
-            C = "";
+            })(E, t, a),
+            w =
+              o === _.ms.k_ELoyaltyRewardReactionType_Invalid ? null : E.get(o),
+            y = w ? w.points_cost : 0,
+            v = w ? w.points_transferred : 0;
+          let A,
+            N = "";
           switch (t) {
-            case 1:
-              C = (0, L.Xx)("#GrantAwardDescription_Review");
+            case _.Lp.k_ELoyaltyRewardReactionTargetType_UserReview:
+              N = (0, C.Xx)("#GrantAwardDescription_Review");
               break;
-            case 2:
-              C = (0, L.Xx)("#GrantAwardDescription_UGC");
+            case _.Lp.k_ELoyaltyRewardReactionTargetType_UGC:
+              N = (0, C.Xx)("#GrantAwardDescription_UGC");
               break;
-            case 3:
-              C = (0, L.Xx)("#GrantAwardDescription_Profile");
+            case _.Lp.k_ELoyaltyRewardReactionTargetType_Profile:
+              N = (0, C.Xx)("#GrantAwardDescription_Profile");
               break;
-            case 4:
-              C = (0, L.Xx)("#GrantAwardDescription_ForumTopic");
+            case _.Lp.k_ELoyaltyRewardReactionTargetType_ForumTopic:
+              N = (0, C.Xx)("#GrantAwardDescription_ForumTopic");
               break;
-            case 5:
-              C = (0, L.Xx)("#GrantAwardDescription_Comment");
+            case _.Lp.k_ELoyaltyRewardReactionTargetType_Comment:
+              N = (0, C.Xx)("#GrantAwardDescription_Comment");
           }
           switch (s) {
-            case T.SELECTING:
+            case I.SELECTING:
               {
-                const e = 0 === o || m.get(o),
-                  t = !_ || _.greaterThanOrEqual(p),
+                const e =
+                    o === _.ms.k_ELoyaltyRewardReactionType_Invalid || u.get(o),
+                  t = !g || g.greaterThanOrEqual(y),
                   a = i.createElement(
-                    A.KM,
+                    R.KM,
                     {
-                      onClick: () => this.setState({ ePhase: T.CONFIRM }),
+                      onClick: () => this.setState({ ePhase: I.CONFIRM }),
                       disabled: e,
                       focusable: !e,
-                      title: (0, L.Xx)(
+                      title: (0, C.Xx)(
                         e
                           ? "#GrantAward_PromptTooltip"
                           : "#GrantAward_SubmitTooltip",
                       ),
                     },
-                    (0, L.Xx)(
+                    (0, C.Xx)(
                       e ? "#GrantAward_SelectAward" : "#GrantAward_Next",
                     ),
                   );
-                y = i.createElement(
+                A = i.createElement(
                   i.Fragment,
                   null,
-                  i.createElement(F, { description: C }),
-                  i.createElement(U, null),
-                  0 === g.length &&
+                  i.createElement(X, { description: N }),
+                  i.createElement(H, null),
+                  0 === p.length &&
                     i.createElement(
                       "div",
-                      { className: f.InitialLoading },
+                      { className: k.InitialLoading },
                       i.createElement(
                         "div",
-                        { className: (0, R.Z)(f.LoadingContainer, f.Visible) },
-                        i.createElement(Z, null),
+                        { className: (0, T.Z)(k.LoadingContainer, k.Visible) },
+                        i.createElement(j, null),
                       ),
                     ),
                   i.createElement(
-                    d.P8,
+                    m.P8,
                     {
-                      className: f.ButtonContainer,
+                      className: k.ButtonContainer,
                       scrollDirection: "y",
                       "flow-children": "grid",
                     },
-                    g.map((e, t) =>
-                      i.createElement(H, {
+                    p.map((e, t) =>
+                      i.createElement(Z, {
                         autoFocus: 0 == t,
                         key: e,
                         reaction: e,
-                        selected: e === o && !m.get(e),
-                        cost: u.get(e).points_cost,
-                        alreadyAwarded: m.get(e),
+                        selected: e === o && !u.get(e),
+                        cost: E.get(e).points_cost,
+                        alreadyAwarded: u.get(e),
                         onClick: () => {
-                          m.get(e) ||
+                          u.get(e) ||
                             this.setState({
-                              selectedReaction: e === o ? 0 : e,
+                              selectedReaction:
+                                e === o
+                                  ? _.ms.k_ELoyaltyRewardReactionType_Invalid
+                                  : e,
                             });
                         },
                       }),
                     ),
                   ),
-                  i.createElement(U, null),
+                  i.createElement(H, null),
                   i.createElement(
-                    X,
+                    U,
                     { store: r },
                     e || t
                       ? a
                       : [
                           i.createElement(
                             "div",
-                            { key: "msg", className: f.NotEnoughPoints },
-                            (0, L.Xx)(
+                            { key: "msg", className: k.NotEnoughPoints },
+                            (0, C.Xx)(
                               "#GrantAward_CantAfford",
-                              _.negate().add(p).toNumber().toLocaleString(),
+                              g.negate().add(y).toNumber().toLocaleString(),
                             ),
                           ),
                           i.createElement(
-                            l.IS,
+                            c.IS,
                             {
                               key: "button",
                               href: `${h.De.STORE_BASE_URL}points/howitworks`,
                             },
                             i.createElement(
-                              A.zx,
+                              R.zx,
                               { key: "button" },
-                              (0, L.Xx)("#GrantAward_HowToGetPoints"),
+                              (0, C.Xx)("#GrantAward_HowToGetPoints"),
                             ),
                           ),
                         ],
@@ -557,55 +573,55 @@
                 );
               }
               break;
-            case T.CONFIRM:
-            case T.SUBMITTING:
-            case T.DONE:
-              y = i.createElement(
+            case I.CONFIRM:
+            case I.SUBMITTING:
+            case I.DONE:
+              A = i.createElement(
                 i.Fragment,
                 null,
-                i.createElement(F, { description: C }),
-                i.createElement(U, null),
+                i.createElement(X, { description: N }),
+                i.createElement(H, null),
                 i.createElement(
                   "div",
                   { style: { position: "relative" } },
                   i.createElement(
                     "div",
                     {
-                      className: (0, R.Z)(
-                        f.ConfirmContainer,
-                        s === T.CONFIRM && f.Visible,
+                      className: (0, T.Z)(
+                        k.ConfirmContainer,
+                        s === I.CONFIRM && k.Visible,
                       ),
                     },
-                    i.createElement(O, {
-                      className: f.ConfirmAwardImage,
+                    i.createElement(M, {
+                      className: k.ConfirmAwardImage,
                       reactionType: o,
                     }),
                     i.createElement(
                       "div",
-                      { className: f.ConfirmTextCtn },
+                      { className: k.ConfirmTextCtn },
                       i.createElement(
                         "div",
-                        { className: f.ConfirmText },
-                        (0, L.kQ)(
+                        { className: k.ConfirmText },
+                        (0, C.kQ)(
                           "#GrantAward_Confirm",
-                          i.createElement(j, null, p.toLocaleString()),
+                          i.createElement(K, null, y.toLocaleString()),
                           i.createElement(
                             "span",
-                            { className: f.AwardName },
-                            S(o),
+                            { className: k.AwardName },
+                            b(o),
                           ),
                         ),
                       ),
                       i.createElement(
                         "div",
-                        { className: f.ConfirmText },
-                        (0, L.kQ)(
+                        { className: k.ConfirmText },
+                        (0, C.kQ)(
                           "#GrantAward_Confirm_Details",
-                          i.createElement(j, null, w.toLocaleString()),
+                          i.createElement(K, null, v.toLocaleString()),
                           i.createElement(
                             "span",
-                            { className: f.TimePeriod },
-                            (0, L.Xx)("#GrantAward_Confirm_DetailsTimePeriod"),
+                            { className: k.TimePeriod },
+                            (0, C.Xx)("#GrantAward_Confirm_DetailsTimePeriod"),
                           ),
                         ),
                       ),
@@ -614,152 +630,152 @@
                   i.createElement(
                     "div",
                     {
-                      className: (0, R.Z)(
-                        f.LoadingContainer,
-                        s === T.SUBMITTING && f.Visible,
+                      className: (0, T.Z)(
+                        k.LoadingContainer,
+                        s === I.SUBMITTING && k.Visible,
                       ),
                     },
-                    i.createElement(Z, null),
+                    i.createElement(j, null),
                   ),
                   i.createElement(
                     "div",
                     {
-                      className: (0, R.Z)(
-                        f.SuccessContainer,
-                        s === T.DONE && f.Visible,
+                      className: (0, T.Z)(
+                        k.SuccessContainer,
+                        s === I.DONE && k.Visible,
                       ),
                     },
-                    i.createElement(O, {
-                      className: f.ConfirmAwardImage,
+                    i.createElement(M, {
+                      className: k.ConfirmAwardImage,
                       reactionType: o,
                     }),
                     i.createElement(
                       "div",
-                      { className: f.SuccessText },
-                      (0, L.Xx)("#GrantAward_Success"),
+                      { className: k.SuccessText },
+                      (0, C.Xx)("#GrantAward_Success"),
                     ),
                   ),
                 ),
-                i.createElement(U, null),
+                i.createElement(H, null),
                 i.createElement(
-                  X,
+                  U,
                   { store: r },
                   i.createElement(
-                    A.zx,
+                    R.zx,
                     {
-                      onClick: () => this.setState({ ePhase: T.SELECTING }),
-                      disabled: s !== T.CONFIRM,
+                      onClick: () => this.setState({ ePhase: I.SELECTING }),
+                      disabled: s !== I.CONFIRM,
                     },
-                    (0, L.Xx)("#GrantAward_Back"),
+                    (0, C.Xx)("#GrantAward_Back"),
                   ),
                   i.createElement(
-                    A.KM,
+                    R.KM,
                     {
                       onClick: this.GrantAward,
-                      title: (0, L.Xx)("#GrantAward_SubmitTooltip"),
-                      disabled: s !== T.CONFIRM,
+                      title: (0, C.Xx)("#GrantAward_SubmitTooltip"),
+                      disabled: s !== I.CONFIRM,
                     },
-                    (0, L.Xx)("#GrantAwardNowButton"),
+                    (0, C.Xx)("#GrantAwardNowButton"),
                   ),
                 ),
               );
               break;
-            case T.ERROR:
+            case I.ERROR:
               {
                 let e = "";
                 switch (this.state.eResult) {
-                  case 10:
-                    e = (0, L.Xx)("#GrantAwardError_Busy");
+                  case l.s.k_EResultBusy:
+                    e = (0, C.Xx)("#GrantAwardError_Busy");
                     break;
-                  case 32:
-                    e = (0, L.Xx)("#GrantAwardError_PersistFailed");
+                  case l.s.k_EResultPersistFailed:
+                    e = (0, C.Xx)("#GrantAwardError_PersistFailed");
                     break;
-                  case 8:
-                    e = (0, L.Xx)("#GrantAwardError_InvalidParam");
+                  case l.s.k_EResultInvalidParam:
+                    e = (0, C.Xx)("#GrantAwardError_InvalidParam");
                     break;
-                  case 42:
-                    e = (0, L.Xx)("#GrantAwardError_NoMatch");
+                  case l.s.k_EResultNoMatch:
+                    e = (0, C.Xx)("#GrantAwardError_NoMatch");
                     break;
-                  case 107:
-                    e = (0, L.Xx)("#GrantAwardError_InsufficientFunds");
+                  case l.s.k_EResultInsufficientFunds:
+                    e = (0, C.Xx)("#GrantAwardError_InsufficientFunds");
                     break;
-                  case 15:
-                    e = (0, L.Xx)("#GrantAwardError_AccessDenied");
+                  case l.s.k_EResultAccessDenied:
+                    e = (0, C.Xx)("#GrantAwardError_AccessDenied");
                     break;
-                  case 21:
-                    e = (0, L.Xx)("#GrantAwardError_NotLoggedOn");
+                  case l.s.k_EResultNotLoggedOn:
+                    e = (0, C.Xx)("#GrantAwardError_NotLoggedOn");
                     break;
-                  case 29:
-                    e = (0, L.Xx)("#GrantAwardError_DuplicateRequest");
+                  case l.s.k_EResultDuplicateRequest:
+                    e = (0, C.Xx)("#GrantAwardError_DuplicateRequest");
                     break;
                   default:
-                    e = (0, L.Xx)("#GrantAwardError_Fail");
+                    e = (0, C.Xx)("#GrantAwardError_Fail");
                 }
-                y = i.createElement(
+                A = i.createElement(
                   i.Fragment,
                   null,
-                  i.createElement(F, { description: C }),
-                  i.createElement(U, null),
+                  i.createElement(X, { description: N }),
+                  i.createElement(H, null),
                   i.createElement(
                     "div",
                     { style: { position: "relative" } },
                     i.createElement(
                       "div",
-                      { className: f.ErrorContainer },
-                      i.createElement("div", { className: f.ErrorText }, e),
+                      { className: k.ErrorContainer },
+                      i.createElement("div", { className: k.ErrorText }, e),
                     ),
                   ),
-                  i.createElement(U, null),
+                  i.createElement(H, null),
                   i.createElement(
-                    X,
+                    U,
                     { store: r },
                     i.createElement(
-                      A.zx,
-                      { onClick: () => this.setState({ ePhase: T.SELECTING }) },
-                      (0, L.Xx)("#GrantAward_Back"),
+                      R.zx,
+                      { onClick: () => this.setState({ ePhase: I.SELECTING }) },
+                      (0, C.Xx)("#GrantAward_Back"),
                     ),
                   ),
                 );
               }
               break;
-            case T.LOADING_ERROR: {
+            case I.LOADING_ERROR: {
               let e = "";
               switch (this.state.eResult) {
-                case 10:
-                  e = (0, L.Xx)("#GrantAwardError_Busy");
+                case l.s.k_EResultBusy:
+                  e = (0, C.Xx)("#GrantAwardError_Busy");
                   break;
-                case 21:
-                  e = (0, L.Xx)("#GrantAwardError_NotLoggedOn");
+                case l.s.k_EResultNotLoggedOn:
+                  e = (0, C.Xx)("#GrantAwardError_NotLoggedOn");
                   break;
                 default:
-                  e = (0, L.Xx)("#GrantAwardError_LoadExistingReactions");
+                  e = (0, C.Xx)("#GrantAwardError_LoadExistingReactions");
               }
-              y = i.createElement(
+              A = i.createElement(
                 i.Fragment,
                 null,
-                i.createElement(F, { description: C }),
-                i.createElement(U, null),
+                i.createElement(X, { description: N }),
+                i.createElement(H, null),
                 i.createElement(
                   "div",
                   { style: { position: "relative" } },
                   i.createElement(
                     "div",
-                    { className: f.ErrorContainer },
-                    i.createElement("div", { className: f.ErrorText }, e),
+                    { className: k.ErrorContainer },
+                    i.createElement("div", { className: k.ErrorText }, e),
                   ),
                 ),
-                i.createElement(U, null),
+                i.createElement(H, null),
               );
             }
           }
           return i.createElement(
-            v.On,
-            { className: f.GrantAwardModal, active: e, onDismiss: n },
+            L.On,
+            { className: k.GrantAwardModal, active: e, onDismiss: n },
             i.createElement(
-              v.Pv,
+              L.Pv,
               { navID: "GrantAward", closeModal: n },
-              c && i.createElement(N.DI, { eType: N.sS.Default }),
-              y,
+              d && i.createElement(f.DI, { eType: f.sS.Default }),
+              A,
             ),
           );
         }
@@ -767,76 +783,76 @@
           const { targetid: e, store: t, onSuccess: a } = this.props,
             { selectedReaction: r } = this.state;
           null !== r &&
-            0 != r &&
-            (this.setState({ ePhase: T.SUBMITTING }),
+            r != _.ms.k_ELoyaltyRewardReactionType_Invalid &&
+            (this.setState({ ePhase: I.SUBMITTING }),
             t.AddReaction(r).then(({ eResult: t, strMessage: n }) => {
-              1 == t
-                ? this.setState({ ePhase: T.DONE, celebrate: !0 }, () =>
+              t == l.s.k_EResultOK
+                ? this.setState({ ePhase: I.DONE, celebrate: !0 }, () =>
                     setTimeout(() => {
                       a && a(e, r);
                     }, 2e3),
                   )
-                : this.setState({ ePhase: T.ERROR, eResult: t });
+                : this.setState({ ePhase: I.ERROR, eResult: t });
             }));
         }
       };
-      (0, r.gn)([b.ak], D.prototype, "GrantAward", null),
-        (D = (0, r.gn)([s.Pi], D));
-      const F = ({ description: e }) =>
+      (0, r.gn)([N.ak], F.prototype, "GrantAward", null),
+        (F = (0, r.gn)([s.Pi], F));
+      const X = ({ description: e }) =>
           i.createElement(
             "div",
-            { className: f.Header },
+            { className: k.Header },
             i.createElement(
               "div",
-              { className: f.Title },
-              (0, L.Xx)("#GrantAwardTitle"),
+              { className: k.Title },
+              (0, C.Xx)("#GrantAwardTitle"),
             ),
-            i.createElement("div", { className: f.Description }, e),
+            i.createElement("div", { className: k.Description }, e),
           ),
-        X = (0, s.Pi)(({ store: e, children: t }) => {
+        U = (0, s.Pi)(({ store: e, children: t }) => {
           const a = e.GetUserPointBalance(),
             r = a && a.toNumber().toLocaleString();
           return i.createElement(
             "div",
-            { className: f.Footer },
+            { className: k.Footer },
             i.createElement(
               "div",
-              { className: f.Left },
-              i.createElement(y.doA, { className: f.BalanceIcon }),
+              { className: k.Left },
+              i.createElement(v.doA, { className: k.BalanceIcon }),
               i.createElement(
                 "div",
-                { className: f.BalanceDetails },
+                { className: k.BalanceDetails },
                 i.createElement(
                   "div",
-                  { className: f.BalanceLabel },
-                  (0, L.Xx)("#YourBalance"),
+                  { className: k.BalanceLabel },
+                  (0, C.Xx)("#YourBalance"),
                 ),
-                i.createElement("div", { className: f.BalanceAmount }, r),
+                i.createElement("div", { className: k.BalanceAmount }, r),
               ),
             ),
             i.createElement(
               "div",
-              { className: f.Right },
+              { className: k.Right },
               i.createElement(
-                c.s,
-                { className: f.Actions, "flow-children": "row" },
+                d.s,
+                { className: k.Actions, "flow-children": "row" },
                 i.Children.map(t, (e) =>
-                  i.createElement("div", { className: f.Action }, e),
+                  i.createElement("div", { className: k.Action }, e),
                 ),
               ),
               i.createElement(
                 "a",
                 {
-                  className: f.FooterLink,
+                  className: k.FooterLink,
                   href: `${h.De.STORE_BASE_URL}points/howitworks`,
                 },
-                (0, L.Xx)("#GrantAward_PointsLink"),
+                (0, C.Xx)("#GrantAward_PointsLink"),
               ),
             ),
           );
         }),
-        U = () => i.createElement("div", { className: f.Divider });
-      class H extends i.PureComponent {
+        H = () => i.createElement("div", { className: k.Divider });
+      class Z extends i.PureComponent {
         constructor(e) {
           super(e), (this.state = { bHovered: !1 });
         }
@@ -863,21 +879,21 @@
               "autoFocus",
             ]);
           return i.createElement(
-            x.k,
+            O.k,
             Object.assign(
               {
                 type: "button",
                 onMouseEnter: this.handleMouseOver,
                 onMouseLeave: this.handleMouseOut,
-                className: (0, R.Z)(f.Button, a && f.Selected, n && f.Disabled),
+                className: (0, T.Z)(k.Button, a && k.Selected, n && k.Disabled),
                 autoFocus: s,
               },
               l,
             ),
             i.createElement(
               "div",
-              { className: f.IconCtn },
-              i.createElement(O, {
+              { className: k.IconCtn },
+              i.createElement(M, {
                 reactionType: t,
                 bForceAnimated: this.state.bHovered,
                 bDisableAnimation: n,
@@ -885,25 +901,25 @@
             ),
             i.createElement(
               "div",
-              { className: f.LabelCtn },
-              i.createElement("div", { className: f.Label }, S(t)),
-              i.createElement(j, { className: f.Points }, o.toLocaleString()),
+              { className: k.LabelCtn },
+              i.createElement("div", { className: k.Label }, b(t)),
+              i.createElement(K, { className: k.Points }, o.toLocaleString()),
             ),
-            n && i.createElement(M, { className: f.IconCheckMark }),
+            n && i.createElement(x, { className: k.IconCheckMark }),
           );
         }
       }
-      (0, r.gn)([b.ak], H.prototype, "handleMouseOver", null),
-        (0, r.gn)([b.ak], H.prototype, "handleMouseOut", null);
-      const Z = () =>
-          i.createElement(C.V, { size: "large", className: f.Loading }),
-        j = (e) => {
+      (0, r.gn)([N.ak], Z.prototype, "handleMouseOver", null),
+        (0, r.gn)([N.ak], Z.prototype, "handleMouseOut", null);
+      const j = () =>
+          i.createElement(A.V, { size: "large", className: k.Loading }),
+        K = (e) => {
           const { children: t, className: a } = e,
             n = (0, r._T)(e, ["children", "className"]);
           return i.createElement(
             "span",
-            Object.assign({}, n, { className: (0, R.Z)(a, f.PointsAmount) }),
-            i.createElement(y.doA, { className: f.PointsAmountIcon }),
+            Object.assign({}, n, { className: (0, T.Z)(a, k.PointsAmount) }),
+            i.createElement(v.doA, { className: k.PointsAmountIcon }),
             t,
           );
         };

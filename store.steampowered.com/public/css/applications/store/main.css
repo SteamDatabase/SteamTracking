@@ -1,3 +1,7 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
 html body.events_hub.v6 {
   background-color: #171a21;
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
@@ -1237,7 +1241,6 @@ button.gamepaddialog_Button_1kn70.DialogButton.gamepaddialog_NoMinWidth_21cih {
 button.gamepaddialog_Button_1kn70.DialogButton,
 button.gamepaddialog_Button_1kn70.DialogButton:enabled,
 button.gamepaddialog_Button_1kn70.DialogButton:active,
-button.gamepaddialog_Button_1kn70.DialogButton:hover,
 button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover {
   color: #dcdedf;
   font-size: 16px;
@@ -1254,8 +1257,6 @@ button.gamepaddialog_Button_1kn70.DialogButton:enabled,
 button.gamepaddialog_Button_1kn70.DialogButton:enabled.Primary,
 button.gamepaddialog_Button_1kn70.DialogButton:active,
 button.gamepaddialog_Button_1kn70.DialogButton:active.Primary,
-button.gamepaddialog_Button_1kn70.DialogButton:hover,
-button.gamepaddialog_Button_1kn70.DialogButton:hover.Primary,
 button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover,
 button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover.Primary {
   background: #23262e;
@@ -1263,7 +1264,6 @@ button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover.Primary {
 button.gamepaddialog_Button_1kn70.DialogButton.BarButton,
 button.gamepaddialog_Button_1kn70.DialogButton:enabled.BarButton,
 button.gamepaddialog_Button_1kn70.DialogButton:active.BarButton,
-button.gamepaddialog_Button_1kn70.DialogButton:hover.BarButton,
 button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover.BarButton {
   background: rgba(0, 0, 0, 0.1019607843);
   color: #fff;
@@ -1271,9 +1271,21 @@ button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover.BarButton {
 button.gamepaddialog_Button_1kn70.DialogButton.gamepaddialog_ActiveAndUnfocused_11tOP,
 button.gamepaddialog_Button_1kn70.DialogButton:enabled.gamepaddialog_ActiveAndUnfocused_11tOP,
 button.gamepaddialog_Button_1kn70.DialogButton:active.gamepaddialog_ActiveAndUnfocused_11tOP,
-button.gamepaddialog_Button_1kn70.DialogButton:hover.gamepaddialog_ActiveAndUnfocused_11tOP,
 button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover.gamepaddialog_ActiveAndUnfocused_11tOP {
   background: #0e141b;
+}
+button.gamepaddialog_Button_1kn70.DialogButton:hover,
+button.gamepaddialog_Button_1kn70.DialogButton:enabled:hover,
+button.gamepaddialog_Button_1kn70.DialogButton:active:hover,
+button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover:hover {
+  background: #3d4450;
+  transition: background-color 150ms ease-in;
+}
+button.gamepaddialog_Button_1kn70.DialogButton.Primary:hover,
+button.gamepaddialog_Button_1kn70.DialogButton:enabled.Primary:hover,
+button.gamepaddialog_Button_1kn70.DialogButton:active.Primary:hover,
+button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover.Primary:hover {
+  background: rgba(26, 160, 255, 0.3254901961);
 }
 button.gamepaddialog_Button_1kn70.DialogButton.gpfocus,
 button.gamepaddialog_Button_1kn70.DialogButton:active,
@@ -1281,8 +1293,6 @@ button.gamepaddialog_Button_1kn70.DialogButton:enabled.gpfocus,
 button.gamepaddialog_Button_1kn70.DialogButton:enabled:active,
 button.gamepaddialog_Button_1kn70.DialogButton:active.gpfocus,
 button.gamepaddialog_Button_1kn70.DialogButton:active:active,
-button.gamepaddialog_Button_1kn70.DialogButton:hover.gpfocus,
-button.gamepaddialog_Button_1kn70.DialogButton:hover:active,
 button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover.gpfocus,
 button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover:active {
   background: #fff;
@@ -1295,8 +1305,6 @@ button.gamepaddialog_Button_1kn70.DialogButton:enabled.gpfocus.Primary,
 button.gamepaddialog_Button_1kn70.DialogButton:enabled:active.Primary,
 button.gamepaddialog_Button_1kn70.DialogButton:active.gpfocus.Primary,
 button.gamepaddialog_Button_1kn70.DialogButton:active:active.Primary,
-button.gamepaddialog_Button_1kn70.DialogButton:hover.gpfocus.Primary,
-button.gamepaddialog_Button_1kn70.DialogButton:hover:active.Primary,
 button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover.gpfocus.Primary,
 button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover:active.Primary {
   background: #1a9fff;
@@ -1308,8 +1316,6 @@ button.gamepaddialog_Button_1kn70.DialogButton:enabled.gpfocus.Destructive,
 button.gamepaddialog_Button_1kn70.DialogButton:enabled:active.Destructive,
 button.gamepaddialog_Button_1kn70.DialogButton:active.gpfocus.Destructive,
 button.gamepaddialog_Button_1kn70.DialogButton:active:active.Destructive,
-button.gamepaddialog_Button_1kn70.DialogButton:hover.gpfocus.Destructive,
-button.gamepaddialog_Button_1kn70.DialogButton:hover:active.Destructive,
 button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover.gpfocus.Destructive,
 button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover:active.Destructive {
   background: #de3618;
@@ -1321,8 +1327,6 @@ button.gamepaddialog_Button_1kn70.DialogButton:enabled.gpfocus.BarButton,
 button.gamepaddialog_Button_1kn70.DialogButton:enabled:active.BarButton,
 button.gamepaddialog_Button_1kn70.DialogButton:active.gpfocus.BarButton,
 button.gamepaddialog_Button_1kn70.DialogButton:active:active.BarButton,
-button.gamepaddialog_Button_1kn70.DialogButton:hover.gpfocus.BarButton,
-button.gamepaddialog_Button_1kn70.DialogButton:hover:active.BarButton,
 button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover.gpfocus.BarButton,
 button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover:active.BarButton {
   background: #fff;
@@ -1335,8 +1339,6 @@ button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover:active.BarBu
 .gamepaddialog_Field_S-_La
   button.gamepaddialog_Button_1kn70.DialogButton:active.gpfocus,
 .gamepaddialog_Field_S-_La
-  button.gamepaddialog_Button_1kn70.DialogButton:hover.gpfocus,
-.gamepaddialog_Field_S-_La
   button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover.gpfocus {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -1346,8 +1348,6 @@ button.gamepaddialog_Button_1kn70.DialogButton:enabled.Disabled,
 button.gamepaddialog_Button_1kn70.DialogButton:enabled[disabled],
 button.gamepaddialog_Button_1kn70.DialogButton:active.Disabled,
 button.gamepaddialog_Button_1kn70.DialogButton:active[disabled],
-button.gamepaddialog_Button_1kn70.DialogButton:hover.Disabled,
-button.gamepaddialog_Button_1kn70.DialogButton:hover[disabled],
 button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover.Disabled,
 button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover[disabled] {
   opacity: 0.4;
@@ -1358,7 +1358,6 @@ button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover[disabled] {
 button.gamepaddialog_Button_1kn70.DialogButton:before,
 button.gamepaddialog_Button_1kn70.DialogButton:enabled:before,
 button.gamepaddialog_Button_1kn70.DialogButton:active:before,
-button.gamepaddialog_Button_1kn70.DialogButton:hover:before,
 button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover:before {
   content: none;
 }
@@ -1599,7 +1598,9 @@ button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover:before {
   .gamepaddialog_FieldLabel_3b0U- {
   flex-shrink: 0;
 }
-.gamepaddialog_Field_S-_La.gamepaddialog_ChildrenWidthGrow__Oeqv
+.gamepaddialog_Field_S-_La:not(
+    .gamepaddialog_WithChildrenBelow_1u5FT
+  ).gamepaddialog_ChildrenWidthGrow__Oeqv
   .gamepaddialog_FieldLabel_3b0U- {
   flex-grow: 0;
 }
@@ -1739,6 +1740,8 @@ button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover:before {
   height: 22px;
   position: relative;
   margin-right: 4px;
+  border-radius: 16px;
+  transition: box-shadow 50ms ease-out;
 }
 .gamepaddialog_Toggle_24G4g.gpfocus {
   outline: none;
@@ -1752,10 +1755,16 @@ button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover:before {
   height: 132%;
   border-radius: 16px;
   background-color: #8b929a;
+  opacity: 1;
   z-index: -1;
 }
 .gamepaddialog_Toggle_24G4g:not(.gamepaddialog_Disabled_1pmyx) {
   cursor: pointer;
+}
+.gamepaddialog_Toggle_24G4g:not(.gamepaddialog_Disabled_1pmyx):hover {
+  box-shadow: 0px 0px 0px 4px rgba(255, 255, 255, 0.3);
+  border-radius: 16px;
+  transition: box-shadow 100ms ease-in;
 }
 .gamepaddialog_ToggleRail_2JtC3 {
   position: absolute;
@@ -1944,6 +1953,62 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Z-Cc svg {
 .gamepadinput_PinDigit_1oiQ5 {
   text-align: center;
 }
+@keyframes gamepadslider_ItemFocusAnim-darkerGrey-nocolor_2ieuB {
+  from {
+    background: #3d4450;
+  }
+  to {
+    background: #23262e;
+  }
+}
+@keyframes gamepadslider_ItemFocusAnim-darkerGrey_rV8ed {
+  from {
+    background: #3d4450;
+    color: #8b929a;
+  }
+  to {
+    background: #23262e;
+    color: #fff;
+  }
+}
+@keyframes gamepadslider_ItemFocusAnim-darkGrey_3mh_q {
+  from {
+    background: #67707b;
+    color: #8b929a;
+  }
+  to {
+    background: #3d4450;
+    color: #fff;
+  }
+}
+@keyframes gamepadslider_ItemFocusAnim-grey_v4-Mh {
+  from {
+    background: #8b929a;
+    color: #fff;
+  }
+  to {
+    background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes gamepadslider_ItemFocusAnimBorder-darkGrey_3Kc9j {
+  from {
+    border-color: #67707b;
+  }
+  to {
+    border-color: #3d4450;
+  }
+}
+@keyframes gamepadslider_ItemFocusAnim-green_8o7mU {
+  from {
+    background: #c9ffc9;
+    color: #8b929a;
+  }
+  to {
+    background: #59bf40;
+    color: #fff;
+  }
+}
 .gamepadslider_SliderControlPanelGroup_MY8iY {
   flex-grow: 1;
 }
@@ -1963,9 +2028,14 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Z-Cc svg {
   display: flex;
   height: 24px;
   min-width: 100px;
+  transition: filter 50ms ease-in;
 }
 .gamepadslider_SliderControl_3o137:not(.gamepadslider_Disabled_1lI1N) {
   cursor: pointer;
+}
+.gamepadslider_SliderControl_3o137:hover .gamepadslider_SliderTrack_Mq25N {
+  background: #3d4450;
+  --left-track-color: #00bbff;
 }
 .gamepadslider_SliderTrack_Mq25N {
   background: #23262e;
@@ -1979,6 +2049,9 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Z-Cc svg {
 }
 .gamepadslider_SliderTrack_Mq25N.gamepadslider_SliderHasNotches_2XiAy {
   width: calc(100% - 20px);
+}
+.gamepadslider_SliderTrack_Mq25N.gamepadslider_Disabled_1lI1N {
+  pointer-events: none;
 }
 .gamepadslider_SliderTrack_Mq25N::before {
   content: "";
@@ -2005,6 +2078,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Z-Cc svg {
 .gamepadslider_SliderControlAndNotches_1Cccx.gamepadslider_Disabled_1lI1N
   .gamepadslider_SliderTrack_Mq25N::before {
   background: #67707b;
+  pointer-events: none;
 }
 .gamepadslider_SliderTrackDark_3UIUD {
   background: #000;
@@ -2065,6 +2139,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Z-Cc svg {
 .gamepadslider_SliderControlAndNotches_1Cccx.gamepadslider_Disabled_1lI1N
   .gamepadslider_SliderHandle_2yVKj {
   background: #8b929a;
+  pointer-events: none;
 }
 .gamepadslider_VerticalLineSliderHandle_i3l9t {
   background: rgba(255, 255, 255, 0.3764705882);
@@ -2714,6 +2789,9 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Z-Cc svg {
   z-index: 1;
   animation-name: gamepadpagedsettings_ItemFocusAnim-darkGrey_3qFxl;
 }
+.gamepadpagedsettings_PagedSettingsDialog_PageListItem_1ix7r:hover {
+  background-color: #3d4450;
+}
 .gamepadpagedsettings_PageListItem_Icon_1F_5Q {
   height: 20px;
   width: 20px;
@@ -2905,6 +2983,407 @@ body.modals_BodyNoScrollDialog_3lrlA {
 }
 .trailerplayer_UserInputNeeded_tH6oU > svg {
   height: 150px;
+}
+.shoppingcart_ShoppingCartPage_22xts {
+  max-width: 940px;
+  margin: 0 auto;
+}
+.shoppingcart_ShoppingCartPage_22xts .shoppingcart_CartCheckboxNoMargin_1S9a0 {
+  margin: 0;
+  margin-bottom: 0;
+}
+.shoppingcart_ShoppingCartHeader_bCGAC {
+  font-weight: 800;
+  font-size: 28px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.shoppingcart_ShoppingCartCtn_1jqUY {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.shoppingcart_ShoppingCartCtn_1jqUY .shoppingcart_ShoppingCartLeftCol_17GFd {
+  max-width: 615px;
+  flex-grow: 1;
+}
+.shoppingcart_LineItemWrapper_1XnXT {
+  position: relative;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+.shoppingcart_LineItemPlaceholder_2L-y7 {
+  min-height: 110px;
+  width: 600px;
+  padding: 0;
+}
+.shoppingcart_LoadingThrobber_eDdFp {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.shoppingcart_CartSummaryCtn_2bIzQ {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.2);
+  max-width: 280px;
+}
+.shoppingcart_CartSummaryCtn_2bIzQ .shoppingcart_EstimatedTotalFlex_2Djad {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.shoppingcart_CartSummaryCtn_2bIzQ .shoppingcart_SummaryMarginBottom_qV80o {
+  margin-bottom: 10px;
+}
+.shoppingcart_CartNoteText_31DQW {
+  color: #ccd5e0;
+}
+.shoppingcart_CartLabelText_3ayrh {
+  color: #fff;
+  font-size: 13px;
+}
+.shoppingcart_CartValueText_2WLaY {
+  font-weight: 700;
+  color: #fff;
+  font-size: 15px;
+}
+.shoppingcart_InnerLineItemCtn_2EWK- {
+  display: flex;
+  gap: 10px;
+}
+.shoppingcart_InnerLineItemCtn_2EWK- .shoppingcart_LineItemDetailsCtn_2Q4My {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.shoppingcart_InnerLineItemCtn_2EWK- .shoppingcart_LineItemRightCol_1_yf7 {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  justify-content: flex-end;
+  text-align: right;
+}
+.shoppingcart_InnerLineItemCtn_2EWK- .shoppingcart_RemoveLineItem_y3Ocs {
+  margin-top: 10px;
+  color: #606f7f;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 12px;
+}
+.shoppingcart_InnerLineItemCtn_2EWK- .shoppingcart_LineItemDetailsRow_2Za3F {
+  align-items: center;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+.shoppingcart_InnerLineItemCtn_2EWK- .shoppingcart_LineItemTitle_HVnEq {
+  font-size: 16px;
+  color: #ccd5e0;
+  font-weight: 800;
+}
+.shoppingcart_InnerLineItemCtn_2EWK-
+  .shoppingcart_LineItemPricingOptions_evgc4 {
+  margin: auto 0;
+}
+.shoppingcart_InnerLineItemCtn_2EWK- .shoppingcart_LineItemCapsule_3bQHp {
+  max-width: 231px;
+  max-height: 87px;
+}
+.shoppingcart_InnerLineItemCtn_2EWK- .shoppingcart_LineItemDropDown_2bDXG {
+  margin: 0;
+}
+.DialogButton.shoppingcart_AddLineItemCtn_2inq2 {
+  width: 26px;
+  margin: 0;
+  padding: 0;
+  line-height: 28px;
+  margin-left: 10px;
+}
+.DialogButton.shoppingcart_AddLineItemCtn_2inq2
+  .shoppingcart_AddLineItemIcon_-STti {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  margin: 0;
+}
+.shoppingcart_PendingLineItem_HuHB6 {
+  opacity: 0.3;
+  user-select: none;
+}
+.shoppingcart_OriginalPrice_3HBQs {
+  color: #606f7f;
+  text-decoration-line: line-through;
+  font-size: 11px;
+}
+.shoppingcart_FinalPrice_3Yy3M {
+  color: #ccd5e0;
+  font-weight: 700;
+  font-size: 15px;
+}
+.shoppingcart_FlexRow_282Qn {
+  display: flex;
+}
+.shoppingcart_ShoppingCartBreadcrumbs_2FKdJ {
+  color: #8f98a0;
+}
+.shoppingcart_ShoppingCartBreadcrumbs_2FKdJ
+  .shoppingcart_CurrentBreadcrumb_3TtUD {
+  color: #56707f;
+}
+.shoppingcart_GiftFormSection_2SPni {
+  margin: 20px 0;
+}
+.shoppingcart_FormTextLabel_2XHPJ {
+  font-size: 14px;
+  color: #c6d4df;
+  line-height: 20px;
+  margin-bottom: 5px;
+}
+.shoppingcart_FormTitle_ceAkk {
+  font-size: 22px;
+  color: #fff;
+}
+.shoppingcart_RedText_2loJb {
+  color: red;
+}
+.shoppingcart_GiftNoteInput_37bAE {
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-radius: 4px;
+  background: rgba(59, 63, 72, 0.5);
+  color: #dfe3e6;
+  box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0);
+  margin-top: 8px;
+  resize: none;
+  padding: 8px;
+  font-size: 14px;
+  line-height: 20px;
+  width: calc(100% - 16px - 2px);
+  transition-property: background, box-shadow;
+  transition-duration: 0.18s;
+  transition-timing-function: ease-in-out;
+}
+.shoppingcart_GiftNoteInput_37bAE::placeholder {
+  font-style: italic;
+  color: rgba(148, 161, 166, 0.562);
+}
+.shoppingcart_GiftNoteInput_37bAE:focus {
+  outline: none;
+  background: rgba(29, 34, 39, 0.8);
+  box-shadow: inset 1px 1px 6px rgba(0, 0, 0, 0.4);
+}
+.shoppingcart_GiftNoteInput_37bAE:focus::placeholder {
+  margin-left: 2px;
+}
+.shoppingcart_WhiteText_1JFxA {
+  color: #fff;
+}
+.DialogDropDown.shoppingcart_DropDownThin_1hTs0 {
+  font-size: 12px;
+  padding: 5px 20px 5px 7px;
+  min-width: 100px;
+}
+.shoppingcart_DropDownThin_1hTs0 .DialogDropDown_Arrow {
+  width: 14px;
+  top: 8px;
+  right: 1px;
+}
+.shoppingcart_DropDownOptionsCtnThin_3NWLp {
+  font-size: 12px;
+  min-width: 300px;
+}
+.shoppingcart_DropDownOptionItem_1CH6Q {
+  padding: 5px;
+}
+.shoppingcart_GiftRecipientPickerModal_biUAd {
+  width: 600px;
+}
+.shoppingcart_GiftFriendsListCtn_MYCpY {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  max-height: 85%;
+  overflow: auto;
+}
+.shoppingcart_GiftRecipientPickerFormCtn_2bchQ {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+}
+.shoppingcart_GiftRecipientPickerFormCtn_2bchQ
+  .shoppingcart_GiftFriendsInput_2P3oe {
+  margin: 10px 0;
+}
+.shoppingcart_GiftRecipientPickerFormCtn_2bchQ
+  .shoppingcart_GiftRecipientSaveBtn_3-mw1 {
+  margin-top: auto;
+}
+.shoppingcart_GiftPickerFriendBlock_3zsMT {
+  background: rgba(21, 21, 21, 0.15);
+  display: flex;
+  align-items: center;
+  padding: 10px 15px 10px 10px;
+  font-size: 13px;
+  cursor: pointer;
+}
+.shoppingcart_GiftPickerFriendBlock_3zsMT .shoppingcart_FriendAvatar_3_UaD {
+  margin-right: 10px;
+}
+.shoppingcart_GiftPickerFriendBlock_3zsMT.shoppingcart_Disabled_12He9 {
+  background: #3d4450;
+}
+.shoppingcart_GiftPickerFriendBlock_3zsMT.shoppingcart_Selected_35K1c {
+  border: 1px solid red;
+}
+.shoppingcart_GiftPickerFriendBlock_3zsMT
+  .shoppingcart_FavoriteFriendIcon_3pisY {
+  margin-left: 5px;
+  fill: #ff0;
+  width: 13px;
+}
+.shoppingcart_FriendsGiftLabel_ILhfY {
+  font-size: 13px;
+  margin-left: auto;
+}
+.shoppingcart_FriendsGiftLabel_ILhfY.shoppingcart_OwnsGame_1spCK {
+  color: #ffc82c;
+}
+.shoppingcart_FriendsGiftLabel_ILhfY.shoppingcart_OnWishlist_15qRp {
+  color: #1a9fff;
+}
+.shoppingcart_GiftFormRecipient_3D8FM {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+}
+.shoppingcart_GiftFormRecipient_3D8FM .shoppingcart_FriendAvatar_3_UaD {
+  margin-right: 10px;
+}
+.shoppingcart_GiftFormRecipient_3D8FM
+  .shoppingcart_ChangeGiftRecipientBtn_1Qwdt {
+  width: auto;
+  margin-left: 15px;
+  padding: 0 5px;
+}
+.shoppingcart_GiftDatePicker_24zqo {
+  display: flex;
+  margin-top: 10px;
+}
+.shoppingcart_ShoppingCartCountCtn_3d_VH {
+  text-align: center;
+  margin-left: 2px;
+}
+.shoppingcart_CartCountButton_aB8cK {
+  font-size: 11px;
+  text-align: center;
+  color: #fff;
+  display: block;
+  background: #5c7e10;
+  font-weight: 700;
+  text-transform: none;
+  line-height: 20px;
+  cursor: pointer;
+  padding: 0px 20px;
+}
+.shoppingcart_CartCountButton_aB8cK:hover {
+  color: #fff;
+  background: #7ea64b;
+}
+.shoppingcart_ShoppingCartModal_28yxH {
+  width: 600px;
+  position: relative;
+}
+.shoppingcart_ShoppingCartSVG_1VYL9 {
+  width: 15px;
+  vertical-align: sub;
+}
+.shoppingcart_GiftResetDeliveryLink_3Wx7q {
+  text-decoration: underline;
+  font-size: 11px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+.DialogButton.shoppingcart_ScheduleGiftBtn_UpvR- {
+  width: fit-content;
+  padding: 5px 15px;
+  cursor: pointer;
+}
+.shoppingcart_GiftScheduleIcon_3BUMp {
+  width: 24px;
+  vertical-align: -5px;
+  fill: #fff;
+  margin-right: 10px;
+}
+.shoppingcart_GiftRadioLabel_ZC3J1 {
+  font-size: 14px;
+  color: #c6d4df;
+  margin-left: 5px;
+  vertical-align: 1px;
+}
+.shoppingcart_GiftRadioRow_15LUO {
+  margin-top: 10px;
+}
+.shoppingcart_GiftSignatureInput_103vJ {
+  max-width: 60%;
+}
+.purchasenotices_PurchaseNoticeContainer_3MM2B {
+  display: flex;
+  flex-direction: row;
+  height: 52px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+  margin-bottom: 12px;
+}
+.purchasenotices_PurchaseNoticeContainer_3MM2B.purchasenotices_RightHandImage_1rj3M {
+  flex-direction: row-reverse;
+}
+.purchasenotices_PurchaseNoticeLabel_3isvN {
+  font-family: "Motiva Sans", Sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: left;
+  white-space: pre-wrap;
+  color: #fff;
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  padding-left: 12px;
+  background: linear-gradient(90.41deg, #2c3c49 16.25%, #576674 99.89%);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.75);
+}
+.purchasenotices_PurchaseNoticeImageContainer_2oYi0 {
+  height: 52px;
+  width: 52px;
+  background-color: #ffc82c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px 0px 0px 2px;
+}
+.purchasenotices_PurchaseNoticeImageContainer_2oYi0.purchasenotices_VRSupported_PJBlJ {
+  width: 72px;
+}
+.purchasenotices_PurchaseNoticeImage_1vJ5G {
+  height: 55%;
+  color: #000;
+}
+.purchasenotices_PurchaseNoticeImage_1vJ5G.purchasenotices_Tilt_2YKuv {
+  transform: rotate(-15deg);
+}
+.purchasenotices_PurchaseNoticeImage_1vJ5G.purchasenotices_VRSupported_PJBlJ {
+  height: 85%;
+  margin-left: 12%;
+  margin-top: 5%;
+}
+.purchasenotices_PurchaseNoticeImage_1vJ5G.purchasenotices_VROnly_30HWu {
+  height: 30%;
 }
 body,
 body.shared_common_v6_3r3Le {

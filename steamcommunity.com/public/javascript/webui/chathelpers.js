@@ -1,1645 +1,143 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "8360360";
+var CLSTAMP = "8371134";
 (() => {
   var e,
     t,
-    r,
     n,
-    o,
-    i = {
-      88593: (e, t, r) => {
+    r,
+    a,
+    o = {
+      18513: (e, t, n) => {
         "use strict";
-        function n(e, t, r, n) {
-          var o,
-            i = arguments.length,
-            a =
-              i < 3
+        function r(e, t, n, r) {
+          var a,
+            o = arguments.length,
+            i =
+              o < 3
                 ? t
-                : null === n
-                ? (n = Object.getOwnPropertyDescriptor(t, r))
-                : n;
+                : null === r
+                ? (r = Object.getOwnPropertyDescriptor(t, n))
+                : r;
           if (
             "object" == typeof Reflect &&
             "function" == typeof Reflect.decorate
           )
-            a = Reflect.decorate(e, t, r, n);
+            i = Reflect.decorate(e, t, n, r);
           else
-            for (var _ = e.length - 1; _ >= 0; _--)
-              (o = e[_]) &&
-                (a = (i < 3 ? o(a) : i > 3 ? o(t, r, a) : o(t, r)) || a);
-          return i > 3 && a && Object.defineProperty(t, r, a), a;
+            for (var s = e.length - 1; s >= 0; s--)
+              (a = e[s]) &&
+                (i = (o < 3 ? a(i) : o > 3 ? a(t, n, i) : a(t, n)) || i);
+          return o > 3 && i && Object.defineProperty(t, n, i), i;
         }
-        function o(e, t, r, n) {
-          return new (r || (r = Promise))(function (o, i) {
-            function a(e) {
+        function a(e, t, n, r) {
+          return new (n || (n = Promise))(function (a, o) {
+            function i(e) {
               try {
-                s(n.next(e));
+                _(r.next(e));
               } catch (e) {
-                i(e);
-              }
-            }
-            function _(e) {
-              try {
-                s(n.throw(e));
-              } catch (e) {
-                i(e);
+                o(e);
               }
             }
             function s(e) {
+              try {
+                _(r.throw(e));
+              } catch (e) {
+                o(e);
+              }
+            }
+            function _(e) {
               var t;
               e.done
-                ? o(e.value)
+                ? a(e.value)
                 : ((t = e.value),
-                  t instanceof r
+                  t instanceof n
                     ? t
-                    : new r(function (e) {
+                    : new n(function (e) {
                         e(t);
-                      })).then(a, _);
+                      })).then(i, s);
             }
-            s((n = n.apply(e, t || [])).next());
+            _((r = r.apply(e, t || [])).next());
           });
         }
         Object.create;
         Object.create;
-        r(58610);
-        var i = r(87363),
-          a = r.n(i),
-          _ = r(61533);
-        const s = 2147483647;
-        function l(e, t = 0) {
-          switch (e) {
-            case "english":
-              return 0;
-            case "german":
-              return 1;
-            case "french":
-              return 2;
-            case "italian":
-              return 3;
-            case "korean":
-            case "koreana":
-              return 4;
-            case "spanish":
-              return 5;
-            case "schinese":
-              return 6;
-            case "tchinese":
-              return 7;
-            case "russian":
-              return 8;
-            case "thai":
-              return 9;
-            case "japanese":
-              return 10;
-            case "portuguese":
-              return 11;
-            case "polish":
-              return 12;
-            case "danish":
-              return 13;
-            case "dutch":
-              return 14;
-            case "finnish":
-              return 15;
-            case "norwegian":
-              return 16;
-            case "swedish":
-              return 17;
-            case "hungarian":
-              return 18;
-            case "czech":
-              return 19;
-            case "romanian":
-              return 20;
-            case "turkish":
-              return 21;
-            case "arabic":
-              return 25;
-            case "brazilian":
-              return 22;
-            case "bulgarian":
-              return 23;
-            case "greek":
-              return 24;
-            case "ukrainian":
-              return 26;
-            case "latam":
-              return 27;
-            case "vietnamese":
-              return 28;
-            case "sc_schinese":
-              return 29;
-            case "indonesian":
-              return 30;
-            default:
-              return t;
-          }
-        }
-        var d, c, u, p, I, m, E, C, h, R, S, f, T, g, D, k;
-        !(function (e) {
-          (e[(e.k_EConnectivityTestResult_Unknown = 0)] =
-            "k_EConnectivityTestResult_Unknown"),
-            (e[(e.k_EConnectivityTestResult_Connected = 1)] =
-              "k_EConnectivityTestResult_Connected"),
-            (e[(e.k_EConnectivityTestResult_CaptivePortal = 2)] =
-              "k_EConnectivityTestResult_CaptivePortal"),
-            (e[(e.k_EConnectivityTestResult_TimedOut = 3)] =
-              "k_EConnectivityTestResult_TimedOut"),
-            (e[(e.k_EConnectivityTestResult_Failed = 4)] =
-              "k_EConnectivityTestResult_Failed"),
-            (e[(e.k_EConnectivityTestResult_WifiDisabled = 5)] =
-              "k_EConnectivityTestResult_WifiDisabled"),
-            (e[(e.k_EConnectivityTestResult_NoLAN = 6)] =
-              "k_EConnectivityTestResult_NoLAN");
-        })(d || (d = {})),
-          (function (e) {
-            (e[(e.k_ENetFakeLocalSystemState_Normal = 0)] =
-              "k_ENetFakeLocalSystemState_Normal"),
-              (e[(e.k_ENetFakeLocalSystemState_NoLAN = 1)] =
-                "k_ENetFakeLocalSystemState_NoLAN"),
-              (e[(e.k_ENetFakeLocalSystemState_CaptivePortal_Redirected = 2)] =
-                "k_ENetFakeLocalSystemState_CaptivePortal_Redirected"),
-              (e[(e.k_ENetFakeLocalSystemState_CaptivePortal_InPlace = 3)] =
-                "k_ENetFakeLocalSystemState_CaptivePortal_InPlace"),
-              (e[(e.k_ENetFakeLocalSystemState_NoInternet = 4)] =
-                "k_ENetFakeLocalSystemState_NoInternet"),
-              (e[(e.k_ENetFakeLocalSystemState_NoSteam = 5)] =
-                "k_ENetFakeLocalSystemState_NoSteam");
-          })(c || (c = {})),
-          (function (e) {
-            (e[(e.k_ESuspendResumeProgressState_Invalid = 0)] =
-              "k_ESuspendResumeProgressState_Invalid"),
-              (e[(e.k_ESuspendResumeProgressState_Complete = 1)] =
-                "k_ESuspendResumeProgressState_Complete"),
-              (e[(e.k_ESuspendResumeProgressState_CloudSync = 2)] =
-                "k_ESuspendResumeProgressState_CloudSync"),
-              (e[(e.k_ESuspendResumeProgressState_LoggingIn = 3)] =
-                "k_ESuspendResumeProgressState_LoggingIn"),
-              (e[(e.k_ESuspendResumeProgressState_WaitingForApp = 4)] =
-                "k_ESuspendResumeProgressState_WaitingForApp"),
-              (e[(e.k_ESuspendResumeProgressState_Working = 5)] =
-                "k_ESuspendResumeProgressState_Working");
-          })(u || (u = {})),
-          (function (e) {
-            (e[(e.k_EFloatingGamepadTextInputModeModeSingleLine = 0)] =
-              "k_EFloatingGamepadTextInputModeModeSingleLine"),
-              (e[(e.k_EFloatingGamepadTextInputModeModeMultipleLines = 1)] =
-                "k_EFloatingGamepadTextInputModeModeMultipleLines"),
-              (e[(e.k_EFloatingGamepadTextInputModeModeEmail = 2)] =
-                "k_EFloatingGamepadTextInputModeModeEmail"),
-              (e[(e.k_EFloatingGamepadTextInputModeModeNumeric = 3)] =
-                "k_EFloatingGamepadTextInputModeModeNumeric");
-          })(p || (p = {})),
-          (function (e) {
-            (e[(e.k_EAppUpdateContentType_Content = 0)] =
-              "k_EAppUpdateContentType_Content"),
-              (e[(e.k_EAppUpdateContentType_Workshop = 1)] =
-                "k_EAppUpdateContentType_Workshop"),
-              (e[(e.k_EAppUpdateContentType_Shader = 2)] =
-                "k_EAppUpdateContentType_Shader"),
-              (e[(e.k_EAppUpdateContentType_Max = 3)] =
-                "k_EAppUpdateContentType_Max");
-          })(I || (I = {})),
-          (function (e) {
-            (e[(e.k_EOverlayToStoreFlag_None = 0)] =
-              "k_EOverlayToStoreFlag_None"),
-              (e[(e.k_EOverlayToStoreFlag_AddToCart = 1)] =
-                "k_EOverlayToStoreFlag_AddToCart"),
-              (e[(e.k_EOverlayToStoreFlag_AddToCartAndShow = 2)] =
-                "k_EOverlayToStoreFlag_AddToCartAndShow");
-          })(m || (m = {})),
-          (function (e) {
-            (e[(e.k_EActivateGameOverlayToWebPageMode_Default = 0)] =
-              "k_EActivateGameOverlayToWebPageMode_Default"),
-              (e[(e.k_EActivateGameOverlayToWebPageMode_Modal = 1)] =
-                "k_EActivateGameOverlayToWebPageMode_Modal");
-          })(E || (E = {})),
-          (function (e) {
-            (e[(e.k_EGamingDeviceType_Unknown = 0)] =
-              "k_EGamingDeviceType_Unknown"),
-              (e[(e.k_EGamingDeviceType_StandardPC = 1)] =
-                "k_EGamingDeviceType_StandardPC"),
-              (e[(e.k_EGamingDeviceType_Console = 256)] =
-                "k_EGamingDeviceType_Console"),
-              (e[(e.k_EGamingDeviceType_PS3 = 272)] =
-                "k_EGamingDeviceType_PS3"),
-              (e[(e.k_EGamingDeviceType_Steambox = 288)] =
-                "k_EGamingDeviceType_Steambox"),
-              (e[(e.k_EGamingDeviceType_Handheld = 512)] =
-                "k_EGamingDeviceType_Handheld"),
-              (e[(e.k_EGamingDeviceType_Phone = 528)] =
-                "k_EGamingDeviceType_Phone"),
-              (e[(e.k_EGamingDeviceType_SteamDeck = 544)] =
-                "k_EGamingDeviceType_SteamDeck");
-          })(C || (C = {})),
-          (function (e) {
-            (e[(e.k_ELoginUIStyleOld = 0)] = "k_ELoginUIStyleOld"),
-              (e[(e.k_ELoginUIStyleNewWithoutQRCode = 1)] =
-                "k_ELoginUIStyleNewWithoutQRCode"),
-              (e[(e.k_ELoginUIStyleNew = 2)] = "k_ELoginUIStyleNew");
-          })(h || (h = {})),
-          (function (e) {
-            (e[(e.k_ECommunityProfileItemProperty_ImageSmall = 0)] =
-              "k_ECommunityProfileItemProperty_ImageSmall"),
-              (e[(e.k_ECommunityProfileItemProperty_ImageLarge = 1)] =
-                "k_ECommunityProfileItemProperty_ImageLarge"),
-              (e[(e.k_ECommunityProfileItemProperty_InternalName = 2)] =
-                "k_ECommunityProfileItemProperty_InternalName"),
-              (e[(e.k_ECommunityProfileItemProperty_Title = 3)] =
-                "k_ECommunityProfileItemProperty_Title"),
-              (e[(e.k_ECommunityProfileItemProperty_Description = 4)] =
-                "k_ECommunityProfileItemProperty_Description"),
-              (e[(e.k_ECommunityProfileItemProperty_AppID = 5)] =
-                "k_ECommunityProfileItemProperty_AppID"),
-              (e[(e.k_ECommunityProfileItemProperty_TypeID = 6)] =
-                "k_ECommunityProfileItemProperty_TypeID"),
-              (e[(e.k_ECommunityProfileItemProperty_Class = 7)] =
-                "k_ECommunityProfileItemProperty_Class"),
-              (e[(e.k_ECommunityProfileItemProperty_MovieWebM = 8)] =
-                "k_ECommunityProfileItemProperty_MovieWebM"),
-              (e[(e.k_ECommunityProfileItemProperty_MovieMP4 = 9)] =
-                "k_ECommunityProfileItemProperty_MovieMP4"),
-              (e[(e.k_ECommunityProfileItemProperty_MovieWebMSmall = 10)] =
-                "k_ECommunityProfileItemProperty_MovieWebMSmall"),
-              (e[(e.k_ECommunityProfileItemProperty_MovieMP4Small = 11)] =
-                "k_ECommunityProfileItemProperty_MovieMP4Small");
-          })(R || (R = {})),
-          (function (e) {
-            (e[(e.k_ERaiseGameWindowResult_NotRunning = 1)] =
-              "k_ERaiseGameWindowResult_NotRunning"),
-              (e[(e.k_ERaiseGameWindowResult_Success = 2)] =
-                "k_ERaiseGameWindowResult_Success"),
-              (e[(e.k_ERaiseGameWindowResult_Failure = 3)] =
-                "k_ERaiseGameWindowResult_Failure");
-          })(S || (S = {})),
-          (function (e) {
-            (e[(e.k_EPositionInvalid = -1)] = "k_EPositionInvalid"),
-              (e[(e.k_EPositionTopLeft = 0)] = "k_EPositionTopLeft"),
-              (e[(e.k_EPositionTopRight = 1)] = "k_EPositionTopRight"),
-              (e[(e.k_EPositionBottomLeft = 2)] = "k_EPositionBottomLeft"),
-              (e[(e.k_EPositionBottomRight = 3)] = "k_EPositionBottomRight");
-          })(f || (f = {})),
-          (function (e) {
-            (e[(e.k_EAppReleaseState_Unknown = 0)] =
-              "k_EAppReleaseState_Unknown"),
-              (e[(e.k_EAppReleaseState_Unavailable = 1)] =
-                "k_EAppReleaseState_Unavailable"),
-              (e[(e.k_EAppReleaseState_Prerelease = 2)] =
-                "k_EAppReleaseState_Prerelease"),
-              (e[(e.k_EAppReleaseState_PreloadOnly = 3)] =
-                "k_EAppReleaseState_PreloadOnly"),
-              (e[(e.k_EAppReleaseState_Released = 4)] =
-                "k_EAppReleaseState_Released"),
-              (e[(e.k_EAppReleaseState_Disabled = 5)] =
-                "k_EAppReleaseState_Disabled");
-          })(T || (T = {})),
-          (function (e) {
-            (e[(e.k_EGameIDTypeApp = 0)] = "k_EGameIDTypeApp"),
-              (e[(e.k_EGameIDTypeGameMod = 1)] = "k_EGameIDTypeGameMod"),
-              (e[(e.k_EGameIDTypeShortcut = 2)] = "k_EGameIDTypeShortcut"),
-              (e[(e.k_EGameIDTypeP2P = 3)] = "k_EGameIDTypeP2P");
-          })(g || (g = {})),
-          (function (e) {
-            (e[(e.k_EInstallMgrStateNone = 0)] = "k_EInstallMgrStateNone"),
-              (e[(e.k_EInstallMgrStateSetup = 1)] = "k_EInstallMgrStateSetup"),
-              (e[(e.k_EInstallMgrStateWaitLicense = 2)] =
-                "k_EInstallMgrStateWaitLicense"),
-              (e[(e.k_EInstallMgrStateFreeLicense = 3)] =
-                "k_EInstallMgrStateFreeLicense"),
-              (e[(e.k_EInstallMgrStateShowCDKey = 4)] =
-                "k_EInstallMgrStateShowCDKey"),
-              (e[(e.k_EInstallMgrStateWaitAppInfo = 5)] =
-                "k_EInstallMgrStateWaitAppInfo"),
-              (e[(e.k_EInstallMgrStateShowPassword = 6)] =
-                "k_EInstallMgrStateShowPassword"),
-              (e[(e.k_EInstallMgrStateShowConfig = 7)] =
-                "k_EInstallMgrStateShowConfig"),
-              (e[(e.k_EInstallMgrStateShowEULAs = 8)] =
-                "k_EInstallMgrStateShowEULAs"),
-              (e[(e.k_EInstallMgrStateCreateApps = 9)] =
-                "k_EInstallMgrStateCreateApps"),
-              (e[(e.k_EInstallMgrStateReadFromMedia = 10)] =
-                "k_EInstallMgrStateReadFromMedia"),
-              (e[(e.k_EInstallMgrStateShowChangeMedia = 11)] =
-                "k_EInstallMgrStateShowChangeMedia"),
-              (e[(e.k_EInstallMgrStateWaitLegacyCDKeys = 12)] =
-                "k_EInstallMgrStateWaitLegacyCDKeys"),
-              (e[(e.k_EInstallMgrStateShowSignup = 13)] =
-                "k_EInstallMgrStateShowSignup"),
-              (e[(e.k_EInstallMgrStateComplete = 14)] =
-                "k_EInstallMgrStateComplete"),
-              (e[(e.k_EInstallMgrStateFailed = 15)] =
-                "k_EInstallMgrStateFailed"),
-              (e[(e.k_EInstallMgrStateCanceled = 16)] =
-                "k_EInstallMgrStateCanceled");
-          })(D || (D = {})),
-          (function (e) {
-            (e[(e.k_EWindowBringToFrontInvalid = 0)] =
-              "k_EWindowBringToFrontInvalid"),
-              (e[(e.k_EWindowBringToFrontAndForceOS = 1)] =
-                "k_EWindowBringToFrontAndForceOS"),
-              (e[(e.k_EWindowBringToFrontWithoutForcingOS = 2)] =
-                "k_EWindowBringToFrontWithoutForcingOS");
-          })(k || (k = {}));
-        var y, A, v;
-        !(function (e) {
-          (e[(e.Input = 0)] = "Input"), (e[(e.Output = 1)] = "Output");
-        })(y || (y = {})),
-          (function (e) {
-            (e[(e.Input = 0)] = "Input"),
-              (e[(e.AllOutput = 1)] = "AllOutput"),
-              (e[(e.Left = 2)] = "Left"),
-              (e[(e.Right = 3)] = "Right"),
-              (e[(e.Sub = 4)] = "Sub"),
-              (e[(e.BackLeft = 5)] = "BackLeft"),
-              (e[(e.BackRight = 6)] = "BackRight");
-          })(A || (A = {})),
-          (function (e) {
-            (e[(e.k_ESteamRealmUnknown = 0)] = "k_ESteamRealmUnknown"),
-              (e[(e.k_ESteamRealmGlobal = 1)] = "k_ESteamRealmGlobal"),
-              (e[(e.k_ESteamRealmChina = 2)] = "k_ESteamRealmChina");
-          })(v || (v = {}));
-        var V;
-        !(function (e) {
-          (e[(e.k_BluetoothDeviceType_Invalid = 0)] =
-            "k_BluetoothDeviceType_Invalid"),
-            (e[(e.k_BluetoothDeviceType_Unknown = 1)] =
-              "k_BluetoothDeviceType_Unknown"),
-            (e[(e.k_BluetoothDeviceType_Phone = 2)] =
-              "k_BluetoothDeviceType_Phone"),
-            (e[(e.k_BluetoothDeviceType_Computer = 3)] =
-              "k_BluetoothDeviceType_Computer"),
-            (e[(e.k_BluetoothDeviceType_Headset = 4)] =
-              "k_BluetoothDeviceType_Headset"),
-            (e[(e.k_BluetoothDeviceType_Headphones = 5)] =
-              "k_BluetoothDeviceType_Headphones"),
-            (e[(e.k_BluetoothDeviceType_Speakers = 6)] =
-              "k_BluetoothDeviceType_Speakers"),
-            (e[(e.k_BluetoothDeviceType_OtherAudio = 7)] =
-              "k_BluetoothDeviceType_OtherAudio"),
-            (e[(e.k_BluetoothDeviceType_Mouse = 8)] =
-              "k_BluetoothDeviceType_Mouse"),
-            (e[(e.k_BluetoothDeviceType_Joystick = 9)] =
-              "k_BluetoothDeviceType_Joystick"),
-            (e[(e.k_BluetoothDeviceType_Gamepad = 10)] =
-              "k_BluetoothDeviceType_Gamepad"),
-            (e[(e.k_BluetoothDeviceType_Keyboard = 11)] =
-              "k_BluetoothDeviceType_Keyboard");
-        })(V || (V = {}));
-        var P, M, F, B;
-        !(function (e) {
-          (e[(e.EBrowserType_OffScreen = 0)] = "EBrowserType_OffScreen"),
-            (e[(e.EBrowserType_OpenVROverlay = 1)] =
-              "EBrowserType_OpenVROverlay"),
-            (e[(e.EBrowserType_OpenVROverlay_Dashboard = 2)] =
-              "EBrowserType_OpenVROverlay_Dashboard"),
-            (e[(e.EBrowserType_DirectHWND = 3)] = "EBrowserType_DirectHWND"),
-            (e[(e.EBrowserType_DirectHWND_Borderless = 4)] =
-              "EBrowserType_DirectHWND_Borderless"),
-            (e[(e.EBrowserType_DirectHWND_Hidden = 5)] =
-              "EBrowserType_DirectHWND_Hidden"),
-            (e[(e.EBrowserType_ChildHWNDNative = 6)] =
-              "EBrowserType_ChildHWNDNative"),
-            (e[(e.EBrowserType_Transparent_Toplevel = 7)] =
-              "EBrowserType_Transparent_Toplevel"),
-            (e[(e.EBrowserType_OffScreen_SharedTexture = 8)] =
-              "EBrowserType_OffScreen_SharedTexture"),
-            (e[(e.EBrowserType_OffScreen_GameOverlay = 9)] =
-              "EBrowserType_OffScreen_GameOverlay"),
-            (e[(e.EBrowserType_OffScreen_GameOverlay_SharedTexture = 10)] =
-              "EBrowserType_OffScreen_GameOverlay_SharedTexture"),
-            (e[(e.EBrowserType_Offscreen_FriendsUI = 11)] =
-              "EBrowserType_Offscreen_FriendsUI"),
-            (e[(e.EBrowserType_Offscreen_SteamUI = 12)] =
-              "EBrowserType_Offscreen_SteamUI"),
-            (e[(e.EBrowserType_OpenVROverlay_Subview = 13)] =
-              "EBrowserType_OpenVROverlay_Subview");
-        })(P || (P = {})),
-          (function (e) {
-            (e[(e.SystemKey0 = 0)] = "SystemKey0"),
-              (e[(e.SystemKey1 = 1)] = "SystemKey1");
-          })(M || (M = {})),
-          (function (e) {
-            (e[(e.Hidden = 0)] = "Hidden"),
-              (e[(e.Notification = 1)] = "Notification"),
-              (e[(e.Overlay = 2)] = "Overlay"),
-              (e[(e.Opaque = 3)] = "Opaque"),
-              (e[(e.OverlayKeyboard = 4)] = "OverlayKeyboard");
-          })(F || (F = {})),
-          (function (e) {
-            (e[(e.MainGamepadUI = 0)] = "MainGamepadUI"),
-              (e[(e.OverlayGamepadUI = 1)] = "OverlayGamepadUI"),
-              (e[(e.Keyboard = 2)] = "Keyboard"),
-              (e[(e.ControllerConfigurator = 3)] = "ControllerConfigurator"),
-              (e[(e.VR = 4)] = "VR"),
-              (e[(e.MainDesktopUI = 5)] = "MainDesktopUI"),
-              (e[(e.DesktopLogin = 6)] = "DesktopLogin"),
-              (e[(e.OverlayDesktopUI = 7)] = "OverlayDesktopUI"),
-              (e[(e.SteamChinaReviewLauncher = 8)] =
-                "SteamChinaReviewLauncher");
-          })(B || (B = {}));
-        var L, b, O;
-        !(function (e) {
-          (e[(e.k_EPending = 0)] = "k_EPending"),
-            (e[(e.k_EAccepted = 1)] = "k_EAccepted"),
-            (e[(e.k_ERejected = 2)] = "k_ERejected");
-        })(L || (L = {})),
-          (function (e) {
-            (e[(e.k_EControllerBindingType_None = 0)] =
-              "k_EControllerBindingType_None"),
-              (e[(e.k_EControllerBindingType_Key = 1)] =
-                "k_EControllerBindingType_Key"),
-              (e[(e.k_EControllerBindingType_MouseButton = 2)] =
-                "k_EControllerBindingType_MouseButton"),
-              (e[(e.k_EControllerBindingType_Gamepad = 3)] =
-                "k_EControllerBindingType_Gamepad"),
-              (e[(e.k_EControllerBindingType_Mousewheel = 4)] =
-                "k_EControllerBindingType_Mousewheel"),
-              (e[(e.k_EControllerBindingType_Modeshift = 5)] =
-                "k_EControllerBindingType_Modeshift"),
-              (e[(e.k_EControllerBindingType_GameAction = 6)] =
-                "k_EControllerBindingType_GameAction"),
-              (e[(e.k_EControllerBindingType_ControllerAction = 7)] =
-                "k_EControllerBindingType_ControllerAction");
-          })(b || (b = {})),
-          (function (e) {
-            (e[(e.GAMEPAD_BUTTON_A = 0)] = "GAMEPAD_BUTTON_A"),
-              (e[(e.GAMEPAD_BUTTON_B = 1)] = "GAMEPAD_BUTTON_B"),
-              (e[(e.GAMEPAD_BUTTON_X = 2)] = "GAMEPAD_BUTTON_X"),
-              (e[(e.GAMEPAD_BUTTON_Y = 3)] = "GAMEPAD_BUTTON_Y"),
-              (e[(e.GAMEPAD_BUTTON_DPAD_UP = 4)] = "GAMEPAD_BUTTON_DPAD_UP"),
-              (e[(e.GAMEPAD_BUTTON_DPAD_RIGHT = 5)] =
-                "GAMEPAD_BUTTON_DPAD_RIGHT"),
-              (e[(e.GAMEPAD_BUTTON_DPAD_DOWN = 6)] =
-                "GAMEPAD_BUTTON_DPAD_DOWN"),
-              (e[(e.GAMEPAD_BUTTON_DPAD_LEFT = 7)] =
-                "GAMEPAD_BUTTON_DPAD_LEFT"),
-              (e[(e.GAMEPAD_BUTTON_MENU = 8)] = "GAMEPAD_BUTTON_MENU"),
-              (e[(e.GAMEPAD_BUTTON_VIEW = 9)] = "GAMEPAD_BUTTON_VIEW"),
-              (e[(e.GAMEPAD_LEFTPAD_UP = 10)] = "GAMEPAD_LEFTPAD_UP"),
-              (e[(e.GAMEPAD_LEFTPAD_DOWN = 11)] = "GAMEPAD_LEFTPAD_DOWN"),
-              (e[(e.GAMEPAD_LEFTPAD_LEFT = 12)] = "GAMEPAD_LEFTPAD_LEFT"),
-              (e[(e.GAMEPAD_LEFTPAD_RIGHT = 13)] = "GAMEPAD_LEFTPAD_RIGHT"),
-              (e[(e.GAMEPAD_LEFTPAD_ANALOG = 14)] = "GAMEPAD_LEFTPAD_ANALOG"),
-              (e[(e.GAMEPAD_RIGHTPAD_UP = 15)] = "GAMEPAD_RIGHTPAD_UP"),
-              (e[(e.GAMEPAD_RIGHTPAD_DOWN = 16)] = "GAMEPAD_RIGHTPAD_DOWN"),
-              (e[(e.GAMEPAD_RIGHTPAD_LEFT = 17)] = "GAMEPAD_RIGHTPAD_LEFT"),
-              (e[(e.GAMEPAD_RIGHTPAD_RIGHT = 18)] = "GAMEPAD_RIGHTPAD_RIGHT"),
-              (e[(e.GAMEPAD_RIGHTPAD_ANALOG = 19)] = "GAMEPAD_RIGHTPAD_ANALOG"),
-              (e[(e.GAMEPAD_LEFTSTICK_UP = 20)] = "GAMEPAD_LEFTSTICK_UP"),
-              (e[(e.GAMEPAD_LEFTSTICK_DOWN = 21)] = "GAMEPAD_LEFTSTICK_DOWN"),
-              (e[(e.GAMEPAD_LEFTSTICK_LEFT = 22)] = "GAMEPAD_LEFTSTICK_LEFT"),
-              (e[(e.GAMEPAD_LEFTSTICK_RIGHT = 23)] = "GAMEPAD_LEFTSTICK_RIGHT"),
-              (e[(e.GAMEPAD_LEFTSTICK_ANALOG = 24)] =
-                "GAMEPAD_LEFTSTICK_ANALOG"),
-              (e[(e.GAMEPAD_LEFTSTICK_CLICK = 25)] = "GAMEPAD_LEFTSTICK_CLICK"),
-              (e[(e.GAMEPAD_LTRIGGER_ANALOG = 26)] = "GAMEPAD_LTRIGGER_ANALOG"),
-              (e[(e.GAMEPAD_RTRIGGER_ANALOG = 27)] = "GAMEPAD_RTRIGGER_ANALOG"),
-              (e[(e.GAMEPAD_BUTTON_LTRIGGER = 28)] = "GAMEPAD_BUTTON_LTRIGGER"),
-              (e[(e.GAMEPAD_BUTTON_RTRIGGER = 29)] = "GAMEPAD_BUTTON_RTRIGGER"),
-              (e[(e.GAMEPAD_BUTTON_LSHOULDER = 30)] =
-                "GAMEPAD_BUTTON_LSHOULDER"),
-              (e[(e.GAMEPAD_BUTTON_RSHOULDER = 31)] =
-                "GAMEPAD_BUTTON_RSHOULDER"),
-              (e[(e.GAMEPAD_BUTTON_LBACK = 32)] = "GAMEPAD_BUTTON_LBACK"),
-              (e[(e.GAMEPAD_BUTTON_RBACK = 33)] = "GAMEPAD_BUTTON_RBACK"),
-              (e[(e.GAMEPAD_BUTTON_GUIDE = 34)] = "GAMEPAD_BUTTON_GUIDE"),
-              (e[(e.GAMEPAD_BUTTON_SELECT = 35)] = "GAMEPAD_BUTTON_SELECT"),
-              (e[(e.GAMEPAD_BUTTON_START = 36)] = "GAMEPAD_BUTTON_START"),
-              (e[(e.GAMEPAD_BUTTON_LPAD_CLICKED = 37)] =
-                "GAMEPAD_BUTTON_LPAD_CLICKED"),
-              (e[(e.GAMEPAD_BUTTON_LPAD_TOUCH = 38)] =
-                "GAMEPAD_BUTTON_LPAD_TOUCH"),
-              (e[(e.GAMEPAD_BUTTON_RPAD_CLICKED = 39)] =
-                "GAMEPAD_BUTTON_RPAD_CLICKED"),
-              (e[(e.GAMEPAD_BUTTON_RPAD_TOUCH = 40)] =
-                "GAMEPAD_BUTTON_RPAD_TOUCH"),
-              (e[(e.GAMEPAD_RIGHTSTICK_CLICK = 41)] =
-                "GAMEPAD_RIGHTSTICK_CLICK"),
-              (e[(e.GAMEPAD_RIGHTSTICK_TOUCH = 42)] =
-                "GAMEPAD_RIGHTSTICK_TOUCH"),
-              (e[(e.GAMEPAD_LEFTSTICK_TOUCH = 43)] = "GAMEPAD_LEFTSTICK_TOUCH"),
-              (e[(e.GAMEPAD_BUTTON_LBACK_UPPER = 44)] =
-                "GAMEPAD_BUTTON_LBACK_UPPER"),
-              (e[(e.GAMEPAD_BUTTON_RBACK_UPPER = 45)] =
-                "GAMEPAD_BUTTON_RBACK_UPPER"),
-              (e[(e.GAMEPAD_BUTTON_LAST = 46)] = "GAMEPAD_BUTTON_LAST"),
-              (e[(e.GAMEPAD_ANALOG_SCROLL = 47)] = "GAMEPAD_ANALOG_SCROLL"),
-              (e[(e.GAMEPAD_ANALOG_LEFT_KEYBOARD_CURSOR = 48)] =
-                "GAMEPAD_ANALOG_LEFT_KEYBOARD_CURSOR"),
-              (e[(e.GAMEPAD_ANALOG_RIGHT_KEYBOARD_CURSOR = 49)] =
-                "GAMEPAD_ANALOG_RIGHT_KEYBOARD_CURSOR"),
-              (e[(e.GAMEPAD_ANALOG_LAST = 50)] = "GAMEPAD_ANALOG_LAST");
-          })(O || (O = {}));
-        var N, U;
-        !(function (e) {
-          (e[(e.k_ERemoteClientLaunchOK = 1)] = "k_ERemoteClientLaunchOK"),
-            (e[(e.k_ERemoteClientLaunchFail = 2)] =
-              "k_ERemoteClientLaunchFail"),
-            (e[(e.k_ERemoteClientLaunchRequiresUI = 3)] =
-              "k_ERemoteClientLaunchRequiresUI"),
-            (e[(e.k_ERemoteClientLaunchRequiresLaunchOption = 4)] =
-              "k_ERemoteClientLaunchRequiresLaunchOption"),
-            (e[(e.k_ERemoteClientLaunchRequiresEULA = 5)] =
-              "k_ERemoteClientLaunchRequiresEULA"),
-            (e[(e.k_ERemoteClientLaunchTimeout = 6)] =
-              "k_ERemoteClientLaunchTimeout"),
-            (e[(e.k_ERemoteClientLaunchStreamTimeout = 7)] =
-              "k_ERemoteClientLaunchStreamTimeout"),
-            (e[(e.k_ERemoteClientLaunchStreamClientFail = 8)] =
-              "k_ERemoteClientLaunchStreamClientFail"),
-            (e[(e.k_ERemoteClientLaunchOtherGameRunning = 9)] =
-              "k_ERemoteClientLaunchOtherGameRunning"),
-            (e[(e.k_ERemoteClientLaunchDownloadStarted = 10)] =
-              "k_ERemoteClientLaunchDownloadStarted"),
-            (e[(e.k_ERemoteClientLaunchDownloadNoSpace = 11)] =
-              "k_ERemoteClientLaunchDownloadNoSpace"),
-            (e[(e.k_ERemoteClientLaunchDownloadFiltered = 12)] =
-              "k_ERemoteClientLaunchDownloadFiltered"),
-            (e[(e.k_ERemoteClientLaunchDownloadRequiresUI = 13)] =
-              "k_ERemoteClientLaunchDownloadRequiresUI"),
-            (e[(e.k_ERemoteClientLaunchAccessDenied = 14)] =
-              "k_ERemoteClientLaunchAccessDenied"),
-            (e[(e.k_ERemoteClientLaunchNetworkError = 15)] =
-              "k_ERemoteClientLaunchNetworkError"),
-            (e[(e.k_ERemoteClientLaunchProgress = 16)] =
-              "k_ERemoteClientLaunchProgress"),
-            (e[(e.k_ERemoteClientLaunchParentalUnlockFailed = 17)] =
-              "k_ERemoteClientLaunchParentalUnlockFailed"),
-            (e[(e.k_ERemoteClientLaunchScreenLocked = 18)] =
-              "k_ERemoteClientLaunchScreenLocked"),
-            (e[(e.k_ERemoteClientLaunchUnsupported = 19)] =
-              "k_ERemoteClientLaunchUnsupported"),
-            (e[(e.k_ERemoteClientLaunchDisabledLocal = 20)] =
-              "k_ERemoteClientLaunchDisabledLocal"),
-            (e[(e.k_ERemoteClientLaunchDisabledRemote = 21)] =
-              "k_ERemoteClientLaunchDisabledRemote"),
-            (e[(e.k_ERemoteClientLaunchBroadcasting = 22)] =
-              "k_ERemoteClientLaunchBroadcasting"),
-            (e[(e.k_ERemoteClientLaunchBusy = 23)] =
-              "k_ERemoteClientLaunchBusy"),
-            (e[(e.k_ERemoteClientLaunchDriversNotInstalled = 24)] =
-              "k_ERemoteClientLaunchDriversNotInstalled"),
-            (e[(e.k_ERemoteClientLaunchTransportUnavailable = 25)] =
-              "k_ERemoteClientLaunchTransportUnavailable"),
-            (e[(e.k_ERemoteClientLaunchCanceled = 26)] =
-              "k_ERemoteClientLaunchCanceled"),
-            (e[(e.k_ERemoteClientLaunchInvisible = 27)] =
-              "k_ERemoteClientLaunchInvisible"),
-            (e[(e.k_ERemoteClientLaunchRestrictedCountry = 28)] =
-              "k_ERemoteClientLaunchRestrictedCountry");
-        })(N || (N = {})),
-          (function (e) {
-            (e[(e.AudioPlayback_Undefined = 0)] = "AudioPlayback_Undefined"),
-              (e[(e.AudioPlayback_Playing = 1)] = "AudioPlayback_Playing"),
-              (e[(e.AudioPlayback_Paused = 2)] = "AudioPlayback_Paused"),
-              (e[(e.AudioPlayback_Idle = 3)] = "AudioPlayback_Idle");
-          })(U || (U = {}));
-        var G, w, j, H, x, W;
-        !(function (e) {
-          (e[(e.Unknown = 0)] = "Unknown"),
-            (e[(e.Wired = 1)] = "Wired"),
-            (e[(e.Wireless = 2)] = "Wireless"),
-            (e[(e.Virtual = 3)] = "Virtual");
-        })(G || (G = {})),
-          (function (e) {
-            (e[(e.NotPresent = 0)] = "NotPresent"),
-              (e[(e.Failed = 1)] = "Failed"),
-              (e[(e.Disconnected = 2)] = "Disconnected"),
-              (e[(e.Disconnecting = 3)] = "Disconnecting"),
-              (e[(e.Connecting = 4)] = "Connecting"),
-              (e[(e.Connected = 5)] = "Connected"),
-              (e[(e.Retrying = 6)] = "Retrying");
-          })(w || (w = {})),
-          (function (e) {
-            (e[(e.None = 0)] = "None"),
-              (e[(e.Weak = 1)] = "Weak"),
-              (e[(e.Ok = 2)] = "Ok"),
-              (e[(e.Good = 3)] = "Good"),
-              (e[(e.Excellent = 4)] = "Excellent");
-          })(j || (j = {})),
-          (function (e) {
-            (e[(e.None = 0)] = "None"),
-              (e[(e.StaticWep = 1)] = "StaticWep"),
-              (e[(e.DynamicWep = 2)] = "DynamicWep"),
-              (e[(e.Wpa = 4)] = "Wpa"),
-              (e[(e.WpaEnterprise = 8)] = "WpaEnterprise"),
-              (e[(e.Wpa2 = 16)] = "Wpa2"),
-              (e[(e.Wpa2Enterprise = 32)] = "Wpa2Enterprise"),
-              (e[(e.Unsupported = 32768)] = "Unsupported");
-          })(H || (H = {})),
-          (function (e) {
-            (e[(e.k_EHTTPProxyMode_Invalid = 0)] = "k_EHTTPProxyMode_Invalid"),
-              (e[(e.k_EHTTPProxyMode_None = 1)] = "k_EHTTPProxyMode_None"),
-              (e[(e.k_EHTTPProxyMode_Manual = 2)] = "k_EHTTPProxyMode_Manual"),
-              (e[(e.k_EHTTPProxyMode_Automatic = 3)] =
-                "k_EHTTPProxyMode_Automatic");
-          })(x || (x = {})),
-          (function (e) {
-            (e[(e.k_EClientUINotificationGroupChatMessage = 1)] =
-              "k_EClientUINotificationGroupChatMessage"),
-              (e[(e.k_EClientUINotificationFriendChatMessage = 2)] =
-                "k_EClientUINotificationFriendChatMessage"),
-              (e[(e.k_EClientUINotificationFriendPersonaState = 3)] =
-                "k_EClientUINotificationFriendPersonaState");
-          })(W || (W = {}));
-        var K;
-        !(function (e) {
-          (e[(e.k_ELaunchOptionType_None = 0)] = "k_ELaunchOptionType_None"),
-            (e[(e.k_ELaunchOptionType_Default = 1)] =
-              "k_ELaunchOptionType_Default"),
-            (e[(e.k_ELaunchOptionType_SafeMode = 2)] =
-              "k_ELaunchOptionType_SafeMode"),
-            (e[(e.k_ELaunchOptionType_Multiplayer = 3)] =
-              "k_ELaunchOptionType_Multiplayer"),
-            (e[(e.k_ELaunchOptionType_Config = 4)] =
-              "k_ELaunchOptionType_Config"),
-            (e[(e.k_ELaunchOptionType_OpenVR = 5)] =
-              "k_ELaunchOptionType_OpenVR"),
-            (e[(e.k_ELaunchOptionType_Server = 6)] =
-              "k_ELaunchOptionType_Server"),
-            (e[(e.k_ELaunchOptionType_Editor = 7)] =
-              "k_ELaunchOptionType_Editor"),
-            (e[(e.k_ELaunchOptionType_Manual = 8)] =
-              "k_ELaunchOptionType_Manual"),
-            (e[(e.k_ELaunchOptionType_Benchmark = 9)] =
-              "k_ELaunchOptionType_Benchmark"),
-            (e[(e.k_ELaunchOptionType_Option1 = 10)] =
-              "k_ELaunchOptionType_Option1"),
-            (e[(e.k_ELaunchOptionType_Option2 = 11)] =
-              "k_ELaunchOptionType_Option2"),
-            (e[(e.k_ELaunchOptionType_Option3 = 12)] =
-              "k_ELaunchOptionType_Option3"),
-            (e[(e.k_ELaunchOptionType_OculusVR = 13)] =
-              "k_ELaunchOptionType_OculusVR"),
-            (e[(e.k_ELaunchOptionType_OpenVROverlay = 14)] =
-              "k_ELaunchOptionType_OpenVROverlay"),
-            (e[(e.k_ELaunchOptionType_OSVR = 15)] = "k_ELaunchOptionType_OSVR"),
-            (e[(e.k_ELaunchOptionType_OpenXR = 16)] =
-              "k_ELaunchOptionType_OpenXR"),
-            (e[(e.k_ELaunchOptionType_Dialog = 1e3)] =
-              "k_ELaunchOptionType_Dialog");
-        })(K || (K = {}));
-        var q, z, Y, X, $, J, Q, Z, ee;
-        function te(e) {
-          if (!re() || !window.document.cookie) return null;
+        n(42938);
+        var o = n(87363),
+          i = n.n(o),
+          s = n(61533);
+        function _(e) {
+          if (!E() || !window.document.cookie) return null;
           let t = document.cookie.match("(^|; )" + e + "=([^;]*)");
           return t && t[2] ? decodeURIComponent(t[2]) : null;
         }
-        function re() {
+        function E() {
           return !!window.document;
         }
-        !(function (e) {
-          (e[(e.k_EComputerActiveStateInvalid = 0)] =
-            "k_EComputerActiveStateInvalid"),
-            (e[(e.k_EComputerActiveStateActive = 1)] =
-              "k_EComputerActiveStateActive"),
-            (e[(e.k_EComputerActiveStateIdle = 2)] =
-              "k_EComputerActiveStateIdle");
-        })(q || (q = {})),
-          (function (e) {
-            (e[(e.k_EClientUsedInputTypeKeyboard = 0)] =
-              "k_EClientUsedInputTypeKeyboard"),
-              (e[(e.k_EClientUsedInputTypeMouse = 1)] =
-                "k_EClientUsedInputTypeMouse"),
-              (e[(e.k_EClientUsedInputTypeController = 2)] =
-                "k_EClientUsedInputTypeController"),
-              (e[(e.k_EClientUsedInputTypeMax = 3)] =
-                "k_EClientUsedInputTypeMax");
-          })(z || (z = {})),
-          (function (e) {
-            (e[(e.k_EVRError_None = 0)] = "k_EVRError_None"),
-              (e[(e.k_EVRError_VRSkipParam = 1)] = "k_EVRError_VRSkipParam"),
-              (e[(e.k_EVRError_ComponentNotInstalled = 2)] =
-                "k_EVRError_ComponentNotInstalled"),
-              (e[(e.k_EVRError_ComponentBusy = 3)] =
-                "k_EVRError_ComponentBusy"),
-              (e[(e.k_EVRError_CrashProtection = 4)] =
-                "k_EVRError_CrashProtection"),
-              (e[(e.k_EVRError_HmdError = 5)] = "k_EVRError_HmdError"),
-              (e[(e.k_EVRError_PathChanged = 6)] = "k_EVRError_PathChanged");
-          })(Y || (Y = {})),
-          (function (e) {
-            (e[(e.VRInitError_None = 0)] = "VRInitError_None"),
-              (e[(e.VRInitError_Unknown = 1)] = "VRInitError_Unknown"),
-              (e[(e.VRInitError_Init_InstallationNotFound = 100)] =
-                "VRInitError_Init_InstallationNotFound"),
-              (e[(e.VRInitError_Init_InstallationCorrupt = 101)] =
-                "VRInitError_Init_InstallationCorrupt"),
-              (e[(e.VRInitError_Init_VRClientDLLNotFound = 102)] =
-                "VRInitError_Init_VRClientDLLNotFound"),
-              (e[(e.VRInitError_Init_FileNotFound = 103)] =
-                "VRInitError_Init_FileNotFound"),
-              (e[(e.VRInitError_Init_FactoryNotFound = 104)] =
-                "VRInitError_Init_FactoryNotFound"),
-              (e[(e.VRInitError_Init_InterfaceNotFound = 105)] =
-                "VRInitError_Init_InterfaceNotFound"),
-              (e[(e.VRInitError_Init_InvalidInterface = 106)] =
-                "VRInitError_Init_InvalidInterface"),
-              (e[(e.VRInitError_Init_UserConfigDirectoryInvalid = 107)] =
-                "VRInitError_Init_UserConfigDirectoryInvalid"),
-              (e[(e.VRInitError_Init_HmdNotFound = 108)] =
-                "VRInitError_Init_HmdNotFound"),
-              (e[(e.VRInitError_Init_NotInitialized = 109)] =
-                "VRInitError_Init_NotInitialized"),
-              (e[(e.VRInitError_Init_PathRegistryNotFound = 110)] =
-                "VRInitError_Init_PathRegistryNotFound"),
-              (e[(e.VRInitError_Init_NoConfigPath = 111)] =
-                "VRInitError_Init_NoConfigPath"),
-              (e[(e.VRInitError_Init_NoLogPath = 112)] =
-                "VRInitError_Init_NoLogPath"),
-              (e[(e.VRInitError_Init_PathRegistryNotWritable = 113)] =
-                "VRInitError_Init_PathRegistryNotWritable"),
-              (e[(e.VRInitError_Init_AppInfoInitFailed = 114)] =
-                "VRInitError_Init_AppInfoInitFailed"),
-              (e[(e.VRInitError_Init_Retry = 115)] = "VRInitError_Init_Retry"),
-              (e[(e.VRInitError_Init_InitCanceledByUser = 116)] =
-                "VRInitError_Init_InitCanceledByUser"),
-              (e[(e.VRInitError_Init_AnotherAppLaunching = 117)] =
-                "VRInitError_Init_AnotherAppLaunching"),
-              (e[(e.VRInitError_Init_SettingsInitFailed = 118)] =
-                "VRInitError_Init_SettingsInitFailed"),
-              (e[(e.VRInitError_Init_ShuttingDown = 119)] =
-                "VRInitError_Init_ShuttingDown"),
-              (e[(e.VRInitError_Init_TooManyObjects = 120)] =
-                "VRInitError_Init_TooManyObjects"),
-              (e[(e.VRInitError_Init_NoServerForBackgroundApp = 121)] =
-                "VRInitError_Init_NoServerForBackgroundApp"),
-              (e[(e.VRInitError_Init_NotSupportedWithCompositor = 122)] =
-                "VRInitError_Init_NotSupportedWithCompositor"),
-              (e[(e.VRInitError_Init_NotAvailableToUtilityApps = 123)] =
-                "VRInitError_Init_NotAvailableToUtilityApps"),
-              (e[(e.VRInitError_Init_Internal = 124)] =
-                "VRInitError_Init_Internal"),
-              (e[(e.VRInitError_Init_HmdDriverIdIsNone = 125)] =
-                "VRInitError_Init_HmdDriverIdIsNone"),
-              (e[(e.VRInitError_Init_HmdNotFoundPresenceFailed = 126)] =
-                "VRInitError_Init_HmdNotFoundPresenceFailed"),
-              (e[(e.VRInitError_Init_VRMonitorNotFound = 127)] =
-                "VRInitError_Init_VRMonitorNotFound"),
-              (e[(e.VRInitError_Init_VRMonitorStartupFailed = 128)] =
-                "VRInitError_Init_VRMonitorStartupFailed"),
-              (e[(e.VRInitError_Init_LowPowerWatchdogNotSupported = 129)] =
-                "VRInitError_Init_LowPowerWatchdogNotSupported"),
-              (e[(e.VRInitError_Init_InvalidApplicationType = 130)] =
-                "VRInitError_Init_InvalidApplicationType"),
-              (e[(e.VRInitError_Init_NotAvailableToWatchdogApps = 131)] =
-                "VRInitError_Init_NotAvailableToWatchdogApps"),
-              (e[(e.VRInitError_Init_WatchdogDisabledInSettings = 132)] =
-                "VRInitError_Init_WatchdogDisabledInSettings"),
-              (e[(e.VRInitError_Init_VRDashboardNotFound = 133)] =
-                "VRInitError_Init_VRDashboardNotFound"),
-              (e[(e.VRInitError_Init_VRDashboardStartupFailed = 134)] =
-                "VRInitError_Init_VRDashboardStartupFailed"),
-              (e[(e.VRInitError_Init_VRHomeNotFound = 135)] =
-                "VRInitError_Init_VRHomeNotFound"),
-              (e[(e.VRInitError_Init_VRHomeStartupFailed = 136)] =
-                "VRInitError_Init_VRHomeStartupFailed"),
-              (e[(e.VRInitError_Init_RebootingBusy = 137)] =
-                "VRInitError_Init_RebootingBusy"),
-              (e[(e.VRInitError_Init_FirmwareUpdateBusy = 138)] =
-                "VRInitError_Init_FirmwareUpdateBusy"),
-              (e[(e.VRInitError_Init_FirmwareRecoveryBusy = 139)] =
-                "VRInitError_Init_FirmwareRecoveryBusy"),
-              (e[(e.VRInitError_Init_USBServiceBusy = 140)] =
-                "VRInitError_Init_USBServiceBusy"),
-              (e[(e.VRInitError_Init_VRWebHelperStartupFailed = 141)] =
-                "VRInitError_Init_VRWebHelperStartupFailed"),
-              (e[(e.VRInitError_Init_TrackerManagerInitFailed = 142)] =
-                "VRInitError_Init_TrackerManagerInitFailed"),
-              (e[(e.VRInitError_Init_AlreadyRunning = 143)] =
-                "VRInitError_Init_AlreadyRunning"),
-              (e[(e.VRInitError_Init_FailedForVrMonitor = 144)] =
-                "VRInitError_Init_FailedForVrMonitor"),
-              (e[(e.VRInitError_Init_PropertyManagerInitFailed = 145)] =
-                "VRInitError_Init_PropertyManagerInitFailed"),
-              (e[(e.VRInitError_Init_WebServerFailed = 146)] =
-                "VRInitError_Init_WebServerFailed"),
-              (e[(e.VRInitError_Init_IllegalTypeTransition = 147)] =
-                "VRInitError_Init_IllegalTypeTransition"),
-              (e[(e.VRInitError_Init_MismatchedRuntimes = 148)] =
-                "VRInitError_Init_MismatchedRuntimes"),
-              (e[(e.VRInitError_Init_InvalidProcessId = 149)] =
-                "VRInitError_Init_InvalidProcessId"),
-              (e[(e.VRInitError_Init_VRServiceStartupFailed = 150)] =
-                "VRInitError_Init_VRServiceStartupFailed"),
-              (e[(e.VRInitError_Init_PrismNeedsNewDrivers = 151)] =
-                "VRInitError_Init_PrismNeedsNewDrivers"),
-              (e[(e.VRInitError_Init_PrismStartupTimedOut = 152)] =
-                "VRInitError_Init_PrismStartupTimedOut"),
-              (e[(e.VRInitError_Init_CouldNotStartPrism = 153)] =
-                "VRInitError_Init_CouldNotStartPrism"),
-              (e[(e.VRInitError_Init_PrismClientInitFailed = 154)] =
-                "VRInitError_Init_PrismClientInitFailed"),
-              (e[(e.VRInitError_Init_PrismClientStartFailed = 155)] =
-                "VRInitError_Init_PrismClientStartFailed"),
-              (e[(e.VRInitError_Init_PrismExitedUnexpectedly = 156)] =
-                "VRInitError_Init_PrismExitedUnexpectedly"),
-              (e[(e.VRInitError_Init_BadLuid = 157)] =
-                "VRInitError_Init_BadLuid"),
-              (e[(e.VRInitError_Init_NoServerForAppContainer = 158)] =
-                "VRInitError_Init_NoServerForAppContainer"),
-              (e[(e.VRInitError_Init_DuplicateBootstrapper = 159)] =
-                "VRInitError_Init_DuplicateBootstrapper"),
-              (e[(e.VRInitError_Init_VRDashboardServicePending = 160)] =
-                "VRInitError_Init_VRDashboardServicePending"),
-              (e[(e.VRInitError_Init_VRDashboardServiceTimeout = 161)] =
-                "VRInitError_Init_VRDashboardServiceTimeout"),
-              (e[(e.VRInitError_Init_VRDashboardServiceStopped = 162)] =
-                "VRInitError_Init_VRDashboardServiceStopped"),
-              (e[(e.VRInitError_Init_VRDashboardAlreadyStarted = 163)] =
-                "VRInitError_Init_VRDashboardAlreadyStarted"),
-              (e[(e.VRInitError_Init_VRDashboardCopyFailed = 164)] =
-                "VRInitError_Init_VRDashboardCopyFailed"),
-              (e[(e.VRInitError_Init_VRDashboardTokenFailure = 165)] =
-                "VRInitError_Init_VRDashboardTokenFailure"),
-              (e[(e.VRInitError_Init_VRDashboardEnvironmentFailure = 166)] =
-                "VRInitError_Init_VRDashboardEnvironmentFailure"),
-              (e[(e.VRInitError_Init_VRDashboardPathFailure = 167)] =
-                "VRInitError_Init_VRDashboardPathFailure"),
-              (e[(e.VRInitError_Driver_Failed = 200)] =
-                "VRInitError_Driver_Failed"),
-              (e[(e.VRInitError_Driver_Unknown = 201)] =
-                "VRInitError_Driver_Unknown"),
-              (e[(e.VRInitError_Driver_HmdUnknown = 202)] =
-                "VRInitError_Driver_HmdUnknown"),
-              (e[(e.VRInitError_Driver_NotLoaded = 203)] =
-                "VRInitError_Driver_NotLoaded"),
-              (e[(e.VRInitError_Driver_RuntimeOutOfDate = 204)] =
-                "VRInitError_Driver_RuntimeOutOfDate"),
-              (e[(e.VRInitError_Driver_HmdInUse = 205)] =
-                "VRInitError_Driver_HmdInUse"),
-              (e[(e.VRInitError_Driver_NotCalibrated = 206)] =
-                "VRInitError_Driver_NotCalibrated"),
-              (e[(e.VRInitError_Driver_CalibrationInvalid = 207)] =
-                "VRInitError_Driver_CalibrationInvalid"),
-              (e[(e.VRInitError_Driver_HmdDisplayNotFound = 208)] =
-                "VRInitError_Driver_HmdDisplayNotFound"),
-              (e[(e.VRInitError_Driver_TrackedDeviceInterfaceUnknown = 209)] =
-                "VRInitError_Driver_TrackedDeviceInterfaceUnknown"),
-              (e[(e.VRInitError_Driver_HmdDriverIdOutOfBounds = 211)] =
-                "VRInitError_Driver_HmdDriverIdOutOfBounds"),
-              (e[(e.VRInitError_Driver_HmdDisplayMirrored = 212)] =
-                "VRInitError_Driver_HmdDisplayMirrored"),
-              (e[(e.VRInitError_Driver_HmdDisplayNotFoundLaptop = 213)] =
-                "VRInitError_Driver_HmdDisplayNotFoundLaptop"),
-              (e[(e.VRInitError_Driver_PeerDriverNotInstalled = 214)] =
-                "VRInitError_Driver_PeerDriverNotInstalled"),
-              (e[(e.VRInitError_Driver_WirelessHmdNotConnected = 215)] =
-                "VRInitError_Driver_WirelessHmdNotConnected"),
-              (e[(e.VRInitError_IPC_ServerInitFailed = 300)] =
-                "VRInitError_IPC_ServerInitFailed"),
-              (e[(e.VRInitError_IPC_ConnectFailed = 301)] =
-                "VRInitError_IPC_ConnectFailed"),
-              (e[(e.VRInitError_IPC_SharedStateInitFailed = 302)] =
-                "VRInitError_IPC_SharedStateInitFailed"),
-              (e[(e.VRInitError_IPC_CompositorInitFailed = 303)] =
-                "VRInitError_IPC_CompositorInitFailed"),
-              (e[(e.VRInitError_IPC_MutexInitFailed = 304)] =
-                "VRInitError_IPC_MutexInitFailed"),
-              (e[(e.VRInitError_IPC_Failed = 305)] = "VRInitError_IPC_Failed"),
-              (e[(e.VRInitError_IPC_CompositorConnectFailed = 306)] =
-                "VRInitError_IPC_CompositorConnectFailed"),
-              (e[(e.VRInitError_IPC_CompositorInvalidConnectResponse = 307)] =
-                "VRInitError_IPC_CompositorInvalidConnectResponse"),
-              (e[(e.VRInitError_IPC_ConnectFailedAfterMultipleAttempts = 308)] =
-                "VRInitError_IPC_ConnectFailedAfterMultipleAttempts"),
-              (e[(e.VRInitError_IPC_ConnectFailedAfterTargetExited = 309)] =
-                "VRInitError_IPC_ConnectFailedAfterTargetExited"),
-              (e[(e.VRInitError_IPC_NamespaceUnavailable = 310)] =
-                "VRInitError_IPC_NamespaceUnavailable"),
-              (e[(e.VRInitError_Compositor_Failed = 400)] =
-                "VRInitError_Compositor_Failed"),
-              (e[(e.VRInitError_Compositor_D3D11HardwareRequired = 401)] =
-                "VRInitError_Compositor_D3D11HardwareRequired"),
-              (e[(e.VRInitError_Compositor_FirmwareRequiresUpdate = 402)] =
-                "VRInitError_Compositor_FirmwareRequiresUpdate"),
-              (e[(e.VRInitError_Compositor_OverlayInitFailed = 403)] =
-                "VRInitError_Compositor_OverlayInitFailed"),
-              (e[(e.VRInitError_Compositor_ScreenshotsInitFailed = 404)] =
-                "VRInitError_Compositor_ScreenshotsInitFailed"),
-              (e[(e.VRInitError_Compositor_UnableToCreateDevice = 405)] =
-                "VRInitError_Compositor_UnableToCreateDevice"),
-              (e[(e.VRInitError_Compositor_SharedStateIsNull = 406)] =
-                "VRInitError_Compositor_SharedStateIsNull"),
-              (e[(e.VRInitError_Compositor_NotificationManagerIsNull = 407)] =
-                "VRInitError_Compositor_NotificationManagerIsNull"),
-              (e[(e.VRInitError_Compositor_ResourceManagerClientIsNull = 408)] =
-                "VRInitError_Compositor_ResourceManagerClientIsNull"),
-              (e[
-                (e.VRInitError_Compositor_MessageOverlaySharedStateInitFailure = 409)
-              ] =
-                "VRInitError_Compositor_MessageOverlaySharedStateInitFailure"),
-              (e[(e.VRInitError_Compositor_PropertiesInterfaceIsNull = 410)] =
-                "VRInitError_Compositor_PropertiesInterfaceIsNull"),
-              (e[
-                (e.VRInitError_Compositor_CreateFullscreenWindowFailed = 411)
-              ] = "VRInitError_Compositor_CreateFullscreenWindowFailed"),
-              (e[(e.VRInitError_Compositor_SettingsInterfaceIsNull = 412)] =
-                "VRInitError_Compositor_SettingsInterfaceIsNull"),
-              (e[(e.VRInitError_Compositor_FailedToShowWindow = 413)] =
-                "VRInitError_Compositor_FailedToShowWindow"),
-              (e[(e.VRInitError_Compositor_DistortInterfaceIsNull = 414)] =
-                "VRInitError_Compositor_DistortInterfaceIsNull"),
-              (e[(e.VRInitError_Compositor_DisplayFrequencyFailure = 415)] =
-                "VRInitError_Compositor_DisplayFrequencyFailure"),
-              (e[
-                (e.VRInitError_Compositor_RendererInitializationFailed = 416)
-              ] = "VRInitError_Compositor_RendererInitializationFailed"),
-              (e[(e.VRInitError_Compositor_DXGIFactoryInterfaceIsNull = 417)] =
-                "VRInitError_Compositor_DXGIFactoryInterfaceIsNull"),
-              (e[(e.VRInitError_Compositor_DXGIFactoryCreateFailed = 418)] =
-                "VRInitError_Compositor_DXGIFactoryCreateFailed"),
-              (e[(e.VRInitError_Compositor_DXGIFactoryQueryFailed = 419)] =
-                "VRInitError_Compositor_DXGIFactoryQueryFailed"),
-              (e[(e.VRInitError_Compositor_InvalidAdapterDesktop = 420)] =
-                "VRInitError_Compositor_InvalidAdapterDesktop"),
-              (e[(e.VRInitError_Compositor_InvalidHmdAttachment = 421)] =
-                "VRInitError_Compositor_InvalidHmdAttachment"),
-              (e[(e.VRInitError_Compositor_InvalidOutputDesktop = 422)] =
-                "VRInitError_Compositor_InvalidOutputDesktop"),
-              (e[(e.VRInitError_Compositor_InvalidDeviceProvided = 423)] =
-                "VRInitError_Compositor_InvalidDeviceProvided"),
-              (e[
-                (e.VRInitError_Compositor_D3D11RendererInitializationFailed = 424)
-              ] = "VRInitError_Compositor_D3D11RendererInitializationFailed"),
-              (e[(e.VRInitError_Compositor_FailedToFindDisplayMode = 425)] =
-                "VRInitError_Compositor_FailedToFindDisplayMode"),
-              (e[(e.VRInitError_Compositor_FailedToCreateSwapChain = 426)] =
-                "VRInitError_Compositor_FailedToCreateSwapChain"),
-              (e[(e.VRInitError_Compositor_FailedToGetBackBuffer = 427)] =
-                "VRInitError_Compositor_FailedToGetBackBuffer"),
-              (e[(e.VRInitError_Compositor_FailedToCreateRenderTarget = 428)] =
-                "VRInitError_Compositor_FailedToCreateRenderTarget"),
-              (e[
-                (e.VRInitError_Compositor_FailedToCreateDXGI2SwapChain = 429)
-              ] = "VRInitError_Compositor_FailedToCreateDXGI2SwapChain"),
-              (e[(e.VRInitError_Compositor_FailedtoGetDXGI2BackBuffer = 430)] =
-                "VRInitError_Compositor_FailedtoGetDXGI2BackBuffer"),
-              (e[
-                (e.VRInitError_Compositor_FailedToCreateDXGI2RenderTarget = 431)
-              ] = "VRInitError_Compositor_FailedToCreateDXGI2RenderTarget"),
-              (e[
-                (e.VRInitError_Compositor_FailedToGetDXGIDeviceInterface = 432)
-              ] = "VRInitError_Compositor_FailedToGetDXGIDeviceInterface"),
-              (e[(e.VRInitError_Compositor_SelectDisplayMode = 433)] =
-                "VRInitError_Compositor_SelectDisplayMode"),
-              (e[
-                (e.VRInitError_Compositor_FailedToCreateNvAPIRenderTargets = 434)
-              ] = "VRInitError_Compositor_FailedToCreateNvAPIRenderTargets"),
-              (e[(e.VRInitError_Compositor_NvAPISetDisplayMode = 435)] =
-                "VRInitError_Compositor_NvAPISetDisplayMode"),
-              (e[
-                (e.VRInitError_Compositor_FailedToCreateDirectModeDisplay = 436)
-              ] = "VRInitError_Compositor_FailedToCreateDirectModeDisplay"),
-              (e[(e.VRInitError_Compositor_InvalidHmdPropertyContainer = 437)] =
-                "VRInitError_Compositor_InvalidHmdPropertyContainer"),
-              (e[(e.VRInitError_Compositor_UpdateDisplayFrequency = 438)] =
-                "VRInitError_Compositor_UpdateDisplayFrequency"),
-              (e[(e.VRInitError_Compositor_CreateRasterizerState = 439)] =
-                "VRInitError_Compositor_CreateRasterizerState"),
-              (e[
-                (e.VRInitError_Compositor_CreateWireframeRasterizerState = 440)
-              ] = "VRInitError_Compositor_CreateWireframeRasterizerState"),
-              (e[(e.VRInitError_Compositor_CreateSamplerState = 441)] =
-                "VRInitError_Compositor_CreateSamplerState"),
-              (e[
-                (e.VRInitError_Compositor_CreateClampToBorderSamplerState = 442)
-              ] = "VRInitError_Compositor_CreateClampToBorderSamplerState"),
-              (e[(e.VRInitError_Compositor_CreateAnisoSamplerState = 443)] =
-                "VRInitError_Compositor_CreateAnisoSamplerState"),
-              (e[(e.VRInitError_Compositor_CreateOverlaySamplerState = 444)] =
-                "VRInitError_Compositor_CreateOverlaySamplerState"),
-              (e[(e.VRInitError_Compositor_CreatePanoramaSamplerState = 445)] =
-                "VRInitError_Compositor_CreatePanoramaSamplerState"),
-              (e[(e.VRInitError_Compositor_CreateFontSamplerState = 446)] =
-                "VRInitError_Compositor_CreateFontSamplerState"),
-              (e[(e.VRInitError_Compositor_CreateNoBlendState = 447)] =
-                "VRInitError_Compositor_CreateNoBlendState"),
-              (e[(e.VRInitError_Compositor_CreateBlendState = 448)] =
-                "VRInitError_Compositor_CreateBlendState"),
-              (e[(e.VRInitError_Compositor_CreateAlphaBlendState = 449)] =
-                "VRInitError_Compositor_CreateAlphaBlendState"),
-              (e[(e.VRInitError_Compositor_CreateBlendStateMaskR = 450)] =
-                "VRInitError_Compositor_CreateBlendStateMaskR"),
-              (e[(e.VRInitError_Compositor_CreateBlendStateMaskG = 451)] =
-                "VRInitError_Compositor_CreateBlendStateMaskG"),
-              (e[(e.VRInitError_Compositor_CreateBlendStateMaskB = 452)] =
-                "VRInitError_Compositor_CreateBlendStateMaskB"),
-              (e[(e.VRInitError_Compositor_CreateDepthStencilState = 453)] =
-                "VRInitError_Compositor_CreateDepthStencilState"),
-              (e[
-                (e.VRInitError_Compositor_CreateDepthStencilStateNoWrite = 454)
-              ] = "VRInitError_Compositor_CreateDepthStencilStateNoWrite"),
-              (e[
-                (e.VRInitError_Compositor_CreateDepthStencilStateNoDepth = 455)
-              ] = "VRInitError_Compositor_CreateDepthStencilStateNoDepth"),
-              (e[(e.VRInitError_Compositor_CreateFlushTexture = 456)] =
-                "VRInitError_Compositor_CreateFlushTexture"),
-              (e[(e.VRInitError_Compositor_CreateDistortionSurfaces = 457)] =
-                "VRInitError_Compositor_CreateDistortionSurfaces"),
-              (e[(e.VRInitError_Compositor_CreateConstantBuffer = 458)] =
-                "VRInitError_Compositor_CreateConstantBuffer"),
-              (e[(e.VRInitError_Compositor_CreateHmdPoseConstantBuffer = 459)] =
-                "VRInitError_Compositor_CreateHmdPoseConstantBuffer"),
-              (e[
-                (e.VRInitError_Compositor_CreateHmdPoseStagingConstantBuffer = 460)
-              ] = "VRInitError_Compositor_CreateHmdPoseStagingConstantBuffer"),
-              (e[
-                (e.VRInitError_Compositor_CreateSharedFrameInfoConstantBuffer = 461)
-              ] = "VRInitError_Compositor_CreateSharedFrameInfoConstantBuffer"),
-              (e[(e.VRInitError_Compositor_CreateOverlayConstantBuffer = 462)] =
-                "VRInitError_Compositor_CreateOverlayConstantBuffer"),
-              (e[
-                (e.VRInitError_Compositor_CreateSceneTextureIndexConstantBuffer = 463)
-              ] =
-                "VRInitError_Compositor_CreateSceneTextureIndexConstantBuffer"),
-              (e[
-                (e.VRInitError_Compositor_CreateReadableSceneTextureIndexConstantBuffer = 464)
-              ] =
-                "VRInitError_Compositor_CreateReadableSceneTextureIndexConstantBuffer"),
-              (e[
-                (e.VRInitError_Compositor_CreateLayerGraphicsTextureIndexConstantBuffer = 465)
-              ] =
-                "VRInitError_Compositor_CreateLayerGraphicsTextureIndexConstantBuffer"),
-              (e[
-                (e.VRInitError_Compositor_CreateLayerComputeTextureIndexConstantBuffer = 466)
-              ] =
-                "VRInitError_Compositor_CreateLayerComputeTextureIndexConstantBuffer"),
-              (e[
-                (e.VRInitError_Compositor_CreateLayerComputeSceneTextureIndexConstantBuffer = 467)
-              ] =
-                "VRInitError_Compositor_CreateLayerComputeSceneTextureIndexConstantBuffer"),
-              (e[
-                (e.VRInitError_Compositor_CreateComputeHmdPoseConstantBuffer = 468)
-              ] = "VRInitError_Compositor_CreateComputeHmdPoseConstantBuffer"),
-              (e[(e.VRInitError_Compositor_CreateGeomConstantBuffer = 469)] =
-                "VRInitError_Compositor_CreateGeomConstantBuffer"),
-              (e[
-                (e.VRInitError_Compositor_CreatePanelMaskConstantBuffer = 470)
-              ] = "VRInitError_Compositor_CreatePanelMaskConstantBuffer"),
-              (e[(e.VRInitError_Compositor_CreatePixelSimUBO = 471)] =
-                "VRInitError_Compositor_CreatePixelSimUBO"),
-              (e[(e.VRInitError_Compositor_CreateMSAARenderTextures = 472)] =
-                "VRInitError_Compositor_CreateMSAARenderTextures"),
-              (e[(e.VRInitError_Compositor_CreateResolveRenderTextures = 473)] =
-                "VRInitError_Compositor_CreateResolveRenderTextures"),
-              (e[
-                (e.VRInitError_Compositor_CreateComputeResolveRenderTextures = 474)
-              ] = "VRInitError_Compositor_CreateComputeResolveRenderTextures"),
-              (e[
-                (e.VRInitError_Compositor_CreateDriverDirectModeResolveTextures = 475)
-              ] =
-                "VRInitError_Compositor_CreateDriverDirectModeResolveTextures"),
-              (e[
-                (e.VRInitError_Compositor_OpenDriverDirectModeResolveTextures = 476)
-              ] = "VRInitError_Compositor_OpenDriverDirectModeResolveTextures"),
-              (e[(e.VRInitError_Compositor_CreateFallbackSyncTexture = 477)] =
-                "VRInitError_Compositor_CreateFallbackSyncTexture"),
-              (e[(e.VRInitError_Compositor_ShareFallbackSyncTexture = 478)] =
-                "VRInitError_Compositor_ShareFallbackSyncTexture"),
-              (e[(e.VRInitError_Compositor_CreateOverlayIndexBuffer = 479)] =
-                "VRInitError_Compositor_CreateOverlayIndexBuffer"),
-              (e[(e.VRInitError_Compositor_CreateOverlayVertexBuffer = 480)] =
-                "VRInitError_Compositor_CreateOverlayVertexBuffer"),
-              (e[(e.VRInitError_Compositor_CreateTextVertexBuffer = 481)] =
-                "VRInitError_Compositor_CreateTextVertexBuffer"),
-              (e[(e.VRInitError_Compositor_CreateTextIndexBuffer = 482)] =
-                "VRInitError_Compositor_CreateTextIndexBuffer"),
-              (e[(e.VRInitError_Compositor_CreateMirrorTextures = 483)] =
-                "VRInitError_Compositor_CreateMirrorTextures"),
-              (e[
-                (e.VRInitError_Compositor_CreateLastFrameRenderTexture = 484)
-              ] = "VRInitError_Compositor_CreateLastFrameRenderTexture"),
-              (e[(e.VRInitError_Compositor_CreateMirrorOverlay = 485)] =
-                "VRInitError_Compositor_CreateMirrorOverlay"),
-              (e[
-                (e.VRInitError_Compositor_FailedToCreateVirtualDisplayBackbuffer = 486)
-              ] =
-                "VRInitError_Compositor_FailedToCreateVirtualDisplayBackbuffer"),
-              (e[(e.VRInitError_Compositor_DisplayModeNotSupported = 487)] =
-                "VRInitError_Compositor_DisplayModeNotSupported"),
-              (e[(e.VRInitError_Compositor_CreateOverlayInvalidCall = 488)] =
-                "VRInitError_Compositor_CreateOverlayInvalidCall"),
-              (e[
-                (e.VRInitError_Compositor_CreateOverlayAlreadyInitialized = 489)
-              ] = "VRInitError_Compositor_CreateOverlayAlreadyInitialized"),
-              (e[(e.VRInitError_Compositor_FailedToCreateMailbox = 490)] =
-                "VRInitError_Compositor_FailedToCreateMailbox"),
-              (e[(e.VRInitError_Compositor_WindowInterfaceIsNull = 491)] =
-                "VRInitError_Compositor_WindowInterfaceIsNull"),
-              (e[(e.VRInitError_Compositor_SystemLayerCreateInstance = 492)] =
-                "VRInitError_Compositor_SystemLayerCreateInstance"),
-              (e[(e.VRInitError_Compositor_SystemLayerCreateSession = 493)] =
-                "VRInitError_Compositor_SystemLayerCreateSession"),
-              (e[(e.VRInitError_Compositor_CreateInverseDistortUVs = 494)] =
-                "VRInitError_Compositor_CreateInverseDistortUVs"),
-              (e[(e.VRInitError_Compositor_CreateBackbufferDepth = 495)] =
-                "VRInitError_Compositor_CreateBackbufferDepth"),
-              (e[
-                (e.VRInitError_VendorSpecific_UnableToConnectToOculusRuntime = 1e3)
-              ] = "VRInitError_VendorSpecific_UnableToConnectToOculusRuntime"),
-              (e[(e.VRInitError_VendorSpecific_WindowsNotInDevMode = 1001)] =
-                "VRInitError_VendorSpecific_WindowsNotInDevMode"),
-              (e[(e.VRInitError_VendorSpecific_OculusLinkNotEnabled = 1002)] =
-                "VRInitError_VendorSpecific_OculusLinkNotEnabled"),
-              (e[
-                (e.VRInitError_VendorSpecific_HmdFound_CantOpenDevice = 1101)
-              ] = "VRInitError_VendorSpecific_HmdFound_CantOpenDevice"),
-              (e[
-                (e.VRInitError_VendorSpecific_HmdFound_UnableToRequestConfigStart = 1102)
-              ] =
-                "VRInitError_VendorSpecific_HmdFound_UnableToRequestConfigStart"),
-              (e[
-                (e.VRInitError_VendorSpecific_HmdFound_NoStoredConfig = 1103)
-              ] = "VRInitError_VendorSpecific_HmdFound_NoStoredConfig"),
-              (e[(e.VRInitError_VendorSpecific_HmdFound_ConfigTooBig = 1104)] =
-                "VRInitError_VendorSpecific_HmdFound_ConfigTooBig"),
-              (e[
-                (e.VRInitError_VendorSpecific_HmdFound_ConfigTooSmall = 1105)
-              ] = "VRInitError_VendorSpecific_HmdFound_ConfigTooSmall"),
-              (e[
-                (e.VRInitError_VendorSpecific_HmdFound_UnableToInitZLib = 1106)
-              ] = "VRInitError_VendorSpecific_HmdFound_UnableToInitZLib"),
-              (e[
-                (e.VRInitError_VendorSpecific_HmdFound_CantReadFirmwareVersion = 1107)
-              ] =
-                "VRInitError_VendorSpecific_HmdFound_CantReadFirmwareVersion"),
-              (e[
-                (e.VRInitError_VendorSpecific_HmdFound_UnableToSendUserDataStart = 1108)
-              ] =
-                "VRInitError_VendorSpecific_HmdFound_UnableToSendUserDataStart"),
-              (e[
-                (e.VRInitError_VendorSpecific_HmdFound_UnableToGetUserDataStart = 1109)
-              ] =
-                "VRInitError_VendorSpecific_HmdFound_UnableToGetUserDataStart"),
-              (e[
-                (e.VRInitError_VendorSpecific_HmdFound_UnableToGetUserDataNext = 1110)
-              ] =
-                "VRInitError_VendorSpecific_HmdFound_UnableToGetUserDataNext"),
-              (e[
-                (e.VRInitError_VendorSpecific_HmdFound_UserDataAddressRange = 1111)
-              ] = "VRInitError_VendorSpecific_HmdFound_UserDataAddressRange"),
-              (e[(e.VRInitError_VendorSpecific_HmdFound_UserDataError = 1112)] =
-                "VRInitError_VendorSpecific_HmdFound_UserDataError"),
-              (e[
-                (e.VRInitError_VendorSpecific_HmdFound_ConfigFailedSanityCheck = 1113)
-              ] =
-                "VRInitError_VendorSpecific_HmdFound_ConfigFailedSanityCheck"),
-              (e[
-                (e.VRInitError_VendorSpecific_OculusRuntimeBadInstall = 1114)
-              ] = "VRInitError_VendorSpecific_OculusRuntimeBadInstall"),
-              (e[
-                (e.VRInitError_VendorSpecific_HmdFound_UnexpectedConfiguration_1 = 1115)
-              ] =
-                "VRInitError_VendorSpecific_HmdFound_UnexpectedConfiguration_1"),
-              (e[(e.VRInitError_Steam_SteamInstallationNotFound = 2e3)] =
-                "VRInitError_Steam_SteamInstallationNotFound"),
-              (e[(e.VRInitError_LastError = 2001)] = "VRInitError_LastError");
-          })(X || (X = {})),
-          (function (e) {
-            (e[(e.Invalid = 0)] = "Invalid"),
-              (e[(e.TrackingSystemName_String = 1e3)] =
-                "TrackingSystemName_String"),
-              (e[(e.ModelNumber_String = 1001)] = "ModelNumber_String"),
-              (e[(e.SerialNumber_String = 1002)] = "SerialNumber_String"),
-              (e[(e.RenderModelName_String = 1003)] = "RenderModelName_String"),
-              (e[(e.WillDriftInYaw_Bool = 1004)] = "WillDriftInYaw_Bool"),
-              (e[(e.ManufacturerName_String = 1005)] =
-                "ManufacturerName_String"),
-              (e[(e.TrackingFirmwareVersion_String = 1006)] =
-                "TrackingFirmwareVersion_String"),
-              (e[(e.HardwareRevision_String = 1007)] =
-                "HardwareRevision_String"),
-              (e[(e.AllWirelessDongleDescriptions_String = 1008)] =
-                "AllWirelessDongleDescriptions_String"),
-              (e[(e.ConnectedWirelessDongle_String = 1009)] =
-                "ConnectedWirelessDongle_String"),
-              (e[(e.DeviceIsWireless_Bool = 1010)] = "DeviceIsWireless_Bool"),
-              (e[(e.DeviceIsCharging_Bool = 1011)] = "DeviceIsCharging_Bool"),
-              (e[(e.DeviceBatteryPercentage_Float = 1012)] =
-                "DeviceBatteryPercentage_Float"),
-              (e[(e.StatusDisplayTransform_Matrix34 = 1013)] =
-                "StatusDisplayTransform_Matrix34"),
-              (e[(e.Firmware_UpdateAvailable_Bool = 1014)] =
-                "Firmware_UpdateAvailable_Bool"),
-              (e[(e.Firmware_ManualUpdate_Bool = 1015)] =
-                "Firmware_ManualUpdate_Bool"),
-              (e[(e.Firmware_ManualUpdateURL_String = 1016)] =
-                "Firmware_ManualUpdateURL_String"),
-              (e[(e.HardwareRevision_Uint64 = 1017)] =
-                "HardwareRevision_Uint64"),
-              (e[(e.FirmwareVersion_Uint64 = 1018)] = "FirmwareVersion_Uint64"),
-              (e[(e.FPGAVersion_Uint64 = 1019)] = "FPGAVersion_Uint64"),
-              (e[(e.VRCVersion_Uint64 = 1020)] = "VRCVersion_Uint64"),
-              (e[(e.RadioVersion_Uint64 = 1021)] = "RadioVersion_Uint64"),
-              (e[(e.DongleVersion_Uint64 = 1022)] = "DongleVersion_Uint64"),
-              (e[(e.BlockServerShutdown_Bool = 1023)] =
-                "BlockServerShutdown_Bool"),
-              (e[(e.CanUnifyCoordinateSystemWithHmd_Bool = 1024)] =
-                "CanUnifyCoordinateSystemWithHmd_Bool"),
-              (e[(e.ContainsProximitySensor_Bool = 1025)] =
-                "ContainsProximitySensor_Bool"),
-              (e[(e.DeviceProvidesBatteryStatus_Bool = 1026)] =
-                "DeviceProvidesBatteryStatus_Bool"),
-              (e[(e.DeviceCanPowerOff_Bool = 1027)] = "DeviceCanPowerOff_Bool"),
-              (e[(e.Firmware_ProgrammingTarget_String = 1028)] =
-                "Firmware_ProgrammingTarget_String"),
-              (e[(e.DeviceClass_Int32 = 1029)] = "DeviceClass_Int32"),
-              (e[(e.HasCamera_Bool = 1030)] = "HasCamera_Bool"),
-              (e[(e.DriverVersion_String = 1031)] = "DriverVersion_String"),
-              (e[(e.Firmware_ForceUpdateRequired_Bool = 1032)] =
-                "Firmware_ForceUpdateRequired_Bool"),
-              (e[(e.ViveSystemButtonFixRequired_Bool = 1033)] =
-                "ViveSystemButtonFixRequired_Bool"),
-              (e[(e.ParentDriver_Uint64 = 1034)] = "ParentDriver_Uint64"),
-              (e[(e.ResourceRoot_String = 1035)] = "ResourceRoot_String"),
-              (e[(e.RegisteredDeviceType_String = 1036)] =
-                "RegisteredDeviceType_String"),
-              (e[(e.InputProfilePath_String = 1037)] =
-                "InputProfilePath_String"),
-              (e[(e.NeverTracked_Bool = 1038)] = "NeverTracked_Bool"),
-              (e[(e.NumCameras_Int32 = 1039)] = "NumCameras_Int32"),
-              (e[(e.CameraFrameLayout_Int32 = 1040)] =
-                "CameraFrameLayout_Int32"),
-              (e[(e.CameraStreamFormat_Int32 = 1041)] =
-                "CameraStreamFormat_Int32"),
-              (e[(e.AdditionalDeviceSettingsPath_String = 1042)] =
-                "AdditionalDeviceSettingsPath_String"),
-              (e[(e.DevicePowerUsage_Float = 1052)] = "DevicePowerUsage_Float"),
-              (e[(e.ReportsTimeSinceVSync_Bool = 2e3)] =
-                "ReportsTimeSinceVSync_Bool"),
-              (e[(e.SecondsFromVsyncToPhotons_Float = 2001)] =
-                "SecondsFromVsyncToPhotons_Float"),
-              (e[(e.DisplayFrequency_Float = 2002)] = "DisplayFrequency_Float"),
-              (e[(e.UserIpdMeters_Float = 2003)] = "UserIpdMeters_Float"),
-              (e[(e.CurrentUniverseId_Uint64 = 2004)] =
-                "CurrentUniverseId_Uint64"),
-              (e[(e.PreviousUniverseId_Uint64 = 2005)] =
-                "PreviousUniverseId_Uint64"),
-              (e[(e.DisplayFirmwareVersion_Uint64 = 2006)] =
-                "DisplayFirmwareVersion_Uint64"),
-              (e[(e.IsOnDesktop_Bool = 2007)] = "IsOnDesktop_Bool"),
-              (e[(e.DisplayMCType_Int32 = 2008)] = "DisplayMCType_Int32"),
-              (e[(e.DisplayMCOffset_Float = 2009)] = "DisplayMCOffset_Float"),
-              (e[(e.DisplayMCScale_Float = 2010)] = "DisplayMCScale_Float"),
-              (e[(e.EdidVendorID_Int32 = 2011)] = "EdidVendorID_Int32"),
-              (e[(e.DisplayMCImageLeft_String = 2012)] =
-                "DisplayMCImageLeft_String"),
-              (e[(e.DisplayMCImageRight_String = 2013)] =
-                "DisplayMCImageRight_String"),
-              (e[(e.DisplayGCBlackClamp_Float = 2014)] =
-                "DisplayGCBlackClamp_Float"),
-              (e[(e.EdidProductID_Int32 = 2015)] = "EdidProductID_Int32"),
-              (e[(e.CameraToHeadTransform_Matrix34 = 2016)] =
-                "CameraToHeadTransform_Matrix34"),
-              (e[(e.DisplayGCType_Int32 = 2017)] = "DisplayGCType_Int32"),
-              (e[(e.DisplayGCOffset_Float = 2018)] = "DisplayGCOffset_Float"),
-              (e[(e.DisplayGCScale_Float = 2019)] = "DisplayGCScale_Float"),
-              (e[(e.DisplayGCPrescale_Float = 2020)] =
-                "DisplayGCPrescale_Float"),
-              (e[(e.DisplayGCImage_String = 2021)] = "DisplayGCImage_String"),
-              (e[(e.LensCenterLeftU_Float = 2022)] = "LensCenterLeftU_Float"),
-              (e[(e.LensCenterLeftV_Float = 2023)] = "LensCenterLeftV_Float"),
-              (e[(e.LensCenterRightU_Float = 2024)] = "LensCenterRightU_Float"),
-              (e[(e.LensCenterRightV_Float = 2025)] = "LensCenterRightV_Float"),
-              (e[(e.UserHeadToEyeDepthMeters_Float = 2026)] =
-                "UserHeadToEyeDepthMeters_Float"),
-              (e[(e.CameraFirmwareVersion_Uint64 = 2027)] =
-                "CameraFirmwareVersion_Uint64"),
-              (e[(e.CameraFirmwareDescription_String = 2028)] =
-                "CameraFirmwareDescription_String"),
-              (e[(e.DisplayFPGAVersion_Uint64 = 2029)] =
-                "DisplayFPGAVersion_Uint64"),
-              (e[(e.DisplayBootloaderVersion_Uint64 = 2030)] =
-                "DisplayBootloaderVersion_Uint64"),
-              (e[(e.DisplayHardwareVersion_Uint64 = 2031)] =
-                "DisplayHardwareVersion_Uint64"),
-              (e[(e.AudioFirmwareVersion_Uint64 = 2032)] =
-                "AudioFirmwareVersion_Uint64"),
-              (e[(e.CameraCompatibilityMode_Int32 = 2033)] =
-                "CameraCompatibilityMode_Int32"),
-              (e[(e.ScreenshotHorizontalFieldOfViewDegrees_Float = 2034)] =
-                "ScreenshotHorizontalFieldOfViewDegrees_Float"),
-              (e[(e.ScreenshotVerticalFieldOfViewDegrees_Float = 2035)] =
-                "ScreenshotVerticalFieldOfViewDegrees_Float"),
-              (e[(e.DisplaySuppressed_Bool = 2036)] = "DisplaySuppressed_Bool"),
-              (e[(e.DisplayAllowNightMode_Bool = 2037)] =
-                "DisplayAllowNightMode_Bool"),
-              (e[(e.DisplayMCImageWidth_Int32 = 2038)] =
-                "DisplayMCImageWidth_Int32"),
-              (e[(e.DisplayMCImageHeight_Int32 = 2039)] =
-                "DisplayMCImageHeight_Int32"),
-              (e[(e.DisplayMCImageNumChannels_Int32 = 2040)] =
-                "DisplayMCImageNumChannels_Int32"),
-              (e[(e.DisplayMCImageData_Binary = 2041)] =
-                "DisplayMCImageData_Binary"),
-              (e[(e.SecondsFromPhotonsToVblank_Float = 2042)] =
-                "SecondsFromPhotonsToVblank_Float"),
-              (e[(e.DriverDirectModeSendsVsyncEvents_Bool = 2043)] =
-                "DriverDirectModeSendsVsyncEvents_Bool"),
-              (e[(e.DisplayDebugMode_Bool = 2044)] = "DisplayDebugMode_Bool"),
-              (e[(e.GraphicsAdapterLuid_Uint64 = 2045)] =
-                "GraphicsAdapterLuid_Uint64"),
-              (e[(e.DriverProvidedChaperonePath_String = 2048)] =
-                "DriverProvidedChaperonePath_String"),
-              (e[(e.ExpectedTrackingReferenceCount_Int32 = 2049)] =
-                "ExpectedTrackingReferenceCount_Int32"),
-              (e[(e.ExpectedControllerCount_Int32 = 2050)] =
-                "ExpectedControllerCount_Int32"),
-              (e[(e.NamedIconPathControllerLeftDeviceOff_String = 2051)] =
-                "NamedIconPathControllerLeftDeviceOff_String"),
-              (e[(e.NamedIconPathControllerRightDeviceOff_String = 2052)] =
-                "NamedIconPathControllerRightDeviceOff_String"),
-              (e[(e.NamedIconPathTrackingReferenceDeviceOff_String = 2053)] =
-                "NamedIconPathTrackingReferenceDeviceOff_String"),
-              (e[(e.DoNotApplyPrediction_Bool = 2054)] =
-                "DoNotApplyPrediction_Bool"),
-              (e[(e.CameraToHeadTransforms_Matrix34_Array = 2055)] =
-                "CameraToHeadTransforms_Matrix34_Array"),
-              (e[(e.DistortionMeshResolution_Int32 = 2056)] =
-                "DistortionMeshResolution_Int32"),
-              (e[(e.DriverIsDrawingControllers_Bool = 2057)] =
-                "DriverIsDrawingControllers_Bool"),
-              (e[(e.DriverRequestsApplicationPause_Bool = 2058)] =
-                "DriverRequestsApplicationPause_Bool"),
-              (e[(e.DriverRequestsReducedRendering_Bool = 2059)] =
-                "DriverRequestsReducedRendering_Bool"),
-              (e[(e.MinimumIpdStepMeters_Float = 2060)] =
-                "MinimumIpdStepMeters_Float"),
-              (e[(e.AudioBridgeFirmwareVersion_Uint64 = 2061)] =
-                "AudioBridgeFirmwareVersion_Uint64"),
-              (e[(e.ImageBridgeFirmwareVersion_Uint64 = 2062)] =
-                "ImageBridgeFirmwareVersion_Uint64"),
-              (e[(e.ImuToHeadTransform_Matrix34 = 2063)] =
-                "ImuToHeadTransform_Matrix34"),
-              (e[(e.ImuFactoryGyroBias_Vector3 = 2064)] =
-                "ImuFactoryGyroBias_Vector3"),
-              (e[(e.ImuFactoryGyroScale_Vector3 = 2065)] =
-                "ImuFactoryGyroScale_Vector3"),
-              (e[(e.ImuFactoryAccelerometerBias_Vector3 = 2066)] =
-                "ImuFactoryAccelerometerBias_Vector3"),
-              (e[(e.ImuFactoryAccelerometerScale_Vector3 = 2067)] =
-                "ImuFactoryAccelerometerScale_Vector3"),
-              (e[(e.ConfigurationIncludesLighthouse20Features_Bool = 2069)] =
-                "ConfigurationIncludesLighthouse20Features_Bool"),
-              (e[(e.Prop_AdditionalRadioFeatures_Uint64 = 2070)] =
-                "Prop_AdditionalRadioFeatures_Uint64"),
-              (e[(e.Prop_CameraWhiteBalance_Vector4_Array = 2071)] =
-                "Prop_CameraWhiteBalance_Vector4_Array"),
-              (e[(e.Prop_CameraDistortionFunction_Int32_Array = 2072)] =
-                "Prop_CameraDistortionFunction_Int32_Array"),
-              (e[(e.Prop_CameraDistortionCoefficients_Float_Array = 2073)] =
-                "Prop_CameraDistortionCoefficients_Float_Array"),
-              (e[(e.Prop_ExpectedControllerType_String = 2074)] =
-                "Prop_ExpectedControllerType_String"),
-              (e[(e.HmdTrackingStyle_Int32 = 2075)] = "HmdTrackingStyle_Int32"),
-              (e[(e.DriverProvidedChaperoneVisibility_Bool = 2076)] =
-                "DriverProvidedChaperoneVisibility_Bool"),
-              (e[(e.HmdColumnCorrectionSettingPrefix_String = 2077)] =
-                "HmdColumnCorrectionSettingPrefix_String"),
-              (e[(e.CameraSupportsCompatibilityModes_Bool = 2078)] =
-                "CameraSupportsCompatibilityModes_Bool"),
-              (e[(e.SupportsRoomViewDepthProjection_Bool = 2079)] =
-                "SupportsRoomViewDepthProjection_Bool"),
-              (e[(e.DisplayAvailableFrameRates_Float_Array = 2080)] =
-                "DisplayAvailableFrameRates_Float_Array"),
-              (e[(e.DisplaySupportsRuntimeFramerateChange_Bool = 2084)] =
-                "DisplaySupportsRuntimeFramerateChange_Bool"),
-              (e[(e.DisplaySupportsAnalogGain_Bool = 2085)] =
-                "DisplaySupportsAnalogGain_Bool"),
-              (e[(e.DisplayMinAnalogGain_Float = 2086)] =
-                "DisplayMinAnalogGain_Float"),
-              (e[(e.DisplayMaxAnalogGain_Float = 2087)] =
-                "DisplayMaxAnalogGain_Float"),
-              (e[(e.DashboardScale_Float = 2091)] = "DashboardScale_Float"),
-              (e[(e.PeerButtonInfo_String = 2092)] = "PeerButtonInfo_String"),
-              (e[(e.IpdUIRangeMinMeters_Float = 2100)] =
-                "IpdUIRangeMinMeters_Float"),
-              (e[(e.IpdUIRangeMaxMeters_Float = 2101)] =
-                "IpdUIRangeMaxMeters_Float"),
-              (e[(e.Hmd_SupportsHDCP14LegacyCompat_Bool = 2102)] =
-                "Hmd_SupportsHDCP14LegacyCompat_Bool"),
-              (e[(e.Hmd_SupportsMicMonitoring_Bool = 2103)] =
-                "Hmd_SupportsMicMonitoring_Bool"),
-              (e[(e.Hmd_SupportsDisplayPortTrainingMode_Bool = 2104)] =
-                "Hmd_SupportsDisplayPortTrainingMode_Bool"),
-              (e[(e.Hmd_SupportsRoomViewDirect_Bool = 2105)] =
-                "Hmd_SupportsRoomViewDirect_Bool"),
-              (e[(e.Hmd_SupportsAppThrottling_Bool = 2106)] =
-                "Hmd_SupportsAppThrottling_Bool"),
-              (e[(e.Hmd_SupportsGpuBusMonitoring_Bool = 2107)] =
-                "Hmd_SupportsGpuBusMonitoring_Bool"),
-              (e[(e.DriverRequestedMuraCorrectionMode_Int32 = 2200)] =
-                "DriverRequestedMuraCorrectionMode_Int32"),
-              (e[(e.DriverRequestedMuraFeather_InnerLeft_Int32 = 2201)] =
-                "DriverRequestedMuraFeather_InnerLeft_Int32"),
-              (e[(e.DriverRequestedMuraFeather_InnerRight_Int32 = 2202)] =
-                "DriverRequestedMuraFeather_InnerRight_Int32"),
-              (e[(e.DriverRequestedMuraFeather_InnerTop_Int32 = 2203)] =
-                "DriverRequestedMuraFeather_InnerTop_Int32"),
-              (e[(e.DriverRequestedMuraFeather_InnerBottom_Int32 = 2204)] =
-                "DriverRequestedMuraFeather_InnerBottom_Int32"),
-              (e[(e.DriverRequestedMuraFeather_OuterLeft_Int32 = 2205)] =
-                "DriverRequestedMuraFeather_OuterLeft_Int32"),
-              (e[(e.DriverRequestedMuraFeather_OuterRight_Int32 = 2206)] =
-                "DriverRequestedMuraFeather_OuterRight_Int32"),
-              (e[(e.DriverRequestedMuraFeather_OuterTop_Int32 = 2207)] =
-                "DriverRequestedMuraFeather_OuterTop_Int32"),
-              (e[(e.DriverRequestedMuraFeather_OuterBottom_Int32 = 2208)] =
-                "DriverRequestedMuraFeather_OuterBottom_Int32"),
-              (e[(e.Audio_SupportsDualSpeakerAndJackOutput_Bool = 2303)] =
-                "Audio_SupportsDualSpeakerAndJackOutput_Bool"),
-              (e[(e.AttachedDeviceId_String = 3e3)] =
-                "AttachedDeviceId_String"),
-              (e[(e.SupportedButtons_Uint64 = 3001)] =
-                "SupportedButtons_Uint64"),
-              (e[(e.Axis0Type_Int32 = 3002)] = "Axis0Type_Int32"),
-              (e[(e.Axis1Type_Int32 = 3003)] = "Axis1Type_Int32"),
-              (e[(e.Axis2Type_Int32 = 3004)] = "Axis2Type_Int32"),
-              (e[(e.Axis3Type_Int32 = 3005)] = "Axis3Type_Int32"),
-              (e[(e.Axis4Type_Int32 = 3006)] = "Axis4Type_Int32"),
-              (e[(e.ControllerRoleHint_Int32 = 3007)] =
-                "ControllerRoleHint_Int32"),
-              (e[(e.FieldOfViewLeftDegrees_Float = 4e3)] =
-                "FieldOfViewLeftDegrees_Float"),
-              (e[(e.FieldOfViewRightDegrees_Float = 4001)] =
-                "FieldOfViewRightDegrees_Float"),
-              (e[(e.FieldOfViewTopDegrees_Float = 4002)] =
-                "FieldOfViewTopDegrees_Float"),
-              (e[(e.FieldOfViewBottomDegrees_Float = 4003)] =
-                "FieldOfViewBottomDegrees_Float"),
-              (e[(e.TrackingRangeMinimumMeters_Float = 4004)] =
-                "TrackingRangeMinimumMeters_Float"),
-              (e[(e.TrackingRangeMaximumMeters_Float = 4005)] =
-                "TrackingRangeMaximumMeters_Float"),
-              (e[(e.ModeLabel_String = 4006)] = "ModeLabel_String"),
-              (e[(e.IconPathName_String = 5e3)] = "IconPathName_String"),
-              (e[(e.NamedIconPathDeviceOff_String = 5001)] =
-                "NamedIconPathDeviceOff_String"),
-              (e[(e.NamedIconPathDeviceSearching_String = 5002)] =
-                "NamedIconPathDeviceSearching_String"),
-              (e[(e.NamedIconPathDeviceSearchingAlert_String = 5003)] =
-                "NamedIconPathDeviceSearchingAlert_String"),
-              (e[(e.NamedIconPathDeviceReady_String = 5004)] =
-                "NamedIconPathDeviceReady_String"),
-              (e[(e.NamedIconPathDeviceReadyAlert_String = 5005)] =
-                "NamedIconPathDeviceReadyAlert_String"),
-              (e[(e.NamedIconPathDeviceNotReady_String = 5006)] =
-                "NamedIconPathDeviceNotReady_String"),
-              (e[(e.NamedIconPathDeviceStandby_String = 5007)] =
-                "NamedIconPathDeviceStandby_String"),
-              (e[(e.NamedIconPathDeviceAlertLow_String = 5008)] =
-                "NamedIconPathDeviceAlertLow_String"),
-              (e[(e.DisplayHiddenArea_Binary_Start = 5100)] =
-                "DisplayHiddenArea_Binary_Start"),
-              (e[(e.DisplayHiddenArea_Binary_End = 5150)] =
-                "DisplayHiddenArea_Binary_End"),
-              (e[(e.ParentContainer = 5151)] = "ParentContainer"),
-              (e[(e.UserConfigPath_String = 6e3)] = "UserConfigPath_String"),
-              (e[(e.InstallPath_String = 6001)] = "InstallPath_String"),
-              (e[(e.HasDisplayComponent_Bool = 6002)] =
-                "HasDisplayComponent_Bool"),
-              (e[(e.HasControllerComponent_Bool = 6003)] =
-                "HasControllerComponent_Bool"),
-              (e[(e.HasCameraComponent_Bool = 6004)] =
-                "HasCameraComponent_Bool"),
-              (e[(e.HasDriverDirectModeComponent_Bool = 6005)] =
-                "HasDriverDirectModeComponent_Bool"),
-              (e[(e.HasVirtualDisplayComponent_Bool = 6006)] =
-                "HasVirtualDisplayComponent_Bool"),
-              (e[(e.HasSpatialAnchorsSupport_Bool = 6007)] =
-                "HasSpatialAnchorsSupport_Bool"),
-              (e[(e.ControllerType_String = 7e3)] = "ControllerType_String"),
-              (e[(e.LegacyInputProfile_String = 7001)] =
-                "LegacyInputProfile_String"),
-              (e[(e.VendorSpecific_Reserved_Start = 1e4)] =
-                "VendorSpecific_Reserved_Start"),
-              (e[(e.VendorSpecific_Reserved_End = 10999)] =
-                "VendorSpecific_Reserved_End"),
-              (e[(e.TrackedDeviceProperty_Max = 1e6)] =
-                "TrackedDeviceProperty_Max");
-          })($ || ($ = {})),
-          (function (e) {
-            (e[(e.k_EButton_System = 0)] = "k_EButton_System"),
-              (e[(e.k_EButton_ApplicationMenu = 1)] =
-                "k_EButton_ApplicationMenu"),
-              (e[(e.k_EButton_Grip = 2)] = "k_EButton_Grip"),
-              (e[(e.k_EButton_DPad_Left = 3)] = "k_EButton_DPad_Left"),
-              (e[(e.k_EButton_DPad_Up = 4)] = "k_EButton_DPad_Up"),
-              (e[(e.k_EButton_DPad_Right = 5)] = "k_EButton_DPad_Right"),
-              (e[(e.k_EButton_DPad_Down = 6)] = "k_EButton_DPad_Down"),
-              (e[(e.k_EButton_A = 7)] = "k_EButton_A"),
-              (e[(e.k_EButton_ProximitySensor = 31)] =
-                "k_EButton_ProximitySensor"),
-              (e[(e.k_EButton_Axis0 = 32)] = "k_EButton_Axis0"),
-              (e[(e.k_EButton_Axis1 = 33)] = "k_EButton_Axis1"),
-              (e[(e.k_EButton_Axis2 = 34)] = "k_EButton_Axis2"),
-              (e[(e.k_EButton_Axis3 = 35)] = "k_EButton_Axis3"),
-              (e[(e.k_EButton_Axis4 = 36)] = "k_EButton_Axis4"),
-              (e[(e.k_EButton_SteamVR_Touchpad = 32)] =
-                "k_EButton_SteamVR_Touchpad"),
-              (e[(e.k_EButton_SteamVR_Trigger = 33)] =
-                "k_EButton_SteamVR_Trigger"),
-              (e[(e.k_EButton_Dashboard_Back = 2)] =
-                "k_EButton_Dashboard_Back"),
-              (e[(e.k_EButton_IndexController_A = 2)] =
-                "k_EButton_IndexController_A"),
-              (e[(e.k_EButton_IndexController_B = 1)] =
-                "k_EButton_IndexController_B"),
-              (e[(e.k_EButton_IndexController_JoyStick = 35)] =
-                "k_EButton_IndexController_JoyStick"),
-              (e[(e.k_EButton_Reserved0 = 50)] = "k_EButton_Reserved0"),
-              (e[(e.k_EButton_Reserved1 = 51)] = "k_EButton_Reserved1"),
-              (e[(e.k_EButton_Max = 64)] = "k_EButton_Max");
-          })(J || (J = {})),
-          (function (e) {
-            (e[(e.None = 0)] = "None"),
-              (e[(e.ButtonEnter = 1)] = "ButtonEnter"),
-              (e[(e.ButtonLeave = 2)] = "ButtonLeave"),
-              (e[(e.Snap = 3)] = "Snap"),
-              (e[(e.Sliding = 4)] = "Sliding"),
-              (e[(e.SlidingEdge = 5)] = "SlidingEdge");
-          })(Q || (Q = {})),
-          (function (e) {
-            (e[(e.Minimal = 1)] = "Minimal"),
-              (e[(e.Modal = 2)] = "Modal"),
-              (e[(e.ShowArrowKeys = 4)] = "ShowArrowKeys"),
-              (e[(e.HideDoneKey = 8)] = "HideDoneKey");
-          })(Z || (Z = {})),
-          (function (e) {
-            (e[(e.Unknown = -1)] = "Unknown"),
-              (e[(e.Idle = 0)] = "Idle"),
-              (e[(e.UserInteraction = 1)] = "UserInteraction"),
-              (e[(e.UserInteraction_Timeout = 2)] = "UserInteraction_Timeout"),
-              (e[(e.Standby = 3)] = "Standby"),
-              (e[(e.Idle_Timeout = 4)] = "Idle_Timeout");
-          })(ee || (ee = {}));
-        const ne = "webui_config";
-        let oe;
-        function ie() {
+        const k = "webui_config";
+        let l;
+        function c() {
           let e = (function () {
             let e = "";
-            for (let n = 0; n < 24; n++)
+            for (let r = 0; r < 24; r++)
               e += ((t = 0),
-              (r = 35),
+              (n = 35),
               (t = Math.ceil(t)),
-              (r = Math.floor(r)),
-              Math.floor(Math.random() * (r - t + 1)) + t).toString(36);
-            var t, r;
+              (n = Math.floor(n)),
+              Math.floor(Math.random() * (n - t + 1)) + t).toString(36);
+            var t, n;
             return e;
           })();
           return (
-            (function (e, t, r, n) {
-              if (!re()) return;
-              n || (n = "/");
-              let o = "";
-              if (void 0 !== r && r) {
+            (function (e, t, n, r) {
+              if (!E()) return;
+              r || (r = "/");
+              let a = "";
+              if (void 0 !== n && n) {
                 let e = new Date();
-                e.setTime(e.getTime() + 864e5 * r),
-                  (o = "; expires=" + e.toUTCString());
+                e.setTime(e.getTime() + 864e5 * n),
+                  (a = "; expires=" + e.toUTCString());
               }
               document.cookie =
                 encodeURIComponent(e) +
                 "=" +
                 encodeURIComponent(t) +
-                o +
+                a +
                 ";path=" +
-                n;
+                r;
             })("sessionid", e, 0),
             e
           );
         }
-        function ae(e = ne) {
+        function u(e = k) {
           const t = {},
-            r = _e("config", e);
-          r && (delete r.SESSIONID, Object.assign(de, r), (t.config = !0));
-          const n = _e("userinfo", e);
-          n &&
-            (Object.assign(ce, n),
+            n = d("config", e);
+          n && (delete n.SESSIONID, Object.assign(h, n), (t.config = !0));
+          const r = d("userinfo", e);
+          r &&
+            (Object.assign(m, r),
             (t.userConfig = !0),
-            ce.is_support &&
+            m.is_support &&
               (function () {
                 let e = null;
-                re() && (e = te(le));
+                E() && (e = _(S));
                 return Boolean(e && 1 === Number.parseInt(e));
               })() &&
-              (ce.is_support = !1));
-          const o = _e("broadcast", e);
-          o && (Object.assign(ue, o), (t.broadcastConfig = !0));
-          const i = _e("community", e);
-          i && (Object.assign(pe, i), (t.communityConfig = !0));
-          const a = _e("event", e);
-          return a && (Object.assign(Ie, a), (t.eventConfig = !0)), t;
+              (m.is_support = !1));
+          const a = d("broadcast", e);
+          a && (Object.assign(y, a), (t.broadcastConfig = !0));
+          const o = d("community", e);
+          o && (Object.assign(g, o), (t.communityConfig = !0));
+          const i = d("event", e);
+          return i && (Object.assign(T, i), (t.eventConfig = !0)), t;
         }
-        function _e(e, t = ne) {
-          return se(e, t, !0);
+        function d(e, t = k) {
+          return p(e, t, !0);
         }
-        function se(e, t = ne, r) {
-          let n;
+        function p(e, t = k, n) {
+          let r;
           if (
-            ((n =
+            ((r =
               "string" == typeof t
                 ? !{
                     NODE_ENV: "production",
@@ -1647,27 +145,27 @@ var CLSTAMP = "8360360";
                     VALVE_BUILD: "false",
                   }.MOBILE_BUILD && document.getElementById(t)
                 : t),
-            n)
+            r)
           )
             try {
-              if (n.hasAttribute("data-" + e)) {
-                return JSON.parse(n.getAttribute("data-" + e));
+              if (r.hasAttribute("data-" + e)) {
+                return JSON.parse(r.getAttribute("data-" + e));
               }
               return null;
             } catch (e) {
               console.error(
                 "Failed to parse config for " +
-                  ce.steamid +
+                  m.steamid +
                   " (" +
                   window.location.href +
                   ")",
                 e,
               );
             }
-          else r && console.error("Missing config element #", t);
+          else n && console.error("Missing config element #", t);
         }
-        const le = "presentation_mode";
-        const de = {
+        const S = "presentation_mode";
+        const h = {
           EUNIVERSE: 0,
           WEB_UNIVERSE: "",
           LANGUAGE: "english",
@@ -1716,9 +214,9 @@ var CLSTAMP = "8360360";
           WEBSITE_ID: "Unknown",
           get SESSIONID() {
             return (function () {
-              if (!re()) return oe || (oe = ie()), oe;
-              let e = te("sessionid");
-              return e || (e = ie()), e;
+              if (!E()) return l || (l = c()), l;
+              let e = _("sessionid");
+              return e || (e = c()), e;
             })();
           },
           FRIENDSUI_BETA: !1,
@@ -1736,7 +234,7 @@ var CLSTAMP = "8360360";
           USE_LONGEST_LOC_STRING: !1,
           SILENT_STARTUP: !1,
         };
-        const ce = {
+        const m = {
             logged_in: !1,
             steamid: "",
             accountid: 0,
@@ -1751,8 +249,8 @@ var CLSTAMP = "8360360";
             short_url: "",
             country_code: "",
           },
-          ue = { steamid: "", clanid: 0, listid: 0 },
-          pe = {
+          y = { steamid: "", clanid: 0, listid: 0 },
+          g = {
             CLANSTEAMID: "",
             CLANACCOUNTID: 0,
             APPID: 0,
@@ -1769,16 +267,204 @@ var CLSTAMP = "8360360";
             IS_VALVE_GROUP: !1,
             IS_ALLOWED_SC: !1,
           },
-          Ie = { ANNOUNCEMENT_GID: "", TAKEOVER_ANNOUNCEMENT_GID: "" };
-        a().createContext({});
-        let me = { success: !0, result: 1 };
-        class Ee {
+          T = { ANNOUNCEMENT_GID: "", TAKEOVER_ANNOUNCEMENT_GID: "" };
+        i().createContext({});
+        var v;
+        !(function (e) {
+          (e[(e.k_EResultOK = 1)] = "k_EResultOK"),
+            (e[(e.k_EResultFail = 2)] = "k_EResultFail"),
+            (e[(e.k_EResultNoConnection = 3)] = "k_EResultNoConnection"),
+            (e[(e.k_EResultInvalidPassword = 5)] = "k_EResultInvalidPassword"),
+            (e[(e.k_EResultLoggedInElsewhere = 6)] =
+              "k_EResultLoggedInElsewhere"),
+            (e[(e.k_EResultInvalidProtocolVer = 7)] =
+              "k_EResultInvalidProtocolVer"),
+            (e[(e.k_EResultInvalidParam = 8)] = "k_EResultInvalidParam"),
+            (e[(e.k_EResultFileNotFound = 9)] = "k_EResultFileNotFound"),
+            (e[(e.k_EResultBusy = 10)] = "k_EResultBusy"),
+            (e[(e.k_EResultInvalidState = 11)] = "k_EResultInvalidState"),
+            (e[(e.k_EResultInvalidName = 12)] = "k_EResultInvalidName"),
+            (e[(e.k_EResultInvalidEmail = 13)] = "k_EResultInvalidEmail"),
+            (e[(e.k_EResultDuplicateName = 14)] = "k_EResultDuplicateName"),
+            (e[(e.k_EResultAccessDenied = 15)] = "k_EResultAccessDenied"),
+            (e[(e.k_EResultTimeout = 16)] = "k_EResultTimeout"),
+            (e[(e.k_EResultBanned = 17)] = "k_EResultBanned"),
+            (e[(e.k_EResultAccountNotFound = 18)] = "k_EResultAccountNotFound"),
+            (e[(e.k_EResultInvalidSteamID = 19)] = "k_EResultInvalidSteamID"),
+            (e[(e.k_EResultServiceUnavailable = 20)] =
+              "k_EResultServiceUnavailable"),
+            (e[(e.k_EResultNotLoggedOn = 21)] = "k_EResultNotLoggedOn"),
+            (e[(e.k_EResultPending = 22)] = "k_EResultPending"),
+            (e[(e.k_EResultEncryptionFailure = 23)] =
+              "k_EResultEncryptionFailure"),
+            (e[(e.k_EResultInsufficientPrivilege = 24)] =
+              "k_EResultInsufficientPrivilege"),
+            (e[(e.k_EResultLimitExceeded = 25)] = "k_EResultLimitExceeded"),
+            (e[(e.k_EResultRevoked = 26)] = "k_EResultRevoked"),
+            (e[(e.k_EResultExpired = 27)] = "k_EResultExpired"),
+            (e[(e.k_EResultAlreadyRedeemed = 28)] = "k_EResultAlreadyRedeemed"),
+            (e[(e.k_EResultDuplicateRequest = 29)] =
+              "k_EResultDuplicateRequest"),
+            (e[(e.k_EResultAlreadyOwned = 30)] = "k_EResultAlreadyOwned"),
+            (e[(e.k_EResultIPNotFound = 31)] = "k_EResultIPNotFound"),
+            (e[(e.k_EResultPersistFailed = 32)] = "k_EResultPersistFailed"),
+            (e[(e.k_EResultLockingFailed = 33)] = "k_EResultLockingFailed"),
+            (e[(e.k_EResultLogonSessionReplaced = 34)] =
+              "k_EResultLogonSessionReplaced"),
+            (e[(e.k_EResultConnectFailed = 35)] = "k_EResultConnectFailed"),
+            (e[(e.k_EResultHandshakeFailed = 36)] = "k_EResultHandshakeFailed"),
+            (e[(e.k_EResultIOFailure = 37)] = "k_EResultIOFailure"),
+            (e[(e.k_EResultRemoteDisconnect = 38)] =
+              "k_EResultRemoteDisconnect"),
+            (e[(e.k_EResultShoppingCartNotFound = 39)] =
+              "k_EResultShoppingCartNotFound"),
+            (e[(e.k_EResultBlocked = 40)] = "k_EResultBlocked"),
+            (e[(e.k_EResultIgnored = 41)] = "k_EResultIgnored"),
+            (e[(e.k_EResultNoMatch = 42)] = "k_EResultNoMatch"),
+            (e[(e.k_EResultAccountDisabled = 43)] = "k_EResultAccountDisabled"),
+            (e[(e.k_EResultServiceReadOnly = 44)] = "k_EResultServiceReadOnly"),
+            (e[(e.k_EResultAccountNotFeatured = 45)] =
+              "k_EResultAccountNotFeatured"),
+            (e[(e.k_EResultAdministratorOK = 46)] = "k_EResultAdministratorOK"),
+            (e[(e.k_EResultContentVersion = 47)] = "k_EResultContentVersion"),
+            (e[(e.k_EResultTryAnotherCM = 48)] = "k_EResultTryAnotherCM"),
+            (e[(e.k_EResultPasswordRequiredToKickSession = 49)] =
+              "k_EResultPasswordRequiredToKickSession"),
+            (e[(e.k_EResultAlreadyLoggedInElsewhere = 50)] =
+              "k_EResultAlreadyLoggedInElsewhere"),
+            (e[(e.k_EResultSuspended = 51)] = "k_EResultSuspended"),
+            (e[(e.k_EResultCancelled = 52)] = "k_EResultCancelled"),
+            (e[(e.k_EResultDataCorruption = 53)] = "k_EResultDataCorruption"),
+            (e[(e.k_EResultDiskFull = 54)] = "k_EResultDiskFull"),
+            (e[(e.k_EResultRemoteCallFailed = 55)] =
+              "k_EResultRemoteCallFailed"),
+            (e[(e.k_EResultPasswordUnset = 56)] = "k_EResultPasswordUnset"),
+            (e[(e.k_EResultExternalAccountUnlinked = 57)] =
+              "k_EResultExternalAccountUnlinked"),
+            (e[(e.k_EResultPSNTicketInvalid = 58)] =
+              "k_EResultPSNTicketInvalid"),
+            (e[(e.k_EResultExternalAccountAlreadyLinked = 59)] =
+              "k_EResultExternalAccountAlreadyLinked"),
+            (e[(e.k_EResultRemoteFileConflict = 60)] =
+              "k_EResultRemoteFileConflict"),
+            (e[(e.k_EResultIllegalPassword = 61)] = "k_EResultIllegalPassword"),
+            (e[(e.k_EResultSameAsPreviousValue = 62)] =
+              "k_EResultSameAsPreviousValue"),
+            (e[(e.k_EResultAccountLogonDenied = 63)] =
+              "k_EResultAccountLogonDenied"),
+            (e[(e.k_EResultCannotUseOldPassword = 64)] =
+              "k_EResultCannotUseOldPassword"),
+            (e[(e.k_EResultInvalidLoginAuthCode = 65)] =
+              "k_EResultInvalidLoginAuthCode"),
+            (e[(e.k_EResultAccountLogonDeniedNoMail = 66)] =
+              "k_EResultAccountLogonDeniedNoMail"),
+            (e[(e.k_EResultHardwareNotCapableOfIPT = 67)] =
+              "k_EResultHardwareNotCapableOfIPT"),
+            (e[(e.k_EResultIPTInitError = 68)] = "k_EResultIPTInitError"),
+            (e[(e.k_EResultParentalControlRestricted = 69)] =
+              "k_EResultParentalControlRestricted"),
+            (e[(e.k_EResultFacebookQueryError = 70)] =
+              "k_EResultFacebookQueryError"),
+            (e[(e.k_EResultExpiredLoginAuthCode = 71)] =
+              "k_EResultExpiredLoginAuthCode"),
+            (e[(e.k_EResultIPLoginRestrictionFailed = 72)] =
+              "k_EResultIPLoginRestrictionFailed"),
+            (e[(e.k_EResultAccountLockedDown = 73)] =
+              "k_EResultAccountLockedDown"),
+            (e[(e.k_EResultAccountLogonDeniedVerifiedEmailRequired = 74)] =
+              "k_EResultAccountLogonDeniedVerifiedEmailRequired"),
+            (e[(e.k_EResultNoMatchingURL = 75)] = "k_EResultNoMatchingURL"),
+            (e[(e.k_EResultBadResponse = 76)] = "k_EResultBadResponse"),
+            (e[(e.k_EResultRequirePasswordReEntry = 77)] =
+              "k_EResultRequirePasswordReEntry"),
+            (e[(e.k_EResultValueOutOfRange = 78)] = "k_EResultValueOutOfRange"),
+            (e[(e.k_EResultUnexpectedError = 79)] = "k_EResultUnexpectedError"),
+            (e[(e.k_EResultDisabled = 80)] = "k_EResultDisabled"),
+            (e[(e.k_EResultInvalidCEGSubmission = 81)] =
+              "k_EResultInvalidCEGSubmission"),
+            (e[(e.k_EResultRestrictedDevice = 82)] =
+              "k_EResultRestrictedDevice"),
+            (e[(e.k_EResultRegionLocked = 83)] = "k_EResultRegionLocked"),
+            (e[(e.k_EResultRateLimitExceeded = 84)] =
+              "k_EResultRateLimitExceeded"),
+            (e[(e.k_EResultAccountLoginDeniedNeedTwoFactor = 85)] =
+              "k_EResultAccountLoginDeniedNeedTwoFactor"),
+            (e[(e.k_EResultItemDeleted = 86)] = "k_EResultItemDeleted"),
+            (e[(e.k_EResultAccountLoginDeniedThrottle = 87)] =
+              "k_EResultAccountLoginDeniedThrottle"),
+            (e[(e.k_EResultTwoFactorCodeMismatch = 88)] =
+              "k_EResultTwoFactorCodeMismatch"),
+            (e[(e.k_EResultTwoFactorActivationCodeMismatch = 89)] =
+              "k_EResultTwoFactorActivationCodeMismatch"),
+            (e[(e.k_EResultAccountAssociatedToMultiplePartners = 90)] =
+              "k_EResultAccountAssociatedToMultiplePartners"),
+            (e[(e.k_EResultNotModified = 91)] = "k_EResultNotModified"),
+            (e[(e.k_EResultNoMobileDevice = 92)] = "k_EResultNoMobileDevice"),
+            (e[(e.k_EResultTimeNotSynced = 93)] = "k_EResultTimeNotSynced"),
+            (e[(e.k_EResultSmsCodeFailed = 94)] = "k_EResultSmsCodeFailed"),
+            (e[(e.k_EResultAccountLimitExceeded = 95)] =
+              "k_EResultAccountLimitExceeded"),
+            (e[(e.k_EResultAccountActivityLimitExceeded = 96)] =
+              "k_EResultAccountActivityLimitExceeded"),
+            (e[(e.k_EResultPhoneActivityLimitExceeded = 97)] =
+              "k_EResultPhoneActivityLimitExceeded"),
+            (e[(e.k_EResultRefundToWallet = 98)] = "k_EResultRefundToWallet"),
+            (e[(e.k_EResultEmailSendFailure = 99)] =
+              "k_EResultEmailSendFailure"),
+            (e[(e.k_EResultNotSettled = 100)] = "k_EResultNotSettled"),
+            (e[(e.k_EResultNeedCaptcha = 101)] = "k_EResultNeedCaptcha"),
+            (e[(e.k_EResultGSLTDenied = 102)] = "k_EResultGSLTDenied"),
+            (e[(e.k_EResultGSOwnerDenied = 103)] = "k_EResultGSOwnerDenied"),
+            (e[(e.k_EResultInvalidItemType = 104)] =
+              "k_EResultInvalidItemType"),
+            (e[(e.k_EResultIPBanned = 105)] = "k_EResultIPBanned"),
+            (e[(e.k_EResultGSLTExpired = 106)] = "k_EResultGSLTExpired"),
+            (e[(e.k_EResultInsufficientFunds = 107)] =
+              "k_EResultInsufficientFunds"),
+            (e[(e.k_EResultTooManyPending = 108)] = "k_EResultTooManyPending"),
+            (e[(e.k_EResultNoSiteLicensesFound = 109)] =
+              "k_EResultNoSiteLicensesFound"),
+            (e[(e.k_EResultWGNetworkSendExceeded = 110)] =
+              "k_EResultWGNetworkSendExceeded"),
+            (e[(e.k_EResultAccountNotFriends = 111)] =
+              "k_EResultAccountNotFriends"),
+            (e[(e.k_EResultLimitedUserAccount = 112)] =
+              "k_EResultLimitedUserAccount"),
+            (e[(e.k_EResultCantRemoveItem = 113)] = "k_EResultCantRemoveItem"),
+            (e[(e.k_EResultAccountDeleted = 114)] = "k_EResultAccountDeleted"),
+            (e[(e.k_EResultExistingUserCancelledLicense = 115)] =
+              "k_EResultExistingUserCancelledLicense"),
+            (e[(e.k_EResultCommunityCooldown = 116)] =
+              "k_EResultCommunityCooldown"),
+            (e[(e.k_EResultNoLauncherSpecified = 117)] =
+              "k_EResultNoLauncherSpecified"),
+            (e[(e.k_EResultMustAgreeToSSA = 118)] = "k_EResultMustAgreeToSSA"),
+            (e[(e.k_EResultLauncherMigrated = 119)] =
+              "k_EResultLauncherMigrated"),
+            (e[(e.k_EResultSteamRealmMismatch = 120)] =
+              "k_EResultSteamRealmMismatch"),
+            (e[(e.k_EResultInvalidSignature = 121)] =
+              "k_EResultInvalidSignature"),
+            (e[(e.k_EResultParseFailure = 122)] = "k_EResultParseFailure"),
+            (e[(e.k_EResultNoVerifiedPhone = 123)] =
+              "k_EResultNoVerifiedPhone"),
+            (e[(e.k_EResultInsufficientBattery = 124)] =
+              "k_EResultInsufficientBattery"),
+            (e[(e.k_EResultChargerRequired = 125)] =
+              "k_EResultChargerRequired"),
+            (e[(e.k_EResultCachedCredentialInvalid = 126)] =
+              "k_EResultCachedCredentialInvalid"),
+            (e[(e.K_EResultPhoneNumberIsVOIP = 127)] =
+              "K_EResultPhoneNumberIsVOIP");
+        })(v || (v = {}));
+        let C = { success: !0, result: v.k_EResultOK };
+        class R {
           constructor() {
-            (this.m_connection = new Ce()),
+            (this.m_connection = new I()),
               (this.m_bAllowAccountMismatch = !1),
               (this.m_mapCacheSubscribedApp = new Map());
           }
-          FailureResult(e = 2) {
+          FailureResult(e = v.k_EResultFail) {
             let t = { success: !1, result: e };
             return (
               this.m_connection &&
@@ -1787,7 +473,7 @@ var CLSTAMP = "8360360";
               this.m_connection &&
                 !this.m_connection.connected_to_client &&
                 (t.connect_failed = !0),
-              7 == e && (t.call_unsupported = !0),
+              e == v.k_EResultInvalidProtocolVer && (t.call_unsupported = !0),
               t
             );
           }
@@ -1796,7 +482,7 @@ var CLSTAMP = "8360360";
           }
           BClientConnected() {
             return this.m_connection.Connect().then(
-              () => me,
+              () => C,
               () => this.FailureResult(),
             );
           }
@@ -1814,8 +500,8 @@ var CLSTAMP = "8360360";
             return this.GenericEResultCall(t);
           }
           OpenChatRoomGroupDialog(e, t) {
-            let r = { message: "ShowChatRoomGroupDialog", chat_group_id: e };
-            return t && (r.chat_room_id = t), this.GenericEResultCall(r);
+            let n = { message: "ShowChatRoomGroupDialog", chat_group_id: e };
+            return t && (n.chat_room_id = t), this.GenericEResultCall(n);
           }
           ShowChatRoomGroupInvite(e) {
             let t = { message: "ShowChatRoomGroupInvite", invite_code: e };
@@ -1827,8 +513,8 @@ var CLSTAMP = "8360360";
             let t = { message: "IsSubscribedApp", appid: e };
             return this.GenericEResultCall(t).then((t) => {
               if (t.connect_failed) return;
-              let r = 1 == t.result;
-              return this.m_mapCacheSubscribedApp.set(e, r), r;
+              let n = t.result == v.k_EResultOK;
+              return this.m_mapCacheSubscribedApp.set(e, n), n;
             });
           }
           OpenFriendsDialog() {
@@ -1836,8 +522,8 @@ var CLSTAMP = "8360360";
           }
           BClientAccountMatches() {
             return (
-              !ce.logged_in ||
-              ce.accountid == this.m_connection.ClientInfo.unAccountID
+              !m.logged_in ||
+              m.accountid == this.m_connection.ClientInfo.unAccountID
             );
           }
           GenericEResultCall(e) {
@@ -1848,14 +534,20 @@ var CLSTAMP = "8360360";
                   ? this.m_connection
                       .SendMsgAndAwaitResponse(e)
                       .then((e) =>
-                        1 === e.success ? me : this.FailureResult(e.success),
+                        e.success === v.k_EResultOK
+                          ? C
+                          : this.FailureResult(e.success),
                       )
-                  : { success: !1, result: 19, account_mismatch: !0 },
+                  : {
+                      success: !1,
+                      result: v.k_EResultInvalidSteamID,
+                      account_mismatch: !0,
+                    },
               )
               .catch(() => this.FailureResult());
           }
         }
-        class Ce {
+        class I {
           constructor() {
             (this.m_mapWaitingCallbacks = new Map()),
               (this.m_iCallSeq = 1),
@@ -1882,27 +574,27 @@ var CLSTAMP = "8360360";
             return this.m_socket && this.m_socket.readyState == WebSocket.OPEN;
           }
           SendMsgAndAwaitResponse(e) {
-            return new Promise((t, r) => {
-              let n = this.m_iCallSeq++;
-              this.BSendMsg(e, n)
-                ? this.m_mapWaitingCallbacks.set(n, {
-                    iSeq: n,
+            return new Promise((t, n) => {
+              let r = this.m_iCallSeq++;
+              this.BSendMsg(e, r)
+                ? this.m_mapWaitingCallbacks.set(r, {
+                    iSeq: r,
                     fnCallback: t,
-                    fnError: r,
+                    fnError: n,
                   })
-                : r();
+                : n();
             });
           }
           BSendMsg(e, t) {
             if (!this.m_socket || this.m_socket.readyState != WebSocket.OPEN)
               return !1;
-            let r = Object.assign({}, e, {
-              universe: de.EUNIVERSE,
-              accountid: ce.accountid,
+            let n = Object.assign({}, e, {
+              universe: h.EUNIVERSE,
+              accountid: m.accountid,
             });
-            void 0 !== t && (r.sequenceid = t);
+            void 0 !== t && (n.sequenceid = t);
             try {
-              return this.m_socket.send(JSON.stringify(r)), !0;
+              return this.m_socket.send(JSON.stringify(n)), !0;
             } catch (e) {
               return !1;
             }
@@ -1940,14 +632,14 @@ var CLSTAMP = "8360360";
                 (this.m_socket.onmessage = this.OnSocketMessage.bind(this)),
                 (this.m_socket.onopen = () => {
                   this.SendMsgAndAwaitResponse({ message: "GetClientInfo" })
-                    .then((r) => {
-                      1 == r.success
-                        ? ((this.m_ClientInfo.ulVersion = r.clientversion),
-                          (this.m_ClientInfo.bFriendsUIEnabled = !!r.friendsui),
-                          (this.m_ClientInfo.unAccountID = r.accountid),
-                          r.supported_messages &&
+                    .then((n) => {
+                      n.success == v.k_EResultOK
+                        ? ((this.m_ClientInfo.ulVersion = n.clientversion),
+                          (this.m_ClientInfo.bFriendsUIEnabled = !!n.friendsui),
+                          (this.m_ClientInfo.unAccountID = n.accountid),
+                          n.supported_messages &&
                             (this.m_ClientInfo.rgSupportedMessages =
-                              r.supported_messages),
+                              n.supported_messages),
                           e())
                         : t();
                     })
@@ -1968,19 +660,1308 @@ var CLSTAMP = "8360360";
             );
           }
         }
-        let he = new Ee();
-        window.ClientConnectionAPI = he;
-        r(9669);
+        let L = new R();
+        window.ClientConnectionAPI = L;
+        n(9669);
+        var f, A, P, M, b, F, D, N, U, G, w, O, j, B;
+        !(function (e) {
+          (e[(e.k_ETransportOK = 1)] = "k_ETransportOK"),
+            (e[(e.k_ETransportRequestNotSent = 2)] =
+              "k_ETransportRequestNotSent"),
+            (e[(e.k_ETransportResponseNotReceived = 3)] =
+              "k_ETransportResponseNotReceived"),
+            (e[(e.k_ETransportIncorrectParameter = 4)] =
+              "k_ETransportIncorrectParameter"),
+            (e[(e.k_ETransportMethodNotFound = 100)] =
+              "k_ETransportMethodNotFound"),
+            (e[(e.k_ETransportCallMismatch = 101)] =
+              "k_ETransportCallMismatch"),
+            (e[(e.k_ETransportSetupError = 102)] = "k_ETransportSetupError"),
+            (e[(e.k_ETransportInternalError = 103)] =
+              "k_ETransportInternalError"),
+            (e[(e.k_ETransportNotSupported = 104)] =
+              "k_ETransportNotSupported");
+        })(f || (f = {})),
+          (function (e) {
+            (e[(e.k_EAppErrorNone = 0)] = "k_EAppErrorNone"),
+              (e[(e.k_EAppErrorUnspecified = 1)] = "k_EAppErrorUnspecified"),
+              (e[(e.k_EAppErrorPaused = 2)] = "k_EAppErrorPaused"),
+              (e[(e.k_EAppErrorCanceled = 3)] = "k_EAppErrorCanceled"),
+              (e[(e.k_EAppErrorSuspended = 4)] = "k_EAppErrorSuspended"),
+              (e[(e.k_EAppErrorNoSubscription = 5)] =
+                "k_EAppErrorNoSubscription"),
+              (e[(e.k_EAppErrorNoConnection = 6)] = "k_EAppErrorNoConnection"),
+              (e[(e.k_EAppErrorTimeout = 7)] = "k_EAppErrorTimeout"),
+              (e[(e.k_EAppErrorMissingKey = 8)] = "k_EAppErrorMissingKey"),
+              (e[(e.k_EAppErrorMissingConfig = 9)] =
+                "k_EAppErrorMissingConfig"),
+              (e[(e.k_EAppErrorDiskReadFailure = 10)] =
+                "k_EAppErrorDiskReadFailure"),
+              (e[(e.k_EAppErrorDiskWriteFailure = 11)] =
+                "k_EAppErrorDiskWriteFailure"),
+              (e[(e.k_EAppErrorNotEnoughDiskSpace = 12)] =
+                "k_EAppErrorNotEnoughDiskSpace"),
+              (e[(e.k_EAppErrorCorruptGameFiles = 13)] =
+                "k_EAppErrorCorruptGameFiles"),
+              (e[(e.k_EAppErrorWaitingForNextDisk = 14)] =
+                "k_EAppErrorWaitingForNextDisk"),
+              (e[(e.k_EAppErrorInvalidInstallPath = 15)] =
+                "k_EAppErrorInvalidInstallPath"),
+              (e[(e.k_EAppErrorAppRunning = 16)] = "k_EAppErrorAppRunning"),
+              (e[(e.k_EAppErrorDependencyFailure = 17)] =
+                "k_EAppErrorDependencyFailure"),
+              (e[(e.k_EAppErrorNotInstalled = 18)] = "k_EAppErrorNotInstalled"),
+              (e[(e.k_EAppErrorUpdateRequired = 19)] =
+                "k_EAppErrorUpdateRequired"),
+              (e[(e.k_EAppErrorBusy = 20)] = "k_EAppErrorBusy"),
+              (e[(e.k_EAppErrorNoDownloadSources = 21)] =
+                "k_EAppErrorNoDownloadSources"),
+              (e[(e.k_EAppErrorInvalidAppConfig = 22)] =
+                "k_EAppErrorInvalidAppConfig"),
+              (e[(e.k_EAppErrorInvalidDepotConfig = 23)] =
+                "k_EAppErrorInvalidDepotConfig"),
+              (e[(e.k_EAppErrorMissingManifest = 24)] =
+                "k_EAppErrorMissingManifest"),
+              (e[(e.k_EAppErrorNotReleased = 25)] = "k_EAppErrorNotReleased"),
+              (e[(e.k_EAppErrorRegionRestricted = 26)] =
+                "k_EAppErrorRegionRestricted"),
+              (e[(e.k_EAppErrorCorruptDepotCache = 27)] =
+                "k_EAppErrorCorruptDepotCache"),
+              (e[(e.k_EAppErrorMissingExecutable = 28)] =
+                "k_EAppErrorMissingExecutable"),
+              (e[(e.k_EAppErrorInvalidPlatform = 29)] =
+                "k_EAppErrorInvalidPlatform"),
+              (e[(e.k_EAppErrorInvalidFileSystem = 30)] =
+                "k_EAppErrorInvalidFileSystem"),
+              (e[(e.k_EAppErrorCorruptUpdateFiles = 31)] =
+                "k_EAppErrorCorruptUpdateFiles"),
+              (e[(e.k_EAppErrorDownloadDisabled = 32)] =
+                "k_EAppErrorDownloadDisabled"),
+              (e[(e.k_EAppErrorSharedLibraryLocked = 33)] =
+                "k_EAppErrorSharedLibraryLocked"),
+              (e[(e.k_EAppErrorPendingLicense = 34)] =
+                "k_EAppErrorPendingLicense"),
+              (e[(e.k_EAppErrorOtherSessionPlaying = 35)] =
+                "k_EAppErrorOtherSessionPlaying"),
+              (e[(e.k_EAppErrorCorruptDownload = 36)] =
+                "k_EAppErrorCorruptDownload"),
+              (e[(e.k_EAppErrorCorruptDisk = 37)] = "k_EAppErrorCorruptDisk"),
+              (e[(e.k_EAppErrorFilePermissions = 38)] =
+                "k_EAppErrorFilePermissions"),
+              (e[(e.k_EAppErrorFileLocked = 39)] = "k_EAppErrorFileLocked"),
+              (e[(e.k_EAppErrorMissingContent = 40)] =
+                "k_EAppErrorMissingContent"),
+              (e[(e.k_EAppErrorRequires64BitOS = 41)] =
+                "k_EAppErrorRequires64BitOS"),
+              (e[(e.k_EAppErrorMissingUpdateFiles = 42)] =
+                "k_EAppErrorMissingUpdateFiles"),
+              (e[(e.k_EAppErrorNotEnoughDiskQuota = 43)] =
+                "k_EAppErrorNotEnoughDiskQuota"),
+              (e[(e.k_EAppErrorLockedSiteLicense = 44)] =
+                "k_EAppErrorLockedSiteLicense"),
+              (e[(e.k_EAppErrorParentalBlocked = 45)] =
+                "k_EAppErrorParentalBlocked"),
+              (e[(e.k_EAppErrorSpawnProcess = 46)] = "k_EAppErrorSpawnProcess"),
+              (e[(e.k_EAppErrorClientOutOfDate = 47)] =
+                "k_EAppErrorClientOutOfDate"),
+              (e[(e.k_EAppErrorPlaytimeExceeded = 48)] =
+                "k_EAppErrorPlaytimeExceeded"),
+              (e[(e.k_EAppErrorCorruptFileSignature = 49)] =
+                "k_EAppErrorCorruptFileSignature"),
+              (e[(e.k_EAppErrorMissingGameFiles = 50)] =
+                "k_EAppErrorMissingGameFiles"),
+              (e[(e.k_EAppErrorCompatToolFailed = 51)] =
+                "k_EAppErrorCompatToolFailed"),
+              (e[(e.k_EAppErrorRemovedInstallPath = 52)] =
+                "k_EAppErrorRemovedInstallPath"),
+              (e[(e.k_EAppErrorInvalidBackupPath = 53)] =
+                "k_EAppErrorInvalidBackupPath"),
+              (e[(e.k_EAppErrorInvalidPasscode = 54)] =
+                "k_EAppErrorInvalidPasscode"),
+              (e[(e.k_EAppErrorSelfUpdating = 55)] = "k_EAppErrorSelfUpdating"),
+              (e[(e.k_EAppErrorParentalPlaytimeExceeded = 56)] =
+                "k_EAppErrorParentalPlaytimeExceeded"),
+              (e[(e.k_EAppErrorMax = 57)] = "k_EAppErrorMax");
+          })(A || (A = {})),
+          (function (e) {
+            (e[(e.k_EAvatarFriendStateOffline = 0)] =
+              "k_EAvatarFriendStateOffline"),
+              (e[(e.k_EAvatarFriendStateOnline = 1)] =
+                "k_EAvatarFriendStateOnline"),
+              (e[(e.k_EAvatarFriendStateInGame = 2)] =
+                "k_EAvatarFriendStateInGame");
+          })(P || (P = {})),
+          (function (e) {
+            (e[(e.k_EScreenshot = 0)] = "k_EScreenshot"),
+              (e[(e.k_ETradingCard = 1)] = "k_ETradingCard"),
+              (e[(e.k_EAchievement = 2)] = "k_EAchievement");
+          })(M || (M = {})),
+          (function (e) {
+            (e[(e.k_EPersonaStateOffline = 0)] = "k_EPersonaStateOffline"),
+              (e[(e.k_EPersonaStateOnline = 1)] = "k_EPersonaStateOnline"),
+              (e[(e.k_EPersonaStateBusy = 2)] = "k_EPersonaStateBusy"),
+              (e[(e.k_EPersonaStateAway = 3)] = "k_EPersonaStateAway"),
+              (e[(e.k_EPersonaStateSnooze = 4)] = "k_EPersonaStateSnooze"),
+              (e[(e.k_EPersonaStateLookingToTrade = 5)] =
+                "k_EPersonaStateLookingToTrade"),
+              (e[(e.k_EPersonaStateLookingToPlay = 6)] =
+                "k_EPersonaStateLookingToPlay"),
+              (e[(e.k_EPersonaStateInvisible = 7)] =
+                "k_EPersonaStateInvisible"),
+              (e[(e.k_EPersonaStateMax = 8)] = "k_EPersonaStateMax");
+          })(b || (b = {})),
+          (function (e) {
+            (e[(e.k_EWorkshopFileTypeInvalid = -1)] =
+              "k_EWorkshopFileTypeInvalid"),
+              (e[(e.k_EWorkshopFileTypeCommunity = 0)] =
+                "k_EWorkshopFileTypeCommunity"),
+              (e[(e.k_EWorkshopFileTypeMicrotransaction = 1)] =
+                "k_EWorkshopFileTypeMicrotransaction"),
+              (e[(e.k_EWorkshopFileTypeCollection = 2)] =
+                "k_EWorkshopFileTypeCollection"),
+              (e[(e.k_EWorkshopFileTypeArt = 3)] = "k_EWorkshopFileTypeArt"),
+              (e[(e.k_EWorkshopFileTypeVideo = 4)] =
+                "k_EWorkshopFileTypeVideo"),
+              (e[(e.k_EWorkshopFileTypeScreenshot = 5)] =
+                "k_EWorkshopFileTypeScreenshot"),
+              (e[(e.k_EWorkshopFileTypeGame = 6)] = "k_EWorkshopFileTypeGame"),
+              (e[(e.k_EWorkshopFileTypeSoftware = 7)] =
+                "k_EWorkshopFileTypeSoftware"),
+              (e[(e.k_EWorkshopFileTypeConcept = 8)] =
+                "k_EWorkshopFileTypeConcept"),
+              (e[(e.k_EWorkshopFileTypeWebGuide = 9)] =
+                "k_EWorkshopFileTypeWebGuide"),
+              (e[(e.k_EWorkshopFileTypeIntegratedGuide = 10)] =
+                "k_EWorkshopFileTypeIntegratedGuide"),
+              (e[(e.k_EWorkshopFileTypeMerch = 11)] =
+                "k_EWorkshopFileTypeMerch"),
+              (e[(e.k_EWorkshopFileTypeControllerBinding = 12)] =
+                "k_EWorkshopFileTypeControllerBinding"),
+              (e[(e.k_EWorkshopFileTypeSteamworksAccessInvite = 13)] =
+                "k_EWorkshopFileTypeSteamworksAccessInvite"),
+              (e[(e.k_EWorkshopFileTypeSteamVideo = 14)] =
+                "k_EWorkshopFileTypeSteamVideo"),
+              (e[(e.k_EWorkshopFileTypeGameManagedItem = 15)] =
+                "k_EWorkshopFileTypeGameManagedItem"),
+              (e[(e.k_EWorkshopFileTypeFirst = 0)] =
+                "k_EWorkshopFileTypeFirst"),
+              (e[(e.k_EWorkshopFileTypeMax = 16)] = "k_EWorkshopFileTypeMax");
+          })(F || (F = {})),
+          (function (e) {
+            (e[(e.k_ELoginState_None = 0)] = "k_ELoginState_None"),
+              (e[(e.k_ELoginState_WelcomeDialog = 1)] =
+                "k_ELoginState_WelcomeDialog"),
+              (e[(e.k_ELoginState_WaitingForCreateUser = 2)] =
+                "k_ELoginState_WaitingForCreateUser"),
+              (e[(e.k_ELoginState_WaitingForCredentials = 3)] =
+                "k_ELoginState_WaitingForCredentials"),
+              (e[(e.k_ELoginState_WaitingForNetwork = 4)] =
+                "k_ELoginState_WaitingForNetwork"),
+              (e[(e.k_ELoginState_WaitingForServerResponse = 5)] =
+                "k_ELoginState_WaitingForServerResponse"),
+              (e[(e.k_ELoginState_WaitingForLibraryReady = 6)] =
+                "k_ELoginState_WaitingForLibraryReady"),
+              (e[(e.k_ELoginState_Success = 7)] = "k_ELoginState_Success"),
+              (e[(e.k_ELoginState_Quit = 8)] = "k_ELoginState_Quit");
+          })(D || (D = {})),
+          (function (e) {
+            (e[(e.k_EProgressType_None = 0)] = "k_EProgressType_None"),
+              (e[(e.k_EProgressType_UpdatingSteamInformation = 1)] =
+                "k_EProgressType_UpdatingSteamInformation"),
+              (e[(e.k_EProgressType_UpdatingUserConfiguration = 2)] =
+                "k_EProgressType_UpdatingUserConfiguration"),
+              (e[(e.k_EProgressType_LoggingIn = 3)] =
+                "k_EProgressType_LoggingIn");
+          })(N || (N = {})),
+          (function (e) {
+            (e[(e.k_EShutdownStep_None = 0)] = "k_EShutdownStep_None"),
+              (e[(e.k_EShutdownStep_Start = 1)] = "k_EShutdownStep_Start"),
+              (e[(e.k_EShutdownStep_WaitingForGames = 2)] =
+                "k_EShutdownStep_WaitingForGames"),
+              (e[(e.k_EShutdownStep_SynchronizingCloud = 3)] =
+                "k_EShutdownStep_SynchronizingCloud"),
+              (e[(e.k_EShutdownStep_FinishingDownload = 4)] =
+                "k_EShutdownStep_FinishingDownload"),
+              (e[(e.k_EShutdownStep_StoppingDownload = 5)] =
+                "k_EShutdownStep_StoppingDownload"),
+              (e[(e.k_EShutdownStep_StoppingServiceApps = 6)] =
+                "k_EShutdownStep_StoppingServiceApps"),
+              (e[(e.k_EShutdownStep_LogginOff = 7)] =
+                "k_EShutdownStep_LogginOff"),
+              (e[(e.k_EShutdownStep_Done = 8)] = "k_EShutdownStep_Done");
+          })(U || (U = {})),
+          (function (e) {
+            (e[(e.k_EIteratorTypeNone = 0)] = "k_EIteratorTypeNone"),
+              (e[(e.k_EIteratorTypeFolder = 1)] = "k_EIteratorTypeFolder"),
+              (e[(e.k_EIteratorTypeExecutables = 2)] =
+                "k_EIteratorTypeExecutables"),
+              (e[(e.k_EIteratorTypeImages = 3)] = "k_EIteratorTypeImages");
+          })(G || (G = {})),
+          (function (e) {
+            (e[(e.k_EUniverseInvalid = 0)] = "k_EUniverseInvalid"),
+              (e[(e.k_EUniversePublic = 1)] = "k_EUniversePublic"),
+              (e[(e.k_EUniverseBeta = 2)] = "k_EUniverseBeta"),
+              (e[(e.k_EUniverseInternal = 3)] = "k_EUniverseInternal"),
+              (e[(e.k_EUniverseDev = 4)] = "k_EUniverseDev"),
+              (e[(e.k_EUniverseMax = 5)] = "k_EUniverseMax");
+          })(w || (w = {})),
+          (function (e) {
+            (e[(e.k_EAccountTypeInvalid = 0)] = "k_EAccountTypeInvalid"),
+              (e[(e.k_EAccountTypeIndividual = 1)] =
+                "k_EAccountTypeIndividual"),
+              (e[(e.k_EAccountTypeMultiseat = 2)] = "k_EAccountTypeMultiseat"),
+              (e[(e.k_EAccountTypeGameServer = 3)] =
+                "k_EAccountTypeGameServer"),
+              (e[(e.k_EAccountTypeAnonGameServer = 4)] =
+                "k_EAccountTypeAnonGameServer"),
+              (e[(e.k_EAccountTypePending = 5)] = "k_EAccountTypePending"),
+              (e[(e.k_EAccountTypeContentServer = 6)] =
+                "k_EAccountTypeContentServer"),
+              (e[(e.k_EAccountTypeClan = 7)] = "k_EAccountTypeClan"),
+              (e[(e.k_EAccountTypeChat = 8)] = "k_EAccountTypeChat"),
+              (e[(e.k_EAccountTypeConsoleUser = 9)] =
+                "k_EAccountTypeConsoleUser"),
+              (e[(e.k_EAccountTypeAnonUser = 10)] = "k_EAccountTypeAnonUser"),
+              (e[(e.k_EAccountTypeMax = 11)] = "k_EAccountTypeMax");
+          })(O || (O = {})),
+          (function (e) {
+            (e[(e.k_EFriendRelationshipNone = 0)] =
+              "k_EFriendRelationshipNone"),
+              (e[(e.k_EFriendRelationshipBlocked = 1)] =
+                "k_EFriendRelationshipBlocked"),
+              (e[(e.k_EFriendRelationshipRequestRecipient = 2)] =
+                "k_EFriendRelationshipRequestRecipient"),
+              (e[(e.k_EFriendRelationshipFriend = 3)] =
+                "k_EFriendRelationshipFriend"),
+              (e[(e.k_EFriendRelationshipRequestInitiator = 4)] =
+                "k_EFriendRelationshipRequestInitiator"),
+              (e[(e.k_EFriendRelationshipIgnored = 5)] =
+                "k_EFriendRelationshipIgnored"),
+              (e[(e.k_EFriendRelationshipIgnoredFriend = 6)] =
+                "k_EFriendRelationshipIgnoredFriend"),
+              (e[(e.k_EFriendRelationshipSuggested_DEPRECATED = 7)] =
+                "k_EFriendRelationshipSuggested_DEPRECATED"),
+              (e[(e.k_EFriendRelationshipMax = 8)] =
+                "k_EFriendRelationshipMax");
+          })(j || (j = {})),
+          (function (e) {
+            (e[(e.k_EClanRelationshipNone = 0)] = "k_EClanRelationshipNone"),
+              (e[(e.k_EClanRelationshipBlocked = 1)] =
+                "k_EClanRelationshipBlocked"),
+              (e[(e.k_EClanRelationshipInvited = 2)] =
+                "k_EClanRelationshipInvited"),
+              (e[(e.k_EClanRelationshipMember = 3)] =
+                "k_EClanRelationshipMember"),
+              (e[(e.k_EClanRelationshipKicked = 4)] =
+                "k_EClanRelationshipKicked"),
+              (e[(e.k_EClanRelationshipKickAcknowledged = 5)] =
+                "k_EClanRelationshipKickAcknowledged"),
+              (e[(e.k_EClanRelationshipPendingApproval = 6)] =
+                "k_EClanRelationshipPendingApproval"),
+              (e[(e.k_EClanRelationshipRequestDenied = 7)] =
+                "k_EClanRelationshipRequestDenied");
+          })(B || (B = {}));
+        var W, x, V;
+        !(function (e) {
+          (e[(e.k_EChatEntryTypeInvalid = 0)] = "k_EChatEntryTypeInvalid"),
+            (e[(e.k_EChatEntryTypeChatMsg = 1)] = "k_EChatEntryTypeChatMsg"),
+            (e[(e.k_EChatEntryTypeTyping = 2)] = "k_EChatEntryTypeTyping"),
+            (e[(e.k_EChatEntryTypeInviteGame = 3)] =
+              "k_EChatEntryTypeInviteGame"),
+            (e[(e.k_EChatEntryTypeEmote = 4)] = "k_EChatEntryTypeEmote"),
+            (e[(e.k_EChatEntryTypeLeftConversation = 6)] =
+              "k_EChatEntryTypeLeftConversation"),
+            (e[(e.k_EChatEntryTypeEntered = 7)] = "k_EChatEntryTypeEntered"),
+            (e[(e.k_EChatEntryTypeWasKicked = 8)] =
+              "k_EChatEntryTypeWasKicked"),
+            (e[(e.k_EChatEntryTypeWasBanned = 9)] =
+              "k_EChatEntryTypeWasBanned"),
+            (e[(e.k_EChatEntryTypeDisconnected = 10)] =
+              "k_EChatEntryTypeDisconnected"),
+            (e[(e.k_EChatEntryTypeHistoricalChat = 11)] =
+              "k_EChatEntryTypeHistoricalChat"),
+            (e[(e.k_EChatEntryTypeLinkBlocked = 14)] =
+              "k_EChatEntryTypeLinkBlocked");
+        })(W || (W = {})),
+          (function (e) {
+            (e[(e.k_EEconTradeResponse_Accepted = 0)] =
+              "k_EEconTradeResponse_Accepted"),
+              (e[(e.k_EEconTradeResponse_Declined = 1)] =
+                "k_EEconTradeResponse_Declined"),
+              (e[(e.k_EEconTradeResponse_TradeBanned_Initiator = 2)] =
+                "k_EEconTradeResponse_TradeBanned_Initiator"),
+              (e[(e.k_EEconTradeResponse_TradeBanned_Target = 3)] =
+                "k_EEconTradeResponse_TradeBanned_Target"),
+              (e[(e.k_EEconTradeResponse_Target_Already_Trading = 4)] =
+                "k_EEconTradeResponse_Target_Already_Trading"),
+              (e[(e.k_EEconTradeResponse_Disabled = 5)] =
+                "k_EEconTradeResponse_Disabled"),
+              (e[(e.k_EEconTradeResponse_NotLoggedIn = 6)] =
+                "k_EEconTradeResponse_NotLoggedIn"),
+              (e[(e.k_EEconTradeResponse_Cancel = 7)] =
+                "k_EEconTradeResponse_Cancel"),
+              (e[(e.k_EEconTradeResponse_TooSoon = 8)] =
+                "k_EEconTradeResponse_TooSoon"),
+              (e[(e.k_EEconTradeResponse_TooSoonPenalty = 9)] =
+                "k_EEconTradeResponse_TooSoonPenalty"),
+              (e[(e.k_EEconTradeResponse_ConnectionFailed = 10)] =
+                "k_EEconTradeResponse_ConnectionFailed"),
+              (e[(e.k_EEconTradeResponse_Already_Trading = 11)] =
+                "k_EEconTradeResponse_Already_Trading"),
+              (e[(e.k_EEconTradeResponse_Already_Has_Trade_Request = 12)] =
+                "k_EEconTradeResponse_Already_Has_Trade_Request"),
+              (e[(e.k_EEconTradeResponse_NoResponse = 13)] =
+                "k_EEconTradeResponse_NoResponse"),
+              (e[(e.k_EEconTradeResponse_CyberCafe_Initiator = 14)] =
+                "k_EEconTradeResponse_CyberCafe_Initiator"),
+              (e[(e.k_EEconTradeResponse_CyberCafe_Target = 15)] =
+                "k_EEconTradeResponse_CyberCafe_Target"),
+              (e[(e.k_EEconTradeResponse_SchoolLab_Initiator = 16)] =
+                "k_EEconTradeResponse_SchoolLab_Initiator"),
+              (e[(e.k_EEconTradeResponse_SchoolLab_Target = 17)] =
+                "k_EEconTradeResponse_SchoolLab_Target"),
+              (e[(e.k_EEconTradeResponse_Initiator_Blocked_Target = 18)] =
+                "k_EEconTradeResponse_Initiator_Blocked_Target"),
+              (e[(e.k_EEconTradeResponse_Initiator_Needs_Verified_Email = 20)] =
+                "k_EEconTradeResponse_Initiator_Needs_Verified_Email"),
+              (e[(e.k_EEconTradeResponse_Initiator_Needs_Steam_Guard = 21)] =
+                "k_EEconTradeResponse_Initiator_Needs_Steam_Guard"),
+              (e[(e.k_EEconTradeResponse_Target_Account_Cannot_Trade = 22)] =
+                "k_EEconTradeResponse_Target_Account_Cannot_Trade"),
+              (e[(e.k_EEconTradeResponse_Initiator_Steam_Guard_Duration = 23)] =
+                "k_EEconTradeResponse_Initiator_Steam_Guard_Duration"),
+              (e[
+                (e.k_EEconTradeResponse_Initiator_Recent_Password_Reset = 24)
+              ] = "k_EEconTradeResponse_Initiator_Recent_Password_Reset"),
+              (e[(e.k_EEconTradeResponse_Initiator_Using_New_Device = 25)] =
+                "k_EEconTradeResponse_Initiator_Using_New_Device"),
+              (e[(e.k_EEconTradeResponse_Initiator_Sent_Invalid_Cookie = 26)] =
+                "k_EEconTradeResponse_Initiator_Sent_Invalid_Cookie"),
+              (e[(e.k_EEconTradeResponse_NeedsEmailConfirmation = 27)] =
+                "k_EEconTradeResponse_NeedsEmailConfirmation"),
+              (e[(e.k_EEconTradeResponse_Initiator_Recent_Email_Change = 28)] =
+                "k_EEconTradeResponse_Initiator_Recent_Email_Change"),
+              (e[(e.k_EEconTradeResponse_NeedsMobileConfirmation = 29)] =
+                "k_EEconTradeResponse_NeedsMobileConfirmation"),
+              (e[
+                (e.k_EEconTradeResponse_TradingHoldForClearedTradeOffers_Initiator = 30)
+              ] =
+                "k_EEconTradeResponse_TradingHoldForClearedTradeOffers_Initiator"),
+              (e[(e.k_EEconTradeResponse_WouldExceedMaxAssetCount = 31)] =
+                "k_EEconTradeResponse_WouldExceedMaxAssetCount"),
+              (e[(e.k_EEconTradeResponse_DisabledInRegion = 32)] =
+                "k_EEconTradeResponse_DisabledInRegion"),
+              (e[(e.k_EEconTradeResponse_DisabledInPartnerRegion = 33)] =
+                "k_EEconTradeResponse_DisabledInPartnerRegion"),
+              (e[(e.k_EEconTradeResponse_OKToDeliver = 50)] =
+                "k_EEconTradeResponse_OKToDeliver");
+          })(x || (x = {})),
+          (function (e) {
+            (e[(e.k_EServerTypeOther_Util = -2)] = "k_EServerTypeOther_Util"),
+              (e[(e.k_EServerTypeOther_Client = -3)] =
+                "k_EServerTypeOther_Client"),
+              (e[(e.k_EServerTypeOther_CServer = -4)] =
+                "k_EServerTypeOther_CServer"),
+              (e[(e.k_EServerTypeOther_CEconBase = -5)] =
+                "k_EServerTypeOther_CEconBase"),
+              (e[(e.k_EServerTypeInvalid = -1)] = "k_EServerTypeInvalid"),
+              (e[(e.k_EServerTypeShell = 0)] = "k_EServerTypeShell"),
+              (e[(e.k_EServerTypeGM = 1)] = "k_EServerTypeGM"),
+              (e[(e.k_EServerTypeAM = 3)] = "k_EServerTypeAM"),
+              (e[(e.k_EServerTypeBS = 4)] = "k_EServerTypeBS"),
+              (e[(e.k_EServerTypeVS = 5)] = "k_EServerTypeVS"),
+              (e[(e.k_EServerTypeATS = 6)] = "k_EServerTypeATS"),
+              (e[(e.k_EServerTypeCM = 7)] = "k_EServerTypeCM"),
+              (e[(e.k_EServerTypeFBS = 8)] = "k_EServerTypeFBS"),
+              (e[(e.k_EServerTypeBoxMonitor = 9)] = "k_EServerTypeBoxMonitor"),
+              (e[(e.k_EServerTypeSS = 10)] = "k_EServerTypeSS"),
+              (e[(e.k_EServerTypeDRMS = 11)] = "k_EServerTypeDRMS"),
+              (e[(e.k_EServerTypeConsole = 13)] = "k_EServerTypeConsole"),
+              (e[(e.k_EServerTypePICS = 14)] = "k_EServerTypePICS"),
+              (e[(e.k_EServerTypeContentStats = 16)] =
+                "k_EServerTypeContentStats"),
+              (e[(e.k_EServerTypeDP = 17)] = "k_EServerTypeDP"),
+              (e[(e.k_EServerTypeWG = 18)] = "k_EServerTypeWG"),
+              (e[(e.k_EServerTypeSM = 19)] = "k_EServerTypeSM"),
+              (e[(e.k_EServerTypeSLC = 20)] = "k_EServerTypeSLC"),
+              (e[(e.k_EServerTypeUFS = 21)] = "k_EServerTypeUFS"),
+              (e[(e.k_EServerTypeCommunity = 24)] = "k_EServerTypeCommunity"),
+              (e[(e.k_EServerTypeP2PRelayOBSOLETE = 25)] =
+                "k_EServerTypeP2PRelayOBSOLETE"),
+              (e[(e.k_EServerTypeAppInformation = 26)] =
+                "k_EServerTypeAppInformation"),
+              (e[(e.k_EServerTypeSpare = 27)] = "k_EServerTypeSpare"),
+              (e[(e.k_EServerTypeFTS = 28)] = "k_EServerTypeFTS"),
+              (e[(e.k_EServerTypeSiteLicense = 29)] =
+                "k_EServerTypeSiteLicense"),
+              (e[(e.k_EServerTypePS = 30)] = "k_EServerTypePS"),
+              (e[(e.k_EServerTypeIS = 31)] = "k_EServerTypeIS"),
+              (e[(e.k_EServerTypeCCS = 32)] = "k_EServerTypeCCS"),
+              (e[(e.k_EServerTypeDFS = 33)] = "k_EServerTypeDFS"),
+              (e[(e.k_EServerTypeLBS = 34)] = "k_EServerTypeLBS"),
+              (e[(e.k_EServerTypeMDS = 35)] = "k_EServerTypeMDS"),
+              (e[(e.k_EServerTypeCS = 36)] = "k_EServerTypeCS"),
+              (e[(e.k_EServerTypeGC = 37)] = "k_EServerTypeGC"),
+              (e[(e.k_EServerTypeNS = 38)] = "k_EServerTypeNS"),
+              (e[(e.k_EServerTypeOGS = 39)] = "k_EServerTypeOGS"),
+              (e[(e.k_EServerTypeWebAPI = 40)] = "k_EServerTypeWebAPI"),
+              (e[(e.k_EServerTypeUDS = 41)] = "k_EServerTypeUDS"),
+              (e[(e.k_EServerTypeMMS = 42)] = "k_EServerTypeMMS"),
+              (e[(e.k_EServerTypeGMS = 43)] = "k_EServerTypeGMS"),
+              (e[(e.k_EServerTypeKGS = 44)] = "k_EServerTypeKGS"),
+              (e[(e.k_EServerTypeUCM = 45)] = "k_EServerTypeUCM"),
+              (e[(e.k_EServerTypeRM = 46)] = "k_EServerTypeRM"),
+              (e[(e.k_EServerTypeFS = 47)] = "k_EServerTypeFS"),
+              (e[(e.k_EServerTypeEcon = 48)] = "k_EServerTypeEcon"),
+              (e[(e.k_EServerTypeBackpack = 49)] = "k_EServerTypeBackpack"),
+              (e[(e.k_EServerTypeUGS = 50)] = "k_EServerTypeUGS"),
+              (e[(e.k_EServerTypeStoreFeature = 51)] =
+                "k_EServerTypeStoreFeature"),
+              (e[(e.k_EServerTypeMoneyStats = 52)] = "k_EServerTypeMoneyStats"),
+              (e[(e.k_EServerTypeCRE = 53)] = "k_EServerTypeCRE"),
+              (e[(e.k_EServerTypeUMQ = 54)] = "k_EServerTypeUMQ"),
+              (e[(e.k_EServerTypeWorkshop = 55)] = "k_EServerTypeWorkshop"),
+              (e[(e.k_EServerTypeBRP = 56)] = "k_EServerTypeBRP"),
+              (e[(e.k_EServerTypeGCH = 57)] = "k_EServerTypeGCH"),
+              (e[(e.k_EServerTypeMPAS = 58)] = "k_EServerTypeMPAS"),
+              (e[(e.k_EServerTypeTrade = 59)] = "k_EServerTypeTrade"),
+              (e[(e.k_EServerTypeSecrets = 60)] = "k_EServerTypeSecrets"),
+              (e[(e.k_EServerTypeLogsink = 61)] = "k_EServerTypeLogsink"),
+              (e[(e.k_EServerTypeMarket = 62)] = "k_EServerTypeMarket"),
+              (e[(e.k_EServerTypeQuest = 63)] = "k_EServerTypeQuest"),
+              (e[(e.k_EServerTypeWDS = 64)] = "k_EServerTypeWDS"),
+              (e[(e.k_EServerTypeACS = 65)] = "k_EServerTypeACS"),
+              (e[(e.k_EServerTypePNP = 66)] = "k_EServerTypePNP"),
+              (e[(e.k_EServerTypeTaxForm = 67)] = "k_EServerTypeTaxForm"),
+              (e[(e.k_EServerTypeExternalMonitor = 68)] =
+                "k_EServerTypeExternalMonitor"),
+              (e[(e.k_EServerTypeParental = 69)] = "k_EServerTypeParental"),
+              (e[(e.k_EServerTypePartnerUpload = 70)] =
+                "k_EServerTypePartnerUpload"),
+              (e[(e.k_EServerTypePartner = 71)] = "k_EServerTypePartner"),
+              (e[(e.k_EServerTypeES = 72)] = "k_EServerTypeES"),
+              (e[(e.k_EServerTypeDepotWebContent = 73)] =
+                "k_EServerTypeDepotWebContent"),
+              (e[(e.k_EServerTypeExternalConfig = 74)] =
+                "k_EServerTypeExternalConfig"),
+              (e[(e.k_EServerTypeGameNotifications = 75)] =
+                "k_EServerTypeGameNotifications"),
+              (e[(e.k_EServerTypeMarketRepl = 76)] = "k_EServerTypeMarketRepl"),
+              (e[(e.k_EServerTypeMarketSearch = 77)] =
+                "k_EServerTypeMarketSearch"),
+              (e[(e.k_EServerTypeLocalization = 78)] =
+                "k_EServerTypeLocalization"),
+              (e[(e.k_EServerTypeSteam2Emulator = 79)] =
+                "k_EServerTypeSteam2Emulator"),
+              (e[(e.k_EServerTypePublicTest = 80)] = "k_EServerTypePublicTest"),
+              (e[(e.k_EServerTypeSolrMgr = 81)] = "k_EServerTypeSolrMgr"),
+              (e[(e.k_EServerTypeBroadcastIngester = 82)] =
+                "k_EServerTypeBroadcastIngester"),
+              (e[(e.k_EServerTypeBroadcastDirectory = 83)] =
+                "k_EServerTypeBroadcastDirectory"),
+              (e[(e.k_EServerTypeVideoManager = 84)] =
+                "k_EServerTypeVideoManager"),
+              (e[(e.k_EServerTypeTradeOffer = 85)] = "k_EServerTypeTradeOffer"),
+              (e[(e.k_EServerTypeBroadcastChat = 86)] =
+                "k_EServerTypeBroadcastChat"),
+              (e[(e.k_EServerTypePhone = 87)] = "k_EServerTypePhone"),
+              (e[(e.k_EServerTypeAccountScore = 88)] =
+                "k_EServerTypeAccountScore"),
+              (e[(e.k_EServerTypeSupport = 89)] = "k_EServerTypeSupport"),
+              (e[(e.k_EServerTypeLogRequest = 90)] = "k_EServerTypeLogRequest"),
+              (e[(e.k_EServerTypeLogWorker = 91)] = "k_EServerTypeLogWorker"),
+              (e[(e.k_EServerTypeEmailDelivery = 92)] =
+                "k_EServerTypeEmailDelivery"),
+              (e[(e.k_EServerTypeInventoryManagement = 93)] =
+                "k_EServerTypeInventoryManagement"),
+              (e[(e.k_EServerTypeAuth = 94)] = "k_EServerTypeAuth"),
+              (e[(e.k_EServerTypeStoreCatalog = 95)] =
+                "k_EServerTypeStoreCatalog"),
+              (e[(e.k_EServerTypeHLTVRelay = 96)] = "k_EServerTypeHLTVRelay"),
+              (e[(e.k_EServerTypeIDLS = 97)] = "k_EServerTypeIDLS"),
+              (e[(e.k_EServerTypePerf = 98)] = "k_EServerTypePerf"),
+              (e[(e.k_EServerTypeItemInventory = 99)] =
+                "k_EServerTypeItemInventory"),
+              (e[(e.k_EServerTypeWatchdog = 100)] = "k_EServerTypeWatchdog"),
+              (e[(e.k_EServerTypeAccountHistory = 101)] =
+                "k_EServerTypeAccountHistory"),
+              (e[(e.k_EServerTypeChat = 102)] = "k_EServerTypeChat"),
+              (e[(e.k_EServerTypeShader = 103)] = "k_EServerTypeShader"),
+              (e[(e.k_EServerTypeAccountHardware = 104)] =
+                "k_EServerTypeAccountHardware"),
+              (e[(e.k_EServerTypeWebRTC = 105)] = "k_EServerTypeWebRTC"),
+              (e[(e.k_EServerTypeGiveaway = 106)] = "k_EServerTypeGiveaway"),
+              (e[(e.k_EServerTypeChatRoom = 107)] = "k_EServerTypeChatRoom"),
+              (e[(e.k_EServerTypeVoiceChat = 108)] = "k_EServerTypeVoiceChat"),
+              (e[(e.k_EServerTypeQMS = 109)] = "k_EServerTypeQMS"),
+              (e[(e.k_EServerTypeTrust = 110)] = "k_EServerTypeTrust"),
+              (e[(e.k_EServerTypeTimeMachine = 111)] =
+                "k_EServerTypeTimeMachine"),
+              (e[(e.k_EServerTypeVACDBMaster = 112)] =
+                "k_EServerTypeVACDBMaster"),
+              (e[(e.k_EServerTypeContentServerConfig = 113)] =
+                "k_EServerTypeContentServerConfig"),
+              (e[(e.k_EServerTypeMinigame = 114)] = "k_EServerTypeMinigame"),
+              (e[(e.k_EServerTypeMLTrain = 115)] = "k_EServerTypeMLTrain"),
+              (e[(e.k_EServerTypeVACTest = 116)] = "k_EServerTypeVACTest"),
+              (e[(e.k_EServerTypeTaxService = 117)] =
+                "k_EServerTypeTaxService"),
+              (e[(e.k_EServerTypeMLInference = 118)] =
+                "k_EServerTypeMLInference"),
+              (e[(e.k_EServerTypeUGSAggregate = 119)] =
+                "k_EServerTypeUGSAggregate"),
+              (e[(e.k_EServerTypeTURN = 120)] = "k_EServerTypeTURN"),
+              (e[(e.k_EServerTypeRemoteClient = 121)] =
+                "k_EServerTypeRemoteClient"),
+              (e[(e.k_EServerTypeBroadcastOrigin = 122)] =
+                "k_EServerTypeBroadcastOrigin"),
+              (e[(e.k_EServerTypeBroadcastChannel = 123)] =
+                "k_EServerTypeBroadcastChannel"),
+              (e[(e.k_EServerTypeSteamAR = 124)] = "k_EServerTypeSteamAR"),
+              (e[(e.k_EServerTypeChina = 125)] = "k_EServerTypeChina"),
+              (e[(e.k_EServerTypeCrashDump = 126)] = "k_EServerTypeCrashDump"),
+              (e[(e.k_EServerTypeMax = 127)] = "k_EServerTypeMax");
+          })(V || (V = {}));
+        const H = 2147483647;
+        var K;
+        !(function (e) {
+          (e[(e.k_Lang_None = -1)] = "k_Lang_None"),
+            (e[(e.k_Lang_English = 0)] = "k_Lang_English"),
+            (e[(e.k_Lang_German = 1)] = "k_Lang_German"),
+            (e[(e.k_Lang_French = 2)] = "k_Lang_French"),
+            (e[(e.k_Lang_Italian = 3)] = "k_Lang_Italian"),
+            (e[(e.k_Lang_Korean = 4)] = "k_Lang_Korean"),
+            (e[(e.k_Lang_Spanish = 5)] = "k_Lang_Spanish"),
+            (e[(e.k_Lang_Simplified_Chinese = 6)] =
+              "k_Lang_Simplified_Chinese"),
+            (e[(e.k_Lang_Traditional_Chinese = 7)] =
+              "k_Lang_Traditional_Chinese"),
+            (e[(e.k_Lang_Russian = 8)] = "k_Lang_Russian"),
+            (e[(e.k_Lang_Thai = 9)] = "k_Lang_Thai"),
+            (e[(e.k_Lang_Japanese = 10)] = "k_Lang_Japanese"),
+            (e[(e.k_Lang_Portuguese = 11)] = "k_Lang_Portuguese"),
+            (e[(e.k_Lang_Polish = 12)] = "k_Lang_Polish"),
+            (e[(e.k_Lang_Danish = 13)] = "k_Lang_Danish"),
+            (e[(e.k_Lang_Dutch = 14)] = "k_Lang_Dutch"),
+            (e[(e.k_Lang_Finnish = 15)] = "k_Lang_Finnish"),
+            (e[(e.k_Lang_Norwegian = 16)] = "k_Lang_Norwegian"),
+            (e[(e.k_Lang_Swedish = 17)] = "k_Lang_Swedish"),
+            (e[(e.k_Lang_Hungarian = 18)] = "k_Lang_Hungarian"),
+            (e[(e.k_Lang_Czech = 19)] = "k_Lang_Czech"),
+            (e[(e.k_Lang_Romanian = 20)] = "k_Lang_Romanian"),
+            (e[(e.k_Lang_Turkish = 21)] = "k_Lang_Turkish"),
+            (e[(e.k_Lang_Brazilian = 22)] = "k_Lang_Brazilian"),
+            (e[(e.k_Lang_Bulgarian = 23)] = "k_Lang_Bulgarian"),
+            (e[(e.k_Lang_Greek = 24)] = "k_Lang_Greek"),
+            (e[(e.k_Lang_Arabic = 25)] = "k_Lang_Arabic"),
+            (e[(e.k_Lang_Ukrainian = 26)] = "k_Lang_Ukrainian"),
+            (e[(e.k_Lang_Latam_Spanish = 27)] = "k_Lang_Latam_Spanish"),
+            (e[(e.k_Lang_Vietnamese = 28)] = "k_Lang_Vietnamese"),
+            (e[(e.k_Lang_SteamChina_SChinese = 29)] =
+              "k_Lang_SteamChina_SChinese"),
+            (e[(e.k_Lang_Indonesian = 30)] = "k_Lang_Indonesian"),
+            (e[(e.k_Lang_MAX = 31)] = "k_Lang_MAX");
+        })(K || (K = {}));
+        function q(e, t = K.k_Lang_English) {
+          switch (e) {
+            case "english":
+              return K.k_Lang_English;
+            case "german":
+              return K.k_Lang_German;
+            case "french":
+              return K.k_Lang_French;
+            case "italian":
+              return K.k_Lang_Italian;
+            case "korean":
+            case "koreana":
+              return K.k_Lang_Korean;
+            case "spanish":
+              return K.k_Lang_Spanish;
+            case "schinese":
+              return K.k_Lang_Simplified_Chinese;
+            case "tchinese":
+              return K.k_Lang_Traditional_Chinese;
+            case "russian":
+              return K.k_Lang_Russian;
+            case "thai":
+              return K.k_Lang_Thai;
+            case "japanese":
+              return K.k_Lang_Japanese;
+            case "portuguese":
+              return K.k_Lang_Portuguese;
+            case "polish":
+              return K.k_Lang_Polish;
+            case "danish":
+              return K.k_Lang_Danish;
+            case "dutch":
+              return K.k_Lang_Dutch;
+            case "finnish":
+              return K.k_Lang_Finnish;
+            case "norwegian":
+              return K.k_Lang_Norwegian;
+            case "swedish":
+              return K.k_Lang_Swedish;
+            case "hungarian":
+              return K.k_Lang_Hungarian;
+            case "czech":
+              return K.k_Lang_Czech;
+            case "romanian":
+              return K.k_Lang_Romanian;
+            case "turkish":
+              return K.k_Lang_Turkish;
+            case "arabic":
+              return K.k_Lang_Arabic;
+            case "brazilian":
+              return K.k_Lang_Brazilian;
+            case "bulgarian":
+              return K.k_Lang_Bulgarian;
+            case "greek":
+              return K.k_Lang_Greek;
+            case "ukrainian":
+              return K.k_Lang_Ukrainian;
+            case "latam":
+              return K.k_Lang_Latam_Spanish;
+            case "vietnamese":
+              return K.k_Lang_Vietnamese;
+            case "sc_schinese":
+              return K.k_Lang_SteamChina_SChinese;
+            case "indonesian":
+              return K.k_Lang_Indonesian;
+            default:
+              return t;
+          }
+        }
+        var z;
+        !(function (e) {
+          (e[(e.k_EOtherEvent = 1)] = "k_EOtherEvent"),
+            (e[(e.k_EGameEvent = 2)] = "k_EGameEvent"),
+            (e[(e.k_EPartyEvent = 3)] = "k_EPartyEvent"),
+            (e[(e.k_EMeetingEvent = 4)] = "k_EMeetingEvent"),
+            (e[(e.k_ESpecialCauseEvent = 5)] = "k_ESpecialCauseEvent"),
+            (e[(e.k_EMusicAndArtsEvent = 6)] = "k_EMusicAndArtsEvent"),
+            (e[(e.k_ESportsEvent = 7)] = "k_ESportsEvent"),
+            (e[(e.k_ETripEvent = 8)] = "k_ETripEvent"),
+            (e[(e.k_EChatEvent = 9)] = "k_EChatEvent"),
+            (e[(e.k_EGameReleaseEvent = 10)] = "k_EGameReleaseEvent"),
+            (e[(e.k_EBroadcastEvent = 11)] = "k_EBroadcastEvent"),
+            (e[(e.k_ESmallUpdateEvent = 12)] = "k_ESmallUpdateEvent"),
+            (e[(e.k_ERegularUpdateEvent = 13)] = "k_ERegularUpdateEvent"),
+            (e[(e.k_EMajorUpdateEvent = 14)] = "k_EMajorUpdateEvent"),
+            (e[(e.k_EDLCReleaseEvent = 15)] = "k_EDLCReleaseEvent"),
+            (e[(e.k_EFutureReleaseEvent = 16)] = "k_EFutureReleaseEvent"),
+            (e[(e.k_EESportTournamentStreamEvent = 17)] =
+              "k_EESportTournamentStreamEvent"),
+            (e[(e.k_EDevStreamEvent = 18)] = "k_EDevStreamEvent"),
+            (e[(e.k_EFamousStreamEvent = 19)] = "k_EFamousStreamEvent"),
+            (e[(e.k_EGameSalesEvent = 20)] = "k_EGameSalesEvent"),
+            (e[(e.k_EGameItemSalesEvent = 21)] = "k_EGameItemSalesEvent"),
+            (e[(e.k_EInGameBonusXPEvent = 22)] = "k_EInGameBonusXPEvent"),
+            (e[(e.k_EInGameLootEvent = 23)] = "k_EInGameLootEvent"),
+            (e[(e.k_EInGamePerksEvent = 24)] = "k_EInGamePerksEvent"),
+            (e[(e.k_EInGameChallengeEvent = 25)] = "k_EInGameChallengeEvent"),
+            (e[(e.k_EInGameContestEvent = 26)] = "k_EInGameContestEvent"),
+            (e[(e.k_EIRLEvent = 27)] = "k_EIRLEvent"),
+            (e[(e.k_ENewsEvent = 28)] = "k_ENewsEvent"),
+            (e[(e.k_EBetaReleaseEvent = 29)] = "k_EBetaReleaseEvent"),
+            (e[(e.k_EFreeTrial = 31)] = "k_EFreeTrial"),
+            (e[(e.k_ESeasonRelease = 32)] = "k_ESeasonRelease"),
+            (e[(e.k_ECrosspostEvent = 34)] = "k_ECrosspostEvent"),
+            (e[(e.k_EInGameEventGeneral = 35)] = "k_EInGameEventGeneral");
+        })(z || (z = {}));
+        z.k_EOtherEvent,
+          z.k_EGameEvent,
+          z.k_EPartyEvent,
+          z.k_EMeetingEvent,
+          z.k_ESpecialCauseEvent,
+          z.k_EMusicAndArtsEvent,
+          z.k_ESportsEvent,
+          z.k_ETripEvent,
+          z.k_EChatEvent,
+          z.k_EGameReleaseEvent,
+          z.k_EBroadcastEvent,
+          z.k_ESmallUpdateEvent,
+          z.k_ERegularUpdateEvent,
+          z.k_EMajorUpdateEvent,
+          z.k_EDLCReleaseEvent,
+          z.k_EFutureReleaseEvent,
+          z.k_EESportTournamentStreamEvent,
+          z.k_EDevStreamEvent,
+          z.k_EFamousStreamEvent,
+          z.k_EGameSalesEvent,
+          z.k_EGameItemSalesEvent,
+          z.k_EInGameBonusXPEvent,
+          z.k_EInGameLootEvent,
+          z.k_EInGamePerksEvent,
+          z.k_EInGameChallengeEvent,
+          z.k_EInGameContestEvent,
+          z.k_EIRLEvent,
+          z.k_ENewsEvent,
+          z.k_EBetaReleaseEvent,
+          z.k_EFreeTrial,
+          z.k_ESeasonRelease,
+          z.k_ECrosspostEvent,
+          z.k_EInGameEventGeneral;
+        var $,
+          J,
+          Q,
+          Y,
+          X,
+          Z,
+          ee,
+          te,
+          ne,
+          re,
+          ae,
+          oe,
+          ie,
+          se,
+          _e,
+          Ee,
+          ke,
+          le,
+          ce,
+          ue,
+          de,
+          pe,
+          Se,
+          he,
+          me,
+          ye,
+          ge,
+          Te,
+          ve,
+          Ce;
+        !(function (e) {
+          (e[(e.k_ELaunchSource_None = 0)] = "k_ELaunchSource_None"),
+            (e[(e.k_ELaunchSource_2ftLibraryDetails = 100)] =
+              "k_ELaunchSource_2ftLibraryDetails"),
+            (e[(e.k_ELaunchSource_2ftLibraryListView = 101)] =
+              "k_ELaunchSource_2ftLibraryListView"),
+            (e[(e.k_ELaunchSource_2ftLibraryGrid = 103)] =
+              "k_ELaunchSource_2ftLibraryGrid"),
+            (e[(e.k_ELaunchSource_InstallSubComplete = 104)] =
+              "k_ELaunchSource_InstallSubComplete"),
+            (e[(e.k_ELaunchSource_DownloadsPage = 105)] =
+              "k_ELaunchSource_DownloadsPage"),
+            (e[(e.k_ELaunchSource_RemoteClientStartStreaming = 106)] =
+              "k_ELaunchSource_RemoteClientStartStreaming"),
+            (e[(e.k_ELaunchSource_2ftMiniModeList = 107)] =
+              "k_ELaunchSource_2ftMiniModeList"),
+            (e[(e.k_ELaunchSource_10ft = 200)] = "k_ELaunchSource_10ft"),
+            (e[(e.k_ELaunchSource_DashAppLaunchCmdLine = 300)] =
+              "k_ELaunchSource_DashAppLaunchCmdLine"),
+            (e[(e.k_ELaunchSource_DashGameIdLaunchCmdLine = 301)] =
+              "k_ELaunchSource_DashGameIdLaunchCmdLine"),
+            (e[(e.k_ELaunchSource_RunByGameDir = 302)] =
+              "k_ELaunchSource_RunByGameDir"),
+            (e[(e.k_ELaunchSource_SubCmdRunDashGame = 303)] =
+              "k_ELaunchSource_SubCmdRunDashGame"),
+            (e[(e.k_ELaunchSource_SteamURL_Launch = 400)] =
+              "k_ELaunchSource_SteamURL_Launch"),
+            (e[(e.k_ELaunchSource_SteamURL_Run = 401)] =
+              "k_ELaunchSource_SteamURL_Run"),
+            (e[(e.k_ELaunchSource_SteamURL_JoinLobby = 402)] =
+              "k_ELaunchSource_SteamURL_JoinLobby"),
+            (e[(e.k_ELaunchSource_SteamURL_RunGame = 403)] =
+              "k_ELaunchSource_SteamURL_RunGame"),
+            (e[(e.k_ELaunchSource_SteamURL_RunGameIdOrJumplist = 404)] =
+              "k_ELaunchSource_SteamURL_RunGameIdOrJumplist"),
+            (e[(e.k_ELaunchSource_SteamURL_RunSafe = 405)] =
+              "k_ELaunchSource_SteamURL_RunSafe"),
+            (e[(e.k_ELaunchSource_TrayIcon = 500)] =
+              "k_ELaunchSource_TrayIcon"),
+            (e[(e.k_ELaunchSource_LibraryLeftColumnContextMenu = 600)] =
+              "k_ELaunchSource_LibraryLeftColumnContextMenu"),
+            (e[(e.k_ELaunchSource_LibraryLeftColumnDoubleClick = 601)] =
+              "k_ELaunchSource_LibraryLeftColumnDoubleClick"),
+            (e[(e.k_ELaunchSource_Dota2Launcher = 700)] =
+              "k_ELaunchSource_Dota2Launcher"),
+            (e[(e.k_ELaunchSource_IRunGameEngine = 800)] =
+              "k_ELaunchSource_IRunGameEngine"),
+            (e[(e.k_ELaunchSource_DRMFailureResponse = 801)] =
+              "k_ELaunchSource_DRMFailureResponse"),
+            (e[(e.k_ELaunchSource_DRMDataRequest = 802)] =
+              "k_ELaunchSource_DRMDataRequest"),
+            (e[(e.k_ELaunchSource_CloudFilePanel = 803)] =
+              "k_ELaunchSource_CloudFilePanel"),
+            (e[(e.k_ELaunchSource_DiscoveredAlreadyRunning = 804)] =
+              "k_ELaunchSource_DiscoveredAlreadyRunning"),
+            (e[(e.k_ELaunchSource_GameActionJoinParty = 900)] =
+              "k_ELaunchSource_GameActionJoinParty"),
+            (e[(e.k_ELaunchSource_AppPortraitContextMenu = 1e3)] =
+              "k_ELaunchSource_AppPortraitContextMenu"),
+            (e[(e.k_ELaunchSource_DownloadItem = 1001)] =
+              "k_ELaunchSource_DownloadItem");
+        })($ || ($ = {})),
+          (function (e) {
+            (e[(e.k_ECommunityPrivacyInvalid = 0)] =
+              "k_ECommunityPrivacyInvalid"),
+              (e[(e.k_ECommunityPrivacyPrivate = 1)] =
+                "k_ECommunityPrivacyPrivate"),
+              (e[(e.k_ECommunityPrivacyFriendsOnly = 2)] =
+                "k_ECommunityPrivacyFriendsOnly"),
+              (e[(e.k_ECommunityPrivacyPublic = 3)] =
+                "k_ECommunityPrivacyPublic"),
+              (e[(e.k_ECommunityPrivacyUsersOnly_DEPRECATED = 4)] =
+                "k_ECommunityPrivacyUsersOnly_DEPRECATED"),
+              (e[(e.k_ECommunityPrivacyFriendsFriendsOnly_DEPRECATED = 5)] =
+                "k_ECommunityPrivacyFriendsFriendsOnly_DEPRECATED");
+          })(J || (J = {})),
+          (function (e) {
+            (e[(e.k_EEconContextRoot = 0)] = "k_EEconContextRoot"),
+              (e[(e.k_EBackpackContextGiftPasses = 1)] =
+                "k_EBackpackContextGiftPasses"),
+              (e[(e.k_EBackpackContextProfile = 2)] =
+                "k_EBackpackContextProfile"),
+              (e[(e.k_EBackpackContextCoupons = 3)] =
+                "k_EBackpackContextCoupons"),
+              (e[(e.k_EBackpackContextWallet = 4)] =
+                "k_EBackpackContextWallet"),
+              (e[(e.k_EBackpackContextCommunity = 6)] =
+                "k_EBackpackContextCommunity"),
+              (e[(e.k_EBackpackContextItemRewards = 7)] =
+                "k_EBackpackContextItemRewards"),
+              (e[(e.k_EEConContextMax = 999)] = "k_EEConContextMax");
+          })(Q || (Q = {})),
+          (function (e) {
+            (e[(e.k_ERemoteStoragePublishedFileVisibilityPublic = 0)] =
+              "k_ERemoteStoragePublishedFileVisibilityPublic"),
+              (e[(e.k_ERemoteStoragePublishedFileVisibilityFriendsOnly = 1)] =
+                "k_ERemoteStoragePublishedFileVisibilityFriendsOnly"),
+              (e[(e.k_ERemoteStoragePublishedFileVisibilityPrivate = 2)] =
+                "k_ERemoteStoragePublishedFileVisibilityPrivate"),
+              (e[(e.k_ERemoteStoragePublishedFileVisibilityUnlisted = 3)] =
+                "k_ERemoteStoragePublishedFileVisibilityUnlisted");
+          })(Y || (Y = {})),
+          (function (e) {
+            (e[(e.k_EUCMListTypeSubscribed = 1)] = "k_EUCMListTypeSubscribed"),
+              (e[(e.k_EUCMListTypeFavorites = 2)] = "k_EUCMListTypeFavorites"),
+              (e[(e.k_EUCMListTypePlayed = 3)] = "k_EUCMListTypePlayed"),
+              (e[(e.k_EUCMListTypeCompleted = 4)] = "k_EUCMListTypeCompleted"),
+              (e[(e.k_EUCMListTypeShortcutFavorites = 5)] =
+                "k_EUCMListTypeShortcutFavorites"),
+              (e[(e.k_EUCMListTypeFollowed = 6)] = "k_EUCMListTypeFollowed");
+          })(X || (X = {})),
+          (function (e) {
+            (e[(e.k_ELibraryAssetType_Capsule = 0)] =
+              "k_ELibraryAssetType_Capsule"),
+              (e[(e.k_ELibraryAssetType_Hero = 1)] =
+                "k_ELibraryAssetType_Hero"),
+              (e[(e.k_ELibraryAssetType_Logo = 2)] =
+                "k_ELibraryAssetType_Logo"),
+              (e[(e.k_ELibraryAssetType_Header = 3)] =
+                "k_ELibraryAssetType_Header"),
+              (e[(e.k_ELibraryAssetType_Icon = 4)] =
+                "k_ELibraryAssetType_Icon"),
+              (e[(e.k_ELibaryAssetType_HeroBlur = 5)] =
+                "k_ELibaryAssetType_HeroBlur");
+          })(Z || (Z = {})),
+          (function (e) {
+            (e[(e.k_ERecommendationIgnoreReasonNotInterested = 0)] =
+              "k_ERecommendationIgnoreReasonNotInterested"),
+              (e[(e.k_ERecommendationIgnoreReasonBlocked = 1)] =
+                "k_ERecommendationIgnoreReasonBlocked"),
+              (e[(e.k_ERecommendationIgnoreReasonOwnedElsewhere = 2)] =
+                "k_ERecommendationIgnoreReasonOwnedElsewhere");
+          })(ee || (ee = {})),
+          (function (e) {
+            (e[(e.k_ELauncherTypeDefault = 0)] = "k_ELauncherTypeDefault"),
+              (e[(e.k_ELauncherTypePerfectWorld = 1)] =
+                "k_ELauncherTypePerfectWorld"),
+              (e[(e.k_ELauncherTypeNexon = 2)] = "k_ELauncherTypeNexon"),
+              (e[(e.k_ELauncherTypeCmdLine = 3)] = "k_ELauncherTypeCmdLine"),
+              (e[(e.k_ELauncherTypeCSGO = 4)] = "k_ELauncherTypeCSGO"),
+              (e[(e.k_ELauncherTypeClientUI = 5)] = "k_ELauncherTypeClientUI"),
+              (e[(e.k_ELauncherTypeHeadless = 6)] = "k_ELauncherTypeHeadless"),
+              (e[(e.k_ELauncherTypeSteamChina = 7)] =
+                "k_ELauncherTypeSteamChina"),
+              (e[(e.k_ELauncherTypeSingleApp = 8)] =
+                "k_ELauncherTypeSingleApp"),
+              (e[(e.k_ELauncherTypeGameServer = 9)] =
+                "k_ELauncherTypeGameServer"),
+              (e[(e.k_ELauncherTypeMax = 10)] = "k_ELauncherTypeMax");
+          })(te || (te = {})),
+          (function (e) {
+            (e[(e.k_EStoreCuratorRecommendationState_Recommended = 0)] =
+              "k_EStoreCuratorRecommendationState_Recommended"),
+              (e[(e.k_EStoreCuratorRecommendationState_NotRecommended = 1)] =
+                "k_EStoreCuratorRecommendationState_NotRecommended"),
+              (e[(e.k_EStoreCuratorRecommendationState_Informative = 2)] =
+                "k_EStoreCuratorRecommendationState_Informative"),
+              (e[(e.k_EStoreCuratorRecommendationState_CreatedApp = 3)] =
+                "k_EStoreCuratorRecommendationState_CreatedApp");
+          })(ne || (ne = {})),
+          (function (e) {
+            (e[(e.k_EUCMFilePrivacyStateInvalid = -1)] =
+              "k_EUCMFilePrivacyStateInvalid"),
+              (e[(e.k_EUCMFilePrivacyStatePrivate = 2)] =
+                "k_EUCMFilePrivacyStatePrivate"),
+              (e[(e.k_EUCMFilePrivacyStateFriendsOnly = 4)] =
+                "k_EUCMFilePrivacyStateFriendsOnly"),
+              (e[(e.k_EUCMFilePrivacyStatePublic = 8)] =
+                "k_EUCMFilePrivacyStatePublic"),
+              (e[(e.k_EUCMFilePrivacyStateUnlisted = 16)] =
+                "k_EUCMFilePrivacyStateUnlisted"),
+              (e[(e.k_EUCMFilePrivacyStateAll = 30)] =
+                "k_EUCMFilePrivacyStateAll");
+          })(re || (re = {})),
+          (function (e) {
+            (e[(e.k_EUIMode_Unknown = -1)] = "k_EUIMode_Unknown"),
+              (e[(e.k_EUIMode_VGUI = 0)] = "k_EUIMode_VGUI"),
+              (e[(e.k_EUIMode_Tenfoot = 1)] = "k_EUIMode_Tenfoot"),
+              (e[(e.k_EUIMode_Mobile = 2)] = "k_EUIMode_Mobile"),
+              (e[(e.k_EUIMode_Web = 3)] = "k_EUIMode_Web"),
+              (e[(e.k_EUIMode_GamePadUI = 4)] = "k_EUIMode_GamePadUI"),
+              (e[(e.k_EUIMode_MobileChat = 5)] = "k_EUIMode_MobileChat"),
+              (e[(e.k_EUIMode_EmbeddedClient = 6)] =
+                "k_EUIMode_EmbeddedClient"),
+              (e[(e.k_EUIMode_DesktopUI = 7)] = "k_EUIMode_DesktopUI"),
+              (e[(e.k_EUIMode_MAX = 8)] = "k_EUIMode_MAX");
+          })(ae || (ae = {})),
+          (function (e) {
+            (e[(e.k_EStoreCategoryMultiplayer = 1)] =
+              "k_EStoreCategoryMultiplayer"),
+              (e[(e.k_EStoreCategorySingleplayer = 2)] =
+                "k_EStoreCategorySingleplayer"),
+              (e[(e.k_EStoreCategoryModHL2 = 6)] = "k_EStoreCategoryModHL2"),
+              (e[(e.k_EStoreCategoryModHL = 7)] = "k_EStoreCategoryModHL"),
+              (e[(e.k_EStoreCategoryVAC = 8)] = "k_EStoreCategoryVAC"),
+              (e[(e.k_EStoreCategoryCoop = 9)] = "k_EStoreCategoryCoop"),
+              (e[(e.k_EStoreCategoryDemo = 10)] = "k_EStoreCategoryDemo"),
+              (e[(e.k_EStoreCategoryFriends = 11)] = "k_EStoreCategoryFriends"),
+              (e[(e.k_EStoreCategoryHDR = 12)] = "k_EStoreCategoryHDR"),
+              (e[(e.k_EStoreCategoryCC = 13)] = "k_EStoreCategoryCC"),
+              (e[(e.k_EStoreCategoryCommentary = 14)] =
+                "k_EStoreCategoryCommentary"),
+              (e[(e.k_EStoreCategoryStats = 15)] = "k_EStoreCategoryStats"),
+              (e[(e.k_EStoreCategorySDK = 16)] = "k_EStoreCategorySDK"),
+              (e[(e.k_EStoreCategoryEditor = 17)] = "k_EStoreCategoryEditor"),
+              (e[(e.k_EStoreCategoryPartialController = 18)] =
+                "k_EStoreCategoryPartialController"),
+              (e[(e.k_EStoreCategoryMod = 19)] = "k_EStoreCategoryMod"),
+              (e[(e.k_EStoreCategoryMMO = 20)] = "k_EStoreCategoryMMO"),
+              (e[(e.k_EStoreCategoryDLC = 21)] = "k_EStoreCategoryDLC"),
+              (e[(e.k_EStoreCategoryAchievements = 22)] =
+                "k_EStoreCategoryAchievements"),
+              (e[(e.k_EStoreCategoryCloud = 23)] = "k_EStoreCategoryCloud"),
+              (e[(e.k_EStoreCategorySharedSplitscreen = 24)] =
+                "k_EStoreCategorySharedSplitscreen"),
+              (e[(e.k_EStoreCategoryLeaderboards = 25)] =
+                "k_EStoreCategoryLeaderboards"),
+              (e[(e.k_EStoreCategoryGuide = 26)] = "k_EStoreCategoryGuide"),
+              (e[(e.k_EStoreCategoryCrossPlatMultiplayer = 27)] =
+                "k_EStoreCategoryCrossPlatMultiplayer"),
+              (e[(e.k_EStoreCategoryFullController = 28)] =
+                "k_EStoreCategoryFullController"),
+              (e[(e.k_EStoreCategoryTradingCard = 29)] =
+                "k_EStoreCategoryTradingCard"),
+              (e[(e.k_EStoreCategoryWorkshop = 30)] =
+                "k_EStoreCategoryWorkshop"),
+              (e[(e.k_EStoreCategoryVRThirdParty = 31)] =
+                "k_EStoreCategoryVRThirdParty"),
+              (e[(e.k_EStoreCategoryAsyncGameNotifications = 32)] =
+                "k_EStoreCategoryAsyncGameNotifications"),
+              (e[(e.k_EStoreCategorySteamController = 33)] =
+                "k_EStoreCategorySteamController"),
+              (e[(e.k_EStoreCategoryVRSteam = 34)] = "k_EStoreCategoryVRSteam"),
+              (e[(e.k_EStoreCategoryInAppPurchases = 35)] =
+                "k_EStoreCategoryInAppPurchases"),
+              (e[(e.k_EStoreCategoryOnlinePvP = 36)] =
+                "k_EStoreCategoryOnlinePvP"),
+              (e[(e.k_EStoreCategoryLocalPvP = 37)] =
+                "k_EStoreCategoryLocalPvP"),
+              (e[(e.k_EStoreCategoryOnlineCoop = 38)] =
+                "k_EStoreCategoryOnlineCoop"),
+              (e[(e.k_EStoreCategoryLocalCoop = 39)] =
+                "k_EStoreCategoryLocalCoop"),
+              (e[(e.k_EStoreCategorySteamVRCollectibles = 40)] =
+                "k_EStoreCategorySteamVRCollectibles"),
+              (e[(e.k_EStoreCategoryRemotePlayToPhone = 41)] =
+                "k_EStoreCategoryRemotePlayToPhone"),
+              (e[(e.k_EStoreCategoryRemotePlayToTablet = 42)] =
+                "k_EStoreCategoryRemotePlayToTablet"),
+              (e[(e.k_EStoreCategoryRemotePlayToTV = 43)] =
+                "k_EStoreCategoryRemotePlayToTV"),
+              (e[(e.k_EStoreCategoryRemotePlayTogether = 44)] =
+                "k_EStoreCategoryRemotePlayTogether"),
+              (e[(e.k_EStoreCategoryCloudGaming = 45)] =
+                "k_EStoreCategoryCloudGaming"),
+              (e[(e.k_EStoreCategoryCloudGamingNVIDIA = 46)] =
+                "k_EStoreCategoryCloudGamingNVIDIA"),
+              (e[(e.k_EStoreCategoryLANPvP = 47)] = "k_EStoreCategoryLANPvP"),
+              (e[(e.k_EStoreCategoryLANCoop = 48)] = "k_EStoreCategoryLANCoop"),
+              (e[(e.k_EStoreCategoryPvP = 49)] = "k_EStoreCategoryPvP"),
+              (e[(e.k_EStoreCategoryHighQualitySoundtrackAudio = 50)] =
+                "k_EStoreCategoryHighQualitySoundtrackAudio"),
+              (e[(e.k_EStoreCategorySteamChinaWorkshop = 51)] =
+                "k_EStoreCategorySteamChinaWorkshop");
+          })(oe || (oe = {})),
+          (function (e) {
+            (e[(e.k_PFI_MatchingFileType_Items = 0)] =
+              "k_PFI_MatchingFileType_Items"),
+              (e[(e.k_PFI_MatchingFileType_Collections = 1)] =
+                "k_PFI_MatchingFileType_Collections"),
+              (e[(e.k_PFI_MatchingFileType_Art = 2)] =
+                "k_PFI_MatchingFileType_Art"),
+              (e[(e.k_PFI_MatchingFileType_Videos = 3)] =
+                "k_PFI_MatchingFileType_Videos"),
+              (e[(e.k_PFI_MatchingFileType_Screenshots = 4)] =
+                "k_PFI_MatchingFileType_Screenshots"),
+              (e[(e.k_PFI_MatchingFileType_CollectionEligible = 5)] =
+                "k_PFI_MatchingFileType_CollectionEligible"),
+              (e[(e.k_PFI_MatchingFileType_Games = 6)] =
+                "k_PFI_MatchingFileType_Games"),
+              (e[(e.k_PFI_MatchingFileType_Software = 7)] =
+                "k_PFI_MatchingFileType_Software"),
+              (e[(e.k_PFI_MatchingFileType_Concepts = 8)] =
+                "k_PFI_MatchingFileType_Concepts"),
+              (e[(e.k_PFI_MatchingFileType_GreenlightItems = 9)] =
+                "k_PFI_MatchingFileType_GreenlightItems"),
+              (e[(e.k_PFI_MatchingFileType_AllGuides = 10)] =
+                "k_PFI_MatchingFileType_AllGuides"),
+              (e[(e.k_PFI_MatchingFileType_WebGuides = 11)] =
+                "k_PFI_MatchingFileType_WebGuides"),
+              (e[(e.k_PFI_MatchingFileType_IntegratedGuides = 12)] =
+                "k_PFI_MatchingFileType_IntegratedGuides"),
+              (e[(e.k_PFI_MatchingFileType_UsableInGame = 13)] =
+                "k_PFI_MatchingFileType_UsableInGame"),
+              (e[(e.k_PFI_MatchingFileType_Merch = 14)] =
+                "k_PFI_MatchingFileType_Merch"),
+              (e[(e.k_PFI_MatchingFileType_ControllerBindings = 15)] =
+                "k_PFI_MatchingFileType_ControllerBindings"),
+              (e[(e.k_PFI_MatchingFileType_SteamworksAccessInvites = 16)] =
+                "k_PFI_MatchingFileType_SteamworksAccessInvites"),
+              (e[(e.k_PFI_MatchingFileType_Items_Mtx = 17)] =
+                "k_PFI_MatchingFileType_Items_Mtx"),
+              (e[(e.k_PFI_MatchingFileType_Items_ReadyToUse = 18)] =
+                "k_PFI_MatchingFileType_Items_ReadyToUse"),
+              (e[(e.k_PFI_MatchingFileType_WorkshopShowcase = 19)] =
+                "k_PFI_MatchingFileType_WorkshopShowcase"),
+              (e[(e.k_PFI_MatchingFileType_GameManagedItems = 20)] =
+                "k_PFI_MatchingFileType_GameManagedItems"),
+              (e[(e.k_PFI_MatchingFileType_All = -1)] =
+                "k_PFI_MatchingFileType_All");
+          })(ie || (ie = {})),
+          (function (e) {
+            (e[(e.k_EConnectivityTestResult_Unknown = 0)] =
+              "k_EConnectivityTestResult_Unknown"),
+              (e[(e.k_EConnectivityTestResult_Connected = 1)] =
+                "k_EConnectivityTestResult_Connected"),
+              (e[(e.k_EConnectivityTestResult_CaptivePortal = 2)] =
+                "k_EConnectivityTestResult_CaptivePortal"),
+              (e[(e.k_EConnectivityTestResult_TimedOut = 3)] =
+                "k_EConnectivityTestResult_TimedOut"),
+              (e[(e.k_EConnectivityTestResult_Failed = 4)] =
+                "k_EConnectivityTestResult_Failed"),
+              (e[(e.k_EConnectivityTestResult_WifiDisabled = 5)] =
+                "k_EConnectivityTestResult_WifiDisabled"),
+              (e[(e.k_EConnectivityTestResult_NoLAN = 6)] =
+                "k_EConnectivityTestResult_NoLAN");
+          })(se || (se = {})),
+          (function (e) {
+            (e[(e.k_ENetFakeLocalSystemState_Normal = 0)] =
+              "k_ENetFakeLocalSystemState_Normal"),
+              (e[(e.k_ENetFakeLocalSystemState_NoLAN = 1)] =
+                "k_ENetFakeLocalSystemState_NoLAN"),
+              (e[(e.k_ENetFakeLocalSystemState_CaptivePortal_Redirected = 2)] =
+                "k_ENetFakeLocalSystemState_CaptivePortal_Redirected"),
+              (e[(e.k_ENetFakeLocalSystemState_CaptivePortal_InPlace = 3)] =
+                "k_ENetFakeLocalSystemState_CaptivePortal_InPlace"),
+              (e[(e.k_ENetFakeLocalSystemState_NoInternet = 4)] =
+                "k_ENetFakeLocalSystemState_NoInternet"),
+              (e[(e.k_ENetFakeLocalSystemState_NoSteam = 5)] =
+                "k_ENetFakeLocalSystemState_NoSteam");
+          })(_e || (_e = {})),
+          (function (e) {
+            (e[(e.k_ESuspendResumeProgressState_Invalid = 0)] =
+              "k_ESuspendResumeProgressState_Invalid"),
+              (e[(e.k_ESuspendResumeProgressState_Complete = 1)] =
+                "k_ESuspendResumeProgressState_Complete"),
+              (e[(e.k_ESuspendResumeProgressState_CloudSync = 2)] =
+                "k_ESuspendResumeProgressState_CloudSync"),
+              (e[(e.k_ESuspendResumeProgressState_LoggingIn = 3)] =
+                "k_ESuspendResumeProgressState_LoggingIn"),
+              (e[(e.k_ESuspendResumeProgressState_WaitingForApp = 4)] =
+                "k_ESuspendResumeProgressState_WaitingForApp"),
+              (e[(e.k_ESuspendResumeProgressState_Working = 5)] =
+                "k_ESuspendResumeProgressState_Working");
+          })(Ee || (Ee = {})),
+          (function (e) {
+            (e[(e.k_EFloatingGamepadTextInputModeModeSingleLine = 0)] =
+              "k_EFloatingGamepadTextInputModeModeSingleLine"),
+              (e[(e.k_EFloatingGamepadTextInputModeModeMultipleLines = 1)] =
+                "k_EFloatingGamepadTextInputModeModeMultipleLines"),
+              (e[(e.k_EFloatingGamepadTextInputModeModeEmail = 2)] =
+                "k_EFloatingGamepadTextInputModeModeEmail"),
+              (e[(e.k_EFloatingGamepadTextInputModeModeNumeric = 3)] =
+                "k_EFloatingGamepadTextInputModeModeNumeric");
+          })(ke || (ke = {})),
+          (function (e) {
+            (e[(e.k_EAppUpdateContentType_Content = 0)] =
+              "k_EAppUpdateContentType_Content"),
+              (e[(e.k_EAppUpdateContentType_Workshop = 1)] =
+                "k_EAppUpdateContentType_Workshop"),
+              (e[(e.k_EAppUpdateContentType_Shader = 2)] =
+                "k_EAppUpdateContentType_Shader"),
+              (e[(e.k_EAppUpdateContentType_Max = 3)] =
+                "k_EAppUpdateContentType_Max");
+          })(le || (le = {})),
+          (function (e) {
+            (e[(e.k_EOverlayToStoreFlag_None = 0)] =
+              "k_EOverlayToStoreFlag_None"),
+              (e[(e.k_EOverlayToStoreFlag_AddToCart = 1)] =
+                "k_EOverlayToStoreFlag_AddToCart"),
+              (e[(e.k_EOverlayToStoreFlag_AddToCartAndShow = 2)] =
+                "k_EOverlayToStoreFlag_AddToCartAndShow");
+          })(ce || (ce = {})),
+          (function (e) {
+            (e[(e.k_EActivateGameOverlayToWebPageMode_Default = 0)] =
+              "k_EActivateGameOverlayToWebPageMode_Default"),
+              (e[(e.k_EActivateGameOverlayToWebPageMode_Modal = 1)] =
+                "k_EActivateGameOverlayToWebPageMode_Modal");
+          })(ue || (ue = {})),
+          (function (e) {
+            (e[(e.k_EGamingDeviceType_Unknown = 0)] =
+              "k_EGamingDeviceType_Unknown"),
+              (e[(e.k_EGamingDeviceType_StandardPC = 1)] =
+                "k_EGamingDeviceType_StandardPC"),
+              (e[(e.k_EGamingDeviceType_Console = 256)] =
+                "k_EGamingDeviceType_Console"),
+              (e[(e.k_EGamingDeviceType_PS3 = 272)] =
+                "k_EGamingDeviceType_PS3"),
+              (e[(e.k_EGamingDeviceType_Steambox = 288)] =
+                "k_EGamingDeviceType_Steambox"),
+              (e[(e.k_EGamingDeviceType_Handheld = 512)] =
+                "k_EGamingDeviceType_Handheld"),
+              (e[(e.k_EGamingDeviceType_Phone = 528)] =
+                "k_EGamingDeviceType_Phone"),
+              (e[(e.k_EGamingDeviceType_SteamDeck = 544)] =
+                "k_EGamingDeviceType_SteamDeck");
+          })(de || (de = {})),
+          (function (e) {
+            (e[(e.k_ELoginUIStyleOld = 0)] = "k_ELoginUIStyleOld"),
+              (e[(e.k_ELoginUIStyleNewWithoutQRCode = 1)] =
+                "k_ELoginUIStyleNewWithoutQRCode"),
+              (e[(e.k_ELoginUIStyleNew = 2)] = "k_ELoginUIStyleNew");
+          })(pe || (pe = {})),
+          (function (e) {
+            (e[(e.k_ECommunityProfileItemProperty_ImageSmall = 0)] =
+              "k_ECommunityProfileItemProperty_ImageSmall"),
+              (e[(e.k_ECommunityProfileItemProperty_ImageLarge = 1)] =
+                "k_ECommunityProfileItemProperty_ImageLarge"),
+              (e[(e.k_ECommunityProfileItemProperty_InternalName = 2)] =
+                "k_ECommunityProfileItemProperty_InternalName"),
+              (e[(e.k_ECommunityProfileItemProperty_Title = 3)] =
+                "k_ECommunityProfileItemProperty_Title"),
+              (e[(e.k_ECommunityProfileItemProperty_Description = 4)] =
+                "k_ECommunityProfileItemProperty_Description"),
+              (e[(e.k_ECommunityProfileItemProperty_AppID = 5)] =
+                "k_ECommunityProfileItemProperty_AppID"),
+              (e[(e.k_ECommunityProfileItemProperty_TypeID = 6)] =
+                "k_ECommunityProfileItemProperty_TypeID"),
+              (e[(e.k_ECommunityProfileItemProperty_Class = 7)] =
+                "k_ECommunityProfileItemProperty_Class"),
+              (e[(e.k_ECommunityProfileItemProperty_MovieWebM = 8)] =
+                "k_ECommunityProfileItemProperty_MovieWebM"),
+              (e[(e.k_ECommunityProfileItemProperty_MovieMP4 = 9)] =
+                "k_ECommunityProfileItemProperty_MovieMP4"),
+              (e[(e.k_ECommunityProfileItemProperty_MovieWebMSmall = 10)] =
+                "k_ECommunityProfileItemProperty_MovieWebMSmall"),
+              (e[(e.k_ECommunityProfileItemProperty_MovieMP4Small = 11)] =
+                "k_ECommunityProfileItemProperty_MovieMP4Small");
+          })(Se || (Se = {})),
+          (function (e) {
+            (e[(e.k_ERaiseGameWindowResult_NotRunning = 1)] =
+              "k_ERaiseGameWindowResult_NotRunning"),
+              (e[(e.k_ERaiseGameWindowResult_Success = 2)] =
+                "k_ERaiseGameWindowResult_Success"),
+              (e[(e.k_ERaiseGameWindowResult_Failure = 3)] =
+                "k_ERaiseGameWindowResult_Failure");
+          })(he || (he = {})),
+          (function (e) {
+            (e[(e.k_EPositionInvalid = -1)] = "k_EPositionInvalid"),
+              (e[(e.k_EPositionTopLeft = 0)] = "k_EPositionTopLeft"),
+              (e[(e.k_EPositionTopRight = 1)] = "k_EPositionTopRight"),
+              (e[(e.k_EPositionBottomLeft = 2)] = "k_EPositionBottomLeft"),
+              (e[(e.k_EPositionBottomRight = 3)] = "k_EPositionBottomRight");
+          })(me || (me = {})),
+          (function (e) {
+            (e[(e.k_EAppReleaseState_Unknown = 0)] =
+              "k_EAppReleaseState_Unknown"),
+              (e[(e.k_EAppReleaseState_Unavailable = 1)] =
+                "k_EAppReleaseState_Unavailable"),
+              (e[(e.k_EAppReleaseState_Prerelease = 2)] =
+                "k_EAppReleaseState_Prerelease"),
+              (e[(e.k_EAppReleaseState_PreloadOnly = 3)] =
+                "k_EAppReleaseState_PreloadOnly"),
+              (e[(e.k_EAppReleaseState_Released = 4)] =
+                "k_EAppReleaseState_Released"),
+              (e[(e.k_EAppReleaseState_Disabled = 5)] =
+                "k_EAppReleaseState_Disabled");
+          })(ye || (ye = {})),
+          (function (e) {
+            (e[(e.k_EGameIDTypeApp = 0)] = "k_EGameIDTypeApp"),
+              (e[(e.k_EGameIDTypeGameMod = 1)] = "k_EGameIDTypeGameMod"),
+              (e[(e.k_EGameIDTypeShortcut = 2)] = "k_EGameIDTypeShortcut"),
+              (e[(e.k_EGameIDTypeP2P = 3)] = "k_EGameIDTypeP2P");
+          })(ge || (ge = {})),
+          (function (e) {
+            (e[(e.k_EInstallMgrStateNone = 0)] = "k_EInstallMgrStateNone"),
+              (e[(e.k_EInstallMgrStateSetup = 1)] = "k_EInstallMgrStateSetup"),
+              (e[(e.k_EInstallMgrStateWaitLicense = 2)] =
+                "k_EInstallMgrStateWaitLicense"),
+              (e[(e.k_EInstallMgrStateFreeLicense = 3)] =
+                "k_EInstallMgrStateFreeLicense"),
+              (e[(e.k_EInstallMgrStateShowCDKey = 4)] =
+                "k_EInstallMgrStateShowCDKey"),
+              (e[(e.k_EInstallMgrStateWaitAppInfo = 5)] =
+                "k_EInstallMgrStateWaitAppInfo"),
+              (e[(e.k_EInstallMgrStateShowPassword = 6)] =
+                "k_EInstallMgrStateShowPassword"),
+              (e[(e.k_EInstallMgrStateShowConfig = 7)] =
+                "k_EInstallMgrStateShowConfig"),
+              (e[(e.k_EInstallMgrStateShowEULAs = 8)] =
+                "k_EInstallMgrStateShowEULAs"),
+              (e[(e.k_EInstallMgrStateCreateApps = 9)] =
+                "k_EInstallMgrStateCreateApps"),
+              (e[(e.k_EInstallMgrStateReadFromMedia = 10)] =
+                "k_EInstallMgrStateReadFromMedia"),
+              (e[(e.k_EInstallMgrStateShowChangeMedia = 11)] =
+                "k_EInstallMgrStateShowChangeMedia"),
+              (e[(e.k_EInstallMgrStateWaitLegacyCDKeys = 12)] =
+                "k_EInstallMgrStateWaitLegacyCDKeys"),
+              (e[(e.k_EInstallMgrStateShowSignup = 13)] =
+                "k_EInstallMgrStateShowSignup"),
+              (e[(e.k_EInstallMgrStateComplete = 14)] =
+                "k_EInstallMgrStateComplete"),
+              (e[(e.k_EInstallMgrStateFailed = 15)] =
+                "k_EInstallMgrStateFailed"),
+              (e[(e.k_EInstallMgrStateCanceled = 16)] =
+                "k_EInstallMgrStateCanceled");
+          })(Te || (Te = {})),
+          (function (e) {
+            (e[(e.k_EWindowBringToFrontInvalid = 0)] =
+              "k_EWindowBringToFrontInvalid"),
+              (e[(e.k_EWindowBringToFrontAndForceOS = 1)] =
+                "k_EWindowBringToFrontAndForceOS"),
+              (e[(e.k_EWindowBringToFrontWithoutForcingOS = 2)] =
+                "k_EWindowBringToFrontWithoutForcingOS");
+          })(ve || (ve = {})),
+          (function (e) {
+            (e[(e.k_ESteamRealmUnknown = 0)] = "k_ESteamRealmUnknown"),
+              (e[(e.k_ESteamRealmGlobal = 1)] = "k_ESteamRealmGlobal"),
+              (e[(e.k_ESteamRealmChina = 2)] = "k_ESteamRealmChina");
+          })(Ce || (Ce = {}));
         function Re(e, t) {
           return (function (e, t) {
-            let r = e.findIndex(t);
-            return r >= 0 && (e.splice(r, 1), !0);
+            let n = e.findIndex(t);
+            return n >= 0 && (e.splice(n, 1), !0);
           })(e, (e) => t == e);
         }
-        function Se(e, t, r) {
+        function Ie(e, t, n) {
           return {
             get() {
-              let e = r.value.bind(this);
+              let e = n.value.bind(this);
               return (
                 this.hasOwnProperty(t) ||
                   Object.defineProperty(this, t, { value: e }),
@@ -1989,7 +1970,7 @@ var CLSTAMP = "8360360";
             },
           };
         }
-        class fe {
+        class Le {
           constructor() {
             this.m_vecCallbacks = [];
           }
@@ -2011,8 +1992,8 @@ var CLSTAMP = "8360360";
             return this.m_vecCallbacks.length;
           }
         }
-        n(
-          [Se],
+        r(
+          [Ie],
           class {
             Schedule(e, t) {
               this.IsScheduled() && this.Cancel(),
@@ -2038,8 +2019,8 @@ var CLSTAMP = "8360360";
           "ScheduledInternal",
           null,
         );
-        n(
-          [Se],
+        r(
+          [Ie],
           class {
             constructor() {
               this.m_vecCallbacks = [];
@@ -2061,20 +2042,20 @@ var CLSTAMP = "8360360";
           "Unregister",
           null,
         );
-        var Te;
+        var fe;
         !(function (e) {
           (e[(e.None = 0)] = "None"),
             (e[(e.Ago = 1)] = "Ago"),
             (e[(e.Remaining = 2)] = "Remaining");
-        })(Te || (Te = {}));
+        })(fe || (fe = {}));
         new Map();
         new Map(), new Map();
         new Map(), new Map(), new Map(), new Map(), new Map(), new Map();
-        class ge {
+        class Ae {
           constructor() {
             (this.m_mapTokens = new Map()),
               (this.m_mapFallbackTokens = new Map()),
-              (this.m_cbkTokensChanged = new fe());
+              (this.m_cbkTokensChanged = new Le());
           }
           static InstallErrorReportingStore(e) {
             this.sm_ErrorReportingStore = e;
@@ -2083,28 +2064,33 @@ var CLSTAMP = "8360360";
             return "sc_schinese" === e ? "schinese" : "english";
           }
           static GetELanguageFallback(e) {
-            return 29 === e ? 6 : 0;
+            return e === K.k_Lang_SteamChina_SChinese
+              ? K.k_Lang_Simplified_Chinese
+              : K.k_Lang_English;
           }
           static IsELanguageValidInRealm(e, t) {
             return (
-              t === (29 === e ? v.k_ESteamRealmChina : v.k_ESteamRealmGlobal)
+              t ===
+              (e === K.k_Lang_SteamChina_SChinese
+                ? Ce.k_ESteamRealmChina
+                : Ce.k_ESteamRealmGlobal)
             );
           }
           static GetLanguageListForRealms(e) {
             const t = new Array();
-            for (let r = 0; r < 31; r++)
-              for (const n of e)
-                if (this.IsELanguageValidInRealm(r, n)) {
-                  t.push(r);
+            for (let n = K.k_Lang_English; n < K.k_Lang_MAX; n++)
+              for (const r of e)
+                if (this.IsELanguageValidInRealm(n, r)) {
+                  t.push(n);
                   break;
                 }
             return t;
           }
-          InitFromObjects(e, t, r, n, o) {
-            o || this.m_mapTokens.clear();
-            const i = Object.assign(Object.assign({}, r || {}), e),
-              a = Object.assign(Object.assign({}, n || {}), t || {});
-            this.AddTokens(i, a), this.m_cbkTokensChanged.Dispatch();
+          InitFromObjects(e, t, n, r, a) {
+            a || this.m_mapTokens.clear();
+            const o = Object.assign(Object.assign({}, n || {}), e),
+              i = Object.assign(Object.assign({}, r || {}), t || {});
+            this.AddTokens(o, i), this.m_cbkTokensChanged.Dispatch();
           }
           InitDirect(e, t) {
             this.m_mapTokens.clear(),
@@ -2135,13 +2121,13 @@ var CLSTAMP = "8360360";
           GetELanguageFallbackOrder(e = null) {
             let t = new Array();
             if (
-              (t.push(l(de.LANGUAGE)),
-              (de.SUPPORTED_LANGUAGES || []).forEach((e) => {
-                e.value != de.LANGUAGE && t.push(l(e.value));
+              (t.push(q(h.LANGUAGE)),
+              (h.SUPPORTED_LANGUAGES || []).forEach((e) => {
+                e.value != h.LANGUAGE && t.push(q(e.value));
               }),
               e)
             ) {
-              ge.GetLanguageListForRealms(e).forEach((e) => {
+              Ae.GetLanguageListForRealms(e).forEach((e) => {
                 -1 == t.indexOf(e) && t.push(e);
               });
             }
@@ -2158,13 +2144,13 @@ var CLSTAMP = "8360360";
           }
           LocalizeString(e, t) {
             if (!this.BLooksLikeToken(e)) return;
-            let r = this.m_mapTokens.get(e.substring(1));
-            if (void 0 !== r) return r;
+            let n = this.m_mapTokens.get(e.substring(1));
+            if (void 0 !== n) return n;
             !t &&
-              ge.sm_ErrorReportingStore &&
-              ge.sm_ErrorReportingStore.ReportError(
+              Ae.sm_ErrorReportingStore &&
+              Ae.sm_ErrorReportingStore.ReportError(
                 new Error(
-                  `Unable to find localization token '${e}' for language '${de.LANGUAGE}', ${this.m_mapTokens.size} tokens in map`,
+                  `Unable to find localization token '${e}' for language '${h.LANGUAGE}', ${this.m_mapTokens.size} tokens in map`,
                 ),
                 { bIncludeMessageInIdentifier: !0 },
               );
@@ -2175,47 +2161,77 @@ var CLSTAMP = "8360360";
             return void 0 !== t ? t : void 0;
           }
         }
-        function De(e, ...t) {
-          let r = Ae.LocalizeString(e);
-          return void 0 === r ? e : ye(r, ...t);
+        function Pe(e, ...t) {
+          let n = Fe.LocalizeString(e);
+          return void 0 === n ? e : be(n, ...t);
         }
-        function ke(e, ...t) {
-          let r = Ae.LocalizeString(e);
-          if (void 0 === r) return e;
-          let n,
-            o = [],
-            a = /(.*?)%(\d+)\$s/g,
-            _ = 0;
-          for (; (n = a.exec(r)); ) {
-            (_ += n[0].length), o.push(n[1]);
-            let e = parseInt(n[2]);
-            e >= 1 && e <= t.length && o.push(t[e - 1]);
+        function Me(e, ...t) {
+          let n = Fe.LocalizeString(e);
+          if (void 0 === n) return e;
+          let r,
+            a = [],
+            i = /(.*?)%(\d+)\$s/g,
+            s = 0;
+          for (; (r = i.exec(n)); ) {
+            (s += r[0].length), a.push(r[1]);
+            let e = parseInt(r[2]);
+            e >= 1 && e <= t.length && a.push(t[e - 1]);
           }
-          return o.push(r.substr(_)), i.createElement(i.Fragment, null, ...o);
+          return a.push(n.substr(s)), o.createElement(o.Fragment, null, ...a);
         }
-        function ye(e, ...t) {
+        function be(e, ...t) {
           return 0 == t.length
             ? e
-            : (e = e.replace(/%(?:(\d+)\$)?s/g, function (e, r) {
-                if (r <= t.length && r >= 1) {
-                  let e = t[r - 1];
+            : (e = e.replace(/%(?:(\d+)\$)?s/g, function (e, n) {
+                if (n <= t.length && n >= 1) {
+                  let e = t[n - 1];
                   return String(null == e ? "" : e);
                 }
                 return e;
               }));
         }
-        const Ae = new ge();
-        function ve(e, t, ...r) {
+        K.k_Lang_English,
+          K.k_Lang_German,
+          K.k_Lang_French,
+          K.k_Lang_Italian,
+          K.k_Lang_Korean,
+          K.k_Lang_Spanish,
+          K.k_Lang_Simplified_Chinese,
+          K.k_Lang_Traditional_Chinese,
+          K.k_Lang_Russian,
+          K.k_Lang_Thai,
+          K.k_Lang_Japanese,
+          K.k_Lang_Portuguese,
+          K.k_Lang_Polish,
+          K.k_Lang_Danish,
+          K.k_Lang_Dutch,
+          K.k_Lang_Finnish,
+          K.k_Lang_Norwegian,
+          K.k_Lang_Swedish,
+          K.k_Lang_Hungarian,
+          K.k_Lang_Czech,
+          K.k_Lang_Romanian,
+          K.k_Lang_Turkish,
+          K.k_Lang_Brazilian,
+          K.k_Lang_Bulgarian,
+          K.k_Lang_Greek,
+          K.k_Lang_Arabic,
+          K.k_Lang_Ukrainian,
+          K.k_Lang_Latam_Spanish,
+          K.k_Lang_Vietnamese,
+          K.k_Lang_Indonesian;
+        const Fe = new Ae();
+        function De(e, t, ...n) {
           console.assert
-            ? 0 == r.length
+            ? 0 == n.length
               ? console.assert(!!e, t)
-              : console.assert(!!e, t, ...r)
-            : e || console.warn(t, ...r);
+              : console.assert(!!e, t, ...n)
+            : e || console.warn(t, ...n);
         }
-        window.LocalizationManager = Ae;
-        var Ve = r(22188),
-          Pe = r(29323);
-        class Me {
+        window.LocalizationManager = Fe;
+        var Ne = n(22188),
+          Ue = n(29323);
+        class Ge {
           constructor(e) {
             (this.m_bReady = !1),
               (this.m_bValid = !1),
@@ -2234,7 +2250,7 @@ var CLSTAMP = "8360360";
             return this.m_strInviteCode;
           }
           BNeverExpires() {
-            return this.m_rtTimeExpires == s;
+            return this.m_rtTimeExpires == H;
           }
           GetChatRoomGroupID() {
             return this.m_ulChatRoomGroupID;
@@ -2248,9 +2264,9 @@ var CLSTAMP = "8360360";
           GetURL() {
             return this.m_strInviteCode
               ? ((e = this.m_strInviteCode),
-                "public" == de.WEB_UNIVERSE
+                "public" == h.WEB_UNIVERSE
                   ? `https://s.team/chat/${e}`
-                  : `${de.COMMUNITY_BASE_URL}chat/invite/${e}`)
+                  : `${h.COMMUNITY_BASE_URL}chat/invite/${e}`)
               : null;
             var e;
           }
@@ -2266,36 +2282,41 @@ var CLSTAMP = "8360360";
           InitInvalid() {
             (this.m_bValid = !1), (this.m_bReady = !0);
           }
-          InitDirectInvite(e, t, r = !1, n = undefined) {
+          InitDirectInvite(e, t, n = !1, r = undefined) {
             (this.m_ulChatRoomGroupID = e),
               (this.m_ulChatID = t),
-              (this.m_bIsBanned = r),
-              (this.m_rtKickExpires = n),
-              (this.m_rtTimeExpires = s),
+              (this.m_bIsBanned = n),
+              (this.m_rtKickExpires = r),
+              (this.m_rtTimeExpires = H),
               (this.m_bValid = !0),
               (this.m_bReady = !0);
           }
         }
-        n([Ve.LO], Me.prototype, "m_bReady", void 0),
-          n([Ve.aD], Me.prototype, "InitInvalid", null),
-          n([Ve.aD], Me.prototype, "InitDirectInvite", null);
-        var Fe = r(43720),
-          Be = r.n(Fe);
-        class Le {
-          constructor(e = 0, t, r, n) {
-            e instanceof Le
+        r([Ne.LO], Ge.prototype, "m_bReady", void 0),
+          r([Ne.aD], Ge.prototype, "InitInvalid", null),
+          r([Ne.aD], Ge.prototype, "InitDirectInvite", null);
+        var we = n(43720),
+          Oe = n.n(we);
+        class je {
+          constructor(e = 0, t, n, r) {
+            e instanceof je
               ? (this.m_ulSteamID = e.m_ulSteamID)
               : "string" == typeof e
-              ? (this.m_ulSteamID = Be().fromString(e, !0))
-              : t && r && void 0 !== n
-              ? this.SetFromComponents(e, n, r, t)
-              : (this.m_ulSteamID = e ? Be().fromNumber(e, !0) : Be().UZERO);
+              ? (this.m_ulSteamID = Oe().fromString(e, !0))
+              : t && n && void 0 !== r
+              ? this.SetFromComponents(e, r, n, t)
+              : (this.m_ulSteamID = e ? Oe().fromNumber(e, !0) : Oe().UZERO);
           }
           static InitFromAccountID(e) {
-            return new Le(Number(e), de.EUNIVERSE, 1, 1);
+            return new je(
+              Number(e),
+              h.EUNIVERSE,
+              O.k_EAccountTypeIndividual,
+              1,
+            );
           }
           static InitFromClanID(e) {
-            return new Le(Number(e), de.EUNIVERSE, 7, 0);
+            return new je(Number(e), h.EUNIVERSE, O.k_EAccountTypeClan, 0);
           }
           GetAccountID() {
             return this.m_ulSteamID.getLowBitsUnsigned();
@@ -2314,15 +2335,15 @@ var CLSTAMP = "8360360";
           }
           Render() {
             switch (this.GetAccountType()) {
-              case 0:
+              case O.k_EAccountTypeInvalid:
                 return (
                   "[I:" + this.GetUniverse() + ":" + this.GetAccountID() + "]"
                 );
-              case 7:
+              case O.k_EAccountTypeClan:
                 return (
                   "[g:" + this.GetUniverse() + ":" + this.GetAccountID() + "]"
                 );
-              case 4:
+              case O.k_EAccountTypeAnonGameServer:
                 return (
                   "[A:" +
                   this.GetUniverse() +
@@ -2332,11 +2353,11 @@ var CLSTAMP = "8360360";
                   this.GetInstance() +
                   "]"
                 );
-              case 3:
+              case O.k_EAccountTypeGameServer:
                 return (
                   "[G:" + this.GetUniverse() + ":" + this.GetAccountID() + "]"
                 );
-              case 2:
+              case O.k_EAccountTypeMultiseat:
                 return (
                   "[M:" +
                   this.GetUniverse() +
@@ -2346,11 +2367,11 @@ var CLSTAMP = "8360360";
                   this.GetInstance() +
                   "]"
                 );
-              case 5:
+              case O.k_EAccountTypePending:
                 return (
                   "[P:" + this.GetUniverse() + ":" + this.GetAccountID() + "]"
                 );
-              case 6:
+              case O.k_EAccountTypeContentServer:
                 return (
                   "[C:" + this.GetUniverse() + ":" + this.GetAccountID() + "]"
                 );
@@ -2361,55 +2382,60 @@ var CLSTAMP = "8360360";
             }
           }
           static InitFromString(e) {
-            let t = new Le();
+            let t = new je();
             try {
-              let [r, n, o, i, a] =
+              let [n, r, a, o, i] =
                   e.match(/\[([I|g|A|G|M|P|C|U]):(\d+):(\d+):?(\d+)?\]/) || [],
+                s = Number(a),
                 _ = Number(o),
-                s = Number(i),
-                l = a ? Number(a) : 1;
-              switch (n) {
+                E = i ? Number(i) : 1;
+              switch (r) {
                 case "I":
-                  t.SetFromComponents(s, l, 0, _);
+                  t.SetFromComponents(_, E, O.k_EAccountTypeInvalid, s);
                 case "g":
-                  t.SetFromComponents(s, 0, 7, _);
+                  t.SetFromComponents(_, 0, O.k_EAccountTypeClan, s);
                 case "A":
-                  t.SetFromComponents(s, l, 4, _);
+                  t.SetFromComponents(_, E, O.k_EAccountTypeAnonGameServer, s);
                 case "G":
-                  t.SetFromComponents(s, l, 3, _);
+                  t.SetFromComponents(_, E, O.k_EAccountTypeGameServer, s);
                 case "M":
-                  t.SetFromComponents(s, l, 2, _);
+                  t.SetFromComponents(_, E, O.k_EAccountTypeMultiseat, s);
                 case "P":
-                  t.SetFromComponents(s, l, 5, _);
+                  t.SetFromComponents(_, E, O.k_EAccountTypePending, s);
                 case "C":
-                  t.SetFromComponents(s, l, 6, _);
+                  t.SetFromComponents(_, E, O.k_EAccountTypeContentServer, s);
                 case "U":
-                  t.SetFromComponents(s, l, 1, _);
+                  t.SetFromComponents(_, E, O.k_EAccountTypeIndividual, s);
               }
             } catch (e) {}
             return t;
           }
           BIsValid() {
             let e = this.GetAccountType();
-            if (e <= 0 || e >= 11) return !1;
+            if (e <= O.k_EAccountTypeInvalid || e >= O.k_EAccountTypeMax)
+              return !1;
             let t = this.GetUniverse();
-            if (t <= 0 || t >= 5) return !1;
-            if (1 == e) {
+            if (t <= w.k_EUniverseInvalid || t >= w.k_EUniverseMax) return !1;
+            if (e == O.k_EAccountTypeIndividual) {
               if (0 == this.GetAccountID() || this.GetInstance() > 4) return !1;
-            } else if (7 == e) {
+            } else if (e == O.k_EAccountTypeClan) {
               if (0 == this.GetAccountID() || 0 != this.GetInstance())
                 return !1;
-            } else if (3 == e && 0 == this.GetAccountID()) return !1;
+            } else if (
+              e == O.k_EAccountTypeGameServer &&
+              0 == this.GetAccountID()
+            )
+              return !1;
             return !0;
           }
           BIsIndividualAccount() {
-            return 1 == this.GetAccountType();
+            return this.GetAccountType() == O.k_EAccountTypeIndividual;
           }
           BIsClanAccount() {
-            return 7 == this.GetAccountType();
+            return this.GetAccountType() == O.k_EAccountTypeClan;
           }
           SetAccountID(e) {
-            this.m_ulSteamID = new (Be())(
+            this.m_ulSteamID = new (Oe())(
               e,
               this.m_ulSteamID.getHighBitsUnsigned(),
               !0,
@@ -2439,20 +2465,20 @@ var CLSTAMP = "8360360";
               e,
             );
           }
-          SetFromComponents(e, t, r, n) {
-            let o = ((255 & n) << 24) + ((15 & r) << 20) + (1048575 & t),
-              i = 4294967295 & e;
-            this.m_ulSteamID = new (Be())(i, o, !0);
+          SetFromComponents(e, t, n, r) {
+            let a = ((255 & r) << 24) + ((15 & n) << 20) + (1048575 & t),
+              o = 4294967295 & e;
+            this.m_ulSteamID = new (Oe())(o, a, !0);
           }
         }
-        var be = r(42238);
-        class Oe extends Me {
+        var Be = n(42238);
+        class We extends Ge {
           BIsExpired() {
-            return Ne.sm_rtTimeCur >= this.m_rtTimeExpires;
+            return xe.sm_rtTimeCur >= this.m_rtTimeExpires;
           }
           InitFromPHPInviteLinkInfo(e) {
             this.m_ulChatID = e.chat_id;
-            let t = new Le(e.steamid_sender);
+            let t = new je(e.steamid_sender);
             t.BIsIndividualAccount() &&
               (this.m_unAccountIDInviter = t.GetAccountID()),
               (this.m_rtTimeExpires = e.time_expires),
@@ -2464,11 +2490,11 @@ var CLSTAMP = "8360360";
               (this.m_bReady = !0);
           }
         }
-        n([Ve.aD], Oe.prototype, "InitFromPHPInviteLinkInfo", null);
-        class Ne {
+        r([Ne.aD], We.prototype, "InitFromPHPInviteLinkInfo", null);
+        class xe {
           constructor(e) {
             (this.m_bConnectingToClient = !1),
-              (this.m_invite = new Oe(e.strInviteCode)),
+              (this.m_invite = new We(e.strInviteCode)),
               e.Invite
                 ? this.m_invite.InitFromPHPInviteLinkInfo(e.Invite)
                 : this.m_invite.InitInvalid(),
@@ -2494,30 +2520,30 @@ var CLSTAMP = "8360360";
             !(function (e) {
               let t = window.open("", "SteamWebChat", "");
               if (!t) return;
-              let r = !1,
-                n = !1;
+              let n = !1,
+                r = !1;
               try {
-                r = "about:blank" == t.location.href;
+                n = "about:blank" == t.location.href;
               } catch (e) {
-                n = !0;
+                r = !0;
               }
-              if (r) {
+              if (n) {
                 if (e) {
-                  let r = function (n) {
-                    let o = de.COMMUNITY_BASE_URL.replace(
+                  let n = function (r) {
+                    let a = h.COMMUNITY_BASE_URL.replace(
                       /(https?:\/\/[^/]*).*$/,
                       "$1",
                     );
-                    n.source == t &&
-                      "FriendsUIReady" == n.data &&
-                      n.origin == o &&
-                      (t.postMessage(e, de.COMMUNITY_BASE_URL),
-                      window.removeEventListener("message", r));
+                    r.source == t &&
+                      "FriendsUIReady" == r.data &&
+                      r.origin == a &&
+                      (t.postMessage(e, h.COMMUNITY_BASE_URL),
+                      window.removeEventListener("message", n));
                   };
-                  window.addEventListener("message", r);
+                  window.addEventListener("message", n);
                 }
-                t.location.href = de.COMMUNITY_BASE_URL + "chat/";
-              } else e && t.postMessage(e, de.COMMUNITY_BASE_URL);
+                t.location.href = h.COMMUNITY_BASE_URL + "chat/";
+              } else e && t.postMessage(e, h.COMMUNITY_BASE_URL);
               t.focus();
             })({
               command: "ShowChatRoomGroupInvite",
@@ -2525,7 +2551,7 @@ var CLSTAMP = "8360360";
             });
           }
           LaunchSteamIgnoreAccount() {
-            he.SetAllowAccountMismatch(!0), this.SendInviteToClient();
+            L.SetAllowAccountMismatch(!0), this.SendInviteToClient();
           }
           ForceLaunchSteamClient() {
             window.location.href = `steam://friends/ShowChatRoomGroupInvite/${this.m_invite.GetInviteCode()}`;
@@ -2534,32 +2560,32 @@ var CLSTAMP = "8360360";
             this.m_invite.BIsValid() &&
               !this.m_invite.BIsExpired() &&
               ((this.m_bConnectingToClient = !0),
-              he
-                .ShowChatRoomGroupInvite(this.m_invite.GetInviteCode())
-                .then((e) => {
-                  (0, Ve.z)(() => {
+              L.ShowChatRoomGroupInvite(this.m_invite.GetInviteCode()).then(
+                (e) => {
+                  (0, Ne.z)(() => {
                     (this.m_bConnectingToClient = !1),
                       (this.m_connectResult = e),
                       console.log(e);
                   });
-                }));
+                },
+              ));
           }
         }
-        n([Ve.LO], Ne.prototype, "m_bConnectingToClient", void 0),
-          n([Ve.LO], Ne.prototype, "m_connectResult", void 0);
-        let Ue = class extends i.Component {
+        r([Ne.LO], xe.prototype, "m_bConnectingToClient", void 0),
+          r([Ne.LO], xe.prototype, "m_connectResult", void 0);
+        let Ve = class extends o.Component {
           render() {
-            return i.createElement(
+            return o.createElement(
               "div",
               { className: "InviteLandingRoot" },
               this.props.controller.BIsInviteValid()
-                ? i.createElement(Ge, { controller: this.props.controller })
-                : i.createElement(we, { controller: this.props.controller }),
+                ? o.createElement(He, { controller: this.props.controller })
+                : o.createElement(Ke, { controller: this.props.controller }),
             );
           }
         };
-        Ue = n([Pe.Pi], Ue);
-        let Ge = class extends i.Component {
+        Ve = r([Ue.Pi], Ve);
+        let He = class extends o.Component {
           constructor() {
             super(...arguments), (this.m_bTriedToLaunchSteam = !1);
           }
@@ -2576,7 +2602,7 @@ var CLSTAMP = "8360360";
               }, 1e3);
           }
           IsMobileDevice() {
-            switch (new be.UAParser(navigator.userAgent).getResult().os.name) {
+            switch (new Be.UAParser(navigator.userAgent).getResult().os.name) {
               case "iOS":
               case "Android":
               case "BlackBerry":
@@ -2586,181 +2612,181 @@ var CLSTAMP = "8360360";
           }
           render() {
             if (this.props.controller.BIsConnectingToClient())
-              return i.createElement(
+              return o.createElement(
                 "div",
                 { className: "ChatMessageInvite RequestingInfo NoColumns" },
-                i.createElement(
+                o.createElement(
                   "div",
                   { className: "postedExpiredInvite" },
-                  De("#bbcode_invite_requesting_info"),
+                  Pe("#bbcode_invite_requesting_info"),
                 ),
               );
             let e = this.props.controller.GetConnectResults(),
               t = this.props.controller.GetInvite(),
-              r = (de.COMMUNITY_BASE_URL, this.IsMobileDevice()),
-              n = "inviteButton inviteButtonJoinChat";
+              n = (h.COMMUNITY_BASE_URL, this.IsMobileDevice()),
+              r = "inviteButton inviteButtonJoinChat";
             return (
-              t.BIsVoiceChatInvite() && (n += " inviteButtonJoinVoice"),
+              t.BIsVoiceChatInvite() && (r += " inviteButtonJoinVoice"),
               e.success
-                ? i.createElement(
+                ? o.createElement(
                     "div",
                     { className: "ChatMessageInvite NoColumns" },
-                    i.createElement(
+                    o.createElement(
                       "div",
                       { className: "groupName" },
-                      De("#InviteLanding_SentToSteam"),
+                      Pe("#InviteLanding_SentToSteam"),
                     ),
-                    i.createElement(
+                    o.createElement(
                       "div",
                       { className: "inviteLabel" },
-                      ke(
+                      Me(
                         "#InviteLanding_SentToSteam_Desc",
-                        i.createElement(
+                        o.createElement(
                           "a",
                           {
                             href: "javascript:void(0);",
                             onClick: this.LaunchWebChat,
                           },
-                          De("#InviteLanding_SentToSteam_Desc_LaunchWebChat"),
+                          Pe("#InviteLanding_SentToSteam_Desc_LaunchWebChat"),
                         ),
                       ),
                     ),
                   )
                 : e.account_mismatch
-                ? i.createElement(
-                    je,
+                ? o.createElement(
+                    qe,
                     { render: this.props.controller.GetPreRenderedHTML() },
-                    i.createElement(
+                    o.createElement(
                       "div",
                       { className: "inviteLabel" },
-                      De("#InviteLanding_AccountMismatch"),
+                      Pe("#InviteLanding_AccountMismatch"),
                     ),
-                    i.createElement(
+                    o.createElement(
                       "div",
                       { className: "inviteLabel" },
-                      i.createElement(
+                      o.createElement(
                         "button",
                         {
-                          className: n,
+                          className: r,
                           type: "button",
                           onClick: this.OpenInSteamIgnoreAccount,
                         },
-                        De("#InviteLanding_OpenInSteam"),
+                        Pe("#InviteLanding_OpenInSteam"),
                       ),
-                      i.createElement(
+                      o.createElement(
                         "button",
                         {
-                          className: n,
+                          className: r,
                           type: "button",
                           onClick: this.LaunchWebChat,
                         },
-                        De("#InviteLanding_OpenInWebChat"),
+                        Pe("#InviteLanding_OpenInWebChat"),
                       ),
                     ),
                   )
                 : e.call_unsupported
-                ? i.createElement(
+                ? o.createElement(
                     "div",
                     { className: "ChatMessageInvite" },
-                    i.createElement(
+                    o.createElement(
                       "div",
                       { className: "groupName" },
-                      De("#InviteLanding_SentToSteam"),
+                      Pe("#InviteLanding_SentToSteam"),
                     ),
-                    i.createElement(
+                    o.createElement(
                       "div",
                       { className: "inviteLabel" },
-                      ke(
+                      Me(
                         "#InviteLanding_SentToSteam_Desc",
-                        i.createElement(
+                        o.createElement(
                           "a",
                           {
                             href: "javascript:void(0);",
                             onClick: this.LaunchWebChat,
                           },
-                          De("#InviteLanding_SentToSteam_Desc_LaunchWebChat"),
+                          Pe("#InviteLanding_SentToSteam_Desc_LaunchWebChat"),
                         ),
                       ),
                     ),
                   )
-                : i.createElement(
-                    je,
+                : o.createElement(
+                    qe,
                     { render: this.props.controller.GetPreRenderedHTML() },
-                    i.createElement(
+                    o.createElement(
                       "div",
                       { className: "inviteLabel inviteLabelButtons" },
-                      !r &&
-                        i.createElement(
+                      !n &&
+                        o.createElement(
                           "button",
                           {
-                            className: n,
+                            className: r,
                             type: "button",
                             onClick: this.LaunchSteamClient,
                           },
-                          De("#InviteLanding_OpenInSteam"),
+                          Pe("#InviteLanding_OpenInSteam"),
                         ),
-                      i.createElement(
+                      o.createElement(
                         "button",
                         {
-                          className: n,
+                          className: r,
                           type: "button",
                           onClick: this.LaunchWebChat,
                         },
-                        De("#InviteLanding_OpenInWebChat"),
+                        Pe("#InviteLanding_OpenInWebChat"),
                       ),
                     ),
                     this.m_bTriedToLaunchSteam &&
-                      i.createElement(
+                      o.createElement(
                         "div",
                         { className: "inviteLabel inviteLabelLaunchPrompt" },
-                        De("#InviteLanding_OpenInSteam_Help"),
+                        Pe("#InviteLanding_OpenInSteam_Help"),
                       ),
                   )
             );
           }
         };
-        n([Ve.LO], Ge.prototype, "m_bTriedToLaunchSteam", void 0),
-          n([Se], Ge.prototype, "LaunchWebChat", null),
-          n([Se], Ge.prototype, "OpenInSteamIgnoreAccount", null),
-          n([Se], Ge.prototype, "LaunchSteamClient", null),
-          (Ge = n([Pe.Pi], Ge));
-        class we extends i.Component {
+        r([Ne.LO], He.prototype, "m_bTriedToLaunchSteam", void 0),
+          r([Ie], He.prototype, "LaunchWebChat", null),
+          r([Ie], He.prototype, "OpenInSteamIgnoreAccount", null),
+          r([Ie], He.prototype, "LaunchSteamClient", null),
+          (He = r([Ue.Pi], He));
+        class Ke extends o.Component {
           render() {
-            return i.createElement(
+            return o.createElement(
               "div",
               { className: "ChatMessageInvite" },
-              i.createElement(
+              o.createElement(
                 "div",
                 { className: "postedExpiredInvite" },
-                De("#InviteLanding_ExpiredOrInvalid"),
+                Pe("#InviteLanding_ExpiredOrInvalid"),
               ),
             );
           }
         }
-        function je(e) {
-          return i.createElement(
+        function qe(e) {
+          return o.createElement(
             "div",
             { className: "ChatMessageInvite" },
-            i.createElement("div", {
+            o.createElement("div", {
               className: "leftInviteContainer",
               dangerouslySetInnerHTML: { __html: e.render.strAvatarHTML },
             }),
-            i.createElement(
+            o.createElement(
               "div",
               { className: "rightInviteContainer" },
-              i.createElement(
+              o.createElement(
                 "div",
                 { className: "inviteLabel" },
-                ke(
+                Me(
                   "#bbcode_invite_description",
-                  i.createElement("span", {
+                  o.createElement("span", {
                     dangerouslySetInnerHTML: {
                       __html: e.render.strInviterNameLinkHTML,
                     },
                   }),
                 ),
               ),
-              i.createElement(
+              o.createElement(
                 "div",
                 { className: "groupName" },
                 e.render.strChatRoomGroupName,
@@ -2769,54 +2795,54 @@ var CLSTAMP = "8360360";
             ),
           );
         }
-        window.AssertMsg = ve;
-        let He = new Ee();
-        function xe(e) {
+        window.AssertMsg = De;
+        let ze = new R();
+        function $e(e) {
           let t;
           try {
             t = JSON.parse(e.getAttribute("data-inviteinfo"));
           } catch (e) {}
-          Ne.sm_rtTimeCur = t.rtTimeCur;
-          let r = new Ne(t);
-          _.render(i.createElement(Ue, { controller: r }), e);
+          xe.sm_rtTimeCur = t.rtTimeCur;
+          let n = new xe(t);
+          s.render(o.createElement(Ve, { controller: n }), e);
         }
-        (window.ClientConnectionAPI = He),
+        (window.ClientConnectionAPI = ze),
           document.addEventListener("DOMContentLoaded", function () {
-            return o(this, void 0, void 0, function* () {
-              ae(),
+            return a(this, void 0, void 0, function* () {
+              u(),
                 yield (function (e) {
-                  return o(this, void 0, void 0, function* () {
-                    const t = ge.GetLanguageFallback(e),
-                      n = e === t,
-                      [o, i, a, _] = yield Promise.all([
-                        r(41171)(`./shared_${e}.json`),
-                        r(3119)(`./friendsui_${e}.json`),
-                        n ? {} : r(91090)(`./shared_${t}.json`),
-                        n ? {} : r(9014)(`./friendsui_${t}.json`),
+                  return a(this, void 0, void 0, function* () {
+                    const t = Ae.GetLanguageFallback(e),
+                      r = e === t,
+                      [a, o, i, s] = yield Promise.all([
+                        n(41171)(`./shared_${e}.json`),
+                        n(3119)(`./friendsui_${e}.json`),
+                        r ? {} : n(91090)(`./shared_${t}.json`),
+                        r ? {} : n(9014)(`./friendsui_${t}.json`),
                       ]);
-                    Ae.AddTokens(
-                      Object.assign(Object.assign({}, o), i),
-                      Object.assign(Object.assign({}, a), _),
+                    Fe.AddTokens(
+                      Object.assign(Object.assign({}, a), o),
+                      Object.assign(Object.assign({}, i), s),
                     );
                   });
-                })(de.LANGUAGE),
+                })(h.LANGUAGE),
                 (function () {
                   let e = document.querySelectorAll(".ChatReactRoot");
                   for (let t = 0; t < e.length; t++) {
-                    let r = e[t],
-                      n = r.getAttribute("data-component");
-                    "ChatInvite" === n
-                      ? xe(r)
-                      : ve(!1, `unknown component: "${n}"`);
+                    let n = e[t],
+                      r = n.getAttribute("data-component");
+                    "ChatInvite" === r
+                      ? $e(n)
+                      : De(!1, `unknown component: "${r}"`);
                   }
                 })();
             });
           });
       },
-      58610: (e, t, r) => {
+      42938: (e, t, n) => {
         "use strict";
         "VALVE_PUBLIC_PATH" in window
-          ? (r.p = window.VALVE_PUBLIC_PATH)
+          ? (n.p = window.VALVE_PUBLIC_PATH)
           : console.error(
               "VALVE_PUBLIC_PATH not defined; check for a call to CHTMLHelpers::WebpackConfigScriptlet",
             ),
@@ -2825,8 +2851,8 @@ var CLSTAMP = "8360360";
             "Should not include prototypejs.",
           );
       },
-      3119: (e, t, r) => {
-        var n = {
+      3119: (e, t, n) => {
+        var r = {
           "./friendsui_arabic.json": [58480, 6992],
           "./friendsui_brazilian.json": [33109, 2862],
           "./friendsui_bulgarian.json": [5242, 8518],
@@ -2859,20 +2885,20 @@ var CLSTAMP = "8360360";
           "./friendsui_ukrainian.json": [83292, 2822],
           "./friendsui_vietnamese.json": [39248, 1635],
         };
-        function o(e) {
-          if (!r.o(n, e))
+        function a(e) {
+          if (!n.o(r, e))
             return Promise.resolve().then(() => {
               var t = new Error("Cannot find module '" + e + "'");
               throw ((t.code = "MODULE_NOT_FOUND"), t);
             });
-          var t = n[e],
-            o = t[0];
-          return r.e(t[1]).then(() => r.t(o, 19));
+          var t = r[e],
+            a = t[0];
+          return n.e(t[1]).then(() => n.t(a, 19));
         }
-        (o.keys = () => Object.keys(n)), (o.id = 3119), (e.exports = o);
+        (a.keys = () => Object.keys(r)), (a.id = 3119), (e.exports = a);
       },
-      9014: (e, t, r) => {
-        var n = {
+      9014: (e, t, n) => {
+        var r = {
           "./friendsui_arabic.json": [58480, 6992],
           "./friendsui_brazilian.json": [33109, 2862],
           "./friendsui_bulgarian.json": [5242, 8518],
@@ -2905,20 +2931,20 @@ var CLSTAMP = "8360360";
           "./friendsui_ukrainian.json": [83292, 2822],
           "./friendsui_vietnamese.json": [39248, 1635],
         };
-        function o(e) {
-          if (!r.o(n, e))
+        function a(e) {
+          if (!n.o(r, e))
             return Promise.resolve().then(() => {
               var t = new Error("Cannot find module '" + e + "'");
               throw ((t.code = "MODULE_NOT_FOUND"), t);
             });
-          var t = n[e],
-            o = t[0];
-          return r.e(t[1]).then(() => r.t(o, 19));
+          var t = r[e],
+            a = t[0];
+          return n.e(t[1]).then(() => n.t(a, 19));
         }
-        (o.keys = () => Object.keys(n)), (o.id = 9014), (e.exports = o);
+        (a.keys = () => Object.keys(r)), (a.id = 9014), (e.exports = a);
       },
-      41171: (e, t, r) => {
-        var n = {
+      41171: (e, t, n) => {
+        var r = {
           "./shared_arabic.json": [78501, 2431],
           "./shared_brazilian.json": [55106, 8385],
           "./shared_bulgarian.json": [34469, 1313],
@@ -2951,20 +2977,20 @@ var CLSTAMP = "8360360";
           "./shared_ukrainian.json": [32110, 7781],
           "./shared_vietnamese.json": [59201, 4964],
         };
-        function o(e) {
-          if (!r.o(n, e))
+        function a(e) {
+          if (!n.o(r, e))
             return Promise.resolve().then(() => {
               var t = new Error("Cannot find module '" + e + "'");
               throw ((t.code = "MODULE_NOT_FOUND"), t);
             });
-          var t = n[e],
-            o = t[0];
-          return r.e(t[1]).then(() => r.t(o, 19));
+          var t = r[e],
+            a = t[0];
+          return n.e(t[1]).then(() => n.t(a, 19));
         }
-        (o.keys = () => Object.keys(n)), (o.id = 41171), (e.exports = o);
+        (a.keys = () => Object.keys(r)), (a.id = 41171), (e.exports = a);
       },
-      91090: (e, t, r) => {
-        var n = {
+      91090: (e, t, n) => {
+        var r = {
           "./shared_arabic.json": [78501, 2431],
           "./shared_brazilian.json": [55106, 8385],
           "./shared_bulgarian.json": [34469, 1313],
@@ -2997,17 +3023,17 @@ var CLSTAMP = "8360360";
           "./shared_ukrainian.json": [32110, 7781],
           "./shared_vietnamese.json": [59201, 4964],
         };
-        function o(e) {
-          if (!r.o(n, e))
+        function a(e) {
+          if (!n.o(r, e))
             return Promise.resolve().then(() => {
               var t = new Error("Cannot find module '" + e + "'");
               throw ((t.code = "MODULE_NOT_FOUND"), t);
             });
-          var t = n[e],
-            o = t[0];
-          return r.e(t[1]).then(() => r.t(o, 19));
+          var t = r[e],
+            a = t[0];
+          return n.e(t[1]).then(() => n.t(a, 19));
         }
-        (o.keys = () => Object.keys(n)), (o.id = 91090), (e.exports = o);
+        (a.keys = () => Object.keys(r)), (a.id = 91090), (e.exports = a);
       },
       87363: (e) => {
         "use strict";
@@ -3018,67 +3044,67 @@ var CLSTAMP = "8360360";
         e.exports = ReactDOM;
       },
     },
-    a = {};
-  function _(e) {
-    var t = a[e];
+    i = {};
+  function s(e) {
+    var t = i[e];
     if (void 0 !== t) return t.exports;
-    var r = (a[e] = { id: e, loaded: !1, exports: {} });
-    return i[e].call(r.exports, r, r.exports, _), (r.loaded = !0), r.exports;
+    var n = (i[e] = { id: e, loaded: !1, exports: {} });
+    return o[e].call(n.exports, n, n.exports, s), (n.loaded = !0), n.exports;
   }
-  (_.m = i),
-    (_.amdO = {}),
+  (s.m = o),
+    (s.amdO = {}),
     (e = []),
-    (_.O = (t, r, n, o) => {
-      if (!r) {
-        var i = 1 / 0;
-        for (d = 0; d < e.length; d++) {
-          for (var [r, n, o] = e[d], a = !0, s = 0; s < r.length; s++)
-            (!1 & o || i >= o) && Object.keys(_.O).every((e) => _.O[e](r[s]))
-              ? r.splice(s--, 1)
-              : ((a = !1), o < i && (i = o));
-          if (a) {
-            e.splice(d--, 1);
-            var l = n();
-            void 0 !== l && (t = l);
+    (s.O = (t, n, r, a) => {
+      if (!n) {
+        var o = 1 / 0;
+        for (k = 0; k < e.length; k++) {
+          for (var [n, r, a] = e[k], i = !0, _ = 0; _ < n.length; _++)
+            (!1 & a || o >= a) && Object.keys(s.O).every((e) => s.O[e](n[_]))
+              ? n.splice(_--, 1)
+              : ((i = !1), a < o && (o = a));
+          if (i) {
+            e.splice(k--, 1);
+            var E = r();
+            void 0 !== E && (t = E);
           }
         }
         return t;
       }
-      o = o || 0;
-      for (var d = e.length; d > 0 && e[d - 1][2] > o; d--) e[d] = e[d - 1];
-      e[d] = [r, n, o];
+      a = a || 0;
+      for (var k = e.length; k > 0 && e[k - 1][2] > a; k--) e[k] = e[k - 1];
+      e[k] = [n, r, a];
     }),
-    (_.n = (e) => {
+    (s.n = (e) => {
       var t = e && e.__esModule ? () => e.default : () => e;
-      return _.d(t, { a: t }), t;
+      return s.d(t, { a: t }), t;
     }),
-    (r = Object.getPrototypeOf
+    (n = Object.getPrototypeOf
       ? (e) => Object.getPrototypeOf(e)
       : (e) => e.__proto__),
-    (_.t = function (e, n) {
-      if ((1 & n && (e = this(e)), 8 & n)) return e;
+    (s.t = function (e, r) {
+      if ((1 & r && (e = this(e)), 8 & r)) return e;
       if ("object" == typeof e && e) {
-        if (4 & n && e.__esModule) return e;
-        if (16 & n && "function" == typeof e.then) return e;
+        if (4 & r && e.__esModule) return e;
+        if (16 & r && "function" == typeof e.then) return e;
       }
-      var o = Object.create(null);
-      _.r(o);
-      var i = {};
-      t = t || [null, r({}), r([]), r(r)];
-      for (var a = 2 & n && e; "object" == typeof a && !~t.indexOf(a); a = r(a))
-        Object.getOwnPropertyNames(a).forEach((t) => (i[t] = () => e[t]));
-      return (i.default = () => e), _.d(o, i), o;
+      var a = Object.create(null);
+      s.r(a);
+      var o = {};
+      t = t || [null, n({}), n([]), n(n)];
+      for (var i = 2 & r && e; "object" == typeof i && !~t.indexOf(i); i = n(i))
+        Object.getOwnPropertyNames(i).forEach((t) => (o[t] = () => e[t]));
+      return (o.default = () => e), s.d(a, o), a;
     }),
-    (_.d = (e, t) => {
-      for (var r in t)
-        _.o(t, r) &&
-          !_.o(e, r) &&
-          Object.defineProperty(e, r, { enumerable: !0, get: t[r] });
+    (s.d = (e, t) => {
+      for (var n in t)
+        s.o(t, n) &&
+          !s.o(e, n) &&
+          Object.defineProperty(e, n, { enumerable: !0, get: t[n] });
     }),
-    (_.f = {}),
-    (_.e = (e) =>
-      Promise.all(Object.keys(_.f).reduce((t, r) => (_.f[r](e, t), t), []))),
-    (_.u = (e) =>
+    (s.f = {}),
+    (s.e = (e) =>
+      Promise.all(Object.keys(s.f).reduce((t, n) => (s.f[n](e, t), t), []))),
+    (s.u = (e) =>
       "javascript/webui/" +
       {
         699: "friendsui_polish-json",
@@ -3147,70 +3173,70 @@ var CLSTAMP = "8360360";
       ".js?contenthash=" +
       {
         699: "e520ea8eb741214a85ed",
-        1162: "82db8a6fa31b345b3898",
-        1313: "e16d47fdc3aaad8ee8f7",
-        1471: "e491f179032daccddabc",
+        1162: "6b9d257947f030eab7c7",
+        1313: "0607cfe66abbaf93c1f3",
+        1471: "8a7c96aba4149abffa26",
         1635: "327b0ab06e9918b8ba12",
         2029: "83a760c7c563af7ff575",
         2431: "3f330a391b919f3bb87d",
-        2443: "8cc74ae666940c491f44",
-        2537: "905c01920881ca4b4532",
+        2443: "da53484535651a0641bb",
+        2537: "6786545a641dfefd8a69",
         2822: "1930acba561078a18a98",
-        2844: "e7219b6fce836165404d",
+        2844: "9c9665c35e4c7c622146",
         2862: "919b0f8467aa4d0dd8af",
         2913: "9caa9f9765f6b6fbfe0d",
-        3112: "b5b888dc22c5cc06a446",
+        3112: "b98c74fe94ab5dda2673",
         3140: "67232a94c8f87bf86abf",
         3182: "626a386cb26ef9f94014",
-        3252: "561f32bf36da208ad029",
+        3252: "97d092215e32695bc1fa",
         3471: "3d722f5b01571f009d05",
         3500: "97f103206f5759b7ea62",
-        3557: "81134e061dc816916206",
-        4108: "00998842cc3a05581cd6",
-        4189: "a754f2f1cc186d492e37",
+        3557: "5385fb8656b68b921d84",
+        4108: "f80b22e9f99eb783db3c",
+        4189: "43f9b970b4a30d1335a4",
         4264: "3f7370d48d57123da3f4",
-        4297: "b61df60975ee746e1568",
-        4448: "4af230686cd895cba71c",
+        4297: "09bd7fbf2b64867efbd3",
+        4448: "dc34ef362bd30950e27e",
         4596: "b64463f287913ed1b4f2",
         4716: "0d03a3ed1cc805af2770",
-        4823: "5fb362253046671512ed",
-        4964: "d9b4d469d215561df6aa",
+        4823: "fb53692e93005bbfc5d4",
+        4964: "c07c274cb1a8e733ed36",
         4989: "7080a6ac094d0c96366d",
-        5438: "9312afe678bacf017db3",
-        5625: "bce11947990e9f9f5733",
-        5632: "28c76b782d6cb20a5de6",
+        5438: "9b0f9d6533742073b391",
+        5625: "6f9afbc04a1dfb8ee527",
+        5632: "04842b46cd85e9d1fb8a",
         5802: "debc3461bbf286c8c1df",
-        5849: "0d0d3d2d5575226e98fd",
-        5925: "da1e26cad092764f1611",
-        5933: "e4ca1f20abab6678f2a3",
-        5948: "679012dc61c5959dda0d",
-        6007: "2abb3eaaffc45cf8ff4f",
-        6492: "61d87cf10dd87906a0f3",
-        6542: "4dd6a1e4ca34b70c5235",
+        5849: "f1e0c5293315f4c16c9d",
+        5925: "525944ee6d48e4ab12b0",
+        5933: "e9e4a470549f2744df2e",
+        5948: "0087322fbfc9c4df2f81",
+        6007: "2faee200b6b2b87dc054",
+        6492: "cd50c4e97972cbb0e66d",
+        6542: "7bd6746dc2bdc4308953",
         6646: "6424317e3f55a734bbf0",
         6727: "5397cc56d81a1b5aed19",
         6986: "c54148885851b5b1f61d",
         6992: "3b30a7e01544619acb07",
         7340: "dd947cee9875884305e1",
         7575: "3e33390f518ecc16c2e0",
-        7602: "651517ffe5a5c77e34fa",
+        7602: "f3459fc574c7658aba74",
         7651: "fcccbe2e0a52e2070a56",
         7706: "415e651d68936074233f",
-        7781: "c0f88464fa8100ddc59a",
-        7975: "2b87970f45b9a71a48af",
+        7781: "efe92329842a6567ea93",
+        7975: "ad0e1aacc14c2bf943a4",
         8247: "f25e033938692b5767ad",
-        8385: "9b1f94b9a8b29746da1b",
+        8385: "44c8b59d7c4605ffabfe",
         8518: "4a0aecf8c58aa429e523",
-        8754: "f4ec2c4f2095a90d2108",
+        8754: "0af553eb2a55d6355e3a",
         8815: "1f786d86346bdbc68758",
-        9062: "35c202ce7cf76921d537",
+        9062: "59c8f3e56b4ac988adf7",
         9263: "0faea3edd3efa407123d",
-        9753: "de516fa11c47e8c783eb",
+        9753: "23325cfdf00806f311ba",
         9775: "660b7785225eab50cda3",
         9818: "f7b856f8c101aa9cae33",
       }[e]),
-    (_.miniCssF = (e) => {}),
-    (_.g = (function () {
+    (s.miniCssF = (e) => {}),
+    (s.g = (function () {
       if ("object" == typeof globalThis) return globalThis;
       try {
         return this || new Function("return this")();
@@ -3218,71 +3244,71 @@ var CLSTAMP = "8360360";
         if ("object" == typeof window) return window;
       }
     })()),
-    (_.o = (e, t) => Object.prototype.hasOwnProperty.call(e, t)),
-    (n = {}),
-    (o = "@steam/friendsui:"),
-    (_.l = (e, t, r, i) => {
-      if (n[e]) n[e].push(t);
+    (s.o = (e, t) => Object.prototype.hasOwnProperty.call(e, t)),
+    (r = {}),
+    (a = "@steam/friendsui:"),
+    (s.l = (e, t, n, o) => {
+      if (r[e]) r[e].push(t);
       else {
-        var a, s;
-        if (void 0 !== r)
+        var i, _;
+        if (void 0 !== n)
           for (
-            var l = document.getElementsByTagName("script"), d = 0;
-            d < l.length;
-            d++
+            var E = document.getElementsByTagName("script"), k = 0;
+            k < E.length;
+            k++
           ) {
-            var c = l[d];
+            var l = E[k];
             if (
-              c.getAttribute("src") == e ||
-              c.getAttribute("data-webpack") == o + r
+              l.getAttribute("src") == e ||
+              l.getAttribute("data-webpack") == a + n
             ) {
-              a = c;
+              i = l;
               break;
             }
           }
-        a ||
-          ((s = !0),
-          ((a = document.createElement("script")).charset = "utf-8"),
-          (a.timeout = 120),
-          _.nc && a.setAttribute("nonce", _.nc),
-          a.setAttribute("data-webpack", o + r),
-          (a.src = e)),
-          (n[e] = [t]);
-        var u = (t, r) => {
-            (a.onerror = a.onload = null), clearTimeout(p);
-            var o = n[e];
+        i ||
+          ((_ = !0),
+          ((i = document.createElement("script")).charset = "utf-8"),
+          (i.timeout = 120),
+          s.nc && i.setAttribute("nonce", s.nc),
+          i.setAttribute("data-webpack", a + n),
+          (i.src = e)),
+          (r[e] = [t]);
+        var c = (t, n) => {
+            (i.onerror = i.onload = null), clearTimeout(u);
+            var a = r[e];
             if (
-              (delete n[e],
-              a.parentNode && a.parentNode.removeChild(a),
-              o && o.forEach((e) => e(r)),
+              (delete r[e],
+              i.parentNode && i.parentNode.removeChild(i),
+              a && a.forEach((e) => e(n)),
               t)
             )
-              return t(r);
+              return t(n);
           },
-          p = setTimeout(
-            u.bind(null, void 0, { type: "timeout", target: a }),
+          u = setTimeout(
+            c.bind(null, void 0, { type: "timeout", target: i }),
             12e4,
           );
-        (a.onerror = u.bind(null, a.onerror)),
-          (a.onload = u.bind(null, a.onload)),
-          s && document.head.appendChild(a);
+        (i.onerror = c.bind(null, i.onerror)),
+          (i.onload = c.bind(null, i.onload)),
+          _ && document.head.appendChild(i);
       }
     }),
-    (_.r = (e) => {
+    (s.r = (e) => {
       "undefined" != typeof Symbol &&
         Symbol.toStringTag &&
         Object.defineProperty(e, Symbol.toStringTag, { value: "Module" }),
         Object.defineProperty(e, "__esModule", { value: !0 });
     }),
-    (_.nmd = (e) => ((e.paths = []), e.children || (e.children = []), e)),
-    (_.j = 1856),
+    (s.nmd = (e) => ((e.paths = []), e.children || (e.children = []), e)),
+    (s.j = 1856),
     (() => {
       var e;
-      _.g.importScripts && (e = _.g.location + "");
-      var t = _.g.document;
+      s.g.importScripts && (e = s.g.location + "");
+      var t = s.g.document;
       if (!e && t && (t.currentScript && (e = t.currentScript.src), !e)) {
-        var r = t.getElementsByTagName("script");
-        r.length && (e = r[r.length - 1].src);
+        var n = t.getElementsByTagName("script");
+        n.length && (e = n[n.length - 1].src);
       }
       if (!e)
         throw new Error(
@@ -3292,31 +3318,31 @@ var CLSTAMP = "8360360";
         .replace(/#.*$/, "")
         .replace(/\?.*$/, "")
         .replace(/\/[^\/]+$/, "/")),
-        (_.p = e + "../../");
+        (s.p = e + "../../");
     })(),
     (() => {
       var e = { 1856: 0 };
-      (_.f.j = (t, r) => {
-        var n = _.o(e, t) ? e[t] : void 0;
-        if (0 !== n)
-          if (n) r.push(n[2]);
+      (s.f.j = (t, n) => {
+        var r = s.o(e, t) ? e[t] : void 0;
+        if (0 !== r)
+          if (r) n.push(r[2]);
           else {
-            var o = new Promise((r, o) => (n = e[t] = [r, o]));
-            r.push((n[2] = o));
-            var i = _.p + _.u(t),
-              a = new Error();
-            _.l(
-              i,
-              (r) => {
-                if (_.o(e, t) && (0 !== (n = e[t]) && (e[t] = void 0), n)) {
-                  var o = r && ("load" === r.type ? "missing" : r.type),
-                    i = r && r.target && r.target.src;
-                  (a.message =
-                    "Loading chunk " + t + " failed.\n(" + o + ": " + i + ")"),
-                    (a.name = "ChunkLoadError"),
-                    (a.type = o),
-                    (a.request = i),
-                    n[1](a);
+            var a = new Promise((n, a) => (r = e[t] = [n, a]));
+            n.push((r[2] = a));
+            var o = s.p + s.u(t),
+              i = new Error();
+            s.l(
+              o,
+              (n) => {
+                if (s.o(e, t) && (0 !== (r = e[t]) && (e[t] = void 0), r)) {
+                  var a = n && ("load" === n.type ? "missing" : n.type),
+                    o = n && n.target && n.target.src;
+                  (i.message =
+                    "Loading chunk " + t + " failed.\n(" + a + ": " + o + ")"),
+                    (i.name = "ChunkLoadError"),
+                    (i.type = a),
+                    (i.request = o),
+                    r[1](i);
                 }
               },
               "chunk-" + t,
@@ -3324,24 +3350,24 @@ var CLSTAMP = "8360360";
             );
           }
       }),
-        (_.O.j = (t) => 0 === e[t]);
-      var t = (t, r) => {
-          var n,
-            o,
-            [i, a, s] = r,
-            l = 0;
-          if (i.some((t) => 0 !== e[t])) {
-            for (n in a) _.o(a, n) && (_.m[n] = a[n]);
-            if (s) var d = s(_);
+        (s.O.j = (t) => 0 === e[t]);
+      var t = (t, n) => {
+          var r,
+            a,
+            [o, i, _] = n,
+            E = 0;
+          if (o.some((t) => 0 !== e[t])) {
+            for (r in i) s.o(i, r) && (s.m[r] = i[r]);
+            if (_) var k = _(s);
           }
-          for (t && t(r); l < i.length; l++)
-            (o = i[l]), _.o(e, o) && e[o] && e[o][0](), (e[o] = 0);
-          return _.O(d);
+          for (t && t(n); E < o.length; E++)
+            (a = o[E]), s.o(e, a) && e[a] && e[a][0](), (e[a] = 0);
+          return s.O(k);
         },
-        r = (self.webpackChunk_steam_friendsui =
+        n = (self.webpackChunk_steam_friendsui =
           self.webpackChunk_steam_friendsui || []);
-      r.forEach(t.bind(null, 0)), (r.push = t.bind(null, r.push.bind(r)));
+      n.forEach(t.bind(null, 0)), (n.push = t.bind(null, n.push.bind(n)));
     })();
-  var s = _.O(void 0, [5968], () => _(88593));
-  s = _.O(s);
+  var _ = s.O(void 0, [5968], () => s(18513));
+  _ = s.O(_);
 })();

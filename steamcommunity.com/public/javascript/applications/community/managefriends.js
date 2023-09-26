@@ -174,7 +174,7 @@
     },
     78307: (e, t, n) => {
       "use strict";
-      n.d(t, { aX: () => C, gu: () => v });
+      n.d(t, { aX: () => E, gu: () => S });
       var r = n(33940),
         s = n(89526),
         a = n(4306),
@@ -188,9 +188,11 @@
         _ = n(47165),
         p = n(60161),
         f = n(24448),
-        g = n(701),
-        h = n(44026);
-      class v extends s.Component {
+        g = n(42735),
+        h = n(701),
+        v = n(77435),
+        C = n(44026);
+      class S extends s.Component {
         constructor() {
           super(...arguments),
             (this.state = {
@@ -250,7 +252,7 @@
                 m.De.COMMUNITY_BASE_URL + "actions/AddFriendAjax",
                 t,
               );
-              return e && e.data && 1 == e.data.success;
+              return e && e.data && e.data.success == g.s.k_EResultOK;
             } catch (e) {
               return !1;
             }
@@ -260,7 +262,7 @@
           this.setState({ input_search: e.target.value });
         }
         OnSearchKeyDown(e) {
-          13 === e.keyCode && this.OnSearchSubmit();
+          e.keyCode === v.J.Enter && this.OnSearchSubmit();
         }
         OnSearchSubmit() {
           window.open(
@@ -310,7 +312,7 @@
                 { className: u().Body },
                 (0, l.Xx)("#ManageFriends_EnterFriendCode"),
               ),
-              s.createElement(C, {
+              s.createElement(E, {
                 onButtonClick: this.OnAddFriend,
                 buttonText: (0, l.Xx)("#ManageFriends_SendInvite"),
                 bDisableForSelf: !0,
@@ -402,20 +404,20 @@
                     },
                     onClick: this.OnSearchSubmit,
                   },
-                  s.createElement(g.YtI, null),
+                  s.createElement(h.YtI, null),
                 ),
               ),
             ),
           );
         }
       }
-      (0, r.gn)([a.ak], v.prototype, "OnCreateInviteLink", null),
-        (0, r.gn)([a.ak], v.prototype, "OnCopy", null),
-        (0, r.gn)([a.ak], v.prototype, "OnAddFriend", null),
-        (0, r.gn)([a.ak], v.prototype, "OnSearchChange", null),
-        (0, r.gn)([a.ak], v.prototype, "OnSearchKeyDown", null),
-        (0, r.gn)([a.ak], v.prototype, "OnSearchSubmit", null);
-      class C extends s.Component {
+      (0, r.gn)([a.ak], S.prototype, "OnCreateInviteLink", null),
+        (0, r.gn)([a.ak], S.prototype, "OnCopy", null),
+        (0, r.gn)([a.ak], S.prototype, "OnAddFriend", null),
+        (0, r.gn)([a.ak], S.prototype, "OnSearchChange", null),
+        (0, r.gn)([a.ak], S.prototype, "OnSearchKeyDown", null),
+        (0, r.gn)([a.ak], S.prototype, "OnSearchSubmit", null);
+      class E extends s.Component {
         constructor() {
           super(...arguments),
             (this.state = {
@@ -488,7 +490,7 @@
               ),
             }),
             s.createElement(
-              S,
+              I,
               {
                 searchResult: this.state.searchResult,
                 invite_status: this.state.invite_status,
@@ -508,10 +510,10 @@
           );
         }
       }
-      (0, r.gn)([a.ak], C.prototype, "OnFriendCodeChange", null),
-        (0, r.gn)([a.ak], C.prototype, "LoadProfile", null),
-        (0, r.gn)([a.ak], C.prototype, "OnActionClick", null);
-      const S = (e) => {
+      (0, r.gn)([a.ak], E.prototype, "OnFriendCodeChange", null),
+        (0, r.gn)([a.ak], E.prototype, "LoadProfile", null),
+        (0, r.gn)([a.ak], E.prototype, "OnActionClick", null);
+      const I = (e) => {
         const {
             searchResult: t,
             invite_status: n,
@@ -546,7 +548,7 @@
                     "div",
                     { className: u().ProfileLink },
                     s.createElement(
-                      h.IS,
+                      C.IS,
                       {
                         target: i ? void 0 : "_blank",
                         href: m.De.COMMUNITY_BASE_URL + "profiles/" + t.steamid,
@@ -581,7 +583,7 @@
                     "div",
                     null,
                     s.createElement(
-                      h.IS,
+                      C.IS,
                       {
                         target: i ? void 0 : "_blank",
                         href:
@@ -622,13 +624,17 @@
     },
     23217: (e, t, n) => {
       "use strict";
-      n.d(t, { l: () => i });
-      var r = n(52868),
-        s = n.n(r),
-        a = n(54856);
-      function i(e) {
-        if (s().isCancel(e))
-          return { strErrorMsg: "Action Cancelled:" + e, errorCode: 52 };
+      n.d(t, { l: () => o });
+      var r = n(42735),
+        s = n(52868),
+        a = n.n(s),
+        i = n(67328);
+      function o(e) {
+        if (a().isCancel(e))
+          return {
+            strErrorMsg: "Action Cancelled:" + e,
+            errorCode: r.s.k_EResultCancelled,
+          };
         if (
           void 0 !== e.response &&
           e.response.data &&
@@ -680,7 +686,7 @@
               console.warn(e),
               console.groupEnd();
           else {
-            if ("object" == typeof e && e instanceof a.gA)
+            if ("object" == typeof e && e instanceof i.gA)
               return {
                 strErrorMsg: "" + e.GetEResult(),
                 errorCode: e.GetEResult(),
@@ -691,9 +697,12 @@
         return "object" == typeof e && "status" in e
           ? {
               strErrorMsg: "Unknown Error: " + e + "\nStatus Code:" + e.status,
-              errorCode: 2,
+              errorCode: r.s.k_EResultFail,
             }
-          : { strErrorMsg: "Unknown Error: " + e, errorCode: 2 };
+          : {
+              strErrorMsg: "Unknown Error: " + e,
+              errorCode: r.s.k_EResultFail,
+            };
       }
     },
     16258: (e, t, n) => {
