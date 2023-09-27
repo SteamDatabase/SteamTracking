@@ -1,3 +1,7 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
 .throbber_LoadingWrapper_chtlD {
   display: flex;
   flex-direction: column;
@@ -1731,7 +1735,6 @@ button.gamepaddialog_Button_32WBl.DialogButton.gamepaddialog_NoMinWidth_1Gs-J {
 button.gamepaddialog_Button_32WBl.DialogButton,
 button.gamepaddialog_Button_32WBl.DialogButton:enabled,
 button.gamepaddialog_Button_32WBl.DialogButton:active,
-button.gamepaddialog_Button_32WBl.DialogButton:hover,
 button.gamepaddialog_Button_32WBl.DialogButton:enabled:active:hover {
   color: #dcdedf;
   font-size: 16px;
@@ -1748,8 +1751,6 @@ button.gamepaddialog_Button_32WBl.DialogButton:enabled,
 button.gamepaddialog_Button_32WBl.DialogButton:enabled.Primary,
 button.gamepaddialog_Button_32WBl.DialogButton:active,
 button.gamepaddialog_Button_32WBl.DialogButton:active.Primary,
-button.gamepaddialog_Button_32WBl.DialogButton:hover,
-button.gamepaddialog_Button_32WBl.DialogButton:hover.Primary,
 button.gamepaddialog_Button_32WBl.DialogButton:enabled:active:hover,
 button.gamepaddialog_Button_32WBl.DialogButton:enabled:active:hover.Primary {
   background: #23262e;
@@ -1757,7 +1758,6 @@ button.gamepaddialog_Button_32WBl.DialogButton:enabled:active:hover.Primary {
 button.gamepaddialog_Button_32WBl.DialogButton.BarButton,
 button.gamepaddialog_Button_32WBl.DialogButton:enabled.BarButton,
 button.gamepaddialog_Button_32WBl.DialogButton:active.BarButton,
-button.gamepaddialog_Button_32WBl.DialogButton:hover.BarButton,
 button.gamepaddialog_Button_32WBl.DialogButton:enabled:active:hover.BarButton {
   background: rgba(0, 0, 0, 0.1019607843);
   color: #fff;
@@ -1765,9 +1765,21 @@ button.gamepaddialog_Button_32WBl.DialogButton:enabled:active:hover.BarButton {
 button.gamepaddialog_Button_32WBl.DialogButton.gamepaddialog_ActiveAndUnfocused_vSuyp,
 button.gamepaddialog_Button_32WBl.DialogButton:enabled.gamepaddialog_ActiveAndUnfocused_vSuyp,
 button.gamepaddialog_Button_32WBl.DialogButton:active.gamepaddialog_ActiveAndUnfocused_vSuyp,
-button.gamepaddialog_Button_32WBl.DialogButton:hover.gamepaddialog_ActiveAndUnfocused_vSuyp,
 button.gamepaddialog_Button_32WBl.DialogButton:enabled:active:hover.gamepaddialog_ActiveAndUnfocused_vSuyp {
   background: #0e141b;
+}
+button.gamepaddialog_Button_32WBl.DialogButton:hover,
+button.gamepaddialog_Button_32WBl.DialogButton:enabled:hover,
+button.gamepaddialog_Button_32WBl.DialogButton:active:hover,
+button.gamepaddialog_Button_32WBl.DialogButton:enabled:active:hover:hover {
+  background: #3d4450;
+  transition: background-color 150ms ease-in;
+}
+button.gamepaddialog_Button_32WBl.DialogButton.Primary:hover,
+button.gamepaddialog_Button_32WBl.DialogButton:enabled.Primary:hover,
+button.gamepaddialog_Button_32WBl.DialogButton:active.Primary:hover,
+button.gamepaddialog_Button_32WBl.DialogButton:enabled:active:hover.Primary:hover {
+  background: rgba(26, 160, 255, 0.3254901961);
 }
 button.gamepaddialog_Button_32WBl.DialogButton.gpfocus,
 button.gamepaddialog_Button_32WBl.DialogButton:active,
@@ -1775,8 +1787,6 @@ button.gamepaddialog_Button_32WBl.DialogButton:enabled.gpfocus,
 button.gamepaddialog_Button_32WBl.DialogButton:enabled:active,
 button.gamepaddialog_Button_32WBl.DialogButton:active.gpfocus,
 button.gamepaddialog_Button_32WBl.DialogButton:active:active,
-button.gamepaddialog_Button_32WBl.DialogButton:hover.gpfocus,
-button.gamepaddialog_Button_32WBl.DialogButton:hover:active,
 button.gamepaddialog_Button_32WBl.DialogButton:enabled:active:hover.gpfocus,
 button.gamepaddialog_Button_32WBl.DialogButton:enabled:active:hover:active {
   background: #fff;
@@ -1789,8 +1799,6 @@ button.gamepaddialog_Button_32WBl.DialogButton:enabled.gpfocus.Primary,
 button.gamepaddialog_Button_32WBl.DialogButton:enabled:active.Primary,
 button.gamepaddialog_Button_32WBl.DialogButton:active.gpfocus.Primary,
 button.gamepaddialog_Button_32WBl.DialogButton:active:active.Primary,
-button.gamepaddialog_Button_32WBl.DialogButton:hover.gpfocus.Primary,
-button.gamepaddialog_Button_32WBl.DialogButton:hover:active.Primary,
 button.gamepaddialog_Button_32WBl.DialogButton:enabled:active:hover.gpfocus.Primary,
 button.gamepaddialog_Button_32WBl.DialogButton:enabled:active:hover:active.Primary {
   background: #1a9fff;
@@ -1802,8 +1810,6 @@ button.gamepaddialog_Button_32WBl.DialogButton:enabled.gpfocus.Destructive,
 button.gamepaddialog_Button_32WBl.DialogButton:enabled:active.Destructive,
 button.gamepaddialog_Button_32WBl.DialogButton:active.gpfocus.Destructive,
 button.gamepaddialog_Button_32WBl.DialogButton:active:active.Destructive,
-button.gamepaddialog_Button_32WBl.DialogButton:hover.gpfocus.Destructive,
-button.gamepaddialog_Button_32WBl.DialogButton:hover:active.Destructive,
 button.gamepaddialog_Button_32WBl.DialogButton:enabled:active:hover.gpfocus.Destructive,
 button.gamepaddialog_Button_32WBl.DialogButton:enabled:active:hover:active.Destructive {
   background: #de3618;
@@ -1815,8 +1821,6 @@ button.gamepaddialog_Button_32WBl.DialogButton:enabled.gpfocus.BarButton,
 button.gamepaddialog_Button_32WBl.DialogButton:enabled:active.BarButton,
 button.gamepaddialog_Button_32WBl.DialogButton:active.gpfocus.BarButton,
 button.gamepaddialog_Button_32WBl.DialogButton:active:active.BarButton,
-button.gamepaddialog_Button_32WBl.DialogButton:hover.gpfocus.BarButton,
-button.gamepaddialog_Button_32WBl.DialogButton:hover:active.BarButton,
 button.gamepaddialog_Button_32WBl.DialogButton:enabled:active:hover.gpfocus.BarButton,
 button.gamepaddialog_Button_32WBl.DialogButton:enabled:active:hover:active.BarButton {
   background: #fff;
@@ -1829,8 +1833,6 @@ button.gamepaddialog_Button_32WBl.DialogButton:enabled:active:hover:active.BarBu
 .gamepaddialog_Field_BBGW4
   button.gamepaddialog_Button_32WBl.DialogButton:active.gpfocus,
 .gamepaddialog_Field_BBGW4
-  button.gamepaddialog_Button_32WBl.DialogButton:hover.gpfocus,
-.gamepaddialog_Field_BBGW4
   button.gamepaddialog_Button_32WBl.DialogButton:enabled:active:hover.gpfocus {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -1840,8 +1842,6 @@ button.gamepaddialog_Button_32WBl.DialogButton:enabled.Disabled,
 button.gamepaddialog_Button_32WBl.DialogButton:enabled[disabled],
 button.gamepaddialog_Button_32WBl.DialogButton:active.Disabled,
 button.gamepaddialog_Button_32WBl.DialogButton:active[disabled],
-button.gamepaddialog_Button_32WBl.DialogButton:hover.Disabled,
-button.gamepaddialog_Button_32WBl.DialogButton:hover[disabled],
 button.gamepaddialog_Button_32WBl.DialogButton:enabled:active:hover.Disabled,
 button.gamepaddialog_Button_32WBl.DialogButton:enabled:active:hover[disabled] {
   opacity: 0.4;
@@ -1852,7 +1852,6 @@ button.gamepaddialog_Button_32WBl.DialogButton:enabled:active:hover[disabled] {
 button.gamepaddialog_Button_32WBl.DialogButton:before,
 button.gamepaddialog_Button_32WBl.DialogButton:enabled:before,
 button.gamepaddialog_Button_32WBl.DialogButton:active:before,
-button.gamepaddialog_Button_32WBl.DialogButton:hover:before,
 button.gamepaddialog_Button_32WBl.DialogButton:enabled:active:hover:before {
   content: none;
 }
@@ -2093,7 +2092,9 @@ button.gamepaddialog_Button_32WBl.DialogButton:enabled:active:hover:before {
   .gamepaddialog_FieldLabel_s3mAa {
   flex-shrink: 0;
 }
-.gamepaddialog_Field_BBGW4.gamepaddialog_ChildrenWidthGrow_2ulAJ
+.gamepaddialog_Field_BBGW4:not(
+    .gamepaddialog_WithChildrenBelow_3swGA
+  ).gamepaddialog_ChildrenWidthGrow_2ulAJ
   .gamepaddialog_FieldLabel_s3mAa {
   flex-grow: 0;
 }
@@ -2233,6 +2234,8 @@ button.gamepaddialog_Button_32WBl.DialogButton:enabled:active:hover:before {
   height: 22px;
   position: relative;
   margin-right: 4px;
+  border-radius: 16px;
+  transition: box-shadow 50ms ease-out;
 }
 .gamepaddialog_Toggle_3JiNt.gpfocus {
   outline: none;
@@ -2246,10 +2249,16 @@ button.gamepaddialog_Button_32WBl.DialogButton:enabled:active:hover:before {
   height: 132%;
   border-radius: 16px;
   background-color: #8b929a;
+  opacity: 1;
   z-index: -1;
 }
 .gamepaddialog_Toggle_3JiNt:not(.gamepaddialog_Disabled_kT2gh) {
   cursor: pointer;
+}
+.gamepaddialog_Toggle_3JiNt:not(.gamepaddialog_Disabled_kT2gh):hover {
+  box-shadow: 0px 0px 0px 4px rgba(255, 255, 255, 0.3);
+  border-radius: 16px;
+  transition: box-shadow 100ms ease-in;
 }
 .gamepaddialog_ToggleRail_2QwKd {
   position: absolute;
@@ -2438,6 +2447,62 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Ozw- svg {
 .gamepadinput_PinDigit_1OYU3 {
   text-align: center;
 }
+@keyframes gamepadslider_ItemFocusAnim-darkerGrey-nocolor_EAg0h {
+  from {
+    background: #3d4450;
+  }
+  to {
+    background: #23262e;
+  }
+}
+@keyframes gamepadslider_ItemFocusAnim-darkerGrey_em86h {
+  from {
+    background: #3d4450;
+    color: #8b929a;
+  }
+  to {
+    background: #23262e;
+    color: #fff;
+  }
+}
+@keyframes gamepadslider_ItemFocusAnim-darkGrey_1FSOC {
+  from {
+    background: #67707b;
+    color: #8b929a;
+  }
+  to {
+    background: #3d4450;
+    color: #fff;
+  }
+}
+@keyframes gamepadslider_ItemFocusAnim-grey_3vRFe {
+  from {
+    background: #8b929a;
+    color: #fff;
+  }
+  to {
+    background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes gamepadslider_ItemFocusAnimBorder-darkGrey_yEb0D {
+  from {
+    border-color: #67707b;
+  }
+  to {
+    border-color: #3d4450;
+  }
+}
+@keyframes gamepadslider_ItemFocusAnim-green_2j5Q_ {
+  from {
+    background: #c9ffc9;
+    color: #8b929a;
+  }
+  to {
+    background: #59bf40;
+    color: #fff;
+  }
+}
 .gamepadslider_SliderControlPanelGroup_2FiKP {
   flex-grow: 1;
 }
@@ -2457,9 +2522,14 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Ozw- svg {
   display: flex;
   height: 24px;
   min-width: 100px;
+  transition: filter 50ms ease-in;
 }
 .gamepadslider_SliderControl_3RYrN:not(.gamepadslider_Disabled_DE-u8) {
   cursor: pointer;
+}
+.gamepadslider_SliderControl_3RYrN:hover .gamepadslider_SliderTrack_2htJF {
+  background: #3d4450;
+  --left-track-color: #00bbff;
 }
 .gamepadslider_SliderTrack_2htJF {
   background: #23262e;
@@ -2473,6 +2543,9 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Ozw- svg {
 }
 .gamepadslider_SliderTrack_2htJF.gamepadslider_SliderHasNotches_1_uHC {
   width: calc(100% - 20px);
+}
+.gamepadslider_SliderTrack_2htJF.gamepadslider_Disabled_DE-u8 {
+  pointer-events: none;
 }
 .gamepadslider_SliderTrack_2htJF::before {
   content: "";
@@ -2499,6 +2572,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Ozw- svg {
 .gamepadslider_SliderControlAndNotches_tyDyU.gamepadslider_Disabled_DE-u8
   .gamepadslider_SliderTrack_2htJF::before {
   background: #67707b;
+  pointer-events: none;
 }
 .gamepadslider_SliderTrackDark_1GcWd {
   background: #000;
@@ -2559,6 +2633,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Ozw- svg {
 .gamepadslider_SliderControlAndNotches_tyDyU.gamepadslider_Disabled_DE-u8
   .gamepadslider_SliderHandle_55Klw {
   background: #8b929a;
+  pointer-events: none;
 }
 .gamepadslider_VerticalLineSliderHandle_102f1 {
   background: rgba(255, 255, 255, 0.3764705882);
@@ -3207,6 +3282,9 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Ozw- svg {
   transform: scale(1.1);
   z-index: 1;
   animation-name: gamepadpagedsettings_ItemFocusAnim-darkGrey_2bogt;
+}
+.gamepadpagedsettings_PagedSettingsDialog_PageListItem_2syih:hover {
+  background-color: #3d4450;
 }
 .gamepadpagedsettings_PageListItem_Icon_1d7b6 {
   height: 20px;
@@ -4521,9 +4599,13 @@ button.Primary.partnereventshared_AddSectionButton_24jC1 {
   color: #06beff;
   font-size: 14px;
 }
+.partnereventshared_HelperTooltip_2hMwT {
+  display: inline-flex;
+}
 .partnereventshared_HelperTooltip_2hMwT > svg {
   width: 16px;
   fill: #aaa;
+  margin-left: 4px;
 }
 .partnereventshared_HelperTooltip_2hMwT > svg:hover {
   fill: #fff;
@@ -16392,6 +16474,16 @@ a {
 .bpcountdownti11_Countdown_JNwKR {
   width: 100%;
   height: 100%;
+  color: #cbb593;
+  background: -webkit-linear-gradient(
+    #ffffff,
+    #cbb593 50%,
+    #948a76 55%,
+    #ffe2b4
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  filter: drop-shadow(0px 8px 8px rgba(0, 0, 0, 0.4));
 }
 * {
   box-sizing: border-box;
@@ -37419,6 +37511,324 @@ a {
   flex-direction: column;
   margin: 8px 0px;
 }
+.dpcroot_DPCHeaderTI2023_rgs4D {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.dpcroot_DPCHeaderTI2023_rgs4D .dpcroot_TI12BannerContainer_3TN1e {
+  width: 100%;
+  height: 100%;
+  max-width: 1600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.dpcroot_DPCHeaderTI2023_rgs4D
+  .dpcroot_TI12BannerContainer_3TN1e
+  .dpcroot_TI12BannerContent_KJLrP {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.dpcroot_DPCHeaderTI2023_rgs4D
+  .dpcroot_TI12BannerContainer_3TN1e
+  .dpcroot_TI12BannerContent_KJLrP
+  .dpcroot_EventPhaseBox_woEv1 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+.dpcroot_DPCHeaderTI2023_rgs4D
+  .dpcroot_TI12BannerContainer_3TN1e
+  .dpcroot_TI12BannerContent_KJLrP
+  .dpcroot_EventPhaseBox_woEv1
+  .dpcroot_EventPhase_1c_im {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.dpcroot_DPCHeaderTI2023_rgs4D
+  .dpcroot_TI12BannerContainer_3TN1e
+  .dpcroot_TI12BannerContent_KJLrP
+  .dpcroot_EventPhaseBox_woEv1
+  .dpcroot_EventPhase_1c_im
+  .dpcroot_EventPhaseTitle_2z9IC {
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+@media (max-width: 1300px) {
+  .dpcroot_DPCHeaderTI2023_rgs4D
+    .dpcroot_TI12BannerContainer_3TN1e
+    .dpcroot_TI12BannerContent_KJLrP
+    .dpcroot_EventPhaseBox_woEv1
+    .dpcroot_EventPhase_1c_im
+    .dpcroot_EventPhaseTitle_2z9IC {
+    display: none;
+  }
+}
+.dpcroot_DPCHeaderTI2023_rgs4D
+  .dpcroot_TI12BannerContainer_3TN1e
+  .dpcroot_TI12BannerContent_KJLrP
+  .dpcroot_EventPhaseBox_woEv1
+  .dpcroot_EventPhase_1c_im
+  .dpcroot_EventPhaseDates_XXWlK {
+  margin-top: 3px;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #cbb593;
+  background: -webkit-linear-gradient(
+    #ffffff,
+    #cbb593 50%,
+    #948a76 55%,
+    #ffe2b4
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+}
+@media (max-width: 1300px) {
+  .dpcroot_DPCHeaderTI2023_rgs4D
+    .dpcroot_TI12BannerContainer_3TN1e
+    .dpcroot_TI12BannerContent_KJLrP
+    .dpcroot_EventPhaseBox_woEv1
+    .dpcroot_EventPhase_1c_im
+    .dpcroot_EventPhaseDates_XXWlK {
+    display: none;
+  }
+}
+.dpcroot_DPCHeaderTI2023_rgs4D
+  .dpcroot_TI12BannerContainer_3TN1e
+  .dpcroot_TI12BannerContent_KJLrP
+  .dpcroot_EventPhaseBox_woEv1
+  .dpcroot_EventPhase_1c_im
+  .dpcroot_EventPhaseDates_XXWlK
+  time {
+  font-size: 24px;
+  font-weight: 800;
+}
+.dpcroot_DPCHeaderTI2023_rgs4D
+  .dpcroot_TI12BannerContainer_3TN1e
+  .dpcroot_TI12BannerContent_KJLrP
+  .dpcroot_EventPhaseBox_woEv1
+  .dpcroot_EventPhase_1c_im
+  .dpcroot_EventPhaseVenue_3VYqo {
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+}
+@media (max-width: 1300px) {
+  .dpcroot_DPCHeaderTI2023_rgs4D
+    .dpcroot_TI12BannerContainer_3TN1e
+    .dpcroot_TI12BannerContent_KJLrP
+    .dpcroot_EventPhaseBox_woEv1
+    .dpcroot_EventPhase_1c_im
+    .dpcroot_EventPhaseVenue_3VYqo {
+    display: none;
+  }
+}
+.dpcroot_DPCHeaderTI2023_rgs4D
+  .dpcroot_TI12BannerContainer_3TN1e
+  .dpcroot_TI12BannerContent_KJLrP
+  .dpcroot_TI12CenterBox_2uLY1 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.dpcroot_DPCHeaderTI2023_rgs4D
+  .dpcroot_TI12BannerContainer_3TN1e
+  .dpcroot_TI12BannerContent_KJLrP
+  .dpcroot_TI12CenterBox_2uLY1
+  .dpcroot_TILogo_3qlYs {
+  width: 460px;
+}
+.dpcroot_DPCHeaderTI2023_rgs4D
+  .dpcroot_TI12BannerContainer_3TN1e
+  .dpcroot_TI12BannerContent_KJLrP
+  .dpcroot_TI12CenterBox_2uLY1
+  .dpcroot_TI12Season_23XvC {
+  margin-top: 20px;
+  font-size: 16px;
+  font-family: "Radiance", sans-serif;
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-align: center;
+  filter: drop-shadow(0px 2px 2px #000);
+}
+.dpcroot_DPCHeaderTI2023_rgs4D
+  .dpcroot_TI12BannerContainer_3TN1e
+  .dpcroot_TI12BannerContent_KJLrP
+  .dpcroot_TI12PrizePoolBox_31f86 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+}
+.dpcroot_DPCHeaderTI2023_rgs4D
+  .dpcroot_TI12BannerContainer_3TN1e
+  .dpcroot_TI12BannerContent_KJLrP
+  .dpcroot_TI12PrizePoolBox_31f86
+  .dpcroot_PrizePoolTitle_JYJRh {
+  margin-right: 120px;
+  margin-left: 150px;
+  font-family: "Radiance", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  text-align: left;
+  filter: drop-shadow(0px 2px 2px #000);
+}
+@media (max-width: 1300px) {
+  .dpcroot_DPCHeaderTI2023_rgs4D
+    .dpcroot_TI12BannerContainer_3TN1e
+    .dpcroot_TI12BannerContent_KJLrP
+    .dpcroot_TI12PrizePoolBox_31f86
+    .dpcroot_PrizePoolTitle_JYJRh {
+    display: none;
+  }
+}
+.dpcroot_DPCHeaderTI2023_rgs4D
+  .dpcroot_TI12BannerContainer_3TN1e
+  .dpcroot_TI12BannerContent_KJLrP
+  .dpcroot_TI12PrizePoolBox_31f86
+  .dpcroot_PrizePoolValue_2SztN {
+  margin-right: 120px;
+  margin-left: 150px;
+  margin-top: 3px;
+  font-family: "Reaver", serif;
+  font-size: 45px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: left;
+  filter: drop-shadow(0px 0px 4px #e1261c);
+  background: -webkit-linear-gradient(#ebcf87 10%, #ea6953 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+}
+@media (max-width: 1300px) {
+  .dpcroot_DPCHeaderTI2023_rgs4D
+    .dpcroot_TI12BannerContainer_3TN1e
+    .dpcroot_TI12BannerContent_KJLrP
+    .dpcroot_TI12PrizePoolBox_31f86
+    .dpcroot_PrizePoolValue_2SztN {
+    display: none;
+  }
+}
+.dpcroot_DPCHeaderTI2023_rgs4D
+  .dpcroot_TI12BannerContainer_3TN1e
+  .dpcroot_TI12BannerContent_KJLrP
+  .dpcroot_TI12PrizePoolBox_31f86
+  .dpcroot_PrizePoolDesc_3P5rQ {
+  margin-right: 120px;
+  margin-left: 150px;
+  margin-top: 15px;
+  color: #b9c0c2;
+  font-family: "Radiance", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  filter: drop-shadow(0px 3px 3px #000);
+}
+@media (max-width: 1300px) {
+  .dpcroot_DPCHeaderTI2023_rgs4D
+    .dpcroot_TI12BannerContainer_3TN1e
+    .dpcroot_TI12BannerContent_KJLrP
+    .dpcroot_TI12PrizePoolBox_31f86
+    .dpcroot_PrizePoolDesc_3P5rQ {
+    display: none;
+  }
+}
+.dpcroot_DPCHeaderTI2023_rgs4D
+  .dpcroot_TI12BannerContainer_3TN1e
+  .dpcroot_TI12BannerContent_KJLrP
+  .dpcroot_TI12PrizePoolBox_31f86
+  .dpcroot_EventResultsTitle_1ReEx {
+  margin-left: 150px;
+  margin-top: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Radiance", sans-serif;
+  color: #fff;
+  letter-spacing: 1px;
+  text-align: left;
+  filter: drop-shadow(0px 3px 3px #000);
+}
+@media (max-width: 1300px) {
+  .dpcroot_DPCHeaderTI2023_rgs4D
+    .dpcroot_TI12BannerContainer_3TN1e
+    .dpcroot_TI12BannerContent_KJLrP
+    .dpcroot_TI12PrizePoolBox_31f86
+    .dpcroot_EventResultsTitle_1ReEx {
+    display: none;
+  }
+}
+.dpcroot_DPCHeaderTI2023_rgs4D
+  .dpcroot_TI12BannerContainer_3TN1e
+  .dpcroot_TI12BannerContent_KJLrP
+  .dpcroot_TI12PrizePoolBox_31f86
+  .dpcroot_EventResultsButton_3yzbY {
+  margin-top: 15px;
+  margin-left: 150px;
+  margin-right: 180px;
+  padding: 12px 35px;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  background: linear-gradient(90deg, #ea6953 0%, #952e46 100%);
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3411764706);
+  border-top: 2px solid #ffa192;
+  border-radius: 4px;
+  transition: 0.15s;
+  transition-property: filter, transform;
+  animation-timing-function: ease-in-out;
+  cursor: pointer;
+  pointer-events: auto;
+}
+.dpcroot_DPCHeaderTI2023_rgs4D
+  .dpcroot_TI12BannerContainer_3TN1e
+  .dpcroot_TI12BannerContent_KJLrP
+  .dpcroot_TI12PrizePoolBox_31f86
+  .dpcroot_EventResultsButton_3yzbY:hover {
+  filter: brightness(1.2);
+  transform: translateY(-2px);
+}
+@media (max-width: 1300px) {
+  .dpcroot_DPCHeaderTI2023_rgs4D
+    .dpcroot_TI12BannerContainer_3TN1e
+    .dpcroot_TI12BannerContent_KJLrP
+    .dpcroot_TI12PrizePoolBox_31f86
+    .dpcroot_EventResultsButton_3yzbY {
+    display: none;
+  }
+}
 * {
   box-sizing: border-box;
   font-family: "Radiance", "Noto Sans", sans-serif;
@@ -44858,6 +45268,1605 @@ a {
 }
 .international2022_InternationalTeamList_2a1qB
   .international2022_TeamGrid_ZTq5g {
+  width: 100%;
+  max-width: 1280px;
+  padding: 0px 100px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+* {
+  box-sizing: border-box;
+  font-family: "Radiance", "Noto Sans", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.Bold {
+  font-weight: bold;
+}
+.Spoiler {
+  background-color: #000 !important;
+  color: #000 !important;
+}
+.Spoiler:hover {
+  color: #fff !important;
+}
+.Strike {
+  text-decoration: line-through;
+}
+[data-aos="fade-zoom-in"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transform: scale(0);
+}
+[data-aos="fade-zoom-in"] &.aos-animate {
+  opacity: 1;
+  transform: scale(1);
+}
+[data-aos="fade-slide-right"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transform: translateX(-40%);
+}
+[data-aos="fade-slide-right"] &.aos-animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+[data-aos="fade-slide-left"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transform: translateX(40%);
+}
+[data-aos="fade-slide-left"] &.aos-animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+[data-aos="fade-slide-up"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transform: translateY(40%);
+}
+[data-aos="fade-slide-up"] &.aos-animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+[data-aos="fade-slide-down"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transform: translateY(-40%);
+}
+[data-aos="fade-slide-down"] &.aos-animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+[data-aos="rotate"] {
+  transition-property: transform;
+  transform: rotateZ(0deg);
+}
+[data-aos="rotate"] &[data-aos-rotate-bottom] {
+  transform-origin: bottom center;
+}
+[data-aos="rotate"] &[data-aos-rotate="10"].aos-animate {
+  transform: rotateZ(10deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="20"].aos-animate {
+  transform: rotateZ(20deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="30"].aos-animate {
+  transform: rotateZ(30deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="40"].aos-animate {
+  transform: rotateZ(40deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="50"].aos-animate {
+  transform: rotateZ(50deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="60"].aos-animate {
+  transform: rotateZ(60deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="70"].aos-animate {
+  transform: rotateZ(70deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="80"].aos-animate {
+  transform: rotateZ(80deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="90"].aos-animate {
+  transform: rotateZ(90deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="100"].aos-animate {
+  transform: rotateZ(100deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="110"].aos-animate {
+  transform: rotateZ(110deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="120"].aos-animate {
+  transform: rotateZ(120deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="130"].aos-animate {
+  transform: rotateZ(130deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="140"].aos-animate {
+  transform: rotateZ(140deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="150"].aos-animate {
+  transform: rotateZ(150deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="160"].aos-animate {
+  transform: rotateZ(160deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="170"].aos-animate {
+  transform: rotateZ(170deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="180"].aos-animate {
+  transform: rotateZ(180deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="190"].aos-animate {
+  transform: rotateZ(190deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="200"].aos-animate {
+  transform: rotateZ(200deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="210"].aos-animate {
+  transform: rotateZ(210deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="220"].aos-animate {
+  transform: rotateZ(220deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="230"].aos-animate {
+  transform: rotateZ(230deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="240"].aos-animate {
+  transform: rotateZ(240deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="250"].aos-animate {
+  transform: rotateZ(250deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="260"].aos-animate {
+  transform: rotateZ(260deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="270"].aos-animate {
+  transform: rotateZ(270deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="280"].aos-animate {
+  transform: rotateZ(280deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="290"].aos-animate {
+  transform: rotateZ(290deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="300"].aos-animate {
+  transform: rotateZ(300deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="310"].aos-animate {
+  transform: rotateZ(310deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="320"].aos-animate {
+  transform: rotateZ(320deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="330"].aos-animate {
+  transform: rotateZ(330deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="340"].aos-animate {
+  transform: rotateZ(340deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="350"].aos-animate {
+  transform: rotateZ(350deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-10"].aos-animate {
+  transform: rotateZ(-10deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-20"].aos-animate {
+  transform: rotateZ(-20deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-30"].aos-animate {
+  transform: rotateZ(-30deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-40"].aos-animate {
+  transform: rotateZ(-40deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-50"].aos-animate {
+  transform: rotateZ(-50deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-60"].aos-animate {
+  transform: rotateZ(-60deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-70"].aos-animate {
+  transform: rotateZ(-70deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-80"].aos-animate {
+  transform: rotateZ(-80deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-90"].aos-animate {
+  transform: rotateZ(-90deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-100"].aos-animate {
+  transform: rotateZ(-100deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-110"].aos-animate {
+  transform: rotateZ(-110deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-120"].aos-animate {
+  transform: rotateZ(-120deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-130"].aos-animate {
+  transform: rotateZ(-130deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-140"].aos-animate {
+  transform: rotateZ(-140deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-150"].aos-animate {
+  transform: rotateZ(-150deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-160"].aos-animate {
+  transform: rotateZ(-160deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-170"].aos-animate {
+  transform: rotateZ(-170deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-180"].aos-animate {
+  transform: rotateZ(-180deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-190"].aos-animate {
+  transform: rotateZ(-190deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-200"].aos-animate {
+  transform: rotateZ(-200deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-210"].aos-animate {
+  transform: rotateZ(-210deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-220"].aos-animate {
+  transform: rotateZ(-220deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-230"].aos-animate {
+  transform: rotateZ(-230deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-240"].aos-animate {
+  transform: rotateZ(-240deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-250"].aos-animate {
+  transform: rotateZ(-250deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-260"].aos-animate {
+  transform: rotateZ(-260deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-270"].aos-animate {
+  transform: rotateZ(-270deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-280"].aos-animate {
+  transform: rotateZ(-280deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-290"].aos-animate {
+  transform: rotateZ(-290deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-300"].aos-animate {
+  transform: rotateZ(-300deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-310"].aos-animate {
+  transform: rotateZ(-310deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-320"].aos-animate {
+  transform: rotateZ(-320deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-330"].aos-animate {
+  transform: rotateZ(-330deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-340"].aos-animate {
+  transform: rotateZ(-340deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-350"].aos-animate {
+  transform: rotateZ(-350deg);
+}
+.carousel__slide-focus-ring {
+  outline: none !important;
+}
+.carousel__dot:focus {
+  outline: none !important;
+}
+.__react_component_tooltip.show {
+  opacity: 1 !important;
+}
+.international2023_Tooltip_kY1P- {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.international2023_CarouselFade_3G2q9 {
+  mask-image: linear-gradient(
+    to left,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to left,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+}
+@font-face {
+  font-family: "Radiance";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance.eot");
+  src:
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance.ttf")
+      format("truetype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance.svg#ywftsvg")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Radiance";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-bold.eot");
+  src:
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-bold.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-bold.ttf")
+      format("truetype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-bold.svg#ywftsvg")
+      format("svg");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Radiance";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-semibold.eot");
+  src:
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-semibold.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-semibold.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-semibold.ttf")
+      format("truetype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/radiance-semibold.svg#ywftsvg")
+      format("svg");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Goudy Trajan";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-regular-pro-webfont.eot");
+  src:
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-regular-pro-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-regular-pro-webfont.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-regular-pro-webfont.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Goudy Trajan";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-bold-pro-webfont.eot");
+  src:
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-bold-pro-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-bold-pro-webfont.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-bold-pro-webfont.ttf")
+      format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Goudy Trajan";
+  src: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-medium-pro-webfont.eot");
+  src:
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-medium-pro-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-medium-pro-webfont.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/goudytrajan-medium-pro-webfont.ttf")
+      format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Noto Sans";
+  src:
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/notosans-regular.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/notosans-regular.ttf")
+      format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Noto Sans";
+  src:
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/notosans-semibold.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/notosans-semibold.ttf")
+      format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Noto Sans";
+  src:
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/notosans-bold.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/notosans-bold.ttf")
+      format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Averia Serif Libre";
+  src:
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/averiaseriflibre-regular.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/averiaseriflibre-regular.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Averia Serif Libre";
+  src:
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/averiaseriflibre-italic.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/averiaseriflibre-italic.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Reaver";
+  src:
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Regular.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Regular.ttf")
+      format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Reaver";
+  src:
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Light.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Regular-Light.ttf")
+      format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Reaver";
+  src:
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-SemiBold.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Regular-SemiBold.ttf")
+      format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Reaver";
+  src:
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Bold.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Regular-Bold.ttf")
+      format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Reaver";
+  src:
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Black.woff")
+      format("woff"),
+    url("https://cdn.cloudflare.steamstatic.com/apps/dota2/fonts/Reaver-Regular-Black.ttf")
+      format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+.international2023_StandardButton_1zWEo {
+  border: 3px solid rgba(255, 255, 255, 0.3137254902);
+  padding: 15px 25px;
+  margin: 10px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  transition-duration: 0.2s;
+}
+.international2023_StandardButton_1zWEo:hover {
+  border: 3px solid #ff6046;
+  transform: translateY(-2px);
+  color: #ff6046;
+}
+.international2023_StandardButton_1zWEo .international2023_ButtonText_Vvq5H {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fff;
+}
+.international2023_StandardButton_1zWEo .international2023_Icon_3WT_3 {
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.international2023_StandardButton_1zWEo
+  .international2023_Icon_3WT_3.international2023_Play_24Yul {
+  background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/icon-play.svg");
+}
+.international2023_StandardButton_1zWEo .international2023_SteamLogo_HiKTY {
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/steam_icon.svg");
+}
+.international2023_ToolTip_1kLZZ,
+.international2023_PlayerReportTooltip_1rY_6 {
+  background-color: #36363e;
+  color: #ddd;
+  max-width: 250px;
+  border: 1px solid #2d2d33;
+  border-radius: 3px;
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.7);
+  font-size: 14px;
+  line-height: 20px;
+  padding: 6px 10px;
+  z-index: 99999;
+}
+.international2023_PlayerReportTooltip_1rY_6 {
+  max-width: none;
+}
+.ReactVirtualized__Table__headerRow {
+  font-weight: 700;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.ReactVirtualized__Table__row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.ReactVirtualized__Table__headerTruncatedText {
+  display: inline-block;
+  max-width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.ReactVirtualized__Table__headerColumn {
+  margin-right: 5px;
+  min-width: 0px;
+}
+.ReactVirtualized__Table__rowColumn {
+  margin-right: 5px;
+  min-width: 0px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.ReactVirtualized__Table__headerColumn:first-of-type {
+  margin-left: 5px;
+}
+.ReactVirtualized__Table__rowColumn:first-of-type {
+  margin-left: 5px;
+}
+.ReactVirtualized__Table__sortableHeaderColumn {
+  cursor: pointer;
+}
+.ReactVirtualized__Table__sortableHeaderIconContainer {
+  display: flex;
+  align-items: center;
+}
+.ReactVirtualized__Table__sortableHeaderIcon {
+  flex: 0 0 24px;
+  height: 1em;
+  width: 1em;
+  fill: currentColor;
+}
+.international2023_TextStyleDisplay_MHdLx {
+  font-size: 70px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.international2023_TextStyleSmallHeading_2r25I {
+  font-size: 20;
+  font-size: clamp(20px, -0.4255319149vw + 28.170212766px, 24px);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.international2023_TextStyleHeading_rqn-w {
+  font-size: 35;
+  font-size: clamp(32px, 0.3191489362vw + 28.8723404255px, 35px);
+  font-family: "Reaver", serif;
+  font-weight: 600;
+  font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.international2023_TextStyleSectionHeading_1INDu {
+  font-size: 40px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.4em;
+  line-height: 100%;
+}
+.international2023_TextStyleOverline_1Vywx {
+  font-size: 17;
+  font-size: clamp(17px, -0.3191489362vw + 23.1276595745px, 20px);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  line-height: 100%;
+}
+.international2023_TextStyleButton_shnrB {
+  font-size: 17px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  line-height: 100%;
+}
+.international2023_TextStyleCaption_3A6ym {
+  font-size: 17px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  line-height: 100%;
+}
+.international2023_TextStyleBody_3ugZd {
+  font-size: 16;
+  font-size: clamp(16px, -0.4255319149vw + 24.170212766px, 20px);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 164%;
+}
+.international2023_TextStyleDescription_1aYhb {
+  font-size: 15;
+  font-size: clamp(15px, -0.3191489362vw + 21.1276595745px, 18px);
+  font-weight: 400;
+  line-height: 164%;
+}
+.international2023_TextStyleThumbnailBody_3MzWS {
+  font-size: 15;
+  font-size: clamp(15px, -0.3191489362vw + 21.1276595745px, 18px);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 164%;
+}
+.international2023_TextStyleFootnote_1zpZL {
+  font-size: 13;
+  font-size: clamp(13px, -0.3191489362vw + 19.1276595745px, 16px);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  line-height: 164%;
+}
+.international2023_MajorHeaderPreTitle_X0ZHg {
+  font-size: 18;
+  font-size: clamp(18px, -0.4255319149vw + 26.170212766px, 22px);
+  font-weight: 600;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+}
+.international2023_MajorHeaderTitle_39dsr {
+  font-family: "Reaver", serif;
+  filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.7137254902));
+  font-size: 38px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.international2023_MajorHeaderSubtitle_2pspr {
+  font-size: 16;
+  font-size: clamp(16px, -0.4255319149vw + 24.170212766px, 20px);
+  font-weight: 400;
+  line-height: 164%;
+}
+.international2023_TextColorYellow_2PAna {
+  color: #ebcf87;
+  text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.8);
+}
+.international2023_TextColorOrange_1GSQ2 {
+  color: #ea6953;
+  text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.8);
+}
+.international2023_TextColorRed_ccx0b {
+  color: #e1261c;
+  text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.8);
+}
+.international2023_TextColorDarkRed_3Ev2i {
+  color: #952e46;
+  text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.8);
+}
+.international2023_TextColorBlack_2yUPg {
+  color: #222;
+  text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.8);
+}
+.international2023_TextColorDarkerGold_15e4P {
+  color: #4f3612;
+}
+.international2023_TextColorDarkGold_3jAv_ {
+  color: #936725;
+}
+.international2023_TextColorGold_2-hI7 {
+  color: #c79123;
+  text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.8);
+}
+.international2023_TextColorLightGold_nFm_v {
+  color: #e4c269;
+  text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.8);
+}
+.international2023_TextColorLighterGold_2LaGq {
+  color: #ecd393;
+  text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.8);
+}
+.international2023_TextColorLightestGold_FJ_UE {
+  color: #f8e8b9;
+}
+.international2023_TextColorGrey_1hcuQ {
+  color: #48495c;
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.8);
+}
+.international2023_TextColorLightGrey_3t2u9 {
+  color: #63656a;
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.8);
+}
+.international2023_TextColorLighterGrey_3xH6a {
+  color: #9fa2a3;
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.8);
+}
+.international2023_TextColorLightestGrey_3aw-n {
+  color: #ebeaeb;
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.8);
+}
+.international2023_TextColorWhite_3-502 {
+  color: #fff;
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.8);
+}
+.international2023_TextColorGoldGlow_2zYDw {
+  color: #fff;
+  text-shadow: 0px 0px 16px #c79123;
+}
+.international2023_TextColorGreenGlow_2w8GI {
+  color: #8fed31;
+  text-shadow: 0px 0px 8px #69993a;
+}
+.international2023_TextColorYellowShadowGradient_22S1X {
+  background: -webkit-linear-gradient(#ebcf87 10%, #ea6953 90%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  filter: drop-shadow(0px 2px 2px #000000);
+}
+.international2023_TextColorYellowGradient_3TWdW {
+  background: -webkit-linear-gradient(#ebcf87 10%, #ea6953 90%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  filter: drop-shadow(0px 0px 5px #e1261c);
+}
+.international2023_TextColorFVArcanaGradient_3U-68 {
+  background: -webkit-linear-gradient(#e4cdff 10%, #945bd6 90%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  filter: drop-shadow(0px 0px 5px #721fd1);
+}
+.international2023_TextColorPurpleGradient_1ilNK {
+  background: -webkit-linear-gradient(#c5c1ff 10%, #6a6cff 90%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  filter: drop-shadow(0px 0px 5px #1b1ed4);
+}
+.international2023_TextColorGreenGradient_3OZzP {
+  background: -webkit-linear-gradient(#f8ffcd 10%, #899155 90%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  filter: drop-shadow(0px 0px 5px #106618);
+}
+.international2023_TextColorBlueGradient_14IFp {
+  background: -webkit-linear-gradient(#ffffff 10%, #00a3d7 90%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  filter: drop-shadow(0px 0px 5px #0089d8);
+}
+.international2023_TextColorPhantomGradient_1VKR_ {
+  background: -webkit-linear-gradient(#ffffff 10%, #8364a5 90%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  filter: drop-shadow(0px 0px 7px #debfff);
+}
+.international2023_TextColorBlueShadowGradient_39Zzm {
+  background: -webkit-linear-gradient(#ffffff 10%, #00a3d7 90%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  filter: drop-shadow(0px 2px 2px #000000);
+}
+.international2023_TextColorGoldGradient_1DXTf {
+  background: linear-gradient(#f8e8b9 10%, #ffffff 90%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  filter: drop-shadow(0px 0px 10px black);
+}
+.international2023_InternationalCountdownContainer_3cS7W {
+  width: 100%;
+  height: 100%;
+  padding-top: 40px;
+  padding-bottom: 80px;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(180deg, #00202e, #000406);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/international2023/blue_gradient_soft_aegis.jpg");
+}
+.international2023_InternationalCountdownContainer_3cS7W
+  .international2023_InternationalCountdown_1vLBa {
+  margin-top: 30px;
+}
+.international2023_InternationalCountdownContainer_3cS7W
+  .international2023_CountdownPreHeader_19yH6 {
+  background: -webkit-linear-gradient(#31c8db 10%, #30a4d5 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  font-size: 20px;
+  margin-top: 1em;
+}
+.international2023_InternationalCountdownContainer_3cS7W
+  .international2023_CountdownHeader_OuCsh {
+  margin-top: 0.5em;
+  font-family: "Reaver", serif;
+  font-size: 35px;
+  color: #fff;
+  letter-spacing: 1px;
+}
+.international2023_InternationalCountdownContainer_3cS7W
+  .international2023_CountdownTimer_2t7c4 {
+  width: 70%;
+  margin: 16px auto 0 auto;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-image: linear-gradient(
+      to right,
+      rgba(148, 138, 118, 0),
+      #eadac0,
+      rgba(148, 138, 118, 0)
+    )
+    1;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.international2023_InternationalCountdownContainer_3cS7W
+  .international2023_CountdownDesc_2QKwR {
+  width: 70%;
+  min-width: 320px;
+  margin-top: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  color: #9fa2a3;
+  font-size: 20;
+  font-size: clamp(20px, -0.4255319149vw + 28.170212766px, 24px);
+}
+.international2023_InternationalCountdownContainer_3cS7W
+  .international2023_CountdownLogo_1_Le9 {
+  width: 65%;
+}
+.international2023_InternationalCountdownContainer_3cS7W
+  .international2023_ViewScheduleButton_3WilW {
+  padding: 0.75em 2em;
+  border-radius: 4px;
+  margin-top: 2em;
+  display: inline-block;
+  text-shadow: none;
+  color: #fffbcd;
+  font-size: 18px;
+  font-weight: 600;
+  background: linear-gradient(90deg, #ea6953 0%, #952e46 100%);
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3411764706);
+  border-top: 2px solid #ffa192;
+  letter-spacing: 1px;
+  transition: 0.15s;
+  transition-property: filter, transform;
+  animation-timing-function: ease-in-out;
+  cursor: pointer;
+  pointer-events: auto;
+}
+.international2023_InternationalCountdownContainer_3cS7W
+  .international2023_ViewScheduleButton_3WilW:hover {
+  filter: brightness(1.2);
+  transform: translateY(-2px);
+}
+.international2023_InternationalCountdownContainer_3cS7W
+  .international2023_KeepUpHeader_2mkMw {
+  background: -webkit-linear-gradient(#31c8db 10%, #30a4d5 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  font-size: 20;
+  font-size: clamp(20px, -0.6382978723vw + 32.2553191489px, 26px);
+  margin-top: 2em;
+}
+.international2023_InternationalCountdownContainer_3cS7W
+  .international2023_SocialIcons_3DMJZ {
+  margin-top: 1em;
+}
+.international2023_InternationalCountdownContainer_3cS7W
+  .international2023_SocialIcons_3DMJZ
+  .international2023_IconImg_nfyiU {
+  width: 60px;
+  height: 60px;
+  margin: 0em 0.5em;
+  transition: 0.15s;
+  transition-property: filter, transform;
+  animation-timing-function: ease-in-out;
+  cursor: pointer;
+}
+.international2023_InternationalCountdownContainer_3cS7W
+  .international2023_SocialIcons_3DMJZ
+  .international2023_IconImg_nfyiU:hover {
+  filter: brightness(1.3);
+  transform: translateY(-2px);
+}
+.international2023_InternationalPrizeSplits_3aSjJ {
+  width: 100%;
+  padding: 0px 0px 0px 0px;
+  background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react//dpc/ti10/prize_bg.jpg");
+  background-size: cover;
+  background-position: center bottom;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.international2023_InternationalPrizeSplits_3aSjJ
+  .international2023_DividerTop_3AqdQ {
+  background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react//dpc/ti10/divider.png");
+  background-size: cover;
+  width: 100%;
+  height: 5px;
+  position: absolute;
+  box-shadow: 0px 0px 20px #000;
+}
+.international2023_InternationalPrizeSplits_3aSjJ
+  .international2023_PrizeGridContain_3DfGa {
+  width: 100%;
+  height: auto;
+  max-width: 1280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+.international2023_InternationalPrizeSplits_3aSjJ
+  .international2023_PrizeGridContain_3DfGa
+  .international2023_PrizePoolLabel_222y3 {
+  font-size: 22px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 150px;
+  font-family: "Reaver", serif;
+  color: #bb9a4a;
+  color: #fff;
+  margin-bottom: 0px;
+}
+.international2023_InternationalPrizeSplits_3aSjJ
+  .international2023_PrizeGridContain_3DfGa
+  .international2023_PrizePoolValue_oarU3 {
+  font-size: 80px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  font-family: "Reaver", serif;
+  color: #fff;
+  background: linear-gradient(
+    #ab8c3b 30%,
+    #efe5bb 50%,
+    #d2bd6f 60%,
+    #785f2f 80%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+}
+.international2023_InternationalPrizeSplits_3aSjJ
+  .international2023_PrizeGridContain_3DfGa
+  .international2023_Title_1h1PD {
+  font-size: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-family: "Reaver", serif;
+  background: linear-gradient(
+    #ab8c3b 30%,
+    #efe5bb 50%,
+    #d2bd6f 60%,
+    #785f2f 80%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  margin-bottom: 26px;
+}
+.international2023_InternationalPrizeSplits_3aSjJ
+  .international2023_PrizeGridContain_3DfGa
+  .international2023_Underline_2ogFG {
+  width: 300px;
+  height: 1px;
+  background: linear-gradient(to right, #ab8c3b 30%, #efe5bb 50%, #ab8c3b 70%);
+  margin-bottom: 40px;
+}
+.international2023_InternationalPrizeSplits_3aSjJ
+  .international2023_PrizeGridContain_3DfGa
+  .international2023_Grid_2lLEN {
+  width: 100%;
+  max-width: 1280px;
+  margin-bottom: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.international2023_InternationalPrizeSplits_3aSjJ
+  .international2023_PrizeGridContain_3DfGa
+  .international2023_Grid_2lLEN
+  .international2023_GridRow_3vC_h {
+  width: 100%;
+  max-width: 1280px;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.international2023_InternationalPrizeSplits_3aSjJ
+  .international2023_PrizeGridContain_3DfGa
+  .international2023_Grid_2lLEN
+  .international2023_GridRow_3vC_h
+  .international2023_GridEntry_2Jv4D {
+  flex-grow: 1;
+  flex-basis: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5647058824);
+}
+.international2023_InternationalPrizeSplits_3aSjJ
+  .international2023_PrizeGridContain_3DfGa
+  .international2023_Grid_2lLEN
+  .international2023_GridRow_3vC_h
+  .international2023_GridEntry_2Jv4D
+  .international2023_PrizeValue_3sDVO {
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: "Reaver", serif;
+  background: linear-gradient(
+    #ab8c3b 30%,
+    #efe5bb 50%,
+    #d2bd6f 60%,
+    #785f2f 80%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+}
+.international2023_InternationalPrizeSplits_3aSjJ
+  .international2023_PrizeGridContain_3DfGa
+  .international2023_Grid_2lLEN
+  .international2023_GridRow_3vC_h
+  .international2023_GridEntry_2Jv4D
+  .international2023_Place_1K84V {
+  font-size: 17px;
+  letter-spacing: 2px;
+  color: #a3a3a3;
+}
+.international2023_TheInternational2023Plugs_EZoZN {
+  border-top: 2px solid;
+  border-image: linear-gradient(to right, #948a76, #eadac0, #948a76) 1;
+  width: 100%;
+  max-height: 960px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/international2023/cathedral_floor.jpg");
+  background-size: 100% auto;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  padding: 8vw 8vw calc(18vw + 48px);
+  background-color: #011017;
+}
+.international2023_TheInternational2023Plugs_EZoZN
+  .international2023_PlugsSmallHead_1ipt_ {
+  letter-spacing: 3px;
+  font-size: 20px;
+}
+.international2023_TheInternational2023Plugs_EZoZN
+  .international2023_PlugsHeader_2I3EL {
+  margin-top: 10px;
+  font-size: 30px;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+.international2023_TheInternational2023Plugs_EZoZN
+  .international2023_PlugsDesc_1dUVH {
+  margin-top: 15px;
+  width: 100%;
+  max-width: 700px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 164%;
+  text-align: center;
+}
+.international2023_TheInternational2023Plugs_EZoZN
+  .international2023_BattlePassPlug_3JqwU {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 1200px) {
+  .international2023_TheInternational2023Plugs_EZoZN
+    .international2023_BattlePassPlug_3JqwU {
+    margin-top: 50px;
+  }
+}
+.international2023_TheInternational2023Plugs_EZoZN
+  .international2023_BattlePassPlug_3JqwU
+  .international2023_BPPlugTextContainer_2CLTA {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 2;
+}
+.international2023_TheInternational2023Plugs_EZoZN
+  .international2023_BattlePassPlug_3JqwU
+  .international2023_BPPlugTextContainer_2CLTA
+  .international2023_BPPlugText_394o0 {
+  width: 100%;
+  max-width: 700px;
+  height: 100%;
+  margin: auto;
+}
+.international2023_TheInternational2023Plugs_EZoZN
+  .international2023_BattlePassPlug_3JqwU
+  .international2023_BPPlugTextContainer_2CLTA
+  .international2023_BPPlugText_394o0
+  .international2023_TI11BPOverline_2uEUj {
+  letter-spacing: 3px;
+  font-size: 20px;
+  color: #31c8db;
+  background: -webkit-linear-gradient(#31c8db, #30a4d5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+}
+.international2023_TheInternational2023Plugs_EZoZN
+  .international2023_BattlePassPlug_3JqwU
+  .international2023_BPPlugTextContainer_2CLTA
+  .international2023_BPPlugText_394o0
+  .international2023_TI11BPHeader_106OT {
+  margin-top: 10px;
+  font-size: 30px;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+.international2023_TheInternational2023Plugs_EZoZN
+  .international2023_BattlePassPlug_3JqwU
+  .international2023_BPPlugTextContainer_2CLTA
+  .international2023_BPPlugText_394o0
+  .international2023_TI11BPDetails_frN5s {
+  margin-top: 15px;
+  width: 100%;
+  max-width: 750px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 160%;
+  color: rgba(255, 255, 255, 0.8666666667);
+}
+.international2023_TheInternational2023Plugs_EZoZN
+  .international2023_BattlePassPlug_3JqwU
+  .international2023_BPPlugTextContainer_2CLTA
+  .international2023_BPPlugText_394o0
+  .international2023_BPPlugBtn_YA0eG {
+  padding: 0.75em 2em;
+  border-radius: 4px;
+  margin-top: 40px;
+  display: inline-block;
+  text-shadow: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  background: linear-gradient(180deg, #30a4d5 0%, #0e4b80 100%);
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3411764706);
+  border-top: 1px solid rgba(255, 255, 255, 0.262745098);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: 0.15s;
+  transition-property: filter, transform;
+  animation-timing-function: ease-in-out;
+  cursor: pointer;
+  pointer-events: auto;
+}
+.international2023_TheInternational2023Plugs_EZoZN
+  .international2023_BattlePassPlug_3JqwU
+  .international2023_BPPlugTextContainer_2CLTA
+  .international2023_BPPlugText_394o0
+  .international2023_BPPlugBtn_YA0eG:hover {
+  filter: brightness(1.2);
+  transform: translateY(-2px);
+}
+.international2023_TheInternational2023Plugs_EZoZN
+  .international2023_BattlePassPlug_3JqwU
+  .international2023_BPPlugImgContainer_1-vY5 {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.international2023_TheInternational2023Plugs_EZoZN
+  .international2023_BattlePassPlug_3JqwU
+  .international2023_BPPlugImgContainer_1-vY5
+  .international2023_BPPlugImg_RvilC {
+  width: 100%;
+  height: 100%;
+}
+.international2023_TheInternational2023Plugs_EZoZN
+  .international2023_StickersPlug_1Y6du {
+  margin: 60px 0px 60px 0px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.international2023_TheInternational2023Plugs_EZoZN
+  .international2023_StickersPlug_1Y6du
+  .international2023_StickersPlugImgContainer_2u4DG {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.international2023_TheInternational2023Plugs_EZoZN
+  .international2023_StickersPlug_1Y6du
+  .international2023_StickersPlugImgContainer_2u4DG
+  .international2023_StickersPlugImg_2OqTV {
+  width: 100%;
+  height: 100%;
+}
+.international2023_TheInternational2023Plugs_EZoZN
+  .international2023_StickersPlug_1Y6du
+  .international2023_StickersPlugTextContainer_1xdrX {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+.international2023_TheInternational2023Plugs_EZoZN
+  .international2023_StickersPlug_1Y6du
+  .international2023_StickersPlugTextContainer_1xdrX
+  .international2023_BPPlugText_394o0 {
+  width: 100%;
+  max-width: 700px;
+}
+.international2023_TheInternational2023Plugs_EZoZN
+  .international2023_StickersPlug_1Y6du
+  .international2023_StickersPlugTextContainer_1xdrX
+  .international2023_BPPlugText_394o0
+  .international2023_TI11BPOverline_2uEUj {
+  letter-spacing: 3px;
+  font-size: 20px;
+}
+.international2023_TheInternational2023Plugs_EZoZN
+  .international2023_StickersPlug_1Y6du
+  .international2023_StickersPlugTextContainer_1xdrX
+  .international2023_BPPlugText_394o0
+  .international2023_TI11BPHeader_106OT {
+  margin-top: 10px;
+  font-size: 30px;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+.international2023_TheInternational2023Plugs_EZoZN
+  .international2023_StickersPlug_1Y6du
+  .international2023_StickersPlugTextContainer_1xdrX
+  .international2023_BPPlugText_394o0
+  .international2023_TI11BPDetails_frN5s {
+  margin-top: 15px;
+  width: 100%;
+  max-width: 750px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 164%;
+}
+.international2023_TheInternational2023Plugs_EZoZN
+  .international2023_FantasyPlug_1Ss3m {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.international2023_TheInternational2023Plugs_EZoZN
+  .international2023_FantasyPlug_1Ss3m
+  .international2023_PlugContainers_kkxC6 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+}
+.international2023_TheInternational2023Plugs_EZoZN
+  .international2023_FantasyPlug_1Ss3m
+  .international2023_PlugContainers_kkxC6
+  .international2023_FantasyContainer_RxuNQ {
+  width: 33%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.international2023_TheInternational2023Plugs_EZoZN
+  .international2023_FantasyPlug_1Ss3m
+  .international2023_PlugContainers_kkxC6
+  .international2023_FantasyContainer_RxuNQ
+  .international2023_PlugImg_KEWr- {
+  width: 100%;
+  height: 100%;
+  max-width: 450px;
+  max-height: auto;
+  align-items: center;
+  justify-content: center;
+}
+.international2023_TheInternational2023Plugs_EZoZN
+  .international2023_FantasyPlug_1Ss3m
+  .international2023_PlugContainers_kkxC6
+  .international2023_FantasyContainer_RxuNQ
+  .international2023_PlugText_vwXgZ {
+  margin-top: 10px;
+  padding-left: 40px;
+  width: 100%;
+  max-width: 400px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: left;
+}
+@media (max-width: 1200px) {
+  .international2023_TheInternational2023Plugs_EZoZN
+    .international2023_FantasyPlug_1Ss3m
+    .international2023_PlugContainers_kkxC6
+    .international2023_FantasyContainer_RxuNQ
+    .international2023_PlugText_vwXgZ {
+    padding-left: 15px;
+  }
+}
+.international2023_TheInternational2023Plugs_EZoZN
+  .international2023_FantasyPlug_1Ss3m
+  .international2023_PlugContainers_kkxC6
+  .international2023_FantasyContainer_RxuNQ
+  .international2023_PlugText_vwXgZ
+  .international2023_TI11BPDetails_frN5s {
+  margin-top: 10px;
+}
+.international2023_TheInternational2023Plugs_EZoZN
+  .international2023_FantasyPlug_1Ss3m
+  .international2023_PlugContainers_kkxC6
+  .international2023_SupportersClubContainer_Zqx6O {
+  width: 33%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.international2023_TheInternational2023Plugs_EZoZN
+  .international2023_FantasyPlug_1Ss3m
+  .international2023_PlugContainers_kkxC6
+  .international2023_SupportersClubContainer_Zqx6O
+  .international2023_PlugImg_KEWr- {
+  width: 100%;
+  height: 100%;
+  max-width: 450px;
+  max-height: auto;
+  align-items: center;
+  justify-content: center;
+}
+.international2023_TheInternational2023Plugs_EZoZN
+  .international2023_FantasyPlug_1Ss3m
+  .international2023_PlugContainers_kkxC6
+  .international2023_SupportersClubContainer_Zqx6O
+  .international2023_PlugText_vwXgZ {
+  margin-top: 10px;
+  padding-left: 40px;
+  width: 100%;
+  max-width: 400px;
+  height: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: left;
+}
+@media (max-width: 1200px) {
+  .international2023_TheInternational2023Plugs_EZoZN
+    .international2023_FantasyPlug_1Ss3m
+    .international2023_PlugContainers_kkxC6
+    .international2023_SupportersClubContainer_Zqx6O
+    .international2023_PlugText_vwXgZ {
+    padding-left: 15px;
+  }
+}
+.international2023_TheInternational2023Plugs_EZoZN
+  .international2023_FantasyPlug_1Ss3m
+  .international2023_PlugContainers_kkxC6
+  .international2023_SupportersClubContainer_Zqx6O
+  .international2023_PlugText_vwXgZ
+  .international2023_TI11BPDetails_frN5s {
+  margin-top: 10px;
+}
+.international2023_TheInternational2023Plugs_EZoZN
+  .international2023_FantasyPlug_1Ss3m
+  .international2023_PlugContainers_kkxC6
+  .international2023_PredictionsContainer_2rbPp {
+  width: 33%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.international2023_TheInternational2023Plugs_EZoZN
+  .international2023_FantasyPlug_1Ss3m
+  .international2023_PlugContainers_kkxC6
+  .international2023_PredictionsContainer_2rbPp
+  .international2023_PlugImg_KEWr- {
+  width: 100%;
+  height: 100%;
+  max-width: 450px;
+  max-height: auto;
+  align-items: center;
+  justify-content: center;
+}
+.international2023_TheInternational2023Plugs_EZoZN
+  .international2023_FantasyPlug_1Ss3m
+  .international2023_PlugContainers_kkxC6
+  .international2023_PredictionsContainer_2rbPp
+  .international2023_PlugText_vwXgZ {
+  margin-top: 10px;
+  padding-left: 40px;
+  width: 100%;
+  max-width: 400px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: left;
+}
+@media (max-width: 1200px) {
+  .international2023_TheInternational2023Plugs_EZoZN
+    .international2023_FantasyPlug_1Ss3m
+    .international2023_PlugContainers_kkxC6
+    .international2023_PredictionsContainer_2rbPp
+    .international2023_PlugText_vwXgZ {
+    padding-left: 15px;
+  }
+}
+.international2023_TheInternational2023Plugs_EZoZN
+  .international2023_FantasyPlug_1Ss3m
+  .international2023_PlugContainers_kkxC6
+  .international2023_PredictionsContainer_2rbPp
+  .international2023_PlugText_vwXgZ
+  .international2023_TI11BPDetails_frN5s {
+  margin-top: 10px;
+}
+.international2023_InternationalTeamListTeam_339fE {
+  width: 180px;
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 8px;
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.4);
+  border: 2px solid;
+  border-image: linear-gradient(to bottom, #0e4b80, #002c4c) 1;
+  background: linear-gradient(180deg, #002c4c, #00182e);
+}
+.international2023_InternationalTeamListTeam_339fE
+  .international2023_TeamName_1qMO9 {
+  height: 44px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+}
+.international2023_InternationalTeamListTeam_339fE
+  .international2023_LavaTeamLogo_1qd68 {
+  margin-top: 12px;
+  margin-bottom: 12px;
+  width: 90px;
+  height: 90px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: drop-shadow(0px 0px 10px #e1261c);
+}
+.international2023_InternationalTeamListTeam_339fE
+  .international2023_TeamRegion_3taDM {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: #30a4d5;
+}
+.international2023_InternationalTeamList_14rdA {
+  width: 100%;
+  background: linear-gradient(180deg, #00182e, #041218);
+  padding-bottom: 100px;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 2px solid;
+  border-image: linear-gradient(to right, #948a76, #eadac0, #948a76) 1;
+}
+.international2023_InternationalTeamList_14rdA .international2023_Title_1h1PD {
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+.international2023_InternationalTeamList_14rdA
+  .international2023_TeamGrid_1r8O3 {
   width: 100%;
   max-width: 1280px;
   padding: 0px 100px;

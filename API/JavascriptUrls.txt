@@ -26,6 +26,7 @@ ${BASE_URL}eminenceofristul
 ${BASE_URL}esports/ti11/schedule
 ${BASE_URL}heroes
 ${BASE_URL}ingest
+${BASE_URL}international2023
 ${BASE_URL}items
 ${BASE_URL}matches/match/${}?u=${}&appid=${DOTA_APP_ID}
 ${BASE_URL}matches/match/${}?u=${}&appid=${DOTA_APP_ID}&highlight=${}
@@ -718,6 +719,12 @@ ${IMG_URL}international2022/swag_bag.png
 ${IMG_URL}international2022/ti11_collectors_aegis.png
 ${IMG_URL}international2022/truesight_logo.jpg
 ${IMG_URL}international2022/weekly_quests.png
+${IMG_URL}international2023/icons/social_fb.png
+${IMG_URL}international2023/icons/social_insta.png
+${IMG_URL}international2023/icons/social_twitch.png
+${IMG_URL}international2023/icons/social_twitter.png
+${IMG_URL}international2023/icons/social_yt.png
+${IMG_URL}international2023/ti_logo_full_color.png
 ${IMG_URL}items/${}.png
 ${IMG_URL}locked.png
 ${IMG_URL}logo.png
