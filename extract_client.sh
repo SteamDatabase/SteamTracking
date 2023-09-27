@@ -55,8 +55,8 @@ echo Dumping protobufs
 
 # https://github.com/m4dEngi/steamworks_dumper
 echo Dumping structs
-./steamworks_dumper/build/steamworks_dumper "linux_bins/ubuntu12_32/steamui.so" "$DIR/Structs/"
-./steamworks_dumper/build/steamworks_dumper "linux_bins/ubuntu12_32/steamclient.so" "$DIR/Structs/"
+#./steamworks_dumper/build/steamworks_dumper "linux_bins/ubuntu12_32/steamui.so" "$DIR/Structs/"
+#./steamworks_dumper/build/steamworks_dumper "linux_bins/ubuntu12_32/steamclient.so" "$DIR/Structs/"
 
 #
 # BUILDBOT PATHS
