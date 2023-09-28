@@ -21394,6 +21394,14 @@
               { bConstMethod: !0, ePrivilege: 0, eWebAPIKeyRequirement: 1 },
             );
           }),
+          (e.GetDisplayMarketingMessageForUser = function (e, t) {
+            return e.SendMsg(
+              "MarketingMessages.GetDisplayMarketingMessageForUser#1",
+              gr(go, t),
+              ho,
+              { bConstMethod: !0, ePrivilege: 1 },
+            );
+          }),
           (e.GetDisplayMarketingMessageAdmin = function (e, t) {
             return e.SendMsg(
               "MarketingMessages.GetDisplayMarketingMessageAdmin#1",
@@ -26043,50 +26051,7 @@
               null,
               a.createElement("title", null, Oi("#header_news")),
             ),
-            a.createElement(
-              "div",
-              { className: El().NewsHeader },
-              a.createElement(
-                V.rU,
-                { to: x(), className: El().S2Bumper },
-                a.createElement(
-                  "div",
-                  { className: El().IntroContainer },
-                  a.createElement(
-                    "div",
-                    {
-                      className: El().IntroText,
-                      "data-aos": "fade-in",
-                      "data-aos-delay": "500",
-                      "data-aos-duration": "1000",
-                    },
-                    Oi("#cs2beta_bumper_intro"),
-                  ),
-                  a.createElement("img", {
-                    className: El().CS2Logo,
-                    src: `${L.IMG_URL}/cs2/logo_cs2_header.svg`,
-                    "data-aos": "fade-left",
-                    "data-aos-delay": "100",
-                    "data-aos-duration": "1000",
-                  }),
-                  a.createElement(
-                    "div",
-                    {
-                      className: El().LimitedTestContainer,
-                      "data-aos": "fade-in",
-                      "data-aos-delay": "500",
-                      "data-aos-duration": "1000",
-                    },
-                    a.createElement("div", { className: El().LimitedTestBG }),
-                    a.createElement(
-                      "div",
-                      { className: El().LimitedTestLabel },
-                      Oi("#cs2beta_header_beta"),
-                    ),
-                  ),
-                ),
-              ),
-            ),
+            a.createElement("div", { className: El().NewsHeader }),
             a.createElement(
               "div",
               { className: El().Body },

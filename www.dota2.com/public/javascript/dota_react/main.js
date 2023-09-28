@@ -5895,7 +5895,7 @@
     },
     78014: (e, t, a) => {
       "use strict";
-      a.d(t, { P: () => js });
+      a.d(t, { P: () => Ys });
       var r = a(33940),
         n = (a(50811), a(73961)),
         i = a(89526),
@@ -6825,7 +6825,7 @@
               "div",
               {
                 onClick: () =>
-                  js.PurchaseOnSteamStore(l, 1, window.location.href),
+                  Ys.PurchaseOnSteamStore(l, 1, window.location.href),
                 className: (0, h.Z)(
                   E().TextStyleButton,
                   E().TextColorWhite,
@@ -6919,7 +6919,7 @@
           this.setState({ nImmortalTreasureSelected: e });
         }
         render() {
-          const e = js.getPrizePool();
+          const e = Ys.getPrizePool();
           return i.createElement(
             "div",
             { className: E().BattlepassPage },
@@ -12358,10 +12358,10 @@
                       Pe().CapsuleDiscount,
                     ),
                   },
-                  js.GetBPDiscount(36, o) &&
+                  Ys.GetBPDiscount(36, o) &&
                     (0, v.Jr)(
                       "#battlepass_purchase_discount",
-                      js.GetBPDiscount(36, o),
+                      Ys.GetBPDiscount(36, o),
                       s,
                     ),
                 ),
@@ -12369,7 +12369,7 @@
                   "div",
                   {
                     onClick: () =>
-                      js.PurchaseOnSteamStore(o, 1, window.location.href),
+                      Ys.PurchaseOnSteamStore(o, 1, window.location.href),
                     className: (0, h.Z)(
                       Pe().TextStyleButton,
                       Pe().TextColorWhite,
@@ -12382,7 +12382,7 @@
                   },
                   (0, v.Jr)(
                     "#battlepass_purchase_label",
-                    "undefined" !== js.GetBPPrice(o) ? js.GetBPPrice(o) : "",
+                    "undefined" !== Ys.GetBPPrice(o) ? Ys.GetBPPrice(o) : "",
                   ),
                 ),
               ),
@@ -12462,7 +12462,7 @@
                 "div",
                 {
                   onClick: () =>
-                    js.PurchaseOnSteamStore(o, 1, window.location.href),
+                    Ys.PurchaseOnSteamStore(o, 1, window.location.href),
                   className: (0, h.Z)(
                     Pe().TextStyleButton,
                     Pe().TextColorWhite,
@@ -12475,7 +12475,7 @@
                 },
                 (0, v.Jr)(
                   "#battlepass_purchase_label",
-                  "undefined" !== js.GetBPPrice(o) ? js.GetBPPrice(o) : "",
+                  "undefined" !== Ys.GetBPPrice(o) ? Ys.GetBPPrice(o) : "",
                 ),
               ),
             ),
@@ -12850,7 +12850,7 @@
           super(e);
         }
         render() {
-          const e = js.getPrizePool(),
+          const e = Ys.getPrizePool(),
             t = Ae(xe);
           return i.createElement(
             "div",
@@ -30606,6 +30606,54 @@
               );
         }),
         di = (0, c.Pi)(() => {
+          const e = Vn();
+          if (e != Jt._A.INTERNATIONAL_2023_QUALIFIERS) return null;
+          const t = jt.f.Get().GetEventInfo(e);
+          if (t.event != Jt._A.INTERNATIONAL_2023_QUALIFIERS) return null;
+          jt.f.Get().GetLeagueData(e, t.leagues[0].league_id);
+          return i.createElement(
+            "div",
+            { className: Da().DPCHeaderTI2023 },
+            i.createElement(
+              "div",
+              { className: Da().TI12BannerContainer },
+              i.createElement(
+                "div",
+                {
+                  className: Da().TI12BannerContent,
+                  "data-aos": "zoom-out",
+                  "data-aos-duration": "1500",
+                },
+                i.createElement(
+                  "div",
+                  { className: Da().TI12CenterBox },
+                  i.createElement(
+                    _.rU,
+                    {
+                      to: {
+                        state: { bAutoScroll: !0 },
+                        pathname: l._.dpc_watch((0, Yt.B2)(e)),
+                      },
+                      className: Da().CenterContent,
+                      "data-aos": "zoom-out",
+                      "data-aos-duration": "1500",
+                    },
+                    i.createElement("img", {
+                      className: Da().TILogo,
+                      src: `${p.Y.IMG_URL}international2023/ti_logo_full_color.png`,
+                    }),
+                  ),
+                  i.createElement(
+                    "div",
+                    { className: Da().TI12Season },
+                    (0, v.Jr)("#dpc_event_2022season"),
+                  ),
+                ),
+              ),
+            ),
+          );
+        }),
+        mi = (0, c.Pi)(() => {
           var e;
           const t = Vn();
           if (t != Jt._A.INTERNATIONAL_2023) return null;
@@ -30748,7 +30796,7 @@
             ),
           );
         }),
-        mi = (0, c.Pi)(() => {
+        ui = (0, c.Pi)(() => {
           const e = Vn();
           let t = "#212026",
             a = "#212026";
@@ -30796,6 +30844,7 @@
             case Jt._A.SUMMER_2023_MAJOR:
               (t = "#10033F"), (a = "#10033F");
               break;
+            case Jt._A.INTERNATIONAL_2023_QUALIFIERS:
             case Jt._A.INTERNATIONAL_2023:
               (t = "#222127"), (a = "#222127");
           }
@@ -30832,9 +30881,10 @@
             i.createElement(ci, null),
             i.createElement(_i, null),
             i.createElement(di, null),
+            i.createElement(mi, null),
           );
         }),
-        ui = (0, c.Pi)(() => {
+        pi = (0, c.Pi)(() => {
           const e = Vn();
           return jt.f.Get().GetSpoilerBlockState(e) != Jt.rE.UNKNOWN
             ? null
@@ -30940,7 +30990,7 @@
                 ),
               );
         }),
-        pi = (0, c.Pi)(() => {
+        gi = (0, c.Pi)(() => {
           const e = (function () {
               const [e, t] = (0, i.useState)(!0);
               return (
@@ -31022,9 +31072,9 @@
               jn,
               { eventContext: u },
               i.createElement(Ne.j, { bOverlapping: !1 }),
-              i.createElement(ui, null),
+              i.createElement(pi, null),
               i.createElement(ha, null),
-              i.createElement(mi, null),
+              i.createElement(ui, null),
               i.createElement(qt, null),
               E &&
                 i.createElement(
@@ -31079,14 +31129,14 @@
             ),
           );
         });
-      var gi = a(40860),
-        Ei = a.n(gi);
-      function hi() {
+      var Ei = a(40860),
+        hi = a.n(Ei);
+      function vi() {
         const { height: e, width: t } = oe();
         let a = 5;
         return t < 1300 && (a = 4), t < 1e3 && (a = 3), t < 600 && (a = 2), a;
       }
-      const vi = ({ hero: e, hidden: t, pos: a }) => {
+      const Si = ({ hero: e, hidden: t, pos: a }) => {
           let r = "";
           switch (e.primary_attr) {
             case 0:
@@ -31101,41 +31151,41 @@
             case 3:
               r = "universal";
           }
-          let n = hi();
+          let n = vi();
           const s = Math.max(0, a % n),
             o = Math.max(0, Math.floor(a / n));
           return i.createElement(
             _.rU,
             {
               to: l._.hero(e.name_english_loc.replace(/ /g, "").toLowerCase()),
-              className: (0, h.Z)(Ei().HeroIcon, t && Ei().Hidden),
+              className: (0, h.Z)(hi().HeroIcon, t && hi().Hidden),
               style: {
                 backgroundImage: `url( ${p.Y.IMG_URL}heroes/${e.name.replace(
                   "npc_dota_hero_",
                   "",
                 )}.png`,
                 left: `calc( ( 5 - ${n} ) * 122px + ${s} * ( 100% - ${
-                  Ei().heroIconWidth
+                  hi().heroIconWidth
                 }px ) / 4 )`,
-                top: `calc( ${o} * ${Ei().heroIconPaddedHeight}px )`,
+                top: `calc( ${o} * ${hi().heroIconPaddedHeight}px )`,
               },
             },
             i.createElement(
               "div",
-              { className: Ei().HeroNameContainer },
+              { className: hi().HeroNameContainer },
               i.createElement("img", {
                 src: `${p.Y.IMG_URL}icons/hero_${r}.png`,
-                className: Ei().PrimaryStatIcon,
+                className: hi().PrimaryStatIcon,
               }),
               i.createElement(
                 "div",
-                { className: Ei().HeroName },
+                { className: hi().HeroName },
                 (0, v.Jr)(e.name_loc),
               ),
             ),
             i.createElement(
               "div",
-              { className: Ei().FadeContainer },
+              { className: hi().FadeContainer },
               i.createElement(f.p, {
                 bottom: !0,
                 color: "#000000",
@@ -31146,7 +31196,7 @@
             ),
           );
         },
-        Si = ({ heroList: e }) => {
+        Ci = ({ heroList: e }) => {
           const [t, a] = (0, i.useState)(0),
             [r, n] = (0, i.useState)(0),
             [s, o] = (0, i.useState)(""),
@@ -31166,13 +31216,13 @@
             };
           let c = 0;
           e && e.heroes.forEach((e) => (c += l(e) ? 1 : 0));
-          const _ = hi(),
-            d = parseInt(Ei().heroIconPaddedHeight);
+          const _ = vi(),
+            d = parseInt(hi().heroIconPaddedHeight);
           let m = 0;
           return i.createElement(
             "div",
             {
-              className: Ei().HeroGrid,
+              className: hi().HeroGrid,
               style: {
                 backgroundImage: `url( ${p.Y.IMG_URL}backgrounds/greyfade.jpg )`,
               },
@@ -31180,42 +31230,42 @@
             i.createElement(
               "div",
               {
-                className: Ei().Header,
+                className: hi().Header,
                 "data-aos": "fade-in",
                 "data-aos-duration": "1000",
               },
-              i.createElement("div", { className: Ei().Trapezoid }),
+              i.createElement("div", { className: hi().Trapezoid }),
               i.createElement(
                 "div",
-                { className: Ei().TitleText },
+                { className: hi().TitleText },
                 (0, v.Jr)("#herogrid_choose"),
               ),
               i.createElement(
                 "div",
-                { className: Ei().SubtitleText },
+                { className: hi().SubtitleText },
                 (0, v.Jr)("#home_choose_body"),
               ),
             ),
             i.createElement(
               "div",
-              { className: Ei().FilterContainer },
+              { className: hi().FilterContainer },
               i.createElement(
                 "div",
-                { className: Ei().FilterLabel },
+                { className: hi().FilterLabel },
                 (0, v.Jr)("#herogrid_filter"),
               ),
               i.createElement(
                 "div",
-                { className: Ei().SpecificFilterContainer },
+                { className: hi().SpecificFilterContainer },
                 i.createElement(
                   "div",
-                  { className: Ei().SelectorLabel },
+                  { className: hi().SelectorLabel },
                   (0, v.Jr)("#herogrid_attribute"),
                 ),
                 i.createElement("div", {
                   className: (0, h.Z)(
-                    Ei().Filter,
-                    1 == t && 0 == s.length && Ei().Selected,
+                    hi().Filter,
+                    1 == t && 0 == s.length && hi().Selected,
                   ),
                   style: {
                     backgroundImage: `url( ${p.Y.IMG_URL}herogrid/filter-str-active.png )`,
@@ -31224,8 +31274,8 @@
                 }),
                 i.createElement("div", {
                   className: (0, h.Z)(
-                    Ei().Filter,
-                    2 == t && 0 == s.length && Ei().Selected,
+                    hi().Filter,
+                    2 == t && 0 == s.length && hi().Selected,
                   ),
                   style: {
                     backgroundImage: `url( ${p.Y.IMG_URL}herogrid/filter-agi-active.png )`,
@@ -31234,8 +31284,8 @@
                 }),
                 i.createElement("div", {
                   className: (0, h.Z)(
-                    Ei().Filter,
-                    3 == t && 0 == s.length && Ei().Selected,
+                    hi().Filter,
+                    3 == t && 0 == s.length && hi().Selected,
                   ),
                   style: {
                     backgroundImage: `url( ${p.Y.IMG_URL}herogrid/filter-int-active.png )`,
@@ -31244,8 +31294,8 @@
                 }),
                 i.createElement("div", {
                   className: (0, h.Z)(
-                    Ei().Filter,
-                    4 == t && 0 == s.length && Ei().Selected,
+                    hi().Filter,
+                    4 == t && 0 == s.length && hi().Selected,
                   ),
                   style: {
                     backgroundImage: `url( ${p.Y.IMG_URL}herogrid/filter-uni-active.png )`,
@@ -31255,16 +31305,16 @@
               ),
               i.createElement(
                 "div",
-                { className: Ei().SpecificFilterContainer },
+                { className: hi().SpecificFilterContainer },
                 i.createElement(
                   "div",
-                  { className: Ei().SelectorLabel },
+                  { className: hi().SelectorLabel },
                   (0, v.Jr)("#herogrid_complexity"),
                 ),
                 i.createElement("div", {
                   className: (0, h.Z)(
-                    Ei().Filter,
-                    r >= 1 && 0 == s.length && Ei().Selected,
+                    hi().Filter,
+                    r >= 1 && 0 == s.length && hi().Selected,
                   ),
                   style: {
                     backgroundImage: `url( ${p.Y.IMG_URL}herogrid/filter-diamond.png )`,
@@ -31273,8 +31323,8 @@
                 }),
                 i.createElement("div", {
                   className: (0, h.Z)(
-                    Ei().Filter,
-                    r >= 2 && 0 == s.length && Ei().Selected,
+                    hi().Filter,
+                    r >= 2 && 0 == s.length && hi().Selected,
                   ),
                   style: {
                     backgroundImage: `url( ${p.Y.IMG_URL}herogrid/filter-diamond.png )`,
@@ -31283,8 +31333,8 @@
                 }),
                 i.createElement("div", {
                   className: (0, h.Z)(
-                    Ei().Filter,
-                    r >= 3 && 0 == s.length && Ei().Selected,
+                    hi().Filter,
+                    r >= 3 && 0 == s.length && hi().Selected,
                   ),
                   style: {
                     backgroundImage: `url( ${p.Y.IMG_URL}herogrid/filter-diamond.png )`,
@@ -31294,12 +31344,12 @@
               ),
               i.createElement(
                 "div",
-                { className: Ei().SearchBarContainer },
+                { className: hi().SearchBarContainer },
                 i.createElement(
                   "div",
-                  { className: Ei().SearchBar },
+                  { className: hi().SearchBar },
                   i.createElement("div", {
-                    className: Ei().MagnifyingGlass,
+                    className: hi().MagnifyingGlass,
                     style: {
                       backgroundImage: `url( ${p.Y.IMG_URL}icons/search.svg )`,
                     },
@@ -31318,18 +31368,18 @@
             ),
             i.createElement(
               "div",
-              { className: (0, h.Z)(Ei().StateLoading, !e && Ei().Show) },
+              { className: (0, h.Z)(hi().StateLoading, !e && hi().Show) },
               (0, v.Jr)("#loading"),
             ),
             i.createElement(
               "div",
-              { className: (0, h.Z)(Ei().NoHeroes, e && 0 == c && Ei().Show) },
+              { className: (0, h.Z)(hi().NoHeroes, e && 0 == c && hi().Show) },
               (0, v.Jr)("#herogrid_noheroes"),
             ),
             i.createElement(
               "div",
               {
-                className: Ei().GridList,
+                className: hi().GridList,
                 style: { height: Math.ceil(c / _) * d + 40 },
               },
               e &&
@@ -31340,7 +31390,7 @@
                     const t = l(e);
                     return (
                       (m += t ? 1 : 0),
-                      i.createElement(vi, {
+                      i.createElement(Si, {
                         key: e.id,
                         hero: e,
                         hidden: !t,
@@ -31351,11 +31401,11 @@
             ),
           );
         },
-        Ci = (0, c.Pi)((e) => {
+        bi = (0, c.Pi)((e) => {
           const t = Pa.L.Get().getHeroList();
           return i.createElement(
             "div",
-            { className: Ei().HeroGridPage },
+            { className: hi().HeroGridPage },
             i.createElement(Ne.j, { bOverlapping: !0 }),
             i.createElement(Nt.Z, null),
             i.createElement(
@@ -31363,69 +31413,69 @@
               null,
               i.createElement("title", null, (0, v.Jr)("#herogrid_title")),
             ),
-            i.createElement(Si, { heroList: t }),
+            i.createElement(Ci, { heroList: t }),
             i.createElement(T.U, null),
           );
         });
-      var bi = a(77108),
-        yi = a(39761),
-        ki = a.n(yi);
-      const Ti = () =>
+      var yi = a(77108),
+        ki = a(39761),
+        Ti = a.n(ki);
+      const fi = () =>
           i.createElement(
             "a",
             { href: "https://store.steampowered.com/app/570/Dota_2/" },
             i.createElement(
               "div",
-              { className: ki().PlayButton },
+              { className: Ti().PlayButton },
               i.createElement("div", {
-                className: ki().SteamLogo,
+                className: Ti().SteamLogo,
                 style: {
                   backgroundImage: `url( ${p.Y.IMG_URL}/icons/steam.svg )`,
                 },
               }),
               i.createElement(
                 "div",
-                { className: ki().RightSide },
+                { className: Ti().RightSide },
                 i.createElement(
                   "div",
-                  { className: ki().PlayForFree },
+                  { className: Ti().PlayForFree },
                   (0, v.Jr)("#play_for_free"),
                 ),
                 i.createElement(
                   "div",
-                  { className: ki().Download },
+                  { className: Ti().Download },
                   (0, v.Jr)("#download_on_steam"),
                 ),
               ),
             ),
           ),
-        fi = (e) =>
+        Mi = (e) =>
           e.link
             ? i.createElement(
                 _.rU,
-                { to: e.link, className: ki().StandardButton },
+                { to: e.link, className: Ti().StandardButton },
                 i.createElement(
                   "div",
-                  { className: ki().ButtonText },
+                  { className: Ti().ButtonText },
                   (0, v.Jr)(e.text),
                 ),
               )
             : i.createElement(
                 "div",
-                { className: ki().StandardButton },
+                { className: Ti().StandardButton },
                 i.createElement(
                   "div",
-                  { className: ki().ButtonText },
+                  { className: Ti().ButtonText },
                   (0, v.Jr)(e.text),
                 ),
               ),
-        Mi = () => i.createElement("div", { className: ki().HorizBar }),
-        Ri = () =>
+        Ri = () => i.createElement("div", { className: Ti().HorizBar }),
+        Ii = () =>
           i.createElement("div", {
-            className: ki().RightArrow,
+            className: Ti().RightArrow,
             style: { backgroundImage: `url( ${p.Y.IMG_URL}/arrow_left.png )` },
           }),
-        Ii = (0, c.Pi)(() => {
+        Bi = (0, c.Pi)(() => {
           const e = Pa.L.Get().getHeroList();
           let t = [];
           return (
@@ -31437,14 +31487,14 @@
             t.forEach((e, a) => t[a].push(...e)),
             i.createElement(
               "div",
-              { className: ki().HeroGrid },
+              { className: Ti().HeroGrid },
               e &&
                 t.map((e, t) =>
                   i.createElement(
                     "div",
                     {
                       key: "Row" + t,
-                      className: (0, h.Z)(ki().HeroGridRow, `Row${t}`),
+                      className: (0, h.Z)(Ti().HeroGridRow, `Row${t}`),
                       style: {
                         width: 255 * (e.length + 2),
                         animationDuration:
@@ -31474,7 +31524,7 @@
                           to: l._.hero(
                             e.name_english_loc.replace(/ /g, "").toLowerCase(),
                           ),
-                          className: ki().HeroIcon,
+                          className: Ti().HeroIcon,
                           style: {
                             backgroundImage: `url( ${
                               p.Y.IMG_URL
@@ -31486,20 +31536,20 @@
                         },
                         i.createElement(
                           "div",
-                          { className: ki().HeroNameContainer },
+                          { className: Ti().HeroNameContainer },
                           i.createElement("img", {
                             src: `${p.Y.IMG_URL}icons/hero_${a}.png`,
-                            className: ki().PrimaryStatIcon,
+                            className: Ti().PrimaryStatIcon,
                           }),
                           i.createElement(
                             "div",
-                            { className: ki().HeroName },
+                            { className: Ti().HeroName },
                             (0, v.Jr)(e.name_loc),
                           ),
                         ),
                         i.createElement(
                           "div",
-                          { className: ki().FadeContainer },
+                          { className: Ti().FadeContainer },
                           i.createElement(f.p, {
                             bottom: !0,
                             color: "#000000",
@@ -31515,7 +31565,7 @@
             )
           );
         }),
-        Bi = (e) => {
+        Ai = (e) => {
           const [t, a] = (0, i.useState)(void 0);
           t ||
             kt.j1
@@ -31532,7 +31582,7 @@
                 break;
           return i.createElement(
             "div",
-            { className: ki().HomePage },
+            { className: Ti().HomePage },
             i.createElement(Ne.j, { bOverlapping: !0 }),
             i.createElement(
               B.q,
@@ -31541,14 +31591,14 @@
             ),
             i.createElement(
               "div",
-              { className: ki().HeaderSection },
+              { className: Ti().HeaderSection },
               i.createElement(
                 "div",
-                { className: ki().BackgroundVideoContainer },
+                { className: Ti().BackgroundVideoContainer },
                 i.createElement(
                   "video",
                   {
-                    className: ki().BackgroundVideo,
+                    className: Ti().BackgroundVideo,
                     autoPlay: !0,
                     preload: "auto",
                     muted: !0,
@@ -31568,62 +31618,62 @@
               i.createElement(
                 "div",
                 {
-                  className: ki().QuoteContainer,
+                  className: Ti().QuoteContainer,
                   "data-aos": "fade-right",
                   "data-aos-delay": "1000",
                   "data-aos-duration": "2500",
                 },
                 i.createElement(
                   "div",
-                  { className: ki().Quote },
+                  { className: Ti().Quote },
                   i.createElement(
                     "div",
-                    { className: ki().QuoteText },
+                    { className: Ti().QuoteText },
                     (0, v.Jr)("#quote_destructoid_quote"),
                   ),
                   i.createElement(
                     "div",
-                    { className: ki().QuoteCredit },
+                    { className: Ti().QuoteCredit },
                     (0, v.Jr)("#quote_destructoid_credit"),
                   ),
                 ),
-                i.createElement(Mi, null),
-                i.createElement(Ti, null),
+                i.createElement(Ri, null),
+                i.createElement(fi, null),
               ),
-              i.createElement("div", { className: ki().BottomFade }),
+              i.createElement("div", { className: Ti().BottomFade }),
             ),
             i.createElement(
               "div",
-              { className: ki().NewsSection },
+              { className: Ti().NewsSection },
               i.createElement(
                 "div",
-                { className: ki().NewsTop },
+                { className: Ti().NewsTop },
                 i.createElement(
                   "div",
-                  { className: ki().Latest },
+                  { className: Ti().Latest },
                   (0, v.Jr)("#home_latest_news"),
                 ),
                 i.createElement(
                   _.rU,
-                  { to: l._.news(), className: ki().ViewAll },
+                  { to: l._.news(), className: Ti().ViewAll },
                   (0, v.Jr)("#home_view_all"),
-                  i.createElement(Ri, null),
+                  i.createElement(Ii, null),
                 ),
               ),
-              i.createElement("div", { className: ki().NewsCapsules }, r),
+              i.createElement("div", { className: Ti().NewsCapsules }, r),
             ),
             i.createElement(
               "div",
-              { className: ki().BattleSection },
+              { className: Ti().BattleSection },
               i.createElement(
                 "div",
-                { className: ki().BattleBG },
+                { className: Ti().BattleBG },
                 i.createElement("img", {
-                  className: ki().BattleImg,
+                  className: Ti().BattleImg,
                   src: `${p.Y.IMG_URL}/home/radiant_dire5.jpg`,
                 }),
                 i.createElement("img", {
-                  className: (0, h.Z)(ki().BattleImg, ki().BattleImgMobile),
+                  className: (0, h.Z)(Ti().BattleImg, Ti().BattleImgMobile),
                   src: `${p.Y.IMG_URL}/home/battle_mobile.jpg`,
                 }),
                 i.createElement(f.p, {
@@ -31636,30 +31686,30 @@
               ),
               i.createElement(
                 "div",
-                { className: ki().LeftHalf },
+                { className: Ti().LeftHalf },
                 i.createElement(
                   "div",
                   {
-                    className: ki().HeaderText,
+                    className: Ti().HeaderText,
                     "data-aos": "fade-up",
                     "data-aos-duration": "1500",
                   },
                   (0, v.Jr)("#home_battle_join"),
                 ),
-                i.createElement(Mi, null),
+                i.createElement(Ri, null),
                 i.createElement(
                   "div",
-                  { className: ki().BodyText },
+                  { className: Ti().BodyText },
                   (0, v.Jr)("#home_battle_body"),
                   i.createElement(
                     _.rU,
                     { to: l._.news() },
                     i.createElement(
                       "div",
-                      { className: ki().StandardButton },
+                      { className: Ti().StandardButton },
                       i.createElement(
                         "div",
-                        { className: ki().ButtonText },
+                        { className: Ti().ButtonText },
                         (0, v.Jr)("#home_battle_button"),
                       ),
                     ),
@@ -31669,7 +31719,7 @@
             ),
             i.createElement(
               "div",
-              { className: ki().ChooseSection },
+              { className: Ti().ChooseSection },
               i.createElement(f.p, {
                 top: !0,
                 color: "#000000",
@@ -31687,60 +31737,60 @@
               i.createElement(
                 "div",
                 {
-                  className: ki().HeaderText,
+                  className: Ti().HeaderText,
                   "data-aos": "fade-up",
                   "data-aos-duration": "2000",
                 },
                 (0, v.Jr)("#home_choose_header"),
               ),
-              i.createElement(Mi, null),
+              i.createElement(Ri, null),
               i.createElement(
                 "div",
-                { className: ki().BodyText },
+                { className: Ti().BodyText },
                 (0, v.Jr)("#home_choose_body"),
                 i.createElement(
                   _.rU,
                   { to: l._.herogrid() },
                   i.createElement(
                     "div",
-                    { className: ki().StandardButton },
+                    { className: Ti().StandardButton },
                     i.createElement(
                       "div",
-                      { className: ki().ButtonText },
+                      { className: Ti().ButtonText },
                       (0, v.Jr)("#home_choose_button"),
                     ),
                   ),
                 ),
               ),
-              i.createElement(Ii, null),
+              i.createElement(Bi, null),
             ),
             i.createElement(
               "div",
               {
-                className: ki().ProCircuitSection,
+                className: Ti().ProCircuitSection,
                 style: {
                   backgroundImage: `url( ${p.Y.IMG_URL}/home/dpc.jpg )`,
                 },
               },
               i.createElement(
                 "div",
-                { className: ki().DPCSmImgs },
+                { className: Ti().DPCSmImgs },
                 i.createElement("img", {
-                  className: (0, h.Z)(ki().DPCSmImg, ki().Img1),
+                  className: (0, h.Z)(Ti().DPCSmImg, Ti().Img1),
                   src: `${p.Y.IMG_URL}/home/dpc_ti9_1.jpg`,
                   "data-aos": "fade-up",
                   "data-aos-delay": "300",
                   "data-aos-duration": "2500",
                 }),
                 i.createElement("img", {
-                  className: (0, h.Z)(ki().DPCSmImg, ki().Img2),
+                  className: (0, h.Z)(Ti().DPCSmImg, Ti().Img2),
                   src: `${p.Y.IMG_URL}/home/dpc_ti9_2.jpg`,
                   "data-aos": "fade-up",
                   "data-aos-delay": "600",
                   "data-aos-duration": "2500",
                 }),
                 i.createElement("img", {
-                  className: (0, h.Z)(ki().DPCSmImg, ki().Img3),
+                  className: (0, h.Z)(Ti().DPCSmImg, Ti().Img3),
                   src: `${p.Y.IMG_URL}/home/dpc_ti9_3.jpg`,
                   "data-aos": "fade-up",
                   "data-aos-delay": "1000",
@@ -31748,63 +31798,63 @@
                 }),
               ),
               i.createElement("div", {
-                className: ki().DPCIcon,
+                className: Ti().DPCIcon,
                 style: {
                   backgroundImage: `url( ${p.Y.IMG_URL}/icons/dpc.svg )`,
                 },
               }),
               i.createElement(
                 "div",
-                { className: ki().HeaderText },
+                { className: Ti().HeaderText },
                 (0, v.Jr)("#home_dpc_header"),
               ),
-              i.createElement(Mi, null),
+              i.createElement(Ri, null),
               i.createElement(
                 "div",
-                { className: ki().BodyText },
+                { className: Ti().BodyText },
                 (0, v.Jr)("#home_dpc_body"),
               ),
             ),
             i.createElement(
               "div",
               {
-                className: ki().JoinBattleSection,
+                className: Ti().JoinBattleSection,
                 style: {
                   backgroundImage: `url( ${p.Y.IMG_URL}/home/background4.png )`,
                 },
               },
               i.createElement(
                 "div",
-                { className: ki().HeaderText },
+                { className: Ti().HeaderText },
                 (0, v.Jr)("#home_join_header"),
               ),
-              i.createElement(Mi, null),
+              i.createElement(Ri, null),
               i.createElement(
                 "a",
                 { href: "https://store.steampowered.com/app/570/Dota_2/" },
-                i.createElement(fi, { text: "#home_play_free_now" }),
+                i.createElement(Mi, { text: "#home_play_free_now" }),
               ),
             ),
             i.createElement(T.U, null),
           );
         };
-      var Ai = a(96680),
-        wi = a.n(Ai);
-      const Di = (e) =>
+      var wi = a(96680),
+        Di = a.n(wi);
+      const Ni = (e) =>
           i.createElement(
             "div",
-            { className: (0, h.Z)(wi().Capsule, e.large && wi().Large) },
+            { className: (0, h.Z)(Di().Capsule, e.large && Di().Large) },
             e.image &&
               !e.video &&
               i.createElement("img", {
-                className: wi().Image,
+                className: Di().Image,
                 src: `${p.Y.IMG_URL}${e.image}`,
               }),
             e.video &&
               i.createElement(
                 "video",
                 {
-                  className: wi().Video,
+                  className: Di().Video,
                   autoPlay: !0,
                   preload: "auto",
                   muted: !0,
@@ -31821,35 +31871,35 @@
                   src: `${p.Y.VIDEO_URL}${e.video}.mp4`,
                 }),
               ),
-            i.createElement("div", { className: wi().Title }, e.title),
+            i.createElement("div", { className: Di().Title }, e.title),
             i.createElement(
               "div",
-              { className: wi().Description },
+              { className: Di().Description },
               e.description,
             ),
           ),
-        Ni = (e) =>
+        Li = (e) =>
           i.createElement(
             "div",
-            { className: wi().EntryList },
-            i.createElement("div", { className: wi().Title }, e.title),
+            { className: Di().EntryList },
+            i.createElement("div", { className: Di().Title }, e.title),
             e.entrySections.map((e, t) =>
               i.createElement(
                 "ul",
                 {
                   key: t,
-                  className: (0, h.Z)(wi().EntrySection, e.bold && wi().Bold),
+                  className: (0, h.Z)(Di().EntrySection, e.bold && Di().Bold),
                 },
                 e.entries.map((e, t) =>
-                  i.createElement("li", { key: t, className: wi().Entry }, e),
+                  i.createElement("li", { key: t, className: Di().Entry }, e),
                 ),
               ),
             ),
           ),
-        Li = () =>
+        Pi = () =>
           i.createElement(
             "div",
-            { className: wi().SpringCleaningPage },
+            { className: Di().SpringCleaningPage },
             i.createElement(
               B.q,
               null,
@@ -31862,37 +31912,37 @@
             i.createElement(Ne.j, { bOverlapping: !0 }),
             i.createElement(Nt.Z, null),
             i.createElement("div", {
-              className: wi().HeaderImage,
+              className: Di().HeaderImage,
               style: {
                 backgroundImage: `url( ${p.Y.IMG_URL}springcleaning22/keyart.jpg )`,
               },
             }),
             i.createElement(
               "div",
-              { className: wi().HeaderText },
+              { className: Di().HeaderText },
               i.createElement(
                 "div",
-                { className: wi().MainTitle },
+                { className: Di().MainTitle },
                 (0, v.Jr)("#springcleaning_title"),
               ),
               i.createElement(
                 "div",
-                { className: wi().MainDesc },
+                { className: Di().MainDesc },
                 (0, v.Jr)("#springcleaning22_desc"),
               ),
             ),
             i.createElement(
               "div",
               {
-                className: wi().CapsuleSection,
+                className: Di().CapsuleSection,
                 style: {
                   backgroundImage: `url( ${p.Y.IMG_URL}springcleaning22/featured.jpg )`,
                 },
               },
               i.createElement(
                 "div",
-                { className: wi().CapuleList },
-                i.createElement(Di, {
+                { className: Di().CapuleList },
+                i.createElement(Ni, {
                   image: "springcleaning22/aghs_tooltips.png",
                   title: (0, v.Jr)("#springcleaning22_aghs_tooltips"),
                   description: (0, v.Jr)(
@@ -31900,21 +31950,21 @@
                   ),
                   large: !0,
                 }),
-                i.createElement(Di, {
+                i.createElement(Ni, {
                   image: "springcleaning22/mute.jpg",
                   video: "springcleaning22/mute",
                   title: (0, v.Jr)("#springcleaning22_muting_ui"),
                   description: (0, v.Jr)("#springcleaning22_muting_ui_desc"),
                   large: !0,
                 }),
-                i.createElement(Di, {
+                i.createElement(Ni, {
                   image: "springcleaning22/shop_search.jpg",
                   video: "springcleaning22/shop_search",
                   title: (0, v.Jr)("#springcleaning22_shop_search"),
                   description: (0, v.Jr)("#springcleaning22_shop_search_desc"),
                   large: !0,
                 }),
-                i.createElement(Di, {
+                i.createElement(Ni, {
                   image: "springcleaning22/hero_demo.jpg",
                   video: "springcleaning22/hero_demo",
                   title: (0, v.Jr)("#springcleaning22_demo_hero"),
@@ -31969,7 +32019,7 @@
                   ),
                   large: !0,
                 }),
-                i.createElement(Di, {
+                i.createElement(Ni, {
                   image: "springcleaning22/expanded_stat_tooltips.png",
                   title: (0, v.Jr)("#springcleaning22_item_tooltips"),
                   description: (0, v.Jr)(
@@ -31977,7 +32027,7 @@
                   ),
                   large: !1,
                 }),
-                i.createElement(Di, {
+                i.createElement(Ni, {
                   image: "springcleaning22/damage_colors.png",
                   title: (0, v.Jr)("#springcleaning22_colored_ability_damage"),
                   description: (0, v.Jr)(
@@ -31985,7 +32035,7 @@
                   ),
                   large: !1,
                 }),
-                i.createElement(Di, {
+                i.createElement(Ni, {
                   image: "springcleaning22/plural_strings.png",
                   title: (0, v.Jr)("#springcleaning22_pluralized_strings"),
                   description: (0, v.Jr)(
@@ -31993,7 +32043,7 @@
                   ),
                   large: !1,
                 }),
-                i.createElement(Di, {
+                i.createElement(Ni, {
                   image: "springcleaning22/permanent_buffs.png",
                   title: (0, v.Jr)("#springcleaning22_permanent_debuffs"),
                   description: (0, v.Jr)(
@@ -32001,7 +32051,7 @@
                   ),
                   large: !1,
                 }),
-                i.createElement(Di, {
+                i.createElement(Ni, {
                   image: "springcleaning22/post_game.jpg",
                   video: "springcleaning22/post_game",
                   title: (0, v.Jr)("#springcleaning22_post_game_sortable"),
@@ -32015,15 +32065,15 @@
             i.createElement(
               "div",
               {
-                className: wi().ListSection,
+                className: Di().ListSection,
                 style: {
                   backgroundImage: `url( ${p.Y.IMG_URL}springcleaning22/list.jpg )`,
                 },
               },
               i.createElement(
                 "div",
-                { className: wi().ListList },
-                i.createElement(Ni, {
+                { className: Di().ListList },
+                i.createElement(Li, {
                   title: (0, v.Jr)("#gameplay"),
                   entrySections: [
                     {
@@ -32162,7 +32212,7 @@
                     },
                   ],
                 }),
-                i.createElement(Ni, {
+                i.createElement(Li, {
                   title: (0, v.Jr)("#rubick"),
                   entrySections: [
                     {
@@ -32221,7 +32271,7 @@
                     },
                   ],
                 }),
-                i.createElement(Ni, {
+                i.createElement(Li, {
                   title: (0, v.Jr)("#user_interface"),
                   entrySections: [
                     {
@@ -32276,7 +32326,7 @@
                     },
                   ],
                 }),
-                i.createElement(Ni, {
+                i.createElement(Li, {
                   title: (0, v.Jr)("#cosmetics"),
                   entrySections: [
                     {
@@ -32342,7 +32392,7 @@
                     },
                   ],
                 }),
-                i.createElement(Ni, {
+                i.createElement(Li, {
                   title: (0, v.Jr)("#performance"),
                   entrySections: [
                     {
@@ -32366,7 +32416,7 @@
                     },
                   ],
                 }),
-                i.createElement(Ni, {
+                i.createElement(Li, {
                   title: (0, v.Jr)("#dota_plus"),
                   entrySections: [
                     {
@@ -32472,7 +32522,7 @@
                     },
                   ],
                 }),
-                i.createElement(Ni, {
+                i.createElement(Li, {
                   title: (0, v.Jr)("#custom_games"),
                   entrySections: [
                     {
@@ -32492,7 +32542,7 @@
                     },
                   ],
                 }),
-                i.createElement(Ni, {
+                i.createElement(Li, {
                   title: (0, v.Jr)("#workshop"),
                   entrySections: [
                     {
@@ -32507,11 +32557,11 @@
             ),
             i.createElement(T.U, null),
           );
-      var Pi,
-        Fi = a(52868),
-        Gi = a.n(Fi),
-        Oi = a(86930),
-        xi = a.n(Oi);
+      var Fi,
+        Gi = a(52868),
+        Oi = a.n(Gi),
+        xi = a(86930),
+        Ui = a.n(xi);
       !(function (e) {
         (e[(e.NONE = 0)] = "NONE"),
           (e[(e.PENDING = 1)] = "PENDING"),
@@ -32521,15 +32571,15 @@
           (e[(e.ALREADY_BOUND = 5)] = "ALREADY_BOUND"),
           (e[(e.ALREADY_SELF_BOUND = 6)] = "ALREADY_SELF_BOUND"),
           (e[(e.ERROR_UNKNOWN = 7)] = "ERROR_UNKNOWN");
-      })(Pi || (Pi = {}));
-      const Ui = () => {
+      })(Fi || (Fi = {}));
+      const Wi = () => {
         const [e, t] = (0, i.useState)([]),
           [a, r] = (0, i.useState)(""),
-          [n, s] = (0, i.useState)(Pi.NONE),
+          [n, s] = (0, i.useState)(Fi.NONE),
           o = 3e3;
         (0, i.useEffect)(() => {
-          (n != Pi.NONE && n != Pi.SUCCESS) ||
-            Gi()
+          (n != Fi.NONE && n != Fi.SUCCESS) ||
+            Oi()
               .get(
                 p.Y.BASE_URL +
                   l._.international_badgebinding() +
@@ -32552,7 +32602,7 @@
         return i.createElement(
           "div",
           {
-            className: xi().InternationalBadgeBindingPage,
+            className: Ui().InternationalBadgeBindingPage,
             style: {
               backgroundImage: `url( ${p.Y.IMG_URL}backgrounds/slate_bg_01.jpg )`,
             },
@@ -32564,21 +32614,21 @@
             i.createElement("title", null, (0, v.Jr)("#ti_badgebinding_title")),
           ),
           i.createElement("div", {
-            className: xi().HeaderImage,
+            className: Ui().HeaderImage,
             style: {
               backgroundImage: `url( ${p.Y.IMG_URL}backgrounds/ti10_half_aegis.png )`,
             },
           }),
           i.createElement(
             "div",
-            { className: xi().Body },
+            { className: Ui().Body },
             0 == p.Y.ACCOUNT_ID &&
               i.createElement(
                 "div",
-                { className: xi().NeedToLogin },
+                { className: Ui().NeedToLogin },
                 i.createElement(
                   "div",
-                  { className: xi().Message },
+                  { className: Ui().Message },
                   (0, v.Jr)("#ti_badgebinding_needtologin"),
                 ),
                 i.createElement(
@@ -32587,7 +32637,7 @@
                     href: `${p.Y.COMMUNITY_URL}oauth/login?client_id=${
                       p.Y.CLIENT_ID
                     }&response_type=token&state=${location.pathname.substr(1)}`,
-                    className: xi().SignInButton,
+                    className: Ui().SignInButton,
                   },
                   (0, v.Jr)("#sign_in"),
                 ),
@@ -32595,26 +32645,26 @@
             0 != p.Y.ACCOUNT_ID &&
               i.createElement(
                 "div",
-                { className: xi().SignedIn },
+                { className: Ui().SignedIn },
                 "\\",
                 (null == e ? void 0 : e.length) > 0 &&
                   i.createElement(
                     "div",
-                    { className: xi().BoundBadges },
+                    { className: Ui().BoundBadges },
                     (0, v.Jr)("#ti_badgebinding_existing_binds"),
                     null == e
                       ? void 0
                       : e.map((e) =>
                           i.createElement(
                             "div",
-                            { key: e, className: xi().BadgeID },
+                            { key: e, className: Ui().BadgeID },
                             e,
                           ),
                         ),
                   ),
                 i.createElement(
                   "div",
-                  { className: xi().BadgeDescription },
+                  { className: Ui().BadgeDescription },
                   (0, v.Jr)(
                     (null == e ? void 0 : e.length) > 0
                       ? "#ti_badgebinding_desc_multi"
@@ -32623,28 +32673,28 @@
                 ),
                 i.createElement(
                   "div",
-                  { className: xi().BadgeWarning },
+                  { className: Ui().BadgeWarning },
                   (0, v.Jr)("#ti_badgebinding_warning"),
                 ),
                 i.createElement("input", {
                   type: "text",
                   autoFocus: !0,
                   placeholder: (0, ra.Xx)("#ti_badgebinding_placeholder"),
-                  className: xi().BadgeIDInput,
+                  className: Ui().BadgeIDInput,
                   value: a,
                   onChange: (e) => r(e.target.value),
                 }),
-                n == Pi.NONE &&
+                n == Fi.NONE &&
                   i.createElement(
                     "div",
                     {
                       className: (0, h.Z)(
-                        xi().SubmitButton,
-                        a.length > 0 && xi().ValidBadgeIDLength,
+                        Ui().SubmitButton,
+                        a.length > 0 && Ui().ValidBadgeIDLength,
                       ),
                       onClick: () => {
-                        s(Pi.PENDING),
-                          Gi()
+                        s(Fi.PENDING),
+                          Oi()
                             .post(
                               p.Y.BASE_URL +
                                 l._.international_badgebinding() +
@@ -32664,28 +32714,28 @@
                                   : t.result
                               ) {
                                 case 0:
-                                  s(Pi.SUCCESS),
-                                    setTimeout(() => s(Pi.NONE), 5e3);
+                                  s(Fi.SUCCESS),
+                                    setTimeout(() => s(Fi.NONE), 5e3);
                                   break;
                                 case 1:
-                                  s(Pi.INVALID_BADGE),
-                                    setTimeout(() => s(Pi.NONE), o);
+                                  s(Fi.INVALID_BADGE),
+                                    setTimeout(() => s(Fi.NONE), o);
                                   break;
                                 case 2:
-                                  s(Pi.COOLDOWN),
-                                    setTimeout(() => s(Pi.NONE), o);
+                                  s(Fi.COOLDOWN),
+                                    setTimeout(() => s(Fi.NONE), o);
                                   break;
                                 case 3:
-                                  s(Pi.ALREADY_BOUND),
-                                    setTimeout(() => s(Pi.NONE), o);
+                                  s(Fi.ALREADY_BOUND),
+                                    setTimeout(() => s(Fi.NONE), o);
                                   break;
                                 case 4:
-                                  s(Pi.ALREADY_SELF_BOUND),
-                                    setTimeout(() => s(Pi.NONE), o);
+                                  s(Fi.ALREADY_SELF_BOUND),
+                                    setTimeout(() => s(Fi.NONE), o);
                                   break;
                                 default:
-                                  s(Pi.ERROR_UNKNOWN),
-                                    setTimeout(() => s(Pi.NONE), o);
+                                  s(Fi.ERROR_UNKNOWN),
+                                    setTimeout(() => s(Fi.NONE), o);
                               }
                               r("");
                             });
@@ -32693,15 +32743,15 @@
                     },
                     (0, v.Jr)("#ti_badgebinding_bind"),
                   ),
-                n != Pi.NONE &&
+                n != Fi.NONE &&
                   i.createElement(
                     "div",
                     {
                       className: (0, h.Z)(
-                        xi().BindState,
-                        n == Pi.PENDING && xi().Pending,
-                        n == Pi.SUCCESS && xi().Success,
-                        n != Pi.SUCCESS && n != Pi.PENDING && xi().Failure,
+                        Ui().BindState,
+                        n == Fi.PENDING && Ui().Pending,
+                        n == Fi.SUCCESS && Ui().Success,
+                        n != Fi.SUCCESS && n != Fi.PENDING && Ui().Failure,
                       ),
                     },
                     (0, v.Jr)(
@@ -32722,13 +32772,13 @@
           i.createElement(T.U, null),
         );
       };
-      var Wi = a(45692),
-        Hi = a.n(Wi);
-      const zi = (0, c.Pi)((e) =>
+      var Hi = a(45692),
+        zi = a.n(Hi);
+      const Vi = (0, c.Pi)((e) =>
         i.createElement(
           "div",
           {
-            className: Hi().InternationalFAQPage,
+            className: zi().InternationalFAQPage,
             style: {
               backgroundImage: `url( ${p.Y.IMG_URL}backgrounds/slate_bg_01.jpg )`,
             },
@@ -32740,130 +32790,130 @@
             i.createElement("title", null, (0, v.Jr)("#ti_2021_faq_title")),
           ),
           i.createElement("div", {
-            className: Hi().HeaderImage,
+            className: zi().HeaderImage,
             style: {
               backgroundImage: `url( ${p.Y.IMG_URL}backgrounds/ti10_half_aegis.png )`,
             },
           }),
           i.createElement(
             "div",
-            { className: Hi().Body },
+            { className: zi().Body },
             i.createElement(
               "div",
-              { className: Hi().TopHeader },
+              { className: zi().TopHeader },
               (0, v.Jr)("#ti_2021_ticket_header"),
             ),
             i.createElement(
               "div",
-              { className: Hi().TopBody },
+              { className: zi().TopBody },
               (0, v.Jr)("#ti_2021_body"),
             ),
             i.createElement(
               "div",
-              { className: Hi().FAQ },
+              { className: zi().FAQ },
               i.createElement(
                 "div",
-                { className: Hi().FAQLabel },
+                { className: zi().FAQLabel },
                 (0, v.Jr)("#dpc_about_faq"),
               ),
               i.createElement(
                 "div",
-                { className: Hi().FAQQuestion },
+                { className: zi().FAQQuestion },
                 (0, v.Jr)("#ti_2021_faq_q_1"),
               ),
               i.createElement(
                 "div",
-                { className: Hi().FAQAnswer },
+                { className: zi().FAQAnswer },
                 (0, v.Jr)("#ti_2021_faq_a_1"),
               ),
               i.createElement(
                 "div",
-                { className: Hi().FAQQuestion },
+                { className: zi().FAQQuestion },
                 (0, v.Jr)("#ti_2021_faq_q_2"),
               ),
               i.createElement(
                 "div",
-                { className: Hi().FAQAnswer },
+                { className: zi().FAQAnswer },
                 (0, v.Jr)("#ti_2021_faq_a_2"),
               ),
               i.createElement(
                 "div",
-                { className: Hi().FAQQuestion },
+                { className: zi().FAQQuestion },
                 (0, v.Jr)("#ti_2021_faq_q_3"),
               ),
               i.createElement(
                 "div",
-                { className: Hi().FAQAnswer },
+                { className: zi().FAQAnswer },
                 (0, v.Jr)("#ti_2021_faq_a_3"),
               ),
               i.createElement(
                 "div",
-                { className: Hi().FAQQuestion },
+                { className: zi().FAQQuestion },
                 (0, v.Jr)("#ti_2021_faq_q_4"),
               ),
               i.createElement(
                 "div",
-                { className: Hi().FAQAnswer },
+                { className: zi().FAQAnswer },
                 (0, v.Jr)("#ti_2021_faq_a_4"),
               ),
               i.createElement(
                 "div",
-                { className: Hi().FAQQuestion },
+                { className: zi().FAQQuestion },
                 (0, v.Jr)("#ti_2021_faq_q_5"),
               ),
               i.createElement(
                 "div",
-                { className: Hi().FAQAnswer },
+                { className: zi().FAQAnswer },
                 (0, v.Jr)("#ti_2021_faq_a_5"),
               ),
               i.createElement(
                 "div",
-                { className: Hi().FAQQuestion },
+                { className: zi().FAQQuestion },
                 (0, v.Jr)("#ti_2021_faq_q_6"),
               ),
               i.createElement(
                 "div",
-                { className: Hi().FAQAnswer },
+                { className: zi().FAQAnswer },
                 (0, v.Jr)("#ti_2021_faq_a_6"),
               ),
               i.createElement(
                 "div",
-                { className: Hi().FAQQuestion },
+                { className: zi().FAQQuestion },
                 (0, v.Jr)("#ti_2021_faq_q_7"),
               ),
               i.createElement(
                 "div",
-                { className: Hi().FAQAnswer },
+                { className: zi().FAQAnswer },
                 (0, v.Jr)("#ti_2021_faq_a_7"),
               ),
               i.createElement(
                 "div",
-                { className: Hi().FAQQuestion },
+                { className: zi().FAQQuestion },
                 (0, v.Jr)("#ti_2021_faq_q_8"),
               ),
               i.createElement(
                 "div",
-                { className: Hi().FAQAnswer },
+                { className: zi().FAQAnswer },
                 (0, v.Jr)("#ti_2021_faq_a_8"),
               ),
               i.createElement(
                 "div",
-                { className: Hi().FAQQuestion },
+                { className: zi().FAQQuestion },
                 (0, v.Jr)("#ti_2021_faq_q_9"),
               ),
               i.createElement(
                 "div",
-                { className: Hi().FAQAnswer },
+                { className: zi().FAQAnswer },
                 (0, v.Jr)("#ti_2021_faq_a_9"),
               ),
               i.createElement(
                 "div",
-                { className: Hi().FAQQuestion },
+                { className: zi().FAQQuestion },
                 (0, v.Jr)("#ti_2021_faq_q_10"),
               ),
               i.createElement(
                 "div",
-                { className: Hi().FAQAnswer },
+                { className: zi().FAQAnswer },
                 (0, v.Jr)("#ti_2021_faq_a_10"),
               ),
             ),
@@ -32871,13 +32921,13 @@
           i.createElement(T.U, null),
         ),
       );
-      var Vi = a(14180),
-        ji = a.n(Vi);
-      const Yi = () => (
+      var ji = a(14180),
+        Yi = a.n(ji);
+      const Ji = () => (
         console.log(p.Y.IMG_URL),
         i.createElement(
           "div",
-          { className: ji().RequestForProposalPage },
+          { className: Yi().RequestForProposalPage },
           i.createElement(Ne.j, { bOverlapping: !1 }),
           i.createElement(
             B.q,
@@ -32891,24 +32941,24 @@
           i.createElement(Nt.Z, null),
           i.createElement(
             "div",
-            { className: ji().Background },
+            { className: Yi().Background },
             i.createElement(
               "div",
-              { className: ji().ContentFrame },
+              { className: Yi().ContentFrame },
               i.createElement(
                 "div",
-                { className: ji().PageTop },
+                { className: Yi().PageTop },
                 i.createElement(
                   "div",
-                  { className: ji().Title },
+                  { className: Yi().Title },
                   (0, v.Jr)("#dpc_rfp_title"),
                   i.createElement("br", null),
                   (0, v.Jr)("#dpc_rfp_subtitle"),
                 ),
-                i.createElement("div", { className: ji().SmoothLine }),
+                i.createElement("div", { className: Yi().SmoothLine }),
                 i.createElement(
                   "div",
-                  { className: ji().TextBody },
+                  { className: Yi().TextBody },
                   i.createElement("div", null, (0, v.Jr)("#dpc_rfp_body")),
                   i.createElement("br", null),
                   i.createElement(
@@ -32944,9 +32994,9 @@
           i.createElement(T.U, null),
         )
       );
-      var Ji = a(77844),
-        $i = a.n(Ji);
-      const Xi = () => {
+      var $i = a(77844),
+        Xi = a.n($i);
+      const qi = () => {
         const [e, t] = (0, i.useState)([]),
           [a, n] = (0, i.useState)([]),
           [s, o] = (0, i.useState)([]),
@@ -32958,7 +33008,7 @@
           [y, k] = (0, i.useState)([]);
         function f() {
           return (0, r.mG)(this, void 0, void 0, function* () {
-            const e = yield Gi().get(
+            const e = yield Oi().get(
               p.Y.BASE_URL + l._.majorsregistration_getautographs(),
               { params: { season: p.Y.DOTA_TEAM_FAN_UPLOAD_CONTENT_SEASON } },
             );
@@ -33171,10 +33221,10 @@
             }
             return i.createElement(
               "div",
-              { className: $i().PlayerAutographContainer },
+              { className: Xi().PlayerAutographContainer },
               i.createElement(
                 "div",
-                { className: s ? $i().NoZoom : $i().ClickZoom },
+                { className: s ? Xi().NoZoom : Xi().ClickZoom },
                 i.createElement(
                   "label",
                   null,
@@ -33193,19 +33243,19 @@
                   i.createElement("img", {
                     src: o,
                     className: s
-                      ? $i().AutographImagePlaceholder
-                      : (0, h.Z)($i().AutographImage, $i().Checkered),
+                      ? Xi().AutographImagePlaceholder
+                      : (0, h.Z)(Xi().AutographImage, Xi().Checkered),
                   }),
                 ),
               ),
               i.createElement(
                 "span",
-                { className: $i().PlayerProName },
+                { className: Xi().PlayerProName },
                 e || "(missing pro name)",
               ),
               i.createElement(
                 "span",
-                { className: $i().PlayerAccountId },
+                { className: Xi().PlayerAccountId },
                 t ? `(${t})` : "(missing account id)",
               ),
             );
@@ -33224,7 +33274,7 @@
           G = 0 == p.Y.ACCOUNT_ID && !p.Y.VALVE_INTERNAL;
         return i.createElement(
           "div",
-          { className: $i().MajorsRegistrationAutographsPage },
+          { className: Xi().MajorsRegistrationAutographsPage },
           i.createElement(Ne.j, { bOverlapping: !1 }),
           i.createElement(
             B.q,
@@ -33238,16 +33288,16 @@
           i.createElement(Nt.Z, null),
           i.createElement(
             "div",
-            { className: $i().Background },
+            { className: Xi().Background },
             i.createElement(
               "div",
-              { className: $i().ContentFrame },
+              { className: Xi().ContentFrame },
               i.createElement(
                 "div",
-                { className: $i().PageTop },
+                { className: Xi().PageTop },
                 i.createElement(
                   "div",
-                  { className: $i().Title },
+                  { className: Xi().Title },
                   `${(0, v.Jr)("#home_title")} ${(0, v.Jr)(
                     "#dpc_event_2023season",
                   )}`,
@@ -33256,16 +33306,16 @@
                 ),
                 i.createElement(
                   "div",
-                  { className: (0, h.Z)($i().Header) },
+                  { className: (0, h.Z)(Xi().Header) },
                   "Player Autographs",
                 ),
                 G &&
                   i.createElement(
                     "div",
-                    { className: $i().NeedToLogin },
+                    { className: Xi().NeedToLogin },
                     i.createElement(
                       "div",
-                      { className: $i().SignInMessage },
+                      { className: Xi().SignInMessage },
                       "Please sign in to your Steam account",
                     ),
                     i.createElement(
@@ -33276,7 +33326,7 @@
                         }&response_type=token&state=${l._.majorsregistration_autographs().substr(
                           1,
                         )}`,
-                        className: $i().SignInButton,
+                        className: Xi().SignInButton,
                       },
                       "Sign in",
                     ),
@@ -33284,13 +33334,13 @@
                 !G &&
                   i.createElement(
                     "div",
-                    { className: $i().SubmitAutographs },
+                    { className: Xi().SubmitAutographs },
                     i.createElement(
                       "div",
                       null,
                       i.createElement(
                         "h3",
-                        { className: $i().Requirements },
+                        { className: Xi().Requirements },
                         "Requirements",
                       ),
                       i.createElement(
@@ -33318,7 +33368,7 @@
                           ),
                         ),
                       ),
-                      i.createElement("h3", { className: $i().Notes }, "Notes"),
+                      i.createElement("h3", { className: Xi().Notes }, "Notes"),
                       i.createElement(
                         "ul",
                         null,
@@ -33338,10 +33388,10 @@
                         ),
                       ),
                     ),
-                    i.createElement("div", { className: $i().SmoothLine }),
+                    i.createElement("div", { className: Xi().SmoothLine }),
                     i.createElement(
                       "h3",
-                      { className: $i().ImageUploadHeader },
+                      { className: Xi().ImageUploadHeader },
                       "Image Upload",
                     ),
                     i.createElement(
@@ -33359,7 +33409,7 @@
                                   "sessionid",
                                   p.Y.SESSION_ID.toString(),
                                 );
-                              const n = yield Gi().post(
+                              const n = yield Oi().post(
                                 p.Y.BASE_URL +
                                   l._.majorsregistration_submitautograph(),
                                 a,
@@ -33370,7 +33420,7 @@
                           }),
                       },
                       i.createElement("input", {
-                        className: $i().FileInput,
+                        className: Xi().FileInput,
                         type: "file",
                         name: "autograph",
                         id: "autographFiles",
@@ -33396,10 +33446,10 @@
                           0 === N.length &&
                             i.createElement(
                               "div",
-                              { className: $i().FileInput },
+                              { className: Xi().FileInput },
                               "Ready to upload",
                               i.createElement("img", {
-                                className: $i().CheckmarkIcon,
+                                className: Xi().CheckmarkIcon,
                                 src: `${p.Y.IMG_URL}international2020/icon_check.png`,
                               }),
                             ),
@@ -33410,7 +33460,7 @@
                               null,
                               "Fix the following errors:",
                               i.createElement("img", {
-                                className: $i().XIcon,
+                                className: Xi().XIcon,
                                 src: `${p.Y.IMG_URL}international2020/icon_x.png`,
                               }),
                               " ",
@@ -33418,7 +33468,7 @@
                           N.length > 0 &&
                             i.createElement(
                               "div",
-                              { className: $i().FileErrors },
+                              { className: Xi().FileErrors },
                               i.createElement("br", null),
                               N,
                             ),
@@ -33432,20 +33482,20 @@
                               ? "hidden"
                               : "submit",
                           value: "Upload Files",
-                          className: (0, h.Z)($i().SubmitButton),
+                          className: (0, h.Z)(Xi().SubmitButton),
                         }),
                       ),
                     ),
                     i.createElement("div", null, L),
                     i.createElement("br", null),
-                    i.createElement("div", { className: $i().SmoothLine }),
+                    i.createElement("div", { className: Xi().SmoothLine }),
                   ),
                 i.createElement("canvas", { id: "canvas", hidden: !0 }),
               ),
               !G &&
                 i.createElement(
                   "div",
-                  { className: $i().ViewAutographs },
+                  { className: Xi().ViewAutographs },
                   i.createElement("br", null),
                   i.createElement(
                     "div",
@@ -33478,7 +33528,7 @@
                               { key: `${e.team_id}Container` },
                               i.createElement(
                                 "div",
-                                { className: $i().TeamName },
+                                { className: Xi().TeamName },
                                 e.name || "(Team name)",
                                 e.team_id ? ` (${e.team_id})` : "",
                               ),
@@ -33486,7 +33536,7 @@
                                 "div",
                                 {
                                   key: `${e.team_id}Row`,
-                                  className: $i().TeamAutographRow,
+                                  className: Xi().TeamAutographRow,
                                 },
                                 e.autographs.map((e, t) => {
                                   const {
@@ -33521,16 +33571,16 @@
           i.createElement(T.U, null),
         );
       };
-      var qi = a(92302),
-        Ki = a.n(qi);
-      const Zi = [
+      var Ki = a(92302),
+        Zi = a.n(Ki);
+      const Qi = [
           {
             imageName: "sign-signature-postit-note.jpg",
             locIdentifier: "sign",
             bullets: 4,
           },
         ],
-        Qi = [
+        es = [
           {
             imageName: "photograph-signature.jpg",
             locIdentifier: "photograph",
@@ -33582,32 +33632,32 @@
             bullets: 5,
           },
         ],
-        es = ({ rowInfo: e, orderedListStart: t }) =>
+        ts = ({ rowInfo: e, orderedListStart: t }) =>
           i.createElement(
             "div",
-            { className: Ki().ImagePreparationContainer },
+            { className: Zi().ImagePreparationContainer },
             i.createElement(
               "div",
-              { className: Ki().ClickZoom },
+              { className: Zi().ClickZoom },
               i.createElement(
                 "label",
                 null,
                 i.createElement("input", { type: "checkbox" }),
                 i.createElement("img", {
                   src: `${p.Y.IMG_URL}dpc/autograph_guidelines/${e.imageName}`,
-                  className: Ki().ImagePreparationImage,
+                  className: Zi().ImagePreparationImage,
                 }),
               ),
             ),
             i.createElement(
               "div",
-              { className: Ki().ImagePreparationDetails },
+              { className: Zi().ImagePreparationDetails },
               i.createElement(
                 "ol",
                 { start: t },
                 i.createElement(
                   "li",
-                  { className: Ki().ImagePreparationHeader },
+                  { className: Zi().ImagePreparationHeader },
                   (0, v.Jr)(`#autograph_preparation_${e.locIdentifier}_header`),
                 ),
               ),
@@ -33622,7 +33672,7 @@
                         "li",
                         {
                           key: `${e}-${r}`,
-                          className: Ki().ImagePreparationBulletText,
+                          className: Zi().ImagePreparationBulletText,
                         },
                         (0, v.Jr)(`#autograph_preparation_${e}_bullet_${r}`),
                       ),
@@ -33632,10 +33682,10 @@
               ),
             ),
           ),
-        ts = () =>
+        as = () =>
           i.createElement(
             "div",
-            { className: Ki().AutographGuidelines },
+            { className: Zi().AutographGuidelines },
             i.createElement(Ne.j, { bOverlapping: !1 }),
             i.createElement(
               B.q,
@@ -33649,66 +33699,66 @@
             i.createElement(Nt.Z, null),
             i.createElement(
               "div",
-              { className: Ki().Background },
+              { className: Zi().Background },
               i.createElement(
                 "div",
-                { className: Ki().ContentFrame },
+                { className: Zi().ContentFrame },
                 i.createElement(
                   "div",
-                  { className: Ki().Page },
+                  { className: Zi().Page },
                   i.createElement("img", {
                     src: `${p.Y.IMG_URL}dpc/dpc_logo.png`,
-                    className: Ki().DPCLogo,
+                    className: Zi().DPCLogo,
                   }),
                   i.createElement(
                     "div",
-                    { className: Ki().Header },
+                    { className: Zi().Header },
                     (0, v.Jr)("#autograph_guidelines_top_header"),
                   ),
-                  i.createElement("div", { className: Ki().SmoothLine }),
+                  i.createElement("div", { className: Zi().SmoothLine }),
                   i.createElement(
                     "div",
-                    { className: Ki().Subheader },
+                    { className: Zi().Subheader },
                     (0, v.Jr)("#autograph_examples_header"),
                   ),
                   i.createElement(
                     "div",
-                    { className: Ki().ExamplesRow },
+                    { className: Zi().ExamplesRow },
                     i.createElement("img", {
                       src: `${p.Y.IMG_URL}dpc/autograph_guidelines/example-signature-1.jpg`,
-                      className: Ki().ExamplesImage,
+                      className: Zi().ExamplesImage,
                     }),
                     i.createElement("img", {
                       src: `${p.Y.IMG_URL}dpc/autograph_guidelines/check-mark.png`,
-                      className: Ki().CheckMarkLeft,
+                      className: Zi().CheckMarkLeft,
                     }),
                     i.createElement("img", {
                       src: `${p.Y.IMG_URL}dpc/autograph_guidelines/example-signature-2.jpg`,
-                      className: Ki().ExamplesImage,
+                      className: Zi().ExamplesImage,
                     }),
                     i.createElement("img", {
                       src: `${p.Y.IMG_URL}dpc/autograph_guidelines/check-mark.png`,
-                      className: Ki().CheckMarkRight,
+                      className: Zi().CheckMarkRight,
                     }),
                   ),
                   i.createElement(
                     "div",
-                    { className: Ki().ExamplesDescription },
+                    { className: Zi().ExamplesDescription },
                     (0, v.Jr)("#autograph_examples_format_and_details"),
                   ),
                   i.createElement(
                     "div",
-                    { className: Ki().ExamplesDescription },
+                    { className: Zi().ExamplesDescription },
                     (0, v.Jr)("#autograph_examples_size"),
                   ),
-                  i.createElement("div", { className: Ki().SmoothLine }),
+                  i.createElement("div", { className: Zi().SmoothLine }),
                   i.createElement(
                     "div",
-                    { className: Ki().Subheader },
+                    { className: Zi().Subheader },
                     (0, v.Jr)("#autograph_creation_header"),
                   ),
-                  Zi.map((e, t) =>
-                    i.createElement(es, {
+                  Qi.map((e, t) =>
+                    i.createElement(ts, {
                       key: `ImagePreparationContainer${t}`,
                       rowInfo: e,
                       orderedListStart: t + 1,
@@ -33716,58 +33766,58 @@
                   ),
                   i.createElement(
                     "div",
-                    { className: Ki().SignatureCreationRules },
+                    { className: Zi().SignatureCreationRules },
                     i.createElement(
                       "div",
-                      { className: Ki().SignatureRulesContainer },
+                      { className: Zi().SignatureRulesContainer },
                       i.createElement("img", {
                         src: `${p.Y.IMG_URL}dpc/autograph_guidelines/guidelines-clarity.jpg`,
-                        className: Ki().SignatureRulesImage,
+                        className: Zi().SignatureRulesImage,
                       }),
                       i.createElement(
                         "div",
-                        { className: Ki().SignatureRulesDetails },
+                        { className: Zi().SignatureRulesDetails },
                         (0, v.Jr)("#autograph_creation_rule_1"),
                       ),
                     ),
                     i.createElement(
                       "div",
-                      { className: Ki().SignatureRulesContainer },
+                      { className: Zi().SignatureRulesContainer },
                       i.createElement("img", {
                         src: `${p.Y.IMG_URL}dpc/autograph_guidelines/guidelines-thickness.jpg`,
-                        className: Ki().SignatureRulesImage,
+                        className: Zi().SignatureRulesImage,
                       }),
                       i.createElement(
                         "div",
-                        { className: Ki().SignatureRulesDetails },
+                        { className: Zi().SignatureRulesDetails },
                         (0, v.Jr)("#autograph_creation_rule_2"),
                       ),
                     ),
                     i.createElement(
                       "div",
-                      { className: Ki().SignatureRulesContainerLast },
+                      { className: Zi().SignatureRulesContainerLast },
                       i.createElement("img", {
                         src: `${p.Y.IMG_URL}dpc/autograph_guidelines/guidelines-imagery.jpg`,
-                        className: Ki().SignatureRulesImage,
+                        className: Zi().SignatureRulesImage,
                       }),
                       i.createElement(
                         "div",
-                        { className: Ki().SignatureRulesDetails },
+                        { className: Zi().SignatureRulesDetails },
                         (0, v.Jr)("#autograph_creation_rule_3"),
                       ),
                     ),
                   ),
-                  i.createElement("div", { className: Ki().SmoothLine }),
+                  i.createElement("div", { className: Zi().SmoothLine }),
                   i.createElement(
                     "div",
-                    { className: Ki().Subheader },
+                    { className: Zi().Subheader },
                     (0, v.Jr)("#autograph_preparation_header"),
                   ),
-                  Qi.map((e, t) =>
-                    i.createElement(es, {
+                  es.map((e, t) =>
+                    i.createElement(ts, {
                       key: `ImagePreparationContainer${t}`,
                       rowInfo: e,
-                      orderedListStart: t + Zi.length + 1,
+                      orderedListStart: t + Qi.length + 1,
                     }),
                   ),
                 ),
@@ -33775,42 +33825,42 @@
             ),
             i.createElement(T.U, null),
           );
-      var as = a(49224),
-        rs = a.n(as);
-      const ns = [
+      var rs = a(49224),
+        ns = a.n(rs);
+      const is = [
           {
             imageName: "example-player-silhouette.jpg",
             locIdentifier: "general_guidelines",
             bullets: 6,
           },
         ],
-        is = [
+        ss = [
           {
             imageName: "photography-lighting-setup.png",
             locIdentifier: "lighting_guidelines",
             bullets: 4,
           },
         ],
-        ss = ({ rowInfo: e }) =>
+        os = ({ rowInfo: e }) =>
           i.createElement(
             "div",
-            { className: rs().PortraitGuidelineContainer },
+            { className: ns().PortraitGuidelineContainer },
             i.createElement(
               "div",
-              { className: rs().ClickZoom },
+              { className: ns().ClickZoom },
               i.createElement(
                 "label",
                 null,
                 i.createElement("input", { type: "checkbox" }),
                 i.createElement("img", {
                   src: `${p.Y.IMG_URL}dpc/portrait_guidelines/${e.imageName}`,
-                  className: rs().GuidelinesImage,
+                  className: ns().GuidelinesImage,
                 }),
               ),
             ),
             i.createElement(
               "div",
-              { className: rs().GuidelinesDetails },
+              { className: ns().GuidelinesDetails },
               i.createElement(
                 "ul",
                 null,
@@ -33822,7 +33872,7 @@
                         "li",
                         {
                           key: `${e}-${r}`,
-                          className: rs().GuidelinesBulletText,
+                          className: ns().GuidelinesBulletText,
                         },
                         (0, v.Jr)(`#portrait_${e}_bullet_${r}`),
                       ),
@@ -33832,10 +33882,10 @@
               ),
             ),
           ),
-        os = () =>
+        ls = () =>
           i.createElement(
             "div",
-            { className: rs().PortraitGuidelines },
+            { className: ns().PortraitGuidelines },
             i.createElement(Ne.j, { bOverlapping: !1 }),
             i.createElement(
               B.q,
@@ -33849,73 +33899,73 @@
             i.createElement(Nt.Z, null),
             i.createElement(
               "div",
-              { className: rs().Background },
+              { className: ns().Background },
               i.createElement(
                 "div",
-                { className: rs().ContentFrame },
+                { className: ns().ContentFrame },
                 i.createElement(
                   "div",
-                  { className: rs().Page },
+                  { className: ns().Page },
                   i.createElement("img", {
                     src: `${p.Y.IMG_URL}dpc/dpc_logo.png`,
-                    className: rs().DPCLogo,
+                    className: ns().DPCLogo,
                   }),
                   i.createElement(
                     "div",
-                    { className: rs().Header },
+                    { className: ns().Header },
                     (0, v.Jr)("#portrait_guidelines_top_header"),
                   ),
-                  i.createElement("div", { className: rs().SmoothLine }),
+                  i.createElement("div", { className: ns().SmoothLine }),
                   i.createElement(
                     "div",
-                    { className: rs().Subheader },
+                    { className: ns().Subheader },
                     (0, v.Jr)("#portrait_examples_header"),
                   ),
                   i.createElement(
                     "div",
-                    { className: rs().ExamplesRow },
+                    { className: ns().ExamplesRow },
                     i.createElement("img", {
                       src: `${p.Y.IMG_URL}dpc/portrait_guidelines/example-player-1.jpg`,
-                      className: rs().ExamplesImage,
+                      className: ns().ExamplesImage,
                     }),
                     i.createElement("img", {
                       src: `${p.Y.IMG_URL}dpc/autograph_guidelines/check-mark.png`,
-                      className: rs().CheckMarkLeft,
+                      className: ns().CheckMarkLeft,
                     }),
                     i.createElement("img", {
                       src: `${p.Y.IMG_URL}dpc/portrait_guidelines/example-player-2.jpg`,
-                      className: rs().ExamplesImage,
+                      className: ns().ExamplesImage,
                     }),
                     i.createElement("img", {
                       src: `${p.Y.IMG_URL}dpc/autograph_guidelines/check-mark.png`,
-                      className: rs().CheckMarkRight,
+                      className: ns().CheckMarkRight,
                     }),
                   ),
                   i.createElement(
                     "div",
-                    { className: rs().ExamplesDescription },
+                    { className: ns().ExamplesDescription },
                     (0, v.Jr)("#portrait_examples_description"),
                   ),
-                  i.createElement("div", { className: rs().SmoothLine }),
+                  i.createElement("div", { className: ns().SmoothLine }),
                   i.createElement(
                     "div",
-                    { className: rs().Subheader },
+                    { className: ns().Subheader },
                     (0, v.Jr)("#portrait_general_guidelines_header"),
                   ),
-                  ns.map((e, t) =>
-                    i.createElement(ss, {
+                  is.map((e, t) =>
+                    i.createElement(os, {
                       key: `PortraitGuidelineContainerTop${t}`,
                       rowInfo: e,
                     }),
                   ),
-                  i.createElement("div", { className: rs().SmoothLine }),
+                  i.createElement("div", { className: ns().SmoothLine }),
                   i.createElement(
                     "div",
-                    { className: rs().Subheader },
+                    { className: ns().Subheader },
                     (0, v.Jr)("#portrait_lighting_guidelines_header"),
                   ),
-                  is.map((e, t) =>
-                    i.createElement(ss, {
+                  ss.map((e, t) =>
+                    i.createElement(os, {
                       key: `PortraitGuidelineContaineBottomr${t}`,
                       rowInfo: e,
                     }),
@@ -33925,13 +33975,13 @@
             ),
             i.createElement(T.U, null),
           );
-      var ls = a(8960),
-        cs = a.n(ls);
-      const _s = (0, c.Pi)((e) =>
+      var cs = a(8960),
+        _s = a.n(cs);
+      const ds = (0, c.Pi)((e) =>
         i.createElement(
           "div",
           {
-            className: cs().ControllerFAQPage,
+            className: _s().ControllerFAQPage,
             style: {
               backgroundImage: `url( ${p.Y.IMG_URL}backgrounds/slate_bg_01.jpg )`,
             },
@@ -33943,85 +33993,85 @@
             i.createElement("title", null, (0, v.Jr)("#controller_faq_title")),
           ),
           i.createElement("div", {
-            className: cs().HeaderImage,
+            className: _s().HeaderImage,
             style: {
               backgroundImage: `url( ${p.Y.IMG_URL}labyrinth/assistant_controller.jpg )`,
             },
           }),
           i.createElement(
             "div",
-            { className: cs().Body },
+            { className: _s().Body },
             i.createElement(
               "div",
-              { className: cs().TopHeader },
+              { className: _s().TopHeader },
               (0, v.Jr)("#controller_faq_title"),
             ),
             i.createElement(
               "div",
-              { className: cs().TopBody },
+              { className: _s().TopBody },
               (0, v.Jr)("#controller_faq_body"),
             ),
             i.createElement(
               "div",
-              { className: cs().FAQ },
+              { className: _s().FAQ },
               i.createElement(
                 "div",
-                { className: cs().FAQQuestion },
+                { className: _s().FAQQuestion },
                 (0, v.Jr)("#controller_faq_q_1"),
               ),
               i.createElement(
                 "div",
-                { className: cs().FAQAnswer },
+                { className: _s().FAQAnswer },
                 (0, v.Jr)("#controller_faq_a_1"),
               ),
               i.createElement(
                 "div",
-                { className: cs().FAQQuestion },
+                { className: _s().FAQQuestion },
                 (0, v.Jr)("#controller_faq_q_2"),
               ),
               i.createElement(
                 "div",
-                { className: cs().FAQAnswer },
+                { className: _s().FAQAnswer },
                 (0, v.Jr)("#controller_faq_a_2"),
               ),
               i.createElement(
                 "div",
-                { className: cs().FAQQuestion },
+                { className: _s().FAQQuestion },
                 (0, v.Jr)("#controller_faq_q_3"),
               ),
               i.createElement(
                 "div",
-                { className: cs().FAQAnswer },
+                { className: _s().FAQAnswer },
                 (0, v.Jr)("#controller_faq_a_3"),
               ),
               i.createElement(
                 "div",
-                { className: cs().FAQQuestion },
+                { className: _s().FAQQuestion },
                 (0, v.Jr)("#controller_faq_q_4"),
               ),
               i.createElement(
                 "div",
-                { className: cs().FAQAnswer },
+                { className: _s().FAQAnswer },
                 (0, v.Jr)("#controller_faq_a_4"),
               ),
               i.createElement(
                 "div",
-                { className: cs().FAQQuestion },
+                { className: _s().FAQQuestion },
                 (0, v.Jr)("#controller_faq_q_5"),
               ),
               i.createElement(
                 "div",
-                { className: cs().FAQAnswer },
+                { className: _s().FAQAnswer },
                 (0, v.Jr)("#controller_faq_a_5"),
               ),
               i.createElement(
                 "div",
-                { className: cs().FAQQuestion },
+                { className: _s().FAQQuestion },
                 (0, v.Jr)("#controller_faq_q_6"),
               ),
               i.createElement(
                 "div",
-                { className: cs().FAQAnswer },
+                { className: _s().FAQAnswer },
                 (0, v.Jr)("#controller_faq_a_6"),
               ),
             ),
@@ -34029,14 +34079,14 @@
           i.createElement(T.U, null),
         ),
       );
-      var ds = a(109),
-        ms = a.n(ds);
-      class us extends i.Component {
+      var ms = a(109),
+        us = a.n(ms);
+      class ps extends i.Component {
         render() {
           return i.createElement(
             "div",
             {
-              className: ms().PastUpdates,
+              className: us().PastUpdates,
               style: {
                 backgroundImage: `url( ${p.Y.IMG_URL}backgrounds/greyfade.jpg )`,
               },
@@ -34053,21 +34103,21 @@
             ),
             i.createElement(
               "div",
-              { className: ms().HeaderSection },
+              { className: us().HeaderSection },
               i.createElement(
                 "div",
-                { className: ms().Headline },
+                { className: us().Headline },
                 (0, v.Jr)("#header_previous_updates"),
               ),
             ),
             i.createElement(
               "div",
-              { className: ms().UpdatesContainer },
+              { className: us().UpdatesContainer },
               i.createElement(
                 "a",
                 { href: "https://www.dota2.com/primalbeast", target: "_blank" },
                 i.createElement("div", {
-                  className: ms().UpdateBlock,
+                  className: us().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${p.Y.IMG_URL}/pastupdates/primalbeast_social.jpg )`,
                   },
@@ -34079,7 +34129,7 @@
                 "a",
                 { href: "https://www.dota2.com/labyrinth", target: "_blank" },
                 i.createElement("div", {
-                  className: ms().UpdateBlock,
+                  className: us().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${p.Y.IMG_URL}/pastupdates/labyrinth_social.jpg )`,
                   },
@@ -34091,7 +34141,7 @@
                 "a",
                 { href: "https://www.dota2.com/marci", target: "_blank" },
                 i.createElement("div", {
-                  className: ms().UpdateBlock,
+                  className: us().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${p.Y.IMG_URL}/pastupdates/marci_social.jpg )`,
                   },
@@ -34103,7 +34153,7 @@
                 "a",
                 { href: "https://www.dota2.com/nemestice", target: "_blank" },
                 i.createElement("div", {
-                  className: ms().UpdateBlock,
+                  className: us().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${p.Y.IMG_URL}/pastupdates/nemestice_social.jpg )`,
                   },
@@ -34115,7 +34165,7 @@
                 "a",
                 { href: "https://www.dota2.com/dawnbreaker", target: "_blank" },
                 i.createElement("div", {
-                  className: ms().UpdateBlock,
+                  className: us().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${p.Y.IMG_URL}/pastupdates/dawnbreaker_social.jpg )`,
                   },
@@ -34127,7 +34177,7 @@
                 "a",
                 { href: "https://www.dota2.com/mistwoods", target: "_blank" },
                 i.createElement("div", {
-                  className: ms().UpdateBlock,
+                  className: us().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${p.Y.IMG_URL}/pastupdates/hoodwink_social.jpg )`,
                   },
@@ -34139,7 +34189,7 @@
                 "a",
                 { href: "https://www.dota2.com/diretide", target: "_blank" },
                 i.createElement("div", {
-                  className: ms().UpdateBlock,
+                  className: us().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${p.Y.IMG_URL}/pastupdates/diretide_twitter.png )`,
                   },
@@ -34151,7 +34201,7 @@
                 "a",
                 { href: "https://www.dota2.com/risinggale", target: "_blank" },
                 i.createElement("div", {
-                  className: ms().UpdateBlock,
+                  className: us().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${p.Y.IMG_URL}/pastupdates/wr_social.png )`,
                   },
@@ -34163,7 +34213,7 @@
                 "a",
                 { href: "https://www.dota2.com/aghanim", target: "_blank" },
                 i.createElement("div", {
-                  className: ms().UpdateBlock,
+                  className: us().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${p.Y.IMG_URL}/pastupdates/aghs_share.png )`,
                   },
@@ -34178,7 +34228,7 @@
                   target: "_blank",
                 },
                 i.createElement("div", {
-                  className: ms().UpdateBlock,
+                  className: us().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${p.Y.IMG_URL}/pastupdates/am_social.png )`,
                   },
@@ -34193,7 +34243,7 @@
                   target: "_blank",
                 },
                 i.createElement("div", {
-                  className: ms().UpdateBlock,
+                  className: us().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${p.Y.IMG_URL}/pastupdates/qop_twitter.png )`,
                   },
@@ -34208,7 +34258,7 @@
                   target: "_blank",
                 },
                 i.createElement("div", {
-                  className: ms().UpdateBlock,
+                  className: us().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${p.Y.IMG_URL}/pastupdates/wk_social.jpg )`,
                   },
@@ -34223,7 +34273,7 @@
                   target: "_blank",
                 },
                 i.createElement("div", {
-                  className: ms().UpdateBlock,
+                  className: us().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${p.Y.IMG_URL}/pastupdates/ti10_social.jpg )`,
                   },
@@ -34238,7 +34288,7 @@
                   target: "_blank",
                 },
                 i.createElement("div", {
-                  className: ms().UpdateBlock,
+                  className: us().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${p.Y.IMG_URL}/pastupdates/flockheart_img.jpg )`,
                   },
@@ -34250,7 +34300,7 @@
                 "a",
                 { href: "https://www.dota2.com/outlanders", target: "_blank" },
                 i.createElement("div", {
-                  className: ms().UpdateBlock,
+                  className: us().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${p.Y.IMG_URL}/pastupdates/outlanders_social.jpg )`,
                   },
@@ -34265,7 +34315,7 @@
                   target: "_blank",
                 },
                 i.createElement("div", {
-                  className: ms().UpdateBlock,
+                  className: us().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${p.Y.IMG_URL}/pastupdates/acolyte_social.jpg )`,
                   },
@@ -34277,7 +34327,7 @@
                 "a",
                 { href: "https://www.dota2.com/planetfall", target: "_blank" },
                 i.createElement("div", {
-                  className: ms().UpdateBlock,
+                  className: us().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${p.Y.IMG_URL}/pastupdates/planetfall_social.jpg )`,
                   },
@@ -34292,7 +34342,7 @@
                   target: "_blank",
                 },
                 i.createElement("div", {
-                  className: ms().UpdateBlock,
+                  className: us().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${p.Y.IMG_URL}/pastupdates/ti9_social.jpg )`,
                   },
@@ -34304,7 +34354,7 @@
                 "a",
                 { href: "https://www.dota2.com/mars", target: "_blank" },
                 i.createElement("div", {
-                  className: ms().UpdateBlock,
+                  className: us().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${p.Y.IMG_URL}/pastupdates/mars_social.jpg )`,
                   },
@@ -34316,7 +34366,7 @@
                 "a",
                 { href: "http://www.dota2.com/frosthaven", target: "_blank" },
                 i.createElement("div", {
-                  className: ms().UpdateBlock,
+                  className: us().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${p.Y.IMG_URL}/pastupdates/frosthaven_social.jpg )`,
                   },
@@ -34328,7 +34378,7 @@
                 "a",
                 { href: "https://www.dota2.com/720", target: "_blank" },
                 i.createElement("div", {
-                  className: ms().UpdateBlock,
+                  className: us().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${p.Y.IMG_URL}/pastupdates/720_social.jpg )`,
                   },
@@ -34340,7 +34390,7 @@
                 "a",
                 { href: "https://www.dota2.com/grimstroke", target: "_blank" },
                 i.createElement("div", {
-                  className: ms().UpdateBlock,
+                  className: us().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${p.Y.IMG_URL}/pastupdates/grimstroke_social.jpg )`,
                   },
@@ -34355,7 +34405,7 @@
                   target: "_blank",
                 },
                 i.createElement("div", {
-                  className: ms().UpdateBlock,
+                  className: us().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${p.Y.IMG_URL}/pastupdates/ti8_social.jpg )`,
                   },
@@ -34370,7 +34420,7 @@
                   target: "_blank",
                 },
                 i.createElement("div", {
-                  className: ms().UpdateBlock,
+                  className: us().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${p.Y.IMG_URL}/pastupdates/pudge_social.jpg )`,
                   },
@@ -34382,7 +34432,7 @@
                 "a",
                 { href: "http://www.dota2.com/plus", target: "_blank" },
                 i.createElement("div", {
-                  className: ms().UpdateBlock,
+                  className: us().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${p.Y.IMG_URL}/pastupdates/plus_social.jpg )`,
                   },
@@ -34397,7 +34447,7 @@
                   target: "_blank",
                 },
                 i.createElement("div", {
-                  className: ms().UpdateBlock,
+                  className: us().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${p.Y.IMG_URL}/pastupdates/duelingfates_social.jpg )`,
                   },
@@ -34412,7 +34462,7 @@
                   target: "_blank",
                 },
                 i.createElement("div", {
-                  className: ms().UpdateBlock,
+                  className: us().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${p.Y.IMG_URL}/pastupdates/ti7_social.jpg )`,
                   },
@@ -34427,7 +34477,7 @@
                   target: "_blank",
                 },
                 i.createElement("div", {
-                  className: ms().UpdateBlock,
+                  className: us().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${p.Y.IMG_URL}/pastupdates/bladeform_social.jpg )`,
                   },
@@ -34439,7 +34489,7 @@
                 "a",
                 { href: "http://www.dota2.com/700", target: "_blank" },
                 i.createElement("div", {
-                  className: ms().UpdateBlock,
+                  className: us().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${p.Y.IMG_URL}/pastupdates/700_social.jpg )`,
                   },
@@ -34451,7 +34501,7 @@
                 "a",
                 { href: "http://www.dota2.com/darkrift", target: "_blank" },
                 i.createElement("div", {
-                  className: ms().UpdateBlock,
+                  className: us().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${p.Y.IMG_URL}/pastupdates/darkrift_social.jpg )`,
                   },
@@ -34466,7 +34516,7 @@
                   target: "_blank",
                 },
                 i.createElement("div", {
-                  className: ms().UpdateBlock,
+                  className: us().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${p.Y.IMG_URL}/pastupdates/ti6_social.jpg )`,
                   },
@@ -34481,7 +34531,7 @@
                   target: "_blank",
                 },
                 i.createElement("div", {
-                  className: ms().UpdateBlock,
+                  className: us().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${p.Y.IMG_URL}/pastupdates/shanghai_social.jpg )`,
                   },
@@ -34493,7 +34543,7 @@
                 "a",
                 { href: "http://www.dota2.com/winter2016", target: "_blank" },
                 i.createElement("div", {
-                  className: ms().UpdateBlock,
+                  className: us().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${p.Y.IMG_URL}/pastupdates/winterbp_social.jpg )`,
                   },
@@ -34508,7 +34558,7 @@
                   target: "_blank",
                 },
                 i.createElement("div", {
-                  className: ms().UpdateBlock,
+                  className: us().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${p.Y.IMG_URL}/pastupdates/balance_social.jpg )`,
                   },
@@ -34520,7 +34570,7 @@
                 "a",
                 { href: "http://www.dota2.com/reborn", target: "_blank" },
                 i.createElement("div", {
-                  className: ms().UpdateBlock,
+                  className: us().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${p.Y.IMG_URL}/pastupdates/reborn_social.jpg )`,
                   },
@@ -34535,7 +34585,7 @@
                   target: "_blank",
                 },
                 i.createElement("div", {
-                  className: ms().UpdateBlock,
+                  className: us().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${p.Y.IMG_URL}/pastupdates/ti5_social.jpg )`,
                   },
@@ -34550,7 +34600,7 @@
                   target: "_blank",
                 },
                 i.createElement("div", {
-                  className: ms().UpdateBlock,
+                  className: us().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${p.Y.IMG_URL}/pastupdates/compendium_social.jpg )`,
                   },
@@ -34565,7 +34615,7 @@
                   target: "_blank",
                 },
                 i.createElement("div", {
-                  className: ms().UpdateBlock,
+                  className: us().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${p.Y.IMG_URL}/pastupdates/newbloom2015_social.jpg )`,
                   },
@@ -34580,7 +34630,7 @@
                   target: "_blank",
                 },
                 i.createElement("div", {
-                  className: ms().UpdateBlock,
+                  className: us().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${p.Y.IMG_URL}/pastupdates/snows_social.jpg )`,
                   },
@@ -34592,7 +34642,7 @@
                 "a",
                 { href: "http://www.dota2.com/oracle/day2", target: "_blank" },
                 i.createElement("div", {
-                  className: ms().UpdateBlock,
+                  className: us().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${p.Y.IMG_URL}/pastupdates/oracle_social.jpg )`,
                   },
@@ -34607,7 +34657,7 @@
                   target: "_blank",
                 },
                 i.createElement("div", {
-                  className: ms().UpdateBlock,
+                  className: us().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${p.Y.IMG_URL}/pastupdates/rekindling_social.jpg )`,
                   },
@@ -34619,7 +34669,7 @@
                 "a",
                 { href: "http://www.dota2.com/techies/", target: "_blank" },
                 i.createElement("div", {
-                  className: ms().UpdateBlock,
+                  className: us().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${p.Y.IMG_URL}/pastupdates/techies_social.jpg )`,
                   },
@@ -34634,7 +34684,7 @@
                   target: "_blank",
                 },
                 i.createElement("div", {
-                  className: ms().UpdateBlock,
+                  className: us().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${p.Y.IMG_URL}/pastupdates/ti4_social.jpg )`,
                   },
@@ -34649,7 +34699,7 @@
                   target: "_blank",
                 },
                 i.createElement("div", {
-                  className: ms().UpdateBlock,
+                  className: us().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${p.Y.IMG_URL}/pastupdates/cleaning_social.jpg )`,
                   },
@@ -34664,7 +34714,7 @@
                   target: "_blank",
                 },
                 i.createElement("div", {
-                  className: ms().UpdateBlock,
+                  className: us().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${p.Y.IMG_URL}/pastupdates/newbloom2014_social.jpg )`,
                   },
@@ -34676,7 +34726,7 @@
                 "a",
                 { href: "http://www.dota2.com/wraithnight/", target: "_blank" },
                 i.createElement("div", {
-                  className: ms().UpdateBlock,
+                  className: us().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${p.Y.IMG_URL}/pastupdates/wraith_social.jpg )`,
                   },
@@ -34691,7 +34741,7 @@
                   target: "_blank",
                 },
                 i.createElement("div", {
-                  className: ms().UpdateBlock,
+                  className: us().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${p.Y.IMG_URL}/pastupdates/spirits_social.jpg )`,
                   },
@@ -34703,7 +34753,7 @@
                 "a",
                 { href: "http://www.dota2.com/firstblood/", target: "_blank" },
                 i.createElement("div", {
-                  className: ms().UpdateBlock,
+                  className: us().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${p.Y.IMG_URL}/pastupdates/firstblood_social.jpg )`,
                   },
@@ -34718,7 +34768,7 @@
                   target: "_blank",
                 },
                 i.createElement("div", {
-                  className: ms().UpdateBlock,
+                  className: us().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${p.Y.IMG_URL}/pastupdates/beta_social.jpg )`,
                   },
@@ -34733,7 +34783,7 @@
                   target: "_blank",
                 },
                 i.createElement("div", {
-                  className: ms().UpdateBlock,
+                  className: us().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${p.Y.IMG_URL}/pastupdates/ti3_social.jpg )`,
                   },
@@ -34745,7 +34795,7 @@
                 "a",
                 { href: "http://www.dota2.com/greeviling/", target: "_blank" },
                 i.createElement("div", {
-                  className: ms().UpdateBlock,
+                  className: us().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${p.Y.IMG_URL}/pastupdates/greevling_social.jpg )`,
                   },
@@ -34760,7 +34810,7 @@
                   target: "_blank",
                 },
                 i.createElement("div", {
-                  className: ms().UpdateBlock,
+                  className: us().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${p.Y.IMG_URL}/pastupdates/diretide2012_social.jpg )`,
                   },
@@ -34775,7 +34825,7 @@
                   target: "_blank",
                 },
                 i.createElement("div", {
-                  className: ms().UpdateBlock,
+                  className: us().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${p.Y.IMG_URL}/pastupdates/aegis_social.jpg )`,
                   },
@@ -34787,7 +34837,7 @@
                 "a",
                 { href: "http://www.dota2.com/spoilsofwar/", target: "_blank" },
                 i.createElement("div", {
-                  className: ms().UpdateBlock,
+                  className: us().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${p.Y.IMG_URL}/pastupdates/spoils_social.jpg )`,
                   },
@@ -34802,7 +34852,7 @@
                   target: "_blank",
                 },
                 i.createElement("div", {
-                  className: ms().UpdateBlock,
+                  className: us().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${p.Y.IMG_URL}/pastupdates/heroes_social.jpg )`,
                   },
@@ -34815,11 +34865,11 @@
           );
         }
       }
-      var ps = a(59481),
-        gs = a(15086),
-        Es = a.n(gs),
-        hs = a(63738);
-      const vs = ({ index: e, video: t, name: a, onSlideIn: r }) => {
+      var gs = a(59481),
+        Es = a(15086),
+        hs = a.n(Es),
+        vs = a(63738);
+      const Ss = ({ index: e, video: t, name: a, onSlideIn: r }) => {
           const n = (0, i.useContext)(R.ro),
             s = (0, i.useRef)(),
             o =
@@ -34839,17 +34889,17 @@
             }, [n, e, a, r]),
             i.createElement(
               "div",
-              { className: Es().SlideContainer },
+              { className: hs().SlideContainer },
               o
                 ? i.createElement("img", {
-                    className: Es().TreasureVideo,
+                    className: hs().TreasureVideo,
                     src: `${p.Y.VIDEO_URL}/augupdate23/${t}.png`,
                   })
                 : i.createElement(
                     "video",
                     {
                       ref: s,
-                      className: Es().TreasureVideo,
+                      className: hs().TreasureVideo,
                       autoPlay: !0,
                       preload: "auto",
                       muted: !0,
@@ -34865,66 +34915,66 @@
             )
           );
         },
-        Ss = (e) => {
+        Cs = (e) => {
           const [t, a] = i.useState(1),
             r = e.comparisons.length - 1;
           return i.createElement(
             "div",
-            { className: Es().ComparisonSelector },
+            { className: hs().ComparisonSelector },
             i.createElement(
               "div",
-              { className: Es().ComparisonOptions },
+              { className: hs().ComparisonOptions },
               e.comparisons.map((e, a) =>
                 i.createElement(
                   "div",
                   {
                     key: `ComparisonOption_${a}`,
                     className: (0, h.Z)(
-                      Es().SliderInset,
-                      t != a && Es().Hidden,
+                      hs().SliderInset,
+                      t != a && hs().Hidden,
                     ),
                   },
                   i.createElement(
                     "div",
-                    { className: Es().SliderColumn },
+                    { className: hs().SliderColumn },
                     i.createElement(
                       "div",
-                      { className: Es().SliderText },
+                      { className: hs().SliderText },
                       i.createElement(
                         "div",
-                        { className: Es().MapTitle },
+                        { className: hs().MapTitle },
                         (0, v.Jr)(e.title),
                       ),
                       i.createElement(
                         "div",
-                        { className: Es().MapBody },
+                        { className: hs().MapBody },
                         (0, v.Jr)(e.subtitle),
                       ),
                     ),
-                    i.createElement(hs.vx, {
+                    i.createElement(vs.vx, {
                       itemOne: i.createElement("img", {
                         src: `${p.Y.IMG_URL}${e.img_before}`,
-                        className: Es().SliderImageSpecs,
+                        className: hs().SliderImageSpecs,
                       }),
                       itemTwo: i.createElement("img", {
                         src: `${p.Y.IMG_URL}${e.img_after}`,
-                        className: Es().SliderImageSpecs,
+                        className: hs().SliderImageSpecs,
                       }),
                     }),
                     i.createElement(
                       "div",
-                      { className: Es().BeforeAfter },
+                      { className: hs().BeforeAfter },
                       i.createElement(
                         "div",
-                        { className: Es().Before },
+                        { className: hs().Before },
                         (0, v.Jr)("#aug23_maprendering_before"),
                       ),
                       i.createElement("div", {
-                        className: Es().BeforeAfterLine,
+                        className: hs().BeforeAfterLine,
                       }),
                       i.createElement(
                         "div",
-                        { className: Es().After },
+                        { className: hs().After },
                         (0, v.Jr)("#aug23_maprendering_after"),
                       ),
                     ),
@@ -34934,15 +34984,15 @@
             ),
             i.createElement(
               "div",
-              { className: Es().ComparisonSelectors },
+              { className: hs().ComparisonSelectors },
               e.comparisons.map((e, n) =>
                 i.createElement(
                   "div",
                   {
                     key: `ComparisonSelector_${n}`,
                     className: (0, h.Z)(
-                      n === r ? Es().LionOption : Es().ComparisonOption,
-                      t == n && Es().Selected,
+                      n === r ? hs().LionOption : hs().ComparisonOption,
+                      t == n && hs().Selected,
                     ),
                     onClick: () => a(n),
                   },
@@ -34952,12 +35002,12 @@
             ),
           );
         },
-        Cs = (0, c.Pi)(() => {
+        bs = (0, c.Pi)(() => {
           const [e, t] = i.useState("#aug23_cc_treasure_name3");
-          js.getPatchNotes("7.34", p.Y.LANGUAGE);
+          Ys.getPatchNotes("7.34", p.Y.LANGUAGE);
           return i.createElement(
             "div",
-            { className: Es().Aug2023Page },
+            { className: hs().Aug2023Page },
             i.createElement(
               B.q,
               null,
@@ -34967,31 +35017,31 @@
             i.createElement(Nt.Z, null),
             i.createElement(
               "div",
-              { className: Es().HeaderContainer },
+              { className: hs().HeaderContainer },
               i.createElement(
                 "div",
                 {
-                  className: Es().HeaderInset,
+                  className: hs().HeaderInset,
                   style: {
                     backgroundImage: `url( ${p.Y.IMG_URL}augupdate23/loadout_armory_2023_web_header_cropped.jpg )`,
                   },
                 },
                 i.createElement(
                   "div",
-                  { className: Es().HeaderText },
+                  { className: hs().HeaderText },
                   i.createElement(
                     "div",
-                    { className: Es().MainTitle },
+                    { className: hs().MainTitle },
                     (0, v.Jr)("#aug23_title_main"),
                   ),
                   i.createElement(
                     "div",
-                    { className: Es().Tagline },
+                    { className: hs().Tagline },
                     (0, v.Jr)("#aug23_title_sub_bottom"),
                   ),
                   i.createElement(
                     "div",
-                    { className: Es().SubTagline },
+                    { className: hs().SubTagline },
                     (0, v.Jr)("#aug23_title_sub_top"),
                   ),
                 ),
@@ -35006,127 +35056,127 @@
             i.createElement(
               "div",
               {
-                className: Es().Container,
+                className: hs().Container,
                 style: {
                   backgroundImage: `url( ${p.Y.IMG_URL}augupdate23/repeater_grey_alt.jpg )`,
                 },
               },
               i.createElement(
                 "div",
-                { className: Es().Inset },
+                { className: hs().Inset },
                 i.createElement(
                   "div",
-                  { className: Es().SingleRow },
+                  { className: hs().SingleRow },
                   i.createElement(
                     "div",
-                    { className: Es().XLText },
+                    { className: hs().XLText },
                     i.createElement(
                       "div",
-                      { className: Es().XLTitle },
+                      { className: hs().XLTitle },
                       (0, v.Jr)("#aug23_armory_title"),
                     ),
-                    i.createElement("div", { className: Es().HorizDivider }),
+                    i.createElement("div", { className: hs().HorizDivider }),
                     i.createElement(
                       "div",
-                      { className: Es().XLSubtitle },
+                      { className: hs().XLSubtitle },
                       (0, v.Jr)("#aug23_armory_title_sub"),
                     ),
                     i.createElement(
                       "div",
-                      { className: Es().XLBody },
+                      { className: hs().XLBody },
                       (0, v.Jr)("#aug23_armory_body"),
                     ),
                   ),
                   i.createElement(
                     "div",
                     {
-                      className: Es().XLImage,
+                      className: hs().XLImage,
                       "data-aos": "fade-up",
                       "data-aos-delay": "200",
                       "data-aos-duration": "2000",
                     },
                     i.createElement("img", {
                       src: `${p.Y.IMG_URL}augupdate23/browse_armory.png`,
-                      className: Es().XLImageSpecs,
+                      className: hs().XLImageSpecs,
                     }),
                   ),
                   i.createElement(
                     "div",
-                    { className: Es().LText },
+                    { className: hs().LText },
                     i.createElement(
                       "div",
-                      { className: Es().LTitle },
+                      { className: hs().LTitle },
                       (0, v.Jr)("#aug23_armory_browse_title"),
                     ),
                     i.createElement(
                       "div",
-                      { className: Es().LBody },
+                      { className: hs().LBody },
                       (0, v.Jr)("#aug23_armory_browse_body"),
                     ),
                   ),
                 ),
                 i.createElement(
                   "div",
-                  { className: Es().RowColumn },
+                  { className: hs().RowColumn },
                   i.createElement(
                     "div",
                     {
-                      className: Es().Row,
+                      className: hs().Row,
                       "data-aos": "fade-up",
                       "data-aos-delay": "200",
                       "data-aos-duration": "2000",
                     },
                     i.createElement(
                       "div",
-                      { className: Es().MText },
+                      { className: hs().MText },
                       i.createElement(
                         "div",
-                        { className: Es().MTitle },
+                        { className: hs().MTitle },
                         (0, v.Jr)("#aug23_armory_paperdoll_title"),
                       ),
                       i.createElement(
                         "div",
-                        { className: Es().MBody },
+                        { className: hs().MBody },
                         (0, v.Jr)("#aug23_armory_paperdoll_body"),
                       ),
                     ),
                     i.createElement(
                       "div",
-                      { className: Es().RowImage },
+                      { className: hs().RowImage },
                       i.createElement("img", {
                         src: `${p.Y.IMG_URL}augupdate23/armory_item_combos.png`,
-                        className: Es().RowImageSpecs,
+                        className: hs().RowImageSpecs,
                       }),
                     ),
                   ),
                   i.createElement(
                     "div",
                     {
-                      className: Es().Row,
+                      className: hs().Row,
                       "data-aos": "fade-up",
                       "data-aos-delay": "200",
                       "data-aos-duration": "2000",
                     },
                     i.createElement(
                       "div",
-                      { className: Es().MText },
+                      { className: hs().MText },
                       i.createElement(
                         "div",
-                        { className: Es().MTitle },
+                        { className: hs().MTitle },
                         (0, v.Jr)("#aug23_armory_global_title"),
                       ),
                       i.createElement(
                         "div",
-                        { className: Es().MBody },
+                        { className: hs().MBody },
                         (0, v.Jr)("#aug23_armory_global_body"),
                       ),
                     ),
                     i.createElement(
                       "div",
-                      { className: Es().RowImage },
+                      { className: hs().RowImage },
                       i.createElement("img", {
                         src: `${p.Y.IMG_URL}augupdate23/global_armory_items.png`,
-                        className: Es().RowImageSpecs,
+                        className: hs().RowImageSpecs,
                       }),
                     ),
                   ),
@@ -35134,85 +35184,85 @@
                 i.createElement(
                   "div",
                   {
-                    className: Es().GridRow,
+                    className: hs().GridRow,
                     "data-aos": "fade-up",
                     "data-aos-delay": "200",
                     "data-aos-duration": "2000",
                   },
                   i.createElement(
                     "div",
-                    { className: Es().GridColumn },
+                    { className: hs().GridColumn },
                     i.createElement(
                       "div",
-                      { className: Es().GridImage },
+                      { className: hs().GridImage },
                       i.createElement("img", {
                         src: `${p.Y.IMG_URL}augupdate23/armory_item_highlight.png`,
-                        className: Es().GridImageSpecs,
+                        className: hs().GridImageSpecs,
                       }),
                     ),
                     i.createElement(
                       "div",
-                      { className: Es().GridText },
+                      { className: hs().GridText },
                       i.createElement(
                         "div",
-                        { className: Es().MTitle },
+                        { className: hs().MTitle },
                         (0, v.Jr)("#aug23_armory_highlight_title"),
                       ),
                       i.createElement(
                         "div",
-                        { className: Es().MBody },
+                        { className: hs().MBody },
                         (0, v.Jr)("#aug23_armory_highlight_body"),
                       ),
                     ),
                   ),
                   i.createElement(
                     "div",
-                    { className: Es().GridColumn },
+                    { className: hs().GridColumn },
                     i.createElement(
                       "div",
-                      { className: Es().GridImage },
+                      { className: hs().GridImage },
                       i.createElement("img", {
                         src: `${p.Y.IMG_URL}augupdate23/armory_stack_duplicates.png`,
-                        className: Es().GridImageSpecs,
+                        className: hs().GridImageSpecs,
                       }),
                     ),
                     i.createElement(
                       "div",
-                      { className: Es().GridText },
+                      { className: hs().GridText },
                       i.createElement(
                         "div",
-                        { className: Es().MTitle },
+                        { className: hs().MTitle },
                         (0, v.Jr)("#aug23_armory_stack_title"),
                       ),
                       i.createElement(
                         "div",
-                        { className: Es().MBody },
+                        { className: hs().MBody },
                         (0, v.Jr)("#aug23_armory_stack_body"),
                       ),
                     ),
                   ),
                   i.createElement(
                     "div",
-                    { className: Es().GridColumn },
+                    { className: hs().GridColumn },
                     i.createElement(
                       "div",
-                      { className: Es().GridImage },
+                      { className: hs().GridImage },
                       i.createElement("img", {
                         src: `${p.Y.IMG_URL}augupdate23/armory_sort_market_value.png`,
-                        className: Es().GridImageSpecs,
+                        className: hs().GridImageSpecs,
                       }),
                     ),
                     i.createElement(
                       "div",
-                      { className: Es().GridText },
+                      { className: hs().GridText },
                       i.createElement(
                         "div",
-                        { className: Es().MTitle },
+                        { className: hs().MTitle },
                         (0, v.Jr)("#aug23_armory_sort_title"),
                       ),
                       i.createElement(
                         "div",
-                        { className: Es().MBody },
+                        { className: hs().MBody },
                         (0, v.Jr)("#aug23_armory_sort_body"),
                       ),
                     ),
@@ -35222,45 +35272,45 @@
             ),
             i.createElement(
               "div",
-              { className: Es().ContainerCarousel },
+              { className: hs().ContainerCarousel },
               i.createElement(
                 "div",
-                { className: Es().Inset },
+                { className: hs().Inset },
                 i.createElement(
                   "div",
-                  { className: Es().CCText },
+                  { className: hs().CCText },
                   i.createElement(
                     "div",
-                    { className: Es().CCTitle },
+                    { className: hs().CCTitle },
                     (0, v.Jr)("#aug23_cc_title"),
                   ),
-                  i.createElement("div", { className: Es().HorizDivider }),
+                  i.createElement("div", { className: hs().HorizDivider }),
                   i.createElement(
                     "div",
-                    { className: Es().CCSubtitle },
+                    { className: hs().CCSubtitle },
                     (0, v.Jr)("#aug23_cc_sub"),
                   ),
                   i.createElement(
                     "div",
-                    { className: Es().CCBody },
+                    { className: hs().CCBody },
                     (0, v.Jr)("#aug23_cc_body"),
                   ),
                   i.createElement(
                     "div",
                     {
                       onClick: () =>
-                        js.PurchaseOnSteamStore(24613, 1, window.location.href),
+                        Ys.PurchaseOnSteamStore(24613, 1, window.location.href),
                       className: (0, h.Z)(
-                        Es().CCBtn,
-                        Es().TextStyleButton,
-                        Es().TextColorWhite,
-                        Es().CapsulePurchaseButton,
+                        hs().CCBtn,
+                        hs().TextStyleButton,
+                        hs().TextColorWhite,
+                        hs().CapsulePurchaseButton,
                       ),
                     },
                     (0, v.Jr)(
                       "#aug23_cc_btn",
-                      "undefined" !== js.GetBPPrice(24613)
-                        ? js.GetBPPrice(24613)
+                      "undefined" !== Ys.GetBPPrice(24613)
+                        ? Ys.GetBPPrice(24613)
                         : "",
                     ),
                   ),
@@ -35269,7 +35319,7 @@
               i.createElement(
                 R.sj,
                 {
-                  className: Es().TreasureCarousel,
+                  className: hs().TreasureCarousel,
                   naturalSlideWidth: 540,
                   naturalSlideHeight: 960,
                   totalSlides: 16,
@@ -35280,16 +35330,16 @@
                 },
                 i.createElement(
                   R.iR,
-                  { className: Es().TreasureSlider },
+                  { className: hs().TreasureSlider },
                   i.createElement(
                     R.Mi,
                     {
                       index: 0,
-                      className: Es().TreasureSlide,
-                      innerClassName: Es().TreasureInnerSlide,
-                      classNameHidden: Es().TreasureSlideHidden,
+                      className: hs().TreasureSlide,
+                      innerClassName: hs().TreasureInnerSlide,
+                      classNameHidden: hs().TreasureSlideHidden,
                     },
-                    i.createElement(vs, {
+                    i.createElement(Ss, {
                       index: 0,
                       video: "cc_abaddon",
                       name: "#aug23_cc_treasure_name1",
@@ -35302,11 +35352,11 @@
                     R.Mi,
                     {
                       index: 1,
-                      className: Es().TreasureSlide,
-                      innerClassName: Es().TreasureInnerSlide,
-                      classNameHidden: Es().TreasureSlideHidden,
+                      className: hs().TreasureSlide,
+                      innerClassName: hs().TreasureInnerSlide,
+                      classNameHidden: hs().TreasureSlideHidden,
                     },
-                    i.createElement(vs, {
+                    i.createElement(Ss, {
                       index: 1,
                       video: "cc_alchemist",
                       name: "#aug23_cc_treasure_name2",
@@ -35319,11 +35369,11 @@
                     R.Mi,
                     {
                       index: 2,
-                      className: Es().TreasureSlide,
-                      innerClassName: Es().TreasureInnerSlide,
-                      classNameHidden: Es().TreasureSlideHidden,
+                      className: hs().TreasureSlide,
+                      innerClassName: hs().TreasureInnerSlide,
+                      classNameHidden: hs().TreasureSlideHidden,
                     },
-                    i.createElement(vs, {
+                    i.createElement(Ss, {
                       index: 2,
                       video: "cc_antimage",
                       name: "#aug23_cc_treasure_name3",
@@ -35336,11 +35386,11 @@
                     R.Mi,
                     {
                       index: 3,
-                      className: Es().TreasureSlide,
-                      innerClassName: Es().TreasureInnerSlide,
-                      classNameHidden: Es().TreasureSlideHidden,
+                      className: hs().TreasureSlide,
+                      innerClassName: hs().TreasureInnerSlide,
+                      classNameHidden: hs().TreasureSlideHidden,
                     },
-                    i.createElement(vs, {
+                    i.createElement(Ss, {
                       index: 3,
                       video: "cc_dawnbreaker",
                       name: "#aug23_cc_treasure_name4",
@@ -35353,11 +35403,11 @@
                     R.Mi,
                     {
                       index: 4,
-                      className: Es().TreasureSlide,
-                      innerClassName: Es().TreasureInnerSlide,
-                      classNameHidden: Es().TreasureSlideHidden,
+                      className: hs().TreasureSlide,
+                      innerClassName: hs().TreasureInnerSlide,
+                      classNameHidden: hs().TreasureSlideHidden,
                     },
-                    i.createElement(vs, {
+                    i.createElement(Ss, {
                       index: 4,
                       video: "cc_dazzle",
                       name: "#aug23_cc_treasure_name5",
@@ -35370,11 +35420,11 @@
                     R.Mi,
                     {
                       index: 5,
-                      className: Es().TreasureSlide,
-                      innerClassName: Es().TreasureInnerSlide,
-                      classNameHidden: Es().TreasureSlideHidden,
+                      className: hs().TreasureSlide,
+                      innerClassName: hs().TreasureInnerSlide,
+                      classNameHidden: hs().TreasureSlideHidden,
                     },
-                    i.createElement(vs, {
+                    i.createElement(Ss, {
                       index: 5,
                       video: "cc_death_prophet",
                       name: "#aug23_cc_treasure_name6",
@@ -35387,11 +35437,11 @@
                     R.Mi,
                     {
                       index: 6,
-                      className: Es().TreasureSlide,
-                      innerClassName: Es().TreasureInnerSlide,
-                      classNameHidden: Es().TreasureSlideHidden,
+                      className: hs().TreasureSlide,
+                      innerClassName: hs().TreasureInnerSlide,
+                      classNameHidden: hs().TreasureSlideHidden,
                     },
-                    i.createElement(vs, {
+                    i.createElement(Ss, {
                       index: 6,
                       video: "cc_hoodwink",
                       name: "#aug23_cc_treasure_name7",
@@ -35404,11 +35454,11 @@
                     R.Mi,
                     {
                       index: 7,
-                      className: Es().TreasureSlide,
-                      innerClassName: Es().TreasureInnerSlide,
-                      classNameHidden: Es().TreasureSlideHidden,
+                      className: hs().TreasureSlide,
+                      innerClassName: hs().TreasureInnerSlide,
+                      classNameHidden: hs().TreasureSlideHidden,
                     },
-                    i.createElement(vs, {
+                    i.createElement(Ss, {
                       index: 7,
                       video: "cc_jakiro",
                       name: "#aug23_cc_treasure_name8",
@@ -35421,11 +35471,11 @@
                     R.Mi,
                     {
                       index: 8,
-                      className: Es().TreasureSlide,
-                      innerClassName: Es().TreasureInnerSlide,
-                      classNameHidden: Es().TreasureSlideHidden,
+                      className: hs().TreasureSlide,
+                      innerClassName: hs().TreasureInnerSlide,
+                      classNameHidden: hs().TreasureSlideHidden,
                     },
-                    i.createElement(vs, {
+                    i.createElement(Ss, {
                       index: 8,
                       video: "cc_kunkka",
                       name: "#aug23_cc_treasure_name9",
@@ -35438,11 +35488,11 @@
                     R.Mi,
                     {
                       index: 9,
-                      className: Es().TreasureSlide,
-                      innerClassName: Es().TreasureInnerSlide,
-                      classNameHidden: Es().TreasureSlideHidden,
+                      className: hs().TreasureSlide,
+                      innerClassName: hs().TreasureInnerSlide,
+                      classNameHidden: hs().TreasureSlideHidden,
                     },
-                    i.createElement(vs, {
+                    i.createElement(Ss, {
                       index: 9,
                       video: "cc_legion_commander",
                       name: "#aug23_cc_treasure_name10",
@@ -35455,11 +35505,11 @@
                     R.Mi,
                     {
                       index: 10,
-                      className: Es().TreasureSlide,
-                      innerClassName: Es().TreasureInnerSlide,
-                      classNameHidden: Es().TreasureSlideHidden,
+                      className: hs().TreasureSlide,
+                      innerClassName: hs().TreasureInnerSlide,
+                      classNameHidden: hs().TreasureSlideHidden,
                     },
-                    i.createElement(vs, {
+                    i.createElement(Ss, {
                       index: 10,
                       video: "cc_marci",
                       name: "#aug23_cc_treasure_name11",
@@ -35472,11 +35522,11 @@
                     R.Mi,
                     {
                       index: 11,
-                      className: Es().TreasureSlide,
-                      innerClassName: Es().TreasureInnerSlide,
-                      classNameHidden: Es().TreasureSlideHidden,
+                      className: hs().TreasureSlide,
+                      innerClassName: hs().TreasureInnerSlide,
+                      classNameHidden: hs().TreasureSlideHidden,
                     },
-                    i.createElement(vs, {
+                    i.createElement(Ss, {
                       index: 11,
                       video: "cc_primal_beast",
                       name: "#aug23_cc_treasure_name12",
@@ -35489,11 +35539,11 @@
                     R.Mi,
                     {
                       index: 12,
-                      className: Es().TreasureSlide,
-                      innerClassName: Es().TreasureInnerSlide,
-                      classNameHidden: Es().TreasureSlideHidden,
+                      className: hs().TreasureSlide,
+                      innerClassName: hs().TreasureInnerSlide,
+                      classNameHidden: hs().TreasureSlideHidden,
                     },
-                    i.createElement(vs, {
+                    i.createElement(Ss, {
                       index: 12,
                       video: "cc_snapfire",
                       name: "#aug23_cc_treasure_name13",
@@ -35506,11 +35556,11 @@
                     R.Mi,
                     {
                       index: 13,
-                      className: Es().TreasureSlide,
-                      innerClassName: Es().TreasureInnerSlide,
-                      classNameHidden: Es().TreasureSlideHidden,
+                      className: hs().TreasureSlide,
+                      innerClassName: hs().TreasureInnerSlide,
+                      classNameHidden: hs().TreasureSlideHidden,
                     },
-                    i.createElement(vs, {
+                    i.createElement(Ss, {
                       index: 13,
                       video: "cc_spectre",
                       name: "#aug23_cc_treasure_name14",
@@ -35523,11 +35573,11 @@
                     R.Mi,
                     {
                       index: 14,
-                      className: Es().TreasureSlide,
-                      innerClassName: Es().TreasureInnerSlide,
-                      classNameHidden: Es().TreasureSlideHidden,
+                      className: hs().TreasureSlide,
+                      innerClassName: hs().TreasureInnerSlide,
+                      classNameHidden: hs().TreasureSlideHidden,
                     },
-                    i.createElement(vs, {
+                    i.createElement(Ss, {
                       index: 14,
                       video: "cc_storm_spirit",
                       name: "#aug23_cc_treasure_name15",
@@ -35540,11 +35590,11 @@
                     R.Mi,
                     {
                       index: 15,
-                      className: Es().TreasureSlide,
-                      innerClassName: Es().TreasureInnerSlide,
-                      classNameHidden: Es().TreasureSlideHidden,
+                      className: hs().TreasureSlide,
+                      innerClassName: hs().TreasureInnerSlide,
+                      classNameHidden: hs().TreasureSlideHidden,
                     },
-                    i.createElement(vs, {
+                    i.createElement(Ss, {
                       index: 15,
                       video: "cc_wraith_king",
                       name: "#aug23_cc_treasure_name16",
@@ -35556,100 +35606,100 @@
                 ),
                 i.createElement(
                   "div",
-                  { className: Es().TreasureName },
+                  { className: hs().TreasureName },
                   (0, v.Jr)(e),
                 ),
                 i.createElement(
                   "div",
-                  { className: Es().CarouselDots },
+                  { className: hs().CarouselDots },
                   i.createElement(
                     R.jp,
-                    { className: Es().TreasureBack },
+                    { className: hs().TreasureBack },
                     i.createElement("div", null),
                   ),
                   i.createElement(
                     R.oT,
-                    { className: Es().TreasureSelector, slide: 0 },
+                    { className: hs().TreasureSelector, slide: 0 },
                     i.createElement("div", null),
                   ),
                   i.createElement(
                     R.oT,
-                    { className: Es().TreasureSelector, slide: 1 },
+                    { className: hs().TreasureSelector, slide: 1 },
                     i.createElement("div", null),
                   ),
                   i.createElement(
                     R.oT,
-                    { className: Es().TreasureSelector, slide: 2 },
+                    { className: hs().TreasureSelector, slide: 2 },
                     i.createElement("div", null),
                   ),
                   i.createElement(
                     R.oT,
-                    { className: Es().TreasureSelector, slide: 3 },
+                    { className: hs().TreasureSelector, slide: 3 },
                     i.createElement("div", null),
                   ),
                   i.createElement(
                     R.oT,
-                    { className: Es().TreasureSelector, slide: 4 },
+                    { className: hs().TreasureSelector, slide: 4 },
                     i.createElement("div", null),
                   ),
                   i.createElement(
                     R.oT,
-                    { className: Es().TreasureSelector, slide: 5 },
+                    { className: hs().TreasureSelector, slide: 5 },
                     i.createElement("div", null),
                   ),
                   i.createElement(
                     R.oT,
-                    { className: Es().TreasureSelector, slide: 6 },
+                    { className: hs().TreasureSelector, slide: 6 },
                     i.createElement("div", null),
                   ),
                   i.createElement(
                     R.oT,
-                    { className: Es().TreasureSelector, slide: 7 },
+                    { className: hs().TreasureSelector, slide: 7 },
                     i.createElement("div", null),
                   ),
                   i.createElement(
                     R.oT,
-                    { className: Es().TreasureSelector, slide: 8 },
+                    { className: hs().TreasureSelector, slide: 8 },
                     i.createElement("div", null),
                   ),
                   i.createElement(
                     R.oT,
-                    { className: Es().TreasureSelector, slide: 9 },
+                    { className: hs().TreasureSelector, slide: 9 },
                     i.createElement("div", null),
                   ),
                   i.createElement(
                     R.oT,
-                    { className: Es().TreasureSelector, slide: 10 },
+                    { className: hs().TreasureSelector, slide: 10 },
                     i.createElement("div", null),
                   ),
                   i.createElement(
                     R.oT,
-                    { className: Es().TreasureSelector, slide: 11 },
+                    { className: hs().TreasureSelector, slide: 11 },
                     i.createElement("div", null),
                   ),
                   i.createElement(
                     R.oT,
-                    { className: Es().TreasureSelector, slide: 12 },
+                    { className: hs().TreasureSelector, slide: 12 },
                     i.createElement("div", null),
                   ),
                   i.createElement(
                     R.oT,
-                    { className: Es().TreasureSelector, slide: 13 },
+                    { className: hs().TreasureSelector, slide: 13 },
                     i.createElement("div", null),
                   ),
                   i.createElement(
                     R.oT,
-                    { className: Es().TreasureSelector, slide: 14 },
+                    { className: hs().TreasureSelector, slide: 14 },
                     i.createElement("div", null),
                   ),
                   i.createElement(
                     R.oT,
-                    { className: Es().TreasureSelector, slide: 15 },
+                    { className: hs().TreasureSelector, slide: 15 },
                     i.createElement("div", null),
                   ),
                   i.createElement(
                     R.P1,
-                    { className: Es().TreasureNext },
+                    { className: hs().TreasureNext },
                     i.createElement("div", null),
                   ),
                 ),
@@ -35658,212 +35708,212 @@
             i.createElement(
               "div",
               {
-                className: Es().Container,
+                className: hs().Container,
                 style: {
                   backgroundImage: `url( ${p.Y.IMG_URL}augupdate23/repeater_grey_alt.jpg )`,
                 },
               },
               i.createElement(
                 "div",
-                { className: Es().Inset },
+                { className: hs().Inset },
                 i.createElement(
                   "div",
-                  { className: Es().SingleRow },
+                  { className: hs().SingleRow },
                   i.createElement(
                     "div",
-                    { className: Es().XLText },
+                    { className: hs().XLText },
                     i.createElement(
                       "div",
-                      { className: Es().XLTitle },
+                      { className: hs().XLTitle },
                       (0, v.Jr)("#aug23_playerbehavior_title"),
                     ),
-                    i.createElement("div", { className: Es().HorizDivider }),
+                    i.createElement("div", { className: hs().HorizDivider }),
                     i.createElement(
                       "div",
-                      { className: Es().XLSubtitle },
+                      { className: hs().XLSubtitle },
                       (0, v.Jr)("#aug23_playerbehavior_subtitle"),
                     ),
                     i.createElement(
                       "div",
-                      { className: Es().XLBody },
+                      { className: hs().XLBody },
                       (0, v.Jr)("#aug23_playerbehavior_body"),
                     ),
                   ),
                 ),
                 i.createElement(
                   "div",
-                  { className: Es().RowColumn },
+                  { className: hs().RowColumn },
                   i.createElement(
                     "div",
                     {
-                      className: (0, h.Z)(Es().Row, Es().Flip),
+                      className: (0, h.Z)(hs().Row, hs().Flip),
                       "data-aos": "fade-up",
                       "data-aos-delay": "200",
                       "data-aos-duration": "2000",
                     },
                     i.createElement(
                       "div",
-                      { className: Es().MText },
+                      { className: hs().MText },
                       i.createElement(
                         "div",
-                        { className: Es().MTitle },
+                        { className: hs().MTitle },
                         (0, v.Jr)("#aug23_playerbehavior_matchmaking_title"),
                       ),
                       i.createElement(
                         "div",
-                        { className: Es().MBody },
+                        { className: hs().MBody },
                         (0, v.Jr)("#aug23_playerbehavior_matchmaking_body"),
                       ),
                     ),
                     i.createElement(
                       "div",
-                      { className: Es().RowImage },
+                      { className: hs().RowImage },
                       i.createElement("img", {
                         src: `${p.Y.IMG_URL}augupdate23/behavior_matchmaking.png`,
-                        className: Es().RowImageSpecs,
+                        className: hs().RowImageSpecs,
                       }),
                     ),
                   ),
                   i.createElement(
                     "div",
                     {
-                      className: Es().Row,
+                      className: hs().Row,
                       "data-aos": "fade-up",
                       "data-aos-delay": "200",
                       "data-aos-duration": "2000",
                     },
                     i.createElement(
                       "div",
-                      { className: Es().MText },
+                      { className: hs().MText },
                       i.createElement(
                         "div",
-                        { className: Es().MTitle },
+                        { className: hs().MTitle },
                         (0, v.Jr)("#aug23_playerbehavior_reporting_title"),
                       ),
                       i.createElement(
                         "div",
-                        { className: Es().MBody },
+                        { className: hs().MBody },
                         (0, v.Jr)("#aug23_playerbehavior_reporting_body"),
                       ),
                     ),
                     i.createElement(
                       "div",
-                      { className: Es().RowImage },
+                      { className: hs().RowImage },
                       i.createElement("img", {
                         src: `${p.Y.IMG_URL}augupdate23/behavior_reporting.png`,
-                        className: Es().RowImageSpecs,
+                        className: hs().RowImageSpecs,
                       }),
                     ),
                   ),
                   i.createElement(
                     "div",
                     {
-                      className: (0, h.Z)(Es().Row, Es().Flip),
+                      className: (0, h.Z)(hs().Row, hs().Flip),
                       "data-aos": "fade-up",
                       "data-aos-delay": "200",
                       "data-aos-duration": "2000",
                     },
                     i.createElement(
                       "div",
-                      { className: Es().MText },
+                      { className: hs().MText },
                       i.createElement(
                         "div",
-                        { className: Es().MTitle },
+                        { className: hs().MTitle },
                         (0, v.Jr)("#aug23_playerbehavior_goodreport_title"),
                       ),
                       i.createElement(
                         "div",
-                        { className: Es().MBody },
+                        { className: hs().MBody },
                         (0, v.Jr)("#aug23_playerbehavior_goodreport_body"),
                       ),
                     ),
                     i.createElement(
                       "div",
-                      { className: Es().RowImage },
+                      { className: hs().RowImage },
                       i.createElement("img", {
                         src: `${p.Y.IMG_URL}augupdate23/behavior_good_reports.png`,
-                        className: Es().RowImageSpecs,
+                        className: hs().RowImageSpecs,
                       }),
                     ),
                   ),
                   i.createElement(
                     "div",
                     {
-                      className: Es().Row,
+                      className: hs().Row,
                       "data-aos": "fade-up",
                       "data-aos-delay": "200",
                       "data-aos-duration": "2000",
                     },
                     i.createElement(
                       "div",
-                      { className: Es().MText },
+                      { className: hs().MText },
                       i.createElement(
                         "div",
-                        { className: Es().MTitle },
+                        { className: hs().MTitle },
                         (0, v.Jr)("#aug23_playerbehavior_chat_title"),
                       ),
                       i.createElement(
                         "div",
-                        { className: Es().MBody },
+                        { className: hs().MBody },
                         (0, v.Jr)("#aug23_playerbehavior_chat_body"),
                       ),
                     ),
                     i.createElement(
                       "div",
-                      { className: Es().RowImage },
+                      { className: hs().RowImage },
                       i.createElement("img", {
                         src: `${p.Y.IMG_URL}augupdate23/behavior_toxic_chat.png`,
-                        className: Es().RowImageSpecs,
+                        className: hs().RowImageSpecs,
                       }),
                     ),
                   ),
                   i.createElement(
                     "div",
                     {
-                      className: (0, h.Z)(Es().Row, Es().Flip),
+                      className: (0, h.Z)(hs().Row, hs().Flip),
                       "data-aos": "fade-up",
                       "data-aos-delay": "200",
                       "data-aos-duration": "2000",
                     },
                     i.createElement(
                       "div",
-                      { className: Es().MText },
+                      { className: hs().MText },
                       i.createElement(
                         "div",
-                        { className: Es().MTitle },
+                        { className: hs().MTitle },
                         (0, v.Jr)("#aug23_playerbehavior_scores_title"),
                       ),
                       i.createElement(
                         "div",
-                        { className: Es().MBody },
+                        { className: hs().MBody },
                         (0, v.Jr)("#aug23_playerbehavior_scores_body"),
                       ),
                     ),
                     i.createElement(
                       "div",
-                      { className: Es().RowImage },
+                      { className: hs().RowImage },
                       i.createElement("img", {
                         src: `${p.Y.IMG_URL}augupdate23/summary_behavior.png`,
-                        className: Es().RowImageSpecs,
+                        className: hs().RowImageSpecs,
                       }),
                     ),
                   ),
                 ),
                 i.createElement(
                   "div",
-                  { className: Es().SingleRow },
+                  { className: hs().SingleRow },
                   i.createElement(
                     "div",
-                    { className: Es().XLText },
+                    { className: hs().XLText },
                     i.createElement(
                       "div",
-                      { className: Es().XLTitle },
+                      { className: hs().XLTitle },
                       (0, v.Jr)("#aug23_playerbehavior_forward_title"),
                     ),
-                    i.createElement("div", { className: Es().HorizDivider }),
+                    i.createElement("div", { className: hs().HorizDivider }),
                     i.createElement(
                       "div",
-                      { className: Es().XLBody },
+                      { className: hs().XLBody },
                       (0, v.Jr)("#aug23_playerbehavior_forward_body"),
                     ),
                   ),
@@ -35873,29 +35923,29 @@
             i.createElement(
               "div",
               {
-                className: Es().Container,
+                className: hs().Container,
                 style: {
                   backgroundImage: `url( ${p.Y.IMG_URL}augupdate23/repeater_grey_alt.jpg )`,
                 },
               },
               i.createElement(
                 "div",
-                { className: Es().Inset },
+                { className: hs().Inset },
                 i.createElement(
                   "div",
-                  { className: Es().SingleRow },
+                  { className: hs().SingleRow },
                   i.createElement(
                     "div",
-                    { className: Es().XLText },
+                    { className: hs().XLText },
                     i.createElement(
                       "div",
-                      { className: Es().XLTitle },
+                      { className: hs().XLTitle },
                       (0, v.Jr)("#aug23_maprendering_title"),
                     ),
-                    i.createElement("div", { className: Es().HorizDivider }),
+                    i.createElement("div", { className: hs().HorizDivider }),
                     i.createElement(
                       "div",
-                      { className: Es().XLBody },
+                      { className: hs().XLBody },
                       (0, v.Jr)("#aug23_maprendering_body"),
                     ),
                   ),
@@ -35903,8 +35953,8 @@
               ),
               i.createElement(
                 "div",
-                { className: Es().SliderContainer },
-                i.createElement(Ss, {
+                { className: hs().SliderContainer },
+                i.createElement(Cs, {
                   comparisons: [
                     {
                       title: "#aug23_maprendering_particles_title",
@@ -35935,51 +35985,51 @@
               ),
               i.createElement(
                 "div",
-                { className: Es().SingleSliderContainer },
+                { className: hs().SingleSliderContainer },
                 i.createElement(
                   "div",
-                  { className: Es().SingleSliderInset },
+                  { className: hs().SingleSliderInset },
                   i.createElement(
                     "div",
-                    { className: Es().SingleSliderColumn },
+                    { className: hs().SingleSliderColumn },
                     i.createElement(
                       "div",
-                      { className: Es().SingleSliderText },
+                      { className: hs().SingleSliderText },
                       i.createElement(
                         "div",
-                        { className: Es().SingleMapTitle },
+                        { className: hs().SingleMapTitle },
                         (0, v.Jr)("#aug23_maprendering_final_title"),
                       ),
                       i.createElement(
                         "div",
-                        { className: Es().SingleMapBody },
+                        { className: hs().SingleMapBody },
                         (0, v.Jr)("#aug23_maprendering_final_body"),
                       ),
                     ),
-                    i.createElement(hs.vx, {
+                    i.createElement(vs.vx, {
                       itemOne: i.createElement("img", {
                         src: `${p.Y.IMG_URL}augupdate23/FinalMapBefore.jpg`,
-                        className: Es().SingleSliderImageSpecs,
+                        className: hs().SingleSliderImageSpecs,
                       }),
                       itemTwo: i.createElement("img", {
                         src: `${p.Y.IMG_URL}augupdate23/FinalMapAfter.jpg`,
-                        className: Es().SingleSliderImageSpecs,
+                        className: hs().SingleSliderImageSpecs,
                       }),
                     }),
                     i.createElement(
                       "div",
-                      { className: Es().SingleBeforeAfter },
+                      { className: hs().SingleBeforeAfter },
                       i.createElement(
                         "div",
-                        { className: Es().Before },
+                        { className: hs().Before },
                         (0, v.Jr)("#aug23_maprendering_before"),
                       ),
                       i.createElement("div", {
-                        className: Es().SingleBeforeAfterLine,
+                        className: hs().SingleBeforeAfterLine,
                       }),
                       i.createElement(
                         "div",
-                        { className: Es().After },
+                        { className: hs().After },
                         (0, v.Jr)("#aug23_maprendering_after"),
                       ),
                     ),
@@ -35990,14 +36040,14 @@
             i.createElement(T.U, null),
           );
         });
-      var bs = a(90113),
-        ys = a.n(bs);
-      const ks = () =>
+      var ys = a(90113),
+        ks = a.n(ys);
+      const Ts = () =>
           i.createElement("div", {
-            className: ys().RightArrow,
+            className: ks().RightArrow,
             style: { backgroundImage: `url( ${p.Y.IMG_URL}/arrow_left.png )` },
           }),
-        Ts = ({
+        fs = ({
           shouldShow: e,
           showFunc: t,
           className: a,
@@ -36008,31 +36058,31 @@
             "div",
             {
               className: (0, h.Z)(
-                ys().PopupPanelContainer,
-                e && ys().ShowPopupPanel,
+                ks().PopupPanelContainer,
+                e && ks().ShowPopupPanel,
               ),
               onClick: () => t(!1),
             },
             i.createElement(
               "div",
               {
-                className: (0, h.Z)(ys().PopupPanel, a),
+                className: (0, h.Z)(ks().PopupPanel, a),
                 onClick: (e) => e.stopPropagation(),
               },
               r &&
                 i.createElement(
                   "div",
-                  { className: ys().CloseButton, onClick: () => t(!1) },
+                  { className: ks().CloseButton, onClick: () => t(!1) },
                   i.createElement("img", { src: `${p.Y.IMG_URL}close.png` }),
                 ),
               n,
             ),
           );
-      class fs extends i.Component {
+      class Ms extends i.Component {
         constructor(e) {
           super(e),
             (this.handleClick = (e) => {
-              if (js.getShortFilmOwnership()) {
+              if (Ys.getShortFilmOwnership()) {
                 const e =
                   p.Y.BASE_URL +
                   l._.shortfilm() +
@@ -36041,14 +36091,14 @@
               } else this.setState({ bPopupVisible: e });
             }),
             (this.handleAccepted = () => {
-              js.grantShortFilmAppIDOwnership();
+              Ys.grantShortFilmAppIDOwnership();
               const e =
                 p.Y.BASE_URL +
                 l._.shortfilm() +
                 "/redirecttosteamcommunityshortfilm/";
               history.pushState("", "", e), history.go();
             }),
-            (this.BGetOwnsApp = () => js.getShortFilmOwnership()),
+            (this.BGetOwnsApp = () => Ys.getShortFilmOwnership()),
             (this.state = { bPopupVisible: !1 });
         }
         render() {
@@ -36056,7 +36106,7 @@
             this.BGetOwnsApp(),
             i.createElement(
               "div",
-              { className: ys().HomePage },
+              { className: ks().HomePage },
               i.createElement(Ne.j, { bOverlapping: !0 }),
               i.createElement(
                 B.q,
@@ -36065,14 +36115,14 @@
               ),
               i.createElement(
                 "div",
-                { className: ys().HeaderSection },
+                { className: ks().HeaderSection },
                 i.createElement(
                   "div",
-                  { className: ys().BackgroundVideoContainer },
+                  { className: ks().BackgroundVideoContainer },
                   i.createElement(
                     "video",
                     {
-                      className: ys().BackgroundVideo,
+                      className: ks().BackgroundVideo,
                       autoPlay: !0,
                       preload: "auto",
                       muted: !0,
@@ -36092,14 +36142,14 @@
                 ),
                 i.createElement(
                   "div",
-                  { className: ys().TitleContainer },
+                  { className: ks().TitleContainer },
                   i.createElement(
                     "div",
-                    { className: ys().TopRow },
+                    { className: ks().TopRow },
                     i.createElement(
                       "video",
                       {
-                        className: ys().HeroLogo,
+                        className: ks().HeroLogo,
                         autoPlay: !0,
                         preload: "auto",
                         muted: !0,
@@ -36114,10 +36164,10 @@
                     ),
                     i.createElement(
                       "div",
-                      { className: ys().ButtonRow },
+                      { className: ks().ButtonRow },
                       i.createElement(
                         "div",
-                        { className: ys().CommunityDesc },
+                        { className: ks().CommunityDesc },
                         (0, v.Jr)("#filmcontest_submit_label"),
                       ),
                       0 == p.Y.ACCOUNT_ID &&
@@ -36130,17 +36180,17 @@
                             "div",
                             {
                               className: (0, h.Z)(
-                                ys().FilmButton,
-                                ys().SteamButton,
+                                ks().FilmButton,
+                                ks().SteamButton,
                               ),
                             },
                             i.createElement(
                               "div",
-                              { className: ys().ButtonText },
+                              { className: ks().ButtonText },
                               (0, v.Jr)("#filmcontest_login_steam"),
                             ),
                             i.createElement("div", {
-                              className: ys().SteamLogo,
+                              className: ks().SteamLogo,
                             }),
                           ),
                         ),
@@ -36150,20 +36200,20 @@
                           {
                             onClick: () => this.handleClick(!0),
                             className: (0, h.Z)(
-                              ys().FilmButton,
-                              ys().SteamButton,
+                              ks().FilmButton,
+                              ks().SteamButton,
                             ),
                           },
                           i.createElement(
                             "div",
-                            { className: ys().ButtonText },
+                            { className: ks().ButtonText },
                             (0, v.Jr)("#filmcontest_button_submit"),
                           ),
-                          i.createElement(ks, null),
+                          i.createElement(Ts, null),
                         ),
                       i.createElement(
                         "div",
-                        { className: ys().CommunityDesc },
+                        { className: ks().CommunityDesc },
                         (0, v.Jr)("#filmcontest_community"),
                       ),
                       i.createElement(
@@ -36171,102 +36221,102 @@
                         { href: "https://steamcommunity.com/dota2shortfilm/" },
                         i.createElement(
                           "div",
-                          { className: ys().FilmButton },
+                          { className: ks().FilmButton },
                           i.createElement(
                             "div",
-                            { className: ys().ButtonText },
+                            { className: ks().ButtonText },
                             (0, v.Jr)("#filmcontest_submissions"),
                           ),
-                          i.createElement(ks, null),
+                          i.createElement(Ts, null),
                         ),
                       ),
                     ),
                   ),
                   i.createElement(
                     "div",
-                    { className: ys().Introduction },
+                    { className: ks().Introduction },
                     (0, v.Jr)("#filmcontest23_intro"),
                   ),
                   i.createElement(
                     "div",
-                    { className: ys().Prizes },
+                    { className: ks().Prizes },
                     i.createElement(
                       "div",
-                      { className: (0, h.Z)(ys().Prize, ys().Prize1) },
+                      { className: (0, h.Z)(ks().Prize, ks().Prize1) },
                       i.createElement(
                         "div",
-                        { className: ys().PrizeAmount },
+                        { className: ks().PrizeAmount },
                         (0, v.Jr)("#filmcontest_prize1_amount"),
                       ),
                       i.createElement(
                         "div",
-                        { className: ys().PrizeLabel },
+                        { className: ks().PrizeLabel },
                         (0, v.Jr)("#filmcontest_prize1_label"),
                       ),
                     ),
                     i.createElement(
                       "div",
-                      { className: (0, h.Z)(ys().Prize, ys().Prize2) },
+                      { className: (0, h.Z)(ks().Prize, ks().Prize2) },
                       i.createElement(
                         "div",
-                        { className: ys().PrizeAmount },
+                        { className: ks().PrizeAmount },
                         (0, v.Jr)("#filmcontest_prize2_amount"),
                       ),
                       i.createElement(
                         "div",
-                        { className: ys().PrizeLabel },
+                        { className: ks().PrizeLabel },
                         (0, v.Jr)("#filmcontest_prize2_label"),
                       ),
                     ),
                     i.createElement(
                       "div",
-                      { className: (0, h.Z)(ys().Prize, ys().Prize3) },
+                      { className: (0, h.Z)(ks().Prize, ks().Prize3) },
                       i.createElement(
                         "div",
-                        { className: ys().PrizeAmount },
+                        { className: ks().PrizeAmount },
                         (0, v.Jr)("#filmcontest_prize3_amount"),
                       ),
                       i.createElement(
                         "div",
-                        { className: ys().PrizeLabel },
+                        { className: ks().PrizeLabel },
                         (0, v.Jr)("#filmcontest_prize3_label"),
                       ),
                     ),
                     i.createElement(
                       "div",
-                      { className: (0, h.Z)(ys().Prize, ys().Prize4) },
+                      { className: (0, h.Z)(ks().Prize, ks().Prize4) },
                       i.createElement(
                         "div",
-                        { className: ys().PrizeAmount },
+                        { className: ks().PrizeAmount },
                         (0, v.Jr)("#filmcontest_prize4_amount"),
                       ),
                       i.createElement(
                         "div",
-                        { className: ys().PrizeLabel },
+                        { className: ks().PrizeLabel },
                         (0, v.Jr)("#filmcontest_prize4_label"),
                       ),
                     ),
                   ),
                   i.createElement(
                     "div",
-                    { className: ys().PrizeDesc },
+                    { className: ks().PrizeDesc },
                     (0, v.Jr)("#filmcontest23_prize_desc"),
                   ),
                 ),
               ),
               i.createElement(
                 "div",
-                { className: ys().WallpaperSection },
+                { className: ks().WallpaperSection },
                 i.createElement(
                   "div",
-                  { className: ys().WallpaperTitle },
+                  { className: ks().WallpaperTitle },
                   (0, v.Jr)("#filmcontest_previous_winners"),
                 ),
                 i.createElement(
                   "div",
-                  { className: ys().Wallpapers },
+                  { className: ks().Wallpapers },
                   i.createElement("iframe", {
-                    className: ys().PreviousWinnerVideo,
+                    className: ks().PreviousWinnerVideo,
                     width: "30%",
                     height: "300px",
                     src: "https://www.youtube.com/embed/_kAubTZUVEo",
@@ -36277,7 +36327,7 @@
                     allowFullScreen: !0,
                   }),
                   i.createElement("iframe", {
-                    className: ys().PreviousWinnerVideo,
+                    className: ks().PreviousWinnerVideo,
                     width: "30%",
                     height: "300px",
                     src: "https://www.youtube.com/embed/A4vbIbEaeDg",
@@ -36288,7 +36338,7 @@
                     allowFullScreen: !0,
                   }),
                   i.createElement("iframe", {
-                    className: ys().PreviousWinnerVideo,
+                    className: ks().PreviousWinnerVideo,
                     width: "30%",
                     height: "300px",
                     src: "https://www.youtube.com/embed/6PLMAD5efmQ",
@@ -36302,20 +36352,20 @@
               ),
               i.createElement(
                 "div",
-                { className: ys().GuidelinesSection },
-                i.createElement("div", { className: ys().Divider }),
-                i.createElement("div", { className: ys().DividerBottom }),
+                { className: ks().GuidelinesSection },
+                i.createElement("div", { className: ks().Divider }),
+                i.createElement("div", { className: ks().DividerBottom }),
                 i.createElement(
                   "div",
-                  { className: ys().Quote },
+                  { className: ks().Quote },
                   i.createElement(
                     "div",
-                    { className: ys().GuidelinesTitle },
+                    { className: ks().GuidelinesTitle },
                     (0, v.Jr)("#filmcontest_guidelines"),
                   ),
                   i.createElement(
                     "div",
-                    { className: ys().GuidelinesList },
+                    { className: ks().GuidelinesList },
                     i.createElement(
                       "ul",
                       null,
@@ -36385,10 +36435,10 @@
               ),
               i.createElement(
                 "div",
-                { className: ys().EndRow },
+                { className: ks().EndRow },
                 i.createElement(
                   "div",
-                  { className: ys().EndRowText },
+                  { className: ks().EndRowText },
                   (0, v.Jr)("#filmcontest23_intro"),
                   0 == p.Y.ACCOUNT_ID &&
                     i.createElement(
@@ -36400,16 +36450,16 @@
                         "div",
                         {
                           className: (0, h.Z)(
-                            ys().FilmButton,
-                            ys().SteamButton,
+                            ks().FilmButton,
+                            ks().SteamButton,
                           ),
                         },
                         i.createElement(
                           "div",
-                          { className: ys().ButtonText },
+                          { className: ks().ButtonText },
                           (0, v.Jr)("#filmcontest_login_steam"),
                         ),
-                        i.createElement("div", { className: ys().SteamLogo }),
+                        i.createElement("div", { className: ks().SteamLogo }),
                       ),
                     ),
                   0 != p.Y.ACCOUNT_ID &&
@@ -36417,26 +36467,26 @@
                       "div",
                       {
                         onClick: () => this.handleClick(!0),
-                        className: (0, h.Z)(ys().FilmButton, ys().SteamButton),
+                        className: (0, h.Z)(ks().FilmButton, ks().SteamButton),
                       },
                       i.createElement(
                         "div",
-                        { className: ys().ButtonText },
+                        { className: ks().ButtonText },
                         (0, v.Jr)("#filmcontest_button_submit"),
                       ),
-                      i.createElement(ks, null),
+                      i.createElement(Ts, null),
                     ),
                 ),
                 i.createElement("img", {
-                  className: ys().EndRowImage,
+                  className: ks().EndRowImage,
                   src: `${p.Y.IMG_URL}shortfilmcontest2023/clapper_2023.png`,
                 }),
               ),
               i.createElement(T.U, null),
               i.createElement(
-                Ts,
+                fs,
                 {
-                  className: ys().ShortFilmPopup,
+                  className: ks().ShortFilmPopup,
                   hasCloseButton: !0,
                   shouldShow: this.state.bPopupVisible,
                   showFunc: (e) => this.handleClick(e),
@@ -36446,7 +36496,7 @@
                   "div",
                   {
                     onClick: () => this.handleAccepted(),
-                    className: (0, h.Z)(ys().FilmButton, ys().SteamButton),
+                    className: (0, h.Z)(ks().FilmButton, ks().SteamButton),
                   },
                   (0, v.Jr)("#filmcontest_i_agree"),
                 ),
@@ -36456,26 +36506,26 @@
           );
         }
       }
-      let Ms = i.lazy(() => a.e(3324).then(a.bind(a, 83324))),
-        Rs = i.lazy(() =>
+      let Rs = i.lazy(() => a.e(3324).then(a.bind(a, 83324))),
+        Is = i.lazy(() =>
           Promise.all([a.e(4711), a.e(6063)]).then(a.bind(a, 66063)),
         ),
-        Is = i.lazy(() => a.e(1669).then(a.bind(a, 91669))),
-        Bs = i.lazy(() =>
+        Bs = i.lazy(() => a.e(1669).then(a.bind(a, 91669))),
+        As = i.lazy(() =>
           Promise.all([a.e(4711), a.e(9431)]).then(a.bind(a, 99431)),
         ),
-        As = i.lazy(() => a.e(104).then(a.bind(a, 20104))),
-        ws = i.lazy(() => a.e(7929).then(a.bind(a, 47929))),
-        Ds = i.lazy(() => a.e(7164).then(a.bind(a, 7164))),
-        Ns = i.lazy(() => a.e(7256).then(a.bind(a, 97256))),
-        Ls = i.lazy(() => a.e(6247).then(a.bind(a, 76247))),
-        Ps = i.lazy(() =>
+        ws = i.lazy(() => a.e(104).then(a.bind(a, 20104))),
+        Ds = i.lazy(() => a.e(7929).then(a.bind(a, 47929))),
+        Ns = i.lazy(() => a.e(7164).then(a.bind(a, 7164))),
+        Ls = i.lazy(() => a.e(7256).then(a.bind(a, 97256))),
+        Ps = i.lazy(() => a.e(6247).then(a.bind(a, 76247))),
+        Fs = i.lazy(() =>
           Promise.all([a.e(4039), a.e(1510)]).then(a.bind(a, 88900)),
         ),
-        Fs = i.lazy(() =>
+        Gs = i.lazy(() =>
           Promise.all([a.e(4039), a.e(1510)]).then(a.bind(a, 21600)),
         ),
-        Gs = class extends i.Component {
+        Os = class extends i.Component {
           componentDidMount() {
             o().init({
               disable: !1,
@@ -36508,7 +36558,7 @@
                   i.createElement(
                     d.rs,
                     null,
-                    i.createElement(ya, { path: l._.home(), component: Bi }),
+                    i.createElement(ya, { path: l._.home(), component: Ai }),
                     i.createElement(ya, {
                       path: l._.newsentry(":id"),
                       component: Lt,
@@ -36531,105 +36581,105 @@
                     }),
                     i.createElement(ya, {
                       path: l._.international_ticketfaq(),
-                      component: zi,
+                      component: Vi,
                     }),
                     i.createElement(ya, {
                       path: l._.international_badgebinding(),
-                      component: Ui,
+                      component: Wi,
                     }),
                     i.createElement(ya, {
                       path: l._.majorsregistration_requestforproposal(),
-                      component: Yi,
+                      component: Ji,
                     }),
                     i.createElement(ya, {
                       path: l._.majorsregistration_autographs(),
-                      component: Xi,
+                      component: qi,
                     }),
                     i.createElement(ya, {
                       path: l._.autographguidelines(),
-                      component: ts,
+                      component: as,
                     }),
                     i.createElement(ya, {
                       path: l._.portraitguidelines(),
-                      component: os,
+                      component: ls,
                     }),
                     i.createElement(ya, {
                       path: l._.hero(":id"),
-                      component: bi.q,
+                      component: yi.q,
                     }),
                     i.createElement(ya, {
                       path: l._.herogrid(),
-                      component: Ci,
+                      component: bi,
                     }),
                     i.createElement(ya, {
                       path: l._.pastupdates(),
-                      component: us,
+                      component: ps,
                     }),
                     i.createElement(ya, {
                       path: l._.controllerfaq(),
-                      component: _s,
+                      component: ds,
                     }),
                     i.createElement(ya, {
                       path: l._.dpc_event_root(":strEvent?"),
-                      component: pi,
+                      component: gi,
                     }),
                     i.createElement(ya, {
                       path: l._.patchnotes(":version?"),
-                      component: ps.Fq,
+                      component: gs.Fq,
                     }),
                     i.createElement(ya, {
                       path: l._.dawnbreaker(),
-                      component: Ms,
-                    }),
-                    i.createElement(ya, { path: l._.marci(), component: Is }),
-                    i.createElement(ya, {
-                      path: l._.labyrinth(),
-                      component: Bs,
-                    }),
-                    i.createElement(ya, {
-                      path: l._.shortfilm(),
-                      component: fs,
-                    }),
-                    i.createElement(ya, {
-                      path: l._.nemestice(),
                       component: Rs,
                     }),
+                    i.createElement(ya, { path: l._.marci(), component: Bs }),
                     i.createElement(ya, {
-                      path: l._.springcleaning(),
-                      component: Li,
-                    }),
-                    i.createElement(ya, {
-                      path: l._.primalbeast(),
+                      path: l._.labyrinth(),
                       component: As,
                     }),
                     i.createElement(ya, {
-                      path: l._.battlereport(),
+                      path: l._.shortfilm(),
+                      component: Ms,
+                    }),
+                    i.createElement(ya, {
+                      path: l._.nemestice(),
+                      component: Is,
+                    }),
+                    i.createElement(ya, {
+                      path: l._.springcleaning(),
+                      component: Pi,
+                    }),
+                    i.createElement(ya, {
+                      path: l._.primalbeast(),
                       component: ws,
                     }),
-                    i.createElement(ya, { path: l._.muerta(), component: Ds }),
+                    i.createElement(ya, {
+                      path: l._.battlereport(),
+                      component: Ds,
+                    }),
+                    i.createElement(ya, { path: l._.muerta(), component: Ns }),
                     i.createElement(ya, {
                       path: l._.new_frontiers(),
-                      component: Ns,
+                      component: Ls,
                     }),
                     i.createElement(ya, {
                       path: l._.summer2023update(),
-                      component: Cs,
+                      component: bs,
                     }),
                     i.createElement(ya, {
                       path: l._.international2023(),
-                      component: Ls,
-                    }),
-                    i.createElement(ya, {
-                      path: l._.international2023alt(),
-                      component: Ls,
-                    }),
-                    i.createElement(ya, {
-                      path: l._.teamdetails(":id"),
                       component: Ps,
                     }),
                     i.createElement(ya, {
-                      path: l._.personadetails(":id"),
+                      path: l._.international2023alt(),
+                      component: Ps,
+                    }),
+                    i.createElement(ya, {
+                      path: l._.teamdetails(":id"),
                       component: Fs,
+                    }),
+                    i.createElement(ya, {
+                      path: l._.personadetails(":id"),
+                      component: Gs,
                     }),
                     i.createElement(ya, {
                       path: l._.other(":page"),
@@ -36641,23 +36691,23 @@
             );
           }
         };
-      Gs = (0, r.gn)([c.Pi], Gs);
-      const Os = Gs;
-      var xs = a(50265),
-        Us = a(49993),
-        Ws = a(91942),
-        Hs = a(33580);
-      class zs {
+      Os = (0, r.gn)([c.Pi], Os);
+      const xs = Os;
+      var Us = a(50265),
+        Ws = a(49993),
+        Hs = a(91942),
+        zs = a(33580);
+      class Vs {
         constructor() {
-          (this.m_asyncPrizePool = new Us.L()),
-            (this.m_asyncPatchNotesListData = new Us.L()),
-            (this.m_asyncPatchNotesData = new Us.r()),
-            (this.m_asyncBPPrice = new Us.r()),
-            (this.m_asyncBPDiscount = new Us.r()),
+          (this.m_asyncPrizePool = new Ws.L()),
+            (this.m_asyncPatchNotesListData = new Ws.L()),
+            (this.m_asyncPatchNotesData = new Ws.r()),
+            (this.m_asyncBPPrice = new Ws.r()),
+            (this.m_asyncBPDiscount = new Ws.r()),
             (this.m_nSelectedAbilityIndex = 0),
-            (this.m_asyncShortFilmOwnership = new Us.L()),
+            (this.m_asyncShortFilmOwnership = new Ws.L()),
             (this.m_BBCodeDictionary = new Map([
-              ...Array.from(Hs.Be.entries()),
+              ...Array.from(zs.Be.entries()),
               ["color", { Constructor: v.H, autocloses: !1 }],
               ["block", { Constructor: v.qH, autocloses: !1 }],
               ["spoiler", { Constructor: v.b4, autocloses: !1 }],
@@ -36670,7 +36720,7 @@
               ["img", { Constructor: v.cW, autocloses: !1 }],
               ["div", { Constructor: v.B9, autocloses: !1 }],
             ])),
-            (this.BBCodeAccumulator = (e) => new Ws.So(new Ws.LT(), 0)),
+            (this.BBCodeAccumulator = (e) => new Hs.So(new Hs.LT(), 0)),
             (this.m_BBCodeParser = new Rt.Z6(
               this.m_BBCodeDictionary,
               this.BBCodeAccumulator,
@@ -36678,7 +36728,7 @@
         }
         Init() {
           n.render(
-            i.createElement(Os, { app: this }),
+            i.createElement(xs, { app: this }),
             document.getElementById("dota_react_root"),
           );
         }
@@ -36687,7 +36737,7 @@
             600,
             () =>
               (0, r.mG)(this, void 0, void 0, function* () {
-                return yield Gi().get(
+                return yield Oi().get(
                   p.Y.BASE_URL + "webapi/IDOTA2League/GetPrizePool/v001",
                   { params: { league_id: 14268 } },
                 );
@@ -36734,10 +36784,10 @@
             this.m_asyncBPPrice.getAsyncDataWrapper(t).setDataPending(),
               (a += `${t}${r == e.length - 1 ? "" : ","}`);
           }),
-            Gi()
+            Oi()
               .get(l._.react("getbpprices"), { params: { item_defs: a } })
               .then((t) => {
-                (0, xs.z)(() => {
+                (0, Us.z)(() => {
                   const a = Object.entries(null == t ? void 0 : t.data);
                   if (a.length == e.length)
                     for (const [e, t] of a)
@@ -36752,7 +36802,7 @@
             600,
             () =>
               (0, r.mG)(this, void 0, void 0, function* () {
-                return yield Gi().get(l._.react("getbpprices"), {
+                return yield Oi().get(l._.react("getbpprices"), {
                   params: { item_defs: `${e}` },
                 });
               }),
@@ -36785,12 +36835,12 @@
             this.m_asyncBPDiscount.getAsyncDataWrapper(e).setDataPending(),
               (r += `${e}${a == t.length - 1 ? "" : ","}`);
           }),
-            Gi()
+            Oi()
               .get(l._.react("getbpdiscounts"), {
                 params: { event_id: e, itemdefs: r },
               })
               .then((e) => {
-                (0, xs.z)(() => {
+                (0, Us.z)(() => {
                   const a = Object.entries(null == e ? void 0 : e.data);
                   if (a.length == t.length)
                     for (const [e, t] of a)
@@ -36805,7 +36855,7 @@
             600,
             () =>
               (0, r.mG)(this, void 0, void 0, function* () {
-                return yield Gi().get(l._.react("getbpdiscounts"), {
+                return yield Oi().get(l._.react("getbpdiscounts"), {
                   params: { event_id: e, itemdefs: `${t}` },
                 });
               }),
@@ -36823,7 +36873,7 @@
             30,
             () =>
               (0, r.mG)(this, void 0, void 0, function* () {
-                return yield Gi().get(
+                return yield Oi().get(
                   p.Y.BASE_URL + "datafeed/patchnoteslist",
                   { params: { language: e } },
                 );
@@ -36836,7 +36886,7 @@
             30,
             () =>
               (0, r.mG)(this, void 0, void 0, function* () {
-                return yield Gi().get(p.Y.BASE_URL + "datafeed/patchnotes", {
+                return yield Oi().get(p.Y.BASE_URL + "datafeed/patchnotes", {
                   params: { version: e, language: t },
                 });
               }),
@@ -36848,7 +36898,7 @@
             600,
             () =>
               (0, r.mG)(this, void 0, void 0, function* () {
-                return yield Gi().get(
+                return yield Oi().get(
                   p.Y.BASE_URL +
                     l._.shortfilm() +
                     "/checkforshortfilmownership/",
@@ -36864,15 +36914,15 @@
           );
         }
         grantShortFilmAppIDOwnership() {
-          Gi().post(p.Y.BASE_URL + l._.shortfilm() + "/grantshortfilmpackage", {
+          Oi().post(p.Y.BASE_URL + l._.shortfilm() + "/grantshortfilmpackage", {
             params: { sessionid: p.Y.SESSION_ID },
           });
         }
       }
-      (0, r.gn)([xs.LO], zs.prototype, "m_nSelectedAbilityIndex", void 0);
-      var Vs = a(4573);
-      let js = new zs();
-      const Ys = [
+      (0, r.gn)([Us.LO], Vs.prototype, "m_nSelectedAbilityIndex", void 0);
+      var js = a(4573);
+      let Ys = new Vs();
+      const Js = [
         "main",
         "springcleaning22",
         "juneupdate22",
@@ -36883,13 +36933,13 @@
       ];
       document.addEventListener("DOMContentLoaded", function () {
         return (0, r.mG)(this, void 0, void 0, function* () {
-          (0, Vs.Ek)("application_config"),
+          (0, js.Ek)("application_config"),
             (0, p.R)(),
             yield (function (e) {
               return (0, r.mG)(this, void 0, void 0, function* () {
                 const t = yield Promise.all([
                   a(56576)(`./shared_${e}.json`),
-                  ...Ys.map((t) => a(3245)(`./${t}_${e}.json`)),
+                  ...Js.map((t) => a(3245)(`./${t}_${e}.json`)),
                 ]);
                 let r = {};
                 for (const e of t) r = Object.assign(Object.assign({}, r), e);
@@ -36898,7 +36948,7 @@
                 else {
                   const e = yield Promise.all([
                     a(56576)(`./shared_${n}.json`),
-                    ...Ys.map((e) => a(3245)(`./${e}_${n}.json`)),
+                    ...Js.map((e) => a(3245)(`./${e}_${n}.json`)),
                   ]);
                   let i = {};
                   for (const t of e) i = Object.assign(Object.assign({}, i), t);
@@ -36906,7 +36956,7 @@
                 }
               });
             })(p.Y.LANGUAGE),
-            js.Init();
+            Ys.Init();
         });
       });
     },
