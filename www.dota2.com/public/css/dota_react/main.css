@@ -37726,8 +37726,8 @@ a {
   font-weight: 600;
   text-transform: uppercase;
   text-align: left;
-  filter: drop-shadow(0px 0px 4px #e1261c);
-  background: -webkit-linear-gradient(#ebcf87 10%, #ea6953 90%);
+  filter: drop-shadow(0px 0px 4px #002c4c);
+  background: -webkit-linear-gradient(#31c8db 10%, #176490 90%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: rgba(0, 0, 0, 0);
 }

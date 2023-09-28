@@ -19486,8 +19486,9 @@
         Aa = (0, c.Pi)(() => {
           const e = (0, v.Wd)("#dpc_event_2022season"),
             t = (0, v.Wd)("#dpc_event_ti12"),
-            a = (0, v.Wd)("#dpc_event_ti11"),
-            r = (0, v.Wd)("#dpc_event_2022season_reg_roster_lock");
+            a =
+              ((0, v.Wd)("#dpc_event_ti11"),
+              (0, v.Wd)("#dpc_event_2022season_reg_roster_lock"));
           return i.createElement(
             "div",
             {
@@ -19823,7 +19824,7 @@
                 i.createElement(
                   "div",
                   { className: Ta().Answer },
-                  (0, v.Jr)("#dpc_about_faq_answer14", e, r),
+                  (0, v.Jr)("#dpc_about_faq_answer14", e, a),
                 ),
               ),
               i.createElement(
@@ -19894,184 +19895,6 @@
                   "div",
                   { className: Ta().Answer },
                   (0, v.Jr)("#dpc_about_faq_answer19"),
-                ),
-              ),
-              i.createElement(
-                "div",
-                { className: Ta().Title },
-                (0, v.Jr)("#dpc_about_registration_faq"),
-              ),
-              i.createElement(
-                "div",
-                { className: Ta().LastUpdated },
-                (0, v.Jr)("#dpc_about_registration_faq_last_updated"),
-              ),
-              i.createElement(
-                "div",
-                { className: Ta().FAQEntry },
-                i.createElement(
-                  "div",
-                  { className: Ta().Question },
-                  (0, v.Jr)("#dpc_about_reg_faq_question1"),
-                ),
-                i.createElement(
-                  "div",
-                  { className: Ta().Answer },
-                  (0, v.Jr)("#dpc_about_reg_faq_answer1"),
-                ),
-              ),
-              i.createElement(
-                "div",
-                { className: Ta().FAQEntry },
-                i.createElement(
-                  "div",
-                  { className: Ta().Question },
-                  (0, v.Jr)("#dpc_about_reg_faq_question2"),
-                ),
-                i.createElement(
-                  "div",
-                  { className: Ta().Answer },
-                  (0, v.Jr)("#dpc_about_reg_faq_answer2", e, r),
-                ),
-              ),
-              i.createElement(
-                "div",
-                { className: Ta().FAQEntry },
-                i.createElement(
-                  "div",
-                  { className: Ta().Question },
-                  (0, v.Jr)("#dpc_about_reg_faq_question3"),
-                ),
-                i.createElement(
-                  "div",
-                  { className: Ta().Answer },
-                  (0, v.Jr)("#dpc_about_reg_faq_answer3"),
-                ),
-              ),
-              i.createElement(
-                "div",
-                { className: Ta().FAQEntry },
-                i.createElement(
-                  "div",
-                  { className: Ta().Question },
-                  (0, v.Jr)("#dpc_about_reg_faq_question4"),
-                ),
-                i.createElement(
-                  "div",
-                  { className: Ta().Answer },
-                  (0, v.Jr)("#dpc_about_reg_faq_answer4"),
-                ),
-              ),
-              i.createElement(
-                "div",
-                { className: Ta().FAQEntry },
-                i.createElement(
-                  "div",
-                  { className: Ta().Question },
-                  (0, v.Jr)("#dpc_about_reg_faq_question5", a),
-                ),
-                i.createElement(
-                  "div",
-                  { className: Ta().Answer },
-                  (0, v.Jr)("#dpc_about_reg_faq_answer5"),
-                ),
-              ),
-              i.createElement(
-                "div",
-                { className: Ta().FAQEntry },
-                i.createElement(
-                  "div",
-                  { className: Ta().Question },
-                  (0, v.Jr)("#dpc_about_reg_faq_question6"),
-                ),
-                i.createElement(
-                  "div",
-                  { className: Ta().Answer },
-                  (0, v.Jr)("#dpc_about_reg_faq_answer6"),
-                ),
-              ),
-              i.createElement(
-                "div",
-                { className: Ta().FAQEntry },
-                i.createElement(
-                  "div",
-                  { className: Ta().Question },
-                  (0, v.Jr)("#dpc_about_reg_faq_question7"),
-                ),
-                i.createElement(
-                  "div",
-                  { className: Ta().Answer },
-                  (0, v.Jr)("#dpc_about_reg_faq_answer7"),
-                ),
-              ),
-              i.createElement(
-                "div",
-                { className: Ta().FAQEntry },
-                i.createElement(
-                  "div",
-                  { className: Ta().Question },
-                  (0, v.Jr)("#dpc_about_reg_faq_question8"),
-                ),
-                i.createElement(
-                  "div",
-                  { className: Ta().Answer },
-                  (0, v.Jr)("#dpc_about_reg_faq_answer8"),
-                ),
-              ),
-              i.createElement(
-                "div",
-                { className: Ta().FAQEntry },
-                i.createElement(
-                  "div",
-                  { className: Ta().Question },
-                  (0, v.Jr)("#dpc_about_reg_faq_question9"),
-                ),
-                i.createElement(
-                  "div",
-                  { className: Ta().Answer },
-                  (0, v.Jr)("#dpc_about_reg_faq_answer9"),
-                ),
-              ),
-              i.createElement(
-                "div",
-                { className: Ta().FAQEntry },
-                i.createElement(
-                  "div",
-                  { className: Ta().Question },
-                  (0, v.Jr)("#dpc_about_reg_faq_question10"),
-                ),
-                i.createElement(
-                  "div",
-                  { className: Ta().Answer },
-                  (0, v.Jr)("#dpc_about_reg_faq_answer10"),
-                ),
-              ),
-              i.createElement(
-                "div",
-                { className: Ta().FAQEntry },
-                i.createElement(
-                  "div",
-                  { className: Ta().Question },
-                  (0, v.Jr)("#dpc_about_reg_faq_question11"),
-                ),
-                i.createElement(
-                  "div",
-                  { className: Ta().Answer },
-                  (0, v.Jr)("#dpc_about_reg_faq_answer11"),
-                ),
-              ),
-              i.createElement(
-                "div",
-                { className: Ta().FAQEntry },
-                i.createElement(
-                  "div",
-                  { className: Ta().Question },
-                  (0, v.Jr)("#dpc_about_reg_faq_question12"),
-                ),
-                i.createElement(
-                  "div",
-                  { className: Ta().Answer },
-                  (0, v.Jr)("#dpc_about_reg_faq_answer12"),
                 ),
               ),
             ),
