@@ -20454,7 +20454,7 @@
             () => t.filter((e) => e && e.appid).map((e) => e.appid),
             [t],
           ),
-          i = (0, ut.QQ)(e, a);
+          i = (0, ut.QQ)(e, a, n);
         return Boolean(i);
       }
       function An(e) {
@@ -20537,101 +20537,107 @@
         );
       }
       function Tn(e) {
-        var t;
-        const n = () => e.closeModal && e.closeModal(),
-          { optInStats: a, strOptInName: i, bFilterToDemoExist: o } = e,
-          s = a.length,
-          [c, m] = (0, b.useState)(!1),
-          [d, p] = (0, b.useState)(new Cn()),
-          u = bn(i, a),
-          _ = (0, b.useRef)(null),
-          h =
-            (null === (t = e.rgAdditionalData) || void 0 === t
-              ? void 0
-              : t.length) > 0,
-          g = new Array();
+        const {
+            rgAdditionalData: t,
+            filter: n,
+            bIncludePerssContact: a,
+            bIncludeCategories: i,
+            bExportArtistStatement: o,
+          } = e,
+          s = () => e.closeModal && e.closeModal(),
+          { optInStats: c, strOptInName: m, bFilterToDemoExist: d } = e,
+          p = c.length,
+          [u, _] = (0, b.useState)(!1),
+          [h] = (0, b.useState)(() => new Cn()),
+          g = bn(m, c, h),
+          E = (0, b.useRef)(null),
+          v = (null == t ? void 0 : t.length) > 0,
+          S = (0, b.useMemo)(() => {
+            const e = new Array();
+            return (
+              v &&
+                t.forEach((t) => {
+                  e.push(B.Get().GetDynamicSectionByID(t.section_id));
+                }),
+              e
+            );
+          }, [v, t]);
         return (
-          h &&
-            e.rgAdditionalData.forEach((e) => {
-              g.push(B.Get().GetDynamicSectionByID(e.section_id));
-            }),
           (0, b.useEffect)(() => {
-            if (a && u) {
-              const t = () =>
+            if (c && g) {
+              (() =>
                 (0, l.mG)(this, void 0, void 0, function* () {
-                  const t = r().CancelToken.source();
-                  _.current = t.cancel;
-                  let n = null;
-                  o && (n = yield rn.Get().LoadAppWithDemoAppIDs(i, e.filter));
-                  const l = new Array();
-                  a
-                    .filter((t) =>
-                      ut.qh
-                        .Get()
-                        .BHasOptionOnRegistration(t.appid, i, e.filter),
+                  const e = r().CancelToken.source();
+                  E.current = e.cancel;
+                  let l = null;
+                  d && (l = yield rn.Get().LoadAppWithDemoAppIDs(m, n));
+                  const s = new Array();
+                  c
+                    .filter((e) =>
+                      ut.qh.Get().BHasOptionOnRegistration(e.appid, m, n),
                     )
                     .filter((e) => {
                       var t;
                       return Boolean(
-                        null == n ||
-                          (null === (t = n.get(e.appid)) || void 0 === t
+                        null == l ||
+                          (null === (t = l.get(e.appid)) || void 0 === t
                             ? void 0
                             : t.demo_appid),
                       );
                     })
-                    .forEach((t) => {
-                      var n, a, o, r;
-                      const s = ut.qh.Get().GetRegistration(t.appid, i),
-                        c = {
-                          game_name: t.app_name || "undefined",
-                          store_page: N.De.STORE_BASE_URL + "app/" + t.appid,
-                          tags: t.tags || "",
+                    .forEach((e) => {
+                      var n, l, r, c;
+                      const d = ut.qh.Get().GetRegistration(e.appid, m),
+                        p = {
+                          game_name: e.app_name || "undefined",
+                          store_page: N.De.STORE_BASE_URL + "app/" + e.appid,
+                          tags: e.tags || "",
                         };
                       if (
-                        (e.bIncludePerssContact &&
-                          ((c.press_contact_name =
-                            (null === (n = null == s ? void 0 : s.jsondata) ||
+                        (a &&
+                          ((p.press_contact_name =
+                            (null === (n = null == d ? void 0 : d.jsondata) ||
                             void 0 === n
                               ? void 0
                               : n.press_contact_name) || ""),
-                          (c.press_contact_email =
-                            (null === (a = null == s ? void 0 : s.jsondata) ||
-                            void 0 === a
+                          (p.press_contact_email =
+                            (null === (l = null == d ? void 0 : d.jsondata) ||
+                            void 0 === l
                               ? void 0
-                              : a.press_contact_email) || "")),
-                        e.bExportArtistStatement &&
-                          (c.artist_statement =
-                            (null === (o = null == s ? void 0 : s.jsondata) ||
-                            void 0 === o
+                              : l.press_contact_email) || "")),
+                        o &&
+                          (p.artist_statement =
+                            (null === (r = null == d ? void 0 : d.jsondata) ||
+                            void 0 === r
                               ? void 0
-                              : o.artist_statement) || ""),
-                        e.bIncludeCategories &&
-                          (null === (r = null == s ? void 0 : s.jsondata) ||
-                          void 0 === r
+                              : r.artist_statement) || ""),
+                        i &&
+                          (null === (c = null == d ? void 0 : d.jsondata) ||
+                          void 0 === c
                             ? void 0
-                            : r.category_tags))
+                            : c.category_tags))
                       ) {
                         let e = 0;
                         const t = x.Get().GetGameTags();
-                        console.log(s.jsondata.category_tags);
-                        for (const n in s.jsondata.category_tags) {
+                        console.log(d.jsondata.category_tags);
+                        for (const n in d.jsondata.category_tags) {
                           const a = t.filter((e) => e.value == n);
                           (null == a ? void 0 : a.length) > 0
-                            ? (c["category_choice_" + ++e] = a[0].label)
-                            : (c["category_choice_" + ++e] = n);
+                            ? (p["category_choice_" + ++e] = a[0].label)
+                            : (p["category_choice_" + ++e] = n);
                         }
-                        for (; e < 2; ) c["category_choice_" + ++e] = "";
+                        for (; e < 2; ) p["category_choice_" + ++e] = "";
                       }
-                      h &&
-                        e.rgAdditionalData.forEach((e, t) => {
-                          const n = g[t],
+                      v &&
+                        t.forEach((e, t) => {
+                          const n = S[t],
                             a = n.GetListByID(e.list_id),
                             i = a.option_title
                               ? a.option_title.english
                               : n.GetName(),
-                            l = (0, ut.A0)(s, e);
+                            l = (0, ut.A0)(d, e);
                           if ("text_input" == n.GetInputStyle())
-                            c[i] =
+                            p[i] =
                               (null == l ? void 0 : l.length) > 0 ? l[0] : "";
                           else {
                             let t = "";
@@ -20645,25 +20651,24 @@
                                 t.length > 0 && (t += "|"),
                                   (t += a.text.english);
                               }),
-                              (c[i] = t);
+                              (p[i] = t);
                           }
                         }),
-                        l.push(c);
+                        s.push(p);
                     }),
-                    In.K.WriteCSVToFile(l, "press_game_list.csv"),
-                    m(!0);
-                });
-              t();
+                    In.K.WriteCSVToFile(s, "press_game_list.csv"),
+                    _(!0);
+                }))();
             }
             return () =>
-              _.current && _.current("OptInStatsPressCSV: unmounting");
-          }, [a, i, o, u]),
+              E.current && E.current("OptInStatsPressCSV: unmounting");
+          }, [c, m, d, g, n, a, o, i, t, v, S]),
           b.createElement(
             X.SV,
             null,
             b.createElement(
               he.e1,
-              { onEscKeypress: n },
+              { onEscKeypress: s },
               b.createElement(
                 j.VY,
                 null,
@@ -20680,23 +20685,27 @@
                       "Extracting the list of opt-in games and producing a CSV. This requires reading in each opt-in record by partners to extract their 'Press Contact Info' if available which takes a while. Please wait while we pull that information",
                     ),
                     b.createElement("br", null),
-                    c
+                    u
                       ? b.createElement(
                           "div",
                           null,
-                          "Completed. You can close this dialog.",
+                          "Completed processing, needed to load ",
+                          h.nLoadedOptIn,
+                          " Apps out of a total ",
+                          c.length,
+                          ". You can close this dialog.",
                         )
-                      : b.createElement(kn, { tracker: d, nTotalOptIn: s }),
+                      : b.createElement(kn, { tracker: h, nTotalOptIn: p }),
                   ),
                 ),
                 b.createElement(
                   j.$_,
                   null,
                   b.createElement(j.o9, {
-                    onCancel: n,
-                    bOKDisabled: !c,
+                    onCancel: s,
+                    bOKDisabled: !u,
                     strOKText: "Done",
-                    onOK: n,
+                    onOK: s,
                   }),
                 ),
               ),
@@ -20706,9 +20715,10 @@
       }
       (0, l.gn)([c.LO], Cn.prototype, "nLoadedOptIn", void 0);
       const kn = (0, Ie.Pi)((e) => {
-        const { tracker: t, nTotalOptIn: n } = e;
+        const { tracker: t, nTotalOptIn: n } = e,
+          a = (0, ut.lQ)();
         return b.createElement(de.V, {
-          string: `Progressing ${t.nLoadedOptIn} / ${n}`,
+          string: `Progressing ${a ? t.nLoadedOptIn : 0} / ${n}`,
           size: "medium",
           position: "center",
         });
@@ -20934,7 +20944,7 @@
           [_, h] = (0, b.useState)(!1),
           [g, E] = (0, b.useState)(!0),
           [v, S] = (0, b.useState)(new Cn()),
-          f = bn(a.GetOptInPageID(), n),
+          f = bn(a.GetOptInPageID(), n, v),
           D = (function (e) {
             const [t, n] = (0, b.useState)(!0);
             return (
@@ -21259,7 +21269,7 @@
       function Bn(e) {
         const { tableRef: t, eligibleStats: n } = e,
           a = B.Get(),
-          i = (0, Ve.SZ)(() => a.GetName()),
+          i = (0, Ve.SZ)(() => a.GetFullName()),
           [l] = (0, Ve.SZ)(() => [
             a.BIsAdditionalFeaturingSectionEnabled() &&
               a.BIsCollectDemoPermissions(),
