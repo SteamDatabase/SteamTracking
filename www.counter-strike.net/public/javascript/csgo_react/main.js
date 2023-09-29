@@ -14213,6 +14213,24 @@
               a.createElement(
                 "div",
                 { className: ue().HeaderContents },
+                a.createElement(V.rU, { to: G(), className: ue().CSLogo }),
+                a.createElement(
+                  "a",
+                  {
+                    className: ue().PlayForFree,
+                    href: `${L.STORE_URL}app/730/CounterStrike_2/`,
+                  },
+                  a.createElement(
+                    "div",
+                    { className: ue().StandardButton },
+                    a.createElement("div", { className: ue().SteamLogo }),
+                    a.createElement(
+                      "div",
+                      { className: ue().ButtonText },
+                      Oi("#header_play"),
+                    ),
+                  ),
+                ),
                 a.createElement(
                   "div",
                   { className: Gi(ue().PlayerCountContainer) },
@@ -14230,6 +14248,15 @@
                 a.createElement(
                   "div",
                   { className: Gi(ue().NavItems, ue().NavLeft) },
+                  a.createElement("div", {
+                    className: Gi(ue().GameDropdownContents, !r && ue().Hidden),
+                    onMouseEnter: () => n(!0),
+                    onMouseLeave: () => n(!1),
+                  }),
+                ),
+                a.createElement(
+                  "div",
+                  { className: Gi(ue().NavItems, ue().NavRight) },
                   a.createElement(
                     V.rU,
                     {
@@ -14241,16 +14268,6 @@
                     },
                     Oi("#header_news"),
                   ),
-                  a.createElement("div", {
-                    className: Gi(ue().GameDropdownContents, !r && ue().Hidden),
-                    onMouseEnter: () => n(!0),
-                    onMouseLeave: () => n(!1),
-                  }),
-                ),
-                a.createElement(V.rU, { to: G(), className: ue().CSLogo }),
-                a.createElement(
-                  "div",
-                  { className: Gi(ue().NavItems, ue().NavRight) },
                   a.createElement(
                     "a",
                     {
