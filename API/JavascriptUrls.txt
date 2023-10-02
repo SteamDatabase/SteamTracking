@@ -905,6 +905,7 @@ ${PARTNER_BASE_URL}admin/store/contenthub/ajaxpublishcontenthubcategorieskv
 ${PARTNER_BASE_URL}admin/store/contenthub/ajaxsavecontenthubcategorieskv
 ${PARTNER_BASE_URL}admin/store/contenthub/categories
 ${PARTNER_BASE_URL}admin/store/dailydeal/${id}
+${PARTNER_BASE_URL}admin/store/page/${}
 ${PARTNER_BASE_URL}admin/store/page/${}?activetab=tab_publish
 ${PARTNER_BASE_URL}admin/store/pageclusteredit/${cluster_name}/${id}?activetab=tab_capsules
 ${PARTNER_BASE_URL}admin/store/pageclusteredit/${}
@@ -1296,6 +1297,7 @@ ${STORE_BASE_URL}points/
 ${STORE_BASE_URL}points/ajaxgeteventdetails?event_name=${}
 ${STORE_BASE_URL}points/heroimage?appid=${}
 ${STORE_BASE_URL}points/howitworks
+${STORE_BASE_URL}points/shop/app/${}
 ${STORE_BASE_URL}points/shop/c/chateffects
 ${STORE_BASE_URL}points/shop/c/emoticons
 ${STORE_BASE_URL}points/shop/c/stickers

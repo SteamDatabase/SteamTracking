@@ -2805,7 +2805,7 @@
           else {
             if ("object" == typeof e && e instanceof a.gA)
               return {
-                strErrorMsg: "" + e.GetEResult(),
+                strErrorMsg: "" + e.GetErrorMessage(),
                 errorCode: e.GetEResult(),
               };
             console.warn("GetMsgAndErrorCodeFromResponse cannot parse: ", e);

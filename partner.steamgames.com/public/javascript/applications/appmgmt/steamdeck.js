@@ -6,23 +6,23 @@
   [6699],
   {
     96405: (r, s, e) => {
-      e.r(s), e.d(s, { default: () => n });
+      e.r(s), e.d(s, { default: () => a });
       var o = e(89526),
         t = e(14965);
-      function n(r) {
+      function a(r) {
         var s, e;
-        const { dataprops: n, results: a } = r;
+        const { dataprops: a, results: n } = r;
         let d = null;
-        if (a && a.length > 0) {
-          const r = null !== (s = n.appid) && void 0 !== s ? s : null;
+        if (n && n.length > 0) {
+          const r = null !== (s = a.appid) && void 0 !== s ? s : null;
           if (r) {
-            let s = a.findIndex((s) => s.appid == r);
-            d = -1 != s ? a[s] : null;
+            let s = n.findIndex((s) => s.appid == r);
+            d = -1 != s ? n[s] : null;
           }
-          const o = null !== (e = n.search_id) && void 0 !== e ? e : null;
+          const o = null !== (e = a.search_id) && void 0 !== e ? e : null;
           if (!d && o) {
-            let r = a.findIndex((r) => r.search_id == o);
-            d = -1 != r ? a[r] : null;
+            let r = n.findIndex((r) => r.search_id == o);
+            d = -1 != r ? n[r] : null;
           }
         }
         return d ? o.createElement(t.default, { results: d }) : null;
@@ -32,10 +32,10 @@
       e.d(s, { l: () => d });
       var o = e(42735),
         t = e(52868),
-        n = e.n(t),
-        a = e(67328);
+        a = e.n(t),
+        n = e(67328);
       function d(r) {
-        if (n().isCancel(r))
+        if (a().isCancel(r))
           return {
             strErrorMsg: "Action Cancelled:" + r,
             errorCode: o.s.k_EResultCancelled,
@@ -91,9 +91,9 @@
               console.warn(r),
               console.groupEnd();
           else {
-            if ("object" == typeof r && r instanceof a.gA)
+            if ("object" == typeof r && r instanceof n.gA)
               return {
-                strErrorMsg: "" + r.GetEResult(),
+                strErrorMsg: "" + r.GetErrorMessage(),
                 errorCode: r.GetEResult(),
               };
             console.warn("GetMsgAndErrorCodeFromResponse cannot parse: ", r);

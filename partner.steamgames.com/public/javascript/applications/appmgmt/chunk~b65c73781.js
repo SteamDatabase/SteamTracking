@@ -2002,7 +2002,8 @@
           [r, o] = (0, n.useState)(null),
           [c, d] = (0, n.useState)(null),
           [m, u] = (0, n.useState)(null),
-          [p, _] = (0, n.useState)(null);
+          [p, _] = (0, n.useState)(null),
+          [h, g] = (0, n.useState)(null);
         return {
           bLoading: e,
           bError: a,
@@ -2011,6 +2012,7 @@
           strSuccess: c,
           elSuccess: p,
           elError: m,
+          strThrobber: h,
           fnSetLoading: t,
           fnSetError: i,
           fnSetSuccess: l,
@@ -2018,6 +2020,7 @@
           fnSetStrSuccess: d,
           fnSetElSuccess: _,
           fnSetElError: u,
+          fnSetThrobber: g,
         };
       }
       function c(e) {
@@ -2035,6 +2038,7 @@
             strSuccess: _,
             elSuccess: h,
             elError: g,
+            strThrobber: v,
           } = a;
         return m || p || g
           ? n.createElement(
@@ -2063,7 +2067,7 @@
               i.uH,
               { strTitle: t, closeModal: () => {} },
               n.createElement(r.V, {
-                string: c || (0, l.Xx)("#Loading"),
+                string: c || v || (0, l.Xx)("#Loading"),
                 size: "medium",
                 position: "center",
               }),
@@ -9922,6 +9926,7 @@
           (0, d.useEffect)(() => {
             a(!0),
               e &&
+                (null == e ? void 0 : e.length) > 0 &&
                 m
                   .Get()
                   .LoadLongTermSalesRank(e)
