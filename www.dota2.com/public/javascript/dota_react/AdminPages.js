@@ -1664,8 +1664,8 @@
                   f = [];
                 for (const e of s) f.push(e);
                 const A = [];
-                return (
-                  d.length &&
+                if (
+                  (d.length &&
                     A.push(
                       i.createElement(
                         P.HP,
@@ -1837,70 +1837,92 @@
                         ),
                       ),
                     ),
-                  f.length &&
-                    A.push(
-                      i.createElement(
-                        P.HP,
-                        {
-                          key: "reportTooltip",
-                          toolTipContent: i.createElement(
-                            "table",
-                            { style: { borderSpacing: "12px" } },
-                            i.createElement(
-                              "thead",
-                              null,
-                              i.createElement(
-                                "tr",
-                                null,
-                                i.createElement("th", { align: "left" }),
-                                i.createElement(
-                                  "th",
-                                  { align: "left" },
-                                  "Reason",
-                                ),
-                                i.createElement(
-                                  "th",
-                                  { align: "left" },
-                                  "Reporter",
-                                ),
-                              ),
-                            ),
-                            i.createElement(
-                              "tbody",
-                              null,
-                              f.map((e) => {
-                                const t = ee(e.reportreason),
-                                  a = te(e.reportreason);
-                                return i.createElement(
-                                  "tr",
-                                  { key: `${e.reporteraccountid}` },
-                                  i.createElement(
-                                    "td",
-                                    null,
-                                    t && i.createElement("img", { src: t }),
-                                  ),
-                                  i.createElement("td", null, a),
-                                  i.createElement(
-                                    "td",
-                                    null,
-                                    e.reporteraccountid,
-                                  ),
-                                );
-                              }),
-                            ),
-                          ),
-                          direction: "left",
-                          nBodyAlignment: 1,
-                          nAllowOffscreenPx: 1200,
-                          strTooltipClassname: Y().PlayerReportTooltip,
-                        },
-                        i.createElement(
-                          "span",
-                          { key: "playerReports", style: { color: x } },
-                          `[${f.length}]`,
+                  f.length)
+                ) {
+                  f.sort((e, t) => e.reporteraccountid - t.reporteraccountid);
+                  const e = [
+                      ...new Set(
+                        f.map((e) =>
+                          null == e ? void 0 : e.reporteraccountid,
                         ),
                       ),
+                    ],
+                    t = [];
+                  let a = 0;
+                  for (let e of f) {
+                    const n = ee(e.reportreason),
+                      l = te(e.reportreason);
+                    a &&
+                      a != e.reporteraccountid &&
+                      t.push(
+                        i.createElement(
+                          "tr",
+                          { key: `${a}-separator` },
+                          i.createElement(
+                            "td",
+                            { colSpan: 3 },
+                            i.createElement("hr", null),
+                          ),
+                        ),
+                      ),
+                      t.push(
+                        i.createElement(
+                          "tr",
+                          { key: `${e.reporteraccountid}-${e.reportreason}` },
+                          i.createElement(
+                            "td",
+                            null,
+                            n && i.createElement("img", { src: n }),
+                          ),
+                          i.createElement("td", null, l),
+                          i.createElement("td", null, e.reporteraccountid),
+                        ),
+                      ),
+                      (a = e.reporteraccountid);
+                  }
+                  A.push(
+                    i.createElement(
+                      P.HP,
+                      {
+                        key: "reportTooltip",
+                        toolTipContent: i.createElement(
+                          "table",
+                          { style: { borderSpacing: "12px" } },
+                          i.createElement(
+                            "thead",
+                            null,
+                            i.createElement(
+                              "tr",
+                              null,
+                              i.createElement("th", { align: "left" }),
+                              i.createElement(
+                                "th",
+                                { align: "left" },
+                                "Reason",
+                              ),
+                              i.createElement(
+                                "th",
+                                { align: "left" },
+                                "Reporter",
+                              ),
+                            ),
+                          ),
+                          i.createElement("tbody", null, t),
+                        ),
+                        direction: "left",
+                        nBodyAlignment: 1,
+                        nAllowOffscreenPx: 1200,
+                        strTooltipClassname: Y().PlayerReportTooltip,
+                      },
+                      i.createElement(
+                        "span",
+                        { key: "playerReports", style: { color: x } },
+                        `[${e.length}]`,
+                      ),
                     ),
+                  );
+                }
+                return (
                   u.length &&
                     A.push(
                       i.createElement(
