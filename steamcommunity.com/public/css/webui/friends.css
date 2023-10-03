@@ -11195,7 +11195,7 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   font-size: 14px;
 }
 .partnereventshared_HelperTooltip_3T6MQ {
-  display: flex;
+  display: inline-flex;
 }
 .partnereventshared_HelperTooltip_3T6MQ > svg {
   width: 16px;

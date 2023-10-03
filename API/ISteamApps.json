@@ -235,6 +235,43 @@
             ]
         },
         {
+            "name": "SetAppBuildLive",
+            "version": 2,
+            "httpmethod": "POST",
+            "parameters": [
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "AppID of game"
+                },
+                {
+                    "name": "buildid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "BuildID"
+                },
+                {
+                    "name": "betakey",
+                    "type": "string",
+                    "optional": false,
+                    "description": "beta key, required. Use public for default branch"
+                },
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": true,
+                    "description": "SteamID of user approving build change, required for public branches of released apps"
+                },
+                {
+                    "name": "description",
+                    "type": "string",
+                    "optional": true,
+                    "description": "optional description for this build"
+                }
+            ]
+        },
+        {
             "name": "UpToDateCheck",
             "version": 1,
             "httpmethod": "GET",

@@ -52,17 +52,26 @@
           "controllersupportinfo_ControllerSupportLevelString_x6aCt",
         InfoRow: "controllersupportinfo_InfoRow_1NUmC",
         LocSection: "controllersupportinfo_LocSection_38m8D",
-        HighlightRow: "controllersupportinfo_HighlightRow_zD5C0",
-        HighlightRowRed: "controllersupportinfo_HighlightRowRed_1_692",
-        LocString: "controllersupportinfo_LocString_5bHD6",
         HighlightText: "controllersupportinfo_HighlightText_3InqR",
+        GamepadRequired: "controllersupportinfo_GamepadRequired_H8PWx",
         Personalized: "controllersupportinfo_Personalized_3Q8sx",
+        HighlightRow: "controllersupportinfo_HighlightRow_zD5C0",
+        LocString: "controllersupportinfo_LocString_5bHD6",
         ImgSection: "controllersupportinfo_ImgSection_28V2e",
         SmallerSVG: "controllersupportinfo_SmallerSVG_BOCK_",
         BiggerSVG: "controllersupportinfo_BiggerSVG_2xOzF",
         PreviewContainer: "controllersupportinfo_PreviewContainer_1F4_s",
         StoreSidebarContainer:
           "controllersupportinfo_StoreSidebarContainer_2Z38-",
+        PurchaseNoticeContainer:
+          "controllersupportinfo_PurchaseNoticeContainer_3coXq",
+        PurchaseNoticeImage: "controllersupportinfo_PurchaseNoticeImage_3Ci-m",
+        NoticeContainer: "controllersupportinfo_NoticeContainer_3nByi",
+        ControllerRequiredImage:
+          "controllersupportinfo_ControllerRequiredImage_2pO7E",
+        Tilt: "controllersupportinfo_Tilt_11_Ka",
+        ToolTipControl: "controllersupportinfo_ToolTipControl_2TD1t",
+        ToolTipContainer: "controllersupportinfo_ToolTipContainer_11C_j",
       };
     },
     750: (e) => {
@@ -852,7 +861,7 @@
     },
     37814: (e, t, r) => {
       "use strict";
-      r.r(t), r.d(t, { default: () => fe });
+      r.r(t), r.d(t, { default: () => xe });
       let o = {
         GameEdit: (e, t) => `/admin/game/${e}/${t}`,
         GameEditByAppID: (e) => `/admin/game/editbyappid/${e}`,
@@ -948,15 +957,15 @@
               }))
             : (!i && s) || (_ = l.createElement(T.V, null)),
           l.createElement(
-            j.Provider,
+            I.Provider,
             { value: s },
             l.createElement(y, { fnSubmit: n, fnCloseModal: r }, _),
           )
         );
       }
-      const j = l.createContext(null);
-      function I() {
-        return l.useContext(j);
+      const I = l.createContext(null);
+      function j() {
+        return l.useContext(I);
       }
       const B = l.memo(function (e) {
         const {
@@ -964,7 +973,7 @@
             bCanUpdateComingSoonDate: r,
             rtReleaseDate: o,
             strComingSoonDisplay: n,
-          } = I(),
+          } = j(),
           { setOnOKButton: a, onCommit: s } = e,
           [i, u] = l.useState(o),
           [c, d] = l.useState(n || void 0),
@@ -1070,7 +1079,7 @@
                 }),
               ),
             ),
-            l.createElement(M, null),
+            l.createElement(O, null),
           )
         );
       });
@@ -1085,7 +1094,7 @@
           bIsWaitingForBuildReview: r,
           bIsFirstSelfPublishingApp: o,
           rtEarliestDate: n,
-        } = I();
+        } = j();
         return e && t
           ? r
             ? l.createElement(
@@ -1112,7 +1121,7 @@
       }
       function y(e) {
         const { fnCloseModal: t, fnSubmit: r, children: o } = e,
-          { bCanUpdateComingSoonDate: n } = I() || {
+          { bCanUpdateComingSoonDate: n } = j() || {
             bCanUpdateComingSoonDate: !0,
           };
         return l.createElement(
@@ -1148,7 +1157,7 @@
       }
       function L(e) {
         const { rtSelectedDate: t, setSelectedDate: r } = e,
-          { bCanUpdateComingSoonDate: o, rtEarliestDate: n } = I();
+          { bCanUpdateComingSoonDate: o, rtEarliestDate: n } = j();
         return l.createElement(
           l.Fragment,
           null,
@@ -1166,7 +1175,7 @@
         );
       }
       function X(e) {
-        const { bCanUpdateComingSoonDate: t, rtReleaseDate: r } = I();
+        const { bCanUpdateComingSoonDate: t, rtReleaseDate: r } = j();
         return t
           ? l.createElement(
               l.Fragment,
@@ -1204,12 +1213,12 @@
       function z(e) {
         return l.createElement("span", { className: D.BlueNote }, e.children);
       }
-      function M(e) {
+      function O(e) {
         const {
           rtEarliestDate: t,
           strReleaseState: r,
           bCanUpdateComingSoonDate: o,
-        } = I();
+        } = j();
         return "prerelease" != r || o
           ? null
           : l.createElement(
@@ -1221,7 +1230,7 @@
               ),
             );
       }
-      var O = r(19304);
+      var M = r(19304);
       function F(e) {
         const { bIsGameEdit: t, unAppID: r } = e,
           [o, n] = l.useState(e.rtReleaseDate),
@@ -1245,21 +1254,21 @@
             }),
           l.createElement(
             "div",
-            { className: (0, O.Z)(c.ReleaseDateInfoCtn, t && c.GameEditCtn) },
+            { className: (0, M.Z)(c.ReleaseDateInfoCtn, t && c.GameEditCtn) },
             l.createElement(
               "div",
               { className: c.ReleaseDateContent },
               l.createElement(
-                G,
+                W,
                 { label: (0, p.Xx)("#App_Landing_SpecifiedReleaseDate") },
-                l.createElement(W, { rtReleaseDate: o }),
+                l.createElement(G, { rtReleaseDate: o }),
               ),
               l.createElement(
-                G,
+                W,
                 { label: (0, p.Xx)("#App_Landing_CustomersSeeReleaseDate") },
                 l.createElement(
                   "div",
-                  { className: (0, O.Z)(c.BigField, a ? c.Set : c.Unset) },
+                  { className: (0, M.Z)(c.BigField, a ? c.Set : c.Unset) },
                   a
                     ? (0, i.M)(a, o)
                     : (0, p.Xx)("#App_Landing_UnsetReleaseDate"),
@@ -1269,20 +1278,20 @@
             l.createElement(
               "div",
               { className: c.EditButton, onClick: g },
-              l.createElement("div", { className: (0, O.Z)(c.Spacer, c.Top) }),
+              l.createElement("div", { className: (0, M.Z)(c.Spacer, c.Top) }),
               l.createElement(
                 "div",
                 { className: c.EditButtonIcon },
                 l.createElement(d.I8b, null),
               ),
               l.createElement("div", {
-                className: (0, O.Z)(c.Spacer, c.Bottom),
+                className: (0, M.Z)(c.Spacer, c.Bottom),
               }),
             ),
           ),
         );
       }
-      function W(e) {
+      function G(e) {
         const { rtReleaseDate: t } = e;
         return t
           ? l.createElement(
@@ -1290,22 +1299,22 @@
               null,
               l.createElement(
                 "div",
-                { className: (0, O.Z)(c.BigField, c.Set) },
+                { className: (0, M.Z)(c.BigField, c.Set) },
                 (0, p.vX)(t),
               ),
               l.createElement(
                 "div",
-                { className: (0, O.Z)(c.SubField, c.Set) },
+                { className: (0, M.Z)(c.SubField, c.Set) },
                 (0, u.Sc)(t, {}, { timeZoneName: "short" }),
               ),
             )
           : l.createElement(
               "div",
-              { className: (0, O.Z)(c.BigField, c.Unset) },
+              { className: (0, M.Z)(c.BigField, c.Unset) },
               (0, p.Xx)("#App_Landing_UnsetReleaseDate"),
             );
       }
-      function G(e) {
+      function W(e) {
         return l.createElement(
           "div",
           { className: c.LabelField },
@@ -1338,20 +1347,24 @@
         );
       }
       var H = r(40661),
-        U = r(91824),
-        q = r(16826),
-        Z = r(12104);
-      function K(e) {
+        q = r(91824),
+        U = r(16826),
+        Z = r(12104),
+        K = r(84343);
+      function $(e) {
         return l.createElement(
-          "div",
-          { className: U.InfoRow },
+          "a",
+          {
+            href: `${x.De.STORE_BASE_URL}search/?controllersupport=${e.strCategory}`,
+            className: q.InfoRow,
+          },
           l.createElement(
             "div",
             {
-              className: (0, O.Z)(
-                U.ImgSection,
-                e.bHightlightRow && U.HighlightRow,
-                e.bHighlightRowRed && U.HighlightRowRed,
+              className: (0, M.Z)(
+                q.ImgSection,
+                e.bHightlightRow && q.HighlightRow,
+                e.bHighlightGPRequired && q.GamepadRequired,
               ),
             },
             e.tagImage,
@@ -1359,36 +1372,80 @@
           l.createElement(
             "div",
             {
-              className: (0, O.Z)(
-                U.LocSection,
-                e.bHightlightRow && U.HighlightRow,
-                e.bHighlightRowRed && U.HighlightRowRed,
+              className: (0, M.Z)(
+                q.LocSection,
+                e.bHighlightText && q.HighlightText,
+                e.bHightlightRow && q.HighlightRow,
+                e.bHighlightGPRequired && q.GamepadRequired,
               ),
             },
             l.createElement(
               "div",
               {
-                className: (0, O.Z)(
-                  U.LocString,
-                  e.bHighlightText && U.HighlightText,
-                  e.bHightlightRow && U.HighlightRow,
-                  e.bHighlightRowRed && U.HighlightRowRed,
-                  e.bPersonalized && U.Personalized,
+                className: (0, M.Z)(
+                  q.LocString,
+                  e.bHighlightText && q.HighlightText,
+                  e.bHightlightRow && q.HighlightRow,
+                  e.bHighlightGPRequired && q.GamepadRequired,
+                  e.bPersonalized && q.Personalized,
                 ),
               },
               (0, p.Xx)(e.strLocalizationToken),
             ),
+            e.strTooltipString &&
+              l.createElement(
+                K.HP,
+                {
+                  toolTipContent: (0, p.Xx)(e.strTooltipString),
+                  className: q.ToolTipContainer,
+                },
+                l.createElement("span", { className: q.ToolTipControl }, "?"),
+              ),
           ),
         );
       }
       function Q(e) {
         return l.createElement(
           "div",
-          { className: U.PreviewContainer },
-          l.createElement($, Object.assign({}, e)),
+          { className: q.PreviewContainer },
+          l.createElement(te, Object.assign({}, e)),
         );
       }
-      function $(e) {
+      function Y() {
+        return l.createElement($, {
+          tagImage: l.createElement(U.by3, {
+            className: (0, M.Z)(q.Tilt, q.SmallerSVG),
+          }),
+          strLocalizationToken: "#Store_ControllerSupport_GamepadRequired",
+          bHighlightGPRequired: !0,
+          strTooltipString:
+            "#Store_ControllerSupport_Tooltip_ControllerRequired",
+        });
+      }
+      function J() {
+        return l.createElement(
+          "div",
+          { className: (0, M.Z)(q.PurchaseNoticeContainer) },
+          l.createElement(U.atL, {
+            className: (0, M.Z)(q.PurchaseNoticeImage),
+          }),
+          l.createElement(
+            "div",
+            { className: (0, M.Z)(q.PurchaseNoticeLabel) },
+            (0, p.Xx)("#Store_ControllerSupport_GamepadPreferred"),
+          ),
+        );
+      }
+      function ee(e) {
+        const { bNoKeyboardSupport: t, bGamepadPreferred: r } = e;
+        return l.createElement(
+          "div",
+          { className: (0, M.Z)(q.NoticeContainer) },
+          t && l.createElement(Y, null),
+          r && !t && l.createElement(J, null),
+        );
+      }
+      function te(e) {
         const {
           bControllerSupportWizardComplete: t,
           bPS4ControllerSupport: r,
@@ -1398,22 +1455,20 @@
           bFullXboxControllerSupport: s,
           bPartialXboxControllerSupport: i,
           bSteamInputAPISupport: u,
-          bGamepadPreferred: c,
-          bNoKeyboardSupport: d,
-          bHasOther: m,
-          bHasPS4: _,
-          bHasPS5: S,
-          bHasXbox: g,
+          bHasOther: c,
+          bHasPS4: d,
+          bHasPS5: m,
+          bHasXbox: _,
         } = e;
-        let C = [];
+        let S = [];
         if (r && o && n && a) {
-          const e = l.createElement(q.CtA, {
-              className: U.SmallerSVG,
+          const e = l.createElement(U.CtA, {
+              className: q.SmallerSVG,
               controllerType: Z.uL.k_eControllerType_PS4Controller,
             }),
-            t = _ || S;
-          C.push(
-            l.createElement(K, {
+            t = d || m;
+          S.push(
+            l.createElement($, {
               key: "1",
               tagImage: e,
               strLocalizationToken: t
@@ -1424,56 +1479,60 @@
           );
         } else {
           if (r) {
-            const e = l.createElement(q.CtA, {
-              className: U.SmallerSVG,
+            const e = l.createElement(U.CtA, {
+              className: q.SmallerSVG,
               controllerType: Z.uL.k_eControllerType_PS4Controller,
             });
             n
-              ? C.push(
-                  l.createElement(K, {
+              ? S.push(
+                  l.createElement($, {
                     key: "2",
                     tagImage: e,
-                    strLocalizationToken: _
+                    strLocalizationToken: d
                       ? "#Store_ControllerSupport_PS4_Personalized"
                       : "#Store_ControllerSupport_PS4",
-                    bPersonalized: _,
+                    bPersonalized: d,
+                    strCategory: "55",
                   }),
                 )
-              : C.push(
-                  l.createElement(K, {
+              : S.push(
+                  l.createElement($, {
                     key: "3",
                     tagImage: e,
-                    strLocalizationToken: _
+                    strLocalizationToken: d
                       ? "#Store_ControllerSupport_PS4_USB_Personalized"
                       : "#Store_ControllerSupport_PS4_USB",
-                    bPersonalized: _,
+                    bPersonalized: d,
+                    strCategory: "55",
                   }),
                 );
           }
           if (o) {
-            const e = l.createElement(q.CtA, {
-              className: U.SmallerSVG,
+            const e = l.createElement(U.CtA, {
+              className: q.SmallerSVG,
               controllerType: Z.uL.k_eControllerType_PS5Controller,
             });
             a
-              ? C.push(
-                  l.createElement(K, {
+              ? S.push(
+                  l.createElement($, {
                     key: "4",
                     tagImage: e,
-                    strLocalizationToken: S
+                    strLocalizationToken: m
                       ? "#Store_ControllerSupport_PS5_Personalized"
                       : "#Store_ControllerSupport_PS5",
-                    bPersonalized: S,
+                    bPersonalized: m,
+                    strCategory: "57",
                   }),
                 )
-              : C.push(
-                  l.createElement(K, {
+              : S.push(
+                  l.createElement($, {
                     key: "5",
                     tagImage: e,
-                    strLocalizationToken: S
+                    strLocalizationToken: m
                       ? "#Store_ControllerSupport_PS5_USB_Personalized"
                       : "#Store_ControllerSupport_PS5_USB",
-                    bPersonalized: S,
+                    bPersonalized: m,
+                    strCategory: "57",
                   }),
                 );
           }
@@ -1487,79 +1546,59 @@
               null,
               l.createElement(
                 "div",
-                { className: U.ControllerSupportLevelString },
+                { className: q.ControllerSupportLevelString },
                 (0, p.Xx)(
                   s
                     ? "#Store_ControllerSupport_FullController"
                     : "#Store_ControllerSupport_PartialController",
                 ),
               ),
-              c &&
-                !d &&
-                l.createElement(K, {
-                  tagImage: l.createElement(q.CtA, {
-                    className: U.SmallerSVG,
-                    controllerType:
-                      Z.uL.k_eControllerType_UnknownNonSteamController,
-                  }),
-                  strLocalizationToken:
-                    "#Store_ControllerSupport_GamepadPreferred",
-                  bHightlightRow: !0,
-                }),
-              d &&
-                l.createElement(K, {
-                  tagImage: l.createElement(q.CtA, {
-                    className: U.SmallerSVG,
-                    controllerType:
-                      Z.uL.k_eControllerType_UnknownNonSteamController,
-                  }),
-                  strLocalizationToken:
-                    "#Store_ControllerSupport_GamepadRequired",
-                  bHightlightRow: !0,
-                  bHighlightRowRed: !0,
-                }),
-              l.createElement(K, {
-                tagImage: l.createElement(q.CtA, {
-                  className: U.SmallerSVG,
+              l.createElement($, {
+                tagImage: l.createElement(U.CtA, {
+                  className: q.SmallerSVG,
                   controllerType: Z.uL.k_eControllerType_XBoxOneController,
                 }),
-                strLocalizationToken: g
+                strLocalizationToken: _
                   ? "#Store_ControllerSupport_Xbox_Personalized"
                   : "#Store_ControllerSupport_Xbox",
-                bPersonalized: g,
+                bPersonalized: _,
+                strCategory: "18",
               }),
-              C,
+              S,
               u &&
-                l.createElement(K, {
-                  tagImage: l.createElement(q.IRk, {
-                    className: U.BiggerSVG,
+                l.createElement($, {
+                  tagImage: l.createElement(U.IRk, {
+                    className: q.BiggerSVG,
                     bGreyOutRightSide: !s,
                   }),
                   strLocalizationToken: "#Store_ControllerSupport_SIAPI",
+                  strTooltipString: "#Store_ControllerSupport_Tooltip_SIAPI",
+                  strCategory: "59",
                 }),
-              (!t || (!u && m && !g)) &&
-                l.createElement(K, {
-                  tagImage: l.createElement(q.uWd, { className: U.BiggerSVG }),
+              (!t || (!u && c && !_)) &&
+                l.createElement($, {
+                  tagImage: l.createElement(U.uWd, { className: q.BiggerSVG }),
                   strLocalizationToken:
-                    m || _ || S
+                    c || d || m
                       ? "#Store_ControllerSupport_Unknown_Personalized"
                       : "#Store_ControllerSupport_Unknown",
-                  bPersonalized: m || _ || S,
+                  bPersonalized: c || d || m,
                 }),
+              l.createElement(ee, Object.assign({}, e)),
             ),
         );
       }
-      var Y,
-        J,
-        ee,
-        te = r(750);
-      function re(e, t) {
+      var re,
+        oe,
+        ne,
+        le = r(750);
+      function ae(e, t) {
         const r = document.getElementById(e);
         if (r) {
           r.setAttribute("value", t ? "true" : "");
         }
       }
-      function oe(e) {
+      function se(e) {
         const {
             nPageNum: t,
             currentValues: r,
@@ -1568,7 +1607,7 @@
           } = e,
           a = [
             {
-              id: Y.k_eMouseKBOnly,
+              id: re.k_eMouseKBOnly,
               locString: "#ControllerSupportModal_PgOne_MouseKBOnly",
               settings: {
                 bFullXboxControllerSupport: !1,
@@ -1584,7 +1623,7 @@
               bSkipToEnd: !0,
             },
             {
-              id: Y.k_eGamepadAndMouse,
+              id: re.k_eGamepadAndMouse,
               locString: "#ControllerSupportModal_PgOne_GamepadAndMouse",
               settings: {
                 bFullXboxControllerSupport: !0,
@@ -1594,7 +1633,7 @@
               },
             },
             {
-              id: Y.k_eGamepadPreferred,
+              id: re.k_eGamepadPreferred,
               locString: "#ControllerSupportModal_PgOne_GamepadPreferred",
               settings: {
                 bFullXboxControllerSupport: !0,
@@ -1604,7 +1643,7 @@
               },
             },
             {
-              id: Y.k_eGamepadRequired,
+              id: re.k_eGamepadRequired,
               locString: "#ControllerSupportModal_PgOne_GamepadRequired",
               settings: {
                 bFullXboxControllerSupport: !0,
@@ -1616,15 +1655,15 @@
           ],
           s = () =>
             r.bNoKeyboardSupport
-              ? Y.k_eGamepadRequired
+              ? re.k_eGamepadRequired
               : r.bGamepadPreferred
-              ? Y.k_eGamepadPreferred
+              ? re.k_eGamepadPreferred
               : r.bFullXboxControllerSupport || r.bPartialXboxControllerSupport
-              ? Y.k_eGamepadAndMouse
-              : Y.k_eMouseKBOnly,
+              ? re.k_eGamepadAndMouse
+              : re.k_eMouseKBOnly,
           i = s();
         l.useEffect(() => {
-          i == Y.k_eMouseKBOnly && n(!0);
+          i == re.k_eMouseKBOnly && n(!0);
         }, [i, n]);
         const u = l.createElement(
           "div",
@@ -1650,18 +1689,18 @@
                 E.EU,
                 { key: e.id, value: e.id },
                 l.createElement("div", {
-                  className: (0, O.Z)(te.RadioButton, i == e.id && te.Selected),
+                  className: (0, M.Z)(le.RadioButton, i == e.id && le.Selected),
                 }),
                 l.createElement(
                   "div",
-                  { className: te.OptionLabel },
+                  { className: le.OptionLabel },
                   (0, p.Xx)(e.locString),
                 ),
               ),
             ),
           ),
         );
-        return l.createElement(ce, {
+        return l.createElement(Se, {
           strStepName: (0, p.Xx)("#ControllerSupportModal_StepString", t + 1),
           strStepSubHeaderToken: "#ControllerSupportModal_PgOne_Header",
           strInstructionsToken: void 0,
@@ -1669,7 +1708,7 @@
           leftColumnContent: u,
         });
       }
-      function ne(e) {
+      function ie(e) {
         const {
             nPageNum: t,
             currentValues: r,
@@ -1679,7 +1718,7 @@
           a = l.useMemo(
             () => [
               {
-                id: J.k_eFullXboxControllerSupport,
+                id: oe.k_eFullXboxControllerSupport,
                 locString: "#ControllerSupportModal_PgTwo_FullController",
                 settings: {
                   bFullXboxControllerSupport: !0,
@@ -1688,7 +1727,7 @@
                 bSkipToEnd: !1,
               },
               {
-                id: J.k_ePartialXboxControllerSupport,
+                id: oe.k_ePartialXboxControllerSupport,
                 locString: "#ControllerSupportModal_PgTwo_PartialController",
                 settings: {
                   bFullXboxControllerSupport: !1,
@@ -1701,8 +1740,8 @@
           s = l.useCallback(
             () =>
               r.bFullXboxControllerSupport
-                ? J.k_eFullXboxControllerSupport
-                : J.k_ePartialXboxControllerSupport,
+                ? oe.k_eFullXboxControllerSupport
+                : oe.k_ePartialXboxControllerSupport,
             [r],
           ),
           i = l.useCallback(
@@ -1731,14 +1770,14 @@
                   E.EU,
                   { key: e.id, value: e.id },
                   l.createElement("div", {
-                    className: (0, O.Z)(
-                      te.RadioButton,
-                      u == e.id && te.Selected,
+                    className: (0, M.Z)(
+                      le.RadioButton,
+                      u == e.id && le.Selected,
                     ),
                   }),
                   l.createElement(
                     "div",
-                    { className: te.OptionLabel },
+                    { className: le.OptionLabel },
                     (0, p.Xx)(e.locString),
                   ),
                 ),
@@ -1769,11 +1808,6 @@
               l.createElement(
                 "li",
                 null,
-                (0, p.Xx)("#ControllerSupportModal_PgTwo_Instructions_pt3"),
-              ),
-              l.createElement(
-                "li",
-                null,
                 (0, p.Xx)("#ControllerSupportModal_PgTwo_Instructions_pt4"),
               ),
               l.createElement(
@@ -1783,8 +1817,8 @@
               ),
             ),
           );
-        return l.createElement(ce, {
-          stepIMG: l.createElement(q.Qrh, { type: "xbox" }),
+        return l.createElement(Se, {
+          stepIMG: l.createElement(U.Qrh, { type: "xbox" }),
           strStepName: (0, p.Xx)("#ControllerSupportModal_StepString", t + 1),
           strStepSubHeaderToken: "#ControllerSupportModal_PgTwo_Header",
           strInstructionsToken: d,
@@ -1792,7 +1826,7 @@
           leftColumnContent: c,
         });
       }
-      function le(e) {
+      function pe(e) {
         const { nPageNum: t, currentValues: r, setCurrentValues: o } = e,
           n = [
             {
@@ -1902,8 +1936,8 @@
               ),
             ),
           );
-        return l.createElement(ce, {
-          stepIMG: l.createElement(q.Qrh, { type: "ps4" }),
+        return l.createElement(Se, {
+          stepIMG: l.createElement(U.Qrh, { type: "ps4" }),
           strStepName: (0, p.Xx)("#ControllerSupportModal_StepString", t + 1),
           strStepSubHeaderToken: "#ControllerSupportModal_PgThree_Header",
           strInstructionsToken: s,
@@ -1911,7 +1945,7 @@
           leftColumnContent: a,
         });
       }
-      function ae(e) {
+      function ue(e) {
         const {
             nPageNum: t,
             currentValues: r,
@@ -1920,21 +1954,21 @@
           } = e,
           a = [
             {
-              id: ee.k_eSteamInputAPISupport,
+              id: ne.k_eSteamInputAPISupport,
               locString: "#ControllerSupportModal_PgFour_SIAPI",
               settings: { bSteamInputAPISupport: !0 },
               bSkipToEnd: !1,
             },
             {
-              id: ee.k_eNoSteamInputAPISupport,
+              id: ne.k_eNoSteamInputAPISupport,
               locString: "#ControllerSupportModal_PgFour_NoSIAPI",
               settings: { bSteamInputAPISupport: !1 },
               bSkipToEnd: !1,
             },
           ],
           s = r.bSteamInputAPISupport
-            ? ee.k_eSteamInputAPISupport
-            : ee.k_eNoSteamInputAPISupport,
+            ? ne.k_eSteamInputAPISupport
+            : ne.k_eNoSteamInputAPISupport,
           i = l.createElement(
             "div",
             null,
@@ -1953,21 +1987,21 @@
                   ),
                     n(null !== (t = l.bSkipToEnd) && void 0 !== t && t);
                 },
-                classNames: te.RadioGroup,
+                classNames: le.RadioGroup,
               },
               a.map((e) =>
                 l.createElement(
                   E.EU,
                   { key: e.id, value: e.id },
                   l.createElement("div", {
-                    className: (0, O.Z)(
-                      te.RadioButton,
-                      s == e.id && te.Selected,
+                    className: (0, M.Z)(
+                      le.RadioButton,
+                      s == e.id && le.Selected,
                     ),
                   }),
                   l.createElement(
                     "div",
-                    { className: te.OptionLabel },
+                    { className: le.OptionLabel },
                     (0, p.Xx)(e.locString),
                   ),
                 ),
@@ -2007,7 +2041,7 @@
               (0, p.Xx)("#ControllerSupportModal_PgFour_Instructions_note"),
             ),
           );
-        return l.createElement(ce, {
+        return l.createElement(Se, {
           strStepName: (0, p.Xx)("#ControllerSupportModal_StepString", t + 1),
           strStepSubHeaderToken: "#ControllerSupportModal_PgFour_Header",
           strInstructionsToken: u,
@@ -2015,7 +2049,7 @@
           leftColumnContent: i,
         });
       }
-      function se(e) {
+      function ce(e) {
         const { currentValues: t } = e,
           r = l.createElement(
             "div",
@@ -2027,7 +2061,7 @@
             t.bFullXboxControllerSupport || t.bPartialXboxControllerSupport
               ? "#ControllerSupportModal_PgFive_Question"
               : "#ControllerSupportModal_PgFive_QuestionNoController";
-        return l.createElement(ce, {
+        return l.createElement(Se, {
           strStepName: (0, p.Xx)("#ControllerSupportModal_StepString", 5),
           strStepSubHeaderToken: "#ControllerSupportModal_PgFive_Header",
           strInstructionsToken: void 0,
@@ -2035,7 +2069,7 @@
           leftColumnContent: r,
         });
       }
-      function ie(e) {
+      function de(e) {
         const { appid: t, onClose: r, onCommit: o, params: n } = e,
           [a, s] = l.useState(n),
           [i, u] = l.useState(n),
@@ -2044,17 +2078,17 @@
           g = l.useCallback(() => {
             !(function (e) {
               (0, m.mG)(this, void 0, void 0, function* () {
-                re("gamepadsupport_input_1", e.bPartialXboxControllerSupport),
-                  re("gamepadsupport_input_2", e.bFullXboxControllerSupport),
-                  re("controllersupport_input_3", e.bPS4ControllerSupport),
-                  re("controllersupport_input_4", e.bPS4ControllerBTSupport),
-                  re("controllersupport_input_5", e.bPS5ControllerSupport),
-                  re("controllersupport_input_6", e.bPS5ControllerBTSupport),
-                  re("controllersupport_input_7", e.bSteamInputAPISupport),
-                  re("controllersupport_input_8", e.bNoKeyboardSupport),
-                  re("controllersupport_input_8_input", e.bNoKeyboardSupport),
-                  re("controllersupport_input_9", e.bGamepadPreferred),
-                  re("controllersupport_input_10", !0);
+                ae("gamepadsupport_input_1", e.bPartialXboxControllerSupport),
+                  ae("gamepadsupport_input_2", e.bFullXboxControllerSupport),
+                  ae("controllersupport_input_3", e.bPS4ControllerSupport),
+                  ae("controllersupport_input_4", e.bPS4ControllerBTSupport),
+                  ae("controllersupport_input_5", e.bPS5ControllerSupport),
+                  ae("controllersupport_input_6", e.bPS5ControllerBTSupport),
+                  ae("controllersupport_input_7", e.bSteamInputAPISupport),
+                  ae("controllersupport_input_8", e.bNoKeyboardSupport),
+                  ae("controllersupport_input_8_input", e.bNoKeyboardSupport),
+                  ae("controllersupport_input_9", e.bGamepadPreferred),
+                  ae("controllersupport_input_10", !0);
                 const t = document.getElementById("submitBtn");
                 t && t.click();
               });
@@ -2065,7 +2099,7 @@
         switch (_) {
           default:
           case 0:
-            C = l.createElement(oe, {
+            C = l.createElement(se, {
               nPageNum: _,
               currentValues: i,
               setCurrentValues: u,
@@ -2073,7 +2107,7 @@
             });
             break;
           case 1:
-            C = l.createElement(ne, {
+            C = l.createElement(ie, {
               nPageNum: _,
               currentValues: i,
               setCurrentValues: u,
@@ -2081,7 +2115,7 @@
             });
             break;
           case 2:
-            C = l.createElement(le, {
+            C = l.createElement(pe, {
               nPageNum: _,
               currentValues: i,
               setCurrentValues: u,
@@ -2089,7 +2123,7 @@
             });
             break;
           case 3:
-            C = l.createElement(ae, {
+            C = l.createElement(ue, {
               nPageNum: _,
               currentValues: i,
               setCurrentValues: u,
@@ -2097,19 +2131,19 @@
             });
             break;
           case 4:
-            C = l.createElement(se, { currentValues: i });
+            C = l.createElement(ce, { currentValues: i });
         }
-        const b = l.createElement(ue, {
+        const b = l.createElement(_e, {
             nPageIdx: _,
             nPages: 5,
             strHeaderText: (0, p.Xx)("#ControllerSupportModal_Title"),
           }),
           E = 4 == _;
         return l.createElement(
-          pe.Provider,
+          me.Provider,
           { value: i },
           l.createElement(
-            de,
+            ge,
             {
               fnNext: E
                 ? () => g()
@@ -2136,44 +2170,44 @@
           (e[(e.k_eGamepadAndMouse = 1)] = "k_eGamepadAndMouse"),
           (e[(e.k_eGamepadPreferred = 2)] = "k_eGamepadPreferred"),
           (e[(e.k_eGamepadRequired = 3)] = "k_eGamepadRequired");
-      })(Y || (Y = {})),
+      })(re || (re = {})),
         (function (e) {
           (e[(e.k_eFullXboxControllerSupport = 0)] =
             "k_eFullXboxControllerSupport"),
             (e[(e.k_ePartialXboxControllerSupport = 1)] =
               "k_ePartialXboxControllerSupport");
-        })(J || (J = {})),
+        })(oe || (oe = {})),
         (function (e) {
           (e[(e.k_eSteamInputAPISupport = 0)] = "k_eSteamInputAPISupport"),
             (e[(e.k_eNoSteamInputAPISupport = 1)] =
               "k_eNoSteamInputAPISupport");
-        })(ee || (ee = {}));
-      const pe = l.createContext(null);
-      function ue(e) {
+        })(ne || (ne = {}));
+      const me = l.createContext(null);
+      function _e(e) {
         const { nPages: t, nPageIdx: r, strHeaderText: o } = e,
           n = (100 * (r + 1)) / (t + 1);
         return l.createElement(
           "div",
-          { className: (0, O.Z)(te.ModalHeader) },
+          { className: (0, M.Z)(le.ModalHeader) },
           !1,
-          l.createElement("div", { className: te.WizardTitle }, (0, p.Xx)(o)),
+          l.createElement("div", { className: le.WizardTitle }, (0, p.Xx)(o)),
           l.createElement(
             "div",
             {
-              className: (0, O.Z)(
-                te.ProgressBar,
-                r == t - 1 && te.ProgressBarComplete,
+              className: (0, M.Z)(
+                le.ProgressBar,
+                r == t - 1 && le.ProgressBarComplete,
               ),
             },
             r < t - 1 &&
               l.createElement("div", {
-                className: (0, O.Z)(te.ProgressBarFillComponent),
+                className: (0, M.Z)(le.ProgressBarFillComponent),
                 style: { width: n + "%" },
               }),
           ),
         );
       }
-      const ce = l.memo(function (e) {
+      const Se = l.memo(function (e) {
         const {
           strStepName: t,
           strStepSubHeaderToken: r,
@@ -2185,29 +2219,29 @@
         } = e;
         return l.createElement(
           "div",
-          { className: te.WizardContainer },
+          { className: le.WizardContainer },
           l.createElement(
             "div",
-            { className: te.StepRow },
+            { className: le.StepRow },
             o &&
               l.createElement(
                 "div",
-                { className: te.StepImgContainer },
+                { className: le.StepImgContainer },
                 " ",
                 o,
                 " ",
               ),
             l.createElement(
               "div",
-              { className: te.StepLabel },
+              { className: le.StepLabel },
               t,
               l.createElement(E.bU, null, (0, p.Xx)(r)),
             ),
           ),
-          n && l.createElement("div", { className: te.StepInstruction }, n),
+          n && l.createElement("div", { className: le.StepInstruction }, n),
           l.createElement(
             "div",
-            { className: te.ControlsQuestion },
+            { className: le.ControlsQuestion },
             (0, p.yu)(
               a,
               l.createElement("span", { style: { fontWeight: "bold" } }),
@@ -2221,7 +2255,7 @@
           ),
         );
       });
-      function de(e) {
+      function ge(e) {
         const {
           fnNext: t,
           fnBack: r,
@@ -2231,9 +2265,9 @@
         } = e;
         return l.createElement(
           f.On,
-          { active: !0, className: te.ControllerWizardModal },
+          { active: !0, className: le.ControllerWizardModal },
           n,
-          l.createElement(E.uT, { className: te.WizardBody }, o),
+          l.createElement(E.uT, { className: le.WizardBody }, o),
           l.createElement(E.o9, {
             bCancelDisabled: !r,
             onCancel: r,
@@ -2243,7 +2277,7 @@
           }),
         );
       }
-      function me(e) {
+      function Ce(e) {
         const { unAppID: t } = e,
           [r, o] = l.useState(!1),
           n = l.useCallback(() => o(!0), []),
@@ -2255,7 +2289,7 @@
           l.Fragment,
           null,
           r &&
-            l.createElement(ie, {
+            l.createElement(de, {
               appid: t,
               onClose: a,
               onCommit: a,
@@ -2280,15 +2314,15 @@
           ),
           l.createElement(
             "div",
-            { className: (0, O.Z)(H.ReleaseDateInfoCtn) },
+            { className: (0, M.Z)(H.ReleaseDateInfoCtn) },
             l.createElement(
               "div",
               { className: H.ReleaseDateContent },
               !e.bControllerSupportWizardComplete &&
-                l.createElement(_e, { onClick: n }),
+                l.createElement(be, { onClick: n }),
               e.bControllerSupportWizardComplete &&
                 !s &&
-                l.createElement(Se, { onClick: n }),
+                l.createElement(Ee, { onClick: n }),
               e.bControllerSupportWizardComplete &&
                 s &&
                 l.createElement(Q, Object.assign({}, e)),
@@ -2299,7 +2333,7 @@
                 "div",
                 { className: H.EditButton, onClick: n },
                 l.createElement("div", {
-                  className: (0, O.Z)(H.Spacer, H.Top),
+                  className: (0, M.Z)(H.Spacer, H.Top),
                 }),
                 l.createElement(
                   "div",
@@ -2307,13 +2341,13 @@
                   l.createElement(d.I8b, null),
                 ),
                 l.createElement("div", {
-                  className: (0, O.Z)(H.Spacer, H.Bottom),
+                  className: (0, M.Z)(H.Spacer, H.Bottom),
                 }),
               ),
           ),
         );
       }
-      function _e(e) {
+      function be(e) {
         return l.createElement(
           "div",
           null,
@@ -2343,7 +2377,7 @@
           ),
         );
       }
-      function Se(e) {
+      function Ee(e) {
         return l.createElement(
           "div",
           null,
@@ -2373,9 +2407,9 @@
           ),
         );
       }
-      var ge = r(6531),
-        Ce = r(4306);
-      class be extends l.Component {
+      var he = r(6531),
+        fe = r(4306);
+      class Te extends l.Component {
         constructor() {
           super(...arguments),
             (this.state = {
@@ -2386,19 +2420,19 @@
           return `rgba(${e.rgb.r}, ${e.rgb.g}, ${e.rgb.b}, ${e.rgb.a})`;
         }
         OnColorChange(e) {
-          const t = be.GetColorString(e);
+          const t = Te.GetColorString(e);
           this.setState({ color: t }), this.props.onChange(t);
         }
         render() {
-          return l.createElement(ge.AI, {
+          return l.createElement(he.AI, {
             onChange: this.OnColorChange,
             color: this.state.color,
           });
         }
       }
-      (0, m.gn)([Ce.ak], be.prototype, "OnColorChange", null);
-      var Ee = r(40103);
-      function he(e) {
+      (0, m.gn)([fe.ak], Te.prototype, "OnColorChange", null);
+      var ve = r(40103);
+      function Pe(e) {
         const { rgGameProfileColorDefs: t } = e,
           r = t.map((e) =>
             l.createElement(
@@ -2420,8 +2454,8 @@
                       const o = (e) => {
                         r(e);
                       };
-                      (0, Ee.yV)(
-                        l.createElement(be, { onChange: o, color: t }),
+                      (0, ve.yV)(
+                        l.createElement(Te, { onChange: o, color: t }),
                         e,
                         { bDisablePopTop: !0 },
                       );
@@ -2453,7 +2487,7 @@
           );
         return l.createElement("div", { className: "profile_colors_ctn" }, r);
       }
-      function fe(e) {
+      function xe(e) {
         return l.createElement(
           a.rs,
           null,
@@ -2465,7 +2499,7 @@
                 "storeadmin-releasedateinfo": (e) =>
                   l.createElement(F, Object.assign({ bIsGameEdit: !0 }, e)),
                 "storeadmin-controllersupportinfo": (e) =>
-                  l.createElement(me, Object.assign({}, e)),
+                  l.createElement(Ce, Object.assign({}, e)),
               },
             }),
           ),
@@ -2485,7 +2519,7 @@
               l.createElement(s.d, {
                 config: {
                   "storeadmin-profilecolors": (e) =>
-                    l.createElement(he, Object.assign({}, e)),
+                    l.createElement(Pe, Object.assign({}, e)),
                 },
               }),
           }),

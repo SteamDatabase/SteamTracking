@@ -620,7 +620,7 @@ button.Primary.partnereventshared_AddSectionButton_15e-D {
   font-size: 14px;
 }
 .partnereventshared_HelperTooltip_3UCPo {
-  display: flex;
+  display: inline-flex;
 }
 .partnereventshared_HelperTooltip_3UCPo > svg {
   width: 16px;
@@ -669,6 +669,10 @@ button.Primary.partnereventshared_AddSectionButton_15e-D {
   padding: 40px 20px;
   box-sizing: border-box;
   margin: 0 auto;
+}
+.adminshared_AdminPageCtn_KNaeC select {
+  font-size: 14px;
+  padding: 12px 10px;
 }
 .adminshared_AdminPageCtn_KNaeC.adminshared_WidePageCtn_3-Dwx {
   max-width: unset;
@@ -989,10 +993,6 @@ button.Primary.partnereventshared_AddSectionButton_15e-D {
 }
 .adminshared_MarginBottom_1qVJS {
   margin-bottom: 20px;
-}
-select {
-  font-size: 14px;
-  padding: 12px 10px;
 }
 .adminshared_StatusLineItemCtn_jtOdk {
   font-size: 14px;
@@ -6399,7 +6399,7 @@ html.responsive.touch .ContentHubSalePage {
   overflow-x: scroll;
   overflow-y: hidden;
   margin: 0px calc(0px - var(--gpSpace-Gutter));
-  padding: 0px var(--gpSpace-Gutter) 8px;
+  padding: 4px var(--gpSpace-Gutter) 8px;
   scroll-padding: var(--gpSpace-Gutter);
 }
 .BasicUI
@@ -6536,6 +6536,13 @@ html.responsive.touch .ContentHubSalePage {
     padding: 0px 10px;
   }
 }
+@media screen and (max-width: 620px) {
+  .partnersaledisplay_SaleOuterContainer_3FwA4:not(
+      .partnersaledisplay_SalePageLogoSet_3Od0-
+    ) {
+    margin-top: 41vw !important;
+  }
+}
 .partnersaledisplay_SaleBackground_dmyDb {
   background-position: center top;
   background-repeat: no-repeat;
@@ -6654,10 +6661,6 @@ span.partnersaledisplay_vr_required_1KRF9 {
   .partnersaledisplay_AlbumTitle_1Izji:hover {
   text-decoration: underline;
 }
-.partnersaledisplay_PreviewSalesPageContainer_1hdiV
-  .partnersaledisplay_SaleSectionTabs_2xKqp {
-  top: 90px;
-}
 .partnersaledisplay_SaleSectionTabs_2xKqp {
   top: 0px;
   position: sticky;
@@ -6685,6 +6688,11 @@ html.responsive.touch
   .partnersaledisplay_SaleSectionTabs_2xKqp.partnersaledisplay_DesktopTabs_3ZE2w {
   top: 0px;
 }
+@media screen and (max-width: 620px) {
+  html.responsive.touch .partnersaledisplay_SaleSectionTabs_2xKqp {
+    padding-bottom: 0;
+  }
+}
 @media screen and (max-width: 910px) {
   html:not(.force_desktop) .partnersaledisplay_SaleSectionTabs_2xKqp {
     left: 50%;
@@ -6699,6 +6707,11 @@ html.responsive.touch
   html:not(.force_desktop)
     .partnersaledisplay_SaleSectionTabs_2xKqp.partnersaledisplay_DesktopTabs_3ZE2w {
     top: 0px;
+  }
+}
+@media screen and (max-width: 910px) and (max-width: 620px) {
+  html:not(.force_desktop) .partnersaledisplay_SaleSectionTabs_2xKqp {
+    padding-bottom: 0;
   }
 }
 .BasicUI .partnersaledisplay_SaleSectionTabs_2xKqp {
@@ -6723,10 +6736,15 @@ html.responsive.touch
   cursor: pointer;
   user-select: none;
 }
+@media screen and (max-width: 620px) {
+  .partnersaledisplay_SaleSectionTabs_2xKqp
+    .partnersaledisplay_SaleSectionTabsTab_tm6Kr {
+    font-size: 14px;
+  }
+}
 .partnersaledisplay_SaleSectionTabs_2xKqp
   .partnersaledisplay_SaleSectionTabContainer_2jFfU {
   display: flex;
-  justify-content: center;
   width: 100%;
   overflow-y: hidden;
   overflow-x: auto;
@@ -6747,7 +6765,7 @@ html.responsive.touch
   .partnersaledisplay_SaleSectionTabContainer_2jFfU {
   width: 100vw;
   margin-left: -10px;
-  margin-right: -10px;
+  margin-right: -18px;
   padding: 0px 10px;
   overflow-x: scroll;
 }
@@ -6757,7 +6775,7 @@ html.responsive.touch
     .partnersaledisplay_SaleSectionTabContainer_2jFfU {
     width: 100vw;
     margin-left: -10px;
-    margin-right: -10px;
+    margin-right: -18px;
     padding: 0px 10px;
     overflow-x: scroll;
   }
@@ -6791,11 +6809,6 @@ html.tablet
   padding: 16px 0px 16px;
   max-width: 95vw;
 }
-html.responsive.touch
-  .partnersaledisplay_SaleSectionTabs_2xKqp
-  .partnersaledisplay_SaleSectionTabsRow_2Zyym {
-  overflow-x: auto;
-}
 html.tablet
   html.responsive.touch
   .partnersaledisplay_SaleSectionTabs_2xKqp
@@ -6810,11 +6823,6 @@ html.tablet
   }
 }
 @media screen and (max-width: 910px) {
-  html:not(.force_desktop)
-    .partnersaledisplay_SaleSectionTabs_2xKqp
-    .partnersaledisplay_SaleSectionTabsRow_2Zyym {
-    overflow-x: auto;
-  }
   html.tablet
     html:not(.force_desktop)
     .partnersaledisplay_SaleSectionTabs_2xKqp
@@ -7007,6 +7015,11 @@ html.tablet
 }
 .BasicUI .partnersaledisplay_DefaultCreatorCtn_1TAEj {
   display: none;
+}
+@media screen and (max-width: 620px) {
+  .partnersaledisplay_DefaultCreatorCtn_1TAEj {
+    display: none;
+  }
 }
 .BasicUI .SaleSectionCtn.curator {
   display: none;

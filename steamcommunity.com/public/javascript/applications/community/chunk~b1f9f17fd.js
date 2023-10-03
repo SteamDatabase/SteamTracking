@@ -10529,7 +10529,7 @@
         const i = {
           id: e.appid,
           type: "game",
-          overrideNavigation: () => {
+          overrideNavigation: (t) => {
             (0, rn.KX)(e.appid),
               (0, ft.AM)(
                 n.createElement(dn, {
@@ -12634,7 +12634,7 @@
                 !c &&
                   "overrideNavigation" in e &&
                   (a = (t) => (
-                    e.overrideNavigation(),
+                    e.overrideNavigation(t),
                     t && (t.preventDefault(), t.stopPropagation()),
                     !1
                   )),
@@ -16999,6 +16999,7 @@
                       [h().SaleOuterContainer]: !0,
                       [h()[`CustomStyle_${i.jsondata.sale_vanity_id}`]]: !0,
                       SaleOuterContainer: !0,
+                      [h().SalePageLogoSet]: l,
                     }),
                     style: { marginTop: `${p || 0}px` },
                   },
@@ -17492,7 +17493,12 @@
         return 1 == t.length
           ? n.createElement(
               "div",
-              { className: h().PresenterDisclaimer },
+              {
+                className: (0, G.Z)(
+                  h().PresenterDisclaimer,
+                  "PresenterDisclaimer",
+                ),
+              },
               (0, R.kQ)(
                 "#SalePresented_By",
                 n.createElement(Oo, { presentor: t[0], lang: a }),
@@ -17500,7 +17506,12 @@
             )
           : n.createElement(
               "div",
-              { className: h().PresenterDisclaimer },
+              {
+                className: (0, G.Z)(
+                  h().PresenterDisclaimer,
+                  "PresenterDisclaimer",
+                ),
+              },
               (0, R.kQ)(
                 "#SalePresented_By_Multi",
                 t

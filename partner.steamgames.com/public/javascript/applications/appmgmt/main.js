@@ -7247,7 +7247,7 @@
     },
     5456: (e, t, n) => {
       "use strict";
-      n.d(t, { l: () => C });
+      n.d(t, { l: () => v });
       var i = n(58638),
         o = n(89526),
         r = n(51438),
@@ -7276,7 +7276,8 @@
           i,
         );
       }
-      class g extends o.Component {
+      var g = n(17589);
+      class _ extends o.Component {
         render() {
           const { showArrows: e } = this.props,
             t = this.props.visibleSlides,
@@ -7354,18 +7355,18 @@
           );
         }
       }
-      const _ = (0, i.Rq)(g, (e) => ({
+      const C = (0, i.Rq)(_, (e) => ({
         currentSlide: e.currentSlide,
         totalSlides: e.totalSlides,
         visibleSlides: e.visibleSlides,
       }));
-      function C(e) {
+      function v(e) {
         const t = (0, h.id)();
         return e.screenIsWide || t
-          ? o.createElement(v, Object.assign({}, e), e.children)
+          ? o.createElement(f, Object.assign({}, e), e.children)
           : o.createElement(p, Object.assign({}, e), e.children);
       }
-      function v(e) {
+      function f(e) {
         const t = (0, h.id)(),
           n = () => o.Children.count(e.children),
           s = n(),
@@ -7374,9 +7375,9 @@
         const m = d < s,
           p = e.hideArrows || !m,
           g = !m || e.hidePips;
-        let C = 4 / 3,
+        let _ = 4 / 3,
           v = !0;
-        e.slideAspectRatio && ((C = e.slideAspectRatio), (v = !1));
+        e.slideAspectRatio && ((_ = e.slideAspectRatio), (v = !1));
         const f = `items_in_row_${e.visibleElements}`;
         return o.createElement(
           r.s,
@@ -7390,18 +7391,19 @@
             {
               visibleSlides: e.visibleElements,
               totalSlides: n(),
-              naturalSlideWidth: 100 * C,
+              naturalSlideWidth: 100 * _,
               naturalSlideHeight: 100,
               step: e.visibleElements,
               infinite: !e.disableEdgeWrap,
               isIntrinsicHeight: v,
-              touchEnabled: !0,
+              dragEnabled: !1,
+              touchEnabled: !1,
               lockOnWindowScroll: !0,
               orientation: "horizontal",
               disableKeyboard: !0,
             },
             o.createElement(
-              b,
+              w,
               {
                 bHideArrows: p,
                 bAutoAdvance: e.bAutoAdvance && !t,
@@ -7429,7 +7431,7 @@
             ),
             !g &&
               (e.useTestScrollbar
-                ? o.createElement(_, { showArrows: p, carouselStore: null })
+                ? o.createElement(C, { showArrows: p, carouselStore: null })
                 : o.createElement(
                     "div",
                     { className: c.breadcrumbContainer },
@@ -7447,49 +7449,49 @@
           ),
         );
       }
-      function f(e) {
+      function b(e) {
         e && (window.clearTimeout(e.current), (e.current = null));
       }
-      function b(e) {
+      function w(e) {
         const { bHideArrows: t, bAutoAdvance: n, children: r, onSlide: l } = e,
           u = o.useContext(i.ro),
           h = o.useRef(u.state.currentSlide),
           [m, p] = o.useState(null),
-          [g, _] = o.useState(!!n),
-          C = o.useRef(null),
-          v = o.useRef(null);
+          [_, C] = o.useState(!!n),
+          v = o.useRef(null),
+          f = o.useRef(null);
         o.useEffect(() => {
           const e = () => {
-            C.current = window.setTimeout(() => {
-              if (C.current) {
-                f(C);
+            v.current = window.setTimeout(() => {
+              if (v.current) {
+                b(v);
                 const e = (u.state.currentSlide + 1) % u.state.totalSlides;
                 u.setStoreState({ currentSlide: e });
               }
             }, 8e3);
           };
-          g && e();
+          _ && e();
           const t = () => {
             const t = h.current,
               n = u.state.currentSlide;
-            l && l(n), p(n > t ? "Right" : n < t ? "Left" : null), f(v);
-            (v.current = window.setTimeout(() => {
-              v.current && (p(null), f(v));
+            l && l(n), p(n > t ? "Right" : n < t ? "Left" : null), b(f);
+            (f.current = window.setTimeout(() => {
+              f.current && (p(null), b(f));
             }, 1e3)),
               (h.current = n),
-              C.current ? (f(C), _(!1)) : g && e();
+              v.current ? (b(v), C(!1)) : _ && e();
           };
           return (
             u.subscribe(t),
             () => {
-              u.unsubscribe(t), f(C), f(v);
+              u.unsubscribe(t), b(v), b(f);
             }
           );
-        }, [u, g]);
-        const b = !!m && "CarouselSliding" + m;
+        }, [u, _]);
+        const w = !!m && "CarouselSliding" + m;
         return o.createElement(
           "div",
-          { className: (0, a.Z)(c.sliderBody, "SliderBody", b) },
+          { className: (0, a.Z)(c.sliderBody, "SliderBody", w) },
           !t &&
             o.createElement(
               i.jp,
@@ -7510,7 +7512,7 @@
               classNameTray: c.slideTrayCustomize,
               classNameAnimation: c.DisableSliderMotion,
             },
-            r,
+            o.createElement(g.O, null, r),
           ),
           !t &&
             o.createElement(
@@ -12715,6 +12717,8 @@
         Qrh: () => c,
         RCC: () => b,
         Tvf: () => f,
+        atL: () => D,
+        by3: () => E,
         dQJ: () => v,
         tkI: () => _,
         uWd: () => S,
@@ -13414,6 +13418,48 @@
           o.createElement("path", {
             d: "M9.51 12.34L6 8.81L8.81 6L12.34 9.54C12.7125 9.91472 12.9216 10.4216 12.9216 10.95C12.9216 11.4784 12.7125 11.9853 12.34 12.36C12.1529 12.5446 11.9313 12.6906 11.6878 12.7895C11.4443 12.8885 11.1837 12.9385 10.9209 12.9366C10.658 12.9347 10.3981 12.8811 10.156 12.7787C9.91396 12.6764 9.69443 12.5273 9.51 12.34Z",
             fill: "currentColor",
+          }),
+        );
+      }
+      function E(e) {
+        return o.createElement(
+          "svg",
+          Object.assign(
+            {
+              width: "21",
+              height: "16",
+              viewBox: "0 0 21 16",
+              fill: "none",
+              xmlns: "http://www.w3.org/2000/svg",
+            },
+            e,
+            { className: (0, a.Z)(e.className) },
+          ),
+          o.createElement("path", {
+            d: "M19.8036 8.20159L17.1427 2.47984C16.8199 1.77029 16.2208 1.26744 15.5477 0.983445C14.8911 0.761343 14.239 0.803399 13.6699 1.15492C13.2079 1.41139 12.7957 1.85353 12.6023 2.36971L5.5464 4.26032C5.12084 3.90999 4.60466 3.71661 4.01445 3.74208C3.36234 3.78414 2.77658 4.07377 2.30245 4.5325C1.78302 5.0697 1.59409 5.85004 1.66932 6.62593L2.22581 12.9115C2.35523 14.1373 3.35116 15.1308 4.53158 15.0799C5.71201 15.0289 6.64366 14.0496 6.63803 12.7907L6.65342 11.8578C7.10771 12.0678 7.59072 12.1374 8.08586 12.0047C9.19995 11.7062 9.87959 10.529 9.58107 9.41495L11.7473 8.8345C12.0459 9.94858 13.223 10.6282 14.3371 10.3297C14.8323 10.197 15.2158 9.89526 15.5208 9.54818L16.0006 10.3484C16.5135 11.2723 17.5624 11.721 18.4908 11.4722C18.6146 11.439 18.8003 11.3893 18.9075 11.2942C19.9387 10.6862 20.3044 9.32782 19.8036 8.20159ZM5.60416 7.69439L5.62075 7.75628C5.72026 8.12764 5.53902 8.44156 5.16766 8.54106C4.79629 8.64057 4.48238 8.45933 4.38288 8.08797L4.36629 8.02608L4.3044 8.04266C3.93304 8.14217 3.61912 7.96093 3.51962 7.58957C3.42011 7.21821 3.60135 6.90429 3.97271 6.80479L4.03461 6.7882L4.01802 6.72631C3.91851 6.35495 4.09975 6.04103 4.47111 5.94153C4.84248 5.84202 5.15639 6.02326 5.25589 6.39462L5.27248 6.45652L5.33437 6.43993C5.70573 6.34042 6.01965 6.52166 6.11915 6.89302C6.21866 7.26439 6.03742 7.5783 5.66606 7.6778L5.60416 7.69439ZM7.6757 10.7215C7.24244 10.8376 6.77158 10.5658 6.65549 10.1325C6.6389 10.0706 6.62232 10.0087 6.58915 9.88495L6.61787 9.74458C6.65874 9.40194 6.91845 9.13334 7.22792 9.05041C7.53739 8.96749 7.89661 9.07025 8.10332 9.34655C8.19838 9.45375 8.23155 9.57754 8.26472 9.70133C8.38081 10.1346 8.10895 10.6055 7.6757 10.7215ZM10.5557 6.36764L9.31778 6.69933C8.94642 6.79883 8.63251 6.6176 8.533 6.24623C8.4335 5.87487 8.61474 5.56096 8.9861 5.46145L10.224 5.12977C10.5953 5.03026 10.9092 5.2115 11.0087 5.58286C11.1083 5.95422 10.927 6.26813 10.5557 6.36764ZM13.9889 9.02994C13.5556 9.14603 13.0847 8.87417 12.9686 8.44092C12.9355 8.31713 12.9023 8.19334 12.931 8.05297C12.9719 7.71033 13.2316 7.44173 13.5411 7.35881C13.603 7.34223 13.7268 7.30906 13.8052 7.35437L13.8671 7.33778C13.929 7.3212 14.0075 7.36651 14.0075 7.36651L14.086 7.41182C14.1479 7.39523 14.1645 7.45713 14.2263 7.44054L14.3048 7.48585C14.3214 7.54774 14.3833 7.53116 14.3999 7.59305C14.3999 7.59305 14.3999 7.59305 14.4165 7.65495L14.5281 7.82404C14.5447 7.88594 14.5447 7.88594 14.5613 7.94783C14.7559 8.4264 14.4221 8.91385 13.9889 9.02994ZM15.569 5.02431L15.5071 5.04089L15.5237 5.10279C15.6232 5.47415 15.442 5.78806 15.0706 5.88757C14.6993 5.98707 14.3854 5.80583 14.2859 5.43447L14.2693 5.37258L14.2074 5.38916C13.836 5.48867 13.5221 5.30743 13.4226 4.93607C13.3231 4.56471 13.5043 4.2508 13.8757 4.15129L13.9376 4.13471L13.921 4.07281C13.8215 3.70145 14.0027 3.38754 14.3741 3.28803C14.7455 3.18853 15.0594 3.36976 15.1589 3.74112L15.1755 3.80302L15.2374 3.78643C15.6087 3.68693 15.9226 3.86817 16.0221 4.23953C16.1216 4.61089 15.8785 4.94139 15.569 5.02431Z",
+            fill: "black",
+          }),
+        );
+      }
+      function D(e) {
+        return o.createElement(
+          "svg",
+          Object.assign(
+            {
+              width: "20",
+              height: "20",
+              viewBox: "6 6 20 20",
+              fill: "none",
+              xmlns: "http://www.w3.org/2000/svg",
+            },
+            e,
+            { className: (0, a.Z)(e.className) },
+          ),
+          o.createElement("path", {
+            d: "M16.9511 6.69098L16 3.76393L15.0489 6.69098L13.0283 12.9098H6.48944H3.41175L5.90165 14.7188L11.1917 18.5623L9.17109 24.7812L8.22003 27.7082L10.7099 25.8992L16 22.0557L21.2901 25.8992L23.78 27.7082L22.8289 24.7812L20.8083 18.5623L26.0984 14.7188L28.5882 12.9098H25.5106H18.9717L16.9511 6.69098Z",
+            fill: "white",
+            stroke: "#141E2B",
+            strokeWidth: "2",
           }),
         );
       }

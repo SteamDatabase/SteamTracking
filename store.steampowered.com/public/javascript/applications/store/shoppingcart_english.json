@@ -20,6 +20,7 @@
     "Cart_GiftDelivery_Scheduled": "Scheduled:",
     "Cart_GiftDelivery_ScheduleDelivery": "Schedule delivery",
     "Cart_GiftDelivery_From": "From:",
+    "Cart_GiftDelivery_RealName": "Real Name:",
     "Cart_GiftDelivery_Body": "Gift message (160 character limit, %1$s remaining):",
     "Cart_GiftRecipientModal_Title": "Select Gift Recipient",
     "Cart_GiftRecipientModal_Save": "Save",
@@ -34,5 +35,7 @@
     "Cart_LineItemOptions_Gift": "Purchase as a gift",
     "Cart_LineItemOptions_Privately": "Purchase for me: <1>Privately</1>",
     "Cart_CountWidget": "Cart (%1$s)",
-    "Cart_AddedToYourCart": "Added to your cart!"
+    "Cart_AddedToYourCart": "Added to your cart!",
+    "Cart_ContinueShopping": "Continue Shopping",
+    "Cart_ViewMyCart": "View My Cart (%1$s)"
 }

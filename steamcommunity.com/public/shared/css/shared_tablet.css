@@ -249,6 +249,11 @@ html.tablet .pill_tab_menu_item {
 	display: inline-block;
 }
 
+html.tablet .pill_tab_menu_item.deck_search_steam {
+	padding-left: 32px;
+	background:	no-repeat 8px center / 18px 18px url('https://community.cloudflare.steamstatic.com/public/shared/images/ico_gamepad/search.svg');
+}
+
 html.tablet .tablet_header_glyph {
 	width: 32px;
 	margin: 0 24px;

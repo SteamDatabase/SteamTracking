@@ -3294,6 +3294,7 @@ body.modals_BodyNoScrollDialog_3lrlA {
 .shoppingcart_ShoppingCartModal_28yxH {
   width: 600px;
   position: relative;
+  min-height: 400px;
 }
 .shoppingcart_ShoppingCartSVG_1VYL9 {
   width: 15px;
@@ -3327,6 +3328,13 @@ body.modals_BodyNoScrollDialog_3lrlA {
 }
 .shoppingcart_GiftSignatureInput_103vJ {
   max-width: 60%;
+}
+.shoppingcart_ShoppingCartModalBtns_1qRag {
+  display: flex;
+}
+.shoppingcart_ShoppingCartModalBtns_1qRag .shoppingcart_OpenCartBtn_5w5S6 {
+  margin-left: 20px;
+  font-weight: 700;
 }
 .purchasenotices_PurchaseNoticeContainer_3MM2B {
   display: flex;

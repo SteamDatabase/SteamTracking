@@ -15301,7 +15301,7 @@
         const i = {
           id: e.appid,
           type: "game",
-          overrideNavigation: () => {
+          overrideNavigation: (t) => {
             (0, pi.KX)(e.appid),
               (0, rn.AM)(
                 a.createElement(hi, {
@@ -17420,7 +17420,7 @@
                 !c &&
                   "overrideNavigation" in e &&
                   (n = (t) => (
-                    e.overrideNavigation(),
+                    e.overrideNavigation(t),
                     t && (t.preventDefault(), t.stopPropagation()),
                     !1
                   )),
@@ -21701,6 +21701,7 @@
                       [S().SaleOuterContainer]: !0,
                       [S()[`CustomStyle_${i.jsondata.sale_vanity_id}`]]: !0,
                       SaleOuterContainer: !0,
+                      [S().SalePageLogoSet]: r,
                     }),
                     style: { marginTop: `${_ || 0}px` },
                   },
@@ -22191,7 +22192,12 @@
         return 1 == t.length
           ? a.createElement(
               "div",
-              { className: S().PresenterDisclaimer },
+              {
+                className: (0, I.Z)(
+                  S().PresenterDisclaimer,
+                  "PresenterDisclaimer",
+                ),
+              },
               (0, R.kQ)(
                 "#SalePresented_By",
                 a.createElement(Uo, { presentor: t[0], lang: n }),
@@ -22199,7 +22205,12 @@
             )
           : a.createElement(
               "div",
-              { className: S().PresenterDisclaimer },
+              {
+                className: (0, I.Z)(
+                  S().PresenterDisclaimer,
+                  "PresenterDisclaimer",
+                ),
+              },
               (0, R.kQ)(
                 "#SalePresented_By_Multi",
                 t
@@ -22481,7 +22492,7 @@
                         return (
                           "overrideNavigation" in e &&
                             (i = (t) => (
-                              e.overrideNavigation(),
+                              e.overrideNavigation(t),
                               t && (t.preventDefault(), t.stopPropagation()),
                               !1
                             )),

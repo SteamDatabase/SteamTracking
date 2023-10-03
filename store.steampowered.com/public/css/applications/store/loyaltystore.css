@@ -11745,19 +11745,19 @@ body.v6.rewards .ModalPosition_Content {
   width: 50px;
 }
 .banner_Banner_ECzA2 .banner_Link_185F6 {
-  border-radius: 3px;
+  border-radius: 2px;
   background-color: rgba(82, 125, 235, 0.32);
   color: #c5cbd8;
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   font-weight: 100;
   letter-spacing: 0.0625rem;
   line-height: 1.125rem;
-  padding: 2px 8px;
+  padding: 6px 18px;
   margin-left: 8px;
   transition: color 0.2s ease-in-out;
 }
 .banner_Banner_ECzA2 .banner_Link_185F6:hover {
-  color: #fff;
+  background-color: rgba(82, 125, 235, 0.7);
 }
 body.v6.rewards {
   background-color: #161a1f;

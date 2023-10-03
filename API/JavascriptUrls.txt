@@ -1350,6 +1350,7 @@ ${STORE_BASE_URL}saleaction/ajaxgetwishlistonsale
 ${STORE_BASE_URL}saleaction/ajaxgresetopendoorrewards
 ${STORE_BASE_URL}saleaction/ajaxopendoor
 ${STORE_BASE_URL}saleaction/ajaxupdateusergiveawayregistration
+${STORE_BASE_URL}search/?controllersupport=${strCategory}
 ${STORE_BASE_URL}search/?filter=${_ ? "topsellers" : "globaltopsellers"}
 ${STORE_BASE_URL}search/suggest
 ${STORE_BASE_URL}share/${}/replay/${}/${}
@@ -2224,6 +2225,7 @@ https://help.steampowered.com/en/ticketmaster/ticket/
 https://help.steampowered.com/en/wizard/HelpValveMerch
 https://help.steampowered.com/en/wizard/HelpWithEconMarket
 https://help.steampowered.com/en/wizard/HelpWithLogin
+https://help.steampowered.com/en/wizard/HelpWithPublishing?issueid=932
 https://help.steampowered.com/en/wizard/HelpWithPublishing?issueid=933
 https://help.steampowered.com/en/wizard/HelpWithPublishing?issueid=938
 https://help.steampowered.com/en/wizard/HelpWithPurchase
@@ -2860,6 +2862,7 @@ https://store.steampowered.com/publisher/${vanity_url}
 https://store.steampowered.com/purchaseoptions/${nAppID}/?ver=nx
 https://store.steampowered.com/recommended/ignorerecommendation
 https://store.steampowered.com/recommended/ignorerecommendation/
+https://store.steampowered.com/sale/nextfest
 https://store.steampowered.com/sale/thegameawardssteamdeckdrop2022
 https://store.steampowered.com/saliens
 https://store.steampowered.com/search/?snr=1_saliens_4__salientags&tags=${tag_ids}
@@ -2947,6 +2950,7 @@ https://www.dota2.com/primalbeast
 https://www.dota2.com/risinggale
 https://www.dota2.com/theonetrueking
 https://www.example.com
+https://www.facebook.com/Steam/videos
 https://www.facebook.com/dota2/
 https://www.google.com/
 https://www.instagram.com/dota2
@@ -2957,10 +2961,12 @@ https://www.reddit.com/
 https://www.store.steampowered.com
 https://www.twitch.tv/
 https://www.twitch.tv/directory/game/Dota%202
+https://www.twitch.tv/valve
 https://www.valvesoftware.com/
 https://www.valvesoftware.com/en/about
 https://www.wanmei.com/
 https://www.youtube.com/
+https://www.youtube.com/c/SteamYT
 https://www.youtube.com/embed/${id}?showinfo=0&autohide=1&fs=1&hd=1&modestbranding=1&rel=0&showsearch=0&wmode=direct
 https://www.youtube.com/embed/${}
 https://www.youtube.com/embed/${}${m_strYouTubeOptions}

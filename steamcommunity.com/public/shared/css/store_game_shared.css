@@ -196,6 +196,8 @@ background: -webkit-linear-gradient( left, rgba(58,110,139,0.2) 0%,rgba(58,110,1
 	vertical-align: unset;
 }
 .game_area_details_specs_ctn .label {
+    display: flex;
+    justify-content: space-between;
 	padding: 6px 8px;
 	height: 100%;
 	background: rgba( 103, 193, 245, 0.1 );

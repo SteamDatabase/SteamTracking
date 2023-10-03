@@ -594,6 +594,7 @@
     14176: (e) => {
       e.exports = {
         Dummy: "marketingmessageeditor_Dummy_3x7rO",
+        MessageCtn: "marketingmessageeditor_MessageCtn_18Z_Q",
         CountryInOut: "marketingmessageeditor_CountryInOut_219uC",
         CountryText: "marketingmessageeditor_CountryText_YvodB",
         RemoveLegacyBtn: "marketingmessageeditor_RemoveLegacyBtn_1pvKr",
@@ -1209,6 +1210,11 @@
               (n = t
                 ? yield r.Bn.GetDisplayMarketingMessageAdmin(
                     this.m_SteamInterfacePromotions.GetServiceTransport(),
+                    a,
+                  )
+                : o.L7.logged_in
+                ? yield r.Bn.GetDisplayMarketingMessageForUser(
+                    this.m_SteamInterface.GetServiceTransport(),
                     a,
                   )
                 : yield r.Bn.GetDisplayMarketingMessage(
@@ -22500,7 +22506,7 @@
           );
         return r.createElement(
           "div",
-          { className: Ft().SectionCtn },
+          { className: (0, x.Z)(Ft().SectionCtn, mi().MessageCtn) },
           r.createElement(f.ry, {
             label: "REALM",
             strClassName: (0, x.Z)(ie().DropDownScroll),
@@ -22580,7 +22586,13 @@
               ),
             r.createElement(
               "div",
-              { className: (0, x.Z)(Ft().FlexRow, Ft().MarginBottom) },
+              {
+                className: (0, x.Z)(
+                  Ft().FlexRow,
+                  Ft().MarginBottom,
+                  mi().MessageCtn,
+                ),
+              },
               r.createElement(f.ry, {
                 strClassName: (0, x.Z)(ie().DropDownScroll, mi().CountryInOut),
                 rgOptions: a,
@@ -32164,10 +32176,10 @@
         const n = {
           id: e.appid,
           type: "game",
-          overrideNavigation: () => {
-            var t;
-            (t = e.appid),
-              ne.Get().AppCapsuleFound(t),
+          overrideNavigation: (t) => {
+            var n;
+            (n = e.appid),
+              ne.Get().AppCapsuleFound(n),
               (0, g.AM)(
                 d.createElement(dt, {
                   iDoorIndex: e.payload,
@@ -33294,7 +33306,7 @@
                 !o &&
                   "overrideNavigation" in e &&
                   (a = (t) => (
-                    e.overrideNavigation(),
+                    e.overrideNavigation(t),
                     t && (t.preventDefault(), t.stopPropagation()),
                     !1
                   )),

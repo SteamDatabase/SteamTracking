@@ -725,12 +725,12 @@
             n.IS,
             {
               onClick: (e) => {
-                return (
+                var t, n;
+                e.preventDefault(),
+                  e.stopPropagation(),
                   (t = (0, B.RA)(e)),
                   (n = r.GetAppID()),
-                  void (0, F.AM)(l.createElement(X, { nAppID: n }), t)
-                );
-                var t, n;
+                  (0, F.AM)(l.createElement(X, { nAppID: n }), t);
               },
             },
             l.createElement(

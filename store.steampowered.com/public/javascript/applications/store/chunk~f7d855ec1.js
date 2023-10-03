@@ -1412,7 +1412,7 @@
     },
     11491: (e, t, a) => {
       "use strict";
-      a.d(t, { l: () => E });
+      a.d(t, { l: () => f });
       var n = a(58638),
         r = a(89526),
         i = a(51438),
@@ -1440,7 +1440,8 @@
           n,
         );
       }
-      class g extends r.Component {
+      var g = a(17589);
+      class _ extends r.Component {
         render() {
           const { showArrows: e } = this.props,
             t = this.props.visibleSlides,
@@ -1518,18 +1519,18 @@
           );
         }
       }
-      const _ = (0, n.Rq)(g, (e) => ({
+      const E = (0, n.Rq)(_, (e) => ({
         currentSlide: e.currentSlide,
         totalSlides: e.totalSlides,
         visibleSlides: e.visibleSlides,
       }));
-      function E(e) {
+      function f(e) {
         const t = (0, p.id)();
         return e.screenIsWide || t
-          ? r.createElement(f, Object.assign({}, e), e.children)
+          ? r.createElement(S, Object.assign({}, e), e.children)
           : r.createElement(h, Object.assign({}, e), e.children);
       }
-      function f(e) {
+      function S(e) {
         const t = (0, p.id)(),
           a = () => r.Children.count(e.children),
           o = a(),
@@ -1538,9 +1539,9 @@
         const u = d < o,
           h = e.hideArrows || !u,
           g = !u || e.hidePips;
-        let E = 4 / 3,
+        let _ = 4 / 3,
           f = !0;
-        e.slideAspectRatio && ((E = e.slideAspectRatio), (f = !1));
+        e.slideAspectRatio && ((_ = e.slideAspectRatio), (f = !1));
         const S = `items_in_row_${e.visibleElements}`;
         return r.createElement(
           i.s,
@@ -1554,18 +1555,19 @@
             {
               visibleSlides: e.visibleElements,
               totalSlides: a(),
-              naturalSlideWidth: 100 * E,
+              naturalSlideWidth: 100 * _,
               naturalSlideHeight: 100,
               step: e.visibleElements,
               infinite: !e.disableEdgeWrap,
               isIntrinsicHeight: f,
-              touchEnabled: !0,
+              dragEnabled: !1,
+              touchEnabled: !1,
               lockOnWindowScroll: !0,
               orientation: "horizontal",
               disableKeyboard: !0,
             },
             r.createElement(
-              C,
+              v,
               {
                 bHideArrows: h,
                 bAutoAdvance: e.bAutoAdvance && !t,
@@ -1593,7 +1595,7 @@
             ),
             !g &&
               (e.useTestScrollbar
-                ? r.createElement(_, { showArrows: h, carouselStore: null })
+                ? r.createElement(E, { showArrows: h, carouselStore: null })
                 : r.createElement(
                     "div",
                     { className: c.breadcrumbContainer },
@@ -1611,49 +1613,49 @@
           ),
         );
       }
-      function S(e) {
+      function C(e) {
         e && (window.clearTimeout(e.current), (e.current = null));
       }
-      function C(e) {
+      function v(e) {
         const { bHideArrows: t, bAutoAdvance: a, children: i, onSlide: l } = e,
           m = r.useContext(n.ro),
           p = r.useRef(m.state.currentSlide),
           [u, h] = r.useState(null),
-          [g, _] = r.useState(!!a),
-          E = r.useRef(null),
-          f = r.useRef(null);
+          [_, E] = r.useState(!!a),
+          f = r.useRef(null),
+          S = r.useRef(null);
         r.useEffect(() => {
           const e = () => {
-            E.current = window.setTimeout(() => {
-              if (E.current) {
-                S(E);
+            f.current = window.setTimeout(() => {
+              if (f.current) {
+                C(f);
                 const e = (m.state.currentSlide + 1) % m.state.totalSlides;
                 m.setStoreState({ currentSlide: e });
               }
             }, 8e3);
           };
-          g && e();
+          _ && e();
           const t = () => {
             const t = p.current,
               a = m.state.currentSlide;
-            l && l(a), h(a > t ? "Right" : a < t ? "Left" : null), S(f);
-            (f.current = window.setTimeout(() => {
-              f.current && (h(null), S(f));
+            l && l(a), h(a > t ? "Right" : a < t ? "Left" : null), C(S);
+            (S.current = window.setTimeout(() => {
+              S.current && (h(null), C(S));
             }, 1e3)),
               (p.current = a),
-              E.current ? (S(E), _(!1)) : g && e();
+              f.current ? (C(f), E(!1)) : _ && e();
           };
           return (
             m.subscribe(t),
             () => {
-              m.unsubscribe(t), S(E), S(f);
+              m.unsubscribe(t), C(f), C(S);
             }
           );
-        }, [m, g]);
-        const C = !!u && "CarouselSliding" + u;
+        }, [m, _]);
+        const v = !!u && "CarouselSliding" + u;
         return r.createElement(
           "div",
-          { className: (0, s.Z)(c.sliderBody, "SliderBody", C) },
+          { className: (0, s.Z)(c.sliderBody, "SliderBody", v) },
           !t &&
             r.createElement(
               n.jp,
@@ -1674,7 +1676,7 @@
               classNameTray: c.slideTrayCustomize,
               classNameAnimation: c.DisableSliderMotion,
             },
-            i,
+            r.createElement(g.O, null, i),
           ),
           !t &&
             r.createElement(
@@ -1707,7 +1709,8 @@
           [s, l] = (0, n.useState)(null),
           [c, m] = (0, n.useState)(null),
           [d, p] = (0, n.useState)(null),
-          [u, h] = (0, n.useState)(null);
+          [u, h] = (0, n.useState)(null),
+          [g, _] = (0, n.useState)(null);
         return {
           bLoading: e,
           bError: a,
@@ -1716,6 +1719,7 @@
           strSuccess: c,
           elSuccess: u,
           elError: d,
+          strThrobber: g,
           fnSetLoading: t,
           fnSetError: r,
           fnSetSuccess: o,
@@ -1723,6 +1727,7 @@
           fnSetStrSuccess: m,
           fnSetElSuccess: h,
           fnSetElError: p,
+          fnSetThrobber: _,
         };
       }
       function c(e) {
@@ -1740,6 +1745,7 @@
             strSuccess: h,
             elSuccess: g,
             elError: _,
+            strThrobber: E,
           } = a;
         return d || u || _
           ? n.createElement(
@@ -1768,7 +1774,7 @@
               r.uH,
               { strTitle: t, closeModal: () => {} },
               n.createElement(s.V, {
-                string: c || (0, o.Xx)("#Loading"),
+                string: c || E || (0, o.Xx)("#Loading"),
                 size: "medium",
                 position: "center",
               }),

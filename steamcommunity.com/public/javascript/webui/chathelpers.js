@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "8371134";
+var CLSTAMP = "8390683";
 (() => {
   var e,
     t,
@@ -8,7 +8,7 @@ var CLSTAMP = "8371134";
     r,
     a,
     o = {
-      18513: (e, t, n) => {
+      61522: (e, t, n) => {
         "use strict";
         function r(e, t, n, r) {
           var a,
@@ -62,7 +62,7 @@ var CLSTAMP = "8371134";
         }
         Object.create;
         Object.create;
-        n(42938);
+        n(22274);
         var o = n(87363),
           i = n.n(o),
           s = n(61533);
@@ -111,9 +111,9 @@ var CLSTAMP = "8371134";
         }
         function u(e = k) {
           const t = {},
-            n = d("config", e);
+            n = p("config", e);
           n && (delete n.SESSIONID, Object.assign(h, n), (t.config = !0));
-          const r = d("userinfo", e);
+          const r = p("userinfo", e);
           r &&
             (Object.assign(m, r),
             (t.userConfig = !0),
@@ -124,17 +124,17 @@ var CLSTAMP = "8371134";
                 return Boolean(e && 1 === Number.parseInt(e));
               })() &&
               (m.is_support = !1));
-          const a = d("broadcast", e);
+          const a = p("broadcast", e);
           a && (Object.assign(y, a), (t.broadcastConfig = !0));
-          const o = d("community", e);
+          const o = p("community", e);
           o && (Object.assign(g, o), (t.communityConfig = !0));
-          const i = d("event", e);
+          const i = p("event", e);
           return i && (Object.assign(T, i), (t.eventConfig = !0)), t;
         }
-        function d(e, t = k) {
-          return p(e, t, !0);
+        function p(e, t = k) {
+          return d(e, t, !0);
         }
-        function p(e, t = k, n) {
+        function d(e, t = k, n) {
           let r;
           if (
             ((r =
@@ -663,7 +663,7 @@ var CLSTAMP = "8371134";
         let L = new R();
         window.ClientConnectionAPI = L;
         n(9669);
-        var f, A, P, M, b, F, D, N, U, G, w, O, j, B;
+        var f, A, P, b, M, F, D, N, U, G, w, O, j, B;
         !(function (e) {
           (e[(e.k_ETransportOK = 1)] = "k_ETransportOK"),
             (e[(e.k_ETransportRequestNotSent = 2)] =
@@ -795,7 +795,7 @@ var CLSTAMP = "8371134";
             (e[(e.k_EScreenshot = 0)] = "k_EScreenshot"),
               (e[(e.k_ETradingCard = 1)] = "k_ETradingCard"),
               (e[(e.k_EAchievement = 2)] = "k_EAchievement");
-          })(M || (M = {})),
+          })(b || (b = {})),
           (function (e) {
             (e[(e.k_EPersonaStateOffline = 0)] = "k_EPersonaStateOffline"),
               (e[(e.k_EPersonaStateOnline = 1)] = "k_EPersonaStateOnline"),
@@ -809,7 +809,7 @@ var CLSTAMP = "8371134";
               (e[(e.k_EPersonaStateInvisible = 7)] =
                 "k_EPersonaStateInvisible"),
               (e[(e.k_EPersonaStateMax = 8)] = "k_EPersonaStateMax");
-          })(b || (b = {})),
+          })(M || (M = {})),
           (function (e) {
             (e[(e.k_EWorkshopFileTypeInvalid = -1)] =
               "k_EWorkshopFileTypeInvalid"),
@@ -1421,8 +1421,8 @@ var CLSTAMP = "8371134";
           le,
           ce,
           ue,
-          de,
           pe,
+          de,
           Se,
           he,
           me,
@@ -1837,13 +1837,13 @@ var CLSTAMP = "8371134";
                 "k_EGamingDeviceType_Phone"),
               (e[(e.k_EGamingDeviceType_SteamDeck = 544)] =
                 "k_EGamingDeviceType_SteamDeck");
-          })(de || (de = {})),
+          })(pe || (pe = {})),
           (function (e) {
             (e[(e.k_ELoginUIStyleOld = 0)] = "k_ELoginUIStyleOld"),
               (e[(e.k_ELoginUIStyleNewWithoutQRCode = 1)] =
                 "k_ELoginUIStyleNewWithoutQRCode"),
               (e[(e.k_ELoginUIStyleNew = 2)] = "k_ELoginUIStyleNew");
-          })(pe || (pe = {})),
+          })(de || (de = {})),
           (function (e) {
             (e[(e.k_ECommunityProfileItemProperty_ImageSmall = 0)] =
               "k_ECommunityProfileItemProperty_ImageSmall"),
@@ -2163,9 +2163,9 @@ var CLSTAMP = "8371134";
         }
         function Pe(e, ...t) {
           let n = Fe.LocalizeString(e);
-          return void 0 === n ? e : be(n, ...t);
+          return void 0 === n ? e : Me(n, ...t);
         }
-        function Me(e, ...t) {
+        function be(e, ...t) {
           let n = Fe.LocalizeString(e);
           if (void 0 === n) return e;
           let r,
@@ -2179,7 +2179,7 @@ var CLSTAMP = "8371134";
           }
           return a.push(n.substr(s)), o.createElement(o.Fragment, null, ...a);
         }
-        function be(e, ...t) {
+        function Me(e, ...t) {
           return 0 == t.length
             ? e
             : (e = e.replace(/%(?:(\d+)\$)?s/g, function (e, n) {
@@ -2639,7 +2639,7 @@ var CLSTAMP = "8371134";
                     o.createElement(
                       "div",
                       { className: "inviteLabel" },
-                      Me(
+                      be(
                         "#InviteLanding_SentToSteam_Desc",
                         o.createElement(
                           "a",
@@ -2696,7 +2696,7 @@ var CLSTAMP = "8371134";
                     o.createElement(
                       "div",
                       { className: "inviteLabel" },
-                      Me(
+                      be(
                         "#InviteLanding_SentToSteam_Desc",
                         o.createElement(
                           "a",
@@ -2777,7 +2777,7 @@ var CLSTAMP = "8371134";
               o.createElement(
                 "div",
                 { className: "inviteLabel" },
-                Me(
+                be(
                   "#bbcode_invite_description",
                   o.createElement("span", {
                     dangerouslySetInnerHTML: {
@@ -2839,7 +2839,7 @@ var CLSTAMP = "8371134";
             });
           });
       },
-      42938: (e, t, n) => {
+      22274: (e, t, n) => {
         "use strict";
         "VALVE_PUBLIC_PATH" in window
           ? (n.p = window.VALVE_PUBLIC_PATH)
@@ -2883,7 +2883,7 @@ var CLSTAMP = "8371134";
           "./friendsui_thai.json": [88902, 9263],
           "./friendsui_turkish.json": [95797, 5632],
           "./friendsui_ukrainian.json": [83292, 2822],
-          "./friendsui_vietnamese.json": [39248, 1635],
+          "./friendsui_vietnamese.json": [15821, 1635],
         };
         function a(e) {
           if (!n.o(r, e))
@@ -2929,7 +2929,7 @@ var CLSTAMP = "8371134";
           "./friendsui_thai.json": [88902, 9263],
           "./friendsui_turkish.json": [95797, 5632],
           "./friendsui_ukrainian.json": [83292, 2822],
-          "./friendsui_vietnamese.json": [39248, 1635],
+          "./friendsui_vietnamese.json": [15821, 1635],
         };
         function a(e) {
           if (!n.o(r, e))
@@ -3173,65 +3173,65 @@ var CLSTAMP = "8371134";
       ".js?contenthash=" +
       {
         699: "e520ea8eb741214a85ed",
-        1162: "6b9d257947f030eab7c7",
-        1313: "0607cfe66abbaf93c1f3",
+        1162: "e364be41d25c16f13eda",
+        1313: "915d70a4599b5c464e04",
         1471: "8a7c96aba4149abffa26",
-        1635: "327b0ab06e9918b8ba12",
+        1635: "83935f45d73fc3e8c63a",
         2029: "83a760c7c563af7ff575",
         2431: "3f330a391b919f3bb87d",
-        2443: "da53484535651a0641bb",
-        2537: "6786545a641dfefd8a69",
+        2443: "2f4a94803cab680a3b07",
+        2537: "ff1c50eaf6e31cc2ac05",
         2822: "1930acba561078a18a98",
-        2844: "9c9665c35e4c7c622146",
+        2844: "d57e174f1d74b0900bfc",
         2862: "919b0f8467aa4d0dd8af",
         2913: "9caa9f9765f6b6fbfe0d",
-        3112: "b98c74fe94ab5dda2673",
+        3112: "db747c8cffce5152df05",
         3140: "67232a94c8f87bf86abf",
         3182: "626a386cb26ef9f94014",
-        3252: "97d092215e32695bc1fa",
+        3252: "b52c3ec16be12e43eb99",
         3471: "3d722f5b01571f009d05",
         3500: "97f103206f5759b7ea62",
-        3557: "5385fb8656b68b921d84",
-        4108: "f80b22e9f99eb783db3c",
-        4189: "43f9b970b4a30d1335a4",
+        3557: "78893e867ae4ad7f862f",
+        4108: "cc2553939ef976507941",
+        4189: "b5971e1110da8d27d6b1",
         4264: "3f7370d48d57123da3f4",
-        4297: "09bd7fbf2b64867efbd3",
+        4297: "496c1e33e1f8b7581f67",
         4448: "dc34ef362bd30950e27e",
         4596: "b64463f287913ed1b4f2",
         4716: "0d03a3ed1cc805af2770",
-        4823: "fb53692e93005bbfc5d4",
-        4964: "c07c274cb1a8e733ed36",
+        4823: "fd23664353bd1610f778",
+        4964: "4804bd90db689fe16bfa",
         4989: "7080a6ac094d0c96366d",
-        5438: "9b0f9d6533742073b391",
-        5625: "6f9afbc04a1dfb8ee527",
+        5438: "4f52a20d133530f36ab6",
+        5625: "1ce12d9cf6b526110965",
         5632: "04842b46cd85e9d1fb8a",
         5802: "debc3461bbf286c8c1df",
-        5849: "f1e0c5293315f4c16c9d",
-        5925: "525944ee6d48e4ab12b0",
-        5933: "e9e4a470549f2744df2e",
-        5948: "0087322fbfc9c4df2f81",
-        6007: "2faee200b6b2b87dc054",
-        6492: "cd50c4e97972cbb0e66d",
-        6542: "7bd6746dc2bdc4308953",
+        5849: "e161ce0fa73831916231",
+        5925: "a26189f6f9e83f9bb790",
+        5933: "4e0f3ca8e550c00e359d",
+        5948: "27cd24f2f0340717d174",
+        6007: "75465a384cd18563f592",
+        6492: "77d018d137a925f746d2",
+        6542: "a399b648077ccc903b61",
         6646: "6424317e3f55a734bbf0",
         6727: "5397cc56d81a1b5aed19",
         6986: "c54148885851b5b1f61d",
         6992: "3b30a7e01544619acb07",
         7340: "dd947cee9875884305e1",
         7575: "3e33390f518ecc16c2e0",
-        7602: "f3459fc574c7658aba74",
-        7651: "fcccbe2e0a52e2070a56",
+        7602: "4558627e3d8ee59df8be",
+        7651: "fb4e6926db7d5298f24e",
         7706: "415e651d68936074233f",
-        7781: "efe92329842a6567ea93",
-        7975: "ad0e1aacc14c2bf943a4",
+        7781: "189a7b6e2bcfce7094d9",
+        7975: "6c27978cf1e4c648646a",
         8247: "f25e033938692b5767ad",
-        8385: "44c8b59d7c4605ffabfe",
+        8385: "ce8dba0e22928a52d169",
         8518: "4a0aecf8c58aa429e523",
-        8754: "0af553eb2a55d6355e3a",
+        8754: "a8d7fc638b7860cd9bdb",
         8815: "1f786d86346bdbc68758",
-        9062: "59c8f3e56b4ac988adf7",
-        9263: "0faea3edd3efa407123d",
-        9753: "23325cfdf00806f311ba",
+        9062: "fc06d3fd50b5fe247609",
+        9263: "5b426ad2267812e707ed",
+        9753: "b824fa366fd3dd6a1b97",
         9775: "660b7785225eab50cda3",
         9818: "f7b856f8c101aa9cae33",
       }[e]),
@@ -3368,6 +3368,6 @@ var CLSTAMP = "8371134";
           self.webpackChunk_steam_friendsui || []);
       n.forEach(t.bind(null, 0)), (n.push = t.bind(null, n.push.bind(n)));
     })();
-  var _ = s.O(void 0, [5968], () => s(18513));
+  var _ = s.O(void 0, [5968], () => s(61522));
   _ = s.O(_);
 })();

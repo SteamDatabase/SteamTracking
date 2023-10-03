@@ -3959,7 +3959,7 @@
                 grouping: G.Popular,
               },
             ),
-            N = e(
+            M = e(
               (0, s.Xx)(
                 "#RewardCluster_All_Title",
                 (0, s.Xx)("#RewardItemType_ArtistProfile_plural"),
@@ -3971,7 +3971,7 @@
                 categoryTag: ["artist_profile"],
               },
             ),
-            M =
+            b =
               (e(
                 (0, s.Xx)("#RewardCluster_TabletopFest2021Profiles_Title"),
                 void 0,
@@ -4023,31 +4023,44 @@
                   linkedPage: { type: "custom", pageid: "emoticons" },
                 },
               ]),
-            b = [];
+            A = [];
+          let x;
           (0, I.e7)(m.De.EREALM)
-            ? b.push(r(2459330))
-            : b.push(r(2603600), r(2598440), r(1716740));
-          const A = [],
-            x = [b, M];
-          for (let e = 0; e < Math.max(x[0].length, x[1].length); e++)
-            e < x[0].length && A.push({ type: "clusterview", view: x[0][e] }),
-              e < x[1].length && A.push({ type: "clusterview", view: x[1][e] });
-          n(new Z(D, A));
-          const P = [{ cluster: p, type: O.GRID }];
+            ? A.push(r(2459330))
+            : A.push(r(2603600), r(2598440), r(1716740)),
+            (x = {
+              type: "banner",
+              title: (0, s.Xx)("#FeaturedBanner_SteamScream2023_Headline"),
+              description: (0, s.Xx)("#FeaturedBanner_SteamScream2023_Subhead"),
+              link_text: (0, s.Xx)(
+                "#FeaturedBanner_SteamScream2023_CallToAction",
+              ),
+              image:
+                m.De.BASE_URL_STORE_CDN_ASSETS + "rewards/steamscream2023.jpg",
+              linked_page: N.Z.LoyaltyEvents("sale_halloween_2023"),
+            });
+          const P = [],
+            T = [A, b];
+          for (let e = 0; e < Math.max(T[0].length, T[1].length); e++)
+            0 == e && x && P.push(x),
+              e < T[0].length && P.push({ type: "clusterview", view: T[0][e] }),
+              e < T[1].length && P.push({ type: "clusterview", view: T[1][e] });
+          n(new Z(D, P));
+          const B = [{ cluster: p, type: O.GRID }];
           n(
             new Q(
               "stickers",
-              P,
+              B,
               (0, s.Xx)("#ShopPageTitle_Stickers"),
               void 0,
               (0, s.Xx)("#SearchPlaceholder_Stickers"),
             ),
           );
-          const T = [{ cluster: u, type: O.GRID }];
+          const j = [{ cluster: u, type: O.GRID }];
           n(
             new Q(
               "emoticons",
-              T,
+              j,
               (0, s.Xx)("#ShopPageTitle_Emoticons"),
               void 0,
               (0, s.Xx)("#SearchPlaceholder_Emoticons"),
@@ -4062,7 +4075,7 @@
                 (0, s.Xx)("#SearchPlaceholder_ChatEffects"),
               ),
             );
-          const B = e(
+          const F = e(
               (0, s.Xx)("#RewardCluster_AnimatedProfileBackgrounds_Title"),
               (0, s.Xx)("#RewardCluster_Backgrounds_Subtitle"),
               {
@@ -4070,7 +4083,7 @@
                 queryFilter: [_.eY.k_ELoyaltyRewardQueryFilter_Animated],
               },
             ),
-            j = e(
+            z = e(
               (0, s.Xx)("#RewardCluster_AnimatedMiniProfileBackgrounds_Title"),
               (0, s.Xx)("#RewardCluster_MiniProfileBackgrounds_Subtitle"),
               {
@@ -4078,7 +4091,7 @@
                 queryFilter: [_.eY.k_ELoyaltyRewardQueryFilter_Animated],
               },
             ),
-            F = e(
+            V = e(
               (0, s.Xx)("#RewardCluster_StillProfileBackgrounds_Title"),
               (0, s.Xx)("#RewardCluster_Backgrounds_Subtitle"),
               {
@@ -4086,7 +4099,7 @@
                 queryFilter: [_.eY.k_ELoyaltyRewardQueryFilter_NotAnimated],
               },
             ),
-            z = e(
+            X = e(
               (0, s.Xx)("#RewardCluster_StillMiniProfileBackgrounds_Title"),
               (0, s.Xx)("#RewardCluster_MiniProfileBackgrounds_Subtitle"),
               {
@@ -4094,16 +4107,16 @@
                 queryFilter: [_.eY.k_ELoyaltyRewardQueryFilter_NotAnimated],
               },
             ),
-            V = [
-              { cluster: B, type: O.CAROUSEL },
-              { cluster: j, type: O.CAROUSEL },
+            W = [
               { cluster: F, type: O.CAROUSEL },
               { cluster: z, type: O.CAROUSEL },
+              { cluster: V, type: O.CAROUSEL },
+              { cluster: X, type: O.CAROUSEL },
             ];
           n(
             new Q(
               "backgrounds",
-              V,
+              W,
               (0, s.Xx)("#ShopPageTitle_Backgrounds"),
               void 0,
               (0, s.Xx)("#SearchPlaceholder_Backgrounds"),
@@ -4121,14 +4134,14 @@
                 (0, s.Xx)("#SearchPlaceholder_Avatar"),
               ),
             );
-          const X = [
+          const q = [
             { cluster: f, type: O.CAROUSEL },
             { cluster: C, type: O.CAROUSEL },
           ];
           n(
             new Q(
               "steamdeck",
-              X,
+              q,
               (0, s.Xx)("#ShopPageTitle_SteamDeckItems"),
               void 0,
               (0, s.Xx)("#SearchPlaceholder_SteamDeckItems"),
@@ -4161,25 +4174,25 @@
                 (0, s.Xx)("#SearchPlaceholder_ItemBundles"),
               ),
             );
-          const W = [
+          const K = [
             { cluster: S, type: O.CAROUSEL },
-            { cluster: N, type: O.CAROUSEL },
+            { cluster: M, type: O.CAROUSEL },
             { cluster: w, type: O.GRID },
           ];
           n(
             new Q(
               "profilebundles",
-              W,
+              K,
               (0, s.Xx)("#ShopPageTitle_ProfileBundles"),
               (0, s.Xx)("#ShopPageTitle_ProfileBundles_Subtitle"),
               (0, s.Xx)("#SearchPlaceholder_ProfileBundles"),
             ),
           );
-          const q = [{ cluster: N, type: O.GRID, bHomogeneous: !0 }];
+          const J = [{ cluster: M, type: O.GRID, bHomogeneous: !0 }];
           n(
             new Q(
               "artistprofiles",
-              q,
+              J,
               (0, s.Xx)("#ShopPageTitle_ArtistProfiles"),
               (0, s.Xx)("#ShopPageTitle_ArtistProfiles_Subtitle"),
               (0, s.Xx)("#SearchPlaceholder_ArtistProfiles"),
@@ -4207,7 +4220,7 @@
                   strImage: v,
                   bFullBleedImage: !0,
                 };
-                A.push({ type: "clusterview", view: t });
+                P.push({ type: "clusterview", view: t });
                 const n = L.Get().GetSortedGamesWithRewards(),
                   a = (e) => {
                     const t = this.m_mapClusters.get(e);
@@ -4217,16 +4230,16 @@
                 for (const e of n) {
                   if (
                     -1 !=
-                    A.findIndex(
+                    P.findIndex(
                       (t) =>
                         "clusterview" === t.type && a(t.view.cluster) === e,
                     )
                   )
                     continue;
                   const t = r(e),
-                    n = b.length + 3;
+                    n = A.length + 3;
                   if (
-                    (A.splice(n + i * n, 0, { type: "clusterview", view: t }),
+                    (P.splice(n + i * n, 0, { type: "clusterview", view: t }),
                     (i += 1),
                     i >= 3)
                   )
@@ -4234,7 +4247,7 @@
                 }
                 this.m_mapPages.set(
                   R({ type: "custom", pageid: D }),
-                  new Z(D, A),
+                  new Z(D, P),
                 );
               });
         }

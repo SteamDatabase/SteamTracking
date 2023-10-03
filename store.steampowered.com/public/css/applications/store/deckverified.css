@@ -784,6 +784,7 @@ button.DialogButton.controllersupportinfo_StartWizardButton_lKVYB {
 }
 .controllersupportinfo_ControllerSupportLevelString_x6aCt {
   color: #8f98a0;
+  margin-bottom: 6px;
 }
 .controllersupportinfo_InfoRow_1NUmC {
   display: flex;
@@ -797,30 +798,37 @@ button.DialogButton.controllersupportinfo_StartWizardButton_lKVYB {
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
   background: rgba(103, 193, 245, 0.1);
+  color: #66c0f4;
+}
+.controllersupportinfo_LocSection_38m8D.controllersupportinfo_HighlightText_3InqR {
+  color: #82f466;
+}
+.controllersupportinfo_LocSection_38m8D.controllersupportinfo_GamepadRequired_H8PWx {
+  color: #ffc82c;
+}
+.controllersupportinfo_LocSection_38m8D.controllersupportinfo_Personalized_3Q8sx {
+  color: #82f466;
 }
 .controllersupportinfo_LocSection_38m8D.controllersupportinfo_HighlightRow_zD5C0 {
   background: #9d8b5e;
+  color: #fff;
 }
-.controllersupportinfo_LocSection_38m8D.controllersupportinfo_HighlightRow_zD5C0.controllersupportinfo_HighlightRowRed_1_692 {
-  background: #a25024;
+.controllersupportinfo_LocSection_38m8D:hover {
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+  background: #67c1f5;
+  background: linear-gradient(135deg, #67c1f5 0%, #417a9b 100%);
 }
 .controllersupportinfo_LocString_5bHD6 {
   font-weight: 400;
   font-size: 12px;
   padding: 6px 8px;
   height: 100%;
-  color: #66c0f4;
-}
-.controllersupportinfo_LocString_5bHD6.controllersupportinfo_HighlightText_3InqR {
-  color: #82f466;
-}
-.controllersupportinfo_LocString_5bHD6.controllersupportinfo_HighlightRow_zD5C0 {
-  color: #fff;
-}
-.controllersupportinfo_LocString_5bHD6.controllersupportinfo_Personalized_3Q8sx {
-  color: #82f466;
+  display: flex;
+  flex-direction: row;
 }
 .controllersupportinfo_ImgSection_28V2e {
   padding: 0px 6px;
@@ -830,8 +838,8 @@ button.DialogButton.controllersupportinfo_StartWizardButton_lKVYB {
 .controllersupportinfo_ImgSection_28V2e.controllersupportinfo_HighlightRow_zD5C0 {
   background: #7c6e4a;
 }
-.controllersupportinfo_ImgSection_28V2e.controllersupportinfo_HighlightRow_zD5C0.controllersupportinfo_HighlightRowRed_1_692 {
-  background: #8a441e;
+.controllersupportinfo_ImgSection_28V2e.controllersupportinfo_GamepadRequired_H8PWx {
+  background: #ffc82c;
 }
 .controllersupportinfo_ImgSection_28V2e > svg {
   width: 26px;
@@ -855,4 +863,44 @@ button.DialogButton.controllersupportinfo_StartWizardButton_lKVYB {
 }
 .controllersupportinfo_StoreSidebarContainer_2Z38- {
   margin-top: 12px;
+}
+.controllersupportinfo_PurchaseNoticeContainer_3coXq {
+  display: flex;
+  flex-direction: row;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  height: 32px;
+}
+.controllersupportinfo_PurchaseNoticeImage_3Ci-m {
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+  margin-right: 12px;
+  margin-top: 2px;
+}
+.controllersupportinfo_NoticeContainer_3nByi {
+  margin-top: 14px;
+  margin-bottom: 2px;
+}
+.controllersupportinfo_ControllerRequiredImage_2pO7E {
+  padding: 0px 6px;
+  display: flex;
+  width: 26px;
+  height: 16px;
+  align-self: center;
+}
+.controllersupportinfo_Tilt_11_Ka {
+  transform: rotate(-15deg);
+}
+.controllersupportinfo_ToolTipControl_2TD1t {
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(217, 217, 217, 0.1);
+}
+.controllersupportinfo_ToolTipContainer_11C_j {
+  color: #fff;
 }

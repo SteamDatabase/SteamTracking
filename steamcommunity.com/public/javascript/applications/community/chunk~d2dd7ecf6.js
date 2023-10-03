@@ -8445,7 +8445,7 @@
                         return (
                           "overrideNavigation" in e &&
                             (i = (t) => (
-                              e.overrideNavigation(),
+                              e.overrideNavigation(t),
                               t && (t.preventDefault(), t.stopPropagation()),
                               !1
                             )),
@@ -10282,7 +10282,7 @@
         return (
           "overrideNavigation" in a &&
             (F = (e) => (
-              a.overrideNavigation(),
+              a.overrideNavigation(e),
               e.preventDefault(),
               e.stopPropagation(),
               !1

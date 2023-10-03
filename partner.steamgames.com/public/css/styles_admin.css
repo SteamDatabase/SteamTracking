@@ -1970,15 +1970,16 @@ html, body { height:100%; }
 
 .SysReqs hr
 {
-	margin: 0px 0px 12px 300px;
-	padding: 0px;
-	width: 700px;
+	height: 0;
+    border-top: 1px solid #67c1f5;
+    margin: 0 0 12px 0;
+	padding: 0;
 }
 
 .SysReqRow
 {
 	width: 500px;
-	margin-bottom: 4px;
+	margin-bottom: 8px;
 }
 
 .SysReqRowLabel
@@ -1988,8 +1989,10 @@ html, body { height:100%; }
 }
 
 .SysReqRowLabel.wide {
-    width: unset;
-    display: block;
+    width: 390px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .SysReqRowDescription
@@ -2000,6 +2003,15 @@ html, body { height:100%; }
 .Music .SysReqRowLabel
 {
 	width: 160px;
+}
+
+.SysReqLargeTooltip {
+    flex-grow: 1;
+    margin-left: 4px;
+}
+
+.SysReqLargeTooltip:hover {
+    cursor: help;
 }
 
 .jsTooltip .SysReqLargeTooltipContent 

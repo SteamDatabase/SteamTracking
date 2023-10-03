@@ -262,7 +262,13 @@ html.tablet .ContentHubSalePage .carousel__slider-tray-wrapper {
   overflow-y: hidden;
   margin: unset;
   scroll-padding: 0px var(--gpSpace-Gutter);
-  padding: 0px var(--gpSpace-Gutter);
+  padding: 4px var(--gpSpace-Gutter);
+}
+html.tablet
+  .ContentHubSalePage
+  .carousel__slider-tray-wrapper
+  .carousel__slide {
+  scroll-snap-align: start;
 }
 @media screen and (max-width: 910px) {
   .ContentHubSalePage .carousel__slider-tray-wrapper {
@@ -271,7 +277,10 @@ html.tablet .ContentHubSalePage .carousel__slider-tray-wrapper {
     overflow-y: hidden;
     margin: unset;
     scroll-padding: 0px var(--gpSpace-Gutter);
-    padding: 0px var(--gpSpace-Gutter);
+    padding: 4px var(--gpSpace-Gutter);
+  }
+  .ContentHubSalePage .carousel__slider-tray-wrapper .carousel__slide {
+    scroll-snap-align: start;
   }
 }
 html.tablet .ContentHubSalePage .carousel__slider-tray:after {

@@ -1,3 +1,67 @@
+.localdateandtime_DateAndTime_1miMh,
+.localdateandtime_DateAndTimeInline_1jG_- {
+  display: inline-flex;
+  white-space: nowrap;
+}
+.localdateandtime_DateAndTime_1miMh span.localdateandtime_At_3D4jI,
+.localdateandtime_DateAndTimeInline_1jG_- span.localdateandtime_At_3D4jI {
+  margin: 0px 4px;
+  color: #6c767f;
+}
+.localdateandtime_DateAndTimeInline_1jG_- {
+  display: inline-flex;
+}
+.localdateandtime_ActiveEvent_2ZcVE {
+  color: #a3cf06;
+  display: flex;
+}
+.localdateandtime_ActiveEvent_2ZcVE .localdateandtime_ActiveEventCallOut__y2DQ {
+  background: #a3cf06;
+  font-size: 11px;
+  color: #222;
+  padding: 0px 5px;
+  border-radius: 2px;
+  display: table;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-right: 4px;
+  margin-top: 1px;
+}
+.localdateandtime_RightSideTitles_3sPON {
+  font-size: 12px;
+  font-weight: 200;
+  color: #b1b4b9;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+.localdateandtime_DateToolTip_3zhja {
+  padding: 3px 8px;
+  border-radius: 2px;
+  background-color: #5e6068;
+  color: #fff;
+  text-transform: uppercase;
+  box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.3);
+}
+.localdateandtime_ShortDateAndTime_4K3Bl {
+  margin: 0px 4px;
+  text-transform: initial;
+  color: #868f98;
+  letter-spacing: normal;
+}
+.localdateandtime_ShortDateRange_3sqcQ {
+  display: flex;
+}
+@media screen and (max-width: 500px) {
+  .localdateandtime_ShortDateRange_3sqcQ {
+    flex-direction: column;
+  }
+}
+.localdateandtime_ShortDateRange_3sqcQ .localdateandtime_RightSideTitles_3sPON {
+  display: flex;
+  flex-wrap: wrap;
+}
 .partnereventshared_PartnerEventFont_22_fG {
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   font-weight: 300;

@@ -51,7 +51,7 @@
     },
     24448: (e, t, n) => {
       "use strict";
-      n.d(t, { Gr: () => f, Jq: () => g, y$: () => p });
+      n.d(t, { Gr: () => g, Jq: () => f, y$: () => p });
       var r = n(33940),
         s = n(52868),
         a = n.n(s),
@@ -136,7 +136,7 @@
       }
       (0, r.gn)([i.LO], _.prototype, "m_mapProfiles", void 0);
       const p = new _();
-      function f(e) {
+      function g(e) {
         const t = o.useMemo(
             () => (e ? ("string" == typeof e ? new l.K(e) : e) : null),
             [e],
@@ -167,8 +167,8 @@
         }, [e]);
         return [n, !!t && p.GetProfileBySteamID(t)];
       }
-      function g(e) {
-        return f(o.useMemo(() => l.K.InitFromAccountID(e), [e]));
+      function f(e) {
+        return g(o.useMemo(() => l.K.InitFromAccountID(e), [e]));
       }
       window.g_ProfileStore = p;
     },
@@ -187,8 +187,8 @@
         m = n(32765),
         _ = n(47165),
         p = n(60161),
-        f = n(24448),
-        g = n(42735),
+        g = n(24448),
+        f = n(42735),
         h = n(701),
         v = n(77435),
         C = n(44026);
@@ -252,7 +252,7 @@
                 m.De.COMMUNITY_BASE_URL + "actions/AddFriendAjax",
                 t,
               );
-              return e && e.data && e.data.success == g.s.k_EResultOK;
+              return e && e.data && e.data.success == f.s.k_EResultOK;
             } catch (e) {
               return !1;
             }
@@ -443,8 +443,8 @@
           return (0, r.mG)(this, void 0, void 0, function* () {
             if (e) {
               const t = _.K.InitFromAccountID(Number(e));
-              yield f.y$.LoadProfiles([t.ConvertTo64BitString()]);
-              const n = f.y$.GetProfile(t.ConvertTo64BitString());
+              yield g.y$.LoadProfiles([t.ConvertTo64BitString()]);
+              const n = g.y$.GetProfile(t.ConvertTo64BitString());
               n
                 ? this.setState({
                     searchResult: n,
@@ -688,7 +688,7 @@
           else {
             if ("object" == typeof e && e instanceof i.gA)
               return {
-                strErrorMsg: "" + e.GetEResult(),
+                strErrorMsg: "" + e.GetErrorMessage(),
                 errorCode: e.GetEResult(),
               };
             console.warn("GetMsgAndErrorCodeFromResponse cannot parse: ", e);

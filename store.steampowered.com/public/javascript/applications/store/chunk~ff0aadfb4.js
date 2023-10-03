@@ -586,7 +586,7 @@
         return (
           "overrideNavigation" in n &&
             (j = (t) => (
-              n.overrideNavigation(),
+              n.overrideNavigation(t),
               t.preventDefault(),
               t.stopPropagation(),
               !1
