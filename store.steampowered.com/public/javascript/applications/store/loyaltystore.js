@@ -3782,9 +3782,9 @@
             case "event":
               return new z(
                 e.eventname,
-                e.featuredAppID,
                 e.rgIncludedAppIDs,
                 e.rgPriorityAppIDs,
+                e.cAppClusters,
               );
             case "custom":
               return console.error("Cannot dynamically build page type"), null;
@@ -4024,8 +4024,9 @@
                 },
               ]),
             b = [];
-          (0, I.e7)(m.De.EREALM) || b.push(r(2598440), r(1716740)),
-            b.push(r(2459330));
+          (0, I.e7)(m.De.EREALM)
+            ? b.push(r(2459330))
+            : b.push(r(2603600), r(2598440), r(1716740));
           const A = [],
             x = [b, M];
           for (let e = 0; e < Math.max(x[0].length, x[1].length); e++)
@@ -4398,9 +4399,9 @@
       class z {
         constructor(e, t, r, n) {
           (this.m_strEventName = e),
-            (this.m_nFeaturedAppID = t),
-            (this.m_rgIncludedAppIDs = r),
-            (this.m_rgPriorityAppIDs = n);
+            (this.m_rgIncludedAppIDs = t),
+            (this.m_rgPriorityAppIDs = r),
+            (this.m_cAppClusters = n);
         }
         get params() {
           return { type: "event", eventname: this.m_strEventName };
@@ -4421,42 +4422,37 @@
             E.Ve.k_ECommunityItemClass_SteamDeckStartupMovie,
           ];
           let t = [];
-          if (this.m_nFeaturedAppID) {
-            const e = {
-              type: "clusterview",
-              view: {
-                type: O.CAROUSEL,
-                cluster: {
-                  id: R({
-                    eventname: this.m_strEventName,
-                    type: "event",
-                    featuredAppID: this.m_nFeaturedAppID,
-                  }),
-                  title: (0, s.Xx)("#RewardCluster_FeaturedItems"),
-                  subtitle: "",
-                  GetRewards: (e, t, r) =>
-                    L.Get().QueryRewardDefinitions(
-                      Y(
-                        {
-                          grouping: G.Popular,
-                          categoryTag: [this.m_strEventName],
-                          appid: [this.m_nFeaturedAppID],
-                        },
-                        r,
-                      ),
-                      e,
-                      t,
+          const r = {
+            type: "clusterview",
+            view: {
+              type: O.CAROUSEL,
+              linkedPage: null,
+              cluster: {
+                id: R({ eventname: this.m_strEventName, type: "event" }),
+                title: (0, s.Xx)("#RewardCluster_FeaturedItems"),
+                subtitle: "",
+                GetRewards: (e, t, r) =>
+                  L.Get().QueryRewardDefinitions(
+                    Y(
+                      {
+                        grouping: G.Popular,
+                        categoryTag: [this.m_strEventName],
+                      },
+                      r,
                     ),
-                },
+                    e,
+                    t,
+                  ),
               },
-            };
-            t.push(e);
-          }
-          const r = this.m_rgPriorityAppIDs.concat(this.m_rgIncludedAppIDs),
-            n = e.map((e) => ({
+            },
+          };
+          t.push(r);
+          const n = this.m_rgPriorityAppIDs.concat(this.m_rgIncludedAppIDs),
+            a = e.map((e) => ({
               type: "clusterview",
               view: {
                 type: O.CAROUSEL,
+                linkedPage: null,
                 cluster: {
                   id: R({
                     eventname: this.m_strEventName,
@@ -4464,36 +4460,29 @@
                     itemclass: e,
                     rgIncludedAppIDs: this.m_rgIncludedAppIDs,
                     rgPriorityAppIDs: this.m_rgPriorityAppIDs,
-                    featuredAppID: this.m_nFeaturedAppID,
                   }),
                   title: k(e, !0),
                   subtitle: "",
-                  GetRewards: (t, n, a) =>
+                  GetRewards: (t, r, a) =>
                     L.Get().QueryRewardDefinitions(
-                      Y(
-                        {
-                          grouping: G.Popular,
-                          itemclass: [e],
-                          appid: r,
-                          excludedAppIDs: [this.m_nFeaturedAppID],
-                        },
-                        a,
-                      ),
+                      Y({ grouping: G.Popular, itemclass: [e], appid: n }, a),
                       t,
-                      n,
+                      r,
                     ),
                 },
               },
             })),
-            a = r.map((e) => ({
-              type: "clusterview",
-              view: {
-                type: O.CAROUSEL,
-                linkedPage: { type: "app", appid: e },
-                cluster: new U(e, "", { grouping: G.Popular }),
-              },
-            }));
-          return t.concat(n, a);
+            i = n
+              .slice(0, this.m_cAppClusters)
+              .map((e) => ({
+                type: "clusterview",
+                view: {
+                  type: O.CAROUSEL,
+                  linkedPage: { type: "app", appid: e },
+                  cluster: new U(e, ""),
+                },
+              }));
+          return t.concat(a, i);
         }
       }
       class V {
@@ -13488,30 +13477,30 @@
           : null;
       }
       function lt(e) {
-        var t, r, i, o, l, c, d, p, h, g, f;
-        const { eventname: C } = e,
-          I = (0, Ze.useQuery)(
-            ["EventDetails", C],
+        var t, r, i, o, l, c, d, p, h, g, f, C, I;
+        const { eventname: y } = e,
+          [E, S] = a.useState(5),
+          v = (0, Ze.useQuery)(
+            ["EventDetails", y],
             () =>
               (0, n.mG)(this, void 0, void 0, function* () {
                 return (yield Xe().get(
                   s.De.STORE_BASE_URL +
                     "points/ajaxgeteventdetails?event_name=" +
-                    C,
+                    y,
                 )).data;
               }),
             { staleTime: 1 / 0 },
           ),
-          y = (0, m.SZ)(() => {
+          N = (0, m.SZ)(() => {
             var e, t, r, n;
             return _.Vb.Get().GetPageDescriptor({
               type: "event",
-              featuredAppID: 782330,
-              eventname: C,
+              eventname: y,
               rgIncludedAppIDs:
                 null ===
                   (t =
-                    null === (e = I.data) || void 0 === e
+                    null === (e = v.data) || void 0 === e
                       ? void 0
                       : e.details) || void 0 === t
                   ? void 0
@@ -13519,59 +13508,67 @@
               rgPriorityAppIDs:
                 null ===
                   (n =
-                    null === (r = I.data) || void 0 === r
+                    null === (r = v.data) || void 0 === r
                       ? void 0
                       : r.details) || void 0 === n
                   ? void 0
                   : n.priority_apps,
+              cAppClusters: E,
             });
           }),
-          E = (0, Ee.bJ)();
-        if (!I.data) return null;
-        if (!y || !I.isSuccess || I.data.success != We.s.k_EResultOK)
-          return console.error(`Failed to get event page for ${C}`), null;
-        let w = a.createElement(be._f, {
+          M = (0, Ee.bJ)();
+        if (!v.data) return null;
+        if (!N || !v.isSuccess || v.data.success != We.s.k_EResultOK)
+          return console.error(`Failed to get event page for ${y}`), null;
+        const b =
+          null ===
+            (r = null === (t = v.data) || void 0 === t ? void 0 : t.details) ||
+          void 0 === r
+            ? void 0
+            : r.included_apps.concat(
+                null ===
+                  (o =
+                    null === (i = v.data) || void 0 === i
+                      ? void 0
+                      : i.details) || void 0 === o
+                  ? void 0
+                  : o.priority_apps,
+              );
+        let A = a.createElement(be._f, {
           title:
             null !==
-              (i =
+              (d =
                 null ===
-                  (r =
-                    null === (t = I.data) || void 0 === t
+                  (c =
+                    null === (l = v.data) || void 0 === l
                       ? void 0
-                      : t.details) || void 0 === r
+                      : l.details) || void 0 === c
                   ? void 0
-                  : r.title) && void 0 !== i
-              ? i
-              : C,
+                  : c.title) && void 0 !== d
+              ? d
+              : y,
         });
         return (
           (null ===
-            (l = null === (o = I.data) || void 0 === o ? void 0 : o.details) ||
-          void 0 === l
+            (h = null === (p = v.data) || void 0 === p ? void 0 : p.details) ||
+          void 0 === h
             ? void 0
-            : l.strPageHeader) &&
-            (w = a.createElement("img", {
+            : h.strPageHeader) &&
+            (A = a.createElement("img", {
               className: u.EventPageHeaderImg,
-              src:
-                null ===
-                  (d =
-                    null === (c = I.data) || void 0 === c
-                      ? void 0
-                      : c.details) || void 0 === d
-                  ? void 0
-                  : d.strPageHeader,
+              src: v.data.details.strPageHeader,
             })),
           a.createElement(
             be.OC,
             {
               background:
                 null ===
-                  (h =
-                    null === (p = I.data) || void 0 === p
+                  (f =
+                    null === (g = v.data) || void 0 === g
                       ? void 0
-                      : p.details) || void 0 === h
+                      : g.details) || void 0 === f
                   ? void 0
-                  : h.strPageBackground,
+                  : f.strPageBackground,
             },
             a.createElement(it, {
               header: a.createElement(
@@ -13580,18 +13577,23 @@
                   href: (0, Ye.Hf)(
                     s.De.STORE_BASE_URL +
                       (null ===
-                        (f =
-                          null === (g = I.data) || void 0 === g
+                        (I =
+                          null === (C = v.data) || void 0 === C
                             ? void 0
-                            : g.details) || void 0 === f
+                            : C.details) || void 0 === I
                         ? void 0
-                        : f.url),
-                    E,
+                        : I.url),
+                    M,
                   ),
                 },
-                w,
+                A,
               ),
-              descriptor: y,
+              descriptor: N,
+            }),
+            a.createElement(w.U, {
+              trigger: "repeated",
+              onVisibilityChange: (e) => e && E < b.length && S(E + 10),
+              rootMargin: "0px 0px 100px 0px",
             }),
           )
         );
