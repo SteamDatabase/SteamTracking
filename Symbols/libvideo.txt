@@ -384,8 +384,11 @@
  T CpuId
  T CreateAudioFileDecoder
  T CreateAudioResampler
+ T CreateExportVideoContainer
  T CreateInterface
+ T CreateMPDDecoder
  T CreateRTMPStream
+ T CreateVideoEncoderX264
  T CreateVideoPlayer
  T CreateVideoRecordingSegmentWriter
  T CumulativeSumToAverageRow_C
@@ -399,6 +402,8 @@
  T DES_ncbc_encrypt
  T DeleteAudioFileDecoder
  T DeleteAudioResampler
+ T DeleteExportVideoContainer
+ T DeleteMPDDecoder
  T DeleteRTMPStream
  T DeleteVideoDecoder
  T DeleteVideoEncoder
@@ -1543,6 +1548,7 @@
  avio_alloc_context
  avio_close
  avio_closep
+ avio_open
  avio_open2
  avresample_alloc_context
  avresample_close

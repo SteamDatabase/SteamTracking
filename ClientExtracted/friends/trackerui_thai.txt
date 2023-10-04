@@ -130,7 +130,7 @@
 "Friends_FriendlyName"				"ชื่อ"
 "Friends_RecentlyUsedNames"			"ชื่อที่ใช้ล่าสุด:"
 
-"Friends_PlaySoundWhenFriendJoins"			"เปิดเสียงเตือนเมื่อเพื่อนเข้าร่วมเกม"
+"Friends_PlaySoundWhenFriendJoins"			"เปิดเสียงเตือนเมื่อเพื่อนเข้าเกม"
 "Friends_PlaySoundWhenFriendComesOnline"		"เปิดเสียงเตือนเมื่อเพื่อนออนไลน์"
 "Friends_PlaySoundWhenReceiveAMessage"		"เปิดเสียงเตือนเมื่อคุณได้รับข้อความ"
 "Friends_NotifyMeWhenUserComesOnline"			"แจ้งเมื่อผู้ใช้นี้ออนไลน์"
@@ -373,7 +373,7 @@
 "Friends_ShowTimeInChatLog"	"แสดงเวลาในบันทึกแช็ต"
 "Friends_AlwaysNewChatCheck" "เปิดหน้าต่างใหม่เสมอแทนการเปิดแบบแท็บ"
 "Friends_NotificationsAndSounds"		"การแจ้งและเสียง"
-"Friends_WhenFriendJoinsGame"			"เมื่อเพื่อนเข้าร่วมเกม"
+"Friends_WhenFriendJoinsGame"			"เมื่อเพื่อนเข้าเกม"
 "Friends_WhenFriendComesOnline"		"เมื่อเพื่อนออนไลน์"
 "Friends_WhenReceiveMessage"			"เมื่อได้รับข้อความ"
 "Friends_WhenGroupEventsOrAnnouncementsHappen"	"สำหรับกิจกรรมกลุ่มและประกาศกลุ่ม"

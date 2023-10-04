@@ -3842,7 +3842,7 @@ Buat Teman baru di Steam dengan mengirimkan hadiah ke kenalanmu."
 "Steam_MoreCloud"		"Lihat Semua File"
 "Steam_Rental_Title"	"Informasi Penyewaan"
 "Steam_Rental_Body_Not_Activated"	"Kamu punya waktu sampai %expiration% untuk mulai menonton %gamename%. Setelah mulai menonton, kamu harus selesai menonton dalam waktu 48 jam."
-"Steam_Rental_Body_Activated"	"Periode sewa untuk menonton %gamename% telah diaktifkan. Kamu punya waktu sampai %expiration% untuk menontonnya."
+"Steam_Rental_Body_Activated"	"Periode penyewaan untuk menonton %gamename% telah diaktifkan. Kamu punya waktu sampai %expiration% untuk menontonnya."
 
 "steam_community_files"		"Workshop"
 "steam_community_files_info"		"Buat, temukan, dan mainkan konten yang diciptakan oleh Komunitas Steam."

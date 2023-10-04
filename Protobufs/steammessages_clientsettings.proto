@@ -165,4 +165,5 @@ message CMsgClientSettings {
 	optional bool force_oobe = 20001 [(setting_store) = k_EClientSettingStore_Registry, (setting_name) = "HKEY_CURRENT_USER\\Software\\Valve\\Steam\\ForceOOBE"];
 	optional int32 override_browser_composer_mode = 20002 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional bool cef_remote_debugging_enabled = 20003 [(setting_store) = k_EClientSettingStore_CustomFunc];
+	optional bool gamescope_hdr_analysis_enabled = 21000 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Gamescope/HDRAnalysis"];
 }

@@ -1,4 +1,3 @@
-"use strict";
 class CNoiseGateProcessor extends AudioWorkletProcessor {
   static get parameterDescriptors() {
     return [

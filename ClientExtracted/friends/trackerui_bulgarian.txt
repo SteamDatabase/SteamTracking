@@ -322,7 +322,7 @@
 "Friends_Voice_ResumeStatusLocalHold"		"Задържан"
 "Friends_Voice_ResumeStatusRemoteHold"	"%friend% задържа този гласов чат"
 "Friends_Voice_AudioOptionsTitle"		"Аудио настройки"
-"Friends_Voice_Microphone_Volume"		"Сила на микрофона:"
+"Friends_Voice_Microphone_Volume"		"Сила на звука за микрофона:"
 "Friends_Voice_Speaker_Volume"		"Сила на получаване:"
 "Friends_Voice_BoostMicrophone"		"Подсилване на микрофона"
 "Friends_Voice_TestMicrophone"		"Тестване на микрофона"
@@ -455,7 +455,7 @@
 "Steam_VoiceMicGain"	"Подсилване на микрофона"
 "Steam_TestMicButton"		"Тестване на микрофона"
 "Steam_VoiceReceiveVolume"	"Сила на приемания звук"
-"Steam_VoiceMicVolume"	"Сила на микрофона"
+"Steam_VoiceMicVolume"	"Сила на звука за микрофона"
 
 "Friends_ViewGroupMembersLink"			"Всички потребители"
 "Friends_GroupCollapsedTooManyMembers"	"(прекалено много потребители за показване)"

@@ -1,8 +1,8 @@
 __TEXT
 __text
 __TEXT
-Pg
-Pg
+pg
+pg
 __stubs
 __TEXT
 __stub_helper
@@ -127,10 +127,10 @@ _convar_
 10ConCommand
 6ConVar
 NSt3__117bad_function_callE
-13CPlainAutoPtrI7CUtlMapIybi8CDefLessEE
+8CAutoPtrI7CUtlMapIybi8CDefLessEE
 7CUtlMapIybi8CDefLessE
 10CUtlRBTreeIN7CUtlMapIybi8CDefLessE6Node_tEiNS2_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE
-13CPlainAutoPtrI7CUtlMapI10CUtlStringbi8CDefLessEE
+8CAutoPtrI7CUtlMapI10CUtlStringbi8CDefLessEE
 7CUtlMapI10CUtlStringbi8CDefLessE
 10CUtlRBTreeIN7CUtlMapI10CUtlStringbi8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
 10CUtlVectorIN6ConVar22ConVarChangeCallback_tE10CUtlMemoryIS1_EE
@@ -1209,7 +1209,7 @@ Compat tool failed
 Install path removed
 Invalid backup path
 Invalid Passcode
-Self udpating
+Self updating
 Logged Off
 Connecting
 Connected
@@ -1326,7 +1326,7 @@ Ic
 =
 @
 =*.*
-T
+i
 @
 @
 0

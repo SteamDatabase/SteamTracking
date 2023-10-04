@@ -60,7 +60,7 @@
 "IME_General"			"Общи"
 "IME_BiasNames"			"Предпочитани имена"
 "IME_BiasSpeech"		"Предпочитание за реч"
-"IME_NoConversion"		"Без превод"
+"IME_NoConversion"		"Без преобразуване"
 
 "IME_0404"			"Chinese (Taiwan)"
 "IME_0804"			"Chinese (PRC)"

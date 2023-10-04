@@ -236,6 +236,10 @@ service MarketingMessages {
 		option (method_description) = "Get a single marketing message, cacheable.";
 	}
 
+	rpc GetDisplayMarketingMessageForUser (.CMarketingMessages_GetDisplayMarketingMessage_Request) returns (.CMarketingMessages_GetDisplayMarketingMessage_Response) {
+		option (method_description) = "Get a single marketing message, which can be customized per user.";
+	}
+
 	rpc GetDisplayMarketingMessageAdmin (.CMarketingMessages_GetDisplayMarketingMessage_Request) returns (.CMarketingMessages_GetDisplayMarketingMessage_Response) {
 		option (method_description) = "Get a single marketing message for Admin, not cacheable.";
 	}

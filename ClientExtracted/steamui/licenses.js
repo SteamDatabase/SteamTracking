@@ -1,10 +1,5 @@
 const Licenses = [
   {
-    name: "@steam/shared",
-    licenseText:
-      "(c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/. \n",
-  },
-  {
     name: "@steam/friendsui",
     licenseText:
       "(c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.\n",

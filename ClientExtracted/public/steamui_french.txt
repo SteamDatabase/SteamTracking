@@ -4680,7 +4680,7 @@ Ajoutez un nouveau contact Steam en envoyant un cadeau à une de vos connaissanc
 "Steam_Settings_Streaming_Disabled" "Streaming désactivé"
 "Steam_Settings_Streaming_Unsupported" "Non pris en charge"
 
-"Steam_Settings_Streaming_PIN_Title" "Créer un code de sécurité pour Steam Link"
+"Steam_Settings_Streaming_PIN_Title" "Créer un code PIN pour Steam Link"
 "Steam_Settings_Streaming_PIN_Text" "Créez un code PIN composé de chiffres à saisir sur Steam Link à chaque fois que vous voudrez transférer le flux depuis cet ordinateur :"
 
 "Steam_Settings_ShareIPNetworking_Label" "Réseau Steam"

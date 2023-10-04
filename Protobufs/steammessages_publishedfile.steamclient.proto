@@ -363,6 +363,7 @@ message CPublishedFile_Update_Request {
 	optional bool spoiler_tag = 10 [(description) = "(Optional) Whether this published file should have a spoiler tag attached to it."];
 	optional uint32 image_width = 15 [(description) = "(Optional) If this is an image file, you can specify the image width."];
 	optional uint32 image_height = 16 [(description) = "(Optional) If this is an image file, you can specify the image height."];
+	optional int32 language = 17 [(description) = "(Optional) If setting title & description, what language to set"];
 }
 
 message CPublishedFile_Update_Response {

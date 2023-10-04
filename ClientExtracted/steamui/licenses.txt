@@ -29,11 +29,6 @@ ISC
 (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
 
 
-@steam/shared
-Commercial
-(c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/. 
-
-
 axios
 MIT
 Copyright (c) 2014-present Matt Zabriskie

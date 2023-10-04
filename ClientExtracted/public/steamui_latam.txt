@@ -226,7 +226,7 @@
 "SteamUI_JoinDialog_SharedLicenseLocked_BorrowerText" "Este juego compartido no está disponible actualmente. Por favor, inténtalo de nuevo más tarde o compra este juego para tu propia biblioteca."
 
 "SteamUI_JoinDialog_KickSessions_Text" "Desconectando la otra sesión en la que se está jugando %dots%"
-"SteamUI_JoinDialog_KickSessions_Error" "Error al desconectar otra sesión que está jugando a %game%"
+"SteamUI_JoinDialog_KickSessions_Error" "Error al desconectar otra sesión que está jugando %game%"
 
 "SteamUI_JoinDialog_VerifyingFiles_Error" "Error al verificar los archivos firmados de %game%, se requiere la validación del contenido."
 "SteamUI_JoinDialog_CreateProcess_Error" "Error al iniciar el proceso de %game% :\n\n%detail%"
@@ -2850,7 +2850,7 @@ Crea uno enviando un regalo por email a alguien que conozcas."
 "Steam_GuestPassAccept_TextFailed$type=guestpass"	"El pase de invitado que intentabas aceptar ya no es válido. Puede que ya lo haya usado otra persona, que haya caducado o que el remitente lo haya anulado."
 
 "Steam_GuestPassAccept_HeadlineAlreadyRedeemed"	"Ya has activado este pase de invitado"
-"Steam_GuestPassAccept_TextAlreadyRedeemed"	"Si ha caducado el pase y quieres seguir jugando a %package%, podrías probar a comprarlo."
+"Steam_GuestPassAccept_TextAlreadyRedeemed"	"Si ha caducado el pase y quieres seguir jugando %package%, podrías probar a comprarlo."
 "Steam_GuestPassAccept_LinkTextAlreadyRedeemed"	"Haz clic aquí para visitar la tienda de Steam."
 "Steam_GuestPassAccept_LinkURLAlreadyRedeemed"	"steam://store"
 
@@ -2909,7 +2909,7 @@ Crea uno enviando un regalo por email a alguien que conozcas."
 
 "SteamUI_DurationControl_PlaytimeExceeded_Body_ThreeHours"	"Alcanzaste el límite de tiempo de conexión por hoy. Por favor, tómate un descanso e inténtalo mañana después de las 8 a. m."
 "SteamUI_DurationControl_PlaytimeExceeded_Body_FiveHours"	"Alcanzaste el límite de tiempo de conexión por hoy. Por favor, tómate un descanso e inténtalo mañana después de las 8 a. m."
-"SteamUI_DurationControl_PlaytimeExceeded_Body_Night"		"Los menores de 18 años no pueden jugar a este juego entre las 10 p. m. y las 8 a. m. del día siguiente. Toma un descanso."
+"SteamUI_DurationControl_PlaytimeExceeded_Body_Night"		"Los menores de 18 años no pueden jugar este juego entre las 10 p. m. y las 8 a. m. del día siguiente. Toma un descanso."
 "SteamUI_DurationControl_PlaytimeExceeded_Body_WaitingVerification"		"Tu cuenta está en proceso de verificación del nombre real. Por favor, inténtalo de nuevo más tarde."
 "SteamUI_DurationControl_PlaytimeExceeded_Body_Maintenance"		"Este juego se está sometiendo a actualizaciones técnicas y los menores no podrán jugar hasta que se completen. Disculpa las molestias y gracias por tu comprensión."
 
@@ -3782,8 +3782,8 @@ Haz nuevos amigos en Steam enviando un regalo por email a alguien que conozcas."
 "steam_details_lockedreason" "Todas las licencias están actualmente en uso. Por favor, vuelve más tarde."
 
 "steam_details_achievementsheader" "%achieved_achievements%/%available_achievements% logros"
-"steam_friendsplayingnow"	"Tienes %friendsplayingnow% amigos jugando a %gamename% en este momento."
-"steam_friendplayingnow"	"Tienes %friendsplayingnow% amigo jugando a %gamename% en este momento."
+"steam_friendsplayingnow"	"Tienes %friendsplayingnow% amigos jugando %gamename% en este momento."
+"steam_friendplayingnow"	"Tienes %friendsplayingnow% amigo jugando %gamename% en este momento."
 "steam_morefriendswhoplay"		"Tienes %friendswhoplay% amigos más que juegan a %gamename%"
 "steam_morefriendwhoplays"		"Tienes %friendswhoplay% amigo más que juega a %gamename%"
 "steam_friendswhoplay"		"Tienes %friendswhoplay% amigos que juegan a %gamename%"
@@ -4249,7 +4249,7 @@ Haz nuevos amigos en Steam enviando un regalo por email a alguien que conozcas."
 "Steam_DeviceAuth_Play_Button" "Jugar"
 "Steam_DeviceAuth_Purchase_Locked" "Comprar"
 
-"Steam_DeviceAuth_ChooseDialog_Title" "¿Quieres jugar a este juego?"
+"Steam_DeviceAuth_ChooseDialog_Title" "¿Quieres jugar este juego?"
 "Steam_DeviceAuth_ChooseDialog_Text" "Este juego pertenece al usuario de Steam llamado %owner%. ¿Quieres solicitar acceso a %owner% para acceder a su biblioteca en este dispositivo?"
 "Steam_DeviceAuth_ChooseDialog_Purchase" "Prefiero comprarlo..."
 "Steam_DeviceAuth_ChooseDialog_Request" "Solicitar acceso..."

@@ -1,0 +1,32 @@
+import "enums.proto";
+import "steammessages_base.proto";
+import "webuimessages_base.proto";
+
+option optimize_for = SPEED;
+option cc_generic_services = true;
+
+message CWebUISettigToggle {
+	optional bool is_availble = 1;
+	optional bool is_enabled = 2;
+}
+
+message CGamescopeState {
+	optional bool is_service_available = 1;
+}
+
+message CGamescope_GetState_Request {
+}
+
+message CGamescope_GetState_Response {
+	optional .CGamescopeState state = 1;
+}
+
+message CGamescope_StateChanged_Notification {
+}
+
+service Gamescope {
+	option (webui_service_execution_site) = k_EClientExecutionSiteSteamUI;
+
+	rpc GetState (.CGamescope_GetState_Request) returns (.CGamescope_GetState_Response);
+	rpc NotifyStateChanged (.CGamescope_StateChanged_Notification) returns (.WebUINoResponse);
+}

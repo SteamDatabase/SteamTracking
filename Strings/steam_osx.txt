@@ -4,15 +4,13 @@ __TEXT
 
 __text
 __TEXT
-0
-0
 __stubs
 __TEXT
 __stub_helper
 __TEXT
 __gcc_except_tab__TEXT
-0]4
-0]4
+pQ4
+pQ4
 __const
 __TEXT
 __objc_methname
@@ -120,61 +118,71 @@ h
 @kC
 X=
 )
-4
+B
+B
+B
+B
+B
+B
+B
+B
 0
-G
-G
-G
 *
 9
 *
 0
-G
 @
 @
-v(
-g(
-"9
 @
 @
 @
 @
 s
-9
-X3
 $
+9
+9
+9
+9
+9
+9
+9
+9
 Hi
 Hi
 Hi
+;3
 (
 *
-p)
-`0
 3
-V)
-;)
+U)
+,
+)
+)
+)
+!)
 
 %
+W8
 ;
+`2
 (
-\(
-h(
-2
+(
+8
+8
+8
+8
 
-2
 2
 0
 5
 (
 (
-6'
-g?
-<
+,@
 
-o1
+<
+m1
 0
 Ic
-P1
 0
 0
 AT=
@@ -185,8 +193,9 @@ AT=
 D
 @
 @
-1
-M2
+7
+7
+92
 @
 Hc
 Hc
@@ -218,8 +227,6 @@ IcE
 IcE
 @
 @
-X0
-6
 6
 0
 0
@@ -1576,10 +1583,10 @@ N11SteamStdLib12ICommandLineE
 20IUniformRandomStream
 14ConCommandBase
 6ConVar
-13CPlainAutoPtrI7CUtlMapIybi8CDefLessEE
+8CAutoPtrI7CUtlMapIybi8CDefLessEE
 7CUtlMapIybi8CDefLessE
 10CUtlRBTreeIN7CUtlMapIybi8CDefLessE6Node_tEiNS2_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE
-13CPlainAutoPtrI7CUtlMapI10CUtlStringbi8CDefLessEE
+8CAutoPtrI7CUtlMapI10CUtlStringbi8CDefLessEE
 7CUtlMapI10CUtlStringbi8CDefLessE
 10CUtlRBTreeIN7CUtlMapI10CUtlStringbi8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
 10CUtlVectorIN6ConVar22ConVarChangeCallback_tE10CUtlMemoryIS1_EE
@@ -2382,7 +2389,7 @@ TempAppCmdLine
 m_nPipeData >= 0
 ReLaunchCmdLine
 ClientLauncherType
-Startup - updater built Sep 25 2023 13:23:51
+Startup - updater built Oct  3 2023 14:02:56
 Startup - Steam Client launched with: %s
 Shutdown
 no hosts found
@@ -2673,8 +2680,8 @@ m_iRefs >= 0 && m_iRefs < 0x0ffffff
 #SteamBootstrapper_UpdatingSteam
 Updating Steam...
 Tahoma
-Sep 25 2023
-13:23:52
+Oct  3 2023
+14:02:57
 crashhandler004
 steam
 Steam Executable Crash
@@ -2771,7 +2778,7 @@ China
 %s/%s%s
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamexe/updateui.h
 ThreadInMainThread()
-13:23:50
+14:02:55
 [%3d%%] %s
 [----] %s
 [%3d%%] !!! Fatal Error: %s
@@ -10894,7 +10901,7 @@ steamwebhelper
 Steam Helper
 cefwebhelper
 1.0
-13:21:39
+14:00:06
 Jan
 Feb
 Mar
@@ -11618,6 +11625,7 @@ Content-Disposition: form-data; name="%s"; filename="%s"
 Content-Type: %s
 --%s--
 application/x-www-form-urlencoded
+CHTTPClientRequest::FinalizeRequest
 text/html,*/*;q=0.9
 identity,*;q=0
 gzip,identity,*;q=0
@@ -11674,6 +11682,7 @@ initial wait
 Submiting threaded work item for HTTP request to %s
 MoveConnnectionFromWaitingToInUse called but connection not found in waiting or in-use tree
 MoveConnnectionFromWaitingToInUse called but no matching entry for connection in m_MapHostsToPersistentConnections
+CHTTPClient::SendRequestForHandle
 HTTPClient shutting down - DispatchRequest - %p finished (%s) successfull (%s)
 HTTPClient address Invalid! DispatchRequest - %p finished (%s) successfull (%s)
 Delaying request for http%s://%s%s, http request cache too busy
@@ -11764,6 +11773,7 @@ Aborting stale client HTTP connection (%p) due to network timeout: %s - %X
 Can't AbortConnection as it deletes inside a HTTP2 callback from nghttp2, doing async - but fix caller
 AbortConnection - (%p) Aborting client HTTP connection
 CHTTPClientConnection::UpdateAbortStaleConnectionTimeout
+CHTTPClientConnection::BAsyncSendRequest
 !m_bAborted
 (%p) Sending request for http%s://%s%s - Stale Timeout %u
 m_eConnectionState == k_EHTTPClientConnectionState_CONNECTING
@@ -11785,6 +11795,7 @@ m_vecRequestsToSend.Count()
 %s:443
 CONNECT %s HTTP/1.1Host: %s
 (%p) Aborting HTTP request because BAsyncSend() failed (AsyncSendCurrentRequest)
+CHTTPClientConnection::AsyncSendPendingRequests
 m_eConnectionState == k_EHTTPClientConnectionState_SENDINGREQUEST || m_eConnectionState == k_EHTTPClientConnectionState_HTTP2SESSIONACTIVE
 m_vecRequestsToSend.Count() == 1
 (%p) Beginning HTTPS handshake to %s with connection %p
@@ -11802,6 +11813,8 @@ Aborting HTTP request because !bSent
 (%p) Aborting HTTP connection and all requests on it due to lack of SSL certificate verification
 HTTP Connection (%p) Dispatching pending request (%p) as failed due to failure sending
 (%p) Fatal HTTP2 error in nghttp2_session_send during initial request submit (%s)
+CHTTPClientConnection::BAsyncSendHeaders
+CHTTPClientConnection::BAsyncSendPartialBody
 m_eConnectionState == k_EHTTPClientConnectionState_SENDINGREQUEST_BODY
 pRequest->GetReqBodyBytesSent() == pRequest->GetReqBodyBytesTotal()
 pBodyBuffer->TellPut() == (int)pRequest->GetReqBodyBytesTotal()
@@ -11877,6 +11890,7 @@ Proxy-Connection
 m_mapRequestsAwaitingCompletion.Count() == 0
 Aborting HTTP request because we received over 2M in response without finding end of headers
 Aborting HTTP request because we received over 256M in response without finding end of body
+CHTTPClientConnection::InitializeSSLConnection
 !m_pSSLConnection
 session == m_pHTTP2Session->m_NGHTTP2Session
 Got GOAWAY frame with last stream processed %d for stream %d
@@ -12611,8 +12625,6 @@ m_vecMetrics
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/metrics/metrics.cpp
 CMetricsPayload::RecordMetric
 m_pMetricsPayload
-value.BIsDimension()
-value.BIsMeasurement()
 Not accumulating differing metrics types: %d and %d
 m_pstrValue
 totaltime
@@ -13309,6 +13321,7 @@ m_WorkThreads.Count() == 0 && m_cThreadsRunning == (uint32) 0
 CWorkThreadPool can't support item auto resubmission when ensuring output ordering
 Failed to create first worker thread in AddWorkItem()
 CWorkThreadPool - Signal Thread Event
+CWorkThreadPool - Check SetEvent
 CWorkThreadPool - SetEvent()
 pWorkThread != NULL
 CWorkThread -- GetNextWorkItemToProcess
@@ -13336,64 +13349,72 @@ n <= (size_t)INT_MAX
 file_ofs == pFile->GetBytesWritten()
 
 
-$%:
--%:
 0
-4
+B
+B
+B
+B
+B
+B
+B
+B
 0
-G
-G
-G
 *
 9
 *
 0
-G
 @
 @
-v(
-g(
-"9
 @
 @
 @
 @
 s
-9
-X3
 $
+9
+9
+9
+9
+9
+9
+9
+9
 Hi
 Hi
 Hi
+;3
 (
 *
-p)
-`0
 3
-V)
-;)
+U)
+,
+)
+)
+)
+!)
 
 %
+W8
 ;
+`2
 (
-\(
-h(
-2
+(
+8
+8
+8
+8
 
-2
 2
 0
 5
 (
 (
-6'
-g?
-<
+,@
 
-o1
+<
+m1
 0
 Ic
-P1
 0
 0
 AT=
@@ -13404,8 +13425,9 @@ AT=
 D
 @
 @
-1
-M2
+7
+7
+92
 @
 Hc
 Hc
@@ -13437,64 +13459,57 @@ IcE
 IcE
 @
 @
-X0
-6
 6
 0
 0
 V
+p/
 =
 /
 /
-/
-/
-/
-/
-/
-/
 =
-$.
+6.
+.
+.
+.
 .
 .
 .
 .
 4
 4
-4
-4
-v3
-D-
--
--
+]-
 !
 @
-y$
-7,
+:$
+,
+,
+,
+,
 2
 2
 @
+6
+6
+6
 &
-m>
-c>
+#6
+6
 1
 +
-y0
-*
-*
-*
-*
-90
-})
-7)
+1
+B/
+k/
 )
 )
 )
-)
-)
+*/
+(1
 @
 M9e
 @
 @
+(
 (
 ?
 ?
@@ -13518,16 +13533,12 @@ AESNI-CBC+SHA256 stitch for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
 AES for Intel AES-NI, CRYPTOGAMS by <appro@openssl.org>
 @
+-
 %
-1
-1
 1
 `
 `
 @
-,
-/(
-1
 j
 j
 Pj
@@ -13537,9 +13548,8 @@ j
 0
 IcU
 E;e
+,
 M)u
-0
-0
 =
 =
 @
@@ -13840,7 +13850,6 @@ ChaCha20 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 #
 #
 #
-#
 (
 =
 @
@@ -13857,17 +13866,18 @@ j
 j
 j
 j
+1$
 
 '
-D+
+'
+'
+T+
 t$I;M
-v&
-p&
 e
 W
 ,7~5d
-#A/
-#$/
+#Q/
+#4/
 H
 0
 
@@ -13880,12 +13890,8 @@ H
 
 
 
-[
 Hc
-%
-%
-%
-L95 }'
+
 AES-NI GCM module for x86_64, CRYPTOGAMS by <appro@openssl.org>
 %
 @
@@ -13900,6 +13906,15 @@ AES-NI GCM module for x86_64, CRYPTOGAMS by <appro@openssl.org>
 Poly1305 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 0
 0
+&
+&
+&
+&
+&
+&
+&
+&
+&
 N
 N
 N
@@ -13907,10 +13922,9 @@ rc4(8x,int)
 rc4(8x,char)
 rc4(16x,int)
 RC4 for x86_64, CRYPTOGAMS by <appro@openssl.org>
-:!
+J!
 j
 j
-!
 $
 $
 
@@ -14148,15 +14162,15 @@ H=
 =*.*
 @
 @
-{
+S
+@
+@
+@
+@
 
 @
 @
-@
-@
-@
-@
-K
+
 0
 0
 0
@@ -14179,10 +14193,8 @@ H=
 &
 E
 0
-s
 Hi
 E
--
 0
 0
 0
@@ -14203,27 +14215,14 @@ j
 @
 0
 0
-
-
 Hc
-o
 0
-
-
-
-
-p
 @
 @
-a
-a
-a
-<
+P
 &
 %
-F
 @
-i
 =h2
 P
 P
@@ -14233,6 +14232,7 @@ P
 @
 ?
 ?
+
 ?
 @
 @

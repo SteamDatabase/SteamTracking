@@ -842,6 +842,10 @@
 "SteamUI_Selection_Ukrainian"			"Українська"
 "SteamUI_Selection_Latam_Spanish"	"Español-Latinoamérica (іспанська — Латинська Америка)"
 "SteamUI_Selection_Vietnamese"		"Tiếng Việt (в’єтнамська)"
+"SteamUI_Selection_Indonesian"		"Bahasa Indonesia (індонезійська)"
+
+
+
 "SteamUI_Modem_33_6k"		"Модем — 33,6 кбіт/с"
 "SteamUI_ISDN_112k"		"ISDN — 112 кбіт/с"
 "SteamUI_T1"			"T1 > 1 Мбіт/с"
@@ -4835,10 +4839,12 @@
 "Steam_DualSense_FirmwareUpdate_DisableNotification"	"Більше не показувати"
 
 "RescueDialog_Title" "Steamwebhelper не відповідає"
+"RescueDialog_Explanation" "steamwebhelper, необхідний компонент Steam, не відповідає. Інтерфейс Steam не працюватиме. Клацніть <a href=steam://openurl_external/https://help.steampowered.com/faqs/view/6C3E-9504-CC20-AF49>тут</a> для отримання докладнішої інформації."
 "RescueDialog_RadioHeader" "Спробуймо вирішити цю проблему:"
 "RescueDialog_RestartSteam" "Перезапустити Steam"
 "RescueDialog_RestartSteam_NoGPU" "Перезапустити Steam із вимкненим апаратним прискоренням"
 "RescueDialog_RestartSteam_NoSandbox" "Перезапустити Steam із вимкненим ізольованим програмним середовищем браузера"
+"RescueDialog_RestartSteamWebHelper" "Перезапустити steamwebhelper"
 "RescueDialog_ExitSteam" "Вийти зі Steam"
 
 "DownloadRegion_default"				 "Невідомо"

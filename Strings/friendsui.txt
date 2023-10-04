@@ -4,6 +4,8 @@ __TEXT
 %
 __text
 __TEXT
+@d
+@d
 __stubs
 __TEXT
 __stub_helper
@@ -11,10 +13,10 @@ __TEXT
 __cstring
 __TEXT
 __gcc_except_tab__TEXT
-l/!
-l/!
 __const
 __TEXT
+`n"
+`n"
 __objc_methname
 __TEXT
 __unwind_info
@@ -39,15 +41,15 @@ __const
 __DATA
 __cfstring
 __DATA
-PL-
-PL-
 __objc_imageinfo__DATA
+N-
+N-
 __objc_selrefs
 __DATA
 __objc_classrefs__DATA
 __data
 __DATA
-M
+@M
 __thread_vars
 __DATA
 0
@@ -60,6 +62,7 @@ __bss
 __DATA
 __common
 __DATA
+0@
 H
 __LINKEDIT
 @.
@@ -67,10 +70,7 @@ __LINKEDIT
 8
 @loader_path/friendsui.dylib
 "
-
 0#
-XY.
-p}.
 (%
 P
 
@@ -103,8 +103,8 @@ h
 8
 /usr/lib/libobjc.A.dylib
 &
-pD
 )
+S.
 22CJSCallbackFunc_HTMLJS
 15CJSCallbackFunc
 11CRefCountedI20CRefCountServiceBaseILb1E6CRefMTEE
@@ -176,6 +176,7 @@ z
 (
 (
 0
+(
 35CClientNotificationCloudSyncFailure
 36CClientNotificationCloudSyncConflict
 29CClientNotificationScreenshot
@@ -211,6 +212,7 @@ z
 41CClientNotificationRemoteClientConnection
 42CClientNotificationRemoteClientStartStream
 44CClientNotificationStreamingClientConnection
+34CClientNotificationPlaytimeWarning
 (
 $
 (
@@ -655,6 +657,7 @@ N24CSteamParentalController38CCallback_OnParentalLockChangeCompleteE
 9CCallbackI24CSteamParentalController35ParentalLockChangeAttemptComplete_tLb0EE
 N24CSteamParentalController35CCallback_OnParentalWebTokenChangedE
 9CCallbackI24CSteamParentalController25ParentalWebTokenChanged_tLb0EE
+N24CSteamParentalController43CCallbackInternal_OnParentalPlaytimeWarningE
 20CJSMethodCallHandlerI24CSteamParentalControllerJ9CSmartPtrI15CJSCallbackFuncEEE
 20CJSMethodCallHandlerI24CSteamParentalControllerJPKcb9CSmartPtrI18CJSCallbackPromiseEEE
 20CJSMethodCallHandlerI24CSteamParentalControllerJEE
@@ -1758,10 +1761,10 @@ N4vgui8URLLabelE
 10CUtlVectorIPN4vgui10ToolWindowE10CUtlMemoryIS2_EE
 _14ConCommandBase
 6ConVar
-13CPlainAutoPtrI7CUtlMapIybi8CDefLessEE
+8CAutoPtrI7CUtlMapIybi8CDefLessEE
 7CUtlMapIybi8CDefLessE
 10CUtlRBTreeIN7CUtlMapIybi8CDefLessE6Node_tEiNS2_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE
-13CPlainAutoPtrI7CUtlMapI10CUtlStringbi8CDefLessEE
+8CAutoPtrI7CUtlMapI10CUtlStringbi8CDefLessEE
 7CUtlMapI10CUtlStringbi8CDefLessE
 10CUtlRBTreeIN7CUtlMapI10CUtlStringbi8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
 10CUtlVectorIN6ConVar22ConVarChangeCallback_tE10CUtlMemoryIS1_EE
@@ -2518,6 +2521,7 @@ m_vecUnlockPromise
 CSteamParentalController::OnParentalLockChangeBegin
 CSteamParentalController::OnParentalLockChangeComplete
 CSteamParentalController::OnParentalWebTokenChanged
+CSteamParentalController::OnParentalPlaytimeWarning
 Parental.RegisterForParentalSettingsChanges
 Parental.UnlockParentalLock
 Parental.LockParentalLock
@@ -3483,6 +3487,8 @@ type() == TYPE_FIXED64
 google/protobuf/unknown_field_set.cc
 CHECK failed: !fields_.empty():
 CHECK failed: (TYPE_LENGTH_DELIMITED) == (type()):
+CHECK failed: *ptr:
+CHECK failed: (overrun) <= (kSlopBytes):
 Can't happen
 google/protobuf/wire_format.cc
 CHECK failed: descriptor:
@@ -5302,32 +5308,33 @@ steamIDChat.GetEAccountType() == k_EAccountTypeChat
 k_EChatInstanceFlagClan & steamIDChat.GetUnAccountInstance()
 0
 0
-%
+-
+-
 $
-f
+$
 
 
 @
 @
 
 
+#
 x
-
-
+~
+#
 "
 @
-=!
->!
+"
+*
 x
+M!
+N!
 p
 0
 p
 0
 p
 0
-!
-!
-!
 p
 0
 p
@@ -5386,9 +5393,9 @@ V
 =
 =
 !
+"
 @
 &
-!
 @
 M9e
 @
@@ -5465,6 +5472,8 @@ B
 
 d
 A+M
+S
+,
 j
 j
 j
@@ -5507,13 +5516,12 @@ d
 &
 &
 d
-
 0
 A+4$A+u
-
 =
 =
 @
+<
 j
 j
 j
@@ -5692,7 +5700,6 @@ d
 @
 @
 0
-)
 @
 @
 @
@@ -5708,5 +5715,6 @@ d
 0
 &
 Hc
+=
 E
 p

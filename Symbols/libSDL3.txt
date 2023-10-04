@@ -452,6 +452,7 @@
  T SDL_GetAudioStreamDevice
  T SDL_GetAudioStreamFormat
  T SDL_GetAudioStreamFrequencyRatio
+ T SDL_GetAudioStreamQueued
  T SDL_GetBasePath
  T SDL_GetCPUCacheLineSize
  T SDL_GetCPUCount

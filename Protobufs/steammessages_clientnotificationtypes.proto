@@ -47,6 +47,7 @@ enum EClientNotificationType {
 	k_EClientNotificationType_RemoteClientStartStream = 42;
 	k_EClientNotificationType_StreamingClientConnection = 43;
 	k_EClientNotificationType_FamilyInvite = 44;
+	k_EClientNotificationType_PlaytimeWarning = 45;
 }
 
 enum ESystemUpdateNotificationType {
@@ -228,4 +229,9 @@ message CClientNotificationStreamingClientConnection {
 	optional string hostname = 1;
 	optional string machine = 2;
 	optional bool connected = 3;
+}
+
+message CClientNotificationPlaytimeWarning {
+	optional string type = 1;
+	optional uint32 playtime_remaining = 2;
 }

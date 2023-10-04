@@ -551,7 +551,7 @@
 "controller_android"								"Kontroler Android"
 "controller_switch_pro"								"Kontroler Nintendo Switch Pro"
 "controller_switch_joycon_pair"						"JoyCon Nintendo Switch"
-"controller_mobile_touch"							"Kontroler Sentuh Steam Link"
+"controller_mobile_touch"							"Kontroler Steam Link Touch"
 
 "Friends_ScreenshotNotification_Info" "Screenshot disimpan"
 "Friends_ScreenshotNotification_Info_Multiple" "%screenshots% screenshot disimpan"

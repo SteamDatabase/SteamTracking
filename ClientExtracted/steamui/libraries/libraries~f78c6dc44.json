@@ -425,7 +425,7 @@
     "GroupSettings_Invite_NeverExpires": "Nikdy",
     "GroupSettings_Invite_NoInvites": "Nebyly nalezeny žádné pozvánky",
     "GroupSettings_Invite_Code": "Vytvořené pozvánky",
-    "GroupSettings_Invite_Expiration": "Vypršení platnosti",
+    "GroupSettings_Invite_Expiration": "Konec platnosti",
     "GroupSettings_Invite_Delete": "Smazat",
     "GroupSettings_Invite_Loading": "Načítání...",
     "GroupSettings_Invite_Failed": "Nepodařilo se načíst seznam pozvánek",

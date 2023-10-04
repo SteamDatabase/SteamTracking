@@ -1230,7 +1230,7 @@
     "changeLog_UpdateItem41": "Bu yeni izinlere sahip olan üyeler yalnızca sahip oldukları rollerin hiyerarşik olarak altındaki rolleri düzenleyebilir ve atayabilir.",
     "changeLog_UpdateItem42": "Artık varsayılan grup sohbeti bildirim ayarını Arkadaş Ayarları'ndan değiştirebilirsiniz. Katıldığınız tüm grup sohbetleri, grup sohbeti tarafından değiştirilmediği sürece bu değeri kullanır.",
     "changeLog_UpdateItem43": "Oyun kapatıldığında grup sohbeti pencerelerinin boş görünmesi düzeltildi.",
-    "changeLog_UpdateItem44": "Arkadaşların üzerinde imleci tutarken küçük profillerin yavaş yüklenmesi giderildi.",
+    "changeLog_UpdateItem44": "Arkadaşların üzerinde imleci tutarken mini profillerin yavaş yüklenmesi giderildi.",
     "changeLog_UpdateItem45": "Grup sohbetlerinin, özellikle de 1000'den fazla üyesi olanların, oluşturulma performansı iyileştirildi.",
     "changeLog_UpdateItem46": "Arkadaş ve grup sohbeti mesajı geçmişlerinin oluşturulma performansı iyileştirildi.",
     "changeLog_UpdateItem47": "\"Arkadaş Ayarları\"na giderek artık sohbetlerin yazı boyutlarını küçük, varsayılan ve büyük olarak seçebilirsiniz.",

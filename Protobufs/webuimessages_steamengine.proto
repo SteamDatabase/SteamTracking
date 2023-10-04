@@ -23,10 +23,19 @@ message CSteamEngine_TextFilterDictionaryChanged_Notification {
 	required string type = 2;
 }
 
+message CSteamEngine_GetGameIDForPID_Request {
+	optional uint32 pid = 1;
+}
+
+message CSteamEngine_GetGameIDForPID_Response {
+	optional uint64 gameid = 1;
+}
+
 service SteamEngine {
 	option (webui_service_execution_site) = k_EClientExecutionSiteClientdll;
 
 	rpc UpdateTextFilterDictionary (.CSteamEngine_UpdateTextFilterDictionary_Notification) returns (.WebUINoResponse);
 	rpc GetTextFilterDictionary (.CSteamEngine_GetTextFilterDictionary_Request) returns (.CSteamEngine_GetTextFilterDictionary_Response);
 	rpc NotifyTextFilterDictionaryChanged (.CSteamEngine_TextFilterDictionaryChanged_Notification) returns (.WebUINoResponse);
+	rpc GetGameIDForPID (.CSteamEngine_GetGameIDForPID_Request) returns (.CSteamEngine_GetGameIDForPID_Response);
 }

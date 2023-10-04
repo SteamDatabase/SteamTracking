@@ -7453,10 +7453,10 @@ N4vgui9WrapPanelE
 _
 14ConCommandBase
 6ConVar
-13CPlainAutoPtrI7CUtlMapIybi8CDefLessEE
+8CAutoPtrI7CUtlMapIybi8CDefLessEE
 7CUtlMapIybi8CDefLessE
 10CUtlRBTreeIN7CUtlMapIybi8CDefLessE6Node_tEiNS2_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE
-13CPlainAutoPtrI7CUtlMapI10CUtlStringbi8CDefLessEE
+8CAutoPtrI7CUtlMapI10CUtlStringbi8CDefLessEE
 7CUtlMapI10CUtlStringbi8CDefLessE
 10CUtlRBTreeIN7CUtlMapI10CUtlStringbi8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
 10CUtlVectorIN6ConVar22ConVarChangeCallback_tE10CUtlMemoryIS1_EE
@@ -7763,8 +7763,8 @@ Steam pid that launched us
 VGUI_Application_001
 OK
 Cancel
-Sep 25 2023
-13:23:57
+Oct  3 2023
+14:03:02
 crashhandler004
 gameoverlayui
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/overlay/gameoverlayui/main.cpp
@@ -10778,11 +10778,8 @@ Dec
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 0
-F+
-F+
-F+
+>+
 0
-U+
 
 
 
@@ -10804,7 +10801,6 @@ j
 j
 j
 !
-^*
 j
 j
 j
@@ -10862,8 +10858,8 @@ V
 =
 !
 @
-U$
 &
+{"
 @
 M9e
 @

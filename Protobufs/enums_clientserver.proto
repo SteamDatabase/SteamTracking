@@ -119,8 +119,6 @@ enum EMsg {
 	k_EMsgAMCancelLicense = 511;
 	k_EMsgAMInitPurchase = 512;
 	k_EMsgAMPurchaseResponse = 513;
-	k_EMsgAMGetFinalPrice = 514;
-	k_EMsgAMGetFinalPriceResponse = 515;
 	k_EMsgAMGetLegacyGameKey = 516;
 	k_EMsgAMGetLegacyGameKeyResponse = 517;
 	k_EMsgAMFindHungTransactions = 518;

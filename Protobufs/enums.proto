@@ -62,6 +62,7 @@ enum EContentCheckProvider {
 	k_EContentCheckProvider_Google = 1;
 	k_EContentCheckProvider_Amazon = 2;
 	k_EContentCheckProvider_Local = 3;
+	k_EContentCheckProvider_GoogleVertexAI = 4;
 }
 
 enum EProfileCustomizationType {
