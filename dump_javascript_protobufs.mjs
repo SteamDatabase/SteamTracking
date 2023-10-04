@@ -271,11 +271,9 @@ message NotImplemented {
 
 	console.log("Found", mergedEnums.size, "enums");
 
-	/*
-	const stream = createWriteStream("Structs/enums.steamd", { flags: "w", encoding: "utf8" });
+	const stream = createWriteStream("Structs/webui_enums.steamd", { flags: "w", encoding: "utf8" });
 	OutputEnums(mergedEnums, stream);
 	stream.end();
-	*/
 }
 
 function GetMatchingDependencyCount(services, dependants) {
@@ -1578,6 +1576,7 @@ function ParseEnum(node) {
 		return null;
 	}
 
+	/*
 	const reSubstrToReplace = new RegExp(`^${commonName}`);
 	allEnumKeys.forEach((keyName) => {
 		let newKeyName = keyName.replace(reSubstrToReplace, "");
@@ -1587,6 +1586,7 @@ function ParseEnum(node) {
 		enumValues.set(newKeyName, enumValues.get(keyName));
 		enumValues.delete(keyName);
 	});
+	*/
 
 	return {
 		name: enumName,
