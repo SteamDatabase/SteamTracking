@@ -30,14 +30,6 @@ enum ATTRIBCAP
 	ATTRIBCAP_CANT_READ_GUIDEBUTTON = 134217728;
 }
 
-enum AudioPlayback
-{
-	AudioPlayback_Undefined = 0;
-	AudioPlayback_Playing = 1;
-	AudioPlayback_Paused = 2;
-	AudioPlayback_Idle = 3;
-}
-
 enum BluetoothDeviceType
 {
 	k_BluetoothDeviceType_Invalid = 0;
@@ -287,6 +279,13 @@ enum EAppControllerSupportLevel
 	k_EAppControllerSupportLevelNone = 0;
 	k_EAppControllerSupportLevelPartial = 1;
 	k_EAppControllerSupportLevelFull = 2;
+}
+
+enum EAppDetailsStatusPanelType
+{
+	k_EAppDetailsStatusPanelType_Everything = 0;
+	k_EAppDetailsStatusPanelType_NoDownloadBar = 1;
+	k_EAppDetailsStatusPanelType_OnlyDownloadBar = 2;
 }
 
 enum EAppError
@@ -662,8 +661,7 @@ enum EBrowserType
 	EBrowserType_OffScreen_GameOverlay = 9;
 	EBrowserType_OffScreen_GameOverlay_SharedTexture = 10;
 	EBrowserType_Offscreen_FriendsUI = 11;
-	EBrowserType_Offscreen_SteamUI = 12;
-	EBrowserType_OpenVROverlay_Subview = 13;
+	EBrowserType_MAX = 12;
 }
 
 enum EButton
@@ -1332,7 +1330,7 @@ enum EControllerTypeFlags
 	k_EControllerTypeFlags_SwitchJoyconPair = 8192;
 	k_EControllerTypeFlags_MobileTouchController = 16384;
 	k_EControllerTypeFlags_PS5EdgeController = 32768;
-	k_EControllerTypeFlags_AllControllers = 131071;
+	k_EControllerTypeFlags_AllControllers = undefined;
 	k_EControllerTypeFlags_AllSteamControllers = 7;
 	k_EControllerTypeFlags_AllPlaystationControllers = 32824;
 	k_EControllerTypeFlags_AllXBoxControllers = 448;
@@ -1342,9 +1340,9 @@ enum EControllerTypeFlags
 	k_EControllerTypeFlags_Gyro = 62007;
 	k_EControllerTypeFlags_Trackpad = 49207;
 	k_EControllerTypeFlags_CenterTrackpad = 49200;
-	k_EControllerTypeFlags_RightJoystick = 126972;
-	k_EControllerTypeFlags_DPad = 126972;
-	k_EControllerTypeFlags_Triggers = 126975;
+	k_EControllerTypeFlags_RightJoystick = undefined;
+	k_EControllerTypeFlags_DPad = undefined;
+	k_EControllerTypeFlags_Triggers = undefined;
 	k_EControllerTypeFlags_HapticSupport = 7;
 }
 
@@ -1688,62 +1686,62 @@ enum EHTTPProxyMode
 
 enum EInputMode
 {
-	k_EInputMode_None = 1;
-	k_EInputMode_Dpad = 2;
-	k_EInputMode_Buttons = 4;
-	k_EInputMode_FourButtons = 8;
-	k_EInputMode_AbsoluteMouse = 16;
-	k_EInputMode_JoystickMouse = 128;
-	k_EInputMode_JoystickCamera = 256;
-	k_EInputMode_ScrollWheel = 512;
-	k_EInputMode_Trigger = 1024;
-	k_EInputMode_TouchMenu = 2048;
-	k_EInputMode_MouseJoystick = 4096;
-	k_EInputMode_MouseRegion = 8192;
-	k_EInputMode_RadialMenu = 16384;
-	k_EInputMode_SingleButton = 32768;
-	k_EInputMode_Switches = 65536;
-	k_EInputMode_FlickStick = 131072;
-	k_EInputMode_2DScrollwheel = 262144;
-	k_EInputMode_Hotbar = 524288;
-	k_EInputMode_GyroToMouse = 4194304;
-	k_EInputMode_GyroToJoystick = 8388608;
-	k_EInputMode_All = 16777215;
+	k_EInputMode_None = undefined;
+	k_EInputMode_Dpad = undefined;
+	k_EInputMode_Buttons = undefined;
+	k_EInputMode_FourButtons = undefined;
+	k_EInputMode_AbsoluteMouse = undefined;
+	k_EInputMode_JoystickMouse = undefined;
+	k_EInputMode_JoystickCamera = undefined;
+	k_EInputMode_ScrollWheel = undefined;
+	k_EInputMode_Trigger = undefined;
+	k_EInputMode_TouchMenu = undefined;
+	k_EInputMode_MouseJoystick = undefined;
+	k_EInputMode_MouseRegion = undefined;
+	k_EInputMode_RadialMenu = undefined;
+	k_EInputMode_SingleButton = undefined;
+	k_EInputMode_Switches = undefined;
+	k_EInputMode_FlickStick = undefined;
+	k_EInputMode_2DScrollwheel = undefined;
+	k_EInputMode_Hotbar = undefined;
+	k_EInputMode_GyroToMouse = undefined;
+	k_EInputMode_GyroToJoystick = undefined;
+	k_EInputMode_All = undefined;
 }
 
 enum EInputSource
 {
-	k_EInputSource_None = 1;
-	k_EInputSource_ABXY = 16;
-	k_EInputSource_Dpad = 8192;
-	k_EInputSource_LeftBumper = 256;
-	k_EInputSource_RightBumper = 512;
-	k_EInputSource_Switch = 32;
-	k_EInputSource_LeftJoystick = 8;
-	k_EInputSource_RightJoystick = 4096;
-	k_EInputSource_LeftTrackpad = 2;
-	k_EInputSource_CenterTrackpad = 2048;
-	k_EInputSource_RightTrackpad = 4;
-	k_EInputSource_LeftGyro = 65536;
-	k_EInputSource_Gyro = 1024;
-	k_EInputSource_LeftTrigger = 64;
-	k_EInputSource_RightTrigger = 128;
-	k_EInputSource_Key = 16384;
-	k_EInputSource_Mouse = 32768;
-	k_EInputSource_CapJoystickRight = 131072;
-	k_EInputSource_CapJoystickLeft = 262144;
-	k_EInputSource_All = 524287;
-	k_EInputSource_Gyros = 66560;
-	k_EInputSource_Trackpads = 2054;
-	k_EInputSource_Joysticks = 397320;
-	k_EInputSource_Touch = 395270;
-	k_EInputSource_Triggers = 192;
+	k_EInputSource_None = undefined;
+	k_EInputSource_ABXY = undefined;
+	k_EInputSource_Dpad = undefined;
+	k_EInputSource_LeftBumper = undefined;
+	k_EInputSource_RightBumper = undefined;
+	k_EInputSource_Switch = undefined;
+	k_EInputSource_LeftJoystick = undefined;
+	k_EInputSource_RightJoystick = undefined;
+	k_EInputSource_LeftTrackpad = undefined;
+	k_EInputSource_CenterTrackpad = undefined;
+	k_EInputSource_RightTrackpad = undefined;
+	k_EInputSource_LeftGyro = undefined;
+	k_EInputSource_Gyro = undefined;
+	k_EInputSource_LeftTrigger = undefined;
+	k_EInputSource_RightTrigger = undefined;
+	k_EInputSource_Key = undefined;
+	k_EInputSource_Mouse = undefined;
+	k_EInputSource_CapJoystickRight = undefined;
+	k_EInputSource_CapJoystickLeft = undefined;
+	k_EInputSource_All = undefined;
+	k_EInputSource_Gyros = undefined;
+	k_EInputSource_Trackpads = undefined;
+	k_EInputSource_Joysticks = undefined;
+	k_EInputSource_Touch = undefined;
+	k_EInputSource_Triggers = undefined;
 	k_EInputSource_NonGyro = undefined;
 	k_EInputSource_NonTrackpad = undefined;
 	k_EInputSource_NonJoystick = undefined;
 	k_EInputSource_NonTouch = undefined;
-	k_EInputSource_Digital = 25392;
-	k_EInputSource_Analog = 466126;
+	k_EInputSource_Digital = undefined;
+	k_EInputSource_Analog = undefined;
 }
 
 enum EInstallMgrState
@@ -2970,6 +2968,13 @@ enum EPeerContentServerMode
 	EPeerContentServerMode_SameUser = 1;
 	EPeerContentServerMode_Friends = 2;
 	EPeerContentServerMode_AnyUser = 3;
+}
+
+enum EPerformanceOverlayOption
+{
+	k_EPerformanceOverlayOptionDisabled = 0;
+	k_EPerformanceOverlayOptionIcons = 1;
+	k_EPerformanceOverlayOptionDetails = 2;
 }
 
 enum EPersonaState
@@ -4607,6 +4612,7 @@ enum EUserBadge
 	k_EUserBadgeNextFestAutumn2022 = 62;
 	k_EUserBadgeSteamAwards2022Nominations = 63;
 	k_EUserBadgeReplay2022 = 64;
+	k_EUserBadgeSteamAwards2023Nominations = 65;
 }
 
 enum EUserConfigStoreNamespace
@@ -5193,6 +5199,27 @@ enum Store
 	k_StoreComingSoon = 3;
 	k_StoreEarlyAccess = 4;
 	k_StoreGeneralAvailability = 5;
+}
+
+enum SubSection_Community
+{
+	k_SubSection_CommunityAllContent = 1;
+	k_SubSection_CommunityScreenshots = 2;
+	k_SubSection_CommunityVideos = 3;
+	k_SubSection_CommunityArt = 4;
+	k_SubSection_CommunityNews = 5;
+	k_SubSection_CommunityWorkshop = 6;
+	k_SubSection_CommunityDiscussions = 7;
+	k_SubSection_CommunityAnnouncements = 8;
+	k_SubSection_CommunityWebGuides = 9;
+	k_SubSection_CommunityUserReviews = 10;
+	k_SubSection_CommunityHome = 11;
+	k_SubSection_CommunityAdmin = 12;
+	k_SubSection_CommunityBroadcasts = 13;
+	k_SubSection_CommunityAllNews = 14;
+	k_SubSection_CommunitySuggested = 15;
+	k_SubSection_CommunityUserReviews_PositiveOnly = 16;
+	k_SubSection_CommunityUserReviews_NegativeOnly = 17;
 }
 
 enum SystemAudioChannel
