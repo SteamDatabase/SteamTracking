@@ -2625,6 +2625,10 @@ body.recommendgame #review_create h1  {
 .review_recent_events.has_events, .review_recent_events.can_edit_app {
 	display: block;
 }
+.review_recent_events.csgo {
+	display: block;
+	padding: 10px;
+}
 
 .review_anomalous_events_icon
 {
@@ -2650,6 +2654,10 @@ body.recommendgame #review_create h1  {
 	color: #d3dade;
     font-size: 15px;
     line-height: 17px;
+}
+.review_recent_events.csgo .review_anomalous_events_title
+{
+	margin-left: 0px;
 }
 .review_anomalous_events_dialog .review_anomalous_events_title
 {
