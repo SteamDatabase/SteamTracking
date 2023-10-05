@@ -486,6 +486,7 @@ message CMsgSystemDisplay {
 	optional bool is_vrr_enabled = 15;
 	optional bool is_hdr_capable = 16;
 	optional bool is_hdr_enabled = 17;
+	repeated int32 compatibility_params = 18;
 }
 
 message CMsgSystemDisplayManagerState {

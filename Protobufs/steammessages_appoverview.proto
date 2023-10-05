@@ -167,6 +167,7 @@ message CAppOverview {
 	optional uint32 rt_last_time_locally_played = 65;
 	optional uint32 rt_purchased_time = 66;
 	optional string header_filename = 67;
+	optional uint32 local_cache_version = 68;
 }
 
 message CAppOverview_Change {

@@ -1,4 +1,4 @@
-var CLSTAMP = "8390819";
+var CLSTAMP = "8396535";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -1629,9 +1629,9 @@ var CLSTAMP = "8390819";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Oct 3 2023 : 16:23:18",
-                BUILD_TIME_UTC: "Oct 3 2023 : 23:23:18",
-                BUILD_RTIME_UTC: 1696375398,
+                BUILD_TIME_LOCAL: "Oct 5 2023 : 13:57:26",
+                BUILD_TIME_UTC: "Oct 5 2023 : 20:57:26",
+                BUILD_RTIME_UTC: 1696539446,
               }.MOBILE_BUILD)
             ) {
               window.addEventListener("beforeunload", (e) => {
@@ -12218,17 +12218,18 @@ var CLSTAMP = "8390819";
             FlattenedDropDownOptions: () => N,
             Footer: () => r.$_,
             Form: () => r.l0,
-            GamepadContent: () => rt,
+            GamepadContent: () => it,
             GamepadDialogPresentationContext: () => ge,
+            GamepadDiscreteValuesSliderField: () => et,
             GamepadDropDownControlButton: () => ke,
             GamepadDropDownField: () => _e,
             GamepadDropDownMenu: () => xe,
             GamepadInputField: () => ce,
-            GamepadPagedSettings: () => Ct,
+            GamepadPagedSettings: () => ut,
             GamepadSliderControl: () => je,
             GamepadSliderField: () => Xe,
-            GamepadToggleControl: () => et,
-            GamepadToggleField: () => tt,
+            GamepadToggleControl: () => tt,
+            GamepadToggleField: () => nt,
             HBar: () => r.tr,
             Header: () => r.h4,
             IPv4InputField: () => ye,
@@ -13914,13 +13915,13 @@ var CLSTAMP = "8390819";
             d.R.Provider,
             {
               value: {
-                PagedSettings: Ct,
-                Content: rt,
+                PagedSettings: ut,
+                Content: it,
                 DropDownControlButton: ke,
                 DropDownField: pe,
                 DropDownMenu: xe,
-                ToggleField: tt,
-                ToggleControl: et,
+                ToggleField: nt,
+                ToggleControl: tt,
                 InputElement: me,
                 SliderField: Xe,
                 strButtonClassName: ne().Button,
@@ -15427,7 +15428,86 @@ var CLSTAMP = "8390819";
             )
           );
         }
-        const et = o.forwardRef(function (e, t) {
+        function et(e) {
+          var t, n;
+          const {
+              rValues: r,
+              onChange: l,
+              onChangeComplete: a,
+              value: s,
+              renderValue: c,
+              showBookendLabels: C = !1,
+            } = e,
+            u = (0, i._T)(e, [
+              "rValues",
+              "onChange",
+              "onChangeComplete",
+              "value",
+              "renderValue",
+              "showBookendLabels",
+            ]),
+            [h, d] = o.useState(
+              (function (e, t) {
+                let n = e.findIndex((e) => e == t);
+                return (
+                  n < 0 &&
+                    (console.error(
+                      "Failed to find a corresponding index for initial GamepadDiscreteValuesSlider value",
+                    ),
+                    (n = 0)),
+                  n
+                );
+              })(r, s),
+            ),
+            m = o.useCallback(
+              (e, t) => {
+                d(e), l && l(r[e], t);
+              },
+              [r, l],
+            ),
+            p = o.useCallback(
+              (e, t) => {
+                a && a(r[e], t);
+              },
+              [r, a],
+            ),
+            g = o.useCallback(
+              (e, t) => (c ? c(r[e], t) : r[e].toString()),
+              [r, c],
+            ),
+            f = r.length - 1,
+            v = [
+              {
+                notchIndex: 0,
+                label:
+                  null === (t = r[0]) || void 0 === t ? void 0 : t.toString(),
+              },
+              {
+                notchIndex: 1,
+                label:
+                  null === (n = r[f]) || void 0 === n ? void 0 : n.toString(),
+              },
+            ];
+          return o.createElement(
+            Xe,
+            Object.assign(
+              {
+                onChange: m,
+                onChangeComplete: p,
+                min: 0,
+                max: f,
+                value: h,
+                step: 1,
+                notchCount: 2,
+                notchLabels: C ? v : null,
+                renderValue: g,
+                notchTicksVisible: !1,
+              },
+              u,
+            ),
+          );
+        }
+        const tt = o.forwardRef(function (e, t) {
           const { value: n, onChange: r, disabled: i, navRef: l } = e;
           return o.createElement(
             h.FocusableDiv,
@@ -15451,7 +15531,7 @@ var CLSTAMP = "8390819";
             o.createElement("div", { className: ne().ToggleSwitch }),
           );
         });
-        class tt extends r.iN {
+        class nt extends r.iN {
           OnToggleChange(e) {
             this.props.disabled || e === this.checked || this.Toggle();
           }
@@ -15480,7 +15560,7 @@ var CLSTAMP = "8390819";
                 },
                 n,
               ),
-              o.createElement(et, {
+              o.createElement(tt, {
                 onChange: this.OnToggleChange,
                 value: this.checked,
                 disabled: e,
@@ -15489,9 +15569,9 @@ var CLSTAMP = "8390819";
             );
           }
         }
-        (0, i.gn)([a.bind], tt.prototype, "OnToggleChange", null);
-        var nt = n(39043);
-        function rt(e) {
+        (0, i.gn)([a.bind], nt.prototype, "OnToggleChange", null);
+        var rt = n(39043);
+        function it(e) {
           const { children: t, bCenterVertically: n } = e,
             r = (0, i._T)(e, ["children", "bCenterVertically"]),
             l = (0, p.default)(
@@ -15500,7 +15580,7 @@ var CLSTAMP = "8390819";
               e.className,
               n && " _DialogCenterVertically",
             ),
-            { ref: a, navRef: s } = (0, nt.$1)();
+            { ref: a, navRef: s } = (0, rt.$1)();
           return o.createElement(
             u.Panel,
             Object.assign({}, r, { className: l, ref: a, navRef: s }),
@@ -15516,12 +15596,12 @@ var CLSTAMP = "8390819";
             ),
           );
         }
-        var it = n(51452),
-          ot = n(77323),
-          lt = n.n(ot);
-        const at = o.createContext(null);
-        function st(e) {
-          const t = o.useContext(at),
+        var ot = n(51452),
+          lt = n(77323),
+          at = n.n(lt);
+        const st = o.createContext(null);
+        function ct(e) {
+          const t = o.useContext(st),
             n = (0, re.useConfigContext)().IN_VR,
             { title: r, icon: l, active: a } = e,
             s = (0, i._T)(e, ["title", "icon", "active"]);
@@ -15538,14 +15618,14 @@ var CLSTAMP = "8390819";
               s,
             ),
             l &&
-              o.createElement("div", { className: lt().PageListItem_Icon }, l),
-            o.createElement("div", { className: lt().PageListItem_Title }, r),
+              o.createElement("div", { className: at().PageListItem_Icon }, l),
+            o.createElement("div", { className: at().PageListItem_Title }, r),
           );
         }
-        function ct(e) {
-          return o.createElement("div", { className: lt().Separator });
+        function Ct(e) {
+          return o.createElement("div", { className: at().Separator });
         }
-        const Ct = o.forwardRef(function (e, t) {
+        const ut = o.forwardRef(function (e, t) {
           const n = o.useRef(),
             [r, i] = o.useState(!0);
           o.useEffect(() => {
@@ -15558,33 +15638,33 @@ var CLSTAMP = "8390819";
           }, [e.page, e.bNoInitialLeftColumnFocus]);
           const l = Boolean(e.showTitle);
           return o.createElement(
-            at.Provider,
+            st.Provider,
             { value: n },
             o.createElement(
               q.Vh,
               Object.assign({}, e, {
-                stylesheet: lt(),
+                stylesheet: at(),
                 showTitle: l,
-                renderPageListItem: st,
-                renderPageListSeparator: ct,
-                renderPageAnimation: ut,
+                renderPageListItem: ct,
+                renderPageListSeparator: Ct,
+                renderPageAnimation: ht,
               }),
             ),
           );
         });
-        function ut(e) {
-          let t = it.sk.None;
+        function ht(e) {
+          let t = ot.sk.None;
           "up" == e.direction
-            ? (t = it.sk.Up)
-            : "down" == e.direction && (t = it.sk.Down);
-          let n = (0, it.mz)(lt(), t);
+            ? (t = ot.sk.Up)
+            : "down" == e.direction && (t = ot.sk.Down);
+          let n = (0, ot.mz)(at(), t);
           return o.createElement(
-            it.Cv,
+            ot.Cv,
             {
               childrenKey: e.activePage.identifier,
-              childrenClasses: (0, it.qh)(lt(), lt().ContentTransition),
+              childrenClasses: (0, ot.qh)(at(), at().ContentTransition),
               directionClass: n,
-              animate: t != it.sk.None,
+              animate: t != ot.sk.None,
             },
             e.children,
           );
@@ -44138,9 +44218,9 @@ var CLSTAMP = "8390819";
                 ? !{
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Oct 3 2023 : 16:23:18",
-                    BUILD_TIME_UTC: "Oct 3 2023 : 23:23:18",
-                    BUILD_RTIME_UTC: 1696375398,
+                    BUILD_TIME_LOCAL: "Oct 5 2023 : 13:57:26",
+                    BUILD_TIME_UTC: "Oct 5 2023 : 20:57:26",
+                    BUILD_RTIME_UTC: 1696539446,
                   }.MOBILE_BUILD && document.getElementById(t)
                 : t),
             r)
@@ -44695,7 +44775,7 @@ var CLSTAMP = "8390819";
       {
         27: "22b35055a4c58d3e857d",
         33: "528b8ab6922e54215c14",
-        58: "e85b54f1f478c53248a3",
+        58: "c238ac92ec36ec68392b",
         131: "6d3eb69613e6b880446d",
         146: "a062923d065b61e9a299",
         200: "0273f88a1d91abf0685e",
@@ -44796,7 +44876,7 @@ var CLSTAMP = "8390819";
         7781: "d886d7151aaf757c198c",
         7832: "9d6d3d860dea2a65797b",
         7850: "1f6f9c8e464ef14e9712",
-        7962: "a476a280365655cfc104",
+        7962: "97fcc6efccbe1c0e0071",
         8011: "cd9fdcd3471ebd4fb569",
         8052: "599e7acd9c0992e33ed1",
         8085: "d90c1113606b7bae5521",

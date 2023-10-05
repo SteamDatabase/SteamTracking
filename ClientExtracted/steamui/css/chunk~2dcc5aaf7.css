@@ -34765,6 +34765,9 @@ div.HighPerfMode .appdetails_ScrollContainer_2l416 {
   z-index: 2;
   opacity: 1;
 }
+.appdetails_PlayBar_2L3s2:not(.appdetails_ShowPlayBar_jnXtv) {
+  pointer-events: none;
+}
 .appdetails_Header_2gZXh {
   opacity: 0;
 }
