@@ -27146,22 +27146,19 @@
                   "div",
                   { className: yl().BodyText },
                   Oi("#homepage_workshop_desc"),
+                ),
+                a.createElement(
+                  V.rU,
+                  { to: "https://www.counter-strike.net/workshop/workshop" },
                   a.createElement(
-                    "a",
-                    {
-                      className: yl().NavLink,
-                      href: "https://www.counter-strike.net/workshop/workshop",
-                    },
+                    "div",
+                    { className: yl().StandardButton },
                     a.createElement(
                       "div",
-                      { className: yl().StandardButton },
-                      a.createElement(
-                        "div",
-                        { className: yl().ButtonText },
-                        Oi("#homepage_workshop_btn"),
-                      ),
-                      a.createElement(zl, null),
+                      { className: yl().ButtonText },
+                      Oi("#homepage_workshop_btn"),
                     ),
+                    a.createElement(zl, null),
                   ),
                 ),
               ),
