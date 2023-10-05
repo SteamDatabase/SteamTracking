@@ -18,8 +18,8 @@
         const t = (0, a.yw)(),
           n = (0, o.useMemo)(() => {
             if (t) {
-              const e = Math.floor(Date.now() / 1e3),
-                n = e + 1209600;
+              const e = Math.floor(Date.now() / 1e3) - 345600,
+                n = e + 1641600;
               return t
                 .filter((t) => {
                   var a;
