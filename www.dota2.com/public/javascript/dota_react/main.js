@@ -39656,7 +39656,7 @@
         return "";
       }
       function m() {
-        return "summermajor23";
+        return "ti12";
       }
       function u(e) {
         const { nLeagueID: t } = i.f.Get().GetBestCurrentLeagueNode(e);
