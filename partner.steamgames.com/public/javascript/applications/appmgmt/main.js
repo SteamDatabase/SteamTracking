@@ -124,12 +124,12 @@
         WithBottomSeparatorThick:
           "gamepaddialog_WithBottomSeparatorThick_28hmy",
         HighlightOnFocus: "gamepaddialog_HighlightOnFocus_wE4V6",
+        Clickable: "gamepaddialog_Clickable_27UVY",
+        Disabled: "gamepaddialog_Disabled_1pmyx",
+        WithBottomSeparator: "gamepaddialog_WithBottomSeparator_1lUZx",
         "ItemFocusAnim-darkerGrey":
           "gamepaddialog_ItemFocusAnim-darkerGrey_3ZRaK",
         "ItemFocusAnim-darkGrey": "gamepaddialog_ItemFocusAnim-darkGrey_2zfa-",
-        WithBottomSeparator: "gamepaddialog_WithBottomSeparator_1lUZx",
-        Disabled: "gamepaddialog_Disabled_1pmyx",
-        Clickable: "gamepaddialog_Clickable_27UVY",
         FieldChildrenWithIcon: "gamepaddialog_FieldChildrenWithIcon_2ZQ9w",
         FieldChildrenInner: "gamepaddialog_FieldChildrenInner_3N47t",
         FieldClickTarget: "gamepaddialog_FieldClickTarget_TN6vN",
@@ -7189,7 +7189,7 @@
                           ? void 0
                           : i.TriggerOverlayHapticEffect) ||
                       void 0 === o ||
-                      o.call(i, a.sH.ButtonEnter));
+                      o.call(i, a.sH.ButtonEnter, 0));
               },
               i = () => {
                 var t, i, o;
@@ -7212,7 +7212,7 @@
                           ? void 0
                           : i.TriggerOverlayHapticEffect) ||
                       void 0 === o ||
-                      o.call(i, a.sH.ButtonLeave));
+                      o.call(i, a.sH.ButtonLeave, 0));
               };
             return (
               null == n || n.addEventListener("mouseenter", t),
@@ -10013,6 +10013,7 @@
         }
         HideMenu() {
           this.m_iMenuInstance && this.m_iMenuInstance.Hide(),
+            this.props.onMenuClose && this.props.onMenuClose(),
             this.setState({ bOpened: !1 });
         }
         render() {
@@ -11858,7 +11859,7 @@
                 ? void 0
                 : i.TriggerOverlayHapticEffect) ||
             void 0 === o ||
-            o.call(i, e);
+            o.call(i, e, 0);
         }
         UpdateSliderValueForPosition(e) {
           var t, n;
@@ -20721,7 +20722,7 @@
             n.e(5875),
             n.e(4033),
             n.e(2136),
-          ]).then(n.bind(n, 91866)),
+          ]).then(n.bind(n, 65269)),
         ),
         H = c.lazy(() =>
           Promise.all([

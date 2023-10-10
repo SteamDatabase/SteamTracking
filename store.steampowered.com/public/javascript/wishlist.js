@@ -2,7 +2,7 @@
 
 InitializeGPFocusRestoreTimeout( false );
 
-var CWishlistController = function()
+var CWishlistController = function( bNotificationFilter = false )
 {
 	this.rgElements = {};
 	this.rgVisibleApps = [];
@@ -10,7 +10,7 @@ var CWishlistController = function()
 	this.elContainer = $elTarget;
 	var _this = this;
 	this.nElementBuffer = 10; // Additional elements to lode above/below the view window
-
+	this.m_bNotificationFilter = bNotificationFilter; // true if we're only displaying a list of AppIDs for a wishlist notification
 
 	// Usee for the scroll handler.
 	this.nHeaderOffset = $J('#wishlist_ctn').offset().top;
@@ -1000,6 +1000,18 @@ CWishlistController.prototype.UpdateFilterDisplay = function()
 			$J('#wishlist_search').val("");
 			_this.rgFilterSettings.term = '';
 			_this.Update();
+		})
+		$elContainer.append($el);
+	}
+
+	if ( this.m_bNotificationFilter )
+	{
+		var $el = $J('<div></div>').text( "Only show" + ": " + "Wishlist Notification Games" );
+
+		$el.on('click', function(){
+			// remove the notification filter param and re-fetch
+			window.location.search = '';
+			window.reload();
 		})
 		$elContainer.append($el);
 	}

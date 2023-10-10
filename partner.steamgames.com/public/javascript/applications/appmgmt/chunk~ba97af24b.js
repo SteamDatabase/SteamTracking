@@ -111,6 +111,7 @@
     30984: (e) => {
       e.exports = {
         LoginQR: "qrlogin_LoginQR_1wtS3",
+        NonPublic: "qrlogin_NonPublic_2iiMm",
         QRLoginDeck: "qrlogin_QRLoginDeck_3pzmh",
         Blur: "qrlogin_Blur_3j1v-",
         Overlay: "qrlogin_Overlay_2VJKT",
@@ -2362,7 +2363,7 @@
             strChallengeURL: d,
             bHadRemoteInteraction: m,
             reset: h,
-            setTokenToRevoke: g,
+            setTokenToRevoke: p,
           } = (function (e) {
             const [t, n] = (0, i.useState)(new F(e));
             return (
@@ -2386,54 +2387,54 @@
             );
           })({ transport: t, onComplete: n, onDeviceDetails: l });
         (0, i.useEffect)(() => o && o(u), [o, u]);
-        const p = u === L.Pending ? d : c.De.STORE_BASE_URL,
-          _ = u === L.Unstarted || u === L.Starting || m,
-          C = u === L.Failure,
-          E = u === L.Success,
-          v = E
+        const _ = u === L.Pending ? d : c.De.STORE_BASE_URL,
+          C = u === L.Unstarted || u === L.Starting || m,
+          E = u === L.Failure,
+          v = u === L.Success,
+          S = v
             ? i.createElement($, null)
-            : C
+            : E
             ? i.createElement(q, { reset: h })
-            : _
+            : C
             ? i.createElement(V, { size: "small" })
             : null,
-          S = _ || C || E;
-        return (
-          (0, i.useEffect)(() => {
-            var t;
-            (null === (t = e.refreshInfo) || void 0 === t
-              ? void 0
-              : t.login_token_id) && g(e.refreshInfo.login_token_id);
-          }, [e.refreshInfo, g]),
+          y = C || E || v;
+        (0, i.useEffect)(() => {
+          var t;
+          (null === (t = e.refreshInfo) || void 0 === t
+            ? void 0
+            : t.login_token_id) && p(e.refreshInfo.login_token_id);
+        }, [e.refreshInfo, p]);
+        const k = c.De.EUNIVERSE !== g.xO.k_EUniversePublic;
+        return i.createElement(
+          "div",
+          { className: P().Column },
           i.createElement(
             "div",
-            { className: P().Column },
+            { style: { position: "relative" } },
             i.createElement(
-              "div",
-              { style: { position: "relative" } },
-              i.createElement(
-                G,
-                {
-                  borderWidth: 0,
-                  activeBitColor: "#212328",
-                  inactiveBitColor: "white",
-                  quality: W(p),
-                  className: (0, r.Z)(
-                    P().LoginQR,
-                    a && P().QRLoginDeck,
-                    S && P().Blur,
-                  ),
-                },
-                p,
-              ),
-              S &&
-                i.createElement(
-                  "div",
-                  { className: P().Overlay },
-                  i.createElement("div", { className: P().Box }, v),
+              G,
+              {
+                borderWidth: 0,
+                activeBitColor: "#212328",
+                inactiveBitColor: k ? "magenta" : "white",
+                quality: W(_),
+                className: (0, r.Z)(
+                  P().LoginQR,
+                  a && P().QRLoginDeck,
+                  y && P().Blur,
+                  k && P().NonPublic,
                 ),
+              },
+              _,
             ),
-          )
+            y &&
+              i.createElement(
+                "div",
+                { className: P().Overlay },
+                i.createElement("div", { className: P().Box }, S),
+              ),
+          ),
         );
       }
       function W(e) {

@@ -142,7 +142,7 @@
         return [s, !!r && g.GetProfileBySteamID(r)];
       }
       function _(e) {
-        return p(i.useMemo(() => u.K.InitFromAccountID(e), [e]));
+        return p(i.useMemo(() => (e ? u.K.InitFromAccountID(e) : null), [e]));
       }
       window.g_ProfileStore = g;
     },

@@ -953,7 +953,7 @@
         return [a, !!t && h.GetProfileBySteamID(t)];
       }
       function _(e) {
-        return g(s.useMemo(() => c.K.InitFromAccountID(e), [e]));
+        return g(s.useMemo(() => (e ? c.K.InitFromAccountID(e) : null), [e]));
       }
       window.g_ProfileStore = h;
     },

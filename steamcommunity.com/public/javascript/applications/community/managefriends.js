@@ -168,7 +168,7 @@
         return [n, !!t && p.GetProfileBySteamID(t)];
       }
       function f(e) {
-        return g(o.useMemo(() => l.K.InitFromAccountID(e), [e]));
+        return g(o.useMemo(() => (e ? l.K.InitFromAccountID(e) : null), [e]));
       }
       window.g_ProfileStore = p;
     },

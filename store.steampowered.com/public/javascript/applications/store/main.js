@@ -97,12 +97,12 @@
         WithBottomSeparatorThick:
           "gamepaddialog_WithBottomSeparatorThick_28hmy",
         HighlightOnFocus: "gamepaddialog_HighlightOnFocus_wE4V6",
+        Clickable: "gamepaddialog_Clickable_27UVY",
+        Disabled: "gamepaddialog_Disabled_1pmyx",
+        WithBottomSeparator: "gamepaddialog_WithBottomSeparator_1lUZx",
         "ItemFocusAnim-darkerGrey":
           "gamepaddialog_ItemFocusAnim-darkerGrey_3ZRaK",
         "ItemFocusAnim-darkGrey": "gamepaddialog_ItemFocusAnim-darkGrey_2zfa-",
-        WithBottomSeparator: "gamepaddialog_WithBottomSeparator_1lUZx",
-        Disabled: "gamepaddialog_Disabled_1pmyx",
-        Clickable: "gamepaddialog_Clickable_27UVY",
         FieldChildrenWithIcon: "gamepaddialog_FieldChildrenWithIcon_2ZQ9w",
         FieldChildrenInner: "gamepaddialog_FieldChildrenInner_3N47t",
         FieldClickTarget: "gamepaddialog_FieldClickTarget_TN6vN",
@@ -12012,6 +12012,7 @@
               pending_invites: 0,
               major_sale: 0,
               fi: 0,
+              fpr: 0,
             }),
             (this.m_bLoaded = !1),
             (this.m_nUnviewed = 0),
@@ -12072,29 +12073,31 @@
                 (this.m_rgNotifyServerHidden = []);
           }
         }
-        MarkItemRead(e) {
-          var t;
-          let n = this.m_rgNotificationRollups.findIndex(
+        MarkItemRead(e, t = !1) {
+          var n;
+          let i = this.m_rgNotificationRollups.findIndex(
             (t) => t.item.notification_id == e,
           );
-          if (-1 === n)
-            return void E(
-              "Attempted to mark notification read that is not in the notification store",
-            );
-          let i = this.m_rgNotificationRollups[n];
-          if (i.item.read)
+          if (-1 === i)
+            return void (t
+              ? this.NotifyServerNotificationsRead([e])
+              : E(
+                  "Attempted to mark notification read that is not in the notification store",
+                ));
+          let r = this.m_rgNotificationRollups[i];
+          if (r.item.read)
             E("Attempted to mark notification read that is already read");
           else if (
-            ((i.item.read = !0),
-            (null === (t = i.rgunread) || void 0 === t ? void 0 : t.length) > 0)
+            ((r.item.read = !0),
+            (null === (n = r.rgunread) || void 0 === n ? void 0 : n.length) > 0)
           ) {
-            this.ReduceNewTotals(i.type, i.rgunread.length);
+            this.ReduceNewTotals(r.type, r.rgunread.length);
             let e = [];
-            i.rgunread.forEach((t) => {
+            r.rgunread.forEach((t) => {
               e.push(t);
             }),
-              i.rgread.push(...i.rgunread),
-              (i.rgunread = []),
+              r.rgread.push(...r.rgunread),
+              (r.rgunread = []),
               this.NotifyServerNotificationsRead(e);
           }
         }
@@ -12155,6 +12158,7 @@
                   pending_invites: 0,
                   major_sale: 0,
                   fi: 0,
+                  fpr: 0,
                 },
                 {
                   pending_gifts: this.m_summary.pending_gifts,
@@ -12228,6 +12232,7 @@
               pending_invites: 0,
               major_sale: 0,
               fi: 0,
+              fpr: 0,
             },
             o = 0;
           null === (e = this.m_currentNotificationsData.notifications) ||
@@ -12429,6 +12434,7 @@
             case s.gH.k_ESteamNotificationType_FriendInvite:
             case s.gH.k_ESteamNotificationType_TradeOffer:
             case s.gH.k_ESteamNotificationType_FamilyInvite:
+            case s.gH.k_ESteamNotificationType_FamilyPurchaseRequest:
             default:
               e.push({
                 type: o,
@@ -12758,6 +12764,7 @@
           bBasic: !0,
         },
         [s.gH.k_ESteamNotificationType_FamilyInvite]: null,
+        [s.gH.k_ESteamNotificationType_FamilyPurchaseRequest]: null,
       };
       function j(e) {
         var t;
@@ -12812,6 +12819,9 @@
             break;
           case s.gH.k_ESteamNotificationType_FamilyInvite:
             e.fi = Math.max(0, e.fi + n);
+            break;
+          case s.gH.k_ESteamNotificationType_FamilyPurchaseRequest:
+            e.fpr = Math.max(0, e.fpr + n);
         }
       }
       function z(e) {
@@ -15186,7 +15196,7 @@
                           ? void 0
                           : i.TriggerOverlayHapticEffect) ||
                       void 0 === r ||
-                      r.call(i, a.sH.ButtonEnter));
+                      r.call(i, a.sH.ButtonEnter, 0));
               },
               i = () => {
                 var t, i, r;
@@ -15209,7 +15219,7 @@
                           ? void 0
                           : i.TriggerOverlayHapticEffect) ||
                       void 0 === r ||
-                      r.call(i, a.sH.ButtonLeave));
+                      r.call(i, a.sH.ButtonLeave, 0));
               };
             return (
               null == n || n.addEventListener("mouseenter", t),
@@ -17685,6 +17695,7 @@
         }
         HideMenu() {
           this.m_iMenuInstance && this.m_iMenuInstance.Hide(),
+            this.props.onMenuClose && this.props.onMenuClose(),
             this.setState({ bOpened: !1 });
         }
         render() {
@@ -19432,7 +19443,7 @@
                 ? void 0
                 : i.TriggerOverlayHapticEffect) ||
             void 0 === r ||
-            r.call(i, e);
+            r.call(i, e, 0);
         }
         UpdateSliderValueForPosition(e) {
           var t, n;
@@ -29622,7 +29633,8 @@
             {
               ShoppingCart: () => "/cart/",
               ShoppingCartGifts: () => "/cart/gifts/",
-              ShoppingCartPurchaseRequest: () => "/cart/purchaserequest/",
+              ShoppingCartPurchaseRequest: () =>
+                "/cart/purchaserequest/:shoppingcartgid",
             },
           ),
           { DiagData: () => "/:anything*/diagdata" },

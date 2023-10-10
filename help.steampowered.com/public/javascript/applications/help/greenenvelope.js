@@ -304,6 +304,7 @@
               pending_invites: 0,
               major_sale: 0,
               fi: 0,
+              fpr: 0,
             }),
             (this.m_bLoaded = !1),
             (this.m_nUnviewed = 0),
@@ -335,7 +336,7 @@
         BSendToCallbackAsNew(e) {
           return (
             !e.read &&
-            !$(e) &&
+            !q(e) &&
             !this.m_rgUnreadNotificationIDs.includes(e.notification_id)
           );
         }
@@ -364,29 +365,31 @@
                 (this.m_rgNotifyServerHidden = []);
           }
         }
-        MarkItemRead(e) {
-          var t;
-          let i = this.m_rgNotificationRollups.findIndex(
+        MarkItemRead(e, t = !1) {
+          var i;
+          let n = this.m_rgNotificationRollups.findIndex(
             (t) => t.item.notification_id == e,
           );
-          if (-1 === i)
-            return void k(
-              "Attempted to mark notification read that is not in the notification store",
-            );
-          let n = this.m_rgNotificationRollups[i];
-          if (n.item.read)
+          if (-1 === n)
+            return void (t
+              ? this.NotifyServerNotificationsRead([e])
+              : k(
+                  "Attempted to mark notification read that is not in the notification store",
+                ));
+          let a = this.m_rgNotificationRollups[n];
+          if (a.item.read)
             k("Attempted to mark notification read that is already read");
           else if (
-            ((n.item.read = !0),
-            (null === (t = n.rgunread) || void 0 === t ? void 0 : t.length) > 0)
+            ((a.item.read = !0),
+            (null === (i = a.rgunread) || void 0 === i ? void 0 : i.length) > 0)
           ) {
-            this.ReduceNewTotals(n.type, n.rgunread.length);
+            this.ReduceNewTotals(a.type, a.rgunread.length);
             let e = [];
-            n.rgunread.forEach((t) => {
+            a.rgunread.forEach((t) => {
               e.push(t);
             }),
-              n.rgread.push(...n.rgunread),
-              (n.rgunread = []),
+              a.rgread.push(...a.rgunread),
+              (a.rgunread = []),
               this.NotifyServerNotificationsRead(e);
           }
         }
@@ -447,6 +450,7 @@
                   pending_invites: 0,
                   major_sale: 0,
                   fi: 0,
+                  fpr: 0,
                 },
                 {
                   pending_gifts: this.m_summary.pending_gifts,
@@ -520,6 +524,7 @@
               pending_invites: 0,
               major_sale: 0,
               fi: 0,
+              fpr: 0,
             },
             s = 0;
           null === (e = this.m_currentNotificationsData.notifications) ||
@@ -684,7 +689,7 @@
               }
               break;
             case s.gH.k_ESteamNotificationType_AsyncGame:
-              const r = H(t.body_data).appid.toString();
+              const r = C(t.body_data).appid.toString();
               if (r) {
                 const i = "asyncgame_" + r;
                 let n = e.findIndex((e) => e.key == i);
@@ -721,6 +726,7 @@
             case s.gH.k_ESteamNotificationType_FriendInvite:
             case s.gH.k_ESteamNotificationType_TradeOffer:
             case s.gH.k_ESteamNotificationType_FamilyInvite:
+            case s.gH.k_ESteamNotificationType_FamilyPurchaseRequest:
             default:
               e.push({
                 type: o,
@@ -861,14 +867,14 @@
       function U(e) {
         return e.comment_type == N.j7.k_ECommentThreadTypeProfile;
       }
-      var C;
-      function H(e) {
+      var H;
+      function C(e) {
         try {
           let t = JSON.parse(e);
           return !t.appid ||
             !t.state ||
-            (t.state != C.k_EAsyncGameSessionUserStateReadyForAction &&
-              t.state != C.k_EAsyncGameSessionUserStateDone)
+            (t.state != H.k_EAsyncGameSessionUserStateReadyForAction &&
+              t.state != H.k_EAsyncGameSessionUserStateDone)
             ? (T("Async game notification invalid data", e), null)
             : { appid: parseInt(t.appid), state: parseInt(t.state) };
         } catch (e) {
@@ -898,7 +904,7 @@
         }
         return null;
       }
-      function O(e) {
+      function F(e) {
         try {
           let t = JSON.parse(e);
           return {
@@ -910,7 +916,7 @@
         }
         return null;
       }
-      function F(e) {
+      function O(e) {
         try {
           return JSON.parse(e).sender;
         } catch (e) {
@@ -925,14 +931,14 @@
             "k_EAsyncGameSessionUserStateReadyForAction"),
           (e[(e.k_EAsyncGameSessionUserStateDone = 2)] =
             "k_EAsyncGameSessionUserStateDone");
-      })(C || (C = {}));
+      })(H || (H = {}));
       const x = {
         [s.gH.k_ESteamNotificationType_Comment]: { fnGet: w, bBasic: !1 },
-        [s.gH.k_ESteamNotificationType_FriendInvite]: { fnGet: O, bBasic: !1 },
+        [s.gH.k_ESteamNotificationType_FriendInvite]: { fnGet: F, bBasic: !1 },
         [s.gH.k_ESteamNotificationType_Gift]: { fnGet: P, bBasic: !1 },
         [s.gH.k_ESteamNotificationType_Item]: { fnGet: M, bBasic: !1 },
         [s.gH.k_ESteamNotificationType_Wishlist]: { fnGet: L, bBasic: !1 },
-        [s.gH.k_ESteamNotificationType_TradeOffer]: { fnGet: F, bBasic: !1 },
+        [s.gH.k_ESteamNotificationType_TradeOffer]: { fnGet: O, bBasic: !1 },
         [s.gH.k_ESteamNotificationType_General]: {
           fnGet: function (e) {
             try {
@@ -971,7 +977,7 @@
           },
           bBasic: !0,
         },
-        [s.gH.k_ESteamNotificationType_AsyncGame]: { fnGet: H, bBasic: !1 },
+        [s.gH.k_ESteamNotificationType_AsyncGame]: { fnGet: C, bBasic: !1 },
         [s.gH.k_ESteamNotificationType_MajorSale]: {
           fnGet: function (e) {
             const t = (0, f.h4)();
@@ -1024,6 +1030,7 @@
           bBasic: !0,
         },
         [s.gH.k_ESteamNotificationType_FamilyInvite]: null,
+        [s.gH.k_ESteamNotificationType_FamilyPurchaseRequest]: null,
       };
       function W(e) {
         var t;
@@ -1078,15 +1085,18 @@
             break;
           case s.gH.k_ESteamNotificationType_FamilyInvite:
             e.fi = Math.max(0, e.fi + i);
+            break;
+          case s.gH.k_ESteamNotificationType_FamilyPurchaseRequest:
+            e.fpr = Math.max(0, e.fpr + i);
         }
       }
       function X(e) {
         return !e.viewed || e.viewed + E > (0, h.QU)();
       }
-      function $(e) {
+      function q(e) {
         return e.viewed && e.viewed + v < (0, h.QU)();
       }
-      function q(e) {
+      function $(e) {
         return (
           (function (e) {
             let t = 0;
@@ -1457,7 +1467,7 @@
             }, [e]),
             [i, !!t && Ae.GetProfileBySteamID(t)]
           );
-        })(o.useMemo(() => u.K.InitFromAccountID(e), [e]));
+        })(o.useMemo(() => (e ? u.K.InitFromAccountID(e) : null), [e]));
       }
       window.g_ProfileStore = Ae;
       var Me = i(5871);
@@ -1513,8 +1523,8 @@
         );
       }
       var Ue = i(9126),
-        Ce = i.n(Ue),
-        He = i(2079);
+        He = i.n(Ue),
+        Ce = i(2079);
       function Le(e) {
         switch (e) {
           case s.gH.k_ESteamNotificationType_MajorSale:
@@ -1546,9 +1556,9 @@
           [h, y] = o.useState(!1),
           v = () => y(!0);
         let E = null;
-        if (_) E = qe(a, n, g);
+        if (_) E = $e(a, n, g);
         else {
-          const e = g ? Ce().ShortLogoDimensions : Ce().StandardLogoDimensions;
+          const e = g ? He().ShortLogoDimensions : He().StandardLogoDimensions;
           E =
             s.image && !h
               ? o.createElement("img", {
@@ -1582,7 +1592,7 @@
               ),
             );
       }
-      function Oe(e) {
+      function Fe(e) {
         let {
           displayName: t,
           location: i,
@@ -1627,7 +1637,7 @@
               ),
             );
       }
-      function Fe(e) {
+      function Oe(e) {
         let {
           senderName: t,
           location: i,
@@ -1703,11 +1713,11 @@
           const e =
               a.state == m.of.k_EFriendRelationshipFriend &&
               s != ae.GamepadToast,
-            t = _ ? Ce().ShortLogoDimensions : Ce().StandardLogoDimensions;
+            t = _ ? He().ShortLogoDimensions : He().StandardLogoDimensions;
           h = o.createElement(
             Q.s,
             { style: { position: "relative" } },
-            e && o.createElement(ie.Fsn, { className: Ce().FriendIndicator }),
+            e && o.createElement(ie.Fsn, { className: He().FriendIndicator }),
             o.createElement("img", { className: t, src: i, onError: N }),
           );
         }
@@ -1770,7 +1780,7 @@
             t = n.item_data.background_color
               ? "#" + n.item_data.background_color
               : null;
-          const i = h ? Ce().ShortLogoDimensions : Ce().StandardLogoDimensions;
+          const i = h ? He().ShortLogoDimensions : He().StandardLogoDimensions;
           y = o.createElement(
             Q.s,
             { style: { position: "relative" } },
@@ -1860,11 +1870,11 @@
           onHide: m,
         } = e;
         const c = we(a),
-          d = qe(i, t, c),
+          d = $e(i, t, c),
           _ = !i;
         let u = "";
         return (
-          n.state == C.k_EAsyncGameSessionUserStateReadyForAction
+          n.state == H.k_EAsyncGameSessionUserStateReadyForAction
             ? (u =
                 c && (null == i ? void 0 : i.GetName())
                   ? (0, g.Xx)(
@@ -1872,7 +1882,7 @@
                       i.GetName(),
                     )
                   : (0, g.Xx)("#SteamNotification_AsyncGame_Action"))
-            : n.state == C.k_EAsyncGameSessionUserStateDone &&
+            : n.state == H.k_EAsyncGameSessionUserStateDone &&
               (u =
                 c && (null == i ? void 0 : i.GetName())
                   ? (0, g.Xx)(
@@ -1931,7 +1941,7 @@
         const T = we(u),
           [k, I] = o.useState(!1),
           b = () => I(!0),
-          [A, B] = (0, He.KU)(
+          [A, B] = (0, Ce.KU)(
             _.bclan_account ? _.owner_steam_id.GetAccountID() : void 0,
           ),
           M = D(_) ? l : null,
@@ -1990,27 +2000,27 @@
                 ),
               )
             : o.createElement(pe, null, '"', _.comment, '"');
-        let C = (0, g.Xx)("#SteamNotifications_Comment"),
-          H = null;
+        let H = (0, g.Xx)("#SteamNotifications_Comment"),
+          C = null;
         if (y > 1) {
           const e = "+" + (y - 1);
           u == ae.AllNotificationsTray
-            ? (H = o.createElement(
+            ? (C = o.createElement(
                 "div",
-                { className: Ce().AllNotificationsCommentPlus },
+                { className: He().AllNotificationsCommentPlus },
                 e,
               ))
-            : (C = C + " " + e);
+            : (H = H + " " + e);
         }
         let L = r;
         if (!k) {
-          const e = T ? Ce().ShortLogoDimensions : Ce().StandardLogoDimensions;
+          const e = T ? He().ShortLogoDimensions : He().StandardLogoDimensions;
           if (c && R(_)) {
             const t = _.bhas_friend && u != ae.GamepadToast;
             L = o.createElement(
               "div",
               { style: { position: "relative" } },
-              t && o.createElement(ie.Fsn, { className: Ce().FriendIndicator }),
+              t && o.createElement(ie.Fsn, { className: He().FriendIndicator }),
               o.createElement("img", { className: e, src: c, onError: b }),
             );
           } else
@@ -2027,7 +2037,7 @@
               Object.assign({}, e, {
                 logo: L,
                 icon: e.icon,
-                title: C,
+                title: H,
                 body: S,
               }),
             )
@@ -2039,19 +2049,19 @@
                 Object.assign({ logo: L }, e),
                 o.createElement(ce, {
                   icon: p,
-                  title: C,
+                  title: H,
                   timestamp: f,
                   location: u,
                   fnRenderTimestamp: h,
                 }),
                 o.createElement(ue, null, S),
                 G,
-                H,
+                C,
                 E ? o.createElement(Ye, { onHide: E }) : null,
               ),
             );
       }
-      function $e(e) {
+      function qe(e) {
         let {
           app: t,
           fallbackLogo: i,
@@ -2063,7 +2073,7 @@
           onHide: m,
         } = e;
         const c = we(a),
-          d = qe(t, i, c),
+          d = $e(t, i, c),
           _ = n.appid && !t;
         let u = "",
           p = null;
@@ -2139,7 +2149,7 @@
               )
         );
       }
-      function qe(e, t, i = !1) {
+      function $e(e, t, i = !1) {
         const [n, a] = o.useState(!1),
           s = () => a(!0);
         return !e || n
@@ -2150,7 +2160,7 @@
               { style: { position: "relative" } },
               o.createElement("img", {
                 src: null == e ? void 0 : e.GetAssets().GetCommunityIconURL(),
-                className: Ce().ShortLogoDimensions,
+                className: He().ShortLogoDimensions,
                 onError: s,
               }),
             )
@@ -2158,7 +2168,7 @@
               Q.s,
               { style: { position: "relative" } },
               o.createElement("img", {
-                className: (0, Y.Z)(Ce().WishlistBlurImage),
+                className: (0, Y.Z)(He().WishlistBlurImage),
                 src: null == e ? void 0 : e.GetAssets().GetCommunityIconURL(),
                 onError: s,
               }),
@@ -2179,7 +2189,7 @@
         return o.createElement(
           "div",
           {
-            className: Ce().HideButton,
+            className: He().HideButton,
             onClick: (t) => {
               e.onHide(), t.stopPropagation(), t.preventDefault();
             },
@@ -2193,7 +2203,7 @@
       function Ze(e) {
         return o.createElement(
           "div",
-          { className: Ce().SteamNotificationWrapper },
+          { className: He().SteamNotificationWrapper },
           e.children,
         );
       }
@@ -2275,18 +2285,25 @@
             [c, d] = (0, o.useState)(""),
             _ = (0, ye.M)();
           (0, o.useEffect)(() => {
-            if (!l.appid || !m || l.count > 1) {
-              const e = l.appid ? `?appid=${l.appid}` : "";
-              d(
+            var e;
+            if (
+              l.count > 1 &&
+              (null === (e = l.appids) || void 0 === e ? void 0 : e.length)
+            )
+              return d(
                 K.De.STORE_BASE_URL +
-                  `wishlist/profiles/${_}/${e}#sort=discount`,
+                  `wishlist/profiles/${_}/?wng=${l.appids.toString()}#sort=discount`,
               );
-            } else d(m.GetStorePageURL());
+            if (m) return d(m.GetStorePageURL());
+            const t = l.appid ? `?appid=${l.appid}` : "";
+            d(
+              K.De.STORE_BASE_URL + `wishlist/profiles/${_}/${t}#sort=discount`,
+            );
           }, [l, m, _]);
           return o.createElement(
             "a",
             { href: c, onMouseDown: (e) => i(() => {}, t.item, e) },
-            o.createElement($e, {
+            o.createElement(qe, {
               fallbackLogo: o.createElement(ie.ui7, null),
               icon: o.createElement(ie.yh4, null),
               onActivate: () => i(() => window.location.assign(c), t.item),
@@ -2311,7 +2328,7 @@
             } = e,
             r = (0, ye.M)(),
             l = `${K.De.COMMUNITY_BASE_URL}profiles/${r}/friends/pending`,
-            m = O(t.item.body_data),
+            m = F(t.item.body_data),
             c = new u.K(m.requestorID),
             [d, _] = Be(c.GetAccountID());
           return o.createElement(
@@ -2380,7 +2397,7 @@
           return o.createElement(
             "a",
             { href: l, onMouseDown: (e) => i(() => {}, t.item, e) },
-            o.createElement(Fe, {
+            o.createElement(Oe, {
               logo: o.createElement(ie.ui7, null),
               icon: o.createElement(ie.ncs, null),
               onActivate: () => i(() => window.location.assign(l), t.item),
@@ -2403,14 +2420,14 @@
               onHide: s,
             } = e,
             r = (0, ye.M)(),
-            l = F(t.item.body_data),
+            l = O(t.item.body_data),
             m = `${K.De.COMMUNITY_BASE_URL}profiles/${r}/tradeoffers`,
             c = new u.K(l),
             [d, _] = Be(c.GetAccountID());
           return o.createElement(
             "a",
             { href: m, onMouseDown: (e) => i(() => {}, t.item, e) },
-            o.createElement(Oe, {
+            o.createElement(Fe, {
               logo: o.createElement(ie.ui7, null),
               icon: o.createElement(ie.hoX, null),
               onActivate: () => i(() => window.location.assign(m), t.item),
@@ -2433,7 +2450,7 @@
               onHide: s,
             } = e,
             r = `${K.De.COMMUNITY_BASE_URL}my/gamenotifications/`,
-            l = (0, o.useMemo)(() => H(t.item.body_data), [t.item.body_data]),
+            l = (0, o.useMemo)(() => C(t.item.body_data), [t.item.body_data]),
             [m] = (0, Me.vs)(l.appid, { include_assets: !0 });
           return o.createElement(
             "a",
@@ -2454,6 +2471,7 @@
           );
         },
         [s.gH.k_ESteamNotificationType_FamilyInvite]: null,
+        [s.gH.k_ESteamNotificationType_FamilyPurchaseRequest]: null,
       };
       function Qe(e) {
         const { rollup: t } = e,
@@ -2803,7 +2821,7 @@
         }));
       }
       function pt() {
-        return ut().notifications.filter((e) => !$(e.item));
+        return ut().notifications.filter((e) => !q(e.item));
       }
       function ft(e) {
         const { nTotalUnviewed: t } = e,
@@ -2955,7 +2973,7 @@
       function vt() {
         const e = ut(),
           t = pt();
-        return t.length || q(e.summary)
+        return t.length || $(e.summary)
           ? o.createElement(
               "div",
               { className: J().NotificationsMenuEntriesContainer },

@@ -184,7 +184,7 @@
         return [n, !!t && m.GetProfileBySteamID(t)];
       }
       function v(e) {
-        return _(r.useMemo(() => l.K.InitFromAccountID(e), [e]));
+        return _(r.useMemo(() => (e ? l.K.InitFromAccountID(e) : null), [e]));
       }
       function h(e) {
         return (function (e) {

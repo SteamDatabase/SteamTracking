@@ -75,6 +75,9 @@
     background-position: 50% 0%;
   }
 }
+.standardtemplates_StandardTemplateContainer_1adpx {
+  cursor: pointer;
+}
 .standardtemplates_StandardTemplateContainer_1adpx:hover,
 .standardtemplates_StandardTemplateContainer_1adpx.gpfocus {
   background-color: #3d4450;
@@ -266,6 +269,7 @@
 }
 .standardtemplates_PinnedTemplate_2eBei {
   height: 16px;
+  cursor: pointer;
 }
 .standardtemplates_PinnedTemplate_2eBei .standardtemplates_PinnedBody_1Ljgv {
   display: flex;
@@ -1036,6 +1040,9 @@
     background-position: 50% 0%;
   }
 }
+.shorttemplates_StandardTemplateContainer_3y65Y {
+  cursor: pointer;
+}
 .shorttemplates_StandardTemplateContainer_3y65Y:hover,
 .shorttemplates_StandardTemplateContainer_3y65Y.gpfocus {
   background-color: #3d4450;
@@ -1223,6 +1230,7 @@
 }
 .shorttemplates_PinnedTemplate_3T_a6 {
   height: 16px;
+  cursor: pointer;
 }
 .shorttemplates_PinnedTemplate_3T_a6 .shorttemplates_PinnedBody_a6Bjh {
   display: flex;
@@ -2051,6 +2059,9 @@
     background-position: 50% 0%;
   }
 }
+.steamtemplates_StandardTemplateContainer_3zt0r {
+  cursor: pointer;
+}
 .steamtemplates_StandardTemplateContainer_3zt0r:hover,
 .steamtemplates_StandardTemplateContainer_3zt0r.gpfocus {
   background-color: #3d4450;
@@ -2238,6 +2249,7 @@
 }
 .steamtemplates_PinnedTemplate_F_L0c {
   height: 16px;
+  cursor: pointer;
 }
 .steamtemplates_PinnedTemplate_F_L0c .steamtemplates_PinnedBody_2YrM_ {
   display: flex;

@@ -110,6 +110,7 @@
     30984: (e) => {
       e.exports = {
         LoginQR: "qrlogin_LoginQR_1wtS3",
+        NonPublic: "qrlogin_NonPublic_2iiMm",
         QRLoginDeck: "qrlogin_QRLoginDeck_3pzmh",
         Blur: "qrlogin_Blur_3j1v-",
         Overlay: "qrlogin_Overlay_2VJKT",
@@ -1277,8 +1278,8 @@
           (e[(e.H = 2)] = "H");
       })(I || (I = {}));
       var H = n(30984),
-        O = n.n(H),
-        P = n(57605);
+        P = n.n(H),
+        O = n(57605);
       function Z(e) {
         const {
             transport: t,
@@ -1293,7 +1294,7 @@
             strChallengeURL: u,
             bHadRemoteInteraction: m,
             reset: g,
-            setTokenToRevoke: _,
+            setTokenToRevoke: C,
           } = (function (e) {
             const [t, n] = (0, i.useState)(new N(e));
             return (
@@ -1317,54 +1318,54 @@
             );
           })({ transport: t, onComplete: n, onDeviceDetails: l });
         (0, i.useEffect)(() => o && o(d), [o, d]);
-        const C = d === F.Pending ? u : c.De.STORE_BASE_URL,
-          E = d === F.Unstarted || d === F.Starting || m,
-          p = d === F.Failure,
-          f = d === F.Success,
-          S = f
+        const E = d === F.Pending ? u : c.De.STORE_BASE_URL,
+          p = d === F.Unstarted || d === F.Starting || m,
+          f = d === F.Failure,
+          S = d === F.Success,
+          v = S
             ? i.createElement(j, null)
-            : p
+            : f
             ? i.createElement(X, { reset: g })
-            : E
+            : p
             ? i.createElement($, { size: "small" })
             : null,
-          v = E || p || f;
-        return (
-          (0, i.useEffect)(() => {
-            var t;
-            (null === (t = e.refreshInfo) || void 0 === t
-              ? void 0
-              : t.login_token_id) && _(e.refreshInfo.login_token_id);
-          }, [e.refreshInfo, _]),
+          k = p || f || S;
+        (0, i.useEffect)(() => {
+          var t;
+          (null === (t = e.refreshInfo) || void 0 === t
+            ? void 0
+            : t.login_token_id) && C(e.refreshInfo.login_token_id);
+        }, [e.refreshInfo, C]);
+        const R = c.De.EUNIVERSE !== _.xO.k_EUniversePublic;
+        return i.createElement(
+          "div",
+          { className: P().Column },
           i.createElement(
             "div",
-            { className: O().Column },
+            { style: { position: "relative" } },
             i.createElement(
-              "div",
-              { style: { position: "relative" } },
-              i.createElement(
-                U,
-                {
-                  borderWidth: 0,
-                  activeBitColor: "#212328",
-                  inactiveBitColor: "white",
-                  quality: W(C),
-                  className: (0, a.Z)(
-                    O().LoginQR,
-                    s && O().QRLoginDeck,
-                    v && O().Blur,
-                  ),
-                },
-                C,
-              ),
-              v &&
-                i.createElement(
-                  "div",
-                  { className: O().Overlay },
-                  i.createElement("div", { className: O().Box }, S),
+              U,
+              {
+                borderWidth: 0,
+                activeBitColor: "#212328",
+                inactiveBitColor: R ? "magenta" : "white",
+                quality: W(E),
+                className: (0, a.Z)(
+                  P().LoginQR,
+                  s && P().QRLoginDeck,
+                  k && P().Blur,
+                  R && P().NonPublic,
                 ),
+              },
+              E,
             ),
-          )
+            k &&
+              i.createElement(
+                "div",
+                { className: P().Overlay },
+                i.createElement("div", { className: P().Box }, v),
+              ),
+          ),
         );
       }
       function W(e) {
@@ -1374,17 +1375,17 @@
         const { size: t } = e;
         return i.createElement("div", {
           className: (0, a.Z)(
-            O().Loading,
-            "small" == t && O().Small,
-            ("medium" == t || !t) && O().Medium,
-            "large" == t && O().Large,
+            P().Loading,
+            "small" == t && P().Small,
+            ("medium" == t || !t) && P().Medium,
+            "large" == t && P().Large,
           ),
         });
       }
       function X(e) {
         return i.createElement(
-          P.zx,
-          { onClick: e.reset, className: O().QRFailure },
+          O.zx,
+          { onClick: e.reset, className: P().QRFailure },
           i.createElement(Q, null),
         );
       }
@@ -2035,7 +2036,7 @@
           case k.WaitingForToken:
             return e.renderLoading
               ? i.createElement(i.Fragment, null, e.renderLoading())
-              : i.createElement(Pe, null);
+              : i.createElement(Oe, null);
           case k.WaitingForDeviceCode:
           case k.InvalidDeviceCode:
           case k.WaitingForEmailCode:
@@ -2175,8 +2176,8 @@
           p = n === k.Starting || n === k.WaitingForToken,
           f = n === k.InvalidCredentials && !_,
           S = f
-            ? i.createElement(Oe, null, (0, V.Xx)("#Login_CheckCredentials"))
-            : i.createElement(Oe, null, " "),
+            ? i.createElement(Pe, null, (0, V.Xx)("#Login_CheckCredentials"))
+            : i.createElement(Pe, null, " "),
           v = o && !r,
           R = o && !!r,
           w = !!e.refreshInfo;
@@ -2501,11 +2502,11 @@
             ),
         );
       }
-      function Oe(e) {
+      function Pe(e) {
         const t = e.children || " ";
         return i.createElement("div", { className: x().FormError }, t);
       }
-      function Pe() {
+      function Oe() {
         return i.createElement(
           lt,
           { compact: !0 },
@@ -2703,7 +2704,7 @@
                     { alignItems: "center", gap: 2 },
                     R &&
                       i.createElement(
-                        Oe,
+                        Pe,
                         null,
                         (0, V.Xx)("#Login_IncorrectSteamGuard"),
                       ),

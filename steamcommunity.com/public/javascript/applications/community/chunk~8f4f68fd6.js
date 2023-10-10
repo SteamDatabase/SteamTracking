@@ -342,7 +342,7 @@
         return [i, !!t && p.GetProfileBySteamID(t)];
       }
       function g(e) {
-        return f(r.useMemo(() => m.K.InitFromAccountID(e), [e]));
+        return f(r.useMemo(() => (e ? m.K.InitFromAccountID(e) : null), [e]));
       }
       window.g_ProfileStore = p;
     },
@@ -352,7 +352,7 @@
         Fg: () => R,
         NR: () => B,
         Pi: () => Q,
-        QN: () => P,
+        QN: () => C,
         RY: () => $,
         S6: () => x,
         UN: () => J,
@@ -363,7 +363,7 @@
         fH: () => w,
         ft: () => Z,
         fw: () => b,
-        g1: () => C,
+        g1: () => P,
         gQ: () => A,
         gs: () => W,
         gt: () => L,
@@ -419,6 +419,7 @@
               pending_invites: 0,
               major_sale: 0,
               fi: 0,
+              fpr: 0,
             }),
             (this.m_bLoaded = !1),
             (this.m_nUnviewed = 0),
@@ -479,29 +480,31 @@
                 (this.m_rgNotifyServerHidden = []);
           }
         }
-        MarkItemRead(e) {
-          var t;
-          let i = this.m_rgNotificationRollups.findIndex(
+        MarkItemRead(e, t = !1) {
+          var i;
+          let a = this.m_rgNotificationRollups.findIndex(
             (t) => t.item.notification_id == e,
           );
-          if (-1 === i)
-            return void T(
-              "Attempted to mark notification read that is not in the notification store",
-            );
-          let a = this.m_rgNotificationRollups[i];
-          if (a.item.read)
+          if (-1 === a)
+            return void (t
+              ? this.NotifyServerNotificationsRead([e])
+              : T(
+                  "Attempted to mark notification read that is not in the notification store",
+                ));
+          let n = this.m_rgNotificationRollups[a];
+          if (n.item.read)
             T("Attempted to mark notification read that is already read");
           else if (
-            ((a.item.read = !0),
-            (null === (t = a.rgunread) || void 0 === t ? void 0 : t.length) > 0)
+            ((n.item.read = !0),
+            (null === (i = n.rgunread) || void 0 === i ? void 0 : i.length) > 0)
           ) {
-            this.ReduceNewTotals(a.type, a.rgunread.length);
+            this.ReduceNewTotals(n.type, n.rgunread.length);
             let e = [];
-            a.rgunread.forEach((t) => {
+            n.rgunread.forEach((t) => {
               e.push(t);
             }),
-              a.rgread.push(...a.rgunread),
-              (a.rgunread = []),
+              n.rgread.push(...n.rgunread),
+              (n.rgunread = []),
               this.NotifyServerNotificationsRead(e);
           }
         }
@@ -562,6 +565,7 @@
                   pending_invites: 0,
                   major_sale: 0,
                   fi: 0,
+                  fpr: 0,
                 },
                 {
                   pending_gifts: this.m_summary.pending_gifts,
@@ -635,6 +639,7 @@
               pending_invites: 0,
               major_sale: 0,
               fi: 0,
+              fpr: 0,
             },
             s = 0;
           null === (e = this.m_currentNotificationsData.notifications) ||
@@ -836,6 +841,7 @@
             case o.gH.k_ESteamNotificationType_FriendInvite:
             case o.gH.k_ESteamNotificationType_TradeOffer:
             case o.gH.k_ESteamNotificationType_FamilyInvite:
+            case o.gH.k_ESteamNotificationType_FamilyPurchaseRequest:
             default:
               e.push({
                 type: s,
@@ -866,6 +872,7 @@
           pending_invites: 0,
           major_sale: 0,
           fi: 0,
+          fpr: 0,
         };
       }
       function A(e, t, i, a = !0) {
@@ -1018,17 +1025,17 @@
       function L(e) {
         return R(e) || H(e);
       }
-      function C(e) {
+      function P(e) {
         return U(e);
       }
-      var P;
+      var C;
       function F(e) {
         try {
           let t = JSON.parse(e);
           return !t.appid ||
             !t.state ||
-            (t.state != P.k_EAsyncGameSessionUserStateReadyForAction &&
-              t.state != P.k_EAsyncGameSessionUserStateDone)
+            (t.state != C.k_EAsyncGameSessionUserStateReadyForAction &&
+              t.state != C.k_EAsyncGameSessionUserStateDone)
             ? (E("Async game notification invalid data", e), null)
             : { appid: parseInt(t.appid), state: parseInt(t.state) };
         } catch (e) {
@@ -1085,7 +1092,7 @@
             "k_EAsyncGameSessionUserStateReadyForAction"),
           (e[(e.k_EAsyncGameSessionUserStateDone = 2)] =
             "k_EAsyncGameSessionUserStateDone");
-      })(P || (P = {}));
+      })(C || (C = {}));
       const X = {
         [o.gH.k_ESteamNotificationType_Comment]: { fnGet: D, bBasic: !1 },
         [o.gH.k_ESteamNotificationType_FriendInvite]: { fnGet: W, bBasic: !1 },
@@ -1184,6 +1191,7 @@
           bBasic: !0,
         },
         [o.gH.k_ESteamNotificationType_FamilyInvite]: null,
+        [o.gH.k_ESteamNotificationType_FamilyPurchaseRequest]: null,
       };
       function q(e) {
         var t;
@@ -1248,6 +1256,9 @@
             break;
           case o.gH.k_ESteamNotificationType_FamilyInvite:
             e.fi = Math.max(0, e.fi + i);
+            break;
+          case o.gH.k_ESteamNotificationType_FamilyPurchaseRequest:
+            e.fpr = Math.max(0, e.fpr + i);
         }
       }
       function Q(e) {
@@ -1642,7 +1653,7 @@
               Object.assign({}, e, { logo: I, icon: l, title: p, body: f }),
             )
           : a.createElement(
-              P,
+              C,
               null,
               a.createElement(
                 u.gd,
@@ -1656,7 +1667,7 @@
                 }),
                 a.createElement(u.ur, { multiline: !g }, f),
                 !!g && a.createElement(u.QW, null, g),
-                d ? a.createElement(C, { onHide: d }) : null,
+                d ? a.createElement(P, { onHide: d }) : null,
               ),
             );
       }
@@ -1687,7 +1698,7 @@
               }),
             )
           : a.createElement(
-              P,
+              C,
               null,
               a.createElement(
                 u.gd,
@@ -1701,7 +1712,7 @@
                 }),
                 a.createElement(u.ur, null, c),
                 a.createElement(u.QW, null, d),
-                r ? a.createElement(C, { onHide: r }) : null,
+                r ? a.createElement(P, { onHide: r }) : null,
               ),
             );
       }
@@ -1732,7 +1743,7 @@
               }),
             )
           : a.createElement(
-              P,
+              C,
               null,
               a.createElement(
                 u.gd,
@@ -1746,7 +1757,7 @@
                 }),
                 a.createElement(u.ur, { multiline: !c }, m),
                 !!c && a.createElement(u.QW, null, c),
-                r ? a.createElement(C, { onHide: r }) : null,
+                r ? a.createElement(P, { onHide: r }) : null,
               ),
             );
       }
@@ -1803,7 +1814,7 @@
               }),
             )
           : a.createElement(
-              P,
+              C,
               null,
               a.createElement(
                 u.gd,
@@ -1817,7 +1828,7 @@
                 }),
                 a.createElement(u.ur, { multiline: !p }, T),
                 !!p && a.createElement(u.QW, null, p),
-                d ? a.createElement(C, { onHide: d }) : null,
+                d ? a.createElement(P, { onHide: d }) : null,
               ),
             );
       }
@@ -1908,7 +1919,7 @@
           );
         }
         return a.createElement(
-          P,
+          C,
           null,
           a.createElement(
             u.gd,
@@ -1922,7 +1933,7 @@
             }),
             a.createElement(u.ur, { multiline: !b }, A),
             !!b && a.createElement(u.QW, null, b),
-            _ ? a.createElement(C, { onHide: _ }) : null,
+            _ ? a.createElement(P, { onHide: _ }) : null,
           ),
         );
       }
@@ -1969,7 +1980,7 @@
                 }),
               )
             : a.createElement(
-                P,
+                C,
                 null,
                 a.createElement(
                   u.gd,
@@ -1983,7 +1994,7 @@
                   }),
                   a.createElement(u.ur, null, f),
                   a.createElement(u.QW, null, null == i ? void 0 : i.GetName()),
-                  m ? a.createElement(C, { onHide: m }) : null,
+                  m ? a.createElement(P, { onHide: m }) : null,
                 ),
               )
         );
@@ -2110,7 +2121,7 @@
               }),
             )
           : a.createElement(
-              P,
+              C,
               null,
               a.createElement(
                 u.gd,
@@ -2125,7 +2136,7 @@
                 a.createElement(u.ur, null, B),
                 x,
                 W,
-                G ? a.createElement(C, { onHide: G }) : null,
+                G ? a.createElement(P, { onHide: G }) : null,
               ),
             );
       }
@@ -2198,7 +2209,7 @@
                 }),
               )
             : a.createElement(
-                P,
+                C,
                 null,
                 a.createElement(
                   u.gd,
@@ -2212,7 +2223,7 @@
                   }),
                   a.createElement(u.ur, { multiline: !f }, p),
                   !!f && a.createElement(u.QW, null, f),
-                  m ? a.createElement(C, { onHide: m }) : null,
+                  m ? a.createElement(P, { onHide: m }) : null,
                 ),
               )
         );
@@ -2253,7 +2264,7 @@
               }),
             );
       }
-      function C(e) {
+      function P(e) {
         return a.createElement(
           "div",
           {
@@ -2268,7 +2279,7 @@
           a.createElement(b.ZNm, null),
         );
       }
-      function P(e) {
+      function C(e) {
         return a.createElement(
           "div",
           { className: k().SteamNotificationWrapper },
@@ -2350,13 +2361,20 @@
             [p, f] = (0, a.useState)(""),
             g = (0, o.M)();
           (0, a.useEffect)(() => {
-            if (!m.appid || !u || m.count > 1) {
-              const e = m.appid ? `?appid=${m.appid}` : "";
-              f(
+            var e;
+            if (
+              m.count > 1 &&
+              (null === (e = m.appids) || void 0 === e ? void 0 : e.length)
+            )
+              return f(
                 _.De.STORE_BASE_URL +
-                  `wishlist/profiles/${g}/${e}#sort=discount`,
+                  `wishlist/profiles/${g}/?wng=${m.appids.toString()}#sort=discount`,
               );
-            } else f(u.GetStorePageURL());
+            if (u) return f(u.GetStorePageURL());
+            const t = m.appid ? `?appid=${m.appid}` : "";
+            f(
+              _.De.STORE_BASE_URL + `wishlist/profiles/${g}/${t}#sort=discount`,
+            );
           }, [m, u, g]);
           return a.createElement(
             "a",
@@ -2532,6 +2550,7 @@
           );
         },
         [l.gH.k_ESteamNotificationType_FamilyInvite]: null,
+        [l.gH.k_ESteamNotificationType_FamilyPurchaseRequest]: null,
       };
       function j(e) {
         const { rollup: t } = e,

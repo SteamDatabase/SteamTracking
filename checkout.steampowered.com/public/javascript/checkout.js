@@ -624,12 +624,12 @@ function InitializeTransaction()
 		if( g_bInitTransactionCallRunning )
 		return;
 
-	var giftee_account_id = 0;
+	var giftee_account_id = g_nGiftee_account_id;
 	var giftee_email = '';
-	var giftee_name = '';
-	var gift_message = '';
-	var gift_sentiment = '';
-	var gift_signature = '';
+	var giftee_name = g_sGiftee_name;
+	var gift_message = g_sGift_message;
+	var gift_sentiment = g_sGift_sentiment;
+	var gift_signature = g_sGift_signature;
 	var gift_scheduled_send = 0;
 	var bIsGift = false;
 	g_eLastAuthenticationStep = false;
@@ -699,6 +699,12 @@ function InitializeTransaction()
 			gift_sentiment = $('gift_sentiment').value;
 			gift_signature = $('gift_signature').value;
 			gift_scheduled_send = GatherScheduledSendFields();
+		}
+
+				if ( g_bIsPurchaseRequest )
+		{
+			bIsGift = true;
+			currently_selected_friend_name = g_sGiftee_name;
 		}
 
 		var bHasCardInfo = false;
@@ -1339,7 +1345,7 @@ function GetFinalPriceAndUpdateReviewTab()
 		    parameters: {
 				'count' : ++nGetFinalPriceCalls,
 				'transid' : transid,
-				'purchasetype' : g_bIsGiftForm ? 'gift' : 'self',
+				'purchasetype' : g_bIsGiftForm || g_bIsPurchaseRequest ? 'gift' : 'self',
 				'microtxnid' : microtxnid,
 				'cart' : cart,
 				'gidReplayOfTransID' : gidReplayOfTransID

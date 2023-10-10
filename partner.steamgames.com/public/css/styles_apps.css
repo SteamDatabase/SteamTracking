@@ -425,8 +425,12 @@ textarea#leaderboard_blob {
 
 .communityitem_header_buttons_ctn {
 	display: flex;
-	gap: 20px;
 }
+
+.communityitem_header_buttons_ctn > a, .communityitem_header_buttons_ctn > button {
+	margin-right: 20px;
+}
+
 
 .communityitem_approval_ctn {
 	margin-top: 15px;
@@ -444,4 +448,25 @@ textarea#leaderboard_blob {
 
 .drops_disabled {
 	color: #e24044;
+}
+
+.communityitem_localization_modal {
+	width: 600px;
+	font-size: 14px;
+}
+
+.communityitem_localization_state_ctn {
+	padding: 15px;
+	margin: 15px 0 30px 0;
+	background: rgba( 0,0,0,.3 );
+}
+
+.communityitem_localization_row_title {
+	color: #ffffff;
+	text-transform: uppercase;
+}
+
+.communityitem_localization_modal_title {
+	color: #ffffff;
+	font-size: 16px;
 }

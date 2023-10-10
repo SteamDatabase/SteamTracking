@@ -825,14 +825,14 @@ ${IMG_URL}valve_logo.png
 ${IMG_URL}webui/storeadmin/plus.png
 ${IMG_URL}x_close.png
 ${IMG_URL}x_red.png
-${IMG_URL}yearinreview/${}/achievement_grid_02.webp
-${IMG_URL}yearinreview/${}/bg_2.png
-${IMG_URL}yearinreview/${}/controllers.png
-${IMG_URL}yearinreview/${}/keyboard.png
-${IMG_URL}yearinreview/${}/screenshot_placeholder.png
-${IMG_URL}yearinreview/${}/steamControllerGrid_02.png
-${IMG_URL}yearinreview/${}/streak_bg.jpg
-${IMG_URL}yearinreview/${}/vr_background6.webp
+${IMG_URL}yearinreview/achievement_grid_02.webp
+${IMG_URL}yearinreview/bg_2.png
+${IMG_URL}yearinreview/controllers.png
+${IMG_URL}yearinreview/keyboard.png
+${IMG_URL}yearinreview/screenshot_placeholder.png
+${IMG_URL}yearinreview/steamControllerGrid_02.png
+${IMG_URL}yearinreview/streak_bg.jpg
+${IMG_URL}yearinreview/vr_background6.webp
 ${INTERNAL_STATS_BASE_URL}sales/details/?gid=${}&clanid=${}&dateStart=${}-${}1-${}&dateEnd=${}-${}1-${}
 ${IN_CLIENT ? "steam://openurl_external/" : ""}${STORE_BASE_URL}appofficialsite/${appid}
 ${IN_CLIENT ? "steam://openurl_external/" : ""}${STORE_BASE_URL}forum/${appid}
@@ -955,7 +955,6 @@ ${PARTNER_BASE_URL}gfxproxy/trailergfx?appid=${}&itype=apps
 ${PARTNER_BASE_URL}giveaways/control/${}
 ${PARTNER_BASE_URL}marketing/message/${gid}
 ${PARTNER_BASE_URL}marketing/message/${}
-${PARTNER_BASE_URL}marketing/messagelist
 ${PARTNER_BASE_URL}marketing/messagepreview/${gid}/?cc=${}&l=${}&bForceSteamChina=${}&low_bandwidth=${}&dlc_override=${_ ? _ : ""}
 ${PARTNER_BASE_URL}optin${}
 ${PARTNER_BASE_URL}optin/${pageid}/sale/${}
@@ -1025,6 +1024,7 @@ ${PARTNER_BASE_URL}promotion/discounts/ajaxgetpackagediscounts/${}
 ${PARTNER_BASE_URL}promotion/discounts/ajaxupdatediscountevent
 ${PARTNER_BASE_URL}promotion/discounts/dashboard/
 ${PARTNER_BASE_URL}promotion/discounts/dashboard/?de=${_ ? _ : _}
+${PARTNER_BASE_URL}promotion/marketingmessages/ajaxgetsnrmetrics
 ${PARTNER_BASE_URL}promotion/marketingmessages/ajaxuploadasset/${}
 ${PARTNER_BASE_URL}promotion/marketingmessages/dashboard
 ${PARTNER_BASE_URL}promotion/marketingmessages/edit/${}
@@ -1383,6 +1383,7 @@ ${STORE_BASE_URL}video/details/${}/0
 ${STORE_BASE_URL}vtt/video/${}
 ${STORE_BASE_URL}wishlist
 ${STORE_BASE_URL}wishlist/profiles/${}/${}#sort=discount
+${STORE_BASE_URL}wishlist/profiles/${}/?wng=${}#sort=discount
 ${STORE_CDN_URL}/categories/headerimage/category/${}?cc=${COUNTRY}&l=${LANGUAGE}
 ${STORE_CDN_URL}/categories/headerimage/tags/${}?cc=${COUNTRY}&l=${LANGUAGE}
 ${STORE_CDN_URL}public/cdn/email/general/logo_med.png
@@ -2206,6 +2207,7 @@ https://developer.valvesoftware.com/
 https://en.wikipedia.org/wiki/Main_Page
 https://facebook.com/dota2/
 https://fonts.googleapis.com/css2?family=Noto+Serif&family=Noto+Serif+JP&family=Noto+Serif+KR&family=Noto+Serif+SC:wght@500&family=Noto+Serif+TC&family=Jomhuria&&family=Big+Shoulders+Display:wght@800&display=swap
+https://grafana.valve.org/steam/d/d03d8518-eccd-4a49-96bc-480f87e6faf5/marketing-message-prioritization?orgId=2&refresh=1m&from=now-3h&to=now
 https://help.steampowered.com
 https://help.steampowered.com/
 https://help.steampowered.com/#HelpWithEconTrading
@@ -3296,7 +3298,7 @@ url( ${IMG_URL}springcleaning22/keyart.jpg )
 url( ${IMG_URL}springcleaning22/list.jpg )
 url( ${IMG_URL}units/${name}.png )
 url( '${thumb_url}' )
-url(${IMG_URL}yearinreview/${}/steamDeckBackground.jpg)
+url(${IMG_URL}yearinreview/steamDeckBackground.jpg)
 url(${avatar_full_url})
 url(${dataUrl})
 url(${preview_url})

@@ -1326,14 +1326,40 @@ html.responsive.touch .yircomponents_TopGameBlockContainer_1o-Oa {
   .yircomponents_GameLink_3qV5g {
   background: rgba(255, 255, 255, 0.1);
   color: rgba(255, 255, 255, 0.6);
-  padding: 7px 12px;
+  padding: 12px;
   border-radius: 3px;
   margin-right: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .yircomponents_StandardInfoCtn_qUC7C
   .yircomponents_InfoContainer_30H7n
   .yircomponents_GameLinks_1OZ4w
   .yircomponents_GameLink_3qV5g:hover {
+  background: rgba(255, 255, 255, 0.3);
+  color: #fff;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+}
+.yircomponents_StandardInfoCtn_qUC7C
+  .yircomponents_InfoContainer_30H7n
+  .yircomponents_GameLinks_1OZ4w
+  .yircomponents_AddToWishlist_2uHs7 {
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.6);
+  padding: 12px;
+  border-radius: 3px;
+  margin-right: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+.yircomponents_StandardInfoCtn_qUC7C
+  .yircomponents_InfoContainer_30H7n
+  .yircomponents_GameLinks_1OZ4w
+  .yircomponents_AddToWishlist_2uHs7:hover {
   background: rgba(255, 255, 255, 0.3);
   color: #fff;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
