@@ -4,8 +4,8 @@ __TEXT
 %
 __text
 __TEXT
-@d
-@d
+d
+d
 __stubs
 __TEXT
 __stub_helper
@@ -15,12 +15,14 @@ __TEXT
 __gcc_except_tab__TEXT
 __const
 __TEXT
-`n"
-`n"
+@n"
+@n"
 __objc_methname
 __TEXT
 __unwind_info
 __TEXT
+| $
+| $
 __DATA
 %
 %
@@ -104,7 +106,7 @@ h
 /usr/lib/libobjc.A.dylib
 &
 )
-S.
+(S.
 22CJSCallbackFunc_HTMLJS
 15CJSCallbackFunc
 11CRefCountedI20CRefCountServiceBaseILb1E6CRefMTEE
@@ -2091,7 +2093,7 @@ none
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/friendsuihelpers.cpp
 IsARM() || GetCPUInformation().m_bSSE2
 GetBootstrapperVersion
-IVRSteamPrivate_016
+IVRSteamPrivate_017
 resolve
 reject
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/refcount.h
@@ -5310,6 +5312,7 @@ k_EChatInstanceFlagClan & steamIDChat.GetUnAccountInstance()
 0
 -
 -
+j
 $
 $
 
@@ -5320,21 +5323,19 @@ $
 
 #
 x
-~
 #
+e#
 "
 @
 "
-*
 x
-M!
-N!
 p
 0
 p
 0
 p
 0
+3!
 p
 0
 p
@@ -5391,11 +5392,13 @@ IcE
 @
 V
 =
+7$
 =
 !
 "
 @
 &
+N!
 @
 M9e
 @

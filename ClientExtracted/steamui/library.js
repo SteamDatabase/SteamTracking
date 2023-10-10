@@ -1,4 +1,4 @@
-var CLSTAMP = "8396535";
+var CLSTAMP = "8407359";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -101,13 +101,13 @@ var CLSTAMP = "8396535";
           WithBottomSeparatorThick:
             "gamepaddialog_WithBottomSeparatorThick_28hmy",
           HighlightOnFocus: "gamepaddialog_HighlightOnFocus_wE4V6",
+          Clickable: "gamepaddialog_Clickable_27UVY",
+          Disabled: "gamepaddialog_Disabled_1pmyx",
+          WithBottomSeparator: "gamepaddialog_WithBottomSeparator_1lUZx",
           "ItemFocusAnim-darkerGrey":
             "gamepaddialog_ItemFocusAnim-darkerGrey_3ZRaK",
           "ItemFocusAnim-darkGrey":
             "gamepaddialog_ItemFocusAnim-darkGrey_2zfa-",
-          WithBottomSeparator: "gamepaddialog_WithBottomSeparator_1lUZx",
-          Disabled: "gamepaddialog_Disabled_1pmyx",
-          Clickable: "gamepaddialog_Clickable_27UVY",
           FieldChildrenWithIcon: "gamepaddialog_FieldChildrenWithIcon_2ZQ9w",
           FieldChildrenInner: "gamepaddialog_FieldChildrenInner_3N47t",
           FieldClickTarget: "gamepaddialog_FieldClickTarget_TN6vN",
@@ -1629,9 +1629,9 @@ var CLSTAMP = "8396535";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Oct 5 2023 : 13:57:26",
-                BUILD_TIME_UTC: "Oct 5 2023 : 20:57:26",
-                BUILD_RTIME_UTC: 1696539446,
+                BUILD_TIME_LOCAL: "Oct 10 2023 : 13:29:19",
+                BUILD_TIME_UTC: "Oct 10 2023 : 20:29:19",
+                BUILD_RTIME_UTC: 1696969759,
               }.MOBILE_BUILD)
             ) {
               window.addEventListener("beforeunload", (e) => {
@@ -9307,7 +9307,7 @@ var CLSTAMP = "8396535";
                             ? void 0
                             : r.TriggerOverlayHapticEffect) ||
                         void 0 === i ||
-                        i.call(r, s.sH.ButtonEnter));
+                        i.call(r, s.sH.ButtonEnter, 0));
                 },
                 r = () => {
                   var t, r, i;
@@ -9330,7 +9330,7 @@ var CLSTAMP = "8396535";
                             ? void 0
                             : r.TriggerOverlayHapticEffect) ||
                         void 0 === i ||
-                        i.call(r, s.sH.ButtonLeave));
+                        i.call(r, s.sH.ButtonLeave, 0));
                 };
               return (
                 null == n || n.addEventListener("mouseenter", t),
@@ -14505,7 +14505,7 @@ var CLSTAMP = "8396535";
                   ? void 0
                   : r.TriggerOverlayHapticEffect) ||
               void 0 === i ||
-              i.call(r, e);
+              i.call(r, e, 0);
           }
           UpdateSliderValueForPosition(e) {
             var t, n;
@@ -43045,6 +43045,7 @@ var CLSTAMP = "8396535";
             useForceUpdateOnResizeObserved: () => C,
             useGlobalEventListener: () => r.JI,
             useGlobalMessageListener: () => r.vK,
+            useHovering: () => r.zZ,
             useHysteresis: () => r.yX,
             useId: () => r.Me,
             useIntersectionObserver: () => c,
@@ -43061,6 +43062,7 @@ var CLSTAMP = "8396535";
             useRefAndShareWith: () => i.ww,
             useRefCallbackWithCleanup: () => i.xK,
             useResizeObserver: () => s,
+            useScrolledToEdge: () => r.Yj,
             useSetRef: () => i.LY,
             useSubscribableValue: () => r.e1,
             useSubscribableValueCallback: () => r.U4,
@@ -43197,6 +43199,7 @@ var CLSTAMP = "8396535";
           Sd: () => m,
           U4: () => b,
           X9: () => R,
+          Yj: () => N,
           Yz: () => C,
           e1: () => _,
           eF: () => L,
@@ -43212,6 +43215,7 @@ var CLSTAMP = "8396535";
           yX: () => Z,
           yx: () => T,
           zP: () => k,
+          zZ: () => I,
         });
         var r = n(67294),
           i = n(2403);
@@ -43544,6 +43548,70 @@ var CLSTAMP = "8396535";
             }, []),
             a = [L("mousedown", o), L("touchstart", l)];
           return (0, i.BE)(...a);
+        }
+        function I() {
+          const [e, t] = r.useState(!1),
+            n = r.useCallback(() => t(!0), []),
+            o = r.useCallback(() => t(!1), []),
+            l = [L("mouseenter", n), L("mouseleave", o)];
+          return { bHovering: e, ref: (0, i.BE)(...l) };
+        }
+        function N() {
+          const e = r.useRef(),
+            t = r.useRef(!0),
+            n = r.useRef(!0),
+            o = d(),
+            l = r.useCallback(() => {
+              var r, i, l, a, s, c;
+              const C =
+                  null !==
+                    (i =
+                      null === (r = e.current) || void 0 === r
+                        ? void 0
+                        : r.scrollTop) && void 0 !== i
+                    ? i
+                    : 0,
+                u = 0 == C,
+                h =
+                  (null !==
+                    (a =
+                      null === (l = e.current) || void 0 === l
+                        ? void 0
+                        : l.scrollHeight) && void 0 !== a
+                    ? a
+                    : 0) -
+                    C ==
+                  (null !==
+                    (c =
+                      null === (s = e.current) || void 0 === s
+                        ? void 0
+                        : s.clientHeight) && void 0 !== c
+                    ? c
+                    : 0);
+              (t.current == u && n.current == h) ||
+                ((t.current = u), (n.current = h), o());
+            }, [o]),
+            a = r.useCallback(
+              (t) => {
+                (e.current = t), l();
+              },
+              [l],
+            ),
+            s = L(
+              "scroll",
+              r.useCallback(
+                (e) => {
+                  l();
+                },
+                [l],
+              ),
+            ),
+            c = (0, i.BE)(s, a);
+          return {
+            bScrolledToBeginning: t.current,
+            bScrolledToEnd: n.current,
+            ref: c,
+          };
         }
       },
       2403: (e, t, n) => {
@@ -44218,9 +44286,9 @@ var CLSTAMP = "8396535";
                 ? !{
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Oct 5 2023 : 13:57:26",
-                    BUILD_TIME_UTC: "Oct 5 2023 : 20:57:26",
-                    BUILD_RTIME_UTC: 1696539446,
+                    BUILD_TIME_LOCAL: "Oct 10 2023 : 13:29:19",
+                    BUILD_TIME_UTC: "Oct 10 2023 : 20:29:19",
+                    BUILD_RTIME_UTC: 1696969759,
                   }.MOBILE_BUILD && document.getElementById(t)
                 : t),
             r)
@@ -44775,7 +44843,7 @@ var CLSTAMP = "8396535";
       {
         27: "22b35055a4c58d3e857d",
         33: "528b8ab6922e54215c14",
-        58: "c238ac92ec36ec68392b",
+        58: "5d787933af68b95b5fa2",
         131: "6d3eb69613e6b880446d",
         146: "a062923d065b61e9a299",
         200: "0273f88a1d91abf0685e",
@@ -44876,7 +44944,7 @@ var CLSTAMP = "8396535";
         7781: "d886d7151aaf757c198c",
         7832: "9d6d3d860dea2a65797b",
         7850: "1f6f9c8e464ef14e9712",
-        7962: "97fcc6efccbe1c0e0071",
+        7962: "2273afbee98d0feadd0b",
         8011: "cd9fdcd3471ebd4fb569",
         8052: "599e7acd9c0992e33ed1",
         8085: "d90c1113606b7bae5521",
@@ -44886,7 +44954,7 @@ var CLSTAMP = "8396535";
         8282: "daf3b8e21c59e32c4c45",
         8319: "df4d5fe82d825eaa4861",
         8433: "f899bdc40e416aadd773",
-        8467: "c7a20d822938ac2441a5",
+        8467: "17318d9f2dd3e0df8f03",
         8490: "ab2f9494e3e5701b55e0",
         8778: "65cb94928bd87e330043",
         8956: "e1968dd2b853874c5de0",

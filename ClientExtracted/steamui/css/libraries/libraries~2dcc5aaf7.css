@@ -20308,11 +20308,11 @@ div:hover > .BBCodeCollapseControl {
 }
 .voicechatheadersteamdeck_VoiceChatHeader_18snG.VRDashboardBar
   .voicechatheadersteamdeck_VoiceChatStatusBackground_1zp0Z {
-  width: calc(100% + var(--side-item-padding-px) * 2);
-  margin: 0 calc(var(--side-item-padding-px) * -1);
+  width: calc(100% + var(--bar-item-padding-px) * 2);
+  margin: 0 calc(var(--bar-item-padding-px) * -1);
   transition: background-color 2s cubic-bezier(0.17, 0.45, 0.14, 0.83);
 }
-.VRDashboardBarSideItem:not(:hover)
+.VRDashboardBarItem:not(:hover)
   .voicechatheadersteamdeck_VoiceChatHeader_18snG.VRDashboardBar
   .voicechatheadersteamdeck_VoiceChatStatusBackground_1zp0Z {
   transition:

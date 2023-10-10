@@ -3528,39 +3528,34 @@ button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover:before {
 .gamepaddialog_Field_S-_La.gamepaddialog_WithDescription_3bMIS {
   padding-bottom: 10px;
 }
-.gamepaddialog_Field_S-_La.gamepaddialog_WithBottomSeparatorStandard_3s1Rk::after {
+.gamepaddialog_Field_S-_La.gamepaddialog_WithBottomSeparatorStandard_3s1Rk::after,
+.gamepaddialog_Field_S-_La.gamepaddialog_WithBottomSeparatorThick_28hmy::after {
   content: "";
   position: absolute;
+  left: var(--field-negative-horizontal-margin);
+  right: var(--field-negative-horizontal-margin);
+}
+.gamepaddialog_Field_S-_La.gamepaddialog_WithBottomSeparatorStandard_3s1Rk::after {
   bottom: -0.5px;
-  left: 0;
-  right: 0;
   height: 1px;
   background: #23262e;
 }
 .gamepaddialog_Field_S-_La.gamepaddialog_WithBottomSeparatorThick_28hmy::after {
-  content: "";
-  position: absolute;
   bottom: -0.75px;
-  left: 0;
-  right: 0;
   height: 1.5px;
   background: #23262e;
 }
 .gamepaddialog_GamepadDialogContent_3joNk .gamepaddialog_Field_S-_La {
   --field-negative-horizontal-margin: 2.8vw;
 }
-.gamepaddialog_GamepadDialogContent_3joNk .gamepaddialog_Field_S-_La::after {
-  left: 2.8vw;
-  right: 2.8vw;
-}
 .gamepaddialog_Field_S-_La.gamepaddialog_HighlightOnFocus_wE4V6.gpfocus,
-.gamepaddialog_Field_S-_La.gamepaddialog_HighlightOnFocus_wE4V6.gpfocuswithin {
+.gamepaddialog_Field_S-_La.gamepaddialog_HighlightOnFocus_wE4V6.gpfocuswithin,
+.gamepaddialog_Field_S-_La.gamepaddialog_Clickable_27UVY:not(
+    .gamepaddialog_Disabled_1pmyx
+  ):hover {
   outline: none;
   background: #3d4450;
   color: #fff;
-  animation-name: gamepaddialog_ItemFocusAnim-darkerGrey_3ZRaK;
-  z-index: 1;
-  animation-name: gamepaddialog_ItemFocusAnim-darkGrey_2zfa-;
 }
 .gamepaddialog_Field_S-_La.gamepaddialog_WithBottomSeparator_1lUZx
   + .gamepaddialog_Field_S-_La.gamepaddialog_HighlightOnFocus_wE4V6.gpfocus,
@@ -3575,20 +3570,46 @@ button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover:before {
   + .gamepaddialog_Field_S-_La.gamepaddialog_HighlightOnFocus_wE4V6.gpfocuswithin,
 .gamepaddialog_GamepadDialogContent_3joNk
   .DialogControlsSectionHeader
-  + .gamepaddialog_Field_S-_La.gamepaddialog_HighlightOnFocus_wE4V6.gpfocuswithin {
+  + .gamepaddialog_Field_S-_La.gamepaddialog_HighlightOnFocus_wE4V6.gpfocuswithin,
+.gamepaddialog_Field_S-_La.gamepaddialog_WithBottomSeparator_1lUZx
+  + .gamepaddialog_Field_S-_La.gamepaddialog_Clickable_27UVY:not(
+    .gamepaddialog_Disabled_1pmyx
+  ):hover,
+.gamepaddialog_StandaloneFieldSeparator_23kNb
+  + .gamepaddialog_Field_S-_La.gamepaddialog_Clickable_27UVY:not(
+    .gamepaddialog_Disabled_1pmyx
+  ):hover,
+.gamepaddialog_GamepadDialogContent_3joNk
+  .DialogControlsSectionHeader
+  + .gamepaddialog_Field_S-_La.gamepaddialog_Clickable_27UVY:not(
+    .gamepaddialog_Disabled_1pmyx
+  ):hover {
   margin-top: -1px;
   border-top: solid 1px transparent;
 }
 .gamepaddialog_Field_S-_La.gamepaddialog_Field_S-_La.gamepaddialog_WithBottomSeparatorThick_28hmy
   + .gamepaddialog_Field_S-_La.gamepaddialog_HighlightOnFocus_wE4V6.gpfocus,
 .gamepaddialog_Field_S-_La.gamepaddialog_Field_S-_La.gamepaddialog_WithBottomSeparatorThick_28hmy
-  + .gamepaddialog_Field_S-_La.gamepaddialog_HighlightOnFocus_wE4V6.gpfocuswithin {
+  + .gamepaddialog_Field_S-_La.gamepaddialog_HighlightOnFocus_wE4V6.gpfocuswithin,
+.gamepaddialog_Field_S-_La.gamepaddialog_Field_S-_La.gamepaddialog_WithBottomSeparatorThick_28hmy
+  + .gamepaddialog_Field_S-_La.gamepaddialog_Clickable_27UVY:not(
+    .gamepaddialog_Disabled_1pmyx
+  ):hover {
   margin-top: -1.5px;
   border-top: solid 1.5px transparent;
 }
 .gamepaddialog_Field_S-_La.gamepaddialog_HighlightOnFocus_wE4V6.gpfocus::after,
-.gamepaddialog_Field_S-_La.gamepaddialog_HighlightOnFocus_wE4V6.gpfocuswithin::after {
+.gamepaddialog_Field_S-_La.gamepaddialog_HighlightOnFocus_wE4V6.gpfocuswithin::after,
+.gamepaddialog_Field_S-_La.gamepaddialog_Clickable_27UVY:not(
+    .gamepaddialog_Disabled_1pmyx
+  ):hover::after {
   display: none;
+}
+.gamepaddialog_Field_S-_La.gamepaddialog_HighlightOnFocus_wE4V6.gpfocus,
+.gamepaddialog_Field_S-_La.gamepaddialog_HighlightOnFocus_wE4V6.gpfocuswithin {
+  animation-name: gamepaddialog_ItemFocusAnim-darkerGrey_3ZRaK;
+  z-index: 1;
+  animation-name: gamepaddialog_ItemFocusAnim-darkGrey_2zfa-;
 }
 .gamepaddialog_Field_S-_La.gamepaddialog_Disabled_1pmyx {
   cursor: default;

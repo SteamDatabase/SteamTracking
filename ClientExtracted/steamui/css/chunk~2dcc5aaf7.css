@@ -3828,21 +3828,20 @@ button.controllerconfiguratormapping_Button_hv-G3.DialogButton:enabled:active:ho
 .controllerconfiguratormapping_Field_1LWDA.controllerconfiguratormapping_WithDescription_bqskV {
   padding-bottom: 10px;
 }
-.controllerconfiguratormapping_Field_1LWDA.controllerconfiguratormapping_WithBottomSeparatorStandard_3LbbG::after {
+.controllerconfiguratormapping_Field_1LWDA.controllerconfiguratormapping_WithBottomSeparatorStandard_3LbbG::after,
+.controllerconfiguratormapping_Field_1LWDA.controllerconfiguratormapping_WithBottomSeparatorThick_3cyUx::after {
   content: "";
   position: absolute;
+  left: var(--field-negative-horizontal-margin);
+  right: var(--field-negative-horizontal-margin);
+}
+.controllerconfiguratormapping_Field_1LWDA.controllerconfiguratormapping_WithBottomSeparatorStandard_3LbbG::after {
   bottom: -0.5px;
-  left: 0;
-  right: 0;
   height: 1px;
   background: #23262e;
 }
 .controllerconfiguratormapping_Field_1LWDA.controllerconfiguratormapping_WithBottomSeparatorThick_3cyUx::after {
-  content: "";
-  position: absolute;
   bottom: -0.75px;
-  left: 0;
-  right: 0;
   height: 1.5px;
   background: #23262e;
 }
@@ -3850,19 +3849,14 @@ button.controllerconfiguratormapping_Button_hv-G3.DialogButton:enabled:active:ho
   .controllerconfiguratormapping_Field_1LWDA {
   --field-negative-horizontal-margin: 2.8vw;
 }
-.controllerconfiguratormapping_GamepadDialogContent_31tKG
-  .controllerconfiguratormapping_Field_1LWDA::after {
-  left: 2.8vw;
-  right: 2.8vw;
-}
 .controllerconfiguratormapping_Field_1LWDA.controllerconfiguratormapping_HighlightOnFocus_YgnZY.gpfocus,
-.controllerconfiguratormapping_Field_1LWDA.controllerconfiguratormapping_HighlightOnFocus_YgnZY.gpfocuswithin {
+.controllerconfiguratormapping_Field_1LWDA.controllerconfiguratormapping_HighlightOnFocus_YgnZY.gpfocuswithin,
+.controllerconfiguratormapping_Field_1LWDA.controllerconfiguratormapping_Clickable_15S9p:not(
+    .controllerconfiguratormapping_Disabled_hBJA7
+  ):hover {
   outline: none;
   background: #3d4450;
   color: #fff;
-  animation-name: controllerconfiguratormapping_ItemFocusAnim-darkerGrey_NuxqQ;
-  z-index: 1;
-  animation-name: controllerconfiguratormapping_ItemFocusAnim-darkGrey_14t35;
 }
 .controllerconfiguratormapping_Field_1LWDA.controllerconfiguratormapping_WithBottomSeparator_3gLBn
   + .controllerconfiguratormapping_Field_1LWDA.controllerconfiguratormapping_HighlightOnFocus_YgnZY.gpfocus,
@@ -3877,20 +3871,46 @@ button.controllerconfiguratormapping_Button_hv-G3.DialogButton:enabled:active:ho
   + .controllerconfiguratormapping_Field_1LWDA.controllerconfiguratormapping_HighlightOnFocus_YgnZY.gpfocuswithin,
 .controllerconfiguratormapping_GamepadDialogContent_31tKG
   .DialogControlsSectionHeader
-  + .controllerconfiguratormapping_Field_1LWDA.controllerconfiguratormapping_HighlightOnFocus_YgnZY.gpfocuswithin {
+  + .controllerconfiguratormapping_Field_1LWDA.controllerconfiguratormapping_HighlightOnFocus_YgnZY.gpfocuswithin,
+.controllerconfiguratormapping_Field_1LWDA.controllerconfiguratormapping_WithBottomSeparator_3gLBn
+  + .controllerconfiguratormapping_Field_1LWDA.controllerconfiguratormapping_Clickable_15S9p:not(
+    .controllerconfiguratormapping_Disabled_hBJA7
+  ):hover,
+.controllerconfiguratormapping_StandaloneFieldSeparator_2lHtc
+  + .controllerconfiguratormapping_Field_1LWDA.controllerconfiguratormapping_Clickable_15S9p:not(
+    .controllerconfiguratormapping_Disabled_hBJA7
+  ):hover,
+.controllerconfiguratormapping_GamepadDialogContent_31tKG
+  .DialogControlsSectionHeader
+  + .controllerconfiguratormapping_Field_1LWDA.controllerconfiguratormapping_Clickable_15S9p:not(
+    .controllerconfiguratormapping_Disabled_hBJA7
+  ):hover {
   margin-top: -1px;
   border-top: solid 1px transparent;
 }
 .controllerconfiguratormapping_Field_1LWDA.controllerconfiguratormapping_Field_1LWDA.controllerconfiguratormapping_WithBottomSeparatorThick_3cyUx
   + .controllerconfiguratormapping_Field_1LWDA.controllerconfiguratormapping_HighlightOnFocus_YgnZY.gpfocus,
 .controllerconfiguratormapping_Field_1LWDA.controllerconfiguratormapping_Field_1LWDA.controllerconfiguratormapping_WithBottomSeparatorThick_3cyUx
-  + .controllerconfiguratormapping_Field_1LWDA.controllerconfiguratormapping_HighlightOnFocus_YgnZY.gpfocuswithin {
+  + .controllerconfiguratormapping_Field_1LWDA.controllerconfiguratormapping_HighlightOnFocus_YgnZY.gpfocuswithin,
+.controllerconfiguratormapping_Field_1LWDA.controllerconfiguratormapping_Field_1LWDA.controllerconfiguratormapping_WithBottomSeparatorThick_3cyUx
+  + .controllerconfiguratormapping_Field_1LWDA.controllerconfiguratormapping_Clickable_15S9p:not(
+    .controllerconfiguratormapping_Disabled_hBJA7
+  ):hover {
   margin-top: -1.5px;
   border-top: solid 1.5px transparent;
 }
 .controllerconfiguratormapping_Field_1LWDA.controllerconfiguratormapping_HighlightOnFocus_YgnZY.gpfocus::after,
-.controllerconfiguratormapping_Field_1LWDA.controllerconfiguratormapping_HighlightOnFocus_YgnZY.gpfocuswithin::after {
+.controllerconfiguratormapping_Field_1LWDA.controllerconfiguratormapping_HighlightOnFocus_YgnZY.gpfocuswithin::after,
+.controllerconfiguratormapping_Field_1LWDA.controllerconfiguratormapping_Clickable_15S9p:not(
+    .controllerconfiguratormapping_Disabled_hBJA7
+  ):hover::after {
   display: none;
+}
+.controllerconfiguratormapping_Field_1LWDA.controllerconfiguratormapping_HighlightOnFocus_YgnZY.gpfocus,
+.controllerconfiguratormapping_Field_1LWDA.controllerconfiguratormapping_HighlightOnFocus_YgnZY.gpfocuswithin {
+  animation-name: controllerconfiguratormapping_ItemFocusAnim-darkerGrey_NuxqQ;
+  z-index: 1;
+  animation-name: controllerconfiguratormapping_ItemFocusAnim-darkGrey_14t35;
 }
 .controllerconfiguratormapping_Field_1LWDA.controllerconfiguratormapping_Disabled_hBJA7 {
   cursor: default;
@@ -28741,7 +28761,7 @@ img.broadcastplayer_BroadcastPlaceholderImg_3Hcqn {
   line-height: 10px;
 }
 :root {
-  --side-item-padding-pct: 0;
+  --bar-item-padding-pct: 0;
 }
 .vrdashboard_DashboardBar_3nkwN {
   background: rgba(14, 20, 27, 0.98);
@@ -28777,22 +28797,22 @@ img.broadcastplayer_BroadcastPlaceholderImg_3Hcqn {
   .vrdashboard_SideSectionInner_1_JdU {
   justify-content: flex-end;
 }
-.vrdashboard_SideItem_2gWdl {
+.vrdashboard_Item_XlWw9 {
   display: flex;
   padding: 0 0.2ch;
   font-size: 24px;
   color: #8b929a;
 }
-.vrdashboard_SideItem_2gWdl.vrdashboard_Clickable_bMtzo {
+.vrdashboard_Item_XlWw9.vrdashboard_Clickable_bMtzo {
   cursor: pointer;
 }
-.vrdashboard_SideItem_2gWdl:first-child {
+.vrdashboard_SideSectionInner_1_JdU > .vrdashboard_Item_XlWw9:first-child {
   padding-left: 22px;
 }
-.vrdashboard_SideItem_2gWdl:last-child {
+.vrdashboard_SideSectionInner_1_JdU > .vrdashboard_Item_XlWw9:last-child {
   padding-right: 22px;
 }
-.vrdashboard_SideItem_2gWdl .vrdashboard_Highlight_359ci {
+.vrdashboard_Item_XlWw9 .vrdashboard_Highlight_359ci {
   margin: auto;
   height: 2em;
   min-width: 2em;
@@ -28805,7 +28825,7 @@ img.broadcastplayer_BroadcastPlaceholderImg_3Hcqn {
   transition: color 0.15s ease-out;
   color: #8b929a;
 }
-.vrdashboard_SideItem_2gWdl .vrdashboard_Highlight_359ci::before {
+.vrdashboard_Item_XlWw9 .vrdashboard_Highlight_359ci::before {
   content: "";
   position: absolute;
   left: 0;
@@ -28822,19 +28842,22 @@ img.broadcastplayer_BroadcastPlaceholderImg_3Hcqn {
     background-color 0.15s ease-out,
     transform 0.15s ease-out;
 }
-.vrdashboard_SideItem_2gWdl .vrdashboard_Highlight_359ci > * {
+.vrdashboard_Item_XlWw9 .vrdashboard_Highlight_359ci > * {
   z-index: 1;
+}
+.vrdashboard_AddWindowButton_2fYGN .vrdashboard_Highlight_359ci {
+  transform: scale(0.7);
 }
 @keyframes vrdashboard_ClickPop_2ed6- {
   5% {
     transform: scale(1.1);
   }
 }
-.vrdashboard_SideItem_2gWdl .vrdashboard_Inner_1B9Kf {
-  --side-item-padding-px: calc(24px * 0.75 * var(--side-item-padding-pct));
+.vrdashboard_Item_XlWw9 .vrdashboard_Inner_1B9Kf {
+  --bar-item-padding-px: calc(24px * 0.75 * var(--bar-item-padding-pct));
   min-width: 2em;
   height: 2em;
-  padding: 0 var(--side-item-padding-px);
+  padding: 0 var(--bar-item-padding-px);
   font-size: 24px;
   display: flex;
   white-space: nowrap;
@@ -28844,38 +28867,37 @@ img.broadcastplayer_BroadcastPlaceholderImg_3Hcqn {
   justify-content: center;
   transition: transform 0.15s ease-out;
 }
-.vrdashboard_SideItem_2gWdl.vrdashboard_ClickAnimation_1yDRG
+.vrdashboard_Item_XlWw9.vrdashboard_ClickAnimation_1yDRG
   .vrdashboard_Inner_1B9Kf {
   animation: vrdashboard_ClickPop_2ed6- 0.8s;
   animation-iteration-count: infinite;
   animation-fill-mode: both;
 }
-.vrdashboard_SideItem_2gWdl.vrdashboard_Active_2s3ct
-  .vrdashboard_Highlight_359ci {
+.vrdashboard_Item_XlWw9.vrdashboard_Active_2s3ct .vrdashboard_Highlight_359ci {
   color: #0e141b;
 }
-.vrdashboard_SideItem_2gWdl.vrdashboard_Active_2s3ct
+.vrdashboard_Item_XlWw9.vrdashboard_Active_2s3ct
   .vrdashboard_Highlight_359ci::before {
   background-color: #dcdedf;
   opacity: 0.5;
 }
-.vrdashboard_SideItem_2gWdl.vrdashboard_Clickable_bMtzo:not(
+.vrdashboard_Item_XlWw9.vrdashboard_Clickable_bMtzo:not(
     .vrdashboard_Active_2s3ct
   ):hover
   .vrdashboard_Highlight_359ci {
   color: #fff;
 }
-.vrdashboard_SideItem_2gWdl.vrdashboard_Clickable_bMtzo:not(
+.vrdashboard_Item_XlWw9.vrdashboard_Clickable_bMtzo:not(
     .vrdashboard_Active_2s3ct
   ):hover
   .vrdashboard_Highlight_359ci::before {
   opacity: 0.5;
 }
-.vrdashboard_SideItem_2gWdl.vrdashboard_Clickable_bMtzo:not(
+.vrdashboard_Item_XlWw9.vrdashboard_Clickable_bMtzo:not(
     .vrdashboard_Active_2s3ct
   ):hover
   .vrdashboard_Highlight_359ci,
-.vrdashboard_SideItem_2gWdl.vrdashboard_Clickable_bMtzo:not(
+.vrdashboard_Item_XlWw9.vrdashboard_Clickable_bMtzo:not(
     .vrdashboard_Active_2s3ct
   ):hover
   .vrdashboard_Highlight_359ci::before {
@@ -28884,36 +28906,36 @@ img.broadcastplayer_BroadcastPlaceholderImg_3Hcqn {
     background-color 0.45s ease-out,
     transform 0.15s ease-out;
 }
-.vrdashboard_SideItem_2gWdl.vrdashboard_Clickable_bMtzo.vrdashboard_Active_2s3ct:hover
+.vrdashboard_Item_XlWw9.vrdashboard_Clickable_bMtzo.vrdashboard_Active_2s3ct:hover
   .vrdashboard_Highlight_359ci {
   color: #000;
 }
-.vrdashboard_SideItem_2gWdl.vrdashboard_Clickable_bMtzo.vrdashboard_Active_2s3ct:hover
+.vrdashboard_Item_XlWw9.vrdashboard_Clickable_bMtzo.vrdashboard_Active_2s3ct:hover
   .vrdashboard_Highlight_359ci::before {
   background-color: #fff;
   opacity: 0.8;
 }
-.vrdashboard_SideItem_2gWdl.vrdashboard_Clickable_bMtzo.vrdashboard_Active_2s3ct:hover
+.vrdashboard_Item_XlWw9.vrdashboard_Clickable_bMtzo.vrdashboard_Active_2s3ct:hover
   .vrdashboard_Highlight_359ci,
-.vrdashboard_SideItem_2gWdl.vrdashboard_Clickable_bMtzo.vrdashboard_Active_2s3ct:hover
+.vrdashboard_Item_XlWw9.vrdashboard_Clickable_bMtzo.vrdashboard_Active_2s3ct:hover
   .vrdashboard_Highlight_359ci::before {
   transition:
     opacity 0,
     background-color 1.5s ease-out,
     transform 0.15s ease-out;
 }
-.vrdashboard_SideItem_2gWdl.vrdashboard_Clickable_bMtzo:active
+.vrdashboard_Item_XlWw9.vrdashboard_Clickable_bMtzo:active
   .vrdashboard_Inner_1B9Kf {
   transform: scale(0.9);
   transition-duration: 0s;
 }
-.vrdashboard_SideItem_2gWdl.vrdashboard_Clickable_bMtzo:not(
+.vrdashboard_Item_XlWw9.vrdashboard_Clickable_bMtzo:not(
     .vrdashboard_Active_2s3ct
   ):active
   .vrdashboard_Highlight_359ci {
   color: #fff;
 }
-.vrdashboard_SideItem_2gWdl.vrdashboard_Clickable_bMtzo:not(
+.vrdashboard_Item_XlWw9.vrdashboard_Clickable_bMtzo:not(
     .vrdashboard_Active_2s3ct
   ):active
   .vrdashboard_Highlight_359ci::before {
@@ -28921,17 +28943,17 @@ img.broadcastplayer_BroadcastPlaceholderImg_3Hcqn {
   transform: scale(1);
   transition: none;
 }
-.vrdashboard_SideItem_2gWdl.vrdashboard_Clickable_bMtzo.vrdashboard_Active_2s3ct:active
+.vrdashboard_Item_XlWw9.vrdashboard_Clickable_bMtzo.vrdashboard_Active_2s3ct:active
   .vrdashboard_Highlight_359ci {
   color: #000;
 }
-.vrdashboard_SideItem_2gWdl.vrdashboard_Clickable_bMtzo.vrdashboard_Active_2s3ct:active
+.vrdashboard_Item_XlWw9.vrdashboard_Clickable_bMtzo.vrdashboard_Active_2s3ct:active
   .vrdashboard_Highlight_359ci::before {
   opacity: 1;
   transform: scale(1);
   transition: none;
 }
-.vrdashboard_SideItem_2gWdl svg {
+.vrdashboard_Item_XlWw9 svg {
   height: 1em;
   width: auto;
 }
@@ -29087,14 +29109,54 @@ img.broadcastplayer_BroadcastPlaceholderImg_3Hcqn {
 }
 .vrdashboard_DashboardBarPopupList_2xVtD {
   width: fit-content;
-  padding: 10px 0;
 }
-.vrdashboard_DashboardBarPopupListItem_1LhEM {
-  padding: 0 20px;
+.vrdashboard_DashboardBarPopupList_2xVtD::before,
+.vrdashboard_DashboardBarPopupList_2xVtD::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  z-index: 9001;
+  height: 0;
+  box-shadow: 0 0 40px 40px #0e141b;
+  transition: opacity 0.15s ease-out;
+  pointer-events: none;
 }
-.vrdashboard_DashboardBarPopupListItem_1LhEM.vrdashboard_Clickable_bMtzo:hover {
-  background: #23262e;
-  color: #fff;
+.vrdashboard_DashboardBarPopupList_2xVtD::before {
+  top: 0;
+}
+.vrdashboard_DashboardBarPopupList_2xVtD::after {
+  bottom: 0;
+}
+.vrdashboard_DashboardBarPopupList_2xVtD:not(
+    .vrdashboard_FadeTop_e3KJZ
+  )::before {
+  opacity: 0;
+}
+.vrdashboard_DashboardBarPopupList_2xVtD:not(
+    .vrdashboard_FadeBottom_3RatN
+  )::after {
+  opacity: 0;
+}
+.vrdashboard_DashboardBarPopupListItem_1LhEM .vrdashboard_Icon_3Onmf {
+  width: 1em;
+  height: 1em;
+  display: flex;
+  pointer-events: none;
+}
+.vrdashboard_DashboardBarPopupListItem_1LhEM .vrdashboard_Icon_3Onmf img,
+.vrdashboard_DashboardBarPopupListItem_1LhEM .vrdashboard_Icon_3Onmf svg {
+  margin: auto;
+  height: 100%;
+  max-width: 100%;
+  width: auto;
+}
+.vrdashboard_DashboardBarPopupListScrollPanel_2FZi2 {
+  width: fit-content;
+  padding: 10px 20px;
+  --field-negative-horizontal-margin: 20px;
+  overflow-y: auto;
+  position: relative;
 }
 @keyframes gamepadui_ItemFocusAnim-darkerGrey-nocolor_2K5n7 {
   from {
@@ -29532,6 +29594,20 @@ body.gamepadui_SteamUIPopupWindowBody_QsvsR
     -webkit-mask-size: 100%;
   }
 }
+.marquee_Container_26RbF.marquee_Marquee_2yQMJ.marquee_Playing_1Xpsr {
+  animation-play-state: running;
+}
+.marquee_Container_26RbF.marquee_Marquee_2yQMJ:not(
+    .marquee_Playing_1Xpsr
+  ).marquee_ResetOnPause_1k-XZ {
+  animation-name: marquee_none_30M9S;
+  -webkit-mask-size: calc(100% + var(--fade-length-left)), 100%;
+}
+.marquee_Container_26RbF.marquee_Marquee_2yQMJ:not(.marquee_Playing_1Xpsr):not(
+    .marquee_ResetOnPause_1k-XZ
+  ) {
+  animation-play-state: paused;
+}
 .marquee_Content_2ADpT {
   flex: 0 0 auto;
   z-index: 1;
@@ -29548,7 +29624,7 @@ body.gamepadui_SteamUIPopupWindowBody_QsvsR
   animation-name: marquee_scroll_EGDyl;
   animation-duration: var(--duration);
   animation-iteration-count: infinite;
-  animation-delay: var(--delay);
+  animation-delay: calc(var(--delay) + 0.25s);
   animation-direction: var(--direction);
   animation-play-state: var(--play);
   animation-timing-function: linear;
@@ -75331,6 +75407,9 @@ img.mainmenuapprunning_CurrentGameLogo_3V3VK {
     background-position: 50% 0%;
   }
 }
+.notificationcontent_StandardTemplateContainer_1hFrV {
+  cursor: pointer;
+}
 .notificationcontent_StandardTemplateContainer_1hFrV:hover,
 .notificationcontent_StandardTemplateContainer_1hFrV.gpfocus {
   background-color: #3d4450;
@@ -75527,6 +75606,7 @@ img.mainmenuapprunning_CurrentGameLogo_3V3VK {
 }
 .notificationcontent_PinnedTemplate_1X-O1 {
   height: 16px;
+  cursor: pointer;
 }
 .notificationcontent_PinnedTemplate_1X-O1
   .notificationcontent_PinnedBody_3V6Rp {
@@ -76732,6 +76812,9 @@ img.mainmenuapprunning_CurrentGameLogo_3V3VK {
     background-position: 50% 0%;
   }
 }
+.standardtemplates_StandardTemplateContainer_1adpx {
+  cursor: pointer;
+}
 .standardtemplates_StandardTemplateContainer_1adpx:hover,
 .standardtemplates_StandardTemplateContainer_1adpx.gpfocus {
   background-color: #3d4450;
@@ -76923,6 +77006,7 @@ img.mainmenuapprunning_CurrentGameLogo_3V3VK {
 }
 .standardtemplates_PinnedTemplate_2eBei {
   height: 16px;
+  cursor: pointer;
 }
 .standardtemplates_PinnedTemplate_2eBei .standardtemplates_PinnedBody_1Ljgv {
   display: flex;
@@ -77693,6 +77777,9 @@ img.mainmenuapprunning_CurrentGameLogo_3V3VK {
     background-position: 50% 0%;
   }
 }
+.shorttemplates_StandardTemplateContainer_3y65Y {
+  cursor: pointer;
+}
 .shorttemplates_StandardTemplateContainer_3y65Y:hover,
 .shorttemplates_StandardTemplateContainer_3y65Y.gpfocus {
   background-color: #3d4450;
@@ -77880,6 +77967,7 @@ img.mainmenuapprunning_CurrentGameLogo_3V3VK {
 }
 .shorttemplates_PinnedTemplate_3T_a6 {
   height: 16px;
+  cursor: pointer;
 }
 .shorttemplates_PinnedTemplate_3T_a6 .shorttemplates_PinnedBody_a6Bjh {
   display: flex;
@@ -78708,6 +78796,9 @@ img.mainmenuapprunning_CurrentGameLogo_3V3VK {
     background-position: 50% 0%;
   }
 }
+.steamtemplates_StandardTemplateContainer_3zt0r {
+  cursor: pointer;
+}
 .steamtemplates_StandardTemplateContainer_3zt0r:hover,
 .steamtemplates_StandardTemplateContainer_3zt0r.gpfocus {
   background-color: #3d4450;
@@ -78895,6 +78986,7 @@ img.mainmenuapprunning_CurrentGameLogo_3V3VK {
 }
 .steamtemplates_PinnedTemplate_F_L0c {
   height: 16px;
+  cursor: pointer;
 }
 .steamtemplates_PinnedTemplate_F_L0c .steamtemplates_PinnedBody_2YrM_ {
   display: flex;
@@ -108715,6 +108807,7 @@ svg.steamtemplates_FriendIndicator_suNJh .Outline {
   min-height: 48px;
   scroll-margin: 64px;
   overflow: hidden;
+  cursor: pointer;
   color: #8b929a;
   background-color: #0e141b;
   outline: none;
