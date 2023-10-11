@@ -438,8 +438,8 @@ Steam
 steamwebhelper
 Steam Helper
 cefwebhelper
-Oct 10 2023
-13:33:25
+Oct 11 2023
+12:02:46
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 CatchAndWriteContext_t::Invoke with bogus argc/argv
@@ -1844,13 +1844,13 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
+jXg^C
 [l=M
 b:IjE
 ld:7
 1G2;
 (`@,w
 /T1C
-_*j8
 {R2$k2k
 w$#{
 v"^Xt
@@ -1860,7 +1860,6 @@ subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-tx+	
 7zh6
 Nfn2
 	+D#
@@ -1872,7 +1871,6 @@ ZWJ]F
 uQ+=
 QS>w	IXx%
 2 #s
-Dbz3
 rh#m
 ~@`s
 =Eos h
@@ -1933,8 +1931,7 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231010203326Z0/
- 'Mo
+231011190248Z0/
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -1942,21 +1939,20 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		YqO9yWcCqgdon9RF/uPW74f74JQ=
+		Q9V+1RqoML8emr0X/Ufli5p8d/E=
 		</data>
 		<data>
-		tkqDR1mAFd3GIyolz/k3U5H7NaI=
+		wZoANp4t5BkES9DR7U3TBU9Pg4k=
 		</data>
 	</array>
 </dict>
 </plist>
-[,G+D
-Teej
-oktAQ
-FS 'h
-]-TV
- /L.AQ
-20231010203401Z0
+5?`^
+O}+L`
+%\9m
+.TVd
+HQ%2
+20231011190249Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -2011,11 +2007,11 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231010203401Z0#
-z]M1
-550+
-0v}t
-"3.V
+231011190249Z0#
+sz2_
+8+xy;A
+42].(
+jCV>`5
 __TEXT
 __text
 __TEXT
@@ -2767,8 +2763,8 @@ Steam
 steamwebhelper
 Steam Helper
 cefwebhelper
-Oct 10 2023
-13:33:25
+Oct 11 2023
+12:02:47
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 CatchAndWriteContext_t::Invoke with bogus argc/argv
@@ -4232,9 +4228,8 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231010203326Z0/
-O>Tn
-s`>gSB
+231011190248Z0/
+zd0-
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -4242,18 +4237,19 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		epXmcW3sQPdVOcjd58Tgu+iV6rs=
+		EyjVW2seEFPY4WuXMrpcPJnpemQ=
 		</data>
 		<data>
-		Ia/Mrr49GQ9zYD5nU0LmTcrnMVM=
+		olMWBj5CE9RaLgqTGhkYI2cTJ8k=
 		</data>
 	</array>
 </dict>
 </plist>
-gAI.}
-&qK2l
-~2)1
-20231010203401Z0
+9y0^
+mR7f
+op&kp3
+P+p$
+20231011190249Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -4312,11 +4308,11 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231010203401Z0#
-47	zIl
-zX52_
-;W@J
-zhez6
+231011190249Z0#
+jnho+Mn
+HRDVE
+3/g(z
+?~7	$j
 __TEXT
 __text
 __TEXT
@@ -4538,8 +4534,8 @@ Steam
 steamwebhelper
 Steam Helper
 cefwebhelper
-Oct 10 2023
-13:33:25
+Oct 11 2023
+12:02:47
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 CatchAndWriteContext_t::Invoke with bogus argc/argv
@@ -6004,8 +6000,9 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231010203326Z0/
-'6aW
+231011190248Z0/
+ZRO0[
+zrGf
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -6013,21 +6010,18 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		lgS235jYtDTGxgGZqzCmD+9pO5Q=
+		Mn+pImwEA5Scu3pyR2bfGFQZz0U=
 		</data>
 		<data>
-		E6xpFnKQbNgnNmFXvG7VihDjo+o=
+		COQyEOstt2pK9+fgiD8AatRZmfY=
 		</data>
 	</array>
 </dict>
 </plist>
-$ q%
-8=W6
-Q]K>
-Z}\[
- omu
-kh,q
-20231010203401Z0
++#*Te
+ 3^F!
+cx7:
+20231011190249Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -6086,7 +6080,6 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231010203401Z0#
-k	W3	g
--lsnSiBe
-S3EI
+231011190249Z0#
+Dqc$
++%f-u

@@ -646,6 +646,7 @@
  T SDL_GetTextureAlphaMod
  T SDL_GetTextureBlendMode
  T SDL_GetTextureColorMod
+ T SDL_GetTextureDXGIResource
  T SDL_GetTextureScaleMode
  T SDL_GetTextureUserData
  T SDL_GetThreadID

@@ -1,4 +1,4 @@
-var CLSTAMP = "8407359";
+var CLSTAMP = "8410691";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -1629,9 +1629,9 @@ var CLSTAMP = "8407359";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Oct 10 2023 : 13:29:19",
-                BUILD_TIME_UTC: "Oct 10 2023 : 20:29:19",
-                BUILD_RTIME_UTC: 1696969759,
+                BUILD_TIME_LOCAL: "Oct 11 2023 : 12:46:06",
+                BUILD_TIME_UTC: "Oct 11 2023 : 19:46:06",
+                BUILD_RTIME_UTC: 1697053566,
               }.MOBILE_BUILD)
             ) {
               window.addEventListener("beforeunload", (e) => {
@@ -9089,8 +9089,8 @@ var CLSTAMP = "8407359";
           RegisterCallbackOnPlaySound(e) {
             return this.m_fnCallbackOnPlaySound.Register(e);
           }
-          PlayNavSound(e) {
-            this.m_fnCallbackOnPlaySound.Dispatch(e);
+          PlayNavSound(e, t) {
+            this.m_fnCallbackOnPlaySound.Dispatch(e, t);
           }
         })();
       },
@@ -44286,9 +44286,9 @@ var CLSTAMP = "8407359";
                 ? !{
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Oct 10 2023 : 13:29:19",
-                    BUILD_TIME_UTC: "Oct 10 2023 : 20:29:19",
-                    BUILD_RTIME_UTC: 1696969759,
+                    BUILD_TIME_LOCAL: "Oct 11 2023 : 12:46:06",
+                    BUILD_TIME_UTC: "Oct 11 2023 : 19:46:06",
+                    BUILD_RTIME_UTC: 1697053566,
                   }.MOBILE_BUILD && document.getElementById(t)
                 : t),
             r)
@@ -44843,7 +44843,7 @@ var CLSTAMP = "8407359";
       {
         27: "22b35055a4c58d3e857d",
         33: "528b8ab6922e54215c14",
-        58: "5d787933af68b95b5fa2",
+        58: "31a1197050e8dc2cc5c7",
         131: "6d3eb69613e6b880446d",
         146: "a062923d065b61e9a299",
         200: "0273f88a1d91abf0685e",
@@ -44944,7 +44944,7 @@ var CLSTAMP = "8407359";
         7781: "d886d7151aaf757c198c",
         7832: "9d6d3d860dea2a65797b",
         7850: "1f6f9c8e464ef14e9712",
-        7962: "2273afbee98d0feadd0b",
+        7962: "7d537b4e5f7cb4d6a82d",
         8011: "cd9fdcd3471ebd4fb569",
         8052: "599e7acd9c0992e33ed1",
         8085: "d90c1113606b7bae5521",
