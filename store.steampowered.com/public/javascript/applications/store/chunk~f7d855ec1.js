@@ -2976,7 +2976,7 @@
             a.e(72),
             a.e(1979),
             a.e(4601),
-          ]).then(a.bind(a, 28388)),
+          ]).then(a.bind(a, 7671)),
         ),
         Ke = (e) => {
           const t = (0, r.useRef)(null),

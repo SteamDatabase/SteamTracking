@@ -1691,6 +1691,7 @@ ${linkURL}${previd}${nextAppend}/?${linkAppend}
 ${linkurl}${}
 ${m_creatorURL}list/${listid}
 ${m_strActionURL}${action}/
+${m_strBaseURL}${strClosedCaptionFile}
 ${m_strBaseURL}${}
 ${m_strBaseURL}/actions/EmoticonList
 ${m_strBaseURL}/app/${appid}/broadcasts

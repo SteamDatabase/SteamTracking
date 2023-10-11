@@ -5195,6 +5195,9 @@
         GetThumbnailForTimestamp(e) {
           return "";
         }
+        BHasTimedText() {
+          return !1;
+        }
       }
       (0, a.gn)([g.a], y.prototype, "PlayWebRTC", null),
         (0, a.gn)([s.aD.bound], y.prototype, "CaptureStatsForDisplay", null),
@@ -5967,6 +5970,15 @@
         GetBroadcastInfo() {
           return this.m_BroadcastInfo;
         }
+        BHasTimedText() {
+          var e;
+          return null === (e = this.m_player) || void 0 === e
+            ? void 0
+            : e.BHasTimedText();
+        }
+        BHasPlayer() {
+          return Boolean(this.m_player);
+        }
         ListSubtitles() {
           return this.m_elVideo.textTracks;
         }
@@ -6301,7 +6313,8 @@
           return this.m_rgSegments.length > 0;
         }
       }
-      (0, a.gn)([s.LO], x.prototype, "m_bPaused", void 0),
+      (0, a.gn)([s.LO], x.prototype, "m_player", void 0),
+        (0, a.gn)([s.LO], x.prototype, "m_bPaused", void 0),
         (0, a.gn)([s.LO], x.prototype, "m_nPlaybackTime", void 0),
         (0, a.gn)([s.LO], x.prototype, "m_bBuffering", void 0),
         (0, a.gn)([s.LO], x.prototype, "m_bOnLiveEdge", void 0),
