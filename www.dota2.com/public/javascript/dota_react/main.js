@@ -23359,13 +23359,7 @@
               },
               {
                 nMin: 5,
-                nMax: 8,
-                strColor: "#929820",
-                strDescription: "#dpc_advance_to_lower_bracket",
-              },
-              {
-                nMin: 9,
-                nMax: 10,
+                nMax: 5,
                 strColor: "#922820",
                 strDescription: "#dpc_eliminated",
                 strDescriptionInProgress: "#dpc_elimination_risk",
@@ -37626,45 +37620,68 @@
           const l = this.GetEventInfo(e),
             c = this.GetNodeEventPhase(e, t, a),
             _ = this.GetEventPhaseString(c),
-            d = this.GetRegionString(i.eRegion, r == u.FH.SHORT),
-            m = this.GetDivisionString(i.eDivision, r == u.FH.SHORT),
-            p = this.GetBracketNodeString(
+            d =
+              (null == l ? void 0 : l.event_type) == u.f5.INTERNATIONAL &&
+              (c == u.BY.GROUP_A ||
+                c == u.BY.GROUP_B ||
+                c == u.BY.GROUP_C ||
+                c == u.BY.GROUP_D ||
+                c == u.BY.PLACEMENT ||
+                41 == a ||
+                42 == a ||
+                43 == a ||
+                44 == a ||
+                49 == a ||
+                50 == a ||
+                51 == a ||
+                52 == a ||
+                53 == a ||
+                54 == a ||
+                55 == a ||
+                56 == a),
+            m = this.GetRegionString(i.eRegion, r == u.FH.SHORT),
+            p = this.GetDivisionString(i.eDivision, r == u.FH.SHORT),
+            g = this.GetBracketNodeString(
               t,
               null == s ? void 0 : s.node_group_id,
               a,
               r == u.FH.SHORT || r == u.FH.LONG,
             ),
-            g = this.IsLeagueNodeBracket(t, a);
+            E = this.IsLeagueNodeBracket(t, a);
           if (i.eDivision != u.sd.UNSET && i.eRegion != u.dO.UNSET)
             switch (r) {
               case u.FH.SHORT:
-                n.push(`${(0, o.Jr)(d)}, ${(0, o.Jr)(m)}`);
+                n.push(`${(0, o.Jr)(m)}, ${(0, o.Jr)(p)}`);
                 break;
               case u.FH.LONG:
               case u.FH.VERYLONG:
-                n.push(d), n.push(m);
+                n.push(m), n.push(p);
             }
-          else if (g && i.eRegion != u.dO.UNSET)
+          else if (E && i.eRegion != u.dO.UNSET)
             switch (r) {
               case u.FH.SHORT:
-                n.push(`${(0, o.Jr)(d)}, ${(0, o.Jr)(p)}`);
+                n.push(`${(0, o.Jr)(m)}, ${(0, o.Jr)(g)}`);
                 break;
               case u.FH.LONG:
               case u.FH.VERYLONG:
-                n.push(d), n.push(p);
+                n.push(m), n.push(g);
             }
           else
-            g
+            E
               ? (r != u.FH.SHORT &&
                   (null == l ? void 0 : l.event_type) == u.f5.INTERNATIONAL &&
-                  n.push("#dpc_ti_intro_title"),
-                n.push(p))
-              : g ||
+                  n.push(
+                    d ? "#dpc_ti_road_intro_title" : "#dpc_ti_intro_title",
+                  ),
+                n.push(g))
+              : E ||
                 i.eDivision != u.sd.UNSET ||
                 i.eRegion != u.dO.UNSET ||
                 (r != u.FH.SHORT &&
                   (null == l ? void 0 : l.event_type) == u.f5.INTERNATIONAL &&
-                  n.push("#dpc_ti_intro_title"),
+                  n.push(
+                    d ? "#dpc_ti_road_intro_title" : "#dpc_ti_intro_title",
+                  ),
                 n.push(_));
           return n;
         }
