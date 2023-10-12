@@ -27094,7 +27094,7 @@
                     a.createElement("div", {
                       className: yl().CSGOCompetitiveLogo,
                       style: {
-                        backgroundImage: `url( ${L.IMG_URL}/global/CSGO_competitive_logo.png )`,
+                        backgroundImage: `url( ${L.IMG_URL}/global/cs2_icon_color_512x512.png )`,
                       },
                     }),
                     a.createElement(
@@ -27148,8 +27148,8 @@
                   Oi("#homepage_workshop_desc"),
                 ),
                 a.createElement(
-                  V.rU,
-                  { to: "https://www.counter-strike.net/workshop/workshop" },
+                  "a",
+                  { href: "https://www.counter-strike.net/workshop/workshop" },
                   a.createElement(
                     "div",
                     { className: yl().StandardButton },
