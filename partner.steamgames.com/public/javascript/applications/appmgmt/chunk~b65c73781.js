@@ -9578,7 +9578,8 @@
         AddNewAdminPlan(e, t, a, i, r, c, m, u, p, h, g, v) {
           return (0, n.mG)(this, void 0, void 0, function* () {
             const n = l.gA.Init(o.IJ),
-              E = {
+              E = Math.floor(new Date().getTime() / 1e3),
+              D = {
                 type: e,
                 name: t,
                 start_date: a,
@@ -9589,22 +9590,23 @@
                 creator_account_id: _.L7.accountid,
                 last_modified_account: _.L7.accountid,
                 admin_accounts: [_.L7.accountid],
-                last_modified_time: Math.floor(new Date().getTime() / 1e3),
+                last_modified_time: E,
+                create_time: E,
               };
-            p && (E.spotlight_ids = [p]),
-              h && (E.marketing_message_ids = [h]),
-              g && (E.takeover_ids = [g]),
-              v && (E.takeunder_ids = [v]);
-            const D = {
-              admin_jsondata: JSON.stringify(E),
+            p && (D.spotlight_ids = [p]),
+              h && (D.marketing_message_ids = [h]),
+              g && (D.takeover_ids = [g]),
+              v && (D.takeunder_ids = [v]);
+            const S = {
+              admin_jsondata: JSON.stringify(D),
               partner_jsondata: JSON.stringify({}),
               input_jsondata: JSON.stringify({}),
               rtime32_start_time: a,
               rtime32_end_time: i,
               partner_id: c,
             };
-            n.Body().set_plan(o.Fc.fromObject(D));
-            let S = null;
+            n.Body().set_plan(o.Fc.fromObject(S));
+            let f = null;
             try {
               const e = yield o.nd.CreatePlan(
                 this.m_SteamInterface.GetServiceTransport(),
@@ -9612,24 +9614,24 @@
               );
               if (e.GetEResult() == s.s.k_EResultOK)
                 return (
-                  (D.promotion_id = e.Body().promotion_id()),
-                  (D.input_access_key = e.Body().input_access_key()),
-                  (E.id = e.Body().promotion_id()),
-                  (D.admin_jsondata = JSON.stringify(E)),
-                  this.m_mapPlans.set(D.promotion_id, D),
-                  this.m_mapPlanByAccessKey.set(D.input_access_key, D),
+                  (S.promotion_id = e.Body().promotion_id()),
+                  (S.input_access_key = e.Body().input_access_key()),
+                  (D.id = e.Body().promotion_id()),
+                  (S.admin_jsondata = JSON.stringify(D)),
+                  this.m_mapPlans.set(S.promotion_id, S),
+                  this.m_mapPlanByAccessKey.set(S.input_access_key, S),
                   this.GetListChangeCallback().Dispatch(this.GetAllPlans()),
-                  D.promotion_id
+                  S.promotion_id
                 );
-              S = (0, d.l)(e);
+              f = (0, d.l)(e);
             } catch (e) {
-              S = (0, d.l)(e);
+              f = (0, d.l)(e);
             }
             return (
               console.error(
                 "CPromotionPlanningStore.AddNewAdminPlan failed: " +
-                  (null == S ? void 0 : S.strErrorMsg),
-                S,
+                  (null == f ? void 0 : f.strErrorMsg),
+                f,
               ),
               null
             );
@@ -27229,6 +27231,25 @@
               ),
             ),
           ),
+          Boolean(t.GetPlan().create_time) &&
+            i.createElement(
+              "div",
+              { className: T().SectionCtn },
+              i.createElement(s.__, null, "Plan initially created By:"),
+              i.createElement(
+                "div",
+                { className: k.UserCtn },
+                i.createElement(
+                  "div",
+                  { className: k.OwnerCtn },
+                  i.createElement(l.N, {
+                    accountID: t.GetPlan().creator_account_id,
+                  }),
+                ),
+              ),
+              "Created at ",
+              i.createElement(X, { rtime: t.GetPlan().create_time }),
+            ),
           Boolean(t.GetPlan().last_modified_account) &&
             i.createElement(
               "div",
