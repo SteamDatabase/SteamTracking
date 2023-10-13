@@ -234,6 +234,12 @@ enum ESplitScalingScaler {
 	k_ESplitScalingScaler_Stretch = 5;
 }
 
+enum EGamescopeBlurMode {
+	k_EGamescopeBlurMode_Disabled = 0;
+	k_EGamescopeBlurMode_IfOccluded = 1;
+	k_EGamescopeBlurMode_Always = 2;
+}
+
 enum EHDRToneMapOperator {
 	k_EHDRToneMapOperator_Invalid = 0;
 	k_EHDRToneMapOperator_Uncharted = 1;

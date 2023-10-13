@@ -1,4 +1,4 @@
-var CLSTAMP = "8410691";
+var CLSTAMP = "8417412";
 /* Third-party software licenses can be found at licenses.txt */ (self.webpackChunksteamui =
   self.webpackChunksteamui || []).push([
   [9394],
@@ -40281,39 +40281,40 @@ var CLSTAMP = "8410691";
     80024: (e, t, r) => {
       "use strict";
       r.d(t, {
-        Ab: () => w,
-        Bb: () => q,
-        Cf: () => Y,
-        D8: () => G,
-        Eb: () => Z,
-        F$: () => x,
+        Ab: () => I,
+        Bb: () => Y,
+        Cf: () => Q,
+        D8: () => V,
+        EX: () => o,
+        Eb: () => $,
+        F$: () => j,
         Fp: () => a,
         Gm: () => R,
-        Om: () => X,
-        Ox: () => o,
+        Om: () => Z,
+        Ox: () => T,
         QN: () => v,
         TH: () => M,
         TT: () => p,
-        Ve: () => j,
-        Xh: () => O,
-        ZL: () => z,
-        _p: () => P,
+        Ve: () => G,
+        Xh: () => U,
+        ZL: () => K,
+        _p: () => w,
         cq: () => _,
-        dY: () => L,
-        fq: () => H,
-        g2: () => U,
+        dY: () => N,
+        fq: () => z,
+        g2: () => L,
         gb: () => C,
-        hh: () => V,
-        j7: () => K,
+        hh: () => W,
+        j7: () => q,
         jS: () => S,
         m0: () => b,
-        n9: () => D,
+        n9: () => O,
         nM: () => f,
-        oc: () => N,
+        oc: () => x,
         pW: () => d,
-        qc: () => W,
+        qc: () => H,
         qi: () => s,
-        vb: () => Q,
+        vb: () => X,
       });
       var n = r(33019);
       n.Message;
@@ -40362,11 +40363,12 @@ var CLSTAMP = "8410691";
         K,
         q,
         Y,
-        Q;
-      function X(e) {
+        Q,
+        X;
+      function Z(e) {
         return "unknown EStorageBlockContentType ( " + e + " )";
       }
-      function Z(e) {
+      function $(e) {
         return "unknown EStorageBlockFileSystemType ( " + e + " )";
       }
       !(function (e) {
@@ -40742,19 +40744,27 @@ var CLSTAMP = "8410691";
               "k_ESplitScalingScaler_Stretch");
         })(R || (R = {})),
         (function (e) {
+          (e[(e.k_EGamescopeBlurMode_Disabled = 0)] =
+            "k_EGamescopeBlurMode_Disabled"),
+            (e[(e.k_EGamescopeBlurMode_IfOccluded = 1)] =
+              "k_EGamescopeBlurMode_IfOccluded"),
+            (e[(e.k_EGamescopeBlurMode_Always = 2)] =
+              "k_EGamescopeBlurMode_Always");
+        })(T || (T = {})),
+        (function (e) {
           (e[(e.k_EHDRToneMapOperator_Invalid = 0)] =
             "k_EHDRToneMapOperator_Invalid"),
             (e[(e.k_EHDRToneMapOperator_Uncharted = 1)] =
               "k_EHDRToneMapOperator_Uncharted"),
             (e[(e.k_EHDRToneMapOperator_Reinhard = 2)] =
               "k_EHDRToneMapOperator_Reinhard");
-        })(T || (T = {})),
+        })(A || (A = {})),
         (function (e) {
           (e[(e.k_ECPUGovernor_Invalid = 0)] = "k_ECPUGovernor_Invalid"),
             (e[(e.k_ECPUGovernor_Perf = 1)] = "k_ECPUGovernor_Perf"),
             (e[(e.k_ECPUGovernor_Powersave = 2)] = "k_ECPUGovernor_Powersave"),
             (e[(e.k_ECPUGovernor_Manual = 3)] = "k_ECPUGovernor_Manual");
-        })(A || (A = {})),
+        })(P || (P = {})),
         (function (e) {
           (e[(e.k_EUpdaterType_Invalid = 0)] = "k_EUpdaterType_Invalid"),
             (e[(e.k_EUpdaterType_Client = 1)] = "k_EUpdaterType_Client"),
@@ -40765,7 +40775,7 @@ var CLSTAMP = "8410691";
             (e[(e.k_EUpdaterType_Test1 = 5)] = "k_EUpdaterType_Test1"),
             (e[(e.k_EUpdaterType_Test2 = 6)] = "k_EUpdaterType_Test2"),
             (e[(e.k_EUpdaterType_Dummy = 7)] = "k_EUpdaterType_Dummy");
-        })(P || (P = {})),
+        })(w || (w = {})),
         (function (e) {
           (e[(e.k_EUpdaterState_Invalid = 0)] = "k_EUpdaterState_Invalid"),
             (e[(e.k_EUpdaterState_UpToDate = 2)] = "k_EUpdaterState_UpToDate"),
@@ -40777,7 +40787,7 @@ var CLSTAMP = "8410691";
               "k_EUpdaterState_ClientRestartPending"),
             (e[(e.k_EUpdaterState_SystemRestartPending = 7)] =
               "k_EUpdaterState_SystemRestartPending");
-        })(w || (w = {})),
+        })(I || (I = {})),
         (function (e) {
           (e[(e.k_EStorageBlockContentType_Invalid = 0)] =
             "k_EStorageBlockContentType_Invalid"),
@@ -40789,7 +40799,7 @@ var CLSTAMP = "8410691";
               "k_EStorageBlockContentType_Crypto"),
             (e[(e.k_EStorageBlockContentType_Raid = 4)] =
               "k_EStorageBlockContentType_Raid");
-        })(I || (I = {})),
+        })(F || (F = {})),
         (function (e) {
           (e[(e.k_EStorageBlockFileSystemType_Invalid = 0)] =
             "k_EStorageBlockFileSystemType_Invalid"),
@@ -40799,7 +40809,7 @@ var CLSTAMP = "8410691";
               "k_EStorageBlockFileSystemType_VFat"),
             (e[(e.k_EStorageBlockFileSystemType_Ext4 = 3)] =
               "k_EStorageBlockFileSystemType_Ext4");
-        })(F || (F = {})),
+        })(B || (B = {})),
         (function (e) {
           (e[(e.k_EStorageDriveMediaType_Invalid = 0)] =
             "k_EStorageDriveMediaType_Invalid"),
@@ -40811,7 +40821,7 @@ var CLSTAMP = "8410691";
               "k_EStorageDriveMediaType_SSD"),
             (e[(e.k_EStorageDriveMediaType_Removable = 4)] =
               "k_EStorageDriveMediaType_Removable");
-        })(B || (B = {})),
+        })(D || (D = {})),
         (function (e) {
           (e[(e.k_ESystemDisplayCompatibilityMode_Invalid = 0)] =
             "k_ESystemDisplayCompatibilityMode_Invalid"),
@@ -40819,7 +40829,7 @@ var CLSTAMP = "8410691";
               "k_ESystemDisplayCompatibilityMode_None"),
             (e[(e.k_ESystemDisplayCompatibilityMode_MinimalBandwith = 2)] =
               "k_ESystemDisplayCompatibilityMode_MinimalBandwith");
-        })(D || (D = {})),
+        })(O || (O = {})),
         (function (e) {
           (e[(e.k_ESteamDeckCompatibilityCategory_Unknown = 0)] =
             "k_ESteamDeckCompatibilityCategory_Unknown"),
@@ -40829,7 +40839,7 @@ var CLSTAMP = "8410691";
               "k_ESteamDeckCompatibilityCategory_Playable"),
             (e[(e.k_ESteamDeckCompatibilityCategory_Verified = 3)] =
               "k_ESteamDeckCompatibilityCategory_Verified");
-        })(O || (O = {})),
+        })(U || (U = {})),
         (function (e) {
           (e[(e.k_ESteamDeckCompatibilityResultDisplayType_Invisible = 0)] =
             "k_ESteamDeckCompatibilityResultDisplayType_Invisible"),
@@ -40842,20 +40852,20 @@ var CLSTAMP = "8410691";
               "k_ESteamDeckCompatibilityResultDisplayType_Playable"),
             (e[(e.k_ESteamDeckCompatibilityResultDisplayType_Verified = 4)] =
               "k_ESteamDeckCompatibilityResultDisplayType_Verified");
-        })(U || (U = {})),
+        })(L || (L = {})),
         (function (e) {
           (e[(e.k_EACState_Unknown = 0)] = "k_EACState_Unknown"),
             (e[(e.k_EACState_Disconnected = 1)] = "k_EACState_Disconnected"),
             (e[(e.k_EACState_Connected = 2)] = "k_EACState_Connected"),
             (e[(e.k_EACState_ConnectedSlow = 3)] = "k_EACState_ConnectedSlow");
-        })(L || (L = {})),
+        })(N || (N = {})),
         (function (e) {
           (e[(e.k_EBatteryState_Unknown = 0)] = "k_EBatteryState_Unknown"),
             (e[(e.k_EBatteryState_Discharging = 1)] =
               "k_EBatteryState_Discharging"),
             (e[(e.k_EBatteryState_Charging = 2)] = "k_EBatteryState_Charging"),
             (e[(e.k_EBatteryState_Full = 3)] = "k_EBatteryState_Full");
-        })(N || (N = {})),
+        })(x || (x = {})),
         (function (e) {
           (e[(e.k_EOSBranch_Unknown = 0)] = "k_EOSBranch_Unknown"),
             (e[(e.k_EOSBranch_Release = 1)] = "k_EOSBranch_Release"),
@@ -40866,7 +40876,7 @@ var CLSTAMP = "8410691";
               "k_EOSBranch_BetaCandidate"),
             (e[(e.k_EOSBranch_Main = 5)] = "k_EOSBranch_Main"),
             (e[(e.k_EOSBranch_Staging = 6)] = "k_EOSBranch_Staging");
-        })(x || (x = {})),
+        })(j || (j = {})),
         (function (e) {
           (e[(e.k_ECommunityItemClass_Invalid = 0)] =
             "k_ECommunityItemClass_Invalid"),
@@ -40904,7 +40914,7 @@ var CLSTAMP = "8410691";
               "k_ECommunityItemClass_SteamDeckKeyboardSkin"),
             (e[(e.k_ECommunityItemClass_SteamDeckStartupMovie = 17)] =
               "k_ECommunityItemClass_SteamDeckStartupMovie");
-        })(j || (j = {})),
+        })(G || (G = {})),
         (function (e) {
           (e[(e.k_ESteamDeckCompatibilityFeedback_Unset = 0)] =
             "k_ESteamDeckCompatibilityFeedback_Unset"),
@@ -40914,7 +40924,7 @@ var CLSTAMP = "8410691";
               "k_ESteamDeckCompatibilityFeedback_Disagree"),
             (e[(e.k_ESteamDeckCompatibilityFeedback_Ignore = 3)] =
               "k_ESteamDeckCompatibilityFeedback_Ignore");
-        })(G || (G = {})),
+        })(V || (V = {})),
         (function (e) {
           (e[(e.k_EProvideDeckFeedbackPreference_Unset = 0)] =
             "k_EProvideDeckFeedbackPreference_Unset"),
@@ -40922,7 +40932,7 @@ var CLSTAMP = "8410691";
               "k_EProvideDeckFeedbackPreference_Yes"),
             (e[(e.k_EProvideDeckFeedbackPreference_No = 2)] =
               "k_EProvideDeckFeedbackPreference_No");
-        })(V || (V = {})),
+        })(W || (W = {})),
         (function (e) {
           (e[(e.k_ETouchGestureNone = 0)] = "k_ETouchGestureNone"),
             (e[(e.k_ETouchGestureTouch = 1)] = "k_ETouchGestureTouch"),
@@ -40945,7 +40955,7 @@ var CLSTAMP = "8410691";
               "k_ETouchGestureFlingStart"),
             (e[(e.k_ETouchGestureFlingCancelled = 13)] =
               "k_ETouchGestureFlingCancelled");
-        })(W || (W = {})),
+        })(H || (H = {})),
         (function (e) {
           (e[(e.k_ESessionPersistence_Invalid = -1)] =
             "k_ESessionPersistence_Invalid"),
@@ -40953,7 +40963,7 @@ var CLSTAMP = "8410691";
               "k_ESessionPersistence_Ephemeral"),
             (e[(e.k_ESessionPersistence_Persistent = 1)] =
               "k_ESessionPersistence_Persistent");
-        })(H || (H = {})),
+        })(z || (z = {})),
         (function (e) {
           (e[(e.k_ENewSteamAnnouncementState_Invalid = 0)] =
             "k_ENewSteamAnnouncementState_Invalid"),
@@ -40963,7 +40973,7 @@ var CLSTAMP = "8410691";
               "k_ENewSteamAnnouncementState_NewAnnouncement"),
             (e[(e.k_ENewSteamAnnouncementState_FeaturedAnnouncement = 3)] =
               "k_ENewSteamAnnouncementState_FeaturedAnnouncement");
-        })(z || (z = {})),
+        })(K || (K = {})),
         (function (e) {
           (e[(e.k_ECommentThreadTypeInvalid = 0)] =
             "k_ECommentThreadTypeInvalid"),
@@ -41006,7 +41016,7 @@ var CLSTAMP = "8410691";
             (e[(e.k_ECommentThreadTypeQAndASession = 20)] =
               "k_ECommentThreadTypeQAndASession"),
             (e[(e.k_ECommentThreadTypeMax = 21)] = "k_ECommentThreadTypeMax");
-        })(K || (K = {})),
+        })(q || (q = {})),
         (function (e) {
           (e[(e.k_EBroadcastPermissionDisabled = 0)] =
             "k_EBroadcastPermissionDisabled"),
@@ -41018,13 +41028,13 @@ var CLSTAMP = "8410691";
               "k_EBroadcastPermissionPublic"),
             (e[(e.k_EBroadcastPermissionSubscribers = 4)] =
               "k_EBroadcastPermissionSubscribers");
-        })(q || (q = {})),
+        })(Y || (Y = {})),
         (function (e) {
           (e[(e.k_EBroadcastEncoderBestQuality = 0)] =
             "k_EBroadcastEncoderBestQuality"),
             (e[(e.k_EBroadcastEncoderBestPerformance = 1)] =
               "k_EBroadcastEncoderBestPerformance");
-        })(Y || (Y = {})),
+        })(Q || (Q = {})),
         (function (e) {
           (e[(e.k_ECloudGamingPlatformNone = 0)] =
             "k_ECloudGamingPlatformNone"),
@@ -41032,7 +41042,7 @@ var CLSTAMP = "8410691";
               "k_ECloudGamingPlatformValve"),
             (e[(e.k_ECloudGamingPlatformNVIDIA = 2)] =
               "k_ECloudGamingPlatformNVIDIA");
-        })(Q || (Q = {}));
+        })(X || (X = {}));
     },
     38217: (e, t, r) => {
       "use strict";

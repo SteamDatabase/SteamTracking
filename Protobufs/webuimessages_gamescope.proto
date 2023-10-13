@@ -5,13 +5,9 @@ import "webuimessages_base.proto";
 option optimize_for = SPEED;
 option cc_generic_services = true;
 
-message CWebUISettigToggle {
-	optional bool is_availble = 1;
-	optional bool is_enabled = 2;
-}
-
 message CGamescopeState {
 	optional bool is_service_available = 1;
+	optional bool is_reshade_supported = 2;
 }
 
 message CGamescope_GetState_Request {
@@ -24,9 +20,19 @@ message CGamescope_GetState_Response {
 message CGamescope_StateChanged_Notification {
 }
 
+message CGamescope_SetBlurParams_Request {
+	optional .EGamescopeBlurMode mode = 1 [default = k_EGamescopeBlurMode_Disabled];
+	optional int32 radius = 2;
+	optional int32 fade_duration_ms = 3;
+}
+
+message CGamescope_SetBlurParams_Response {
+}
+
 service Gamescope {
 	option (webui_service_execution_site) = k_EClientExecutionSiteSteamUI;
 
 	rpc GetState (.CGamescope_GetState_Request) returns (.CGamescope_GetState_Response);
 	rpc NotifyStateChanged (.CGamescope_StateChanged_Notification) returns (.WebUINoResponse);
+	rpc SetBlurParams (.CGamescope_SetBlurParams_Request) returns (.CGamescope_SetBlurParams_Response);
 }
