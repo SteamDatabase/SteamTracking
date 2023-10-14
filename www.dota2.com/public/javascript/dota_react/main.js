@@ -22638,6 +22638,8 @@
                 nNodeGroupID: null == l ? void 0 : l.node_group_id,
                 nTeamID: 0,
                 bNarrow: e.bNarrow,
+                bHideRank:
+                  (null == l ? void 0 : l.node_group_type) == Jt.L$.PLACEMENT,
               }),
               d.map((t) =>
                 i.createElement(Cr, {
@@ -22646,6 +22648,8 @@
                   nNodeGroupID: null == l ? void 0 : l.node_group_id,
                   nTeamID: t,
                   bNarrow: e.bNarrow,
+                  bHideRank:
+                    (null == l ? void 0 : l.node_group_type) == Jt.L$.PLACEMENT,
                 }),
               ),
               !n &&
@@ -22682,6 +22686,7 @@
                     })),
             ),
             !n &&
+              (null == l ? void 0 : l.node_group_type) != Jt.L$.PLACEMENT &&
               _.length > 0 &&
               e.bShowLegend &&
               i.createElement(
@@ -22727,11 +22732,12 @@
             ? i.createElement(
                 "div",
                 { className: (0, h.Z)(vr().DPCStandingsTeam, vr().Header) },
-                i.createElement(
-                  "div",
-                  { className: vr().Standing },
-                  (0, v.Jr)("#dpc_rank"),
-                ),
+                !e.bHideRank &&
+                  i.createElement(
+                    "div",
+                    { className: vr().Standing },
+                    (0, v.Jr)("#dpc_rank"),
+                  ),
                 i.createElement(
                   "div",
                   { className: vr().TeamName },
@@ -22764,11 +22770,12 @@
                     e.bNarrow && vr().Narrow,
                   ),
                 },
-                i.createElement(
-                  "div",
-                  { className: vr().Standing },
-                  a ? "" : (0, Fa.jc)(null == r ? void 0 : r.standing),
-                ),
+                !e.bHideRank &&
+                  i.createElement(
+                    "div",
+                    { className: vr().Standing },
+                    a ? "" : (0, Fa.jc)(null == r ? void 0 : r.standing),
+                  ),
                 i.createElement(da, {
                   className: vr().TeamLogo,
                   nTeamID: e.nTeamID,
@@ -38586,7 +38593,8 @@
             (e[(e.BRACKET_DOUBLE_ALL_WINNER = 6)] =
               "BRACKET_DOUBLE_ALL_WINNER"),
             (e[(e.SHOWMATCH = 7)] = "SHOWMATCH"),
-            (e[(e.GSL = 8)] = "GSL");
+            (e[(e.GSL = 8)] = "GSL"),
+            (e[(e.PLACEMENT = 9)] = "PLACEMENT");
         })(c || (c = {})),
         (function (e) {
           (e[(e.INVALID_NODE_TYPE = 0)] = "INVALID_NODE_TYPE"),
