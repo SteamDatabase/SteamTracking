@@ -22027,10 +22027,12 @@
       var sr = a(28494),
         or = a.n(sr);
       const lr = (0, c.Pi)((e) => {
-          const t = e.bStyleStopThree && 1 == e.nStanding,
-            a = e.bStyleStopThree && 2 == e.nStanding,
-            r = e.bStyleStopThree && 3 == e.nStanding,
-            n = jt.f.Get().GetTeamNames(e.nTeamID);
+          const t = Vn(),
+            a = jt.f.Get().GetEventInfo(t),
+            r = e.bStyleStopThree && 1 == e.nStanding,
+            n = e.bStyleStopThree && 2 == e.nStanding,
+            s = e.bStyleStopThree && 3 == e.nStanding,
+            o = jt.f.Get().GetTeamNames(e.nTeamID);
           return i.createElement(
             "div",
             { className: or().StandingsResult },
@@ -22039,9 +22041,9 @@
               {
                 className: (0, h.Z)(
                   or().Placement,
-                  t && or().First,
-                  a && or().Second,
-                  r && or().Third,
+                  r && or().First,
+                  n && or().Second,
+                  s && or().Third,
                 ),
               },
               (0, Fa.jc)(e.nStanding),
@@ -22055,7 +22057,7 @@
               "div",
               { className: or().TeamName },
               (0, v.Jr)(
-                0 == e.nTeamID ? "#dpc_tbd" : null == n ? void 0 : n.name,
+                0 == e.nTeamID ? "#dpc_tbd" : null == o ? void 0 : o.name,
               ),
             ),
             i.createElement(
@@ -22072,20 +22074,21 @@
                 `$${e.nEarnings ? e.nEarnings.toLocaleString() : "0"} USD`,
               ),
             ),
-            i.createElement(
-              "div",
-              { className: or().PointsContainer },
+            a.event_type != Jt.f5.INTERNATIONAL &&
               i.createElement(
                 "div",
-                { className: or().Title },
-                (0, v.Jr)("#dpc_points"),
+                { className: or().PointsContainer },
+                i.createElement(
+                  "div",
+                  { className: or().Title },
+                  (0, v.Jr)("#dpc_points"),
+                ),
+                i.createElement(
+                  "div",
+                  { className: or().Value },
+                  `${e.nPoints ? e.nPoints.toLocaleString() : "0"}`,
+                ),
               ),
-              i.createElement(
-                "div",
-                { className: or().Value },
-                `${e.nPoints ? e.nPoints.toLocaleString() : "0"}`,
-              ),
-            ),
           );
         }),
         cr = (0, c.Pi)((e) => {
@@ -22132,17 +22135,26 @@
                   bStyleStopThree: e.bStyleTopThree,
                 });
               const a = null == s ? void 0 : s.results[c];
-              return a
-                ? ((c += 1),
+              if (a) {
+                const o =
+                  r.event_type == Jt.f5.INTERNATIONAL
+                    ? null == s
+                      ? void 0
+                      : s.dollars[t - 1]
+                    : a.earnings;
+                return (
+                  (c += 1),
                   i.createElement(lr, {
                     key: `${n}_${t}`,
                     nStanding: a.standing,
                     nTeamID: a.team_id,
-                    nEarnings: a.earnings,
+                    nEarnings: o,
                     nPoints: a.points,
                     bStyleStopThree: e.bStyleTopThree,
-                  }))
-                : null;
+                  })
+                );
+              }
+              return null;
             }),
           );
         });
