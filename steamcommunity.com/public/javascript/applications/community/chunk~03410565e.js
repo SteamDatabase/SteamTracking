@@ -106,6 +106,7 @@
                 e.className ? e.className : "",
                 c.SectionTitleHeader,
                 c.required_title,
+                "SectionTitleHeader",
               ),
             },
             a.createElement(

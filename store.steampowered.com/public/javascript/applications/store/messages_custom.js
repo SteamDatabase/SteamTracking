@@ -21,62 +21,85 @@
     },
     20285: (e, t, a) => {
       "use strict";
-      a.d(t, { F: () => f, t: () => L });
-      var l = a(33940),
-        C = a(52868),
-        r = a.n(C),
-        n = a(92994),
-        o = a.n(n),
+      a.d(t, { Fz: () => M, TQ: () => g, tE: () => v });
+      var n = a(33940),
+        l = a(52868),
+        r = a.n(l),
+        C = a(92994),
+        o = a.n(C),
         c = a(89526),
         i = a(5615),
         s = a(42735),
         u = a(47165),
         m = a(23217),
-        d = a(32765);
-      const p = new (o())(
+        d = a(32765),
+        p = a(67328),
+        f = a(94738),
+        H = a(27070);
+      const L = "nicknames";
+      function g(e) {
+        const t = (0, H.bY)(),
+          { data: a, isLoading: l } = (0, i.useQuery)([L], () =>
+            (0, n.mG)(this, void 0, void 0, function* () {
+              const e = new Map();
+              if (d.L7.logged_in) {
+                const a = p.gA.Init(f.bM),
+                  n = (yield f.lk.GetNicknameList(t, a)).Body().toObject();
+                (null == n ? void 0 : n.nicknames) &&
+                  n.nicknames.length > 0 &&
+                  n.nicknames.forEach((t) => {
+                    e.set(t.accountid, t.nickname);
+                  });
+              }
+              return e;
+            }),
+          );
+        return a ? a.get(e) : null;
+      }
+      const E = new (o())(
           (e) =>
             (function (e) {
-              var t, a, C, n;
-              return (0, l.mG)(this, void 0, void 0, function* () {
+              var t, a, l, C;
+              return (0, n.mG)(this, void 0, void 0, function* () {
                 if (!e || 0 == e.length) return [];
-                const l =
+                const n =
                   "community" == (0, d.Zv)()
                     ? d.De.COMMUNITY_BASE_URL
                     : d.De.STORE_BASE_URL;
                 if (1 == e.length) {
-                  const C = { accountid: e[0], origin: self.origin },
-                    n = yield r().get(`${l}actions/ajaxgetavatarpersona`, {
-                      params: C,
+                  const l = { accountid: e[0], origin: self.origin },
+                    C = yield r().get(`${n}actions/ajaxgetavatarpersona`, {
+                      params: l,
                     });
                   if (
-                    !n ||
-                    200 != n.status ||
-                    (null === (t = n.data) || void 0 === t
+                    !C ||
+                    200 != C.status ||
+                    (null === (t = C.data) || void 0 === t
                       ? void 0
                       : t.success) != s.s.k_EResultOK ||
-                    !(null === (a = n.data) || void 0 === a
+                    !(null === (a = C.data) || void 0 === a
                       ? void 0
                       : a.userinfo)
                   )
                     throw `Load single avatar/persona failed ${
-                      (0, m.l)(n).strErrorMsg
+                      (0, m.l)(C).strErrorMsg
                     }`;
-                  return [n.data.userinfo];
+                  return [C.data.userinfo];
                 }
                 {
                   const t = { accountids: e.join(","), origin: self.origin },
-                    a = yield r().get(`${l}actions/ajaxgetmultiavatarpersona`, {
+                    a = yield r().get(`${n}actions/ajaxgetmultiavatarpersona`, {
                       params: t,
                     });
                   if (
                     !a ||
                     200 != a.status ||
-                    (null === (C = a.data) || void 0 === C
+                    (null === (l = a.data) || void 0 === l
                       ? void 0
-                      : C.success) != s.s.k_EResultOK ||
-                    !(null === (n = a.data) || void 0 === n
+                      : l.success) != s.s.k_EResultOK ||
+                    !(null === (C = a.data) || void 0 === C
                       ? void 0
-                      : n.userinfos)
+                      : C.userinfos)
                   )
                     throw `Load single avatar/persona failed ${
                       (0, m.l)(a).strErrorMsg
@@ -93,27 +116,27 @@
             })(e),
           { cache: !1 },
         ),
-        H = "avatarandpersonas";
-      function f(e) {
-        const { data: t, isLoading: a } = (0, i.useQuery)([H, e], () =>
-          p.load(e),
+        h = "avatarandpersonas";
+      function M(e) {
+        const { data: t, isLoading: a } = (0, i.useQuery)([h, e], () =>
+          E.load(e),
         );
         return [t, a];
       }
-      function L(e) {
+      function v(e) {
         const t = (0, i.useQueryClient)(),
-          { data: a, isLoading: l } = (0, i.useQuery)({
-            queryKey: [H, e],
-            queryFn: () => p.loadMany(e),
+          { data: a, isLoading: n } = (0, i.useQuery)({
+            queryKey: [h, e],
+            queryFn: () => E.loadMany(e),
             onSuccess(e) {
               e.forEach((e) => {
-                const a = [H, new u.K(e.steamid).GetAccountID()];
+                const a = [h, new u.K(e.steamid).GetAccountID()];
                 t.setQueryData(a, e);
               });
             },
             enabled: (null == e ? void 0 : e.length) > 0,
           }),
-          C = (0, c.useMemo)(() => {
+          l = (0, c.useMemo)(() => {
             const e = new Array();
             return (
               null == a ||
@@ -123,16 +146,16 @@
               e
             );
           }, [a]);
-        return l ? null : C;
+        return n ? null : l;
       }
     },
     75176: (e, t, a) => {
       "use strict";
       a.r(t), a.d(t, { default: () => u });
-      var l = a(5742),
-        C = a(55861),
+      var n = a(5742),
+        l = a(55861),
         r = a(89526),
-        n = a(51438),
+        C = a(51438),
         o = a(20285),
         c = a(14826),
         i = a(32765),
@@ -142,9 +165,9 @@
         return r.createElement(
           "div",
           { className: s.Frame, onClick: t },
-          r.createElement(H, { className: s.ReplayLogo }),
+          r.createElement(f, { className: s.ReplayLogo }),
           r.createElement(p, { className: s.SteamLogo }),
-          r.createElement(f, null),
+          r.createElement(H, null),
           r.createElement(
             "div",
             { className: s.Content },
@@ -159,7 +182,7 @@
         );
       }
       function m() {
-        const [e] = (0, o.F)(i.L7.accountid);
+        const [e] = (0, o.Fz)(i.L7.accountid);
         return e
           ? r.createElement(
               r.Fragment,
@@ -196,7 +219,7 @@
       function d() {
         const e = L();
         return r.createElement(
-          n.s,
+          C.s,
           { className: s.ViewPageButton, onActivate: e },
           (0, c.Xx)("#YIR_MM_Generic_Action"),
         );
@@ -229,7 +252,7 @@
           }),
         );
       }
-      function H(e) {
+      function f(e) {
         return r.createElement(
           "svg",
           Object.assign(
@@ -316,7 +339,7 @@
           }),
         );
       }
-      function f() {
+      function H() {
         return r.createElement(
           "div",
           { className: s.Hashtag },
@@ -324,8 +347,8 @@
         );
       }
       function L() {
-        const e = (0, C.U)().GetTemplateVars();
-        return (0, l.pT)(e.linkurl);
+        const e = (0, l.U)().GetTemplateVars();
+        return (0, n.pT)(e.linkurl);
       }
     },
   },

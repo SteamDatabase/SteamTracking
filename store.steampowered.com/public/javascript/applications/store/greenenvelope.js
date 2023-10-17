@@ -376,9 +376,9 @@
       "use strict";
       n.r(t),
         n.d(t, {
-          GreenEnvelope: () => Te,
-          default: () => We,
-          useSteamNotifications: () => Ie,
+          GreenEnvelope: () => Ie,
+          default: () => je,
+          useSteamNotifications: () => Ae,
         });
       var a = n(33940),
         o = n(89526),
@@ -683,8 +683,8 @@
           ),
         );
       }
-      var Z = n(89126),
-        q = n.n(Z),
+      var q = n(89126),
+        Z = n.n(q),
         V = n(82079);
       function K(e) {
         switch (e) {
@@ -719,7 +719,7 @@
         let y = null;
         if (_) y = ie(i, a, g);
         else {
-          const e = g ? q().ShortLogoDimensions : q().StandardLogoDimensions;
+          const e = g ? Z().ShortLogoDimensions : Z().StandardLogoDimensions;
           y =
             l.image && !E
               ? o.createElement("img", {
@@ -874,11 +874,11 @@
           const e =
               i.state == _.of.k_EFriendRelationshipFriend &&
               l != h.GamepadToast,
-            t = p ? q().ShortLogoDimensions : q().StandardLogoDimensions;
+            t = p ? Z().ShortLogoDimensions : Z().StandardLogoDimensions;
           y = o.createElement(
             u.s,
             { style: { position: "relative" } },
-            e && o.createElement(E.Fsn, { className: q().FriendIndicator }),
+            e && o.createElement(E.Fsn, { className: Z().FriendIndicator }),
             o.createElement("img", { className: t, src: n, onError: v }),
           );
         }
@@ -941,7 +941,7 @@
             t = a.item_data.background_color
               ? "#" + a.item_data.background_color
               : null;
-          const n = E ? q().ShortLogoDimensions : q().StandardLogoDimensions;
+          const n = E ? Z().ShortLogoDimensions : Z().StandardLogoDimensions;
           v = o.createElement(
             u.s,
             { style: { position: "relative" } },
@@ -1168,20 +1168,20 @@
           f == h.AllNotificationsTray
             ? (R = o.createElement(
                 "div",
-                { className: q().AllNotificationsCommentPlus },
+                { className: Z().AllNotificationsCommentPlus },
                 e,
               ))
             : (H = H + " " + e);
         }
         let O = m;
         if (!B) {
-          const e = k ? q().ShortLogoDimensions : q().StandardLogoDimensions;
+          const e = k ? Z().ShortLogoDimensions : Z().StandardLogoDimensions;
           if (d && (0, i.rc)(p)) {
             const t = p.bhas_friend && f != h.GamepadToast;
             O = o.createElement(
               "div",
               { style: { position: "relative" } },
-              t && o.createElement(E.Fsn, { className: q().FriendIndicator }),
+              t && o.createElement(E.Fsn, { className: Z().FriendIndicator }),
               o.createElement("img", { className: e, src: d, onError: G }),
             );
           } else
@@ -1321,7 +1321,7 @@
               { style: { position: "relative" } },
               o.createElement("img", {
                 src: null == e ? void 0 : e.GetAssets().GetCommunityIconURL(),
-                className: q().ShortLogoDimensions,
+                className: Z().ShortLogoDimensions,
                 onError: s,
               }),
             )
@@ -1329,7 +1329,7 @@
               u.s,
               { style: { position: "relative" } },
               o.createElement("img", {
-                className: (0, l.Z)(q().WishlistBlurImage),
+                className: (0, l.Z)(Z().WishlistBlurImage),
                 src: null == e ? void 0 : e.GetAssets().GetCommunityIconURL(),
                 onError: s,
               }),
@@ -1350,7 +1350,7 @@
         return o.createElement(
           "div",
           {
-            className: q().HideButton,
+            className: Z().HideButton,
             onClick: (t) => {
               e.onHide(), t.stopPropagation(), t.preventDefault();
             },
@@ -1364,7 +1364,7 @@
       function se(e) {
         return o.createElement(
           "div",
-          { className: q().SteamNotificationWrapper },
+          { className: Z().SteamNotificationWrapper },
           e.children,
         );
       }
@@ -1803,26 +1803,30 @@
               "a",
               { href: t, className: me().WebPinnedNotification },
               o.createElement(T, {
-                icon: o.createElement(U.yBp, null),
+                icon: o.createElement(U.dqu, null),
                 count: n,
                 onActivate: () => window.location.assign(t),
-                strLocToken: "#Notification_FriendInvitePinned_Body",
+                strLocToken: "#Notification_NewModeratorMessagePinned_Body",
                 eUIMode: _.se.k_EUIMode_Web,
                 visible: !0,
               }),
             )
           : null;
       }
-      var ye = n(41576);
-      const Se = new i.tL();
-      function Te(e) {
+      function ye(e) {
+        const { url: t, count: n } = e;
+        return null;
+      }
+      var Se = n(41576);
+      const Te = new i.tL();
+      function Ie(e) {
         const { bResponsiveHeader: t, notifications: n } = e;
         o.useEffect(() => {
-          n && !Se.m_bLoaded && Se.ProcessNewNotificationPayload(n);
+          n && !Te.m_bLoaded && Te.ProcessNewNotificationPayload(n);
         }, [n]);
         const l = (0, P.bY)();
         (0, o.useEffect)(() => {
-          Se.setTransport(l),
+          Te.setTransport(l),
             (window.RefreshSteamNotifications = () =>
               (function (e) {
                 return (0, a.mG)(this, void 0, void 0, function* () {
@@ -1835,40 +1839,40 @@
                       !1,
                     );
                   } catch (e) {}
-                  t && Se.ProcessNewNotificationPayload(t);
+                  t && Te.ProcessNewNotificationPayload(t);
                 });
               })(l));
         }, [l]);
-        const s = Ie();
+        const s = Ae();
         return t
           ? o.createElement(
               o.Fragment,
               null,
-              o.createElement(Ge, null),
-              o.createElement(Me, null),
+              o.createElement(Ue, null),
+              o.createElement(De, null),
             )
-          : o.createElement(be, { nTotalUnviewed: s.nUnviewed });
-      }
-      function Ie() {
-        return (0, C.SZ)(() => ({
-          notifications: Se.m_rgNotificationRollups,
-          summary: Object.assign({}, Se.m_summary),
-          loaded: Se.m_bLoaded,
-          nUnviewed: Se.m_nUnviewed,
-        }));
+          : o.createElement(ke, { nTotalUnviewed: s.nUnviewed });
       }
       function Ae() {
-        return Ie().notifications.filter((e) => !(0, i.sA)(e.item));
+        return (0, C.SZ)(() => ({
+          notifications: Te.m_rgNotificationRollups,
+          summary: Object.assign({}, Te.m_summary),
+          loaded: Te.m_bLoaded,
+          nUnviewed: Te.m_nUnviewed,
+        }));
       }
-      function be(e) {
+      function be() {
+        return Ae().notifications.filter((e) => !(0, i.sA)(e.item));
+      }
+      function ke(e) {
         const { nTotalUnviewed: t } = e,
           n = o.useRef(),
-          a = Ae(),
+          a = be(),
           [i, s] = o.useState(c().AnimateBell);
         o.useEffect(() => {
           n.current ||
             ((n.current = (0, r.yV)(
-              o.createElement(ke, { popupRef: n }),
+              o.createElement(Be, { popupRef: n }),
               document.getElementById("green_envelope_menu_root"),
               {
                 bPreferPopLeft: !0,
@@ -1891,7 +1895,7 @@
           [n],
         );
         return o.createElement(
-          ye.U,
+          Se.U,
           { trigger: "repeated", onVisibilityChange: m },
           o.createElement(
             "div",
@@ -1900,7 +1904,7 @@
                 if (!n.current.visible) {
                   n.current.Show();
                   -1 != a.findIndex((e) => !e.item.viewed) &&
-                    Se.MarkAllItemsViewed();
+                    Te.MarkAllItemsViewed();
                 }
               },
               id: "green_envelope_menu_root",
@@ -1915,7 +1919,7 @@
           ),
         );
       }
-      const ke = (e) => {
+      const Be = (e) => {
           var t;
           const { popupRef: n } = e,
             a = o.useRef(),
@@ -1947,19 +1951,19 @@
                   : e.Hide();
               },
             },
-            o.createElement(Be, null),
+            o.createElement(Me, null),
             o.createElement(
               "div",
               {
                 className: (0, l.Z)(c().NotificationsMenuScrollable, r),
                 ref: a,
               },
+              o.createElement(Ue, null),
               o.createElement(Ge, null),
-              o.createElement(Le, null),
             ),
           );
         },
-        Be = () =>
+        Me = () =>
           o.createElement(
             "div",
             { className: (0, l.Z)(c().NotificationHeader) },
@@ -1980,7 +1984,7 @@
               (0, s.Xx)("#NotificationsMenu_ViewAll"),
             ),
           ),
-        Me = () =>
+        De = () =>
           o.createElement(
             "div",
             {
@@ -2001,15 +2005,15 @@
               (0, s.Xx)("#NotificationsMenu_ViewAll"),
             ),
           );
-      function De(e, t, n) {
+      function Le(e, t, n) {
         t.read ||
           (n && 0 != n.button && 1 != n.button) ||
-          Se.MarkItemRead(t.notification_id),
+          Te.MarkItemRead(t.notification_id),
           e();
       }
-      function Le() {
-        const e = Ie(),
-          t = Ae();
+      function Ge() {
+        const e = Ae(),
+          t = be();
         return t.length || (0, i.ft)(e.summary)
           ? o.createElement(
               "div",
@@ -2018,84 +2022,90 @@
                 o.createElement(de, {
                   key: t,
                   rollup: e,
-                  onNotificationClick: De,
+                  onNotificationClick: Le,
                   uimode: _.se.k_EUIMode_Web,
                   location: h.Tray,
                 }),
               ),
             )
-          : o.createElement(xe, null);
+          : o.createElement(Xe, null);
       }
-      function Ge() {
+      function Ue() {
         return o.createElement(
           "div",
           null,
-          o.createElement(Ue, null),
-          o.createElement(we, null),
           o.createElement(Ce, null),
           o.createElement(Pe, null),
+          o.createElement(we, null),
           o.createElement(Fe, null),
           o.createElement(He, null),
-          o.createElement(Oe, null),
           o.createElement(Re, null),
+          o.createElement(xe, null),
+          o.createElement(Oe, null),
+          o.createElement(We, null),
         );
       }
-      function Ue() {
-        const e = Ie(),
+      function Ce() {
+        const e = Ae(),
           t = `${d.De.COMMUNITY_BASE_URL}profiles/${d.L7.steamid}/inventory/#pending_gifts`;
         return o.createElement(fe, { url: t, count: e.summary.pending_gifts });
       }
-      function Ce() {
-        const e = Ie(),
+      function we() {
+        const e = Ae(),
           t = `${d.De.COMMUNITY_BASE_URL}profiles/${d.L7.steamid}/notifications#comments`;
         return o.createElement(ue, { url: t, count: e.summary.comments });
       }
-      function we() {
-        const e = Ie(),
+      function Pe() {
+        const e = Ae(),
           t = `${d.De.COMMUNITY_BASE_URL}profiles/${d.L7.steamid}/home/invites`;
         return o.createElement(pe, {
           url: t,
           count: e.summary.pending_invites,
         });
       }
-      function Pe() {
-        const e = Ie(),
+      function Fe() {
+        const e = Ae(),
           t = `${d.De.COMMUNITY_BASE_URL}profiles/${d.L7.steamid}/inventory`;
         return o.createElement(ge, {
           url: t,
           count: e.summary.inventory_items,
         });
       }
-      function Fe() {
-        const e = Ie(),
+      function He() {
+        const e = Ae(),
           t = `${d.De.COMMUNITY_BASE_URL}profiles/${d.L7.steamid}/tradeoffers`;
         return o.createElement(Ne, { url: t, count: e.summary.trade_offers });
       }
-      function He() {
-        const e = Ie(),
+      function Re() {
+        const e = Ae(),
           t = `${d.De.COMMUNITY_BASE_URL}profiles/${d.L7.steamid}/gamenotifications`;
         return o.createElement(Ee, {
           url: t,
           count: e.summary.async_game_updates,
         });
       }
-      function Re() {
-        const e = Ie(),
+      function Oe() {
+        const e = Ae(),
           t = `${d.De.HELP_BASE_URL}wizard/HelpRequests`;
         return o.createElement(ve, {
           url: t,
           count: e.summary.help_request_replies,
         });
       }
-      function Oe() {
-        const e = Ie(),
+      function xe() {
+        const e = Ae(),
           t = `${d.De.COMMUNITY_BASE_URL}my/moderatormessages`;
         return o.createElement(he, {
           url: t,
           count: e.summary.moderator_messages,
         });
       }
-      function xe() {
+      function We() {
+        const e = Ae(),
+          t = `${d.De.STORE_BASE_URL}account/familymanagement`;
+        return o.createElement(ye, { url: t, count: e.summary.pending_fi });
+      }
+      function Xe() {
         return o.createElement(
           "div",
           { className: c().EmptyNotificationsCtn },
@@ -2111,7 +2121,7 @@
           ),
         );
       }
-      const We = Te;
+      const je = Ie;
     },
     41576: (e, t, n) => {
       "use strict";

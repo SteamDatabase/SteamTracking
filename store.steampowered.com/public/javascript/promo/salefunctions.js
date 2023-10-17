@@ -1356,16 +1356,16 @@ function InitSteamAwardNominationDialog( nominatedid, appname, rgCategories, bRe
 		var $Form = $J('<form/>', {'class': 'steamward_nominate_form'});
 
 		var bFoundCurrentApp = false;
-		var rgPreviousLaborOfLoveWinners = [230410,271590,730,105600];
+		var rgPreviousLaborOfLoveWinners = [230410,271590,730,105600,1091500];
 		for ( var i = 0; i < rgCategories.length; i++ )
 		{
 			var oCategory = rgCategories[i];
 			if ( oCategory.categoryid == -1 )
 				continue;
 
-			var bHideCategory = !bReleasedCurrentYear && oCategory.categoryid != 74;
+			var bHideCategory = !bReleasedCurrentYear && oCategory.categoryid != 92;
 
-			if ( oCategory.categoryid == 74 && $J.inArray( nominatedid, rgPreviousLaborOfLoveWinners ) !== -1 )
+			if ( oCategory.categoryid == 92 && $J.inArray( nominatedid, rgPreviousLaborOfLoveWinners ) !== -1 )
 				bHideCategory = true;
 
 			if ( bHideCategory )

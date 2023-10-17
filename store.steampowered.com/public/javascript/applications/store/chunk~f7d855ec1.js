@@ -267,28 +267,31 @@
     5080: (e, t, a) => {
       "use strict";
       a.d(t, {
-        HG: () => i,
-        H_: () => s,
-        LJ: () => d,
-        Zh: () => c,
-        _: () => l,
-        ml: () => o,
-        zs: () => m,
+        HG: () => s,
+        H_: () => c,
+        LJ: () => u,
+        Pi: () => h,
+        Zh: () => d,
+        _: () => m,
+        ml: () => l,
+        zs: () => p,
       });
-      var n = a(84770),
-        r = a(89526);
-      const i = "0px 0px 100% 0px",
-        o = "tab",
-        s = 940;
-      function l() {
-        return window.innerWidth >= s;
+      var n = a(75457),
+        r = a(84770),
+        i = a(89526),
+        o = a(12104);
+      const s = "0px 0px 100% 0px",
+        l = "tab",
+        c = 940;
+      function m() {
+        return window.innerWidth >= c;
       }
-      function c(e = s) {
+      function d(e = c) {
         return (
           (function () {
-            const [e, t] = (0, r.useState)(window.innerWidth);
+            const [e, t] = (0, i.useState)(window.innerWidth);
             return (
-              (0, r.useEffect)(() => {
+              (0, i.useEffect)(() => {
                 const e = () => {
                   t(window.innerWidth);
                 };
@@ -302,9 +305,9 @@
           })() >= e
         );
       }
-      function m(e) {
-        const t = c(s),
-          a = (0, n.fD)(e);
+      function p(e) {
+        const t = d(c),
+          a = (0, r.fD)(e);
         return t
           ? { nMaxCapsulesPerRow: a.nMaxItemsPerRow, bScreenIsWide: t }
           : {
@@ -318,14 +321,28 @@
               bScreenIsWide: t,
             };
       }
-      function d(e) {
-        const t = (0, n.fD)(e);
-        return l()
+      function u(e) {
+        const t = (0, r.fD)(e);
+        return m()
           ? t.nMaxItemsPerRow
           : Math.min(
               Math.max(Math.floor(window.innerWidth / t.nItemMinimumWidth), 1),
               t.nMaxItemsPerRow,
             );
+      }
+      function h(e) {
+        switch (e) {
+          case o.uL.k_eControllerType_XBoxOneController:
+            return n.U5.k_EStoreCategoryFullController;
+          case o.uL.k_eControllerType_PS4Controller:
+            return n.U5.k_EStoreCategoryPS4Controller;
+          case o.uL.k_eControllerType_PS5Controller:
+            return n.U5.k_EStoreCategoryPS5Controller;
+          case o.uL.k_eControllerType_SteamController:
+            return n.U5.k_EStoreCategorySteamInputAPI;
+          default:
+            return;
+        }
       }
     },
     68943: (e, t, a) => {

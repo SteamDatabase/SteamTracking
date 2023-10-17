@@ -3113,7 +3113,7 @@
         }
         GetCommunityItemInventory(e) {
           return (0, n.mG)(this, void 0, void 0, function* () {
-            if (!this.BIsLoggedIn()) return;
+            if (!this.BIsLoggedIn()) return Promise.resolve();
             const t = this.GetOwnedItemCacheKey(e);
             if (this.m_inflightInventoryRequests[t])
               return this.m_inflightInventoryRequests[t];

@@ -4745,9 +4745,9 @@
         (f = (0, a.gn)([l.Pi], f));
       const D = f;
     },
-    40619: (e, t, n) => {
+    9663: (e, t, n) => {
       "use strict";
-      n.d(t, { d: () => $t });
+      n.d(t, { d: () => Qt });
       var a = n(33940),
         i = n(89526),
         l = n(24174),
@@ -6132,7 +6132,7 @@
         $e = n(90170),
         Je = n(17547);
       const et = i.lazy(() =>
-          Promise.all([n.e(2706), n.e(4601)]).then(n.bind(n, 90171)),
+          Promise.all([n.e(2706), n.e(4601)]).then(n.bind(n, 70005)),
         ),
         tt = (e) => {
           const t = (0, i.useRef)(null),
@@ -6196,34 +6196,15 @@
         };
       var nt = n(54297),
         at = n(75962),
-        it = n(60161);
-      const lt = 940;
-      function ot(e = lt) {
-        return (
-          (function () {
-            const [e, t] = (0, i.useState)(window.innerWidth);
-            return (
-              (0, i.useEffect)(() => {
-                const e = () => {
-                  t(window.innerWidth);
-                };
-                return (
-                  window.addEventListener("resize", e),
-                  () => window.removeEventListener("resize", e)
-                );
-              }, []),
-              e
-            );
-          })() >= e
-        );
-      }
-      var rt = n(5456);
-      function st(e) {
+        it = n(60161),
+        lt = n(5080),
+        ot = n(5456);
+      function rt(e) {
         const t = (0, b.id)(),
-          n = ot(lt),
+          n = (0, lt.Zh)(lt.H_),
           a = "true" === String((0, r.im)(e.args, "autoadvance")).toLowerCase();
         return i.createElement(
-          rt.l,
+          ot.l,
           {
             hideArrows: !n,
             hidePips: t,
@@ -6237,14 +6218,14 @@
           e.children,
         );
       }
-      var ct = n(44026),
-        mt = n(2851);
-      function dt(e) {
+      var st = n(44026),
+        ct = n(2851);
+      function mt(e) {
         const { fileUploadManager: t } = e,
           n = (0, i.useRef)();
         return i.createElement(
           "div",
-          { className: mt.Ctn },
+          { className: ct.Ctn },
           i.createElement("input", {
             type: "file",
             accept: ".jpg,.jpeg,.png,.gif,.webm,.mpg,.mpeg,.ogv,.mp4",
@@ -6265,7 +6246,7 @@
             },
           }),
           i.createElement(
-            ct.wl,
+            st.wl,
             {
               type: "button",
               title: (0, C.Xx)("#Button_Upload"),
@@ -6276,50 +6257,50 @@
           ),
         );
       }
-      var pt = n(25125),
-        ut = n(59015);
-      function _t(e) {
+      var dt = n(25125),
+        pt = n(59015);
+      function ut(e) {
         const { fileUploadManager: t } = e,
-          n = (0, pt.SZ)(() => t.file_upload_props.eUploadState);
+          n = (0, dt.SZ)(() => t.file_upload_props.eUploadState);
         return n == Be.FileReady
-          ? i.createElement(ht, { fileUploadManager: t })
+          ? i.createElement(_t, { fileUploadManager: t })
           : n == Be.Error ||
             n == Be.Error_FileTypeNotSupported ||
             n == Be.Error_ImageTooLarge
-          ? i.createElement(Et, { fileUploadManager: t })
-          : n != Be.None
           ? i.createElement(gt, { fileUploadManager: t })
+          : n != Be.None
+          ? i.createElement(ht, { fileUploadManager: t })
           : null;
       }
-      function ht(e) {
+      function _t(e) {
         const { fileUploadManager: t } = e,
           n = t.file;
         return i.createElement(
           "div",
-          { className: ut.UploadPreviewContainer },
+          { className: pt.UploadPreviewContainer },
           Boolean(-1 != n.type.indexOf("image")) &&
             i.createElement("img", {
-              className: ut.UploadPreview,
+              className: pt.UploadPreview,
               src: t.file_upload_data_url,
             }),
           Boolean(-1 != n.type.indexOf("video")) &&
             i.createElement(k.nkn, null),
           i.createElement(
             "div",
-            { className: ut.FileUploadFileName },
+            { className: pt.FileUploadFileName },
             "'",
             n.name,
             "'",
           ),
           i.createElement(
             "div",
-            { className: ut.FileUploadCancel, onClick: () => t.Reset() },
+            { className: pt.FileUploadCancel, onClick: () => t.Reset() },
             i.createElement(k.pVO, null),
           ),
           i.createElement(
             He.KM,
             {
-              className: ut.FileUploadBtn,
+              className: pt.FileUploadBtn,
               onClick: () =>
                 (0, a.mG)(this, void 0, void 0, function* () {
                   yield t.BeginFileUpload(), t.Reset();
@@ -6329,9 +6310,9 @@
           ),
         );
       }
-      function gt(e) {
+      function ht(e) {
         const { fileUploadManager: t } = e,
-          [n, a, l] = (0, pt.SZ)(() => [
+          [n, a, l] = (0, dt.SZ)(() => [
             t.file_upload_props.file,
             t.file_upload_props.displayFileName,
             t.file_upload_props.uploadProgress,
@@ -6340,13 +6321,13 @@
           r = { width: l + "%" };
         return i.createElement(
           "div",
-          { className: ut.FileUploadProgressContainer },
-          i.createElement("div", { className: ut.FileUploadProgressName }, o),
+          { className: pt.FileUploadProgressContainer },
+          i.createElement("div", { className: pt.FileUploadProgressName }, o),
           i.createElement(
             "div",
             {
               className: (0, w.Z)(
-                ut.FileUploadProgressBarContainer,
+                pt.FileUploadProgressBarContainer,
                 "DialogProgressBar_ProgressBarContainer",
               ),
             },
@@ -6357,9 +6338,9 @@
           ),
         );
       }
-      function Et(e) {
+      function gt(e) {
         const { fileUploadManager: t } = e,
-          [n, l, o] = (0, pt.SZ)(() => [
+          [n, l, o] = (0, dt.SZ)(() => [
             t.file_upload_props.strErrorDescription,
             t.file_upload_props.displayFileName,
             t.file_upload_props.eUploadState,
@@ -6368,16 +6349,16 @@
           s = n || (0, C.Xx)("#Chat_Upload_ErrorCloud");
         return i.createElement(
           "div",
-          { className: ut.FileUploadProgressContainer },
-          i.createElement("div", { className: ut.FileUploadProgressName }, r),
+          { className: pt.FileUploadProgressContainer },
+          i.createElement("div", { className: pt.FileUploadProgressName }, r),
           i.createElement(
             "div",
-            { className: ut.FileUploadErrorDescription },
+            { className: pt.FileUploadErrorDescription },
             s,
           ),
           i.createElement(
             "div",
-            { className: ut.FileUploadActions },
+            { className: pt.FileUploadActions },
             i.createElement(
               He.Uq,
               { className: "DialogLayout_NoMinWidth" },
@@ -6401,12 +6382,12 @@
           ),
         );
       }
-      var vt = n(67736),
-        St = n(57742),
-        ft = n(32905),
-        Dt = n(21907),
-        yt = n(72985);
-      class It {
+      var Et = n(67736),
+        vt = n(57742),
+        St = n(32905),
+        ft = n(21907),
+        Dt = n(72985);
+      class yt {
         GetInventoryForApp(e) {
           return this.m_mapInventoryByApp.get(e);
         }
@@ -6439,11 +6420,11 @@
         }
         InternalLoadCommunityInventory(e) {
           return (0, a.mG)(this, void 0, void 0, function* () {
-            const t = K.gA.Init(yt.o0);
+            const t = K.gA.Init(Dt.o0);
             t.Body().set_filter_appids([e]);
             let n = null;
             try {
-              const a = yield yt.Ts.GetCommunityInventory(
+              const a = yield Dt.Ts.GetCommunityInventory(
                 this.m_SteamInterface.GetServiceTransport(),
                 t,
               );
@@ -6477,12 +6458,12 @@
         }
         static Get() {
           return (
-            It.s_Singleton ||
-              ((It.s_Singleton = new It()),
-              It.s_Singleton.Init(),
+            yt.s_Singleton ||
+              ((yt.s_Singleton = new yt()),
+              yt.s_Singleton.Init(),
               "dev" == b.De.WEB_UNIVERSE &&
-                (window.g_QuestCommunityInventoryStore = It.s_Singleton)),
-            It.s_Singleton
+                (window.g_QuestCommunityInventoryStore = yt.s_Singleton)),
+            yt.s_Singleton
           );
         }
         constructor() {
@@ -6500,20 +6481,20 @@
             (this.m_SteamInterface = new Y.J(b.De.WEBAPI_BASE_URL, e));
         }
       }
-      function Ct(e) {
-        const [t, n] = (0, i.useState)(It.Get().GetInventoryForApp(e));
+      function It(e) {
+        const [t, n] = (0, i.useState)(yt.Get().GetInventoryForApp(e));
         return (
           (0, i.useEffect)(() => {
             e &&
-              !It.Get().BHasLoadedDef(e) &&
-              It.Get().LoadCommunityInventory(e);
+              !yt.Get().BHasLoadedDef(e) &&
+              yt.Get().LoadCommunityInventory(e);
           }, [e]),
-          (0, h.Qg)(It.Get().GetItemDefsChangeForAppID(e), n),
+          (0, h.Qg)(yt.Get().GetItemDefsChangeForAppID(e), n),
           t
         );
       }
-      (0, a.gn)([h.ak], It.prototype, "SetTestAppCommunityItems", null);
-      class bt {
+      (0, a.gn)([h.ak], yt.prototype, "SetTestAppCommunityItems", null);
+      class Ct {
         GetClaimItemState() {
           return this.m_claimState;
         }
@@ -6538,7 +6519,7 @@
                   rtNextClaimTime: Math.floor(Date.now() / 1e3) + 3600,
                   appid: 2243810,
                   community_item_type: 2,
-                  community_item_class: Dt.Ve.k_ECommunityItemClass_Sticker,
+                  community_item_class: ft.Ve.k_ECommunityItemClass_Sticker,
                 })
               : (this.m_testNextClaimFakeResponse = null),
             (this.m_claimState = e),
@@ -6546,11 +6527,11 @@
         }
         ActivateProfileModifier(e) {
           return (0, a.mG)(this, void 0, void 0, function* () {
-            const t = K.gA.Init(yt.yg);
+            const t = K.gA.Init(Dt.yg);
             t.Body().set_communityitemid(e.communityitemid),
               t.Body().set_appid(e.appid),
               t.Body().set_activate(!0);
-            const n = yield yt.Ts.ActivateProfileModifierItem(
+            const n = yield Dt.Ts.ActivateProfileModifierItem(
               this.m_SteamInterface.GetServiceTransport(),
               t,
             );
@@ -6755,12 +6736,12 @@
         }
         static Get() {
           return (
-            bt.s_Singleton ||
-              ((bt.s_Singleton = new bt()),
-              bt.s_Singleton.Init(),
+            Ct.s_Singleton ||
+              ((Ct.s_Singleton = new Ct()),
+              Ct.s_Singleton.Init(),
               "dev" == b.De.WEB_UNIVERSE &&
-                (window.g_SaleItemClaimableRewardsStore = bt.s_Singleton)),
-            bt.s_Singleton
+                (window.g_SaleItemClaimableRewardsStore = Ct.s_Singleton)),
+            Ct.s_Singleton
           );
         }
         constructor() {
@@ -6784,11 +6765,11 @@
             (this.m_SteamInterface = new Y.J(b.De.WEBAPI_BASE_URL, e));
         }
       }
-      (0, a.gn)([h.ak], bt.prototype, "TEST_OverrideClaimState", null),
-        (0, a.gn)([h.ak], bt.prototype, "UserClaimItem", null);
-      var At = n(77557),
-        Tt = n(39087);
-      class kt {
+      (0, a.gn)([h.ak], Ct.prototype, "TEST_OverrideClaimState", null),
+        (0, a.gn)([h.ak], Ct.prototype, "UserClaimItem", null);
+      var bt = n(77557),
+        At = n(39087);
+      class Tt {
         GetItemDefForAppID(e) {
           return this.m_mapAppToDefs.get(e);
         }
@@ -6872,12 +6853,12 @@
         }
         static Get() {
           return (
-            kt.s_Singleton ||
-              ((kt.s_Singleton = new kt()),
-              kt.s_Singleton.Init(),
+            Tt.s_Singleton ||
+              ((Tt.s_Singleton = new Tt()),
+              Tt.s_Singleton.Init(),
               "dev" == b.De.WEB_UNIVERSE &&
-                (window.g_SaleMiniGameItemDefStore = kt.s_Singleton)),
-            kt.s_Singleton
+                (window.g_SaleMiniGameItemDefStore = Tt.s_Singleton)),
+            Tt.s_Singleton
           );
         }
         constructor() {
@@ -6887,16 +6868,16 @@
         }
         Init() {}
       }
-      function wt(e, t, n) {
+      function kt(e, t, n) {
         const a = (function (e, t) {
-            const [n, a] = (0, i.useState)(kt.Get().GetItemDefForAppID(e));
+            const [n, a] = (0, i.useState)(Tt.Get().GetItemDefForAppID(e));
             return (
               (0, i.useEffect)(() => {
                 e &&
-                  !kt.Get().BHasLoadedDef(e) &&
-                  kt.Get().LoadAppCommunityItems(e, t);
+                  !Tt.Get().BHasLoadedDef(e) &&
+                  Tt.Get().LoadAppCommunityItems(e, t);
               }, [e, t]),
-              (0, h.Qg)(kt.Get().GetItemDefsChangeForEventID(e), a),
+              (0, h.Qg)(Tt.Get().GetItemDefsChangeForEventID(e), a),
               n
             );
           })(e, n),
@@ -6913,9 +6894,9 @@
           l
         );
       }
-      function Nt(e) {
+      function wt(e) {
         const { appid: t, community_item_type: n, bForEdit: a } = e,
-          l = wt(t, n, a);
+          l = kt(t, n, a);
         if (
           (null == l ? void 0 : l.item_movie_mp4) &&
           (null == l ? void 0 : l.item_movie_webm)
@@ -6953,18 +6934,18 @@
           string: (0, C.Xx)("#Loading"),
         });
       }
-      function Lt(e) {
+      function Nt(e) {
         const t = (function () {
-            const [e, t] = (0, i.useState)(bt.Get().GetClaimItemState()),
+            const [e, t] = (0, i.useState)(Ct.Get().GetClaimItemState()),
               [n, a] = (0, i.useState)(!0);
             return (
               (0, i.useEffect)(() => {
-                bt.Get()
+                Ct.Get()
                   .LoadCanUserClaimItem()
                   .then(t)
                   .finally(() => a(!1));
               }, []),
-              (0, h.Qg)(bt.Get().GetClaimStateChangeCallback(), t),
+              (0, h.Qg)(Ct.Get().GetClaimStateChangeCallback(), t),
               Object.assign(Object.assign({}, e), { bLoading: n })
             );
           })(),
@@ -6976,15 +6957,15 @@
             className: (0, w.Z)("CSSClaimItemButton", a),
             onClick: (e) => {
               t.bCanClaimNewItem
-                ? (0, St.AM)(
-                    i.createElement(Ot, { rewardType: o }),
+                ? (0, vt.AM)(
+                    i.createElement(xt, { rewardType: o }),
                     (0, it.RA)(e),
                   )
                 : ("dev" == b.De.WEB_UNIVERSE ||
                     "beta" == b.De.WEB_UNIVERSE ||
                     l) &&
-                  ((0, St.AM)(
-                    i.createElement(Ot, { rewardType: o }),
+                  ((0, vt.AM)(
+                    i.createElement(xt, { rewardType: o }),
                     (0, it.RA)(e),
                   ),
                   console.log(
@@ -6999,15 +6980,15 @@
                 string: (0, C.Xx)("#Loading"),
                 size: "small",
               })
-            : i.createElement(xt, { claimState: t }),
+            : i.createElement(Lt, { claimState: t }),
         );
       }
-      function xt(e) {
+      function Lt(e) {
         const { claimState: t, strButtonOverride: n, rewardType: a } = e;
         if (t.bAlreadyClaimedCurrentItem)
           return i.createElement(
             "div",
-            { className: (0, w.Z)(Tt.CheckMark, "CSSClaimedState") },
+            { className: (0, w.Z)(At.CheckMark, "CSSClaimedState") },
             i.createElement(k.JrY, null),
             i.createElement(
               "span",
@@ -7020,21 +7001,21 @@
           );
         let l = (0, C.Xx)("#Sale_ClaimableReward_generic");
         switch ((null == t ? void 0 : t.community_item_class) || a) {
-          case Dt.Ve.k_ECommunityItemClass_Sticker:
+          case ft.Ve.k_ECommunityItemClass_Sticker:
             l = (0, C.Xx)("#Sale_ClaimableReward_sticker");
             break;
-          case Dt.Ve.k_ECommunityItemClass_ProfileModifier:
+          case ft.Ve.k_ECommunityItemClass_ProfileModifier:
             l = (0, C.Xx)("#Sale_ClaimableReward_profilemodifier");
             break;
-          case Dt.Ve.k_ECommunityItemClass_AnimatedAvatar:
+          case ft.Ve.k_ECommunityItemClass_AnimatedAvatar:
             l = (0, C.Xx)("#Sale_ClaimableReward_animatedavatar");
         }
         return i.createElement("span", { className: "CSSUnclaimedState" }, l);
       }
-      function Ot(e) {
+      function xt(e) {
         const { closeModal: t, rewardType: n } = e,
-          { fnClaimItem: a } = { fnClaimItem: bt.Get().UserClaimItem },
-          l = (0, At.tx)(),
+          { fnClaimItem: a } = { fnClaimItem: Ct.Get().UserClaimItem },
+          l = (0, bt.tx)(),
           [o, r] = i.useState(null);
         i.useEffect(() => {
           l.bLoading ||
@@ -7047,15 +7028,15 @@
                   let t = (0, C.Xx)("#Sale_ClaimableReward_completed_generic");
                   const a = (null == o ? void 0 : o.community_item_class) || n;
                   switch (a) {
-                    case Dt.Ve.k_ECommunityItemClass_Sticker:
+                    case ft.Ve.k_ECommunityItemClass_Sticker:
                       t = (0, C.Xx)("#Sale_ClaimableReward_completed_sticker");
                       break;
-                    case Dt.Ve.k_ECommunityItemClass_ProfileModifier:
+                    case ft.Ve.k_ECommunityItemClass_ProfileModifier:
                       t = (0, C.Xx)(
                         "#Sale_ClaimableReward_completed_profilemodifier",
                       );
                       break;
-                    case Dt.Ve.k_ECommunityItemClass_AnimatedAvatar:
+                    case ft.Ve.k_ECommunityItemClass_AnimatedAvatar:
                       t = (0, C.Xx)(
                         "#Sale_ClaimableReward_completed_animatedavatar",
                       );
@@ -7064,9 +7045,9 @@
                     l.fnSetElSuccess(
                       i.createElement(
                         "div",
-                        { className: Tt.DialogCtn },
+                        { className: At.DialogCtn },
                         i.createElement("span", null, t),
-                        i.createElement(Gt, {
+                        i.createElement(Ot, {
                           appid: e.appid,
                           community_item_type: e.community_item_type,
                           rewardType: a,
@@ -7081,43 +7062,43 @@
         }, [null == o ? void 0 : o.community_item_class, l, a, n]);
         let s = (0, C.Xx)("#Sale_ClaimableReward_generic");
         switch ((null == o ? void 0 : o.community_item_class) || n) {
-          case Dt.Ve.k_ECommunityItemClass_Sticker:
+          case ft.Ve.k_ECommunityItemClass_Sticker:
             s = (0, C.Xx)("#Sale_ClaimableReward_sticker");
             break;
-          case Dt.Ve.k_ECommunityItemClass_ProfileModifier:
+          case ft.Ve.k_ECommunityItemClass_ProfileModifier:
             s = (0, C.Xx)("#Sale_ClaimableReward_profilemodifier");
             break;
-          case Dt.Ve.k_ECommunityItemClass_AnimatedAvatar:
+          case ft.Ve.k_ECommunityItemClass_AnimatedAvatar:
             s = (0, C.Xx)("#Sale_ClaimableReward_animatedavatar");
         }
-        return i.createElement(At.NT, {
+        return i.createElement(bt.NT, {
           state: l,
           strDialogTitle: s,
           closeModal: t,
         });
       }
-      function Gt(e) {
+      function Ot(e) {
         const { appid: t, community_item_type: n, rewardType: a } = e;
         return t && n
           ? i.createElement(
               i.Fragment,
               null,
-              i.createElement(Nt, { appid: t, community_item_type: n }),
-              Boolean(a == Dt.Ve.k_ECommunityItemClass_ProfileModifier) &&
-                i.createElement(Rt, { appid: t, community_item_type: n }),
+              i.createElement(wt, { appid: t, community_item_type: n }),
+              Boolean(a == ft.Ve.k_ECommunityItemClass_ProfileModifier) &&
+                i.createElement(Gt, { appid: t, community_item_type: n }),
             )
           : null;
       }
-      function Rt(e) {
+      function Gt(e) {
         const { appid: t, community_item_type: n } = e,
-          l = Ct(t),
+          l = It(t),
           [o, r] = i.useState(!1);
         if (!l) return null;
         const s = l.find((e) => e.item_type == n);
         return s
           ? i.createElement(
               "div",
-              { className: Tt.EquipCtn },
+              { className: At.EquipCtn },
               Boolean(o)
                 ? i.createElement(
                     "div",
@@ -7132,7 +7113,7 @@
                       onClick: (e) => {
                         (function (e) {
                           return (0, a.mG)(this, void 0, void 0, function* () {
-                            return bt.Get().ActivateProfileModifier(e);
+                            return Ct.Get().ActivateProfileModifier(e);
                           });
                         })(s).then((e) => {
                           e == Z.s.k_EResultOK && r(!0);
@@ -7142,7 +7123,7 @@
                     (0, C.Xx)("#Sale_ClaimableReward_profilemodifier_apply"),
                   ),
               i.createElement(
-                ct.IS,
+                st.IS,
                 { href: `${b.De.COMMUNITY_BASE_URL}profiles/${b.L7.steamid}` },
                 (0, C.Xx)("#Sale_ClaimableReward_profilemodifier_view"),
               ),
@@ -7151,22 +7132,22 @@
               "div",
               null,
               i.createElement(
-                ct.IS,
+                st.IS,
                 {
                   href: `${b.De.COMMUNITY_BASE_URL}profiles/${b.L7.steamid}/edit/goldenprofile`,
                 },
                 (0, C.Xx)("#Sale_ClaimableReward_profilemodifier_choose"),
               ),
               i.createElement(
-                ct.IS,
+                st.IS,
                 { href: `${b.De.COMMUNITY_BASE_URL}profiles/${b.L7.steamid}` },
                 (0, C.Xx)("#Sale_ClaimableReward_profilemodifier_view"),
               ),
             );
       }
-      var Bt = n(78651);
-      let Mt = null;
-      function Pt(e) {
+      var Rt = n(78651);
+      let Bt = null;
+      function Mt(e) {
         var t, n;
         let a = (0, r.im)(e.args);
         const l = (0, r.im)(e.args, "style"),
@@ -7218,7 +7199,7 @@
               )
         );
       }
-      function Ft(e) {
+      function Pt(e) {
         const { showErrorInfo: t, event: n } = e.context;
         let a = e && e.children && e.children.toString();
         if (
@@ -7243,7 +7224,7 @@
                   src: a,
                   crossOrigin: e ? "anonymous" : void 0,
                 })
-              : i.createElement(Bt.l, {
+              : i.createElement(Rt.l, {
                   src: a,
                   crossOrigin: e ? "anonymous" : void 0,
                 })
@@ -7251,7 +7232,7 @@
         }
         return i.createElement(F.j, { rgSources: l });
       }
-      function Ut(e) {
+      function Ft(e) {
         const t = (0, r.im)(e.args);
         if (null == t || null == t || 0 == t.length) return "";
         const n = e && e.children && e.children.toString(),
@@ -7267,27 +7248,27 @@
           i.createElement(F.j, { rgSources: a, alt: n })
         );
       }
-      function jt(e) {
-        const t = Ht(
+      function Ut(e) {
+        const t = zt(
             e.args,
             "appid",
             e.context.event.appid ? e.context.event.appid : 0,
           ),
-          n = Ht(e.args, "trailerid", 0);
+          n = zt(e.args, "trailerid", 0);
         return i.createElement(Ke, {
           appid: t,
           trailerBaseID: n,
           bIsPreviewMode: e.context.showErrorInfo,
         });
       }
-      function Xt(e) {
-        const t = Ht(e.args, "appid", 0);
+      function jt(e) {
+        const t = zt(e.args, "appid", 0);
         return i.createElement(tt, {
           appid: t,
           bPreviewMode: e.context.showErrorInfo,
         });
       }
-      function zt(e) {
+      function Xt(e) {
         const t = (0, r.im)(e.args, "name"),
           n = (0, r.im)(e.args, "title"),
           a = (0, r.im)(e.args, "company"),
@@ -7308,11 +7289,11 @@
               bio: e.children,
             });
       }
-      function Ht(e, t, n) {
+      function zt(e, t, n) {
         const a = (0, r.im)(e, t);
         return void 0 === a || null == a ? n : Number.parseInt(a);
       }
-      function Vt(e) {
+      function Ht(e) {
         const t = (0, r.im)(e.args, "name"),
           n =
             "true" === ((0, r.im)(e.args, "visible") || "false").toLowerCase(),
@@ -7326,12 +7307,12 @@
           ? e.children
           : null;
       }
-      function Wt(e) {
+      function Vt(e) {
         const t = e.context.showErrorInfo;
         if (!b.L7.logged_in)
           return i.createElement(
             He.zx,
-            { onClick: ft.X, className: "CSSClaimItemLoginButton" },
+            { onClick: St.X, className: "CSSClaimItemLoginButton" },
             (0, C.Xx)("#Sale_ClaimableReward_Login"),
           );
         const n = (0, r.im)(e.args, "type");
@@ -7339,14 +7320,14 @@
         if (n)
           switch (n) {
             case "profilemodifier":
-              a = Dt.Ve.k_ECommunityItemClass_ProfileModifier;
+              a = ft.Ve.k_ECommunityItemClass_ProfileModifier;
               break;
             case "sticker":
-              a = Dt.Ve.k_ECommunityItemClass_Sticker;
+              a = ft.Ve.k_ECommunityItemClass_Sticker;
           }
-        return i.createElement(Lt, { bPreviewMode: t, rewardType: a });
+        return i.createElement(Nt, { bPreviewMode: t, rewardType: a });
       }
-      function qt(e) {
+      function Wt(e) {
         const t = Number.parseInt((0, r.im)(e.args, "id")) || 0,
           n =
             "true" === ((0, r.im)(e.args, "visible") || "false").toLowerCase(),
@@ -7364,7 +7345,7 @@
           (!s && !n) || (s && n) ? e.children : null
         );
       }
-      function Zt(e) {
+      function qt(e) {
         if ("GameAwardDrop2022" === e) {
           const t = (0, Xe.x)(e),
             n = (0, Xe.v)();
@@ -7392,12 +7373,12 @@
         }
         return { bInitialState: !0 };
       }
-      function Kt(e) {
+      function Zt(e) {
         const t = (0, r.im)(e.args, "action"),
           n = (0, r.im)(e.args, "initialToken"),
           a = (0, r.im)(e.args, "successToken"),
           l = (0, r.im)(e.args, "failToken"),
-          o = Zt(t);
+          o = qt(t);
         if (!(t && n && a && l)) {
           return e.context.showErrorInfo
             ? i.createElement(
@@ -7413,9 +7394,9 @@
               {
                 className: "CSSActionDialogButton",
                 onClick: (o) => {
-                  (0, St.AM)(
+                  (0, vt.AM)(
                     i.createElement(
-                      Yt,
+                      Kt,
                       {
                         strAction: t,
                         strInitialToken: n,
@@ -7434,11 +7415,11 @@
             )
           : i.createElement(
               He.zx,
-              { className: "CSSActionDialogButton", onClick: ft.X },
+              { className: "CSSActionDialogButton", onClick: St.X },
               (0, C.Xx)("#Login_SignIn"),
             );
       }
-      function Yt(e) {
+      function Kt(e) {
         const {
             strAction: t,
             children: n,
@@ -7447,14 +7428,14 @@
             strSuccessToken: o,
             strFailToken: r,
           } = e,
-          s = Zt(t),
+          s = qt(t),
           [c, m] = i.useState(Boolean(s.fnAction));
         return (
           i.useEffect(() => {
             s.fnAction && (m(!0), s.fnAction().finally(() => m(!1)));
           }, [s]),
           i.createElement(
-            vt.RG,
+            Et.RG,
             {
               bDisableBackgroundDismiss: !0,
               closeModal: a,
@@ -7486,7 +7467,7 @@
           )
         );
       }
-      function Qt(e) {
+      function Yt(e) {
         const { showErrorInfo: t, event: n } = e.context,
           a = n.clanSteamID.GetAccountID(),
           [l] = i.useState(
@@ -7519,18 +7500,18 @@
           ? i.createElement(
               "div",
               null,
-              i.createElement(dt, { fileUploadManager: l }),
-              i.createElement(_t, { fileUploadManager: l }),
+              i.createElement(mt, { fileUploadManager: l }),
+              i.createElement(ut, { fileUploadManager: l }),
             )
           : t
           ? i.createElement("div", null, (0, C.Xx)("#CloudUpload_NotSupport"))
           : null;
       }
-      class $t extends i.Component {
+      class Qt extends i.Component {
         constructor(e) {
           super(e),
             (this.m_parser = new l.Z6(
-              $t.sm_BBCodeDictionary,
+              Qt.sm_BBCodeDictionary,
               this.ElementAccumulator,
               e.languageOverride,
             ));
@@ -7584,8 +7565,8 @@
           );
         }
         static AddDictionary(e) {
-          $t.sm_BBCodeDictionary = new Map([
-            ...Array.from($t.sm_BBCodeDictionary.entries()),
+          Qt.sm_BBCodeDictionary = new Map([
+            ...Array.from(Qt.sm_BBCodeDictionary.entries()),
             ...Array.from(e.entries()),
           ]);
         }
@@ -7600,12 +7581,12 @@
           );
         }
       }
-      ($t.sm_BBCodeDictionary = new Map([
+      (Qt.sm_BBCodeDictionary = new Map([
         ...Array.from(r.Be.entries()),
         ...Array.from(
-          (null == Mt &&
-            (Mt = new Map([
-              ["url", { Constructor: Pt, autocloses: !1 }],
+          (null == Bt &&
+            (Bt = new Map([
+              ["url", { Constructor: Mt, autocloses: !1 }],
               [
                 "h1",
                 {
@@ -7654,34 +7635,34 @@
                 "*",
                 { Constructor: r.HC, autocloses: !0, skipInternalNewline: !0 },
               ],
-              ["img", { Constructor: Ft, autocloses: !1 }],
+              ["img", { Constructor: Pt, autocloses: !1 }],
               ["previewyoutube", { Constructor: r.MJ, autocloses: !1 }],
               ["looping_media", { Constructor: r.jj, autocloses: !1 }],
               ["video", { Constructor: r.qy, autocloses: !1 }],
               ["youtubeorvideo", { Constructor: r.YC, autocloses: !1 }],
-              ["trailer", { Constructor: jt, autocloses: !0 }],
-              ["vod", { Constructor: Xt, autocloses: !1 }],
+              ["trailer", { Constructor: Ut, autocloses: !0 }],
+              ["vod", { Constructor: jt, autocloses: !1 }],
               [
                 "speaker",
                 {
-                  Constructor: zt,
+                  Constructor: Xt,
                   autocloses: !1,
                   skipInternalNewline: !0,
                   allowWrapTextForCopying: !0,
                 },
               ],
-              ["giveawayeligible", { Constructor: Vt, autocloses: !1 }],
-              ["claimitem", { Constructor: Wt, autocloses: !0 }],
-              ["packagepurchaseable", { Constructor: qt, autocloses: !1 }],
-              ["actiondialog", { Constructor: Kt, autocloses: !1 }],
-              ["uploadfilebutton", { Constructor: Qt, autocloses: !0 }],
-              ["docimg", { Constructor: Ut, autocloses: !1 }],
-              ["carousel", { Constructor: st, autocloses: !1 }],
+              ["giveawayeligible", { Constructor: Ht, autocloses: !1 }],
+              ["claimitem", { Constructor: Vt, autocloses: !0 }],
+              ["packagepurchaseable", { Constructor: Wt, autocloses: !1 }],
+              ["actiondialog", { Constructor: Zt, autocloses: !1 }],
+              ["uploadfilebutton", { Constructor: Yt, autocloses: !0 }],
+              ["docimg", { Constructor: Ft, autocloses: !1 }],
+              ["carousel", { Constructor: rt, autocloses: !1 }],
             ])),
-          Mt).entries(),
+          Bt).entries(),
         ),
       ])),
-        (0, a.gn)([h.ak], $t.prototype, "ElementAccumulator", null);
+        (0, a.gn)([h.ak], Qt.prototype, "ElementAccumulator", null);
     },
     5386: (e, t, n) => {
       "use strict";
@@ -9682,7 +9663,7 @@
       const Ce = new Ie();
       var be = n(94738),
         Ae = n(24448),
-        Te = n(40619),
+        Te = n(9663),
         ke = n(99066),
         we = n.n(ke);
       const Ne = (0, g.Pi)((e) => {
@@ -27058,7 +27039,7 @@
           null,
         ),
         (0, l.gn)([c.aD.bound], Ni.prototype, "SetGameProfileIntent", null);
-      var Li = n(40619),
+      var Li = n(9663),
         xi = n(36041),
         Oi = n(96230);
       const Gi = (0, Ie.Pi)((e) =>

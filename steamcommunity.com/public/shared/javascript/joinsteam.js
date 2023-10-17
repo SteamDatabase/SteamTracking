@@ -517,10 +517,65 @@ function AccountPasswordFormVerification(  )
 	}
 }
 
+function GetRedir( result )
+{
+	if ( result && result.redirect )
+	{
+		return result.redirect;
+	}
+	else
+	{
+		return g_sBaseURL;
+	}
+}
+
+function TransferLogin( data )
+{
+	let posts = [];
+	var nFailed = 0;
+	var nTransferred = 0;
+	for ( var idx = 0; idx < data.transfer_info.length; idx++ )
+	{
+		site = data.transfer_info[ idx ];
+		prom = new Promise( (resolve, reject) => {
+			 $J.ajax( {
+				 type: 'POST',
+				 url: site.url,
+				 data: {
+					 steamID: data.steamID,
+					 auth: site.params.auth,
+					 nonce: site.params.nonce,
+				 },
+				 crossDomain: true,
+				 xhrFields: {withCredentials: true},
+				 success: function ( data ) {
+				     nTransferred++;
+					 resolve();
+				 },
+				 error: function ( data ) {
+					 nFailed++;
+					 resolve();
+				 }
+			 } )
+		} );
+		posts.push( prom );
+	}
+
+	Promise.all(posts).then(() => {
+		console.log( 'transfer ' + nTransferred + '/' + nFailed );
+		if ( nTransferred > 0 )
+		{
+			window.location = GetRedir( data.redir );
+		}
+	}).catch((e) => {
+	    // this is a weird failure
+	});
+}
+
 function ReallyCreateAccount()
 {
 	++iAjaxCalls;
-		new Ajax.Request( g_sBaseURL + 'join/createaccount/',
+	new Ajax.Request( g_sBaseURL + 'join/createaccount/',
 	{
 		type: 'POST', 	    parameters: { accountname : $('accountname').value,
 	    			  password : $('password').value,
@@ -558,16 +613,32 @@ function ReallyCreateAccount()
 					});
 			}
 			else {
-				
-												if ( result && result.redirect ) {
-					window.location = result.redirect;
-				} else if ( typeof g_strRedirectURL != 'undefined' ) {
-					window.location = g_strRedirectURL;
-				} else {
-					window.location = g_sBaseURL;
-				}
+				$J.ajax( {
+					type: 'POST',
+					url: `https://login.steampowered.com/jwt/finalizelogin`,
+					data: {
+						'nonce': result.refresh_token,
+						'redir': GetRedir( result )
+					},
+					crossDomain: true,
+					xhrFields: { withCredentials: true },
+				} )
+				.fail( function() {
+					ShowError( 'Your account creation request failed, please try again later.' );
+				})
+				.done( function( data )
+				{
+					if ( data && data.transfer_info )
+					{
+						TransferLogin( data );
+					}
+					else
+					{
+						// something went wrong, but the account should have been created - redirect
+						window.location = GetRedir(result);
+					}
+				});
 			}
-
 		},
 	    onFailure: function()
 	    {

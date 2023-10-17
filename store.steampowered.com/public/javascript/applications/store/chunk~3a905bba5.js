@@ -3277,6 +3277,9 @@
         BHasTag(e) {
           return -1 != this.vecTags.indexOf(e);
         }
+        BHasTagStartingWith(e) {
+          return this.vecTags.some((t) => t.startsWith(e));
+        }
         BIsOGGEvent() {
           return Boolean(this.appid) && this.appid > 0;
         }
@@ -3529,7 +3532,9 @@
             ? (0, v.Xx)("#PartnerEvent_SteamGameFestival_ArtistState")
             : this.BHasTag("steam_game_festival_office_hour")
             ? (0, v.Xx)("#PartnerEvent_SteamGameFestival_OfficeHour")
-            : this.BHasTag("steam_game_festival_broadcast")
+            : this.BHasTag("steam_game_festival_broadcast") ||
+              (this.BHasTagStartingWith("sale_nextfest_") &&
+                this.type == s.Ep.k_EBroadcastEvent)
             ? (0, v.Xx)("#PartnerEvent_SteamGameFestival_Broadcast")
             : this.GetEventTypeAsString();
         }
@@ -8225,7 +8230,7 @@
                 category_or_language: this.m_key.category_or_language,
                 tag_name: this.m_key.tag_name,
                 tags: this.m_key.rgTags
-                  ? this.m_key.rgTags.sort().join(",")
+                  ? this.m_key.rgTags.slice().sort().join(",")
                   : void 0,
               };
             "forward" === e
@@ -8502,7 +8507,7 @@
           e.rtCalendarEnd && (n += "_end:" + e.rtCalendarEnd),
           e.rgTags &&
             e.rgTags.length > 0 &&
-            (n += "_tags:" + e.rgTags.sort().join(",")),
+            (n += "_tags:" + e.rgTags.slice().sort().join(",")),
           e.hubtype &&
             (n +=
               "_hubtype:" +
@@ -13397,24 +13402,18 @@
           );
         const E = "hiding" == K(),
           f = (0, p.Hf)(`${_.GetStorePageURL()}${o ? `?${o}` : ""}`, h),
-          b = l.createElement(
-            ne,
-            Object.assign(
-              {},
-              {
-                info: t,
-                strStoreUrl: f,
-                elElementToAppend: n,
-                bShowDemoButton: i,
-                bShowDeckCompatibilityDialog: m,
-                bHideBottomHalf: E,
-                bHidePrice: r,
-                bUseSubscriptionLayout: s,
-                strSNR: g,
-                nCreatorAccountID: c,
-              },
-            ),
-          );
+          b = l.createElement(ne, {
+            info: t,
+            strStoreUrl: f,
+            elElementToAppend: n,
+            bShowDemoButton: i,
+            bShowDeckCompatibilityDialog: m,
+            bHideBottomHalf: E,
+            bHidePrice: r,
+            bUseSubscriptionLayout: s,
+            strSNR: g,
+            nCreatorAccountID: c,
+          });
         return l.createElement(
           oe,
           Object.assign({ hoverContent: b, strClickUrl: f }, u),
@@ -15087,22 +15086,15 @@
       function k(e) {
         const { possibleDemoAppID: t, className: n } = e,
           [a] = (0, c.vs)(t, {});
-        return (
-          console.log(
-            "adil2",
-            null == a ? void 0 : a.GetAppType(),
-            null == a ? void 0 : a.GetParentAppID(),
-          ),
-          ((null == a ? void 0 : a.GetAppType()) == l.Ac.k_EStoreAppType_Demo ||
-            (null == a ? void 0 : a.GetAppType()) ==
-              l.Ac.k_EStoreAppType_Beta) &&
+        return ((null == a ? void 0 : a.GetAppType()) ==
+          l.Ac.k_EStoreAppType_Demo ||
+          (null == a ? void 0 : a.GetAppType()) == l.Ac.k_EStoreAppType_Beta) &&
           (null == a ? void 0 : a.GetParentAppID()) > 0
-            ? r.createElement(A, {
-                parentAppID: null == a ? void 0 : a.GetParentAppID(),
-                className: n,
-              })
-            : null
-        );
+          ? r.createElement(A, {
+              parentAppID: null == a ? void 0 : a.GetParentAppID(),
+              className: n,
+            })
+          : null;
       }
       function A(e) {
         const { parentAppID: t, className: n } = e,

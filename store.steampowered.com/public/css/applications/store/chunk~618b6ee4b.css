@@ -6667,66 +6667,6 @@ a.storywidget_BadgeFooter_3kBeS:hover {
 .BasicUI .salebackgroundoverlay_SaleBackgroundOverlay_MrIcZ {
   display: none;
 }
-.giveawaynextdraw_countdownCtn_awreX {
-  background: radial-gradient(
-    100% 80% at 64% 95%,
-    rgba(108, 119, 134, 0.4) 40%,
-    rgba(83, 104, 104, 0.4) 100%
-  );
-  padding: 16px;
-  border-radius: 4px;
-}
-.giveawaynextdraw_Closed_26nqf {
-  position: relative;
-}
-.giveawaynextdraw_CountDownCtn_7do5R {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-  padding-bottom: 11px;
-  padding-bottom: 8px;
-  margin-bottom: 8px;
-}
-.giveawaynextdraw_CountDownCtn_7do5R .giveawaynextdraw_CountDownTime_3wwxF {
-  font-size: 16px;
-  font-weight: 600;
-  color: #fff;
-  display: inline-block;
-  background: rgba(255, 255, 255, 0.1);
-  width: 62px;
-  padding-left: 14px;
-  border-radius: 2px;
-}
-.giveawaynextdraw_CountDownCtn_7do5R .giveawaynextdraw_CountDownText_6MmR7 {
-  font-size: 16px;
-  display: inline;
-  margin-left: 8px;
-}
-.giveawaynextdraw_LearnMore_kL9GF {
-  position: relative;
-}
-.giveawaynextdraw_Throbber_318nd {
-  display: flex;
-  color: #80caff;
-  line-height: 37px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-  padding-bottom: 12px;
-  padding-bottom: 8px;
-  margin-bottom: 8px;
-}
-.giveawaynextdraw_WinnerInfo_2iyxC {
-  display: inline;
-  margin-right: 8px;
-}
-.giveawaynextdraw_WinnerInfo_2iyxC .giveawaynextdraw_WinnerCount_2cdse {
-  display: inline-block;
-  background: rgba(255, 255, 255, 0.1);
-  width: 62px;
-  padding-left: 14px;
-  border-radius: 2px;
-}
-.giveawaynextdraw_WinnerInfo_2iyxC .giveawaynextdraw_WinnerText_2s2hb {
-  display: inline;
-  margin-left: 8px;
-}
 .saleclaimitem_ClaimCtn_d5PCH {
   display: flex;
   flex-direction: column;
@@ -6826,4 +6766,113 @@ a.storywidget_BadgeFooter_3kBeS:hover {
 .saleclaimitem_NextStop_35VNz .saleclaimitem_Timer_2zqp4 {
   color: #94f6c3;
   font-weight: 600;
+}
+.giveawaynextdraw_countdownCtn_awreX {
+  background: radial-gradient(
+    100% 80% at 64% 95%,
+    rgba(108, 119, 134, 0.4) 40%,
+    rgba(83, 104, 104, 0.4) 100%
+  );
+  padding: 16px;
+  border-radius: 4px;
+}
+.giveawaynextdraw_Closed_26nqf {
+  position: relative;
+}
+.giveawaynextdraw_CountDownCtn_7do5R {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 11px;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+}
+.giveawaynextdraw_CountDownCtn_7do5R .giveawaynextdraw_CountDownTime_3wwxF {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.1);
+  width: 62px;
+  padding-left: 14px;
+  border-radius: 2px;
+}
+.giveawaynextdraw_CountDownCtn_7do5R .giveawaynextdraw_CountDownText_6MmR7 {
+  font-size: 16px;
+  display: inline;
+  margin-left: 8px;
+}
+.giveawaynextdraw_LearnMore_kL9GF {
+  position: relative;
+}
+.giveawaynextdraw_Throbber_318nd {
+  display: flex;
+  color: #80caff;
+  line-height: 37px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 12px;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+}
+.giveawaynextdraw_WinnerInfo_2iyxC {
+  display: inline;
+  margin-right: 8px;
+}
+.giveawaynextdraw_WinnerInfo_2iyxC .giveawaynextdraw_WinnerCount_2cdse {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.1);
+  width: 62px;
+  padding-left: 14px;
+  border-radius: 2px;
+}
+.giveawaynextdraw_WinnerInfo_2iyxC .giveawaynextdraw_WinnerText_2s2hb {
+  display: inline;
+  margin-left: 8px;
+}
+.controllerfiltersection_ControllerFilterCtn_1Pytb {
+  display: flex;
+  height: 48px;
+}
+.controllerfiltersection_ControllerFilterCtn_1Pytb
+  .controllerfiltersection_ControllerFilter_1h_gO {
+  display: flex;
+  margin-right: 16px;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 24px;
+}
+.controllerfiltersection_ControllerFilterCtn_1Pytb
+  .controllerfiltersection_ControllerFilter_1h_gO
+  .controllerfiltersection_ControllerFilterIcon_3TBVw {
+  display: inline-block;
+  margin: auto 0;
+  margin-right: 8px;
+}
+.controllerfiltersection_ControllerFilterCtn_1Pytb
+  .controllerfiltersection_ControllerFilter_1h_gO
+  .controllerfiltersection_ControllerFilterIcon_3TBVw
+  svg {
+  height: 32px;
+  width: 32px;
+}
+.controllerfiltersection_ControllerFilterCtn_1Pytb
+  .controllerfiltersection_ControllerFilter_1h_gO
+  .controllerfiltersection_ControllerFilterName_1csa9 {
+  display: inline-block;
+  margin: auto 0;
+}
+.controllerfiltersection_ControllerFilterCtn_1Pytb
+  .controllerfiltersection_ControllerFilterActive_3xsW_ {
+  background: rgba(255, 255, 255, 0.9);
+}
+.controllerfiltersection_ControllerFilterCtn_1Pytb
+  .controllerfiltersection_ControllerFilterActive_3xsW_
+  .controllerfiltersection_ControllerFilterIcon_3TBVw {
+  color: #000;
+}
+.controllerfiltersection_ControllerFilterCtn_1Pytb
+  .controllerfiltersection_ControllerFilterActive_3xsW_
+  .controllerfiltersection_ControllerFilterName_1csa9 {
+  color: #000;
 }

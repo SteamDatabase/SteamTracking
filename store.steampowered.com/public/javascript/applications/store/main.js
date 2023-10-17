@@ -11068,8 +11068,8 @@
         RegisterCallbackOnPlaySound(e) {
           return this.m_fnCallbackOnPlaySound.Register(e);
         }
-        PlayNavSound(e) {
-          this.m_fnCallbackOnPlaySound.Dispatch(e);
+        PlayNavSound(e, t) {
+          this.m_fnCallbackOnPlaySound.Dispatch(e, t);
         }
       })();
     },
@@ -12024,6 +12024,7 @@
               major_sale: 0,
               fi: 0,
               fpr: 0,
+              pending_fi: 0,
             }),
             (this.m_bLoaded = !1),
             (this.m_nUnviewed = 0),
@@ -12170,10 +12171,12 @@
                   major_sale: 0,
                   fi: 0,
                   fpr: 0,
+                  pending_fi: 0,
                 },
                 {
                   pending_gifts: this.m_summary.pending_gifts,
                   pending_invites: this.m_summary.pending_invites,
+                  pending_fi: this.m_summary.pending_fi,
                 },
               )),
               n.forEach((e) => {
@@ -12214,6 +12217,9 @@
                   void 0 !== e.pending_gift_count &&
                     (this.m_currentNotificationsData.pending_gift_count =
                       e.pending_gift_count),
+                  void 0 !== e.pending_fi_count &&
+                    (this.m_currentNotificationsData.pending_fi_count =
+                      e.pending_fi_count),
                   this.ProcessNotifications())
                 : w(
                     "Error: ApplyNotificationsUpdate was called before this.m_currentNotificationsData was set",
@@ -12225,9 +12231,9 @@
             this.ProcessNotifications();
         }
         ProcessNotifications() {
-          var e, t, n;
-          let r = [],
-            s = {
+          var e, t, n, r;
+          let s = [],
+            o = {
               comments: 0,
               inventory_items: 0,
               invites: 0,
@@ -12244,8 +12250,9 @@
               major_sale: 0,
               fi: 0,
               fpr: 0,
+              pending_fi: 0,
             },
-            o = 0;
+            a = 0;
           null === (e = this.m_currentNotificationsData.notifications) ||
             void 0 === e ||
             e.forEach((e) => {
@@ -12272,14 +12279,14 @@
                       (t) => t == e.notification_id,
                     ) && (e.read = !0);
                 }
-                e.read || Z(s, e.notification_type, 1),
-                  e.viewed || o++,
-                  this.AddNotificationToRollups(r, e);
+                e.read || Z(o, e.notification_type, 1),
+                  e.viewed || a++,
+                  this.AddNotificationToRollups(s, e);
               }
             }),
-            r.sort((e, t) => e.timestamp - t.timestamp),
+            s.sort((e, t) => e.timestamp - t.timestamp),
             this.m_fnOnNotificationCallback &&
-              (r.forEach((e) => {
+              (s.forEach((e) => {
                 if (e.bSendToCallbackAsNew)
                   this.m_rgNewRollupIDs.set(e.key, e),
                     this.m_fnOnNotificationCallback(e, i.New);
@@ -12292,27 +12299,32 @@
                 }
               }),
               this.m_rgNewRollupIDs.forEach((e, t) => {
-                -1 == r.findIndex((e) => e.key == t) &&
+                -1 == s.findIndex((e) => e.key == t) &&
                   (this.m_fnOnNotificationCallback(e, i.Remove),
                   this.m_rgNewRollupIDs.delete(t));
               })),
-            r.reverse(),
-            (s.pending_gifts =
+            s.reverse(),
+            (o.pending_gifts =
               null !==
                 (t = this.m_currentNotificationsData.pending_gift_count) &&
               void 0 !== t
                 ? t
                 : 0),
-            (s.pending_invites =
+            (o.pending_invites =
               null !==
                 (n = this.m_currentNotificationsData.pending_friend_count) &&
               void 0 !== n
                 ? n
                 : 0),
-            (this.m_rgNotificationRollups = r.slice()),
-            (this.m_summary = s),
+            (o.pending_fi =
+              null !== (r = this.m_currentNotificationsData.pending_fi_count) &&
+              void 0 !== r
+                ? r
+                : 0),
+            (this.m_rgNotificationRollups = s.slice()),
+            (this.m_summary = o),
             (this.m_bLoaded = !0),
-            (this.m_nUnviewed = o);
+            (this.m_nUnviewed = a);
         }
         BReplaceRollupItem(e, t) {
           return e.read != t.read
@@ -12854,7 +12866,8 @@
             );
           })(e) +
             e.pending_gifts +
-            e.pending_invites >
+            e.pending_invites +
+            e.pending_fi >
           0
         );
       }
@@ -15138,6 +15151,29 @@
             this.m_bSimulatingVROnDesktop ||
             this.m_bHMDPresent ||
             this.m_bHMDHardwareDetected
+          );
+        }
+        HasVRHMDBeenSeen() {
+          var e, t;
+          let n =
+              null ===
+                (t =
+                  null ===
+                    (e =
+                      null === SteamClient || void 0 === SteamClient
+                        ? void 0
+                        : SteamClient.OpenVR) || void 0 === e
+                    ? void 0
+                    : e.Device) || void 0 === t
+                ? void 0
+                : t.BVRDeviceSeenRecently(),
+            i = !1;
+          return (
+            null == n ||
+              n.then((e) => {
+                i = e;
+              }),
+            i
           );
         }
         get IsSteamVRRunning() {
@@ -20307,20 +20343,21 @@
       n.d(t, {
         $nC: () => m,
         CtA: () => u,
-        Hz5: () => f,
-        IRk: () => b,
+        Hz5: () => v,
+        IRk: () => w,
         Qrh: () => c,
-        RCC: () => S,
-        Tvf: () => C,
-        Tx5: () => g,
-        V7L: () => w,
-        YbX: () => E,
+        RCC: () => b,
+        Tvf: () => S,
+        Tx5: () => f,
+        V7L: () => E,
+        YbX: () => y,
         aeH: () => d,
-        atL: () => L,
-        by3: () => D,
-        dQJ: () => v,
+        atL: () => I,
+        by3: () => L,
+        dQJ: () => C,
+        dqu: () => g,
         tkI: () => _,
-        uWd: () => y,
+        uWd: () => D,
         vVQ: () => h,
         yBp: () => p,
       });
@@ -20793,6 +20830,27 @@
         );
       }
       function g(e) {
+        return r.createElement(
+          "svg",
+          Object.assign(
+            {
+              width: "36",
+              height: "36",
+              viewBox: "0 0 36 36",
+              fill: "none",
+              xmlns: "http://www.w3.org/2000/svg",
+            },
+            e,
+          ),
+          r.createElement("path", {
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            d: "M31.7 15.2077C31.703 12.5623 30.94 9.97259 29.5032 7.75136C28.0664 5.53014 26.0172 3.77242 23.6031 2.69048C21.189 1.60855 18.5133 1.24869 15.8992 1.65436C13.2851 2.06002 10.8443 3.21387 8.87163 4.97655C6.89899 6.73922 5.47888 9.03532 4.78281 11.5875C4.08673 14.1397 4.14447 16.8389 4.94905 19.359C5.75363 21.8791 7.27063 24.1124 9.31684 25.7891C11.363 27.4658 13.8509 28.5142 16.48 28.8077V34.5077L27.31 25.2477C28.6947 23.9675 29.7996 22.4147 30.5551 20.6869C31.3106 18.959 31.7004 17.0935 31.7 15.2077ZM15.3 7.06885L16.3075 16.9577H20.1309L21.1039 7.06885H15.3ZM20.6927 22.0125C20.6927 23.3774 19.5862 24.4838 18.2213 24.4838C16.8564 24.4838 15.7499 23.3774 15.7499 22.0125C15.7499 20.6475 16.8564 19.5411 18.2213 19.5411C19.5862 19.5411 20.6927 20.6475 20.6927 22.0125Z",
+            fill: "currentColor",
+          }),
+        );
+      }
+      function f(e) {
         const { alert: t, urgent: n } = e,
           s = (0, i._T)(e, ["alert", "urgent"]);
         return n
@@ -20868,7 +20926,7 @@
               ),
             );
       }
-      function f(e) {
+      function v(e) {
         return r.createElement(
           "svg",
           Object.assign(
@@ -20887,7 +20945,7 @@
           }),
         );
       }
-      function v(e) {
+      function C(e) {
         return r.createElement(
           "svg",
           Object.assign(
@@ -20908,7 +20966,7 @@
           }),
         );
       }
-      function C(e) {
+      function S(e) {
         return r.createElement(
           "svg",
           {
@@ -20924,7 +20982,7 @@
           }),
         );
       }
-      function S(e) {
+      function b(e) {
         return r.createElement(
           "svg",
           {
@@ -20940,7 +20998,7 @@
           }),
         );
       }
-      function b(e) {
+      function w(e) {
         const { bGreyOutRightSide: t } = e,
           n = (0, i._T)(e, ["bGreyOutRightSide"]);
         return t
@@ -20991,7 +21049,7 @@
               }),
             );
       }
-      function w(e) {
+      function E(e) {
         return r.createElement(
           "svg",
           Object.assign(
@@ -21008,7 +21066,7 @@
           }),
         );
       }
-      function E(e) {
+      function y(e) {
         return r.createElement(
           "svg",
           Object.assign(
@@ -21056,7 +21114,7 @@
           ),
         );
       }
-      function y(e) {
+      function D(e) {
         return r.createElement(
           "svg",
           Object.assign(
@@ -21102,7 +21160,7 @@
           }),
         );
       }
-      function D(e) {
+      function L(e) {
         return r.createElement(
           "svg",
           Object.assign(
@@ -21122,7 +21180,7 @@
           }),
         );
       }
-      function L(e) {
+      function I(e) {
         return r.createElement(
           "svg",
           Object.assign(

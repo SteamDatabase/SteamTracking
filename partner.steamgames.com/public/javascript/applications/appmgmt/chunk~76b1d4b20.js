@@ -2611,6 +2611,9 @@
         BHasTag(e) {
           return -1 != this.vecTags.indexOf(e);
         }
+        BHasTagStartingWith(e) {
+          return this.vecTags.some((t) => t.startsWith(e));
+        }
         BIsOGGEvent() {
           return Boolean(this.appid) && this.appid > 0;
         }
@@ -2863,7 +2866,9 @@
             ? (0, S.Xx)("#PartnerEvent_SteamGameFestival_ArtistState")
             : this.BHasTag("steam_game_festival_office_hour")
             ? (0, S.Xx)("#PartnerEvent_SteamGameFestival_OfficeHour")
-            : this.BHasTag("steam_game_festival_broadcast")
+            : this.BHasTag("steam_game_festival_broadcast") ||
+              (this.BHasTagStartingWith("sale_nextfest_") &&
+                this.type == r.Ep.k_EBroadcastEvent)
             ? (0, S.Xx)("#PartnerEvent_SteamGameFestival_Broadcast")
             : this.GetEventTypeAsString();
         }
@@ -5326,12 +5331,15 @@
                   );
                   continue;
                 }
-                a.strClosedCaptionFile = this.m_strBaseURL + U(r, a.strID, 0);
+                (a.strClosedCaptionFile = U(r, a.strID, 0)),
+                  a.strClosedCaptionFile.startsWith("http") ||
+                    (a.strClosedCaptionFile =
+                      this.m_strBaseURL + a.strClosedCaptionFile);
                 ("store" != (0, E.Zv)() && "dev" != E.De.WEB_UNIVERSE) ||
                   (a.strClosedCaptionFile =
                     E.De.STORE_BASE_URL +
                     "vtt/video/" +
-                    a.strClosedCaptionFile.substr(40)),
+                    a.strClosedCaptionFile.substring(40)),
                   i.rgRepresentations.push(a);
               }
               continue;
@@ -6067,6 +6075,7 @@
             (this.m_listeners = new g.G_()),
             (this.m_bFirstPlay = !0),
             (this.m_bPlaybackStarted = !1),
+            (this.m_nTimedText = 0),
             (this.m_schGameDataEventTrigger = new g.Ar()),
             (this.m_schReportPlayerTrigger = new g.Ar()),
             (this.m_nGameDataLastFramePTS = -1),
@@ -6140,35 +6149,37 @@
         }
         InitTimedText() {
           let e = !0;
-          this.m_mpd.GetTimedTextAdaptionSet(0).forEach((t) => {
-            let n = (0, p.jM)(E.De.LANGUAGE);
-            if (
-              t.rgRepresentations.length > 0 &&
-              t.rgRepresentations[0].strClosedCaptionFile &&
-              S.is[t.strLanguage]
-            ) {
-              const a = document.createElement("track");
-              (a.kind = "subtitles"),
-                (a.label = (0, S.Xx)(
-                  "#Language_" + (0, p.j_)(S.is[t.strLanguage]),
-                )),
-                (a.srclang = t.strLanguage),
-                (a.src = t.rgRepresentations[0].strClosedCaptionFile),
-                n != p.Df.k_Lang_English &&
-                  S.is[t.strLanguage] == n &&
-                  ((a.default = !0),
-                  (this.m_timedTextRepSelected = t.rgRepresentations[0]),
-                  (e = !1)),
-                this.m_elVideo.appendChild(a),
-                e &&
-                  (a.addEventListener("load", () => {
-                    this.m_elVideo.textTracks &&
-                      this.m_elVideo.textTracks.length > 0 &&
-                      (this.m_elVideo.textTracks[0].mode = "disabled");
-                  }),
-                  (e = !1));
-            }
-          });
+          (this.m_nTimedText = 0),
+            this.m_mpd.GetTimedTextAdaptionSet(0).forEach((t) => {
+              let n = (0, p.jM)(E.De.LANGUAGE);
+              if (
+                t.rgRepresentations.length > 0 &&
+                t.rgRepresentations[0].strClosedCaptionFile &&
+                S.is[t.strLanguage]
+              ) {
+                const a = document.createElement("track");
+                (a.kind = "subtitles"),
+                  (a.label = (0, S.Xx)(
+                    "#Language_" + (0, p.j_)(S.is[t.strLanguage]),
+                  )),
+                  (a.srclang = t.strLanguage),
+                  (a.src = t.rgRepresentations[0].strClosedCaptionFile),
+                  (this.m_nTimedText += 1),
+                  n != p.Df.k_Lang_English &&
+                    S.is[t.strLanguage] == n &&
+                    ((a.default = !0),
+                    (this.m_timedTextRepSelected = t.rgRepresentations[0]),
+                    (e = !1)),
+                  this.m_elVideo.appendChild(a),
+                  e &&
+                    (a.addEventListener("load", () => {
+                      this.m_elVideo.textTracks &&
+                        this.m_elVideo.textTracks.length > 0 &&
+                        (this.m_elVideo.textTracks[0].mode = "disabled");
+                    }),
+                    (e = !1));
+              }
+            });
         }
         SetSubtitles(e) {
           let t = null;
@@ -7073,11 +7084,16 @@
         GetThumbnailForTimestamp(e) {
           return "";
         }
+        BHasTimedText() {
+          return this.m_nTimedText > 0;
+        }
       }
       function te(e) {
         return e < 360 ? 480 : e < 480 ? 720 : 4320;
       }
-      (0, a.gn)([f.a], ee.prototype, "OnVisibilityChange", null),
+      (0, a.gn)([r.LO], ee.prototype, "m_nTimedText", void 0),
+        (0, a.gn)([r.aD], ee.prototype, "InitTimedText", null),
+        (0, a.gn)([f.a], ee.prototype, "OnVisibilityChange", null),
         (0, a.gn)([f.a], ee.prototype, "UpdateMPD", null),
         (0, a.gn)([f.a], ee.prototype, "OnMediaSourceOpen", null),
         (0, a.gn)([f.a], ee.prototype, "HandleMediaSourceError", null),
@@ -7433,6 +7449,9 @@
         }
         GetThumbnailForTimestamp(e) {
           return "";
+        }
+        BHasTimedText() {
+          return !1;
         }
       }
       (0, a.gn)([f.a], ae.prototype, "PlayWebRTC", null),
@@ -8211,6 +8230,15 @@
         GetBroadcastInfo() {
           return this.m_BroadcastInfo;
         }
+        BHasTimedText() {
+          var e;
+          return null === (e = this.m_player) || void 0 === e
+            ? void 0
+            : e.BHasTimedText();
+        }
+        BHasPlayer() {
+          return Boolean(this.m_player);
+        }
         ListSubtitles() {
           return this.m_elVideo.textTracks;
         }
@@ -8548,7 +8576,8 @@
           return this.m_rgSegments.length > 0;
         }
       }
-      (0, a.gn)([r.LO], fe.prototype, "m_bPaused", void 0),
+      (0, a.gn)([r.LO], fe.prototype, "m_player", void 0),
+        (0, a.gn)([r.LO], fe.prototype, "m_bPaused", void 0),
         (0, a.gn)([r.LO], fe.prototype, "m_nPlaybackTime", void 0),
         (0, a.gn)([r.LO], fe.prototype, "m_bBuffering", void 0),
         (0, a.gn)([r.LO], fe.prototype, "m_bOnLiveEdge", void 0),
@@ -15976,7 +16005,7 @@
                 category_or_language: this.m_key.category_or_language,
                 tag_name: this.m_key.tag_name,
                 tags: this.m_key.rgTags
-                  ? this.m_key.rgTags.sort().join(",")
+                  ? this.m_key.rgTags.slice().sort().join(",")
                   : void 0,
               };
             "forward" === e
@@ -16255,7 +16284,7 @@
                 e.rtCalendarEnd && (n += "_end:" + e.rtCalendarEnd),
                 e.rgTags &&
                   e.rgTags.length > 0 &&
-                  (n += "_tags:" + e.rgTags.sort().join(",")),
+                  (n += "_tags:" + e.rgTags.slice().sort().join(",")),
                 e.hubtype &&
                   (n +=
                     "_hubtype:" +
@@ -17045,24 +17074,18 @@
           );
         const v = "hiding" == K(),
           E = (0, p.Hf)(`${h.GetStorePageURL()}${o ? `?${o}` : ""}`, _),
-          I = l.createElement(
-            ne,
-            Object.assign(
-              {},
-              {
-                info: t,
-                strStoreUrl: E,
-                elElementToAppend: n,
-                bShowDemoButton: i,
-                bShowDeckCompatibilityDialog: c,
-                bHideBottomHalf: v,
-                bHidePrice: s,
-                bUseSubscriptionLayout: r,
-                strSNR: g,
-                nCreatorAccountID: m,
-              },
-            ),
-          );
+          I = l.createElement(ne, {
+            info: t,
+            strStoreUrl: E,
+            elElementToAppend: n,
+            bShowDemoButton: i,
+            bShowDeckCompatibilityDialog: c,
+            bHideBottomHalf: v,
+            bHidePrice: s,
+            bUseSubscriptionLayout: r,
+            strSNR: g,
+            nCreatorAccountID: m,
+          });
         return l.createElement(
           oe,
           Object.assign({ hoverContent: I, strClickUrl: E }, u),
@@ -18475,22 +18498,15 @@
       function F(e) {
         const { possibleDemoAppID: t, className: n } = e,
           [a] = (0, c.vs)(t, {});
-        return (
-          console.log(
-            "adil2",
-            null == a ? void 0 : a.GetAppType(),
-            null == a ? void 0 : a.GetParentAppID(),
-          ),
-          ((null == a ? void 0 : a.GetAppType()) == l.Ac.k_EStoreAppType_Demo ||
-            (null == a ? void 0 : a.GetAppType()) ==
-              l.Ac.k_EStoreAppType_Beta) &&
+        return ((null == a ? void 0 : a.GetAppType()) ==
+          l.Ac.k_EStoreAppType_Demo ||
+          (null == a ? void 0 : a.GetAppType()) == l.Ac.k_EStoreAppType_Beta) &&
           (null == a ? void 0 : a.GetParentAppID()) > 0
-            ? r.createElement(O, {
-                parentAppID: null == a ? void 0 : a.GetParentAppID(),
-                className: n,
-              })
-            : null
-        );
+          ? r.createElement(O, {
+              parentAppID: null == a ? void 0 : a.GetParentAppID(),
+              className: n,
+            })
+          : null;
       }
       function O(e) {
         const { parentAppID: t, className: n } = e,

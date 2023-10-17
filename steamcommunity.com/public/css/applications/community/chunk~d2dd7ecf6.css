@@ -1762,6 +1762,19 @@ strong {
   display: inline-block;
 }
 .partnereventeditor_EventCategory_SpecialCategory_2Hm22
+  .partnereventeditor_Summary_2eQap.partnereventeditor_MaxReachedCtn_LMuGL {
+  width: 100%;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 12px;
+  text-align: center;
+}
+.partnereventeditor_EventCategory_SpecialCategory_2Hm22
+  .partnereventeditor_Summary_2eQap.partnereventeditor_MaxReachedCtn_LMuGL
+  a {
+  text-decoration: underline;
+}
+.partnereventeditor_EventCategory_SpecialCategory_2Hm22
   .partnereventeditor_Link_3s-fD {
   background: #2c584b;
 }

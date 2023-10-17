@@ -706,6 +706,7 @@
         TitleCtn: "partnereventeditor_TitleCtn_oGmJd",
         Title: "partnereventeditor_Title_1iEFY",
         Summary: "partnereventeditor_Summary_2eQap",
+        MaxReachedCtn: "partnereventeditor_MaxReachedCtn_LMuGL",
         Link: "partnereventeditor_Link_3s-fD",
         EventSubCategoriesCtn: "partnereventeditor_EventSubCategoriesCtn_1Ic2i",
         EventCategoryExpanded: "partnereventeditor_EventCategoryExpanded_2gb8_",
@@ -14116,6 +14117,7 @@
                 e.className ? e.className : "",
                 u.SectionTitleHeader,
                 u.required_title,
+                "SectionTitleHeader",
               ),
             },
             r.createElement(
@@ -23839,17 +23841,17 @@
       };
       ee = (0, n.gn)([r.Pi], ee);
     },
-    49634: (e, t, a) => {
+    92880: (e, t, a) => {
       "use strict";
       a.d(t, {
-        ZP: () => hn,
-        GU: () => _n,
-        OC: () => cn,
-        Rj: () => pn,
-        Gx: () => Dn,
-        kY: () => vn,
-        FM: () => xn,
-        p0: () => In,
+        ZP: () => vn,
+        GU: () => pn,
+        OC: () => dn,
+        Rj: () => gn,
+        Gx: () => In,
+        kY: () => Sn,
+        FM: () => An,
+        p0: () => kn,
       });
       var n = a(33940),
         i = a(52868),
@@ -29258,7 +29260,7 @@
         }),
         da = (0, I.Pi)((e) => {
           const { section: t } = e;
-          return d.createElement(xn, Object.assign({ saleSection: t }, e));
+          return d.createElement(An, Object.assign({ saleSection: t }, e));
         });
       var ua = a(74158);
       function ma(e) {
@@ -31575,20 +31577,24 @@
       }
       var on = a(55526),
         sn = a(33674);
-      function cn(e, t, a) {
+      function cn(e) {
+        const { saleSection: t, editModel: a } = e;
+        return null;
+      }
+      function dn(e, t, a) {
         return e.disable_background
           ? { background: "transparent" }
           : (0, $t.V)(e, t, a);
       }
-      function dn(e, t) {
+      function un(e, t) {
         for (const a of e.GetSaleSections()) {
           if (a === t) break;
           if ("tabs" === a.section_type) return a;
         }
         return null;
       }
-      function un(e, t, a, n) {
-        const i = dn(e, t);
+      function mn(e, t, a, n) {
+        const i = un(e, t);
         if (!i) return;
         let l = new Set(a ? a() : [...(t.show_on_tabs || [])]);
         const o = i.tabs.map((a) => {
@@ -31633,7 +31639,7 @@
           window,
         );
       }
-      let mn = class extends d.Component {
+      let _n = class extends d.Component {
         GetShowOnTabsList(e) {
           const { saleSection: t, editLanguage: a } = this.props;
           if (!e || !t.show_on_tabs || 0 === t.show_on_tabs.length)
@@ -31649,10 +31655,10 @@
         }
         OnEditTabSections() {
           const { saleSection: e, editModel: t } = this.props;
-          un(t, e);
+          mn(t, e);
         }
         render() {
-          const e = dn(this.props.editModel, this.props.saleSection);
+          const e = un(this.props.editModel, this.props.saleSection);
           return e && e.tabs && 0 !== e.tabs.length
             ? d.createElement(
                 "div",
@@ -31702,7 +31708,7 @@
             : null;
         }
       };
-      function _n(e) {
+      function pn(e) {
         const { saleSection: t, editLanguage: a, editModel: n, index: i } = e,
           l = (0, Xt._U)(t, a, n.GetClanSteamID().GetAccountID());
         if (l) return d.createElement(d.Fragment, null, l);
@@ -31719,7 +31725,7 @@
             )
           : null;
       }
-      function pn(e, t, a, n) {
+      function gn(e, t, a, n) {
         const i = (0, Xt._U)(e, t, a.GetClanSteamID().GetAccountID());
         if (i) return i;
         let l = (0, _.Xx)("#Sale_Section_Header", n + 1);
@@ -31727,10 +31733,10 @@
           o = (0, _.Xx)(r);
         return o !== r ? `${l} (${o})` : null;
       }
-      (0, n.gn)([C.ak], mn.prototype, "OnEditTabSections", null),
-        (mn = (0, n.gn)([I.Pi], mn));
-      const gn = ["tabs", "social_share"];
-      function hn(e) {
+      (0, n.gn)([C.ak], _n.prototype, "OnEditTabSections", null),
+        (_n = (0, n.gn)([I.Pi], _n));
+      const hn = ["tabs", "social_share"];
+      function vn(e) {
         return [
           "broadcast",
           "sale_item_browser",
@@ -31744,7 +31750,7 @@
           "social_share",
         ].includes(e);
       }
-      let vn = class extends d.Component {
+      let Sn = class extends d.Component {
         constructor() {
           super(...arguments), (this.state = { bIsExiting: !1 });
         }
@@ -31978,7 +31984,8 @@
               label: "(VO) " + (0, _.Xx)("#Sale_SectionType_ClaimItem"),
               data: "claim_item",
               tooltip: (0, _.Xx)("#Sale_SectionType_ClaimItem_ttip"),
-            }));
+            }),
+            n.push({ label: "(VO) Controller Type", data: "controller_type" }));
           const {
               sale_font: i,
               sale_section_font_size: l,
@@ -31995,7 +32002,7 @@
               id: "SaleSection_" + t.unique_id,
               className: (0, g.Z)(et.SaleSection, et.InEditor),
               style: Object.assign(
-                Object.assign({}, cn(t, e.GetEventModel(), !1)),
+                Object.assign({}, dn(t, e.GetEventModel(), !1)),
                 {
                   opacity: this.state.bIsExiting ? 0 : 1,
                   transition: "opacity 500ms",
@@ -32014,7 +32021,7 @@
                   color: this.props.saleSection.label_color,
                 },
               },
-              d.createElement(_n, {
+              d.createElement(pn, {
                 saleSection: t,
                 editLanguage: this.props.editLanguage,
                 editModel: e,
@@ -32081,7 +32088,7 @@
                 ),
               ),
             s
-              ? d.createElement(Sn, {
+              ? d.createElement(En, {
                   editModel: e,
                   section: t,
                   tabSection: e.GetTabSaleSection(),
@@ -32140,7 +32147,7 @@
                             { className: et.EditorCtn },
                             d.createElement(lt, Object.assign({}, this.props)),
                           ),
-                        d.createElement(mn, {
+                        d.createElement(_n, {
                           saleSection: t,
                           editModel: e,
                           editLanguage: a,
@@ -32177,10 +32184,10 @@
                             id: "salesection_item_" + this.props.index,
                             rootMargin: "0px 0px 100% 0px",
                           },
-                          d.createElement(wn, Object.assign({}, this.props)),
+                          d.createElement(xn, Object.assign({}, this.props)),
                         ),
                       Boolean(
-                        !gn.includes(this.props.saleSection.section_type),
+                        !hn.includes(this.props.saleSection.section_type),
                       ) &&
                         d.createElement(
                           "div",
@@ -32193,20 +32200,20 @@
           var m;
         }
       };
-      (0, n.gn)([C.ak], vn.prototype, "RemoveSection", null),
-        (0, n.gn)([C.ak], vn.prototype, "DoRemoveSection", null),
-        (0, n.gn)([C.ak], vn.prototype, "OnSaleSectionTypeChange", null),
-        (0, n.gn)([C.ak], vn.prototype, "MoveSection", null),
-        (0, n.gn)([C.ak], vn.prototype, "GetMinimized", null),
-        (0, n.gn)([C.ak], vn.prototype, "ToggleMinimized", null),
-        (0, n.gn)([C.ak], vn.prototype, "OnChangeContentHubOverrideKey", null),
-        (vn = (0, n.gn)([I.Pi], vn));
-      const Sn = (e) => {
+      (0, n.gn)([C.ak], Sn.prototype, "RemoveSection", null),
+        (0, n.gn)([C.ak], Sn.prototype, "DoRemoveSection", null),
+        (0, n.gn)([C.ak], Sn.prototype, "OnSaleSectionTypeChange", null),
+        (0, n.gn)([C.ak], Sn.prototype, "MoveSection", null),
+        (0, n.gn)([C.ak], Sn.prototype, "GetMinimized", null),
+        (0, n.gn)([C.ak], Sn.prototype, "ToggleMinimized", null),
+        (0, n.gn)([C.ak], Sn.prototype, "OnChangeContentHubOverrideKey", null),
+        (Sn = (0, n.gn)([I.Pi], Sn));
+      const En = (e) => {
         const { editModel: t, section: a, tabSection: n } = e,
           i = n
             ? d.createElement(
                 "span",
-                { className: O.ShowInTabsList, onClick: () => un(t, a) },
+                { className: O.ShowInTabsList, onClick: () => mn(t, a) },
                 (0, _.Xx)(
                   "#Sale_SectionDesc_Tabs",
                   (function (e, t) {
@@ -32261,7 +32268,7 @@
             )
           : i;
       };
-      function En(e) {
+      function fn(e) {
         const { saleSection: t, editModel: a, index: n } = e,
           [i, l] = (0, c.SZ)(() => [t.smart_section, t.unique_id]);
         return d.createElement(
@@ -32277,7 +32284,7 @@
             description: (0, _.Xx)("#Sale_SmartSectionDescription"),
             checked: i,
           }),
-          Boolean(i) && d.createElement(xn, { saleSection: t, editModel: a }),
+          Boolean(i) && d.createElement(An, { saleSection: t, editModel: a }),
           Boolean(!i) &&
             d.createElement(
               d.Fragment,
@@ -32305,7 +32312,7 @@
           ),
         );
       }
-      const fn = (0, I.Pi)((e) => {
+      const yn = (0, I.Pi)((e) => {
         const { saleSection: t, editModel: a } = e;
         return d.createElement(
           d.Fragment,
@@ -32337,14 +32344,14 @@
                   sn.ij,
                   Object.assign({ capsuleContainer: t }, e),
                 ),
-                d.createElement(yn, Object.assign({ section: t }, e)),
                 d.createElement(bn, Object.assign({ section: t }, e)),
+                d.createElement(Cn, Object.assign({ section: t }, e)),
                 d.createElement(_e, Object.assign({}, e)),
               )
             : d.createElement(ue, Object.assign({}, e)),
         );
       });
-      function yn(e) {
+      function bn(e) {
         const { editModel: t, section: a } = e;
         if (
           !(0, c.SZ)(
@@ -32399,7 +32406,7 @@
           }),
         );
       }
-      function bn(e) {
+      function Cn(e) {
         const { editModel: t, section: a } = e;
         if (
           !(0, c.SZ)(
@@ -32444,7 +32451,7 @@
           }),
         );
       }
-      function Cn(e) {
+      function Tn(e) {
         const { editModel: t, saleSection: a } = e,
           n = d.useRef(),
           [i, l, o] = (0, c.SZ)(() => [
@@ -32583,7 +32590,7 @@
           ),
         );
       }
-      let Tn = class extends d.Component {
+      let Dn = class extends d.Component {
         EnsureBrowseData() {
           const { saleSection: e, editModel: t } = this.props;
           e.item_browse_section_data ||
@@ -32656,7 +32663,7 @@
                 " (" +
                 (0, _.Xx)("#Sale_BrowserSortOption_ContentHub_Suffix") +
                 ")"));
-          const l = dn(this.props.editModel, this.props.saleSection);
+          const l = un(this.props.editModel, this.props.saleSection);
           return d.createElement(
             "div",
             { className: O.ItemBrowseTabNameCtn },
@@ -32678,7 +32685,7 @@
                   onClick: (t) => {
                     t.preventDefault(), t.stopPropagation();
                     const { editModel: a, saleSection: n } = this.props;
-                    un(
+                    mn(
                       a,
                       n,
                       () =>
@@ -32796,13 +32803,13 @@
           );
         }
       };
-      (0, n.gn)([C.ak], Tn.prototype, "OnSubscriptionIDChange", null),
-        (0, n.gn)([C.ak], Tn.prototype, "OnRemoveTab", null),
-        (0, n.gn)([C.ak], Tn.prototype, "OnAddTab", null),
-        (0, n.gn)([C.ak], Tn.prototype, "OnShowAsDemos", null),
-        (0, n.gn)([C.ak], Tn.prototype, "OnEnableSearch", null),
-        (Tn = (0, n.gn)([I.Pi], Tn));
-      const Dn = (0, I.Pi)((e) => {
+      (0, n.gn)([C.ak], Dn.prototype, "OnSubscriptionIDChange", null),
+        (0, n.gn)([C.ak], Dn.prototype, "OnRemoveTab", null),
+        (0, n.gn)([C.ak], Dn.prototype, "OnAddTab", null),
+        (0, n.gn)([C.ak], Dn.prototype, "OnShowAsDemos", null),
+        (0, n.gn)([C.ak], Dn.prototype, "OnEnableSearch", null),
+        (Dn = (0, n.gn)([I.Pi], Dn));
+      const In = (0, I.Pi)((e) => {
         var t, a;
         const { editModel: n } = e,
           [i, l] = (0, d.useState)(!1),
@@ -32868,7 +32875,7 @@
                       };
                       (n.GetEventModel().jsondata.source_content_hub = e),
                         n.GetEventModel().jsondata
-                          .bAutoUpdateVanityURLForContentHub && In(e, n);
+                          .bAutoUpdateVanityURLForContentHub && kn(e, n);
                     }
                     n.SetDirty(r.jB.jsondata_sales);
                   },
@@ -32877,7 +32884,7 @@
             : d.createElement(W.V, { size: "medium", position: "center" }),
         );
       });
-      function In(e, t) {
+      function kn(e, t) {
         if (e.type)
           if ("category" !== e.type || e.category)
             if ("tags" !== e.type || e.tagid) {
@@ -32904,7 +32911,7 @@
             "SetVanityURLForContentHub: Undefined hub type, skipping vanity URL update.",
           );
       }
-      const kn = (0, I.Pi)((e) => {
+      const wn = (0, I.Pi)((e) => {
           const { editModel: t, saleSection: a, index: n } = e,
             { internal_section_data: i } = a,
             l = [
@@ -32994,13 +33001,13 @@
               }),
           );
         }),
-        wn = (0, I.Pi)((e) => {
+        xn = (0, I.Pi)((e) => {
           switch (e.saleSection.section_type) {
             case "items":
               return d.createElement(
                 d.Fragment,
                 null,
-                d.createElement(En, Object.assign({}, e)),
+                d.createElement(fn, Object.assign({}, e)),
                 d.createElement(
                   Re,
                   Object.assign({}, e, {
@@ -33012,7 +33019,7 @@
               return d.createElement(
                 d.Fragment,
                 null,
-                d.createElement(fn, Object.assign({}, e)),
+                d.createElement(yn, Object.assign({}, e)),
                 d.createElement(
                   Re,
                   Object.assign({}, e, {
@@ -33037,11 +33044,11 @@
             case "event_description":
               return d.createElement(Ba, Object.assign({}, e));
             case "text_section":
-              return d.createElement(Cn, Object.assign({}, e));
+              return d.createElement(Tn, Object.assign({}, e));
             case "curator":
               return d.createElement(Ma, Object.assign({}, e));
             case "vo_internal":
-              return d.createElement(kn, Object.assign({}, e));
+              return d.createElement(wn, Object.assign({}, e));
             case "tabs":
               return d.createElement(Ut.U, Object.assign({}, e));
             case "tab_buttons":
@@ -33051,7 +33058,7 @@
             case "doors":
               return d.createElement("div", null, "No settings for now.");
             case "sale_item_browser":
-              return d.createElement(Tn, Object.assign({}, e));
+              return d.createElement(Dn, Object.assign({}, e));
             case "event_schedule":
               return d.createElement(pe, Object.assign({}, e));
             case "curator_recommendation":
@@ -33130,9 +33137,11 @@
                   Object.assign({}, e, { bSmartSection: !0 }),
                 ),
               );
+            case "controller_type":
+              return d.createElement(cn, Object.assign({}, e));
           }
         });
-      let xn = class extends d.Component {
+      let An = class extends d.Component {
         constructor() {
           super(...arguments),
             (this.m_bMounted = !1),
@@ -33620,14 +33629,14 @@
           );
         }
       };
-      (0, n.gn)([C.ak], xn.prototype, "OnSmartSectionTypeChange", null),
-        (0, n.gn)([C.ak], xn.prototype, "OnSmartSectionMaxAppChange", null),
-        (0, n.gn)([C.ak], xn.prototype, "SetSmartSectionCategory", null),
-        (0, n.gn)([C.ak], xn.prototype, "SetSmartSectionTag", null),
-        (0, n.gn)([C.ak], xn.prototype, "UpdateTagSuggestions", null),
-        (0, n.gn)([C.ak], xn.prototype, "SetMasterAppID", null),
-        (0, n.gn)([C.ak], xn.prototype, "OnChooseMasterSubscriptionID", null),
-        (xn = (0, n.gn)([I.Pi], xn));
+      (0, n.gn)([C.ak], An.prototype, "OnSmartSectionTypeChange", null),
+        (0, n.gn)([C.ak], An.prototype, "OnSmartSectionMaxAppChange", null),
+        (0, n.gn)([C.ak], An.prototype, "SetSmartSectionCategory", null),
+        (0, n.gn)([C.ak], An.prototype, "SetSmartSectionTag", null),
+        (0, n.gn)([C.ak], An.prototype, "UpdateTagSuggestions", null),
+        (0, n.gn)([C.ak], An.prototype, "SetMasterAppID", null),
+        (0, n.gn)([C.ak], An.prototype, "OnChooseMasterSubscriptionID", null),
+        (An = (0, n.gn)([I.Pi], An));
     },
     33674: (e, t, a) => {
       "use strict";
@@ -33684,7 +33693,7 @@
         Z = a(32765),
         W = a(46616),
         q = a(16133),
-        Q = a(49634),
+        Q = a(92880),
         K = a(95833),
         Y = a(93504);
       function J(e) {

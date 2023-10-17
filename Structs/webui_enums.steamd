@@ -1606,6 +1606,13 @@ enum EGameIDType
 	k_EGameIDTypeP2P = 3;
 }
 
+enum EGamescopeBlurMode
+{
+	k_EGamescopeBlurMode_Disabled = 0;
+	k_EGamescopeBlurMode_IfOccluded = 1;
+	k_EGamescopeBlurMode_Always = 2;
+}
+
 enum EGamingDeviceType
 {
 	k_EGamingDeviceType_Unknown = 0;

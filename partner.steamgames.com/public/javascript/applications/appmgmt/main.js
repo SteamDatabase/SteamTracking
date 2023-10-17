@@ -2040,7 +2040,7 @@
         zQ: () => T,
         Iy: () => E,
         lP: () => A,
-        hi: () => I,
+        hi: () => R,
         ET: () => S,
         Pd: () => D,
       });
@@ -2519,7 +2519,7 @@
           return O(e, t, n, i);
         });
       }
-      function I(e) {
+      function R(e) {
         const t = L(e);
         return o.forwardRef(function (n, o) {
           const r = (function (e) {
@@ -2878,23 +2878,23 @@
           A = (0, c.K)();
         (S.className = (0, s.Z)(S.className, "Panel", A && "Focusable")),
           (0, u.pD)(D, T);
-        const I = (0, o.useContext)(h),
-          R = (0, p.Ze)(
+        const R = (0, o.useContext)(h),
+          I = (0, p.Ze)(
             m.Z_.PrimaryClick,
             () => "self" == (null == O ? void 0 : O.GetFocusable()),
           ),
           k = (0, p.Ze)(m.Z_.SecondaryClick, () =>
-            null == I ? void 0 : I.HasContextMenu(O),
+            null == R ? void 0 : R.HasContextMenu(O),
           ),
-          x = (0, a.BE)(R, k, T, t);
+          x = (0, a.BE)(I, k, T, t);
         return (
           (!E.focusable && !E.focusableIfNoChildren) ||
             (O && O.Tree.BUseVirtualFocus()) ||
             (S.tabIndex = S.tabIndex || 0),
-          I &&
+          R &&
             (S.onContextMenu = (t) => {
               var n;
-              I.OnContextMenu(O, t) ||
+              R.OnContextMenu(O, t) ||
                 null === (n = e.onContextMenu) ||
                 void 0 === n ||
                 n.call(e, t);
@@ -4451,7 +4451,7 @@
           e || (e = (0, h.kR)(s));
           let t = y(s),
             n = L(e, S(e)),
-            c = R(e),
+            c = I(e),
             u = { element: e, left: 0, top: 0 };
           if (
             (f(
@@ -4507,7 +4507,7 @@
         let c = !1;
         for (let e of r) {
           if (T(e.left) && T(e.top)) continue;
-          let t = R(e.element),
+          let t = I(e.element),
             i = t.scrollTop + e.top,
             o = t.scrollLeft + e.left;
           (o = C.Lh(o, 0, t.MaxScrollLeft())),
@@ -4637,13 +4637,13 @@
         }
       }
       (0, i.gn)([a.a], A.prototype, "ResetScrollState", null);
-      const I = new WeakMap();
-      function R(e) {
-        let t = I.get(e);
-        return t || ((t = new A(e)), I.set(e, t)), t;
+      const R = new WeakMap();
+      function I(e) {
+        let t = R.get(e);
+        return t || ((t = new A(e)), R.set(e, t)), t;
       }
       function k(e) {
-        const t = I.get(e);
+        const t = R.get(e);
         return t
           ? { scrollLeft: t.scrollLeft, scrollTop: t.scrollTop }
           : { scrollLeft: e.scrollLeft, scrollTop: e.scrollTop };
@@ -6690,8 +6690,8 @@
         RegisterCallbackOnPlaySound(e) {
           return this.m_fnCallbackOnPlaySound.Register(e);
         }
-        PlayNavSound(e) {
-          this.m_fnCallbackOnPlaySound.Dispatch(e);
+        PlayNavSound(e, t) {
+          this.m_fnCallbackOnPlaySound.Dispatch(e, t);
         }
       })();
     },
@@ -7120,6 +7120,29 @@
             this.m_bSimulatingVROnDesktop ||
             this.m_bHMDPresent ||
             this.m_bHMDHardwareDetected
+          );
+        }
+        HasVRHMDBeenSeen() {
+          var e, t;
+          let n =
+              null ===
+                (t =
+                  null ===
+                    (e =
+                      null === SteamClient || void 0 === SteamClient
+                        ? void 0
+                        : SteamClient.OpenVR) || void 0 === e
+                    ? void 0
+                    : e.Device) || void 0 === t
+                ? void 0
+                : t.BVRDeviceSeenRecently(),
+            i = !1;
+          return (
+            null == n ||
+              n.then((e) => {
+                i = e;
+              }),
+            i
           );
         }
         get IsSteamVRRunning() {
@@ -7578,7 +7601,7 @@
         Yr: () => y,
         Zo: () => T,
         Vc: () => k,
-        Wn: () => R,
+        Wn: () => I,
         T: () => x,
       });
       var i = n(33940),
@@ -7870,7 +7893,7 @@
           null !== (t = r.useContext(y).styles) && void 0 !== t ? t : M();
         return r.createElement("div", { className: n.ContextMenuSeparator });
       }
-      class I extends r.PureComponent {
+      class R extends r.PureComponent {
         constructor(e) {
           super(e),
             (this.m_refItem = r.createRef()),
@@ -7957,14 +7980,14 @@
           );
         }
       }
-      (I.contextType = y),
-        (0, i.gn)([S.ak], I.prototype, "OnSubMenuMouseEnter", null),
-        (0, i.gn)([S.ak], I.prototype, "OnSubMenuHidden", null),
-        (0, i.gn)([S.ak], I.prototype, "ShowSubMenu", null),
-        (0, i.gn)([S.ak], I.prototype, "RenderSubMenu", null),
-        (0, i.gn)([S.ak], I.prototype, "OnMouseEnter", null),
-        (0, i.gn)([S.ak], I.prototype, "OnClick", null);
-      let R = class extends r.Component {
+      (R.contextType = y),
+        (0, i.gn)([S.ak], R.prototype, "OnSubMenuMouseEnter", null),
+        (0, i.gn)([S.ak], R.prototype, "OnSubMenuHidden", null),
+        (0, i.gn)([S.ak], R.prototype, "ShowSubMenu", null),
+        (0, i.gn)([S.ak], R.prototype, "RenderSubMenu", null),
+        (0, i.gn)([S.ak], R.prototype, "OnMouseEnter", null),
+        (0, i.gn)([S.ak], R.prototype, "OnClick", null);
+      let I = class extends r.Component {
         constructor(e) {
           super(e),
             (this.m_elMenu = void 0),
@@ -8145,22 +8168,22 @@
           let T = (t.bOverlapVertical ? y : M) - c - L,
             O = T > 0,
             A = c + d - (t.bOverlapVertical ? M : y) - L,
-            I = A > 0,
-            R = (t.bPreferPopTop || !I) && O && !t.bDisablePopTop;
-          if (!O && !I) {
+            R = A > 0,
+            I = (t.bPreferPopTop || !R) && O && !t.bDisablePopTop;
+          if (!O && !R) {
             const e =
               void 0 !== t.bShiftToFitWindow
                 ? t.bShiftToFitWindow
                 : t.bFitToWindow && !t.bOverlapHorizontal;
-            (R = T > A && !t.bDisablePopTop),
-              e && (R ? (g.menuTop = 4) : (g.menuBottom = 4)),
+            (I = T > A && !t.bDisablePopTop),
+              e && (I ? (g.menuTop = 4) : (g.menuBottom = 4)),
               t.bFitToWindow &&
-                (e ? (L = Math.min(L, d - 8)) : (L += R ? T : A),
+                (e ? (L = Math.min(L, d - 8)) : (L += I ? T : A),
                 (g.menuHeight = L - 8));
           }
           void 0 === g.menuBottom &&
             void 0 === g.menuTop &&
-            (R
+            (I
               ? (g.menuBottom = d - (t.bOverlapVertical ? y : M))
               : (g.menuTop = t.bOverlapVertical ? M : y)),
             o
@@ -8453,12 +8476,12 @@
           e.preventDefault(), e.stopPropagation();
         }
       }
-      (0, i.gn)([S.ak], R.prototype, "BindMenuElement", null),
-        (0, i.gn)([S.ak, (0, f.D)(100)], R.prototype, "OnMenuMutation", null),
-        (0, i.gn)([S.ak], R.prototype, "OnWindowResize", null),
-        (0, i.gn)([S.ak], R.prototype, "OnBlur", null),
-        (0, i.gn)([S.ak], R.prototype, "OnKeyDown", null),
-        (R = (0, i.gn)([o.Pi], R));
+      (0, i.gn)([S.ak], I.prototype, "BindMenuElement", null),
+        (0, i.gn)([S.ak, (0, f.D)(100)], I.prototype, "OnMenuMutation", null),
+        (0, i.gn)([S.ak], I.prototype, "OnWindowResize", null),
+        (0, i.gn)([S.ak], I.prototype, "OnBlur", null),
+        (0, i.gn)([S.ak], I.prototype, "OnKeyDown", null),
+        (I = (0, i.gn)([o.Pi], I));
       const N = "EnableContextMenuBlurDelay3";
       function B() {
         return (
@@ -8512,7 +8535,7 @@
         zx: () => F,
         ji: () => U,
         sg: () => A,
-        VY: () => I,
+        VY: () => R,
         oX: () => x,
         Vh: () => qe,
         TW: () => Ee,
@@ -8618,11 +8641,11 @@
         A =
           (b("DialogTwoThirdColLayout _DialogColLayout"),
           f("DialogColumn _DialogLayout"));
-      function I(e) {
-        const t = m().Content || R;
+      function R(e) {
+        const t = m().Content || I;
         return o.createElement(t, Object.assign({}, e));
       }
-      function R(e) {
+      function I(e) {
         let { children: t, bCenterVertically: n } = e,
           r = (0, i._T)(e, ["children", "bCenterVertically"]),
           s =
@@ -8656,7 +8679,7 @@
         const { classNameContent: t, bCenterVertically: n } = e,
           r = (0, i._T)(e, ["classNameContent", "bCenterVertically"]);
         return o.createElement(
-          I,
+          R,
           { className: t, bCenterVertically: n },
           o.createElement(k, Object.assign({}, r)),
         );
@@ -10162,8 +10185,8 @@
       var Te = n(50265),
         Oe = n(894),
         Ae = n(11837),
-        Ie = n(36041);
-      const Re = new (n(50454).s)("DragDrop").Debug;
+        Re = n(36041);
+      const Ie = new (n(50454).s)("DragDrop").Debug;
       class ke extends o.Component {
         constructor() {
           super(...arguments), (this.m_coordinator = new Ne());
@@ -10350,8 +10373,8 @@
               n = o + s,
               a = e.GetDragDocument().body.getBoundingClientRect();
             if (xe(i, o, a) && !xe(t, n, a, !0)) {
-              const i = Ie.r4(t, a.left, a.right, a.left - 200, a.right + 200),
-                o = Ie.r4(n, a.top, a.bottom, a.top - 100, a.bottom + 100),
+              const i = Re.r4(t, a.left, a.right, a.left - 200, a.right + 200),
+                o = Re.r4(n, a.top, a.bottom, a.top - 100, a.bottom + 100),
                 r = 50;
               this.m_dragOffWindowTimer = window.setTimeout(() => {
                 e == this.m_activeDraggable && this.OnDrag(e, i, o);
@@ -10406,7 +10429,7 @@
             (this.m_DragInfo.ownerWin = e.ownerDocument.defaultView);
         }
         ProcessDragMove(e) {
-          Re("ProcessDragMove", e, this.props.data);
+          Ie("ProcessDragMove", e, this.props.data);
           const [t, n] = (function (e) {
             if ("touches" in e) {
               let t = e;
@@ -10479,7 +10502,7 @@
             this.ResetDragState();
         }
         ResetDragState() {
-          Re("ResetDragState", this.props.data),
+          Ie("ResetDragState", this.props.data),
             this.m_DragInfo.bStarted &&
               (this.props.coordinator.EndDrag(),
               this.props.fnOnDragEnd && this.props.fnOnDragEnd()),
@@ -10492,7 +10515,7 @@
             this.forceUpdate();
         }
         OnHTMLDragStart(e) {
-          Re("HTMLDragStart", e, this.props.data, this.props.strHTMLDragData),
+          Ie("HTMLDragStart", e, this.props.data, this.props.strHTMLDragData),
             (e.dataTransfer.effectAllowed = "copyMove"),
             this.props.strHTMLDragData &&
               this.props.strHTMLDragData.forEach((t, n) =>
@@ -10510,11 +10533,11 @@
             );
         }
         OnHTMLDrag(e) {
-          Re("HTMLDrag", e, e.dataTransfer.types.length),
+          Ie("HTMLDrag", e, e.dataTransfer.types.length),
             this.ProcessDragMove(e);
         }
         OnHTMLDragEnd(e) {
-          Re(
+          Ie(
             "HTMLDragEnd",
             e,
             e.dataTransfer.getData("text/plain") || "NOTHING",
@@ -10661,7 +10684,7 @@
               height: this.props.height || "auto",
               perspective: "600px",
             },
-            t = Ie.r4(
+            t = Re.r4(
               this.CalculateRotationDegrees(this.state.clientYDelta),
               -90,
               90,
@@ -10815,7 +10838,7 @@
         const n =
           null !== (t = e.activePage.padding) && void 0 !== t ? t : "standard";
         return o.createElement(
-          I,
+          R,
           {
             className: (0, c.Z)(
               e.stylesheet.PagedSettingsDialog_PageContent,
@@ -11158,12 +11181,12 @@
           T = null != d ? d : "inline",
           O = null != S ? S : "front",
           A = "front" == O && !!s,
-          I = "before-children" == O && !!s,
-          R = "inline" == T && !!l,
+          R = "before-children" == O && !!s,
+          I = "inline" == T && !!l,
           k = "below" == T && !!l,
           x = null != h ? h : L ? "shift-children-below" : "keep-inline",
           N = !!(y.onClick || y.onActivate || y.focusable),
-          B = (null != s && A) || null != n || (R && null != l),
+          B = (null != s && A) || null != n || (I && null != l),
           F = null != m ? m : "min",
           P = null != p ? p : "standard",
           H = null != g ? g : "standard",
@@ -11215,7 +11238,7 @@
                 it().Field,
                 _ && it().Disabled,
                 B && it().WithFirstRow,
-                R && it().WithChildrenInline,
+                I && it().WithChildrenInline,
                 k && it().WithChildrenBelow,
                 "center" == W && it().VerticalAlignCenter,
                 "shift-children-below" == x &&
@@ -11251,11 +11274,11 @@
                 E &&
                   o.createElement("span", { "data-tooltip-text": E }, " (?)"),
               ),
-              R &&
+              I &&
                 o.createElement(
                   "div",
                   { className: it().FieldChildrenWithIcon },
-                  I &&
+                  R &&
                     o.createElement(
                       "div",
                       {
@@ -11277,7 +11300,7 @@
             o.createElement(
               "div",
               { className: it().FieldChildrenWithIcon },
-              I &&
+              R &&
                 o.createElement(
                   "div",
                   { className: (0, c.Z)(it().FieldIcon, it().BeforeChildren) },
@@ -11651,7 +11674,7 @@
           const e =
             null == this.props.value || isNaN(this.props.value)
               ? this.props.min
-              : (0, Ie.Lh)(this.props.value, this.props.min, this.props.max);
+              : (0, Re.Lh)(this.props.value, this.props.min, this.props.max);
           return Mt(this.props.min, this.props.max, e);
         }
         get normalizedDefaultValue() {
@@ -11662,7 +11685,7 @@
             return Mt(this.props.min, this.props.max, e);
         }
         get normalizedSliderOrigin() {
-          const e = (0, Ie.Lh)(0, this.props.min, this.props.max);
+          const e = (0, Re.Lh)(0, this.props.min, this.props.max);
           return Mt(this.props.min, this.props.max, e);
         }
         get CanResetToDefault() {
@@ -11789,9 +11812,9 @@
             ? this.m_nRepeatCount++
             : (this.m_nRepeatCount = 0);
           const o = 1 / this.normalizedDpadStep,
-            r = Math.floor((0, Ie.bU)(o, 8, 25, 10, 30)),
+            r = Math.floor((0, Re.bU)(o, 8, 25, 10, 30)),
             s = Math.max(1, r / 2),
-            a = (0, Ie.Lh)((this.m_nRepeatCount - s) / (r - s), 0, 1),
+            a = (0, Re.Lh)((this.m_nRepeatCount - s) / (r - s), 0, 1),
             l =
               a * a * (0.05 - this.normalizedDpadStep) +
               this.normalizedDpadStep,
@@ -11804,7 +11827,7 @@
             d = Et(this.normalizedStep, this.normalizedClampedValue + u);
           let h = Dt(this.props.min, this.props.max, d);
           if (
-            ((h = (0, Ie.Lh)(
+            ((h = (0, Re.Lh)(
               h,
               null !== (t = this.props.clampMin) && void 0 !== t
                 ? t
@@ -11875,7 +11898,7 @@
               null !== (n = this.props.clampMax) && void 0 !== n
                 ? n
                 : this.props.max;
-          if (((r = (0, Ie.Lh)(r, s, a)), r != this.props.value)) {
+          if (((r = (0, Re.Lh)(r, s, a)), r != this.props.value)) {
             const e = r > this.props.value,
               t = 0 == this.step;
             (this.m_eDragMode == yt.None || !t) &&
@@ -12348,9 +12371,9 @@
         null,
       );
       n(22612);
-      var It,
-        Rt = n(96931),
-        kt = n.n(Rt),
+      var Rt,
+        It = n(96931),
+        kt = n.n(It),
         xt = n(32873),
         Nt = n(1981);
       function Bt(e) {
@@ -12470,7 +12493,7 @@
           (e[(e.Right = 2)] = "Right"),
           (e[(e.Up = 3)] = "Up"),
           (e[(e.Down = 4)] = "Down");
-      })(It || (It = {}));
+      })(Rt || (Rt = {}));
       var Ht = n(4532),
         Vt = n.n(Ht);
       const Gt = o.createContext(null);
@@ -12526,19 +12549,19 @@
         );
       });
       function jt(e) {
-        let t = It.None;
+        let t = Rt.None;
         "up" == e.direction
-          ? (t = It.Up)
-          : "down" == e.direction && (t = It.Down);
+          ? (t = Rt.Up)
+          : "down" == e.direction && (t = Rt.Down);
         let n =
           ((i = Vt()),
-          (r = t) == It.Left
+          (r = t) == Rt.Left
             ? i.Left
-            : r == It.Right
+            : r == Rt.Right
             ? i.Right
-            : r == It.Up
+            : r == Rt.Up
             ? i.Up
-            : r == It.Down
+            : r == Rt.Down
             ? i.Down
             : "");
         var i, r;
@@ -12548,7 +12571,7 @@
             childrenKey: e.activePage.identifier,
             childrenClasses: Pt(Vt(), Vt().ContentTransition),
             directionClass: n,
-            animate: t != It.None,
+            animate: t != Rt.None,
           },
           e.children,
         );
@@ -14610,7 +14633,7 @@
     },
     51594: (e, t, n) => {
       "use strict";
-      n.d(t, { Y0: () => T, Yu: () => I, eR: () => A, $C: () => O });
+      n.d(t, { Y0: () => T, Yu: () => R, eR: () => A, $C: () => O });
       var i = n(33940),
         o = n(89526),
         r = n(73961),
@@ -14756,7 +14779,7 @@
                     m.window.SteamClient.Window.HideWindow();
                   }, 30);
           }, [m, t, t.visible]),
-          I(m.window),
+          R(m.window),
           o.useLayoutEffect(() => {
             t.SetPopup(m);
           }, [t, m]),
@@ -14882,7 +14905,7 @@
       function A() {
         return o.useContext(L).DialogWrapper;
       }
-      function I(e) {
+      function R(e) {
         const t = O();
         o.useEffect(() => {
           if (e) return l.Zp.RegisterModalManager(t, e);
@@ -15442,7 +15465,7 @@
         XBH: () => U,
         YUK: () => we,
         YVI: () => Ce,
-        YqJ: () => R,
+        YqJ: () => I,
         YtI: () => g,
         Zrf: () => h,
         Zxw: () => Se,
@@ -15471,7 +15494,7 @@
         sqQ: () => ce,
         tEX: () => W,
         tLe: () => K,
-        thP: () => I,
+        thP: () => R,
         uZu: () => ee,
         ui7: () => H,
         vJ$: () => ne,
@@ -16125,7 +16148,7 @@
           }),
         );
       }
-      function I() {
+      function R() {
         return o.createElement(
           "svg",
           {
@@ -16145,7 +16168,7 @@
           }),
         );
       }
-      function R() {
+      function I() {
         return o.createElement(
           "svg",
           {
@@ -20637,8 +20660,8 @@
         T = n(71209),
         O = n(4306),
         A = n(86900),
-        I = n(45820);
-      const R = c.lazy(() =>
+        R = n(45820);
+      const I = c.lazy(() =>
           Promise.all([n.e(9749), n.e(8591), n.e(2268), n.e(4535)]).then(
             n.bind(n, 19058),
           ),
@@ -20848,7 +20871,7 @@
       }
       function Y(e) {
         let { children: t } = e,
-          n = (0, I.H7)([s.Z.PricingTools(), s.Z.PromotionTools()]);
+          n = (0, R.H7)([s.Z.PricingTools(), s.Z.PromotionTools()]);
         return c.createElement(
           "div",
           { className: r()(l().App, n && l().FillBrowserVertically) },
@@ -20871,7 +20894,7 @@
                 c.createElement(
                   w.rs,
                   null,
-                  c.createElement(w.AW, { exact: !0, path: "/", component: R }),
+                  c.createElement(w.AW, { exact: !0, path: "/", component: I }),
                   c.createElement(w.AW, {
                     exact: !0,
                     path: s.Z.DiagData(),

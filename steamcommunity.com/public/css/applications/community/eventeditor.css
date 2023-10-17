@@ -97,6 +97,19 @@
   padding-bottom: 24px;
   padding-top: 12px;
 }
+.DialogContent.auditContents .DialogBodyText {
+  user-select: text;
+}
+.partnereventdashboard_AuditInfoItem_3zF56 {
+  margin-top: 20px;
+}
+.partnereventdashboard_AuditItemStatsCtn_2is7F {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 12px;
+}
+.partnereventdashboard_AuditItemStatsCtn_2is7F .AuditItemStatsCtn {
+  margin-top: 0;
+}
 .partnereventtile_TileContainer_1eeyC {
   display: flex;
   flex-direction: row;

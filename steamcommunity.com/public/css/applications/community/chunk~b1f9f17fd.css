@@ -3987,6 +3987,55 @@ a.storywidget_BadgeFooter_3kBeS:hover {
   color: #94f6c3;
   font-weight: 600;
 }
+.controllerfiltersection_ControllerFilterCtn_1Pytb {
+  display: flex;
+  height: 48px;
+}
+.controllerfiltersection_ControllerFilterCtn_1Pytb
+  .controllerfiltersection_ControllerFilter_1h_gO {
+  display: flex;
+  margin-right: 16px;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 24px;
+}
+.controllerfiltersection_ControllerFilterCtn_1Pytb
+  .controllerfiltersection_ControllerFilter_1h_gO
+  .controllerfiltersection_ControllerFilterIcon_3TBVw {
+  display: inline-block;
+  margin: auto 0;
+  margin-right: 8px;
+}
+.controllerfiltersection_ControllerFilterCtn_1Pytb
+  .controllerfiltersection_ControllerFilter_1h_gO
+  .controllerfiltersection_ControllerFilterIcon_3TBVw
+  svg {
+  height: 32px;
+  width: 32px;
+}
+.controllerfiltersection_ControllerFilterCtn_1Pytb
+  .controllerfiltersection_ControllerFilter_1h_gO
+  .controllerfiltersection_ControllerFilterName_1csa9 {
+  display: inline-block;
+  margin: auto 0;
+}
+.controllerfiltersection_ControllerFilterCtn_1Pytb
+  .controllerfiltersection_ControllerFilterActive_3xsW_ {
+  background: rgba(255, 255, 255, 0.9);
+}
+.controllerfiltersection_ControllerFilterCtn_1Pytb
+  .controllerfiltersection_ControllerFilterActive_3xsW_
+  .controllerfiltersection_ControllerFilterIcon_3TBVw {
+  color: #000;
+}
+.controllerfiltersection_ControllerFilterCtn_1Pytb
+  .controllerfiltersection_ControllerFilterActive_3xsW_
+  .controllerfiltersection_ControllerFilterName_1csa9 {
+  color: #000;
+}
 .requirevalvepublishapproval_ApprovalRequiredCtn_800dA {
   background-color: #abb2bd;
   padding: 12px;

@@ -34,7 +34,7 @@
       n.r(t),
         n.d(t, {
           GreenEnvelope: () => b,
-          default: () => $,
+          default: () => V,
           useSteamNotifications: () => h,
         });
       var i = n(33940),
@@ -84,7 +84,7 @@
               o.Fragment,
               null,
               o.createElement(S, null),
-              o.createElement(C, null),
+              o.createElement(w, null),
             )
           : o.createElement(M, { nTotalUnviewed: s.nUnviewed });
       }
@@ -186,7 +186,7 @@
                   : e.Hide();
               },
             },
-            o.createElement(w, null),
+            o.createElement(T, null),
             o.createElement(
               "div",
               {
@@ -194,11 +194,11 @@
                 ref: i,
               },
               o.createElement(S, null),
-              o.createElement(B, null),
+              o.createElement(C, null),
             ),
           );
         },
-        w = () =>
+        T = () =>
           o.createElement(
             "div",
             { className: (0, l.Z)(u().NotificationHeader) },
@@ -219,7 +219,7 @@
               (0, s.Xx)("#NotificationsMenu_ViewAll"),
             ),
           ),
-        C = () =>
+        w = () =>
           o.createElement(
             "div",
             {
@@ -240,13 +240,13 @@
               (0, s.Xx)("#NotificationsMenu_ViewAll"),
             ),
           );
-      function T(e, t, n) {
+      function B(e, t, n) {
         t.read ||
           (n && 0 != n.button && 1 != n.button) ||
           N.MarkItemRead(t.notification_id),
           e();
       }
-      function B() {
+      function C() {
         const e = h(),
           t = y();
         return t.length || (0, r.ft)(e.summary)
@@ -257,7 +257,7 @@
                 o.createElement(v.RW, {
                   key: t,
                   rollup: e,
-                  onNotificationClick: T,
+                  onNotificationClick: B,
                   uimode: p.se.k_EUIMode_Web,
                   location: d.IS.Tray,
                 }),
@@ -272,11 +272,12 @@
           o.createElement(A, null),
           o.createElement(O, null),
           o.createElement(L, null),
+          o.createElement(R, null),
           o.createElement(k, null),
           o.createElement(I, null),
-          o.createElement(R, null),
           o.createElement(H, null),
           o.createElement(D, null),
+          o.createElement($, null),
         );
       }
       function A() {
@@ -300,7 +301,7 @@
           count: e.summary.pending_invites,
         });
       }
-      function k() {
+      function R() {
         const e = h(),
           t = `${m.De.COMMUNITY_BASE_URL}profiles/${m.L7.steamid}/inventory`;
         return o.createElement(v.TO, {
@@ -308,12 +309,12 @@
           count: e.summary.inventory_items,
         });
       }
-      function I() {
+      function k() {
         const e = h(),
           t = `${m.De.COMMUNITY_BASE_URL}profiles/${m.L7.steamid}/tradeoffers`;
         return o.createElement(v.OU, { url: t, count: e.summary.trade_offers });
       }
-      function R() {
+      function I() {
         const e = h(),
           t = `${m.De.COMMUNITY_BASE_URL}profiles/${m.L7.steamid}/gamenotifications`;
         return o.createElement(v.Lo, {
@@ -337,6 +338,11 @@
           count: e.summary.moderator_messages,
         });
       }
+      function $() {
+        const e = h(),
+          t = `${m.De.STORE_BASE_URL}account/familymanagement`;
+        return o.createElement(v.ij, { url: t, count: e.summary.pending_fi });
+      }
       function G() {
         return o.createElement(
           "div",
@@ -353,7 +359,7 @@
           ),
         );
       }
-      const $ = b;
+      const V = b;
     },
     41576: (e, t, n) => {
       "use strict";

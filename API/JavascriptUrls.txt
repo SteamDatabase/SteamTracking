@@ -1125,6 +1125,7 @@ ${STORE_BASE_URL}account/
 ${STORE_BASE_URL}account/ajaxsetcookiepreferences
 ${STORE_BASE_URL}account/ajaxsetnotificationsettings
 ${STORE_BASE_URL}account/emailoptout/app
+${STORE_BASE_URL}account/familymanagement
 ${STORE_BASE_URL}account/languagepreferences/
 ${STORE_BASE_URL}account/notificationsettings
 ${STORE_BASE_URL}account/notinterested
@@ -2231,6 +2232,7 @@ https://help.steampowered.com/en/wizard/HelpWithLogin
 https://help.steampowered.com/en/wizard/HelpWithPublishing?issueid=932
 https://help.steampowered.com/en/wizard/HelpWithPublishing?issueid=933
 https://help.steampowered.com/en/wizard/HelpWithPublishing?issueid=938
+https://help.steampowered.com/en/wizard/HelpWithPublishingEvent
 https://help.steampowered.com/en/wizard/HelpWithPurchase
 https://help.steampowered.com/en/wizard/HelpWithUnknownCharges
 https://help.steampowered.com/faqs/view/1025-BD94-12FC-3409

@@ -2733,7 +2733,7 @@
         }
       }
     },
-    4738: (e, t, n) => {
+    5933: (e, t, n) => {
       "use strict";
       n.d(t, { B: () => r, M: () => s });
       var i = n(9526);
@@ -8647,8 +8647,8 @@
         RegisterCallbackOnPlaySound(e) {
           return this.m_fnCallbackOnPlaySound.Register(e);
         }
-        PlayNavSound(e) {
-          this.m_fnCallbackOnPlaySound.Dispatch(e);
+        PlayNavSound(e, t) {
+          this.m_fnCallbackOnPlaySound.Dispatch(e, t);
         }
       })();
     },
@@ -11589,6 +11589,29 @@
             this.m_bSimulatingVROnDesktop ||
             this.m_bHMDPresent ||
             this.m_bHMDHardwareDetected
+          );
+        }
+        HasVRHMDBeenSeen() {
+          var e, t;
+          let n =
+              null ===
+                (t =
+                  null ===
+                    (e =
+                      null === SteamClient || void 0 === SteamClient
+                        ? void 0
+                        : SteamClient.OpenVR) || void 0 === e
+                    ? void 0
+                    : e.Device) || void 0 === t
+                ? void 0
+                : t.BVRDeviceSeenRecently(),
+            i = !1;
+          return (
+            null == n ||
+              n.then((e) => {
+                i = e;
+              }),
+            i
           );
         }
         get IsSteamVRRunning() {
@@ -17075,11 +17098,12 @@
       "use strict";
       n.d(t, {
         $nC: () => r,
-        Hz5: () => c,
-        RCC: () => m,
-        Tvf: () => d,
-        Tx5: () => l,
-        dQJ: () => u,
+        Hz5: () => u,
+        RCC: () => h,
+        Tvf: () => m,
+        Tx5: () => c,
+        dQJ: () => d,
+        dqu: () => l,
         vVQ: () => s,
         yBp: () => a,
       });
@@ -17254,6 +17278,27 @@
         );
       }
       function l(e) {
+        return o.createElement(
+          "svg",
+          Object.assign(
+            {
+              width: "36",
+              height: "36",
+              viewBox: "0 0 36 36",
+              fill: "none",
+              xmlns: "http://www.w3.org/2000/svg",
+            },
+            e,
+          ),
+          o.createElement("path", {
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            d: "M31.7 15.2077C31.703 12.5623 30.94 9.97259 29.5032 7.75136C28.0664 5.53014 26.0172 3.77242 23.6031 2.69048C21.189 1.60855 18.5133 1.24869 15.8992 1.65436C13.2851 2.06002 10.8443 3.21387 8.87163 4.97655C6.89899 6.73922 5.47888 9.03532 4.78281 11.5875C4.08673 14.1397 4.14447 16.8389 4.94905 19.359C5.75363 21.8791 7.27063 24.1124 9.31684 25.7891C11.363 27.4658 13.8509 28.5142 16.48 28.8077V34.5077L27.31 25.2477C28.6947 23.9675 29.7996 22.4147 30.5551 20.6869C31.3106 18.959 31.7004 17.0935 31.7 15.2077ZM15.3 7.06885L16.3075 16.9577H20.1309L21.1039 7.06885H15.3ZM20.6927 22.0125C20.6927 23.3774 19.5862 24.4838 18.2213 24.4838C16.8564 24.4838 15.7499 23.3774 15.7499 22.0125C15.7499 20.6475 16.8564 19.5411 18.2213 19.5411C19.5862 19.5411 20.6927 20.6475 20.6927 22.0125Z",
+            fill: "currentColor",
+          }),
+        );
+      }
+      function c(e) {
         const { alert: t, urgent: n } = e,
           r = (0, i._T)(e, ["alert", "urgent"]);
         return n
@@ -17329,7 +17374,7 @@
               ),
             );
       }
-      function c(e) {
+      function u(e) {
         return o.createElement(
           "svg",
           Object.assign(
@@ -17348,7 +17393,7 @@
           }),
         );
       }
-      function u(e) {
+      function d(e) {
         return o.createElement(
           "svg",
           Object.assign(
@@ -17369,7 +17414,7 @@
           }),
         );
       }
-      function d(e) {
+      function m(e) {
         return o.createElement(
           "svg",
           {
@@ -17385,7 +17430,7 @@
           }),
         );
       }
-      function m(e) {
+      function h(e) {
         return o.createElement(
           "svg",
           {
@@ -26743,6 +26788,9 @@
         BHasTag(e) {
           return -1 != this.vecTags.indexOf(e);
         }
+        BHasTagStartingWith(e) {
+          return this.vecTags.some((t) => t.startsWith(e));
+        }
         BIsOGGEvent() {
           return Boolean(this.appid) && this.appid > 0;
         }
@@ -26999,7 +27047,9 @@
             ? (0, j.Xx)("#PartnerEvent_SteamGameFestival_ArtistState")
             : this.BHasTag("steam_game_festival_office_hour")
             ? (0, j.Xx)("#PartnerEvent_SteamGameFestival_OfficeHour")
-            : this.BHasTag("steam_game_festival_broadcast")
+            : this.BHasTag("steam_game_festival_broadcast") ||
+              (this.BHasTagStartingWith("sale_nextfest_") &&
+                this.type == E.Ep.k_EBroadcastEvent)
             ? (0, j.Xx)("#PartnerEvent_SteamGameFestival_Broadcast")
             : this.GetEventTypeAsString();
         }
@@ -35954,8 +36004,11 @@
           o.createElement("div", { className: cs.FAQViewPage }, e.children);
       var ms = n(2994),
         hs = n.n(ms),
-        ps = n(5615);
-      const _s = new (hs())(
+        ps = n(5615),
+        _s = n(4738),
+        gs = n(7070);
+      const vs = "nicknames";
+      const fs = new (hs())(
           (e) =>
             (function (e) {
               var t, n, o, r;
@@ -36015,21 +36068,40 @@
             })(e),
           { cache: !1 },
         ),
-        gs = "avatarandpersonas";
-      var vs = n(6708);
-      function fs(e) {
+        Es = "avatarandpersonas";
+      var Cs = n(6708);
+      function bs(e) {
         const { accountID: t, bHideWhenNotAvailable: n } = e,
-          [i] = (function (e) {
-            const { data: t, isLoading: n } = (0, ps.useQuery)([gs, e], () =>
-              _s.load(e),
+          [r] = (function (e) {
+            const { data: t, isLoading: n } = (0, ps.useQuery)([Es, e], () =>
+              fs.load(e),
             );
             return [t, n];
           })(t),
-          r = o.useMemo(() => Ve.K.InitFromAccountID(t), [t]);
+          a = (function (e) {
+            const t = (0, gs.bY)(),
+              { data: n, isLoading: o } = (0, ps.useQuery)([vs], () =>
+                (0, i.mG)(this, void 0, void 0, function* () {
+                  const e = new Map();
+                  if (s.L7.logged_in) {
+                    const n = C.gA.Init(_s.bM),
+                      i = (yield _s.lk.GetNicknameList(t, n)).Body().toObject();
+                    (null == i ? void 0 : i.nicknames) &&
+                      i.nicknames.length > 0 &&
+                      i.nicknames.forEach((t) => {
+                        e.set(t.accountid, t.nickname);
+                      });
+                  }
+                  return e;
+                }),
+              );
+            return n ? n.get(e) : null;
+          })(t),
+          l = o.useMemo(() => Ve.K.InitFromAccountID(t), [t]);
         return o.createElement(
           o.Fragment,
           null,
-          Boolean(!i)
+          Boolean(!r)
             ? o.createElement(
                 o.Fragment,
                 null,
@@ -36039,39 +36111,43 @@
                 o.Fragment,
                 null,
                 o.createElement("img", {
-                  className: vs.SmallAvatar,
-                  src: i.avatar_url,
-                  "data-miniprofile": "s" + r.ConvertTo64BitString(),
+                  className: Cs.SmallAvatar,
+                  src: r.avatar_url,
+                  "data-miniprofile": "s" + l.ConvertTo64BitString(),
                 }),
-                o.createElement("span", null, i.persona_name),
+                o.createElement(
+                  "span",
+                  null,
+                  a ? `${a} (${r.persona_name})` : r.persona_name,
+                ),
               ),
         );
       }
-      var Es,
-        Cs = n(2120);
+      var Ss,
+        ys = n(2120);
       !(function (e) {
         (e.k_eView = "view"),
           (e.k_eCommunityView = "communityview"),
           (e.k_eCommunityEdit = "edit"),
           (e.k_eCommunityDashboard = "dashboard"),
           (e.k_eCommunityPreview = "preview");
-      })(Es || (Es = {}));
-      const bs = (e) => {
+      })(Ss || (Ss = {}));
+      const Is = (e) => {
         const { route: t, faqid: n } = e,
           i = (function (e, t) {
             let n = "/faqs/" + s.JA.VANITY_ID + "/";
             switch (e) {
-              case Es.k_eView:
-              case Es.k_eCommunityView:
+              case Ss.k_eView:
+              case Ss.k_eCommunityView:
                 n += "view/" + L(t);
                 break;
-              case Es.k_eCommunityEdit:
+              case Ss.k_eCommunityEdit:
                 n += "edit/" + L(t);
                 break;
-              case Es.k_eCommunityDashboard:
+              case Ss.k_eCommunityDashboard:
                 n += "dashboard";
                 break;
-              case Es.k_eCommunityPreview:
+              case Ss.k_eCommunityPreview:
                 n += "preview/" + L(t);
             }
             return n;
@@ -36093,9 +36169,9 @@
               e.children,
             );
       };
-      var Ss = n(7197),
-        ys = n(3662);
-      const Is = (e) => {
+      var Ds = n(7197),
+        ws = n(3662);
+      const As = (e) => {
           const { faqContent: t } = e,
             [n, i] = (function (e, t, n) {
               const [i, r] = o.useState(null),
@@ -36114,19 +36190,19 @@
           return T.Get().BHasFAQEdit()
             ? o.createElement(
                 "div",
-                { className: (0, K.Z)(ys.Section, Un.ValveOnlyBackground) },
+                { className: (0, K.Z)(ws.Section, Un.ValveOnlyBackground) },
                 o.createElement(
                   "div",
-                  { className: ys.TopicHeader },
+                  { className: ws.TopicHeader },
                   (0, j.Xx)("#FAQViewer_AdminLinks"),
                 ),
                 o.createElement(
                   "div",
-                  { className: Ss.InfoRow },
+                  { className: Ds.InfoRow },
                   (0, j.kQ)(
                     "#FAQViewer_Admin_LastUpdate",
                     (null == n ? void 0 : n.author_account_id)
-                      ? o.createElement(fs, {
+                      ? o.createElement(bs, {
                           accountID: Number.parseInt(n.author_account_id),
                         })
                       : (0, j.Xx)("#FAQViewer_UnknownUser"),
@@ -36135,16 +36211,16 @@
                       null,
                       (0, j.$1)(t.timestamp) +
                         "@" +
-                        (0, Cs.Sc)(t.timestamp, { bForce24HourClock: !1 }),
+                        (0, ys.Sc)(t.timestamp, { bForce24HourClock: !1 }),
                     ),
                   ),
                 ),
-                o.createElement(Ds, { faqContent: t }),
+                o.createElement(Ts, { faqContent: t }),
                 o.createElement(
-                  bs,
+                  Is,
                   {
                     faqid: t.faq_id,
-                    route: Es.k_eCommunityEdit,
+                    route: Ss.k_eCommunityEdit,
                     bForceAnchor: !0,
                   },
                   (0, j.Xx)("#FAQViewer_GotoEditor"),
@@ -36152,7 +36228,7 @@
               )
             : null;
         },
-        Ds = (e) => {
+        Ts = (e) => {
           const { faqContent: t } = e,
             [n, i] = (function (e) {
               const [t, n] = o.useState(T.Get().GetFAQDraftContent(e)),
@@ -36176,10 +36252,10 @@
           const r = n.GetLastSavedDraftVersion(t.language);
           return o.createElement(
             "div",
-            { className: Ss.InfoRow },
+            { className: Ds.InfoRow },
             (0, j.kQ)(
               "#FAQViewer_DraftNewer",
-              o.createElement(fs, {
+              o.createElement(bs, {
                 accountID: Number.parseInt(r.author_account_id),
               }),
               o.createElement(
@@ -36187,29 +36263,29 @@
                 null,
                 (0, j.$1)(r.timestamp) +
                   "@" +
-                  (0, Cs.Sc)(r.timestamp, { bForce24HourClock: !1 }),
+                  (0, ys.Sc)(r.timestamp, { bForce24HourClock: !1 }),
               ),
             ),
           );
         },
-        ws = (e) =>
+        ks = (e) =>
           o.createElement(
             o.Fragment,
             null,
             o.createElement(
               "div",
-              { className: (0, K.Z)(ys.Section, ys.NeedHelp) },
+              { className: (0, K.Z)(ws.Section, ws.NeedHelp) },
               o.createElement(
                 "div",
-                { className: ys.LeftCol },
+                { className: ws.LeftCol },
                 o.createElement(z.WWB, null),
               ),
               o.createElement(
                 "div",
-                { className: ys.RightCol },
+                { className: ws.RightCol },
                 o.createElement(
                   "div",
-                  { className: ys.TopicHeader },
+                  { className: ws.TopicHeader },
                   (0, j.Xx)("#FAQViewer_SideBar_ProblemWithSteam_Title"),
                 ),
                 o.createElement(
@@ -36219,7 +36295,7 @@
                 ),
                 o.createElement(
                   "div",
-                  { className: ys.CenterButtonCtn },
+                  { className: ws.CenterButtonCtn },
                   o.createElement(
                     "a",
                     {
@@ -36234,18 +36310,18 @@
             !(0, s.h4)() &&
               o.createElement(
                 "div",
-                { className: (0, K.Z)(ys.Section, ys.CommunityHelp) },
+                { className: (0, K.Z)(ws.Section, ws.CommunityHelp) },
                 o.createElement(
                   "div",
-                  { className: ys.LeftCol },
+                  { className: ws.LeftCol },
                   o.createElement(z.IWH, null),
                 ),
                 o.createElement(
                   "div",
-                  { className: ys.RightCol },
+                  { className: ws.RightCol },
                   o.createElement(
                     "div",
-                    { className: ys.TopicHeader },
+                    { className: ws.TopicHeader },
                     (0, j.Xx)("#FAQViewer_SideBar_CommunityHelp_Title"),
                   ),
                   o.createElement(
@@ -36255,7 +36331,7 @@
                   ),
                   o.createElement(
                     "div",
-                    { className: ys.CenterButtonCtn },
+                    { className: ws.CenterButtonCtn },
                     o.createElement(
                       "a",
                       {
@@ -36268,9 +36344,9 @@
                 ),
               ),
           );
-      var As = n(5920),
-        Ts = n.n(As);
-      const ks = (e) => {
+      var Ls = n(5920),
+        Rs = n.n(Ls);
+      const Ms = (e) => {
           const { faqid: t } = e,
             [n, i] = (function (e, t) {
               return [e && T.Get().GetFAQPublishedContent(e, t), !0];
@@ -36285,14 +36361,14 @@
                     title: n.title,
                     content: n.content,
                     elSideBars: [
-                      o.createElement(ws, { key: "sidebar", faqContent: n }),
-                      o.createElement(Is, { key: "adminbar", faqContent: n }),
+                      o.createElement(ks, { key: "sidebar", faqContent: n }),
+                      o.createElement(As, { key: "adminbar", faqContent: n }),
                     ],
                   })
                 : o.createElement(
                     ds,
                     null,
-                    o.createElement(Ls, {
+                    o.createElement(Os, {
                       strError: (0, j.Xx)("#FAQViewer_NoFAQFound"),
                     }),
                   )
@@ -36307,26 +36383,25 @@
                 )
           );
         },
-        Ls = (e) =>
+        Os = (e) =>
           o.createElement(
             "div",
-            { className: Ts().ErrorCtn },
-            o.createElement("div", { className: Ts().ErrorMsg }, e.strError),
+            { className: Rs().ErrorCtn },
+            o.createElement("div", { className: Rs().ErrorMsg }, e.strError),
             o.createElement(
               "a",
-              { className: Ts().EscapeLink, href: s.De.HELP_BASE_URL },
+              { className: Rs().EscapeLink, href: s.De.HELP_BASE_URL },
               (0, j.Xx)("#Help_GoToHomepage"),
             ),
           );
-      var Rs = n(2152),
-        Ms = n(7070);
-      function Os(e) {
+      var Ns = n(2152);
+      function Bs(e) {
         const { redirectUrl: t = s.De.HELP_BASE_URL } = e,
-          n = (0, Ms.sG)(),
+          n = (0, gs.sG)(),
           [i, r] = (0, o.useState)(!1);
         return o.createElement(
           "div",
-          { className: Rs.LoginContainer },
+          { className: Ns.LoginContainer },
           i
             ? o.createElement(Gi, null)
             : o.createElement(xi, {
@@ -36342,7 +36417,7 @@
               }),
         );
       }
-      function Ns(e) {
+      function Fs(e) {
         const t = (0, m.TH)();
         return t.pathname.includes("//")
           ? (console.error(`Malformed path: "${t.pathname}"`),
@@ -36352,8 +36427,8 @@
           : null;
       }
       n(4084);
-      function Bs(e) {
-        const t = o.useRef(Fs),
+      function Gs(e) {
+        const t = o.useRef(xs),
           n = function (e, t, ...n) {
             console.log(`React-Query ${e}`, t, ...n);
           };
@@ -36368,16 +36443,16 @@
           o.createElement(ps.QueryClientProvider, { client: t.current }, i)
         );
       }
-      const Fs = new ps.QueryClient({
+      const xs = new ps.QueryClient({
         defaultOptions: { queries: { staleTime: 1 / 0 } },
       });
-      var Gs = n(5406),
-        xs = n(1594),
-        Ps = n(4738);
-      const Us = o.lazy(() =>
+      var Ps = n(5406),
+        Us = n(1594),
+        Hs = n(5933);
+      const Vs = o.lazy(() =>
           Promise.all([n.e(5425), n.e(3068)]).then(n.bind(n, 5017)),
         ),
-        Hs = (e) =>
+        js = (e) =>
           o.createElement(
             d.VK,
             { basename: u() },
@@ -36385,7 +36460,7 @@
               "div",
               { className: V().App },
               o.createElement(
-                Vs,
+                Ws,
                 null,
                 o.createElement(
                   Li.SV,
@@ -36396,7 +36471,7 @@
                     o.createElement(F, {
                       config: {
                         "green-envelope": () =>
-                          o.createElement(Us, {
+                          o.createElement(Vs, {
                             bResponsiveHeader: !1,
                             notifications: (0, s.kQ)(
                               "steam_notifications",
@@ -36404,7 +36479,7 @@
                             ),
                           }),
                         "green-envelope-responsive": () =>
-                          o.createElement(Us, {
+                          o.createElement(Vs, {
                             bResponsiveHeader: !0,
                             notifications: (0, s.kQ)(
                               "steam_notifications",
@@ -36449,7 +36524,7 @@
                                       ? g().fromString(t, !0, 16).toString()
                                       : null;
                                   })(t);
-                                return o.createElement(ks, { faqid: i });
+                                return o.createElement(Ms, { faqid: i });
                               },
                             },
                           }),
@@ -36460,83 +36535,83 @@
                         o.createElement(F, {
                           config: {
                             login: (e) =>
-                              o.createElement(Os, Object.assign({}, e)),
+                              o.createElement(Bs, Object.assign({}, e)),
                           },
                         }),
                       ),
-                      o.createElement(m.AW, null, o.createElement(Ns, null)),
+                      o.createElement(m.AW, null, o.createElement(Fs, null)),
                     ),
                   ),
                 ),
               ),
             ),
           );
-      function Vs(e) {
+      function Ws(e) {
         const { children: t } = e;
         return o.createElement(
-          Ws,
+          Ks,
           null,
           o.createElement(
-            Bs,
+            Gs,
             null,
             o.createElement(
-              xs.Y0,
+              Us.Y0,
               { bRenderOverlayAtRoot: !0, bUsePopups: !1 },
               t,
             ),
           ),
         );
       }
-      function js() {
+      function zs() {
         const e = (0, s.kQ)("help_user_config", "application_config");
         return new w.J(
           s.De.WEBAPI_BASE_URL,
           null == e ? void 0 : e.webapi_token,
         );
       }
-      function Ws(e) {
-        const t = (0, le.kD)(js),
-          n = (0, le.kD)(o.useCallback(() => new Gs.Z(), [])),
+      function Ks(e) {
+        const t = (0, le.kD)(zs),
+          n = (0, le.kD)(o.useCallback(() => new Ps.Z(), [])),
           i = (0, o.useMemo)(() => ({ useActiveAccount: () => "" }), []);
         return o.createElement(
-          Ps.B,
+          Hs.B,
           { value: i },
           o.createElement(
-            Ms.Ub,
+            gs.Ub,
             { useActiveSteamInterface: t, useStorage: n },
             e.children,
           ),
         );
       }
-      var zs = n(10);
-      const Ks =
+      var Xs = n(10);
+      const qs =
         window.addEventListener || (n.g && n.g.addEventListener) || (() => {});
-      let Xs,
-        qs = [],
-        Zs = (e, t) => qs.push({ error: e, cCallsitesToIgnore: t });
-      const Qs = !0;
+      let Zs,
+        Qs = [],
+        Ys = (e, t) => Qs.push({ error: e, cCallsitesToIgnore: t });
+      const $s = !0;
       {
         const e = console.assert;
         console.assert = (t, n, ...i) => {
-          t || Zs(new Error(ea(n, ...i)), 2), e.apply(console, [t, n, ...i]);
+          t || Ys(new Error(na(n, ...i)), 2), e.apply(console, [t, n, ...i]);
         };
         const t = console.error;
         (console.error = (e, ...n) => {
-          Zs(new Error(ea(e, ...n)), 1), t.apply(console, [e, ...n]);
+          Ys(new Error(na(e, ...n)), 1), t.apply(console, [e, ...n]);
         }),
           (console.clogerror = (e, n, ...i) => {
-            Zs(new Error(ea(n, ...i)), e + 1), t.apply(console, [n, ...i]);
+            Ys(new Error(na(n, ...i)), e + 1), t.apply(console, [n, ...i]);
           }),
-          Ks("error", (e) => {
-            Zs(e.error, 0);
+          qs("error", (e) => {
+            Ys(e.error, 0);
           }),
-          (Xs = window.setTimeout(() => {
-            (qs = []), (Zs = () => {});
+          (Zs = window.setTimeout(() => {
+            (Qs = []), (Ys = () => {});
           }, 3e4));
       }
-      const Ys = { cCallsitesToIgnore: 0, bIncludeMessageInIdentifier: !1 },
-        $s = ["/localhost:1337/"];
-      class Js {
+      const Js = { cCallsitesToIgnore: 0, bIncludeMessageInIdentifier: !1 },
+        ea = ["/localhost:1337/"];
+      class ta {
         constructor(e = !0) {
           (this.m_transport = null),
             (this.m_rgErrorQueue = []),
@@ -36544,13 +36619,13 @@
             (this.m_bEnabled = !0),
             (this.m_bInitialized = !1),
             e
-              ? (qs.forEach(({ error: e, cCallsitesToIgnore: t }) =>
+              ? (Qs.forEach(({ error: e, cCallsitesToIgnore: t }) =>
                   this.ReportError(e, { cCallsitesToIgnore: t }),
                 ),
-                (Zs = (e, t) => this.ReportError(e, { cCallsitesToIgnore: t })))
-              : (Zs = () => {}),
-            (qs = []),
-            clearTimeout(Xs),
+                (Ys = (e, t) => this.ReportError(e, { cCallsitesToIgnore: t })))
+              : (Ys = () => {}),
+            (Qs = []),
+            clearTimeout(Zs),
             window.setTimeout(() => {
               this.m_bInitialized ||
                 ((this.m_bEnabled = !1), (this.m_rgErrorQueue = []));
@@ -36580,12 +36655,12 @@
                 null
               );
             try {
-              const n = Object.assign(Object.assign({}, Ys), t);
+              const n = Object.assign(Object.assign({}, Js), t);
               if (!this.m_bEnabled) return null;
               0;
               const o = yield (function (e, t) {
                 try {
-                  return e.stack && e.stack.match(ta)
+                  return e.stack && e.stack.match(ia)
                     ? (function (e, t) {
                         return (0, i.mG)(this, void 0, void 0, function* () {
                           const {
@@ -36593,7 +36668,7 @@
                               bIncludeMessageInIdentifier: i,
                             } = t,
                             o = e.stack.split("\n");
-                          let r = sa(o.filter((e) => !!e.match(ta))[n]);
+                          let r = la(o.filter((e) => !!e.match(ia))[n]);
                           i && (r = `${r} ${e.message}`);
                           const s = o
                             .map((e) => {
@@ -36610,12 +36685,12 @@
                             .filter((e) => !!e);
                           return {
                             identifier: r,
-                            identifierHash: yield la(r),
+                            identifierHash: yield ua(r),
                             message: s,
                           };
                         });
                       })(e, t)
-                    : e.stack && e.stack.match(na)
+                    : e.stack && e.stack.match(oa)
                     ? (function (e, t) {
                         return (0, i.mG)(this, void 0, void 0, function* () {
                           const {
@@ -36623,7 +36698,7 @@
                               bIncludeMessageInIdentifier: i,
                             } = t,
                             o = e.stack.split("\n");
-                          let r = sa(o.filter((e) => !!e.match(na))[n]);
+                          let r = la(o.filter((e) => !!e.match(oa))[n]);
                           i && (r = `${r} ${e.message}`);
                           const s = o
                             .map((e) => {
@@ -36640,12 +36715,12 @@
                             .filter((e) => !!e);
                           return {
                             identifier: r,
-                            identifierHash: yield la(r),
+                            identifierHash: yield ua(r),
                             message: [e.message, ...s],
                           };
                         });
                       })(e, t)
-                    : e.stack && e.stack.match(ia)
+                    : e.stack && e.stack.match(ra)
                     ? (function (e, t) {
                         return (0, i.mG)(this, void 0, void 0, function* () {
                           const {
@@ -36674,17 +36749,17 @@
                             .filter((e) => !!e);
                           return {
                             identifier: a,
-                            identifierHash: yield la(a),
+                            identifierHash: yield ua(a),
                             message: [e.message, ...l],
                           };
                         });
                       })(e, t)
-                    : (ra ||
+                    : (aa ||
                         (console.warn(
                           "Error reporter does not know how to parse generated stack:",
                         ),
                         console.warn(e.stack),
-                        (ra = !0)),
+                        (aa = !0)),
                       null);
                 } catch (e) {
                   return (
@@ -36701,7 +36776,7 @@
         BIsBlacklisted(e) {
           for (let t of e.message) {
             let n = JSON.stringify(t);
-            for (let t of $s) {
+            for (let t of ea) {
               const i = new RegExp(t);
               if (n.match(i))
                 return console.warn("Report", e, "matched regex", t), !0;
@@ -36726,7 +36801,7 @@
         }
         SendErrorReports(e) {
           if (!e || !e.length) return;
-          const t = C.gA.Init(zs.$4),
+          const t = C.gA.Init(Xs.$4),
             n = e.reduce(
               (e, t) => (
                 e[t.identifier]
@@ -36738,7 +36813,7 @@
             ),
             i = Object.keys(n).map((e) => {
               const { report: t, count: i } = n[e],
-                o = new zs.kb();
+                o = new Xs.kb();
               return (
                 o.set_count(i),
                 o.set_identifier(t.identifier + " " + t.identifierHash),
@@ -36749,7 +36824,7 @@
           t.Body().set_product(this.m_strProduct),
             t.Body().set_version(this.m_strVersion),
             t.Body().set_errors(i),
-            zs.TF.ReportClientError(this.m_transport, t);
+            Xs.TF.ReportClientError(this.m_transport, t);
         }
         get version() {
           return this.m_strVersion;
@@ -36758,10 +36833,10 @@
           return this.m_strProduct;
         }
         get reporting_enabled() {
-          return Qs;
+          return $s;
         }
       }
-      function ea(e, ...t) {
+      function na(e, ...t) {
         if ("string" == typeof e && 0 === t.length) return e;
         return [e, ...t]
           .map((e) => {
@@ -36773,12 +36848,12 @@
           })
           .join(", ");
       }
-      const ta = /^\s*at .*(\S+:\d+|\(native\))/m,
-        na = /(^|@)\S+:\d+/,
-        ia = /.*\/bundle-[a-zA-Z0-9]+:\d+:\d+/;
-      let oa,
-        ra = !1;
-      function sa(e) {
+      const ia = /^\s*at .*(\S+:\d+|\(native\))/m,
+        oa = /(^|@)\S+:\d+/,
+        ra = /.*\/bundle-[a-zA-Z0-9]+:\d+:\d+/;
+      let sa,
+        aa = !1;
+      function la(e) {
         return (function (e) {
           const t = "https://",
             n = e.indexOf(t);
@@ -36794,13 +36869,13 @@
           })(e),
         );
       }
-      const aa = (e) => {
-        (oa = e),
-          Li.SV.InstallErrorReportingStore(oa),
-          C.lq.InstallErrorReportingStore(oa),
-          j.LJ.InstallErrorReportingStore(oa);
+      const ca = (e) => {
+        (sa = e),
+          Li.SV.InstallErrorReportingStore(sa),
+          C.lq.InstallErrorReportingStore(sa),
+          j.LJ.InstallErrorReportingStore(sa);
       };
-      function la(e) {
+      function ua(e) {
         return (0, i.mG)(this, void 0, void 0, function* () {
           try {
             const n = yield window.crypto.subtle.digest(
@@ -36829,7 +36904,7 @@
           document.getElementById("application_config")
             ? (0, s.Ek)("application_config")
             : (0, s.Ek)(),
-            (oa || aa(new Js()), oa).Init(
+            (sa || ca(new ta()), sa).Init(
               "Help",
               CLSTAMP,
               new w.J(s.De.WEBAPI_BASE_URL).GetServiceTransport(),
@@ -36851,18 +36926,18 @@
                     ]);
                   j.Yt.InitFromObjects(r, a, o, s);
                 }
-                for (const e of ca) j.Yt.AddTokens(e);
-                ca = void 0;
+                for (const e of da) j.Yt.AddTokens(e);
+                da = void 0;
               });
             })(s.De.LANGUAGE),
             document.getElementById("application_root") &&
               r.render(
-                o.createElement(Hs, {}),
+                o.createElement(js, {}),
                 document.getElementById("application_root"),
               );
         }),
       );
-      let ca = [];
+      let da = [];
     },
     1574: (e, t, n) => {
       var i = {

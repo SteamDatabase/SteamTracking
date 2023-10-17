@@ -20559,7 +20559,9 @@
                     i.createElement(
                       "div",
                       { className: La().Title },
-                      (0, v.Jr)("#dpc_main_event"),
+                      21 == (null == a ? void 0 : a.event)
+                        ? (0, v.Jr)("#dpc_about_theinternational")
+                        : (0, v.Jr)("#dpc_main_event"),
                     ),
                     i.createElement(
                       "div",
