@@ -20411,34 +20411,50 @@
                 : void 0,
             ];
           let c = [],
-            _ = [];
+            _ = [],
+            d = [];
           if ((null == a ? void 0 : a.event_type) == Jt.f5.INTERNATIONAL)
             for (const e of r) {
-              let a = !1;
-              const r = jt.f.Get().GetEventNodesForDate(t, e);
-              for (const e of r) {
+              let r = !1,
+                n = !1;
+              const i = jt.f.Get().GetEventNodesForDate(t, e);
+              for (const e of i) {
                 const t = jt.f.Get().GetLeagueNode(e.nLeagueID, e.nNodeID),
-                  r = jt.f
+                  i = jt.f
                     .Get()
                     .GetLeagueNodeGroup(
                       e.nLeagueID,
                       null == t ? void 0 : t.node_group_id,
                     ),
-                  n = jt.f
+                  s = jt.f
                     .Get()
                     .GetLeagueNodeGroup(
                       e.nLeagueID,
-                      null == r ? void 0 : r.parent_node_group_id,
+                      null == i ? void 0 : i.parent_node_group_id,
                     );
                 if (
-                  (null == n ? void 0 : n.phase) ==
+                  (null == s ? void 0 : s.phase) ==
                   Jt.g5.LEAGUE_PHASE_GROUP_STAGE
                 ) {
-                  a = !0;
+                  r = !0;
                   break;
                 }
+                21 == (null == a ? void 0 : a.event) &&
+                  ((41 != t.node_id &&
+                    42 != t.node_id &&
+                    43 != t.node_id &&
+                    44 != t.node_id &&
+                    49 != t.node_id &&
+                    50 != t.node_id &&
+                    51 != t.node_id &&
+                    52 != t.node_id &&
+                    53 != t.node_id &&
+                    54 != t.node_id &&
+                    55 != t.node_id &&
+                    56 != t.node_id) ||
+                    (n = !0));
               }
-              a ? c.push(e) : _.push(e);
+              r ? c.push(e) : n ? _.push(e) : d.push(e);
             }
           return i.createElement(
             "div",
@@ -20506,12 +20522,49 @@
                     i.createElement(
                       "div",
                       { className: La().Title },
-                      (0, v.Jr)("#dpc_main_event"),
+                      (0, v.Jr)("#dpc_playoff"),
                     ),
                     i.createElement(
                       "div",
                       { className: La().DayList },
                       _.map((t) =>
+                        i.createElement(
+                          "div",
+                          {
+                            className: (0, h.Z)(
+                              La().DayContainer,
+                              t == e.nDayFilter && La().Selected,
+                            ),
+                            key: t,
+                            onClick: () => e.setDayFilter(t),
+                          },
+                          i.createElement(ta(), {
+                            format: "DD ",
+                            date: 1e3 * t,
+                            className: La().DayNumber,
+                          }),
+                          i.createElement(ta(), {
+                            format: "ddd ",
+                            date: 1e3 * t,
+                            className: La().DayOfWeek,
+                          }),
+                        ),
+                      ),
+                    ),
+                  ),
+                !!d.length &&
+                  i.createElement(
+                    "div",
+                    { className: La().EventStageContainer },
+                    i.createElement(
+                      "div",
+                      { className: La().Title },
+                      (0, v.Jr)("#dpc_main_event"),
+                    ),
+                    i.createElement(
+                      "div",
+                      { className: La().DayList },
+                      d.map((t) =>
                         i.createElement(
                           "div",
                           {
