@@ -1705,7 +1705,8 @@ enum EInputMode
 	k_EInputMode_2DScrollwheel = undefined;
 	k_EInputMode_Hotbar = undefined;
 	k_EInputMode_GyroToMouse = undefined;
-	k_EInputMode_GyroToJoystick = undefined;
+	k_EInputMode_GyroToJoystickCamera = undefined;
+	k_EInputMode_GyroToJoystickDeflection = undefined;
 	k_EInputMode_All = undefined;
 }
 

@@ -541,8 +541,8 @@ CreateInterface
 steamwebhelper
 Steam Helper
 cefwebhelper
-Oct 13 2023
-13:54:39
+Oct 16 2023
+18:32:38
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 MainThrd
@@ -954,7 +954,6 @@ Qmw)
 cQ+%
 2{J>\lW
 i*GwCF
-){pc)
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
@@ -968,6 +967,7 @@ D4KOJ,7
 N6	D
 >N+=[
 :?"=
+jl(]
 [?L^
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -1024,9 +1024,9 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231013205501Z0/
-a8E1jM
-{q@oP
+231017013300Z0/
+ ;}\
+A_J}v5m0[
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -1034,17 +1034,17 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		kGE4RTFqTeeLtsNQYMsCNhz5+x8=
+		ElZAA1bXQAvsrHawN5NT4eoLui0=
 		</data>
 		<data>
-		OcM1wNd9ZYht2FbE/wF01MbfdKw=
+		WZJLyjAawY+RRosdlMtvErQxV3A=
 		</data>
 	</array>
 </dict>
 </plist>
-n;}`
-L](/.\
-20231013205513Z0
+jAb#
+a#%{
+20231017013331Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -1099,8 +1099,12 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231013205513Z0#
-.,'5|"l
+231017013331Z0#
+:kt&
+:HD1
+*O(%
+6|=H-
+6.=\YyR
 __TEXT
 __text
 __TEXT
@@ -1834,8 +1838,8 @@ CreateInterface
 steamwebhelper
 Steam Helper
 cefwebhelper
-Oct 13 2023
-13:54:39
+Oct 16 2023
+18:32:38
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 MainThrd
@@ -2276,7 +2280,6 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-0csJ
 J1+e
 +WPi
 'o%>
@@ -2287,6 +2290,8 @@ subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
+C'Nu
+,(x|[=
 =+)g
 PQ)Nu
 H,Q]aP/^
@@ -2347,8 +2352,8 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231013205501Z0/
-Dg'^
+231017013300Z0/
+a;,g70[
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -2356,19 +2361,19 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		3eTt7lkO/pLMn1wehCrV4k8/uSQ=
+		hgewLiB/nO4WyrpH2eq7jML9gdk=
 		</data>
 		<data>
-		qiTNDekg4uuoKBQgCdgoNMLOGZw=
+		NzbC7YWfkT7gKvM/hvHOlnA8/FY=
 		</data>
 	</array>
 </dict>
 </plist>
-F>u\
-}%vj
-Wn0p
-IOPvVfM
-20231013205513Z0
+ujbjm
+;0>I
+#Y`)
+8&la
+20231017013331Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -2427,11 +2432,9 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231013205513Z0#
-Mxp3
->c{i5
-EAiUH
-z{?fB
+231017013331Z0#
+bAK]
+Ck-)
 __TEXT
 __text
 __TEXT
@@ -2741,8 +2744,8 @@ CreateInterface
 steamwebhelper
 Steam Helper
 cefwebhelper
-Oct 13 2023
-13:54:40
+Oct 16 2023
+18:32:39
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 MainThrd
@@ -3181,18 +3184,16 @@ MXGJJ98X76
 `:?mE
 TyM@
 a@o1`
-EELK
 qL\aM
 |z>_
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-+K^a
 B-?fH
 ,GS	R2
 n>+	S
-N[sH
+CC]Zfz
 } ~B
 #lB 
 +?<x
@@ -3252,7 +3253,9 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231013205501Z0/
+231017013300Z0/
+ 6-a
+A[0[
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -3260,18 +3263,20 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		pfuCQcFU2TUwaPIrvk4dCrAmLZI=
+		FJdetqwN85lJnb2rjYq42EcKM/0=
 		</data>
 		<data>
-		aMKnTKVmLzXwzmpP12hvdPhxvME=
+		RIMmvJXJtxUIPe2A+a3wx5AvpUE=
 		</data>
 	</array>
 </dict>
 </plist>
-mm=1 
-{st!
-%t9^
-20231013205513Z0
+W-'2
++:NF
+\YdE
+I]/R
+)eyr:
+20231017013331Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -3326,7 +3331,9 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231013205513Z0#
-`|8|<<
-x,<:%:
-o:@I
+231017013331Z0#
+2!>!
+6\zW
+R-Ii}
+~77W'j
+^QwL
