@@ -19749,6 +19749,20 @@
                 i.createElement(
                   "div",
                   { className: Ta().Question },
+                  (0, v.Jr)("#dpc_about_faq_question20"),
+                ),
+                i.createElement(
+                  "div",
+                  { className: Ta().Answer },
+                  (0, v.Jr)("#dpc_about_faq_answer20"),
+                ),
+              ),
+              i.createElement(
+                "div",
+                { className: Ta().FAQEntry },
+                i.createElement(
+                  "div",
+                  { className: Ta().Question },
                   (0, v.Jr)("#dpc_about_faq_question9"),
                 ),
                 i.createElement(
@@ -28209,7 +28223,7 @@
             i.createElement(
               "div",
               { className: Wn().Title },
-              `${(0, v.Jr)("#dpc_event_ti11")} ${(0, v.Jr)(
+              `${(0, v.Jr)("#dpc_event_ti12")} ${(0, v.Jr)(
                 "#dpc_tirules_header",
               )}`,
             ),
@@ -28219,233 +28233,7 @@
               i.createElement(
                 "div",
                 { className: Wn().SubHeader },
-                (0, v.Jr)("#dpc_group_stage"),
-              ),
-              i.createElement(
-                "ul",
-                null,
-                i.createElement(
-                  "li",
-                  null,
-                  i.createElement(
-                    "div",
-                    { className: Wn().Description },
-                    (0, v.Jr)("#dpc_tirules_2022_two_groups"),
-                  ),
-                ),
-                i.createElement(
-                  "li",
-                  null,
-                  i.createElement(
-                    "div",
-                    { className: Wn().Description },
-                    (0, v.Jr)("#dpc_tirules_groups_match_format"),
-                  ),
-                ),
-                i.createElement(
-                  "li",
-                  null,
-                  i.createElement(
-                    "div",
-                    { className: Wn().Description },
-                    (0, v.Jr)("#dpc_tirules_groups_match_selection_priority"),
-                  ),
-                ),
-                i.createElement(
-                  "li",
-                  null,
-                  i.createElement(
-                    "div",
-                    { className: Wn().Description },
-                    (0, v.Jr)("#dpc_tirules_groups_match_win_points"),
-                  ),
-                ),
-                i.createElement(
-                  "li",
-                  null,
-                  i.createElement(
-                    "div",
-                    { className: Wn().Description },
-                    (0, v.Jr)("#dpc_tirules_2022_groups_top_4"),
-                  ),
-                ),
-                i.createElement(
-                  "li",
-                  null,
-                  i.createElement(
-                    "div",
-                    { className: Wn().Description },
-                    (0, v.Jr)("#dpc_tirules_2022_groups_5_to_8"),
-                  ),
-                ),
-                i.createElement(
-                  "li",
-                  null,
-                  i.createElement(
-                    "div",
-                    { className: Wn().Description },
-                    (0, v.Jr)("#dpc_tirules_2022_groups_bottom_2"),
-                  ),
-                ),
-              ),
-              i.createElement(
-                "div",
-                { className: Wn().SubHeader },
-                `${(0, v.Jr)("#dpc_tiebreakers")}`,
-              ),
-              i.createElement(
-                "ul",
-                null,
-                i.createElement(
-                  "li",
-                  null,
-                  i.createElement(
-                    "div",
-                    { className: Wn().Description },
-                    (0, v.Jr)("#dpc_tirules_groups_tiebreaker_elim_rules"),
-                  ),
-                ),
-              ),
-              i.createElement(
-                "div",
-                { className: Wn().TiebreakerList },
-                i.createElement(
-                  "ul",
-                  null,
-                  i.createElement(
-                    "li",
-                    null,
-                    i.createElement(
-                      "div",
-                      { className: Wn().Description },
-                      (0, v.Jr)("#dpc_tirules_groups_tiebreaker_elim_format_1"),
-                    ),
-                  ),
-                  i.createElement(
-                    "div",
-                    { className: Wn().AdditionalIndent },
-                    i.createElement(
-                      "li",
-                      null,
-                      i.createElement(
-                        "div",
-                        { className: Wn().Description },
-                        (0, v.Jr)(
-                          "#dpc_tirules_groups_tiebreaker_elim_format_2",
-                        ),
-                      ),
-                    ),
-                  ),
-                  i.createElement(
-                    "li",
-                    null,
-                    i.createElement(
-                      "div",
-                      { className: Wn().Description },
-                      (0, v.Jr)("#dpc_tirules_groups_tiebreaker_elim_format_3"),
-                    ),
-                  ),
-                  i.createElement(
-                    "div",
-                    { className: Wn().AdditionalIndent },
-                    i.createElement(
-                      "li",
-                      null,
-                      i.createElement(
-                        "div",
-                        { className: Wn().Description },
-                        (0, v.Jr)(
-                          "#dpc_tirules_groups_tiebreaker_elim_format_4",
-                        ),
-                      ),
-                    ),
-                  ),
-                  i.createElement(
-                    "div",
-                    { className: Wn().AdditionalIndent },
-                    i.createElement(
-                      "li",
-                      null,
-                      i.createElement(
-                        "div",
-                        { className: Wn().Description },
-                        (0, v.Jr)(
-                          "#dpc_tirules_groups_tiebreaker_elim_format_5",
-                        ),
-                      ),
-                    ),
-                  ),
-                  i.createElement(
-                    "div",
-                    { className: Wn().AdditionalIndent },
-                    i.createElement(
-                      "li",
-                      null,
-                      i.createElement(
-                        "div",
-                        { className: Wn().Description },
-                        (0, v.Jr)(
-                          "#dpc_tirules_groups_tiebreaker_elim_format_6",
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-              i.createElement(
-                "ul",
-                null,
-                i.createElement(
-                  "li",
-                  null,
-                  i.createElement(
-                    "div",
-                    { className: Wn().Description },
-                    (0, v.Jr)("#dpc_tirules_groups_tiebreaker_other_rules"),
-                  ),
-                ),
-              ),
-              i.createElement(
-                "div",
-                { className: Wn().TiebreakerList },
-                i.createElement(
-                  "ol",
-                  null,
-                  i.createElement(
-                    "li",
-                    null,
-                    i.createElement(
-                      "div",
-                      { className: Wn().Description },
-                      (0, v.Jr)("#dpc_tirules_groups_tiebreaker_other_rules1"),
-                    ),
-                  ),
-                  i.createElement(
-                    "li",
-                    null,
-                    i.createElement(
-                      "div",
-                      { className: Wn().Description },
-                      (0, v.Jr)("#dpc_tirules_groups_tiebreaker_other_rules2"),
-                    ),
-                  ),
-                  i.createElement(
-                    "li",
-                    null,
-                    i.createElement(
-                      "div",
-                      { className: Wn().Description },
-                      (0, v.Jr)("#dpc_tirules_groups_tiebreaker_other_rules3"),
-                    ),
-                  ),
-                ),
-              ),
-              i.createElement(
-                "div",
-                { className: Wn().SubHeader },
-                `${(0, v.Jr)("#dpc_main_event")} (${(0, v.Jr)(
-                  "#dpc_upper_bracket",
-                )})`,
+                `${(0, v.Jr)("#dpc_upper_bracket")}`,
               ),
               i.createElement(
                 "ul",
@@ -28457,51 +28245,6 @@
                     "div",
                     { className: Wn().Description },
                     (0, v.Jr)("#dpc_tirules_main_event_upper_bracket_format"),
-                  ),
-                ),
-                i.createElement(
-                  "li",
-                  null,
-                  i.createElement(
-                    "div",
-                    { className: Wn().Description },
-                    (0, v.Jr)("#dpc_tirules_groups_first_place_selection"),
-                  ),
-                ),
-                i.createElement(
-                  "li",
-                  null,
-                  i.createElement(
-                    "div",
-                    { className: Wn().Description },
-                    (0, v.Jr)("#dpc_tirules_main_event_upper_bracket_a"),
-                  ),
-                ),
-                i.createElement(
-                  "li",
-                  null,
-                  i.createElement(
-                    "div",
-                    { className: Wn().Description },
-                    (0, v.Jr)("#dpc_tirules_main_event_upper_bracket_b"),
-                  ),
-                ),
-                i.createElement(
-                  "li",
-                  null,
-                  i.createElement(
-                    "div",
-                    { className: Wn().Description },
-                    (0, v.Jr)("#dpc_tirules_main_event_upper_bracket_c"),
-                  ),
-                ),
-                i.createElement(
-                  "li",
-                  null,
-                  i.createElement(
-                    "div",
-                    { className: Wn().Description },
-                    (0, v.Jr)("#dpc_tirules_main_event_upper_bracket_d"),
                   ),
                 ),
                 i.createElement(
@@ -28528,9 +28271,7 @@
               i.createElement(
                 "div",
                 { className: Wn().SubHeader },
-                `${(0, v.Jr)("#dpc_main_event")} (${(0, v.Jr)(
-                  "#dpc_lower_bracket",
-                )})`,
+                `${(0, v.Jr)("#dpc_lower_bracket")}`,
               ),
               i.createElement(
                 "ul",
@@ -28541,52 +28282,9 @@
                   i.createElement(
                     "div",
                     { className: Wn().Description },
-                    (0, v.Jr)("#dpc_tirules_main_event_lower_bracket_format"),
-                  ),
-                ),
-                i.createElement(
-                  "li",
-                  null,
-                  i.createElement(
-                    "div",
-                    { className: Wn().Description },
-                    (0, v.Jr)("#dpc_tirules_groups_fifth_place_selection"),
-                  ),
-                ),
-                i.createElement(
-                  "li",
-                  null,
-                  i.createElement(
-                    "div",
-                    { className: Wn().Description },
-                    (0, v.Jr)("#dpc_tirules_main_event_lower_bracket_a"),
-                  ),
-                ),
-                i.createElement(
-                  "li",
-                  null,
-                  i.createElement(
-                    "div",
-                    { className: Wn().Description },
-                    (0, v.Jr)("#dpc_tirules_main_event_lower_bracket_b"),
-                  ),
-                ),
-                i.createElement(
-                  "li",
-                  null,
-                  i.createElement(
-                    "div",
-                    { className: Wn().Description },
-                    (0, v.Jr)("#dpc_tirules_main_event_lower_bracket_c"),
-                  ),
-                ),
-                i.createElement(
-                  "li",
-                  null,
-                  i.createElement(
-                    "div",
-                    { className: Wn().Description },
-                    (0, v.Jr)("#dpc_tirules_main_event_lower_bracket_d"),
+                    (0, v.Jr)(
+                      "#dpc_tirules2023_main_event_lower_bracket_format",
+                    ),
                   ),
                 ),
                 i.createElement(
