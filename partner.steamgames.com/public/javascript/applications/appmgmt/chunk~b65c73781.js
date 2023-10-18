@@ -17622,7 +17622,7 @@
             ),
           );
       var Pt = a(70903),
-        wt = (a(88026), a(39116)),
+        wt = (a(88026), a(3494)),
         At = a(45763);
       const Tt = ["cart", "underten", "specials"],
         Rt = [
@@ -29718,9 +29718,9 @@
           );
         };
     },
-    39116: (e, t, a) => {
+    3494: (e, t, a) => {
       "use strict";
-      a.d(t, { K: () => _a, n: () => ha });
+      a.d(t, { K: () => ha, n: () => ga });
       var n = a(33940),
         i = a(50265),
         s = a(32765);
@@ -34959,34 +34959,66 @@
         );
       }
       var ea = a(99344);
-      const ta = (e) => {
+      function ta(e) {
+        const { saleDescList: t, fnSetFilteredSaleDescList: a } = e,
+          [i, s] = d.useState(null),
+          l = d.useRef(),
+          r = d.useCallback(
+            (e) =>
+              (0, n.mG)(this, void 0, void 0, function* () {
+                const n = String(e.target.value).toLocaleLowerCase();
+                if (!n || n.trim().length < 2) return;
+                const i = t.filter(
+                  (e) =>
+                    (e.strEventName || "").toLocaleLowerCase().includes(n) ||
+                    (e.strVanity || "").toLocaleLowerCase().includes(n),
+                );
+                a(i);
+              }),
+            [a, t],
+          );
+        return d.createElement(_.II, {
+          onBlur: () => {
+            setTimeout(() => (null == i ? void 0 : i.Hide()), 200);
+          },
+          ref: l,
+          type: "text",
+          label: "Search by Sale Page Name",
+          placeholder: "type at least 2 characters..",
+          onChange: r,
+        });
+      }
+      const aa = (e) => {
         const {
-          saleDescList: t,
-          bShowAppBrowse: a,
-          bShowFeaturing: n,
-          descriptionToken: i,
-          hiddenSaleDescList: s,
-          bShowRankView: l,
-        } = e;
+            saleDescList: t,
+            bShowAppBrowse: a,
+            bShowFeaturing: n,
+            descriptionToken: i,
+            hiddenSaleDescList: s,
+            bShowRankView: l,
+          } = e,
+          [r, o] = (0, d.useState)(() => t);
         return d.createElement(
           "div",
           { className: (0, ue.Z)(At().SectionContainer) },
-          i &&
+          d.createElement(ta, {
+            saleDescList: t,
+            fnSetFilteredSaleDescList: o,
+          }),
+          Boolean(i) &&
             d.createElement(
               "div",
               { className: At().SaleSectionDesc },
-              " ",
               (0, S.Xx)(i),
-              " ",
             ),
-          t.map((e) =>
+          r.map((e) =>
             d.createElement(
               h.SV,
               { key: e.clanEventGID },
               d.createElement(
                 Dt.Y,
                 { placeholderHeight: "160px", rootMargin: "0px 0px 200px 0px" },
-                d.createElement(na, {
+                d.createElement(ia, {
                   saleDesc: e,
                   bShowAppBrowse: a,
                   bShowFeaturing: n,
@@ -34995,17 +35027,23 @@
               ),
             ),
           ),
+          Boolean(0 == r.length) &&
+            d.createElement(
+              "div",
+              null,
+              (0, S.Xx)("#OptIn_AppReview_EmptyList"),
+            ),
           Boolean((null == s ? void 0 : s.length) > 0) &&
             s.map((e) =>
               d.createElement(
                 h.SV,
                 { key: e.clanEventGID },
-                d.createElement(ia, { saleDesc: e }),
+                d.createElement(sa, { saleDesc: e }),
               ),
             ),
         );
       };
-      function aa(e) {
+      function na(e) {
         const { saleDesc: t } = e,
           a = (0, u.J)(t.clanAccountID),
           n =
@@ -35049,7 +35087,7 @@
           d.createElement("div", { className: At().Footer }),
         );
       }
-      function na(e) {
+      function ia(e) {
         const {
             saleDesc: t,
             bShowAppBrowse: a,
@@ -35075,7 +35113,7 @@
           }, [o, t]),
           l)
         )
-          return d.createElement(aa, {
+          return d.createElement(na, {
             saleDesc: t,
             bShowAppBrowse: e.bShowAppBrowse,
             bShowFeaturing: !o,
@@ -35090,7 +35128,7 @@
               null,
               "Failed to load event. Are you logged into the Steam Store?",
             ),
-            d.createElement(aa, {
+            d.createElement(na, {
               saleDesc: t,
               bShowAppBrowse: e.bShowAppBrowse,
               bShowFeaturing: !o,
@@ -35104,7 +35142,7 @@
           d.createElement(
             "div",
             { className: (0, ue.Z)(At().TileContainer) },
-            d.createElement(ua, {
+            d.createElement(pa, {
               saleDesc: t,
               strSaleURL: _.GetSaleURL(),
               strEventName: _.GetNameWithFallback(g),
@@ -35131,15 +35169,15 @@
               d.createElement(
                 "div",
                 { className: (0, ue.Z)(At().TopStatsCtn) },
-                d.createElement(ca, {
+                d.createElement(da, {
                   eventModel: _,
                   bShowAppBrowse: a,
                   bShowRankView: !o && i,
                 }),
                 Boolean(_.BIsVisibleEvent() && o) &&
-                  d.createElement(sa, { eventModel: _ }),
-                Boolean(_.BIsVisibleEvent() && !o) &&
                   d.createElement(la, { eventModel: _ }),
+                Boolean(_.BIsVisibleEvent() && !o) &&
+                  d.createElement(ra, { eventModel: _ }),
                 Boolean(!o) &&
                   d.createElement(Gt, {
                     saleDesc: t,
@@ -35147,17 +35185,17 @@
                     fnToggleDetails: () => u(!m),
                   }),
               ),
-              d.createElement(ra, { eventModel: _ }),
               d.createElement(oa, { eventModel: _ }),
+              d.createElement(ca, { eventModel: _ }),
               Boolean(!o && n) && d.createElement(Pt, { event: _ }),
               Boolean(!o) && d.createElement(Qt, { event: _ }),
-              d.createElement(pa, { clanAccountID: t.clanAccountID }),
+              d.createElement(_a, { clanAccountID: t.clanAccountID }),
             ),
             m && d.createElement(Lt, { saleDesc: t }),
           ),
         );
       }
-      function ia(e) {
+      function sa(e) {
         const { saleDesc: t } = e,
           a = t.bFeaturedNextSeasonalSale
             ? s.De.STORE_BASE_URL + "sale/" + t.strVanity
@@ -35169,7 +35207,7 @@
         return d.createElement(
           "div",
           { className: (0, ue.Z)(At().TileContainer) },
-          d.createElement(ua, {
+          d.createElement(pa, {
             saleDesc: t,
             strSaleURL: a,
             strEventName: t.strEventName,
@@ -35179,16 +35217,16 @@
             { className: (0, ue.Z)(At().EventDetailsCtn) },
             (0, S.Xx)("#Sale_InDraftModeNoAccess"),
           ),
-          d.createElement(pa, { clanAccountID: t.clanAccountID }),
+          d.createElement(_a, { clanAccountID: t.clanAccountID }),
         );
       }
-      function sa(e) {
+      function la(e) {
         const { eventModel: t } = e;
         return (0, u.J)(t.clanSteamID.GetAccountID()).can_edit
-          ? d.createElement(la, { eventModel: t })
+          ? d.createElement(ra, { eventModel: t })
           : null;
       }
-      function la(e) {
+      function ra(e) {
         const { eventModel: t } = e,
           a = t.GID,
           n = t.clanSteamID.GetAccountID(),
@@ -35227,7 +35265,7 @@
               )
         );
       }
-      function ra(e) {
+      function oa(e) {
         const { eventModel: t } = e,
           a = t.GetSaleSectionCount(),
           n = t.GetSaleFeaturedAppsCount(),
@@ -35246,7 +35284,7 @@
           d.createElement("br", null),
         );
       }
-      function oa(e) {
+      function ca(e) {
         const t = (0, c.Z)(),
           { eventModel: a } = e,
           n = (0, u.J)(a.clanSteamID.GetAccountID()),
@@ -35347,7 +35385,7 @@
             ),
         );
       }
-      function ca(e) {
+      function da(e) {
         const { eventModel: t, bShowAppBrowse: a, bShowRankView: n } = e,
           { fnBIsPublisherApp: i } = P(),
           s = (0, c.Z)();
@@ -35355,7 +35393,7 @@
         const r = (0, d.useCallback)(
           (e) => {
             (0, g.AM)(
-              d.createElement(da, { nPartnerID: s, eventModel: t }),
+              d.createElement(ma, { nPartnerID: s, eventModel: t }),
               (0, D.RA)(e),
             );
           },
@@ -35389,7 +35427,7 @@
                 {
                   onClick: (e) => {
                     (0, g.AM)(
-                      d.createElement(ma, { eventModel: t }),
+                      d.createElement(ua, { eventModel: t }),
                       (0, D.RA)(e),
                     );
                   },
@@ -35400,7 +35438,7 @@
           ),
         );
       }
-      function da(e) {
+      function ma(e) {
         const { closeModal: t, nPartnerID: a, eventModel: n } = e,
           { fnBIsPublisherApp: i } = P();
         return d.createElement(
@@ -35445,7 +35483,7 @@
           ),
         );
       }
-      function ma(e) {
+      function ua(e) {
         const { closeModal: t, eventModel: a } = e,
           n = (0, d.useMemo)(() => Array.from(a.GetSaleFeaturedApps()), [a]),
           i = (0, w.l)(n),
@@ -35530,7 +35568,7 @@
               position: "center",
             });
       }
-      function ua(e) {
+      function pa(e) {
         const { saleDesc: t, strSaleURL: a, strEventName: n } = e;
         return d.createElement(
           "div",
@@ -35559,7 +35597,7 @@
           ),
         );
       }
-      function pa(e) {
+      function _a(e) {
         const { clanAccountID: t } = e,
           [a, n] = (0, M.KU)(t);
         return a || !n
@@ -35600,7 +35638,7 @@
               ),
             );
       }
-      function _a(e) {
+      function ha(e) {
         const { publisherid: t } = (0, m.UO)(),
           [a, n] = d.useState(!0);
         if (
@@ -35635,11 +35673,11 @@
           d.createElement(
             c.X.Provider,
             { value: Number.parseInt(t) },
-            d.createElement(ga, null),
+            d.createElement(va, null),
           ),
         );
       }
-      function ha(e) {
+      function ga(e) {
         const [t, a] = d.useState(!0);
         d.useEffect(() => {
           t &&
@@ -35706,11 +35744,11 @@
               d.createElement(
                 c.X.Provider,
                 { value: null },
-                d.createElement(ga, null),
+                d.createElement(va, null),
               ),
             );
       }
-      function ga(e) {
+      function va(e) {
         var t;
         const a = (0, c.Z)(),
           n = (e) => window.sessionStorage.setItem("saletab", `?tab=${e.key}`),
@@ -35727,7 +35765,7 @@
                 d.createElement(
                   "div",
                   { className: b().DashboardSectionActive },
-                  d.createElement(ta, {
+                  d.createElement(aa, {
                     saleDescList: f.U.Get().GetActiveEvents(),
                     bShowAppBrowse: !0,
                     bShowFeaturing: !0,
@@ -35755,7 +35793,7 @@
                 d.createElement(
                   "div",
                   { className: b().DashboardSectionFeatured },
-                  d.createElement(ta, {
+                  d.createElement(aa, {
                     saleDescList: f.U.Get().GetSeasonFeaturedEvents(),
                     descriptionToken: "#Sale_Summary_SeasonalSaleFeatured_Desc",
                     bShowAppBrowse: !0,
@@ -35775,7 +35813,7 @@
             contents: d.createElement(
               h.SV,
               null,
-              d.createElement(ta, {
+              d.createElement(aa, {
                 saleDescList: f.U.Get().GetUpcomingEvents(),
                 bShowFeaturing: !0,
                 bShowAppBrowse: Boolean(a),
@@ -35793,7 +35831,7 @@
             contents: d.createElement(
               h.SV,
               null,
-              d.createElement(ta, {
+              d.createElement(aa, {
                 saleDescList: f.U.Get().GetDraftEvents(),
                 bShowFeaturing: !0,
                 bShowAppBrowse: Boolean(a),
@@ -35812,7 +35850,7 @@
               contents: d.createElement(
                 h.SV,
                 null,
-                d.createElement(ta, {
+                d.createElement(aa, {
                   saleDescList: f.U.Get().GetOldDraftEvents(),
                   bShowAppBrowse: Boolean(a),
                 }),
@@ -35828,7 +35866,7 @@
             contents: d.createElement(
               h.SV,
               null,
-              d.createElement(ta, {
+              d.createElement(aa, {
                 saleDescList: f.U.Get().GetArchiveEvents(),
                 bShowAppBrowse: Boolean(a),
               }),
