@@ -141,12 +141,16 @@ CWishlistController.prototype.LoadAdditionalPages = function()
 	var _this = this;
 	var unUserdataVersion = WebStorage.GetLocal( 'unUserdataVersion' );
 
+	// include the wishlist notification games filter if in use
+	const urlParams = new URLSearchParams( window.location.search );
+	let wng = urlParams.has('wng') ? urlParams.get('wng') : undefined;
+
 	for( var i=0; i < this.nPagesToLoad; i++ )
 	{
 		$J.ajax ( {
 			type: "GET",
 			url: g_strWishlistBaseURL + 'wishlistdata/',
-			data: { 'p': i, 'v': unUserdataVersion },
+			data: { 'p': i, 'v': unUserdataVersion, wng },
 			dataType: 'json'
 		}).done(function(data){
 			_this.OnPageLoaded( data )
@@ -1009,9 +1013,8 @@ CWishlistController.prototype.UpdateFilterDisplay = function()
 		var $el = $J('<div></div>').text( "Only show" + ": " + "Wishlist Notification Games" );
 
 		$el.on('click', function(){
-			// remove the notification filter param and re-fetch
+			// remove the notification filter param
 			window.location.search = '';
-			window.reload();
 		})
 		$elContainer.append($el);
 	}
