@@ -332,7 +332,7 @@
       function k(e) {
         return e >= 0 ? e.toFixed(0) + "ms" : "???";
       }
-      function P(e) {
+      function F(e) {
         const t = e.flow;
         return l.createElement(
           "div",
@@ -597,7 +597,7 @@
               ),
         );
       }
-      function w(e) {
+      function P(e) {
         const t = e.sess,
           n = e.cxn;
         let s = null,
@@ -605,13 +605,13 @@
         if (t.client_front || t.router_front) {
           const e =
             "ded" == n.kind
-              ? "End-to-end statistics reported by client"
-              : "End-to-end statistics reported by player";
+              ? "Front side statistics reported by client"
+              : "Front side statistics reported by player";
           s = l.createElement(
             "div",
             { className: _.QualityFlowPairCtr },
-            l.createElement(P, { title: e, flow: t.client_front }),
-            l.createElement(P, {
+            l.createElement(F, { title: e, flow: t.client_front }),
+            l.createElement(F, {
               title: "Front side statistics reported by relay",
               flow: t.router_front,
             }),
@@ -622,11 +622,11 @@
             (a = l.createElement(
               "div",
               { className: _.QualityFlowPairCtr },
-              l.createElement(P, {
+              l.createElement(F, {
                 title: "Back side statistics reported by relay",
                 flow: t.router_back,
               }),
-              l.createElement(P, {
+              l.createElement(F, {
                 title: "Back side statistics reported by gameserver",
                 flow: t.gameserver_back,
               }),
@@ -654,7 +654,7 @@
           )
         );
       }
-      function F(e) {
+      function w(e) {
         const t = e.cxn,
           n = t.client,
           s = t.peer,
@@ -793,8 +793,8 @@
             S = l.createElement(
               "div",
               { className: _.QualityFlowPairCtr },
-              l.createElement(P, { title: e, flow: a }),
-              l.createElement(P, { title: n, flow: r }),
+              l.createElement(F, { title: e, flow: a }),
+              l.createElement(F, { title: n, flow: r }),
             );
           }
         }
@@ -825,7 +825,7 @@
                 );
             for (const n of e(t.client_sessions))
               b.push(
-                l.createElement(w, { cxn: t, sess: n, host_role: "client" }),
+                l.createElement(P, { cxn: t, sess: n, host_role: "client" }),
               );
           }
           if (s) {
@@ -838,7 +838,7 @@
             );
             for (const n of e(t.peer_sessions))
               b.push(
-                l.createElement(w, { cxn: t, sess: n, host_role: "peer" }),
+                l.createElement(P, { cxn: t, sess: n, host_role: "peer" }),
               );
           }
         }
@@ -883,8 +883,8 @@
           [v, h] = l.useState(void 0),
           [y, N] = l.useState(""),
           [S, b] = l.useState(""),
-          [k, P] = l.useState(""),
-          [w, x] = l.useState(0),
+          [k, F] = l.useState(""),
+          [P, x] = l.useState(0),
           [D, R] = l.useState(""),
           [I, T] = l.useState("");
         l.useEffect(() => {
@@ -894,7 +894,7 @@
             c = e.get("kind") || "",
             i = e.get("app_name1") || "",
             m = e.get("app_value1") || "";
-          if ((N(a), b(l), P(c), R(i), T(m), !e.toString() && 0 == w)) return;
+          if ((N(a), b(l), F(c), R(i), T(m), !e.toString() && 0 == P)) return;
           f(!0), g(""), e.set("appid", "" + n);
           const d =
             p.De.PARTNER_BASE_URL + "sdr/ajaxsessionsearch?" + e.toString();
@@ -940,14 +940,14 @@
               f(!1);
             });
           })();
-        }, [n, t.location, w]);
+        }, [n, t.location, P]);
         let A = null;
         if (void 0 !== v) {
           let e = [];
           for (const t of v) {
             const n =
               (t.client.id || "") + "-" + (t.client.connection_id || "");
-            e.push(l.createElement(F, { key: n, cxn: t }));
+            e.push(l.createElement(w, { key: n, cxn: t }));
           }
           A = l.createElement(
             "div",
@@ -996,7 +996,7 @@
                 ),
                 l.createElement(
                   m.SY,
-                  { value: k, onChange: (e) => P(e) },
+                  { value: k, onChange: (e) => F(e) },
                   l.createElement(m.EU, { value: "" }, "Any"),
                   l.createElement(m.EU, { value: "ded" }, "Dedicated server"),
                   l.createElement(m.EU, { value: "p2p" }, "Peer-to-Peer"),
@@ -1055,7 +1055,7 @@
                       let n = Object.assign({}, t.location);
                       (n.search = e.toString()),
                         n != t.location && t.push(n),
-                        x(w + 1);
+                        x(P + 1);
                     },
                     disabled: a,
                   },
