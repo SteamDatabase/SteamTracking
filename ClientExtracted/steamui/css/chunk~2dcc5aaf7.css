@@ -4127,6 +4127,14 @@ button.controllerconfiguratormapping_Button_hv-G3.DialogButton:enabled:active:ho
   padding: 0;
 }
 .controllerconfiguratormapping_ModalPosition_1B8RZ
+  .controllerconfiguratormapping_ModalClickToDismiss_TQKF3 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.controllerconfiguratormapping_ModalPosition_1B8RZ
   > .controllerconfiguratormapping_GamepadDialogContent_31tKG {
   margin: auto;
   background-color: #0e141b;
@@ -9652,6 +9660,62 @@ div.UltraRightPanel
 .controllerconfiguratoractionsetselector_ActionSetSelectorDisabled_Y_ogg {
   opacity: 20%;
 }
+@keyframes gamepadtabbedpage_ItemFocusAnim-darkerGrey-nocolor_3RzB9 {
+  from {
+    background: #3d4450;
+  }
+  to {
+    background: #23262e;
+  }
+}
+@keyframes gamepadtabbedpage_ItemFocusAnim-darkerGrey_iqU9p {
+  from {
+    background: #3d4450;
+    color: #8b929a;
+  }
+  to {
+    background: #23262e;
+    color: #fff;
+  }
+}
+@keyframes gamepadtabbedpage_ItemFocusAnim-darkGrey_1sp-b {
+  from {
+    background: #67707b;
+    color: #8b929a;
+  }
+  to {
+    background: #3d4450;
+    color: #fff;
+  }
+}
+@keyframes gamepadtabbedpage_ItemFocusAnim-grey_17--P {
+  from {
+    background: #8b929a;
+    color: #fff;
+  }
+  to {
+    background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes gamepadtabbedpage_ItemFocusAnimBorder-darkGrey_qcowP {
+  from {
+    border-color: #67707b;
+  }
+  to {
+    border-color: #3d4450;
+  }
+}
+@keyframes gamepadtabbedpage_ItemFocusAnim-green_2ZQlq {
+  from {
+    background: #c9ffc9;
+    color: #8b929a;
+  }
+  to {
+    background: #59bf40;
+    color: #fff;
+  }
+}
 .gamepadtabbedpage_GamepadTabbedPage_3IBLc {
   position: relative;
   min-height: 100%;
@@ -9832,6 +9896,14 @@ div.UltraRightPanel
 .gamepadtabbedpage_Glyphs_N-f57.gamepadtabbedpage_Show_1ZEnd {
   opacity: 1;
 }
+.gamepadtabbedpage_Arrows_1Rv2q {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+.gamepadtabbedpage_Arrows_1Rv2q svg {
+  width: 37px;
+}
 .gamepadtabbedpage_TabContents_WDa0_ {
   position: absolute;
   top: 0;
@@ -9939,306 +10011,28 @@ div.UltraRightPanel
   padding-right: 8px;
   align-self: center;
 }
-:root {
-  --touchmenuicon-fg: #b8bcbf;
-  --touchmenuicon-bg: #1f1f1f;
-  --touchmenuicon-scale: 1;
+.gamepadtabbedpage_SortAndFilterContainer_3UdPh {
+  position: absolute;
+  bottom: 4px;
+  right: 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-end;
+  pointer-events: none;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(100px);
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.32);
 }
-.controllerconfiguratoriconpicker_BindingIcon_2IoBn {
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-  padding: 5px;
-  background-color: var(--touchmenuicon-bg);
-}
-.controllerconfiguratoriconpicker_BindingIcon_2IoBn.controllerconfiguratoriconpicker_Placeholder_6aPbQ,
-.gpfocus
-  .controllerconfiguratoriconpicker_BindingIcon_2IoBn.controllerconfiguratoriconpicker_Placeholder_6aPbQ {
-  color: var(--touchmenuicon-fg);
-}
-.controllerconfiguratoriconpicker_BindingIconImage_SRLtS {
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-.controllerconfiguratoriconpicker_BindingIconImage_SRLtS.controllerconfiguratoriconpicker_WithForeground_2Gg0- {
-  -webkit-mask-size: contain;
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-  background-blend-mode: multiply;
-}
-.controllerconfiguratoriconpicker_BindingIcon_2IoBn > * {
-  width: 100%;
-  height: 100%;
-  transform: scale(var(--touchmenuicon-scale));
-}
-.controllerconfiguratoriconpicker_IconPickerDialog_15a1c {
-  flex: 1;
-  overflow: hidden;
-}
-.controllerconfiguratoriconpicker_IconGridScrollable_2Fu1M {
-  --scroll-fade-size: 50px;
-  padding: 7px 2.8vw;
-  margin: 0 -2.8vw;
-  box-sizing: border-box;
-  height: 100%;
-  width: auto;
-}
-.controllerconfiguratoriconpicker_IconGrid_2gQN3 {
-  justify-content: space-between;
-  align-content: flex-start;
-  display: grid;
-  grid-gap: 6px;
-  grid-template-columns: repeat(auto-fill, 40px);
-  grid-auto-rows: minmax(40px, auto);
-}
-button.controllerconfiguratoriconpicker_IconButton_1VO-Y.DialogButton {
-  padding: 0;
-  min-width: 0;
-  width: 40px;
-  max-width: 40px;
+.gamepadtabbedpage_SortAndFilterButton_25nG9 {
+  display: flex;
+  pointer-events: auto;
   height: 40px;
-}
-button.controllerconfiguratoriconpicker_IconButton_1VO-Y.DialogButton,
-button.controllerconfiguratoriconpicker_IconButton_1VO-Y.DialogButton:enabled.gpfocus,
-button.controllerconfiguratoriconpicker_IconButton_1VO-Y.DialogButton:enabled:active {
-  background: #23262e;
-}
-button.controllerconfiguratoriconpicker_IconButton_1VO-Y.DialogButton.controllerconfiguratoriconpicker_Highlighted__kSxS,
-button.controllerconfiguratoriconpicker_IconButton_1VO-Y.DialogButton:enabled.gpfocus.controllerconfiguratoriconpicker_Highlighted__kSxS,
-button.controllerconfiguratoriconpicker_IconButton_1VO-Y.DialogButton:enabled:active.controllerconfiguratoriconpicker_Highlighted__kSxS {
-  outline: solid 2px #1a9fff;
-}
-.controllerconfiguratoriconpicker_TabbedPageBleed_3OaOJ {
-  margin: 0 -2.8vw;
-  flex-grow: 1;
-}
-.controllerconfiguratoriconpicker_FooterButtons_3rE6E {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-}
-.controllerconfiguratoriconpicker_ColorPickerStep_2gTGy {
-  display: flex;
-  flex-direction: row;
-  margin-top: 24px;
-}
-.controllerconfiguratoriconpicker_ColorPickers_2gA0w {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-}
-.controllerconfiguratoriconpicker_Preview_BnK2z {
-  align-self: stretch;
-  margin: 0 auto;
-  margin-right: 2.8vw;
-  overflow: hidden;
-  flex-shrink: 0;
-  display: flex;
-  position: relative;
-  height: fit-content;
-  cursor: pointer;
-}
-.controllerconfiguratoriconpicker_Preview_BnK2z:not(.gpfocus) {
-  border-radius: 5px;
-}
-.controllerconfiguratoriconpicker_Preview_BnK2z > * {
-  width: 150px;
-  height: 150px;
-}
-.controllerconfiguratoriconpicker_ColorPickerColors_LTkmQ {
-  display: flex;
-  flex-direction: row;
-}
-.controllerconfiguratoriconpicker_ColorPickerColor_1LLMM {
-  height: 16px;
-  flex-grow: 1;
-  cursor: pointer;
-}
-.controllerconfiguratoriconpicker_ColorPickerColor_1LLMM.controllerconfiguratoriconpicker_Selected_mxtdB {
-  z-index: 1;
-  transform: scale(1.3);
-  box-shadow: 0 1px 3px 0px #000;
-  border-radius: 1px;
-}
-:root {
-  --scroll-fade-size: 20px;
-}
-.scrollfade_ScrollFade_1ZCj8 {
-  -webkit-mask-image: linear-gradient(
-    to bottom,
-    transparent 0%,
-    black var(--scroll-fade-size),
-    black calc(100% - var(--scroll-fade-size)),
-    transparent 100%
-  );
-  scroll-padding: var(--scroll-fade-size) 0px;
-}
-.scrollfade_ScrollFade_1ZCj8.scrollfade_ScrolledToTop_2-bw5 {
-  -webkit-mask-image: linear-gradient(
-    to bottom,
-    black 0%,
-    black calc(100% - var(--scroll-fade-size)),
-    transparent 100%
-  );
-}
-.scrollfade_ScrollFade_1ZCj8.scrollfade_ScrolledToBottom_E4xhS {
-  -webkit-mask-image: linear-gradient(
-    to bottom,
-    transparent 0%,
-    black var(--scroll-fade-size),
-    black 100%
-  );
-}
-.scrollfade_ScrollFade_1ZCj8.scrollfade_ScrolledToTop_2-bw5.scrollfade_ScrolledToBottom_E4xhS {
-  -webkit-mask-image: none;
-}
-@keyframes reorderablelist_ItemFocusAnim-darkerGrey-nocolor_3q9Lj {
-  from {
-    background: #3d4450;
-  }
-  to {
-    background: #23262e;
-  }
-}
-@keyframes reorderablelist_ItemFocusAnim-darkerGrey_2klKK {
-  from {
-    background: #3d4450;
-    color: #8b929a;
-  }
-  to {
-    background: #23262e;
-    color: #fff;
-  }
-}
-@keyframes reorderablelist_ItemFocusAnim-darkGrey_1eemU {
-  from {
-    background: #67707b;
-    color: #8b929a;
-  }
-  to {
-    background: #3d4450;
-    color: #fff;
-  }
-}
-@keyframes reorderablelist_ItemFocusAnim-grey_22tzA {
-  from {
-    background: #8b929a;
-    color: #fff;
-  }
-  to {
-    background: #67707b;
-    color: #fff;
-  }
-}
-@keyframes reorderablelist_ItemFocusAnimBorder-darkGrey_YcSUy {
-  from {
-    border-color: #67707b;
-  }
-  to {
-    border-color: #3d4450;
-  }
-}
-@keyframes reorderablelist_ItemFocusAnim-green_3Rhvg {
-  from {
-    background: #c9ffc9;
-    color: #8b929a;
-  }
-  to {
-    background: #59bf40;
-    color: #fff;
-  }
-}
-@keyframes reorderablelist_focusAnimation_3inQS {
-  0% {
-    background-position: 0% 0%;
-    opacity: 1;
-  }
-  100% {
-    background-position: -180% 0%;
-    opacity: 0.8;
-  }
-}
-@keyframes reorderablelist_hoverAnimation_2kGlM {
-  0% {
-    background-position: 0% 0%;
-  }
-  100% {
-    background-position: 50% 0%;
-  }
-}
-.reorderablelist_ReorderableListDialog_36d9J {
-  background: #0e141b;
-  padding: calc(12px + 1.4vw) 2.8vw;
-  width: 100%;
-  max-width: 420px;
-  border: 2px solid #23262e;
-  --field-negative-horizontal-margin: 2.8vw;
-}
-.reorderablelist_ModalHeader_3FCYT {
-  display: flex;
-  justify-content: space-between;
-}
-.reorderablelist_ModalHeader_3FCYT .reorderablelist_CloseButtonContainer_oizyu {
-  color: #b8bcbf;
-  height: 28px;
-  width: 28px;
-  display: flex;
   align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  border-radius: 2px;
-}
-.reorderablelist_ModalHeader_3FCYT
-  .reorderablelist_CloseButtonContainer_oizyu
-  svg {
-  height: 20px;
-  width: 20px;
-}
-.gpfocus
-  .reorderablelist_ModalHeader_3FCYT
-  .reorderablelist_CloseButtonContainer_oizyu,
-.reorderablelist_ModalHeader_3FCYT
-  .reorderablelist_CloseButtonContainer_oizyu.gpfocus {
-  color: #0e141b;
-  background: #fff;
-}
-.reorderablelist_ModalHeader_3FCYT
-  .reorderablelist_CloseButtonContainer_oizyu:hover {
-  background: #3d4450;
-  color: #fff;
-}
-.reorderablelist_ReorderableListIconIndexCtr_AaGeW {
-  display: flex;
-  align-items: center;
-  padding-bottom: 2px;
-}
-.reorderablelist_Selected_2YyvH.gpfocus
-  .reorderablelist_ReorderableListIconIndexCtr_AaGeW {
-  color: #0e141b;
-}
-.reorderablelist_ReorderableListIndexCtr_18EHm {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: -6px 16px -6px 0;
-  min-width: 28px;
-}
-svg.reorderablelist_ReorderArrow_2gZry {
-  height: 15px;
-  color: #3d4450;
-  visibility: hidden;
-  margin: -2px 0;
-}
-.reorderablelist_Selected_2YyvH svg.reorderablelist_ReorderArrow_2gZry {
-  visibility: visible;
-}
-.reorderablelist_ReorderableListIndex_1DJcg {
-  background: #fff;
-  border-radius: 1000px;
-  min-width: 20px;
-  height: 20px;
+  padding: 0 15px;
   font-family: "Motiva Sans", Helvetica, sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -10256,902 +10050,20 @@ svg.reorderablelist_ReorderArrow_2gZry {
   line-height: 22px;
   letter-spacing: 0.5px;
   text-transform: uppercase;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #0e141b;
-  text-align: center;
-  padding: 0 5px;
-  box-sizing: border-box;
-  font-variant-numeric: tabular-nums;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 50ms ease-out;
 }
-.reorderablelist_Selected_2YyvH.gpfocus
-  .reorderablelist_ReorderableListIndex_1DJcg {
-  background: #0e141b;
-  color: #fff;
+.gamepadtabbedpage_SortAndFilterButton_25nG9:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 150ms ease-in;
 }
-.reorderablelist_ReorderableListIndex_1DJcg:empty {
-  visibility: hidden;
-}
-.reorderablelist_ReorderableListItemLabel_3Gemp {
-  font-family: "Motiva Sans", Helvetica, sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  font-style: normal;
-  line-height: 20px;
-  text-align: left;
-  text-decoration: none;
-  text-indent: 0;
-  text-shadow: none;
-  text-transform: none;
-  letter-spacing: 0px;
-  color: #fff;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  color: #b8bcbf;
-  width: 100%;
-}
-.reorderablelist_Selected_2YyvH.gpfocus
-  .reorderablelist_ReorderableListItemLabel_3Gemp {
-  color: #000;
-}
-.reorderablelist_Disabled_2ID2b
-  .reorderablelist_ReorderableListItemLabel_3Gemp {
-  color: #67707b;
-}
-.reorderablelist_ReorderableListItem_3AS3M.reorderablelist_Selected_2YyvH.gpfocus {
-  background: #fff;
-  color: #000;
-}
-.reorderablelist_ReorderableListItem_3AS3M.reorderablelist_Selected_2YyvH:not(
-    .gpfocus
-  ) {
-  background: #23262e;
-}
-@keyframes gamepaduiappoverlayvirtualmenucontainer_ItemFocusAnim-darkerGrey-nocolor_hIQRp {
-  from {
-    background: #3d4450;
-  }
-  to {
-    background: #23262e;
-  }
-}
-@keyframes gamepaduiappoverlayvirtualmenucontainer_ItemFocusAnim-darkerGrey_2FgPG {
-  from {
-    background: #3d4450;
-    color: #8b929a;
-  }
-  to {
-    background: #23262e;
-    color: #fff;
-  }
-}
-@keyframes gamepaduiappoverlayvirtualmenucontainer_ItemFocusAnim-darkGrey_3JSgm {
-  from {
-    background: #67707b;
-    color: #8b929a;
-  }
-  to {
-    background: #3d4450;
-    color: #fff;
-  }
-}
-@keyframes gamepaduiappoverlayvirtualmenucontainer_ItemFocusAnim-grey_1QB3w {
-  from {
-    background: #8b929a;
-    color: #fff;
-  }
-  to {
-    background: #67707b;
-    color: #fff;
-  }
-}
-@keyframes gamepaduiappoverlayvirtualmenucontainer_ItemFocusAnimBorder-darkGrey_17zTL {
-  from {
-    border-color: #67707b;
-  }
-  to {
-    border-color: #3d4450;
-  }
-}
-@keyframes gamepaduiappoverlayvirtualmenucontainer_ItemFocusAnim-green_ZSRT7 {
-  from {
-    background: #c9ffc9;
-    color: #8b929a;
-  }
-  to {
-    background: #59bf40;
-    color: #fff;
-  }
-}
-@keyframes gamepaduiappoverlayvirtualmenucontainer_focusAnimation_341ql {
-  0% {
-    background-position: 0% 0%;
-    opacity: 1;
-  }
-  100% {
-    background-position: -180% 0%;
-    opacity: 0.8;
-  }
-}
-@keyframes gamepaduiappoverlayvirtualmenucontainer_hoverAnimation_3-jH6 {
-  0% {
-    background-position: 0% 0%;
-  }
-  100% {
-    background-position: 50% 0%;
-  }
-}
-:root {
-  --virtualmenu-accent: #1a9fff;
-  --virtualmenu-bg: #1f1f1f;
-  --virtualmenu-bg-hover: #103753;
-  --virtualmenu-fg: #ffffff;
-  --virtualmenutouchkey-icon-width: 100%;
-  --virtualmenutouchkey-icon-height: 100%;
-  --virtualmenupointer-x: 0%;
-  --virtualmenupointer-y: 0%;
-  --virtualmenupointer-color: #1a9fff;
-  --virtualmenutouchkey-midpoint-x: 0%;
-  --virtualmenutouchkey-midpoint-y: 0%;
-  --virtualmenutouchkey-description-width: 0px;
-}
-.gamepaduiappoverlayvirtualmenucontainer_BrowserViewHost_1y1Z7 {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-}
-.gamepaduiappoverlayvirtualmenucontainer_VirtualMenuContainer_3J5J3 {
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding: 0;
-  margin: 0;
-  contain: strict;
-  width: 100%;
-  height: 100%;
-  background-color: transparent;
-}
-.gamepaduiappoverlayvirtualmenucontainer_TouchMenuPad_2h2k6 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform-origin: top left;
-  display: flex;
-  flex-direction: column;
-}
-.gamepaduiappoverlayvirtualmenucontainer_TouchMenuPad_2h2k6.gamepaduiappoverlayvirtualmenucontainer_Preview_2o0Iv {
-  padding: 50px;
-}
-.gamepaduiappoverlayvirtualmenucontainer_RadialTouchMenuHoverKeyDescription_4M7pJ {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  height: 60px;
-  line-height: 60px;
-  font-size: 60px;
-  color: #fff;
-  text-align: center;
-}
-.gamepaduiappoverlayvirtualmenucontainer_HotbarDescriptionPopups_2WaL0 {
-  height: 72px;
-  position: relative;
-  contain: strict;
-  margin: 0 4px;
-}
-.gamepaduiappoverlayvirtualmenucontainer_DescriptionPopup_3mD8W.gamepaduiappoverlayvirtualmenucontainer_Radial_2zLRW,
-.gamepaduiappoverlayvirtualmenucontainer_DescriptionPopup_3mD8W.gamepaduiappoverlayvirtualmenucontainer_TouchMenu_3Cqne {
-  perspective: 400px;
-}
-.gamepaduiappoverlayvirtualmenucontainer_DescriptionPopup_3mD8W.gamepaduiappoverlayvirtualmenucontainer_Hotbar_24hPd {
-  position: absolute;
-  --midpoint-left: calc(
-    var(--virtualmenutouchkey-midpoint-x) -
-      (0.5 * var(--virtualmenutouchkey-description-width))
-  );
-  --min-left: 0%;
-  --max-left: calc(100% - var(--virtualmenutouchkey-description-width));
-  left: min(max(var(--midpoint-left), var(--min-left)), var(--max-left));
-  top: 0;
-  bottom: 4px;
-  width: fit-content;
-  max-width: 100%;
-  perspective: 400px;
-}
-.gamepaduiappoverlayvirtualmenucontainer_DescriptionPopup_3mD8W.gamepaduiappoverlayvirtualmenucontainer_Hotbar_24hPd.gamepaduiappoverlayvirtualmenucontainer_Visible_3hp-z {
-  z-index: 1;
-}
-.gamepaduiappoverlayvirtualmenucontainer_DescriptionPopupInner_3tTb5 {
-  font-family: "Motiva Sans", Helvetica, sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  font-style: normal;
-  line-height: 20px;
-  text-align: left;
-  text-decoration: none;
-  text-indent: 0;
-  text-shadow: none;
-  text-transform: none;
-  letter-spacing: 0px;
-  color: #fff;
-  font-weight: bold;
-  font-size: 22px;
-  line-height: 28px;
-  line-height: 1.5em;
-  border: solid 0px var(--virtualmenu-accent);
-  background: var(--virtualmenu-bg);
-  color: var(--virtualmenu-fg);
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 12px;
-  max-width: 100%;
-  font-size: 32px;
-  font-weight: initial;
-  transition:
-    opacity 60ms cubic-bezier(0, 0, 0.1, 1),
-    transform 60ms cubic-bezier(0, 0, 0.1, 1);
-}
-.gamepaduiappoverlayvirtualmenucontainer_DescriptionPopup_3mD8W.gamepaduiappoverlayvirtualmenucontainer_JustMounted_4oqCp
-  .gamepaduiappoverlayvirtualmenucontainer_DescriptionPopupInner_3tTb5 {
-  transition: none !important;
-}
-.gamepaduiappoverlayvirtualmenucontainer_DescriptionPopup_3mD8W.gamepaduiappoverlayvirtualmenucontainer_TouchMenu_3Cqne
-  .gamepaduiappoverlayvirtualmenucontainer_DescriptionPopupInner_3tTb5 {
-  height: 80px;
-  width: 400px;
-  border-top-width: 4px;
-  padding: 12px;
-}
-.gamepaduiappoverlayvirtualmenucontainer_DescriptionPopup_3mD8W.gamepaduiappoverlayvirtualmenucontainer_TouchMenu_3Cqne
-  .gamepaduiappoverlayvirtualmenucontainer_DescriptionPopupInner_3tTb5::before,
-.gamepaduiappoverlayvirtualmenucontainer_DescriptionPopup_3mD8W.gamepaduiappoverlayvirtualmenucontainer_TouchMenu_3Cqne
-  .gamepaduiappoverlayvirtualmenucontainer_DescriptionPopupInner_3tTb5::after {
-  content: "";
-  position: absolute;
-  bottom: calc(1px - 20px);
-  width: 20px;
-  height: 20px;
-  z-index: 1;
-}
-.gamepaduiappoverlayvirtualmenucontainer_DescriptionPopup_3mD8W.gamepaduiappoverlayvirtualmenucontainer_TouchMenu_3Cqne
-  .gamepaduiappoverlayvirtualmenucontainer_DescriptionPopupInner_3tTb5::before {
-  left: 0px;
-  background: -webkit-radial-gradient(
-    100% 100%,
-    circle,
-    transparent 20px,
-    var(--virtualmenu-bg) calc(0.5 * 20px)
-  );
-}
-.gamepaduiappoverlayvirtualmenucontainer_DescriptionPopup_3mD8W.gamepaduiappoverlayvirtualmenucontainer_TouchMenu_3Cqne
-  .gamepaduiappoverlayvirtualmenucontainer_DescriptionPopupInner_3tTb5::after {
-  right: 0px;
-  background: -webkit-radial-gradient(
-    0% 100%,
-    circle,
-    transparent 20px,
-    var(--virtualmenu-bg) calc(0.5 * 20px)
-  );
-}
-.gamepaduiappoverlayvirtualmenucontainer_DescriptionPopup_3mD8W.gamepaduiappoverlayvirtualmenucontainer_Radial_2zLRW
-  .gamepaduiappoverlayvirtualmenucontainer_DescriptionPopupInner_3tTb5 {
-  height: 80px;
-  width: 400px;
-  border-top-width: 4px;
-  padding: 12px;
-}
-.gamepaduiappoverlayvirtualmenucontainer_DescriptionPopup_3mD8W.gamepaduiappoverlayvirtualmenucontainer_Radial_2zLRW
-  .gamepaduiappoverlayvirtualmenucontainer_DescriptionPopupInner_3tTb5::before,
-.gamepaduiappoverlayvirtualmenucontainer_DescriptionPopup_3mD8W.gamepaduiappoverlayvirtualmenucontainer_Radial_2zLRW
-  .gamepaduiappoverlayvirtualmenucontainer_DescriptionPopupInner_3tTb5::after {
-  content: "";
-  position: absolute;
-  bottom: calc(1px - 200px);
-  width: 200px;
-  height: 200px;
-  z-index: 1;
-}
-.gamepaduiappoverlayvirtualmenucontainer_DescriptionPopup_3mD8W.gamepaduiappoverlayvirtualmenucontainer_Radial_2zLRW
-  .gamepaduiappoverlayvirtualmenucontainer_DescriptionPopupInner_3tTb5::before {
-  left: 0px;
-  background: -webkit-radial-gradient(
-    100% 100%,
-    circle,
-    transparent 200px,
-    var(--virtualmenu-bg) calc(0.5 * 200px)
-  );
-}
-.gamepaduiappoverlayvirtualmenucontainer_DescriptionPopup_3mD8W.gamepaduiappoverlayvirtualmenucontainer_Radial_2zLRW
-  .gamepaduiappoverlayvirtualmenucontainer_DescriptionPopupInner_3tTb5::after {
-  right: 0px;
-  background: -webkit-radial-gradient(
-    0% 100%,
-    circle,
-    transparent 200px,
-    var(--virtualmenu-bg) calc(0.5 * 200px)
-  );
-}
-.gamepaduiappoverlayvirtualmenucontainer_DescriptionPopup_3mD8W.gamepaduiappoverlayvirtualmenucontainer_Hotbar_24hPd
-  .gamepaduiappoverlayvirtualmenucontainer_DescriptionPopupInner_3tTb5 {
-  border-bottom-width: 4px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  text-align: center;
-  white-space: nowrap;
-  padding: 0 40px;
-  gap: 30px;
-  width: fit-content;
-  height: 100%;
-}
-.gamepaduiappoverlayvirtualmenucontainer_DescriptionPopup_3mD8W.gamepaduiappoverlayvirtualmenucontainer_TouchMenu_3Cqne:not(
-    .gamepaduiappoverlayvirtualmenucontainer_Visible_3hp-z
-  )
-  .gamepaduiappoverlayvirtualmenucontainer_DescriptionPopupInner_3tTb5 {
-  opacity: 0;
-  transform: translate3d(0, 50%, -40px) rotate3d(1, 0, 0, 90deg)
-    translate3d(0, -50%, -20px);
-  transition:
-    opacity 120ms cubic-bezier(0.6, 0, 1, 1),
-    transform 120ms cubic-bezier(0.6, 0, 1, 1);
-}
-.gamepaduiappoverlayvirtualmenucontainer_DescriptionPopup_3mD8W.gamepaduiappoverlayvirtualmenucontainer_Radial_2zLRW:not(
-    .gamepaduiappoverlayvirtualmenucontainer_Visible_3hp-z
-  )
-  .gamepaduiappoverlayvirtualmenucontainer_DescriptionPopupInner_3tTb5 {
-  opacity: 0;
-  transform: translate3d(0, 50%, -240px) rotate3d(1, 0, 0, 90deg)
-    translate3d(0, -50%, -220px);
-  transition:
-    opacity 120ms cubic-bezier(0.6, 0, 1, 1),
-    transform 120ms cubic-bezier(0.6, 0, 1, 1);
-}
-.gamepaduiappoverlayvirtualmenucontainer_DescriptionPopup_3mD8W.gamepaduiappoverlayvirtualmenucontainer_Hotbar_24hPd:not(
-    .gamepaduiappoverlayvirtualmenucontainer_Visible_3hp-z
-  )
-  .gamepaduiappoverlayvirtualmenucontainer_DescriptionPopupInner_3tTb5 {
-  opacity: 0;
-  transform: translate3d(0, -50%, -40px) rotate3d(1, 0, 0, -90deg)
-    translate3d(0, 50%, -20px);
-  transition:
-    opacity 120ms cubic-bezier(0.6, 0, 1, 1),
-    transform 120ms cubic-bezier(0.6, 0, 1, 1);
-}
-.gamepaduiappoverlayvirtualmenucontainer_DescriptionPopupInner_3tTb5
-  .gamepaduiappoverlayvirtualmenucontainer_Description_3Hibt {
-  flex-grow: 1;
-  min-width: 0;
-  white-space: nowrap;
-}
-.gamepaduiappoverlayvirtualmenucontainer_DescriptionPopupInner_3tTb5
-  .gamepaduiappoverlayvirtualmenucontainer_TouchKeyGlyph_2Km9Z {
-  margin: auto;
-  height: 100%;
-  min-width: 3ch;
-  max-width: 100%;
-  width: fit-content;
-  flex-shrink: 0;
-}
-.gamepaduiappoverlayvirtualmenucontainer_DescriptionPopupInner_3tTb5
-  .gamepaduiappoverlayvirtualmenucontainer_TouchKeyGlyph_2Km9Z.gamepaduiappoverlayvirtualmenucontainer_KeyboardKey_312mr {
-  font-size: 48px;
-}
-.gamepaduiappoverlayvirtualmenucontainer_TouchKeyContainer_1MxnF {
-  width: 400px;
-  height: 400px;
-  position: relative;
-}
-.gamepaduiappoverlayvirtualmenucontainer_TouchMenuPad_2h2k6.gamepaduiappoverlayvirtualmenucontainer_Hotbar_24hPd
-  .gamepaduiappoverlayvirtualmenucontainer_TouchKeyContainer_1MxnF {
+.gamepadtabbedpage_SortAndFilterButton_25nG9 svg {
   width: auto;
-  height: 180px;
-}
-.gamepaduiappoverlayvirtualmenucontainer_TouchMenuKey_b4zYW {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  color: var(--virtualmenu-fg);
-  background-color: var(--virtualmenu-bg);
-  border-top: solid 4px var(--virtualmenu-bg);
-  box-sizing: border-box;
-}
-.gamepaduiappoverlayvirtualmenucontainer_TouchMenuPad_2h2k6:not(
-    .gamepaduiappoverlayvirtualmenucontainer_Radial_2zLRW
-  )
-  .gamepaduiappoverlayvirtualmenucontainer_TouchMenuKey_b4zYW {
-  margin: 4px;
-  width: calc(var(--virtualmenutouchkey-width) - 8px);
-  height: calc(var(--virtualmenutouchkey-height) - 8px);
-}
-.gamepaduiappoverlayvirtualmenucontainer_TouchMenuPad_2h2k6:not(
-    .gamepaduiappoverlayvirtualmenucontainer_Radial_2zLRW
-  ):not(.gamepaduiappoverlayvirtualmenucontainer_Hotbar_24hPd)
-  .gamepaduiappoverlayvirtualmenucontainer_TouchMenuKey_b4zYW.gamepaduiappoverlayvirtualmenucontainer_TopEdge_1rA16.gamepaduiappoverlayvirtualmenucontainer_LeftEdge_1N8HM {
-  border-top-left-radius: 20px;
-}
-.gamepaduiappoverlayvirtualmenucontainer_TouchMenuPad_2h2k6:not(
-    .gamepaduiappoverlayvirtualmenucontainer_Radial_2zLRW
-  ):not(.gamepaduiappoverlayvirtualmenucontainer_Hotbar_24hPd)
-  .gamepaduiappoverlayvirtualmenucontainer_TouchMenuKey_b4zYW.gamepaduiappoverlayvirtualmenucontainer_TopEdge_1rA16.gamepaduiappoverlayvirtualmenucontainer_RightEdge_3VkZb {
-  border-top-right-radius: 20px;
-}
-.gamepaduiappoverlayvirtualmenucontainer_TouchMenuPad_2h2k6:not(
-    .gamepaduiappoverlayvirtualmenucontainer_Radial_2zLRW
-  ):not(.gamepaduiappoverlayvirtualmenucontainer_Hotbar_24hPd)
-  .gamepaduiappoverlayvirtualmenucontainer_TouchMenuKey_b4zYW.gamepaduiappoverlayvirtualmenucontainer_BottomEdge_3-DR_.gamepaduiappoverlayvirtualmenucontainer_LeftEdge_1N8HM {
-  border-bottom-left-radius: 20px;
-}
-.gamepaduiappoverlayvirtualmenucontainer_TouchMenuPad_2h2k6:not(
-    .gamepaduiappoverlayvirtualmenucontainer_Radial_2zLRW
-  ):not(.gamepaduiappoverlayvirtualmenucontainer_Hotbar_24hPd)
-  .gamepaduiappoverlayvirtualmenucontainer_TouchMenuKey_b4zYW.gamepaduiappoverlayvirtualmenucontainer_BottomEdge_3-DR_.gamepaduiappoverlayvirtualmenucontainer_RightEdge_3VkZb {
-  border-bottom-right-radius: 20px;
-}
-.gamepaduiappoverlayvirtualmenucontainer_TouchMenuKey_b4zYW:not(
-    .gamepaduiappoverlayvirtualmenucontainer_Radial_2zLRW
-  ).gamepaduiappoverlayvirtualmenucontainer_Bound_1zlPn:not(
-    .gamepaduiappoverlayvirtualmenucontainer_Placeholder_1ATSn
-  ).gamepaduiappoverlayvirtualmenucontainer_TouchKeyHover_2CiMT {
-  background: var(--virtualmenu-bg-hover);
-  border-top-color: var(--virtualmenu-accent);
-  z-index: 1;
-}
-.gamepaduiappoverlayvirtualmenucontainer_TouchMenuKey_b4zYW.gamepaduiappoverlayvirtualmenucontainer_Radial_2zLRW {
-  width: 80px;
-  height: 80px;
-  --midpoint-pct-from-center: 0.74;
-  top: calc(
-    (var(--virtualmenutouchkey-midpoint-y) - 50%) *
-      var(--midpoint-pct-from-center) + 50% - 40px
-  );
-  left: calc(
-    (var(--virtualmenutouchkey-midpoint-x) - 50%) *
-      var(--midpoint-pct-from-center) + 50% - 40px
-  );
-  overflow: hidden;
-  border: none;
-  background: none;
-}
-.gamepaduiappoverlayvirtualmenucontainer_TouchMenuKey_b4zYW.gamepaduiappoverlayvirtualmenucontainer_Radial_2zLRW.gamepaduiappoverlayvirtualmenucontainer_Center_tkv56 {
-  border: solid 4px transparent;
-  border-radius: 50%;
-  background-color: var(--virtualmenu-bg);
-  width: 184px;
-  height: 184px;
-  top: calc(50% - 92px);
-  left: calc(50% - 92px);
-  box-sizing: border-box;
-}
-.gamepaduiappoverlayvirtualmenucontainer_TouchMenuKey_b4zYW.gamepaduiappoverlayvirtualmenucontainer_Radial_2zLRW.gamepaduiappoverlayvirtualmenucontainer_Center_tkv56.gamepaduiappoverlayvirtualmenucontainer_Bound_1zlPn:not(
-    .gamepaduiappoverlayvirtualmenucontainer_Placeholder_1ATSn
-  ).gamepaduiappoverlayvirtualmenucontainer_TouchKeyHover_2CiMT {
-  border-color: var(--virtualmenu-accent);
-  background-color: var(--virtualmenu-bg-hover);
-}
-.gamepaduiappoverlayvirtualmenucontainer_TouchMenuKey_b4zYW:not(
-    .gamepaduiappoverlayvirtualmenucontainer_Bound_1zlPn
-  ),
-.gamepaduiappoverlayvirtualmenucontainer_TouchMenuKey_b4zYW.gamepaduiappoverlayvirtualmenucontainer_Placeholder_1ATSn {
-  opacity: 0.5;
-}
-.gamepaduiappoverlayvirtualmenucontainer_TouchLabel_1kouc {
-  font-size: 64px;
-  text-align: center;
-  opacity: 0.6;
-}
-.gamepaduiappoverlayvirtualmenucontainer_TouchLabel_1kouc:not(
-    .gamepaduiappoverlayvirtualmenucontainer_Visible_3hp-z
-  ) {
-  visibility: hidden;
-}
-.gamepaduiappoverlayvirtualmenucontainer_TouchMenuKey_b4zYW.gamepaduiappoverlayvirtualmenucontainer_Radial_2zLRW
-  .gamepaduiappoverlayvirtualmenucontainer_TouchLabel_1kouc {
-  font-size: 48px;
-}
-.gamepaduiappoverlayvirtualmenucontainer_TouchLabel_1kouc
-  .gamepaduiappoverlayvirtualmenucontainer_Inner_GBHo1 {
-  display: block;
-  width: 100%;
-  padding-left: 16px;
-}
-.gamepaduiappoverlayvirtualmenucontainer_BindingIcon_3hQ9g {
-  margin: auto;
-  background-blend-mode: multiply;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  -webkit-mask-size: contain;
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-  mask-size: cover;
-  mask-repeat: no-repeat;
-  mask-position: center;
-}
-.gamepaduiappoverlayvirtualmenucontainer_BindingIcon_3hQ9g.gamepaduiappoverlayvirtualmenucontainer_HasImage_3m8Gj {
-  width: var(--virtualmenutouchkey-icon-width);
-  height: var(--virtualmenutouchkey-icon-height);
-}
-.gamepaduiappoverlayvirtualmenucontainer_TouchMenuKey_b4zYW.gamepaduiappoverlayvirtualmenucontainer_Radial_2zLRW
-  .gamepaduiappoverlayvirtualmenucontainer_BindingIcon_3hQ9g {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-}
-.gamepaduiappoverlayvirtualmenucontainer_TouchMenuKey_b4zYW.gamepaduiappoverlayvirtualmenucontainer_Radial_2zLRW
-  .gamepaduiappoverlayvirtualmenucontainer_BindingIcon_3hQ9g.gamepaduiappoverlayvirtualmenucontainer_HasImage_3m8Gj {
-  width: calc(var(--virtualmenutouchkey-icon-width) * 0.65);
-  height: calc(var(--virtualmenutouchkey-icon-height) * 0.65);
-}
-.gamepaduiappoverlayvirtualmenucontainer_TouchMenuKey_b4zYW.gamepaduiappoverlayvirtualmenucontainer_Hotbar_24hPd
-  .gamepaduiappoverlayvirtualmenucontainer_BindingIcon_3hQ9g {
-  width: 45%;
-  height: 45%;
-}
-.gamepaduiappoverlayvirtualmenucontainer_BindingIcon_3hQ9g.gamepaduiappoverlayvirtualmenucontainer_TouchKeyGlyph_2Km9Z {
-  max-width: 100%;
-  box-sizing: border-box;
-  padding: 0 4px;
-  font-size: 64px;
-}
-.gamepaduiappoverlayvirtualmenucontainer_TouchMenuKey_b4zYW.gamepaduiappoverlayvirtualmenucontainer_Radial_2zLRW
-  .gamepaduiappoverlayvirtualmenucontainer_BindingIcon_3hQ9g.gamepaduiappoverlayvirtualmenucontainer_TouchKeyGlyph_2Km9Z {
-  font-size: 44px;
-}
-.gamepaduiappoverlayvirtualmenucontainer_TouchMenuKey_b4zYW.gamepaduiappoverlayvirtualmenucontainer_SemitransparentIcons_2a4AL:not(
-    .gamepaduiappoverlayvirtualmenucontainer_TouchKeyHover_2CiMT
-  )
-  .gamepaduiappoverlayvirtualmenucontainer_TouchLabel_1kouc,
-.gamepaduiappoverlayvirtualmenucontainer_TouchMenuKey_b4zYW.gamepaduiappoverlayvirtualmenucontainer_SemitransparentIcons_2a4AL:not(
-    .gamepaduiappoverlayvirtualmenucontainer_TouchKeyHover_2CiMT
-  )
-  .gamepaduiappoverlayvirtualmenucontainer_BindingIcon_3hQ9g {
-  opacity: 0.8;
-}
-.gamepaduiappoverlayvirtualmenucontainer_Pointer_Syyx9 {
-  z-index: 2;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  transform: translate(
-    calc(var(--virtualmenupointer-x) - 15px),
-    calc(var(--virtualmenupointer-y) - 15px)
-  );
-  pointer-events: none;
-}
-.gamepaduiappoverlayvirtualmenucontainer_Pointer_Syyx9::before {
-  content: "";
-  background: #0e141b;
-  border-radius: 15px;
-  pointer-events: all;
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  opacity: 0.8;
-  transition: background-color 0.15s ease-out;
-}
-.gamepaduiappoverlayvirtualmenucontainer_Pointer_Syyx9.gamepaduiappoverlayvirtualmenucontainer_Active_1-Gjf::before {
-  background: var(--virtualmenupointer-color);
-}
-.gamepaduiappoverlayvirtualmenucontainer_CircleSegments_oHW-j {
-  width: 100%;
-  height: 100%;
-}
-.gamepaduiappoverlayvirtualmenucontainer_TouchKeyGlyph_2Km9Z {
-  display: flex;
-}
-.gamepaduiappoverlayvirtualmenucontainer_TouchKeyGlyph_2Km9Z
-  .gamepaduiappoverlayvirtualmenucontainer_Label_15bBh {
-  margin: auto;
-  max-width: 100%;
-  text-align: center;
-  color: var(--virtualmenu-fg);
-  border-radius: 0.3em;
-  font-size: 0.5em;
-  font-weight: 700;
-  border: solid 2px var(--virtualmenu-fg);
-  display: flex;
-  flex-direction: row;
-}
-.gamepaduiappoverlayvirtualmenucontainer_TouchKeyGlyph_2Km9Z
-  .gamepaduiappoverlayvirtualmenucontainer_Label_15bBh::before,
-.gamepaduiappoverlayvirtualmenucontainer_TouchKeyGlyph_2Km9Z
-  .gamepaduiappoverlayvirtualmenucontainer_Label_15bBh::after {
-  content: "";
-  flex-shrink: 1;
-  width: 1ch;
-}
-.gamepaduiappoverlayvirtualmenucontainer_TouchKeyGlyph_2Km9Z.gamepaduiappoverlayvirtualmenucontainer_KeyboardKey_312mr
-  .gamepaduiappoverlayvirtualmenucontainer_Label_15bBh {
-  color: var(--virtualmenu-bg);
-  background-color: var(--virtualmenu-fg);
-  border-radius: 0.2em;
-  border-bottom: solid 0.2em rgba(0, 0, 0, 0.5);
-}
-.gamepaduiappoverlayvirtualmenucontainer_TouchKeyGlyph_2Km9Z.gamepaduiappoverlayvirtualmenucontainer_KeyboardKey_312mr
-  .gamepaduiappoverlayvirtualmenucontainer_Label_15bBh::before,
-.gamepaduiappoverlayvirtualmenucontainer_TouchKeyGlyph_2Km9Z.gamepaduiappoverlayvirtualmenucontainer_KeyboardKey_312mr
-  .gamepaduiappoverlayvirtualmenucontainer_Label_15bBh::after {
-  width: 0.8ch;
-}
-.gamepaduiappoverlayvirtualmenucontainer_TouchKeyGlyph_2Km9Z
-  .gamepaduiappoverlayvirtualmenucontainer_Label_15bBh
-  .gamepaduiappoverlayvirtualmenucontainer_Inner_GBHo1 {
-  flex-grow: 1;
-  flex-shrink: 0;
-  max-width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  line-height: 1.7em;
-  font-weight: 800;
-}
-.gamepaduiappoverlayvirtualmenucontainer_TouchKeyGlyph_2Km9Z
-  .gamepaduiappoverlayvirtualmenucontainer_GlyphImage_xgJke {
-  height: 100%;
-  width: 100%;
-  background-blend-mode: multiply;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  -webkit-mask-size: contain;
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-  mask-size: cover;
-  mask-repeat: no-repeat;
-  mask-position: center;
-}
-.gamepaduiappoverlayvirtualmenucontainer_RadialSegment_J6O5u {
-  fill: #1f1f1f;
-}
-.gamepaduiappoverlayvirtualmenucontainer_RadialSegment_J6O5u.gamepaduiappoverlayvirtualmenucontainer_Bound_1zlPn:not(
-    .gamepaduiappoverlayvirtualmenucontainer_Placeholder_1ATSn
-  ).gamepaduiappoverlayvirtualmenucontainer_Active_1-Gjf {
-  fill: #103753;
-}
-.gamepaduiappoverlayvirtualmenucontainer_RadialSegment_J6O5u:not(
-    .gamepaduiappoverlayvirtualmenucontainer_Bound_1zlPn
-  ),
-.gamepaduiappoverlayvirtualmenucontainer_RadialSegment_J6O5u.gamepaduiappoverlayvirtualmenucontainer_Placeholder_1ATSn {
-  opacity: 0.5;
-}
-.gamepaduiappoverlayvirtualmenucontainer_SelectionArc_2Znw2 {
-  fill: #1a9fff;
-  transition: fill 0.15s ease-out;
-}
-@keyframes euladialog_ItemFocusAnim-darkerGrey-nocolor_3nrMD {
-  from {
-    background: #3d4450;
-  }
-  to {
-    background: #23262e;
-  }
-}
-@keyframes euladialog_ItemFocusAnim-darkerGrey_JYELp {
-  from {
-    background: #3d4450;
-    color: #8b929a;
-  }
-  to {
-    background: #23262e;
-    color: #fff;
-  }
-}
-@keyframes euladialog_ItemFocusAnim-darkGrey_1ifEm {
-  from {
-    background: #67707b;
-    color: #8b929a;
-  }
-  to {
-    background: #3d4450;
-    color: #fff;
-  }
-}
-@keyframes euladialog_ItemFocusAnim-grey_g6kOc {
-  from {
-    background: #8b929a;
-    color: #fff;
-  }
-  to {
-    background: #67707b;
-    color: #fff;
-  }
-}
-@keyframes euladialog_ItemFocusAnimBorder-darkGrey_1-PhQ {
-  from {
-    border-color: #67707b;
-  }
-  to {
-    border-color: #3d4450;
-  }
-}
-@keyframes euladialog_ItemFocusAnim-green_TAKgT {
-  from {
-    background: #c9ffc9;
-    color: #8b929a;
-  }
-  to {
-    background: #59bf40;
-    color: #fff;
-  }
-}
-@keyframes euladialog_focusAnimation_1zESp {
-  0% {
-    background-position: 0% 0%;
-    opacity: 1;
-  }
-  100% {
-    background-position: -180% 0%;
-    opacity: 0.8;
-  }
-}
-@keyframes euladialog_hoverAnimation_21kJB {
-  0% {
-    background-position: 0% 0%;
-  }
-  100% {
-    background-position: 50% 0%;
-  }
-}
-@keyframes euladialog_ItemFocusAnim-darkerGrey-nocolor_3nrMD {
-  from {
-    background: #3d4450;
-  }
-  to {
-    background: #23262e;
-  }
-}
-@keyframes euladialog_ItemFocusAnim-darkerGrey_JYELp {
-  from {
-    background: #3d4450;
-    color: #8b929a;
-  }
-  to {
-    background: #23262e;
-    color: #fff;
-  }
-}
-@keyframes euladialog_ItemFocusAnim-darkGrey_1ifEm {
-  from {
-    background: #67707b;
-    color: #8b929a;
-  }
-  to {
-    background: #3d4450;
-    color: #fff;
-  }
-}
-@keyframes euladialog_ItemFocusAnim-grey_g6kOc {
-  from {
-    background: #8b929a;
-    color: #fff;
-  }
-  to {
-    background: #67707b;
-    color: #fff;
-  }
-}
-@keyframes euladialog_ItemFocusAnimBorder-darkGrey_1-PhQ {
-  from {
-    border-color: #67707b;
-  }
-  to {
-    border-color: #3d4450;
-  }
-}
-@keyframes euladialog_ItemFocusAnim-green_TAKgT {
-  from {
-    background: #c9ffc9;
-    color: #8b929a;
-  }
-  to {
-    background: #59bf40;
-    color: #fff;
-  }
-}
-.euladialog_EulaIntro_3q_Ir {
-  text-align: center;
-}
-.DesktopUI .euladialog_EulaIntro_3q_Ir {
-  text-align: left;
-}
-.DesktopUI .euladialog_EulaDialogContent_2YXHR {
-  font-size: 14px;
-  color: #b8bcbf;
-}
-.DesktopUI .euladialog_EulaDialogContent_2YXHR .euladialog_EULAScrolling__7lXD {
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  border: 1px solid rgba(14, 20, 27, 0.5);
-}
-.euladialog_EulaModalDialog_3jj_K {
-  flex: 1;
-}
-.euladialog_EulaModalDialog_3jj_K .euladialog_EulaDialogContent_2YXHR {
-  display: flex;
-  flex-direction: column;
-  min-height: 0;
-  height: 0;
-  flex: 1;
-}
-.euladialog_EulaModalDialog_3jj_K.DesktopUI,
-.DesktopUI .euladialog_EulaModalDialog_3jj_K {
-  min-height: 400px;
-  max-height: 700px;
-  height: 76vh;
-}
-.euladialog_EulaModalDialog_3jj_K.DesktopUI .DialogDropDown,
-.DesktopUI .euladialog_EulaModalDialog_3jj_K .DialogDropDown {
-  display: flex;
-  align-items: center;
-  gap: 9px;
-  padding: 8px 14px;
-  font-size: 13px;
-  line-height: 18px;
-  transition-property: opacity, background, color, box-shadow;
-  transition-duration: 0.2s;
-  transition-timing-function: ease-out;
-}
-.euladialog_EulaModalDialog_3jj_K.DesktopUI .DialogDropDown:hover,
-.DesktopUI .euladialog_EulaModalDialog_3jj_K .DialogDropDown:hover {
-  background: #464d58;
-  color: #fff;
-}
-.euladialog_EulaModalDialog_3jj_K.DesktopUI .DialogDropDown_Arrow,
-.DesktopUI .euladialog_EulaModalDialog_3jj_K .DialogDropDown_Arrow {
-  position: unset;
   height: 18px;
+  margin-right: 8px;
 }
-.euladialog_EULAThrobber_1gwU6 {
-  flex: 1;
-}
-.euladialog_EULAScrolling__7lXD {
-  display: flex;
-  flex-direction: column;
-  min-height: 0;
-  flex: 1;
-}
-.BasicUI .euladialog_EULAScrolling__7lXD {
-  margin: 0 -2.8vw;
-  padding: 0 2.8vw;
-}
-.euladialog_EULAContent_1dbgU {
-  padding: 10px;
-  background: #23262e;
-  overflow-wrap: anywhere;
-  border-radius: 2px;
-  flex: 1;
-  transition-property: transform, background-color;
-  transition-duration: 0.32s, 0s;
-  transition-timing-function: cubic-bezier(0.17, 0.45, 0.14, 0.83);
-  transform-origin: 12% 50%;
-  animation-timing-function: cubic-bezier(0.17, 0.45, 0.14, 0.83);
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
-  transform: scale(1) rotateX(0deg);
-}
-.euladialog_EULAContent_1dbgU.gpfocuswithin {
-  animation-name: euladialog_ItemFocusAnim-darkerGrey_JYELp;
-  z-index: 1;
-  animation-name: euladialog_ItemFocusAnim-darkGrey_1ifEm;
-}
-.euladialog_EULAError_1BwVZ {
-  flex: 1;
-  padding: 20px;
-  background: #3d4450;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-.euladialog_LanguageFieldContainer_2xwMG {
-  margin-bottom: 10px;
-}
-@keyframes launchoptionsdialog_ItemFocusAnim-darkerGrey-nocolor_2gDTO {
+@keyframes sortingdropdowncontrolbutton_ItemFocusAnim-darkerGrey-nocolor_Bc1rK {
   from {
     background: #3d4450;
   }
@@ -11159,7 +10071,7 @@ svg.reorderablelist_ReorderArrow_2gZry {
     background: #23262e;
   }
 }
-@keyframes launchoptionsdialog_ItemFocusAnim-darkerGrey_3ALDv {
+@keyframes sortingdropdowncontrolbutton_ItemFocusAnim-darkerGrey_2BR8S {
   from {
     background: #3d4450;
     color: #8b929a;
@@ -11169,7 +10081,7 @@ svg.reorderablelist_ReorderArrow_2gZry {
     color: #fff;
   }
 }
-@keyframes launchoptionsdialog_ItemFocusAnim-darkGrey_2BH5v {
+@keyframes sortingdropdowncontrolbutton_ItemFocusAnim-darkGrey_21x39 {
   from {
     background: #67707b;
     color: #8b929a;
@@ -11179,7 +10091,7 @@ svg.reorderablelist_ReorderArrow_2gZry {
     color: #fff;
   }
 }
-@keyframes launchoptionsdialog_ItemFocusAnim-grey_17B40 {
+@keyframes sortingdropdowncontrolbutton_ItemFocusAnim-grey_2fOX3 {
   from {
     background: #8b929a;
     color: #fff;
@@ -11189,7 +10101,7 @@ svg.reorderablelist_ReorderArrow_2gZry {
     color: #fff;
   }
 }
-@keyframes launchoptionsdialog_ItemFocusAnimBorder-darkGrey_2o2JM {
+@keyframes sortingdropdowncontrolbutton_ItemFocusAnimBorder-darkGrey_cbSHG {
   from {
     border-color: #67707b;
   }
@@ -11197,7 +10109,7 @@ svg.reorderablelist_ReorderArrow_2gZry {
     border-color: #3d4450;
   }
 }
-@keyframes launchoptionsdialog_ItemFocusAnim-green_1o01u {
+@keyframes sortingdropdowncontrolbutton_ItemFocusAnim-green_1gaiV {
   from {
     background: #c9ffc9;
     color: #8b929a;
@@ -11207,7 +10119,7 @@ svg.reorderablelist_ReorderArrow_2gZry {
     color: #fff;
   }
 }
-@keyframes launchoptionsdialog_focusAnimation_3Bw6u {
+@keyframes sortingdropdowncontrolbutton_focusAnimation_1Mrcr {
   0% {
     background-position: 0% 0%;
     opacity: 1;
@@ -11217,7 +10129,7 @@ svg.reorderablelist_ReorderArrow_2gZry {
     opacity: 0.8;
   }
 }
-@keyframes launchoptionsdialog_hoverAnimation_34JaO {
+@keyframes sortingdropdowncontrolbutton_hoverAnimation_3eVWC {
   0% {
     background-position: 0% 0%;
   }
@@ -11225,472 +10137,11 @@ svg.reorderablelist_ReorderArrow_2gZry {
     background-position: 50% 0%;
   }
 }
-.launchoptionsdialog_LaunchOptionDialog_LclHw {
-  background: radial-gradient(
-      circle at top left,
-      rgba(74, 81, 92, 0.4) 0%,
-      rgba(75, 81, 92, 0) 60%
-    ),
-    #25282e;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  padding: 5px;
-  color: #fff;
-}
-.launchoptionsdialog_LaunchOptionDialog_LclHw
-  .launchoptionsdialog_AppNameHeader_3T-1P {
-  margin: 2px;
-  text-transform: none;
-}
-.launchoptionsdialog_LaunchOptionDialog_LclHw
-  .launchoptionsdialog_AppNameHeader_3T-1P.DesktopUI,
-.DesktopUI
-  .launchoptionsdialog_LaunchOptionDialog_LclHw
-  .launchoptionsdialog_AppNameHeader_3T-1P {
-  font-size: 22px;
-  font-weight: 700;
-  color: #fff;
-  letter-spacing: unset;
-  text-transform: unset;
-  margin-top: 16px;
-  margin-bottom: 0px;
-  margin-left: 12px;
-  line-height: 28px;
-}
-.launchoptionsdialog_LaunchOptionDialog_LclHw
-  .launchoptionsdialog_OptionList_2aHnQ {
-  display: flex;
-  flex-grow: 1;
-  flex-direction: column;
-  padding: 14px 14px 0 14px;
-  min-height: 0;
-}
-.launchoptionsdialog_LaunchOptionDialog_LclHw
-  .launchoptionsdialog_OptionList_2aHnQ
-  .launchoptionsdialog_ListHeader_EvZ7k {
-  color: #dcdedf;
-  font-weight: bold;
-  font-size: 12px;
-  margin-top: 4px;
-  margin-bottom: 4px;
-  letter-spacing: 1px;
-}
-.launchoptionsdialog_LaunchOptionDialog_LclHw
-  .launchoptionsdialog_OptionList_2aHnQ
-  .launchoptionsdialog_ListContainer_134yW {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  flex-shrink: 1;
-  min-height: 0;
-  padding: 10px;
-  background: #23262e;
-  overflow-y: scroll;
-  border-radius: 2px;
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  border: 1px solid rgba(14, 20, 27, 0.5);
-}
-.launchoptionsdialog_LaunchOptionDialog_LclHw
-  .launchoptionsdialog_OptionList_2aHnQ
-  .launchoptionsdialog_ListContainer_134yW
-  .launchoptionsdialog_ListItem_3DEhf {
-  align-items: center;
-  background: rgba(61, 68, 80, 0.5);
-  padding: 10px 8px 10px 12px;
-  margin: 3px;
-  display: flex;
-  flex-direction: row;
-  cursor: pointer;
-}
-.launchoptionsdialog_LaunchOptionDialog_LclHw
-  .launchoptionsdialog_OptionList_2aHnQ
-  .launchoptionsdialog_ListContainer_134yW
-  .launchoptionsdialog_ListItem_3DEhf:hover {
-  background: rgba(61, 68, 80, 0.8);
-}
-.launchoptionsdialog_LaunchOptionDialog_LclHw
-  .launchoptionsdialog_OptionList_2aHnQ
-  .launchoptionsdialog_ListContainer_134yW
-  .launchoptionsdialog_ListItem_3DEhf
-  label {
-  padding-left: 8px;
-  font-weight: 100;
-  font-size: 13px;
-  cursor: pointer;
-}
-.launchoptionsdialog_LaunchOptionDialog_LclHw
-  .launchoptionsdialog_OptionList_2aHnQ
-  .launchoptionsdialog_ListContainer_134yW
-  .launchoptionsdialog_ListItem_3DEhf
-  input {
-  cursor: pointer;
-  margin: 0;
-}
-.launchoptionsdialog_LaunchOptionDialog_LclHw
-  .launchoptionsdialog_OptionList_2aHnQ
-  .launchoptionsdialog_CheckboxRow_1xyUT {
-  text-transform: none;
-  margin-top: 6px;
-}
-.launchoptionsdialog_LaunchOptionDialog_LclHw
-  .launchoptionsdialog_OptionList_2aHnQ
-  .launchoptionsdialog_SeeProperties_HSQN4 {
-  text-transform: none;
-  color: #b8bcbf;
-  font-size: small;
-}
-.launchoptionsdialog_LaunchOptionDialog_LclHw
-  .launchoptionsdialog_ButtonContainer_3H2Ge {
-  display: flex;
-  flex-direction: row;
-  justify-content: right;
-  margin-right: 10px;
-  margin-left: auto;
-}
-.launchoptionsdialog_LaunchOptionDialog_LclHw
-  .launchoptionsdialog_ButtonContainer_3H2Ge
-  .launchoptionsdialog_PlayButton_3EWVu,
-.launchoptionsdialog_LaunchOptionDialog_LclHw
-  .launchoptionsdialog_ButtonContainer_3H2Ge
-  .launchoptionsdialog_CancelButton_1d8Cb {
-  background: #3d4450;
-  color: #fff;
-  padding: 8px;
-  margin: 10px;
-  font-size: 14px;
-  font-weight: 200;
-  font-family: inherit;
-  text-align: center;
-  letter-spacing: 0.03em;
+.sortingdropdowncontrolbutton_BasicHomeDropDownControlButton_17SQW {
   border: none;
-  border-radius: 2px;
-  min-width: 80px;
-  user-select: none;
-  cursor: pointer;
-}
-.launchoptionsdialog_LaunchOptionDialog_LclHw
-  .launchoptionsdialog_ButtonContainer_3H2Ge
-  .launchoptionsdialog_PlayButton_3EWVu:hover,
-.launchoptionsdialog_LaunchOptionDialog_LclHw
-  .launchoptionsdialog_ButtonContainer_3H2Ge
-  .launchoptionsdialog_CancelButton_1d8Cb:hover {
-  background: #525b6a;
-}
-.launchoptionsdialog_LaunchOptionDialog_LclHw
-  .launchoptionsdialog_ButtonContainer_3H2Ge
-  .launchoptionsdialog_PlayButton_3EWVu:active,
-.launchoptionsdialog_LaunchOptionDialog_LclHw
-  .launchoptionsdialog_ButtonContainer_3H2Ge
-  .launchoptionsdialog_CancelButton_1d8Cb:active {
-  background: #2f343e;
-}
-.launchoptionsdialog_LaunchOptionDialog_LclHw
-  .launchoptionsdialog_ButtonContainer_3H2Ge
-  .launchoptionsdialog_PlayButton_3EWVu {
-  background: #1a9fff;
-  font-weight: 400;
-}
-.launchoptionsdialog_LaunchOptionDialog_LclHw
-  .launchoptionsdialog_ButtonContainer_3H2Ge
-  .launchoptionsdialog_PlayButton_3EWVu:hover {
-  background: #0bf;
-}
-.launchoptionsdialog_LaunchOptionDialog_LclHw
-  .launchoptionsdialog_ButtonContainer_3H2Ge
-  .launchoptionsdialog_PlayButton_3EWVu:active {
-  background: #0bf;
-}
-.DesktopUI .launchoptionsdialog_LaunchOptionDialog_LclHw .DialogToggle_Label {
-  font-size: 14px;
-  color: #dcdedf;
-}
-.launchoptionsdialog_MenuHeader_9V51O {
-  padding-bottom: 6px;
-  background: #0e141b;
-}
-.launchoptionsdialog_MenuHeader_9V51O .launchoptionsdialog_MenuMain_LixkU {
-  text-align: center;
-}
-.launchoptionsdialog_MenuHeader_9V51O .launchoptionsdialog_MenuSecondary_2dt4o {
-  color: #b8bcbf;
-  font-size: 12;
-  max-width: 400px;
-  text-align: center;
-}
-.remoteplaydialog_DialogBodyText_1Mzhx .DialogLabel {
-  font-size: 14px;
-  padding-bottom: 16px;
-  margin-bottom: 0px;
-  text-transform: none;
-}
-@keyframes applaunchingdetails_ItemFocusAnim-darkerGrey-nocolor_1FxlL {
-  from {
-    background: #3d4450;
-  }
-  to {
-    background: #23262e;
-  }
-}
-@keyframes applaunchingdetails_ItemFocusAnim-darkerGrey_2aeuM {
-  from {
-    background: #3d4450;
-    color: #8b929a;
-  }
-  to {
-    background: #23262e;
-    color: #fff;
-  }
-}
-@keyframes applaunchingdetails_ItemFocusAnim-darkGrey_2IKnK {
-  from {
-    background: #67707b;
-    color: #8b929a;
-  }
-  to {
-    background: #3d4450;
-    color: #fff;
-  }
-}
-@keyframes applaunchingdetails_ItemFocusAnim-grey_4BwNm {
-  from {
-    background: #8b929a;
-    color: #fff;
-  }
-  to {
-    background: #67707b;
-    color: #fff;
-  }
-}
-@keyframes applaunchingdetails_ItemFocusAnimBorder-darkGrey_1sMkE {
-  from {
-    border-color: #67707b;
-  }
-  to {
-    border-color: #3d4450;
-  }
-}
-@keyframes applaunchingdetails_ItemFocusAnim-green_1Gdnr {
-  from {
-    background: #c9ffc9;
-    color: #8b929a;
-  }
-  to {
-    background: #59bf40;
-    color: #fff;
-  }
-}
-@keyframes applaunchingdetails_focusAnimation_xE1Fu {
-  0% {
-    background-position: 0% 0%;
-    opacity: 1;
-  }
-  100% {
-    background-position: -180% 0%;
-    opacity: 0.8;
-  }
-}
-@keyframes applaunchingdetails_hoverAnimation_3anto {
-  0% {
-    background-position: 0% 0%;
-  }
-  100% {
-    background-position: 50% 0%;
-  }
-}
-.applaunchingdetails_Container_1NEW9 {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  height: calc(100vh - 40px);
-  justify-content: center;
-  align-items: center;
-}
-.applaunchingdetails_Container_1NEW9,
-.applaunchingdetails_Container_1NEW9.applaunchingdetails_FullscreenEnterStart_3mGgs:not(
-    .applaunchingdetails_FullscreenEnterActive_3K_3T
-  ),
-.applaunchingdetails_Container_1NEW9.applaunchingdetails_FullscreenExitActive_zemdh,
-.applaunchingdetails_Container_1NEW9.applaunchingdetails_FullscreenExitDone_3X1sx {
-  transform: translateY(-200px);
-  opacity: 0;
-}
-.applaunchingdetails_Container_1NEW9.applaunchingdetails_FullscreenEnterActive_3K_3T,
-.applaunchingdetails_Container_1NEW9.applaunchingdetails_FullscreenEnterDone_1qp33,
-.applaunchingdetails_Container_1NEW9.applaunchingdetails_FullscreenExitStart_1mOWz:not(
-    .applaunchingdetails_FullscreenExitActive_zemdh
-  ),
-.applaunchingdetails_Container_1NEW9.applaunchingdetails_FullscreenAppearDone_136Im {
-  transform: none;
-  opacity: 1;
-}
-.applaunchingdetails_Container_1NEW9.applaunchingdetails_FullscreenEnterActive_3K_3T {
-  transition:
-    opacity 800ms ease-in,
-    transform 800ms cubic-bezier(0, 0, 0.1, 1);
-  transition-delay: 133.3333333333ms;
-}
-.applaunchingdetails_Container_1NEW9.applaunchingdetails_FullscreenExitActive_zemdh {
-  transition:
-    opacity 400ms ease-out,
-    transform 800ms cubic-bezier(0, 0, 0.1, 1);
-}
-.applaunchingdetails_ConfigurationHeader_30C5a {
-  font-family: "Motiva Sans", Helvetica, sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  font-style: normal;
-  line-height: 20px;
-  text-align: left;
-  text-decoration: none;
-  text-indent: 0;
-  text-shadow: none;
-  text-transform: none;
-  letter-spacing: 0px;
-  color: #fff;
-  margin: 0 auto;
-  text-align: center;
-  margin-top: 16px;
-}
-.applaunchingdetails_ConfigurationName_XPWRZ {
-  font-family: "Motiva Sans", Helvetica, sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  font-style: normal;
-  line-height: 20px;
-  text-align: left;
-  text-decoration: none;
-  text-indent: 0;
-  text-shadow: none;
-  text-transform: none;
-  letter-spacing: 0px;
-  color: #fff;
-  font-size: 14px;
-  line-height: 20px;
-  margin: 0 auto;
-  margin-top: 6px;
-  color: #b8bcbf;
-  text-align: center;
-}
-.applaunchingdetails_TopSection_16H1c {
-  flex-grow: 1;
-  flex-shrink: 1;
-  min-height: 0;
-  display: flex;
-  flex-direction: column;
   box-sizing: border-box;
-  align-items: center;
-}
-.applaunchingdetails_LogoSpacerTop_1njPa,
-.applaunchingdetails_LogoSpacerBottom_ptAD4 {
-  min-height: 8px;
-  flex-shrink: 1;
-  flex-grow: 0;
-  width: 200px;
-}
-.applaunchingdetails_LogoSpacerTop_1njPa.applaunchingdetails_LogoSpacerTop_1njPa,
-.applaunchingdetails_LogoSpacerBottom_ptAD4.applaunchingdetails_LogoSpacerTop_1njPa {
-  height: 30px;
-  flex-grow: 1;
-}
-.applaunchingdetails_LogoSpacerTop_1njPa.applaunchingdetails_LogoSpacerBottom_ptAD4,
-.applaunchingdetails_LogoSpacerBottom_ptAD4.applaunchingdetails_LogoSpacerBottom_ptAD4 {
-  height: 24px;
-}
-.applaunchingdetails_LogoOrTitleContainer_2uvMX {
-  display: flex;
-  flex-direction: column;
-  flex-shrink: 1;
-  height: 87px;
-  min-height: 30px;
-}
-.applaunchingdetails_LogoOrTitleContainer_2uvMX img {
-  margin: auto;
-  height: 100%;
-  max-width: 500px;
-  object-fit: contain;
-}
-.applaunchingdetails_TitleText_2wIEO {
-  font-size: 34px;
-  font-weight: 800;
-  margin: auto;
-  padding: 0 20px;
-  text-align: center;
-  -webkit-text-fill-color: transparent;
-  background: linear-gradient(
-    to bottom,
-    #fff 0%,
-    #fff 20%,
-    #fff 40%,
-    #eee 60%,
-    #ddd 80%,
-    #ccc 100%
-  );
-  -webkit-background-clip: text;
-}
-.applaunchingdetails_ConfigurationHeaderBold_3E3b6 {
-  font-weight: bold;
-}
-.applaunchingdetails_Divider_1wneT {
-  height: 1px;
-  width: 680px;
-  background: #fff;
-  opacity: 0.2;
-  flex-shrink: 0;
-}
-.applaunchingdetails_TopSection_16H1c .applaunchingdetails_Divider_1wneT {
-  margin-bottom: 0;
-}
-.applaunchingdetails_BottomSection_2HF0k .applaunchingdetails_Divider_1wneT {
-  margin-top: 0;
-}
-@keyframes applaunchingdetails_ShowControlOverviewContainerAnimation_MNeWP {
-  from {
-    opacity: 0;
-    transform: translateX(-80%);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0%);
-  }
-}
-.applaunchingdetails_ControlOverviewContainer_3ixQR {
-  display: flex;
-  flex-shrink: 1;
-  flex-direction: column;
-  padding-bottom: 24px;
-  min-height: 150px;
-  transition:
-    opacity 350ms ease,
-    transform 350ms ease-out;
-  transition-delay: 280ms;
-}
-.applaunchingdetails_ControlOverviewContainer_3ixQR:not(
-    .applaunchingdetails_Visible_2Bi9R
-  ) {
-  transition: none;
-  opacity: 0;
-  transform: scale(0.7);
-}
-.applaunchingdetails_ControlOverviewContainer_3ixQR svg {
-  margin: auto;
-}
-.applaunchingdetails_BottomSection_2HF0k {
-  flex-grow: 4;
-  display: flex;
-  flex-direction: column;
-}
-.applaunchingdetails_BottomSectionChildren_3AOBS {
-  margin: auto;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  padding-top: 10px;
-}
-.applaunchingdetails_LaunchStatus_1ZWPD {
+  background: transparent;
+  margin: 0px;
   font-family: "Motiva Sans", Helvetica, sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -11704,798 +10155,63 @@ svg.reorderablelist_ReorderArrow_2gZry {
   letter-spacing: 0px;
   color: #fff;
   font-weight: 500;
-  padding-bottom: 20px;
-}
-.applaunchingdetails_SkipProcessingShaderCache_3NZ34.DialogButton {
-  margin-top: 14px;
-  width: auto;
-  min-width: 150px;
-}
-.applaunchingdetails_TemporaryDetails_3Yz5H {
-  font-family: "Motiva Sans", Helvetica, sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  font-style: normal;
-  line-height: 20px;
-  text-align: left;
-  text-decoration: none;
-  text-indent: 0;
-  text-shadow: none;
-  text-transform: none;
-  letter-spacing: 0px;
-  color: #fff;
-  font-weight: 500;
-  color: #ffc82c;
-  padding-bottom: 12px;
-  padding-top: 6px;
-}
-.applaunchingdetails_ControllerInterstitialAnimationContainer_W-nlX {
-  min-height: 20px;
-  height: 175px;
-  width: auto;
-  display: flex;
-}
-.applaunchingdetails_ControllerInterstitialAnimationContainer_W-nlX.applaunchingdetails_SteamDeck_2VNwW {
-  margin: 0 auto -30px auto;
-}
-.applaunchingdetails_ControllerInterstitialAnimationContainer_W-nlX img {
-  height: 100%;
-  margin: auto;
-}
-.applaunchingdetails_StatusSpinner_hir4W {
-  height: 1.6em;
-  margin-right: 0.5ch;
-  margin-bottom: -0.5em;
-}
-.applaunchingdetails_GyroImage1A_2G_ik {
-  animation-name: applaunchingdetails_gyroAnim2_2_qCH;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
-}
-@keyframes applaunchingdetails_gyroAnim2_2_qCH {
-  0% {
-    transform: rotate(2deg);
-  }
-  50% {
-    transform: rotate(-2deg);
-  }
-  100% {
-    transform: rotate(2deg);
-  }
-}
-.applaunchingdetails_TopSection_16H1c,
-.applaunchingdetails_BottomSection_2HF0k {
-  transition: transform 700ms ease;
-}
-.applaunchingdetails_TopSection_16H1c:not(
-    .applaunchingdetails_ShowControlsOverview_2g15H
-  ) {
-  transition: none;
-  transform: translateY(calc(var(--controls-overview-height) / 2));
-}
-.applaunchingdetails_BottomSection_2HF0k:not(
-    .applaunchingdetails_ShowControlsOverview_2g15H
-  ) {
-  transition: none;
-  transform: translateY(calc(var(--controls-overview-height) / -2));
-}
-.applaunchingdetails_BottomSection_2HF0k:not(
-    .applaunchingdetails_ShowControlsOverview_2g15H
-  )
-  .applaunchingdetails_Divider_1wneT {
-  opacity: 0;
-}
-@keyframes controllerconfigurator_interstitial_ItemFocusAnim-darkerGrey-nocolor_3DlWW {
-  from {
-    background: #3d4450;
-  }
-  to {
-    background: #23262e;
-  }
-}
-@keyframes controllerconfigurator_interstitial_ItemFocusAnim-darkerGrey_36sHy {
-  from {
-    background: #3d4450;
-    color: #8b929a;
-  }
-  to {
-    background: #23262e;
-    color: #fff;
-  }
-}
-@keyframes controllerconfigurator_interstitial_ItemFocusAnim-darkGrey_CdQ9l {
-  from {
-    background: #67707b;
-    color: #8b929a;
-  }
-  to {
-    background: #3d4450;
-    color: #fff;
-  }
-}
-@keyframes controllerconfigurator_interstitial_ItemFocusAnim-grey_2SR02 {
-  from {
-    background: #8b929a;
-    color: #fff;
-  }
-  to {
-    background: #67707b;
-    color: #fff;
-  }
-}
-@keyframes controllerconfigurator_interstitial_ItemFocusAnimBorder-darkGrey_QD77A {
-  from {
-    border-color: #67707b;
-  }
-  to {
-    border-color: #3d4450;
-  }
-}
-@keyframes controllerconfigurator_interstitial_ItemFocusAnim-green_3VhRU {
-  from {
-    background: #c9ffc9;
-    color: #8b929a;
-  }
-  to {
-    background: #59bf40;
-    color: #fff;
-  }
-}
-@keyframes controllerconfigurator_interstitial_focusAnimation_2SbTm {
-  0% {
-    background-position: 0% 0%;
-    opacity: 1;
-  }
-  100% {
-    background-position: -180% 0%;
-    opacity: 0.8;
-  }
-}
-@keyframes controllerconfigurator_interstitial_hoverAnimation_MvWJ6 {
-  0% {
-    background-position: 0% 0%;
-  }
-  100% {
-    background-position: 50% 0%;
-  }
-}
-.controllerconfigurator_interstitial_ConfiguratorInterstitialContainer_3FS5u {
-  max-width: 100%;
-  height: 100%;
-  background-color: #0e141b;
-  padding: 3% 10%;
-  position: relative;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  animation-name: controllerconfigurator_interstitial_modalAppear_399Ea;
-  animation-timing-function: ease;
-  animation-duration: 0.3s;
-  animation-iteration-count: 1;
-}
-.controllerconfigurator_interstitial_ConfiguratorInterstitialContainer_3FS5u
-  .controllerconfigurator_interstitial_DontShowAgain_8aT8x
-  > div
-  > div {
-  flex-grow: 0;
-}
-.controllerconfigurator_interstitial_ConfiguratorInterstitialContainer_3FS5u
-  .controllerconfigurator_interstitial_DontShowAgain_8aT8x
-  > div {
-  justify-content: center;
-}
-.controllerconfigurator_interstitial_ConfiguratorInterstitialContainer_3FS5u
-  .controllerconfigurator_interstitial_DontShowAgain_8aT8x {
-  position: absolute;
-  bottom: 90px;
-  align-self: center;
-}
-@keyframes controllerconfigurator_interstitial_modalAppear_399Ea {
-  0% {
-    transform: scale(0);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-.controllerconfigurator_interstitial_ConfiguratorInterstitialFooter_1xJ2y {
-  position: fixed;
-  width: 100%;
-  margin: 0 auto;
-  bottom: 55px;
-  transform: scale(0.6);
-  align-self: center;
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-}
-.controllerconfigurator_interstitial_SectionSeparator_RoCqX {
-  width: 3px;
-  height: 40px;
-  background-color: #3d4450;
-}
-.controllerconfigurator_interstitial_DialogHeader_3PYip {
-  text-transform: none;
-  font-weight: bold;
-  letter-spacing: 0px;
-  font-size: 22px;
-  width: 100%;
-  text-align: left;
-}
-.controllerconfigurator_interstitial_DialogBody_bo5Tt {
+  font-size: 18px;
+  line-height: 22px;
   color: #dcdedf;
-}
-.controllerconfigurator_interstitial_DialogBodyText_3C0_f {
-  margin-bottom: 0px;
-}
-.controllerconfigurator_interstitial_DescLabel_19njk {
-  margin-bottom: 2px;
-}
-.controllerconfigurator_interstitial_DescLabel2_kipHd {
-  margin-top: 10px;
-}
-.controllerconfigurator_interstitial_DescLabelWithSpace_yMEbv {
-  margin-bottom: 20px;
-}
-.controllerconfigurator_interstitial_Highlight_1FZA8 {
-  color: #fff;
-  font-weight: bold;
-}
-.controllerconfigurator_interstitial_DescImage_1T0oY {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-.controllerconfigurator_interstitial_DescImageRow_ztD0R {
+  margin-top: 1px;
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-.controllerconfigurator_interstitial_ArrowHack_BvOCV {
-  position: absolute;
-  margin-left: 270px;
-}
-.controllerconfigurator_interstitial_ControlLabel_tGJeF {
-  background-color: #3d4450;
-  padding: 5px 25px;
-  border-radius: 2px;
-  min-width: 100px;
-  font-size: 12px;
-  color: #fff;
-  margin: 10px;
-  text-align: center;
-}
-.controllerconfigurator_interstitial_InterstitialGlyphButton_2vQ2X {
-  width: 30px;
-  margin-left: 0px;
-  margin-right: 10px;
-}
-.controllerconfigurator_interstitial_InterstitialArrow_2_E_g {
-  width: 30px;
-  margin: 12px 0px;
-}
-.controllerconfigurator_interstitial_InterstitialImageContainer_1i7xP {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: center;
-  margin: 20px 0px;
-}
-.controllerconfigurator_interstitial_InterstitialImageColumn_U-0Em {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 50%;
-}
-.controllerconfigurator_interstitial_InterstitialImageColumn_U-0Em
-  .controllerconfigurator_interstitial_Highlight_1FZA8 {
-  margin: 10px 0px;
-}
-.controllerconfigurator_interstitial_InterstitialImageColumnButtons_14UtV {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-width: 120px;
-}
-.controllerconfigurator_interstitial_InterstitialImageColumnButtons_14UtV
-  .controllerconfigurator_interstitial_Highlight_1FZA8 {
-  margin: 10px 0px;
-}
-.controllerconfigurator_interstitial_DividerLine_2mAc6 {
-  height: 130px;
-  width: 1px;
-  background-color: #8b929a;
-  position: absolute;
-  padding-top: 20px;
-  left: 50%;
-  transform: translateX(-50%) translateY(0%) skew(-30deg);
-}
-.controllerconfigurator_interstitial_SteamInputSide_3hs-c {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 40%;
-  min-height: 150px;
-  justify-content: center;
-  margin: 10px 5% 20px 5%;
-}
-.controllerconfigurator_interstitial_SteamInputSide_3hs-c
-  .controllerconfigurator_interstitial_Highlight_1FZA8 {
-  color: #8b929a;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 12px;
-}
-.controllerconfigurator_interstitial_SteamInputSide_3hs-c
-  .controllerconfigurator_interstitial_SIHighlight_269-O {
-  color: #1a9fff;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 12px;
-}
-.controllerconfigurator_interstitial_SteamInputARow_2ls5W {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: 100%;
-}
-.controllerconfigurator_interstitial_SteamInputARow_2ls5W
-  .controllerconfigurator_interstitial_Highlight_1FZA8 {
-  margin: 10px 0px;
-}
-.controllerconfigurator_interstitial_InterstitialImageRow_3Lxxk {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  position: relative;
-}
-.controllerconfigurator_interstitial_InterstitialImageRow_3Lxxk
-  .controllerconfigurator_interstitial_Highlight_1FZA8 {
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 12px;
-  font-weight: 400;
-}
-.controllerconfigurator_interstitial_InterstitialImageRow_3Lxxk
-  .controllerconfigurator_interstitial_InterstitialImageColumn_U-0Em {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 50%;
-  position: relative;
-  margin: 20px 10px;
-}
-.controllerconfigurator_interstitial_InterstitialImageRow_3Lxxk
-  .controllerconfigurator_interstitial_InterstitialImageColumn_U-0Em
-  .controllerconfigurator_interstitial_InterstitialArrow_2_E_g {
-  width: 20px;
-  margin: 0px 10px;
-}
-.controllerconfigurator_interstitial_ActionSetItem_3BBZa {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 25%;
-  min-height: 150px;
-  justify-content: center;
-}
-.controllerconfigurator_interstitial_ActionSetItem_3BBZa
-  .controllerconfigurator_interstitial_Highlight_1FZA8 {
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: 500;
-  background-color: #3d4450;
-  padding: 5px 10px;
-  color: #fff;
-  border-radius: 30px;
-  font-size: 10px;
-  margin-bottom: 5px;
-}
-.controllerconfigurator_interstitial_ActionSetItem_3BBZa
-  .controllerconfigurator_interstitial_ControlLabel_tGJeF {
-  min-width: 50px;
-  margin: 10px 0px;
-}
-.controllerconfigurator_interstitial_ActionSetLayout_3bHO_ {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 60%;
-  padding: 20px 0px;
   justify-content: flex-start;
+  border-radius: 0px;
+  cursor: pointer;
+  padding: 4px 0px;
+  transition: padding 0.3s cubic-bezier(0.16, 0.86, 0.43, 0.99);
 }
-.controllerconfigurator_interstitial_ActionSetLayout_3bHO_ img {
-  width: 20px;
-}
-.controllerconfigurator_interstitial_ActionSetLayout_3bHO_
-  .controllerconfigurator_interstitial_ActionSetRow_2lCWy {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  border-bottom: 1px solid #3d4450;
-  align-items: center;
-  padding-right: 40px;
-}
-.controllerconfigurator_interstitial_ActionSetLayout_3bHO_
-  .controllerconfigurator_interstitial_LayerRow_Y2Szn {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  border-bottom: 1px solid #3d4450;
-  align-items: center;
-  margin-left: 40px;
-}
-.controllerconfigurator_interstitial_ActionSetLayout_3bHO_
-  .controllerconfigurator_interstitial_LayerRow2_PSSCv {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  border-bottom: 1px solid #3d4450;
-  align-items: center;
-}
-.controllerconfigurator_interstitial_ActionSetLayout_3bHO_
-  .controllerconfigurator_interstitial_SetLabel_3b0XB {
-  font-size: 14px;
-  color: #dcdedf;
-  text-align: left;
-}
-.controllerconfigurator_interstitial_ActionSetLayout_3bHO_
-  .controllerconfigurator_interstitial_ActivatorLabel_3wck6 {
-  font-size: 12px;
-  text-align: left;
-  font-weight: 500;
-  width: 180px;
-  color: #1a9fff;
-}
-.controllerconfigurator_interstitial_ActionSetLayout_3bHO_
-  .controllerconfigurator_interstitial_ControlLabel_tGJeF {
-  align-self: flex-end;
-  max-width: 140px;
-}
-.controllerconfigurator_interstitial_ActionSetDivider_2es8a {
-  height: 130px;
-  width: 1px;
-  background-color: #3d4450;
-  margin: 0px 40px;
-}
-.controllerconfigurator_interstitial_IntroImage1A_2-k2g {
-  width: 90%;
-  margin-top: 0px;
-}
-.controllerconfigurator_interstitial_IntroImage1B_1sg7Z {
-  width: 40%;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  object-fit: cover;
-  clip-path: polygon(24% 19%, 76% 19%, 76% 82%, 24% 82%);
-  margin-left: 20px;
-}
-.controllerconfigurator_interstitial_Intro1Arrow_3Y2Un {
-  width: 30px;
-  margin: 12px 0px;
-}
-.controllerconfigurator_interstitial_IntroImage1C_3ilH6 {
-  height: 140px;
-  padding: 20px 0px;
-  margin-bottom: 0px;
-}
-.controllerconfigurator_interstitial_IntroImage2_2gyG1 {
-  width: 60%;
-}
-.controllerconfigurator_interstitial_IntroImage3_3gZ4J {
-  width: 70%;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-.controllerconfigurator_interstitial_IntroImage3a_YbOFy {
-  height: 80px;
-}
-.controllerconfigurator_interstitial_IntroImage3b_3VzQr {
-  height: 80px;
-  animation-name: controllerconfigurator_interstitial_gyroAnim_DKUXm;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
-}
-@keyframes controllerconfigurator_interstitial_gyroAnim_DKUXm {
-  0% {
-    transform: rotate(3deg);
-  }
-  50% {
-    transform: rotate(-3deg);
-  }
-  100% {
-    transform: rotate(3deg);
-  }
-}
-.controllerconfigurator_interstitial_NonVerifiedImage1A_3tOBr {
-  width: 90%;
-  margin-top: 15px;
-  padding-top: 30px;
-}
-.controllerconfigurator_interstitial_NonVerifiedImage2A_3wngO {
-  width: 30px;
-  margin: 15px 10px;
-}
-.controllerconfigurator_interstitial_NonVerifiedImage2B_2T3lU {
-  width: 15%;
-  margin-top: 30px;
-}
-.controllerconfigurator_interstitial_NonVerifiedImage3A_21v9b {
-  width: 50%;
-  margin: 0 auto;
-  padding: 20px 0px 15px 0px;
-}
-.controllerconfigurator_interstitial_ScreenshotBG_cUZzG {
-  background-color: #00000090;
-  margin: 15px 0px;
-}
-.controllerconfigurator_interstitial_GyroImage1A_F_1x2 {
-  width: 40%;
-  animation-name: controllerconfigurator_interstitial_gyroAnim2_3UiLq;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
-}
-.controllerconfigurator_interstitial_GyroImage1A_F_1x2.controllerconfigurator_interstitial_SteamController_snyYG {
-  height: 160px;
-}
-.controllerconfigurator_interstitial_GyroImage1A_F_1x2.controllerconfigurator_interstitial_GenericController_2a3Se {
-  height: 160px;
-}
-@keyframes controllerconfigurator_interstitial_gyroAnim2_3UiLq {
-  0% {
-    transform: rotate(3deg);
-  }
-  50% {
-    transform: rotate(-3deg);
-  }
-  100% {
-    transform: rotate(3deg);
-  }
-}
-.controllerconfigurator_interstitial_AppRequiresOSKImage1A_3_P7r {
-  width: 50%;
-  margin-bottom: 10px;
-}
-.controllerconfigurator_interstitial_AppRequiresLauncher_2jQrJ {
-  width: 100%;
-  margin-bottom: 10px;
-}
-.controllerconfigurator_interstitial_AppRequiresMagnify_1f3GS {
-  width: 100%;
-  margin-bottom: 10px;
-}
-.controllerconfigurator_interstitial_RemotePlayImage1A_37fYM {
-  width: 70%;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-.controllerconfigurator_interstitial_InterstitialImageLabelContainer_2ed7X {
-  width: 56%;
-  margin-left: 90px;
-  height: fit-content;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-bottom: 20px;
-}
-.controllerconfigurator_interstitial_ChordRow_2NYEW {
-  margin-top: 10px;
-  display: inline-block;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
-.controllerconfigurator_interstitial_ChordRow_2NYEW svg {
-  height: 30px;
-  padding: 0px 5px;
-}
-.controllerconfigurator_interstitial_ChordRow_2NYEW img {
-  height: 30px;
-  padding: 0px 5px;
-}
-.controllerconfigurator_interstitial_ButtonRow_1Zzxw {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-.controllerconfigurator_interstitial_AppLauncherInteractionIssuesImage1A_1LISJ {
-  width: 35%;
-  margin-top: 0px;
-}
-.controllerconfigurator_interstitial_ExternalControllersAndSIAPIImage1A_UXk9J {
-  width: 90%;
-  padding: 5px 0px;
-}
-.controllerconfigurator_interstitial_ExternalControllersAndSIAPIImage1B_fcZmQ {
-  width: 25%;
-}
-.controllerconfigurator_interstitial_ChordLabel_3e42p {
-  font-size: 10px;
-  text-transform: uppercase;
-  font-weight: bold;
-  letter-spacing: 1px;
-  color: #b8bcbf;
-  text-align: center;
-}
-.controllerconfigurator_interstitial_ChordContainer_2ZMYH {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.controllerconfigurator_interstitial_ChordRight_18vjH {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-top: 10px;
-}
-.controllerconfigurator_interstitial_ChordRight_18vjH
-  .controllerconfigurator_interstitial_DescImageRow_ztD0R {
-  width: 50%;
-}
-.controllerconfigurator_interstitial_ChordColumn_2_xFc {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 50%;
-  margin-left: 20px;
-}
-.controllerconfigurator_interstitial_LabelAndChord_1t7KN {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 20px;
-  gap: 0px;
-}
-.controllerconfigurator_interstitial_LabelAndChord_1t7KN
-  .controllerconfigurator_interstitial_ChordRow_2NYEW {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 0px;
-}
-.controllerconfigurator_interstitial_LabelAndChord_1t7KN
-  .controllerconfigurator_interstitial_DescLabel_19njk {
-  font-size: 10px;
-  text-transform: uppercase;
-  font-weight: bold;
-  letter-spacing: 1px;
-  color: #b8bcbf;
-}
-.controllerconfigurator_interstitial_LabelAndChord_1t7KN svg {
-  height: 25px;
-  padding: 0px 5px;
-}
-.controllerconfigurator_interstitial_LabelAndChord_1t7KN img {
-  height: 25px;
-  padding: 0px 5px;
-}
-.controllerconfigurator_interstitial_LabelAndChord2_1Citu {
-  margin-top: 10px;
-}
-.controllerconfigurator_interstitial_IntroToActionSetsB1_1Wvc3 {
-  width: 70%;
-}
-.controllerconfigurator_interstitial_IntroToActionSetsD1_nDL0e {
-  width: 60%;
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-.guidedtour_PageIndicators_2Hdn3 {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 9px;
-}
-.guidedtour_PageIndicator_4hJJR {
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  background-color: #67707b;
-}
-.guidedtour_PageIndicator_4hJJR.guidedtour_Active_2SNXu {
-  background-color: #1a9fff;
-}
-.guidedtour_WelcomeTitle_1F9OY {
-  font-size: 36px;
-  font-weight: 800;
-}
-.guidedtour_WelcomeDescription_1vXgw {
-  text-align: center;
-  max-width: 500px;
-}
-.guidedtour_CenteredContent_wNoTs {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.guidedtour_ContinueMessage_2Znu0 {
-  font-size: 15px;
-  font-weight: 800;
-  margin-top: 24px;
-}
-.guidedtour_MessageAction_1R1iz {
-  color: #1a9fff;
-  text-transform: uppercase;
-}
-.guidedtour_TourText_3bd-0 {
+.sortingdropdowncontrolbutton_BasicHomeDropDownControlButton_17SQW.sortingdropdowncontrolbutton_SortingDropDownControlButton_2ddeJ {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
   font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
 }
-.guidedtour_TourText_3bd-0 img {
-  vertical-align: middle;
+.sortingdropdowncontrolbutton_BasicHomeDropDownControlButton_17SQW:focus {
+  background: #fff;
+  color: #000;
+  outline: none;
+  padding-left: 8px;
+  padding-right: 8px;
 }
-.guidedtour_TourStopContent_3awTl {
-  display: flex;
-  position: absolute;
-  align-items: center;
-  gap: 24px;
+.sortingdropdowncontrolbutton_BasicHomeDropDownControlButton_17SQW:hover,
+.sortingdropdowncontrolbutton_BasicHomeDropDownControlButton_17SQW:active {
+  background: #3d4450;
+  color: #fff;
+  outline: none;
+  padding-left: 8px;
+  padding-right: 8px;
 }
-.guidedtour_TourStopContent_3awTl .guidedtour_Icon_1q04N {
-  width: 32px;
-  height: 32px;
+.sortingdropdowncontrolbutton_BasicHomeDropDownControlButton_17SQW svg {
+  height: 16px;
+  width: 16px;
+  margin: auto;
 }
-.guidedtour_TourStopTextContainer_r6K0O {
-  display: flex;
-  flex-direction: column;
+.sortingdropdowncontrolbutton_BasicHomeDropDownControlButton_17SQW
+  svg:not(:first-child) {
+  margin-left: 8px;
 }
-.guidedtour_TourStopTextContainer_r6K0O .guidedtour_Title_3OkGX {
-  font-size: 24px;
-  font-weight: 800;
+.sortingdropdowncontrolbutton_BasicHomeDropDownControlButton_17SQW
+  svg:not(:last-child) {
+  margin-right: 8px;
 }
-.guidedtour_TourStopTextContainer_r6K0O .guidedtour_Description_1jthL {
-  max-width: 360px;
-}
-.guidedtour_ActiveTourPage_C_c5h.guidedtour_Enter_4VW_t {
-  opacity: 0;
-}
-.guidedtour_ActiveTourPage_C_c5h.guidedtour_EnterActive_1RWlD {
-  opacity: 1;
-  transition: opacity 0.8s ease-in-out;
-}
-.guidedtour_ActiveTourPage_C_c5h.guidedtour_Exit_I63qJ {
-  opacity: 1;
-}
-.guidedtour_ActiveTourPage_C_c5h.guidedtour_ExitActive_1869L {
-  opacity: 0;
-  transition: opacity 0.8s ease-in-out;
-}
-.guidedtour_PaginationContentEnter_14IPq {
-  opacity: 0;
-}
-.guidedtour_PaginationContentEnterActive_2TFIw {
-  opacity: 1;
-  transition: opacity 0.8s ease-in-out;
-}
-.guidedtour_PaginationContentExit_3fQ_o {
-  opacity: 1;
-}
-.guidedtour_PaginationContentExitActive_qgfyy {
-  opacity: 0;
-  transition: opacity 0.8s ease-in-out;
+.sortingdropdowncontrolbutton_BasicHomeDropDownControlButton_17SQW
+  svg.sortingdropdowncontrolbutton_SortIcon_jewgw {
+  margin-left: 13px;
 }
 @keyframes systemdock_ItemFocusAnim-darkerGrey-nocolor_3hL8S {
   from {
@@ -14439,6 +12155,38 @@ span.suggestdialog_mentionSearchMatch_mBrO4 {
   margin-right: 8px;
   padding: 0 4px;
 }
+:root {
+  --scroll-fade-size: 20px;
+}
+.scrollfade_ScrollFade_1ZCj8 {
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black var(--scroll-fade-size),
+    black calc(100% - var(--scroll-fade-size)),
+    transparent 100%
+  );
+  scroll-padding: var(--scroll-fade-size) 0px;
+}
+.scrollfade_ScrollFade_1ZCj8.scrollfade_ScrolledToTop_2-bw5 {
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    black 0%,
+    black calc(100% - var(--scroll-fade-size)),
+    transparent 100%
+  );
+}
+.scrollfade_ScrollFade_1ZCj8.scrollfade_ScrolledToBottom_E4xhS {
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black var(--scroll-fade-size),
+    black 100%
+  );
+}
+.scrollfade_ScrollFade_1ZCj8.scrollfade_ScrolledToTop_2-bw5.scrollfade_ScrolledToBottom_E4xhS {
+  -webkit-mask-image: none;
+}
 @keyframes quickaccesscontrols_ItemFocusAnim-darkerGrey-nocolor_3-KyY {
   from {
     background: #3d4450;
@@ -14706,6 +12454,222 @@ span.suggestdialog_mentionSearchMatch_mBrO4 {
   font-size: 10px;
   font-weight: bold;
   line-height: 10px;
+}
+@keyframes reorderablelist_ItemFocusAnim-darkerGrey-nocolor_3q9Lj {
+  from {
+    background: #3d4450;
+  }
+  to {
+    background: #23262e;
+  }
+}
+@keyframes reorderablelist_ItemFocusAnim-darkerGrey_2klKK {
+  from {
+    background: #3d4450;
+    color: #8b929a;
+  }
+  to {
+    background: #23262e;
+    color: #fff;
+  }
+}
+@keyframes reorderablelist_ItemFocusAnim-darkGrey_1eemU {
+  from {
+    background: #67707b;
+    color: #8b929a;
+  }
+  to {
+    background: #3d4450;
+    color: #fff;
+  }
+}
+@keyframes reorderablelist_ItemFocusAnim-grey_22tzA {
+  from {
+    background: #8b929a;
+    color: #fff;
+  }
+  to {
+    background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes reorderablelist_ItemFocusAnimBorder-darkGrey_YcSUy {
+  from {
+    border-color: #67707b;
+  }
+  to {
+    border-color: #3d4450;
+  }
+}
+@keyframes reorderablelist_ItemFocusAnim-green_3Rhvg {
+  from {
+    background: #c9ffc9;
+    color: #8b929a;
+  }
+  to {
+    background: #59bf40;
+    color: #fff;
+  }
+}
+@keyframes reorderablelist_focusAnimation_3inQS {
+  0% {
+    background-position: 0% 0%;
+    opacity: 1;
+  }
+  100% {
+    background-position: -180% 0%;
+    opacity: 0.8;
+  }
+}
+@keyframes reorderablelist_hoverAnimation_2kGlM {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
+}
+.reorderablelist_ReorderableListDialog_36d9J {
+  background: #0e141b;
+  padding: calc(12px + 1.4vw) 2.8vw;
+  width: 100%;
+  max-width: 420px;
+  border: 2px solid #23262e;
+  --field-negative-horizontal-margin: 2.8vw;
+}
+.reorderablelist_ModalHeader_3FCYT {
+  display: flex;
+  justify-content: space-between;
+}
+.reorderablelist_ModalHeader_3FCYT .reorderablelist_CloseButtonContainer_oizyu {
+  color: #b8bcbf;
+  height: 28px;
+  width: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 2px;
+}
+.reorderablelist_ModalHeader_3FCYT
+  .reorderablelist_CloseButtonContainer_oizyu
+  svg {
+  height: 20px;
+  width: 20px;
+}
+.gpfocus
+  .reorderablelist_ModalHeader_3FCYT
+  .reorderablelist_CloseButtonContainer_oizyu,
+.reorderablelist_ModalHeader_3FCYT
+  .reorderablelist_CloseButtonContainer_oizyu.gpfocus {
+  color: #0e141b;
+  background: #fff;
+}
+.reorderablelist_ModalHeader_3FCYT
+  .reorderablelist_CloseButtonContainer_oizyu:hover {
+  background: #3d4450;
+  color: #fff;
+}
+.reorderablelist_ReorderableListIconIndexCtr_AaGeW {
+  display: flex;
+  align-items: center;
+  padding-bottom: 2px;
+}
+.reorderablelist_Selected_2YyvH.gpfocus
+  .reorderablelist_ReorderableListIconIndexCtr_AaGeW {
+  color: #0e141b;
+}
+.reorderablelist_ReorderableListIndexCtr_18EHm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: -6px 16px -6px 0;
+  min-width: 28px;
+}
+svg.reorderablelist_ReorderArrow_2gZry {
+  height: 15px;
+  color: #3d4450;
+  visibility: hidden;
+  margin: -2px 0;
+}
+.reorderablelist_Selected_2YyvH svg.reorderablelist_ReorderArrow_2gZry {
+  visibility: visible;
+}
+.reorderablelist_ReorderableListIndex_1DJcg {
+  background: #fff;
+  border-radius: 1000px;
+  min-width: 20px;
+  height: 20px;
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 22px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0e141b;
+  text-align: center;
+  padding: 0 5px;
+  box-sizing: border-box;
+  font-variant-numeric: tabular-nums;
+}
+.reorderablelist_Selected_2YyvH.gpfocus
+  .reorderablelist_ReorderableListIndex_1DJcg {
+  background: #0e141b;
+  color: #fff;
+}
+.reorderablelist_ReorderableListIndex_1DJcg:empty {
+  visibility: hidden;
+}
+.reorderablelist_ReorderableListItemLabel_3Gemp {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #b8bcbf;
+  width: 100%;
+}
+.reorderablelist_Selected_2YyvH.gpfocus
+  .reorderablelist_ReorderableListItemLabel_3Gemp {
+  color: #000;
+}
+.reorderablelist_Disabled_2ID2b
+  .reorderablelist_ReorderableListItemLabel_3Gemp {
+  color: #67707b;
+}
+.reorderablelist_ReorderableListItem_3AS3M.reorderablelist_Selected_2YyvH.gpfocus {
+  background: #fff;
+  color: #000;
+}
+.reorderablelist_ReorderableListItem_3AS3M.reorderablelist_Selected_2YyvH:not(
+    .gpfocus
+  ) {
+  background: #23262e;
 }
 .logsettings_ManualOverlayContainer_1iHWa {
   position: fixed;
@@ -29652,156 +27616,6 @@ body.gamepadui_SteamUIPopupWindowBody_QsvsR
   .marquee_Content_2ADpT {
   animation-play-state: paused;
 }
-@keyframes sortingdropdowncontrolbutton_ItemFocusAnim-darkerGrey-nocolor_Bc1rK {
-  from {
-    background: #3d4450;
-  }
-  to {
-    background: #23262e;
-  }
-}
-@keyframes sortingdropdowncontrolbutton_ItemFocusAnim-darkerGrey_2BR8S {
-  from {
-    background: #3d4450;
-    color: #8b929a;
-  }
-  to {
-    background: #23262e;
-    color: #fff;
-  }
-}
-@keyframes sortingdropdowncontrolbutton_ItemFocusAnim-darkGrey_21x39 {
-  from {
-    background: #67707b;
-    color: #8b929a;
-  }
-  to {
-    background: #3d4450;
-    color: #fff;
-  }
-}
-@keyframes sortingdropdowncontrolbutton_ItemFocusAnim-grey_2fOX3 {
-  from {
-    background: #8b929a;
-    color: #fff;
-  }
-  to {
-    background: #67707b;
-    color: #fff;
-  }
-}
-@keyframes sortingdropdowncontrolbutton_ItemFocusAnimBorder-darkGrey_cbSHG {
-  from {
-    border-color: #67707b;
-  }
-  to {
-    border-color: #3d4450;
-  }
-}
-@keyframes sortingdropdowncontrolbutton_ItemFocusAnim-green_1gaiV {
-  from {
-    background: #c9ffc9;
-    color: #8b929a;
-  }
-  to {
-    background: #59bf40;
-    color: #fff;
-  }
-}
-@keyframes sortingdropdowncontrolbutton_focusAnimation_1Mrcr {
-  0% {
-    background-position: 0% 0%;
-    opacity: 1;
-  }
-  100% {
-    background-position: -180% 0%;
-    opacity: 0.8;
-  }
-}
-@keyframes sortingdropdowncontrolbutton_hoverAnimation_3eVWC {
-  0% {
-    background-position: 0% 0%;
-  }
-  100% {
-    background-position: 50% 0%;
-  }
-}
-.sortingdropdowncontrolbutton_BasicHomeDropDownControlButton_17SQW {
-  border: none;
-  box-sizing: border-box;
-  background: transparent;
-  margin: 0px;
-  font-family: "Motiva Sans", Helvetica, sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  font-style: normal;
-  line-height: 20px;
-  text-align: left;
-  text-decoration: none;
-  text-indent: 0;
-  text-shadow: none;
-  text-transform: none;
-  letter-spacing: 0px;
-  color: #fff;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 22px;
-  color: #dcdedf;
-  margin-top: 1px;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  border-radius: 0px;
-  cursor: pointer;
-  padding: 4px 0px;
-  transition: padding 0.3s cubic-bezier(0.16, 0.86, 0.43, 0.99);
-}
-.sortingdropdowncontrolbutton_BasicHomeDropDownControlButton_17SQW.sortingdropdowncontrolbutton_SortingDropDownControlButton_2ddeJ {
-  font-family: "Motiva Sans", Helvetica, sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  font-style: normal;
-  line-height: 20px;
-  text-align: left;
-  text-decoration: none;
-  text-indent: 0;
-  text-shadow: none;
-  text-transform: none;
-  letter-spacing: 0px;
-  color: #fff;
-}
-.sortingdropdowncontrolbutton_BasicHomeDropDownControlButton_17SQW:focus {
-  background: #fff;
-  color: #000;
-  outline: none;
-  padding-left: 8px;
-  padding-right: 8px;
-}
-.sortingdropdowncontrolbutton_BasicHomeDropDownControlButton_17SQW:hover,
-.sortingdropdowncontrolbutton_BasicHomeDropDownControlButton_17SQW:active {
-  background: #3d4450;
-  color: #fff;
-  outline: none;
-  padding-left: 8px;
-  padding-right: 8px;
-}
-.sortingdropdowncontrolbutton_BasicHomeDropDownControlButton_17SQW svg {
-  height: 16px;
-  width: 16px;
-  margin: auto;
-}
-.sortingdropdowncontrolbutton_BasicHomeDropDownControlButton_17SQW
-  svg:not(:first-child) {
-  margin-left: 8px;
-}
-.sortingdropdowncontrolbutton_BasicHomeDropDownControlButton_17SQW
-  svg:not(:last-child) {
-  margin-right: 8px;
-}
-.sortingdropdowncontrolbutton_BasicHomeDropDownControlButton_17SQW
-  svg.sortingdropdowncontrolbutton_SortIcon_jewgw {
-  margin-left: 13px;
-}
 @keyframes savecollectiondialog_ItemFocusAnim-darkerGrey-nocolor_1tms9 {
   from {
     background: #3d4450;
@@ -31458,884 +29272,6 @@ div.ShortWindow
   width: 14px;
   margin-right: 4px;
 }
-@keyframes appgrid_ItemFocusAnim-darkerGrey-nocolor_20N6a {
-  from {
-    background: #3d4450;
-  }
-  to {
-    background: #23262e;
-  }
-}
-@keyframes appgrid_ItemFocusAnim-darkerGrey_1h7rD {
-  from {
-    background: #3d4450;
-    color: #8b929a;
-  }
-  to {
-    background: #23262e;
-    color: #fff;
-  }
-}
-@keyframes appgrid_ItemFocusAnim-darkGrey_1epbf {
-  from {
-    background: #67707b;
-    color: #8b929a;
-  }
-  to {
-    background: #3d4450;
-    color: #fff;
-  }
-}
-@keyframes appgrid_ItemFocusAnim-grey_1uEwx {
-  from {
-    background: #8b929a;
-    color: #fff;
-  }
-  to {
-    background: #67707b;
-    color: #fff;
-  }
-}
-@keyframes appgrid_ItemFocusAnimBorder-darkGrey_3B9ip {
-  from {
-    border-color: #67707b;
-  }
-  to {
-    border-color: #3d4450;
-  }
-}
-@keyframes appgrid_ItemFocusAnim-green_3TtYs {
-  from {
-    background: #c9ffc9;
-    color: #8b929a;
-  }
-  to {
-    background: #59bf40;
-    color: #fff;
-  }
-}
-@keyframes appgrid_focusAnimation_C1GgX {
-  0% {
-    background-position: 0% 0%;
-    opacity: 1;
-  }
-  100% {
-    background-position: -180% 0%;
-    opacity: 0.8;
-  }
-}
-@keyframes appgrid_hoverAnimation_2sxXp {
-  0% {
-    background-position: 0% 0%;
-  }
-  100% {
-    background-position: 50% 0%;
-  }
-}
-@keyframes appgrid_ItemFocusAnim-darkerGrey-nocolor_20N6a {
-  from {
-    background: #3d4450;
-  }
-  to {
-    background: #23262e;
-  }
-}
-@keyframes appgrid_ItemFocusAnim-darkerGrey_1h7rD {
-  from {
-    background: #3d4450;
-    color: #8b929a;
-  }
-  to {
-    background: #23262e;
-    color: #fff;
-  }
-}
-@keyframes appgrid_ItemFocusAnim-darkGrey_1epbf {
-  from {
-    background: #67707b;
-    color: #8b929a;
-  }
-  to {
-    background: #3d4450;
-    color: #fff;
-  }
-}
-@keyframes appgrid_ItemFocusAnim-grey_1uEwx {
-  from {
-    background: #8b929a;
-    color: #fff;
-  }
-  to {
-    background: #67707b;
-    color: #fff;
-  }
-}
-@keyframes appgrid_ItemFocusAnimBorder-darkGrey_3B9ip {
-  from {
-    border-color: #67707b;
-  }
-  to {
-    border-color: #3d4450;
-  }
-}
-@keyframes appgrid_ItemFocusAnim-green_3TtYs {
-  from {
-    background: #c9ffc9;
-    color: #8b929a;
-  }
-  to {
-    background: #59bf40;
-    color: #fff;
-  }
-}
-.appgrid_EmptyGridMessageContainer_Vl8Ft {
-  box-sizing: border-box;
-  padding: 20px;
-}
-.appgrid_EmptyGridMessageLine_15p_9 {
-  box-sizing: border-box;
-  color: rgba(255, 255, 255, 0.8);
-  text-align: center;
-  margin: 8px 0;
-}
-.appgrid_GridWithControls_rz1mr {
-  box-sizing: border-box;
-  padding: 4px 0px;
-}
-.appgrid_CompatFooterIcons_3wP0R {
-  display: flex;
-  margin-left: 4px;
-  background-color: #23262e;
-  border-radius: 12px;
-  transform-origin: left;
-  justify-content: center;
-  align-items: center;
-  padding: 2px;
-}
-.appgrid_CompatFooterIcons_3wP0R.appgrid_Advanced_1ENSK {
-  padding: 0px 8px;
-}
-.appgrid_CompatFooterDescription_CipKz {
-  display: flex;
-  align-items: center;
-}
-.appgrid_CompatFooterIcons_3wP0R > svg {
-  height: 12px;
-  width: 12px;
-}
-.appgrid_CompatFilterDialog_2xGC- {
-  background-color: #0e141b;
-  border: 2px solid #23262e;
-  padding: 24px;
-  animation-name: appgrid_slideInAnimation_X6DDo;
-  animation-duration: 0.5s;
-  animation-timing-function: cubic-bezier(0.16, 0.86, 0.43, 0.99);
-  animation-fill-mode: both;
-}
-@keyframes appgrid_slideInAnimation_X6DDo {
-  0% {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.appgrid_CompatFilterDialogRow_ORyJN {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  width: 100%;
-  padding: 8px;
-  text-align: left;
-}
-div.appgrid_CompatFilterDialogButton_1FjJ3 {
-  padding: 4px;
-}
-.appgrid_CompatFilterDialogButton_1FjJ3.gpfocuswithin
-  .appgrid_CompatFilterDialogRow_ORyJN
-  .appgrid_CompatFilterDescription_2cvkB {
-  max-height: 900px;
-}
-.appgrid_CompatFilterLabel_3mHIv {
-  font-size: 20px;
-}
-.appgrid_CompatFilterDescription_2cvkB {
-  color: #8b929a;
-  font-size: 14px;
-  max-height: 0px;
-  overflow: hidden;
-}
-.appgrid_CompatFilterDialogDescription_dsyll {
-  padding-bottom: 12px;
-}
-.appgrid_CompatFilterDialogIcons_29dk0 {
-  display: flex;
-  align-items: center;
-  margin-right: 12px;
-}
-.appgrid_CompatFilterDialogIcons_29dk0 > svg.appgrid_Inactive_zymIS {
-  opacity: 0.05;
-}
-.appgrid_CompatFilterDialogTitle_23rml {
-  text-transform: none;
-}
-.gpfocus .appgrid_InvertFocusedIcon_2flD1 {
-  color: inherit;
-}
-.appgrid_YourCollection_11p6F {
-  display: grid;
-  width: 100%;
-  height: auto;
-  padding: 8px 0px;
-  grid-auto-flow: row;
-  grid-template-columns: repeat(auto-fit, 148px);
-  justify-content: space-between;
-}
-.appgrid_CollectionOptions_BpxCz {
-  box-sizing: border-box;
-  padding: 20px 0px 0px 0px;
-  display: flex;
-  user-select: none;
-  align-items: flex-end;
-}
-.appgrid_SortingDropDown_1tBzy {
-  margin-right: 0;
-  display: flex;
-  flex-direction: row;
-  font-size: 12px;
-  align-items: flex-start;
-}
-.appgrid_SortingDropDown_1tBzy .appgrid_SortingDropDownLabel_1ljKT {
-  color: #a0a1a5;
-  text-transform: uppercase;
-  line-height: 18px;
-  font-weight: 100;
-  letter-spacing: 1px;
-  white-space: nowrap;
-  margin-top: 1px;
-}
-.appgrid_SortingDropDown_1tBzy:focus {
-  outline: none;
-}
-.appgrid_SortingDropDown_1tBzy .DialogInputLabelGroup {
-  margin: 0;
-}
-.appgrid_SortingDropDown_1tBzy ._DialogInputContainer {
-  box-sizing: border-box;
-  background: transparent;
-  margin: 0;
-  padding: 0;
-  margin-left: 8px;
-  font-size: 12px;
-  line-height: 18px;
-  font-weight: 100;
-  letter-spacing: 1px;
-  margin-top: 0px;
-  max-width: 230px;
-  margin-right: 6px;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  color: #ccc;
-}
-.appgrid_SortingDropDown_1tBzy ._DialogInputContainer.DialogDropDown:hover {
-  box-shadow: none;
-  color: #fff;
-}
-.appgrid_SortingDropDown_1tBzy
-  ._DialogInputContainer.DialogDropDown.Disabled:hover {
-  color: #ccc;
-}
-.appgrid_SortingDropDown_1tBzy
-  ._DialogInputContainer
-  .DialogDropDown_CurrentDisplay {
-  background-color: rgba(255, 255, 255, 0.1);
-  padding-left: 6px;
-  padding-right: 6px;
-  padding-top: 1px;
-  border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
-}
-.appgrid_SortingDropDown_1tBzy ._DialogInputContainer .DialogDropDown_Arrow {
-  width: 14px;
-  position: relative;
-  top: initial;
-  right: initial;
-  padding-left: 0px;
-  padding-top: 2px;
-  padding-right: 3px;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
-}
-.appgrid_SortingDropDown_1tBzy
-  ._DialogInputContainer
-  .DialogDropDown_Arrow
-  svg {
-  fill: #969696;
-}
-.appgrid_SortingDropDownContainer_1ZpBQ {
-  margin-left: -70px;
-  min-width: 230px;
-}
-.appgrid_SortingDropDownContainer_1ZpBQ.DesktopUI,
-.DesktopUI .appgrid_SortingDropDownContainer_1ZpBQ {
-  transform: translateY(2px);
-}
-.appgrid_SortingDropDownContainer_1ZpBQ > div {
-  box-sizing: border-box;
-  padding: 8px 0;
-  box-shadow: 1px 8px 32px 1px #0009 !important;
-  border: 0.5px solid #6e6e6e;
-  border-radius: 0;
-  background: #75767c !important;
-  color: #fff;
-  border-left: 1px solid #fff;
-}
-.appgrid_SortingDropDownContainer_1ZpBQ > div.DesktopUI,
-.DesktopUI .appgrid_SortingDropDownContainer_1ZpBQ > div {
-  box-shadow: 0 10px 32px 0px #000000ab !important;
-  background: #3d4450 !important;
-  border: none;
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-.appgrid_SortingDropDownContainer_1ZpBQ .appgrid_SortingDropDownItems_1ZtpS {
-  box-sizing: border-box;
-  padding: 3px 12px;
-  line-height: initial;
-  background-color: transparent;
-  font-size: 12px;
-  font-weight: 100;
-  letter-spacing: 1px;
-  margin-left: 1px;
-}
-.appgrid_SortingDropDownContainer_1ZpBQ
-  .appgrid_SortingDropDownItems_1ZtpS.DesktopUI,
-.DesktopUI
-  .appgrid_SortingDropDownContainer_1ZpBQ
-  .appgrid_SortingDropDownItems_1ZtpS {
-  padding: 8px 18px;
-  font-size: 13px;
-  font-weight: 400;
-  letter-spacing: 0px;
-  color: #dcdedf;
-  cursor: pointer;
-  position: relative;
-  min-width: fit-content;
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  border-top: none;
-  border-bottom: none;
-}
-.appgrid_SortingDropDownContainer_1ZpBQ
-  .appgrid_SortingDropDownItems_1ZtpS.Focusable:focus {
-  outline: none;
-  background-color: #fff;
-  color: #0e141b;
-}
-.appgrid_SortingDropDownContainer_1ZpBQ
-  .appgrid_SortingDropDownItems_1ZtpS:hover {
-  background-color: #9899a1;
-}
-.appgrid_SortingDropDownContainer_1ZpBQ
-  .appgrid_SortingDropDownItems_1ZtpS:hover.DesktopUI,
-.DesktopUI
-  .appgrid_SortingDropDownContainer_1ZpBQ
-  .appgrid_SortingDropDownItems_1ZtpS:hover {
-  background: #dcdedf;
-  color: #3d4450;
-}
-.appgrid_CollectionOptionsRightJustified_3t1pL {
-  margin-left: auto;
-  white-space: nowrap;
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 4px;
-}
-.appgrid_CollectionOptionsRightJustified_3t1pL
-  .appgrid_ShowingReadyToPlay_38IOu {
-  box-sizing: border-box;
-  padding: 0;
-  font-size: 12px;
-  font-weight: 300;
-  letter-spacing: 1px;
-  color: #09b9ff;
-  text-transform: uppercase;
-  margin-right: 20px;
-}
-.appgrid_CollectionOptionsRightJustified_3t1pL .SVGIcon_Installed {
-  width: 20px;
-  height: 20px;
-  fill: #969696;
-  margin-right: 8px;
-  margin-top: -6px;
-}
-.appgrid_CollectionOptionsRightJustified_3t1pL .SVGIcon_Installed polyline {
-  stroke: #969696;
-  stroke-width: 12px;
-}
-.appgrid_InstalledCheckBox_3S2E4 {
-  display: flex;
-  flex-direction: row;
-  font-size: 12px;
-  font-weight: 100;
-  letter-spacing: 1px;
-  color: #ccc;
-  transition-property: color;
-  transition-duration: 0.16s;
-  transition-timing-function: ease-in-out;
-}
-.appgrid_InstalledCheckBox_3S2E4:hover {
-  color: #fff;
-}
-.appgrid_InstalledCheckBox_3S2E4.DialogCheckbox_Container {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  margin-right: 32px;
-}
-.appgrid_InstalledCheckBox_3S2E4.DialogCheckbox_Container:hover
-  .DialogCheckbox {
-  background-color: #fff4;
-}
-.appgrid_InstalledCheckBox_3S2E4 .DialogCheckbox {
-  box-sizing: border-box;
-  height: 15px;
-  width: 15px;
-  background-color: transparent;
-  border: 1px solid #969696;
-  transition-duration: 0.16s;
-  transition-timing-function: ease-in-out;
-  margin-top: 1px;
-}
-.appgrid_InstalledCheckBox_3S2E4 .DialogCheckbox svg {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-}
-.appgrid_InstalledCheckBox_3S2E4 .DialogCheckbox svg path {
-  stroke-width: 20px;
-}
-div.appgrid_CoverSizeSlider_U4J9B {
-  width: 100px;
-  box-sizing: border-box;
-  padding-top: 0;
-  padding-left: 8px;
-  padding-right: 0;
-  background: none;
-  margin-bottom: 0;
-}
-div.appgrid_CoverSizeSlider_U4J9B .DialogSlider_Slider {
-  box-sizing: border-box;
-  border: none;
-  height: 3px;
-  margin-top: 7px;
-  background: #888;
-  box-shadow: inset 0px 11px 8px -10px #131313;
-}
-div.appgrid_CoverSizeSlider_U4J9B .DialogSlider_Value {
-  display: none;
-}
-div.appgrid_CoverSizeSlider_U4J9B .DialogSlider_Grabber {
-  border-radius: 2px;
-  height: 20px;
-  width: 6px;
-  top: -8px;
-  background: #aaa;
-  box-shadow: none;
-}
-div.appgrid_CoverSizeSlider_U4J9B .DialogSlider_Grabber:active,
-div.appgrid_CoverSizeSlider_U4J9B .DialogSlider_Grabber:hover {
-  background: #fff;
-}
-.appgrid_CoverSizeLabel_3gYY5 {
-  box-sizing: border-box;
-  padding: 0;
-  font-size: 12px;
-  font-weight: 100;
-  letter-spacing: 1px;
-  color: #ccc;
-  text-transform: uppercase;
-}
-.appgrid_CoverSizePickerContainer_2Uoqg {
-  display: flex;
-  user-select: none;
-  align-items: flex-end;
-}
-.appgrid_CoverSizePickerContainer_2Uoqg .appgrid_CoverSizes_L64GX {
-  display: flex;
-  align-items: flex-end;
-  margin-bottom: 4px;
-}
-.appgrid_CoverSizePickerContainer_2Uoqg .appgrid_CoverSizePicker_3U9BQ {
-  width: 20px;
-  height: 20px;
-  color: #969696;
-  text-align: center;
-  border: 1px solid rgba(128, 128, 128, 0.2);
-  margin-left: 8px;
-  align-self: flex-end;
-  cursor: pointer;
-}
-.appgrid_CoverSizePickerContainer_2Uoqg
-  .appgrid_CoverSizePicker_3U9BQ.appgrid_Small_2JAQ7 {
-  width: 5px;
-  height: 7px;
-  font-size: 12px;
-  padding-top: 2px;
-}
-.appgrid_CoverSizePickerContainer_2Uoqg
-  .appgrid_CoverSizePicker_3U9BQ.appgrid_Medium_3e5UM {
-  width: 9px;
-  height: 12px;
-  font-size: 15px;
-  padding-bottom: 1px;
-  padding-top: 1px;
-}
-.appgrid_CoverSizePickerContainer_2Uoqg
-  .appgrid_CoverSizePicker_3U9BQ.appgrid_Large_1c3Av {
-  width: 12px;
-  height: 18px;
-  font-size: 18px;
-  padding-bottom: 2px;
-}
-.appgrid_CoverSizePickerContainer_2Uoqg .appgrid_CoverSizePicker_3U9BQ:hover {
-  color: #fff;
-  border-color: #fff;
-}
-.appgrid_CoverSizePickerContainer_2Uoqg
-  .appgrid_CoverSizePicker_3U9BQ:hover
-  svg {
-  fill: #fff;
-}
-.appgrid_CoverSizePickerContainer_2Uoqg
-  .appgrid_CoverSizePicker_3U9BQ.appgrid_Active_2uzBH {
-  color: #1e90ff;
-  border: 1px solid gray;
-}
-.appgrid_CoverSizePickerContainer_2Uoqg
-  .appgrid_CoverSizePicker_3U9BQ.appgrid_Active_2uzBH
-  svg {
-  fill: #1e90ff;
-}
-.appgrid_CoverSizePickerContainer_2Uoqg .appgrid_CoverSizePicker_3U9BQ svg {
-  fill: #969696;
-}
-.appgrid_TestAppContainer_2Ybdd {
-  box-sizing: border-box;
-  border: 1px solid red;
-  background: gray;
-}
-.appgrid_TestAppContainer_2Ybdd .appgrid_TestApp_-kKx2 {
-  box-sizing: border-box;
-  width: 100%;
-  padding-top: 150%;
-  border: 1px solid red;
-  background: gray;
-}
-:root {
-  --sticky-header-background-opacity: 0;
-}
-.appgrid_AppGridSectionHeader_3bWIS {
-  margin-top: 6px;
-  margin-bottom: 0px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin-left: -2px;
-  padding-left: 26px;
-  transform: translatex(-24px);
-  margin-right: -48px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  box-shadow: 0 0px 0px #0004;
-  z-index: 30;
-}
-.BasicUI .appgrid_AppGridSectionHeader_3bWIS {
-  margin-right: -50px;
-  margin-top: 0px;
-}
-.appgrid_AppGridSectionHeader_3bWIS:not(.appgrid_NotReallySticky_E5k6b) {
-  position: sticky;
-  top: 0;
-}
-.BasicUI .appgrid_AppGridSectionHeader_3bWIS {
-  pointer-events: none;
-}
-.BasicUI .appgrid_AppGridSectionHeader_3bWIS > * {
-  pointer-events: all;
-}
-.appgrid_AppGridSectionHeader_3bWIS::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  z-index: -1;
-  background: radial-gradient(103% 98vh at 33% 44vh, #313d53 0%, #101314 100%);
-  box-shadow: 0px 4px 4px #0004;
-  opacity: var(--sticky-header-background-opacity);
-  pointer-events: none;
-}
-.appgrid_AppGridSectionHeader_3bWIS .appgrid_Rule_3pJqX {
-  flex-grow: 1;
-  height: 1px;
-  align-self: center;
-  margin-left: 10px;
-  background: linear-gradient(
-    to right,
-    rgba(126, 102, 102, 0.2),
-    rgba(255, 255, 255, 0)
-  );
-}
-.appgrid_AppGridSectionHeader_3bWIS .appgrid_CoverSizePickerContainer_2Uoqg {
-  display: none;
-  margin-right: 20px;
-}
-.appgrid_AppGridSectionHeader_3bWIS.appgrid_IsSticking_sV6aD
-  .appgrid_CoverSizePickerContainer_2Uoqg {
-  display: inherit;
-}
-.appgrid_AppGridSectionLabel_2hvQb {
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 12px;
-  user-select: none;
-  letter-spacing: 2px;
-  font-weight: 100;
-}
-.appgrid_AppGridSectionFooter_2c0Fg {
-  height: 20px;
-  width: 100%;
-}
-.BasicUI .appgrid_AppGridSectionFooter_2c0Fg {
-  height: 0px;
-}
-.appgrid_ReadyToPlayBigButton_3wbWH {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-top: 1px solid rgba(201, 201, 201, 0.02);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.7);
-  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.5);
-  -webkit-transform: translateZ(0);
-  filter: brightness(1) contrast(1);
-  cursor: pointer;
-  transition-property: -webkit-transform, filter, box-shadow;
-  transition-duration: 0.6s;
-  transition-timing-function: cubic-bezier(0, 0.73, 0.48, 1);
-  user-select: none;
-}
-.appgrid_ReadyToPlayBigButton_3wbWH .appgrid_CountGamesExcluded_2R_HL {
-  color: #a0a1a5;
-  text-transform: uppercase;
-  font-size: 42px;
-  line-height: 38px;
-  text-align: center;
-}
-.appgrid_ReadyToPlayBigButton_3wbWH.appgrid_Small_2JAQ7
-  .appgrid_CountGamesExcluded_2R_HL {
-  font-size: 20px;
-  line-height: 18px;
-}
-.appgrid_ReadyToPlayBigButton_3wbWH.appgrid_Medium_3e5UM
-  .appgrid_CountGamesExcluded_2R_HL {
-  font-size: 30px;
-  line-height: 28px;
-}
-.appgrid_ReadyToPlayBigButton_3wbWH .appgrid_CountGamesExcludedDesc_1MGS3 {
-  color: #a0a1a5;
-  text-transform: uppercase;
-  line-height: 24px;
-  font-size: 22px;
-  text-align: center;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-.appgrid_ReadyToPlayBigButton_3wbWH.appgrid_Small_2JAQ7
-  .appgrid_CountGamesExcludedDesc_1MGS3 {
-  font-size: 12px;
-  line-height: 14px;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-.appgrid_ReadyToPlayBigButton_3wbWH.appgrid_Medium_3e5UM
-  .appgrid_CountGamesExcludedDesc_1MGS3 {
-  font-size: 17px;
-  line-height: 19px;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-.appgrid_ReadyToPlayBigButton_3wbWH .SVGIcon_ReadyToPlay {
-  width: 160px;
-  height: 160px;
-  position: relative;
-  top: -20px;
-  right: initial;
-}
-.appgrid_ReadyToPlayBigButton_3wbWH .SVGIcon_ReadyToPlay path {
-  fill: #a0a1a5;
-  stroke: #a0a1a5;
-}
-.appgrid_ReadyToPlayBigButton_3wbWH .SVGIcon_ReadyToPlay circle {
-  stroke: #a0a1a5;
-}
-.appgrid_ReadyToPlayBigButton_3wbWH.appgrid_Small_2JAQ7 .SVGIcon_ReadyToPlay {
-  width: 80px;
-  height: 80px;
-  top: -6px;
-}
-.appgrid_ReadyToPlayBigButton_3wbWH.appgrid_Medium_3e5UM .SVGIcon_ReadyToPlay {
-  width: 120px;
-  height: 120px;
-  top: -8px;
-}
-.appgrid_ReadyToPlayBigButton_3wbWH .appgrid_ReadyToPlayIcon_pCHyk:after {
-  position: absolute;
-  content: "/";
-  color: #a0a1a5;
-  font-size: 120px;
-  font-style: italic;
-  left: 90px;
-  top: 6px;
-}
-.appgrid_ReadyToPlayBigButton_3wbWH.appgrid_Small_2JAQ7
-  .appgrid_ReadyToPlayIcon_pCHyk:after {
-  font-size: 60px;
-  left: 44px;
-  top: 6px;
-}
-.appgrid_ReadyToPlayBigButton_3wbWH.appgrid_Medium_3e5UM
-  .appgrid_ReadyToPlayIcon_pCHyk:after {
-  font-size: 90px;
-  left: 58px;
-  top: 0px;
-}
-.appgrid_ReadyToPlayBigButton_3wbWH:hover {
-  -webkit-transform: rotateX(3deg) translateZ(15px) translateZ(0);
-  filter: brightness(1.1) contrast(0.95) saturate(1);
-  box-shadow: 0px 14px 22px 0px rgba(0, 0, 0, 0.3);
-  z-index: 12;
-}
-.appgrid_ReadyToPlayBigButton_3wbWH:hover:active {
-  transition-duration: 0.05s;
-  transition-timing-function: ease-out;
-  filter: brightness(0.8) contrast(1.05) saturate(1);
-}
-.cssgrid_CSSGrid_3vHkm {
-  display: grid;
-  box-sizing: border-box;
-}
-.cssgrid_Container_DGRkX {
-  box-sizing: border-box;
-  overflow: visible;
-}
-.cssgrid_Animate_1IbFa {
-  transition: height 0.3s ease-in-out;
-}
-@keyframes fastscrolloverlay_ItemFocusAnim-darkerGrey-nocolor_E10Yo {
-  from {
-    background: #3d4450;
-  }
-  to {
-    background: #23262e;
-  }
-}
-@keyframes fastscrolloverlay_ItemFocusAnim-darkerGrey_1p2kO {
-  from {
-    background: #3d4450;
-    color: #8b929a;
-  }
-  to {
-    background: #23262e;
-    color: #fff;
-  }
-}
-@keyframes fastscrolloverlay_ItemFocusAnim-darkGrey_1Yhkz {
-  from {
-    background: #67707b;
-    color: #8b929a;
-  }
-  to {
-    background: #3d4450;
-    color: #fff;
-  }
-}
-@keyframes fastscrolloverlay_ItemFocusAnim-grey_1zxjV {
-  from {
-    background: #8b929a;
-    color: #fff;
-  }
-  to {
-    background: #67707b;
-    color: #fff;
-  }
-}
-@keyframes fastscrolloverlay_ItemFocusAnimBorder-darkGrey_23gkw {
-  from {
-    border-color: #67707b;
-  }
-  to {
-    border-color: #3d4450;
-  }
-}
-@keyframes fastscrolloverlay_ItemFocusAnim-green_FNp92 {
-  from {
-    background: #c9ffc9;
-    color: #8b929a;
-  }
-  to {
-    background: #59bf40;
-    color: #fff;
-  }
-}
-@keyframes fastscrolloverlay_focusAnimation_gcd7b {
-  0% {
-    background-position: 0% 0%;
-    opacity: 1;
-  }
-  100% {
-    background-position: -180% 0%;
-    opacity: 0.8;
-  }
-}
-@keyframes fastscrolloverlay_hoverAnimation_1GjUc {
-  0% {
-    background-position: 0% 0%;
-  }
-  100% {
-    background-position: 50% 0%;
-  }
-}
-.fastscrolloverlay_FastScrollOverlay_1gRvM {
-  position: fixed;
-  top: 40px;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  transition: background-color 0.2s linear;
-  background-color: transparent;
-  pointer-events: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 64px;
-  text-transform: uppercase;
-  text-align: center;
-}
-.fastscrolloverlay_FastScrollOverlay_1gRvM.fastscrolloverlay_Visible_pdiNo {
-  background-color: #000000c0;
-  backdrop-filter: blur(3px);
-}
 @keyframes allcollections_ItemFocusAnim-darkerGrey-nocolor_17xL2 {
   from {
     background: #3d4450;
@@ -32996,6 +29932,17 @@ div.appgrid_CoverSizeSlider_U4J9B .DialogSlider_Grabber:hover {
   transform: translateY(3px);
   margin-right: 2px;
 }
+.cssgrid_CSSGrid_3vHkm {
+  display: grid;
+  box-sizing: border-box;
+}
+.cssgrid_Container_DGRkX {
+  box-sizing: border-box;
+  overflow: visible;
+}
+.cssgrid_Animate_1IbFa {
+  transition: height 0.3s ease-in-out;
+}
 .eaaccessdialog_DialogContainer_24vXJ {
   width: 680px;
   height: 240px;
@@ -33106,6 +30053,100 @@ div.appgrid_CoverSizeSlider_U4J9B .DialogSlider_Grabber:hover {
 }
 .draganddrop_Draggable_2wgFG.draganddrop_Active_1FSEr * div {
   box-shadow: none;
+}
+@keyframes fastscrolloverlay_ItemFocusAnim-darkerGrey-nocolor_E10Yo {
+  from {
+    background: #3d4450;
+  }
+  to {
+    background: #23262e;
+  }
+}
+@keyframes fastscrolloverlay_ItemFocusAnim-darkerGrey_1p2kO {
+  from {
+    background: #3d4450;
+    color: #8b929a;
+  }
+  to {
+    background: #23262e;
+    color: #fff;
+  }
+}
+@keyframes fastscrolloverlay_ItemFocusAnim-darkGrey_1Yhkz {
+  from {
+    background: #67707b;
+    color: #8b929a;
+  }
+  to {
+    background: #3d4450;
+    color: #fff;
+  }
+}
+@keyframes fastscrolloverlay_ItemFocusAnim-grey_1zxjV {
+  from {
+    background: #8b929a;
+    color: #fff;
+  }
+  to {
+    background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes fastscrolloverlay_ItemFocusAnimBorder-darkGrey_23gkw {
+  from {
+    border-color: #67707b;
+  }
+  to {
+    border-color: #3d4450;
+  }
+}
+@keyframes fastscrolloverlay_ItemFocusAnim-green_FNp92 {
+  from {
+    background: #c9ffc9;
+    color: #8b929a;
+  }
+  to {
+    background: #59bf40;
+    color: #fff;
+  }
+}
+@keyframes fastscrolloverlay_focusAnimation_gcd7b {
+  0% {
+    background-position: 0% 0%;
+    opacity: 1;
+  }
+  100% {
+    background-position: -180% 0%;
+    opacity: 0.8;
+  }
+}
+@keyframes fastscrolloverlay_hoverAnimation_1GjUc {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
+}
+.fastscrolloverlay_FastScrollOverlay_1gRvM {
+  position: fixed;
+  top: 40px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  transition: background-color 0.2s linear;
+  background-color: transparent;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 64px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.fastscrolloverlay_FastScrollOverlay_1gRvM.fastscrolloverlay_Visible_pdiNo {
+  background-color: #000000c0;
+  backdrop-filter: blur(3px);
 }
 .gamelistcollectionmenu_CollectionDeleteContainer_nYduu
   .DialogContent_InnerWidth
@@ -34704,6 +31745,718 @@ div.NarrowRightPanel
 }
 .achievementspage_PinnedView_278LB .achievementspage_DragHandle_2BcXp {
   visibility: hidden;
+}
+@keyframes controllerconfigurator_interstitial_ItemFocusAnim-darkerGrey-nocolor_3DlWW {
+  from {
+    background: #3d4450;
+  }
+  to {
+    background: #23262e;
+  }
+}
+@keyframes controllerconfigurator_interstitial_ItemFocusAnim-darkerGrey_36sHy {
+  from {
+    background: #3d4450;
+    color: #8b929a;
+  }
+  to {
+    background: #23262e;
+    color: #fff;
+  }
+}
+@keyframes controllerconfigurator_interstitial_ItemFocusAnim-darkGrey_CdQ9l {
+  from {
+    background: #67707b;
+    color: #8b929a;
+  }
+  to {
+    background: #3d4450;
+    color: #fff;
+  }
+}
+@keyframes controllerconfigurator_interstitial_ItemFocusAnim-grey_2SR02 {
+  from {
+    background: #8b929a;
+    color: #fff;
+  }
+  to {
+    background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes controllerconfigurator_interstitial_ItemFocusAnimBorder-darkGrey_QD77A {
+  from {
+    border-color: #67707b;
+  }
+  to {
+    border-color: #3d4450;
+  }
+}
+@keyframes controllerconfigurator_interstitial_ItemFocusAnim-green_3VhRU {
+  from {
+    background: #c9ffc9;
+    color: #8b929a;
+  }
+  to {
+    background: #59bf40;
+    color: #fff;
+  }
+}
+@keyframes controllerconfigurator_interstitial_focusAnimation_2SbTm {
+  0% {
+    background-position: 0% 0%;
+    opacity: 1;
+  }
+  100% {
+    background-position: -180% 0%;
+    opacity: 0.8;
+  }
+}
+@keyframes controllerconfigurator_interstitial_hoverAnimation_MvWJ6 {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
+}
+.controllerconfigurator_interstitial_ConfiguratorInterstitialContainer_3FS5u {
+  max-width: 100%;
+  height: 100%;
+  background-color: #0e141b;
+  padding: 3% 10%;
+  position: relative;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  animation-name: controllerconfigurator_interstitial_modalAppear_399Ea;
+  animation-timing-function: ease;
+  animation-duration: 0.3s;
+  animation-iteration-count: 1;
+}
+.controllerconfigurator_interstitial_ConfiguratorInterstitialContainer_3FS5u
+  .controllerconfigurator_interstitial_DontShowAgain_8aT8x
+  > div
+  > div {
+  flex-grow: 0;
+}
+.controllerconfigurator_interstitial_ConfiguratorInterstitialContainer_3FS5u
+  .controllerconfigurator_interstitial_DontShowAgain_8aT8x
+  > div {
+  justify-content: center;
+}
+.controllerconfigurator_interstitial_ConfiguratorInterstitialContainer_3FS5u
+  .controllerconfigurator_interstitial_DontShowAgain_8aT8x {
+  position: absolute;
+  bottom: 90px;
+  align-self: center;
+}
+@keyframes controllerconfigurator_interstitial_modalAppear_399Ea {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.controllerconfigurator_interstitial_ConfiguratorInterstitialFooter_1xJ2y {
+  position: fixed;
+  width: 100%;
+  margin: 0 auto;
+  bottom: 55px;
+  transform: scale(0.6);
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+.controllerconfigurator_interstitial_SectionSeparator_RoCqX {
+  width: 3px;
+  height: 40px;
+  background-color: #3d4450;
+}
+.controllerconfigurator_interstitial_DialogHeader_3PYip {
+  text-transform: none;
+  font-weight: bold;
+  letter-spacing: 0px;
+  font-size: 22px;
+  width: 100%;
+  text-align: left;
+}
+.controllerconfigurator_interstitial_DialogBody_bo5Tt {
+  color: #dcdedf;
+}
+.controllerconfigurator_interstitial_DialogBodyText_3C0_f {
+  margin-bottom: 0px;
+}
+.controllerconfigurator_interstitial_DescLabel_19njk {
+  margin-bottom: 2px;
+}
+.controllerconfigurator_interstitial_DescLabel2_kipHd {
+  margin-top: 10px;
+}
+.controllerconfigurator_interstitial_DescLabelWithSpace_yMEbv {
+  margin-bottom: 20px;
+}
+.controllerconfigurator_interstitial_Highlight_1FZA8 {
+  color: #fff;
+  font-weight: bold;
+}
+.controllerconfigurator_interstitial_DescImage_1T0oY {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.controllerconfigurator_interstitial_DescImageRow_ztD0R {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.controllerconfigurator_interstitial_ArrowHack_BvOCV {
+  position: absolute;
+  margin-left: 270px;
+}
+.controllerconfigurator_interstitial_ControlLabel_tGJeF {
+  background-color: #3d4450;
+  padding: 5px 25px;
+  border-radius: 2px;
+  min-width: 100px;
+  font-size: 12px;
+  color: #fff;
+  margin: 10px;
+  text-align: center;
+}
+.controllerconfigurator_interstitial_InterstitialGlyphButton_2vQ2X {
+  width: 30px;
+  margin-left: 0px;
+  margin-right: 10px;
+}
+.controllerconfigurator_interstitial_InterstitialArrow_2_E_g {
+  width: 30px;
+  margin: 12px 0px;
+}
+.controllerconfigurator_interstitial_InterstitialImageContainer_1i7xP {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 20px 0px;
+}
+.controllerconfigurator_interstitial_InterstitialImageColumn_U-0Em {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+}
+.controllerconfigurator_interstitial_InterstitialImageColumn_U-0Em
+  .controllerconfigurator_interstitial_Highlight_1FZA8 {
+  margin: 10px 0px;
+}
+.controllerconfigurator_interstitial_InterstitialImageColumnButtons_14UtV {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 120px;
+}
+.controllerconfigurator_interstitial_InterstitialImageColumnButtons_14UtV
+  .controllerconfigurator_interstitial_Highlight_1FZA8 {
+  margin: 10px 0px;
+}
+.controllerconfigurator_interstitial_DividerLine_2mAc6 {
+  height: 130px;
+  width: 1px;
+  background-color: #8b929a;
+  position: absolute;
+  padding-top: 20px;
+  left: 50%;
+  transform: translateX(-50%) translateY(0%) skew(-30deg);
+}
+.controllerconfigurator_interstitial_SteamInputSide_3hs-c {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 40%;
+  min-height: 150px;
+  justify-content: center;
+  margin: 10px 5% 20px 5%;
+}
+.controllerconfigurator_interstitial_SteamInputSide_3hs-c
+  .controllerconfigurator_interstitial_Highlight_1FZA8 {
+  color: #8b929a;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 12px;
+}
+.controllerconfigurator_interstitial_SteamInputSide_3hs-c
+  .controllerconfigurator_interstitial_SIHighlight_269-O {
+  color: #1a9fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 12px;
+}
+.controllerconfigurator_interstitial_SteamInputARow_2ls5W {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+.controllerconfigurator_interstitial_SteamInputARow_2ls5W
+  .controllerconfigurator_interstitial_Highlight_1FZA8 {
+  margin: 10px 0px;
+}
+.controllerconfigurator_interstitial_InterstitialImageRow_3Lxxk {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+}
+.controllerconfigurator_interstitial_InterstitialImageRow_3Lxxk
+  .controllerconfigurator_interstitial_Highlight_1FZA8 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 12px;
+  font-weight: 400;
+}
+.controllerconfigurator_interstitial_InterstitialImageRow_3Lxxk
+  .controllerconfigurator_interstitial_InterstitialImageColumn_U-0Em {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  position: relative;
+  margin: 20px 10px;
+}
+.controllerconfigurator_interstitial_InterstitialImageRow_3Lxxk
+  .controllerconfigurator_interstitial_InterstitialImageColumn_U-0Em
+  .controllerconfigurator_interstitial_InterstitialArrow_2_E_g {
+  width: 20px;
+  margin: 0px 10px;
+}
+.controllerconfigurator_interstitial_ActionSetItem_3BBZa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 25%;
+  min-height: 150px;
+  justify-content: center;
+}
+.controllerconfigurator_interstitial_ActionSetItem_3BBZa
+  .controllerconfigurator_interstitial_Highlight_1FZA8 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+  background-color: #3d4450;
+  padding: 5px 10px;
+  color: #fff;
+  border-radius: 30px;
+  font-size: 10px;
+  margin-bottom: 5px;
+}
+.controllerconfigurator_interstitial_ActionSetItem_3BBZa
+  .controllerconfigurator_interstitial_ControlLabel_tGJeF {
+  min-width: 50px;
+  margin: 10px 0px;
+}
+.controllerconfigurator_interstitial_ActionSetLayout_3bHO_ {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+  padding: 20px 0px;
+  justify-content: flex-start;
+}
+.controllerconfigurator_interstitial_ActionSetLayout_3bHO_ img {
+  width: 20px;
+}
+.controllerconfigurator_interstitial_ActionSetLayout_3bHO_
+  .controllerconfigurator_interstitial_ActionSetRow_2lCWy {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  border-bottom: 1px solid #3d4450;
+  align-items: center;
+  padding-right: 40px;
+}
+.controllerconfigurator_interstitial_ActionSetLayout_3bHO_
+  .controllerconfigurator_interstitial_LayerRow_Y2Szn {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  border-bottom: 1px solid #3d4450;
+  align-items: center;
+  margin-left: 40px;
+}
+.controllerconfigurator_interstitial_ActionSetLayout_3bHO_
+  .controllerconfigurator_interstitial_LayerRow2_PSSCv {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  border-bottom: 1px solid #3d4450;
+  align-items: center;
+}
+.controllerconfigurator_interstitial_ActionSetLayout_3bHO_
+  .controllerconfigurator_interstitial_SetLabel_3b0XB {
+  font-size: 14px;
+  color: #dcdedf;
+  text-align: left;
+}
+.controllerconfigurator_interstitial_ActionSetLayout_3bHO_
+  .controllerconfigurator_interstitial_ActivatorLabel_3wck6 {
+  font-size: 12px;
+  text-align: left;
+  font-weight: 500;
+  width: 180px;
+  color: #1a9fff;
+}
+.controllerconfigurator_interstitial_ActionSetLayout_3bHO_
+  .controllerconfigurator_interstitial_ControlLabel_tGJeF {
+  align-self: flex-end;
+  max-width: 140px;
+}
+.controllerconfigurator_interstitial_ActionSetDivider_2es8a {
+  height: 130px;
+  width: 1px;
+  background-color: #3d4450;
+  margin: 0px 40px;
+}
+.controllerconfigurator_interstitial_IntroImage1A_2-k2g {
+  width: 90%;
+  margin-top: 0px;
+}
+.controllerconfigurator_interstitial_IntroImage1B_1sg7Z {
+  width: 40%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  object-fit: cover;
+  clip-path: polygon(24% 19%, 76% 19%, 76% 82%, 24% 82%);
+  margin-left: 20px;
+}
+.controllerconfigurator_interstitial_Intro1Arrow_3Y2Un {
+  width: 30px;
+  margin: 12px 0px;
+}
+.controllerconfigurator_interstitial_IntroImage1C_3ilH6 {
+  height: 140px;
+  padding: 20px 0px;
+  margin-bottom: 0px;
+}
+.controllerconfigurator_interstitial_IntroImage2_2gyG1 {
+  width: 60%;
+}
+.controllerconfigurator_interstitial_IntroImage3_3gZ4J {
+  width: 70%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.controllerconfigurator_interstitial_IntroImage3a_YbOFy {
+  height: 80px;
+}
+.controllerconfigurator_interstitial_IntroImage3b_3VzQr {
+  height: 80px;
+  animation-name: controllerconfigurator_interstitial_gyroAnim_DKUXm;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+@keyframes controllerconfigurator_interstitial_gyroAnim_DKUXm {
+  0% {
+    transform: rotate(3deg);
+  }
+  50% {
+    transform: rotate(-3deg);
+  }
+  100% {
+    transform: rotate(3deg);
+  }
+}
+.controllerconfigurator_interstitial_NonVerifiedImage1A_3tOBr {
+  width: 90%;
+  margin-top: 15px;
+  padding-top: 30px;
+}
+.controllerconfigurator_interstitial_NonVerifiedImage2A_3wngO {
+  width: 30px;
+  margin: 15px 10px;
+}
+.controllerconfigurator_interstitial_NonVerifiedImage2B_2T3lU {
+  width: 15%;
+  margin-top: 30px;
+}
+.controllerconfigurator_interstitial_NonVerifiedImage3A_21v9b {
+  width: 50%;
+  margin: 0 auto;
+  padding: 20px 0px 15px 0px;
+}
+.controllerconfigurator_interstitial_ScreenshotBG_cUZzG {
+  background-color: #00000090;
+  margin: 15px 0px;
+}
+.controllerconfigurator_interstitial_GyroImage1A_F_1x2 {
+  width: 40%;
+  animation-name: controllerconfigurator_interstitial_gyroAnim2_3UiLq;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+.controllerconfigurator_interstitial_GyroImage1A_F_1x2.controllerconfigurator_interstitial_SteamController_snyYG {
+  height: 160px;
+}
+.controllerconfigurator_interstitial_GyroImage1A_F_1x2.controllerconfigurator_interstitial_GenericController_2a3Se {
+  height: 160px;
+}
+@keyframes controllerconfigurator_interstitial_gyroAnim2_3UiLq {
+  0% {
+    transform: rotate(3deg);
+  }
+  50% {
+    transform: rotate(-3deg);
+  }
+  100% {
+    transform: rotate(3deg);
+  }
+}
+.controllerconfigurator_interstitial_AppRequiresOSKImage1A_3_P7r {
+  width: 50%;
+  margin-bottom: 10px;
+}
+.controllerconfigurator_interstitial_AppRequiresLauncher_2jQrJ {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.controllerconfigurator_interstitial_AppRequiresMagnify_1f3GS {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.controllerconfigurator_interstitial_RemotePlayImage1A_37fYM {
+  width: 70%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.controllerconfigurator_interstitial_InterstitialImageLabelContainer_2ed7X {
+  width: 56%;
+  margin-left: 90px;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.controllerconfigurator_interstitial_ChordRow_2NYEW {
+  margin-top: 10px;
+  display: inline-block;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.controllerconfigurator_interstitial_ChordRow_2NYEW svg {
+  height: 30px;
+  padding: 0px 5px;
+}
+.controllerconfigurator_interstitial_ChordRow_2NYEW img {
+  height: 30px;
+  padding: 0px 5px;
+}
+.controllerconfigurator_interstitial_ButtonRow_1Zzxw {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.controllerconfigurator_interstitial_AppLauncherInteractionIssuesImage1A_1LISJ {
+  width: 35%;
+  margin-top: 0px;
+}
+.controllerconfigurator_interstitial_ExternalControllersAndSIAPIImage1A_UXk9J {
+  width: 90%;
+  padding: 5px 0px;
+}
+.controllerconfigurator_interstitial_ExternalControllersAndSIAPIImage1B_fcZmQ {
+  width: 25%;
+}
+.controllerconfigurator_interstitial_ChordLabel_3e42p {
+  font-size: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #b8bcbf;
+  text-align: center;
+}
+.controllerconfigurator_interstitial_ChordContainer_2ZMYH {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.controllerconfigurator_interstitial_ChordRight_18vjH {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 10px;
+}
+.controllerconfigurator_interstitial_ChordRight_18vjH
+  .controllerconfigurator_interstitial_DescImageRow_ztD0R {
+  width: 50%;
+}
+.controllerconfigurator_interstitial_ChordColumn_2_xFc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  margin-left: 20px;
+}
+.controllerconfigurator_interstitial_LabelAndChord_1t7KN {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 0px;
+}
+.controllerconfigurator_interstitial_LabelAndChord_1t7KN
+  .controllerconfigurator_interstitial_ChordRow_2NYEW {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0px;
+}
+.controllerconfigurator_interstitial_LabelAndChord_1t7KN
+  .controllerconfigurator_interstitial_DescLabel_19njk {
+  font-size: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #b8bcbf;
+}
+.controllerconfigurator_interstitial_LabelAndChord_1t7KN svg {
+  height: 25px;
+  padding: 0px 5px;
+}
+.controllerconfigurator_interstitial_LabelAndChord_1t7KN img {
+  height: 25px;
+  padding: 0px 5px;
+}
+.controllerconfigurator_interstitial_LabelAndChord2_1Citu {
+  margin-top: 10px;
+}
+.controllerconfigurator_interstitial_IntroToActionSetsB1_1Wvc3 {
+  width: 70%;
+}
+.controllerconfigurator_interstitial_IntroToActionSetsD1_nDL0e {
+  width: 60%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.guidedtour_PageIndicators_2Hdn3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+}
+.guidedtour_PageIndicator_4hJJR {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #67707b;
+}
+.guidedtour_PageIndicator_4hJJR.guidedtour_Active_2SNXu {
+  background-color: #1a9fff;
+}
+.guidedtour_WelcomeTitle_1F9OY {
+  font-size: 36px;
+  font-weight: 800;
+}
+.guidedtour_WelcomeDescription_1vXgw {
+  text-align: center;
+  max-width: 500px;
+}
+.guidedtour_CenteredContent_wNoTs {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.guidedtour_ContinueMessage_2Znu0 {
+  font-size: 15px;
+  font-weight: 800;
+  margin-top: 24px;
+}
+.guidedtour_MessageAction_1R1iz {
+  color: #1a9fff;
+  text-transform: uppercase;
+}
+.guidedtour_TourText_3bd-0 {
+  font-size: 16px;
+}
+.guidedtour_TourText_3bd-0 img {
+  vertical-align: middle;
+}
+.guidedtour_TourStopContent_3awTl {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  gap: 24px;
+}
+.guidedtour_TourStopContent_3awTl .guidedtour_Icon_1q04N {
+  width: 32px;
+  height: 32px;
+}
+.guidedtour_TourStopTextContainer_r6K0O {
+  display: flex;
+  flex-direction: column;
+}
+.guidedtour_TourStopTextContainer_r6K0O .guidedtour_Title_3OkGX {
+  font-size: 24px;
+  font-weight: 800;
+}
+.guidedtour_TourStopTextContainer_r6K0O .guidedtour_Description_1jthL {
+  max-width: 360px;
+}
+.guidedtour_ActiveTourPage_C_c5h.guidedtour_Enter_4VW_t {
+  opacity: 0;
+}
+.guidedtour_ActiveTourPage_C_c5h.guidedtour_EnterActive_1RWlD {
+  opacity: 1;
+  transition: opacity 0.8s ease-in-out;
+}
+.guidedtour_ActiveTourPage_C_c5h.guidedtour_Exit_I63qJ {
+  opacity: 1;
+}
+.guidedtour_ActiveTourPage_C_c5h.guidedtour_ExitActive_1869L {
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+.guidedtour_PaginationContentEnter_14IPq {
+  opacity: 0;
+}
+.guidedtour_PaginationContentEnterActive_2TFIw {
+  opacity: 1;
+  transition: opacity 0.8s ease-in-out;
+}
+.guidedtour_PaginationContentExit_3fQ_o {
+  opacity: 1;
+}
+.guidedtour_PaginationContentExitActive_qgfyy {
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
 }
 @keyframes appdetails_ItemFocusAnim-darkerGrey-nocolor_3vPeH {
   from {
@@ -38127,6 +35880,273 @@ div.NarrowRightPanel
 .appactionbutton_StreamingCalloutMessageContainer_tALeJ
   .appactionbutton_StreamingCalloutMessage_2_ScL {
   width: fit-content;
+}
+@keyframes launchoptionsdialog_ItemFocusAnim-darkerGrey-nocolor_2gDTO {
+  from {
+    background: #3d4450;
+  }
+  to {
+    background: #23262e;
+  }
+}
+@keyframes launchoptionsdialog_ItemFocusAnim-darkerGrey_3ALDv {
+  from {
+    background: #3d4450;
+    color: #8b929a;
+  }
+  to {
+    background: #23262e;
+    color: #fff;
+  }
+}
+@keyframes launchoptionsdialog_ItemFocusAnim-darkGrey_2BH5v {
+  from {
+    background: #67707b;
+    color: #8b929a;
+  }
+  to {
+    background: #3d4450;
+    color: #fff;
+  }
+}
+@keyframes launchoptionsdialog_ItemFocusAnim-grey_17B40 {
+  from {
+    background: #8b929a;
+    color: #fff;
+  }
+  to {
+    background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes launchoptionsdialog_ItemFocusAnimBorder-darkGrey_2o2JM {
+  from {
+    border-color: #67707b;
+  }
+  to {
+    border-color: #3d4450;
+  }
+}
+@keyframes launchoptionsdialog_ItemFocusAnim-green_1o01u {
+  from {
+    background: #c9ffc9;
+    color: #8b929a;
+  }
+  to {
+    background: #59bf40;
+    color: #fff;
+  }
+}
+@keyframes launchoptionsdialog_focusAnimation_3Bw6u {
+  0% {
+    background-position: 0% 0%;
+    opacity: 1;
+  }
+  100% {
+    background-position: -180% 0%;
+    opacity: 0.8;
+  }
+}
+@keyframes launchoptionsdialog_hoverAnimation_34JaO {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
+}
+.launchoptionsdialog_LaunchOptionDialog_LclHw {
+  background: radial-gradient(
+      circle at top left,
+      rgba(74, 81, 92, 0.4) 0%,
+      rgba(75, 81, 92, 0) 60%
+    ),
+    #25282e;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  color: #fff;
+}
+.launchoptionsdialog_LaunchOptionDialog_LclHw
+  .launchoptionsdialog_AppNameHeader_3T-1P {
+  margin: 2px;
+  text-transform: none;
+}
+.launchoptionsdialog_LaunchOptionDialog_LclHw
+  .launchoptionsdialog_AppNameHeader_3T-1P.DesktopUI,
+.DesktopUI
+  .launchoptionsdialog_LaunchOptionDialog_LclHw
+  .launchoptionsdialog_AppNameHeader_3T-1P {
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: unset;
+  text-transform: unset;
+  margin-top: 16px;
+  margin-bottom: 0px;
+  margin-left: 12px;
+  line-height: 28px;
+}
+.launchoptionsdialog_LaunchOptionDialog_LclHw
+  .launchoptionsdialog_OptionList_2aHnQ {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  padding: 14px 14px 0 14px;
+  min-height: 0;
+}
+.launchoptionsdialog_LaunchOptionDialog_LclHw
+  .launchoptionsdialog_OptionList_2aHnQ
+  .launchoptionsdialog_ListHeader_EvZ7k {
+  color: #dcdedf;
+  font-weight: bold;
+  font-size: 12px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  letter-spacing: 1px;
+}
+.launchoptionsdialog_LaunchOptionDialog_LclHw
+  .launchoptionsdialog_OptionList_2aHnQ
+  .launchoptionsdialog_ListContainer_134yW {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-shrink: 1;
+  min-height: 0;
+  padding: 10px;
+  background: #23262e;
+  overflow-y: scroll;
+  border-radius: 2px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(14, 20, 27, 0.5);
+}
+.launchoptionsdialog_LaunchOptionDialog_LclHw
+  .launchoptionsdialog_OptionList_2aHnQ
+  .launchoptionsdialog_ListContainer_134yW
+  .launchoptionsdialog_ListItem_3DEhf {
+  align-items: center;
+  background: rgba(61, 68, 80, 0.5);
+  padding: 10px 8px 10px 12px;
+  margin: 3px;
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+}
+.launchoptionsdialog_LaunchOptionDialog_LclHw
+  .launchoptionsdialog_OptionList_2aHnQ
+  .launchoptionsdialog_ListContainer_134yW
+  .launchoptionsdialog_ListItem_3DEhf:hover {
+  background: rgba(61, 68, 80, 0.8);
+}
+.launchoptionsdialog_LaunchOptionDialog_LclHw
+  .launchoptionsdialog_OptionList_2aHnQ
+  .launchoptionsdialog_ListContainer_134yW
+  .launchoptionsdialog_ListItem_3DEhf
+  label {
+  padding-left: 8px;
+  font-weight: 100;
+  font-size: 13px;
+  cursor: pointer;
+}
+.launchoptionsdialog_LaunchOptionDialog_LclHw
+  .launchoptionsdialog_OptionList_2aHnQ
+  .launchoptionsdialog_ListContainer_134yW
+  .launchoptionsdialog_ListItem_3DEhf
+  input {
+  cursor: pointer;
+  margin: 0;
+}
+.launchoptionsdialog_LaunchOptionDialog_LclHw
+  .launchoptionsdialog_OptionList_2aHnQ
+  .launchoptionsdialog_CheckboxRow_1xyUT {
+  text-transform: none;
+  margin-top: 6px;
+}
+.launchoptionsdialog_LaunchOptionDialog_LclHw
+  .launchoptionsdialog_OptionList_2aHnQ
+  .launchoptionsdialog_SeeProperties_HSQN4 {
+  text-transform: none;
+  color: #b8bcbf;
+  font-size: small;
+}
+.launchoptionsdialog_LaunchOptionDialog_LclHw
+  .launchoptionsdialog_ButtonContainer_3H2Ge {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  margin-right: 10px;
+  margin-left: auto;
+}
+.launchoptionsdialog_LaunchOptionDialog_LclHw
+  .launchoptionsdialog_ButtonContainer_3H2Ge
+  .launchoptionsdialog_PlayButton_3EWVu,
+.launchoptionsdialog_LaunchOptionDialog_LclHw
+  .launchoptionsdialog_ButtonContainer_3H2Ge
+  .launchoptionsdialog_CancelButton_1d8Cb {
+  background: #3d4450;
+  color: #fff;
+  padding: 8px;
+  margin: 10px;
+  font-size: 14px;
+  font-weight: 200;
+  font-family: inherit;
+  text-align: center;
+  letter-spacing: 0.03em;
+  border: none;
+  border-radius: 2px;
+  min-width: 80px;
+  user-select: none;
+  cursor: pointer;
+}
+.launchoptionsdialog_LaunchOptionDialog_LclHw
+  .launchoptionsdialog_ButtonContainer_3H2Ge
+  .launchoptionsdialog_PlayButton_3EWVu:hover,
+.launchoptionsdialog_LaunchOptionDialog_LclHw
+  .launchoptionsdialog_ButtonContainer_3H2Ge
+  .launchoptionsdialog_CancelButton_1d8Cb:hover {
+  background: #525b6a;
+}
+.launchoptionsdialog_LaunchOptionDialog_LclHw
+  .launchoptionsdialog_ButtonContainer_3H2Ge
+  .launchoptionsdialog_PlayButton_3EWVu:active,
+.launchoptionsdialog_LaunchOptionDialog_LclHw
+  .launchoptionsdialog_ButtonContainer_3H2Ge
+  .launchoptionsdialog_CancelButton_1d8Cb:active {
+  background: #2f343e;
+}
+.launchoptionsdialog_LaunchOptionDialog_LclHw
+  .launchoptionsdialog_ButtonContainer_3H2Ge
+  .launchoptionsdialog_PlayButton_3EWVu {
+  background: #1a9fff;
+  font-weight: 400;
+}
+.launchoptionsdialog_LaunchOptionDialog_LclHw
+  .launchoptionsdialog_ButtonContainer_3H2Ge
+  .launchoptionsdialog_PlayButton_3EWVu:hover {
+  background: #0bf;
+}
+.launchoptionsdialog_LaunchOptionDialog_LclHw
+  .launchoptionsdialog_ButtonContainer_3H2Ge
+  .launchoptionsdialog_PlayButton_3EWVu:active {
+  background: #0bf;
+}
+.DesktopUI .launchoptionsdialog_LaunchOptionDialog_LclHw .DialogToggle_Label {
+  font-size: 14px;
+  color: #dcdedf;
+}
+.launchoptionsdialog_MenuHeader_9V51O {
+  padding-bottom: 6px;
+  background: #0e141b;
+}
+.launchoptionsdialog_MenuHeader_9V51O .launchoptionsdialog_MenuMain_LixkU {
+  text-align: center;
+}
+.launchoptionsdialog_MenuHeader_9V51O .launchoptionsdialog_MenuSecondary_2dt4o {
+  color: #b8bcbf;
+  font-size: 12;
+  max-width: 400px;
+  text-align: center;
 }
 @keyframes appdetailsplaysection_ItemFocusAnim-darkerGrey-nocolor_3dfpg {
   from {
@@ -59836,6 +57856,232 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
 .DesktopUI .installrequest_NoticeInstallFolder_WonjN {
   justify-content: flex-end;
 }
+@keyframes euladialog_ItemFocusAnim-darkerGrey-nocolor_3nrMD {
+  from {
+    background: #3d4450;
+  }
+  to {
+    background: #23262e;
+  }
+}
+@keyframes euladialog_ItemFocusAnim-darkerGrey_JYELp {
+  from {
+    background: #3d4450;
+    color: #8b929a;
+  }
+  to {
+    background: #23262e;
+    color: #fff;
+  }
+}
+@keyframes euladialog_ItemFocusAnim-darkGrey_1ifEm {
+  from {
+    background: #67707b;
+    color: #8b929a;
+  }
+  to {
+    background: #3d4450;
+    color: #fff;
+  }
+}
+@keyframes euladialog_ItemFocusAnim-grey_g6kOc {
+  from {
+    background: #8b929a;
+    color: #fff;
+  }
+  to {
+    background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes euladialog_ItemFocusAnimBorder-darkGrey_1-PhQ {
+  from {
+    border-color: #67707b;
+  }
+  to {
+    border-color: #3d4450;
+  }
+}
+@keyframes euladialog_ItemFocusAnim-green_TAKgT {
+  from {
+    background: #c9ffc9;
+    color: #8b929a;
+  }
+  to {
+    background: #59bf40;
+    color: #fff;
+  }
+}
+@keyframes euladialog_focusAnimation_1zESp {
+  0% {
+    background-position: 0% 0%;
+    opacity: 1;
+  }
+  100% {
+    background-position: -180% 0%;
+    opacity: 0.8;
+  }
+}
+@keyframes euladialog_hoverAnimation_21kJB {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
+}
+@keyframes euladialog_ItemFocusAnim-darkerGrey-nocolor_3nrMD {
+  from {
+    background: #3d4450;
+  }
+  to {
+    background: #23262e;
+  }
+}
+@keyframes euladialog_ItemFocusAnim-darkerGrey_JYELp {
+  from {
+    background: #3d4450;
+    color: #8b929a;
+  }
+  to {
+    background: #23262e;
+    color: #fff;
+  }
+}
+@keyframes euladialog_ItemFocusAnim-darkGrey_1ifEm {
+  from {
+    background: #67707b;
+    color: #8b929a;
+  }
+  to {
+    background: #3d4450;
+    color: #fff;
+  }
+}
+@keyframes euladialog_ItemFocusAnim-grey_g6kOc {
+  from {
+    background: #8b929a;
+    color: #fff;
+  }
+  to {
+    background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes euladialog_ItemFocusAnimBorder-darkGrey_1-PhQ {
+  from {
+    border-color: #67707b;
+  }
+  to {
+    border-color: #3d4450;
+  }
+}
+@keyframes euladialog_ItemFocusAnim-green_TAKgT {
+  from {
+    background: #c9ffc9;
+    color: #8b929a;
+  }
+  to {
+    background: #59bf40;
+    color: #fff;
+  }
+}
+.euladialog_EulaIntro_3q_Ir {
+  text-align: center;
+}
+.DesktopUI .euladialog_EulaIntro_3q_Ir {
+  text-align: left;
+}
+.DesktopUI .euladialog_EulaDialogContent_2YXHR {
+  font-size: 14px;
+  color: #b8bcbf;
+}
+.DesktopUI .euladialog_EulaDialogContent_2YXHR .euladialog_EULAScrolling__7lXD {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(14, 20, 27, 0.5);
+}
+.euladialog_EulaModalDialog_3jj_K {
+  flex: 1;
+}
+.euladialog_EulaModalDialog_3jj_K .euladialog_EulaDialogContent_2YXHR {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  height: 0;
+  flex: 1;
+}
+.euladialog_EulaModalDialog_3jj_K.DesktopUI,
+.DesktopUI .euladialog_EulaModalDialog_3jj_K {
+  min-height: 400px;
+  max-height: 700px;
+  height: 76vh;
+}
+.euladialog_EulaModalDialog_3jj_K.DesktopUI .DialogDropDown,
+.DesktopUI .euladialog_EulaModalDialog_3jj_K .DialogDropDown {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 8px 14px;
+  font-size: 13px;
+  line-height: 18px;
+  transition-property: opacity, background, color, box-shadow;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
+}
+.euladialog_EulaModalDialog_3jj_K.DesktopUI .DialogDropDown:hover,
+.DesktopUI .euladialog_EulaModalDialog_3jj_K .DialogDropDown:hover {
+  background: #464d58;
+  color: #fff;
+}
+.euladialog_EulaModalDialog_3jj_K.DesktopUI .DialogDropDown_Arrow,
+.DesktopUI .euladialog_EulaModalDialog_3jj_K .DialogDropDown_Arrow {
+  position: unset;
+  height: 18px;
+}
+.euladialog_EULAThrobber_1gwU6 {
+  flex: 1;
+}
+.euladialog_EULAScrolling__7lXD {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  flex: 1;
+}
+.BasicUI .euladialog_EULAScrolling__7lXD {
+  margin: 0 -2.8vw;
+  padding: 0 2.8vw;
+}
+.euladialog_EULAContent_1dbgU {
+  padding: 10px;
+  background: #23262e;
+  overflow-wrap: anywhere;
+  border-radius: 2px;
+  flex: 1;
+  transition-property: transform, background-color;
+  transition-duration: 0.32s, 0s;
+  transition-timing-function: cubic-bezier(0.17, 0.45, 0.14, 0.83);
+  transform-origin: 12% 50%;
+  animation-timing-function: cubic-bezier(0.17, 0.45, 0.14, 0.83);
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  transform: scale(1) rotateX(0deg);
+}
+.euladialog_EULAContent_1dbgU.gpfocuswithin {
+  animation-name: euladialog_ItemFocusAnim-darkerGrey_JYELp;
+  z-index: 1;
+  animation-name: euladialog_ItemFocusAnim-darkGrey_1ifEm;
+}
+.euladialog_EULAError_1BwVZ {
+  flex: 1;
+  padding: 20px;
+  background: #3d4450;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.euladialog_LanguageFieldContainer_2xwMG {
+  margin-bottom: 10px;
+}
 @keyframes activateproductdialog_ItemFocusAnim-darkerGrey-nocolor_3monw {
   from {
     background: #3d4450;
@@ -61724,6 +59970,779 @@ button.accountpanel_FatButton_TEWms.accountpanel_FatButtonFocus_2rd6k
   .basicappdetailssectionstyler_DeckVerifiedFeedbackConfirmation_2ddhh
   span {
   font-size: 16px !important;
+}
+@keyframes appgrid_ItemFocusAnim-darkerGrey-nocolor_20N6a {
+  from {
+    background: #3d4450;
+  }
+  to {
+    background: #23262e;
+  }
+}
+@keyframes appgrid_ItemFocusAnim-darkerGrey_1h7rD {
+  from {
+    background: #3d4450;
+    color: #8b929a;
+  }
+  to {
+    background: #23262e;
+    color: #fff;
+  }
+}
+@keyframes appgrid_ItemFocusAnim-darkGrey_1epbf {
+  from {
+    background: #67707b;
+    color: #8b929a;
+  }
+  to {
+    background: #3d4450;
+    color: #fff;
+  }
+}
+@keyframes appgrid_ItemFocusAnim-grey_1uEwx {
+  from {
+    background: #8b929a;
+    color: #fff;
+  }
+  to {
+    background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes appgrid_ItemFocusAnimBorder-darkGrey_3B9ip {
+  from {
+    border-color: #67707b;
+  }
+  to {
+    border-color: #3d4450;
+  }
+}
+@keyframes appgrid_ItemFocusAnim-green_3TtYs {
+  from {
+    background: #c9ffc9;
+    color: #8b929a;
+  }
+  to {
+    background: #59bf40;
+    color: #fff;
+  }
+}
+@keyframes appgrid_focusAnimation_C1GgX {
+  0% {
+    background-position: 0% 0%;
+    opacity: 1;
+  }
+  100% {
+    background-position: -180% 0%;
+    opacity: 0.8;
+  }
+}
+@keyframes appgrid_hoverAnimation_2sxXp {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
+}
+@keyframes appgrid_ItemFocusAnim-darkerGrey-nocolor_20N6a {
+  from {
+    background: #3d4450;
+  }
+  to {
+    background: #23262e;
+  }
+}
+@keyframes appgrid_ItemFocusAnim-darkerGrey_1h7rD {
+  from {
+    background: #3d4450;
+    color: #8b929a;
+  }
+  to {
+    background: #23262e;
+    color: #fff;
+  }
+}
+@keyframes appgrid_ItemFocusAnim-darkGrey_1epbf {
+  from {
+    background: #67707b;
+    color: #8b929a;
+  }
+  to {
+    background: #3d4450;
+    color: #fff;
+  }
+}
+@keyframes appgrid_ItemFocusAnim-grey_1uEwx {
+  from {
+    background: #8b929a;
+    color: #fff;
+  }
+  to {
+    background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes appgrid_ItemFocusAnimBorder-darkGrey_3B9ip {
+  from {
+    border-color: #67707b;
+  }
+  to {
+    border-color: #3d4450;
+  }
+}
+@keyframes appgrid_ItemFocusAnim-green_3TtYs {
+  from {
+    background: #c9ffc9;
+    color: #8b929a;
+  }
+  to {
+    background: #59bf40;
+    color: #fff;
+  }
+}
+.appgrid_EmptyGridMessageContainer_Vl8Ft {
+  box-sizing: border-box;
+  padding: 20px;
+}
+.appgrid_EmptyGridMessageLine_15p_9 {
+  box-sizing: border-box;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  margin: 8px 0;
+}
+.appgrid_GridWithControls_rz1mr {
+  box-sizing: border-box;
+  padding: 4px 0px;
+}
+.appgrid_CompatFooterIcons_3wP0R {
+  display: flex;
+  margin-left: 4px;
+  background-color: #23262e;
+  border-radius: 12px;
+  transform-origin: left;
+  justify-content: center;
+  align-items: center;
+  padding: 2px;
+}
+.appgrid_CompatFooterIcons_3wP0R.appgrid_Advanced_1ENSK {
+  padding: 0px 8px;
+}
+.appgrid_CompatFooterDescription_CipKz {
+  display: flex;
+  align-items: center;
+}
+.appgrid_CompatFooterIcons_3wP0R > svg {
+  height: 12px;
+  width: 12px;
+}
+.appgrid_CompatFilterDialog_2xGC- {
+  background-color: #0e141b;
+  border: 2px solid #23262e;
+  padding: 24px;
+  animation-name: appgrid_slideInAnimation_X6DDo;
+  animation-duration: 0.5s;
+  animation-timing-function: cubic-bezier(0.16, 0.86, 0.43, 0.99);
+  animation-fill-mode: both;
+}
+@keyframes appgrid_slideInAnimation_X6DDo {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.appgrid_CompatFilterDialogRow_ORyJN {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  padding: 8px;
+  text-align: left;
+}
+div.appgrid_CompatFilterDialogButton_1FjJ3 {
+  padding: 4px;
+}
+.appgrid_CompatFilterDialogButton_1FjJ3.gpfocuswithin
+  .appgrid_CompatFilterDialogRow_ORyJN
+  .appgrid_CompatFilterDescription_2cvkB {
+  max-height: 900px;
+}
+.appgrid_CompatFilterLabel_3mHIv {
+  font-size: 20px;
+}
+.appgrid_CompatFilterDescription_2cvkB {
+  color: #8b929a;
+  font-size: 14px;
+  max-height: 0px;
+  overflow: hidden;
+}
+.appgrid_CompatFilterDialogDescription_dsyll {
+  padding-bottom: 12px;
+}
+.appgrid_CompatFilterDialogIcons_29dk0 {
+  display: flex;
+  align-items: center;
+  margin-right: 12px;
+}
+.appgrid_CompatFilterDialogIcons_29dk0 > svg.appgrid_Inactive_zymIS {
+  opacity: 0.05;
+}
+.appgrid_CompatFilterDialogTitle_23rml {
+  text-transform: none;
+}
+.gpfocus .appgrid_InvertFocusedIcon_2flD1 {
+  color: inherit;
+}
+.appgrid_YourCollection_11p6F {
+  display: grid;
+  width: 100%;
+  height: auto;
+  padding: 8px 0px;
+  grid-auto-flow: row;
+  grid-template-columns: repeat(auto-fit, 148px);
+  justify-content: space-between;
+}
+.appgrid_CollectionOptions_BpxCz {
+  box-sizing: border-box;
+  padding: 20px 0px 0px 0px;
+  display: flex;
+  user-select: none;
+  align-items: flex-end;
+}
+.appgrid_SortingDropDown_1tBzy {
+  margin-right: 0;
+  display: flex;
+  flex-direction: row;
+  font-size: 12px;
+  align-items: flex-start;
+}
+.appgrid_SortingDropDown_1tBzy .appgrid_SortingDropDownLabel_1ljKT {
+  color: #a0a1a5;
+  text-transform: uppercase;
+  line-height: 18px;
+  font-weight: 100;
+  letter-spacing: 1px;
+  white-space: nowrap;
+  margin-top: 1px;
+}
+.appgrid_SortingDropDown_1tBzy:focus {
+  outline: none;
+}
+.appgrid_SortingDropDown_1tBzy .DialogInputLabelGroup {
+  margin: 0;
+}
+.appgrid_SortingDropDown_1tBzy ._DialogInputContainer {
+  box-sizing: border-box;
+  background: transparent;
+  margin: 0;
+  padding: 0;
+  margin-left: 8px;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 100;
+  letter-spacing: 1px;
+  margin-top: 0px;
+  max-width: 230px;
+  margin-right: 6px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  color: #ccc;
+}
+.appgrid_SortingDropDown_1tBzy ._DialogInputContainer.DialogDropDown:hover {
+  box-shadow: none;
+  color: #fff;
+}
+.appgrid_SortingDropDown_1tBzy
+  ._DialogInputContainer.DialogDropDown.Disabled:hover {
+  color: #ccc;
+}
+.appgrid_SortingDropDown_1tBzy
+  ._DialogInputContainer
+  .DialogDropDown_CurrentDisplay {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding-left: 6px;
+  padding-right: 6px;
+  padding-top: 1px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+.appgrid_SortingDropDown_1tBzy ._DialogInputContainer .DialogDropDown_Arrow {
+  width: 14px;
+  position: relative;
+  top: initial;
+  right: initial;
+  padding-left: 0px;
+  padding-top: 2px;
+  padding-right: 3px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.appgrid_SortingDropDown_1tBzy
+  ._DialogInputContainer
+  .DialogDropDown_Arrow
+  svg {
+  fill: #969696;
+}
+.appgrid_SortingDropDownContainer_1ZpBQ {
+  margin-left: -70px;
+  min-width: 230px;
+}
+.appgrid_SortingDropDownContainer_1ZpBQ.DesktopUI,
+.DesktopUI .appgrid_SortingDropDownContainer_1ZpBQ {
+  transform: translateY(2px);
+}
+.appgrid_SortingDropDownContainer_1ZpBQ > div {
+  box-sizing: border-box;
+  padding: 8px 0;
+  box-shadow: 1px 8px 32px 1px #0009 !important;
+  border: 0.5px solid #6e6e6e;
+  border-radius: 0;
+  background: #75767c !important;
+  color: #fff;
+  border-left: 1px solid #fff;
+}
+.appgrid_SortingDropDownContainer_1ZpBQ > div.DesktopUI,
+.DesktopUI .appgrid_SortingDropDownContainer_1ZpBQ > div {
+  box-shadow: 0 10px 32px 0px #000000ab !important;
+  background: #3d4450 !important;
+  border: none;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.appgrid_SortingDropDownContainer_1ZpBQ .appgrid_SortingDropDownItems_1ZtpS {
+  box-sizing: border-box;
+  padding: 3px 12px;
+  line-height: initial;
+  background-color: transparent;
+  font-size: 12px;
+  font-weight: 100;
+  letter-spacing: 1px;
+  margin-left: 1px;
+}
+.appgrid_SortingDropDownContainer_1ZpBQ
+  .appgrid_SortingDropDownItems_1ZtpS.DesktopUI,
+.DesktopUI
+  .appgrid_SortingDropDownContainer_1ZpBQ
+  .appgrid_SortingDropDownItems_1ZtpS {
+  padding: 8px 18px;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  color: #dcdedf;
+  cursor: pointer;
+  position: relative;
+  min-width: fit-content;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  border-top: none;
+  border-bottom: none;
+}
+.appgrid_SortingDropDownContainer_1ZpBQ
+  .appgrid_SortingDropDownItems_1ZtpS.Focusable:focus {
+  outline: none;
+  background-color: #fff;
+  color: #0e141b;
+}
+.appgrid_SortingDropDownContainer_1ZpBQ
+  .appgrid_SortingDropDownItems_1ZtpS:hover {
+  background-color: #9899a1;
+}
+.appgrid_SortingDropDownContainer_1ZpBQ
+  .appgrid_SortingDropDownItems_1ZtpS:hover.DesktopUI,
+.DesktopUI
+  .appgrid_SortingDropDownContainer_1ZpBQ
+  .appgrid_SortingDropDownItems_1ZtpS:hover {
+  background: #dcdedf;
+  color: #3d4450;
+}
+.appgrid_CollectionOptionsRightJustified_3t1pL {
+  margin-left: auto;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 4px;
+}
+.appgrid_CollectionOptionsRightJustified_3t1pL
+  .appgrid_ShowingReadyToPlay_38IOu {
+  box-sizing: border-box;
+  padding: 0;
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  color: #09b9ff;
+  text-transform: uppercase;
+  margin-right: 20px;
+}
+.appgrid_CollectionOptionsRightJustified_3t1pL .SVGIcon_Installed {
+  width: 20px;
+  height: 20px;
+  fill: #969696;
+  margin-right: 8px;
+  margin-top: -6px;
+}
+.appgrid_CollectionOptionsRightJustified_3t1pL .SVGIcon_Installed polyline {
+  stroke: #969696;
+  stroke-width: 12px;
+}
+.appgrid_InstalledCheckBox_3S2E4 {
+  display: flex;
+  flex-direction: row;
+  font-size: 12px;
+  font-weight: 100;
+  letter-spacing: 1px;
+  color: #ccc;
+  transition-property: color;
+  transition-duration: 0.16s;
+  transition-timing-function: ease-in-out;
+}
+.appgrid_InstalledCheckBox_3S2E4:hover {
+  color: #fff;
+}
+.appgrid_InstalledCheckBox_3S2E4.DialogCheckbox_Container {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  margin-right: 32px;
+}
+.appgrid_InstalledCheckBox_3S2E4.DialogCheckbox_Container:hover
+  .DialogCheckbox {
+  background-color: #fff4;
+}
+.appgrid_InstalledCheckBox_3S2E4 .DialogCheckbox {
+  box-sizing: border-box;
+  height: 15px;
+  width: 15px;
+  background-color: transparent;
+  border: 1px solid #969696;
+  transition-duration: 0.16s;
+  transition-timing-function: ease-in-out;
+  margin-top: 1px;
+}
+.appgrid_InstalledCheckBox_3S2E4 .DialogCheckbox svg {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+.appgrid_InstalledCheckBox_3S2E4 .DialogCheckbox svg path {
+  stroke-width: 20px;
+}
+div.appgrid_CoverSizeSlider_U4J9B {
+  width: 100px;
+  box-sizing: border-box;
+  padding-top: 0;
+  padding-left: 8px;
+  padding-right: 0;
+  background: none;
+  margin-bottom: 0;
+}
+div.appgrid_CoverSizeSlider_U4J9B .DialogSlider_Slider {
+  box-sizing: border-box;
+  border: none;
+  height: 3px;
+  margin-top: 7px;
+  background: #888;
+  box-shadow: inset 0px 11px 8px -10px #131313;
+}
+div.appgrid_CoverSizeSlider_U4J9B .DialogSlider_Value {
+  display: none;
+}
+div.appgrid_CoverSizeSlider_U4J9B .DialogSlider_Grabber {
+  border-radius: 2px;
+  height: 20px;
+  width: 6px;
+  top: -8px;
+  background: #aaa;
+  box-shadow: none;
+}
+div.appgrid_CoverSizeSlider_U4J9B .DialogSlider_Grabber:active,
+div.appgrid_CoverSizeSlider_U4J9B .DialogSlider_Grabber:hover {
+  background: #fff;
+}
+.appgrid_CoverSizeLabel_3gYY5 {
+  box-sizing: border-box;
+  padding: 0;
+  font-size: 12px;
+  font-weight: 100;
+  letter-spacing: 1px;
+  color: #ccc;
+  text-transform: uppercase;
+}
+.appgrid_CoverSizePickerContainer_2Uoqg {
+  display: flex;
+  user-select: none;
+  align-items: flex-end;
+}
+.appgrid_CoverSizePickerContainer_2Uoqg .appgrid_CoverSizes_L64GX {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 4px;
+}
+.appgrid_CoverSizePickerContainer_2Uoqg .appgrid_CoverSizePicker_3U9BQ {
+  width: 20px;
+  height: 20px;
+  color: #969696;
+  text-align: center;
+  border: 1px solid rgba(128, 128, 128, 0.2);
+  margin-left: 8px;
+  align-self: flex-end;
+  cursor: pointer;
+}
+.appgrid_CoverSizePickerContainer_2Uoqg
+  .appgrid_CoverSizePicker_3U9BQ.appgrid_Small_2JAQ7 {
+  width: 5px;
+  height: 7px;
+  font-size: 12px;
+  padding-top: 2px;
+}
+.appgrid_CoverSizePickerContainer_2Uoqg
+  .appgrid_CoverSizePicker_3U9BQ.appgrid_Medium_3e5UM {
+  width: 9px;
+  height: 12px;
+  font-size: 15px;
+  padding-bottom: 1px;
+  padding-top: 1px;
+}
+.appgrid_CoverSizePickerContainer_2Uoqg
+  .appgrid_CoverSizePicker_3U9BQ.appgrid_Large_1c3Av {
+  width: 12px;
+  height: 18px;
+  font-size: 18px;
+  padding-bottom: 2px;
+}
+.appgrid_CoverSizePickerContainer_2Uoqg .appgrid_CoverSizePicker_3U9BQ:hover {
+  color: #fff;
+  border-color: #fff;
+}
+.appgrid_CoverSizePickerContainer_2Uoqg
+  .appgrid_CoverSizePicker_3U9BQ:hover
+  svg {
+  fill: #fff;
+}
+.appgrid_CoverSizePickerContainer_2Uoqg
+  .appgrid_CoverSizePicker_3U9BQ.appgrid_Active_2uzBH {
+  color: #1e90ff;
+  border: 1px solid gray;
+}
+.appgrid_CoverSizePickerContainer_2Uoqg
+  .appgrid_CoverSizePicker_3U9BQ.appgrid_Active_2uzBH
+  svg {
+  fill: #1e90ff;
+}
+.appgrid_CoverSizePickerContainer_2Uoqg .appgrid_CoverSizePicker_3U9BQ svg {
+  fill: #969696;
+}
+.appgrid_TestAppContainer_2Ybdd {
+  box-sizing: border-box;
+  border: 1px solid red;
+  background: gray;
+}
+.appgrid_TestAppContainer_2Ybdd .appgrid_TestApp_-kKx2 {
+  box-sizing: border-box;
+  width: 100%;
+  padding-top: 150%;
+  border: 1px solid red;
+  background: gray;
+}
+:root {
+  --sticky-header-background-opacity: 0;
+}
+.appgrid_AppGridSectionHeader_3bWIS {
+  margin-top: 6px;
+  margin-bottom: 0px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-left: -2px;
+  padding-left: 26px;
+  transform: translatex(-24px);
+  margin-right: -48px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  box-shadow: 0 0px 0px #0004;
+  z-index: 30;
+}
+.BasicUI .appgrid_AppGridSectionHeader_3bWIS {
+  margin-right: -50px;
+  margin-top: 0px;
+}
+.appgrid_AppGridSectionHeader_3bWIS:not(.appgrid_NotReallySticky_E5k6b) {
+  position: sticky;
+  top: 0;
+}
+.BasicUI .appgrid_AppGridSectionHeader_3bWIS {
+  pointer-events: none;
+}
+.BasicUI .appgrid_AppGridSectionHeader_3bWIS > * {
+  pointer-events: all;
+}
+.appgrid_AppGridSectionHeader_3bWIS::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  background: radial-gradient(103% 98vh at 33% 44vh, #313d53 0%, #101314 100%);
+  box-shadow: 0px 4px 4px #0004;
+  opacity: var(--sticky-header-background-opacity);
+  pointer-events: none;
+}
+.appgrid_AppGridSectionHeader_3bWIS .appgrid_Rule_3pJqX {
+  flex-grow: 1;
+  height: 1px;
+  align-self: center;
+  margin-left: 10px;
+  background: linear-gradient(
+    to right,
+    rgba(126, 102, 102, 0.2),
+    rgba(255, 255, 255, 0)
+  );
+}
+.appgrid_AppGridSectionHeader_3bWIS .appgrid_CoverSizePickerContainer_2Uoqg {
+  display: none;
+  margin-right: 20px;
+}
+.appgrid_AppGridSectionHeader_3bWIS.appgrid_IsSticking_sV6aD
+  .appgrid_CoverSizePickerContainer_2Uoqg {
+  display: inherit;
+}
+.appgrid_AppGridSectionLabel_2hvQb {
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 12px;
+  user-select: none;
+  letter-spacing: 2px;
+  font-weight: 100;
+}
+.appgrid_AppGridSectionFooter_2c0Fg {
+  height: 20px;
+  width: 100%;
+}
+.BasicUI .appgrid_AppGridSectionFooter_2c0Fg {
+  height: 0px;
+}
+.appgrid_ReadyToPlayBigButton_3wbWH {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid rgba(201, 201, 201, 0.02);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.5);
+  -webkit-transform: translateZ(0);
+  filter: brightness(1) contrast(1);
+  cursor: pointer;
+  transition-property: -webkit-transform, filter, box-shadow;
+  transition-duration: 0.6s;
+  transition-timing-function: cubic-bezier(0, 0.73, 0.48, 1);
+  user-select: none;
+}
+.appgrid_ReadyToPlayBigButton_3wbWH .appgrid_CountGamesExcluded_2R_HL {
+  color: #a0a1a5;
+  text-transform: uppercase;
+  font-size: 42px;
+  line-height: 38px;
+  text-align: center;
+}
+.appgrid_ReadyToPlayBigButton_3wbWH.appgrid_Small_2JAQ7
+  .appgrid_CountGamesExcluded_2R_HL {
+  font-size: 20px;
+  line-height: 18px;
+}
+.appgrid_ReadyToPlayBigButton_3wbWH.appgrid_Medium_3e5UM
+  .appgrid_CountGamesExcluded_2R_HL {
+  font-size: 30px;
+  line-height: 28px;
+}
+.appgrid_ReadyToPlayBigButton_3wbWH .appgrid_CountGamesExcludedDesc_1MGS3 {
+  color: #a0a1a5;
+  text-transform: uppercase;
+  line-height: 24px;
+  font-size: 22px;
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.appgrid_ReadyToPlayBigButton_3wbWH.appgrid_Small_2JAQ7
+  .appgrid_CountGamesExcludedDesc_1MGS3 {
+  font-size: 12px;
+  line-height: 14px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.appgrid_ReadyToPlayBigButton_3wbWH.appgrid_Medium_3e5UM
+  .appgrid_CountGamesExcludedDesc_1MGS3 {
+  font-size: 17px;
+  line-height: 19px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.appgrid_ReadyToPlayBigButton_3wbWH .SVGIcon_ReadyToPlay {
+  width: 160px;
+  height: 160px;
+  position: relative;
+  top: -20px;
+  right: initial;
+}
+.appgrid_ReadyToPlayBigButton_3wbWH .SVGIcon_ReadyToPlay path {
+  fill: #a0a1a5;
+  stroke: #a0a1a5;
+}
+.appgrid_ReadyToPlayBigButton_3wbWH .SVGIcon_ReadyToPlay circle {
+  stroke: #a0a1a5;
+}
+.appgrid_ReadyToPlayBigButton_3wbWH.appgrid_Small_2JAQ7 .SVGIcon_ReadyToPlay {
+  width: 80px;
+  height: 80px;
+  top: -6px;
+}
+.appgrid_ReadyToPlayBigButton_3wbWH.appgrid_Medium_3e5UM .SVGIcon_ReadyToPlay {
+  width: 120px;
+  height: 120px;
+  top: -8px;
+}
+.appgrid_ReadyToPlayBigButton_3wbWH .appgrid_ReadyToPlayIcon_pCHyk:after {
+  position: absolute;
+  content: "/";
+  color: #a0a1a5;
+  font-size: 120px;
+  font-style: italic;
+  left: 90px;
+  top: 6px;
+}
+.appgrid_ReadyToPlayBigButton_3wbWH.appgrid_Small_2JAQ7
+  .appgrid_ReadyToPlayIcon_pCHyk:after {
+  font-size: 60px;
+  left: 44px;
+  top: 6px;
+}
+.appgrid_ReadyToPlayBigButton_3wbWH.appgrid_Medium_3e5UM
+  .appgrid_ReadyToPlayIcon_pCHyk:after {
+  font-size: 90px;
+  left: 58px;
+  top: 0px;
+}
+.appgrid_ReadyToPlayBigButton_3wbWH:hover {
+  -webkit-transform: rotateX(3deg) translateZ(15px) translateZ(0);
+  filter: brightness(1.1) contrast(0.95) saturate(1);
+  box-shadow: 0px 14px 22px 0px rgba(0, 0, 0, 0.3);
+  z-index: 12;
+}
+.appgrid_ReadyToPlayBigButton_3wbWH:hover:active {
+  transition-duration: 0.05s;
+  transition-timing-function: ease-out;
+  filter: brightness(0.8) contrast(1.05) saturate(1);
 }
 .basiclibrarysettingszoo_GiantHeading_2BoYW {
   font-family: "Motiva Sans", Helvetica, sans-serif;
@@ -66466,6 +65485,622 @@ button.accountpanel_FatButton_TEWms.accountpanel_FatButtonFocus_2rd6k
   );
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
+@keyframes gamepaduiappoverlayvirtualmenucontainer_ItemFocusAnim-darkerGrey-nocolor_hIQRp {
+  from {
+    background: #3d4450;
+  }
+  to {
+    background: #23262e;
+  }
+}
+@keyframes gamepaduiappoverlayvirtualmenucontainer_ItemFocusAnim-darkerGrey_2FgPG {
+  from {
+    background: #3d4450;
+    color: #8b929a;
+  }
+  to {
+    background: #23262e;
+    color: #fff;
+  }
+}
+@keyframes gamepaduiappoverlayvirtualmenucontainer_ItemFocusAnim-darkGrey_3JSgm {
+  from {
+    background: #67707b;
+    color: #8b929a;
+  }
+  to {
+    background: #3d4450;
+    color: #fff;
+  }
+}
+@keyframes gamepaduiappoverlayvirtualmenucontainer_ItemFocusAnim-grey_1QB3w {
+  from {
+    background: #8b929a;
+    color: #fff;
+  }
+  to {
+    background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes gamepaduiappoverlayvirtualmenucontainer_ItemFocusAnimBorder-darkGrey_17zTL {
+  from {
+    border-color: #67707b;
+  }
+  to {
+    border-color: #3d4450;
+  }
+}
+@keyframes gamepaduiappoverlayvirtualmenucontainer_ItemFocusAnim-green_ZSRT7 {
+  from {
+    background: #c9ffc9;
+    color: #8b929a;
+  }
+  to {
+    background: #59bf40;
+    color: #fff;
+  }
+}
+@keyframes gamepaduiappoverlayvirtualmenucontainer_focusAnimation_341ql {
+  0% {
+    background-position: 0% 0%;
+    opacity: 1;
+  }
+  100% {
+    background-position: -180% 0%;
+    opacity: 0.8;
+  }
+}
+@keyframes gamepaduiappoverlayvirtualmenucontainer_hoverAnimation_3-jH6 {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
+}
+:root {
+  --virtualmenu-accent: #1a9fff;
+  --virtualmenu-bg: #1f1f1f;
+  --virtualmenu-bg-hover: #103753;
+  --virtualmenu-fg: #ffffff;
+  --virtualmenutouchkey-icon-width: 100%;
+  --virtualmenutouchkey-icon-height: 100%;
+  --virtualmenupointer-x: 0%;
+  --virtualmenupointer-y: 0%;
+  --virtualmenupointer-color: #1a9fff;
+  --virtualmenutouchkey-midpoint-x: 0%;
+  --virtualmenutouchkey-midpoint-y: 0%;
+  --virtualmenutouchkey-description-width: 0px;
+}
+.gamepaduiappoverlayvirtualmenucontainer_BrowserViewHost_1y1Z7 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.gamepaduiappoverlayvirtualmenucontainer_VirtualMenuContainer_3J5J3 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0;
+  margin: 0;
+  contain: strict;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchMenuPad_2h2k6 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: top left;
+  display: flex;
+  flex-direction: column;
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchMenuPad_2h2k6.gamepaduiappoverlayvirtualmenucontainer_Preview_2o0Iv {
+  padding: 50px;
+}
+.gamepaduiappoverlayvirtualmenucontainer_RadialTouchMenuHoverKeyDescription_4M7pJ {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 60px;
+  line-height: 60px;
+  font-size: 60px;
+  color: #fff;
+  text-align: center;
+}
+.gamepaduiappoverlayvirtualmenucontainer_HotbarDescriptionPopups_2WaL0 {
+  height: 72px;
+  position: relative;
+  contain: strict;
+  margin: 0 4px;
+}
+.gamepaduiappoverlayvirtualmenucontainer_DescriptionPopup_3mD8W.gamepaduiappoverlayvirtualmenucontainer_Radial_2zLRW,
+.gamepaduiappoverlayvirtualmenucontainer_DescriptionPopup_3mD8W.gamepaduiappoverlayvirtualmenucontainer_TouchMenu_3Cqne {
+  perspective: 400px;
+}
+.gamepaduiappoverlayvirtualmenucontainer_DescriptionPopup_3mD8W.gamepaduiappoverlayvirtualmenucontainer_Hotbar_24hPd {
+  position: absolute;
+  --midpoint-left: calc(
+    var(--virtualmenutouchkey-midpoint-x) -
+      (0.5 * var(--virtualmenutouchkey-description-width))
+  );
+  --min-left: 0%;
+  --max-left: calc(100% - var(--virtualmenutouchkey-description-width));
+  left: min(max(var(--midpoint-left), var(--min-left)), var(--max-left));
+  top: 0;
+  bottom: 4px;
+  width: fit-content;
+  max-width: 100%;
+  perspective: 400px;
+}
+.gamepaduiappoverlayvirtualmenucontainer_DescriptionPopup_3mD8W.gamepaduiappoverlayvirtualmenucontainer_Hotbar_24hPd.gamepaduiappoverlayvirtualmenucontainer_Visible_3hp-z {
+  z-index: 1;
+}
+.gamepaduiappoverlayvirtualmenucontainer_DescriptionPopupInner_3tTb5 {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 28px;
+  line-height: 1.5em;
+  border: solid 0px var(--virtualmenu-accent);
+  background: var(--virtualmenu-bg);
+  color: var(--virtualmenu-fg);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  max-width: 100%;
+  font-size: 32px;
+  font-weight: initial;
+  transition:
+    opacity 60ms cubic-bezier(0, 0, 0.1, 1),
+    transform 60ms cubic-bezier(0, 0, 0.1, 1);
+}
+.gamepaduiappoverlayvirtualmenucontainer_DescriptionPopup_3mD8W.gamepaduiappoverlayvirtualmenucontainer_JustMounted_4oqCp
+  .gamepaduiappoverlayvirtualmenucontainer_DescriptionPopupInner_3tTb5 {
+  transition: none !important;
+}
+.gamepaduiappoverlayvirtualmenucontainer_DescriptionPopup_3mD8W.gamepaduiappoverlayvirtualmenucontainer_TouchMenu_3Cqne
+  .gamepaduiappoverlayvirtualmenucontainer_DescriptionPopupInner_3tTb5 {
+  height: 80px;
+  width: 400px;
+  border-top-width: 4px;
+  padding: 12px;
+}
+.gamepaduiappoverlayvirtualmenucontainer_DescriptionPopup_3mD8W.gamepaduiappoverlayvirtualmenucontainer_TouchMenu_3Cqne
+  .gamepaduiappoverlayvirtualmenucontainer_DescriptionPopupInner_3tTb5::before,
+.gamepaduiappoverlayvirtualmenucontainer_DescriptionPopup_3mD8W.gamepaduiappoverlayvirtualmenucontainer_TouchMenu_3Cqne
+  .gamepaduiappoverlayvirtualmenucontainer_DescriptionPopupInner_3tTb5::after {
+  content: "";
+  position: absolute;
+  bottom: calc(1px - 20px);
+  width: 20px;
+  height: 20px;
+  z-index: 1;
+}
+.gamepaduiappoverlayvirtualmenucontainer_DescriptionPopup_3mD8W.gamepaduiappoverlayvirtualmenucontainer_TouchMenu_3Cqne
+  .gamepaduiappoverlayvirtualmenucontainer_DescriptionPopupInner_3tTb5::before {
+  left: 0px;
+  background: -webkit-radial-gradient(
+    100% 100%,
+    circle,
+    transparent 20px,
+    var(--virtualmenu-bg) calc(0.5 * 20px)
+  );
+}
+.gamepaduiappoverlayvirtualmenucontainer_DescriptionPopup_3mD8W.gamepaduiappoverlayvirtualmenucontainer_TouchMenu_3Cqne
+  .gamepaduiappoverlayvirtualmenucontainer_DescriptionPopupInner_3tTb5::after {
+  right: 0px;
+  background: -webkit-radial-gradient(
+    0% 100%,
+    circle,
+    transparent 20px,
+    var(--virtualmenu-bg) calc(0.5 * 20px)
+  );
+}
+.gamepaduiappoverlayvirtualmenucontainer_DescriptionPopup_3mD8W.gamepaduiappoverlayvirtualmenucontainer_Radial_2zLRW
+  .gamepaduiappoverlayvirtualmenucontainer_DescriptionPopupInner_3tTb5 {
+  height: 80px;
+  width: 400px;
+  border-top-width: 4px;
+  padding: 12px;
+}
+.gamepaduiappoverlayvirtualmenucontainer_DescriptionPopup_3mD8W.gamepaduiappoverlayvirtualmenucontainer_Radial_2zLRW
+  .gamepaduiappoverlayvirtualmenucontainer_DescriptionPopupInner_3tTb5::before,
+.gamepaduiappoverlayvirtualmenucontainer_DescriptionPopup_3mD8W.gamepaduiappoverlayvirtualmenucontainer_Radial_2zLRW
+  .gamepaduiappoverlayvirtualmenucontainer_DescriptionPopupInner_3tTb5::after {
+  content: "";
+  position: absolute;
+  bottom: calc(1px - 200px);
+  width: 200px;
+  height: 200px;
+  z-index: 1;
+}
+.gamepaduiappoverlayvirtualmenucontainer_DescriptionPopup_3mD8W.gamepaduiappoverlayvirtualmenucontainer_Radial_2zLRW
+  .gamepaduiappoverlayvirtualmenucontainer_DescriptionPopupInner_3tTb5::before {
+  left: 0px;
+  background: -webkit-radial-gradient(
+    100% 100%,
+    circle,
+    transparent 200px,
+    var(--virtualmenu-bg) calc(0.5 * 200px)
+  );
+}
+.gamepaduiappoverlayvirtualmenucontainer_DescriptionPopup_3mD8W.gamepaduiappoverlayvirtualmenucontainer_Radial_2zLRW
+  .gamepaduiappoverlayvirtualmenucontainer_DescriptionPopupInner_3tTb5::after {
+  right: 0px;
+  background: -webkit-radial-gradient(
+    0% 100%,
+    circle,
+    transparent 200px,
+    var(--virtualmenu-bg) calc(0.5 * 200px)
+  );
+}
+.gamepaduiappoverlayvirtualmenucontainer_DescriptionPopup_3mD8W.gamepaduiappoverlayvirtualmenucontainer_Hotbar_24hPd
+  .gamepaduiappoverlayvirtualmenucontainer_DescriptionPopupInner_3tTb5 {
+  border-bottom-width: 4px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+  white-space: nowrap;
+  padding: 0 40px;
+  gap: 30px;
+  width: fit-content;
+  height: 100%;
+}
+.gamepaduiappoverlayvirtualmenucontainer_DescriptionPopup_3mD8W.gamepaduiappoverlayvirtualmenucontainer_TouchMenu_3Cqne:not(
+    .gamepaduiappoverlayvirtualmenucontainer_Visible_3hp-z
+  )
+  .gamepaduiappoverlayvirtualmenucontainer_DescriptionPopupInner_3tTb5 {
+  opacity: 0;
+  transform: translate3d(0, 50%, -40px) rotate3d(1, 0, 0, 90deg)
+    translate3d(0, -50%, -20px);
+  transition:
+    opacity 120ms cubic-bezier(0.6, 0, 1, 1),
+    transform 120ms cubic-bezier(0.6, 0, 1, 1);
+}
+.gamepaduiappoverlayvirtualmenucontainer_DescriptionPopup_3mD8W.gamepaduiappoverlayvirtualmenucontainer_Radial_2zLRW:not(
+    .gamepaduiappoverlayvirtualmenucontainer_Visible_3hp-z
+  )
+  .gamepaduiappoverlayvirtualmenucontainer_DescriptionPopupInner_3tTb5 {
+  opacity: 0;
+  transform: translate3d(0, 50%, -240px) rotate3d(1, 0, 0, 90deg)
+    translate3d(0, -50%, -220px);
+  transition:
+    opacity 120ms cubic-bezier(0.6, 0, 1, 1),
+    transform 120ms cubic-bezier(0.6, 0, 1, 1);
+}
+.gamepaduiappoverlayvirtualmenucontainer_DescriptionPopup_3mD8W.gamepaduiappoverlayvirtualmenucontainer_Hotbar_24hPd:not(
+    .gamepaduiappoverlayvirtualmenucontainer_Visible_3hp-z
+  )
+  .gamepaduiappoverlayvirtualmenucontainer_DescriptionPopupInner_3tTb5 {
+  opacity: 0;
+  transform: translate3d(0, -50%, -40px) rotate3d(1, 0, 0, -90deg)
+    translate3d(0, 50%, -20px);
+  transition:
+    opacity 120ms cubic-bezier(0.6, 0, 1, 1),
+    transform 120ms cubic-bezier(0.6, 0, 1, 1);
+}
+.gamepaduiappoverlayvirtualmenucontainer_DescriptionPopupInner_3tTb5
+  .gamepaduiappoverlayvirtualmenucontainer_Description_3Hibt {
+  flex-grow: 1;
+  min-width: 0;
+  white-space: nowrap;
+}
+.gamepaduiappoverlayvirtualmenucontainer_DescriptionPopupInner_3tTb5
+  .gamepaduiappoverlayvirtualmenucontainer_TouchKeyGlyph_2Km9Z {
+  margin: auto;
+  height: 100%;
+  min-width: 3ch;
+  max-width: 100%;
+  width: fit-content;
+  flex-shrink: 0;
+}
+.gamepaduiappoverlayvirtualmenucontainer_DescriptionPopupInner_3tTb5
+  .gamepaduiappoverlayvirtualmenucontainer_TouchKeyGlyph_2Km9Z.gamepaduiappoverlayvirtualmenucontainer_KeyboardKey_312mr {
+  font-size: 48px;
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchKeyContainer_1MxnF {
+  width: 400px;
+  height: 400px;
+  position: relative;
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchMenuPad_2h2k6.gamepaduiappoverlayvirtualmenucontainer_Hotbar_24hPd
+  .gamepaduiappoverlayvirtualmenucontainer_TouchKeyContainer_1MxnF {
+  width: auto;
+  height: 180px;
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchMenuKey_b4zYW {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: var(--virtualmenu-fg);
+  background-color: var(--virtualmenu-bg);
+  border-top: solid 4px var(--virtualmenu-bg);
+  box-sizing: border-box;
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchMenuPad_2h2k6:not(
+    .gamepaduiappoverlayvirtualmenucontainer_Radial_2zLRW
+  )
+  .gamepaduiappoverlayvirtualmenucontainer_TouchMenuKey_b4zYW {
+  margin: 4px;
+  width: calc(var(--virtualmenutouchkey-width) - 8px);
+  height: calc(var(--virtualmenutouchkey-height) - 8px);
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchMenuPad_2h2k6:not(
+    .gamepaduiappoverlayvirtualmenucontainer_Radial_2zLRW
+  ):not(.gamepaduiappoverlayvirtualmenucontainer_Hotbar_24hPd)
+  .gamepaduiappoverlayvirtualmenucontainer_TouchMenuKey_b4zYW.gamepaduiappoverlayvirtualmenucontainer_TopEdge_1rA16.gamepaduiappoverlayvirtualmenucontainer_LeftEdge_1N8HM {
+  border-top-left-radius: 20px;
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchMenuPad_2h2k6:not(
+    .gamepaduiappoverlayvirtualmenucontainer_Radial_2zLRW
+  ):not(.gamepaduiappoverlayvirtualmenucontainer_Hotbar_24hPd)
+  .gamepaduiappoverlayvirtualmenucontainer_TouchMenuKey_b4zYW.gamepaduiappoverlayvirtualmenucontainer_TopEdge_1rA16.gamepaduiappoverlayvirtualmenucontainer_RightEdge_3VkZb {
+  border-top-right-radius: 20px;
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchMenuPad_2h2k6:not(
+    .gamepaduiappoverlayvirtualmenucontainer_Radial_2zLRW
+  ):not(.gamepaduiappoverlayvirtualmenucontainer_Hotbar_24hPd)
+  .gamepaduiappoverlayvirtualmenucontainer_TouchMenuKey_b4zYW.gamepaduiappoverlayvirtualmenucontainer_BottomEdge_3-DR_.gamepaduiappoverlayvirtualmenucontainer_LeftEdge_1N8HM {
+  border-bottom-left-radius: 20px;
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchMenuPad_2h2k6:not(
+    .gamepaduiappoverlayvirtualmenucontainer_Radial_2zLRW
+  ):not(.gamepaduiappoverlayvirtualmenucontainer_Hotbar_24hPd)
+  .gamepaduiappoverlayvirtualmenucontainer_TouchMenuKey_b4zYW.gamepaduiappoverlayvirtualmenucontainer_BottomEdge_3-DR_.gamepaduiappoverlayvirtualmenucontainer_RightEdge_3VkZb {
+  border-bottom-right-radius: 20px;
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchMenuKey_b4zYW:not(
+    .gamepaduiappoverlayvirtualmenucontainer_Radial_2zLRW
+  ).gamepaduiappoverlayvirtualmenucontainer_Bound_1zlPn:not(
+    .gamepaduiappoverlayvirtualmenucontainer_Placeholder_1ATSn
+  ).gamepaduiappoverlayvirtualmenucontainer_TouchKeyHover_2CiMT {
+  background: var(--virtualmenu-bg-hover);
+  border-top-color: var(--virtualmenu-accent);
+  z-index: 1;
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchMenuKey_b4zYW.gamepaduiappoverlayvirtualmenucontainer_Radial_2zLRW {
+  width: 80px;
+  height: 80px;
+  --midpoint-pct-from-center: 0.74;
+  top: calc(
+    (var(--virtualmenutouchkey-midpoint-y) - 50%) *
+      var(--midpoint-pct-from-center) + 50% - 40px
+  );
+  left: calc(
+    (var(--virtualmenutouchkey-midpoint-x) - 50%) *
+      var(--midpoint-pct-from-center) + 50% - 40px
+  );
+  overflow: hidden;
+  border: none;
+  background: none;
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchMenuKey_b4zYW.gamepaduiappoverlayvirtualmenucontainer_Radial_2zLRW.gamepaduiappoverlayvirtualmenucontainer_Center_tkv56 {
+  border: solid 4px transparent;
+  border-radius: 50%;
+  background-color: var(--virtualmenu-bg);
+  width: 184px;
+  height: 184px;
+  top: calc(50% - 92px);
+  left: calc(50% - 92px);
+  box-sizing: border-box;
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchMenuKey_b4zYW.gamepaduiappoverlayvirtualmenucontainer_Radial_2zLRW.gamepaduiappoverlayvirtualmenucontainer_Center_tkv56.gamepaduiappoverlayvirtualmenucontainer_Bound_1zlPn:not(
+    .gamepaduiappoverlayvirtualmenucontainer_Placeholder_1ATSn
+  ).gamepaduiappoverlayvirtualmenucontainer_TouchKeyHover_2CiMT {
+  border-color: var(--virtualmenu-accent);
+  background-color: var(--virtualmenu-bg-hover);
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchMenuKey_b4zYW:not(
+    .gamepaduiappoverlayvirtualmenucontainer_Bound_1zlPn
+  ),
+.gamepaduiappoverlayvirtualmenucontainer_TouchMenuKey_b4zYW.gamepaduiappoverlayvirtualmenucontainer_Placeholder_1ATSn {
+  opacity: 0.5;
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchLabel_1kouc {
+  font-size: 64px;
+  text-align: center;
+  opacity: 0.6;
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchLabel_1kouc:not(
+    .gamepaduiappoverlayvirtualmenucontainer_Visible_3hp-z
+  ) {
+  visibility: hidden;
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchMenuKey_b4zYW.gamepaduiappoverlayvirtualmenucontainer_Radial_2zLRW
+  .gamepaduiappoverlayvirtualmenucontainer_TouchLabel_1kouc {
+  font-size: 48px;
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchLabel_1kouc
+  .gamepaduiappoverlayvirtualmenucontainer_Inner_GBHo1 {
+  display: block;
+  width: 100%;
+  padding-left: 16px;
+}
+.gamepaduiappoverlayvirtualmenucontainer_BindingIcon_3hQ9g {
+  margin: auto;
+  background-blend-mode: multiply;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-size: cover;
+  mask-repeat: no-repeat;
+  mask-position: center;
+}
+.gamepaduiappoverlayvirtualmenucontainer_BindingIcon_3hQ9g.gamepaduiappoverlayvirtualmenucontainer_HasImage_3m8Gj {
+  width: var(--virtualmenutouchkey-icon-width);
+  height: var(--virtualmenutouchkey-icon-height);
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchMenuKey_b4zYW.gamepaduiappoverlayvirtualmenucontainer_Radial_2zLRW
+  .gamepaduiappoverlayvirtualmenucontainer_BindingIcon_3hQ9g {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchMenuKey_b4zYW.gamepaduiappoverlayvirtualmenucontainer_Radial_2zLRW
+  .gamepaduiappoverlayvirtualmenucontainer_BindingIcon_3hQ9g.gamepaduiappoverlayvirtualmenucontainer_HasImage_3m8Gj {
+  width: calc(var(--virtualmenutouchkey-icon-width) * 0.65);
+  height: calc(var(--virtualmenutouchkey-icon-height) * 0.65);
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchMenuKey_b4zYW.gamepaduiappoverlayvirtualmenucontainer_Hotbar_24hPd
+  .gamepaduiappoverlayvirtualmenucontainer_BindingIcon_3hQ9g {
+  width: 45%;
+  height: 45%;
+}
+.gamepaduiappoverlayvirtualmenucontainer_BindingIcon_3hQ9g.gamepaduiappoverlayvirtualmenucontainer_TouchKeyGlyph_2Km9Z {
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 0 4px;
+  font-size: 64px;
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchMenuKey_b4zYW.gamepaduiappoverlayvirtualmenucontainer_Radial_2zLRW
+  .gamepaduiappoverlayvirtualmenucontainer_BindingIcon_3hQ9g.gamepaduiappoverlayvirtualmenucontainer_TouchKeyGlyph_2Km9Z {
+  font-size: 44px;
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchMenuKey_b4zYW.gamepaduiappoverlayvirtualmenucontainer_SemitransparentIcons_2a4AL:not(
+    .gamepaduiappoverlayvirtualmenucontainer_TouchKeyHover_2CiMT
+  )
+  .gamepaduiappoverlayvirtualmenucontainer_TouchLabel_1kouc,
+.gamepaduiappoverlayvirtualmenucontainer_TouchMenuKey_b4zYW.gamepaduiappoverlayvirtualmenucontainer_SemitransparentIcons_2a4AL:not(
+    .gamepaduiappoverlayvirtualmenucontainer_TouchKeyHover_2CiMT
+  )
+  .gamepaduiappoverlayvirtualmenucontainer_BindingIcon_3hQ9g {
+  opacity: 0.8;
+}
+.gamepaduiappoverlayvirtualmenucontainer_Pointer_Syyx9 {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: translate(
+    calc(var(--virtualmenupointer-x) - 15px),
+    calc(var(--virtualmenupointer-y) - 15px)
+  );
+  pointer-events: none;
+}
+.gamepaduiappoverlayvirtualmenucontainer_Pointer_Syyx9::before {
+  content: "";
+  background: #0e141b;
+  border-radius: 15px;
+  pointer-events: all;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  opacity: 0.8;
+  transition: background-color 0.15s ease-out;
+}
+.gamepaduiappoverlayvirtualmenucontainer_Pointer_Syyx9.gamepaduiappoverlayvirtualmenucontainer_Active_1-Gjf::before {
+  background: var(--virtualmenupointer-color);
+}
+.gamepaduiappoverlayvirtualmenucontainer_CircleSegments_oHW-j {
+  width: 100%;
+  height: 100%;
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchKeyGlyph_2Km9Z {
+  display: flex;
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchKeyGlyph_2Km9Z
+  .gamepaduiappoverlayvirtualmenucontainer_Label_15bBh {
+  margin: auto;
+  max-width: 100%;
+  text-align: center;
+  color: var(--virtualmenu-fg);
+  border-radius: 0.3em;
+  font-size: 0.5em;
+  font-weight: 700;
+  border: solid 2px var(--virtualmenu-fg);
+  display: flex;
+  flex-direction: row;
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchKeyGlyph_2Km9Z
+  .gamepaduiappoverlayvirtualmenucontainer_Label_15bBh::before,
+.gamepaduiappoverlayvirtualmenucontainer_TouchKeyGlyph_2Km9Z
+  .gamepaduiappoverlayvirtualmenucontainer_Label_15bBh::after {
+  content: "";
+  flex-shrink: 1;
+  width: 1ch;
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchKeyGlyph_2Km9Z.gamepaduiappoverlayvirtualmenucontainer_KeyboardKey_312mr
+  .gamepaduiappoverlayvirtualmenucontainer_Label_15bBh {
+  color: var(--virtualmenu-bg);
+  background-color: var(--virtualmenu-fg);
+  border-radius: 0.2em;
+  border-bottom: solid 0.2em rgba(0, 0, 0, 0.5);
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchKeyGlyph_2Km9Z.gamepaduiappoverlayvirtualmenucontainer_KeyboardKey_312mr
+  .gamepaduiappoverlayvirtualmenucontainer_Label_15bBh::before,
+.gamepaduiappoverlayvirtualmenucontainer_TouchKeyGlyph_2Km9Z.gamepaduiappoverlayvirtualmenucontainer_KeyboardKey_312mr
+  .gamepaduiappoverlayvirtualmenucontainer_Label_15bBh::after {
+  width: 0.8ch;
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchKeyGlyph_2Km9Z
+  .gamepaduiappoverlayvirtualmenucontainer_Label_15bBh
+  .gamepaduiappoverlayvirtualmenucontainer_Inner_GBHo1 {
+  flex-grow: 1;
+  flex-shrink: 0;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.7em;
+  font-weight: 800;
+}
+.gamepaduiappoverlayvirtualmenucontainer_TouchKeyGlyph_2Km9Z
+  .gamepaduiappoverlayvirtualmenucontainer_GlyphImage_xgJke {
+  height: 100%;
+  width: 100%;
+  background-blend-mode: multiply;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-size: cover;
+  mask-repeat: no-repeat;
+  mask-position: center;
+}
+.gamepaduiappoverlayvirtualmenucontainer_RadialSegment_J6O5u {
+  fill: #1f1f1f;
+}
+.gamepaduiappoverlayvirtualmenucontainer_RadialSegment_J6O5u.gamepaduiappoverlayvirtualmenucontainer_Bound_1zlPn:not(
+    .gamepaduiappoverlayvirtualmenucontainer_Placeholder_1ATSn
+  ).gamepaduiappoverlayvirtualmenucontainer_Active_1-Gjf {
+  fill: #103753;
+}
+.gamepaduiappoverlayvirtualmenucontainer_RadialSegment_J6O5u:not(
+    .gamepaduiappoverlayvirtualmenucontainer_Bound_1zlPn
+  ),
+.gamepaduiappoverlayvirtualmenucontainer_RadialSegment_J6O5u.gamepaduiappoverlayvirtualmenucontainer_Placeholder_1ATSn {
+  opacity: 0.5;
+}
+.gamepaduiappoverlayvirtualmenucontainer_SelectionArc_2Znw2 {
+  fill: #1a9fff;
+  transition: fill 0.15s ease-out;
+}
 .mainpanelapprunning_MainPanelAppRunning_3x-nj {
   height: 100%;
 }
@@ -69045,6 +68680,12 @@ button.keyboardsettings_ShowKeyboardButton_3vbFn svg {
 .remoteplaysettings_SubSetting_1v7vl .Panel > div {
   padding-left: 32px;
 }
+.remoteplaydialog_DialogBodyText_1Mzhx .DialogLabel {
+  font-size: 14px;
+  padding-bottom: 16px;
+  margin-bottom: 0px;
+  text-transform: none;
+}
 @keyframes friendssettings_ItemFocusAnim-darkerGrey-nocolor_Pp5Dr {
   from {
     background: #3d4450;
@@ -69980,6 +69621,367 @@ div.LowPerfMode
   padding-right: 5px;
   vertical-align: middle;
 }
+@keyframes applaunchingdetails_ItemFocusAnim-darkerGrey-nocolor_1FxlL {
+  from {
+    background: #3d4450;
+  }
+  to {
+    background: #23262e;
+  }
+}
+@keyframes applaunchingdetails_ItemFocusAnim-darkerGrey_2aeuM {
+  from {
+    background: #3d4450;
+    color: #8b929a;
+  }
+  to {
+    background: #23262e;
+    color: #fff;
+  }
+}
+@keyframes applaunchingdetails_ItemFocusAnim-darkGrey_2IKnK {
+  from {
+    background: #67707b;
+    color: #8b929a;
+  }
+  to {
+    background: #3d4450;
+    color: #fff;
+  }
+}
+@keyframes applaunchingdetails_ItemFocusAnim-grey_4BwNm {
+  from {
+    background: #8b929a;
+    color: #fff;
+  }
+  to {
+    background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes applaunchingdetails_ItemFocusAnimBorder-darkGrey_1sMkE {
+  from {
+    border-color: #67707b;
+  }
+  to {
+    border-color: #3d4450;
+  }
+}
+@keyframes applaunchingdetails_ItemFocusAnim-green_1Gdnr {
+  from {
+    background: #c9ffc9;
+    color: #8b929a;
+  }
+  to {
+    background: #59bf40;
+    color: #fff;
+  }
+}
+@keyframes applaunchingdetails_focusAnimation_xE1Fu {
+  0% {
+    background-position: 0% 0%;
+    opacity: 1;
+  }
+  100% {
+    background-position: -180% 0%;
+    opacity: 0.8;
+  }
+}
+@keyframes applaunchingdetails_hoverAnimation_3anto {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
+}
+.applaunchingdetails_Container_1NEW9 {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: calc(100vh - 40px);
+  justify-content: center;
+  align-items: center;
+}
+.applaunchingdetails_Container_1NEW9,
+.applaunchingdetails_Container_1NEW9.applaunchingdetails_FullscreenEnterStart_3mGgs:not(
+    .applaunchingdetails_FullscreenEnterActive_3K_3T
+  ),
+.applaunchingdetails_Container_1NEW9.applaunchingdetails_FullscreenExitActive_zemdh,
+.applaunchingdetails_Container_1NEW9.applaunchingdetails_FullscreenExitDone_3X1sx {
+  transform: translateY(-200px);
+  opacity: 0;
+}
+.applaunchingdetails_Container_1NEW9.applaunchingdetails_FullscreenEnterActive_3K_3T,
+.applaunchingdetails_Container_1NEW9.applaunchingdetails_FullscreenEnterDone_1qp33,
+.applaunchingdetails_Container_1NEW9.applaunchingdetails_FullscreenExitStart_1mOWz:not(
+    .applaunchingdetails_FullscreenExitActive_zemdh
+  ),
+.applaunchingdetails_Container_1NEW9.applaunchingdetails_FullscreenAppearDone_136Im {
+  transform: none;
+  opacity: 1;
+}
+.applaunchingdetails_Container_1NEW9.applaunchingdetails_FullscreenEnterActive_3K_3T {
+  transition:
+    opacity 800ms ease-in,
+    transform 800ms cubic-bezier(0, 0, 0.1, 1);
+  transition-delay: 133.3333333333ms;
+}
+.applaunchingdetails_Container_1NEW9.applaunchingdetails_FullscreenExitActive_zemdh {
+  transition:
+    opacity 400ms ease-out,
+    transform 800ms cubic-bezier(0, 0, 0.1, 1);
+}
+.applaunchingdetails_ConfigurationHeader_30C5a {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 16px;
+}
+.applaunchingdetails_ConfigurationName_XPWRZ {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0 auto;
+  margin-top: 6px;
+  color: #b8bcbf;
+  text-align: center;
+}
+.applaunchingdetails_TopSection_16H1c {
+  flex-grow: 1;
+  flex-shrink: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  align-items: center;
+}
+.applaunchingdetails_LogoSpacerTop_1njPa,
+.applaunchingdetails_LogoSpacerBottom_ptAD4 {
+  min-height: 8px;
+  flex-shrink: 1;
+  flex-grow: 0;
+  width: 200px;
+}
+.applaunchingdetails_LogoSpacerTop_1njPa.applaunchingdetails_LogoSpacerTop_1njPa,
+.applaunchingdetails_LogoSpacerBottom_ptAD4.applaunchingdetails_LogoSpacerTop_1njPa {
+  height: 30px;
+  flex-grow: 1;
+}
+.applaunchingdetails_LogoSpacerTop_1njPa.applaunchingdetails_LogoSpacerBottom_ptAD4,
+.applaunchingdetails_LogoSpacerBottom_ptAD4.applaunchingdetails_LogoSpacerBottom_ptAD4 {
+  height: 24px;
+}
+.applaunchingdetails_LogoOrTitleContainer_2uvMX {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 1;
+  height: 87px;
+  min-height: 30px;
+}
+.applaunchingdetails_LogoOrTitleContainer_2uvMX img {
+  margin: auto;
+  height: 100%;
+  max-width: 500px;
+  object-fit: contain;
+}
+.applaunchingdetails_TitleText_2wIEO {
+  font-size: 34px;
+  font-weight: 800;
+  margin: auto;
+  padding: 0 20px;
+  text-align: center;
+  -webkit-text-fill-color: transparent;
+  background: linear-gradient(
+    to bottom,
+    #fff 0%,
+    #fff 20%,
+    #fff 40%,
+    #eee 60%,
+    #ddd 80%,
+    #ccc 100%
+  );
+  -webkit-background-clip: text;
+}
+.applaunchingdetails_ConfigurationHeaderBold_3E3b6 {
+  font-weight: bold;
+}
+.applaunchingdetails_Divider_1wneT {
+  height: 1px;
+  width: 680px;
+  background: #fff;
+  opacity: 0.2;
+  flex-shrink: 0;
+}
+.applaunchingdetails_TopSection_16H1c .applaunchingdetails_Divider_1wneT {
+  margin-bottom: 0;
+}
+.applaunchingdetails_BottomSection_2HF0k .applaunchingdetails_Divider_1wneT {
+  margin-top: 0;
+}
+@keyframes applaunchingdetails_ShowControlOverviewContainerAnimation_MNeWP {
+  from {
+    opacity: 0;
+    transform: translateX(-80%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+.applaunchingdetails_ControlOverviewContainer_3ixQR {
+  display: flex;
+  flex-shrink: 1;
+  flex-direction: column;
+  padding-bottom: 24px;
+  min-height: 150px;
+  transition:
+    opacity 350ms ease,
+    transform 350ms ease-out;
+  transition-delay: 280ms;
+}
+.applaunchingdetails_ControlOverviewContainer_3ixQR:not(
+    .applaunchingdetails_Visible_2Bi9R
+  ) {
+  transition: none;
+  opacity: 0;
+  transform: scale(0.7);
+}
+.applaunchingdetails_ControlOverviewContainer_3ixQR svg {
+  margin: auto;
+}
+.applaunchingdetails_BottomSection_2HF0k {
+  flex-grow: 4;
+  display: flex;
+  flex-direction: column;
+}
+.applaunchingdetails_BottomSectionChildren_3AOBS {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 10px;
+}
+.applaunchingdetails_LaunchStatus_1ZWPD {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-weight: 500;
+  padding-bottom: 20px;
+}
+.applaunchingdetails_SkipProcessingShaderCache_3NZ34.DialogButton {
+  margin-top: 14px;
+  width: auto;
+  min-width: 150px;
+}
+.applaunchingdetails_TemporaryDetails_3Yz5H {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-weight: 500;
+  color: #ffc82c;
+  padding-bottom: 12px;
+  padding-top: 6px;
+}
+.applaunchingdetails_ControllerInterstitialAnimationContainer_W-nlX {
+  min-height: 20px;
+  height: 175px;
+  width: auto;
+  display: flex;
+}
+.applaunchingdetails_ControllerInterstitialAnimationContainer_W-nlX.applaunchingdetails_SteamDeck_2VNwW {
+  margin: 0 auto -30px auto;
+}
+.applaunchingdetails_ControllerInterstitialAnimationContainer_W-nlX img {
+  height: 100%;
+  margin: auto;
+}
+.applaunchingdetails_StatusSpinner_hir4W {
+  height: 1.6em;
+  margin-right: 0.5ch;
+  margin-bottom: -0.5em;
+}
+.applaunchingdetails_GyroImage1A_2G_ik {
+  animation-name: applaunchingdetails_gyroAnim2_2_qCH;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+@keyframes applaunchingdetails_gyroAnim2_2_qCH {
+  0% {
+    transform: rotate(2deg);
+  }
+  50% {
+    transform: rotate(-2deg);
+  }
+  100% {
+    transform: rotate(2deg);
+  }
+}
+.applaunchingdetails_TopSection_16H1c,
+.applaunchingdetails_BottomSection_2HF0k {
+  transition: transform 700ms ease;
+}
+.applaunchingdetails_TopSection_16H1c:not(
+    .applaunchingdetails_ShowControlsOverview_2g15H
+  ) {
+  transition: none;
+  transform: translateY(calc(var(--controls-overview-height) / 2));
+}
+.applaunchingdetails_BottomSection_2HF0k:not(
+    .applaunchingdetails_ShowControlsOverview_2g15H
+  ) {
+  transition: none;
+  transform: translateY(calc(var(--controls-overview-height) / -2));
+}
+.applaunchingdetails_BottomSection_2HF0k:not(
+    .applaunchingdetails_ShowControlsOverview_2g15H
+  )
+  .applaunchingdetails_Divider_1wneT {
+  opacity: 0;
+}
 .console_Console_1fuML {
   width: 100%;
   height: 100%;
@@ -70871,6 +70873,10 @@ img {
   .mainmenu_Item_2w9Tp.mainmenu_Active_10bq5 {
   transform-origin: center;
 }
+.mainmenu_Menu_23IDi.mainmenu_VR_1ABsh
+  .mainmenu_Item_2w9Tp:not(.mainmenu_Active_10bq5) {
+  color: #8b929a;
+}
 .mainmenu_Item_2w9Tp .mainmenu_ActiveDot_1uLVH {
   position: absolute;
   left: -3px;
@@ -70902,7 +70908,6 @@ img {
 .mainmenu_Menu_23IDi.mainmenu_VR_1ABsh .mainmenu_Item_2w9Tp {
   padding: 3px 50px 3px 30px;
   display: flex;
-  color: #8b929a;
 }
 .mainmenu_Menu_23IDi.mainmenu_VR_1ABsh.mainmenu_Collapsed_3I23q
   .mainmenu_Item_2w9Tp {
@@ -70927,7 +70932,7 @@ img {
   color: #b8bcbf;
 }
 .mainmenu_Menu_23IDi.mainmenu_VR_1ABsh
-  .mainmenu_Item_2w9Tp:not(.mainmenu_Blocked_1OasT)
+  .mainmenu_Item_2w9Tp:not(.mainmenu_Active_10bq5):not(.mainmenu_Blocked_1OasT)
   .mainmenu_ItemIcon_3xZ3Z {
   color: #8b929a;
 }
@@ -70965,7 +70970,7 @@ img {
   max-width: 160px;
 }
 .mainmenu_Menu_23IDi.mainmenu_VR_1ABsh
-  .mainmenu_Item_2w9Tp:not(.mainmenu_Blocked_1OasT)
+  .mainmenu_Item_2w9Tp:not(.mainmenu_Active_10bq5):not(.mainmenu_Blocked_1OasT)
   .mainmenu_ItemLabel_3x-ZK {
   color: #8b929a;
 }
@@ -110911,6 +110916,128 @@ svg.steamtemplates_FriendIndicator_suNJh .Outline {
   width: 30px;
   height: 30px;
   margin-bottom: 0px;
+}
+:root {
+  --touchmenuicon-fg: #b8bcbf;
+  --touchmenuicon-bg: #1f1f1f;
+  --touchmenuicon-scale: 1;
+}
+.controllerconfiguratoriconpicker_BindingIcon_2IoBn {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 5px;
+  background-color: var(--touchmenuicon-bg);
+}
+.controllerconfiguratoriconpicker_BindingIcon_2IoBn.controllerconfiguratoriconpicker_Placeholder_6aPbQ,
+.gpfocus
+  .controllerconfiguratoriconpicker_BindingIcon_2IoBn.controllerconfiguratoriconpicker_Placeholder_6aPbQ {
+  color: var(--touchmenuicon-fg);
+}
+.controllerconfiguratoriconpicker_BindingIconImage_SRLtS {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.controllerconfiguratoriconpicker_BindingIconImage_SRLtS.controllerconfiguratoriconpicker_WithForeground_2Gg0- {
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  background-blend-mode: multiply;
+}
+.controllerconfiguratoriconpicker_BindingIcon_2IoBn > * {
+  width: 100%;
+  height: 100%;
+  transform: scale(var(--touchmenuicon-scale));
+}
+.controllerconfiguratoriconpicker_IconPickerDialog_15a1c {
+  flex: 1;
+  overflow: hidden;
+}
+.controllerconfiguratoriconpicker_IconGridScrollable_2Fu1M {
+  --scroll-fade-size: 50px;
+  padding: 7px 2.8vw;
+  margin: 0 -2.8vw;
+  box-sizing: border-box;
+  height: 100%;
+  width: auto;
+}
+.controllerconfiguratoriconpicker_IconGrid_2gQN3 {
+  justify-content: space-between;
+  align-content: flex-start;
+  display: grid;
+  grid-gap: 6px;
+  grid-template-columns: repeat(auto-fill, 40px);
+  grid-auto-rows: minmax(40px, auto);
+}
+button.controllerconfiguratoriconpicker_IconButton_1VO-Y.DialogButton {
+  padding: 0;
+  min-width: 0;
+  width: 40px;
+  max-width: 40px;
+  height: 40px;
+}
+button.controllerconfiguratoriconpicker_IconButton_1VO-Y.DialogButton,
+button.controllerconfiguratoriconpicker_IconButton_1VO-Y.DialogButton:enabled.gpfocus,
+button.controllerconfiguratoriconpicker_IconButton_1VO-Y.DialogButton:enabled:active {
+  background: #23262e;
+}
+button.controllerconfiguratoriconpicker_IconButton_1VO-Y.DialogButton.controllerconfiguratoriconpicker_Highlighted__kSxS,
+button.controllerconfiguratoriconpicker_IconButton_1VO-Y.DialogButton:enabled.gpfocus.controllerconfiguratoriconpicker_Highlighted__kSxS,
+button.controllerconfiguratoriconpicker_IconButton_1VO-Y.DialogButton:enabled:active.controllerconfiguratoriconpicker_Highlighted__kSxS {
+  outline: solid 2px #1a9fff;
+}
+.controllerconfiguratoriconpicker_TabbedPageBleed_3OaOJ {
+  margin: 0 -2.8vw;
+  flex-grow: 1;
+}
+.controllerconfiguratoriconpicker_FooterButtons_3rE6E {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.controllerconfiguratoriconpicker_ColorPickerStep_2gTGy {
+  display: flex;
+  flex-direction: row;
+  margin-top: 24px;
+}
+.controllerconfiguratoriconpicker_ColorPickers_2gA0w {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.controllerconfiguratoriconpicker_Preview_BnK2z {
+  align-self: stretch;
+  margin: 0 auto;
+  margin-right: 2.8vw;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  position: relative;
+  height: fit-content;
+  cursor: pointer;
+}
+.controllerconfiguratoriconpicker_Preview_BnK2z:not(.gpfocus) {
+  border-radius: 5px;
+}
+.controllerconfiguratoriconpicker_Preview_BnK2z > * {
+  width: 150px;
+  height: 150px;
+}
+.controllerconfiguratoriconpicker_ColorPickerColors_LTkmQ {
+  display: flex;
+  flex-direction: row;
+}
+.controllerconfiguratoriconpicker_ColorPickerColor_1LLMM {
+  height: 16px;
+  flex-grow: 1;
+  cursor: pointer;
+}
+.controllerconfiguratoriconpicker_ColorPickerColor_1LLMM.controllerconfiguratoriconpicker_Selected_mxtdB {
+  z-index: 1;
+  transform: scale(1.3);
+  box-shadow: 0 1px 3px 0px #000;
+  border-radius: 1px;
 }
 @keyframes controllerconfiguratorvirtualmenus_ItemFocusAnim-darkerGrey-nocolor_3Bl5f {
   from {

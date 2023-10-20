@@ -2093,7 +2093,7 @@ none
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/friendsuihelpers.cpp
 IsARM() || GetCPUInformation().m_bSSE2
 GetBootstrapperVersion
-IVRSteamPrivate_017
+IVRSteamPrivate_018
 resolve
 reject
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/refcount.h

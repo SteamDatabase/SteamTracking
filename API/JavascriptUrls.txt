@@ -3027,6 +3027,7 @@ steam://oldsettings
 steam://open/about
 steam://open/addnonsteamgame
 steam://open/bigpicture
+steam://open/bigpicture/librarydetails/
 steam://open/changeemail
 steam://open/console
 steam://open/downloads
@@ -3040,6 +3041,7 @@ steam://open/library
 steam://open/library${}
 steam://open/library/
 steam://open/library/collection/hidden
+steam://open/library/details/
 steam://open/library/details/${id}
 steam://open/library/shared-apps/${}
 steam://open/library/view/home

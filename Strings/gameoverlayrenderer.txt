@@ -255,6 +255,7 @@ QRPS
 ^_[]
 ^_[]
 ^_[]
+^_[]
 \^_[]
 ^_[]
 PWVQ
@@ -312,19 +313,21 @@ M 9H
 @QPP
 PQRW
 ^_[]
-qD;u
+qL;u
 t	;p
 ^_[]
 ^_[]
-RPSW
-NTsd
+RPWV
 ^_[]
+;YHtC
+SPj@R
+PPPP
+L^_[]
 <^_[]
 ;^$s+
 ;~,s
 +F =
 +F0=
-^_[]
 ^_[]
 ^_[]
 ^_[]
@@ -1135,6 +1138,7 @@ GameOverlay_MovieStream_%u
 Created movie stream %s
 Couldn't create movie stream %s
 Deleting movie stream
+VR_Compositor_OverlayVSync_%u
 SteamGamepadUI
 SteamDisableOverlayDPIScaling
 GameOverlayRender_PIDStream
@@ -1850,49 +1854,45 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-dl~%
-(ZoA*
-t3d-RQ
-RY>Q
-yL<X*
->oI2
-pir{
-:{/Yb*]
-;w4r
-s<BT
-	/ >
-I@qZ
-[,Gw
-v,iY
+^!VJ
+>t1W
+al70~
+0JI2N
+ =,<>
+\rEZc
+0B84
+sPo>^
+1uoP|
+koM[l
+OX[u
+lVu1
+jPeQ
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-@GBD
-y&'t
-'w2Q
-MdhX
-*MXR
-656:!
-}Ns;
-DKja
-/vae[
-W}TZ
-LS"x1
-O}re
-ARsV
-RD8g:
-EpN<
-wm tU
-*BEY]
-wJc<
-g{D=
-9lHi
-"Zmu
-mSA*Z
-V|	8
-\al-
-_:71
+tgPn
+$X33
+Usn+T
+9pe$
+v9GWj
+lSUK
+r?O@	
+;B7Qwk
+@Duo
+Z/u"
+*/h8o
+$9z`H
+=$E&
+Jp&"x
+ag/EmL 
+@N]o
+,A=p
+ ,Qt
+xHH+
+3/-IoO
+UXD1aXp
+_45T:
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -1948,7 +1948,10 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231017013249Z0/
+231019221117Z0/
+:.$s
+N&hHn
+|{t$
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -1956,34 +1959,38 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		mQoK58vNRv4jiH2thnJBeqvt6KI=
+		CYqHOef/RLCU0qNzkplOJmhIbp8=
 		</data>
 		<data>
-		tij5AXAd79R9bZXMh4zHHxL/gec=
+		ZdP10531ANMPOK/IP+/odtckHkA=
 		</data>
 	</array>
 </dict>
 </plist>
-#(dvj
-f0:R
-im0~
-20231017013320Z0
+D'qH
+BRs~
+*d8{
+W,M=N
+20231019221128Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-230921211508Z
-231102211507Z0B1
+231019211004Z
+231130211003Z0B1
 Timestamp Signer NWK11
 Apple Inc.1
-|3}rL
-GS6A!L
-d9Vxc
+$qJK
+mc.V_l
+\+\V
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
- o^%
+X3zP
+27,=Dr
+k]mh
+MM.):t
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -2022,13 +2029,10 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231017013320Z0#
-}A2o*
-Gy{8kVUh
-AfPCr
-~)Jh
-qyKl
-i$%4p
+231019221128Z0#
+E=HM
+3Piw
+'S^r
 __TEXT
 __text
 __TEXT
@@ -2319,13 +2323,11 @@ AWAVSH
 AWAVAUATSH
 u8ASD
 ]0AS
-Y-%~
 H[A\A]A^A_]
 AWAVAUATSH
 D9` 
 D9c ~
 |$$I
-(%Jz
 [A\A]A^A_]
 P A9
 [A\A]A^A_]
@@ -2370,7 +2372,7 @@ AWAVAUATSH
 H9^ 
 t$H9Y w
 D9A4u
-Y%Ea
+(%=b
 [A\A]A^A_]
 AWAVAUATSH
 8[A\A]A^A_]
@@ -2491,9 +2493,8 @@ AWAVATSI
 AWAVAUATSPH
 [A\A]A^A_]
 AVSH
-H9=a
 [A^]
-H9GHt.H
+H9GHt+H
 AWAVATSH
 L9x 
 t{L9{ wuH
@@ -2518,7 +2519,7 @@ AWAVATSH
 )CNH
 [A\A^A_]
 AWAVAUATSH
-_PH9
+_`H9
 t	;X 
 P(D9
 T$(D
@@ -2530,9 +2531,14 @@ AVSH
 [A^]
 [A^]
 AWAVATSH
-I;_`sA
-I;_`r
+NpH9
+NpH9
+I;^pr7I
 [A\A^A_]
+AWAVSH
+D;sXtDH
+	H;M
+H[A^A_]
 AWAVAUATSH
 Hc^ H
 h[A\A]A^A_]
@@ -2540,12 +2546,12 @@ h[A\A]A^A_]
 h[A\A]A^A_]
 AWAVAUATSH
 t9L9
-E;u,s*H
-P0E;u4s
-A+M(
-E+}0
-A+E8=
-uhH9
+E;w,s*H
+P0E;w4s
+A+O(
+A+_0
+A+G8=
+wxH9
 [A\A]A^A_]
 AWAVSH
 [A^A_]
@@ -2582,7 +2588,7 @@ AWAVSPI
 AWAVSP
 [A^A_]
 AWAVAUATSH
-D8-<k
+D8-pk
 ([A\A]A^A_]
 AWAVATSH
 [A\A^A_]
@@ -2888,6 +2894,7 @@ UAWAVATSH
 }%E1
 H;D$
 [A\A^A_]
+D957
 UAWAVAUATSH
 D$`H
 D$8H
@@ -3346,6 +3353,7 @@ GameOverlay_MovieStream_%u
 Created movie stream %s
 Couldn't create movie stream %s
 Deleting movie stream
+VR_Compositor_OverlayVSync_%u
 SteamGamepadUI
 SteamDisableOverlayDPIScaling
 GameOverlayRender_PIDStream
@@ -4346,17 +4354,19 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-)()+
--(U;
-+eh,9
-+~\l\
-9Vyz
-dj@z
-gUS|
-5rG[a0
-Jr?q
-,EC`
-^O9L
+nq]/V
+(*Pe
+u1jW
+i<@'
+LB *
+~Iad
+}$U8
+MTC2^
+o4P*
+a~#S
+YNMMDU
+BTvFD
+*dnv
 y_-f
 {yji
 subject.OU
@@ -4365,20 +4375,26 @@ com.valvesoftware.steam
 MXGJJ98X76
 VXe{
 gcsr_
-|uEb1
-~>"S:
-|}( 
-4nVr~
-NzP`f
-nHie
-|e-9G
-TJ2D/
-DNc>HJ
-l`l+_@
-yr^6\
-=1qAh.
-gRUd
-Bu@s
+dVc/h 
+QMi}@F
+l?V8
+93\d!
+/hMUt
+8%k_
+ (<3
+%8yP
+qK_$GH
+zRl_2;t
+[Ci_?
+X>H/KHEw
+97Rj
+YYf4
+wv$B
+umVT
+<X=Hd
+xnJ9
+kF\a3
+dmY'
 #TNJ
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -4435,10 +4451,8 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231017013249Z0/
-{PD0[
-T-^	h0-
-wReI`
+231019221117Z0/
+MI#0
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -4446,35 +4460,37 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		PYY8Id2J1PyK3Zc28BN/VC1eCWg=
+		I/yicRc45ACkAAf5QK2qPZPdgo8=
 		</data>
 		<data>
-		YoNj9M8tc2iLKJOPHfF3UmVJYBo=
+		dISdupqWcQhD+/pdKJ+Q0seL6do=
 		</data>
 	</array>
 </dict>
 </plist>
-T\ke
-LxX:y
--d%4&B!
-JrcKx
-20231017013320Z0
+m}W.
+Vgj"!U
+[d;R
+pKM\TH
+Z}~	
+20231019221128Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-230921211508Z
-231102211507Z0B1
-Timestamp Signer NWK11
+231019205532Z
+231130205531Z0B1
+Timestamp Signer NWK21
 Apple Inc.1
-|3}rL
-GS6A!L
-d9Vxc
+S2/k4
+]-lU
+)sX]
+g6;h
+2Z72
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
- o^%
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -4513,13 +4529,10 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231017013320Z0#
-Fb;-
-{#aO
-kNq'
-B%x"
-1`Eo
-_}+K
+231019221128Z0#
+)b/{d
+6|dhL
+)Iza
 __TEXT
 __text
 __TEXT
@@ -4580,7 +4593,6 @@ __common
 __DATA
 __LINKEDIT
 @loader_path/gameoverlayrenderer.dylib
-|g a:
 /System/Library/Frameworks/OpenGL.framework/Versions/A/OpenGL
 /System/Library/Frameworks/AppKit.framework/Versions/C/AppKit
 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices
@@ -4609,9 +4621,7 @@ ia@9i
 	a@9Ia
 ia@9i
 	a@9Ia
-@9j.
 h&B)
-19`k
 56P@
 @9h*
 h&E9
@@ -4626,9 +4636,11 @@ $E9H
 &E9h
 h&A)
 (	29
+45M	0
 jh8)	
-@)5(
+@)<(
 29:;	
+@9HB
 h"@9
 Th*@
 Th.@
@@ -4639,58 +4651,55 @@ XcZ@
 h&@9
 hvB9
 hrB9
-C9a"C9b&C9c*C9VA
-[)}A
-4[	0
-6[	0
+C9a"C9b&C9c*C9
 aBA9
 h&D)
-j3	0
+qm>	P
+L=	P
 <v}	
 =h"@9
 h"@9
 yi:@
-bD9h
 Th#@
-hbN9
 -D@!
-X`bA
-X`2A
+ C	P
+X`rA
+X`BA
 T	!@
 T*!@
 Ci8}
 Th#@
-Th"A
+Th.A
+Th2A
 	k	 
 I+8k
 "Uzb
 T	5@
 T	9@
-S@9H6
-hbN9 
+S@9h6
 -!($
 9B(*
-X`bA
-X`2A
+X`rA
+X`BA
 7		)
 BP7	
-9kbD9i
+9h.A
+D9i.A
+9i.A
 Z)x,
 Z-xL
 Z-x-
 Z-x+
 Z+x+
 Z+x)
-hbD9
+T(/D
 T	%A
-X`2A
-X`bA
-hbN9
-Th"A
-a"F9b2F9cBF9dRF9 
+X`BA
+X`rA
+Th2A
+abF9brF9c
 4	%A
-aRN9bVN9cZN9d^N9 
-Ti"A
+Ti2A
 4	%A
 4	%A
 4	%A
@@ -4706,17 +4715,18 @@ Ti"A
 4	%A
 4	%A
 4	%A
-a2G9 
-XavB
-X`nB
-X`jB
+arG9 
+X`"B
+X`~B
+X`zB
+X`&B
+y		XX
 	Am 8`
-9hRC9
 #V)h
-hjA9h
 4h.@
 4b.@
-Mm`z@
+	AD9
+h2C9
 NH `
 m@)h
 nA8!
@@ -4727,68 +4737,55 @@ WA)9
 	@q"
 	K?U
 @z`:@z`
-	)D9)
+	iD9)
 o"E@
 !~"8"
 T( @
 TYC@
-ThjA9h
 yixJ	
-T`*@
-T`*@
-Ay &
+T`2@
+T`2@
 T	!@
 	k Q
 	k!+
-T`*@
-Ay@	
-T`*@
-T`*@
-T`*@
+T`2@
+T`2@
+T`2@
+T`2@
 +ih8J	
-hnA9h/
-	)D9)
-T`*@
-hjA9(
-7`*@
-4t:@
-#A)	|	
-i"V)
+A9h/
+	iD9)
+T`2@
+7`2@
+4tB@
++A)	|	
+i"X)
 Ci8}
-hfA9
-Hr	X
-Hr	X
-	%D9?
-))D9)
+	eD9?
+)iD9)
 	*h&@
-4hrA9
 9h.@
 Th&@
 Th&@
 Rh:@
-5hrA9
 9`&@
-8	X`
-6	Xa
-RivA9)
 Th&@
-T`*@
-4a*@
-T*+A
-1f9(
-5f9h
-	aE9?
-	5f9
-Tl=A
+ 5	X
+A3	X
+T`2@
+4a2@
+T*;A
+TlMA
 hBD9H
 hrD9h
 hrD9
 hBD9
 hBD9h
-IJ9(
 !IzH
+	!F9
+hRG9
 +ih8J	
-	1G9
+	qG9
 12CIMENullImpl
 4IIME
 KYf><
@@ -5232,6 +5229,7 @@ GameOverlay_MovieStream_%u
 Created movie stream %s
 Couldn't create movie stream %s
 Deleting movie stream
+VR_Compositor_OverlayVSync_%u
 SteamGamepadUI
 SteamDisableOverlayDPIScaling
 GameOverlayRender_PIDStream
@@ -6124,35 +6122,28 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-BMiK|
-R{`r
-Z[a;
-^{To4;f
-7(`(
-"X\E{2
-i]PE
-e= W
-91FE
+=0G5
+c&bX
+#=E*
+Q[&\
+?~3f
 jJ;w
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
 x)B	s
-anh 9qI
-1R2U
-zu\#LX
-Iv;@
-#.[B
-hflB
->K^h_U
-rYNW
-&_}}
-^8:s|
-lx5JP
-ck/'
-Tg~O
-T<%s
+(fBQq
+:M;I
+Yq#KR
+]daH
+yXG%
+9kI]9
+mVmx
+@YIo
+Cx~$
+Or,C*
+Di3?
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -6208,9 +6199,9 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231017013249Z0/
-ytivT
-\A{C
+231019221117Z0/
+4t@/
+Lq]Y
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -6218,35 +6209,35 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		5SSFJfEABmdjHq6u2u967bqn+30=
+		NwfmfBDp7MeVUORh4hh7/Sm5jaE=
 		</data>
 		<data>
-		CIF/EVZm9xFkKFTLSv+ngVa2XEE=
+		y5yQOP4m3rpbsz7Ux7NYGFM8RRM=
 		</data>
 	</array>
 </dict>
 </plist>
-/X&c
-(G6bR
-Mm\t
-epoE
-20231017013320Z0
+^&tM
+20231019221128Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-230921211508Z
-231102211507Z0B1
+231019211004Z
+231130211003Z0B1
 Timestamp Signer NWK11
 Apple Inc.1
-|3}rL
-GS6A!L
-d9Vxc
+$qJK
+mc.V_l
+\+\V
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
- o^%
+X3zP
+27,=Dr
+k]mh
+MM.):t
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -6285,8 +6276,7 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231017013320Z0#
-'stV
-D}sY
-ac9[{
-'[8"	1
+231019221128Z0#
+X,*_
+`B].
+=5+{

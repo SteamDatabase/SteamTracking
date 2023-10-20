@@ -3816,6 +3816,13 @@ button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover:before {
   top: 0;
   padding: 0;
 }
+.gamepaddialog_ModalPosition_30VHl .gamepaddialog_ModalClickToDismiss_2szdG {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
 .gamepaddialog_ModalPosition_30VHl > .gamepaddialog_GamepadDialogContent_3joNk {
   margin: auto;
   background-color: #0e141b;

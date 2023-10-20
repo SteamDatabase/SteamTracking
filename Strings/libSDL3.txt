@@ -65,7 +65,6 @@ __image_info
 __OBJC
 __LINKEDIT
 @loader_path/libSDL3.dylib
-dCE09Q
 /usr/lib/libiconv.2.dylib
 /System/Library/Frameworks/AudioToolbox.framework/Versions/A/AudioToolbox
 /System/Library/Frameworks/Carbon.framework/Versions/A/Carbon
@@ -4571,7 +4570,7 @@ SetDrawState
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/external/SDL3/src/render/software/SDL_render_sw.c
 Tried to read outside of surface bounds
 SDL_LEGACY_VERSION
-SDL-prerelease-3.0.0-2610-gb65442753
+SDL-prerelease-3.0.0-2617-g6c8ad975c
 macOS
 SDL assertion report.
 All SDL assertions between last init/quit:
@@ -8496,25 +8495,34 @@ radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
 oWx2
-2;\4
-J4LO
-,p@:
-2_%m
-u!F}
-MPBF
-.OZq
-4n_u
-1"90G
-n!z$g
-	uBM;
+n{N;
+82Ph
+{S"I>
+ow0.
+|6B+
+MDN^t
+0vCE1C
+S,lV
+~=t%
+F*gx+
+,lX5
+Brft#/f
+|8ydp
+o"Im
+(ovd
+f,{h
+cDyBHu
+H@ME
 [aGZ
-01&u
+o]II
+_o0_
+Q6q\
 $nKR-
 ]Zn+@
 lT$V'
 xC,,"
 *C";5
-<?iq
+i]RH
 ;k^~Qs
 sStX
 %gIV`D
@@ -8524,13 +8532,10 @@ H]MC
 C:r`
 WpO{
 6aQ~
-17'&SS
-pOb0
-b0rT
-Zk;n
-~g?p
-G:~%
-@DC 
+Z|bB
+>3kb
+X,;-K
+SL(_
 4%IJ
 ZaVR
 K+Fd~
@@ -8538,14 +8543,15 @@ K+Fd~
 ,qhH(y
 MZ-[j
 [gWd
+m^dul
 S!zy/#
 'm	u
- 	\K
-/cx	"F+;
-fp'|
-jIk=K
+\_.S
+/cx	"3}
 |C^dC
-	!Sf
+!T1;
+ygOz
+>J/0
 S|}P
 H&PS
 ]Xs@
@@ -8557,42 +8563,56 @@ hVYV
 -&72
 lUva
 8	z;
-fI{R
 M&8=a
 LTos
 ykJ`
-xce\/
-Jcf_
-"7`P
+vUR-
+_E$a
+=b"L
+6k1\
+[@DZ
 H&(7=
 Y^^U
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-\q))
-dG%c
-Vw$AZ_
--3]W
-R:QT
-oa;k
-j9t3
-E{[u1
-ssoJj:
--#I*
-c\m'
-:g@}
-^7M$
-0E$09
-C#<A
-9neb
-2=;J
-(xTE
-qrZVz
-.fvH
+bAu=
+T64R9
+sGUr
+DS	Dnv
+FC/(
+j	F^G
+W,5#
+?Jv%
+mqZsW
+zR08
+0xcCh
+Yr{"
+uhw97
+OZfs
+V .^
+IN@>
+?y0c
+dUT,
+|b,C
+]h=Y
+]E2~	
+ qbQ
+z#:e_&
+ht	5
+40tB
+5II Z
+XLvW
+z>U$!W
+q)J7)
+5=bq
+?'!4B
+V=6E`g
 +))>
 'WkP
 I7Cqt
+NW2h
 Y;],z
 xpZc^
 vu-c
@@ -8606,21 +8626,18 @@ KMv58
 TRS!
 0MQ5
 g6fc
-+FxB
 `-ksos1
 z q%.
-a!#V
-\ug`
-#Wa3
-8gRe~K
-Avt)
-4r:{~
-_ND>
-v/eJ
-,~_V
+MuF1
+vNRl{!
+*Xv_
+8\R=
+ef;B
+O->,
+NMX\k
+49oWz
 U<8$
 f/V 
-	XVq
 =>=Z
 FkI J$\
 VTyd
@@ -8636,19 +8653,19 @@ AYa-
 gPm9
  $T e
 yx5R
-YK-G
+e&$R
 9"C<}p
 BVv!#
 5jZ7}
-"^@9
-jAxr$
+yoVc2
 Vt-@j
+MqbaX
 <x@'
 11`m
-d2CY
-yDJ}h
+\3WDE#
+Nmqm
 V{WX
-(Aa 
+.@@t
 F'4l
 [sJ]
 I[_i?
@@ -8667,10 +8684,13 @@ ae-'
 yD"sR
 nO%/
 YXS7;C
-h)-9
+vg;)P0
 ovj.cW
-@<&Q
-e{nx
+,-V3
+fktO
+t.J 
+RxmLH
+L*Mt\
 .n^xeG
 11y}
 Apple Inc.1&0$
@@ -8728,9 +8748,9 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231017013254Z0/
-qX0-
-]pp{
+231019221125Z0/
+4r>0-
+nEq*
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -8738,35 +8758,34 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		AWupLOZ9njhEkGcLBNGbW8GpcVg=
+		MF2DNJ3szTx9n6KgkZN+25U0cj4=
 		</data>
 		<data>
-		tUidaH1xk4qdXXBwe/LsAbk4JZY=
+		cZ/+wNABTIez+oYUHgGBQa/xD5w=
 		</data>
 	</array>
 </dict>
 </plist>
-QtDo
-@\i*&
-KPNL
-i{Nh
-20231017013325Z0
+Z\GXB
+20231019221136Z0
+n'k 
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-230921211508Z
-231102211507Z0B1
-Timestamp Signer NWK11
+231019205532Z
+231130205531Z0B1
+Timestamp Signer NWK21
 Apple Inc.1
-|3}rL
-GS6A!L
-d9Vxc
+S2/k4
+]-lU
+)sX]
+g6;h
+2Z72
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
- o^%
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -8805,9 +8824,10 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231017013325Z0#
-xn@qQ
-V\`Yp
+231019221136Z0#
+)b/{d
+O< 'Wl
+P*u[
 __TEXT
 __text
 __TEXT
@@ -8990,15 +9010,14 @@ E9gT
 E9gTH
 AVS1
 [A^]
-AWAVATSH
-[A\A^A_]
+AWAVSH
+[A^A_]
 AVSA
 [A^]
 [A^]
-AWAVAUATSPI
-Ict$xH
-D$pH
-s0E1
+AWAVAUATSPH
+IcvxH
+]0E1
 [A\A]A^A_]
 AWAVAUATSH
 t>xQI
@@ -10047,7 +10066,7 @@ udzb1
 [A\A]A^A_]
 AWAVAUATSH
 *J(A
-D954
+D95@
 [A\A]A^A_]
 AWAVATSH
 [A\A^A_]
@@ -10078,8 +10097,8 @@ L9!t
 AWAVAUATSH
 ]L9%
 u+L9-
-L9%a
-L9-`
+L9%m
+L9-l
 L9.t
 L9.t
 [A\A]A^A_]
@@ -10141,7 +10160,7 @@ AWAVAUATSH
 AWAVATSA
 t.E1
 [A\A^A_]
-x#9=c
+x#9=o
 AWAVATSH
 D$ H
 D$ L
@@ -17608,7 +17627,7 @@ SetDrawState
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/external/SDL3/src/render/software/SDL_render_sw.c
 Tried to read outside of surface bounds
 SDL_LEGACY_VERSION
-SDL-prerelease-3.0.0-2610-gb65442753
+SDL-prerelease-3.0.0-2617-g6c8ad975c
 macOS
 SDL assertion report.
 All SDL assertions between last init/quit:
@@ -21946,30 +21965,26 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-Y-gy
-`PRu4
-}Xry
-Z% ZF
-od9x
-rWtM*
-F4Fo
-/EXYN
-uJ.&d
-B12-
-@#qm
-u Rx\TN
-oTV'
-pWzBI
-uw?F
-f.h~
+OoY.d'
+qrob
+I)zZ\,%
+agA.r
+mLwv
+e~,f
+D7\ '{
+j-n:y
+D>DS
 H[1L
-dL[V
-eF4i
+D&A)n
+:!\..
+BO4+
++=5<
+,.Z :
+, %Z
 t9j\
 [d)Z
 ^y[_B`
 !?"R.
-O@oh
 A<&Y
 3B&{
 $/Z5BzaA
@@ -21978,27 +21993,23 @@ q-;+
 DAKQ
 _Y"P	y
 **T*
-cgHy
-=v$o
-M}KVb
-vlE(
-9P!)LB
+yP!)LB
+G, Qf
+Rg@y
 $DTz\
 SyVX5M
+<fty
 ll!f
 	Iv5a
 }7f@
 /DB\s
+eU$+_MYL
 +7N6
 S-9{
 ki'#
-sgq(R
 R4}n1
-'{;	m|*
-UGba
--W~-
-=}2c
-B/\"~
+^ Y\
+:[MX
 QL9J
 6|jr
 `MFfB
@@ -22012,44 +22023,45 @@ n\%Z
 ]	8x
 'LVi
 ;I1y
-=N m
 )\z^
-w8d`
-s?hrM
-CG4_
-idSL
+3	?!* 
+$ =.
+(oev
 b0vp
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-Ac8FD
-7t/=
-.>pfK
-*>S7P^u
-34;T
-W{E|
-{M.p
-At^L
-RaV'
-oiNS6
-w^Ne
-C|A]s
-=9m8
-[JR	
-R+4s5
-`:6o	
-4sV)
-/D'W
-H!1bK
+014Qf
+Mv,y
+vK!Lh+
+XC*d
+J~4v0Ma28s
+roD*
+ltK&
+tZs"
+TZ1c
+q!=\R
+_`51
+Z#!:4
+$2s86'
+'	!o
+EExh
+P)&a
+0vCZ
+M:(~
+Y~cyi:
+<c}G
+v]Zy
+jKz_QD
+C^BV
 W3;^'
-Tm=x
-Qb&2
-;;l/;
-0hbX
-dhJu>
-{jHZR
-$HTH
+.{o|
+vW3j;lO3
+7~_ilt.
+GZdV
+$<p*
+j_B6f(
 -75&
 UE;o:)
 FH'c
@@ -22060,9 +22072,10 @@ E,tp
 s5_"
 WD8v
 *cnB3
+~mGp
 ])'=
 6`Y20
-0'F7
+6y,"p
 Z"XEI
 A~#j
 R2.n
@@ -22073,20 +22086,15 @@ kjOz
 ],\,
 V$btL
 K5Veh
-X|`/
-}-}vuy
-jQAY
-m\AbT
-rOrk
-wcBJ
-F{1?
-3;X]
-K++MF
-Uxda
-vqR9
-;hTw
-2pH<
-2 B)
+;ZGZ\
+,O3naK
+_D'"g
+XLSGhN
+z1T1
+\0/]
++}7o
+-e'M
+#(<X0
 qs1r
 -B2!
 Os%:I+
@@ -22104,20 +22112,15 @@ bY)O
 sRJ-:
 FuS1
 "9*$
->}:n]
-/UY`$
+G,}vd
+[&)|
 Fpu7>H
-rs7(
+o@LE
 :Kjm
-9PI2T
-D')$eT
-1'iD
-~R'L
-]F&n
-.bM{
+YKJti
+$.W#
 >NzK
-}3?)
-}wC4nF6
+I@lz_?
 >	B!
 fUdr*@<
 )`fw
@@ -22137,24 +22140,23 @@ vzmQ
 8vET
 n:CZ
 !Kj&v6
+Ft`kI
 7o7U
 RAjS
 N!t+
-(Eyw
 Vvm=?
 E<]!
 2l>|
 $/n1{
-X:( 
-H/hs
+^r$TI
+b<Pi
 (\Ve,
-; fE/
-tJPF
-pIoN
-"0bda
-EUxr
-o0b*
-Iygc
+k-7}
+k),Z
+	>X*mL
+Qz%K
+@b9)
+-dNs
 ?tp9
 wQX.>
 Apple Inc.1&0$
@@ -22212,10 +22214,10 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231017013254Z0/
-0Z*}0[
-RHfo6
-xKR*?
+231019221125Z0/
+;ug*6
+iv|R
+{I0-
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -22223,42 +22225,37 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		v1o503RT2BD5HFCwmKaGcyMshFQ=
+		eaXRgbAfLPw6ZIEFFxZNMQr3e0k=
 		</data>
 		<data>
-		lPByjKFGGahSSGZvNgDBaMBQSK0=
+		wGTxu/4sNl+W9m0aHZt3hUs9MPY=
 		</data>
 	</array>
 </dict>
 </plist>
-+w#k
-g:u,
-XPR y}
-W(59\G
-O})	[
-}gw1
-20231017013325Z0
-ULC(
+5)*:6db
+4sMA#Z
+w7`i
+20231019221136Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-230921210022Z
-231102210021Z0B1
-Timestamp Signer NWK21
+231019211004Z
+231130211003Z0B1
+Timestamp Signer NWK11
 Apple Inc.1
-RBCH
-9x=y
+$qJK
+mc.V_l
+\+\V
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-r55y
-h.AlQ
-W\_U
-r|,l
-S%*i 5
-I3	l
+X3zP
+27,=Dr
+k]mh
+MM.):t
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -22297,12 +22294,9 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231017013325Z0#
-x?.c
-ky(Z
-dfV&
-)AOg
-Afs`<
+231019221136Z0#
+[|0+
+<t|j
 __TEXT
 __text
 __TEXT
@@ -22392,7 +22386,8 @@ Ta.@
 RkV@
 4hV@
 @9h	
-R6Mn
+aLnp
+q(Ln0
 4`B@
 4hN@
 jB@y	$
@@ -22418,17 +22413,16 @@ Sj&@
 hB@y	$
 5hV@
 ysN@
+hB@y
+B@y	Q
 *vzu
 TLQ@
 Kiix
-(;~X
 #@9+
 4hN@
 B@yiB@y
-/~X)
-I&~X)
-@Hm0
-4!0mP
+I/~X)
+%~X)
 *)$@x)	
 *)D@
 ?))!
@@ -30923,7 +30917,7 @@ SetDrawState
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/external/SDL3/src/render/software/SDL_render_sw.c
 Tried to read outside of surface bounds
 SDL_LEGACY_VERSION
-SDL-prerelease-3.0.0-2610-gb65442753
+SDL-prerelease-3.0.0-2617-g6c8ad975c
 macOS
 SDL assertion report.
 All SDL assertions between last init/quit:
@@ -35248,19 +35242,26 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-c$mQ
+1as%a=
+uF47[	
+ByBl
 iQ'K
 hwmD
 9r@Q=@qo
+O]uy
 ;0~X
 c7tNE
+~UWD
+zO)T
+h{!1c
 hB.}
 A c9
 %miH
+V~ep
+5 Lb
 .fER
-,ti	
 6"Yh
-+GA^
+05jk
 4BM-
 &.dU
 H}nj
@@ -35270,7 +35271,10 @@ Fkf,pC
 sHNRc
 yHJr
 EtB$
+>.JR
+LMj#
 _m6Gv
+i	so
 A^$2
 ;L	mq
 Z@YS
@@ -35282,11 +35286,11 @@ sYQY
 ^	,/
 H`hQ
 $@R5P4
+e,<C
 N'<N
 >Z9K
 	$M4
 x i4
-@HpR
 %QZA
 nthM"w~
 eO{!
@@ -35299,10 +35303,12 @@ wLQK
  ~Wf
 gis5
 B~i% 
-Mx_zQY
 $rNu
 ,bm}
-!DPV
+w^pT
+pCR7
+O0	i
+,D p
 ;]g|
 +1k$T
 _v%lqs^6
@@ -35316,35 +35322,30 @@ subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-K~)Z
-SOo^
-ZZ~$=
+],eL>
 oo@5q
 C6mG5
-VsrE
-:4g6CN
-T#qv
+p@b1
+>%\f
 >p(|
 %QgQ
 WikS
 "bt>
 na+i.G
 B^v=
-'d!u
-z>H=
+>oGs
 V^K`
 juqY
 v<^a
 .@4a4
 Mj`8
-zAJr,
+L}yC
 VG>!
 =i"]^M
 u#5)#
 	b<L
 `-mK
-GO[y'
- 0a6
+B(b%4
 qupR
 OS:ab
 TLLt
@@ -35370,13 +35371,14 @@ nzsr
 (wdt
 |]V4=
 y]wk
-xksO
+^C},oe
+ulTd
 hYy;)#
-Rr2*
-`Cx:
+TH(k#
+MR}%c
 ttRk%
 /xB,c
-X8DQ
+@!=x]E
 8?[r
 |wKA
 @et{
@@ -35401,7 +35403,6 @@ HA!a
 LEqd\
 XrF7
 ?{pc
-<fZr
 sdIV
 =j$@
 L&ez
@@ -35425,13 +35426,10 @@ $m+s=
 N_P}
 Y8QJN-
 J~e[
+&(=d>
 =<Q&
 sV[L
-W	QD
-xE[!E
-u|Fh
-&>Kv
-5w-Z
+i^M8
 `c_T
 rrZl
 KsU~P
@@ -35500,8 +35498,9 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231017013254Z0/
-G{,fp
+231019221125Z0/
++^Hy
+5LH\
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -35509,35 +35508,37 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		Z5yHDvddJbPf3EhNmN9nxiCT5C8=
+		RN+rn6+uvGoGK15IeeVX/+ZZAnM=
 		</data>
 		<data>
-		owTmR3ssZnAcQwH0bASQSTXYjMw=
+		d94+GkHlavD1izVMSFzFrU1DxA0=
 		</data>
 	</array>
 </dict>
 </plist>
-20231017013325Z0
+2YM9
+a>L<
+v#Bx
+uYvh
+20231019221136Z0
+WN9%
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-230921210022Z
-231102210021Z0B1
+231019205532Z
+231130205531Z0B1
 Timestamp Signer NWK21
 Apple Inc.1
-RBCH
-9x=y
+S2/k4
+]-lU
+)sX]
+g6;h
+2Z72
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-r55y
-h.AlQ
-W\_U
-r|,l
-S%*i 5
-I3	l
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -35576,8 +35577,6 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231017013325Z0#
-:lvR
-Ur(y
-JbC[
-C*!4
+231019221136Z0#
+9Q0+
+)b/{d
