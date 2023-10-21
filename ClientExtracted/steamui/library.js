@@ -1,4 +1,4 @@
-var CLSTAMP = "8430979";
+var CLSTAMP = "8434222";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -1630,9 +1630,9 @@ var CLSTAMP = "8430979";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Oct 19 2023 : 15:17:35",
-                BUILD_TIME_UTC: "Oct 19 2023 : 22:17:35",
-                BUILD_RTIME_UTC: 1697753855,
+                BUILD_TIME_LOCAL: "Oct 20 2023 : 15:33:31",
+                BUILD_TIME_UTC: "Oct 20 2023 : 22:33:31",
+                BUILD_RTIME_UTC: 1697841211,
               }.MOBILE_BUILD)
             ) {
               window.addEventListener("beforeunload", (e) => {
@@ -40783,6 +40783,7 @@ var CLSTAMP = "8430979";
                   o = e.ownerDocument.defaultView;
                 i &&
                   o &&
+                  !c &&
                   ((n = Math.ceil(o.innerWidth - i.left)),
                   (r = Math.ceil(o.innerHeight - i.top))),
                   t.SteamClient.Window.SetResizeGrip(n, r);
@@ -43954,16 +43955,18 @@ var CLSTAMP = "8430979";
         function l(e) {
           const [t, n] = r.useState(!1),
             l = r.useCallback(() => {
-              (0, i.w3)(e, "Window.IsWindowMaximized")
-                ? e.SteamClient.Window.IsWindowMaximized((e) => {
-                    n(e);
-                  })
-                : n(
-                    e.screen.availWidth == e.innerWidth &&
-                      e.screen.availHeight == e.innerHeight,
-                  );
+              e &&
+                ((0, i.w3)(e, "Window.IsWindowMaximized")
+                  ? e.SteamClient.Window.IsWindowMaximized((e) => {
+                      n(e);
+                    })
+                  : n(
+                      e.screen.availWidth == e.innerWidth &&
+                        e.screen.availHeight == e.innerHeight,
+                    ));
             }, [e]);
           return (
+            r.useEffect(l, [e]),
             (0, o.useGlobalEventListener)(e, "resize", l),
             (0, o.useGlobalMessageListener)(e, ["window_toggle_maximized"], l),
             t
@@ -44493,9 +44496,9 @@ var CLSTAMP = "8430979";
                 ? !{
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Oct 19 2023 : 15:17:35",
-                    BUILD_TIME_UTC: "Oct 19 2023 : 22:17:35",
-                    BUILD_RTIME_UTC: 1697753855,
+                    BUILD_TIME_LOCAL: "Oct 20 2023 : 15:33:31",
+                    BUILD_TIME_UTC: "Oct 20 2023 : 22:33:31",
+                    BUILD_RTIME_UTC: 1697841211,
                   }.MOBILE_BUILD && document.getElementById(t)
                 : t),
             r)
@@ -45050,8 +45053,8 @@ var CLSTAMP = "8430979";
       {
         27: "22b35055a4c58d3e857d",
         33: "528b8ab6922e54215c14",
-        58: "fe2c12ad0b0640853581",
-        131: "6d3eb69613e6b880446d",
+        58: "909e59959b48e04cc08a",
+        131: "b7f7b2dfc41a9c063671",
         146: "a062923d065b61e9a299",
         200: "0273f88a1d91abf0685e",
         220: "0355b5539ec987b27c67",
@@ -45151,7 +45154,7 @@ var CLSTAMP = "8430979";
         7781: "d886d7151aaf757c198c",
         7832: "9d6d3d860dea2a65797b",
         7850: "1f6f9c8e464ef14e9712",
-        7962: "db9ba8bdb9617022042e",
+        7962: "f6c37d0b03b8bc38d95f",
         8011: "cd9fdcd3471ebd4fb569",
         8052: "599e7acd9c0992e33ed1",
         8085: "d90c1113606b7bae5521",
@@ -45161,7 +45164,7 @@ var CLSTAMP = "8430979";
         8282: "daf3b8e21c59e32c4c45",
         8319: "df4d5fe82d825eaa4861",
         8433: "f899bdc40e416aadd773",
-        8467: "9e765dbc16b6310ae465",
+        8467: "3c377d72ad62dcb2c33c",
         8490: "ab2f9494e3e5701b55e0",
         8778: "65cb94928bd87e330043",
         8956: "e1968dd2b853874c5de0",

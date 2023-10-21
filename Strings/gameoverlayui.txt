@@ -7495,7 +7495,7 @@ d
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/friendsuihelpers.cpp
 IsARM() || GetCPUInformation().m_bSSE2
 GetBootstrapperVersion
-IVRSteamPrivate_018
+IVRSteamPrivate_019
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlvector.h
 !pToCopy || (pToCopy + num <= Base()) || (pToCopy >= (Base() + Count()) )
 log_files_always_flush
@@ -7763,8 +7763,8 @@ Steam pid that launched us
 VGUI_Application_001
 OK
 Cancel
-Oct 19 2023
-15:13:25
+Oct 20 2023
+15:30:03
 crashhandler004
 gameoverlayui
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/overlay/gameoverlayui/main.cpp

@@ -1115,8 +1115,8 @@ Disable the glcomposer workaround applied to some video drivers
 Force the usage of opaque backgrounds for CEF
 -cef-no-restart-on-ui-mode-change
 Don't restart the renderer on UI mode changes
--cef-no-accessibility
-Don't set the CEF accessibility flag
+-cef-force-accessibility
+Force enable CEF accessibility features
 -store
 -community
 -clientui
@@ -1163,6 +1163,7 @@ GetClientActualLauncherType
 -force-sandbox
 -delaypageload
 -no-restart-on-ui-mode-change
+--force-renderer-accessibility
 -disablejslogging
 -verbosejslogging
 --ignore-certificate-errors
@@ -2418,19 +2419,21 @@ id
 @
 @
 
-z
+
+{
+
 
 @
 Ic
-D
-;
-U
+~
+r
+
+F
 
 
 0
 
 0
-
 Hi
 `
 0

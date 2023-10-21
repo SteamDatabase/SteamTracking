@@ -1,13 +1,17 @@
 __TEXT
+-
+-
 __text
 __TEXT
-@
-@
+p
+p
 __stubs
 __TEXT
 __stub_helper
 __TEXT
 __gcc_except_tab__TEXT
+t+%
+t+%
 __const
 __TEXT
 __cstring
@@ -16,12 +20,19 @@ __objc_methname
 __TEXT
 __unwind_info
 __TEXT
-Dq
+p,
+p,
 __DATA
+-
+-
 __nl_symbol_ptr
 __DATA
+-
+-
 __got
 __DATA
+-
+-
 __la_symbol_ptr
 __DATA
 __mod_init_func
@@ -48,13 +59,18 @@ __bss
 __DATA
 __common
 __DATA
+PX4
 H
 __LINKEDIT
-5
+@5
+0
 
 8
 @loader_path/steamservice.dylib
 "
+0
+*0
+8D0
 P
 
 *
@@ -80,34 +96,27 @@ h
 8
 /usr/lib/libobjc.A.dylib
 &
-H*
+`*
 )
-G0
-/
-/
-+g_/
-/
-Hc5MX/
 0
 0
 Hi
-)
-)
+"
+"
 H=
 )
+)
+)
+)
 %
 %
 %
 %
 %
-r
-_
-$
-`
+%
 Hc
 Hc
 Hc
-y
 0
 0
 AT=
@@ -123,8 +132,6 @@ D
 (
 (
 (
-'#
-$
 #
 @
 Hc
@@ -158,20 +165,21 @@ IcE
 @
 @
 ]
+G'
 '
 '
-0"
+'
+"
 V
-?&
+w&
 =
-&!
+1!
 !
 !
 !
 !
 !
 !
-=
 10CIPCServer
 10IIPCServer
 11CPipeWaiter
@@ -1410,6 +1418,7 @@ zD
 13CRSAPublicKey
 %Y-%m-%d %H:%M:%S
 18CBaseFrameFunction
+14CFrameFunctionI19CQueuedLambdaRunnerE
 20CRefCountServiceBaseILb1E6CRefMTE
 10CUtlString
 11CRefCountedI20CRefCountServiceBaseILb1E6CRefMTEE
@@ -8781,8 +8790,8 @@ steamwebhelper
 Steam Helper
 cefwebhelper
 1.0
-Oct 19 2023
-15:11:13
+Oct 20 2023
+15:27:52
 Jan
 Feb
 Mar
@@ -9001,6 +9010,7 @@ eFrameType < k_EFrameTypeMax
 pchName
 V_strlen( pchName ) < V_ARRAYSIZE( m_rgchName )
 m_iHistory < V_ARRAYSIZE( m_rgunMicroSecRunHistory )
+CQueuedLambdaRunner::BFrameFuncRunQueuedFunctions
 CFrameFunctionMgr::~CFrameFunctionMgr: non static FrameFunction[%s] still registered
 *pBaseFrameFunction->GetName()
 CFrameFunctionMgr::Deregister: function to deregister not found
@@ -9388,31 +9398,25 @@ CWorkThread -- OnWorkItemCompleted - unordered
 CWorkThread -- OnWorkItemCompleted - ordered
 m_cCurrentDepth > 0
 %s%s%s
-/
-/
-+g_/
-/
-Hc5MX/
 0
 0
 Hi
-)
-)
+"
+"
 H=
 )
+)
+)
+)
 %
 %
 %
 %
 %
-r
-_
-$
-`
+%
 Hc
 Hc
 Hc
-y
 0
 0
 AT=
@@ -9428,8 +9432,6 @@ D
 (
 (
 (
-'#
-$
 #
 @
 Hc
@@ -9463,13 +9465,15 @@ IcE
 @
 @
 ]
+G'
 '
 '
-0"
+'
+"
 V
-?&
+w&
 =
-&!
+1!
 !
 !
 !
@@ -9477,14 +9481,32 @@ V
 !
 !
 =
-H
+[%
+%
 %
 !
+'
+'
+'
 @
-G&
 @
 &
-!
+&
+O"
+"
+"
+"
+"
+j!
+[!
+$
+$
+$
+$
+$
+$
+#!
+$
 !
 @
 M9e
@@ -9881,9 +9903,7 @@ SHA1 block transform for x86_64, CRYPTOGAMS by <appro@openssl.org>
 0
 @
 @
-f
 @
-
 d
 @
 
@@ -9939,13 +9959,9 @@ Ic
 0
 0
 0
+>
 H=
-
 0
-
-
-
-
 
 
 &
@@ -9953,14 +9969,13 @@ H=
 @
 @
 @
+
 0
-(
 Hi
 E
 0
 0
 0
-@
 Hc
 Hc
 Hc

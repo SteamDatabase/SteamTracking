@@ -68,6 +68,18 @@ message CTransportValidation_CountOrderedBytes_Response {
 	optional int32 byte_count = 1;
 }
 
+message CTransportValidation_ThreadedCount_Request {
+	optional int32 start_num = 1;
+	optional int32 end_num = 2;
+}
+
+message CTransportValidation_ThreadedCount_Response {
+}
+
+message CTransportValidation_NotifyCount_Notification {
+	optional int32 num = 1;
+}
+
 message CTransportValidationClient_AddNumbers_Request {
 	repeated int32 numbers = 1;
 }
@@ -88,6 +100,8 @@ service TransportValidation {
 	rpc NotifySyntheticEvent (.CTransportValidation_NotifySyntheticEvent_Notification) returns (.WebUINoResponse);
 	rpc TriggerSyntheticEvents (.CTransportValidation_TriggerSyntheticEvents_Request) returns (.CTransportValidation_TriggerSyntheticEvents_Response);
 	rpc CountOrderedBytes (.CTransportValidation_CountOrderedBytes_Request) returns (.CTransportValidation_CountOrderedBytes_Response);
+	rpc ThreadedCount (.CTransportValidation_ThreadedCount_Request) returns (.CTransportValidation_ThreadedCount_Response);
+	rpc NotifyCount (.CTransportValidation_NotifyCount_Notification) returns (.WebUINoResponse);
 }
 
 service TransportValidationClient {

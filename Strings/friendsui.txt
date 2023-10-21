@@ -75,6 +75,7 @@ __LINKEDIT
 0#
 (%
 P
+$
 
 *
 8
@@ -2093,7 +2094,7 @@ none
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/friendsuihelpers.cpp
 IsARM() || GetCPUInformation().m_bSSE2
 GetBootstrapperVersion
-IVRSteamPrivate_018
+IVRSteamPrivate_019
 resolve
 reject
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/refcount.h

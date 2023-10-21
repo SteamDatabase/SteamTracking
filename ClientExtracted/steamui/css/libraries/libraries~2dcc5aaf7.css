@@ -32629,8 +32629,6 @@ body.in_global_drag .quickAccessFriends.emptyQuickAccess {
 }
 .YoutubePlayer {
   background-color: #16181c;
-  border-radius: 6px;
-  padding: 4px;
 }
 .chatRoomListContainer {
   background: radial-gradient(

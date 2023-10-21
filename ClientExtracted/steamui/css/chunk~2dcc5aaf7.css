@@ -25880,8 +25880,9 @@ img.broadcastplayer_BroadcastPlaceholderImg_3Hcqn {
   height: 100%;
   color: #8b929a;
   position: relative;
+  margin-right: auto;
 }
-.backbutton_BackContainer_2B4W7::after {
+.backbutton_BackContainer_2B4W7:not(:last-child)::after {
   content: "";
   width: 1px;
   height: 2em;
@@ -38265,10 +38266,21 @@ a.appdetailsbroadcastsection_ViewBroadcastOnWeb_1Z3B4:hover {
   display: flex;
   flex-direction: column;
 }
+.appactivityday_VideoCarousel_dUAJi .appactivityday_ActiveVideoContainer_35noK {
+  background-color: #16181c;
+}
 .appactivityday_VideoCarousel_dUAJi .appactivityday_ActiveVideo_19rn- {
-  flex: 1;
   min-width: 0;
+  width: 70%;
+  margin: auto;
   cursor: pointer;
+  background-color: #16181c;
+  overflow: hidden;
+}
+.BasicUI .appactivityday_VideoCarousel_dUAJi .appactivityday_ActiveVideo_19rn- {
+  width: 50%;
+  box-shadow: none;
+  background-color: rgba(22, 24, 28, 0.5);
 }
 .appactivityday_VideoCarousel_dUAJi
   .appactivityday_ActiveVideo_19rn-
@@ -38288,14 +38300,15 @@ a.appdetailsbroadcastsection_ViewBroadcastOnWeb_1Z3B4:hover {
   height: 64px;
 }
 .appactivityday_VideoCarousel_dUAJi .appactivityday_VideoTitle_1d0ij {
-  color: #94a1a6;
-  margin-top: 8px;
-  font-size: 16px;
+  color: #ffffffe0;
+  padding: 8px 18px;
+  font-size: 14px;
+  font-weight: 300;
 }
 .appactivityday_VideoCarousel_dUAJi .appactivityday_CarouselThumbs_1tRKR {
   flex: 1;
   min-width: 0;
-  padding: 8px 0;
+  padding: 8px 0 8px 8px;
   overflow-x: auto;
   overflow-y: hidden;
   display: flex;
@@ -39844,6 +39857,9 @@ div.NarrowRightPanel
   padding-top: 6px;
   padding-left: 18px;
 }
+.BasicUI .comment_thread_ActivityCommentThread_39nna {
+  margin-left: 0px;
+}
 .comment_thread_ActivityCommentThread_39nna
   .comment_thread_RatingContainer_3Kynf {
   display: flex;
@@ -40367,12 +40383,14 @@ div.NarrowRightPanel
   align-items: center;
   justify-content: center;
 }
-.BasicUI .comment_thread_RatingBar_1yWgP .comment_thread_LikeIcon_1OhPt,
-.BasicUI .comment_thread_RatingBar_1yWgP .comment_thread_CommentIcon_1R6Ou,
-.BasicUI .comment_thread_RatingBar_1yWgP .comment_thread_ReactionIcon_QL3Aa {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.comment_thread_RatingBar_1yWgP .comment_thread_LikeIcon_1OhPt svg,
+.comment_thread_RatingBar_1yWgP .comment_thread_LikeIcon_1OhPt path,
+.comment_thread_RatingBar_1yWgP .comment_thread_CommentIcon_1R6Ou svg,
+.comment_thread_RatingBar_1yWgP .comment_thread_CommentIcon_1R6Ou path,
+.comment_thread_RatingBar_1yWgP .comment_thread_ReactionIcon_QL3Aa svg,
+.comment_thread_RatingBar_1yWgP .comment_thread_ReactionIcon_QL3Aa path {
+  fill: #707070;
+  color: #707070;
 }
 .BasicUI .comment_thread_RatingBar_1yWgP .comment_thread_LikeIcon_1OhPt svg,
 .BasicUI .comment_thread_RatingBar_1yWgP .comment_thread_CommentIcon_1R6Ou svg,
@@ -40382,6 +40400,8 @@ div.NarrowRightPanel
   svg {
   width: 16px;
   height: 16px;
+  fill: #707070;
+  color: #707070;
 }
 .comment_thread_RatingBar_1yWgP
   .comment_thread_LikeIcon_1OhPt
@@ -51386,6 +51406,7 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   font-size: 15px;
   text-align: center;
   margin: auto 0;
+  flex: 1 0 30%;
 }
 .nominationandvote_SteamAwardContainer_jBtX5
   .nominationandvote_SteamAwardVoteWidget_2-t3v
@@ -51410,7 +51431,7 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   .nominationandvote_SteamAwardVoteButtonArea_2gvv6
   .nominationandvote_SteamAwardVoteButton_kTsuK {
   border: none;
-  margin: 12px 0px 6px;
+  margin: 15px 0px 6px;
   padding: 0px;
   cursor: pointer;
   font-size: 13px;
@@ -51604,6 +51625,9 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   .nominationandvote_SteamAwardVoteButtonArea_2gvv6
   .nominationandvote_SteamAwardCategoryTitle_3hZED {
   padding-left: 8px;
+}
+.nominationandvote_SteamAwardConflictModal_1Ujn_ {
+  min-width: 600px;
 }
 body.v6.partner_events {
   background: #24282e;

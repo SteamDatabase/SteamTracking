@@ -1,16 +1,18 @@
 H
 __PAGEZERO
 __TEXT
+?
+?
 
 __text
 __TEXT
+P
+P
 __stubs
 __TEXT
 __stub_helper
 __TEXT
 __gcc_except_tab__TEXT
-pQ4
-pQ4
 __const
 __TEXT
 __objc_methname
@@ -25,10 +27,16 @@ __TEXT
 __unwind_info
 __TEXT
 __DATA
+?
+?
 __nl_symbol_ptr
 __DATA
+?
+?
 __got
 __DATA
+?
+?
 __la_symbol_ptr
 __DATA
 __mod_init_func
@@ -37,24 +45,24 @@ __const
 __DATA
 __cfstring
 __DATA
+]B
+]B
 __objc_classlist__DATA
 __objc_imageinfo__DATA
 __objc_const
 __DATA
 __objc_selrefs
 __DATA
-h!B
-h!B
 __objc_classrefs__DATA
 __objc_superrefs__DATA
 __objc_ivar
 __DATA
+gB
+gB
 __objc_data
 __DATA
 __data
 __DATA
-`'B
-`'B
 __thread_vars
 __DATA
 0
@@ -65,19 +73,18 @@ __thread_bss
 __DATA
 __bss
 __DATA
+C
 __common
 __DATA
-`G
 H
 __LINKEDIT
-@H
-C
+@C
 "
-C
-8%
-8%C
-P2C
-@4C
+@C
+@%
+@eC
+XrC
+HtC
 P
 /usr/lib/dyld
 
@@ -115,74 +122,69 @@ h
 8
 /usr/lib/libobjc.A.dylib
 &
-@kC
-X=
+x=
+)
+)
 )
 B
-B
-B
-B
-B
-B
-B
-B
 0
+*
 *
 9
-*
 0
 @
 @
+*
+>9
+.9
 @
 @
 @
 @
-s
++9
+(9
 $
-9
-9
-9
-9
-9
-9
-9
-9
+B
+B
+B
 Hi
 Hi
 Hi
-;3
 (
-*
+(
+(
+(
+(
+(
+(
+_)
 3
-U)
-,
 )
 )
-)
-!)
++
+(
+(
+&)
 
 %
-W8
-;
-`2
+)
+)
 (
-(
-8
-8
-8
-8
 
-2
 0
 5
+'
 (
 (
-,@
+(
+3
+3
+8@
+I(
 
-<
-m1
 0
 Ic
+i1
 0
 0
 AT=
@@ -195,7 +197,12 @@ D
 @
 7
 7
-92
+7
+7
+7
+7
+1
+[;
 @
 Hc
 Hc
@@ -227,8 +234,12 @@ IcE
 IcE
 @
 @
-6
 0
+6
+6
+6
+6
+6
 0
 NSt3__117bad_function_callE
 15CBaseFileSystem
@@ -1681,6 +1692,7 @@ N16CCookieContainer11CCookieInfoE
 10CUtlRBTreeIN7CUtlMapI10CUtlStringP10CUtlVectorIN16CCookieContainer11CCookieInfoE10CUtlMemoryIS4_EEi22CDefCaselessStringLessE6Node_tEiNSA_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
 10CUtlVectorIN16CCookieContainer11CCookieInfoE10CUtlMemoryIS1_EE
 18CBaseFrameFunction
+14CFrameFunctionI19CQueuedLambdaRunnerE
 %a, %d %b %Y %H:%M:%S GMT
 12CHTTPRequest
 20CRefCountServiceBaseILb1E6CRefMTE
@@ -2386,10 +2398,14 @@ Software\Valve\Steam
 SteamPID
 m_NamedPipe >= 0
 TempAppCmdLine
-m_nPipeData >= 0
+%s: read failed: %s
+ReadCommandsFromPipe
+%s: pending command too large, truncating
 ReLaunchCmdLine
 ClientLauncherType
-Startup - updater built Oct 19 2023 15:13:19
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlqueue.h
+IsValidIndex( idx )
+Startup - updater built Oct 20 2023 15:29:55
 Startup - Steam Client launched with: %s
 Shutdown
 no hosts found
@@ -2680,8 +2696,8 @@ m_iRefs >= 0 && m_iRefs < 0x0ffffff
 #SteamBootstrapper_UpdatingSteam
 Updating Steam...
 Tahoma
-Oct 19 2023
-15:13:19
+Oct 20 2023
+15:29:56
 crashhandler004
 steam
 Steam Executable Crash
@@ -2778,7 +2794,7 @@ China
 %s/%s%s
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamexe/updateui.h
 ThreadInMainThread()
-15:13:18
+15:29:54
 [%3d%%] %s
 [----] %s
 [%3d%%] !!! Fatal Error: %s
@@ -10901,7 +10917,7 @@ steamwebhelper
 Steam Helper
 cefwebhelper
 1.0
-15:11:13
+15:27:52
 Jan
 Feb
 Mar
@@ -11498,6 +11514,7 @@ eFrameType < k_EFrameTypeMax
 pchName
 V_strlen( pchName ) < V_ARRAYSIZE( m_rgchName )
 m_iHistory < V_ARRAYSIZE( m_rgunMicroSecRunHistory )
+CQueuedLambdaRunner::BFrameFuncRunQueuedFunctions
 CFrameFunctionMgr::~CFrameFunctionMgr: non static FrameFunction[%s] still registered
 *pBaseFrameFunction->GetName()
 CFrameFunctionMgr::Deregister: function to deregister not found
@@ -12156,8 +12173,6 @@ IsInList(after)
 m_vecHashBuckets
 m_memNodes
 m_bitsMigratedBuckets
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlqueue.h
-IsValidIndex( idx )
 k_EMsgClientVoiceCallPreAuthorize
 k_EMsgClientVoiceCallPreAuthorizeResponse
 k_EMsgClientServerTimestampRequest
@@ -13348,73 +13363,73 @@ out of memory
 n <= (size_t)INT_MAX
 file_ofs == pFile->GetBytesWritten()
 
+K8:
+S8:
+n2:
+P=
 
 0
-B
-B
-B
-B
-B
-B
-B
+)
+)
 B
 0
+*
 *
 9
-*
 0
 @
 @
+*
+>9
+.9
 @
 @
 @
 @
-s
++9
+(9
 $
-9
-9
-9
-9
-9
-9
-9
-9
+B
+B
+B
 Hi
 Hi
 Hi
-;3
 (
-*
+(
+(
+(
+(
+(
+(
+_)
 3
-U)
-,
 )
 )
-)
-!)
++
+(
+(
+&)
 
 %
-W8
-;
-`2
+)
+)
 (
-(
-8
-8
-8
-8
 
-2
 0
 5
+'
 (
 (
-,@
+(
+3
+3
+8@
+I(
 
-<
-m1
 0
 Ic
+i1
 0
 0
 AT=
@@ -13427,7 +13442,12 @@ D
 @
 7
 7
-92
+7
+7
+7
+7
+1
+[;
 @
 Hc
 Hc
@@ -13459,56 +13479,62 @@ IcE
 IcE
 @
 @
+0
+6
+6
+6
+6
 6
 0
-0
+C1
 V
-p/
+r/
+6/
 =
 /
 /
 =
-6.
+3.
+<
+<
+<
+<
 .
 .
-.
-.
-.
-.
-.
+~8
 4
 4
-]-
+4
+}-
+A-
+0-
+-
 !
 @
-:$
-,
-,
-,
-,
-2
-2
+#,
+$
 @
-6
-6
-6
 &
-#6
-6
-1
+3+
 +
 1
-B/
-k/
+*
+0
+0
+w4
+0
+V/
+/
 )
 )
-)
-*/
-(1
+>/
+<1
 @
 M9e
 @
 @
+6(
+(
 (
 (
 ?
@@ -13533,9 +13559,10 @@ AESNI-CBC+SHA256 stitch for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
 AES for Intel AES-NI, CRYPTOGAMS by <appro@openssl.org>
 @
--
+)1
 %
-1
+-
+-
 `
 `
 @
@@ -13544,10 +13571,12 @@ j
 Pj
 ARj
 j
+
 0
 0
 IcU
 E;e
+,
 ,
 M)u
 =
@@ -13847,10 +13876,7 @@ OO
 expand 32-byte k
 ChaCha20 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
-#
-#
-#
-(
++
 =
 @
 
@@ -13858,27 +13884,35 @@ ChaCha20 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
 @
 0
+
+
+
+
 H=
 Ic]
 j
 j
 j
 j
+"
 j
 j
-1$
 
-'
-'
-'
-T+
 t$I;M
+"
+"
 e
 W
 ,7~5d
-#Q/
-#4/
+#-O/
+#mE/
+#ME/
+#mB/
+#m2/
+#-+/
+d)
 H
+z!
 0
 
 
@@ -13891,7 +13925,6 @@ H
 
 
 Hc
-
 AES-NI GCM module for x86_64, CRYPTOGAMS by <appro@openssl.org>
 %
 @
@@ -13904,8 +13937,17 @@ AES-NI GCM module for x86_64, CRYPTOGAMS by <appro@openssl.org>
 
 @
 Poly1305 for x86_64, CRYPTOGAMS by <appro@openssl.org>
+H%
 0
 0
+&
+&
+&
+&
+&
+&
+&
+&
 &
 &
 &
@@ -14163,15 +14205,16 @@ H=
 @
 @
 S
+{
+h
 @
 @
 @
 @
-
 @
 @
-
 0
+
 0
 0
 #
@@ -14219,9 +14262,10 @@ Hc
 0
 @
 @
-P
 &
 %
+
+
 @
 =h2
 P
@@ -14232,7 +14276,6 @@ P
 @
 ?
 ?
-
 ?
 @
 @

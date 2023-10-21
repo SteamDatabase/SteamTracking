@@ -19,6 +19,8 @@ __TEXT
 (
 __unwind_info
 __TEXT
+D:
+D:
 __eh_frame
 __TEXT
 __DATA
@@ -59,7 +61,7 @@ __thread_bss
 __DATA
 __bss
 __DATA
-@ >
+@!>
 __common
 __DATA
 H
@@ -71,11 +73,10 @@ A
 @loader_path/panorama.dylib
 "
 @>
-(S>
-p-?
+0S>
 xX
 P
-0c?
+Xc?
 
 *
 8
@@ -148,24 +149,25 @@ h
 &
 )
 HB
-g4
-V3
+y=
+i4
 .
+91
 0
-'=
+K1
 A1
-1
-1
 
 
 
 
-1
 
 @
 
 1
-<
+1
+1
+1
++1
 0
 @
 @
@@ -2549,7 +2551,7 @@ l
 14CUtlMemoryBase
 10CUtlVectorIPN19CBaseUtlSymbolTableI10CUtlSymbolE12StringPool_tE10CUtlMemoryIS4_EE
 10CUtlRBTreeI16CStringPoolIndextN19CBaseUtlSymbolTableI10CUtlSymbolE5CLessE25CDefRBTreeBalanceListenerItES0_E
-N5vrapi16IOpenVRInterfaceIN2vr19IVRSteamPrivate_018EEE
+N5vrapi16IOpenVRInterfaceIN2vr19IVRSteamPrivate_019EEE
 N5vrapi33CVRSteamPrivateAdapter_003_as_004E
 N2vr19IVRSteamPrivate_004E
 N5vrapi33CVRSteamPrivateAdapter_004_as_005E
@@ -2580,6 +2582,8 @@ N5vrapi33CVRSteamPrivateAdapter_016_as_017E
 N2vr19IVRSteamPrivate_017E
 N5vrapi33CVRSteamPrivateAdapter_017_as_018E
 N2vr19IVRSteamPrivate_018E
+N5vrapi33CVRSteamPrivateAdapter_018_as_019E
+N2vr19IVRSteamPrivate_019E
 12CDynamicFuncIPFPN2vr9IVRSystemEPNS0_12EVRInitErrorENS0_18EVRApplicationTypeEEE
 12CDynamicFuncIPFjPN2vr12EVRInitErrorENS0_18EVRApplicationTypeEEE
 12CDynamicFuncIPFvvEE
@@ -2849,7 +2853,7 @@ sc_kalman_slowq
 sc_kalman_fastq
 IsValid()
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/mathlib/vector4d.h
-IVRSteamPrivate_018
+IVRSteamPrivate_019
 src.IsValid() && IsValid()
 v.IsValid()
 a.IsValid() && b.IsValid()
@@ -5380,8 +5384,8 @@ linux
 Linux;tenfoot
 X-ValveUserAgent
 panorama %s %s
-Oct 19 2023
-15:14:13
+Oct 20 2023
+15:30:28
 X-SteamClientVersion
 hostName
 pchRemoteHost
@@ -7650,6 +7654,7 @@ IVRProperties_001
 IVRPaths_001
 IVRInput_010
 libopenvr_api.dylib
+IVRSteamPrivate_018
 IVRSteamPrivate_017
 IVRSteamPrivate_016
 IVRSteamPrivate_015
@@ -8300,67 +8305,59 @@ q.IsValid()
 angles.IsValid()
 SSE is required.
 src.IsValid()
-HB2
-RB2
 
-]B2
-gB2
-mB2
-}B2
+B2
 HB
-g4
-V3
+y=
+i4
 .
+91
 0
-'=
+K1
 A1
-1
-1
 
 
 
 
-1
 
 @
 
 1
-<
+1
+1
+1
++1
 0
 @
 @
-\/
 0
-=/
 '
 %'
 /
 '
 k&
+/
 %
-.
+:
 v%
 %
+.
+;
 ;
 -
 -
+-
 7
 7
 7
 7
-(,
 j
 .
-:
-:
-,
 ,
 ,
 "
-,
 "
 ?
-!,
 (
 (
 (
@@ -8374,11 +8371,8 @@ F
 +
 !
 &
-p+
-4+
-7
-7
-.
++
++
 j
 0'
 @
@@ -8399,6 +8393,7 @@ j
 @
 @
 @
+R*
 @
 @
 @
@@ -8411,6 +8406,7 @@ j
 @
 @
 @
+K*
 @
 @
 @
@@ -8432,7 +8428,7 @@ j
 d
 Uk/
 K
-X6
+[6
 @
 @
 @
@@ -8457,25 +8453,23 @@ X6
 @
 @
 @
+Q4
 @
 @
 @
 @
 0
-~*
+-
+*
 @
 @
+'*
 y&
 3
 3
 J&
-X)
-~&
+c)
 u
-)
-)
-h2
-)
 @
 @
 @
@@ -8484,50 +8478,46 @@ h2
 @
 @
 @
+(3
 0
 @
 @
 3
-J,
+L,
 0
 0
 =
+u(
 @
 @
+I(
 H=
-@4
-(
-(
 /$
-(
-(
-(
-(
+U(
+1
+1
+1
+0'
 )
 $
-)
-)
 '
-'
-`0
 @
+1
 &
 =
 @
 @
 1
-1
-$
+0
 @
 @
 ?
+0
 ^
 #
-$
+M#
 @
-$
-5#
-;#
+1#
 P
 (
 #
@@ -8535,25 +8525,26 @@ P
 #
 #
 P
+a,
 j
 A
 A
 A
 A
 (
-,
+A#
+.#
 @
+E9u
 E9u
 #
-E9u
+#
 @
 A
 A
 A
 A
-%
-%
-%
+"
 "
 "
 A
@@ -8561,66 +8552,59 @@ A
 A
 A
 Ic
-.!
-Z"
-#
+e.
+/
+/
+/
+/
+!
+$
+$
+n#
+*-
+U
+!
 !
 !
 !
 !
-}$
-l#
-.
-!
-!
-!
-!
-!
-.
-.
 @
-)
-)
-#
 -
-(
-"
-"
+i,
+!*
+!
 !
 !
 }
 "
 @
 '
-y$
 Hi
 (
-$
-&
-&
-&
-&
-&
-&
-&
 @
 @
 0
 0
 
+"
 
 
 0
 
 
-%!
 0
-Z%
 IcE
+^
 @
 @
-"
-"
+!
+!
+@
+@
+@
+@
+@
+@
 @
 @
 @
@@ -8904,13 +8888,12 @@ IcE
 @
 @
 @
-@
-@
-@
-@
-@
-@
-fD;==@!
+fD;=}C!
+tAf;B/!
+t8f;;/!
+t/f;4/!
+t&f;-/!
+*!
 @
 j
 @
@@ -9010,25 +8993,19 @@ IcE
 V
 =
 =
-x
 !
-A
-
+X
 @
 &
-a
-6
-%
+"
 
 
-
-
-
-
+/
 @
 M9e
 @
 @
+
 ?
 ?
 ?
@@ -9044,6 +9021,7 @@ M9e
 ?
 ?
 ?
+
 
 @
 ,
@@ -9111,7 +9089,6 @@ P
 |
 H=
 =
-/
 
 =
 @
@@ -9140,6 +9117,7 @@ E
 0
 0
 @
+*
 @
 @
 ?
@@ -9150,3 +9128,4 @@ E
 @
 @
 
+\
