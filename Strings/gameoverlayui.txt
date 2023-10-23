@@ -7763,8 +7763,8 @@ Steam pid that launched us
 VGUI_Application_001
 OK
 Cancel
-Oct 20 2023
-15:30:03
+Oct 23 2023
+12:45:28
 crashhandler004
 gameoverlayui
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/overlay/gameoverlayui/main.cpp
