@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "8424875";
+var CLSTAMP = "8441226";
 (() => {
   "use strict";
   function e(e) {
@@ -367,7 +367,8 @@ var CLSTAMP = "8424875";
       (e[(e.k_EResultChargerRequired = 125)] = "k_EResultChargerRequired"),
       (e[(e.k_EResultCachedCredentialInvalid = 126)] =
         "k_EResultCachedCredentialInvalid"),
-      (e[(e.K_EResultPhoneNumberIsVOIP = 127)] = "K_EResultPhoneNumberIsVOIP");
+      (e[(e.K_EResultPhoneNumberIsVOIP = 127)] = "K_EResultPhoneNumberIsVOIP"),
+      (e[(e.k_EResultNotSupported = 128)] = "k_EResultNotSupported");
   })(d || (d = {}));
   let k = { success: !0, result: d.k_EResultOK };
   class m {

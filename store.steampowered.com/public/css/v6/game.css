@@ -3042,18 +3042,20 @@ body.v6 .game_area_already_owned.master_sub {
 
 .game_purchase_area_friends_want {
 	height: 61px;
+    margin-bottom: 8px;
 	padding-left: 46px;
 	position: relative;
 
 	background-color: rgba( 0, 0, 0, 0.2 );
 
 	font-size: 12px;
-	color: #626366;
+	color: #8d9096;
 	z-index: 0;
 }
 
 .game_purchase_area_friends_want .gift_icon {
 	position: absolute;
+    filter: brightness(1.5);
 	left: 17px;
 	top: 23px;
 }
@@ -3063,7 +3065,7 @@ body.v6 .game_area_already_owned.master_sub {
 }
 
 .game_purchase_area_friends_want a {
-	color: #b0aeac;
+	color: #bfc1c4;
 }
 
 .myactivity_block .block_content {

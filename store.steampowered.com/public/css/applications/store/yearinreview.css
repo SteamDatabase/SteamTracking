@@ -39,12 +39,6 @@ body.v6 {
   margin: 0px;
   padding: 8px 12px;
 }
-.yirlanding_YearInReviewContent_2Mj4n
-  .yirlanding_TabCtn_1BCmn
-  .yirlanding_TabBar_l1orY
-  .yirlanding_Tab_2Mufq.ActiveTab {
-  background-color: rgba(103, 193, 245, 0.34);
-}
 .yirlanding_HeaderCtn_39_9J {
   display: flex;
   flex-direction: row;
@@ -94,14 +88,10 @@ body.v6 {
   }
 }
 .yirlanding_UserName_3_FPl {
-  color: #1a9ffe;
   font-size: 0.75em;
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 50vw;
-}
-.yirlanding_ConclusionName_2aF5R {
-  color: #1a9ffe;
 }
 .yirlanding_InlineUserName_3W5sy {
   color: #fff;
@@ -213,34 +203,17 @@ body.v6 {
 }
 .yirlanding_GridItem_2VmQC.yirlanding_Game0_31y86 {
   cursor: pointer;
-  background: linear-gradient(
-    119.08deg,
-    #cd3bda 1.25%,
-    rgba(219, 43, 31, 0.83) 97.55%
-  );
 }
 .yirlanding_GridItem_2VmQC.yirlanding_Game1_d50og {
   cursor: pointer;
-  background: linear-gradient(
-    119.08deg,
-    #da913b 1.25%,
-    rgba(69, 219, 31, 0.83) 97.55%
-  );
 }
 .yirlanding_GridItem_2VmQC.yirlanding_Game2_2lQfz {
   cursor: pointer;
-  background: linear-gradient(119.08deg, #2536bf 1.25%, #bd71db 97.55%);
   flex-direction: column;
 }
 .yirlanding_GridItem_2VmQC.yirlanding_OverviewBlock_e5tza
   .yirlanding_BackgroundImage_2UVYU {
-  filter: opacity(1);
-}
-.yirlanding_GridItem_2VmQC.yirlanding_AchievementBlock_pcrG7 {
-  background: linear-gradient(147.86deg, #2389d1 25.78%, #68afe1 79.81%);
-}
-.yirlanding_GridItem_2VmQC.yirlanding_StreakBlock_3VDFE {
-  background: linear-gradient(147.86deg, #2389d1 25.78%, #68afe1 79.81%);
+  filter: opacity(0.5);
 }
 .yirlanding_GridItem_2VmQC.yirlanding_StreakBlock_3VDFE
   .yirlanding_SummaryBlockHugeNumCtn_2jeQG
@@ -250,11 +223,9 @@ body.v6 {
   white-space: nowrap;
 }
 .yirlanding_GridItem_2VmQC.yirlanding_HardwareBlock_3NyHm {
-  background: linear-gradient(147.86deg, #2389d1 25.78%, #68afe1 79.81%);
   flex-direction: column;
 }
 .yirlanding_GridItem_2VmQC.yirlanding_DeviceBlock_3tXh4 {
-  background: linear-gradient(147.86deg, #2389d1 25.78%, #68afe1 79.81%);
   flex-direction: column;
 }
 @media screen and (max-width: 500px) {
@@ -282,7 +253,6 @@ body.v6 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background: linear-gradient(147.86deg, #782370 25.78%, #05113c 101.81%);
   border-radius: 12px;
   box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.8);
   align-items: center;
@@ -557,12 +527,6 @@ body.v6 {
 .yirlanding_SummaryCtn_9eVnU .yirlanding_LongestStreakStat_1f0il {
   flex: 1;
 }
-.yirlanding_SummaryCtn_9eVnU .yirlanding_Keyboard_1hEqc {
-  background-color: green;
-}
-.yirlanding_SummaryCtn_9eVnU .yirlanding_Controller_1wLKO {
-  background-color: orange;
-}
 .yirlanding_StatBox_3vEOC {
   display: flex;
   flex-direction: column;
@@ -646,39 +610,13 @@ body.v6 {
   flex: 1;
   border-radius: 0px;
 }
-.yirlanding_ChartTitle_1Kpso {
-  font-size: 18px;
-  color: #fff;
-}
-.yirlanding_ChartSubtitle_wsE9H {
-  font-size: 18px;
-  color: #1a9ffe;
-}
-.yirlanding_OddSubtitle_OAdbH {
-  color: #0d5e1b;
-}
-.yirlanding_EvenSubtitle_3RdSx {
-  color: #642452;
-}
 .yirlanding_GraphRelatedCtn_1cvZS {
   position: relative;
-}
-.yirlanding_GraphRelatedCtn_1cvZS
-  .yirlanding_KeyboardControllerBreakdown_eqXZF {
-  background: linear-gradient(135deg, #0d245d 0%, #0b4648 100%);
-  padding-top: 3vw;
-  padding-bottom: 3vw;
 }
 .yirlanding_TimeRelatedCtn_1yKIM {
   position: relative;
   width: 100%;
   z-index: 1;
-  background: radial-gradient(
-    120.31% 100.89% at 74.99% -9.75%,
-    #690029 0%,
-    #0b1b35,
-    #060f0b
-  );
 }
 .yirlanding_TopHonorsSection_3Ftq5 {
   min-height: 80vh;
@@ -688,11 +626,6 @@ body.v6 {
   justify-content: center;
   padding-top: 4vw;
   box-sizing: border-box;
-  background: radial-gradient(
-    101.49% 84.96% at 18% -1.96%,
-    #8876cf 0%,
-    #423a5a 100%
-  );
 }
 .yirlanding_TopHonorsSection_3Ftq5 .yirlanding_YearInReviewContent_2Mj4n {
   height: unset;
@@ -734,7 +667,6 @@ body.v6 {
 .yirlanding_MissingUserCtn_1d-Ve .yirlanding_GenericBackground_3g9L1,
 .yirlanding_LogInCtn_283ao .yirlanding_GenericBackground_3g9L1 {
   position: absolute;
-  background: linear-gradient(147.86deg, #782370 25.78%, #05113c 101.81%);
   -webkit-mask: linear-gradient(180deg, black 58%, rgba(0, 0, 0, 0) 95%);
   mask: linear-gradient(180deg, black 58%, rgba(0, 0, 0, 0) 95%);
   -webkit-mask-composite: source-in;
@@ -1185,14 +1117,6 @@ html.responsive.touch .yircomponents_TopGameBlockContainer_1o-Oa {
     top: 62px;
   }
 }
-.yircomponents_TopGameBlockContainer_1o-Oa.yircomponents_OddGradient_FZUw6 {
-  background: radial-gradient(
-    120.31% 100.89% at 74.99% -9.75%,
-    #0d5e1b 0%,
-    #1f4e5c 52.6%,
-    #0e1014
-  );
-}
 .yircomponents_TopGameBlockContainer_1o-Oa.yircomponents_OddGradient_FZUw6
   .yircomponents_BigNum_1cZBW,
 .yircomponents_TopGameBlockContainer_1o-Oa.yircomponents_OddGradient_FZUw6
@@ -1203,14 +1127,6 @@ html.responsive.touch .yircomponents_TopGameBlockContainer_1o-Oa {
   .yircomponents_Title_2geom {
   text-shadow: 2px 2px 13px rgba(24, 90, 29, 0.568627451);
 }
-.yircomponents_TopGameBlockContainer_1o-Oa.yircomponents_EvenGradient_3pmx1 {
-  background: radial-gradient(
-    94.31% 143.89% at 49.99% -21.75%,
-    #642452 0%,
-    #06123d 52.6%,
-    #0e1014
-  );
-}
 .yircomponents_TopGameBlockContainer_1o-Oa.yircomponents_EvenGradient_3pmx1
   .yircomponents_BigNum_1cZBW,
 .yircomponents_TopGameBlockContainer_1o-Oa.yircomponents_EvenGradient_3pmx1
@@ -1220,13 +1136,6 @@ html.responsive.touch .yircomponents_TopGameBlockContainer_1o-Oa {
 .yircomponents_TopGameBlockContainer_1o-Oa.yircomponents_EvenGradient_3pmx1
   .yircomponents_Title_2geom {
   text-shadow: 2px 2px 13px rgba(100, 36, 82, 0.568627451);
-}
-.yircomponents_TopMostGame_GSCk- .yircomponents_TopGameBlockContainer_1o-Oa {
-  background: radial-gradient(
-    51.31% 143.89% at 49.99% -21.75%,
-    #642452 0%,
-    #06123d 52.6%
-  );
 }
 .yircomponents_SelectedInfoCtn_3lVSa
   .yircomponents_TopGameBlockContainer_1o-Oa {
@@ -1688,12 +1597,6 @@ html.responsive.touch .yircomponents_TopGameBlockContainer_1o-Oa {
   position: absolute;
   width: 194px;
   text-align: center;
-  background: linear-gradient(
-    45deg,
-    rgba(11, 112, 89, 0.5411764706) 15%,
-    rgba(0, 85, 128, 0.8509803922) 55%,
-    rgba(148, 26, 115, 0.7411764706)
-  );
   color: #fff;
   font-weight: 700;
   font-size: 10px;
@@ -1716,7 +1619,6 @@ html.responsive.touch .yircomponents_TopGameBlockContainer_1o-Oa {
 .yircomponents_PlatformChartsCtn_1dYXW {
   height: 70vw;
   max-height: 77vw;
-  background: radial-gradient(#17333a, #0a0d0d);
   box-sizing: border-box;
   padding-top: 2vw;
   padding-bottom: 2vw;
@@ -2068,7 +1970,7 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   filter: drop-shadow(0px 8px 16px rgba(0, 0, 0, 0.35));
   transform: translate3d(0px, -3px, 0px);
 }
-.yirallgames_BGImage_1XJXA {
+.yirallgames_AllGamesBGImage_Quroh {
   position: absolute;
   top: 0;
   left: -50%;
@@ -2078,13 +1980,6 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   margin-top: -32vw;
   transform-origin: top center;
   background-position: 0 0;
-  background-image: radial-gradient(
-      94.31% 143.89% at 2.99% -1.75%,
-      rgba(2, 187, 255, 0.2039215686) 0%,
-      rgba(255, 3, 179, 0.2274509804) 52.6%,
-      rgba(106, 255, 0, 0.137254902)
-    ),
-    url("/public/images/yearinreview/2022/steam_logo_offset.png");
   background-repeat: repeat;
   -webkit-mask-image: -webkit-gradient(
     linear,
@@ -2102,7 +1997,6 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   top: 0;
   min-height: 1500px;
   height: 100%;
-  background: linear-gradient(180deg, #642452 30%, #06123d 90%, transparent);
   -webkit-mask-image: -webkit-gradient(
     linear,
     left 90%,
@@ -2167,11 +2061,6 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   top: 0;
   height: 1080px;
   transform: rotate(-22.5deg) translate(-10%, -21%);
-  background: radial-gradient(
-    108.31% 162.89% at 18.99% -21.75%,
-    #03090e 0%,
-    #1b5276 52.6%
-  );
   z-index: -1;
   -webkit-mask: linear-gradient(180deg, black 58%, rgba(0, 0, 0, 0) 95%),
     radial-gradient(
@@ -2194,7 +2083,6 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  background: linear-gradient(135deg, #642452 0%, #06123d 100%);
 }
 .yirbackgroundtiles_SingleGame_VGWhX .yirbackgroundtiles_ImageTint_3vfLR img {
   filter: saturate(0.2) opacity(0.2);
@@ -2663,6 +2551,64 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   box-sizing: border-box;
   border-radius: 12px;
 }
+.yirbadges_PlayBehaviorContainer_1NBM7 .yirbadges_ProgressBarFilled_3d5FO {
+  box-shadow: 0.2vw 0.3vw 0.3vw rgba(0, 0, 0, 0.3);
+  height: 100%;
+  border-radius: 4px;
+}
+.yirbadges_PlayBehaviorContainer_1NBM7
+  .yirbadges_ProgressBarFilled_3d5FO
+  .yirbadges_GlitterBox_1a0N2 {
+  width: 100%;
+  height: 100%;
+  background-image: url("/public/images/yearinreview/glitter_albedo.png");
+  -webkit-mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 55%,
+    black 90%
+  );
+  mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 55%, black 90%);
+  mix-blend-mode: screen;
+  position: relative;
+  background-repeat: repeat-y;
+  background-position: 100% 0;
+  background-size: 512px contain;
+  border-radius: 4px;
+}
+.yirbadges_PlayBehaviorContainer_1NBM7
+  .yirbadges_ProgressBarFilled_3d5FO
+  .yirbadges_GlitterBox_1a0N2
+  .yirbadges_GlitterSecond_2Gj-8,
+.yirbadges_PlayBehaviorContainer_1NBM7
+  .yirbadges_ProgressBarFilled_3d5FO
+  .yirbadges_GlitterBox_1a0N2
+  .yirbadges_Glitter_hxngh {
+  position: absolute;
+  right: 0;
+  width: 512px;
+  height: 100%;
+  background-image: url("/public/images/yearinreview/glitter_color.png");
+  -webkit-mask-image: url("/public/images/yearinreview/glitter.png");
+  mask-image: url("/public/images/yearinreview/glitter.png");
+  mask-size: 32px;
+  -webkit-mask-size: 32px;
+  mix-blend-mode: screen;
+  animation-name: yirbadges_glitterMove_2UzEp;
+  animation-duration: 15s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.yirbadges_PlayBehaviorContainer_1NBM7
+  .yirbadges_ProgressBarFilled_3d5FO
+  .yirbadges_GlitterBox_1a0N2
+  .yirbadges_GlitterSecond_2Gj-8 {
+  animation-name: yirbadges_glitterMove2_309-e;
+  mask-size: 64px;
+  -webkit-mask-size: 64px;
+  box-sizing: border-box;
+  right: -32px;
+  animation-duration: 12s;
+}
 .yirbadges_PlayBehaviorContainer_1NBM7
   .yirbadges_PlayBehaviorSectionSubTitle_3g3Vy {
   font-size: clamp(17px, 2vw, 28px);
@@ -2694,27 +2640,6 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   width: 80%;
   height: 80%;
   margin: auto;
-}
-.yirbadges_PlayBehaviorContainer_1NBM7
-  .yirbadges_PlayerBehaviorProgressCnt_pYgyD
-  .yirbadges_ProgressIcon_3J3rX
-  .yirbadges_ProgressIconSVG_3GZf3.yirbadges_IconAchievement_2DkX2
-  path {
-  fill: #01a4f6;
-}
-.yirbadges_PlayBehaviorContainer_1NBM7
-  .yirbadges_PlayerBehaviorProgressCnt_pYgyD
-  .yirbadges_ProgressIcon_3J3rX
-  .yirbadges_ProgressIconSVG_3GZf3.yirbadges_IconGamesPlayed_bs1zw
-  path {
-  fill: #10ca70;
-}
-.yirbadges_PlayBehaviorContainer_1NBM7
-  .yirbadges_PlayerBehaviorProgressCnt_pYgyD
-  .yirbadges_ProgressIcon_3J3rX
-  .yirbadges_ProgressIconSVG_3GZf3.yirbadges_IconStreak_36416
-  path {
-  fill: #bd97ff;
 }
 .yirbadges_PlayBehaviorContainer_1NBM7
   .yirbadges_PlayerBehaviorProgressCnt_pYgyD
@@ -2759,81 +2684,6 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   top: -25%;
   border-radius: 6px;
   z-index: 2;
-}
-.yirbadges_PlayBehaviorContainer_1NBM7
-  .yirbadges_PlayerBehaviorProgressCnt_pYgyD
-  .yirbadges_ProgressRightSide_3FXre
-  .yirbadges_ProgressBar_ImOR1
-  .yirbadges_ProgressBarFilled_3d5FO {
-  background: linear-gradient(to right, #10cb6e 0%, #00a2ff 50%, #8a48f5 90%);
-  box-shadow: 0.2vw 0.3vw 0.3vw rgba(0, 0, 0, 0.3);
-  height: 100%;
-  border-radius: 4px;
-}
-.yirbadges_PlayBehaviorContainer_1NBM7
-  .yirbadges_PlayerBehaviorProgressCnt_pYgyD
-  .yirbadges_ProgressRightSide_3FXre
-  .yirbadges_ProgressBar_ImOR1
-  .yirbadges_ProgressBarFilled_3d5FO
-  .yirbadges_GlitterBox_1a0N2 {
-  width: 100%;
-  height: 100%;
-  background-image: url("/public/images/yearinreview/2022/glitter_albedo.png");
-  -webkit-mask-image: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0) 55%,
-    black 90%
-  );
-  mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 55%, black 90%);
-  mix-blend-mode: screen;
-  position: relative;
-  background-repeat: repeat-y;
-  background-position: 100% 0;
-  background-size: 512px contain;
-  border-radius: 4px;
-}
-.yirbadges_PlayBehaviorContainer_1NBM7
-  .yirbadges_PlayerBehaviorProgressCnt_pYgyD
-  .yirbadges_ProgressRightSide_3FXre
-  .yirbadges_ProgressBar_ImOR1
-  .yirbadges_ProgressBarFilled_3d5FO
-  .yirbadges_GlitterBox_1a0N2
-  .yirbadges_GlitterSecond_2Gj-8,
-.yirbadges_PlayBehaviorContainer_1NBM7
-  .yirbadges_PlayerBehaviorProgressCnt_pYgyD
-  .yirbadges_ProgressRightSide_3FXre
-  .yirbadges_ProgressBar_ImOR1
-  .yirbadges_ProgressBarFilled_3d5FO
-  .yirbadges_GlitterBox_1a0N2
-  .yirbadges_Glitter_hxngh {
-  position: absolute;
-  right: 0;
-  width: 512px;
-  height: 100%;
-  background-image: url("/public/images/yearinreview/2022/glitter_color.png");
-  -webkit-mask-image: url("/public/images/yearinreview/2022/glitter.png");
-  mask-image: url("/public/images/yearinreview/2022/glitter.png");
-  mask-size: 32px;
-  -webkit-mask-size: 32px;
-  mix-blend-mode: screen;
-  animation-name: yirbadges_glitterMove_2UzEp;
-  animation-duration: 15s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-.yirbadges_PlayBehaviorContainer_1NBM7
-  .yirbadges_PlayerBehaviorProgressCnt_pYgyD
-  .yirbadges_ProgressRightSide_3FXre
-  .yirbadges_ProgressBar_ImOR1
-  .yirbadges_ProgressBarFilled_3d5FO
-  .yirbadges_GlitterBox_1a0N2
-  .yirbadges_GlitterSecond_2Gj-8 {
-  animation-name: yirbadges_glitterMove2_309-e;
-  mask-size: 64px;
-  -webkit-mask-size: 64px;
-  box-sizing: border-box;
-  right: -32px;
-  animation-duration: 12s;
 }
 .yirbadges_PlayBehaviorContainer_1NBM7
   .yirbadges_PlayerBehaviorProgressCnt_pYgyD
@@ -2988,75 +2838,6 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   font-weight: bold;
 }
 .yirbadges_PlayBehaviorContainer_1NBM7
-  .yirbadges_GameNewnessComparisonContainer_2ejw1.yirbadges_NewActive_1cYbZ
-  .yirbadges_DataBoxArrow_1YSSn,
-.yirbadges_PlayBehaviorContainer_1NBM7
-  .yirbadges_GameNewnessComparisonContainer_2ejw1.yirbadges_NewActive_1cYbZ
-  .yirbadges_UserData_37wKV.yirbadges_DataBox_8TJrJ {
-  background-color: #3cdf6a;
-}
-.yirbadges_PlayBehaviorContainer_1NBM7
-  .yirbadges_GameNewnessComparisonContainer_2ejw1.yirbadges_NewActive_1cYbZ
-  .yirbadges_SteamData_1J7jQ.yirbadges_DataBox_8TJrJ {
-  border: 4px dotted #3cdf6a;
-}
-.yirbadges_PlayBehaviorContainer_1NBM7
-  .yirbadges_GameNewnessComparisonContainer_2ejw1.yirbadges_NewActive_1cYbZ
-  .yirbadges_SteamData_1J7jQ.yirbadges_DataBox_8TJrJ
-  .yirbadges_PercentageLabel_1fy0h,
-.yirbadges_PlayBehaviorContainer_1NBM7
-  .yirbadges_GameNewnessComparisonContainer_2ejw1.yirbadges_NewActive_1cYbZ
-  .yirbadges_SteamData_1J7jQ.yirbadges_DataBox_8TJrJ
-  .yirbadges_PercentageDescriptionLabel_3dO1H {
-  color: #3cdf6a;
-}
-.yirbadges_PlayBehaviorContainer_1NBM7
-  .yirbadges_GameNewnessComparisonContainer_2ejw1.yirbadges_UsedActive_36_wy
-  .yirbadges_DataBoxArrow_1YSSn,
-.yirbadges_PlayBehaviorContainer_1NBM7
-  .yirbadges_GameNewnessComparisonContainer_2ejw1.yirbadges_UsedActive_36_wy
-  .yirbadges_UserData_37wKV.yirbadges_DataBox_8TJrJ {
-  background-color: #4df;
-}
-.yirbadges_PlayBehaviorContainer_1NBM7
-  .yirbadges_GameNewnessComparisonContainer_2ejw1.yirbadges_UsedActive_36_wy
-  .yirbadges_SteamData_1J7jQ.yirbadges_DataBox_8TJrJ {
-  border: 4px dotted #4df;
-}
-.yirbadges_PlayBehaviorContainer_1NBM7
-  .yirbadges_GameNewnessComparisonContainer_2ejw1.yirbadges_UsedActive_36_wy
-  .yirbadges_SteamData_1J7jQ.yirbadges_DataBox_8TJrJ
-  .yirbadges_PercentageLabel_1fy0h,
-.yirbadges_PlayBehaviorContainer_1NBM7
-  .yirbadges_GameNewnessComparisonContainer_2ejw1.yirbadges_UsedActive_36_wy
-  .yirbadges_SteamData_1J7jQ.yirbadges_DataBox_8TJrJ
-  .yirbadges_PercentageDescriptionLabel_3dO1H {
-  color: #4df;
-}
-.yirbadges_PlayBehaviorContainer_1NBM7
-  .yirbadges_GameNewnessComparisonContainer_2ejw1.yirbadges_OldActive_1oprM
-  .yirbadges_DataBoxArrow_1YSSn,
-.yirbadges_PlayBehaviorContainer_1NBM7
-  .yirbadges_GameNewnessComparisonContainer_2ejw1.yirbadges_OldActive_1oprM
-  .yirbadges_UserData_37wKV.yirbadges_DataBox_8TJrJ {
-  background-color: #e496ff;
-}
-.yirbadges_PlayBehaviorContainer_1NBM7
-  .yirbadges_GameNewnessComparisonContainer_2ejw1.yirbadges_OldActive_1oprM
-  .yirbadges_SteamData_1J7jQ.yirbadges_DataBox_8TJrJ {
-  border: 4px dotted #e496ff;
-}
-.yirbadges_PlayBehaviorContainer_1NBM7
-  .yirbadges_GameNewnessComparisonContainer_2ejw1.yirbadges_OldActive_1oprM
-  .yirbadges_SteamData_1J7jQ.yirbadges_DataBox_8TJrJ
-  .yirbadges_PercentageLabel_1fy0h,
-.yirbadges_PlayBehaviorContainer_1NBM7
-  .yirbadges_GameNewnessComparisonContainer_2ejw1.yirbadges_OldActive_1oprM
-  .yirbadges_SteamData_1J7jQ.yirbadges_DataBox_8TJrJ
-  .yirbadges_PercentageDescriptionLabel_3dO1H {
-  color: #e496ff;
-}
-.yirbadges_PlayBehaviorContainer_1NBM7
   .yirbadges_GameNewnessComparisonContainer_2ejw1
   .yirbadges_DataBoxArrow_1YSSn {
   position: absolute;
@@ -3110,11 +2891,6 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
 .yirfriends_FriendCtn_1dEBr {
   display: flex;
   align-items: center;
-  background: linear-gradient(
-    14deg,
-    rgba(22, 41, 100, 0.8784313725),
-    rgba(16, 86, 98, 0.7215686275)
-  );
   border-radius: 5px;
   padding: 8px;
   font-size: 14px;
@@ -3215,12 +2991,6 @@ div.yirhowyouplayed_DeckContainer_3G2ne .yirhowyouplayed_Disclaimer_1h_am {
 }
 .yirlongeststreak_Section_32a0u {
   position: relative;
-  background: radial-gradient(
-    94.31% 143.89% at 2.99% -1.75%,
-    #0578a2 0%,
-    #449963 52.6%,
-    #104a4a
-  );
   width: 100%;
   height: 100%;
   padding-top: 3vw;
@@ -3244,7 +3014,6 @@ div.yirhowyouplayed_DeckContainer_3G2ne .yirhowyouplayed_Disclaimer_1h_am {
 .yirlongeststreak_StreakSizeFullBar_3sks_ {
   width: 100%;
   height: 3px;
-  background-color: #fff;
   position: absolute;
   top: 28%;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.35);
@@ -3320,19 +3089,12 @@ div.yirhowyouplayed_DeckContainer_3G2ne .yirhowyouplayed_Disclaimer_1h_am {
 .yirlongeststreak_Tick_3XaLQ:last-child {
   margin-right: -4px;
 }
-.yirlongeststreak_BgImage_2dY4F {
+.yirlongeststreak_LongestStreakBgImage_szI1U {
   position: absolute;
   top: 0;
   width: 100%;
   height: 100%;
   opacity: 0.2;
-  background-image: radial-gradient(
-      94.31% 143.89% at 2.99% -1.75%,
-      #0578a2 0%,
-      #449963 52.6%,
-      #104a4a
-    ),
-    url("/public/images/yearinreview/2022/streak_bg_large.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-blend-mode: hard-light;
@@ -4808,4 +4570,452 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
     opacity: 1;
     transform: translateX(0px);
   }
+}
+.yir2022_ImagesCtn_wLcoY {
+  background: linear-gradient(180deg, #642452 30%, #06123d 90%, transparent);
+}
+.yir2022_SingleGame_31M-T {
+  background: radial-gradient(
+    108.31% 162.89% at 18.99% -21.75%,
+    #03090e 0%,
+    #1b5276 52.6%
+  );
+}
+.yir2022_SingleGame_31M-T .yir2022_ImageTint_1SZVV {
+  background: linear-gradient(135deg, #642452 0%, #06123d 100%);
+}
+.yir2022_Section_1tFD8 {
+  background: radial-gradient(
+    94.31% 143.89% at 2.99% -1.75%,
+    #0578a2 0%,
+    #449963 52.6%,
+    #104a4a
+  );
+}
+.yir2022_StreakSizeFullBar_2d2eX {
+  background-color: #fff;
+}
+.yir2022_LongestStreakBgImage_AEfs4 {
+  background-image: radial-gradient(
+      94.31% 143.89% at 2.99% -1.75%,
+      #0578a2 0%,
+      #449963 52.6%,
+      #104a4a
+    ),
+    url("/public/images/yearinreview/streak_bg_large.webp");
+}
+.yir2022_Tab_2ucSw.ActiveTab {
+  background-color: rgba(103, 193, 245, 0.34);
+}
+.yir2022_UserName_2abMW {
+  color: #1a9ffe;
+}
+.yir2022_ConclusionName_2LIZW {
+  color: #1a9ffe;
+}
+.yir2022_GridItem_2VCOc.yir2022_Game0_3itR- {
+  background: linear-gradient(
+    119.08deg,
+    #cd3bda 1.25%,
+    rgba(219, 43, 31, 0.83) 97.55%
+  );
+}
+.yir2022_GridItem_2VCOc.yir2022_Game1_2rx_v {
+  background: linear-gradient(
+    119.08deg,
+    #da913b 1.25%,
+    rgba(69, 219, 31, 0.83) 97.55%
+  );
+}
+.yir2022_GridItem_2VCOc.yir2022_Game2_24X3Z {
+  background: linear-gradient(119.08deg, #2536bf 1.25%, #bd71db 97.55%);
+}
+.yir2022_GridItem_2VCOc.yir2022_AchievementBlock_3w6ck {
+  background: linear-gradient(147.86deg, #2389d1 25.78%, #68afe1 79.81%);
+}
+.yir2022_GridItem_2VCOc.yir2022_StreakBlock_Y5ho7 {
+  background: linear-gradient(147.86deg, #2389d1 25.78%, #68afe1 79.81%);
+}
+.yir2022_GridItem_2VCOc.yir2022_HardwareBlock_1ljEl {
+  background: linear-gradient(147.86deg, #2389d1 25.78%, #68afe1 79.81%);
+}
+.yir2022_GridItem_2VCOc.yir2022_DeviceBlock_20l6G {
+  background: linear-gradient(147.86deg, #2389d1 25.78%, #68afe1 79.81%);
+}
+.yir2022_SummaryCtn_2m_pb {
+  background: linear-gradient(147.86deg, #782370 25.78%, #05113c 101.81%);
+}
+.yir2022_TimeRelatedCtn_1F5_Q {
+  background: radial-gradient(
+    120.31% 100.89% at 74.99% -9.75%,
+    #690029 0%,
+    #0b1b35,
+    #060f0b
+  );
+}
+.yir2022_TopHonorsSection_1tc8t {
+  background: radial-gradient(
+    101.49% 84.96% at 18% -1.96%,
+    #8876cf 0%,
+    #423a5a 100%
+  );
+}
+.yir2022_MissingUserCtn_1tHOJ .yir2022_GenericBackground_1OocY,
+.yir2022_LogInCtn_mU6TQ .yir2022_GenericBackground_1OocY {
+  background: linear-gradient(147.86deg, #782370 25.78%, #05113c 101.81%);
+}
+.yir2022_FriendCtn_10UIo {
+  background: linear-gradient(
+    14deg,
+    rgba(22, 41, 100, 0.8784313725),
+    rgba(16, 86, 98, 0.7215686275)
+  );
+}
+.yir2022_TopGameBlockContainer_3cqzP.yir2022_OddGradient_2MFzm {
+  background: radial-gradient(
+    120.31% 100.89% at 74.99% -9.75%,
+    #0d5e1b 0%,
+    #1f4e5c 52.6%,
+    #0e1014
+  );
+}
+.yir2022_TopGameBlockContainer_3cqzP.yir2022_EvenGradient_2DtTV {
+  background: radial-gradient(
+    94.31% 143.89% at 49.99% -21.75%,
+    #642452 0%,
+    #06123d 52.6%,
+    #0e1014
+  );
+}
+.yir2022_TopMostGame_TEmY- .yir2022_TopGameBlockContainer_3cqzP {
+  background: radial-gradient(
+    51.31% 143.89% at 49.99% -21.75%,
+    #642452 0%,
+    #06123d 52.6%
+  );
+}
+.yir2022_FirstPlayCtn_-cK9w .yir2022_GamePlayDetails_161Uj {
+  background: linear-gradient(
+    45deg,
+    rgba(11, 112, 89, 0.5411764706) 15%,
+    rgba(0, 85, 128, 0.8509803922) 55%,
+    rgba(148, 26, 115, 0.7411764706)
+  );
+}
+.yir2022_PlatformChartsCtn_2gfnc {
+  background: radial-gradient(#17333a, #0a0d0d);
+}
+.yir2022_IconAchievement_1ccyh path {
+  fill: #01a4f6;
+}
+.yir2022_IconGamesPlayed_3qZMf path {
+  fill: #10ca70;
+}
+.yir2022_IconStreak_3gW-b path {
+  fill: #bd97ff;
+}
+.yir2022_PlayBehaviorContainer_1SL9g
+  .yir2022_ProgressBarFilled_2lEhY.yir2022_ProgressBarFilledGradient_j_CK0 {
+  background: linear-gradient(to right, #10cb6e 0%, #00a2ff 50%, #8a48f5 90%);
+}
+.yir2022_PlayBehaviorContainer_1SL9g
+  .yir2022_NewActive_2WOXA
+  .yir2022_DataBoxArrow_2j2hP.yir2022_Background_1DEzd,
+.yir2022_PlayBehaviorContainer_1SL9g
+  .yir2022_NewActive_2WOXA
+  .yir2022_UserData_3Lp_9.yir2022_DataBox_2GDYo.yir2022_Background_1DEzd {
+  background-color: #3cdf6a;
+}
+.yir2022_PlayBehaviorContainer_1SL9g
+  .yir2022_NewActive_2WOXA
+  .yir2022_SteamData_r2PuX.yir2022_DataBox_2GDYo.yir2022_Border_a5nHY {
+  border: 4px dotted #3cdf6a;
+}
+.yir2022_PlayBehaviorContainer_1SL9g
+  .yir2022_NewActive_2WOXA
+  .yir2022_SteamData_r2PuX.yir2022_DataBox_2GDYo
+  .yir2022_PercentageLabel_3PPdn.yir2022_Color_10WCy,
+.yir2022_PlayBehaviorContainer_1SL9g
+  .yir2022_NewActive_2WOXA
+  .yir2022_SteamData_r2PuX.yir2022_DataBox_2GDYo
+  .yir2022_PercentageDescriptionLabel_1BwKK.yir2022_Color_10WCy {
+  color: #3cdf6a;
+}
+.yir2022_PlayBehaviorContainer_1SL9g
+  .yir2022_UsedActive_YETzI
+  .yir2022_DataBoxArrow_2j2hP.yir2022_Background_1DEzd,
+.yir2022_PlayBehaviorContainer_1SL9g
+  .yir2022_UsedActive_YETzI
+  .yir2022_UserData_3Lp_9.yir2022_DataBox_2GDYo.yir2022_Background_1DEzd {
+  background-color: #4df;
+}
+.yir2022_PlayBehaviorContainer_1SL9g
+  .yir2022_UsedActive_YETzI
+  .yir2022_SteamData_r2PuX.yir2022_DataBox_2GDYo.yir2022_Border_a5nHY {
+  border: 4px dotted #4df;
+}
+.yir2022_PlayBehaviorContainer_1SL9g
+  .yir2022_UsedActive_YETzI
+  .yir2022_SteamData_r2PuX.yir2022_DataBox_2GDYo
+  .yir2022_PercentageLabel_3PPdn.yir2022_Color_10WCy,
+.yir2022_PlayBehaviorContainer_1SL9g
+  .yir2022_UsedActive_YETzI
+  .yir2022_SteamData_r2PuX.yir2022_DataBox_2GDYo
+  .yir2022_PercentageDescriptionLabel_1BwKK.yir2022_Color_10WCy {
+  color: #4df;
+}
+.yir2022_PlayBehaviorContainer_1SL9g
+  .yir2022_OldActive_3kJYF
+  .yir2022_DataBoxArrow_2j2hP.yir2022_Background_1DEzd,
+.yir2022_PlayBehaviorContainer_1SL9g
+  .yir2022_OldActive_3kJYF
+  .yir2022_UserData_3Lp_9.yir2022_DataBox_2GDYo.yir2022_Background_1DEzd {
+  background-color: #e496ff;
+}
+.yir2022_PlayBehaviorContainer_1SL9g
+  .yir2022_OldActive_3kJYF
+  .yir2022_SteamData_r2PuX.yir2022_DataBox_2GDYo.yir2022_Border_a5nHY {
+  border: 4px dotted #e496ff;
+}
+.yir2022_PlayBehaviorContainer_1SL9g
+  .yir2022_OldActive_3kJYF
+  .yir2022_SteamData_r2PuX.yir2022_DataBox_2GDYo
+  .yir2022_PercentageLabel_3PPdn.yir2022_Color_10WCy,
+.yir2022_PlayBehaviorContainer_1SL9g
+  .yir2022_OldActive_3kJYF
+  .yir2022_SteamData_r2PuX.yir2022_DataBox_2GDYo
+  .yir2022_PercentageDescriptionLabel_1BwKK.yir2022_Color_10WCy {
+  color: #e496ff;
+}
+.yir2022_AllGamesBGImage_3BT7r {
+  background-image: radial-gradient(
+      94.31% 143.89% at 2.99% -1.75%,
+      rgba(2, 187, 255, 0.2039215686) 0%,
+      rgba(255, 3, 179, 0.2274509804) 52.6%,
+      rgba(106, 255, 0, 0.137254902)
+    ),
+    url("/public/images/yearinreview/steam_logo_offset.png");
+}
+.yir2022_SeeRewindButton_12Vol {
+  background: #2d73ff;
+}
+.yir2022_SeeRewindButton_12Vol:hover {
+  background: #fff;
+  color: #222;
+}
+.yir2023_ImagesCtn_2w-zj {
+  background: linear-gradient(180deg, #d3d920 30%, #d3d920 90%, transparent);
+}
+.yir2023_SingleGame_10YwG {
+  background: radial-gradient(
+    108.31% 162.89% at 18.99% -21.75%,
+    #d3d920 0%,
+    #d3d920 52.6%
+  );
+}
+.yir2023_SingleGame_10YwG .yir2023_ImageTint_2GknM {
+  background: linear-gradient(135deg, #d3d920 0%, #d3d920 100%);
+}
+.yir2023_Section_1z6_O {
+  background: radial-gradient(
+    94.31% 143.89% at 2.99% -1.75%,
+    #d3d920 0%,
+    #d3d920 52.6%,
+    #d3d920
+  );
+}
+.yir2023_StreakSizeFullBar_1Yndk {
+  background-color: #fff;
+}
+.yir2023_LongestStreakBgImage_3rUSv {
+  background-image: radial-gradient(
+      94.31% 143.89% at 2.99% -1.75%,
+      #d3d920 0%,
+      #d3d920 52.6%,
+      #d3d920
+    ),
+    url("/public/images/yearinreview/streak_bg_large.webp");
+}
+.yir2023_Tab_19Kvz.ActiveTab {
+  background-color: rgba(190, 240, 51, 0.34);
+}
+.yir2023_ConclusionName_2qriz {
+  color: #d3d920;
+}
+.yir2023_GridItem_2u4ym.yir2023_Game0_3B1V7 {
+  background: linear-gradient(
+    119.08deg,
+    #d3d920 1.25%,
+    rgba(190, 240, 51, 0.83) 97.55%
+  );
+}
+.yir2023_GridItem_2u4ym.yir2023_Game1_TyaIa {
+  background: linear-gradient(
+    119.08deg,
+    #d3d920 1.25%,
+    rgba(190, 240, 51, 0.83) 97.55%
+  );
+}
+.yir2023_GridItem_2u4ym.yir2023_Game2_2MJi2 {
+  background: linear-gradient(119.08deg, #d3d920 1.25%, #d3d920 97.55%);
+}
+.yir2023_GridItem_2u4ym.yir2023_AchievementBlock_SK6TH {
+  background: linear-gradient(147.86deg, #d3d920 25.78%, #d3d920 79.81%);
+}
+.yir2023_GridItem_2u4ym.yir2023_StreakBlock_1HWMU {
+  background: linear-gradient(147.86deg, #d3d920 25.78%, #d3d920 79.81%);
+}
+.yir2023_GridItem_2u4ym.yir2023_HardwareBlock_3u55A {
+  background: linear-gradient(147.86deg, #d3d920 25.78%, #d3d920 79.81%);
+}
+.yir2023_GridItem_2u4ym.yir2023_DeviceBlock_30Nlt {
+  background: linear-gradient(147.86deg, #d3d920 25.78%, #d3d920 79.81%);
+}
+.yir2023_SummaryCtn_3B7MS {
+  background: linear-gradient(147.86deg, #d3d920 25.78%, #d3d920 101.81%);
+}
+.yir2023_TimeRelatedCtn_1NReD {
+  background: radial-gradient(
+    120.31% 100.89% at 74.99% -9.75%,
+    #d3d920 0%,
+    #d3d920,
+    #d3d920
+  );
+}
+.yir2023_TopHonorsSection_3_b2U {
+  background: radial-gradient(
+    101.49% 84.96% at 18% -1.96%,
+    #d3d920 0%,
+    #d3d920 100%
+  );
+}
+.yir2023_FriendCtn_3vzUI {
+  background: linear-gradient(14deg, #d3d920, #d3d920);
+}
+.yir2023_TopGameBlockContainer_3F7PU.yir2023_OddGradient_w_Lxb {
+  background: radial-gradient(
+    120.31% 100.89% at 74.99% -9.75%,
+    #d3d920 0%,
+    #d3d920 52.6%,
+    #d3d920
+  );
+}
+.yir2023_TopGameBlockContainer_3F7PU.yir2023_EvenGradient_94te0 {
+  background: radial-gradient(
+    94.31% 143.89% at 49.99% -21.75%,
+    #d3d920 0%,
+    #d3d920 52.6%,
+    #d3d920
+  );
+}
+.yir2023_TopMostGame_1rn7C .yir2023_TopGameBlockContainer_3F7PU {
+  background: radial-gradient(
+    51.31% 143.89% at 49.99% -21.75%,
+    #d3d920 0%,
+    #d3d920 52.6%
+  );
+}
+.yir2023_GamePlayDetails_2qarm {
+  background: linear-gradient(45deg, #d3d920 15%, #d3d920 55%, #d3d920);
+}
+.yir2023_PlatformChartsCtn_3cVLk {
+  background: radial-gradient(#d3d920, #d3d920);
+}
+.yir2023_IconAchievement_3meex path {
+  fill: #d3d920;
+}
+.yir2023_IconGamesPlayed_1_Cfx path {
+  fill: #d3d920;
+}
+.yir2023_IconStreak_3A0kF path {
+  fill: #d3d920;
+}
+.yir2023_PlayBehaviorContainer_9YqCa
+  .yir2023_ProgressBarFilled_3wtv1.yir2023_ProgressBarFilledGradient_1bVTX {
+  background: linear-gradient(to right, #d3d920 0%, #d3d920 50%, #d3d920 90%);
+}
+.yir2023_PlayBehaviorContainer_9YqCa
+  .yir2023_NewActive_18-Ta
+  .yir2023_DataBoxArrow_1wfGD.yir2023_Background_2UelP,
+.yir2023_PlayBehaviorContainer_9YqCa
+  .yir2023_NewActive_18-Ta
+  .yir2023_UserData_155Ld.yir2023_DataBox_1PoOp.yir2023_Background_2UelP {
+  background-color: #bef033;
+}
+.yir2023_PlayBehaviorContainer_9YqCa
+  .yir2023_NewActive_18-Ta
+  .yir2023_SteamData_3So3G.yir2023_DataBox_1PoOp.yir2023_Border_XBvd9 {
+  border: 4px dotted #bef033;
+}
+.yir2023_PlayBehaviorContainer_9YqCa
+  .yir2023_NewActive_18-Ta
+  .yir2023_SteamData_3So3G.yir2023_DataBox_1PoOp
+  .yir2023_PercentageLabel_2mv_7.yir2023_Color_12oaM,
+.yir2023_PlayBehaviorContainer_9YqCa
+  .yir2023_NewActive_18-Ta
+  .yir2023_SteamData_3So3G.yir2023_DataBox_1PoOp
+  .yir2023_PercentageDescriptionLabel_19zcQ.yir2023_Color_12oaM {
+  color: #bef033;
+}
+.yir2023_PlayBehaviorContainer_9YqCa
+  .yir2023_UsedActive_dGZz3
+  .yir2023_DataBoxArrow_1wfGD.yir2023_Background_2UelP,
+.yir2023_PlayBehaviorContainer_9YqCa
+  .yir2023_UsedActive_dGZz3
+  .yir2023_UserData_155Ld.yir2023_DataBox_1PoOp.yir2023_Background_2UelP {
+  background-color: #bef033;
+}
+.yir2023_PlayBehaviorContainer_9YqCa
+  .yir2023_UsedActive_dGZz3
+  .yir2023_SteamData_3So3G.yir2023_DataBox_1PoOp.yir2023_Border_XBvd9 {
+  border: 4px dotted #bef033;
+}
+.yir2023_PlayBehaviorContainer_9YqCa
+  .yir2023_UsedActive_dGZz3
+  .yir2023_SteamData_3So3G.yir2023_DataBox_1PoOp
+  .yir2023_PercentageLabel_2mv_7.yir2023_Color_12oaM,
+.yir2023_PlayBehaviorContainer_9YqCa
+  .yir2023_UsedActive_dGZz3
+  .yir2023_SteamData_3So3G.yir2023_DataBox_1PoOp
+  .yir2023_PercentageDescriptionLabel_19zcQ.yir2023_Color_12oaM {
+  color: #bef033;
+}
+.yir2023_PlayBehaviorContainer_9YqCa
+  .yir2023_OldActive_3XPjE
+  .yir2023_DataBoxArrow_1wfGD.yir2023_Background_2UelP,
+.yir2023_PlayBehaviorContainer_9YqCa
+  .yir2023_OldActive_3XPjE
+  .yir2023_UserData_155Ld.yir2023_DataBox_1PoOp.yir2023_Background_2UelP {
+  background-color: #bef033;
+}
+.yir2023_PlayBehaviorContainer_9YqCa
+  .yir2023_OldActive_3XPjE
+  .yir2023_SteamData_3So3G.yir2023_DataBox_1PoOp.yir2023_Border_XBvd9 {
+  border: 4px dotted #bef033;
+}
+.yir2023_PlayBehaviorContainer_9YqCa
+  .yir2023_OldActive_3XPjE
+  .yir2023_SteamData_3So3G.yir2023_DataBox_1PoOp
+  .yir2023_PercentageLabel_2mv_7.yir2023_Color_12oaM,
+.yir2023_PlayBehaviorContainer_9YqCa
+  .yir2023_OldActive_3XPjE
+  .yir2023_SteamData_3So3G.yir2023_DataBox_1PoOp
+  .yir2023_PercentageDescriptionLabel_19zcQ.yir2023_Color_12oaM {
+  color: #bef033;
+}
+.yir2023_AllGamesBGImage_1ujDQ {
+  background-image: radial-gradient(
+      94.31% 143.89% at 2.99% -1.75%,
+      rgba(211, 217, 32, 0.2274509804) 0%,
+      rgba(211, 217, 32, 0.2274509804) 52.6%,
+      rgba(211, 217, 32, 0.2274509804)
+    ),
+    url("/public/images/yearinreview/steam_logo_offset.png");
+}
+.yir2023_SeeRewindButton_2rDtQ {
+  background: #d3d920;
+}
+.yir2023_SeeRewindButton_2rDtQ:hover {
+  background: #c2c3a8;
+  color: #adce0a;
 }

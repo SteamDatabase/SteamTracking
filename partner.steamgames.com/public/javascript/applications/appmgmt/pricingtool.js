@@ -185,7 +185,7 @@
                 strClassName: (0, D.Z)(G().contextMenu, H().DropDown),
               };
               t.current = (0, A.yV)(
-                a.createElement(L, {
+                a.createElement(K, {
                   packageID: r,
                   fnOnClick: () => t.current.Hide(),
                 }),
@@ -197,7 +197,7 @@
           a.createElement(O.$gZ, null),
         );
       }
-      function L(e) {
+      function K(e) {
         const { packageID: r, fnOnClick: t } = e,
           { rgUSDPricesInCents: n, fnApplyGuidelines: i } = (0, P.AN)(),
           { nPriceInCents: l } = (0, P.dU)(r, "USD");
@@ -232,8 +232,8 @@
           ),
         );
       }
-      var K = t(3346),
-        F = t.n(K);
+      var L = t(3346),
+        F = t.n(L);
       const U = new (t(894).AN)("price-grid-cell-popout-elements");
       function V(e) {
         let { hoverKey: r, className: t, renderHover: n } = e,
@@ -1401,7 +1401,7 @@
               headerSort: !1,
               titleFormatter: (0, I.reactFormatter)(a.createElement(fe, null)),
               formatter: (0, I.reactFormatter)(a.createElement(z, null)),
-              cssClass: x().PricingGridDataColumn,
+              cssClass: (0, D.Z)(x().PricingGridDataColumn, t),
             });
           return r;
         }, [l, o, c, s, d, u, m, e]);
@@ -1901,7 +1901,7 @@
             ),
         );
       }
-      function Le(e) {
+      function Ke(e) {
         (0, m.j)((0, P.We)());
         const r = (0, g.NR)(),
           t = v.De.PARTNER_BASE_URL + "doc/store/pricing",
@@ -1918,10 +1918,10 @@
               "div",
               { className: u().ButtonGroup },
               a.createElement(
-                s.zx,
+                s.KM,
                 {
                   onClick: (e) =>
-                    (0, _.AM)(a.createElement(Ke, null), (0, b.RA)(e)),
+                    (0, _.AM)(a.createElement(Le, null), (0, b.RA)(e)),
                 },
                 (0, E.Xx)("#PricingDashboard_ApplyGuidelinesDialog_Button"),
               ),
@@ -1960,7 +1960,7 @@
             ),
         );
       }
-      function Ke(e) {
+      function Le(e) {
         const { closeModal: r } = e,
           t = (0, P.Ol)();
         return a.createElement(
@@ -2024,7 +2024,7 @@
                 }),
                 a.createElement(o.AW, {
                   path: Ue.PricingDashboard(),
-                  render: (e) => a.createElement(Le, null),
+                  render: (e) => a.createElement(Ke, null),
                 }),
                 a.createElement(o.AW, { component: i.R }),
               ),

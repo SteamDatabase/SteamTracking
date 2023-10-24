@@ -965,6 +965,20 @@
   color: #fff;
   justify-content: center;
 }
+.tabulator.tabulator
+  .tabulator-header.tabulator-header
+  .tabulator-headers
+  .tabulator-col.gridcomponents_PackageName_t8fSj,
+.tabulator.tabulator
+  .tabulator-header.tabulator-header
+  .tabulator-headers
+  .tabulator-col.gridcomponents_AppCount_2J3kN,
+.tabulator.tabulator
+  .tabulator-header.tabulator-header
+  .tabulator-headers
+  .tabulator-col.gridcomponents_PackageID_1E3TV {
+  background-color: #4f5463;
+}
 .gridcomponents_PackageNameColumn_2pjx8 {
   padding: 4px 8px;
 }

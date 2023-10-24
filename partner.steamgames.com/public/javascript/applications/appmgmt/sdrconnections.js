@@ -154,7 +154,7 @@
         _ = n(14986),
         E = n(3301),
         f = n(72120);
-      function C(e) {
+      function g(e) {
         return l.createElement(
           "span",
           { className: (0, c.Z)(_.GenericLabeledItem, e.className) },
@@ -166,7 +166,7 @@
           l.createElement("span", { className: _.CxnGenericData }, e.children),
         );
       }
-      function g(e) {
+      function C(e) {
         const t = e.host,
           n = t.type + ":" + t.id;
         let s = "peer" == e.host_role ? "Peer" : "Client",
@@ -215,10 +215,10 @@
           l.createElement(
             "div",
             { className: _.HostIDAndConnectionCtr },
-            l.createElement(C, { className: _.HostIDInfo, label: s }, a),
+            l.createElement(g, { className: _.HostIDInfo, label: s }, a),
             null != t.connection_id &&
               l.createElement(
-                C,
+                g,
                 { className: _.HostConnectionID, label: "ConnectionID" },
                 t.connection_id,
               ),
@@ -227,20 +227,20 @@
             "div",
             { className: _.ClientIPInfo },
             t.addr &&
-              l.createElement(C, { className: "addr", label: "IP" }, t.addr),
+              l.createElement(g, { className: "addr", label: "IP" }, t.addr),
             t.city_name &&
               l.createElement(
-                C,
+                g,
                 { className: "city_name", label: "City" },
                 t.city_name,
               ),
             t.country_code &&
               l.createElement(
-                C,
+                g,
                 { className: "country_code", label: "Country" },
                 t.country_code,
               ),
-            t.as && l.createElement(C, { className: "as", label: "AS" }, t.as),
+            t.as && l.createElement(g, { className: "as", label: "AS" }, t.as),
           ),
         );
       }
@@ -638,16 +638,16 @@
               "div",
               { className: _.RelayInfoCtr },
               l.createElement(
-                C,
+                g,
                 { label: "Relay address" },
                 t.client.relay_addr,
               ),
               l.createElement(
-                C,
+                g,
                 { label: "Relay POP" },
                 t.client.relay_cluster,
               ),
-              l.createElement(C, { label: "Active" }, (0, f.jA)(t.active_time)),
+              l.createElement(g, { label: "Active" }, (0, f.jA)(t.active_time)),
             ),
             s,
             a,
@@ -711,14 +711,14 @@
             d = l.createElement(
               "span",
               { className: _.CxnTimeAndDuration },
-              l.createElement(C, { label: "Time" }, s, " ", a, "--", r),
-              l.createElement(C, { label: "Duration" }, c),
+              l.createElement(g, { label: "Time" }, s, " ", a, "--", r),
+              l.createElement(g, { label: "Duration" }, c),
             );
           }
           if (
             (i.close_code &&
               (u = l.createElement(
-                C,
+                g,
                 { label: "Closed", className: _.CxnCloseInfo },
                 i.close_type,
                 " ",
@@ -731,7 +731,7 @@
           ) {
             const e = i.class_reason ? ` (${i.class_reason})` : "";
             p = l.createElement(
-              C,
+              g,
               { label: "Experience" },
               l.createElement(
                 "span",
@@ -747,7 +747,7 @@
           if (e.length > 0) {
             e.sort();
             let n = [];
-            for (let s of e) n.push(l.createElement(C, { label: s }, t.app[s]));
+            for (let s of e) n.push(l.createElement(g, { label: s }, t.app[s]));
             E = l.createElement(
               "div",
               { className: _.AppFieldsCtr },
@@ -770,7 +770,7 @@
               0.03 * i + 2 < m
                 ? `${i}--${m}ms`
                 : Math.floor((i + m) / 2 + 0.5) + "ms";
-            v = l.createElement(C, { label: "Ping" }, e);
+            v = l.createElement(g, { label: "Ping" }, e);
           }
           const d = y(a),
             u = y(r),
@@ -779,7 +779,7 @@
             (p >= 0 &&
               p <= 100 &&
               (N = l.createElement(
-                C,
+                g,
                 { label: "Packet delivery" },
                 `${p.toFixed(2)}%`,
               )),
@@ -868,8 +868,8 @@
           l.createElement(
             "div",
             { className: _.CxnPeersCtr },
-            l.createElement(g, { host: t.client, host_role: "client" }),
-            l.createElement(g, { host: t.peer, host_role: "peer" }),
+            l.createElement(C, { host: t.client, host_role: "client" }),
+            l.createElement(C, { host: t.peer, host_role: "peer" }),
           ),
           S,
           b,
@@ -879,7 +879,7 @@
         const t = (0, i.k6)(),
           n = e.appId,
           [a, f] = l.useState(!1),
-          [C, g] = l.useState(""),
+          [g, C] = l.useState(""),
           [v, h] = l.useState(void 0),
           [y, N] = l.useState(""),
           [S, b] = l.useState(""),
@@ -895,7 +895,7 @@
             i = e.get("app_name1") || "",
             m = e.get("app_value1") || "";
           if ((N(a), b(l), F(c), R(i), T(m), !e.toString() && 0 == P)) return;
-          f(!0), g(""), e.set("appid", "" + n);
+          f(!0), C(""), n > 0 && e.set("appid", "" + n);
           const d =
             p.De.PARTNER_BASE_URL + "sdr/ajaxsessionsearch?" + e.toString();
           (() => {
@@ -919,7 +919,7 @@
                           ? void 0
                           : n.msg),
                     ),
-                    g(
+                    C(
                       (null === (s = null == l ? void 0 : l.data) ||
                       void 0 === s
                         ? void 0
@@ -935,7 +935,8 @@
                 console.error(
                   "sdrsessionsearch: OnPerformSearch " + t.strErrorMsg,
                   t,
-                );
+                ),
+                  C(t.strErrorMsg);
               }
               f(!1);
             });
@@ -962,8 +963,8 @@
             e,
           );
         }
-        const G = "ded" == k ? "Gameserver" : "Peer",
-          M = !1;
+        const M = "ded" == k ? "Gameserver" : "Peer",
+          G = !1;
         return l.createElement(
           d.SV,
           null,
@@ -973,11 +974,13 @@
             l.createElement(
               "div",
               { className: _.SDRConnectionsAppTitle },
-              "SDR Connections [BETA] - App ",
-              e.appId,
-              " ",
+              l.createElement(l.Fragment, null, "SDR Connections - "),
+              e.appId > 0
+                ? l.createElement(l.Fragment, null, "App ", e.appId)
+                : l.createElement(l.Fragment, null, "All apps"),
+              l.createElement(l.Fragment, null, " [BETA feature]"),
             ),
-            C && l.createElement("div", { className: _.ErrMsg }, C),
+            g && l.createElement("div", { className: _.ErrMsg }, g),
             l.createElement(
               "div",
               { className: _.SearchParamsCtr },
@@ -1008,15 +1011,15 @@
                 l.createElement(m.II, {
                   type: "text",
                   value: y,
-                  disabled: M,
+                  disabled: G,
                   label: "Client",
                   onChange: (e) => N(e.currentTarget.value),
                 }),
                 l.createElement(m.II, {
                   type: "text",
                   value: S,
-                  disabled: M,
-                  label: G,
+                  disabled: G,
+                  label: M,
                   onChange: (e) => b(e.currentTarget.value),
                 }),
               ),
@@ -1026,14 +1029,14 @@
                 l.createElement(m.II, {
                   type: "text",
                   value: D,
-                  disabled: M,
+                  disabled: G,
                   label: "App field name 1",
                   onChange: (e) => R(e.currentTarget.value),
                 }),
                 l.createElement(m.II, {
                   type: "text",
                   value: I,
-                  disabled: M,
+                  disabled: G,
                   label: "App field value 1",
                   onChange: (e) => T(e.currentTarget.value),
                 }),

@@ -1,4 +1,3 @@
-@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
 .suggestdialog_mentionDialogPosition_1bkUR {
   position: absolute;
   left: 0;
@@ -1666,6 +1665,7 @@ div.apppartnereventspage_EventDetailsBody_AWjK8 {
   font-size: 15px;
   text-align: center;
   margin: auto 0;
+  flex: 1 0 30%;
 }
 .nominationandvote_SteamAwardContainer_jBtX5
   .nominationandvote_SteamAwardVoteWidget_2-t3v
@@ -1690,7 +1690,7 @@ div.apppartnereventspage_EventDetailsBody_AWjK8 {
   .nominationandvote_SteamAwardVoteButtonArea_2gvv6
   .nominationandvote_SteamAwardVoteButton_kTsuK {
   border: none;
-  margin: 12px 0px 6px;
+  margin: 15px 0px 6px;
   padding: 0px;
   cursor: pointer;
   font-size: 13px;
@@ -1884,6 +1884,9 @@ div.apppartnereventspage_EventDetailsBody_AWjK8 {
   .nominationandvote_SteamAwardVoteButtonArea_2gvv6
   .nominationandvote_SteamAwardCategoryTitle_3hZED {
   padding-left: 8px;
+}
+.nominationandvote_SteamAwardConflictModal_1Ujn_ {
+  min-width: 600px;
 }
 body.v6.partner_events {
   background: #24282e;

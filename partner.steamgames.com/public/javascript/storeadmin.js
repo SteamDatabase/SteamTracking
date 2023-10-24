@@ -985,6 +985,134 @@ function ReadAssociationValuesInternal( json, sFormName, sInputPrefix )
 	} );
 }
 
+function ShowAddAppsDialog( nPackageId, bPublished, nIncludeAppIDForDepots = 0, bCreateBetaPkg = false )
+{
+	new Ajax.Request( 'https://partner.steamgames.com/store/ajaxpackageaddapps/' + nPackageId, {
+			method: 'POST',
+			parameters: {
+				'package_released' : bPublished ? '1' : '0',
+				'sessionid' : g_sessionID
+			},
+	onSuccess: function( transport )
+	{
+		var dialog = ShowConfirmDialog( 'Add Apps', transport.responseText, 'Continue' );
+		dialog.SetRemoveContentOnDismissal( false );
+		dialog.done( function() {
+			var appIds = Array();
+			var checkboxes = dialog.GetContent().find('input[type="checkbox"]');
+			for ( var i = 0; i < checkboxes.length; ++i )
+			{
+				var checkbox = checkboxes[i];
+				if ( checkbox.checked )
+				{
+					appIds.push( checkbox.value );
+				}
+			}
+
+			dialog.GetContent().remove();
+
+			if ( nIncludeAppIDForDepots > 0 )
+			{
+				appIds.push( nIncludeAppIDForDepots );
+			}
+
+			if ( appIds.length == 0 )
+			{
+				return;
+			}
+			ShowManageDepotsDialog( nPackageId, appIds, bCreateBetaPkg );
+		} );
+
+		dialog.fail( function() {
+			if ( bCreateBetaPkg )
+			{
+				$J.post( 'https://partner.steamgames.com/store/ajaxcreatebetapackagefrompackage/' + nPackageId, {
+					'sessionid' : g_sessionID
+				} );
+			}
+			dialog.GetContent().remove();
+		});
+	}
+} );
+}
+
+function ShowManageDepotsDialog( nPackageId, overrideAppIds, bCreateBetaPkg = false )
+{
+	$J.post( 'https://partner.steamgames.com/store/ajaxpackagemanagedepots/' + nPackageId, {
+			'appids' : overrideAppIds,
+			'sessionid' : g_sessionID
+		}
+	).done( function( response ) {
+		var dialog = ShowConfirmDialog( 'Add/Remove Depots', response, 'Save' );
+		dialog.SetRemoveContentOnDismissal( false );
+
+		$J('#manageDepotsFilterTable').tableFilter({'control': '#manageDepotsFilterControl', 'defaultText': 'type here to filter'});
+
+		dialog.done( function() {
+			var appIds = Array();
+			var hiddenInputs = dialog.GetContent().find('input[type="hidden"]');
+			for ( var i = 0; i < hiddenInputs.length; ++i )
+			{
+				appIds.push( hiddenInputs[i].value );
+			}
+			var depotIds = Array();
+			var checkboxes = dialog.GetContent().find('input[type="checkbox"]');
+			for ( var i = 0; i < checkboxes.length; ++i )
+			{
+				var checkbox = checkboxes[i];
+				if ( checkbox.checked )
+				{
+					depotIds.push( checkbox.value );
+				}
+			}
+
+			// now save
+			var dialogWait = ShowBlockingWaitDialog( 'Please Wait', 'Saving your changes...' );
+			$J.post( 'https://partner.steamgames.com/store/ajaxpackagesave/' + nPackageId, {
+					'action' : 'manageDepots',
+					'appids' : appIds,
+					'depotids' : depotIds,
+					'sessionid' : g_sessionID
+				}
+			).done( function( response ) {
+
+				if ( response.success == 1 )
+				{
+					OnAIWaitComplete(function(){
+						if ( bCreateBetaPkg )
+						{
+							$J.post( 'https://partner.steamgames.com/store/ajaxcreatebetapackagefrompackage/' + nPackageId, {
+								'sessionid' : g_sessionID
+							} );
+						}
+
+						dialogWait.Dismiss();
+						top.location.href = 'https://partner.steamgames.com/store/packagelanding/' + nPackageId;
+					});
+				}
+			else
+				{
+					dialogWait.Dismiss();
+					ShowAlertDialog( 'Error', 'Failure code: ' + response.success );
+				}
+			});
+
+			dialog.GetContent().remove();
+
+		} );
+
+		dialog.fail( function() {
+			if ( bCreateBetaPkg )
+			{
+				$J.post( 'https://partner.steamgames.com/store/ajaxcreatebetapackagefrompackage/' + nPackageId, {
+					'sessionid' : g_sessionID
+				} );
+			}
+			dialog.GetContent().remove();
+		});
+	} );
+}
+
 function Logout()
 {
 	var $Form = $J('<form/>', {'action': 'https://partner.steamgames.com/login/logout/', 'method': 'POST' } );

@@ -800,6 +800,7 @@ function InitializeTransaction()
 				// Info for all carts
 				'gidShoppingCart' : $J('#shopping_cart_gid').val() || -1,
 				'gidReplayOfTransID' : $J('#gid_replay' ).val() || -1,
+				'bUseAccountCart': ( typeof g_bUseAccountCart != 'undefined' && g_bUseAccountCart ) ? 1 : 0,
 				'PaymentMethod' : sPaymentMethod,
 				'abortPendingTransactions' : ( $('cancel_pending').checked ? 1 : 0 ),
 

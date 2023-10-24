@@ -15,12 +15,12 @@
         FocusRingOnHiddenItem: "focusring_FocusRingOnHiddenItem_2OusV",
       };
     },
-    966: (e, t, n) => {
+    703: (e, t, n) => {
       "use strict";
       n.d(t, { Pf: () => r, y5: () => a });
       var i = n(655),
-        o = n(537),
-        s = n(146);
+        o = n(588),
+        s = n(298);
       class r {
         constructor() {
           SteamClient.BrowserView.RegisterForMessageFromParent(this.OnMessage);
@@ -80,7 +80,7 @@
       }
       (0, i.gn)([o.a], a.prototype, "OnMessage", null);
     },
-    146: (e, t, n) => {
+    298: (e, t, n) => {
       "use strict";
       n.d(t, { i: () => o, l: () => i });
       const i = "GamepadInput";
@@ -93,14 +93,14 @@
           (e[(e.Full = 4)] = "Full");
       })(o || (o = {}));
     },
-    910: (e, t, n) => {
+    441: (e, t, n) => {
       "use strict";
       n.r(t), n.d(t, { InitializeGamepadNavigation: () => ht });
       var i,
         o = n(655),
         s = n(311),
         r = n.n(s),
-        a = n(148);
+        a = n(451);
       !(function (e) {
         (e[(e.GAMEPAD = 0)] = "GAMEPAD"),
           (e[(e.KEYBOARD = 1)] = "KEYBOARD"),
@@ -160,10 +160,10 @@
           l
         );
       }
-      var g = n(537),
-        _ = n(146),
-        v = n(586),
-        p = n(966);
+      var g = n(588),
+        _ = n(298),
+        v = n(405),
+        p = n(703);
       class f {
         constructor(e) {
           (this.m_bIsGamepadInputExternallyControlled = !1),
@@ -250,7 +250,7 @@
         (0, o.gn)([g.a], f.prototype, "OnMessage", null),
         (0, o.gn)([g.a], f.prototype, "PostPageUnloading", null);
       function b(e, t) {
-        let n = e.parentElement;
+        let n = null == e ? void 0 : e.parentElement;
         for (; n; ) {
           if (!t || "x" == t) {
             let e = window.getComputedStyle(n);
@@ -571,7 +571,7 @@
             : console.assert(!!e, t, ...n)
           : e || console.warn(t, ...n);
       }
-      var y = n(657);
+      var y = n(496);
       class B extends class {
         GetObject(e) {
           return (0, o.mG)(this, void 0, void 0, function* () {
@@ -980,7 +980,7 @@
           );
         }
       }
-      var Y = n(234);
+      var Y = n(791);
       const X = new G("FocusNavigation").Debug,
         z = new G("GamepadEvents").Debug;
       class Q {

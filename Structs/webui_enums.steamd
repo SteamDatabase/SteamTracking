@@ -1676,6 +1676,13 @@ enum EHDRToneMapOperator
 	k_EHDRToneMapOperator_Reinhard = 2;
 }
 
+enum EHDRVisualization
+{
+	k_EHDRVisualization_None = 0;
+	k_EHDRVisualization_Heatmap = 1;
+	k_EHDRVisualization_Analysis = 2;
+}
+
 enum EHide
 {
 	k_EHideOwnedItems = 0;
@@ -1874,6 +1881,7 @@ enum ELib
 	k_ELibraryAssetType_Header = 3;
 	k_ELibraryAssetType_Icon = 4;
 	k_ELibaryAssetType_HeroBlur = 5;
+	k_ELibaryAssetType_PublicTimelineIcons = 6;
 }
 
 enum ELibraryDisplaySize
@@ -3602,6 +3610,16 @@ enum EShutdownStep
 	k_EShutdownStep_StoppingServiceApps = 6;
 	k_EShutdownStep_LogginOff = 7;
 	k_EShutdownStep_Done = 8;
+}
+
+enum ESLSHelper
+{
+	k_ESLSHelper_Invalid = 0;
+	k_ESLSHelper_Minidump = 1;
+	k_ESLSHelper_Kdump = 2;
+	k_ESLSHelper_Journal = 3;
+	k_ESLSHelper_Gpu = 4;
+	k_ESLSHelper_SystemInfo = 5;
 }
 
 enum ESortFacets

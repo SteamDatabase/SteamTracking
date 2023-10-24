@@ -206,11 +206,27 @@
   height: 100%;
   padding: 0px;
 }
-.pricinggrid_PriceProposalState_3M90f .tabulator-col-title {
+.tabulator.tabulator
+  .tabulator-header.tabulator-header
+  .tabulator-headers
+  .tabulator-col.pricinggrid_PriceProposalState_3M90f {
+  background-color: #4f5463;
+}
+.tabulator.tabulator
+  .tabulator-header.tabulator-header
+  .tabulator-headers
+  .tabulator-col.pricinggrid_PriceProposalState_3M90f
+  .tabulator-col-title {
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.tabulator.tabulator
+  .tabulator-header.tabulator-header
+  .tabulator-headers
+  .tabulator-col.pricinggrid_PricingGridDataColumn_OVDCt.USD {
+  background-color: #4f5463;
 }
 .tabulator.tabulator
   .tabulator-cell.tabulator-cell.pricinggrid_PricingGridDataColumn_OVDCt {
@@ -760,6 +776,20 @@ div.pricinggridcell_HoverToolTip_36qS7 {
   .tabulator-cell.tabulator-cell.gridcomponents_PackageType_3LZvj {
   color: #fff;
   justify-content: center;
+}
+.tabulator.tabulator
+  .tabulator-header.tabulator-header
+  .tabulator-headers
+  .tabulator-col.gridcomponents_PackageName_t8fSj,
+.tabulator.tabulator
+  .tabulator-header.tabulator-header
+  .tabulator-headers
+  .tabulator-col.gridcomponents_AppCount_2J3kN,
+.tabulator.tabulator
+  .tabulator-header.tabulator-header
+  .tabulator-headers
+  .tabulator-col.gridcomponents_PackageID_1E3TV {
+  background-color: #4f5463;
 }
 .gridcomponents_PackageNameColumn_2pjx8 {
   padding: 4px 8px;

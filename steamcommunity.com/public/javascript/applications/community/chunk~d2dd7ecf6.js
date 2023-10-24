@@ -3399,21 +3399,20 @@
             this.m_mapPrivateDataCallback.get(a)
           );
         }
-        UpdatePrivateData(e, t, a) {
-          const n = this.HandleNewEventGID(t),
-            i = this.GetPrivateData(e, n);
-          if (!this.BIsEqual(i.jsonData, a)) {
-            if (null != this.m_gidDirty && n != this.m_gidDirty) {
+        UpdatePrivateData(e, t, a, n) {
+          const i = this.HandleNewEventGID(t),
+            l = this.GetPrivateData(e, i);
+          if (!this.BIsEqual(l.jsonData, a)) {
+            if (null != this.m_gidDirty && i != this.m_gidDirty) {
               const e = this.m_mapPrivateData.get(this.m_gidDirty),
                 t = this.m_mapOriginalJSON.get(this.m_gidDirty),
                 a = Object.assign(Object.assign({}, e), { jsonData: t });
               this.m_mapPrivateData.set(this.m_gidDirty, a),
                 this.DispatchUpdate(this.m_clanAccountIDDirty, this.m_gidDirty);
             }
-            (i.jsonData = a),
-              (this.m_gidDirty = n),
-              (this.m_clanAccountIDDirty = e),
-              this.DispatchUpdate(e, n);
+            (l.jsonData = a),
+              n && ((this.m_gidDirty = i), (this.m_clanAccountIDDirty = e)),
+              this.DispatchUpdate(e, i);
           }
         }
         BIsEqual(e, t) {
@@ -3684,11 +3683,17 @@
           oPrivateData: n,
           fnSetPrivateJon: (0, r.useCallback)(
             (n) => {
-              a.UpdatePrivateData(e, t, n);
+              a.UpdatePrivateData(e, t, n, !0);
             },
             [e, t, a],
           ),
           bLoading: l,
+          fnSetPrivateJsonNoDirty: (0, r.useCallback)(
+            (n) => {
+              a.UpdatePrivateData(e, t, n, !1);
+            },
+            [e, t, a],
+          ),
         };
       }
       function S() {
@@ -16350,6 +16355,13 @@
             ? void 0
             : e.GetReleaseDateRTime();
         }
+        GetPlatforms() {
+          var e;
+          return null === (e = E.Z.Get().GetApp(this.m_curModel.appid)) ||
+            void 0 === e
+            ? void 0
+            : e.GetPlatforms();
+        }
         BDoesSupportLanguage(e) {
           if (this.m_curModel && this.m_curModel.appid) {
             const t = E.Z.Get().GetApp(this.m_curModel.appid);
@@ -17449,6 +17461,7 @@
                 include_basic_info: !0,
                 include_supported_languages: !0,
                 include_release: !0,
+                include_platforms: !0,
               });
         }
         LoadClanEventsForPartnerDashboard(e, t) {
@@ -18031,28 +18044,25 @@
             l()
               .get(t, { params: a, withCredentials: !0 })
               .then(
-                (e) => {
-                  var t, a, n;
-                  (null === (t = null == e ? void 0 : e.data) || void 0 === t
+                (t) => {
+                  var a, n, i;
+                  (null === (a = null == t ? void 0 : t.data) || void 0 === a
                     ? void 0
-                    : t.success) == m.s.k_EResultOK &&
+                    : a.success) == m.s.k_EResultOK &&
                     (null ===
-                      (n =
-                        null === (a = null == e ? void 0 : e.data) ||
-                        void 0 === a
+                      (i =
+                        null === (n = null == t ? void 0 : t.data) ||
+                        void 0 === n
                           ? void 0
-                          : a.votes) || void 0 === n
+                          : n.votes) || void 0 === i
                       ? void 0
-                      : n.length) > 0 &&
-                    e.data.votes.forEach((e) => {
-                      this.m_mapSteamAwardVoteDefinitionsForApp.has(e.voteid)
+                      : i.length) > 0 &&
+                    t.data.votes.forEach((t) => {
+                      this.m_mapSteamAwardVoteDefinitionsForApp.has(e)
                         ? this.m_mapSteamAwardVoteDefinitionsForApp
-                            .get(e.voteid)
-                            .push(e)
-                        : this.m_mapSteamAwardVoteDefinitionsForApp.set(
-                            e.voteid,
-                            [e],
-                          );
+                            .get(e)
+                            .push(t)
+                        : this.m_mapSteamAwardVoteDefinitionsForApp.set(e, [t]);
                     });
                 },
                 (e) => {

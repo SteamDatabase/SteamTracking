@@ -663,3 +663,362 @@ button.Primary.partnereventshared_AddSectionButton_15e-D {
   height: 100vh;
   overflow-y: scroll;
 }
+.nominationandvote_SteamAwardContainer_jBtX5 {
+  margin-right: 24px;
+  margin-left: 24px;
+  margin-top: 24px;
+  margin-bottom: 40px;
+  border-radius: 4px;
+  position: relative;
+  border: solid 1px #000;
+  background-size: cover;
+  color: #fff;
+  background-repeat: no-repeat;
+}
+.nominationandvote_InLibraryView_1G81P
+  .nominationandvote_SteamAwardContainer_jBtX5 {
+  margin: 24px;
+}
+.nominationandvote_SteamAwardContainer_jBtX5
+  .nominationandvote_SVGIcon_DialogCheck_1IRgd {
+  fill: #fad569;
+}
+.nominationandvote_SteamAwardContainer_jBtX5
+  .nominationandvote_SteamAwardHeader_2TvWH {
+  box-sizing: border-box;
+  position: relative;
+  padding: 16px;
+  font-size: 12px;
+}
+.nominationandvote_SteamAwardContainer_jBtX5
+  .nominationandvote_SteamAwardHeader_2TvWH
+  .nominationandvote_SteamAwardHeaderImage_3dsTJ {
+  position: absolute;
+  bottom: 10%;
+  right: -10px;
+  max-width: 100%;
+}
+.nominationandvote_SteamAwardContainer_jBtX5
+  .nominationandvote_SteamAwardHeader_2TvWH
+  .nominationandvote_SteamAwardMainCtn_3CUAM {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  position: relative;
+}
+.nominationandvote_SteamAwardContainer_jBtX5
+  .nominationandvote_SteamAwardHeader_2TvWH
+  .nominationandvote_SteamAwardMainTitle_6gN_u {
+  position: relative;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 36px;
+  padding-right: 90px;
+  padding-bottom: 10px;
+}
+.nominationandvote_SteamAwardContainer_jBtX5
+  .nominationandvote_SteamAwardHeader_2TvWH
+  .nominationandvote_SteamAwardSubTitle_3SuAg {
+  position: relative;
+  text-transform: uppercase;
+  color: #fff;
+}
+.nominationandvote_SteamAwardContainer_jBtX5
+  .nominationandvote_SteamAwardHeader_2TvWH
+  .nominationandvote_SteamAwardLearnMore_TqZmn {
+  color: #c9d3d9;
+  margin-left: 12px;
+  text-transform: uppercase;
+  font-style: normal;
+}
+.nominationandvote_SteamAwardContainer_jBtX5
+  .nominationandvote_SteamAwardHeader_2TvWH
+  .nominationandvote_SteamAwardLearnMore_TqZmn:hover {
+  color: #fff;
+}
+.nominationandvote_SteamAwardContainer_jBtX5
+  .nominationandvote_SteamAwardHeader_2TvWH
+  .nominationandvote_SteamAwardLearnMore_TqZmn.nominationandvote_BottomRight_3VSBr {
+  margin-left: auto;
+}
+.nominationandvote_SteamAwardContainer_jBtX5
+  .nominationandvote_SteamAwardHeader_2TvWH
+  .nominationandvote_SteamAwardHeaderText_30-fH {
+  position: relative;
+  padding-top: 15px;
+  width: 85%;
+  color: #fff;
+  font-size: 14px;
+  font-style: italic;
+  display: flex;
+}
+.nominationandvote_SteamAwardContainer_jBtX5
+  .nominationandvote_SteamAwardHeader_2TvWH
+  .nominationandvote_SteamAwardHeaderText_30-fH
+  .nominationandvote_LinkText_1dQJW {
+  color: #ebebeb;
+  text-decoration: underline;
+  font-style: normal;
+}
+.nominationandvote_SteamAwardContainer_jBtX5
+  .nominationandvote_SteamAwardHeader_2TvWH
+  .nominationandvote_SteamAwardHeaderText_30-fH
+  .nominationandvote_LinkText_1dQJW:hover {
+  color: #fff;
+}
+@media screen and (max-width: 620px) {
+  .nominationandvote_SteamAwardContainer_jBtX5
+    .nominationandvote_SteamAwardHeader_2TvWH
+    .nominationandvote_SteamAwardHeaderText_30-fH {
+    display: none;
+  }
+}
+.nominationandvote_SteamAwardContainer_jBtX5
+  .nominationandvote_SteamAwardVoteWidget_2-t3v {
+  padding: 0px;
+  color: #fff;
+  font-size: 12px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.nominationandvote_SteamAwardContainer_jBtX5
+  .nominationandvote_SteamAwardVoteWidget_2-t3v
+  .nominationandvote_SteamAwardVotePrompt_38kTM {
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  letter-spacing: 0.05em;
+  margin-left: 15px;
+}
+.nominationandvote_SteamAwardContainer_jBtX5
+  .nominationandvote_SteamAwardVoteWidget_2-t3v
+  .nominationandvote_SteamAwardCategoryTitle_3hZED {
+  font-weight: 500;
+  font-size: 15px;
+  text-align: center;
+  margin: auto 0;
+  flex: 1 0 30%;
+}
+.nominationandvote_SteamAwardContainer_jBtX5
+  .nominationandvote_SteamAwardVoteWidget_2-t3v
+  .nominationandvote_SteamAwardCategoryTitle_3hZED.nominationandvote_VotingTitle_at4wS {
+  text-align: left;
+  font-size: 20px;
+}
+.nominationandvote_SteamAwardContainer_jBtX5
+  .nominationandvote_SteamAwardVoteWidget_2-t3v
+  .nominationandvote_SteamAwardCategoryDesc_3bu8i {
+  display: block;
+}
+.nominationandvote_SteamAwardContainer_jBtX5
+  .nominationandvote_SteamAwardVoteWidget_2-t3v
+  .nominationandvote_SteamAwardVoteButtonArea_2gvv6 {
+  border-radius: 4px;
+  padding: 0px 20% 6px 0px;
+  margin-top: 20px;
+}
+.nominationandvote_SteamAwardContainer_jBtX5
+  .nominationandvote_SteamAwardVoteWidget_2-t3v
+  .nominationandvote_SteamAwardVoteButtonArea_2gvv6
+  .nominationandvote_SteamAwardVoteButton_kTsuK {
+  border: none;
+  margin: 15px 0px 6px;
+  padding: 0px;
+  cursor: pointer;
+  font-size: 13px;
+  background: rgba(0, 0, 0, 0);
+}
+.nominationandvote_SteamAwardContainer_jBtX5
+  .nominationandvote_SteamAwardVoteWidget_2-t3v
+  .nominationandvote_SteamAwardVoteButtonArea_2gvv6
+  .nominationandvote_SteamAwardVoteButton_kTsuK
+  .nominationandvote_SteamAwardVoteButtonText_Zzla_ {
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  border-radius: 2px;
+  text-transform: uppercase;
+  letter-spacing: 1.8px;
+  font-weight: 600;
+  padding: 5px 10px;
+  color: #fff;
+}
+@media screen and (max-width: 620px) {
+  .nominationandvote_SteamAwardContainer_jBtX5
+    .nominationandvote_SteamAwardVoteWidget_2-t3v
+    .nominationandvote_SteamAwardVoteButtonArea_2gvv6
+    .nominationandvote_SteamAwardVoteButton_kTsuK
+    .nominationandvote_SteamAwardVoteButtonText_Zzla_ {
+    padding: 5px;
+  }
+}
+.nominationandvote_SteamAwardContainer_jBtX5
+  .nominationandvote_SteamAwardVoteWidget_2-t3v
+  .nominationandvote_SteamAwardVoteButtonArea_2gvv6
+  .nominationandvote_SteamAwardVoteButton_kTsuK:hover
+  .nominationandvote_SteamAwardVoteButtonText_Zzla_ {
+  border: 2px solid #fff;
+}
+.nominationandvote_SteamAwardContainer_jBtX5
+  .nominationandvote_SteamAwardVoteWidget_2-t3v
+  .nominationandvote_SteamAwardVoteButtonArea_2gvv6
+  .nominationandvote_SteamAwardVoteButtonSubmitted_39ziF {
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  border: none;
+  margin: 12px 0px 6px;
+  padding: 0px;
+  cursor: pointer;
+  font-size: 13px;
+  background: rgba(0, 0, 0, 0);
+  box-sizing: border-box;
+}
+.nominationandvote_SteamAwardContainer_jBtX5
+  .nominationandvote_SteamAwardVoteWidget_2-t3v
+  .nominationandvote_SteamAwardVoteButtonArea_2gvv6
+  .nominationandvote_SteamAwardVoteButtonSubmitted_39ziF
+  .nominationandvote_SteamAwardVoteButtonText_Zzla_ {
+  border: 1px solid #fff;
+  background: #fff;
+  border-radius: 2px;
+  text-transform: uppercase;
+  letter-spacing: 1.8px;
+  font-weight: 600;
+  padding: 5px 10px;
+  color: #355a5f;
+}
+@media screen and (max-width: 620px) {
+  .nominationandvote_SteamAwardContainer_jBtX5
+    .nominationandvote_SteamAwardVoteWidget_2-t3v
+    .nominationandvote_SteamAwardVoteButtonArea_2gvv6
+    .nominationandvote_SteamAwardVoteButtonSubmitted_39ziF
+    .nominationandvote_SteamAwardVoteButtonText_Zzla_ {
+    padding: 5px;
+  }
+}
+.nominationandvote_SteamAwardContainer_jBtX5
+  .nominationandvote_SteamAwardVoteWidget_2-t3v
+  .nominationandvote_SteamAwardNominateButton_VcFKW {
+  border: 1px solid #fff;
+  border-radius: 4px;
+  padding: 4px 6px 0px;
+  margin: 20px 15px 15px 15px;
+}
+.nominationandvote_SteamAwardContainer_jBtX5
+  .nominationandvote_SteamAwardVoteWidget_2-t3v
+  .nominationandvote_SteamAwardNominateButton_VcFKW:hover {
+  border: 1px solid #fff;
+}
+.nominationandvote_SteamAwardContainer_jBtX5
+  .nominationandvote_SteamAwardVoteWidget_2-t3v
+  .nominationandvote_SteamAwardNominateButton_VcFKW
+  .DialogCheckbox {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid #fff;
+  margin: auto 0;
+  max-width: 22px;
+  width: 100%;
+}
+.nominationandvote_SteamAwardContainer_jBtX5
+  .nominationandvote_SteamAwardVoteWidget_2-t3v
+  .nominationandvote_SteamAwardNominateButton_VcFKW
+  .nominationandvote_SteamAwardCategoryDesc_3bu8i {
+  margin-left: 0px;
+}
+@media screen and (max-width: 620px) {
+  .nominationandvote_SteamAwardContainer_jBtX5
+    .nominationandvote_SteamAwardVoteWidget_2-t3v
+    .nominationandvote_SteamAwardNominateButton_VcFKW
+    .nominationandvote_SteamAwardCategoryDesc_3bu8i {
+    width: 100%;
+  }
+}
+.nominationandvote_SteamAwardContainer_jBtX5
+  .nominationandvote_SteamAwardVoteWidget_2-t3v
+  .nominationandvote_SteamAwardLinkToNominationPage_3XWCw {
+  margin-top: 4px;
+  text-decoration: underline;
+  margin-left: 15px;
+  margin-bottom: 15px;
+  font-size: 12px;
+}
+.nominationandvote_SteamAwardContainer_jBtX5
+  .nominationandvote_SteamAwardVoteWidget_2-t3v
+  .nominationandvote_SteamAwardLinkToNominationPage_3XWCw
+  a {
+  color: #fff;
+  font-size: 12px;
+}
+.nominationandvote_SteamAwardVoteCheckBox_LFbd4 {
+  display: flex;
+}
+.nominationandvote_SteamAwardModalGameTitle_3hBdP {
+  color: #fff;
+}
+.nominationandvote_ExpiredEventHeader_3e-YK {
+  font-size: 16px;
+  color: #c9d3d9;
+  font-weight: bold;
+  margin-bottom: 30px;
+  padding: 10px;
+  background: rgba(30, 33, 38, 0.5);
+}
+.EventDetail .nominationandvote_SteamAwardContainer_jBtX5 {
+  max-width: 713px;
+  margin-right: 0px;
+  margin-left: 0px;
+  margin-top: 0px;
+}
+.steam_awards_vote_section .nominationandvote_SteamAwardContainer_jBtX5 {
+  margin-left: 0px;
+  margin-top: 0px;
+  margin-right: 0px;
+}
+.steam_awards_vote_section
+  .nominationandvote_SteamAwardContainer_jBtX5
+  .nominationandvote_SteamAwardHeader_2TvWH
+  .nominationandvote_SteamAwardHeaderImage_3dsTJ {
+  height: 180px;
+}
+.steam_awards_vote_section
+  .nominationandvote_SteamAwardContainer_jBtX5
+  .nominationandvote_SteamAwardHeader_2TvWH
+  .nominationandvote_SteamAwardMainTitle_6gN_u {
+  font-size: 28px;
+  line-height: 28px;
+}
+.steam_awards_vote_section .nominationandvote_AwardCategoriesCtn_GCwk0 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 85%;
+}
+@media screen and (max-width: 620px) {
+  .steam_awards_vote_section .nominationandvote_AwardCategoriesCtn_GCwk0 {
+    max-width: 100%;
+  }
+}
+.steam_awards_vote_section
+  .nominationandvote_AwardCategoriesCtn_GCwk0
+  .nominationandvote_SteamAwardVoteWidget_2-t3v {
+  flex-grow: 1;
+}
+.steam_awards_vote_section
+  .nominationandvote_AwardCategoriesCtn_GCwk0
+  .nominationandvote_SteamAwardVoteWidget_2-t3v
+  .nominationandvote_SteamAwardVoteButtonArea_2gvv6 {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 0px;
+}
+.steam_awards_vote_section
+  .nominationandvote_AwardCategoriesCtn_GCwk0
+  .nominationandvote_SteamAwardVoteWidget_2-t3v
+  .nominationandvote_SteamAwardVoteButtonArea_2gvv6
+  .nominationandvote_SteamAwardCategoryTitle_3hZED {
+  padding-left: 8px;
+}
+.nominationandvote_SteamAwardConflictModal_1Ujn_ {
+  min-width: 600px;
+}

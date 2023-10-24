@@ -1,39 +1,3 @@
-@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
-@import url(https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap);
 .crossfade {
   position: relative;
   overflow: hidden;
@@ -2812,6 +2776,13 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:before {
 .gamepaddialog_ModalPosition_3A5uj.gamepaddialog_NoHeaderPadding_1Y7qW {
   top: 0;
   padding: 0;
+}
+.gamepaddialog_ModalPosition_3A5uj .gamepaddialog_ModalClickToDismiss_27uCS {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
 }
 .gamepaddialog_ModalPosition_3A5uj > .gamepaddialog_GamepadDialogContent_16sYN {
   margin: auto;

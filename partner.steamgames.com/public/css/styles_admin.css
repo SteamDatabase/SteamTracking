@@ -2000,6 +2000,13 @@ html, body { height:100%; }
 	font-style: italic;
 }
 
+.SysReqProcessorMac
+{
+    width: 390px;
+    color: #AC966A;
+    margin: 4px 0px 8px 0px;
+}
+
 .Music .SysReqRowLabel
 {
 	width: 160px;

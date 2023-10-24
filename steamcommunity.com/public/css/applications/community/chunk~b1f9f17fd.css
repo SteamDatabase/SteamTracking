@@ -4036,6 +4036,16 @@ a.storywidget_BadgeFooter_3kBeS:hover {
   .controllerfiltersection_ControllerFilterName_1csa9 {
   color: #000;
 }
+.controllerfiltersection_FilterHeading_3o6sN {
+  height: 23px;
+  line-height: 23px;
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 6px;
+}
 .requirevalvepublishapproval_ApprovalRequiredCtn_800dA {
   background-color: #abb2bd;
   padding: 12px;
