@@ -3,10 +3,8 @@ ${AUDIO_URL}international2022/${}.wav
 ${BASE_URL}${patch_website}
 ${BASE_URL}${}
 ${BASE_URL}${}/checkforshortfilmownership/
-${BASE_URL}${}/getboundbadges
 ${BASE_URL}${}/grantshortfilmpackage
 ${BASE_URL}${}/redirecttosteamcommunityshortfilm/
-${BASE_URL}${}/registeremail
 ${BASE_URL}?l=${}
 ${BASE_URL}app/${}
 ${BASE_URL}app/${}?snr=${LINK_PARAM}
@@ -3198,7 +3196,6 @@ url( ${IMG_URL}backgrounds/grey_painterly.png )
 url( ${IMG_URL}backgrounds/grey_painterly_wide.png )
 url( ${IMG_URL}backgrounds/greyfade.jpg )
 url( ${IMG_URL}backgrounds/slate_bg_01.jpg )
-url( ${IMG_URL}backgrounds/ti10_half_aegis.png )
 url( ${IMG_URL}close.png )
 url( ${IMG_URL}dota_icon_generic.png )
 url( ${IMG_URL}dpc/bottom_block.jpg )
