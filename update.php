@@ -765,7 +765,7 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 			{
 				$Filename = basename( $Url[ 'File' ] );
 
-				if( str_starts_with( $Filename, 'chunk~' ) )
+				if( str_starts_with( $Filename, 'chunk~' ) || str_starts_with( $Filename, 'libraries~' ) )
 				{
 					$Folder = __DIR__ . '/' . dirname( $Url[ 'File' ] ) . '/';
 
@@ -780,15 +780,18 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 
 			foreach( $Folders as $Folder => $NewChunks )
 			{
-				foreach( glob( $Folder . 'chunk~*' ) as $FilepathOnDisk )
+				foreach( [ 'chunk~*', 'libraries~*' ] as $Glob )
 				{
-					$Filename = basename( $FilepathOnDisk );
-
-					if( !isset( $NewChunks[ $Filename ] ) )
+					foreach( glob( $Folder . $Glob ) as $FilepathOnDisk )
 					{
-						$this->Log( 'Chunk ' . $FilepathOnDisk . ' no longer exists in manifest' );
+						$Filename = basename( $FilepathOnDisk );
 
-						unlink( $FilepathOnDisk );
+						if( !isset( $NewChunks[ $Filename ] ) )
+						{
+							$this->Log( 'Chunk ' . $FilepathOnDisk . ' no longer exists in manifest' );
+
+							unlink( $FilepathOnDisk );
+						}
 					}
 				}
 			}

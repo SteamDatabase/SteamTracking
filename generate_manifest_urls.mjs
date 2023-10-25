@@ -62,10 +62,6 @@ for (const { file, cdn } of files) {
 								continue;
 							}
 
-							if (name.startsWith("libraries~")) {
-								continue;
-							}
-
 							const fullUrl = cdn + folder + name + suffix;
 
 							urls.add(fullUrl);
