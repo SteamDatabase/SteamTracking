@@ -650,7 +650,7 @@ function FixTypesCrossModule(services, messages, crossModuleExportedMessages) {
 	const GetType = ({ module, name }) => {
 		const moduleExported = crossModuleExportedMessages.get(module);
 
-		if (!moduleExported) {
+		if (!moduleExported || moduleExported.size === 0) {
 			// TODO: Cross-file modules
 			//throw new Error("Failed to find module");
 			return null;
@@ -659,7 +659,7 @@ function FixTypesCrossModule(services, messages, crossModuleExportedMessages) {
 		const className = moduleExported.get(name);
 
 		if (!className) {
-			throw new Error("Failed to exported name");
+			throw new Error("Failed to find exported name");
 		}
 
 		return className;

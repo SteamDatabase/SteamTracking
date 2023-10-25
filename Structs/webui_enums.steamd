@@ -259,6 +259,18 @@ enum EAppAutoUpdateBehavior
 	k_EAppAutoUpdateBehaviorHighPriority = 2;
 }
 
+enum EAppCapability
+{
+	k_EAppCapabilityNone = 0;
+	k_EAppCapabilityCommunityItems = 1;
+	k_EAppCapabilityJumboKeyRequests = 2;
+	k_EAppCapabilityKeyRequests = 3;
+	k_EAppCapabilityVetted = 4;
+	k_EAppCapabilityEligibleForUpcomingList = 5;
+	k_EAppCapabilityVettedForShowcaseItems = 6;
+	k_EAppCapabilityFishy = 7;
+}
+
 enum EAppCloudStatus
 {
 	k_EAppCloudStatusInvalid = 0;
@@ -279,6 +291,23 @@ enum EAppControllerSupportLevel
 	k_EAppControllerSupportLevelNone = 0;
 	k_EAppControllerSupportLevelPartial = 1;
 	k_EAppControllerSupportLevelFull = 2;
+}
+
+enum EAppCreationCreditStatus
+{
+	k_EAppCreationCreditStatus_Available = 0;
+	k_EAppCreationCreditStatus_Redeemed = 1;
+	k_EAppCreationCreditStatus_Revoked = 2;
+	k_EAppCreationCreditStatus_Pending = 3;
+}
+
+enum EAppCreationCreditType
+{
+	k_EAppCreationCreditType_Standard = 0;
+	k_EAppCreationCreditType_Granted = 1;
+	k_EAppCreationCreditType_Complimentary = 2;
+	k_EAppCreationCreditType_AdultContent = 3;
+	k_EAppCreationCreditType_Referral = 4;
 }
 
 enum EAppDetailsStatusPanelType
@@ -395,6 +424,14 @@ enum EAppReleaseState
 	k_EAppReleaseState_Disabled = 5;
 }
 
+enum EAppReportingPlatform
+{
+	k_EAppReportingPlatform_All = 0;
+	k_EAppReportingPlatform_Windows = 1;
+	k_EAppReportingPlatform_Mac = 2;
+	k_EAppReportingPlatform_Linux = 4;
+}
+
 enum EAppReportType
 {
 	k_EAppReportType_Invalid = 0;
@@ -413,6 +450,38 @@ enum EAppReportType
 	k_EAppReportType_Broken = 13;
 }
 
+enum EAppShareState
+{
+	k_EAppShareState_Invalid = 0;
+	k_EAppShareState_Created = 1;
+	k_EAppShareState_AwaitingConfirmation = 2;
+	k_EAppShareState_Declined = 3;
+	k_EAppShareState_Active = 4;
+	k_EAppShareState_Canceled = 5;
+	k_EAppShareState_Expired = 6;
+	k_EAppShareState_Revoked = 7;
+	k_EAppShareState_CanceledForAppTransfer = 8;
+	k_EAppShareState_MAX = 9;
+}
+
+enum EAppTestType
+{
+	k_EAppTestType_BuildReview = 0;
+	k_EAppTestType_StorePageReview = 1;
+	k_EAppTestType_SteamChina_BuildReview = 2;
+	k_EAppTestType_SteamChina_StorePageReview = 3;
+	k_EAppTestType_SteamChinaPlatformOperator_StorePageReview = 4;
+	k_EAppTestType_SteamChinaPlatformOperator_BuildReview = 5;
+	k_EAppTestType_SteamDeckCompatibilityReview = 6;
+}
+
+enum EAppTrafficStatAttribution
+{
+	k_EAppTrafficStatAttribution_Store = 0;
+	k_EAppTrafficStatAttribution_SteamPlatform = 1;
+	k_EAppTrafficStatAttribution_External = 2;
+}
+
 enum EAppTrailerStatus
 {
 	k_EAppTrailerStatusInvalid = 0;
@@ -427,6 +496,21 @@ enum EAppTrailerType
 	k_EAppTrailerTypePublisherUploaded = 1;
 	k_EAppTrailerTypeAutoShow = 2;
 	k_EAppTrailerTypeMicrotrailer = 3;
+}
+
+enum EAppTransferState
+{
+	k_EAppTransferState_Invalid = 0;
+	k_EAppTransferState_PendingConfirmationFrom_Receiver = 1;
+	k_EAppTransferState_PendingConfirmationFrom_Sender = 2;
+	k_EAppTransferState_PendingApproval = 3;
+	k_EAppTransferState_Approved = 4;
+	k_EAppTransferState_CanceledByReceiver = 5;
+	k_EAppTransferState_CanceledBySender = 6;
+	k_EAppTransferState_Declined = 7;
+	k_EAppTransferState_RequiresEscalation = 8;
+	k_EAppTransferState_ApprovedPendingScheduledTransfer = 9;
+	k_EAppTransferState_Expired = 10;
 }
 
 enum EAppType
@@ -474,6 +558,15 @@ enum EAuctionBadgeLevel
 	k_EAuctionBadgeLevel_MadeGoo = 1;
 	k_EAuctionBadgeLevel_BidInAuction = 2;
 	k_EAuctionBadgeLevel_WonInAuction = 3;
+}
+
+enum EAuctionBidState
+{
+	k_EAuctionBidState_Invalid = 0;
+	k_EAuctionBidState_Active = 1;
+	k_EAuctionBidState_Cancelled = 2;
+	k_EAuctionBidState_Winner = 3;
+	k_EAuctionBidState_Expired = 4;
 }
 
 enum EAudioFormat
@@ -579,6 +672,14 @@ enum EBatteryState
 	k_EBatteryState_Discharging = 1;
 	k_EBatteryState_Charging = 2;
 	k_EBatteryState_Full = 3;
+}
+
+enum EBetaProgram
+{
+	k_EBetaProgram_Invalid = 0;
+	k_EBetaProgram_PartnerUTMStats = 1;
+	k_EBetaProgram_SteamStatsAPI = 2;
+	k_EBetaProgram_SteamLearn = 3;
 }
 
 enum EBroadcastChatBan
@@ -1013,6 +1114,14 @@ enum ECloudStoragePersistState
 	k_ECloudStoragePersistStateDeleted = 2;
 }
 
+enum EClustersFromPlaytimeSort
+{
+	k_EClustersFromPlaytimeSort_Invalid = 0;
+	k_EClustersFromPlaytimeSort_MostRecent = 1;
+	k_EClustersFromPlaytimeSort_MostGames = 2;
+	k_EClustersFromPlaytimeSort_MostPlaytime = 3;
+}
+
 enum ECodecUsagePlatform
 {
 	k_ECodecUsagePlatformUnknown = 0;
@@ -1085,6 +1194,38 @@ enum ECommentThreadType
 	k_ECommentThreadTypeMax = 21;
 }
 
+enum ECommunicationInviteState
+{
+	k_ECommunicationInviteState_Invalid = 0;
+	k_ECommunicationInviteState_Pending = 1;
+	k_ECommunicationInviteState_Accepted = 2;
+	k_ECommunicationInviteState_Removed = 4;
+}
+
+enum ECommunityItemApprovalState
+{
+	k_ECommunityItemApprovalState_Invalid = 0;
+	k_ECommunityItemApprovalState_DeveloperRequestsReview = 1;
+	k_ECommunityItemApprovalState_ApprovedByValve = 2;
+	k_ECommunityItemApprovalState_ApprovalInvalidatedByEdits = 3;
+	k_ECommunityItemApprovalState_ValveRequestsEdits = 4;
+	k_ECommunityItemApprovalState_Released = 5;
+}
+
+enum ECommunityItemAttribute
+{
+	k_ECommunityItemAttribute_Invalid = 0;
+	k_ECommunityItemAttribute_CardBorder = 1;
+	k_ECommunityItemAttribute_Level = 2;
+	k_ECommunityItemAttribute_IssueNumber = 3;
+	k_ECommunityItemAttribute_TradableTime = 4;
+	k_ECommunityItemAttribute_StorePackageID = 5;
+	k_ECommunityItemAttribute_CommunityItemAppID = 6;
+	k_ECommunityItemAttribute_CommunityItemType = 7;
+	k_ECommunityItemAttribute_ProfileModiferEnabled = 8;
+	k_ECommunityItemAttribute_ExpiryTime = 9;
+}
+
 enum ECommunityItemClass
 {
 	k_ECommunityItemClass_Invalid = 0;
@@ -1105,6 +1246,21 @@ enum ECommunityItemClass
 	k_ECommunityItemClass_AnimatedAvatar = 15;
 	k_ECommunityItemClass_SteamDeckKeyboardSkin = 16;
 	k_ECommunityItemClass_SteamDeckStartupMovie = 17;
+}
+
+enum ECommunityItemDropRate
+{
+	k_ECommunityItemDropRate_Common = 0;
+	k_ECommunityItemDropRate_Uncommon = 1;
+	k_ECommunityItemDropRate_Rare = 2;
+}
+
+enum ECommunityItemSalienType
+{
+	k_ECommunityItemSalienType_Invalid = 0;
+	k_ECommunityItemSalienType_Hat = 1;
+	k_ECommunityItemSalienType_Shirt = 2;
+	k_ECommunityItemSalienType_Cape = 3;
 }
 
 enum ECommunityPrivacy
@@ -1202,6 +1358,15 @@ enum EContentCheckProvider
 	k_EContentCheckProvider_Amazon = 2;
 	k_EContentCheckProvider_Local = 3;
 	k_EContentCheckProvider_GoogleVertexAI = 4;
+}
+
+enum EContentDescriptor
+{
+	k_EContentDescriptor_NudityOrSexualContent = 1;
+	k_EContentDescriptor_FrequentViolenceOrGore = 2;
+	k_EContentDescriptor_AdultOnlySexualContent = 3;
+	k_EContentDescriptor_GratuitousSexualContent = 4;
+	k_EContentDescriptor_AnyMatureContent = 5;
 }
 
 enum EContentHubDiscountFilterType
@@ -1361,6 +1526,14 @@ enum ECursorType
 	k_ECursorType_AccumulatedDelta = 2;
 }
 
+enum EDailyDealStoreItemType
+{
+	k_EDailyDealStoreItemType_Unknown = undefined;
+	k_EDailyDealStoreItemType_App = 0;
+	k_EDailyDealStoreItemType_Sub = 1;
+	k_EDailyDealStoreItemType_Bundle = 2;
+}
+
 enum EDiscoveryAction
 {
 	k_EDiscoveryAction_Invalid = 0;
@@ -1406,6 +1579,13 @@ enum EDisplayStatus
 	k_EDisplayStatusCloudError = 34;
 	k_EDisplayStatusCloudOutOfDate = 35;
 	k_EDisplayStatusTerminating = 36;
+}
+
+enum EDocumentationFileType
+{
+	k_EDocumentationFileType_Invalid = 0;
+	k_EDocumentationFileType_Download = 1;
+	k_EDocumentationFileType_Image = 2;
 }
 
 enum EDown
@@ -1494,6 +1674,18 @@ enum EEventState
 	k_EEventStateUnpublished = 0;
 	k_EEventStateStaged = 1;
 	k_EEventStateVisible = 2;
+}
+
+enum EExternal
+{
+	k_EExternalNone = 0;
+	k_EExternalSteamAccount = 1;
+	k_EExternalGoogleAccount = 2;
+	k_EExternalFacebookAccount = 3;
+	k_EExternalTwitterAccount = 4;
+	k_EExternalTwitchAccount = 5;
+	k_EExternalYouTubeChannelAccount = 6;
+	k_EExternalFacebookPage = 7;
 }
 
 enum EFeature
@@ -1596,6 +1788,16 @@ enum EFriendRelationship
 	k_EFriendRelationshipIgnoredFriend = 6;
 	k_EFriendRelationshipSuggested_DEPRECATED = 7;
 	k_EFriendRelationshipMax = 8;
+}
+
+enum EGameCardDropMethod
+{
+	k_EGameCardDropMethodInvalid = 0;
+	k_EGameCardDropMethodOneTimePurchase = 1;
+	k_EGameCardDropMethodFreeToPlay = 2;
+	k_EGameCardDropMethodComboOTPFP2 = 3;
+	k_EGameCardDropMethodSalePurchase = 4;
+	k_EGameCardDropMethodOTPWithMicroTxn = 5;
 }
 
 enum EGameIDType
@@ -1780,6 +1982,14 @@ enum EInstallMgrState
 	k_EInstallMgrStateCanceled = 16;
 }
 
+enum EInternal
+{
+	k_EInternalSteamAccountType = 1;
+	k_EInternalClanType = 2;
+	k_EInternalAppType = 3;
+	k_EInternalBroadcastChannelType = 4;
+}
+
 enum EIteratorType
 {
 	k_EIteratorTypeNone = 0;
@@ -1917,6 +2127,123 @@ enum ELoginUIStyle
 	k_ELoginUIStyleOld = 0;
 	k_ELoginUIStyleNewWithoutQRCode = 1;
 	k_ELoginUIStyleNew = 2;
+}
+
+enum ELoyaltyRewardAuditType
+{
+	k_ELoyaltyRewardAuditType_Invalid = 0;
+	k_ELoyaltyRewardAuditType_Purchase = 1;
+	k_ELoyaltyRewardAuditType_RefundOrChargeback = 2;
+	k_ELoyaltyRewardAuditType_SupportGrant = 3;
+	k_ELoyaltyRewardAuditType_PointRedemption = 4;
+	k_ELoyaltyRewardAuditType_PointClawback = 5;
+	k_ELoyaltyRewardAuditType_PointRedemptionForBadgeLevel = 6;
+	k_ELoyaltyRewardAuditType_SpendingBackfill = 7;
+	k_ELoyaltyRewardAuditType_PointRedemptionForItemUpgrade = 9;
+	k_ELoyaltyRewardAuditType_PointRedemptionForTransaction = 10;
+	k_ELoyaltyRewardAuditType_SupportRegrantItem = 19;
+	k_ELoyaltyRewardAuditType_TransferRequest = 20;
+	k_ELoyaltyRewardAuditType_Transferred = 21;
+	k_ELoyaltyRewardAuditType_UserReviewReaction = 22;
+	k_ELoyaltyRewardAuditType_UserReviewReaction_PointsTransferred = 23;
+	k_ELoyaltyRewardAuditType_LaunchBackfill_Purchase = 24;
+	k_ELoyaltyRewardAuditType_LaunchBackfill_RefundOrChargeback = 25;
+	k_ELoyaltyRewardAuditType_UGCReaction = 26;
+	k_ELoyaltyRewardAuditType_UGCReaction_PointsTransferred = 27;
+	k_ELoyaltyRewardAuditType_SupportSetBadgeLevel = 28;
+	k_ELoyaltyRewardAuditType_UserReviewReaction_Removed = 29;
+	k_ELoyaltyRewardAuditType_UGCReaction_Removed = 30;
+	k_ELoyaltyRewardAuditType_Auction_Bid = 31;
+	k_ELoyaltyRewardAuditType_Auction_BidCancelled = 32;
+	k_ELoyaltyRewardAuditType_Auction_WinningBid = 33;
+	k_ELoyaltyRewardAuditType_GrantedFromPackage = 34;
+	k_ELoyaltyRewardAuditType_PointRedemptionForProfileCustomization = 35;
+	k_ELoyaltyRewardAuditType_ProfileReaction = 36;
+	k_ELoyaltyRewardAuditType_ProfileReaction_PointsTransferred = 37;
+	k_ELoyaltyRewardAuditType_ProfileReaction_Removed = 38;
+	k_ELoyaltyRewardAuditType_PointRedemptionForProfileCustomizationUpgrade = 39;
+	k_ELoyaltyRewardAuditType_ForumTopicReaction = 40;
+	k_ELoyaltyRewardAuditType_ForumTopicReaction_PointsTransferred = 41;
+	k_ELoyaltyRewardAuditType_ForumTopicReaction_Removed = 42;
+	k_ELoyaltyRewardAuditType_CommentReaction = 43;
+	k_ELoyaltyRewardAuditType_CommentReaction_PointsTransferred = 44;
+	k_ELoyaltyRewardAuditType_CommentReaction_Removed = 45;
+	k_ELoyaltyRewardAuditType_SteamDeckRewards = 46;
+	k_ELoyaltyRewardAuditType_SupportGrantReward = 47;
+	k_ELoyaltyRewardAuditType_PointRedemptionForFreeItem = 48;
+}
+
+enum ELoyaltyRewardPointTransferType
+{
+	k_ELoyaltyRewardPointTransferType_Invalid = 0;
+	k_ELoyaltyRewardPointTransferType_Support = 1;
+	k_ELoyaltyRewardPointTransferType_Review = 2;
+	k_ELoyaltyRewardPointTransferType_UGC = 3;
+	k_ELoyaltyRewardPointTransferType_Profile = 4;
+	k_ELoyaltyRewardPointTransferType_ForumTopic = 5;
+	k_ELoyaltyRewardPointTransferType_Comment = 6;
+}
+
+enum ELoyaltyRewardQueryFilter
+{
+	k_ELoyaltyRewardQueryFilter_Animated = 1;
+	k_ELoyaltyRewardQueryFilter_NotAnimated = 2;
+	k_ELoyaltyRewardQueryFilter_Bundle = 3;
+}
+
+enum ELoyaltyRewardReactionTargetType
+{
+	k_ELoyaltyRewardReactionTargetType_Invalid = 0;
+	k_ELoyaltyRewardReactionTargetType_UserReview = 1;
+	k_ELoyaltyRewardReactionTargetType_UGC = 2;
+	k_ELoyaltyRewardReactionTargetType_Profile = 3;
+	k_ELoyaltyRewardReactionTargetType_ForumTopic = 4;
+	k_ELoyaltyRewardReactionTargetType_Comment = 5;
+}
+
+enum ELoyaltyRewardReactionType
+{
+	k_ELoyaltyRewardReactionType_Invalid = 0;
+	k_ELoyaltyRewardReactionType_DeepThoughts = 1;
+	k_ELoyaltyRewardReactionType_Heartwarming = 2;
+	k_ELoyaltyRewardReactionType_Hilarious = 3;
+	k_ELoyaltyRewardReactionType_HotTake = 4;
+	k_ELoyaltyRewardReactionType_Poetry = 5;
+	k_ELoyaltyRewardReactionType_ExtraHelpful = 6;
+	k_ELoyaltyRewardReactionType_GottaHaveIt = 7;
+	k_ELoyaltyRewardReactionType_Michelangelo = 8;
+	k_ELoyaltyRewardReactionType_Treasure = 9;
+	k_ELoyaltyRewardReactionType_MindBlown = 10;
+	k_ELoyaltyRewardReactionType_GoldenUnicorn = 11;
+	k_ELoyaltyRewardReactionType_MadScientist = 12;
+	k_ELoyaltyRewardReactionType_Clever = 13;
+	k_ELoyaltyRewardReactionType_WarmBlanket = 14;
+	k_ELoyaltyRewardReactionType_Saucy = 15;
+	k_ELoyaltyRewardReactionType_SlowClap = 16;
+	k_ELoyaltyRewardReactionType_TakeMyPoints = 17;
+	k_ELoyaltyRewardReactionType_Wholesome = 18;
+	k_ELoyaltyRewardReactionType_Jester = 19;
+	k_ELoyaltyRewardReactionType_FancyPants = 20;
+	k_ELoyaltyRewardReactionType_Whoa = 21;
+	k_ELoyaltyRewardReactionType_SuperStar = 22;
+	k_ELoyaltyRewardReactionType_Wild = 23;
+}
+
+enum ELoyaltyRewardsQuerySort
+{
+	k_ELoyaltyRewardsQuerySort_TimeCreated = 1;
+	k_ELoyaltyRewardsQuerySort_RedemptionRank = 2;
+}
+
+enum ELoyaltyRewardType
+{
+	k_ELoyaltyRewardType_Invalid = 0;
+	k_ELoyaltyRewardType_VirtualItemReward = 1;
+	k_ELoyaltyRewardType_Badge = 2;
+	k_ELoyaltyRewardType_CommunityItemLevelUpgrade = 3;
+	k_ELoyaltyRewardType_CartDiscount = 4;
+	k_ELoyaltyRewardType_Bundle = 5;
+	k_ELoyaltyRewardType_AutoGeneratedBundle = 6;
 }
 
 enum EM
@@ -2799,6 +3126,17 @@ enum EMarketingMessageVisible
 	k_EMarketingMessageVisiblePublic = 2;
 }
 
+enum EMembershipEvent
+{
+	k_EMembershipEvent_Invalid = 0;
+	k_EMembershipEvent_AccountAddedToPartner = 1;
+	k_EMembershipEvent_AccountRemovedFromPartner = 2;
+	k_EMembershipEvent_GroupRightsModified = 3;
+	k_EMembershipEvent_AddedToGroup = 4;
+	k_EMembershipEvent_RemovedFromGroup = 5;
+	k_EMembershipEvent_PublisherRightsModified = 6;
+}
+
 enum EMenu
 {
 	k_EMenuButtonPress = 0;
@@ -2848,6 +3186,13 @@ enum EMsgClanAccountFlag
 	k_EMsgClanAccountFlagLocked = 4;
 	k_EMsgClanAccountFlagDisabled = 8;
 	k_EMsgClanAccountFlagOGG = 16;
+}
+
+enum ENavigationDeviceType
+{
+	k_ENavigationDeviceType_Unknown = 0;
+	k_ENavigationDeviceType_PC = 1;
+	k_ENavigationDeviceType_Mobile = 2;
 }
 
 enum ENetFakeLocalSystemState
@@ -2907,6 +3252,39 @@ enum ENotifyFlag
 	k_ENotifyFlagByPush = 2;
 }
 
+enum EOptInEmailSetting
+{
+	k_EOptInEmailSetting_None = 0;
+	k_EOptInEmailSetting_AssetKit = 1;
+	k_EOptInEmailSetting_PressPreview = 2;
+	k_EOptInEmailSetting_ScheduleWidget = 4;
+	k_EOptInEmailSetting_OptOut = 8;
+	k_EOptInEmailSetting_OptOutDemo = 16;
+	k_EOptInEmailSetting_EnterDiscount = 32;
+	k_EOptInEmailSetting_ActivateDemo = 64;
+	k_EOptInEmailSetting_ReviewCategorization = 128;
+	k_EOptInEmailSetting_DemoReview = 256;
+	k_EOptInEmailSetting_PressPreviewDetails = 512;
+	k_EOptInEmailSetting_StatsSummary = 1024;
+	k_EOptInEmailSetting_SurveyButton = 2048;
+	k_EOptInEmailSetting_DemoLaunch = 4096;
+	k_EOptInEmailSetting_CallForRegistration = 8192;
+}
+
+enum EOptInEmailTarget
+{
+	k_EOptInEmailTarget_ActivatingUser = 1;
+	k_EOptInEmailTarget_DemoNotLive = 2;
+	k_EOptInEmailTarget_DiscountMissing = 4;
+	k_EOptInEmailTarget_DEPRECATED_InvitedPartners = 8;
+	k_EOptInEmailTarget_InvitedApps = 16;
+	k_EOptInEmailTarget_EligibleApps = 32;
+	k_EOptInEmailTarget_FeaturedApps = 64;
+	k_EOptInEmailTarget_FeaturedAppsMissingDate = 128;
+	k_EOptInEmailTarget_FeaturedAppsNotContacted = 256;
+	k_EOptInEmailTarget_CustomAppList = 512;
+}
+
 enum EOSBranch
 {
 	k_EOSBranch_Unknown = 0;
@@ -2947,6 +3325,25 @@ enum EPad_Support
 	k_EPad_Support_Switch = 8;
 }
 
+enum EPartnerAppOptInAppealState
+{
+	k_EPartnerAppOptInAppealState_Invalid = 0;
+	k_EPartnerAppOptInAppealState_Approved = 1;
+	k_EPartnerAppOptInAppealState_Denied = 2;
+}
+
+enum EPartnerAppOptInType
+{
+	k_EPartnerAppOptInType_PartnerEvent = 0;
+	k_EPartnerAppOptInType_FeatureAccess = 1;
+}
+
+enum EPartnerEmailNotifcationType
+{
+	k_EPartnerEmailNotifcationType_Invalid = 0;
+	k_EPartnerEmailNotifcationType_PartnerReminderPreRelease = 1;
+}
+
 enum EPartnerEventDisplayLocation
 {
 	k_EPartnerEventDisplayLocation_Invalid = 0;
@@ -2976,6 +3373,30 @@ enum EPartnerLinkTrackingStoreLocation
 	k_EPartnerLinkTrackingStoreLocation_PackagePage = 2;
 	k_EPartnerLinkTrackingStoreLocation_AnnouncementPage = 3;
 	k_EPartnerLinkTrackingStoreLocation_SalePage = 4;
+}
+
+enum EPartnerMembershipInviteState
+{
+	k_EPartnerMembershipInviteState_Invalid = 0;
+	k_EPartnerMembershipInviteState_Sent = 1;
+	k_EPartnerMembershipInviteState_ReceiverAccepted = 2;
+	k_EPartnerMembershipInviteState_ReceiverDeclined = 3;
+	k_EPartnerMembershipInviteState_PartnerAccepted = 4;
+	k_EPartnerMembershipInviteState_PartnerDeclined = 5;
+	k_EPartnerMembershipInviteState_Canceled = 6;
+	k_EPartnerMembershipInviteState_Expired = 7;
+	k_EPartnerMembershipInviteState_MAX = 8;
+}
+
+enum EPartnerNotesType
+{
+	k_EPartnerNotesType_Misc = 0;
+	k_EPartnerNotesType_SetStatus_Active = 1;
+	k_EPartnerNotesType_SetStatus_Archived = 2;
+	k_EPartnerNotesType_SetStatus_Banned = 3;
+	k_EPartnerNotesType_Warning = 4;
+	k_EPartnerNotesType_Legacy = 5;
+	k_EPartnerNotesType_SetStatus_Retired = 6;
 }
 
 enum EPeerContentServerMode
@@ -3164,6 +3585,24 @@ enum EProgressType
 	k_EProgressType_LoggingIn = 3;
 }
 
+enum EPromotionEventInvite
+{
+	k_EPromotionEventInvite_Invalid = 0;
+	k_EPromotionEventInvite_DailyDeal = 1;
+	k_EPromotionEventInvite_MidWeekDeal = 2;
+	k_EPromotionEventInvite_WeekendDeal = 3;
+	k_EPromotionEventInvite_AssetAndActionRequest = 4;
+}
+
+enum EPromotionNotification
+{
+	k_EPromotionNotification_Unknown = 0;
+	k_EPromotionNotification_AssetRequest = 1;
+	k_EPromotionNotification_AssetRequest_Reminder = 2;
+	k_EPromotionNotification_AssetRequest_Submitted = 3;
+	k_EPromotionNotification_MAX = 4;
+}
+
 enum EProtoAvail
 {
 	k_EProtoAvailInterServer = 0;
@@ -3246,6 +3685,16 @@ enum EPublishedFileInappropriateResult
 	k_EPublishedFileInappropriateResult_VeryLikely = 100;
 }
 
+enum EPublishedFileRevision
+{
+	k_EPublishedFileRevision_Default = 0;
+	k_EPublishedFileRevision_Latest = 1;
+	k_EPublishedFileRevision_ApprovedSnapshot = 2;
+	k_EPublishedFileRevision_ApprovedSnapshot_China = 3;
+	k_EPublishedFileRevision_RejectedSnapshot = 4;
+	k_EPublishedFileRevision_RejectedSnapshot_China = 5;
+}
+
 enum EPublishedFileStorageSystem
 {
 	k_EPublishedFileStorageSystemInvalid = 0;
@@ -3300,6 +3749,14 @@ enum ERedeemPointsType
 	k_ERedeemPointsTypeVirtualItem = 1;
 	k_ERedeemPointsTypeProfileShowcaseUpgrade = 2;
 	k_ERedeemPointsTypeProfileShowcaseSlot = 3;
+}
+
+enum EReleaseRequestState
+{
+	k_EReleaseRequestStateAny = 0;
+	k_EReleaseRequestStateNotReady = 1;
+	k_EReleaseRequestStatePending = 2;
+	k_EReleaseRequestStateApproved = 3;
 }
 
 enum ERemote
@@ -3411,6 +3868,14 @@ enum eRestoreFocus
 	eRestoreFocusNever = 2;
 }
 
+enum ERewardDefinitionsAction
+{
+	k_ERewardDefinitionsAction_Invalid = 0;
+	k_ERewardDefinitionsAction_Add = 1;
+	k_ERewardDefinitionsAction_Update = 2;
+	k_ERewardDefinitionsAction_Delete = 3;
+}
+
 enum ErrorCondition
 {
 	k_ErrorCondition_Invalid = 0;
@@ -3452,6 +3917,15 @@ enum ESDCardFormatStage
 	k_ESDCardFormatStage_Rescuing = 3;
 	k_ESDCardFormatStage_Formatting = 4;
 	k_ESDCardFormatStage_Finalizing = 5;
+}
+
+enum ESeason
+{
+	k_ESeason_Invalid = 0;
+	k_ESeason_Spring = 1;
+	k_ESeason_Summer = 2;
+	k_ESeason_Fall = 3;
+	k_ESeason_Winter = 4;
 }
 
 enum EServerType
@@ -3599,6 +4073,20 @@ enum ESessionPersistence
 	k_ESessionPersistence_Persistent = 1;
 }
 
+enum ESetUserCountryError
+{
+	k_ESetUserCountryError_None = 0;
+	k_ESetUserCountryError_NewCountryMustMatchWebIP = 1;
+	k_ESetUserCountryError_NewCountryMustMatchClientIP = 2;
+	k_ESetUserCountryError_MilitaryCountryMustBeUSA = 3;
+	k_ESetUserCountryError_NoUSMilitaryBaseInIPCountry = 4;
+	k_ESetUserCountryError_InvalidMilitaryAddress = 5;
+	k_ESetUserCountryError_HasPendingPurchase = 6;
+	k_ESetUserCountryError_HasRecentPurchase = 7;
+	k_ESetUserCountryError_HasRecentCountryChange = 8;
+	k_ESetUserCountryError_WalletConversionFailed = 9;
+}
+
 enum EShutdownStep
 {
 	k_EShutdownStep_None = 0;
@@ -3648,12 +4136,80 @@ enum ESplitScalingScaler
 	k_ESplitScalingScaler_Stretch = 5;
 }
 
+enum ESpringCleaningEventYear
+{
+	k_ESpringCleaningEventYear_Invalid = 0;
+	k_ESpringCleaningEventYear_2018 = 1;
+	k_ESpringCleaningEventYear_2019 = 2;
+	k_ESpringCleaningEventYear_2020 = 3;
+}
+
 enum eState
 {
 	eStateNone = 0;
 	eStateSaving = 1;
 	eStateSaved = 2;
 	eStateError = 3;
+}
+
+enum ESteamAwardCategoryID
+{
+	k_ESteamAwardCategoryID_Invalid = 0;
+	k_ESteamAwardCategoryID_2020_GameOfTheYear = 50;
+	k_ESteamAwardCategoryID_2020_VRGameOfTheYear = 51;
+	k_ESteamAwardCategoryID_2020_LaborOfLove = 52;
+	k_ESteamAwardCategoryID_2020_BetterWithFriends = 53;
+	k_ESteamAwardCategoryID_2020_OutstandingVisualStyle = 54;
+	k_ESteamAwardCategoryID_2020_MostInnovativeGameplay = 55;
+	k_ESteamAwardCategoryID_2020_BestGameYouSuckAt = 56;
+	k_ESteamAwardCategoryID_2020_BestSoundtrack = 57;
+	k_ESteamAwardCategoryID_2020_OutstandingStoryRichGame = 58;
+	k_ESteamAwardCategoryID_2020_SitBackAndRelax = 59;
+	k_ESteamAwardCategoryID_2020_MAX = 60;
+	k_ESteamAwardCategoryID_2021_GameOfTheYear = 61;
+	k_ESteamAwardCategoryID_2021_VRGameOfTheYear = 62;
+	k_ESteamAwardCategoryID_2021_LaborOfLove = 63;
+	k_ESteamAwardCategoryID_2021_BetterWithFriends = 64;
+	k_ESteamAwardCategoryID_2021_OutstandingVisualStyle = 65;
+	k_ESteamAwardCategoryID_2021_MostInnovativeGameplay = 66;
+	k_ESteamAwardCategoryID_2021_BestGameYouSuckAt = 67;
+	k_ESteamAwardCategoryID_2021_BestSoundtrack = 68;
+	k_ESteamAwardCategoryID_2021_OutstandingStoryRichGame = 69;
+	k_ESteamAwardCategoryID_2021_SitBackAndRelax = 70;
+	k_ESteamAwardCategoryID_2021_MAX = 71;
+	k_ESteamAwardCategoryID_2022_GameOfTheYear = 72;
+	k_ESteamAwardCategoryID_2022_VRGameOfTheYear = 73;
+	k_ESteamAwardCategoryID_2022_LaborOfLove = 74;
+	k_ESteamAwardCategoryID_2022_BetterWithFriends = 75;
+	k_ESteamAwardCategoryID_2022_OutstandingVisualStyle = 76;
+	k_ESteamAwardCategoryID_2022_MostInnovativeGameplay = 77;
+	k_ESteamAwardCategoryID_2022_BestGameYouSuckAt = 78;
+	k_ESteamAwardCategoryID_2022_BestSoundtrack = 79;
+	k_ESteamAwardCategoryID_2022_OutstandingStoryRichGame = 80;
+	k_ESteamAwardCategoryID_2022_SitBackAndRelax = 81;
+	k_ESteamAwardCategoryID_2022_BestGameOnTheGo = 82;
+	k_ESteamAwardCategoryID_2022_MAX = 83;
+	k_ESteamAwardCategoryID_2023_GameOfTheYear = 90;
+	k_ESteamAwardCategoryID_2023_VRGameOfTheYear = 91;
+	k_ESteamAwardCategoryID_2023_LaborOfLove = 92;
+	k_ESteamAwardCategoryID_2023_BestGameOnDeck = 93;
+	k_ESteamAwardCategoryID_2023_BetterWithFriends = 94;
+	k_ESteamAwardCategoryID_2023_OutstandingVisualStyle = 95;
+	k_ESteamAwardCategoryID_2023_MostInnovativeGameplay = 96;
+	k_ESteamAwardCategoryID_2023_BestGameYouSuckAt = 97;
+	k_ESteamAwardCategoryID_2023_BestSoundtrack = 98;
+	k_ESteamAwardCategoryID_2023_OutstandingStoryRichGame = 99;
+	k_ESteamAwardCategoryID_2023_SitBackAndRelax = 100;
+	k_ESteamAwardCategoryID_2023_MAX = 101;
+}
+
+enum ESteamAwardsNominationSource
+{
+	k_ESteamAwardsNominationSource_Invalid = 0;
+	k_ESteamAwardsNominationSource_StorePage = 1;
+	k_ESteamAwardsNominationSource_Recommendation = 2;
+	k_ESteamAwardsNominationSource_ModalSearch = 3;
+	k_ESteamAwardsNominationSource_PartnerEvent = 4;
 }
 
 enum ESteamDeckCompatibilityCategory
@@ -3701,6 +4257,38 @@ enum ESteamNetTransport
 	k_ESteamNetTransport_TURN = 5;
 	k_ESteamNetTransport_SDRP2P = 6;
 	k_ESteamNetTransport_SDRHostedServer = 7;
+}
+
+enum ESteamNotificationTarget
+{
+	k_ESteamNotificationTarget_Invalid = 0;
+	k_ESteamNotificationTarget_NotificationFeed = 1;
+	k_ESteamNotificationTarget_PushNotification = 2;
+	k_ESteamNotificationTarget_Email = 4;
+	k_ESteamNotificationTarget_Steam = 8;
+}
+
+enum ESteamNotificationType
+{
+	k_ESteamNotificationType_Invalid = 0;
+	k_ESteamNotificationType_Test = 1;
+	k_ESteamNotificationType_Gift = 2;
+	k_ESteamNotificationType_Comment = 3;
+	k_ESteamNotificationType_Item = 4;
+	k_ESteamNotificationType_FriendInvite = 5;
+	k_ESteamNotificationType_MajorSale = 6;
+	k_ESteamNotificationType_PreloadAvailable = 7;
+	k_ESteamNotificationType_Wishlist = 8;
+	k_ESteamNotificationType_TradeOffer = 9;
+	k_ESteamNotificationType_General = 10;
+	k_ESteamNotificationType_HelpRequest = 11;
+	k_ESteamNotificationType_AsyncGame = 12;
+	k_ESteamNotificationType_ChatMsg = 13;
+	k_ESteamNotificationType_ModeratorMsg = 14;
+	k_ESteamNotificationType_ParentalFeatureAccessRequest = 15;
+	k_ESteamNotificationType_FamilyInvite = 16;
+	k_ESteamNotificationType_FamilyPurchaseRequest = 17;
+	k_ESteamNotificationType_ParentalPlaytimeRequest = 18;
 }
 
 enum ESteamPipeClientWorkType
@@ -3786,6 +4374,16 @@ enum EStorageFormatStage
 	k_EStorageFormatStage_Rescuing = 4;
 	k_EStorageFormatStage_Formatting = 5;
 	k_EStorageFormatStage_Finalizing = 6;
+}
+
+enum EStoreAppSimilarityPopularity
+{
+	k_EStoreAppSimilarityPopularity_None = 0;
+	k_EStoreAppSimilarityPopularity_SalesRank = 1;
+	k_EStoreAppSimilarityPopularity_LongTermSalesRank = 2;
+	k_EStoreAppSimilarityPopularity_WishlistActivityRank = 3;
+	k_EStoreAppSimilarityPopularity_DailyActiveUserRank = 4;
+	k_EStoreAppSimilarityPopularity_Blended = 5;
 }
 
 enum EStoreAppType
@@ -4319,6 +4917,52 @@ enum EStreamVideoCodec
 	k_EStreamVideoCodecORBX2 = 7;
 }
 
+enum ESummerSale2021Genre
+{
+	k_ESummerSale2021Genre_Invalid = 0;
+	k_ESummerSale2021Genre_Action = 1;
+	k_ESummerSale2021Genre_AdventureAndCasual = 2;
+	k_ESummerSale2021Genre_RolePlaying = 3;
+	k_ESummerSale2021Genre_Strategy = 4;
+	k_ESummerSale2021Genre_Simulation = 5;
+	k_ESummerSale2021Genre_SportsAndRacing = 6;
+	k_ESummerSale2021Genre_Horror = 7;
+	k_ESummerSale2021Genre_Survival = 8;
+	k_ESummerSale2021Genre_OpenWorld = 9;
+	k_ESummerSale2021Genre_ScifiAndCyberpunk = 10;
+	k_ESummerSale2021Genre_MysteryAndDetective = 11;
+	k_ESummerSale2021Genre_Space = 12;
+	k_ESummerSale2021Genre_RogueLike = 13;
+	k_ESummerSale2021Genre_Anime = 14;
+}
+
+enum ESummerSale2021StoryChoice
+{
+	k_ESummerSale2021StoryChoice_Invalid = 0;
+	k_ESummerSale2021StoryChoice_A = 1;
+	k_ESummerSale2021StoryChoice_B = 2;
+}
+
+enum ESummerSaleTask
+{
+	k_ESummerSaleTaskUseDiscoveryQueue = 0;
+	k_ESummerSaleTaskPlayAGame = 1;
+	k_ESummerSaleTaskViewFriendActivity = 2;
+	k_ESummerSaleTaskAddToWishlist = 3;
+	k_ESummerSaleTaskReviewStorePreferences = 4;
+	k_ESummerSaleTaskEarnAchievement = 5;
+	k_ESummerSaleTaskVisitBroadcastPage = 6;
+	k_ESummerSaleTaskMarkReviewHelpful = 7;
+	k_ESummerSaleTaskFollowCurator = 8;
+	k_ESummerSaleTaskViewAProfile = 9;
+	k_ESummerSaleTaskViewATagPage = 10;
+	k_ESummerSaleTaskMarkNotInterested = 11;
+	k_ESummerSaleTaskViewVideosPage = 12;
+	k_ESummerSaleTaskUploadAScreenshot = 13;
+	k_ESummerSaleTaskPersonalizeProfile = 14;
+	k_ESummerSaleTaskPersonalizeDiscoveryQueue = 15;
+}
+
 enum ESupport
 {
 	k_ESupportPermissions_Invalid = 0;
@@ -4398,6 +5042,15 @@ enum ETextFilterSetting
 	k_ETextFilterSettingDisabled = 3;
 }
 
+enum ETF2BlogPostType
+{
+	k_ETF2BlogPostType_Blog = 0;
+	k_ETF2BlogPostType_News = 1;
+	k_ETF2BlogPostType_Updates = 2;
+	k_ETF2BlogPostType_PostID = 3;
+	k_ETF2BlogPostType_RSS = 4;
+}
+
 enum ETokenRenewalType
 {
 	k_ETokenRenewalType_None = 0;
@@ -4426,6 +5079,14 @@ enum ETrackedEmail
 {
 	k_ETrackedEmail_WishlistEmail = 1;
 	k_ETrackedEmail_RecommendationEmailCampaign = 2;
+}
+
+enum ETradabilityPreference
+{
+	k_ETradabilityPreference_DontCare = 0;
+	k_ETradabilityPreference_PreferTradable = 1;
+	k_ETradabilityPreference_RequireTradable = 2;
+	k_ETradabilityPreference_PreferNotTradable = 3;
 }
 
 enum ETradeOfferConfirmationMethod
@@ -4577,6 +5238,12 @@ enum EUpdaterType
 	k_EUpdaterType_Dummy = 7;
 }
 
+enum EUserAccountHistoryCategory_Inv
+{
+	k_EUserAccountHistoryCategory_Invalid = 0;
+	k_EUserAccountHistoryCategory_Inventory = 1;
+}
+
 enum EUserBadge
 {
 	k_EUserBadgeInvalid = 0;
@@ -4653,6 +5320,50 @@ enum EUserConfigStoreNamespace
 	k_EUserConfigStoreNamespaceLibrary = 1;
 }
 
+enum EUserLastReadFeed
+{
+	k_EUserLastReadFeed_Invalid = 0;
+	k_EUserLastReadFeed_TradeOffers = 1;
+	k_EUserLastReadFeed_AuctionWins = 2;
+	k_EUserLastReadFeed_SteamAnnouncement = 3;
+}
+
+enum EUserReviewAuditAction
+{
+	k_EUserReviewAuditAction_Invalid = 0;
+	k_EUserReviewAuditAction_Banned = 1;
+	k_EUserReviewAuditAction_Unbanned = 2;
+	k_EUserReviewAuditAction_FlaggedByDeveloper = 3;
+	k_EUserReviewAuditAction_ClearedFlaggedByDeveloper = 4;
+	k_EUserReviewAuditAction_VoteBanUsers = 5;
+	k_EUserReviewAuditAction_ClearVoteBanUsers = 6;
+	k_EUserReviewAuditAction_ClearReports = 7;
+	k_EUserReviewAuditAction_ClearedContentCheck = 8;
+	k_EUserReviewAuditAction_MarkedAsSuspicious = 9;
+}
+
+enum EUserReviewBombPeriodType
+{
+	k_EUserReviewBombPeriodType_OffTopic = 0;
+	k_EUserReviewBombPeriodType_PendingReview = 1;
+	k_EUserReviewBombPeriodType_Testing = 2;
+}
+
+enum EUserReviewFlaggedByDeveloperType
+{
+	k_EUserReviewFlaggedByDeveloperType_None = 0;
+	k_EUserReviewFlaggedByDeveloperType_Abusive = 1;
+	k_EUserReviewFlaggedByDeveloperType_OffTopic = 2;
+	k_EUserReviewFlaggedByDeveloperType_ViolatesCommunityGuidelines = 3;
+}
+
+enum EUserReviewQuality
+{
+	k_EUserReviewQuality_NotDetermined = 0;
+	k_EUserReviewQuality_Poor = 1;
+	k_EUserReviewQuality_Good = 2;
+}
+
 enum EUserReviewScore
 {
 	k_EUserReviewScore_None = 0;
@@ -4672,6 +5383,12 @@ enum EUserReviewScorePreference
 	k_EUserReviewScorePreference_Unset = 0;
 	k_EUserReviewScorePreference_IncludeAll = 1;
 	k_EUserReviewScorePreference_ExcludeBombs = 2;
+}
+
+enum EUserReviewVoteTag
+{
+	k_EUserReviewVoteTag_None = 0;
+	k_EUserReviewVoteTag_Funny = 1;
 }
 
 enum EUserTagReport
@@ -4698,6 +5415,57 @@ enum EViewer
 	k_EViewerLeft = 3;
 }
 
+enum EVirtualItemRewardEven
+{
+	k_EVirtualItemRewardEvent_Invalid = 0;
+	k_EVirtualItemRewardEvent_Winter2013 = 1;
+	k_EVirtualItemRewardEvent_Summer2014 = 2;
+	k_EVirtualItemRewardEvent_Winter2018 = 3;
+	k_EVirtualItemRewardEvent_LunarNewYear2019 = 4;
+	k_EVirtualItemRewardEvent_Summer2019 = 5;
+	k_EVirtualItemRewardEvent_Winter2019 = 6;
+	k_EVirtualItemRewardEvent_Winter2019Free = 7;
+	k_EVirtualItemRewardEvent_LunarNewYear2020 = 8;
+	k_EVirtualItemRewardEvent_Summer2020 = 9;
+	k_EVirtualItemRewardEvent_Winter2020 = 10;
+	k_EVirtualItemRewardEvent_LunarNewYear2021 = 11;
+	k_EVirtualItemRewardEvent_Winter2021 = 12;
+	k_EVirtualItemRewardEven_LunarNewYear2022 = 13;
+	k_EVirtualItemRewardEvent_RacingSale2022 = 14;
+	k_EVirtualItemRewardEvent_Summer2022 = 15;
+	k_EVirtualItemRewardEvent_Sim4F2P = 16;
+	k_EVirtualItemRewardEvent_DyingLight2 = 17;
+	k_EVirtualItemRewardEvent_GameAwardDeckDrop = 18;
+	k_EVirtualItemRewardEvent_Winter2022 = 19;
+	k_EVirtualItemRewardEvent_Lunar2023 = 20;
+	k_EVirtualItemRewardEvent_Spring2023 = 21;
+	k_EVirtualItemRewardEvent_Summer2023 = 22;
+	k_EVirtualItemRewardEvent_Autumn2023 = 23;
+	k_EVirtualItemRewardEvent_Winter2023 = 24;
+	k_EVirtualItemRewardEvent_RedFallLaunch = 25;
+	k_EVirtualItemRewardEvent_PuzzleFest2023 = 26;
+	k_EVirtualItemRewardEvent_SportsFest2023 = 27;
+	k_EVirtualItemRewardEvent_NextFestSummer2023 = 28;
+	k_EVirtualItemRewardEvent_StealthFest2023 = 29;
+	k_EVirtualItemRewardEvent_VisualNovelFest2023 = 30;
+	k_EVirtualItemRewardEvent_StrategyFest2023 = 31;
+	k_EVirtualItemRewardEvent_SchmupFest2023 = 32;
+	k_EVirtualItemRewardEvent_NextFestFall2023 = 33;
+	k_EVirtualItemRewardEvent_Halloween2023 = 34;
+	k_EVirtualItemRewardEvent_TechLandEvent = 35;
+}
+
+enum EVirtualItemRewardRarity
+{
+	k_EVirtualItemRewardRarity_Invalid = 0;
+	k_EVirtualItemRewardRarity_Common = 1;
+	k_EVirtualItemRewardRarity_Uncommon = 2;
+	k_EVirtualItemRewardRarity_Rare = 3;
+	k_EVirtualItemRewardRarity_Extraordinary = 4;
+	k_EVirtualItemRewardRarity_Precious = 5;
+	k_EVirtualItemRewardRarity_Unparalleled = 6;
+}
+
 enum EVirtualMenuType
 {
 	k_EVirtualMenuType_Touch = 0;
@@ -4717,6 +5485,14 @@ enum EVoiceCallState
 	k_EVoiceCallState_RequestedPermission = 7;
 	k_EVoiceCallState_NotifyingVoiceChatOfWebRTCSession = 8;
 	k_EVoiceCallState_Connected = 9;
+}
+
+enum EVoteDefinitionFlag
+{
+	k_EVoteDefinitionFlag_None = 0;
+	k_EVoteDefinitionFlag_OnlyVR = 1;
+	k_EVoteDefinitionFlag_SteamDeck = 2;
+	k_EVoteDefinitionFlag_LaborOfLove = 3;
 }
 
 enum EVRError
@@ -4858,6 +5634,29 @@ enum EWorkshopFileType
 	k_EWorkshopFileTypeGameManagedItem = 15;
 	k_EWorkshopFileTypeFirst = 0;
 	k_EWorkshopFileTypeMax = 16;
+}
+
+enum EYearInReviewAccessSource
+{
+	k_EYearInReviewAccessSource_Unknown = 0;
+	k_EYearInReviewAccessSource_IM = 1;
+	k_EYearInReviewAccessSource_Homepage = 2;
+	k_EYearInReviewAccessSource_Mobile = 3;
+	k_EYearInReviewAccessSource_SocialMedia = 4;
+	k_EYearInReviewAccessSource_Email = 5;
+	k_EYearInReviewAccessSource_Blog = 6;
+	k_EYearInReviewAccessSource_StoreMenu = 7;
+	k_EYearInReviewAccessSource_Press = 8;
+	k_EYearInReviewAccessSource_FriendsReplay = 9;
+}
+
+enum EYearInReviewPrivacyState
+{
+	k_EYearInReviewPrivacyStateInvalid = 0;
+	k_EYearInReviewPrivacyStatePrivate = 1;
+	k_EYearInReviewPrivacyStateFriendsOnly = 2;
+	k_EYearInReviewPrivacyStatePublic = 3;
+	k_EYearInReviewPrivacyStateUnlisted = 4;
 }
 
 enum GAMEPAD
@@ -5158,6 +5957,16 @@ enum nAppMappingPriority
 	k_nAppMappingPriorityUserSpecified = 250;
 }
 
+enum PFFSS
+{
+	k_PFFSS_NotForSale = 0;
+	k_PFFSS_PendingApproval = 1;
+	k_PFFSS_ApprovedForSale = 2;
+	k_PFFSS_RejectedForSale = 3;
+	k_PFFSS_NoLongerForSale = 4;
+	k_PFFSS_TentativeApproval = 5;
+}
+
 enum PFI_MatchingFileType
 {
 	k_PFI_MatchingFileType_Items = 0;
@@ -5210,6 +6019,31 @@ enum PublishedFileQueryType
 	k_PublishedFileQueryType_RankedByLastUpdatedDate = 21;
 }
 
+enum PublishedFileUpdateType
+{
+	k_PublishedFileUpdateType_All = 0;
+	k_PublishedFileUpdateType_BanStatus = 1;
+	k_PublishedFileUpdateType_VotingData = 2;
+	k_PublishedFileUpdateType_Tags = 3;
+	k_PublishedFileUpdateType_KeyValueTags = 4;
+	k_PublishedFileUpdateType_Flags = 5;
+}
+
+enum PublishedFileVisibilityType
+{
+	k_PublishedFileVisibilityType_None = 0;
+	k_PublishedFileVisibilityType_Normal = 1;
+	k_PublishedFileVisibilityType_Contributor = 2;
+}
+
+enum SetVirtualItemRewardDefinition
+{
+	k_SetVirtualItemRewardDefinition_Add = 1;
+	k_SetVirtualItemRewardDefinition_Update = 2;
+	k_SetVirtualItemRewardDefinition_MarkInactive = 3;
+	k_SetVirtualItemRewardDefinition_Remove = 4;
+}
+
 enum Show
 {
 	ShowIncludedItems = 0;
@@ -5221,6 +6055,307 @@ enum SortBy
 {
 	k_SortByPriority = 0;
 	k_SortByStartDate = 1;
+}
+
+enum STEAM_LEARN_SCHEDULED_TYPE
+{
+	STEAM_LEARN_SCHEDULED_TYPE_NONE = 0;
+	STEAM_LEARN_SCHEDULED_TYPE_HOURLY = 1;
+	STEAM_LEARN_SCHEDULED_TYPE_DAILY = 2;
+	STEAM_LEARN_SCHEDULED_TYPE_WEEKLY = 3;
+	STEAM_LEARN_SCHEDULED_TYPE_MONTHLY = 4;
+}
+
+enum STEAMLEARN_AUTOSS_STATUS
+{
+	STEAMLEARN_AUTOSS_STATUS_ERROR = 0;
+	STEAMLEARN_AUTOSS_STATUS_IN_PROGRESS = 1;
+	STEAMLEARN_AUTOSS_STATUS_COMPLETED = 2;
+	STEAMLEARN_AUTOSS_STATUS_CANCELLED = 3;
+	STEAMLEARN_AUTOSS_STATUS_PENDING = 4;
+}
+
+enum STEAMLEARN_CACHE_DATA
+{
+	STEAMLEARN_CACHE_DATA_ERROR = 0;
+	STEAMLEARN_CACHE_DATA_SUCCESS = 1;
+	STEAMLEARN_CACHE_DATA_ERROR_UNKNOWN_DATA_SOURCE = 2;
+	STEAMLEARN_CACHE_DATA_ERROR_UNCACHED_DATA_SOURCE = 3;
+	STEAMLEARN_CACHE_DATA_ERROR_INVALID_KEYS = 4;
+	STEAMLEARN_CACHE_DATA_ERROR_FORBIDDEN = 5;
+	STEAMLEARN_CACHE_DATA_ERROR_INVALID_TIMESTAMP = 6;
+	STEAMLEARN_CACHE_DATA_DISABLED = 7;
+}
+
+enum STEAMLEARN_CREATEPROJECT
+{
+	STEAMLEARN_CREATEPROJECT_ERROR = 0;
+	STEAMLEARN_CREATEPROJECT_SUCCESS = 1;
+	STEAMLEARN_CREATEPROJECT_ERROR_INVALID_PROJECT_NAME = 2;
+	STEAMLEARN_CREATEPROJECT_ERROR_GENERIC = 3;
+}
+
+enum STEAMLEARN_DATATYPE
+{
+	STEAMLEARN_DATATYPE_INVALID = 0;
+	STEAMLEARN_DATATYPE_INT32 = 1;
+	STEAMLEARN_DATATYPE_FLOAT32 = 2;
+	STEAMLEARN_DATATYPE_BOOL = 3;
+	STEAMLEARN_DATATYPE_STRING = 4;
+	STEAMLEARN_DATATYPE_OBJECT = 5;
+}
+
+enum STEAMLEARN_DENSE_ACTIVATION
+{
+	STEAMLEARN_DENSE_ACTIVATION_INVALID = 0;
+	STEAMLEARN_DENSE_ACTIVATION_RELU = 1;
+	STEAMLEARN_DENSE_ACTIVATION_ELU = 2;
+	STEAMLEARN_DENSE_ACTIVATION_TANH = 3;
+}
+
+enum STEAMLEARN_EDITPROJECT
+{
+	STEAMLEARN_EDITPROJECT_ERROR = 0;
+	STEAMLEARN_EDITPROJECT_SUCCESS = 1;
+	STEAMLEARN_EDITPROJECT_ERROR_INVALID_PROJECT_ID = 2;
+	STEAMLEARN_EDITPROJECT_ERROR_INVALID_VERSION = 3;
+	STEAMLEARN_EDITPROJECT_ERROR_GENERIC = 4;
+}
+
+enum STEAMLEARN_ELEMENT_PROCESS
+{
+	STEAMLEARN_ELEMENT_PROCESS_NONE = 0;
+	STEAMLEARN_ELEMENT_PROCESS_COMPACT_TABLE = 1;
+	STEAMLEARN_ELEMENT_PROCESS_NORMALIZE_FULL = 2;
+	STEAMLEARN_ELEMENT_PROCESS_NORMALIZE_RANGE = 3;
+	STEAMLEARN_ELEMENT_PROCESS_NORMALIZE_STDDEV = 4;
+	STEAMLEARN_ELEMENT_PROCESS_NORMALIZE_LOG_RANGE = 5;
+}
+
+enum STEAMLEARN_FETCH_STATUS
+{
+	STEAMLEARN_FETCH_STATUS_UNKNOWN = 0;
+	STEAMLEARN_FETCH_STATUS_UNSTARTED = 1;
+	STEAMLEARN_FETCH_STATUS_IN_PROGRESS_DATA = 2;
+	STEAMLEARN_FETCH_STATUS_COMPLETE = 3;
+	STEAMLEARN_FETCH_STATUS_ERROR = 4;
+	STEAMLEARN_FETCH_STATUS_IN_PROGRESS_METADATA = 5;
+	STEAMLEARN_FETCH_STATUS_IN_PROGRESS_CLEANUP = 6;
+	STEAMLEARN_FETCH_STATUS_CLEANED_UP = 7;
+	STEAMLEARN_FETCH_STATUS_CANCELED = 8;
+}
+
+enum STEAMLEARN_FETCH_STATUS_RESULT
+{
+	STEAMLEARN_FETCH_STATUS_RESULT_ERROR = 0;
+	STEAMLEARN_FETCH_STATUS_RESULT_SUCCESS = 1;
+}
+
+enum STEAMLEARN_GET_HMAC_KEYS
+{
+	STEAMLEARN_GET_HMAC_KEYS_ERROR = 0;
+	STEAMLEARN_GET_HMAC_KEYS_SUCCESS = 1;
+}
+
+enum STEAMLEARN_GET_LOG_EVENTS_RESULT
+{
+	STEAMLEARN_GET_LOG_EVENTS_RESULT_ERROR = 0;
+	STEAMLEARN_GET_LOG_EVENTS_RESULT_SUCCESS = 1;
+}
+
+enum STEAMLEARN_INFERENCE
+{
+	STEAMLEARN_INFERENCE_ERROR = 0;
+	STEAMLEARN_INFERENCE_SUCCESS = 1;
+	STEAMLEARN_INFERENCE_ERROR_INVALID_PROJECT_ID = 2;
+	STEAMLEARN_INFERENCE_ERROR_MISSING_CACHED_SCHEMA_DATA = 3;
+	STEAMLEARN_INFERENCE_ERROR_NO_PUBLISHED_CONFIG = 4;
+	STEAMLEARN_INFERENCE_ERROR_FORBIDDEN = 5;
+	STEAMLEARN_INFERENCE_ERROR_INVALID_TIMESTAMP = 6;
+	STEAMLEARN_INFERENCE_ERROR_INVALID_PUBLISHED_VERSION = 7;
+	STEAMLEARN_INFERENCE_ERROR_NO_FETCH_ID_FOUND = 8;
+	STEAMLEARN_INFERENCE_ERROR_TOO_BUSY = 9;
+	STEAMLEARN_INFERENCE_ERROR_UNSUPPLIED_DATA_FAIL = 10;
+	STEAMLEARN_INFERENCE_ERROR_UNSUPPLIED_DATA_NO_KEYS = 11;
+}
+
+enum STEAMLEARN_INFERENCE_METADATA
+{
+	STEAMLEARN_INFERENCE_METADATA_ERROR = 0;
+	STEAMLEARN_INFERENCE_METADATA_SUCCESS = 1;
+	STEAMLEARN_INFERENCE_METADATA_ERROR_INVALID_PROJECT_ID = 2;
+	STEAMLEARN_INFERENCE_METADATA_ERROR_NO_PUBLISHED_CONFIG = 3;
+	STEAMLEARN_INFERENCE_METADATA_ERROR_FORBIDDEN = 4;
+	STEAMLEARN_INFERENCE_METADATA_ERROR_INVALID_TIMESTAMP = 5;
+	STEAMLEARN_INFERENCE_METADATA_ERROR_INVALID_PUBLISHED_VERSION = 6;
+	STEAMLEARN_INFERENCE_METADATA_ERROR_NO_FETCH_ID_FOUND = 7;
+}
+
+enum STEAMLEARN_LOG_EVENT
+{
+	STEAMLEARN_LOG_EVENT_TRAIN_STARTED = 1;
+	STEAMLEARN_LOG_EVENT_TRAIN_ENDED = 2;
+	STEAMLEARN_LOG_EVENT_TRAIN_SET_LIVE = 3;
+	STEAMLEARN_LOG_EVENT_SCHEDULED_TRAIN = 4;
+}
+
+enum STEAMLEARN_NODE_EXTRACT_TYPE
+{
+	STEAMLEARN_NODE_EXTRACT_TYPE_INVALID = 0;
+	STEAMLEARN_NODE_EXTRACT_TYPE_RANDOM = 1;
+	STEAMLEARN_NODE_EXTRACT_TYPE_APPID = 2;
+	STEAMLEARN_NODE_EXTRACT_TYPE_APPID_PUBLISHER = 3;
+	STEAMLEARN_NODE_EXTRACT_TYPE_APPID_FEATURED = 4;
+	STEAMLEARN_NODE_EXTRACT_TYPE_APPID_THEME = 5;
+	STEAMLEARN_NODE_EXTRACT_TYPE_ALL = 6;
+}
+
+enum STEAMLEARN_NODE_EXTRACT_WEIGHT_TYPE
+{
+	STEAMLEARN_NODE_EXTRACT_WEIGHT_TYPE_INVALID = 0;
+	STEAMLEARN_NODE_EXTRACT_WEIGHT_TYPE_APPID_RECENCY = 2;
+	STEAMLEARN_NODE_EXTRACT_WEIGHT_TYPE_INPUT = 3;
+}
+
+enum STEAMLEARN_NODE_TYPE
+{
+	STEAMLEARN_NODE_TYPE_INVALID = 0;
+	STEAMLEARN_NODE_TYPE_INPUT = 1;
+	STEAMLEARN_NODE_TYPE_DENSE = 2;
+	STEAMLEARN_NODE_TYPE_DENSE_STACK = 3;
+	STEAMLEARN_NODE_TYPE_DROPOUT = 4;
+	STEAMLEARN_NODE_TYPE_EMBEDDING = 5;
+	STEAMLEARN_NODE_TYPE_TRAIN = 6;
+	STEAMLEARN_NODE_TYPE_CONDITIONAL_EXTRACT = 7;
+	STEAMLEARN_NODE_TYPE_CONCATENATE = 8;
+	STEAMLEARN_NODE_TYPE_SHUFFLE = 9;
+	STEAMLEARN_NODE_TYPE_SYNCED_SHUFFLE = 10;
+	STEAMLEARN_NODE_TYPE_ONEHOT = 11;
+	STEAMLEARN_NODE_TYPE_EXPLODE = 12;
+	STEAMLEARN_NODE_TYPE_CONDITIONAL_SWAP = 13;
+	STEAMLEARN_NODE_TYPE_KMEANS = 14;
+	STEAMLEARN_NODE_TYPE_COMBINE = 15;
+}
+
+enum STEAMLEARN_PUBLISHPROJECT
+{
+	STEAMLEARN_PUBLISHPROJECT_ERROR = 0;
+	STEAMLEARN_PUBLISHPROJECT_SUCCESS = 1;
+	STEAMLEARN_PUBLISHPROJECT_ERROR_INVALID_PROJECT_ID = 2;
+	STEAMLEARN_PUBLISHPROJECT_ERROR_GENERIC = 3;
+}
+
+enum STEAMLEARN_REGISTER_DATA_SOURCE_RESULT
+{
+	STEAMLEARN_REGISTER_DATA_SOURCE_RESULT_ERROR = 0;
+	STEAMLEARN_REGISTER_DATA_SOURCE_RESULT_SUCCESS_CREATED = 1;
+	STEAMLEARN_REGISTER_DATA_SOURCE_RESULT_SUCCESS_FOUND = 2;
+	STEAMLEARN_REGISTER_DATA_SOURCE_RESULT_ERROR_GENERIC = 3;
+	STEAMLEARN_REGISTER_DATA_SOURCE_RESULT_ERROR_INVALID_NAME = 4;
+	STEAMLEARN_REGISTER_DATA_SOURCE_RESULT_ERROR_INVALID_VERSION = 5;
+	STEAMLEARN_REGISTER_DATA_SOURCE_RESULT_ERROR_DATA_CHANGED = 6;
+	STEAMLEARN_REGISTER_DATA_SOURCE_RESULT_ERROR_DATA_INVALID = 7;
+	STEAMLEARN_REGISTER_DATA_SOURCE_RESULT_ERROR_FORBIDDEN = 8;
+	STEAMLEARN_REGISTER_DATA_SOURCE_RESULT_ERROR_INVALID_TIMESTAMP = 9;
+	STEAMLEARN_REGISTER_DATA_SOURCE_RESULT_DISABLED = 10;
+}
+
+enum STEAMLEARN_SET_TRAIN_LIVE_RESULT
+{
+	STEAMLEARN_SET_TRAIN_LIVE_RESULT_ERROR = 0;
+	STEAMLEARN_SET_TRAIN_LIVE_RESULT_SUCCESS = 1;
+	STEAMLEARN_SET_TRAIN_LIVE_RESULT_ERROR_INVALID_PUBLISHED_VERSION = 2;
+	STEAMLEARN_SET_TRAIN_LIVE_RESULT_ERROR_INVALID_TRAIN_ID = 3;
+}
+
+enum STEAMLEARN_SNAPSHOT
+{
+	STEAMLEARN_SNAPSHOT_MANUAL = 0;
+	STEAMLEARN_SNAPSHOT_ACCOUNT_IDS = 1;
+	STEAMLEARN_SNAPSHOT_APP_IDS = 2;
+	STEAMLEARN_SNAPSHOT_OTHER_PROJECT = 3;
+}
+
+enum STEAMLEARN_SNAPSHOT_PROJECT
+{
+	STEAMLEARN_SNAPSHOT_PROJECT_ERROR = 0;
+	STEAMLEARN_SNAPSHOT_PROJECT_SUCCESS_STORED = 1;
+	STEAMLEARN_SNAPSHOT_PROJECT_SUCCESS_QUEUED = 2;
+	STEAMLEARN_SNAPSHOT_PROJECT_ERROR_INVALID_PROJECT_ID = 3;
+	STEAMLEARN_SNAPSHOT_PROJECT_ERROR_UNKNOWN_DATA_SOURCE = 4;
+	STEAMLEARN_SNAPSHOT_PROJECT_ERROR_INVALID_DATA_SOURCE_KEY = 5;
+	STEAMLEARN_SNAPSHOT_PROJECT_ERROR_MISSING_CACHE_DURATION = 6;
+	STEAMLEARN_SNAPSHOT_PROJECT_ERROR_NO_PUBLISHED_CONFIG = 7;
+	STEAMLEARN_SNAPSHOT_PROJECT_ERROR_FORBIDDEN = 8;
+	STEAMLEARN_SNAPSHOT_PROJECT_ERROR_INVALID_TIMESTAMP = 9;
+	STEAMLEARN_SNAPSHOT_PROJECT_SUCCESS_EXCLUDED = 10;
+	STEAMLEARN_SNAPSHOT_PROJECT_DISABLED = 11;
+	STEAMLEARN_SNAPSHOT_PROJECT_ERROR_INVALID_PUBLISHED_VERSION = 12;
+	STEAMLEARN_SNAPSHOT_PROJECT_ERROR_FAILED_INTERNAL_DATA = 13;
+}
+
+enum STEAMLEARN_STOREREC_RESULT
+{
+	STEAMLEARN_STOREREC_RESULT_ERROR = 0;
+	STEAMLEARN_STOREREC_RESULT_SUCCESS = 1;
+	STEAMLEARN_STOREREC_RESULT_ERROR_METADATA = 2;
+	STEAMLEARN_STOREREC_RESULT_SKIPPED = 3;
+}
+
+enum STEAMLEARN_TRAIN
+{
+	STEAMLEARN_TRAIN_ERROR = 0;
+	STEAMLEARN_TRAIN_SUCCESS = 1;
+}
+
+enum STEAMLEARN_TRAIN_ACTIVATION
+{
+	STEAMLEARN_TRAIN_ACTIVATION_INVALID = 0;
+	STEAMLEARN_TRAIN_ACTIVATION_SOFTMAX = 1;
+	STEAMLEARN_TRAIN_ACTIVATION_SIGMOID = 2;
+}
+
+enum STEAMLEARN_TRAIN_LOSS
+{
+	STEAMLEARN_TRAIN_LOSS_INVALID = 0;
+	STEAMLEARN_TRAIN_LOSS_BINARY_CROSSENTROPY = 1;
+	STEAMLEARN_TRAIN_LOSS_CATEGORICAL_CROSSENTROPY = 2;
+	STEAMLEARN_TRAIN_LOSS_SPARSE_CATEGORICAL_CROSSENTROPY = 3;
+}
+
+enum STEAMLEARN_TRAIN_OPTIMIZER
+{
+	STEAMLEARN_TRAIN_OPTIMIZER_INVALID = 0;
+	STEAMLEARN_TRAIN_OPTIMIZER_SGD = 1;
+	STEAMLEARN_TRAIN_OPTIMIZER_ADAM = 2;
+	STEAMLEARN_TRAIN_OPTIMIZER_ADADELTA = 3;
+	STEAMLEARN_TRAIN_OPTIMIZER_ADAGRAD = 4;
+}
+
+enum STEAMLEARN_TRAIN_PHASE
+{
+	STEAMLEARN_TRAIN_PHASE_TRAIN = 0;
+	STEAMLEARN_TRAIN_PHASE_VALIDATE = 1;
+	STEAMLEARN_TRAIN_PHASE_TEST = 2;
+}
+
+enum STEAMLEARN_TRAIN_STATUS
+{
+	STEAMLEARN_TRAIN_STATUS_UNKNOWN = 0;
+	STEAMLEARN_TRAIN_STATUS_UNSTARTED = 1;
+	STEAMLEARN_TRAIN_STATUS_IN_PROGRESS = 2;
+	STEAMLEARN_TRAIN_STATUS_COMPLETE = 3;
+	STEAMLEARN_TRAIN_STATUS_ERROR = 4;
+	STEAMLEARN_TRAIN_STATUS_MANUAL_STOPPED_EARLY = 5;
+	STEAMLEARN_TRAIN_STATUS_WAITING_ON_AUTO_SNAPSHOT = 6;
+}
+
+enum STEAMLEARN_TRAIN_STATUS_RESULT
+{
+	STEAMLEARN_TRAIN_STATUS_RESULT_ERROR = 0;
+	STEAMLEARN_TRAIN_STATUS_RESULT_SUCCESS = 1;
+	STEAMLEARN_TRAIN_STATUS_RESULT_ERROR_INVALID_TRAIN_ID = 2;
+	STEAMLEARN_TRAIN_STATUS_RESULT_ERROR_INVALID_FETCH_ID = 3;
 }
 
 enum Store
@@ -5311,6 +6446,16 @@ enum TOUCH_QUADRANT
 	TOUCH_QUADRANT_BOTTOM = 2;
 	TOUCH_QUADRANT_LEFT = 4;
 	TOUCH_QUADRANT_RIGHT = 8;
+}
+
+enum UserActionEventType
+{
+	k_UserActionEventType_Invalid = 0;
+	k_UserActionEventType_GiveawayRegistration = 1;
+	k_UserActionEventType_PartnerEventPoll = 2;
+	k_UserActionEventType_UserConsent = 3;
+	k_UserActionEventType_UserFileUpload = 4;
+	k_UserActionEventType_MAX = 5;
 }
 
 enum VRInitError
