@@ -1,4 +1,4 @@
-var CLSTAMP = "8436916";
+var CLSTAMP = "8440880";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -1630,9 +1630,9 @@ var CLSTAMP = "8436916";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Oct 23 2023 : 12:48:28",
-                BUILD_TIME_UTC: "Oct 23 2023 : 19:48:28",
-                BUILD_RTIME_UTC: 1698090508,
+                BUILD_TIME_LOCAL: "Oct 24 2023 : 14:47:35",
+                BUILD_TIME_UTC: "Oct 24 2023 : 21:47:35",
+                BUILD_RTIME_UTC: 1698184055,
               }.MOBILE_BUILD)
             ) {
               window.addEventListener("beforeunload", (e) => {
@@ -43108,6 +43108,7 @@ var CLSTAMP = "8436916";
             useModalState: () => r.X9,
             useMouseDownOrTouchStartRef: () => r.yx,
             useMultipleRefs: () => i.BE,
+            useMutationObserver: () => r.Iy,
             useOnAncestorScroll: () => r.I5,
             usePreventVerticalShrinking: () => m,
             usePreviousValue: () => r.zP,
@@ -43239,7 +43240,8 @@ var CLSTAMP = "8436916";
           B: () => V,
           B8: () => a,
           Dc: () => R,
-          I5: () => G,
+          I5: () => F,
+          Iy: () => A,
           J7: () => h,
           JI: () => E,
           KM: () => g,
@@ -43253,7 +43255,7 @@ var CLSTAMP = "8436916";
           Sd: () => p,
           U4: () => x,
           X9: () => D,
-          Yj: () => A,
+          Yj: () => G,
           Yz: () => u,
           e1: () => b,
           eF: () => w,
@@ -43611,64 +43613,104 @@ var CLSTAMP = "8436916";
             l = [w("mouseenter", n), w("mouseleave", o)];
           return { bHovering: e, ref: (0, i.BE)(...l) };
         }
-        function A() {
-          const e = r.useRef(),
-            t = r.useRef(!0),
-            n = r.useRef(!0),
-            o = m(),
-            l = r.useCallback(() => {
-              var r, i, l, a, s, c;
-              const C =
+        function A(e, t) {
+          const n = r.useRef(),
+            i = r.useCallback(
+              (r) => {
+                if (
+                  (n.current && (n.current.disconnect(), (n.current = void 0)),
+                  r)
+                ) {
+                  const i = new MutationObserver(e);
+                  i.observe(r, t), (n.current = i);
+                }
+              },
+              [e],
+            );
+          return (
+            r.useEffect(
+              () => () => {
+                var e;
+                return null === (e = n.current) || void 0 === e
+                  ? void 0
+                  : e.disconnect();
+              },
+              [],
+            ),
+            i
+          );
+        }
+        function G(e = "vertical") {
+          const t = "vertical" == e,
+            n = r.useRef(),
+            o = r.useRef(!0),
+            l = r.useRef(!0),
+            a = m(),
+            s = r.useCallback(() => {
+              var e, r, i, s, c, C, u, h, d;
+              const m =
                   null !==
-                    (i =
-                      null === (r = e.current) || void 0 === r
+                    (i = t
+                      ? null === (e = n.current) || void 0 === e
                         ? void 0
-                        : r.scrollTop) && void 0 !== i
+                        : e.scrollTop
+                      : null === (r = n.current) || void 0 === r
+                      ? void 0
+                      : r.scrollLeft) && void 0 !== i
                     ? i
                     : 0,
-                u = 0 == C,
-                h =
+                p = 0 == m,
+                g =
                   (null !==
-                    (a =
-                      null === (l = e.current) || void 0 === l
+                    (C = t
+                      ? null === (s = n.current) || void 0 === s
                         ? void 0
-                        : l.scrollHeight) && void 0 !== a
-                    ? a
+                        : s.scrollHeight
+                      : null === (c = n.current) || void 0 === c
+                      ? void 0
+                      : c.scrollWidth) && void 0 !== C
+                    ? C
                     : 0) -
-                    C ==
+                    m ==
                   (null !==
-                    (c =
-                      null === (s = e.current) || void 0 === s
+                    (d = t
+                      ? null === (u = n.current) || void 0 === u
                         ? void 0
-                        : s.clientHeight) && void 0 !== c
-                    ? c
+                        : u.clientHeight
+                      : null === (h = n.current) || void 0 === h
+                      ? void 0
+                      : h.clientWidth) && void 0 !== d
+                    ? d
                     : 0);
-              (t.current == u && n.current == h) ||
-                ((t.current = u), (n.current = h), o());
-            }, [o]),
-            a = r.useCallback(
-              (t) => {
-                (e.current = t), l();
+              (o.current == p && l.current == g) ||
+                ((o.current = p), (l.current = g), a());
+            }, [a]),
+            c = r.useCallback(
+              (e) => {
+                (n.current = e), s();
               },
-              [l],
+              [s],
             ),
-            s = w(
-              "scroll",
-              r.useCallback(
-                (e) => {
-                  l();
-                },
-                [l],
-              ),
+            C = r.useCallback(
+              (e) => {
+                s();
+              },
+              [s],
+            );
+          r.useLayoutEffect(s, [s]);
+          const u = A(
+              r.useCallback(() => s(), [s]),
+              { subtree: !0, childList: !0 },
             ),
-            c = (0, i.BE)(s, a);
+            h = w("scroll", C),
+            d = (0, i.BE)(h, c, u);
           return {
-            bScrolledToBeginning: t.current,
-            bScrolledToEnd: n.current,
-            ref: c,
+            bScrolledToBeginning: o.current,
+            bScrolledToEnd: l.current,
+            ref: d,
           };
         }
-        function G(e) {
+        function F(e) {
           const t = r.useRef([]),
             n = r.useCallback(() => {
               for (const e of t.current) e();
@@ -44026,7 +44068,7 @@ var CLSTAMP = "8436916";
           return s.has(e) || s.set(e, new Set()), s.get(e);
         }
         function C(e) {
-          const t = (0, a.useConfigContext)().IN_VR,
+          const t = (0, a.useConfigContext)({ bSuppressAssert: !0 }).IN_VR,
             n = r.useMemo(() => new Map(), []),
             [i, s] = r.useState(!1),
             C = r.useRef(void 0),
@@ -44135,7 +44177,7 @@ var CLSTAMP = "8436916";
             : void 0;
         }
         function u(e) {
-          const t = (0, a.useConfigContext)().IN_VR,
+          const t = (0, a.useConfigContext)({ bSuppressAssert: !0 }).IN_VR,
             n = e.onClick,
             o = r.useCallback(
               (e) => {
@@ -44496,9 +44538,9 @@ var CLSTAMP = "8436916";
                 ? !{
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Oct 23 2023 : 12:48:28",
-                    BUILD_TIME_UTC: "Oct 23 2023 : 19:48:28",
-                    BUILD_RTIME_UTC: 1698090508,
+                    BUILD_TIME_LOCAL: "Oct 24 2023 : 14:47:35",
+                    BUILD_TIME_UTC: "Oct 24 2023 : 21:47:35",
+                    BUILD_RTIME_UTC: 1698184055,
                   }.MOBILE_BUILD && document.getElementById(t)
                 : t),
             r)
@@ -45053,7 +45095,7 @@ var CLSTAMP = "8436916";
       {
         27: "22b35055a4c58d3e857d",
         33: "528b8ab6922e54215c14",
-        58: "6dfd6d036acd6821872f",
+        58: "3403ad0c4958038cb3b0",
         131: "b7f7b2dfc41a9c063671",
         146: "a062923d065b61e9a299",
         200: "0273f88a1d91abf0685e",
@@ -45154,7 +45196,7 @@ var CLSTAMP = "8436916";
         7781: "d886d7151aaf757c198c",
         7832: "9d6d3d860dea2a65797b",
         7850: "1f6f9c8e464ef14e9712",
-        7962: "ebc27f15b6fcaf7aed3c",
+        7962: "2df23fadce39b369d7b8",
         8011: "cd9fdcd3471ebd4fb569",
         8052: "599e7acd9c0992e33ed1",
         8085: "d90c1113606b7bae5521",

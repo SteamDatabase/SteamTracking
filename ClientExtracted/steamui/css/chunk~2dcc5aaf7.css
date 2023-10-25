@@ -25410,7 +25410,7 @@ img.broadcastplayer_BroadcastPlaceholderImg_3Hcqn {
   background-color: #23262e;
   transition: background-color 150ms ease-in;
 }
-.searchbar_SearchContainer_161Tj:hover {
+.searchbar_SearchContainer_161Tj:not(.searchbar_VR_35hhe):hover {
   background-color: rgba(255, 255, 255, 0.3);
   transition: background-color 150ms ease-in;
 }
@@ -26600,6 +26600,7 @@ img.broadcastplayer_BroadcastPlaceholderImg_3Hcqn {
   display: flex;
   flex-grow: 1;
   flex-basis: 0;
+  flex-shrink: 0;
   align-items: center;
 }
 .vrdashboard_SideSection_nLkGj.vrdashboard_Right_1j_te {
@@ -26776,11 +26777,41 @@ img.broadcastplayer_BroadcastPlaceholderImg_3Hcqn {
 }
 .vrdashboard_DockItems_1OTX3 {
   display: flex;
-  flex-shrink: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  position: relative;
+  -webkit-mask: linear-gradient(
+    90deg,
+    transparent,
+    white 130px calc(100% - 130px),
+    transparent
+  );
+  -webkit-mask-size: 100% 100%;
+  transition:
+    -webkit-mask-size 0.2s ease-out,
+    -webkit-mask-position-x 0.2s ease-out;
+  scroll-padding: 0 130px;
+}
+.vrdashboard_DockItems_1OTX3.vrdashboard_FadeLeft_2a086:not(
+    .vrdashboard_FadeRight_30ps9
+  ),
+.vrdashboard_DockItems_1OTX3.vrdashboard_FadeRight_30ps9:not(
+    .vrdashboard_FadeLeft_2a086
+  ) {
+  -webkit-mask-size: calc(100% + 130px) 100%;
+}
+.vrdashboard_DockItems_1OTX3:not(.vrdashboard_FadeLeft_2a086):not(
+    .vrdashboard_FadeRight_30ps9
+  ) {
+  -webkit-mask-size: calc(100% + (130px * 2)) 100%;
+}
+.vrdashboard_DockItems_1OTX3:not(.vrdashboard_FadeLeft_2a086) {
+  -webkit-mask-position-x: -130px;
 }
 .vrdashboard_DockItem_3ntvH {
   width: 80px;
   height: 80px;
+  min-width: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
