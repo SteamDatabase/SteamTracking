@@ -337,6 +337,7 @@
  T SDL_ClearComposition
  T SDL_ClearError
  T SDL_ClearHints
+ T SDL_ClearProperty
  T SDL_CloseAudioDevice
  T SDL_CloseGamepad
  T SDL_CloseJoystick
@@ -355,6 +356,7 @@
  T SDL_CreatePalette
  T SDL_CreatePixelFormat
  T SDL_CreatePopupWindow
+ T SDL_CreateProperties
  T SDL_CreateRW
  T SDL_CreateRWLock
  T SDL_CreateRenderer
@@ -385,6 +387,7 @@
  T SDL_DestroyMutex
  T SDL_DestroyPalette
  T SDL_DestroyPixelFormat
+ T SDL_DestroyProperties
  T SDL_DestroyRW
  T SDL_DestroyRWLock
  T SDL_DestroyRenderer
@@ -452,6 +455,7 @@
  T SDL_GetAudioStreamDevice
  T SDL_GetAudioStreamFormat
  T SDL_GetAudioStreamFrequencyRatio
+ T SDL_GetAudioStreamProperties
  T SDL_GetAudioStreamQueued
  T SDL_GetBasePath
  T SDL_GetCPUCacheLineSize
@@ -510,6 +514,7 @@
  T SDL_GetGamepadPowerLevel
  T SDL_GetGamepadProduct
  T SDL_GetGamepadProductVersion
+ T SDL_GetGamepadProperties
  T SDL_GetGamepadSensorData
  T SDL_GetGamepadSensorDataRate
  T SDL_GetGamepadSerial
@@ -551,6 +556,7 @@
  T SDL_GetJoystickPowerLevel
  T SDL_GetJoystickProduct
  T SDL_GetJoystickProductVersion
+ T SDL_GetJoystickProperties
  T SDL_GetJoystickSerial
  T SDL_GetJoystickType
  T SDL_GetJoystickVendor
@@ -589,8 +595,10 @@
  T SDL_GetPreferredLocales
  T SDL_GetPrimaryDisplay
  T SDL_GetPrimarySelectionText
+ T SDL_GetProperty
  T SDL_GetRGB
  T SDL_GetRGBA
+ T SDL_GetRWProperties
  T SDL_GetRealGamepadInstanceType
  T SDL_GetRealGamepadType
  T SDL_GetRectAndLineIntersection
@@ -618,6 +626,7 @@
  T SDL_GetRenderWindow
  T SDL_GetRenderer
  T SDL_GetRendererInfo
+ T SDL_GetRendererProperties
  T SDL_GetRevision
  T SDL_GetScancodeFromKey
  T SDL_GetScancodeFromName
@@ -631,6 +640,7 @@
  T SDL_GetSensorInstanceType
  T SDL_GetSensorName
  T SDL_GetSensorNonPortableType
+ T SDL_GetSensorProperties
  T SDL_GetSensorType
  T SDL_GetSensors
  T SDL_GetShapedWindowMode
@@ -640,6 +650,7 @@
  T SDL_GetSurfaceClipRect
  T SDL_GetSurfaceColorKey
  T SDL_GetSurfaceColorMod
+ T SDL_GetSurfaceProperties
  T SDL_GetSystemRAM
  T SDL_GetSystemTheme
  T SDL_GetTLS
@@ -647,8 +658,8 @@
  T SDL_GetTextureBlendMode
  T SDL_GetTextureColorMod
  T SDL_GetTextureDXGIResource
+ T SDL_GetTextureProperties
  T SDL_GetTextureScaleMode
- T SDL_GetTextureUserData
  T SDL_GetThreadID
  T SDL_GetThreadName
  T SDL_GetTicks
@@ -661,7 +672,6 @@
  T SDL_GetVersion
  T SDL_GetVideoDriver
  T SDL_GetWindowBordersSize
- T SDL_GetWindowData
  T SDL_GetWindowDisplayScale
  T SDL_GetWindowFlags
  T SDL_GetWindowFromID
@@ -679,6 +689,7 @@
  T SDL_GetWindowPixelDensity
  T SDL_GetWindowPixelFormat
  T SDL_GetWindowPosition
+ T SDL_GetWindowProperties
  T SDL_GetWindowSize
  T SDL_GetWindowSizeInPixels
  T SDL_GetWindowSurface
@@ -761,6 +772,7 @@
  T SDL_LockAudioStream
  T SDL_LockJoysticks
  T SDL_LockMutex
+ T SDL_LockProperties
  T SDL_LockRWLockForReading
  T SDL_LockRWLockForWriting
  T SDL_LockSurface
@@ -911,6 +923,7 @@
  T SDL_SetPaletteColors
  T SDL_SetPixelFormatPalette
  T SDL_SetPrimarySelectionText
+ T SDL_SetProperty
  T SDL_SetRelativeMouseMode
  T SDL_SetRenderClipRect
  T SDL_SetRenderDrawBlendMode
@@ -933,11 +946,9 @@
  T SDL_SetTextureBlendMode
  T SDL_SetTextureColorMod
  T SDL_SetTextureScaleMode
- T SDL_SetTextureUserData
  T SDL_SetThreadPriority
  T SDL_SetWindowAlwaysOnTop
  T SDL_SetWindowBordered
- T SDL_SetWindowData
  T SDL_SetWindowFocusable
  T SDL_SetWindowFullscreen
  T SDL_SetWindowFullscreenMode
@@ -983,6 +994,7 @@
  T SDL_UnlockAudioStream
  T SDL_UnlockJoysticks
  T SDL_UnlockMutex
+ T SDL_UnlockProperties
  T SDL_UnlockRWLock
  T SDL_UnlockSurface
  T SDL_UnlockTexture
