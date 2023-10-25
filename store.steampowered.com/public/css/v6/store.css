@@ -6426,6 +6426,10 @@ background: -webkit-linear-gradient( 297deg, rgba( 255, 255, 255, 0.2) 5%,rgba( 
 	transition: left 0.1s, top 0.1s, height 0.1s, width 0.1s;
 }
 
+.home_page_body_ctn .CurrencyChangeBanner {
+    display: none;
+}
+
 .CurrencyChangeBanner {
     height: 30px;
     width: 100%;
