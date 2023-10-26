@@ -21050,7 +21050,7 @@
                 p.createElement(r.J, {
                   name: "#EventCategory_SteamAwardsNomination",
                   description: "#EventCategory_SteamAwardsNomination_Desc",
-                  icon: "trophy",
+                  icon: "trophy_2023",
                   onCategoryChosen: e.fnOnCategoryChosen,
                   type: g.Ep.k_ENewsEvent,
                   tags: [
@@ -21268,7 +21268,7 @@
             p.createElement(r.J, {
               name: "#EventCategory_SteamAwardsVoteRequest",
               description: "#EventCategory_SteamAwardsVoteRequest_Desc",
-              icon: "trophy",
+              icon: "trophy_2023",
               onCategoryChosen: e.fnOnCategoryChosen,
               steam_award_category_voteids: s,
               type: g.Ep.k_ENewsEvent,
