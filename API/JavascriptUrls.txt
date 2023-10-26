@@ -880,9 +880,9 @@ ${MEDIA_CDN_URL}steam/apps/${}/${}
 ${MEDIA_CDN_URL}steam/apps/${}/header.jpg
 ${MEDIA_CDN_URL}steam/marketing/${}/${path}${}
 ${MEDIA_CDN_URL}store/promo/autumn2020/event_nomination_banner_2020.png?v=2
-${MEDIA_CDN_URL}store/promo/autumn2022/trophy.png?v=2
 ${MEDIA_CDN_URL}store/promo/lunar2020/red_envelope_2020.mp4${bIsFirstOpen ? "" : "#t=5,6"}
 ${MEDIA_CDN_URL}store/promo/lunar2020/red_envelope_2020.webm${bIsFirstOpen ? "" : "#t=5,6"}
+${MEDIA_CDN_URL}store/promo/steamawards2023/trophy_2023.png?v=1
 ${MEDIA_CDN_URL}store/promo/summer2021/Steam_Summer_Sale_2021_Wallpapers.zip
 ${MEDIA_CDN_URL}store/promo/summer2022/card_stack.png?v-1
 ${PARTNER_BASE_URL}

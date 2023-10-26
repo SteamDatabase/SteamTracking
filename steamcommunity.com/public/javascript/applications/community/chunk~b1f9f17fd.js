@@ -21027,7 +21027,7 @@
         },
         O = (e) => {
           const t = o.wk.GetEditModel();
-          let a = _()("2023-11-01T10:00:00-08:00").unix(),
+          let a = _()("2023-10-26T10:00:00-08:00").unix(),
             n = _()("2023-11-21T10:00:00-08:00").unix();
           "dev" == x.De.WEB_UNIVERSE &&
             (n = _()("2023-10-01T10:00:00-08:00").unix());
@@ -21043,7 +21043,8 @@
           const l = f.JW.GetTimeNowWithOverride();
           return !t || !t.BIsAppReleased() || l < a || l > i
             ? null
-            : p.createElement(
+            : (t.SetLibrarySpotlight(!0),
+              p.createElement(
                 "div",
                 { className: B.EventCategory_SteamAwardsNomination },
                 p.createElement(r.J, {
@@ -21060,7 +21061,7 @@
                   latestAllowedEndTime: i,
                   actionEndTime: i,
                 }),
-              );
+              ));
         };
       function P() {
         var e, t;
@@ -21187,7 +21188,7 @@
                   className: B.event_nomination_trophy,
                   src:
                     x.De.MEDIA_CDN_URL +
-                    "store/promo/autumn2022/trophy.png?v=2",
+                    "store/promo/steamawards2023/trophy_2023.png?v=1",
                 }),
                 p.createElement(
                   "div",
@@ -21255,6 +21256,7 @@
           l = f.JW.GetTimeNowWithOverride();
         if (!t || !t.BIsAppReleased() || l > i) return null;
         if (!o.wk.GetSteamAwardVoteDefinitionForApp(a)) return null;
+        t.SetLibrarySpotlight(!0);
         let s = [];
         return (
           o.wk.GetSteamAwardVoteDefinitionForApp(a).forEach((e) => {
