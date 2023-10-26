@@ -264,7 +264,8 @@ GHomepage = {
 				$J.ajax( {
 					url: "https:\/\/store.steampowered.com\/default\/home_additional\/",
 					data: {
-						bNeedRecommendedCurators: 0
+						bNeedRecommendedCurators: 0,
+						u: g_AccountID,
 					},
 					dataType: 'json',
 					type: 'GET'
@@ -1679,7 +1680,7 @@ GHomepage = {
 
 	FilterTabs: function()
 	{
-		var rgTabSections =  ['#tab_newreleases_content', '#tab_specials_content'];
+		var rgTabSections =  ['#tab_newreleases_content', '#tab_specials_content', '#tab_topsellers_legacy_content' ];
 
 		for( var i=0; i<rgTabSections.length; i++)
 		{
