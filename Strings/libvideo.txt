@@ -50,7 +50,6 @@ __image_info
 __OBJC
 __LINKEDIT
 @loader_path/libvideo.dylib
-p\EV
 @loader_path/libavcodec.58.dylib
 @loader_path/libavformat.58.dylib
 @loader_path/libavresample.4.dylib
@@ -21295,32 +21294,32 @@ N12_GLOBAL__N_127CDummySSLConnectionCallbackE
 10CUtlVectorIP9CWorkItem10CUtlMemoryIS1_EE
 10CUtlRBTreeIP15CWorkThreadPooli8CDefLess25CDefRBTreeBalanceListenerIiES1_E
 10CUtlVectorIN17CWorkItemPipeline7BarrierE10CUtlMemoryIS1_EE
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/video/audiodecoder.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/video/audiodecoder.cpp
 !m_bEndOfInput
 nSamplesToCopy > 0
 invalid m_nInterleavedBytesPerSample
 m_bEndOfInput || ( m_Packet.data && m_Packet.size )
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlstring.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlstring.h
 !pszString || pszString[nChars] == '\0'
 !m_data.HasError()
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/video/exportvideocontainer.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/video/exportvideocontainer.cpp
 pVideoStream
 lTimeBaseDenom > 0
 nAudioChannels == 2
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/video/avframeyuvwrapper.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/video/avframeyuvwrapper.h
 m_pAVFrame->format == AV_PIX_FMT_YUV420P || m_pAVFrame->format == AV_PIX_FMT_YUVJ420P
 m_pCodecContext == nullptr
 m_listOutput
 m_Memory
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utllinkedlist.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utllinkedlist.h
 m_TotalElements != InvalidIndex()
 %s overflow!
 IsValidIndex(elem)
 IsInList(before)
 Invalid index %u
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlvector.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlvector.h
 (&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/video/videodecoderlibav.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/video/videodecoderlibav.cpp
 false
 Can't seek w/o init segment size
 Can't see w/o segment size
@@ -21361,7 +21360,7 @@ x264_encoder_close
 x264_picture_init
 x264_encoder_encode
 x264_encoder_delayed_frames
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/video/videoencode.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/video/videoencode.cpp
 m_listOutput.IsEmpty()
 veryfast
 film
@@ -21370,7 +21369,7 @@ X264 encoder expects YUV420 frame
 CVideoEncoderX264::BEncodeFrame
 BEncodeFrame
 %s: BScaleImageYUV returned false
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/video/videoalignedbuffer.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/video/videoalignedbuffer.h
 nWidth % 2 == 0
 nHeight % 2 == 0
 m_sps
@@ -21379,7 +21378,7 @@ m_rgScaledFrames
 CUtlAllocation
 http://
 https://
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/video/videofilestream.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/video/videofilestream.cpp
 cMaxSamples > 2
 m_bRunning
 m_cSamples == 0 && m_pulSamples[0] == 0
@@ -21395,7 +21394,7 @@ m_strTargetPath
 m_vecAvailableByteRanges
 m_strTempFile
 CFileReader
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/refcount.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/refcount.h
 m_iRefs > 0 && m_iRefs < 0x1000000
 m_iRefs >= 0 && m_iRefs < 0x0ffffff
 video libav error: %s
@@ -21404,7 +21403,7 @@ CCrypto
 IMetricsFactory
 CWorkThreadPool
 g_CompletionPortManager
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/video/videomanifest.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/video/videomanifest.cpp
 !m_bLoaded
 cRemaining > 0
 pAdaptation->m_pSegmentTemplate
@@ -21498,7 +21497,7 @@ Invalid segment template
 Found unexpected representation close element
 While parsing SegmentBase, didn't find init and index range
 Error parsing MPD file (line=%d): %s
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/video/videoplayer.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/video/videoplayer.cpp
 !m_bInThreadPool
 !m_strURL.IsEmpty() || m_bufFromMemory.TellPut() > 0
 unSeekMS != k_unNoSeekRequest && 0 == ( unSeekMS & k_unSeekPreciseBit )
@@ -21543,14 +21542,14 @@ m_pVideoDecoder
 m_pAudioDecoder
 m_pNextVideoFrame
 CUtlBuffer
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlrbtree.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlrbtree.h
 IsValidIndex( elem )
 _IsValidIndex( elem, unNodeSize, pMemBase )
 _IsValidIndex( y, unNodeSize, pMemBase )
 m_Tree
 m_Elements
 Video Player
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/video/videoplayermanager.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/video/videoplayermanager.cpp
 HTTP client must be set on video manager before it can be used by players
 m_cRunningThreads == 0
 m_cNextThreads == 0
@@ -21579,10 +21578,10 @@ m_vecMainThreadDel
 IsVideoPlayerManagerInitialized()
 pManager
 Video Decode Thread
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlpriorityqueue.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlpriorityqueue.h
 m_heap.IsValidIndex(index)
 m_heap
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/video/videorecordingsegmentwriter.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/video/videorecordingsegmentwriter.cpp
 *pubExtraData == nullptr && *pcubExtraData == 0
 bufSPS.TellPut() > 0 && bufPPS.TellPut() > 0
 dash
@@ -21599,8 +21598,8 @@ dash_segment_type
 m_pAVFormatContext->streams[ m_nVideoTrack ]->time_base.num == 1
 m_pAVFormatContext->streams[ m_nAudioTrack ]->time_base.num == 1
 m_pAVFormatContext->oformat->flags & AVFMT_ALLOW_FLUSH
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/video/videortmp.cpp
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/video/videoutils.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/video/videortmp.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/video/videoutils.cpp
 !m_pContext
 m_pContext
 pAudioResampler
@@ -21608,9 +21607,9 @@ pYUVFrame
 BScaleImageYUV
 TODO implement BScaleImageNV12 on POSIX
 BConvertYUVtoRGB
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/smartptr.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/smartptr.h
 m_p == NULL
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/bitstring.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/bitstring.cpp
 resizeNumBits >= 0
 !m_pInt
 GetInts()
@@ -21621,11 +21620,11 @@ allocator<T>::allocate(size_t n) 'n' exceeds maximum supported size
 null
 true
 object
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/circularbuffer.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/circularbuffer.cpp
 nRead == nPeeked
 pPeeked >= &m_chData[0] && pPeeked < &m_chData[m_nSize]
 pPeeked == &m_chData[ m_nWrite ] && nBytesToCommit >= 0 && m_nWrite + nBytesToCommit <= m_nSize
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/convar.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/convar.cpp
 pName
 Convars
 %llu
@@ -21646,7 +21645,7 @@ m_strConvertedDefaultValue
 m_vecCallbacks
 FCVAR_NEVER_AS_STRING
 Key( i )
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/fileio.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/fileio.cpp
 V_RemoveDotSlashes failed for "%s".
 flock LOCK_SH requested but file is not opened for reading, ignoring: %s
 flock %s %s failed. errno = %d
@@ -21677,9 +21676,9 @@ Waited %u iterations in CFileWriter::Flush - m_cubOutstanding = %d
 %s/%s
 cbToRead <= 1024 * 1024 * 1024
 cbActual < (uint32)nBufSizeWithTerminator
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlbuffer.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlbuffer.h
 CFileWriterThread
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/tslist.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier0/tslist.h
 m_Count == 0
 pNode && pNode->Next == QueueEnd()
 m_queueItemsPending
@@ -21699,7 +21698,7 @@ Element( i )
 CPathString
 .dylib
 %s/%s%s
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/interface.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/interface.cpp
 strlen(pchModuleName) + V_strlen(pModuleExtension) < MAX_UNICODE_PATH_IN_UTF8
 .cpl
 %s%s
@@ -21708,7 +21707,7 @@ CreateInterface
 %%%d
 ]:%u
 port
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/KeyValues.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/KeyValues.cpp
 GetUint64FromString() did not get correct peCS parameter
 can't convert uint64 to int32 (data loss)
 can't convert int64 to uint64 (negative number)
@@ -21717,7 +21716,7 @@ KeyValues
 NULL
 %.18g
 Memory leak: mempool blocks left in memory: %d
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/mempool.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/mempool.cpp
 CMemoryPool::AddNewBlob: mode == GROW_NONE
 blobSize <= nMaxBlobSize
 pBlob
@@ -21725,7 +21724,7 @@ CMemoryPool::Alloc: ran out of memory
 k_nMemPoolMagic_Free == *(( (int *) returnBlock) - 1)
 k_nMemPoolMagic_InUse == *(( (int *) pMem) - 1)
 CMemoryPool
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/netadr.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/netadr.cpp
 loopback
 broadcast
 %i.%i.%i.%i
@@ -21733,7 +21732,7 @@ broadcast
 unknown
 %d.%d.%d.%d:%d
 Address too small!
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/netadr.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/netadr.h
 m_usType == k_EIPTypeV6
 pvecAddressesOut != nullptr || pSingleOutput != nullptr
 about to perform blocking dns call from the main thread.  consider refactoring.
@@ -21765,7 +21764,7 @@ getRelationship:ofDirectoryAtURL:toItemAtURL:error:
 path
 hasPrefix:
 length
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlbuffer.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlbuffer.cpp
 info.m_pReplacementString == 0
 nSize != 0
 CUtlBuffer::GetStringFast: binary buffers only
@@ -21776,7 +21775,7 @@ m_Put >= 0
 offset >= 0
 offset >= -m_Put && offset <= INT_MAX-m_Put
 offset != INT_MIN && offset <= m_nMaxPut && -offset <= INT_MAX-m_nMaxPut
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlmemory.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlmemory.cpp
 nSizeOfType > 0
 nGrowSize >= 0
 m_nAllocationCount >= 0
@@ -21787,12 +21786,12 @@ num > 0
 num >= 0
 numElements <= m_nAllocationCount
 m_pMemory
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlqueue.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlqueue.cpp
 IsPowerOfTwo( nNewCapacity )
 nPreSplit > 0 && nPreSplit + nPostSplit == nCount
 ( m_iHead & nNewCapacityMask ) == nNewCapacity - nPreSplit
 CUtlString::SetValue
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlstring.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlstring.cpp
 CUtlString::VFormat
 CUtlString::VAppendFormat
 Assertion failed: length > k_cchMaxString
@@ -21807,7 +21806,7 @@ CUtlStringBuilder::Data::MoveToHeap
 CUtlSymbolTable
 m_StringPools
 m_Lookup
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlsymbol.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlsymbol.h
 pPool->m_SpaceUsed < 0xFFFF
 Symbol table grew beyond unsigned short.  Time to upgrade UtlSymId_t for the symbol type or look for unnecessary spam in the tables.
 INFO
@@ -29460,7 +29459,7 @@ ScaleUVDownEven
 IS_ALIGNED(src_width, 2)
 IS_ALIGNED(src_height, 2)
 Not continuing coroutine due to g_bPreventCoroutineContinue, %s
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/coroutine.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/coroutine.cpp
 GCoroutineMgr().IsValidCoroutine(hCoroutine)
 Coroutine_IsActive()
 (main)
@@ -29469,7 +29468,7 @@ m_cubSavedStack < k_cubMaxCoroutineStackSize
 m_pStackHigh
 m_pSavedStack
 m_VecCoroutineStack.Count() > 1
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/debugstatssystem.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/debugstatssystem.cpp
 String pool bytes used %u, max %u, %u pools
 Total number of strings %u, longest string size %u, avg size %u
 Total of %u buckets with %u hash collisions
@@ -29478,12 +29477,12 @@ Bucket size : count
 nTotal number of strings %u, longest string size %u, avg size %u
 Leaked KeyValues (%u):
 %s (%u)
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/keyvaluessystem.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/keyvaluessystem.cpp
 size < INT_MAX
 CKeyValuesSystem::AddStringToPool: key name too long (%u chars)
 CKeyValuesSystem::AddStringToPool: out of memory
 CKeyValuesSystem::AddStringToPool: running out of memory (%u bytes left)
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/osversion.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/osversion.cpp
 Invalid macOS version %d.%d.%d
 Unknown
 /System/Library/Frameworks/OpenGL.framework/OpenGL
@@ -29500,7 +29499,7 @@ processInfo
 operatingSystemVersion
 respondsToSelector:
 defaults read /System/Library/CoreServices/SystemVersion.plist ProductVersion
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/strtools.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/strtools.cpp
 count == 0 || s1 != NULL
 count == 0 || s2 != NULL
 n == 0 || s1 != NULL
@@ -29534,7 +29533,7 @@ V_URLDecode needs a dest buffer at least as large as the source
 str != NULL
 prefix != NULL
 nBytes
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/strtools_unicode.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/strtools_unicode.cpp
 invalid input pointer
 !pToCopy || (pToCopy + num <= Base()) || (pToCopy >= (Base() + Count()) )
 count >= 0
@@ -29549,7 +29548,7 @@ Unable to determine CPU Frequency. Try defining CPU_MHZ.
 %s (%d) : 
 console
 Exiting on SPEW_ABORT
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/dbg.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/dbg.cpp
 pGroupName
 strlen( pGroupName ) < MAX_GROUP_NAME_LENGTH
 IsSpewActive
@@ -29560,13 +29559,13 @@ Fatal assert; application exiting
 Fatal assert
 _ExitOnFatalAssert
 Failed to generate callstack
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/memblockhdr.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/memblockhdr.cpp
 Assertion Failed: stack%2d: %s
 Stack%2d: %s
 Assertion Failed: stack%2d: 0x%llX
 Stack%2d: 0x%llX
 ppFrames[iFrame] != NULL
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/memstd.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/memstd.cpp
 ((size_t)(m_nLogicalBytesAllocated) % 8) == 0
 No tracked allocs currently in use. Total %d
 Tracked allocs currently in use. %d Total %d
@@ -29578,9 +29577,9 @@ DumpMemTrackingStats %d %d
 OUT OF MEMORY
 (iub & (m_nSizeWithStack-1)) == 0
 pAllocTracker->m_uSentinel == 0xaa110ced
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/memblockhdr.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier0/memblockhdr.h
 pLeft->m_iStackPC <= V_ARRAYSIZE(pLeft->m_StackPC)
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/minidump.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/minidump.cpp
 Someone called SetWritingMinidump without holding the minidump lock.
 Someone called ClearWritingMinidump without holding the minidump lock.
 !g_pCrashMemoryReserve
@@ -29595,20 +29594,20 @@ Steam
 steamwebhelper
 Steam Helper
 cefwebhelper
-Oct 25 2023
-11:38:38
+Oct 27 2023
+16:23:04
 %04d%02d%02d%02d%02d%02d
 CatchAndWriteContext_t::Invoke with bogus argc/argv
 CatchAndWriteContext_t::Invoke with bogus void *ptr
 CatchAndWriteContext_t::Set w/o a function pointer!
 com.valvesoftware.steam
 /dev/urandom
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/platform_posix.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/platform_posix.cpp
 s_dev_urandom_fd >= 0
 urandom_result > 0 || ( urandom_result < 0 && errno == EINTR )
 MainThrd
 pthread_setname_np
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/threadtools.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/threadtools.cpp
 Thread synchronization object is unuseable
 Out of thread local storage!
 Illegal termination of worker thread '%s'
@@ -29622,15 +29621,15 @@ Invalid thread id during thread Start()
 Thread cannot be joined with self
 Probably deadlock or failure waiting for thread to initialize.
 CTSListBase: Misaligned list
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/validator.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/validator.cpp
 CValidator : too many memory nodes to store, try again with a higher threshold value
 NULL != m_pValObjectCur
  GiB
  MiB
  KiB
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/valobject.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/valobject.cpp
 NULL == pValObjectPrev->m_pValObjectNext
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/vprof.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/vprof.cpp
 !g_VProfile
 pszName
  Avg Time/Frame (ms)
@@ -29686,11 +29685,11 @@ m_pBudgetGroups
 eGroup < VPROF_BUDGETGROUP_MAX
 No room for new profile in vprof thread profile list, grow MAX_THREADS_TO_VPROF_AT_ONCE
 WARNING: Disabling vprof spike dumping and stopping profile for thread %d - %s because of exceeded rate limit, try a higher threshold.
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/vprof.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier0/vprof.h
 m_nRecursions > 0
 m_pszName
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/crypto_aescbc_openssl.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/crypto_aescbc_openssl.cpp
 pubEncryptedData
 cubEncryptedData
 pubPlaintextData
@@ -29705,7 +29704,7 @@ pcubEncryptedData
 *pcubEncryptedData
 cubEncryptedData >= cubTotalOutput
 nDecrypted == cubEncryptedData - k_nSymmetricBlockSize
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/crypto_digest_openssl.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/crypto_digest_openssl.cpp
 CCrypto::GenerateSHA1Digest
 pOutDigest
 SHA1_Init( &c )
@@ -29714,13 +29713,13 @@ cubData > 0
 pubKey
 cubKey > 0
 pOutputDigest
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/crypto_rsa_openssl.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/crypto_rsa_openssl.cpp
 CCrypto::RSAEncrypt
 cubPlaintextData > 0
 Invalid RSA modulus: %d bytes wide
 CCrypto::RSAEncrypt: insufficient output buffer for encryption, needed %d got %d
 RSA encryption failed
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/crypto_textencode.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/crypto_textencode.cpp
 CCrypto::Base64Encode: insufficient output buffer for encoding, needed %d got %d
 CCrypto::Base64Encode
 NULL output buffer with non-zero size passed to Base64Encode
@@ -29733,7 +29732,7 @@ CCrypto::Base64Encode: insufficient output buffer (up to n*4/3+5 bytes required,
 %a, %e-%b-%y %H:%M:%S
 %a, %e-%b-%Y %H:%M:%S
 %Y-%m-%dT%H:%M:%S+00:00
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/stat.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/stat.cpp
 CStatT<T>::Update: called on class that was not initialized.
 m_iSampleBucketCurrent < m_cSampleBuckets
 m_iSampleBucketLast < m_cSampleBuckets
@@ -29754,14 +29753,14 @@ UnbufferedSend
 PostRecv
 SocketFail
 SocketAlreadyClosed
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/completionportmanager.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/completionportmanager.cpp
 DispatchCompletedItem
 DispatchCompletedItem - error
 ulResult != 0
 CCompletionPortManager::IOCPWorkerThread: got 100 consecutive errors, last error %d (%s), IOCP thread aborting and exiting
 BStarted()
 m_AssocHandles
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/completionportmanager_posix.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/completionportmanager_posix.cpp
 g_CompletionPortManager.BStarted()
 Assoc.nFd == handle
 ( Assoc.nFlags & ( k_nAssocProcessing | k_nAssocFinalizing ) ) == 0 && Assoc.pPending == NULL
@@ -29776,7 +29775,7 @@ Finalization timeout waiting for processing of %d to complete
 Pipe write failed
 CompletePendingIo
 Unhandled pending I/O type %d
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/cookiecontainer.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/cookiecontainer.cpp
 Unexpected result from V_SplitString() 
 secure
 httponly
@@ -29796,7 +29795,7 @@ m_strValue
 m_strDomain
 m_strPath
 enums_clientserver.proto
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/enum_names.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/enum_names.cpp
 Missing String for %s (%d)
 EResult
 EUniverse
@@ -29991,7 +29990,7 @@ optional
 unspecified
 @bEnableFrameFuncOverageWarnings
 This turns on the spew in SPEW_MISC at level 4, still need to adjust spew levels to see it.
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/framefunction.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/framefunction.cpp
 eFrameType < k_EFrameTypeMax
 pchName
 V_strlen( pchName ) < V_ARRAYSIZE( m_rgchName )
@@ -30045,7 +30044,7 @@ china
 html
 Invalid spew group
 RequestHeaders
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/http.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/http.cpp
 Authorization
 CHTTPRequest::RetrieveURLEncodedData
 m_pkvRequestHeaders
@@ -30094,7 +30093,7 @@ user-agent
 Transfer-Encoding
 Set-Cookie
 localhost
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/httpclient.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/httpclient.cpp
 Request host %s with relative URL %s appears invalid
 CHTTPUtil::BStatusCodeIsRedirect( eRedirectStatusCode )
 wss://
@@ -30244,13 +30243,13 @@ m_pListWaitingRequestsForAddress
 m_pTreeWaitingConnections
 m_pTreeInUseConnections
 <local>
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/httpclientmgr.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/httpclientmgr.cpp
 m_vecpHTTPClients.FindAndFastRemove( pHTTPClient )
 m_vecpHTTPClients
 m_strProxyOverride
 Aborting stale HTTP request on connection (%p, stream: %d) due to absolute timeout: %s - %X
 Aborting stale HTTP request on connection (%p, stream: %d) due to network activity timeout: %s - %X
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/httpclient_internal.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/httpclient_internal.cpp
 Hit destructor inside a HTTP2 callback from nghttp2 - not safe
 HTTP Connection (%p) (connection handle %X) destructing! - Dispatching pending request (%p)
 Closing HTTP 1.x connection hard (%p) due to timeout while request active: %s - %X
@@ -30529,7 +30528,7 @@ Failed writing http cache file to disk
 (uint32)m_pHTTPRequestCache->m_listCacheFileLRU.Count() == (uint32)m_pHTTPRequestCache->m_mapCacheFiles.Count()
 CWorkItemHTTPClientRequest
 CWorkItemHTTPClientRequest::ThreadProcess
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/httpclient_internal.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/httpclient_internal.h
 m_BodyDataBuffer
 m_bufLeftOverHTTP2BodyDataChunk
 m_strCacheDirectory
@@ -30540,7 +30539,7 @@ m_FileIOThreadPool
 m_pCachedResponseData
 m_pOriginatingRequestHandle
 m_strFilename
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/iopollinghelpers_osx.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/iopollinghelpers_osx.cpp
 Unexpected thread race for CIOPollingHelper construction
 nStateFlags != 0
 m_watchTable.InvalidIndex() == m_watchTable.Find( socket )
@@ -30554,7 +30553,7 @@ m_vecIPFilterRangesV6
 @nJobInteryieldMillisecondsLogThreshold
 @nJobNetSendsInsaneThreshold
 15000
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/job.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/job.cpp
 undefined
 this != g_pJobCur
 Long interyield runtime -  %u jobs ran over interyield threshold and spew was rate limited since last output
@@ -30581,14 +30580,14 @@ shared resource
 generic context
 @cMinimumJobTimeoutsToCheckPerFrame
 @bEnableNetworkJobsOwnStartList
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/jobmgr.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/jobmgr.cpp
 m_MapJob.InvalidIndex() != iJob || !bShouldExist
 BRouteWorkItemCompleted called for a job that could not be found!
 Job yielding despite declaring a Do Not Yield block at %s
 name
 @bEnableSpewThrottle
 @bEnableLogTearOff
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/logger.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/logger.cpp
 pLogInstance == sm_pLogInstance
 sm_cRef > 0
 sm_bShuttingDown
@@ -30640,14 +30639,14 @@ CLogInstance::EmitEventNow
 Last Message Repeated %d times.
 eGroup >= static_cast< ESpewGroup >( 0 ) && eGroup < k_ESpew_ArraySize
 CIPAndPort::GetIPv4 called on IPv6 address
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/bitstring.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/bitstring.h
 bitNum >= 0 && bitNum < this->Size()
 m_vecHashBuckets
 m_memNodes
 m_bitsMigratedBuckets
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlqueue.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlqueue.h
 IsValidIndex( idx )
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlhashmap.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlhashmap.h
 CUtlHashMap::RemoveAt - Invalid index
 CUtlHashMap::RemoveAt - couldn't find bucket for item
 k_EMsgClientVoiceCallPreAuthorize
@@ -31114,7 +31113,7 @@ k_EMsgClientSiteLicenseGetAvailableSeatsResponse
 k_EMsgClientSiteLicenseGetContentCacheInfo
 k_EMsgClientSiteLicenseGetContentCacheInfoResponse
 m_vecMetrics
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/metrics/metrics.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/metrics/metrics.cpp
 CMetricsPayload::RecordMetric
 m_pMetricsPayload
 Not accumulating differing metrics types: %d and %d
@@ -31140,7 +31139,7 @@ null catalog
 null program
 null operation
 @bMsgErrorDump
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/msg.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/msg.cpp
 EMsg %d registered multiple times.
 EMsg_IsValid( pOldMsgInfo->eMsg )
 *pOldMsgInfo->pchMsgName
@@ -31151,7 +31150,7 @@ Sent message: %s - %u bytes
 GetMessageFlags
 Bad packet received: EMsg would be %u, next 12 bytes: %02X %02X %02X %02X %02X %02X %02X %02X %02X %02X %02X %02X
 Bad packet received: EMsg would be %u
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/netpacket_legacy_struct.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/netpacket_legacy_struct.h
 CClientStructNetPacket->GetHdrIP() not valid.
 CClientStructNetPacket->GetRealm() not valid.
 CClientStructNetPacket->GetGCRouting() not valid.
@@ -31180,7 +31179,7 @@ Default initial allocation size for PB arena
 Max block allocation size for PB arena
 @bCheckMsgProtobufOnJobStackForArenaAlloc
 Should we only use the arena allocator if the protobuf is on the job stack
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/msgprotobuf.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/msgprotobuf.cpp
 Unparseable protobuf message arrived, emsg=%u, size=%u
 CProtoBufNetPacket::RebuildPacketIfNeeded (needed)
 unOldBodySize >= 0
@@ -31194,7 +31193,7 @@ m_pHeader->ip_v6().length() == 16
 @nSpewThrottleUnconditionalResumeMs
 5000
 @nSpewThrottleNagFrequencyMs
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/net.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/net.cpp
 pFrameFunctionMgr
 CNet Encrypt
 CNet Resolver
@@ -31252,16 +31251,16 @@ iSetNonBlockResult == 0
 pvCallback != NULL
 !pvCallbackCur
 pvCallbackUDPCur || pvCallbackTCPCur
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/job.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/job.h
 g_pJobCur != NULL
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/cumulativetimer.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/cumulativetimer.h
 IsRunning()
 CNetConnectionImmediateDisconnectWorkItem
 CNetConnectionImmediateDisconnectWorkItem::ThreadProcess
 CNetConnectionDestroyWorkItem
 CNetConnectionDestroyWorkItem::ThreadProcess
 *pvRecord
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/thash.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/thash.h
 m_pBucket == NULL
 cRecordInit > 0
 m_cBucket > 0
@@ -31270,7 +31269,7 @@ PvRecordFind( unKey ) == NULL
 Performance warning: too many items (%d), not enough buckets (%d)
 not enough buckets in thash class %s (%d records, %d buckets)
 pvRemove
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/netconnection.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/netconnection.cpp
 m_hSocket == INVALID_SOCKET
 Must pass a INetSSLConnectionCallback if using SSL
 Cannot use netfilter based encryption with SSL, setup SSL based encryption in your INetSSLConnectionCallback
@@ -31298,8 +31297,8 @@ CNetConnectionAsyncDisconnectWorkItem
 CNetConnectionAsyncDisconnectWorkItem::ThreadProcess
 CNetConnectionOnDisconnectWorkItem
 CNetConnectionOnDisconnectWorkItem::ThreadProcess
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/netconnection.h
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/scheduledfunction.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/netconnection.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/scheduledfunction.h
 m_Func
 m_pSSLConnection
 m_bufSSLRecv
@@ -31310,7 +31309,7 @@ m_pListQueuedSSLRecvsPostHandshake
 4000
 @cNetEncryptionHandshakeWorkMax_HighPri
 8000
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/netfilter.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/netfilter.cpp
 m_pNetConnection
 m_pNetConnection->m_pConnectionCallback != this
 NULL == m_pConnectionCallbackOrig
@@ -31338,10 +31337,10 @@ CWorkItemNetFilterEncrypt
 CWorkItemNetFilterEncrypt::ThreadProcess
 CWorkItemNetFilterOnDisconnect
 CWorkItemNetFilterOnDisconnect::ThreadProcess
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/netfilter.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/netfilter.h
 CWorkItemNetEncryptionHandshakeEncrypt
 CWorkItemNetEncryptionHandshakeEncrypt::ThreadProcess
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/netpacket.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/netpacket.cpp
 m_cRef == 0
 pubData
 cubData
@@ -31369,7 +31368,7 @@ ECONNREFUSED
 ENOPROTOOPT
 ECONNRESET
 [no name available]
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/opensslconnection.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/opensslconnection.cpp
 nBytes2 == m_data.NumAllocated()
 m_data
 commonName
@@ -31500,9 +31499,9 @@ VALVE_CRYPTO_dbg_realloc
 VALVE_CRYPTO_dbg_free
 COpenSSLContext
 COpenSSLConnection
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/opensslwrapper.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/opensslwrapper.cpp
 OpenSSL random number system reports not enough entropy
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/platform_sockets_posix.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/platform_sockets_posix.cpp
 nDataLen not supported in %s
 AsyncSocketAcceptExComplete
 pCompletion->type == IOTYPE_ACCEPT && pCompletion->ulResult == 0 && pCompletion->SocketAcceptEx.hNewSocket != INVALID_SOCKET
@@ -31514,7 +31513,7 @@ AsyncSocketWrite
 pCompletion->type == IOTYPE_SEND || pCompletion->type == IOTYPE_UNBUFFEREDSEND
 AsyncSocketReadFrom
 CBaseScheduledFunction
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/scheduledfunction.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/scheduledfunction.cpp
 Attempt to schedule '%s' %lldusec in the past
 CScheduledFunctionMgr::BFrameFuncRun
 pBaseScheduledFunction->m_iScheduledItem == scheduledItem.m_iScheduledFunction
@@ -31547,7 +31546,7 @@ steammessages_base.proto
 client/TCPConnection/SentBytes
 client/TCPConnection/RecvBytes
 IStreamParser::BIsValidMsgType() old packet header from out-of-date Steam build, discarding packet and closing connection
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/tcpconnection.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/tcpconnection.cpp
 cubData >= 8
 IStreamParser::BIsValidMsgType() invalid packet header (1st 8 bytes: 0x%02X%02X%02X%02X%02X%02X%02X%02X, %d bytes recv'd so far) discarding packet and closing connection
 IStreamParser::BIsValidMsgType() too-large cbMessageSize in message header (%u bytes, %d bytes recv'd so far) discarding packet and closing connection
@@ -31660,7 +31659,7 @@ DisconnectPlatformSocket
 ClosePlatformSocket
 m_queueSends
 TCP disconnect
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/tcphost.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/tcphost.cpp
 IOTYPE_ACCEPT == pCompletionData->type
 CTCPHost
 CTCPHost Globals
@@ -31668,7 +31667,7 @@ CTCPHost Globals
 @cUDPSendRetries
 @nClientCMUDPPingTimeGoodEnoughThresholdMS
 @nClientCMUDPPingTimeoutUseGoodEnoughMS
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/udpconnection.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/udpconnection.cpp
 CUDPConnection not initialized, was GlobalInit called?
 CUDPConnection::InternalGetUDPConnection called without calling CUDPConnection::GlobalInit first
 *ppUDPConnection
@@ -31744,8 +31743,8 @@ sm_THashPUDPConnection
 sm_SchedulerACK
 sm_SchedulerResend
 sm_StatMicroSecLatency
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/udpconnection.h
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/msgbase.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/udpconnection.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/msgbase.h
 CMsgBase_t : packet too small (EMsg %u)
 CMsgBase_t : packet too small
 CUDPHost
@@ -31754,7 +31753,7 @@ client/UDPSocket/SentBytes
 client/UDPSocket/RecvBytes
 client/UDPSocket/SentPacket
 client/UDPSocket/RecvPacket
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/udpsocket.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/udpsocket.cpp
 bUseIOCP
 INVALID_SOCKET != hSocket
 CWSARecvFrom (UDP) --ioctl(FIONREAD
@@ -31774,7 +31773,7 @@ UDPSocket: ThreadedFunc_RecvUDP got error %d (%s) from socket %d, (invalid) hSoc
 CUDPSocket
 CUDPSocket Globals
 CWebSocketConnection::GlobalInit()
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/websocket.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/websocket.cpp
 Must initialize with CWebSocketConnection::GlobalInit before accepting connections
 eConnectionMode == k_EConnectionModeClient
 pConnectionCallback == pWebSocketConnection
@@ -31805,9 +31804,9 @@ sm_mapWebSocketConnection
 258EAFA5-E914-47DA-95CA-C5AB0DC85B11
 CWebSocketConnectionDelayedCloseConnectionWorkItem
 CWebSocketConnectionDelayedCloseConnectionWorkItem::ThreadProcess
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/websocket.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/websocket.h
 CWorkThread -- Sleep
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/workthreadpool.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/workthreadpool.cpp
 pszThreadName != NULL
 CWorkThreadPool::~CWorkThreadPool(): Thread pool %s shutdown incorrectly.
 0 == m_WorkThreads.Count()
@@ -31856,314 +31855,318 @@ m_vecBarriers
 out of memory
 %s%s%s
     
-3	Q<
-3*Q<
-3:Q<
-3UQ<
-3hQ<
- )R<
- 4R<
-	 BR<
-	 QR<
-0	 ^R<
- gR<
- yR<
+3&R<
+36R<
+3QR<
+3dR<
+3{R<
+ %S<
  0S<
- =S<
- MS<
- WS<
- bS<
- mS<
- yS<
- %T<
- /T<
-P	 :T<
+	 >S<
+	 MS<
+0	 ZS<
+ cS<
+ uS<
+ ,T<
+ 9T<
  IT<
- YT<
-`	 jT<
- vT<
- "U<
- .U<
- <U<
- ^U<
- pU<
+ ST<
+ ^T<
+ iT<
+ uT<
+ !U<
+ +U<
+P	 6U<
+ EU<
+ UU<
+`	 fU<
+ rU<
+ |U<
  *V<
- NV<
- oV<
- 1W<
- ?W<
- QW<
- gW<
- zW<
-.#_<
-.;_<
-.K_<
-.`_<
-.m_<
-.*`<
-.@`<
-.]`<
-.z`<
-.1a<
-.La<
-.ea<
-.(b<
-.8b<
-	.Nb<
-.ib<
+ 8V<
+ ZV<
+ lV<
+ &W<
+ JW<
+ kW<
+ {W<
+ -X<
+ ;X<
+ MX<
+ cX<
+ vX<
+.7`<
+.G`<
+.\`<
+.i`<
+.&a<
+.<a<
+.Ya<
+.va<
+.-b<
+.Hb<
+.ab<
 .|b<
+.$c<
 .4c<
-.Wc<
-.wc<
-.4d<
-.Ud<
-.{d<
-0	.6e<
-@	.Ge<
-P	.Pe<
-`	.ee<
-	.'f<
-.2f<
-.Af<
-.Rf<
-.bf<
-.~f<
-.)g<
-.;g<
-.Qg<
-.rg<
-.`9>
-.-h<
-.Ih<
-.fh<
-.!i<
-.;i<
-.Ki<
-.`i<
-.si<
-.{i<
-.&j<
-.<j<
-.Rj<
-.bj<
-.nj<
-.}j<
+	.Jc<
+.ec<
+.xc<
+.0d<
+.Sd<
+.sd<
+.0e<
+.Qe<
+.we<
+.	f<
+0	.2f<
+@	.Cf<
+P	.Lf<
+`	.af<
+p	.}f<
+	.	g<
+	.#g<
+..g<
+.=g<
+.Ng<
+.^g<
+.zg<
+.%h<
+.7h<
+.Mh<
+.nh<
+.\:>
+.)i<
+.Ei<
+.bi<
+.7j<
+.Gj<
+.\j<
+.oj<
+.wj<
 ."k<
-.3k<
-.Dk<
-.]k<
-.kk<
-.3l<
-.Xl<
-.wl<
-2	s<
-2.s<
-2?s<
-2Vs<
-2ms<
-2us<
-2&t<
-29t<
-2Pt<
-2ft<
-2vt<
-2)u<
-2?u<
-2Pu<
-2du<
-2pu<
-'%3=
-'63=
-'K3=
-'Z3=
-'l3=
+.8k<
+.Nk<
+.^k<
+.jk<
+.yk<
+./l<
+.@l<
+.Yl<
+.gl<
+.~l<
+./m<
+.Tm<
+.sm<
+2*t<
+2;t<
+2Rt<
+2it<
+2qt<
+2~t<
+2"u<
+25u<
+2Lu<
+2bu<
+2ru<
+2%v<
+2;v<
+2Lv<
+2`v<
+2lv<
+'!4=
 '24=
-'D4=
-'^4=
-'{4=
-'"5=
-'85=
-'T5=
-'f5=
-'u5=
-'d0=
-	W6=
-	_6=
-	k6=
-	s6=
-		37=
-	<7=
-	D7=
-	P7=
-	X7=
-	f7=
-	x7=
-	%8=
-	=8=
-	O8=
-	c8=
-	q8=
-	{8=
-	$9=
-	19=
-	B9=
-	U9=
-	g9=
-	v9=
-	$C<
-		:=
-	%:=
-	3:=
-	A:=
-	O:=
-	i:=
-	|:=
-#)==
-#A==
-#Z==
-#m==
-#8>=
-#\>=
-#m>=
+'G4=
+'V4=
+'h4=
+'|4=
+'.5=
+'@5=
+'Z5=
+'w5=
+'46=
+'P6=
+'b6=
+'q6=
+'`1=
+	S7=
+	[7=
+	g7=
+	o7=
+		/8=
+	88=
+	@8=
+	L8=
+	T8=
+	b8=
+	t8=
+		9=
+	!9=
+	99=
+	K9=
+	_9=
+	m9=
+	w9=
+	 :=
+	-:=
+	|_=
+	>:=
+	Q:=
+	c:=
+	r:=
+	 D<
+	!;=
+	/;=
+	=;=
+	K;=
+	e;=
+	x;=
+#%>=
+#=>=
+#V>=
+#i>=
 #|>=
-#S9>
-#QB<
-#2?=
-#H?=
-#d?=
-#q?=
-#1@=
-!]@=
-!t@=
-!$A=
-!?A=
-!JA=
-![A=
-!kA=
-!zA=
-!%B=
-!7B=
-!HB=
+#4?=
+#X?=
+#i?=
+#x?=
+#O:>
+#MC<
+#.@=
+#D@=
+#`@=
+#m@=
+#{@=
+#-A=
+!YA=
+!pA=
+! B=
+!;B=
+!FB=
 !WB=
-!bB=
-!xB=
-!`9>
-!5C=
-!`C=
-!wC=
-!4D=
-!ND=
-!eD=
-!T5=
-!tD=
-!"k<
-!'E=
-!?E=
-!RE=
-$'F=
-$:F=
-$PF=
-$dF=
-$zF=
-$3G=
-$EG=
-$VG=
-$mG=
-$|G=
-$0H=
-$GH=
-$\H=
-${H=
-$-I=
-$@I=
-$OI=
-$^I=
-$qI=
-$*J=
-$?J=
-$UJ=
-$pJ=
-$}J=
-,vT<
-,4[=
-,E[=
-,O[=
-,i[=
-,{[=
-,<\=
-,X\=
-,r\=
-,3]=
-,H]=
-,^]=
+!gB=
+!vB=
+!!C=
+!3C=
+!DC=
+!SC=
+!^C=
+!tC=
+!\:>
+!1D=
+!\D=
+!sD=
+!0E=
+!JE=
+!aE=
+!P6=
+!pE=
+!#F=
+!;F=
+!NF=
+$#G=
+$6G=
+$LG=
+$`G=
+$vG=
+$/H=
+$AH=
+$RH=
+$iH=
+$xH=
+$,I=
+$CI=
+$XI=
+$wI=
+$)J=
+$<J=
+$KJ=
+$ZJ=
+$mJ=
+$~J=
+$&K=
+$;K=
+$QK=
+$lK=
+$yK=
+,rU<
+,0\=
+,A\=
+,K\=
+,e\=
+,w\=
+,8]=
+,T]=
 ,n]=
-,+^=
-,=^=
-,O^=
-,i^=
-, _=
-,*_=
-,4_=
-,?_=
-,N_=
-,h_=
-,~_=
-/=`=
-/K`=
-/W`=
-0	/l`=
-/-a=
-/Da=
-/\a=
-/na=
-/~a=
- 	/'b=
-/Bb=
-/Ub=
-/mb=
-/!c=
-/1c=
-/Jc=
-/`c=
-/{c=
-/#d=
-/<d=
-/Ud=
-/qd=
-/2e=
-/Je=
-/_e=
-/re=
-/%f=
-/8f=
-/4D=
-/Lf=
-/hf=
-/T5=
-/*g=
-/6g=
-/Jg=
-/cg=
-/qg=
-/?E=
-(	h=
-("h=
-(6h=
-(Ih=
-(^h=
-(rh=
-($i=
-(4i=
+,	^=
+,/^=
+,D^=
+,Z^=
+,j^=
+,'_=
+,9_=
+,K_=
+,e_=
+,|_=
+,&`=
+,0`=
+,;`=
+,J`=
+,d`=
+,z`=
+/9a=
+/Ga=
+/Sa=
+0	/ha=
+/)b=
+/@b=
+/Xb=
+/jb=
+/zb=
+ 	/#c=
+/>c=
+/Qc=
+/ic=
+/-d=
+/Fd=
+/\d=
+/wd=
+/8e=
+/Qe=
+/me=
+/.f=
+/Ff=
+/[f=
+/nf=
+/!g=
+/4g=
+/0E=
+/Hg=
+/dg=
+/P6=
+/&h=
+/2h=
+/Fh=
+/_h=
+/mh=
+/;F=
+(2i=
 (Ei=
-(Vi=
-(gi=
-(xi=
-0	"A
- 	"V
-"2?=
-")E<
-"?F<
-"}j<
+(Zi=
+(ni=
+( j=
+(0j=
+(Aj=
+(Rj=
+(cj=
+(tj=
+`	"~
+0	"=
+ 	"R
+".@=
+"%F<
+";G<
+"yk<
 Mb@?
 RCRC`
 A`_A`
@@ -36077,84 +36080,83 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-am]`,
-"[9U
-U{{K
-a':*
-n2q{
-z0WV
-%-YQ
- g:%
-qd)~
-j@MG}
-bhV5
-M{a?
-O,WE
-IiP^
-`[E?BQ
-6$w_
-3tbEx
+v<`6v
+UI&x
+Tg-Ol
+s&s%Ys{
+0:(Jv
+:Y<Vo*M
+S(yXpgT
+[}v3
+0*0F6
+nGZ^
+]\8D
+;R^fK
+1}L	
+Evgy
+$SwVo
+TTVc
+[eDv"b
+)9\I
 HAOp
-ig~M
-(Y7R
-q~;q
-A\-x
-HUm`}Q
--SG<
-+xf#/
-tbj{6<ZWb
-55*,YF
-8DGj5
-SjxK
-33p>
-FwYS?
-{S^;8
-wif]
-m0]9
-C%K;p
-qIT_
-&]1`
-jf6E
-61xK
-}!6c
-&sBod
-r8u5
-G&|A
-jM:%L
-`$PQW
-4b}0
-dd$i/3
-s$}UX)
-9MC7
--MCK
-'	oh
-|$XB
+Y7VqA
+>z(,T
+h)8p
+@+"+-
+6>>)3
+IEsW
+rz3U
+Fvw"gj
+-ik5
+36$/
+K9EM3
+Y~Q$y
+#lt	
+5=j;
+6:Lq3h
+gj/n;
+rXH=W
+TBu>
+woBg)
+qecz
+BGf%Kb
+C&WU
+!"Ii
+kT"HP
+9Rtt
+^5CZ
+*Eh]'
+""Tt
 Gf$(\@r
-	G	I
-NZ-&
-bGhQ
-lu#^v
-k v{_<
-~o|]
-_R@{
-p3]y
-c"*G
-ah<>
-lm++1"
-w&+C
+Rv@g
+~\+,e
+%b'0
+}(3Z
+(Y`c
++YEJ
+eqL|[
+b&>K
+dF8t
+ owg
+N+bqKZ
+W2 80
 MWZ-
->_&%
-~NQb$
-,d	l
+[G3s
+Gg(9
+KW8Gu
 ;#1}
 O}^z,	R
 ATeSW
 ~N2~
 =5_IA};
 W$9u
-6H~N
-QCfwp
-[-=i
+b[w#'
+{JAK
+Mun?
+qmMfQ;v
+dm&1
+qJ'N%Pi~
+^!6@
 p1vp
 d}{<
 2\'u$
@@ -36163,64 +36165,72 @@ KI60
 }r3 9
 6Kut
 'vk[
-c*TGM
-^<IL
-EPVV\l
-dY^B5
-Htq1
-C0Q{
+$^$,
+*TGM
+-:R@
+VYbo
+lOiC
+RN&8D.v[
+D/KhCW
+wZRKk
+VWL(-
 	`eX
 'BOW
 q^w 
-O9Iz	
-EXe*{
+;Zu%k
+LFv#
+Ek|X
+MEMh
+:t]e*{
 ^W1_
-D	oJ
-0UUF
-Tl+<s
+a|1(
+ 7R}
+[h+\
 by("
 =OF>
 =,HL
 `[r[
-X3$	
+lk}w3
 -dGC
-2wq_
-?Ej^=
-FWCO
-JU5'
-@ rJ
-a9wO
-D%1e
-32b 
-		S34
-\`hT
-0P!h
-G]/+
-7/2)F
-@Gea
-fCB~
+.vLt
+x%<&
+'zI2
+wf8?W
+2Y>l
+F~ntT
+TwvK	,R
+qARF
+K.~"
+a07@i
+YZ.cH@z%G
+i4!h
+2b~{
+T,ys
+f]q 
+ ,=8
+>+.4
+[S}`
 ;xm:
-j]kYn[
-]rp_/|5
-ApyW
-:DP/s
-G0~V
-^xX`@
-[)O3
-2{Zn
-X0cf
-|80FO
-eG9Tu
-aZ3?Na
-[{T3
-h}c$
-:.Rq
-Xz'o
-al8_
-U?Cj|,
+ocmo
+>2??<
+d/[$XJ
+3{d=
+e?,:
+9"E&
+Av,'
+'hQ(Tr
+p,tn
+RKoI
+X3xJ
++jKt
+*IIa
+W?Kk
+PD{3
+Bl$#
 n[G'
 L:T1
 c][v$
+dJfU(
 mV2#G
 Tw!U
 _v%3#
@@ -36231,52 +36241,43 @@ O.MX
 UaAFdf
 9z:y
 YYF8
-22?ha
 )gcD
 qb^O-
->LvNz
-{Qdj
-{B:8
-3gD[
-0:;O$3N
-9nliY
-'=baXWd.
-djc*
-qD6K
-)<h)~	
-2&,hb
-V{S'J
-!hb)
-7]G?pPi
- ,r`S.4i
-1}/n
-XxO-
-1q~o
-+i:1j
-yv*{p
-Js8!Z
-LmXrl
-yHv-
-x>;'~
-+Hot+a%QD/
-"wF9
-e%8S
-a*rE`
-\wqjQk
-8|SVN
-{5aM
-dt&ON
+[Uf+
+h]v5
+)Jrp
+;(TP
+3gD[9$
+VUM2
+1*Yf
+&.E]?
+9Tn3
+>e09
+	OaK
+rE{SY
+Rp|0
+ aCa
+(~H}WF
+u6(P
+K`0{T
+?@F+
+z_>jc
+P{EFZd
+^>^h
+g\Rt
+NiW-
+/=Nz
+.G$R
+>r(b
+"LRe
+r,??
 jjaA
 h6mN^
 EHBoV
-?Hij
-gmM&
-&	6_]
-E+yk/
-NKAF8
-04Ej
-f:vq
-bdEH
+Te8`Pn
+)?{rH
+JUrJ 
+DXT}
 :]:V
 Kd5q
 6V//~
@@ -36302,38 +36303,53 @@ dBs.
 aOb`XO
 ^SG7
 e~pn`]
-%7L|
-td&x
-;;"0
-loq&
-NvMm)
-Lyc1
-|rC&
-l*1B
-~5vx
-o|Cj
-\F#h
-%-6A
-Z<r;\T
-&R:u=g
-@`%W
-Ji_Z
-0:o.
-t}?X
-r)g'
-N)*Y@J
-lX	u
-I3Gr
-c(|41
-,4vOS
-n.SS
-i67.
-KE0M}
-brb]0
-Ewc+
-5{;p
-a;&a?
-+0|x$
+(9iWs	
+B$}Z
+7@gN
+Rv8[
+m{pEe
+2t{L
+wJv1
+BACg
+7|Z{
+Qs,`
+yk[d
+.eY}
+cQxM
+8~/4
+Lz'[
+g8[)
+{EYB7
+3C,N
+UM/]o
+&mm::
+[G!b,
+8:=l
+]s~^
+Lmh|
+	KF/{
+<hU4
+h.3@
+%9:@
+(\*o
+n'1U
+X<	(O
+rWi=
+/XtL07)z
+],_1
+80)<
+D'Hz
+L+7:
+(`!P
+RqE"
+Y6B"6)Il
+{.XB\|
+Vv9|g
+&!Y5
+KsJC
+d2A9/
+PD1f
+|?I/
 $)`r
 |fC<
 Jfr7I
@@ -36346,119 +36362,123 @@ subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-O$oW
-kLGR
-\kEq
-rfSnB8
-	|eK|
-(D:z
-)DDG
-e`%w
-E&}s
-.o3^
-LTiG
-|nu:
-'l\Y
-w}E^j
-biI&e
-b+LN\'y
->Ls@P
-(J"g07 
-jTdm\S[
-a 1'
-zG)C.r
-N7%6
-	?ga
-$t<v[
-k{{_
-!fD^
-REv=
-'M(Pv
-K.53
-kR;kj
-S9"4JeU
-0/a`
-a|q9
-'$dk
-E7TX
-rjRU
-\	,t
-&q4Y
-[GcJ
-vc+_@
-m{R_J
-dNjH
-5tMx
-,FQwc
-@llK
-`30N
-%0lv
-#FuxE{ 
-`T#6p
->bB.
-74FM
-(r<u
->kst7r
-s-t8
-Pt&^KW;
-[>9x
-%$xU
-o]i##
-.+`N
-A>Sz(
-r}%X
-z}4h*
- %s>
-E3Vs
-hW4$
->#\`
-D{{]B,
-67U!HD
-:2k[
-H:$WU*
-?KVR
-km$/
+B(y'D
+Q	.o
+jhG3n
+BXvHb
+LS!x5
+pbK]^
+Wl"b@a
+SN>V
+4%>\
+tZs*
+!(Ki%
+1[8!
+>\,'
+x3a' A`i
+z{jq
+4ev<H0
+XVjA
+F4{L
+l`;BKq
+Cq~#
+C~d3
+vAKG9p
+eUlHk
+^Tne
+^-Ucx
+%ked%e\Z
+|MFo
+0H=/
+aU~Uf
+:zGQ
+5aXD'
+Z%?m$r
+6Hf^
+VSx?_
+-XXM
+k	_S
+09x_9}
+ +0`
+i49E
+cZf f8Hp2dw
+Mlk1
+:r)+\$
+P pUu
+~9iYD
+|d3MX;r
+J qN
+I6;P[XZ
+hid{
+	Lk<O
+[}.{v
+:'de5Qg
+@O_2	*
+JHfS
+jOn 
+f:Ss#t
+#?oJ
+gZ(c
+-[kN
+sXA1}
+)E~,
+8XAWN
+)iq]
+4$Mv
+j%B9
+z5I7
+"5(>8@
+3h:G
+:RSfh
+.Y8;
+*{{l
+M	 #Cn
+`@*\
+,c[sk
+87{YE
+q_?Q
+#ma3
+U-$H
+IM-z
+QCg{YI<?
+2u!X
 |(Wg
 Z!tJ
-?Z_2|
-B^dJL
-|C2pO}q
-R+-1*
-pP2V
-h5oL
-Ez:5
-8&B6
-%mk&
-+fkA
-".M;
+k/0$
+n*8&
+Ly$	
+o[Z1
+[^0;
+~|xx
+*C;{@
+`Dc 
+!27r
+mur	
 1>U*
 `"?:1
 -X2{
 SD{+
 R6f>z
 ["5!
-MO)D
-L:TW
-7e>Cq
+KGxI
+j0,03
+q. &?Z
+d@nf
+eX5+n
 H>3D
-&Ufi|Pf
-'CQE
 =OWr
 WqrV
-td[[/{
-}sbU
+j++qLq
+$dxw
+Z2pslV
+3+$xUQ
 50z{FP
 vk5qI_
 YUq&
-j5(N
-qKW,o
-(	e-A
-%{g>d
-zmaz
-'j+K
-]{%026@
-L!jDG
-K03<
+&tZKX)t^
+1N>s
+N]%>
+max:
 e:?_
 ?/n_3
 D9fD
@@ -36470,15 +36490,9 @@ b3NuXf
 |_D9
 [y\Y
 Ds?G
++1N5
 zus +
-=In{
-dlD4
-67wz
-d\=s
-*^aT/
-L-rf3'^
-?d[D
- b%KM
+^`:,@
 RXvZ
 ] lGIHIP
 1q{N#
@@ -36494,102 +36508,102 @@ N=Yz
 SN!O
 U5T8BLc
 +vPK
-^5!p
-aM8HY
-N'A5
-sd2o
-WWMM
+I5u9
+O,Ev
+`uPS
+SWOt
+|@%S
+"J3<
+M GA
 31j$
-\}bU
-65FzG
-=5\Q
->R7s
-s6nI
-D-1G
-'tO,
+Vf2n
+Ipl`
+ ;2x
+B$uWxc
 v1'V
-ex)@
-EaH-E
-FzL+
-<|f<
-On'jG
-[:aO^D
-3!$5
+$*U@c!0
+?|L|
+8xL:
+R)a@
+@<aH
+@atVX
 BJOz
-eF0}
-tvv6
-rvwq"
+3V*"
+?pi8
+swOKv
 xqt	e
-Vv'(
-I4iH
-!3hK
-z4{'\
-m=xOa
-nlXA`/
-<iw;X
-8b4%dU
-(b>[g
+l)p8
+'8Tr
+	.:n
+>pT(&
+nGCm108
+y5U9Ws
+>,b-fh
+1T5:
 O!Ww?*
 mMYPM2
 Q9Ph
 [~^)
 m3=5
 v6LJ
-I,{;K
-y~?;
->/Aoz'I
+fO'x!
+q(#4!yL
 t$6cdm:N
-W'/L
-c5:p
-tHM2
+6a}>
+hNi$}
+6c:T
+PHDL;f}r
+1DX}
+7I&/
+:9uU
+s	yT
+Ti5B
 dJ:^0
-P(6o
->x|$
-)Q<]
-k9S]
-3gP9
-,!d&3u
-|+rE
-r5"@+
-hE|;
-.-&~	z
-@9#[XR
-F;)`
--aQ<B
-w5z.s|6
-6HUu0T
-[%4D
-N[tK
-,)$W
+f[U#E
+w;~P
+rR#r
+.2&B
+;MO\
+H5|t_8
+vS[(
+A--A
+u;mA
+)Q"%
+'@z2y
+@gF(
+'lOPz
+s*yYj
+oI:@
+91u@
+kl4Q*4
 W&5X>
-1FZJ
-A@y?
-4~x&
-}rcV
-:'JX
-8TPH
-o=Tl{
-_.PLK
-[.WrE
-B_u#b
-%;n#=g
-hgbN
-\=|gR>0
-+VW*
-E614
-~Ffm
-_25Tt
-rX0ru
-LRg~
-|.tk
-97X$;{
-UZY+]
-KvH8X
-aPM'
-U803
-C1R@
+P_`E$G	
+k7CR
+`n!z
+	$c6)
+*`oi
+VRKR
+/$31-Z=
+u!GA6ZE
+.:63
+snSx
+8k2%fK
+ofGD.:
+JyFD
+9Q'LU
+D#[E
+>'o$-
+PSM5
+KbM?
+w 7Vn=
+q*zA
+"v]m
+NKiv
+*,DS
+foAU 
 JZyl
-u"Bs
+o[|b
+6~720
 qWzv
 .(&E
 rG):Uj
@@ -36621,56 +36635,58 @@ u7,Y
 <#,L
 :n-w
 OUdN	
-QnS5|5
-]Zn`
+1aYyAM%
 |8> 
 /~hCf}
-ig+K34
-=Wud
-2<dbr
-UeRr
-t	D#
-9#l*]
-$~H6
-h#[s
-X3@F
-<N}j
-~Uwm
-d."P
-pTJQk
+@0G8h`G
+H4^e
+/)*7T
+W\u+
+	$+\`
+=iL0
+7L=A
+'G,x
+h?Zq
+F~PP0R'
+SlDe
+)OXK
+)ujM
+gm\hMR
+dA,@
 DMn!
-T[;l
-qgVD/o
-	='}
-cp`Z^b
-T0 2`
-_=kZ89DL
-v3)7{
-04P2
-6\}ev
-=Us!
-c	Mfx
-Z@tvf
-aWV9
-nQW$J'Y
-4`"@
-'p)'S.
-/5Xk
-B>O=
-MXx<
-:0oL
-0eS?`
-0&Vt
-j9AY
-$\!q
-SsR7
-^npi
-ba	~QgWO0
-)?b}g@
-E]_I
-ZLb6?
-H7Wh
-D,~u
+n>cB
+41/b9s
+mI}L
+~Kug
+F&PC
+^XU|
+1K|4
+}HFA
+%M,C`y`d
+Ue&4
+Fd[S
+%(yY\
+awG"6
+R{Ua{
+#D"Ell
+j3-{
+<N%<=
+pu|qt}
+ZT/h
+]lz(
+h}p=
+PCBu
+B1V-
+b =n
+ND7h
+%0+SRS
+hW)"
+7cVw'
+?YX+
+^bsq_*
+$d[U
+'MXA[.
+r]{z
 qE8q.
 }>S%xC
 -SHf
@@ -36679,12 +36695,14 @@ jK_$
 a50(f
 [,3n
 LAX#G
-Un2c2C
-F$Iv,
-Q-@*Cqnk
-l#{e
-)f\@
-9Q$&S
+!eN-
+,)	@
+&7bL
+>Se?
+%1&0
+ouSe[
+r=1$
+MM	RY
 /\9i)
 _<^1
 ))X7
@@ -36714,51 +36732,63 @@ jg!]
 _v"#-
  +h0f?
 .%4	
-"EM&
-|@yg
-]b%on
-nv9}
-W>*>8
-~AIaMx
-(/)[	
-#nX#
-Ys'6
-|}^G
-y-(R
-{'Jf
-\zMv
-b`sl.
-2-|:
-Y\nS
-0pl5
-xt6L
-:IVz"
-8kHK
-3l3ED
-J-c6
-W!TWH\
-a\k ?a
-)ehg
-	r%T
-n!1\vB
-}f)q
-GZ-z
-5|%S
-;X"\
-Zcimu
-!HK>}
-\t24
-h||o
-C	GX
-j:yf
-Oo&O
-U]-V
-NRi-
-N|g-
-!!Um
-#<D(Y
-.Rp;
-S&^s~%
+FRsM
+m>~g
+dr^<
+Mu]Z
+s=q#"
+6JK*
+B6	;
+ND)sp}
+o]z)
+B(q+
+9RY2
+2tLb
+S.13
+BLc.
+23(}sao
+ &;3
+S]933
+Vyaq
+(0"rZ
+=ln4s{
+CtnLr$)
+Yx_D
+>beU*
+*E^X!
+	] n
+aT+_
+9Ppn
+b+g(
+QSY}Vr
+u`0K
+Wx]D3
+sz?l
+Opuo
+EF	U
+GEhK
+YJRt
+IT\h
+Z%Yb
+Lfb~7^
+SzGb
+lA|:
+(Sv{5I
+/Mh,
+S`;6
+M&d 
+.>y<
+f~(;3
+"yg*"
+H~uW
+'LyB
+i`LQ
+u`98RS$v
+-Sd7c
+mMD~
+Iqth
+('|9
+pJN|
 osu[
 Ei+V
 v9{R
@@ -36825,9 +36855,8 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231025184101Z0/
-+c0[
-9E)NW
+231027232525Z0/
+u@0-
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -36835,39 +36864,38 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		cqHw6bmGP2WvOUUpTlfArBDvBdE=
+		tfX403kbHdPjucrOzEi6roiJdUA=
 		</data>
 		<data>
-		uPR4BpBP8eifeF/+QkSzcncX+0M=
+		zmp3nQ4Fd960mzLZer8gbTS1KN8=
 		</data>
 	</array>
 </dict>
 </plist>
-*9&<9)F
-ybs-
- J`fo
-:_8R
-;aAa 
-20231025184146Z0
+,CMUem
+;Z]'
+WVQk*
+][~9
+Qz!h
+Wj#K
+20231027232537Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231019211004Z
-231130211003Z0B1
-Timestamp Signer NWK11
+231019205532Z
+231130205531Z0B1
+Timestamp Signer NWK21
 Apple Inc.1
-$qJK
-mc.V_l
-\+\V
+S2/k4
+]-lU
+)sX]
+g6;h
+2Z72
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-X3zP
-27,=Dr
-k]mh
-MM.):t
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -36906,11 +36934,11 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231025184146Z0#
-kA8^
-$2+%_
-uZds
-ChQ;
+231027232537Z0#
+)b/{d
+>C4C
+gs?.8Mq
+8GbV
 __TEXT
 __text
 __TEXT
@@ -36986,7 +37014,6 @@ AVSI
 AWAVAUATSH
 dummL
 ([A\A]A^A_]
-547@
 I0IcU`H
 A0HcW`H
 AWAVAUATSH
@@ -37021,8 +37048,9 @@ AVSI
 [A^]
 AWAVAUATSPH
 [A\A]A^A_]
-=._=
+=_^=
 AWAVATSH
+=w]=
 [A\A^A_]
 AWAVAUATSH
 Hcw H
@@ -37039,12 +37067,10 @@ HcO$H
 G Ic
 h[A\A]A^A_]
 AWAVAUATSH
-5#$@
 X[A\A]A^A_]
 AWAVATSH
 0[A\A^A_]
 AWAVAUATSH
-5B!@
 8[A\A]A^A_]
 AWAVAUATSH
 G Hi
@@ -37065,9 +37091,10 @@ AWAVSP
 AWAVAUATSPA
 [A\A]A^A_]
 AWAVAUATSH
-=PK=
+=	K=
 t:I9
 tPI)
+=:J=
 [A\A]A^A_]
 AVSH
 sp[A^]
@@ -37075,19 +37102,20 @@ AVSH
 [A^]
 AWAVSPI
 [A^A_]
-=[E=
 9p,vIH
-=wD=
+=0D=
 [A^]
-=@D=
 [A^]
 9p,vIH
 [A^]
+=sC=
 [A^]
 AWAVAUATSH
-=%C=
+=ID=
+=fB=
+=~B=
 [A\A]A^A_]
-=I@=
+=PB=
 AWAVSPH
 {(E1
 [A^A_]
@@ -37102,15 +37130,19 @@ x[A\A]A^A_]
 AWAVSPA
 [A^A_]
 AWAVAUATSH
+=L:=
 x[A\A]A^A_]
 AWAVAUATSH
+=[9=
 @0Ic
 HcPtH
+=H6=
 [A\A]A^A_]
 AWAVAUATSP
 E9nXv
 L X9
 u*B9\ \tmH
+=v3=
 L \A
 [A\A]A^A_]
 AWAVAUATSH
@@ -37137,6 +37169,7 @@ Xu$D9t
 E9u(v
 L0XD9
 u&D9t0\tmH
+=x+=
 D0\A
 t_Ic
 E9}(v
@@ -37146,14 +37179,15 @@ Xu#H
 AWAVAUATSPI
 [A\A]A^A_]
 AWAVAUATSPI
+=l,=
+=G,=
 ~(Ik
 [A\A]A^A_]
 ~(Mk
 AWAVAUATSH
-5(*=
 \$dA
 L$`L
-5b)=
+5))=
 |$ L
 	H;M
 [A\A]A^A_]
@@ -37161,7 +37195,6 @@ AWAVSPI
 ~,E1
 [A^A_]
 AWAVAUATSH
-=K'=
 P@A9
 PHA9
 L$ H
@@ -37182,7 +37215,7 @@ u,9L0
 [A^]
 AWAVATSI
 |$hH
-=d =
+=2 =
 [A\A^A_]
 AVSH
 [A^]
@@ -37437,6 +37470,7 @@ Mc}(L
 E(L9
 w*IcM8H
 } Ic]8L
+5_{?
 ([A\A]A^A_]
 AWAVAUATSP
 tqMc
@@ -37490,17 +37524,17 @@ AWAVAUATSH
 HLA8
 [A\A]A^A_]
 AWAVATSH
-5G[?
 P[A\A^A_]
 P[A\A^A_]
 AWAVAUATSPH
 [A\A]A^A_]
 [A\A]A^A_]
 AWAVAUATSH
-5yX?
+5IT?
 uIA9
 H[A\A]A^A_]
 AWAVAUATSH
+5qQ?
 8[A\A]A^A_]
 AWAVAUATSH
 Q E1
@@ -37567,7 +37601,7 @@ AVSD
 AWAVATSH
 0[A\A^A_]
 AWAVAUATSH
-=Ov<
+=7v<
 [A\A]A^A_]
 [A^]
 AWAVSPH
@@ -37632,8 +37666,8 @@ AVSH
 AVSH
 [A^]
 AWAVAUATSH
-=:O<
-=ue<
+=.O<
+=ke<
 [A\A]A^A_]
 AVSH
 [A^]
@@ -37641,17 +37675,16 @@ AWAVATSH
  [A\A^A_]
 AVSH
 [A^]
-=za<
+=pa<
 AWAVAUATSP
-= a<
 w.IcM H
 Mc} L
 [A\A]A^A_]
 AWAVATSI
 IcG H9
 G A9G0t
-=R_<
-=._<
+=H_<
+=$_<
 [A\A^A_]
 AWAVATSH
 w-Ic
@@ -37662,30 +37695,29 @@ AWAVAUATSPI
 [A\A]A^A_]
 AWAVAUATSPH
 w-Hc
-= D<
 [A\A]A^A_]
 AWAVAUATSH
-=^\<
+=[\<
 h[A\A]A^A_]
 AWAVAUATSH
-=LX<
-=d=<
+=IX<
+=X=<
 tUE9
 [A\A]A^A_]
 AWAVAUATSPI
 w1Ic
-=>;<
+=2;<
 [A\A]A^A_]
 AWAVAUATSPI
 H91u
 [A\A]A^A_]
 AWAVATSH
-=!P<
 IcD$ H9
 [A\A^A_]
 AVSH
 [A^]
-=JM<
+=~M<
+=@M<
 AVSH
 =Q	E
 [A^]
@@ -37693,19 +37725,16 @@ AVSH
 AWAVSPA
 [A^A_]
 AWAVAUATSH
-5uN<
+5yN<
 H[A\A]A^A_]
 AWAVAUATSPH
 [A\A]A^A_]
 AWAVATSH
-5QK<
-='K<
+5UK<
+=+K<
 [A\A^A_]
 AWAVATSH
-5|J<
-5iJ<
-5{J<
-=}H<
+5tJ<
 [A\A^A_]
 AWAVAUATSH
 )G@A
@@ -37724,11 +37753,11 @@ AVSH
 [A^]
 AWAVAUATSH
 Q<Ic
-5NE<
+5YE<
 H[A\A]A^A_]
 AWAVAUATSPH
 hpIc
-5VD<
+5aD<
 [A\A]A^A_]
 AWAVSPH
 [A^A_]
@@ -37739,11 +37768,6 @@ Q [A^]
 AWAVAUATSP1
 [A\A]A^A_]
 AWAVAUATSH
-=n@<
-5A&<
-5W&<
-5.&<
-5E&<
 D$$E
 l$(1
 D$,I
@@ -37754,6 +37778,7 @@ AWAVAUATSH
 uCE9
 u>;]
 [A\A]A^A_]
+=1<<
 AWAVSPA
 [A^A_]
 AWAVSPA
@@ -37768,7 +37793,7 @@ t$0D
 l$(H
 [A\A]A^A_]
 AWAVAUATSH
-=_9<
+=x9<
 h[A\A]A^A_]
 AVSH
 P8HcK
@@ -37781,7 +37806,6 @@ AWAVAUATSH
 w.HcM
 X[A\A]A^A_]
 AVSI
-=g1<
 3[A^]
 AWAVAUATSH
 [A\A]A^A_]
@@ -37804,12 +37828,11 @@ AWAVATSA
  s_I
 >[A\A^A_]
 AVSA
-=J#<
+=j#<
 [A^]
 [A^]
 [A^]
 AVSH
-5n"<
 [A^]
 AWAVATSD
 ?[A\A^A_]
@@ -38058,7 +38081,6 @@ AWAVSH
 	H;M
 [A^A_]
 AVSH
-5|e>
 =*.*
 *t"H
 [A^]
@@ -38161,7 +38183,7 @@ AVSH
 	w{H
 [A^]
 AWAVATSH
-5s?>
+5C;>
 A#D$
 [A\A^A_]
 AWAVSPH
@@ -38197,7 +38219,6 @@ AVSH
 ^,fA
 [A^]
 AWAVSH
-5(:>
 ([A^A_]
 AWAVAUATSH
 =zDD
@@ -38261,6 +38282,7 @@ AWAVAUATSH
 ,$E1
  uWH
 tqHc{
+=.};
 	H;M
 AWAVSP
 t6IcF
@@ -38268,7 +38290,6 @@ t6IcF
 [A^A_]
 AWAVSPA
 ujE1
-=q{;
 [A^A_]
 AWAVATSI
 |$$E
@@ -38287,9 +38308,8 @@ t"IcG
 [A^A_]
 [A^A_]
 AVSA
-=ux;
 C D9
-=.x;
+=Gx;
 C D)
 [A^]
 AWAVATSH
@@ -38327,50 +38347,55 @@ AVSH
 [A^]
 AVSH
  uCHcK
-55l;
 [A^]
 AVSA
-=wo;
-=Uo;
+=uo;
 x1tS
+=!o;
 [A^]
 AVSI
-=;n;
+=[n;
 [A^]
 AWAVSP
 [A^A_]
 AWAVATSA
 [A\A^A_]
-=Xk;
+=#l;
+=xk;
 'Icv
 [A^]
 'Icv
 [A^]
 AWAVSPA
-=*j;
+=Jj;
+=%j;
 [A^A_]
 [A^A_]
 AVSH
 [A^]
 AWAVAUATSH
-=dh;
+=%i;
 8[A\A]A^A_]
 8[A\A]A^A_]
 t%UH
 AWAVSPH97
 [A^A_]
+=(g;
 AWAVSH
+=:g;
 [A^A_]
 	H;M
 	H;M
 AWAVSH
-=-e;
+=be;
 [A^A_]
 AWAVSPH
 t,Hc
 [A^A_]
 AWAVAUATSH
-=3c;
+=Pd;
+=ac;
+=?c;
 rlL9
 [A\A]A^A_]
 	H;M
@@ -38378,11 +38403,10 @@ AWAVAUATSH
 [A\A]A^A_]
 	H;M
 AWAVAUATSH
-=Z^;
 ([A\A]A^A_]
 AWAVSP
-=b^;
 [A^A_]
+=$\;
 AVSH
 [A^]
 AWAVSPI
@@ -38393,6 +38417,7 @@ IcF`H9
 AVSH
 [A^]
 x4UH
+5KZ;
 AVSH
  [A^]
 AWAVSPH
@@ -38455,11 +38480,13 @@ AWAVAUATSPI
 [A\A]A^A_]
 [A\A]A^A_]
 AWAVAUATSH
-5uG;
+5,G;
 D81u
 E8t$
 X[A\A]A^A_]
 AWAVATSH
+5GC;
+5ZC;
 <%w=
 @[A\A^A_]
 AWAVAUATSPH
@@ -38480,7 +38507,6 @@ gfffH
 AWAVSH
 8[A^A_]
 ;rAH
-5i:;
 4PfA
 4HfA
 8[A^A_]
@@ -38488,16 +38514,17 @@ AWAVATSI
 [A\A^A_]
 AVSH
 -inf
-5;8;
+5{8;
 P[A^]
 AVSH
 -inf
-5x6;
+5@7;
 P[A^]
 AWAVSPH
 [A^A_]
 [A^A_]
 AWAVAUATSH
+506;
 5tGH
 [A\A]A^A_]
 AVSH
@@ -38507,16 +38534,17 @@ AVSH
 AWAVSH
 8[A^A_]
 AWAVAUATSH
-5*0;
+5j0;
 8[A\A]A^A_]
 AWAVAUATSH
+5-/;
 H[A\A]A^A_]
 AWAVAUATSPM
 [A\A]A^A_]
 AWAVAUATSH
+5D-;
 H[A\A]A^A_]
 AWAVSH
-5k,;
 8[A^A_]
 AWAVAUATSH
 ([A\A]A^A_]
@@ -38542,25 +38570,25 @@ C0[A\A^A_]
 AWAVSPI
 [A^A_]
 AWAVATSH
-53%;
+5s%;
 O0H9
+5V%;
 O0H)
 @[A\A^A_]
 AWAVATSH
-5_$;
 @[A\A^A_]
 AWAVSPL
 [A^A_]
 AWAVAUATSH
-5]";
 Pr?A
 8[A\A]A^A_]
 AWAVAUATSH
-55!;
+5u!;
 L$ H
-51 ;
+5q ;
 H[A\A]A^A_]
 AWAVATSH
+5) ;
 O0H9
 O0H)
 @[A\A^A_]
@@ -38640,7 +38668,6 @@ E8|$
 3D;s
 H[A\A]A^A_]
 AWAVSH
-5X	;
 8[A^A_]
 AWAVATSH
 @[A\A^A_]
@@ -38794,11 +38821,11 @@ tPE1
 L99t
 [A\A^A_]
 AWAVAUATSH
-5?{:
 >D;?|
 >D;?|
 H[A\A]A^A_]
 AWAVATSH
+5Fs:
 @[A\A^A_]
 9r @
 9p ~
@@ -38816,7 +38843,6 @@ t-UH
 AVSH
 [A^]
 AWAVSH
-5vq:
 8[A^A_]
 AWAVSH
 8[A^A_]
@@ -38844,20 +38870,24 @@ L97u
 AWAVATSH
 [A\A^A_]
 AWAVSH
-5he:
 [A^A_]
 AWAVSH
 [A^A_]
 AWAVSP
 [A^A_]
 AWAVSH
+5Xd:
 [A^A_]
 AVSH
 @[A^]
 AWAVSH
+5,b:
+5:b:
 X[A^A_]
 AWAVATSH
+51a:
 P`I9
+58a:
 	H;M
 [A\A^A_]
 AVSH
@@ -38870,38 +38900,38 @@ AWAVSPI
 <u4H
 [A^A_]
 AVSH
-57]:
+5w]:
 @[A^]
 AWAVAUATSH
 _(I9
-5P]:
+5Sc:
 ]8Ic
 E)eTA
+5([:
 H[A\A]A^A_]
 D%(I
 AWAVAUATSH
-5rX:
 $tFH
-58X:
-50X:
+5xX:
+5pX:
 $I;D$
-5\^:
+5?X:
+5CW:
 8[A\A]A^A_]
 AWAVAUATSH
 8[A\A]A^A_]
 AWAVAUATSH
 IcT$
-5~U:
 tXIc
 H[A\A]A^A_]
 AWAVAUATSH
-5*T:
+5jT:
 tXIc
 H[A\A]A^A_]
 AWAVATSH
 [A\A^A_]
 AVSI
-5>U:
+5~U:
 [A^]
 AVSH
 [A^]
@@ -38998,33 +39028,31 @@ AVSH
 [A^]
 [A^]
 AWAVSH
+5,0:
 8[A^A_]
 AWAVAUATSH
-5l/:
+5?/:
+580:
 8[A\A]A^A_]
 AWAVSH
-5=.:
+5}.:
 8[A^A_]
 AWAVSH
-5H,:
-5!,:
+5a,:
 8[A^A_]
 AWAVSH
-5v+:
-5O+:
 8[A^A_]
 AWAVSH
 L;8tAH
-5*+:
+5j+:
 8[A^A_]
 AVSH
 @[A^]
 AWAVAUATSH
-5f(:
-5?(:
 8[A\A]A^A_]
 AWAVSH
-5"':
+5+(:
+5b':
 8[A^A_]
 AWAVSH
 L;8t
@@ -39033,26 +39061,22 @@ L;8t
 AWAVATSA
 [A\A^A_]
 AWAVSH
-54%:
+5t%:
+5"%:
 8[A^A_]
 AWAVAUATSH
-5F$:
-5?%:
 8[A\A]A^A_]
 AWAVSH
-5{#:
 8[A^A_]
 AWAVSH
-5~!:
-5W!:
 8[A^A_]
 AWAVSH
 8[A^A_]
 AWAVSH
 L;8tAH
-5\ :
 8[A^A_]
 AVSH
+5& :
 @[A^]
 AWAVAUATSH
 8[A\A]A^A_]
@@ -39119,6 +39143,7 @@ AWAVSH
 AWAVAUATSH
 8[A\A]A^A_]
 AWAVSH
+52h:
 8[A^A_]
 AWAVSH
 8[A^A_]
@@ -39144,6 +39169,7 @@ AWAVSH
 AWAVAUATSH
 8[A\A]A^A_]
 AWAVSH
+5\]:
 8[A^A_]
 AWAVSH
 8[A^A_]
@@ -39169,7 +39195,6 @@ AWAVSH
 AWAVAUATSH
 8[A\A]A^A_]
 AWAVSH
-5JR:
 8[A^A_]
 AWAVSH
 8[A^A_]
@@ -39432,6 +39457,7 @@ UUUUUUUUH!
 AVSH
 @[A^]
 AVSH
+5@}9
 @[A^]
 AWAVAUATSH
 UUUUUUUUH!
@@ -39455,8 +39481,11 @@ AWAVAUATSH
 @ D	
 X[A\A]A^A_]
 AWAVAUATSH
-5%q9
-5P:9
+5%r9
+5:r9
+5eq9
+5Eq9
+5w:9
 h[A\A]A^A_]
 AWAVATSI
 [A\A^A_]
@@ -39559,8 +39588,10 @@ L$HA
 D$PA
 \$TI
 \$XA
+5|$9
 |$ H
 |$ I
+5Z#9
 |$(H
 |$(I
 |$(H
@@ -39591,7 +39622,7 @@ AVSH
 AWAVAUATSH
 D$(H
 D$ H
-58p9
+5xp9
 	H;M
 [A\A]A^A_]
 AWAVAUATSH
@@ -39602,21 +39633,20 @@ D$(H
 D$ H
 D$(H
 D$ H
-5UH9
 D$(H
 D$ H
-5BG9
 D$(H
 D$ H
+5^F9
 HcA8I9
 D$(H
 D$ H
 D$(H
 D$ H
-5zC9
 HcA<I9
 D$(H
 D$ H
+5RB9
 [A\A]A^A_]
 AWAVAUATSH
 \$(H
@@ -39634,44 +39664,49 @@ D$HB
 D$HB
 D$(H
 D$ H
-5u99
 IcD$|I
 \7PL9
 D$(H
 D$ H
+5<89
 D$(H
 D$ H
 D$(H
 D$ H
-5359
+5s59
 \$(H
 |$ L
-5Y49
 D$(H
 D$ H
+5[39
 D$(H
 D$ H
+5D29
+D$(H
+D$ H
+5 19
+\$(H
+|$ L
 D$(H
 D$ H
 \$(H
 |$ L
-5u/9
-D$(H
-D$ H
-5a.9
-\$(H
-|$ L
+5U-9
 [A\A]A^A_]
 AWAVAUATSH
 \$(H
 |$ H
+5#)9
 \$(L
 d$ L
-5&%9
+5f%9
 \$(L
 d$ L
-57|9
-5a"9
+5L$9
+5A}9
+5	$9
+5w|9
+5B"9
 [A\A]A^A_]
 AWAVAUATSH
 |$(H
@@ -39748,13 +39783,11 @@ UUUUUUUUH!
 33333333H
 H[A\A]A^A_]
 AWAVAUATSH
-5Db;
 ([A\A]A^A_]
 AWAVSPL
 [A^A_]
 [A^A_]
 AWAVATSH
-51m;
 @[A\A^A_]
 AWAVAUATSH
 [A\A]A^A_]
@@ -39818,8 +39851,6 @@ AWAVAUATSH
 AWAVAUATSH
 X[A\A]A^A_]
 AWAVAUATSH
-5(4;
-5L2;
 [A\A]A^A_]
 t$ A
 Hc@ I9
@@ -39958,26 +39989,31 @@ AWAVAUATSH
 #t	H
 [A\A]A^A_]
 AWAVAUATSH
+57z8
 [A\A]A^A_]
 AWAVAUATSH
 L+`HI
 t!L9
+5Vu8
 [A\A]A^A_]
 AWAVAUATSH
 X[A\A]A^A_]
 AWAVAUATSH
 D$PH
-5Kn8
+5=l8
+56l8
 \$(H
 |$ H
+5Ak8
 t$(H
 T$ H
-5#i8
-5%i8
+5ci8
+5ei8
 [A\A]A^A_]
 A;|$l}
 \$(H
 |$ H
+5K_8
 AWAVAUATSP
 <_t5A
 [A\A]A^A_]
@@ -39995,16 +40031,11 @@ AWAVAUATSH
 <_u	I
 HcA,I9
 L$8I
-5JS8
-5CS8
 [A\A]A^A_]
-=gi8
 AWAVAUATSH
 D$(L
-5<r8
-5DP8
-56O8
-5aD8
+5|r8
+5vO8
 [A\A]A^A_]
 AWAVAUATSH
 X[A\A]A^A_]
@@ -40013,9 +40044,9 @@ X[A\A]A^A_]
 AWAVAUATSH
 M#t$
 l$0M
-5#i8
+5ci8
 l$0H
-5/H8
+5oH8
 x[A\A]A^A_]
 AWAVAUATSH
 X[A\A]A^A_]
@@ -40039,7 +40070,6 @@ D$(J
 L$(J
 D$(H
 D$ H
-5t@8
 D$hI
 L$0I
 L+z0I
@@ -40061,23 +40091,16 @@ UUUUUUUUH!
 u'D9O
 t$(H
 T$ H
-5U68
 t$(H
 T$ H
-5q68
 !u.H
 t$(H
 T$ H
-5m38
-5J18
-5}18
 L$(H
 t$(H
 L$ H
-5618
-5W/8
+5v18
 [A\A]A^A_]
-5m!8
 AWAVAUATSPI
 IcG,I
 [A\A]A^A_]
@@ -40086,19 +40109,14 @@ l$ M
 IcD$(I
 [A\A]A^A_]
 AWAVAUATSH
-5I)8
-5$(8
+5d(8
 X[A\A]A^A_]
 AWAVAUATSH
-5m98
-5g88
-5c88
-5<88
-5,88
+5N98
+5|88
+5l88
 8[A\A]A^A_]
 AWAVSH
-5v68
-5E68
 8[A^A_]
 AWAVAUATSH
 l$(M
@@ -40116,6 +40134,7 @@ IcD$|H
 AWAVAUATSH
 ;W }YL
 IcF,H
+5D%8
 [A\A]A^A_]
 AWAVSPI
 A;_(|
@@ -40130,7 +40149,7 @@ IcE0I
 [A\A]A^A_]
 AWAVAUATSH
 [A\A]A^A_]
-5+(8
+5k(8
 AWAVAUATSH
 IcEtI
 IcExI
@@ -40152,8 +40171,7 @@ AWAVAUATSH
 8[A\A]A^A_]
 AWAVAUATSH
 D$(H
-5gg:
-5[98
+57c:
 APL9
 [A\A]A^A_]
 AWAVATSH
@@ -40233,7 +40251,7 @@ AWAVAUATSH
 [A\A]A^A_]
 [A\A]A^A_]
 AWAVAUATSH
-5iN:
+5TP:
 UUUUUUU
 	H;M
 [A\A]A^A_]
@@ -40688,12 +40706,12 @@ P(I9
 [A^]
 Z L)
 AWAVATSH
-5Z07
 [A\A^A_]
 AWAVAUATSH
 fffffff
 <$H)
 3333333
+5H.7
 D$0I
 |$8M
 l$@H
@@ -40719,14 +40737,14 @@ AWAVAUATSH
 H[A\A]A^A_]
 AWAVAUATSH
 L;8t"I
+5^#7
 M9<$t
 |$ H
-5e"7
-5T"7
 I;EpL
-5'!7
-55 7
-5$ 7
+5g!7
+5V!7
+5u 7
+5d 7
 [A\A]A^A_]
 AWAVATSH
 [A\A^A_]
@@ -41167,9 +41185,10 @@ AWAVSPI
 [A^A_]
 [A^A_]
 AWAVSH
+5-t6
 8[A^A_]
 AWAVATSH
-59s6
+5ys6
 |$ I
 |$(I
 |$0I
@@ -41184,7 +41203,6 @@ D$LA	\$
 D$XA	\$
 @[A\A^A_]
 AWAVATSH
-5mp6
 t$HA
 D$PA
 D$TA
@@ -41202,6 +41220,7 @@ AVSI
 AVSH
 @[A^]
 AVSH
+5]u6
 @[A^]
 AVSH
 @[A^]
@@ -41217,20 +41236,20 @@ AVSI
 [A^]
 [A^]
 AWAVSH
-5)g6
+5ig6
 8[A^A_]
 AWAVATSH
-5uf6
 |$ H
 D$ I
 @[A\A^A_]
 AWAVSH
-59e6
+5ye6
 8[A^A_]
 t!UH
 AVSI
 [A^]
 AVSH
+5/l6
 @[A^]
 AWAVAUATSH
 UPE	~
@@ -41241,9 +41260,9 @@ t`I96
 [A^A_]
 [A^A_]
 AWAVSH
+5K_6
 8[A^A_]
 AWAVSH
-5Y^6
 8[A^A_]
 t!UH
 AVSI
@@ -41251,7 +41270,7 @@ AVSI
 AVSH
 [A^]
 AVSH
-5'd6
+5gd6
 F`H;
 @[A^]
 AVSH
@@ -41289,6 +41308,7 @@ D$@L
 AWAVSH
 8[A^A_]
 AWAVATSH
+5QN6
 |$`I
 |$hH
 D$hI
@@ -41300,13 +41320,14 @@ t!UH
 AVSI
 [A^]
 AVSH
-5.S6
+5nS6
 @[A^]
 AVSI
 [A^]
 AVSH
 @[A^]
 AVSH
+5:I6
 @[A^]
 AWAVAUATSH
 WPE	n
@@ -41335,7 +41356,7 @@ t!UH
 AVSI
 [A^]
 AVSH
-5'G6
+5gG6
 @[A^]
 AVSH
 [A^]
@@ -41343,6 +41364,7 @@ AVSH
 F0H;
 @[A^]
 AVSH
+5E=6
 @[A^]
 AWAVAUATSH
 HcS 
@@ -41363,14 +41385,15 @@ Lcg H
 [A\A]A^A_]
 [A\A]A^A_]
 AWAVSH
+5W56
 8[A^A_]
 AWAVATSH
-5c46
 |$0I
 |$8H
 D$8I
 @[A\A^A_]
 AWAVSH
+5U36
 8[A^A_]
 t!UH
 AVSI
@@ -41380,6 +41403,7 @@ AVSH
 AVSI
 [A^]
 AVSH
+5M86
 F H;
 F(H;
 @[A^]
@@ -41400,9 +41424,9 @@ AWAVSPI
 [A^A_]
 [A^A_]
 AWAVSH
+5Y&6
 8[A^A_]
 AWAVATSH
-5e%6
 |$ I
 |$(I
 |$0H
@@ -41411,13 +41435,13 @@ D$0I
 D$9A	\$
 @[A\A^A_]
 AWAVSH
-5a#6
 NLA	F(H
 8[A^A_]
 t!UH
 AVSI
 [A^]
 AVSH
+5;*6
 @[A^]
 AVSI
 [A^]
@@ -41856,71 +41880,67 @@ AVSH
 AVSH
 [A^]
 AWAVSH
-5BJ5
+5ZJ5
 8[A^A_]
 AWAVSH
-5BI5
-8[A^A_]
-AWAVSH
-5nH5
-5FH5
-8[A^A_]
-AWAVSH
-5tG5
+5ZI5
 8[A^A_]
 AWAVSH
 8[A^A_]
 AWAVSH
 8[A^A_]
 AWAVSH
-5 E5
 8[A^A_]
 AWAVSH
-5ND5
-5&D5
+54F5
 8[A^A_]
 AWAVSH
-5|C5
-5TC5
+5`E5
+58E5
+8[A^A_]
+AWAVSH
+5fD5
+8[A^A_]
+AWAVSH
 8[A^A_]
 AWAVSH
 8[A^A_]
 AWAVATSH
-5,D5
-@[A\A^A_]
-AWAVATSH
-5vC5
-@[A\A^A_]
-AWAVATSH
-@[A\A^A_]
-AWAVATSH
-5&B5
-@[A\A^A_]
-AWAVATSH
-5~A5
-@[A\A^A_]
-AWAVATSH
-@[A\A^A_]
-AWAVATSH
-5.@5
+5lD5
 @[A\A^A_]
 AWAVATSH
 @[A\A^A_]
 AWAVATSH
 @[A\A^A_]
 AWAVATSH
-56>5
+5fB5
 @[A\A^A_]
 AWAVATSH
 @[A\A^A_]
 AWAVATSH
 @[A\A^A_]
 AWAVATSH
-5><5
+5n@5
 @[A\A^A_]
 AWAVATSH
 @[A\A^A_]
 AWAVATSH
+@[A\A^A_]
+AWAVATSH
+5v>5
+@[A\A^A_]
+AWAVATSH
+@[A\A^A_]
+AWAVATSH
+5&=5
+@[A\A^A_]
+AWAVATSH
+5~<5
+@[A\A^A_]
+AWAVATSH
+@[A\A^A_]
+AWAVATSH
+5.;5
 @[A\A^A_]
 AVSH
 [A^]
@@ -41982,32 +42002,16 @@ AWAVAUATSPI
 [A\A]A^A_]
 AWAVATSH
 @[A\A^A_]
-AWAVSH
-5}.5
-8[A^A_]
-AWAVAUATSH
-s	I9
-([A\A]A^A_]
-AWAVSH
-8[A^A_]
 AWAVSH
 8[A^A_]
 AWAVAUATSH
 s	I9
 ([A\A]A^A_]
 AWAVSH
-5W*5
+5(.5
 8[A^A_]
-AWAVAUATSH
-s	I9
-([A\A]A^A_]
 AWAVSH
-8[A^A_]
-AWAVAUATSH
-s	I9
-([A\A]A^A_]
-AWAVSH
-5''5
+5/,5
 8[A^A_]
 AWAVAUATSH
 s	I9
@@ -42023,7 +42027,23 @@ AWAVAUATSH
 s	I9
 ([A\A]A^A_]
 AWAVSH
-5_"5
+5g'5
+8[A^A_]
+AWAVAUATSH
+s	I9
+([A\A]A^A_]
+AWAVSH
+8[A^A_]
+AWAVAUATSH
+s	I9
+([A\A]A^A_]
+AWAVSH
+57$5
+8[A^A_]
+AWAVAUATSH
+s	I9
+([A\A]A^A_]
+AWAVSH
 8[A^A_]
 AWAVAUATSH
 s	I9
@@ -42136,24 +42156,23 @@ v1M9
 AWAVSH
 ([A^A_]
 AWAVATSH
-5Z45
 @[A\A^A_]
 @[A\A^A_]
 AWAVATSH
-5925
-5w25
+5y25
 P[A\A^A_]
 AWAVAUATSH
-5E15
+5D15
 8[A\A]A^A_]
 AVSH
-5G05
+5B05
+5F/5
 P[A^]
 AWAVAUATSH
+59/5
 8[A\A]A^A_]
 AWAVATSH
 D$8A
-5n-5
 |$0H
 P[A\A^A_]
 AWAVAUATSH
@@ -42204,6 +42223,8 @@ AVSH
 [A^]
 AWAVAUATSH
 7E;w
+5W<5
+5/<5
 $A;\$
 $A;\$
 [A\A]A^A_]
@@ -42248,7 +42269,6 @@ H+X0H
 A;FDt\H
 H[A\A]A^A_]
 AWAVAUATSH
-5W	5
 H+X0H
 A;FDt\H
 H[A\A]A^A_]
@@ -42594,7 +42614,8 @@ AWAVATSH
 ?H9zPt
 0[A\A^A_]
 AWAVSH
-5(C4
+5hC4
+5@C4
 8[A^A_]
 AWAVATSH
 ?H9zPt
@@ -42604,7 +42625,6 @@ AWAVSH
 AWAVAUATSH
 ?H9zPt
 |$@A
-5\>4
 H[A\A]A^A_]
 AVSI
 t)Hc
@@ -42613,9 +42633,9 @@ AWAVAUATSH
 X[A\A]A^A_]
 AWAVAUATSH
 CxD9hPtPH
-51}4
-56|4
-5Y|4
+5J}4
+5q}4
+5v|4
 X[A\A]A^A_]
 H+P0H
 AWAVATSI
@@ -42627,18 +42647,19 @@ AWAVATSH
 AWAVATSH
 0[A\A^A_]
 AVSH
+5O{4
 @[A^]
 H+P0H
 AWAVAUATSH
-5Qt4
-54u4
+5Bu4
+5tu4
+51u4
 X[A\A]A^A_]
 AWAVSH
 ([A^A_]
 AWAVSH
 ([A^A_]
 AWAVAUATSH
-5Eu4
 oN0I
 ~-E1
 t$hL
@@ -42654,45 +42675,46 @@ AWAVSP
 AWAVSPI
 [A^A_]
 AVSH
+5]n4
 @[A^]
 AWAVAUATSH
 H+X0H
 A;FDt\H
-5Ao4
-H[A\A]A^A_]
-AWAVAUATSH
-5Ud4
-H+X0H
-A;FDt\H
-55n4
 H[A\A]A^A_]
 AWAVAUATSH
 H+X0H
 A;FDt\H
+57n4
+5un4
+H[A\A]A^A_]
+AWAVAUATSH
+5Kc4
+H+X0H
+A;FDt\H
+5+m4
 H[A\A]A^A_]
 AWAVAUATSH
 H+X0H
 A;FDt\H
-5ck4
 H[A\A]A^A_]
 AWAVAUATSH
-5w`4
 H+X0H
 A;FDt\H
-5Wj4
+5Yj4
 H[A\A]A^A_]
 AWAVAUATSH
-5-_4
+5m_4
 H+X0H
 A;FDt\H
+5Mi4
 H[A\A]A^A_]
 AWAVAUATSH
+5#^4
 H+X0H
 A;FDt\H
 H[A\A]A^A_]
 H+K0HcRhH
 AWAVSH
-5Zf4
 k(Hc
 H[A^A_]
 AWAVAUATSH
@@ -42708,8 +42730,7 @@ AWAVSPI
 AWAVAUATSH
 H+X0H
 A;FDt\H
-5#a4
-5aa4
+5ca4
 H[A\A]A^A_]
 AVSH
 k(Hc
@@ -42806,13 +42827,25 @@ D$`H
 t$xH
 h[A\A]A^A_]
 AWAVATSH
+54Z4
+5;Z4
+5Ax6
 @[A\A^A_]
 AWAVSH
-5_Z4
+51Y4
+58Y4
+5?w6
 8[A^A_]
 AWAVATSH
+5.X4
+55X4
+5;v6
 @[A\A^A_]
 AWAVATSH
+5&W4
+5-W4
+53u6
+5	W4
 @[A\A^A_]
 AWAVATSH
 t$ H
@@ -42820,33 +42853,25 @@ t$ H
 AWAVSH
 H[A^A_]
 AWAVSH
+5(@4
 H[A^A_]
 AWAVATSH
+5:?4
 t$8H
 @[A\A^A_]
 AWAVSH
-5`S4
 8[A^A_]
 AWAVATSH
+5N=4
 t$HH
-5{n6
 @[A\A^A_]
 AWAVATSH
-5|O4
+5R<4
 t$@H
-5cm6
-5yO4
 @[A\A^A_]
 AWAVSH
-5kN4
-5MC4
-5Sl6
-5iN4
 8[A^A_]
 AWAVSH
-5oM4
-5Wk6
-5mM4
 8[A^A_]
 AVSH
 FX[A^]
@@ -42859,18 +42884,11 @@ D$`L
 t$xL
 [A\A]A^A_]
 AWAVSH
-5?F4
-5YF4
-5`F4
-5'd6
-5=F4
+53G4
+5}F4
 8[A^A_]
 AWAVSH
-5?E4
-5YE4
-5`E4
-5'c6
-5=E4
+5}E4
 8[A^A_]
 AWAVAUATSH
 [A\A]A^A_]
@@ -42880,9 +42898,11 @@ AWAVAUATSH
 tBMco
 8[A\A]A^A_]
 AVSH
+57=4
 @[A^]
 AVSH
-5%:4
+5:94
+5e:4
 @[A^]
 AWAVSH
 8[A^A_]
@@ -42894,7 +42914,6 @@ AVSI
 AVSH
 [A^]
 AWAVAUATSH
-5z"4
 I97t
 H[A\A]A^A_]
 AWAVSPI
@@ -42916,13 +42935,12 @@ AWAVATSH
 AWAVAUATSH
 ([A\A]A^A_]
 	wQH
-5N*4
 AWAVAUATSI
 [A\A]A^A_]
 	rIH
 AWAVSH
 	wQH
-54$4
+5t$4
 8[A^A_]
 AWAVATSI
 [A\A^A_]
@@ -43029,7 +43047,6 @@ UUUUUUUUH!
 33333333H
 [A^A_]
 [A^A_]
-5Zm3
 AWAVAUATSH
 UUUUUUUUH!
 33333333H
@@ -43135,7 +43152,6 @@ AVSI
 AWAVATSI
 [A\A^A_]
 AVSH
-5x~3
 @[A^]
 AWAVAUATSH
 H[A\A]A^A_]
@@ -43153,13 +43169,15 @@ AVSI
 AWAVSPH
 [A^A_]
 AVSH
+5\y3
 @[A^]
 AVSA
 [A^]
 AWAVSH
 8[A^A_]
 AWAVSH
-5 w3
+5`w3
+58w3
 8[A^A_]
 AWAVATSH
 P(I9
@@ -43168,10 +43186,8 @@ AVSI
 t)Hc
 [A^]
 AWAVSH
-5Dw3
 8[A^A_]
 AWAVSH
-5?t3
 8[A^A_]
 AWAVATSI
 [A\A^A_]
@@ -43185,7 +43201,6 @@ AVSI
 AWAVATSI
 [A\A^A_]
 AVSH
-5hq3
 @[A^]
 AWAVSH
 8[A^A_]
@@ -43220,7 +43235,6 @@ UUUUUUU
 AWAVAUATSH
 [A\A]A^A_]
 AWAVAUATSH
-5G	6
 X[A\A]A^A_]
 AWAVAUATSH
 8[A\A]A^A_]
@@ -43231,7 +43245,7 @@ AWAVATSH
 d$ L
 0[A\A^A_]
 AWAVAUATSH
-54a3
+5ta3
 [A\A]A^A_]
 AWAVATSI
 [A\A^A_]
@@ -43263,10 +43277,11 @@ AVSH
 @[A^]
 AWAVAUATSH
 8[A\A]A^A_]
-5q#3
+5x#3
 8[A\A]A^A_]
 AVSH
 [A^]
+5O.3
 AWAVAUATSH
 X[A\A]A^A_]
 AWAVAUATSH
@@ -43275,7 +43290,6 @@ AWAVAUATSH
 X[A\A]A^A_]
 AWAVAUATSH
 X[A\A]A^A_]
-5JO3
 AWAVSH
 [A^A_]
 AVSH
@@ -43293,13 +43307,9 @@ h[A\A]A^A_]
 AWAVAUATSH
 @(t}
 [A\A]A^A_]
-=r13
-=K13
 AWAVAUATSH
 |$PH
-5yy3
-5~y3
-5(y3
+5hy3
 T$(H
 t$(H
 H9J @
@@ -43312,31 +43322,30 @@ H9X w
 @(t'
 [A\A]A^A_]
 AWAVAUATSH
-53q3
-5;q3
+5sq3
+5{q3
 H[A\A]A^A_]
 AWAVAUATSH
-5pp3
 H9Y @
 H9X 
-5_l3
+5:k3
 [A\A]A^A_]
 AWAVAUATSH
 ,$M)
 4$I)
 [A\A]A^A_]
 AWAVATSH
-5yc3
 `[A\A^A_]
 AWAVAUATSH
 H[A\A]A^A_]
 AWAVSH
 8[A^A_]
 AWAVSH
-5Ki3
 8[A^A_]
 AWAVAUATSH
 ~>E1
+5@o3
+5_]3
 [A\A]A^A_]
 AWAVAUATSH
 L9K 
@@ -43349,19 +43358,17 @@ AWAVATSI
 [A\A^A_]
 AWAVAUATSH
 8[A\A]A^A_]
-5Rj3
+5LY3
 8[A\A]A^A_]
 AWAVAUATSH
-5Yh3
-54T3
-5dO3
-5RO3
-5J\3
-5pK3
-59U3
+5QV3
+5EV3
+5tT3
+58P3
+53P3
+5yU3
 ~0H9
-5BD3
-5-D3
+5mD3
 [A\A]A^A_]
 AVSD
 [A^]
@@ -43370,24 +43377,21 @@ AWAVAUATSH
 AWAVATSH
 s0H9
 {@u!H
-5s=3
-5h=3
 `[A\A^A_]
 AWAVAUATSH
+59;3
+56;3
 t$HA
 T$LL
 [A\A]A^A_]
 AWAVAUATSH
 [A\A]A^A_]
 AVSH
-5o83
  [A^]
 AWAVAUATSH
 }@u"H
 }@u(A
-5pB3
-5QV3
-5w33
+5,43
 [A\A]A^A_]
 AWAVAUATSH
 {@u!H
@@ -43396,7 +43400,6 @@ AWAVAUATSH
 AWAVAUATSH
 uIfA
 T$0H
-5I/3
 t$HA
 T$LL
 l$(I
@@ -43405,13 +43408,11 @@ l$(I
 AWAVAUATSH
 [A\A]A^A_]
 AWAVAUATSH
-5+'3
-5nG3
+5\'3
+5k'3
 N0H9
 ~@u=H
-57%3
-5I#3
-5N#3
+5w%3
 [A\A]A^A_]
 AWAVSH
 [A^A_]
@@ -43421,18 +43422,19 @@ AWAVAUATSH
 X[A\A]A^A_]
 5zG7
 AWAVATSH
-5>&3
+5~&3
 w0H9
-5m$3
+5wm5
 P[A\A^A_]
 AWAVAUATSH
-5H85
 H[A\A]A^A_]
 AWAVATSH
  [A\A^A_]
 AWAVSH
+5uo5
 8[A^A_]
 AWAVAUATSH
+5&53
 8[A\A]A^A_]
 AWAVSH
 xt\$
@@ -43569,7 +43571,7 @@ AVSH
 AWAVSPI
 <u4H
 [A^A_]
-5.^2
+5U^2
 AVSI
 [A^]
 AWAVAUATSPI
@@ -43622,10 +43624,12 @@ AWAVAUATSH
 &M;f
  L;e
 NDHc@
-51T2
-5|Q2
-5'P2
-5?N2
+5#U2
+5qT2
+5^R2
+5gP2
+5"O2
+5 M2
 [A\A]A^A_]
 vhHc
 vhHc
@@ -43665,12 +43669,10 @@ QHA
 [A\A]A^A_]
 AWAVATSH
 D$8H
-58l2
+5xl2
 |$0H
-5ok2
 P[A\A^A_]
 AVSH
-5{i2
 P[A^]
 AVSI
 [A^]
@@ -43680,10 +43682,11 @@ PXE1
 AWAVSH
 [A^A_]
 AWAVAUATSH
-5Ua2
 8[A\A]A^A_]
+5Fa2
 AVSH
 	wzH
+5>a2
 @[A^]
 @[A^]
 AWAVAUATSPI
@@ -43700,7 +43703,6 @@ AWAVAUATSH
 |$ H
 X[A\A]A^A_]
 AWAVSH
-5MZ2
 8[A^A_]
 AWAVAUATSH
 	H;M
@@ -43724,39 +43726,14 @@ L$`I
 t$ L
 H[A\A]A^A_]
 AWAVSH
-5_N2
-5jO2
-5yN2
-5Gl4
-5]N2
 8[A^A_]
 AWAVSH
-5_M2
-5yM2
-5Gk4
-5]M2
 8[A^A_]
 AWAVSH
-5WL2
-5^N2
-5qL2
-5xL2
-5?j4
-5UL2
 8[A^A_]
 AWAVSH
-5WK2
-5qK2
-5xK2
-5?i4
-5UK2
 8[A^A_]
 AWAVSH
-5WJ2
-5qJ2
-5xJ2
-5?h4
-5UJ2
 8[A^A_]
 AVSH
 {(	u
@@ -43768,6 +43745,7 @@ AWAVAUATSPL
 [A\A]A^A_]
 7H;1u H
 AWAVAUATSH
+5BH2
 X[A\A]A^A_]
 AWAVATSI
 [A\A^A_]
@@ -43829,22 +43807,27 @@ AVSH
 [A^]
 [A^]
 AWAVAUATSH
+5$62
 <%ws
 <%wG
 <%ws
 <%wG
+5%42
 [A\A]A^A_]
 AWAVATSI
 [A\A^A_]
 AWAVSH
 <%w	
+5?22
 u/<.u(H
  <euuH
 Cp<-t
-5_12
 Cp<Ft
+5P12
 o<_t
 <.unE
+5712
+5H12
 [A^A_]
 AVSI
 [A^]
@@ -43859,17 +43842,16 @@ Cp<*tK</t;
 {p#u
 AWAVAUATSH
 ([A\A]A^A_]
-=K,2
 r1<_t-
 v%<.
 C$;CXuJL
-5.*2
+5n*2
 "u1H
  <xu
 AWAVSH
  <eu"H
 >-uu
-5$(2
+5d(2
 h[A^A_]
 AWAVAUATSH
 h[A\A]A^A_]
@@ -44556,8 +44538,8 @@ B D+
 [A\A]A^A_]
 AWAVAUATSH
 ([A\A]A^A_]
-5P(1
 C D%
+5/(1
 AWAVAUATSPH
 Hc3Lc
 [A\A]A^A_]
@@ -44572,9 +44554,9 @@ AWAVATSH
 [A\A^A_]
 AWAVATSH
 t6Hc
-5`!1
 [A\A^A_]
 t/Hc
+5,!1
 AVSH
  [A^]
 AWAVATSH
@@ -44615,6 +44597,7 @@ tPD2R
 	H;M
 AWAVAUATSH
 ~xH9
+53	1
 h[A\A]A^A_]
 fff.
 AWAVAUATSPM
@@ -44648,16 +44631,15 @@ AWAVAUATSH
 X[A\A]A^A_]
 fffff.
 AWAVAUATSH
-5px2
 ffffff.
-5(v2
+5hv2
 tND)
 ~E~51
 [A\A]A^A_]
 fff.
 AWAVAUATSH
 ffff.
-5[e0
+5be0
 H[A\A]A^A_]
 tcHcN
 AWAVAUATSH
@@ -44667,7 +44649,7 @@ u=E
 Vfff.
 H[A\A]A^A_]
 AWAVSH
-5Wd0
+5wd0
 8[A^A_]
 AWAVATSH
 @[A\A^A_]
@@ -44755,6 +44737,8 @@ fff.
 [A\A]A^A_]
 fffff.
 AWAVAUATSH
+5>V2
+5Q	3
 H[A\A]A^A_]
 AWAVAUATSPI
 [A\A]A^A_]
@@ -44840,22 +44824,20 @@ AWAVAUATSH
 ([A\A]A^A_]
 	wz1
 AWAVAUATSH
-5Zz0
 [A\A]A^A_]
 [A\A]A^A_]
 [A\A]A^A_]
 [A\A]A^A_]
 AWAVAUATSH
 [A\A]A^A_]
+5Kx0
 ffff.
 AWAVAUATSH
-5vt0
-5Et0
 [A\A]A^A_]
 AWAVSPH
 [A^A_]
 [A^A_]
-5!r0
+5ar0
 fff.
 ffffff.
 ffffff.
@@ -44875,6 +44857,7 @@ AWAVSP
 HcI H
 ffffff.
 t3Hc@ H
+5Vn0
 AWAVAUATSPA
 tzHc@ H
 [A\A]A^A_]
@@ -44902,33 +44885,36 @@ AWAVATSM
 [A\A^A_]
 AWAVSPI
 [A^A_]
+5$g2
 fffff.
 AWAVATSM
 [A\A^A_]
-5+g0
+5kg0
 AVSH
 [A^]
 [A^]
-5Sf0
 AWAVAUATSH
+5#f0
 tOIc
 ([A\A]A^A_]
 u	@ 
-5/d0
+5od0
+56d0
 AWAVATSH
-5,c0
+5lc0
  [A\A^A_]
-5ba0
-5Qa0
 ffffff.
 ffffff.
 ffffff.
+5T`0
 AVSH
 ffffff.
 AWAVAUATSH
 =9z8
-5<[0
+5S\0
+5|[0
 ={v8
+5>Z0
 ([A\A]A^A_]
 ffff.
 =[u8
@@ -44936,20 +44922,19 @@ ffff.
 =0u8
 =	u8
 AWAVAUATSPI
-=;X0
-=PW0
+={X0
 =(s8
 [A\A]A^A_]
-5mV0
 AWAVSPH
 =Or8
+=ZV0
 [A^A_]
 [A^A_]
 fff.
 =9q8
 AWAVATSI
-=mU0
 fffff.
+5^U0
 [A\A^A_]
 [A\A^A_]
 AWAVAUATSH
@@ -44981,15 +44966,13 @@ D$D1
 fffff.
 [A\A^A_]
 AWAVAUATSH
-=JA2
 [A\A]A^A_]
 fff.
 AWAVAUATSH
-5Kz1
-5y;2
-54/3
+5!z1
 [A\A]A^A_]
 	H;M
+5@=0
 AWAVAUATSH
 ATAV
 ATAVS
@@ -44999,6 +44982,7 @@ X[A\A]A^A_]
 AWAVAUATSPI
 [A\A]A^A_]
 AWAVAUATSH
+-i(2
 ffff.
 t5Hc
 X[A\A]A^A_]
@@ -45104,8 +45088,6 @@ ffff.
 AVSH
 [A^]
 AWAVSPI
-5z	0
-5X	0
 [A^A_]
 fff.
 AWAVAUATSPI
@@ -45126,7 +45108,7 @@ AWAVATSH
 t$8A
 Ic\$$
 D$$A
-5:e/
+5Ze/
 D$8A
 [A\A^A_]
 AVSH
@@ -45281,8 +45263,8 @@ tvE1
 AWAVAUATSH
 [A\A]A^A_]
 AWAVAUATSH
-5Pn/
 [A\A]A^A_]
+5Nn/
 D$PL
 L$ A
 ffffff.
@@ -45343,9 +45325,8 @@ AWAVAUATSH
 ([A\A]A^A_]
 fff.
 AWAVAUATSH
-5F%/
 IcD$
-5.$/
+5n$/
 ([A\A]A^A_]
 AWAVAUATSH
 [A\A]A^A_]
@@ -46557,10 +46538,10 @@ D$ L
 H[A\A]A^A_]
 AWAVAUATSPH
 tUE1
+5B}-
 [A\A]A^A_]
 AVSH
 [A^]
-5p|-
 [A^]
 AWAVATSA
 =Vx5
@@ -46571,7 +46552,7 @@ AVSH
 fffff.
 AWAVAUATSPI
 =:v5
-5\y-
+5Xy-
 [A\A]A^A_]
 fffff.
 fff.
@@ -46588,19 +46569,20 @@ AWAVAUATSPI
 ffffff.
 [A\A]A^A_]
 AWAVAUATSH
-5Xu-
-->t-
+5.u-
+-~t-
 %5p5
-5;6/
+5{6/
 8[A\A]A^A_]
 AWAVAUATSPL
 ffff.
 M;.r
 L;=bn5
 5Mn5
+5%r-
 [A\A]A^A_]
 AWAVAUATSP
-=!s-
+=as-
 0u%A
 ~uCH
 =rr:
@@ -46610,10 +46592,11 @@ tB<:u
 0u@M
 fff.
 [A\A]A^A_]
+=Mp-
+59s-
 fff.
-5br-
 AVSH
-5-r-
+5mr-
 [A^]
 [A^]
 AWAVAUATSPI
@@ -46628,9 +46611,10 @@ u*H
 [A\A]A^A_]
 fff.
 AWAVSPI
-5Um-
 [A^A_]
+5Sm-
 AWAVATSH
+5Sl-
 [A\A^A_]
 D$)I
 AWAVAUATSPI
@@ -46641,11 +46625,12 @@ fffff.
 AWAVAUATSH
 ffffff.
 ffffff.
-5*f-
+5jf-
 [A\A]A^A_]
 AWAVATSH
 [A\A^A_]
-5vd-
+5[e-
+5?e-
 AVSH
 [A^]
 [A^]
@@ -46653,21 +46638,23 @@ AVSH
 [A^]
 [A^]
 AWAVAUATSH
-%&@/
 8[A\A]A^A_]
-5Nc-
-55c-
-5*c-
-5/b-
+5uc-
+5jc-
+5>c-
+5ob-
+5+b-
+5L>/
+5	b-
 8[A\A]A^A_]
 fff.
 AWAVAUATSH
 ~ZE1
 fffff.
+5H=/
 [A\A]A^A_]
 ffff.
 AVSH
-5L`-
 [A^]
 [A^]
 ffff.
@@ -46681,18 +46668,17 @@ AWAVAUATSH
 [A\A]A^A_]
 AWAVAUATSPI
 [A\A]A^A_]
+5<\-
 AVSH
 [A^]
 [A^]
 AWAVAUATSH
 xQE1
 ([A\A]A^A_]
-5kX-
 C(HcE
 C8Ic
 AWAVAUATSH
-5WW-
-5/W-
+5oW-
 [A\A]A^A_]
 AWAVATSH
 [A\A^A_]
@@ -46708,6 +46694,7 @@ t$HI
 T$PL
 AWAVSPI
 [A^A_]
+5!S-
 AWAVSPI
 [A^A_]
 fffff.
@@ -47461,6 +47448,7 @@ AVSH
 t.HcU
 0[A^]
 AWAVAUATSH
+5G&+
 [A\A]A^A_]
 ffffff.
 AWAVSPH
@@ -47470,7 +47458,6 @@ AVSH
 t.HcU
 0[A^]
 AWAVATSH
-5a#+
 p[A\A^A_]
 AVSI
 [A^]
@@ -47720,9 +47707,9 @@ AWAVAUATSH
 AWAVAUATSH
 8[A\A]A^A_]
 AWAVAUATSH
+5Y>,
 [A\A]A^A_]
-5/;,
-5x`*
+5n7,
 AWAVSPI
 [A^A_]
 AWAVAUATSH
@@ -47743,6 +47730,7 @@ AWAVAUATSH
 [A\A]A^A_]
 AWAVAUATSH
 %($'
+59l*
 fff.
 \0`H
 \0`H
@@ -47754,7 +47742,7 @@ PASARj
 PARASAV
 [A\A]A^A_]
 AWAVAUATSH
-5WX*
+5<Z*
 [A\A]A^A_]
 D$`H
 D$hH
@@ -47806,14 +47794,14 @@ ARASAV
 [A\A]A^A_]
 AWAVAUATSH
 =X9&
-5>y)
+5~y)
 SAVj
 SAVj
 SAVL
 PARASAV
+5#s)
 [A\A]A^A_]
 5o2&
-5lq)
 ffffff.
 AVSH
 	H;M
@@ -50365,17 +50353,19 @@ AWAVATS
 ffff.
 AWAVAUATSH
 [A\A]A^A_]
-=l}%
-=Y}%
-=H|%
-=r{%
+=J.(
+=-~%
+=2|%
+=#|%
 HcpDH
+52y%
 AVSI
 [A^]
 ffffff.
 AVSI
 t&HcpDH
 u+Ic~DH
+5Rx%
 t&E1
 [A^]
 [A^]
@@ -50384,12 +50374,11 @@ AWAVSPI
 A}XH
 HcpD
 [A^A_]
+=9w%
 AWAVSPI
 A}PH
 HcpD
 [A^A_]
-=qv%
-5Vv%
 ffffff.
 AVSI
 HcpD
@@ -50405,7 +50394,9 @@ HcxDH
 [A^A_]
 AWAVAUATSPM
 HcpD
+5=s%
 [A\A]A^A_]
+=&s%
 ffff.
 ffff.
 ffff.
@@ -50475,11 +50466,12 @@ r&L;
 r&L;
 [A\A]A^A_]
 AWAVSPI
+55\%
 [A^A_]
 ffff.
 AWAVAUATSPH
+54[%
 |NE9
-5~Z%
 [A\A]A^A_]
 AWAVATSI
 [A\A^A_]
@@ -50788,25 +50780,22 @@ fff.
 AWAVSPI
 [A^A_]
 AWAVAUATSPH
-=|~$
-5&A$
+5fA$
 ffff.
+5^O%
 $fffff.
 [A\A]A^A_]
 AVSH
 Hcp0H
+5;}$
 [A^]
 Hcp0H
-5b|$
-5D|$
 AWAVAUATSPE
 Hcp0H
-5t{$
 +Ic}0H
-5;{$
-5jy$
+5{{$
 [A\A]A^A_]
-5jx$
+=6y$
 fff.
 AWAVAUATSH
 t.HcU
@@ -50815,25 +50804,27 @@ t.HcU
 AWAVAUATSPI
 [A\A]A^A_]
 u@A9
-=	t$
-55s$
+=It$
+5us$
 fff.
 AVSI
 tKA9
  r!J
 [A^]
-5 p$
+=\q$
+5`p$
 AWAVAUATSH
 uyIcw
 6H+U
 |78A9
 ~#Hc
 ([A\A]A^A_]
+=Xn$
+52m$
 9Wht-
 AWAVSPI
 Hcp0H
 Hcx0H
-5Wk$
 wxHcQ0H
 [A^A_]
 =s,)
@@ -50844,24 +50835,23 @@ AWAVAUATSH
 	H;M
 	H;M
 [A\A]A^A_]
-=0s$
-5Vs$
-=Zs$
-5>s$
+=ps$
+5~s$
 AWAVATSH
 D$8H
 [A\A^A_]
-="r$
+=br$
+5!r$
 AWAVSPI
 [A^A_]
-=zq$
-59q$
+5yq$
 ffff.
 AWAVAUATSPI
 D$@H
 [A\A]A^A_]
 AWAVATSH
 [A\A^A_]
+=4o$
 fff.
 AWAVSP
 	wVH
@@ -50974,7 +50964,8 @@ fffff.
 AWAVAUATSH
 ARAV
 h[A\A]A^A_]
-=!F$
+=aF$
+5DF$
 fffff.
 fffff.
 AWAVSPI
@@ -50987,12 +50978,11 @@ AWAVSPI
 [A^A_]
 fff.
 AVSH
-5=B$
+5}B$
+5;B$
 [A^]
 AWAVAUATSPI
-5ZA$
-55@$
-5h?$
+5u@$
 [A\A]A^A_]
 fff.
 AWAVATSH
@@ -51045,7 +51035,6 @@ AVSA
 [A^]
 AWAVSPA
 [A^A_]
-5J $
 ffff.
 AWAVATSH
 [A\A^A_]
@@ -51092,9 +51081,9 @@ AVSI
 [A^]
 AWAVATSI
 |$ I
-5W	$
 [A\A^A_]
 AWAVSPI
+=C	$
 [A^A_]
 [A^A_]
 AVSI
@@ -51159,7 +51148,6 @@ D$ H
 tAE1
 [A\A^A_]
 AWAVSPI
-5]r$
 [A^A_]
 [A^A_]
 [A^A_]
@@ -51175,7 +51163,6 @@ AWAVATSH
 tDIc
 [A\A^A_]
 AWAVSPI
-5^w#
 [A^A_]
 [A^A_]
 [A^A_]
@@ -51188,6 +51175,7 @@ AWAVATSI
 [A\A^A_]
 fff.
 AWAVSPI
+5[b$
 [A^A_]
 [A^A_]
 [A^A_]
@@ -51562,7 +51550,6 @@ Z2[tY
 GHASH for x86_64, CRYPTOGAMS by <appro@openssl.org>
 fff.
 AWAVAUATSPL
-5j%#
 MHA2}WA
 x @0p/I
 x0@0p?I
@@ -51725,11 +51712,13 @@ fffff.
 =CL(
 AVSH
 F Hcs
-57>#
+5w>#
+5U>#
 [A^]
 AVSH
 [A^]
 54J(
+5R<#
 ffffff.
 5UL(
 ffffff.
@@ -51739,8 +51728,8 @@ ffffff.
 ffffff.
 5GP(
 AWAVSPA
-5#?#
-5*W$
+5c?#
+5XW$
 [A^A_]
 fffff.
 AWAVSPI
@@ -51757,10 +51746,14 @@ AVSI
 AWAVSPI
 [A^A_]
 AWAVAUATSPA
-5g;#
+5@<#
 [A\A]A^A_]
+5E;#
 =sT(
 AWAVAUATSH
+5>@#
+5.?#
+5T?#
 fffff.
 [A\A]A^A_]
 AWAVAUATSPI
@@ -51769,14 +51762,12 @@ ffffff.
 fff.
 AWAVAUATSH
 Lff.
-5c7#
-5t6#
-5l6#
-5[6#
-5B6#
-5@6#
-5)6#
+5O6#
+5P6#
+5i6#
+5F6#
  u3I
+5.4#
 h[A\A]A^A_]
 fff.
 AWAVAUATSH
@@ -51785,17 +51776,18 @@ tsHc
 fff.
 AWAVAUATSPI
 [A\A]A^A_]
-5}z#
-5Ny#
+5T/#
+5E/#
 ?,u!H
 AWAVAUATSH
 ffff.
 u!Mc
-5F)#
-=a%#
+5B*#
 $Hc}
+59%#
 x[A\A]A^A_]
 $Hc}
+56$#
 AWAVATSI
 })Hc
  u	H
@@ -51807,8 +51799,9 @@ fffff.
 AWAVATSH
  [A\A^A_]
 AWAVAUATSH
-59!#
-5.!#
+5y!#
+5n!#
+5K!#
 [A\A]A^A_]
 ffffff.
 AVSH
@@ -51933,6 +51926,7 @@ AWAVAUATSPI
 uIIc
 [A\A]A^A_]
 AWAVSPI
+5A.#
 [A^A_]
 [A^A_]
 [A^A_]
@@ -52130,7 +52124,6 @@ AWAVATSH
 AWAVATSH
 |$(H
 |$(A
-5lt"
 [A\A^A_]
 AWAVSPI
 [A^A_]
@@ -52143,7 +52136,6 @@ AWAVATSH
  [A\A^A_]
 fffff.
 AWAVAUATSPA
-5(s#
 [A\A]A^A_]
 [A\A]A^A_]
 AWAVAUATSH
@@ -52159,24 +52151,26 @@ ffffff.
 AWAVAUATSH
 [A\A]A^A_]
 AWAVAUATSH
-5<d"
-5	d"
-5	d"
+5|d"
+5Dd"
+5Gd"
+5Id"
+5Pd"
+5Gd"
+5Id"
 P E1
-5yc"
-5Yc"
-5<c"
-5bb"
-5$h#
+5|c"
+5_c"
+5Vd#
+5Lb"
 ([A\A]A^A_]
 AWAVAUATSPA
-5Ua"
-52a"
-55b#
+5]c#
+5ra"
+5,a"
 [A\A]A^A_]
-51a#
-5`_"
-5/`#
+5\`"
+5"a#
 ffff.
 AWAVSH
 [A^A_]
@@ -52206,6 +52200,7 @@ t?E1
 [A\A]A^A_]
 ~kE1
 AVSH
+57L"
 [A^]
 AVSH
 [A^]
@@ -52215,7 +52210,7 @@ AVSH
 [A^]
 [A^]
 fffff.
-5,I"
+5lI"
 ffffff.
 AWAVAUATSH
 [A\A]A^A_]
@@ -52235,7 +52230,7 @@ AWAVAUATSH
 x[A\A]A^A_]
 AWAVAUATSH
 [A\A]A^A_]
-5J?"
+5U?"
 E",$D
 oD8!
 oL81f
@@ -52244,6 +52239,7 @@ oL<
 o\<0
 L<0H
 fff.
+5*6"
 AWAVAUATSH
 A|!H
 ([A\A]A^A_]
@@ -52252,9 +52248,11 @@ T$ I
 L$xH
 AWAVAUATSH
 A|!H
+5^1"
 tXE9
 ([A\A]A^A_]
 AWAVAUATSH
+5/."
 X[A\A]A^A_]
 AWAVAUATSH
 H[A\A]A^A_]
@@ -52326,7 +52324,6 @@ t$8A
 L$8B
 t$8A
 AWAVAUATSH
-5S	"
 ([A\A]A^A_]
 AWAVAUATSH
 r(AW
@@ -52343,7 +52340,6 @@ x&E9
 fff.
 AWAVSPI
 [A^A_]
-5{)"
 [A^A_]
 [A^A_]
 [A^A_]
@@ -53690,7 +53686,6 @@ AWAVAUATSPI
 [A\A]A^A_]
 AWAVATSI
 [A\A^A_]
-5|9 
 [A\A^A_]
 AWAVAUATSH
 tcIc
@@ -63333,7 +63328,7 @@ AWAVAUATSH
 t&L9e
 ([A\A]A^A_]
 AWAVAUATSP
-5o}	
+5\}	
 [A\A]A^A_]
 AWAVAUATSH
 [A\A]A^A_]
@@ -63602,7 +63597,7 @@ AWAVSH
 AWAVSH
 ([A^A_]
 PAQARSAS
-=c/	
+=8/	
 AWAVAUATSP
 [A\A]A^A_]
 AWAVSPH
@@ -65563,6 +65558,7 @@ AWAVAUATSH
 ~|.D
 [A\A]A^A_]
 AWAVAUATSH
+= 1	
 Hc	H
 E;wd|rE
 E;o\|fE
@@ -65579,6 +65575,7 @@ AWAVAUATSP9wX
 G@Hc
 Hc1H
 A+FP
+=?.	
 E;~d}&H
 E;f\|
 E9f 
@@ -65604,12 +65601,13 @@ AWAVSPH
 [A^A_]
 AWAVATSI
 C [A\A^A_]
+=j~	
+=F~	
 AWAVAUATSH
 A;]d
 E;u\
 E9u 
 E9u 
-=[ 	
 E0F	$
 M@Hc
 A;]d
@@ -69198,31 +69196,29 @@ N12_GLOBAL__N_127CDummySSLConnectionCallbackE
 10CUtlVectorIP9CWorkItem10CUtlMemoryIS1_EE
 10CUtlRBTreeIP15CWorkThreadPooli8CDefLess25CDefRBTreeBalanceListenerIiES1_E
 10CUtlVectorIN17CWorkItemPipeline7BarrierE10CUtlMemoryIS1_EE
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/video/audiodecoder.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/video/audiodecoder.cpp
 !m_bEndOfInput
 nSamplesToCopy > 0
 invalid m_nInterleavedBytesPerSample
 m_bEndOfInput || ( m_Packet.data && m_Packet.size )
-!pszString || pszString[nChars] == '\0'
 !m_data.HasError()
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/video/exportvideocontainer.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/video/exportvideocontainer.cpp
 pVideoStream
 lTimeBaseDenom > 0
 nAudioChannels == 2
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/video/avframeyuvwrapper.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/video/avframeyuvwrapper.h
 m_pAVFrame->format == AV_PIX_FMT_YUV420P || m_pAVFrame->format == AV_PIX_FMT_YUVJ420P
 m_pCodecContext == nullptr
 m_listOutput
 m_Memory
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utllinkedlist.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utllinkedlist.h
 m_TotalElements != InvalidIndex()
 %s overflow!
 IsValidIndex(elem)
 IsInList(before)
 Invalid index %u
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlvector.h
-(&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/video/videodecoderlibav.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlvector.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/video/videodecoderlibav.cpp
 Can't seek w/o init segment size
 Can't see w/o segment size
 lOffset >= 0
@@ -69262,7 +69258,7 @@ x264_encoder_close
 x264_picture_init
 x264_encoder_encode
 x264_encoder_delayed_frames
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/video/videoencode.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/video/videoencode.cpp
 m_listOutput.IsEmpty()
 veryfast
 film
@@ -69271,7 +69267,7 @@ X264 encoder expects YUV420 frame
 CVideoEncoderX264::BEncodeFrame
 BEncodeFrame
 %s: BScaleImageYUV returned false
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/video/videoalignedbuffer.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/video/videoalignedbuffer.h
 nWidth % 2 == 0
 nHeight % 2 == 0
 m_sps
@@ -69280,7 +69276,7 @@ m_rgScaledFrames
 CUtlAllocation
 http://
 https://
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/video/videofilestream.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/video/videofilestream.cpp
 cMaxSamples > 2
 m_bRunning
 m_cSamples == 0 && m_pulSamples[0] == 0
@@ -69296,7 +69292,7 @@ m_strTargetPath
 m_vecAvailableByteRanges
 m_strTempFile
 CFileReader
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/refcount.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/refcount.h
 m_iRefs > 0 && m_iRefs < 0x1000000
 m_iRefs >= 0 && m_iRefs < 0x0ffffff
 video libav error: %s
@@ -69305,7 +69301,7 @@ CCrypto
 IMetricsFactory
 CWorkThreadPool
 g_CompletionPortManager
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/video/videomanifest.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/video/videomanifest.cpp
 !m_bLoaded
 cRemaining > 0
 pAdaptation->m_pSegmentTemplate
@@ -69316,6 +69312,7 @@ Number
 %0*d
 Bandwidth
 Time
+%lld
 video/webm
 audio/webm
 m_strBaseURL
@@ -69398,7 +69395,7 @@ Invalid segment template
 Found unexpected representation close element
 While parsing SegmentBase, didn't find init and index range
 Error parsing MPD file (line=%d): %s
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/video/videoplayer.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/video/videoplayer.cpp
 !m_bInThreadPool
 !m_strURL.IsEmpty() || m_bufFromMemory.TellPut() > 0
 unSeekMS != k_unNoSeekRequest && 0 == ( unSeekMS & k_unSeekPreciseBit )
@@ -69443,14 +69440,14 @@ m_pVideoDecoder
 m_pAudioDecoder
 m_pNextVideoFrame
 CUtlBuffer
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlrbtree.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlrbtree.h
 IsValidIndex( elem )
 _IsValidIndex( elem, unNodeSize, pMemBase )
 _IsValidIndex( y, unNodeSize, pMemBase )
 m_Tree
 m_Elements
 Video Player
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/video/videoplayermanager.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/video/videoplayermanager.cpp
 HTTP client must be set on video manager before it can be used by players
 m_cRunningThreads == 0
 m_cNextThreads == 0
@@ -69479,10 +69476,10 @@ m_vecMainThreadDel
 IsVideoPlayerManagerInitialized()
 pManager
 Video Decode Thread
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlpriorityqueue.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlpriorityqueue.h
 m_heap.IsValidIndex(index)
 m_heap
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/video/videorecordingsegmentwriter.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/video/videorecordingsegmentwriter.cpp
 *pubExtraData == nullptr && *pcubExtraData == 0
 bufSPS.TellPut() > 0 && bufPPS.TellPut() > 0
 dash
@@ -69499,8 +69496,8 @@ dash_segment_type
 m_pAVFormatContext->streams[ m_nVideoTrack ]->time_base.num == 1
 m_pAVFormatContext->streams[ m_nAudioTrack ]->time_base.num == 1
 m_pAVFormatContext->oformat->flags & AVFMT_ALLOW_FLUSH
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/video/videortmp.cpp
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/video/videoutils.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/video/videortmp.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/video/videoutils.cpp
 !m_pContext
 m_pContext
 pAudioResampler
@@ -69508,9 +69505,9 @@ pYUVFrame
 BScaleImageYUV
 TODO implement BScaleImageNV12 on POSIX
 BConvertYUVtoRGB
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/smartptr.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/smartptr.h
 m_p == NULL
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/bitstring.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/bitstring.cpp
 resizeNumBits >= 0
 !m_pInt
 GetInts()
@@ -69521,13 +69518,14 @@ allocator<T>::allocate(size_t n) 'n' exceeds maximum supported size
 null
 true
 object
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/circularbuffer.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/circularbuffer.cpp
 nRead == nPeeked
 pPeeked >= &m_chData[0] && pPeeked < &m_chData[m_nSize]
 pPeeked == &m_chData[ m_nWrite ] && nBytesToCommit >= 0 && m_nWrite + nBytesToCommit <= m_nSize
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/convar.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/convar.cpp
 pName
 Convars
+%llu
 m_vecCallbacks.Count() == 0 || !callback
 m_pParent == this
 ConVar::InternalSetValue: called with NULL
@@ -69545,7 +69543,7 @@ m_strConvertedDefaultValue
 m_vecCallbacks
 FCVAR_NEVER_AS_STRING
 Key( i )
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/fileio.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/fileio.cpp
 flock LOCK_SH requested but file is not opened for reading, ignoring: %s
 flock %s %s failed. errno = %d
 LOCK_EX
@@ -69574,9 +69572,8 @@ Waited %u iterations in CFileWriter::Flush - m_cubOutstanding = %d
 %s%c%s
 %s/%s
 cbActual < (uint32)nBufSizeWithTerminator
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlbuffer.h
 CFileWriterThread
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/tslist.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier0/tslist.h
 m_Count == 0
 pNode && pNode->Next == QueueEnd()
 m_queueItemsPending
@@ -69596,7 +69593,7 @@ Element( i )
 CPathString
 .dylib
 %s/%s%s
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/interface.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/interface.cpp
 strlen(pchModuleName) + V_strlen(pModuleExtension) < MAX_UNICODE_PATH_IN_UTF8
 .cpl
 %s%s
@@ -69605,7 +69602,7 @@ CreateInterface
 %%%d
 ]:%u
 port
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/KeyValues.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/KeyValues.cpp
 GetIntFromString() did not get correct peCS parameter
 GetUint64FromString() did not get correct peCS parameter
 can't convert uint64 to int32 (data loss)
@@ -69615,7 +69612,7 @@ KeyValues
 NULL
 %.18g
 Memory leak: mempool blocks left in memory: %d
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/mempool.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/mempool.cpp
 CMemoryPool::AddNewBlob: mode == GROW_NONE
 blobSize <= nMaxBlobSize
 pBlob
@@ -69623,19 +69620,19 @@ CMemoryPool::Alloc: ran out of memory
 k_nMemPoolMagic_Free == *(( (int *) returnBlock) - 1)
 k_nMemPoolMagic_InUse == *(( (int *) pMem) - 1)
 CMemoryPool
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/netadr.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/netadr.cpp
 loopback
 broadcast
 %i.%i.%i.%i
 %i.%i.%i.%i:%i
 unknown
 Address too small!
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/netadr.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/netadr.h
 m_usType == k_EIPTypeV6
 pvecAddressesOut != nullptr || pSingleOutput != nullptr
 about to perform blocking dns call from the main thread.  consider refactoring.
 BResolveHostString - unexpected DNS lookup flag '%d'
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlbuffer.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlbuffer.cpp
 info.m_pReplacementString == 0
 nSize != 0
 CUtlBuffer::GetStringFast: binary buffers only
@@ -69646,7 +69643,7 @@ m_Put >= 0
 offset >= 0
 offset >= -m_Put && offset <= INT_MAX-m_Put
 offset != INT_MIN && offset <= m_nMaxPut && -offset <= INT_MAX-m_nMaxPut
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlmemory.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlmemory.cpp
 nSizeOfType > 0
 nGrowSize >= 0
 m_nAllocationCount >= 0
@@ -69657,12 +69654,12 @@ num > 0
 num >= 0
 numElements <= m_nAllocationCount
 m_pMemory
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlqueue.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlqueue.cpp
 IsPowerOfTwo( nNewCapacity )
 nPreSplit > 0 && nPreSplit + nPostSplit == nCount
 ( m_iHead & nNewCapacityMask ) == nNewCapacity - nPreSplit
 CUtlString::SetValue
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlstring.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlstring.cpp
 CUtlString::VFormat
 CUtlString::VAppendFormat
 Assertion failed: length > k_cchMaxString
@@ -69677,7 +69674,7 @@ CUtlStringBuilder::Data::MoveToHeap
 CUtlSymbolTable
 m_StringPools
 m_Lookup
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlsymbol.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlsymbol.h
 pPool->m_SpaceUsed < 0xFFFF
 Symbol table grew beyond unsigned short.  Time to upgrade UtlSymId_t for the symbol type or look for unnecessary spam in the tables.
 INFO
@@ -77370,7 +77367,7 @@ ScaleUVDownEven
 IS_ALIGNED(src_width, 2)
 IS_ALIGNED(src_height, 2)
 Not continuing coroutine due to g_bPreventCoroutineContinue, %s
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/coroutine.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/coroutine.cpp
 GCoroutineMgr().IsValidCoroutine(hCoroutine)
 Coroutine_IsActive()
 (main)
@@ -77379,7 +77376,7 @@ m_cubSavedStack < k_cubMaxCoroutineStackSize
 m_pStackHigh
 m_pSavedStack
 m_VecCoroutineStack.Count() > 1
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/debugstatssystem.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/debugstatssystem.cpp
 String pool bytes used %u, max %u, %u pools
 Total number of strings %u, longest string size %u, avg size %u
 Total of %u buckets with %u hash collisions
@@ -77388,12 +77385,12 @@ Bucket size : count
 nTotal number of strings %u, longest string size %u, avg size %u
 Leaked KeyValues (%u):
 %s (%u)
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/keyvaluessystem.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/keyvaluessystem.cpp
 size < INT_MAX
 CKeyValuesSystem::AddStringToPool: key name too long (%u chars)
 CKeyValuesSystem::AddStringToPool: out of memory
 CKeyValuesSystem::AddStringToPool: running out of memory (%u bytes left)
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/osversion.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/osversion.cpp
 Invalid macOS version %d.%d.%d
 Unknown
 /System/Library/Frameworks/OpenGL.framework/OpenGL
@@ -77406,7 +77403,7 @@ CGLCreateContext
 CGLDestroyContext
 CGLGetParameter
 defaults read /System/Library/CoreServices/SystemVersion.plist ProductVersion
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/strtools.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/strtools.cpp
 count == 0 || s1 != NULL
 count == 0 || s2 != NULL
 n == 0 || s1 != NULL
@@ -77424,7 +77421,6 @@ bufferLen == 0 || pDest != NULL
 destCapacity != 0
  bytes
 %i%s
-%lld
 outsize >= ( inputbytes * 2 ) + 1
 0123456789abcdef
 outsize >= 1
@@ -77441,10 +77437,12 @@ Target buffer too short to terminate
 V_URLDecode needs a dest buffer at least as large as the source
 str != NULL
 prefix != NULL
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlstring.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlstring.h
+!pszString || pszString[nChars] == '\0'
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlbuffer.h
 nBytes
-%llu
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/strtools_unicode.cpp
+(&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/strtools_unicode.cpp
 invalid input pointer
 !pToCopy || (pToCopy + num <= Base()) || (pToCopy >= (Base() + Count()) )
 count >= 0
@@ -77458,7 +77456,7 @@ hw.logicalcpu
 Unable to determine CPU Frequency. Try defining CPU_MHZ.
 %s (%d) : 
 Exiting on SPEW_ABORT
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/dbg.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/dbg.cpp
 pGroupName
 strlen( pGroupName ) < MAX_GROUP_NAME_LENGTH
 IsSpewActive
@@ -77469,13 +77467,13 @@ Fatal assert; application exiting
 Fatal assert
 _ExitOnFatalAssert
 Failed to generate callstack
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/memblockhdr.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/memblockhdr.cpp
 Assertion Failed: stack%2d: %s
 Stack%2d: %s
 Assertion Failed: stack%2d: 0x%llX
 Stack%2d: 0x%llX
 ppFrames[iFrame] != NULL
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/memstd.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/memstd.cpp
 ((size_t)(m_nLogicalBytesAllocated) % 8) == 0
 No tracked allocs currently in use. Total %d
 Tracked allocs currently in use. %d Total %d
@@ -77487,9 +77485,9 @@ DumpMemTrackingStats %d %d
 OUT OF MEMORY
 (iub & (m_nSizeWithStack-1)) == 0
 pAllocTracker->m_uSentinel == 0xaa110ced
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/memblockhdr.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier0/memblockhdr.h
 pLeft->m_iStackPC <= V_ARRAYSIZE(pLeft->m_StackPC)
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/minidump.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/minidump.cpp
 Someone called SetWritingMinidump without holding the minidump lock.
 Someone called ClearWritingMinidump without holding the minidump lock.
 !g_pCrashMemoryReserve
@@ -77504,20 +77502,20 @@ Steam
 steamwebhelper
 Steam Helper
 cefwebhelper
-Oct 25 2023
-11:38:40
+Oct 27 2023
+16:23:05
 %04d%02d%02d%02d%02d%02d
 CatchAndWriteContext_t::Invoke with bogus argc/argv
 CatchAndWriteContext_t::Invoke with bogus void *ptr
 CatchAndWriteContext_t::Set w/o a function pointer!
 com.valvesoftware.steam
 /dev/urandom
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/platform_posix.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/platform_posix.cpp
 s_dev_urandom_fd >= 0
 urandom_result > 0 || ( urandom_result < 0 && errno == EINTR )
 MainThrd
 pthread_setname_np
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/threadtools.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/threadtools.cpp
 Thread synchronization object is unuseable
 Out of thread local storage!
 Illegal termination of worker thread '%s'
@@ -77532,7 +77530,7 @@ Thread cannot be joined with self
 Probably deadlock or failure waiting for thread to initialize.
 CTSListBase: Misaligned list
 %d.%d.%d.%d:%d
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/validator.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/validator.cpp
 CValidator : too many memory nodes to store, try again with a higher threshold value
 NULL != m_pValObjectCur
 console
@@ -77540,9 +77538,9 @@ console
  MiB
  KiB
 %%.%if%s
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/valobject.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/valobject.cpp
 NULL == pValObjectPrev->m_pValObjectNext
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/vprof.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/vprof.cpp
 !g_VProfile
 pszName
  Avg Time/Frame (ms)
@@ -77598,11 +77596,11 @@ m_pBudgetGroups
 eGroup < VPROF_BUDGETGROUP_MAX
 No room for new profile in vprof thread profile list, grow MAX_THREADS_TO_VPROF_AT_ONCE
 WARNING: Disabling vprof spike dumping and stopping profile for thread %d - %s because of exceeded rate limit, try a higher threshold.
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/vprof.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier0/vprof.h
 m_nRecursions > 0
 m_pszName
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/crypto_aescbc_openssl.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/crypto_aescbc_openssl.cpp
 pubEncryptedData
 cubEncryptedData
 pubPlaintextData
@@ -77617,7 +77615,7 @@ pcubEncryptedData
 *pcubEncryptedData
 cubEncryptedData >= cubTotalOutput
 nDecrypted == cubEncryptedData - k_nSymmetricBlockSize
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/crypto_digest_openssl.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/crypto_digest_openssl.cpp
 CCrypto::GenerateSHA1Digest
 pOutDigest
 SHA1_Init( &c )
@@ -77626,13 +77624,13 @@ cubData > 0
 pubKey
 cubKey > 0
 pOutputDigest
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/crypto_rsa_openssl.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/crypto_rsa_openssl.cpp
 CCrypto::RSAEncrypt
 cubPlaintextData > 0
 Invalid RSA modulus: %d bytes wide
 CCrypto::RSAEncrypt: insufficient output buffer for encryption, needed %d got %d
 RSA encryption failed
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/crypto_textencode.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/crypto_textencode.cpp
 CCrypto::Base64Encode: insufficient output buffer for encoding, needed %d got %d
 CCrypto::Base64Encode
 NULL output buffer with non-zero size passed to Base64Encode
@@ -77645,7 +77643,7 @@ CCrypto::Base64Encode: insufficient output buffer (up to n*4/3+5 bytes required,
 %a, %e-%b-%y %H:%M:%S
 %a, %e-%b-%Y %H:%M:%S
 %Y-%m-%dT%H:%M:%S+00:00
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/stat.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/stat.cpp
 CStatT<T>::Update: called on class that was not initialized.
 m_iSampleBucketCurrent < m_cSampleBuckets
 m_iSampleBucketLast < m_cSampleBuckets
@@ -77666,14 +77664,14 @@ UnbufferedSend
 PostRecv
 SocketFail
 SocketAlreadyClosed
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/completionportmanager.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/completionportmanager.cpp
 DispatchCompletedItem
 DispatchCompletedItem - error
 ulResult != 0
 CCompletionPortManager::IOCPWorkerThread: got 100 consecutive errors, last error %d (%s), IOCP thread aborting and exiting
 BStarted()
 m_AssocHandles
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/completionportmanager_posix.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/completionportmanager_posix.cpp
 g_CompletionPortManager.BStarted()
 Assoc.nFd == handle
 ( Assoc.nFlags & ( k_nAssocProcessing | k_nAssocFinalizing ) ) == 0 && Assoc.pPending == NULL
@@ -77688,7 +77686,7 @@ Finalization timeout waiting for processing of %d to complete
 Pipe write failed
 CompletePendingIo
 Unhandled pending I/O type %d
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/cookiecontainer.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/cookiecontainer.cpp
 Unexpected result from V_SplitString() 
 secure
 httponly
@@ -77708,7 +77706,7 @@ m_strValue
 m_strDomain
 m_strPath
 enums_clientserver.proto
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/enum_names.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/enum_names.cpp
 Missing String for %s (%d)
 EResult
 EUniverse
@@ -77903,7 +77901,7 @@ optional
 unspecified
 @bEnableFrameFuncOverageWarnings
 This turns on the spew in SPEW_MISC at level 4, still need to adjust spew levels to see it.
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/framefunction.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/framefunction.cpp
 eFrameType < k_EFrameTypeMax
 pchName
 V_strlen( pchName ) < V_ARRAYSIZE( m_rgchName )
@@ -77957,7 +77955,7 @@ china
 html
 Invalid spew group
 RequestHeaders
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/http.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/http.cpp
 Authorization
 CHTTPRequest::RetrieveURLEncodedData
 m_pkvRequestHeaders
@@ -78006,7 +78004,7 @@ user-agent
 Transfer-Encoding
 Set-Cookie
 localhost
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/httpclient.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/httpclient.cpp
 Request host %s with relative URL %s appears invalid
 CHTTPUtil::BStatusCodeIsRedirect( eRedirectStatusCode )
 wss://
@@ -78156,13 +78154,13 @@ m_pListWaitingRequestsForAddress
 m_pTreeWaitingConnections
 m_pTreeInUseConnections
 <local>
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/httpclientmgr.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/httpclientmgr.cpp
 m_vecpHTTPClients.FindAndFastRemove( pHTTPClient )
 m_vecpHTTPClients
 m_strProxyOverride
 Aborting stale HTTP request on connection (%p, stream: %d) due to absolute timeout: %s - %X
 Aborting stale HTTP request on connection (%p, stream: %d) due to network activity timeout: %s - %X
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/httpclient_internal.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/httpclient_internal.cpp
 Hit destructor inside a HTTP2 callback from nghttp2 - not safe
 HTTP Connection (%p) (connection handle %X) destructing! - Dispatching pending request (%p)
 Closing HTTP 1.x connection hard (%p) due to timeout while request active: %s - %X
@@ -78441,7 +78439,7 @@ Failed writing http cache file to disk
 (uint32)m_pHTTPRequestCache->m_listCacheFileLRU.Count() == (uint32)m_pHTTPRequestCache->m_mapCacheFiles.Count()
 CWorkItemHTTPClientRequest
 CWorkItemHTTPClientRequest::ThreadProcess
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/httpclient_internal.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/httpclient_internal.h
 m_BodyDataBuffer
 m_bufLeftOverHTTP2BodyDataChunk
 m_strCacheDirectory
@@ -78452,7 +78450,7 @@ m_FileIOThreadPool
 m_pCachedResponseData
 m_pOriginatingRequestHandle
 m_strFilename
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/iopollinghelpers_osx.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/iopollinghelpers_osx.cpp
 Unexpected thread race for CIOPollingHelper construction
 nStateFlags != 0
 m_watchTable.InvalidIndex() == m_watchTable.Find( socket )
@@ -78466,7 +78464,7 @@ m_vecIPFilterRangesV6
 @nJobInteryieldMillisecondsLogThreshold
 @nJobNetSendsInsaneThreshold
 15000
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/job.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/job.cpp
 undefined
 this != g_pJobCur
 Long interyield runtime -  %u jobs ran over interyield threshold and spew was rate limited since last output
@@ -78493,14 +78491,14 @@ shared resource
 generic context
 @cMinimumJobTimeoutsToCheckPerFrame
 @bEnableNetworkJobsOwnStartList
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/jobmgr.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/jobmgr.cpp
 m_MapJob.InvalidIndex() != iJob || !bShouldExist
 BRouteWorkItemCompleted called for a job that could not be found!
 Job yielding despite declaring a Do Not Yield block at %s
 name
 @bEnableSpewThrottle
 @bEnableLogTearOff
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/logger.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/logger.cpp
 pLogInstance == sm_pLogInstance
 sm_cRef > 0
 sm_bShuttingDown
@@ -78553,14 +78551,14 @@ Last Message Repeated %d times.
 eGroup >= static_cast< ESpewGroup >( 0 ) && eGroup < k_ESpew_ArraySize
 CIPAndPort::GetIPv4 called on IPv6 address
 IsInList(after)
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/bitstring.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/bitstring.h
 bitNum >= 0 && bitNum < this->Size()
 m_vecHashBuckets
 m_memNodes
 m_bitsMigratedBuckets
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlqueue.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlqueue.h
 IsValidIndex( idx )
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlhashmap.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlhashmap.h
 CUtlHashMap::RemoveAt - Invalid index
 CUtlHashMap::RemoveAt - couldn't find bucket for item
 k_EMsgClientVoiceCallPreAuthorize
@@ -79027,7 +79025,7 @@ k_EMsgClientSiteLicenseGetAvailableSeatsResponse
 k_EMsgClientSiteLicenseGetContentCacheInfo
 k_EMsgClientSiteLicenseGetContentCacheInfoResponse
 m_vecMetrics
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/metrics/metrics.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/metrics/metrics.cpp
 CMetricsPayload::RecordMetric
 m_pMetricsPayload
 Not accumulating differing metrics types: %d and %d
@@ -79053,7 +79051,7 @@ null catalog
 null program
 null operation
 @bMsgErrorDump
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/msg.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/msg.cpp
 EMsg %d registered multiple times.
 EMsg_IsValid( pOldMsgInfo->eMsg )
 *pOldMsgInfo->pchMsgName
@@ -79064,7 +79062,7 @@ Sent message: %s - %u bytes
 GetMessageFlags
 Bad packet received: EMsg would be %u, next 12 bytes: %02X %02X %02X %02X %02X %02X %02X %02X %02X %02X %02X %02X
 Bad packet received: EMsg would be %u
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/netpacket_legacy_struct.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/netpacket_legacy_struct.h
 CClientStructNetPacket->GetHdrIP() not valid.
 CClientStructNetPacket->GetRealm() not valid.
 CClientStructNetPacket->GetGCRouting() not valid.
@@ -79093,7 +79091,7 @@ Default initial allocation size for PB arena
 Max block allocation size for PB arena
 @bCheckMsgProtobufOnJobStackForArenaAlloc
 Should we only use the arena allocator if the protobuf is on the job stack
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/msgprotobuf.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/msgprotobuf.cpp
 Unparseable protobuf message arrived, emsg=%u, size=%u
 CProtoBufNetPacket::RebuildPacketIfNeeded (needed)
 unOldBodySize >= 0
@@ -79107,7 +79105,7 @@ m_pHeader->ip_v6().length() == 16
 @nSpewThrottleUnconditionalResumeMs
 5000
 @nSpewThrottleNagFrequencyMs
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/net.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/net.cpp
 pFrameFunctionMgr
 CNet Encrypt
 CNet Resolver
@@ -79165,16 +79163,16 @@ iSetNonBlockResult == 0
 pvCallback != NULL
 !pvCallbackCur
 pvCallbackUDPCur || pvCallbackTCPCur
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/job.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/job.h
 g_pJobCur != NULL
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/cumulativetimer.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/cumulativetimer.h
 IsRunning()
 CNetConnectionImmediateDisconnectWorkItem
 CNetConnectionImmediateDisconnectWorkItem::ThreadProcess
 CNetConnectionDestroyWorkItem
 CNetConnectionDestroyWorkItem::ThreadProcess
 *pvRecord
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/thash.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/thash.h
 m_pBucket == NULL
 cRecordInit > 0
 m_cBucket > 0
@@ -79183,7 +79181,7 @@ PvRecordFind( unKey ) == NULL
 Performance warning: too many items (%d), not enough buckets (%d)
 not enough buckets in thash class %s (%d records, %d buckets)
 pvRemove
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/netconnection.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/netconnection.cpp
 m_hSocket == INVALID_SOCKET
 Must pass a INetSSLConnectionCallback if using SSL
 Cannot use netfilter based encryption with SSL, setup SSL based encryption in your INetSSLConnectionCallback
@@ -79211,8 +79209,8 @@ CNetConnectionAsyncDisconnectWorkItem
 CNetConnectionAsyncDisconnectWorkItem::ThreadProcess
 CNetConnectionOnDisconnectWorkItem
 CNetConnectionOnDisconnectWorkItem::ThreadProcess
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/netconnection.h
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/scheduledfunction.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/netconnection.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/scheduledfunction.h
 m_Func
 m_pSSLConnection
 m_bufSSLRecv
@@ -79223,7 +79221,7 @@ m_pListQueuedSSLRecvsPostHandshake
 4000
 @cNetEncryptionHandshakeWorkMax_HighPri
 8000
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/netfilter.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/netfilter.cpp
 m_pNetConnection
 m_pNetConnection->m_pConnectionCallback != this
 NULL == m_pConnectionCallbackOrig
@@ -79251,10 +79249,10 @@ CWorkItemNetFilterEncrypt
 CWorkItemNetFilterEncrypt::ThreadProcess
 CWorkItemNetFilterOnDisconnect
 CWorkItemNetFilterOnDisconnect::ThreadProcess
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/netfilter.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/netfilter.h
 CWorkItemNetEncryptionHandshakeEncrypt
 CWorkItemNetEncryptionHandshakeEncrypt::ThreadProcess
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/netpacket.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/netpacket.cpp
 m_cRef == 0
 pubData
 cubData
@@ -79282,7 +79280,7 @@ ECONNREFUSED
 ENOPROTOOPT
 ECONNRESET
 [no name available]
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/opensslconnection.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/opensslconnection.cpp
 nBytes2 == m_data.NumAllocated()
 m_data
 commonName
@@ -79413,9 +79411,9 @@ VALVE_CRYPTO_dbg_realloc
 VALVE_CRYPTO_dbg_free
 COpenSSLContext
 COpenSSLConnection
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/opensslwrapper.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/opensslwrapper.cpp
 OpenSSL random number system reports not enough entropy
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/platform_sockets_posix.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/platform_sockets_posix.cpp
 nDataLen not supported in %s
 AsyncSocketAcceptExComplete
 pCompletion->type == IOTYPE_ACCEPT && pCompletion->ulResult == 0 && pCompletion->SocketAcceptEx.hNewSocket != INVALID_SOCKET
@@ -79427,7 +79425,7 @@ AsyncSocketWrite
 pCompletion->type == IOTYPE_SEND || pCompletion->type == IOTYPE_UNBUFFEREDSEND
 AsyncSocketReadFrom
 CBaseScheduledFunction
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/scheduledfunction.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/scheduledfunction.cpp
 Attempt to schedule '%s' %lldusec in the past
 CScheduledFunctionMgr::BFrameFuncRun
 pBaseScheduledFunction->m_iScheduledItem == scheduledItem.m_iScheduledFunction
@@ -79460,7 +79458,7 @@ steammessages_base.proto
 client/TCPConnection/SentBytes
 client/TCPConnection/RecvBytes
 IStreamParser::BIsValidMsgType() old packet header from out-of-date Steam build, discarding packet and closing connection
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/tcpconnection.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/tcpconnection.cpp
 cubData >= 8
 IStreamParser::BIsValidMsgType() invalid packet header (1st 8 bytes: 0x%02X%02X%02X%02X%02X%02X%02X%02X, %d bytes recv'd so far) discarding packet and closing connection
 IStreamParser::BIsValidMsgType() too-large cbMessageSize in message header (%u bytes, %d bytes recv'd so far) discarding packet and closing connection
@@ -79573,7 +79571,7 @@ DisconnectPlatformSocket
 ClosePlatformSocket
 m_queueSends
 TCP disconnect
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/tcphost.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/tcphost.cpp
 IOTYPE_ACCEPT == pCompletionData->type
 CTCPHost
 CTCPHost Globals
@@ -79581,7 +79579,7 @@ CTCPHost Globals
 @cUDPSendRetries
 @nClientCMUDPPingTimeGoodEnoughThresholdMS
 @nClientCMUDPPingTimeoutUseGoodEnoughMS
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/udpconnection.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/udpconnection.cpp
 CUDPConnection not initialized, was GlobalInit called?
 CUDPConnection::InternalGetUDPConnection called without calling CUDPConnection::GlobalInit first
 *ppUDPConnection
@@ -79657,8 +79655,8 @@ sm_THashPUDPConnection
 sm_SchedulerACK
 sm_SchedulerResend
 sm_StatMicroSecLatency
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/udpconnection.h
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/msgbase.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/udpconnection.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/msgbase.h
 CMsgBase_t : packet too small (EMsg %u)
 CMsgBase_t : packet too small
 CUDPHost
@@ -79667,7 +79665,7 @@ client/UDPSocket/SentBytes
 client/UDPSocket/RecvBytes
 client/UDPSocket/SentPacket
 client/UDPSocket/RecvPacket
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/udpsocket.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/udpsocket.cpp
 bUseIOCP
 INVALID_SOCKET != hSocket
 CWSARecvFrom (UDP) --ioctl(FIONREAD
@@ -79687,7 +79685,7 @@ UDPSocket: ThreadedFunc_RecvUDP got error %d (%s) from socket %d, (invalid) hSoc
 CUDPSocket
 CUDPSocket Globals
 CWebSocketConnection::GlobalInit()
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/websocket.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/websocket.cpp
 Must initialize with CWebSocketConnection::GlobalInit before accepting connections
 eConnectionMode == k_EConnectionModeClient
 pConnectionCallback == pWebSocketConnection
@@ -79718,9 +79716,9 @@ sm_mapWebSocketConnection
 258EAFA5-E914-47DA-95CA-C5AB0DC85B11
 CWebSocketConnectionDelayedCloseConnectionWorkItem
 CWebSocketConnectionDelayedCloseConnectionWorkItem::ThreadProcess
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/websocket.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/websocket.h
 CWorkThread -- Sleep
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/workthreadpool.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/workthreadpool.cpp
 pszThreadName != NULL
 CWorkThreadPool::~CWorkThreadPool(): Thread pool %s shutdown incorrectly.
 0 == m_WorkThreads.Count()
@@ -83809,146 +83807,148 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-9]uv
-yE2=
-of_2
-(3dBa$
-POqo
-g8Uc
-~ %]0
-4HK8
-W4p5
-Xk2R
-4;7+
-f~AP
-2Ui4%
+6oq6
+&j,:
+TbjC
+E|M*
+::f(
+bzd@
+I8rV)
+DPVn
+|+ih
+j`bhdk
+tzHD
+C7U	
+6aWw
+nR"e
 71{e
-	j{Z
+Y;Nq
 cm|k
-vk/EZ
-cU{/
-*Nx}
-'E{<
-!Ar	
-H*g)
-YHT{TE
+NAwl
+jbD:
+Ot$5
+!a}>
+kL%,@
+9A)`
+ xn}{
+NpTK]
+JL_#B"VJ
+?Q{+
+meTN(
 x8L_
-0M"F
-p9FtmE
-&*AT
-P!:B
-&n=N
-SGZt
-y!0i
-oTuH
- l!|L
-S-uC
-'Q&[
-5}??
-=E!VU
-\.]E
-y<glp
-THzaM
-/\=Yn
-[6U7
-v&P0
-YJ-V
-e'tLV'T
-:sZ8
-'HKo
-j:kN
+HGosM
+oug_]I
+J7@$
+(]ML
+`VI5
+;_>1k
+%Ms=
+\]09
+}L7e-
+Rq4~
+.S=QEp$b
+_ePY
+0,$`
+z4& 
 .@G>
 `g_{
-6$b3
-YeO4
-z6|KT9R
-0[ZZ
-Uw$X
+J3o#
+y)~5
+BTCf
+[ 8-/
+C@\h+
+Vj2>
+3I3-
+JV_m
+LSQx
+8RU'2
+,n8rA]
+hbR#
 <PZ`
 @*t9
-@U\5
 :eOD
-bHAY
+-QMe_
+,COn
+eLNsb!
+y?LG
 ~$^7
-e]dxi
-&?Q/2
-`W01
+9^|u
+q7NfH
 \`+W$
 ,l{|
 ;[c	
-6oac
-x:BS
-R2r=]
-_Q	T
-/:37
 2y#|
 qc2rR)|
 gf!T9
+S(;8
 Ule^z
 j<7/
 E~;2
 eX?\)
 C"uA
-}/YOS
-?i9_#
-sI{<v#
-@%Cz
-*vIlU
-MBnp
-{<X|v
+aD(mW
+{%^ne
+-:G6
+ a)OU/
 U-L&(/
 =S,D
-9## m
-Q:7@7
+4Dl*
+zk&(
 #/MU5
 4d]j`5
 =@3[<;
-y =g
-D/F)
-.Zox
-6eE9j
-5$k^
+2G9$
+JC^J
+8tQv{
+wY00
+=/RI
+H*ym
 $/M_&
 e fP
-C3Fi
+J<&+:(
+hXv9
 h&S7n
->L)4
-#F@!
-0RYZ
-G>_l
-'JAFk4
-k-%}
-z(_g
-SUcR
-s%?Z
-hhkm
-3x= 
-DbmZ7
-xZ^:
-4I6j
-^1su0
-nPCWXs
-LX6Q
-[.J&
-w#JM
-tth#}X
-Q#QE
-$fd^j6Q
-g28+
-+7-UC
-s#*K
-]bl7P
-	l/o
-nFL|
-k|}x{
-:O~[
-i3n$
-J(2;
+SYE\
+DSUt(
+}QkN
+jt'6%2:[
+8@Y;{
+h_HW
+2nBNR3
+\&+b
+\%rU
+tv+mMM
+\<B?
+:O6V
+;=d<
+m!)f
+1mt4
+UB\XYF
+~e=@z%
+6 |	
+M>MN
+vcSGx
+}3u]
+tHJ$
+xJyV
+_sKw6Vj>N
+W=Fh<
+[^V/
+{>9@S
+j_$M
+PD<U
+`l_b
+h$X{
+:49<8Cc
++\syU
+sm<%
+pN0	$
+=#u>4
+Htsk
 vMVY
 *b	O
 2meL
-zSuH
-M6C]
+$'YD
 N;c}(
 F!"D
 mL4b
@@ -83964,47 +83964,52 @@ JNLP
 *j+#
 r+abh$
 o6wq
-MfV~
-%S	R
+d9;(:
+(xm"
 FvJC
 VEh?
-c86.
-@a/0O
-T*RL
-3`(+
-$hea
-8I3@
-,baVTS
-(,lZ#k^G
-poP[Up.
+2PTn
+_OGb
+;/.q^
+5m"=
+vV8!
+=q24
+9f^W
+24zfO$
+=c=-
+c9p4
+[L{%
 Z:(@.
-56>{
-i}TI
-^_r-6
-s#1~np
-6i\%r
- K;o"A
-M/}3^g
-jt$^
-f^6b
-1U8DnP
-h@%t_Z
-C4qZ
-w!P#
-Nl|F
-JO<T
-rV.]
+T9kr
+8B+~
+"R3!
+SvRr
+fG	|
+eTJMB
+O9,8
+}sxe
+X7JvBL
+0 Ka
+u	=h
+C?u$
+HFA,
+/t%~
+\e!E
+U0wi
+aFt&
+HcP9N
+vHi(Fae
+N$1^
 W}4A
 `@%5
 0?)v
-`!Dk
-dRoPau
-|A0(
- ]M*
-FnY}
-g{0)
-7%Bp
-~h<D
+`!Dkmj`u=>
+ =m3V
+}9;G
+QI}|
+(+0 
+~e1x
+*N|"
 jg.G
 {NMd
 }(P3)m
@@ -84030,35 +84035,44 @@ TiEC1
 K]4aztd
 0Y|R
 rSfb
-.bj9e
-q#	A
-[rd@~_
-V1,HF
-q	."
-plps+
-9AX+
-%I_s
-92$wbUJ
-74[a
-:=0k
-90V{
-:HK$
-ok6i
-'[vyz
+$z#_
+EfhM
+G6y6
++%*0
+\w6,
+o{Y8ry
+-|aV
+#QBh
+	=-t
+;<[l	
+'+v8
+)K -J?
+Q~;%
+|}[ 
+Q{9H
+3KW	
+15VH
+Y(kr
+G5k6
+-JH)&
+?oK.
 p7;S{
-k`j'
-_P+--
-Xiwnl
-9,'F
-V|j#
-XseS
-FVX:GE08Z
-vj[O
+B z;
+v7cG
+Z<{D
+:[ I
+~k8Tt
+},j2
+M]? 
+|6F /+
+ZcFJ9
+4F]X
+a"W3H@
 A#D)e
 (f{G
 )zm/H
-pBv%
-uZDV
+F'*Cn
+*#$'
 iB~s
 IC}7
 [4c5YF?.
@@ -84075,100 +84089,111 @@ MXGJJ98X76
 I+` 
 com.valvesoftware.steam
 MXGJJ98X76
-G;F7
-A	d9
-10BU
-K%s+
-gR=]
-Yu[R
-<< "
-qt li
-$QcAj2
-<|J]
-0j/}zOf
-^F)+
-QdnA
-\ZX9p
-,MKw 
-^go+gA
+=?iC
+:4~N
+w(0n
+1`Yv}z
+g;8a5
+ 1LD
+-w0Q
+*	hI
+U_Ol
+*<Ba
+b%jP
+lX/_
+K0wihr
 ,!S|^
-3M;x
-'EM^
-C+0`
- /Fr
-0#hD
-6_x/
-|,CR4
-[14I
+bzJM
+Na4R
+'FXb(
+dl/a
+u+E*e
+GVYU
++dJS
+zL'SA
+_.Jb
+\/of'|N
+&iDX
+)t~V{
 `NGC
-gy}S
-;cq2
-GV)Vri
-p~zM;
-$mNB
-330t
-@Pjc
-^/1M
-D2,o
-  jz
-b#y~D%@j
-q5%AUu
-%~'tc
-K>ji
-itmh
-%{9K
+<4eY
+[@Y-
+gj]'
+IxBD
+DbLc
+Ze$Fa
+4MEbX@
+|B)1
+(q'f
+$ij)
+3'7UL#
+Nj5_
+(`Ax
+K;r}
+lAQ;
+S8 7
+gd|T
 F!"v
 s'Pm
-R&Hu
-UJL4
-[dSs'u
-:,v3NH
-&1i&Q
-E%H$IKP
-8]<k
-uNGc
-pM'g
-mz|hf#
-Qtsc
- r)R
-R_FZ'Ox/,
-Drz1
-d7=g
-z4~3
-:\x:
-.Gij]k
-1`c,I
-x2)X
-Ax&j
-FnV<>r
-E8q-
-dWmC&
-nv45
-YDnr
-Eb	#
+iWcdJ
+2[|K[Y
+."CN)
+0@(mg
+.z>r-n
+W[6l
+-2=Y
+5CSfF
+I"67
+w+kl|{
+r%jUL
+M\/m
+=Rj U
+xl!n
+mVhR
+ MIx
++M8f
+Z2>m
+<4-M t
+[x7:
+l3#W.
+[7O[
+n#|K
+nFK;
+q.*b9
+8-]dn
+ w+W
+sWbr**W
+#.Kv
+xNh&
+^'<KF
+v#$P_
+OK1$
+Q"Bg
+%)(G
+"e}?}
+fvB#&
 >gs	
 E<(	
 ?PWm
-l`1Z
-%Dh>.E
-&xCZ
-OI)*
-U:,x
-#e|M
-A.iM5N
+8'Z2?
+N6Kn :.mb
+Q[y^
+cKVZD
++Fd?G
+\t5};<
+@F_FCPB
+4+cq
+[	X#"
 MXc$
 ],_p
 ]GI05
-hLR;
-N^j5
-\zX*
-?GIp
-6cE:
+!JCFVT
+Yuor/
+!yuBp
+=OSH
 vzA\
-#]%W
-<F2ib
-+idD
-'x>t
+n0]p
+O2cZF
 [AJa
 C`3y
 sx&F
@@ -84176,35 +84201,30 @@ l_uKA
 A5lr;i
 ,iU* r
 2)Y\:
-/ReFS
+Hgqx
 ^~/1
 ^\OO
 6GEiC
-pU+<tV\
+_k<\6w
+I"jW[
+uN0lU&
+L F0
 q->+3uxL
 g)fC
-j06-/{O
-R9A~
-*^Jay
-q)oJ
 ZK,*
 OR[e
 ^y?*|^
 02-]=:
-Ej[/
+1}48
 /rh5P7
 { !Fk
-B;z|_
-"|)<.
-zXfl
-CsA0i
-kQL_^
-wT0p
-GniPqJ
+8.f>/
+*1h{
+z9.@_
 bm	H
 YDCj
 \P6pb
-rCb?!
+8@Wi
 u5YzM
 :V_{@
 V~.O<
@@ -84224,32 +84244,45 @@ v.e-
 qao<
 rQ?Ro
 f9lq
-a+f}
-ezP5F
-Y9i?
-{uR@
-IIiM
-@6mhI
-$-fL
+"Ywk
+<p;u
+h}QZ
+lf#"p
+wZCH9
 CrIT
 NG6I"
-ubH%G$@
-_/\pF
-/X-R
-Q2'ey
-j*+t
-T:w_
+;hXS
+*01c^
+q#cZ
+to9+o
+/Uxf
+#TnE
+=8QP
+V'E9
+y_hV
+6geTI
+bM4~x
+t71R
+r:[S
+RPlH
 RwOH_UM
 ,XQ~
 XUe|
-|O 5
-H:*H
-3`"}
-}Cg!a"
-J2^D-
-@eCn
-S0:A
-g]OM
+xzLl]
+-jE"7
+@c]%
+#8Gg
+B<g@)
+ 	$		c
+j~zY
+O1ogl
+tO-0?
+`/RSzK#
+lszc9a
+*\,G
+i6Nl
+BV_1
+[?iQX
 a&z8]
 :bP43f
 SmZ=
@@ -84264,59 +84297,60 @@ i71=%
 `<S^
 UUNq
 w76Ru
-Uh(D#
-iJjV
- +rd'
-F&N@
-`+s^9
-P^qH
-EpHS
-.@MP
-pe-y
-*+/Nr
-9tBEr
-\+I6
-1(kO2I
-}x{Fm
-3Rd}
-aP&r4
-^qHopF
-PN>h
-Ni>3
-jz~O
-T,yhn[
-a^b[
-SKVb
-q'@"]
-/\*2a
-y%?6
-I<&[
-~@iw
-"^vGM2
-;tl,
-zJpb
-oj`SV&
-*B",*
-`XQk
-aX%5!
-B|Hm
-!;)]
-bZ-n
-Mp1fr
-Rwy{q
-aj27sC
-E'*=
-l~7O
-R\R^
-%|kd
-;o0j
-2msPO
-]i	,
-Q<vct
-='AB
-%#bgW
-P*_\
-{XsH
+*_M(
+w$r<=rNUK
+!yht
+F1X(q
+@kpA	
+%RgB
+ +/D
+#N"=
+)}U@
+p$+>7"
+wA_0
+L1Z.
+ka+/
+Pr\)
+AP7>
+q:[0
+Xpi+
+@d=	kU
+r/VR
+JV8v
+$lW~
+4V'K3
+hsx'
+5eYT
+kZ=O
+^:|Y
+za.X
+:1hY
+@T$Oo
+V,=`A)
+.SRH@
+ba:-
+F"Q,
+"PY 
+fkm o
+@^)c
+s+Sa
+o4`GD|
+3F(:%
+A6[g
+!]$?	
+sv$A
+u@.x
+BQ+&S
+:hL>`
+}?%@
+_,*G
+CEB$@q
+{Q/M
+ ~S[p
+Y`Z~
+/z-b
+7<{b
+\[.L
 gXxI{{F
 Cx-b
 N5Fx
@@ -84324,7 +84358,7 @@ jBce+
 }6w 
 S<]dS
  Ot&
-%U\v
+4f|9
 emQ9S
 ~l\5U
 d9Q"
@@ -84342,76 +84376,66 @@ jkW2
 8F4S'o
 y^aP
 W1$64
+\x:S
++kaB(
 ~i*`
 Fg~kh,
 "/(|
 97B^V
-L@S]Q
+On|/;^y
+U$#s
 Tvw!6
 aln[
-E(Qe
-ORt-
-40S{
-|d&2Oz
-[y#Lw
-G%/!
-R%ma
-	{Q_
+uFS|
+U?D<
+U*g*6)r
+Ify	M
+||oJ
+DGoh
 M83^y[Z
--ip2
-a\Tq
-`)~q
-bxwcV
--3c]j
+$~^8
+M1A[L
+	x4C
 %d9U
-ETthh
-G*^s{
-Javt
-sg3W
-c>:8A
-fFK[
-e=Jgi
-JZw-
-w1k:
-"ii?
-nb@<
-lWND0Q
-cp37
-^0^$
-I7H<
-iDa&N
-WV<Zt
-9%p"kc
-%MFBE
-kN-7
-p>mv
-<7&(>
-;Tq/
-]O>%
-T#sNBz
-\"1~F
- Q<C
-`"^hm
-[3N`
-	&i0
-3_c2
-	rqcZ
-yWGG
-dy0w
-!jzl
-B2'0
-;swy:KH
+IdO	
+p5zO
+7At8B
+fGm5
+|s /
+|&HW[D
+ZUhd3-Czs
+Sr26'
+WJ;n
+ L.g^
+\^77i3
+Q}aH
+~f>4
+;ns)d
+X.6T
+{>0E
+8[jb
+'Cq{\
+<3j%C
+Pb/7
+~k?B
+_1viH
 c)pq
 	O1z
 T{6R
 WHhe2
 :K:6
 TwA9
-% Z,
-CJ\]
-5nW0
-9w'7
-b:uE
+ukGg
+JuX"F%
+MQmb
+0Jc'O
+or44
+nS}.
+R}W>+
+U #j
+;xU!{
+C=cvj
+m:P=3
 #L*?
 *}fi
 %J5T
@@ -84440,66 +84464,62 @@ MJu,
 4D~p
 Hfe|3
 `P{{
->r4/
-Nkg&2%
-k-pr
-B&;?
-jKv]
-5Pfj
-9.(!l
-Ll7@
-LH+dyU}\4
-^*6[
-9Go2WI
-Wl-?
-pv~r
-f$Q6
-.yK5
-|A,m"C
-Bhds
-DF8L<Lw
-pO|,
->Eo~o
-R/J8
-_@W[
-Dt*(
-,(oF
-4'AL
-1~zQ
-8Sj~
-D-yO
-x"Zj
-" QC
-WB;o
-wKoBP
-\a0,$
-`%J;O@
-v#<2
-EQ_ou[K
-XLjre
-Gr|C
+@,Z7>
+H]lVP-D@
+[N?O
+2Hm`
+[u!%
+4zJ\.
+n?:I2
+%5;7
+A(5J
+~$=s
+P_.l
+BVXZ
+urW1
+Jcqe
+(r.{*f;YJ
+daN?
+EOqr
+Rr4]s
+k&UL
+"0VN
+5T(^
+jdgq
+:!qE
+%:#q
+XOa~
+j	"-
+W0wl
+}q5E
+cjC:
+0}SS
+!9\G
+X[pK
+7D1QcB]*
 63RQC
-iI7'
->\sPM
-A'tM
-+kyJ1klop~	
-fS-7
-cf1S
-LK.	
-)D<#rGX0
-MC L9
-jo{_
-!W	l59U
-`R0T
-'S0`%
-CpVYBI
-B$c(f
+y#t+
+I{%C){
+`C1$
+@Y^^3
+V4U)t
+ j<uv
+mc1d
+?P"uFs
+|7`gx
+vs^F
+!r(Z
+{<,r \
+"F1p
+l2#S]
+@HuI9J=
++-a9i
 RIuJ
 I@hhq
-@3G\l
-i'~zk
-o$YyrF
-n_Ip
+@3G6
+~>^q3
+qL'"#
+Y"v 
 ~YBYm
 D+p}
 _p5V
@@ -84566,7 +84586,9 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231025184101Z0/
+231027232525Z0/
+;|&FU1+
+A<Qa0
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -84574,35 +84596,39 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		XPwGLz1gnaSy8Kg8yf5fV9/UBpE=
+		Os+sLDTc3hcgaBHKcoao2tbK/ms=
 		</data>
 		<data>
-		hhcYubxbb++l3Rp4QW7gaofbOKo=
+		fZc+hp4jMKw7fCZGVTErt5nfQLY=
 		</data>
 	</array>
 </dict>
 </plist>
-wXAaD
-.:@x
-u`1`
-20231025184147Z0
+*TMV
+T8qz
++g>sm
+apx\j
+.f>p
+20231027232537Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231019205532Z
-231130205531Z0B1
-Timestamp Signer NWK21
+231019211004Z
+231130211003Z0B1
+Timestamp Signer NWK11
 Apple Inc.1
-S2/k4
-]-lU
-)sX]
-g6;h
-2Z72
+$qJK
+mc.V_l
+\+\V
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
+X3zP
+27,=Dr
+k]mh
+MM.):t
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -84641,10 +84667,8 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231025184147Z0#
-)b/{d
-P[Q dF
-H#Qn
+231027232537Z0#
+=Aj2
 __TEXT
 __text
 __TEXT
@@ -84693,6 +84717,7 @@ __common
 __DATA
 __LINKEDIT
 @loader_path/libvideo.dylib
+TRt%N":
 @loader_path/libavcodec.58.dylib
 @loader_path/libavformat.58.dylib
 @loader_path/libavresample.4.dylib
@@ -92862,16 +92887,17 @@ R	g
 R(#	
 A@q+
 R	_	
-T`is0
+Rbxs0
 Twb@
 Th:@
-`VsP
-T@JsP
+"Xsp
+T KsP
+BOsp
 RH!	
-T`GsP
+T@HsP
+bLsp
 T-}@
 Th*@
-T AsP
 R(!*
 DQ\@
 &B)3
@@ -92880,6 +92906,7 @@ DQ\@
 Rh!	
 Rh!	
 @9(	
+`Tr0
 T9|@
 T9|@
 R(#	
@@ -93046,14 +93073,13 @@ Tk"@
 AMJn
 j88 
 6h&@
+T`6h0
 Rh&@
-Ajhp
-AKhp
-ZKg0
-52gp
-VH~P
-c4~p
-#3~P
+IJg0
+"Wg0
+9OhP
+5T~0
+C?~0
 5qm	
 ii8J	
 	k-%
@@ -93068,36 +93094,31 @@ ii8J
 T	q0Q?
 ii8J	
 	!5Q?
-T D~
-bF~P
-T ?~
-T@:~
-T@7~
-b7~p
+"T~p
+ N~P
+BJ~p
 	Khb
-B-~P
 2@9(
-T vf0
-bxfp
+5@7~P
+T@wf
+!6~0
+4`1~0
 TsB@
-4 [g0
-"[g0
-bLg0
+)>|P
 4iF@
 *k{8I
-b|eP
-"N}0
-Bse0
-cJ}P
-"oe0
-#G}0
-A<}0
-a8}0
-".}p
-b-}p
+"\}0
+"te0
+cX}P
+#U}0
+AJ}0
+aF}0
+"<}p
+b;}p
 @9_%
 T	}@
-b%}p
+`'}P
+b3}p
 jh8?5
 j{8?%
 T`6@
@@ -93105,30 +93126,31 @@ T`6@
 Tw"@
 h&@9
 4hN@
+"|d0
 i88`
-6sdp
-"{|P
+Bqd0
 yhN@
-7@i|p
-"m|p
+7@w|p
+b{|P
 9h+A
 4iZ@
+"e|p
 4hZ@
-T@H|p
+T@V|p
+"e|p
 ThZ@
-aM|P
-A-|0
-a+|0
-b(|P
-!&|0
-T@=e0
-R"&z0
-T@8e0
-R"!z0
-5a(d0
-6Gep
-7sep
-!mep
+6>d0
+!Z|p
+!P|P
+4@G|
+A>|p
+B3|0
+R"/z
+R"*z
+5a*d
+VMep
+7zep
+!tep
 ?))A
 hB@9(
 4`FB
@@ -93154,32 +93176,31 @@ ThND
 4hND
 4hND
 @@9(
+4@({0
 B@9H
-i~tP
 cSxH
-iutP
+I}tP
 <HO@
-T I}0
-RBK}p
+RB[}P
 T	'@
+BUcP
 Th6@
 T8|@
 T8|@
- fbP
-`ZbP
-T TbP
-@ObP
+"\bp
+"Ybp
+ PbP
+ Rb0
 Tm}@
 hB@9
-7`%zp
+7`3zp
 RhNB
 TzjB
 ThbB
+6@'zp
 Rl}@
-"Ez0
 T9|@
 R(#	
-h3zp
 <(DA
 <(DA
 RhNB
@@ -93188,8 +93209,9 @@ ThbB
 <(DA
 RhNB
 TxjB
+T@s|0
 ThbB
-T vbP
+T`lb0
 ?))A
 T	}@
 ?))1
@@ -93205,31 +93227,32 @@ hNA9
 Th6@
 hJA9
 <(DA
-B[yp
-bHyp
 T7|@
-!gy0
 6s:@
-bgy0
-TfyP
-BbyP
-	_y0
+Isyp
+	lyP
 =)	@
 Ti>@
 ?))1
 <@`D
 KA9hJ
 9x:@
-@taP
+`xap
+8l`0
 9iBA9	A
 9iFA9	E
 9h6@
-4@Nxp
+aO`0
+4@\xp
+!{x0
+v>`0
+auxp
+A:`0
 5h6@
-A#`p
 R[?@
 	 @y
 Rh#	
+#Qx0
 <h>@
 <h>@
 ThZ@
@@ -93252,41 +93275,37 @@ TM}@
 )h>@
 TM}@
 <i*@
-T {y0
-RB}yp
-T@xy0
-Rbzyp
 **y(
-6^yp
+6nyP
 7h"@
 7h"@
 **y(
 Th"@
 R( )
 Tu~@
-6Iy0
-wKyp
-BOyP
- Kyp
+w[yP
+ ]y0
+`[y0
+"_y0
 TM}@
 Th*@
 H,\P
+b/yp
 (*\P
-c4_P
 ('\0
 h!\0
-"$_0
-RUl_p
-b'^0
-a=^0
+"'_p
+Ruq_
+B(^0
+!>^P
 Tv"@
 hBA9
-btv0
-HYvp
+(kvp
 =vB	
 y`FA
 TzNA
 Ti.A
+4 ;v0
 5`6A
 	9`6A
 I9h%
@@ -93303,16 +93322,16 @@ R	}
 Th>B
 4hZA
 RLyi
+"evP
+Bdvp
 ThZA
-BRvP
 Th>B
 7hBA
-IMvp
 5`6A
 5`6A
 9`ZA
+T 5]
 ThFB
-t-]0
 Ti.A
 =uB	
 TyNA
@@ -93324,86 +93343,78 @@ Tihw
 Thhw
 5`6A
 5h>B
-4 Zup
-)huP
-T@Nup
-@Lup
-BcuP
-4`Jup
+"ruP
 Oz!S
-5@9up
-bhu0
 ThZA
 I9(Q
 4hBA
 5)A@
-RBfu
-Heup
+R"suP
+4`/u0
 5hBA
-HauP
-(Xup
 9hZA
-(Mu0
+hauP
+(`up
 Th.A
 T8|@
 Th6A
-I.up
+HPuP
+J<\0
+I-u0
+i>uP
 4hBA
 		A9i
 i#S)?
 h'S)
 i+S)
 h'S)
-E9J#tp
-E9+~rP
-al\0
-4 Ru
+T`wt0
+ vt0
 ijh8
-T`Ctp
 "S)?
-RBgtp
-T "tp
+T@Mt0
+T Gt0
+T`Et0
+`4t0
+@2t0
 S	|@
 Tc.A
-	[[p
 #U)*
 #U)*
-IG[p
 *ih8_5
 )Ij8?)
-A|tp
-Hlt0
-RBmtp
-hTtP
-4`^t0
-4@TtP
+(ttP
+RBptP
 TJKh8_5
 JKj8_)
-(Htp
+HRtP
+ StP
+IGtP
 *ih8_5
 )Ij8?)
-4@4tp
-	;tp
+4 ?tp
 T`6A
 T`6A
-4 <sp
+b!tp
 	9hBA
-4@3sp
 B9c.A
-4!|r0
+`=s0
+BP[P
 4`6A
 4h>B
-B\sP
 7hBA
-BHsP
 ThZA
+bSsp
 5`6A
+HPsP
+BNs0
 TtFA
 5`6A
 5`6A
 #8)h
  =8\
 ThZA
+B+s0
 		A9
 ThZA
 5`6A
@@ -93411,30 +93422,24 @@ ThZA
 7hBA
 5hZA
 5`6A
-T`lrp
-T@erp
 h2@9
 Th:@
 Th6@9(	
 	!@9
-	Is0
-iCsP
-T`Prp
+	Rsp
 Th.A
-I<s0
-T`<rp
 Tc.A
-h$sp
+T`[Z0
 ThZA
 5`6A
-4`,rp
-"#s0
 9u>B
 4h6A
 	9hZA
 4`6A
 Th.A
+  sP
 Tc.A
+b:ZP
 h2@9
 Th:@
 5`6A
@@ -93445,26 +93450,34 @@ Th:@
 Th"@
 7h"@
 T	}@
-T`5YP
+T@6YP
+b;Yp
 EW9h
 y{BA
 j78t
-awr0
-i"E9
+i"E9J
+H}rP
+:}rp
+6<qP
+Xdr0
 (GW9h
 	EW9
+zuX0
+!Grp
 	AW9I
 Tx#C
 7h#F
 	AW9
+Ry_XP
 T	!C
 T*}@
 44|@
 R( *
 Th>@
-T @XP
+"EXp
 TM}@
 H}~X
+3*X0
 Hy~X
 (x~X
 Cx~X
@@ -93489,14 +93502,14 @@ hBA9
 hBA9
 4hBA9
 i)8`
-aJqp
 Th*@
 T`JB
-T@QW0
+T`RW
 Tj.B
 Th"E
 Ti.B
 a}X)
+x	W0
 TyvB
 R) 	
 R) 	
@@ -93511,72 +93524,78 @@ Ti:@
 T -@
 5h:@
 5h6@
-Adn0
-)nVp
+4@4o0
+	|V0
 K!C6
-6gVp
-!Hpp
 E8qc
-9rn0
-ZLpp
-6RVp
-!Ip0
-!GpP
-8)Vp
- Sp0
-@TpP
-BTp0
+I_p0
+8[p0
+[[pp
+aXpp
+@bp0
+"5VP
+@app
+ccp0
+"cp0
 4`n@
 4vn@
 h@|X
 Rvv@
-AVW0
+a\W0
 Ki~@
 Thv@
 )|X)
 9vv@
 TH/B
-R!8n0
+RaFn
 Ti~@
 T9|@
 Rh!	
 4`n@
-axoP
 T`6@
+(so0
+(jo0
 4h6@
-T@!UP
+T "UP
+B&Up
 Rh!	
+b#Up
 TM}@
 Th*@
 R(!*
- 'oP
+`.op
 R`z@
-bGmp
-"lU0
+`Hrp
+B`mP
+@<rp
+"oUp
 R( )
-`Dop
-W;op
+"Wop
+WKoP
 7h"@
 7h"@
 7h"@
 **y(
 Th"@
+T`)o0
 Rh )
 TM}@
 Rh")
-@kTP
+`jTP
+`lT0
+T`eTP
 TM}@
 Rh")
 **y(
+b<Tp
+i)T0
 Ri")
 TM}@
-"Snp
-"Sn0
 (	RP
-R5lU
-AHT0
+cXn0
+aJTp
+BJnp
 Qy9(
-B#n0
 rI}	
 AHJiM
 AHJh2@
@@ -93587,17 +93606,17 @@ Th&@
 )AIJjM
 )5IJ
 7AIJ	
-Vnnp
+V~nP
 T	|@
 rI}	
 AHJiM
+Yin0
 R( )
 K)@),
 JAJJkM
 J5JJ
 WAJJj
-@Hnp
-6?np
+6OnP
 7h"@
 hRA9
 yh*@
@@ -93614,15 +93633,18 @@ RL-,
 AMJn
 (Q99
 h(Q0
-cemP
-""S0
-" S0
-T@cm
+#sm0
+T@rmp
 6`2@
  7	}
 R	}	
 Ti>@
-IGmP
+	emP
+4 gm0
+!Ymp
+BNm0
+!(mp
+B)m0
 Rh:J
 RhZJ
 	J)M
@@ -93630,17 +93652,20 @@ RhZJ
 )5IJ
 7AIJ	
 T	|@
+WWm0
 rI}	
 AHJiM
 AHJh
-T ^RP
+U(m0
+"cRp
 Rh!	
-T@[RP
+T \RP
+B`Rp
 TM}@
 Th*@
-T@URP
+T VRP
 R(!*
-bERP
+BFRP
 Th*@
 TKii
 q$	@z
@@ -93653,19 +93678,18 @@ R(#
 R(#	
 rI}	
 AHJiM
-5el0
-vglp
+vwlP
 h:@y
 6h:@y
-b\lP
+T@>S0
+"llP
 BWJiM
-6\lp
+6llP
 6h.@
-6Ql0
-wSlp
+wclP
 rI}	
 AHJiM
-5Hlp
+5XlP
 Ti"@
 7h"@
 Ti"@
@@ -93676,14 +93700,16 @@ pgwX
 TjF@
 TjF@
 7`&@
-Tb2gP
+Tb;g0
 Qi&@
 	?wX)
+4@ok
 RH#	
-Y*k0
+\<kp
 ji8J	
 Kki8J	
 ii8J	
+R@	k0
 @9H*
 Txj;8
 7HK 
@@ -93698,8 +93724,8 @@ i1vX)
 )AIJjM
 )5IJ
 7AIJi
-Uhj0
 7h"@
+ :j0
 Tj.@
 **y(
 T	|@
@@ -93732,19 +93758,21 @@ i2@9
 yh&B
 h"A9(
 @y@!
-T *N0
-b,Np
+T@+N
 Tw2@
 +ih8J	
 "@9h"
 h.@y
 w.@y
-BMj0
-B;jP
-A;jP
-b+jp
-"1N0
-VYMp
+"Zfp
+"QfP
+aNj0
+aIjp
+B<jP
+B<jp
+#%O0
+#"Op
+"4Np
 4hC[J
 AHJh
 Ti"@
@@ -93761,10 +93789,12 @@ K\`2
 ThZ@
 Tv"@
 J\`2
-RXOgp
+RX_gP
+T@[g0
 **y(
 T	|@
 Tl}@
+rtHg0
 7h"@
 7h"@
 **y(
@@ -93778,59 +93808,62 @@ Th"@
 	E@9
 ((@y
 p7(	
-bmh0
-DOhP
-!Ph0
-bRhp
-dRhP
-ARh0
-DShp
+!ahp
+!bhP
+Achp
+ddh0
 @sI\
  mI\
-A;hP
-":hP
+AKhp
+bKhp
+!Jh0
+AIhP
 ?))1
 ?))a
 ?))a
- #hP
-"%hP
-a h0
-T@Qh0
-"Sh0
-"Nh0
-bJh0
-T@Fh0
+`4hp
+(,hp
+ )hp
+".h0
+A-hP
+`"hp
+!+hp
+`dhp
+T chp
+"fhP
+BehP
+T Xhp
+bVhp
 Tn}@
 Tn}@
 4h.@y
 4h*@y
 4h.@yh
-5 fgP
- cgP
+5`wgp
+(vgp
+`tgp
 =	(@
 Ri")
 Ti~@
 Rj"*
 Tn}@
-aigP
-Cigp
-Cgg0
-BfgP
-cdgP
+b^J0
+"wg0
+`?JP
 ThvHp
-@@JP
+`AJ0
 R)|)
 R)|)
+T`+gp
 Tn}@
 )lpX)
-T`	gP
-"3gP
 Ri")
 Ti~@
 Rj"*
 Tn}@
 T	@@
 R)	@
+b-g0
 @yiz
 (/H*
 i4pX)
@@ -93848,32 +93881,28 @@ TIy+
 )5IJ
 )AIJ
 TIy+
-T@^IP
+T _IP
+BcIp
 Rh!	
-T`[IP
+T@\IP
+b`Ip
 TM}@
 Th*@
-T`UIP
+T@VIP
 R(!*
 Rh!	
 TM}@
 Th*@
-bIIp
 R(!*
->9 pf0
-Buf0
 H@BJiM
 6hZ@
 ?))A
-T@3fp
 R	!@
- *fp
- &fp
-b)f0
+6@7f
 hbA9
-T "fp
-b*f0
+T`4f
 hbA9(
+6 3f
 hbA9
 hbA9
 ?))A
@@ -93889,24 +93918,26 @@ ThbA9
 T	}@
 rk~+
 ThV@
-@cep
- zep
+T@se
+Bzep
+"*HP
 TM}@
 Th*@
 (5Fp
-B`e0
+bse0
+BseP
 H(FP
-T`Le0
- Ke0
-"Jep
-@Ee0
-T Ae0
+`cep
+T _ep
+T@Yep
+B\e0
+`Uep
 +ih8J	
-@5e0
-`/e0
- &e0
-B(ep
+ Bep
+*Ke0
+HHe0
 =h2@
+ /ep
 +ih8J	
 hBA9
 &C)K
@@ -93915,9 +93946,11 @@ Th"@
 (`H9
 HzHy
 TH|@
+bIGp
 )h2@
 # D9	
-v:GP
+uSfp
+V;GP
 Rh~@
 Ti2@
 ?))A
@@ -93927,7 +93960,6 @@ IqmX)
 =(iC
 	XmX)
 4`j@
-7@vd0
 DmX)
 4`j@
 (@mX
@@ -93936,7 +93968,6 @@ B),5@)
 @9)1@9)
 JKAJ*k!J*jaJ*I
 I*J	I*I
-T@gd0
 5mX)
 4`j@
 4hj@
@@ -93944,24 +93975,33 @@ Ti2@
 ?))A
 Ti2@
 ?))A
- Mfp
-"Of0
-BOf0
+"mfp
+Bmfp
+`bfP
+ afP
 TM}@
 Th*@
-b#dp
-4`LdP
- IdP
-"@dP
+A5dP
+B6d0
+A4dP
+B5dP
+`\dP
+"_dp
+5@[dP
+B^dp
+4@YdP
+4`Xdp
+bSdP
 ?))a
-">dP
-4@7d0
-(!dP
-@qFP
+CSdP
+h4dP
+"9dP
+`pFP
+`rF0
 Rh!	
 TM}@
 Th*@
-BcFp
+bdFP
 R(!*
 h*@y
 6h*@y
@@ -93972,15 +94012,12 @@ TI~DP
 JlX)
 #A)	0
 $lX)
-"ccP
-A`cP
-5`WcP
-T`LcP
+b{cp
+C~cP
  6hB@
- AcP
-4 -cP
-4a+cP
-) cP
+4!?c
+)5cp
+j:E0
 HykX
 T	}@
 Ri"	
@@ -94002,17 +94039,12 @@ T!#;
 TH?@
 TM}@
 T	!@
-bA]P
 =h"A
-4`|bp
-@IbP
- HbP
 ?))a
 Ti"A
 ?))A
 ?))A
-4 gb
-R4{DP
+A4b0
 ?))a
 ?))A
 ?))A
@@ -94023,7 +94055,8 @@ Thv@
 Ti"A
 ?))A
 ?))A
-4@gb
+"'bp
+B#b0
 	qU9
 @y	M
 	uU9
@@ -94032,33 +94065,35 @@ THIB0
 (+BP
 i3M9I
 $	Cz`
+4@la0
 4hrA
 ThrB
-`IaP
 4hrB
+T Ya0
+4 Pa0
 @9jRA
-`8aP
-`!aP
 @9jRA
-W|Y0
 S	|@
-T@AC0
-RbCCp
-4@^ap
-X/CP
+T`BC
+80CP
+y5Cp
 Th>A
+RBrap
 Tm}@
 Tm}@
 4h^B
 	ZiX)
 +ih8J	
+R{_ap
 4hbC
 Th:@
+B:[p
 6*AP
 T`j@
 hbC9
 4hbC9
 R(!+
+bzB0
 HzhX
 ThZ@
 Ti"@
@@ -94070,43 +94105,50 @@ ThZ@
 Ti"@
  ,@\`2
 <h>@
-RBH`p
 T)sB
+RbX`
 T(#A
 Tm}@
-b&C0
 Rh 5
 TM}@
 Rh")
 THh?P
 TM}@
 Rh")
+T`[\0
 **y(
-RT.\0
 7h"@
 7h"@
 **y(
 Th"@
 R( )
- "\p
+`2\0
 7h"@
-T @AP
+"EAp
 Rh!	
-T@=AP
+T >AP
+BBAp
 TM}@
 Th*@
-T@7AP
+T 8AP
 R(!*
-T@-AP
+T .AP
+B2Ap
 TM}@
 Th*@
-b,Ap
-4@Y_
+4@f_P
+4`[_p
+T`O_
 I$gX)
 Th:A
 5h6@
-"(_0
-B$_P
+B<_0
+b8_P
+T(4_
+"2_P
+T@&_P
+TH-_0
+R@ _P
 Tn}@
 Thr@
 hBB9H
@@ -94131,22 +94173,22 @@ Qhj@
 =J	@
 =jZ@
 Thr@
+`G@P
 Tm}@
 Tir@
 ?))A
+T`/@P
 TM}@
 Th*@
+T`'@P
+",@P
 Rh!	
 TM}@
 Th*@
+B	@P
 R(!*
 	K	1
 ,ij8k	
-Bt^P
-Bn^P
-"n^P
-"o^P
-bk^P
 	]@9*
 @@9h
 =\`b
@@ -94345,53 +94387,52 @@ Tb^@
 Tb^@
 `55\h
 45\h
-k(U0
-T`"UP
-4	-U0
-",UP
+	>UP
+T =U0
+Ty,U0
 q 	@
+ #U0
 RifA
 h*F9
 ji8J	
 ij8k	
-RbEU0
-h6Up
+#YUP
+R"SU
+RbAU
+B=UP
 e\X)
 4hbA9
-"GSP
+BYSp
 (@AJiM
 AHJ	
 hbA9(
 @7`:@
 .\X)
 h*F9
-b`TP
+ vT0
 9h*F9
 <hJ@
-T@XTP
- QTP
 ThV@
-T FTP
-bzTP
 hbA9
-(fTP
-T`'TP
-T $TP
+@ST0
+ 5T0
 Th&F9
 ThZ@
+bWTP
 7yZ@
-4 BTP
-4`>Tp
-B=Tp
+bUTP
 hbA9h
 =gZ@
 h*F9
 7i&F9i
+bMT0
 h&F9
 hbD9h
 `A9(
+"IT0
 9h&F9
 5afA
+WGT0
 K`"@
 ThN@
 ThzA
@@ -94400,6 +94441,8 @@ h&F9
 5afA
 ThfA
 9hfA
+C9T0
+4@)T0
 ThbA9
 `A9h
 	Khf
@@ -94409,54 +94452,59 @@ R`B@
 @y	2
 4a.A
 <h.A
-T jSP
-b]SP
+"zS0
 `A9(
- GSP
-7ESP
-@$SP
+7`^S0
+@.S0
+T (S0
 hbA9
+@ S0
+"ISP
 hbA9h
-bzSP
 )F9(
-"wS0
 )F9(
-!CSp
-`BSP
-@>SP
+B{Sp
+bzSp
+!qS0
+BqSp
+BqS0
+@5SP
 	YZX)
-"N50
-4 G50
-"G50
+TT Q0
 )AIJjM
 )5IJ
 )AIJ
 TIy+
 HaY9
 H@BJiM
-A&R0
-!%R0
+B;RP
+":RP
+a8Rp
 ?))a
 A`9(
 h|1\:
 T`"@
-T mRP
-5`_RP
-`gP0
-BjPP
- ORP
+*`~Rp
+T`{Rp
+5 tRp
+bSP0
+@yPp
+b|Pp
 (@AJiM
 AHJ	
-T@ARP
+T`[Rp
 ibA9)
 9h"@9h&
-T@)RP
 h"H9(
-B]RP
-b@RP
+BrRP
+T 3Rp
+T`1Rp
+T@*Rp
+T !Rp
+bURP
 T`"@
 4hN@
-w&Rp
+w;Rp
 Tj"H9
 Tj"H9
 .@yh~
@@ -94464,39 +94512,29 @@ Tj"H9
 T	o2
 +ih8J	
 T-1H
+b{2P
 	Jh"H9
-T`kQP
-"rQp
-BrQP
-T@PQP
-T@MQP
-T@IQP
+T`kQp
 *C)I
-b>QP
+"SQp
 @yC4
-!uQ0
 h"H9
-TawQp
-uxQp
 iIXX)
 =		@
-"AQp
+"VQp
 KhR(
-B:Q0
-V4Q0
+BOQ0
+VIQ0
 Ti"@
-".Q0
+"CQ0
 9hZ@
 Ti"@
+"2Q0
 T`&@
 Ti"@
-4@	Q
 Th"@
 h91P
-"|10
-)\1p
-"t10
-9`}N0
+"t1P
 H@BJiM
 )AIJjM
 )5IJ
@@ -94504,13 +94542,14 @@ H@BJiM
 TIy+
 ii8J	
 +ih8J	
-B@Op
-AIPp
-T IPp
-hPPp
-4@-P
-69`&Pp
-=Y%P
+bbPP
+BaPp
+4@rP0
+T@:P0
+=\EPP
+(%P0
+h4PP
+H%Pp
 HVX)
 TE9(
 By)y
@@ -94522,31 +94561,30 @@ By)y
 @8)	
 @y)	
 jfE9i
-`~OP
-`|OP
 9hVE9`
-4`yOP
 Lii8k	
 hbE9
 hRE9
 hbE9
-"XOP
-4@jOp
 hZE9(
 	AHJjM
 )5IJ
 7AIJ	
+u/J0
 T	AHJjM
 )5IJ
 7AIJ
-";O0
 R( )
 JAJJkM
 J5JJ
 WAJJj
+V	JP
 7h"@
-"E/0
-b=/0
+b4Op
+!2OP
+"E/P
+"=/P
+b;/P
 **y(
 T	|@
 Tl}@
@@ -94563,14 +94601,9 @@ hBA9
 hBA9
 hBA9
 9h&@
-4 mN0
 T`BA
-4`xN0
 5h2B
 4hZB
-4@vNp
-4@sN
- @N0
 (KA9
 9(KA9h
 4(GA9
@@ -94586,18 +94619,17 @@ Tj6B
 Thv@
 TiN@
 hS-P
-`X-0
-T`0M0
-T@*M0
+bvMP
+T`@M
 7h:@
 4hb@
 R5c	
 7hJ@
-BVMp
-cSMp
-"l.0
-T `.0
-T W.0
+6 6M
+4@h.
+bh.p
+4@_.
+b_.p
 HHSX
 yhxk	
 6SX)
@@ -94640,16 +94672,15 @@ hhh8H
 @y+0
 *)Q 
 ?))A
-A{.P
-Aq.0
-`g.0
- m.P
-Cn.p
-a\0p
-an.P
-Am.P
-!l.P
-!d1P
+!y.0
+@o.0
+co.P
+au.0
+#v.p
+Ad0p
+Av.P
+!u.P
+cm1P
 p,nX
 P,nX
 0,nX
@@ -98211,32 +98242,32 @@ N12_GLOBAL__N_127CDummySSLConnectionCallbackE
 10CUtlVectorIP9CWorkItem10CUtlMemoryIS1_EE
 10CUtlRBTreeIP15CWorkThreadPooli8CDefLess25CDefRBTreeBalanceListenerIiES1_E
 10CUtlVectorIN17CWorkItemPipeline7BarrierE10CUtlMemoryIS1_EE
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/video/audiodecoder.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/video/audiodecoder.cpp
 !m_bEndOfInput
 nSamplesToCopy > 0
 invalid m_nInterleavedBytesPerSample
 m_bEndOfInput || ( m_Packet.data && m_Packet.size )
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlstring.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlstring.h
 !pszString || pszString[nChars] == '\0'
 !m_data.HasError()
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/video/exportvideocontainer.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/video/exportvideocontainer.cpp
 pVideoStream
 lTimeBaseDenom > 0
 nAudioChannels == 2
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/video/avframeyuvwrapper.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/video/avframeyuvwrapper.h
 m_pAVFrame->format == AV_PIX_FMT_YUV420P || m_pAVFrame->format == AV_PIX_FMT_YUVJ420P
 m_pCodecContext == nullptr
 m_listOutput
 m_Memory
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utllinkedlist.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utllinkedlist.h
 m_TotalElements != InvalidIndex()
 %s overflow!
 IsValidIndex(elem)
 IsInList(before)
 Invalid index %u
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlvector.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlvector.h
 (&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/video/videodecoderlibav.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/video/videodecoderlibav.cpp
 false
 Can't seek w/o init segment size
 Can't see w/o segment size
@@ -98277,7 +98308,7 @@ x264_encoder_close
 x264_picture_init
 x264_encoder_encode
 x264_encoder_delayed_frames
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/video/videoencode.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/video/videoencode.cpp
 m_listOutput.IsEmpty()
 veryfast
 film
@@ -98286,7 +98317,7 @@ X264 encoder expects YUV420 frame
 CVideoEncoderX264::BEncodeFrame
 BEncodeFrame
 %s: BScaleImageYUV returned false
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/video/videoalignedbuffer.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/video/videoalignedbuffer.h
 nWidth % 2 == 0
 nHeight % 2 == 0
 m_sps
@@ -98295,7 +98326,7 @@ m_rgScaledFrames
 CUtlAllocation
 http://
 https://
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/video/videofilestream.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/video/videofilestream.cpp
 cMaxSamples > 2
 m_bRunning
 m_cSamples == 0 && m_pulSamples[0] == 0
@@ -98311,7 +98342,7 @@ m_strTargetPath
 m_vecAvailableByteRanges
 m_strTempFile
 CFileReader
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/refcount.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/refcount.h
 m_iRefs > 0 && m_iRefs < 0x1000000
 m_iRefs >= 0 && m_iRefs < 0x0ffffff
 video libav error: %s
@@ -98320,7 +98351,7 @@ CCrypto
 IMetricsFactory
 CWorkThreadPool
 g_CompletionPortManager
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/video/videomanifest.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/video/videomanifest.cpp
 !m_bLoaded
 cRemaining > 0
 pAdaptation->m_pSegmentTemplate
@@ -98414,7 +98445,7 @@ Invalid segment template
 Found unexpected representation close element
 While parsing SegmentBase, didn't find init and index range
 Error parsing MPD file (line=%d): %s
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/video/videoplayer.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/video/videoplayer.cpp
 !m_bInThreadPool
 !m_strURL.IsEmpty() || m_bufFromMemory.TellPut() > 0
 unSeekMS != k_unNoSeekRequest && 0 == ( unSeekMS & k_unSeekPreciseBit )
@@ -98459,14 +98490,14 @@ m_pVideoDecoder
 m_pAudioDecoder
 m_pNextVideoFrame
 CUtlBuffer
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlrbtree.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlrbtree.h
 IsValidIndex( elem )
 _IsValidIndex( elem, unNodeSize, pMemBase )
 _IsValidIndex( y, unNodeSize, pMemBase )
 m_Tree
 m_Elements
 Video Player
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/video/videoplayermanager.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/video/videoplayermanager.cpp
 HTTP client must be set on video manager before it can be used by players
 m_cRunningThreads == 0
 m_cNextThreads == 0
@@ -98495,10 +98526,10 @@ m_vecMainThreadDel
 IsVideoPlayerManagerInitialized()
 pManager
 Video Decode Thread
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlpriorityqueue.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlpriorityqueue.h
 m_heap.IsValidIndex(index)
 m_heap
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/video/videorecordingsegmentwriter.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/video/videorecordingsegmentwriter.cpp
 *pubExtraData == nullptr && *pcubExtraData == 0
 bufSPS.TellPut() > 0 && bufPPS.TellPut() > 0
 dash
@@ -98515,8 +98546,8 @@ dash_segment_type
 m_pAVFormatContext->streams[ m_nVideoTrack ]->time_base.num == 1
 m_pAVFormatContext->streams[ m_nAudioTrack ]->time_base.num == 1
 m_pAVFormatContext->oformat->flags & AVFMT_ALLOW_FLUSH
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/video/videortmp.cpp
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/video/videoutils.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/video/videortmp.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/video/videoutils.cpp
 !m_pContext
 m_pContext
 pAudioResampler
@@ -98524,9 +98555,9 @@ pYUVFrame
 BScaleImageYUV
 TODO implement BScaleImageNV12 on POSIX
 BConvertYUVtoRGB
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/smartptr.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/smartptr.h
 m_p == NULL
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/bitstring.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/bitstring.cpp
 resizeNumBits >= 0
 !m_pInt
 GetInts()
@@ -98537,11 +98568,11 @@ allocator<T>::allocate(size_t n) 'n' exceeds maximum supported size
 null
 true
 object
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/circularbuffer.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/circularbuffer.cpp
 nRead == nPeeked
 pPeeked >= &m_chData[0] && pPeeked < &m_chData[m_nSize]
 pPeeked == &m_chData[ m_nWrite ] && nBytesToCommit >= 0 && m_nWrite + nBytesToCommit <= m_nSize
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/convar.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/convar.cpp
 pName
 Convars
 %llu
@@ -98562,7 +98593,7 @@ m_strConvertedDefaultValue
 m_vecCallbacks
 FCVAR_NEVER_AS_STRING
 Key( i )
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/fileio.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/fileio.cpp
 V_RemoveDotSlashes failed for "%s".
 flock LOCK_SH requested but file is not opened for reading, ignoring: %s
 flock %s %s failed. errno = %d
@@ -98592,9 +98623,9 @@ Waited %u iterations in CFileWriter::Flush - m_cubOutstanding = %d
 %s%c%s
 %s/%s
 cbActual < (uint32)nBufSizeWithTerminator
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlbuffer.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlbuffer.h
 CFileWriterThread
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/tslist.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier0/tslist.h
 m_Count == 0
 pNode && pNode->Next == QueueEnd()
 m_queueItemsPending
@@ -98614,7 +98645,7 @@ Element( i )
 CPathString
 .dylib
 %s/%s%s
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/interface.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/interface.cpp
 strlen(pchModuleName) + V_strlen(pModuleExtension) < MAX_UNICODE_PATH_IN_UTF8
 .cpl
 %s%s
@@ -98623,7 +98654,7 @@ CreateInterface
 %%%d
 ]:%u
 port
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/KeyValues.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/KeyValues.cpp
 GetIntFromString() did not get correct peCS parameter
 GetUint64FromString() did not get correct peCS parameter
 can't convert uint64 to int32 (data loss)
@@ -98633,7 +98664,7 @@ KeyValues
 NULL
 %.18g
 Memory leak: mempool blocks left in memory: %d
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/mempool.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/mempool.cpp
 CMemoryPool::AddNewBlob: mode == GROW_NONE
 blobSize <= nMaxBlobSize
 pBlob
@@ -98641,7 +98672,7 @@ CMemoryPool::Alloc: ran out of memory
 k_nMemPoolMagic_Free == *(( (int *) returnBlock) - 1)
 k_nMemPoolMagic_InUse == *(( (int *) pMem) - 1)
 CMemoryPool
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/netadr.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/netadr.cpp
 loopback
 broadcast
 %i.%i.%i.%i
@@ -98649,12 +98680,12 @@ broadcast
 unknown
 %d.%d.%d.%d:%d
 Address too small!
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/netadr.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/netadr.h
 m_usType == k_EIPTypeV6
 pvecAddressesOut != nullptr || pSingleOutput != nullptr
 about to perform blocking dns call from the main thread.  consider refactoring.
 BResolveHostString - unexpected DNS lookup flag '%d'
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlbuffer.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlbuffer.cpp
 info.m_pReplacementString == 0
 nSize != 0
 CUtlBuffer::GetStringFast: binary buffers only
@@ -98665,7 +98696,7 @@ m_Put >= 0
 offset >= 0
 offset >= -m_Put && offset <= INT_MAX-m_Put
 offset != INT_MIN && offset <= m_nMaxPut && -offset <= INT_MAX-m_nMaxPut
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlmemory.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlmemory.cpp
 nSizeOfType > 0
 nGrowSize >= 0
 m_nAllocationCount >= 0
@@ -98676,12 +98707,12 @@ num > 0
 num >= 0
 numElements <= m_nAllocationCount
 m_pMemory
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlqueue.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlqueue.cpp
 IsPowerOfTwo( nNewCapacity )
 nPreSplit > 0 && nPreSplit + nPostSplit == nCount
 ( m_iHead & nNewCapacityMask ) == nNewCapacity - nPreSplit
 CUtlString::SetValue
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlstring.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlstring.cpp
 CUtlString::VFormat
 CUtlString::VAppendFormat
 Assertion failed: length > k_cchMaxString
@@ -98696,7 +98727,7 @@ CUtlStringBuilder::Data::MoveToHeap
 CUtlSymbolTable
 m_StringPools
 m_Lookup
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlsymbol.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlsymbol.h
 pPool->m_SpaceUsed < 0xFFFF
 Symbol table grew beyond unsigned short.  Time to upgrade UtlSymId_t for the symbol type or look for unnecessary spam in the tables.
 INFO
@@ -106384,7 +106415,7 @@ ScaleUVDownEven
 IS_ALIGNED(src_width, 2)
 IS_ALIGNED(src_height, 2)
 Not continuing coroutine due to g_bPreventCoroutineContinue, %s
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/coroutine.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/coroutine.cpp
 GCoroutineMgr().IsValidCoroutine(hCoroutine)
 Coroutine_IsActive()
 (main)
@@ -106393,7 +106424,7 @@ m_cubSavedStack < k_cubMaxCoroutineStackSize
 m_pStackHigh
 m_pSavedStack
 m_VecCoroutineStack.Count() > 1
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/debugstatssystem.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/debugstatssystem.cpp
 String pool bytes used %u, max %u, %u pools
 Total number of strings %u, longest string size %u, avg size %u
 Total of %u buckets with %u hash collisions
@@ -106402,12 +106433,12 @@ Bucket size : count
 nTotal number of strings %u, longest string size %u, avg size %u
 Leaked KeyValues (%u):
 %s (%u)
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/keyvaluessystem.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/keyvaluessystem.cpp
 size < INT_MAX
 CKeyValuesSystem::AddStringToPool: key name too long (%u chars)
 CKeyValuesSystem::AddStringToPool: out of memory
 CKeyValuesSystem::AddStringToPool: running out of memory (%u bytes left)
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/osversion.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/osversion.cpp
 Invalid macOS version %d.%d.%d
 Unknown
 /System/Library/Frameworks/OpenGL.framework/OpenGL
@@ -106420,7 +106451,7 @@ CGLCreateContext
 CGLDestroyContext
 CGLGetParameter
 defaults read /System/Library/CoreServices/SystemVersion.plist ProductVersion
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/strtools.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/strtools.cpp
 count == 0 || s1 != NULL
 count == 0 || s2 != NULL
 n == 0 || s1 != NULL
@@ -106455,7 +106486,7 @@ V_URLDecode needs a dest buffer at least as large as the source
 str != NULL
 prefix != NULL
 nBytes
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/strtools_unicode.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/strtools_unicode.cpp
 invalid input pointer
 !pToCopy || (pToCopy + num <= Base()) || (pToCopy >= (Base() + Count()) )
 count >= 0
@@ -106465,7 +106496,7 @@ count >= 0
 %s (%d) : 
 console
 Exiting on SPEW_ABORT
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/dbg.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/dbg.cpp
 pGroupName
 strlen( pGroupName ) < MAX_GROUP_NAME_LENGTH
 IsSpewActive
@@ -106476,13 +106507,13 @@ Fatal assert; application exiting
 Fatal assert
 _ExitOnFatalAssert
 Failed to generate callstack
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/memblockhdr.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/memblockhdr.cpp
 Assertion Failed: stack%2d: %s
 Stack%2d: %s
 Assertion Failed: stack%2d: 0x%llX
 Stack%2d: 0x%llX
 ppFrames[iFrame] != NULL
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/memstd.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/memstd.cpp
 ((size_t)(m_nLogicalBytesAllocated) % 8) == 0
 No tracked allocs currently in use. Total %d
 Tracked allocs currently in use. %d Total %d
@@ -106494,9 +106525,9 @@ DumpMemTrackingStats %d %d
 OUT OF MEMORY
 (iub & (m_nSizeWithStack-1)) == 0
 pAllocTracker->m_uSentinel == 0xaa110ced
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/memblockhdr.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier0/memblockhdr.h
 pLeft->m_iStackPC <= V_ARRAYSIZE(pLeft->m_StackPC)
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/minidump.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/minidump.cpp
 Someone called SetWritingMinidump without holding the minidump lock.
 Someone called ClearWritingMinidump without holding the minidump lock.
 !g_pCrashMemoryReserve
@@ -106511,20 +106542,20 @@ Steam
 steamwebhelper
 Steam Helper
 cefwebhelper
-Oct 25 2023
-11:38:42
+Oct 27 2023
+16:23:05
 %04d%02d%02d%02d%02d%02d
 CatchAndWriteContext_t::Invoke with bogus argc/argv
 CatchAndWriteContext_t::Invoke with bogus void *ptr
 CatchAndWriteContext_t::Set w/o a function pointer!
 com.valvesoftware.steam
 /dev/urandom
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/platform_posix.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/platform_posix.cpp
 s_dev_urandom_fd >= 0
 urandom_result > 0 || ( urandom_result < 0 && errno == EINTR )
 MainThrd
 pthread_setname_np
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/threadtools.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/threadtools.cpp
 Thread synchronization object is unuseable
 Out of thread local storage!
 Illegal termination of worker thread '%s'
@@ -106538,15 +106569,15 @@ Invalid thread id during thread Start()
 Thread cannot be joined with self
 Probably deadlock or failure waiting for thread to initialize.
 CTSListBase: Misaligned list
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/validator.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/validator.cpp
 CValidator : too many memory nodes to store, try again with a higher threshold value
 NULL != m_pValObjectCur
  GiB
  MiB
  KiB
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/valobject.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/valobject.cpp
 NULL == pValObjectPrev->m_pValObjectNext
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/vprof.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/vprof.cpp
 !g_VProfile
 pszName
  Avg Time/Frame (ms)
@@ -106602,11 +106633,11 @@ m_pBudgetGroups
 eGroup < VPROF_BUDGETGROUP_MAX
 No room for new profile in vprof thread profile list, grow MAX_THREADS_TO_VPROF_AT_ONCE
 WARNING: Disabling vprof spike dumping and stopping profile for thread %d - %s because of exceeded rate limit, try a higher threshold.
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/vprof.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier0/vprof.h
 m_nRecursions > 0
 m_pszName
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/crypto_aescbc_openssl.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/crypto_aescbc_openssl.cpp
 pubEncryptedData
 cubEncryptedData
 pubPlaintextData
@@ -106621,7 +106652,7 @@ pcubEncryptedData
 *pcubEncryptedData
 cubEncryptedData >= cubTotalOutput
 nDecrypted == cubEncryptedData - k_nSymmetricBlockSize
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/crypto_digest_openssl.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/crypto_digest_openssl.cpp
 CCrypto::GenerateSHA1Digest
 pOutDigest
 SHA1_Init( &c )
@@ -106630,13 +106661,13 @@ cubData > 0
 pubKey
 cubKey > 0
 pOutputDigest
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/crypto_rsa_openssl.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/crypto_rsa_openssl.cpp
 CCrypto::RSAEncrypt
 cubPlaintextData > 0
 Invalid RSA modulus: %d bytes wide
 CCrypto::RSAEncrypt: insufficient output buffer for encryption, needed %d got %d
 RSA encryption failed
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/crypto_textencode.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/crypto_textencode.cpp
 CCrypto::Base64Encode: insufficient output buffer for encoding, needed %d got %d
 CCrypto::Base64Encode
 NULL output buffer with non-zero size passed to Base64Encode
@@ -106649,7 +106680,7 @@ CCrypto::Base64Encode: insufficient output buffer (up to n*4/3+5 bytes required,
 %a, %e-%b-%y %H:%M:%S
 %a, %e-%b-%Y %H:%M:%S
 %Y-%m-%dT%H:%M:%S+00:00
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/stat.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/stat.cpp
 CStatT<T>::Update: called on class that was not initialized.
 m_iSampleBucketCurrent < m_cSampleBuckets
 m_iSampleBucketLast < m_cSampleBuckets
@@ -106670,14 +106701,14 @@ UnbufferedSend
 PostRecv
 SocketFail
 SocketAlreadyClosed
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/completionportmanager.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/completionportmanager.cpp
 DispatchCompletedItem
 DispatchCompletedItem - error
 ulResult != 0
 CCompletionPortManager::IOCPWorkerThread: got 100 consecutive errors, last error %d (%s), IOCP thread aborting and exiting
 BStarted()
 m_AssocHandles
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/completionportmanager_posix.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/completionportmanager_posix.cpp
 g_CompletionPortManager.BStarted()
 Assoc.nFd == handle
 ( Assoc.nFlags & ( k_nAssocProcessing | k_nAssocFinalizing ) ) == 0 && Assoc.pPending == NULL
@@ -106692,7 +106723,7 @@ Finalization timeout waiting for processing of %d to complete
 Pipe write failed
 CompletePendingIo
 Unhandled pending I/O type %d
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/cookiecontainer.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/cookiecontainer.cpp
 Unexpected result from V_SplitString() 
 secure
 httponly
@@ -106712,7 +106743,7 @@ m_strValue
 m_strDomain
 m_strPath
 enums_clientserver.proto
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/enum_names.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/enum_names.cpp
 Missing String for %s (%d)
 EResult
 EUniverse
@@ -106907,7 +106938,7 @@ optional
 unspecified
 @bEnableFrameFuncOverageWarnings
 This turns on the spew in SPEW_MISC at level 4, still need to adjust spew levels to see it.
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/framefunction.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/framefunction.cpp
 eFrameType < k_EFrameTypeMax
 pchName
 V_strlen( pchName ) < V_ARRAYSIZE( m_rgchName )
@@ -106961,7 +106992,7 @@ china
 html
 Invalid spew group
 RequestHeaders
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/http.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/http.cpp
 Authorization
 CHTTPRequest::RetrieveURLEncodedData
 m_pkvRequestHeaders
@@ -107010,7 +107041,7 @@ user-agent
 Transfer-Encoding
 Set-Cookie
 localhost
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/httpclient.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/httpclient.cpp
 Request host %s with relative URL %s appears invalid
 CHTTPUtil::BStatusCodeIsRedirect( eRedirectStatusCode )
 wss://
@@ -107160,13 +107191,13 @@ m_pListWaitingRequestsForAddress
 m_pTreeWaitingConnections
 m_pTreeInUseConnections
 <local>
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/httpclientmgr.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/httpclientmgr.cpp
 m_vecpHTTPClients.FindAndFastRemove( pHTTPClient )
 m_vecpHTTPClients
 m_strProxyOverride
 Aborting stale HTTP request on connection (%p, stream: %d) due to absolute timeout: %s - %X
 Aborting stale HTTP request on connection (%p, stream: %d) due to network activity timeout: %s - %X
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/httpclient_internal.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/httpclient_internal.cpp
 Hit destructor inside a HTTP2 callback from nghttp2 - not safe
 HTTP Connection (%p) (connection handle %X) destructing! - Dispatching pending request (%p)
 Closing HTTP 1.x connection hard (%p) due to timeout while request active: %s - %X
@@ -107445,7 +107476,7 @@ Failed writing http cache file to disk
 (uint32)m_pHTTPRequestCache->m_listCacheFileLRU.Count() == (uint32)m_pHTTPRequestCache->m_mapCacheFiles.Count()
 CWorkItemHTTPClientRequest
 CWorkItemHTTPClientRequest::ThreadProcess
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/httpclient_internal.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/httpclient_internal.h
 m_BodyDataBuffer
 m_bufLeftOverHTTP2BodyDataChunk
 m_strCacheDirectory
@@ -107456,7 +107487,7 @@ m_FileIOThreadPool
 m_pCachedResponseData
 m_pOriginatingRequestHandle
 m_strFilename
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/iopollinghelpers_osx.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/iopollinghelpers_osx.cpp
 Unexpected thread race for CIOPollingHelper construction
 nStateFlags != 0
 m_watchTable.InvalidIndex() == m_watchTable.Find( socket )
@@ -107470,7 +107501,7 @@ m_vecIPFilterRangesV6
 @nJobInteryieldMillisecondsLogThreshold
 @nJobNetSendsInsaneThreshold
 15000
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/job.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/job.cpp
 undefined
 this != g_pJobCur
 Long interyield runtime -  %u jobs ran over interyield threshold and spew was rate limited since last output
@@ -107497,14 +107528,14 @@ shared resource
 generic context
 @cMinimumJobTimeoutsToCheckPerFrame
 @bEnableNetworkJobsOwnStartList
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/jobmgr.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/jobmgr.cpp
 m_MapJob.InvalidIndex() != iJob || !bShouldExist
 BRouteWorkItemCompleted called for a job that could not be found!
 Job yielding despite declaring a Do Not Yield block at %s
 name
 @bEnableSpewThrottle
 @bEnableLogTearOff
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/logger.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/logger.cpp
 pLogInstance == sm_pLogInstance
 sm_cRef > 0
 sm_bShuttingDown
@@ -107556,14 +107587,14 @@ CLogInstance::EmitEventNow
 Last Message Repeated %d times.
 eGroup >= static_cast< ESpewGroup >( 0 ) && eGroup < k_ESpew_ArraySize
 CIPAndPort::GetIPv4 called on IPv6 address
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/bitstring.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/bitstring.h
 bitNum >= 0 && bitNum < this->Size()
 m_vecHashBuckets
 m_memNodes
 m_bitsMigratedBuckets
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlqueue.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlqueue.h
 IsValidIndex( idx )
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlhashmap.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlhashmap.h
 CUtlHashMap::RemoveAt - Invalid index
 CUtlHashMap::RemoveAt - couldn't find bucket for item
 k_EMsgClientVoiceCallPreAuthorize
@@ -108030,7 +108061,7 @@ k_EMsgClientSiteLicenseGetAvailableSeatsResponse
 k_EMsgClientSiteLicenseGetContentCacheInfo
 k_EMsgClientSiteLicenseGetContentCacheInfoResponse
 m_vecMetrics
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/metrics/metrics.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/metrics/metrics.cpp
 CMetricsPayload::RecordMetric
 m_pMetricsPayload
 Not accumulating differing metrics types: %d and %d
@@ -108056,7 +108087,7 @@ null catalog
 null program
 null operation
 @bMsgErrorDump
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/msg.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/msg.cpp
 EMsg %d registered multiple times.
 EMsg_IsValid( pOldMsgInfo->eMsg )
 *pOldMsgInfo->pchMsgName
@@ -108067,7 +108098,7 @@ Sent message: %s - %u bytes
 GetMessageFlags
 Bad packet received: EMsg would be %u, next 12 bytes: %02X %02X %02X %02X %02X %02X %02X %02X %02X %02X %02X %02X
 Bad packet received: EMsg would be %u
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/netpacket_legacy_struct.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/netpacket_legacy_struct.h
 CClientStructNetPacket->GetHdrIP() not valid.
 CClientStructNetPacket->GetRealm() not valid.
 CClientStructNetPacket->GetGCRouting() not valid.
@@ -108096,7 +108127,7 @@ Default initial allocation size for PB arena
 Max block allocation size for PB arena
 @bCheckMsgProtobufOnJobStackForArenaAlloc
 Should we only use the arena allocator if the protobuf is on the job stack
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/msgprotobuf.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/msgprotobuf.cpp
 Unparseable protobuf message arrived, emsg=%u, size=%u
 CProtoBufNetPacket::RebuildPacketIfNeeded (needed)
 unOldBodySize >= 0
@@ -108110,7 +108141,7 @@ m_pHeader->ip_v6().length() == 16
 @nSpewThrottleUnconditionalResumeMs
 5000
 @nSpewThrottleNagFrequencyMs
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/net.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/net.cpp
 pFrameFunctionMgr
 CNet Encrypt
 CNet Resolver
@@ -108168,16 +108199,16 @@ iSetNonBlockResult == 0
 pvCallback != NULL
 !pvCallbackCur
 pvCallbackUDPCur || pvCallbackTCPCur
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/job.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/job.h
 g_pJobCur != NULL
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/cumulativetimer.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/cumulativetimer.h
 IsRunning()
 CNetConnectionImmediateDisconnectWorkItem
 CNetConnectionImmediateDisconnectWorkItem::ThreadProcess
 CNetConnectionDestroyWorkItem
 CNetConnectionDestroyWorkItem::ThreadProcess
 *pvRecord
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/thash.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/thash.h
 m_pBucket == NULL
 cRecordInit > 0
 m_cBucket > 0
@@ -108186,7 +108217,7 @@ PvRecordFind( unKey ) == NULL
 Performance warning: too many items (%d), not enough buckets (%d)
 not enough buckets in thash class %s (%d records, %d buckets)
 pvRemove
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/netconnection.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/netconnection.cpp
 m_hSocket == INVALID_SOCKET
 Must pass a INetSSLConnectionCallback if using SSL
 Cannot use netfilter based encryption with SSL, setup SSL based encryption in your INetSSLConnectionCallback
@@ -108214,8 +108245,8 @@ CNetConnectionAsyncDisconnectWorkItem
 CNetConnectionAsyncDisconnectWorkItem::ThreadProcess
 CNetConnectionOnDisconnectWorkItem
 CNetConnectionOnDisconnectWorkItem::ThreadProcess
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/netconnection.h
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/scheduledfunction.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/netconnection.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/scheduledfunction.h
 m_Func
 m_pSSLConnection
 m_bufSSLRecv
@@ -108226,7 +108257,7 @@ m_pListQueuedSSLRecvsPostHandshake
 4000
 @cNetEncryptionHandshakeWorkMax_HighPri
 8000
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/netfilter.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/netfilter.cpp
 m_pNetConnection
 m_pNetConnection->m_pConnectionCallback != this
 NULL == m_pConnectionCallbackOrig
@@ -108254,10 +108285,10 @@ CWorkItemNetFilterEncrypt
 CWorkItemNetFilterEncrypt::ThreadProcess
 CWorkItemNetFilterOnDisconnect
 CWorkItemNetFilterOnDisconnect::ThreadProcess
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/netfilter.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/netfilter.h
 CWorkItemNetEncryptionHandshakeEncrypt
 CWorkItemNetEncryptionHandshakeEncrypt::ThreadProcess
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/netpacket.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/netpacket.cpp
 m_cRef == 0
 pubData
 cubData
@@ -108285,7 +108316,7 @@ ECONNREFUSED
 ENOPROTOOPT
 ECONNRESET
 [no name available]
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/opensslconnection.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/opensslconnection.cpp
 nBytes2 == m_data.NumAllocated()
 m_data
 commonName
@@ -108416,9 +108447,9 @@ VALVE_CRYPTO_dbg_realloc
 VALVE_CRYPTO_dbg_free
 COpenSSLContext
 COpenSSLConnection
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/opensslwrapper.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/opensslwrapper.cpp
 OpenSSL random number system reports not enough entropy
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/platform_sockets_posix.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/platform_sockets_posix.cpp
 nDataLen not supported in %s
 AsyncSocketAcceptExComplete
 pCompletion->type == IOTYPE_ACCEPT && pCompletion->ulResult == 0 && pCompletion->SocketAcceptEx.hNewSocket != INVALID_SOCKET
@@ -108430,7 +108461,7 @@ AsyncSocketWrite
 pCompletion->type == IOTYPE_SEND || pCompletion->type == IOTYPE_UNBUFFEREDSEND
 AsyncSocketReadFrom
 CBaseScheduledFunction
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/scheduledfunction.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/scheduledfunction.cpp
 Attempt to schedule '%s' %lldusec in the past
 CScheduledFunctionMgr::BFrameFuncRun
 pBaseScheduledFunction->m_iScheduledItem == scheduledItem.m_iScheduledFunction
@@ -108463,7 +108494,7 @@ steammessages_base.proto
 client/TCPConnection/SentBytes
 client/TCPConnection/RecvBytes
 IStreamParser::BIsValidMsgType() old packet header from out-of-date Steam build, discarding packet and closing connection
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/tcpconnection.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/tcpconnection.cpp
 cubData >= 8
 IStreamParser::BIsValidMsgType() invalid packet header (1st 8 bytes: 0x%02X%02X%02X%02X%02X%02X%02X%02X, %d bytes recv'd so far) discarding packet and closing connection
 IStreamParser::BIsValidMsgType() too-large cbMessageSize in message header (%u bytes, %d bytes recv'd so far) discarding packet and closing connection
@@ -108576,7 +108607,7 @@ DisconnectPlatformSocket
 ClosePlatformSocket
 m_queueSends
 TCP disconnect
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/tcphost.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/tcphost.cpp
 IOTYPE_ACCEPT == pCompletionData->type
 CTCPHost
 CTCPHost Globals
@@ -108584,7 +108615,7 @@ CTCPHost Globals
 @cUDPSendRetries
 @nClientCMUDPPingTimeGoodEnoughThresholdMS
 @nClientCMUDPPingTimeoutUseGoodEnoughMS
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/udpconnection.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/udpconnection.cpp
 CUDPConnection not initialized, was GlobalInit called?
 CUDPConnection::InternalGetUDPConnection called without calling CUDPConnection::GlobalInit first
 *ppUDPConnection
@@ -108660,8 +108691,8 @@ sm_THashPUDPConnection
 sm_SchedulerACK
 sm_SchedulerResend
 sm_StatMicroSecLatency
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/udpconnection.h
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/msgbase.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/udpconnection.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/msgbase.h
 CMsgBase_t : packet too small (EMsg %u)
 CMsgBase_t : packet too small
 CUDPHost
@@ -108670,7 +108701,7 @@ client/UDPSocket/SentBytes
 client/UDPSocket/RecvBytes
 client/UDPSocket/SentPacket
 client/UDPSocket/RecvPacket
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/udpsocket.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/udpsocket.cpp
 bUseIOCP
 INVALID_SOCKET != hSocket
 CWSARecvFrom (UDP) --ioctl(FIONREAD
@@ -108690,7 +108721,7 @@ UDPSocket: ThreadedFunc_RecvUDP got error %d (%s) from socket %d, (invalid) hSoc
 CUDPSocket
 CUDPSocket Globals
 CWebSocketConnection::GlobalInit()
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/websocket.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/websocket.cpp
 Must initialize with CWebSocketConnection::GlobalInit before accepting connections
 eConnectionMode == k_EConnectionModeClient
 pConnectionCallback == pWebSocketConnection
@@ -108721,9 +108752,9 @@ sm_mapWebSocketConnection
 258EAFA5-E914-47DA-95CA-C5AB0DC85B11
 CWebSocketConnectionDelayedCloseConnectionWorkItem
 CWebSocketConnectionDelayedCloseConnectionWorkItem::ThreadProcess
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/websocket.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/websocket.h
 CWorkThread -- Sleep
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/workthreadpool.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/workthreadpool.cpp
 pszThreadName != NULL
 CWorkThreadPool::~CWorkThreadPool(): Thread pool %s shutdown incorrectly.
 0 == m_WorkThreads.Count()
@@ -112261,79 +112292,63 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-2(P@%
-u(\?	6
-Gb-N
-uY"W
-aN9z
-.+[0
-gVV2_
->9!1Z
-{6S'
-]m'P
-ad1Z
-Ai+$h<nK
-3KKW
-o7Xn
-,>sl
+BLxka
+esE}
+Nz<d
+ %!X
+X]Cr
+dA8-
+2Odz
+$wOi
+9V1O
+z_TlA
+ImVE@
+HK:4.
+$[x|.
 J0.BC
-NLDk
-!4.t
-yjf%
-Ux([
-8~<+jt
-fQh0
-xmN}cB
-L^'H
-OI$)
-Y+0t
-MtG_
-J\sI
-2]:e3E
-8/7Fm
-h'81
-b+sC
-;6"S
-xY@X
-;q~W
-xBuq
-({Vj
-G@CU
-A8?6
-7W&?
+g,8Y
+uDdG
+s{z=B
+A~!xe@T
+a'!|
+V~!\
+ex0)
+7;W,
+ZdN[
+tw?s
+Pws*
+~S	a
+`322V
+Cv0`A
+|D.h
+:4#!
+cOy)
+"MP/h
+J_Ez
+9hhhN
++)tTR'/
+gR2LSk
+2cGMFUp
+$iF&
 /DNa
--Qp7
-Ri#y
-e1!s
-ajnb2
-aoQ5
-tF,$
-zseN@
-:OUJBh7
-Mw2x
-)@:O
+1Otp7
+n4%Xr)=O
+a/E3.[
+9!zu"
+`i<&
+Ta'B
 2O1ARO
-EOk1
-:6v[B
 6"jh	
 BF{~
-dhRG
-z`#g
-~ E%
-!	H^
 !s!u
 8G@vC`u
 dP_Y
 8X\1*
 -b5g
 Ot`kA
-M/]f
 0	`R
 u>zW
-f_;}
-}!$S@ylRH
- _eu
-3y?0;
+aqLI
 p1vp
 d}{<
 2\'u$
@@ -112343,109 +112358,104 @@ KI60
 6Kut
 'vk[
 m>$9
-:]hE
-%P|c
-?}rLc
-$M _
-,2+eD
-2u?N
-8V2f
+grH"
+A>O gK|
+e1[6
+<gq	
+K-Pe-
+F]&;
 l8pa]
-0#KZ
+B'A~
+J44l)
+I|7C
+'BMn
+hQ\hS
 2M2/
 wA@[
-r"04
-Z,Zl
-:EoImJ
-YS L
-YqXE
-9O1=
-(/_-
-tekGc
-+KD{3
-pj }f9
-neid
-|T{!9{=
---2R
+ ;Wh
+Z|im
+.~zN
+xFb;^DF,
+Tgh6
+^K8"im
+W9=~
+^w	 
+cqBs
+O(H)
+7A ]A"2
+ru{C
+/I{TnQf
 )0^ubE!
-5o.FN
-.5(%N
-8gLn
-Yl]UJ3
-i'k x
-@C__
-$N3H
-]>H^+V[
-UgPu"
-8IH-
-*7x_
-	=)a
-xS%	
-YhK4
-hllA
-?I9)C*
-&zUd
-2s\I9
-+u8.2
--o!c)
-3y44
-OR%S
-s -l
-Y/Iy;p
-ihk>
-=?^94e
-/N_#
-4A<X
+5o.N
+<!A5G}
+xQwF`
+Df2J`K
+| 07N
+9:XO
+2jF)
+Uyv	
+FF5a
+M_+-
+iGY^
+	9@c
+I,%Z
+vL75
+__&N
+A	Si
+1={Hr
 DCR2N9
 !S,d
 AD(Aeh
 2!R}
-0|{1
-b,`?
 90{I@2Fp)
 ebk=
 <|J(b
 {I<?6
 LoMgWz
 #dc+
-l%,:
 JING
 =7G6
 6(a7G" 
-ik{>
-xsUHx
-o=R>
-J$OV
-`NS(
-5.fMk
-u/S{zPJ
-%ltCX
-L;zn
-QNyf6V
-ZO5@
-Tec/
-MZ0k
-Y-V}
-''@7n
-T6[Nb
-R^_{K
-+^X.
-$}bbZ
-BM|$
-n	=Pt
-aW~+
-RgiNENl
-oE7B$c
-.A\ _
-_Fp`Z5
-zfcp
-kg><
-QRpd
-}F	d
-z>M#
+9pR?G
+D ]|
+A &l
+ZLlo
+L+eF
+A:z5
+/+'t
+3~,]
+R*n+/
+LN*a@
+{i3>E
+~cat
+(VJI
++gym
+S]r/Q
+ri"z
+.>xjm
+H/|r
+I9G>M)'
+jagX3
+Ip:7
+?%U~
+,bBj
+g)9wF
+@HmL
+=\FbG
+#>?x}P
+)8%	
+}~&2
++f~e
+PU^1
 \]j(
-v(!*iCs
-o&Sh5ov
+#T5f
+"j|=
+[Skl1
+ bRl
+/17\
+&!2$
+C}(=O
+C-eG
 3Y:@S<
 -7gfV
 ~@:{
@@ -112462,36 +112472,38 @@ Pz=tc7
 3&L_
 93D)
 W|C!
-jV%v
-JeH-
-UYR}<:
-HI)6)&
-M9`W
-7a6u
-ityv
-qQSb%
-OF2i
-S*	b4
-R!>%
-b3-5
-lfnR
-b-v8
-I?%DV
-ju4yKrI
-k6?&=
-)]qt
-\MW,
+*5$_
+p?Ku
+J`OE
+aA]zj
+n{	)
+aH	y
+nK#X
+7[$#b
+^;CP
+b<0	C
+I_F	K
+%j"#
+L?@l
+d!mdv
+im|y
+QmO2;U
+sF {
+K%d|
+N,fq
 1*)x/Su
-u28&
-w4T-
-	FOh
-	tqY
-a&ex
-f(Yw
-tbd]
-iM89S&
-1)%'
-xCbJ
+>[4&
+?(MF6
+?zr%
+CE9TH
+u]r3
+>(7j
+nnhw-*
+`u_B
+xEPF
+5uy_
+r}7H
+Vm*K]6u
 S[U\Bh
 6>;?
 '\%\i
@@ -112502,124 +112514,123 @@ subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-(Ewz/
-^L(}
-Vt1(h
-RU`"
-~>zK
-wiDe
-|97,
-j`lz/
-o(mC:
->:cKU
-/	|;
-j}@fa
-<rdX
-(J]?5
-$]]T
-}iO\
-]'X#
-guzk
-2>4d
-0|>g
-Nr8X@
-\0V|qlc
-C{&F
-x.[4
-Rf*v
-:Wl.
-6bpba3
-9f(n
+2<ot
+u><`
+K7h?C
+LXWa
+0m~F{
+iZ"7
+.	rsl
+IkHr
+#W=A
+U3Ey
+P`$@)
+A6A,2V
+ij1h
+gW1X!u
+6E~!
+.k\"
+Xg('
+Yd};
+$V\\IZ
+!S+s
+|?l|
+pW"d
+!>{Vf
 "7#f
-I+(u
-oO,(:
-A7L-
-\y^4
-\1I7m
-EU0V
-;&"t
-Oo;s
-Ru<}
-+CZ8uP
-/u5gpnvZ(
-X1o5n
-W|z{(
-,Wo^
-F[6+Ws
-PII0xH
-"_~E
-\@aVW
-,D[:?E
-I?I>O'
-;i)y)W$B
+Y@Sc
+6-!p
+m'f1
+F.oT
+aq6n
+yBN}aLn
+qw|#
+),+&;Q
+t8_:
+(=h;s
+	Fb/
+@?_`
+{GA7
+@egI
+PrPk
+k`7w
+lO\*
+X^I$d
 ~^0-
 !=>6.g
-:%a9
-LvpDn
-!Vfl
-kTsxTy}
-2ZXci_
-mK<q
-K}0n
-=~AK
-D$pd
-[VF/
-V1rz
-l0zY
-'"LU
-"jDD
-m$)x
-UZQ;#99o
-|$F/<
-.tru
-])F6
-R&m@
-IdZt
-m(,TMo
-.h3Z
-b\X]o
-Xa4{C`
-pgfm
-;.0z
-Wbz)
-jfuPCo
-&O)J
-Zu+'
-R5(='
-qZ*8
-LRs`
+ATzm
+d| "
+CAJs
+'>bA=
+L!-]
+qDWO[
+Zuc`{
+ R^A	&
+Ia ji
+gs6$
+gQ0P?#!6
+c&Y_
+X0az
+S?ztVu;
+kse/?i<
+>k/X4c
+|"!3
+dFSG
+ST<D
+~VIi
+{|kZ
+L.p;
+3?y/
+)8	C
+q68X0*;
+$P>}
+`Z3e
+VG8G
+:AviW
+O'!l
+|ii$
+N:h&~
+$(-q"
+iT9R;
+b_z8
+e|iT#t;gTQ
+2^"8E
+C|%K3
 @51i.
-2:3(
-D@x=w_
-&yN(
-Lfv4
-`th5
->,$#"
-\:v{
-Vy H
-'jhDQ
+tu*x
+(8p<
+^'P0O
+$2hds
+C7:9
+DLT"
+[~+d
+%tq9
+LDpK&
+FV5M
 *-y\Ys#]
-QsP3
 }EukH
- M-*
-y4"3
-U|>T
-|H~\
--?;8
-g6'Os
-RT!}
+DHYy
+|N#r
+:UY 
+.ec6
+(#Hxi]
+;Z^T
+02E[
+wfsS
+Rr@=
+`W{y	
+0Tk_XD
+m~'0hZQ
 b{z,
-d+c%s
-,C{8
+Q6KB
+}tXm#
 J,Yx
 4,|L
 uNH@
 Tm)-
-q/-Az
-&5F*JM
-'$, 
-yBy'
-Zl'J=s
+8 5W
+(.l/
+d7U=|\f_T
 RXvZ
 ] lGIHIP
 1q{N#
@@ -112635,101 +112646,82 @@ N=Yz
 SN!O
 U5T8BLc
 +vPK
-vIBq$N
-=(xj+
-x'/S}ss
-xXs*
-EZ^O|K
-Kma.
-cBOUo
-}Hg"
-?"{h
-fW%,
-ib!z
-1AXX
-FRvR
-h'Q	
-G=4C
-!X7e+-C=
-EHz2
-V>om
-Pi_5w
-^#eI
-GXsU
-.NS4
-z+8Rh
-F<+$
-fF-{
-* 	o}
-B(wR'2
-rG4U
+io_-
+1q[P
+j<0Z
+go^5A
+:7>E
+,dOP4
+55A+
+.(+t
+XR>++
+orvT
+]RfnB
+bp~\
+1u_y
+mQ1u
+([Ju
+Zk-(
+Sl1b
+=I,U
+Jr,A
+1"UU
+:LR&pv5
+=OJF
+p'\\
+~*;P
+* OU
 p[T"
 GEzHK
 /3KCS
-KO%6
-1x$`W?-
-%9QL=tBH
+!Yz6
+&le&
 NQeYY
 o|Gqa	!
 9qN%p
 O2z<
-r:q]
-ufj;%t
-[7gt
->EX*(
-W/k^
-_j_ClN
-H`RA
-AYN%K<
-={k^Z
-!TP+
-NeS%P
-cYV3ZI
-yL'm
-^qOa
-m#E w
-^(9%
-KUVw
-Idq@
-_:v*
-<HxV
-a*$9
-N"'>V
-,P?h
-%@<Y
->Y02
-Y$ZE5
-8T]n
-cyGo
-	r;kc
-ct"Uls
-gdRnpM
-3:v.
+R4Q|%
+xF#z
+Jk \%
+S<]y9
+"G'}(,<m
+AfIw
+I\4MN^
+?R8o
+/H\d
+bl=J{
+dSGl
+ nOB
+:9G+
+sIbZ
+)EAB
+`vI/' 
+sEXYk
 TiP0&
-x*/z
-v~ao
-9TTg
-LOi5H
-ImPL(%}4
-8{/ZQ$
-2,q\
-UWE)R
- jXDr
-1"4~#
-?]}Hm
-N@h\
-DYI5
-Ch<R4
-IzlC
-?-cC
-IGx[
-x9/!pE
-19L(P
- _jc
-g=Rc
-{3Ld
-LOE{
-aZcN
+lr5;
+#&z>
+dqFV6
+5Mfpw
+}Oud
+-RZ'm
+3&rQ
+/r *
+pPW+)q'
+q$w9
+#Pm/
+%tEH
+fn6 
+V]pTA
+[W>m
+_<G`
+b'ny
+,vKLsv
+ut`@
+%pQV
+j& qZP
+$ej*
+pz+0zx
+OFTP
 4Ij,
 q1XF
 Xa=*
@@ -112737,8 +112729,6 @@ n*x\
 'H|Z
 I;@f	zL
 3B,WG
-OT.U
-~+&0`(
 L|$s!
 {?zN8
 RT`#
@@ -112747,52 +112737,63 @@ U/2B
 vY; 
 U,;~Ts
 5^qN
-FD``
-V|]6
+$~1q
+tQC	
+'Q<w
+ZAzm
+q73Bq
+|fusO
+@<ba
+R49[z
 <1Jt
 B;Jji
-h&Mq7
-K0ex
-+y5	
-\hr2
-6&#;
-d>dN
-+B`M
-:9Oy
-@Y'7
-r+	0
-GBmX
-^+vw_y
-AiG<
- AOJ
-FH`1
-VAZ<X"
-h`|Q
-@ET[r
-phx&9y
-Oz3N
-O}Y_/
-)##;
-^&6jj+
-cttH@
-Qj*jH!c
-szsRy
-wBM}q#{
-:wL;
-s-HM
-.*iO	
-htl`r
-,!NI
-Wng\>
-HKa*
-B>G7y 
-sLOB\
-j_nbYl
-rm)p
-BjH{c
-hluc
-MoBu
-NZ lI
+[yl5
+iC,ba
+4-ZN
+!STYIO
+({xb@
+_ <[T
+ `I,xi
+Q#O4
+q^*w
+2vO?P
+ao=VEk
+/X/'
+)}0=
+JbQU
+%NkN`
+$cIfP
+!BF~
+Yuu}o
+X@U*
+&8i 
+]I?q	
+"[A0
+wiT!?;'
+cB>v
+wd	IO|
+wy}N
+f<^U
+	3^_
+td}l
+8cOs=C}
+)VU^
+\-6YR
+7,<q
+Pc8[_nm9
+N.|(C
+#`R<
+rpjya
+,,Y/
+*3i~$
+Z]8y=
+K\$@
+Dn=c
+	\H^
+;;g#
+bh-<
+Gh.ub
+o#AW
 {"T,
 #{MR
 >DeZ
@@ -112804,16 +112805,15 @@ v$27-R
 Y #vrs-:g
 On$\
 7	-G.
-&6Q'=:
-ak'/z
-1v/*
-[|a@
-C7Kh
-l{P3}
-%4+b
-51e7
-}lt&
-(Y57y
+NJ*.
+R"d5Q
+rMfZ9`
+:m)^
+':h|
+=6Z`O
+`|K%T
+' C@T
+%'@j 
 dz5}
 6Wt0
 JCi4
@@ -112843,55 +112843,67 @@ zD_2'
 C^/.
 E+J:
 4#6$
-nnwY
-CW(h-
-L?Z.(;
-i1:!!N
-NQo[$o
-Jab3
- X5f
-5h.k
-EdnO~
-\Jj9
-t xcvEv8
-GO)2w
-t|ly
- L\j
-VC}!88
-.=)z
-!F8O
-O^KX
-Y''1
-xj#J>
-[6"1
-Ve)!o
- R r_
-P[Q,
-CKNa
-~4Yv
-? Li
-!"~f
-)W/p
-N?w3
-uAQg
-^(6T
-0Ws?v
-_Xz/c
-r;lf4
- 8S=>x
-1K85
-0]\I
-LteP>
-B{<w
-qY_%B
-#dde
-	CL,
-,qMUb
-R.o_
-!!d76
-G.7e
-g/.+
-'w(@
+AFT(
+}.Hn
+(;\,T
+SZp1
+!^Yu
+d$id
+A[y&
+(\>7
+K@;I
+Liiv
+/os:
+)XhMP25~`H
+=2pO
+rnBsd
+wUWj+
+TaIrw
+m}fxX
+J%23
+.`jf
+?"4N<$
+:	b9
+PpdBx
+//]s
+7/9"
+Vv=u
+Z6j?
+44NV
+L,h+
+>S[3
+54R 
+m/*W
+<}DiM
+_im0
+T{8'O8B
+-pAz
+5p+z
+*/nP
+V$[~
+wjpP
+'tc(
+pU#+
+7/A(
+ju$~
+kqAQ
+lUW.
+33?s]
+>6(A8
+K_sE
+<&oa
+\`Bu
+c7ajF
+<8W/
+Z}V#-]<
+RZ<b~
+=|]m
++8wB
+eg<j}|
+~'Rz
+/(XXs
+V|z-rL
+Dd	/zn
 &czx
 .RnP
 xsl3
@@ -112962,8 +112974,8 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231025184101Z0/
-R;<N
+231027232525Z0/
+ P0*
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -112971,15 +112983,19 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		nk/qT+ZuE0W7qCTQTBXt1xISlgY=
+		SFoNUDj7QCO08+7qFgM9xUIhjNY=
 		</data>
 		<data>
-		oMBx3pNXE+LcfSoOC8iKf2AEUjs=
+		UDAqGK2Lpa2GLBPiqxF+mAfUwqg=
 		</data>
 	</array>
 </dict>
 </plist>
-20231025184147Z0
+tYdmmt
+B.G^
+%Iq4i
+UZct-
+20231027232537Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -113035,7 +113051,7 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231025184147Z0#
+231027232537Z0#
 )b/{d
-{6&9
-TG#p:
+(	ZW
+4M;r%

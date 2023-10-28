@@ -500,7 +500,7 @@ A 	4
 ;s@|D
 ^_[]
 %lld
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/bitstring.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/bitstring.cpp
 resizeNumBits >= 0
 !m_pInt
 GetInts()
@@ -509,12 +509,12 @@ CVariableBitStringBase
 false
 %llu
 console
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlstring.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlstring.h
 !pszString || pszString[nChars] == '\0'
 m_Tree
 m_Elements
 m_Memory
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/fileio.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/fileio.cpp
 V_RemoveDotSlashes failed for "%s".
 flock LOCK_SH requested but file is not opened for reading, ignoring: %s
 flock %s %s failed. errno = %d
@@ -529,16 +529,16 @@ Unbuffered read should be called with cubData length that is aligned to system p
 Seeking to a position which is not sector aligned will break unbuffered io
 cbToRead <= 1024 * 1024 * 1024
 cbActual < (uint32)nBufSizeWithTerminator
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlbuffer.h
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlvector.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlbuffer.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlvector.h
 (&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utllinkedlist.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utllinkedlist.h
 m_TotalElements != InvalidIndex()
 %s overflow!
 IsValidIndex(elem)
 IsInList(before)
 Invalid index %u
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlrbtree.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlrbtree.h
 IsValidIndex( elem )
 _IsValidIndex( elem, unNodeSize, pMemBase )
 _IsValidIndex( y, unNodeSize, pMemBase )
@@ -546,7 +546,7 @@ CPathString
 %s%s
 IVALIDATE001
 Memory leak: mempool blocks left in memory: %d
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/mempool.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/mempool.cpp
 CMemoryPool::AddNewBlob: mode == GROW_NONE
 blobSize <= nMaxBlobSize
 pBlob
@@ -581,14 +581,14 @@ getRelationship:ofDirectoryAtURL:toItemAtURL:error:
 path
 hasPrefix:
 length
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlbuffer.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlbuffer.cpp
 info.m_pReplacementString == 0
 nSize >= 0
 m_Put >= 0
 offset >= 0
 offset >= -m_Put && offset <= INT_MAX-m_Put
 offset != INT_MIN && offset <= m_nMaxPut && -offset <= INT_MAX-m_nMaxPut
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlmemory.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlmemory.cpp
 nSizeOfType > 0
 nGrowSize >= 0
 m_nAllocationCount >= 0
@@ -597,7 +597,7 @@ nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
 num > 0
 num >= 0
 CUtlString::SetValue
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlstring.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlstring.cpp
 CUtlString::VFormat
 CUtlString::VAppendFormat
 Assertion failed: length > k_cchMaxString
@@ -608,7 +608,7 @@ nMinCapacity <= k_nMaxStringSize
 len > 0 || HasError()
 Error State on string being set.
 CUtlStringBuilder::Data::MoveToHeap
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/commandline.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/commandline.cpp
 (int)(intp)m_hParam != -1
 m_bInitialized
 Parameter file '%s' not found, skipping...
@@ -627,7 +627,7 @@ m_listCommandLineOption
 (elem == Count()) || IsValidIndex(elem)
 Not continuing coroutine due to g_bPreventCoroutineContinue, %s
 Unknown
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/coroutine.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/coroutine.cpp
 GCoroutineMgr().IsValidCoroutine(hCoroutine)
 Coroutine_IsActive()
 test string
@@ -641,7 +641,7 @@ g_VecPCoroutineMgr
 m_cubSavedStack < k_cubMaxCoroutineStackSize
 m_pStackHigh
 m_pSavedStack
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/vprof.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier0/vprof.h
 m_pszName
 m_VecCoroutineStack.Count() > 1
 CCoroutineMgr
@@ -652,9 +652,9 @@ CCoroutine
 VEngineCvar002
 WARNING: unable to link %s and %s because one or more is a ConCommand.
 CDefaultCvar cvar
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/cvar.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/cvar.cpp
 !m_fnGlobalChangeCallback || !callback
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/debugstatssystem.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/debugstatssystem.cpp
 *(CDebugStatsSystem*)DebugStatsSystem()
 String pool bytes used %u, max %u, %u pools
 Total number of strings %u, longest string size %u, avg size %u
@@ -664,7 +664,7 @@ Bucket size : count
 nTotal number of strings %u, longest string size %u, avg size %u
 Leaked KeyValues (%u):
 %s (%u)
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/keyvaluessystem.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/keyvaluessystem.cpp
 size < INT_MAX
 CKeyValuesSystem::AddStringToPool: key name too long (%u chars)
 CKeyValuesSystem::AddStringToPool: out of memory
@@ -674,7 +674,7 @@ m_HashItemMemPool
 m_LeakTrack
 m_mapConditionalSymbolTable
 KeyValuesSystem()
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/osversion.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/osversion.cpp
 Invalid macOS version %d.%d.%d
 MacOS %d.%d.%d
 Windows
@@ -801,12 +801,12 @@ processInfo
 operatingSystemVersion
 respondsToSelector:
 defaults read /System/Library/CoreServices/SystemVersion.plist ProductVersion
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/parseurl.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/parseurl.cpp
 pchURL != NULL
 pchStart
 pchEnd
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/vstdlib/../tier1/utlstring.h
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/stringnormalize.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/vstdlib/../tier1/utlstring.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/stringnormalize.cpp
 pwchSrc != NULL
 pwchDest != NULL
 CStringNormalize is full of quirks that need fixing. You just hit one. Don't pass buffers > 1kb.
@@ -815,7 +815,7 @@ CStringNormalization statics
 g_mapPairs
 0x%4.4X is both the source and destination of a normalization mapping
 out of order normalization entry
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/strtools.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/strtools.cpp
 dest != NULL
 src != NULL
 count == 0 || s1 != NULL
@@ -1018,8 +1018,8 @@ nBytes
 &lsquo;
 &rsquo;
 &hellip;
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utldict.h
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/strtools_unicode.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utldict.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/strtools_unicode.cpp
 invalid input pointer
 in != out
 !(nStringCaseFlags & STRINGCASE_FLAG_TURKISH)
@@ -1027,7 +1027,7 @@ count >= 0
 :/?#
 %.*s://%s
 gCURLUtils_hashTLDs
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/bitstring.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/bitstring.h
 bitNum >= 0 && bitNum < this->Size()
 ACADEMY
 ACCOUNTANTS
@@ -2227,34 +2227,49 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-o?4`
-q?`8{gMX|=
-hu#uU
-5/`'
-l"t7
-=x74
-81a-
+GdBt2Wm
+N	(KED4
+sr|jP
+dFW|
+LhK~
+?V#w
+X|X%
+M7e,
+k"JR
+7X9^
+\eZ8
 2Gsl
-Je1-
-}otPR0
+74+y_VL
+a`8K4
 I}Lf
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-'TNd
-tLqM
-6p6i
-"Px^
-)ht/%w
-V saF
-uRuv
- *1a
-s<zI
+Ox<v7
+\',wvc
+gG&e
+yuv$I
+0`J^
+MyaI
+1q_\
+,{_/
+hbYQBH
+|H5	
+N-\P?
+Ce,\
+RAWo
+'g}_
+NS=t
+as[/F
+$|ai#
+!fn:
 A$?l
 Z1?e
 +7"CN
-N.OL
+tRI)
+7ydqS
+/	3)
 \Smb
 oo?{
 (>\Gz
@@ -2313,9 +2328,8 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231025183906Z0/
-Zhm0-
-@B|>7
+231027232335Z0/
+/OQ@
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -2323,36 +2337,34 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		lfJXJalhYgdctH/1Ve3ROMlaaG0=
+		93cbMIlkEvwY3ARTUvMvT1FA180=
 		</data>
 		<data>
-		b7udi/JAQnw+N7a9OkKz74SWDA8=
+		EaS1uP4kG8UyLbXmvYzpa4BmByY=
 		</data>
 	</array>
 </dict>
 </plist>
-;U[\
-]Q=m
-20231025183952Z0
++?#{
+'hOm
+20231027232347Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231019211004Z
-231130211003Z0B1
-Timestamp Signer NWK11
+231019205532Z
+231130205531Z0B1
+Timestamp Signer NWK21
 Apple Inc.1
-$qJK
-mc.V_l
-\+\V
+S2/k4
+]-lU
+)sX]
+g6;h
+2Z72
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-X3zP
-27,=Dr
-k]mh
-MM.):t
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -2391,11 +2403,11 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231025183952Z0#
-+By`
-|Dr3uFG
-o+@N
-xI98o
+231027232347Z0#
+)b/{d
+Qy=9h
+.Er,
+:;] 
 __TEXT
 __text
 __TEXT
@@ -2895,7 +2907,6 @@ AWAVATSH
 AVSH
 [A^]
 AWAVAUATSH
-Lc56
 [A\A]A^A_]
 AWAVAUATSH
 [A\A]A^A_]
@@ -2962,7 +2973,7 @@ AWAVAUATSPI
 AVSI
 [A^]
 AWAVSH
-Lc5r
+Lc52
 x(Hc
 VUUUH
 X[A^A_]
@@ -3387,19 +3398,20 @@ E;fd|ZE
 E;n\|ME
 E9n 
 [A\A]A^A_]
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/bitstring.cpp
+%lld
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/bitstring.cpp
 resizeNumBits >= 0
 !m_pInt
 GetInts()
 CVariableBitStringBase
 0123456789ABCDEF
 false
+%llu
 console
-!pszString || pszString[nChars] == '\0'
 m_Tree
 m_Elements
 m_Memory
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/fileio.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/fileio.cpp
 flock LOCK_SH requested but file is not opened for reading, ignoring: %s
 flock %s %s failed. errno = %d
 LOCK_EX
@@ -3412,16 +3424,14 @@ Unbuffered read should be called with pvData buffer that is aligned to system pa
 Unbuffered read should be called with cubData length that is aligned to system page size (4kb)
 Seeking to a position which is not sector aligned will break unbuffered io
 cbActual < (uint32)nBufSizeWithTerminator
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlbuffer.h
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlvector.h
-(&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utllinkedlist.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlvector.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utllinkedlist.h
 m_TotalElements != InvalidIndex()
 %s overflow!
 IsValidIndex(elem)
 IsInList(before)
 Invalid index %u
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlrbtree.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlrbtree.h
 IsValidIndex( elem )
 _IsValidIndex( elem, unNodeSize, pMemBase )
 _IsValidIndex( y, unNodeSize, pMemBase )
@@ -3429,7 +3439,7 @@ CPathString
 %s%s
 IVALIDATE001
 Memory leak: mempool blocks left in memory: %d
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/mempool.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/mempool.cpp
 CMemoryPool::AddNewBlob: mode == GROW_NONE
 blobSize <= nMaxBlobSize
 pBlob
@@ -3437,14 +3447,14 @@ CMemoryPool::Alloc: ran out of memory
 k_nMemPoolMagic_Free == *(( (int *) returnBlock) - 1)
 CMemoryPool
 unknown
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlbuffer.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlbuffer.cpp
 info.m_pReplacementString == 0
 nSize >= 0
 m_Put >= 0
 offset >= 0
 offset >= -m_Put && offset <= INT_MAX-m_Put
 offset != INT_MIN && offset <= m_nMaxPut && -offset <= INT_MAX-m_nMaxPut
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlmemory.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlmemory.cpp
 nSizeOfType > 0
 nGrowSize >= 0
 m_nAllocationCount >= 0
@@ -3453,7 +3463,7 @@ nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
 num > 0
 num >= 0
 CUtlString::SetValue
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlstring.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlstring.cpp
 CUtlString::VFormat
 CUtlString::VAppendFormat
 Assertion failed: length > k_cchMaxString
@@ -3464,7 +3474,7 @@ nMinCapacity <= k_nMaxStringSize
 len > 0 || HasError()
 Error State on string being set.
 CUtlStringBuilder::Data::MoveToHeap
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/commandline.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/commandline.cpp
 (int)(intp)m_hParam != -1
 m_bInitialized
 Parameter file '%s' not found, skipping...
@@ -3483,7 +3493,7 @@ m_listCommandLineOption
 (elem == Count()) || IsValidIndex(elem)
 Not continuing coroutine due to g_bPreventCoroutineContinue, %s
 Unknown
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/coroutine.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/coroutine.cpp
 GCoroutineMgr().IsValidCoroutine(hCoroutine)
 Coroutine_IsActive()
 test string
@@ -3497,7 +3507,7 @@ g_VecPCoroutineMgr
 m_cubSavedStack < k_cubMaxCoroutineStackSize
 m_pStackHigh
 m_pSavedStack
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/vprof.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier0/vprof.h
 m_pszName
 m_VecCoroutineStack.Count() > 1
 CCoroutineMgr
@@ -3508,9 +3518,9 @@ CCoroutine
 VEngineCvar002
 WARNING: unable to link %s and %s because one or more is a ConCommand.
 CDefaultCvar cvar
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/cvar.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/cvar.cpp
 !m_fnGlobalChangeCallback || !callback
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/debugstatssystem.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/debugstatssystem.cpp
 *(CDebugStatsSystem*)DebugStatsSystem()
 String pool bytes used %u, max %u, %u pools
 Total number of strings %u, longest string size %u, avg size %u
@@ -3520,7 +3530,7 @@ Bucket size : count
 nTotal number of strings %u, longest string size %u, avg size %u
 Leaked KeyValues (%u):
 %s (%u)
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/keyvaluessystem.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/keyvaluessystem.cpp
 size < INT_MAX
 CKeyValuesSystem::AddStringToPool: key name too long (%u chars)
 CKeyValuesSystem::AddStringToPool: out of memory
@@ -3530,7 +3540,7 @@ m_HashItemMemPool
 m_LeakTrack
 m_mapConditionalSymbolTable
 KeyValuesSystem()
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/osversion.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/osversion.cpp
 Invalid macOS version %d.%d.%d
 MacOS %d.%d.%d
 Windows
@@ -3653,12 +3663,12 @@ CGLCreateContext
 CGLDestroyContext
 CGLGetParameter
 defaults read /System/Library/CoreServices/SystemVersion.plist ProductVersion
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/parseurl.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/parseurl.cpp
 pchURL != NULL
 pchStart
 pchEnd
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/vstdlib/../tier1/utlstring.h
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/stringnormalize.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/vstdlib/../tier1/utlstring.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/stringnormalize.cpp
 pwchSrc != NULL
 pwchDest != NULL
 CStringNormalize is full of quirks that need fixing. You just hit one. Don't pass buffers > 1kb.
@@ -3667,7 +3677,7 @@ CStringNormalization statics
 g_mapPairs
 0x%4.4X is both the source and destination of a normalization mapping
 out of order normalization entry
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/strtools.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/strtools.cpp
 dest != NULL
 src != NULL
 count == 0 || s1 != NULL
@@ -3702,7 +3712,6 @@ destCapacity != 0
  bps
 %i%s
 %%.%if%s
-%lld
 outsize >= ( inputbytes * 2 ) + 1
 0123456789abcdef
 outsize >= 1
@@ -3762,7 +3771,8 @@ steam://close
 steam://close/
 Error decoding string1: %s
 Error decoding string2: %s
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlstring.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlstring.h
+!pszString || pszString[nChars] == '\0'
 &quot;
 &#039;
 &lt;
@@ -3770,6 +3780,7 @@ Error decoding string2: %s
 &amp;
 &nbsp;
 <br>
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlbuffer.h
 nBytes
 &apos;
 &trade;
@@ -3874,9 +3885,9 @@ nBytes
 &lsquo;
 &rsquo;
 &hellip;
-%llu
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utldict.h
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/strtools_unicode.cpp
+(&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utldict.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/strtools_unicode.cpp
 invalid input pointer
 in != out
 !(nStringCaseFlags & STRINGCASE_FLAG_TURKISH)
@@ -3884,7 +3895,7 @@ count >= 0
 :/?#
 %.*s://%s
 gCURLUtils_hashTLDs
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/bitstring.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/bitstring.h
 bitNum >= 0 && bitNum < this->Size()
 ACADEMY
 ACCOUNTANTS
@@ -5105,46 +5116,46 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-(,::E#b9
-Q#DP.
-SN>B
-i^3U}/
-MUbW
-..+L
-Y~8-
-C 0Q
-+:5v
-{EU_
+@9P83
+?(Su
+I{+F
+FS^n
+V32omx
+xeEv
+S}Y&0
+K.qp2
+Wm;b
+Rqy{-&
+4^i=
+M0wR
+*$_:%
 I0%V
 zhG9
+L6M^
+t%3Pd
 OcNU
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-8Va'G
-SYVxU
-@?g>z
-Ra*4
-LkQiq
-5K5.I
-plX+X
-S#cv
-DIqD
-I0Cx
-D4$]
-2$*}d!
-w#Q`
-9Erc
-S*EC
-%9/:7
-[Oo 
-C(]UcG
+1r#H
+t5-X
+`r]#
+/?D$
+mD4T
+zSk2
+P78r
+$!8I
+{?7cST
+RhE-
+(*^Tw~
+O^bdhI.
 /<{.Hmt
 L2b>
-D=ti
-T3M'
-_dc+
+Rbmft
+.7RV8,(
+MlJf#
+oxxi
 iL;8i
 N9&%
 Apple Inc.1&0$
@@ -5202,7 +5213,10 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231025183906Z0/
+231027232335Z0/
+m]0-
+ "QW~<R
+4Qdi
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -5210,17 +5224,18 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		fysjHU9p7t+JdRDmuE6JBBNLEW8=
+		LsYoWVwKrSR6jTQNhVnqUI0XbV0=
 		</data>
 		<data>
-		6MaM1OfluecVXUZSDXshnscvoew=
+		IlFXfjxS68XxClVBxgUtlTRRZGk=
 		</data>
 	</array>
 </dict>
 </plist>
-Gxo"7a!
-Yc={
-20231025183952Z0
+lYzT
+LS[RI
+3?'(]
+20231027232347Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -5278,10 +5293,9 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231025183952Z0#
-LQv#
-? J/e5GG#
-87?5zO
+231027232347Z0#
+sZV \N
+$2OBf
 __TEXT
 __text
 __TEXT
@@ -5336,8 +5350,6 @@ TH|@
 R,|@
 +ih8J	
  	@z
-;9 `
-;9@^
 TK	@
 R,|@
 D@i!
@@ -5421,7 +5433,7 @@ Rl}@
 Lii8k	
 +ih8J	
 	Et9
-R	E49(u3
+R	E49
 (I49
 ii8J	
 *At9
@@ -5432,26 +5444,31 @@ ii8J
 yixJ	
 +yhxJ	
 ii8J	
-`^	0
+ `	0
 @9,!
 @9,!
 Th! 
 T6|@
-Bb	p
+@d	P
+ c	P
+Bf	P
 	qx9	
-R	q89
+R	q89 a	P
 	yx9)
-R	y89
-bY	0
+R	y89@W	P
 	ux9I
-R	u89
+R	u89`U	P
 	}x9I
 R	}89
-A?	p
- *	P
+aP	P
+s<	P
+"1	P
+b0	p
 K"}@
-`$	P
-` 	P
+ *	0
+b5	P
+B&	P
+B-	p
 @9z=
 @9m=
 jv8(
@@ -5513,17 +5530,13 @@ R	kzx*
 ji8?
 7HK6
 @9[3
-hq	X
-o	X)
-Hm	X
+iu	X)
 hj8*i(8
 ?i(8
-Ia	X)
+f	X)
 .@8h
-(@	X
-;	X)
-(9	X
-)7	X)
+IA	X)
+<	X)
 @9 z
 4kj 8
 lj 8
@@ -5626,7 +5639,7 @@ Tjzi
 **y(
 Th"@
 %lld
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/bitstring.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/bitstring.cpp
 resizeNumBits >= 0
 !m_pInt
 GetInts()
@@ -5635,12 +5648,12 @@ CVariableBitStringBase
 false
 %llu
 console
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlstring.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlstring.h
 !pszString || pszString[nChars] == '\0'
 m_Tree
 m_Elements
 m_Memory
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/fileio.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/fileio.cpp
 V_RemoveDotSlashes failed for "%s".
 flock LOCK_SH requested but file is not opened for reading, ignoring: %s
 flock %s %s failed. errno = %d
@@ -5654,16 +5667,16 @@ Unbuffered read should be called with pvData buffer that is aligned to system pa
 Unbuffered read should be called with cubData length that is aligned to system page size (4kb)
 Seeking to a position which is not sector aligned will break unbuffered io
 cbActual < (uint32)nBufSizeWithTerminator
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlbuffer.h
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlvector.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlbuffer.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlvector.h
 (&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utllinkedlist.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utllinkedlist.h
 m_TotalElements != InvalidIndex()
 %s overflow!
 IsValidIndex(elem)
 IsInList(before)
 Invalid index %u
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlrbtree.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlrbtree.h
 IsValidIndex( elem )
 _IsValidIndex( elem, unNodeSize, pMemBase )
 _IsValidIndex( y, unNodeSize, pMemBase )
@@ -5671,7 +5684,7 @@ CPathString
 %s%s
 IVALIDATE001
 Memory leak: mempool blocks left in memory: %d
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/mempool.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/mempool.cpp
 CMemoryPool::AddNewBlob: mode == GROW_NONE
 blobSize <= nMaxBlobSize
 pBlob
@@ -5679,14 +5692,14 @@ CMemoryPool::Alloc: ran out of memory
 k_nMemPoolMagic_Free == *(( (int *) returnBlock) - 1)
 CMemoryPool
 unknown
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlbuffer.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlbuffer.cpp
 info.m_pReplacementString == 0
 nSize >= 0
 m_Put >= 0
 offset >= 0
 offset >= -m_Put && offset <= INT_MAX-m_Put
 offset != INT_MIN && offset <= m_nMaxPut && -offset <= INT_MAX-m_nMaxPut
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlmemory.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlmemory.cpp
 nSizeOfType > 0
 nGrowSize >= 0
 m_nAllocationCount >= 0
@@ -5695,7 +5708,7 @@ nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
 num > 0
 num >= 0
 CUtlString::SetValue
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlstring.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlstring.cpp
 CUtlString::VFormat
 CUtlString::VAppendFormat
 Assertion failed: length > k_cchMaxString
@@ -5706,7 +5719,7 @@ nMinCapacity <= k_nMaxStringSize
 len > 0 || HasError()
 Error State on string being set.
 CUtlStringBuilder::Data::MoveToHeap
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/commandline.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/commandline.cpp
 (int)(intp)m_hParam != -1
 m_bInitialized
 Parameter file '%s' not found, skipping...
@@ -5725,7 +5738,7 @@ m_listCommandLineOption
 (elem == Count()) || IsValidIndex(elem)
 Not continuing coroutine due to g_bPreventCoroutineContinue, %s
 Unknown
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/coroutine.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/coroutine.cpp
 GCoroutineMgr().IsValidCoroutine(hCoroutine)
 Coroutine_IsActive()
 test string
@@ -5739,7 +5752,7 @@ g_VecPCoroutineMgr
 m_cubSavedStack < k_cubMaxCoroutineStackSize
 m_pStackHigh
 m_pSavedStack
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/vprof.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier0/vprof.h
 m_pszName
 m_VecCoroutineStack.Count() > 1
 CCoroutineMgr
@@ -5750,9 +5763,9 @@ CCoroutine
 VEngineCvar002
 WARNING: unable to link %s and %s because one or more is a ConCommand.
 CDefaultCvar cvar
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/cvar.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/cvar.cpp
 !m_fnGlobalChangeCallback || !callback
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/debugstatssystem.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/debugstatssystem.cpp
 *(CDebugStatsSystem*)DebugStatsSystem()
 String pool bytes used %u, max %u, %u pools
 Total number of strings %u, longest string size %u, avg size %u
@@ -5762,7 +5775,7 @@ Bucket size : count
 nTotal number of strings %u, longest string size %u, avg size %u
 Leaked KeyValues (%u):
 %s (%u)
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/keyvaluessystem.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/keyvaluessystem.cpp
 size < INT_MAX
 CKeyValuesSystem::AddStringToPool: key name too long (%u chars)
 CKeyValuesSystem::AddStringToPool: out of memory
@@ -5772,7 +5785,7 @@ m_HashItemMemPool
 m_LeakTrack
 m_mapConditionalSymbolTable
 KeyValuesSystem()
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/osversion.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/osversion.cpp
 Invalid macOS version %d.%d.%d
 MacOS %d.%d.%d
 Windows
@@ -5895,12 +5908,12 @@ CGLCreateContext
 CGLDestroyContext
 CGLGetParameter
 defaults read /System/Library/CoreServices/SystemVersion.plist ProductVersion
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/parseurl.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/parseurl.cpp
 pchURL != NULL
 pchStart
 pchEnd
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/vstdlib/../tier1/utlstring.h
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/stringnormalize.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/vstdlib/../tier1/utlstring.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/stringnormalize.cpp
 pwchSrc != NULL
 pwchDest != NULL
 CStringNormalize is full of quirks that need fixing. You just hit one. Don't pass buffers > 1kb.
@@ -5909,7 +5922,7 @@ CStringNormalization statics
 g_mapPairs
 0x%4.4X is both the source and destination of a normalization mapping
 out of order normalization entry
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/strtools.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/strtools.cpp
 dest != NULL
 src != NULL
 count == 0 || s1 != NULL
@@ -6113,8 +6126,8 @@ nBytes
 &lsquo;
 &rsquo;
 &hellip;
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utldict.h
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/strtools_unicode.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utldict.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/strtools_unicode.cpp
 invalid input pointer
 in != out
 !(nStringCaseFlags & STRINGCASE_FLAG_TURKISH)
@@ -6122,7 +6135,7 @@ count >= 0
 :/?#
 %.*s://%s
 gCURLUtils_hashTLDs
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/bitstring.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/bitstring.h
 bitNum >= 0 && bitNum < this->Size()
 ACADEMY
 ACCOUNTANTS
@@ -7339,44 +7352,38 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-/ClG9
-~fGt
-+)Xxc
-;x?|
-o<l9
-jbv'8
-)[Ad
-ZhQ*
+\4iM 
+}Ejf!
+gWRK.
 Se`!
-$c>"
-\y|u
+%DPt	
+!A2v$
++\y|u
 >0!7
 kPMk
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-Gio0
-E7zL
-9Ngs=
-fSJ:
-@!/,%
-}Si- _
-~Sh/
-'h'd
-EbzQ
-to`7
-wXo[
-P3n%z
-%gV;
-&)<`
-ho$FJ
-:wEPb\
+i?'2S`
+'(/Z
+iN:8
+#=e>S4
+x")v
+-Kx 
+*&f5
+D&0o=`
+#Mvt
+_x>j
+aF"9
+hrfkE
+".B7
+(9CJ
+_e;(
 SXSq
-#IB+s
-)AKy
-GWC-
-8@7&P
+_/[:
+<$	><
+`7Kmf
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -7432,9 +7439,8 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231025183906Z0/
-oa&=/
-"}0,!
+231027232335Z0/
+{m/G
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -7442,36 +7448,41 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		Y7FG+G9hJj0vi7SGJHr7CKtn1aQ=
+		32MOT6joVQozav8k0qVl15trzYw=
 		</data>
 		<data>
-		ihyg7BHO6XNFvivmIn0wLCGTmBs=
+		b8noVt1yeQ0QqG/u+P/+iHttL0c=
 		</data>
 	</array>
 </dict>
 </plist>
-9A0<WJ
-& 0Z
-&*Y 
-_7kQ
-20231025183952Z0
+&%v1
+z_@4
+*HBFV0
+!HyH
+NC6{
+ALzVwk
+i&!9
+20231027232347Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231019205532Z
-231130205531Z0B1
-Timestamp Signer NWK21
+231019211004Z
+231130211003Z0B1
+Timestamp Signer NWK11
 Apple Inc.1
-S2/k4
-]-lU
-)sX]
-g6;h
-2Z72
+$qJK
+mc.V_l
+\+\V
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
+X3zP
+27,=Dr
+k]mh
+MM.):t
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -7510,10 +7521,9 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231025183952Z0#
-;!^0
-)b/{d
-)C~:
-8)p6
-Q2_J
-Ef+b
+231027232347Z0#
+iNr0
+ac,J
+WR9@
+0-)E
+sDnKQ

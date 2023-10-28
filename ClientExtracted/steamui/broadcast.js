@@ -87,7 +87,7 @@
           BroadcastEmbeddablePopoutHeader: () => Ee,
           default: () => be,
         });
-      var r = a(70655),
+      var r = a(97582),
         n = a(9669),
         o = a.n(n),
         s = a(29323),
@@ -1332,7 +1332,7 @@
     79927: (e, t, a) => {
       "use strict";
       a.r(t), a.d(t, { default: () => v });
-      var r = a(70655),
+      var r = a(97582),
         n = a(67294),
         o = a(90437),
         s = a(29323),
