@@ -87,7 +87,7 @@
 		ActivateRetail					{	text="#Steam_RegisterProductCode"		shellcmd="steam://open/activateproduct" }
 		RedeemWalletVoucher				{	text="#Steam_RedeemWalletVoucher"		shellcmd="steam://url/RedeemWalletVoucher" }
 		ManageGuestPasses				{	text="#Steam_ManageGuestPasses"			shellcmd="steam://url/ManageGiftsPage" }
-		AddShortcut						{	text="#Steam_menu_AddShortcut"			shellcmd="steam://AddNonSteamGame" }
+		AddShortcut						{	text="#Steam_menu_AddShortcut"			shellcmd="steam://open/addnonsteamgame" }
 	}
 
 	Window [$OSX]
