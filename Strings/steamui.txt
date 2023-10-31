@@ -22219,7 +22219,7 @@ file://{resources}/layout/settings/settings_about.xml
 build_date
 Oct 30 2023
 build_time
-15:16:32
+19:08:58
 package_version
 local
 SteamClient020
@@ -29871,7 +29871,7 @@ sOSBuildId
 System details: codename:%s variant:%s version:%s build:%s bios:%s cef_debugging:%d
 nSteamVersion
 sSteamBuildDate
-Oct 30 2023 15:16:58
+Oct 30 2023 19:09:56
 sSteamAPI
 sCPUVendor
 sCPUName
