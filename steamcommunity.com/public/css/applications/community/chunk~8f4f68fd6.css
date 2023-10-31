@@ -1,3 +1,11 @@
+@keyframes standardtemplates_BackgroundAnimation_1qyu7 {
+  from {
+    background-position: 0 100%;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
 @keyframes standardtemplates_ItemFocusAnim-darkerGrey-nocolor_MYSYJ {
   from {
     background: #3d4450;
@@ -18,11 +26,11 @@
 }
 @keyframes standardtemplates_ItemFocusAnim-darkGrey_3Sx7_ {
   from {
-    background: #67707b;
+    background: rgba(255, 255, 255, 0.25);
     color: #8b929a;
   }
   to {
-    background: #3d4450;
+    background: rgba(255, 255, 255, 0.15);
     color: #fff;
   }
 }
@@ -33,6 +41,26 @@
   }
   to {
     background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes standardtemplates_ItemFocusAnim-translucent-white-10_2C6lF {
+  from {
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+  }
+}
+@keyframes standardtemplates_ItemFocusAnim-translucent-white-20_1JLmp {
+  from {
+    background: rgba(255, 255, 255, 0.5);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.2);
     color: #fff;
   }
 }
@@ -963,6 +991,14 @@
   height: 6px;
   color: #57a11c;
 }
+@keyframes shorttemplates_BackgroundAnimation_OYUmx {
+  from {
+    background-position: 0 100%;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
 @keyframes shorttemplates_ItemFocusAnim-darkerGrey-nocolor_1kXW6 {
   from {
     background: #3d4450;
@@ -983,11 +1019,11 @@
 }
 @keyframes shorttemplates_ItemFocusAnim-darkGrey_3e4-_ {
   from {
-    background: #67707b;
+    background: rgba(255, 255, 255, 0.25);
     color: #8b929a;
   }
   to {
-    background: #3d4450;
+    background: rgba(255, 255, 255, 0.15);
     color: #fff;
   }
 }
@@ -998,6 +1034,26 @@
   }
   to {
     background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes shorttemplates_ItemFocusAnim-translucent-white-10_1-Z3j {
+  from {
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+  }
+}
+@keyframes shorttemplates_ItemFocusAnim-translucent-white-20_15TtT {
+  from {
+    background: rgba(255, 255, 255, 0.5);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.2);
     color: #fff;
   }
 }
@@ -1982,6 +2038,14 @@
   margin-left: 8px;
   margin-right: -8px;
 }
+@keyframes steamtemplates_BackgroundAnimation_3gEr8 {
+  from {
+    background-position: 0 100%;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
 @keyframes steamtemplates_ItemFocusAnim-darkerGrey-nocolor_1Dogf {
   from {
     background: #3d4450;
@@ -2002,11 +2066,11 @@
 }
 @keyframes steamtemplates_ItemFocusAnim-darkGrey_KWBEO {
   from {
-    background: #67707b;
+    background: rgba(255, 255, 255, 0.25);
     color: #8b929a;
   }
   to {
-    background: #3d4450;
+    background: rgba(255, 255, 255, 0.15);
     color: #fff;
   }
 }
@@ -2017,6 +2081,26 @@
   }
   to {
     background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes steamtemplates_ItemFocusAnim-translucent-white-10_1wBt1 {
+  from {
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+  }
+}
+@keyframes steamtemplates_ItemFocusAnim-translucent-white-20_3BFfm {
+  from {
+    background: rgba(255, 255, 255, 0.5);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.2);
     color: #fff;
   }
 }

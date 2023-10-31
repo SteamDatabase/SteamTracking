@@ -620,7 +620,6 @@ p {
 	color: #b2b2b2;
 }
 
-
 	.landingTable.nowrap .td, .landingTable.nowrap .th, .landingTable.nowrap a, .landingTable.nowrap td, .landingTable.nowrap th
 	{
 		white-space: nowrap;
@@ -735,6 +734,10 @@ p {
 		vertical-align: middle;
 		
 	}
+
+    .landingTable.largeText .td {
+        font-size: 14px;
+    }
 
 	.landingtable td.wrap, .landingTable .td.wrap {
 		overflow-wrap: anywhere;
@@ -1343,7 +1346,7 @@ div + #landingFooter.nonconfidential {
 .fancyCurrencyInput input {
 	background-color: inherit;
 	border: none;
-	color: inherit;
+	color: #82a6d7;
 	font-size: inherit;
 	outline: none;
 	text-align: right;
@@ -1403,9 +1406,15 @@ div + #landingFooter.nonconfidential {
 	color: gray;
 }
 
+.td.currentPrice,
+.th.currentPrice {
+    text-align: right;
+    padding-right: 40px;
+}
+
 .packagePriceForm
 {
-	width: 550px;
+	width: 100%;
 }
 
 .packagePriceFormCurrencyLabelColumn
@@ -3557,4 +3566,34 @@ ul.pub_rights li {
 
 .toolBetaNotice a {
     color: white;
+}
+
+.statLinkCallOut {
+    width: fit-content;
+    background: lightblue;
+    padding: 8px 16px 8px 8px;
+    margin-left: 12px;
+    border-radius: 5px;
+    border: 1px solid #3790ad;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.statIconCtn {
+    width: 32px;
+    height: 32px;
+    flex-grow: 0;
+    background: #3790ad;
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+.statInstructionsCtn {
+    display: flex;
+    flex-direction: column;
+    margin-left: 8px;
+    color: black;
+}
+.statInstructionsCtn a {
+    color: black;
 }

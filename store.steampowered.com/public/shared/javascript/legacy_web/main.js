@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "8446642";
+var CLSTAMP = "8456328";
 (() => {
   "use strict";
   var e,
@@ -8,12 +8,13 @@ var CLSTAMP = "8446642";
     n,
     i,
     r = {
-      450: (e, t, n) => {
-        n.d(t, { eV: () => i, Rr: () => r, oH: () => c });
+      242: (e, t, n) => {
+        n.d(t, { eV: () => r, Rr: () => a, oH: () => l });
         var i,
           r,
-          a = n(643);
-        class o {
+          a,
+          o = n(917);
+        class s {
           constructor(e) {
             this.m_config = e;
           }
@@ -41,20 +42,43 @@ var CLSTAMP = "8446642";
             }
           }
         }
-        class s {
+        !(function (e) {
+          (e[(e.None = 0)] = "None"),
+            (e[(e.Horizontal = 1)] = "Horizontal"),
+            (e[(e.Vertical = 2)] = "Vertical");
+        })(i || (i = {}));
+        class c {
           constructor(e) {
-            (this.m_config = e), (this.m_inputRepeatGenerator = new o(e));
+            (this.m_repeatOnAxis = i.None),
+              (this.m_config = e),
+              (this.m_inputRepeatGenerator = new s(e));
           }
           Reset() {
             this.m_inputRepeatGenerator.Reset();
           }
-          HandleInputButtonDown(e, t) {
+          HandleInputButtonDown(e, t, n) {
             this.m_config.inputsThatRepeat.has(e)
-              ? this.m_inputRepeatGenerator.HandleInputButtonDown(e, t)
-              : this.m_inputRepeatGenerator.Reset();
+              ? this.m_repeatOnAxis == i.None &&
+                ((e != r.DIR_UP && e != r.DIR_DOWN) ||
+                  (this.m_repeatOnAxis = i.Vertical),
+                (e != r.DIR_LEFT && e != r.DIR_RIGHT) ||
+                  (this.m_repeatOnAxis = i.Horizontal),
+                t(),
+                this.m_inputRepeatGenerator.HandleInputButtonDown(e, n))
+              : (t(), this.m_inputRepeatGenerator.Reset());
           }
           HandleInputButtonUp(e) {
-            this.m_inputRepeatGenerator.Reset();
+            if (
+              this.m_config.inputsThatRepeat.has(e) &&
+              this.m_repeatOnAxis != i.None
+            ) {
+              const t = e == r.DIR_UP || e == r.DIR_DOWN,
+                n = e == r.DIR_LEFT || e == r.DIR_RIGHT;
+              ((this.m_repeatOnAxis == i.Vertical && t) ||
+                (this.m_repeatOnAxis == i.Horizontal && n)) &&
+                ((this.m_repeatOnAxis = i.None),
+                this.m_inputRepeatGenerator.Reset());
+            } else this.m_inputRepeatGenerator.Reset();
           }
         }
         !(function (e) {
@@ -87,7 +111,7 @@ var CLSTAMP = "8446642";
             (e[(e.REAR_RIGHT_LOWER = 26)] = "REAR_RIGHT_LOWER"),
             (e[(e.STEAM_GUIDE = 27)] = "STEAM_GUIDE"),
             (e[(e.STEAM_QUICK_MENU = 28)] = "STEAM_QUICK_MENU");
-        })(i || (i = {})),
+        })(r || (r = {})),
           (function (e) {
             (e[(e.UNKNOWN = 0)] = "UNKNOWN"),
               (e[(e.GAMEPAD = 1)] = "GAMEPAD"),
@@ -96,21 +120,21 @@ var CLSTAMP = "8446642";
               (e[(e.TOUCH = 4)] = "TOUCH"),
               (e[(e.LPAD = 5)] = "LPAD"),
               (e[(e.RPAD = 6)] = "RPAD");
-          })(r || (r = {}));
-        class c {
+          })(a || (a = {}));
+        class l {
           constructor() {
-            (this.m_OnGamepadDetectedCallbacks = new a.pB()),
-              (this.m_ButtonDownCallbacks = new a.pB()),
-              (this.m_ButtonUpCallbacks = new a.pB()),
-              (this.m_AnalogCallbacks = new a.pB()),
-              (this.m_NavigationTypeChangeCallbacks = new a.pB()),
+            (this.m_OnGamepadDetectedCallbacks = new o.pB()),
+              (this.m_ButtonDownCallbacks = new o.pB()),
+              (this.m_ButtonUpCallbacks = new o.pB()),
+              (this.m_AnalogCallbacks = new o.pB()),
+              (this.m_NavigationTypeChangeCallbacks = new o.pB()),
               (this.m_nLastActiveControllerIndex = -1),
-              (this.m_ButtonRepeatHandler = new s({
+              (this.m_ButtonRepeatHandler = new c({
                 inputsThatRepeat: new Set([
-                  i.DIR_UP,
-                  i.DIR_DOWN,
-                  i.DIR_LEFT,
-                  i.DIR_RIGHT,
+                  r.DIR_UP,
+                  r.DIR_DOWN,
+                  r.DIR_LEFT,
+                  r.DIR_RIGHT,
                 ]),
                 firstRepeatInterval_ms: 400,
                 repeatInterval_ms: 50,
@@ -156,9 +180,10 @@ var CLSTAMP = "8446642";
           OnButtonDown(e, t) {
             void 0 === t && (t = -1),
               this.SetControllerActive(t),
-              this.DispatchButtonDown(e),
-              this.m_ButtonRepeatHandler.HandleInputButtonDown(e, () =>
-                this.DispatchButtonDown(e, !0),
+              this.m_ButtonRepeatHandler.HandleInputButtonDown(
+                e,
+                () => this.DispatchButtonDown(e, !1),
+                () => this.DispatchButtonDown(e, !0),
               );
           }
           OnButtonUp(e, t) {
@@ -194,7 +219,7 @@ var CLSTAMP = "8446642";
           }
         }
       },
-      277: (e, t, n) => {
+      593: (e, t, n) => {
         function i(e, t) {
           return !!e && "object" == typeof e.SteamClient && t in e.SteamClient;
         }
@@ -207,7 +232,7 @@ var CLSTAMP = "8446642";
         }
         n.d(t, { U5: () => r });
       },
-      719: (e, t, n) => {
+      964: (e, t, n) => {
         function i(e, t) {
           return (function (e, t) {
             let n = e.findIndex(t);
@@ -216,7 +241,7 @@ var CLSTAMP = "8446642";
         }
         n.d(t, { Zf: () => i });
       },
-      837: (e, t, n) => {
+      68: (e, t, n) => {
         function i(e, t, n) {
           return {
             get() {
@@ -231,17 +256,17 @@ var CLSTAMP = "8446642";
         }
         n.d(t, { a: () => i });
       },
-      643: (e, t, n) => {
+      917: (e, t, n) => {
         n.d(t, {
           Ar: () => p,
-          Hf: () => d,
+          Hf: () => h,
           km: () => u,
           pB: () => o,
           vq: () => c,
         });
         var i = n(655),
-          r = n(719),
-          a = n(837);
+          r = n(964),
+          a = n(68);
         class o {
           constructor() {
             this.m_vecCallbacks = [];
@@ -343,7 +368,7 @@ var CLSTAMP = "8446642";
           }
         }
         (0, i.gn)([a.a], p.prototype, "ScheduledInternal", null);
-        class d {
+        class h {
           constructor() {
             this.m_vecCallbacks = [];
           }
@@ -361,9 +386,9 @@ var CLSTAMP = "8446642";
             return this.Unregister;
           }
         }
-        (0, i.gn)([a.a], d.prototype, "Unregister", null);
+        (0, i.gn)([a.a], h.prototype, "Unregister", null);
       },
-      809: (e, t, n) => {
+      785: (e, t, n) => {
         "VALVE_PUBLIC_PATH" in window
           ? (n.p = window.VALVE_PUBLIC_PATH)
           : console.error(
@@ -473,7 +498,7 @@ var CLSTAMP = "8446642";
       "javascript/legacy_web/" +
       { 380: "desktop", 511: "gamepad" }[e] +
       ".js?contenthash=" +
-      { 380: "b2829a15647f36137cf3", 511: "8a7b90f2bd99d7949e77" }[e]),
+      { 380: "19717a9d5b5424727255", 511: "4691812ff5af055d3c63" }[e]),
     (o.miniCssF = (e) =>
       "css/legacy_web/gamepad.css?contenthash=be44dba8ea7ddd48708c"),
     (o.g = (function () {
@@ -514,8 +539,8 @@ var CLSTAMP = "8446642";
           s.setAttribute("data-webpack", t + r),
           (s.src = n)),
           (e[n] = [i]);
-        var d = (t, i) => {
-            (s.onerror = s.onload = null), clearTimeout(h);
+        var h = (t, i) => {
+            (s.onerror = s.onload = null), clearTimeout(d);
             var r = e[n];
             if (
               (delete e[n],
@@ -525,12 +550,12 @@ var CLSTAMP = "8446642";
             )
               return t(i);
           },
-          h = setTimeout(
-            d.bind(null, void 0, { type: "timeout", target: s }),
+          d = setTimeout(
+            h.bind(null, void 0, { type: "timeout", target: s }),
             12e4,
           );
-        (s.onerror = d.bind(null, s.onerror)),
-          (s.onload = d.bind(null, s.onload)),
+        (s.onerror = h.bind(null, s.onerror)),
+          (s.onload = h.bind(null, s.onload)),
           c && document.head.appendChild(s);
       }
     }),
@@ -670,10 +695,10 @@ var CLSTAMP = "8446642";
     })(),
     (() => {
       var e = o(655),
-        t = (o(809), o(311)),
+        t = (o(785), o(311)),
         n = o.n(t),
-        i = o(450),
-        r = o(837);
+        i = o(242),
+        r = o(68);
       let a = [
         { index: 0, type: i.eV.OK, category: "action" },
         { index: 1, type: i.eV.CANCEL, category: "action" },
@@ -737,12 +762,12 @@ var CLSTAMP = "8446642";
       }
       (0, e.gn)([r.a], s.prototype, "PollGamepads", null),
         (0, e.gn)([r.a], s.prototype, "OnWindowRegainedFocus", null);
-      var c = o(277);
+      var c = o(593);
       function l(t) {
         return (0, e.mG)(this, void 0, void 0, function* () {
           const { InitializeGamepadNavigation: e } = yield o
             .e(511)
-            .then(o.bind(o, 984));
+            .then(o.bind(o, 373));
           e(t);
         });
       }
@@ -758,7 +783,7 @@ var CLSTAMP = "8446642";
                   (0, e.mG)(this, void 0, void 0, function* () {
                     const { InitializeForDesktop: e } = yield o
                       .e(380)
-                      .then(o.bind(o, 966));
+                      .then(o.bind(o, 317));
                     e();
                   });
                 })()

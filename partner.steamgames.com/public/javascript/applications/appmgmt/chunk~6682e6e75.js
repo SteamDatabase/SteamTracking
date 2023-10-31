@@ -4,6 +4,52 @@
   self.webpackChunkappmgmt_storeadmin || []).push([
   [6608],
   {
+    69818: (e) => {
+      e.exports = {
+        AdminPageCtn: "adminshared_AdminPageCtn_KNaeC",
+        WidePageCtn: "adminshared_WidePageCtn_3-Dwx",
+        PageTitleFlexCtn: "adminshared_PageTitleFlexCtn_SZQhW",
+        PageTitle: "adminshared_PageTitle_15d88",
+        PageSubTitle: "adminshared_PageSubTitle_3gMUt",
+        ValveOnlyTitle: "adminshared_ValveOnlyTitle_3ccYi",
+        ValveOnlyBackground: "adminshared_ValveOnlyBackground_TRbfz",
+        ColumnCtn: "adminshared_ColumnCtn_1Mnmn",
+        LeftCol: "adminshared_LeftCol_1neFt",
+        ColHeader: "adminshared_ColHeader_uP0hv",
+        ColHeaderImg: "adminshared_ColHeaderImg_3OYqx",
+        SectionCtn: "adminshared_SectionCtn_3la4r",
+        Bright: "adminshared_Bright_1Sq2a",
+        ActionBar: "adminshared_ActionBar_1lvk-",
+        SectionIntroText: "adminshared_SectionIntroText_2BLTK",
+        SectionIntroRequirements: "adminshared_SectionIntroRequirements_2wFwI",
+        warning: "adminshared_warning_3RQNx",
+        RightCol: "adminshared_RightCol_p8nGm",
+        NoSticky: "adminshared_NoSticky_1sSkE",
+        SmallText: "adminshared_SmallText_1YUYd",
+        TitleSmall: "adminshared_TitleSmall_oEKks",
+        DefaultSectionCtn: "adminshared_DefaultSectionCtn_2Cn7r",
+        Indent: "adminshared_Indent_225jn",
+        DashLink: "adminshared_DashLink_2y93_",
+        FlexRow: "adminshared_FlexRow_2OkCw",
+        MarginBottom: "adminshared_MarginBottom_1qVJS",
+        StatusLineItemCtn: "adminshared_StatusLineItemCtn_jtOdk",
+        StatusIcon: "adminshared_StatusIcon_gwjXH",
+        StatusIconDone: "adminshared_StatusIconDone_20lWe",
+        UploadedImageDisplayCtn: "adminshared_UploadedImageDisplayCtn_suH0c",
+        UploaderLeftCol: "adminshared_UploaderLeftCol_1lUkC",
+        MarketingMessage: "adminshared_MarketingMessage_35Spt",
+        BannerPreview: "adminshared_BannerPreview_1HJLo",
+        UploaderRightCol: "adminshared_UploaderRightCol_1qxnk",
+        LangCountTitle: "adminshared_LangCountTitle_32cpl",
+        LangSelectCtn: "adminshared_LangSelectCtn_1HRVR",
+        UploaderImgLang: "adminshared_UploaderImgLang_35KwL",
+        LangSelected: "adminshared_LangSelected_362rk",
+        DeleteAll: "adminshared_DeleteAll_2aArL",
+        EditCtn: "adminshared_EditCtn_152-T",
+        StatusBtn: "adminshared_StatusBtn_3diJD",
+        HalfWidthBtnCtn: "adminshared_HalfWidthBtnCtn_1mhRc",
+      };
+    },
     52629: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
@@ -94,6 +140,7 @@
         LeftCol: "partnereventshared_LeftCol_PzQ1b",
         RightCol: "partnereventshared_RightCol_1y0mV",
         DropDownScroll: "partnereventshared_DropDownScroll_31SMP",
+        DropDownScrollItem: "partnereventshared_DropDownScrollItem_1gJSm",
         CloseButton: "partnereventshared_CloseButton_1y6UV",
         CloseSectionTools: "partnereventshared_CloseSectionTools_2rLRq",
         HalfColumn: "partnereventshared_HalfColumn_1sMNJ",
@@ -118,19 +165,19 @@
     24174: (e, t, n) => {
       "use strict";
       n.d(t, {
-        Z6: () => _,
-        p8: () => A,
+        Z6: () => c,
+        p8: () => v,
         NO: () => g,
-        UC: () => v,
-        A1: () => u,
-        yp: () => c,
-        iP: () => h,
+        UC: () => E,
+        A1: () => m,
+        yp: () => p,
+        iP: () => u,
       });
       var r,
         a = n(89526),
         o = n(75457),
-        s = n(32765),
-        i = n(4116);
+        i = n(32765),
+        s = n(4116);
       !(function (e) {
         (e[(e.UNKNOWN = 0)] = "UNKNOWN"),
           (e[(e.TEXT = 1)] = "TEXT"),
@@ -148,7 +195,7 @@
             (this.type = r.TEXT);
         }
       }
-      class p {
+      class d {
         constructor(e, t) {
           (this.m_dictComponents = void 0),
             (this.m_dictComponents = e),
@@ -159,26 +206,26 @@
             const n = [];
             let a = new l(),
               o = !1,
-              s = !1,
-              i = !1;
+              i = !1,
+              s = !1;
             for (let l = 0; l < e.length; l++) {
-              let p = e[l];
+              let d = e[l];
               switch (a.type) {
                 case r.UNKNOWN:
-                  "[" == p
-                    ? ((a.type = r.OPENTAG), (s = !0))
+                  "[" == d
+                    ? ((a.type = r.OPENTAG), (i = !0))
                     : ((a.type = r.TEXT),
-                      "\\" == p && t ? (o = !o) : (a.text += p));
+                      "\\" == d && t ? (o = !o) : (a.text += d));
                   break;
                 case r.OPENTAG:
                 case r.CLOSETAG:
-                  if ("/" == p && s)
-                    (a.type = r.CLOSETAG), (a.text = ""), (s = !1);
-                  else if ("[" != p || o)
-                    if ("]" != p || o)
-                      "\\" == p && t
-                        ? ((a.text += p), (o = !o), (s = !1))
-                        : ((a.text += p), (o = !1), (s = !1));
+                  if ("/" == d && i)
+                    (a.type = r.CLOSETAG), (a.text = ""), (i = !1);
+                  else if ("[" != d || o)
+                    if ("]" != d || o)
+                      "\\" == d && t
+                        ? ((a.text += d), (o = !o), (i = !1))
+                        : ((a.text += d), (o = !1), (i = !1));
                     else {
                       const e =
                           a.type == r.OPENTAG &&
@@ -186,25 +233,25 @@
                         t =
                           a.type == r.CLOSETAG &&
                           "noparse" == a.text.toLocaleLowerCase();
-                      s || (i && !t)
-                        ? (a.ConvertMalformedNodeToText(), (a.text += p))
+                      i || (s && !t)
+                        ? (a.ConvertMalformedNodeToText(), (a.text += d))
                         : e
-                        ? (i = !0)
-                        : t && (i = !1),
-                        (a = d(n, a)),
-                        (s = !1);
+                        ? (s = !0)
+                        : t && (s = !1),
+                        (a = _(n, a)),
+                        (i = !1);
                     }
                   else
                     a.ConvertMalformedNodeToText(),
-                      (a = d(n, a, r.OPENTAG)),
-                      (s = !0);
+                      (a = _(n, a, r.OPENTAG)),
+                      (i = !0);
                   break;
                 case r.TEXT:
-                  "[" != p || o
-                    ? "\\" == p && t
-                      ? (o && (a.text += p), (o = !o))
-                      : ((a.text += p), (o = !1))
-                    : ((a = d(n, a, r.OPENTAG)), (s = !0));
+                  "[" != d || o
+                    ? "\\" == d && t
+                      ? (o && (a.text += d), (o = !o))
+                      : ((a.text += d), (o = !1))
+                    : ((a = _(n, a, r.OPENTAG)), (i = !0));
               }
             }
             a.type != r.UNKNOWN &&
@@ -221,18 +268,18 @@
             o = function () {
               return a.length < 1 ? void 0 : a[a.length - 1];
             },
-            s = this.m_dictComponents,
-            i = !1,
+            i = this.m_dictComponents,
+            s = !1,
             l = !0,
-            p = function (e, r, o) {
-              if (e && e.node.tag === r.text && s.get(e.node.tag)) {
-                const r = s.get(e.node.tag),
+            d = function (e, r, o) {
+              if (e && e.node.tag === r.text && i.get(e.node.tag)) {
+                const r = i.get(e.node.tag),
                   o = a.map((e) => e.node.tag),
-                  p = { parentTags: o, tagname: e.node.tag, args: e.node.args },
-                  d = t(r.Constructor, p, ...n.GetElements());
+                  d = { parentTags: o, tagname: e.node.tag, args: e.node.args },
+                  _ = t(r.Constructor, d, ...n.GetElements());
                 (n = e.accumulator),
-                  n.AppendNode(d),
-                  (i = r.skipFollowingNewline),
+                  n.AppendNode(_),
+                  (s = r.skipFollowingNewline),
                   (l = e.bWrapTextForCopying);
               } else if (e) {
                 let t = e.accumulator;
@@ -245,47 +292,47 @@
             };
           for (
             e.forEach((e, t) => {
-              var d, _;
+              var _, c;
               if (e.type == r.TEXT) {
-                const t = i ? e.text.replace(/^[\t\r ]*\n/g, "") : e.text;
-                n.AppendText(t, l), (i = !1);
+                const t = s ? e.text.replace(/^[\t\r ]*\n/g, "") : e.text;
+                n.AppendText(t, l), (s = !1);
               } else if (e.type == r.OPENTAG) {
-                const t = s.get(e.tag);
+                const t = i.get(e.tag);
                 if (t) {
                   const r = o();
                   if (void 0 !== r) {
-                    const t = s.get(r.node.tag);
+                    const t = i.get(r.node.tag);
                     t &&
                       t.autocloses &&
                       e.tag === r.node.tag &&
-                      p(a.pop(), r.node);
+                      d(a.pop(), r.node);
                   }
                   a.push({ accumulator: n, node: e, bWrapTextForCopying: l }),
                     (n = this.m_fnAccumulatorFactory(e)),
-                    (i = t.skipInternalNewline),
+                    (s = t.skipInternalNewline),
                     (l =
-                      null !== (d = t.allowWrapTextForCopying) &&
-                      void 0 !== d &&
-                      d);
+                      null !== (_ = t.allowWrapTextForCopying) &&
+                      void 0 !== _ &&
+                      _);
                 } else n.AppendText("[" + e.text + "]", 0 == a.length);
               } else if (e.type == r.CLOSETAG) {
                 for (
                   ;
                   o() &&
                   o().node.tag !== e.text &&
-                  s.get(o().node.tag) &&
-                  s.get(o().node.tag).autocloses;
+                  i.get(o().node.tag) &&
+                  i.get(o().node.tag).autocloses;
 
                 ) {
                   const e = a.pop();
-                  p(e, e.node);
+                  d(e, e.node);
                 }
                 if (
-                  (null === (_ = o()) || void 0 === _ ? void 0 : _.node.tag) ==
+                  (null === (c = o()) || void 0 === c ? void 0 : c.node.tag) ==
                   e.text
                 ) {
                   const t = a.pop();
-                  p(t, e);
+                  d(t, e);
                 } else n.AppendText("[/" + e.text + "]", 0 == a.length);
               }
             });
@@ -301,7 +348,7 @@
           return n.GetElements();
         }
       }
-      function d(e, t, n = r.UNKNOWN) {
+      function _(e, t, n = r.UNKNOWN) {
         if (t.type == r.OPENTAG) {
           let e = t.text.indexOf("="),
             n = t.text.indexOf(" ");
@@ -322,13 +369,13 @@
                   (e[(e.IN_QUOTED_VALUE = 4)] = "IN_QUOTED_VALUE");
               })(t || (t = {}));
               let o = t.PRE_NAME,
-                s = 0;
+                i = 0;
               "=" == e[0] && (o = t.POST_NAME);
-              let i = !1;
-              for (s++; s < e.length; s++) {
-                let l = e[s],
-                  p = !0,
-                  d = !1;
+              let s = !1;
+              for (i++; i < e.length; i++) {
+                let l = e[i],
+                  d = !0,
+                  _ = !1;
                 switch (o) {
                   case t.PRE_NAME:
                     if ("=" == l) return {};
@@ -337,28 +384,28 @@
                     break;
                   case t.IN_NAME:
                     ("=" != l && " " != l) ||
-                      i ||
+                      s ||
                       (" " == l
-                        ? ((o = t.PRE_NAME), (d = !0))
+                        ? ((o = t.PRE_NAME), (_ = !0))
                         : (o = t.POST_NAME),
-                      (p = !1));
+                      (d = !1));
                     break;
                   case t.POST_NAME:
                     " " == l
-                      ? ((o = t.PRE_NAME), (p = !1), (d = !0))
+                      ? ((o = t.PRE_NAME), (d = !1), (_ = !0))
                       : '"' == l
-                      ? ((o = t.IN_QUOTED_VALUE), (p = !1))
+                      ? ((o = t.IN_QUOTED_VALUE), (d = !1))
                       : (o = t.IN_VALUE);
                     break;
                   case t.IN_VALUE:
                   case t.IN_QUOTED_VALUE:
-                    ((" " == l && o != t.IN_QUOTED_VALUE && !i) ||
-                      ('"' == l && o == t.IN_QUOTED_VALUE && !i)) &&
-                      ((o = t.PRE_NAME), (p = !1), (d = !0));
+                    ((" " == l && o != t.IN_QUOTED_VALUE && !s) ||
+                      ('"' == l && o == t.IN_QUOTED_VALUE && !s)) &&
+                      ((o = t.PRE_NAME), (d = !1), (_ = !0));
                 }
-                if (p)
-                  if ("\\" != l || i)
-                    if (((i = !1), o == t.IN_NAME)) r += l;
+                if (d)
+                  if ("\\" != l || s)
+                    if (((s = !1), o == t.IN_NAME)) r += l;
                     else {
                       if (o != t.IN_VALUE && o != t.IN_QUOTED_VALUE)
                         throw new Error(
@@ -366,8 +413,8 @@
                         );
                       a += l;
                     }
-                  else i = !0;
-                d && ((n[r] = a), (r = ""), (a = ""));
+                  else s = !0;
+                _ && ((n[r] = a), (r = ""), (a = ""));
               }
               o != t.PRE_NAME && (n[r] = a);
               return n;
@@ -378,13 +425,13 @@
         let a = new l();
         return (a.type = n), a;
       }
-      class _ extends p {
+      class c extends d {
         constructor(e, t, n) {
-          super(e, null != t ? t : () => new i.LT()),
-            (this.m_renderingLanguage = n || (0, o.jM)(s.De.LANGUAGE));
+          super(e, null != t ? t : () => new s.LT()),
+            (this.m_renderingLanguage = n || (0, o.jM)(i.De.LANGUAGE));
         }
         UpdateOverrideLanguage(e) {
-          this.m_renderingLanguage = e || (0, o.jM)(s.De.LANGUAGE);
+          this.m_renderingLanguage = e || (0, o.jM)(i.De.LANGUAGE);
         }
         ParseBBCode(e, t, n = !1) {
           let r = 0;
@@ -409,7 +456,7 @@
             : null;
         }
       }
-      const c = [
+      const p = [
           "h1",
           "h2",
           "h3",
@@ -453,7 +500,7 @@
           "uploadfilebutton",
           "docimg",
         ],
-        h = [
+        u = [
           "h1",
           "h2",
           "h3",
@@ -465,7 +512,7 @@
           "noparse",
           "url",
         ],
-        E = [
+        h = [
           "img",
           "previewyoutube",
           "looping_media",
@@ -476,24 +523,24 @@
           "youtubeorvideo",
           "docimg",
         ],
-        u = (c.filter((e) => -1 == E.indexOf(e)), "{STEAM_CLAN_IMAGE}"),
-        v = "{STEAM_CLAN_LOC_IMAGE}";
-      function A(e, t = null, n = " ") {
+        m = (p.filter((e) => -1 == h.indexOf(e)), "{STEAM_CLAN_IMAGE}"),
+        E = "{STEAM_CLAN_LOC_IMAGE}";
+      function v(e, t = null, n = " ") {
         let r = null == t ? void 0 : t.join("|");
-        r || (r = c.join("|") + "|\\*");
+        r || (r = p.join("|") + "|\\*");
         let a = new RegExp("\\[(" + r + ")\\b[^\\]]*\\].*?\\[/\\1\\]", "gi");
         return e.replace(a, n);
       }
       function g(e, t = null, n = "") {
         let r = null == t ? void 0 : t.join("|");
-        r || (r = c.join("|") + "|\\*");
+        r || (r = p.join("|") + "|\\*");
         let a = "\\[\\/?(?:" + r + "){1,}.*?]";
         return e.replace(new RegExp(a, "gi"), n);
       }
     },
     4116: (e, t, n) => {
       "use strict";
-      n.d(t, { DX: () => s, LT: () => o, So: () => i });
+      n.d(t, { DX: () => i, LT: () => o, So: () => s });
       var r = n(89526),
         a = n(23801);
       class o {
@@ -523,7 +570,7 @@
           return this.reactNodes;
         }
       }
-      class s {
+      class i {
         constructor(e) {
           (0, a.X)(e, "decorated accumulator cannot be null"),
             (this.m_decoratedAccumulator = e);
@@ -538,7 +585,7 @@
           return this.m_decoratedAccumulator.GetElements();
         }
       }
-      class i extends s {
+      class s extends i {
         constructor(e, t, n) {
           super(e),
             (this.m_nStartCursor = 1),
@@ -564,38 +611,246 @@
     },
     13345: (e, t, n) => {
       "use strict";
-      n.d(t, { HZ: () => i, OL: () => o, pd: () => s });
+      n.d(t, { HZ: () => s, OL: () => o, pd: () => i });
       var r = n(24174),
         a = n(44973);
       function o() {
         return `${a.De.CLAN_CDN_ASSET_URL}images/`;
       }
-      function s(e) {
+      function i(e) {
         return (e = e.replace(r.A1, o())).replace("http://", "https://");
       }
-      function i(e) {
+      function s(e) {
         return e.replace(/{STEAM_CLAN_IMAGE}/g, o());
       }
+    },
+    25871: (e, t, n) => {
+      "use strict";
+      n.d(t, {
+        Vm: () => m,
+        Y0: () => r,
+        dY: () => g,
+        ie: () => h,
+        jk: () => c,
+        vs: () => p,
+        wZ: () => v,
+        yo: () => u,
+      });
+      var r,
+        a = n(52868),
+        o = n.n(a),
+        i = n(89526),
+        s = (n(24174), n(42735)),
+        l = n(68562),
+        d = n(4306),
+        _ = n(92616);
+      function c(e, t, n, a) {
+        const l = (0, i.useRef)(),
+          c = (0, i.useRef)(void 0),
+          p = (0, d.NW)();
+        l.current = e;
+        const [u, h] = (0, i.useState)(void 0),
+          {
+            include_assets: m,
+            include_release: E,
+            include_platforms: v,
+            include_all_purchase_options: g,
+            include_screenshots: C,
+            include_trailers: S,
+            include_ratings: A,
+            include_tag_count: f,
+            include_reviews: T,
+            include_basic_info: N,
+            include_supported_languages: I,
+            include_full_description: L,
+            include_included_items: x,
+          } = n;
+        if (
+          ((0, i.useEffect)(() => {
+            const n = {
+              include_assets: m,
+              include_release: E,
+              include_platforms: v,
+              include_all_purchase_options: g,
+              include_screenshots: C,
+              include_trailers: S,
+              include_ratings: A,
+              include_tag_count: f,
+              include_reviews: T,
+              include_basic_info: N,
+              include_supported_languages: I,
+              include_full_description: L,
+              include_included_items: x,
+            };
+            let r = null;
+            return (
+              !e ||
+                _.Z.Get().BHasStoreItem(e, t, n) ||
+                (void 0 !== u && a && a == c.current) ||
+                (a !== c.current && (h(void 0), (c.current = a)),
+                (r = o().CancelToken.source()),
+                _.Z.Get()
+                  .QueueStoreItemRequest(e, t, n)
+                  .then((t) => {
+                    r.token.reason ||
+                      l.current !== e ||
+                      h(t == s.s.k_EResultOK),
+                      p();
+                  })),
+              () => r && r.cancel("useStoreItemCache: unmounting")
+            );
+          }, [e, t, a, u, m, E, v, g, C, S, A, f, T, N, I, L, x, p]),
+          !e)
+        )
+          return [null, r.k_EStoreItemCacheState_Unavailable];
+        if (!1 === u) return [void 0, r.k_EStoreItemCacheState_Unavailable];
+        if (_.Z.Get().BIsStoreItemMissing(e, t))
+          return [void 0, r.k_EStoreItemCacheState_Unavailable];
+        if (!_.Z.Get().BHasStoreItem(e, t, n))
+          return [void 0, r.k_EStoreItemCacheState_Loading];
+        const D = _.Z.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
+        return D
+          ? [D, r.k_EStoreItemCacheState_Found]
+          : [null, r.k_EStoreItemCacheState_Unavailable];
+      }
+      function p(e, t, n) {
+        return c(e, l.vn.k_EStoreItemType_App, t, n);
+      }
+      function u(e, t, n) {
+        return c(e, l.vn.k_EStoreItemType_Bundle, t, n);
+      }
+      function h(e, t, n) {
+        return c(e, l.vn.k_EStoreItemType_Package, t, n);
+      }
+      function m(e, t, n) {
+        const [r, a] = c(e, t, n),
+          [s, d] = (0, i.useState)(null),
+          [_, u] = p(s, n);
+        return (
+          (0, i.useEffect)(() => {
+            var e;
+            const t = o().CancelToken.source();
+            if (
+              (null == r ? void 0 : r.GetStoreItemType()) ==
+                l.vn.k_EStoreItemType_Package &&
+              1 == (null == r ? void 0 : r.GetIncludedAppIDs().length)
+            ) {
+              const n = r.GetIncludedAppIDs()[0];
+              s != n &&
+                ((null === (e = null == t ? void 0 : t.token) || void 0 === e
+                  ? void 0
+                  : e.reason) ||
+                  d(n));
+            }
+            return () =>
+              t.cancel("useStoreItemCacheOrPackageSingleApp: unmounting");
+          }, [s, r]),
+          s ? [_, u] : [r, a]
+        );
+      }
+      function E(e, t, n, a) {
+        const s = (0, d.NW)(),
+          {
+            include_assets: l,
+            include_release: c,
+            include_platforms: p,
+            include_all_purchase_options: u,
+            include_screenshots: h,
+            include_trailers: m,
+            include_ratings: E,
+            include_tag_count: v,
+            include_reviews: g,
+            include_basic_info: C,
+            include_supported_languages: S,
+            include_full_description: A,
+            include_included_items: f,
+          } = n;
+        if (
+          ((0, i.useEffect)(() => {
+            if (!e || 0 == e.length) return;
+            const n = {
+                include_assets: l,
+                include_release: c,
+                include_platforms: p,
+                include_all_purchase_options: u,
+                include_screenshots: h,
+                include_trailers: m,
+                include_ratings: E,
+                include_tag_count: v,
+                include_reviews: g,
+                include_basic_info: C,
+                include_supported_languages: S,
+                include_full_description: A,
+                include_included_items: f,
+              },
+              r = e.filter(
+                (e) =>
+                  !(
+                    _.Z.Get().BHasStoreItem(e, t, n) ||
+                    _.Z.Get().BIsStoreItemMissing(e, t)
+                  ),
+              );
+            if (0 == r.length) return;
+            const a = o().CancelToken.source(),
+              i = r.map((e) => _.Z.Get().QueueStoreItemRequest(e, t, n));
+            return (
+              Promise.all(i).then(() => {
+                a.token.reason || s();
+              }),
+              () => a.cancel("useStoreItemCacheMultiplePackages: unmounting")
+            );
+          }, [e, t, a, s, l, c, p, u, h, m, E, v, g, C, S, A, f]),
+          !e)
+        )
+          return r.k_EStoreItemCacheState_Unavailable;
+        if (
+          !e.every(
+            (e) =>
+              _.Z.Get().BHasStoreItem(e, t, n) ||
+              _.Z.Get().BIsStoreItemMissing(e, t),
+          )
+        )
+          return r.k_EStoreItemCacheState_Loading;
+        return e.every((e) =>
+          _.Z.Get().GetStoreItemWithLegacyVisibilityCheck(e, t),
+        )
+          ? r.k_EStoreItemCacheState_Found
+          : r.k_EStoreItemCacheState_Unavailable;
+      }
+      function v(e, t, n) {
+        return E(e, l.vn.k_EStoreItemType_App, t, n);
+      }
+      function g(e, t, n) {
+        return E(e, l.vn.k_EStoreItemType_Package, t, n);
+      }
+      !(function (e) {
+        (e[(e.k_EStoreItemCacheState_Loading = 1)] =
+          "k_EStoreItemCacheState_Loading"),
+          (e[(e.k_EStoreItemCacheState_Unavailable = 2)] =
+            "k_EStoreItemCacheState_Unavailable"),
+          (e[(e.k_EStoreItemCacheState_Found = 3)] =
+            "k_EStoreItemCacheState_Found");
+      })(r || (r = {}));
     },
     207: (e, t, n) => {
       "use strict";
       n.d(t, {
         FM: () => l,
-        H7: () => i,
-        OL: () => E,
-        Pm: () => _,
-        XW: () => p,
-        bk: () => A,
-        dK: () => h,
-        et: () => c,
-        iv: () => v,
-        md: () => u,
+        H7: () => s,
+        OL: () => h,
+        Pm: () => c,
+        XW: () => d,
+        bk: () => v,
+        dK: () => u,
+        et: () => p,
+        iv: () => E,
+        md: () => m,
       });
       var r = n(32765),
         a = n(75457),
         o = n(14826),
-        s = n(13345);
-      const i =
+        i = n(13345);
+      const s =
         /((?:(?:https?:)|(?:www[.,])|(?:[!#-;=?-Z\\\^-~]+[\.,](?:(?:[a-zA-Z]{2,4}[\.?]*[\/\\\?#])|(?:(?:biz|com|gallery|in|name|net|online|org|tech|trade|xyz)(?=\W|$)))))(?:[^ː\s"<>\[\]]*[^\\s"<>\[\],.ː:])?)/;
       function l(e) {
         let t = new RegExp(
@@ -605,15 +860,15 @@
           n = e.match(t);
         return n && n.length > 5 ? n[6].toString() : e;
       }
-      function p(e) {
+      function d(e) {
         let t = l(e);
         return t.startsWith("www.") && (t = t.slice(4)), t;
       }
-      const d = /^(steam|ftp|https?):\/\//;
-      function _(e) {
-        return d.test(e) ? e : "https://" + e;
-      }
+      const _ = /^(steam|ftp|https?):\/\//;
       function c(e) {
+        return _.test(e) ? e : "https://" + e;
+      }
+      function p(e) {
         return e
           ? r.De.EUNIVERSE != a.xO.k_EUniversePublic
             ? e
@@ -662,10 +917,10 @@
                 /{MEDIA_CDN_COMMUNITY_URL}/g,
                 r.De.MEDIA_CDN_COMMUNITY_URL,
               )).replace(/{COMMUNITY_CDN_URL}/g, r.De.COMMUNITY_CDN_URL)),
-              (e = (0, s.HZ)(e)))
+              (e = (0, i.HZ)(e)))
           : e;
       }
-      function h(e) {
+      function u(e) {
         if (!e) return !0;
         const t = l(e).toLocaleLowerCase();
         return (
@@ -683,7 +938,7 @@
           ].indexOf(t) >= 0
         );
       }
-      function E(e) {
+      function h(e) {
         return r.De.SNR &&
           r.De.SNR.length > 0 &&
           e &&
@@ -691,7 +946,7 @@
           ? e + (e.indexOf("?") >= 0 ? "&" : "?") + "snr=" + r.De.SNR
           : e;
       }
-      function u(e, t) {
+      function m(e, t) {
         try {
           const n = new URL(t),
             r = new URL(e);
@@ -700,10 +955,10 @@
           return "";
         }
       }
-      function v() {
+      function E() {
         return `${r.De.HELP_BASE_URL}${(0, o.CE)()}/`;
       }
-      function A(e) {
+      function v(e) {
         return (
           r.De.IN_STEAMUI &&
             !e.startsWith("steam://") &&

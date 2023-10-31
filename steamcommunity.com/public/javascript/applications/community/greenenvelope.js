@@ -33,9 +33,9 @@
       "use strict";
       n.r(t),
         n.d(t, {
-          GreenEnvelope: () => b,
+          GreenEnvelope: () => h,
           default: () => V,
-          useSteamNotifications: () => h,
+          useSteamNotifications: () => b,
         });
       var i = n(33940),
         o = n(89526),
@@ -46,15 +46,15 @@
         c = n(159),
         u = n.n(c),
         m = n(44973),
-        d = n(77427),
-        f = n(16826),
+        f = n(77427),
+        d = n(16826),
         _ = n(25125),
         v = n(86770),
         p = n(75457),
         E = n(27070),
         g = n(41576);
       const N = new r.tL();
-      function b(e) {
+      function h(e) {
         const { bResponsiveHeader: t, notifications: n } = e;
         o.useEffect(() => {
           n && !N.m_bLoaded && N.ProcessNewNotificationPayload(n);
@@ -78,17 +78,17 @@
                 });
               })(l));
         }, [l]);
-        const s = h();
+        const s = b();
         return t
           ? o.createElement(
               o.Fragment,
               null,
-              o.createElement(S, null),
-              o.createElement(w, null),
+              o.createElement(C, null),
+              o.createElement(B, null),
             )
           : o.createElement(M, { nTotalUnviewed: s.nUnviewed });
       }
-      function h() {
+      function b() {
         return (0, _.SZ)(() => ({
           notifications: N.m_rgNotificationRollups,
           summary: Object.assign({}, N.m_summary),
@@ -97,7 +97,7 @@
         }));
       }
       function y() {
-        return h().notifications.filter((e) => !(0, r.sA)(e.item));
+        return b().notifications.filter((e) => !(0, r.sA)(e.item));
       }
       function M(e) {
         const { nTotalUnviewed: t } = e,
@@ -150,7 +150,7 @@
                 r,
               ),
             },
-            o.createElement(f.Tx5, { className: u().SVGNotifications }),
+            o.createElement(d.Tx5, { className: u().SVGNotifications }),
           ),
         );
       }
@@ -193,13 +193,14 @@
                 className: (0, l.Z)(u().NotificationsMenuScrollable, a),
                 ref: i,
               },
-              o.createElement(S, null),
               o.createElement(C, null),
+              o.createElement(A, null),
             ),
           );
         },
-        T = () =>
-          o.createElement(
+        T = () => {
+          const e = `${m.De.COMMUNITY_BASE_URL}profiles/${m.L7.steamid}/notifications`;
+          return o.createElement(
             "div",
             { className: (0, l.Z)(u().NotificationHeader) },
             o.createElement(
@@ -208,19 +209,19 @@
               (0, s.Xx)("#NotificationsMenu_Title"),
             ),
             o.createElement(
-              "button",
-              {
-                className: u().AllNotificationsButton,
-                onClick: () =>
-                  window.location.assign(
-                    `${m.De.COMMUNITY_BASE_URL}profiles/${m.L7.steamid}/notifications`,
-                  ),
-              },
-              (0, s.Xx)("#NotificationsMenu_ViewAll"),
+              "a",
+              { href: e },
+              o.createElement(
+                "div",
+                { className: u().AllNotificationsButton },
+                (0, s.Xx)("#NotificationsMenu_ViewAll"),
+              ),
             ),
-          ),
-        w = () =>
-          o.createElement(
+          );
+        },
+        B = () => {
+          const e = `${m.De.COMMUNITY_BASE_URL}profiles/${m.L7.steamid}/notifications`;
+          return o.createElement(
             "div",
             {
               className: (0, l.Z)(
@@ -229,25 +230,24 @@
               ),
             },
             o.createElement(
-              "button",
-              {
-                className: u().AllNotificationsButton,
-                onClick: () =>
-                  window.location.assign(
-                    `${m.De.COMMUNITY_BASE_URL}profiles/${m.L7.steamid}/notifications`,
-                  ),
-              },
-              (0, s.Xx)("#NotificationsMenu_ViewAll"),
+              "a",
+              { href: e },
+              o.createElement(
+                "div",
+                { className: u().AllNotificationsButton },
+                (0, s.Xx)("#NotificationsMenu_ViewAll"),
+              ),
             ),
           );
-      function B(e, t, n) {
+        };
+      function S(e, t, n) {
         t.read ||
           (n && 0 != n.button && 1 != n.button) ||
           N.MarkItemRead(t.notification_id),
           e();
       }
-      function C() {
-        const e = h(),
+      function A() {
+        const e = b(),
           t = y();
         return t.length || (0, r.ft)(e.summary)
           ? o.createElement(
@@ -257,31 +257,31 @@
                 o.createElement(v.RW, {
                   key: t,
                   rollup: e,
-                  onNotificationClick: B,
+                  onNotificationClick: S,
                   uimode: p.se.k_EUIMode_Web,
-                  location: d.IS.Tray,
+                  location: f.IS.Tray,
                 }),
               ),
             )
           : o.createElement(G, null);
       }
-      function S() {
+      function C() {
         return o.createElement(
           "div",
           null,
-          o.createElement(A, null),
+          o.createElement(w, null),
           o.createElement(O, null),
           o.createElement(L, null),
           o.createElement(R, null),
-          o.createElement(k, null),
           o.createElement(I, null),
-          o.createElement(H, null),
           o.createElement(D, null),
+          o.createElement(H, null),
+          o.createElement(k, null),
           o.createElement($, null),
         );
       }
-      function A() {
-        const e = h(),
+      function w() {
+        const e = b(),
           t = `${m.De.COMMUNITY_BASE_URL}profiles/${m.L7.steamid}/inventory/#pending_gifts`;
         return o.createElement(v.wY, {
           url: t,
@@ -289,12 +289,12 @@
         });
       }
       function L() {
-        const e = h(),
+        const e = b(),
           t = `${m.De.COMMUNITY_BASE_URL}profiles/${m.L7.steamid}/notifications#comments`;
         return o.createElement(v.DY, { url: t, count: e.summary.comments });
       }
       function O() {
-        const e = h(),
+        const e = b(),
           t = `${m.De.COMMUNITY_BASE_URL}profiles/${m.L7.steamid}/home/invites`;
         return o.createElement(v.b9, {
           url: t,
@@ -302,28 +302,28 @@
         });
       }
       function R() {
-        const e = h(),
+        const e = b(),
           t = `${m.De.COMMUNITY_BASE_URL}profiles/${m.L7.steamid}/inventory`;
         return o.createElement(v.TO, {
           url: t,
           count: e.summary.inventory_items,
         });
       }
-      function k() {
-        const e = h(),
+      function I() {
+        const e = b(),
           t = `${m.De.COMMUNITY_BASE_URL}profiles/${m.L7.steamid}/tradeoffers`;
         return o.createElement(v.OU, { url: t, count: e.summary.trade_offers });
       }
-      function I() {
-        const e = h(),
+      function D() {
+        const e = b(),
           t = `${m.De.COMMUNITY_BASE_URL}profiles/${m.L7.steamid}/gamenotifications`;
         return o.createElement(v.Lo, {
           url: t,
           count: e.summary.async_game_updates,
         });
       }
-      function D() {
-        const e = h(),
+      function k() {
+        const e = b(),
           t = `${m.De.HELP_BASE_URL}wizard/HelpRequests`;
         return o.createElement(v.ZS, {
           url: t,
@@ -331,7 +331,7 @@
         });
       }
       function H() {
-        const e = h(),
+        const e = b(),
           t = `${m.De.COMMUNITY_BASE_URL}my/moderatormessages`;
         return o.createElement(v.V2, {
           url: t,
@@ -339,7 +339,7 @@
         });
       }
       function $() {
-        const e = h(),
+        const e = b(),
           t = `${m.De.STORE_BASE_URL}account/familymanagement`;
         return o.createElement(v.ij, { url: t, count: e.summary.pending_fi });
       }
@@ -359,7 +359,7 @@
           ),
         );
       }
-      const V = b;
+      const V = h;
     },
     41576: (e, t, n) => {
       "use strict";

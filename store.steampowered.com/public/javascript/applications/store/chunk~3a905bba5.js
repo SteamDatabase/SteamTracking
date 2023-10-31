@@ -304,6 +304,7 @@
         LeftCol: "partnereventshared_LeftCol_PzQ1b",
         RightCol: "partnereventshared_RightCol_1y0mV",
         DropDownScroll: "partnereventshared_DropDownScroll_31SMP",
+        DropDownScrollItem: "partnereventshared_DropDownScrollItem_1gJSm",
         CloseButton: "partnereventshared_CloseButton_1y6UV",
         CloseSectionTools: "partnereventshared_CloseSectionTools_2rLRq",
         HalfColumn: "partnereventshared_HalfColumn_1sMNJ",

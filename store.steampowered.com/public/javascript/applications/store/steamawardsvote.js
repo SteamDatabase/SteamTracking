@@ -93,6 +93,7 @@
         LeftCol: "partnereventshared_LeftCol_PzQ1b",
         RightCol: "partnereventshared_RightCol_1y0mV",
         DropDownScroll: "partnereventshared_DropDownScroll_31SMP",
+        DropDownScrollItem: "partnereventshared_DropDownScrollItem_1gJSm",
         CloseButton: "partnereventshared_CloseButton_1y6UV",
         CloseSectionTools: "partnereventshared_CloseSectionTools_2rLRq",
         HalfColumn: "partnereventshared_HalfColumn_1sMNJ",
@@ -116,12 +117,12 @@
     },
     5557: (e, t, n) => {
       "use strict";
-      n.d(t, { r: () => d });
+      n.d(t, { r: () => l });
       var r = n(89526),
         a = n(99307),
         o = n(14826),
         i = n(32765);
-      const d = (e) => {
+      const l = (e) => {
         let t = i.De.HELP_BASE_URL + "wizard/HelpWithLimitedAccount";
         return r.createElement(
           a.uH,
@@ -153,8 +154,8 @@
         a = n(57742),
         o = n(14826),
         i = n(32765),
-        d = n(88390),
-        l = n(7786),
+        l = n(88390),
+        d = n(7786),
         _ = n(19094),
         s = n(79925);
       function p(e) {
@@ -191,11 +192,11 @@
           "div",
           null,
           a
-            ? r.createElement(d.pT, null)
-            : r.createElement(d.wK, {
+            ? r.createElement(l.pT, null)
+            : r.createElement(l.wK, {
                 autoFocus: !0,
                 transport: n,
-                platform: l.hn.k_EAuthTokenPlatformType_WebBrowser,
+                platform: d.hn.k_EAuthTokenPlatformType_WebBrowser,
                 onComplete: (e) => {
                   e == s.TG.k_PrimaryDomainFail
                     ? o(!0)

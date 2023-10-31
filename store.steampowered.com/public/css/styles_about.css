@@ -1330,3 +1330,171 @@ a.about_install_steam_link:hover {
 @media only screen and (min-width: 768px) {
 
 }
+
+
+@media only screen and (max-width: 768px) {
+	#about_header_area.mobile_device.global #about_header {
+		background: url('/public/shared/images/joinsteam/new_login_bg_strong_mask_mobile.jpg') no-repeat;
+		padding-bottom: 10px;
+	}
+
+	#about_header_area.mobile_device.steamchina #about_header {
+		background: url('/public/shared/images/joinsteam/new_login_bg_steam_china_mobile.jpg') no-repeat;
+		padding-bottom: 10px;
+	}
+}
+/* TODO: Add larger background image for tablets
+
+	The class name 'mobile_device' is used to apply mobile styles based on platform regardless of screen size
+*/
+
+#about_header_area.mobile_device .about_area_inner_wrapper {
+	padding: 0px;
+}
+
+#about_header_area.mobile_device {
+	overflow: visible;
+}
+
+#about_header_area.mobile_device #about_header {
+	padding-top: 14vw;
+	overflow: visible;
+}
+
+#about_header_area.mobile_device #about_greeting {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#about_header_area.mobile_device .about_subtitle {
+	padding: 20px 10px;
+	font-size: 18px;
+	text-align: center;
+}
+
+.install_dropdown_wrapper {
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 23px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: #FFFFFF;
+	border-radius: 2px;
+	border: none;
+	padding: 12px;
+	margin: 16px 0px;
+	cursor: pointer;
+	position: relative;
+	width: 75%;
+}
+
+.install_dropdown_wrapper.install_mobile {
+	background: linear-gradient(45deg, #1A9FFF 0%, #0056D6 100%);
+}
+.install_dropdown_wrapper.install_pc {
+	background: rgba(217, 217, 217, 0.1);
+}
+.install_dropdown_placeholder_wrapper {
+	user-select: none;
+	position: relative;
+	width: 100%;
+	font-size: 18px;
+}
+
+/* todo: use a double down arrow image */
+.install_dropdown_placeholder_wrapper::after {
+	font-weight: 700;
+	content: "⌵";
+	font-size: 16px;
+	line-height: 23px;
+	top: 0px;
+	right: 0px;
+	position: absolute;
+	color: #FFFFFF;
+	z-index: 0;
+}
+
+.install_dropdown_flyout {
+	background-color: grey;
+	position: absolute;
+	display: none;
+	flex-direction: column;
+	font-weight: normal;
+	border-radius: 2px;
+	margin-top: 35px;
+	width: 100%;
+	z-index: 1;
+}
+
+.dropdown_option_link {
+	padding: 8px;
+	color: #FFFFFF;
+}
+
+.install_dropdown_wrapper.install_mobile .dropdown_option_link:hover  {
+	background-color: rgb(110, 187, 253);
+	color: #FFFFFF;
+}
+
+.dropdown_install_container {
+	display: flex;
+	flex-direction: row;
+}
+
+.pill_icon {
+	width: 30px;
+	aspect-ratio: 1;
+	flex-shrink: 0;
+}
+
+.install_pc_container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: left;
+}
+
+.dropdown_install_container .option_text {
+	text-align: center;
+	padding: 0px 20px;
+	weight: 400;
+	text-align: left;
+}
+.dropdown_install_container .title {
+	font-size: 16px;
+}
+.dropdown_install_container .description {
+	font-size: 13px;
+}
+
+.install_mobile_app_description {
+	text-align: center;
+	padding: 0px 10px;
+	weight: 300;
+	font-size: 13px;
+}
+.install_mobile_app_description a {
+	text-decoration: underline;
+}
+
+.start_playing {
+	padding-top: 20px;
+	font-size: 18px;
+	font-weight: 800;
+	text-align: center;
+}
+
+.create_account {
+	padding-bottom: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 13px;
+	font-weight: 400;
+}
+
+.create_account a {
+	text-decoration: underline;
+}

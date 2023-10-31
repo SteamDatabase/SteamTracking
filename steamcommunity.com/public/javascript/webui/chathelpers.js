@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "8446642";
+var CLSTAMP = "8456329";
 (() => {
   var e,
     t,
@@ -8,7 +8,7 @@ var CLSTAMP = "8446642";
     r,
     o,
     a = {
-      54279: (e, t, n) => {
+      99902: (e, t, n) => {
         "use strict";
         function r(e, t, n, r) {
           var o,
@@ -62,7 +62,7 @@ var CLSTAMP = "8446642";
         }
         Object.create;
         Object.create;
-        n(22563);
+        n(59602);
         var a = n(87363),
           i = n.n(a),
           s = n(61533);
@@ -111,9 +111,9 @@ var CLSTAMP = "8446642";
         }
         function u(e = k) {
           const t = {},
-            n = d("config", e);
+            n = p("config", e);
           n && (delete n.SESSIONID, Object.assign(h, n), (t.config = !0));
-          const r = d("userinfo", e);
+          const r = p("userinfo", e);
           r &&
             (Object.assign(m, r),
             (t.userConfig = !0),
@@ -124,17 +124,17 @@ var CLSTAMP = "8446642";
                 return Boolean(e && 1 === Number.parseInt(e));
               })() &&
               (m.is_support = !1));
-          const o = d("broadcast", e);
+          const o = p("broadcast", e);
           o && (Object.assign(y, o), (t.broadcastConfig = !0));
-          const a = d("community", e);
+          const a = p("community", e);
           a && (Object.assign(g, a), (t.communityConfig = !0));
-          const i = d("event", e);
+          const i = p("event", e);
           return i && (Object.assign(T, i), (t.eventConfig = !0)), t;
         }
-        function d(e, t = k) {
-          return p(e, t, !0);
+        function p(e, t = k) {
+          return d(e, t, !0);
         }
-        function p(e, t = k, n) {
+        function d(e, t = k, n) {
           let r;
           if (
             ((r =
@@ -1422,8 +1422,8 @@ var CLSTAMP = "8446642";
           le,
           ce,
           ue,
-          de,
           pe,
+          de,
           Se,
           he,
           me,
@@ -1852,13 +1852,13 @@ var CLSTAMP = "8446642";
                 "k_EGamingDeviceType_Phone"),
               (e[(e.k_EGamingDeviceType_SteamDeck = 544)] =
                 "k_EGamingDeviceType_SteamDeck");
-          })(de || (de = {})),
+          })(pe || (pe = {})),
           (function (e) {
             (e[(e.k_ELoginUIStyleOld = 0)] = "k_ELoginUIStyleOld"),
               (e[(e.k_ELoginUIStyleNewWithoutQRCode = 1)] =
                 "k_ELoginUIStyleNewWithoutQRCode"),
               (e[(e.k_ELoginUIStyleNew = 2)] = "k_ELoginUIStyleNew");
-          })(pe || (pe = {})),
+          })(de || (de = {})),
           (function (e) {
             (e[(e.k_ECommunityProfileItemProperty_ImageSmall = 0)] =
               "k_ECommunityProfileItemProperty_ImageSmall"),
@@ -2854,7 +2854,7 @@ var CLSTAMP = "8446642";
             });
           });
       },
-      22563: (e, t, n) => {
+      59602: (e, t, n) => {
         "use strict";
         "VALVE_PUBLIC_PATH" in window
           ? (n.p = window.VALVE_PUBLIC_PATH)
@@ -2967,7 +2967,7 @@ var CLSTAMP = "8446642";
           "./shared_danish.json": [87113, 9753],
           "./shared_dutch.json": [80737, 5925],
           "./shared_english.json": [48751, 7975],
-          "./shared_finnish.json": [94189, 3557],
+          "./shared_finnish.json": [7817, 3557],
           "./shared_french.json": [50731, 3112],
           "./shared_german.json": [54811, 6007],
           "./shared_greek.json": [90175, 4297],
@@ -3013,7 +3013,7 @@ var CLSTAMP = "8446642";
           "./shared_danish.json": [87113, 9753],
           "./shared_dutch.json": [80737, 5925],
           "./shared_english.json": [48751, 7975],
-          "./shared_finnish.json": [94189, 3557],
+          "./shared_finnish.json": [7817, 3557],
           "./shared_french.json": [50731, 3112],
           "./shared_german.json": [54811, 6007],
           "./shared_greek.json": [90175, 4297],
@@ -3188,65 +3188,65 @@ var CLSTAMP = "8446642";
       ".js?contenthash=" +
       {
         699: "e520ea8eb741214a85ed",
-        1162: "a729fdf770b14a3872c4",
-        1313: "10557bd83d1b6d07524f",
-        1471: "81ed8254d1a3deeef975",
+        1162: "c555c36fc97aabd8e8d7",
+        1313: "404f1e129cb116914be7",
+        1471: "98e4a40448bc5aab8e29",
         1635: "80689dbce9ef30fb5333",
         2029: "83a760c7c563af7ff575",
         2431: "3f330a391b919f3bb87d",
-        2443: "7c9d3e5ec58490315f46",
-        2537: "68380035ca19335ebb76",
+        2443: "28bb3923224cf9d3d1f2",
+        2537: "3668972247ad67dedd2e",
         2822: "1930acba561078a18a98",
-        2844: "b16334857acdec1b7189",
+        2844: "631e39fd74c7c7e87d81",
         2862: "919b0f8467aa4d0dd8af",
         2913: "9caa9f9765f6b6fbfe0d",
-        3112: "f196a1f76b302067bb3e",
+        3112: "8e1193c50481143976dd",
         3140: "67232a94c8f87bf86abf",
         3182: "626a386cb26ef9f94014",
-        3252: "cc6a41c2ad57473584bc",
+        3252: "a59afa15171fcecb3d91",
         3471: "3d722f5b01571f009d05",
         3500: "97f103206f5759b7ea62",
-        3557: "8ce6a2b478adc460eb54",
-        4108: "f6d4f0958728bb94be48",
-        4189: "891fcf94b0e73a062a92",
+        3557: "891ea11cdf0636b63985",
+        4108: "f4c0f94547ce45e530dd",
+        4189: "c3b24486601220353482",
         4264: "3f7370d48d57123da3f4",
-        4297: "b94c2e1db2b43a3c380f",
+        4297: "b230e070612ec16d0763",
         4448: "dc34ef362bd30950e27e",
         4596: "b64463f287913ed1b4f2",
         4716: "0d03a3ed1cc805af2770",
-        4823: "5b56b2f738646177e0b3",
-        4964: "b81520ba3e8c10b30b21",
+        4823: "739a3eaa19fbece143af",
+        4964: "9b586808b20fbf9b783c",
         4989: "7080a6ac094d0c96366d",
-        5438: "a7d453ee5ac03991f566",
-        5625: "adc4ff189c03c013c57d",
+        5438: "f6de48431591694521a4",
+        5625: "b1b44bafcefde163263a",
         5632: "04842b46cd85e9d1fb8a",
         5802: "debc3461bbf286c8c1df",
-        5849: "d7c6c0fb89bb7b3a6af3",
-        5925: "5bae6d53bdf13368cb42",
-        5933: "5e91e8469a7121dac1f6",
-        5948: "95494e140abbcd4acccf",
-        6007: "f0e0a3be39b770fce30f",
-        6492: "26243cd9a924da0f5986",
-        6542: "fdd017eb5cc00fd40a4e",
+        5849: "4666cf46f39fa494ddb6",
+        5925: "35ff95ed65a053d98cab",
+        5933: "232287c296c083912eec",
+        5948: "bc664f00051b9f4b638d",
+        6007: "8b4672afb0a2e51f7e31",
+        6492: "28ff18e763b57b6bfaae",
+        6542: "fe00504cc82d519a9c74",
         6646: "6424317e3f55a734bbf0",
         6727: "5397cc56d81a1b5aed19",
         6986: "c54148885851b5b1f61d",
         6992: "3b30a7e01544619acb07",
         7340: "dd947cee9875884305e1",
         7575: "3e33390f518ecc16c2e0",
-        7602: "1b524d62cfc231cafb6b",
-        7651: "fb4e6926db7d5298f24e",
+        7602: "8a601449b59a8c959a74",
+        7651: "d9c6f0f0e972666c9460",
         7706: "415e651d68936074233f",
-        7781: "77bfbfb1b47260bccd48",
+        7781: "1fe8ca206d5173535f8c",
         7975: "4e2e081da6bfdf13756f",
         8247: "f25e033938692b5767ad",
-        8385: "823da8684b8d84235d36",
-        8518: "4a0aecf8c58aa429e523",
-        8754: "08906a98bd082c8a8761",
+        8385: "7ec7f3c946f0ca2239ae",
+        8518: "cd9a798946d052ef9d1e",
+        8754: "0902f59eeec9e3f5b51f",
         8815: "1f786d86346bdbc68758",
-        9062: "9d7411c812aec2e77071",
+        9062: "86b4b032bcff638d728f",
         9263: "5b426ad2267812e707ed",
-        9753: "64aecf613419396d832a",
+        9753: "e4239b937ac398bfd7d8",
         9775: "660b7785225eab50cda3",
         9818: "f7b856f8c101aa9cae33",
       }[e]),
@@ -3383,6 +3383,6 @@ var CLSTAMP = "8446642";
           self.webpackChunk_steam_friendsui || []);
       n.forEach(t.bind(null, 0)), (n.push = t.bind(null, n.push.bind(n)));
     })();
-  var _ = s.O(void 0, [5968], () => s(54279));
+  var _ = s.O(void 0, [5968], () => s(99902));
   _ = s.O(_);
 })();

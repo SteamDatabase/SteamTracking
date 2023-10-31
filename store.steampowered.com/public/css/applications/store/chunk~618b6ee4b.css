@@ -1958,9 +1958,9 @@ html.tablet .partnereventdisplay_EventDetailTitle_2_4FS {
   .nominationandvote_SteamAwardHeader_2TvWH
   .nominationandvote_SteamAwardHeaderImage_3dsTJ {
   position: absolute;
-  bottom: 10%;
   right: -10px;
-  max-width: 100%;
+  max-width: 65px;
+  top: -30px;
 }
 .nominationandvote_SteamAwardContainer_jBtX5
   .nominationandvote_SteamAwardHeader_2TvWH

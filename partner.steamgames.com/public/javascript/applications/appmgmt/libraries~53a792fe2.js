@@ -2,9 +2,9 @@
  ****/
 (self.webpackChunkappmgmt_storeadmin =
   self.webpackChunkappmgmt_storeadmin || []).push([
-  [4309],
+  [4309, 9035],
   {
-    50132: function (e, t, o) {
+    50132: function (e, t, i) {
       /*!
        * @overview es6-promise - a tiny implementation of Promises/A+.
        * @copyright Copyright (c) 2014 Yehuda Katz, Tom Dale, Stefan Penner and contributors (Conversion to ES6 API by Jake Archibald)
@@ -21,7 +21,7 @@
         function t(e) {
           return "function" == typeof e;
         }
-        var i = Array.isArray
+        var o = Array.isArray
             ? Array.isArray
             : function (e) {
                 return "[object Array]" === Object.prototype.toString.call(e);
@@ -30,7 +30,7 @@
           r = void 0,
           a = void 0,
           s = function (e, t) {
-            (w[n] = e), (w[n + 1] = t), 2 === (n += 2) && (a ? a(E) : R());
+            (w[n] = e), (w[n + 1] = t), 2 === (n += 2) && (a ? a(E) : _());
           };
         function l(e) {
           a = e;
@@ -64,11 +64,11 @@
         function b() {
           var e = 0,
             t = new p(E),
-            o = document.createTextNode("");
+            i = document.createTextNode("");
           return (
-            t.observe(o, { characterData: !0 }),
+            t.observe(i, { characterData: !0 }),
             function () {
-              o.data = e = ++e % 2;
+              i.data = e = ++e % 2;
             }
           );
         }
@@ -101,31 +101,31 @@
             return y();
           }
         }
-        var R = void 0;
-        function x(e, t) {
-          var o = this,
-            i = new this.constructor(S);
-          void 0 === i[M] && Y(i);
-          var n = o._state;
+        var _ = void 0;
+        function R(e, t) {
+          var i = this,
+            o = new this.constructor(S);
+          void 0 === o[M] && q(o);
+          var n = i._state;
           if (n) {
             var r = arguments[n - 1];
             s(function () {
-              return V(n, i, r, o._result);
+              return V(n, o, r, i._result);
             });
-          } else j(o, i, e, t);
-          return i;
+          } else j(i, o, e, t);
+          return o;
         }
-        function _(e) {
+        function x(e) {
           var t = this;
           if (e && "object" == typeof e && e.constructor === t) return e;
-          var o = new t(S);
-          return H(o, e), o;
+          var i = new t(S);
+          return O(i, e), i;
         }
-        R = h ? f() : p ? b() : m ? v() : void 0 === u ? C() : y();
+        _ = h ? f() : p ? b() : m ? v() : void 0 === u ? C() : y();
         var M = Math.random().toString(36).substring(2);
         function S() {}
-        var T = void 0,
-          k = 1,
+        var k = void 0,
+          T = 1,
           D = 2;
         function L() {
           return new TypeError("You cannot resolve a promise with itself");
@@ -135,32 +135,32 @@
             "A promises callback cannot return that same promise.",
           );
         }
-        function P(e, t, o, i) {
+        function A(e, t, i, o) {
           try {
-            e.call(t, o, i);
+            e.call(t, i, o);
           } catch (e) {
             return e;
           }
         }
-        function A(e, t, o) {
+        function P(e, t, i) {
           s(function (e) {
-            var i = !1,
-              n = P(
-                o,
+            var o = !1,
+              n = A(
+                i,
                 t,
-                function (o) {
-                  i || ((i = !0), t !== o ? H(e, o) : I(e, o));
+                function (i) {
+                  o || ((o = !0), t !== i ? O(e, i) : I(e, i));
                 },
                 function (t) {
-                  i || ((i = !0), N(e, t));
+                  o || ((o = !0), N(e, t));
                 },
                 "Settle: " + (e._label || " unknown promise"),
               );
-            !i && n && ((i = !0), N(e, n));
+            !o && n && ((o = !0), N(e, n));
           }, e);
         }
         function F(e, t) {
-          t._state === k
+          t._state === T
             ? I(e, t._result)
             : t._state === D
             ? N(e, t._result)
@@ -168,97 +168,97 @@
                 t,
                 void 0,
                 function (t) {
-                  return H(e, t);
+                  return O(e, t);
                 },
                 function (t) {
                   return N(e, t);
                 },
               );
         }
-        function B(e, o, i) {
-          o.constructor === e.constructor &&
-          i === x &&
-          o.constructor.resolve === _
-            ? F(e, o)
-            : void 0 === i
-            ? I(e, o)
-            : t(i)
-            ? A(e, o, i)
-            : I(e, o);
+        function B(e, i, o) {
+          i.constructor === e.constructor &&
+          o === R &&
+          i.constructor.resolve === x
+            ? F(e, i)
+            : void 0 === o
+            ? I(e, i)
+            : t(o)
+            ? P(e, i, o)
+            : I(e, i);
         }
-        function H(t, o) {
-          if (t === o) N(t, L());
-          else if (e(o)) {
-            var i = void 0;
+        function O(t, i) {
+          if (t === i) N(t, L());
+          else if (e(i)) {
+            var o = void 0;
             try {
-              i = o.then;
+              o = i.then;
             } catch (e) {
               return void N(t, e);
             }
-            B(t, o, i);
-          } else I(t, o);
+            B(t, i, o);
+          } else I(t, i);
         }
-        function O(e) {
+        function H(e) {
           e._onerror && e._onerror(e._result), W(e);
         }
         function I(e, t) {
-          e._state === T &&
+          e._state === k &&
             ((e._result = t),
-            (e._state = k),
+            (e._state = T),
             0 !== e._subscribers.length && s(W, e));
         }
         function N(e, t) {
-          e._state === T && ((e._state = D), (e._result = t), s(O, e));
+          e._state === k && ((e._state = D), (e._result = t), s(H, e));
         }
-        function j(e, t, o, i) {
+        function j(e, t, i, o) {
           var n = e._subscribers,
             r = n.length;
           (e._onerror = null),
             (n[r] = t),
-            (n[r + k] = o),
-            (n[r + D] = i),
+            (n[r + T] = i),
+            (n[r + D] = o),
             0 === r && e._state && s(W, e);
         }
         function W(e) {
           var t = e._subscribers,
-            o = e._state;
+            i = e._state;
           if (0 !== t.length) {
             for (
-              var i = void 0, n = void 0, r = e._result, a = 0;
+              var o = void 0, n = void 0, r = e._result, a = 0;
               a < t.length;
               a += 3
             )
-              (i = t[a]), (n = t[a + o]), i ? V(o, i, n, r) : n(r);
+              (o = t[a]), (n = t[a + i]), o ? V(i, o, n, r) : n(r);
             e._subscribers.length = 0;
           }
         }
-        function V(e, o, i, n) {
-          var r = t(i),
+        function V(e, i, o, n) {
+          var r = t(o),
             a = void 0,
             s = void 0,
             l = !0;
           if (r) {
             try {
-              a = i(n);
+              a = o(n);
             } catch (e) {
               (l = !1), (s = e);
             }
-            if (o === a) return void N(o, z());
+            if (i === a) return void N(i, z());
           } else a = n;
-          o._state !== T ||
+          i._state !== k ||
             (r && l
-              ? H(o, a)
+              ? O(i, a)
               : !1 === l
-              ? N(o, s)
-              : e === k
-              ? I(o, a)
-              : e === D && N(o, a));
+              ? N(i, s)
+              : e === T
+              ? I(i, a)
+              : e === D && N(i, a));
         }
         function G(e, t) {
           try {
             t(
               function (t) {
-                H(e, t);
+                O(e, t);
               },
               function (t) {
                 N(e, t);
@@ -272,21 +272,21 @@
         function X() {
           return U++;
         }
-        function Y(e) {
+        function q(e) {
           (e[M] = U++),
             (e._state = void 0),
             (e._result = void 0),
             (e._subscribers = []);
         }
-        function q() {
+        function Y() {
           return new Error("Array Methods must be provided an Array");
         }
         var K = (function () {
           function e(e, t) {
             (this._instanceConstructor = e),
               (this.promise = new e(S)),
-              this.promise[M] || Y(this.promise),
-              i(t)
+              this.promise[M] || q(this.promise),
+              o(t)
                 ? ((this.length = t.length),
                   (this._remaining = t.length),
                   (this._result = new Array(this.length)),
@@ -295,17 +295,17 @@
                     : ((this.length = this.length || 0),
                       this._enumerate(t),
                       0 === this._remaining && I(this.promise, this._result)))
-                : N(this.promise, q());
+                : N(this.promise, Y());
           }
           return (
             (e.prototype._enumerate = function (e) {
-              for (var t = 0; this._state === T && t < e.length; t++)
+              for (var t = 0; this._state === k && t < e.length; t++)
                 this._eachEntry(e[t], t);
             }),
             (e.prototype._eachEntry = function (e, t) {
-              var o = this._instanceConstructor,
-                i = o.resolve;
-              if (i === _) {
+              var i = this._instanceConstructor,
+                o = i.resolve;
+              if (o === x) {
                 var n = void 0,
                   r = void 0,
                   a = !1;
@@ -314,38 +314,38 @@
                 } catch (e) {
                   (a = !0), (r = e);
                 }
-                if (n === x && e._state !== T)
+                if (n === R && e._state !== k)
                   this._settledAt(e._state, t, e._result);
                 else if ("function" != typeof n)
                   this._remaining--, (this._result[t] = e);
-                else if (o === te) {
-                  var s = new o(S);
+                else if (i === te) {
+                  var s = new i(S);
                   a ? N(s, r) : B(s, e, n), this._willSettleAt(s, t);
                 } else
                   this._willSettleAt(
-                    new o(function (t) {
+                    new i(function (t) {
                       return t(e);
                     }),
                     t,
                   );
-              } else this._willSettleAt(i(e), t);
+              } else this._willSettleAt(o(e), t);
             }),
-            (e.prototype._settledAt = function (e, t, o) {
-              var i = this.promise;
-              i._state === T &&
-                (this._remaining--, e === D ? N(i, o) : (this._result[t] = o)),
-                0 === this._remaining && I(i, this._result);
+            (e.prototype._settledAt = function (e, t, i) {
+              var o = this.promise;
+              o._state === k &&
+                (this._remaining--, e === D ? N(o, i) : (this._result[t] = i)),
+                0 === this._remaining && I(o, this._result);
             }),
             (e.prototype._willSettleAt = function (e, t) {
-              var o = this;
+              var i = this;
               j(
                 e,
                 void 0,
                 function (e) {
-                  return o._settledAt(k, t, e);
+                  return i._settledAt(T, t, e);
                 },
                 function (e) {
-                  return o._settledAt(D, t, e);
+                  return i._settledAt(D, t, e);
                 },
               );
             }),
@@ -355,18 +355,18 @@
         function J(e) {
           return new K(this, e).promise;
         }
-        function Z(e) {
+        function $(e) {
           var t = this;
-          return i(e)
-            ? new t(function (o, i) {
+          return o(e)
+            ? new t(function (i, o) {
                 for (var n = e.length, r = 0; r < n; r++)
-                  t.resolve(e[r]).then(o, i);
+                  t.resolve(e[r]).then(i, o);
               })
             : new t(function (e, t) {
                 return t(new TypeError("You must pass an array to race."));
               });
         }
-        function $(e) {
+        function Z(e) {
           var t = new this(S);
           return N(t, e), t;
         }
@@ -394,29 +394,29 @@
               return this.then(null, e);
             }),
             (e.prototype.finally = function (e) {
-              var o = this,
-                i = o.constructor;
+              var i = this,
+                o = i.constructor;
               return t(e)
-                ? o.then(
+                ? i.then(
                     function (t) {
-                      return i.resolve(e()).then(function () {
+                      return o.resolve(e()).then(function () {
                         return t;
                       });
                     },
                     function (t) {
-                      return i.resolve(e()).then(function () {
+                      return o.resolve(e()).then(function () {
                         throw t;
                       });
                     },
                   )
-                : o.then(e, e);
+                : i.then(e, e);
             }),
             e
           );
         })();
-        function oe() {
+        function ie() {
           var e = void 0;
-          if (void 0 !== o.g) e = o.g;
+          if (void 0 !== i.g) e = i.g;
           else if ("undefined" != typeof self) e = self;
           else
             try {
@@ -428,71 +428,1170 @@
             }
           var t = e.Promise;
           if (t) {
-            var i = null;
+            var o = null;
             try {
-              i = Object.prototype.toString.call(t.resolve());
+              o = Object.prototype.toString.call(t.resolve());
             } catch (e) {}
-            if ("[object Promise]" === i && !t.cast) return;
+            if ("[object Promise]" === o && !t.cast) return;
           }
           e.Promise = te;
         }
         return (
-          (te.prototype.then = x),
+          (te.prototype.then = R),
           (te.all = J),
-          (te.race = Z),
-          (te.resolve = _),
-          (te.reject = $),
+          (te.race = $),
+          (te.resolve = x),
+          (te.reject = Z),
           (te._setScheduler = l),
           (te._setAsap = c),
           (te._asap = s),
-          (te.polyfill = oe),
+          (te.polyfill = ie),
           (te.Promise = te),
           te
         );
       })();
     },
+    54905: function (e, t) {
+      var i, o, n;
+      /* @license
+Papa Parse
+v5.3.2
+https://github.com/mholt/PapaParse
+License: MIT
+*/ (o = []),
+        (i = function e() {
+          "use strict";
+          var t =
+              "undefined" != typeof self
+                ? self
+                : "undefined" != typeof window
+                ? window
+                : void 0 !== t
+                ? t
+                : {},
+            i = !t.document && !!t.postMessage,
+            o = i && /blob:/i.test((t.location || {}).protocol),
+            n = {},
+            r = 0,
+            a = {
+              parse: function (i, o) {
+                var s = (o = o || {}).dynamicTyping || !1;
+                if (
+                  (E(s) && ((o.dynamicTypingFunction = s), (s = {})),
+                  (o.dynamicTyping = s),
+                  (o.transform = !!E(o.transform) && o.transform),
+                  o.worker && a.WORKERS_SUPPORTED)
+                ) {
+                  var l = (function () {
+                    if (!a.WORKERS_SUPPORTED) return !1;
+                    var i,
+                      o,
+                      s =
+                        ((i = t.URL || t.webkitURL || null),
+                        (o = e.toString()),
+                        a.BLOB_URL ||
+                          (a.BLOB_URL = i.createObjectURL(
+                            new Blob(["(", o, ")();"], {
+                              type: "text/javascript",
+                            }),
+                          ))),
+                      l = new t.Worker(s);
+                    return (l.onmessage = g), (l.id = r++), (n[l.id] = l);
+                  })();
+                  return (
+                    (l.userStep = o.step),
+                    (l.userChunk = o.chunk),
+                    (l.userComplete = o.complete),
+                    (l.userError = o.error),
+                    (o.step = E(o.step)),
+                    (o.chunk = E(o.chunk)),
+                    (o.complete = E(o.complete)),
+                    (o.error = E(o.error)),
+                    delete o.worker,
+                    void l.postMessage({ input: i, config: o, workerId: l.id })
+                  );
+                }
+                var h = null;
+                return (
+                  a.NODE_STREAM_INPUT,
+                  "string" == typeof i
+                    ? (h = o.download ? new c(o) : new d(o))
+                    : !0 === i.readable && E(i.read) && E(i.on)
+                    ? (h = new p(o))
+                    : ((t.File && i instanceof File) || i instanceof Object) &&
+                      (h = new u(o)),
+                  h.stream(i)
+                );
+              },
+              unparse: function (e, t) {
+                var i = !1,
+                  o = !0,
+                  n = ",",
+                  r = "\r\n",
+                  s = '"',
+                  l = s + s,
+                  c = !1,
+                  u = null,
+                  d = !1;
+                !(function () {
+                  if ("object" == typeof t) {
+                    if (
+                      ("string" != typeof t.delimiter ||
+                        a.BAD_DELIMITERS.filter(function (e) {
+                          return -1 !== t.delimiter.indexOf(e);
+                        }).length ||
+                        (n = t.delimiter),
+                      ("boolean" == typeof t.quotes ||
+                        "function" == typeof t.quotes ||
+                        Array.isArray(t.quotes)) &&
+                        (i = t.quotes),
+                      ("boolean" != typeof t.skipEmptyLines &&
+                        "string" != typeof t.skipEmptyLines) ||
+                        (c = t.skipEmptyLines),
+                      "string" == typeof t.newline && (r = t.newline),
+                      "string" == typeof t.quoteChar && (s = t.quoteChar),
+                      "boolean" == typeof t.header && (o = t.header),
+                      Array.isArray(t.columns))
+                    ) {
+                      if (0 === t.columns.length)
+                        throw new Error("Option columns is empty");
+                      u = t.columns;
+                    }
+                    void 0 !== t.escapeChar && (l = t.escapeChar + s),
+                      ("boolean" == typeof t.escapeFormulae ||
+                        t.escapeFormulae instanceof RegExp) &&
+                        (d =
+                          t.escapeFormulae instanceof RegExp
+                            ? t.escapeFormulae
+                            : /^[=+\-@\t\r].*$/);
+                  }
+                })();
+                var p = new RegExp(m(s), "g");
+                if (
+                  ("string" == typeof e && (e = JSON.parse(e)),
+                  Array.isArray(e))
+                ) {
+                  if (!e.length || Array.isArray(e[0])) return h(null, e, c);
+                  if ("object" == typeof e[0])
+                    return h(u || Object.keys(e[0]), e, c);
+                } else if ("object" == typeof e)
+                  return (
+                    "string" == typeof e.data && (e.data = JSON.parse(e.data)),
+                    Array.isArray(e.data) &&
+                      (e.fields || (e.fields = (e.meta && e.meta.fields) || u),
+                      e.fields ||
+                        (e.fields = Array.isArray(e.data[0])
+                          ? e.fields
+                          : "object" == typeof e.data[0]
+                          ? Object.keys(e.data[0])
+                          : []),
+                      Array.isArray(e.data[0]) ||
+                        "object" == typeof e.data[0] ||
+                        (e.data = [e.data])),
+                    h(e.fields || [], e.data || [], c)
+                  );
+                throw new Error("Unable to serialize unrecognized input");
+                function h(e, t, i) {
+                  var a = "";
+                  "string" == typeof e && (e = JSON.parse(e)),
+                    "string" == typeof t && (t = JSON.parse(t));
+                  var s = Array.isArray(e) && 0 < e.length,
+                    l = !Array.isArray(t[0]);
+                  if (s && o) {
+                    for (var c = 0; c < e.length; c++)
+                      0 < c && (a += n), (a += f(e[c], c));
+                    0 < t.length && (a += r);
+                  }
+                  for (var u = 0; u < t.length; u++) {
+                    var d = s ? e.length : t[u].length,
+                      p = !1,
+                      h = s
+                        ? 0 === Object.keys(t[u]).length
+                        : 0 === t[u].length;
+                    if (
+                      (i &&
+                        !s &&
+                        (p =
+                          "greedy" === i
+                            ? "" === t[u].join("").trim()
+                            : 1 === t[u].length && 0 === t[u][0].length),
+                      "greedy" === i && s)
+                    ) {
+                      for (var m = [], g = 0; g < d; g++) {
+                        var b = l ? e[g] : g;
+                        m.push(t[u][b]);
+                      }
+                      p = "" === m.join("").trim();
+                    }
+                    if (!p) {
+                      for (var v = 0; v < d; v++) {
+                        0 < v && !h && (a += n);
+                        var y = s && l ? e[v] : v;
+                        a += f(t[u][y], v);
+                      }
+                      u < t.length - 1 && (!i || (0 < d && !h)) && (a += r);
+                    }
+                  }
+                  return a;
+                }
+                function f(e, t) {
+                  if (null == e) return "";
+                  if (e.constructor === Date)
+                    return JSON.stringify(e).slice(1, 25);
+                  var o = !1;
+                  d &&
+                    "string" == typeof e &&
+                    d.test(e) &&
+                    ((e = "'" + e), (o = !0));
+                  var r = e.toString().replace(p, l);
+                  return (o =
+                    o ||
+                    !0 === i ||
+                    ("function" == typeof i && i(e, t)) ||
+                    (Array.isArray(i) && i[t]) ||
+                    (function (e, t) {
+                      for (var i = 0; i < t.length; i++)
+                        if (-1 < e.indexOf(t[i])) return !0;
+                      return !1;
+                    })(r, a.BAD_DELIMITERS) ||
+                    -1 < r.indexOf(n) ||
+                    " " === r.charAt(0) ||
+                    " " === r.charAt(r.length - 1))
+                    ? s + r + s
+                    : r;
+                }
+              },
+            };
+          if (
+            ((a.RECORD_SEP = String.fromCharCode(30)),
+            (a.UNIT_SEP = String.fromCharCode(31)),
+            (a.BYTE_ORDER_MARK = "\ufeff"),
+            (a.BAD_DELIMITERS = ["\r", "\n", '"', a.BYTE_ORDER_MARK]),
+            (a.WORKERS_SUPPORTED = !i && !!t.Worker),
+            (a.NODE_STREAM_INPUT = 1),
+            (a.LocalChunkSize = 10485760),
+            (a.RemoteChunkSize = 5242880),
+            (a.DefaultDelimiter = ","),
+            (a.Parser = f),
+            (a.ParserHandle = h),
+            (a.NetworkStreamer = c),
+            (a.FileStreamer = u),
+            (a.StringStreamer = d),
+            (a.ReadableStreamStreamer = p),
+            t.jQuery)
+          ) {
+            var s = t.jQuery;
+            s.fn.parse = function (e) {
+              var i = e.config || {},
+                o = [];
+              return (
+                this.each(function (e) {
+                  if (
+                    "INPUT" !== s(this).prop("tagName").toUpperCase() ||
+                    "file" !== s(this).attr("type").toLowerCase() ||
+                    !t.FileReader ||
+                    !this.files ||
+                    0 === this.files.length
+                  )
+                    return !0;
+                  for (var n = 0; n < this.files.length; n++)
+                    o.push({
+                      file: this.files[n],
+                      inputElem: this,
+                      instanceConfig: s.extend({}, i),
+                    });
+                }),
+                n(),
+                this
+              );
+              function n() {
+                if (0 !== o.length) {
+                  var t,
+                    i,
+                    n,
+                    l,
+                    c = o[0];
+                  if (E(e.before)) {
+                    var u = e.before(c.file, c.inputElem);
+                    if ("object" == typeof u) {
+                      if ("abort" === u.action)
+                        return (
+                          (t = "AbortError"),
+                          (i = c.file),
+                          (n = c.inputElem),
+                          (l = u.reason),
+                          void (E(e.error) && e.error({ name: t }, i, n, l))
+                        );
+                      if ("skip" === u.action) return void r();
+                      "object" == typeof u.config &&
+                        (c.instanceConfig = s.extend(
+                          c.instanceConfig,
+                          u.config,
+                        ));
+                    } else if ("skip" === u) return void r();
+                  }
+                  var d = c.instanceConfig.complete;
+                  (c.instanceConfig.complete = function (e) {
+                    E(d) && d(e, c.file, c.inputElem), r();
+                  }),
+                    a.parse(c.file, c.instanceConfig);
+                } else E(e.complete) && e.complete();
+              }
+              function r() {
+                o.splice(0, 1), n();
+              }
+            };
+          }
+          function l(e) {
+            (this._handle = null),
+              (this._finished = !1),
+              (this._completed = !1),
+              (this._halted = !1),
+              (this._input = null),
+              (this._baseIndex = 0),
+              (this._partialLine = ""),
+              (this._rowCount = 0),
+              (this._start = 0),
+              (this._nextChunk = null),
+              (this.isFirstChunk = !0),
+              (this._completeResults = { data: [], errors: [], meta: {} }),
+              function (e) {
+                var t = y(e);
+                (t.chunkSize = parseInt(t.chunkSize)),
+                  e.step || e.chunk || (t.chunkSize = null),
+                  (this._handle = new h(t)),
+                  ((this._handle.streamer = this)._config = t);
+              }.call(this, e),
+              (this.parseChunk = function (e, i) {
+                if (this.isFirstChunk && E(this._config.beforeFirstChunk)) {
+                  var n = this._config.beforeFirstChunk(e);
+                  void 0 !== n && (e = n);
+                }
+                (this.isFirstChunk = !1), (this._halted = !1);
+                var r = this._partialLine + e;
+                this._partialLine = "";
+                var s = this._handle.parse(r, this._baseIndex, !this._finished);
+                if (!this._handle.paused() && !this._handle.aborted()) {
+                  var l = s.meta.cursor;
+                  this._finished ||
+                    ((this._partialLine = r.substring(l - this._baseIndex)),
+                    (this._baseIndex = l)),
+                    s && s.data && (this._rowCount += s.data.length);
+                  var c =
+                    this._finished ||
+                    (this._config.preview &&
+                      this._rowCount >= this._config.preview);
+                  if (o)
+                    t.postMessage({
+                      results: s,
+                      workerId: a.WORKER_ID,
+                      finished: c,
+                    });
+                  else if (E(this._config.chunk) && !i) {
+                    if (
+                      (this._config.chunk(s, this._handle),
+                      this._handle.paused() || this._handle.aborted())
+                    )
+                      return void (this._halted = !0);
+                    (s = void 0), (this._completeResults = void 0);
+                  }
+                  return (
+                    this._config.step ||
+                      this._config.chunk ||
+                      ((this._completeResults.data =
+                        this._completeResults.data.concat(s.data)),
+                      (this._completeResults.errors =
+                        this._completeResults.errors.concat(s.errors)),
+                      (this._completeResults.meta = s.meta)),
+                    this._completed ||
+                      !c ||
+                      !E(this._config.complete) ||
+                      (s && s.meta.aborted) ||
+                      (this._config.complete(
+                        this._completeResults,
+                        this._input,
+                      ),
+                      (this._completed = !0)),
+                    c || (s && s.meta.paused) || this._nextChunk(),
+                    s
+                  );
+                }
+                this._halted = !0;
+              }),
+              (this._sendError = function (e) {
+                E(this._config.error)
+                  ? this._config.error(e)
+                  : o &&
+                    this._config.error &&
+                    t.postMessage({
+                      workerId: a.WORKER_ID,
+                      error: e,
+                      finished: !1,
+                    });
+              });
+          }
+          function c(e) {
+            var t;
+            (e = e || {}).chunkSize || (e.chunkSize = a.RemoteChunkSize),
+              l.call(this, e),
+              (this._nextChunk = i
+                ? function () {
+                    this._readChunk(), this._chunkLoaded();
+                  }
+                : function () {
+                    this._readChunk();
+                  }),
+              (this.stream = function (e) {
+                (this._input = e), this._nextChunk();
+              }),
+              (this._readChunk = function () {
+                if (this._finished) this._chunkLoaded();
+                else {
+                  if (
+                    ((t = new XMLHttpRequest()),
+                    this._config.withCredentials &&
+                      (t.withCredentials = this._config.withCredentials),
+                    i ||
+                      ((t.onload = w(this._chunkLoaded, this)),
+                      (t.onerror = w(this._chunkError, this))),
+                    t.open(
+                      this._config.downloadRequestBody ? "POST" : "GET",
+                      this._input,
+                      !i,
+                    ),
+                    this._config.downloadRequestHeaders)
+                  ) {
+                    var e = this._config.downloadRequestHeaders;
+                    for (var o in e) t.setRequestHeader(o, e[o]);
+                  }
+                  if (this._config.chunkSize) {
+                    var n = this._start + this._config.chunkSize - 1;
+                    t.setRequestHeader(
+                      "Range",
+                      "bytes=" + this._start + "-" + n,
+                    );
+                  }
+                  try {
+                    t.send(this._config.downloadRequestBody);
+                  } catch (e) {
+                    this._chunkError(e.message);
+                  }
+                  i && 0 === t.status && this._chunkError();
+                }
+              }),
+              (this._chunkLoaded = function () {
+                4 === t.readyState &&
+                  (t.status < 200 || 400 <= t.status
+                    ? this._chunkError()
+                    : ((this._start += this._config.chunkSize
+                        ? this._config.chunkSize
+                        : t.responseText.length),
+                      (this._finished =
+                        !this._config.chunkSize ||
+                        this._start >=
+                          (function (e) {
+                            var t = e.getResponseHeader("Content-Range");
+                            return null === t
+                              ? -1
+                              : parseInt(t.substring(t.lastIndexOf("/") + 1));
+                          })(t)),
+                      this.parseChunk(t.responseText)));
+              }),
+              (this._chunkError = function (e) {
+                var i = t.statusText || e;
+                this._sendError(new Error(i));
+              });
+          }
+          function u(e) {
+            var t, i;
+            (e = e || {}).chunkSize || (e.chunkSize = a.LocalChunkSize),
+              l.call(this, e);
+            var o = "undefined" != typeof FileReader;
+            (this.stream = function (e) {
+              (this._input = e),
+                (i = e.slice || e.webkitSlice || e.mozSlice),
+                o
+                  ? (((t = new FileReader()).onload = w(
+                      this._chunkLoaded,
+                      this,
+                    )),
+                    (t.onerror = w(this._chunkError, this)))
+                  : (t = new FileReaderSync()),
+                this._nextChunk();
+            }),
+              (this._nextChunk = function () {
+                this._finished ||
+                  (this._config.preview &&
+                    !(this._rowCount < this._config.preview)) ||
+                  this._readChunk();
+              }),
+              (this._readChunk = function () {
+                var e = this._input;
+                if (this._config.chunkSize) {
+                  var n = Math.min(
+                    this._start + this._config.chunkSize,
+                    this._input.size,
+                  );
+                  e = i.call(e, this._start, n);
+                }
+                var r = t.readAsText(e, this._config.encoding);
+                o || this._chunkLoaded({ target: { result: r } });
+              }),
+              (this._chunkLoaded = function (e) {
+                (this._start += this._config.chunkSize),
+                  (this._finished =
+                    !this._config.chunkSize || this._start >= this._input.size),
+                  this.parseChunk(e.target.result);
+              }),
+              (this._chunkError = function () {
+                this._sendError(t.error);
+              });
+          }
+          function d(e) {
+            var t;
+            l.call(this, (e = e || {})),
+              (this.stream = function (e) {
+                return (t = e), this._nextChunk();
+              }),
+              (this._nextChunk = function () {
+                if (!this._finished) {
+                  var e,
+                    i = this._config.chunkSize;
+                  return (
+                    i
+                      ? ((e = t.substring(0, i)), (t = t.substring(i)))
+                      : ((e = t), (t = "")),
+                    (this._finished = !t),
+                    this.parseChunk(e)
+                  );
+                }
+              });
+          }
+          function p(e) {
+            l.call(this, (e = e || {}));
+            var t = [],
+              i = !0,
+              o = !1;
+            (this.pause = function () {
+              l.prototype.pause.apply(this, arguments), this._input.pause();
+            }),
+              (this.resume = function () {
+                l.prototype.resume.apply(this, arguments), this._input.resume();
+              }),
+              (this.stream = function (e) {
+                (this._input = e),
+                  this._input.on("data", this._streamData),
+                  this._input.on("end", this._streamEnd),
+                  this._input.on("error", this._streamError);
+              }),
+              (this._checkIsFinished = function () {
+                o && 1 === t.length && (this._finished = !0);
+              }),
+              (this._nextChunk = function () {
+                this._checkIsFinished(),
+                  t.length ? this.parseChunk(t.shift()) : (i = !0);
+              }),
+              (this._streamData = w(function (e) {
+                try {
+                  t.push(
+                    "string" == typeof e
+                      ? e
+                      : e.toString(this._config.encoding),
+                  ),
+                    i &&
+                      ((i = !1),
+                      this._checkIsFinished(),
+                      this.parseChunk(t.shift()));
+                } catch (e) {
+                  this._streamError(e);
+                }
+              }, this)),
+              (this._streamError = w(function (e) {
+                this._streamCleanUp(), this._sendError(e);
+              }, this)),
+              (this._streamEnd = w(function () {
+                this._streamCleanUp(), (o = !0), this._streamData("");
+              }, this)),
+              (this._streamCleanUp = w(function () {
+                this._input.removeListener("data", this._streamData),
+                  this._input.removeListener("end", this._streamEnd),
+                  this._input.removeListener("error", this._streamError);
+              }, this));
+          }
+          function h(e) {
+            var t,
+              i,
+              o,
+              n = Math.pow(2, 53),
+              r = -n,
+              s = /^\s*-?(\d+\.?|\.\d+|\d+\.\d+)([eE][-+]?\d+)?\s*$/,
+              l =
+                /^(\d{4}-[01]\d-[0-3]\dT[0-2]\d:[0-5]\d:[0-5]\d\.\d+([+-][0-2]\d:[0-5]\d|Z))|(\d{4}-[01]\d-[0-3]\dT[0-2]\d:[0-5]\d:[0-5]\d([+-][0-2]\d:[0-5]\d|Z))|(\d{4}-[01]\d-[0-3]\dT[0-2]\d:[0-5]\d([+-][0-2]\d:[0-5]\d|Z))$/,
+              c = this,
+              u = 0,
+              d = 0,
+              p = !1,
+              h = !1,
+              g = [],
+              b = { data: [], errors: [], meta: {} };
+            if (E(e.step)) {
+              var v = e.step;
+              e.step = function (t) {
+                if (((b = t), _())) C();
+                else {
+                  if ((C(), 0 === b.data.length)) return;
+                  (u += t.data.length),
+                    e.preview && u > e.preview
+                      ? i.abort()
+                      : ((b.data = b.data[0]), v(b, c));
+                }
+              };
+            }
+            function w(t) {
+              return "greedy" === e.skipEmptyLines
+                ? "" === t.join("").trim()
+                : 1 === t.length && 0 === t[0].length;
+            }
+            function C() {
+              return (
+                b &&
+                  o &&
+                  (x(
+                    "Delimiter",
+                    "UndetectableDelimiter",
+                    "Unable to auto-detect delimiting character; defaulted to '" +
+                      a.DefaultDelimiter +
+                      "'",
+                  ),
+                  (o = !1)),
+                e.skipEmptyLines &&
+                  (b.data = b.data.filter(function (e) {
+                    return !w(e);
+                  })),
+                _() &&
+                  (function () {
+                    if (b)
+                      if (Array.isArray(b.data[0])) {
+                        for (var t = 0; _() && t < b.data.length; t++)
+                          b.data[t].forEach(i);
+                        b.data.splice(0, 1);
+                      } else b.data.forEach(i);
+                    function i(t, i) {
+                      E(e.transformHeader) && (t = e.transformHeader(t, i)),
+                        g.push(t);
+                    }
+                  })(),
+                (function () {
+                  if (!b || (!e.header && !e.dynamicTyping && !e.transform))
+                    return b;
+                  function t(t, i) {
+                    var o,
+                      n = e.header ? {} : [];
+                    for (o = 0; o < t.length; o++) {
+                      var r = o,
+                        a = t[o];
+                      e.header && (r = o >= g.length ? "__parsed_extra" : g[o]),
+                        e.transform && (a = e.transform(a, r)),
+                        (a = R(r, a)),
+                        "__parsed_extra" === r
+                          ? ((n[r] = n[r] || []), n[r].push(a))
+                          : (n[r] = a);
+                    }
+                    return (
+                      e.header &&
+                        (o > g.length
+                          ? x(
+                              "FieldMismatch",
+                              "TooManyFields",
+                              "Too many fields: expected " +
+                                g.length +
+                                " fields but parsed " +
+                                o,
+                              d + i,
+                            )
+                          : o < g.length &&
+                            x(
+                              "FieldMismatch",
+                              "TooFewFields",
+                              "Too few fields: expected " +
+                                g.length +
+                                " fields but parsed " +
+                                o,
+                              d + i,
+                            )),
+                      n
+                    );
+                  }
+                  var i = 1;
+                  return (
+                    !b.data.length || Array.isArray(b.data[0])
+                      ? ((b.data = b.data.map(t)), (i = b.data.length))
+                      : (b.data = t(b.data, 0)),
+                    e.header && b.meta && (b.meta.fields = g),
+                    (d += i),
+                    b
+                  );
+                })()
+              );
+            }
+            function _() {
+              return e.header && 0 === g.length;
+            }
+            function R(t, i) {
+              return (
+                (o = t),
+                e.dynamicTypingFunction &&
+                  void 0 === e.dynamicTyping[o] &&
+                  (e.dynamicTyping[o] = e.dynamicTypingFunction(o)),
+                !0 === (e.dynamicTyping[o] || e.dynamicTyping)
+                  ? "true" === i ||
+                    "TRUE" === i ||
+                    ("false" !== i &&
+                      "FALSE" !== i &&
+                      ((function (e) {
+                        if (s.test(e)) {
+                          var t = parseFloat(e);
+                          if (r < t && t < n) return !0;
+                        }
+                        return !1;
+                      })(i)
+                        ? parseFloat(i)
+                        : l.test(i)
+                        ? new Date(i)
+                        : "" === i
+                        ? null
+                        : i))
+                  : i
+              );
+              var o;
+            }
+            function x(e, t, i, o) {
+              var n = { type: e, code: t, message: i };
+              void 0 !== o && (n.row = o), b.errors.push(n);
+            }
+            (this.parse = function (n, r, s) {
+              var l = e.quoteChar || '"';
+              if (
+                (e.newline ||
+                  (e.newline = (function (e, t) {
+                    e = e.substring(0, 1048576);
+                    var i = new RegExp(m(t) + "([^]*?)" + m(t), "gm"),
+                      o = (e = e.replace(i, "")).split("\r"),
+                      n = e.split("\n"),
+                      r = 1 < n.length && n[0].length < o[0].length;
+                    if (1 === o.length || r) return "\n";
+                    for (var a = 0, s = 0; s < o.length; s++)
+                      "\n" === o[s][0] && a++;
+                    return a >= o.length / 2 ? "\r\n" : "\r";
+                  })(n, l)),
+                (o = !1),
+                e.delimiter)
+              )
+                E(e.delimiter) &&
+                  ((e.delimiter = e.delimiter(n)),
+                  (b.meta.delimiter = e.delimiter));
+              else {
+                var c = (function (t, i, o, n, r) {
+                  var s, l, c, u;
+                  r = r || [",", "\t", "|", ";", a.RECORD_SEP, a.UNIT_SEP];
+                  for (var d = 0; d < r.length; d++) {
+                    var p = r[d],
+                      h = 0,
+                      m = 0,
+                      g = 0;
+                    c = void 0;
+                    for (
+                      var b = new f({
+                          comments: n,
+                          delimiter: p,
+                          newline: i,
+                          preview: 10,
+                        }).parse(t),
+                        v = 0;
+                      v < b.data.length;
+                      v++
+                    )
+                      if (o && w(b.data[v])) g++;
+                      else {
+                        var y = b.data[v].length;
+                        (m += y),
+                          void 0 !== c
+                            ? 0 < y && ((h += Math.abs(y - c)), (c = y))
+                            : (c = y);
+                      }
+                    0 < b.data.length && (m /= b.data.length - g),
+                      (void 0 === l || h <= l) &&
+                        (void 0 === u || u < m) &&
+                        1.99 < m &&
+                        ((l = h), (s = p), (u = m));
+                  }
+                  return { successful: !!(e.delimiter = s), bestDelimiter: s };
+                })(
+                  n,
+                  e.newline,
+                  e.skipEmptyLines,
+                  e.comments,
+                  e.delimitersToGuess,
+                );
+                c.successful
+                  ? (e.delimiter = c.bestDelimiter)
+                  : ((o = !0), (e.delimiter = a.DefaultDelimiter)),
+                  (b.meta.delimiter = e.delimiter);
+              }
+              var u = y(e);
+              return (
+                e.preview && e.header && u.preview++,
+                (t = n),
+                (i = new f(u)),
+                (b = i.parse(t, r, s)),
+                C(),
+                p ? { meta: { paused: !0 } } : b || { meta: { paused: !1 } }
+              );
+            }),
+              (this.paused = function () {
+                return p;
+              }),
+              (this.pause = function () {
+                (p = !0),
+                  i.abort(),
+                  (t = E(e.chunk) ? "" : t.substring(i.getCharIndex()));
+              }),
+              (this.resume = function () {
+                c.streamer._halted
+                  ? ((p = !1), c.streamer.parseChunk(t, !0))
+                  : setTimeout(c.resume, 3);
+              }),
+              (this.aborted = function () {
+                return h;
+              }),
+              (this.abort = function () {
+                (h = !0),
+                  i.abort(),
+                  (b.meta.aborted = !0),
+                  E(e.complete) && e.complete(b),
+                  (t = "");
+              });
+          }
+          function m(e) {
+            return e.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+          }
+          function f(e) {
+            var t,
+              i = (e = e || {}).delimiter,
+              o = e.newline,
+              n = e.comments,
+              r = e.step,
+              s = e.preview,
+              l = e.fastMode,
+              c = (t =
+                void 0 === e.quoteChar || null === e.quoteChar
+                  ? '"'
+                  : e.quoteChar);
+            if (
+              (void 0 !== e.escapeChar && (c = e.escapeChar),
+              ("string" != typeof i || -1 < a.BAD_DELIMITERS.indexOf(i)) &&
+                (i = ","),
+              n === i)
+            )
+              throw new Error("Comment character same as delimiter");
+            !0 === n
+              ? (n = "#")
+              : ("string" != typeof n || -1 < a.BAD_DELIMITERS.indexOf(n)) &&
+                (n = !1),
+              "\n" !== o && "\r" !== o && "\r\n" !== o && (o = "\n");
+            var u = 0,
+              d = !1;
+            (this.parse = function (e, a, p) {
+              if ("string" != typeof e)
+                throw new Error("Input must be a string");
+              var h = e.length,
+                f = i.length,
+                g = o.length,
+                b = n.length,
+                v = E(r),
+                y = [],
+                w = [],
+                C = [],
+                _ = (u = 0);
+              if (!e) return B();
+              if (l || (!1 !== l && -1 === e.indexOf(t))) {
+                for (var R = e.split(o), x = 0; x < R.length; x++) {
+                  if (((C = R[x]), (u += C.length), x !== R.length - 1))
+                    u += o.length;
+                  else if (p) return B();
+                  if (!n || C.substring(0, b) !== n) {
+                    if (v) {
+                      if (((y = []), z(C.split(i)), O(), d)) return B();
+                    } else z(C.split(i));
+                    if (s && s <= x) return (y = y.slice(0, s)), B(!0);
+                  }
+                }
+                return B();
+              }
+              for (
+                var M = e.indexOf(i, u),
+                  S = e.indexOf(o, u),
+                  k = new RegExp(m(c) + m(t), "g"),
+                  T = e.indexOf(t, u);
+                ;
+
+              )
+                if (e[u] !== t)
+                  if (n && 0 === C.length && e.substring(u, u + b) === n) {
+                    if (-1 === S) return B();
+                    (u = S + g), (S = e.indexOf(o, u)), (M = e.indexOf(i, u));
+                  } else if (-1 !== M && (M < S || -1 === S))
+                    C.push(e.substring(u, M)),
+                      (u = M + f),
+                      (M = e.indexOf(i, u));
+                  else {
+                    if (-1 === S) break;
+                    if ((C.push(e.substring(u, S)), F(S + g), v && (O(), d)))
+                      return B();
+                    if (s && y.length >= s) return B(!0);
+                  }
+                else
+                  for (T = u, u++; ; ) {
+                    if (-1 === (T = e.indexOf(t, T + 1)))
+                      return (
+                        p ||
+                          w.push({
+                            type: "Quotes",
+                            code: "MissingQuotes",
+                            message: "Quoted field unterminated",
+                            row: y.length,
+                            index: u,
+                          }),
+                        P()
+                      );
+                    if (T === h - 1) return P(e.substring(u, T).replace(k, t));
+                    if (t !== c || e[T + 1] !== c) {
+                      if (t === c || 0 === T || e[T - 1] !== c) {
+                        -1 !== M && M < T + 1 && (M = e.indexOf(i, T + 1)),
+                          -1 !== S && S < T + 1 && (S = e.indexOf(o, T + 1));
+                        var D = A(-1 === S ? M : Math.min(M, S));
+                        if (e.substr(T + 1 + D, f) === i) {
+                          C.push(e.substring(u, T).replace(k, t)),
+                            e[(u = T + 1 + D + f)] !== t &&
+                              (T = e.indexOf(t, u)),
+                            (M = e.indexOf(i, u)),
+                            (S = e.indexOf(o, u));
+                          break;
+                        }
+                        var L = A(S);
+                        if (e.substring(T + 1 + L, T + 1 + L + g) === o) {
+                          if (
+                            (C.push(e.substring(u, T).replace(k, t)),
+                            F(T + 1 + L + g),
+                            (M = e.indexOf(i, u)),
+                            (T = e.indexOf(t, u)),
+                            v && (O(), d))
+                          )
+                            return B();
+                          if (s && y.length >= s) return B(!0);
+                          break;
+                        }
+                        w.push({
+                          type: "Quotes",
+                          code: "InvalidQuotes",
+                          message:
+                            "Trailing quote on quoted field is malformed",
+                          row: y.length,
+                          index: u,
+                        }),
+                          T++;
+                      }
+                    } else T++;
+                  }
+              return P();
+              function z(e) {
+                y.push(e), (_ = u);
+              }
+              function A(t) {
+                var i = 0;
+                if (-1 !== t) {
+                  var o = e.substring(T + 1, t);
+                  o && "" === o.trim() && (i = o.length);
+                }
+                return i;
+              }
+              function P(t) {
+                return (
+                  p ||
+                    (void 0 === t && (t = e.substring(u)),
+                    C.push(t),
+                    (u = h),
+                    z(C),
+                    v && O()),
+                  B()
+                );
+              }
+              function F(t) {
+                (u = t), z(C), (C = []), (S = e.indexOf(o, u));
+              }
+              function B(e) {
+                return {
+                  data: y,
+                  errors: w,
+                  meta: {
+                    delimiter: i,
+                    linebreak: o,
+                    aborted: d,
+                    truncated: !!e,
+                    cursor: _ + (a || 0),
+                  },
+                };
+              }
+              function O() {
+                r(B()), (y = []), (w = []);
+              }
+            }),
+              (this.abort = function () {
+                d = !0;
+              }),
+              (this.getCharIndex = function () {
+                return u;
+              });
+          }
+          function g(e) {
+            var t = e.data,
+              i = n[t.workerId],
+              o = !1;
+            if (t.error) i.userError(t.error, t.file);
+            else if (t.results && t.results.data) {
+              var r = {
+                abort: function () {
+                  (o = !0),
+                    b(t.workerId, {
+                      data: [],
+                      errors: [],
+                      meta: { aborted: !0 },
+                    });
+                },
+                pause: v,
+                resume: v,
+              };
+              if (E(i.userStep)) {
+                for (
+                  var a = 0;
+                  a < t.results.data.length &&
+                  (i.userStep(
+                    {
+                      data: t.results.data[a],
+                      errors: t.results.errors,
+                      meta: t.results.meta,
+                    },
+                    r,
+                  ),
+                  !o);
+                  a++
+                );
+                delete t.results;
+              } else
+                E(i.userChunk) &&
+                  (i.userChunk(t.results, r, t.file), delete t.results);
+            }
+            t.finished && !o && b(t.workerId, t.results);
+          }
+          function b(e, t) {
+            var i = n[e];
+            E(i.userComplete) && i.userComplete(t), i.terminate(), delete n[e];
+          }
+          function v() {
+            throw new Error("Not implemented.");
+          }
+          function y(e) {
+            if ("object" != typeof e || null === e) return e;
+            var t = Array.isArray(e) ? [] : {};
+            for (var i in e) t[i] = y(e[i]);
+            return t;
+          }
+          function w(e, t) {
+            return function () {
+              e.apply(t, arguments);
+            };
+          }
+          function E(e) {
+            return "function" == typeof e;
+          }
+          return (
+            o &&
+              (t.onmessage = function (e) {
+                var i = e.data;
+                if (
+                  (void 0 === a.WORKER_ID && i && (a.WORKER_ID = i.workerId),
+                  "string" == typeof i.input)
+                )
+                  t.postMessage({
+                    workerId: a.WORKER_ID,
+                    results: a.parse(i.input, i.config),
+                    finished: !0,
+                  });
+                else if (
+                  (t.File && i.input instanceof File) ||
+                  i.input instanceof Object
+                ) {
+                  var o = a.parse(i.input, i.config);
+                  o &&
+                    t.postMessage({
+                      workerId: a.WORKER_ID,
+                      results: o,
+                      finished: !0,
+                    });
+                }
+              }),
+            ((c.prototype = Object.create(l.prototype)).constructor = c),
+            ((u.prototype = Object.create(l.prototype)).constructor = u),
+            ((d.prototype = Object.create(d.prototype)).constructor = d),
+            ((p.prototype = Object.create(l.prototype)).constructor = p),
+            a
+          );
+        }),
+        void 0 === (n = "function" == typeof i ? i.apply(t, o) : i) ||
+          (e.exports = n);
+    },
     29196: (e) => {
       e.exports = (function (e) {
         var t = {};
-        function o(i) {
-          if (t[i]) return t[i].exports;
-          var n = (t[i] = { exports: {}, id: i, loaded: !1 });
+        function i(o) {
+          if (t[o]) return t[o].exports;
+          var n = (t[o] = { exports: {}, id: o, loaded: !1 });
           return (
-            e[i].call(n.exports, n, n.exports, o), (n.loaded = !0), n.exports
+            e[o].call(n.exports, n, n.exports, i), (n.loaded = !0), n.exports
           );
         }
-        return (o.m = e), (o.c = t), (o.p = ""), o(0);
+        return (i.m = e), (i.c = t), (i.p = ""), i(0);
       })([
-        function (e, t, o) {
+        function (e, t, i) {
           "use strict";
           Object.defineProperty(t, "__esModule", { value: !0 }),
             (t.pickSVGProps = t.pickHTMLProps = void 0);
-          var i = r(o(1)),
-            n = r(o(5));
+          var o = r(i(1)),
+            n = r(i(5));
           function r(e) {
             return e && e.__esModule ? e : { default: e };
           }
-          (t.pickHTMLProps = i.default), (t.pickSVGProps = n.default);
+          (t.pickHTMLProps = o.default), (t.pickSVGProps = n.default);
         },
-        function (e, t, o) {
+        function (e, t, i) {
           "use strict";
           Object.defineProperty(t, "__esModule", { value: !0 });
-          var i =
+          var o =
               Object.assign ||
               function (e) {
                 for (var t = 1; t < arguments.length; t++) {
-                  var o = arguments[t];
-                  for (var i in o)
-                    Object.prototype.hasOwnProperty.call(o, i) && (e[i] = o[i]);
+                  var i = arguments[t];
+                  for (var o in i)
+                    Object.prototype.hasOwnProperty.call(i, o) && (e[o] = i[o]);
                 }
                 return e;
               },
-            n = a(o(2)),
-            r = a(o(3));
+            n = a(i(2)),
+            r = a(i(3));
           function a(e) {
             return e && e.__esModule ? e : { default: e };
           }
-          var s = i(
+          var s = o(
             {},
             n.default,
             [
@@ -743,25 +1842,25 @@
             wrap: "wrap",
           };
         },
-        function (e, t, o) {
+        function (e, t, i) {
           "use strict";
           Object.defineProperty(t, "__esModule", { value: !0 });
-          var i,
-            n = o(4),
-            r = (i = n) && i.__esModule ? i : { default: i };
+          var o,
+            n = i(4),
+            r = (o = n) && o.__esModule ? o : { default: o };
           t.default = function (e) {
             return function (t) {
               if (!(0, r.default)(t))
                 throw new Error("props should be a plain object");
-              var o = {};
-              for (var i in t) t.hasOwnProperty(i) && e(i) && (o[i] = t[i]);
-              return o;
+              var i = {};
+              for (var o in t) t.hasOwnProperty(o) && e(o) && (i[o] = t[o]);
+              return i;
             };
           };
         },
         function (e, t) {
-          var o,
-            i,
+          var i,
+            o,
             n = Function.prototype,
             r = Object.prototype,
             a = n.toString,
@@ -769,10 +1868,10 @@
             l = a.call(Object),
             c = r.toString,
             u =
-              ((o = Object.getPrototypeOf),
-              (i = Object),
+              ((i = Object.getPrototypeOf),
+              (o = Object),
               function (e) {
-                return o(i(e));
+                return i(o(e));
               });
           e.exports = function (e) {
             if (
@@ -792,19 +1891,19 @@
               return !1;
             var t = u(e);
             if (null === t) return !0;
-            var o = s.call(t, "constructor") && t.constructor;
-            return "function" == typeof o && o instanceof o && a.call(o) == l;
+            var i = s.call(t, "constructor") && t.constructor;
+            return "function" == typeof i && i instanceof i && a.call(i) == l;
           };
         },
-        function (e, t, o) {
+        function (e, t, i) {
           "use strict";
           Object.defineProperty(t, "__esModule", { value: !0 });
-          var i = r(o(3)),
-            n = r(o(6));
+          var o = r(i(3)),
+            n = r(i(6));
           function r(e) {
             return e && e.__esModule ? e : { default: e };
           }
-          t.default = (0, i.default)(function (e) {
+          t.default = (0, o.default)(function (e) {
             return Boolean(n.default[e]);
           });
         },
@@ -1077,22 +2176,22 @@
         },
       ]);
     },
-    28838: function (e, t, o) {
+    28838: function (e, t, i) {
       "use strict";
-      var i =
+      var o =
           (this && this.__awaiter) ||
-          function (e, t, o, i) {
-            return new (o || (o = Promise))(function (n, r) {
+          function (e, t, i, o) {
+            return new (i || (i = Promise))(function (n, r) {
               function a(e) {
                 try {
-                  l(i.next(e));
+                  l(o.next(e));
                 } catch (e) {
                   r(e);
                 }
               }
               function s(e) {
                 try {
-                  l(i.throw(e));
+                  l(o.throw(e));
                 } catch (e) {
                   r(e);
                 }
@@ -1102,20 +2201,20 @@
                 e.done
                   ? n(e.value)
                   : ((t = e.value),
-                    t instanceof o
+                    t instanceof i
                       ? t
-                      : new o(function (e) {
+                      : new i(function (e) {
                           e(t);
                         })).then(a, s);
               }
-              l((i = i.apply(e, t || [])).next());
+              l((o = o.apply(e, t || [])).next());
             });
           },
         n =
           (this && this.__generator) ||
           function (e, t) {
-            var o,
-              i,
+            var i,
+              o,
               n,
               r,
               a = {
@@ -1138,22 +2237,22 @@
             function s(r) {
               return function (s) {
                 return (function (r) {
-                  if (o) throw new TypeError("Generator is already executing.");
+                  if (i) throw new TypeError("Generator is already executing.");
                   for (; a; )
                     try {
                       if (
-                        ((o = 1),
-                        i &&
+                        ((i = 1),
+                        o &&
                           (n =
                             2 & r[0]
-                              ? i.return
+                              ? o.return
                               : r[0]
-                              ? i.throw || ((n = i.return) && n.call(i), 0)
-                              : i.next) &&
-                          !(n = n.call(i, r[1])).done)
+                              ? o.throw || ((n = o.return) && n.call(o), 0)
+                              : o.next) &&
+                          !(n = n.call(o, r[1])).done)
                       )
                         return n;
-                      switch (((i = 0), n && (r = [2 & r[0], n.value]), r[0])) {
+                      switch (((o = 0), n && (r = [2 & r[0], n.value]), r[0])) {
                         case 0:
                         case 1:
                           n = r;
@@ -1161,7 +2260,7 @@
                         case 4:
                           return a.label++, { value: r[1], done: !1 };
                         case 5:
-                          a.label++, (i = r[1]), (r = [0]);
+                          a.label++, (o = r[1]), (r = [0]);
                           continue;
                         case 7:
                           (r = a.ops.pop()), a.trys.pop();
@@ -1195,9 +2294,9 @@
                       }
                       r = t.call(e, a);
                     } catch (e) {
-                      (r = [6, e]), (i = 0);
+                      (r = [6, e]), (o = 0);
                     } finally {
-                      o = n = 0;
+                      i = n = 0;
                     }
                   if (5 & r[0]) throw r[1];
                   return { value: r[0] ? r[1] : void 0, done: !0 };
@@ -1206,26 +2305,26 @@
             }
           };
       (t.__esModule = !0), (t.propsToOptions = void 0);
-      var r = o(50132),
-        a = o(73961),
+      var r = i(50132),
+        a = i(73961),
         s = function () {};
       function l(e, t) {
-        return new r.Promise(function (o, i) {
+        return new r.Promise(function (i, o) {
           a.render(e, t, function () {
-            o(t);
+            i(t);
           });
         });
       }
       t.propsToOptions = function (e) {
-        return i(void 0, void 0, void 0, function () {
-          var t, o, i, r, a, c, u, d;
+        return o(void 0, void 0, void 0, function () {
+          var t, i, o, r, a, c, u, d;
           return n(this, function (n) {
             switch (n.label) {
               case 0:
                 for (
                   t = {},
-                    o = 0,
-                    i = [
+                    i = 0,
+                    o = [
                       "height",
                       "layout",
                       "layoutColumnsOnNewData",
@@ -1254,10 +2353,10 @@
                       "placeholder",
                       "selectable",
                     ];
-                  o < i.length;
-                  o++
+                  i < o.length;
+                  i++
                 )
-                  void 0 !== e[(r = i[o])] && (t[r] = e[r]);
+                  void 0 !== e[(r = o[i])] && (t[r] = e[r]);
                 for (
                   a = 0,
                     c = [
@@ -1345,24 +2444,24 @@
         });
       };
     },
-    78848: function (e, t, o) {
+    78848: function (e, t, i) {
       "use strict";
-      var i,
+      var o,
         n =
           (this && this.__extends) ||
-          ((i = function (e, t) {
+          ((o = function (e, t) {
             return (
-              (i =
+              (o =
                 Object.setPrototypeOf ||
                 ({ __proto__: [] } instanceof Array &&
                   function (e, t) {
                     e.__proto__ = t;
                   }) ||
                 function (e, t) {
-                  for (var o in t)
-                    Object.prototype.hasOwnProperty.call(t, o) && (e[o] = t[o]);
+                  for (var i in t)
+                    Object.prototype.hasOwnProperty.call(t, i) && (e[i] = t[i]);
                 }),
-              i(e, t)
+              o(e, t)
             );
           }),
           function (e, t) {
@@ -1372,14 +2471,14 @@
                   String(t) +
                   " is not a constructor or null",
               );
-            function o() {
+            function i() {
               this.constructor = e;
             }
-            i(e, t),
+            o(e, t),
               (e.prototype =
                 null === t
                   ? Object.create(t)
-                  : ((o.prototype = t.prototype), new o()));
+                  : ((i.prototype = t.prototype), new i()));
           }),
         r =
           (this && this.__assign) ||
@@ -1388,8 +2487,8 @@
               (r =
                 Object.assign ||
                 function (e) {
-                  for (var t, o = 1, i = arguments.length; o < i; o++)
-                    for (var n in (t = arguments[o]))
+                  for (var t, i = 1, o = arguments.length; i < o; i++)
+                    for (var n in (t = arguments[i]))
                       Object.prototype.hasOwnProperty.call(t, n) &&
                         (e[n] = t[n]);
                   return e;
@@ -1399,18 +2498,18 @@
           },
         a =
           (this && this.__awaiter) ||
-          function (e, t, o, i) {
-            return new (o || (o = Promise))(function (n, r) {
+          function (e, t, i, o) {
+            return new (i || (i = Promise))(function (n, r) {
               function a(e) {
                 try {
-                  l(i.next(e));
+                  l(o.next(e));
                 } catch (e) {
                   r(e);
                 }
               }
               function s(e) {
                 try {
-                  l(i.throw(e));
+                  l(o.throw(e));
                 } catch (e) {
                   r(e);
                 }
@@ -1420,20 +2519,20 @@
                 e.done
                   ? n(e.value)
                   : ((t = e.value),
-                    t instanceof o
+                    t instanceof i
                       ? t
-                      : new o(function (e) {
+                      : new i(function (e) {
                           e(t);
                         })).then(a, s);
               }
-              l((i = i.apply(e, t || [])).next());
+              l((o = o.apply(e, t || [])).next());
             });
           },
         s =
           (this && this.__generator) ||
           function (e, t) {
-            var o,
-              i,
+            var i,
+              o,
               n,
               r,
               a = {
@@ -1456,22 +2555,22 @@
             function s(r) {
               return function (s) {
                 return (function (r) {
-                  if (o) throw new TypeError("Generator is already executing.");
+                  if (i) throw new TypeError("Generator is already executing.");
                   for (; a; )
                     try {
                       if (
-                        ((o = 1),
-                        i &&
+                        ((i = 1),
+                        o &&
                           (n =
                             2 & r[0]
-                              ? i.return
+                              ? o.return
                               : r[0]
-                              ? i.throw || ((n = i.return) && n.call(i), 0)
-                              : i.next) &&
-                          !(n = n.call(i, r[1])).done)
+                              ? o.throw || ((n = o.return) && n.call(o), 0)
+                              : o.next) &&
+                          !(n = n.call(o, r[1])).done)
                       )
                         return n;
-                      switch (((i = 0), n && (r = [2 & r[0], n.value]), r[0])) {
+                      switch (((o = 0), n && (r = [2 & r[0], n.value]), r[0])) {
                         case 0:
                         case 1:
                           n = r;
@@ -1479,7 +2578,7 @@
                         case 4:
                           return a.label++, { value: r[1], done: !1 };
                         case 5:
-                          a.label++, (i = r[1]), (r = [0]);
+                          a.label++, (o = r[1]), (r = [0]);
                           continue;
                         case 7:
                           (r = a.ops.pop()), a.trys.pop();
@@ -1513,9 +2612,9 @@
                       }
                       r = t.call(e, a);
                     } catch (e) {
-                      (r = [6, e]), (i = 0);
+                      (r = [6, e]), (o = 0);
                     } finally {
-                      o = n = 0;
+                      i = n = 0;
                     }
                   if (5 & r[0]) throw r[1];
                   return { value: r[0] ? r[1] : void 0, done: !0 };
@@ -1524,12 +2623,12 @@
             }
           };
       t.__esModule = !0;
-      var l = o(89526),
-        c = o(73961),
-        u = o(29196),
-        d = o(28838),
-        p = o(3073),
-        h = o(16894),
+      var l = i(89526),
+        c = i(73961),
+        u = i(29196),
+        d = i(28838),
+        p = i(3073),
+        h = i(16894),
         m = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
@@ -1556,17 +2655,17 @@
             n(t, e),
             (t.prototype.componentDidMount = function () {
               return a(this, void 0, void 0, function () {
-                var e, t, o, i, n, a, l;
+                var e, t, i, o, n, a, l;
                 return s(this, function (s) {
                   switch (s.label) {
                     case 0:
                       return (
                         (e = c.findDOMNode(this.ref)),
                         (t = this),
-                        (o = this.props),
-                        (i = o.columns),
-                        (n = o.data),
-                        (a = o.options),
+                        (i = this.props),
+                        (o = i.columns),
+                        (n = i.data),
+                        (a = i.options),
                         [4, d.propsToOptions(this.props)]
                       );
                     case 1:
@@ -1576,7 +2675,7 @@
                           e,
                           r(
                             r(
-                              r(r({ columns: i }, l), {
+                              r(r({ columns: o }, l), {
                                 layout: "fitColumns",
                                 tableBuilding: function () {
                                   (t.table = this),
@@ -1637,24 +2736,24 @@
         })(l.Component);
       t.default = m;
     },
-    9667: function (e, t, o) {
+    9667: function (e, t, i) {
       "use strict";
-      var i,
+      var o,
         n =
           (this && this.__extends) ||
-          ((i = function (e, t) {
+          ((o = function (e, t) {
             return (
-              (i =
+              (o =
                 Object.setPrototypeOf ||
                 ({ __proto__: [] } instanceof Array &&
                   function (e, t) {
                     e.__proto__ = t;
                   }) ||
                 function (e, t) {
-                  for (var o in t)
-                    Object.prototype.hasOwnProperty.call(t, o) && (e[o] = t[o]);
+                  for (var i in t)
+                    Object.prototype.hasOwnProperty.call(t, i) && (e[i] = t[i]);
                 }),
-              i(e, t)
+              o(e, t)
             );
           }),
           function (e, t) {
@@ -1664,14 +2763,14 @@
                   String(t) +
                   " is not a constructor or null",
               );
-            function o() {
+            function i() {
               this.constructor = e;
             }
-            i(e, t),
+            o(e, t),
               (e.prototype =
                 null === t
                   ? Object.create(t)
-                  : ((o.prototype = t.prototype), new o()));
+                  : ((i.prototype = t.prototype), new i()));
           }),
         r =
           (this && this.__assign) ||
@@ -1680,8 +2779,8 @@
               (r =
                 Object.assign ||
                 function (e) {
-                  for (var t, o = 1, i = arguments.length; o < i; o++)
-                    for (var n in (t = arguments[o]))
+                  for (var t, i = 1, o = arguments.length; i < o; i++)
+                    for (var n in (t = arguments[i]))
                       Object.prototype.hasOwnProperty.call(t, n) &&
                         (e[n] = t[n]);
                   return e;
@@ -1691,18 +2790,18 @@
           },
         a =
           (this && this.__awaiter) ||
-          function (e, t, o, i) {
-            return new (o || (o = Promise))(function (n, r) {
+          function (e, t, i, o) {
+            return new (i || (i = Promise))(function (n, r) {
               function a(e) {
                 try {
-                  l(i.next(e));
+                  l(o.next(e));
                 } catch (e) {
                   r(e);
                 }
               }
               function s(e) {
                 try {
-                  l(i.throw(e));
+                  l(o.throw(e));
                 } catch (e) {
                   r(e);
                 }
@@ -1712,20 +2811,20 @@
                 e.done
                   ? n(e.value)
                   : ((t = e.value),
-                    t instanceof o
+                    t instanceof i
                       ? t
-                      : new o(function (e) {
+                      : new i(function (e) {
                           e(t);
                         })).then(a, s);
               }
-              l((i = i.apply(e, t || [])).next());
+              l((o = o.apply(e, t || [])).next());
             });
           },
         s =
           (this && this.__generator) ||
           function (e, t) {
-            var o,
-              i,
+            var i,
+              o,
               n,
               r,
               a = {
@@ -1748,22 +2847,22 @@
             function s(r) {
               return function (s) {
                 return (function (r) {
-                  if (o) throw new TypeError("Generator is already executing.");
+                  if (i) throw new TypeError("Generator is already executing.");
                   for (; a; )
                     try {
                       if (
-                        ((o = 1),
-                        i &&
+                        ((i = 1),
+                        o &&
                           (n =
                             2 & r[0]
-                              ? i.return
+                              ? o.return
                               : r[0]
-                              ? i.throw || ((n = i.return) && n.call(i), 0)
-                              : i.next) &&
-                          !(n = n.call(i, r[1])).done)
+                              ? o.throw || ((n = o.return) && n.call(o), 0)
+                              : o.next) &&
+                          !(n = n.call(o, r[1])).done)
                       )
                         return n;
-                      switch (((i = 0), n && (r = [2 & r[0], n.value]), r[0])) {
+                      switch (((o = 0), n && (r = [2 & r[0], n.value]), r[0])) {
                         case 0:
                         case 1:
                           n = r;
@@ -1771,7 +2870,7 @@
                         case 4:
                           return a.label++, { value: r[1], done: !1 };
                         case 5:
-                          a.label++, (i = r[1]), (r = [0]);
+                          a.label++, (o = r[1]), (r = [0]);
                           continue;
                         case 7:
                           (r = a.ops.pop()), a.trys.pop();
@@ -1805,9 +2904,9 @@
                       }
                       r = t.call(e, a);
                     } catch (e) {
-                      (r = [6, e]), (i = 0);
+                      (r = [6, e]), (o = 0);
                     } finally {
-                      o = n = 0;
+                      i = n = 0;
                     }
                   if (5 & r[0]) throw r[1];
                   return { value: r[0] ? r[1] : void 0, done: !0 };
@@ -1818,17 +2917,17 @@
         l =
           (this && this.__spreadArray) ||
           function (e, t) {
-            for (var o = 0, i = t.length, n = e.length; o < i; o++, n++)
-              e[n] = t[o];
+            for (var i = 0, o = t.length, n = e.length; i < o; i++, n++)
+              e[n] = t[i];
             return e;
           };
       t.__esModule = !0;
-      var c = o(89526),
-        u = o(73961),
-        d = o(29196),
-        p = o(28838),
-        h = o(3073),
-        m = o(16894),
+      var c = i(89526),
+        u = i(73961),
+        d = i(29196),
+        p = i(28838),
+        h = i(3073),
+        m = i(16894),
         f = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
@@ -1860,17 +2959,17 @@
             (t.prototype.initTabulator = function () {
               var e;
               return a(this, void 0, void 0, function () {
-                var t, o, i, n, a, l, c;
+                var t, i, o, n, a, l, c;
                 return s(this, function (s) {
                   switch (s.label) {
                     case 0:
                       return (
                         (t = u.findDOMNode(this.ref)),
-                        (o = this),
-                        (i = this.props),
-                        (n = i.columns),
-                        (a = i.data),
-                        (l = i.options),
+                        (i = this),
+                        (o = this.props),
+                        (n = o.columns),
+                        (a = o.data),
+                        (l = o.options),
                         [4, p.propsToOptions(this.props)]
                       );
                     case 1:
@@ -1887,12 +2986,12 @@
                                     ? e
                                     : "fitColumns",
                                 tableBuilding: function () {
-                                  (o.table = this),
-                                    o.props.tableBuilding &&
-                                      o.props.tableBuilding();
+                                  (i.table = this),
+                                    i.props.tableBuilding &&
+                                      i.props.tableBuilding();
                                 },
                                 dataLoaded: function () {
-                                  o.props.dataLoaded && o.props.dataLoaded();
+                                  i.props.dataLoaded && i.props.dataLoaded();
                                 },
                                 invalidOptionWarnings: !1,
                               }),
@@ -1924,8 +3023,8 @@
               this.table && this.table.destroy();
             }),
             (t.getDerivedStateFromProps = function (e, t) {
-              var o = !e.data || 0 === e.data.length;
-              return (!t && o) ||
+              var i = !e.data || 0 === e.data.length;
+              return (!t && i) ||
                 (t &&
                   t.data.length &&
                   0 === t.data.length &&
@@ -1976,25 +3075,25 @@
         })(c.Component);
       t.default = f;
     },
-    72576: function (e, t, o) {
+    72576: function (e, t, i) {
       "use strict";
-      var i,
+      var o,
         n,
         r =
           (this && this.__extends) ||
-          ((i = function (e, t) {
+          ((o = function (e, t) {
             return (
-              (i =
+              (o =
                 Object.setPrototypeOf ||
                 ({ __proto__: [] } instanceof Array &&
                   function (e, t) {
                     e.__proto__ = t;
                   }) ||
                 function (e, t) {
-                  for (var o in t)
-                    Object.prototype.hasOwnProperty.call(t, o) && (e[o] = t[o]);
+                  for (var i in t)
+                    Object.prototype.hasOwnProperty.call(t, i) && (e[i] = t[i]);
                 }),
-              i(e, t)
+              o(e, t)
             );
           }),
           function (e, t) {
@@ -2004,21 +3103,21 @@
                   String(t) +
                   " is not a constructor or null",
               );
-            function o() {
+            function i() {
               this.constructor = e;
             }
-            i(e, t),
+            o(e, t),
               (e.prototype =
                 null === t
                   ? Object.create(t)
-                  : ((o.prototype = t.prototype), new o()));
+                  : ((i.prototype = t.prototype), new i()));
           });
       t.__esModule = !0;
-      var a = o(89526),
-        s = o(9667),
-        l = o(25348),
-        c = o(10150),
-        u = o(73066);
+      var a = i(89526),
+        s = i(9667),
+        l = i(25348),
+        c = i(10150),
+        u = i(73066);
       var d = [
           { title: "Name", field: "name", width: 150 },
           {
@@ -2046,10 +3145,10 @@
             field: "custom",
             hozAlign: "center",
             editor: "input",
-            formatter: o(3073).reactFormatter(
+            formatter: i(3073).reactFormatter(
               a.createElement(function (e) {
                 var t = e.cell._cell.row.data,
-                  o = e.cell._cell.value || "Edit | Show";
+                  i = e.cell._cell.value || "Edit | Show";
                 return a.createElement(
                   "button",
                   {
@@ -2057,7 +3156,7 @@
                       return alert(t.name);
                     },
                   },
-                  o,
+                  i,
                 );
               }, null),
             ),
@@ -2198,10 +3297,10 @@
             return (
               (t.state = { data: [], selectedName: "" }),
               (t.ref = null),
-              (t.rowClick = function (e, o) {
+              (t.rowClick = function (e, i) {
                 console.log("ref table: ", t.ref.table),
-                  console.log("rowClick id: ${row.getData().id}", o, e),
-                  t.setState({ selectedName: o.getData().name });
+                  console.log("rowClick id: ${row.getData().id}", i, e),
+                  t.setState({ selectedName: i.getData().name });
               }),
               (t.setData = function () {
                 t.setState({ data: p });
@@ -2221,8 +3320,8 @@
                   paginationDataReceived: { last_page: "total_pages" },
                   current_page: 1,
                   paginationSize: 3,
-                  ajaxResponse: function (e, t, o) {
-                    return console.log("ajaxResponse", e), o;
+                  ajaxResponse: function (e, t, i) {
+                    return console.log("ajaxResponse", e), i;
                   },
                   ajaxError: function (e) {
                     console.log("ajaxError", e);
@@ -2338,44 +3437,44 @@
         })(a.Component);
       t.default = f;
     },
-    3073: (e, t, o) => {
+    3073: (e, t, i) => {
       "use strict";
       (t.__esModule = !0),
         (t.reactFormatter = t.isSameObject = t.isSameArray = t.clone = void 0);
-      var i = o(89526),
-        n = o(73961);
+      var o = i(89526),
+        n = i(73961);
       function r(e) {
         var t = 0;
-        return function (o, i) {
+        return function (i, o) {
           return 0 !== t &&
             "object" == typeof e &&
-            "object" == typeof i &&
-            e == i
+            "object" == typeof o &&
+            e == o
             ? "[Circular]"
             : t >= 29
             ? "[Unknown]"
-            : (++t, i);
+            : (++t, o);
         };
       }
       (t.clone = function (e) {
         return JSON.parse(JSON.stringify(e));
       }),
         (t.isSameArray = function (e, t) {
-          var o = e && e.length ? e.length : 0;
-          if (o !== (t && t.length ? t.length : 0)) return !1;
-          for (; o--; ) if (e[o] !== t[o]) return !1;
+          var i = e && e.length ? e.length : 0;
+          if (i !== (t && t.length ? t.length : 0)) return !1;
+          for (; i--; ) if (e[i] !== t[i]) return !1;
           return !0;
         }),
         (t.isSameObject = function (e, t) {
           return JSON.stringify(e, r(e)) === JSON.stringify(t, r(t));
         }),
         (t.reactFormatter = function (e) {
-          return function (t, o, r) {
+          return function (t, i, r) {
             var a = function () {
-              var o = t.getElement();
-              if (o && o.querySelector(".formatterCell")) {
-                var r = i.cloneElement(e, { cell: t });
-                n.render(r, o.querySelector(".formatterCell"));
+              var i = t.getElement();
+              if (i && i.querySelector(".formatterCell")) {
+                var r = o.cloneElement(e, { cell: t });
+                n.render(r, i.querySelector(".formatterCell"));
               }
             };
             return (
@@ -2388,24 +3487,24 @@
           };
         });
     },
-    25348: function (e, t, o) {
+    25348: function (e, t, i) {
       "use strict";
-      var i,
+      var o,
         n =
           (this && this.__extends) ||
-          ((i = function (e, t) {
+          ((o = function (e, t) {
             return (
-              (i =
+              (o =
                 Object.setPrototypeOf ||
                 ({ __proto__: [] } instanceof Array &&
                   function (e, t) {
                     e.__proto__ = t;
                   }) ||
                 function (e, t) {
-                  for (var o in t)
-                    Object.prototype.hasOwnProperty.call(t, o) && (e[o] = t[o]);
+                  for (var i in t)
+                    Object.prototype.hasOwnProperty.call(t, i) && (e[i] = t[i]);
                 }),
-              i(e, t)
+              o(e, t)
             );
           }),
           function (e, t) {
@@ -2415,19 +3514,19 @@
                   String(t) +
                   " is not a constructor or null",
               );
-            function o() {
+            function i() {
               this.constructor = e;
             }
-            i(e, t),
+            o(e, t),
               (e.prototype =
                 null === t
                   ? Object.create(t)
-                  : ((o.prototype = t.prototype), new o()));
+                  : ((i.prototype = t.prototype), new i()));
           });
       t.__esModule = !0;
-      var r = o(89526),
-        a = o(73961),
-        s = o(1857),
+      var r = i(89526),
+        a = i(73961),
+        s = i(1857),
         l = "YYYY-MM-DD",
         c = {
           width: "100%",
@@ -2444,31 +3543,31 @@
               (t.format = t.props.editorParams.format || "MM/DD/YYYY"),
               (t.setValueOnSuccess = function (e) {
                 void 0 === e && (e = t.state.value);
-                var o = t.props.success;
+                var i = t.props.success;
                 if (e) {
-                  var i = e;
+                  var o = e;
                   try {
-                    if (i.indexOf("-") > 0) {
+                    if (o.indexOf("-") > 0) {
                       var n = s.parse(e, "YYYY-MM-DD");
-                      i = s.format(n, t.format);
+                      o = s.format(n, t.format);
                     }
                   } catch (e) {
-                    console.error("ERROR", e), (i = s.format(new Date(), l));
+                    console.error("ERROR", e), (o = s.format(new Date(), l));
                   }
-                  o(i);
-                } else o("");
+                  i(o);
+                } else i("");
               }),
               (t.onChange = function (e) {
-                var o = e.target.value;
-                t.setState({ value: o });
+                var i = e.target.value;
+                t.setState({ value: i });
               }),
               (t.onKeyPress = function (e) {
-                var o = t.props.cancel;
+                var i = t.props.cancel;
                 if (13 === e.keyCode) {
-                  var i = s.format(new Date(), l),
-                    n = t.state.value || i;
+                  var o = s.format(new Date(), l),
+                    n = t.state.value || o;
                   t.setValueOnSuccess(n);
-                } else 27 === e.keyCode && o();
+                } else 27 === e.keyCode && i();
               }),
               (t.onBlur = function () {
                 t.setValueOnSuccess();
@@ -2488,17 +3587,17 @@
             (t.prototype.render = function () {
               var e = this,
                 t = this.props.cell,
-                o = s.parse(t.getValue(), this.format),
-                i = s.format(new Date(), l);
+                i = s.parse(t.getValue(), this.format),
+                o = s.format(new Date(), l);
               try {
-                i = s.format(o, l);
+                o = s.format(i, l);
               } catch (e) {}
               return r.createElement("input", {
                 type: "date",
                 ref: function (t) {
                   return (e.ref = t);
                 },
-                defaultValue: i,
+                defaultValue: o,
                 onBlur: this.onBlur,
                 onChange: this.onChange,
                 onKeyUp: this.onKeyPress,
@@ -2508,7 +3607,7 @@
             t
           );
         })(r.Component);
-      t.default = function (e, t, o, i, n) {
+      t.default = function (e, t, i, o, n) {
         var s = document.createElement("div");
         return (
           (s.style.height = "100%"),
@@ -2516,8 +3615,8 @@
             r.createElement(u, {
               cell: e,
               onRendered: t,
-              success: o,
-              cancel: i,
+              success: i,
+              cancel: o,
               editorParams: n,
             }),
             s,
@@ -2536,31 +3635,31 @@
           t.format =
           t.assign =
             void 0);
-      var o =
+      var i =
           /d{1,4}|M{1,4}|YY(?:YY)?|S{1,3}|Do|ZZ|Z|([HhMsDm])\1?|[aA]|"[^"]*"|'[^']*'/g,
-        i = "[1-9]\\d?",
+        o = "[1-9]\\d?",
         n = "\\d\\d",
         r = "[^\\s]+",
         a = /\[([^]*?)\]/gm;
       function s(e, t) {
-        for (var o = [], i = 0, n = e.length; i < n; i++)
-          o.push(e[i].substr(0, t));
-        return o;
+        for (var i = [], o = 0, n = e.length; o < n; o++)
+          i.push(e[o].substr(0, t));
+        return i;
       }
       var l = function (e) {
-        return function (t, o) {
-          var i = o[e].map(function (e) {
+        return function (t, i) {
+          var o = i[e].map(function (e) {
               return e.toLowerCase();
             }),
-            n = i.indexOf(t.toLowerCase());
+            n = o.indexOf(t.toLowerCase());
           return n > -1 ? n : null;
         };
       };
       function c(e) {
-        for (var t = [], o = 1; o < arguments.length; o++)
-          t[o - 1] = arguments[o];
-        for (var i = 0, n = t; i < n.length; i++) {
-          var r = n[i];
+        for (var t = [], i = 1; i < arguments.length; i++)
+          t[i - 1] = arguments[i];
+        for (var o = 0, n = t; o < n.length; o++) {
+          var r = n[o];
           for (var a in r) e[a] = r[a];
         }
         return e;
@@ -2720,39 +3819,39 @@
         y = function (e) {
           return +e - 1;
         },
-        w = [null, i],
+        w = [null, o],
         E = [null, r],
         C = [
           "isPm",
           r,
           function (e, t) {
-            var o = e.toLowerCase();
-            return o === t.amPm[0] ? 0 : o === t.amPm[1] ? 1 : null;
+            var i = e.toLowerCase();
+            return i === t.amPm[0] ? 0 : i === t.amPm[1] ? 1 : null;
           },
         ],
-        R = [
+        _ = [
           "timezoneOffset",
           "[^\\s]*?[\\+\\-]\\d\\d:?\\d\\d|[^\\s]*?Z?",
           function (e) {
             var t = (e + "").match(/([+-]|\d\d)/gi);
             if (t) {
-              var o = 60 * +t[1] + parseInt(t[2], 10);
-              return "+" === t[0] ? o : -o;
+              var i = 60 * +t[1] + parseInt(t[2], 10);
+              return "+" === t[0] ? i : -i;
             }
             return 0;
           },
         ],
-        x = {
-          D: ["day", i],
+        R = {
+          D: ["day", o],
           DD: ["day", n],
           Do: [
             "day",
-            i + r,
+            o + r,
             function (e) {
               return parseInt(e, 10);
             },
           ],
-          M: ["month", i, y],
+          M: ["month", o, y],
           MM: ["month", n, y],
           YY: [
             "year",
@@ -2762,13 +3861,13 @@
               return +("" + (+e > 68 ? t - 1 : t) + e);
             },
           ],
-          h: ["hour", i, void 0, "isPm"],
+          h: ["hour", o, void 0, "isPm"],
           hh: ["hour", n, void 0, "isPm"],
-          H: ["hour", i],
+          H: ["hour", o],
           HH: ["hour", n],
-          m: ["minute", i],
+          m: ["minute", o],
           mm: ["minute", n],
-          s: ["second", i],
+          s: ["second", o],
           ss: ["second", n],
           YYYY: ["year", "\\d{4}"],
           S: [
@@ -2794,10 +3893,10 @@
           MMMM: ["month", r, l("monthNames")],
           a: C,
           A: C,
-          ZZ: R,
-          Z: R,
+          ZZ: _,
+          Z: _,
         },
-        _ = {
+        x = {
           default: "ddd MMM DD YYYY HH:mm:ss",
           shortDate: "M/D/YY",
           mediumDate: "MMM D, YYYY",
@@ -2810,33 +3909,33 @@
           longTime: "HH:mm:ss.SSS",
         },
         M = function (e) {
-          return c(_, e);
+          return c(x, e);
         };
       t.setGlobalDateMasks = M;
-      var S = function (e, t, i) {
+      var S = function (e, t, o) {
         if (
-          (void 0 === t && (t = _.default),
-          void 0 === i && (i = {}),
+          (void 0 === t && (t = x.default),
+          void 0 === o && (o = {}),
           "number" == typeof e && (e = new Date(e)),
           "[object Date]" !== Object.prototype.toString.call(e) ||
             isNaN(e.getTime()))
         )
           throw new Error("Invalid Date pass to format");
         var n = [];
-        t = (t = _[t] || t).replace(a, function (e, t) {
+        t = (t = x[t] || t).replace(a, function (e, t) {
           return n.push(t), "@@@";
         });
-        var r = c(c({}, m), i);
-        return (t = t.replace(o, function (t) {
+        var r = c(c({}, m), o);
+        return (t = t.replace(i, function (t) {
           return v[t](e, r);
         })).replace(/@@@/g, function () {
           return n.shift();
         });
       };
-      function T(e, t, i) {
-        if ((void 0 === i && (i = {}), "string" != typeof t))
+      function k(e, t, o) {
+        if ((void 0 === o && (o = {}), "string" != typeof t))
           throw new Error("Invalid format in fecha parse");
-        if (((t = _[t] || t), e.length > 1e3)) return null;
+        if (((t = x[t] || t), e.length > 1e3)) return null;
         var n = {
             year: new Date().getFullYear(),
             month: 0,
@@ -2855,16 +3954,16 @@
           }),
           u = {},
           d = {};
-        (l = g(l).replace(o, function (e) {
-          var t = x[e],
-            o = t[0],
-            i = t[1],
+        (l = g(l).replace(i, function (e) {
+          var t = R[e],
+            i = t[0],
+            o = t[1],
             n = t[3];
-          if (u[o])
+          if (u[i])
             throw new Error(
-              "Invalid format. " + o + " specified twice in format",
+              "Invalid format. " + i + " specified twice in format",
             );
-          return (u[o] = !0), n && (d[n] = !0), r.push(t), "(" + i + ")";
+          return (u[i] = !0), n && (d[n] = !0), r.push(t), "(" + o + ")";
         })),
           Object.keys(d).forEach(function (e) {
             if (!u[e])
@@ -2877,7 +3976,7 @@
           }));
         var p = e.match(new RegExp(l, "i"));
         if (!p) return null;
-        for (var h = c(c({}, m), i), f = 1; f < p.length; f++) {
+        for (var h = c(c({}, m), o), f = 1; f < p.length; f++) {
           var b = r[f - 1],
             v = b[0],
             y = b[2],
@@ -2905,8 +4004,8 @@
               ["minute", "getMinutes"],
               ["second", "getSeconds"],
             ],
-            R = ((f = 0), C.length);
-          f < R;
+            _ = ((f = 0), C.length);
+          f < _;
           f++
         )
           if (u[C[f][0]] && n[C[f][0]] !== E[C[f][1]]()) return null;
@@ -2925,33 +4024,33 @@
             );
       }
       (t.format = S),
-        (t.parse = T),
+        (t.parse = k),
         (t.default = {
           format: S,
-          parse: T,
+          parse: k,
           defaultI18n: h,
           setGlobalDateI18n: f,
           setGlobalDateMasks: M,
         });
     },
-    10150: function (e, t, o) {
+    10150: function (e, t, i) {
       "use strict";
-      var i,
+      var o,
         n =
           (this && this.__extends) ||
-          ((i = function (e, t) {
+          ((o = function (e, t) {
             return (
-              (i =
+              (o =
                 Object.setPrototypeOf ||
                 ({ __proto__: [] } instanceof Array &&
                   function (e, t) {
                     e.__proto__ = t;
                   }) ||
                 function (e, t) {
-                  for (var o in t)
-                    Object.prototype.hasOwnProperty.call(t, o) && (e[o] = t[o]);
+                  for (var i in t)
+                    Object.prototype.hasOwnProperty.call(t, i) && (e[i] = t[i]);
                 }),
-              i(e, t)
+              o(e, t)
             );
           }),
           function (e, t) {
@@ -2961,20 +4060,20 @@
                   String(t) +
                   " is not a constructor or null",
               );
-            function o() {
+            function i() {
               this.constructor = e;
             }
-            i(e, t),
+            o(e, t),
               (e.prototype =
                 null === t
                   ? Object.create(t)
-                  : ((o.prototype = t.prototype), new o()));
+                  : ((i.prototype = t.prototype), new i()));
           });
       t.__esModule = !0;
-      var r = o(89526),
-        a = o(73961),
-        s = o(3073),
-        l = o(79416),
+      var r = i(89526),
+        a = i(73961),
+        s = i(3073),
+        l = i(79416),
         c = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
@@ -2983,33 +4082,33 @@
               (t.ref = null),
               (t.setValueOnSuccess = function (e) {
                 void 0 === e && (e = t.state.values);
-                var o = t.props,
-                  i = o.success;
-                o.cancel;
-                i(e);
+                var i = t.props,
+                  o = i.success;
+                i.cancel;
+                o(e);
               }),
               (t.handleDelete = function (e) {
-                var o = t.state.values.filter(function (t, o) {
-                  return o !== e;
+                var i = t.state.values.filter(function (t, i) {
+                  return i !== e;
                 });
-                t.setState({ values: o }, function () {
-                  t.setValueOnSuccess(o);
+                t.setState({ values: i }, function () {
+                  t.setValueOnSuccess(i);
                 });
               }),
               (t.handleAddition = function (e) {
-                var o = t.state.values;
+                var i = t.state.values;
                 e.name &&
-                  (o.push({ id: e.name, name: e.name }),
-                  t.setState({ values: o }, function () {
-                    t.setValueOnSuccess(o);
+                  (i.push({ id: e.name, name: e.name }),
+                  t.setState({ values: i }, function () {
+                    t.setValueOnSuccess(i);
                   }));
               }),
               (t.handleBlur = function () {
                 var e = t.props.cancel,
-                  o = t.ref.input.input.value;
-                if (o) {
-                  var i = s.clone(t.state.values);
-                  i.push({ id: o, name: o }), t.setValueOnSuccess(i);
+                  i = t.ref.input.input.value;
+                if (i) {
+                  var o = s.clone(t.state.values);
+                  o.push({ id: i, name: i }), t.setValueOnSuccess(o);
                 } else e();
                 var n = a.findDOMNode(t.ref);
                 n &&
@@ -3030,17 +4129,17 @@
                   (t.parentElement.parentElement.parentElement.style.overflow =
                     "inherit"),
                   t.querySelector("input").focus();
-                var o = (e.props.cell.getValue() || []).map(function (e) {
+                var i = (e.props.cell.getValue() || []).map(function (e) {
                   return "string" == typeof e ? { id: e, name: e } : e;
                 });
-                e.setState({ values: o });
+                e.setState({ values: i });
               });
             }),
             (t.prototype.render = function () {
               var e = this,
                 t = this.props.editorParams,
-                o = this.state.values,
-                i = t.values;
+                i = this.state.values,
+                o = t.values;
               return r.createElement(
                 "div",
                 null,
@@ -3049,8 +4148,8 @@
                     return (e.ref = t);
                   },
                   placeholder: "Select or Type",
-                  tags: o,
-                  suggestions: i,
+                  tags: i,
+                  suggestions: o,
                   allowNew: !0,
                   autoresize: !0,
                   autofocus: this.state.autofocus,
@@ -3064,7 +4163,7 @@
             t
           );
         })(r.Component);
-      t.default = function (e, t, o, i, n) {
+      t.default = function (e, t, i, o, n) {
         var s = document.createElement("div");
         return (
           (s.style.height = "100%"),
@@ -3072,8 +4171,8 @@
             r.createElement(c, {
               cell: e,
               onRendered: t,
-              success: o,
-              cancel: i,
+              success: i,
+              cancel: o,
               editorParams: n,
             }),
             s,
@@ -3082,26 +4181,26 @@
         );
       };
     },
-    73066: (e, t, o) => {
+    73066: (e, t, i) => {
       "use strict";
       t.__esModule = !0;
-      var i = o(89526),
-        n = o(73961);
-      t.default = function (e, t, o) {
+      var o = i(89526),
+        n = i(73961);
+      t.default = function (e, t, i) {
         var r = t.style || "",
           a = e.getValue() || [],
           s =
             a && a.length > 0 && "string" == typeof a[0]
-              ? i.createElement("span", null, a.join(", "))
-              : i.createElement("span", null);
+              ? o.createElement("span", null, a.join(", "))
+              : o.createElement("span", null);
         "PILL" === r &&
-          (s = i.createElement(
+          (s = o.createElement(
             "div",
             null,
             a.map(function (e) {
               return "string" == typeof e
-                ? i.createElement("span", { key: e }, e)
-                : i.createElement("span", { key: e.name }, e.name);
+                ? o.createElement("span", { key: e }, e)
+                : o.createElement("span", { key: e.name }, e.name);
             }),
           ));
         var l = (function () {
@@ -3117,22 +4216,22 @@
         );
       };
     },
-    20614: function (e, t, o) {
+    20614: function (e, t, i) {
       "use strict";
-      var i =
+      var o =
         (this && this.__createBinding) ||
         (Object.create
-          ? function (e, t, o, i) {
-              void 0 === i && (i = o),
-                Object.defineProperty(e, i, {
+          ? function (e, t, i, o) {
+              void 0 === o && (o = i),
+                Object.defineProperty(e, o, {
                   enumerable: !0,
                   get: function () {
-                    return t[o];
+                    return t[i];
                   },
                 });
             }
-          : function (e, t, o, i) {
-              void 0 === i && (i = o), (e[i] = t[o]);
+          : function (e, t, i, o) {
+              void 0 === o && (o = i), (e[o] = t[i]);
             });
       (t.__esModule = !0),
         (t.reactFormatter =
@@ -3140,14 +4239,14 @@
           t.React15Tabulator =
           t.ReactTabulator =
             void 0),
-        i(t, o(9667), "default", "ReactTabulator"),
-        i(t, o(78848), "default", "React15Tabulator"),
-        i(t, o(72576), "default", "ReactTabulatorExample"),
-        i(t, o(3073), "reactFormatter");
+        o(t, i(9667), "default", "ReactTabulator"),
+        o(t, i(78848), "default", "React15Tabulator"),
+        o(t, i(72576), "default", "ReactTabulatorExample"),
+        o(t, i(3073), "reactFormatter");
     },
-    79135: (e, t, o) => {
+    79135: (e, t, i) => {
       "use strict";
-      var i = o(89526),
+      var o = i(89526),
         n = {
           position: "absolute",
           width: 0,
@@ -3179,15 +4278,15 @@
             }),
             (t.prototype.componentDidUpdate = function (e) {
               var t = e.query,
-                o = e.placeholder;
-              (t === this.props.query && o === this.props.placeholder) ||
+                i = e.placeholder;
+              (t === this.props.query && i === this.props.placeholder) ||
                 this.updateInputWidth();
             }),
             (t.prototype.copyInputStyles = function () {
               var e = this,
                 t = window.getComputedStyle(this.input);
-              r.forEach(function (o) {
-                e.sizer.style[o] = t[o];
+              r.forEach(function (i) {
+                e.sizer.style[i] = t[i];
               });
             }),
             (t.prototype.updateInputWidth = function () {
@@ -3199,7 +4298,7 @@
             (t.prototype.render = function () {
               var e = this,
                 t = this.props,
-                o = t.inputAttributes,
+                i = t.inputAttributes,
                 r = t.inputEventHandlers,
                 a = t.query,
                 s = t.placeholder,
@@ -3207,12 +4306,12 @@
                 c = t.listboxId,
                 u = t.selectedIndex,
                 d = t.ariaLabel;
-              return i.createElement(
+              return o.createElement(
                 "div",
                 { className: this.props.classNames.searchInput },
-                i.createElement(
+                o.createElement(
                   "input",
-                  Object.assign({}, o, r, {
+                  Object.assign({}, i, r, {
                     ref: function (t) {
                       e.input = t;
                     },
@@ -3227,7 +4326,7 @@
                     style: { width: this.state.inputWidth },
                   }),
                 ),
-                i.createElement(
+                o.createElement(
                   "div",
                   {
                     ref: function (t) {
@@ -3241,16 +4340,16 @@
             }),
             t
           );
-        })(i.Component);
+        })(o.Component);
       e.exports = a;
     },
-    79416: (e, t, o) => {
+    79416: (e, t, i) => {
       "use strict";
-      var i = o(89526),
-        n = o(2652),
-        r = o(83604),
-        a = o(79135),
-        s = o(78762),
+      var o = i(89526),
+        n = i(2652),
+        r = i(83604),
+        a = i(79135),
+        s = i(78762),
         l = 13,
         c = 9,
         u = 8,
@@ -3285,7 +4384,7 @@
                 onInput: this.handleInput.bind(this),
                 onKeyDown: this.handleKeyDown.bind(this),
               }),
-              (this.container = i.createRef());
+              (this.container = o.createRef());
           }
           return (
             e && (t.__proto__ = e),
@@ -3301,41 +4400,41 @@
             }),
             (t.prototype.handleKeyDown = function (e) {
               var t = this.state,
-                o = t.query,
-                i = t.selectedIndex,
+                i = t.query,
+                o = t.selectedIndex,
                 n = this.props,
                 r = n.delimiters,
                 a = n.delimiterChars;
               (r.indexOf(e.keyCode) > -1 || a.indexOf(e.key) > -1) &&
-                ((o || i > -1) && e.preventDefault(), this.handleDelimiter()),
+                ((i || o > -1) && e.preventDefault(), this.handleDelimiter()),
                 e.keyCode === u &&
-                  0 === o.length &&
+                  0 === i.length &&
                   this.props.allowBackspace &&
                   this.deleteTag(this.props.tags.length - 1),
                 e.keyCode === d &&
                   (e.preventDefault(),
-                  i <= 0
+                  o <= 0
                     ? this.setState({
                         selectedIndex:
                           this.suggestions.state.options.length - 1,
                       })
-                    : this.setState({ selectedIndex: i - 1 })),
+                    : this.setState({ selectedIndex: o - 1 })),
                 e.keyCode === p &&
                   (e.preventDefault(),
                   this.setState({
                     selectedIndex:
-                      (i + 1) % this.suggestions.state.options.length,
+                      (o + 1) % this.suggestions.state.options.length,
                   }));
             }),
             (t.prototype.handleDelimiter = function () {
               var e = this.state,
                 t = e.query,
-                o = e.selectedIndex;
+                i = e.selectedIndex;
               if (t.length >= this.props.minQueryLength) {
-                var i = this.suggestions.state.options.findIndex(function (e) {
+                var o = this.suggestions.state.options.findIndex(function (e) {
                     return 0 === e.name.search(new RegExp("^" + t + "$", "i"));
                   }),
-                  n = -1 === o ? i : o;
+                  n = -1 === i ? o : i;
                 n > -1 && this.suggestions.state.options[n]
                   ? this.addTag(this.suggestions.state.options[n])
                   : this.props.allowNew && this.addTag({ name: t });
@@ -3355,12 +4454,12 @@
             }),
             (t.prototype.handleDeleteTag = function (e, t) {
               if (this.container.current) {
-                var o =
+                var i =
                     this.container.current.querySelectorAll("a,button,input"),
-                  i = Array.prototype.findIndex.call(o, function (e) {
+                  o = Array.prototype.findIndex.call(i, function (e) {
                     return e === t.currentTarget;
                   }),
-                  n = o[i - 1] || o[i + 1];
+                  n = i[o - 1] || i[o + 1];
                 n && n.focus();
               }
               this.deleteTag(e);
@@ -3381,9 +4480,9 @@
             (t.prototype.render = function () {
               var e = this,
                 t = "ReactTags-listbox",
-                o = this.props.tagComponent || r,
+                i = this.props.tagComponent || r,
                 n = this.props.tags.map(function (t, n) {
-                  return i.createElement(o, {
+                  return o.createElement(i, {
                     key: n,
                     tag: t,
                     classNames: e.state.classNames,
@@ -3396,14 +4495,14 @@
                 c = [this.state.classNames.root];
               return (
                 this.state.focused && c.push(this.state.classNames.rootFocused),
-                i.createElement(
+                o.createElement(
                   "div",
                   {
                     ref: this.container,
                     className: c.join(" "),
                     onClick: this.handleClick.bind(this),
                   },
-                  i.createElement(
+                  o.createElement(
                     "div",
                     {
                       className: this.state.classNames.selected,
@@ -3412,10 +4511,10 @@
                     },
                     n,
                   ),
-                  i.createElement(
+                  o.createElement(
                     "div",
                     { className: this.state.classNames.search },
-                    i.createElement(
+                    o.createElement(
                       a,
                       Object.assign({}, this.state, {
                         inputAttributes: this.props.inputAttributes,
@@ -3431,7 +4530,7 @@
                         ariaLabel: this.props.ariaLabel,
                       }),
                     ),
-                    i.createElement(
+                    o.createElement(
                       s,
                       Object.assign({}, this.state, {
                         ref: function (t) {
@@ -3452,7 +4551,7 @@
             }),
             t
           );
-        })(i.Component);
+        })(o.Component);
       (m.defaultProps = {
         tags: [],
         placeholder: "Add new tag",
@@ -3501,31 +4600,31 @@
         }),
         (e.exports = m);
     },
-    78762: (e, t, o) => {
+    78762: (e, t, i) => {
       "use strict";
-      var i = o(89526);
+      var o = i(89526);
       function n(e) {
         return e.replace(/[-\\^$*+?.()|[\]{}]/g, "\\$&");
       }
       function r(e, t) {
         if (t) {
-          var o = RegExp(n(t), "gi");
-          e = e.replace(o, "<mark>$&</mark>");
+          var i = RegExp(n(t), "gi");
+          e = e.replace(i, "<mark>$&</mark>");
         }
         return { __html: e };
       }
-      function a(e, t, o, i, r) {
-        if (!i) {
+      function a(e, t, i, o, r) {
+        if (!o) {
           var a = new RegExp("(?:^|\\s)" + n(e), "i");
-          i = function (e) {
+          o = function (e) {
             return a.test(e.name);
           };
         }
         var s = t
           .filter(function (t) {
-            return i(t, e);
+            return o(t, e);
           })
-          .slice(0, o);
+          .slice(0, i);
         return (
           0 === s.length &&
             r &&
@@ -3568,14 +4667,14 @@
             var e = this;
             if (!this.props.expandable || !this.state.options.length)
               return null;
-            var t = this.state.options.map(function (t, o) {
-              var n = e.props.listboxId + "-" + o,
+            var t = this.state.options.map(function (t, i) {
+              var n = e.props.listboxId + "-" + i,
                 a = [];
               return (
-                e.props.selectedIndex === o &&
+                e.props.selectedIndex === i &&
                   a.push(e.props.classNames.suggestionActive),
                 t.disabled && a.push(e.props.classNames.suggestionDisabled),
-                i.createElement(
+                o.createElement(
                   "li",
                   {
                     id: n,
@@ -3587,7 +4686,7 @@
                   },
                   t.disableMarkIt
                     ? t.name
-                    : i.createElement("span", {
+                    : o.createElement("span", {
                         dangerouslySetInnerHTML: r(
                           t.name,
                           e.props.query,
@@ -3597,10 +4696,10 @@
                 )
               );
             });
-            return i.createElement(
+            return o.createElement(
               "div",
               { className: this.props.classNames.suggestions },
-              i.createElement(
+              o.createElement(
                 "ul",
                 { role: "listbox", id: this.props.listboxId },
                 t,
@@ -3609,14 +4708,14 @@
           }),
           t
         );
-      })(i.Component);
+      })(o.Component);
       e.exports = s;
     },
-    83604: (e, t, o) => {
+    83604: (e, t, i) => {
       "use strict";
-      var i = o(89526);
+      var o = i(89526);
       e.exports = function (e) {
-        return i.createElement(
+        return o.createElement(
           "button",
           {
             type: "button",
@@ -3624,7 +4723,7 @@
             title: "Click to remove tag",
             onClick: e.onDelete,
           },
-          i.createElement(
+          o.createElement(
             "span",
             { className: e.classNames.selectedTagName },
             e.tag.name,
@@ -3634,7 +4733,7 @@
     },
     16894: (t, o, n) => {
       "use strict";
-      n.r(o), n.d(o, { default: () => oe });
+      n.r(o), n.d(o, { default: () => ie });
       var r =
         "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
           ? function (e) {
@@ -3654,12 +4753,12 @@
             if (null == this)
               throw new TypeError('"this" is null or not defined');
             var t = Object(this),
-              o = t.length >>> 0;
+              i = t.length >>> 0;
             if ("function" != typeof e)
               throw new TypeError("predicate must be a function");
-            for (var i = arguments[1], n = 0; n < o; ) {
+            for (var o = arguments[1], n = 0; n < i; ) {
               var r = t[n];
-              if (e.call(i, r, n, t)) return n;
+              if (e.call(o, r, n, t)) return n;
               n++;
             }
             return -1;
@@ -3671,12 +4770,12 @@
               if (null == this)
                 throw new TypeError('"this" is null or not defined');
               var t = Object(this),
-                o = t.length >>> 0;
+                i = t.length >>> 0;
               if ("function" != typeof e)
                 throw new TypeError("predicate must be a function");
-              for (var i = arguments[1], n = 0; n < o; ) {
+              for (var o = arguments[1], n = 0; n < i; ) {
                 var r = t[n];
-                if (e.call(i, r, n, t)) return r;
+                if (e.call(o, r, n, t)) return r;
                 n++;
               }
             },
@@ -3692,16 +4791,16 @@
             value: function (e, t) {
               if (null == this)
                 throw new TypeError('"this" is null or not defined');
-              var o = Object(this),
-                i = o.length >>> 0;
-              if (0 === i) return !1;
+              var i = Object(this),
+                o = i.length >>> 0;
+              if (0 === o) return !1;
               var n,
                 r,
                 a = 0 | t,
-                s = Math.max(a >= 0 ? a : i - Math.abs(a), 0);
-              for (; s < i; ) {
+                s = Math.max(a >= 0 ? a : o - Math.abs(a), 0);
+              for (; s < o; ) {
                 if (
-                  (n = o[s]) === (r = e) ||
+                  (n = i[s]) === (r = e) ||
                   ("number" == typeof n &&
                     "number" == typeof r &&
                     isNaN(n) &&
@@ -3720,13 +4819,13 @@
                 throw new TypeError(
                   "Cannot convert undefined or null to object",
                 );
-              for (var o = Object(e), i = 1; i < arguments.length; i++) {
-                var n = arguments[i];
+              for (var i = Object(e), o = 1; o < arguments.length; o++) {
+                var n = arguments[o];
                 if (null != n)
                   for (var r in n)
-                    Object.prototype.hasOwnProperty.call(n, r) && (o[r] = n[r]);
+                    Object.prototype.hasOwnProperty.call(n, r) && (i[r] = n[r]);
               }
-              return o;
+              return i;
             },
             writable: !0,
             configurable: !0,
@@ -3771,10 +4870,10 @@
         }),
         (a.prototype.scrollHorizontal = function (e) {
           var t = 0,
-            o = this.element.scrollWidth - this.table.element.clientWidth;
+            i = this.element.scrollWidth - this.table.element.clientWidth;
           (this.element.scrollLeft = e),
-            e > o
-              ? ((t = e - o), (this.element.style.marginLeft = -t + "px"))
+            e > i
+              ? ((t = e - i), (this.element.style.marginLeft = -t + "px"))
               : (this.element.style.marginLeft = 0),
             (this.scrollLeft = e),
             this.table.modExists("frozenColumns") &&
@@ -3782,8 +4881,8 @@
         }),
         (a.prototype.generateColumnsFromRowData = function (e) {
           var t,
-            o,
-            i = [],
+            i,
+            o = [],
             n = this.table.options.autoColumnsDefinitions;
           if (e && e.length) {
             for (var a in (t = e[0])) {
@@ -3791,87 +4890,87 @@
                 l = t[a];
               switch (void 0 === l ? "undefined" : r(l)) {
                 case "undefined":
-                  o = "string";
+                  i = "string";
                   break;
                 case "boolean":
-                  o = "boolean";
+                  i = "boolean";
                   break;
                 case "object":
-                  o = Array.isArray(l) ? "array" : "string";
+                  i = Array.isArray(l) ? "array" : "string";
                   break;
                 default:
-                  o =
+                  i =
                     isNaN(l) || "" === l
                       ? l.match(/((^[0-9]+[a-z]+)|(^[a-z]+[0-9]+))+$/i)
                         ? "alphanum"
                         : "string"
                       : "number";
               }
-              (s.sorter = o), i.push(s);
+              (s.sorter = i), o.push(s);
             }
             if (n)
               switch (void 0 === n ? "undefined" : r(n)) {
                 case "function":
-                  this.table.options.columns = n.call(this.table, i);
+                  this.table.options.columns = n.call(this.table, o);
                   break;
                 case "object":
                   Array.isArray(n)
-                    ? i.forEach(function (e) {
+                    ? o.forEach(function (e) {
                         var t = n.find(function (t) {
                           return t.field === e.field;
                         });
                         t && Object.assign(e, t);
                       })
-                    : i.forEach(function (e) {
+                    : o.forEach(function (e) {
                         n[e.field] && Object.assign(e, n[e.field]);
                       }),
-                    (this.table.options.columns = i);
+                    (this.table.options.columns = o);
               }
-            else this.table.options.columns = i;
+            else this.table.options.columns = o;
             this.setColumns(this.table.options.columns);
           }
         }),
         (a.prototype.setColumns = function (e, t) {
-          for (var o = this; o.headersElement.firstChild; )
-            o.headersElement.removeChild(o.headersElement.firstChild);
-          (o.columns = []),
-            (o.columnsByIndex = []),
-            (o.columnsByField = {}),
-            o.table.modExists("frozenColumns") &&
-              o.table.modules.frozenColumns.reset(),
+          for (var i = this; i.headersElement.firstChild; )
+            i.headersElement.removeChild(i.headersElement.firstChild);
+          (i.columns = []),
+            (i.columnsByIndex = []),
+            (i.columnsByField = {}),
+            i.table.modExists("frozenColumns") &&
+              i.table.modules.frozenColumns.reset(),
             e.forEach(function (e, t) {
-              o._addColumn(e);
+              i._addColumn(e);
             }),
-            o._reIndexColumns(),
-            o.table.options.responsiveLayout &&
-              o.table.modExists("responsiveLayout", !0) &&
-              o.table.modules.responsiveLayout.initialize(),
+            i._reIndexColumns(),
+            i.table.options.responsiveLayout &&
+              i.table.modExists("responsiveLayout", !0) &&
+              i.table.modules.responsiveLayout.initialize(),
             this.table.options.virtualDomHoz &&
               this.table.vdomHoz.reinitialize(!1, !0),
-            o.redraw(!0);
+            i.redraw(!0);
         }),
-        (a.prototype._addColumn = function (e, t, o) {
-          var i = new l(e, this),
-            n = i.getElement(),
-            r = o ? this.findColumnIndex(o) : o;
-          if (o && r > -1) {
-            var a = this.columns.indexOf(o.getTopColumn()),
-              s = o.getElement();
+        (a.prototype._addColumn = function (e, t, i) {
+          var o = new l(e, this),
+            n = o.getElement(),
+            r = i ? this.findColumnIndex(i) : i;
+          if (i && r > -1) {
+            var a = this.columns.indexOf(i.getTopColumn()),
+              s = i.getElement();
             t
-              ? (this.columns.splice(a, 0, i), s.parentNode.insertBefore(n, s))
-              : (this.columns.splice(a + 1, 0, i),
+              ? (this.columns.splice(a, 0, o), s.parentNode.insertBefore(n, s))
+              : (this.columns.splice(a + 1, 0, o),
                 s.parentNode.insertBefore(n, s.nextSibling));
           } else
             t
-              ? (this.columns.unshift(i),
+              ? (this.columns.unshift(o),
                 this.headersElement.insertBefore(
-                  i.getElement(),
+                  o.getElement(),
                   this.headersElement.firstChild,
                 ))
-              : (this.columns.push(i),
-                this.headersElement.appendChild(i.getElement())),
-              i.columnRendered();
-          return i;
+              : (this.columns.push(o),
+                this.headersElement.appendChild(o.getElement())),
+              o.columnRendered();
+          return o;
         }),
         (a.prototype.registerColumnField = function (e) {
           e.definition.field && (this.columnsByField[e.definition.field] = e);
@@ -3889,11 +4988,11 @@
           var e = this,
             t = 0;
           e.columns.forEach(function (e) {
-            var o;
-            e.clearVerticalAlign(), (o = e.getHeight()) > t && (t = o);
+            var i;
+            e.clearVerticalAlign(), (i = e.getHeight()) > t && (t = i);
           }),
-            e.columns.forEach(function (o) {
-              o.verticalAlign(e.table.options.columnHeaderVertAlign, t);
+            e.columns.forEach(function (i) {
+              i.verticalAlign(e.table.options.columnHeaderVertAlign, t);
             }),
             e.rowManager.adjustTableSize();
         }),
@@ -3916,12 +5015,12 @@
         }),
         (a.prototype.getColumnsByFieldRoot = function (e) {
           var t = this,
-            o = [];
+            i = [];
           return (
-            Object.keys(this.columnsByField).forEach(function (i) {
-              i.split(".")[0] === e && o.push(t.columnsByField[i]);
+            Object.keys(this.columnsByField).forEach(function (o) {
+              o.split(".")[0] === e && i.push(t.columnsByField[o]);
             }),
-            o
+            i
           );
         }),
         (a.prototype.getColumnByIndex = function (e) {
@@ -3946,15 +5045,15 @@
           return this.columnsByIndex;
         }),
         (a.prototype.traverse = function (e) {
-          this.columnsByIndex.forEach(function (t, o) {
-            e(t, o);
+          this.columnsByIndex.forEach(function (t, i) {
+            e(t, i);
           });
         }),
         (a.prototype.getDefinitions = function (e) {
           var t = [];
           return (
-            this.columnsByIndex.forEach(function (o) {
-              (!e || (e && o.visible)) && t.push(o.getDefinition());
+            this.columnsByIndex.forEach(function (i) {
+              (!e || (e && i.visible)) && t.push(i.getDefinition());
             }),
             t
           );
@@ -3986,8 +5085,8 @@
             e
           );
         }),
-        (a.prototype.moveColumn = function (e, t, o) {
-          this.moveColumnActual(e, t, o),
+        (a.prototype.moveColumn = function (e, t, i) {
+          this.moveColumnActual(e, t, i),
             this.table.options.responsiveLayout &&
               this.table.modExists("responsiveLayout", !0) &&
               this.table.modules.responsiveLayout.initialize(),
@@ -3996,15 +5095,15 @@
                 this.table.rowManager.activeRows,
               ),
             t.element.parentNode.insertBefore(e.element, t.element),
-            o && t.element.parentNode.insertBefore(t.element, e.element),
+            i && t.element.parentNode.insertBefore(t.element, e.element),
             this._verticalAlignHeaders(),
             this.table.rowManager.reinitialize();
         }),
-        (a.prototype.moveColumnActual = function (e, t, o) {
+        (a.prototype.moveColumnActual = function (e, t, i) {
           e.parent.isGroup
-            ? this._moveColumnInArray(e.parent.columns, e, t, o)
-            : this._moveColumnInArray(this.columns, e, t, o),
-            this._moveColumnInArray(this.columnsByIndex, e, t, o, !0),
+            ? this._moveColumnInArray(e.parent.columns, e, t, i)
+            : this._moveColumnInArray(this.columns, e, t, i),
+            this._moveColumnInArray(this.columnsByIndex, e, t, i, !0),
             this.table.options.responsiveLayout &&
               this.table.modExists("responsiveLayout", !0) &&
               this.table.modules.responsiveLayout.initialize(),
@@ -4021,14 +5120,14 @@
               this.table.modules.persistence.config.columns &&
               this.table.modules.persistence.save("columns");
         }),
-        (a.prototype._moveColumnInArray = function (e, t, o, i, n) {
+        (a.prototype._moveColumnInArray = function (e, t, i, o, n) {
           var r,
             a = this,
             s = e.indexOf(t),
             l = [];
           s > -1 &&
             (e.splice(s, 1),
-            (r = e.indexOf(o)) > -1 ? i && (r += 1) : (r = s),
+            (r = e.indexOf(i)) > -1 ? o && (r += 1) : (r = s),
             e.splice(r, 0, t),
             n &&
               (this.table.options.dataTree &&
@@ -4045,43 +5144,43 @@
                 }
               })));
         }),
-        (a.prototype.scrollToColumn = function (e, t, o) {
-          var i = this,
+        (a.prototype.scrollToColumn = function (e, t, i) {
+          var o = this,
             n = 0,
             r = 0,
             a = 0,
             s = e.getElement();
           return new Promise(function (l, c) {
             if (
-              (void 0 === t && (t = i.table.options.scrollToColumnPosition),
-              void 0 === o && (o = i.table.options.scrollToColumnIfVisible),
+              (void 0 === t && (t = o.table.options.scrollToColumnPosition),
+              void 0 === i && (i = o.table.options.scrollToColumnIfVisible),
               e.visible)
             ) {
               switch (t) {
                 case "middle":
                 case "center":
-                  a = -i.element.clientWidth / 2;
+                  a = -o.element.clientWidth / 2;
                   break;
                 case "right":
-                  a = s.clientWidth - i.headersElement.clientWidth;
+                  a = s.clientWidth - o.headersElement.clientWidth;
               }
               if (
-                !o &&
+                !i &&
                 (r = s.offsetLeft) > 0 &&
-                r + s.offsetWidth < i.element.clientWidth
+                r + s.offsetWidth < o.element.clientWidth
               )
                 return !1;
               (n = s.offsetLeft + a),
                 (n = Math.max(
                   Math.min(
                     n,
-                    i.table.rowManager.element.scrollWidth -
-                      i.table.rowManager.element.clientWidth,
+                    o.table.rowManager.element.scrollWidth -
+                      o.table.rowManager.element.clientWidth,
                   ),
                   0,
                 )),
-                i.table.rowManager.scrollHorizontal(n),
-                i.scrollHorizontal(n),
+                o.table.rowManager.scrollHorizontal(n),
+                o.scrollHorizontal(n),
                 l();
             } else
               console.warn("Scroll Error - Column not visible"),
@@ -4091,8 +5190,8 @@
         (a.prototype.generateCells = function (e) {
           var t = [];
           return (
-            this.columnsByIndex.forEach(function (o) {
-              t.push(o.generateCell(e));
+            this.columnsByIndex.forEach(function (i) {
+              t.push(i.generateCell(e));
             }),
             t
           );
@@ -4100,57 +5199,57 @@
         (a.prototype.getFlexBaseWidth = function () {
           var e = this,
             t = e.table.element.clientWidth,
-            o = 0;
+            i = 0;
           return (
             e.rowManager.element.scrollHeight >
               e.rowManager.element.clientHeight &&
               (t -=
                 e.rowManager.element.offsetWidth -
                 e.rowManager.element.clientWidth),
-            this.columnsByIndex.forEach(function (i) {
+            this.columnsByIndex.forEach(function (o) {
               var n, r, a;
-              i.visible &&
-                ((n = i.definition.width || 0),
+              o.visible &&
+                ((n = o.definition.width || 0),
                 (r =
-                  void 0 === i.minWidth
+                  void 0 === o.minWidth
                     ? e.table.options.columnMinWidth
-                    : parseInt(i.minWidth)),
+                    : parseInt(o.minWidth)),
                 (a =
                   "string" == typeof n
                     ? n.indexOf("%") > -1
                       ? (t / 100) * parseInt(n)
                       : parseInt(n)
                     : n),
-                (o += a > r ? a : r));
+                (i += a > r ? a : r));
             }),
-            o
+            i
           );
         }),
-        (a.prototype.addColumn = function (e, t, o) {
-          var i = this;
+        (a.prototype.addColumn = function (e, t, i) {
+          var o = this;
           return new Promise(function (n, r) {
-            var a = i._addColumn(e, t, o);
-            i._reIndexColumns(),
-              i.table.options.responsiveLayout &&
-                i.table.modExists("responsiveLayout", !0) &&
-                i.table.modules.responsiveLayout.initialize(),
-              i.table.modExists("columnCalcs") &&
-                i.table.modules.columnCalcs.recalc(
-                  i.table.rowManager.activeRows,
+            var a = o._addColumn(e, t, i);
+            o._reIndexColumns(),
+              o.table.options.responsiveLayout &&
+                o.table.modExists("responsiveLayout", !0) &&
+                o.table.modules.responsiveLayout.initialize(),
+              o.table.modExists("columnCalcs") &&
+                o.table.modules.columnCalcs.recalc(
+                  o.table.rowManager.activeRows,
                 ),
-              i.redraw(!0),
-              "fitColumns" != i.table.modules.layout.getMode() &&
+              o.redraw(!0),
+              "fitColumns" != o.table.modules.layout.getMode() &&
                 a.reinitializeWidth(),
-              i._verticalAlignHeaders(),
-              i.table.rowManager.reinitialize(),
-              i.table.options.virtualDomHoz && i.table.vdomHoz.reinitialize(),
+              o._verticalAlignHeaders(),
+              o.table.rowManager.reinitialize(),
+              o.table.options.virtualDomHoz && o.table.vdomHoz.reinitialize(),
               n(a);
           });
         }),
         (a.prototype.deregisterColumn = function (e) {
           var t,
-            o = e.getField();
-          o && delete this.columnsByField[o],
+            i = e.getField();
+          i && delete this.columnsByField[i],
             (t = this.columnsByIndex.indexOf(e)) > -1 &&
               this.columnsByIndex.splice(t, 1),
             (t = this.columns.indexOf(e)) > -1 && this.columns.splice(t, 1),
@@ -4289,10 +5388,10 @@
             );
         }),
         (s.prototype.move = function (e, t) {
-          var o = this._column.table.columnManager.findColumn(e);
-          o
-            ? this._column.table.columnManager.moveColumn(this._column, o, t)
-            : console.warn("Move Error - No matching column found:", o);
+          var i = this._column.table.columnManager.findColumn(e);
+          i
+            ? this._column.table.columnManager.moveColumn(this._column, i, t)
+            : console.warn("Move Error - No matching column found:", i);
         }),
         (s.prototype.getNextColumn = function () {
           var e = this._column.nextColumn();
@@ -4323,11 +5422,11 @@
         (s.prototype.validate = function () {
           return this._column.validate();
         });
-      var l = function e(t, o) {
-        var i = this;
-        (this.table = o.table),
+      var l = function e(t, i) {
+        var o = this;
+        (this.table = i.table),
           (this.definition = t),
-          (this.parent = o),
+          (this.parent = i),
           (this.type = "column"),
           (this.columns = []),
           (this.cells = []),
@@ -4373,12 +5472,12 @@
           this._mapDepricatedFunctionality(),
           t.columns
             ? ((this.isGroup = !0),
-              t.columns.forEach(function (t, o) {
-                var n = new e(t, i);
-                i.attachColumn(n);
+              t.columns.forEach(function (t, i) {
+                var n = new e(t, o);
+                o.attachColumn(n);
               }),
-              i.checkColumnVisibility())
-            : o.registerColumnField(this),
+              o.checkColumnVisibility())
+            : i.registerColumnField(this),
           t.rowHandle &&
             !1 !== this.table.options.movableRows &&
             this.table.modExists("moveRow") &&
@@ -4460,24 +5559,24 @@
         (l.prototype.setTooltip = function () {
           var e = this,
             t = e.definition,
-            o =
+            i =
               t.headerTooltip || !1 === t.tooltip
                 ? t.headerTooltip
                 : e.table.options.tooltipsHeader;
-          o
-            ? !0 === o
+          i
+            ? !0 === i
               ? t.field
                 ? e.table.modules.localize.bind(
                     "columns|" + t.field,
-                    function (o) {
-                      e.element.setAttribute("title", o || t.title);
+                    function (i) {
+                      e.element.setAttribute("title", i || t.title);
                     },
                   )
                 : e.element.setAttribute("title", t.title)
-              : ("function" == typeof o &&
-                  !1 === (o = o(e.getComponent())) &&
-                  (o = ""),
-                e.element.setAttribute("title", o))
+              : ("function" == typeof i &&
+                  !1 === (i = i(e.getComponent())) &&
+                  (i = ""),
+                e.element.setAttribute("title", i))
             : e.element.setAttribute("title", "");
         }),
         (l.prototype._buildHeader = function () {
@@ -4528,112 +5627,112 @@
         (l.prototype._bindEvents = function () {
           var e,
             t,
-            o,
-            i = this,
-            n = i.definition;
+            i,
+            o = this,
+            n = o.definition;
           "function" == typeof n.headerClick &&
-            i.element.addEventListener("click", function (e) {
-              n.headerClick(e, i.getComponent());
+            o.element.addEventListener("click", function (e) {
+              n.headerClick(e, o.getComponent());
             }),
             "function" == typeof n.headerDblClick &&
-              i.element.addEventListener("dblclick", function (e) {
-                n.headerDblClick(e, i.getComponent());
+              o.element.addEventListener("dblclick", function (e) {
+                n.headerDblClick(e, o.getComponent());
               }),
             "function" == typeof n.headerContext &&
-              i.element.addEventListener("contextmenu", function (e) {
-                n.headerContext(e, i.getComponent());
+              o.element.addEventListener("contextmenu", function (e) {
+                n.headerContext(e, o.getComponent());
               }),
             "function" == typeof n.headerTap &&
-              ((o = !1),
-              i.element.addEventListener(
+              ((i = !1),
+              o.element.addEventListener(
                 "touchstart",
                 function (e) {
-                  o = !0;
+                  i = !0;
                 },
                 { passive: !0 },
               ),
-              i.element.addEventListener("touchend", function (e) {
-                o && n.headerTap(e, i.getComponent()), (o = !1);
+              o.element.addEventListener("touchend", function (e) {
+                i && n.headerTap(e, o.getComponent()), (i = !1);
               })),
             "function" == typeof n.headerDblTap &&
               ((e = null),
-              i.element.addEventListener("touchend", function (t) {
+              o.element.addEventListener("touchend", function (t) {
                 e
                   ? (clearTimeout(e),
                     (e = null),
-                    n.headerDblTap(t, i.getComponent()))
+                    n.headerDblTap(t, o.getComponent()))
                   : (e = setTimeout(function () {
                       clearTimeout(e), (e = null);
                     }, 300));
               })),
             "function" == typeof n.headerTapHold &&
               ((t = null),
-              i.element.addEventListener(
+              o.element.addEventListener(
                 "touchstart",
                 function (e) {
                   clearTimeout(t),
                     (t = setTimeout(function () {
                       clearTimeout(t),
                         (t = null),
-                        (o = !1),
-                        n.headerTapHold(e, i.getComponent());
+                        (i = !1),
+                        n.headerTapHold(e, o.getComponent());
                     }, 1e3));
                 },
                 { passive: !0 },
               ),
-              i.element.addEventListener("touchend", function (e) {
+              o.element.addEventListener("touchend", function (e) {
                 clearTimeout(t), (t = null);
               })),
             "function" == typeof n.cellClick &&
-              (i.cellEvents.cellClick = n.cellClick),
+              (o.cellEvents.cellClick = n.cellClick),
             "function" == typeof n.cellDblClick &&
-              (i.cellEvents.cellDblClick = n.cellDblClick),
+              (o.cellEvents.cellDblClick = n.cellDblClick),
             "function" == typeof n.cellContext &&
-              (i.cellEvents.cellContext = n.cellContext),
+              (o.cellEvents.cellContext = n.cellContext),
             "function" == typeof n.cellMouseEnter &&
-              (i.cellEvents.cellMouseEnter = n.cellMouseEnter),
+              (o.cellEvents.cellMouseEnter = n.cellMouseEnter),
             "function" == typeof n.cellMouseLeave &&
-              (i.cellEvents.cellMouseLeave = n.cellMouseLeave),
+              (o.cellEvents.cellMouseLeave = n.cellMouseLeave),
             "function" == typeof n.cellMouseOver &&
-              (i.cellEvents.cellMouseOver = n.cellMouseOver),
+              (o.cellEvents.cellMouseOver = n.cellMouseOver),
             "function" == typeof n.cellMouseOut &&
-              (i.cellEvents.cellMouseOut = n.cellMouseOut),
+              (o.cellEvents.cellMouseOut = n.cellMouseOut),
             "function" == typeof n.cellMouseMove &&
-              (i.cellEvents.cellMouseMove = n.cellMouseMove),
+              (o.cellEvents.cellMouseMove = n.cellMouseMove),
             "function" == typeof n.cellTap &&
-              (i.cellEvents.cellTap = n.cellTap),
+              (o.cellEvents.cellTap = n.cellTap),
             "function" == typeof n.cellDblTap &&
-              (i.cellEvents.cellDblTap = n.cellDblTap),
+              (o.cellEvents.cellDblTap = n.cellDblTap),
             "function" == typeof n.cellTapHold &&
-              (i.cellEvents.cellTapHold = n.cellTapHold),
+              (o.cellEvents.cellTapHold = n.cellTapHold),
             "function" == typeof n.cellEdited &&
-              (i.cellEvents.cellEdited = n.cellEdited),
+              (o.cellEvents.cellEdited = n.cellEdited),
             "function" == typeof n.cellEditing &&
-              (i.cellEvents.cellEditing = n.cellEditing),
+              (o.cellEvents.cellEditing = n.cellEditing),
             "function" == typeof n.cellEditCancelled &&
-              (i.cellEvents.cellEditCancelled = n.cellEditCancelled);
+              (o.cellEvents.cellEditCancelled = n.cellEditCancelled);
         }),
         (l.prototype._buildColumnHeader = function () {
           var e = this,
             t = this.definition,
-            o = this.table;
-          (o.modExists("sort") &&
-            o.modules.sort.initializeColumn(this, this.titleHolderElement),
+            i = this.table;
+          (i.modExists("sort") &&
+            i.modules.sort.initializeColumn(this, this.titleHolderElement),
           (t.headerContextMenu || t.headerClickMenu || t.headerMenu) &&
-            o.modExists("menu") &&
-            o.modules.menu.initializeColumnHeader(this),
-          o.modExists("format") && o.modules.format.initializeColumn(this),
+            i.modExists("menu") &&
+            i.modules.menu.initializeColumnHeader(this),
+          i.modExists("format") && i.modules.format.initializeColumn(this),
           void 0 !== t.editor &&
-            o.modExists("edit") &&
-            o.modules.edit.initializeColumn(this),
+            i.modExists("edit") &&
+            i.modules.edit.initializeColumn(this),
           void 0 !== t.validator &&
-            o.modExists("validate") &&
-            o.modules.validate.initializeColumn(this),
-          o.modExists("mutator") && o.modules.mutator.initializeColumn(this),
-          o.modExists("accessor") && o.modules.accessor.initializeColumn(this),
-          r(o.options.responsiveLayout) &&
-            o.modExists("responsiveLayout") &&
-            o.modules.responsiveLayout.initializeColumn(this),
+            i.modExists("validate") &&
+            i.modules.validate.initializeColumn(this),
+          i.modExists("mutator") && i.modules.mutator.initializeColumn(this),
+          i.modExists("accessor") && i.modules.accessor.initializeColumn(this),
+          r(i.options.responsiveLayout) &&
+            i.modExists("responsiveLayout") &&
+            i.modules.responsiveLayout.initializeColumn(this),
           void 0 !== t.visible && (t.visible ? this.show(!0) : this.hide(!0)),
           t.cssClass) &&
             t.cssClass.split(" ").forEach(function (t) {
@@ -4685,9 +5784,9 @@
         (l.prototype._buildColumnHeaderTitle = function () {
           var e = this,
             t = e.definition,
-            o = e.table,
-            i = document.createElement("div");
-          if ((i.classList.add("tabulator-col-title"), t.editableTitle)) {
+            i = e.table,
+            o = document.createElement("div");
+          if ((o.classList.add("tabulator-col-title"), t.editableTitle)) {
             var n = document.createElement("input");
             n.classList.add("tabulator-title-editor"),
               n.addEventListener("click", function (e) {
@@ -4695,32 +5794,32 @@
               }),
               n.addEventListener("change", function () {
                 (t.title = n.value),
-                  o.options.columnTitleChanged.call(e.table, e.getComponent());
+                  i.options.columnTitleChanged.call(e.table, e.getComponent());
               }),
-              i.appendChild(n),
+              o.appendChild(n),
               t.field
-                ? o.modules.localize.bind("columns|" + t.field, function (e) {
+                ? i.modules.localize.bind("columns|" + t.field, function (e) {
                     n.value = e || t.title || "&nbsp;";
                   })
                 : (n.value = t.title || "&nbsp;");
           } else
             t.field
-              ? o.modules.localize.bind("columns|" + t.field, function (o) {
-                  e._formatColumnHeaderTitle(i, o || t.title || "&nbsp;");
+              ? i.modules.localize.bind("columns|" + t.field, function (i) {
+                  e._formatColumnHeaderTitle(o, i || t.title || "&nbsp;");
                 })
-              : e._formatColumnHeaderTitle(i, t.title || "&nbsp;");
-          return i;
+              : e._formatColumnHeaderTitle(o, t.title || "&nbsp;");
+          return o;
         }),
         (l.prototype._formatColumnHeaderTitle = function (e, t) {
-          var o,
-            i,
+          var i,
+            o,
             n,
             a,
             s,
             l = this;
           if (this.definition.titleFormatter && this.table.modExists("format"))
             switch (
-              ((o = this.table.modules.format.getFormatter(
+              ((i = this.table.modules.format.getFormatter(
                 this.definition.titleFormatter,
               )),
               (s = function (e) {
@@ -4739,17 +5838,17 @@
                 typeof (n = this.definition.titleFormatterParams || {})
                   ? n()
                   : n),
-              void 0 === (i = o.call(this.table.modules.format, a, n, s))
+              void 0 === (o = i.call(this.table.modules.format, a, n, s))
                 ? "undefined"
-                : r(i))
+                : r(o))
             ) {
               case "object":
-                i instanceof Node
-                  ? e.appendChild(i)
+                o instanceof Node
+                  ? e.appendChild(o)
                   : ((e.innerHTML = ""),
                     console.warn(
                       "Format Error - Title formatter has returned a type of object, the only valid formatter object return is an instance of Node, the formatter returned:",
-                      i,
+                      o,
                     ));
                 break;
               case "undefined":
@@ -4757,7 +5856,7 @@
                 e.innerHTML = "";
                 break;
               default:
-                e.innerHTML = i;
+                e.innerHTML = o;
             }
           else e.innerHTML = t;
         }),
@@ -4783,8 +5882,8 @@
         }),
         (l.prototype._getNestedData = function (e) {
           for (
-            var t, o = e, i = this.fieldStructure, n = i.length, r = 0;
-            r < n && ((t = o = o[i[r]]), o);
+            var t, i = e, o = this.fieldStructure, n = o.length, r = 0;
+            r < n && ((t = i = i[o[r]]), i);
             r++
           );
           return t;
@@ -4794,17 +5893,17 @@
         }),
         (l.prototype._setNestedData = function (e, t) {
           for (
-            var o = e, i = this.fieldStructure, n = i.length, r = 0;
+            var i = e, o = this.fieldStructure, n = o.length, r = 0;
             r < n;
             r++
           )
-            if (r == n - 1) o[i[r]] = t;
+            if (r == n - 1) i[o[r]] = t;
             else {
-              if (!o[i[r]]) {
+              if (!i[o[r]]) {
                 if (void 0 === t) break;
-                o[i[r]] = {};
+                i[o[r]] = {};
               }
-              o = o[i[r]];
+              i = i[o[r]];
             }
         }),
         (l.prototype.attachColumn = function (e) {
@@ -4816,13 +5915,13 @@
               );
         }),
         (l.prototype.verticalAlign = function (e, t) {
-          var o = this.parent.isGroup
+          var i = this.parent.isGroup
             ? this.parent.getGroupElement().clientHeight
             : t || this.parent.getHeadersElement().clientHeight;
-          (this.element.style.height = o + "px"),
+          (this.element.style.height = i + "px"),
             this.isGroup &&
               (this.groupElement.style.minHeight =
-                o - this.contentElement.offsetHeight + "px"),
+                i - this.contentElement.offsetHeight + "px"),
             this.isGroup ||
               "top" === e ||
               (this.element.style.paddingTop =
@@ -5052,7 +6151,7 @@
         }),
         (l.prototype.delete = function () {
           var e = this;
-          return new Promise(function (t, o) {
+          return new Promise(function (t, i) {
             e.isGroup &&
               e.columns.forEach(function (e) {
                 e.delete();
@@ -5060,7 +6159,7 @@
               e.table.modExists("edit") &&
                 e.table.modules.edit.currentCell.column === e &&
                 e.table.modules.edit.cancelEdit();
-            for (var i = e.cells.length, n = 0; n < i; n++) e.cells[0].delete();
+            for (var o = e.cells.length, n = 0; n < o; n++) e.cells[0].delete();
             e.element.parentNode && e.element.parentNode.removeChild(e.element),
               (e.element = !1),
               (e.contentElement = !1),
@@ -5125,20 +6224,20 @@
           var t = this.element.offsetWidth;
           (e.width && this.widthFixed) ||
             (e.cells.forEach(function (e) {
-              var o = e.getWidth();
-              o > t && (t = o);
+              var i = e.getWidth();
+              i > t && (t = i);
             }),
             t && e.setWidthActual(t + 1));
         }),
         (l.prototype.updateDefinition = function (e) {
           var t = this;
-          return new Promise(function (o, i) {
+          return new Promise(function (i, o) {
             var n;
             t.isGroup || t.parent.isGroup
               ? (console.warn(
                   "Column Update Error - The updateDefinition function is only available on ungrouped columns",
                 ),
-                i(
+                o(
                   "Column Update Error - The updateDefinition function is only available on columns, not column groups",
                 ))
               : ((n = Object.assign({}, t.getDefinition())),
@@ -5150,14 +6249,14 @@
                       t
                         .delete()
                         .then(function () {
-                          o(e.getComponent());
+                          i(e.getComponent());
                         })
                         .catch(function (e) {
-                          i(e);
+                          o(e);
                         });
                   })
                   .catch(function (e) {
-                    i(e);
+                    o(e);
                   }));
           });
         }),
@@ -5362,10 +6461,10 @@
             "virtual" === this.renderMode &&
               e.element.addEventListener("scroll", function () {
                 var t = e.element.scrollTop,
-                  o = e.scrollTop > t;
+                  i = e.scrollTop > t;
                 e.scrollTop != t
                   ? ((e.scrollTop = t),
-                    e.scrollVertical(o),
+                    e.scrollVertical(i),
                     "scroll" == e.table.options.ajaxProgressiveLoad &&
                       e.table.modules.ajax.nextPage(
                         e.element.scrollHeight - e.element.clientHeight - t,
@@ -5378,8 +6477,8 @@
           var t = this;
           return "object" != (void 0 === e ? "undefined" : r(e))
             ? null != e &&
-                (t.rows.find(function (o) {
-                  return o.data[t.table.options.index] == e;
+                (t.rows.find(function (i) {
+                  return i.data[t.table.options.index] == e;
                 }) ||
                   !1)
             : e instanceof p
@@ -5403,8 +6502,8 @@
         (c.prototype.getRowFromPosition = function (e, t) {
           return t ? this.activeRows[e] : this.rows[e];
         }),
-        (c.prototype.scrollToRow = function (e, t, o) {
-          var i,
+        (c.prototype.scrollToRow = function (e, t, i) {
+          var o,
             n = this,
             r = this.getDisplayRows().indexOf(e),
             a = e.getElement(),
@@ -5413,16 +6512,16 @@
             if (r > -1) {
               if (
                 (void 0 === t && (t = n.table.options.scrollToRowPosition),
-                void 0 === o && (o = n.table.options.scrollToRowIfVisible),
+                void 0 === i && (i = n.table.options.scrollToRowIfVisible),
                 "nearest" === t)
               )
                 switch (n.renderMode) {
                   case "classic":
-                    (i = g.prototype.helpers.elOffset(a).top),
+                    (o = g.prototype.helpers.elOffset(a).top),
                       (t =
-                        Math.abs(n.element.scrollTop - i) >
+                        Math.abs(n.element.scrollTop - o) >
                         Math.abs(
-                          n.element.scrollTop + n.element.clientHeight - i,
+                          n.element.scrollTop + n.element.clientHeight - o,
                         )
                           ? "bottom"
                           : "top");
@@ -5434,7 +6533,7 @@
                         : "top";
                 }
               if (
-                !o &&
+                !i &&
                 g.prototype.helpers.elVisible(a) &&
                 (s =
                   g.prototype.helpers.elOffset(a).top -
@@ -5482,27 +6581,27 @@
                 l("Scroll Error - Row not visible");
           });
         }),
-        (c.prototype.setData = function (e, t, o) {
-          var i = this,
+        (c.prototype.setData = function (e, t, i) {
+          var o = this,
             n = this;
           return new Promise(function (r, a) {
-            t && i.getDisplayRows().length
+            t && o.getDisplayRows().length
               ? n.table.options.pagination
                 ? n._setDataActual(e, !0)
-                : i.reRenderInPosition(function () {
+                : o.reRenderInPosition(function () {
                     n._setDataActual(e);
                   })
-              : (i.table.options.autoColumns &&
-                  o &&
-                  i.table.columnManager.generateColumnsFromRowData(e),
-                i.resetScroll(),
-                i._setDataActual(e)),
+              : (o.table.options.autoColumns &&
+                  i &&
+                  o.table.columnManager.generateColumnsFromRowData(e),
+                o.resetScroll(),
+                o._setDataActual(e)),
               r();
           });
         }),
         (c.prototype._setDataActual = function (e, t) {
-          var o = this;
-          o.table.options.dataLoading.call(this.table, e),
+          var i = this;
+          i.table.options.dataLoading.call(this.table, e),
             this._wipeElements(),
             this.table.options.history &&
               this.table.modExists("history") &&
@@ -5515,16 +6614,16 @@
                   this.table.modules.reactiveData.watchData(e),
                 e.forEach(function (e, t) {
                   if (e && "object" === (void 0 === e ? "undefined" : r(e))) {
-                    var i = new p(e, o);
-                    o.rows.push(i);
+                    var o = new p(e, i);
+                    i.rows.push(o);
                   } else
                     console.warn(
                       "Data Loading Warning - Invalid row data detected and ignored, expecting object but received:",
                       e,
                     );
                 }),
-                o.refreshActiveData(!1, !1, t),
-                o.table.options.dataLoaded.call(this.table, e))
+                i.refreshActiveData(!1, !1, t),
+                i.table.options.dataLoaded.call(this.table, e))
               : console.error(
                   "Data Loading Error - Unable to process data due to invalid data type \nExpecting: array \nReceived: ",
                   void 0 === e ? "undefined" : r(e),
@@ -5547,14 +6646,14 @@
             this.adjustTableSize();
         }),
         (c.prototype.deleteRow = function (e, t) {
-          var o = this.rows.indexOf(e),
-            i = this.activeRows.indexOf(e);
-          i > -1 && this.activeRows.splice(i, 1),
-            o > -1 && this.rows.splice(o, 1),
+          var i = this.rows.indexOf(e),
+            o = this.activeRows.indexOf(e);
+          o > -1 && this.activeRows.splice(o, 1),
+            i > -1 && this.rows.splice(i, 1),
             this.setActiveRows(this.activeRows),
             this.displayRowIterator(function (t) {
-              var o = t.indexOf(e);
-              o > -1 && t.splice(o, 1);
+              var i = t.indexOf(e);
+              i > -1 && t.splice(i, 1);
             }),
             t || this.reRenderInPosition(),
             this.regenerateRowNumbers(),
@@ -5569,42 +6668,42 @@
                 this.table.modExists("page") &&
                 this.refreshActiveData("page");
         }),
-        (c.prototype.addRow = function (e, t, o, i) {
-          var n = this.addRowActual(e, t, o, i);
+        (c.prototype.addRow = function (e, t, i, o) {
+          var n = this.addRowActual(e, t, i, o);
           return (
             this.table.options.history &&
               this.table.modExists("history") &&
               this.table.modules.history.action("rowAdd", n, {
                 data: e,
                 pos: t,
-                index: o,
+                index: i,
               }),
             n
           );
         }),
-        (c.prototype.addRows = function (e, t, o) {
-          var i = this,
+        (c.prototype.addRows = function (e, t, i) {
+          var o = this,
             n = this,
             r = [];
           return new Promise(function (a, s) {
-            (t = i.findAddRowPos(t)),
+            (t = o.findAddRowPos(t)),
               Array.isArray(e) || (e = [e]),
               e.length - 1,
-              ((void 0 === o && t) || (void 0 !== o && !t)) && e.reverse(),
-              e.forEach(function (e, i) {
-                var a = n.addRow(e, t, o, !0);
+              ((void 0 === i && t) || (void 0 !== i && !t)) && e.reverse(),
+              e.forEach(function (e, o) {
+                var a = n.addRow(e, t, i, !0);
                 r.push(a);
               }),
-              i.table.options.groupBy && i.table.modExists("groupRows")
-                ? i.table.modules.groupRows.updateGroupRows(!0)
-                : i.table.options.pagination && i.table.modExists("page")
-                ? i.refreshActiveData(!1, !1, !0)
-                : i.reRenderInPosition(),
-              i.table.modExists("columnCalcs") &&
-                i.table.modules.columnCalcs.recalc(
-                  i.table.rowManager.activeRows,
+              o.table.options.groupBy && o.table.modExists("groupRows")
+                ? o.table.modules.groupRows.updateGroupRows(!0)
+                : o.table.options.pagination && o.table.modExists("page")
+                ? o.refreshActiveData(!1, !1, !0)
+                : o.reRenderInPosition(),
+              o.table.modExists("columnCalcs") &&
+                o.table.modules.columnCalcs.recalc(
+                  o.table.rowManager.activeRows,
                 ),
-              i.regenerateRowNumbers(),
+              o.regenerateRowNumbers(),
               a(r);
           });
         }),
@@ -5616,48 +6715,48 @@
             e
           );
         }),
-        (c.prototype.addRowActual = function (e, t, o, i) {
+        (c.prototype.addRowActual = function (e, t, i, o) {
           var n,
             r,
             a = e instanceof p ? e : new p(e || {}, this),
             s = this.findAddRowPos(t),
             l = -1;
           if (
-            (!o &&
+            (!i &&
               this.table.options.pagination &&
               "page" == this.table.options.paginationAddRow &&
               ((r = this.getDisplayRows()),
               s
                 ? r.length
-                  ? (o = r[0])
+                  ? (i = r[0])
                   : this.activeRows.length &&
-                    ((o = this.activeRows[this.activeRows.length - 1]),
+                    ((i = this.activeRows[this.activeRows.length - 1]),
                     (s = !1))
                 : r.length &&
-                  ((o = r[r.length - 1]),
+                  ((i = r[r.length - 1]),
                   (s = !(r.length < this.table.modules.page.getPageSize())))),
-            void 0 !== o && (o = this.findRow(o)),
+            void 0 !== i && (i = this.findRow(i)),
             this.table.options.groupBy && this.table.modExists("groupRows"))
           ) {
             this.table.modules.groupRows.assignRowToGroup(a);
             var c = a.getGroup().rows;
             c.length > 1 &&
-              (!o || (o && -1 == c.indexOf(o))
+              (!i || (i && -1 == c.indexOf(i))
                 ? s
                   ? c[0] !== a &&
-                    ((o = c[0]),
-                    this._moveRowInArray(a.getGroup().rows, a, o, !s))
+                    ((i = c[0]),
+                    this._moveRowInArray(a.getGroup().rows, a, i, !s))
                   : c[c.length - 1] !== a &&
-                    ((o = c[c.length - 1]),
-                    this._moveRowInArray(a.getGroup().rows, a, o, !s))
-                : this._moveRowInArray(a.getGroup().rows, a, o, !s));
+                    ((i = c[c.length - 1]),
+                    this._moveRowInArray(a.getGroup().rows, a, i, !s))
+                : this._moveRowInArray(a.getGroup().rows, a, i, !s));
           }
           return (
-            o && (l = this.rows.indexOf(o)),
-            o && l > -1
-              ? ((n = this.activeRows.indexOf(o)),
+            i && (l = this.rows.indexOf(i)),
+            i && l > -1
+              ? ((n = this.activeRows.indexOf(i)),
                 this.displayRowIterator(function (e) {
-                  var t = e.indexOf(o);
+                  var t = e.indexOf(i);
                   t > -1 && e.splice(s ? t : t + 1, 0, a);
                 }),
                 n > -1 && this.activeRows.splice(s ? n : n + 1, 0, a),
@@ -5677,51 +6776,51 @@
             this.table.options.rowAdded.call(this.table, a.getComponent()),
             this.table.options.dataChanged &&
               this.table.options.dataChanged.call(this.table, this.getData()),
-            i || this.reRenderInPosition(),
+            o || this.reRenderInPosition(),
             a
           );
         }),
-        (c.prototype.moveRow = function (e, t, o) {
+        (c.prototype.moveRow = function (e, t, i) {
           this.table.options.history &&
             this.table.modExists("history") &&
             this.table.modules.history.action("rowMove", e, {
               posFrom: this.getRowPosition(e),
               posTo: this.getRowPosition(t),
               to: t,
-              after: o,
+              after: i,
             }),
-            this.moveRowActual(e, t, o),
+            this.moveRowActual(e, t, i),
             this.regenerateRowNumbers(),
             this.table.options.rowMoved.call(this.table, e.getComponent());
         }),
-        (c.prototype.moveRowActual = function (e, t, o) {
-          var i = this;
+        (c.prototype.moveRowActual = function (e, t, i) {
+          var o = this;
           if (
-            (this._moveRowInArray(this.rows, e, t, o),
-            this._moveRowInArray(this.activeRows, e, t, o),
+            (this._moveRowInArray(this.rows, e, t, i),
+            this._moveRowInArray(this.activeRows, e, t, i),
             this.displayRowIterator(function (n) {
-              i._moveRowInArray(n, e, t, o);
+              o._moveRowInArray(n, e, t, i);
             }),
             this.table.options.groupBy && this.table.modExists("groupRows"))
           ) {
-            !o &&
+            !i &&
               t instanceof B &&
               (t = this.table.rowManager.prevDisplayRow(e) || t);
             var n = t.getGroup(),
               r = e.getGroup();
             n === r
-              ? this._moveRowInArray(n.rows, e, t, o)
-              : (r && r.removeRow(e), n.insertRow(e, t, o));
+              ? this._moveRowInArray(n.rows, e, t, i)
+              : (r && r.removeRow(e), n.insertRow(e, t, i));
           }
         }),
-        (c.prototype._moveRowInArray = function (e, t, o, i) {
+        (c.prototype._moveRowInArray = function (e, t, i, o) {
           var n, r, a;
           if (
-            t !== o &&
+            t !== i &&
             ((n = e.indexOf(t)) > -1 &&
               (e.splice(n, 1),
-              (r = e.indexOf(o)) > -1
-                ? i
+              (r = e.indexOf(i)) > -1
+                ? o
                   ? e.splice(r + 1, 0, t)
                   : e.splice(r, 0, t)
                 : e.splice(n, 0, t)),
@@ -5743,38 +6842,38 @@
           return t > -1 && t;
         }),
         (c.prototype.nextDisplayRow = function (e, t) {
-          var o = this.getDisplayRowIndex(e),
-            i = !1;
+          var i = this.getDisplayRowIndex(e),
+            o = !1;
           return (
-            !1 !== o &&
-              o < this.displayRowsCount - 1 &&
-              (i = this.getDisplayRows()[o + 1]),
-            !i || (i instanceof p && "row" == i.type)
-              ? i
-              : this.nextDisplayRow(i, t)
+            !1 !== i &&
+              i < this.displayRowsCount - 1 &&
+              (o = this.getDisplayRows()[i + 1]),
+            !o || (o instanceof p && "row" == o.type)
+              ? o
+              : this.nextDisplayRow(o, t)
           );
         }),
         (c.prototype.prevDisplayRow = function (e, t) {
-          var o = this.getDisplayRowIndex(e),
-            i = !1;
+          var i = this.getDisplayRowIndex(e),
+            o = !1;
           return (
-            o && (i = this.getDisplayRows()[o - 1]),
-            !t || !i || (i instanceof p && "row" == i.type)
-              ? i
-              : this.prevDisplayRow(i, t)
+            i && (o = this.getDisplayRows()[i - 1]),
+            !t || !o || (o instanceof p && "row" == o.type)
+              ? o
+              : this.prevDisplayRow(o, t)
           );
         }),
         (c.prototype.findRowIndex = function (e, t) {
-          var o;
-          return !!((e = this.findRow(e)) && (o = t.indexOf(e)) > -1) && o;
+          var i;
+          return !!((e = this.findRow(e)) && (i = t.indexOf(e)) > -1) && i;
         }),
         (c.prototype.getData = function (e, t) {
-          var o = [];
+          var i = [];
           return (
             this.getRows(e).forEach(function (e) {
-              "row" == e.type && o.push(e.getData(t || "data"));
+              "row" == e.type && i.push(e.getData(t || "data"));
             }),
-            o
+            i
           );
         }),
         (c.prototype.getComponents = function (e) {
@@ -5792,22 +6891,22 @@
         (c.prototype._genRemoteRequest = function () {
           var e = this,
             t = this.table,
-            o = t.options,
-            i = {};
+            i = t.options,
+            o = {};
           if (t.modExists("page")) {
-            if (o.ajaxSorting) {
+            if (i.ajaxSorting) {
               var n = this.table.modules.sort.getSort();
               n.forEach(function (e) {
                 delete e.column;
               }),
-                (i[this.table.modules.page.paginationDataSentNames.sorters] =
+                (o[this.table.modules.page.paginationDataSentNames.sorters] =
                   n);
             }
-            if (o.ajaxFiltering) {
+            if (i.ajaxFiltering) {
               var r = this.table.modules.filter.getFilters(!0, !0);
-              i[this.table.modules.page.paginationDataSentNames.filters] = r;
+              o[this.table.modules.page.paginationDataSentNames.filters] = r;
             }
-            this.table.modules.ajax.setParams(i, !0);
+            this.table.modules.ajax.setParams(o, !0);
           }
           t.modules.ajax
             .sendRequest()
@@ -5819,7 +6918,7 @@
         (c.prototype.filterRefresh = function () {
           var e = this.table,
             t = e.options,
-            o = this.scrollLeft;
+            i = this.scrollLeft;
           t.ajaxFiltering
             ? "remote" == t.pagination && e.modExists("page")
               ? (e.modules.page.reset(!0),
@@ -5834,28 +6933,28 @@
                   .catch(function () {})
               : this._genRemoteRequest()
             : this.refreshActiveData("filter"),
-            this.scrollHorizontal(o);
+            this.scrollHorizontal(i);
         }),
         (c.prototype.sorterRefresh = function (e) {
           var t = this.table,
-            o = this.table.options,
-            i = this.scrollLeft;
-          o.ajaxSorting
-            ? ("remote" == o.pagination || o.progressiveLoad) &&
+            i = this.table.options,
+            o = this.scrollLeft;
+          i.ajaxSorting
+            ? ("remote" == i.pagination || i.progressiveLoad) &&
               t.modExists("page")
               ? (t.modules.page.reset(!0),
                 t.modules.page
                   .setPage(1)
                   .then(function () {})
                   .catch(function () {}))
-              : o.ajaxProgressiveLoad
+              : i.ajaxProgressiveLoad
               ? t.modules.ajax
                   .loadData()
                   .then(function () {})
                   .catch(function () {})
               : this._genRemoteRequest()
             : this.refreshActiveData(e ? "filter" : "sort"),
-            this.scrollHorizontal(i);
+            this.scrollHorizontal(o);
         }),
         (c.prototype.scrollHorizontal = function (e) {
           (this.scrollLeft = e),
@@ -5865,8 +6964,8 @@
             this.table.modExists("columnCalcs") &&
               this.table.modules.columnCalcs.scrollHorizontal(e);
         }),
-        (c.prototype.refreshActiveData = function (e, t, o) {
-          var i,
+        (c.prototype.refreshActiveData = function (e, t, i) {
+          var o,
             n = this,
             r = this.table,
             a = [
@@ -5885,7 +6984,7 @@
               (this.redrawBlockRestoreConfig = {
                 stage: e,
                 skipStage: t,
-                renderInPosition: o,
+                renderInPosition: i,
               });
           else {
             switch (
@@ -5920,14 +7019,14 @@
                       r.modules.frozenRows.setDisplayIndex(
                         this.getNextDisplayIndex(),
                       ),
-                    (i = r.modules.frozenRows.getDisplayIndex()),
+                    (o = r.modules.frozenRows.getDisplayIndex()),
                     !0 !==
-                      (i = n.setDisplayRows(
+                      (o = n.setDisplayRows(
                         r.modules.frozenRows.getRows(
-                          this.getDisplayRows(i - 1),
+                          this.getDisplayRows(o - 1),
                         ),
-                        i,
-                      )) && r.modules.frozenRows.setDisplayIndex(i));
+                        o,
+                      )) && r.modules.frozenRows.setDisplayIndex(o));
               case "group":
                 t
                   ? (t = !1)
@@ -5937,12 +7036,12 @@
                       r.modules.groupRows.setDisplayIndex(
                         this.getNextDisplayIndex(),
                       ),
-                    (i = r.modules.groupRows.getDisplayIndex()),
+                    (o = r.modules.groupRows.getDisplayIndex()),
                     !0 !==
-                      (i = n.setDisplayRows(
-                        r.modules.groupRows.getRows(this.getDisplayRows(i - 1)),
-                        i,
-                      )) && r.modules.groupRows.setDisplayIndex(i));
+                      (o = n.setDisplayRows(
+                        r.modules.groupRows.getRows(this.getDisplayRows(o - 1)),
+                        o,
+                      )) && r.modules.groupRows.setDisplayIndex(o));
               case "tree":
                 t
                   ? (t = !1)
@@ -5952,15 +7051,15 @@
                       r.modules.dataTree.setDisplayIndex(
                         this.getNextDisplayIndex(),
                       ),
-                    (i = r.modules.dataTree.getDisplayIndex()),
+                    (o = r.modules.dataTree.getDisplayIndex()),
                     !0 !==
-                      (i = n.setDisplayRows(
-                        r.modules.dataTree.getRows(this.getDisplayRows(i - 1)),
-                        i,
-                      )) && r.modules.dataTree.setDisplayIndex(i)),
+                      (o = n.setDisplayRows(
+                        r.modules.dataTree.getRows(this.getDisplayRows(o - 1)),
+                        o,
+                      )) && r.modules.dataTree.setDisplayIndex(o)),
                   r.options.pagination &&
                     r.modExists("page") &&
-                    !o &&
+                    !i &&
                     "local" == r.modules.page.getMode() &&
                     r.modules.page.reset();
               case "page":
@@ -5972,19 +7071,19 @@
                       r.modules.page.setDisplayIndex(
                         this.getNextDisplayIndex(),
                       ),
-                    (i = r.modules.page.getDisplayIndex()),
+                    (o = r.modules.page.getDisplayIndex()),
                     "local" == r.modules.page.getMode() &&
                       r.modules.page.setMaxRows(
-                        this.getDisplayRows(i - 1).length,
+                        this.getDisplayRows(o - 1).length,
                       ),
                     !0 !==
-                      (i = n.setDisplayRows(
-                        r.modules.page.getRows(this.getDisplayRows(i - 1)),
-                        i,
-                      )) && r.modules.page.setDisplayIndex(i));
+                      (o = n.setDisplayRows(
+                        r.modules.page.getRows(this.getDisplayRows(o - 1)),
+                        o,
+                      )) && r.modules.page.setDisplayIndex(o));
             }
             g.prototype.helpers.elVisible(n.element) &&
-              (o
+              (i
                 ? n.reRenderInPosition()
                 : ("all" === e &&
                     this.table.options.virtualDomHoz &&
@@ -6000,8 +7099,8 @@
           var e = this;
           this.rowNumColumn &&
             this.activeRows.forEach(function (t) {
-              var o = t.getCell(e.rowNumColumn);
-              o && o._generateContents();
+              var i = t.getCell(e.rowNumColumn);
+              i && i._generateContents();
             });
         }),
         (c.prototype.setActiveRows = function (e) {
@@ -6025,16 +7124,16 @@
           return this.displayRows.length;
         }),
         (c.prototype.setDisplayRows = function (e, t) {
-          var o = !0;
+          var i = !0;
           return (
             t && void 0 !== this.displayRows[t]
-              ? ((this.displayRows[t] = e), (o = !0))
+              ? ((this.displayRows[t] = e), (i = !0))
               : (this.displayRows.push(e),
-                (o = t = this.displayRows.length - 1)),
+                (i = t = this.displayRows.length - 1)),
             t == this.displayRows.length - 1 &&
               (this.displayRowsCount =
                 this.displayRows[this.displayRows.length - 1].length),
-            o
+            i
           );
         }),
         (c.prototype.getDisplayRows = function (e) {
@@ -6046,8 +7145,8 @@
         }),
         (c.prototype.getVisibleRows = function (e) {
           var t = this.element.scrollTop,
-            o = this.element.clientHeight + t,
-            i = !1,
+            i = this.element.clientHeight + t,
+            o = !1,
             n = 0,
             r = 0,
             a = this.getDisplayRows();
@@ -6055,12 +7154,12 @@
             this.getDisplayRows();
             for (var s = this.vDomTop; s <= this.vDomBottom; s++)
               if (a[s])
-                if (i) {
-                  if (!(o - a[s].getElement().offsetTop >= 0)) break;
+                if (o) {
+                  if (!(i - a[s].getElement().offsetTop >= 0)) break;
                   r = s;
                 } else if (t - a[s].getElement().offsetTop >= 0) n = s;
                 else {
-                  if (((i = !0), !(o - a[s].getElement().offsetTop >= 0)))
+                  if (((o = !0), !(i - a[s].getElement().offsetTop >= 0)))
                     break;
                   r = s;
                 }
@@ -6099,8 +7198,8 @@
             else {
               for (
                 var t = this.element.scrollTop,
-                  o = !1,
                   i = !1,
+                  o = !1,
                   n = this.scrollLeft,
                   r = this.getDisplayRows(),
                   a = this.vDomTop;
@@ -6109,14 +7208,14 @@
               )
                 if (r[a]) {
                   var s = t - r[a].getElement().offsetTop;
-                  if (!(!1 === i || Math.abs(s) < i)) break;
-                  (i = s), (o = a);
+                  if (!(!1 === o || Math.abs(s) < o)) break;
+                  (o = s), (i = a);
                 }
               e && e(),
                 this._virtualRenderFill(
-                  !1 === o ? this.displayRowsCount - 1 : o,
+                  !1 === i ? this.displayRowsCount - 1 : i,
                   !0,
-                  i || 0,
+                  o || 0,
                 ),
                 this.scrollHorizontal(n);
             }
@@ -6171,14 +7270,14 @@
         (c.prototype.checkClassicModeGroupHeaderWidth = function () {
           var e = this,
             t = this.tableElement,
-            o = !0;
-          e.getDisplayRows().forEach(function (i, n) {
-            e.styleRow(i, n),
-              t.appendChild(i.getElement()),
-              i.initialize(!0),
-              "group" !== i.type && (o = !1);
+            i = !0;
+          e.getDisplayRows().forEach(function (o, n) {
+            e.styleRow(o, n),
+              t.appendChild(o.getElement()),
+              o.initialize(!0),
+              "group" !== o.type && (i = !1);
           }),
-            (t.style.minWidth = o
+            (t.style.minWidth = i
               ? e.table.columnManager.getWidth() + "px"
               : "");
         }),
@@ -6214,50 +7313,50 @@
             (this.vDomBottomPad = 0);
         }),
         (c.prototype.styleRow = function (e, t) {
-          var o = e.getElement();
+          var i = e.getElement();
           t % 2
-            ? (o.classList.add("tabulator-row-even"),
-              o.classList.remove("tabulator-row-odd"))
-            : (o.classList.add("tabulator-row-odd"),
-              o.classList.remove("tabulator-row-even"));
+            ? (i.classList.add("tabulator-row-even"),
+              i.classList.remove("tabulator-row-odd"))
+            : (i.classList.add("tabulator-row-odd"),
+              i.classList.remove("tabulator-row-even"));
         }),
-        (c.prototype._virtualRenderFill = function (e, t, o) {
-          var i = this,
-            n = i.tableElement,
-            r = i.element,
+        (c.prototype._virtualRenderFill = function (e, t, i) {
+          var o = this,
+            n = o.tableElement,
+            r = o.element,
             a = 0,
             s = 0,
             l = 0,
             c = 0,
             u = !0,
-            d = i.getDisplayRows();
-          if (((o = o || 0), (e = e || 0))) {
+            d = o.getDisplayRows();
+          if (((i = i || 0), (e = e || 0))) {
             for (; n.firstChild; ) n.removeChild(n.firstChild);
-            var p = (i.displayRowsCount - e + 1) * i.vDomRowHeight;
-            p < i.height &&
-              (e -= Math.ceil((i.height - p) / i.vDomRowHeight)) < 0 &&
+            var p = (o.displayRowsCount - e + 1) * o.vDomRowHeight;
+            p < o.height &&
+              (e -= Math.ceil((o.height - p) / o.vDomRowHeight)) < 0 &&
               (e = 0),
               (e -= a =
                 Math.min(
                   Math.max(
-                    Math.floor(i.vDomWindowBuffer / i.vDomRowHeight),
-                    i.vDomWindowMinMarginRows,
+                    Math.floor(o.vDomWindowBuffer / o.vDomRowHeight),
+                    o.vDomWindowMinMarginRows,
                   ),
                   e,
                 ));
-          } else i._clearVirtualDom();
-          if (i.displayRowsCount && g.prototype.helpers.elVisible(i.element)) {
+          } else o._clearVirtualDom();
+          if (o.displayRowsCount && g.prototype.helpers.elVisible(o.element)) {
             for (
-              i.vDomTop = e, i.vDomBottom = e - 1;
-              (s <= i.height + i.vDomWindowBuffer ||
-                c < i.vDomWindowMinTotalRows) &&
-              i.vDomBottom < i.displayRowsCount - 1;
+              o.vDomTop = e, o.vDomBottom = e - 1;
+              (s <= o.height + o.vDomWindowBuffer ||
+                c < o.vDomWindowMinTotalRows) &&
+              o.vDomBottom < o.displayRowsCount - 1;
 
             ) {
               var h,
-                m = i.vDomBottom + 1,
+                m = o.vDomBottom + 1,
                 f = d[m];
-              i.styleRow(f, m),
+              o.styleRow(f, m),
                 n.appendChild(f.getElement()),
                 f.initialize(),
                 f.heightInitialized || f.normalizeHeight(!0),
@@ -6265,29 +7364,29 @@
                 c < a ? (l += h) : (s += h),
                 h > this.vDomWindowBuffer && (this.vDomWindowBuffer = 2 * h),
                 "group" !== f.type && (u = !1),
-                i.vDomBottom++,
+                o.vDomBottom++,
                 c++;
             }
             e
-              ? ((i.vDomTopPad = t
-                  ? i.vDomRowHeight * this.vDomTop + o
-                  : i.scrollTop - l),
-                (i.vDomBottomPad =
-                  i.vDomBottom == i.displayRowsCount - 1
+              ? ((o.vDomTopPad = t
+                  ? o.vDomRowHeight * this.vDomTop + i
+                  : o.scrollTop - l),
+                (o.vDomBottomPad =
+                  o.vDomBottom == o.displayRowsCount - 1
                     ? 0
-                    : Math.max(i.vDomScrollHeight - i.vDomTopPad - s - l, 0)))
+                    : Math.max(o.vDomScrollHeight - o.vDomTopPad - s - l, 0)))
               : ((this.vDomTopPad = 0),
-                (i.vDomRowHeight = Math.floor((s + l) / c)),
-                (i.vDomBottomPad =
-                  i.vDomRowHeight * (i.displayRowsCount - i.vDomBottom - 1)),
-                (i.vDomScrollHeight = l + s + i.vDomBottomPad - i.height)),
-              (n.style.paddingTop = i.vDomTopPad + "px"),
-              (n.style.paddingBottom = i.vDomBottomPad + "px"),
+                (o.vDomRowHeight = Math.floor((s + l) / c)),
+                (o.vDomBottomPad =
+                  o.vDomRowHeight * (o.displayRowsCount - o.vDomBottom - 1)),
+                (o.vDomScrollHeight = l + s + o.vDomBottomPad - o.height)),
+              (n.style.paddingTop = o.vDomTopPad + "px"),
+              (n.style.paddingBottom = o.vDomBottomPad + "px"),
               t &&
                 (this.scrollTop =
-                  i.vDomTopPad +
+                  o.vDomTopPad +
                   l +
-                  o -
+                  i -
                   (this.element.scrollWidth > this.element.clientWidth
                     ? this.element.offsetHeight - this.element.clientHeight
                     : 0)),
@@ -6303,21 +7402,21 @@
               (this.vDomScrollPosBottom = this.scrollTop),
               (r.scrollTop = this.scrollTop),
               (n.style.minWidth = u
-                ? i.table.columnManager.getWidth() + "px"
+                ? o.table.columnManager.getWidth() + "px"
                 : ""),
-              i.table.options.groupBy &&
-                "fitDataFill" != i.table.modules.layout.getMode() &&
-                i.displayRowsCount == i.table.modules.groupRows.countGroups() &&
-                (i.tableElement.style.minWidth =
-                  i.table.columnManager.getWidth());
+              o.table.options.groupBy &&
+                "fitDataFill" != o.table.modules.layout.getMode() &&
+                o.displayRowsCount == o.table.modules.groupRows.countGroups() &&
+                (o.tableElement.style.minWidth =
+                  o.table.columnManager.getWidth());
           } else this.renderEmptyScroll();
           this.fixedHeight || this.adjustTableSize();
         }),
         (c.prototype.scrollVertical = function (e) {
           var t = this.scrollTop - this.vDomScrollPosTop,
-            o = this.scrollTop - this.vDomScrollPosBottom,
-            i = 2 * this.vDomWindowBuffer;
-          if (-t > i || o > i) {
+            i = this.scrollTop - this.vDomScrollPosBottom,
+            o = 2 * this.vDomWindowBuffer;
+          if (-t > o || i > o) {
             var n = this.scrollLeft;
             this._virtualRenderFill(
               Math.floor(
@@ -6329,31 +7428,31 @@
           } else
             e
               ? (t < 0 && this._addTopRow(-t),
-                o < 0 &&
+                i < 0 &&
                   (this.vDomScrollHeight - this.scrollTop >
                   this.vDomWindowBuffer
-                    ? this._removeBottomRow(-o)
+                    ? this._removeBottomRow(-i)
                     : (this.vDomScrollPosBottom = this.scrollTop)))
               : (t >= 0 &&
                   (this.scrollTop > this.vDomWindowBuffer
                     ? this._removeTopRow(t)
                     : (this.vDomScrollPosTop = this.scrollTop)),
-                o >= 0 && this._addBottomRow(o));
+                i >= 0 && this._addBottomRow(i));
         }),
         (c.prototype._addTopRow = function (e) {
           var t =
               arguments.length > 1 && void 0 !== arguments[1]
                 ? arguments[1]
                 : 0,
-            o = this.tableElement,
-            i = this.getDisplayRows();
+            i = this.tableElement,
+            o = this.getDisplayRows();
           if (this.vDomTop) {
             var n = this.vDomTop - 1,
-              r = i[n],
+              r = o[n],
               a = r.getHeight() || this.vDomRowHeight;
             e >= a &&
               (this.styleRow(r, n),
-              o.insertBefore(r.getElement(), o.firstChild),
+              i.insertBefore(r.getElement(), i.firstChild),
               (r.initialized && r.heightInitialized) ||
                 (this.vDomTopNewRows.push(r),
                 r.heightInitialized || r.clearCellHeight()),
@@ -6361,7 +7460,7 @@
               (this.vDomTopPad -= a),
               this.vDomTopPad < 0 && (this.vDomTopPad = n * this.vDomRowHeight),
               n || (this.vDomTopPad = 0),
-              (o.style.paddingTop = this.vDomTopPad + "px"),
+              (i.style.paddingTop = this.vDomTopPad + "px"),
               (this.vDomScrollPosTop -= a),
               this.vDomTop--),
               (e = -(this.scrollTop - this.vDomScrollPosTop)),
@@ -6369,23 +7468,23 @@
                 (this.vDomWindowBuffer = 2 * r.getHeight()),
               t < this.vDomMaxRenderChain &&
               this.vDomTop &&
-              e >= (i[this.vDomTop - 1].getHeight() || this.vDomRowHeight)
+              e >= (o[this.vDomTop - 1].getHeight() || this.vDomRowHeight)
                 ? this._addTopRow(e, t + 1)
                 : this._quickNormalizeRowHeight(this.vDomTopNewRows);
           }
         }),
         (c.prototype._removeTopRow = function (e) {
           var t = this.tableElement,
-            o = this.getDisplayRows()[this.vDomTop],
-            i = o.getHeight() || this.vDomRowHeight;
-          if (e >= i) {
-            var n = o.getElement();
+            i = this.getDisplayRows()[this.vDomTop],
+            o = i.getHeight() || this.vDomRowHeight;
+          if (e >= o) {
+            var n = i.getElement();
             n.parentNode.removeChild(n),
-              (this.vDomTopPad += i),
+              (this.vDomTopPad += o),
               (t.style.paddingTop = this.vDomTopPad + "px"),
               (this.vDomScrollPosTop += this.vDomTop
-                ? i
-                : i + this.vDomWindowBuffer),
+                ? o
+                : o + this.vDomWindowBuffer),
               this.vDomTop++,
               (e = this.scrollTop - this.vDomScrollPosTop),
               this._removeTopRow(e);
@@ -6396,15 +7495,15 @@
               arguments.length > 1 && void 0 !== arguments[1]
                 ? arguments[1]
                 : 0,
-            o = this.tableElement,
-            i = this.getDisplayRows();
+            i = this.tableElement,
+            o = this.getDisplayRows();
           if (this.vDomBottom < this.displayRowsCount - 1) {
             var n = this.vDomBottom + 1,
-              r = i[n],
+              r = o[n],
               a = r.getHeight() || this.vDomRowHeight;
             e >= a &&
               (this.styleRow(r, n),
-              o.appendChild(r.getElement()),
+              i.appendChild(r.getElement()),
               (r.initialized && r.heightInitialized) ||
                 (this.vDomBottomNewRows.push(r),
                 r.heightInitialized || r.clearCellHeight()),
@@ -6412,7 +7511,7 @@
               (this.vDomBottomPad -= a),
               (this.vDomBottomPad < 0 || n == this.displayRowsCount - 1) &&
                 (this.vDomBottomPad = 0),
-              (o.style.paddingBottom = this.vDomBottomPad + "px"),
+              (i.style.paddingBottom = this.vDomBottomPad + "px"),
               (this.vDomScrollPosBottom += a),
               this.vDomBottom++),
               (e = this.scrollTop - this.vDomScrollPosBottom),
@@ -6420,22 +7519,22 @@
                 (this.vDomWindowBuffer = 2 * r.getHeight()),
               t < this.vDomMaxRenderChain &&
               this.vDomBottom < this.displayRowsCount - 1 &&
-              e >= (i[this.vDomBottom + 1].getHeight() || this.vDomRowHeight)
+              e >= (o[this.vDomBottom + 1].getHeight() || this.vDomRowHeight)
                 ? this._addBottomRow(e, t + 1)
                 : this._quickNormalizeRowHeight(this.vDomBottomNewRows);
           }
         }),
         (c.prototype._removeBottomRow = function (e) {
           var t = this.tableElement,
-            o = this.getDisplayRows()[this.vDomBottom],
-            i = o.getHeight() || this.vDomRowHeight;
-          if (e >= i) {
-            var n = o.getElement();
+            i = this.getDisplayRows()[this.vDomBottom],
+            o = i.getHeight() || this.vDomRowHeight;
+          if (e >= o) {
+            var n = i.getElement();
             n.parentNode && n.parentNode.removeChild(n),
-              (this.vDomBottomPad += i),
+              (this.vDomBottomPad += o),
               this.vDomBottomPad < 0 && (this.vDomBottomPad = 0),
               (t.style.paddingBottom = this.vDomBottomPad + "px"),
-              (this.vDomScrollPosBottom -= i),
+              (this.vDomScrollPosBottom -= o),
               this.vDomBottom--,
               (e = -(this.scrollTop - this.vDomScrollPosBottom)),
               this._removeBottomRow(e);
@@ -6459,7 +7558,7 @@
           var e,
             t = this.element.clientHeight;
           if ("virtual" === this.renderMode) {
-            var o = Math.floor(
+            var i = Math.floor(
               this.columnManager.getElement().getBoundingClientRect().height +
                 (this.table.footerManager &&
                 this.table.footerManager.active &&
@@ -6470,12 +7569,12 @@
                   : 0),
             );
             this.fixedHeight
-              ? ((this.element.style.minHeight = "calc(100% - " + o + "px)"),
-                (this.element.style.height = "calc(100% - " + o + "px)"),
-                (this.element.style.maxHeight = "calc(100% - " + o + "px)"))
+              ? ((this.element.style.minHeight = "calc(100% - " + i + "px)"),
+                (this.element.style.height = "calc(100% - " + i + "px)"),
+                (this.element.style.maxHeight = "calc(100% - " + i + "px)"))
               : ((this.element.style.height = ""),
                 (this.element.style.height =
-                  this.table.element.clientHeight - o + "px"),
+                  this.table.element.clientHeight - i + "px"),
                 (this.element.scrollTop = this.scrollTop)),
               (this.height = this.element.clientHeight),
               (this.vDomWindowBuffer =
@@ -6607,16 +7706,16 @@
         (u.prototype.dataChange = function () {
           var e,
             t,
-            o = !1,
-            i = 0,
+            i = !1,
+            o = 0,
             n = 0;
           if ("fitData" === this.table.options.layout) {
             if (
               (this.table.columnManager.columnsByIndex.forEach(function (e) {
-                !e.definition.width && e.visible && (o = !0);
+                !e.definition.width && e.visible && (i = !0);
               }),
-              o &&
-                o &&
+              i &&
+                i &&
                 this.table.rowManager.getDisplayRows().length &&
                 ((this.vDomScrollPosRight =
                   this.scrollLeft + this.holderEl.clientWidth + this.window),
@@ -6632,13 +7731,13 @@
                 if (
                   (t.appendChild(r.getElement()),
                   r.column.reinitializeWidth(),
-                  (i += r.column.getWidth()) > this.vDomScrollPosRight)
+                  (o += r.column.getWidth()) > this.vDomScrollPosRight)
                 )
                   break;
               }
               for (
                 t.parentNode.removeChild(t),
-                  this.fitDataColAvg = Math.floor(i / (n + 1));
+                  this.fitDataColAvg = Math.floor(o / (n + 1));
                 n < this.table.columnManager.columnsByIndex.length;
                 n++
               )
@@ -6657,8 +7756,8 @@
             this.columns[e].reinitializeWidth();
         }),
         (u.prototype.reinitialize = function (e, t) {
-          var o = this,
-            i = {
+          var i = this,
+            o = {
               cols: this.columns,
               leftCol: this.leftCol,
               rightCol: this.rightCol,
@@ -6673,37 +7772,37 @@
             this.table.columnManager.columnsByIndex.forEach(function (e) {
               var t = {};
               if (e.visible) {
-                var i = e.getWidth();
+                var o = e.getWidth();
                 (t.leftPos = n),
-                  (t.rightPos = n + i),
-                  n + i > o.vDomScrollPosLeft && n < o.vDomScrollPosRight
-                    ? (-1 == o.leftCol &&
-                        ((o.leftCol = o.columns.length), (o.vDomPadLeft = n)),
-                      (o.rightCol = o.columns.length))
-                    : -1 !== o.leftCol && (o.vDomPadRight += i),
-                  o.columns.push(e),
+                  (t.rightPos = n + o),
+                  n + o > i.vDomScrollPosLeft && n < i.vDomScrollPosRight
+                    ? (-1 == i.leftCol &&
+                        ((i.leftCol = i.columns.length), (i.vDomPadLeft = n)),
+                      (i.rightCol = i.columns.length))
+                    : -1 !== i.leftCol && (i.vDomPadRight += o),
+                  i.columns.push(e),
                   (e.modules.vdomHoz = t),
-                  (n += i);
+                  (n += o);
               }
             }),
               (this.element.style.paddingLeft = this.vDomPadLeft + "px"),
               (this.element.style.paddingRight = this.vDomPadRight + "px"),
               (this.initialized = !0),
-              t || (e && !this.reinitChanged(i)) || this.renitializeRows(),
+              t || (e && !this.reinitChanged(o)) || this.renitializeRows(),
               (this.holderEl.scrollLeft = this.scrollLeft);
           }
         }),
         (u.prototype.reinitChanged = function (e) {
           var t = this,
-            o = !0;
+            i = !0;
           return (
             e.cols.length !== this.columns.length ||
             e.leftCol !== this.leftCol ||
             e.rightCol !== this.rightCol ||
-            (e.cols.forEach(function (e, i) {
-              e !== t.columns[i] && (o = !1);
+            (e.cols.forEach(function (e, o) {
+              e !== t.columns[o] && (i = !1);
             }),
-            !o)
+            !i)
           );
         }),
         (u.prototype.renitializeRows = function () {
@@ -6721,29 +7820,29 @@
               ? (this.addColRight(), this.removeColLeft())
               : (this.addColLeft(), this.removeColRight());
         }),
-        (u.prototype.colPositionAdjust = function (e, t, o) {
-          for (var i = e; i < t; i++) {
-            var n = this.columns[i];
-            (n.modules.vdomHoz.leftPos -= o), (n.modules.vdomHoz.rightPos -= o);
+        (u.prototype.colPositionAdjust = function (e, t, i) {
+          for (var o = e; o < t; o++) {
+            var n = this.columns[o];
+            (n.modules.vdomHoz.leftPos -= i), (n.modules.vdomHoz.rightPos -= i);
           }
         }),
         (u.prototype.addColRight = function () {
           var e,
             t,
-            o = this.columns[this.rightCol + 1];
-          o &&
-            o.modules.vdomHoz.leftPos <= this.vDomScrollPosRight &&
+            i = this.columns[this.rightCol + 1];
+          i &&
+            i.modules.vdomHoz.leftPos <= this.vDomScrollPosRight &&
             (this.table.rowManager.getVisibleRows().forEach(function (e) {
               if ("group" !== e.type) {
-                var t = e.getCell(o);
+                var t = e.getCell(i);
                 e.getElement().appendChild(t.getElement()), t.cellRendered();
               }
             }),
             this.fitDataColAvg &&
-              (e = o.getWidth()) === this.fitDataColAvg &&
-              (o.reinitializeWidth(),
-              (t = e - o.getWidth()) &&
-                ((o.modules.vdomHoz.rightPos -= t),
+              (e = i.getWidth()) === this.fitDataColAvg &&
+              (i.reinitializeWidth(),
+              (t = e - i.getWidth()) &&
+                ((i.modules.vdomHoz.rightPos -= t),
                 this.colPositionAdjust(
                   this.rightCol + 1,
                   this.columns.length,
@@ -6752,7 +7851,7 @@
             this.rightCol++,
             this.rightCol >= this.columns.length - 1
               ? (this.vDomPadRight = 0)
-              : (this.vDomPadRight -= o.getWidth()),
+              : (this.vDomPadRight -= i.getWidth()),
             (this.element.style.paddingRight = this.vDomPadRight + "px"),
             this.addColRight());
         }),
@@ -6762,8 +7861,8 @@
             e.modules.vdomHoz.rightPos >= this.vDomScrollPosLeft &&
             (this.table.rowManager.getVisibleRows().forEach(function (t) {
               if ("group" !== t.type) {
-                var o = t.getCell(e);
-                t.getElement().prepend(o.getElement()), o.cellRendered();
+                var i = t.getCell(e);
+                t.getElement().prepend(i.getElement()), i.cellRendered();
               }
             }),
             this.leftCol
@@ -6781,8 +7880,8 @@
             (e.modules.vdomHoz.visible = !1),
             t.forEach(function (t) {
               if ("group" !== t.type) {
-                var o = t.getCell(e);
-                t.getElement().removeChild(o.getElement());
+                var i = t.getCell(e);
+                t.getElement().removeChild(i.getElement());
               }
             }),
             (this.vDomPadRight += e.getWidth()),
@@ -6796,8 +7895,8 @@
             e.modules.vdomHoz.rightPos < this.vDomScrollPosLeft &&
             (this.table.rowManager.getVisibleRows().forEach(function (t) {
               if ("group" !== t.type) {
-                var o = t.getCell(e);
-                t.getElement().removeChild(o.getElement());
+                var i = t.getCell(e);
+                t.getElement().removeChild(i.getElement());
               }
             }),
             (this.vDomPadLeft += e.getWidth()),
@@ -6812,10 +7911,10 @@
               rightCol: this.rightCol,
             };
             for (var t = this.leftCol; t <= this.rightCol; t++) {
-              var o = this.columns[t];
-              if (o && o.visible) {
-                var i = e.getCell(o);
-                e.getElement().appendChild(i.getElement()), i.cellRendered();
+              var i = this.columns[t];
+              if (i && i.visible) {
+                var o = e.getCell(i);
+                e.getElement().appendChild(o.getElement()), o.cellRendered();
               }
             }
           }
@@ -6828,8 +7927,8 @@
               e.modules.vdomHoz.leftCol !== this.leftCol ||
               e.modules.vdomHoz.rightCol !== this.rightCol)
           ) {
-            for (var o = e.getElement(); o.firstChild; )
-              o.removeChild(o.firstChild);
+            for (var i = e.getElement(); i.firstChild; )
+              i.removeChild(i.firstChild);
             this.initializeRow(e);
           }
         });
@@ -6936,10 +8035,10 @@
             this._row.table.modules.dataTree.getTreeChildren(this._row, !0)
           );
         }),
-        (d.prototype.addTreeChild = function (e, t, o) {
+        (d.prototype.addTreeChild = function (e, t, i) {
           return (
             !!this._row.table.modExists("dataTree", !0) &&
-            this._row.table.modules.dataTree.addTreeChildRow(this._row, e, t, o)
+            this._row.table.modules.dataTree.addTreeChildRow(this._row, e, t, i)
           );
         }),
         (d.prototype.reformat = function () {
@@ -6960,14 +8059,14 @@
           return e ? e.getComponent() : e;
         });
       var p = function (e, t) {
-        var o =
+        var i =
           arguments.length > 2 && void 0 !== arguments[2]
             ? arguments[2]
             : "row";
         (this.table = t.table),
           (this.parent = t),
           (this.data = {}),
-          (this.type = o),
+          (this.type = i),
           (this.element = !1),
           (this.modules = {}),
           (this.cells = []),
@@ -7001,95 +8100,95 @@
         (p.prototype.generateElement = function () {
           var e,
             t,
-            o,
-            i = this;
+            i,
+            o = this;
           this.createElement(),
-            !1 !== i.table.options.selectable &&
-              i.table.modExists("selectRow") &&
-              i.table.modules.selectRow.initializeRow(this),
-            !1 !== i.table.options.movableRows &&
-              i.table.modExists("moveRow") &&
-              i.table.modules.moveRow.initializeRow(this),
-            !1 !== i.table.options.dataTree &&
-              i.table.modExists("dataTree") &&
-              i.table.modules.dataTree.initializeRow(this),
-            "collapse" === i.table.options.responsiveLayout &&
-              i.table.modExists("responsiveLayout") &&
-              i.table.modules.responsiveLayout.initializeRow(this),
-            (i.table.options.rowContextMenu || i.table.options.rowClickMenu) &&
+            !1 !== o.table.options.selectable &&
+              o.table.modExists("selectRow") &&
+              o.table.modules.selectRow.initializeRow(this),
+            !1 !== o.table.options.movableRows &&
+              o.table.modExists("moveRow") &&
+              o.table.modules.moveRow.initializeRow(this),
+            !1 !== o.table.options.dataTree &&
+              o.table.modExists("dataTree") &&
+              o.table.modules.dataTree.initializeRow(this),
+            "collapse" === o.table.options.responsiveLayout &&
+              o.table.modExists("responsiveLayout") &&
+              o.table.modules.responsiveLayout.initializeRow(this),
+            (o.table.options.rowContextMenu || o.table.options.rowClickMenu) &&
               this.table.modExists("menu") &&
-              i.table.modules.menu.initializeRow(this),
-            i.table.options.rowClick &&
-              i.element.addEventListener("click", function (e) {
-                i.table.options.rowClick(e, i.getComponent());
+              o.table.modules.menu.initializeRow(this),
+            o.table.options.rowClick &&
+              o.element.addEventListener("click", function (e) {
+                o.table.options.rowClick(e, o.getComponent());
               }),
-            i.table.options.rowDblClick &&
-              i.element.addEventListener("dblclick", function (e) {
-                i.table.options.rowDblClick(e, i.getComponent());
+            o.table.options.rowDblClick &&
+              o.element.addEventListener("dblclick", function (e) {
+                o.table.options.rowDblClick(e, o.getComponent());
               }),
-            i.table.options.rowContext &&
-              i.element.addEventListener("contextmenu", function (e) {
-                i.table.options.rowContext(e, i.getComponent());
+            o.table.options.rowContext &&
+              o.element.addEventListener("contextmenu", function (e) {
+                o.table.options.rowContext(e, o.getComponent());
               }),
-            i.table.options.rowMouseEnter &&
-              i.element.addEventListener("mouseenter", function (e) {
-                i.table.options.rowMouseEnter(e, i.getComponent());
+            o.table.options.rowMouseEnter &&
+              o.element.addEventListener("mouseenter", function (e) {
+                o.table.options.rowMouseEnter(e, o.getComponent());
               }),
-            i.table.options.rowMouseLeave &&
-              i.element.addEventListener("mouseleave", function (e) {
-                i.table.options.rowMouseLeave(e, i.getComponent());
+            o.table.options.rowMouseLeave &&
+              o.element.addEventListener("mouseleave", function (e) {
+                o.table.options.rowMouseLeave(e, o.getComponent());
               }),
-            i.table.options.rowMouseOver &&
-              i.element.addEventListener("mouseover", function (e) {
-                i.table.options.rowMouseOver(e, i.getComponent());
+            o.table.options.rowMouseOver &&
+              o.element.addEventListener("mouseover", function (e) {
+                o.table.options.rowMouseOver(e, o.getComponent());
               }),
-            i.table.options.rowMouseOut &&
-              i.element.addEventListener("mouseout", function (e) {
-                i.table.options.rowMouseOut(e, i.getComponent());
+            o.table.options.rowMouseOut &&
+              o.element.addEventListener("mouseout", function (e) {
+                o.table.options.rowMouseOut(e, o.getComponent());
               }),
-            i.table.options.rowMouseMove &&
-              i.element.addEventListener("mousemove", function (e) {
-                i.table.options.rowMouseMove(e, i.getComponent());
+            o.table.options.rowMouseMove &&
+              o.element.addEventListener("mousemove", function (e) {
+                o.table.options.rowMouseMove(e, o.getComponent());
               }),
-            i.table.options.rowTap &&
-              ((o = !1),
-              i.element.addEventListener(
+            o.table.options.rowTap &&
+              ((i = !1),
+              o.element.addEventListener(
                 "touchstart",
                 function (e) {
-                  o = !0;
+                  i = !0;
                 },
                 { passive: !0 },
               ),
-              i.element.addEventListener("touchend", function (e) {
-                o && i.table.options.rowTap(e, i.getComponent()), (o = !1);
+              o.element.addEventListener("touchend", function (e) {
+                i && o.table.options.rowTap(e, o.getComponent()), (i = !1);
               })),
-            i.table.options.rowDblTap &&
+            o.table.options.rowDblTap &&
               ((e = null),
-              i.element.addEventListener("touchend", function (t) {
+              o.element.addEventListener("touchend", function (t) {
                 e
                   ? (clearTimeout(e),
                     (e = null),
-                    i.table.options.rowDblTap(t, i.getComponent()))
+                    o.table.options.rowDblTap(t, o.getComponent()))
                   : (e = setTimeout(function () {
                       clearTimeout(e), (e = null);
                     }, 300));
               })),
-            i.table.options.rowTapHold &&
+            o.table.options.rowTapHold &&
               ((t = null),
-              i.element.addEventListener(
+              o.element.addEventListener(
                 "touchstart",
                 function (e) {
                   clearTimeout(t),
                     (t = setTimeout(function () {
                       clearTimeout(t),
                         (t = null),
-                        (o = !1),
-                        i.table.options.rowTapHold(e, i.getComponent());
+                        (i = !1),
+                        o.table.options.rowTapHold(e, o.getComponent());
                     }, 1e3));
                 },
                 { passive: !0 },
               ),
-              i.element.addEventListener("touchend", function (e) {
+              o.element.addEventListener("touchend", function (e) {
                 clearTimeout(t), (t = null);
               }));
         }),
@@ -7149,18 +8248,18 @@
         }),
         (p.prototype.calcHeight = function (e) {
           var t = 0,
-            o = this.table.options.resizableRows
+            i = this.table.options.resizableRows
               ? this.element.clientHeight
               : 0;
           this.cells.forEach(function (e) {
-            var o = e.getHeight();
-            o > t && (t = o);
+            var i = e.getHeight();
+            i > t && (t = i);
           }),
             (this.height = e
-              ? Math.max(t, o)
+              ? Math.max(t, i)
               : this.manualHeight
               ? this.height
-              : Math.max(t, o)),
+              : Math.max(t, i)),
             (this.heightStyled = this.height ? this.height + "px" : ""),
             (this.outerHeight = this.element.offsetHeight);
         }),
@@ -7206,57 +8305,57 @@
         }),
         (p.prototype.updateData = function (e) {
           var t,
-            o = this,
-            i = this.element && g.prototype.helpers.elVisible(this.element),
+            i = this,
+            o = this.element && g.prototype.helpers.elVisible(this.element),
             n = {};
           return new Promise(function (r, a) {
             for (var s in ("string" == typeof e && (e = JSON.parse(e)),
-            o.table.options.reactiveData &&
-              o.table.modExists("reactiveData", !0) &&
-              o.table.modules.reactiveData.block(),
-            o.table.modExists("mutator")
-              ? ((n = Object.assign(n, o.data)),
+            i.table.options.reactiveData &&
+              i.table.modExists("reactiveData", !0) &&
+              i.table.modules.reactiveData.block(),
+            i.table.modExists("mutator")
+              ? ((n = Object.assign(n, i.data)),
                 (n = Object.assign(n, e)),
-                (t = o.table.modules.mutator.transformRow(n, "data", e)))
+                (t = i.table.modules.mutator.transformRow(n, "data", e)))
               : (t = e),
             t))
-              o.data[s] = t[s];
-            for (var s in (o.table.options.reactiveData &&
-              o.table.modExists("reactiveData", !0) &&
-              o.table.modules.reactiveData.unblock(),
+              i.data[s] = t[s];
+            for (var s in (i.table.options.reactiveData &&
+              i.table.modExists("reactiveData", !0) &&
+              i.table.modules.reactiveData.unblock(),
             e)) {
-              o.table.columnManager
+              i.table.columnManager
                 .getColumnsByFieldRoot(s)
                 .forEach(function (e) {
-                  var n = o.getCell(e.getField());
+                  var n = i.getCell(e.getField());
                   if (n) {
                     var r = e.getFieldValue(t);
                     n.getValue() != r &&
-                      (n.setValueProcessData(r), i && n.cellRendered());
+                      (n.setValueProcessData(r), o && n.cellRendered());
                   }
                 });
             }
-            o.table.options.groupUpdateOnCellEdit &&
-              o.table.options.groupBy &&
-              o.table.modExists("groupRows") &&
-              o.table.modules.groupRows.reassignRowToGroup(o.row),
-              i
-                ? (o.normalizeHeight(!0),
-                  o.table.options.rowFormatter &&
-                    o.table.options.rowFormatter(o.getComponent()))
-                : ((o.initialized = !1), (o.height = 0), (o.heightStyled = "")),
-              !1 !== o.table.options.dataTree &&
-                o.table.modExists("dataTree") &&
-                o.table.modules.dataTree.redrawNeeded(e) &&
-                (o.table.modules.dataTree.initializeRow(o),
-                i &&
-                  (o.table.modules.dataTree.layoutRow(o),
-                  o.table.rowManager.refreshActiveData("tree", !1, !0))),
-              o.table.options.rowUpdated.call(o.table, o.getComponent()),
-              o.table.options.dataChanged &&
-                o.table.options.dataChanged.call(
-                  o.table,
-                  o.table.rowManager.getData(),
+            i.table.options.groupUpdateOnCellEdit &&
+              i.table.options.groupBy &&
+              i.table.modExists("groupRows") &&
+              i.table.modules.groupRows.reassignRowToGroup(i.row),
+              o
+                ? (i.normalizeHeight(!0),
+                  i.table.options.rowFormatter &&
+                    i.table.options.rowFormatter(i.getComponent()))
+                : ((i.initialized = !1), (i.height = 0), (i.heightStyled = "")),
+              !1 !== i.table.options.dataTree &&
+                i.table.modExists("dataTree") &&
+                i.table.modules.dataTree.redrawNeeded(e) &&
+                (i.table.modules.dataTree.initializeRow(i),
+                o &&
+                  (i.table.modules.dataTree.layoutRow(i),
+                  i.table.rowManager.refreshActiveData("tree", !1, !0))),
+              i.table.options.rowUpdated.call(i.table, i.getComponent()),
+              i.table.options.dataChanged &&
+                i.table.options.dataChanged.call(
+                  i.table,
+                  i.table.rowManager.getData(),
                 ),
               r();
           });
@@ -7282,19 +8381,19 @@
         (p.prototype.findNextEditableCell = function (e) {
           var t = !1;
           if (e < this.cells.length - 1)
-            for (var o = e + 1; o < this.cells.length; o++) {
-              var i = this.cells[o];
+            for (var i = e + 1; i < this.cells.length; i++) {
+              var o = this.cells[i];
               if (
-                i.column.modules.edit &&
-                g.prototype.helpers.elVisible(i.getElement())
+                o.column.modules.edit &&
+                g.prototype.helpers.elVisible(o.getElement())
               ) {
                 var n = !0;
                 if (
-                  ("function" == typeof i.column.modules.edit.check &&
-                    (n = i.column.modules.edit.check(i.getComponent())),
+                  ("function" == typeof o.column.modules.edit.check &&
+                    (n = o.column.modules.edit.check(o.getComponent())),
                   n)
                 ) {
-                  t = i;
+                  t = o;
                   break;
                 }
               }
@@ -7304,17 +8403,17 @@
         (p.prototype.findPrevEditableCell = function (e) {
           var t = !1;
           if (e > 0)
-            for (var o = e - 1; o >= 0; o--) {
-              var i = this.cells[o],
+            for (var i = e - 1; i >= 0; i--) {
+              var o = this.cells[i],
                 n = !0;
               if (
-                i.column.modules.edit &&
-                g.prototype.helpers.elVisible(i.getElement()) &&
-                ("function" == typeof i.column.modules.edit.check &&
-                  (n = i.column.modules.edit.check(i.getComponent())),
+                o.column.modules.edit &&
+                g.prototype.helpers.elVisible(o.getElement()) &&
+                ("function" == typeof o.column.modules.edit.check &&
+                  (n = o.column.modules.edit.check(o.getComponent())),
                 n)
               ) {
-                t = i;
+                t = o;
                 break;
               }
             }
@@ -7330,9 +8429,9 @@
           return this.table.rowManager.prevDisplayRow(this, !0) || !1;
         }),
         (p.prototype.moveToRow = function (e, t) {
-          var o = this.table.rowManager.findRow(e);
-          o
-            ? (this.table.rowManager.moveRowActual(this, o, !t),
+          var i = this.table.rowManager.findRow(e);
+          i
+            ? (this.table.rowManager.moveRowActual(this, i, !t),
               this.table.rowManager.refreshActiveData("display", !1, !0))
             : console.warn("Move Error - No matching row found:", e);
         }),
@@ -7347,18 +8446,18 @@
         }),
         (p.prototype.delete = function () {
           var e = this;
-          return new Promise(function (t, o) {
-            var i, n;
+          return new Promise(function (t, i) {
+            var o, n;
             e.table.options.history &&
               e.table.modExists("history") &&
               (e.table.options.groupBy && e.table.modExists("groupRows")
-                ? (i = (n = e.getGroup().rows).indexOf(e)) && (i = n[i - 1])
-                : (i = e.table.rowManager.getRowIndex(e)) &&
-                  (i = e.table.rowManager.rows[i - 1]),
+                ? (o = (n = e.getGroup().rows).indexOf(e)) && (o = n[o - 1])
+                : (o = e.table.rowManager.getRowIndex(e)) &&
+                  (o = e.table.rowManager.rows[o - 1]),
               e.table.modules.history.action("rowDelete", e, {
                 data: e.getData(),
-                pos: !i,
-                index: i,
+                pos: !o,
+                index: o,
               })),
               e.deleteActual(),
               t();
@@ -7520,27 +8619,27 @@
         (m.prototype._configureCell = function () {
           var e = this,
             t = e.column.cellEvents,
-            o = e.element,
-            i = this.column.getField();
-          ((o.style.textAlign = e.column.hozAlign),
+            i = e.element,
+            o = this.column.getField();
+          ((i.style.textAlign = e.column.hozAlign),
           e.column.vertAlign &&
-            ((o.style.display = "inline-flex"),
-            (o.style.alignItems =
+            ((i.style.display = "inline-flex"),
+            (i.style.alignItems =
               { top: "flex-start", bottom: "flex-end", middle: "center" }[
                 e.column.vertAlign
               ] || ""),
             e.column.hozAlign &&
-              (o.style.justifyContent =
+              (i.style.justifyContent =
                 { left: "flex-start", right: "flex-end", center: "center" }[
                   e.column.hozAlign
                 ] || "")),
-          i && o.setAttribute("tabulator-field", i),
+          o && i.setAttribute("tabulator-field", o),
           e.column.definition.cssClass) &&
             e.column.definition.cssClass.split(" ").forEach(function (e) {
-              o.classList.add(e);
+              i.classList.add(e);
             });
           "hover" === this.table.options.tooltipGenerationMode &&
-            o.addEventListener("mouseenter", function (t) {
+            i.addEventListener("mouseenter", function (t) {
               e._generateTooltip();
             }),
             e._bindClickEvents(t),
@@ -7555,22 +8654,22 @@
         }),
         (m.prototype._bindClickEvents = function (e) {
           var t = this,
-            o = t.element;
+            i = t.element;
           (e.cellClick || t.table.options.cellClick) &&
-            o.addEventListener("click", function (o) {
-              var i = t.getComponent();
-              e.cellClick && e.cellClick.call(t.table, o, i),
+            i.addEventListener("click", function (i) {
+              var o = t.getComponent();
+              e.cellClick && e.cellClick.call(t.table, i, o),
                 t.table.options.cellClick &&
-                  t.table.options.cellClick.call(t.table, o, i);
+                  t.table.options.cellClick.call(t.table, i, o);
             }),
             e.cellDblClick || this.table.options.cellDblClick
-              ? o.addEventListener("dblclick", function (o) {
-                  var i = t.getComponent();
-                  e.cellDblClick && e.cellDblClick.call(t.table, o, i),
+              ? i.addEventListener("dblclick", function (i) {
+                  var o = t.getComponent();
+                  e.cellDblClick && e.cellDblClick.call(t.table, i, o),
                     t.table.options.cellDblClick &&
-                      t.table.options.cellDblClick.call(t.table, o, i);
+                      t.table.options.cellDblClick.call(t.table, i, o);
                 })
-              : o.addEventListener("dblclick", function (e) {
+              : i.addEventListener("dblclick", function (e) {
                   if (
                     !t.table.modExists("edit") ||
                     t.table.modules.edit.currentCell !== t
@@ -7578,112 +8677,112 @@
                     e.preventDefault();
                     try {
                       if (document.selection)
-                        (o = document.body.createTextRange()).moveToElementText(
+                        (i = document.body.createTextRange()).moveToElementText(
                           t.element,
                         ),
-                          o.select();
+                          i.select();
                       else if (window.getSelection) {
-                        var o;
-                        (o = document.createRange()).selectNode(t.element),
+                        var i;
+                        (i = document.createRange()).selectNode(t.element),
                           window.getSelection().removeAllRanges(),
-                          window.getSelection().addRange(o);
+                          window.getSelection().addRange(i);
                       }
                     } catch (e) {}
                   }
                 }),
             (e.cellContext || this.table.options.cellContext) &&
-              o.addEventListener("contextmenu", function (o) {
-                var i = t.getComponent();
-                e.cellContext && e.cellContext.call(t.table, o, i),
+              i.addEventListener("contextmenu", function (i) {
+                var o = t.getComponent();
+                e.cellContext && e.cellContext.call(t.table, i, o),
                   t.table.options.cellContext &&
-                    t.table.options.cellContext.call(t.table, o, i);
+                    t.table.options.cellContext.call(t.table, i, o);
               });
         }),
         (m.prototype._bindMouseEvents = function (e) {
           var t = this,
-            o = t.element;
+            i = t.element;
           (e.cellMouseEnter || t.table.options.cellMouseEnter) &&
-            o.addEventListener("mouseenter", function (o) {
-              var i = t.getComponent();
-              e.cellMouseEnter && e.cellMouseEnter.call(t.table, o, i),
+            i.addEventListener("mouseenter", function (i) {
+              var o = t.getComponent();
+              e.cellMouseEnter && e.cellMouseEnter.call(t.table, i, o),
                 t.table.options.cellMouseEnter &&
-                  t.table.options.cellMouseEnter.call(t.table, o, i);
+                  t.table.options.cellMouseEnter.call(t.table, i, o);
             }),
             (e.cellMouseLeave || t.table.options.cellMouseLeave) &&
-              o.addEventListener("mouseleave", function (o) {
-                var i = t.getComponent();
-                e.cellMouseLeave && e.cellMouseLeave.call(t.table, o, i),
+              i.addEventListener("mouseleave", function (i) {
+                var o = t.getComponent();
+                e.cellMouseLeave && e.cellMouseLeave.call(t.table, i, o),
                   t.table.options.cellMouseLeave &&
-                    t.table.options.cellMouseLeave.call(t.table, o, i);
+                    t.table.options.cellMouseLeave.call(t.table, i, o);
               }),
             (e.cellMouseOver || t.table.options.cellMouseOver) &&
-              o.addEventListener("mouseover", function (o) {
-                var i = t.getComponent();
-                e.cellMouseOver && e.cellMouseOver.call(t.table, o, i),
+              i.addEventListener("mouseover", function (i) {
+                var o = t.getComponent();
+                e.cellMouseOver && e.cellMouseOver.call(t.table, i, o),
                   t.table.options.cellMouseOver &&
-                    t.table.options.cellMouseOver.call(t.table, o, i);
+                    t.table.options.cellMouseOver.call(t.table, i, o);
               }),
             (e.cellMouseOut || t.table.options.cellMouseOut) &&
-              o.addEventListener("mouseout", function (o) {
-                var i = t.getComponent();
-                e.cellMouseOut && e.cellMouseOut.call(t.table, o, i),
+              i.addEventListener("mouseout", function (i) {
+                var o = t.getComponent();
+                e.cellMouseOut && e.cellMouseOut.call(t.table, i, o),
                   t.table.options.cellMouseOut &&
-                    t.table.options.cellMouseOut.call(t.table, o, i);
+                    t.table.options.cellMouseOut.call(t.table, i, o);
               }),
             (e.cellMouseMove || t.table.options.cellMouseMove) &&
-              o.addEventListener("mousemove", function (o) {
-                var i = t.getComponent();
-                e.cellMouseMove && e.cellMouseMove.call(t.table, o, i),
+              i.addEventListener("mousemove", function (i) {
+                var o = t.getComponent();
+                e.cellMouseMove && e.cellMouseMove.call(t.table, i, o),
                   t.table.options.cellMouseMove &&
-                    t.table.options.cellMouseMove.call(t.table, o, i);
+                    t.table.options.cellMouseMove.call(t.table, i, o);
               });
         }),
         (m.prototype._bindTouchEvents = function (e) {
           var t,
-            o,
             i,
+            o,
             n = this,
             r = n.element;
           (e.cellTap || this.table.options.cellTap) &&
-            ((i = !1),
+            ((o = !1),
             r.addEventListener(
               "touchstart",
               function (e) {
-                i = !0;
+                o = !0;
               },
               { passive: !0 },
             ),
             r.addEventListener("touchend", function (t) {
-              if (i) {
-                var o = n.getComponent();
-                e.cellTap && e.cellTap.call(n.table, t, o),
+              if (o) {
+                var i = n.getComponent();
+                e.cellTap && e.cellTap.call(n.table, t, i),
                   n.table.options.cellTap &&
-                    n.table.options.cellTap.call(n.table, t, o);
+                    n.table.options.cellTap.call(n.table, t, i);
               }
-              i = !1;
+              o = !1;
             })),
             (e.cellDblTap || this.table.options.cellDblTap) &&
               ((t = null),
-              r.addEventListener("touchend", function (o) {
+              r.addEventListener("touchend", function (i) {
                 if (t) {
                   clearTimeout(t), (t = null);
-                  var i = n.getComponent();
-                  e.cellDblTap && e.cellDblTap.call(n.table, o, i),
+                  var o = n.getComponent();
+                  e.cellDblTap && e.cellDblTap.call(n.table, i, o),
                     n.table.options.cellDblTap &&
-                      n.table.options.cellDblTap.call(n.table, o, i);
+                      n.table.options.cellDblTap.call(n.table, i, o);
                 } else
                   t = setTimeout(function () {
                     clearTimeout(t), (t = null);
                   }, 300);
               })),
             (e.cellTapHold || this.table.options.cellTapHold) &&
-              ((o = null),
+              ((i = null),
               r.addEventListener(
                 "touchstart",
                 function (t) {
-                  clearTimeout(o),
-                    (o = setTimeout(function () {
-                      clearTimeout(o), (o = null), (i = !1);
+                  clearTimeout(i),
+                    (i = setTimeout(function () {
+                      clearTimeout(i), (i = null), (o = !1);
                       var r = n.getComponent();
                       e.cellTapHold && e.cellTapHold.call(n.table, t, r),
                         n.table.options.cellTapHold &&
@@ -7693,7 +8792,7 @@
                 { passive: !0 },
               ),
               r.addEventListener("touchend", function (e) {
-                clearTimeout(o), (o = null);
+                clearTimeout(i), (i = null);
               }));
         }),
         (m.prototype._generateContents = function () {
@@ -7757,7 +8856,7 @@
           return this.oldValue;
         }),
         (m.prototype.setValue = function (e, t) {
-          var o;
+          var i;
           this.setValueProcessData(e, t) &&
             (this.table.options.history &&
               this.table.modExists("history") &&
@@ -7765,15 +8864,15 @@
                 oldValue: this.oldValue,
                 newValue: this.value,
               }),
-            (o = this.getComponent()),
+            (i = this.getComponent()),
             this.column.cellEvents.cellEdited &&
-              this.column.cellEvents.cellEdited.call(this.table, o),
+              this.column.cellEvents.cellEdited.call(this.table, i),
             this.table.options.groupUpdateOnCellEdit &&
               this.table.options.groupBy &&
               this.table.modExists("groupRows") &&
               this.table.modules.groupRows.reassignRowToGroup(this.row),
             this.cellRendered(),
-            this.table.options.cellEdited.call(this.table, o),
+            this.table.options.cellEdited.call(this.table, i),
             this.table.options.dataChanged &&
               this.table.options.dataChanged.call(
                 this.table,
@@ -7781,15 +8880,15 @@
               ));
         }),
         (m.prototype.setValueProcessData = function (e, t) {
-          var o = !1;
+          var i = !1;
           return (
             this.value != e &&
-              ((o = !0),
+              ((i = !0),
               t &&
                 this.column.modules.mutate &&
                 (e = this.table.modules.mutator.transformCell(this, e))),
             this.setValueActual(e),
-            o &&
+            i &&
               this.table.modExists("columnCalcs") &&
               (this.column.definition.topCalc ||
                 this.column.definition.bottomCalc) &&
@@ -7804,7 +8903,7 @@
                 : this.table.modules.columnCalcs.recalc(
                     this.table.rowManager.activeRows,
                   )),
-            o
+            i
           );
         }),
         (m.prototype.setValueActual = function (e) {
@@ -7925,45 +9024,45 @@
         (m.prototype.nav = function () {
           var e = this,
             t = !1,
-            o = this.row.getCellIndex(this);
+            i = this.row.getCellIndex(this);
           return {
             next: function () {
               var t,
-                o = this.right();
+                i = this.right();
               return (
-                !!o ||
+                !!i ||
                 (!(
                   !(t = e.table.rowManager.nextDisplayRow(e.row, !0)) ||
-                  !(o = t.findNextEditableCell(-1))
+                  !(i = t.findNextEditableCell(-1))
                 ) &&
-                  (o.edit(), !0))
+                  (i.edit(), !0))
               );
             },
             prev: function () {
               var t,
-                o = this.left();
+                i = this.left();
               return (
-                !!o ||
+                !!i ||
                 (!(
                   !(t = e.table.rowManager.prevDisplayRow(e.row, !0)) ||
-                  !(o = t.findPrevEditableCell(t.cells.length))
+                  !(i = t.findPrevEditableCell(t.cells.length))
                 ) &&
-                  (o.edit(), !0))
+                  (i.edit(), !0))
               );
             },
             left: function () {
-              return !!(t = e.row.findPrevEditableCell(o)) && (t.edit(), !0);
+              return !!(t = e.row.findPrevEditableCell(i)) && (t.edit(), !0);
             },
             right: function () {
-              return !!(t = e.row.findNextEditableCell(o)) && (t.edit(), !0);
+              return !!(t = e.row.findNextEditableCell(i)) && (t.edit(), !0);
             },
             up: function () {
               var t = e.table.rowManager.prevDisplayRow(e.row, !0);
-              t && t.cells[o].edit();
+              t && t.cells[i].edit();
             },
             down: function () {
               var t = e.table.rowManager.nextDisplayRow(e.row, !0);
-              t && t.cells[o].edit();
+              t && t.cells[i].edit();
             },
           };
         }),
@@ -8032,7 +9131,7 @@
             e.footerRedraw();
           });
         });
-      var g = function e(t, o) {
+      var g = function e(t, i) {
         (this.options = {}),
           (this.columnManager = null),
           (this.rowManager = null),
@@ -8044,7 +9143,7 @@
           (this.rtl = !1),
           (this.modules = {}),
           this.initializeElement(t) &&
-            (this.initializeOptions(o || {}), this._create()),
+            (this.initializeOptions(i || {}), this._create()),
           e.prototype.comms.register(this);
       };
       (g.prototype.defaultOptions = {
@@ -8430,106 +9529,106 @@
         (g.prototype._buildElement = function () {
           var e = this,
             t = this.element,
-            o = this.modules,
-            i = this.options;
+            i = this.modules,
+            o = this.options;
           for (
-            i.tableBuilding.call(this),
+            o.tableBuilding.call(this),
               t.classList.add("tabulator"),
               t.setAttribute("role", "grid");
             t.firstChild;
 
           )
             t.removeChild(t.firstChild);
-          for (var n in (i.height &&
-            ((i.height = isNaN(i.height) ? i.height : i.height + "px"),
-            (t.style.height = i.height)),
-          !1 !== i.minHeight &&
-            ((i.minHeight = isNaN(i.minHeight)
-              ? i.minHeight
-              : i.minHeight + "px"),
-            (t.style.minHeight = i.minHeight)),
-          !1 !== i.maxHeight &&
-            ((i.maxHeight = isNaN(i.maxHeight)
-              ? i.maxHeight
-              : i.maxHeight + "px"),
-            (t.style.maxHeight = i.maxHeight)),
+          for (var n in (o.height &&
+            ((o.height = isNaN(o.height) ? o.height : o.height + "px"),
+            (t.style.height = o.height)),
+          !1 !== o.minHeight &&
+            ((o.minHeight = isNaN(o.minHeight)
+              ? o.minHeight
+              : o.minHeight + "px"),
+            (t.style.minHeight = o.minHeight)),
+          !1 !== o.maxHeight &&
+            ((o.maxHeight = isNaN(o.maxHeight)
+              ? o.maxHeight
+              : o.maxHeight + "px"),
+            (t.style.maxHeight = o.maxHeight)),
           this.columnManager.initialize(),
           this.rowManager.initialize(),
           this._detectBrowser(),
-          this.modExists("layout", !0) && o.layout.initialize(i.layout),
-          o.localize.initialize(),
-          !1 !== i.headerFilterPlaceholder &&
-            o.localize.setHeaderFilterPlaceholder(i.headerFilterPlaceholder),
-          i.langs))
-            o.localize.installLang(n, i.langs[n]);
+          this.modExists("layout", !0) && i.layout.initialize(o.layout),
+          i.localize.initialize(),
+          !1 !== o.headerFilterPlaceholder &&
+            i.localize.setHeaderFilterPlaceholder(o.headerFilterPlaceholder),
+          o.langs))
+            i.localize.installLang(n, o.langs[n]);
           if (
-            (o.localize.setLocale(i.locale), "string" == typeof i.placeholder)
+            (i.localize.setLocale(o.locale), "string" == typeof o.placeholder)
           ) {
             var r = document.createElement("div");
             r.classList.add("tabulator-placeholder");
             var a = document.createElement("span");
-            (a.innerHTML = i.placeholder),
+            (a.innerHTML = o.placeholder),
               r.appendChild(a),
-              (i.placeholder = r);
+              (o.placeholder = r);
           }
           if (
             (t.appendChild(this.columnManager.getElement()),
             t.appendChild(this.rowManager.getElement()),
-            i.footerElement && this.footerManager.activate(),
-            i.persistence &&
+            o.footerElement && this.footerManager.activate(),
+            o.persistence &&
               this.modExists("persistence", !0) &&
-              o.persistence.initialize(),
-            i.movableRows &&
+              i.persistence.initialize(),
+            o.movableRows &&
               this.modExists("moveRow") &&
-              o.moveRow.initialize(),
-            i.autoColumns &&
+              i.moveRow.initialize(),
+            o.autoColumns &&
               this.options.data &&
               this.columnManager.generateColumnsFromRowData(this.options.data),
-            this.modExists("columnCalcs") && o.columnCalcs.initialize(),
-            this.columnManager.setColumns(i.columns),
-            i.dataTree &&
+            this.modExists("columnCalcs") && i.columnCalcs.initialize(),
+            this.columnManager.setColumns(o.columns),
+            o.dataTree &&
               this.modExists("dataTree", !0) &&
-              o.dataTree.initialize(),
+              i.dataTree.initialize(),
             this.modExists("frozenRows") &&
               this.modules.frozenRows.initialize(),
-            ((i.persistence &&
+            ((o.persistence &&
               this.modExists("persistence", !0) &&
-              o.persistence.config.sort) ||
-              i.initialSort) &&
+              i.persistence.config.sort) ||
+              o.initialSort) &&
               this.modExists("sort", !0))
           ) {
             var s = [];
-            i.persistence &&
+            o.persistence &&
             this.modExists("persistence", !0) &&
-            o.persistence.config.sort
-              ? !1 === (s = o.persistence.load("sort")) &&
-                i.initialSort &&
-                (s = i.initialSort)
-              : i.initialSort && (s = i.initialSort),
-              o.sort.setSort(s);
+            i.persistence.config.sort
+              ? !1 === (s = i.persistence.load("sort")) &&
+                o.initialSort &&
+                (s = o.initialSort)
+              : o.initialSort && (s = o.initialSort),
+              i.sort.setSort(s);
           }
           if (
-            ((i.persistence &&
+            ((o.persistence &&
               this.modExists("persistence", !0) &&
-              o.persistence.config.filter) ||
-              i.initialFilter) &&
+              i.persistence.config.filter) ||
+              o.initialFilter) &&
             this.modExists("filter", !0)
           ) {
             var l = [];
-            i.persistence &&
+            o.persistence &&
             this.modExists("persistence", !0) &&
-            o.persistence.config.filter
-              ? !1 === (l = o.persistence.load("filter")) &&
-                i.initialFilter &&
-                (l = i.initialFilter)
-              : i.initialFilter && (l = i.initialFilter),
-              o.filter.setFilter(l);
+            i.persistence.config.filter
+              ? !1 === (l = i.persistence.load("filter")) &&
+                o.initialFilter &&
+                (l = o.initialFilter)
+              : o.initialFilter && (l = o.initialFilter),
+              i.filter.setFilter(l);
           }
-          i.initialHeaderFilter &&
+          o.initialHeaderFilter &&
             this.modExists("filter", !0) &&
-            i.initialHeaderFilter.forEach(function (t) {
-              var i = e.columnManager.findColumn(t.field);
-              if (!i)
+            o.initialHeaderFilter.forEach(function (t) {
+              var o = e.columnManager.findColumn(t.field);
+              if (!o)
                 return (
                   console.warn(
                     "Column Filter Error - No matching column found:",
@@ -8537,21 +9636,21 @@
                   ),
                   !1
                 );
-              o.filter.setHeaderFilterValue(i, t.value);
+              i.filter.setHeaderFilterValue(o, t.value);
             }),
-            this.modExists("ajax") && o.ajax.initialize(),
-            i.pagination && this.modExists("page", !0) && o.page.initialize(),
-            i.groupBy &&
+            this.modExists("ajax") && i.ajax.initialize(),
+            o.pagination && this.modExists("page", !0) && i.page.initialize(),
+            o.groupBy &&
               this.modExists("groupRows", !0) &&
-              o.groupRows.initialize(),
-            this.modExists("keybindings") && o.keybindings.initialize(),
-            this.modExists("selectRow") && o.selectRow.clearSelectionData(!0),
-            i.autoResize &&
+              i.groupRows.initialize(),
+            this.modExists("keybindings") && i.keybindings.initialize(),
+            this.modExists("selectRow") && i.selectRow.clearSelectionData(!0),
+            o.autoResize &&
               this.modExists("resizeTable") &&
-              o.resizeTable.initialize(),
-            this.modExists("clipboard") && o.clipboard.initialize(),
-            i.printAsHtml && this.modExists("print") && o.print.initialize(),
-            i.tableBuilt.call(this);
+              i.resizeTable.initialize(),
+            this.modExists("clipboard") && i.clipboard.initialize(),
+            o.printAsHtml && this.modExists("print") && i.print.initialize(),
+            o.tableBuilt.call(this);
         }),
         (g.prototype._loadInitialData = function () {
           var e = this;
@@ -8644,7 +9743,7 @@
         }),
         (g.prototype.setDataFromLocalFile = function (e) {
           var t = this;
-          return new Promise(function (o, i) {
+          return new Promise(function (i, o) {
             var n = document.createElement("input");
             (n.type = "file"),
               (n.accept = e || ".json,application/json"),
@@ -8662,50 +9761,50 @@
                           "File Load Error - File contents is invalid JSON",
                           e,
                         ),
-                        void i(e)
+                        void o(e)
                       );
                     }
                     t.setData(r)
                       .then(function (e) {
-                        o(e);
+                        i(e);
                       })
                       .catch(function (e) {
-                        o(e);
+                        i(e);
                       });
                   }),
                   (s.onerror = function (e) {
-                    console.warn("File Load Error - Unable to read file"), i();
+                    console.warn("File Load Error - Unable to read file"), o();
                   });
               }),
               n.click();
           });
         }),
-        (g.prototype.setData = function (e, t, o) {
+        (g.prototype.setData = function (e, t, i) {
           return (
             this.modExists("ajax") && this.modules.ajax.blockActiveRequest(),
-            this._setData(e, t, o, !1, !0)
+            this._setData(e, t, i, !1, !0)
           );
         }),
-        (g.prototype._setData = function (e, t, o, i, n) {
+        (g.prototype._setData = function (e, t, i, o, n) {
           var r = this;
           return "string" != typeof e
             ? e
-              ? r.rowManager.setData(e, i, n)
+              ? r.rowManager.setData(e, o, n)
               : r.modExists("ajax") &&
                 (r.modules.ajax.getUrl || r.options.ajaxURLGenerator)
               ? "remote" == r.options.pagination && r.modExists("page", !0)
                 ? (r.modules.page.reset(!0, !0), r.modules.page.setPage(1))
-                : r.modules.ajax.loadData(i, n)
-              : r.rowManager.setData([], i, n)
+                : r.modules.ajax.loadData(o, n)
+              : r.rowManager.setData([], o, n)
             : 0 == e.indexOf("{") || 0 == e.indexOf("[")
-            ? r.rowManager.setData(JSON.parse(e), i, n)
+            ? r.rowManager.setData(JSON.parse(e), o, n)
             : r.modExists("ajax", !0)
             ? (t && r.modules.ajax.setParams(t),
-              o && r.modules.ajax.setConfig(o),
+              i && r.modules.ajax.setConfig(i),
               r.modules.ajax.setUrl(e),
               "remote" == r.options.pagination && r.modExists("page", !0)
                 ? (r.modules.page.reset(!0, !0), r.modules.page.setPage(1))
-                : r.modules.ajax.loadData(i, n))
+                : r.modules.ajax.loadData(o, n))
             : void 0;
         }),
         (g.prototype.clearData = function () {
@@ -8732,58 +9831,58 @@
             this.rowManager.getDataCount(e)
           );
         }),
-        (g.prototype.searchRows = function (e, t, o) {
+        (g.prototype.searchRows = function (e, t, i) {
           if (this.modExists("filter", !0))
-            return this.modules.filter.search("rows", e, t, o);
+            return this.modules.filter.search("rows", e, t, i);
         }),
-        (g.prototype.searchData = function (e, t, o) {
+        (g.prototype.searchData = function (e, t, i) {
           if (this.modExists("filter", !0))
-            return this.modules.filter.search("data", e, t, o);
+            return this.modules.filter.search("data", e, t, i);
         }),
-        (g.prototype.getHtml = function (e, t, o) {
+        (g.prototype.getHtml = function (e, t, i) {
           if (this.modExists("export", !0))
-            return this.modules.export.getHtml(e, t, o);
+            return this.modules.export.getHtml(e, t, i);
         }),
-        (g.prototype.print = function (e, t, o) {
+        (g.prototype.print = function (e, t, i) {
           if (this.modExists("print", !0))
-            return this.modules.print.printFullscreen(e, t, o);
+            return this.modules.print.printFullscreen(e, t, i);
         }),
         (g.prototype.getAjaxUrl = function () {
           if (this.modExists("ajax", !0)) return this.modules.ajax.getUrl();
         }),
-        (g.prototype.replaceData = function (e, t, o) {
+        (g.prototype.replaceData = function (e, t, i) {
           return (
             this.modExists("ajax") && this.modules.ajax.blockActiveRequest(),
-            this._setData(e, t, o, !0)
+            this._setData(e, t, i, !0)
           );
         }),
         (g.prototype.updateData = function (e) {
           var t = this,
-            o = this,
-            i = 0;
+            i = this,
+            o = 0;
           return new Promise(function (n, r) {
             t.modExists("ajax") && t.modules.ajax.blockActiveRequest(),
               "string" == typeof e && (e = JSON.parse(e)),
               e
                 ? e.forEach(function (e) {
-                    var t = o.rowManager.findRow(e[o.options.index]);
+                    var t = i.rowManager.findRow(e[i.options.index]);
                     t &&
-                      (i++,
+                      (o++,
                       t.updateData(e).then(function () {
-                        --i || n();
+                        --o || n();
                       }));
                   })
                 : (console.warn("Update Error - No data provided"),
                   r("Update Error - No data provided"));
           });
         }),
-        (g.prototype.addData = function (e, t, o) {
-          var i = this;
+        (g.prototype.addData = function (e, t, i) {
+          var o = this;
           return new Promise(function (n, r) {
-            i.modExists("ajax") && i.modules.ajax.blockActiveRequest(),
+            o.modExists("ajax") && o.modules.ajax.blockActiveRequest(),
               "string" == typeof e && (e = JSON.parse(e)),
               e
-                ? i.rowManager.addRows(e, t, o).then(function (e) {
+                ? o.rowManager.addRows(e, t, i).then(function (e) {
                     var t = [];
                     e.forEach(function (e) {
                       t.push(e.getComponent());
@@ -8796,22 +9895,22 @@
         }),
         (g.prototype.updateOrAddData = function (e) {
           var t = this,
-            o = this,
-            i = [],
+            i = this,
+            o = [],
             n = 0;
           return new Promise(function (r, a) {
             t.modExists("ajax") && t.modules.ajax.blockActiveRequest(),
               "string" == typeof e && (e = JSON.parse(e)),
               e
                 ? e.forEach(function (e) {
-                    var t = o.rowManager.findRow(e[o.options.index]);
+                    var t = i.rowManager.findRow(e[i.options.index]);
                     n++,
                       t
                         ? t.updateData(e).then(function () {
-                            n--, i.push(t.getComponent()), n || r(i);
+                            n--, o.push(t.getComponent()), n || r(o);
                           })
-                        : o.rowManager.addRows(e).then(function (e) {
-                            n--, i.push(e[0].getComponent()), n || r(i);
+                        : i.rowManager.addRows(e).then(function (e) {
+                            n--, o.push(e[0].getComponent()), n || r(o);
                           });
                   })
                 : (console.warn("Update Error - No data provided"),
@@ -8825,33 +9924,33 @@
             : (console.warn("Find Error - No matching row found:", e), !1);
         }),
         (g.prototype.getRowFromPosition = function (e, t) {
-          var o = this.rowManager.getRowFromPosition(e, t);
-          return o
-            ? o.getComponent()
+          var i = this.rowManager.getRowFromPosition(e, t);
+          return i
+            ? i.getComponent()
             : (console.warn("Find Error - No matching row found:", e), !1);
         }),
         (g.prototype.deleteRow = function (e) {
           var t = this;
-          return new Promise(function (o, i) {
+          return new Promise(function (i, o) {
             var n = t,
               r = 0,
               a = 0,
               s = [];
             function l() {
-              ++r == e.length && a && (n.rowManager.reRenderInPosition(), o());
+              ++r == e.length && a && (n.rowManager.reRenderInPosition(), i());
             }
             Array.isArray(e) || (e = [e]),
               e.forEach(function (e) {
-                var o = t.rowManager.findRow(e, !0);
-                o
-                  ? s.push(o)
+                var i = t.rowManager.findRow(e, !0);
+                i
+                  ? s.push(i)
                   : (console.warn("Delete Error - No matching row found:", e),
-                    i("Delete Error - No matching row found"),
+                    o("Delete Error - No matching row found"),
                     l());
               }),
-              s.sort(function (e, o) {
+              s.sort(function (e, i) {
                 return t.rowManager.rows.indexOf(e) >
-                  t.rowManager.rows.indexOf(o)
+                  t.rowManager.rows.indexOf(i)
                   ? 1
                   : -1;
               }),
@@ -8861,44 +9960,44 @@
                     a++, l();
                   })
                   .catch(function (e) {
-                    l(), i(e);
+                    l(), o(e);
                   });
               });
           });
         }),
-        (g.prototype.addRow = function (e, t, o) {
-          var i = this;
+        (g.prototype.addRow = function (e, t, i) {
+          var o = this;
           return new Promise(function (n, r) {
             "string" == typeof e && (e = JSON.parse(e)),
-              i.rowManager.addRows(e, t, o).then(function (e) {
-                i.modExists("columnCalcs") &&
-                  i.modules.columnCalcs.recalc(i.rowManager.activeRows),
+              o.rowManager.addRows(e, t, i).then(function (e) {
+                o.modExists("columnCalcs") &&
+                  o.modules.columnCalcs.recalc(o.rowManager.activeRows),
                   n(e[0].getComponent());
               });
           });
         }),
         (g.prototype.updateOrAddRow = function (e, t) {
-          var o = this;
-          return new Promise(function (i, n) {
-            var r = o.rowManager.findRow(e);
+          var i = this;
+          return new Promise(function (o, n) {
+            var r = i.rowManager.findRow(e);
             "string" == typeof t && (t = JSON.parse(t)),
               r
                 ? r
                     .updateData(t)
                     .then(function () {
-                      o.modExists("columnCalcs") &&
-                        o.modules.columnCalcs.recalc(o.rowManager.activeRows),
-                        i(r.getComponent());
+                      i.modExists("columnCalcs") &&
+                        i.modules.columnCalcs.recalc(i.rowManager.activeRows),
+                        o(r.getComponent());
                     })
                     .catch(function (e) {
                       n(e);
                     })
-                : (r = o.rowManager
+                : (r = i.rowManager
                     .addRows(t)
                     .then(function (e) {
-                      o.modExists("columnCalcs") &&
-                        o.modules.columnCalcs.recalc(o.rowManager.activeRows),
-                        i(e[0].getComponent());
+                      i.modExists("columnCalcs") &&
+                        i.modules.columnCalcs.recalc(i.rowManager.activeRows),
+                        o(e[0].getComponent());
                     })
                     .catch(function (e) {
                       n(e);
@@ -8906,15 +10005,15 @@
           });
         }),
         (g.prototype.updateRow = function (e, t) {
-          var o = this;
-          return new Promise(function (i, n) {
-            var r = o.rowManager.findRow(e);
+          var i = this;
+          return new Promise(function (o, n) {
+            var r = i.rowManager.findRow(e);
             "string" == typeof t && (t = JSON.parse(t)),
               r
                 ? r
                     .updateData(t)
                     .then(function () {
-                      i(r.getComponent());
+                      o(r.getComponent());
                     })
                     .catch(function (e) {
                       n(e);
@@ -8923,13 +10022,13 @@
                   n("Update Error - No matching row found"));
           });
         }),
-        (g.prototype.scrollToRow = function (e, t, o) {
-          var i = this;
+        (g.prototype.scrollToRow = function (e, t, i) {
+          var o = this;
           return new Promise(function (n, r) {
-            var a = i.rowManager.findRow(e);
+            var a = o.rowManager.findRow(e);
             a
-              ? i.rowManager
-                  .scrollToRow(a, t, o)
+              ? o.rowManager
+                  .scrollToRow(a, t, i)
                   .then(function () {
                     n();
                   })
@@ -8940,10 +10039,10 @@
                 r("Scroll Error - No matching row found"));
           });
         }),
-        (g.prototype.moveRow = function (e, t, o) {
-          var i = this.rowManager.findRow(e);
-          i
-            ? i.moveToRow(t, o)
+        (g.prototype.moveRow = function (e, t, i) {
+          var o = this.rowManager.findRow(e);
+          o
+            ? o.moveToRow(t, i)
             : console.warn("Move Error - No matching row found:", e);
         }),
         (g.prototype.getRows = function (e) {
@@ -8957,9 +10056,9 @@
           );
         }),
         (g.prototype.getRowPosition = function (e, t) {
-          var o = this.rowManager.findRow(e);
-          return o
-            ? this.rowManager.getRowPosition(o, t)
+          var i = this.rowManager.findRow(e);
+          return i
+            ? this.rowManager.getRowPosition(i, t)
             : (console.warn("Position Error - No matching row found:", e), !1);
         }),
         (g.prototype.copyToClipboard = function (e) {
@@ -9031,11 +10130,11 @@
             );
           t.visible ? t.hide() : t.show();
         }),
-        (g.prototype.addColumn = function (e, t, o) {
-          var i = this;
+        (g.prototype.addColumn = function (e, t, i) {
+          var o = this;
           return new Promise(function (n, r) {
-            var a = i.columnManager.findColumn(o);
-            i.columnManager
+            var a = o.columnManager.findColumn(i);
+            o.columnManager
               .addColumn(e, t, a)
               .then(function (e) {
                 n(e.getComponent());
@@ -9047,33 +10146,33 @@
         }),
         (g.prototype.deleteColumn = function (e) {
           var t = this;
-          return new Promise(function (o, i) {
+          return new Promise(function (i, o) {
             var n = t.columnManager.findColumn(e);
             n
               ? n
                   .delete()
                   .then(function () {
-                    o();
+                    i();
                   })
                   .catch(function (e) {
-                    i(e);
+                    o(e);
                   })
               : (console.warn(
                   "Column Delete Error - No matching column found:",
                   e,
                 ),
-                i());
+                o());
           });
         }),
         (g.prototype.updateColumnDefinition = function (e, t) {
-          var o = this;
-          return new Promise(function (i, n) {
-            var r = o.columnManager.findColumn(e);
+          var i = this;
+          return new Promise(function (o, n) {
+            var r = i.columnManager.findColumn(e);
             r
               ? r
                   .updateDefinition(t)
                   .then(function (e) {
-                    i(e);
+                    o(e);
                   })
                   .catch(function (e) {
                     n(e);
@@ -9085,22 +10184,22 @@
                 n());
           });
         }),
-        (g.prototype.moveColumn = function (e, t, o) {
-          var i = this.columnManager.findColumn(e),
+        (g.prototype.moveColumn = function (e, t, i) {
+          var o = this.columnManager.findColumn(e),
             n = this.columnManager.findColumn(t);
-          i
+          o
             ? n
-              ? this.columnManager.moveColumn(i, n, o)
+              ? this.columnManager.moveColumn(o, n, i)
               : console.warn("Move Error - No matching column found:", n)
             : console.warn("Move Error - No matching column found:", e);
         }),
-        (g.prototype.scrollToColumn = function (e, t, o) {
-          var i = this;
+        (g.prototype.scrollToColumn = function (e, t, i) {
+          var o = this;
           return new Promise(function (n, r) {
-            var a = i.columnManager.findColumn(e);
+            var a = o.columnManager.findColumn(e);
             a
-              ? i.columnManager
-                  .scrollToColumn(a, t, o)
+              ? o.columnManager
+                  .scrollToColumn(a, t, i)
                   .then(function () {
                     n();
                   })
@@ -9144,17 +10243,17 @@
           this.modExists("sort", !0) &&
             (this.modules.sort.clear(), this.rowManager.sorterRefresh());
         }),
-        (g.prototype.setFilter = function (e, t, o, i) {
+        (g.prototype.setFilter = function (e, t, i, o) {
           this.modExists("filter", !0) &&
-            (this.modules.filter.setFilter(e, t, o, i),
+            (this.modules.filter.setFilter(e, t, i, o),
             this.rowManager.filterRefresh());
         }),
         (g.prototype.refreshFilter = function () {
           this.modExists("filter", !0) && this.rowManager.filterRefresh();
         }),
-        (g.prototype.addFilter = function (e, t, o, i) {
+        (g.prototype.addFilter = function (e, t, i, o) {
           this.modExists("filter", !0) &&
-            (this.modules.filter.addFilter(e, t, o, i),
+            (this.modules.filter.addFilter(e, t, i, o),
             this.rowManager.filterRefresh());
         }),
         (g.prototype.getFilters = function (e) {
@@ -9184,8 +10283,8 @@
         }),
         (g.prototype.setHeaderFilterValue = function (e, t) {
           if (this.modExists("filter", !0)) {
-            var o = this.columnManager.findColumn(e);
-            if (!o)
+            var i = this.columnManager.findColumn(e);
+            if (!i)
               return (
                 console.warn(
                   "Column Filter Error - No matching column found:",
@@ -9193,16 +10292,16 @@
                 ),
                 !1
               );
-            this.modules.filter.setHeaderFilterValue(o, t);
+            this.modules.filter.setHeaderFilterValue(i, t);
           }
         }),
         (g.prototype.getHeaderFilters = function () {
           if (this.modExists("filter", !0))
             return this.modules.filter.getHeaderFilters();
         }),
-        (g.prototype.removeFilter = function (e, t, o) {
+        (g.prototype.removeFilter = function (e, t, i) {
           this.modExists("filter", !0) &&
-            (this.modules.filter.removeFilter(e, t, o),
+            (this.modules.filter.removeFilter(e, t, i),
             this.rowManager.filterRefresh());
         }),
         (g.prototype.clearFilter = function (e) {
@@ -9257,8 +10356,8 @@
           var t = [];
           return (
             this.rowManager.rows.forEach(function (e) {
-              var o = e.validate();
-              !0 !== o && (t = t.concat(o));
+              var i = e.validate();
+              !0 !== i && (t = t.concat(i));
             }),
             !t.length || t
           );
@@ -9276,19 +10375,19 @@
         }),
         (g.prototype.setPageToRow = function (e) {
           var t = this;
-          return new Promise(function (o, i) {
+          return new Promise(function (i, o) {
             t.options.pagination &&
             t.modExists("page") &&
             (e = t.rowManager.findRow(e))
               ? t.modules.page
                   .setPageToRow(e)
                   .then(function () {
-                    o();
-                  })
-                  .catch(function () {
                     i();
                   })
-              : i();
+                  .catch(function () {
+                    o();
+                  })
+              : o();
           });
         }),
         (g.prototype.setPageSize = function (e) {
@@ -9490,24 +10589,24 @@
             this.modules.history.clear()
           );
         }),
-        (g.prototype.download = function (e, t, o, i) {
+        (g.prototype.download = function (e, t, i, o) {
           this.modExists("download", !0) &&
-            this.modules.download.download(e, t, o, i);
+            this.modules.download.download(e, t, i, o);
         }),
-        (g.prototype.downloadToTab = function (e, t, o, i) {
+        (g.prototype.downloadToTab = function (e, t, i, o) {
           this.modExists("download", !0) &&
-            this.modules.download.download(e, t, o, i, !0);
+            this.modules.download.download(e, t, i, o, !0);
         }),
-        (g.prototype.tableComms = function (e, t, o, i) {
-          this.modules.comms.receive(e, t, o, i);
+        (g.prototype.tableComms = function (e, t, i, o) {
+          this.modules.comms.receive(e, t, i, o);
         }),
         (g.prototype.moduleBindings = {}),
-        (g.prototype.extendModule = function (e, t, o) {
+        (g.prototype.extendModule = function (e, t, i) {
           if (g.prototype.moduleBindings[e]) {
-            var i = g.prototype.moduleBindings[e].prototype[t];
-            if (i)
-              if ("object" == (void 0 === o ? "undefined" : r(o)))
-                for (var n in o) i[n] = o[n];
+            var o = g.prototype.moduleBindings[e].prototype[t];
+            if (o)
+              if ("object" == (void 0 === i ? "undefined" : r(i)))
+                for (var n in i) o[n] = i[n];
               else
                 console.warn(
                   "Module Error - Invalid value type, it must be an object",
@@ -9545,12 +10644,12 @@
           },
           deepClone: function (e) {
             var t = Object.assign(Array.isArray(e) ? [] : {}, e);
-            for (var o in e)
-              null != e[o] &&
-                "object" === r(e[o]) &&
-                (e[o] instanceof Date
-                  ? (t[o] = new Date(e[o]))
-                  : (t[o] = this.deepClone(e[o])));
+            for (var i in e)
+              null != e[i] &&
+                "object" === r(e[i]) &&
+                (e[i] instanceof Date
+                  ? (t[i] = new Date(e[i]))
+                  : (t[i] = this.deepClone(e[i])));
             return t;
           },
         }),
@@ -9564,17 +10663,17 @@
             t > -1 && g.prototype.comms.tables.splice(t, 1);
           },
           lookupTable: function (e, t) {
-            var o,
-              i,
+            var i,
+              o,
               n = [];
             if ("string" == typeof e) {
-              if ((o = document.querySelectorAll(e)).length)
-                for (var r = 0; r < o.length; r++)
-                  (i = g.prototype.comms.matchElement(o[r])) && n.push(i);
+              if ((i = document.querySelectorAll(e)).length)
+                for (var r = 0; r < i.length; r++)
+                  (o = g.prototype.comms.matchElement(i[r])) && n.push(o);
             } else
               ("undefined" != typeof HTMLElement && e instanceof HTMLElement) ||
               e instanceof g
-                ? (i = g.prototype.comms.matchElement(e)) && n.push(i)
+                ? (o = g.prototype.comms.matchElement(e)) && n.push(o)
                 : Array.isArray(e)
                 ? e.forEach(function (e) {
                     n = n.concat(g.prototype.comms.lookupTable(e));
@@ -9648,19 +10747,19 @@
           },
           fitDataStretch: function (e) {
             var t = this,
-              o = 0,
-              i = this.table.rowManager.element.clientWidth,
+              i = 0,
+              o = this.table.rowManager.element.clientWidth,
               n = 0,
               r = !1;
-            e.forEach(function (e, i) {
+            e.forEach(function (e, o) {
               e.widthFixed || e.reinitializeWidth(),
                 (t.table.options.responsiveLayout
                   ? e.modules.responsive.visible
                   : e.visible) && (r = e),
-                e.visible && (o += e.getWidth());
+                e.visible && (i += e.getWidth());
             }),
               r
-                ? ((n = i - o + r.getWidth()),
+                ? ((n = o - i + r.getWidth()),
                   this.table.options.responsiveLayout &&
                     this.table.modExists("responsiveLayout", !0) &&
                     (r.setWidth(0),
@@ -9672,8 +10771,8 @@
           },
           fitColumns: function (e) {
             var t,
-              o,
-              i = this.table.element.clientWidth,
+              i,
+              o = this.table.element.clientWidth,
               n = 0,
               r = 0,
               a = 0,
@@ -9684,11 +10783,11 @@
             function d(e) {
               return "string" == typeof e
                 ? e.indexOf("%") > -1
-                  ? (i / 100) * parseInt(e)
+                  ? (o / 100) * parseInt(e)
                   : parseInt(e)
                 : e;
             }
-            function p(e, t, o, i) {
+            function p(e, t, i, o) {
               var n = [],
                 r = 0,
                 s = 0,
@@ -9698,40 +10797,40 @@
                 h = 0,
                 m = [];
               function f(e) {
-                return o * (e.column.definition.widthGrow || 1);
+                return i * (e.column.definition.widthGrow || 1);
               }
               function g(e) {
-                return d(e.width) - o * (e.column.definition.widthShrink || 0);
+                return d(e.width) - i * (e.column.definition.widthShrink || 0);
               }
               return (
                 e.forEach(function (e, r) {
-                  var a = i ? g(e) : f(e);
+                  var a = o ? g(e) : f(e);
                   e.column.minWidth >= a
                     ? n.push(e)
                     : e.column.maxWidth && e.column.maxWidth < a
                     ? ((e.width = e.column.maxWidth),
                       (t -= e.column.maxWidth),
-                      (c -= i
+                      (c -= o
                         ? e.column.definition.widthShrink || 1
                         : e.column.definition.widthGrow || 1) &&
-                        (o = Math.floor(t / c)))
+                        (i = Math.floor(t / c)))
                     : (m.push(e),
-                      (h += i
+                      (h += o
                         ? e.column.definition.widthShrink || 1
                         : e.column.definition.widthGrow || 1));
                 }),
                 n.length
                   ? (n.forEach(function (e) {
-                      (r += i
+                      (r += o
                         ? e.width - e.column.minWidth
                         : e.column.minWidth),
                         (e.width = e.column.minWidth);
                     }),
                     (u = (s = t - r) - (l = h ? Math.floor(s / h) : s) * h),
-                    (u += p(m, s, l, i)))
+                    (u += p(m, s, l, o)))
                   : ((u = h ? t - Math.floor(t / h) * h : t),
                     m.forEach(function (e) {
-                      e.width = i ? g(e) : f(e);
+                      e.width = o ? g(e) : f(e);
                     })),
                 u
               );
@@ -9741,33 +10840,33 @@
               this.table.modules.responsiveLayout.update(),
               this.table.rowManager.element.scrollHeight >
                 this.table.rowManager.element.clientHeight &&
-                (i -=
+                (o -=
                   this.table.rowManager.element.offsetWidth -
                   this.table.rowManager.element.clientWidth),
               e.forEach(function (e) {
-                var t, o, i;
+                var t, i, o;
                 e.visible &&
                   ((t = e.definition.width),
-                  (o = parseInt(e.minWidth)),
+                  (i = parseInt(e.minWidth)),
                   t
-                    ? ((i = d(t)),
-                      (n += i > o ? i : o),
+                    ? ((o = d(t)),
+                      (n += o > i ? o : i),
                       e.definition.widthShrink &&
-                        (l.push({ column: e, width: i > o ? i : o }),
+                        (l.push({ column: e, width: o > i ? o : i }),
                         (c += e.definition.widthShrink)))
                     : (s.push({ column: e, width: 0 }),
                       (a += e.definition.widthGrow || 1)));
               }),
-              (r = i - n),
+              (r = o - n),
               (t = Math.floor(r / a));
             u = p(s, r, t, !1);
             s.length && u > 0 && (s[s.length - 1].width += +u),
               s.forEach(function (e) {
                 r -= e.width;
               }),
-              (o = Math.abs(u) + r) > 0 &&
+              (i = Math.abs(u) + r) > 0 &&
                 c &&
-                (u = p(l, o, Math.floor(o / c), !0)),
+                (u = p(l, i, Math.floor(i / c), !0)),
               l.length && (l[l.length - 1].width -= u),
               s.forEach(function (e) {
                 e.column.setWidth(e.width);
@@ -9803,10 +10902,10 @@
             : (this.langList[e] = t);
         }),
         (v.prototype._setLangProp = function (e, t) {
-          for (var o in t)
-            e[o] && "object" == r(e[o])
-              ? this._setLangProp(e[o], t[o])
-              : (e[o] = t[o]);
+          for (var i in t)
+            e[i] && "object" == r(e[i])
+              ? this._setLangProp(e[i], t[i])
+              : (e[i] = t[i]);
         }),
         (v.prototype.setLocale = function (e) {
           var t = this;
@@ -9816,14 +10915,14 @@
               (e = navigator.language.toLowerCase()),
             e && !t.langList[e])
           ) {
-            var o = e.split("-")[0];
-            t.langList[o]
+            var i = e.split("-")[0];
+            t.langList[i]
               ? (console.warn(
                   "Localization Error - Exact matching locale not found, using closest match: ",
                   e,
-                  o,
+                  i,
                 ),
-                (e = o))
+                (e = i))
               : (console.warn(
                   "Localization Error - Matching locale not found, using default: ",
                   e,
@@ -9833,11 +10932,11 @@
           (t.locale = e),
             (t.lang = g.prototype.helpers.deepClone(t.langList.default || {})),
             "default" != e &&
-              (function e(t, o) {
-                for (var i in t)
-                  "object" == r(t[i])
-                    ? (o[i] || (o[i] = {}), e(t[i], o[i]))
-                    : (o[i] = t[i]);
+              (function e(t, i) {
+                for (var o in t)
+                  "object" == r(t[o])
+                    ? (i[o] || (i[o] = {}), e(t[o], i[o]))
+                    : (i[o] = t[o]);
               })(t.langList[e], t.lang),
             t.table.options.localized.call(t.table, t.locale, t.lang),
             t._executeBindings();
@@ -9849,17 +10948,17 @@
           return e ? this.langList[e] : this.lang;
         }),
         (v.prototype.getText = function (e, t) {
-          var o = (e = t ? e + "|" + t : e).split("|");
-          return this._getLangElement(o, this.locale) || "";
+          var i = (e = t ? e + "|" + t : e).split("|");
+          return this._getLangElement(i, this.locale) || "";
         }),
         (v.prototype._getLangElement = function (e, t) {
-          var o = this.lang;
+          var i = this.lang;
           return (
             e.forEach(function (e) {
               var t;
-              o && ((t = o[e]), (o = void 0 !== t && t));
+              i && ((t = i[e]), (i = void 0 !== t && t));
             }),
-            o
+            i
           );
         }),
         (v.prototype.bind = function (e, t) {
@@ -9870,11 +10969,11 @@
         (v.prototype._executeBindings = function () {
           var e = this,
             t = function (t) {
-              e.bindings[t].forEach(function (o) {
-                o(e.getText(t), e.lang);
+              e.bindings[t].forEach(function (i) {
+                i(e.getText(t), e.lang);
               });
             };
-          for (var o in e.bindings) t(o);
+          for (var i in e.bindings) t(i);
         }),
         (v.prototype.langs = {
           default: {
@@ -9903,19 +11002,19 @@
       };
       (y.prototype.getConnections = function (e) {
         var t = this,
-          o = [];
+          i = [];
         return (
           g.prototype.comms.lookupTable(e).forEach(function (e) {
-            t.table !== e && o.push(e);
+            t.table !== e && i.push(e);
           }),
-          o
+          i
         );
       }),
-        (y.prototype.send = function (e, t, o, i) {
+        (y.prototype.send = function (e, t, i, o) {
           var n = this,
             r = this.getConnections(e);
           r.forEach(function (e) {
-            e.tableComms(n.table.element, t, o, i);
+            e.tableComms(n.table.element, t, i, o);
           }),
             !r.length &&
               e &&
@@ -9924,9 +11023,9 @@
                 e,
               );
         }),
-        (y.prototype.receive = function (e, t, o, i) {
+        (y.prototype.receive = function (e, t, i, o) {
           if (this.table.modExists(t))
-            return this.table.modules[t].commsReceived(e, o, i);
+            return this.table.modules[t].commsReceived(e, i, o);
           console.warn("Inter-table Comms Error - no such module:", t);
         }),
         g.prototype.registerModule("comms", y);
@@ -9943,17 +11042,17 @@
       };
       (w.prototype.initializeColumn = function (e) {
         var t = this,
-          o = !1,
-          i = {};
+          i = !1,
+          o = {};
         this.allowedTypes.forEach(function (n) {
           var r,
             a = "accessor" + (n.charAt(0).toUpperCase() + n.slice(1));
           e.definition[a] &&
             (r = t.lookupAccessor(e.definition[a])) &&
-            ((o = !0),
-            (i[a] = { accessor: r, params: e.definition[a + "Params"] || {} }));
+            ((i = !0),
+            (o[a] = { accessor: r, params: e.definition[a + "Params"] || {} }));
         }),
-          o && (e.modules.accessor = i);
+          i && (e.modules.accessor = o);
       }),
         (w.prototype.lookupAccessor = function (e) {
           var t = !1;
@@ -9972,22 +11071,22 @@
           return t;
         }),
         (w.prototype.transformRow = function (e, t) {
-          var o = "accessor" + (t.charAt(0).toUpperCase() + t.slice(1)),
-            i = e.getComponent(),
+          var i = "accessor" + (t.charAt(0).toUpperCase() + t.slice(1)),
+            o = e.getComponent(),
             n = g.prototype.helpers.deepClone(e.data || {});
           return (
             this.table.columnManager.traverse(function (e) {
               var r, a, s, l;
               e.modules.accessor &&
                 (a =
-                  e.modules.accessor[o] || e.modules.accessor.accessor || !1) &&
+                  e.modules.accessor[i] || e.modules.accessor.accessor || !1) &&
                 "undefined" != (r = e.getFieldValue(n)) &&
                 ((l = e.getComponent()),
                 (s =
                   "function" == typeof a.params
-                    ? a.params(r, n, t, l, i)
+                    ? a.params(r, n, t, l, o)
                     : a.params),
-                e.setFieldValue(n, a.accessor(r, n, t, s, l, i)));
+                e.setFieldValue(n, a.accessor(r, n, t, s, l, o)));
             }),
             n
           );
@@ -10063,8 +11162,8 @@
         }),
         (E.prototype.setParams = function (e, t) {
           if (t)
-            for (var o in ((this.params = this.params || {}), e))
-              this.params[o] = e[o];
+            for (var i in ((this.params = this.params || {}), e))
+              this.params[i] = e[i];
           else this.params = e;
         }),
         (E.prototype.getParams = function () {
@@ -10078,8 +11177,8 @@
         (E.prototype._loadDefaultConfig = function (e) {
           var t = this;
           if (!t.config || e)
-            for (var o in ((t.config = {}), t.defaultConfig))
-              t.config[o] = t.defaultConfig[o];
+            for (var i in ((t.config = {}), t.defaultConfig))
+              t.config[i] = t.defaultConfig[i];
         }),
         (E.prototype.setUrl = function (e) {
           this.url = e;
@@ -10112,14 +11211,14 @@
           );
         }),
         (E.prototype._loadDataStandard = function (e, t) {
-          var o = this;
-          return new Promise(function (i, n) {
-            o.sendRequest(e)
+          var i = this;
+          return new Promise(function (o, n) {
+            i.sendRequest(e)
               .then(function (r) {
-                o.table.rowManager
+                i.table.rowManager
                   .setData(r, e, t)
                   .then(function () {
-                    i();
+                    o();
                   })
                   .catch(function (e) {
                     n(e);
@@ -10131,72 +11230,72 @@
           });
         }),
         (E.prototype.generateParamsList = function (e, t) {
-          var o = this,
-            i = [];
+          var i = this,
+            o = [];
           if (((t = t || ""), Array.isArray(e)))
             e.forEach(function (e, n) {
-              i = i.concat(o.generateParamsList(e, t ? t + "[" + n + "]" : n));
+              o = o.concat(i.generateParamsList(e, t ? t + "[" + n + "]" : n));
             });
           else if ("object" === (void 0 === e ? "undefined" : r(e)))
             for (var n in e)
-              i = i.concat(
-                o.generateParamsList(e[n], t ? t + "[" + n + "]" : n),
+              o = o.concat(
+                i.generateParamsList(e[n], t ? t + "[" + n + "]" : n),
               );
-          else i.push({ key: t, value: e });
-          return i;
+          else o.push({ key: t, value: e });
+          return o;
         }),
         (E.prototype.serializeParams = function (e) {
           var t = this.generateParamsList(e),
-            o = [];
+            i = [];
           return (
             t.forEach(function (e) {
-              o.push(
+              i.push(
                 encodeURIComponent(e.key) + "=" + encodeURIComponent(e.value),
               );
             }),
-            o.join("&")
+            i.join("&")
           );
         }),
         (E.prototype.sendRequest = function (e) {
           var t,
-            o = this,
             i = this,
-            n = i.url;
+            o = this,
+            n = o.url;
           return (
-            i.requestOrder++,
-            (t = i.requestOrder),
-            i._loadDefaultConfig(),
+            o.requestOrder++,
+            (t = o.requestOrder),
+            o._loadDefaultConfig(),
             new Promise(function (r, a) {
               !1 !==
-              i.table.options.ajaxRequesting.call(o.table, i.url, i.params)
-                ? ((i.loading = !0),
-                  e || i.showLoader(),
-                  o
-                    .loaderPromise(n, i.config, i.params)
+              o.table.options.ajaxRequesting.call(i.table, o.url, o.params)
+                ? ((o.loading = !0),
+                  e || o.showLoader(),
+                  i
+                    .loaderPromise(n, o.config, o.params)
                     .then(function (e) {
-                      t === i.requestOrder
-                        ? (i.table.options.ajaxResponse &&
-                            (e = i.table.options.ajaxResponse.call(
-                              i.table,
-                              i.url,
-                              i.params,
+                      t === o.requestOrder
+                        ? (o.table.options.ajaxResponse &&
+                            (e = o.table.options.ajaxResponse.call(
+                              o.table,
+                              o.url,
+                              o.params,
                               e,
                             )),
                           r(e),
-                          i.hideLoader(),
-                          (i.loading = !1))
+                          o.hideLoader(),
+                          (o.loading = !1))
                         : console.warn(
                             "Ajax Response Blocked - An active ajax request was blocked by an attempt to change table data while the request was being made",
                           );
                     })
                     .catch(function (e) {
                       console.error("Ajax Load Error: ", e),
-                        i.table.options.ajaxError.call(i.table, e),
-                        i.showError(),
+                        o.table.options.ajaxError.call(o.table, e),
+                        o.showError(),
                         setTimeout(function () {
-                          i.hideLoader();
+                          o.hideLoader();
                         }, 3e3),
-                        (i.loading = !1),
+                        (o.loading = !1),
                         a(e);
                     }))
                 : a();
@@ -10236,37 +11335,37 @@
             this.loaderElement.parentNode.removeChild(this.loaderElement);
         }),
         (E.prototype.defaultConfig = { method: "GET" }),
-        (E.prototype.defaultURLGenerator = function (e, t, o) {
+        (E.prototype.defaultURLGenerator = function (e, t, i) {
           return (
             e &&
-              o &&
-              Object.keys(o).length &&
+              i &&
+              Object.keys(i).length &&
               ((t.method && "get" != t.method.toLowerCase()) ||
                 ((t.method = "get"),
                 (e +=
                   (e.includes("?") ? "&" : "?") +
-                  this.modules.ajax.serializeParams(o)))),
+                  this.modules.ajax.serializeParams(i)))),
             e
           );
         }),
-        (E.prototype.defaultLoaderPromise = function (e, t, o) {
-          var i,
+        (E.prototype.defaultLoaderPromise = function (e, t, i) {
+          var o,
             n = this;
           return new Promise(function (a, s) {
             if (
-              ((e = n.urlGenerator.call(n.table, e, t, o)),
+              ((e = n.urlGenerator.call(n.table, e, t, i)),
               "GET" != t.method.toUpperCase())
             )
               if (
-                (i =
+                (o =
                   "object" === r(n.table.options.ajaxContentType)
                     ? n.table.options.ajaxContentType
                     : n.contentTypeFormatters[n.table.options.ajaxContentType])
               ) {
-                for (var l in i.headers)
+                for (var l in o.headers)
                   t.headers || (t.headers = {}),
-                    void 0 === t.headers[l] && (t.headers[l] = i.headers[l]);
-                t.body = i.body.call(n, e, t, o);
+                    void 0 === t.headers[l] && (t.headers[l] = o.headers[l]);
+                t.body = o.body.call(n, e, t, i);
               } else
                 console.warn(
                   "Ajax Error - Invalid ajaxContentType value:",
@@ -10316,17 +11415,17 @@
         (E.prototype.contentTypeFormatters = {
           json: {
             headers: { "Content-Type": "application/json" },
-            body: function (e, t, o) {
-              return JSON.stringify(o);
+            body: function (e, t, i) {
+              return JSON.stringify(i);
             },
           },
           form: {
             headers: {},
-            body: function (e, t, o) {
-              var i = this.generateParamsList(o),
+            body: function (e, t, i) {
+              var o = this.generateParamsList(i),
                 n = new FormData();
               return (
-                i.forEach(function (e) {
+                o.forEach(function (e) {
                   n.append(e.key, e.value);
                 }),
                 n
@@ -10363,7 +11462,7 @@
         (C.prototype._getSelf = function () {
           return this._row;
         });
-      var R = function (e) {
+      var _ = function (e) {
         (this.table = e),
           (this.topCalcs = []),
           (this.botCalcs = []),
@@ -10376,17 +11475,17 @@
           (this.botInitialized = !1),
           this.initialize();
       };
-      (R.prototype.createElement = function () {
+      (_.prototype.createElement = function () {
         var e = document.createElement("div");
         return e.classList.add("tabulator-calcs-holder"), e;
       }),
-        (R.prototype.initialize = function () {
+        (_.prototype.initialize = function () {
           this.genColumn = new l({ field: "value" }, this);
         }),
-        (R.prototype.registerColumnField = function () {}),
-        (R.prototype.initializeColumn = function (e) {
+        (_.prototype.registerColumnField = function () {}),
+        (_.prototype.initializeColumn = function (e) {
           var t = e.definition,
-            o = {
+            i = {
               topCalcParams: t.topCalcParams || {},
               botCalcParams: t.bottomCalcParams || {},
             };
@@ -10394,17 +11493,17 @@
             switch (r(t.topCalc)) {
               case "string":
                 this.calculations[t.topCalc]
-                  ? (o.topCalc = this.calculations[t.topCalc])
+                  ? (i.topCalc = this.calculations[t.topCalc])
                   : console.warn(
                       "Column Calc Error - No such calculation found, ignoring: ",
                       t.topCalc,
                     );
                 break;
               case "function":
-                o.topCalc = t.topCalc;
+                i.topCalc = t.topCalc;
             }
-            o.topCalc &&
-              ((e.modules.columnCalcs = o),
+            i.topCalc &&
+              ((e.modules.columnCalcs = i),
               this.topCalcs.push(e),
               "group" != this.table.options.columnCalcs &&
                 this.initializeTopRow());
@@ -10413,23 +11512,23 @@
             switch (r(t.bottomCalc)) {
               case "string":
                 this.calculations[t.bottomCalc]
-                  ? (o.botCalc = this.calculations[t.bottomCalc])
+                  ? (i.botCalc = this.calculations[t.bottomCalc])
                   : console.warn(
                       "Column Calc Error - No such calculation found, ignoring: ",
                       t.bottomCalc,
                     );
                 break;
               case "function":
-                o.botCalc = t.bottomCalc;
+                i.botCalc = t.bottomCalc;
             }
-            o.botCalc &&
-              ((e.modules.columnCalcs = o),
+            i.botCalc &&
+              ((e.modules.columnCalcs = i),
               this.botCalcs.push(e),
               "group" != this.table.options.columnCalcs &&
                 this.initializeBottomRow());
           }
         }),
-        (R.prototype.removeCalcs = function () {
+        (_.prototype.removeCalcs = function () {
           var e = !1;
           this.topInitialized &&
             ((this.topInitialized = !1),
@@ -10441,7 +11540,7 @@
               (e = !0)),
             e && this.table.rowManager.adjustTableSize();
         }),
-        (R.prototype.initializeTopRow = function () {
+        (_.prototype.initializeTopRow = function () {
           this.topInitialized ||
             (this.table.columnManager
               .getElement()
@@ -10451,17 +11550,17 @@
               ),
             (this.topInitialized = !0));
         }),
-        (R.prototype.initializeBottomRow = function () {
+        (_.prototype.initializeBottomRow = function () {
           this.botInitialized ||
             (this.table.footerManager.prepend(this.botElement),
             (this.botInitialized = !0));
         }),
-        (R.prototype.scrollHorizontal = function (e) {
+        (_.prototype.scrollHorizontal = function (e) {
           this.botInitialized &&
             this.botRow &&
             (this.botRow.getElement().style.marginLeft = -e + "px");
         }),
-        (R.prototype.recalc = function (e) {
+        (_.prototype.recalc = function (e) {
           var t;
           if (this.topInitialized || this.botInitialized) {
             if ((this.rowsToData(e), this.topInitialized)) {
@@ -10491,10 +11590,10 @@
                 this.table.modules.frozenColumns.layout();
           }
         }),
-        (R.prototype.recalcRowGroup = function (e) {
+        (_.prototype.recalcRowGroup = function (e) {
           this.recalcGroup(this.table.modules.groupRows.getRowGroup(e));
         }),
-        (R.prototype.recalcAll = function () {
+        (_.prototype.recalcAll = function () {
           var e = this;
           (this.topCalcs.length || this.botCalcs.length) &&
             ("group" !== this.table.options.columnCalcs &&
@@ -10505,84 +11604,84 @@
                 e.recalcGroup(t);
               }));
         }),
-        (R.prototype.recalcGroup = function (e) {
-          var t, o;
+        (_.prototype.recalcGroup = function (e) {
+          var t, i;
           e &&
             e.calcs &&
             (e.calcs.bottom &&
               ((t = this.rowsToData(e.rows)),
-              (o = this.generateRowData("bottom", t)),
-              e.calcs.bottom.updateData(o),
+              (i = this.generateRowData("bottom", t)),
+              e.calcs.bottom.updateData(i),
               e.calcs.bottom.reinitialize()),
             e.calcs.top &&
               ((t = this.rowsToData(e.rows)),
-              (o = this.generateRowData("top", t)),
-              e.calcs.top.updateData(o),
+              (i = this.generateRowData("top", t)),
+              e.calcs.top.updateData(i),
               e.calcs.top.reinitialize()));
         }),
-        (R.prototype.generateTopRow = function (e) {
+        (_.prototype.generateTopRow = function (e) {
           return this.generateRow("top", this.rowsToData(e));
         }),
-        (R.prototype.generateBottomRow = function (e) {
+        (_.prototype.generateBottomRow = function (e) {
           return this.generateRow("bottom", this.rowsToData(e));
         }),
-        (R.prototype.rowsToData = function (e) {
+        (_.prototype.rowsToData = function (e) {
           var t = this,
-            o = [];
+            i = [];
           return (
             e.forEach(function (e) {
               if (
-                (o.push(e.getData()),
+                (i.push(e.getData()),
                 t.table.options.dataTree &&
                   t.table.options.dataTreeChildColumnCalcs &&
                   e.modules.dataTree.open)
               ) {
-                var i = t.rowsToData(
+                var o = t.rowsToData(
                   t.table.modules.dataTree.getFilteredTreeChildren(e),
                 );
-                o = o.concat(i);
+                i = i.concat(o);
               }
             }),
-            o
+            i
           );
         }),
-        (R.prototype.generateRow = function (e, t) {
-          var o,
-            i = this,
+        (_.prototype.generateRow = function (e, t) {
+          var i,
+            o = this,
             n = this.generateRowData(e, t);
           return (
-            i.table.modExists("mutator") && i.table.modules.mutator.disable(),
-            (o = new p(n, this, "calc")),
-            i.table.modExists("mutator") && i.table.modules.mutator.enable(),
-            o
+            o.table.modExists("mutator") && o.table.modules.mutator.disable(),
+            (i = new p(n, this, "calc")),
+            o.table.modExists("mutator") && o.table.modules.mutator.enable(),
+            i
               .getElement()
               .classList.add("tabulator-calcs", "tabulator-calcs-" + e),
-            (o.component = !1),
-            (o.getComponent = function () {
+            (i.component = !1),
+            (i.getComponent = function () {
               return (
                 this.component || (this.component = new C(this)), this.component
               );
             }),
-            (o.generateCells = function () {
+            (i.generateCells = function () {
               var t = [];
-              i.table.columnManager.columnsByIndex.forEach(function (n) {
-                i.genColumn.setField(n.getField()),
-                  (i.genColumn.hozAlign = n.hozAlign),
+              o.table.columnManager.columnsByIndex.forEach(function (n) {
+                o.genColumn.setField(n.getField()),
+                  (o.genColumn.hozAlign = n.hozAlign),
                   n.definition[e + "CalcFormatter"] &&
-                  i.table.modExists("format")
-                    ? (i.genColumn.modules.format = {
-                        formatter: i.table.modules.format.getFormatter(
+                  o.table.modExists("format")
+                    ? (o.genColumn.modules.format = {
+                        formatter: o.table.modules.format.getFormatter(
                           n.definition[e + "CalcFormatter"],
                         ),
                         params: n.definition[e + "CalcFormatterParams"] || {},
                       })
-                    : (i.genColumn.modules.format = {
+                    : (o.genColumn.modules.format = {
                         formatter:
-                          i.table.modules.format.getFormatter("plaintext"),
+                          o.table.modules.format.getFormatter("plaintext"),
                         params: {},
                       }),
-                  (i.genColumn.definition.cssClass = n.definition.cssClass);
-                var r = new m(i.genColumn, o);
+                  (o.genColumn.definition.cssClass = n.definition.cssClass);
+                var r = new m(o.genColumn, i);
                 r.getElement(),
                   (r.column = n),
                   r.setWidth(),
@@ -10592,12 +11691,12 @@
               }),
                 (this.cells = t);
             }),
-            o
+            i
           );
         }),
-        (R.prototype.generateRowData = function (e, t) {
-          var o,
-            i,
+        (_.prototype.generateRowData = function (e, t) {
+          var i,
+            o,
             n = {},
             r = "top" == e ? this.topCalcs : this.botCalcs,
             a = "top" == e ? "topCalc" : "botCalc";
@@ -10609,35 +11708,35 @@
                 (t.forEach(function (t) {
                   r.push(e.getFieldValue(t));
                 }),
-                (i = a + "Params"),
-                (o =
-                  "function" == typeof e.modules.columnCalcs[i]
-                    ? e.modules.columnCalcs[i](r, t)
-                    : e.modules.columnCalcs[i]),
-                e.setFieldValue(n, e.modules.columnCalcs[a](r, t, o)));
+                (o = a + "Params"),
+                (i =
+                  "function" == typeof e.modules.columnCalcs[o]
+                    ? e.modules.columnCalcs[o](r, t)
+                    : e.modules.columnCalcs[o]),
+                e.setFieldValue(n, e.modules.columnCalcs[a](r, t, i)));
             }),
             n
           );
         }),
-        (R.prototype.hasTopCalcs = function () {
+        (_.prototype.hasTopCalcs = function () {
           return !!this.topCalcs.length;
         }),
-        (R.prototype.hasBottomCalcs = function () {
+        (_.prototype.hasBottomCalcs = function () {
           return !!this.botCalcs.length;
         }),
-        (R.prototype.redraw = function () {
+        (_.prototype.redraw = function () {
           this.topRow && this.topRow.normalizeHeight(!0),
             this.botRow && this.botRow.normalizeHeight(!0);
         }),
-        (R.prototype.getResults = function () {
+        (_.prototype.getResults = function () {
           var e = this,
             t = {};
           return (
             this.table.options.groupBy && this.table.modExists("groupRows")
               ? this.table.modules.groupRows
                   .getGroups(!0)
-                  .forEach(function (o) {
-                    t[o.getKey()] = e.getGroupResults(o);
+                  .forEach(function (i) {
+                    t[i.getKey()] = e.getGroupResults(i);
                   })
               : (t = {
                   top: this.topRow ? this.topRow.getData() : {},
@@ -10646,90 +11745,90 @@
             t
           );
         }),
-        (R.prototype.getGroupResults = function (e) {
+        (_.prototype.getGroupResults = function (e) {
           var t = this,
-            o = e._getSelf(),
-            i = e.getSubGroups(),
+            i = e._getSelf(),
+            o = e.getSubGroups(),
             n = {};
           return (
-            i.forEach(function (e) {
+            o.forEach(function (e) {
               n[e.getKey()] = t.getGroupResults(e);
             }),
             {
-              top: o.calcs.top ? o.calcs.top.getData() : {},
-              bottom: o.calcs.bottom ? o.calcs.bottom.getData() : {},
+              top: i.calcs.top ? i.calcs.top.getData() : {},
+              bottom: i.calcs.bottom ? i.calcs.bottom.getData() : {},
               groups: n,
             }
           );
         }),
-        (R.prototype.calculations = {
-          avg: function (e, t, o) {
-            var i = 0,
-              n = void 0 !== o.precision ? o.precision : 2;
+        (_.prototype.calculations = {
+          avg: function (e, t, i) {
+            var o = 0,
+              n = void 0 !== i.precision ? i.precision : 2;
             return (
               e.length &&
-                ((i = e.reduce(function (e, t) {
+                ((o = e.reduce(function (e, t) {
                   return Number(e) + Number(t);
                 })),
-                (i /= e.length),
-                (i = !1 !== n ? i.toFixed(n) : i)),
-              parseFloat(i).toString()
+                (o /= e.length),
+                (o = !1 !== n ? o.toFixed(n) : o)),
+              parseFloat(o).toString()
             );
           },
-          max: function (e, t, o) {
-            var i = null,
-              n = void 0 !== o.precision && o.precision;
+          max: function (e, t, i) {
+            var o = null,
+              n = void 0 !== i.precision && i.precision;
             return (
               e.forEach(function (e) {
-                ((e = Number(e)) > i || null === i) && (i = e);
+                ((e = Number(e)) > o || null === o) && (o = e);
               }),
-              null !== i ? (!1 !== n ? i.toFixed(n) : i) : ""
+              null !== o ? (!1 !== n ? o.toFixed(n) : o) : ""
             );
           },
-          min: function (e, t, o) {
-            var i = null,
-              n = void 0 !== o.precision && o.precision;
+          min: function (e, t, i) {
+            var o = null,
+              n = void 0 !== i.precision && i.precision;
             return (
               e.forEach(function (e) {
-                ((e = Number(e)) < i || null === i) && (i = e);
+                ((e = Number(e)) < o || null === o) && (o = e);
               }),
-              null !== i ? (!1 !== n ? i.toFixed(n) : i) : ""
+              null !== o ? (!1 !== n ? o.toFixed(n) : o) : ""
             );
           },
-          sum: function (e, t, o) {
-            var i = 0,
-              n = void 0 !== o.precision && o.precision;
+          sum: function (e, t, i) {
+            var o = 0,
+              n = void 0 !== i.precision && i.precision;
             return (
               e.length &&
                 e.forEach(function (e) {
-                  (e = Number(e)), (i += isNaN(e) ? 0 : Number(e));
+                  (e = Number(e)), (o += isNaN(e) ? 0 : Number(e));
                 }),
-              !1 !== n ? i.toFixed(n) : i
+              !1 !== n ? o.toFixed(n) : o
             );
           },
-          concat: function (e, t, o) {
-            var i = 0;
+          concat: function (e, t, i) {
+            var o = 0;
             return (
               e.length &&
-                (i = e.reduce(function (e, t) {
+                (o = e.reduce(function (e, t) {
                   return String(e) + String(t);
                 })),
-              i
+              o
             );
           },
-          count: function (e, t, o) {
-            var i = 0;
+          count: function (e, t, i) {
+            var o = 0;
             return (
               e.length &&
                 e.forEach(function (e) {
-                  e && i++;
+                  e && o++;
                 }),
-              i
+              o
             );
           },
         }),
-        g.prototype.registerModule("columnCalcs", R);
-      var x = function (e) {
+        g.prototype.registerModule("columnCalcs", _);
+      var R = function (e) {
         (this.table = e),
           (this.mode = !0),
           (this.pasteParser = function () {}),
@@ -10738,18 +11837,18 @@
           (this.rowRange = !1),
           (this.blocked = !0);
       };
-      (x.prototype.initialize = function () {
+      (R.prototype.initialize = function () {
         var e = this;
         (this.mode = this.table.options.clipboard),
           (this.rowRange = this.table.options.clipboardCopyRowRange),
           (!0 !== this.mode && "copy" !== this.mode) ||
             this.table.element.addEventListener("copy", function (t) {
-              var o, i;
+              var i, o;
               if (!e.blocked) {
                 if ((t.preventDefault(), e.customSelection))
-                  (o = e.customSelection),
+                  (i = e.customSelection),
                     e.table.options.clipboardCopyFormatter &&
-                      (o = e.table.options.clipboardCopyFormatter("plain", o));
+                      (i = e.table.options.clipboardCopyFormatter("plain", i));
                 else {
                   var n = e.table.modules.export.generateExportList(
                     e.table.options.clipboardCopyConfig,
@@ -10757,23 +11856,23 @@
                     e.rowRange,
                     "clipboard",
                   );
-                  (o = (i = e.table.modules.export.genereateHTMLTable(n))
+                  (i = (o = e.table.modules.export.genereateHTMLTable(n))
                     ? e.generatePlainContent(n)
                     : ""),
                     e.table.options.clipboardCopyFormatter &&
-                      ((o = e.table.options.clipboardCopyFormatter("plain", o)),
-                      (i = e.table.options.clipboardCopyFormatter("html", i)));
+                      ((i = e.table.options.clipboardCopyFormatter("plain", i)),
+                      (o = e.table.options.clipboardCopyFormatter("html", o)));
                 }
                 window.clipboardData && window.clipboardData.setData
-                  ? window.clipboardData.setData("Text", o)
+                  ? window.clipboardData.setData("Text", i)
                   : t.clipboardData && t.clipboardData.setData
-                  ? (t.clipboardData.setData("text/plain", o),
-                    i && t.clipboardData.setData("text/html", i))
+                  ? (t.clipboardData.setData("text/plain", i),
+                    o && t.clipboardData.setData("text/html", o))
                   : t.originalEvent &&
                     t.originalEvent.clipboardData.setData &&
-                    (t.originalEvent.clipboardData.setData("text/plain", o),
-                    i && t.originalEvent.clipboardData.setData("text/html", i)),
-                  e.table.options.clipboardCopied.call(e.table, o, i),
+                    (t.originalEvent.clipboardData.setData("text/plain", i),
+                    o && t.originalEvent.clipboardData.setData("text/html", o)),
+                  e.table.options.clipboardCopied.call(e.table, i, o),
                   e.reset();
               }
             }),
@@ -10784,42 +11883,42 @@
           this.setPasteParser(this.table.options.clipboardPasteParser),
           this.setPasteAction(this.table.options.clipboardPasteAction);
       }),
-        (x.prototype.reset = function () {
+        (R.prototype.reset = function () {
           (this.blocked = !0), (this.customSelection = !1);
         }),
-        (x.prototype.generatePlainContent = function (e) {
+        (R.prototype.generatePlainContent = function (e) {
           var t = [];
           return (
             e.forEach(function (e) {
-              var o = [];
+              var i = [];
               e.columns.forEach(function (t) {
-                var i = "";
+                var o = "";
                 if (t)
                   if (
                     ("group" === e.type && (t.value = t.component.getKey()),
                     null === t.value)
                   )
-                    i = "";
+                    o = "";
                   else
                     switch (r(t.value)) {
                       case "object":
-                        i = JSON.stringify(t.value);
+                        o = JSON.stringify(t.value);
                         break;
                       case "undefined":
-                        i = "";
+                        o = "";
                         break;
                       default:
-                        i = t.value;
+                        o = t.value;
                     }
-                o.push(i);
+                i.push(o);
               }),
-                t.push(o.join("\t"));
+                t.push(i.join("\t"));
             }),
             t.join("\n")
           );
         }),
-        (x.prototype.copy = function (e, t) {
-          var o, i;
+        (R.prototype.copy = function (e, t) {
+          var i, o;
           (this.blocked = !1),
             (this.customSelection = !1),
             (!0 !== this.mode && "copy" !== this.mode) ||
@@ -10828,21 +11927,21 @@
                 ? ((e = document.createRange()).selectNodeContents(
                     this.table.element,
                   ),
-                  (o = window.getSelection()).toString() &&
+                  (i = window.getSelection()).toString() &&
                     t &&
-                    (this.customSelection = o.toString()),
-                  o.removeAllRanges(),
-                  o.addRange(e))
+                    (this.customSelection = i.toString()),
+                  i.removeAllRanges(),
+                  i.addRange(e))
                 : void 0 !== document.selection &&
                   void 0 !== document.body.createTextRange &&
-                  ((i = document.body.createTextRange()).moveToElementText(
+                  ((o = document.body.createTextRange()).moveToElementText(
                     this.table.element,
                   ),
-                  i.select()),
+                  o.select()),
               document.execCommand("copy"),
-              o && o.removeAllRanges());
+              i && i.removeAllRanges());
         }),
-        (x.prototype.setPasteAction = function (e) {
+        (R.prototype.setPasteAction = function (e) {
           switch (void 0 === e ? "undefined" : r(e)) {
             case "string":
               (this.pasteAction = this.pasteActions[e]),
@@ -10856,7 +11955,7 @@
               this.pasteAction = e;
           }
         }),
-        (x.prototype.setPasteParser = function (e) {
+        (R.prototype.setPasteParser = function (e) {
           switch (void 0 === e ? "undefined" : r(e)) {
             case "string":
               (this.pasteParser = this.pasteParsers[e]),
@@ -10870,30 +11969,30 @@
               this.pasteParser = e;
           }
         }),
-        (x.prototype.paste = function (e) {
-          var t, o, i;
+        (R.prototype.paste = function (e) {
+          var t, i, o;
           this.checkPaseOrigin(e) &&
             ((t = this.getPasteData(e)),
-            (o = this.pasteParser.call(this, t))
+            (i = this.pasteParser.call(this, t))
               ? (e.preventDefault(),
-                this.table.modExists("mutator") && (o = this.mutateData(o)),
-                (i = this.pasteAction.call(this, o)),
-                this.table.options.clipboardPasted.call(this.table, t, o, i))
+                this.table.modExists("mutator") && (i = this.mutateData(i)),
+                (o = this.pasteAction.call(this, i)),
+                this.table.options.clipboardPasted.call(this.table, t, i, o))
               : this.table.options.clipboardPasteError.call(this.table, t));
         }),
-        (x.prototype.mutateData = function (e) {
+        (R.prototype.mutateData = function (e) {
           var t = this,
-            o = [];
+            i = [];
           return (
             Array.isArray(e)
               ? e.forEach(function (e) {
-                  o.push(t.table.modules.mutator.transformRow(e, "clipboard"));
+                  i.push(t.table.modules.mutator.transformRow(e, "clipboard"));
                 })
-              : (o = e),
-            o
+              : (i = e),
+            i
           );
         }),
-        (x.prototype.checkPaseOrigin = function (e) {
+        (R.prototype.checkPaseOrigin = function (e) {
           var t = !0;
           return (
             ("DIV" != e.target.tagName ||
@@ -10902,7 +12001,7 @@
             t
           );
         }),
-        (x.prototype.getPasteData = function (e) {
+        (R.prototype.getPasteData = function (e) {
           var t;
           return (
             window.clipboardData && window.clipboardData.getData
@@ -10915,11 +12014,11 @@
             t
           );
         }),
-        (x.prototype.pasteParsers = {
+        (R.prototype.pasteParsers = {
           table: function (e) {
             var t = [],
-              o = !0,
-              i = this.table.columnManager.columns,
+              i = !0,
+              o = this.table.columnManager.columns,
               n = [],
               r = [];
             return (
@@ -10929,7 +12028,7 @@
               !(!t.length || (1 === t.length && t[0].length < 2)) &&
                 (!0,
                 t[0].forEach(function (e) {
-                  var t = i.find(function (t) {
+                  var t = o.find(function (t) {
                     return (
                       e &&
                       t.definition.title &&
@@ -10937,25 +12036,25 @@
                       t.definition.title.trim() === e.trim()
                     );
                   });
-                  t ? n.push(t) : (o = !1);
+                  t ? n.push(t) : (i = !1);
                 }),
-                o ||
-                  ((o = !0),
+                i ||
+                  ((i = !0),
                   (n = []),
                   t[0].forEach(function (e) {
-                    var t = i.find(function (t) {
+                    var t = o.find(function (t) {
                       return (
                         e && t.field && e.trim() && t.field.trim() === e.trim()
                       );
                     });
-                    t ? n.push(t) : (o = !1);
+                    t ? n.push(t) : (i = !1);
                   }),
-                  o || (n = this.table.columnManager.columnsByIndex)),
-                o && t.shift(),
+                  i || (n = this.table.columnManager.columnsByIndex)),
+                i && t.shift(),
                 t.forEach(function (e) {
                   var t = {};
-                  e.forEach(function (e, o) {
-                    n[o] && (t[n[o].field] = e);
+                  e.forEach(function (e, i) {
+                    n[i] && (t[n[i].field] = e);
                   }),
                     r.push(t);
                 }),
@@ -10963,7 +12062,7 @@
             );
           },
         }),
-        (x.prototype.pasteActions = {
+        (R.prototype.pasteActions = {
           replace: function (e) {
             return this.table.setData(e);
           },
@@ -10974,8 +12073,8 @@
             return this.table.addData(e);
           },
         }),
-        g.prototype.registerModule("clipboard", x);
-      var _ = function (e) {
+        g.prototype.registerModule("clipboard", R);
+      var x = function (e) {
         (this.table = e),
           (this.indent = 10),
           (this.field = ""),
@@ -10986,76 +12085,76 @@
           (this.startOpen = function () {}),
           (this.displayIndex = 0);
       };
-      (_.prototype.initialize = function () {
+      (x.prototype.initialize = function () {
         var e = null,
           t = this.table.columnManager.getFirstVisibileColumn(),
-          o = this.table.options;
+          i = this.table.options;
         switch (
-          ((this.field = o.dataTreeChildField),
-          (this.indent = o.dataTreeChildIndent),
-          (this.elementField = o.dataTreeElementColumn || (!!t && t.field)),
-          o.dataTreeBranchElement &&
-            (!0 === o.dataTreeBranchElement
+          ((this.field = i.dataTreeChildField),
+          (this.indent = i.dataTreeChildIndent),
+          (this.elementField = i.dataTreeElementColumn || (!!t && t.field)),
+          i.dataTreeBranchElement &&
+            (!0 === i.dataTreeBranchElement
               ? ((this.branchEl = document.createElement("div")),
                 this.branchEl.classList.add("tabulator-data-tree-branch"))
-              : "string" == typeof o.dataTreeBranchElement
+              : "string" == typeof i.dataTreeBranchElement
               ? (((e = document.createElement("div")).innerHTML =
-                  o.dataTreeBranchElement),
+                  i.dataTreeBranchElement),
                 (this.branchEl = e.firstChild))
-              : (this.branchEl = o.dataTreeBranchElement)),
-          o.dataTreeCollapseElement
-            ? "string" == typeof o.dataTreeCollapseElement
+              : (this.branchEl = i.dataTreeBranchElement)),
+          i.dataTreeCollapseElement
+            ? "string" == typeof i.dataTreeCollapseElement
               ? (((e = document.createElement("div")).innerHTML =
-                  o.dataTreeCollapseElement),
+                  i.dataTreeCollapseElement),
                 (this.collapseEl = e.firstChild))
-              : (this.collapseEl = o.dataTreeCollapseElement)
+              : (this.collapseEl = i.dataTreeCollapseElement)
             : ((this.collapseEl = document.createElement("div")),
               this.collapseEl.classList.add("tabulator-data-tree-control"),
               (this.collapseEl.tabIndex = 0),
               (this.collapseEl.innerHTML =
                 "<div class='tabulator-data-tree-control-collapse'></div>")),
-          o.dataTreeExpandElement
-            ? "string" == typeof o.dataTreeExpandElement
+          i.dataTreeExpandElement
+            ? "string" == typeof i.dataTreeExpandElement
               ? (((e = document.createElement("div")).innerHTML =
-                  o.dataTreeExpandElement),
+                  i.dataTreeExpandElement),
                 (this.expandEl = e.firstChild))
-              : (this.expandEl = o.dataTreeExpandElement)
+              : (this.expandEl = i.dataTreeExpandElement)
             : ((this.expandEl = document.createElement("div")),
               this.expandEl.classList.add("tabulator-data-tree-control"),
               (this.expandEl.tabIndex = 0),
               (this.expandEl.innerHTML =
                 "<div class='tabulator-data-tree-control-expand'></div>")),
-          r(o.dataTreeStartExpanded))
+          r(i.dataTreeStartExpanded))
         ) {
           case "boolean":
             this.startOpen = function (e, t) {
-              return o.dataTreeStartExpanded;
+              return i.dataTreeStartExpanded;
             };
             break;
           case "function":
-            this.startOpen = o.dataTreeStartExpanded;
+            this.startOpen = i.dataTreeStartExpanded;
             break;
           default:
             this.startOpen = function (e, t) {
-              return o.dataTreeStartExpanded[t];
+              return i.dataTreeStartExpanded[t];
             };
         }
       }),
-        (_.prototype.initializeRow = function (e) {
+        (x.prototype.initializeRow = function (e) {
           var t = e.getData()[this.field],
-            o = Array.isArray(t),
-            i =
-              o ||
-              (!o &&
+            i = Array.isArray(t),
+            o =
+              i ||
+              (!i &&
                 "object" === (void 0 === t ? "undefined" : r(t)) &&
                 null !== t);
-          !i &&
+          !o &&
             e.modules.dataTree &&
             e.modules.dataTree.branchEl &&
             e.modules.dataTree.branchEl.parentNode.removeChild(
               e.modules.dataTree.branchEl,
             ),
-            !i &&
+            !o &&
               e.modules.dataTree &&
               e.modules.dataTree.controlEl &&
               e.modules.dataTree.controlEl.parentNode.removeChild(
@@ -11064,48 +12163,48 @@
             (e.modules.dataTree = {
               index: e.modules.dataTree ? e.modules.dataTree.index : 0,
               open:
-                !!i &&
+                !!o &&
                 (e.modules.dataTree
                   ? e.modules.dataTree.open
                   : this.startOpen(e.getComponent(), 0)),
               controlEl:
-                !(!e.modules.dataTree || !i) && e.modules.dataTree.controlEl,
+                !(!e.modules.dataTree || !o) && e.modules.dataTree.controlEl,
               branchEl:
-                !(!e.modules.dataTree || !i) && e.modules.dataTree.branchEl,
+                !(!e.modules.dataTree || !o) && e.modules.dataTree.branchEl,
               parent: !!e.modules.dataTree && e.modules.dataTree.parent,
-              children: i,
+              children: o,
             });
         }),
-        (_.prototype.layoutRow = function (e) {
+        (x.prototype.layoutRow = function (e) {
           var t = (
               this.elementField ? e.getCell(this.elementField) : e.getCells()[0]
             ).getElement(),
-            o = e.modules.dataTree;
-          o.branchEl &&
-            (o.branchEl.parentNode &&
-              o.branchEl.parentNode.removeChild(o.branchEl),
-            (o.branchEl = !1)),
-            o.controlEl &&
-              (o.controlEl.parentNode &&
-                o.controlEl.parentNode.removeChild(o.controlEl),
-              (o.controlEl = !1)),
+            i = e.modules.dataTree;
+          i.branchEl &&
+            (i.branchEl.parentNode &&
+              i.branchEl.parentNode.removeChild(i.branchEl),
+            (i.branchEl = !1)),
+            i.controlEl &&
+              (i.controlEl.parentNode &&
+                i.controlEl.parentNode.removeChild(i.controlEl),
+              (i.controlEl = !1)),
             this.generateControlElement(e, t),
-            e.getElement().classList.add("tabulator-tree-level-" + o.index),
-            o.index &&
+            e.getElement().classList.add("tabulator-tree-level-" + i.index),
+            i.index &&
               (this.branchEl
-                ? ((o.branchEl = this.branchEl.cloneNode(!0)),
-                  t.insertBefore(o.branchEl, t.firstChild),
+                ? ((i.branchEl = this.branchEl.cloneNode(!0)),
+                  t.insertBefore(i.branchEl, t.firstChild),
                   this.table.rtl
-                    ? (o.branchEl.style.marginRight =
-                        (o.branchEl.offsetWidth + o.branchEl.style.marginLeft) *
-                          (o.index - 1) +
-                        o.index * this.indent +
+                    ? (i.branchEl.style.marginRight =
+                        (i.branchEl.offsetWidth + i.branchEl.style.marginLeft) *
+                          (i.index - 1) +
+                        i.index * this.indent +
                         "px")
-                    : (o.branchEl.style.marginLeft =
-                        (o.branchEl.offsetWidth +
-                          o.branchEl.style.marginRight) *
-                          (o.index - 1) +
-                        o.index * this.indent +
+                    : (i.branchEl.style.marginLeft =
+                        (i.branchEl.offsetWidth +
+                          i.branchEl.style.marginRight) *
+                          (i.index - 1) +
+                        i.index * this.indent +
                         "px"))
                 : this.table.rtl
                 ? (t.style.paddingRight =
@@ -11114,7 +12213,7 @@
                         .getComputedStyle(t, null)
                         .getPropertyValue("padding-right"),
                     ) +
-                    o.index * this.indent +
+                    i.index * this.indent +
                     "px")
                 : (t.style.paddingLeft =
                     parseInt(
@@ -11122,89 +12221,89 @@
                         .getComputedStyle(t, null)
                         .getPropertyValue("padding-left"),
                     ) +
-                    o.index * this.indent +
+                    i.index * this.indent +
                     "px"));
         }),
-        (_.prototype.generateControlElement = function (e, t) {
-          var o = this,
-            i = e.modules.dataTree,
-            n = ((t = t || e.getCells()[0].getElement()), i.controlEl);
-          !1 !== i.children &&
-            (i.open
-              ? ((i.controlEl = this.collapseEl.cloneNode(!0)),
-                i.controlEl.addEventListener("click", function (t) {
-                  t.stopPropagation(), o.collapseRow(e);
+        (x.prototype.generateControlElement = function (e, t) {
+          var i = this,
+            o = e.modules.dataTree,
+            n = ((t = t || e.getCells()[0].getElement()), o.controlEl);
+          !1 !== o.children &&
+            (o.open
+              ? ((o.controlEl = this.collapseEl.cloneNode(!0)),
+                o.controlEl.addEventListener("click", function (t) {
+                  t.stopPropagation(), i.collapseRow(e);
                 }))
-              : ((i.controlEl = this.expandEl.cloneNode(!0)),
-                i.controlEl.addEventListener("click", function (t) {
-                  t.stopPropagation(), o.expandRow(e);
+              : ((o.controlEl = this.expandEl.cloneNode(!0)),
+                o.controlEl.addEventListener("click", function (t) {
+                  t.stopPropagation(), i.expandRow(e);
                 })),
-            i.controlEl.addEventListener("mousedown", function (e) {
+            o.controlEl.addEventListener("mousedown", function (e) {
               e.stopPropagation();
             }),
             n && n.parentNode === t
-              ? n.parentNode.replaceChild(i.controlEl, n)
-              : t.insertBefore(i.controlEl, t.firstChild));
+              ? n.parentNode.replaceChild(o.controlEl, n)
+              : t.insertBefore(o.controlEl, t.firstChild));
         }),
-        (_.prototype.setDisplayIndex = function (e) {
+        (x.prototype.setDisplayIndex = function (e) {
           this.displayIndex = e;
         }),
-        (_.prototype.getDisplayIndex = function () {
+        (x.prototype.getDisplayIndex = function () {
           return this.displayIndex;
         }),
-        (_.prototype.getRows = function (e) {
+        (x.prototype.getRows = function (e) {
           var t = this,
-            o = [];
+            i = [];
           return (
-            e.forEach(function (e, i) {
+            e.forEach(function (e, o) {
               var n;
-              o.push(e),
+              i.push(e),
                 e instanceof p &&
                   (e.create(),
                   (n = e.modules.dataTree.children).index ||
                     !1 === n.children ||
                     t.getChildren(e).forEach(function (e) {
-                      e.create(), o.push(e);
+                      e.create(), i.push(e);
                     }));
             }),
-            o
+            i
           );
         }),
-        (_.prototype.getChildren = function (e, t) {
-          var o = this,
-            i = e.modules.dataTree,
+        (x.prototype.getChildren = function (e, t) {
+          var i = this,
+            o = e.modules.dataTree,
             n = [],
             r = [];
           return (
-            !1 !== i.children &&
-              (i.open || t) &&
-              (Array.isArray(i.children) ||
-                (i.children = this.generateChildren(e)),
+            !1 !== o.children &&
+              (o.open || t) &&
+              (Array.isArray(o.children) ||
+                (o.children = this.generateChildren(e)),
               (n =
                 this.table.modExists("filter") &&
                 this.table.options.dataTreeFilter
-                  ? this.table.modules.filter.filter(i.children)
-                  : i.children),
+                  ? this.table.modules.filter.filter(o.children)
+                  : o.children),
               this.table.modExists("sort") &&
                 this.table.options.dataTreeSort &&
                 this.table.modules.sort.sort(n),
               n.forEach(function (e) {
                 r.push(e),
-                  o.getChildren(e).forEach(function (e) {
+                  i.getChildren(e).forEach(function (e) {
                     r.push(e);
                   });
               })),
             r
           );
         }),
-        (_.prototype.generateChildren = function (e) {
+        (x.prototype.generateChildren = function (e) {
           var t = this,
-            o = [],
-            i = e.getData()[this.field];
+            i = [],
+            o = e.getData()[this.field];
           return (
-            Array.isArray(i) || (i = [i]),
-            i.forEach(function (i) {
-              var n = new p(i || {}, t.table.rowManager);
+            Array.isArray(o) || (o = [o]),
+            o.forEach(function (o) {
+              var n = new p(o || {}, t.table.rowManager);
               n.create(),
                 (n.modules.dataTree.index = e.modules.dataTree.index + 1),
                 (n.modules.dataTree.parent = e),
@@ -11213,15 +12312,15 @@
                     n.getComponent(),
                     n.modules.dataTree.index,
                   )),
-                o.push(n);
+                i.push(n);
             }),
-            o
+            i
           );
         }),
-        (_.prototype.expandRow = function (e, t) {
-          var o = e.modules.dataTree;
-          !1 !== o.children &&
-            ((o.open = !0),
+        (x.prototype.expandRow = function (e, t) {
+          var i = e.modules.dataTree;
+          !1 !== i.children &&
+            ((i.open = !0),
             e.reinitialize(),
             this.table.rowManager.refreshActiveData("tree", !1, !0),
             this.table.options.dataTreeRowExpanded(
@@ -11229,7 +12328,7 @@
               e.modules.dataTree.index,
             ));
         }),
-        (_.prototype.collapseRow = function (e) {
+        (x.prototype.collapseRow = function (e) {
           var t = e.modules.dataTree;
           !1 !== t.children &&
             ((t.open = !1),
@@ -11240,20 +12339,20 @@
               e.modules.dataTree.index,
             ));
         }),
-        (_.prototype.toggleRow = function (e) {
+        (x.prototype.toggleRow = function (e) {
           var t = e.modules.dataTree;
           !1 !== t.children &&
             (t.open ? this.collapseRow(e) : this.expandRow(e));
         }),
-        (_.prototype.getTreeParent = function (e) {
+        (x.prototype.getTreeParent = function (e) {
           return (
             !!e.modules.dataTree.parent &&
             e.modules.dataTree.parent.getComponent()
           );
         }),
-        (_.prototype.getFilteredTreeChildren = function (e) {
+        (x.prototype.getFilteredTreeChildren = function (e) {
           var t = e.modules.dataTree,
-            o = [];
+            i = [];
           return (
             t.children &&
               (Array.isArray(t.children) ||
@@ -11263,23 +12362,23 @@
                 ? this.table.modules.filter.filter(t.children)
                 : t.children
               ).forEach(function (e) {
-                e instanceof p && o.push(e);
+                e instanceof p && i.push(e);
               })),
-            o
+            i
           );
         }),
-        (_.prototype.rowDelete = function (e) {
+        (x.prototype.rowDelete = function (e) {
           var t,
-            o = e.modules.dataTree.parent;
-          o &&
-            (!1 !== (t = this.findChildIndex(e, o)) &&
-              o.data[this.field].splice(t, 1),
-            o.data[this.field].length || delete o.data[this.field],
-            this.initializeRow(o),
-            this.layoutRow(o)),
+            i = e.modules.dataTree.parent;
+          i &&
+            (!1 !== (t = this.findChildIndex(e, i)) &&
+              i.data[this.field].splice(t, 1),
+            i.data[this.field].length || delete i.data[this.field],
+            this.initializeRow(i),
+            this.layoutRow(i)),
             this.table.rowManager.refreshActiveData("tree", !1, !0);
         }),
-        (_.prototype.addTreeChildRow = function (e, t, o, i) {
+        (x.prototype.addTreeChildRow = function (e, t, i, o) {
           var n = !1;
           "string" == typeof t && (t = JSON.parse(t)),
             Array.isArray(e.data[this.field]) ||
@@ -11288,45 +12387,45 @@
                 e.getComponent(),
                 e.modules.dataTree.index,
               ))),
-            void 0 !== i &&
-              !1 !== (n = this.findChildIndex(i, e)) &&
-              e.data[this.field].splice(o ? n : n + 1, 0, t),
+            void 0 !== o &&
+              !1 !== (n = this.findChildIndex(o, e)) &&
+              e.data[this.field].splice(i ? n : n + 1, 0, t),
             !1 === n &&
-              (o ? e.data[this.field].unshift(t) : e.data[this.field].push(t)),
+              (i ? e.data[this.field].unshift(t) : e.data[this.field].push(t)),
             this.initializeRow(e),
             this.layoutRow(e),
             this.table.rowManager.refreshActiveData("tree", !1, !0);
         }),
-        (_.prototype.findChildIndex = function (e, t) {
-          var o = this,
-            i = !1;
+        (x.prototype.findChildIndex = function (e, t) {
+          var i = this,
+            o = !1;
           return (
             "object" == (void 0 === e ? "undefined" : r(e))
               ? e instanceof p
-                ? (i = e.data)
+                ? (o = e.data)
                 : e instanceof d
-                ? (i = e._getSelf().data)
+                ? (o = e._getSelf().data)
                 : "undefined" != typeof HTMLElement &&
                   e instanceof HTMLElement &&
                   t.modules.dataTree &&
-                  (i = t.modules.dataTree.children.find(function (t) {
+                  (o = t.modules.dataTree.children.find(function (t) {
                     return t instanceof p && t.element === e;
                   })) &&
-                  (i = i.data)
-              : (i =
+                  (o = o.data)
+              : (o =
                   null != e &&
                   t.data[this.field].find(function (t) {
-                    return t.data[o.table.options.index] == e;
+                    return t.data[i.table.options.index] == e;
                   })),
-            i &&
+            o &&
               (Array.isArray(t.data[this.field]) &&
-                (i = t.data[this.field].indexOf(i)),
-              -1 == i && (i = !1)),
-            i
+                (o = t.data[this.field].indexOf(o)),
+              -1 == o && (o = !1)),
+            o
           );
         }),
-        (_.prototype.getTreeChildren = function (e, t, o) {
-          var i = this,
+        (x.prototype.getTreeChildren = function (e, t, i) {
+          var o = this,
             n = e.modules.dataTree,
             r = [];
           return (
@@ -11336,28 +12435,28 @@
               n.children.forEach(function (e) {
                 e instanceof p &&
                   (r.push(t ? e.getComponent() : e),
-                  o && (r = r.concat(i.getTreeChildren(e, t, o))));
+                  i && (r = r.concat(o.getTreeChildren(e, t, i))));
               })),
             r
           );
         }),
-        (_.prototype.checkForRestyle = function (e) {
+        (x.prototype.checkForRestyle = function (e) {
           e.row.cells.indexOf(e) || e.row.reinitialize();
         }),
-        (_.prototype.getChildField = function () {
+        (x.prototype.getChildField = function () {
           return this.field;
         }),
-        (_.prototype.redrawNeeded = function (e) {
+        (x.prototype.redrawNeeded = function (e) {
           return (
             (!!this.field && void 0 !== e[this.field]) ||
             (!!this.elementField && void 0 !== e[this.elementField])
           );
         }),
-        g.prototype.registerModule("dataTree", _);
+        g.prototype.registerModule("dataTree", x);
       var M = function (e) {
         this.table = e;
       };
-      (M.prototype.download = function (e, t, o, i, n) {
+      (M.prototype.download = function (e, t, i, o, n) {
         var r = this,
           a = !1;
         if (
@@ -11368,13 +12467,13 @@
             : console.warn("Download Error - No such download type found: ", e),
           a)
         ) {
-          var s = this.generateExportList(i);
-          a.call(this.table, s, o || {}, function (o, i) {
+          var s = this.generateExportList(o);
+          a.call(this.table, s, i || {}, function (i, o) {
             n
               ? !0 === n
-                ? r.triggerDownload(o, i, e, t, !0)
-                : n(o)
-              : r.triggerDownload(o, i, e, t);
+                ? r.triggerDownload(i, o, e, t, !0)
+                : n(i)
+              : r.triggerDownload(i, o, e, t);
           });
         }
       }),
@@ -11385,16 +12484,16 @@
               e || this.table.options.downloadRowRange,
               "download",
             ),
-            o = this.table.options.groupHeaderDownload;
+            i = this.table.options.groupHeaderDownload;
           return (
-            o && !Array.isArray(o) && (o = [o]),
+            i && !Array.isArray(i) && (i = [i]),
             t.forEach(function (e) {
               var t;
               "group" === e.type &&
                 ((t = e.columns[0]),
-                o &&
-                  o[e.indent] &&
-                  (t.value = o[e.indent](
+                i &&
+                  i[e.indent] &&
+                  (t.value = i[e.indent](
                     t.value,
                     e.component._group.getRowCount(),
                     e.component._group.getData(),
@@ -11404,17 +12503,17 @@
             t
           );
         }),
-        (M.prototype.triggerDownload = function (e, t, o, i, n) {
+        (M.prototype.triggerDownload = function (e, t, i, o, n) {
           var r = document.createElement("a"),
             a = new Blob([e], { type: t });
-          i = i || "Tabulator." + ("function" == typeof o ? "txt" : o);
+          o = o || "Tabulator." + ("function" == typeof i ? "txt" : i);
           (a = this.table.options.downloadReady.call(this.table, e, a)) &&
             (n
               ? window.open(window.URL.createObjectURL(a))
               : navigator.msSaveOrOpenBlob
-              ? navigator.msSaveOrOpenBlob(a, i)
+              ? navigator.msSaveOrOpenBlob(a, o)
               : (r.setAttribute("href", window.URL.createObjectURL(a)),
-                r.setAttribute("download", i),
+                r.setAttribute("download", o),
                 (r.style.display = "none"),
                 document.body.appendChild(r),
                 r.click(),
@@ -11422,13 +12521,13 @@
             this.table.options.downloadComplete &&
               this.table.options.downloadComplete());
         }),
-        (M.prototype.commsReceived = function (e, t, o) {
+        (M.prototype.commsReceived = function (e, t, i) {
           if ("intercept" === t)
-            this.download(o.type, "", o.options, o.active, o.intercept);
+            this.download(i.type, "", i.options, i.active, i.intercept);
         }),
         (M.prototype.downloaders = {
-          csv: function (e, t, o) {
-            var i = t && t.delimiter ? t.delimiter : ",",
+          csv: function (e, t, i) {
+            var o = t && t.delimiter ? t.delimiter : ",",
               n = [],
               a = [];
             e.forEach(function (e) {
@@ -11468,16 +12567,16 @@
                       t.push('"' + String(e.value).split('"').join('""') + '"');
                     }
                   }),
-                    n.push(t.join(i));
+                    n.push(t.join(o));
               }
             }),
-              a.length && n.unshift(a.join(i)),
+              a.length && n.unshift(a.join(o)),
               (n = n.join("\n")),
               t.bom && (n = "\ufeff" + n),
-              o(n, "text/csv");
+              i(n, "text/csv");
           },
-          json: function (e, t, o) {
-            var i = [];
+          json: function (e, t, i) {
+            var o = [];
             e.forEach(function (e) {
               var t = {};
               switch (e.type) {
@@ -11497,13 +12596,13 @@
                   e.columns.forEach(function (e) {
                     e && (t[e.component.getField()] = e.value);
                   }),
-                    i.push(t);
+                    o.push(t);
               }
             }),
-              o((i = JSON.stringify(i, null, "\t")), "application/json");
+              i((o = JSON.stringify(o, null, "\t")), "application/json");
           },
-          pdf: function (e, t, o) {
-            var i = [],
+          pdf: function (e, t, i) {
+            var o = [],
               n = [],
               a = {},
               s = t.rowGroupStyles || {
@@ -11521,10 +12620,10 @@
               c = t.jsPDF || {},
               u = t && t.title ? t.title : "";
             function d(e, t) {
-              var o = [];
+              var i = [];
               return (
                 e.columns.forEach(function (e) {
-                  var i;
+                  var o;
                   if (e) {
                     switch (r(e.value)) {
                       case "object":
@@ -11534,16 +12633,16 @@
                       case "null":
                         e.value = "";
                     }
-                    (i = {
+                    (o = {
                       content: e.value,
                       colSpan: e.width,
                       rowSpan: e.height,
                     }),
-                      t && (i.styles = t),
-                      o.push(i);
-                  } else o.push("");
+                      t && (o.styles = t),
+                      i.push(o);
+                  } else i.push("");
                 }),
-                o
+                i
               );
             }
             c.orientation || (c.orientation = t.orientation || "landscape"),
@@ -11551,7 +12650,7 @@
               e.forEach(function (e) {
                 switch (e.type) {
                   case "header":
-                    i.push(d(e));
+                    o.push(d(e));
                     break;
                   case "group":
                     n.push(d(e, s));
@@ -11574,19 +12673,19 @@
                 (a.addPageContent = function (e) {
                   p.text(u, 40, 30);
                 }),
-              (a.head = i),
+              (a.head = o),
               (a.body = n),
               p.autoTable(a),
               t && t.documentProcessing && t.documentProcessing(p),
-              o(p.output("arraybuffer"), "application/pdf");
+              i(p.output("arraybuffer"), "application/pdf");
           },
-          xlsx: function (e, t, o) {
-            var i = t.sheetName || "Sheet1",
+          xlsx: function (e, t, i) {
+            var o = t.sheetName || "Sheet1",
               n = XLSX.utils.book_new();
             function a() {
               var t = [],
-                o = [],
-                i = {},
+                i = [],
+                o = {},
                 n = {
                   s: { c: 0, r: 0 },
                   e: {
@@ -11599,7 +12698,7 @@
                   },
                 };
               return (
-                e.forEach(function (e, i) {
+                e.forEach(function (e, o) {
                   var n = [];
                   e.columns.forEach(function (e, t) {
                     e
@@ -11609,21 +12708,21 @@
                             : JSON.stringify(e.value),
                         ),
                         (e.width > 1 || e.height > -1) &&
-                          o.push({
-                            s: { r: i, c: t },
-                            e: { r: i + e.height - 1, c: t + e.width - 1 },
+                          i.push({
+                            s: { r: o, c: t },
+                            e: { r: o + e.height - 1, c: t + e.width - 1 },
                           }))
                       : n.push("");
                   }),
                     t.push(n);
                 }),
-                XLSX.utils.sheet_add_aoa(i, t),
-                (i["!ref"] = XLSX.utils.encode_range(n)),
-                o.length && (i["!merges"] = o),
-                i
+                XLSX.utils.sheet_add_aoa(o, t),
+                (o["!ref"] = XLSX.utils.encode_range(n)),
+                i.length && (o["!merges"] = i),
+                o
               );
             }
-            if (((n.SheetNames = []), (n.Sheets = {}), t.sheetOnly)) o(a());
+            if (((n.SheetNames = []), (n.Sheets = {}), t.sheetOnly)) i(a());
             else {
               if (t.sheets)
                 for (var s in t.sheets)
@@ -11643,18 +12742,18 @@
                           },
                         },
                       ));
-              else n.SheetNames.push(i), (n.Sheets[i] = a());
+              else n.SheetNames.push(o), (n.Sheets[o] = a());
               t.documentProcessing && (n = t.documentProcessing(n)),
-                o(
+                i(
                   (function (e) {
                     for (
                       var t = new ArrayBuffer(e.length),
-                        o = new Uint8Array(t),
-                        i = 0;
-                      i != e.length;
-                      ++i
+                        i = new Uint8Array(t),
+                        o = 0;
+                      o != e.length;
+                      ++o
                     )
-                      o[i] = 255 & e.charCodeAt(i);
+                      i[o] = 255 & e.charCodeAt(o);
                     return t;
                   })(
                     XLSX.write(n, {
@@ -11667,9 +12766,9 @@
                 );
             }
           },
-          html: function (e, t, o) {
+          html: function (e, t, i) {
             this.modExists("export", !0) &&
-              o(this.modules.export.genereateHTMLTable(e), "text/html");
+              i(this.modules.export.genereateHTMLTable(e), "text/html");
           },
         }),
         g.prototype.registerModule("download", M);
@@ -11683,7 +12782,7 @@
       };
       (S.prototype.initializeColumn = function (e) {
         var t = this,
-          o = {
+          i = {
             editor: !1,
             blocked: !1,
             check: e.definition.editable,
@@ -11697,14 +12796,14 @@
                 "DEPRECATION WARNING - the tick editor has been deprecated, please use the tickCross editor",
               )),
               t.editors[e.definition.editor]
-                ? (o.editor = t.editors[e.definition.editor])
+                ? (i.editor = t.editors[e.definition.editor])
                 : console.warn(
                     "Editor Error - No such editor found: ",
                     e.definition.editor,
                   );
             break;
           case "function":
-            o.editor = e.definition.editor;
+            i.editor = e.definition.editor;
             break;
           case "boolean":
             !0 === e.definition.editor &&
@@ -11715,34 +12814,34 @@
                       "DEPRECATION WARNING - the tick editor has been deprecated, please use the tickCross editor",
                     )),
                   t.editors[e.definition.formatter]
-                    ? (o.editor = t.editors[e.definition.formatter])
-                    : (o.editor = t.editors.input))
+                    ? (i.editor = t.editors[e.definition.formatter])
+                    : (i.editor = t.editors.input))
                 : console.warn(
                     "Editor Error - Cannot auto lookup editor for a custom formatter: ",
                     e.definition.formatter,
                   ));
         }
-        o.editor && (e.modules.edit = o);
+        i.editor && (e.modules.edit = i);
       }),
         (S.prototype.getCurrentCell = function () {
           return !!this.currentCell && this.currentCell.getComponent();
         }),
         (S.prototype.clearEditor = function (e) {
           var t,
-            o = this.currentCell;
-          if (((this.invalidEdit = !1), o)) {
+            i = this.currentCell;
+          if (((this.invalidEdit = !1), i)) {
             for (
               this.currentCell = !1,
-                t = o.getElement(),
+                t = i.getElement(),
                 e
-                  ? o.validate()
+                  ? i.validate()
                   : t.classList.remove("tabulator-validation-fail"),
                 t.classList.remove("tabulator-editing");
               t.firstChild;
 
             )
               t.removeChild(t.firstChild);
-            o.row.getElement().classList.remove("tabulator-row-editing");
+            i.row.getElement().classList.remove("tabulator-row-editing");
           }
         }),
         (S.prototype.cancelEdit = function () {
@@ -11762,17 +12861,17 @@
         }),
         (S.prototype.bindEditor = function (e) {
           var t = this,
-            o = e.getElement(!0);
-          o.setAttribute("tabindex", 0),
-            o.addEventListener("click", function (e) {
-              o.classList.contains("tabulator-editing") ||
-                o.focus({ preventScroll: !0 });
+            i = e.getElement(!0);
+          i.setAttribute("tabindex", 0),
+            i.addEventListener("click", function (e) {
+              i.classList.contains("tabulator-editing") ||
+                i.focus({ preventScroll: !0 });
             }),
-            o.addEventListener("mousedown", function (e) {
+            i.addEventListener("mousedown", function (e) {
               2 === e.button ? e.preventDefault() : (t.mouseClick = !0);
             }),
-            o.addEventListener("focus", function (o) {
-              t.recursionBlock || t.edit(e, o, !1);
+            i.addEventListener("focus", function (i) {
+              t.recursionBlock || t.edit(e, i, !1);
             });
         }),
         (S.prototype.focusCellNoEvent = function (e, t) {
@@ -11787,16 +12886,16 @@
         (S.prototype.focusScrollAdjust = function (e) {
           if ("virtual" == this.table.rowManager.getRenderMode()) {
             var t = this.table.rowManager.element.scrollTop,
-              o =
+              i =
                 this.table.rowManager.element.clientHeight +
                 this.table.rowManager.element.scrollTop,
-              i = e.row.getElement();
-            i.offsetTop;
-            i.offsetTop < t
-              ? (this.table.rowManager.element.scrollTop -= t - i.offsetTop)
-              : i.offsetTop + i.offsetHeight > o &&
+              o = e.row.getElement();
+            o.offsetTop;
+            o.offsetTop < t
+              ? (this.table.rowManager.element.scrollTop -= t - o.offsetTop)
+              : o.offsetTop + o.offsetHeight > i &&
                 (this.table.rowManager.element.scrollTop +=
-                  i.offsetTop + i.offsetHeight - o);
+                  o.offsetTop + o.offsetHeight - i);
             var n = this.table.rowManager.element.scrollLeft,
               r =
                 this.table.rowManager.element.clientWidth +
@@ -11816,8 +12915,8 @@
                     a.offsetLeft + a.offsetWidth - r);
           }
         }),
-        (S.prototype.edit = function (e, t, o) {
-          var i,
+        (S.prototype.edit = function (e, t, i) {
+          var o,
             n,
             a,
             s = this,
@@ -11836,7 +12935,7 @@
               case "boolean":
                 l = e.column.modules.edit.check;
             }
-            if (l || o) {
+            if (l || i) {
               if (
                 (s.cancelEdit(),
                 (s.currentCell = e),
@@ -11854,7 +12953,7 @@
                     ? e.column.modules.edit.params(n)
                     : e.column.modules.edit.params),
                 !1 ===
-                  (i = e.column.modules.edit.editor.call(
+                  (o = e.column.modules.edit.editor.call(
                     s,
                     n,
                     function (e) {
@@ -11862,17 +12961,17 @@
                     },
                     function (t) {
                       if (s.currentCell === e) {
-                        var o = !0;
+                        var i = !0;
                         return (
                           e.column.modules.validate &&
                             s.table.modExists("validate") &&
                             "manual" != s.table.options.validationMode &&
-                            (o = s.table.modules.validate.validate(
+                            (i = s.table.modules.validate.validate(
                               e.column.modules.validate,
                               e,
                               t,
                             )),
-                          !0 === o ||
+                          !0 === i ||
                           "highlight" === s.table.options.validationMode
                             ? (s.clearEditor(),
                               e.modules.edit || (e.modules.edit = {}),
@@ -11883,13 +12982,13 @@
                               s.table.options.dataTree &&
                                 s.table.modExists("dataTree") &&
                                 s.table.modules.dataTree.checkForRestyle(e),
-                              !0 === o ||
+                              !0 === i ||
                                 (u.classList.add("tabulator-validation-fail"),
                                 s.table.options.validationFailed.call(
                                   s.table,
                                   e.getComponent(),
                                   t,
-                                  o,
+                                  i,
                                 ),
                                 !1))
                             : ((s.invalidEdit = !0),
@@ -11900,7 +12999,7 @@
                                 s.table,
                                 e.getComponent(),
                                 t,
-                                o,
+                                i,
                               ),
                               !1)
                         );
@@ -11917,11 +13016,11 @@
                   )))
               )
                 return u.blur(), !1;
-              if (!(i instanceof Node))
+              if (!(o instanceof Node))
                 return (
                   console.warn(
                     "Edit Error - Editor should return an instance of Node, the editor returned:",
-                    i,
+                    o,
                   ),
                   u.blur(),
                   !1
@@ -11933,7 +13032,7 @@
 
               )
                 u.removeChild(u.firstChild);
-              u.appendChild(i), c();
+              u.appendChild(o), c();
               for (var d = u.children, p = 0; p < d.length; p++)
                 d[p].addEventListener("click", function (e) {
                   e.stopPropagation();
@@ -11945,15 +13044,15 @@
           this.invalidEdit || this.cancelEdit();
         }),
         (S.prototype.maskInput = function (e, t) {
-          var o = t.mask,
-            i = void 0 !== t.maskLetterChar ? t.maskLetterChar : "A",
+          var i = t.mask,
+            o = void 0 !== t.maskLetterChar ? t.maskLetterChar : "A",
             n = void 0 !== t.maskNumberChar ? t.maskNumberChar : "9",
             r = void 0 !== t.maskWildcardChar ? t.maskWildcardChar : "*";
           function a(t) {
-            var s = o[t];
+            var s = i[t];
             void 0 !== s &&
               s !== r &&
-              s !== i &&
+              s !== o &&
               s !== n &&
               ((e.value = e.value + "" + s), a(t + 1));
           }
@@ -11961,10 +13060,10 @@
             var a = e.value.length,
               s = t.key;
             if (t.keyCode > 46) {
-              if (a >= o.length)
+              if (a >= i.length)
                 return t.preventDefault(), t.stopPropagation(), !1, !1;
-              switch (o[a]) {
-                case i:
+              switch (i[a]) {
+                case o:
                   if (s.toUpperCase() == s.toLowerCase())
                     return t.preventDefault(), t.stopPropagation(), !1, !1;
                   break;
@@ -11975,16 +13074,16 @@
                 case r:
                   break;
                 default:
-                  if (s !== o[a])
+                  if (s !== i[a])
                     return t.preventDefault(), t.stopPropagation(), !1, !1;
               }
               !0;
             }
           }),
-            e.addEventListener("keyup", function (o) {
-              o.keyCode > 46 && t.maskAutoFill && a(e.value.length);
+            e.addEventListener("keyup", function (i) {
+              i.keyCode > 46 && t.maskAutoFill && a(e.value.length);
             }),
-            e.placeholder || (e.placeholder = o),
+            e.placeholder || (e.placeholder = i),
             t.maskAutoFill && a(e.value.length);
         }),
         (S.prototype.getEditedCells = function () {
@@ -12006,7 +13105,7 @@
               this.editedCells.splice(t, 1);
         }),
         (S.prototype.editors = {
-          input: function (e, t, o, i, n) {
+          input: function (e, t, i, o, n) {
             var a = e.getValue(),
               s = document.createElement("input");
             if (
@@ -12026,8 +13125,8 @@
                   : s.setAttribute(l, n.elementAttributes[l]);
             function c(e) {
               (null == a && "" !== s.value) || s.value !== a
-                ? o(s.value) && (a = s.value)
-                : i();
+                ? i(s.value) && (a = s.value)
+                : o();
             }
             return (
               (s.value = void 0 !== a ? a : ""),
@@ -12042,7 +13141,7 @@
                     c();
                     break;
                   case 27:
-                    i();
+                    o();
                     break;
                   case 35:
                   case 36:
@@ -12053,7 +13152,7 @@
               s
             );
           },
-          textarea: function (e, t, o, i, n) {
+          textarea: function (e, t, i, o, n) {
             var a = e.getValue(),
               s = n.verticalNavigation || "hybrid",
               l = String(null != a ? a : ""),
@@ -12081,11 +13180,11 @@
                   : c.setAttribute(d, n.elementAttributes[d]);
             function p(t) {
               (null == a && "" !== c.value) || c.value !== a
-                ? (o(c.value) && (a = c.value),
+                ? (i(c.value) && (a = c.value),
                   setTimeout(function () {
                     e.getRow().normalizeHeight();
                   }, 300))
-                : i();
+                : o();
             }
             return (
               (c.value = l),
@@ -12107,7 +13206,7 @@
               c.addEventListener("keydown", function (e) {
                 switch (e.keyCode) {
                   case 27:
-                    i();
+                    o();
                     break;
                   case 38:
                     ("editor" == s || ("hybrid" == s && c.selectionStart)) &&
@@ -12127,7 +13226,7 @@
               c
             );
           },
-          number: function (e, t, o, i, n) {
+          number: function (e, t, i, o, n) {
             var a = e.getValue(),
               s = n.verticalNavigation || "editor",
               l = document.createElement("input");
@@ -12156,7 +13255,7 @@
             function d() {
               var e = l.value;
               isNaN(e) || "" === e || (e = Number(e)),
-                e !== a ? o(e) && (a = e) : i();
+                e !== a ? i(e) && (a = e) : o();
             }
             return (
               t(function () {
@@ -12171,7 +13270,7 @@
                     d();
                     break;
                   case 27:
-                    i();
+                    o();
                     break;
                   case 38:
                   case 40:
@@ -12187,7 +13286,7 @@
               l
             );
           },
-          range: function (e, t, o, i, n) {
+          range: function (e, t, i, o, n) {
             var a = e.getValue(),
               s = document.createElement("input");
             if (
@@ -12211,7 +13310,7 @@
             function c() {
               var e = s.value;
               isNaN(e) || "" === e || (e = Number(e)),
-                e != a ? o(e) && (a = e) : i();
+                e != a ? i(e) && (a = e) : o();
             }
             return (
               (s.value = a),
@@ -12227,13 +13326,13 @@
                     c();
                     break;
                   case 27:
-                    i();
+                    o();
                 }
               }),
               s
             );
           },
-          select: function (e, t, o, i, n) {
+          select: function (e, t, i, o, n) {
             var a = this,
               s = this,
               l = e.getElement(),
@@ -12257,28 +13356,28 @@
               w = !0,
               E = !1,
               C = "",
-              R = null;
-            function x(t) {
-              var o,
-                i = {},
+              _ = null;
+            function R(t) {
+              var i,
+                o = {},
                 n = s.table.getData();
               return (
-                (o = t
+                (i = t
                   ? s.table.columnManager.getColumnByField(t)
                   : e.getColumn()._getSelf())
                   ? n.forEach(function (e) {
-                      var t = o.getFieldValue(e);
-                      null != t && "" !== t && (i[t] = !0);
+                      var t = i.getFieldValue(e);
+                      null != t && "" !== t && (o[t] = !0);
                     })
                   : console.warn(
                       "unable to find matching column to create select lookup list:",
                       t,
                     ),
-                Object.keys(i)
+                Object.keys(o)
               );
             }
-            function _(t, o) {
-              var i = [],
+            function x(t, i) {
+              var o = [],
                 a = [];
               function s(e) {
                 e = {
@@ -12288,7 +13387,7 @@
                   elementAttributes: e.elementAttributes,
                   element: !1,
                 };
-                return o.indexOf(e.value) > -1 && S(e), i.push(e), a.push(e), e;
+                return i.indexOf(e.value) > -1 && S(e), o.push(e), a.push(e), e;
               }
               if (("function" == typeof t && (t = t(e)), Array.isArray(t)))
                 t.forEach(function (e) {
@@ -12308,79 +13407,79 @@
                         }))
                       : s(e)
                     : ((t = { label: e, value: e, element: !1 }),
-                      o.indexOf(t.value) > -1 && S(t),
-                      i.push(t),
+                      i.indexOf(t.value) > -1 && S(t),
+                      o.push(t),
                       a.push(t));
                 });
               else
                 for (var l in t) {
                   var c = { label: t[l], value: l, element: !1 };
-                  o.indexOf(c.value) > -1 && S(c), i.push(c), a.push(c);
+                  i.indexOf(c.value) > -1 && S(c), o.push(c), a.push(c);
                 }
               n.sortValuesList &&
-                (i.sort(function (e, t) {
+                (o.sort(function (e, t) {
                   return e.label < t.label ? -1 : e.label > t.label ? 1 : 0;
                 }),
                 a.sort(function (e, t) {
                   return e.label < t.label ? -1 : e.label > t.label ? 1 : 0;
                 }),
-                "asc" !== n.sortValuesList && (i.reverse(), a.reverse())),
-                (f = i),
+                "asc" !== n.sortValuesList && (o.reverse(), a.reverse())),
+                (f = o),
                 (v = a),
                 (function () {
                   for (; h.firstChild; ) h.removeChild(h.firstChild);
                   v.forEach(function (t) {
-                    var o = t.element;
-                    if (!o) {
+                    var i = t.element;
+                    if (!i) {
                       if (
-                        ((o = document.createElement("div")),
+                        ((i = document.createElement("div")),
                         (t.label = n.listItemFormatter
                           ? n.listItemFormatter(
                               t.value,
                               t.label,
                               e,
-                              o,
+                              i,
                               t.itemParams,
                             )
                           : t.label),
                         t.group
-                          ? (o.classList.add(
+                          ? (i.classList.add(
                               "tabulator-edit-select-list-group",
                             ),
-                            (o.tabIndex = 0),
-                            (o.innerHTML = "" === t.label ? "&nbsp;" : t.label))
-                          : (o.classList.add("tabulator-edit-select-list-item"),
-                            (o.tabIndex = 0),
-                            (o.innerHTML = "" === t.label ? "&nbsp;" : t.label),
-                            o.addEventListener("click", function () {
+                            (i.tabIndex = 0),
+                            (i.innerHTML = "" === t.label ? "&nbsp;" : t.label))
+                          : (i.classList.add("tabulator-edit-select-list-item"),
+                            (i.tabIndex = 0),
+                            (i.innerHTML = "" === t.label ? "&nbsp;" : t.label),
+                            i.addEventListener("click", function () {
                               (E = !0),
                                 setTimeout(function () {
                                   E = !1;
                                 }, 10),
-                                m ? (k(t), p.focus()) : D(t);
+                                m ? (T(t), p.focus()) : D(t);
                             }),
-                            y.indexOf(t) > -1 && o.classList.add("active")),
+                            y.indexOf(t) > -1 && i.classList.add("active")),
                         t.elementAttributes &&
                           "object" == r(t.elementAttributes))
                       )
-                        for (var i in t.elementAttributes)
-                          "+" == i.charAt(0)
-                            ? ((i = i.slice(1)),
-                              o.setAttribute(
-                                i,
-                                p.getAttribute(i) +
-                                  t.elementAttributes["+" + i],
+                        for (var o in t.elementAttributes)
+                          "+" == o.charAt(0)
+                            ? ((o = o.slice(1)),
+                              i.setAttribute(
+                                o,
+                                p.getAttribute(o) +
+                                  t.elementAttributes["+" + o],
                               ))
-                            : o.setAttribute(i, t.elementAttributes[i]);
-                      o.addEventListener("mousedown", function () {
+                            : i.setAttribute(o, t.elementAttributes[o]);
+                      i.addEventListener("mousedown", function () {
                         (w = !1),
                           setTimeout(function () {
                             w = !0;
                           }, 10);
                       }),
-                        (t.element = o);
+                        (t.element = i);
                     }
-                    h.appendChild(o);
+                    h.appendChild(i);
                   });
                 })();
             }
@@ -12403,31 +13502,31 @@
             function S(e) {
               -1 == y.indexOf(e) && (y.push(e), M(e, !0)), z();
             }
-            function T(e) {
+            function k(e) {
               var t = y[e];
               e > -1 &&
                 (y.splice(e, 1),
                 t.element && t.element.classList.remove("active"));
             }
-            function k(e) {
+            function T(e) {
               e || (e = b);
               var t = y.indexOf(e);
-              t > -1 ? T(t) : (!0 !== m && y.length >= m && T(0), S(e)), z();
+              t > -1 ? k(t) : (!0 !== m && y.length >= m && k(0), S(e)), z();
             }
             function D(e) {
-              A(),
+              P(),
                 e || (e = b),
-                e && ((p.value = e.label), o(e.value)),
+                e && ((p.value = e.label), i(e.value)),
                 (d = [e.value]);
             }
             function L(e) {
-              e || A();
+              e || P();
               var t = [];
               y.forEach(function (e) {
                 t.push(e.value);
               }),
                 (d = t),
-                o(t);
+                i(t);
             }
             function z() {
               var e = [];
@@ -12437,12 +13536,12 @@
                 (p.value = e.join(", ")),
                 !1 === s.currentCell && L(!0);
             }
-            function P() {
-              A(), i();
-            }
             function A() {
+              P(), o();
+            }
+            function P() {
               h.parentNode && h.parentNode.removeChild(h),
-                s.table.rowManager.element.removeEventListener("scroll", P);
+                s.table.rowManager.element.removeEventListener("scroll", A);
             }
             if (
               ((Array.isArray(n) ||
@@ -12474,7 +13573,7 @@
               p.addEventListener("search", function (e) {
                 p.value ||
                   (!(function () {
-                    for (var e = y.length, t = 0; t < e; t++) T(0);
+                    for (var e = y.length, t = 0; t < e; t++) k(0);
                   })(),
                   L());
               }),
@@ -12504,10 +13603,10 @@
                       e.preventDefault();
                     break;
                   case 13:
-                    m ? k() : D();
+                    m ? T() : D();
                     break;
                   case 27:
-                    P();
+                    A();
                     break;
                   case 9:
                     break;
@@ -12516,36 +13615,36 @@
                       e.keyCode >= 38 &&
                         e.keyCode <= 90 &&
                         (function (e) {
-                          clearTimeout(R);
+                          clearTimeout(_);
                           var t = String.fromCharCode(
                             event.keyCode,
                           ).toLowerCase();
                           C += t.toLowerCase();
-                          var o = f.find(function (e) {
+                          var i = f.find(function (e) {
                             return (
                               void 0 !== e.label &&
                               e.label.toLowerCase().startsWith(C)
                             );
                           });
-                          o && M(o, !m),
-                            (R = setTimeout(function () {
+                          i && M(i, !m),
+                            (_ = setTimeout(function () {
                               C = "";
                             }, 800));
                         })(e.keyCode);
                 }
               }),
               p.addEventListener("blur", function (e) {
-                w && (m ? L() : P());
+                w && (m ? L() : A());
               }),
               p.addEventListener("focus", function (e) {
                 E ||
                   (function () {
                     if (((y = []), !h.parentNode)) {
                       !0 === n.values
-                        ? _(x(), d)
+                        ? x(R(), d)
                         : "string" == typeof n.values
-                        ? _(x(n.values), d)
-                        : _(n.values || [], d);
+                        ? x(R(n.values), d)
+                        : x(n.values || [], d);
                       var e = g.prototype.helpers.elOffset(l);
                       (h.style.minWidth = l.offsetWidth + "px"),
                         (h.style.top = e.top + l.offsetHeight + "px"),
@@ -12567,12 +13666,12 @@
                 (p.style.height = "100%"), p.focus({ preventScroll: !0 });
               }),
               setTimeout(function () {
-                a.table.rowManager.element.addEventListener("scroll", P);
+                a.table.rowManager.element.addEventListener("scroll", A);
               }, 10),
               p
             );
           },
-          autocomplete: function (e, t, o, i, n) {
+          autocomplete: function (e, t, i, o, n) {
             var a = this,
               s = this,
               l = e.getElement(),
@@ -12611,44 +13710,44 @@
                 : "string" == typeof n.values && (v = E(n.values));
             }
             function E(t) {
-              var o,
-                i = {},
+              var i,
+                o = {},
                 r = s.table.getData();
               return (
-                (o = t
+                (i = t
                   ? s.table.columnManager.getColumnByField(t)
                   : e.getColumn()._getSelf())
                   ? (r.forEach(function (e) {
-                      var t = o.getFieldValue(e);
-                      null != t && "" !== t && (i[t] = !0);
+                      var t = i.getFieldValue(e);
+                      null != t && "" !== t && (o[t] = !0);
                     }),
-                    (i = n.sortValuesList
+                    (o = n.sortValuesList
                       ? "asc" == n.sortValuesList
-                        ? Object.keys(i).sort()
-                        : Object.keys(i).sort().reverse()
-                      : Object.keys(i)))
+                        ? Object.keys(o).sort()
+                        : Object.keys(o).sort().reverse()
+                      : Object.keys(o)))
                   : console.warn(
                       "unable to find matching column to create autocomplete lookup list:",
                       t,
                     ),
-                i
+                o
               );
             }
             function C(e, t) {
-              var o,
-                i,
+              var i,
+                o,
                 r = [];
-              (o = v || n.values || []),
+              (i = v || n.values || []),
                 n.searchFunc
-                  ? (r = n.searchFunc(e, o)) instanceof Promise
-                    ? (R(
+                  ? (r = n.searchFunc(e, i)) instanceof Promise
+                    ? (_(
                         void 0 !== n.searchingPlaceholder
                           ? n.searchingPlaceholder
                           : "Searching...",
                       ),
                       r
                         .then(function (e) {
-                          M(x(e), t);
+                          M(R(e), t);
                         })
                         .catch(function (e) {
                           console.err(
@@ -12656,11 +13755,11 @@
                             e,
                           );
                         }))
-                    : M(x(r), t)
-                  : ((i = x(o)),
+                    : M(R(r), t)
+                  : ((o = R(i)),
                     "" === e
-                      ? n.showListOnEmpty && (r = i)
-                      : i.forEach(function (t) {
+                      ? n.showListOnEmpty && (r = o)
+                      : o.forEach(function (t) {
                           (null === t.value && void 0 === t.value) ||
                             ((String(t.value)
                               .toLowerCase()
@@ -12672,94 +13771,94 @@
                         }),
                     M(r, t));
             }
-            function R(e) {
+            function _(e) {
               var t = document.createElement("div");
-              _(),
+              x(),
                 !1 !== e &&
                   (t.classList.add("tabulator-edit-select-list-notice"),
                   (t.tabIndex = 0),
                   e instanceof Node ? t.appendChild(e) : (t.innerHTML = e),
                   h.appendChild(t));
             }
-            function x(e) {
+            function R(e) {
               var t = [];
               if (Array.isArray(e))
                 e.forEach(function (e) {
-                  var o = {};
+                  var i = {};
                   "object" === (void 0 === e ? "undefined" : r(e))
-                    ? ((o.title = n.listItemFormatter
+                    ? ((i.title = n.listItemFormatter
                         ? n.listItemFormatter(e.value, e.label)
                         : e.label),
-                      (o.value = e.value))
-                    : ((o.title = n.listItemFormatter
+                      (i.value = e.value))
+                    : ((i.title = n.listItemFormatter
                         ? n.listItemFormatter(e, e)
                         : e),
-                      (o.value = e)),
-                    t.push(o);
+                      (i.value = e)),
+                    t.push(i);
                 });
               else
-                for (var o in e) {
-                  var i = {
+                for (var i in e) {
+                  var o = {
                     title: n.listItemFormatter
-                      ? n.listItemFormatter(o, e[o])
-                      : e[o],
-                    value: o,
+                      ? n.listItemFormatter(i, e[i])
+                      : e[i],
+                    value: i,
                   };
-                  t.push(i);
+                  t.push(o);
                 }
               return t;
             }
-            function _() {
+            function x() {
               for (; h.firstChild; ) h.removeChild(h.firstChild);
             }
             function M(e, t) {
               e.length
                 ? (function (e, t) {
-                    var o = !1;
-                    _(),
+                    var i = !1;
+                    x(),
                       (m = e),
                       m.forEach(function (e) {
-                        var i = e.element;
-                        i ||
-                          ((i = document.createElement("div")).classList.add(
+                        var o = e.element;
+                        o ||
+                          ((o = document.createElement("div")).classList.add(
                             "tabulator-edit-select-list-item",
                           ),
-                          (i.tabIndex = 0),
-                          (i.innerHTML = e.title),
-                          i.addEventListener("click", function (t) {
-                            T(e), S();
+                          (o.tabIndex = 0),
+                          (o.innerHTML = e.title),
+                          o.addEventListener("click", function (t) {
+                            k(e), S();
                           }),
-                          i.addEventListener("mousedown", function (e) {
+                          o.addEventListener("mousedown", function (e) {
                             (b = !1),
                               setTimeout(function () {
                                 b = !0;
                               }, 10);
                           }),
-                          (e.element = i),
+                          (e.element = o),
                           t &&
                             e.value == c &&
                             ((p.value = e.title),
                             e.element.classList.add("active"),
-                            (o = !0)),
+                            (i = !0)),
                           e === f &&
-                            (e.element.classList.add("active"), (o = !0))),
-                          h.appendChild(i);
+                            (e.element.classList.add("active"), (i = !0))),
+                          h.appendChild(o);
                       }),
-                      o || T(!1);
+                      i || k(!1);
                   })(e, t)
-                : n.emptyPlaceholder && R(n.emptyPlaceholder);
+                : n.emptyPlaceholder && _(n.emptyPlaceholder);
             }
             function S() {
-              k(),
+              T(),
                 f
                   ? c !== f.value
-                    ? ((c = f.value), (p.value = f.title), o(f.value))
-                    : i()
+                    ? ((c = f.value), (p.value = f.title), i(f.value))
+                    : o()
                   : n.freetext || (n.allowEmpty && "" === p.value)
-                  ? ((c = p.value), o(p.value))
-                  : i();
+                  ? ((c = p.value), i(p.value))
+                  : o();
             }
-            function T(e, t) {
+            function k(e, t) {
               f && f.element && f.element.classList.remove("active"),
                 (f = e),
                 e && e.element && e.element.classList.add("active"),
@@ -12772,12 +13871,12 @@
                     inline: "start",
                   });
             }
-            function k() {
+            function T() {
               h.parentNode && h.parentNode.removeChild(h),
                 s.table.rowManager.element.removeEventListener("scroll", D);
             }
             function D() {
-              k(), i();
+              T(), o();
             }
             return (
               h.classList.add("tabulator-edit-select-list"),
@@ -12796,7 +13895,7 @@
                         (e.stopImmediatePropagation(),
                         e.stopPropagation(),
                         e.preventDefault(),
-                        T(t > 0 && m[t - 1]));
+                        k(t > 0 && m[t - 1]));
                     break;
                   case 40:
                     (t = m.indexOf(f)),
@@ -12804,7 +13903,7 @@
                         (e.stopImmediatePropagation(),
                         e.stopPropagation(),
                         e.preventDefault(),
-                        t < m.length - 1 && T(-1 == t ? m[0] : m[t + 1]));
+                        t < m.length - 1 && k(-1 == t ? m[0] : m[t + 1]));
                     break;
                   case 37:
                   case 39:
@@ -12870,7 +13969,7 @@
               p
             );
           },
-          star: function (e, t, o, i, n) {
+          star: function (e, t, i, o, n) {
             var a = this,
               s = e.getElement(),
               l = e.getValue(),
@@ -12882,8 +13981,8 @@
               p = document.createElement("div"),
               h = document.createElementNS("http://www.w3.org/2000/svg", "svg");
             function m(e) {
-              d.forEach(function (t, o) {
-                o < e
+              d.forEach(function (t, i) {
+                i < e
                   ? ("ie" == a.table.browser
                       ? t.setAttribute("class", "tabulator-star-active")
                       : t.classList.replace(
@@ -12904,8 +14003,8 @@
             }
             function f(e) {
               var t = document.createElement("span"),
-                i = h.cloneNode(!0);
-              d.push(i),
+                o = h.cloneNode(!0);
+              d.push(o),
                 t.addEventListener("mouseenter", function (t) {
                   t.stopPropagation(), t.stopImmediatePropagation(), m(e);
                 }),
@@ -12915,10 +14014,10 @@
                 t.addEventListener("click", function (t) {
                   t.stopPropagation(),
                     t.stopImmediatePropagation(),
-                    o(e),
+                    i(e),
                     s.blur();
                 }),
-                t.appendChild(i),
+                t.appendChild(o),
                 p.appendChild(t);
             }
             function g(e) {
@@ -12953,10 +14052,10 @@
                 m(0);
               }),
               p.addEventListener("click", function (e) {
-                o(0);
+                i(0);
               }),
               s.addEventListener("blur", function (e) {
-                i();
+                o();
               }),
               s.addEventListener("keydown", function (e) {
                 switch (e.keyCode) {
@@ -12967,16 +14066,16 @@
                     g(l - 1);
                     break;
                   case 13:
-                    o(l);
+                    i(l);
                     break;
                   case 27:
-                    i();
+                    o();
                 }
               }),
               p
             );
           },
-          progress: function (e, t, o, i, n) {
+          progress: function (e, t, i, o, n) {
             var a,
               s,
               l = e.getElement(),
@@ -13004,7 +14103,7 @@
                           100),
                     ) +
                   u;
-              o(t),
+              i(t),
                 l.setAttribute("aria-valuenow", t),
                 l.setAttribute("aria-label", p);
             }
@@ -13074,16 +14173,16 @@
                     f();
                     break;
                   case 27:
-                    i();
+                    o();
                 }
               }),
               l.addEventListener("blur", function () {
-                i();
+                o();
               }),
               m
             );
           },
-          tickCross: function (e, t, o, i, n) {
+          tickCross: function (e, t, i, o, n) {
             var a = e.getValue(),
               s = document.createElement("input"),
               l = n.tristate,
@@ -13128,30 +14227,30 @@
                 s.focus();
               }),
               s.addEventListener("change", function (e) {
-                o(p());
+                i(p());
               }),
               s.addEventListener("blur", function (e) {
-                o(p(!0));
+                i(p(!0));
               }),
               s.addEventListener("keydown", function (e) {
-                13 == e.keyCode && o(p()), 27 == e.keyCode && i();
+                13 == e.keyCode && i(p()), 27 == e.keyCode && o();
               }),
               s
             );
           },
         }),
         g.prototype.registerModule("edit", S);
-      var T = function (e, t, o, i) {
+      var k = function (e, t, i, o) {
           (this.type = e),
             (this.columns = t),
-            (this.component = o || !1),
-            (this.indent = i || 0);
+            (this.component = i || !1),
+            (this.indent = o || 0);
         },
-        k = function (e, t, o, i, n) {
+        T = function (e, t, i, o, n) {
           (this.value = e),
             (this.component = t || !1),
-            (this.width = o),
-            (this.height = i),
+            (this.width = i),
+            (this.height = o),
             (this.depth = n);
         },
         D = function (e) {
@@ -13160,48 +14259,48 @@
             (this.cloneTableStyle = !0),
             (this.colVisProp = "");
         };
-      (D.prototype.generateExportList = function (e, t, o, i) {
+      (D.prototype.generateExportList = function (e, t, i, o) {
         (this.cloneTableStyle = t),
           (this.config = e || {}),
-          (this.colVisProp = i);
+          (this.colVisProp = o);
         var n =
             !1 !== this.config.columnHeaders
               ? this.headersToExportRows(this.generateColumnGroupHeaders())
               : [],
-          r = this.bodyToExportRows(this.rowLookup(o));
+          r = this.bodyToExportRows(this.rowLookup(i));
         return n.concat(r);
       }),
-        (D.prototype.genereateTable = function (e, t, o, i) {
-          var n = this.generateExportList(e, t, o, i);
+        (D.prototype.genereateTable = function (e, t, i, o) {
+          var n = this.generateExportList(e, t, i, o);
           return this.genereateTableElement(n);
         }),
         (D.prototype.rowLookup = function (e) {
           var t = this,
-            o = [];
+            i = [];
           if ("function" == typeof e)
             e.call(this.table).forEach(function (e) {
-              (e = t.table.rowManager.findRow(e)) && o.push(e);
+              (e = t.table.rowManager.findRow(e)) && i.push(e);
             });
           else
             switch (e) {
               case !0:
               case "visible":
-                o = this.table.rowManager.getVisibleRows(!0);
+                i = this.table.rowManager.getVisibleRows(!0);
                 break;
               case "all":
-                o = this.table.rowManager.rows;
+                i = this.table.rowManager.rows;
                 break;
               case "selected":
-                o = this.table.modules.selectRow.selectedRows;
+                i = this.table.modules.selectRow.selectedRows;
                 break;
               default:
-                o = this.table.options.pagination
+                i = this.table.options.pagination
                   ? this.table.rowManager.getDisplayRows(
                       this.table.rowManager.displayRows.length - 2,
                     )
                   : this.table.rowManager.getDisplayRows();
             }
-          return Object.assign([], o);
+          return Object.assign([], i);
         }),
         (D.prototype.generateColumnGroupHeaders = function () {
           var e = this,
@@ -13210,17 +14309,17 @@
             (!1 !== this.config.columnGroups
               ? this.table.columnManager.columns
               : this.table.columnManager.columnsByIndex
-            ).forEach(function (o) {
-              var i = e.processColumnGroup(o);
-              i && t.push(i);
+            ).forEach(function (i) {
+              var o = e.processColumnGroup(i);
+              o && t.push(o);
             }),
             t
           );
         }),
         (D.prototype.processColumnGroup = function (e) {
           var t = this,
-            o = e.columns,
-            i = 0,
+            i = e.columns,
+            o = 0,
             n = {
               title:
                 e.definition[
@@ -13231,18 +14330,18 @@
               column: e,
               depth: 1,
             };
-          if (o.length) {
+          if (i.length) {
             if (
               ((n.subGroups = []),
               (n.width = 0),
-              o.forEach(function (e) {
-                var o = t.processColumnGroup(e);
-                o &&
-                  ((n.width += o.width),
-                  n.subGroups.push(o),
-                  o.depth > i && (i = o.depth));
+              i.forEach(function (e) {
+                var i = t.processColumnGroup(e);
+                i &&
+                  ((n.width += i.width),
+                  n.subGroups.push(i),
+                  i.depth > o && (o = i.depth));
               }),
-              (n.depth += i),
+              (n.depth += o),
               !n.width)
             )
               return !1;
@@ -13260,27 +14359,27 @@
         }),
         (D.prototype.headersToExportRows = function (e) {
           var t = [],
-            o = 0,
-            i = [];
-          function n(e, i) {
-            var r = o - i;
+            i = 0,
+            o = [];
+          function n(e, o) {
+            var r = i - o;
             if (
-              (void 0 === t[i] && (t[i] = []),
+              (void 0 === t[o] && (t[o] = []),
               (e.height = e.subGroups ? 1 : r - e.depth + 1),
-              t[i].push(e),
+              t[o].push(e),
               e.height > 1)
             )
               for (var a = 1; a < e.height; a++)
-                void 0 === t[i + a] && (t[i + a] = []), t[i + a].push(!1);
-            if (e.width > 1) for (var s = 1; s < e.width; s++) t[i].push(!1);
+                void 0 === t[o + a] && (t[o + a] = []), t[o + a].push(!1);
+            if (e.width > 1) for (var s = 1; s < e.width; s++) t[o].push(!1);
             e.subGroups &&
               e.subGroups.forEach(function (e) {
-                n(e, i + 1);
+                n(e, o + 1);
               });
           }
           return (
             e.forEach(function (e) {
-              e.depth > o && (o = e.depth);
+              e.depth > i && (i = e.depth);
             }),
             e.forEach(function (e) {
               n(e, 0);
@@ -13290,7 +14389,7 @@
               e.forEach(function (e) {
                 e
                   ? t.push(
-                      new k(
+                      new T(
                         e.title,
                         e.column.getComponent(),
                         e.width,
@@ -13300,18 +14399,18 @@
                     )
                   : t.push(null);
               }),
-                i.push(new T("header", t));
+                o.push(new k("header", t));
             }),
-            i
+            o
           );
         }),
         (D.prototype.bodyToExportRows = function (e) {
           var t = this,
-            o = [],
-            i = [];
+            i = [],
+            o = [];
           return (
             this.table.columnManager.columnsByIndex.forEach(function (e) {
-              t.columnVisCheck(e) && o.push(e.getComponent());
+              t.columnVisCheck(e) && i.push(e.getComponent());
             }),
             !1 !== this.config.columnCalcs &&
               this.table.modExists("columnCalcs") &&
@@ -13340,26 +14439,26 @@
               switch (e.type) {
                 case "group":
                   (s = e.level),
-                    a.push(new k(e.key, e.getComponent(), o.length, 1));
+                    a.push(new T(e.key, e.getComponent(), i.length, 1));
                   break;
                 case "calc":
                 case "row":
-                  o.forEach(function (e) {
-                    a.push(new k(e._column.getFieldValue(r), e, 1, 1));
+                  i.forEach(function (e) {
+                    a.push(new T(e._column.getFieldValue(r), e, 1, 1));
                   }),
                     t.table.options.dataTree &&
                       !1 !== t.config.dataTree &&
                       (s = e.modules.dataTree.index);
               }
-              i.push(new T(e.type, a, e.getComponent(), s));
+              o.push(new k(e.type, a, e.getComponent(), s));
             }),
-            i
+            o
           );
         }),
         (D.prototype.genereateTableElement = function (e) {
           var t = this,
-            o = document.createElement("table"),
-            i = document.createElement("thead"),
+            i = document.createElement("table"),
+            o = document.createElement("thead"),
             n = document.createElement("tbody"),
             r = this.lookupTableStyles(),
             a =
@@ -13384,10 +14483,10 @@
             s.groupHeader &&
               !Array.isArray(s.groupHeader) &&
               (s.groupHeader = [s.groupHeader]),
-            o.classList.add("tabulator-print-table"),
+            i.classList.add("tabulator-print-table"),
             this.mapElementStyles(
               this.table.columnManager.getHeadersElement(),
-              i,
+              o,
               [
                 "border-top",
                 "border-left",
@@ -13404,10 +14503,10 @@
               console.warn(
                 "It may take a long time to render an HTML table with more than 1000 rows",
               ),
-            e.forEach(function (e, o) {
+            e.forEach(function (e, i) {
               switch (e.type) {
                 case "header":
-                  i.appendChild(t.genereateHeaderElement(e, s, r));
+                  o.appendChild(t.genereateHeaderElement(e, s, r));
                   break;
                 case "group":
                   n.appendChild(t.genereateGroupElement(e, s, r));
@@ -13418,7 +14517,7 @@
                 case "row":
                   var a = t.genereateRowElement(e, s, r);
                   t.mapElementStyles(
-                    o % 2 && r.evenRow ? r.evenRow : r.oddRow,
+                    i % 2 && r.evenRow ? r.evenRow : r.oddRow,
                     a,
                     [
                       "border-top",
@@ -13435,15 +14534,15 @@
                     n.appendChild(a);
               }
             }),
-            i.innerHTML && o.appendChild(i),
-            o.appendChild(n),
-            this.mapElementStyles(this.table.element, o, [
+            o.innerHTML && i.appendChild(o),
+            i.appendChild(n),
+            this.mapElementStyles(this.table.element, i, [
               "border-top",
               "border-left",
               "border-right",
               "border-bottom",
             ]),
-            o
+            i
           );
         }),
         (D.prototype.lookupTableStyles = function () {
@@ -13475,24 +14574,24 @@
             e
           );
         }),
-        (D.prototype.genereateHeaderElement = function (e, t, o) {
-          var i = this,
+        (D.prototype.genereateHeaderElement = function (e, t, i) {
+          var o = this,
             n = document.createElement("tr");
           return (
             e.columns.forEach(function (e) {
               if (e) {
                 var t = document.createElement("th"),
-                  o = e.component._column.definition.cssClass
+                  i = e.component._column.definition.cssClass
                     ? e.component._column.definition.cssClass.split(" ")
                     : [];
                 (t.colSpan = e.width),
                   (t.rowSpan = e.height),
                   (t.innerHTML = e.value),
-                  i.cloneTableStyle && (t.style.boxSizing = "border-box"),
-                  o.forEach(function (e) {
+                  o.cloneTableStyle && (t.style.boxSizing = "border-box"),
+                  i.forEach(function (e) {
                     t.classList.add(e);
                   }),
-                  i.mapElementStyles(e.component.getElement(), t, [
+                  o.mapElementStyles(e.component.getElement(), t, [
                     "text-align",
                     "border-top",
                     "border-left",
@@ -13504,19 +14603,19 @@
                     "font-family",
                     "font-size",
                   ]),
-                  i.mapElementStyles(e.component._column.contentElement, t, [
+                  o.mapElementStyles(e.component._column.contentElement, t, [
                     "padding-top",
                     "padding-left",
                     "padding-right",
                     "padding-bottom",
                   ]),
                   e.component._column.visible
-                    ? i.mapElementStyles(e.component.getElement(), t, ["width"])
+                    ? o.mapElementStyles(e.component.getElement(), t, ["width"])
                     : e.component._column.definition.width &&
                       (t.style.width =
                         e.component._column.definition.width + "px"),
                   e.component._column.parent &&
-                    i.mapElementStyles(
+                    o.mapElementStyles(
                       e.component._column.parent.groupElement,
                       t,
                       ["border-top"],
@@ -13527,12 +14626,12 @@
             n
           );
         }),
-        (D.prototype.genereateGroupElement = function (e, t, o) {
-          var i = document.createElement("tr"),
+        (D.prototype.genereateGroupElement = function (e, t, i) {
+          var o = document.createElement("tr"),
             n = document.createElement("td"),
             r = e.columns[0];
           return (
-            i.classList.add("tabulator-print-table-row"),
+            o.classList.add("tabulator-print-table-row"),
             t.groupHeader && t.groupHeader[e.indent]
               ? (r.value = t.groupHeader[e.indent](
                   r.value,
@@ -13550,11 +14649,11 @@
                 )),
             (n.colSpan = r.width),
             (n.innerHTML = r.value),
-            i.classList.add("tabulator-print-table-group"),
-            i.classList.add("tabulator-group-level-" + e.indent),
+            o.classList.add("tabulator-print-table-group"),
+            o.classList.add("tabulator-group-level-" + e.indent),
             r.component.isVisible() &&
-              i.classList.add("tabulator-group-visible"),
-            this.mapElementStyles(o.firstGroup, i, [
+              o.classList.add("tabulator-group-visible"),
+            this.mapElementStyles(i.firstGroup, o, [
               "border-top",
               "border-left",
               "border-right",
@@ -13565,21 +14664,21 @@
               "font-size",
               "background-color",
             ]),
-            this.mapElementStyles(o.firstGroup, n, [
+            this.mapElementStyles(i.firstGroup, n, [
               "padding-top",
               "padding-left",
               "padding-right",
               "padding-bottom",
             ]),
-            i.appendChild(n),
-            i
+            o.appendChild(n),
+            o
           );
         }),
-        (D.prototype.genereateCalcElement = function (e, t, o) {
-          var i = this.genereateRowElement(e, t, o);
+        (D.prototype.genereateCalcElement = function (e, t, i) {
+          var o = this.genereateRowElement(e, t, i);
           return (
-            i.classList.add("tabulator-print-table-calcs"),
-            this.mapElementStyles(o.calcRow, i, [
+            o.classList.add("tabulator-print-table-calcs"),
+            this.mapElementStyles(i.calcRow, o, [
               "border-top",
               "border-left",
               "border-right",
@@ -13590,7 +14689,7 @@
               "font-size",
               "background-color",
             ]),
-            i
+            o
           );
         }),
         (D.prototype.genereateRowElement = function (e, t, o) {
@@ -13699,18 +14798,18 @@
           var t = document.createElement("div");
           return t.appendChild(this.genereateTableElement(e)), t.innerHTML;
         }),
-        (D.prototype.getHtml = function (e, t, o, i) {
+        (D.prototype.getHtml = function (e, t, i, o) {
           var n = this.generateExportList(
-            o || this.table.options.htmlOutputConfig,
+            i || this.table.options.htmlOutputConfig,
             t,
             e,
-            i || "htmlOutput",
+            o || "htmlOutput",
           );
           return this.genereateHTMLTable(n);
         }),
-        (D.prototype.mapElementStyles = function (e, t, o) {
+        (D.prototype.mapElementStyles = function (e, t, i) {
           if (this.cloneTableStyle && e && t) {
-            var i = {
+            var o = {
               "background-color": "backgroundColor",
               color: "fontColor",
               width: "width",
@@ -13729,8 +14828,8 @@
             };
             if (window.getComputedStyle) {
               var n = window.getComputedStyle(e);
-              o.forEach(function (e) {
-                t.style[i[e]] = n.getPropertyValue(e);
+              i.forEach(function (e) {
+                t.style[o[e]] = n.getPropertyValue(e);
               });
             }
           }
@@ -13746,8 +14845,8 @@
           (this.changed = !1);
       };
       (L.prototype.initializeColumn = function (e, t) {
-        var o = this,
-          i = e.getField();
+        var i = this,
+          o = e.getField();
         (e.modules.filter = {
           success: function (t) {
             var n,
@@ -13767,21 +14866,21 @@
                 ((e.modules.filter.prevSuccess = t),
                 e.modules.filter.emptyFunc(t))
               )
-                delete o.headerFilters[i];
+                delete i.headerFilters[o];
               else {
                 switch (
                   ((e.modules.filter.value = t),
                   r(e.definition.headerFilterFunc))
                 ) {
                   case "string":
-                    o.filters[e.definition.headerFilterFunc]
+                    i.filters[e.definition.headerFilterFunc]
                       ? ((s = e.definition.headerFilterFunc),
-                        (n = function (i) {
+                        (n = function (o) {
                           var n = e.definition.headerFilterFuncParams || {},
-                            r = e.getFieldValue(i);
+                            r = e.getFieldValue(o);
                           return (
-                            (n = "function" == typeof n ? n(t, r, i) : n),
-                            o.filters[e.definition.headerFilterFunc](t, r, i, n)
+                            (n = "function" == typeof n ? n(t, r, o) : n),
+                            i.filters[e.definition.headerFilterFunc](t, r, o, n)
                           );
                         }))
                       : console.warn(
@@ -13790,40 +14889,40 @@
                         );
                     break;
                   case "function":
-                    (n = function (o) {
-                      var i = e.definition.headerFilterFuncParams || {},
-                        n = e.getFieldValue(o);
+                    (n = function (i) {
+                      var o = e.definition.headerFilterFuncParams || {},
+                        n = e.getFieldValue(i);
                       return (
-                        (i = "function" == typeof i ? i(t, n, o) : i),
-                        e.definition.headerFilterFunc(t, n, o, i)
+                        (o = "function" == typeof o ? o(t, n, i) : o),
+                        e.definition.headerFilterFunc(t, n, i, o)
                       );
                     }),
                       (s = n);
                 }
                 if (!n)
                   if ("partial" === a)
-                    (n = function (o) {
-                      var i = e.getFieldValue(o);
+                    (n = function (i) {
+                      var o = e.getFieldValue(i);
                       return (
-                        null != i &&
-                        String(i)
+                        null != o &&
+                        String(o)
                           .toLowerCase()
                           .indexOf(String(t).toLowerCase()) > -1
                       );
                     }),
                       (s = "like");
                   else
-                    (n = function (o) {
-                      return e.getFieldValue(o) == t;
+                    (n = function (i) {
+                      return e.getFieldValue(i) == t;
                     }),
                       (s = "=");
-                o.headerFilters[i] = { value: t, func: n, type: s, params: {} };
+                i.headerFilters[o] = { value: t, func: n, type: s, params: {} };
               }
-              (l = JSON.stringify(o.headerFilters)),
-                o.prevHeaderFilterChangeCheck !== l &&
-                  ((o.prevHeaderFilterChangeCheck = l),
-                  (o.changed = !0),
-                  o.table.rowManager.filterRefresh());
+              (l = JSON.stringify(i.headerFilters)),
+                i.prevHeaderFilterChangeCheck !== l &&
+                  ((i.prevHeaderFilterChangeCheck = l),
+                  (i.changed = !0),
+                  i.table.rowManager.filterRefresh());
             }
             return !0;
           },
@@ -13833,8 +14932,8 @@
         }),
           this.generateHeaderFilterElement(e);
       }),
-        (L.prototype.generateHeaderFilterElement = function (e, t, o) {
-          var i,
+        (L.prototype.generateHeaderFilterElement = function (e, t, i) {
+          var o,
             n,
             a,
             s,
@@ -13859,7 +14958,7 @@
                 function (e) {
                   return !e && "0" !== e && 0 !== e;
                 }),
-              (i = document.createElement("div")).classList.add(
+              (o = document.createElement("div")).classList.add(
                 "tabulator-header-filter",
               ),
               r(e.definition.headerFilter))
@@ -13906,7 +15005,7 @@
                     return e.definition.field;
                   },
                   getElement: function () {
-                    return i;
+                    return o;
                   },
                   getColumn: function () {
                     return e.getComponent();
@@ -14010,9 +15109,9 @@
                     a.addEventListener("mousedown", function (e) {
                       e.stopPropagation();
                     })),
-                i.appendChild(a),
-                e.contentElement.appendChild(i),
-                o || p.headerFilterColumns.push(e);
+                o.appendChild(a),
+                e.contentElement.appendChild(o),
+                i || p.headerFilterColumns.push(e);
             }
           } else
             console.warn(
@@ -14073,16 +15172,16 @@
           var e = this.changed;
           return (this.changed = !1), e;
         }),
-        (L.prototype.setFilter = function (e, t, o, i) {
+        (L.prototype.setFilter = function (e, t, i, o) {
           (this.filterList = []),
             Array.isArray(e) ||
-              (e = [{ field: e, type: t, value: o, params: i }]),
+              (e = [{ field: e, type: t, value: i, params: o }]),
             this.addFilter(e);
         }),
-        (L.prototype.addFilter = function (e, t, o, i) {
+        (L.prototype.addFilter = function (e, t, i, o) {
           var n = this;
           Array.isArray(e) ||
-            (e = [{ field: e, type: t, value: o, params: i }]),
+            (e = [{ field: e, type: t, value: i, params: o }]),
             e.forEach(function (e) {
               (e = n.findFilter(e)) && (n.filterList.push(e), (n.changed = !0));
             }),
@@ -14093,26 +15192,26 @@
         }),
         (L.prototype.findFilter = function (e) {
           var t,
-            o = this;
+            i = this;
           if (Array.isArray(e)) return this.findSubFilters(e);
-          var i = !1;
+          var o = !1;
           return (
             "function" == typeof e.field
-              ? (i = function (t) {
+              ? (o = function (t) {
                   return e.field(t, e.type || {});
                 })
-              : o.filters[e.type]
-              ? (i = (t = o.table.columnManager.getColumnByField(e.field))
-                  ? function (i) {
-                      return o.filters[e.type](
+              : i.filters[e.type]
+              ? (o = (t = i.table.columnManager.getColumnByField(e.field))
+                  ? function (o) {
+                      return i.filters[e.type](
                         e.value,
-                        t.getFieldValue(i),
-                        i,
+                        t.getFieldValue(o),
+                        o,
                         e.params || {},
                       );
                     }
                   : function (t) {
-                      return o.filters[e.type](
+                      return i.filters[e.type](
                         e.value,
                         t[e.field],
                         t,
@@ -14123,44 +15222,44 @@
                   "Filter Error - No such filter type found, ignoring: ",
                   e.type,
                 ),
-            (e.func = i),
+            (e.func = o),
             !!e.func && e
           );
         }),
         (L.prototype.findSubFilters = function (e) {
           var t = this,
-            o = [];
+            i = [];
           return (
             e.forEach(function (e) {
-              (e = t.findFilter(e)) && o.push(e);
+              (e = t.findFilter(e)) && i.push(e);
             }),
-            !!o.length && o
+            !!i.length && i
           );
         }),
         (L.prototype.getFilters = function (e, t) {
-          var o = [];
+          var i = [];
           return (
-            e && (o = this.getHeaderFilters()),
+            e && (i = this.getHeaderFilters()),
             t &&
-              o.forEach(function (e) {
+              i.forEach(function (e) {
                 "function" == typeof e.type && (e.type = "function");
               }),
-            (o = o.concat(this.filtersToArray(this.filterList, t)))
+            (i = i.concat(this.filtersToArray(this.filterList, t)))
           );
         }),
         (L.prototype.filtersToArray = function (e, t) {
-          var o = this,
-            i = [];
+          var i = this,
+            o = [];
           return (
             e.forEach(function (e) {
               var n;
               Array.isArray(e)
-                ? i.push(o.filtersToArray(e, t))
+                ? o.push(i.filtersToArray(e, t))
                 : ((n = { field: e.field, type: e.type, value: e.value }),
                   t && "function" == typeof n.type && (n.type = "function"),
-                  i.push(n));
+                  o.push(n));
             }),
-            i
+            o
           );
         }),
         (L.prototype.getHeaderFilters = function () {
@@ -14173,24 +15272,24 @@
             });
           return e;
         }),
-        (L.prototype.removeFilter = function (e, t, o) {
-          var i = this;
-          Array.isArray(e) || (e = [{ field: e, type: t, value: o }]),
+        (L.prototype.removeFilter = function (e, t, i) {
+          var o = this;
+          Array.isArray(e) || (e = [{ field: e, type: t, value: i }]),
             e.forEach(function (e) {
               var t = -1;
               (t =
                 "object" == r(e.field)
-                  ? i.filterList.findIndex(function (t) {
+                  ? o.filterList.findIndex(function (t) {
                       return e === t;
                     })
-                  : i.filterList.findIndex(function (t) {
+                  : o.filterList.findIndex(function (t) {
                       return (
                         e.field === t.field &&
                         e.type === t.type &&
                         e.value === t.value
                       );
                     })) > -1
-                ? (i.filterList.splice(t, 1), (i.changed = !0))
+                ? (o.filterList.splice(t, 1), (o.changed = !0))
                 : console.warn(
                     "Filter Error - No matching filter type found, ignoring: ",
                     e.type,
@@ -14222,123 +15321,123 @@
             }),
             (this.changed = !0);
         }),
-        (L.prototype.search = function (e, t, o, i) {
+        (L.prototype.search = function (e, t, i, o) {
           var n = this,
             r = [],
             a = [];
           return (
-            Array.isArray(t) || (t = [{ field: t, type: o, value: i }]),
+            Array.isArray(t) || (t = [{ field: t, type: i, value: o }]),
             t.forEach(function (e) {
               (e = n.findFilter(e)) && a.push(e);
             }),
             this.table.rowManager.rows.forEach(function (t) {
-              var o = !0;
+              var i = !0;
               a.forEach(function (e) {
-                n.filterRecurse(e, t.getData()) || (o = !1);
+                n.filterRecurse(e, t.getData()) || (i = !1);
               }),
-                o &&
+                i &&
                   r.push("data" === e ? t.getData("data") : t.getComponent());
             }),
             r
           );
         }),
         (L.prototype.filter = function (e, t) {
-          var o = this,
-            i = [],
+          var i = this,
+            o = [],
             n = [];
           return (
-            o.table.options.dataFiltering &&
-              o.table.options.dataFiltering.call(o.table, o.getFilters()),
-            o.table.options.ajaxFiltering ||
-            (!o.filterList.length && !Object.keys(o.headerFilters).length)
-              ? (i = e.slice(0))
+            i.table.options.dataFiltering &&
+              i.table.options.dataFiltering.call(i.table, i.getFilters()),
+            i.table.options.ajaxFiltering ||
+            (!i.filterList.length && !Object.keys(i.headerFilters).length)
+              ? (o = e.slice(0))
               : e.forEach(function (e) {
-                  o.filterRow(e) && i.push(e);
+                  i.filterRow(e) && o.push(e);
                 }),
-            o.table.options.dataFiltered &&
-              (i.forEach(function (e) {
+            i.table.options.dataFiltered &&
+              (o.forEach(function (e) {
                 n.push(e.getComponent());
               }),
-              o.table.options.dataFiltered.call(o.table, o.getFilters(), n)),
-            i
+              i.table.options.dataFiltered.call(i.table, i.getFilters(), n)),
+            o
           );
         }),
         (L.prototype.filterRow = function (e, t) {
-          var o = this,
-            i = !0,
+          var i = this,
+            o = !0,
             n = e.getData();
-          for (var r in (o.filterList.forEach(function (e) {
-            o.filterRecurse(e, n) || (i = !1);
+          for (var r in (i.filterList.forEach(function (e) {
+            i.filterRecurse(e, n) || (o = !1);
           }),
-          o.headerFilters))
-            o.headerFilters[r].func(n) || (i = !1);
-          return i;
+          i.headerFilters))
+            i.headerFilters[r].func(n) || (o = !1);
+          return o;
         }),
         (L.prototype.filterRecurse = function (e, t) {
-          var o = this,
-            i = !1;
+          var i = this,
+            o = !1;
           return (
             Array.isArray(e)
               ? e.forEach(function (e) {
-                  o.filterRecurse(e, t) && (i = !0);
+                  i.filterRecurse(e, t) && (o = !0);
                 })
-              : (i = e.func(t)),
-            i
+              : (o = e.func(t)),
+            o
           );
         }),
         (L.prototype.filters = {
-          "=": function (e, t, o, i) {
+          "=": function (e, t, i, o) {
             return t == e;
           },
-          "<": function (e, t, o, i) {
+          "<": function (e, t, i, o) {
             return t < e;
           },
-          "<=": function (e, t, o, i) {
+          "<=": function (e, t, i, o) {
             return t <= e;
           },
-          ">": function (e, t, o, i) {
+          ">": function (e, t, i, o) {
             return t > e;
           },
-          ">=": function (e, t, o, i) {
+          ">=": function (e, t, i, o) {
             return t >= e;
           },
-          "!=": function (e, t, o, i) {
+          "!=": function (e, t, i, o) {
             return t != e;
           },
-          regex: function (e, t, o, i) {
+          regex: function (e, t, i, o) {
             return "string" == typeof e && (e = new RegExp(e)), e.test(t);
           },
-          like: function (e, t, o, i) {
+          like: function (e, t, i, o) {
             return null == e
               ? t === e
               : null != t &&
                   String(t).toLowerCase().indexOf(e.toLowerCase()) > -1;
           },
-          keywords: function (e, t, o, i) {
+          keywords: function (e, t, i, o) {
             var n = e
                 .toLowerCase()
-                .split(void 0 === i.separator ? " " : i.separator),
+                .split(void 0 === o.separator ? " " : o.separator),
               r = String(null == t ? "" : t).toLowerCase(),
               a = [];
             return (
               n.forEach(function (e) {
                 r.includes(e) && a.push(!0);
               }),
-              i.matchAll ? a.length === n.length : !!a.length
+              o.matchAll ? a.length === n.length : !!a.length
             );
           },
-          starts: function (e, t, o, i) {
+          starts: function (e, t, i, o) {
             return null == e
               ? t === e
               : null != t &&
                   String(t).toLowerCase().startsWith(e.toLowerCase());
           },
-          ends: function (e, t, o, i) {
+          ends: function (e, t, i, o) {
             return null == e
               ? t === e
               : null != t && String(t).toLowerCase().endsWith(e.toLowerCase());
           },
-          in: function (e, t, o, i) {
+          in: function (e, t, i, o) {
             return Array.isArray(e)
               ? !e.length || e.indexOf(t) > -1
               : (console.warn(
@@ -14365,32 +15464,32 @@
             ));
       }),
         (z.prototype.lookupFormatter = function (e, t) {
-          var o = { params: e.definition["formatter" + t + "Params"] || {} },
-            i = e.definition["formatter" + t];
-          switch (void 0 === i ? "undefined" : r(i)) {
+          var i = { params: e.definition["formatter" + t + "Params"] || {} },
+            o = e.definition["formatter" + t];
+          switch (void 0 === o ? "undefined" : r(o)) {
             case "string":
-              "tick" === i &&
-                ((i = "tickCross"),
-                void 0 === o.params.crossElement &&
-                  (o.params.crossElement = !1),
+              "tick" === o &&
+                ((o = "tickCross"),
+                void 0 === i.params.crossElement &&
+                  (i.params.crossElement = !1),
                 console.warn(
                   "DEPRECATION WARNING - the tick formatter has been deprecated, please use the tickCross formatter with the crossElement param set to false",
                 )),
-                this.formatters[i]
-                  ? (o.formatter = this.formatters[i])
+                this.formatters[o]
+                  ? (i.formatter = this.formatters[o])
                   : (console.warn(
                       "Formatter Error - No such formatter found: ",
-                      i,
+                      o,
                     ),
-                    (o.formatter = this.formatters.plaintext));
+                    (i.formatter = this.formatters.plaintext));
               break;
             case "function":
-              o.formatter = i;
+              i.formatter = o;
               break;
             default:
-              o.formatter = this.formatters.plaintext;
+              i.formatter = this.formatters.plaintext;
           }
-          return o;
+          return i;
         }),
         (z.prototype.cellRendered = function (e) {
           e.modules.format &&
@@ -14401,14 +15500,14 @@
         }),
         (z.prototype.formatValue = function (e) {
           var t = e.getComponent(),
-            o =
+            i =
               "function" == typeof e.column.modules.format.params
                 ? e.column.modules.format.params(t)
                 : e.column.modules.format.params;
           return e.column.modules.format.formatter.call(
             this,
             t,
-            o,
+            i,
             function (t) {
               e.modules.format || (e.modules.format = {}),
                 (e.modules.format.renderedCallback = t),
@@ -14417,13 +15516,13 @@
           );
         }),
         (z.prototype.formatExportValue = function (e, t) {
-          var o,
-            i = e.column.modules.format[t];
-          if (i) {
+          var i,
+            o = e.column.modules.format[t];
+          if (o) {
             return (
-              (o =
-                "function" == typeof i.params ? i.params(component) : i.params),
-              i.formatter.call(this, e.getComponent(), o, function (t) {
+              (i =
+                "function" == typeof o.params ? o.params(component) : o.params),
+              o.formatter.call(this, e.getComponent(), i, function (t) {
                 e.modules.format || (e.modules.format = {}),
                   (e.modules.format.renderedCallback = t),
                   (e.modules.format.rendered = !1);
@@ -14472,20 +15571,20 @@
           return e;
         }),
         (z.prototype.formatters = {
-          plaintext: function (e, t, o) {
+          plaintext: function (e, t, i) {
             return this.emptyToSpace(this.sanitizeHTML(e.getValue()));
           },
-          html: function (e, t, o) {
+          html: function (e, t, i) {
             return e.getValue();
           },
-          textarea: function (e, t, o) {
+          textarea: function (e, t, i) {
             return (
               (e.getElement().style.whiteSpace = "pre-wrap"),
               this.emptyToSpace(this.sanitizeHTML(e.getValue()))
             );
           },
-          money: function (e, t, o) {
-            var i,
+          money: function (e, t, i) {
+            var o,
               n,
               r,
               a,
@@ -14498,9 +15597,9 @@
             if (isNaN(s))
               return this.emptyToSpace(this.sanitizeHTML(e.getValue()));
             for (
-              i = !1 !== p ? s.toFixed(p) : s,
-                n = (i = String(i).split("."))[0],
-                r = i.length > 1 ? l + i[1] : "",
+              o = !1 !== p ? s.toFixed(p) : s,
+                n = (o = String(o).split("."))[0],
+                r = o.length > 1 ? l + o[1] : "",
                 a = /(\d+)(\d{3})/;
               a.test(n);
 
@@ -14508,11 +15607,11 @@
               n = n.replace(a, "$1" + c + "$2");
             return d ? n + r + u : u + n + r;
           },
-          link: function (e, t, o) {
-            var i = e.getValue(),
+          link: function (e, t, i) {
+            var o = e.getValue(),
               n = t.urlPrefix || "",
               a = t.download,
-              s = i,
+              s = o,
               l = document.createElement("a");
             if ((t.labelField && (s = e.getData()[t.labelField]), t.label))
               switch (r(t.label)) {
@@ -14523,16 +15622,16 @@
                   s = t.label(e);
               }
             if (s) {
-              if ((t.urlField && (i = e.getData()[t.urlField]), t.url))
+              if ((t.urlField && (o = e.getData()[t.urlField]), t.url))
                 switch (r(t.url)) {
                   case "string":
-                    i = t.url;
+                    o = t.url;
                     break;
                   case "function":
-                    i = t.url(e);
+                    o = t.url(e);
                 }
               return (
-                l.setAttribute("href", n + i),
+                l.setAttribute("href", n + o),
                 t.target && l.setAttribute("target", t.target),
                 t.download &&
                   ((a = "function" == typeof a ? a(e) : !0 === a ? "" : a),
@@ -14543,37 +15642,37 @@
             }
             return "&nbsp;";
           },
-          image: function (e, t, o) {
-            var i = document.createElement("img"),
+          image: function (e, t, i) {
+            var o = document.createElement("img"),
               n = e.getValue();
             switch (
               (t.urlPrefix && (n = t.urlPrefix + e.getValue()),
               t.urlSuffix && (n += t.urlSuffix),
-              i.setAttribute("src", n),
+              o.setAttribute("src", n),
               r(t.height))
             ) {
               case "number":
-                i.style.height = t.height + "px";
+                o.style.height = t.height + "px";
                 break;
               case "string":
-                i.style.height = t.height;
+                o.style.height = t.height;
             }
             switch (r(t.width)) {
               case "number":
-                i.style.width = t.width + "px";
+                o.style.width = t.width + "px";
                 break;
               case "string":
-                i.style.width = t.width;
+                o.style.width = t.width;
             }
             return (
-              i.addEventListener("load", function () {
+              o.addEventListener("load", function () {
                 e.getRow().normalizeHeight();
               }),
-              i
+              o
             );
           },
-          tickCross: function (e, t, o) {
-            var i = e.getValue(),
+          tickCross: function (e, t, i) {
+            var o = e.getValue(),
               n = e.getElement(),
               r = t.allowEmpty,
               a = t.allowTruthy,
@@ -14585,23 +15684,23 @@
                 void 0 !== t.crossElement
                   ? t.crossElement
                   : '<svg enable-background="new 0 0 24 24" height="14" width="14"  viewBox="0 0 24 24" xml:space="preserve" ><path fill="#CE1515" d="M22.245,4.015c0.313,0.313,0.313,0.826,0,1.139l-6.276,6.27c-0.313,0.312-0.313,0.826,0,1.14l6.273,6.272  c0.313,0.313,0.313,0.826,0,1.14l-2.285,2.277c-0.314,0.312-0.828,0.312-1.142,0l-6.271-6.271c-0.313-0.313-0.828-0.313-1.141,0  l-6.276,6.267c-0.313,0.313-0.828,0.313-1.141,0l-2.282-2.28c-0.313-0.313-0.313-0.826,0-1.14l6.278-6.269  c0.313-0.312,0.313-0.826,0-1.14L1.709,5.147c-0.314-0.313-0.314-0.827,0-1.14l2.284-2.278C4.308,1.417,4.821,1.417,5.135,1.73  L11.405,8c0.314,0.314,0.828,0.314,1.141,0.001l6.276-6.267c0.312-0.312,0.826-0.312,1.141,0L22.245,4.015z"/></svg>';
-            return (a && i) ||
-              !0 === i ||
-              "true" === i ||
-              "True" === i ||
-              1 === i ||
-              "1" === i
+            return (a && o) ||
+              !0 === o ||
+              "true" === o ||
+              "True" === o ||
+              1 === o ||
+              "1" === o
               ? (n.setAttribute("aria-checked", !0), s || "")
-              : !r || ("null" !== i && "" !== i && null != i)
+              : !r || ("null" !== o && "" !== o && null != o)
               ? (n.setAttribute("aria-checked", !1), l || "")
               : (n.setAttribute("aria-checked", "mixed"), "");
           },
-          datetime: function (e, t, o) {
-            var i = t.inputFormat || "YYYY-MM-DD hh:mm:ss",
+          datetime: function (e, t, i) {
+            var o = t.inputFormat || "YYYY-MM-DD hh:mm:ss",
               n = t.outputFormat || "DD/MM/YYYY hh:mm:ss",
               r = void 0 !== t.invalidPlaceholder ? t.invalidPlaceholder : "",
               a = e.getValue(),
-              s = moment(a, i);
+              s = moment(a, o);
             return s.isValid()
               ? t.timezone
                 ? s.tz(t.timezone).format(n)
@@ -14612,15 +15711,15 @@
               ? r(a)
               : r;
           },
-          datetimediff: function (e, t, o) {
-            var i = t.inputFormat || "YYYY-MM-DD hh:mm:ss",
+          datetimediff: function (e, t, i) {
+            var o = t.inputFormat || "YYYY-MM-DD hh:mm:ss",
               n = void 0 !== t.invalidPlaceholder ? t.invalidPlaceholder : "",
               r = void 0 !== t.suffix && t.suffix,
               a = void 0 !== t.unit ? t.unit : void 0,
               s = void 0 !== t.humanize && t.humanize,
               l = void 0 !== t.date ? t.date : moment(),
               c = e.getValue(),
-              u = moment(c, i);
+              u = moment(c, o);
             return u.isValid()
               ? s
                 ? moment.duration(u.diff(l)).humanize(r)
@@ -14631,14 +15730,14 @@
               ? n(c)
               : n;
           },
-          lookup: function (e, t, o) {
-            var i = e.getValue();
-            return void 0 === t[i]
-              ? (console.warn("Missing display value for " + i), i)
-              : t[i];
+          lookup: function (e, t, i) {
+            var o = e.getValue();
+            return void 0 === t[o]
+              ? (console.warn("Missing display value for " + o), o)
+              : t[o];
           },
-          star: function (e, t, o) {
-            var i = e.getValue(),
+          star: function (e, t, i) {
+            var o = e.getValue(),
               n = e.getElement(),
               r = t && t.stars ? t.stars : 5,
               a = document.createElement("span"),
@@ -14649,12 +15748,12 @@
               s.setAttribute("viewBox", "0 0 512 512"),
               s.setAttribute("xml:space", "preserve"),
               (s.style.padding = "0 1px"),
-              (i = i && !isNaN(i) ? parseInt(i) : 0),
-              (i = Math.max(0, Math.min(i, r)));
+              (o = o && !isNaN(o) ? parseInt(o) : 0),
+              (o = Math.max(0, Math.min(o, r)));
             for (var l = 1; l <= r; l++) {
               var c = s.cloneNode(!0);
               (c.innerHTML =
-                l <= i
+                l <= o
                   ? '<polygon fill="#FFEA00" stroke="#C1AB60" stroke-width="37.6152" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="259.216,29.942 330.27,173.919 489.16,197.007 374.185,309.08 401.33,467.31 259.216,392.612 117.104,467.31 144.25,309.08 29.274,197.007 188.165,173.919 "/>'
                   : '<polygon fill="#D2D2D2" stroke="#686868" stroke-width="37.6152" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="259.216,29.942 330.27,173.919 489.16,197.007 374.185,309.08 401.33,467.31 259.216,392.612 117.104,467.31 144.25,309.08 29.274,197.007 188.165,173.919 "/>'),
                 a.appendChild(c);
@@ -14663,12 +15762,12 @@
               (n.style.whiteSpace = "nowrap"),
               (n.style.overflow = "hidden"),
               (n.style.textOverflow = "ellipsis"),
-              n.setAttribute("aria-label", i),
+              n.setAttribute("aria-label", o),
               a
             );
           },
-          traffic: function (e, t, o) {
-            var i,
+          traffic: function (e, t, i) {
+            var o,
               n,
               a = this.sanitizeHTML(e.getValue()) || 0,
               s = document.createElement("span"),
@@ -14682,8 +15781,8 @@
                 (s.classList.add("tabulator-traffic-light"),
                 (n = parseFloat(a) <= l ? parseFloat(a) : l),
                 (n = parseFloat(n) >= c ? parseFloat(n) : c),
-                (i = (l - c) / 100),
-                (n = Math.round((n - c) / i)),
+                (o = (l - c) / 100),
+                (n = Math.round((n - c) / o)),
                 void 0 === u ? "undefined" : r(u))
               ) {
                 case "string":
@@ -14704,8 +15803,8 @@
               return (s.style.backgroundColor = d), s;
             }
           },
-          progress: function (e, t, o) {
-            var i,
+          progress: function (e, t, i) {
+            var o,
               n,
               a,
               s,
@@ -14718,8 +15817,8 @@
             switch (
               ((n = parseFloat(c) <= d ? parseFloat(c) : d),
               (n = parseFloat(n) >= p ? parseFloat(n) : p),
-              (i = (d - p) / 100),
-              (n = Math.round((n - p) / i)),
+              (o = (d - p) / 100),
+              (n = Math.round((n - p) / o)),
               r(t.color))
             ) {
               case "string":
@@ -14795,7 +15894,7 @@
                 (v.innerHTML = s);
             }
             return (
-              o(function () {
+              i(function () {
                 if (!(e instanceof h)) {
                   var t = document.createElement("div");
                   (t.style.position = "absolute"),
@@ -14811,7 +15910,7 @@
               ""
             );
           },
-          color: function (e, t, o) {
+          color: function (e, t, i) {
             return (
               (e.getElement().style.backgroundColor = this.sanitizeHTML(
                 e.getValue(),
@@ -14819,49 +15918,49 @@
               ""
             );
           },
-          buttonTick: function (e, t, o) {
+          buttonTick: function (e, t, i) {
             return '<svg enable-background="new 0 0 24 24" height="14" width="14" viewBox="0 0 24 24" xml:space="preserve" ><path fill="#2DC214" clip-rule="evenodd" d="M21.652,3.211c-0.293-0.295-0.77-0.295-1.061,0L9.41,14.34  c-0.293,0.297-0.771,0.297-1.062,0L3.449,9.351C3.304,9.203,3.114,9.13,2.923,9.129C2.73,9.128,2.534,9.201,2.387,9.351  l-2.165,1.946C0.078,11.445,0,11.63,0,11.823c0,0.194,0.078,0.397,0.223,0.544l4.94,5.184c0.292,0.296,0.771,0.776,1.062,1.07  l2.124,2.141c0.292,0.293,0.769,0.293,1.062,0l14.366-14.34c0.293-0.294,0.293-0.777,0-1.071L21.652,3.211z" fill-rule="evenodd"/></svg>';
           },
-          buttonCross: function (e, t, o) {
+          buttonCross: function (e, t, i) {
             return '<svg enable-background="new 0 0 24 24" height="14" width="14" viewBox="0 0 24 24" xml:space="preserve" ><path fill="#CE1515" d="M22.245,4.015c0.313,0.313,0.313,0.826,0,1.139l-6.276,6.27c-0.313,0.312-0.313,0.826,0,1.14l6.273,6.272  c0.313,0.313,0.313,0.826,0,1.14l-2.285,2.277c-0.314,0.312-0.828,0.312-1.142,0l-6.271-6.271c-0.313-0.313-0.828-0.313-1.141,0  l-6.276,6.267c-0.313,0.313-0.828,0.313-1.141,0l-2.282-2.28c-0.313-0.313-0.313-0.826,0-1.14l6.278-6.269  c0.313-0.312,0.313-0.826,0-1.14L1.709,5.147c-0.314-0.313-0.314-0.827,0-1.14l2.284-2.278C4.308,1.417,4.821,1.417,5.135,1.73  L11.405,8c0.314,0.314,0.828,0.314,1.141,0.001l6.276-6.267c0.312-0.312,0.826-0.312,1.141,0L22.245,4.015z"/></svg>';
           },
-          rownum: function (e, t, o) {
+          rownum: function (e, t, i) {
             return (
               this.table.rowManager.activeRows.indexOf(e.getRow()._getSelf()) +
               1
             );
           },
-          handle: function (e, t, o) {
+          handle: function (e, t, i) {
             return (
               e.getElement().classList.add("tabulator-row-handle"),
               "<div class='tabulator-row-handle-box'><div class='tabulator-row-handle-bar'></div><div class='tabulator-row-handle-bar'></div><div class='tabulator-row-handle-bar'></div></div>"
             );
           },
-          responsiveCollapse: function (e, t, o) {
-            var i = document.createElement("div"),
+          responsiveCollapse: function (e, t, i) {
+            var o = document.createElement("div"),
               n = e.getRow()._row.modules.responsiveLayout;
             function r(e) {
               var t = n.element;
               (n.open = e),
                 t &&
                   (n.open
-                    ? (i.classList.add("open"), (t.style.display = ""))
-                    : (i.classList.remove("open"), (t.style.display = "none")));
+                    ? (o.classList.add("open"), (t.style.display = ""))
+                    : (o.classList.remove("open"), (t.style.display = "none")));
             }
             return (
-              i.classList.add("tabulator-responsive-collapse-toggle"),
-              (i.innerHTML =
+              o.classList.add("tabulator-responsive-collapse-toggle"),
+              (o.innerHTML =
                 "<span class='tabulator-responsive-collapse-toggle-open'>+</span><span class='tabulator-responsive-collapse-toggle-close'>-</span>"),
               e.getElement().classList.add("tabulator-row-handle"),
-              i.addEventListener("click", function (e) {
+              o.addEventListener("click", function (e) {
                 e.stopImmediatePropagation(), r(!n.open);
               }),
               r(n.open),
-              i
+              o
             );
           },
-          rowSelection: function (e, t, o) {
-            var i = this,
+          rowSelection: function (e, t, i) {
+            var o = this,
               n = document.createElement("input");
             if (((n.type = "checkbox"), this.table.modExists("selectRow", !0)))
               if (
@@ -14883,16 +15982,16 @@
                   : (n = "");
               } else
                 n.addEventListener("change", function (e) {
-                  i.table.modules.selectRow.selectedRows.length
-                    ? i.table.deselectRow()
-                    : i.table.selectRow(t.rowRange);
+                  o.table.modules.selectRow.selectedRows.length
+                    ? o.table.deselectRow()
+                    : o.table.selectRow(t.rowRange);
                 }),
                   this.table.modules.selectRow.registerHeaderSelectCheckbox(n);
             return n;
           },
         }),
         g.prototype.registerModule("format", z);
-      var P = function (e) {
+      var A = function (e) {
         (this.table = e),
           (this.leftColumns = []),
           (this.rightColumns = []),
@@ -14903,7 +16002,7 @@
           (this.active = !1),
           (this.scrollEndTimer = !1);
       };
-      (P.prototype.reset = function () {
+      (A.prototype.reset = function () {
         (this.initializationMode = "left"),
           (this.leftColumns = []),
           (this.rightColumns = []),
@@ -14914,7 +16013,7 @@
           (this.table.columnManager.headersElement.style.marginLeft = 0),
           (this.table.columnManager.element.style.paddingRight = 0);
       }),
-        (P.prototype.initializeColumn = function (e) {
+        (A.prototype.initializeColumn = function (e) {
           var t = { margin: 0, edge: !1 };
           e.isGroup ||
             (this.frozenCheck(e)
@@ -14926,7 +16025,7 @@
                 (e.modules.frozen = t))
               : (this.initializationMode = "right"));
         }),
-        (P.prototype.frozenCheck = function (e) {
+        (A.prototype.frozenCheck = function (e) {
           return (
             e.parent.isGroup &&
               e.definition.frozen &&
@@ -14936,7 +16035,7 @@
             e.parent.isGroup ? this.frozenCheck(e.parent) : e.definition.frozen
           );
         }),
-        (P.prototype.scrollHorizontal = function () {
+        (A.prototype.scrollHorizontal = function () {
           var e,
             t = this;
           this.active &&
@@ -14954,7 +16053,7 @@
             (this.table.rowManager.tableElement.style.marginRight =
               this.rightMargin));
         }),
-        (P.prototype.calcMargins = function () {
+        (A.prototype.calcMargins = function () {
           (this.leftMargin =
             this._calcSpace(this.leftColumns, this.leftColumns.length) + "px"),
             (this.table.columnManager.headersElement.style.marginLeft =
@@ -14968,7 +16067,7 @@
               this.table.rowManager.element.clientWidth +
               this.table.columnManager.scrollLeft);
         }),
-        (P.prototype.layoutCalcRows = function () {
+        (A.prototype.layoutCalcRows = function () {
           this.table.modExists("columnCalcs") &&
             (this.table.modules.columnCalcs.topInitialized &&
               this.table.modules.columnCalcs.topRow &&
@@ -14977,53 +16076,53 @@
               this.table.modules.columnCalcs.botRow &&
               this.layoutRow(this.table.modules.columnCalcs.botRow));
         }),
-        (P.prototype.layoutColumnPosition = function (e) {
+        (A.prototype.layoutColumnPosition = function (e) {
           var t = this,
-            o = [];
-          this.leftColumns.forEach(function (i, n) {
+            i = [];
+          this.leftColumns.forEach(function (o, n) {
             if (
-              ((i.modules.frozen.margin =
+              ((o.modules.frozen.margin =
                 t._calcSpace(t.leftColumns, n) +
                 t.table.columnManager.scrollLeft +
                 "px"),
               n == t.leftColumns.length - 1
-                ? (i.modules.frozen.edge = !0)
-                : (i.modules.frozen.edge = !1),
-              i.parent.isGroup)
+                ? (o.modules.frozen.edge = !0)
+                : (o.modules.frozen.edge = !1),
+              o.parent.isGroup)
             ) {
-              var r = t.getColGroupParentElement(i);
-              o.includes(r) || (t.layoutElement(r, i), o.push(r)),
-                i.modules.frozen.edge &&
+              var r = t.getColGroupParentElement(o);
+              i.includes(r) || (t.layoutElement(r, o), i.push(r)),
+                o.modules.frozen.edge &&
                   r.classList.add(
-                    "tabulator-frozen-" + i.modules.frozen.position,
+                    "tabulator-frozen-" + o.modules.frozen.position,
                   );
-            } else t.layoutElement(i.getElement(), i);
+            } else t.layoutElement(o.getElement(), o);
             e &&
-              i.cells.forEach(function (e) {
-                t.layoutElement(e.getElement(!0), i);
+              o.cells.forEach(function (e) {
+                t.layoutElement(e.getElement(!0), o);
               });
           }),
-            this.rightColumns.forEach(function (o, i) {
-              (o.modules.frozen.margin =
-                t.rightPadding - t._calcSpace(t.rightColumns, i + 1) + "px"),
-                i == t.rightColumns.length - 1
-                  ? (o.modules.frozen.edge = !0)
-                  : (o.modules.frozen.edge = !1),
-                o.parent.isGroup
-                  ? t.layoutElement(t.getColGroupParentElement(o), o)
-                  : t.layoutElement(o.getElement(), o),
+            this.rightColumns.forEach(function (i, o) {
+              (i.modules.frozen.margin =
+                t.rightPadding - t._calcSpace(t.rightColumns, o + 1) + "px"),
+                o == t.rightColumns.length - 1
+                  ? (i.modules.frozen.edge = !0)
+                  : (i.modules.frozen.edge = !1),
+                i.parent.isGroup
+                  ? t.layoutElement(t.getColGroupParentElement(i), i)
+                  : t.layoutElement(i.getElement(), i),
                 e &&
-                  o.cells.forEach(function (e) {
-                    t.layoutElement(e.getElement(!0), o);
+                  i.cells.forEach(function (e) {
+                    t.layoutElement(e.getElement(!0), i);
                   });
             });
         }),
-        (P.prototype.getColGroupParentElement = function (e) {
+        (A.prototype.getColGroupParentElement = function (e) {
           return e.parent.isGroup
             ? this.getColGroupParentElement(e.parent)
             : e.getElement();
         }),
-        (P.prototype.layout = function () {
+        (A.prototype.layout = function () {
           var e = this;
           e.active &&
             (this.calcMargins(),
@@ -15035,19 +16134,19 @@
             (this.table.rowManager.tableElement.style.marginRight =
               this.rightMargin));
         }),
-        (P.prototype.layoutRow = function (e) {
+        (A.prototype.layoutRow = function (e) {
           var t = this;
           (e.getElement().style.paddingLeft = this.leftMargin),
-            this.leftColumns.forEach(function (o) {
-              var i = e.getCell(o);
-              i && t.layoutElement(i.getElement(!0), o);
+            this.leftColumns.forEach(function (i) {
+              var o = e.getCell(i);
+              o && t.layoutElement(o.getElement(!0), i);
             }),
-            this.rightColumns.forEach(function (o) {
-              var i = e.getCell(o);
-              i && t.layoutElement(i.getElement(!0), o);
+            this.rightColumns.forEach(function (i) {
+              var o = e.getCell(i);
+              o && t.layoutElement(o.getElement(!0), i);
             });
         }),
-        (P.prototype.layoutElement = function (e, t) {
+        (A.prototype.layoutElement = function (e, t) {
           t.modules.frozen &&
             ((e.style.position = "absolute"),
             (e.style.left = t.modules.frozen.margin),
@@ -15055,19 +16154,19 @@
             t.modules.frozen.edge &&
               e.classList.add("tabulator-frozen-" + t.modules.frozen.position));
         }),
-        (P.prototype._calcSpace = function (e, t) {
-          for (var o = 0, i = 0; i < t; i++)
-            e[i].visible && (o += e[i].getWidth());
-          return o;
+        (A.prototype._calcSpace = function (e, t) {
+          for (var i = 0, o = 0; o < t; o++)
+            e[o].visible && (i += e[o].getWidth());
+          return i;
         }),
-        g.prototype.registerModule("frozenColumns", P);
-      var A = function (e) {
+        g.prototype.registerModule("frozenColumns", A);
+      var P = function (e) {
         (this.table = e),
           (this.topElement = document.createElement("div")),
           (this.rows = []),
           (this.displayIndex = 0);
       };
-      (A.prototype.initialize = function () {
+      (P.prototype.initialize = function () {
         (this.rows = []),
           this.topElement.classList.add("tabulator-frozen-rows-holder"),
           this.table.columnManager
@@ -15077,26 +16176,26 @@
               this.table.columnManager.headersElement.nextSibling,
             );
       }),
-        (A.prototype.setDisplayIndex = function (e) {
+        (P.prototype.setDisplayIndex = function (e) {
           this.displayIndex = e;
         }),
-        (A.prototype.getDisplayIndex = function () {
+        (P.prototype.getDisplayIndex = function () {
           return this.displayIndex;
         }),
-        (A.prototype.isFrozen = function () {
+        (P.prototype.isFrozen = function () {
           return !!this.rows.length;
         }),
-        (A.prototype.getRows = function (e) {
+        (P.prototype.getRows = function (e) {
           var t = e.slice(0);
           return (
             this.rows.forEach(function (e) {
-              var o = t.indexOf(e);
-              o > -1 && t.splice(o, 1);
+              var i = t.indexOf(e);
+              i > -1 && t.splice(i, 1);
             }),
             t
           );
         }),
-        (A.prototype.freezeRow = function (e) {
+        (P.prototype.freezeRow = function (e) {
           e.modules.frozen
             ? console.warn("Freeze Error - Row is already frozen")
             : ((e.modules.frozen = !0),
@@ -15108,7 +16207,7 @@
               this.table.rowManager.refreshActiveData("display"),
               this.styleRows());
         }),
-        (A.prototype.unfreezeRow = function (e) {
+        (P.prototype.unfreezeRow = function (e) {
           this.rows.indexOf(e);
           e.modules.frozen
             ? ((e.modules.frozen = !1),
@@ -15118,20 +16217,20 @@
               this.rows.length && this.styleRows())
             : console.warn("Freeze Error - Row is already unfrozen");
         }),
-        (A.prototype.detachRow = function (e) {
+        (P.prototype.detachRow = function (e) {
           var t = this.rows.indexOf(e);
           if (t > -1) {
-            var o = e.getElement();
-            o.parentNode.removeChild(o), this.rows.splice(t, 1);
+            var i = e.getElement();
+            i.parentNode.removeChild(i), this.rows.splice(t, 1);
           }
         }),
-        (A.prototype.styleRows = function (e) {
+        (P.prototype.styleRows = function (e) {
           var t = this;
-          this.rows.forEach(function (e, o) {
-            t.table.rowManager.styleRow(e, o);
+          this.rows.forEach(function (e, i) {
+            t.table.rowManager.styleRow(e, i);
           });
         }),
-        g.prototype.registerModule("frozenRows", A);
+        g.prototype.registerModule("frozenRows", P);
       var F = function (e) {
         (this._group = e), (this.type = "GroupComponent");
       };
@@ -15179,13 +16278,13 @@
         (F.prototype.getTable = function () {
           return this._group.groupManager.table;
         });
-      var B = function (e, t, o, i, n, r, a) {
+      var B = function (e, t, i, o, n, r, a) {
         (this.groupManager = e),
           (this.parent = t),
-          (this.key = i),
-          (this.level = o),
+          (this.key = o),
+          (this.level = i),
           (this.field = n),
-          (this.hasSubGroups = o < e.groupIDLookups.length - 1),
+          (this.hasSubGroups = i < e.groupIDLookups.length - 1),
           (this.addRow = this.hasSubGroups
             ? this._addRowToGroup
             : this._addRow),
@@ -15205,8 +16304,8 @@
           (this.arrowElement = !1),
           (this.visible = a
             ? a.visible
-            : void 0 !== e.startOpen[o]
-            ? e.startOpen[o]
+            : void 0 !== e.startOpen[i]
+            ? e.startOpen[i]
             : e.startOpen[0]),
           (this.component = null),
           this.createElements(),
@@ -15244,107 +16343,107 @@
             t = this.level + 1;
           this.groupManager.allowedValues &&
             this.groupManager.allowedValues[t] &&
-            this.groupManager.allowedValues[t].forEach(function (o) {
-              e._createGroup(o, t);
+            this.groupManager.allowedValues[t].forEach(function (i) {
+              e._createGroup(i, t);
             });
         }),
         (B.prototype.addBindings = function () {
           var e,
             t,
-            o,
-            i = this;
-          i.groupManager.table.options.groupClick &&
-            i.element.addEventListener("click", function (e) {
-              i.groupManager.table.options.groupClick.call(
-                i.groupManager.table,
+            i,
+            o = this;
+          o.groupManager.table.options.groupClick &&
+            o.element.addEventListener("click", function (e) {
+              o.groupManager.table.options.groupClick.call(
+                o.groupManager.table,
                 e,
-                i.getComponent(),
+                o.getComponent(),
               );
             }),
-            i.groupManager.table.options.groupDblClick &&
-              i.element.addEventListener("dblclick", function (e) {
-                i.groupManager.table.options.groupDblClick.call(
-                  i.groupManager.table,
+            o.groupManager.table.options.groupDblClick &&
+              o.element.addEventListener("dblclick", function (e) {
+                o.groupManager.table.options.groupDblClick.call(
+                  o.groupManager.table,
                   e,
-                  i.getComponent(),
+                  o.getComponent(),
                 );
               }),
-            i.groupManager.table.options.groupContext &&
-              i.element.addEventListener("contextmenu", function (e) {
-                i.groupManager.table.options.groupContext.call(
-                  i.groupManager.table,
+            o.groupManager.table.options.groupContext &&
+              o.element.addEventListener("contextmenu", function (e) {
+                o.groupManager.table.options.groupContext.call(
+                  o.groupManager.table,
                   e,
-                  i.getComponent(),
+                  o.getComponent(),
                 );
               }),
-            (i.groupManager.table.options.groupContextMenu ||
-              i.groupManager.table.options.groupClickMenu) &&
-              i.groupManager.table.modExists("menu") &&
-              i.groupManager.table.modules.menu.initializeGroup.call(
-                i.groupManager.table.modules.menu,
-                i,
+            (o.groupManager.table.options.groupContextMenu ||
+              o.groupManager.table.options.groupClickMenu) &&
+              o.groupManager.table.modExists("menu") &&
+              o.groupManager.table.modules.menu.initializeGroup.call(
+                o.groupManager.table.modules.menu,
+                o,
               ),
-            i.groupManager.table.options.groupTap &&
-              ((o = !1),
-              i.element.addEventListener(
+            o.groupManager.table.options.groupTap &&
+              ((i = !1),
+              o.element.addEventListener(
                 "touchstart",
                 function (e) {
-                  o = !0;
+                  i = !0;
                 },
                 { passive: !0 },
               ),
-              i.element.addEventListener("touchend", function (e) {
-                o && i.groupManager.table.options.groupTap(e, i.getComponent()),
-                  (o = !1);
+              o.element.addEventListener("touchend", function (e) {
+                i && o.groupManager.table.options.groupTap(e, o.getComponent()),
+                  (i = !1);
               })),
-            i.groupManager.table.options.groupDblTap &&
+            o.groupManager.table.options.groupDblTap &&
               ((e = null),
-              i.element.addEventListener("touchend", function (t) {
+              o.element.addEventListener("touchend", function (t) {
                 e
                   ? (clearTimeout(e),
                     (e = null),
-                    i.groupManager.table.options.groupDblTap(
+                    o.groupManager.table.options.groupDblTap(
                       t,
-                      i.getComponent(),
+                      o.getComponent(),
                     ))
                   : (e = setTimeout(function () {
                       clearTimeout(e), (e = null);
                     }, 300));
               })),
-            i.groupManager.table.options.groupTapHold &&
+            o.groupManager.table.options.groupTapHold &&
               ((t = null),
-              i.element.addEventListener(
+              o.element.addEventListener(
                 "touchstart",
                 function (e) {
                   clearTimeout(t),
                     (t = setTimeout(function () {
                       clearTimeout(t),
                         (t = null),
-                        (o = !1),
-                        i.groupManager.table.options.groupTapHold(
+                        (i = !1),
+                        o.groupManager.table.options.groupTapHold(
                           e,
-                          i.getComponent(),
+                          o.getComponent(),
                         );
                     }, 1e3));
                 },
                 { passive: !0 },
               ),
-              i.element.addEventListener("touchend", function (e) {
+              o.element.addEventListener("touchend", function (e) {
                 clearTimeout(t), (t = null);
               })),
-            i.groupManager.table.options.groupToggleElement &&
-              ("arrow" == i.groupManager.table.options.groupToggleElement
-                ? i.arrowElement
-                : i.element
+            o.groupManager.table.options.groupToggleElement &&
+              ("arrow" == o.groupManager.table.options.groupToggleElement
+                ? o.arrowElement
+                : o.element
               ).addEventListener("click", function (e) {
                 e.stopPropagation(),
                   e.stopImmediatePropagation(),
-                  i.toggleVisibility();
+                  o.toggleVisibility();
               });
         }),
         (B.prototype._createGroup = function (e, t) {
-          var o = t + "_" + e,
-            i = new B(
+          var i = t + "_" + e,
+            o = new B(
               this.groupManager,
               this,
               t,
@@ -15352,34 +16451,34 @@
               this.groupManager.groupIDLookups[t].field,
               this.groupManager.headerGenerator[t] ||
                 this.groupManager.headerGenerator[0],
-              !!this.old && this.old.groups[o],
+              !!this.old && this.old.groups[i],
             );
-          (this.groups[o] = i), this.groupList.push(i);
+          (this.groups[i] = o), this.groupList.push(o);
         }),
         (B.prototype._addRowToGroup = function (e) {
           var t = this.level + 1;
           if (this.hasSubGroups) {
-            var o = this.groupManager.groupIDLookups[t].func(e.getData()),
-              i = t + "_" + o;
+            var i = this.groupManager.groupIDLookups[t].func(e.getData()),
+              o = t + "_" + i;
             this.groupManager.allowedValues &&
             this.groupManager.allowedValues[t]
-              ? this.groups[i] && this.groups[i].addRow(e)
-              : (this.groups[i] || this._createGroup(o, t),
-                this.groups[i].addRow(e));
+              ? this.groups[o] && this.groups[o].addRow(e)
+              : (this.groups[o] || this._createGroup(i, t),
+                this.groups[o].addRow(e));
           }
         }),
         (B.prototype._addRow = function (e) {
           this.rows.push(e), (e.modules.group = this);
         }),
-        (B.prototype.insertRow = function (e, t, o) {
-          var i = this.conformRowData({});
-          e.updateData(i);
+        (B.prototype.insertRow = function (e, t, i) {
+          var o = this.conformRowData({});
+          e.updateData(o);
           var n = this.rows.indexOf(t);
           n > -1
-            ? o
+            ? i
               ? this.rows.splice(n + 1, 0, e)
               : this.rows.splice(n, 0, e)
-            : o
+            : i
             ? this.rows.push(e)
             : this.rows.unshift(e),
             (e.modules.group = this),
@@ -15409,10 +16508,10 @@
         }),
         (B.prototype.removeRow = function (e) {
           var t = this.rows.indexOf(e),
-            o = e.getElement();
+            i = e.getElement();
           t > -1 && this.rows.splice(t, 1),
             this.groupManager.table.options.groupValues || this.rows.length
-              ? (o.parentNode && o.parentNode.removeChild(o),
+              ? (i.parentNode && i.parentNode.removeChild(i),
                 this.generateGroupHeaderContents(),
                 this.groupManager.table.modExists("columnCalcs") &&
                   "table" != this.groupManager.table.options.columnCalcs &&
@@ -15424,9 +16523,9 @@
         }),
         (B.prototype.removeGroup = function (e) {
           var t,
-            o = e.level + "_" + e.key;
-          this.groups[o] &&
-            (delete this.groups[o],
+            i = e.level + "_" + e.key;
+          this.groups[i] &&
+            (delete this.groups[i],
             (t = this.groupList.indexOf(e)) > -1 && this.groupList.splice(t, 1),
             this.groupList.length ||
               (this.parent
@@ -15440,8 +16539,8 @@
             this._visSet(),
             this.visible
               ? this.groupList.length
-                ? this.groupList.forEach(function (o) {
-                    t = t.concat(o.getHeadersAndRows(e));
+                ? this.groupList.forEach(function (i) {
+                    t = t.concat(i.getHeadersAndRows(e));
                   })
                 : (!e &&
                     "table" != this.groupManager.table.options.columnCalcs &&
@@ -15497,14 +16596,14 @@
           );
         }),
         (B.prototype.getData = function (e, t) {
-          var o = [];
+          var i = [];
           return (
             this._visSet(),
             (!e || (e && this.visible)) &&
               this.rows.forEach(function (e) {
-                o.push(e.getData(t || "data"));
+                i.push(e.getData(t || "data"));
               }),
-            o
+            i
           );
         }),
         (B.prototype.getRowCount = function () {
@@ -15562,17 +16661,17 @@
             this.groupList.length
               ? this.groupList.forEach(function (e) {
                   e.getHeadersAndRows().forEach(function (e) {
-                    var o = e.getElement();
-                    t.parentNode.insertBefore(o, t.nextSibling),
+                    var i = e.getElement();
+                    t.parentNode.insertBefore(i, t.nextSibling),
                       e.initialize(),
-                      (t = o);
+                      (t = i);
                   });
                 })
               : e.rows.forEach(function (e) {
-                  var o = e.getElement();
-                  t.parentNode.insertBefore(o, t.nextSibling),
+                  var i = e.getElement();
+                  t.parentNode.insertBefore(i, t.nextSibling),
                     e.initialize(),
-                    (t = o);
+                    (t = i);
                 }),
               this.groupManager.table.rowManager.setDisplayRows(
                 this.groupManager.updateGroupRows(),
@@ -15603,9 +16702,9 @@
           var t = !1;
           return (
             this.groupList.length
-              ? this.groupList.forEach(function (o) {
-                  var i = o.getRowGroup(e);
-                  i && (t = i);
+              ? this.groupList.forEach(function (i) {
+                  var o = i.getRowGroup(e);
+                  o && (t = o);
                 })
               : this.rows.find(function (t) {
                   return t === e;
@@ -15616,8 +16715,8 @@
         (B.prototype.getSubGroups = function (e) {
           var t = [];
           return (
-            this.groupList.forEach(function (o) {
-              t.push(e ? o.getComponent() : o);
+            this.groupList.forEach(function (i) {
+              t.push(e ? i.getComponent() : i);
             }),
             t
           );
@@ -15625,8 +16724,8 @@
         (B.prototype.getRows = function (e) {
           var t = [];
           return (
-            this.rows.forEach(function (o) {
-              t.push(e ? o.getComponent() : o);
+            this.rows.forEach(function (i) {
+              t.push(e ? i.getComponent() : i);
             }),
             t
           );
@@ -15708,7 +16807,7 @@
             this.component || (this.component = new F(this)), this.component
           );
         });
-      var H = function (e) {
+      var O = function (e) {
         (this.table = e),
           (this.groupIDLookups = !1),
           (this.startOpen = [
@@ -15726,15 +16825,15 @@
           (this.groups = {}),
           (this.displayIndex = 0);
       };
-      (H.prototype.initialize = function () {
+      (O.prototype.initialize = function () {
         var e = this,
           t = e.table.options.groupBy,
-          o = e.table.options.groupStartOpen,
-          i = e.table.options.groupHeader;
+          i = e.table.options.groupStartOpen,
+          o = e.table.options.groupHeader;
         ((this.allowedValues = e.table.options.groupValues),
         Array.isArray(t) &&
-          Array.isArray(i) &&
-          t.length > i.length &&
+          Array.isArray(o) &&
+          t.length > o.length &&
           console.warn(
             "Error creating group headers, groupHeader array is shorter than groupBy array",
           ),
@@ -15748,14 +16847,14 @@
             return !1;
           },
         ]),
-        e.table.modules.localize.bind("groups|item", function (t, o) {
-          e.headerGenerator[0] = function (e, i, n) {
+        e.table.modules.localize.bind("groups|item", function (t, i) {
+          e.headerGenerator[0] = function (e, o, n) {
             return (
               (void 0 === e ? "" : e) +
               "<span>(" +
-              i +
+              o +
               " " +
-              (1 === i ? t : o.groups.items) +
+              (1 === o ? t : i.groups.items) +
               ")</span>"
             );
           };
@@ -15775,9 +16874,9 @@
                   e.table.modules.columnCalcs.initializeBottomRow();
             });
         Array.isArray(t) || (t = [t]),
-          t.forEach(function (t, o) {
-            var i, n;
-            (i =
+          t.forEach(function (t, i) {
+            var o, n;
+            (o =
               "function" == typeof t
                 ? t
                 : (n = e.table.columnManager.getColumnByField(t))
@@ -15789,13 +16888,13 @@
                   }),
               e.groupIDLookups.push({
                 field: "function" != typeof t && t,
-                func: i,
-                values: !!e.allowedValues && e.allowedValues[o],
+                func: o,
+                values: !!e.allowedValues && e.allowedValues[i],
               });
           }),
-          o &&
-            (Array.isArray(o) || (o = [o]),
-            o.forEach(function (e) {
+          i &&
+            (Array.isArray(i) || (i = [i]),
+            i.forEach(function (e) {
               e =
                 "function" == typeof e
                   ? e
@@ -15803,17 +16902,17 @@
                       return !0;
                     };
             }),
-            (e.startOpen = o)),
-          i && (e.headerGenerator = Array.isArray(i) ? i : [i]),
+            (e.startOpen = i)),
+          o && (e.headerGenerator = Array.isArray(o) ? o : [o]),
           (this.initialized = !0);
       }),
-        (H.prototype.setDisplayIndex = function (e) {
+        (O.prototype.setDisplayIndex = function (e) {
           this.displayIndex = e;
         }),
-        (H.prototype.getDisplayIndex = function () {
+        (O.prototype.getDisplayIndex = function () {
           return this.displayIndex;
         }),
-        (H.prototype.getRows = function (e) {
+        (O.prototype.getRows = function (e) {
           return this.groupIDLookups.length
             ? (this.table.options.dataGrouping.call(this.table),
               this.generateGroups(e),
@@ -15825,163 +16924,163 @@
               this.updateGroupRows())
             : e.slice(0);
         }),
-        (H.prototype.getGroups = function (e) {
+        (O.prototype.getGroups = function (e) {
           var t = [];
           return (
-            this.groupList.forEach(function (o) {
-              t.push(e ? o.getComponent() : o);
+            this.groupList.forEach(function (i) {
+              t.push(e ? i.getComponent() : i);
             }),
             t
           );
         }),
-        (H.prototype.getChildGroups = function (e) {
+        (O.prototype.getChildGroups = function (e) {
           var t = this,
-            o = [];
+            i = [];
           return (
             e || (e = this),
             e.groupList.forEach(function (e) {
               e.groupList.length
-                ? (o = o.concat(t.getChildGroups(e)))
-                : o.push(e);
+                ? (i = i.concat(t.getChildGroups(e)))
+                : i.push(e);
             }),
-            o
+            i
           );
         }),
-        (H.prototype.wipe = function () {
+        (O.prototype.wipe = function () {
           this.groupList.forEach(function (e) {
             e.wipe();
           });
         }),
-        (H.prototype.pullGroupListData = function (e) {
+        (O.prototype.pullGroupListData = function (e) {
           var t = this,
-            o = [];
+            i = [];
           return (
             e.forEach(function (e) {
-              var i = { level: 0, rowCount: 0, headerContent: "" },
+              var o = { level: 0, rowCount: 0, headerContent: "" },
                 n = [];
               e.hasSubGroups
                 ? ((n = t.pullGroupListData(e.groupList)),
-                  (i.level = e.level),
-                  (i.rowCount = n.length - e.groupList.length),
-                  (i.headerContent = e.generator(e.key, i.rowCount, e.rows, e)),
-                  o.push(i),
-                  (o = o.concat(n)))
-                : ((i.level = e.level),
-                  (i.headerContent = e.generator(
+                  (o.level = e.level),
+                  (o.rowCount = n.length - e.groupList.length),
+                  (o.headerContent = e.generator(e.key, o.rowCount, e.rows, e)),
+                  i.push(o),
+                  (i = i.concat(n)))
+                : ((o.level = e.level),
+                  (o.headerContent = e.generator(
                     e.key,
                     e.rows.length,
                     e.rows,
                     e,
                   )),
-                  (i.rowCount = e.getRows().length),
-                  o.push(i),
+                  (o.rowCount = e.getRows().length),
+                  i.push(o),
                   e.getRows().forEach(function (e) {
-                    o.push(e.getData("data"));
+                    i.push(e.getData("data"));
                   }));
             }),
-            o
+            i
           );
         }),
-        (H.prototype.getGroupedData = function () {
+        (O.prototype.getGroupedData = function () {
           return this.pullGroupListData(this.groupList);
         }),
-        (H.prototype.getRowGroup = function (e) {
+        (O.prototype.getRowGroup = function (e) {
           var t = !1;
           return (
-            this.groupList.forEach(function (o) {
-              var i = o.getRowGroup(e);
-              i && (t = i);
+            this.groupList.forEach(function (i) {
+              var o = i.getRowGroup(e);
+              o && (t = o);
             }),
             t
           );
         }),
-        (H.prototype.countGroups = function () {
+        (O.prototype.countGroups = function () {
           return this.groupList.length;
         }),
-        (H.prototype.generateGroups = function (e) {
+        (O.prototype.generateGroups = function (e) {
           var t = this,
-            o = t.groups;
+            i = t.groups;
           (t.groups = {}),
             (t.groupList = []),
             this.allowedValues && this.allowedValues[0]
               ? (this.allowedValues[0].forEach(function (e) {
-                  t.createGroup(e, 0, o);
+                  t.createGroup(e, 0, i);
                 }),
                 e.forEach(function (e) {
-                  t.assignRowToExistingGroup(e, o);
+                  t.assignRowToExistingGroup(e, i);
                 }))
               : e.forEach(function (e) {
-                  t.assignRowToGroup(e, o);
+                  t.assignRowToGroup(e, i);
                 });
         }),
-        (H.prototype.createGroup = function (e, t, o) {
-          var i,
+        (O.prototype.createGroup = function (e, t, i) {
+          var o,
             n = t + "_" + e;
-          (o = o || []),
-            (i = new B(
+          (i = i || []),
+            (o = new B(
               this,
               !1,
               t,
               e,
               this.groupIDLookups[0].field,
               this.headerGenerator[0],
-              o[n],
+              i[n],
             )),
-            (this.groups[n] = i),
-            this.groupList.push(i);
+            (this.groups[n] = o),
+            this.groupList.push(o);
         }),
-        (H.prototype.assignRowToExistingGroup = function (e, t) {
-          var o = "0_" + this.groupIDLookups[0].func(e.getData());
-          this.groups[o] && this.groups[o].addRow(e);
+        (O.prototype.assignRowToExistingGroup = function (e, t) {
+          var i = "0_" + this.groupIDLookups[0].func(e.getData());
+          this.groups[i] && this.groups[i].addRow(e);
         }),
-        (H.prototype.assignRowToGroup = function (e, t) {
-          var o = this.groupIDLookups[0].func(e.getData()),
-            i = !this.groups["0_" + o];
+        (O.prototype.assignRowToGroup = function (e, t) {
+          var i = this.groupIDLookups[0].func(e.getData()),
+            o = !this.groups["0_" + i];
           return (
-            i && this.createGroup(o, 0, t), this.groups["0_" + o].addRow(e), !i
+            o && this.createGroup(i, 0, t), this.groups["0_" + i].addRow(e), !o
           );
         }),
-        (H.prototype.reassignRowToGroup = function (e) {
+        (O.prototype.reassignRowToGroup = function (e) {
           var t = e.getGroup(),
-            o = t.getPath(),
-            i = this.getExpectedPath(e);
-          (o.length == i.length &&
-            o.every(function (e, t) {
-              return e === i[t];
+            i = t.getPath(),
+            o = this.getExpectedPath(e);
+          (i.length == o.length &&
+            i.every(function (e, t) {
+              return e === o[t];
             })) ||
             (t.removeRow(e),
             this.assignRowToGroup(e, self.groups),
             this.table.rowManager.refreshActiveData("group", !1, !0));
         }),
-        (H.prototype.getExpectedPath = function (e) {
+        (O.prototype.getExpectedPath = function (e) {
           var t = [],
-            o = e.getData();
+            i = e.getData();
           return (
             this.groupIDLookups.forEach(function (e) {
-              t.push(e.func(o));
+              t.push(e.func(i));
             }),
             t
           );
         }),
-        (H.prototype.updateGroupRows = function (e) {
+        (O.prototype.updateGroupRows = function (e) {
           var t = this,
-            o = [];
+            i = [];
           if (
             (t.groupList.forEach(function (e) {
-              o = o.concat(e.getHeadersAndRows());
+              i = i.concat(e.getHeadersAndRows());
             }),
             e)
           ) {
-            var i = t.table.rowManager.setDisplayRows(
-              o,
+            var o = t.table.rowManager.setDisplayRows(
+              i,
               this.getDisplayIndex(),
             );
-            !0 !== i && this.setDisplayIndex(i),
+            !0 !== o && this.setDisplayIndex(o),
               t.table.rowManager.refreshActiveData("group", !0, !0);
           }
-          return o;
+          return i;
         }),
-        (H.prototype.scrollHeaders = function (e) {
+        (O.prototype.scrollHeaders = function (e) {
           this.table.options.virtualDomHoz &&
             (e -= this.table.vdomHoz.vDomPadLeft),
             (e += "px"),
@@ -15989,33 +17088,33 @@
               t.scrollHeader(e);
             });
         }),
-        (H.prototype.removeGroup = function (e) {
+        (O.prototype.removeGroup = function (e) {
           var t,
-            o = e.level + "_" + e.key;
-          this.groups[o] &&
-            (delete this.groups[o],
+            i = e.level + "_" + e.key;
+          this.groups[i] &&
+            (delete this.groups[i],
             (t = this.groupList.indexOf(e)) > -1 &&
               this.groupList.splice(t, 1));
         }),
-        g.prototype.registerModule("groupRows", H);
-      var O = function (e) {
+        g.prototype.registerModule("groupRows", O);
+      var H = function (e) {
         (this.table = e), (this.history = []), (this.index = -1);
       };
-      (O.prototype.clear = function () {
+      (H.prototype.clear = function () {
         (this.history = []), (this.index = -1);
       }),
-        (O.prototype.action = function (e, t, o) {
+        (H.prototype.action = function (e, t, i) {
           (this.history = this.history.slice(0, this.index + 1)),
-            this.history.push({ type: e, component: t, data: o }),
+            this.history.push({ type: e, component: t, data: i }),
             this.index++;
         }),
-        (O.prototype.getHistoryUndoSize = function () {
+        (H.prototype.getHistoryUndoSize = function () {
           return this.index + 1;
         }),
-        (O.prototype.getHistoryRedoSize = function () {
+        (H.prototype.getHistoryRedoSize = function () {
           return this.history.length - (this.index + 1);
         }),
-        (O.prototype.clearComponentHistory = function (e) {
+        (H.prototype.clearComponentHistory = function (e) {
           var t = this.history.findIndex(function (t) {
             return t.component === e;
           });
@@ -16024,7 +17123,7 @@
             t <= this.index && this.index--,
             this.clearComponentHistory(e));
         }),
-        (O.prototype.undo = function () {
+        (H.prototype.undo = function () {
           if (this.index > -1) {
             var e = this.history[this.index];
             return (
@@ -16043,7 +17142,7 @@
             console.warn("History Undo Error - No more history to undo"), !1
           );
         }),
-        (O.prototype.redo = function () {
+        (H.prototype.redo = function () {
           if (this.history.length - 1 > this.index) {
             this.index++;
             var e = this.history[this.index];
@@ -16062,7 +17161,7 @@
             console.warn("History Redo Error - No more history to redo"), !1
           );
         }),
-        (O.prototype.undoers = {
+        (H.prototype.undoers = {
           cellEdit: function (e) {
             e.component.setValueProcessData(e.data.oldValue);
           },
@@ -16089,7 +17188,7 @@
               this.table.rowManager.redraw();
           },
         }),
-        (O.prototype.redoers = {
+        (H.prototype.redoers = {
           cellEdit: function (e) {
             e.component.setValueProcessData(e.data.newValue);
           },
@@ -16116,36 +17215,36 @@
               this.table.rowManager.redraw();
           },
         }),
-        (O.prototype._rebindRow = function (e, t) {
-          this.history.forEach(function (o) {
-            if (o.component instanceof p)
-              o.component === e && (o.component = t);
-            else if (o.component instanceof m && o.component.row === e) {
-              var i = o.component.column.getField();
-              i && (o.component = t.getCell(i));
+        (H.prototype._rebindRow = function (e, t) {
+          this.history.forEach(function (i) {
+            if (i.component instanceof p)
+              i.component === e && (i.component = t);
+            else if (i.component instanceof m && i.component.row === e) {
+              var o = i.component.column.getField();
+              o && (i.component = t.getCell(o));
             }
           });
         }),
-        g.prototype.registerModule("history", O);
+        g.prototype.registerModule("history", H);
       var I = function (e) {
         (this.table = e), (this.fieldIndex = []), (this.hasIndex = !1);
       };
       (I.prototype.parseTable = function () {
         var e = this,
           t = e.table.element,
-          o = e.table.options,
-          i = (o.columns, t.getElementsByTagName("th")),
+          i = e.table.options,
+          o = (i.columns, t.getElementsByTagName("th")),
           n = t.getElementsByTagName("tbody")[0],
           a = [];
         (e.hasIndex = !1),
           e.table.options.htmlImporting.call(this.table),
           (n = n ? n.getElementsByTagName("tr") : []),
-          e._extractOptions(t, o),
-          i.length ? e._extractHeaders(i, n) : e._generateBlankHeaders(i, n);
+          e._extractOptions(t, i),
+          o.length ? e._extractHeaders(o, n) : e._generateBlankHeaders(o, n);
         for (var s = 0; s < n.length; s++) {
           var l = n[s].getElementsByTagName("td"),
             c = {};
-          e.hasIndex || (c[o.index] = s);
+          e.hasIndex || (c[i.index] = s);
           for (var u = 0; u < l.length; u++) {
             var d = l[u];
             void 0 !== this.fieldIndex[u] &&
@@ -16158,20 +17257,20 @@
         for (var u in h)
           "object" == r(h[u]) && p.setAttribute(h[u].name, h[u].value);
         t.parentNode.replaceChild(p, t),
-          (o.data = a),
+          (i.data = a),
           e.table.options.htmlImported.call(this.table),
           (this.table.element = p);
       }),
-        (I.prototype._extractOptions = function (e, t, o) {
-          var i = e.attributes,
-            n = o ? Object.assign([], o) : Object.keys(t),
+        (I.prototype._extractOptions = function (e, t, i) {
+          var o = e.attributes,
+            n = i ? Object.assign([], i) : Object.keys(t),
             a = {};
           for (var s in (n.forEach(function (e) {
             a[e.toLowerCase()] = e;
           }),
-          i)) {
+          o)) {
             var l,
-              c = i[s];
+              c = o[s];
             c &&
               "object" == (void 0 === c ? "undefined" : r(c)) &&
               c.name &&
@@ -16191,9 +17290,9 @@
           );
         }),
         (I.prototype._extractHeaders = function (e, t) {
-          for (var o = 0; o < e.length; o++) {
-            var i,
-              n = e[o],
+          for (var i = 0; i < e.length; i++) {
+            var o,
+              n = e[i],
               r = !1,
               a = this._findCol(n.textContent);
             a ? (r = !0) : (a = { title: n.textContent.trim() }),
@@ -16202,20 +17301,20 @@
                   .trim()
                   .toLowerCase()
                   .replace(" ", "_")),
-              (i = n.getAttribute("width")) && !a.width && (a.width = i),
+              (o = n.getAttribute("width")) && !a.width && (a.width = o),
               n.attributes,
               this._extractOptions(n, a, l.prototype.defaultOptionList),
-              (this.fieldIndex[o] = a.field),
+              (this.fieldIndex[i] = a.field),
               a.field == this.table.options.index && (this.hasIndex = !0),
               r || this.table.options.columns.push(a);
           }
         }),
         (I.prototype._generateBlankHeaders = function (e, t) {
-          for (var o = 0; o < e.length; o++) {
-            var i = e[o],
-              n = { title: "", field: "col" + o };
-            this.fieldIndex[o] = n.field;
-            var r = i.getAttribute("width");
+          for (var i = 0; i < e.length; i++) {
+            var o = e[i],
+              n = { title: "", field: "col" + i };
+            this.fieldIndex[i] = n.field;
+            var r = o.getAttribute("width");
             r && (n.width = r), this.table.options.columns.push(n);
           }
         }),
@@ -16231,28 +17330,28 @@
         var e = this.table.options.keybindings,
           t = {};
         if (((this.watchKeys = {}), (this.pressedKeys = []), !1 !== e)) {
-          for (var o in this.bindings) t[o] = this.bindings[o];
-          if (Object.keys(e).length) for (var i in e) t[i] = e[i];
+          for (var i in this.bindings) t[i] = this.bindings[i];
+          if (Object.keys(e).length) for (var o in e) t[o] = e[o];
           this.mapBindings(t), this.bindEvents();
         }
       }),
         (N.prototype.mapBindings = function (e) {
           var t = this,
-            o = this,
-            i = function (i) {
-              t.actions[i]
-                ? e[i] &&
-                  ("object" !== r(e[i]) && (e[i] = [e[i]]),
-                  e[i].forEach(function (e) {
-                    o.mapBinding(i, e);
+            i = this,
+            o = function (o) {
+              t.actions[o]
+                ? e[o] &&
+                  ("object" !== r(e[o]) && (e[o] = [e[o]]),
+                  e[o].forEach(function (e) {
+                    i.mapBinding(o, e);
                   }))
-                : console.warn("Key Binding Error - no such action:", i);
+                : console.warn("Key Binding Error - no such action:", o);
             };
-          for (var n in e) i(n);
+          for (var n in e) o(n);
         }),
         (N.prototype.mapBinding = function (e, t) {
-          var o = this,
-            i = {
+          var i = this,
+            o = {
               action: this.actions[e],
               keys: [],
               ctrl: !1,
@@ -16267,38 +17366,38 @@
             .forEach(function (e) {
               switch (e) {
                 case "ctrl":
-                  i.ctrl = !0;
+                  o.ctrl = !0;
                   break;
                 case "shift":
-                  i.shift = !0;
+                  o.shift = !0;
                   break;
                 case "meta":
-                  i.meta = !0;
+                  o.meta = !0;
                   break;
                 default:
                   (e = parseInt(e)),
-                    i.keys.push(e),
-                    o.watchKeys[e] || (o.watchKeys[e] = []),
-                    o.watchKeys[e].push(i);
+                    o.keys.push(e),
+                    i.watchKeys[e] || (i.watchKeys[e] = []),
+                    i.watchKeys[e].push(o);
               }
             });
         }),
         (N.prototype.bindEvents = function () {
           var e = this;
           (this.keyupBinding = function (t) {
-            var o = t.keyCode,
-              i = e.watchKeys[o];
-            i &&
-              (e.pressedKeys.push(o),
-              i.forEach(function (o) {
-                e.checkBinding(t, o);
+            var i = t.keyCode,
+              o = e.watchKeys[i];
+            o &&
+              (e.pressedKeys.push(i),
+              o.forEach(function (i) {
+                e.checkBinding(t, i);
               }));
           }),
             (this.keydownBinding = function (t) {
-              var o = t.keyCode;
-              if (e.watchKeys[o]) {
-                var i = e.pressedKeys.indexOf(o);
-                i > -1 && e.pressedKeys.splice(i, 1);
+              var i = t.keyCode;
+              if (e.watchKeys[i]) {
+                var o = e.pressedKeys.indexOf(i);
+                o > -1 && e.pressedKeys.splice(o, 1);
               }
             }),
             this.table.element.addEventListener("keydown", this.keyupBinding),
@@ -16317,16 +17416,16 @@
               );
         }),
         (N.prototype.checkBinding = function (e, t) {
-          var o = this,
-            i = !0;
+          var i = this,
+            o = !0;
           return (
             e.ctrlKey == t.ctrl &&
             e.shiftKey == t.shift &&
             e.metaKey == t.meta &&
             (t.keys.forEach(function (e) {
-              -1 == o.pressedKeys.indexOf(e) && (i = !1);
+              -1 == i.pressedKeys.indexOf(e) && (o = !1);
             }),
-            i && t.action.call(o, e),
+            o && t.action.call(i, e),
             !0)
           );
         }),
@@ -16349,23 +17448,23 @@
           },
           scrollPageUp: function (e) {
             var t = this.table.rowManager,
-              o = t.scrollTop - t.height;
+              i = t.scrollTop - t.height;
             t.element.scrollHeight;
             e.preventDefault(),
               t.displayRowsCount &&
-                (o >= 0
-                  ? (t.element.scrollTop = o)
+                (i >= 0
+                  ? (t.element.scrollTop = i)
                   : t.scrollToRow(t.getDisplayRows()[0])),
               this.table.element.focus();
           },
           scrollPageDown: function (e) {
             var t = this.table.rowManager,
-              o = t.scrollTop + t.height,
-              i = t.element.scrollHeight;
+              i = t.scrollTop + t.height,
+              o = t.element.scrollHeight;
             e.preventDefault(),
               t.displayRowsCount &&
-                (o <= i
-                  ? (t.element.scrollTop = o)
+                (i <= o
+                  ? (t.element.scrollTop = i)
                   : t.scrollToRow(t.getDisplayRows()[t.displayRowsCount - 1])),
               this.table.element.focus();
           },
@@ -16390,20 +17489,20 @@
           },
           navNext: function (e) {
             var t,
-              o = !1,
-              i = this.table.options.tabEndNewRow;
+              i = !1,
+              o = this.table.options.tabEndNewRow;
             this.table.modExists("edit") &&
-              (o = this.table.modules.edit.currentCell) &&
+              (i = this.table.modules.edit.currentCell) &&
               (e.preventDefault(),
-              (t = o.nav()).next() ||
-                (i &&
-                  (o.getElement().firstChild.blur(),
-                  (i =
-                    !0 === i
+              (t = i.nav()).next() ||
+                (o &&
+                  (i.getElement().firstChild.blur(),
+                  (o =
+                    !0 === o
                       ? this.table.addRow({})
-                      : "function" == typeof i
-                      ? this.table.addRow(i(o.row.getComponent()))
-                      : this.table.addRow(Object.assign({}, i))).then(
+                      : "function" == typeof o
+                      ? this.table.addRow(o(i.row.getComponent()))
+                      : this.table.addRow(Object.assign({}, o))).then(
                     function () {
                       setTimeout(function () {
                         t.next();
@@ -16466,7 +17565,7 @@
       };
       (j.prototype.initializeColumnHeader = function (e) {
         var t,
-          o = this;
+          i = this;
         e.definition.headerContextMenu &&
           (e
             .getElement()
@@ -16483,37 +17582,37 @@
             t.addEventListener("click", function (t) {
               t.stopPropagation(),
                 t.preventDefault(),
-                o.LoadMenuEvent(e, e.definition.headerMenu, t);
+                i.LoadMenuEvent(e, e.definition.headerMenu, t);
             }),
             e.titleElement.insertBefore(t, e.titleElement.firstChild));
       }),
-        (j.prototype.LoadMenuEvent = function (e, t, o) {
+        (j.prototype.LoadMenuEvent = function (e, t, i) {
           (t =
             "function" == typeof t
-              ? t.call(this.table, e.getComponent(), o)
+              ? t.call(this.table, e.getComponent(), i)
               : t),
-            this.loadMenu(o, e, t);
+            this.loadMenu(i, e, t);
         }),
         (j.prototype.tapHold = function (e, t) {
-          var o = this,
-            i = e.getElement(),
+          var i = this,
+            o = e.getElement(),
             n = null,
             r = !1;
-          i.addEventListener(
+          o.addEventListener(
             "touchstart",
-            function (i) {
+            function (o) {
               clearTimeout(n),
                 (r = !1),
                 (n = setTimeout(function () {
                   clearTimeout(n),
                     (n = null),
                     (r = !0),
-                    o.LoadMenuEvent(e, t, i);
+                    i.LoadMenuEvent(e, t, o);
                 }, 1e3));
             },
             { passive: !0 },
           ),
-            i.addEventListener("touchend", function (e) {
+            o.addEventListener("touchend", function (e) {
               clearTimeout(n), (n = null), r && e.preventDefault();
             });
         }),
@@ -16592,16 +17691,16 @@
                   ),
                 );
         }),
-        (j.prototype.loadMenu = function (e, t, o, i) {
+        (j.prototype.loadMenu = function (e, t, i, o) {
           var n = this,
             r = !(e instanceof MouseEvent),
             a = document.createElement("div");
           if (
             (a.classList.add("tabulator-menu"),
             r || e.preventDefault(),
-            o && o.length)
+            i && i.length)
           ) {
-            if (!i) {
+            if (!o) {
               if (this.nestedMenuBlock) {
                 if (this.isOpen()) return;
               } else
@@ -16610,55 +17709,55 @@
                 }, 100);
               this.hideMenu(), (this.menuElements = []);
             }
-            o.forEach(function (e) {
-              var o = document.createElement("div"),
-                i = e.label,
+            i.forEach(function (e) {
+              var i = document.createElement("div"),
+                o = e.label,
                 r = e.disabled;
               e.separator
-                ? o.classList.add("tabulator-menu-separator")
-                : (o.classList.add("tabulator-menu-item"),
-                  "function" == typeof i &&
-                    (i = i.call(n.table, t.getComponent())),
-                  i instanceof Node ? o.appendChild(i) : (o.innerHTML = i),
+                ? i.classList.add("tabulator-menu-separator")
+                : (i.classList.add("tabulator-menu-item"),
+                  "function" == typeof o &&
+                    (o = o.call(n.table, t.getComponent())),
+                  o instanceof Node ? i.appendChild(o) : (i.innerHTML = o),
                   "function" == typeof r &&
                     (r = r.call(n.table, t.getComponent())),
                   r
-                    ? (o.classList.add("tabulator-menu-item-disabled"),
-                      o.addEventListener("click", function (e) {
+                    ? (i.classList.add("tabulator-menu-item-disabled"),
+                      i.addEventListener("click", function (e) {
                         e.stopPropagation();
                       }))
                     : e.menu && e.menu.length
-                    ? o.addEventListener("click", function (i) {
-                        i.stopPropagation(),
+                    ? i.addEventListener("click", function (o) {
+                        o.stopPropagation(),
                           n.hideOldSubMenus(a),
-                          n.loadMenu(i, t, e.menu, o);
+                          n.loadMenu(o, t, e.menu, i);
                       })
                     : e.action &&
-                      o.addEventListener("click", function (o) {
-                        e.action(o, t.getComponent());
+                      i.addEventListener("click", function (i) {
+                        e.action(i, t.getComponent());
                       }),
                   e.menu &&
                     e.menu.length &&
-                    o.classList.add("tabulator-menu-item-submenu")),
-                a.appendChild(o);
+                    i.classList.add("tabulator-menu-item-submenu")),
+                a.appendChild(i);
             }),
               a.addEventListener("click", function (e) {
                 n.hideMenu();
               }),
               this.menuElements.push(a),
-              this.positionMenu(a, i, r, e);
+              this.positionMenu(a, o, r, e);
           }
         }),
         (j.prototype.hideOldSubMenus = function (e) {
           var t = this.menuElements.indexOf(e);
           if (t > -1)
-            for (var o = this.menuElements.length - 1; o > t; o--) {
-              var i = this.menuElements[o];
-              i.parentNode && i.parentNode.removeChild(i),
+            for (var i = this.menuElements.length - 1; i > t; i--) {
+              var o = this.menuElements[i];
+              o.parentNode && o.parentNode.removeChild(o),
                 this.menuElements.pop();
             }
         }),
-        (j.prototype.positionMenu = function (e, t, o, i) {
+        (j.prototype.positionMenu = function (e, t, i, o) {
           var n,
             r,
             a,
@@ -16667,8 +17766,8 @@
           t
             ? ((n = (a = g.prototype.helpers.elOffset(t)).left + t.offsetWidth),
               (r = a.top - 1))
-            : ((n = o ? i.touches[0].pageX : i.pageX),
-              (r = o ? i.touches[0].pageY : i.pageY),
+            : ((n = i ? o.touches[0].pageX : o.pageX),
+              (r = i ? o.touches[0].pageY : o.pageY),
               (this.positionReversedX = !1)),
             (e.style.top = r + "px"),
             (e.style.left = n + "px"),
@@ -16744,43 +17843,43 @@
       }),
         (W.prototype.initializeColumn = function (e) {
           var t,
-            o = this,
-            i = {};
+            i = this,
+            o = {};
           e.modules.frozen ||
             ((t = e.getElement()),
-            (i.mousemove = function (i) {
-              e.parent === o.moving.parent &&
-                ((o.touchMove ? i.touches[0].pageX : i.pageX) -
+            (o.mousemove = function (o) {
+              e.parent === i.moving.parent &&
+                ((i.touchMove ? o.touches[0].pageX : o.pageX) -
                   g.prototype.helpers.elOffset(t).left +
-                  o.table.columnManager.element.scrollLeft >
+                  i.table.columnManager.element.scrollLeft >
                 e.getWidth() / 2
-                  ? (o.toCol === e && o.toColAfter) ||
+                  ? (i.toCol === e && i.toColAfter) ||
                     (t.parentNode.insertBefore(
-                      o.placeholderElement,
+                      i.placeholderElement,
                       t.nextSibling,
                     ),
-                    o.moveColumn(e, !0))
-                  : (o.toCol !== e || o.toColAfter) &&
-                    (t.parentNode.insertBefore(o.placeholderElement, t),
-                    o.moveColumn(e, !1)));
-            }.bind(o)),
+                    i.moveColumn(e, !0))
+                  : (i.toCol !== e || i.toColAfter) &&
+                    (t.parentNode.insertBefore(i.placeholderElement, t),
+                    i.moveColumn(e, !1)));
+            }.bind(i)),
             t.addEventListener("mousedown", function (t) {
-              (o.touchMove = !1),
+              (i.touchMove = !1),
                 1 === t.which &&
-                  (o.checkTimeout = setTimeout(function () {
-                    o.startMove(t, e);
-                  }, o.checkPeriod));
+                  (i.checkTimeout = setTimeout(function () {
+                    i.startMove(t, e);
+                  }, i.checkPeriod));
             }),
             t.addEventListener("mouseup", function (e) {
-              1 === e.which && o.checkTimeout && clearTimeout(o.checkTimeout);
+              1 === e.which && i.checkTimeout && clearTimeout(i.checkTimeout);
             }),
-            o.bindTouchEvents(e)),
-            (e.modules.moveColumn = i);
+            i.bindTouchEvents(e)),
+            (e.modules.moveColumn = o);
         }),
         (W.prototype.bindTouchEvents = function (e) {
           var t,
-            o,
             i,
+            o,
             n,
             r,
             a,
@@ -16794,9 +17893,9 @@
                 (s.touchMove = !0),
                   e,
                   (t = e.nextColumn()),
-                  (i = t ? t.getWidth() / 2 : 0),
-                  (o = e.prevColumn()),
-                  (n = o ? o.getWidth() / 2 : 0),
+                  (o = t ? t.getWidth() / 2 : 0),
+                  (i = e.prevColumn()),
+                  (n = i ? i.getWidth() / 2 : 0),
                   (r = 0),
                   (a = 0),
                   (c = !1),
@@ -16814,7 +17913,7 @@
                   c || (c = l.touches[0].pageX),
                   (u = l.touches[0].pageX - c) > 0
                     ? t &&
-                      u - r > i &&
+                      u - r > o &&
                       (d = t) !== e &&
                       ((c = l.touches[0].pageX),
                       d
@@ -16824,9 +17923,9 @@
                           d.getElement().nextSibling,
                         ),
                       s.moveColumn(d, !0))
-                    : o &&
+                    : i &&
                       -u - a > n &&
-                      (d = o) !== e &&
+                      (d = i) !== e &&
                       ((c = l.touches[0].pageX),
                       d
                         .getElement()
@@ -16838,11 +17937,11 @@
                   d &&
                     (d,
                     (t = d.nextColumn()),
-                    (r = i),
-                    (i = t ? t.getWidth() / 2 : 0),
-                    (o = d.prevColumn()),
+                    (r = o),
+                    (o = t ? t.getWidth() / 2 : 0),
+                    (i = d.prevColumn()),
                     (a = n),
-                    (n = o ? o.getWidth() / 2 : 0)));
+                    (n = i ? i.getWidth() / 2 : 0)));
               },
               { passive: !0 },
             ),
@@ -16852,17 +17951,17 @@
             });
         }),
         (W.prototype.startMove = function (e, t) {
-          var o = t.getElement();
+          var i = t.getElement();
           (this.moving = t),
             (this.startX =
               (this.touchMove ? e.touches[0].pageX : e.pageX) -
-              g.prototype.helpers.elOffset(o).left),
+              g.prototype.helpers.elOffset(i).left),
             this.table.element.classList.add("tabulator-block-select"),
             (this.placeholderElement.style.width = t.getWidth() + "px"),
             (this.placeholderElement.style.height = t.getHeight() + "px"),
-            o.parentNode.insertBefore(this.placeholderElement, o),
-            o.parentNode.removeChild(o),
-            (this.hoverElement = o.cloneNode(!0)),
+            i.parentNode.insertBefore(this.placeholderElement, i),
+            i.parentNode.removeChild(i),
+            (this.hoverElement = i.cloneNode(!0)),
             this.hoverElement.classList.add("tabulator-moving"),
             this.table.columnManager
               .getElement()
@@ -16895,17 +17994,17 @@
           });
         }),
         (W.prototype.moveColumn = function (e, t) {
-          var o = this.moving.getCells();
+          var i = this.moving.getCells();
           (this.toCol = e),
             (this.toColAfter = t),
             t
               ? e.getCells().forEach(function (e, t) {
-                  var i = e.getElement(!0);
-                  i.parentNode.insertBefore(o[t].getElement(), i.nextSibling);
+                  var o = e.getElement(!0);
+                  o.parentNode.insertBefore(i[t].getElement(), o.nextSibling);
                 })
               : e.getCells().forEach(function (e, t) {
-                  var i = e.getElement(!0);
-                  i.parentNode.insertBefore(o[t].getElement(), i);
+                  var o = e.getElement(!0);
+                  o.parentNode.insertBefore(i[t].getElement(), o);
                 });
         }),
         (W.prototype.endMove = function (e) {
@@ -16935,27 +18034,27 @@
         }),
         (W.prototype.moveHover = function (e) {
           var t,
-            o = this,
-            i = o.table.columnManager.getElement(),
-            n = i.scrollLeft,
+            i = this,
+            o = i.table.columnManager.getElement(),
+            n = o.scrollLeft,
             r =
-              (o.touchMove ? e.touches[0].pageX : e.pageX) -
-              g.prototype.helpers.elOffset(i).left +
+              (i.touchMove ? e.touches[0].pageX : e.pageX) -
+              g.prototype.helpers.elOffset(o).left +
               n;
-          (o.hoverElement.style.left = r - o.startX + "px"),
-            r - n < o.autoScrollMargin &&
-              (o.autoScrollTimeout ||
-                (o.autoScrollTimeout = setTimeout(function () {
+          (i.hoverElement.style.left = r - i.startX + "px"),
+            r - n < i.autoScrollMargin &&
+              (i.autoScrollTimeout ||
+                (i.autoScrollTimeout = setTimeout(function () {
                   (t = Math.max(0, n - 5)),
-                    (o.table.rowManager.getElement().scrollLeft = t),
-                    (o.autoScrollTimeout = !1);
+                    (i.table.rowManager.getElement().scrollLeft = t),
+                    (i.autoScrollTimeout = !1);
                 }, 1))),
-            n + i.clientWidth - r < o.autoScrollMargin &&
-              (o.autoScrollTimeout ||
-                (o.autoScrollTimeout = setTimeout(function () {
-                  (t = Math.min(i.clientWidth, n + 5)),
-                    (o.table.rowManager.getElement().scrollLeft = t),
-                    (o.autoScrollTimeout = !1);
+            n + o.clientWidth - r < i.autoScrollMargin &&
+              (i.autoScrollTimeout ||
+                (i.autoScrollTimeout = setTimeout(function () {
+                  (t = Math.min(o.clientWidth, n + 5)),
+                    (i.table.rowManager.getElement().scrollLeft = t),
+                    (i.autoScrollTimeout = !1);
                 }, 1)));
         }),
         g.prototype.registerModule("moveColumn", W);
@@ -17005,82 +18104,82 @@
         }),
         (V.prototype.initializeGroupHeader = function (e) {
           var t = this,
-            o = {};
-          (o.mouseup = function (e) {
+            i = {};
+          (i.mouseup = function (e) {
             t.tableRowDrop(e, row);
           }.bind(t)),
-            (o.mousemove = function (o) {
-              var i;
-              o.pageY -
+            (i.mousemove = function (i) {
+              var o;
+              i.pageY -
                 g.prototype.helpers.elOffset(e.element).top +
                 t.table.rowManager.element.scrollTop >
               e.getHeight() / 2
                 ? (t.toRow === e && t.toRowAfter) ||
-                  ((i = e.getElement()).parentNode.insertBefore(
+                  ((o = e.getElement()).parentNode.insertBefore(
                     t.placeholderElement,
-                    i.nextSibling,
+                    o.nextSibling,
                   ),
                   t.moveRow(e, !0))
                 : (t.toRow !== e || t.toRowAfter) &&
-                  (i = e.getElement()).previousSibling &&
-                  (i.parentNode.insertBefore(t.placeholderElement, i),
+                  (o = e.getElement()).previousSibling &&
+                  (o.parentNode.insertBefore(t.placeholderElement, o),
                   t.moveRow(e, !1));
             }.bind(t)),
-            (e.modules.moveRow = o);
+            (e.modules.moveRow = i);
         }),
         (V.prototype.initializeRow = function (e) {
           var t,
-            o = this,
-            i = {};
-          (i.mouseup = function (t) {
-            o.tableRowDrop(t, e);
-          }.bind(o)),
-            (i.mousemove = function (t) {
-              var i = e.getElement();
+            i = this,
+            o = {};
+          (o.mouseup = function (t) {
+            i.tableRowDrop(t, e);
+          }.bind(i)),
+            (o.mousemove = function (t) {
+              var o = e.getElement();
               t.pageY -
-                g.prototype.helpers.elOffset(i).top +
-                o.table.rowManager.element.scrollTop >
+                g.prototype.helpers.elOffset(o).top +
+                i.table.rowManager.element.scrollTop >
               e.getHeight() / 2
-                ? (o.toRow === e && o.toRowAfter) ||
-                  (i.parentNode.insertBefore(
-                    o.placeholderElement,
-                    i.nextSibling,
+                ? (i.toRow === e && i.toRowAfter) ||
+                  (o.parentNode.insertBefore(
+                    i.placeholderElement,
+                    o.nextSibling,
                   ),
-                  o.moveRow(e, !0))
-                : (o.toRow !== e || o.toRowAfter) &&
-                  (i.parentNode.insertBefore(o.placeholderElement, i),
-                  o.moveRow(e, !1));
-            }.bind(o)),
+                  i.moveRow(e, !0))
+                : (i.toRow !== e || i.toRowAfter) &&
+                  (o.parentNode.insertBefore(i.placeholderElement, o),
+                  i.moveRow(e, !1));
+            }.bind(i)),
             this.hasHandle ||
               ((t = e.getElement()).addEventListener("mousedown", function (t) {
                 1 === t.which &&
-                  (o.checkTimeout = setTimeout(function () {
-                    o.startMove(t, e);
-                  }, o.checkPeriod));
+                  (i.checkTimeout = setTimeout(function () {
+                    i.startMove(t, e);
+                  }, i.checkPeriod));
               }),
               t.addEventListener("mouseup", function (e) {
-                1 === e.which && o.checkTimeout && clearTimeout(o.checkTimeout);
+                1 === e.which && i.checkTimeout && clearTimeout(i.checkTimeout);
               }),
               this.bindTouchEvents(e, e.getElement())),
-            (e.modules.moveRow = i);
+            (e.modules.moveRow = o);
         }),
         (V.prototype.initializeCell = function (e) {
           var t = this,
-            o = e.getElement(!0);
-          o.addEventListener("mousedown", function (o) {
-            1 === o.which &&
+            i = e.getElement(!0);
+          i.addEventListener("mousedown", function (i) {
+            1 === i.which &&
               (t.checkTimeout = setTimeout(function () {
-                t.startMove(o, e.row);
+                t.startMove(i, e.row);
               }, t.checkPeriod));
           }),
-            o.addEventListener("mouseup", function (e) {
+            i.addEventListener("mouseup", function (e) {
               1 === e.which && t.checkTimeout && clearTimeout(t.checkTimeout);
             }),
-            this.bindTouchEvents(e.row, o);
+            this.bindTouchEvents(e.row, i);
         }),
         (V.prototype.bindTouchEvents = function (e, t) {
-          var o,
-            i,
+          var i,
+            o,
             n,
             r,
             a,
@@ -17093,10 +18192,10 @@
               l.checkTimeout = setTimeout(function () {
                 (l.touchMove = !0),
                   e,
-                  (o = e.nextRow()),
-                  (n = o ? o.getHeight() / 2 : 0),
-                  (i = e.prevRow()),
-                  (r = i ? i.getHeight() / 2 : 0),
+                  (i = e.nextRow()),
+                  (n = i ? i.getHeight() / 2 : 0),
+                  (o = e.prevRow()),
+                  (r = o ? o.getHeight() / 2 : 0),
                   (a = 0),
                   (s = 0),
                   (c = !1),
@@ -17115,9 +18214,9 @@
                 l.moveHover(t),
                 c || (c = t.touches[0].pageY),
                 (u = t.touches[0].pageY - c) > 0
-                  ? o &&
+                  ? i &&
                     u - a > n &&
-                    (d = o) !== e &&
+                    (d = i) !== e &&
                     ((c = t.touches[0].pageY),
                     d
                       .getElement()
@@ -17126,9 +18225,9 @@
                         d.getElement().nextSibling,
                       ),
                     l.moveRow(d, !0))
-                  : i &&
+                  : o &&
                     -u - s > r &&
-                    (d = i) !== e &&
+                    (d = o) !== e &&
                     ((c = t.touches[0].pageY),
                     d
                       .getElement()
@@ -17139,12 +18238,12 @@
                     l.moveRow(d, !1)),
                 d &&
                   (d,
-                  (o = d.nextRow()),
+                  (i = d.nextRow()),
                   (a = n),
-                  (n = o ? o.getHeight() / 2 : 0),
-                  (i = d.prevRow()),
+                  (n = i ? i.getHeight() / 2 : 0),
+                  (o = d.prevRow()),
                   (s = r),
-                  (r = i ? i.getHeight() / 2 : 0)));
+                  (r = o ? o.getHeight() / 2 : 0)));
             }),
             t.addEventListener("touchend", function (e) {
               l.checkTimeout && clearTimeout(l.checkTimeout),
@@ -17170,7 +18269,7 @@
           });
         }),
         (V.prototype.startMove = function (e, t) {
-          var o = t.getElement();
+          var i = t.getElement();
           this.setStartPosition(e, t),
             (this.moving = t),
             this.table.element.classList.add("tabulator-block-select"),
@@ -17181,9 +18280,9 @@
                   "tabulator-movingrow-sending",
                 ),
                 this.connectToTables(t))
-              : (o.parentNode.insertBefore(this.placeholderElement, o),
-                o.parentNode.removeChild(o)),
-            (this.hoverElement = o.cloneNode(!0)),
+              : (i.parentNode.insertBefore(this.placeholderElement, i),
+                i.parentNode.removeChild(i)),
+            (this.hoverElement = i.cloneNode(!0)),
             this.hoverElement.classList.add("tabulator-moving"),
             this.connection
               ? (document.body.appendChild(this.hoverElement),
@@ -17205,16 +18304,16 @@
             this.moveHover(e);
         }),
         (V.prototype.setStartPosition = function (e, t) {
-          var o,
-            i,
+          var i,
+            o,
             n = this.touchMove ? e.touches[0].pageX : e.pageX,
             r = this.touchMove ? e.touches[0].pageY : e.pageY;
-          (o = t.getElement()),
+          (i = t.getElement()),
             this.connection
-              ? ((i = o.getBoundingClientRect()),
-                (this.startX = i.left - n + window.pageXOffset),
-                (this.startY = i.top - r + window.pageYOffset))
-              : (this.startY = r - o.getBoundingClientRect().top);
+              ? ((o = i.getBoundingClientRect()),
+                (this.startX = o.left - n + window.pageXOffset),
+                (this.startY = o.top - r + window.pageYOffset))
+              : (this.startY = r - i.getBoundingClientRect().top);
         }),
         (V.prototype.endMove = function (e) {
           (e && 1 !== e.which && !this.touchMove) ||
@@ -17256,12 +18355,12 @@
         }),
         (V.prototype.moveHoverTable = function (e) {
           var t = this.table.rowManager.getElement(),
-            o = t.scrollTop,
-            i =
+            i = t.scrollTop,
+            o =
               (this.touchMove ? e.touches[0].pageY : e.pageY) -
               t.getBoundingClientRect().top +
-              o;
-          this.hoverElement.style.top = i - this.startY + "px";
+              i;
+          this.hoverElement.style.top = o - this.startY + "px";
         }),
         (V.prototype.moveHoverConnections = function (e) {
           (this.hoverElement.style.left =
@@ -17273,17 +18372,17 @@
               (this.touchMove ? e.touches[0].pageY : e.pageY) +
               "px");
         }),
-        (V.prototype.elementRowDrop = function (e, t, o) {
+        (V.prototype.elementRowDrop = function (e, t, i) {
           this.table.options.movableRowsElementDrop &&
             this.table.options.movableRowsElementDrop(
               e,
               t,
-              !!o && o.getComponent(),
+              !!i && i.getComponent(),
             );
         }),
         (V.prototype.connectToTables = function (e) {
           var t,
-            o = this;
+            i = this;
           this.connectionSelectorsTables &&
             ((t = this.table.modules.comms.getConnections(
               this.connectionSelectorsTables,
@@ -17303,14 +18402,14 @@
                 ]),
               this.connectionSelectorsElements.forEach(function (e) {
                 "string" == typeof e
-                  ? (o.connectionElements = o.connectionElements.concat(
+                  ? (i.connectionElements = i.connectionElements.concat(
                       Array.prototype.slice.call(document.querySelectorAll(e)),
                     ))
-                  : o.connectionElements.push(e);
+                  : i.connectionElements.push(e);
               }),
               this.connectionElements.forEach(function (e) {
                 var t = function (t) {
-                  o.elementRowDrop(t, e, o.moving);
+                  i.elementRowDrop(t, e, i.moving);
                 };
                 e.addEventListener("mouseup", t),
                   (e.tabulatorElementDropEvent = t),
@@ -17336,7 +18435,7 @@
             });
         }),
         (V.prototype.connect = function (e, t) {
-          var o = this;
+          var i = this;
           return this.connectedTable
             ? (console.warn(
                 "Move Row Error - Table cannot accept connection, already connected to table:",
@@ -17346,7 +18445,7 @@
             : ((this.connectedTable = e),
               (this.connectedRow = t),
               this.table.element.classList.add("tabulator-movingrow-receiving"),
-              o.table.rowManager.getDisplayRows().forEach(function (e) {
+              i.table.rowManager.getDisplayRows().forEach(function (e) {
                 "row" === e.type &&
                   e.modules.moveRow &&
                   e.modules.moveRow.mouseup &&
@@ -17354,8 +18453,8 @@
                     .getElement()
                     .addEventListener("mouseup", e.modules.moveRow.mouseup);
               }),
-              (o.tableRowDropEvent = o.tableRowDrop.bind(o)),
-              o.table.element.addEventListener("mouseup", o.tableRowDropEvent),
+              (i.tableRowDropEvent = i.tableRowDrop.bind(i)),
+              i.table.element.addEventListener("mouseup", i.tableRowDropEvent),
               this.table.options.movableRowsReceivingStart.call(
                 this.table,
                 t,
@@ -17388,18 +18487,18 @@
                 "Move Row Error - trying to disconnect from non connected table",
               );
         }),
-        (V.prototype.dropComplete = function (e, t, o) {
-          var i = !1;
-          if (o) {
+        (V.prototype.dropComplete = function (e, t, i) {
+          var o = !1;
+          if (i) {
             switch (r(this.table.options.movableRowsSender)) {
               case "string":
-                i = this.senders[this.table.options.movableRowsSender];
+                o = this.senders[this.table.options.movableRowsSender];
                 break;
               case "function":
-                i = this.table.options.movableRowsSender;
+                o = this.table.options.movableRowsSender;
             }
-            i
-              ? i.call(
+            o
+              ? o.call(
                   this,
                   this.moving.getComponent(),
                   t ? t.getComponent() : void 0,
@@ -17426,20 +18525,20 @@
           this.endMove();
         }),
         (V.prototype.tableRowDrop = function (e, t) {
-          var o = !1,
-            i = !1;
+          var i = !1,
+            o = !1;
           switch (
             (e.stopImmediatePropagation(),
             r(this.table.options.movableRowsReceiver))
           ) {
             case "string":
-              o = this.receivers[this.table.options.movableRowsReceiver];
+              i = this.receivers[this.table.options.movableRowsReceiver];
               break;
             case "function":
-              o = this.table.options.movableRowsReceiver;
+              i = this.table.options.movableRowsReceiver;
           }
-          o
-            ? (i = o.call(
+          i
+            ? (o = i.call(
                 this,
                 this.connectedRow.getComponent(),
                 t ? t.getComponent() : void 0,
@@ -17449,7 +18548,7 @@
                 "Mover Row Error - no matching receiver found:",
                 this.table.options.movableRowsReceiver,
               ),
-            i
+            o
               ? this.table.options.movableRowsReceived.call(
                   this.table,
                   this.connectedRow.getComponent(),
@@ -17466,38 +18565,38 @@
               this.connectedTable,
               "moveRow",
               "dropcomplete",
-              { row: t, success: i },
+              { row: t, success: o },
             );
         }),
         (V.prototype.receivers = {
-          insert: function (e, t, o) {
+          insert: function (e, t, i) {
             return this.table.addRow(e.getData(), void 0, t), !0;
           },
-          add: function (e, t, o) {
+          add: function (e, t, i) {
             return this.table.addRow(e.getData()), !0;
           },
-          update: function (e, t, o) {
+          update: function (e, t, i) {
             return !!t && (t.update(e.getData()), !0);
           },
-          replace: function (e, t, o) {
+          replace: function (e, t, i) {
             return (
               !!t && (this.table.addRow(e.getData(), void 0, t), t.delete(), !0)
             );
           },
         }),
         (V.prototype.senders = {
-          delete: function (e, t, o) {
+          delete: function (e, t, i) {
             e.delete();
           },
         }),
-        (V.prototype.commsReceived = function (e, t, o) {
+        (V.prototype.commsReceived = function (e, t, i) {
           switch (t) {
             case "connect":
-              return this.connect(e, o.row);
+              return this.connect(e, i.row);
             case "disconnect":
               return this.disconnect(e);
             case "dropcomplete":
-              return this.dropComplete(e, o.row, o.success);
+              return this.dropComplete(e, i.row, i.success);
           }
         }),
         g.prototype.registerModule("moveRow", V);
@@ -17508,17 +18607,17 @@
       };
       (G.prototype.initializeColumn = function (e) {
         var t = this,
-          o = !1,
-          i = {};
+          i = !1,
+          o = {};
         this.allowedTypes.forEach(function (n) {
           var r,
             a = "mutator" + (n.charAt(0).toUpperCase() + n.slice(1));
           e.definition[a] &&
             (r = t.lookupMutator(e.definition[a])) &&
-            ((o = !0),
-            (i[a] = { mutator: r, params: e.definition[a + "Params"] || {} }));
+            ((i = !0),
+            (o[a] = { mutator: r, params: e.definition[a + "Params"] || {} }));
         }),
-          o && (e.modules.mutate = i);
+          i && (e.modules.mutate = o);
       }),
         (G.prototype.lookupMutator = function (e) {
           var t = !1;
@@ -17536,8 +18635,8 @@
           }
           return t;
         }),
-        (G.prototype.transformRow = function (e, t, o) {
-          var i,
+        (G.prototype.transformRow = function (e, t, i) {
+          var o,
             n = "mutator" + (t.charAt(0).toUpperCase() + t.slice(1));
           return (
             this.enabled &&
@@ -17545,28 +18644,28 @@
                 var a, s, l;
                 r.modules.mutate &&
                   (a = r.modules.mutate[n] || r.modules.mutate.mutator || !1) &&
-                  ((i = r.getFieldValue(void 0 !== o ? o : e)),
-                  ("data" != t && void 0 === i) ||
+                  ((o = r.getFieldValue(void 0 !== i ? i : e)),
+                  ("data" != t && void 0 === o) ||
                     ((l = r.getComponent()),
                     (s =
                       "function" == typeof a.params
-                        ? a.params(i, e, t, l)
+                        ? a.params(o, e, t, l)
                         : a.params),
-                    r.setFieldValue(e, a.mutator(i, e, t, s, l))));
+                    r.setFieldValue(e, a.mutator(o, e, t, s, l))));
               }),
             e
           );
         }),
         (G.prototype.transformCell = function (e, t) {
-          var o =
+          var i =
               e.column.modules.mutate.mutatorEdit ||
               e.column.modules.mutate.mutator ||
               !1,
-            i = {};
-          return o
-            ? ((i = Object.assign(i, e.row.getData())),
-              e.column.setFieldValue(i, t),
-              o.mutator(t, i, "edit", o.params, e.getComponent()))
+            o = {};
+          return i
+            ? ((o = Object.assign(o, e.row.getData())),
+              e.column.setFieldValue(o, t),
+              i.mutator(t, o, "edit", i.params, e.getComponent()))
             : t;
         }),
         (G.prototype.enable = function () {
@@ -17627,31 +18726,31 @@
                 -1 == this.pageSizes.indexOf(this.size) && t.unshift(this.size);
             else if (-1 == this.pageSizes.indexOf(this.size)) {
               t = [];
-              for (var o = 1; o < 5; o++) t.push(this.size * o);
+              for (var i = 1; i < 5; i++) t.push(this.size * i);
               this.pageSizes = t;
             } else t = this.pageSizes;
             for (; this.pageSizeSelect.firstChild; )
               this.pageSizeSelect.removeChild(this.pageSizeSelect.firstChild);
             t.forEach(function (t) {
-              var o = document.createElement("option");
-              (o.value = t),
+              var i = document.createElement("option");
+              (i.value = t),
                 !0 === t
                   ? e.table.modules.localize.bind(
                       "pagination|all",
                       function (e) {
-                        o.innerHTML = e;
+                        i.innerHTML = e;
                       },
                     )
-                  : (o.innerHTML = t),
-                e.pageSizeSelect.appendChild(o);
+                  : (i.innerHTML = t),
+                e.pageSizeSelect.appendChild(i);
             }),
               (this.pageSizeSelect.value = this.size);
           }
         }),
         (U.prototype.initialize = function (e) {
           var t,
-            o,
             i,
+            o,
             n = this;
           (this.dataSentNames = Object.assign(
             {},
@@ -17763,20 +18862,20 @@
             (n.mode = n.table.options.pagination),
             n.table.options.paginationSize
               ? (n.size = n.table.options.paginationSize)
-              : ((o = document.createElement("div")).classList.add(
+              : ((i = document.createElement("div")).classList.add(
                   "tabulator-row",
                 ),
-                (o.style.visibility = e),
-                (i = document.createElement("div")).classList.add(
+                (i.style.visibility = e),
+                (o = document.createElement("div")).classList.add(
                   "tabulator-cell",
                 ),
-                (i.innerHTML = "Page Row Test"),
-                o.appendChild(i),
-                n.table.rowManager.getTableElement().appendChild(o),
+                (o.innerHTML = "Page Row Test"),
+                i.appendChild(o),
+                n.table.rowManager.getTableElement().appendChild(i),
                 (n.size = Math.floor(
-                  n.table.rowManager.getElement().clientHeight / o.offsetHeight,
+                  n.table.rowManager.getElement().clientHeight / i.offsetHeight,
                 )),
-                n.table.rowManager.getTableElement().removeChild(o)),
+                n.table.rowManager.getTableElement().removeChild(i)),
             (n.count = n.table.options.paginationButtonCount),
             n.generatePageSizeSelectList();
         }),
@@ -17813,7 +18912,7 @@
         }),
         (U.prototype.setPage = function (e) {
           var t = this,
-            o = this;
+            i = this;
           switch (e) {
             case "first":
               return this.setPage(1);
@@ -17824,21 +18923,21 @@
             case "last":
               return this.setPage(this.max);
           }
-          return new Promise(function (i, n) {
+          return new Promise(function (o, n) {
             ((e = parseInt(e)) > 0 && e <= t.max) || "local" !== t.mode
               ? ((t.page = e),
                 t
                   .trigger()
                   .then(function () {
-                    i();
+                    o();
                   })
                   .catch(function () {
                     n();
                   }),
-                o.table.options.persistence &&
-                  o.table.modExists("persistence", !0) &&
-                  o.table.modules.persistence.config.page &&
-                  o.table.modules.persistence.save("page"))
+                i.table.options.persistence &&
+                  i.table.modExists("persistence", !0) &&
+                  i.table.modules.persistence.config.page &&
+                  i.table.modules.persistence.save("page"))
               : (console.warn(
                   "Pagination Error - Requested page is out of range of 1 - " +
                     t.max +
@@ -17850,7 +18949,7 @@
         }),
         (U.prototype.setPageToRow = function (e) {
           var t = this;
-          return new Promise(function (o, i) {
+          return new Promise(function (i, o) {
             var n = t.table.rowManager
               .getDisplayRows(t.displayIndex - 1)
               .indexOf(e);
@@ -17858,14 +18957,14 @@
               var r = !0 === t.size ? 1 : Math.ceil((n + 1) / t.size);
               t.setPage(r)
                 .then(function () {
-                  o();
+                  i();
                 })
                 .catch(function () {
-                  i();
+                  o();
                 });
             } else
               console.warn("Pagination Error - Requested row is not visible"),
-                i();
+                o();
           });
         }),
         (U.prototype.setPageSize = function (e) {
@@ -17881,15 +18980,15 @@
           for (
             var e = this,
               t = Math.floor((this.count - 1) / 2),
-              o = Math.ceil((this.count - 1) / 2),
-              i =
+              i = Math.ceil((this.count - 1) / 2),
+              o =
                 this.max - this.page + t + 1 < this.count
                   ? this.max - this.count + 1
                   : Math.max(this.page - t, 1),
               n =
-                this.page <= o
+                this.page <= i
                   ? Math.min(this.count, this.max)
-                  : Math.min(this.page + o, this.max);
+                  : Math.min(this.page + i, this.max);
             e.pagesElement.firstChild;
 
           )
@@ -17900,7 +18999,7 @@
             e.page == e.max
               ? ((e.lastBut.disabled = !0), (e.nextBut.disabled = !0))
               : ((e.lastBut.disabled = !1), (e.nextBut.disabled = !1));
-          for (var r = i; r <= n; r++)
+          for (var r = o; r <= n; r++)
             r > 0 &&
               r <= e.max &&
               e.pagesElement.appendChild(e._generatePageButton(r));
@@ -17908,32 +19007,32 @@
         }),
         (U.prototype._generatePageButton = function (e) {
           var t = this,
-            o = document.createElement("button");
+            i = document.createElement("button");
           return (
-            o.classList.add("tabulator-page"),
-            e == t.page && o.classList.add("active"),
-            o.setAttribute("type", "button"),
-            o.setAttribute("role", "button"),
+            i.classList.add("tabulator-page"),
+            e == t.page && i.classList.add("active"),
+            i.setAttribute("type", "button"),
+            i.setAttribute("role", "button"),
             t.table.modules.localize.bind(
               "pagination|page_title",
               function (t) {
-                o.setAttribute("aria-label", t + " " + e),
-                  o.setAttribute("title", t + " " + e);
+                i.setAttribute("aria-label", t + " " + e),
+                  i.setAttribute("title", t + " " + e);
               },
             ),
-            o.setAttribute("data-page", e),
-            (o.textContent = e),
-            o.addEventListener("click", function (o) {
+            i.setAttribute("data-page", e),
+            (i.textContent = e),
+            i.addEventListener("click", function (i) {
               t.setPage(e)
                 .then(function () {})
                 .catch(function () {});
             }),
-            o
+            i
           );
         }),
         (U.prototype.previousPage = function () {
           var e = this;
-          return new Promise(function (t, o) {
+          return new Promise(function (t, i) {
             e.page > 1
               ? (e.page--,
                 e
@@ -17942,7 +19041,7 @@
                     t();
                   })
                   .catch(function () {
-                    o();
+                    i();
                   }),
                 e.table.options.persistence &&
                   e.table.modExists("persistence", !0) &&
@@ -17952,12 +19051,12 @@
                   "Pagination Error - Previous page would be less than page 1:",
                   0,
                 ),
-                o());
+                i());
           });
         }),
         (U.prototype.nextPage = function () {
           var e = this;
-          return new Promise(function (t, o) {
+          return new Promise(function (t, i) {
             e.page < e.max
               ? (e.page++,
                 e
@@ -17966,7 +19065,7 @@
                     t();
                   })
                   .catch(function () {
-                    o();
+                    i();
                   }),
                 e.table.options.persistence &&
                   e.table.modExists("persistence", !0) &&
@@ -17979,7 +19078,7 @@
                       ":",
                     e.max + 1,
                   ),
-                o());
+                i());
           });
         }),
         (U.prototype.getPage = function () {
@@ -17995,14 +19094,14 @@
           return this.mode;
         }),
         (U.prototype.getRows = function (e) {
-          var t, o, i;
+          var t, i, o;
           if ("local" == this.mode) {
             (t = []),
               !0 === this.size
-                ? ((o = 0), (i = e.length))
-                : (i = (o = this.size * (this.page - 1)) + parseInt(this.size)),
+                ? ((i = 0), (o = e.length))
+                : (o = (i = this.size * (this.page - 1)) + parseInt(this.size)),
               this._setPageButtons();
-            for (var n = o; n < i; n++) e[n] && t.push(e[n]);
+            for (var n = i; n < o; n++) e[n] && t.push(e[n]);
             return t;
           }
           return this._setPageButtons(), e.slice(0);
@@ -18010,14 +19109,14 @@
         (U.prototype.trigger = function () {
           var e,
             t = this;
-          return new Promise(function (o, i) {
+          return new Promise(function (i, o) {
             switch (t.mode) {
               case "local":
                 (e = t.table.rowManager.scrollLeft),
                   t.table.rowManager.refreshActiveData("page"),
                   t.table.rowManager.scrollHorizontal(e),
                   t.table.options.pageLoaded.call(t.table, t.getPage()),
-                  o();
+                  i();
                 break;
               case "remote":
               case "progressive_load":
@@ -18026,10 +19125,10 @@
                   t
                     ._getRemotePage()
                     .then(function () {
-                      o();
+                      i();
                     })
                     .catch(function () {
-                      i();
+                      o();
                     });
                 break;
               default:
@@ -18037,52 +19136,52 @@
                   "Pagination Error - no such pagination mode:",
                   t.mode,
                 ),
-                  i();
+                  o();
             }
           });
         }),
         (U.prototype._getRemotePage = function () {
           var e,
             t,
-            o = this,
-            i = this;
+            i = this,
+            o = this;
           return new Promise(function (n, r) {
             if (
-              (i.table.modExists("ajax", !0) || r(),
+              (o.table.modExists("ajax", !0) || r(),
               (e = g.prototype.helpers.deepClone(
-                i.table.modules.ajax.getParams() || {},
+                o.table.modules.ajax.getParams() || {},
               )),
-              ((t = i.table.modules.ajax.getParams())[o.dataSentNames.page] =
-                i.page),
-              o.size && (t[o.dataSentNames.size] = o.size),
-              o.table.options.ajaxSorting && o.table.modExists("sort"))
+              ((t = o.table.modules.ajax.getParams())[i.dataSentNames.page] =
+                o.page),
+              i.size && (t[i.dataSentNames.size] = i.size),
+              i.table.options.ajaxSorting && i.table.modExists("sort"))
             ) {
-              var a = i.table.modules.sort.getSort();
+              var a = o.table.modules.sort.getSort();
               a.forEach(function (e) {
                 delete e.column;
               }),
-                (t[o.dataSentNames.sorters] = a);
+                (t[i.dataSentNames.sorters] = a);
             }
-            if (o.table.options.ajaxFiltering && o.table.modExists("filter")) {
-              var s = i.table.modules.filter.getFilters(!0, !0);
-              t[o.dataSentNames.filters] = s;
+            if (i.table.options.ajaxFiltering && i.table.modExists("filter")) {
+              var s = o.table.modules.filter.getFilters(!0, !0);
+              t[i.dataSentNames.filters] = s;
             }
-            i.table.modules.ajax.setParams(t),
-              i.table.modules.ajax
-                .sendRequest(o.progressiveLoad)
+            o.table.modules.ajax.setParams(t),
+              o.table.modules.ajax
+                .sendRequest(i.progressiveLoad)
                 .then(function (e) {
-                  i._parseRemoteData(e), n();
+                  o._parseRemoteData(e), n();
                 })
                 .catch(function (e) {
                   r();
                 }),
-              i.table.modules.ajax.setParams(e);
+              o.table.modules.ajax.setParams(e);
           });
         }),
         (U.prototype._parseRemoteData = function (e) {
           var t,
-            o,
-            i = this;
+            i,
+            o = this;
           if (
             (void 0 === e[this.dataReceivedNames.last_page] &&
               console.warn(
@@ -18109,10 +19208,10 @@
                       ),
                     this.page < this.max &&
                       setTimeout(function () {
-                        i.nextPage()
+                        o.nextPage()
                           .then(function () {})
                           .catch(function () {});
-                      }, i.table.options.ajaxProgressiveLoadDelay);
+                      }, o.table.options.ajaxProgressiveLoadDelay);
                   break;
                 case "progressive_scroll":
                   (e = this.table.rowManager
@@ -18123,12 +19222,12 @@
                       !0,
                       this.initialLoad && 1 == this.page,
                     ),
-                    (o =
+                    (i =
                       this.table.options.ajaxProgressiveLoadScrollMargin ||
                       2 * this.table.rowManager.element.clientHeight),
-                    i.table.rowManager.element.scrollHeight <=
-                      i.table.rowManager.element.clientHeight + o &&
-                      i
+                    o.table.rowManager.element.scrollHeight <=
+                      o.table.rowManager.element.clientHeight + i &&
+                      o
                         .nextPage()
                         .then(function () {})
                         .catch(function () {});
@@ -18195,7 +19294,7 @@
         (X.prototype.initialize = function () {
           var e,
             t = this.table.options.persistenceMode,
-            o = this.table.options.persistenceID;
+            i = this.table.options.persistenceID;
           (this.mode =
             !0 !== t ? t : this.localStorageTest() ? "local" : "cookie"),
             this.table.options.persistenceReaderFunc
@@ -18232,7 +19331,7 @@
                 ),
             (this.id =
               "tabulator-" +
-              (o || this.table.element.getAttribute("id") || "")),
+              (i || this.table.element.getAttribute("id") || "")),
             (this.config = {
               sort:
                 !0 === this.table.options.persistence ||
@@ -18280,7 +19379,7 @@
         }),
         (X.prototype.initializeColumn = function (e) {
           var t,
-            o = this;
+            i = this;
           this.config.columns &&
             ((this.defWatcherBlock = !0),
             (t = e.getDefinition()),
@@ -18288,58 +19387,58 @@
               ? Object.keys(t)
               : this.config.columns
             ).forEach(function (e) {
-              var i = Object.getOwnPropertyDescriptor(t, e),
+              var o = Object.getOwnPropertyDescriptor(t, e),
                 n = t[e];
-              i &&
+              o &&
                 Object.defineProperty(t, e, {
                   set: function (e) {
                     (n = e),
-                      o.defWatcherBlock || o.save("columns"),
-                      i.set && i.set(e);
+                      i.defWatcherBlock || i.save("columns"),
+                      o.set && o.set(e);
                   },
                   get: function () {
-                    return i.get && i.get(), n;
+                    return o.get && o.get(), n;
                   },
                 });
             }),
             (this.defWatcherBlock = !1));
         }),
         (X.prototype.load = function (e, t) {
-          var o = this.retreiveData(e);
-          return t && (o = o ? this.mergeDefinition(t, o) : t), o;
+          var i = this.retreiveData(e);
+          return t && (i = i ? this.mergeDefinition(t, i) : t), i;
         }),
         (X.prototype.retreiveData = function (e) {
           return !!this.readFunc && this.readFunc(this.id, e);
         }),
         (X.prototype.mergeDefinition = function (e, t) {
-          var o = this,
-            i = [];
+          var i = this,
+            o = [];
           return (
             (t = t || []).forEach(function (t, n) {
               var r,
-                a = o._findColumn(e, t);
+                a = i._findColumn(e, t);
               a &&
-                (!0 === o.config.columns || null == o.config.columns
+                (!0 === i.config.columns || null == i.config.columns
                   ? (r = Object.keys(a)).push("width")
-                  : (r = o.config.columns),
+                  : (r = i.config.columns),
                 r.forEach(function (e) {
                   "columns" !== e && void 0 !== t[e] && (a[e] = t[e]);
                 }),
                 a.columns &&
-                  (a.columns = o.mergeDefinition(a.columns, t.columns)),
-                i.push(a));
+                  (a.columns = i.mergeDefinition(a.columns, t.columns)),
+                o.push(a));
             }),
             e.forEach(function (e, n) {
-              o._findColumn(t, e) ||
-                (i.length > n ? i.splice(n, 0, e) : i.push(e));
+              i._findColumn(t, e) ||
+                (o.length > n ? o.splice(n, 0, e) : o.push(e));
             }),
-            i
+            o
           );
         }),
         (X.prototype._findColumn = function (e, t) {
-          var o = t.columns ? "group" : t.field ? "field" : "object";
+          var i = t.columns ? "group" : t.field ? "field" : "object";
           return e.find(function (e) {
-            switch (o) {
+            switch (i) {
               case "group":
                 return (
                   e.title === t.title && e.columns.length === t.columns.length
@@ -18405,8 +19504,8 @@
         }),
         (X.prototype.parseColumns = function (e) {
           var t = this,
-            o = [],
-            i = ["headerContextMenu", "headerMenu", "contextMenu", "clickMenu"];
+            i = [],
+            o = ["headerContextMenu", "headerMenu", "contextMenu", "clickMenu"];
           return (
             e.forEach(function (e) {
               var n,
@@ -18429,61 +19528,61 @@
                         break;
                       default:
                         "function" != typeof a[t] &&
-                          -1 === i.indexOf(t) &&
+                          -1 === o.indexOf(t) &&
                           (r[t] = a[t]);
                     }
                   })),
-                o.push(r);
+                i.push(r);
             }),
-            o
+            i
           );
         }),
         (X.prototype.readers = {
           local: function (e, t) {
-            var o = localStorage.getItem(e + "-" + t);
-            return !!o && JSON.parse(o);
+            var i = localStorage.getItem(e + "-" + t);
+            return !!i && JSON.parse(i);
           },
           cookie: function (e, t) {
-            var o,
-              i,
+            var i,
+              o,
               n = document.cookie,
               r = e + "-" + t,
               a = n.indexOf(r + "=");
             return (
               a > -1 &&
                 ((n = n.substr(a)),
-                (o = n.indexOf(";")) > -1 && (n = n.substr(0, o)),
-                (i = n.replace(r + "=", ""))),
-              !!i && JSON.parse(i)
+                (i = n.indexOf(";")) > -1 && (n = n.substr(0, i)),
+                (o = n.replace(r + "=", ""))),
+              !!o && JSON.parse(o)
             );
           },
         }),
         (X.prototype.writers = {
-          local: function (e, t, o) {
-            localStorage.setItem(e + "-" + t, JSON.stringify(o));
+          local: function (e, t, i) {
+            localStorage.setItem(e + "-" + t, JSON.stringify(i));
           },
-          cookie: function (e, t, o) {
-            var i = new Date();
-            i.setDate(i.getDate() + 1e4),
+          cookie: function (e, t, i) {
+            var o = new Date();
+            o.setDate(o.getDate() + 1e4),
               (document.cookie =
                 e +
                 "-" +
                 t +
                 "=" +
-                JSON.stringify(o) +
+                JSON.stringify(i) +
                 "; expires=" +
-                i.toUTCString());
+                o.toUTCString());
           },
         }),
         g.prototype.registerModule("persistence", X);
-      var Y = function (e) {
+      var q = function (e) {
         (this.table = e), (this.element = !1), (this.manualBlock = !1);
       };
-      (Y.prototype.initialize = function () {
+      (q.prototype.initialize = function () {
         window.addEventListener("beforeprint", this.replaceTable.bind(this)),
           window.addEventListener("afterprint", this.cleanup.bind(this));
       }),
-        (Y.prototype.replaceTable = function () {
+        (q.prototype.replaceTable = function () {
           this.manualBlock ||
             ((this.element = document.createElement("div")),
             this.element.classList.add("tabulator-print-table"),
@@ -18501,22 +19600,22 @@
               this.table.element,
             ));
         }),
-        (Y.prototype.cleanup = function () {
+        (q.prototype.cleanup = function () {
           document.body.classList.remove("tabulator-print-fullscreen-hide"),
             this.element &&
               this.element.parentNode &&
               (this.element.parentNode.removeChild(this.element),
               (this.table.element.style.display = ""));
         }),
-        (Y.prototype.printFullscreen = function (e, t, o) {
-          var i,
+        (q.prototype.printFullscreen = function (e, t, i) {
+          var o,
             n,
             r = window.scrollX,
             a = window.scrollY,
             s = document.createElement("div"),
             l = document.createElement("div"),
             c = this.table.modules.export.genereateTable(
-              void 0 !== o ? o : this.table.options.printConfig,
+              void 0 !== i ? i : this.table.options.printConfig,
               void 0 !== t ? t : this.table.options.printStyled,
               e,
               "print",
@@ -18527,12 +19626,12 @@
             this.table.options.printHeader &&
               (s.classList.add("tabulator-print-header"),
               "string" ==
-              typeof (i =
+              typeof (o =
                 "function" == typeof this.table.options.printHeader
                   ? this.table.options.printHeader.call(this.table)
                   : this.table.options.printHeader)
-                ? (s.innerHTML = i)
-                : s.appendChild(i),
+                ? (s.innerHTML = o)
+                : s.appendChild(o),
               this.element.appendChild(s)),
             this.element.appendChild(c),
             this.table.options.printFooter &&
@@ -18554,123 +19653,123 @@
             window.scrollTo(r, a),
             (this.manualBlock = !1);
         }),
-        g.prototype.registerModule("print", Y);
-      var q = function (e) {
+        g.prototype.registerModule("print", q);
+      var Y = function (e) {
         (this.table = e),
           (this.data = !1),
           (this.blocked = !1),
           (this.origFuncs = {}),
           (this.currentVersion = 0);
       };
-      (q.prototype.watchData = function (e) {
+      (Y.prototype.watchData = function (e) {
         var t,
-          o = this;
+          i = this;
         this.currentVersion++,
           (t = this.currentVersion),
-          o.unwatchData(),
-          (o.data = e),
-          (o.origFuncs.push = e.push),
-          Object.defineProperty(o.data, "push", {
+          i.unwatchData(),
+          (i.data = e),
+          (i.origFuncs.push = e.push),
+          Object.defineProperty(i.data, "push", {
             enumerable: !1,
             configurable: !0,
             value: function () {
-              var i = Array.from(arguments);
+              var o = Array.from(arguments);
               return (
-                o.blocked ||
-                  t !== o.currentVersion ||
-                  i.forEach(function (e) {
-                    o.table.rowManager.addRowActual(e, !1);
+                i.blocked ||
+                  t !== i.currentVersion ||
+                  o.forEach(function (e) {
+                    i.table.rowManager.addRowActual(e, !1);
                   }),
-                o.origFuncs.push.apply(e, arguments)
+                i.origFuncs.push.apply(e, arguments)
               );
             },
           }),
-          (o.origFuncs.unshift = e.unshift),
-          Object.defineProperty(o.data, "unshift", {
+          (i.origFuncs.unshift = e.unshift),
+          Object.defineProperty(i.data, "unshift", {
             enumerable: !1,
             configurable: !0,
             value: function () {
-              var i = Array.from(arguments);
+              var o = Array.from(arguments);
               return (
-                o.blocked ||
-                  t !== o.currentVersion ||
-                  i.forEach(function (e) {
-                    o.table.rowManager.addRowActual(e, !0);
+                i.blocked ||
+                  t !== i.currentVersion ||
+                  o.forEach(function (e) {
+                    i.table.rowManager.addRowActual(e, !0);
                   }),
-                o.origFuncs.unshift.apply(e, arguments)
+                i.origFuncs.unshift.apply(e, arguments)
               );
             },
           }),
-          (o.origFuncs.shift = e.shift),
-          Object.defineProperty(o.data, "shift", {
+          (i.origFuncs.shift = e.shift),
+          Object.defineProperty(i.data, "shift", {
             enumerable: !1,
             configurable: !0,
             value: function () {
-              var i;
+              var o;
               return (
-                o.blocked ||
-                  t !== o.currentVersion ||
-                  (o.data.length &&
-                    (i = o.table.rowManager.getRowFromDataObject(o.data[0])) &&
-                    i.deleteActual()),
-                o.origFuncs.shift.call(e)
+                i.blocked ||
+                  t !== i.currentVersion ||
+                  (i.data.length &&
+                    (o = i.table.rowManager.getRowFromDataObject(i.data[0])) &&
+                    o.deleteActual()),
+                i.origFuncs.shift.call(e)
               );
             },
           }),
-          (o.origFuncs.pop = e.pop),
-          Object.defineProperty(o.data, "pop", {
+          (i.origFuncs.pop = e.pop),
+          Object.defineProperty(i.data, "pop", {
             enumerable: !1,
             configurable: !0,
             value: function () {
-              var i;
+              var o;
               return (
-                o.blocked ||
-                  t !== o.currentVersion ||
-                  (o.data.length &&
-                    (i = o.table.rowManager.getRowFromDataObject(
-                      o.data[o.data.length - 1],
+                i.blocked ||
+                  t !== i.currentVersion ||
+                  (i.data.length &&
+                    (o = i.table.rowManager.getRowFromDataObject(
+                      i.data[i.data.length - 1],
                     )) &&
-                    i.deleteActual()),
-                o.origFuncs.pop.call(e)
+                    o.deleteActual()),
+                i.origFuncs.pop.call(e)
               );
             },
           }),
-          (o.origFuncs.splice = e.splice),
-          Object.defineProperty(o.data, "splice", {
+          (i.origFuncs.splice = e.splice),
+          Object.defineProperty(i.data, "splice", {
             enumerable: !1,
             configurable: !0,
             value: function () {
-              var i,
+              var o,
                 n = Array.from(arguments),
                 r = n[0] < 0 ? e.length + n[0] : n[0],
                 a = n[1],
                 s = !!n[2] && n.slice(2);
-              if (!o.blocked && t === o.currentVersion) {
+              if (!i.blocked && t === i.currentVersion) {
                 if (
                   (s &&
-                    ((i =
-                      !!e[r] && o.table.rowManager.getRowFromDataObject(e[r]))
+                    ((o =
+                      !!e[r] && i.table.rowManager.getRowFromDataObject(e[r]))
                       ? s.forEach(function (e) {
-                          o.table.rowManager.addRowActual(e, !0, i, !0);
+                          i.table.rowManager.addRowActual(e, !0, o, !0);
                         })
                       : (s = s.slice().reverse()).forEach(function (e) {
-                          o.table.rowManager.addRowActual(e, !0, !1, !0);
+                          i.table.rowManager.addRowActual(e, !0, !1, !0);
                         })),
                   0 !== a)
                 ) {
                   var l = e.slice(r, void 0 === n[1] ? n[1] : r + a);
                   l.forEach(function (e, t) {
-                    var i = o.table.rowManager.getRowFromDataObject(e);
-                    i && i.deleteActual(t !== l.length - 1);
+                    var o = i.table.rowManager.getRowFromDataObject(e);
+                    o && o.deleteActual(t !== l.length - 1);
                   });
                 }
-                (s || 0 !== a) && o.table.rowManager.reRenderInPosition();
+                (s || 0 !== a) && i.table.rowManager.reRenderInPosition();
               }
-              return o.origFuncs.splice.apply(e, arguments);
+              return i.origFuncs.splice.apply(e, arguments);
             },
           });
       }),
-        (q.prototype.unwatchData = function () {
+        (Y.prototype.unwatchData = function () {
           if (!1 !== this.data)
             for (var e in this.origFuncs)
               Object.defineProperty(this.data, e, {
@@ -18680,78 +19779,78 @@
                 value: this.origFuncs.key,
               });
         }),
-        (q.prototype.watchRow = function (e) {
+        (Y.prototype.watchRow = function (e) {
           var t = e.getData();
-          for (var o in ((this.blocked = !0), t)) this.watchKey(e, t, o);
+          for (var i in ((this.blocked = !0), t)) this.watchKey(e, t, i);
           this.table.options.dataTree && this.watchTreeChildren(e),
             (this.blocked = !1);
         }),
-        (q.prototype.watchTreeChildren = function (e) {
+        (Y.prototype.watchTreeChildren = function (e) {
           var t = this,
-            o = e.getData()[this.table.options.dataTreeChildField],
-            i = {};
+            i = e.getData()[this.table.options.dataTreeChildField],
+            o = {};
           function n() {
             t.table.modules.dataTree.initializeRow(e),
               t.table.modules.dataTree.layoutRow(e),
               t.table.rowManager.refreshActiveData("tree", !1, !0);
           }
-          o &&
-            ((i.push = o.push),
-            Object.defineProperty(o, "push", {
+          i &&
+            ((o.push = i.push),
+            Object.defineProperty(i, "push", {
               enumerable: !1,
               configurable: !0,
               value: function () {
-                var e = i.push.apply(o, arguments);
+                var e = o.push.apply(i, arguments);
                 return n(), e;
               },
             }),
-            (i.unshift = o.unshift),
-            Object.defineProperty(o, "unshift", {
+            (o.unshift = i.unshift),
+            Object.defineProperty(i, "unshift", {
               enumerable: !1,
               configurable: !0,
               value: function () {
-                var e = i.unshift.apply(o, arguments);
+                var e = o.unshift.apply(i, arguments);
                 return n(), e;
               },
             }),
-            (i.shift = o.shift),
-            Object.defineProperty(o, "shift", {
+            (o.shift = i.shift),
+            Object.defineProperty(i, "shift", {
               enumerable: !1,
               configurable: !0,
               value: function () {
-                var e = i.shift.call(o);
+                var e = o.shift.call(i);
                 return n(), e;
               },
             }),
-            (i.pop = o.pop),
-            Object.defineProperty(o, "pop", {
+            (o.pop = i.pop),
+            Object.defineProperty(i, "pop", {
               enumerable: !1,
               configurable: !0,
               value: function () {
-                var e = i.pop.call(o);
+                var e = o.pop.call(i);
                 return n(), e;
               },
             }),
-            (i.splice = o.splice),
-            Object.defineProperty(o, "splice", {
+            (o.splice = i.splice),
+            Object.defineProperty(i, "splice", {
               enumerable: !1,
               configurable: !0,
               value: function () {
-                var e = i.splice.apply(o, arguments);
+                var e = o.splice.apply(i, arguments);
                 return n(), e;
               },
             }));
         }),
-        (q.prototype.watchKey = function (e, t, o) {
-          var i = this,
-            n = Object.getOwnPropertyDescriptor(t, o),
-            r = t[o],
+        (Y.prototype.watchKey = function (e, t, i) {
+          var o = this,
+            n = Object.getOwnPropertyDescriptor(t, i),
+            r = t[i],
             a = this.currentVersion;
-          Object.defineProperty(t, o, {
+          Object.defineProperty(t, i, {
             set: function (t) {
-              if (((r = t), !i.blocked && a === i.currentVersion)) {
+              if (((r = t), !o.blocked && a === o.currentVersion)) {
                 var s = {};
-                (s[o] = t), e.updateData(s);
+                (s[i] = t), e.updateData(s);
               }
               n.set && n.set(t);
             },
@@ -18760,17 +19859,17 @@
             },
           });
         }),
-        (q.prototype.unwatchRow = function (e) {
+        (Y.prototype.unwatchRow = function (e) {
           var t = e.getData();
-          for (var o in t) Object.defineProperty(t, o, { value: t[o] });
+          for (var i in t) Object.defineProperty(t, i, { value: t[i] });
         }),
-        (q.prototype.block = function () {
+        (Y.prototype.block = function () {
           this.blocked = !0;
         }),
-        (q.prototype.unblock = function () {
+        (Y.prototype.unblock = function () {
           this.blocked = !1;
         }),
-        g.prototype.registerModule("reactiveData", q);
+        g.prototype.registerModule("reactiveData", Y);
       var K = function (e) {
         (this.table = e),
           (this.startColumn = !1),
@@ -18779,8 +19878,8 @@
           (this.handle = null),
           (this.prevHandle = null);
       };
-      (K.prototype.initializeColumn = function (e, t, o) {
-        var i = this,
+      (K.prototype.initializeColumn = function (e, t, i) {
+        var o = this,
           n = !1,
           r = this.table.options.resizableColumns;
         if (
@@ -18799,44 +19898,44 @@
               e.stopPropagation();
             });
           var l = function (e) {
-            var o = t.getLastColumn();
-            o &&
-              i._checkResizability(o) &&
-              ((i.startColumn = t), i._mouseDown(e, o, a));
+            var i = t.getLastColumn();
+            i &&
+              o._checkResizability(i) &&
+              ((o.startColumn = t), o._mouseDown(e, i, a));
           };
           a.addEventListener("mousedown", l),
             a.addEventListener("touchstart", l, { passive: !0 }),
             a.addEventListener("dblclick", function (e) {
-              var o = t.getLastColumn();
-              o &&
-                i._checkResizability(o) &&
-                (e.stopPropagation(), o.reinitializeWidth(!0));
+              var i = t.getLastColumn();
+              i &&
+                o._checkResizability(i) &&
+                (e.stopPropagation(), i.reinitializeWidth(!0));
             }),
             s.addEventListener("click", function (e) {
               e.stopPropagation();
             });
           var c = function (e) {
-            var o, n, r;
-            (o = t.getFirstColumn()) &&
+            var i, n, r;
+            (i = t.getFirstColumn()) &&
               (r =
-                (n = i.table.columnManager.findColumnIndex(o)) > 0 &&
-                i.table.columnManager.getColumnByIndex(n - 1)) &&
-              i._checkResizability(r) &&
-              ((i.startColumn = t), i._mouseDown(e, r, s));
+                (n = o.table.columnManager.findColumnIndex(i)) > 0 &&
+                o.table.columnManager.getColumnByIndex(n - 1)) &&
+              o._checkResizability(r) &&
+              ((o.startColumn = t), o._mouseDown(e, r, s));
           };
           s.addEventListener("mousedown", c),
             s.addEventListener("touchstart", c, { passive: !0 }),
             s.addEventListener("dblclick", function (e) {
-              var o, n, r;
-              (o = t.getFirstColumn()) &&
+              var i, n, r;
+              (i = t.getFirstColumn()) &&
                 (r =
-                  (n = i.table.columnManager.findColumnIndex(o)) > 0 &&
-                  i.table.columnManager.getColumnByIndex(n - 1)) &&
-                i._checkResizability(r) &&
+                  (n = o.table.columnManager.findColumnIndex(i)) > 0 &&
+                  o.table.columnManager.getColumnByIndex(n - 1)) &&
+                o._checkResizability(r) &&
                 (e.stopPropagation(), r.reinitializeWidth(!0));
             }),
-            o.appendChild(a),
-            o.appendChild(s);
+            i.appendChild(a),
+            i.appendChild(s);
         }
       }),
         (K.prototype._checkResizability = function (e) {
@@ -18844,55 +19943,55 @@
             ? e.definition.resizable
             : this.table.options.resizableColumns;
         }),
-        (K.prototype._mouseDown = function (e, t, o) {
-          var i = this;
+        (K.prototype._mouseDown = function (e, t, i) {
+          var o = this;
           function n(e) {
-            i.table.rtl
+            o.table.rtl
               ? t.setWidth(
-                  i.startWidth -
+                  o.startWidth -
                     ((void 0 === e.screenX ? e.touches[0].screenX : e.screenX) -
-                      i.startX),
+                      o.startX),
                 )
               : t.setWidth(
-                  i.startWidth +
+                  o.startWidth +
                     ((void 0 === e.screenX ? e.touches[0].screenX : e.screenX) -
-                      i.startX),
+                      o.startX),
                 ),
-              i.table.options.virtualDomHoz && i.table.vdomHoz.reinitialize(!0),
-              !i.table.browserSlow &&
+              o.table.options.virtualDomHoz && o.table.vdomHoz.reinitialize(!0),
+              !o.table.browserSlow &&
                 t.modules.resize &&
                 t.modules.resize.variableHeight &&
                 t.checkCellHeights();
           }
           function r(e) {
-            i.startColumn.modules.edit &&
-              (i.startColumn.modules.edit.blocked = !1),
-              i.table.browserSlow &&
+            o.startColumn.modules.edit &&
+              (o.startColumn.modules.edit.blocked = !1),
+              o.table.browserSlow &&
                 t.modules.resize &&
                 t.modules.resize.variableHeight &&
                 t.checkCellHeights(),
               document.body.removeEventListener("mouseup", r),
               document.body.removeEventListener("mousemove", n),
-              o.removeEventListener("touchmove", n),
-              o.removeEventListener("touchend", r),
-              i.table.element.classList.remove("tabulator-block-select"),
-              i.table.options.persistence &&
-                i.table.modExists("persistence", !0) &&
-                i.table.modules.persistence.config.columns &&
-                i.table.modules.persistence.save("columns"),
-              i.table.options.columnResized.call(i.table, t.getComponent());
+              i.removeEventListener("touchmove", n),
+              i.removeEventListener("touchend", r),
+              o.table.element.classList.remove("tabulator-block-select"),
+              o.table.options.persistence &&
+                o.table.modExists("persistence", !0) &&
+                o.table.modules.persistence.config.columns &&
+                o.table.modules.persistence.save("columns"),
+              o.table.options.columnResized.call(o.table, t.getComponent());
           }
-          i.table.element.classList.add("tabulator-block-select"),
+          o.table.element.classList.add("tabulator-block-select"),
             e.stopPropagation(),
-            i.startColumn.modules.edit &&
-              (i.startColumn.modules.edit.blocked = !0),
-            (i.startX =
+            o.startColumn.modules.edit &&
+              (o.startColumn.modules.edit.blocked = !0),
+            (o.startX =
               void 0 === e.screenX ? e.touches[0].screenX : e.screenX),
-            (i.startWidth = t.getWidth()),
+            (o.startWidth = t.getWidth()),
             document.body.addEventListener("mousemove", n),
             document.body.addEventListener("mouseup", r),
-            o.addEventListener("touchmove", n, { passive: !0 }),
-            o.addEventListener("touchend", r);
+            i.addEventListener("touchmove", n, { passive: !0 }),
+            i.addEventListener("touchend", r);
         }),
         g.prototype.registerModule("resizeColumns", K);
       var J = function (e) {
@@ -18905,60 +20004,60 @@
       };
       (J.prototype.initializeRow = function (e) {
         var t = this,
-          o = e.getElement(),
-          i = document.createElement("div");
-        i.className = "tabulator-row-resize-handle";
+          i = e.getElement(),
+          o = document.createElement("div");
+        o.className = "tabulator-row-resize-handle";
         var n = document.createElement("div");
         (n.className = "tabulator-row-resize-handle prev"),
-          i.addEventListener("click", function (e) {
+          o.addEventListener("click", function (e) {
             e.stopPropagation();
           });
-        var r = function (o) {
-          (t.startRow = e), t._mouseDown(o, e, i);
+        var r = function (i) {
+          (t.startRow = e), t._mouseDown(i, e, o);
         };
-        i.addEventListener("mousedown", r),
-          i.addEventListener("touchstart", r, { passive: !0 }),
+        o.addEventListener("mousedown", r),
+          o.addEventListener("touchstart", r, { passive: !0 }),
           n.addEventListener("click", function (e) {
             e.stopPropagation();
           });
-        var a = function (o) {
-          var i = t.table.rowManager.prevDisplayRow(e);
-          i && ((t.startRow = i), t._mouseDown(o, i, n));
+        var a = function (i) {
+          var o = t.table.rowManager.prevDisplayRow(e);
+          o && ((t.startRow = o), t._mouseDown(i, o, n));
         };
         n.addEventListener("mousedown", a),
           n.addEventListener("touchstart", a, { passive: !0 }),
-          o.appendChild(i),
-          o.appendChild(n);
+          i.appendChild(o),
+          i.appendChild(n);
       }),
-        (J.prototype._mouseDown = function (e, t, o) {
-          var i = this;
+        (J.prototype._mouseDown = function (e, t, i) {
+          var o = this;
           function n(e) {
             t.setHeight(
-              i.startHeight +
+              o.startHeight +
                 ((void 0 === e.screenY ? e.touches[0].screenY : e.screenY) -
-                  i.startY),
+                  o.startY),
             );
           }
           function r(e) {
             document.body.removeEventListener("mouseup", n),
               document.body.removeEventListener("mousemove", n),
-              o.removeEventListener("touchmove", n),
-              o.removeEventListener("touchend", r),
-              i.table.element.classList.remove("tabulator-block-select"),
-              i.table.options.rowResized.call(this.table, t.getComponent());
+              i.removeEventListener("touchmove", n),
+              i.removeEventListener("touchend", r),
+              o.table.element.classList.remove("tabulator-block-select"),
+              o.table.options.rowResized.call(this.table, t.getComponent());
           }
-          i.table.element.classList.add("tabulator-block-select"),
+          o.table.element.classList.add("tabulator-block-select"),
             e.stopPropagation(),
-            (i.startY =
+            (o.startY =
               void 0 === e.screenY ? e.touches[0].screenY : e.screenY),
-            (i.startHeight = t.getHeight()),
+            (o.startHeight = t.getHeight()),
             document.body.addEventListener("mousemove", n),
             document.body.addEventListener("mouseup", r),
-            o.addEventListener("touchmove", n, { passive: !0 }),
-            o.addEventListener("touchend", r);
+            i.addEventListener("touchmove", n, { passive: !0 }),
+            i.addEventListener("touchend", r);
         }),
         g.prototype.registerModule("resizeRows", J);
-      var Z = function (e) {
+      var $ = function (e) {
         (this.table = e),
           (this.binding = !1),
           (this.observer = !1),
@@ -18969,74 +20068,74 @@
           (this.containerWidth = 0),
           (this.autoResize = !1);
       };
-      (Z.prototype.initialize = function (e) {
+      ($.prototype.initialize = function (e) {
         var t,
-          o = this,
-          i = this.table;
-        (this.tableHeight = i.element.clientHeight),
-          (this.tableWidth = i.element.clientWidth),
-          i.element.parentNode &&
-            ((this.containerHeight = i.element.parentNode.clientHeight),
-            (this.containerWidth = i.element.parentNode.clientWidth)),
+          i = this,
+          o = this.table;
+        (this.tableHeight = o.element.clientHeight),
+          (this.tableWidth = o.element.clientWidth),
+          o.element.parentNode &&
+            ((this.containerHeight = o.element.parentNode.clientHeight),
+            (this.containerWidth = o.element.parentNode.clientWidth)),
           "undefined" != typeof ResizeObserver &&
-          "virtual" === i.rowManager.getRenderMode()
+          "virtual" === o.rowManager.getRenderMode()
             ? ((this.autoResize = !0),
               (this.observer = new ResizeObserver(function (e) {
                 if (
-                  !i.browserMobile ||
-                  (i.browserMobile && !i.modules.edit.currentCell)
+                  !o.browserMobile ||
+                  (o.browserMobile && !o.modules.edit.currentCell)
                 ) {
                   var t = Math.floor(e[0].contentRect.height),
                     n = Math.floor(e[0].contentRect.width);
-                  (o.tableHeight == t && o.tableWidth == n) ||
-                    ((o.tableHeight = t),
-                    (o.tableWidth = n),
-                    i.element.parentNode &&
-                      ((o.containerHeight = i.element.parentNode.clientHeight),
-                      (o.containerWidth = i.element.parentNode.clientWidth)),
-                    i.options.virtualDomHoz && i.vdomHoz.reinitialize(!0),
-                    i.redraw());
+                  (i.tableHeight == t && i.tableWidth == n) ||
+                    ((i.tableHeight = t),
+                    (i.tableWidth = n),
+                    o.element.parentNode &&
+                      ((i.containerHeight = o.element.parentNode.clientHeight),
+                      (i.containerWidth = o.element.parentNode.clientWidth)),
+                    o.options.virtualDomHoz && o.vdomHoz.reinitialize(!0),
+                    o.redraw());
                 }
               })),
-              this.observer.observe(i.element),
-              (t = window.getComputedStyle(i.element)),
+              this.observer.observe(o.element),
+              (t = window.getComputedStyle(o.element)),
               this.table.element.parentNode &&
                 !this.table.rowManager.fixedHeight &&
                 (t.getPropertyValue("max-height") ||
                   t.getPropertyValue("min-height")) &&
                 ((this.containerObserver = new ResizeObserver(function (e) {
                   if (
-                    !i.browserMobile ||
-                    (i.browserMobile && !i.modules.edit.currentCell)
+                    !o.browserMobile ||
+                    (o.browserMobile && !o.modules.edit.currentCell)
                   ) {
                     var t = Math.floor(e[0].contentRect.height),
                       n = Math.floor(e[0].contentRect.width);
-                    (o.containerHeight == t && o.containerWidth == n) ||
-                      ((o.containerHeight = t),
-                      (o.containerWidth = n),
-                      (o.tableHeight = i.element.clientHeight),
-                      (o.tableWidth = i.element.clientWidth)),
-                      i.options.virtualDomHoz && i.vdomHoz.reinitialize(!0),
-                      i.redraw();
+                    (i.containerHeight == t && i.containerWidth == n) ||
+                      ((i.containerHeight = t),
+                      (i.containerWidth = n),
+                      (i.tableHeight = o.element.clientHeight),
+                      (i.tableWidth = o.element.clientWidth)),
+                      o.options.virtualDomHoz && o.vdomHoz.reinitialize(!0),
+                      o.redraw();
                   }
                 })),
                 this.containerObserver.observe(this.table.element.parentNode)))
             : ((this.binding = function () {
-                (!i.browserMobile ||
-                  (i.browserMobile && !i.modules.edit.currentCell)) &&
-                  (i.options.virtualDomHoz && i.vdomHoz.reinitialize(!0),
-                  i.redraw());
+                (!o.browserMobile ||
+                  (o.browserMobile && !o.modules.edit.currentCell)) &&
+                  (o.options.virtualDomHoz && o.vdomHoz.reinitialize(!0),
+                  o.redraw());
               }),
               window.addEventListener("resize", this.binding));
       }),
-        (Z.prototype.clearBindings = function (e) {
+        ($.prototype.clearBindings = function (e) {
           this.binding && window.removeEventListener("resize", this.binding),
             this.observer && this.observer.unobserve(this.table.element),
             this.containerObserver &&
               this.containerObserver.unobserve(this.table.element.parentNode);
         }),
-        g.prototype.registerModule("resizeTable", Z);
-      var $ = function (e) {
+        g.prototype.registerModule("resizeTable", $);
+      var Z = function (e) {
         (this.table = e),
           (this.columns = []),
           (this.hiddenColumns = []),
@@ -19046,7 +20145,7 @@
           (this.collapseStartOpen = !0),
           (this.collapseHandleColumn = !1);
       };
-      ($.prototype.initialize = function () {
+      (Z.prototype.initialize = function () {
         var e = this,
           t = [];
         (this.mode = this.table.options.responsiveLayout),
@@ -19056,13 +20155,13 @@
           (this.collapseStartOpen =
             this.table.options.responsiveLayoutCollapseStartOpen),
           (this.hiddenColumns = []),
-          this.table.columnManager.columnsByIndex.forEach(function (o, i) {
-            o.modules.responsive &&
-              o.modules.responsive.order &&
-              o.modules.responsive.visible &&
-              ((o.modules.responsive.index = i),
-              t.push(o),
-              o.visible || "collapse" !== e.mode || e.hiddenColumns.push(o));
+          this.table.columnManager.columnsByIndex.forEach(function (i, o) {
+            i.modules.responsive &&
+              i.modules.responsive.order &&
+              i.modules.responsive.visible &&
+              ((i.modules.responsive.index = o),
+              t.push(i),
+              i.visible || "collapse" !== e.mode || e.hiddenColumns.push(i));
           }),
           (t = (t = t.reverse()).sort(function (e, t) {
             return (
@@ -19072,16 +20171,16 @@
           })),
           (this.columns = t),
           "collapse" === this.mode && this.generateCollapsedContent();
-        var o = this.table.columnManager.columnsByIndex,
-          i = Array.isArray(o),
+        var i = this.table.columnManager.columnsByIndex,
+          o = Array.isArray(i),
           n = 0;
-        for (o = i ? o : o[Symbol.iterator](); ; ) {
+        for (i = o ? i : i[Symbol.iterator](); ; ) {
           var r;
-          if (i) {
-            if (n >= o.length) break;
-            r = o[n++];
+          if (o) {
+            if (n >= i.length) break;
+            r = i[n++];
           } else {
-            if ((n = o.next()).done) break;
+            if ((n = i.next()).done) break;
             r = n.value;
           }
           var a = r;
@@ -19095,14 +20194,14 @@
             ? this.collapseHandleColumn.show()
             : this.collapseHandleColumn.hide());
       }),
-        ($.prototype.initializeColumn = function (e) {
+        (Z.prototype.initializeColumn = function (e) {
           var t = e.getDefinition();
           e.modules.responsive = {
             order: void 0 === t.responsive ? 1 : t.responsive,
             visible: !1 !== t.visible,
           };
         }),
-        ($.prototype.initializeRow = function (e) {
+        (Z.prototype.initializeRow = function (e) {
           var t;
           "calc" !== e.type &&
             ((t = document.createElement("div")).classList.add(
@@ -19114,17 +20213,17 @@
             }),
             this.collapseStartOpen || (t.style.display = "none"));
         }),
-        ($.prototype.layoutRow = function (e) {
+        (Z.prototype.layoutRow = function (e) {
           var t = e.getElement();
           e.modules.responsiveLayout &&
             (t.appendChild(e.modules.responsiveLayout.element),
             this.generateCollapsedRowContent(e));
         }),
-        ($.prototype.updateColumnVisibility = function (e, t) {
+        (Z.prototype.updateColumnVisibility = function (e, t) {
           e.modules.responsive &&
             ((e.modules.responsive.visible = t), this.initialize());
         }),
-        ($.prototype.hideColumn = function (e) {
+        (Z.prototype.hideColumn = function (e) {
           var t = this.hiddenColumns.length;
           e.hide(!1, !0),
             "collapse" === this.mode &&
@@ -19134,7 +20233,7 @@
                 !t &&
                 this.collapseHandleColumn.show());
         }),
-        ($.prototype.showColumn = function (e) {
+        (Z.prototype.showColumn = function (e) {
           var t;
           e.show(!1, !0),
             e.setWidth(e.getWidth()),
@@ -19146,22 +20245,22 @@
                 !this.hiddenColumns.length &&
                 this.collapseHandleColumn.hide());
         }),
-        ($.prototype.update = function () {
+        (Z.prototype.update = function () {
           for (var e = this, t = !0; t; ) {
-            var o =
+            var i =
                 "fitColumns" == e.table.modules.layout.getMode()
                   ? e.table.columnManager.getFlexBaseWidth()
                   : e.table.columnManager.getWidth(),
-              i =
+              o =
                 (e.table.options.headerVisible
                   ? e.table.columnManager.element.clientWidth
-                  : e.table.element.clientWidth) - o;
-            if (i < 0) {
+                  : e.table.element.clientWidth) - i;
+            if (o < 0) {
               var n = e.columns[e.index];
               n ? (e.hideColumn(n), e.index++) : (t = !1);
             } else {
               var r = e.columns[e.index - 1];
-              r && i > 0 && i >= r.getWidth()
+              r && o > 0 && o >= r.getWidth()
                 ? (e.showColumn(r), e.index--)
                 : (t = !1);
             }
@@ -19169,33 +20268,33 @@
               e.table.rowManager.renderEmptyScroll();
           }
         }),
-        ($.prototype.generateCollapsedContent = function () {
+        (Z.prototype.generateCollapsedContent = function () {
           var e = this;
           this.table.rowManager.getDisplayRows().forEach(function (t) {
             e.generateCollapsedRowContent(t);
           });
         }),
-        ($.prototype.generateCollapsedRowContent = function (e) {
-          var t, o;
+        (Z.prototype.generateCollapsedRowContent = function (e) {
+          var t, i;
           if (e.modules.responsiveLayout) {
             for (t = e.modules.responsiveLayout.element; t.firstChild; )
               t.removeChild(t.firstChild);
-            (o = this.collapseFormatter(this.generateCollapsedRowData(e))) &&
-              t.appendChild(o);
+            (i = this.collapseFormatter(this.generateCollapsedRowData(e))) &&
+              t.appendChild(i);
           }
         }),
-        ($.prototype.generateCollapsedRowData = function (e) {
+        (Z.prototype.generateCollapsedRowData = function (e) {
           var t,
-            o = this,
-            i = e.getData(),
+            i = this,
+            o = e.getData(),
             n = [];
           return (
             this.hiddenColumns.forEach(function (r) {
-              var a = r.getFieldValue(i);
+              var a = r.getFieldValue(o);
               r.definition.title &&
                 r.field &&
                 (r.modules.format &&
-                o.table.options.responsiveLayoutCollapseUseFormatters
+                i.table.options.responsiveLayoutCollapseUseFormatters
                   ? ((t = {
                       value: !1,
                       data: {},
@@ -19203,7 +20302,7 @@
                         return a;
                       },
                       getData: function () {
-                        return i;
+                        return o;
                       },
                       getElement: function () {
                         return document.createElement("div");
@@ -19219,7 +20318,7 @@
                       field: r.field,
                       title: r.definition.title,
                       value: r.modules.format.formatter.call(
-                        o.table.modules.format,
+                        i.table.modules.format,
                         t,
                         r.modules.format.params,
                       ),
@@ -19233,12 +20332,12 @@
             n
           );
         }),
-        ($.prototype.formatCollapsedData = function (e) {
+        (Z.prototype.formatCollapsedData = function (e) {
           var t = document.createElement("table");
           return (
             e.forEach(function (e) {
-              var o,
-                i = document.createElement("tr"),
+              var i,
+                o = document.createElement("tr"),
                 n = document.createElement("td"),
                 r = document.createElement("td"),
                 a = document.createElement("strong");
@@ -19250,17 +20349,17 @@
                   },
                 ),
                 e.value instanceof Node
-                  ? ((o = document.createElement("div")).appendChild(e.value),
-                    r.appendChild(o))
+                  ? ((i = document.createElement("div")).appendChild(e.value),
+                    r.appendChild(i))
                   : (r.innerHTML = e.value),
-                i.appendChild(n),
-                i.appendChild(r),
-                t.appendChild(i);
+                o.appendChild(n),
+                o.appendChild(r),
+                t.appendChild(o);
             }, this),
             Object.keys(e).length ? t : ""
           );
         }),
-        g.prototype.registerModule("responsiveLayout", $);
+        g.prototype.registerModule("responsiveLayout", Z);
       var Q = function (e) {
         (this.table = e),
           (this.selecting = !1),
@@ -19278,8 +20377,8 @@
       }),
         (Q.prototype.initializeRow = function (e) {
           var t = this,
-            o = e.getElement(),
-            i = function e() {
+            i = e.getElement(),
+            o = function e() {
               setTimeout(function () {
                 t.selecting = !1;
               }, 50),
@@ -19287,33 +20386,33 @@
             };
           (e.modules.select = { selected: !1 }),
             t.table.options.selectableCheck.call(this.table, e.getComponent())
-              ? (o.classList.add("tabulator-selectable"),
-                o.classList.remove("tabulator-unselectable"),
+              ? (i.classList.add("tabulator-selectable"),
+                i.classList.remove("tabulator-unselectable"),
                 t.table.options.selectable &&
                   "highlight" != t.table.options.selectable &&
                   ("click" === t.table.options.selectableRangeMode
-                    ? o.addEventListener("click", function (o) {
-                        if (o.shiftKey) {
+                    ? i.addEventListener("click", function (i) {
+                        if (i.shiftKey) {
                           t.table._clearSelection(),
                             (t.lastClickedRow = t.lastClickedRow || e);
-                          var i = t.table.rowManager.getDisplayRowIndex(
+                          var o = t.table.rowManager.getDisplayRowIndex(
                               t.lastClickedRow,
                             ),
                             n = t.table.rowManager.getDisplayRowIndex(e),
-                            r = i <= n ? i : n,
-                            a = i >= n ? i : n,
+                            r = o <= n ? o : n,
+                            a = o >= n ? o : n,
                             s = t.table.rowManager
                               .getDisplayRows()
                               .slice(0)
                               .splice(r, a - r + 1);
-                          o.ctrlKey || o.metaKey
-                            ? (s.forEach(function (o) {
-                                o !== t.lastClickedRow &&
+                          i.ctrlKey || i.metaKey
+                            ? (s.forEach(function (i) {
+                                i !== t.lastClickedRow &&
                                   (!0 === t.table.options.selectable ||
                                     t.isRowSelected(e) ||
                                     t.selectedRows.length <
                                       t.table.options.selectable) &&
-                                  t.toggleRow(o);
+                                  t.toggleRow(i);
                               }),
                               (t.lastClickedRow = e))
                             : (t.deselectRows(void 0, !0),
@@ -19323,42 +20422,42 @@
                               t.selectRows(s)),
                             t.table._clearSelection();
                         } else
-                          o.ctrlKey || o.metaKey
+                          i.ctrlKey || i.metaKey
                             ? (t.toggleRow(e), (t.lastClickedRow = e))
                             : (t.deselectRows(void 0, !0),
                               t.selectRows(e),
                               (t.lastClickedRow = e));
                       })
-                    : (o.addEventListener("click", function (o) {
+                    : (i.addEventListener("click", function (i) {
                         (t.table.modExists("edit") &&
                           t.table.modules.edit.getCurrentCell()) ||
                           t.table._clearSelection(),
                           t.selecting || t.toggleRow(e);
                       }),
-                      o.addEventListener("mousedown", function (o) {
-                        if (o.shiftKey)
+                      i.addEventListener("mousedown", function (i) {
+                        if (i.shiftKey)
                           return (
                             t.table._clearSelection(),
                             (t.selecting = !0),
                             (t.selectPrev = []),
-                            document.body.addEventListener("mouseup", i),
-                            document.body.addEventListener("keyup", i),
+                            document.body.addEventListener("mouseup", o),
+                            document.body.addEventListener("keyup", o),
                             t.toggleRow(e),
                             !1
                           );
                       }),
-                      o.addEventListener("mouseenter", function (o) {
+                      i.addEventListener("mouseenter", function (i) {
                         t.selecting &&
                           (t.table._clearSelection(),
                           t.toggleRow(e),
                           t.selectPrev[1] == e && t.toggleRow(t.selectPrev[0]));
                       }),
-                      o.addEventListener("mouseout", function (o) {
+                      i.addEventListener("mouseout", function (i) {
                         t.selecting &&
                           (t.table._clearSelection(), t.selectPrev.unshift(e));
                       }))))
-              : (o.classList.add("tabulator-unselectable"),
-                o.classList.remove("tabulator-selectable"));
+              : (i.classList.add("tabulator-unselectable"),
+                i.classList.remove("tabulator-selectable"));
         }),
         (Q.prototype.toggleRow = function (e) {
           this.table.options.selectableCheck.call(
@@ -19371,11 +20470,11 @@
         }),
         (Q.prototype.selectRows = function (e) {
           var t,
-            o = this;
+            i = this;
           switch (void 0 === e ? "undefined" : r(e)) {
             case "undefined":
               this.table.rowManager.rows.forEach(function (e) {
-                o._selectRow(e, !0, !0);
+                i._selectRow(e, !0, !0);
               }),
                 this._rowSelectionChanged();
               break;
@@ -19383,44 +20482,44 @@
               (t = this.table.rowManager.findRow(e))
                 ? this._selectRow(t, !0, !0)
                 : this.table.rowManager.getRows(e).forEach(function (e) {
-                    o._selectRow(e, !0, !0);
+                    i._selectRow(e, !0, !0);
                   }),
                 this._rowSelectionChanged();
               break;
             default:
               Array.isArray(e)
                 ? (e.forEach(function (e) {
-                    o._selectRow(e, !0, !0);
+                    i._selectRow(e, !0, !0);
                   }),
                   this._rowSelectionChanged())
                 : this._selectRow(e, !1, !0);
           }
         }),
-        (Q.prototype._selectRow = function (e, t, o) {
+        (Q.prototype._selectRow = function (e, t, i) {
           if (
             !isNaN(this.table.options.selectable) &&
             !0 !== this.table.options.selectable &&
-            !o &&
+            !i &&
             this.selectedRows.length >= this.table.options.selectable
           ) {
             if (!this.table.options.selectableRollingSelection) return !1;
             this._deselectRow(this.selectedRows[0]);
           }
-          var i = this.table.rowManager.findRow(e);
-          i
-            ? -1 == this.selectedRows.indexOf(i) &&
-              (i.getElement().classList.add("tabulator-selected"),
-              i.modules.select || (i.modules.select = {}),
-              (i.modules.select.selected = !0),
-              i.modules.select.checkboxEl &&
-                (i.modules.select.checkboxEl.checked = !0),
-              this.selectedRows.push(i),
+          var o = this.table.rowManager.findRow(e);
+          o
+            ? -1 == this.selectedRows.indexOf(o) &&
+              (o.getElement().classList.add("tabulator-selected"),
+              o.modules.select || (o.modules.select = {}),
+              (o.modules.select.selected = !0),
+              o.modules.select.checkboxEl &&
+                (o.modules.select.checkboxEl.checked = !0),
+              this.selectedRows.push(o),
               this.table.options.dataTreeSelectPropagate &&
-                this.childRowSelection(i, !0),
+                this.childRowSelection(o, !0),
               t ||
                 this.table.options.rowSelected.call(
                   this.table,
-                  i.getComponent(),
+                  o.getComponent(),
                 ),
               this._rowSelectionChanged(t))
             : t ||
@@ -19432,26 +20531,26 @@
           return -1 !== this.selectedRows.indexOf(e);
         }),
         (Q.prototype.deselectRows = function (e, t) {
-          var o,
-            i = this;
+          var i,
+            o = this;
           if (void 0 === e) {
-            o = i.selectedRows.length;
-            for (var n = 0; n < o; n++) i._deselectRow(i.selectedRows[0], !0);
-            i._rowSelectionChanged(t);
+            i = o.selectedRows.length;
+            for (var n = 0; n < i; n++) o._deselectRow(o.selectedRows[0], !0);
+            o._rowSelectionChanged(t);
           } else
             Array.isArray(e)
               ? (e.forEach(function (e) {
-                  i._deselectRow(e, !0);
+                  o._deselectRow(e, !0);
                 }),
-                i._rowSelectionChanged(t))
-              : i._deselectRow(e, t);
+                o._rowSelectionChanged(t))
+              : o._deselectRow(e, t);
         }),
         (Q.prototype._deselectRow = function (e, t) {
-          var o,
-            i = this,
-            n = i.table.rowManager.findRow(e);
+          var i,
+            o = this,
+            n = o.table.rowManager.findRow(e);
           n
-            ? (o = i.selectedRows.findIndex(function (e) {
+            ? (i = o.selectedRows.findIndex(function (e) {
                 return e == n;
               })) > -1 &&
               (n.getElement().classList.remove("tabulator-selected"),
@@ -19459,15 +20558,15 @@
               (n.modules.select.selected = !1),
               n.modules.select.checkboxEl &&
                 (n.modules.select.checkboxEl.checked = !1),
-              i.selectedRows.splice(o, 1),
+              o.selectedRows.splice(i, 1),
               this.table.options.dataTreeSelectPropagate &&
                 this.childRowSelection(n, !1),
               t ||
-                i.table.options.rowDeselected.call(
+                o.table.options.rowDeselected.call(
                   this.table,
                   n.getComponent(),
                 ),
-              i._rowSelectionChanged(t))
+              o._rowSelectionChanged(t))
             : t ||
               console.warn(
                 "Deselection Error - No such row found, ignoring selection:" +
@@ -19517,25 +20616,25 @@
           this.headerCheckboxElement = e;
         }),
         (Q.prototype.childRowSelection = function (e, t) {
-          var o = this.table.modules.dataTree.getChildren(e, !0);
+          var i = this.table.modules.dataTree.getChildren(e, !0);
           if (t) {
-            var i = o,
-              n = Array.isArray(i),
+            var o = i,
+              n = Array.isArray(o),
               r = 0;
-            for (i = n ? i : i[Symbol.iterator](); ; ) {
+            for (o = n ? o : o[Symbol.iterator](); ; ) {
               var a;
               if (n) {
-                if (r >= i.length) break;
-                a = i[r++];
+                if (r >= o.length) break;
+                a = o[r++];
               } else {
-                if ((r = i.next()).done) break;
+                if ((r = o.next()).done) break;
                 a = r.value;
               }
               var s = a;
               this._selectRow(s, !0);
             }
           } else {
-            var l = o,
+            var l = i,
               c = Array.isArray(l),
               u = 0;
             for (l = c ? l : l[Symbol.iterator](); ; ) {
@@ -19557,8 +20656,8 @@
         (this.table = e), (this.sortList = []), (this.changed = !1);
       };
       (ee.prototype.initializeColumn = function (e, t) {
-        var o,
-          i,
+        var i,
+          o,
           n = this,
           a = !1;
         switch (r(e.definition.sorter)) {
@@ -19586,22 +20685,22 @@
           (void 0 === e.definition.headerSort
             ? !1 !== this.table.options.headerSort
             : !1 !== e.definition.headerSort) &&
-            ((o = e.getElement()).classList.add("tabulator-sortable"),
-            (i = document.createElement("div")).classList.add(
+            ((i = e.getElement()).classList.add("tabulator-sortable"),
+            (o = document.createElement("div")).classList.add(
               "tabulator-col-sorter",
             ),
             "object" == r(this.table.options.headerSortElement)
-              ? i.appendChild(this.table.options.headerSortElement)
-              : (i.innerHTML = this.table.options.headerSortElement),
-            t.appendChild(i),
-            (e.modules.sort.element = i),
-            o.addEventListener("click", function (t) {
-              var o = "",
-                i = [],
+              ? o.appendChild(this.table.options.headerSortElement)
+              : (o.innerHTML = this.table.options.headerSortElement),
+            t.appendChild(o),
+            (e.modules.sort.element = o),
+            i.addEventListener("click", function (t) {
+              var i = "",
+                o = [],
                 r = !1;
               if (e.modules.sort) {
                 if (e.modules.sort.tristate)
-                  o =
+                  i =
                     "none" == e.modules.sort.dir
                       ? e.modules.sort.startingDir
                       : e.modules.sort.dir == e.modules.sort.startingDir
@@ -19612,28 +20711,28 @@
                 else
                   switch (e.modules.sort.dir) {
                     case "asc":
-                      o = "desc";
+                      i = "desc";
                       break;
                     case "desc":
-                      o = "asc";
+                      i = "asc";
                       break;
                     default:
-                      o = e.modules.sort.startingDir;
+                      i = e.modules.sort.startingDir;
                   }
                 n.table.options.columnHeaderSortMulti &&
                 (t.shiftKey || t.ctrlKey)
-                  ? ((r = (i = n.getSort()).findIndex(function (t) {
+                  ? ((r = (o = n.getSort()).findIndex(function (t) {
                       return t.field === e.getField();
                     })),
                     r > -1
-                      ? ((i[r].dir = o),
-                        r != i.length - 1 &&
-                          ((r = i.splice(r, 1)[0]), "none" != o && i.push(r)))
-                      : "none" != o && i.push({ column: e, dir: o }),
-                    n.setSort(i))
-                  : "none" == o
+                      ? ((o[r].dir = i),
+                        r != o.length - 1 &&
+                          ((r = o.splice(r, 1)[0]), "none" != i && o.push(r)))
+                      : "none" != i && o.push({ column: e, dir: i }),
+                    n.setSort(o))
+                  : "none" == i
                   ? n.clear()
-                  : n.setSort(e, o),
+                  : n.setSort(e, i),
                   n.table.rowManager.sorterRefresh(!n.sortList.length);
               }
             }));
@@ -19657,19 +20756,19 @@
           );
         }),
         (ee.prototype.setSort = function (e, t) {
-          var o = this,
-            i = [];
+          var i = this,
+            o = [];
           Array.isArray(e) || (e = [{ column: e, dir: t }]),
             e.forEach(function (e) {
               var t;
-              (t = o.table.columnManager.findColumn(e.column))
-                ? ((e.column = t), i.push(e), (o.changed = !0))
+              (t = i.table.columnManager.findColumn(e.column))
+                ? ((e.column = t), o.push(e), (i.changed = !0))
                 : console.warn(
                     "Sort Warning - Sort field does not exist and is being ignored: ",
                     e.column,
                   );
             }),
-            (o.sortList = i),
+            (i.sortList = o),
             this.table.options.persistence &&
               this.table.modExists("persistence", !0) &&
               this.table.modules.persistence.config.sort &&
@@ -19680,39 +20779,39 @@
         }),
         (ee.prototype.findSorter = function (e) {
           var t,
-            o = this.table.rowManager.activeRows[0],
-            i = "string";
-          if (o && ((o = o.getData()), e.getField()))
-            switch (void 0 === (t = e.getFieldValue(o)) ? "undefined" : r(t)) {
+            i = this.table.rowManager.activeRows[0],
+            o = "string";
+          if (i && ((i = i.getData()), e.getField()))
+            switch (void 0 === (t = e.getFieldValue(i)) ? "undefined" : r(t)) {
               case "undefined":
-                i = "string";
+                o = "string";
                 break;
               case "boolean":
-                i = "boolean";
+                o = "boolean";
                 break;
               default:
                 isNaN(t) || "" === t
                   ? t.match(/((^[0-9]+[a-z]+)|(^[a-z]+[0-9]+))+$/i) &&
-                    (i = "alphanum")
-                  : (i = "number");
+                    (o = "alphanum")
+                  : (o = "number");
             }
-          return this.sorters[i];
+          return this.sorters[o];
         }),
         (ee.prototype.sort = function (e) {
           var t = this,
-            o = this.table.options.sortOrderReverse
+            i = this.table.options.sortOrderReverse
               ? t.sortList.slice().reverse()
               : t.sortList,
-            i = [],
+            o = [],
             n = [];
           t.table.options.dataSorting &&
             t.table.options.dataSorting.call(t.table, t.getSort()),
             t.clearColumnHeaders(),
             t.table.options.ajaxSorting
-              ? o.forEach(function (e, o) {
+              ? i.forEach(function (e, i) {
                   t.setColumnHeader(e.column, e.dir);
                 })
-              : (o.forEach(function (e, o) {
+              : (i.forEach(function (e, i) {
                   var n = e.column.modules.sort;
                   e.column &&
                     n &&
@@ -19721,10 +20820,10 @@
                       "function" == typeof n.params
                         ? n.params(e.column.getComponent(), e.dir)
                         : n.params),
-                    i.push(e)),
+                    o.push(e)),
                     t.setColumnHeader(e.column, e.dir);
                 }),
-                i.length && t._sortItems(e, i)),
+                o.length && t._sortItems(e, o)),
             t.table.options.dataSorted &&
               (e.forEach(function (e) {
                 n.push(e.getComponent());
@@ -19742,32 +20841,32 @@
           (e.modules.sort.dir = t), e.getElement().setAttribute("aria-sort", t);
         }),
         (ee.prototype._sortItems = function (e, t) {
-          var o = this,
-            i = t.length - 1;
+          var i = this,
+            o = t.length - 1;
           e.sort(function (e, n) {
-            for (var r, a = i; a >= 0; a--) {
+            for (var r, a = o; a >= 0; a--) {
               var s = t[a];
-              if (0 !== (r = o._sortRow(e, n, s.column, s.dir, s.params)))
+              if (0 !== (r = i._sortRow(e, n, s.column, s.dir, s.params)))
                 break;
             }
             return r;
           });
         }),
-        (ee.prototype._sortRow = function (e, t, o, i, n) {
+        (ee.prototype._sortRow = function (e, t, i, o, n) {
           var r,
             a,
-            s = "asc" == i ? e : t,
-            l = "asc" == i ? t : e;
+            s = "asc" == o ? e : t,
+            l = "asc" == o ? t : e;
           return (
-            (e = void 0 !== (e = o.getFieldValue(s.getData())) ? e : ""),
-            (t = void 0 !== (t = o.getFieldValue(l.getData())) ? t : ""),
+            (e = void 0 !== (e = i.getFieldValue(s.getData())) ? e : ""),
+            (t = void 0 !== (t = i.getFieldValue(l.getData())) ? t : ""),
             (r = s.getComponent()),
             (a = l.getComponent()),
-            o.modules.sort.sorter.call(this, e, t, r, a, o.getComponent(), i, n)
+            i.modules.sort.sorter.call(this, e, t, r, a, i.getComponent(), o, n)
           );
         }),
         (ee.prototype.sorters = {
-          number: function (e, t, o, i, n, r, a) {
+          number: function (e, t, i, o, n, r, a) {
             var s = a.alignEmptyValues,
               l = a.decimalSeparator,
               c = a.thousandSeparator,
@@ -19793,7 +20892,7 @@
               u
             );
           },
-          string: function (e, t, o, i, n, a, s) {
+          string: function (e, t, i, o, n, a, s) {
             var l,
               c = s.alignEmptyValues,
               u = 0;
@@ -19819,19 +20918,19 @@
               u
             );
           },
-          date: function (e, t, o, i, n, r, a) {
+          date: function (e, t, i, o, n, r, a) {
             return (
               a.format || (a.format = "DD/MM/YYYY"),
-              this.sorters.datetime.call(this, e, t, o, i, n, r, a)
+              this.sorters.datetime.call(this, e, t, i, o, n, r, a)
             );
           },
-          time: function (e, t, o, i, n, r, a) {
+          time: function (e, t, i, o, n, r, a) {
             return (
               a.format || (a.format = "HH:mm"),
-              this.sorters.datetime.call(this, e, t, o, i, n, r, a)
+              this.sorters.datetime.call(this, e, t, i, o, n, r, a)
             );
           },
-          datetime: function (e, t, o, i, n, r, a) {
+          datetime: function (e, t, i, o, n, r, a) {
             var s = a.format || "DD/MM/YYYY HH:mm:ss",
               l = a.alignEmptyValues,
               c = 0;
@@ -19851,13 +20950,13 @@
               "Sort Error - 'datetime' sorter is dependant on moment.js",
             );
           },
-          boolean: function (e, t, o, i, n, r, a) {
+          boolean: function (e, t, i, o, n, r, a) {
             return (
               (!0 === e || "true" === e || "True" === e || 1 === e ? 1 : 0) -
               (!0 === t || "true" === t || "True" === t || 1 === t ? 1 : 0)
             );
           },
-          array: function (e, t, o, i, n, r, a) {
+          array: function (e, t, i, o, n, r, a) {
             var s = a.type || "length",
               l = a.alignEmptyValues,
               c = 0;
@@ -19892,10 +20991,10 @@
               c
             );
           },
-          exists: function (e, t, o, i, n, r, a) {
+          exists: function (e, t, i, o, n, r, a) {
             return (void 0 === e ? 0 : 1) - (void 0 === t ? 0 : 1);
           },
-          alphanum: function (e, t, o, i, n, r, a) {
+          alphanum: function (e, t, i, o, n, r, a) {
             var s,
               l,
               c,
@@ -19948,25 +21047,25 @@
       };
       (te.prototype.initializeColumn = function (e) {
         var t,
-          o = this,
-          i = [];
+          i = this,
+          o = [];
         e.definition.validator &&
           (Array.isArray(e.definition.validator)
             ? e.definition.validator.forEach(function (e) {
-                (t = o._extractValidator(e)) && i.push(t);
+                (t = i._extractValidator(e)) && o.push(t);
               })
-            : (t = this._extractValidator(e.definition.validator)) && i.push(t),
-          (e.modules.validate = !!i.length && i));
+            : (t = this._extractValidator(e.definition.validator)) && o.push(t),
+          (e.modules.validate = !!o.length && o));
       }),
         (te.prototype._extractValidator = function (e) {
-          var t, o, i;
+          var t, i, o;
           switch (void 0 === e ? "undefined" : r(e)) {
             case "string":
               return (
-                (i = e.indexOf(":")) > -1
-                  ? ((t = e.substring(0, i)), (o = e.substring(i + 1)))
+                (o = e.indexOf(":")) > -1
+                  ? ((t = e.substring(0, o)), (i = e.substring(o + 1)))
                   : (t = e),
-                this._buildValidator(t, o)
+                this._buildValidator(t, i)
               );
             case "function":
               return this._buildValidator(e);
@@ -19975,11 +21074,11 @@
           }
         }),
         (te.prototype._buildValidator = function (e, t) {
-          var o = "function" == typeof e ? e : this.validators[e];
-          return o
+          var i = "function" == typeof e ? e : this.validators[e];
+          return i
             ? {
                 type: "function" == typeof e ? "function" : e,
-                func: o,
+                func: i,
                 params: t,
               }
             : (console.warn(
@@ -19988,14 +21087,14 @@
               ),
               !1);
         }),
-        (te.prototype.validate = function (e, t, o) {
-          var i = this,
+        (te.prototype.validate = function (e, t, i) {
+          var o = this,
             n = [],
             r = this.invalidCells.indexOf(t);
           return (
             e &&
               e.forEach(function (e) {
-                e.func.call(i, t.getComponent(), o, e.params) ||
+                e.func.call(o, t.getComponent(), i, e.params) ||
                   n.push({ type: e.type, parameters: e.params });
               }),
             (n = !n.length || n),
@@ -20030,7 +21129,7 @@
               this.invalidCells.splice(t, 1));
         }),
         (te.prototype.validators = {
-          integer: function (e, t, o) {
+          integer: function (e, t, i) {
             return (
               "" === t ||
               null == t ||
@@ -20039,96 +21138,96 @@
                 Math.floor(t) === t)
             );
           },
-          float: function (e, t, o) {
+          float: function (e, t, i) {
             return (
               "" === t ||
               null == t ||
               ("number" == typeof (t = Number(t)) && isFinite(t) && t % 1 != 0)
             );
           },
-          numeric: function (e, t, o) {
+          numeric: function (e, t, i) {
             return "" === t || null == t || !isNaN(t);
           },
-          string: function (e, t, o) {
+          string: function (e, t, i) {
             return "" === t || null == t || isNaN(t);
           },
-          max: function (e, t, o) {
-            return "" === t || null == t || parseFloat(t) <= o;
+          max: function (e, t, i) {
+            return "" === t || null == t || parseFloat(t) <= i;
           },
-          min: function (e, t, o) {
-            return "" === t || null == t || parseFloat(t) >= o;
+          min: function (e, t, i) {
+            return "" === t || null == t || parseFloat(t) >= i;
           },
-          starts: function (e, t, o) {
+          starts: function (e, t, i) {
             return (
               "" === t ||
               null == t ||
-              String(t).toLowerCase().startsWith(String(o).toLowerCase())
+              String(t).toLowerCase().startsWith(String(i).toLowerCase())
             );
           },
-          ends: function (e, t, o) {
+          ends: function (e, t, i) {
             return (
               "" === t ||
               null == t ||
-              String(t).toLowerCase().endsWith(String(o).toLowerCase())
+              String(t).toLowerCase().endsWith(String(i).toLowerCase())
             );
           },
-          minLength: function (e, t, o) {
-            return "" === t || null == t || String(t).length >= o;
+          minLength: function (e, t, i) {
+            return "" === t || null == t || String(t).length >= i;
           },
-          maxLength: function (e, t, o) {
-            return "" === t || null == t || String(t).length <= o;
+          maxLength: function (e, t, i) {
+            return "" === t || null == t || String(t).length <= i;
           },
-          in: function (e, t, o) {
+          in: function (e, t, i) {
             return (
               "" === t ||
               null == t ||
-              ("string" == typeof o && (o = o.split("|")),
-              "" === t || o.indexOf(t) > -1)
+              ("string" == typeof i && (i = i.split("|")),
+              "" === t || i.indexOf(t) > -1)
             );
           },
-          regex: function (e, t, o) {
-            return "" === t || null == t || new RegExp(o).test(t);
+          regex: function (e, t, i) {
+            return "" === t || null == t || new RegExp(i).test(t);
           },
-          unique: function (e, t, o) {
+          unique: function (e, t, i) {
             if ("" === t || null == t) return !0;
-            var i = !0,
+            var o = !0,
               n = e.getData(),
               r = e.getColumn()._getSelf();
             return (
               this.table.rowManager.rows.forEach(function (e) {
-                var o = e.getData();
-                o !== n && t == r.getFieldValue(o) && (i = !1);
+                var i = e.getData();
+                i !== n && t == r.getFieldValue(i) && (o = !1);
               }),
-              i
+              o
             );
           },
-          required: function (e, t, o) {
+          required: function (e, t, i) {
             return "" !== t && null != t;
           },
         }),
         g.prototype.registerModule("validate", te);
-      const oe = g;
+      const ie = g;
     },
-    51194: (e, t, o) => {
+    51194: (e, t, i) => {
       "use strict";
-      o.d(t, {
+      i.d(t, {
         JL: () => E,
         KC: () => C,
-        Rg: () => P,
+        Rg: () => A,
         XB: () => j,
         XD: () => V,
-        c_: () => R,
+        c_: () => _,
         ik: () => B,
         pA: () => X,
-        rf: () => Z,
-        u2: () => k,
+        rf: () => $,
+        u2: () => T,
         vc: () => I,
         xQ: () => L,
       });
-      var i = o(45878),
-        n = o(43898),
-        r = o(67328);
-      const a = i.Message;
+      var o = i(45878),
+        n = i(43898),
+        r = i(67328);
+      const a = o.Message;
       var s,
         l,
         c,
@@ -20145,13 +21244,13 @@
         w,
         E,
         C,
+        _,
         R,
         x,
-        _,
         M,
         S,
-        T,
         k,
+        T,
         D;
       !(function (e) {
         (e[(e.k_EPartnerEmailNotifcationType_Invalid = 0)] =
@@ -20370,7 +21469,7 @@
               "k_EOptInEmailSetting_DemoLaunch"),
             (e[(e.k_EOptInEmailSetting_CallForRegistration = 8192)] =
               "k_EOptInEmailSetting_CallForRegistration");
-        })(R || (R = {})),
+        })(_ || (_ = {})),
         (function (e) {
           (e[(e.k_EAppTestType_BuildReview = 0)] =
             "k_EAppTestType_BuildReview"),
@@ -20387,7 +21486,7 @@
               "k_EAppTestType_SteamChinaPlatformOperator_BuildReview"),
             (e[(e.k_EAppTestType_SteamDeckCompatibilityReview = 6)] =
               "k_EAppTestType_SteamDeckCompatibilityReview");
-        })(x || (x = {})),
+        })(R || (R = {})),
         (function (e) {
           (e[(e.k_EAppTrafficStatAttribution_Store = 0)] =
             "k_EAppTrafficStatAttribution_Store"),
@@ -20395,7 +21494,7 @@
               "k_EAppTrafficStatAttribution_SteamPlatform"),
             (e[(e.k_EAppTrafficStatAttribution_External = 2)] =
               "k_EAppTrafficStatAttribution_External");
-        })(_ || (_ = {})),
+        })(x || (x = {})),
         (function (e) {
           (e[(e.k_EPartnerMembershipInviteState_Invalid = 0)] =
             "k_EPartnerMembershipInviteState_Invalid"),
@@ -20441,7 +21540,7 @@
               "k_ECommunicationInviteState_Accepted"),
             (e[(e.k_ECommunicationInviteState_Removed = 4)] =
               "k_ECommunicationInviteState_Removed");
-        })(T || (T = {}));
+        })(k || (k = {}));
       class L extends a {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -20505,22 +21604,22 @@
           return n.aD(L.M(), e);
         }
         static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            o = new L();
-          return L.deserializeBinaryFromReader(o, t);
+          let t = new o.BinaryReader(e),
+            i = new L();
+          return L.deserializeBinaryFromReader(i, t);
         }
         static deserializeBinaryFromReader(e, t) {
           return n.F(L.MBF(), e, t);
         }
         serializeBinary() {
-          var e = new i.BinaryWriter();
+          var e = new o.BinaryWriter();
           return L.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
           n.l2(L.M(), e, t);
         }
         serializeBase64String() {
-          var e = new i.BinaryWriter();
+          var e = new o.BinaryWriter();
           return L.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
@@ -20563,40 +21662,40 @@
           return n.aD(z.M(), e);
         }
         static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            o = new z();
-          return z.deserializeBinaryFromReader(o, t);
+          let t = new o.BinaryReader(e),
+            i = new z();
+          return z.deserializeBinaryFromReader(i, t);
         }
         static deserializeBinaryFromReader(e, t) {
           return n.F(z.MBF(), e, t);
         }
         serializeBinary() {
-          var e = new i.BinaryWriter();
+          var e = new o.BinaryWriter();
           return z.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
           n.l2(z.M(), e, t);
         }
         serializeBase64String() {
-          var e = new i.BinaryWriter();
+          var e = new o.BinaryWriter();
           return z.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CPublishing_CreatePartnerAppOptInEmail_Response";
         }
       }
-      class P extends a {
+      class A extends a {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            P.prototype.email_def_id || n.aR(P.M()),
+            A.prototype.email_def_id || n.aR(A.M()),
             a.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            P.sm_m ||
-              (P.sm_m = {
-                proto: P,
+            A.sm_m ||
+              (A.sm_m = {
+                proto: A,
                 fields: {
                   email_def_id: {
                     n: 1,
@@ -20638,74 +21737,74 @@
                   },
                 },
               }),
-            P.sm_m
+            A.sm_m
           );
         }
         static MBF() {
-          return P.sm_mbf || (P.sm_mbf = n.Bh(P.M())), P.sm_mbf;
-        }
-        toObject(e = !1) {
-          return P.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.TA(P.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.aD(P.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            o = new P();
-          return P.deserializeBinaryFromReader(o, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.F(P.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return P.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.l2(P.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return P.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CPublishing_UpdatePartnerAppOptInEmail_Request";
-        }
-      }
-      class A extends a {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(), a.initialize(this, e, 0, -1, void 0, null);
+          return A.sm_mbf || (A.sm_mbf = n.Bh(A.M())), A.sm_mbf;
         }
         toObject(e = !1) {
           return A.toObject(e, this);
         }
         static toObject(e, t) {
+          return n.TA(A.M(), e, t);
+        }
+        static fromObject(e) {
+          return n.aD(A.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new o.BinaryReader(e),
+            i = new A();
+          return A.deserializeBinaryFromReader(i, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return n.F(A.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new o.BinaryWriter();
+          return A.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          n.l2(A.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new o.BinaryWriter();
+          return A.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CPublishing_UpdatePartnerAppOptInEmail_Request";
+        }
+      }
+      class P extends a {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(), a.initialize(this, e, 0, -1, void 0, null);
+        }
+        toObject(e = !1) {
+          return P.toObject(e, this);
+        }
+        static toObject(e, t) {
           return e ? { $jspbMessageInstance: t } : {};
         }
         static fromObject(e) {
-          return new A();
+          return new P();
         }
         static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            o = new A();
-          return A.deserializeBinaryFromReader(o, t);
+          let t = new o.BinaryReader(e),
+            i = new P();
+          return P.deserializeBinaryFromReader(i, t);
         }
         static deserializeBinaryFromReader(e, t) {
           return e;
         }
         serializeBinary() {
-          var e = new i.BinaryWriter();
-          return A.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          var e = new o.BinaryWriter();
+          return P.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {}
         serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return A.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          var e = new o.BinaryWriter();
+          return P.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CPublishing_UpdatePartnerAppOptInEmail_Response";
@@ -20768,22 +21867,22 @@
           return n.aD(F.M(), e);
         }
         static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            o = new F();
-          return F.deserializeBinaryFromReader(o, t);
+          let t = new o.BinaryReader(e),
+            i = new F();
+          return F.deserializeBinaryFromReader(i, t);
         }
         static deserializeBinaryFromReader(e, t) {
           return n.F(F.MBF(), e, t);
         }
         serializeBinary() {
-          var e = new i.BinaryWriter();
+          var e = new o.BinaryWriter();
           return F.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
           n.l2(F.M(), e, t);
         }
         serializeBase64String() {
-          var e = new i.BinaryWriter();
+          var e = new o.BinaryWriter();
           return F.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
@@ -20827,89 +21926,89 @@
           return n.aD(B.M(), e);
         }
         static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            o = new B();
-          return B.deserializeBinaryFromReader(o, t);
+          let t = new o.BinaryReader(e),
+            i = new B();
+          return B.deserializeBinaryFromReader(i, t);
         }
         static deserializeBinaryFromReader(e, t) {
           return n.F(B.MBF(), e, t);
         }
         serializeBinary() {
-          var e = new i.BinaryWriter();
+          var e = new o.BinaryWriter();
           return B.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
           n.l2(B.M(), e, t);
         }
         serializeBase64String() {
-          var e = new i.BinaryWriter();
+          var e = new o.BinaryWriter();
           return B.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CPublishing_SendPartnerAppOptInEmailAndWait_Request";
         }
       }
-      class H extends a {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            H.prototype.results || n.aR(H.M()),
-            a.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            H.sm_m ||
-              (H.sm_m = { proto: H, fields: { results: { n: 1, c: F } } }),
-            H.sm_m
-          );
-        }
-        static MBF() {
-          return H.sm_mbf || (H.sm_mbf = n.Bh(H.M())), H.sm_mbf;
-        }
-        toObject(e = !1) {
-          return H.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.TA(H.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.aD(H.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            o = new H();
-          return H.deserializeBinaryFromReader(o, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.F(H.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return H.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.l2(H.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return H.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CPublishing_SendPartnerAppOptInEmailAndWait_Response";
-        }
-      }
       class O extends a {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            O.prototype.opt_in_name || n.aR(O.M()),
+            O.prototype.results || n.aR(O.M()),
             a.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
             O.sm_m ||
-              (O.sm_m = {
-                proto: O,
+              (O.sm_m = { proto: O, fields: { results: { n: 1, c: F } } }),
+            O.sm_m
+          );
+        }
+        static MBF() {
+          return O.sm_mbf || (O.sm_mbf = n.Bh(O.M())), O.sm_mbf;
+        }
+        toObject(e = !1) {
+          return O.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return n.TA(O.M(), e, t);
+        }
+        static fromObject(e) {
+          return n.aD(O.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new o.BinaryReader(e),
+            i = new O();
+          return O.deserializeBinaryFromReader(i, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return n.F(O.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new o.BinaryWriter();
+          return O.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          n.l2(O.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new o.BinaryWriter();
+          return O.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CPublishing_SendPartnerAppOptInEmailAndWait_Response";
+        }
+      }
+      class H extends a {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            H.prototype.opt_in_name || n.aR(H.M()),
+            a.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            H.sm_m ||
+              (H.sm_m = {
+                proto: H,
                 fields: {
                   opt_in_name: {
                     n: 1,
@@ -20968,39 +22067,39 @@
                   reviewed: { n: 15, br: n.FE.readBool, bw: n.Xc.writeBool },
                 },
               }),
-            O.sm_m
+            H.sm_m
           );
         }
         static MBF() {
-          return O.sm_mbf || (O.sm_mbf = n.Bh(O.M())), O.sm_mbf;
+          return H.sm_mbf || (H.sm_mbf = n.Bh(H.M())), H.sm_mbf;
         }
         toObject(e = !1) {
-          return O.toObject(e, this);
+          return H.toObject(e, this);
         }
         static toObject(e, t) {
-          return n.TA(O.M(), e, t);
+          return n.TA(H.M(), e, t);
         }
         static fromObject(e) {
-          return n.aD(O.M(), e);
+          return n.aD(H.M(), e);
         }
         static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            o = new O();
-          return O.deserializeBinaryFromReader(o, t);
+          let t = new o.BinaryReader(e),
+            i = new H();
+          return H.deserializeBinaryFromReader(i, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return n.F(O.MBF(), e, t);
+          return n.F(H.MBF(), e, t);
         }
         serializeBinary() {
-          var e = new i.BinaryWriter();
-          return O.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          var e = new o.BinaryWriter();
+          return H.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          n.l2(O.M(), e, t);
+          n.l2(H.M(), e, t);
         }
         serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return O.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          var e = new o.BinaryWriter();
+          return H.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CPartnerAppOptInEmailDef";
@@ -21042,22 +22141,22 @@
           return n.aD(I.M(), e);
         }
         static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            o = new I();
-          return I.deserializeBinaryFromReader(o, t);
+          let t = new o.BinaryReader(e),
+            i = new I();
+          return I.deserializeBinaryFromReader(i, t);
         }
         static deserializeBinaryFromReader(e, t) {
           return n.F(I.MBF(), e, t);
         }
         serializeBinary() {
-          var e = new i.BinaryWriter();
+          var e = new o.BinaryWriter();
           return I.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
           n.l2(I.M(), e, t);
         }
         serializeBase64String() {
-          var e = new i.BinaryWriter();
+          var e = new o.BinaryWriter();
           return I.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
@@ -21076,7 +22175,7 @@
             N.sm_m ||
               (N.sm_m = {
                 proto: N,
-                fields: { defs: { n: 1, c: O, r: !0, q: !0 } },
+                fields: { defs: { n: 1, c: H, r: !0, q: !0 } },
               }),
             N.sm_m
           );
@@ -21094,22 +22193,22 @@
           return n.aD(N.M(), e);
         }
         static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            o = new N();
-          return N.deserializeBinaryFromReader(o, t);
+          let t = new o.BinaryReader(e),
+            i = new N();
+          return N.deserializeBinaryFromReader(i, t);
         }
         static deserializeBinaryFromReader(e, t) {
           return n.F(N.MBF(), e, t);
         }
         serializeBinary() {
-          var e = new i.BinaryWriter();
+          var e = new o.BinaryWriter();
           return N.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
           n.l2(N.M(), e, t);
         }
         serializeBase64String() {
-          var e = new i.BinaryWriter();
+          var e = new o.BinaryWriter();
           return N.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
@@ -21152,22 +22251,22 @@
           return n.aD(j.M(), e);
         }
         static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            o = new j();
-          return j.deserializeBinaryFromReader(o, t);
+          let t = new o.BinaryReader(e),
+            i = new j();
+          return j.deserializeBinaryFromReader(i, t);
         }
         static deserializeBinaryFromReader(e, t) {
           return n.F(j.MBF(), e, t);
         }
         serializeBinary() {
-          var e = new i.BinaryWriter();
+          var e = new o.BinaryWriter();
           return j.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
           n.l2(j.M(), e, t);
         }
         serializeBase64String() {
-          var e = new i.BinaryWriter();
+          var e = new o.BinaryWriter();
           return j.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
@@ -21201,22 +22300,22 @@
           return n.aD(W.M(), e);
         }
         static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            o = new W();
-          return W.deserializeBinaryFromReader(o, t);
+          let t = new o.BinaryReader(e),
+            i = new W();
+          return W.deserializeBinaryFromReader(i, t);
         }
         static deserializeBinaryFromReader(e, t) {
           return n.F(W.MBF(), e, t);
         }
         serializeBinary() {
-          var e = new i.BinaryWriter();
+          var e = new o.BinaryWriter();
           return W.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
           n.l2(W.M(), e, t);
         }
         serializeBase64String() {
-          var e = new i.BinaryWriter();
+          var e = new o.BinaryWriter();
           return W.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
@@ -21265,22 +22364,22 @@
           return n.aD(V.M(), e);
         }
         static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            o = new V();
-          return V.deserializeBinaryFromReader(o, t);
+          let t = new o.BinaryReader(e),
+            i = new V();
+          return V.deserializeBinaryFromReader(i, t);
         }
         static deserializeBinaryFromReader(e, t) {
           return n.F(V.MBF(), e, t);
         }
         serializeBinary() {
-          var e = new i.BinaryWriter();
+          var e = new o.BinaryWriter();
           return V.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
           n.l2(V.M(), e, t);
         }
         serializeBase64String() {
-          var e = new i.BinaryWriter();
+          var e = new o.BinaryWriter();
           return V.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
@@ -21302,20 +22401,20 @@
           return new G();
         }
         static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            o = new G();
-          return G.deserializeBinaryFromReader(o, t);
+          let t = new o.BinaryReader(e),
+            i = new G();
+          return G.deserializeBinaryFromReader(i, t);
         }
         static deserializeBinaryFromReader(e, t) {
           return e;
         }
         serializeBinary() {
-          var e = new i.BinaryWriter();
+          var e = new o.BinaryWriter();
           return G.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {}
         serializeBase64String() {
-          var e = new i.BinaryWriter();
+          var e = new o.BinaryWriter();
           return G.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
@@ -21385,22 +22484,22 @@
           return n.aD(U.M(), e);
         }
         static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            o = new U();
-          return U.deserializeBinaryFromReader(o, t);
+          let t = new o.BinaryReader(e),
+            i = new U();
+          return U.deserializeBinaryFromReader(i, t);
         }
         static deserializeBinaryFromReader(e, t) {
           return n.F(U.MBF(), e, t);
         }
         serializeBinary() {
-          var e = new i.BinaryWriter();
+          var e = new o.BinaryWriter();
           return U.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
           n.l2(U.M(), e, t);
         }
         serializeBase64String() {
-          var e = new i.BinaryWriter();
+          var e = new o.BinaryWriter();
           return U.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
@@ -21443,40 +22542,40 @@
           return n.aD(X.M(), e);
         }
         static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            o = new X();
-          return X.deserializeBinaryFromReader(o, t);
+          let t = new o.BinaryReader(e),
+            i = new X();
+          return X.deserializeBinaryFromReader(i, t);
         }
         static deserializeBinaryFromReader(e, t) {
           return n.F(X.MBF(), e, t);
         }
         serializeBinary() {
-          var e = new i.BinaryWriter();
+          var e = new o.BinaryWriter();
           return X.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
           n.l2(X.M(), e, t);
         }
         serializeBase64String() {
-          var e = new i.BinaryWriter();
+          var e = new o.BinaryWriter();
           return X.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CPublishing_GetOptInEmailTracking_Request";
         }
       }
-      class Y extends a {
+      class q extends a {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Y.prototype.email_def_id || n.aR(Y.M()),
+            q.prototype.email_def_id || n.aR(q.M()),
             a.initialize(this, e, 0, -1, [2], null);
         }
         static M() {
           return (
-            Y.sm_m ||
-              (Y.sm_m = {
-                proto: Y,
+            q.sm_m ||
+              (q.sm_m = {
+                proto: q,
                 fields: {
                   email_def_id: {
                     n: 1,
@@ -21486,56 +22585,56 @@
                   results: { n: 2, c: U, r: !0, q: !0 },
                 },
               }),
-            Y.sm_m
+            q.sm_m
           );
         }
         static MBF() {
-          return Y.sm_mbf || (Y.sm_mbf = n.Bh(Y.M())), Y.sm_mbf;
+          return q.sm_mbf || (q.sm_mbf = n.Bh(q.M())), q.sm_mbf;
         }
         toObject(e = !1) {
-          return Y.toObject(e, this);
+          return q.toObject(e, this);
         }
         static toObject(e, t) {
-          return n.TA(Y.M(), e, t);
+          return n.TA(q.M(), e, t);
         }
         static fromObject(e) {
-          return n.aD(Y.M(), e);
+          return n.aD(q.M(), e);
         }
         static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            o = new Y();
-          return Y.deserializeBinaryFromReader(o, t);
+          let t = new o.BinaryReader(e),
+            i = new q();
+          return q.deserializeBinaryFromReader(i, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return n.F(Y.MBF(), e, t);
+          return n.F(q.MBF(), e, t);
         }
         serializeBinary() {
-          var e = new i.BinaryWriter();
-          return Y.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          var e = new o.BinaryWriter();
+          return q.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          n.l2(Y.M(), e, t);
+          n.l2(q.M(), e, t);
         }
         serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return Y.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          var e = new o.BinaryWriter();
+          return q.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CPublishing_GetOptInEmailTracking_Response";
         }
       }
-      class q extends a {
+      class Y extends a {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            q.prototype.appid || n.aR(q.M()),
+            Y.prototype.appid || n.aR(Y.M()),
             a.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            q.sm_m ||
-              (q.sm_m = {
-                proto: q,
+            Y.sm_m ||
+              (Y.sm_m = {
+                proto: Y,
                 fields: {
                   appid: { n: 1, br: n.FE.readUint32, bw: n.Xc.writeUint32 },
                   opt_in: { n: 2, br: n.FE.readBool, bw: n.Xc.writeBool },
@@ -21625,39 +22724,39 @@
                   },
                 },
               }),
-            q.sm_m
+            Y.sm_m
           );
         }
         static MBF() {
-          return q.sm_mbf || (q.sm_mbf = n.Bh(q.M())), q.sm_mbf;
+          return Y.sm_mbf || (Y.sm_mbf = n.Bh(Y.M())), Y.sm_mbf;
         }
         toObject(e = !1) {
-          return q.toObject(e, this);
+          return Y.toObject(e, this);
         }
         static toObject(e, t) {
-          return n.TA(q.M(), e, t);
+          return n.TA(Y.M(), e, t);
         }
         static fromObject(e) {
-          return n.aD(q.M(), e);
+          return n.aD(Y.M(), e);
         }
         static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            o = new q();
-          return q.deserializeBinaryFromReader(o, t);
+          let t = new o.BinaryReader(e),
+            i = new Y();
+          return Y.deserializeBinaryFromReader(i, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return n.F(q.MBF(), e, t);
+          return n.F(Y.MBF(), e, t);
         }
         serializeBinary() {
-          var e = new i.BinaryWriter();
-          return q.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          var e = new o.BinaryWriter();
+          return Y.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          n.l2(q.M(), e, t);
+          n.l2(Y.M(), e, t);
         }
         serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return q.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          var e = new o.BinaryWriter();
+          return Y.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CPartnerAppOptInData";
@@ -21695,22 +22794,22 @@
           return n.aD(K.M(), e);
         }
         static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            o = new K();
-          return K.deserializeBinaryFromReader(o, t);
+          let t = new o.BinaryReader(e),
+            i = new K();
+          return K.deserializeBinaryFromReader(i, t);
         }
         static deserializeBinaryFromReader(e, t) {
           return n.F(K.MBF(), e, t);
         }
         serializeBinary() {
-          var e = new i.BinaryWriter();
+          var e = new o.BinaryWriter();
           return K.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
           n.l2(K.M(), e, t);
         }
         serializeBase64String() {
-          var e = new i.BinaryWriter();
+          var e = new o.BinaryWriter();
           return K.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
@@ -21729,7 +22828,7 @@
             J.sm_m ||
               (J.sm_m = {
                 proto: J,
-                fields: { data: { n: 1, c: q, r: !0, q: !0 } },
+                fields: { data: { n: 1, c: Y, r: !0, q: !0 } },
               }),
             J.sm_m
           );
@@ -21747,98 +22846,26 @@
           return n.aD(J.M(), e);
         }
         static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            o = new J();
-          return J.deserializeBinaryFromReader(o, t);
+          let t = new o.BinaryReader(e),
+            i = new J();
+          return J.deserializeBinaryFromReader(i, t);
         }
         static deserializeBinaryFromReader(e, t) {
           return n.F(J.MBF(), e, t);
         }
         serializeBinary() {
-          var e = new i.BinaryWriter();
+          var e = new o.BinaryWriter();
           return J.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
           n.l2(J.M(), e, t);
         }
         serializeBase64String() {
-          var e = new i.BinaryWriter();
+          var e = new o.BinaryWriter();
           return J.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CPublishing_GetSinglePartnerAppOptIns_Response";
-        }
-      }
-      class Z extends a {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            Z.prototype.appids || n.aR(Z.M()),
-            a.initialize(this, e, 0, -1, [1], null);
-        }
-        static M() {
-          return (
-            Z.sm_m ||
-              (Z.sm_m = {
-                proto: Z,
-                fields: {
-                  appids: {
-                    n: 1,
-                    r: !0,
-                    q: !0,
-                    br: n.FE.readUint32,
-                    pbr: n.FE.readPackedUint32,
-                    bw: n.Xc.writeRepeatedUint32,
-                  },
-                  additional_featuring: {
-                    n: 2,
-                    d: !0,
-                    br: n.FE.readBool,
-                    bw: n.Xc.writeBool,
-                  },
-                  opt_in_name: {
-                    n: 3,
-                    br: n.FE.readString,
-                    bw: n.Xc.writeString,
-                  },
-                },
-              }),
-            Z.sm_m
-          );
-        }
-        static MBF() {
-          return Z.sm_mbf || (Z.sm_mbf = n.Bh(Z.M())), Z.sm_mbf;
-        }
-        toObject(e = !1) {
-          return Z.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.TA(Z.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.aD(Z.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            o = new Z();
-          return Z.deserializeBinaryFromReader(o, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.F(Z.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return Z.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.l2(Z.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return Z.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CPublishing_SetFeaturingOnPartnerAppOptIn_Request";
         }
       }
       class $ extends a {
@@ -21862,6 +22889,17 @@
                     pbr: n.FE.readPackedUint32,
                     bw: n.Xc.writeRepeatedUint32,
                   },
+                  additional_featuring: {
+                    n: 2,
+                    d: !0,
+                    br: n.FE.readBool,
+                    bw: n.Xc.writeBool,
+                  },
+                  opt_in_name: {
+                    n: 3,
+                    br: n.FE.readString,
+                    bw: n.Xc.writeString,
+                  },
                 },
               }),
             $.sm_m
@@ -21880,23 +22918,84 @@
           return n.aD($.M(), e);
         }
         static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            o = new $();
-          return $.deserializeBinaryFromReader(o, t);
+          let t = new o.BinaryReader(e),
+            i = new $();
+          return $.deserializeBinaryFromReader(i, t);
         }
         static deserializeBinaryFromReader(e, t) {
           return n.F($.MBF(), e, t);
         }
         serializeBinary() {
-          var e = new i.BinaryWriter();
+          var e = new o.BinaryWriter();
           return $.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
           n.l2($.M(), e, t);
         }
         serializeBase64String() {
-          var e = new i.BinaryWriter();
+          var e = new o.BinaryWriter();
           return $.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CPublishing_SetFeaturingOnPartnerAppOptIn_Request";
+        }
+      }
+      class Z extends a {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            Z.prototype.appids || n.aR(Z.M()),
+            a.initialize(this, e, 0, -1, [1], null);
+        }
+        static M() {
+          return (
+            Z.sm_m ||
+              (Z.sm_m = {
+                proto: Z,
+                fields: {
+                  appids: {
+                    n: 1,
+                    r: !0,
+                    q: !0,
+                    br: n.FE.readUint32,
+                    pbr: n.FE.readPackedUint32,
+                    bw: n.Xc.writeRepeatedUint32,
+                  },
+                },
+              }),
+            Z.sm_m
+          );
+        }
+        static MBF() {
+          return Z.sm_mbf || (Z.sm_mbf = n.Bh(Z.M())), Z.sm_mbf;
+        }
+        toObject(e = !1) {
+          return Z.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return n.TA(Z.M(), e, t);
+        }
+        static fromObject(e) {
+          return n.aD(Z.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new o.BinaryReader(e),
+            i = new Z();
+          return Z.deserializeBinaryFromReader(i, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return n.F(Z.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new o.BinaryWriter();
+          return Z.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          n.l2(Z.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new o.BinaryWriter();
+          return Z.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CPublishing_SetFeaturingOnPartnerAppOptIn_Response";
@@ -22005,22 +23104,22 @@
           return n.aD(Q.M(), e);
         }
         static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            o = new Q();
-          return Q.deserializeBinaryFromReader(o, t);
+          let t = new o.BinaryReader(e),
+            i = new Q();
+          return Q.deserializeBinaryFromReader(i, t);
         }
         static deserializeBinaryFromReader(e, t) {
           return n.F(Q.MBF(), e, t);
         }
         serializeBinary() {
-          var e = new i.BinaryWriter();
+          var e = new o.BinaryWriter();
           return Q.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
           n.l2(Q.M(), e, t);
         }
         serializeBase64String() {
-          var e = new i.BinaryWriter();
+          var e = new o.BinaryWriter();
           return Q.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
@@ -22071,22 +23170,22 @@
           return n.aD(ee.M(), e);
         }
         static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            o = new ee();
-          return ee.deserializeBinaryFromReader(o, t);
+          let t = new o.BinaryReader(e),
+            i = new ee();
+          return ee.deserializeBinaryFromReader(i, t);
         }
         static deserializeBinaryFromReader(e, t) {
           return n.F(ee.MBF(), e, t);
         }
         serializeBinary() {
-          var e = new i.BinaryWriter();
+          var e = new o.BinaryWriter();
           return ee.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
           n.l2(ee.M(), e, t);
         }
         serializeBase64String() {
-          var e = new i.BinaryWriter();
+          var e = new o.BinaryWriter();
           return ee.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
@@ -22123,22 +23222,22 @@
           return n.aD(te.M(), e);
         }
         static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            o = new te();
-          return te.deserializeBinaryFromReader(o, t);
+          let t = new o.BinaryReader(e),
+            i = new te();
+          return te.deserializeBinaryFromReader(i, t);
         }
         static deserializeBinaryFromReader(e, t) {
           return n.F(te.MBF(), e, t);
         }
         serializeBinary() {
-          var e = new i.BinaryWriter();
+          var e = new o.BinaryWriter();
           return te.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
           n.l2(te.M(), e, t);
         }
         serializeBase64String() {
-          var e = new i.BinaryWriter();
+          var e = new o.BinaryWriter();
           return te.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
@@ -22157,8 +23256,8 @@
           (e.SetFeaturingOnPartnerAppOptIn = function (e, t) {
             return e.SendMsg(
               "Publishing.SetFeaturingOnPartnerAppOptIn#1",
-              (0, r.MD)(Z, t),
-              $,
+              (0, r.MD)($, t),
+              Z,
               { ePrivilege: 1 },
             );
           }),
@@ -22173,8 +23272,8 @@
           (e.UpdatePartnerAppOptInEmails = function (e, t) {
             return e.SendMsg(
               "Publishing.UpdatePartnerAppOptInEmails#1",
-              (0, r.MD)(P, t),
-              A,
+              (0, r.MD)(A, t),
+              P,
               { ePrivilege: 1 },
             );
           }),
@@ -22182,7 +23281,7 @@
             return e.SendMsg(
               "Publishing.SendPartnerOptInEmailAndWait#1",
               (0, r.MD)(B, t),
-              H,
+              O,
               { ePrivilege: 1 },
             );
           }),
@@ -22214,11 +23313,11 @@
             return e.SendMsg(
               "Publishing.GetOptInEmailTracking#1",
               (0, r.MD)(X, t),
-              Y,
+              q,
               { ePrivilege: 1 },
             );
           });
-      })(k || (k = {})),
+      })(T || (T = {})),
         (function (e) {
           e.GetInvites = function (e, t) {
             return e.SendMsg(

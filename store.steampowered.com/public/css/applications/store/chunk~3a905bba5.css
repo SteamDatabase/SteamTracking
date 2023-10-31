@@ -1143,6 +1143,15 @@ b {
   min-width: 100px;
   overflow: hidden scroll;
 }
+.partnereventshared_DropDownScroll_31SMP
+  .partnereventshared_DropDownScrollItem_1gJSm {
+  padding: 0;
+}
+.partnereventshared_DropDownScroll_31SMP
+  .partnereventshared_DropDownScrollItem_1gJSm
+  > div {
+  padding: 10px 15px;
+}
 .partnereventshared_CloseButton_1y6UV {
   position: absolute;
   top: 4px;

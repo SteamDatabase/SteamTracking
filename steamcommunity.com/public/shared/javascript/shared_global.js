@@ -292,18 +292,22 @@ function ShowDialog( strTitle, strDescription, rgModalParams )
 }
 
 /**
+ * Show a dialog, but take the arguments as an object a la React.
  * @returns CModal
  */
-function ShowPromptDialog( strTitle, strDescription, strOKButton, strCancelButton, rgModalParams, defaultValue )
+function ShowPromptDialogWithProps( rgParams )
 {
+	let { strOKButton, strCancelButton, strTitle, strDescription, defaultValue, inputType, inputMaxSize, bNoPromiseDismiss } = rgParams;
 	if ( !strOKButton )
 		strOKButton = 'OK';
 	if ( !strCancelButton )
 		strCancelButton = 'Cancel';
+	if ( !inputType )
+		inputType = 'text';
 
 	var $Body = $J('<form/>');
-	var $Input = $J('<input/>', {type: 'text', 'class': '' } ).val( defaultValue );
-	if ( rgModalParams && rgModalParams.inputMaxSize )
+	var $Input = $J('<input/>', {type: inputType, 'class': '' } ).val( defaultValue );
+	if ( inputMaxSize )
 	{
 		$Input.attr( 'maxlength', rgModalParams.inputMaxSize );
 	}
@@ -314,7 +318,6 @@ function ShowPromptDialog( strTitle, strDescription, strOKButton, strCancelButto
 	var fnOK = function() { deferred.resolve( $Input.val() ); };
 	var fnCancel = function() { deferred.reject(); };
 
-
 	$Body.submit( function( event ) { event.preventDefault(); fnOK(); } );
 
 	var elButtonLabel = $J( '<span/>' ).text( strOKButton );
@@ -324,7 +327,7 @@ function ShowPromptDialog( strTitle, strDescription, strOKButton, strCancelButto
 	$CancelButton.click( fnCancel );
 
 	var Modal = _BuildDialog( strTitle, $Body, [ $OKButton, $CancelButton ], fnCancel );
-	if( !rgModalParams || !rgModalParams.bNoPromiseDismiss )
+	if( !bNoPromiseDismiss )
 		deferred.always( function() { Modal.Dismiss(); } );
 
 	Modal.Show();
@@ -335,6 +338,23 @@ function ShowPromptDialog( strTitle, strDescription, strOKButton, strCancelButto
 	deferred.promise( Modal );
 
 	return Modal;
+}
+
+/**
+ * A wrapper around ShowDialogPrompt to be compatible with existing code. Prefer ShowPromptDialogWithProps instead.
+ * @returns CModal
+ */
+function ShowPromptDialog( strTitle, strDescription, strOKButton, strCancelButton, rgModalParams, defaultValue )
+{
+	let rgParams = {};
+	if ( rgModalParams )
+		Object.assign( rgParams, rgModalParams );
+	rgParams.strTitle = strTitle;
+	rgParams.strDescription = strDescription;
+	rgParams.strOKButton = strOKButton;
+	rgParams.strCancelButton = strCancelButton;
+	rgParams.defaultValue = defaultValue;
+	return ShowPromptDialogWithProps( rgParams );
 }
 
 /**

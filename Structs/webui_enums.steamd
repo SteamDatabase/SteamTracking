@@ -448,6 +448,7 @@ enum EAppReportType
 	k_EAppReportType_ViolatesLaws = 11;
 	k_EAppReportType_Other = 12;
 	k_EAppReportType_Broken = 13;
+	k_EAppReportType_AIContentReport = 14;
 }
 
 enum EAppShareState
@@ -1519,6 +1520,59 @@ enum ECPUGovernor
 	k_ECPUGovernor_Manual = 3;
 }
 
+enum ECurrencyCode
+{
+	k_ECurrencyCodeInvalid = 0;
+	k_ECurrencyCodeUSD = 1;
+	k_ECurrencyCodeGBP = 2;
+	k_ECurrencyCodeEUR = 3;
+	k_ECurrencyCodeCHF = 4;
+	k_ECurrencyCodeRUB = 5;
+	k_ECurrencyCodePLN = 6;
+	k_ECurrencyCodeBRL = 7;
+	k_ECurrencyCodeJPY = 8;
+	k_ECurrencyCodeNOK = 9;
+	k_ECurrencyCodeIDR = 10;
+	k_ECurrencyCodeMYR = 11;
+	k_ECurrencyCodePHP = 12;
+	k_ECurrencyCodeSGD = 13;
+	k_ECurrencyCodeTHB = 14;
+	k_ECurrencyCodeVND = 15;
+	k_ECurrencyCodeKRW = 16;
+	k_ECurrencyCodeTRY = 17;
+	k_ECurrencyCodeUAH = 18;
+	k_ECurrencyCodeMXN = 19;
+	k_ECurrencyCodeCAD = 20;
+	k_ECurrencyCodeAUD = 21;
+	k_ECurrencyCodeNZD = 22;
+	k_ECurrencyCodeCNY = 23;
+	k_ECurrencyCodeINR = 24;
+	k_ECurrencyCodeCLP = 25;
+	k_ECurrencyCodePEN = 26;
+	k_ECurrencyCodeCOP = 27;
+	k_ECurrencyCodeZAR = 28;
+	k_ECurrencyCodeHKD = 29;
+	k_ECurrencyCodeTWD = 30;
+	k_ECurrencyCodeSAR = 31;
+	k_ECurrencyCodeAED = 32;
+	k_ECurrencyCodeSEK = 33;
+	k_ECurrencyCodeARS = 34;
+	k_ECurrencyCodeILS = 35;
+	k_ECurrencyCodeBYN = 36;
+	k_ECurrencyCodeKZT = 37;
+	k_ECurrencyCodeKWD = 38;
+	k_ECurrencyCodeQAR = 39;
+	k_ECurrencyCodeCRC = 40;
+	k_ECurrencyCodeUYU = 41;
+	k_ECurrencyCodeBGN = 42;
+	k_ECurrencyCodeHRK = 43;
+	k_ECurrencyCodeCZK = 44;
+	k_ECurrencyCodeDKK = 45;
+	k_ECurrencyCodeHUF = 46;
+	k_ECurrencyCodeRON = 47;
+	k_ECurrencyCodeMax = 48;
+}
+
 enum ECursorType
 {
 	k_ECursorType_Raw = 0;
@@ -1686,6 +1740,14 @@ enum EExternal
 	k_EExternalTwitchAccount = 5;
 	k_EExternalYouTubeChannelAccount = 6;
 	k_EExternalFacebookPage = 7;
+}
+
+enum EFamilyGroupRole
+{
+	k_EFamilyGroupRole_None = 0;
+	k_EFamilyGroupRole_Adult = 1;
+	k_EFamilyGroupRole_Child = 2;
+	k_EFamilyGroupRole_MAX = 3;
 }
 
 enum EFeature
@@ -1883,6 +1945,8 @@ enum EHDRVisualization
 	k_EHDRVisualization_None = 0;
 	k_EHDRVisualization_Heatmap = 1;
 	k_EHDRVisualization_Analysis = 2;
+	k_EHDRVisualization_HeatmapExtended = 3;
+	k_EHDRVisualization_HeatmapClassic = 4;
 }
 
 enum EHide
@@ -3710,6 +3774,15 @@ enum EPurchaseNoticeType
 	EPurchaseNoticeType_VRSupported = 2;
 }
 
+enum EPurchaseRequestAction
+{
+	k_EPurchaseRequestAction_None = 0;
+	k_EPurchaseRequestAction_Decline = 1;
+	k_EPurchaseRequestAction_Purchased = 2;
+	k_EPurchaseRequestAction_Abandoned = 3;
+	k_EPurchaseRequestAction_MAX = 4;
+}
+
 enum EPurchaseReservationState
 {
 	k_EPurchaseReservationState_NotReserved = 0;
@@ -3749,6 +3822,16 @@ enum ERedeemPointsType
 	k_ERedeemPointsTypeVirtualItem = 1;
 	k_ERedeemPointsTypeProfileShowcaseUpgrade = 2;
 	k_ERedeemPointsTypeProfileShowcaseSlot = 3;
+}
+
+enum ERegionCode
+{
+	k_ERegionCodeInvalid = 0;
+	k_ERegionCodeCIS = 1;
+	k_ERegionCodeSAsia = 2;
+	k_ERegionCodeLATAM = 3;
+	k_ERegionCodeMENA = 4;
+	k_ERegionCodeMax = 5;
 }
 
 enum EReleaseRequestState
@@ -4289,6 +4372,7 @@ enum ESteamNotificationType
 	k_ESteamNotificationType_FamilyInvite = 16;
 	k_ESteamNotificationType_FamilyPurchaseRequest = 17;
 	k_ESteamNotificationType_ParentalPlaytimeRequest = 18;
+	k_ESteamNotificationType_FamilyPurchaseRequestResponse = 19;
 }
 
 enum ESteamPipeClientWorkType

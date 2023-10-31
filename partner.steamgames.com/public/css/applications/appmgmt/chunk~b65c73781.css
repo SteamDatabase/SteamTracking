@@ -1643,6 +1643,12 @@ div.savetoolbar_HoverToolTip_gba9O {
 .tabulator.tabulator
   .tabulator-header
   .tabulator-headers
+  .tabulator-col.discountgridheaders_RelatedDiscount_12zwK {
+  background-color: #4f5463;
+}
+.tabulator.tabulator
+  .tabulator-header
+  .tabulator-headers
   .tabulator-col.discountgridheaders_RelatedDiscount_12zwK
   .tabulator-col-content,
 .tabulator.tabulator
@@ -1662,6 +1668,12 @@ div.savetoolbar_HoverToolTip_gba9O {
   .formatterCell {
   height: 100%;
   padding: 0px;
+}
+.tabulator.tabulator
+  .tabulator-header
+  .tabulator-headers
+  .tabulator-col.discountgridheaders_BasePrice_1a_Lw {
+  background-color: #4f5463;
 }
 .tabulator.tabulator
   .tabulator-cell.tabulator-cell.discountgridheaders_BasePrice_1a_Lw,

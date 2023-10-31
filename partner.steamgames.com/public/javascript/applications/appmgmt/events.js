@@ -30190,7 +30190,7 @@
             "div",
             { className: Ze().SectionCtn },
             b.createElement("h1", null, (0, me.Xx)(p, i.GetName())),
-            b.createElement("p", null, (0, me.Xx)(u)),
+            b.createElement("p", null, (0, me.Xx)(u, i.GetName())),
             Boolean(l) &&
               b.createElement(
                 "div",

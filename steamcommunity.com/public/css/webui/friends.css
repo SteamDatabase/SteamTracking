@@ -1286,7 +1286,7 @@
   left: 0;
   top: 0;
   pointer-events: none;
-  z-index: 100;
+  z-index: 2000;
 }
 .mutualFriendsContainer {
   padding: 12px 16px 4px 16px;
@@ -2041,6 +2041,14 @@ html.contextmenu_ContextMenuPopup_14wqd body {
   background: #464d58;
   border-radius: 2px;
 }
+@keyframes gamepaddialog_BackgroundAnimation_3PwEE {
+  from {
+    background-position: 0 100%;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
 @keyframes gamepaddialog_ItemFocusAnim-darkerGrey-nocolor_OLaBY {
   from {
     background: #3d4450;
@@ -2061,11 +2069,11 @@ html.contextmenu_ContextMenuPopup_14wqd body {
 }
 @keyframes gamepaddialog_ItemFocusAnim-darkGrey_2NVMb {
   from {
-    background: #67707b;
+    background: rgba(255, 255, 255, 0.25);
     color: #8b929a;
   }
   to {
-    background: #3d4450;
+    background: rgba(255, 255, 255, 0.15);
     color: #fff;
   }
 }
@@ -2076,6 +2084,26 @@ html.contextmenu_ContextMenuPopup_14wqd body {
   }
   to {
     background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes gamepaddialog_ItemFocusAnim-translucent-white-10_2ZXhF {
+  from {
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+  }
+}
+@keyframes gamepaddialog_ItemFocusAnim-translucent-white-20_3FYJQ {
+  from {
+    background: rgba(255, 255, 255, 0.5);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.2);
     color: #fff;
   }
 }
@@ -2115,6 +2143,14 @@ html.contextmenu_ContextMenuPopup_14wqd body {
     background-position: 50% 0%;
   }
 }
+@keyframes gamepaddialog_BackgroundAnimation_3PwEE {
+  from {
+    background-position: 0 100%;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
 @keyframes gamepaddialog_ItemFocusAnim-darkerGrey-nocolor_OLaBY {
   from {
     background: #3d4450;
@@ -2135,11 +2171,11 @@ html.contextmenu_ContextMenuPopup_14wqd body {
 }
 @keyframes gamepaddialog_ItemFocusAnim-darkGrey_2NVMb {
   from {
-    background: #67707b;
+    background: rgba(255, 255, 255, 0.25);
     color: #8b929a;
   }
   to {
-    background: #3d4450;
+    background: rgba(255, 255, 255, 0.15);
     color: #fff;
   }
 }
@@ -2150,6 +2186,26 @@ html.contextmenu_ContextMenuPopup_14wqd body {
   }
   to {
     background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes gamepaddialog_ItemFocusAnim-translucent-white-10_2ZXhF {
+  from {
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+  }
+}
+@keyframes gamepaddialog_ItemFocusAnim-translucent-white-20_3FYJQ {
+  from {
+    background: rgba(255, 255, 255, 0.5);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.2);
     color: #fff;
   }
 }
@@ -2220,9 +2276,24 @@ html.contextmenu_ContextMenuPopup_14wqd body {
   line-height: 22px;
 }
 .BasicUI .gamepaddialog_GamepadDialogContent_16sYN .DialogSubHeader {
-  letter-spacing: 0.5px;
-  color: #8b929a;
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
   text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: rgba(255, 255, 255, 0.5);
   font-size: 16px;
   font-weight: 600;
 }
@@ -2266,7 +2337,7 @@ html.contextmenu_ContextMenuPopup_14wqd body {
   .gamepaddialog_GamepadDialogContent_16sYN
   .DialogControlsSectionHeader {
   letter-spacing: 0.5px;
-  color: #8b929a;
+  color: rgba(255, 255, 255, 0.5);
   text-transform: uppercase;
   font-size: 16px;
   font-weight: 600;
@@ -2347,7 +2418,7 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:active,
 button.gamepaddialog_Button_cXzBZ.DialogButton:active.Primary,
 button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover,
 button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover.Primary {
-  background: #23262e;
+  background: rgba(255, 255, 255, 0.15);
 }
 button.gamepaddialog_Button_cXzBZ.DialogButton.BarButton,
 button.gamepaddialog_Button_cXzBZ.DialogButton:enabled.BarButton,
@@ -2373,7 +2444,7 @@ button.gamepaddialog_Button_cXzBZ.DialogButton.Primary:hover,
 button.gamepaddialog_Button_cXzBZ.DialogButton:enabled.Primary:hover,
 button.gamepaddialog_Button_cXzBZ.DialogButton:active.Primary:hover,
 button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover.Primary:hover {
-  background: #1aa0ff53;
+  background: #1aa0ff7c;
 }
 button.gamepaddialog_Button_cXzBZ.DialogButton.gpfocus,
 button.gamepaddialog_Button_cXzBZ.DialogButton:active,
@@ -2451,7 +2522,7 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:before {
 }
 .gamepaddialog_StandaloneFieldSeparator_1vcky {
   height: 1px;
-  background: #23262e;
+  background: rgba(255, 255, 255, 0.1);
   margin-left: calc(-1 * var(--field-negative-horizontal-margin));
   margin-right: calc(-1 * var(--field-negative-horizontal-margin));
 }
@@ -2499,12 +2570,12 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:before {
 .gamepaddialog_Field_eKmEX.gamepaddialog_WithBottomSeparatorStandard_GxgIy::after {
   bottom: -0.5px;
   height: 1px;
-  background: #23262e;
+  background: rgba(255, 255, 255, 0.1);
 }
 .gamepaddialog_Field_eKmEX.gamepaddialog_WithBottomSeparatorThick_39x36::after {
   bottom: -0.75px;
   height: 1.5px;
-  background: #23262e;
+  background: rgba(255, 255, 255, 0.1);
 }
 .gamepaddialog_GamepadDialogContent_16sYN .gamepaddialog_Field_eKmEX {
   --field-negative-horizontal-margin: 2.8vw;
@@ -2834,6 +2905,11 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:before {
 .gamepaddialog_BasicTextInput_3ZR32:not(.disabled):not(.gpfocus):hover {
   background: #23262e;
 }
+.BasicUI .gamepaddialog_BasicTextInput_3ZR32,
+.BasicUI
+  .gamepaddialog_BasicTextInput_3ZR32:not(.disabled):not(.gpfocus):hover {
+  background: rgba(255, 255, 255, 0.1);
+}
 .gamepaddialog_BasicTextInput_3ZR32,
 .gamepaddialog_BasicTextInput_3ZR32.gpfocus {
   padding: 10px 16px;
@@ -2888,7 +2964,7 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:before {
   right: 0;
   top: 0;
   bottom: 0;
-  background: #3d4450;
+  background: rgba(255, 255, 255, 0.15);
   border-radius: 9001px;
   overflow: hidden;
 }
@@ -3069,6 +3145,14 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
 .gamepadinput_PinDigit_15-eR {
   text-align: center;
 }
+@keyframes gamepadslider_BackgroundAnimation_34gou {
+  from {
+    background-position: 0 100%;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
 @keyframes gamepadslider_ItemFocusAnim-darkerGrey-nocolor_3uBtl {
   from {
     background: #3d4450;
@@ -3089,11 +3173,11 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
 }
 @keyframes gamepadslider_ItemFocusAnim-darkGrey_3rHHM {
   from {
-    background: #67707b;
+    background: rgba(255, 255, 255, 0.25);
     color: #8b929a;
   }
   to {
-    background: #3d4450;
+    background: rgba(255, 255, 255, 0.15);
     color: #fff;
   }
 }
@@ -3104,6 +3188,26 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   }
   to {
     background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes gamepadslider_ItemFocusAnim-translucent-white-10_1eyjV {
+  from {
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+  }
+}
+@keyframes gamepadslider_ItemFocusAnim-translucent-white-20_1iqNj {
+  from {
+    background: rgba(255, 255, 255, 0.5);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.2);
     color: #fff;
   }
 }
@@ -3154,7 +3258,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   --left-track-color: #00bbff;
 }
 .gamepadslider_SliderTrack_2_vG6 {
-  background: #23262e;
+  background: rgba(255, 255, 255, 0.15);
   margin: auto;
   width: 100%;
   height: 6px;
@@ -3248,7 +3352,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
     .gamepadslider_Disabled_35GyZ
   ).gpfocus
   .gamepadslider_SliderHandle_11PBf {
-  border: solid 3px #0e141b;
+  border: solid 3px rgba(255, 255, 255, 0.15);
   margin: -3px;
   animation: gamepadslider_SliderHandleFocusPop_1RC4f 200ms ease-out;
 }
@@ -3333,7 +3437,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   height: 12px;
   flex-shrink: 0;
   flex-grow: 0;
-  background-color: #23262e;
+  background-color: rgba(255, 255, 255, 0.15);
 }
 .gamepadslider_SliderNotchTick_u8QEa.gamepadslider_TickActive_j418S {
   background-color: #1a9fff;
@@ -3655,6 +3759,14 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   bottom: 0;
   left: 0;
 }
+@keyframes gamepadpagedsettings_BackgroundAnimation_5VEJ9 {
+  from {
+    background-position: 0 100%;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
 @keyframes gamepadpagedsettings_ItemFocusAnim-darkerGrey-nocolor_gmWXV {
   from {
     background: #3d4450;
@@ -3675,11 +3787,11 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
 }
 @keyframes gamepadpagedsettings_ItemFocusAnim-darkGrey_2x0HR {
   from {
-    background: #67707b;
+    background: rgba(255, 255, 255, 0.25);
     color: #8b929a;
   }
   to {
-    background: #3d4450;
+    background: rgba(255, 255, 255, 0.15);
     color: #fff;
   }
 }
@@ -3690,6 +3802,26 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   }
   to {
     background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes gamepadpagedsettings_ItemFocusAnim-translucent-white-10_3JK1V {
+  from {
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+  }
+}
+@keyframes gamepadpagedsettings_ItemFocusAnim-translucent-white-20_2PDwQ {
+  from {
+    background: rgba(255, 255, 255, 0.5);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.2);
     color: #fff;
   }
 }
@@ -3711,6 +3843,14 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
     color: #fff;
   }
 }
+@keyframes gamepadpagedsettings_BackgroundAnimation_5VEJ9 {
+  from {
+    background-position: 0 100%;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
 @keyframes gamepadpagedsettings_ItemFocusAnim-darkerGrey-nocolor_gmWXV {
   from {
     background: #3d4450;
@@ -3731,11 +3871,11 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
 }
 @keyframes gamepadpagedsettings_ItemFocusAnim-darkGrey_2x0HR {
   from {
-    background: #67707b;
+    background: rgba(255, 255, 255, 0.25);
     color: #8b929a;
   }
   to {
-    background: #3d4450;
+    background: rgba(255, 255, 255, 0.15);
     color: #fff;
   }
 }
@@ -3746,6 +3886,26 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   }
   to {
     background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes gamepadpagedsettings_ItemFocusAnim-translucent-white-10_3JK1V {
+  from {
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+  }
+}
+@keyframes gamepadpagedsettings_ItemFocusAnim-translucent-white-20_2PDwQ {
+  from {
+    background: rgba(255, 255, 255, 0.5);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.2);
     color: #fff;
   }
 }
@@ -3797,9 +3957,10 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   right: 0;
   bottom: 0;
   left: 0;
+  padding-bottom: 60px;
   overflow-x: hidden;
   overflow-y: auto;
-  scroll-padding: 56px 0px;
+  scroll-padding: 56px 0px 60px 0px;
   flex-direction: column;
   padding-top: calc(24px + var(--basicui-header-height, 0px));
 }
@@ -3814,15 +3975,14 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   margin-top: 5px;
 }
 .gamepadpagedsettings_PagedSettingsDialog_PageListColumn_1d6VI {
-  background: #23262e;
+  background: rgba(255, 255, 255, 0.1);
   flex: 1;
   min-width: 240px;
   max-width: 40%;
   display: flex;
   flex-direction: column;
   position: relative;
-  border-right: 1px solid #0e141b;
-  padding-top: calc(0px + var(--basicui-header-height, 0px));
+  padding-bottom: 40px;
 }
 .gamepadpagedsettings_PagedSettingsDialog_Title_3aOHb {
   color: #67707b;
@@ -3848,6 +4008,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   flex-direction: column;
   scroll-snap-type: y mandatory;
   scroll-padding: 36px 0px;
+  padding-top: calc(0px + var(--basicui-header-height, 0px));
 }
 .gamepadpagedsettings_PagedSettingsDialog_PageList_gNwoz.gamepadpagedsettings_PagedSettingsDialog_PageList_DisableScrolling_sMDrh {
   overflow-y: hidden;
@@ -3865,7 +4026,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   text-transform: none;
   letter-spacing: 0px;
   color: #fff;
-  padding: 10px calc(12px + 1.4vw);
+  padding: 10px 16px;
   color: #b8bcbf;
   cursor: pointer;
   display: flex;
@@ -3893,8 +4054,9 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
 .gamepadpagedsettings_PagedSettingsDialog_PageListItem_2mL2H.gamepadpagedsettings_Active_1ELdD {
   color: #fff;
   cursor: default;
-  background: #3d4450;
+  background: rgba(255, 255, 255, 0.15);
   transform: scale(1.1) rotateX(1deg);
+  clip-path: inset(5% 0% 5% 0%);
 }
 .gamepadpagedsettings_PagedSettingsDialog_PageListItem_2mL2H:focus {
   outline: none;
@@ -3906,7 +4068,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   animation-name: gamepadpagedsettings_ItemFocusAnim-darkGrey_2x0HR;
 }
 .gamepadpagedsettings_PagedSettingsDialog_PageListItem_2mL2H:hover {
-  background-color: #3d4450;
+  background-color: rgba(255, 255, 255, 0.05);
 }
 .gamepadpagedsettings_PageListItem_Icon_3f2IO {
   height: 20px;
@@ -3924,12 +4086,12 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
 }
 .gamepadpagedsettings_Separator_3sUwu {
   height: 1px;
-  background: #3d4450;
+  background: rgba(255, 255, 255, 0.1);
   margin: 8px calc(12px + 1.4vw);
   flex-shrink: 0;
 }
 .gamepadpagedsettings_PagedSettingDialog_ContentColumn_ZjHHX {
-  background: #0e141b;
+  background: transparent;
 }
 .gamepadpagedsettings_Up_1dnQH
   > .gamepadpagedsettings_ContentTransition_1IuEv.gamepadpagedsettings_Enter_1GyNi {
@@ -4014,6 +4176,14 @@ body.modals_BodyNoScrollDialog_3jhMI {
   flex-direction: column;
   min-height: 0;
 }
+@keyframes chatroom_BackgroundAnimation_225-z {
+  from {
+    background-position: 0 100%;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
 @keyframes chatroom_ItemFocusAnim-darkerGrey-nocolor_2SpA2 {
   from {
     background: #3d4450;
@@ -4034,11 +4204,11 @@ body.modals_BodyNoScrollDialog_3jhMI {
 }
 @keyframes chatroom_ItemFocusAnim-darkGrey_1a6zU {
   from {
-    background: #67707b;
+    background: rgba(255, 255, 255, 0.25);
     color: #8b929a;
   }
   to {
-    background: #3d4450;
+    background: rgba(255, 255, 255, 0.15);
     color: #fff;
   }
 }
@@ -4049,6 +4219,26 @@ body.modals_BodyNoScrollDialog_3jhMI {
   }
   to {
     background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes chatroom_ItemFocusAnim-translucent-white-10_3sQ7j {
+  from {
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+  }
+}
+@keyframes chatroom_ItemFocusAnim-translucent-white-20_j2b41 {
+  from {
+    background: rgba(255, 255, 255, 0.5);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.2);
     color: #fff;
   }
 }
@@ -4070,6 +4260,14 @@ body.modals_BodyNoScrollDialog_3jhMI {
     color: #fff;
   }
 }
+@keyframes chatroom_BackgroundAnimation_225-z {
+  from {
+    background-position: 0 100%;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
 @keyframes chatroom_ItemFocusAnim-darkerGrey-nocolor_2SpA2 {
   from {
     background: #3d4450;
@@ -4090,11 +4288,11 @@ body.modals_BodyNoScrollDialog_3jhMI {
 }
 @keyframes chatroom_ItemFocusAnim-darkGrey_1a6zU {
   from {
-    background: #67707b;
+    background: rgba(255, 255, 255, 0.25);
     color: #8b929a;
   }
   to {
-    background: #3d4450;
+    background: rgba(255, 255, 255, 0.15);
     color: #fff;
   }
 }
@@ -4105,6 +4303,26 @@ body.modals_BodyNoScrollDialog_3jhMI {
   }
   to {
     background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes chatroom_ItemFocusAnim-translucent-white-10_3sQ7j {
+  from {
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+  }
+}
+@keyframes chatroom_ItemFocusAnim-translucent-white-20_j2b41 {
+  from {
+    background: rgba(255, 255, 255, 0.5);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.2);
     color: #fff;
   }
 }
@@ -4744,7 +4962,7 @@ body.modals_BodyNoScrollDialog_3jhMI {
 }
 .chatWindow .chatEntry.GamepadMode,
 .GamepadMode .chatWindow .chatEntry {
-  padding: 0px;
+  padding: 0px 50px 40px 0px;
   background-color: transparent;
 }
 .chatWindow .chatEntry.GamepadMode.gpfocuswithin > *,
@@ -4894,6 +5112,10 @@ body.modals_BodyNoScrollDialog_3jhMI {
   background-color: #23262e;
   box-shadow: 0 0 10px #0e141b;
 }
+#QuickAccess-Menu .GamepadMode.friendlist .FriendsListSteamDeckTopSection {
+  height: auto;
+  padding-top: 0px;
+}
 #QuickAccess-Menu .GamepadMode.friendlist.gpfocuswithin {
   background-color: transparent;
   background: transparent;
@@ -4909,6 +5131,11 @@ body.modals_BodyNoScrollDialog_3jhMI {
 .GamepadMode.friendlist .FriendsListSteamDeckTopSection {
   transition-property: none;
   background-color: transparent;
+  height: 100px;
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 .GamepadMode.friendlist .FriendsListSteamDeckTabs {
   display: flex;
@@ -5009,10 +5236,8 @@ body.modals_BodyNoScrollDialog_3jhMI {
   letter-spacing: 0px;
   color: #fff;
   font-weight: bold;
-  font-size: 12px;
-  line-height: 22px;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
+  font-size: 22px;
+  line-height: 28px;
   color: #fff;
   margin: 0;
   display: flex;
@@ -5135,6 +5360,17 @@ body.modals_BodyNoScrollDialog_3jhMI {
 }
 .GamepadMode.friendlist .FriendsListTabPanel.GroupsTabList > div:first-of-type {
   padding-top: 4px;
+}
+.GamepadMode.friendlist
+  .FriendsListTabPanel.FavoritesTabList
+  > div:last-of-type {
+  padding-bottom: 40px;
+}
+.GamepadMode.friendlist .FriendsListTabPanel.FriendsTabList > div:last-of-type {
+  padding-bottom: 40px;
+}
+.GamepadMode.friendlist .FriendsListTabPanel.GroupsTabList > div:last-of-type {
+  padding-bottom: 40px;
 }
 .GamepadMode.friendlist
   .FriendsListTabPanel.RecentMessagesTabList
@@ -9647,7 +9883,7 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   background-color: #212328;
 }
 .qrcode_Bit_1YVDT:not(.qrcode_Active_1zNnN) {
-  background-color: #1999ff;
+  background-color: #fff;
 }
 .qrlogin_LoginQR_xlEVp {
   position: relative;
@@ -11102,6 +11338,15 @@ b {
   max-height: 400px;
   min-width: 100px;
   overflow: hidden scroll;
+}
+.partnereventshared_DropDownScroll_1CewB
+  .partnereventshared_DropDownScrollItem_3D3hC {
+  padding: 0;
+}
+.partnereventshared_DropDownScroll_1CewB
+  .partnereventshared_DropDownScrollItem_3D3hC
+  > div {
+  padding: 10px 15px;
 }
 .partnereventshared_CloseButton_gR2gS {
   position: absolute;
@@ -15860,6 +16105,14 @@ a.bbcodes_LinkButton_jPpgc:hover {
 .reactions_ReactionHover_12Ox3 .reactions_ReactionName_2bwkm {
   font-weight: 600;
 }
+@keyframes quickaccessvoicecontrolssteamdeck_BackgroundAnimation_23GbG {
+  from {
+    background-position: 0 100%;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
 @keyframes quickaccessvoicecontrolssteamdeck_ItemFocusAnim-darkerGrey-nocolor_1xyIi {
   from {
     background: #3d4450;
@@ -15880,11 +16133,11 @@ a.bbcodes_LinkButton_jPpgc:hover {
 }
 @keyframes quickaccessvoicecontrolssteamdeck_ItemFocusAnim-darkGrey_2GqB7 {
   from {
-    background: #67707b;
+    background: rgba(255, 255, 255, 0.25);
     color: #8b929a;
   }
   to {
-    background: #3d4450;
+    background: rgba(255, 255, 255, 0.15);
     color: #fff;
   }
 }
@@ -15895,6 +16148,26 @@ a.bbcodes_LinkButton_jPpgc:hover {
   }
   to {
     background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes quickaccessvoicecontrolssteamdeck_ItemFocusAnim-translucent-white-10_2jM4E {
+  from {
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+  }
+}
+@keyframes quickaccessvoicecontrolssteamdeck_ItemFocusAnim-translucent-white-20_O-onA {
+  from {
+    background: rgba(255, 255, 255, 0.5);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.2);
     color: #fff;
   }
 }
@@ -16539,7 +16812,7 @@ a.bbcodes_LinkButton_jPpgc:hover {
 }
 .chatWindow .chatEntry.GamepadMode,
 .GamepadMode .chatWindow .chatEntry {
-  padding: 0px;
+  padding: 0px 50px 40px 0px;
   background-color: transparent;
 }
 .chatWindow .chatEntry.GamepadMode.gpfocuswithin > *,
@@ -16689,6 +16962,10 @@ a.bbcodes_LinkButton_jPpgc:hover {
   background-color: #23262e;
   box-shadow: 0 0 10px #0e141b;
 }
+#QuickAccess-Menu .GamepadMode.friendlist .FriendsListSteamDeckTopSection {
+  height: auto;
+  padding-top: 0px;
+}
 #QuickAccess-Menu .GamepadMode.friendlist.gpfocuswithin {
   background-color: transparent;
   background: transparent;
@@ -16704,6 +16981,11 @@ a.bbcodes_LinkButton_jPpgc:hover {
 .GamepadMode.friendlist .FriendsListSteamDeckTopSection {
   transition-property: none;
   background-color: transparent;
+  height: 100px;
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 .GamepadMode.friendlist .FriendsListSteamDeckTabs {
   display: flex;
@@ -16804,10 +17086,8 @@ a.bbcodes_LinkButton_jPpgc:hover {
   letter-spacing: 0px;
   color: #fff;
   font-weight: bold;
-  font-size: 12px;
-  line-height: 22px;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
+  font-size: 22px;
+  line-height: 28px;
   color: #fff;
   margin: 0;
   display: flex;
@@ -16930,6 +17210,17 @@ a.bbcodes_LinkButton_jPpgc:hover {
 }
 .GamepadMode.friendlist .FriendsListTabPanel.GroupsTabList > div:first-of-type {
   padding-top: 4px;
+}
+.GamepadMode.friendlist
+  .FriendsListTabPanel.FavoritesTabList
+  > div:last-of-type {
+  padding-bottom: 40px;
+}
+.GamepadMode.friendlist .FriendsListTabPanel.FriendsTabList > div:last-of-type {
+  padding-bottom: 40px;
+}
+.GamepadMode.friendlist .FriendsListTabPanel.GroupsTabList > div:last-of-type {
+  padding-bottom: 40px;
 }
 .GamepadMode.friendlist
   .FriendsListTabPanel.RecentMessagesTabList
@@ -17804,6 +18095,14 @@ a.bbcodes_LinkButton_jPpgc:hover {
   margin-right: 6px;
   color: #67707b;
 }
+@keyframes chattabs_BackgroundAnimation_20GyX {
+  from {
+    background-position: 0 100%;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
 @keyframes chattabs_ItemFocusAnim-darkerGrey-nocolor_wLNQI {
   from {
     background: #3d4450;
@@ -17824,11 +18123,11 @@ a.bbcodes_LinkButton_jPpgc:hover {
 }
 @keyframes chattabs_ItemFocusAnim-darkGrey_1esdt {
   from {
-    background: #67707b;
+    background: rgba(255, 255, 255, 0.25);
     color: #8b929a;
   }
   to {
-    background: #3d4450;
+    background: rgba(255, 255, 255, 0.15);
     color: #fff;
   }
 }
@@ -17839,6 +18138,26 @@ a.bbcodes_LinkButton_jPpgc:hover {
   }
   to {
     background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes chattabs_ItemFocusAnim-translucent-white-10_33vsA {
+  from {
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+  }
+}
+@keyframes chattabs_ItemFocusAnim-translucent-white-20_2nvh8 {
+  from {
+    background: rgba(255, 255, 255, 0.5);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.2);
     color: #fff;
   }
 }
@@ -18478,7 +18797,7 @@ a.bbcodes_LinkButton_jPpgc:hover {
 }
 .chatWindow .chatEntry.GamepadMode,
 .GamepadMode .chatWindow .chatEntry {
-  padding: 0px;
+  padding: 0px 50px 40px 0px;
   background-color: transparent;
 }
 .chatWindow .chatEntry.GamepadMode.gpfocuswithin > *,
@@ -18628,6 +18947,10 @@ a.bbcodes_LinkButton_jPpgc:hover {
   background-color: #23262e;
   box-shadow: 0 0 10px #0e141b;
 }
+#QuickAccess-Menu .GamepadMode.friendlist .FriendsListSteamDeckTopSection {
+  height: auto;
+  padding-top: 0px;
+}
 #QuickAccess-Menu .GamepadMode.friendlist.gpfocuswithin {
   background-color: transparent;
   background: transparent;
@@ -18643,6 +18966,11 @@ a.bbcodes_LinkButton_jPpgc:hover {
 .GamepadMode.friendlist .FriendsListSteamDeckTopSection {
   transition-property: none;
   background-color: transparent;
+  height: 100px;
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 .GamepadMode.friendlist .FriendsListSteamDeckTabs {
   display: flex;
@@ -18743,10 +19071,8 @@ a.bbcodes_LinkButton_jPpgc:hover {
   letter-spacing: 0px;
   color: #fff;
   font-weight: bold;
-  font-size: 12px;
-  line-height: 22px;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
+  font-size: 22px;
+  line-height: 28px;
   color: #fff;
   margin: 0;
   display: flex;
@@ -18869,6 +19195,17 @@ a.bbcodes_LinkButton_jPpgc:hover {
 }
 .GamepadMode.friendlist .FriendsListTabPanel.GroupsTabList > div:first-of-type {
   padding-top: 4px;
+}
+.GamepadMode.friendlist
+  .FriendsListTabPanel.FavoritesTabList
+  > div:last-of-type {
+  padding-bottom: 40px;
+}
+.GamepadMode.friendlist .FriendsListTabPanel.FriendsTabList > div:last-of-type {
+  padding-bottom: 40px;
+}
+.GamepadMode.friendlist .FriendsListTabPanel.GroupsTabList > div:last-of-type {
+  padding-bottom: 40px;
 }
 .GamepadMode.friendlist
   .FriendsListTabPanel.RecentMessagesTabList
@@ -19357,10 +19694,6 @@ a.bbcodes_LinkButton_jPpgc:hover {
   box-sizing: border-box;
   transition: padding 200ms ease-out;
 }
-.chattabs_ChatTab_2Vrcp.GamepadMode,
-.GamepadMode .chattabs_ChatTab_2Vrcp {
-  padding: 0px 12px 0px 6px;
-}
 .chattabs_ChatTab_2Vrcp:before,
 .chattabs_ChatTab_2Vrcp:last-of-type:after {
   content: "";
@@ -19458,7 +19791,7 @@ a.bbcodes_LinkButton_jPpgc:hover {
 .chattabs_ChatTab_2Vrcp.chattabs_VoiceActive_33vMa.GamepadMode,
 .GamepadMode .chattabs_ChatTab_2Vrcp.chattabs_VoiceActive_33vMa {
   background: radial-gradient(
-    ellipse 80px 80px at 14px 24px,
+    ellipse 80px 80px at 20px 80px,
     #59bf40 0%,
     rgba(89, 191, 64, 0.5) 30%,
     rgba(89, 191, 64, 0.3) 50%,
@@ -19469,8 +19802,8 @@ a.bbcodes_LinkButton_jPpgc:hover {
 .GamepadMode
   .chattabs_ChatTab_2Vrcp.chattabs_VoiceActive_33vMa.chattabs_MicMuted_2Sn4b {
   background: radial-gradient(
-    ellipse 80px 80px at 14px 24px,
-    #000000 0%,
+    ellipse 80px 80px at 20px 80px,
+    #59bf40 0%,
     rgba(89, 191, 64, 0.5) 30%,
     rgba(89, 191, 64, 0.3) 50%,
     rgba(89, 191, 64, 0.25) 70%
@@ -19486,7 +19819,7 @@ a.bbcodes_LinkButton_jPpgc:hover {
 .chattabs_ChatTab_2Vrcp.chattabs_VoiceActive_33vMa.GamepadMode.gpfocus,
 .GamepadMode .chattabs_ChatTab_2Vrcp.chattabs_VoiceActive_33vMa.gpfocus {
   background: radial-gradient(
-    ellipse 80px 80px at 14px 24px,
+    ellipse 80px 80px at 20px 80px,
     #59bf40 0%,
     rgba(89, 191, 64, 0.8) 30%,
     rgba(89, 191, 64, 0.6) 50%,
@@ -19514,15 +19847,17 @@ a.bbcodes_LinkButton_jPpgc:hover {
 }
 .chattabs_ChatTab_2Vrcp .chattabs_MicStatus_30H7N.GamepadMode,
 .GamepadMode .chattabs_ChatTab_2Vrcp .chattabs_MicStatus_30H7N {
+  position: relative;
   width: 24px;
   height: 24px;
-  top: 1px;
-  left: -5px;
+  padding-right: 4px;
+  mix-blend-mode: normal;
 }
 .chattabs_ChatTab_2Vrcp .chattabs_MicStatus_30H7N.GamepadMode svg,
 .GamepadMode .chattabs_ChatTab_2Vrcp .chattabs_MicStatus_30H7N svg {
   width: 100%;
   height: 100%;
+  padding: 0px;
 }
 .chattabs_ChatTab_2Vrcp.chattabs_Active_Lrqoj .chattabs_MicStatus_30H7N {
   background: radial-gradient(
@@ -19557,6 +19892,15 @@ a.bbcodes_LinkButton_jPpgc:hover {
   .chattabs_MicStatus_30H7N {
   background: transparent;
 }
+.chattabs_ChatTab_2Vrcp.chattabs_Active_Lrqoj.chattabs_MicMuted_2Sn4b
+  .chattabs_MicStatus_30H7N.GamepadMode
+  svg,
+.GamepadMode
+  .chattabs_ChatTab_2Vrcp.chattabs_Active_Lrqoj.chattabs_MicMuted_2Sn4b
+  .chattabs_MicStatus_30H7N
+  svg {
+  color: #8a220f;
+}
 .chattabs_ChatTab_2Vrcp:not(.chattabs_Active_Lrqoj) * {
   stroke: #a4ff3a;
   fill: #a4ff3a;
@@ -19568,6 +19912,7 @@ a.bbcodes_LinkButton_jPpgc:hover {
   stroke-width: 10px;
   stroke: #fff;
   transform: transformY(0px);
+  opacity: 1;
 }
 .chattabs_ChatTab_2Vrcp.chattabs_MicMuted_2Sn4b
   .chattabs_MicStatus_30H7N
@@ -19590,7 +19935,8 @@ a.bbcodes_LinkButton_jPpgc:hover {
 .GamepadMode .chattabs_ChatTab_2Vrcp {
   width: 100%;
   border-radius: 0;
-  height: 48px;
+  padding: 40px 12px 0px 6px;
+  height: 118px;
 }
 .chattabs_ChatTab_2Vrcp.GamepadMode .chattabs_CloseButton_7gMwY,
 .GamepadMode .chattabs_ChatTab_2Vrcp .chattabs_CloseButton_7gMwY {
@@ -19762,6 +20108,14 @@ a.bbcodes_LinkButton_jPpgc:hover {
   border-radius: 50%;
   overflow: hidden;
 }
+@keyframes pagedcontent_BackgroundAnimation_1XVbj {
+  from {
+    background-position: 0 100%;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
 @keyframes pagedcontent_ItemFocusAnim-darkerGrey-nocolor_1vMKF {
   from {
     background: #3d4450;
@@ -19782,11 +20136,11 @@ a.bbcodes_LinkButton_jPpgc:hover {
 }
 @keyframes pagedcontent_ItemFocusAnim-darkGrey_1c2HK {
   from {
-    background: #67707b;
+    background: rgba(255, 255, 255, 0.25);
     color: #8b929a;
   }
   to {
-    background: #3d4450;
+    background: rgba(255, 255, 255, 0.15);
     color: #fff;
   }
 }
@@ -19797,6 +20151,26 @@ a.bbcodes_LinkButton_jPpgc:hover {
   }
   to {
     background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes pagedcontent_ItemFocusAnim-translucent-white-10_3TnSz {
+  from {
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+  }
+}
+@keyframes pagedcontent_ItemFocusAnim-translucent-white-20_1C2QC {
+  from {
+    background: rgba(255, 255, 255, 0.5);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.2);
     color: #fff;
   }
 }
@@ -20436,7 +20810,7 @@ a.bbcodes_LinkButton_jPpgc:hover {
 }
 .chatWindow .chatEntry.GamepadMode,
 .GamepadMode .chatWindow .chatEntry {
-  padding: 0px;
+  padding: 0px 50px 40px 0px;
   background-color: transparent;
 }
 .chatWindow .chatEntry.GamepadMode.gpfocuswithin > *,
@@ -20586,6 +20960,10 @@ a.bbcodes_LinkButton_jPpgc:hover {
   background-color: #23262e;
   box-shadow: 0 0 10px #0e141b;
 }
+#QuickAccess-Menu .GamepadMode.friendlist .FriendsListSteamDeckTopSection {
+  height: auto;
+  padding-top: 0px;
+}
 #QuickAccess-Menu .GamepadMode.friendlist.gpfocuswithin {
   background-color: transparent;
   background: transparent;
@@ -20601,6 +20979,11 @@ a.bbcodes_LinkButton_jPpgc:hover {
 .GamepadMode.friendlist .FriendsListSteamDeckTopSection {
   transition-property: none;
   background-color: transparent;
+  height: 100px;
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 .GamepadMode.friendlist .FriendsListSteamDeckTabs {
   display: flex;
@@ -20701,10 +21084,8 @@ a.bbcodes_LinkButton_jPpgc:hover {
   letter-spacing: 0px;
   color: #fff;
   font-weight: bold;
-  font-size: 12px;
-  line-height: 22px;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
+  font-size: 22px;
+  line-height: 28px;
   color: #fff;
   margin: 0;
   display: flex;
@@ -20827,6 +21208,17 @@ a.bbcodes_LinkButton_jPpgc:hover {
 }
 .GamepadMode.friendlist .FriendsListTabPanel.GroupsTabList > div:first-of-type {
   padding-top: 4px;
+}
+.GamepadMode.friendlist
+  .FriendsListTabPanel.FavoritesTabList
+  > div:last-of-type {
+  padding-bottom: 40px;
+}
+.GamepadMode.friendlist .FriendsListTabPanel.FriendsTabList > div:last-of-type {
+  padding-bottom: 40px;
+}
+.GamepadMode.friendlist .FriendsListTabPanel.GroupsTabList > div:last-of-type {
+  padding-bottom: 40px;
 }
 .GamepadMode.friendlist
   .FriendsListTabPanel.RecentMessagesTabList
@@ -21595,6 +21987,14 @@ a.bbcodes_LinkButton_jPpgc:hover {
 .logsettings_DropDownRow_cv_p8 .logsettings_Label_3ces1 {
   flex-grow: 1;
 }
+@keyframes friendslist_BackgroundAnimation_1-Raw {
+  from {
+    background-position: 0 100%;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
 @keyframes friendslist_ItemFocusAnim-darkerGrey-nocolor_3BGg0 {
   from {
     background: #3d4450;
@@ -21615,11 +22015,11 @@ a.bbcodes_LinkButton_jPpgc:hover {
 }
 @keyframes friendslist_ItemFocusAnim-darkGrey_i0vR_ {
   from {
-    background: #67707b;
+    background: rgba(255, 255, 255, 0.25);
     color: #8b929a;
   }
   to {
-    background: #3d4450;
+    background: rgba(255, 255, 255, 0.15);
     color: #fff;
   }
 }
@@ -21630,6 +22030,26 @@ a.bbcodes_LinkButton_jPpgc:hover {
   }
   to {
     background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes friendslist_ItemFocusAnim-translucent-white-10_118kp {
+  from {
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+  }
+}
+@keyframes friendslist_ItemFocusAnim-translucent-white-20_9L9Wc {
+  from {
+    background: rgba(255, 255, 255, 0.5);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.2);
     color: #fff;
   }
 }
@@ -22269,7 +22689,7 @@ a.bbcodes_LinkButton_jPpgc:hover {
 }
 .chatWindow .chatEntry.GamepadMode,
 .GamepadMode .chatWindow .chatEntry {
-  padding: 0px;
+  padding: 0px 50px 40px 0px;
   background-color: transparent;
 }
 .chatWindow .chatEntry.GamepadMode.gpfocuswithin > *,
@@ -22419,6 +22839,10 @@ a.bbcodes_LinkButton_jPpgc:hover {
   background-color: #23262e;
   box-shadow: 0 0 10px #0e141b;
 }
+#QuickAccess-Menu .GamepadMode.friendlist .FriendsListSteamDeckTopSection {
+  height: auto;
+  padding-top: 0px;
+}
 #QuickAccess-Menu .GamepadMode.friendlist.gpfocuswithin {
   background-color: transparent;
   background: transparent;
@@ -22434,6 +22858,11 @@ a.bbcodes_LinkButton_jPpgc:hover {
 .GamepadMode.friendlist .FriendsListSteamDeckTopSection {
   transition-property: none;
   background-color: transparent;
+  height: 100px;
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 .GamepadMode.friendlist .FriendsListSteamDeckTabs {
   display: flex;
@@ -22534,10 +22963,8 @@ a.bbcodes_LinkButton_jPpgc:hover {
   letter-spacing: 0px;
   color: #fff;
   font-weight: bold;
-  font-size: 12px;
-  line-height: 22px;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
+  font-size: 22px;
+  line-height: 28px;
   color: #fff;
   margin: 0;
   display: flex;
@@ -22660,6 +23087,17 @@ a.bbcodes_LinkButton_jPpgc:hover {
 }
 .GamepadMode.friendlist .FriendsListTabPanel.GroupsTabList > div:first-of-type {
   padding-top: 4px;
+}
+.GamepadMode.friendlist
+  .FriendsListTabPanel.FavoritesTabList
+  > div:last-of-type {
+  padding-bottom: 40px;
+}
+.GamepadMode.friendlist .FriendsListTabPanel.FriendsTabList > div:last-of-type {
+  padding-bottom: 40px;
+}
+.GamepadMode.friendlist .FriendsListTabPanel.GroupsTabList > div:last-of-type {
+  padding-bottom: 40px;
 }
 .GamepadMode.friendlist
   .FriendsListTabPanel.RecentMessagesTabList
@@ -23135,6 +23573,14 @@ a.bbcodes_LinkButton_jPpgc:hover {
   color: #67707b;
   font-size: 16px;
 }
+@keyframes friendslist_BackgroundAnimation_1-Raw {
+  from {
+    background-position: 0 100%;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
 @keyframes friendslist_ItemFocusAnim-darkerGrey-nocolor_3BGg0 {
   from {
     background: #3d4450;
@@ -23155,11 +23601,11 @@ a.bbcodes_LinkButton_jPpgc:hover {
 }
 @keyframes friendslist_ItemFocusAnim-darkGrey_i0vR_ {
   from {
-    background: #67707b;
+    background: rgba(255, 255, 255, 0.25);
     color: #8b929a;
   }
   to {
-    background: #3d4450;
+    background: rgba(255, 255, 255, 0.15);
     color: #fff;
   }
 }
@@ -23170,6 +23616,26 @@ a.bbcodes_LinkButton_jPpgc:hover {
   }
   to {
     background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes friendslist_ItemFocusAnim-translucent-white-10_118kp {
+  from {
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+  }
+}
+@keyframes friendslist_ItemFocusAnim-translucent-white-20_9L9Wc {
+  from {
+    background: rgba(255, 255, 255, 0.5);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.2);
     color: #fff;
   }
 }
@@ -23570,6 +24036,14 @@ a.bbcodes_LinkButton_jPpgc:hover {
 .friendslist_OfflineMessage_2aYfi .friendslist_retryButton_1NI2e:active {
   background: linear-gradient(to right, #018eea 0%, #185feb 100%);
 }
+@keyframes quickaccesscontrols_BackgroundAnimation_nTEVK {
+  from {
+    background-position: 0 100%;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
 @keyframes quickaccesscontrols_ItemFocusAnim-darkerGrey-nocolor_2HixS {
   from {
     background: #3d4450;
@@ -23590,11 +24064,11 @@ a.bbcodes_LinkButton_jPpgc:hover {
 }
 @keyframes quickaccesscontrols_ItemFocusAnim-darkGrey_3s1Va {
   from {
-    background: #67707b;
+    background: rgba(255, 255, 255, 0.25);
     color: #8b929a;
   }
   to {
-    background: #3d4450;
+    background: rgba(255, 255, 255, 0.15);
     color: #fff;
   }
 }
@@ -23605,6 +24079,26 @@ a.bbcodes_LinkButton_jPpgc:hover {
   }
   to {
     background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes quickaccesscontrols_ItemFocusAnim-translucent-white-10_wzXlo {
+  from {
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+  }
+}
+@keyframes quickaccesscontrols_ItemFocusAnim-translucent-white-20_2l5JI {
+  from {
+    background: rgba(255, 255, 255, 0.5);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.2);
     color: #fff;
   }
 }
@@ -23669,7 +24163,7 @@ a.bbcodes_LinkButton_jPpgc:hover {
   line-height: 22px;
   letter-spacing: 0.5px;
   text-transform: uppercase;
-  color: #8b929a;
+  color: rgba(255, 255, 255, 0.7);
   padding: 0px 0px 8px;
   display: flex;
   letter-spacing: 0.5px;
@@ -23838,6 +24332,14 @@ a.bbcodes_LinkButton_jPpgc:hover {
   font-weight: bold;
   line-height: 10px;
 }
+@keyframes remoteplay_BackgroundAnimation_2Uu7J {
+  from {
+    background-position: 0 100%;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
 @keyframes remoteplay_ItemFocusAnim-darkerGrey-nocolor_PvXtR {
   from {
     background: #3d4450;
@@ -23858,11 +24360,11 @@ a.bbcodes_LinkButton_jPpgc:hover {
 }
 @keyframes remoteplay_ItemFocusAnim-darkGrey_3ybDj {
   from {
-    background: #67707b;
+    background: rgba(255, 255, 255, 0.25);
     color: #8b929a;
   }
   to {
-    background: #3d4450;
+    background: rgba(255, 255, 255, 0.15);
     color: #fff;
   }
 }
@@ -23873,6 +24375,26 @@ a.bbcodes_LinkButton_jPpgc:hover {
   }
   to {
     background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes remoteplay_ItemFocusAnim-translucent-white-10_260b3 {
+  from {
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+  }
+}
+@keyframes remoteplay_ItemFocusAnim-translucent-white-20_3OEDn {
+  from {
+    background: rgba(255, 255, 255, 0.5);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.2);
     color: #fff;
   }
 }
@@ -23937,7 +24459,7 @@ a.bbcodes_LinkButton_jPpgc:hover {
   line-height: 22px;
   letter-spacing: 0.5px;
   text-transform: uppercase;
-  color: #8b929a;
+  color: rgba(255, 255, 255, 0.7);
   padding: 0px 0px 8px;
   display: flex;
   letter-spacing: 0.5px;
@@ -24930,6 +25452,14 @@ svg.remoteplay_IconMobile_2371n {
 .remoteplay_Footer_2l7VY.DialogFooter {
   margin-top: 0;
 }
+@keyframes reorderablelist_BackgroundAnimation_3Jw1U {
+  from {
+    background-position: 0 100%;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
 @keyframes reorderablelist_ItemFocusAnim-darkerGrey-nocolor_T4rhf {
   from {
     background: #3d4450;
@@ -24950,11 +25480,11 @@ svg.remoteplay_IconMobile_2371n {
 }
 @keyframes reorderablelist_ItemFocusAnim-darkGrey_2Uq4O {
   from {
-    background: #67707b;
+    background: rgba(255, 255, 255, 0.25);
     color: #8b929a;
   }
   to {
-    background: #3d4450;
+    background: rgba(255, 255, 255, 0.15);
     color: #fff;
   }
 }
@@ -24965,6 +25495,26 @@ svg.remoteplay_IconMobile_2371n {
   }
   to {
     background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes reorderablelist_ItemFocusAnim-translucent-white-10_3iJJl {
+  from {
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+  }
+}
+@keyframes reorderablelist_ItemFocusAnim-translucent-white-20_1bgRU {
+  from {
+    background: rgba(255, 255, 255, 0.5);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.2);
     color: #fff;
   }
 }
@@ -25176,6 +25726,14 @@ svg.reorderablelist_ReorderArrow_1jEeo {
 .footericons_ChordSummary_2NB_h.footericons_SizeSmall_1Zc5j {
   margin-right: 20px;
 }
+@keyframes recentchatssteamdeck_BackgroundAnimation_v87rF {
+  from {
+    background-position: 0 100%;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
 @keyframes recentchatssteamdeck_ItemFocusAnim-darkerGrey-nocolor_1W_MK {
   from {
     background: #3d4450;
@@ -25196,11 +25754,11 @@ svg.reorderablelist_ReorderArrow_1jEeo {
 }
 @keyframes recentchatssteamdeck_ItemFocusAnim-darkGrey_1pEXV {
   from {
-    background: #67707b;
+    background: rgba(255, 255, 255, 0.25);
     color: #8b929a;
   }
   to {
-    background: #3d4450;
+    background: rgba(255, 255, 255, 0.15);
     color: #fff;
   }
 }
@@ -25211,6 +25769,26 @@ svg.reorderablelist_ReorderArrow_1jEeo {
   }
   to {
     background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes recentchatssteamdeck_ItemFocusAnim-translucent-white-10_odmKL {
+  from {
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+  }
+}
+@keyframes recentchatssteamdeck_ItemFocusAnim-translucent-white-20_smtou {
+  from {
+    background: rgba(255, 255, 255, 0.5);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.2);
     color: #fff;
   }
 }
@@ -25853,7 +26431,7 @@ svg.reorderablelist_ReorderArrow_1jEeo {
 }
 .chatWindow .chatEntry.GamepadMode,
 .GamepadMode .chatWindow .chatEntry {
-  padding: 0px;
+  padding: 0px 50px 40px 0px;
   background-color: transparent;
 }
 .chatWindow .chatEntry.GamepadMode.gpfocuswithin > *,
@@ -26003,6 +26581,10 @@ svg.reorderablelist_ReorderArrow_1jEeo {
   background-color: #23262e;
   box-shadow: 0 0 10px #0e141b;
 }
+#QuickAccess-Menu .GamepadMode.friendlist .FriendsListSteamDeckTopSection {
+  height: auto;
+  padding-top: 0px;
+}
 #QuickAccess-Menu .GamepadMode.friendlist.gpfocuswithin {
   background-color: transparent;
   background: transparent;
@@ -26018,6 +26600,11 @@ svg.reorderablelist_ReorderArrow_1jEeo {
 .GamepadMode.friendlist .FriendsListSteamDeckTopSection {
   transition-property: none;
   background-color: transparent;
+  height: 100px;
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 .GamepadMode.friendlist .FriendsListSteamDeckTabs {
   display: flex;
@@ -26118,10 +26705,8 @@ svg.reorderablelist_ReorderArrow_1jEeo {
   letter-spacing: 0px;
   color: #fff;
   font-weight: bold;
-  font-size: 12px;
-  line-height: 22px;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
+  font-size: 22px;
+  line-height: 28px;
   color: #fff;
   margin: 0;
   display: flex;
@@ -26244,6 +26829,17 @@ svg.reorderablelist_ReorderArrow_1jEeo {
 }
 .GamepadMode.friendlist .FriendsListTabPanel.GroupsTabList > div:first-of-type {
   padding-top: 4px;
+}
+.GamepadMode.friendlist
+  .FriendsListTabPanel.FavoritesTabList
+  > div:last-of-type {
+  padding-bottom: 40px;
+}
+.GamepadMode.friendlist .FriendsListTabPanel.FriendsTabList > div:last-of-type {
+  padding-bottom: 40px;
+}
+.GamepadMode.friendlist .FriendsListTabPanel.GroupsTabList > div:last-of-type {
+  padding-bottom: 40px;
 }
 .GamepadMode.friendlist
   .FriendsListTabPanel.RecentMessagesTabList
@@ -26719,6 +27315,14 @@ svg.reorderablelist_ReorderArrow_1jEeo {
   color: #67707b;
   font-size: 16px;
 }
+@keyframes recentchatssteamdeck_BackgroundAnimation_v87rF {
+  from {
+    background-position: 0 100%;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
 @keyframes recentchatssteamdeck_ItemFocusAnim-darkerGrey-nocolor_1W_MK {
   from {
     background: #3d4450;
@@ -26739,11 +27343,11 @@ svg.reorderablelist_ReorderArrow_1jEeo {
 }
 @keyframes recentchatssteamdeck_ItemFocusAnim-darkGrey_1pEXV {
   from {
-    background: #67707b;
+    background: rgba(255, 255, 255, 0.25);
     color: #8b929a;
   }
   to {
-    background: #3d4450;
+    background: rgba(255, 255, 255, 0.15);
     color: #fff;
   }
 }
@@ -26754,6 +27358,26 @@ svg.reorderablelist_ReorderArrow_1jEeo {
   }
   to {
     background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes recentchatssteamdeck_ItemFocusAnim-translucent-white-10_odmKL {
+  from {
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+  }
+}
+@keyframes recentchatssteamdeck_ItemFocusAnim-translucent-white-20_smtou {
+  from {
+    background: rgba(255, 255, 255, 0.5);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.2);
     color: #fff;
   }
 }
@@ -29282,6 +29906,14 @@ div:hover > .BBCodeCollapseControl {
     margin-top: 10px;
   }
 }
+@keyframes friendinvites_BackgroundAnimation_3ZMc5 {
+  from {
+    background-position: 0 100%;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
 @keyframes friendinvites_ItemFocusAnim-darkerGrey-nocolor_1OURP {
   from {
     background: #3d4450;
@@ -29302,11 +29934,11 @@ div:hover > .BBCodeCollapseControl {
 }
 @keyframes friendinvites_ItemFocusAnim-darkGrey_wQRdQ {
   from {
-    background: #67707b;
+    background: rgba(255, 255, 255, 0.25);
     color: #8b929a;
   }
   to {
-    background: #3d4450;
+    background: rgba(255, 255, 255, 0.15);
     color: #fff;
   }
 }
@@ -29317,6 +29949,26 @@ div:hover > .BBCodeCollapseControl {
   }
   to {
     background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes friendinvites_ItemFocusAnim-translucent-white-10_2JKoK {
+  from {
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+  }
+}
+@keyframes friendinvites_ItemFocusAnim-translucent-white-20_2oq2Q {
+  from {
+    background: rgba(255, 255, 255, 0.5);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.2);
     color: #fff;
   }
 }
@@ -29956,7 +30608,7 @@ div:hover > .BBCodeCollapseControl {
 }
 .chatWindow .chatEntry.GamepadMode,
 .GamepadMode .chatWindow .chatEntry {
-  padding: 0px;
+  padding: 0px 50px 40px 0px;
   background-color: transparent;
 }
 .chatWindow .chatEntry.GamepadMode.gpfocuswithin > *,
@@ -30106,6 +30758,10 @@ div:hover > .BBCodeCollapseControl {
   background-color: #23262e;
   box-shadow: 0 0 10px #0e141b;
 }
+#QuickAccess-Menu .GamepadMode.friendlist .FriendsListSteamDeckTopSection {
+  height: auto;
+  padding-top: 0px;
+}
 #QuickAccess-Menu .GamepadMode.friendlist.gpfocuswithin {
   background-color: transparent;
   background: transparent;
@@ -30121,6 +30777,11 @@ div:hover > .BBCodeCollapseControl {
 .GamepadMode.friendlist .FriendsListSteamDeckTopSection {
   transition-property: none;
   background-color: transparent;
+  height: 100px;
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 .GamepadMode.friendlist .FriendsListSteamDeckTabs {
   display: flex;
@@ -30221,10 +30882,8 @@ div:hover > .BBCodeCollapseControl {
   letter-spacing: 0px;
   color: #fff;
   font-weight: bold;
-  font-size: 12px;
-  line-height: 22px;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
+  font-size: 22px;
+  line-height: 28px;
   color: #fff;
   margin: 0;
   display: flex;
@@ -30347,6 +31006,17 @@ div:hover > .BBCodeCollapseControl {
 }
 .GamepadMode.friendlist .FriendsListTabPanel.GroupsTabList > div:first-of-type {
   padding-top: 4px;
+}
+.GamepadMode.friendlist
+  .FriendsListTabPanel.FavoritesTabList
+  > div:last-of-type {
+  padding-bottom: 40px;
+}
+.GamepadMode.friendlist .FriendsListTabPanel.FriendsTabList > div:last-of-type {
+  padding-bottom: 40px;
+}
+.GamepadMode.friendlist .FriendsListTabPanel.GroupsTabList > div:last-of-type {
+  padding-bottom: 40px;
 }
 .GamepadMode.friendlist
   .FriendsListTabPanel.RecentMessagesTabList
@@ -30822,6 +31492,14 @@ div:hover > .BBCodeCollapseControl {
   color: #67707b;
   font-size: 16px;
 }
+@keyframes friendinvites_BackgroundAnimation_3ZMc5 {
+  from {
+    background-position: 0 100%;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
 @keyframes friendinvites_ItemFocusAnim-darkerGrey-nocolor_1OURP {
   from {
     background: #3d4450;
@@ -30842,11 +31520,11 @@ div:hover > .BBCodeCollapseControl {
 }
 @keyframes friendinvites_ItemFocusAnim-darkGrey_wQRdQ {
   from {
-    background: #67707b;
+    background: rgba(255, 255, 255, 0.25);
     color: #8b929a;
   }
   to {
-    background: #3d4450;
+    background: rgba(255, 255, 255, 0.15);
     color: #fff;
   }
 }
@@ -30857,6 +31535,26 @@ div:hover > .BBCodeCollapseControl {
   }
   to {
     background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes friendinvites_ItemFocusAnim-translucent-white-10_2JKoK {
+  from {
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+  }
+}
+@keyframes friendinvites_ItemFocusAnim-translucent-white-20_2oq2Q {
+  from {
+    background: rgba(255, 255, 255, 0.5);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.2);
     color: #fff;
   }
 }
@@ -31004,6 +31702,14 @@ div:hover > .BBCodeCollapseControl {
   margin-left: 24px;
   margin-right: 24px;
 }
+@keyframes unreadchatmessagesheadersteamdeck_BackgroundAnimation_1Hj25 {
+  from {
+    background-position: 0 100%;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
 @keyframes unreadchatmessagesheadersteamdeck_ItemFocusAnim-darkerGrey-nocolor_1drG4 {
   from {
     background: #3d4450;
@@ -31024,11 +31730,11 @@ div:hover > .BBCodeCollapseControl {
 }
 @keyframes unreadchatmessagesheadersteamdeck_ItemFocusAnim-darkGrey_3vJLM {
   from {
-    background: #67707b;
+    background: rgba(255, 255, 255, 0.25);
     color: #8b929a;
   }
   to {
-    background: #3d4450;
+    background: rgba(255, 255, 255, 0.15);
     color: #fff;
   }
 }
@@ -31039,6 +31745,26 @@ div:hover > .BBCodeCollapseControl {
   }
   to {
     background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes unreadchatmessagesheadersteamdeck_ItemFocusAnim-translucent-white-10_3yWy7 {
+  from {
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+  }
+}
+@keyframes unreadchatmessagesheadersteamdeck_ItemFocusAnim-translucent-white-20_3Z08b {
+  from {
+    background: rgba(255, 255, 255, 0.5);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.2);
     color: #fff;
   }
 }
@@ -31683,7 +32409,7 @@ div:hover > .BBCodeCollapseControl {
 }
 .chatWindow .chatEntry.GamepadMode,
 .GamepadMode .chatWindow .chatEntry {
-  padding: 0px;
+  padding: 0px 50px 40px 0px;
   background-color: transparent;
 }
 .chatWindow .chatEntry.GamepadMode.gpfocuswithin > *,
@@ -31833,6 +32559,10 @@ div:hover > .BBCodeCollapseControl {
   background-color: #23262e;
   box-shadow: 0 0 10px #0e141b;
 }
+#QuickAccess-Menu .GamepadMode.friendlist .FriendsListSteamDeckTopSection {
+  height: auto;
+  padding-top: 0px;
+}
 #QuickAccess-Menu .GamepadMode.friendlist.gpfocuswithin {
   background-color: transparent;
   background: transparent;
@@ -31848,6 +32578,11 @@ div:hover > .BBCodeCollapseControl {
 .GamepadMode.friendlist .FriendsListSteamDeckTopSection {
   transition-property: none;
   background-color: transparent;
+  height: 100px;
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 .GamepadMode.friendlist .FriendsListSteamDeckTabs {
   display: flex;
@@ -31948,10 +32683,8 @@ div:hover > .BBCodeCollapseControl {
   letter-spacing: 0px;
   color: #fff;
   font-weight: bold;
-  font-size: 12px;
-  line-height: 22px;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
+  font-size: 22px;
+  line-height: 28px;
   color: #fff;
   margin: 0;
   display: flex;
@@ -32074,6 +32807,17 @@ div:hover > .BBCodeCollapseControl {
 }
 .GamepadMode.friendlist .FriendsListTabPanel.GroupsTabList > div:first-of-type {
   padding-top: 4px;
+}
+.GamepadMode.friendlist
+  .FriendsListTabPanel.FavoritesTabList
+  > div:last-of-type {
+  padding-bottom: 40px;
+}
+.GamepadMode.friendlist .FriendsListTabPanel.FriendsTabList > div:last-of-type {
+  padding-bottom: 40px;
+}
+.GamepadMode.friendlist .FriendsListTabPanel.GroupsTabList > div:last-of-type {
+  padding-bottom: 40px;
 }
 .GamepadMode.friendlist
   .FriendsListTabPanel.RecentMessagesTabList
@@ -32583,6 +33327,14 @@ div:hover > .BBCodeCollapseControl {
   box-shadow: 0 0 8px 1px rgba(218, 149, 0, 0.5);
   border-radius: 2px;
 }
+@keyframes voicechatheadersteamdeck_BackgroundAnimation_3E1yZ {
+  from {
+    background-position: 0 100%;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
 @keyframes voicechatheadersteamdeck_ItemFocusAnim-darkerGrey-nocolor_jyLlf {
   from {
     background: #3d4450;
@@ -32603,11 +33355,11 @@ div:hover > .BBCodeCollapseControl {
 }
 @keyframes voicechatheadersteamdeck_ItemFocusAnim-darkGrey_HsK6E {
   from {
-    background: #67707b;
+    background: rgba(255, 255, 255, 0.25);
     color: #8b929a;
   }
   to {
-    background: #3d4450;
+    background: rgba(255, 255, 255, 0.15);
     color: #fff;
   }
 }
@@ -32618,6 +33370,26 @@ div:hover > .BBCodeCollapseControl {
   }
   to {
     background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes voicechatheadersteamdeck_ItemFocusAnim-translucent-white-10_2f5VL {
+  from {
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+  }
+}
+@keyframes voicechatheadersteamdeck_ItemFocusAnim-translucent-white-20_AoFA7 {
+  from {
+    background: rgba(255, 255, 255, 0.5);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.2);
     color: #fff;
   }
 }
@@ -33260,7 +34032,7 @@ div:hover > .BBCodeCollapseControl {
 }
 .chatWindow .chatEntry.GamepadMode,
 .GamepadMode .chatWindow .chatEntry {
-  padding: 0px;
+  padding: 0px 50px 40px 0px;
   background-color: transparent;
 }
 .chatWindow .chatEntry.GamepadMode.gpfocuswithin > *,
@@ -33410,6 +34182,10 @@ div:hover > .BBCodeCollapseControl {
   background-color: #23262e;
   box-shadow: 0 0 10px #0e141b;
 }
+#QuickAccess-Menu .GamepadMode.friendlist .FriendsListSteamDeckTopSection {
+  height: auto;
+  padding-top: 0px;
+}
 #QuickAccess-Menu .GamepadMode.friendlist.gpfocuswithin {
   background-color: transparent;
   background: transparent;
@@ -33425,6 +34201,11 @@ div:hover > .BBCodeCollapseControl {
 .GamepadMode.friendlist .FriendsListSteamDeckTopSection {
   transition-property: none;
   background-color: transparent;
+  height: 100px;
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 .GamepadMode.friendlist .FriendsListSteamDeckTabs {
   display: flex;
@@ -33525,10 +34306,8 @@ div:hover > .BBCodeCollapseControl {
   letter-spacing: 0px;
   color: #fff;
   font-weight: bold;
-  font-size: 12px;
-  line-height: 22px;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
+  font-size: 22px;
+  line-height: 28px;
   color: #fff;
   margin: 0;
   display: flex;
@@ -33651,6 +34430,17 @@ div:hover > .BBCodeCollapseControl {
 }
 .GamepadMode.friendlist .FriendsListTabPanel.GroupsTabList > div:first-of-type {
   padding-top: 4px;
+}
+.GamepadMode.friendlist
+  .FriendsListTabPanel.FavoritesTabList
+  > div:last-of-type {
+  padding-bottom: 40px;
+}
+.GamepadMode.friendlist .FriendsListTabPanel.FriendsTabList > div:last-of-type {
+  padding-bottom: 40px;
+}
+.GamepadMode.friendlist .FriendsListTabPanel.GroupsTabList > div:last-of-type {
+  padding-bottom: 40px;
 }
 .GamepadMode.friendlist
   .FriendsListTabPanel.RecentMessagesTabList
@@ -34311,6 +35101,14 @@ div:hover > .BBCodeCollapseControl {
     background-color 2s cubic-bezier(0.17, 0.45, 0.14, 0.83);
   opacity: 0.8;
 }
+@keyframes main_BackgroundAnimation_3-MCu {
+  from {
+    background-position: 0 100%;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
 @keyframes main_ItemFocusAnim-darkerGrey-nocolor_3plWN {
   from {
     background: #3d4450;
@@ -34331,11 +35129,11 @@ div:hover > .BBCodeCollapseControl {
 }
 @keyframes main_ItemFocusAnim-darkGrey_3khNe {
   from {
-    background: #67707b;
+    background: rgba(255, 255, 255, 0.25);
     color: #8b929a;
   }
   to {
-    background: #3d4450;
+    background: rgba(255, 255, 255, 0.15);
     color: #fff;
   }
 }
@@ -34346,6 +35144,26 @@ div:hover > .BBCodeCollapseControl {
   }
   to {
     background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes main_ItemFocusAnim-translucent-white-10_38cxd {
+  from {
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+  }
+}
+@keyframes main_ItemFocusAnim-translucent-white-20_1KpqF {
+  from {
+    background: rgba(255, 255, 255, 0.5);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.2);
     color: #fff;
   }
 }
@@ -34984,7 +35802,7 @@ div:hover > .BBCodeCollapseControl {
 }
 .chatWindow .chatEntry.GamepadMode,
 .GamepadMode .chatWindow .chatEntry {
-  padding: 0px;
+  padding: 0px 50px 40px 0px;
   background-color: transparent;
 }
 .chatWindow .chatEntry.GamepadMode.gpfocuswithin > *,
@@ -35134,6 +35952,10 @@ div:hover > .BBCodeCollapseControl {
   background-color: #23262e;
   box-shadow: 0 0 10px #0e141b;
 }
+#QuickAccess-Menu .GamepadMode.friendlist .FriendsListSteamDeckTopSection {
+  height: auto;
+  padding-top: 0px;
+}
 #QuickAccess-Menu .GamepadMode.friendlist.gpfocuswithin {
   background-color: transparent;
   background: transparent;
@@ -35149,6 +35971,11 @@ div:hover > .BBCodeCollapseControl {
 .GamepadMode.friendlist .FriendsListSteamDeckTopSection {
   transition-property: none;
   background-color: transparent;
+  height: 100px;
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 .GamepadMode.friendlist .FriendsListSteamDeckTabs {
   display: flex;
@@ -35249,10 +36076,8 @@ div:hover > .BBCodeCollapseControl {
   letter-spacing: 0px;
   color: #fff;
   font-weight: bold;
-  font-size: 12px;
-  line-height: 22px;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
+  font-size: 22px;
+  line-height: 28px;
   color: #fff;
   margin: 0;
   display: flex;
@@ -35375,6 +36200,17 @@ div:hover > .BBCodeCollapseControl {
 }
 .GamepadMode.friendlist .FriendsListTabPanel.GroupsTabList > div:first-of-type {
   padding-top: 4px;
+}
+.GamepadMode.friendlist
+  .FriendsListTabPanel.FavoritesTabList
+  > div:last-of-type {
+  padding-bottom: 40px;
+}
+.GamepadMode.friendlist .FriendsListTabPanel.FriendsTabList > div:last-of-type {
+  padding-bottom: 40px;
+}
+.GamepadMode.friendlist .FriendsListTabPanel.GroupsTabList > div:last-of-type {
+  padding-bottom: 40px;
 }
 .GamepadMode.friendlist
   .FriendsListTabPanel.RecentMessagesTabList
@@ -38307,6 +39143,14 @@ body.in_global_drag .title-area {
 .DesktopUI .title-area .title-bar-actions {
   margin-right: 0px;
 }
+@keyframes BackgroundAnimation {
+  from {
+    background-position: 0 100%;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
 @keyframes ItemFocusAnim-darkerGrey-nocolor {
   from {
     background: #3d4450;
@@ -38327,11 +39171,11 @@ body.in_global_drag .title-area {
 }
 @keyframes ItemFocusAnim-darkGrey {
   from {
-    background: #67707b;
+    background: rgba(255, 255, 255, 0.25);
     color: #8b929a;
   }
   to {
-    background: #3d4450;
+    background: rgba(255, 255, 255, 0.15);
     color: #fff;
   }
 }
@@ -38342,6 +39186,26 @@ body.in_global_drag .title-area {
   }
   to {
     background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes ItemFocusAnim-translucent-white-10 {
+  from {
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+  }
+}
+@keyframes ItemFocusAnim-translucent-white-20 {
+  from {
+    background: rgba(255, 255, 255, 0.5);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.2);
     color: #fff;
   }
 }
@@ -38979,7 +39843,7 @@ body.in_global_drag .title-area {
 }
 .chatWindow .chatEntry.GamepadMode,
 .GamepadMode .chatWindow .chatEntry {
-  padding: 0px;
+  padding: 0px 50px 40px 0px;
   background-color: transparent;
 }
 .chatWindow .chatEntry.GamepadMode.gpfocuswithin > *,
@@ -39129,6 +39993,10 @@ body.in_global_drag .title-area {
   background-color: #23262e;
   box-shadow: 0 0 10px #0e141b;
 }
+#QuickAccess-Menu .GamepadMode.friendlist .FriendsListSteamDeckTopSection {
+  height: auto;
+  padding-top: 0px;
+}
 #QuickAccess-Menu .GamepadMode.friendlist.gpfocuswithin {
   background-color: transparent;
   background: transparent;
@@ -39144,6 +40012,11 @@ body.in_global_drag .title-area {
 .GamepadMode.friendlist .FriendsListSteamDeckTopSection {
   transition-property: none;
   background-color: transparent;
+  height: 100px;
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 .GamepadMode.friendlist .FriendsListSteamDeckTabs {
   display: flex;
@@ -39244,10 +40117,8 @@ body.in_global_drag .title-area {
   letter-spacing: 0px;
   color: #fff;
   font-weight: bold;
-  font-size: 12px;
-  line-height: 22px;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
+  font-size: 22px;
+  line-height: 28px;
   color: #fff;
   margin: 0;
   display: flex;
@@ -39370,6 +40241,17 @@ body.in_global_drag .title-area {
 }
 .GamepadMode.friendlist .FriendsListTabPanel.GroupsTabList > div:first-of-type {
   padding-top: 4px;
+}
+.GamepadMode.friendlist
+  .FriendsListTabPanel.FavoritesTabList
+  > div:last-of-type {
+  padding-bottom: 40px;
+}
+.GamepadMode.friendlist .FriendsListTabPanel.FriendsTabList > div:last-of-type {
+  padding-bottom: 40px;
+}
+.GamepadMode.friendlist .FriendsListTabPanel.GroupsTabList > div:last-of-type {
+  padding-bottom: 40px;
 }
 .GamepadMode.friendlist
   .FriendsListTabPanel.RecentMessagesTabList
@@ -39837,6 +40719,14 @@ body.in_global_drag .title-area {
   color: #67707b;
   font-size: 16px;
 }
+@keyframes BackgroundAnimation {
+  from {
+    background-position: 0 100%;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
 @keyframes ItemFocusAnim-darkerGrey-nocolor {
   from {
     background: #3d4450;
@@ -39857,11 +40747,11 @@ body.in_global_drag .title-area {
 }
 @keyframes ItemFocusAnim-darkGrey {
   from {
-    background: #67707b;
+    background: rgba(255, 255, 255, 0.25);
     color: #8b929a;
   }
   to {
-    background: #3d4450;
+    background: rgba(255, 255, 255, 0.15);
     color: #fff;
   }
 }
@@ -39872,6 +40762,26 @@ body.in_global_drag .title-area {
   }
   to {
     background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes ItemFocusAnim-translucent-white-10 {
+  from {
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+  }
+}
+@keyframes ItemFocusAnim-translucent-white-20 {
+  from {
+    background: rgba(255, 255, 255, 0.5);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.2);
     color: #fff;
   }
 }
