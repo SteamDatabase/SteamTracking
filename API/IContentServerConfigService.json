@@ -124,6 +124,12 @@
                     "type": "uint32",
                     "optional": false,
                     "description": "What is the percent utilization of the busiest datacenter egress link?"
+                },
+                {
+                    "name": "upstream_peering_utilization",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "What is the percent utilization of the busiest peering link?"
                 }
             ]
         }
