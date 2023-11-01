@@ -1,6 +1,7 @@
 import { join as pathJoin } from "path";
 import { readFile, writeFile } from "fs/promises";
 import { createWriteStream } from "fs";
+import { createHash } from "node:crypto";
 import { parse, latestEcmaVersion } from "espree";
 import { traverse, Syntax } from "estraverse";
 import { GetFilesToParse } from "./dump_javascript_paths.mjs";
@@ -1573,7 +1574,10 @@ function ParseEnum(node) {
 	}
 
 	if (enumName.length < 2) {
-		return null;
+		const hash = createHash("sha256");
+		hash.update(allEnumKeys.join(","));
+
+		enumName = "UnnamedEnum" + hash.digest("hex").substring(0, 16);
 	}
 
 	/*

@@ -6532,6 +6532,3155 @@ enum TOUCH_QUADRANT
 	TOUCH_QUADRANT_RIGHT = 8;
 }
 
+enum UnnamedEnum008b8bff579bf723
+{
+	AppIcons = 0;
+	Weapons = 1;
+	Ammo = 2;
+	Inventory = 3;
+	Magic = 4;
+	Actions = 5;
+	Movement = 6;
+	Menu = 7;
+	Vehicle = 8;
+	Utility = 9;
+	Input = 10;
+	Media = 11;
+	Targets = 12;
+	Social = 13;
+	Other = 14;
+	User = 15;
+}
+
+enum UnnamedEnum01e0af9000abb618
+{
+	Verification = 0;
+	Removing = 1;
+	Error = 2;
+}
+
+enum UnnamedEnum0417760694451931
+{
+	Standard = 1;
+	Knockout = 2;
+	Duos = 3;
+}
+
+enum UnnamedEnum0529e22c307fa21f
+{
+	Menu = 0;
+	NavEntries = 1;
+	Controller = 2;
+}
+
+enum UnnamedEnum05440eaac2cdd031
+{
+	k_ePrimary = 3;
+	k_eFeatured = 2;
+	k_eDefaultFeatured = 1;
+	k_eGeneral = 0;
+}
+
+enum UnnamedEnum0558827179236bf8
+{
+	PENDING = 0;
+	UNKNOWN = 1;
+	BLOCKED = 2;
+	UNBLOCKED = 3;
+}
+
+enum UnnamedEnum0731ad10e9d10396
+{
+	Idle = 0;
+	Loading = 1;
+	OK = 2;
+	FailedToLoad = 3;
+	RequiresCooldown = 4;
+}
+
+enum UnnamedEnum082dd12e6086021e
+{
+	Neutral = 0;
+	Up = 1;
+	Down = 2;
+}
+
+enum UnnamedEnum095e5536e2e0d84b
+{
+	k_eIntro = 0;
+	k_eNonVerifiedGame = 1;
+	k_eGyro = 2;
+	k_eAppTextInputDoesNotAutomaticallyInvokesKeyboard = 3;
+	k_eRemotePlayConfirm = 4;
+	k_eAppLauncherInteractionIssues = 5;
+	k_eAppHasSmallText = 6;
+	k_eExternalControllersAndSIAPI = 7;
+	k_eIntroToActionSets = 8;
+	k_eIntroToSteamInputGames = 9;
+}
+
+enum UnnamedEnum0987f77de7dada0f
+{
+	Pending = 0;
+	Shown = 1;
+	Closed = 2;
+	Failed = 3;
+}
+
+enum UnnamedEnum09e3cce3b6071fcb
+{
+	None = 0;
+	Generic = 1;
+	Expired = 2;
+}
+
+enum UnnamedEnum0be4f2c7ab15fa09
+{
+	Invalid = undefined;
+	Default = 0;
+	Light = 1;
+	Medium_Light = 2;
+	Medium = 3;
+	Medium_Dark = 4;
+	Dark = 5;
+}
+
+enum UnnamedEnum0cd3b70614cdedc8
+{
+	GAMEPAD = 0;
+	KEYBOARD = 1;
+	APPLICATION = 2;
+	BROWSER = 3;
+}
+
+enum UnnamedEnum0d5b030e19417dab
+{
+	RANK_ELIGIBLE = 1;
+	BATTLECUP = 2;
+	BAN_WARNING = 4;
+	RETURNING_PLAYER = 16;
+	COMMS_DISRUPTIVE = 64;
+}
+
+enum UnnamedEnum0f3c4fdd99d18bb8
+{
+	None = 0;
+	Connecting = 1;
+	FindingRoute = 2;
+	Connected = 3;
+	ClosedByPeer = 4;
+	ProblemDetectedLocally = 5;
+}
+
+enum UnnamedEnum0f5dedf55f59c3be
+{
+	Main = 0;
+	Predictions = 1;
+	Fantasy = 2;
+}
+
+enum UnnamedEnum0fd8aa29d83fb708
+{
+	Headless = 0;
+	Full = 1;
+	StandaloneKeyboard = 2;
+	ControllerConfigurator = 3;
+	Overlay = 4;
+}
+
+enum UnnamedEnum103c46b6e6314ec9
+{
+	k_EUnknown = 0;
+	k_EActive = 1;
+	k_EActiveDownloading = 2;
+	k_EActivePaused = 3;
+	k_EQueued = 4;
+	k_EQueuedNext = 5;
+	k_EScheduled = 6;
+	k_ERemovedFromQueue = 7;
+	k_EError = 8;
+	k_EUpdatesDisabledByUser = 9;
+	k_EUpdatesDisabledByApp = 10;
+	k_ECompleted = 11;
+}
+
+enum UnnamedEnum10c37c457648be1b
+{
+	LastChatted = 0;
+	AlphabeticalByName = 1;
+	OnlineStatus = 2;
+}
+
+enum UnnamedEnum12b52e8a1dd53cc3
+{
+	Name = 0;
+	NameReverse = 1;
+	Path = 2;
+	PathReverse = 3;
+}
+
+enum UnnamedEnum12ea4feab06d6070
+{
+	Small = 0;
+	Medium = 1;
+	Large = 2;
+}
+
+enum UnnamedEnum13a063a90abefe7d
+{
+	Action = 19;
+	Adventure = 21;
+	Casual = 597;
+	Indie = 492;
+	MMO = 128;
+	Racing = 699;
+	RPG = 122;
+	Simulation = 599;
+	Sports = 701;
+	Strategy = 9;
+}
+
+enum UnnamedEnum14b20255bb5ef56d
+{
+	None = 0;
+	Ago = 1;
+	Remaining = 2;
+}
+
+enum UnnamedEnum15675cb60f1450a5
+{
+	None = 0;
+	Generic = 1;
+	NotFriends = 2;
+	NoChatPermissionInGroup = 3;
+	RateLimitExceeded = 4;
+}
+
+enum UnnamedEnum183417f294ffc34a
+{
+	None = 0;
+	StartupAnimation = 1;
+	LoadingSpinner = 2;
+}
+
+enum UnnamedEnum184ae5e9b907d5cb
+{
+	k_eNone = 0;
+	k_eSecond = 1;
+	k_eMinute = 2;
+	k_eHour = 3;
+	k_eDay = 4;
+	k_eWeek = 5;
+	k_eMonth = 6;
+	k_eYear = 7;
+}
+
+enum UnnamedEnum19d0d9cc3ff0fd44
+{
+	k_NotRejected = undefined;
+	k_RejectNoMainCap = 0;
+	k_RejectWrongPlatform = 1;
+	k_RejectNoComingSoon = 2;
+	k_RejectNoVR = 3;
+	k_RejectCreatorClan = 4;
+	k_RejectIgnoredGame = 5;
+	k_RejectSupportedLanguage = 6;
+	k_RejectNotLoaded = 7;
+	k_RejectIgnoreGameTags = 8;
+	k_RejectIgnoreContentDescriptors = 9;
+	k_RejectEarlyAccess = 10;
+	k_RejectSoftware = 11;
+	k_RejectDLC = 12;
+	k_RejectInLibrary = 13;
+	k_RejectNotInLibrary = 14;
+	k_RejectVideo = 15;
+	k_RejectNoDiscount = 16;
+	k_RejectAlreadyDisplayed = 17;
+}
+
+enum UnnamedEnum1a595e4880050966
+{
+	k_EOtherEvent = 1;
+	k_EGameEvent = 2;
+	k_EPartyEvent = 3;
+	k_EMeetingEvent = 4;
+	k_ESpecialCauseEvent = 5;
+	k_EMusicAndArtsEvent = 6;
+	k_ESportsEvent = 7;
+	k_ETripEvent = 8;
+	k_EChatEvent = 9;
+	k_EGameReleaseEvent = 10;
+	k_EBroadcastEvent = 11;
+	k_ESmallUpdateEvent = 12;
+	k_ERegularUpdateEvent = 13;
+	k_EMajorUpdateEvent = 14;
+	k_EFutureReleaseEvent = 16;
+	k_EESportTournamentStreamEvent = 17;
+	k_EDevStreamEvent = 18;
+	k_EFamousStreamEvent = 19;
+	k_EGameSalesEvent = 20;
+	k_EGameItemSalesEvent = 21;
+	k_EInGameBonusXPEvent = 22;
+	k_EInGameLootEvent = 23;
+	k_EInGamePerksEvent = 24;
+	k_EInGameChallengeEvent = 25;
+	k_EInGameContestEvent = 26;
+	k_EIRLEvent = 27;
+	k_ENewsEvent = 28;
+	k_EBetaReleaseEvent = 29;
+	k_EFreeTrial = 31;
+	k_ESeasonRelease = 32;
+	k_ECrosspostEvent = 34;
+	k_EInGameEventGeneral = 35;
+}
+
+enum UnnamedEnum1c49f2493d5575b5
+{
+	None = 0;
+	FriendAdded = 1;
+	AchievementUnlocked = 2;
+	ReceivedNewGame = 4;
+	JoinedGroup = 8;
+	GroupCreated = 64;
+	AddedGameToWishlist = 128;
+	RecommendedGame = 256;
+	ScreenshotPublished = 512;
+	VideoPublished = 1024;
+	TaggedInScreenshot = 2048;
+	PublishedStatus = 4096;
+	FilePublished_Other = 8192;
+	FileFavorited = 16384;
+	AllIndividual = 20431;
+	AllGamesOwnedPrivacy = 134;
+	AllPlaytimePrivacy = 2;
+	UnlockedGroupAchievement = 65536;
+	PostedAnnouncement = 131072;
+	ScheduledEvent = 262144;
+	SelectedNewPOTW = 524288;
+	PromotedNewAdmin = 1048576;
+	ReceivesGroupComment = 2097152;
+	CuratorRecommendations = 4194304;
+	AllClans = 4128768;
+	PublishedFileAnnouncementGreenlight = 16777216;
+	PublishedFileAnnouncementMicrotransaction = 33554432;
+	AllPublishedFileAnnouncements = 50331648;
+	FollowingPublishedUGC = 134217728;
+	All = 4294967295;
+	FlagsNeedingBackfill = undefined;
+	AllFollowingUGC = 9216;
+	SubscriptionsBackfilled = 2147483648;
+}
+
+enum UnnamedEnum1d137d7f853b05fe
+{
+	k_NotAvailableOnStore = 0;
+	k_NotIndexedBySolr = 1;
+	k_NotReturnedByQuery = 2;
+	k_IncorrectlyIndexedBySolr = 3;
+	k_SyncTagsIssue = 4;
+	k_Unknown = 5;
+}
+
+enum UnnamedEnum1e5291df888dba39
+{
+	UNKNOWN = 0;
+	TEXT = 1;
+	OPENTAG = 2;
+	CLOSETAG = 3;
+}
+
+enum UnnamedEnum1eb9732e676a1f8b
+{
+	Loaded = 0;
+	Loading = 1;
+	Complete = 2;
+}
+
+enum UnnamedEnum1ec6c82c0cacba76
+{
+	k_Success = 0;
+	k_PrimaryDomainFail = 1;
+	k_SecondaryDomainFail = 2;
+}
+
+enum UnnamedEnum209be1a5e8248296
+{
+	INVALID_NODE_TYPE = 0;
+	BEST_OF_ONE = 1;
+	BEST_OF_THREE = 2;
+	BEST_OF_FIVE = 3;
+	BEST_OF_TWO = 4;
+}
+
+enum UnnamedEnum213cfe813b358659
+{
+	k_eDiscussions = 0;
+	k_eThumbsUp = 1;
+	k_eClickThrough = 2;
+	k_eMuted = 3;
+	k_ePlayedVideo = 4;
+	k_eReminder_Opened = 5;
+	k_eReminder_MobilePush = 6;
+	k_eReminder_Email = 7;
+	k_eReminder_CalendarApple = 8;
+	k_eReminder_CalendarGoogle = 9;
+	k_eReminder_CalendarOutlook = 10;
+	k_eReminder_EmailUnverified = 11;
+	k_eReminder_MobilePushMissing = 12;
+}
+
+enum UnnamedEnum21b6f12fba92de13
+{
+	UNSET = 0;
+	DIVISION_I = 1;
+	DIVISION_II = 2;
+}
+
+enum UnnamedEnum21e1ba10d510cf3b
+{
+	None = 0;
+	Horizontal = 1;
+	Vertical = 2;
+}
+
+enum UnnamedEnum24822a7e69ba9ab7
+{
+	k_EPending = 0;
+	k_EAccepted = 1;
+	k_ERejected = 2;
+}
+
+enum UnnamedEnum258cde65fc9c0016
+{
+	Invalid = 0;
+	Casual = 1;
+	PrivateLobby = 2;
+	SoloBot = 3;
+	Ranked = 4;
+}
+
+enum UnnamedEnum258d6841bf5f8ea0
+{
+	Hidden = 0;
+	Prompt = 1;
+}
+
+enum UnnamedEnum2603c05e3f1b8c52
+{
+	NOT_TRACKING = undefined;
+	UP_TO_DATE = 0;
+	POSSIBLY_STALE = 1;
+	STALE = 2;
+}
+
+enum UnnamedEnum262b5710133da930
+{
+	Minimized = 1;
+	Hidden = 2;
+	Tooltip = 4;
+	ContextMenu = 8;
+	Resizable = 16;
+}
+
+enum UnnamedEnum26b26332fa565251
+{
+	BackSpace = 65288;
+	Tab = 65289;
+	Return = 65293;
+	Page_Up = 65365;
+	Page_Down = 65366;
+}
+
+enum UnnamedEnum27f3d5ee56814acf
+{
+	None = 0;
+	Left = 1;
+	Right = 2;
+}
+
+enum UnnamedEnum2ad3a297ec46ebfc
+{
+	k_Custom = 0;
+	k_AssetKit = 1;
+	k_DemoPressPreview = 2;
+	k_ScheduleLiveStream = 3;
+	k_CancelSection = 4;
+	k_DemoNotReady = 5;
+	k_ReviewCategorization = 6;
+	k_DemoReview = 7;
+	k_PressPreviewDetails = 8;
+	k_StatsSummary = 9;
+	k_SurveyButton = 10;
+	k_DemoLaunch = 11;
+	k_CallForRegistration = 12;
+	k_EnterDiscount = 13;
+	k_EnterDiscountReminder = 14;
+	k_LearnMore = 15;
+	k_MediaUsePermission = 16;
+}
+
+enum UnnamedEnum2bf3fa6c4886638f
+{
+	Standard = 0;
+	NoTransform = 1;
+	NoTransformSparseContent = 2;
+}
+
+enum UnnamedEnum2c41fa064d91dbff
+{
+	k_EOpenMic = 0;
+	k_EPushToTalk = 1;
+	k_EPushToMute = 2;
+}
+
+enum UnnamedEnum2cb9b3e31468ae28
+{
+	Invalid = 0;
+	Normal = 1;
+	Turbo = 2;
+	Duos = 3;
+	TechPrototypeA = 4;
+	Sandbox = 5;
+	Puzzle = 6;
+	Tutorial = 7;
+	Streetfight = 8;
+	Onslaught = 9;
+}
+
+enum UnnamedEnum2dfea80db4b6d761
+{
+	LaunchGame = 0;
+	FriendMessage = 1;
+	ChatMention = 2;
+	ChatMessage = 3;
+	ToastMessage = 4;
+	ToastAchievement = 5;
+	ToastMisc = 6;
+	ToastMiscShort = 7;
+	FriendOnline = 8;
+	FriendInGame = 9;
+	VolSound = 10;
+	ShowModal = 11;
+	HideModal = 12;
+	IntoGameDetail = 13;
+	OutOfGameDetail = 14;
+	PagedNavigation = 15;
+	ToggleOn = 16;
+	ToggleOff = 17;
+	SliderUp = 18;
+	SliderDown = 19;
+	ChangeTabs = 20;
+	DefaultOk = 21;
+	OpenSideMenu = 22;
+	CloseSideMenu = 23;
+	BasicNav = 24;
+	FailedNav = 25;
+	Typing = 26;
+	TimerExpired = 27;
+}
+
+enum UnnamedEnum304f4bcd9d879629
+{
+	Idle = 0;
+	Loading = 1;
+	OK = 2;
+	Failed = 3;
+}
+
+enum UnnamedEnum3162b5cef919f5eb
+{
+	INVALID = 0;
+	SPRING_2021_LEAGUE = 1;
+	SPRING_2021_MAJOR = 2;
+	INTERNATIONAL_2021_QUALIFIERS = 3;
+	INTERNATIONAL_2021 = 4;
+	WINTER_2021_LEAGUE = 5;
+	WINTER_2021_LEAGUE_FINALS = 6;
+	SPRING_2022_LEAGUE = 7;
+	SPRING_2022_MAJOR = 8;
+	SUMMER_2022_LEAGUE = 9;
+	SUMMER_2022_MAJOR = 10;
+	INTERNATIONAL_2022 = 11;
+	CHINA_SPRING_2022_LEAGUE_FINALS = 12;
+	INTERNATIONAL_2022_QUALIFIERS = 13;
+	INTERNATIONAL_2022_LASTCHANCE = 14;
+	WINTER_2023_LEAGUE = 15;
+	WINTER_2023_MAJOR = 16;
+	SPRING_2023_LEAGUE = 17;
+	SPRING_2023_MAJOR = 18;
+	SUMMER_2023_LEAGUE = 19;
+	SUMMER_2023_MAJOR = 20;
+	INTERNATIONAL_2023 = 21;
+	INTERNATIONAL_2023_QUALIFIERS = 22;
+}
+
+enum UnnamedEnum31aea444bbab8afd
+{
+	Unknown = 0;
+	Wired = 1;
+	Wireless = 2;
+	Virtual = 3;
+}
+
+enum UnnamedEnum322f4518bf470232
+{
+	Overlay = 0;
+	Notification = 1;
+	Tooltip = 2;
+	PopupContextMenu = 3;
+	StandaloneContextMenu = 4;
+}
+
+enum UnnamedEnum336a74c93bcf88cc
+{
+	Idle = 1;
+	Loading = 2;
+	EndOfContent = 3;
+}
+
+enum UnnamedEnum336e1b6bafa25e4e
+{
+	Init = 0;
+	Loading = 1;
+	MoreContent = 2;
+	OutOfContent = 3;
+	Errored = 4;
+}
+
+enum UnnamedEnum3461d68cd53273a9
+{
+	Init = 0;
+	UserChooser = 1;
+	LoginWithBack = 2;
+	Login = 3;
+	RemoveConfirmation = 4;
+	WaitingForLibrary = 5;
+}
+
+enum UnnamedEnum347138d53ae1d40b
+{
+	Initial = 0;
+	ConnectionProgress = 1;
+	NotPresent = 2;
+	NetworkInfoPrompt = 3;
+}
+
+enum UnnamedEnum34918bc068bf9b01
+{
+	k_None = 0;
+	k_SteamStart = 1;
+	k_StartupBeep = 2;
+}
+
+enum UnnamedEnum354c1e07cb8c12de
+{
+	k_RegistrationConfirmation = 0;
+	k_Reminder = 1;
+	k_Invite = 2;
+	k_Followup = 3;
+	k_Starting = 4;
+	k_InviteReminder = 5;
+	k_Update = 6;
+	k_PermissionRequest = 7;
+}
+
+enum UnnamedEnum35983b064195a8f0
+{
+	Invalid = 0;
+	TrackingSystemName_String = 1000;
+	ModelNumber_String = 1001;
+	SerialNumber_String = 1002;
+	RenderModelName_String = 1003;
+	WillDriftInYaw_Bool = 1004;
+	ManufacturerName_String = 1005;
+	TrackingFirmwareVersion_String = 1006;
+	HardwareRevision_String = 1007;
+	AllWirelessDongleDescriptions_String = 1008;
+	ConnectedWirelessDongle_String = 1009;
+	DeviceIsWireless_Bool = 1010;
+	DeviceIsCharging_Bool = 1011;
+	DeviceBatteryPercentage_Float = 1012;
+	StatusDisplayTransform_Matrix34 = 1013;
+	Firmware_UpdateAvailable_Bool = 1014;
+	Firmware_ManualUpdate_Bool = 1015;
+	Firmware_ManualUpdateURL_String = 1016;
+	HardwareRevision_Uint64 = 1017;
+	FirmwareVersion_Uint64 = 1018;
+	FPGAVersion_Uint64 = 1019;
+	VRCVersion_Uint64 = 1020;
+	RadioVersion_Uint64 = 1021;
+	DongleVersion_Uint64 = 1022;
+	BlockServerShutdown_Bool = 1023;
+	CanUnifyCoordinateSystemWithHmd_Bool = 1024;
+	ContainsProximitySensor_Bool = 1025;
+	DeviceProvidesBatteryStatus_Bool = 1026;
+	DeviceCanPowerOff_Bool = 1027;
+	Firmware_ProgrammingTarget_String = 1028;
+	DeviceClass_Int32 = 1029;
+	HasCamera_Bool = 1030;
+	DriverVersion_String = 1031;
+	Firmware_ForceUpdateRequired_Bool = 1032;
+	ViveSystemButtonFixRequired_Bool = 1033;
+	ParentDriver_Uint64 = 1034;
+	ResourceRoot_String = 1035;
+	RegisteredDeviceType_String = 1036;
+	InputProfilePath_String = 1037;
+	NeverTracked_Bool = 1038;
+	NumCameras_Int32 = 1039;
+	CameraFrameLayout_Int32 = 1040;
+	CameraStreamFormat_Int32 = 1041;
+	AdditionalDeviceSettingsPath_String = 1042;
+	DevicePowerUsage_Float = 1052;
+	ReportsTimeSinceVSync_Bool = 2000;
+	SecondsFromVsyncToPhotons_Float = 2001;
+	DisplayFrequency_Float = 2002;
+	UserIpdMeters_Float = 2003;
+	CurrentUniverseId_Uint64 = 2004;
+	PreviousUniverseId_Uint64 = 2005;
+	DisplayFirmwareVersion_Uint64 = 2006;
+	IsOnDesktop_Bool = 2007;
+	DisplayMCType_Int32 = 2008;
+	DisplayMCOffset_Float = 2009;
+	DisplayMCScale_Float = 2010;
+	EdidVendorID_Int32 = 2011;
+	DisplayMCImageLeft_String = 2012;
+	DisplayMCImageRight_String = 2013;
+	DisplayGCBlackClamp_Float = 2014;
+	EdidProductID_Int32 = 2015;
+	CameraToHeadTransform_Matrix34 = 2016;
+	DisplayGCType_Int32 = 2017;
+	DisplayGCOffset_Float = 2018;
+	DisplayGCScale_Float = 2019;
+	DisplayGCPrescale_Float = 2020;
+	DisplayGCImage_String = 2021;
+	LensCenterLeftU_Float = 2022;
+	LensCenterLeftV_Float = 2023;
+	LensCenterRightU_Float = 2024;
+	LensCenterRightV_Float = 2025;
+	UserHeadToEyeDepthMeters_Float = 2026;
+	CameraFirmwareVersion_Uint64 = 2027;
+	CameraFirmwareDescription_String = 2028;
+	DisplayFPGAVersion_Uint64 = 2029;
+	DisplayBootloaderVersion_Uint64 = 2030;
+	DisplayHardwareVersion_Uint64 = 2031;
+	AudioFirmwareVersion_Uint64 = 2032;
+	CameraCompatibilityMode_Int32 = 2033;
+	ScreenshotHorizontalFieldOfViewDegrees_Float = 2034;
+	ScreenshotVerticalFieldOfViewDegrees_Float = 2035;
+	DisplaySuppressed_Bool = 2036;
+	DisplayAllowNightMode_Bool = 2037;
+	DisplayMCImageWidth_Int32 = 2038;
+	DisplayMCImageHeight_Int32 = 2039;
+	DisplayMCImageNumChannels_Int32 = 2040;
+	DisplayMCImageData_Binary = 2041;
+	SecondsFromPhotonsToVblank_Float = 2042;
+	DriverDirectModeSendsVsyncEvents_Bool = 2043;
+	DisplayDebugMode_Bool = 2044;
+	GraphicsAdapterLuid_Uint64 = 2045;
+	DriverProvidedChaperonePath_String = 2048;
+	ExpectedTrackingReferenceCount_Int32 = 2049;
+	ExpectedControllerCount_Int32 = 2050;
+	NamedIconPathControllerLeftDeviceOff_String = 2051;
+	NamedIconPathControllerRightDeviceOff_String = 2052;
+	NamedIconPathTrackingReferenceDeviceOff_String = 2053;
+	DoNotApplyPrediction_Bool = 2054;
+	CameraToHeadTransforms_Matrix34_Array = 2055;
+	DistortionMeshResolution_Int32 = 2056;
+	DriverIsDrawingControllers_Bool = 2057;
+	DriverRequestsApplicationPause_Bool = 2058;
+	DriverRequestsReducedRendering_Bool = 2059;
+	MinimumIpdStepMeters_Float = 2060;
+	AudioBridgeFirmwareVersion_Uint64 = 2061;
+	ImageBridgeFirmwareVersion_Uint64 = 2062;
+	ImuToHeadTransform_Matrix34 = 2063;
+	ImuFactoryGyroBias_Vector3 = 2064;
+	ImuFactoryGyroScale_Vector3 = 2065;
+	ImuFactoryAccelerometerBias_Vector3 = 2066;
+	ImuFactoryAccelerometerScale_Vector3 = 2067;
+	ConfigurationIncludesLighthouse20Features_Bool = 2069;
+	Prop_AdditionalRadioFeatures_Uint64 = 2070;
+	Prop_CameraWhiteBalance_Vector4_Array = 2071;
+	Prop_CameraDistortionFunction_Int32_Array = 2072;
+	Prop_CameraDistortionCoefficients_Float_Array = 2073;
+	Prop_ExpectedControllerType_String = 2074;
+	HmdTrackingStyle_Int32 = 2075;
+	DriverProvidedChaperoneVisibility_Bool = 2076;
+	HmdColumnCorrectionSettingPrefix_String = 2077;
+	CameraSupportsCompatibilityModes_Bool = 2078;
+	SupportsRoomViewDepthProjection_Bool = 2079;
+	DisplayAvailableFrameRates_Float_Array = 2080;
+	DisplaySupportsRuntimeFramerateChange_Bool = 2084;
+	DisplaySupportsAnalogGain_Bool = 2085;
+	DisplayMinAnalogGain_Float = 2086;
+	DisplayMaxAnalogGain_Float = 2087;
+	DashboardScale_Float = 2091;
+	PeerButtonInfo_String = 2092;
+	IpdUIRangeMinMeters_Float = 2100;
+	IpdUIRangeMaxMeters_Float = 2101;
+	Hmd_SupportsHDCP14LegacyCompat_Bool = 2102;
+	Hmd_SupportsMicMonitoring_Bool = 2103;
+	Hmd_SupportsDisplayPortTrainingMode_Bool = 2104;
+	Hmd_SupportsRoomViewDirect_Bool = 2105;
+	Hmd_SupportsAppThrottling_Bool = 2106;
+	Hmd_SupportsGpuBusMonitoring_Bool = 2107;
+	DriverRequestedMuraCorrectionMode_Int32 = 2200;
+	DriverRequestedMuraFeather_InnerLeft_Int32 = 2201;
+	DriverRequestedMuraFeather_InnerRight_Int32 = 2202;
+	DriverRequestedMuraFeather_InnerTop_Int32 = 2203;
+	DriverRequestedMuraFeather_InnerBottom_Int32 = 2204;
+	DriverRequestedMuraFeather_OuterLeft_Int32 = 2205;
+	DriverRequestedMuraFeather_OuterRight_Int32 = 2206;
+	DriverRequestedMuraFeather_OuterTop_Int32 = 2207;
+	DriverRequestedMuraFeather_OuterBottom_Int32 = 2208;
+	Audio_SupportsDualSpeakerAndJackOutput_Bool = 2303;
+	AttachedDeviceId_String = 3000;
+	SupportedButtons_Uint64 = 3001;
+	Axis0Type_Int32 = 3002;
+	Axis1Type_Int32 = 3003;
+	Axis2Type_Int32 = 3004;
+	Axis3Type_Int32 = 3005;
+	Axis4Type_Int32 = 3006;
+	ControllerRoleHint_Int32 = 3007;
+	FieldOfViewLeftDegrees_Float = 4000;
+	FieldOfViewRightDegrees_Float = 4001;
+	FieldOfViewTopDegrees_Float = 4002;
+	FieldOfViewBottomDegrees_Float = 4003;
+	TrackingRangeMinimumMeters_Float = 4004;
+	TrackingRangeMaximumMeters_Float = 4005;
+	ModeLabel_String = 4006;
+	IconPathName_String = 5000;
+	NamedIconPathDeviceOff_String = 5001;
+	NamedIconPathDeviceSearching_String = 5002;
+	NamedIconPathDeviceSearchingAlert_String = 5003;
+	NamedIconPathDeviceReady_String = 5004;
+	NamedIconPathDeviceReadyAlert_String = 5005;
+	NamedIconPathDeviceNotReady_String = 5006;
+	NamedIconPathDeviceStandby_String = 5007;
+	NamedIconPathDeviceAlertLow_String = 5008;
+	DisplayHiddenArea_Binary_Start = 5100;
+	DisplayHiddenArea_Binary_End = 5150;
+	ParentContainer = 5151;
+	UserConfigPath_String = 6000;
+	InstallPath_String = 6001;
+	HasDisplayComponent_Bool = 6002;
+	HasControllerComponent_Bool = 6003;
+	HasCameraComponent_Bool = 6004;
+	HasDriverDirectModeComponent_Bool = 6005;
+	HasVirtualDisplayComponent_Bool = 6006;
+	HasSpatialAnchorsSupport_Bool = 6007;
+	ControllerType_String = 7000;
+	LegacyInputProfile_String = 7001;
+	VendorSpecific_Reserved_Start = 10000;
+	VendorSpecific_Reserved_End = 10999;
+	TrackedDeviceProperty_Max = 1000000;
+}
+
+enum UnnamedEnum36c53e97c2363988
+{
+	Absolute = 0;
+	FromAvailableStart = 1;
+}
+
+enum UnnamedEnum370fea7da2f80997
+{
+	Debug = 0;
+	Info = 1;
+	Warning = 2;
+	Error = 3;
+}
+
+enum UnnamedEnum3740744456cf55a3
+{
+	NotShown = 0;
+	FadingIn = 1;
+	Showing = 2;
+	FadingOut = 3;
+	Finished = 4;
+}
+
+enum UnnamedEnum375c587373ce1506
+{
+	kCollections = 1;
+	kOneCollection = 10;
+	kSearchResults = 11;
+}
+
+enum UnnamedEnum3823e60141e7e50d
+{
+	k_ESaleTagFilter = 0;
+	k_ELanguage = 1;
+	k_EContentDescriptor = 2;
+	k_EUserPreference = 3;
+	k_EPrice = 4;
+	k_EAppType = 5;
+}
+
+enum UnnamedEnum3864c06f550e20d6
+{
+	None = 0;
+	Weak = 1;
+	Ok = 2;
+	Good = 3;
+	Excellent = 4;
+}
+
+enum UnnamedEnum3bfd44005cf37904
+{
+	k_Optional = 0;
+	k_Suggested = 1;
+	k_Required = 2;
+}
+
+enum UnnamedEnum3dd1c4581017d7dd
+{
+	FIRST = 0;
+	LAST = 1;
+	MAINTAIN_X = 2;
+	MAINTAIN_Y = 3;
+	PREFERRED_CHILD = 4;
+}
+
+enum UnnamedEnum3fcaac8de59d5e7c
+{
+	PRE_NAME = 0;
+	IN_NAME = 1;
+	POST_NAME = 2;
+	IN_VALUE = 3;
+	IN_QUOTED_VALUE = 4;
+}
+
+enum UnnamedEnum409440688093b1ab
+{
+	k_EResultOK = 1;
+	k_EResultFail = 2;
+	k_EResultNoConnection = 3;
+	k_EResultInvalidPassword = 5;
+	k_EResultLoggedInElsewhere = 6;
+	k_EResultInvalidProtocolVer = 7;
+	k_EResultInvalidParam = 8;
+	k_EResultFileNotFound = 9;
+	k_EResultBusy = 10;
+	k_EResultInvalidState = 11;
+	k_EResultInvalidName = 12;
+	k_EResultInvalidEmail = 13;
+	k_EResultDuplicateName = 14;
+	k_EResultAccessDenied = 15;
+	k_EResultTimeout = 16;
+	k_EResultBanned = 17;
+	k_EResultAccountNotFound = 18;
+	k_EResultInvalidSteamID = 19;
+	k_EResultServiceUnavailable = 20;
+	k_EResultNotLoggedOn = 21;
+	k_EResultPending = 22;
+	k_EResultEncryptionFailure = 23;
+	k_EResultInsufficientPrivilege = 24;
+	k_EResultLimitExceeded = 25;
+	k_EResultRevoked = 26;
+	k_EResultExpired = 27;
+	k_EResultAlreadyRedeemed = 28;
+	k_EResultDuplicateRequest = 29;
+	k_EResultAlreadyOwned = 30;
+	k_EResultIPNotFound = 31;
+	k_EResultPersistFailed = 32;
+	k_EResultLockingFailed = 33;
+	k_EResultLogonSessionReplaced = 34;
+	k_EResultConnectFailed = 35;
+	k_EResultHandshakeFailed = 36;
+	k_EResultIOFailure = 37;
+	k_EResultRemoteDisconnect = 38;
+	k_EResultShoppingCartNotFound = 39;
+	k_EResultBlocked = 40;
+	k_EResultIgnored = 41;
+	k_EResultNoMatch = 42;
+	k_EResultAccountDisabled = 43;
+	k_EResultServiceReadOnly = 44;
+	k_EResultAccountNotFeatured = 45;
+	k_EResultAdministratorOK = 46;
+	k_EResultContentVersion = 47;
+	k_EResultTryAnotherCM = 48;
+	k_EResultPasswordRequiredToKickSession = 49;
+	k_EResultAlreadyLoggedInElsewhere = 50;
+	k_EResultSuspended = 51;
+	k_EResultCancelled = 52;
+	k_EResultDataCorruption = 53;
+	k_EResultDiskFull = 54;
+	k_EResultRemoteCallFailed = 55;
+	k_EResultPasswordUnset = 56;
+	k_EResultExternalAccountUnlinked = 57;
+	k_EResultPSNTicketInvalid = 58;
+	k_EResultExternalAccountAlreadyLinked = 59;
+	k_EResultRemoteFileConflict = 60;
+	k_EResultIllegalPassword = 61;
+	k_EResultSameAsPreviousValue = 62;
+	k_EResultAccountLogonDenied = 63;
+	k_EResultCannotUseOldPassword = 64;
+	k_EResultInvalidLoginAuthCode = 65;
+	k_EResultAccountLogonDeniedNoMail = 66;
+	k_EResultHardwareNotCapableOfIPT = 67;
+	k_EResultIPTInitError = 68;
+	k_EResultParentalControlRestricted = 69;
+	k_EResultFacebookQueryError = 70;
+	k_EResultExpiredLoginAuthCode = 71;
+	k_EResultIPLoginRestrictionFailed = 72;
+	k_EResultAccountLockedDown = 73;
+	k_EResultAccountLogonDeniedVerifiedEmailRequired = 74;
+	k_EResultNoMatchingURL = 75;
+	k_EResultBadResponse = 76;
+	k_EResultRequirePasswordReEntry = 77;
+	k_EResultValueOutOfRange = 78;
+	k_EResultUnexpectedError = 79;
+	k_EResultDisabled = 80;
+	k_EResultInvalidCEGSubmission = 81;
+	k_EResultRestrictedDevice = 82;
+	k_EResultRegionLocked = 83;
+	k_EResultRateLimitExceeded = 84;
+	k_EResultAccountLoginDeniedNeedTwoFactor = 85;
+	k_EResultItemDeleted = 86;
+	k_EResultAccountLoginDeniedThrottle = 87;
+	k_EResultTwoFactorCodeMismatch = 88;
+	k_EResultTwoFactorActivationCodeMismatch = 89;
+	k_EResultAccountAssociatedToMultiplePartners = 90;
+	k_EResultNotModified = 91;
+	k_EResultNoMobileDevice = 92;
+	k_EResultTimeNotSynced = 93;
+	k_EResultSmsCodeFailed = 94;
+	k_EResultAccountLimitExceeded = 95;
+	k_EResultAccountActivityLimitExceeded = 96;
+	k_EResultPhoneActivityLimitExceeded = 97;
+	k_EResultRefundToWallet = 98;
+	k_EResultEmailSendFailure = 99;
+	k_EResultNotSettled = 100;
+	k_EResultNeedCaptcha = 101;
+	k_EResultGSLTDenied = 102;
+	k_EResultGSOwnerDenied = 103;
+	k_EResultInvalidItemType = 104;
+	k_EResultIPBanned = 105;
+	k_EResultGSLTExpired = 106;
+	k_EResultInsufficientFunds = 107;
+	k_EResultTooManyPending = 108;
+	k_EResultNoSiteLicensesFound = 109;
+	k_EResultWGNetworkSendExceeded = 110;
+	k_EResultAccountNotFriends = 111;
+	k_EResultLimitedUserAccount = 112;
+	k_EResultCantRemoveItem = 113;
+	k_EResultAccountDeleted = 114;
+	k_EResultExistingUserCancelledLicense = 115;
+	k_EResultCommunityCooldown = 116;
+	k_EResultNoLauncherSpecified = 117;
+	k_EResultMustAgreeToSSA = 118;
+	k_EResultLauncherMigrated = 119;
+	k_EResultSteamRealmMismatch = 120;
+	k_EResultInvalidSignature = 121;
+	k_EResultParseFailure = 122;
+	k_EResultNoVerifiedPhone = 123;
+	k_EResultInsufficientBattery = 124;
+	k_EResultChargerRequired = 125;
+	k_EResultCachedCredentialInvalid = 126;
+	K_EResultPhoneNumberIsVOIP = 127;
+	k_EResultNotSupported = 128;
+}
+
+enum UnnamedEnum40e8d944a2ddb9d1
+{
+	Screenshots = 1;
+	Clips = 2;
+}
+
+enum UnnamedEnum444e26d5fd11557e
+{
+	None = 0;
+	Deleting = 1;
+	Deleted = 2;
+}
+
+enum UnnamedEnum448e6dd2c19f0f8c
+{
+	Invalid = 0;
+	FriendAdded = 1;
+	AchievementUnlocked = 2;
+	ReceivedNewGame = 3;
+	JoinedGroup = 4;
+	CommentByMe = 5;
+	FriendRemoved = 6;
+	GroupCreated = 7;
+	CommentOnMe = 8;
+	AddedGameToWishlist = 9;
+	RecommendedGame = 10;
+	ScreenshotPublished_Deprecated = 11;
+	VideoPublished_Deprecated = 12;
+	FilePublished_Screenshot = 13;
+	FilePublished_Video = 14;
+	FilePublished_WorkshopItem = 15;
+	UserStatus = 16;
+	FilePublished_Collection = 17;
+	FilePublished_GreenlightGame = 18;
+	FilePublished_WorkshopAnnouncement = 19;
+	FilePublished_WebGuide = 20;
+	FilePublished_Screenshot_Tagged = 21;
+	FilePublished_Art = 22;
+	FileFavorited = 23;
+	PlayedGameFirstTime = 30;
+	ClanAchievement = 1001;
+	PostedAnnouncement = 1002;
+	ScheduledEvent = 1003;
+	SelectedNewPOTW = 1004;
+	PromotedNewAdmin = 1005;
+	MessageOnClanPage = 1006;
+	CuratorRecommendedGame = 1007;
+}
+
+enum UnnamedEnum46a5ccceb5385d09
+{
+	k_ELoading = 0;
+	k_EOkToDiscount = 1;
+	k_ENeedsOptIn = 2;
+	k_EOptInOptedOut = 3;
+	k_EOptInRestricted = 4;
+	k_EOptInNoBaseAppToRegister = 5;
+	k_EJustReleased = 6;
+	k_EPriceIncreased = 7;
+	k_ECooldownWindow = 8;
+	k_EOverlapsExisting = 9;
+	k_ENoAppInRequiredList = 10;
+	k_EOptInMultiAppPackageRegisterSomeGame = 11;
+}
+
+enum UnnamedEnum47122ffa63e68b01
+{
+	Character = 0;
+	Enter = 1;
+	Half = 2;
+	Tab = 3;
+	Meta = 4;
+	Close = 5;
+	Caps = 6;
+	LeftShift = 7;
+	RightShift = 8;
+	Backspace = 9;
+	Spacebar = 10;
+	Spacer25 = 11;
+}
+
+enum UnnamedEnum48a0b37c58c83454
+{
+	INVALID = undefined;
+	CASUAL_MATCH = 0;
+	PRACTICE = 1;
+	COOP_BOT_MATCH = 4;
+	COMPETITIVE_MATCH = 7;
+	WEEKEND_TOURNEY = 9;
+	LOCAL_BOT_MATCH = 10;
+	SPECTATOR = 11;
+	EVENT_MATCH = 12;
+	NEW_PLAYER_POOL = 14;
+	FEATURED_GAMEMODE = 15;
+}
+
+enum UnnamedEnum4935268003b18d26
+{
+	Favorites = 0;
+	FriendsList = 1;
+	GroupChats = 2;
+	RecentMessages = 3;
+	FirstTab = 0;
+	MaxTab = 3;
+}
+
+enum UnnamedEnum498d6571fb6036d5
+{
+	k_NotVisible = 0;
+	k_Prompt = 1;
+	k_GatheringData = 2;
+	k_SentResults = 3;
+}
+
+enum UnnamedEnum498f9ba208938629
+{
+	kHidden = 0;
+	kVisible = 1;
+	kWaitingToShow = 2;
+	kWaitingToHide = 3;
+}
+
+enum UnnamedEnum4b0c2d915210fd30
+{
+	UNKNOWN = 0;
+	GAMEPAD = 1;
+	KEYBOARD = 2;
+	MOUSE = 3;
+	TOUCH = 4;
+	LPAD = 5;
+	RPAD = 6;
+}
+
+enum UnnamedEnum4cc6d63ba18ecebd
+{
+	None = 0;
+	Generic = 1;
+	Expired = 2;
+	Network = 3;
+	MoveAuthenticator = 4;
+	RateLimitExceeded = 5;
+	AnonymousLogin = 6;
+}
+
+enum UnnamedEnum4ceac336526a1979
+{
+	k_None = 0;
+	k_TopLeft = 1;
+	k_TopRight = 2;
+	k_BottomRight = 3;
+	k_BottomLeft = 4;
+}
+
+enum UnnamedEnum4da6e256f9442d62
+{
+	HALF_WIDTH = 1;
+	LARGE = 2;
+	FULLSCREEN = 3;
+}
+
+enum UnnamedEnum4f36dc9e4ec2644e
+{
+	Unstarted = 0;
+	Starting = 1;
+	Pending = 2;
+	Success = 3;
+	Failure = 4;
+	Stopped = 5;
+}
+
+enum UnnamedEnum511f114323ab4358
+{
+	NotPresent = 0;
+	Failed = 1;
+	Disconnected = 2;
+	Disconnecting = 3;
+	Connecting = 4;
+	Connected = 5;
+	Retrying = 6;
+}
+
+enum UnnamedEnum5164fb8413b2b2d9
+{
+	DashboardBarPopup = 0;
+	Tooltip = 1;
+	MainPanelMenu = 2;
+}
+
+enum UnnamedEnum52043658147c42e3
+{
+	INVALID = 0;
+	VERY_LIKELY = 1;
+	SOMEWHAT_LIKELY = 2;
+	UNCLEAR = 3;
+	SOMEWHAT_UNLIKELY = 4;
+	VERY_UNLIKELY = 5;
+}
+
+enum UnnamedEnum5208bd0306021116
+{
+	INVALID = 0;
+	WILD_CARD = 1;
+	GROUP_STAGE = 2;
+	GROUP_A = 3;
+	GROUP_B = 4;
+	OVERALL = 5;
+	PLAYOFF = 6;
+	RESULTS = 7;
+	DPC_POINT_STANDINGS = 8;
+	GROUP_C = 9;
+	GROUP_D = 10;
+	PLACEMENT = 11;
+}
+
+enum UnnamedEnum5492f48161b9f221
+{
+	Off = 0;
+	OneShot = 1;
+	Stuck = 2;
+	NonHeld = 3;
+	Held = 4;
+	On = 7;
+}
+
+enum UnnamedEnum55381d04bbcefb85
+{
+	SHORT = 0;
+	LONG = 1;
+	VERYLONG = 2;
+}
+
+enum UnnamedEnum55a9e12958fe69d4
+{
+	Millis = 1;
+	Seconds = 1000;
+	Minutes = 60000;
+	Hours = 3600000;
+	Days = 86400000;
+}
+
+enum UnnamedEnum55cdda1583360b17
+{
+	All = 1;
+	Popular = 2;
+}
+
+enum UnnamedEnum57a3dfe446c1fa85
+{
+	Low = 0;
+	Medium = 1;
+	High = 2;
+}
+
+enum UnnamedEnum57bf92e3de997183
+{
+	UNDEFINED = 0;
+	CORE = 1;
+	SUPPORT = 2;
+	OFFLANE = 3;
+	MID = 4;
+}
+
+enum UnnamedEnum5b3ee43818cae779
+{
+	k_None = 0;
+	k_Initialized = 1;
+	k_ShuttingDown = 2;
+}
+
+enum UnnamedEnum5b9e1e5238550b64
+{
+	None = 0;
+	Minimized = 1;
+	Hidden = 2;
+	TooltipHint = 4;
+	NoTaskbarIcon = 8;
+	Resizable = 16;
+	ScalePosition = 32;
+	ScaleSize = 64;
+	Maximized = 128;
+	BackgroundTransparent = 256;
+	NotFocusable = 512;
+	FullScreen = 1024;
+	Fullscreen_Exclusive = 2048;
+	ApplyBrowserScaleToDimensions = 4096;
+	AlwaysOnTop = 8192;
+	NoWindowShadow = 16384;
+	NoMinimize = 32768;
+	PopUpMenuHint = 65536;
+	IgnoreSavedSize = 131072;
+	NoRoundedCorners = 262144;
+	ForceRoundedCorners = 524288;
+	OverrideRedirect = 1048576;
+	IgnoreSteamDisplayScale = 2097152;
+}
+
+enum UnnamedEnum5dc3a1fbe6f34283
+{
+	k_eAppSpotlight = 0;
+	k_eFriendsActivity = 1;
+	k_ePlayNext = 2;
+	k_eNotifications = 3;
+	k_eVRDevOptions = 4;
+}
+
+enum UnnamedEnum5e14c6d1b71a889d
+{
+	LeftTop = 0;
+	CenterTop = 1;
+	RightTop = 2;
+	LeftMiddle = 3;
+	RightMiddle = 4;
+	LeftBottom = 5;
+	CenterBottom = 6;
+	RightBottom = 7;
+}
+
+enum UnnamedEnum5f9e5112c68eb7f0
+{
+	k_ModReviewed = 0;
+	k_ModUnreviewed = 1;
+	k_ChangeEventType = 2;
+	k_UpdateSeasonTags = 3;
+	k_ModReReviewed = 4;
+	k_ModRemovedFromSteamChina = 5;
+	k_ModFlagAdultOnlyContent = 6;
+	k_ModRemoveAdultOnlyContent = 7;
+}
+
+enum UnnamedEnum64e7e2fbc4d9ff40
+{
+	Unknown = 0;
+	Self = 1;
+	Friend = 2;
+	Player = 3;
+}
+
+enum UnnamedEnum65462e7320de51d7
+{
+	k_InvalidChangeType = 0;
+	k_FamilyGroupCreated = 1;
+	k_FamilyGroupModified = 2;
+	k_FamilyGroupDeleted = 3;
+	k_AccountInvited = 4;
+	k_InviteDeniedByGroupSize = 5;
+	k_JoinedFamilyGroup = 6;
+	k_JoinDeniedByRegionMismatch = 7;
+	k_JoinDeniedByMissingIpAddress = 8;
+	k_JoinDeniedByFamilyCooldown = 9;
+	k_JoinDeniedByUserCooldown = 10;
+	k_JoinDeniedByOtherGroup = 11;
+	k_AccountRemoved = 12;
+	k_InviteCancelled = 13;
+	k_PurchaseRequested = 14;
+	k_ParentalSettingsEnabled = 15;
+	k_ParentalSettingsDisabled = 16;
+	k_ParentalSettingsChanged = 17;
+}
+
+enum UnnamedEnum677a8f66df5a1db0
+{
+	Unopened = 0;
+	Hidden = 1;
+	Visible = 2;
+	FocusedIdle = 3;
+	FocusedActive = 4;
+}
+
+enum UnnamedEnum6847f45783a9d593
+{
+	Pitch = 0;
+	Yaw = 1;
+	Roll = 2;
+}
+
+enum UnnamedEnum68d075c3ee470a14
+{
+	A = 0;
+	B = 1;
+	X = 2;
+	Y = 3;
+	Left = 4;
+	Right = 5;
+	Up = 6;
+	Down = 7;
+	HomeMenu = 8;
+	QuickMenu = 9;
+	Select = 10;
+	Start = 11;
+	LeftBumper = 12;
+	RightBumper = 13;
+	LeftTrigger = 14;
+	RightTrigger = 15;
+	LeftStick = 16;
+	LeftStickClick = 17;
+	RightStick = 18;
+	RightStickClick = 19;
+	LeftTrackpad = 20;
+	LeftTrackpadClick = 21;
+	RightTrackpad = 22;
+	RightTrackpadClick = 23;
+	RearLeftUpper = 24;
+	RearLeftLower = 25;
+	RearRightUpper = 26;
+	RearRightLower = 27;
+}
+
+enum UnnamedEnum68de8213265dce35
+{
+	SELECTING = 0;
+	CONFIRM = 1;
+	SUBMITTING = 2;
+	DONE = 3;
+	ERROR = 4;
+}
+
+enum UnnamedEnum68e01081c8ab5277
+{
+	FriendsList = 0;
+	Chat = 1;
+}
+
+enum UnnamedEnum6a270a5d9acf89f0
+{
+	MainGamepadUI = 0;
+	OverlayGamepadUI = 1;
+	Keyboard = 2;
+	ControllerConfigurator = 3;
+	VR = 4;
+	MainDesktopUI = 5;
+	DesktopLogin = 6;
+	OverlayDesktopUI = 7;
+	SteamChinaReviewLauncher = 8;
+}
+
+enum UnnamedEnum6b26a08b3a0772c1
+{
+	Input = 0;
+	Output = 1;
+}
+
+enum UnnamedEnum6c1bb491618b74c6
+{
+	k_EServerResponded = 0;
+	k_EServerFailedToRespond = 1;
+	k_ENoServersListedOnMasterServer = 2;
+}
+
+enum UnnamedEnum6cf2b7ae1f44a3a3
+{
+	Invalid = 0;
+	TrackingSystemName_String = 1000;
+	ModelNumber_String = 1001;
+	SerialNumber_String = 1002;
+	RenderModelName_String = 1003;
+	WillDriftInYaw_Bool = 1004;
+	ManufacturerName_String = 1005;
+	TrackingFirmwareVersion_String = 1006;
+	HardwareRevision_String = 1007;
+	AllWirelessDongleDescriptions_String = 1008;
+	ConnectedWirelessDongle_String = 1009;
+	DeviceIsWireless_Bool = 1010;
+	DeviceIsCharging_Bool = 1011;
+	DeviceBatteryPercentage_Float = 1012;
+	StatusDisplayTransform_Matrix34 = 1013;
+	Firmware_UpdateAvailable_Bool = 1014;
+	Firmware_ManualUpdate_Bool = 1015;
+	Firmware_ManualUpdateURL_String = 1016;
+	HardwareRevision_Uint64 = 1017;
+	FirmwareVersion_Uint64 = 1018;
+	FPGAVersion_Uint64 = 1019;
+	VRCVersion_Uint64 = 1020;
+	RadioVersion_Uint64 = 1021;
+	DongleVersion_Uint64 = 1022;
+	BlockServerShutdown_Bool = 1023;
+	CanUnifyCoordinateSystemWithHmd_Bool = 1024;
+	ContainsProximitySensor_Bool = 1025;
+	DeviceProvidesBatteryStatus_Bool = 1026;
+	DeviceCanPowerOff_Bool = 1027;
+	Firmware_ProgrammingTarget_String = 1028;
+	DeviceClass_Int32 = 1029;
+	HasCamera_Bool = 1030;
+	DriverVersion_String = 1031;
+	Firmware_ForceUpdateRequired_Bool = 1032;
+	ViveSystemButtonFixRequired_Bool = 1033;
+	ParentDriver_Uint64 = 1034;
+	ResourceRoot_String = 1035;
+	RegisteredDeviceType_String = 1036;
+	InputProfilePath_String = 1037;
+	NeverTracked_Bool = 1038;
+	NumCameras_Int32 = 1039;
+	CameraFrameLayout_Int32 = 1040;
+	CameraStreamFormat_Int32 = 1041;
+	AdditionalDeviceSettingsPath_String = 1042;
+	DevicePowerUsage_Float = 1052;
+	ActualTrackingSystemName_String = 1054;
+	ReportsTimeSinceVSync_Bool = 2000;
+	SecondsFromVsyncToPhotons_Float = 2001;
+	DisplayFrequency_Float = 2002;
+	UserIpdMeters_Float = 2003;
+	CurrentUniverseId_Uint64 = 2004;
+	PreviousUniverseId_Uint64 = 2005;
+	DisplayFirmwareVersion_Uint64 = 2006;
+	IsOnDesktop_Bool = 2007;
+	DisplayMCType_Int32 = 2008;
+	DisplayMCOffset_Float = 2009;
+	DisplayMCScale_Float = 2010;
+	EdidVendorID_Int32 = 2011;
+	DisplayMCImageLeft_String = 2012;
+	DisplayMCImageRight_String = 2013;
+	DisplayGCBlackClamp_Float = 2014;
+	EdidProductID_Int32 = 2015;
+	CameraToHeadTransform_Matrix34 = 2016;
+	DisplayGCType_Int32 = 2017;
+	DisplayGCOffset_Float = 2018;
+	DisplayGCScale_Float = 2019;
+	DisplayGCPrescale_Float = 2020;
+	DisplayGCImage_String = 2021;
+	LensCenterLeftU_Float = 2022;
+	LensCenterLeftV_Float = 2023;
+	LensCenterRightU_Float = 2024;
+	LensCenterRightV_Float = 2025;
+	UserHeadToEyeDepthMeters_Float = 2026;
+	CameraFirmwareVersion_Uint64 = 2027;
+	CameraFirmwareDescription_String = 2028;
+	DisplayFPGAVersion_Uint64 = 2029;
+	DisplayBootloaderVersion_Uint64 = 2030;
+	DisplayHardwareVersion_Uint64 = 2031;
+	AudioFirmwareVersion_Uint64 = 2032;
+	CameraCompatibilityMode_Int32 = 2033;
+	ScreenshotHorizontalFieldOfViewDegrees_Float = 2034;
+	ScreenshotVerticalFieldOfViewDegrees_Float = 2035;
+	DisplaySuppressed_Bool = 2036;
+	DisplayAllowNightMode_Bool = 2037;
+	DisplayMCImageWidth_Int32 = 2038;
+	DisplayMCImageHeight_Int32 = 2039;
+	DisplayMCImageNumChannels_Int32 = 2040;
+	DisplayMCImageData_Binary = 2041;
+	SecondsFromPhotonsToVblank_Float = 2042;
+	DriverDirectModeSendsVsyncEvents_Bool = 2043;
+	DisplayDebugMode_Bool = 2044;
+	GraphicsAdapterLuid_Uint64 = 2045;
+	DriverProvidedChaperonePath_String = 2048;
+	ExpectedTrackingReferenceCount_Int32 = 2049;
+	ExpectedControllerCount_Int32 = 2050;
+	NamedIconPathControllerLeftDeviceOff_String = 2051;
+	NamedIconPathControllerRightDeviceOff_String = 2052;
+	NamedIconPathTrackingReferenceDeviceOff_String = 2053;
+	DoNotApplyPrediction_Bool = 2054;
+	CameraToHeadTransforms_Matrix34_Array = 2055;
+	DistortionMeshResolution_Int32 = 2056;
+	DriverIsDrawingControllers_Bool = 2057;
+	DriverRequestsApplicationPause_Bool = 2058;
+	DriverRequestsReducedRendering_Bool = 2059;
+	MinimumIpdStepMeters_Float = 2060;
+	AudioBridgeFirmwareVersion_Uint64 = 2061;
+	ImageBridgeFirmwareVersion_Uint64 = 2062;
+	ImuToHeadTransform_Matrix34 = 2063;
+	ImuFactoryGyroBias_Vector3 = 2064;
+	ImuFactoryGyroScale_Vector3 = 2065;
+	ImuFactoryAccelerometerBias_Vector3 = 2066;
+	ImuFactoryAccelerometerScale_Vector3 = 2067;
+	ConfigurationIncludesLighthouse20Features_Bool = 2069;
+	Prop_AdditionalRadioFeatures_Uint64 = 2070;
+	Prop_CameraWhiteBalance_Vector4_Array = 2071;
+	Prop_CameraDistortionFunction_Int32_Array = 2072;
+	Prop_CameraDistortionCoefficients_Float_Array = 2073;
+	Prop_ExpectedControllerType_String = 2074;
+	HmdTrackingStyle_Int32 = 2075;
+	DriverProvidedChaperoneVisibility_Bool = 2076;
+	HmdColumnCorrectionSettingPrefix_String = 2077;
+	CameraSupportsCompatibilityModes_Bool = 2078;
+	SupportsRoomViewDepthProjection_Bool = 2079;
+	DisplayAvailableFrameRates_Float_Array = 2080;
+	DisplaySupportsRuntimeFramerateChange_Bool = 2084;
+	DisplaySupportsAnalogGain_Bool = 2085;
+	DisplayMinAnalogGain_Float = 2086;
+	DisplayMaxAnalogGain_Float = 2087;
+	DashboardScale_Float = 2091;
+	PeerButtonInfo_String = 2092;
+	IpdUIRangeMinMeters_Float = 2100;
+	IpdUIRangeMaxMeters_Float = 2101;
+	Hmd_SupportsHDCP14LegacyCompat_Bool = 2102;
+	Hmd_SupportsMicMonitoring_Bool = 2103;
+	Hmd_SupportsDisplayPortTrainingMode_Bool = 2104;
+	Hmd_SupportsRoomViewDirect_Bool = 2105;
+	Hmd_SupportsAppThrottling_Bool = 2106;
+	Hmd_SupportsGpuBusMonitoring_Bool = 2107;
+	DriverRequestedMuraCorrectionMode_Int32 = 2200;
+	DriverRequestedMuraFeather_InnerLeft_Int32 = 2201;
+	DriverRequestedMuraFeather_InnerRight_Int32 = 2202;
+	DriverRequestedMuraFeather_InnerTop_Int32 = 2203;
+	DriverRequestedMuraFeather_InnerBottom_Int32 = 2204;
+	DriverRequestedMuraFeather_OuterLeft_Int32 = 2205;
+	DriverRequestedMuraFeather_OuterRight_Int32 = 2206;
+	DriverRequestedMuraFeather_OuterTop_Int32 = 2207;
+	DriverRequestedMuraFeather_OuterBottom_Int32 = 2208;
+	Audio_SupportsDualSpeakerAndJackOutput_Bool = 2303;
+	AttachedDeviceId_String = 3000;
+	SupportedButtons_Uint64 = 3001;
+	Axis0Type_Int32 = 3002;
+	Axis1Type_Int32 = 3003;
+	Axis2Type_Int32 = 3004;
+	Axis3Type_Int32 = 3005;
+	Axis4Type_Int32 = 3006;
+	ControllerRoleHint_Int32 = 3007;
+	FieldOfViewLeftDegrees_Float = 4000;
+	FieldOfViewRightDegrees_Float = 4001;
+	FieldOfViewTopDegrees_Float = 4002;
+	FieldOfViewBottomDegrees_Float = 4003;
+	TrackingRangeMinimumMeters_Float = 4004;
+	TrackingRangeMaximumMeters_Float = 4005;
+	ModeLabel_String = 4006;
+	IconPathName_String = 5000;
+	NamedIconPathDeviceOff_String = 5001;
+	NamedIconPathDeviceSearching_String = 5002;
+	NamedIconPathDeviceSearchingAlert_String = 5003;
+	NamedIconPathDeviceReady_String = 5004;
+	NamedIconPathDeviceReadyAlert_String = 5005;
+	NamedIconPathDeviceNotReady_String = 5006;
+	NamedIconPathDeviceStandby_String = 5007;
+	NamedIconPathDeviceAlertLow_String = 5008;
+	DisplayHiddenArea_Binary_Start = 5100;
+	DisplayHiddenArea_Binary_End = 5150;
+	ParentContainer = 5151;
+	UserConfigPath_String = 6000;
+	InstallPath_String = 6001;
+	HasDisplayComponent_Bool = 6002;
+	HasControllerComponent_Bool = 6003;
+	HasCameraComponent_Bool = 6004;
+	HasDriverDirectModeComponent_Bool = 6005;
+	HasVirtualDisplayComponent_Bool = 6006;
+	HasSpatialAnchorsSupport_Bool = 6007;
+	ControllerType_String = 7000;
+	LegacyInputProfile_String = 7001;
+	VendorSpecific_Reserved_Start = 10000;
+	VendorSpecific_Reserved_End = 10999;
+	TrackedDeviceProperty_Max = 1000000;
+}
+
+enum UnnamedEnum6d01a51db37ee4b8
+{
+	k_eEnableStickyHovers = 0;
+	k_eAppsHaveTonsOfFriends = 1;
+	k_eFriendsAppsActivityAllowRepeat = 2;
+	k_eFriendsAppsActivityNoMinimum = 3;
+	k_eFriendsAppsActivitySlowQuery = 4;
+	k_eFriendsAppsActivityBreakImages = 5;
+	k_eFriendsAppsActivityDebugSpew = 6;
+	k_eDebugOwnedDLCSpotlight = 7;
+	k_eEnableStickyContextMenus = 8;
+	k_eFriendsAppsActivityForceEmpty = 9;
+	k_eFriendsAppsActivityIgnoreAppHistory = 10;
+	k_eFriendsAppsActivityForceFreshQuery = 11;
+	k_eFriendsAppsActivityIgnoreUnownedLimit = 12;
+	k_ePlayNextNoFilter = 13;
+	k_ePlayNextSlowQuery = 14;
+	k_eEnableStickyKeyboard = 15;
+	k_eDebugIncludeSeenSpotlightEvents = 16;
+	k_eDebugNewContentSpotlight = 17;
+	k_eDebugMarkAllNotificationsRead = 18;
+	k_eForcePopupContextMenus = 19;
+	k_eEnableVRPopupsOnDesktop = 20;
+	k_eVRDashboardHasManyTabs = 21;
+}
+
+enum UnnamedEnum6d0c4a4e51ce607a
+{
+	Icon = 0;
+	Color = 1;
+}
+
+enum UnnamedEnum6d85e147863c8302
+{
+	None = 0;
+	Left = 1;
+	Right = 2;
+	Up = 3;
+	Down = 4;
+}
+
+enum UnnamedEnum6dc1117c55eed9d3
+{
+	k_EStatusString = 0;
+	k_ECreator = 1;
+	k_ECurator = 2;
+	k_ETags = 3;
+	k_EDisplayList = 4;
+}
+
+enum UnnamedEnum6ff4bd83626916e7
+{
+	None = 0;
+	WirelessOfflineMode = 1;
+	WirelessConnectingActive = 2;
+	WiredNetworkWarning = 3;
+	WirelessNetworkWarning = 4;
+	WiredNetwork = 5;
+	WirelessNetwork = 6;
+	WirelessDisabled = 7;
+}
+
+enum UnnamedEnum6ffd890a446c4435
+{
+	None = 0;
+	Forward = 1;
+	Backward = 2;
+}
+
+enum UnnamedEnum71321e1d7c5f7a14
+{
+	Minimal = 1;
+	Modal = 2;
+	ShowArrowKeys = 4;
+	HideDoneKey = 8;
+}
+
+enum UnnamedEnum71adb9c1860a40e0
+{
+	k_All = 0;
+	k_Owned = 1;
+	k_Subscribed = 2;
+}
+
+enum UnnamedEnum7282757b17cca874
+{
+	Loading = 1;
+	Loaded = 2;
+	Error = 3;
+}
+
+enum UnnamedEnum73275793a48d2416
+{
+	k_RegistrationConfirmation = 0;
+	k_Reminder = 1;
+	k_Invite = 2;
+	k_Followup = 3;
+	k_Starting = 4;
+	k_InviteReminder = 5;
+	k_Update = 6;
+	k_PermissionRequest = 7;
+	k_MediaUsageNotification = 8;
+}
+
+enum UnnamedEnum73fab2eb67048082
+{
+	Error = undefined;
+	Invalid = undefined;
+	UpToDate = 0;
+	Checking = 1;
+	Available = 2;
+	Downloading = 3;
+	Downloaded = 4;
+	Applying = 5;
+	Applied = 6;
+	ClientRestartPending = 7;
+	SystemRestartPending = 8;
+}
+
+enum UnnamedEnum798f930648f1159b
+{
+	Digital = 0;
+	Cursor = 1;
+}
+
+enum UnnamedEnum7f0c6007c4a848a6
+{
+	Touch = 0;
+	Mouse = 1;
+	DPad = 2;
+	TextInput = 3;
+	Reset = 4;
+}
+
+enum UnnamedEnum7f46ca7702a21925
+{
+	LaunchGame = 0;
+	FriendMessage = 1;
+	ChatMention = 2;
+	ChatMessage = 3;
+	ToastMessage = 4;
+	ToastAchievement = 5;
+	ToastMisc = 6;
+	FriendOnline = 7;
+	FriendInGame = 8;
+	VolSound = 9;
+	ShowModal = 10;
+	HideModal = 11;
+	IntoGameDetail = 12;
+	OutOfGameDetail = 13;
+	PagedNavigation = 14;
+	ToggleOn = 15;
+	ToggleOff = 16;
+	SliderUp = 17;
+	SliderDown = 18;
+	ChangeTabs = 19;
+	DefaultOk = 20;
+	OpenSideMenu = 21;
+	CloseSideMenu = 22;
+	BasicNav = 23;
+	FailedNav = 24;
+	Typing = 25;
+}
+
+enum UnnamedEnum8007cbba74d1848c
+{
+	None = 0;
+	InvalidCode = 1;
+}
+
+enum UnnamedEnum80fde622b7ffb8a2
+{
+	Timeline = 1;
+	Minimap = 2;
+}
+
+enum UnnamedEnum8109693d463750cd
+{
+	GRID = 0;
+	CAROUSEL = 1;
+	HERO = 2;
+}
+
+enum UnnamedEnum8344648dd138f1b0
+{
+	k_eInsertThumbnail = 1;
+	k_eInsertFullImage = 2;
+	k_eShowImageGroup = 3;
+}
+
+enum UnnamedEnum8464db862b909b82
+{
+	LeagueSelect = 0;
+	RegionSelect = 1;
+	Roster = 2;
+	PlayerSelect = 3;
+	Scores = 4;
+	Leaderboard = 5;
+}
+
+enum UnnamedEnum84f925970b2abf75
+{
+	Up = undefined;
+	Down = 1;
+}
+
+enum UnnamedEnum850d42e0163562b7
+{
+	Notifications = 0;
+	RemotePlayTogetherControls = 1;
+	VoiceChat = 2;
+	Friends = 3;
+	Settings = 4;
+	Perf = 5;
+	Help = 6;
+	Soundtrack = 7;
+	PerfInternal = 8;
+}
+
+enum UnnamedEnum866d82e66e6a644d
+{
+	Unknown = 0;
+	Above = 1;
+	OnScreen = 2;
+	Below = 3;
+	Empty = 4;
+}
+
+enum UnnamedEnum899cc823eee04c7f
+{
+	SERIES = 1;
+	GAME = 2;
+	DETAILS = 3;
+	VOD = 4;
+}
+
+enum UnnamedEnum8a56d02e19e23722
+{
+	INVALID = 0;
+	WATCH = 1;
+	SCHEDULE = 2;
+	STANDINGS = 3;
+	ABOUT = 4;
+	TISTANDINGS = 5;
+	TIRULES = 6;
+}
+
+enum UnnamedEnum8abeb6bedb3f618e
+{
+	Desktop = 0;
+	BasicUI = 1;
+}
+
+enum UnnamedEnum8c7160c1124f3d52
+{
+	kAppType = 0;
+	kPlayState = 1;
+	kAppFeature = 2;
+	kGenre = 3;
+	kStoreTag = 4;
+	kPartner = 5;
+	kFriend = 6;
+}
+
+enum UnnamedEnum8cbaa18358818ee1
+{
+	k_EViewComments = 1;
+	k_EUpvote = 2;
+	k_EDownvote = 3;
+}
+
+enum UnnamedEnum8edc8c3ef547367c
+{
+	k_EStorePage = 0;
+	k_EEventPage = 1;
+	k_ESalesPage = 2;
+}
+
+enum UnnamedEnum8f786e34a2e54885
+{
+	Unknown = 0;
+	Phone = 1;
+	Tablet = 2;
+	Computer = 3;
+	TV = 4;
+}
+
+enum UnnamedEnum940ff890eb1bf26e
+{
+	POPULAR = 1;
+	FAVORITE = 2;
+	ALL = 3;
+}
+
+enum UnnamedEnum944055b7ecac77bb
+{
+	NEWEST_FIRST = 0;
+	OLDEST_FIRST = 1;
+}
+
+enum UnnamedEnum9454ede744687573
+{
+	None = 0;
+	FileReady = 1;
+	InProgress = 2;
+	Error = 3;
+	Error_ImageTooLarge = 4;
+	Error_FileTypeNotSupported = 5;
+	Completed = 6;
+}
+
+enum UnnamedEnum953b696abb380ac4
+{
+	Invalid = 0;
+	AccountName = 1;
+	EmailCode = 2;
+	TwoFactorCode = 3;
+	Complete = 4;
+}
+
+enum UnnamedEnum95c6d1aa56bc1dce
+{
+	ClickThrough = 1;
+	AddToWishlist = 2;
+	AddToCart = 3;
+}
+
+enum UnnamedEnum961ee65102a01e04
+{
+	Unit = 0;
+	Item = 1;
+	Synergy = 2;
+	Talent = 3;
+}
+
+enum UnnamedEnum968f1a0e518faf1a
+{
+	k_EDefault = 1;
+	k_EPercentAchievementsComplete = 2;
+	k_ELastUpdated = 3;
+	k_EHoursPlayed = 4;
+	k_ELastPlayed = 5;
+	k_EReleaseDate = 6;
+	k_EDateAddedToLibrary = 7;
+	k_ESizeOnDisk = 8;
+	k_EMetacriticScore = 9;
+	k_EFriendsPlaying = 10;
+	k_ESteamReview = 11;
+}
+
+enum UnnamedEnum9744fddc6b9fcf31
+{
+	UNSET = 0;
+	NA = 1;
+	SA = 2;
+	WEU = 3;
+	EEU = 4;
+	CN = 5;
+	SEA = 6;
+}
+
+enum UnnamedEnum98e740aa9809340f
+{
+	eOnlineOnly = 0;
+	eOnlineOnlyNotInGame = 1;
+	eOfflineOnly = 2;
+	eIncomingInvites = 3;
+	eOutgoingInvites = 4;
+	eAll = 5;
+}
+
+enum UnnamedEnum9a54433f4d76badc
+{
+	L = 1;
+	M = 0;
+	Q = 3;
+	H = 2;
+}
+
+enum UnnamedEnuma55cf1297122de03
+{
+	InstalledLocally = 1;
+	ReadyToPlay = 2;
+	PlayedPreviously = 3;
+	PlayedNever = 4;
+	ValidPlatform = 5;
+}
+
+enum UnnamedEnuma68ec96c8362722a
+{
+	Unknown = undefined;
+	Idle = 0;
+	UserInteraction = 1;
+	UserInteraction_Timeout = 2;
+	Standby = 3;
+	Idle_Timeout = 4;
+}
+
+enum UnnamedEnuma744c529bb8c8699
+{
+	Any = 0;
+	Player = 1;
+	Team = 2;
+	League = 3;
+}
+
+enum UnnamedEnuma80ee23554b6c9ac
+{
+	PageUnloading = 0;
+	Unknown = 1;
+	None = 2;
+	Basic = 3;
+	Full = 4;
+}
+
+enum UnnamedEnuma8315b6bfb6b5edb
+{
+	LanguageScreen = 0;
+	TimezoneScreen = 1;
+	NetworkSetupScreen = 2;
+	UpdateScreen = 3;
+	CachedUsersPanel = 4;
+	SignInPanel = 5;
+}
+
+enum UnnamedEnuma8a8b1f6cea505e4
+{
+	AppDetails = 1;
+	LibraryHome = 2;
+}
+
+enum UnnamedEnuma9dc642d225a4850
+{
+	Large = 3;
+	Medium = 2;
+	Small = 1;
+	Tiny = 0;
+}
+
+enum UnnamedEnumabd9cfdef8ee6530
+{
+	k_EScreenshot = 0;
+	k_ETradingCard = 1;
+	k_EAchievement = 2;
+}
+
+enum UnnamedEnumabdb62f3f76c01bf
+{
+	FullControllerSupport = 1;
+	PartialControllerSupport = 2;
+	VRSupport = 3;
+	TradingCards = 4;
+	Workshop = 5;
+	Achievements = 6;
+	SinglePlayer = 7;
+	MultiPlayer = 8;
+	CoOp = 9;
+	Cloud = 10;
+	RemotePlayTogether = 11;
+	SteamDeckVerified = 12;
+	SteamDeckPlayable = 13;
+	SteamDeckUnknown = 14;
+	SteamDeckUnsupported = 15;
+}
+
+enum UnnamedEnumabea9075e9266653
+{
+	Default = 0;
+	ReviseQuery = 1;
+	ReviseEdit = 2;
+}
+
+enum UnnamedEnumac9ccfed4f769533
+{
+	k_None = 0;
+	k_Suggested = 1;
+	k_Required = 2;
+	k_Requested = 3;
+}
+
+enum UnnamedEnumad989ac806e57514
+{
+	None = 0;
+	Connecting = 1;
+	FindingRoute = 2;
+	Connected = 3;
+	ClosedByPeer = 4;
+	ProblemDetectedLocally = 5;
+	Linger = undefined;
+}
+
+enum UnnamedEnumb0f99e67f3ec880b
+{
+	NONE = 0;
+	LOG = 1;
+	BREAK = 2;
+}
+
+enum UnnamedEnumb21f37461b7e5756
+{
+	k_ETaggedItems = 0;
+	k_EContentHub = 1;
+}
+
+enum UnnamedEnumb2890a863c618527
+{
+	Large = 0;
+	Medium = 1;
+	Small = 2;
+}
+
+enum UnnamedEnumb306264d8508f790
+{
+	INVALID_GROUP_TYPE = 0;
+	ORGANIZATIONAL = 1;
+	ROUND_ROBIN = 2;
+	SWISS = 3;
+	BRACKET_SINGLE = 4;
+	BRACKET_DOUBLE_SEED_LOSER = 5;
+	BRACKET_DOUBLE_ALL_WINNER = 6;
+	SHOWMATCH = 7;
+	GSL = 8;
+	PLACEMENT = 9;
+}
+
+enum UnnamedEnumb3736887c7b4d4a4
+{
+	None = 0;
+	PersonaName = 1;
+	Nickname = 2;
+}
+
+enum UnnamedEnumb4157bc080bb8fb9
+{
+	k_ModReviewed = 0;
+	k_ModUnreviewed = 1;
+	k_ChangeEventType = 2;
+	k_UpdateSeasonTags = 3;
+	k_ModReReviewed = 4;
+	k_ModRemovedFromSteamChina = 5;
+	k_ModFlagAdultOnlyContent = 6;
+	k_ModRemoveAdultOnlyContent = 7;
+	k_ModFlagHalloweenEvent = 8;
+	k_ModRemoveHalloweenEvent = 9;
+}
+
+enum UnnamedEnumb63aeccc409af0d7
+{
+	None = 0;
+	Loading = 1;
+	Ready = 2;
+	Error = 3;
+}
+
+enum UnnamedEnumb6b201d3943db7e2
+{
+	Invalid = 0;
+	System = 1;
+	OpenGL = 2;
+}
+
+enum UnnamedEnumb8bceb83053e4b5b
+{
+	Invalid = 0;
+	StreamGone = 1;
+}
+
+enum UnnamedEnumb9dbd68757ae6dad
+{
+	SSA = 0;
+	EnterCode = 1;
+	Info = 2;
+	Success = 3;
+	Failure = 4;
+	Busy = 5;
+}
+
+enum UnnamedEnumbb3ae5f8157543f0
+{
+	k_Custom = 0;
+	k_AssetKit = 1;
+	k_DemoPressPreview = 2;
+	k_ScheduleLiveStream = 3;
+	k_CancelSection = 4;
+	k_DemoNotReady = 5;
+	k_ReviewCategorization = 6;
+	k_DemoReview = 7;
+	k_PressPreviewDetails = 8;
+	k_StatsSummary = 9;
+	k_SurveyButton = 10;
+	k_DemoLaunch = 11;
+	k_CallForRegistration = 12;
+	k_EnterDiscount = 13;
+	k_EnterDiscountReminder = 14;
+	k_LearnMore = 15;
+	k_MediaUsePermission = 16;
+	k_MeasureResults = 17;
+	k_TrailerOrDemoPermissions = 18;
+	k_NextFestQASession = 19;
+	k_NextFestReturns = 20;
+	k_NextFestWhatNext = 21;
+	k_NextFestTips = 22;
+	k_NextFestStartsNow = 23;
+	k_MeasureResultsFree = 24;
+	k_NextFestThankYou = 25;
+	k_MediaPermissionReminder = 26;
+	k_SaleThankYou = 27;
+	k_NextFestMediaUsageIntended = 28;
+}
+
+enum UnnamedEnumbb409c705b092041
+{
+	k_None = 0;
+	k_Suggested = 1;
+	k_Required = 2;
+}
+
+enum UnnamedEnumbb8c085d0bda4064
+{
+	New = 0;
+	Update = 1;
+	Remove = 2;
+}
+
+enum UnnamedEnumbbe71fa9e1ed2b49
+{
+	k_EList = 0;
+	k_EGrid = 1;
+}
+
+enum UnnamedEnumbc6c3b80d752bedd
+{
+	Backspace = 8;
+	Tab = 9;
+	Enter = 13;
+	Escape = 27;
+	Space = 32;
+	PageUp = 33;
+	PageDown = 34;
+	End = 35;
+	Home = 36;
+	LeftArrow = 37;
+	UpArrow = 38;
+	RightArrow = 39;
+	DownArrow = 40;
+	Delete = 46;
+	F = 70;
+	Slash = 191;
+	BackSlash = 220;
+}
+
+enum UnnamedEnumbe1bad91be08ca41
+{
+	None = 0;
+	Append = 1;
+	Remove = 2;
+}
+
+enum UnnamedEnumbeac8bc198152282
+{
+	LOADING = 0;
+	SELECTING = 1;
+	CONFIRM = 2;
+	SUBMITTING = 3;
+	DONE = 4;
+	ERROR = 5;
+	LOADING_ERROR = 6;
+}
+
+enum UnnamedEnumbf3218c9d748466b
+{
+	Unstarted = 0;
+	Starting = 1;
+	InvalidCredentials = 2;
+	WaitingForEmailCode = 3;
+	WaitingForEmailConfirmation = 4;
+	WaitingForDeviceCode = 5;
+	WaitingForDeviceConfirmation = 6;
+	StartMoveAuthenticator = 7;
+	WaitingForMoveCode = 8;
+	AuthenticatorMoved = 9;
+	InvalidEmailCode = 10;
+	InvalidDeviceCode = 11;
+	InvalidMoveCode = 12;
+	WaitingForToken = 13;
+	Success = 14;
+	Failure = 15;
+	Stopped = 16;
+}
+
+enum UnnamedEnumbf94e43b6037649d
+{
+	Close = undefined;
+	OpenDevTools = 26500;
+	CloseDevTools = 26501;
+	InspectElement = 26502;
+	OpenLinkInNewTab = 26503;
+}
+
+enum UnnamedEnumc0b496922a237a5b
+{
+	k_eSteamInputAPISupport = 0;
+	k_eNoSteamInputAPISupport = 1;
+}
+
+enum UnnamedEnumc0d3181531d6b6e5
+{
+	Unknown = 0;
+	NotNeeded = 1;
+	InReactTree = 2;
+}
+
+enum UnnamedEnumc118f0b997e61c94
+{
+	Invalid = 0;
+	AccountName = 1;
+	EmailCode = 2;
+	TwoFactorCode = 3;
+	Complete = 4;
+	None = 0;
+	InvalidCode = 1;
+}
+
+enum UnnamedEnumc1dc9e791df4e044
+{
+	Unknown = 0;
+	InitialConnect = 1;
+	InitialConnectFailed = 2;
+	Connect = 3;
+	ConnectFailed = 4;
+	InitialLogon = 5;
+	InitialLogonFailed = 6;
+	Logon = 7;
+	LogonFailed = 8;
+	OK = 9;
+	Disconnected = 10;
+	RequestLogonCredentials = 11;
+	RequestLogonCredentialsFailed = 12;
+	RequestLogonCredentialsNotLoggedOn = 13;
+	RequestLogonCredentialsUserChanged = 14;
+	LoggedOnElsewhere = 15;
+}
+
+enum UnnamedEnumc2b67199254beacd
+{
+	UNKNOWN = 0;
+	RADIANT_VICTORY = 2;
+	DIRE_VICTORY = 3;
+	NOTSCORED_POOR_NETWORK = 64;
+	NOTSCORED_LEAVER = 65;
+	NOTSCORED_SERVER_CRASH = 66;
+	NOTSCORED_NEVER_STARTED = 67;
+	NOTSCORED_CANCELED = 68;
+	NOTSCORED_SUSPICIOUS = 69;
+}
+
+enum UnnamedEnumc390aca02ea00918
+{
+	SUCCEEDED = 0;
+	FAILED = 1;
+}
+
+enum UnnamedEnumc3c06b9797acb457
+{
+	k_eMouseKBOnly = 0;
+	k_eGamepadAndMouse = 1;
+	k_eGamepadPreferred = 2;
+	k_eGamepadRequired = 3;
+}
+
+enum UnnamedEnumc5bc47386f71e3e3
+{
+	Unknown = 0;
+	Autosave = 1;
+	Workshop = 2;
+	Template = 3;
+	Game = 4;
+}
+
+enum UnnamedEnumc635dff5ed4bf41d
+{
+	k_Off = 0;
+	k_Tick = 1;
+	k_Click = 2;
+	k_Script = 6;
+}
+
+enum UnnamedEnumc6e55c10367f49b7
+{
+	Unknown = 0;
+	Autosave = 1;
+	Official = 2;
+	Personal = 3;
+	Workshop = 4;
+	Template = 5;
+	Search = 6;
+	OptedOut = 7;
+}
+
+enum UnnamedEnumc7bfb42dcab87596
+{
+	None = 0;
+	Waiting = 1;
+	Success = 2;
+	Failed = 3;
+}
+
+enum UnnamedEnumc871c27f28c8b37d
+{
+	Knockout = 0;
+	Light = 1;
+	Dark = 2;
+}
+
+enum UnnamedEnumc8fc67fa54b26a6f
+{
+	Achievements = 0;
+	Controller = 1;
+	Guides = 2;
+	Notes = 3;
+	Browser = 4;
+}
+
+enum UnnamedEnumc97b61f74c670b3e
+{
+	Input = 0;
+	AllOutput = 1;
+	Left = 2;
+	Right = 3;
+	Sub = 4;
+	BackLeft = 5;
+	BackRight = 6;
+}
+
+enum UnnamedEnumcb4e0eddfd0c185e
+{
+	AutoCalibrating = 0;
+	CalibratingStationaryTolerances = 1;
+	CalibratingAntidrift = 2;
+	CalibrationComplete = 3;
+	CalibrationFailed = 4;
+	CalibrationPrompt = 5;
+	CalibrationCountDown = 6;
+}
+
+enum UnnamedEnumcbc616fa95d4ce31
+{
+	none = 0;
+	loadingActive = 1;
+	loadingComplete = 2;
+}
+
+enum UnnamedEnumcc887d1a9582eafc
+{
+	Hidden = 0;
+	Notification = 1;
+	Overlay = 2;
+	Opaque = 3;
+	OverlayKeyboard = 4;
+}
+
+enum UnnamedEnumcd0f6aff229814ee
+{
+	Add = 0;
+	Remove = 1;
+	Disband = 2;
+}
+
+enum UnnamedEnumcd45c706ae6f84ed
+{
+	Closed = 0;
+	Visible = 1;
+	Minimized = 2;
+}
+
+enum UnnamedEnumce80111fb803b9a5
+{
+	DIM = 0;
+	NORMAL = 1;
+	HIGHLIGHTED = 2;
+}
+
+enum UnnamedEnumce8b51d6cb6e5e47
+{
+	Invalid = 0;
+	Small = 1;
+	Medium = 2;
+	Large = 4;
+	VideoAspect = 8;
+	Panoramic = 16;
+	Wide = 32;
+	Narrow = 64;
+	Tall = 128;
+}
+
+enum UnnamedEnumceb8961b24f76ce1
+{
+	NotLoaded = 0;
+	Loading = 1;
+	Loaded = 2;
+}
+
+enum UnnamedEnumced36aa584d3b2bf
+{
+	k_EEconContextRoot = 0;
+	k_EBackpackContextGiftPasses = 1;
+	k_EBackpackContextProfile = 2;
+	k_EBackpackContextCoupons = 3;
+	k_EBackpackContextWallet = 4;
+	k_EBackpackContextCommunity = 6;
+	k_EBackpackContextItemRewards = 7;
+	k_EEConContextMax = 999;
+}
+
+enum UnnamedEnumcf102e4532afeb1d
+{
+	CountDown = 0;
+	Calibrating = 1;
+	Complete_Success = 2;
+}
+
+enum UnnamedEnumd2a1463c68084b87
+{
+	Teams = 0;
+	Standings = 1;
+	Matchups = 2;
+}
+
+enum UnnamedEnumd2f296f4cc236e47
+{
+	None = 0;
+	Animating = 1;
+}
+
+enum UnnamedEnumd3cd795810560177
+{
+	ChooseFolder = 0;
+	MovingApps = 1;
+	MoveFinished = 2;
+	MoveFailed = 3;
+}
+
+enum UnnamedEnumd41d2a81a1c775e4
+{
+	Unrequested = 0;
+	Pending = 1;
+	Valid = 2;
+	Failed = 3;
+	Rerequest = 4;
+}
+
+enum UnnamedEnumd4d9d8fd3054a6fd
+{
+	SteamUI = 0;
+	BasicUI = 1;
+}
+
+enum UnnamedEnumd4f313929840b090
+{
+	ChooseFolder = 0;
+	Working = 1;
+	Finished = 2;
+	Failed = 3;
+}
+
+enum UnnamedEnumd52769fb1bd0a59c
+{
+	k_EOtherEvent = 1;
+	k_EGameEvent = 2;
+	k_EPartyEvent = 3;
+	k_EMeetingEvent = 4;
+	k_ESpecialCauseEvent = 5;
+	k_EMusicAndArtsEvent = 6;
+	k_ESportsEvent = 7;
+	k_ETripEvent = 8;
+	k_EChatEvent = 9;
+	k_EGameReleaseEvent = 10;
+	k_EBroadcastEvent = 11;
+	k_ESmallUpdateEvent = 12;
+	k_ERegularUpdateEvent = 13;
+	k_EMajorUpdateEvent = 14;
+	k_EDLCReleaseEvent = 15;
+	k_EFutureReleaseEvent = 16;
+	k_EESportTournamentStreamEvent = 17;
+	k_EDevStreamEvent = 18;
+	k_EFamousStreamEvent = 19;
+	k_EGameSalesEvent = 20;
+	k_EGameItemSalesEvent = 21;
+	k_EInGameBonusXPEvent = 22;
+	k_EInGameLootEvent = 23;
+	k_EInGamePerksEvent = 24;
+	k_EInGameChallengeEvent = 25;
+	k_EInGameContestEvent = 26;
+	k_EIRLEvent = 27;
+	k_ENewsEvent = 28;
+	k_EBetaReleaseEvent = 29;
+	k_EFreeTrial = 31;
+	k_ESeasonRelease = 32;
+	k_ECrosspostEvent = 34;
+	k_EInGameEventGeneral = 35;
+}
+
+enum UnnamedEnumd6a84333206e5390
+{
+	immediate = 0;
+	event_start = 1;
+	specified_time = 2;
+}
+
+enum UnnamedEnumd754cec457ef65e8
+{
+	Hover = 0;
+	ClickPopup = 1;
+	ClickSurroundingRegion = 2;
+}
+
+enum UnnamedEnumd97103ae663c8a09
+{
+	k_eFullXboxControllerSupport = 0;
+	k_ePartialXboxControllerSupport = 1;
+}
+
+enum UnnamedEnumdafb6d37579e0926
+{
+	k_EFaqID = 0;
+	k_EName = 1;
+	k_EDraftTimestamp = 2;
+	k_EUpdatedDrafts = 3;
+	k_EStaleDrafts = 4;
+	k_EPublished = 5;
+	k_ENeedPublish = 6;
+	k_EGlobalVisible = 7;
+	k_ESteamChinaVisible = 8;
+}
+
+enum UnnamedEnumdb303c21506dd3e7
+{
+	None = 0;
+	MouseDragging = 1;
+	TouchStart = 2;
+	TouchDragging = 3;
+}
+
+enum UnnamedEnumdc9256109fda0b46
+{
+	Notifications = 0;
+	RemotePlayTogetherControls = 1;
+	VoiceChat = 2;
+	Friends = 3;
+	Settings = 4;
+	Perf = 5;
+	Help = 6;
+}
+
+enum UnnamedEnumddf21b2888ecc060
+{
+	k_Client = 1;
+	k_Server = 2;
+}
+
+enum UnnamedEnumde308e0154cd3024
+{
+	k_None = 0;
+	k_Alert = 1;
+	k_Confirm = 2;
+}
+
+enum UnnamedEnumdf8b8cfc20e6db08
+{
+	Chat = 0;
+	Notification = 1;
+	Error = 2;
+}
+
+enum UnnamedEnumdf90a08aed284b03
+{
+	NONE = 0;
+	COLUMN = 1;
+	ROW = 2;
+	COLUMN_REVERSE = 3;
+	ROW_REVERSE = 4;
+	GRID = 5;
+	GEOMETRIC = 6;
+}
+
+enum UnnamedEnumdfa716524449ed10
+{
+	None = 0;
+	KeepLocal = 1;
+	KeepRemote = 2;
+}
+
+enum UnnamedEnume1202fbe60302220
+{
+	Normal = 0;
+	Rare = 1;
+	Very = 2;
+	Ultra = 3;
+	Cosmic = 4;
+}
+
+enum UnnamedEnume36c5cd7cd6e71c1
+{
+	k_eLibrary = 1;
+	k_eWishlist = 2;
+	k_eFollowing = 4;
+	k_eRecommended = 8;
+	k_eSteam = 16;
+	k_eRequired = 32;
+	k_eFeatured = 64;
+	k_eCurator = 128;
+	k_eReposted = 256;
+}
+
+enum UnnamedEnume3fcc930950058cd
+{
+	UNKNOWN = 0;
+	LEAGUE = 1;
+	MAJOR = 2;
+	INTERNATIONAL_QUALIFIERS = 3;
+	INTERNATIONAL = 4;
+	LEAGUE_FINALS = 5;
+}
+
+enum UnnamedEnume495d6402338f1c4
+{
+	kMultiPlayer = 1;
+	kSinglePlayer = 2;
+	kCoOp = 9;
+	kPartialController = 18;
+	kMMO = 20;
+	kAchievements = 22;
+	kSteamCloud = 23;
+	kSplitScreen = 24;
+	kCrossPlatformMultiPlayer = 27;
+	kFullController = 28;
+	kTradingCards = 29;
+	kWorkshop = 30;
+	kVRSupport = 31;
+	kOnlineMultiPlayer = 36;
+	kLocalMultiPlayer = 37;
+	kOnlineCoOp = 38;
+	kLocalCoOp = 39;
+	kRemotePlayTogether = 44;
+	kHighQualitySoundtrackAudio = 50;
+}
+
+enum UnnamedEnume52e95a5029e6a34
+{
+	None = 0;
+	SecondaryClick = 1;
+	PrimaryClick = 2;
+}
+
+enum UnnamedEnume6093c05096df8e2
+{
+	INVALID = 0;
+	FORWARD = 1;
+	BACKWARD = 2;
+}
+
+enum UnnamedEnume8529d27186452fb
+{
+	k_ECollectionView = 1;
+	k_ERecentGamesView = 2;
+	k_EGameDetailsView = 3;
+	k_EFriendsActivityView = 4;
+	k_EPlayNextView = 5;
+	k_EDownloadsView = 6;
+	k_ELibraryManagerView = 7;
+}
+
+enum UnnamedEnume91934d732c052f5
+{
+	None = 0;
+	StaticWep = 1;
+	DynamicWep = 2;
+	Wpa = 4;
+	WpaEnterprise = 8;
+	Wpa2 = 16;
+	Wpa2Enterprise = 32;
+	Unsupported = 32768;
+}
+
+enum UnnamedEnume99001381424a13a
+{
+	None = 0;
+	Up = 1;
+	Down = 2;
+}
+
+enum UnnamedEnumeaa76a15206c310e
+{
+	Tick = 1;
+	Click = 2;
+}
+
+enum UnnamedEnumeaf70d8cee21d56c
+{
+	None = 0;
+	Library = 1;
+	GamepadUI = 2;
+	DesktopUI = 3;
+}
+
+enum UnnamedEnumed37b551cf653bf6
+{
+	Off = 0;
+	Low = 1;
+	Medium = 2;
+	High = 3;
+	Custom = 10;
+}
+
+enum UnnamedEnumee13fc02f2c6851d
+{
+	None = 0;
+	ButtonEnter = 1;
+	ButtonLeave = 2;
+	Snap = 3;
+	Sliding = 4;
+	SlidingEdge = 5;
+}
+
+enum UnnamedEnumeeeeb64d8da89d55
+{
+	Invalid = 0;
+	GamepadToast = 1;
+	DesktopToast = 2;
+	Tray = 3;
+	AllNotificationsTray = 4;
+}
+
+enum UnnamedEnumf126cd872c06e76e
+{
+	None = 0;
+	type = 1;
+	name = 2;
+	description = 4;
+	time = 8;
+	visibility = 16;
+	jsondata_other = 32;
+	jsondata_image = 64;
+	jsondata_email = 128;
+	jsondata_broadcast = 256;
+	jsondata_sales = 512;
+	jsondata_schedule = 1024;
+}
+
+enum UnnamedEnumf344f66096fda8b6
+{
+	None = 0;
+	SenderBlocked = 1;
+	SenderCommunityBanned = 2;
+}
+
+enum UnnamedEnumf5aaaa43b05e117e
+{
+	k_EResultOK = 1;
+	k_EResultFail = 2;
+	k_EResultNoConnection = 3;
+	k_EResultInvalidPassword = 5;
+	k_EResultLoggedInElsewhere = 6;
+	k_EResultInvalidProtocolVer = 7;
+	k_EResultInvalidParam = 8;
+	k_EResultFileNotFound = 9;
+	k_EResultBusy = 10;
+	k_EResultInvalidState = 11;
+	k_EResultInvalidName = 12;
+	k_EResultInvalidEmail = 13;
+	k_EResultDuplicateName = 14;
+	k_EResultAccessDenied = 15;
+	k_EResultTimeout = 16;
+	k_EResultBanned = 17;
+	k_EResultAccountNotFound = 18;
+	k_EResultInvalidSteamID = 19;
+	k_EResultServiceUnavailable = 20;
+	k_EResultNotLoggedOn = 21;
+	k_EResultPending = 22;
+	k_EResultEncryptionFailure = 23;
+	k_EResultInsufficientPrivilege = 24;
+	k_EResultLimitExceeded = 25;
+	k_EResultRevoked = 26;
+	k_EResultExpired = 27;
+	k_EResultAlreadyRedeemed = 28;
+	k_EResultDuplicateRequest = 29;
+	k_EResultAlreadyOwned = 30;
+	k_EResultIPNotFound = 31;
+	k_EResultPersistFailed = 32;
+	k_EResultLockingFailed = 33;
+	k_EResultLogonSessionReplaced = 34;
+	k_EResultConnectFailed = 35;
+	k_EResultHandshakeFailed = 36;
+	k_EResultIOFailure = 37;
+	k_EResultRemoteDisconnect = 38;
+	k_EResultShoppingCartNotFound = 39;
+	k_EResultBlocked = 40;
+	k_EResultIgnored = 41;
+	k_EResultNoMatch = 42;
+	k_EResultAccountDisabled = 43;
+	k_EResultServiceReadOnly = 44;
+	k_EResultAccountNotFeatured = 45;
+	k_EResultAdministratorOK = 46;
+	k_EResultContentVersion = 47;
+	k_EResultTryAnotherCM = 48;
+	k_EResultPasswordRequiredToKickSession = 49;
+	k_EResultAlreadyLoggedInElsewhere = 50;
+	k_EResultSuspended = 51;
+	k_EResultCancelled = 52;
+	k_EResultDataCorruption = 53;
+	k_EResultDiskFull = 54;
+	k_EResultRemoteCallFailed = 55;
+	k_EResultPasswordUnset = 56;
+	k_EResultExternalAccountUnlinked = 57;
+	k_EResultPSNTicketInvalid = 58;
+	k_EResultExternalAccountAlreadyLinked = 59;
+	k_EResultRemoteFileConflict = 60;
+	k_EResultIllegalPassword = 61;
+	k_EResultSameAsPreviousValue = 62;
+	k_EResultAccountLogonDenied = 63;
+	k_EResultCannotUseOldPassword = 64;
+	k_EResultInvalidLoginAuthCode = 65;
+	k_EResultAccountLogonDeniedNoMail = 66;
+	k_EResultHardwareNotCapableOfIPT = 67;
+	k_EResultIPTInitError = 68;
+	k_EResultParentalControlRestricted = 69;
+	k_EResultFacebookQueryError = 70;
+	k_EResultExpiredLoginAuthCode = 71;
+	k_EResultIPLoginRestrictionFailed = 72;
+	k_EResultAccountLockedDown = 73;
+	k_EResultAccountLogonDeniedVerifiedEmailRequired = 74;
+	k_EResultNoMatchingURL = 75;
+	k_EResultBadResponse = 76;
+	k_EResultRequirePasswordReEntry = 77;
+	k_EResultValueOutOfRange = 78;
+	k_EResultUnexpectedError = 79;
+	k_EResultDisabled = 80;
+	k_EResultInvalidCEGSubmission = 81;
+	k_EResultRestrictedDevice = 82;
+	k_EResultRegionLocked = 83;
+	k_EResultRateLimitExceeded = 84;
+	k_EResultAccountLoginDeniedNeedTwoFactor = 85;
+	k_EResultItemDeleted = 86;
+	k_EResultAccountLoginDeniedThrottle = 87;
+	k_EResultTwoFactorCodeMismatch = 88;
+	k_EResultTwoFactorActivationCodeMismatch = 89;
+	k_EResultAccountAssociatedToMultiplePartners = 90;
+	k_EResultNotModified = 91;
+	k_EResultNoMobileDevice = 92;
+	k_EResultTimeNotSynced = 93;
+	k_EResultSmsCodeFailed = 94;
+	k_EResultAccountLimitExceeded = 95;
+	k_EResultAccountActivityLimitExceeded = 96;
+	k_EResultPhoneActivityLimitExceeded = 97;
+	k_EResultRefundToWallet = 98;
+	k_EResultEmailSendFailure = 99;
+	k_EResultNotSettled = 100;
+	k_EResultNeedCaptcha = 101;
+	k_EResultGSLTDenied = 102;
+	k_EResultGSOwnerDenied = 103;
+	k_EResultInvalidItemType = 104;
+	k_EResultIPBanned = 105;
+	k_EResultGSLTExpired = 106;
+	k_EResultInsufficientFunds = 107;
+	k_EResultTooManyPending = 108;
+	k_EResultNoSiteLicensesFound = 109;
+	k_EResultWGNetworkSendExceeded = 110;
+	k_EResultAccountNotFriends = 111;
+	k_EResultLimitedUserAccount = 112;
+	k_EResultCantRemoveItem = 113;
+	k_EResultAccountDeleted = 114;
+	k_EResultExistingUserCancelledLicense = 115;
+	k_EResultCommunityCooldown = 116;
+	k_EResultNoLauncherSpecified = 117;
+	k_EResultMustAgreeToSSA = 118;
+	k_EResultLauncherMigrated = 119;
+	k_EResultSteamRealmMismatch = 120;
+	k_EResultInvalidSignature = 121;
+	k_EResultParseFailure = 122;
+	k_EResultNoVerifiedPhone = 123;
+	k_EResultInsufficientBattery = 124;
+	k_EResultChargerRequired = 125;
+	k_EResultCachedCredentialInvalid = 126;
+	K_EResultPhoneNumberIsVOIP = 127;
+}
+
+enum UnnamedEnumf60d704b0b63ab30
+{
+	None = 0;
+	Unlocking = 1;
+	Loading = 2;
+	Ready = 3;
+	Error = 4;
+}
+
+enum UnnamedEnumf711bb3dceab35ce
+{
+	Invalid = 0;
+	Confirmation = 1;
+	Uploading = 2;
+	Error = 3;
+}
+
+enum UnnamedEnumf8c8b38ac1dd39c3
+{
+	Default = 0;
+	Gold = 1;
+	LNY2020 = 2;
+}
+
+enum UnnamedEnumfdf9542cbb4256c3
+{
+	None = 0;
+	Main = 1;
+	QuickAccess = 2;
+}
+
+enum UnnamedEnumff97bb87ab229b1b
+{
+	INVALID = 0;
+	OK = 1;
+	CANCEL = 2;
+	SECONDARY = 3;
+	OPTIONS = 4;
+	BUMPER_LEFT = 5;
+	BUMPER_RIGHT = 6;
+	TRIGGER_LEFT = 7;
+	TRIGGER_RIGHT = 8;
+	DIR_UP = 9;
+	DIR_DOWN = 10;
+	DIR_LEFT = 11;
+	DIR_RIGHT = 12;
+	SELECT = 13;
+	START = 14;
+	LSTICK_CLICK = 15;
+	RSTICK_CLICK = 16;
+	LSTICK_TOUCH = 17;
+	RSTICK_TOUCH = 18;
+	LPAD_TOUCH = 19;
+	LPAD_CLICK = 20;
+	RPAD_TOUCH = 21;
+	RPAD_CLICK = 22;
+	REAR_LEFT_UPPER = 23;
+	REAR_LEFT_LOWER = 24;
+	REAR_RIGHT_UPPER = 25;
+	REAR_RIGHT_LOWER = 26;
+	STEAM_GUIDE = 27;
+	STEAM_QUICK_MENU = 28;
+}
+
+enum UnnamedEnumffb03be984d151d5
+{
+	k_EUnknown = 0;
+	k_EPublisher = 1;
+	k_EDeveloper = 2;
+	k_EPublisherDeveloper = 3;
+	k_EMacPortDeveloper = 4;
+	k_ELinuxPortDeveloper = 5;
+	k_EFranchise = 6;
+}
+
 enum UserActionEventType
 {
 	k_UserActionEventType_Invalid = 0;
