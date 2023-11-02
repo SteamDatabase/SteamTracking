@@ -4187,7 +4187,7 @@ Pilih kategori untuk game-game ini agar kamu dapat mencarinya secara cepat dan m
 "Steam_AppUpdateError_21"		"server konten tidak dapat dijangkau"
 "Steam_AppUpdateError_22"		"konfigurasi aplikasi tidak valid"
 "Steam_AppUpdateError_23"		"konfigurasi depot tidak valid"
-"Steam_AppUpdateError_24"		"manifest tidak tersedia"
+"Steam_AppUpdateError_24"		"manifes tidak tersedia"
 "Steam_AppUpdateError_25"		"aplikasi belum dirilis"
 "Steam_AppUpdateError_26"		"wilayah dibatasi"
 "Steam_AppUpdateError_27"		"konten cache rusak"

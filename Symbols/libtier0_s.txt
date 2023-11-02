@@ -30,8 +30,8 @@
  T AreStackTrackingFiltersEnabledAtStart
  T AssertMsgHelper<false>::AssertFailed(char const*, unsigned int, char const*, ...)
  T AssertMsgHelper<true>::AssertFailed(char const*, unsigned int, char const*)
- T AssertMsgImplementation
  T AssertMsgImplementationF
+ T AssertMsgImplementationPreformatted
  T AssertMsgImplementationV
  T BBlockingGetMiniDumpLock
  T BGetLocalFQDN
@@ -325,14 +325,6 @@
  T TSQueueBase_UnsafePeek
  T TSQueue_PopIntoFreeList
  T TSQueue_UnsafeDebugCheck
- T TestThread_Yield
- T Test_HasFailed
- T Test_HasFinished
- T Test_IsActive
- T Test_RunFrame
- T Test_RunTest
- T Test_SetFailed
- T Test_TerminateThread
  T ThreadCloseProcess
  T ThreadFindProcessByName
  T ThreadGetCurrentHandle
@@ -500,7 +492,6 @@
  pthread_condattr_init
  pthread_create
  pthread_equal
- pthread_exit
  pthread_getspecific
  pthread_join
  pthread_join$UNIX2003

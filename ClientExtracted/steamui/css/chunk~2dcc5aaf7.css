@@ -1238,6 +1238,9 @@
   border-width: 1.25em;
   border-radius: 0.625em;
 }
+.qrlogin_LoginQR_1wtS3.qrlogin_NonPublic_2iiMm {
+  border-color: #f0f;
+}
 .qrlogin_LoginQR_1wtS3.qrlogin_QRLoginDeck_3pzmh {
   width: 8em;
   height: 8em;
@@ -1641,6 +1644,9 @@
   font-size: 10px;
   vertical-align: center;
   align-self: center;
+}
+.controllerconfiguratorsummary_ChordControlBinding_2-B4w {
+  margin-left: 6px;
 }
 .controllerconfiguratorsummary_ControllerInputDisplay_27Q1T
   .controllerconfiguratorsummary_ChordControlBinding_2-B4w {
@@ -2767,6 +2773,72 @@
   display: flex;
   align-items: center;
   padding-bottom: 10px;
+}
+.controllerconfigurator_ControllerSupportInfoSection_2q529 {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  display: flex;
+  flex-direction: column;
+}
+.controllerconfigurator_ControllerImageRow_1Xoxf {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.controllerconfigurator_ControllerInfoSVG_3RQ_s {
+  height: 72px;
+  opacity: 0.5;
+}
+.controllerconfigurator_ControllerSupportImage_1DHGq.controllerconfigurator_Checked_1lshO
+  .controllerconfigurator_ControllerInfoSVG_3RQ_s {
+  opacity: 1;
+}
+.controllerconfigurator_ControllerSupportImage_1DHGq {
+  display: flex;
+  flex-direction: column;
+}
+.controllerconfigurator_ControllerSupportImage_1DHGq
+  .controllerconfigurator_Checkmark_1XK4- {
+  display: block;
+  color: #3de014;
+  position: relative;
+  height: 24px;
+  top: -22px;
+}
+.controllerconfigurator_ControllerSupportImage_1DHGq
+  .controllerconfigurator_YourControllerLabel_TA5dR {
+  display: block;
+  position: relative;
+  text-align: center;
+  background: #3a7fd5;
+  border-radius: 5px;
+  height: 16px;
+  padding-left: 6px;
+  padding-right: 6px;
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #000;
+}
+.controllerconfigurator_ControllerSupportImage_1DHGq.controllerconfigurator_Checked_1lshO
+  .controllerconfigurator_YourControllerLabel_TA5dR {
+  top: -20px;
 }
 button.controllerconfigurator_MainOptionsButton_77qZL.DialogButton {
   flex-shrink: 0;
@@ -28332,7 +28404,7 @@ body.gamepadui_SteamUIPopupWindowBody_QsvsR
   box-sizing: border-box;
   display: grid;
   grid-auto-flow: row;
-  grid-template-rows: 5fr 5fr 3fr;
+  grid-template-rows: min-content min-content min-content min-content;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 8px 24px;
 }
@@ -31718,10 +31790,17 @@ div.NarrowRightPanel
   left: 0;
   bottom: 0;
   right: 0;
+}
+.GamepadMode
+  .controllerconfigurator_interstitial_ConfiguratorInterstitialContainer_3FS5u {
   animation-name: controllerconfigurator_interstitial_modalAppear_399Ea;
   animation-timing-function: ease;
   animation-duration: 0.3s;
   animation-iteration-count: 1;
+}
+.DesktopUI
+  .controllerconfigurator_interstitial_ConfiguratorInterstitialContainer_3FS5u {
+  background-color: linear-gradient(126deg, #333840 4.36%, #25282e 93.41%);
 }
 .controllerconfigurator_interstitial_ConfiguratorInterstitialContainer_3FS5u
   .controllerconfigurator_interstitial_DontShowAgain_8aT8x
@@ -31783,7 +31862,7 @@ div.NarrowRightPanel
 .controllerconfigurator_interstitial_DescLabel_19njk {
   margin-bottom: 2px;
 }
-.controllerconfigurator_interstitial_DescLabel2_kipHd {
+.controllerconfigurator_interstitial_Label2_1Kssa {
   margin-top: 10px;
 }
 .controllerconfigurator_interstitial_DescLabelWithSpace_yMEbv {
@@ -31799,6 +31878,9 @@ div.NarrowRightPanel
   margin-right: auto;
   margin-top: 10px;
   margin-bottom: 10px;
+}
+.controllerconfigurator_interstitial_DescImage_1T0oY.controllerconfigurator_interstitial_PlugIn_81B4Y {
+  width: 60%;
 }
 .controllerconfigurator_interstitial_DescImageRow_ztD0R {
   display: flex;
@@ -32161,6 +32243,9 @@ div.NarrowRightPanel
   align-items: center;
   justify-content: center;
 }
+.DesktopUI .controllerconfigurator_interstitial_ButtonRow_1Zzxw {
+  justify-content: flex-end;
+}
 .controllerconfigurator_interstitial_AppLauncherInteractionIssuesImage1A_1LISJ {
   width: 35%;
   margin-top: 0px;
@@ -32242,6 +32327,52 @@ div.NarrowRightPanel
   width: 60%;
   margin-top: 0px;
   margin-bottom: 0px;
+}
+.controllerconfigurator_interstitial_ControllerTypeString_2JYpK {
+  margin-left: 4px;
+  margin-right: 2px;
+}
+.controllerconfigurator_interstitial_WarningTextRow_29Jhl {
+  margin-bottom: 19px;
+}
+.controllerconfigurator_interstitial_WarningTextColumn_1pYeu {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-left: 36px;
+}
+.controllerconfigurator_interstitial_WarningImage_53CPT {
+  width: 100%;
+}
+.controllerconfigurator_interstitial_ControllerRecommendedImageRow_16TUC {
+  display: flex;
+  flex-direction: row;
+  grid-gap: 16px;
+}
+.controllerconfigurator_interstitial_ControllerRecommendedImageRow_16TUC > svg {
+  flex-shrink: 1;
+  flex-grow: 1;
+}
+.controllerconfigurator_interstitial_ConfiguratorInterstitialContainer_3FS5u
+  .DialogButton {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.controllerconfigurator_interstitial_ConfiguratorInterstitialContainer_3FS5u
+  .DialogButton.controllerconfigurator_interstitial_OKButton_vTxP0 {
+  background-color: #769505;
+}
+.controllerconfigurator_interstitial_OptIn_1JKJY {
+  width: 200px;
+}
+.GamepadMode .controllerconfigurator_interstitial_OptIn_1JKJY {
+  width: 100%;
+}
+.controllerconfigurator_interstitial_TwoColumn_-AT-2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  grid-gap: 16px;
 }
 .guidedtour_PageIndicators_2Hdn3 {
   display: flex;
@@ -33086,11 +33217,6 @@ div.HighPerfMode .sharedappdetailsheader_HeaderBackgroundImage_1sarA {
   padding-right: 20px;
   align-items: center;
 }
-.BasicUI
-  .sharedappdetailsheader_TitleSection_1P_tv
-  .sharedappdetailsheader_Features_P_lFf {
-  display: none;
-}
 .sharedappdetailsheader_TitleImageContainer_3H5_m.sharedappdetailsheader_FullscreenEnterStart_P7eLv:not(
     .sharedappdetailsheader_FullscreenEnterActive_2FlTp
   ),
@@ -33202,6 +33328,11 @@ div.HighPerfMode .sharedappdetailsheader_HeaderBackgroundImage_1sarA {
   transition-timing-function: ease-in-out;
   backdrop-filter: blur(6px);
 }
+.BasicUI .appdetailsheader_InCollection_1HS4t {
+  border-radius: 2px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
 .appdetailsheader_InCollection_1HS4t:hover {
   color: #fff;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -33233,7 +33364,7 @@ div.HighPerfMode .sharedappdetailsheader_HeaderBackgroundImage_1sarA {
   overflow: hidden;
 }
 .BasicUI .appdetailsheader_HeaderFeatures_2b6Wk {
-  display: none;
+  padding-top: 40px;
 }
 .appdetailsheader_HeaderFriendsInGameBadge_1wNTI {
   position: absolute;
@@ -33276,6 +33407,14 @@ button.appdetailsheader_ExitEditModeButton_i7jBC.appdetailsheader_ExitEditModeBu
   bottom: 8px;
   left: 76px;
   font-weight: 700;
+}
+.appdetailsheader_Column_329r5 {
+  display: flex;
+  flex-direction: column;
+}
+.appdetailsheader_Row_XL--n {
+  display: flex;
+  flex-direction: row;
 }
 .overflowbox_OverflowBox_rgZGV {
   opacity: 1;
@@ -33580,6 +33719,68 @@ button.TextButton.appdetailsfriendssection_ShowMore_34gmV
 }
 .appdetailsfriendssection_GamepadFriendSectionItemLong_tDGek {
   width: 190px;
+}
+.appdetailscontrollersupport_PurchaseNoticeContainer_3STfN {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-shrink: 1;
+  width: fit-content;
+  align-self: flex-end;
+  height: 30px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+  margin-bottom: 12px;
+}
+.appdetailscontrollersupport_PurchaseNoticeContainer_3STfN.appdetailscontrollersupport_RightHandImage_1s9uh {
+  flex-direction: row-reverse;
+}
+.appdetailscontrollersupport_PurchaseNoticeLabel_1t792 {
+  font-family: "Motiva Sans", Sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: left;
+  white-space: pre-wrap;
+  opacity: 0.75;
+  color: #fff;
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  flex-grow: 0;
+  padding-left: 12px;
+  padding-right: 12px;
+  background: linear-gradient(90.41deg, #2c3c49 16.25%, #576674 99.89%);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.75);
+}
+.appdetailscontrollersupport_PurchaseNoticeImageContainer_lKkF8 {
+  height: 30px;
+  width: 30px;
+  background-color: #ffc82c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px 0px 0px 2px;
+}
+.appdetailscontrollersupport_PurchaseNoticeImageContainer_lKkF8.appdetailscontrollersupport_VRSupported_22RIi {
+  width: 42px;
+}
+.appdetailscontrollersupport_PurchaseNoticeImage_2tCNv {
+  height: 55%;
+  color: #000;
+}
+.appdetailscontrollersupport_PurchaseNoticeImage_2tCNv.appdetailscontrollersupport_Tilt_21ocD {
+  transform: rotate(-15deg);
+}
+.appdetailscontrollersupport_PurchaseNoticeImage_2tCNv.appdetailscontrollersupport_VRSupported_22RIi {
+  height: 85%;
+  margin-left: 12%;
+  margin-top: 5%;
+}
+.appdetailscontrollersupport_PurchaseNoticeImage_2tCNv.appdetailscontrollersupport_VROnly_2N6y_ {
+  height: 30%;
 }
 .library_Container_3xRRJ {
   display: flex;
@@ -35664,7 +35865,14 @@ div.NarrowRightPanel
   .appactionbutton_Throbber_gGXex {
   opacity: 1;
   animation: none;
-  margin: auto;
+  margin: 4px auto 0px;
+}
+.appactionbutton_PlayButton_3ydig
+  .appactionbutton_ThrobberContainer_yYVX6
+  .appactionbutton_Throbber_gGXex
+  img {
+  position: relative;
+  align-items: center;
 }
 .BasicUI
   .appactionbutton_PlayButton_3ydig
@@ -35679,6 +35887,15 @@ div.NarrowRightPanel
   svg {
   width: 32px;
   height: 32px;
+}
+div.NarrowWindow
+  .appactionbutton_PlayButton_3ydig
+  .appactionbutton_ThrobberContainer_yYVX6
+  .appactionbutton_Throbber_gGXex {
+  opacity: 1;
+  animation: none;
+  margin: 3px auto 0px;
+  width: 24px;
 }
 .appactionbutton_PlayButton_3ydig .appactionbutton_ButtonText_33cnX {
   vertical-align: middle;
@@ -36237,6 +36454,7 @@ div.NarrowRightPanel
     opacity 0.16s ease-out,
     transform 0.16s ease-out;
   align-self: stretch;
+  width: 100%;
 }
 .BasicUI
   .appdetailsplaysection_StatusAndStats_1YbtI
@@ -36527,7 +36745,8 @@ div.NarrowRightPanel
 }
 .BasicUI .appdetailsplaysection_DetailsSection_1dg8h {
   margin-left: 0;
-  margin-right: 24px;
+  margin-right: 20px;
+  padding: 0px 5px 0px;
 }
 div.NarrowRightPanel .appdetailsplaysection_DetailsSection_1dg8h {
   justify-content: initial;
@@ -37543,6 +37762,33 @@ div.NarrowRightPanel
   .appdetailsplaysection_LaunchOptionCalloutMessage_2OF9n {
   width: fit-content;
   margin-left: auto;
+}
+.appdetailsplaysection_ControllerSupportInfo_38kos {
+  display: flex;
+  flex-direction: column;
+  height: 32px;
+  margin-top: 6px;
+  margin-left: 5px;
+  margin-right: 5px;
+  align-items: flex-start;
+}
+.appdetailsplaysection_ControllerSupportInfo_38kos svg {
+  height: 36px !important;
+}
+.BasicUI .appdetailsplaysection_ControllerSupportInfo_38kos svg {
+  color: #fff !important;
+  opacity: 1 !important;
+}
+.DesktopUI .appdetailsplaysection_ControllerSupportInfo_38kos svg {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+.BasicUI .appdetailsplaysection_ControllerSupportInfo_38kos {
+  margin-top: 0;
+}
+.appdetailsplaysection_ControllerSupportInfo_38kos
+  .appdetailsplaysection_ControllerSupportRow_1h2AI {
+  display: flex;
+  flex-direction: row;
 }
 .appdetailsbroadcastsection_TheaterMode_19yL9 {
   position: absolute;
@@ -44296,6 +44542,11 @@ div.NarrowRightPanel .appdetailsprimarylinkssection_LinksSection_3-V8v {
   transition-duration: 0.2s;
   transition-timing-function: ease-out;
 }
+.appdetailsprimarylinkssection_Anchor_DY4_w
+  .appdetailsprimarylinkssection_Link_1b6LY.appdetailsprimarylinkssection_Disabled_MlIXK
+  .appdetailsprimarylinkssection_Text_2sNDj {
+  color: rgba(255, 255, 255, 0.15);
+}
 .BasicUI
   .appdetailsprimarylinkssection_Anchor_DY4_w
   .appdetailsprimarylinkssection_Link_1b6LY {
@@ -44398,8 +44649,37 @@ div.NarrowRightPanel .appdetailsprimarylinkssection_LinksSection_3-V8v {
   background-color: #fff;
   color: #0e141b;
 }
+.appdetailsprimarylinkssection_ContextMenuItem_322wB.appdetailsprimarylinkssection_Disabled_MlIXK {
+  color: rgba(255, 255, 255, 0.15);
+}
 .appdetailsprimarylinkssection_ForcedCarouselPadding_1B7Xk {
   width: 100px;
+}
+.parentalunlockdialog_Body_2Tzz8 {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.parentalunlockdialog_ErrorText_4EU3s {
+  color: #c15755;
+}
+.parentalunlockdialog_TextInput_sLyAb {
+  height: 50px;
+  font-size: 35px;
+  max-width: 25%;
+  text-align: center;
+  background: rgba(59, 63, 72, 0.5);
+  color: #dfe3e6;
+  border: none;
+  border-radius: 3px;
+  box-shadow: inset 0px 0px 0px #0000;
+}
+.parentalunlockdialog_TextInput_sLyAb:focus {
+  background: rgba(67, 73, 83, 0.6);
+  box-shadow: inset 1px 1px 8px #000a;
+  border: none;
+  outline: none;
 }
 .appdetailsworkshopsection_WorkshopContainer_176QJ {
   background: url(/images/workshopbackground.png) #2c3138;
@@ -51184,9 +51464,9 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   .nominationandvote_SteamAwardHeader_2TvWH
   .nominationandvote_SteamAwardHeaderImage_3dsTJ {
   position: absolute;
-  bottom: 10%;
   right: -10px;
-  max-width: 100%;
+  max-width: 65px;
+  top: -30px;
 }
 .nominationandvote_SteamAwardContainer_jBtX5
   .nominationandvote_SteamAwardHeader_2TvWH
@@ -51289,7 +51569,7 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   font-size: 15px;
   text-align: center;
   margin: auto 0;
-  flex: 1 0 30%;
+  flex: 1 0 25%;
 }
 .nominationandvote_SteamAwardContainer_jBtX5
   .nominationandvote_SteamAwardVoteWidget_2-t3v
@@ -61287,6 +61567,515 @@ div.appgrid_CoverSizeSlider_U4J9B .DialogSlider_Grabber:hover {
   color: #dcdedf;
   padding: 15px;
   white-space: pre;
+}
+@keyframes systemmanagement_ItemFocusAnim-darkerGrey-nocolor_Hn2LH {
+  from {
+    background: #3d4450;
+  }
+  to {
+    background: #23262e;
+  }
+}
+@keyframes systemmanagement_ItemFocusAnim-darkerGrey_2-hgr {
+  from {
+    background: #3d4450;
+    color: #8b929a;
+  }
+  to {
+    background: #23262e;
+    color: #fff;
+  }
+}
+@keyframes systemmanagement_ItemFocusAnim-darkGrey_DSbAR {
+  from {
+    background: #67707b;
+    color: #8b929a;
+  }
+  to {
+    background: #3d4450;
+    color: #fff;
+  }
+}
+@keyframes systemmanagement_ItemFocusAnim-grey_3FKLZ {
+  from {
+    background: #8b929a;
+    color: #fff;
+  }
+  to {
+    background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes systemmanagement_ItemFocusAnimBorder-darkGrey_1_4Ws {
+  from {
+    border-color: #67707b;
+  }
+  to {
+    border-color: #3d4450;
+  }
+}
+@keyframes systemmanagement_ItemFocusAnim-green_H3F6W {
+  from {
+    background: #c9ffc9;
+    color: #8b929a;
+  }
+  to {
+    background: #59bf40;
+    color: #fff;
+  }
+}
+@keyframes systemmanagement_focusAnimation_1V_fb {
+  0% {
+    background-position: 0% 0%;
+    opacity: 1;
+  }
+  100% {
+    background-position: -180% 0%;
+    opacity: 0.8;
+  }
+}
+@keyframes systemmanagement_hoverAnimation_1VW4u {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
+}
+@keyframes systemmanagement_ItemFocusAnim-darkerGrey-nocolor_Hn2LH {
+  from {
+    background: #3d4450;
+  }
+  to {
+    background: #23262e;
+  }
+}
+@keyframes systemmanagement_ItemFocusAnim-darkerGrey_2-hgr {
+  from {
+    background: #3d4450;
+    color: #8b929a;
+  }
+  to {
+    background: #23262e;
+    color: #fff;
+  }
+}
+@keyframes systemmanagement_ItemFocusAnim-darkGrey_DSbAR {
+  from {
+    background: #67707b;
+    color: #8b929a;
+  }
+  to {
+    background: #3d4450;
+    color: #fff;
+  }
+}
+@keyframes systemmanagement_ItemFocusAnim-grey_3FKLZ {
+  from {
+    background: #8b929a;
+    color: #fff;
+  }
+  to {
+    background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes systemmanagement_ItemFocusAnimBorder-darkGrey_1_4Ws {
+  from {
+    border-color: #67707b;
+  }
+  to {
+    border-color: #3d4450;
+  }
+}
+@keyframes systemmanagement_ItemFocusAnim-green_H3F6W {
+  from {
+    background: #c9ffc9;
+    color: #8b929a;
+  }
+  to {
+    background: #59bf40;
+    color: #fff;
+  }
+}
+@keyframes systemmanagement_focusAnimation_1V_fb {
+  0% {
+    background-position: 0% 0%;
+    opacity: 1;
+  }
+  100% {
+    background-position: -180% 0%;
+    opacity: 0.8;
+  }
+}
+@keyframes systemmanagement_hoverAnimation_1VW4u {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
+}
+.systemmanagement_PanelSection_HyLTs {
+  padding: 0px 16px;
+  margin: 0px 0px 24px;
+}
+.systemmanagement_PanelSection_HyLTs:first-of-type {
+  margin: 0px 0px 24px;
+}
+.systemmanagement_PanelSectionTitle_17F9- {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 22px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #8b929a;
+  padding: 0px 0px 8px;
+  display: flex;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 600;
+}
+.systemmanagement_PanelSectionTitle_17F9- .systemmanagement_Text_a7zm3 {
+  flex-grow: 1;
+}
+.systemmanagement_PanelSectionTitle_17F9- > svg {
+  height: 18px;
+}
+.systemmanagement_PanelSectionRow_2qp3b > :first-child {
+  --field-negative-horizontal-margin: 16px;
+  padding: 8px 16px;
+}
+.systemmanagement_Label_4MuJx svg {
+  padding-right: 16px;
+  width: 22px;
+  height: 22px;
+  color: inherit;
+}
+.systemmanagement_Label_4MuJx {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 16px;
+  color: inherit;
+}
+.systemmanagement_ComingSoon_1rRGx {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-style: italic;
+  color: #b8bcbf;
+  margin: 20px 15px 0px 15px;
+  font-size: 14px;
+}
+.systemmanagement_QuickAccessNotifications_3Zd9G > div {
+  position: relative;
+}
+.systemmanagement_QuickAccessNotifications_3Zd9G:not(.systemmanagement_VR_1Y_lO)
+  > div:not(:focus)
+  + div:not(:focus):before,
+.systemmanagement_QuickAccessNotifications_3Zd9G
+  > div:not(:hover)
+  + div:not(:hover):before,
+.systemmanagement_QuickAccessNotifications_3Zd9G
+  > div:not(:hover)
+  + div.systemmanagement_EmptyNotifications_3GLCv:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 10px;
+  right: 10px;
+  height: 1px;
+  border-bottom: 1px solid #3d4450;
+}
+.systemmanagement_LowBattery_2koDx {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 10px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  background-color: #ffc82c;
+  color: #000;
+  display: flex;
+  align-items: center;
+  height: 36px;
+  padding: 10px 16px;
+  box-sizing: border-box;
+  margin-top: 10px;
+}
+.systemmanagement_LowBattery_2koDx.systemmanagement_ReallyLow_2FBSX {
+  background-color: #de3618;
+  color: #fff;
+}
+.systemmanagement_LowBattery_2koDx .systemmanagement_LowBatteryGauge_2lzw6 {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+.systemmanagement_LowBattery_2koDx .systemmanagement_Text_a7zm3 {
+  flex-shrink: 0;
+}
+.systemmanagement_LowBattery_2koDx .systemmanagement_Remaining_2QNUK {
+  flex-grow: 1;
+  text-align: right;
+}
+.systemmanagement_EmptyNotifications_3GLCv {
+  padding-top: 40px;
+  text-align: center;
+}
+.systemmanagement_BatterySectionContainer_1z1vY {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.systemmanagement_BatteryIcon_31grG {
+  height: fit-content;
+  margin-right: 6px;
+}
+.systemmanagement_BatteryIcon_31grG svg {
+  width: 24px;
+  height: 40px;
+}
+.systemmanagement_BatteryPercentageLabel_pcGOQ {
+  font-size: 36px;
+  color: #fff;
+  align-self: flex-end;
+  line-height: 30px;
+}
+.systemmanagement_BatteryDetailsLabels_ZDDEV {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  height: fit-content;
+  align-self: flex-end;
+}
+.systemmanagement_BatteryDetailsLabels_ZDDEV
+  .systemmanagement_BatteryProjectedValue_3UR9e {
+  font-size: unset;
+  text-transform: unset;
+  color: #fff;
+}
+.systemmanagement_BatteryDetailsLabels_ZDDEV
+  .systemmanagement_BatteryProjectedLabel_1cTLJ {
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 10px;
+}
+.systemmanagement_HDRBadge_1ZEAv {
+  position: absolute;
+  top: 15px;
+  right: 16px;
+  max-width: fit-content;
+  background: linear-gradient(136deg, #81399a 8%, #0094a2 90.05%);
+  border-radius: 4px;
+  padding: 2px 8px 2px 8px !important;
+  overflow: hidden;
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 10px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 800;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+.systemmanagement_HDRBadge_1ZEAv::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    101deg,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: translateX(-200%) skew(-30deg);
+  animation: systemmanagement_HDRBadgeAnimation_2E3jN 2s
+    cubic-bezier(0.86, 0, 0.07, 1);
+  animation-delay: 0.2s;
+  filter: blur(1px);
+}
+.systemmanagement_HDRBadgeOrange_OLpds {
+  background: linear-gradient(136deg, #9a5839 8%, #a21800 90.05%);
+}
+@keyframes systemmanagement_HDRBadgeAnimation_2E3jN {
+  0% {
+    transform: translateX(-200%) skew(-30deg);
+  }
+  100% {
+    transform: translateX(150%) skew(-30deg);
+  }
+}
+.systemmanagement_PerfProfileInfo_KWPmf .systemmanagement_Heading_1bIiM {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+.systemmanagement_PerfProfileInfo_KWPmf
+  .systemmanagement_Heading_1bIiM
+  .systemmanagement_Text_a7zm3 {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 22px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #8b929a;
+  padding: 0px 0px 8px;
+  display: flex;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 600;
+}
+.systemmanagement_PerfProfileInfo_KWPmf
+  .systemmanagement_Heading_1bIiM
+  .systemmanagement_Icon_2wWEf {
+  width: 8%;
+}
+.systemmanagement_PerfProfileInfo_KWPmf .systemmanagement_SubHeading_3bFcn {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: left;
+  height: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.2rem;
+  align-items: center;
+}
+.systemmanagement_PerfProfileInfo_KWPmf
+  .systemmanagement_SubHeading_3bFcn
+  .systemmanagement_Icon_2wWEf {
+  width: 8%;
+  margin-right: 1ch;
+}
+.systemmanagement_PerfProfileInfo_KWPmf
+  .systemmanagement_SubHeading_3bFcn
+  .systemmanagement_Text_a7zm3 {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 16px;
+  color: #b8bcbf;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.systemmanagement_PerfProfileInfo_KWPmf
+  .systemmanagement_SubHeading_3bFcn
+  .systemmanagement_Text_a7zm3
+  .systemmanagement_GameName_1BVAO {
+  text-transform: uppercase;
+}
+.systemmanagement_PerfProfileExplainerModal_3HuMn {
+  white-space: pre-line;
+}
+.systemmanagement_PerfProfileInfoBasic_1TDxz {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+}
+.systemmanagement_PerfProfileInfoBasic_1TDxz .systemmanagement_Name_CwN2e {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.systemmanagement_FramerateLimitWarning_3idJU {
+  color: #ef806c;
+}
+.systemmanagement_LimitFramerateSlider_2860M.systemmanagement_Warning_2DGcO {
+  color: #ef806c;
 }
 .gamepaduiappoverlay_OverlayPosition_2D-LG {
   width: 100%;
@@ -74958,7 +75747,8 @@ img.mainmenuapprunning_CurrentGameLogo_3V3VK {
   margin: 0px;
   padding: 0px;
 }
-.menu_MenuItem_2jXHP.disabled {
+.menu_MenuItem_2jXHP.disabled,
+.menu_MenuItem_2jXHP.menu_Disabled_d8GPm {
   color: rgba(169, 169, 169, 0.5);
 }
 .menu_MenuWrapper_2Lu3d.menu_MenuOpen_3rgV8 {
@@ -75111,32 +75901,6 @@ img.mainmenuapprunning_CurrentGameLogo_3V3VK {
   width: 18px;
   height: 18px;
   margin-top: 1px;
-}
-.parentalunlockdialog_Body_2Tzz8 {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-.parentalunlockdialog_ErrorText_4EU3s {
-  color: #c15755;
-}
-.parentalunlockdialog_TextInput_sLyAb {
-  height: 50px;
-  font-size: 35px;
-  max-width: 25%;
-  text-align: center;
-  background: rgba(59, 63, 72, 0.5);
-  color: #dfe3e6;
-  border: none;
-  border-radius: 3px;
-  box-shadow: inset 0px 0px 0px #0000;
-}
-.parentalunlockdialog_TextInput_sLyAb:focus {
-  background: rgba(67, 73, 83, 0.6);
-  box-shadow: inset 1px 1px 8px #000a;
-  border: none;
-  outline: none;
 }
 
 @keyframes notificationcontent_ItemFocusAnim-darkerGrey-nocolor_1B1pw {
@@ -80038,13 +80802,16 @@ svg.steamtemplates_FriendIndicator_suNJh .Outline {
   flex-direction: row;
   justify-content: center;
   border-radius: 2px;
-  cursor: pointer;
+  cursor: default;
   background-color: rgba(103, 112, 123, 0.2);
 }
-.titlebarcontrols_ParentalToggleButton_13vrq:hover {
+.titlebarcontrols_ParentalToggleButton_13vrq.titlebarcontrols_HasPassword_1-J-R {
+  cursor: pointer;
+}
+.titlebarcontrols_ParentalToggleButton_13vrq.titlebarcontrols_HasPassword_1-J-R:hover {
   background-color: #3d4450;
 }
-.titlebarcontrols_ParentalToggleButton_13vrq:hover
+.titlebarcontrols_ParentalToggleButton_13vrq.titlebarcontrols_HasPassword_1-J-R:hover
   .titlebarcontrols_Icon_34bQc {
   color: #b8bcbf;
 }
@@ -80055,10 +80822,10 @@ svg.steamtemplates_FriendIndicator_suNJh .Outline {
   .titlebarcontrols_Icon_34bQc {
   color: #fff;
 }
-.titlebarcontrols_ParentalToggleButton_13vrq.titlebarcontrols_Locked_2lStU:hover {
+.titlebarcontrols_ParentalToggleButton_13vrq.titlebarcontrols_Locked_2lStU.titlebarcontrols_HasPassword_1-J-R:hover {
   background-color: #97bb69;
 }
-.titlebarcontrols_ParentalToggleButton_13vrq.titlebarcontrols_Locked_2lStU:hover
+.titlebarcontrols_ParentalToggleButton_13vrq.titlebarcontrols_Locked_2lStU.titlebarcontrols_HasPassword_1-J-R:hover
   .titlebarcontrols_Icon_34bQc {
   color: #fff;
 }
@@ -80538,6 +81305,9 @@ svg.steamtemplates_FriendIndicator_suNJh .Outline {
 }
 .bottombar_FriendsButton_1TdaA.bottombar_Disabled_2Sdix .bottombar_Text_3OhUx {
   color: rgba(169, 169, 169, 0.5);
+}
+.bottombar_AddGameMenu_H2MNn .bottombar_ContextMenuItemDisabled_3jXK1 {
+  color: #67707b;
 }
 @keyframes gamepadtoasts_ItemFocusAnim-darkerGrey-nocolor_3HiKC {
   from {
@@ -108877,191 +109647,6 @@ svg.steamtemplates_FriendIndicator_suNJh .Outline {
   height: 30px;
   margin: auto;
 }
-@keyframes systemmanagement_ItemFocusAnim-darkerGrey-nocolor_Hn2LH {
-  from {
-    background: #3d4450;
-  }
-  to {
-    background: #23262e;
-  }
-}
-@keyframes systemmanagement_ItemFocusAnim-darkerGrey_2-hgr {
-  from {
-    background: #3d4450;
-    color: #8b929a;
-  }
-  to {
-    background: #23262e;
-    color: #fff;
-  }
-}
-@keyframes systemmanagement_ItemFocusAnim-darkGrey_DSbAR {
-  from {
-    background: #67707b;
-    color: #8b929a;
-  }
-  to {
-    background: #3d4450;
-    color: #fff;
-  }
-}
-@keyframes systemmanagement_ItemFocusAnim-grey_3FKLZ {
-  from {
-    background: #8b929a;
-    color: #fff;
-  }
-  to {
-    background: #67707b;
-    color: #fff;
-  }
-}
-@keyframes systemmanagement_ItemFocusAnimBorder-darkGrey_1_4Ws {
-  from {
-    border-color: #67707b;
-  }
-  to {
-    border-color: #3d4450;
-  }
-}
-@keyframes systemmanagement_ItemFocusAnim-green_H3F6W {
-  from {
-    background: #c9ffc9;
-    color: #8b929a;
-  }
-  to {
-    background: #59bf40;
-    color: #fff;
-  }
-}
-@keyframes systemmanagement_focusAnimation_1V_fb {
-  0% {
-    background-position: 0% 0%;
-    opacity: 1;
-  }
-  100% {
-    background-position: -180% 0%;
-    opacity: 0.8;
-  }
-}
-@keyframes systemmanagement_hoverAnimation_1VW4u {
-  0% {
-    background-position: 0% 0%;
-  }
-  100% {
-    background-position: 50% 0%;
-  }
-}
-.systemmanagement_PerfProfileInfo_KWPmf .systemmanagement_Heading_1bIiM {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-}
-.systemmanagement_PerfProfileInfo_KWPmf
-  .systemmanagement_Heading_1bIiM
-  .systemmanagement_Text_a7zm3 {
-  font-family: "Motiva Sans", Helvetica, sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  font-style: normal;
-  line-height: 20px;
-  text-align: left;
-  text-decoration: none;
-  text-indent: 0;
-  text-shadow: none;
-  text-transform: none;
-  letter-spacing: 0px;
-  color: #fff;
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 22px;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  color: #8b929a;
-  padding: 0px 0px 8px;
-  display: flex;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  font-size: 16px;
-  font-weight: 600;
-}
-.systemmanagement_PerfProfileInfo_KWPmf
-  .systemmanagement_Heading_1bIiM
-  .systemmanagement_Icon_2wWEf {
-  width: 8%;
-}
-.systemmanagement_PerfProfileInfo_KWPmf .systemmanagement_SubHeading_3bFcn {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: left;
-  height: 1rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.2rem;
-  align-items: center;
-}
-.systemmanagement_PerfProfileInfo_KWPmf
-  .systemmanagement_SubHeading_3bFcn
-  .systemmanagement_Icon_2wWEf {
-  width: 8%;
-  margin-right: 1ch;
-}
-.systemmanagement_PerfProfileInfo_KWPmf
-  .systemmanagement_SubHeading_3bFcn
-  .systemmanagement_Text_a7zm3 {
-  font-family: "Motiva Sans", Helvetica, sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  font-style: normal;
-  line-height: 20px;
-  text-align: left;
-  text-decoration: none;
-  text-indent: 0;
-  text-shadow: none;
-  text-transform: none;
-  letter-spacing: 0px;
-  color: #fff;
-  font-size: 12px;
-  line-height: 16px;
-  color: #b8bcbf;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.systemmanagement_PerfProfileInfo_KWPmf
-  .systemmanagement_SubHeading_3bFcn
-  .systemmanagement_Text_a7zm3
-  .systemmanagement_GameName_1BVAO {
-  text-transform: uppercase;
-}
-.systemmanagement_PerfProfileExplainerModal_3HuMn {
-  white-space: pre-line;
-}
-.systemmanagement_PerfProfileInfoBasic_1TDxz {
-  font-family: "Motiva Sans", Helvetica, sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  font-style: normal;
-  line-height: 20px;
-  text-align: left;
-  text-decoration: none;
-  text-indent: 0;
-  text-shadow: none;
-  text-transform: none;
-  letter-spacing: 0px;
-  color: #fff;
-  font-size: 12px;
-  line-height: 16px;
-  text-align: center;
-}
-.systemmanagement_PerfProfileInfoBasic_1TDxz .systemmanagement_Name_CwN2e {
-  font-weight: bold;
-  text-transform: uppercase;
-}
-.systemmanagement_FramerateLimitWarning_3idJU {
-  color: #ef806c;
-}
-.systemmanagement_LimitFramerateSlider_2860M.systemmanagement_Warning_2DGcO {
-  color: #ef806c;
-}
 .quickaccesscontrollerorder_OptedOut_3NMs0 {
   color: #ffc82c;
   display: block;
@@ -110709,6 +111294,9 @@ svg.steamtemplates_FriendIndicator_suNJh .Outline {
   width: 30px;
   height: 30px;
   margin-bottom: 0px;
+}
+.requestplaytime_ErrorText_3Gwch {
+  color: #de3618;
 }
 :root {
   --touchmenuicon-fg: #b8bcbf;

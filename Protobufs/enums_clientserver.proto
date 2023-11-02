@@ -1416,7 +1416,6 @@ enum EMsg {
 	k_EMsgSLCSharedLicensesLockStatus = 9402;
 	k_EMsgClientSharedLibraryLockStatus = 9405;
 	k_EMsgClientSharedLibraryStopPlaying = 9406;
-	k_EMsgSLCOwnerLibraryChanged = 9407;
 	k_EMsgSLCSharedLibraryChanged = 9408;
 	k_EMsgRemoteClientBase = 9500;
 	k_EMsgRemoteClientAuth_OBSOLETE = 9500;

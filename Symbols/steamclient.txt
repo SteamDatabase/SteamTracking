@@ -326,8 +326,6 @@
  TSQueueBase_UnsafeDummy
  TSQueueBase_UnsafePeek
  TSQueue_PopIntoFreeList
- Test_IsActive
- Test_SetFailed
  ThreadCloseProcess
  ThreadFindProcessByName
  ThreadGetCurrentId
@@ -370,7 +368,7 @@
  V_ComposeFileName
  V_ConvertUUIDToString(V_UUID const*, EUUIDStringFlags, char*, int)
  V_CopyAndFixSlashes
- V_EscapeShellArgumentAndAppend(CUtlStringBuilder*, char const*)
+ V_EscapeShellArgumentAndAppend(CUtlStringBuilder*, char const*, bool)
  V_ExtractDomainFromURL
  V_ExtractFileExtension
  V_ExtractFilePath

@@ -96,10 +96,9 @@ j$WP
 j$PQ
 <^_[]
 ,^_[]
-,^_[]
-9JLtD
-tM9H
+QWRP
 ^_[]
+9JLtD
 tM9H
 ^_[]
 tU9A
@@ -351,7 +350,7 @@ j$WP
 ^_[]
 j$RP
 <^_[]
-2+qh
+2+qp
 ^_[]
 ^_[]
 r =p
@@ -554,7 +553,6 @@ Detected hot-key via base input, now requesting overlay %s
 disable
 enable
 Detected screenshot hot-key via base input
-Detected movie hot-key via base input
 ESC press detected, requesting overlay disable
 SteamGameStream_%u_mem
 SteamGameStream_%u_mutex
@@ -1600,9 +1598,10 @@ ValveHookScreenshots
 dBOverlayNeedsPresent
 jIsOverlayEnabled
 cYY0T
-BrrrXJ\Z
+Brrr
+XJ\Z
 :>6x
-:B	s
+:F	s
 FF26(
 4>>^
 L d\8
@@ -1854,45 +1853,46 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-^!VJ
->t1W
-al70~
-0JI2N
- =,<>
-\rEZc
-0B84
-sPo>^
-1uoP|
-koM[l
-OX[u
-lVu1
-jPeQ
+j imY
+2v7o
+L\e:
+L65|
+21&q
+pns)"
+r/K:<
+bcZ"
+II;M
+U4_q
+sG2U
+0n`[
+=xvl
+l_T1
+	XLT
+X%.J!
+#$d\
+v,iY
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-tgPn
-$X33
-Usn+T
-9pe$
-v9GWj
-lSUK
-r?O@	
-;B7Qwk
-@Duo
-Z/u"
-*/h8o
-$9z`H
-=$E&
-Jp&"x
-ag/EmL 
-@N]o
-,A=p
- ,Qt
-xHH+
-3/-IoO
-UXD1aXp
-_45T:
+['iW
+mKbN.
+,/.-1
+ULoy
+|%}g
+~SCw
+`([3S
+a?7&x 
+lacN}R
+:?3H
++h"'
+~Tm G-
+$E_]
+3lIC
+IfRuJY
+#BNo
+\al-
+_:71
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -1948,10 +1948,10 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231031020236Z0/
-:.$s
-N&hHn
-|{t$
+231101234838Z0/
+4Y$cU	
+6BaM0[
+ 2(v+
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -1959,19 +1959,17 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		CYqHOef/RLCU0qNzkplOJmhIbp8=
+		mjVOL5rafH8RDNd/NA330qlf5U0=
 		</data>
 		<data>
-		ZdP10531ANMPOK/IP+/odtckHkA=
+		Mih2Kxf/NR1z5IZI216WJ4EF5II=
 		</data>
 	</array>
 </dict>
 </plist>
-%'kB$
-BrJ8/
-)+fY6
-VTJNb
-20231031020307Z0
+=!il{
+4AB&9X
+20231101234919Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -2027,14 +2025,10 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231031020307Z0#
+231101234919Z0#
 )b/{d
-~Fs)
-;.iY
-0.p)
-R#Mg
-nxL~
-6t	M
+P6dF
+a(z|)n#
 __TEXT
 __text
 __TEXT
@@ -2135,10 +2129,7 @@ saE1
 AVSH
 tT9H
 [A^]
-AVSH
-tT9H
-[A^]
-t\9A
+tU9p
 [A^]
 AWAVSPA
 [A^A_]
@@ -2330,6 +2321,7 @@ AWAVAUATSH
 D9` 
 D9c ~
 |$$I
+(%z{
 [A\A]A^A_]
 P A9
 [A\A]A^A_]
@@ -2374,7 +2366,8 @@ AWAVAUATSH
 H9^ 
 t$H9Y w
 D9A4u
-(%=b
+Y%ub
+(%-b
 [A\A]A^A_]
 AWAVAUATSH
 8[A\A]A^A_]
@@ -2523,9 +2516,9 @@ AWAVATSH
 AWAVAUATSH
 _`H9
 t	;X 
-P(D9
 T$(D
 \$ L
+|$(D
 [A\A]A^A_]
 AVSH
  [A^]
@@ -2590,7 +2583,7 @@ AWAVSPI
 AWAVSP
 [A^A_]
 AWAVAUATSH
-D8-pk
+D8-Lk
 ([A\A]A^A_]
 AWAVATSH
 [A\A^A_]
@@ -2896,7 +2889,6 @@ UAWAVATSH
 }%E1
 H;D$
 [A\A^A_]
-D957
 UAWAVAUATSH
 D$`H
 D$8H
@@ -2942,7 +2934,6 @@ Detected hot-key via base input, now requesting overlay %s
 disable
 enable
 Detected screenshot hot-key via base input
-Detected movie hot-key via base input
 ESC press detected, requesting overlay disable
 SteamGameStream_%u_mem
 SteamGameStream_%u_mutex
@@ -4092,7 +4083,8 @@ ValveHookScreenshots
 dBOverlayNeedsPresent
 jIsOverlayEnabled
 G.11
-@zzzT:dV
+@zzz
+T:dV
 >@.v
 D: 0 
 (44n
@@ -4356,19 +4348,19 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-nq]/V
-(*Pe
-u1jW
-i<@'
-LB *
-~Iad
-}$U8
-MTC2^
-o4P*
-a~#S
-YNMMDU
-BTvFD
-*dnv
+)b+V
+[(|r
+!:1 (
+ll)),
+'Nza
+L*bc
++UJH\
+s=M-Q
+##8>
+XH,.
+w05!
+pVVqpT
+[+9R
 y_-f
 {yji
 subject.OU
@@ -4377,26 +4369,18 @@ com.valvesoftware.steam
 MXGJJ98X76
 VXe{
 gcsr_
-dVc/h 
-QMi}@F
-l?V8
-93\d!
-/hMUt
-8%k_
- (<3
-%8yP
-qK_$GH
-zRl_2;t
-[Ci_?
-X>H/KHEw
-97Rj
-YYf4
-wv$B
-umVT
-<X=Hd
-xnJ9
-kF\a3
-dmY'
+<@7V
+8NNvy
+J	,>
+.]00D
+wB[^
+QU)9qq
+KnvW
+.@26
+0u3\V(
+zZS.
+I26;o
+Vtp>O
 #TNJ
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -4453,8 +4437,8 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231031020236Z0/
-MI#0
+231101234838Z0/
+0Q/-"
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -4462,36 +4446,38 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		I/yicRc45ACkAAf5QK2qPZPdgo8=
+		zQ4Lkj4HMFEvLSLEnhIqQ5MezoI=
 		</data>
 		<data>
-		dISdupqWcQhD+/pdKJ+Q0seL6do=
+		IPFZegjLZxRkcWW2PByLUdxUAQk=
 		</data>
 	</array>
 </dict>
 </plist>
-".}U
-^&P7wh
- QS`E
-TH:l
-20231031020307Z0
+aDFMW
+VEi}
+oG_-
+=pni]
+20231101234919Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231019205532Z
-231130205531Z0B1
-Timestamp Signer NWK21
+231019211004Z
+231130211003Z0B1
+Timestamp Signer NWK11
 Apple Inc.1
-S2/k4
-]-lU
-)sX]
-g6;h
-2Z72
+$qJK
+mc.V_l
+\+\V
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
+X3zP
+27,=Dr
+k]mh
+MM.):t
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -4530,10 +4516,10 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231031020307Z0#
-)b/{d
-q"z)
-7xo{
+231101234919Z0#
+q	)JM^;
+84q0+
+3	/I
 __TEXT
 __text
 __TEXT
@@ -4637,11 +4623,10 @@ $E9H
 &E9h
 h&A)
 (	29
-45M	0
 jh8)	
-@)<(
+@)7(
 29:;	
-@9HB
+@9GB
 h"@9
 Th*@
 Th.@
@@ -4653,17 +4638,18 @@ h&@9
 hvB9
 hrB9
 C9a"C9b&C9c*C9
+Td	P
+Vd	P
 aBA9
+A`	0
 h&D)
-qm>	P
-L=	P
+l;	0
 <v}	
 =h"@9
 h"@9
 yi:@
 Th#@
 -D@!
- C	P
 X`rA
 X`BA
 T	!@
@@ -4721,7 +4707,7 @@ X`"B
 X`~B
 X`zB
 X`&B
-y		XX
+H%	X
 	Am 8`
 #V)h
 4h.@
@@ -4738,7 +4724,6 @@ WA)9
 	@q"
 	K?U
 @z`:@z`
-	iD9)
 o"E@
 !~"8"
 T( @
@@ -4747,8 +4732,6 @@ yixJ
 T`2@
 T`2@
 T	!@
-	k Q
-	k!+
 T`2@
 T`2@
 T`2@
@@ -4771,17 +4754,14 @@ Th&@
 Rh:@
 9`&@
 Th&@
- 5	X
-A3	X
 T`2@
 4a2@
 T*;A
 TlMA
-hBD9H
-hrD9h
-hrD9
-hBD9
-hBD9h
+hbD9H
+4h"A
+hbD9
+hbD9h
 !IzH
 	!F9
 hRG9
@@ -4817,7 +4797,6 @@ Detected hot-key via base input, now requesting overlay %s
 disable
 enable
 Detected screenshot hot-key via base input
-Detected movie hot-key via base input
 ESC press detected, requesting overlay disable
 SteamGameStream_%u_mem
 SteamGameStream_%u_mutex
@@ -6123,28 +6102,38 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-(s!b
-c&bX
-#=E*
-Q[&\
-?~3f
+p*$c
+|Xq^Z&{
+d^yR<P*m
+zPYfQ
+.$I!L
+54**
+OH`#
+m8/Zq))G
+aYmu
 jJ;w
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
+nUNU
 x)B	s
-(fBQq
-:M;I
-Yq#KR
-]daH
-yXG%
-9kI]9
-mVmx
-@YIo
-Cx~$
-Or,C*
-Di3?
+7RX"
+8cGv_5
+BrVU
+VeM;
+VB9PU
+U{\$H
+Ea1N
+.t/	
+m,DWbg'
+$\l(
+-Yf{
+Is.uwZ_>
+!_N)
+~%_Us
+R}Wb
+ROH"
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -6200,8 +6189,8 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231031020236Z0/
-s>*Ox
+231101234838Z0/
+zZ[Y
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -6209,34 +6198,39 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		8b7eZv1VLK2VQLOJVKlzPipPeJM=
+		22SPirP6neEgEnt+z3paW1kKqWU=
 		</data>
 		<data>
-		otUyGhJcmQdwE0BTgVqHqG/G1Ic=
+		BE4w3jmPkkl8n1xkPP7BH/j4mGA=
 		</data>
 	</array>
 </dict>
 </plist>
-#;>!
-GrHv.
-20231031020307Z0
+8Mo.B
+?R60S)
+Rc@-
+$9)!G
+(BrW
+20231101234919Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231019205532Z
-231130205531Z0B1
-Timestamp Signer NWK21
+231019211004Z
+231130211003Z0B1
+Timestamp Signer NWK11
 Apple Inc.1
-S2/k4
-]-lU
-)sX]
-g6;h
-2Z72
+$qJK
+mc.V_l
+\+\V
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
+X3zP
+27,=Dr
+k]mh
+MM.):t
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -6275,8 +6269,10 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231031020307Z0#
-)b/{d
-.Chw~+
-}]Qf
-d_W$
+231101234919Z0#
+MzM&
+Q(\w
+wb>C
+Zx_:
++db4[
+?23y

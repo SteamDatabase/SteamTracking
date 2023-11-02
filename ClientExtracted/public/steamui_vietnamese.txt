@@ -1352,7 +1352,7 @@ Công đoạn này nên hoàn thành dưới một phút."
 "Steam_App_LegacyKey_Failed_Text"  "Không thể yêu cầu mã sản phẩm. Xin hãy thử lại trong ít phút."
 "Steam_App_LegacyKey_NoResponse_Text" "Không thể liên lạc với máy chủ Steam. Xin vui lòng kiểm tra kết nối internet của bạn và thử lại."
 "Steam_App_LegacyKey_Denied_Text"  "Steam không thể xác nhận quyền sở hữu để đặt nhận mã sản phẩm. Hãy liên hệ với đội hỗ trợ Steam."
-"Steam_App_LegacyKey_Denied_Borrowed_Text" "Một vài hoặc tất cả nội dung của %game% chỉ khả dụng khi kết nối đến dịch vụ của bên thứ ba, ví dụ Uplay hoặc Origin.\nNgười chủ sở hữu gốc phải đăng ký với dịch vụ đó thì mới có thể truy cập nội dung này."
+"Steam_App_LegacyKey_Denied_Borrowed_Text" "Một vài hoặc tất cả nội dung của %game% chỉ có khi kết nối đến dịch vụ của bên thứ ba, ví dụ Uplay hoặc Origin.\nNgười chủ sở hữu gốc phải đăng ký với dịch vụ đó thì mới có thể truy cập nội dung này."
 "Steam_App_LegacyKey_Pending_Text" "Yêu cầu về mã sản phẩm đang chờ phê duyệt từ đội hỗ trợ Steam. Vui lòng thử lại sau vài giờ."
 "Steam_App_LegacyKey_OutOfKeys_Text" "Hiện Steam không còn mã cho sản phẩm được yêu cầu bởi %game%.\n\nChúng tôi sẽ phát cho bạn một mã sản phẩm ngay khi được nhận thêm từ phía nhà phát hành.\nThử lại sau hoặc bạn có thể yêu cầu hoàn tiền ngay bây giờ."
 

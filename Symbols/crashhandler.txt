@@ -122,13 +122,8 @@
  popen$UNIX2003
  posix_memalign
  printf
- pthread_cond_destroy
- pthread_cond_wait
- pthread_cond_wait$UNIX2003
  pthread_create
  pthread_getspecific
- pthread_join
- pthread_join$UNIX2003
  pthread_key_create
  pthread_key_delete
  pthread_kill

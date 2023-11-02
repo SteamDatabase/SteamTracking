@@ -178,7 +178,7 @@
  ThreadImplOneTimeInit
  VProfInternalEnterScopeCurrentThread
  V_CopyAndFixSlashes
- V_EscapeShellArgumentAndAppend(CUtlStringBuilder*, char const*)
+ V_EscapeShellArgumentAndAppend(CUtlStringBuilder*, char const*, bool)
  V_FixDoubleSlashes
  V_FixSlashes
  V_GetFileExtension

@@ -108,7 +108,7 @@
  VProfInternalEnterScopeCurrentThread
  VProfInternalGetProfileForCurrentThread
  V_AppendSlash
- V_EscapeShellArgumentAndAppend(CUtlStringBuilder*, char const*)
+ V_EscapeShellArgumentAndAppend(CUtlStringBuilder*, char const*, bool)
  V_FixDoubleSlashes
  V_IsAbsolutePath
  V_JoinStrings(CUtlVector<CUtlString, CUtlMemory<CUtlString> > const&, char const*)

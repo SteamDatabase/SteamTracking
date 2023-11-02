@@ -1,0 +1,29 @@
+import "steammessages_base.proto";
+import "webuimessages_base.proto";
+
+option optimize_for = SPEED;
+option cc_generic_services = true;
+
+message CAchievements_GetInfo_Request {
+	optional uint64 gameid = 1;
+}
+
+message CAchievements_GetInfo_Response {
+	message Info {
+		optional string id = 1;
+		optional string name = 2;
+		optional string desc = 3;
+		optional string image_url_achieved = 4;
+		optional string image_url_not_achieved = 5;
+		optional bool achieved = 6;
+		optional uint32 unlock_time = 7;
+	}
+
+	repeated .CAchievements_GetInfo_Response.Info achievements = 1;
+}
+
+service Achievements {
+	option (webui_service_execution_site) = k_EClientExecutionSiteClientdll;
+
+	rpc GetInfo (.CAchievements_GetInfo_Request) returns (.CAchievements_GetInfo_Response);
+}

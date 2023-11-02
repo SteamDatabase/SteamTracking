@@ -140,7 +140,7 @@ message CMsgClientSettings {
 	optional int32 broadcast_chat_corner = 12010 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Broadcast\\ShowChat", (setting_default_int) = 1];
 	optional bool steam_input_configurator_error_msg_enable = 14001 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "SteamInput/Configurator/ErrorMsgEnabled"];
 	optional bool controller_guide_button_focus_steam = 14002 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Controller_CheckGuideButton"];
-	optional bool controller_ps4_support = 14003 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "SteamController_PS4Support"];
+	optional int32 controller_ps_support = 14003 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "SteamController_PSSupport", (setting_default_int) = 1];
 	optional bool controller_xbox_support = 14004 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "SteamController_XBoxSupport"];
 	optional bool controller_xbox_driver = 14005 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "SteamController_XBoxDriver"];
 	optional bool controller_switch_support = 14006 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "SteamController_SwitchSupport"];
@@ -161,10 +161,12 @@ message CMsgClientSettings {
 	optional int32 g_marker_before_seconds = 18204 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional int32 g_marker_after_seconds = 18205 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional bool g_background_devmode = 18206 [(setting_store) = k_EClientSettingStore_CustomFunc];
+	optional .CMsgHotkey g_background_mk = 18207 [(setting_store) = k_EClientSettingStore_CustomFunc];
+	optional .CMsgHotkey g_background_tg = 18208 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional bool show_timestamps_in_console = 20000 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Developer\\ShowTimestampsInConsole"];
 	optional bool force_oobe = 20001 [(setting_store) = k_EClientSettingStore_Registry, (setting_name) = "HKEY_CURRENT_USER\\Software\\Valve\\Steam\\ForceOOBE"];
 	optional int32 override_browser_composer_mode = 20002 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional bool cef_remote_debugging_enabled = 20003 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional bool force_deck_perf_tab = 20004 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Developer/ForceDeckPerfTab"];
-	optional bool gamescope_hdr_analysis_enabled = 21000 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Gamescope/HDRAnalysis"];
+	optional .EHDRVisualization gamescope_hdr_visualization = 21001 [default = k_EHDRVisualization_None, (setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Gamescope/HDRVisualization"];
 }

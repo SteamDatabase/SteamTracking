@@ -301,6 +301,7 @@ message StoreItem {
 	optional uint32 game_count = 56 [(description) = "For creators and tags, how many games belong to them"];
 	optional string internal_name = 57 [(description) = "For hub categories, the internal name (handle) of the category"];
 	optional string full_description = 58 [(description) = "About this game section on the store page"];
+	optional bool is_free_temporarily = 59 [(description) = "This item is free now but not permanently so."];
 }
 
 message StoreGameRating {

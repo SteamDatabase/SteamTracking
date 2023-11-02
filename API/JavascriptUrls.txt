@@ -3038,7 +3038,6 @@ steam://helpurl/
 steam://joinlobby/${appID}/${lobbyID}/${}
 steam://joinlobby/${}/${}/${}
 steam://nav/games/details/${}
-steam://oldsettings
 steam://open/about
 steam://open/addnonsteamgame
 steam://open/bigpicture

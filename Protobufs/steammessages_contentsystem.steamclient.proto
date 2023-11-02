@@ -33,6 +33,7 @@ message CContentServerDirectory_ServerInfo {
 	optional string https_support = 12;
 	repeated uint32 allowed_app_ids = 13;
 	optional bool preferred_server = 14;
+	optional uint32 priority_class = 15;
 }
 
 message CContentServerDirectory_GetServersForSteamPipe_Response {

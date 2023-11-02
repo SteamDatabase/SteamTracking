@@ -1,8 +1,8 @@
 __TEXT
 __text
 __TEXT
-pg
-pg
+[
+[
 __stubs
 __TEXT
 __stub_helper
@@ -12,7 +12,7 @@ __TEXT
 __cstring
 __TEXT
 __gcc_except_tab__TEXT
-<#
+8#
 __objc_methname
 __TEXT
 __unwind_info
@@ -153,6 +153,7 @@ e
 14CUtlMemoryBase
 %Y-%m-%d %H:%M:%S
 Logger
+none
 console
 generic
 publish
@@ -264,15 +265,12 @@ ClientAPI_Init(GlobalInstance): GetIClientSTARInternal returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientNetworkingUtils returned NULL.
 -quicklogin
 Set the base used to construct quick login URLs
--community
-Set the community URL
--store
-Set the store URL
--help
-Set the help/support URL
 -devsites
 Use local dev websites
+-devsiteshost
+Pass the hostname, will generate dev site domains like store.{hostname}.steam.dev
 /
+local
 help
 %s/
 login
@@ -322,7 +320,6 @@ betapassword
 language
 ERROR! Password check for AppId %d failed to start.
 ERROR! Password check for AppId %d returned error %s.
-betakey
 ERROR! Unknown app '%u'
 ERROR! Failed to install app '%u' (%s)
 Success! App '%u' already up to date.
@@ -493,7 +490,6 @@ appbuild
 ERROR! App build file  has invalid format: %s.
 ERROR! App build file %s has invalid appid.
 setlive
-local
 depots
 ERROR! App build file %s has no depots section.
 ERROR! Invalid depot ID: %s.
@@ -608,6 +604,7 @@ https://www.example.com/
 GetBootstrapperVersion
 Steam Console Client (c) Valve Corporation
 - version %llu
+-help
 --help
 -h
 /h
@@ -1010,6 +1007,7 @@ NIL
 steamclient.dylib
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/enum_names.cpp
 EResult
+cs
 EUniverse
 false
 true
@@ -1147,6 +1145,7 @@ Public
 Beta
 Internal
 Dev
+None
 Offline
 Online
 Away
@@ -1210,6 +1209,30 @@ Install path removed
 Invalid backup path
 Invalid Passcode
 Self updating
+en
+de
+fr
+it
+ko
+es
+ru
+th
+ja
+pt
+pl
+da
+nl
+fi
+sv
+hu
+ro
+tr
+pt-br
+bg
+el
+uk
+vi
+id
 Logged Off
 Connecting
 Connected
@@ -1219,6 +1242,191 @@ Logging Off
 broadcast
 PS3
 unspecified
+zh_CN
+English
+#SteamUI_Selection_English
+#Panorama_Selection_English
+#Panorama_Lang_English
+en_US
+German
+german
+#SteamUI_Selection_German
+#Panorama_Selection_German
+#Panorama_Lang_German
+de_DE
+French
+french
+#SteamUI_Selection_French
+#Panorama_Selection_French
+#Panorama_Lang_French
+fr_FR
+Italian
+italian
+#SteamUI_Selection_Italian
+#Panorama_Selection_Italian
+#Panorama_Lang_Italian
+it_IT
+Korean
+koreana
+#SteamUI_Selection_Korean
+#Panorama_Selection_Korean
+#Panorama_Lang_Korean
+ko_KR
+Spanish
+spanish
+#SteamUI_Selection_Spanish
+#Panorama_Selection_Spanish
+#Panorama_Lang_Spanish
+es_ES
+Simplified_Chinese
+schinese
+#SteamUI_Selection_Simplified_Chinese
+#Panorama_Selection_Simplified_Chinese
+#Panorama_Lang_Simplified_Chinese
+zh-cn
+Traditional_Chinese
+tchinese
+#SteamUI_Selection_Traditional_Chinese
+#Panorama_Selection_Traditional_Chinese
+#Panorama_Lang_Traditional_Chinese
+zh_TW
+zh-tw
+Russian
+russian
+#SteamUI_Selection_Russian
+#Panorama_Selection_Russian
+#Panorama_Lang_Russian
+ru_RU
+Thai
+thai
+#SteamUI_Selection_Thai
+#Panorama_Selection_Thai
+#Panorama_Lang_Thai
+th_TH
+Japanese
+japanese
+#SteamUI_Selection_Japanese
+#Panorama_Selection_Japanese
+#Panorama_Lang_Japanese
+ja_JP
+Portuguese
+portuguese
+#SteamUI_Selection_Portuguese
+#Panorama_Selection_Portuguese
+#Panorama_Lang_Portuguese
+pt_PT
+Polish
+polish
+#SteamUI_Selection_Polish
+#Panorama_Selection_Polish
+#Panorama_Lang_Polish
+pl_PL
+Danish
+danish
+#SteamUI_Selection_Danish
+#Panorama_Selection_Danish
+#Panorama_Lang_Danish
+da_DK
+Dutch
+dutch
+#SteamUI_Selection_Dutch
+#Panorama_Selection_Dutch
+#Panorama_Lang_Dutch
+nl_NL
+Finnish
+finnish
+#SteamUI_Selection_Finnish
+#Panorama_Selection_Finnish
+#Panorama_Lang_Finnish
+fi_FI
+Norwegian
+norwegian
+#SteamUI_Selection_Norwegian
+#Panorama_Selection_Norwegian
+#Panorama_Lang_Norwegian
+no_NO
+Swedish
+swedish
+#SteamUI_Selection_Swedish
+#Panorama_Selection_Swedish
+#Panorama_Lang_Swedish
+sv_SE
+Hungarian
+hungarian
+#SteamUI_Selection_Hungarian
+#Panorama_Selection_Hungarian
+#Panorama_Lang_Hungarian
+hu_HU
+Czech
+czech
+#SteamUI_Selection_Czech
+#Panorama_Selection_Czech
+#Panorama_Lang_Czech
+cs_CZ
+Romanian
+romanian
+#SteamUI_Selection_Romanian
+#Panorama_Selection_Romanian
+#Panorama_Lang_Romanian
+ro_RO
+Turkish
+turkish
+#SteamUI_Selection_Turkish
+#Panorama_Selection_Turkish
+#Panorama_Lang_Turkish
+tr_TR
+Brazilian
+brazilian
+#SteamUI_Selection_Brazilian
+#Panorama_Selection_Brazilian
+#Panorama_Lang_Brazilian
+pt_BR
+Bulgarian
+bulgarian
+#SteamUI_Selection_Bulgarian
+#Panorama_Selection_Bulgarian
+#Panorama_Lang_Bulgarian
+bg_BG
+Greek
+greek
+#SteamUI_Selection_Greek
+#Panorama_Selection_Greek
+#Panorama_Lang_Greek
+el_GR
+Arabic
+arabic
+#SteamUI_Selection_Arabic
+#Panorama_Selection_Arabic
+#Panorama_Lang_Arabic
+ar_AE
+ar
+Ukrainian
+ukrainian
+#SteamUI_Selection_Ukrainian
+#Panorama_Selection_Ukrainian
+#Panorama_Lang_Ukrainian
+uk_UA
+Latam_Spanish
+latam
+#SteamUI_Selection_Latam_Spanish
+#Panorama_Selection_Latam_Spanish
+#Panorama_Lang_Latam_Spanish
+es_419
+es-419
+Vietnamese
+vietnamese
+#SteamUI_Selection_Vietnamese
+#Panorama_Selection_Vietnamese
+#Panorama_Lang_Vietnamese
+vi_VN
+SteamChina_SChinese
+sc_schinese
+Indonesian
+indonesian
+#SteamUI_Selection_Indonesian
+#Panorama_Selection_Indonesian
+#Panorama_Lang_Indonesian
+id_ID
 @bEnableSpewThrottle
 @bEnableLogTearOff
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/logger.cpp

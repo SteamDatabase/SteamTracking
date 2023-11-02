@@ -59,7 +59,7 @@ enum EPersonaStateFlag {
 
 enum EContentCheckProvider {
 	k_EContentCheckProvider_Invalid = 0;
-	k_EContentCheckProvider_Google = 1;
+	k_EContentCheckProvider_Google_DEPRECATED = 1;
 	k_EContentCheckProvider_Amazon = 2;
 	k_EContentCheckProvider_Local = 3;
 	k_EContentCheckProvider_GoogleVertexAI = 4;
@@ -238,6 +238,23 @@ enum EGamescopeBlurMode {
 	k_EGamescopeBlurMode_Disabled = 0;
 	k_EGamescopeBlurMode_IfOccluded = 1;
 	k_EGamescopeBlurMode_Always = 2;
+}
+
+enum ESLSHelper {
+	k_ESLSHelper_Invalid = 0;
+	k_ESLSHelper_Minidump = 1;
+	k_ESLSHelper_Kdump = 2;
+	k_ESLSHelper_Journal = 3;
+	k_ESLSHelper_Gpu = 4;
+	k_ESLSHelper_SystemInfo = 5;
+}
+
+enum EHDRVisualization {
+	k_EHDRVisualization_None = 0;
+	k_EHDRVisualization_Heatmap = 1;
+	k_EHDRVisualization_Analysis = 2;
+	k_EHDRVisualization_HeatmapExtended = 3;
+	k_EHDRVisualization_HeatmapClassic = 4;
 }
 
 enum EHDRToneMapOperator {

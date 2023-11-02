@@ -234,8 +234,6 @@
  TSQueueBase_UnsafeDummy
  TSQueueBase_UnsafePeek
  TSQueue_PopIntoFreeList
- Test_IsActive
- Test_SetFailed
  ThreadGetCurrentId
  ThreadInMainThread
  ThreadInterlockedAssignIf

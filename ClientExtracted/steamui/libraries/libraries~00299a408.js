@@ -1,4 +1,4 @@
-var CLSTAMP = "8456790";
+var CLSTAMP = "8460218";
 /* Third-party software licenses can be found at licenses.txt */ (self.webpackChunksteamui =
   self.webpackChunksteamui || []).push([
   [9394],
@@ -12738,10 +12738,11 @@ var CLSTAMP = "8456790";
       };
     },
     5826: (e) => {
+      var t = {}.toString;
       e.exports =
         Array.isArray ||
         function (e) {
-          return "[object Array]" == Object.prototype.toString.call(e);
+          return "[object Array]" == t.call(e);
         };
     },
     43720: (e) => {
@@ -34069,7 +34070,8 @@ var CLSTAMP = "8456790";
             (e[(e.k_EResultCachedCredentialInvalid = 126)] =
               "k_EResultCachedCredentialInvalid"),
             (e[(e.K_EResultPhoneNumberIsVOIP = 127)] =
-              "K_EResultPhoneNumberIsVOIP");
+              "K_EResultPhoneNumberIsVOIP"),
+            (e[(e.k_EResultNotSupported = 128)] = "k_EResultNotSupported");
         })(n || (n = {}));
     },
     77008: (e, t, r) => {
@@ -35256,7 +35258,9 @@ var CLSTAMP = "8456790";
               "k_ELibraryAssetType_Header"),
             (e[(e.k_ELibraryAssetType_Icon = 4)] = "k_ELibraryAssetType_Icon"),
             (e[(e.k_ELibaryAssetType_HeroBlur = 5)] =
-              "k_ELibaryAssetType_HeroBlur");
+              "k_ELibaryAssetType_HeroBlur"),
+            (e[(e.k_ELibaryAssetType_PublicTimelineIcons = 6)] =
+              "k_ELibaryAssetType_PublicTimelineIcons");
         })(ee || (ee = {})),
         (function (e) {
           (e[(e.k_ERecommendationIgnoreReasonNotInterested = 0)] =
@@ -35392,7 +35396,19 @@ var CLSTAMP = "8456790";
             (e[(e.k_EStoreCategoryHighQualitySoundtrackAudio = 50)] =
               "k_EStoreCategoryHighQualitySoundtrackAudio"),
             (e[(e.k_EStoreCategorySteamChinaWorkshop = 51)] =
-              "k_EStoreCategorySteamChinaWorkshop");
+              "k_EStoreCategorySteamChinaWorkshop"),
+            (e[(e.k_EStoreCategoryPS4Controller = 55)] =
+              "k_EStoreCategoryPS4Controller"),
+            (e[(e.k_EStoreCategoryPS4ControllerBT = 56)] =
+              "k_EStoreCategoryPS4ControllerBT"),
+            (e[(e.k_EStoreCategoryPS5Controller = 57)] =
+              "k_EStoreCategoryPS5Controller"),
+            (e[(e.k_EStoreCategoryPS5ControllerBT = 58)] =
+              "k_EStoreCategoryPS5ControllerBT"),
+            (e[(e.k_EStoreCategorySteamInputAPI = 59)] =
+              "k_EStoreCategorySteamInputAPI"),
+            (e[(e.k_EStoreCategoryGamepadPreferred = 60)] =
+              "k_EStoreCategoryGamepadPreferred");
         })(se || (se = {})),
         (function (e) {
           (e[(e.k_PFI_MatchingFileType_Items = 0)] =
@@ -36806,6 +36822,8 @@ var CLSTAMP = "8456790";
             (e[(e.AdditionalDeviceSettingsPath_String = 1042)] =
               "AdditionalDeviceSettingsPath_String"),
             (e[(e.DevicePowerUsage_Float = 1052)] = "DevicePowerUsage_Float"),
+            (e[(e.ActualTrackingSystemName_String = 1054)] =
+              "ActualTrackingSystemName_String"),
             (e[(e.ReportsTimeSinceVSync_Bool = 2e3)] =
               "ReportsTimeSinceVSync_Bool"),
             (e[(e.SecondsFromVsyncToPhotons_Float = 2001)] =
@@ -37304,7 +37322,8 @@ var CLSTAMP = "8456790";
             (e[(e.k_EResultCachedCredentialInvalid = 126)] =
               "k_EResultCachedCredentialInvalid"),
             (e[(e.K_EResultPhoneNumberIsVOIP = 127)] =
-              "K_EResultPhoneNumberIsVOIP");
+              "K_EResultPhoneNumberIsVOIP"),
+            (e[(e.k_EResultNotSupported = 128)] = "k_EResultNotSupported");
         })(n || (n = {}));
       var o,
         i = r(33019),
@@ -40073,8 +40092,6 @@ var CLSTAMP = "8456790";
             "k_EMsgClientSharedLibraryLockStatus"),
           (e[(e.k_EMsgClientSharedLibraryStopPlaying = 9406)] =
             "k_EMsgClientSharedLibraryStopPlaying"),
-          (e[(e.k_EMsgSLCOwnerLibraryChanged = 9407)] =
-            "k_EMsgSLCOwnerLibraryChanged"),
           (e[(e.k_EMsgSLCSharedLibraryChanged = 9408)] =
             "k_EMsgSLCSharedLibraryChanged"),
           (e[(e.k_EMsgRemoteClientBase = 9500)] = "k_EMsgRemoteClientBase"),
@@ -40280,40 +40297,42 @@ var CLSTAMP = "8456790";
     80024: (e, t, r) => {
       "use strict";
       r.d(t, {
-        Ab: () => I,
-        Bb: () => Y,
-        Cf: () => Q,
-        D8: () => V,
+        Ab: () => B,
+        Bb: () => X,
+        Cf: () => Z,
+        D8: () => H,
         EX: () => o,
-        Eb: () => $,
-        F$: () => j,
+        Eb: () => ee,
+        F$: () => V,
         Fp: () => a,
         Gm: () => R,
-        Om: () => Z,
+        Mx: () => P,
+        Om: () => J,
         Ox: () => T,
         QN: () => v,
         TH: () => M,
         TT: () => p,
-        Ve: () => G,
-        Xh: () => U,
-        ZL: () => K,
-        _p: () => w,
+        Tx: () => A,
+        Ve: () => W,
+        Xh: () => N,
+        ZL: () => Y,
+        _p: () => F,
         cq: () => _,
-        dY: () => N,
-        fq: () => z,
-        g2: () => L,
+        dY: () => j,
+        fq: () => q,
+        g2: () => x,
         gb: () => C,
-        hh: () => W,
-        j7: () => q,
+        hh: () => z,
+        j7: () => Q,
         jS: () => S,
         m0: () => b,
-        n9: () => O,
+        n9: () => L,
         nM: () => f,
-        oc: () => x,
+        oc: () => G,
         pW: () => d,
-        qc: () => H,
+        qc: () => K,
         qi: () => s,
-        vb: () => X,
+        vb: () => $,
       });
       var n = r(33019);
       n.Message;
@@ -40363,11 +40382,13 @@ var CLSTAMP = "8456790";
         q,
         Y,
         Q,
-        X;
-      function Z(e) {
+        X,
+        Z,
+        $;
+      function J(e) {
         return "unknown EStorageBlockContentType ( " + e + " )";
       }
-      function $(e) {
+      function ee(e) {
         return "unknown EStorageBlockFileSystemType ( " + e + " )";
       }
       !(function (e) {
@@ -40474,8 +40495,8 @@ var CLSTAMP = "8456790";
         (function (e) {
           (e[(e.k_EContentCheckProvider_Invalid = 0)] =
             "k_EContentCheckProvider_Invalid"),
-            (e[(e.k_EContentCheckProvider_Google = 1)] =
-              "k_EContentCheckProvider_Google"),
+            (e[(e.k_EContentCheckProvider_Google_DEPRECATED = 1)] =
+              "k_EContentCheckProvider_Google_DEPRECATED"),
             (e[(e.k_EContentCheckProvider_Amazon = 2)] =
               "k_EContentCheckProvider_Amazon"),
             (e[(e.k_EContentCheckProvider_Local = 3)] =
@@ -40751,19 +40772,38 @@ var CLSTAMP = "8456790";
               "k_EGamescopeBlurMode_Always");
         })(T || (T = {})),
         (function (e) {
+          (e[(e.k_ESLSHelper_Invalid = 0)] = "k_ESLSHelper_Invalid"),
+            (e[(e.k_ESLSHelper_Minidump = 1)] = "k_ESLSHelper_Minidump"),
+            (e[(e.k_ESLSHelper_Kdump = 2)] = "k_ESLSHelper_Kdump"),
+            (e[(e.k_ESLSHelper_Journal = 3)] = "k_ESLSHelper_Journal"),
+            (e[(e.k_ESLSHelper_Gpu = 4)] = "k_ESLSHelper_Gpu"),
+            (e[(e.k_ESLSHelper_SystemInfo = 5)] = "k_ESLSHelper_SystemInfo");
+        })(A || (A = {})),
+        (function (e) {
+          (e[(e.k_EHDRVisualization_None = 0)] = "k_EHDRVisualization_None"),
+            (e[(e.k_EHDRVisualization_Heatmap = 1)] =
+              "k_EHDRVisualization_Heatmap"),
+            (e[(e.k_EHDRVisualization_Analysis = 2)] =
+              "k_EHDRVisualization_Analysis"),
+            (e[(e.k_EHDRVisualization_HeatmapExtended = 3)] =
+              "k_EHDRVisualization_HeatmapExtended"),
+            (e[(e.k_EHDRVisualization_HeatmapClassic = 4)] =
+              "k_EHDRVisualization_HeatmapClassic");
+        })(P || (P = {})),
+        (function (e) {
           (e[(e.k_EHDRToneMapOperator_Invalid = 0)] =
             "k_EHDRToneMapOperator_Invalid"),
             (e[(e.k_EHDRToneMapOperator_Uncharted = 1)] =
               "k_EHDRToneMapOperator_Uncharted"),
             (e[(e.k_EHDRToneMapOperator_Reinhard = 2)] =
               "k_EHDRToneMapOperator_Reinhard");
-        })(A || (A = {})),
+        })(w || (w = {})),
         (function (e) {
           (e[(e.k_ECPUGovernor_Invalid = 0)] = "k_ECPUGovernor_Invalid"),
             (e[(e.k_ECPUGovernor_Perf = 1)] = "k_ECPUGovernor_Perf"),
             (e[(e.k_ECPUGovernor_Powersave = 2)] = "k_ECPUGovernor_Powersave"),
             (e[(e.k_ECPUGovernor_Manual = 3)] = "k_ECPUGovernor_Manual");
-        })(P || (P = {})),
+        })(I || (I = {})),
         (function (e) {
           (e[(e.k_EUpdaterType_Invalid = 0)] = "k_EUpdaterType_Invalid"),
             (e[(e.k_EUpdaterType_Client = 1)] = "k_EUpdaterType_Client"),
@@ -40774,7 +40814,7 @@ var CLSTAMP = "8456790";
             (e[(e.k_EUpdaterType_Test1 = 5)] = "k_EUpdaterType_Test1"),
             (e[(e.k_EUpdaterType_Test2 = 6)] = "k_EUpdaterType_Test2"),
             (e[(e.k_EUpdaterType_Dummy = 7)] = "k_EUpdaterType_Dummy");
-        })(w || (w = {})),
+        })(F || (F = {})),
         (function (e) {
           (e[(e.k_EUpdaterState_Invalid = 0)] = "k_EUpdaterState_Invalid"),
             (e[(e.k_EUpdaterState_UpToDate = 2)] = "k_EUpdaterState_UpToDate"),
@@ -40786,7 +40826,7 @@ var CLSTAMP = "8456790";
               "k_EUpdaterState_ClientRestartPending"),
             (e[(e.k_EUpdaterState_SystemRestartPending = 7)] =
               "k_EUpdaterState_SystemRestartPending");
-        })(I || (I = {})),
+        })(B || (B = {})),
         (function (e) {
           (e[(e.k_EStorageBlockContentType_Invalid = 0)] =
             "k_EStorageBlockContentType_Invalid"),
@@ -40798,7 +40838,7 @@ var CLSTAMP = "8456790";
               "k_EStorageBlockContentType_Crypto"),
             (e[(e.k_EStorageBlockContentType_Raid = 4)] =
               "k_EStorageBlockContentType_Raid");
-        })(F || (F = {})),
+        })(D || (D = {})),
         (function (e) {
           (e[(e.k_EStorageBlockFileSystemType_Invalid = 0)] =
             "k_EStorageBlockFileSystemType_Invalid"),
@@ -40808,7 +40848,7 @@ var CLSTAMP = "8456790";
               "k_EStorageBlockFileSystemType_VFat"),
             (e[(e.k_EStorageBlockFileSystemType_Ext4 = 3)] =
               "k_EStorageBlockFileSystemType_Ext4");
-        })(B || (B = {})),
+        })(O || (O = {})),
         (function (e) {
           (e[(e.k_EStorageDriveMediaType_Invalid = 0)] =
             "k_EStorageDriveMediaType_Invalid"),
@@ -40820,7 +40860,7 @@ var CLSTAMP = "8456790";
               "k_EStorageDriveMediaType_SSD"),
             (e[(e.k_EStorageDriveMediaType_Removable = 4)] =
               "k_EStorageDriveMediaType_Removable");
-        })(D || (D = {})),
+        })(U || (U = {})),
         (function (e) {
           (e[(e.k_ESystemDisplayCompatibilityMode_Invalid = 0)] =
             "k_ESystemDisplayCompatibilityMode_Invalid"),
@@ -40828,7 +40868,7 @@ var CLSTAMP = "8456790";
               "k_ESystemDisplayCompatibilityMode_None"),
             (e[(e.k_ESystemDisplayCompatibilityMode_MinimalBandwith = 2)] =
               "k_ESystemDisplayCompatibilityMode_MinimalBandwith");
-        })(O || (O = {})),
+        })(L || (L = {})),
         (function (e) {
           (e[(e.k_ESteamDeckCompatibilityCategory_Unknown = 0)] =
             "k_ESteamDeckCompatibilityCategory_Unknown"),
@@ -40838,7 +40878,7 @@ var CLSTAMP = "8456790";
               "k_ESteamDeckCompatibilityCategory_Playable"),
             (e[(e.k_ESteamDeckCompatibilityCategory_Verified = 3)] =
               "k_ESteamDeckCompatibilityCategory_Verified");
-        })(U || (U = {})),
+        })(N || (N = {})),
         (function (e) {
           (e[(e.k_ESteamDeckCompatibilityResultDisplayType_Invisible = 0)] =
             "k_ESteamDeckCompatibilityResultDisplayType_Invisible"),
@@ -40851,20 +40891,20 @@ var CLSTAMP = "8456790";
               "k_ESteamDeckCompatibilityResultDisplayType_Playable"),
             (e[(e.k_ESteamDeckCompatibilityResultDisplayType_Verified = 4)] =
               "k_ESteamDeckCompatibilityResultDisplayType_Verified");
-        })(L || (L = {})),
+        })(x || (x = {})),
         (function (e) {
           (e[(e.k_EACState_Unknown = 0)] = "k_EACState_Unknown"),
             (e[(e.k_EACState_Disconnected = 1)] = "k_EACState_Disconnected"),
             (e[(e.k_EACState_Connected = 2)] = "k_EACState_Connected"),
             (e[(e.k_EACState_ConnectedSlow = 3)] = "k_EACState_ConnectedSlow");
-        })(N || (N = {})),
+        })(j || (j = {})),
         (function (e) {
           (e[(e.k_EBatteryState_Unknown = 0)] = "k_EBatteryState_Unknown"),
             (e[(e.k_EBatteryState_Discharging = 1)] =
               "k_EBatteryState_Discharging"),
             (e[(e.k_EBatteryState_Charging = 2)] = "k_EBatteryState_Charging"),
             (e[(e.k_EBatteryState_Full = 3)] = "k_EBatteryState_Full");
-        })(x || (x = {})),
+        })(G || (G = {})),
         (function (e) {
           (e[(e.k_EOSBranch_Unknown = 0)] = "k_EOSBranch_Unknown"),
             (e[(e.k_EOSBranch_Release = 1)] = "k_EOSBranch_Release"),
@@ -40875,7 +40915,7 @@ var CLSTAMP = "8456790";
               "k_EOSBranch_BetaCandidate"),
             (e[(e.k_EOSBranch_Main = 5)] = "k_EOSBranch_Main"),
             (e[(e.k_EOSBranch_Staging = 6)] = "k_EOSBranch_Staging");
-        })(j || (j = {})),
+        })(V || (V = {})),
         (function (e) {
           (e[(e.k_ECommunityItemClass_Invalid = 0)] =
             "k_ECommunityItemClass_Invalid"),
@@ -40913,7 +40953,7 @@ var CLSTAMP = "8456790";
               "k_ECommunityItemClass_SteamDeckKeyboardSkin"),
             (e[(e.k_ECommunityItemClass_SteamDeckStartupMovie = 17)] =
               "k_ECommunityItemClass_SteamDeckStartupMovie");
-        })(G || (G = {})),
+        })(W || (W = {})),
         (function (e) {
           (e[(e.k_ESteamDeckCompatibilityFeedback_Unset = 0)] =
             "k_ESteamDeckCompatibilityFeedback_Unset"),
@@ -40923,7 +40963,7 @@ var CLSTAMP = "8456790";
               "k_ESteamDeckCompatibilityFeedback_Disagree"),
             (e[(e.k_ESteamDeckCompatibilityFeedback_Ignore = 3)] =
               "k_ESteamDeckCompatibilityFeedback_Ignore");
-        })(V || (V = {})),
+        })(H || (H = {})),
         (function (e) {
           (e[(e.k_EProvideDeckFeedbackPreference_Unset = 0)] =
             "k_EProvideDeckFeedbackPreference_Unset"),
@@ -40931,7 +40971,7 @@ var CLSTAMP = "8456790";
               "k_EProvideDeckFeedbackPreference_Yes"),
             (e[(e.k_EProvideDeckFeedbackPreference_No = 2)] =
               "k_EProvideDeckFeedbackPreference_No");
-        })(W || (W = {})),
+        })(z || (z = {})),
         (function (e) {
           (e[(e.k_ETouchGestureNone = 0)] = "k_ETouchGestureNone"),
             (e[(e.k_ETouchGestureTouch = 1)] = "k_ETouchGestureTouch"),
@@ -40954,7 +40994,7 @@ var CLSTAMP = "8456790";
               "k_ETouchGestureFlingStart"),
             (e[(e.k_ETouchGestureFlingCancelled = 13)] =
               "k_ETouchGestureFlingCancelled");
-        })(H || (H = {})),
+        })(K || (K = {})),
         (function (e) {
           (e[(e.k_ESessionPersistence_Invalid = -1)] =
             "k_ESessionPersistence_Invalid"),
@@ -40962,7 +41002,7 @@ var CLSTAMP = "8456790";
               "k_ESessionPersistence_Ephemeral"),
             (e[(e.k_ESessionPersistence_Persistent = 1)] =
               "k_ESessionPersistence_Persistent");
-        })(z || (z = {})),
+        })(q || (q = {})),
         (function (e) {
           (e[(e.k_ENewSteamAnnouncementState_Invalid = 0)] =
             "k_ENewSteamAnnouncementState_Invalid"),
@@ -40972,7 +41012,7 @@ var CLSTAMP = "8456790";
               "k_ENewSteamAnnouncementState_NewAnnouncement"),
             (e[(e.k_ENewSteamAnnouncementState_FeaturedAnnouncement = 3)] =
               "k_ENewSteamAnnouncementState_FeaturedAnnouncement");
-        })(K || (K = {})),
+        })(Y || (Y = {})),
         (function (e) {
           (e[(e.k_ECommentThreadTypeInvalid = 0)] =
             "k_ECommentThreadTypeInvalid"),
@@ -41015,7 +41055,7 @@ var CLSTAMP = "8456790";
             (e[(e.k_ECommentThreadTypeQAndASession = 20)] =
               "k_ECommentThreadTypeQAndASession"),
             (e[(e.k_ECommentThreadTypeMax = 21)] = "k_ECommentThreadTypeMax");
-        })(q || (q = {})),
+        })(Q || (Q = {})),
         (function (e) {
           (e[(e.k_EBroadcastPermissionDisabled = 0)] =
             "k_EBroadcastPermissionDisabled"),
@@ -41027,13 +41067,13 @@ var CLSTAMP = "8456790";
               "k_EBroadcastPermissionPublic"),
             (e[(e.k_EBroadcastPermissionSubscribers = 4)] =
               "k_EBroadcastPermissionSubscribers");
-        })(Y || (Y = {})),
+        })(X || (X = {})),
         (function (e) {
           (e[(e.k_EBroadcastEncoderBestQuality = 0)] =
             "k_EBroadcastEncoderBestQuality"),
             (e[(e.k_EBroadcastEncoderBestPerformance = 1)] =
               "k_EBroadcastEncoderBestPerformance");
-        })(Q || (Q = {})),
+        })(Z || (Z = {})),
         (function (e) {
           (e[(e.k_ECloudGamingPlatformNone = 0)] =
             "k_ECloudGamingPlatformNone"),
@@ -41041,7 +41081,7 @@ var CLSTAMP = "8456790";
               "k_ECloudGamingPlatformValve"),
             (e[(e.k_ECloudGamingPlatformNVIDIA = 2)] =
               "k_ECloudGamingPlatformNVIDIA");
-        })(X || (X = {}));
+        })($ || ($ = {}));
     },
     38217: (e, t, r) => {
       "use strict";
@@ -43138,11 +43178,6 @@ var CLSTAMP = "8456790";
                     br: o.FE.readInt32,
                     bw: o.Xc.writeInt32,
                   },
-                  webapi_authenticate_user_nonce: {
-                    n: 11,
-                    br: o.FE.readString,
-                    bw: o.Xc.writeString,
-                  },
                   cell_id_ping_threshold: {
                     n: 12,
                     br: o.FE.readUint32,
@@ -43587,6 +43622,74 @@ var CLSTAMP = "8456790";
         return t;
       }
     },
+    70655: (e, t, r) => {
+      "use strict";
+      r.d(t, { _T: () => n, gn: () => o, mG: () => i });
+      function n(e, t) {
+        var r = {};
+        for (var n in e)
+          Object.prototype.hasOwnProperty.call(e, n) &&
+            t.indexOf(n) < 0 &&
+            (r[n] = e[n]);
+        if (null != e && "function" == typeof Object.getOwnPropertySymbols) {
+          var o = 0;
+          for (n = Object.getOwnPropertySymbols(e); o < n.length; o++)
+            t.indexOf(n[o]) < 0 &&
+              Object.prototype.propertyIsEnumerable.call(e, n[o]) &&
+              (r[n[o]] = e[n[o]]);
+        }
+        return r;
+      }
+      function o(e, t, r, n) {
+        var o,
+          i = arguments.length,
+          s =
+            i < 3
+              ? t
+              : null === n
+              ? (n = Object.getOwnPropertyDescriptor(t, r))
+              : n;
+        if ("object" == typeof Reflect && "function" == typeof Reflect.decorate)
+          s = Reflect.decorate(e, t, r, n);
+        else
+          for (var a = e.length - 1; a >= 0; a--)
+            (o = e[a]) &&
+              (s = (i < 3 ? o(s) : i > 3 ? o(t, r, s) : o(t, r)) || s);
+        return i > 3 && s && Object.defineProperty(t, r, s), s;
+      }
+      function i(e, t, r, n) {
+        return new (r || (r = Promise))(function (o, i) {
+          function s(e) {
+            try {
+              l(n.next(e));
+            } catch (e) {
+              i(e);
+            }
+          }
+          function a(e) {
+            try {
+              l(n.throw(e));
+            } catch (e) {
+              i(e);
+            }
+          }
+          function l(e) {
+            var t;
+            e.done
+              ? o(e.value)
+              : ((t = e.value),
+                t instanceof r
+                  ? t
+                  : new r(function (e) {
+                      e(t);
+                    })).then(s, a);
+          }
+          l((n = n.apply(e, t || [])).next());
+        });
+      }
+      Object.create;
+      Object.create;
+    },
     97326: (e, t, r) => {
       "use strict";
       function n(e) {
@@ -43668,75 +43771,6 @@ var CLSTAMP = "8456790";
           throw new Error(i);
         }
       }
-    },
-    97582: (e, t, r) => {
-      "use strict";
-      r.d(t, { _T: () => n, gn: () => o, mG: () => i });
-      function n(e, t) {
-        var r = {};
-        for (var n in e)
-          Object.prototype.hasOwnProperty.call(e, n) &&
-            t.indexOf(n) < 0 &&
-            (r[n] = e[n]);
-        if (null != e && "function" == typeof Object.getOwnPropertySymbols) {
-          var o = 0;
-          for (n = Object.getOwnPropertySymbols(e); o < n.length; o++)
-            t.indexOf(n[o]) < 0 &&
-              Object.prototype.propertyIsEnumerable.call(e, n[o]) &&
-              (r[n[o]] = e[n[o]]);
-        }
-        return r;
-      }
-      function o(e, t, r, n) {
-        var o,
-          i = arguments.length,
-          s =
-            i < 3
-              ? t
-              : null === n
-              ? (n = Object.getOwnPropertyDescriptor(t, r))
-              : n;
-        if ("object" == typeof Reflect && "function" == typeof Reflect.decorate)
-          s = Reflect.decorate(e, t, r, n);
-        else
-          for (var a = e.length - 1; a >= 0; a--)
-            (o = e[a]) &&
-              (s = (i < 3 ? o(s) : i > 3 ? o(t, r, s) : o(t, r)) || s);
-        return i > 3 && s && Object.defineProperty(t, r, s), s;
-      }
-      function i(e, t, r, n) {
-        return new (r || (r = Promise))(function (o, i) {
-          function s(e) {
-            try {
-              l(n.next(e));
-            } catch (e) {
-              i(e);
-            }
-          }
-          function a(e) {
-            try {
-              l(n.throw(e));
-            } catch (e) {
-              i(e);
-            }
-          }
-          function l(e) {
-            var t;
-            e.done
-              ? o(e.value)
-              : ((t = e.value),
-                t instanceof r
-                  ? t
-                  : new r(function (e) {
-                      e(t);
-                    })).then(s, a);
-          }
-          l((n = n.apply(e, t || [])).next());
-        });
-      }
-      Object.create;
-      Object.create;
-      "function" == typeof SuppressedError && SuppressedError;
     },
   },
 ]);

@@ -234,7 +234,7 @@
 "SteamUI_JoinDialog_KickSessions_Error" "无法断开另一个在进行的 %game% 会话"
 
 "SteamUI_JoinDialog_VerifyingFiles_Error" "验证 %game% 的签名文件失败，需要内容验证。"
-"SteamUI_JoinDialog_CreateProcess_Error" "无法为 %game% 执行启动程序：\n\n%detail%"
+"SteamUI_JoinDialog_CreateProcess_Error" "开始 %game% 的进程失败：\n\n%detail%"
 "SteamUI_JoinDialog_CreateProcess_Error_Detail_macOS" "macOS 10.15 及以上系统不再支持 32 位应用程序。"
 
 "SteamUI_JoinDialog_OpenVRStartupFailure" "虚拟现实下启动 %game% 失败。（错误：%error%）"

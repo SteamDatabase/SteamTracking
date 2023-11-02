@@ -14,9 +14,13 @@ message ParentalPlaytimeDay {
 }
 
 message ParentalPlaytimeRestrictions {
-	optional int32 tz_offset = 1 [(description) = "Time zone offset to use to determine when days roll over"];
 	optional bool apply_playtime_restrictions = 2 [(description) = "If true, apply the playtime restrictions described here"];
 	repeated .ParentalPlaytimeDay playtime_days = 15 [(description) = "Playtime restrictions for each day of the week. This will either be empty or will be 7 items long"];
+}
+
+message ParentalTemporaryPlaytimeRestrictions {
+	optional .ParentalPlaytimeDay restrictions = 1 [(description) = "Playtime restrictions to be temporarily applied"];
+	optional uint32 rtime_expires = 2 [(description) = "Time at which playtime restrictions no longer apply"];
 }
 
 message ParentalSettings {
@@ -35,6 +39,7 @@ message ParentalSettings {
 	optional uint32 temporary_enabled_features = 13;
 	optional uint32 rtime_temporary_feature_expiration = 14;
 	optional .ParentalPlaytimeRestrictions playtime_restrictions = 15;
+	optional .ParentalTemporaryPlaytimeRestrictions temporary_playtime_restrictions = 16;
 }
 
 message CParental_EnableParentalSettings_Request {
@@ -123,7 +128,7 @@ message CParental_DisableWithRecoveryCode_Response {
 }
 
 message CParental_RequestFeatureAccess_Request {
-	optional uint32 features = 1;
+	optional uint32 features = 1 [(description) = "Bitfield of features being requested"];
 	optional fixed64 steamid = 10;
 }
 
@@ -132,14 +137,77 @@ message CParental_RequestFeatureAccess_Response {
 }
 
 message CParental_ApproveFeatureAccess_Request {
-	optional bool approve = 1;
+	optional bool approve = 1 [(description) = "True to approve, false to reject"];
 	optional fixed64 requestid = 2;
-	optional uint32 features = 3;
-	optional uint32 duration = 4;
+	optional uint32 features = 3 [(description) = "Bitfield of features being approved. Must match the features in requestid"];
+	optional uint32 duration = 4 [(description) = "Length of approval in seconds. If zero, approval is permanent"];
 	optional fixed64 steamid = 10;
 }
 
 message CParental_ApproveFeatureAccess_Response {
+}
+
+message CParental_RequestPlaytime_Request {
+	optional uint32 time_expires = 1 [(description) = "rtime at which the request expires. This is typically midnight of the next local day."];
+	optional .ParentalPlaytimeDay current_playtime_restrictions = 2 [(description) = "Current restrictions for the day at the time the request was made, including previously granted temporary playtime"];
+	optional fixed64 steamid = 10;
+}
+
+message CParental_RequestPlaytime_Response {
+	optional fixed64 requestid = 1;
+}
+
+message CParental_ApprovePlaytime_Request {
+	optional bool approve = 1;
+	optional fixed64 requestid = 2;
+	optional .ParentalTemporaryPlaytimeRestrictions restrictions_approved = 3;
+	optional fixed64 steamid = 10;
+}
+
+message CParental_ApprovePlaytime_Response {
+}
+
+message CParental_GetRequests_Request {
+	optional uint32 rt_include_completed_since = 1 [(description) = "Also return completed requests that were responded to after this rtime"];
+	optional fixed64 steamid = 10 [(description) = "SteamID of the requester. This must be an adult account in a family group."];
+}
+
+message ParentalFeatureRequest {
+	optional fixed64 requestid = 1;
+	optional fixed64 family_groupid = 2;
+	optional fixed64 steamid = 3 [(description) = "Steamid of the requester"];
+	optional uint32 features = 4 [(description) = "Bitfield of features requested"];
+	optional uint32 time_requested = 5 [(description) = "rtime the request was made"];
+	optional bool approved = 6 [(description) = "True if the request was approved, false if rejected"];
+	optional fixed64 steamid_responder = 7 [(description) = "Steamid of the approver/rejecter"];
+	optional uint32 time_responded = 8 [(description) = "rtime the request was approved/rejected"];
+}
+
+message ParentalPlaytimeRequest {
+	optional fixed64 requestid = 1;
+	optional fixed64 family_groupid = 2;
+	optional fixed64 steamid = 3 [(description) = "Steamid of the requester"];
+	optional .ParentalPlaytimeDay current_playtime_restrictions = 4 [(description) = "Current restrictions for the day at the time the request was made, including previously granted temporary playtime"];
+	optional uint32 time_expires = 5 [(description) = "rtime at which the request expires. This is typically midnight of the next local day."];
+	optional uint32 time_requested = 6 [(description) = "rtime the request was made"];
+	optional bool approved = 7 [(description) = "True if the request was approved, false if rejected"];
+	optional fixed64 steamid_responder = 8 [(description) = "Steamid of the approver/rejecter"];
+	optional uint32 time_responded = 9 [(description) = "rtime the request was approved/rejected"];
+	optional .ParentalTemporaryPlaytimeRestrictions restrictions_approved = 10 [(description) = "For approved requests, the new playtime restrictions after approval"];
+}
+
+message CParental_GetRequests_Response {
+	repeated .ParentalFeatureRequest feature_requests = 1;
+	repeated .ParentalPlaytimeRequest playtime_requests = 2;
+}
+
+message CParental_ReportPlaytimeAndNotify_Request {
+	optional uint32 day_of_week = 1;
+	optional uint32 minutes_used = 2;
+	optional fixed64 steamid = 10;
+}
+
+message CParental_ReportPlaytimeAndNotify_Response {
 }
 
 message CParental_ParentalSettingsChange_Notification {
@@ -156,6 +224,11 @@ message CParental_ParentalUnlock_Notification {
 
 message CParental_ParentalLock_Notification {
 	optional string sessionid = 1;
+}
+
+message CParental_PlaytimeUsed_Notification {
+	optional uint32 day_of_week = 1;
+	optional uint32 minutes_used = 2;
 }
 
 service Parental {
@@ -208,6 +281,22 @@ service Parental {
 	rpc ApproveFeatureAccess (.CParental_ApproveFeatureAccess_Request) returns (.CParental_ApproveFeatureAccess_Response) {
 		option (method_description) = "Approve or deny temporary access to a feature from a child account";
 	}
+
+	rpc RequestPlaytime (.CParental_RequestPlaytime_Request) returns (.CParental_RequestPlaytime_Response) {
+		option (method_description) = "Request temporary additional playtime from a parent account";
+	}
+
+	rpc ApprovePlaytime (.CParental_ApprovePlaytime_Request) returns (.CParental_ApprovePlaytime_Response) {
+		option (method_description) = "Approve or deny a temporary playtime request from a child account";
+	}
+
+	rpc GetRequests (.CParental_GetRequests_Request) returns (.CParental_GetRequests_Response) {
+		option (method_description) = "Return a list of pending (or pending and completed) feature and playtime requests for the given steamid";
+	}
+
+	rpc ReportPlaytimeAndNotify (.CParental_ReportPlaytimeAndNotify_Request) returns (.CParental_ReportPlaytimeAndNotify_Response) {
+		option (method_description) = "Report playtime for the given account and notify all connected clients of the new result";
+	}
 }
 
 service ParentalClient {
@@ -224,5 +313,9 @@ service ParentalClient {
 
 	rpc NotifyLock (.CParental_ParentalLock_Notification) returns (.NoResponse) {
 		option (method_description) = "Notification from server to client that a lock has occurred in a browser";
+	}
+
+	rpc NotifyPlaytimeUsed (.CParental_PlaytimeUsed_Notification) returns (.NoResponse) {
+		option (method_description) = "Notification from server to client that playtime has been consumed by the user";
 	}
 }

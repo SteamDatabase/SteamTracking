@@ -1354,12 +1354,6 @@
  TSQueueBase_UnsafeDummy
  TSQueueBase_UnsafePeek
  TSQueue_PopIntoFreeList
- Test_HasFailed
- Test_HasFinished
- Test_IsActive
- Test_RunFrame
- Test_SetFailed
- Test_TerminateThread
  ThreadGetCurrentId
  ThreadGetCurrentProcessId
  ThreadGetProcessExitCode
@@ -1393,7 +1387,7 @@
  V_BasicHtmlEntityEncode
  V_ComposeFileName
  V_CopyAndFixSlashes
- V_EscapeShellArgumentAndAppend(CUtlStringBuilder*, char const*)
+ V_EscapeShellArgumentAndAppend(CUtlStringBuilder*, char const*, bool)
  V_ExtractDomainFromURL
  V_ExtractFileExtension
  V_ExtractFilePath
@@ -1405,7 +1399,6 @@
  V_IsAbsolutePath
  V_IsSteamCloseProtocol
  V_IsValidURLCharacter
- V_JoinNumbersUint
  V_JoinStrings(CUtlVector<CUtlString, CUtlMemory<CUtlString> > const&, char const*)
  V_MakeAbsolutePath
  V_MakeFileSafeName
@@ -1818,6 +1811,7 @@
  log10
  longjmp
  lrintf
+ lroundf
  lseek
  lstat$INODE64
  mach_absolute_time

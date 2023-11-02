@@ -112,7 +112,7 @@
  T V_ConvertUUIDToString(V_UUID const*, EUUIDStringFlags, wchar_t*, int)
  T V_CopyAndFixSlashes
  T V_DefaultExtension
- T V_EscapeShellArgumentAndAppend(CUtlStringBuilder*, char const*)
+ T V_EscapeShellArgumentAndAppend(CUtlStringBuilder*, char const*, bool)
  T V_EscapeShellArgumentAndAppend(char*, unsigned long, char const*)
  T V_EscapeShellArgumentAndAppendPOSIX(char*, unsigned long, char const*)
  T V_EscapeShellArgumentAndAppendWin32(char*, unsigned long, char const*)

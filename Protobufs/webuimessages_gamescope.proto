@@ -8,6 +8,7 @@ option cc_generic_services = true;
 message CGamescopeState {
 	optional bool is_service_available = 1;
 	optional bool is_reshade_supported = 2;
+	optional bool is_app_hdr_enabled = 3;
 }
 
 message CGamescope_GetState_Request {

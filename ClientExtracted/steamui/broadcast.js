@@ -87,14 +87,14 @@
           BroadcastEmbeddablePopoutHeader: () => Ee,
           default: () => be,
         });
-      var r = a(97582),
+      var r = a(70655),
         n = a(9669),
         o = a.n(n),
         s = a(29323),
         i = a(13271),
         l = a(67294),
         c = a(91148),
-        d = a(4687),
+        d = a(52649),
         m = a(73185),
         _ = a(96452),
         p = a(17297),
@@ -1332,7 +1332,7 @@
     79927: (e, t, a) => {
       "use strict";
       a.r(t), a.d(t, { default: () => v });
-      var r = a(97582),
+      var r = a(70655),
         n = a(67294),
         o = a(90437),
         s = a(29323),
@@ -1345,7 +1345,7 @@
         p = a(17257),
         b = a(95379),
         h = a.n(b),
-        u = a(4687),
+        u = a(52649),
         S = a(51878);
       let g = class extends n.Component {
         constructor(e) {

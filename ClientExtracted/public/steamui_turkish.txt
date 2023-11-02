@@ -4870,7 +4870,7 @@ Bu oyun için bir kategori ayarlamanız, o oyunu çabuk bulmanıza ve Kütüphan
 "DownloadRegion_ro_bucharest"   "Romanya"
 "DownloadRegion_ca_toronto"     "Kanada - Toronto"
 "DownloadRegion_nz_auckland"    "Yeni Zelanda"
-"DownloadRegion_br_sao_paulo"   "Brezilya - Saõ Paulo"
+"DownloadRegion_br_sao_paulo"   "Brezilya - São Paulo"
 "DownloadRegion_za_johannesburg""Güney Afrika - Johannesburg"
 "DownloadRegion_iceland"        "İzlanda"
 "DownloadRegion_israel"         "İsrail"
