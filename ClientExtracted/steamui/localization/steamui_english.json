@@ -934,6 +934,7 @@
     "AppDetails_Feature_PS4BT": "DualShock Support (BT)",
     "AppDetails_Feature_PS5": "DualSense Support",
     "AppDetails_Feature_PS5BT": "DualSense Support (BT)",
+    "AppDetails_Feature_SteamInputAPI": "Steam Input API",
     "AppDetails_ViewAllUpdates": "View All Updates",
     "AppDetails_ViewAllAchievements": "View My Achievements",
     "AppDetails_ViewGlobalAchievements": "View Global Achievement Stats",

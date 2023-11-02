@@ -1,4 +1,4 @@
-var CLSTAMP = "8460218";
+var CLSTAMP = "8461160";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -1630,9 +1630,9 @@ var CLSTAMP = "8460218";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Nov 1 2023 : 15:25:25",
-                BUILD_TIME_UTC: "Nov 1 2023 : 22:25:25",
-                BUILD_RTIME_UTC: 1698877525,
+                BUILD_TIME_LOCAL: "Nov 1 2023 : 18:31:36",
+                BUILD_TIME_UTC: "Nov 2 2023 : 01:31:36",
+                BUILD_RTIME_UTC: 1698888696,
               }.MOBILE_BUILD)
             ) {
               window.addEventListener("beforeunload", (e) => {
@@ -29613,7 +29613,7 @@ var CLSTAMP = "8460218";
                 Object.assign(
                   {
                     xmlns: "http://www.w3.org/2000/svg",
-                    viewBox: "0 0 21 14",
+                    viewBox: "0 0 25 15",
                     fill: "none",
                   },
                   n,
@@ -29636,7 +29636,7 @@ var CLSTAMP = "8460218";
                 Object.assign(
                   {
                     xmlns: "http://www.w3.org/2000/svg",
-                    viewBox: "0 0 21 14",
+                    viewBox: "0 0 25 15",
                     fill: "none",
                   },
                   n,
@@ -44728,9 +44728,9 @@ var CLSTAMP = "8460218";
                 ? !{
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Nov 1 2023 : 15:25:25",
-                    BUILD_TIME_UTC: "Nov 1 2023 : 22:25:25",
-                    BUILD_RTIME_UTC: 1698877525,
+                    BUILD_TIME_LOCAL: "Nov 1 2023 : 18:31:36",
+                    BUILD_TIME_UTC: "Nov 2 2023 : 01:31:36",
+                    BUILD_RTIME_UTC: 1698888696,
                   }.MOBILE_BUILD && document.getElementById(t)
                 : t),
             r)
@@ -45285,7 +45285,7 @@ var CLSTAMP = "8460218";
       {
         27: "c09a437a665ff7863b87",
         33: "33b3ca787548f1eb5866",
-        58: "c06310d70a22be22c7de",
+        58: "67dd292771550e1f5edc",
         131: "281acce86c1a41323f80",
         146: "23a1300f385e570946fd",
         200: "0273f88a1d91abf0685e",
@@ -45396,7 +45396,7 @@ var CLSTAMP = "8460218";
         8282: "43733ee66d0e453d3201",
         8319: "442ae55058f8e6241530",
         8433: "8b63615a58cc5b813ec0",
-        8467: "e3d8e498b5d8114518a2",
+        8467: "296384d3b617d807678e",
         8490: "9c3ca98b03f2f8988299",
         8778: "3a6f1894eea7e6083818",
         8956: "7339de391508672435e0",
