@@ -3508,20 +3508,24 @@
       }
       function gr(e) {
         return a.createElement(
-          "tr",
+          "thead",
           null,
-          He.map((e) =>
-            a.createElement(
-              "td",
-              { key: "header" + e },
-              a.createElement(Y.HP, { toolTipContent: Me(e) }, xe(e)),
+          a.createElement(
+            "tr",
+            null,
+            He.map((e) =>
+              a.createElement(
+                "td",
+                { key: "header" + e },
+                a.createElement(Y.HP, { toolTipContent: Me(e) }, xe(e)),
+              ),
             ),
-          ),
-          Ke.map((e) =>
-            a.createElement(
-              "td",
-              { key: "header_region" + e },
-              a.createElement(Y.HP, { toolTipContent: Fe(e) }, Oe(e)),
+            Ke.map((e) =>
+              a.createElement(
+                "td",
+                { key: "header_region" + e },
+                a.createElement(Y.HP, { toolTipContent: Fe(e) }, Oe(e)),
+              ),
             ),
           ),
         );
@@ -3586,10 +3590,8 @@
       function kr(e) {
         var r;
         const { eRegionCode: t, curPrice: n, proposal: o, guidePrice: l } = e,
-          c = Xe(t),
-          i = o.proposed_prices.base_amounts.find(
-            (e) => e.amount.region_code == t,
-          ),
+          c = Oe(t),
+          i = o.proposed_prices.region_amounts.find((e) => e.name == c),
           s =
             null === (r = null == n ? void 0 : n.current_costs) || void 0 === r
               ? void 0
