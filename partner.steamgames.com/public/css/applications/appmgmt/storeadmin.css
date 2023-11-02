@@ -1243,7 +1243,7 @@ button.DialogButton.controllersupportinfo_StartWizardButton_lKVYB {
   color: #8bb006;
 }
 .reviewpricetable_outofmatrix_1v_RE {
-  border: 1px dashed #e24044 !important;
+  background: rgba(226, 64, 67, 0.1725490196);
 }
 .reviewpricetable_pricingerror_1flav {
   color: #e24044 !important;
@@ -1252,7 +1252,7 @@ button.DialogButton.controllersupportinfo_StartWizardButton_lKVYB {
   background-color: #500 !important;
 }
 .reviewpricetable_outofmatrixlower_1yBYL {
-  border: 1px dashed #8bb006 !important;
+  background: rgba(139, 176, 6, 0.137254902);
 }
 .reviewpricetable_pricingLegend_31Qzh {
   display: inline-block;
@@ -1292,6 +1292,9 @@ button.DialogButton.controllersupportinfo_StartWizardButton_lKVYB {
 .reviewpricetable_MissingReleaseDate_2smrP {
   color: #b8b877;
 }
+.reviewpricetable_FullCurrencyColumn_1VlWu {
+  vertical-align: top;
+}
 .userprofile_SmallAvatar_2cCH3 {
   max-width: 32px;
   max-height: 32px;
@@ -1299,92 +1302,6 @@ button.DialogButton.controllersupportinfo_StartWizardButton_lKVYB {
   margin-right: 10px;
   margin-top: 2px;
   border-radius: 3px;
-}
-.reviewdeltatable_PriceDeltaCtn_FR0Jb {
-  position: relative;
-}
-.reviewdeltatable_PriceDeltaCtn_FR0Jb
-  .reviewdeltatable_PackageInfoColumn_1sw3l {
-  width: 300px;
-  display: flex;
-  flex-direction: column;
-}
-.reviewdeltatable_RowCtn_3Fj4_ {
-  display: flex;
-  flex-direction: row;
-  padding: 12px;
-  margin-bottom: 16px;
-  background: #000;
-}
-.reviewdeltatable_InlineDiv_19_mE {
-  display: inline;
-}
-.reviewdeltatable_FailuresCtn_1Z31T {
-  font-size: 14px;
-  margin-left: 20px;
-}
-.reviewdeltatable_FailuresCtn_1Z31T .reviewdeltatable_MatrixGap_3vOjx {
-  color: #a75ea7;
-}
-.reviewdeltatable_MissingCurrency_1aHJa {
-  font-size: 14px;
-  margin-bottom: 6px;
-  color: #ff0;
-}
-.reviewdeltatable_ThresholdMiniTable_1Qz3S {
-  margin-top: 16px;
-  border-top: 1px solid #2b2b2b;
-}
-.reviewdeltatable_ThresholdMiniTable_1Qz3S
-  .reviewdeltatable_WarningTitle_1jnFS {
-  color: #ff4500;
-  padding: 0;
-}
-.reviewdeltatable_ThresholdMiniTable_1Qz3S td {
-  padding: 1px 5px 1px 0;
-}
-.reviewdeltatable_ThresholdMiniTable_1Qz3S
-  .reviewdeltatable_ThresholdRow_1WR81 {
-  color: #c9d5dd;
-}
-.reviewdeltatable_ThresholdMiniTable_1Qz3S
-  .reviewdeltatable_ThresholdRow_1WR81.reviewdeltatable_ThresholdHeader_IROvk {
-  color: #7e8285;
-  font-weight: 500;
-}
-.reviewdeltatable_ThresholdMiniTable_1Qz3S
-  .reviewdeltatable_ThresholdRow_1WR81.reviewdeltatable_ThresholdHeader_IROvk
-  .reviewdeltatable_CurrencyName_1ErxF {
-  text-transform: unset;
-}
-.reviewdeltatable_ThresholdMiniTable_1Qz3S
-  .reviewdeltatable_ThresholdRow_1WR81
-  .reviewdeltatable_CurrencyName_1ErxF {
-  padding-right: 8px;
-  text-transform: uppercase;
-}
-.reviewdeltatable_ThresholdMiniTable_1Qz3S
-  .reviewdeltatable_ThresholdRow_1WR81
-  .reviewdeltatable_ProposedPrice_mbBO- {
-  padding-right: 8px;
-}
-.reviewdeltatable_ThresholdMiniTable_1Qz3S
-  .reviewdeltatable_ThresholdRow_1WR81
-  .reviewdeltatable_PercentDiff_1d_jm {
-  padding-right: 8px;
-}
-.reviewdeltatable_ThresholdMiniTable_1Qz3S
-  .reviewdeltatable_ThresholdRow_1WR81
-  .reviewdeltatable_RecommendedPrice_30pJD {
-  padding-right: 8px;
-}
-.pricingreviewactions_RadioButtons_1o8Pe {
-  line-height: 24px;
-}
-.pricingreviewactions_ActionsCtn_3tmYm {
-  display: flex;
-  flex-direction: row;
-  grid-gap: 5px;
 }
 .partnereventdialog_ErrorStyles_2TszC,
 .partnereventdialog_ErrorStylesWithIcon_1mcSA {
@@ -1466,59 +1383,6 @@ button.DialogButton.controllersupportinfo_StartWizardButton_lKVYB {
   .DialogContent_InnerWidth
   > form {
   padding-right: 8px;
-}
-.tabbar_GraphicalAssetsTabs_36r8g {
-  display: flex;
-  margin-bottom: 16px;
-  border-bottom: 1px solid #67c1f5;
-  align-items: flex-end;
-  text-align: center;
-}
-.tabbar_GraphicalAssetsTab_K1_Tp {
-  margin: 0 16px;
-  padding: 4px 12px;
-  cursor: pointer;
-  border-bottom: 4px solid rgba(0, 0, 0, 0);
-  transition-property: border-bottom-color;
-  transition-duration: 0.25s;
-  font-size: 14px;
-  letter-spacing: 1px;
-  color: #fff;
-  text-transform: uppercase;
-}
-html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
-  font-size: 12px;
-}
-@media screen and (max-width: 910px) {
-  html:not(.force_desktop) .tabbar_GraphicalAssetsTab_K1_Tp {
-    font-size: 12px;
-  }
-}
-.tabbar_GraphicalAssetsTab_K1_Tp:first-child {
-  margin-left: 0;
-}
-.tabbar_GraphicalAssetsTab_K1_Tp.tabbar_Active_37f6M,
-.tabbar_GraphicalAssetsTab_K1_Tp:hover {
-  border-bottom-color: #67c1f5;
-  cursor: default;
-  cursor: pointer;
-}
-.tabbar_GraphicalAssetStatus_ojMj8 {
-  text-transform: uppercase;
-  font-size: 9px;
-}
-.tabbar_VOWarning_21XR- {
-  font-size: 9px;
-  color: #b22222;
-}
-.tabbar_StatusSuccess_1HWSe {
-  color: #a4d007;
-}
-.tabbar_StatusDanger_2jgbN {
-  color: #e24044;
-}
-.tabbar_StatusCaution_31Lxu {
-  color: #e76e34;
 }
 .guidelinespicker_PriceGuidelinesPicker_4Xo2k {
   background-color: #515661;
@@ -1761,4 +1625,196 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
 }
 div.pricinggridcell_HoverToolTip_36qS7 {
   z-index: 2000;
+}
+.pricingreviewactions_RadioButtons_1o8Pe {
+  line-height: 24px;
+}
+.pricingreviewactions_ActionsCtn_3tmYm {
+  display: flex;
+  flex-direction: row;
+  grid-gap: 5px;
+}
+.pricingreviewactions_NotesField_hmIKA {
+  width: 100%;
+  box-sizing: border-box;
+  height: 100px;
+}
+.reviewdeltatable_PriceDeltaCtn_FR0Jb {
+  position: relative;
+}
+.reviewdeltatable_PriceDeltaCtn_FR0Jb
+  .reviewdeltatable_PackageInfoColumn_1sw3l {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+}
+.reviewdeltatable_ProposalCtn_2aZ0d {
+  margin-bottom: 16px;
+}
+.reviewdeltatable_RowCtn_3Fj4_ {
+  display: flex;
+  flex-direction: row;
+  padding: 12px;
+  background: #000;
+}
+.reviewdeltatable_InlineDiv_19_mE {
+  display: inline;
+}
+.reviewdeltatable_FailuresCtn_1Z31T {
+  margin-left: 20px;
+}
+.reviewdeltatable_FailuresCtn_1Z31T .reviewdeltatable_MatrixGap_3vOjx {
+  color: #a75ea7;
+}
+.reviewdeltatable_Legend_14hkG .reviewdeltatable_Missing_1Prze {
+  color: #ff0;
+}
+.reviewdeltatable_Legend_14hkG .reviewdeltatable_Outside_gYYAD {
+  color: #a58c5d;
+}
+.reviewdeltatable_Legend_14hkG .reviewdeltatable_CustomUsd_Ru7OV {
+  color: #a75ea7;
+}
+.reviewdeltatable_Legend_14hkG .reviewdeltatable_AboveAutoPublish_18NNA {
+  color: #adff2f;
+}
+.reviewdeltatable_MissingCurrency_1aHJa {
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+.reviewdeltatable_MissingCurrency_1aHJa .reviewdeltatable_Title_3vH34 {
+  color: #ff0;
+  display: inline-block;
+}
+.reviewdeltatable_CurrencyWarningsCtn_2H_Mc {
+  display: flex;
+  flex-direction: row;
+}
+.reviewdeltatable_AutoPublishCeiling_1x66l {
+  color: #adff2f;
+}
+.reviewdeltatable_ThresholdMiniTable_1Qz3S {
+  margin-top: 16px;
+  border-top: 1px solid #2b2b2b;
+  margin-right: 16px;
+  height: fit-content;
+}
+.reviewdeltatable_ThresholdMiniTable_1Qz3S
+  .reviewdeltatable_WarningTitle_1jnFS {
+  padding: 0;
+  color: #a58c5d;
+}
+.reviewdeltatable_ThresholdMiniTable_1Qz3S
+  .reviewdeltatable_WarningTitle_1jnFS.reviewdeltatable_WarningAbove_2QdKN
+  b {
+  color: #ff4500;
+}
+.reviewdeltatable_ThresholdMiniTable_1Qz3S
+  .reviewdeltatable_WarningTitle_1jnFS.reviewdeltatable_WarningBelow_1Yk63
+  b {
+  color: orange;
+}
+.reviewdeltatable_ThresholdMiniTable_1Qz3S td {
+  padding: 1px 5px 1px 0;
+}
+.reviewdeltatable_ThresholdMiniTable_1Qz3S
+  .reviewdeltatable_ThresholdRow_1WR81 {
+  color: #c9d5dd;
+}
+.reviewdeltatable_ThresholdMiniTable_1Qz3S
+  .reviewdeltatable_ThresholdRow_1WR81.reviewdeltatable_ThresholdHeader_IROvk {
+  color: #7e8285;
+  font-weight: 500;
+}
+.reviewdeltatable_ThresholdMiniTable_1Qz3S
+  .reviewdeltatable_ThresholdRow_1WR81.reviewdeltatable_ThresholdHeader_IROvk
+  .reviewdeltatable_CurrencyName_1ErxF {
+  text-transform: unset;
+}
+.reviewdeltatable_ThresholdMiniTable_1Qz3S
+  .reviewdeltatable_ThresholdRow_1WR81
+  .reviewdeltatable_EqualPrices_3tHg_ {
+  color: #77a777;
+}
+.reviewdeltatable_ThresholdMiniTable_1Qz3S
+  .reviewdeltatable_ThresholdRow_1WR81
+  .reviewdeltatable_CurrencyName_1ErxF {
+  padding-right: 8px;
+  text-transform: uppercase;
+}
+.reviewdeltatable_ThresholdMiniTable_1Qz3S
+  .reviewdeltatable_ThresholdRow_1WR81
+  .reviewdeltatable_OriginalPrice_2oPTC {
+  padding-right: 8px;
+  text-align: right;
+}
+.reviewdeltatable_ThresholdMiniTable_1Qz3S
+  .reviewdeltatable_ThresholdRow_1WR81
+  .reviewdeltatable_ProposedPrice_mbBO- {
+  padding-right: 8px;
+  text-align: right;
+}
+.reviewdeltatable_ThresholdMiniTable_1Qz3S
+  .reviewdeltatable_ThresholdRow_1WR81
+  .reviewdeltatable_RecommendedPrice_30pJD {
+  padding-right: 8px;
+  text-align: right;
+}
+.reviewdeltatable_ThresholdMiniTable_1Qz3S
+  .reviewdeltatable_ThresholdRow_1WR81
+  .reviewdeltatable_PercentDiff_1d_jm {
+  padding-right: 8px;
+}
+.tabbar_GraphicalAssetsTabs_36r8g {
+  display: flex;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #67c1f5;
+  align-items: flex-end;
+  text-align: center;
+}
+.tabbar_GraphicalAssetsTab_K1_Tp {
+  margin: 0 16px;
+  padding: 4px 12px;
+  cursor: pointer;
+  border-bottom: 4px solid rgba(0, 0, 0, 0);
+  transition-property: border-bottom-color;
+  transition-duration: 0.25s;
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #fff;
+  text-transform: uppercase;
+}
+html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
+  font-size: 12px;
+}
+@media screen and (max-width: 910px) {
+  html:not(.force_desktop) .tabbar_GraphicalAssetsTab_K1_Tp {
+    font-size: 12px;
+  }
+}
+.tabbar_GraphicalAssetsTab_K1_Tp:first-child {
+  margin-left: 0;
+}
+.tabbar_GraphicalAssetsTab_K1_Tp.tabbar_Active_37f6M,
+.tabbar_GraphicalAssetsTab_K1_Tp:hover {
+  border-bottom-color: #67c1f5;
+  cursor: default;
+  cursor: pointer;
+}
+.tabbar_GraphicalAssetStatus_ojMj8 {
+  text-transform: uppercase;
+  font-size: 9px;
+}
+.tabbar_VOWarning_21XR- {
+  font-size: 9px;
+  color: #b22222;
+}
+.tabbar_StatusSuccess_1HWSe {
+  color: #a4d007;
+}
+.tabbar_StatusDanger_2jgbN {
+  color: #e24044;
+}
+.tabbar_StatusCaution_31Lxu {
+  color: #e76e34;
 }

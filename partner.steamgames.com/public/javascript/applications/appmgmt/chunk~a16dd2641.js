@@ -77,35 +77,35 @@
       n.d(t, { NT: () => c, tx: () => l });
       var a = n(89526),
         i = n(67736),
-        s = n(93513),
-        r = n(14826),
+        r = n(93513),
+        s = n(14826),
         o = n(3301);
       function l() {
         const [e, t] = (0, a.useState)(!1),
           [n, i] = (0, a.useState)(!1),
-          [s, r] = (0, a.useState)(!1),
+          [r, s] = (0, a.useState)(!1),
           [o, l] = (0, a.useState)(null),
           [c, d] = (0, a.useState)(null),
-          [m, u] = (0, a.useState)(null),
+          [u, m] = (0, a.useState)(null),
           [p, h] = (0, a.useState)(null),
-          [T, g] = (0, a.useState)(null);
+          [g, T] = (0, a.useState)(null);
         return {
           bLoading: e,
           bError: n,
-          bSuccess: s,
+          bSuccess: r,
           strError: o,
           strSuccess: c,
           elSuccess: p,
-          elError: m,
-          strThrobber: T,
+          elError: u,
+          strThrobber: g,
           fnSetLoading: t,
           fnSetError: i,
-          fnSetSuccess: r,
+          fnSetSuccess: s,
           fnSetStrError: l,
           fnSetStrSuccess: d,
           fnSetElSuccess: h,
-          fnSetElError: u,
-          fnSetThrobber: g,
+          fnSetElError: m,
+          fnSetThrobber: T,
         };
       }
       function c(e) {
@@ -117,42 +117,42 @@
           } = e,
           {
             bLoading: d,
-            bError: m,
-            bSuccess: u,
+            bError: u,
+            bSuccess: m,
             strError: p,
             strSuccess: h,
-            elSuccess: T,
-            elError: g,
+            elSuccess: g,
+            elError: T,
             strThrobber: _,
           } = n;
-        return m || p || g
+        return u || p || T
           ? a.createElement(
               i.uH,
               { strTitle: t, bAlertDialog: !0, closeModal: l },
               Boolean(p) &&
                 a.createElement(
                   "div",
-                  { className: s.ErrorStylesWithIcon },
-                  p || (0, r.Xx)("#Error_ErrorCommunicatingWithNetwork"),
+                  { className: r.ErrorStylesWithIcon },
+                  p || (0, s.Xx)("#Error_ErrorCommunicatingWithNetwork"),
                 ),
-              Boolean(g) && g,
+              Boolean(T) && T,
             )
-          : u || h || T
+          : m || h || g
           ? a.createElement(
               i.uH,
               {
                 strTitle: t,
-                strDescription: h || (0, r.Xx)("#EventDisplay_Share_Success"),
+                strDescription: h || (0, s.Xx)("#EventDisplay_Share_Success"),
                 bAlertDialog: !0,
                 closeModal: l,
               },
-              a.createElement(a.Fragment, null, Boolean(T) && T),
+              a.createElement(a.Fragment, null, Boolean(g) && g),
             )
           : a.createElement(
               i.uH,
               { strTitle: t, closeModal: () => {} },
               a.createElement(o.V, {
-                string: c || _ || (0, r.Xx)("#Loading"),
+                string: c || _ || (0, s.Xx)("#Loading"),
                 size: "medium",
                 position: "center",
               }),
@@ -161,25 +161,25 @@
     },
     82971: (e, t, n) => {
       "use strict";
-      n.d(t, { A: () => E });
+      n.d(t, { A: () => v });
       var a = n(33940),
         i = n(88464),
-        s = n(89526),
-        r = n(5556),
-        o = n.n(r),
+        r = n(89526),
+        s = n(5556),
+        o = n.n(s),
         l = n(70369),
         c = n(85651),
         d = n(52629),
-        m = n.n(d),
-        u = n(19304),
+        u = n.n(d),
+        m = n(19304),
         p = n(14826),
         h = n(4306),
-        T = n(84343),
-        g = n(29183),
-        _ = n.n(g),
+        g = n(84343),
+        T = n(29183),
+        _ = n.n(T),
         S = n(47812),
-        v = n.n(S);
-      let E = class extends s.Component {
+        E = n.n(S);
+      let v = class extends r.Component {
         constructor(e) {
           super(e),
             (this.state = {
@@ -197,25 +197,25 @@
           } = this.props;
           if (i) return;
           if ("string" == typeof e) {
-            let t = v()(e, "h:m a +-h:m", !0);
+            let t = E()(e, "h:m a +-h:m", !0);
             if (!t.isValid()) return void this.setState({ timeAsString: e });
             e = t;
           }
-          let s = this.props.fnGetTimeToUpdate(),
-            r = 0;
-          if (s) {
-            const t = v().unix(s);
+          let r = this.props.fnGetTimeToUpdate(),
+            s = 0;
+          if (r) {
+            const t = E().unix(r);
             e.year(t.year()),
               e.month(t.month()),
               e.day(t.day()),
-              (r = e.unix());
+              (s = e.unix());
           } else {
-            r =
-              v().unix(t).hour(0).second(0).minutes(0).unix() +
+            s =
+              E().unix(t).hour(0).second(0).minutes(0).unix() +
               3600 * e.hour() +
               60 * e.minutes();
           }
-          n(r);
+          n(s);
           let o = a && !0 === a();
           (null == this.state.timeAsString &&
             o == this.state.bEndTimeBeforeStartTime) ||
@@ -225,12 +225,12 @@
           const { disabled: t } = this.props;
           if (t) return;
           if ("string" == typeof e) {
-            let t = v()(e, "M/D/YYYY", !0);
+            let t = E()(e, "M/D/YYYY", !0);
             if (!t.isValid()) return void this.setState({ dateAsString: e });
             e = t;
           }
           const n = this.props.fnGetTimeToUpdate(),
-            a = v().unix(n || c.JW.GetTimeNowWithOverride());
+            a = E().unix(n || c.JW.GetTimeNowWithOverride());
           e.hour(a.hour()),
             e.minute(a.minute()),
             e.second(0),
@@ -249,14 +249,14 @@
               nLatestTime: n,
               bWeekdaysOnly: a,
             } = this.props,
-            i = v().unix(t).hour(0).seconds(0).minute(0);
-          let s = e.unix() >= i.unix();
-          if (s && n && n >= t) {
-            const t = v().unix(n).hour(23).minute(59).seconds(59);
-            s = e.unix() <= t.unix();
+            i = E().unix(t).hour(0).seconds(0).minute(0);
+          let r = e.unix() >= i.unix();
+          if (r && n && n >= t) {
+            const t = E().unix(n).hour(23).minute(59).seconds(59);
+            r = e.unix() <= t.unix();
           }
           return (
-            s && a && ((0 != e.weekday() && 6 != e.weekday()) || (s = !1)), s
+            r && a && ((0 != e.weekday() && 6 != e.weekday()) || (r = !1)), r
           );
         }
         SetToNow() {
@@ -271,30 +271,30 @@
             fnGetTimeToUpdate: n,
             fnIsValidDateTime: a,
             strAlsoShowTimeZone: i,
-            disabled: r,
+            disabled: s,
             bNoDefaultDate: d,
           } = this.props;
           let h = n(),
-            g = h > 0 ? new Date(1e3 * h) : null,
+            T = h > 0 ? new Date(1e3 * h) : null,
             S = "h:mm A";
-          const E = a && a(),
+          const v = a && a(),
             b =
               this.state.timeAsString ||
               this.state.dateAsString ||
-              "string" == typeof E ||
-              !1 === E;
+              "string" == typeof v ||
+              !1 === v;
           let f,
             y,
-            D = "#DateTimePicker_Fallback_Invalid_DateTime";
+            I = "#DateTimePicker_Fallback_Invalid_DateTime";
           if (
             (this.state.timeAsString
-              ? (D = "#DateTimePicker_Time_CannotParse")
+              ? (I = "#DateTimePicker_Time_CannotParse")
               : this.state.dateAsString
-              ? (D = "#DateTimePicker_Date_CannotParse")
-              : "string" == typeof E && (D = E),
+              ? (I = "#DateTimePicker_Date_CannotParse")
+              : "string" == typeof v && (I = v),
             e && t && e == t && t > c.JW.GetTimeNowWithOverride())
           ) {
-            let e = v().unix(t);
+            let e = E().unix(t);
             (f = {
               hours: { max: e.hour(), min: e.hour(), step: 0 },
               minutes: { max: e.minute(), min: e.minute(), step: 0 },
@@ -303,96 +303,96 @@
             }),
               (S = "HH:mm");
           }
-          h || !t || d || (y = v().unix(t));
-          const k = v().tz.guess(),
-            I = v().unix(h).tz(k),
-            A = !!i && k != i && v().unix(h).tz(i);
-          return s.createElement(
+          h || !t || d || (y = E().unix(t));
+          const D = E().tz.guess(),
+            k = E().unix(h).tz(D),
+            A = !!i && D != i && E().unix(h).tz(i);
+          return r.createElement(
             "div",
-            { className: (0, u.Z)(_().EventTimeSection, this.props.className) },
-            s.createElement(
+            { className: (0, m.Z)(_().EventTimeSection, this.props.className) },
+            r.createElement(
               "div",
-              { className: (0, u.Z)(_().EventTimeTitle, "DialogLabel") },
-              s.createElement(
-                T.HP,
+              { className: (0, m.Z)(_().EventTimeTitle, "DialogLabel") },
+              r.createElement(
+                g.HP,
                 { toolTipContent: this.props.strDescToolTip, direction: "top" },
                 Boolean(this.props.strDescription) &&
-                  s.createElement("span", null, this.props.strDescription),
+                  r.createElement("span", null, this.props.strDescription),
               ),
               b &&
-                s.createElement(
+                r.createElement(
                   "span",
                   { className: _().DateErrorCtn },
-                  s.createElement("img", { src: l.Z }),
-                  (0, p.Xx)(D),
+                  r.createElement("img", { src: l.Z }),
+                  (0, p.Xx)(I),
                 ),
             ),
-            s.createElement(
+            r.createElement(
               "div",
-              { className: m().FlexRowContainer },
-              s.createElement(
+              { className: u().FlexRowContainer },
+              r.createElement(
                 "div",
-                { className: (0, u.Z)(m().InputBorder, _().TimeBlock) },
-                s.createElement(o(), {
+                { className: (0, m.Z)(u().InputBorder, _().TimeBlock) },
+                r.createElement(o(), {
                   onChange: this.OnDateChange,
                   timeFormat: !1,
-                  value: this.state.dateAsString ? this.state.dateAsString : g,
+                  value: this.state.dateAsString ? this.state.dateAsString : T,
                   isValidDate: this.IsValidDate,
                   initialValue: y,
                   inputProps: {
                     placeholder: (0, p.Xx)("#DateTimePicker_Enter_Date"),
-                    className: (0, u.Z)(
+                    className: (0, m.Z)(
                       _().DateWidth,
                       "DialogInput",
                       "DialogTextInputBase",
                     ),
-                    disabled: r,
+                    disabled: s,
                   },
                 }),
                 !!A &&
-                  s.createElement(
+                  r.createElement(
                     "div",
                     { className: _().PacificTimeHint },
                     A.format("L"),
                   ),
               ),
-              s.createElement(
+              r.createElement(
                 "div",
-                { className: (0, u.Z)(m().InputBorder, _().TimeBlock) },
-                s.createElement(o(), {
+                { className: (0, m.Z)(u().InputBorder, _().TimeBlock) },
+                r.createElement(o(), {
                   onChange: this.OnTimeChange,
                   dateFormat: !1,
                   timeFormat: S,
                   timeConstraints: f,
-                  value: this.state.timeAsString ? this.state.timeAsString : g,
+                  value: this.state.timeAsString ? this.state.timeAsString : T,
                   inputProps: {
                     placeholder: (0, p.Xx)("#DateTimePicker_Enter_Time"),
-                    className: (0, u.Z)(
+                    className: (0, m.Z)(
                       _().TimeWidth,
                       "DialogInput",
                       "DialogTextInputBase",
                     ),
-                    disabled: r,
+                    disabled: s,
                   },
                 }),
                 !!A &&
-                  s.createElement(
+                  r.createElement(
                     "div",
                     { className: _().PacificTimeHint },
                     A.format("LT"),
                   ),
               ),
               this.props.bShowTimeZone &&
-                s.createElement(
+                r.createElement(
                   "div",
                   null,
-                  s.createElement(
+                  r.createElement(
                     "div",
                     { className: _().TimeZone },
-                    I.zoneAbbr(),
+                    k.zoneAbbr(),
                   ),
                   !!A &&
-                    s.createElement(
+                    r.createElement(
                       "div",
                       { className: _().TimeZone },
                       A.zoneAbbr(),
@@ -400,7 +400,7 @@
                 ),
             ),
             Boolean(f) &&
-              s.createElement(
+              r.createElement(
                 "div",
                 null,
                 (0, p.Xx)("#DateTimePicker_DateTime_Fixed"),
@@ -408,43 +408,43 @@
           );
         }
       };
-      (0, a.gn)([h.ak], E.prototype, "OnTimeChange", null),
-        (0, a.gn)([h.ak], E.prototype, "OnDateChange", null),
-        (0, a.gn)([h.ak], E.prototype, "IsValidDate", null),
-        (0, a.gn)([h.ak], E.prototype, "SetToNow", null),
-        (E = (0, a.gn)([i.Pi], E));
+      (0, a.gn)([h.ak], v.prototype, "OnTimeChange", null),
+        (0, a.gn)([h.ak], v.prototype, "OnDateChange", null),
+        (0, a.gn)([h.ak], v.prototype, "IsValidDate", null),
+        (0, a.gn)([h.ak], v.prototype, "SetToNow", null),
+        (v = (0, a.gn)([i.Pi], v));
     },
     16670: (e, t, n) => {
       "use strict";
       n.d(t, { N: () => b });
       var a = n(89526),
         i = n(47165),
-        s = n(33940),
-        r = n(52868),
-        o = n.n(r),
+        r = n(33940),
+        s = n(52868),
+        o = n.n(s),
         l = n(92994),
         c = n.n(l),
         d = n(5615),
-        m = n(42735),
-        u = n(23217),
+        u = n(42735),
+        m = n(23217),
         p = n(32765),
         h = n(67328),
-        T = n(94738),
-        g = n(27070);
+        g = n(94738),
+        T = n(27070);
       const _ = "nicknames";
       const S = new (c())(
           (e) =>
             (function (e) {
-              var t, n, a, r;
-              return (0, s.mG)(this, void 0, void 0, function* () {
+              var t, n, a, s;
+              return (0, r.mG)(this, void 0, void 0, function* () {
                 if (!e || 0 == e.length) return [];
-                const s =
+                const r =
                   "community" == (0, p.Zv)()
                     ? p.De.COMMUNITY_BASE_URL
                     : p.De.STORE_BASE_URL;
                 if (1 == e.length) {
                   const a = { accountid: e[0], origin: self.origin },
-                    i = yield o().get(`${s}actions/ajaxgetavatarpersona`, {
+                    i = yield o().get(`${r}actions/ajaxgetavatarpersona`, {
                       params: a,
                     });
                   if (
@@ -452,19 +452,19 @@
                     200 != i.status ||
                     (null === (t = i.data) || void 0 === t
                       ? void 0
-                      : t.success) != m.s.k_EResultOK ||
+                      : t.success) != u.s.k_EResultOK ||
                     !(null === (n = i.data) || void 0 === n
                       ? void 0
                       : n.userinfo)
                   )
                     throw `Load single avatar/persona failed ${
-                      (0, u.l)(i).strErrorMsg
+                      (0, m.l)(i).strErrorMsg
                     }`;
                   return [i.data.userinfo];
                 }
                 {
                   const t = { accountids: e.join(","), origin: self.origin },
-                    n = yield o().get(`${s}actions/ajaxgetmultiavatarpersona`, {
+                    n = yield o().get(`${r}actions/ajaxgetmultiavatarpersona`, {
                       params: t,
                     });
                   if (
@@ -472,13 +472,13 @@
                     200 != n.status ||
                     (null === (a = n.data) || void 0 === a
                       ? void 0
-                      : a.success) != m.s.k_EResultOK ||
-                    !(null === (r = n.data) || void 0 === r
+                      : a.success) != u.s.k_EResultOK ||
+                    !(null === (s = n.data) || void 0 === s
                       ? void 0
-                      : r.userinfos)
+                      : s.userinfos)
                   )
                     throw `Load single avatar/persona failed ${
-                      (0, u.l)(n).strErrorMsg
+                      (0, m.l)(n).strErrorMsg
                     }`;
                   const l = new Map();
                   return (
@@ -492,24 +492,24 @@
             })(e),
           { cache: !1 },
         ),
-        v = "avatarandpersonas";
-      var E = n(56708);
+        E = "avatarandpersonas";
+      var v = n(56708);
       function b(e) {
         const { accountID: t, bHideWhenNotAvailable: n } = e,
-          [r] = (function (e) {
-            const { data: t, isLoading: n } = (0, d.useQuery)([v, e], () =>
+          [s] = (function (e) {
+            const { data: t, isLoading: n } = (0, d.useQuery)([E, e], () =>
               S.load(e),
             );
             return [t, n];
           })(t),
           o = (function (e) {
-            const t = (0, g.bY)(),
+            const t = (0, T.bY)(),
               { data: n, isLoading: a } = (0, d.useQuery)([_], () =>
-                (0, s.mG)(this, void 0, void 0, function* () {
+                (0, r.mG)(this, void 0, void 0, function* () {
                   const e = new Map();
                   if (p.L7.logged_in) {
-                    const n = h.gA.Init(T.bM),
-                      a = (yield T.lk.GetNicknameList(t, n)).Body().toObject();
+                    const n = h.gA.Init(g.bM),
+                      a = (yield g.lk.GetNicknameList(t, n)).Body().toObject();
                     (null == a ? void 0 : a.nicknames) &&
                       a.nicknames.length > 0 &&
                       a.nicknames.forEach((t) => {
@@ -525,7 +525,7 @@
         return a.createElement(
           a.Fragment,
           null,
-          Boolean(!r)
+          Boolean(!s)
             ? a.createElement(
                 a.Fragment,
                 null,
@@ -535,14 +535,14 @@
                 a.Fragment,
                 null,
                 a.createElement("img", {
-                  className: E.SmallAvatar,
-                  src: r.avatar_url,
+                  className: v.SmallAvatar,
+                  src: s.avatar_url,
                   "data-miniprofile": "s" + l.ConvertTo64BitString(),
                 }),
                 a.createElement(
                   "span",
                   null,
-                  o ? `${o} (${r.persona_name})` : r.persona_name,
+                  o ? `${o} (${s.persona_name})` : s.persona_name,
                 ),
               ),
         );
@@ -553,14 +553,14 @@
       n.d(t, { n: () => p });
       var a = n(89526),
         i = n(59934),
-        s = n(19304),
-        r = n(14826),
+        r = n(19304),
+        s = n(14826),
         o = n(5029),
         l = n(74286),
         c = n.n(l),
         d = n(84343),
-        m = n(75962);
-      class u extends a.Component {
+        u = n(75962);
+      class m extends a.Component {
         constructor() {
           super(...arguments), (this.state = { activeTab: "" });
         }
@@ -596,7 +596,7 @@
             a.createElement(
               "div",
               {
-                className: (0, s.Z)(
+                className: (0, r.Z)(
                   c().GraphicalAssetsTabs,
                   this.props.classNameCtn,
                 ),
@@ -611,7 +611,7 @@
                       ? (n = c().StatusDanger)
                       : "caution" === t.statusType && (n = c().StatusCaution),
                     a.createElement(
-                      m.M2,
+                      u.M2,
                       {
                         key: t.key,
                         condition: Boolean(t.statusToolTip),
@@ -626,10 +626,10 @@
                         "div",
                         {
                           key: t.key,
-                          className: (0, s.Z)(
+                          className: (0, r.Z)(
                             `${c().GraphicalAssetsTab} ${
                               t.key === e.key
-                                ? (0, s.Z)(c().Active, "ActiveTab")
+                                ? (0, r.Z)(c().Active, "ActiveTab")
                                 : ""
                             }`,
                             this.props.classNameTab,
@@ -643,14 +643,14 @@
                             a.createElement(
                               "div",
                               { className: c().VOWarning },
-                              (0, r.Xx)("#EventEditor_VOWarning"),
+                              (0, s.Xx)("#EventEditor_VOWarning"),
                             ),
                           ),
                         Boolean(t.status) &&
                           a.createElement(
                             "div",
                             {
-                              className: (0, s.Z)(c().GraphicalAssetStatus, n),
+                              className: (0, r.Z)(c().GraphicalAssetStatus, n),
                             },
                             t.status,
                           ),
@@ -666,35 +666,35 @@
           );
         }
       }
-      const p = (0, i.EN)(u);
+      const p = (0, i.EN)(m);
     },
     24166: (e, t, n) => {
       "use strict";
-      n.d(t, { mY: () => u, ug: () => p });
+      n.d(t, { mY: () => m, ug: () => p });
       var a = n(22444),
         i = n(14826),
-        s = n(701),
-        r = n(89526),
+        r = n(701),
+        s = n(89526),
         o = n(19304),
         l = n(52629),
         c = n(17547),
         d = n(88464),
-        m = n(48705);
-      const u = (0, d.Pi)((e) =>
-        r.createElement(
-          r.Fragment,
+        u = n(48705);
+      const m = (0, d.Pi)((e) =>
+        s.createElement(
+          s.Fragment,
           null,
-          r.createElement(
+          s.createElement(
             "div",
             {
               className: (0, o.Z)(
                 e.className ? e.className : "",
-                m.SectionTitleHeader,
-                m.required_title,
+                u.SectionTitleHeader,
+                u.required_title,
                 "SectionTitleHeader",
               ),
             },
-            r.createElement(
+            s.createElement(
               "div",
               {
                 className: (0, o.Z)(
@@ -703,20 +703,20 @@
                 ),
               },
               e.title,
-              Boolean(e.tooltip) && r.createElement(T, { tooltip: e.tooltip }),
+              Boolean(e.tooltip) && s.createElement(g, { tooltip: e.tooltip }),
             ),
-            r.createElement(h, {
+            s.createElement(h, {
               bIsMinimized: e.getMinimized(),
               fnToggleMinimize: e.toggleMinimized,
             }),
           ),
-          !e.getMinimized() && r.createElement(c.SV, null, e.children),
+          !e.getMinimized() && s.createElement(c.SV, null, e.children),
         ),
       );
       function p(e) {
-        const [t, n] = r.useState(Boolean(e.bStartMinimized));
-        return r.createElement(
-          u,
+        const [t, n] = s.useState(Boolean(e.bStartMinimized));
+        return s.createElement(
+          m,
           Object.assign({}, e, {
             getMinimized: () => t,
             toggleMinimized: () => n(!t),
@@ -727,23 +727,147 @@
       function h(e) {
         const { bIsMinimized: t, fnToggleMinimize: n } = e,
           o = t ? "#Section_Maximize_Tooltip" : "#Section_Minimize_Tooltip";
-        return r.createElement(
+        return s.createElement(
           a.zx,
           { "data-tooltip-text": (0, i.Xx)(o), onClick: n },
           e.bIsMinimized
-            ? r.createElement(s.YqJ, null)
-            : r.createElement(s.gR, null),
+            ? s.createElement(r.YqJ, null)
+            : s.createElement(r.gR, null),
         );
       }
-      function T(e) {
-        return r.createElement(
+      function g(e) {
+        return s.createElement(
           "span",
           {
             "data-tooltip-text": e.tooltip,
             className: (0, o.Z)(l.HelperTooltip, "HelperTooltip"),
           },
           " ",
-          r.createElement(s.WWB, null),
+          s.createElement(r.WWB, null),
+        );
+      }
+    },
+    38944: (e, t, n) => {
+      "use strict";
+      n.d(t, { DV: () => p, Tt: () => u });
+      var a = n(33940),
+        i = n(52868),
+        r = n.n(i),
+        s = n(89526),
+        o = n(75457),
+        l = n(42735),
+        c = n(23217),
+        d = n(32765);
+      function u() {
+        return d.De.EUNIVERSE == o.xO.k_EUniverseBeta ? 12 : 1;
+      }
+      class m {
+        GetPartnerInfo(e) {
+          return this.m_mapOptInToPartners.get(e);
+        }
+        BHasPartnerInfoLoad(e) {
+          return this.m_mapOptInToPartners.has(e);
+        }
+        FindPartnerByName(e) {
+          var t, n, i;
+          return (0, a.mG)(this, void 0, void 0, function* () {
+            const a = new Array();
+            try {
+              const s = d.De.PARTNER_BASE_URL + "pub/ajaxfindpublishers",
+                o = { sessionid: d.De.SESSIONID, searchtext: e },
+                c = yield r().get(s, { params: o });
+              200 == (null == c ? void 0 : c.status) &&
+              (null === (t = null == c ? void 0 : c.data) || void 0 === t
+                ? void 0
+                : t.success) == l.s.k_EResultOK
+                ? c.data.publishers.forEach((e) => {
+                    const t = {
+                      partnerid: e.publisherid,
+                      name: e.publishername,
+                      partner_url:
+                        d.De.PARTNER_BASE_URL +
+                        `pub/publisher/${e.publisherid}/`,
+                      contacts: e.contacts,
+                    };
+                    this.m_mapOptInToPartners.set(e.publisherid, t), a.push(t);
+                  })
+                : console.log(
+                    `CPartnerInfoStore.FindPartnerByName failed with status ${
+                      null == c ? void 0 : c.status
+                    } eresult ${
+                      null === (n = null == c ? void 0 : c.data) || void 0 === n
+                        ? void 0
+                        : n.success
+                    } and msg ${
+                      null === (i = null == c ? void 0 : c.data) || void 0 === i
+                        ? void 0
+                        : i.msg
+                    }`,
+                  );
+            } catch (e) {
+              const t = (0, c.l)(e);
+              console.error(
+                "CPartnerInfoStore.FindPartnerByName failed add: " +
+                  t.strErrorMsg,
+                t,
+              );
+            }
+            return a;
+          });
+        }
+        LoadPartnerInfo(e) {
+          return (0, a.mG)(this, void 0, void 0, function* () {
+            yield this.FindPartnerByName("" + e);
+            return (
+              this.BHasPartnerInfoLoad(e) ||
+                this.m_mapOptInToPartners.set(e, null),
+              this.m_mapOptInToPartners.get(e)
+            );
+          });
+        }
+        static Get() {
+          return (
+            m.s_Singleton ||
+              ((m.s_Singleton = new m()),
+              ("dev" != d.De.WEB_UNIVERSE && "beta" != d.De.WEB_UNIVERSE) ||
+                (window.g_PartnerInfoStore = m.s_Singleton)),
+            m.s_Singleton
+          );
+        }
+        constructor() {
+          this.m_mapOptInToPartners = new Map();
+          let e = JSON.parse(
+            JSON.stringify((0, d.kQ)("partner_info", "application_config")),
+          );
+          this.ValidateStoreDefault(e) &&
+            e.forEach((e) => this.m_mapOptInToPartners.set(e.partnerid, e));
+        }
+        ValidateStoreDefault(e) {
+          const t = e;
+          return (
+            !!(
+              t &&
+              Array.isArray(t) &&
+              t.length > 0 &&
+              "object" == typeof t[0]
+            ) &&
+            "number" == typeof t[0].partnerid &&
+            "string" == typeof t[0].name
+          );
+        }
+      }
+      function p(e) {
+        const [t, n] = s.useState(m.Get().GetPartnerInfo(e));
+        return (
+          s.useEffect(() => {
+            !m.Get().BHasPartnerInfoLoad(e) &&
+              e > 0 &&
+              m
+                .Get()
+                .LoadPartnerInfo(e)
+                .then((e) => n(e));
+          }, [e]),
+          [t]
         );
       }
     },

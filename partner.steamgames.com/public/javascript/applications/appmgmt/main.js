@@ -21143,7 +21143,7 @@
             n.e(7241),
             n.e(5405),
             n.e(8974),
-          ]).then(n.bind(n, 11173)),
+          ]).then(n.bind(n, 7036)),
         ),
         W = c.lazy(() =>
           Promise.all([
