@@ -3574,7 +3574,7 @@
           return this.m_oMessage.must_have_launched_appid;
         }
         GetPreviewURL(e = "US", t = "english", a = !1, n = !1, i = []) {
-          return `${p.De.PARTNER_BASE_URL}marketing/messagepreview/${
+          return `${p.De.PARTNER_BASE_URL}marketingmessages/messagepreview/${
             this.m_oMessage.gid
           }/?cc=${e}&l=${t}&bForceSteamChina=${a}&low_bandwidth=${n}&dlc_override=${
             i ? i.join(",") : ""
@@ -5733,7 +5733,7 @@
                 this.m_SteamInterface.GetServiceTransport(),
                 e,
               );
-              return void (t.GetEResult() == r.s.k_EResultOK
+              t.GetEResult() == r.s.k_EResultOK
                 ? (t
                     .Body()
                     .daily_deals()
@@ -5748,7 +5748,69 @@
                       " days",
                   ))
                 : t.GetEResult() != r.s.k_EResultNoMatch &&
-                  h.Error("Failed loading daily deals:" + t.GetErrorMessage()));
+                  h.Error("Failed loading daily deals:" + t.GetErrorMessage());
+              let a = new Array();
+              for (
+                this.m_mapDailyDeals.forEach((e) => {
+                  var t, n;
+                  e.migratedgid && this.m_mapCDailyDeals.has(e.migratedgid)
+                    ? h.Debug(
+                        "Deal migration: don't need to migrate migratedgid " +
+                          e.migratedgid,
+                      )
+                    : e.name == v &&
+                      this.m_mapCDailyDealsByDay.has(
+                        null === (t = e.visibility) || void 0 === t
+                          ? void 0
+                          : t.startdate,
+                      )
+                    ? h.Debug(
+                        "Deal migration: don't need to migrate blockout on " +
+                          (null === (n = e.visibility) || void 0 === n
+                            ? void 0
+                            : n.startdate),
+                      )
+                    : (h.Debug(
+                        "Deal migration: KV ID " +
+                          e.id +
+                          " needs to be migrated to the new system",
+                        e.migratedgid,
+                      ),
+                      a.push(e));
+                }),
+                  a.length &&
+                    h.Debug(
+                      "About to migrate " +
+                        a.length +
+                        " deals to the new system",
+                    );
+                a.length > 0;
+
+              ) {
+                const e = a.pop();
+                h.Debug("Migrating KV id " + e.id, JSON.stringify(e));
+                const t = p.gA.Init(u.sj),
+                  n = D(e);
+                t.Body().set_daily_deal(n),
+                  h.Info(JSON.stringify(n.toObject()));
+                let i = yield u.X3.CreateDailyDeal(
+                  this.m_SteamInterface.GetServiceTransport(),
+                  t,
+                );
+                i.GetEResult() == r.s.k_EResultOK
+                  ? (h.Debug(
+                      "Success migrating KV " + e.id + " to " + i.Body().gid(),
+                    ),
+                    n.set_gid(i.Body().gid()),
+                    this.InternalAddCDailyDeal(n.toObject()),
+                    n.store_item_name() != v &&
+                      ((e.migratedgid = i.Body().gid()),
+                      yield this.SaveDailyDeal(e, !1)))
+                  : h.Error(
+                      "Failed to migrate KV deal id:" + e.id,
+                      i.GetErrorMessage(),
+                    );
+              }
             } catch (e) {
               const t = (0, c.l)(e);
               h.Error(
@@ -18304,7 +18366,7 @@
                   ? void 0
                   : i.toLocaleLowerCase();
               if (s)
-                if ((a(s), s.trim().length > 2)) {
+                if ((a(s), s.trim().length > 1)) {
                   const e = 1e3;
                   n.Schedule(e, () => p(s));
                 } else n.Cancel();
@@ -21249,21 +21311,19 @@
             bShowLowBandwidth: l,
             rgDLCOverride: o,
           } = e,
-          c = (0, s.fL)();
+          c = (0, s.fL)().GetPreviewURL(t, a, i, l, o);
         return r.createElement(
-          "div",
-          null,
+          me.HP,
+          { toolTipContent: c },
           r.createElement(
             "a",
             {
               href: "#",
               onClick: (e) => {
-                e.preventDefault();
-                const n = c.GetPreviewURL(t, a, i, l, o);
-                console.log("preview url clicked", n);
+                e.preventDefault(), console.log("preview url clicked", c);
                 window
                   .open(
-                    n,
+                    c,
                     "marketing_message",
                     "height=720,width=700,resize=yes,scrollbars=yes",
                   )

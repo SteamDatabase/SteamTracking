@@ -959,7 +959,7 @@ ${PARTNER_BASE_URL}gfxproxy/trailergfx?appid=${}&itype=apps
 ${PARTNER_BASE_URL}giveaways/control/${}
 ${PARTNER_BASE_URL}marketing/message/${gid}
 ${PARTNER_BASE_URL}marketing/message/${}
-${PARTNER_BASE_URL}marketing/messagepreview/${gid}/?cc=${}&l=${}&bForceSteamChina=${}&low_bandwidth=${}&dlc_override=${_ ? _ : ""}
+${PARTNER_BASE_URL}marketingmessages/messagepreview/${gid}/?cc=${}&l=${}&bForceSteamChina=${}&low_bandwidth=${}&dlc_override=${_ ? _ : ""}
 ${PARTNER_BASE_URL}optin${}
 ${PARTNER_BASE_URL}optin/${pageid}/sale/${}
 ${PARTNER_BASE_URL}optin/admin/edit/${pageid}
