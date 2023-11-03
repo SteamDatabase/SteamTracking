@@ -406,6 +406,7 @@
  T SDL_EGL_GetWindowEGLSurface
  T SDL_EGL_SetEGLAttributeCallbacks
  T SDL_EnableScreenSaver
+ T SDL_EnterAppMainCallbacks
  T SDL_Error
  T SDL_EventEnabled
  T SDL_FillSurfaceRect

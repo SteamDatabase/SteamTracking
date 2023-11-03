@@ -3026,7 +3026,6 @@ steam://close/authorize
 steam://close/bigpicture
 steam://close/cancel
 steam://controllerconfig/${appid}/${publishedFileID}
-steam://currentcontrollerconfig/${}
 steam://exit
 steam://friends/add
 steam://friends/joinchat/${steamid}
