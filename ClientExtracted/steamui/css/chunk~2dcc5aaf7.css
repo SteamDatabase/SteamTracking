@@ -31808,20 +31808,7 @@ div.NarrowRightPanel
   background-color: linear-gradient(126deg, #333840 4.36%, #25282e 93.41%);
 }
 .controllerconfigurator_interstitial_ConfiguratorInterstitialContainer_3FS5u
-  .controllerconfigurator_interstitial_DontShowAgain_8aT8x
-  > div
-  > div {
-  flex-grow: 0;
-}
-.controllerconfigurator_interstitial_ConfiguratorInterstitialContainer_3FS5u
-  .controllerconfigurator_interstitial_DontShowAgain_8aT8x
-  > div {
-  justify-content: center;
-}
-.controllerconfigurator_interstitial_ConfiguratorInterstitialContainer_3FS5u
   .controllerconfigurator_interstitial_DontShowAgain_8aT8x {
-  position: absolute;
-  bottom: 90px;
   align-self: center;
 }
 @keyframes controllerconfigurator_interstitial_modalAppear_399Ea {
@@ -31835,10 +31822,9 @@ div.NarrowRightPanel
   }
 }
 .controllerconfigurator_interstitial_ConfiguratorInterstitialFooter_1xJ2y {
-  position: fixed;
   width: 100%;
   margin: 0 auto;
-  bottom: 55px;
+  padding-bottom: 8px;
   transform: scale(0.6);
   align-self: center;
   display: flex;

@@ -22269,9 +22269,9 @@ ShowLegalInformation
 SettingsPanel_About
 file://{resources}/layout/settings/settings_about.xml
 build_date
-Nov  2 2023
+Nov  3 2023
 build_time
-17:22:18
+14:00:51
 package_version
 SteamClient020
 build_interface
@@ -29923,7 +29923,7 @@ sOSBuildId
 System details: codename:%s variant:%s version:%s build:%s bios:%s cef_debugging:%d
 nSteamVersion
 sSteamBuildDate
-Nov  2 2023 17:22:56
+Nov  3 2023 14:01:24
 sSteamAPI
 sCPUVendor
 sCPUName

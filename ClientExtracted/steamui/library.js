@@ -1,4 +1,4 @@
-var CLSTAMP = "8464565";
+var CLSTAMP = "8468537";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -1630,9 +1630,9 @@ var CLSTAMP = "8464565";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Nov 2 2023 : 18:31:09",
-                BUILD_TIME_UTC: "Nov 3 2023 : 01:31:09",
-                BUILD_RTIME_UTC: 1698975069,
+                BUILD_TIME_LOCAL: "Nov 3 2023 : 16:17:10",
+                BUILD_TIME_UTC: "Nov 3 2023 : 23:17:10",
+                BUILD_RTIME_UTC: 1699053430,
               }.MOBILE_BUILD)
             ) {
               window.addEventListener("beforeunload", (e) => {
@@ -17702,33 +17702,40 @@ var CLSTAMP = "8464565";
             : i.createElement(K, Object.assign({}, o));
         }
         function X(e) {
-          const { controllerType: t, className: n } = e;
+          const { controllerType: t } = e,
+            n = (0, r._T)(e, ["controllerType"]);
           switch (t) {
             case o.uL.k_eControllerType_SteamControllerNeptune:
-              return i.createElement(J, { className: n });
+              return i.createElement(J, Object.assign({}, n));
             case o.uL.k_eControllerType_PS4Controller:
             case o.uL.k_eControllerType_XInputPS4Controller:
-              return i.createElement(Y, { type: "ps4", className: n });
+              return i.createElement(Y, Object.assign({ type: "ps4" }, n));
             case o.uL.k_eControllerType_PS5Controller:
             case o.uL.k_eControllerType_PS5EdgeController:
-              return i.createElement(Y, { type: "ps5", className: n });
+              return i.createElement(Y, Object.assign({ type: "ps5" }, n));
             case o.uL.k_eControllerType_SwitchProController:
-              return i.createElement(Y, { type: "switchpro", className: n });
+              return i.createElement(
+                Y,
+                Object.assign({ type: "switchpro" }, n),
+              );
             case o.uL.k_eControllerType_SteamController:
-              return i.createElement(Y, { type: "steam", className: n });
+              return i.createElement(Y, Object.assign({ type: "steam" }, n));
             case o.uL.k_eControllerType_XBox360Controller:
             case o.uL.k_eControllerType_XBoxOneController:
             case o.uL.k_eControllerType_XBoxEliteController:
-              return i.createElement(Y, { type: "xbox", className: n });
+              return i.createElement(Y, Object.assign({ type: "xbox" }, n));
             case o.uL.k_eControllerType_SwitchInputOnlyController:
             case o.uL.k_eControllerType_SwitchJoyConLeft:
             case o.uL.k_eControllerType_SwitchJoyConRight:
             case o.uL.k_eControllerType_SwitchJoyConPair:
             case o.uL.k_eControllerType_SwitchProController:
             case o.uL.k_eControllerType_XInputSwitchController:
-              return i.createElement(Y, { type: "switchpro", className: n });
+              return i.createElement(
+                Y,
+                Object.assign({ type: "switchpro" }, n),
+              );
             default:
-              return i.createElement(Y, { type: "generic", className: n });
+              return i.createElement(Y, Object.assign({ type: "generic" }, n));
           }
         }
         function $(e) {
@@ -44833,9 +44840,9 @@ var CLSTAMP = "8464565";
                 ? !{
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Nov 2 2023 : 18:31:09",
-                    BUILD_TIME_UTC: "Nov 3 2023 : 01:31:09",
-                    BUILD_RTIME_UTC: 1698975069,
+                    BUILD_TIME_LOCAL: "Nov 3 2023 : 16:17:10",
+                    BUILD_TIME_UTC: "Nov 3 2023 : 23:17:10",
+                    BUILD_RTIME_UTC: 1699053430,
                   }.MOBILE_BUILD && document.getElementById(t)
                 : t),
             r)
@@ -45390,7 +45397,7 @@ var CLSTAMP = "8464565";
       {
         27: "c09a437a665ff7863b87",
         33: "33b3ca787548f1eb5866",
-        58: "42dfef58271099e9dd83",
+        58: "a198beff2013a386d9d6",
         131: "281acce86c1a41323f80",
         146: "23a1300f385e570946fd",
         200: "0273f88a1d91abf0685e",
@@ -45491,7 +45498,7 @@ var CLSTAMP = "8464565";
         7781: "c61d5bae0f3c2a3885c9",
         7832: "9d6d3d860dea2a65797b",
         7850: "1bc695461b8002c33685",
-        7962: "a34dd691a4cc91de58f8",
+        7962: "7849a019567ca4969537",
         8011: "cd9fdcd3471ebd4fb569",
         8052: "56f4d2ec38f7e9c4103a",
         8085: "0653b9e6a5f721ba171a",
