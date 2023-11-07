@@ -253,6 +253,15 @@ body.v6 .responsive_page_template_content h3 {
 	}
 }
 
+.about_chromebook_beta {
+	margin-top: 40px;
+	color: #79c7ff;
+}
+
+.about_chromebook_beta_link {
+	text-decoration: underline;
+	color: #79c7ff;
+}
 
 .steam_logo {
 	width: 50vw;
@@ -476,6 +485,10 @@ body.v6 .responsive_page_template_content h3 {
 	background-image: url('https://cdn.cloudflare.steamstatic.com/store/about/icon-steamos.svg');
 }
 
+.about_install.chromeos:not(.mobile) .about_install_steam_link:after {
+	background-image: url('https://cdn.cloudflare.steamstatic.com/store/about/icon-chromeos.svg');
+}
+
 a.about_install_steam_link:hover {
 	text-decoration: none;
 	color: #fff;
@@ -677,8 +690,10 @@ a.about_install_steam_link:hover {
 	position: absolute;
 }
 
-
-.games_col .game_image:nth-child(1),
+.games_col .game_image:nth-child(1) {
+	opacity: 0.5;
+	width: 40vw;
+}
 .games_col .game_image:nth-child(2),
 .games_col .game_image:nth-child(3) {
 	opacity: 0.4;
@@ -719,11 +734,16 @@ a.about_install_steam_link:hover {
 	box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
 }
 
-.games_col .game_image:nth-child(5),
+.games_col .game_image:nth-child(5) {
+	opacity: 0.7;
+	width: 32vw;
+}
+
 .games_col .game_image:nth-child(6) {
 	opacity: 0.7;
 	width: 32vw;
 }
+
 @media only screen and (min-width: 768px) {
 	.games_col .game_image:nth-child(5),
 	.games_col .game_image:nth-child(6) {
@@ -765,6 +785,12 @@ a.about_install_steam_link:hover {
 }
 
 
+#games_col_left .game_image:nth-child(1) {
+	top: 1vw;
+	left: 3vw;
+	opacity: 50%;
+}
+
 #games_col_left .game_image:nth-child(5) {
 	top: auto;
 	bottom: 0;
@@ -788,10 +814,11 @@ a.about_install_steam_link:hover {
 	top: 0;
 	left: 0;
 }
+
 @media only screen and (min-width: 768px) {
 	#games_col_right .game_image:nth-child(1) {
-		left: -60px;
-		top: 650px;
+		left: 290px;
+		top: 500px;
 		bottom: auto;
 	}
 
@@ -847,6 +874,7 @@ a.about_install_steam_link:hover {
 		right: -60px;
 		top: 650px;
 		bottom: auto;
+		left: unset;
 	}
 
 	#games_col_left .game_image:nth-child(2) {
@@ -1327,54 +1355,117 @@ a.about_install_steam_link:hover {
 	}
 }
 
+
+@media only screen and (max-width: 767px) {
+
+		#about_header_area.mobile_device #about_monitor_video,
+	#about_header_area.mobile_device .online_stats {
+		display: none;
+	}
+
+		#about_header_area.mobile_device,
+	#about_header_area.mobile_device #about_header {
+		overflow: visible;
+	}
+
+	#about_header_area.mobile_device.global #about_header .about_greeting_header {
+		background: url('/public/shared/images/joinsteam/new_login_bg_strong_mask_mobile.jpg') no-repeat;
+		padding-top: 14vw;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+	}
+
+	#about_header_area.mobile_device.steamchina #about_header .about_greeting_header {
+		background: url('/public/shared/images/joinsteam/new_login_bg_steam_china_mobile.jpg') no-repeat;
+		padding-top: 14vw;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	#about_header_area.mobile_device.global #about_header,
+	#about_header_area.mobile_device.steamchina #about_header {
+		padding-bottom: 0px;
+	}
+
+	#about_header_area.mobile_device #about_header {
+		padding-top: unset;
+	}
+
+	#about_header_area.mobile_device .about_area_inner_wrapper {
+		padding: 0px;
+	}
+
+	#about_header_area.mobile_device #about_greeting {
+		padding: 0px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	#about_header_area.mobile_device .about_subtitle {
+		padding: 20px 10px;
+		font-size: 18px;
+		text-align: center;
+	}
+
+	#about_header_area.mobile_device .create_account.tablet {
+		display: none;
+	}
+	#about_header_area.mobile_device .create_account.mobile {
+		display: flex;
+	}
+}
+
 @media only screen and (min-width: 768px) {
 
-}
-
-
-@media only screen and (max-width: 768px) {
-	#about_header_area.mobile_device.global #about_header {
-		background: url('/public/shared/images/joinsteam/new_login_bg_strong_mask_mobile.jpg') no-repeat;
-		padding-bottom: 10px;
-	}
-
+	/* tablet styles only when we're on a mobile device (Android, iOS)  */
+	#about_header_area.mobile_device.global #about_header,
 	#about_header_area.mobile_device.steamchina #about_header {
-		background: url('/public/shared/images/joinsteam/new_login_bg_steam_china_mobile.jpg') no-repeat;
-		padding-bottom: 10px;
+		padding-bottom: 0px;
+	}
+
+	#about_header_area.mobile_device .install_pc_container,
+	#about_header_area.mobile_device #about_greeting {
+		align-items: start;
+	}
+	#about_header_area.mobile_device .install_pc_container .start_playing {
+		width: 85%;
+		text-align: center;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	#about_header_area.mobile_device {
+		min-height: 750px
+	}
+
+	#about_header_area.mobile_device .create_account.tablet {
+	 	display: flex;
+	}
+	#about_header_area.mobile_device .create_account.mobile {
+		display: none;
+	}
+
+		#about_header_area.mobile_device .install_pc_container {
+		padding-bottom: 200px;
 	}
 }
-/* TODO: Add larger background image for tablets
 
-	The class name 'mobile_device' is used to apply mobile styles based on platform regardless of screen size
-*/
-
-#about_header_area.mobile_device .about_area_inner_wrapper {
-	padding: 0px;
+@media only screen and (min-width: 970px) {
+	#about_header_area.mobile_device .create_account.tablet {
+		left: 50%;
+	}
 }
 
-#about_header_area.mobile_device {
-	overflow: visible;
-}
-
-#about_header_area.mobile_device #about_header {
-	padding-top: 14vw;
-	overflow: visible;
-}
-
-#about_header_area.mobile_device #about_greeting {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
-#about_header_area.mobile_device .about_subtitle {
-	padding: 20px 10px;
-	font-size: 18px;
-	text-align: center;
+#about_header_area.mobile_device .about_install_wrapper {
+	display: none;
 }
 
 .install_dropdown_wrapper {
-	font-weight: 700;
+	font-weight: 400;
 	font-size: 16px;
 	line-height: 23px;
 	display: flex;
@@ -1387,7 +1478,7 @@ a.about_install_steam_link:hover {
 	margin: 16px 0px;
 	cursor: pointer;
 	position: relative;
-	width: 75%;
+	width: 85%;
 }
 
 .install_dropdown_wrapper.install_mobile {
@@ -1395,12 +1486,13 @@ a.about_install_steam_link:hover {
 }
 .install_dropdown_wrapper.install_pc {
 	background: rgba(217, 217, 217, 0.1);
+	margin-top: 8px;
 }
 .install_dropdown_placeholder_wrapper {
 	user-select: none;
 	position: relative;
 	width: 100%;
-	font-size: 18px;
+	font-size: 16px;
 }
 
 /* todo: use a double down arrow image */
@@ -1417,20 +1509,33 @@ a.about_install_steam_link:hover {
 }
 
 .install_dropdown_flyout {
-	background-color: grey;
+	background-color: #313438;
 	position: absolute;
 	display: none;
 	flex-direction: column;
 	font-weight: normal;
 	border-radius: 2px;
-	margin-top: 35px;
-	width: 100%;
-	z-index: 1;
+	padding: 10px 10px;
+    margin-top: 38px;
+    width: 94%;
+	z-index: 5;
 }
 
 .dropdown_option_link {
-	padding: 8px;
+	padding: 12px 0px;
 	color: #FFFFFF;
+}
+
+.dropdown_option_link:first-of-type {
+	padding-top: 0px;
+}
+
+.dropdown_option_link:not(:first-of-type) {
+	border-top: 1px solid #a7abae23;
+}
+
+.dropdown_option_link:last-of-type {
+	padding-bottom: 0px;
 }
 
 .install_dropdown_wrapper.install_mobile .dropdown_option_link:hover  {
@@ -1441,25 +1546,45 @@ a.about_install_steam_link:hover {
 .dropdown_install_container {
 	display: flex;
 	flex-direction: row;
+	align-items: flex-start;
 }
 
+.dropdown_install_pc_container {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 10px;
+}
+
+.dropdown_install_container
 .pill_icon {
-	width: 30px;
+	width: 24px;
 	aspect-ratio: 1;
+	display: flex;
+	flex-shrink: 0;
+	padding-top: 1px;
+}
+
+.dropdown_install_pc_container
+.pill_icon {
+	width: 20px;
+	aspect-ratio: 1;
+	display: flex;
 	flex-shrink: 0;
 }
 
 .install_pc_container {
 	display: flex;
 	flex-direction: column;
+	align-self: stretch;
 	align-items: center;
 	text-align: left;
+	margin-top: 10px;
 }
 
 .dropdown_install_container .option_text {
 	text-align: center;
-	padding: 0px 20px;
-	weight: 400;
+	padding: 0px 10px;
 	text-align: left;
 }
 .dropdown_install_container .title {
@@ -1467,34 +1592,49 @@ a.about_install_steam_link:hover {
 }
 .dropdown_install_container .description {
 	font-size: 13px;
+	color: #B8BCBF;
+	line-height: normal;
 }
 
 .install_mobile_app_description {
 	text-align: center;
 	padding: 0px 10px;
-	weight: 300;
+	font-weight: 300;
 	font-size: 13px;
+	color: #D3D6DD;
+	background: linear-gradient(0deg, #1C2025 8%, #1c202500 90%);
+	width: 85%;
+
 }
 .install_mobile_app_description a {
 	text-decoration: underline;
+	color:white;
 }
 
 .start_playing {
 	padding-top: 20px;
 	font-size: 18px;
-	font-weight: 800;
+	font-weight: 700;
 	text-align: center;
 }
 
 .create_account {
-	padding-bottom: 20px;
+	padding: 20px 10px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	font-size: 13px;
 	font-weight: 400;
+	color: #D3D6DD;
+}
+.create_account.tablet {
+	padding: 0px;
+	position: absolute;
+	top: 78%;
+	left: calc( 50% - 15px );
 }
 
 .create_account a {
 	text-decoration: underline;
+	color: white;
 }
