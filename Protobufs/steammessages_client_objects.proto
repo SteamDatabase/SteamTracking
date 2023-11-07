@@ -275,6 +275,7 @@ message CMsgSystemPerfLimits {
 	repeated .ESplitScalingScaler split_scaling_scalers_available = 27;
 	optional bool is_hdr_supported = 28;
 	optional int32 display_refresh_manual_hz_oc_max = 29;
+	optional bool disable_refresh_rate_management = 30;
 }
 
 message CMsgSystemPerfSettingsGlobal {

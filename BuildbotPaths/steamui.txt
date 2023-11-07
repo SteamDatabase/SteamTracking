@@ -258,6 +258,7 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/serverbrowsercontroller.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/settingscontroller.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/settingscontroller.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/settingsprofilemanager.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/sharedconnectioncontroller.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/sharedconnectioncontroller.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/shutdowncontroller.cpp

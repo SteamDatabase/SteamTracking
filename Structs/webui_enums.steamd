@@ -310,13 +310,6 @@ enum EAppCreationCreditType
 	k_EAppCreationCreditType_Referral = 4;
 }
 
-enum EAppDetailsStatusPanelType
-{
-	k_EAppDetailsStatusPanelType_Everything = 0;
-	k_EAppDetailsStatusPanelType_NoDownloadBar = 1;
-	k_EAppDetailsStatusPanelType_OnlyDownloadBar = 2;
-}
-
 enum EAppError
 {
 	k_EAppErrorNone = 0;
@@ -1496,7 +1489,7 @@ enum EControllerTypeFlags
 	k_EControllerTypeFlags_SwitchJoyconPair = 8192;
 	k_EControllerTypeFlags_MobileTouchController = 16384;
 	k_EControllerTypeFlags_PS5EdgeController = 32768;
-	k_EControllerTypeFlags_AllControllers = undefined;
+	k_EControllerTypeFlags_AllControllers = 131071;
 	k_EControllerTypeFlags_AllSteamControllers = 7;
 	k_EControllerTypeFlags_AllPlaystationControllers = 32824;
 	k_EControllerTypeFlags_AllXBoxControllers = 448;
@@ -1506,9 +1499,9 @@ enum EControllerTypeFlags
 	k_EControllerTypeFlags_Gyro = 62007;
 	k_EControllerTypeFlags_Trackpad = 49207;
 	k_EControllerTypeFlags_CenterTrackpad = 49200;
-	k_EControllerTypeFlags_RightJoystick = undefined;
-	k_EControllerTypeFlags_DPad = undefined;
-	k_EControllerTypeFlags_Triggers = undefined;
+	k_EControllerTypeFlags_RightJoystick = 126972;
+	k_EControllerTypeFlags_DPad = 126972;
+	k_EControllerTypeFlags_Triggers = 126975;
 	k_EControllerTypeFlags_HapticSupport = 7;
 }
 
@@ -1966,63 +1959,63 @@ enum EHTTPProxyMode
 
 enum EInputMode
 {
-	k_EInputMode_None = undefined;
-	k_EInputMode_Dpad = undefined;
-	k_EInputMode_Buttons = undefined;
-	k_EInputMode_FourButtons = undefined;
-	k_EInputMode_AbsoluteMouse = undefined;
-	k_EInputMode_JoystickMouse = undefined;
-	k_EInputMode_JoystickCamera = undefined;
-	k_EInputMode_ScrollWheel = undefined;
-	k_EInputMode_Trigger = undefined;
-	k_EInputMode_TouchMenu = undefined;
-	k_EInputMode_MouseJoystick = undefined;
-	k_EInputMode_MouseRegion = undefined;
-	k_EInputMode_RadialMenu = undefined;
-	k_EInputMode_SingleButton = undefined;
-	k_EInputMode_Switches = undefined;
-	k_EInputMode_FlickStick = undefined;
-	k_EInputMode_2DScrollwheel = undefined;
-	k_EInputMode_Hotbar = undefined;
-	k_EInputMode_GyroToMouse = undefined;
-	k_EInputMode_GyroToJoystickCamera = undefined;
-	k_EInputMode_GyroToJoystickDeflection = undefined;
-	k_EInputMode_All = undefined;
+	k_EInputMode_None = 1;
+	k_EInputMode_Dpad = 2;
+	k_EInputMode_Buttons = 4;
+	k_EInputMode_FourButtons = 8;
+	k_EInputMode_AbsoluteMouse = 16;
+	k_EInputMode_JoystickMouse = 128;
+	k_EInputMode_JoystickCamera = 256;
+	k_EInputMode_ScrollWheel = 512;
+	k_EInputMode_Trigger = 1024;
+	k_EInputMode_TouchMenu = 2048;
+	k_EInputMode_MouseJoystick = 4096;
+	k_EInputMode_MouseRegion = 8192;
+	k_EInputMode_RadialMenu = 16384;
+	k_EInputMode_SingleButton = 32768;
+	k_EInputMode_Switches = 65536;
+	k_EInputMode_FlickStick = 131072;
+	k_EInputMode_2DScrollwheel = 262144;
+	k_EInputMode_Hotbar = 524288;
+	k_EInputMode_GyroToMouse = 4194304;
+	k_EInputMode_GyroToJoystickCamera = 8388608;
+	k_EInputMode_GyroToJoystickDeflection = 16777216;
+	k_EInputMode_All = 33554431;
 }
 
 enum EInputSource
 {
-	k_EInputSource_None = undefined;
-	k_EInputSource_ABXY = undefined;
-	k_EInputSource_Dpad = undefined;
-	k_EInputSource_LeftBumper = undefined;
-	k_EInputSource_RightBumper = undefined;
-	k_EInputSource_Switch = undefined;
-	k_EInputSource_LeftJoystick = undefined;
-	k_EInputSource_RightJoystick = undefined;
-	k_EInputSource_LeftTrackpad = undefined;
-	k_EInputSource_CenterTrackpad = undefined;
-	k_EInputSource_RightTrackpad = undefined;
-	k_EInputSource_LeftGyro = undefined;
-	k_EInputSource_Gyro = undefined;
-	k_EInputSource_LeftTrigger = undefined;
-	k_EInputSource_RightTrigger = undefined;
-	k_EInputSource_Key = undefined;
-	k_EInputSource_Mouse = undefined;
-	k_EInputSource_CapJoystickRight = undefined;
-	k_EInputSource_CapJoystickLeft = undefined;
-	k_EInputSource_All = undefined;
-	k_EInputSource_Gyros = undefined;
-	k_EInputSource_Trackpads = undefined;
-	k_EInputSource_Joysticks = undefined;
-	k_EInputSource_Touch = undefined;
-	k_EInputSource_Triggers = undefined;
+	k_EInputSource_None = 1;
+	k_EInputSource_ABXY = 16;
+	k_EInputSource_Dpad = 8192;
+	k_EInputSource_LeftBumper = 256;
+	k_EInputSource_RightBumper = 512;
+	k_EInputSource_Switch = 32;
+	k_EInputSource_LeftJoystick = 8;
+	k_EInputSource_RightJoystick = 4096;
+	k_EInputSource_LeftTrackpad = 2;
+	k_EInputSource_CenterTrackpad = 2048;
+	k_EInputSource_RightTrackpad = 4;
+	k_EInputSource_LeftGyro = 65536;
+	k_EInputSource_Gyro = 1024;
+	k_EInputSource_LeftTrigger = 64;
+	k_EInputSource_RightTrigger = 128;
+	k_EInputSource_Key = 16384;
+	k_EInputSource_Mouse = 32768;
+	k_EInputSource_CapJoystickRight = 131072;
+	k_EInputSource_CapJoystickLeft = 262144;
+	k_EInputSource_All = 524287;
+	k_EInputSource_Gyros = 66560;
+	k_EInputSource_Trackpads = 2054;
+	k_EInputSource_Joysticks = 397320;
+	k_EInputSource_Touch = 395270;
+	k_EInputSource_Triggers = 192;
 	k_EInputSource_NonGyro = undefined;
 	k_EInputSource_NonTrackpad = undefined;
 	k_EInputSource_NonJoystick = undefined;
 	k_EInputSource_NonTouch = undefined;
-	k_EInputSource_Digital = undefined;
-	k_EInputSource_Analog = undefined;
+	k_EInputSource_Digital = 25392;
+	k_EInputSource_Analog = 466126;
 }
 
 enum EInstallMgrState
@@ -3469,13 +3462,6 @@ enum EPeerContentServerMode
 	EPeerContentServerMode_SameUser = 1;
 	EPeerContentServerMode_Friends = 2;
 	EPeerContentServerMode_AnyUser = 3;
-}
-
-enum EPerformanceOverlayOption
-{
-	k_EPerformanceOverlayOptionDisabled = 0;
-	k_EPerformanceOverlayOptionIcons = 1;
-	k_EPerformanceOverlayOptionDetails = 2;
 }
 
 enum EPersonaState
@@ -6452,27 +6438,6 @@ enum Store
 	k_StoreGeneralAvailability = 5;
 }
 
-enum SubSection_Community
-{
-	k_SubSection_CommunityAllContent = 1;
-	k_SubSection_CommunityScreenshots = 2;
-	k_SubSection_CommunityVideos = 3;
-	k_SubSection_CommunityArt = 4;
-	k_SubSection_CommunityNews = 5;
-	k_SubSection_CommunityWorkshop = 6;
-	k_SubSection_CommunityDiscussions = 7;
-	k_SubSection_CommunityAnnouncements = 8;
-	k_SubSection_CommunityWebGuides = 9;
-	k_SubSection_CommunityUserReviews = 10;
-	k_SubSection_CommunityHome = 11;
-	k_SubSection_CommunityAdmin = 12;
-	k_SubSection_CommunityBroadcasts = 13;
-	k_SubSection_CommunityAllNews = 14;
-	k_SubSection_CommunitySuggested = 15;
-	k_SubSection_CommunityUserReviews_PositiveOnly = 16;
-	k_SubSection_CommunityUserReviews_NegativeOnly = 17;
-}
-
 enum SystemAudioChannel
 {
 	k_SystemAudioChannel_Invalid = 0;
@@ -6605,14 +6570,6 @@ enum UnnamedEnum082dd12e6086021e
 	Down = 2;
 }
 
-enum UnnamedEnum0987f77de7dada0f
-{
-	Pending = 0;
-	Shown = 1;
-	Closed = 2;
-	Failed = 3;
-}
-
 enum UnnamedEnum09e3cce3b6071fcb
 {
 	None = 0;
@@ -6694,20 +6651,6 @@ enum UnnamedEnum12ea4feab06d6070
 	Small = 0;
 	Medium = 1;
 	Large = 2;
-}
-
-enum UnnamedEnum13a063a90abefe7d
-{
-	Action = 19;
-	Adventure = 21;
-	Casual = 597;
-	Indie = 492;
-	MMO = 128;
-	Racing = 699;
-	RPG = 122;
-	Simulation = 599;
-	Sports = 701;
-	Strategy = 9;
 }
 
 enum UnnamedEnum14b20255bb5ef56d
@@ -6802,43 +6745,6 @@ enum UnnamedEnum1a595e4880050966
 	k_ESeasonRelease = 32;
 	k_ECrosspostEvent = 34;
 	k_EInGameEventGeneral = 35;
-}
-
-enum UnnamedEnum1c49f2493d5575b5
-{
-	None = 0;
-	FriendAdded = 1;
-	AchievementUnlocked = 2;
-	ReceivedNewGame = 4;
-	JoinedGroup = 8;
-	GroupCreated = 64;
-	AddedGameToWishlist = 128;
-	RecommendedGame = 256;
-	ScreenshotPublished = 512;
-	VideoPublished = 1024;
-	TaggedInScreenshot = 2048;
-	PublishedStatus = 4096;
-	FilePublished_Other = 8192;
-	FileFavorited = 16384;
-	AllIndividual = 20431;
-	AllGamesOwnedPrivacy = 134;
-	AllPlaytimePrivacy = 2;
-	UnlockedGroupAchievement = 65536;
-	PostedAnnouncement = 131072;
-	ScheduledEvent = 262144;
-	SelectedNewPOTW = 524288;
-	PromotedNewAdmin = 1048576;
-	ReceivesGroupComment = 2097152;
-	CuratorRecommendations = 4194304;
-	AllClans = 4128768;
-	PublishedFileAnnouncementGreenlight = 16777216;
-	PublishedFileAnnouncementMicrotransaction = 33554432;
-	AllPublishedFileAnnouncements = 50331648;
-	FollowingPublishedUGC = 134217728;
-	All = 4294967295;
-	FlagsNeedingBackfill = undefined;
-	AllFollowingUGC = 9216;
-	SubscriptionsBackfilled = 2147483648;
 }
 
 enum UnnamedEnum1d137d7f853b05fe
@@ -7142,14 +7048,6 @@ enum UnnamedEnum3461d68cd53273a9
 	WaitingForLibrary = 5;
 }
 
-enum UnnamedEnum347138d53ae1d40b
-{
-	Initial = 0;
-	ConnectionProgress = 1;
-	NotPresent = 2;
-	NetworkInfoPrompt = 3;
-}
-
 enum UnnamedEnum34918bc068bf9b01
 {
 	k_None = 0;
@@ -7383,13 +7281,6 @@ enum UnnamedEnum3740744456cf55a3
 	Finished = 4;
 }
 
-enum UnnamedEnum375c587373ce1506
-{
-	kCollections = 1;
-	kOneCollection = 10;
-	kSearchResults = 11;
-}
-
 enum UnnamedEnum3823e60141e7e50d
 {
 	k_ESaleTagFilter = 0;
@@ -7414,31 +7305,6 @@ enum UnnamedEnum3bfd44005cf37904
 	k_Optional = 0;
 	k_Suggested = 1;
 	k_Required = 2;
-}
-
-enum UnnamedEnum3d1944db58c3d1f9
-{
-	FullControllerSupport = 1;
-	PartialControllerSupport = 2;
-	VRSupport = 3;
-	TradingCards = 4;
-	Workshop = 5;
-	Achievements = 6;
-	SinglePlayer = 7;
-	MultiPlayer = 8;
-	CoOp = 9;
-	Cloud = 10;
-	RemotePlayTogether = 11;
-	SteamDeckVerified = 12;
-	SteamDeckPlayable = 13;
-	SteamDeckUnknown = 14;
-	SteamDeckUnsupported = 15;
-	PS4ControllerSupport = 16;
-	PS4ControllerBTSupport = 17;
-	PS5ControllerSupport = 18;
-	PS5ControllerBTSupport = 19;
-	SteamInputAPI = 20;
-	GamepadPreferred = 21;
 }
 
 enum UnnamedEnum3dd1c4581017d7dd
@@ -7886,15 +7752,6 @@ enum UnnamedEnum5b9e1e5238550b64
 	IgnoreSteamDisplayScale = 2097152;
 }
 
-enum UnnamedEnum5dc3a1fbe6f34283
-{
-	k_eAppSpotlight = 0;
-	k_eFriendsActivity = 1;
-	k_ePlayNext = 2;
-	k_eNotifications = 3;
-	k_eVRDevOptions = 4;
-}
-
 enum UnnamedEnum5e14c6d1b71a889d
 {
 	LeftTop = 0;
@@ -8230,32 +8087,6 @@ enum UnnamedEnum6cf2b7ae1f44a3a3
 	TrackedDeviceProperty_Max = 1000000;
 }
 
-enum UnnamedEnum6d01a51db37ee4b8
-{
-	k_eEnableStickyHovers = 0;
-	k_eAppsHaveTonsOfFriends = 1;
-	k_eFriendsAppsActivityAllowRepeat = 2;
-	k_eFriendsAppsActivityNoMinimum = 3;
-	k_eFriendsAppsActivitySlowQuery = 4;
-	k_eFriendsAppsActivityBreakImages = 5;
-	k_eFriendsAppsActivityDebugSpew = 6;
-	k_eDebugOwnedDLCSpotlight = 7;
-	k_eEnableStickyContextMenus = 8;
-	k_eFriendsAppsActivityForceEmpty = 9;
-	k_eFriendsAppsActivityIgnoreAppHistory = 10;
-	k_eFriendsAppsActivityForceFreshQuery = 11;
-	k_eFriendsAppsActivityIgnoreUnownedLimit = 12;
-	k_ePlayNextNoFilter = 13;
-	k_ePlayNextSlowQuery = 14;
-	k_eEnableStickyKeyboard = 15;
-	k_eDebugIncludeSeenSpotlightEvents = 16;
-	k_eDebugNewContentSpotlight = 17;
-	k_eDebugMarkAllNotificationsRead = 18;
-	k_eForcePopupContextMenus = 19;
-	k_eEnableVRPopupsOnDesktop = 20;
-	k_eVRDashboardHasManyTabs = 21;
-}
-
 enum UnnamedEnum6d0c4a4e51ce607a
 {
 	Icon = 0;
@@ -8278,18 +8109,6 @@ enum UnnamedEnum6dc1117c55eed9d3
 	k_ECurator = 2;
 	k_ETags = 3;
 	k_EDisplayList = 4;
-}
-
-enum UnnamedEnum6ff4bd83626916e7
-{
-	None = 0;
-	WirelessOfflineMode = 1;
-	WirelessConnectingActive = 2;
-	WiredNetworkWarning = 3;
-	WirelessNetworkWarning = 4;
-	WiredNetwork = 5;
-	WirelessNetwork = 6;
-	WirelessDisabled = 7;
 }
 
 enum UnnamedEnum6ffd890a446c4435
@@ -8483,24 +8302,6 @@ enum UnnamedEnum8abeb6bedb3f618e
 	BasicUI = 1;
 }
 
-enum UnnamedEnum8c7160c1124f3d52
-{
-	kAppType = 0;
-	kPlayState = 1;
-	kAppFeature = 2;
-	kGenre = 3;
-	kStoreTag = 4;
-	kPartner = 5;
-	kFriend = 6;
-}
-
-enum UnnamedEnum8cbaa18358818ee1
-{
-	k_EViewComments = 1;
-	k_EUpvote = 2;
-	k_EDownvote = 3;
-}
-
 enum UnnamedEnum8edc8c3ef547367c
 {
 	k_EStorePage = 0;
@@ -8565,21 +8366,6 @@ enum UnnamedEnum961ee65102a01e04
 	Talent = 3;
 }
 
-enum UnnamedEnum968f1a0e518faf1a
-{
-	k_EDefault = 1;
-	k_EPercentAchievementsComplete = 2;
-	k_ELastUpdated = 3;
-	k_EHoursPlayed = 4;
-	k_ELastPlayed = 5;
-	k_EReleaseDate = 6;
-	k_EDateAddedToLibrary = 7;
-	k_ESizeOnDisk = 8;
-	k_EMetacriticScore = 9;
-	k_EFriendsPlaying = 10;
-	k_ESteamReview = 11;
-}
-
 enum UnnamedEnum9744fddc6b9fcf31
 {
 	UNSET = 0;
@@ -8607,15 +8393,6 @@ enum UnnamedEnum9a54433f4d76badc
 	M = 0;
 	Q = 3;
 	H = 2;
-}
-
-enum UnnamedEnuma55cf1297122de03
-{
-	InstalledLocally = 1;
-	ReadyToPlay = 2;
-	PlayedPreviously = 3;
-	PlayedNever = 4;
-	ValidPlatform = 5;
 }
 
 enum UnnamedEnuma68ec96c8362722a
@@ -9010,14 +8787,6 @@ enum UnnamedEnumc6e55c10367f49b7
 	OptedOut = 7;
 }
 
-enum UnnamedEnumc7bfb42dcab87596
-{
-	None = 0;
-	Waiting = 1;
-	Success = 2;
-	Failed = 3;
-}
-
 enum UnnamedEnumc871c27f28c8b37d
 {
 	Knockout = 0;
@@ -9091,19 +8860,6 @@ enum UnnamedEnumce80111fb803b9a5
 	DIM = 0;
 	NORMAL = 1;
 	HIGHLIGHTED = 2;
-}
-
-enum UnnamedEnumce8b51d6cb6e5e47
-{
-	Invalid = 0;
-	Small = 1;
-	Medium = 2;
-	Large = 4;
-	VideoAspect = 8;
-	Panoramic = 16;
-	Wide = 32;
-	Narrow = 64;
-	Tall = 128;
 }
 
 enum UnnamedEnumceb8961b24f76ce1
@@ -9315,42 +9071,6 @@ enum UnnamedEnumdf90a08aed284b03
 	GEOMETRIC = 6;
 }
 
-enum UnnamedEnumdfa716524449ed10
-{
-	None = 0;
-	KeepLocal = 1;
-	KeepRemote = 2;
-}
-
-enum UnnamedEnume067a1490e5eee76
-{
-	kMultiPlayer = 1;
-	kSinglePlayer = 2;
-	kCoOp = 9;
-	kPartialController = 18;
-	kMMO = 20;
-	kAchievements = 22;
-	kSteamCloud = 23;
-	kSplitScreen = 24;
-	kCrossPlatformMultiPlayer = 27;
-	kFullController = 28;
-	kTradingCards = 29;
-	kWorkshop = 30;
-	kVRSupport = 31;
-	kOnlineMultiPlayer = 36;
-	kLocalMultiPlayer = 37;
-	kOnlineCoOp = 38;
-	kLocalCoOp = 39;
-	kRemotePlayTogether = 44;
-	kHighQualitySoundtrackAudio = 50;
-	kPS4Support = 55;
-	kPS4BTSupport = 56;
-	kPS5Support = 57;
-	kPS5BTSupport = 58;
-	kSteamInputAPI = 59;
-	kGamepadPreferred = 60;
-}
-
 enum UnnamedEnume1202fbe60302220
 {
 	Normal = 0;
@@ -9395,17 +9115,6 @@ enum UnnamedEnume6093c05096df8e2
 	INVALID = 0;
 	FORWARD = 1;
 	BACKWARD = 2;
-}
-
-enum UnnamedEnume8529d27186452fb
-{
-	k_ECollectionView = 1;
-	k_ERecentGamesView = 2;
-	k_EGameDetailsView = 3;
-	k_EFriendsActivityView = 4;
-	k_EPlayNextView = 5;
-	k_EDownloadsView = 6;
-	k_ELibraryManagerView = 7;
 }
 
 enum UnnamedEnume91934d732c052f5

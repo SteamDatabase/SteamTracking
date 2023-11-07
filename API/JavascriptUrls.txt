@@ -3039,6 +3039,7 @@ steam://gamewebcallback/
 steam://helpurl/
 steam://joinlobby/${appID}/${lobbyID}/${}
 steam://joinlobby/${}/${}/${}
+steam://nav/games/
 steam://nav/games/details/${}
 steam://open/about
 steam://open/addnonsteamgame

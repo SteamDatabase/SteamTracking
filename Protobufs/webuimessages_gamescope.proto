@@ -5,17 +5,27 @@ import "webuimessages_base.proto";
 option optimize_for = SPEED;
 option cc_generic_services = true;
 
-message CGamescopeState {
+message CMsgDisplayInfo {
+	optional string make = 1;
+	optional string model = 2;
+	optional string connector_name = 3;
+	repeated int32 supported_refresh_rates = 4;
+	repeated int32 supported_frame_rates = 5;
+}
+
+message CMsgGamescopeState {
 	optional bool is_service_available = 1;
 	optional bool is_reshade_supported = 2;
 	optional bool is_app_hdr_enabled = 3;
+	optional bool is_app_refresh_rate_supported = 4;
+	optional .CMsgDisplayInfo active_display_info = 5;
 }
 
 message CGamescope_GetState_Request {
 }
 
 message CGamescope_GetState_Response {
-	optional .CGamescopeState state = 1;
+	optional .CMsgGamescopeState state = 1;
 }
 
 message CGamescope_StateChanged_Notification {
