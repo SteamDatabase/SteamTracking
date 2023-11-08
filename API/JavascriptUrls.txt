@@ -134,7 +134,6 @@ ${COMMUNITY_BASE_URL}/gid/${}/getimages/
 ${COMMUNITY_BASE_URL}/gid/${}/partnerevents/edit/${}
 ${COMMUNITY_BASE_URL}/gid/${}/resizeimage/
 ${COMMUNITY_BASE_URL}/profiles/${id}
-${COMMUNITY_BASE_URL}/profiles/${}/ajaxgetbadgeinfo/${appid}
 ${COMMUNITY_BASE_URL}/profiles/${}/ajaxgetbadgeinfo/${}
 ${COMMUNITY_BASE_URL}?subsection=workshop
 ${COMMUNITY_BASE_URL}actions/AddFriendAjax
@@ -229,19 +228,13 @@ ${COMMUNITY_BASE_URL}id/${profile_url}
 ${COMMUNITY_BASE_URL}invites/ajaxcreate
 ${COMMUNITY_BASE_URL}invites/ajaxgetall
 ${COMMUNITY_BASE_URL}linkfilter/?u=${}
-${COMMUNITY_BASE_URL}linkfilter/?url
 ${COMMUNITY_BASE_URL}market
 ${COMMUNITY_BASE_URL}market/listings/${}/${}
 ${COMMUNITY_BASE_URL}migrate/ajaxcreateupdatesalepage
 ${COMMUNITY_BASE_URL}migrate/ajaxgetallapps
 ${COMMUNITY_BASE_URL}migrate/ajaxgetallclans
 ${COMMUNITY_BASE_URL}migrate/ajaxgetsalepagestomigrate
-${COMMUNITY_BASE_URL}miniprofile/${}/json
 ${COMMUNITY_BASE_URL}miniprofile/${}/json/?origin=${STORE_BASE_URL}
-${COMMUNITY_BASE_URL}mobileconf/ajaxop?${}
-${COMMUNITY_BASE_URL}mobileconf/detailspage/${id}?${}
-${COMMUNITY_BASE_URL}mobileconf/getlist
-${COMMUNITY_BASE_URL}mobileconf/multiajaxop?${}
 ${COMMUNITY_BASE_URL}my
 ${COMMUNITY_BASE_URL}my/badges/${}
 ${COMMUNITY_BASE_URL}my/edit/avatar
@@ -381,7 +374,6 @@ ${COMMUNITY_URL}oauth/login?client_id=${CLIENT_ID}&response_type=token&state=${}
 ${COMMUNITY_URL}oauth/login?client_id=${CLIENT_ID}&response_type=token&state=filmcontest/
 ${HELP_BASE_URL}
 ${HELP_BASE_URL}${}/
-${HELP_BASE_URL}/wizard/HelpWithSteamIssue/?issueid=809
 ${HELP_BASE_URL}en/wizard/HelpWithPublishing?issueid=919
 ${HELP_BASE_URL}en/wizard/HelpWithPublishing?issueid=933
 ${HELP_BASE_URL}faqs/view/${url_code}
@@ -1128,7 +1120,6 @@ ${STORE_BASE_URL}/events/ajaxgetdynamiceventmetadata
 ${STORE_BASE_URL}/events_admin/ajaxhidefromsteamchina
 ${STORE_BASE_URL}about
 ${STORE_BASE_URL}about/
-${STORE_BASE_URL}account
 ${STORE_BASE_URL}account/
 ${STORE_BASE_URL}account/ajaxgetcontrollersused
 ${STORE_BASE_URL}account/ajaxsetcookiepreferences
@@ -1190,7 +1181,6 @@ ${STORE_BASE_URL}cart/ajaxredeemtokensforcartdiscount
 ${STORE_BASE_URL}category/${category}
 ${STORE_BASE_URL}category/${handle}
 ${STORE_BASE_URL}category/${}
-${STORE_BASE_URL}checkout
 ${STORE_BASE_URL}contenthub/ajaxcheckcontenthubsalepage
 ${STORE_BASE_URL}contenthub/ajaxfilterappsbycontenthub
 ${STORE_BASE_URL}contenthub/ajaxgetcontenthubdata
@@ -1281,7 +1271,6 @@ ${STORE_BASE_URL}labs/ajaxgetsimilarapps?appid=${}&model=${similarity_model}
 ${STORE_BASE_URL}labs/ajaxgetsimilaritymodelnames
 ${STORE_BASE_URL}labs/contenthub?optout=1
 ${STORE_BASE_URL}labs/trendingreviews/
-${STORE_BASE_URL}legal
 ${STORE_BASE_URL}login/checkdevice
 ${STORE_BASE_URL}login?redir=${}
 ${STORE_BASE_URL}lunarnewyearmarket
@@ -1289,7 +1278,6 @@ ${STORE_BASE_URL}lunarnewyearmarket/ajaxgettokensummary
 ${STORE_BASE_URL}mobile
 ${STORE_BASE_URL}mobile/?show=steamapp
 ${STORE_BASE_URL}mobile?show=steamapp
-${STORE_BASE_URL}news
 ${STORE_BASE_URL}news/
 ${STORE_BASE_URL}news/${}
 ${STORE_BASE_URL}news/${}/view/${announcement_gid}
@@ -1373,7 +1361,6 @@ ${STORE_BASE_URL}stats/support?json=1
 ${STORE_BASE_URL}stats/supportdata.json
 ${STORE_BASE_URL}stats/userdata.json?days_back=${}
 ${STORE_BASE_URL}steam_refunds
-${STORE_BASE_URL}steamaccount/addfunds
 ${STORE_BASE_URL}steamawards/
 ${STORE_BASE_URL}steamawards/ajaxgetpartnervotedefs
 ${STORE_BASE_URL}steamawards/ajaxgetsteamawardeventdetails
@@ -1744,7 +1731,6 @@ ${sCurrentURL}#buy${sElementPrefix}|${listingid}|${}|${}|${}
 ${sURL}${}
 ${serverUrl}${}?platform=android&hash=${hash}
 ${short_url}/${invite_token}
-${sourceURL}
 ${strBaseURL}${_ ? '' : '/'}${m_bIsMobile ? 'mobilelogin' : 'login'}/
 ${strBaseURL}${strLocation}
 ${strBaseURL}${}

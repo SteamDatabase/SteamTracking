@@ -4264,7 +4264,7 @@ span.partnersaledisplay_vr_required_1KRF9 {
   overflow: hidden;
 }
 .partnersaledisplay_fullscreen_bg_video_2iQk_ {
-  position: fixed;
+  position: absolute;
   top: 0;
   min-width: 100%;
   min-height: 100%;
