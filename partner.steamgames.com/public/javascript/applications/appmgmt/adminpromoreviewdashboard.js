@@ -4,16 +4,16 @@
   self.webpackChunkappmgmt_storeadmin || []).push([
   [3599],
   {
-    14080: () => {},
+    87289: () => {},
     91183: (e, t, n) => {
       "use strict";
       n.r(t), n.d(t, { default: () => d });
       var a = n(49675),
         o = n(89526),
-        c = n(3301),
+        c = n(69338),
         r = n(44973),
         i = n(44989),
-        u = n(14080);
+        u = n(87289);
       function d(e) {
         const t = (0, a.yw)(),
           n = (0, o.useMemo)(() => {

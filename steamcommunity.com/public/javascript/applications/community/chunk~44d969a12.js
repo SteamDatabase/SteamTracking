@@ -3,7 +3,7 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [5503],
   {
-    50711: (e) => {
+    30120: (e) => {
       e.exports = {
         avatarHolder: "steamavatar_avatarHolder_1YGAH",
         avatarStatus: "steamavatar_avatarStatus_1yIzy",
@@ -14,17 +14,15 @@
     },
     11301: (e, t, a) => {
       "use strict";
-      a.d(t, { Pv: () => h, U0: () => _.U, WV: () => _.W, sB: () => p });
+      a.d(t, { Pv: () => p, U0: () => A.U, WV: () => A.W, sB: () => l });
       var i = a(33940),
         r = a(50265),
         s = a(39818),
         n = a(58961),
         o = a(14826),
-        m = a(75457),
-        A = a(21907),
-        l = a(32765),
-        _ = a(4556);
-      function p(e) {
+        m = a(32765),
+        A = a(4556);
+      function l(e) {
         let t = "offline";
         return (
           e &&
@@ -37,15 +35,15 @@
           t
         );
       }
-      class h {
+      class p {
         constructor(e) {
           (this.m_bInitialized = !1),
-            (this.m_ePersonaState = m.fi.k_EPersonaStateOffline),
+            (this.m_ePersonaState = 0),
             (this.m_unGamePlayedAppID = 0),
             (this.m_gameid = "0"),
             (this.m_unPersonaStateFlags = 0),
             (this.m_strPlayerName = ""),
-            (this.m_strAvatarHash = _.W),
+            (this.m_strAvatarHash = A.W),
             (this.m_strAccountName = ""),
             (this.m_rtLastSeenOnline = 0),
             (this.m_strGameExtraInfo = ""),
@@ -60,7 +58,7 @@
             (this.m_steamid = e);
         }
         Reset() {
-          (this.m_ePersonaState = m.fi.k_EPersonaStateOffline),
+          (this.m_ePersonaState = 0),
             (this.m_unGamePlayedAppID = 0),
             (this.m_gameid = "0"),
             (this.m_strGameExtraInfo = ""),
@@ -78,10 +76,7 @@
           return this.m_steamid.GetAccountID();
         }
         get is_online() {
-          return (
-            this.m_ePersonaState != m.fi.k_EPersonaStateOffline &&
-            this.m_ePersonaState != m.fi.k_EPersonaStateInvisible
-          );
+          return 0 != this.m_ePersonaState && 7 != this.m_ePersonaState;
         }
         get is_ingame() {
           return (
@@ -103,11 +98,7 @@
           );
         }
         get has_joinable_game_flag() {
-          return (
-            0 !=
-            (this.m_unPersonaStateFlags &
-              A.Fp.k_EPersonaStateFlag_InJoinableGame)
-          );
+          return 0 != (2 & this.m_unPersonaStateFlags);
         }
         get connect_string() {
           return this.m_mapRichPresence.get("connect");
@@ -119,10 +110,7 @@
           return 0 != this.m_unGameServerIP;
         }
         get is_awayOrSnooze() {
-          return (
-            this.m_ePersonaState == m.fi.k_EPersonaStateAway ||
-            this.m_ePersonaState == m.fi.k_EPersonaStateSnooze
-          );
+          return 3 == this.m_ePersonaState || 4 == this.m_ePersonaState;
         }
         HasStateFlag(e) {
           return 0 != (this.m_unPersonaStateFlags & e);
@@ -131,10 +119,10 @@
           return this.m_rtLastSeenOnline;
         }
         ClearStateOnDisconnect() {
-          this.m_ePersonaState != m.fi.k_EPersonaStateOffline && this.Reset();
+          0 != this.m_ePersonaState && this.Reset();
         }
         get is_golden() {
-          return this.HasStateFlag(A.Fp.k_EPersonaStateFlag_Golden);
+          return this.HasStateFlag(4);
         }
         GetCurrentGameName() {
           return this.m_strGameExtraInfo
@@ -181,9 +169,7 @@
               let t = this.m_mapRichPresence.get("steam_display");
               return e.Localize(t, this.m_mapRichPresence);
             }
-          } else if (
-            this.HasStateFlag(A.Fp.k_EPersonaStateFlag_RemotePlayTogether)
-          )
+          } else if (this.HasStateFlag(8))
             return (0, o.Xx)("#PersonaStateRemotePlayTogether");
           return "";
         }
@@ -198,7 +184,7 @@
           if (0 == this.last_seen_online)
             return (0, o.Xx)("#PersonaStateOffline");
           let e = this.GetOfflineStatusUpdateRate();
-          (!l.De.IN_MOBILE || e <= 60) && (0, s.zO)(e);
+          (!m.De.IN_MOBILE || e <= 60) && (0, s.zO)(e);
           let t = n.Q8.CMInterface.GetServerRTime32() - this.last_seen_online;
           return t < 60
             ? (0, o.Xx)("#PersonaStateLastSeen_JustNow")
@@ -206,20 +192,20 @@
         }
         GetLocalizedOnlineStatus() {
           switch (this.m_ePersonaState) {
-            case m.fi.k_EPersonaStateOffline:
-            case m.fi.k_EPersonaStateInvisible:
+            case 0:
+            case 7:
               return this.GetOfflineStatusTime();
-            case m.fi.k_EPersonaStateOnline:
+            case 1:
               return (0, o.Xx)("#PersonaStateOnline");
-            case m.fi.k_EPersonaStateBusy:
+            case 2:
               return (0, o.Xx)("#PersonaStateBusy");
-            case m.fi.k_EPersonaStateAway:
+            case 3:
               return (0, o.Xx)("#PersonaStateAway");
-            case m.fi.k_EPersonaStateSnooze:
+            case 4:
               return (0, o.Xx)("#PersonaStateSnooze");
-            case m.fi.k_EPersonaStateLookingToTrade:
+            case 5:
               return (0, o.Xx)("#PersonaStateLookingToTrade");
-            case m.fi.k_EPersonaStateLookingToPlay:
+            case 6:
               return (0, o.Xx)("#PersonaStateLookingToPlay");
             default:
               return "";
@@ -250,16 +236,16 @@
             : "offline";
         }
         BHasAvatarSet() {
-          return this.m_strAvatarHash != _.W;
+          return this.m_strAvatarHash != A.W;
         }
         get avatar_url() {
-          return (0, _.U)(this.m_strAvatarHash);
+          return (0, A.U)(this.m_strAvatarHash);
         }
         get avatar_url_medium() {
-          return (0, _.U)(this.m_strAvatarHash, "medium");
+          return (0, A.U)(this.m_strAvatarHash, "medium");
         }
         get avatar_url_full() {
-          return (0, _.U)(this.m_strAvatarHash, "full");
+          return (0, A.U)(this.m_strAvatarHash, "full");
         }
         static SortStatusComparator(e, t, a) {
           if (t.has_public_party_beacon) {
@@ -285,35 +271,35 @@
         }
         GetCommunityProfileURL() {
           return (
-            l.De.COMMUNITY_BASE_URL +
+            m.De.COMMUNITY_BASE_URL +
             "profiles/" +
             this.m_steamid.ConvertTo64BitString()
           );
         }
       }
-      (0, i.gn)([r.LO], h.prototype, "m_bInitialized", void 0),
-        (0, i.gn)([r.LO], h.prototype, "m_ePersonaState", void 0),
-        (0, i.gn)([r.LO], h.prototype, "m_unGamePlayedAppID", void 0),
-        (0, i.gn)([r.LO], h.prototype, "m_gameid", void 0),
-        (0, i.gn)([r.LO], h.prototype, "m_unPersonaStateFlags", void 0),
-        (0, i.gn)([r.LO], h.prototype, "m_strPlayerName", void 0),
-        (0, i.gn)([r.LO], h.prototype, "m_strAvatarHash", void 0),
-        (0, i.gn)([r.LO], h.prototype, "m_strAccountName", void 0),
-        (0, i.gn)([r.LO], h.prototype, "m_rtLastSeenOnline", void 0),
-        (0, i.gn)([r.LO], h.prototype, "m_strGameExtraInfo", void 0),
-        (0, i.gn)([r.LO], h.prototype, "m_unGameServerIP", void 0),
-        (0, i.gn)([r.LO], h.prototype, "m_unGameServerPort", void 0),
-        (0, i.gn)([r.LO], h.prototype, "m_game_lobby_id", void 0),
-        (0, i.gn)([r.LO], h.prototype, "m_bPlayerNamePending", void 0),
-        (0, i.gn)([r.LO], h.prototype, "m_bAvatarPending", void 0),
-        (0, i.gn)([r.LO], h.prototype, "m_broadcastId", void 0),
-        (0, i.gn)([r.LO], h.prototype, "m_broadcastAccountId", void 0),
-        (0, i.gn)([r.LO], h.prototype, "m_broadcastAppId", void 0),
-        (0, i.gn)([r.LO], h.prototype, "m_broadcastViewerCount", void 0),
-        (0, i.gn)([r.LO], h.prototype, "m_strBroadcastTitle", void 0),
-        (0, i.gn)([r.LO], h.prototype, "m_bCommunityBanned", void 0);
+      (0, i.gn)([r.LO], p.prototype, "m_bInitialized", void 0),
+        (0, i.gn)([r.LO], p.prototype, "m_ePersonaState", void 0),
+        (0, i.gn)([r.LO], p.prototype, "m_unGamePlayedAppID", void 0),
+        (0, i.gn)([r.LO], p.prototype, "m_gameid", void 0),
+        (0, i.gn)([r.LO], p.prototype, "m_unPersonaStateFlags", void 0),
+        (0, i.gn)([r.LO], p.prototype, "m_strPlayerName", void 0),
+        (0, i.gn)([r.LO], p.prototype, "m_strAvatarHash", void 0),
+        (0, i.gn)([r.LO], p.prototype, "m_strAccountName", void 0),
+        (0, i.gn)([r.LO], p.prototype, "m_rtLastSeenOnline", void 0),
+        (0, i.gn)([r.LO], p.prototype, "m_strGameExtraInfo", void 0),
+        (0, i.gn)([r.LO], p.prototype, "m_unGameServerIP", void 0),
+        (0, i.gn)([r.LO], p.prototype, "m_unGameServerPort", void 0),
+        (0, i.gn)([r.LO], p.prototype, "m_game_lobby_id", void 0),
+        (0, i.gn)([r.LO], p.prototype, "m_bPlayerNamePending", void 0),
+        (0, i.gn)([r.LO], p.prototype, "m_bAvatarPending", void 0),
+        (0, i.gn)([r.LO], p.prototype, "m_broadcastId", void 0),
+        (0, i.gn)([r.LO], p.prototype, "m_broadcastAccountId", void 0),
+        (0, i.gn)([r.LO], p.prototype, "m_broadcastAppId", void 0),
+        (0, i.gn)([r.LO], p.prototype, "m_broadcastViewerCount", void 0),
+        (0, i.gn)([r.LO], p.prototype, "m_strBroadcastTitle", void 0),
+        (0, i.gn)([r.LO], p.prototype, "m_bCommunityBanned", void 0);
     },
-    68943: (e, t, a) => {
+    50355: (e, t, a) => {
       "use strict";
       a.d(t, { o: () => h, vV: () => c });
       var i = a(33940),
@@ -326,8 +312,8 @@
       const l =
         a.p +
         "images/applications/community/avatar_default_full.jpg?v=valveisgoodatcaching";
-      var _ = a(50711),
-        p = a.n(_);
+      var p = a(30120),
+        _ = a.n(p);
       class h extends r.Component {
         render() {
           const e = this.props,
@@ -337,7 +323,7 @@
               className: s,
               statusStyle: n,
               statusPosition: m,
-              children: _,
+              children: p,
             } = e,
             h = (0, i._T)(e, [
               "strAvatarURL",
@@ -371,7 +357,7 @@
               Object.assign(
                 {
                   className: (0, o.Z)(
-                    p().avatarHolder,
+                    _().avatarHolder,
                     "avatarHolder",
                     "no-drag",
                     a || "Medium",
@@ -381,15 +367,15 @@
                 h,
               ),
               r.createElement("div", {
-                className: (0, o.Z)(p().avatarStatus, "avatarStatus", m),
+                className: (0, o.Z)(_().avatarStatus, "avatarStatus", m),
                 style: n,
               }),
               r.createElement(A.j, {
-                className: (0, o.Z)(p().avatar, "avatar"),
+                className: (0, o.Z)(_().avatar, "avatar"),
                 rgSources: c,
                 draggable: !1,
               }),
-              _,
+              p,
             )
           );
         }
@@ -404,21 +390,21 @@
               "animatedAvatar",
               "className",
             ]);
-          let _ = "";
+          let p = "";
           return (
             s && s.image_small && 0 != s.image_small.length
-              ? (_ = m.De.MEDIA_CDN_COMMUNITY_URL + "images/" + s.image_small)
+              ? (p = m.De.MEDIA_CDN_COMMUNITY_URL + "images/" + s.image_small)
               : t &&
-                ((_ = t.avatar_url_medium),
+                ((p = t.avatar_url_medium),
                 "Small" == a || "X-Small" == a
-                  ? (_ = t.avatar_url)
+                  ? (p = t.avatar_url)
                   : ("Large" != a && "X-Large" != a && "FillArea" != a) ||
-                    (_ = t.avatar_url_full)),
+                    (p = t.avatar_url_full)),
             r.createElement(
               h,
               Object.assign(
                 {
-                  strAvatarURL: _,
+                  strAvatarURL: p,
                   size: a,
                   className: (0, o.Z)((0, n.sB)(t), A),
                 },
@@ -441,10 +427,10 @@
           r.createElement(
             "div",
             Object.assign(
-              { className: (0, o.Z)(p().avatarFrame, a, "avatarFrame") },
+              { className: (0, o.Z)(_().avatarFrame, a, "avatarFrame") },
               n,
             ),
-            r.createElement("img", { className: p().avatarFrameImg, src: A }),
+            r.createElement("img", { className: _().avatarFrameImg, src: A }),
           )
         );
       });

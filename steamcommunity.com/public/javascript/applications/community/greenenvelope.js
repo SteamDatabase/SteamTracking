@@ -3,7 +3,7 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [3068],
   {
-    159: (e) => {
+    15937: (e) => {
       e.exports = {
         NotificationsMenu: "greenenvelope_NotificationsMenu_DHpNP",
         NotificationsMenuEntriesContainer:
@@ -43,14 +43,14 @@
         l = n(19304),
         s = n(14826),
         a = n(40103),
-        c = n(159),
+        c = n(15937),
         u = n.n(c),
         m = n(44973),
         f = n(77427),
         d = n(16826),
         _ = n(25125),
-        v = n(86770),
-        p = n(75457),
+        v = n(66559),
+        p = n(40442),
         E = n(27070),
         g = n(41576);
       const N = new r.tL();
@@ -107,7 +107,7 @@
         o.useEffect(() => {
           n.current ||
             ((n.current = (0, a.yV)(
-              o.createElement(U, { popupRef: n }),
+              o.createElement(T, { popupRef: n }),
               document.getElementById("green_envelope_menu_root"),
               {
                 bPreferPopLeft: !0,
@@ -154,7 +154,7 @@
           ),
         );
       }
-      const U = (e) => {
+      const T = (e) => {
           var t;
           const { popupRef: n } = e,
             i = o.useRef(),
@@ -186,7 +186,7 @@
                   : e.Hide();
               },
             },
-            o.createElement(T, null),
+            o.createElement(U, null),
             o.createElement(
               "div",
               {
@@ -198,7 +198,7 @@
             ),
           );
         },
-        T = () => {
+        U = () => {
           const e = `${m.De.COMMUNITY_BASE_URL}profiles/${m.L7.steamid}/notifications`;
           return o.createElement(
             "div",
@@ -258,7 +258,7 @@
                   key: t,
                   rollup: e,
                   onNotificationClick: S,
-                  uimode: p.se.k_EUIMode_Web,
+                  uimode: 3,
                   location: f.IS.Tray,
                 }),
               ),
@@ -273,8 +273,8 @@
           o.createElement(O, null),
           o.createElement(L, null),
           o.createElement(R, null),
-          o.createElement(I, null),
           o.createElement(D, null),
+          o.createElement(I, null),
           o.createElement(H, null),
           o.createElement(k, null),
           o.createElement($, null),
@@ -309,12 +309,12 @@
           count: e.summary.inventory_items,
         });
       }
-      function I() {
+      function D() {
         const e = b(),
           t = `${m.De.COMMUNITY_BASE_URL}profiles/${m.L7.steamid}/tradeoffers`;
         return o.createElement(v.OU, { url: t, count: e.summary.trade_offers });
       }
-      function D() {
+      function I() {
         const e = b(),
           t = `${m.De.COMMUNITY_BASE_URL}profiles/${m.L7.steamid}/gamenotifications`;
         return o.createElement(v.Lo, {

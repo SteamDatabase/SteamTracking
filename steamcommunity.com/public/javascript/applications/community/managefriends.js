@@ -3,7 +3,7 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [8647],
   {
-    20730: (e) => {
+    31698: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         Heading: "managefriends_Heading_1lIY_",
@@ -174,7 +174,7 @@
     },
     78307: (e, t, n) => {
       "use strict";
-      n.d(t, { aX: () => E, gu: () => S });
+      n.d(t, { aX: () => C, gu: () => v });
       var r = n(33940),
         s = n(89526),
         a = n(4306),
@@ -182,17 +182,15 @@
         o = n.n(i),
         d = n(57605),
         l = n(14826),
-        c = n(20730),
+        c = n(31698),
         u = n.n(c),
         m = n(32765),
         _ = n(47165),
         p = n(60161),
         g = n(24448),
-        f = n(42735),
-        h = n(701),
-        v = n(77435),
-        C = n(44026);
-      class S extends s.Component {
+        f = n(701),
+        h = n(44026);
+      class v extends s.Component {
         constructor() {
           super(...arguments),
             (this.state = {
@@ -252,7 +250,7 @@
                 m.De.COMMUNITY_BASE_URL + "actions/AddFriendAjax",
                 t,
               );
-              return e && e.data && e.data.success == f.s.k_EResultOK;
+              return e && e.data && 1 == e.data.success;
             } catch (e) {
               return !1;
             }
@@ -262,7 +260,7 @@
           this.setState({ input_search: e.target.value });
         }
         OnSearchKeyDown(e) {
-          e.keyCode === v.J.Enter && this.OnSearchSubmit();
+          13 === e.keyCode && this.OnSearchSubmit();
         }
         OnSearchSubmit() {
           window.open(
@@ -312,7 +310,7 @@
                 { className: u().Body },
                 (0, l.Xx)("#ManageFriends_EnterFriendCode"),
               ),
-              s.createElement(E, {
+              s.createElement(C, {
                 onButtonClick: this.OnAddFriend,
                 buttonText: (0, l.Xx)("#ManageFriends_SendInvite"),
                 bDisableForSelf: !0,
@@ -404,20 +402,20 @@
                     },
                     onClick: this.OnSearchSubmit,
                   },
-                  s.createElement(h.YtI, null),
+                  s.createElement(f.YtI, null),
                 ),
               ),
             ),
           );
         }
       }
-      (0, r.gn)([a.ak], S.prototype, "OnCreateInviteLink", null),
-        (0, r.gn)([a.ak], S.prototype, "OnCopy", null),
-        (0, r.gn)([a.ak], S.prototype, "OnAddFriend", null),
-        (0, r.gn)([a.ak], S.prototype, "OnSearchChange", null),
-        (0, r.gn)([a.ak], S.prototype, "OnSearchKeyDown", null),
-        (0, r.gn)([a.ak], S.prototype, "OnSearchSubmit", null);
-      class E extends s.Component {
+      (0, r.gn)([a.ak], v.prototype, "OnCreateInviteLink", null),
+        (0, r.gn)([a.ak], v.prototype, "OnCopy", null),
+        (0, r.gn)([a.ak], v.prototype, "OnAddFriend", null),
+        (0, r.gn)([a.ak], v.prototype, "OnSearchChange", null),
+        (0, r.gn)([a.ak], v.prototype, "OnSearchKeyDown", null),
+        (0, r.gn)([a.ak], v.prototype, "OnSearchSubmit", null);
+      class C extends s.Component {
         constructor() {
           super(...arguments),
             (this.state = {
@@ -490,7 +488,7 @@
               ),
             }),
             s.createElement(
-              I,
+              S,
               {
                 searchResult: this.state.searchResult,
                 invite_status: this.state.invite_status,
@@ -510,10 +508,10 @@
           );
         }
       }
-      (0, r.gn)([a.ak], E.prototype, "OnFriendCodeChange", null),
-        (0, r.gn)([a.ak], E.prototype, "LoadProfile", null),
-        (0, r.gn)([a.ak], E.prototype, "OnActionClick", null);
-      const I = (e) => {
+      (0, r.gn)([a.ak], C.prototype, "OnFriendCodeChange", null),
+        (0, r.gn)([a.ak], C.prototype, "LoadProfile", null),
+        (0, r.gn)([a.ak], C.prototype, "OnActionClick", null);
+      const S = (e) => {
         const {
             searchResult: t,
             invite_status: n,
@@ -548,7 +546,7 @@
                     "div",
                     { className: u().ProfileLink },
                     s.createElement(
-                      C.IS,
+                      h.IS,
                       {
                         target: i ? void 0 : "_blank",
                         href: m.De.COMMUNITY_BASE_URL + "profiles/" + t.steamid,
@@ -583,7 +581,7 @@
                     "div",
                     null,
                     s.createElement(
-                      C.IS,
+                      h.IS,
                       {
                         target: i ? void 0 : "_blank",
                         href:
@@ -624,17 +622,13 @@
     },
     23217: (e, t, n) => {
       "use strict";
-      n.d(t, { l: () => o });
-      var r = n(42735),
-        s = n(52868),
-        a = n.n(s),
-        i = n(67328);
-      function o(e) {
-        if (a().isCancel(e))
-          return {
-            strErrorMsg: "Action Cancelled:" + e,
-            errorCode: r.s.k_EResultCancelled,
-          };
+      n.d(t, { l: () => i });
+      var r = n(52868),
+        s = n.n(r),
+        a = n(68333);
+      function i(e) {
+        if (s().isCancel(e))
+          return { strErrorMsg: "Action Cancelled:" + e, errorCode: 52 };
         if (
           void 0 !== e.response &&
           e.response.data &&
@@ -686,7 +680,7 @@
               console.warn(e),
               console.groupEnd();
           else {
-            if ("object" == typeof e && e instanceof i.gA)
+            if ("object" == typeof e && e instanceof a.gA)
               return {
                 strErrorMsg: "" + e.GetErrorMessage(),
                 errorCode: e.GetEResult(),
@@ -697,12 +691,9 @@
         return "object" == typeof e && "status" in e
           ? {
               strErrorMsg: "Unknown Error: " + e + "\nStatus Code:" + e.status,
-              errorCode: r.s.k_EResultFail,
+              errorCode: 2,
             }
-          : {
-              strErrorMsg: "Unknown Error: " + e,
-              errorCode: r.s.k_EResultFail,
-            };
+          : { strErrorMsg: "Unknown Error: " + e, errorCode: 2 };
       }
     },
     16258: (e, t, n) => {

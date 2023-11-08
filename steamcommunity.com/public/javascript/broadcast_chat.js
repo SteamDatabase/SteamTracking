@@ -363,7 +363,7 @@ CBroadcastChat.prototype.AddLinks = function( strHTML )
 		if ( bTrustedDomain )
 			return ( s1 + '<a href="' + s2 + '" class="whiteLink" target="_blank">' + s2 + '</a>' );
 		else
-			return ( s1 + '<a href="https://steamcommunity.com/linkfilter/?url=' + s2 + '" class="whiteLink" target="_blank" rel="noreferrer">' + s2 + '</a>' );
+			return ( s1 + '<a href="https://steamcommunity.com/linkfilter/?u=' + encodeURIComponent( s2 ) + '" class="whiteLink" target="_blank" rel="noreferrer">' + s2 + '</a>' );
 	} );
 
 	return strHTML;

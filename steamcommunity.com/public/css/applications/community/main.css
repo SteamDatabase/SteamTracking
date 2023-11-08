@@ -287,7 +287,8 @@ html.contextmenu_ContextMenuPopup_2GpKT body {
 }
 .shared_svg_library_SteamDeckCompatInfo_2LcFI {
   display: flex;
-  background-color: #0e141b;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(100px);
   padding: 2px;
   border-radius: 20px;
 }
@@ -651,6 +652,7 @@ html.contextmenu_ContextMenuPopup_2GpKT body {
 .DesktopUI .pagedsettings_PagedSettingsDialog_PageListColumn_RTicB {
   padding-left: 0px;
   min-width: 160px;
+  height: 95vh;
 }
 .pagedsettings_NewNoteButton_sc_I7 {
   margin: 0px 4px 4px 4px;
@@ -670,12 +672,18 @@ html.contextmenu_ContextMenuPopup_2GpKT body {
 }
 .pagedsettings_PagedSettingsDialog_PageList__EebF {
   line-height: 16px;
+  height: 100vh;
   white-space: nowrap;
   overflow-y: overlay;
+  overflow: scroll;
   flex-shrink: 1;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
+  padding-bottom: 40px;
+}
+.pagedsettings_PagedSettingsDialog_PageList__EebF::-webkit-scrollbar-corner {
+  background: rgba(0, 0, 0, 0);
 }
 .pagedsettings_PagedSettingsDialog_PageList__EebF.pagedsettings_PagedSettingsDialog_PageList_DisableScrolling_36Srg {
   overflow-y: hidden;
@@ -1285,6 +1293,13 @@ button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover,
 button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover.Primary {
   background: rgba(255, 255, 255, 0.15);
 }
+button.gamepaddialog_Button_1kn70.DialogButton.EmptyButton,
+button.gamepaddialog_Button_1kn70.DialogButton:enabled.EmptyButton,
+button.gamepaddialog_Button_1kn70.DialogButton:active.EmptyButton,
+button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover.EmptyButton {
+  padding: 0px;
+  overflow: hidden;
+}
 button.gamepaddialog_Button_1kn70.DialogButton.BarButton,
 button.gamepaddialog_Button_1kn70.DialogButton:enabled.BarButton,
 button.gamepaddialog_Button_1kn70.DialogButton:active.BarButton,
@@ -1302,7 +1317,7 @@ button.gamepaddialog_Button_1kn70.DialogButton:hover,
 button.gamepaddialog_Button_1kn70.DialogButton:enabled:hover,
 button.gamepaddialog_Button_1kn70.DialogButton:active:hover,
 button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover:hover {
-  background: #3d4450;
+  background: rgba(255, 255, 255, 0.2);
   transition: background-color 150ms ease-in;
 }
 button.gamepaddialog_Button_1kn70.DialogButton.Primary:hover,
@@ -2119,7 +2134,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Z-Cc svg {
   cursor: pointer;
 }
 .gamepadslider_SliderControl_3o137:hover .gamepadslider_SliderTrack_Mq25N {
-  background: #3d4450;
+  background: rgba(255, 255, 255, 0.3);
   --left-track-color: #00bbff;
 }
 .gamepadslider_SliderTrack_Mq25N {
@@ -2850,15 +2865,26 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Z-Cc svg {
   padding-bottom: 40px;
 }
 .gamepadpagedsettings_PagedSettingsDialog_Title_1Px9u {
-  color: #67707b;
-  text-transform: uppercase;
-  padding-top: calc(12px + 1.4vw);
+  color: #fff;
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 28px;
+  padding-top: calc(8px + var(--basicui-header-height, 0px));
   padding-left: calc(12px + 1.4vw);
-  padding-right: calc(12px + 1.4vw);
-  font-weight: 500;
-  letter-spacing: 0.2px;
+  padding-right: 16px;
   overflow: hidden;
-  white-space: nowrap;
   text-overflow: ellipsis;
 }
 .gamepadpagedsettings_PagedSettingsDialog_PageList_3c_Jp {
@@ -2878,6 +2904,9 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Z-Cc svg {
 .gamepadpagedsettings_PagedSettingsDialog_PageList_3c_Jp.gamepadpagedsettings_PagedSettingsDialog_PageList_DisableScrolling_2brQE {
   overflow-y: hidden;
 }
+.gamepadpagedsettings_PagedSettingsDialog_PageList_3c_Jp.gamepadpagedsettings_PagedSettingsDialog_PageList_ShowTitle_d113O {
+  padding-top: 16px;
+}
 .gamepadpagedsettings_PagedSettingsDialog_PageListItem_1ix7r {
   font-family: "Motiva Sans", Helvetica, sans-serif;
   font-weight: normal;
@@ -2891,7 +2920,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Z-Cc svg {
   text-transform: none;
   letter-spacing: 0px;
   color: #fff;
-  padding: 10px 16px;
+  padding: 10px calc(12px + 1.4vw);
   color: #b8bcbf;
   cursor: pointer;
   display: flex;
@@ -3040,6 +3069,65 @@ body.modals_BodyNoScrollDialog_3lrlA {
   display: flex;
   flex-direction: column;
   min-height: 0;
+}
+.parentalunlockdialog_ParentalPINDialog_176OW {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.parentalunlockdialog_ParentalUnlock_26x49,
+.parentalunlockdialog_ParentalRequest_3CX0p {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+}
+.parentalunlockdialog_Body_3Vbr2 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-image: url(../../../images/applications/community/keybg.png?v=valveisgoodatcaching);
+  background-repeat: no-repeat;
+  background-position: 80% 50%;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+.parentalunlockdialog_ParentalRequest_3CX0p .parentalunlockdialog_Body_3Vbr2 {
+  min-height: 142px;
+}
+.parentalunlockdialog_Title_heMWC {
+  font-size: 16px;
+  font-weight: bold;
+}
+.parentalunlockdialog_ErrorText_332yb {
+  color: #de3618;
+}
+.parentalunlockdialog_TextInput_2WMdv {
+  height: 50px;
+  font-size: 35px;
+  max-width: 25%;
+  text-align: center;
+  background: rgba(59, 63, 72, 0.5);
+  color: #dcdedf;
+  border: none;
+  border-radius: 3px;
+  box-shadow: inset 0px 0px 0px rgba(0, 0, 0, 0);
+}
+.parentalunlockdialog_TextInput_2WMdv:focus {
+  background: rgba(67, 73, 83, 0.6);
+  box-shadow: inset 1px 1px 8px rgba(0, 0, 0, 0.6666666667);
+  border: none;
+  outline: none;
+}
+.parentalunlockdialog_ButtonWrapper_Q7uvx .parentalunlockdialog_Button_1v4Js {
+  box-sizing: border-box;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .logsettings_ManualOverlayContainer_1iHWa {
   position: fixed;

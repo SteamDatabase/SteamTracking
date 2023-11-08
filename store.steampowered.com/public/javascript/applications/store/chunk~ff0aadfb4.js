@@ -3,7 +3,7 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [9211],
   {
-    71: (t) => {
+    5089: (t) => {
       t.exports = {
         "duration-app-launch": "800ms",
         OtherEventsCtn: "eventrow_OtherEventsCtn_1qNsZ",
@@ -37,63 +37,47 @@
     16468: (t, e, n) => {
       "use strict";
       n.d(e, {
-        Bo: () => D,
-        FG: () => G,
-        Gj: () => a,
-        N: () => I,
-        P4: () => A,
-        mb: () => S,
-        yS: () => T,
+        Bo: () => L,
+        FG: () => D,
+        N: () => y,
+        P4: () => I,
+        mb: () => C,
+        yS: () => S,
       });
-      var a,
-        o = n(33940),
-        r = n(52868),
-        i = n.n(r),
+      var a = n(33940),
+        o = n(52868),
+        i = n.n(o),
         l = n(50265),
-        s = n(89526),
-        u = n(75457),
-        c = n(42735),
-        _ = n(47165),
-        d = n(82079),
-        p = n(98210),
-        m = n(54671),
-        v = n(10412),
-        E = n(70750),
-        g = n(11837),
-        f = n(23801),
-        C = n(23217),
-        L = n(4306),
-        h = n(32765);
-      function y(t) {
+        r = n(89526),
+        s = n(47165),
+        c = n(82079),
+        u = n(98210),
+        d = n(54671),
+        _ = n(10412),
+        p = n(70750),
+        m = n(11837),
+        v = n(23801),
+        g = n(23217),
+        E = n(4306),
+        f = n(32765);
+      function h(t) {
         t.list_jsondata && "string" == typeof t.list_jsondata
           ? (t.list_jsondata = JSON.parse(t.list_jsondata))
-          : ((0, f.X)(
+          : ((0, v.X)(
               !t.list_jsondata,
               "Found unexpected ListDetails_t.list_jsondata type: " +
                 typeof t.list_jsondata,
             ),
             (t.list_jsondata = {}));
       }
-      !(function (t) {
-        (t[(t.k_EStoreCuratorListType_Unknown = 0)] =
-          "k_EStoreCuratorListType_Unknown"),
-          (t[(t.k_EStoreCuratorListType_Grid = 1)] =
-            "k_EStoreCuratorListType_Grid"),
-          (t[(t.k_EStoreCuratorListType_Ordered = 2)] =
-            "k_EStoreCuratorListType_Ordered"),
-          (t[(t.k_EStoreCuratorListType_AutoDLC = 3)] =
-            "k_EStoreCuratorListType_AutoDLC"),
-          (t[(t.k_EStoreCuratorListType_SaleList = 4)] =
-            "k_EStoreCuratorListType_SaleList");
-      })(a || (a = {}));
-      const S = "0";
+      const C = "0";
       function b(t, e) {
-        (e.localized_flat_title = (0, g.LG)([], u.Df.k_Lang_MAX, null)),
-          (e.localized_flat_blurb = (0, g.LG)([], u.Df.k_Lang_MAX, null)),
-          (e.localized_flat_link = (0, g.LG)([], u.Df.k_Lang_MAX, null)),
-          e.title !== S && (e.localized_flat_title[t] = e.title),
-          e.blurb !== S && (e.localized_flat_blurb[t] = e.blurb),
-          e.link !== S && (e.localized_flat_link[t] = e.link),
+        (e.localized_flat_title = (0, m.LG)([], 31, null)),
+          (e.localized_flat_blurb = (0, m.LG)([], 31, null)),
+          (e.localized_flat_link = (0, m.LG)([], 31, null)),
+          e.title !== C && (e.localized_flat_title[t] = e.title),
+          e.blurb !== C && (e.localized_flat_blurb[t] = e.blurb),
+          e.link !== C && (e.localized_flat_link[t] = e.link),
           e.title_localization.forEach((t) => {
             var n;
             (null === (n = t.localized_string) || void 0 === n
@@ -116,7 +100,7 @@
               (e.localized_flat_link[t.language] = t.localized_string);
           });
       }
-      class D {
+      class L {
         GetListDetails(t) {
           return this.m_mapList.get(t);
         }
@@ -127,40 +111,41 @@
           return this.m_mapListIDToClanAccount.get(t);
         }
         LoadListDetails(t, e, n) {
-          var a;
-          return (0, o.mG)(this, void 0, void 0, function* () {
+          var o;
+          return (0, a.mG)(this, void 0, void 0, function* () {
             if (this.m_mapList.has(e)) return this.m_mapList.get(e);
-            const o =
-                h.De.STORE_BASE_URL +
+            const a =
+                f.De.STORE_BASE_URL +
                 "curator/" +
                 t.GetAccountID() +
                 "/admin/ajaxgetlistdetails",
-              r = { listid: e };
+              l = { listid: e };
             try {
-              const l = yield i().get(o, {
-                params: r,
+              const r = yield i().get(a, {
+                params: l,
                 cancelToken: null == n ? void 0 : n.token,
               });
               if (
-                (null === (a = null == l ? void 0 : l.data) || void 0 === a
+                1 ==
+                (null === (o = null == r ? void 0 : r.data) || void 0 === o
                   ? void 0
-                  : a.success) == c.s.k_EResultOK
+                  : o.success)
               ) {
-                const n = Object.assign({}, l.data.list_details);
+                const n = Object.assign({}, r.data.list_details);
                 return (
-                  (0, f.X)(
+                  (0, v.X)(
                     e == (null == n ? void 0 : n.listid),
                     "Wanted" + e + "but got" + (null == n ? void 0 : n.listid),
                   ),
-                  y(n),
-                  b(l.data.curation_language, n),
+                  h(n),
+                  b(r.data.curation_language, n),
                   this.m_mapList.set(e, n),
                   this.m_mapListIDToClanAccount.set(e, t.GetAccountID()),
                   n
                 );
               }
             } catch (t) {
-              const e = (0, C.l)(t);
+              const e = (0, g.l)(t);
               console.error(
                 "CCuratorListStore.LoadListDetails: error on load: " +
                   e.strErrorMsg,
@@ -171,21 +156,21 @@
           });
         }
         LoadMyFollowedSaleCurationLists(t, e, n) {
-          return (0, o.mG)(this, void 0, void 0, function* () {
+          return (0, a.mG)(this, void 0, void 0, function* () {
             if (
-              !h.L7.logged_in ||
-              (m.jg.Get().BIsLoaded() &&
-                0 == m.jg.Get().GetFollowedCuratorCount())
+              !f.L7.logged_in ||
+              (d.jg.Get().BIsLoaded() &&
+                0 == d.jg.Get().GetFollowedCuratorCount())
             )
               return [];
             const a =
-                h.De.STORE_BASE_URL + "curators/ajaxgetmycuratorsalelists",
+                f.De.STORE_BASE_URL + "curators/ajaxgetmycuratorsalelists",
               o = {
                 clan_account_id: t.GetAccountID(),
                 clan_event_gid: e,
                 origin: self.origin,
-                curator_clan_account_followed: m.jg.Get().BIsLoaded()
-                  ? m.jg.Get().GetFollowedCuratorsAccountID().join(",")
+                curator_clan_account_followed: d.jg.Get().BIsLoaded()
+                  ? d.jg.Get().GetFollowedCuratorsAccountID().join(",")
                   : void 0,
               };
             return this.InternalLoadSaleCuratorLists(
@@ -199,10 +184,10 @@
           });
         }
         LoadAllSaleCurationLists(t, e, n) {
-          return (0, o.mG)(this, void 0, void 0, function* () {
+          return (0, a.mG)(this, void 0, void 0, function* () {
             if (this.m_mapEventGIDToLists.has(e))
               return this.m_mapEventGIDToLists.get(e);
-            const a = h.De.STORE_BASE_URL + "curators/ajaxfindcuratorlists",
+            const a = f.De.STORE_BASE_URL + "curators/ajaxfindcuratorlists",
               o = {
                 clan_account_id: t.GetAccountID(),
                 clan_event_gid: e,
@@ -218,18 +203,19 @@
             );
           });
         }
-        InternalLoadSaleCuratorLists(t, e, n, a, r, s) {
-          var u;
-          return (0, o.mG)(this, void 0, void 0, function* () {
+        InternalLoadSaleCuratorLists(t, e, n, o, r, s) {
+          var c;
+          return (0, a.mG)(this, void 0, void 0, function* () {
             try {
               const n = yield i().get(t, {
                 params: e,
                 cancelToken: null == s ? void 0 : s.token,
               });
               if (
-                (null === (u = null == n ? void 0 : n.data) || void 0 === u
+                1 ==
+                (null === (c = null == n ? void 0 : n.data) || void 0 === c
                   ? void 0
-                  : u.success) == c.s.k_EResultOK
+                  : c.success)
               ) {
                 const t = new Array();
                 return (
@@ -241,7 +227,7 @@
                             n.listid,
                             e.clan_account_id,
                           ),
-                            y(n),
+                            h(n),
                             b(e.curation_language, n),
                             this.m_mapList.set(n.listid, n),
                             t.push(n);
@@ -253,22 +239,22 @@
                 );
               }
             } catch (t) {
-              const e = (0, C.l)(t);
+              const e = (0, g.l)(t);
               console.error(n + ": error on load: " + e.strErrorMsg, e);
             }
             return [];
           });
         }
         static Get() {
-          return D.s_Singleton || (D.s_Singleton = new D()), D.s_Singleton;
+          return L.s_Singleton || (L.s_Singleton = new L()), L.s_Singleton;
         }
         constructor() {
           (this.m_mapList = new Map()),
             (this.m_mapEventGIDToLists = new Map()),
             (this.m_mapListIDToClanAccount = new Map()),
-            "dev" == h.De.WEB_UNIVERSE && (window.g_curatorListStore = this);
-          let t = (0, h.kQ)("curatorlistdata", "application_config");
-          ("dev" != h.De.WEB_UNIVERSE && "beta" != h.De.WEB_UNIVERSE) ||
+            "dev" == f.De.WEB_UNIVERSE && (window.g_curatorListStore = this);
+          let t = (0, f.kQ)("curatorlistdata", "application_config");
+          ("dev" != f.De.WEB_UNIVERSE && "beta" != f.De.WEB_UNIVERSE) ||
             console.log(
               "DEV_DEBUG: CCuratorListStore loading list payload: " +
                 (null == t ? void 0 : t.length),
@@ -278,7 +264,7 @@
               (0, l.z)(() => {
                 t.forEach((t) => {
                   t.multi_detail_lists.forEach((e) => {
-                    y(e),
+                    h(e),
                       b(t.curation_language, e),
                       this.m_mapList.set(e.listid, e);
                   });
@@ -300,59 +286,59 @@
             : e && Array.isArray(e) && 0 == e.length;
         }
       }
-      function I(t, e) {
-        const n = (0, L.NW)();
+      function y(t, e) {
+        const n = (0, E.NW)();
         return (
-          (0, s.useEffect)(() => {
-            if (D.Get().GetListDetails(e) || !t) return;
-            const a = i().CancelToken.source();
+          (0, r.useEffect)(() => {
+            if (L.Get().GetListDetails(e) || !t) return;
+            const o = i().CancelToken.source();
             return (
               (() => {
-                (0, o.mG)(this, void 0, void 0, function* () {
-                  var o, r;
-                  const i = yield D.Get().LoadListDetails(t, e);
-                  if (!a.token.reason)
+                (0, a.mG)(this, void 0, void 0, function* () {
+                  var a, i;
+                  const l = yield L.Get().LoadListDetails(t, e);
+                  if (!o.token.reason)
                     if (
-                      null === (o = null == i ? void 0 : i.apps) || void 0 === o
+                      null === (a = null == l ? void 0 : l.apps) || void 0 === a
                         ? void 0
-                        : o.length
+                        : a.length
                     ) {
                       const t = [];
-                      for (const e of i.apps) {
+                      for (const e of l.apps) {
                         const n =
                           null ===
-                            (r = null == e ? void 0 : e.recommended_app) ||
-                          void 0 === r
+                            (i = null == e ? void 0 : e.recommended_app) ||
+                          void 0 === i
                             ? void 0
-                            : r.appid;
+                            : i.appid;
                         n && t.push({ id: n, type: "game" });
                       }
-                      (0, E.qr)(
+                      (0, p.qr)(
                         t,
-                        Object.assign(Object.assign({}, E.NC), {
+                        Object.assign(Object.assign({}, p.NC), {
                           include_assets: !0,
                           include_release: !0,
                         }),
                       ),
-                        p.ZP.Get().LoadAppIDsBatch(t.map((t) => t.id)),
+                        u.ZP.Get().LoadAppIDsBatch(t.map((t) => t.id)),
                         n();
                     } else console.error("Found no list data");
                 });
               })(),
-              () => a.cancel("unmounting CuratorList")
+              () => o.cancel("unmounting CuratorList")
             );
           }, [t, e, n]),
-          D.Get().GetListDetails(e)
+          L.Get().GetListDetails(e)
         );
       }
-      function A(t) {
-        const e = t && d.sV.GetClanInfoByClanAccountID(t),
-          [n, a] = (0, s.useState)(!!e);
+      function I(t) {
+        const e = t && c.sV.GetClanInfoByClanAccountID(t),
+          [n, a] = (0, r.useState)(!!e);
         return (
-          (0, s.useEffect)(() => {
+          (0, r.useEffect)(() => {
             if (n && t) {
-              const e = _.K.InitFromClanID(t);
-              d.sV.LoadClanInfoForClanSteamID(e).finally(() => {
+              const e = s.K.InitFromClanID(t);
+              c.sV.LoadClanInfoForClanSteamID(e).finally(() => {
                 a(!0);
               });
             }
@@ -360,113 +346,112 @@
           e
         );
       }
-      function G(t) {
+      function D(t) {
         return (
           Boolean(null == t ? void 0 : t.sale_clan_event_gid) &&
           Boolean(null == t ? void 0 : t.sale_clan_steamid)
         );
       }
-      function T(t) {
-        const e = (0, L.NW)(),
-          n = G(t) ? t.sale_clan_event_gid : null,
-          a = n && v.j1.GetClanEventModel(n);
+      function S(t) {
+        const e = (0, E.NW)(),
+          n = D(t) ? t.sale_clan_event_gid : null,
+          o = n && _.j1.GetClanEventModel(n);
         return (
-          (0, s.useEffect)(() => {
-            if (a || !G(t)) return;
-            const r = i().CancelToken.source();
+          (0, r.useEffect)(() => {
+            if (o || !D(t)) return;
+            const l = i().CancelToken.source();
             return (
               (() => {
-                (0, o.mG)(this, void 0, void 0, function* () {
-                  v.j1.Init(),
-                    yield v.j1.LoadPartnerEventFromClanEventGIDAndClanSteamID(
-                      new _.K(t.sale_clan_steamid),
+                (0, a.mG)(this, void 0, void 0, function* () {
+                  _.j1.Init(),
+                    yield _.j1.LoadPartnerEventFromClanEventGIDAndClanSteamID(
+                      new s.K(t.sale_clan_steamid),
                       n,
                       0,
                     ),
-                    r.token.reason || e();
+                    l.token.reason || e();
                 });
               })(),
-              () => r.cancel("unmounting CuratorList")
+              () => l.cancel("unmounting CuratorList")
             );
-          }, [t, n, a, e]),
-          a
+          }, [t, n, o, e]),
+          o
         );
       }
-      (0, o.gn)([l.LO], D.prototype, "m_mapList", void 0);
+      (0, a.gn)([l.LO], L.prototype, "m_mapList", void 0);
     },
     31245: (t, e, n) => {
       "use strict";
-      n.d(e, { B: () => k, O: () => w });
+      n.d(e, { B: () => T, O: () => w });
       var a = n(89526),
         o = n(62983),
-        r = n(44026),
-        i = n(51438),
-        l = n(16221),
+        i = n(44026),
+        l = n(51438),
+        r = n(16221),
         s = n(98009),
-        u = n(68562),
         c = n(54671),
-        _ = n(85886),
+        u = n(85886),
         d = n(25871),
-        p = n(71),
-        m = n(51441),
-        v = n(44421),
-        E = n(1631),
-        g = n.n(E),
-        f = n(67935),
-        C = n(21219),
-        L = n(87539),
-        h = n(3991),
-        y = n(33406),
-        S = n(98389),
-        b = n(42317),
-        D = n(71161),
-        I = n(19304),
-        A = n(14826),
-        G = n(207),
-        T = n(32765);
+        _ = n(5089),
+        p = n(51441),
+        m = n(44421),
+        v = n(23715),
+        g = n.n(v),
+        E = n(67935),
+        f = n(21219),
+        h = n(87539),
+        C = n(3991),
+        b = n(33406),
+        L = n(98389),
+        y = n(42317),
+        I = n(71161),
+        D = n(19304),
+        S = n(14826),
+        A = n(207),
+        G = n(32765);
       const w = "capsule_index_";
-      function k(t) {
+      function T(t) {
         const {
             capsule: e,
             bShowParentApp: n,
             strExtraParams: s,
             elElementToAppendToHover: c,
-            index: v,
-            navKey: E,
-            bHideStoreHover: f,
+            index: m,
+            navKey: v,
+            bHideStoreHover: E,
           } = t,
-          [C, y] = a.useState(!1),
-          [b] = (0, d.jk)(e.id, (0, _.TM)(e.type), o.bk),
-          [G] = (0, d.vs)(n && (null == b ? void 0 : b.GetParentAppID()), o.bk),
-          k = (0, D.bJ)(),
-          P = (0, T.id)();
-        if (!b) return null;
-        const H = Boolean(G),
+          [f, b] = a.useState(!1),
+          [y] = (0, d.jk)(e.id, (0, u.TM)(e.type), o.bk),
+          [A] = (0, d.vs)(n && (null == y ? void 0 : y.GetParentAppID()), o.bk),
+          T = (0, I.bJ)(),
+          P = (0, G.id)();
+        if (!y) return null;
+        const H = Boolean(A),
           z = a.createElement(
             O,
             Object.assign({}, t, {
               info: e,
-              bIsHovered: C,
+              bIsHovered: f,
               bHasParentAppToDisplay: H,
             }),
           );
         return a.createElement(
-          i.s,
+          l.s,
           {
-            className: (0, I.Z)({
+            className: (0, D.Z)({
               [g().OuterCapsuleContainer]: !0,
-              [w + v]: 0 == v,
+              [w + m]: 0 == m,
             }),
-            navEntryPreferPosition: l.c4.PREFERRED_CHILD,
-            navKey: E,
+            navEntryPreferPosition: r.c4.PREFERRED_CHILD,
+            navKey: v,
           },
           a.createElement(
-            h.zw,
-            { appid: b.GetAppID() },
-            Boolean(f)
+            C.zw,
+            { appid: y.GetAppID() },
+            Boolean(E)
               ? a.createElement(a.Fragment, null, z)
               : a.createElement(
-                  m.ll,
+                  p.ll,
                   {
                     className: g().CapsuleContainer,
                     item: e,
@@ -477,7 +462,7 @@
                     bHidePrice: t.bHidePrice,
                     bUseSubscriptionLayout: t.bUseSubscriptionLayout,
                     strExtraParams: t.strExtraParams,
-                    fnOnHoverStateChange: !P && y,
+                    fnOnHoverStateChange: !P && b,
                     nCreatorAccountID: t.creatorAccountID,
                   },
                   z,
@@ -486,28 +471,28 @@
           ),
           H &&
             a.createElement(
-              r.Ks,
+              i.Ks,
               Object.assign(
                 { className: g().CapsuleParentInfo },
-                (0, L.h)(G, k, P, t.strExtraParams),
+                (0, h.h)(A, T, P, t.strExtraParams),
               ),
               a.createElement(
-                h.zw,
-                { appid: G.GetAppID() },
+                C.zw,
+                { appid: A.GetAppID() },
                 a.createElement(
                   "div",
                   { className: g().ParentType },
-                  (0, A.Xx)(
-                    b.GetAppType() == u.Ac.k_EStoreAppType_Music
+                  (0, S.Xx)(
+                    11 == y.GetAppType()
                       ? "#SalePage_ParentApp_SoundTrack"
                       : "#SalePage_ParentApp_DLC",
                   ),
                 ),
                 a.createElement(
-                  S._,
+                  L._,
                   {
                     type: "app",
-                    id: G.GetAppID(),
+                    id: A.GetAppID(),
                     strExtraParams: t.strExtraParams,
                   },
                   a.createElement(
@@ -515,9 +500,9 @@
                     Object.assign(
                       {
                         loading: "lazy",
-                        className: p.AppCapsuleImage,
-                        alt: G.GetName(),
-                        src: G.GetAssets().GetSmallCapsuleURL(),
+                        className: _.AppCapsuleImage,
+                        alt: A.GetName(),
+                        src: A.GetAssets().GetSmallCapsuleURL(),
                       },
                       (0, o.fn)(),
                     ),
@@ -532,21 +517,21 @@
         const {
             info: n,
             bHidePriceIfOwned: o,
-            bHideStatusBanners: i,
-            strExtraParams: l,
-            imageType: p,
-            bHasParentAppToDisplay: E,
+            bHideStatusBanners: l,
+            strExtraParams: r,
+            imageType: _,
+            bHasParentAppToDisplay: v,
             bUseSubscriptionLayout: g,
-            elElementToAppendToHover: L,
-            bHidePrice: S,
-            bHidePlatforms: I,
-            creatorAccountID: A,
-            bIsHovered: T,
+            elElementToAppendToHover: h,
+            bHidePrice: L,
+            bHidePlatforms: D,
+            creatorAccountID: S,
+            bIsHovered: G,
           } = t,
-          [w] = (0, d.jk)(n.id, (0, _.TM)(n.type), { include_platforms: !0 }),
-          k = (0, D.bJ)(),
+          [w] = (0, d.jk)(n.id, (0, u.TM)(n.type), { include_platforms: !0 }),
+          T = (0, I.bJ)(),
           O =
-            ((0, h.Dt)(n.type),
+            ((0, C.Dt)(n.type),
             (0, a.useMemo)(
               () => (null == w ? void 0 : w.GetIncludedAppIDsOrSelf()),
               [w],
@@ -559,57 +544,53 @@
                   .GetIncludedAppIDsOrSelf()
                   .every((t) => c.jg.Get().BOwnsApp(t)));
         if (!w) return null;
-        const H = P && !i,
-          z = (0, G.bk)((0, s.Hf)(`${w.GetStorePageURL()}${l || ""}`, k));
-        let j,
-          B = null;
-        if (
-          g &&
-          (null == w ? void 0 : w.GetStoreItemType()) ==
-            u.vn.k_EStoreItemType_App
-        )
-          B = a.createElement(y.r, { appid: w.GetAppID(), bIsMuted: T });
-        else if (L);
+        const H = P && !l,
+          z = (0, A.bk)((0, s.Hf)(`${w.GetStorePageURL()}${r || ""}`, T));
+        let k,
+          j = null;
+        if (g && 0 == (null == w ? void 0 : w.GetStoreItemType()))
+          j = a.createElement(b.r, { appid: w.GetAppID(), bIsMuted: G });
+        else if (h);
         else {
           const e = P && o,
-            r = H;
-          B = a.createElement(v.Hl, {
+            i = H;
+          j = a.createElement(m.Hl, {
             info: n,
-            bShowAsMuted: r,
-            bHidePrice: S,
+            bShowAsMuted: i,
+            bHidePrice: L,
             bShowInLibraryInsteadOfPrice: e,
-            bHidePlatforms: I,
-            creatorAccountID: A,
+            bHidePlatforms: D,
+            creatorAccountID: S,
             bShowName: t.bShowName,
           });
         }
         return (
           "overrideNavigation" in n &&
-            (j = (t) => (
+            (k = (t) => (
               n.overrideNavigation(t),
               t.preventDefault(),
               t.stopPropagation(),
               !1
             )),
           a.createElement(
-            r.IS,
+            i.IS,
             {
-              href: j ? null : z,
+              href: k ? null : z,
               style: { display: "block" },
-              preferredFocus: E,
-              onClick: j,
+              preferredFocus: v,
+              onClick: k,
             },
-            a.createElement(C.vs, { appids: O, hide_status_banners: i }),
-            a.createElement(v.a4, { imageType: p, info: n }),
-            a.createElement(b.y, {
+            a.createElement(f.vs, { appids: O, hide_status_banners: l }),
+            a.createElement(m.a4, { imageType: _, info: n }),
+            a.createElement(y.y, {
               eDeckCompatibilityCategory:
                 null === (e = null == w ? void 0 : w.GetPlatforms()) ||
                 void 0 === e
                   ? void 0
                   : e.steam_deck_compat_category,
             }),
-            Boolean(T && !(0, m.Hu)()) && a.createElement(f.v, { appInfo: n }),
-            B,
+            Boolean(G && !(0, p.Hu)()) && a.createElement(E.v, { appInfo: n }),
+            j,
           )
         );
       }

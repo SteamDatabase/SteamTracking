@@ -3,7 +3,7 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [312],
   {
-    5896: (e) => {
+    94513: (e) => {
       e.exports = {
         CommunityHomeHeader: "communityhomeheader_CommunityHomeHeader_1C-zu",
         CommunityHomeHeaderTitleSection:
@@ -141,7 +141,7 @@
       var a = n(33940),
         r = n(89526),
         o = n(14826),
-        i = n(5896),
+        i = n(94513),
         m = n.n(i),
         c = n(44026),
         s = n(32765),
@@ -218,9 +218,7 @@
               n = [...e, ...t];
             if (n.length)
               return {
-                isLoading:
-                  (0, h.wZ)(n, { include_assets: !0 }) ===
-                  h.Y0.k_EStoreItemCacheState_Loading,
+                isLoading: 1 === (0, h.wZ)(n, { include_assets: !0 }),
                 data: { personalAppIds: e, popularAppIds: t },
               };
             return {

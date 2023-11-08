@@ -3,7 +3,7 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [40],
   {
-    52629: (e) => {
+    17318: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         PartnerEventFont: "partnereventshared_PartnerEventFont_22_fG",
@@ -149,25 +149,24 @@
     },
     32905: (e, t, n) => {
       "use strict";
-      n.d(t, { X: () => v, _: () => h });
+      n.d(t, { X: () => p, _: () => v });
       var r = n(89526),
         a = n(57742),
         o = n(14826),
         i = n(32765),
-        l = n(88390),
-        d = n(7786),
-        _ = n(19094),
-        s = n(79925);
-      function p(e) {
+        l = n(90580),
+        d = n(19094),
+        _ = n(79925);
+      function s(e) {
         return r.createElement(
           a.e1,
           { onEscKeypress: e.closeModal, bDisableBackgroundDismiss: !0 },
-          r.createElement(c, { redirectURL: e.redirectURL }),
+          r.createElement(h, { redirectURL: e.redirectURL }),
         );
       }
-      function v() {
+      function p() {
         (0, a.AM)(
-          r.createElement(p, {
+          r.createElement(s, {
             ownerWin: window,
             redirectURL: window.location.href,
           }),
@@ -175,17 +174,17 @@
           { strTitle: (0, o.Xx)("#Login_SignIn") },
         );
       }
-      function h(e) {
+      function v(e) {
         (0, a.AM)(
-          r.createElement(p, { ownerWin: window, redirectURL: e }),
+          r.createElement(s, { ownerWin: window, redirectURL: e }),
           window,
           { strTitle: (0, o.Xx)("#Login_SignIn") },
         );
       }
-      function c(e) {
+      function h(e) {
         const { redirectURL: t } = e,
           [n] = (0, r.useState)(
-            new _.J(i.De.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
+            new d.J(i.De.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
           ),
           [a, o] = (0, r.useState)(!1);
         return r.createElement(
@@ -196,9 +195,9 @@
             : r.createElement(l.wK, {
                 autoFocus: !0,
                 transport: n,
-                platform: d.hn.k_EAuthTokenPlatformType_WebBrowser,
+                platform: 2,
                 onComplete: (e) => {
-                  e == s.TG.k_PrimaryDomainFail
+                  e == _.TG.k_PrimaryDomainFail
                     ? o(!0)
                     : window.location.assign(t);
                 },

@@ -3,7 +3,7 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [680],
   {
-    87562: (e) => {
+    93181: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         CategorySectionsCtn: "categoriesapp_CategorySectionsCtn_YuXds",
@@ -23,15 +23,15 @@
       var a = n(33940),
         r = n(89526),
         o = n(44026),
-        s = n(17589),
-        c = n(4306),
+        c = n(17589),
+        s = n(4306),
         i = n(32765),
         u = n(94952);
       function l(e) {
         const { children: t, navTreeRef: n } = e,
           l = (0, a._T)(e, ["children", "navTreeRef"]),
           g = r.useRef(),
-          m = (0, c.BE)(g, n),
+          m = (0, s.BE)(g, n),
           d = (0, i.id)(),
           E = window.__virtual_keyboard_client;
         if (
@@ -48,7 +48,7 @@
               secondary: !0,
               parentEmbeddedNavTree: e,
             }),
-            r.createElement(s.O, null, t),
+            r.createElement(c.O, null, t),
           );
         }
         return r.createElement(r.Fragment, null, t);
@@ -60,8 +60,8 @@
       var a = n(33940),
         r = n(89526),
         o = n(59934),
-        s = (n(4306), n(60142)),
-        c = n(51438),
+        c = (n(4306), n(60142)),
+        s = n(51438),
         i = n(87458);
       const u = "FocusNavHistoryID";
       function l(e) {
@@ -71,7 +71,7 @@
             const t = (0, o.k6)(),
               n = r.useRef(),
               a = (0, o.TH)(),
-              c = (0, i.k0)(),
+              s = (0, i.k0)(),
               l = a.state && a.state[u],
               g = r.useRef();
             return (
@@ -85,7 +85,7 @@
                       const o = t.location;
                       let i = o.state && o.state[u];
                       i ||
-                        ((i = c
+                        ((i = s
                           ? `State_${o.key}`
                           : `State_${e.Node().Tree.id}`),
                         (g.current = i),
@@ -97,42 +97,33 @@
                           }),
                         )),
                         g.current == i &&
-                          (c
+                          (s
                             ? e.SaveState(i)
                             : window.history.replaceState(
                                 Object.assign(
                                   Object.assign({}, window.history.state),
-                                  { [i]: (0, s.Sp)(e.Node()) },
+                                  { [i]: (0, c.Sp)(e.Node()) },
                                 ),
                                 null,
                               ));
                     },
                   ).Unregister;
-              }, [t, c]),
+              }, [t, s]),
               r.useLayoutEffect(() => {
                 var t;
                 if (n.current && g.current != l) {
                   const a = n.current.NavTree().DeferredFocus;
                   a.SuppressFocus();
-                  const r = c
+                  const r = s
                       ? null
                       : null === (t = window.history.state) || void 0 === t
                       ? void 0
                       : t[l],
                     o = window.setTimeout(() => {
                       let e = !1;
-                      c
-                        ? (e = n.current.RestoreState(
-                            l,
-                            s.Vr.eRestoreFocusAlways,
-                          ))
-                        : r &&
-                          ((0, s.$y)(
-                            n.current.Node(),
-                            r,
-                            s.Vr.eRestoreFocusIfHadFocus,
-                          ),
-                          (e = !0)),
+                      s
+                        ? (e = n.current.RestoreState(l, 1))
+                        : r && ((0, c.$y)(n.current.Node(), r, 0), (e = !0)),
                         e ? a.Reset() : a.ExecuteQueuedFocus(),
                         (g.current = l);
                     }, e);
@@ -140,12 +131,12 @@
                     window.clearTimeout(o), a.ExecuteQueuedFocus();
                   };
                 }
-              }, [l, t, c, e]),
+              }, [l, t, s, e]),
               n
             );
           })(n);
         return r.createElement(
-          c.s,
+          s.s,
           Object.assign(Object.assign({}, l), { navRef: g }),
           t,
         );
@@ -157,15 +148,15 @@
       var a = n(89526),
         r = n(44026),
         o = n(66294),
-        s = n(51438),
-        c = n(34329),
+        c = n(51438),
+        s = n(34329),
         i = n(16221),
         u = n(64197),
         l = n(83145),
         g = n(46294),
         m = n(19304),
         d = n(32765),
-        E = n(87562);
+        E = n(93181);
       class p {
         GetSections() {
           return this.m_rgSections;
@@ -189,7 +180,7 @@
               t.name,
             ),
             a.createElement(
-              c.P8,
+              s.P8,
               {
                 className: E.CategoriesCtn,
                 scrollDirection: "x",
@@ -197,7 +188,7 @@
                 navKey: "cat_section" + t.name,
               },
               t.categories.map((t, n) =>
-                a.createElement(f, {
+                a.createElement(v, {
                   key: "category" + t.name,
                   category: t,
                   autoFocus: e.autoFocus && 0 === n,
@@ -207,10 +198,10 @@
           );
         return r ? o : a.createElement(g.Y, { placeholderHeight: "150px" }, o);
       }
-      function f(e) {
+      function v(e) {
         const { category: t } = e;
         return a.createElement(
-          s.s,
+          c.s,
           {
             focusableIfNoChildren: !0,
             autoFocus: e.autoFocus,
@@ -230,11 +221,11 @@
               { className: E.CategoryName },
               a.createElement("span", null, t.name),
             ),
-            a.createElement(v, Object.assign({}, e)),
+            a.createElement(f, Object.assign({}, e)),
           ),
         );
       }
-      function v(e) {
+      function f(e) {
         let { category: t } = e;
         return a.createElement(
           "div",
@@ -285,40 +276,40 @@
     },
     11513: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => f });
+      n.r(t), n.d(t, { default: () => v });
       var a = n(89526),
         r = n(66294),
         o = n(64197),
-        s = n(84770),
-        c = n(47165),
+        c = n(84770),
+        s = n(47165),
         i = n(83145),
         u = n(10412),
         l = n(71983),
-        g = n(35266),
+        g = n(1721),
         m = n.n(g),
-        d = n(3301),
+        d = n(69338),
         E = n(14826),
         p = n(32765),
         _ = n(71752);
-      function f(e) {
+      function v(e) {
         return a.createElement(
           _.n,
           { bSalePage: !0 },
-          a.createElement(v, Object.assign({}, e)),
+          a.createElement(f, Object.assign({}, e)),
         );
       }
-      function v(e) {
+      function f(e) {
         const { promotionName: t, language: n } = e,
           [g, _] = a.useState(
             u.j1.GetClanEventFromAnnouncementGID(p.Wj.ANNOUNCEMENT_GID),
           ),
-          f = (0, i.L)();
+          v = (0, i.L)();
         if (
           (a.useEffect(() => {
             if (
               (null == g ? void 0 : g.AnnouncementGID) != p.Wj.ANNOUNCEMENT_GID
             ) {
-              const e = new c.K(p.JA.CLANSTEAMID);
+              const e = new s.K(p.JA.CLANSTEAMID);
               u.j1
                 .LoadPartnerEventFromAnnoucementGIDAndClanSteamID(
                   e,
@@ -338,10 +329,10 @@
               string: (0, E.Xx)("#Loading"),
             }),
           );
-        const v = g.visibility_state !== s.ac.k_EEventStateVisible;
+        const f = g.visibility_state !== c.ac.k_EEventStateVisible;
         return a.createElement(
           r.p,
-          { navID: "StoreSalePageRoot", NavigationManager: f },
+          { navID: "StoreSalePageRoot", NavigationManager: v },
           a.createElement(
             o.g,
             { timeoutMS: 1e3 },
@@ -349,7 +340,7 @@
               promotionName: t,
               language: n,
               eventModel: g,
-              bIsPreview: v,
+              bIsPreview: f,
             }),
           ),
         );

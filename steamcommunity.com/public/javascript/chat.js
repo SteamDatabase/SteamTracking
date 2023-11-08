@@ -765,7 +765,7 @@ CWebChatDialog.prototype.RenderChatMessage = function( Sender, timestamp, strMes
 		}
 		else
 		{
-			return ( s1 + '<a href="https://steamcommunity.com/linkfilter/?url=' + s2 + '" class="whiteLink" target="_blank" rel="noreferrer">' + s2 + '</a>' );
+			return ( s1 + '<a href="https://steamcommunity.com/linkfilter/?u=' + EncodeURIComponent( s2 ) + '" class="whiteLink" target="_blank" rel="noreferrer">' + s2 + '</a>' );
 		}
 	} );
 

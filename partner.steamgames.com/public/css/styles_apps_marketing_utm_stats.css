@@ -477,6 +477,12 @@
 	font-size: 14px;
 	text-align: left;
 }
+.device_chart .jqplot-data-label {
+	display: inline-flex;
+}
+.device_chart .device_legend_title {
+	padding-right: 4px;
+}
 .device_chart .device_legend_value {
 	text-align: right;
 }

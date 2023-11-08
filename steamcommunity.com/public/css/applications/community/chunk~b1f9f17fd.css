@@ -4060,6 +4060,12 @@ a.storywidget_BadgeFooter_3kBeS:hover {
   margin-left: 18px;
   min-width: 200px;
 }
+.requirevalvepublishapproval_ApprovalRequiredCtn_800dA
+  .requirevalvepublishapproval_Right_184Cy
+  a {
+  display: block;
+  margin-bottom: 8px;
+}
 .requirevalvepublishapproval_Title_1TI4b {
   font-weight: bold;
 }
@@ -4123,6 +4129,7 @@ a.storywidget_BadgeFooter_3kBeS:hover {
   button {
   padding-left: 8px;
   padding-right: 8px;
+  box-sizing: border-box;
 }
 .saleguidelinedialog_PresenterInfoCtn_Ltbsl {
   display: flex;

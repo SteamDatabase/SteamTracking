@@ -330,7 +330,8 @@ html.contextmenu_ContextMenuPopup_2GpKT body {
 }
 .shared_svg_library_SteamDeckCompatInfo_2LcFI {
   display: flex;
-  background-color: #0e141b;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(100px);
   padding: 2px;
   border-radius: 20px;
 }
@@ -694,6 +695,7 @@ html.contextmenu_ContextMenuPopup_2GpKT body {
 .DesktopUI .pagedsettings_PagedSettingsDialog_PageListColumn_RTicB {
   padding-left: 0px;
   min-width: 160px;
+  height: 95vh;
 }
 .pagedsettings_NewNoteButton_sc_I7 {
   margin: 0px 4px 4px 4px;
@@ -713,12 +715,18 @@ html.contextmenu_ContextMenuPopup_2GpKT body {
 }
 .pagedsettings_PagedSettingsDialog_PageList__EebF {
   line-height: 16px;
+  height: 100vh;
   white-space: nowrap;
   overflow-y: overlay;
+  overflow: scroll;
   flex-shrink: 1;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
+  padding-bottom: 40px;
+}
+.pagedsettings_PagedSettingsDialog_PageList__EebF::-webkit-scrollbar-corner {
+  background: rgba(0, 0, 0, 0);
 }
 .pagedsettings_PagedSettingsDialog_PageList__EebF.pagedsettings_PagedSettingsDialog_PageList_DisableScrolling_36Srg {
   overflow-y: hidden;
@@ -1328,6 +1336,13 @@ button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover,
 button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover.Primary {
   background: rgba(255, 255, 255, 0.15);
 }
+button.gamepaddialog_Button_1kn70.DialogButton.EmptyButton,
+button.gamepaddialog_Button_1kn70.DialogButton:enabled.EmptyButton,
+button.gamepaddialog_Button_1kn70.DialogButton:active.EmptyButton,
+button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover.EmptyButton {
+  padding: 0px;
+  overflow: hidden;
+}
 button.gamepaddialog_Button_1kn70.DialogButton.BarButton,
 button.gamepaddialog_Button_1kn70.DialogButton:enabled.BarButton,
 button.gamepaddialog_Button_1kn70.DialogButton:active.BarButton,
@@ -1345,7 +1360,7 @@ button.gamepaddialog_Button_1kn70.DialogButton:hover,
 button.gamepaddialog_Button_1kn70.DialogButton:enabled:hover,
 button.gamepaddialog_Button_1kn70.DialogButton:active:hover,
 button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover:hover {
-  background: #3d4450;
+  background: rgba(255, 255, 255, 0.2);
   transition: background-color 150ms ease-in;
 }
 button.gamepaddialog_Button_1kn70.DialogButton.Primary:hover,
@@ -2162,7 +2177,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Z-Cc svg {
   cursor: pointer;
 }
 .gamepadslider_SliderControl_3o137:hover .gamepadslider_SliderTrack_Mq25N {
-  background: #3d4450;
+  background: rgba(255, 255, 255, 0.3);
   --left-track-color: #00bbff;
 }
 .gamepadslider_SliderTrack_Mq25N {
@@ -2893,15 +2908,26 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Z-Cc svg {
   padding-bottom: 40px;
 }
 .gamepadpagedsettings_PagedSettingsDialog_Title_1Px9u {
-  color: #67707b;
-  text-transform: uppercase;
-  padding-top: calc(12px + 1.4vw);
+  color: #fff;
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 28px;
+  padding-top: calc(8px + var(--basicui-header-height, 0px));
   padding-left: calc(12px + 1.4vw);
-  padding-right: calc(12px + 1.4vw);
-  font-weight: 500;
-  letter-spacing: 0.2px;
+  padding-right: 16px;
   overflow: hidden;
-  white-space: nowrap;
   text-overflow: ellipsis;
 }
 .gamepadpagedsettings_PagedSettingsDialog_PageList_3c_Jp {
@@ -2921,6 +2947,9 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Z-Cc svg {
 .gamepadpagedsettings_PagedSettingsDialog_PageList_3c_Jp.gamepadpagedsettings_PagedSettingsDialog_PageList_DisableScrolling_2brQE {
   overflow-y: hidden;
 }
+.gamepadpagedsettings_PagedSettingsDialog_PageList_3c_Jp.gamepadpagedsettings_PagedSettingsDialog_PageList_ShowTitle_d113O {
+  padding-top: 16px;
+}
 .gamepadpagedsettings_PagedSettingsDialog_PageListItem_1ix7r {
   font-family: "Motiva Sans", Helvetica, sans-serif;
   font-weight: normal;
@@ -2934,7 +2963,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Z-Cc svg {
   text-transform: none;
   letter-spacing: 0px;
   color: #fff;
-  padding: 10px 16px;
+  padding: 10px calc(12px + 1.4vw);
   color: #b8bcbf;
   cursor: pointer;
   display: flex;
@@ -3170,6 +3199,10 @@ body.modals_BodyNoScrollDialog_3lrlA {
 .trailerplayer_UserInputNeeded_tH6oU > svg {
   height: 150px;
 }
+body.ShoppingCart {
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  font-weight: normal;
+}
 .shoppingcart_ShoppingCartPage_22xts {
   max-width: 940px;
   margin: 0 auto;
@@ -3180,7 +3213,7 @@ body.modals_BodyNoScrollDialog_3lrlA {
 }
 .shoppingcart_ShoppingCartHeader_bCGAC {
   font-weight: 800;
-  font-size: 28px;
+  font-size: 22px;
   color: #fff;
   margin-bottom: 10px;
 }
@@ -3202,7 +3235,6 @@ body.modals_BodyNoScrollDialog_3lrlA {
 .shoppingcart_LineItemPlaceholder_2L-y7 {
   min-height: 110px;
   width: 600px;
-  padding: 0;
 }
 .shoppingcart_LoadingThrobber_eDdFp {
   position: absolute;
@@ -3216,6 +3248,8 @@ body.modals_BodyNoScrollDialog_3lrlA {
   padding: 15px;
   background-color: rgba(0, 0, 0, 0.2);
   max-width: 280px;
+  position: sticky;
+  top: 10px;
 }
 .shoppingcart_CartSummaryCtn_2bIzQ .shoppingcart_EstimatedTotalFlex_2Djad {
   display: flex;
@@ -3242,33 +3276,37 @@ body.modals_BodyNoScrollDialog_3lrlA {
   gap: 10px;
 }
 .shoppingcart_InnerLineItemCtn_2EWK- .shoppingcart_LineItemDetailsCtn_2Q4My {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  flex-grow: 1;
 }
-.shoppingcart_InnerLineItemCtn_2EWK- .shoppingcart_LineItemRightCol_1_yf7 {
+.shoppingcart_InnerLineItemCtn_2EWK- .shoppingcart_LineItemCol_2KIVS {
   display: flex;
-  flex-direction: column;
-  margin-left: auto;
-  justify-content: flex-end;
-  text-align: right;
 }
 .shoppingcart_InnerLineItemCtn_2EWK- .shoppingcart_RemoveLineItem_y3Ocs {
-  margin-top: 10px;
   color: #606f7f;
   text-decoration: underline;
   cursor: pointer;
   font-size: 12px;
 }
+.shoppingcart_InnerLineItemCtn_2EWK- .shoppingcart_RemoveLineItem_y3Ocs:hover {
+  color: #fff;
+}
 .shoppingcart_InnerLineItemCtn_2EWK- .shoppingcart_LineItemDetailsRow_2Za3F {
+  display: flex;
   align-items: center;
-  margin-top: 10px;
+  margin-top: 8px;
   flex-wrap: wrap;
 }
+.shoppingcart_InnerLineItemCtn_2EWK- .shoppingcart_LineItemDetailsRowTop_2aofi {
+  margin-top: 0px;
+}
+.shoppingcart_InnerLineItemCtn_2EWK- .shoppingcart_LineItemSpaceBetween_1sE14 {
+  justify-content: space-between;
+}
 .shoppingcart_InnerLineItemCtn_2EWK- .shoppingcart_LineItemTitle_HVnEq {
-  font-size: 16px;
-  color: #ccd5e0;
-  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  color: #fff;
+  font-weight: 500;
 }
 .shoppingcart_InnerLineItemCtn_2EWK-
   .shoppingcart_LineItemPricingOptions_evgc4 {
@@ -3281,19 +3319,31 @@ body.modals_BodyNoScrollDialog_3lrlA {
 .shoppingcart_InnerLineItemCtn_2EWK- .shoppingcart_LineItemDropDown_2bDXG {
   margin: 0;
 }
+.shoppingcart_InnerLineItemCtn_2EWK-
+  .shoppingcart_LineItemDropDown_2bDXG
+  :hover {
+  background: #464d58;
+}
+.shoppingcart_InnerLineItemCtn_2EWK- .shoppingcart_PlatformIcons_1AHjj {
+  fill: #ccd5e0;
+}
+.shoppingcart_InnerLineItemCtn_2EWK- .shoppingcart_PlatformIcons_1AHjj svg {
+  fill: #ccd5e0;
+}
 .DialogButton.shoppingcart_AddLineItemCtn_2inq2 {
   width: 26px;
   margin: 0;
   padding: 0;
   line-height: 28px;
   margin-left: 10px;
+  background: rgba(59, 63, 72, 0.5);
 }
 .DialogButton.shoppingcart_AddLineItemCtn_2inq2
   .shoppingcart_AddLineItemIcon_-STti {
-  width: 16px;
-  height: 16px;
-  vertical-align: middle;
+  width: 10px;
+  height: 10px;
   margin: 0;
+  color: #ccd5e0;
 }
 .shoppingcart_PendingLineItem_HuHB6 {
   opacity: 0.3;
@@ -3319,6 +3369,10 @@ body.modals_BodyNoScrollDialog_3lrlA {
   .shoppingcart_CurrentBreadcrumb_3TtUD {
   color: #56707f;
 }
+.shoppingcart_GiftFormDivider_ub0iG {
+  border-top: 1px solid #343a44;
+  margin-bottom: 15px;
+}
 .shoppingcart_GiftFormSection_2SPni {
   margin: 20px 0;
 }
@@ -3336,12 +3390,11 @@ body.modals_BodyNoScrollDialog_3lrlA {
   color: red;
 }
 .shoppingcart_GiftNoteInput_37bAE {
-  border: 1px solid rgba(0, 0, 0, 0);
+  border: 1px solid #0e141b;
   border-radius: 4px;
   background: rgba(59, 63, 72, 0.5);
   color: #dfe3e6;
   box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0);
-  margin-top: 8px;
   resize: none;
   padding: 8px;
   font-size: 14px;
@@ -3368,13 +3421,13 @@ body.modals_BodyNoScrollDialog_3lrlA {
 }
 .DialogDropDown.shoppingcart_DropDownThin_1hTs0 {
   font-size: 12px;
-  padding: 5px 20px 5px 7px;
+  padding: 5px 24px 5px 7px;
   min-width: 100px;
 }
 .shoppingcart_DropDownThin_1hTs0 .DialogDropDown_Arrow {
   width: 14px;
-  top: 8px;
-  right: 1px;
+  top: 9px;
+  right: 4px;
 }
 .shoppingcart_DropDownOptionsCtnThin_3NWLp {
   font-size: 12px;
@@ -3415,7 +3468,7 @@ body.modals_BodyNoScrollDialog_3lrlA {
   cursor: pointer;
 }
 .shoppingcart_GiftPickerFriendBlock_3zsMT .shoppingcart_FriendAvatar_3_UaD {
-  margin-right: 10px;
+  margin-right: 2px;
 }
 .shoppingcart_GiftPickerFriendBlock_3zsMT.shoppingcart_Disabled_12He9 {
   background: #3d4450;
@@ -3442,16 +3495,26 @@ body.modals_BodyNoScrollDialog_3lrlA {
 .shoppingcart_GiftFormRecipient_3D8FM {
   display: flex;
   align-items: center;
-  font-size: 13px;
+  font-size: 15px;
 }
 .shoppingcart_GiftFormRecipient_3D8FM .shoppingcart_FriendAvatar_3_UaD {
-  margin-right: 10px;
+  margin: 0px 2px 0px 7px;
 }
 .shoppingcart_GiftFormRecipient_3D8FM
   .shoppingcart_ChangeGiftRecipientBtn_1Qwdt {
   width: auto;
   margin-left: 15px;
   padding: 0 5px;
+}
+.shoppingcart_GiftFormRecipient_3D8FM .shoppingcart_EditRecipient_3B5Iu {
+  color: #606f7f;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 12px;
+  margin-left: 6px;
+}
+.shoppingcart_GiftFormRecipient_3D8FM .shoppingcart_EditRecipient_3B5Iu:hover {
+  color: #fff;
 }
 .shoppingcart_GiftDatePicker_24zqo {
   display: flex;
@@ -3481,6 +3544,8 @@ body.modals_BodyNoScrollDialog_3lrlA {
   width: 600px;
   position: relative;
   min-height: 400px;
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  font-weight: normal;
 }
 .shoppingcart_ShoppingCartSVG_1VYL9 {
   width: 15px;
@@ -3521,6 +3586,26 @@ body.modals_BodyNoScrollDialog_3lrlA {
 .shoppingcart_ShoppingCartModalBtns_1qRag .shoppingcart_OpenCartBtn_5w5S6 {
   margin-left: 20px;
   font-weight: 700;
+}
+.shoppingcart_PriceWidget_1FHzN div {
+  background: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
+}
+.shoppingcart_Warning_IIwxr {
+  color: #ffcc6a;
+}
+.shoppingcart_FooterNotice_LXZhw {
+  display: flex;
+  margin-bottom: 15px;
+  font-size: 13px;
+}
+.shoppingcart_FooterNotice_LXZhw .shoppingcart_NoticeIndex_3GJop {
+  margin-right: 10px;
+}
+.shoppingcart_LineItemNoticeAppsCtn_gx9zC {
+  display: inline-flex;
+  flex-wrap: wrap;
+  color: #fff;
 }
 .purchasenotices_PurchaseNoticeContainer_3MM2B {
   display: flex;
@@ -3578,6 +3663,65 @@ body.modals_BodyNoScrollDialog_3lrlA {
 }
 .purchasenotices_PurchaseNoticeImage_1vJ5G.purchasenotices_VROnly_30HWu {
   height: 30%;
+}
+.parentalunlockdialog_ParentalPINDialog_176OW {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.parentalunlockdialog_ParentalUnlock_26x49,
+.parentalunlockdialog_ParentalRequest_3CX0p {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+}
+.parentalunlockdialog_Body_3Vbr2 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-image: url(../../../images/applications/store/keybg.png?v=valveisgoodatcaching);
+  background-repeat: no-repeat;
+  background-position: 80% 50%;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+.parentalunlockdialog_ParentalRequest_3CX0p .parentalunlockdialog_Body_3Vbr2 {
+  min-height: 142px;
+}
+.parentalunlockdialog_Title_heMWC {
+  font-size: 16px;
+  font-weight: bold;
+}
+.parentalunlockdialog_ErrorText_332yb {
+  color: #de3618;
+}
+.parentalunlockdialog_TextInput_2WMdv {
+  height: 50px;
+  font-size: 35px;
+  max-width: 25%;
+  text-align: center;
+  background: rgba(59, 63, 72, 0.5);
+  color: #dcdedf;
+  border: none;
+  border-radius: 3px;
+  box-shadow: inset 0px 0px 0px rgba(0, 0, 0, 0);
+}
+.parentalunlockdialog_TextInput_2WMdv:focus {
+  background: rgba(67, 73, 83, 0.6);
+  box-shadow: inset 1px 1px 8px rgba(0, 0, 0, 0.6666666667);
+  border: none;
+  outline: none;
+}
+.parentalunlockdialog_ButtonWrapper_Q7uvx .parentalunlockdialog_Button_1v4Js {
+  box-sizing: border-box;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 body,
 body.shared_common_v6_3r3Le {

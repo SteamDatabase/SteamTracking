@@ -3,7 +3,7 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [556],
   {
-    50711: (e) => {
+    30120: (e) => {
       e.exports = {
         avatarHolder: "steamavatar_avatarHolder_1YGAH",
         avatarStatus: "steamavatar_avatarStatus_1yIzy",
@@ -12,7 +12,7 @@
         avatarFrameImg: "steamavatar_avatarFrameImg_338kJ",
       };
     },
-    88090: (e) => {
+    47573: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         DiscoveryQueueWidgetCtn:
@@ -38,13 +38,13 @@
           c = (0, r._T)(e, ["children", "navTreeRef"]),
           m = i.useRef(),
           u = (0, o.BE)(m, a),
-          p = (0, A.id)(),
-          g = window.__virtual_keyboard_client;
+          g = (0, A.id)(),
+          p = window.__virtual_keyboard_client;
         if (
           ((0, i.useEffect)(() => {
-            l.Wz.SetHookFactory(() => g);
-          }, [g]),
-          p)
+            l.Wz.SetHookFactory(() => p);
+          }, [p]),
+          g)
         ) {
           const e = window.__nav_tree_root;
           return i.createElement(
@@ -60,9 +60,9 @@
         return i.createElement(i.Fragment, null, t);
       }
     },
-    68943: (e, t, a) => {
+    50355: (e, t, a) => {
       "use strict";
-      a.d(t, { o: () => p, _1: () => h, DY: () => d, vV: () => g });
+      a.d(t, { o: () => g, _1: () => h, DY: () => d, vV: () => p });
       var r = a(33940),
         i = a(89526),
         s = a(88464),
@@ -73,9 +73,9 @@
       const c =
         a.p +
         "images/applications/store/avatar_default_full.jpg?v=valveisgoodatcaching";
-      var m = a(50711),
+      var m = a(30120),
         u = a.n(m);
-      class p extends i.Component {
+      class g extends i.Component {
         render() {
           const e = this.props,
             {
@@ -86,7 +86,7 @@
               statusPosition: A,
               children: m,
             } = e,
-            p = (0, r._T)(e, [
+            g = (0, r._T)(e, [
               "strAvatarURL",
               "size",
               "className",
@@ -94,10 +94,10 @@
               "statusPosition",
               "children",
             ]),
-            g = [];
+            p = [];
           return (
-            t && g.push(t),
-            g.push(
+            t && p.push(t),
+            p.push(
               (function (e) {
                 switch (e) {
                   case "X-Small":
@@ -125,7 +125,7 @@
                     s,
                   ),
                 },
-                p,
+                g,
               ),
               i.createElement("div", {
                 className: (0, o.Z)(u().avatarStatus, "avatarStatus", A),
@@ -133,7 +133,7 @@
               }),
               i.createElement(l.j, {
                 className: (0, o.Z)(u().avatar, "avatar"),
-                rgSources: g,
+                rgSources: p,
                 draggable: !1,
               }),
               m,
@@ -141,7 +141,7 @@
           );
         }
       }
-      let g = class extends i.Component {
+      let p = class extends i.Component {
         render() {
           const e = this.props,
             { persona: t, size: a, animatedAvatar: s, className: l } = e,
@@ -162,7 +162,7 @@
                   : ("Large" != a && "X-Large" != a && "FillArea" != a) ||
                     (m = t.avatar_url_full)),
             i.createElement(
-              p,
+              g,
               Object.assign(
                 {
                   strAvatarURL: m,
@@ -175,7 +175,7 @@
           );
         }
       };
-      g = (0, r.gn)([s.Pi], g);
+      p = (0, r.gn)([s.Pi], p);
       const d = (0, s.Pi)((e) => {
         const { profileItem: t, className: a, bDisableAnimation: s } = e,
           n = (0, r._T)(e, ["profileItem", "className", "bDisableAnimation"]);
@@ -281,7 +281,7 @@
                 onMouseLeave: () => this.SetupAnimationTimer(),
               },
               i.createElement(
-                g,
+                p,
                 Object.assign({ animatedAvatar: a }, c),
                 n,
                 i.createElement(d, {
@@ -455,107 +455,103 @@
     },
     89350: (e, t, a) => {
       "use strict";
-      a.r(t), a.d(t, { default: () => B });
+      a.r(t), a.d(t, { default: () => E });
       var r = a(89526),
         i = a(66294),
         s = a(51438),
-        n = a(74158),
-        o = a(83145),
-        A = a(82588),
-        l = a(25871),
-        c = a(5029),
-        m = a(701),
-        u = a(49330),
-        p = a(35388),
+        n = a(83145),
+        o = a(82588),
+        A = a(25871),
+        l = a(5029),
+        c = a(701),
+        m = a(49330),
+        u = a(35388),
         g = a(14826),
-        d = a(88090),
-        h = a.n(d),
-        E = a(32765);
-      function B(e) {
+        p = a(47573),
+        d = a.n(p),
+        h = a(32765);
+      function E(e) {
         const { appID: t } = e,
-          a = (0, p.g)(),
-          [d] = (0, c.Ar)("inqueue", "" + n.lV.k_EStoreDiscoveryQueueTypeNew),
-          [B, Q] = (0, r.useState)(!1),
-          [v, S] = (0, r.useState)(!1),
-          [D] = (0, l.vs)(t, { include_assets: !0 }),
-          C = (0, o.L)(),
-          I = r.useRef();
+          a = (0, u.g)(),
+          [p] = (0, l.Ar)("inqueue", "0"),
+          [E, B] = (0, r.useState)(!1),
+          [Q, v] = (0, r.useState)(!1),
+          [S] = (0, A.vs)(t, { include_assets: !0 }),
+          D = (0, n.L)(),
+          C = r.useRef();
         r.useEffect(() => {
           var e;
-          return null === (e = I.current) || void 0 === e
+          return null === (e = C.current) || void 0 === e
             ? void 0
             : e.Activate(!0);
         }, []);
-        const T = (0, E.id)(),
-          { eStoreDiscoveryQueueType: f, storePageFilter: N } =
+        const I = (0, h.id)(),
+          { eStoreDiscoveryQueueType: T, storePageFilter: f } =
             r.useMemo(() => {
-              if ((null == d ? void 0 : d.length) > 0) {
-                const e = d.split("_"),
+              if ((null == p ? void 0 : p.length) > 0) {
+                const e = p.split("_"),
                   t = Number(e[0]);
                 let a;
                 return (
-                  e.length > 1 && (a = (0, A.M_)(e[1])),
+                  e.length > 1 && (a = (0, o.M_)(e[1])),
                   { eStoreDiscoveryQueueType: t, storePageFilter: a }
                 );
               }
-              return {
-                eStoreDiscoveryQueueType: n.lV.k_EStoreDiscoveryQueueTypeNew,
-                storePageFilter: void 0,
-              };
-            }, [d]),
+              return { eStoreDiscoveryQueueType: 0, storePageFilter: void 0 };
+            }, [p]),
           R = r.useCallback(() => {
-            S(!0);
+            v(!0);
           }, []),
-          b = r.useCallback(() => {
-            Q(!0);
+          N = r.useCallback(() => {
+            B(!0);
           }, []),
-          y = (0, A.ZP)(f, N);
-        return a && D
-          ? v
+          b = (0, o.ZP)(T, f);
+        return a && S
+          ? Q
             ? null
             : r.createElement(
                 i.p,
                 {
-                  NavigationManager: C,
-                  navTreeRef: I,
+                  NavigationManager: D,
+                  navTreeRef: C,
                   navID: "DiscoveryQueueAppWidget",
                 },
                 r.createElement(
                   s.s,
                   {
                     focusable: !0,
-                    className: h().DiscoveryQueueWidgetCtn,
+                    className: d().DiscoveryQueueWidgetCtn,
                     onSecondaryButton: R,
-                    onOKButton: b,
+                    onOKButton: N,
                     onOKActionDescription: (0, g.Xx)(
                       "#DiscoveryQueue_ResumeWizard",
                     ),
                     onSecondaryActionDescription: (0, g.Xx)("#Button_Close"),
                   },
                   r.createElement("img", {
-                    className: h().WidgetCapsule,
+                    className: d().WidgetCapsule,
                     src:
-                      null == D ? void 0 : D.GetAssets().GetSmallCapsuleURL(),
+                      null == S ? void 0 : S.GetAssets().GetSmallCapsuleURL(),
                   }),
                   r.createElement(
                     "div",
-                    { onClick: b, className: h().WidgetText },
+                    { onClick: N, className: d().WidgetText },
                     (0, g.Xx)("#DiscoveryQueue_ResumeWizard"),
-                    (null == y ? void 0 : y.length) > 0 && ": " + y,
+                    (null == b ? void 0 : b.length) > 0 && ": " + b,
                   ),
-                  !T &&
+                  !I &&
                     r.createElement(
                       "div",
-                      { className: h().CloseButton, onClick: R },
-                      r.createElement(m.X, null),
+                      { className: d().CloseButton, onClick: R },
+                      r.createElement(c.X, null),
                     ),
-                  B &&
-                    r.createElement(u.MS, {
+                  E &&
+                    r.createElement(m.MS, {
                       includeAppID: t,
-                      bWizardVisible: B,
-                      fnCloseModal: () => Q(!1),
-                      eStoreDiscoveryQueueType: f,
-                      storePageFilter: N,
+                      bWizardVisible: E,
+                      fnCloseModal: () => B(!1),
+                      eStoreDiscoveryQueueType: T,
+                      storePageFilter: f,
                     }),
                 ),
               )
@@ -564,54 +560,53 @@
     },
     77091: (e, t, a) => {
       "use strict";
-      a.r(t), a.d(t, { default: () => u });
+      a.r(t), a.d(t, { default: () => m });
       var r = a(89526),
-        i = a(74158),
-        s = a(14826),
-        n = a(49330),
-        o = a(35388),
-        A = a(51438),
-        l = a(32765),
-        c = a(99307),
-        m = a(57742);
-      function u(e) {
-        const t = (0, o.g)(),
-          [a, u] = (0, r.useState)(!1),
-          p = r.useCallback(() => {
-            l.L7.logged_in
-              ? u(!0)
-              : (0, m.AM)(
-                  r.createElement(c.JX, {
+        i = a(14826),
+        s = a(49330),
+        n = a(35388),
+        o = a(51438),
+        A = a(32765),
+        l = a(99307),
+        c = a(57742);
+      function m(e) {
+        const t = (0, n.g)(),
+          [a, m] = (0, r.useState)(!1),
+          u = r.useCallback(() => {
+            A.L7.logged_in
+              ? m(!0)
+              : (0, c.AM)(
+                  r.createElement(l.JX, {
                     onOK: () => {
                       window.location.href = `${
-                        l.De.STORE_BASE_URL
+                        A.De.STORE_BASE_URL
                       }login?redir=${encodeURIComponent(
                         document.location.href,
                       )}`;
                     },
-                    strOKButtonText: (0, s.Xx)(
+                    strOKButtonText: (0, i.Xx)(
                       "#DiscoveryQueue_Error_Login_Title",
                     ),
-                    strDescription: (0, s.Xx)("#DiscoveryQueue_Error_Login"),
-                    strTitle: (0, s.Xx)("#DiscoveryQueue_Error_Login_Title"),
+                    strDescription: (0, i.Xx)("#DiscoveryQueue_Error_Login"),
+                    strTitle: (0, i.Xx)("#DiscoveryQueue_Error_Login_Title"),
                   }),
                   window,
                 );
           }, []);
         return t
           ? r.createElement(
-              A.s,
+              o.s,
               null,
               r.createElement(
                 "a",
-                { onClick: p, className: "experiment-button" },
-                (0, s.Xx)("#DiscoveryQueue_OpenWizard"),
+                { onClick: u, className: "experiment-button" },
+                (0, i.Xx)("#DiscoveryQueue_OpenWizard"),
               ),
               a &&
-                r.createElement(n.MS, {
+                r.createElement(s.MS, {
                   bWizardVisible: a,
-                  fnCloseModal: () => u(!1),
-                  eStoreDiscoveryQueueType: i.lV.k_EStoreDiscoveryQueueTypeNew,
+                  fnCloseModal: () => m(!1),
+                  eStoreDiscoveryQueueType: 0,
                 }),
             )
           : r.createElement(
@@ -621,7 +616,7 @@
             );
       }
     },
-    45718: (e, t, a) => {
+    26121: (e, t, a) => {
       "use strict";
       a.d(t, { Z: () => r });
       const r =

@@ -1,0 +1,222 @@
+.reservationqueuemessagingdashboard_Dummy_33nIb {
+  background-color: hotpink;
+}
+.reservationqueuemessagingdashboard_ItemTable_dhnmd tr {
+  background: #000;
+}
+.reservationqueuemessagingdashboard_ItemSelect_2B82L {
+  color: #000;
+}
+.reservationqueuemessagingdashboard_NewEntryCtn_1n-Sq {
+  min-height: 500px;
+  min-width: 500px;
+}
+.reservationqueuemessagingdashboard_DatePreview_2p-FI {
+  background: #000;
+  padding: 12px;
+}
+.partnereventdialog_ErrorStyles_2TszC,
+.partnereventdialog_ErrorStylesWithIcon_1mcSA {
+  color: #c44848;
+}
+.partnereventdialog_ErrorIconLayout_15HwA,
+.partnereventdialog_ErrorStylesWithIcon_1mcSA,
+.partnereventdialog_ErrorStylesBackground_3Ht2e {
+  padding: 10px;
+  padding-left: 42px;
+  background-image: url("https://partner.steamgames.com/public/images//sharedfiles/icons/icon_warning.png");
+  background-repeat: no-repeat;
+  background-position-x: 10px;
+  background-position-y: 10px;
+}
+.partnereventdialog_ErrorStylesBackground_3Ht2e {
+  background-color: #472025;
+}
+.partnereventdialog_ErrorStyles_2TszC > div,
+.partnereventdialog_ErrorStylesWithIcon_1mcSA > div {
+  display: inline;
+  color: #d78484;
+}
+.partnereventdialog_WarningStyles_1C_Im,
+.partnereventdialog_WarningStylesWithIcon_3p5KO {
+  color: #b8860b;
+}
+.partnereventdialog_WarningIconLayout_3POKG,
+.partnereventdialog_WarningStylesWithIcon_3p5KO,
+.partnereventdialog_WarningStylesBackground_2MAql {
+  padding: 10px;
+  padding-left: 42px;
+  background-image: url("https://partner.steamgames.com/public/images//sharedfiles/icons/icon_warning.png");
+  background-repeat: no-repeat;
+  background-position-x: 10px;
+  background-position-y: 10px;
+}
+.partnereventdialog_WarningStylesBackground_2MAql {
+  background-color: #b8860b;
+  color: #fff;
+}
+.partnereventdialog_WarningStylesBackground_2MAql
+  .partnereventdialog_Stuck_2JqXL {
+  position: sticky;
+  top: 89px;
+  z-index: 1;
+}
+.partnereventdialog_InfoStyles_2Zq0U,
+.partnereventdialog_InfoStylesWithIcon_2TYAo {
+  color: #556b2f;
+}
+.partnereventdialog_InfoIconLayout_qgVd4,
+.partnereventdialog_InfoStylesWithIcon_2TYAo,
+.partnereventdialog_InfoStylesBackground_3YqPi {
+  padding: 10px;
+  padding-left: 42px;
+  background-image: url("https://partner.steamgames.com/public/images//sharedfiles/icons/icon_spoiler_tag.png");
+  background-repeat: no-repeat;
+  background-position-x: 10px;
+  background-position-y: 10px;
+}
+.partnereventdialog_InfoStylesBackground_3YqPi {
+  background-color: #556b2f;
+  color: #fff;
+}
+.partnereventdialog_InfoStylesBackground_3YqPi .partnereventdialog_Stuck_2JqXL {
+  position: sticky;
+  top: 89px;
+  z-index: 1;
+}
+.partnereventdialog_Padding_2oWai {
+  padding-top: 10px;
+}
+.ModalPosition_Content .partnereventdialog_NotTooWideModal_3P6Se.DialogContent {
+  width: initial;
+}
+.ModalPosition_Content
+  .partnereventdialog_NotTooWideModal_3P6Se.DialogContent
+  .DialogContent_InnerWidth
+  > form {
+  padding-right: 8px;
+}
+.partnereventshareddates_EventTimeSection_27EoU:first-child {
+  margin-bottom: 12px;
+}
+.partnereventshareddates_EventTimeSection_27EoU:last-child {
+  margin-bottom: 0px;
+}
+.partnereventshareddates_EventTimeTitle_2sTdT {
+  font-size: 11px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 3px;
+  position: relative;
+}
+.partnereventshareddates_EventVisibilityItem_3Q0gD {
+  line-height: 24px;
+}
+.partnereventshareddates_EventEditorInputPaneContainer_3j82M
+  input.partnereventshareddates_TimeWidth_2W8sg {
+  font-size: 15px;
+}
+.partnereventshareddates_EventPublishTimeCtn_12m3S {
+  margin-left: 20px;
+  margin-top: 8px;
+}
+.partnereventshareddates_DateWidth_2ao2W {
+  max-width: 200px;
+}
+.partnereventshareddates_TimeWidth_2W8sg {
+  max-width: 100px;
+}
+.partnereventshareddates_PacificTimeHint_VTwea {
+  display: block;
+  line-height: 22px;
+  padding: 10px;
+  font-size: 14px;
+}
+.partnereventshareddates_TimeZone_2RLF9 {
+  padding: 10px;
+}
+.partnereventshareddates_InputBorder_2mTwC.partnereventshareddates_TimeBlock_1O49u {
+  margin-right: 8px;
+}
+.partnereventshareddates_TimeRowContainer_3ksYF {
+  justify-content: flex-start;
+  padding: 10px;
+  border-radius: 3px;
+  background-color: rgba(57, 61, 71, 0.5);
+}
+.partnereventshareddates_TimeRowDropDown_3KrsS {
+  margin-top: 5px;
+  padding-top: 10px;
+  margin-bottom: 15px;
+  margin-left: 10px;
+  padding-left: 20px;
+  border-left: #399aec 1px solid;
+}
+.partnereventshareddates_TimeRowDropDown_3KrsS
+  > .partnereventshareddates_EndDateAmountCtn_2_8MR {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 8px;
+  width: 50%;
+}
+.partnereventshareddates_TimeRowDropDown_3KrsS
+  > .partnereventshareddates_EndRound_1MAHS
+  > span {
+  margin-bottom: 0px;
+}
+.partnereventshareddates_VisibilityItemList_rYX24 {
+  display: flex;
+  flex-direction: column;
+}
+.partnereventshareddates_VisibilityItems_2SAGi {
+  padding: 10px;
+  border-radius: 3px;
+  background: rgba(57, 61, 71, 0.5);
+}
+.partnereventshareddates_EventEditorVisibilityCtn_1jbnR {
+  margin-top: 12px;
+}
+.partnereventshareddates_DateErrorCtn_Bww9B {
+  position: absolute;
+  top: -13px;
+  left: 30px;
+  background: #744f4f;
+  padding: 2px 8px 2px 2px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 2px;
+  box-shadow: 1px 1px 8px #000;
+}
+.partnereventshareddates_DateErrorCtn_Bww9B img {
+  margin-right: 4px;
+}
+.userprofile_SmallAvatar_2cCH3 {
+  max-width: 32px;
+  max-height: 32px;
+  float: left;
+  margin-right: 10px;
+  margin-top: 2px;
+  border-radius: 3px;
+}
+.collapseablesection_SectionTitleHeader_1K5gA {
+  display: flex;
+}
+.collapseablesection_SectionTitleHeader_1K5gA .DialogButton {
+  width: 36px;
+  height: 30px;
+  margin-left: auto;
+  margin-top: auto;
+}
+.collapseablesection_required_title_29VCz {
+  display: flex;
+}
+.collapseablesection_required_title_29VCz:not(:first-child) {
+  margin-top: 60px;
+}
+.collapseablesection_SectionTitleHeader_1K5gA .EventEditorTextTitle {
+  padding-top: 6px;
+}
+.reservationdate_Ctn_Zy-bB {
+  position: relative;
+}

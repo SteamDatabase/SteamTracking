@@ -4,7 +4,7 @@
   self.webpackChunkappmgmt_storeadmin || []).push([
   [6608],
   {
-    69818: (e) => {
+    13364: (e) => {
       e.exports = {
         AdminPageCtn: "adminshared_AdminPageCtn_KNaeC",
         WidePageCtn: "adminshared_WidePageCtn_3-Dwx",
@@ -50,7 +50,7 @@
         HalfWidthBtnCtn: "adminshared_HalfWidthBtnCtn_1mhRc",
       };
     },
-    52629: (e) => {
+    17318: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         PartnerEventFont: "partnereventshared_PartnerEventFont_22_fG",
@@ -166,180 +166,168 @@
       "use strict";
       n.d(t, {
         Z6: () => c,
-        p8: () => v,
-        NO: () => g,
-        UC: () => E,
-        A1: () => m,
-        yp: () => p,
-        iP: () => u,
+        p8: () => g,
+        NO: () => v,
+        UC: () => m,
+        A1: () => h,
+        yp: () => _,
+        iP: () => p,
       });
-      var r,
-        a = n(89526),
-        o = n(75457),
-        i = n(32765),
-        s = n(4116);
-      !(function (e) {
-        (e[(e.UNKNOWN = 0)] = "UNKNOWN"),
-          (e[(e.TEXT = 1)] = "TEXT"),
-          (e[(e.OPENTAG = 2)] = "OPENTAG"),
-          (e[(e.CLOSETAG = 3)] = "CLOSETAG");
-      })(r || (r = {}));
-      class l {
+      var r = n(89526),
+        a = n(40442),
+        o = n(32765),
+        i = n(4116);
+      class s {
         constructor() {
-          (this.type = r.UNKNOWN), (this.text = "");
+          (this.type = 0), (this.text = "");
         }
         ConvertMalformedNodeToText() {
-          this.type == r.CLOSETAG
+          3 == this.type
             ? (this.text = "[/" + this.text)
-            : this.type == r.OPENTAG && (this.text = "[" + this.text),
-            (this.type = r.TEXT);
+            : 2 == this.type && (this.text = "[" + this.text),
+            (this.type = 1);
         }
       }
-      class d {
+      class l {
         constructor(e, t) {
           (this.m_dictComponents = void 0),
             (this.m_dictComponents = e),
             (this.m_fnAccumulatorFactory = t);
         }
         Parse(e, t, n = !1) {
-          const a = (function (e, t) {
+          const r = (function (e, t) {
             const n = [];
-            let a = new l(),
+            let r = new s(),
+              a = !1,
               o = !1,
-              i = !1,
-              s = !1;
-            for (let l = 0; l < e.length; l++) {
-              let d = e[l];
-              switch (a.type) {
-                case r.UNKNOWN:
-                  "[" == d
-                    ? ((a.type = r.OPENTAG), (i = !0))
-                    : ((a.type = r.TEXT),
-                      "\\" == d && t ? (o = !o) : (a.text += d));
+              i = !1;
+            for (let s = 0; s < e.length; s++) {
+              let l = e[s];
+              switch (r.type) {
+                case 0:
+                  "[" == l
+                    ? ((r.type = 2), (o = !0))
+                    : ((r.type = 1), "\\" == l && t ? (a = !a) : (r.text += l));
                   break;
-                case r.OPENTAG:
-                case r.CLOSETAG:
-                  if ("/" == d && i)
-                    (a.type = r.CLOSETAG), (a.text = ""), (i = !1);
-                  else if ("[" != d || o)
-                    if ("]" != d || o)
-                      "\\" == d && t
-                        ? ((a.text += d), (o = !o), (i = !1))
-                        : ((a.text += d), (o = !1), (i = !1));
+                case 2:
+                case 3:
+                  if ("/" == l && o) (r.type = 3), (r.text = ""), (o = !1);
+                  else if ("[" != l || a)
+                    if ("]" != l || a)
+                      "\\" == l && t
+                        ? ((r.text += l), (a = !a), (o = !1))
+                        : ((r.text += l), (a = !1), (o = !1));
                     else {
                       const e =
-                          a.type == r.OPENTAG &&
-                          "noparse" == a.text.toLocaleLowerCase(),
+                          2 == r.type &&
+                          "noparse" == r.text.toLocaleLowerCase(),
                         t =
-                          a.type == r.CLOSETAG &&
-                          "noparse" == a.text.toLocaleLowerCase();
-                      i || (s && !t)
-                        ? (a.ConvertMalformedNodeToText(), (a.text += d))
+                          3 == r.type &&
+                          "noparse" == r.text.toLocaleLowerCase();
+                      o || (i && !t)
+                        ? (r.ConvertMalformedNodeToText(), (r.text += l))
                         : e
-                        ? (s = !0)
-                        : t && (s = !1),
-                        (a = _(n, a)),
-                        (i = !1);
+                        ? (i = !0)
+                        : t && (i = !1),
+                        (r = d(n, r)),
+                        (o = !1);
                     }
                   else
-                    a.ConvertMalformedNodeToText(),
-                      (a = _(n, a, r.OPENTAG)),
-                      (i = !0);
+                    r.ConvertMalformedNodeToText(), (r = d(n, r, 2)), (o = !0);
                   break;
-                case r.TEXT:
-                  "[" != d || o
-                    ? "\\" == d && t
-                      ? (o && (a.text += d), (o = !o))
-                      : ((a.text += d), (o = !1))
-                    : ((a = _(n, a, r.OPENTAG)), (i = !0));
+                case 1:
+                  "[" != l || a
+                    ? "\\" == l && t
+                      ? (a && (r.text += l), (a = !a))
+                      : ((r.text += l), (a = !1))
+                    : ((r = d(n, r, 2)), (o = !0));
               }
             }
-            a.type != r.UNKNOWN &&
-              ((a.type != r.OPENTAG && a.type != r.CLOSETAG) ||
-                a.ConvertMalformedNodeToText(),
-              n.push(a));
+            0 != r.type &&
+              ((2 != r.type && 3 != r.type) || r.ConvertMalformedNodeToText(),
+              n.push(r));
             return n;
           })(e, n);
-          return this.Parse_BuildElements(a, t);
+          return this.Parse_BuildElements(r, t);
         }
         Parse_BuildElements(e, t) {
           let n = this.m_fnAccumulatorFactory(void 0),
-            a = [],
-            o = function () {
-              return a.length < 1 ? void 0 : a[a.length - 1];
+            r = [],
+            a = function () {
+              return r.length < 1 ? void 0 : r[r.length - 1];
             },
-            i = this.m_dictComponents,
-            s = !1,
-            l = !0,
-            d = function (e, r, o) {
-              if (e && e.node.tag === r.text && i.get(e.node.tag)) {
-                const r = i.get(e.node.tag),
-                  o = a.map((e) => e.node.tag),
-                  d = { parentTags: o, tagname: e.node.tag, args: e.node.args },
-                  _ = t(r.Constructor, d, ...n.GetElements());
+            o = this.m_dictComponents,
+            i = !1,
+            s = !0,
+            l = function (e, a, l) {
+              if (e && e.node.tag === a.text && o.get(e.node.tag)) {
+                const a = o.get(e.node.tag),
+                  l = r.map((e) => e.node.tag),
+                  d = { parentTags: l, tagname: e.node.tag, args: e.node.args },
+                  c = t(a.Constructor, d, ...n.GetElements());
                 (n = e.accumulator),
-                  n.AppendNode(_),
-                  (s = r.skipFollowingNewline),
-                  (l = e.bWrapTextForCopying);
+                  n.AppendNode(c),
+                  (i = a.skipFollowingNewline),
+                  (s = e.bWrapTextForCopying);
               } else if (e) {
                 let t = e.accumulator;
                 t.AppendText("[" + e.node.text + "]", !1),
                   n.GetElements().forEach((e) => t.AppendNode(e)),
-                  t.AppendText("[/" + r.text + "]", !1),
+                  t.AppendText("[/" + a.text + "]", !1),
                   (n = t),
-                  (l = e.bWrapTextForCopying);
+                  (s = e.bWrapTextForCopying);
               }
             };
           for (
             e.forEach((e, t) => {
-              var _, c;
-              if (e.type == r.TEXT) {
-                const t = s ? e.text.replace(/^[\t\r ]*\n/g, "") : e.text;
-                n.AppendText(t, l), (s = !1);
-              } else if (e.type == r.OPENTAG) {
-                const t = i.get(e.tag);
+              var d, c;
+              if (1 == e.type) {
+                const t = i ? e.text.replace(/^[\t\r ]*\n/g, "") : e.text;
+                n.AppendText(t, s), (i = !1);
+              } else if (2 == e.type) {
+                const t = o.get(e.tag);
                 if (t) {
-                  const r = o();
-                  if (void 0 !== r) {
-                    const t = i.get(r.node.tag);
+                  const c = a();
+                  if (void 0 !== c) {
+                    const t = o.get(c.node.tag);
                     t &&
                       t.autocloses &&
-                      e.tag === r.node.tag &&
-                      d(a.pop(), r.node);
+                      e.tag === c.node.tag &&
+                      l(r.pop(), c.node);
                   }
-                  a.push({ accumulator: n, node: e, bWrapTextForCopying: l }),
+                  r.push({ accumulator: n, node: e, bWrapTextForCopying: s }),
                     (n = this.m_fnAccumulatorFactory(e)),
-                    (s = t.skipInternalNewline),
-                    (l =
-                      null !== (_ = t.allowWrapTextForCopying) &&
-                      void 0 !== _ &&
-                      _);
-                } else n.AppendText("[" + e.text + "]", 0 == a.length);
-              } else if (e.type == r.CLOSETAG) {
+                    (i = t.skipInternalNewline),
+                    (s =
+                      null !== (d = t.allowWrapTextForCopying) &&
+                      void 0 !== d &&
+                      d);
+                } else n.AppendText("[" + e.text + "]", 0 == r.length);
+              } else if (3 == e.type) {
                 for (
                   ;
-                  o() &&
-                  o().node.tag !== e.text &&
-                  i.get(o().node.tag) &&
-                  i.get(o().node.tag).autocloses;
+                  a() &&
+                  a().node.tag !== e.text &&
+                  o.get(a().node.tag) &&
+                  o.get(a().node.tag).autocloses;
 
                 ) {
-                  const e = a.pop();
-                  d(e, e.node);
+                  const e = r.pop();
+                  l(e, e.node);
                 }
                 if (
-                  (null === (c = o()) || void 0 === c ? void 0 : c.node.tag) ==
+                  (null === (c = a()) || void 0 === c ? void 0 : c.node.tag) ==
                   e.text
                 ) {
-                  const t = a.pop();
-                  d(t, e);
-                } else n.AppendText("[/" + e.text + "]", 0 == a.length);
+                  const t = r.pop();
+                  l(t, e);
+                } else n.AppendText("[/" + e.text + "]", 0 == r.length);
               }
             });
-            a.length > 0;
+            r.length > 0;
 
           ) {
-            let e = a.pop(),
+            let e = r.pop(),
               t = e.accumulator;
             t.AppendText("[" + e.node.text + "]", !1),
               n.GetElements().forEach((e) => t.AppendNode(e)),
@@ -348,8 +336,8 @@
           return n.GetElements();
         }
       }
-      function _(e, t, n = r.UNKNOWN) {
-        if (t.type == r.OPENTAG) {
+      function d(e, t, n = 0) {
+        if (2 == t.type) {
           let e = t.text.indexOf("="),
             n = t.text.indexOf(" ");
           if ((-1 != n && (-1 == e || n < e) && (e = n), e > 0)) {
@@ -357,106 +345,95 @@
             let n = t.text.substr(e);
             t.args = (function (e) {
               if (!e || e.length < 1) return {};
-              let t,
-                n = {},
+              let t = {},
+                n = "",
                 r = "",
-                a = "";
-              !(function (e) {
-                (e[(e.PRE_NAME = 0)] = "PRE_NAME"),
-                  (e[(e.IN_NAME = 1)] = "IN_NAME"),
-                  (e[(e.POST_NAME = 2)] = "POST_NAME"),
-                  (e[(e.IN_VALUE = 3)] = "IN_VALUE"),
-                  (e[(e.IN_QUOTED_VALUE = 4)] = "IN_QUOTED_VALUE");
-              })(t || (t = {}));
-              let o = t.PRE_NAME,
-                i = 0;
-              "=" == e[0] && (o = t.POST_NAME);
-              let s = !1;
-              for (i++; i < e.length; i++) {
-                let l = e[i],
-                  d = !0,
-                  _ = !1;
-                switch (o) {
-                  case t.PRE_NAME:
-                    if ("=" == l) return {};
-                    if (" " == l) continue;
-                    o = t.IN_NAME;
+                a = 0,
+                o = 0;
+              "=" == e[0] && (a = 2);
+              let i = !1;
+              for (o++; o < e.length; o++) {
+                let s = e[o],
+                  l = !0,
+                  d = !1;
+                switch (a) {
+                  case 0:
+                    if ("=" == s) return {};
+                    if (" " == s) continue;
+                    a = 1;
                     break;
-                  case t.IN_NAME:
-                    ("=" != l && " " != l) ||
-                      s ||
-                      (" " == l
-                        ? ((o = t.PRE_NAME), (_ = !0))
-                        : (o = t.POST_NAME),
-                      (d = !1));
+                  case 1:
+                    ("=" != s && " " != s) ||
+                      i ||
+                      (" " == s ? ((a = 0), (d = !0)) : (a = 2), (l = !1));
                     break;
-                  case t.POST_NAME:
-                    " " == l
-                      ? ((o = t.PRE_NAME), (d = !1), (_ = !0))
-                      : '"' == l
-                      ? ((o = t.IN_QUOTED_VALUE), (d = !1))
-                      : (o = t.IN_VALUE);
+                  case 2:
+                    " " == s
+                      ? ((a = 0), (l = !1), (d = !0))
+                      : '"' == s
+                      ? ((a = 4), (l = !1))
+                      : (a = 3);
                     break;
-                  case t.IN_VALUE:
-                  case t.IN_QUOTED_VALUE:
-                    ((" " == l && o != t.IN_QUOTED_VALUE && !s) ||
-                      ('"' == l && o == t.IN_QUOTED_VALUE && !s)) &&
-                      ((o = t.PRE_NAME), (d = !1), (_ = !0));
+                  case 3:
+                  case 4:
+                    ((" " == s && 4 != a && !i) ||
+                      ('"' == s && 4 == a && !i)) &&
+                      ((a = 0), (l = !1), (d = !0));
                 }
-                if (d)
-                  if ("\\" != l || s)
-                    if (((s = !1), o == t.IN_NAME)) r += l;
+                if (l)
+                  if ("\\" != s || i)
+                    if (((i = !1), 1 == a)) n += s;
                     else {
-                      if (o != t.IN_VALUE && o != t.IN_QUOTED_VALUE)
+                      if (3 != a && 4 != a)
                         throw new Error(
-                          "Not expecting to accumulate buffer in state " + o,
+                          "Not expecting to accumulate buffer in state " + a,
                         );
-                      a += l;
+                      r += s;
                     }
-                  else s = !0;
-                _ && ((n[r] = a), (r = ""), (a = ""));
+                  else i = !0;
+                d && ((t[n] = r), (n = ""), (r = ""));
               }
-              o != t.PRE_NAME && (n[r] = a);
-              return n;
+              0 != a && (t[n] = r);
+              return t;
             })(n);
           } else (t.args = {}), (t.tag = t.text.toLocaleLowerCase());
         }
         e.push(t);
-        let a = new l();
-        return (a.type = n), a;
+        let r = new s();
+        return (r.type = n), r;
       }
-      class c extends d {
+      class c extends l {
         constructor(e, t, n) {
-          super(e, null != t ? t : () => new s.LT()),
-            (this.m_renderingLanguage = n || (0, o.jM)(i.De.LANGUAGE));
+          super(e, null != t ? t : () => new i.LT()),
+            (this.m_renderingLanguage = n || (0, a.jM)(o.De.LANGUAGE));
         }
         UpdateOverrideLanguage(e) {
-          this.m_renderingLanguage = e || (0, o.jM)(i.De.LANGUAGE);
+          this.m_renderingLanguage = e || (0, a.jM)(o.De.LANGUAGE);
         }
         ParseBBCode(e, t, n = !1) {
-          let r = 0;
+          let a = 0;
           const o = this.Parse(
             e,
             (e, n, ...o) =>
-              a.createElement(
+              r.createElement(
                 e,
                 Object.assign(Object.assign({}, n), {
                   context: t,
                   language: this.m_renderingLanguage,
-                  key: "bbnode_" + r++,
+                  key: "bbnode_" + a++,
                 }),
                 ...o,
               ),
             n,
           );
           return o.length > 1
-            ? a.createElement(a.Fragment, null, ...o)
+            ? r.createElement(r.Fragment, null, ...o)
             : 1 == o.length
             ? o[0]
             : null;
         }
       }
-      const p = [
+      const _ = [
           "h1",
           "h2",
           "h3",
@@ -500,7 +477,7 @@
           "uploadfilebutton",
           "docimg",
         ],
-        u = [
+        p = [
           "h1",
           "h2",
           "h3",
@@ -512,7 +489,7 @@
           "noparse",
           "url",
         ],
-        h = [
+        u = [
           "img",
           "previewyoutube",
           "looping_media",
@@ -523,17 +500,17 @@
           "youtubeorvideo",
           "docimg",
         ],
-        m = (p.filter((e) => -1 == h.indexOf(e)), "{STEAM_CLAN_IMAGE}"),
-        E = "{STEAM_CLAN_LOC_IMAGE}";
-      function v(e, t = null, n = " ") {
+        h = (_.filter((e) => -1 == u.indexOf(e)), "{STEAM_CLAN_IMAGE}"),
+        m = "{STEAM_CLAN_LOC_IMAGE}";
+      function g(e, t = null, n = " ") {
         let r = null == t ? void 0 : t.join("|");
-        r || (r = p.join("|") + "|\\*");
+        r || (r = _.join("|") + "|\\*");
         let a = new RegExp("\\[(" + r + ")\\b[^\\]]*\\].*?\\[/\\1\\]", "gi");
         return e.replace(a, n);
       }
-      function g(e, t = null, n = "") {
+      function v(e, t = null, n = "") {
         let r = null == t ? void 0 : t.join("|");
-        r || (r = p.join("|") + "|\\*");
+        r || (r = _.join("|") + "|\\*");
         let a = "\\[\\/?(?:" + r + "){1,}.*?]";
         return e.replace(new RegExp(a, "gi"), n);
       }
@@ -627,112 +604,100 @@
     25871: (e, t, n) => {
       "use strict";
       n.d(t, {
-        Vm: () => m,
-        Y0: () => r,
-        dY: () => g,
-        ie: () => h,
-        jk: () => c,
-        vs: () => p,
-        wZ: () => v,
-        yo: () => u,
+        Vm: () => p,
+        dY: () => m,
+        ie: () => _,
+        jk: () => l,
+        vs: () => d,
+        wZ: () => h,
+        yo: () => c,
       });
-      var r,
-        a = n(52868),
-        o = n.n(a),
-        i = n(89526),
-        s = (n(24174), n(42735)),
-        l = n(68562),
-        d = n(4306),
-        _ = n(92616);
-      function c(e, t, n, a) {
-        const l = (0, i.useRef)(),
-          c = (0, i.useRef)(void 0),
-          p = (0, d.NW)();
+      var r = n(52868),
+        a = n.n(r),
+        o = n(89526),
+        i = (n(24174), n(4306)),
+        s = n(92616);
+      function l(e, t, n, r) {
+        const l = (0, o.useRef)(),
+          d = (0, o.useRef)(void 0),
+          c = (0, i.NW)();
         l.current = e;
-        const [u, h] = (0, i.useState)(void 0),
+        const [_, p] = (0, o.useState)(void 0),
           {
-            include_assets: m,
-            include_release: E,
-            include_platforms: v,
+            include_assets: u,
+            include_release: h,
+            include_platforms: m,
             include_all_purchase_options: g,
-            include_screenshots: C,
-            include_trailers: S,
-            include_ratings: A,
-            include_tag_count: f,
-            include_reviews: T,
-            include_basic_info: N,
-            include_supported_languages: I,
-            include_full_description: L,
-            include_included_items: x,
+            include_screenshots: v,
+            include_trailers: C,
+            include_ratings: f,
+            include_tag_count: S,
+            include_reviews: E,
+            include_basic_info: A,
+            include_supported_languages: x,
+            include_full_description: D,
+            include_included_items: T,
           } = n;
         if (
-          ((0, i.useEffect)(() => {
+          ((0, o.useEffect)(() => {
             const n = {
-              include_assets: m,
-              include_release: E,
-              include_platforms: v,
+              include_assets: u,
+              include_release: h,
+              include_platforms: m,
               include_all_purchase_options: g,
-              include_screenshots: C,
-              include_trailers: S,
-              include_ratings: A,
-              include_tag_count: f,
-              include_reviews: T,
-              include_basic_info: N,
-              include_supported_languages: I,
-              include_full_description: L,
-              include_included_items: x,
+              include_screenshots: v,
+              include_trailers: C,
+              include_ratings: f,
+              include_tag_count: S,
+              include_reviews: E,
+              include_basic_info: A,
+              include_supported_languages: x,
+              include_full_description: D,
+              include_included_items: T,
             };
-            let r = null;
+            let o = null;
             return (
               !e ||
-                _.Z.Get().BHasStoreItem(e, t, n) ||
-                (void 0 !== u && a && a == c.current) ||
-                (a !== c.current && (h(void 0), (c.current = a)),
-                (r = o().CancelToken.source()),
-                _.Z.Get()
+                s.Z.Get().BHasStoreItem(e, t, n) ||
+                (void 0 !== _ && r && r == d.current) ||
+                (r !== d.current && (p(void 0), (d.current = r)),
+                (o = a().CancelToken.source()),
+                s.Z.Get()
                   .QueueStoreItemRequest(e, t, n)
                   .then((t) => {
-                    r.token.reason ||
-                      l.current !== e ||
-                      h(t == s.s.k_EResultOK),
-                      p();
+                    o.token.reason || l.current !== e || p(1 == t), c();
                   })),
-              () => r && r.cancel("useStoreItemCache: unmounting")
+              () => o && o.cancel("useStoreItemCache: unmounting")
             );
-          }, [e, t, a, u, m, E, v, g, C, S, A, f, T, N, I, L, x, p]),
+          }, [e, t, r, _, u, h, m, g, v, C, f, S, E, A, x, D, T, c]),
           !e)
         )
-          return [null, r.k_EStoreItemCacheState_Unavailable];
-        if (!1 === u) return [void 0, r.k_EStoreItemCacheState_Unavailable];
-        if (_.Z.Get().BIsStoreItemMissing(e, t))
-          return [void 0, r.k_EStoreItemCacheState_Unavailable];
-        if (!_.Z.Get().BHasStoreItem(e, t, n))
-          return [void 0, r.k_EStoreItemCacheState_Loading];
-        const D = _.Z.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
-        return D
-          ? [D, r.k_EStoreItemCacheState_Found]
-          : [null, r.k_EStoreItemCacheState_Unavailable];
+          return [null, 2];
+        if (!1 === _) return [void 0, 2];
+        if (s.Z.Get().BIsStoreItemMissing(e, t)) return [void 0, 2];
+        if (!s.Z.Get().BHasStoreItem(e, t, n)) return [void 0, 1];
+        const L = s.Z.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
+        return L ? [L, 3] : [null, 2];
+      }
+      function d(e, t, n) {
+        return l(e, 0, t, n);
+      }
+      function c(e, t, n) {
+        return l(e, 2, t, n);
+      }
+      function _(e, t, n) {
+        return l(e, 1, t, n);
       }
       function p(e, t, n) {
-        return c(e, l.vn.k_EStoreItemType_App, t, n);
-      }
-      function u(e, t, n) {
-        return c(e, l.vn.k_EStoreItemType_Bundle, t, n);
-      }
-      function h(e, t, n) {
-        return c(e, l.vn.k_EStoreItemType_Package, t, n);
-      }
-      function m(e, t, n) {
-        const [r, a] = c(e, t, n),
-          [s, d] = (0, i.useState)(null),
-          [_, u] = p(s, n);
+        const [r, i] = l(e, t, n),
+          [s, c] = (0, o.useState)(null),
+          [_, p] = d(s, n);
         return (
-          (0, i.useEffect)(() => {
+          (0, o.useEffect)(() => {
             var e;
-            const t = o().CancelToken.source();
+            const t = a().CancelToken.source();
             if (
-              (null == r ? void 0 : r.GetStoreItemType()) ==
-                l.vn.k_EStoreItemType_Package &&
+              1 == (null == r ? void 0 : r.GetStoreItemType()) &&
               1 == (null == r ? void 0 : r.GetIncludedAppIDs().length)
             ) {
               const n = r.GetIncludedAppIDs()[0];
@@ -740,119 +705,110 @@
                 ((null === (e = null == t ? void 0 : t.token) || void 0 === e
                   ? void 0
                   : e.reason) ||
-                  d(n));
+                  c(n));
             }
             return () =>
               t.cancel("useStoreItemCacheOrPackageSingleApp: unmounting");
           }, [s, r]),
-          s ? [_, u] : [r, a]
+          s ? [_, p] : [r, i]
         );
       }
-      function E(e, t, n, a) {
-        const s = (0, d.NW)(),
+      function u(e, t, n, r) {
+        const l = (0, i.NW)(),
           {
-            include_assets: l,
+            include_assets: d,
             include_release: c,
-            include_platforms: p,
-            include_all_purchase_options: u,
-            include_screenshots: h,
-            include_trailers: m,
-            include_ratings: E,
-            include_tag_count: v,
-            include_reviews: g,
+            include_platforms: _,
+            include_all_purchase_options: p,
+            include_screenshots: u,
+            include_trailers: h,
+            include_ratings: m,
+            include_tag_count: g,
+            include_reviews: v,
             include_basic_info: C,
-            include_supported_languages: S,
-            include_full_description: A,
-            include_included_items: f,
+            include_supported_languages: f,
+            include_full_description: S,
+            include_included_items: E,
           } = n;
         if (
-          ((0, i.useEffect)(() => {
+          ((0, o.useEffect)(() => {
             if (!e || 0 == e.length) return;
             const n = {
-                include_assets: l,
+                include_assets: d,
                 include_release: c,
-                include_platforms: p,
-                include_all_purchase_options: u,
-                include_screenshots: h,
-                include_trailers: m,
-                include_ratings: E,
-                include_tag_count: v,
-                include_reviews: g,
+                include_platforms: _,
+                include_all_purchase_options: p,
+                include_screenshots: u,
+                include_trailers: h,
+                include_ratings: m,
+                include_tag_count: g,
+                include_reviews: v,
                 include_basic_info: C,
-                include_supported_languages: S,
-                include_full_description: A,
-                include_included_items: f,
+                include_supported_languages: f,
+                include_full_description: S,
+                include_included_items: E,
               },
               r = e.filter(
                 (e) =>
                   !(
-                    _.Z.Get().BHasStoreItem(e, t, n) ||
-                    _.Z.Get().BIsStoreItemMissing(e, t)
+                    s.Z.Get().BHasStoreItem(e, t, n) ||
+                    s.Z.Get().BIsStoreItemMissing(e, t)
                   ),
               );
             if (0 == r.length) return;
-            const a = o().CancelToken.source(),
-              i = r.map((e) => _.Z.Get().QueueStoreItemRequest(e, t, n));
+            const o = a().CancelToken.source(),
+              i = r.map((e) => s.Z.Get().QueueStoreItemRequest(e, t, n));
             return (
               Promise.all(i).then(() => {
-                a.token.reason || s();
+                o.token.reason || l();
               }),
-              () => a.cancel("useStoreItemCacheMultiplePackages: unmounting")
+              () => o.cancel("useStoreItemCacheMultiplePackages: unmounting")
             );
-          }, [e, t, a, s, l, c, p, u, h, m, E, v, g, C, S, A, f]),
+          }, [e, t, r, l, d, c, _, p, u, h, m, g, v, C, f, S, E]),
           !e)
         )
-          return r.k_EStoreItemCacheState_Unavailable;
+          return 2;
         if (
           !e.every(
             (e) =>
-              _.Z.Get().BHasStoreItem(e, t, n) ||
-              _.Z.Get().BIsStoreItemMissing(e, t),
+              s.Z.Get().BHasStoreItem(e, t, n) ||
+              s.Z.Get().BIsStoreItemMissing(e, t),
           )
         )
-          return r.k_EStoreItemCacheState_Loading;
+          return 1;
         return e.every((e) =>
-          _.Z.Get().GetStoreItemWithLegacyVisibilityCheck(e, t),
+          s.Z.Get().GetStoreItemWithLegacyVisibilityCheck(e, t),
         )
-          ? r.k_EStoreItemCacheState_Found
-          : r.k_EStoreItemCacheState_Unavailable;
+          ? 3
+          : 2;
       }
-      function v(e, t, n) {
-        return E(e, l.vn.k_EStoreItemType_App, t, n);
+      function h(e, t, n) {
+        return u(e, 0, t, n);
       }
-      function g(e, t, n) {
-        return E(e, l.vn.k_EStoreItemType_Package, t, n);
+      function m(e, t, n) {
+        return u(e, 1, t, n);
       }
-      !(function (e) {
-        (e[(e.k_EStoreItemCacheState_Loading = 1)] =
-          "k_EStoreItemCacheState_Loading"),
-          (e[(e.k_EStoreItemCacheState_Unavailable = 2)] =
-            "k_EStoreItemCacheState_Unavailable"),
-          (e[(e.k_EStoreItemCacheState_Found = 3)] =
-            "k_EStoreItemCacheState_Found");
-      })(r || (r = {}));
     },
     207: (e, t, n) => {
       "use strict";
       n.d(t, {
-        FM: () => l,
-        H7: () => s,
-        OL: () => h,
+        FM: () => s,
+        H7: () => i,
+        OL: () => u,
         Pm: () => c,
-        XW: () => d,
-        bk: () => v,
-        dK: () => u,
-        et: () => p,
-        iv: () => E,
-        md: () => m,
+        XW: () => l,
+        bk: () => g,
+        dK: () => p,
+        et: () => _,
+        iv: () => m,
+        md: () => h,
       });
       var r = n(32765),
-        a = n(75457),
-        o = n(14826),
-        i = n(13345);
-      const s =
+        a = n(14826),
+        o = n(13345);
+      const i =
         /((?:(?:https?:)|(?:www[.,])|(?:[!#-;=?-Z\\\^-~]+[\.,](?:(?:[a-zA-Z]{2,4}[\.?]*[\/\\\?#])|(?:(?:biz|com|gallery|in|name|net|online|org|tech|trade|xyz)(?=\W|$)))))(?:[^ː\s"<>\[\]]*[^\\s"<>\[\],.ː:])?)/;
-      function l(e) {
+      function s(e) {
         let t = new RegExp(
             "^(steam://openurl(_external)?/)?((f|ht)tps?://)?([^@/?#]*@)?([^/#?]+)",
             "im",
@@ -860,17 +816,17 @@
           n = e.match(t);
         return n && n.length > 5 ? n[6].toString() : e;
       }
-      function d(e) {
-        let t = l(e);
+      function l(e) {
+        let t = s(e);
         return t.startsWith("www.") && (t = t.slice(4)), t;
       }
-      const _ = /^(steam|ftp|https?):\/\//;
+      const d = /^(steam|ftp|https?):\/\//;
       function c(e) {
-        return _.test(e) ? e : "https://" + e;
+        return d.test(e) ? e : "https://" + e;
       }
-      function p(e) {
+      function _(e) {
         return e
-          ? r.De.EUNIVERSE != a.xO.k_EUniversePublic
+          ? 1 != r.De.EUNIVERSE
             ? e
             : ("http:" == e.substring(0, 5) && (e = "https:" + e.substring(5)),
               (e = (e = (e = (e = (e = (e = (e = (e = (e = (e = (e = (e = (e =
@@ -917,20 +873,20 @@
                 /{MEDIA_CDN_COMMUNITY_URL}/g,
                 r.De.MEDIA_CDN_COMMUNITY_URL,
               )).replace(/{COMMUNITY_CDN_URL}/g, r.De.COMMUNITY_CDN_URL)),
-              (e = (0, i.HZ)(e)))
+              (e = (0, o.HZ)(e)))
           : e;
       }
-      function u(e) {
+      function p(e) {
         if (!e) return !0;
-        const t = l(e).toLocaleLowerCase();
+        const t = s(e).toLocaleLowerCase();
         return (
           [
-            l(r.De.COMMUNITY_CDN_URL).toLocaleLowerCase(),
-            l(r.De.MEDIA_CDN_URL).toLocaleLowerCase(),
-            l(r.De.MEDIA_CDN_COMMUNITY_URL).toLocaleLowerCase(),
-            l(r.De.STORE_CDN_URL).toLocaleLowerCase(),
-            l(r.De.BASE_URL_SHARED_CDN).toLocaleLowerCase(),
-            l(r.De.CLAN_CDN_ASSET_URL).toLocaleLowerCase(),
+            s(r.De.COMMUNITY_CDN_URL).toLocaleLowerCase(),
+            s(r.De.MEDIA_CDN_URL).toLocaleLowerCase(),
+            s(r.De.MEDIA_CDN_COMMUNITY_URL).toLocaleLowerCase(),
+            s(r.De.STORE_CDN_URL).toLocaleLowerCase(),
+            s(r.De.BASE_URL_SHARED_CDN).toLocaleLowerCase(),
+            s(r.De.CLAN_CDN_ASSET_URL).toLocaleLowerCase(),
             "support.steampowered.com",
             "steamcdn-a.akamaihd.net",
             "cdn.cloudflare.steamstatic.com",
@@ -938,7 +894,7 @@
           ].indexOf(t) >= 0
         );
       }
-      function h(e) {
+      function u(e) {
         return r.De.SNR &&
           r.De.SNR.length > 0 &&
           e &&
@@ -946,7 +902,7 @@
           ? e + (e.indexOf("?") >= 0 ? "&" : "?") + "snr=" + r.De.SNR
           : e;
       }
-      function m(e, t) {
+      function h(e, t) {
         try {
           const n = new URL(t),
             r = new URL(e);
@@ -955,10 +911,10 @@
           return "";
         }
       }
-      function E() {
-        return `${r.De.HELP_BASE_URL}${(0, o.CE)()}/`;
+      function m() {
+        return `${r.De.HELP_BASE_URL}${(0, a.CE)()}/`;
       }
-      function v(e) {
+      function g(e) {
         return (
           r.De.IN_STEAMUI &&
             !e.startsWith("steam://") &&
@@ -967,7 +923,7 @@
         );
       }
     },
-    70369: (e, t, n) => {
+    28542: (e, t, n) => {
       "use strict";
       n.d(t, { Z: () => r });
       const r =

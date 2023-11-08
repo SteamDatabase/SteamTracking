@@ -3,7 +3,7 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [938],
   {
-    61818: (e) => {
+    35350: (e) => {
       e.exports = {
         Frame: "replay2022_Frame_1C1Yh",
         SteamLogo: "replay2022_SteamLogo_1pv40",
@@ -21,7 +21,7 @@
     },
     20285: (e, t, a) => {
       "use strict";
-      a.d(t, { Fz: () => M, TQ: () => g, tE: () => v });
+      a.d(t, { Fz: () => h, TQ: () => L, tE: () => M });
       var n = a(33940),
         l = a(52868),
         r = a.n(l),
@@ -29,22 +29,21 @@
         o = a.n(C),
         c = a(89526),
         i = a(5615),
-        s = a(42735),
-        u = a(47165),
-        m = a(23217),
-        d = a(32765),
-        p = a(67328),
-        f = a(94738),
-        H = a(27070);
-      const L = "nicknames";
-      function g(e) {
-        const t = (0, H.bY)(),
-          { data: a, isLoading: l } = (0, i.useQuery)([L], () =>
+        s = a(47165),
+        u = a(23217),
+        m = a(32765),
+        d = a(68333),
+        p = a(97940),
+        f = a(27070);
+      const H = "nicknames";
+      function L(e) {
+        const t = (0, f.bY)(),
+          { data: a, isLoading: l } = (0, i.useQuery)([H], () =>
             (0, n.mG)(this, void 0, void 0, function* () {
               const e = new Map();
-              if (d.L7.logged_in) {
-                const a = p.gA.Init(f.bM),
-                  n = (yield f.lk.GetNicknameList(t, a)).Body().toObject();
+              if (m.L7.logged_in) {
+                const a = d.gA.Init(p.bM),
+                  n = (yield p.lk.GetNicknameList(t, a)).Body().toObject();
                 (null == n ? void 0 : n.nicknames) &&
                   n.nicknames.length > 0 &&
                   n.nicknames.forEach((t) => {
@@ -56,16 +55,16 @@
           );
         return a ? a.get(e) : null;
       }
-      const E = new (o())(
+      const g = new (o())(
           (e) =>
             (function (e) {
               var t, a, l, C;
               return (0, n.mG)(this, void 0, void 0, function* () {
                 if (!e || 0 == e.length) return [];
                 const n =
-                  "community" == (0, d.Zv)()
-                    ? d.De.COMMUNITY_BASE_URL
-                    : d.De.STORE_BASE_URL;
+                  "community" == (0, m.Zv)()
+                    ? m.De.COMMUNITY_BASE_URL
+                    : m.De.STORE_BASE_URL;
                 if (1 == e.length) {
                   const l = { accountid: e[0], origin: self.origin },
                     C = yield r().get(`${n}actions/ajaxgetavatarpersona`, {
@@ -74,15 +73,16 @@
                   if (
                     !C ||
                     200 != C.status ||
-                    (null === (t = C.data) || void 0 === t
-                      ? void 0
-                      : t.success) != s.s.k_EResultOK ||
+                    1 !=
+                      (null === (t = C.data) || void 0 === t
+                        ? void 0
+                        : t.success) ||
                     !(null === (a = C.data) || void 0 === a
                       ? void 0
                       : a.userinfo)
                   )
                     throw `Load single avatar/persona failed ${
-                      (0, m.l)(C).strErrorMsg
+                      (0, u.l)(C).strErrorMsg
                     }`;
                   return [C.data.userinfo];
                 }
@@ -94,20 +94,21 @@
                   if (
                     !a ||
                     200 != a.status ||
-                    (null === (l = a.data) || void 0 === l
-                      ? void 0
-                      : l.success) != s.s.k_EResultOK ||
+                    1 !=
+                      (null === (l = a.data) || void 0 === l
+                        ? void 0
+                        : l.success) ||
                     !(null === (C = a.data) || void 0 === C
                       ? void 0
                       : C.userinfos)
                   )
                     throw `Load single avatar/persona failed ${
-                      (0, m.l)(a).strErrorMsg
+                      (0, u.l)(a).strErrorMsg
                     }`;
                   const o = new Map();
                   return (
                     a.data.userinfos.forEach((e) =>
-                      o.set(new u.K(e.steamid).GetAccountID(), e),
+                      o.set(new s.K(e.steamid).GetAccountID(), e),
                     ),
                     e.map((e) => o.get(e))
                   );
@@ -116,21 +117,21 @@
             })(e),
           { cache: !1 },
         ),
-        h = "avatarandpersonas";
-      function M(e) {
-        const { data: t, isLoading: a } = (0, i.useQuery)([h, e], () =>
-          E.load(e),
+        E = "avatarandpersonas";
+      function h(e) {
+        const { data: t, isLoading: a } = (0, i.useQuery)([E, e], () =>
+          g.load(e),
         );
         return [t, a];
       }
-      function v(e) {
+      function M(e) {
         const t = (0, i.useQueryClient)(),
           { data: a, isLoading: n } = (0, i.useQuery)({
-            queryKey: [h, e],
-            queryFn: () => E.loadMany(e),
+            queryKey: [E, e],
+            queryFn: () => g.loadMany(e),
             onSuccess(e) {
               e.forEach((e) => {
-                const a = [h, new u.K(e.steamid).GetAccountID()];
+                const a = [E, new s.K(e.steamid).GetAccountID()];
                 t.setQueryData(a, e);
               });
             },
@@ -159,7 +160,7 @@
         o = a(20285),
         c = a(14826),
         i = a(32765),
-        s = a(61818);
+        s = a(35350);
       function u(e) {
         const t = L();
         return r.createElement(

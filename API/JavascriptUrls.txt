@@ -228,8 +228,8 @@ ${COMMUNITY_BASE_URL}id/${m_strCustomURL}/
 ${COMMUNITY_BASE_URL}id/${profile_url}
 ${COMMUNITY_BASE_URL}invites/ajaxcreate
 ${COMMUNITY_BASE_URL}invites/ajaxgetall
+${COMMUNITY_BASE_URL}linkfilter/?u=${}
 ${COMMUNITY_BASE_URL}linkfilter/?url
-${COMMUNITY_BASE_URL}linkfilter/?url=${}
 ${COMMUNITY_BASE_URL}market
 ${COMMUNITY_BASE_URL}market/listings/${}/${}
 ${COMMUNITY_BASE_URL}migrate/ajaxcreateupdatesalepage
@@ -262,6 +262,7 @@ ${COMMUNITY_BASE_URL}ogg/${}/ajaxgetvanityandclanid/
 ${COMMUNITY_BASE_URL}ogg/${}/ajaxisvisibleinsc
 ${COMMUNITY_BASE_URL}ogg/${}/partnerevents/create/
 ${COMMUNITY_BASE_URL}ogg/${}/selectAvatar
+${COMMUNITY_BASE_URL}parental/ajaxunlock/
 ${COMMUNITY_BASE_URL}partnereventdata/ajaxgetprivatedata
 ${COMMUNITY_BASE_URL}partnereventdata/ajaxrequestsalepagereview
 ${COMMUNITY_BASE_URL}partnereventdata/ajaxsetprivatedata
@@ -1183,6 +1184,7 @@ ${STORE_BASE_URL}buyitem/${DOTA_APP_ID}/${}/${}
 ${STORE_BASE_URL}buyitem/${nAppID}/${nItemDefID}/${}
 ${STORE_BASE_URL}cart
 ${STORE_BASE_URL}cart/
+${STORE_BASE_URL}cart/?cart=${}&fpr=1&prsi=${}
 ${STORE_BASE_URL}cart/addtocart
 ${STORE_BASE_URL}cart/ajaxredeemtokensforcartdiscount
 ${STORE_BASE_URL}category/${category}
@@ -1302,6 +1304,8 @@ ${STORE_BASE_URL}newshub/group/${}/view
 ${STORE_BASE_URL}newshub/sale/${}
 ${STORE_BASE_URL}notification/ajaxusersettings
 ${STORE_BASE_URL}online_conduct/
+${STORE_BASE_URL}parental/ajaxunlock/
+${STORE_BASE_URL}parental/requestrecovery
 ${STORE_BASE_URL}points/
 ${STORE_BASE_URL}points/ajaxgeteventdetails?event_name=${}
 ${STORE_BASE_URL}points/heroimage?appid=${}
@@ -1321,7 +1325,7 @@ ${STORE_BASE_URL}promotion/ajaxhasclaimedgenresticker
 ${STORE_BASE_URL}publisher/${m_strVanity}/
 ${STORE_BASE_URL}recommended/ignorerecommendation
 ${STORE_BASE_URL}remoteplay#anywhere_how
-${STORE_BASE_URL}replay/${steamid}/${}?src=${k_EYearInReviewAccessSource_FriendsReplay}
+${STORE_BASE_URL}replay/${steamid}/${}?src=9
 ${STORE_BASE_URL}replay/${}/${}
 ${STORE_BASE_URL}reservation/ajaxcancelreservation
 ${STORE_BASE_URL}reservation/ajaxdirectreservation
@@ -1400,6 +1404,7 @@ ${STORE_CDN_URL}public/images/footerLogo_valve_new.png
 ${STORE_CDN_URL}public/images/loyalty/reactions/${_ ? "animated" : "still"}/${}.png
 ${STORE_CDN_URL}public/images/v6/ico/ico_selected.png
 ${STORE_CDN_URL}public/shared/images/header/logo_steamchina.svg?t=962016
+${STORE_CHECKOUT_BASE_URL}parental/ajaxunlock/
 ${STORE_ICON_BASE_URL}${appid}/${}
 ${STORE_ICON_BASE_URL}${appid}/header.jpg
 ${STORE_ICON_BASE_URL}${appid}/portrait.png

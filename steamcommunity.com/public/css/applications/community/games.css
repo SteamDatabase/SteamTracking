@@ -287,6 +287,7 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
     background-position-x: calc(100% + 250px);
   }
 }
+
 .gameslistitems_List_3tY9v {
   margin: auto;
   position: relative;
@@ -448,11 +449,25 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   position: absolute;
   top: 10px;
   right: 10px;
+  display: flex;
+  flex-direction: row;
+}
+.gameslistitems_GamesListItem_2-pQF
+  .gameslistitems_GameLinks_35fxd
+  .gameslistitems_GameLinksButton_1pXbX {
   padding-left: 8px;
   padding-right: 8px;
 }
-.gameslistitems_GamesListItem_2-pQF .gameslistitems_GameLinks_35fxd svg {
+.gameslistitems_GamesListItem_2-pQF
+  .gameslistitems_GameLinks_35fxd
+  .gameslistitems_GameLinksButton_1pXbX
+  svg {
   width: 18px;
+}
+.gameslistitems_GamesListItem_2-pQF
+  .gameslistitems_GameLinks_35fxd
+  .gameslistitems_AppPrivateIndicator_2UkkK {
+  margin-right: 6px;
 }
 .GamepadMode
   .gameslistitems_GamesListItem_2-pQF
@@ -836,11 +851,14 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
 .gameslistitems_NavDropdownMenu_1Hvmx .contextMenuItem {
   padding: 0;
 }
-.gameslistitems_NavDropdownMenu_1Hvmx .contextMenuItem a {
+.gameslistitems_NavDropdownMenu_1Hvmx .contextMenuItem a,
+.gameslistitems_NavDropdownMenu_1Hvmx .contextMenuItem span {
+  color: #ebebeb;
   display: inline-block;
   width: 100%;
   height: 100%;
   padding: 4px 6px;
+  cursor: pointer;
 }
 .gameslistitems_AchievementContainer_38RhR {
   display: grid;

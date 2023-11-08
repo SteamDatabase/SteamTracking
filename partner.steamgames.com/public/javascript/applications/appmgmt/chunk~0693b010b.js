@@ -278,10 +278,10 @@
         "./zh-tw.js": 85136,
       };
       function i(e) {
-        var t = n(e);
+        var t = a(e);
         return s(t);
       }
-      function n(e) {
+      function a(e) {
         if (!s.o(r, e)) {
           var t = new Error("Cannot find module '" + e + "'");
           throw ((t.code = "MODULE_NOT_FOUND"), t);
@@ -291,42 +291,42 @@
       (i.keys = function () {
         return Object.keys(r);
       }),
-        (i.resolve = n),
+        (i.resolve = a),
         (e.exports = i),
         (i.id = 46700);
     },
     4556: (e, t, s) => {
       "use strict";
-      s.d(t, { U: () => n });
+      s.d(t, { U: () => a });
       var r = s(32765);
       const i = "fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb";
-      function n(e, t) {
+      function a(e, t) {
         let s = ".jpg";
         (e && "0000000000000000000000000000000000000000" !== e) || (e = i),
           44 == e.length && ((s = e.substr(-4)), (e = e.substr(0, 40)));
-        let n = r.De.AVATAR_BASE_URL;
+        let a = r.De.AVATAR_BASE_URL;
         return (
-          n ||
-            ((n = r.De.MEDIA_CDN_COMMUNITY_URL + "images/avatars/"),
-            (n += e.substr(0, 2) + "/")),
-          (n += e),
-          t && "small" != t && (n += "_" + t),
-          (n += s),
-          n
+          a ||
+            ((a = r.De.MEDIA_CDN_COMMUNITY_URL + "images/avatars/"),
+            (a += e.substr(0, 2) + "/")),
+          (a += e),
+          t && "small" != t && (a += "_" + t),
+          (a += s),
+          a
         );
       }
     },
     85651: (e, t, s) => {
       "use strict";
-      s.d(t, { F_: () => c, JW: () => d, kl: () => g, zD: () => v });
+      s.d(t, { F_: () => h, JW: () => c, kl: () => g, zD: () => v });
       var r = s(33940),
         i = s(50265),
-        n = s(36105),
-        a = s.n(n),
+        a = s(36105),
+        n = s.n(a),
         o = s(89526),
         l = s(58218),
         u = s(32765);
-      class _ {
+      class d {
         constructor() {
           (this.bOpenEventLandingPage = !1),
             (this.bIncludeFeaturedAsGameSource = !0),
@@ -365,7 +365,7 @@
             ("dev" == u.De.WEB_UNIVERSE || "beta" == u.De.WEB_UNIVERSE)
           ) {
             const e = t.get("t");
-            let s = /^\d+$/.test(e) ? a().unix(Number.parseInt(e)) : a()(e);
+            let s = /^\d+$/.test(e) ? n().unix(Number.parseInt(e)) : n()(e);
             (this.nOverrideDateNow = Math.floor(s.unix())),
               console.log(
                 "CEventCalendarDevFeatures overriding partner event time: " +
@@ -376,9 +376,9 @@
           }
         }
       }
-      (0, r.gn)([i.LO], _.prototype, "nOverrideDateNow", void 0);
-      const d = new _();
-      function c(e = 1) {
+      (0, r.gn)([i.LO], d.prototype, "nOverrideDateNow", void 0);
+      const c = new d();
+      function h(e = 1) {
         const [t, s] = o.useState(() => p()),
           r = (0, l.T)("useTimeNowWithOverride"),
           i = o.useCallback(() => {
@@ -396,16 +396,16 @@
           t
         );
       }
-      window.g_EventCalendarDevFeatures = d;
+      window.g_EventCalendarDevFeatures = c;
       const m = new Date(),
-        h = Math.floor(m.getTime() / 1e3);
+        _ = Math.floor(m.getTime() / 1e3);
       function p() {
         const e = Math.floor(Date.now() / 1e3);
-        return d.nOverrideDateNow ? d.nOverrideDateNow + (e - h) : e;
+        return c.nOverrideDateNow ? c.nOverrideDateNow + (e - _) : e;
       }
       function g() {
         var e;
-        return null !== (e = d.nOverrideDateNow) && void 0 !== e ? e : h;
+        return null !== (e = c.nOverrideDateNow) && void 0 !== e ? e : _;
       }
       function v() {
         return o.useMemo(() => g(), []);
@@ -413,12 +413,12 @@
     },
     11195: (e, t, s) => {
       "use strict";
-      s.d(t, { De: () => l, Fq: () => o, pA: () => a });
-      var r = s(68562),
+      s.d(t, { De: () => l, Fq: () => o, pA: () => n });
+      var r = s(85251),
         i = s(32765),
-        n = s(63903);
-      s(66262);
-      function a(e, t) {
+        a = s(2232);
+      s(63261);
+      function n(e, t) {
         e.Body().set_context(o(t));
       }
       function o(e) {
@@ -426,7 +426,7 @@
         return (
           e || t.set_country_code(i.De.COUNTRY),
           t.set_language(i.De.LANGUAGE),
-          i.De.EREALM != n.IN.k_ESteamRealmUnknown &&
+          i.De.EREALM != a.IN.k_ESteamRealmUnknown &&
             t.set_steam_realm(i.De.EREALM),
           t
         );
@@ -439,13 +439,12 @@
       "use strict";
       s.d(t, { Z: () => d });
       var r = s(50265),
-        i = s(68562),
-        n = s(85886),
+        i = s(85886),
         a = s(23801),
-        o = s(14826),
-        l = s(72120),
-        u = s(32765),
-        _ = s(81500);
+        n = s(14826),
+        o = s(72120),
+        l = s(32765),
+        u = s(81500);
       class d {
         constructor(e, t) {
           var s, r, i;
@@ -487,7 +486,7 @@
         MergeData(e, t) {
           t.include_assets &&
             !this.m_Assets &&
-            ((this.m_Assets = new m(e.assets(), e.id())),
+            ((this.m_Assets = new h(e.assets(), e.id())),
             (this.m_DataRequested.include_assets = !0)),
             t.include_release &&
               !this.m_ReleaseInfo &&
@@ -505,11 +504,11 @@
               (this.m_DataRequested.include_all_purchase_options = !0)),
             t.include_screenshots &&
               !this.m_Screenshots &&
-              ((this.m_Screenshots = new g(e.screenshots())),
+              ((this.m_Screenshots = new p(e.screenshots())),
               (this.m_DataRequested.include_screenshots = !0)),
             t.include_trailers &&
               !this.m_Trailers &&
-              ((this.m_Trailers = new h(e.trailers())),
+              ((this.m_Trailers = new m(e.trailers())),
               (this.m_DataRequested.include_trailers = !0)),
             t.include_tag_count > this.m_rgStoreTags.length &&
               this.m_DataRequested.include_tag_count < t.include_tag_count &&
@@ -558,10 +557,10 @@
           );
         }
         BCheckDataRequestIncluded(e) {
-          ("dev" != u.De.WEB_UNIVERSE && "beta" != u.De.WEB_UNIVERSE) ||
+          ("dev" != l.De.WEB_UNIVERSE && "beta" != l.De.WEB_UNIVERSE) ||
             (0, a.X)(
               this.BContainDataRequest(e),
-              `Requested data without for ${(0, n.qE)(this.m_eItemType)} @ ${
+              `Requested data without for ${(0, i.qE)(this.m_eItemType)} @ ${
                 this.m_unID
               }`,
               (0, r.ZN)(e),
@@ -584,7 +583,7 @@
           return this.m_strName;
         }
         GetStorePageURL() {
-          return u.De.STORE_BASE_URL + this.m_strStoreURLPath;
+          return l.De.STORE_BASE_URL + this.m_strStoreURLPath;
         }
         GetStorePageURLWithOverride() {
           var e;
@@ -599,12 +598,12 @@
         }
         GetCommunityPageURL() {
           return this.GetAppID()
-            ? u.De.COMMUNITY_BASE_URL + "app/" + this.GetAppID()
+            ? l.De.COMMUNITY_BASE_URL + "app/" + this.GetAppID()
             : null;
         }
         GetCommunityDiscussionForumsURL() {
           return this.GetAppID()
-            ? u.De.COMMUNITY_BASE_URL +
+            ? l.De.COMMUNITY_BASE_URL +
                 "app/" +
                 this.GetAppID() +
                 "/discussions/"
@@ -615,29 +614,24 @@
         }
         GetAppIDToRun() {
           const e = this.GetParentAppID();
-          return e && this.m_eAppType != i.Ac.k_EStoreAppType_Music
-            ? e
-            : this.GetAppID();
+          return e && 11 != this.m_eAppType ? e : this.GetAppID();
         }
         GetAppType() {
           return this.m_eAppType;
         }
         BIsApplicationOrTool() {
-          return (
-            this.GetAppType() == i.Ac.k_EStoreAppType_Software ||
-            this.GetAppType() == i.Ac.k_EStoreAppType_Tool
-          );
+          return 6 == this.GetAppType() || 13 == this.GetAppType();
         }
         BIsSalePage() {
           return (
-            this.GetStoreItemType() === i.vn.k_EStoreItemType_App &&
+            0 === this.GetStoreItemType() &&
             this.k_regexSalePage.test(this.GetStorePageURLWithOverride())
           );
         }
         GetSalePageVanityURL() {
           let e = this.GetStorePageURLWithOverride();
           return (
-            this.GetStoreItemType() === i.vn.k_EStoreItemType_App &&
+            0 === this.GetStoreItemType() &&
               ((e = this.GetStorePageURLWithOverride().replace(
                 this.k_regexSalePage,
                 "",
@@ -653,7 +647,7 @@
           return this.m_rgIncludedAppIDs;
         }
         GetIncludedAppIDsOrSelf() {
-          return this.GetStoreItemType() == i.vn.k_EStoreItemType_App
+          return 0 == this.GetStoreItemType()
             ? [this.GetID()]
             : this.GetIncludedAppIDs();
         }
@@ -933,7 +927,7 @@
                 ? void 0
                 : t.coming_soon_display
             )
-              return (0, _.y)(this.m_ReleaseInfo);
+              return (0, u.y)(this.m_ReleaseInfo);
             if (
               null === (s = this.m_ReleaseInfo) || void 0 === s
                 ? void 0
@@ -950,12 +944,12 @@
                     ? void 0
                     : i.is_abridged_release_date
                 )
-                ? (0, l.LO)(new Date(1e3 * e))
-                : (0, o.vX)(e)
+                ? (0, o.LO)(new Date(1e3 * e))
+                : (0, n.vX)(e)
               : "";
           }
-          const n = this.GetReleaseDateRTime();
-          return n ? (0, o.vX)(n) : "";
+          const a = this.GetReleaseDateRTime();
+          return a ? (0, n.vX)(a) : "";
         }
         BIsComingSoon() {
           var e;
@@ -1154,7 +1148,7 @@
         const t = e.map((e) => e.creator_clan_account_id).filter((e) => !!e);
         return Array.from(new Set(t));
       }
-      class m {
+      class h {
         constructor(e, t) {
           const s = e.asset_url_format();
           s &&
@@ -1212,7 +1206,7 @@
               ))),
             e.community_icon() &&
               (this.m_strCommunityIcon = `${
-                u.De.MEDIA_CDN_COMMUNITY_URL
+                l.De.MEDIA_CDN_COMMUNITY_URL
               }images/apps/${t}/${e.community_icon()}.jpg`);
         }
         GetMainCapsuleURL() {
@@ -1249,26 +1243,26 @@
           return this.m_strLibraryHeroURL_2x;
         }
         ConstructAssetURL(e, t) {
-          return u.De.MEDIA_CDN_URL + e.replace("${FILENAME}", t);
+          return l.De.MEDIA_CDN_URL + e.replace("${FILENAME}", t);
         }
         GetCommunityIconURL() {
           return this.m_strCommunityIcon;
         }
       }
-      class h {
+      class m {
         constructor(e) {
           (this.m_mapTrailer = new Map()),
             (this.m_higherTrailers = new Array()),
             (this.m_otherTrailers = new Array()),
             e.highlights() &&
               e.highlights().forEach((e) => {
-                let t = new p(e);
+                let t = new _(e);
                 this.m_mapTrailer.set(t.GetTrailerID(), t),
                   this.m_higherTrailers.push(t);
               }),
             e.other_trailers() &&
               e.other_trailers().forEach((e) => {
-                let t = new p(e);
+                let t = new _(e);
                 this.m_mapTrailer.set(t.GetTrailerID(), t),
                   this.m_otherTrailers.push(t);
               });
@@ -1288,7 +1282,7 @@
           return this.m_mapTrailer.get(e);
         }
       }
-      class p {
+      class _ {
         constructor(e) {
           (this.m_strTrailerName = e.trailer_name()),
             (this.m_nBaseID = e.trailer_base_id());
@@ -1353,10 +1347,10 @@
           );
         }
         ConstructAssetURL(e, t) {
-          return u.De.MEDIA_CDN_URL + e.replace("${FILENAME}", t);
+          return l.De.MEDIA_CDN_URL + e.replace("${FILENAME}", t);
         }
       }
-      class g {
+      class p {
         constructor(e) {
           (this.m_rgAllScreenshots = new Array()),
             (this.m_rgOnlyAllAgesScreenshots = new Array());
@@ -1370,12 +1364,12 @@
               e = r[t].ordinal() < i[s].ordinal();
             }
             if (e) {
-              const e = u.De.MEDIA_CDN_URL + r[t].filename();
+              const e = l.De.MEDIA_CDN_URL + r[t].filename();
               this.m_rgAllScreenshots.push(e),
                 this.m_rgOnlyAllAgesScreenshots.push(e),
                 (t += 1);
             } else {
-              const e = u.De.MEDIA_CDN_URL + i[s].filename();
+              const e = l.De.MEDIA_CDN_URL + i[s].filename();
               this.m_rgAllScreenshots.push(e), (s += 1);
             }
           }
@@ -1390,21 +1384,19 @@
     },
     92616: (e, t, s) => {
       "use strict";
-      s.d(t, { Z: () => k });
+      s.d(t, { Z: () => v });
       var r = s(33940),
         i = s(50265),
-        n = s(42735),
-        a = s(75457),
-        o = s(67328),
-        l = s(19094),
-        u = s(5083),
-        _ = s(68562),
-        d = s(23801),
-        c = s(23217),
-        m = s(32765),
+        a = s(68333),
+        n = s(19094),
+        o = s(14596),
+        l = s(85251),
+        u = s(23801),
+        d = s(23217),
+        c = s(32765),
         h = s(11195),
-        p = s(74429);
-      function g(e, t) {
+        m = s(74429);
+      function _(e, t) {
         if (!e) return t;
         if (!t) return e;
         return {
@@ -1429,14 +1421,14 @@
             e.include_included_items || t.include_included_items,
         };
       }
-      function v(e, t) {
+      function p(e, t) {
         return (0, r.mG)(this, void 0, void 0, function* () {
           const s = yield e,
             r = yield t;
-          return s != n.s.k_EResultOK ? s : r;
+          return 1 != s ? s : r;
         });
       }
-      class I {
+      class g {
         constructor() {
           (this.k_QueueWaitUntilRequestMS = 5),
             (this.k_nMaxBatchSize = 250),
@@ -1475,29 +1467,27 @@
             (this.m_setPendingDataRequest = {}),
             (this.m_PendingInfoResolve = void 0),
             (this.m_PendingTimer = void 0),
-            (this.k_AlreadyResolvedOK = Promise.resolve(n.s.k_EResultOK)),
-            (this.k_AlreadyResolvedInvalid = Promise.resolve(
-              n.s.k_EResultInvalidParam,
-            )),
-            (this.k_AlreadyResolvedBusy = Promise.resolve(n.s.k_EResultBusy));
+            (this.k_AlreadyResolvedOK = Promise.resolve(1)),
+            (this.k_AlreadyResolvedInvalid = Promise.resolve(8)),
+            (this.k_AlreadyResolvedBusy = Promise.resolve(10));
         }
         static Get() {
           return (
-            I.sm_instance ||
-              ((I.sm_instance = new I()),
-              (window.StoreItemCache = I.sm_instance)),
-            I.sm_instance
+            g.sm_instance ||
+              ((g.sm_instance = new g()),
+              (window.StoreItemCache = g.sm_instance)),
+            g.sm_instance
           );
         }
         static Initialize(e, t) {
           return (0, r.mG)(this, void 0, void 0, function* () {
-            (0, d.X)(
-              !I.Get().m_bInitialized,
+            (0, u.X)(
+              !g.Get().m_bInitialized,
               "CStoreItemCache was already initialized; initialize it only once.",
             ),
-              (I.Get().m_SteamInterface = e),
-              (I.Get().m_bUsePartnerAPI = !!t),
-              (I.Get().m_bInitialized = !0);
+              (g.Get().m_SteamInterface = e),
+              (g.Get().m_bUsePartnerAPI = !!t),
+              (g.Get().m_bInitialized = !0);
           });
         }
         GetSteamInterface() {
@@ -1545,52 +1535,36 @@
           });
         }
         static BIsInitialized() {
-          return I.Get().m_bInitialized;
+          return g.Get().m_bInitialized;
         }
         QueueAppRequest(e, t) {
           return (0, r.mG)(this, void 0, void 0, function* () {
-            return this.QueueStoreItemRequest(e, _.vn.k_EStoreItemType_App, t);
+            return this.QueueStoreItemRequest(e, 0, t);
           });
         }
         QueuePackageRequest(e, t) {
           return (0, r.mG)(this, void 0, void 0, function* () {
-            return this.QueueStoreItemRequest(
-              e,
-              _.vn.k_EStoreItemType_Package,
-              t,
-            );
+            return this.QueueStoreItemRequest(e, 1, t);
           });
         }
         QueueBundleRequest(e, t) {
           return (0, r.mG)(this, void 0, void 0, function* () {
-            return this.QueueStoreItemRequest(
-              e,
-              _.vn.k_EStoreItemType_Bundle,
-              t,
-            );
+            return this.QueueStoreItemRequest(e, 2, t);
           });
         }
         QueueTagRequest(e, t) {
           return (0, r.mG)(this, void 0, void 0, function* () {
-            return this.QueueStoreItemRequest(e, _.vn.k_EStoreItemType_Tag, t);
+            return this.QueueStoreItemRequest(e, 4, t);
           });
         }
         QueueCreatorRequest(e, t) {
           return (0, r.mG)(this, void 0, void 0, function* () {
-            return this.QueueStoreItemRequest(
-              e,
-              _.vn.k_EStoreItemType_Creator,
-              t,
-            );
+            return this.QueueStoreItemRequest(e, 5, t);
           });
         }
         QueueHubCategoryRequest(e, t) {
           return (0, r.mG)(this, void 0, void 0, function* () {
-            return this.QueueStoreItemRequest(
-              e,
-              _.vn.k_EStoreItemType_HubCategory,
-              t,
-            );
+            return this.QueueStoreItemRequest(e, 6, t);
           });
         }
         static ValidateDataRequest(e) {
@@ -1611,88 +1585,72 @@
         }
         QueueMultipleAppRequests(e, t) {
           return (0, r.mG)(this, void 0, void 0, function* () {
-            if (!e || 0 == e.length) return n.s.k_EResultOK;
+            if (!e || 0 == e.length) return 1;
             const s = (yield Promise.all(
-              e.map((e) =>
-                this.QueueStoreItemRequest(e, _.vn.k_EStoreItemType_App, t),
-              ),
-            )).filter((e) => e != n.s.k_EResultOK);
-            return s.length > 0 ? s[0] : n.s.k_EResultOK;
+              e.map((e) => this.QueueStoreItemRequest(e, 0, t)),
+            )).filter((e) => 1 != e);
+            return s.length > 0 ? s[0] : 1;
           });
         }
         QueueMultiplePackageRequests(e, t) {
           return (0, r.mG)(this, void 0, void 0, function* () {
-            if (!e || 0 == e.length) return n.s.k_EResultOK;
+            if (!e || 0 == e.length) return 1;
             const s = (yield Promise.all(
-              e.map((e) =>
-                this.QueueStoreItemRequest(e, _.vn.k_EStoreItemType_Package, t),
-              ),
-            )).filter((e) => e != n.s.k_EResultOK);
-            return s.length > 0 ? s[0] : n.s.k_EResultOK;
+              e.map((e) => this.QueueStoreItemRequest(e, 1, t)),
+            )).filter((e) => 1 != e);
+            return s.length > 0 ? s[0] : 1;
           });
         }
         QueueMultipleBundleRequests(e, t) {
           return (0, r.mG)(this, void 0, void 0, function* () {
-            if (!e || 0 == e.length) return n.s.k_EResultOK;
+            if (!e || 0 == e.length) return 1;
             const s = (yield Promise.all(
-              e.map((e) =>
-                this.QueueStoreItemRequest(e, _.vn.k_EStoreItemType_Bundle, t),
-              ),
-            )).filter((e) => e != n.s.k_EResultOK);
-            return s.length > 0 ? s[0] : n.s.k_EResultOK;
+              e.map((e) => this.QueueStoreItemRequest(e, 2, t)),
+            )).filter((e) => 1 != e);
+            return s.length > 0 ? s[0] : 1;
           });
         }
         QueueMultipleTagRequests(e, t) {
           return (0, r.mG)(this, void 0, void 0, function* () {
-            if (!e || 0 == e.length) return n.s.k_EResultOK;
+            if (!e || 0 == e.length) return 1;
             const s = (yield Promise.all(
-              e.map((e) =>
-                this.QueueStoreItemRequest(e, _.vn.k_EStoreItemType_Tag, t),
-              ),
-            )).filter((e) => e != n.s.k_EResultOK);
-            return s.length > 0 ? s[0] : n.s.k_EResultOK;
+              e.map((e) => this.QueueStoreItemRequest(e, 4, t)),
+            )).filter((e) => 1 != e);
+            return s.length > 0 ? s[0] : 1;
           });
         }
         QueueMultipleCreatorRequests(e, t) {
           return (0, r.mG)(this, void 0, void 0, function* () {
-            if (!e || 0 == e.length) return n.s.k_EResultOK;
+            if (!e || 0 == e.length) return 1;
             const s = (yield Promise.all(
-              e.map((e) =>
-                this.QueueStoreItemRequest(e, _.vn.k_EStoreItemType_Creator, t),
-              ),
-            )).filter((e) => e != n.s.k_EResultOK);
-            return s.length > 0 ? s[0] : n.s.k_EResultOK;
+              e.map((e) => this.QueueStoreItemRequest(e, 5, t)),
+            )).filter((e) => 1 != e);
+            return s.length > 0 ? s[0] : 1;
           });
         }
         QueueMultipleHubCategoryRequests(e, t) {
           return (0, r.mG)(this, void 0, void 0, function* () {
-            if (!e || 0 == e.length) return n.s.k_EResultOK;
+            if (!e || 0 == e.length) return 1;
             const s = (yield Promise.all(
-              e.map((e) =>
-                this.QueueStoreItemRequest(
-                  e,
-                  _.vn.k_EStoreItemType_HubCategory,
-                  t,
-                ),
-              ),
-            )).filter((e) => e != n.s.k_EResultOK);
-            return s.length > 0 ? s[0] : n.s.k_EResultOK;
+              e.map((e) => this.QueueStoreItemRequest(e, 6, t)),
+            )).filter((e) => 1 != e);
+            return s.length > 0 ? s[0] : 1;
           });
         }
         QueueMultipleStoreItemRequests(e, t, s) {
           return (0, r.mG)(this, void 0, void 0, function* () {
-            if (!e || 0 == e.length) return n.s.k_EResultOK;
+            if (!e || 0 == e.length) return 1;
             const r = (yield Promise.all(
               e.map((e, r) => this.QueueStoreItemRequest(e, t[r], s)),
-            )).filter((e) => e != n.s.k_EResultOK);
-            return r.length > 0 ? r[0] : n.s.k_EResultOK;
+            )).filter((e) => 1 != e);
+            return r.length > 0 ? r[0] : 1;
           });
         }
         QueueStoreItemRequest(e, t, s) {
           return (0, r.mG)(this, void 0, void 0, function* () {
             if (
-              ((0, d.X)(
-                I.ValidateDataRequest(s),
+              ((0, u.X)(
+                g.ValidateDataRequest(s),
                 "Invalid Data Request: " + JSON.stringify(s),
               ),
               this.m_bActivelyResettingCache)
@@ -1705,7 +1663,7 @@
               );
             if (!e)
               return (
-                (0, d.X)(
+                (0, u.X)(
                   !e,
                   `unexpected id ${e} of zero or undefined for type ${t}`,
                 ),
@@ -1722,32 +1680,32 @@
                   () => this.FlushPendingInfo(),
                   this.k_QueueWaitUntilRequestMS,
                 ))),
-              (this.m_setPendingDataRequest = g(
+              (this.m_setPendingDataRequest = _(
                 this.m_setPendingDataRequest,
                 s,
               )),
               t)
             ) {
-              case _.vn.k_EStoreItemType_App:
+              case 0:
                 this.m_setPendingAppInfo.add(e);
                 break;
-              case _.vn.k_EStoreItemType_Bundle:
+              case 2:
                 this.m_setPendingBundleInfo.add(e);
                 break;
-              case _.vn.k_EStoreItemType_Package:
+              case 1:
                 this.m_setPendingPackageInfo.add(e);
                 break;
-              case _.vn.k_EStoreItemType_Tag:
+              case 4:
                 this.m_setPendingTagInfo.add(e);
                 break;
-              case _.vn.k_EStoreItemType_Creator:
+              case 5:
                 this.m_setPendingCreatorInfo.add(e);
                 break;
-              case _.vn.k_EStoreItemType_HubCategory:
+              case 6:
                 this.m_setPendingHubCategoryInfo.add(e);
                 break;
               default:
-                (0, d.X)(!1, `Unexpected Type ${t}`);
+                (0, u.X)(!1, `Unexpected Type ${t}`);
             }
             const i = this.m_PendingInfoPromise;
             return (
@@ -1770,8 +1728,8 @@
               s = Array.from(this.m_setPendingPackageInfo),
               r = Array.from(this.m_setPendingBundleInfo),
               i = Array.from(this.m_setPendingTagInfo),
-              n = Array.from(this.m_setPendingCreatorInfo),
-              a = Array.from(this.m_setPendingHubCategoryInfo),
+              a = Array.from(this.m_setPendingCreatorInfo),
+              n = Array.from(this.m_setPendingHubCategoryInfo),
               o = this.m_setPendingDataRequest;
             (this.m_PendingInfoPromise = void 0),
               (this.m_PendingInfoResolve = void 0),
@@ -1783,7 +1741,7 @@
               this.m_setPendingHubCategoryInfo.clear(),
               (this.m_setPendingDataRequest = {}),
               (this.m_PendingTimer = void 0),
-              this.HintLoadStoreItems(void 0, t, s, r, i, n, a, o).then((t) =>
+              this.HintLoadStoreItems(void 0, t, s, r, i, a, n, o).then((t) =>
                 e(t),
               );
           });
@@ -1835,199 +1793,144 @@
             return this.k_AlreadyResolvedOK;
           let r = null;
           switch (t) {
-            case _.vn.k_EStoreItemType_App:
+            case 0:
               r = this.m_mapAppsInFlight.get(e);
               break;
-            case _.vn.k_EStoreItemType_Package:
+            case 1:
               r = this.m_mapPackageInFlight.get(e);
               break;
-            case _.vn.k_EStoreItemType_Bundle:
+            case 2:
               r = this.m_mapBundleInFlight.get(e);
               break;
-            case _.vn.k_EStoreItemType_Tag:
+            case 4:
               r = this.m_mapTagsInFlight.get(e);
               break;
-            case _.vn.k_EStoreItemType_Creator:
+            case 5:
               r = this.m_mapCreatorsInFlight.get(e);
               break;
-            case _.vn.k_EStoreItemType_HubCategory:
+            case 6:
               r = this.m_mapHubCategoriesInFlight.get(e);
           }
-          return r && p.Z.BDataRequestContainsOtherDataRequest(r.dataRequest, s)
+          return r && m.Z.BDataRequestContainsOtherDataRequest(r.dataRequest, s)
             ? r.promise
             : null;
         }
-        HintLoadStoreItems(e, t, s, i, a, o, l, u) {
+        HintLoadStoreItems(e, t, s, i, a, n, o, u) {
           return (0, r.mG)(this, void 0, void 0, function* () {
             let r = null;
             const d = new Promise((e) => (r = e));
             let c = [],
-              m = [];
+              h = [];
             (t || []).forEach((e) => {
-              const t = this.GetPreviousSupersetLoadPromise(
-                e,
-                _.vn.k_EStoreItemType_App,
-                u,
-              );
-              if (t) m.push(t);
+              const t = this.GetPreviousSupersetLoadPromise(e, 0, u);
+              if (t) h.push(t);
               else {
-                c.push(_.oY.fromObject({ appid: e }));
-                let t = g(
-                  this.GetStoreItemDataRequest(e, _.vn.k_EStoreItemType_App),
-                  u,
-                );
+                c.push(l.oY.fromObject({ appid: e }));
+                let t = _(this.GetStoreItemDataRequest(e, 0), u);
                 const s = this.m_mapAppsInFlight.get(e);
-                (t = g(null == s ? void 0 : s.dataRequest, t)),
-                  s && m.push(s.promise),
+                (t = _(null == s ? void 0 : s.dataRequest, t)),
+                  s && h.push(s.promise),
                   this.m_mapAppsInFlight.set(e, {
-                    promise: s ? v(s.promise, d) : d,
+                    promise: s ? p(s.promise, d) : d,
                     dataRequest: t,
                   });
               }
             }),
               (s || []).forEach((e) => {
-                const t = this.GetPreviousSupersetLoadPromise(
-                  e,
-                  _.vn.k_EStoreItemType_Package,
-                  u,
-                );
-                if (t) m.push(t);
+                const t = this.GetPreviousSupersetLoadPromise(e, 1, u);
+                if (t) h.push(t);
                 else {
-                  c.push(_.oY.fromObject({ packageid: e }));
-                  let t = g(
-                    this.GetStoreItemDataRequest(
-                      e,
-                      _.vn.k_EStoreItemType_Package,
-                    ),
-                    u,
-                  );
+                  c.push(l.oY.fromObject({ packageid: e }));
+                  let t = _(this.GetStoreItemDataRequest(e, 1), u);
                   const s = this.m_mapPackageInFlight.get(e);
-                  (t = g(null == s ? void 0 : s.dataRequest, t)),
-                    s && m.push(s.promise),
+                  (t = _(null == s ? void 0 : s.dataRequest, t)),
+                    s && h.push(s.promise),
                     this.m_mapPackageInFlight.set(e, {
-                      promise: s ? v(s.promise, d) : d,
+                      promise: s ? p(s.promise, d) : d,
                       dataRequest: t,
                     });
                 }
               }),
               (i || []).forEach((e) => {
-                const t = this.GetPreviousSupersetLoadPromise(
-                  e,
-                  _.vn.k_EStoreItemType_Bundle,
-                  u,
-                );
-                if (t) m.push(t);
+                const t = this.GetPreviousSupersetLoadPromise(e, 2, u);
+                if (t) h.push(t);
                 else {
-                  c.push(_.oY.fromObject({ bundleid: e }));
-                  let t = g(
-                    this.GetStoreItemDataRequest(
-                      e,
-                      _.vn.k_EStoreItemType_Bundle,
-                    ),
-                    u,
-                  );
+                  c.push(l.oY.fromObject({ bundleid: e }));
+                  let t = _(this.GetStoreItemDataRequest(e, 2), u);
                   const s = this.m_mapBundleInFlight.get(e);
-                  (t = g(null == s ? void 0 : s.dataRequest, t)),
-                    s && m.push(s.promise),
+                  (t = _(null == s ? void 0 : s.dataRequest, t)),
+                    s && h.push(s.promise),
                     this.m_mapBundleInFlight.set(e, {
-                      promise: s ? v(s.promise, d) : d,
+                      promise: s ? p(s.promise, d) : d,
                       dataRequest: t,
                     });
                 }
               }),
               (a || []).forEach((e) => {
-                const t = this.GetPreviousSupersetLoadPromise(
-                  e,
-                  _.vn.k_EStoreItemType_Tag,
-                  u,
-                );
-                if (t) m.push(t);
+                const t = this.GetPreviousSupersetLoadPromise(e, 4, u);
+                if (t) h.push(t);
                 else {
-                  c.push(_.oY.fromObject({ tagid: e }));
-                  let t = g(
-                    this.GetStoreItemDataRequest(e, _.vn.k_EStoreItemType_Tag),
-                    u,
-                  );
+                  c.push(l.oY.fromObject({ tagid: e }));
+                  let t = _(this.GetStoreItemDataRequest(e, 4), u);
                   const s = this.m_mapTagsInFlight.get(e);
-                  (t = g(null == s ? void 0 : s.dataRequest, t)),
-                    s && m.push(s.promise),
+                  (t = _(null == s ? void 0 : s.dataRequest, t)),
+                    s && h.push(s.promise),
                     this.m_mapTagsInFlight.set(e, {
-                      promise: s ? v(s.promise, d) : d,
+                      promise: s ? p(s.promise, d) : d,
+                      dataRequest: t,
+                    });
+                }
+              }),
+              (n || []).forEach((e) => {
+                const t = this.GetPreviousSupersetLoadPromise(e, 5, u);
+                if (t) h.push(t);
+                else {
+                  c.push(l.oY.fromObject({ creatorid: e }));
+                  let t = _(this.GetStoreItemDataRequest(e, 5), u);
+                  const s = this.m_mapCreatorsInFlight.get(e);
+                  (t = _(null == s ? void 0 : s.dataRequest, t)),
+                    s && h.push(s.promise),
+                    this.m_mapCreatorsInFlight.set(e, {
+                      promise: s ? p(s.promise, d) : d,
                       dataRequest: t,
                     });
                 }
               }),
               (o || []).forEach((e) => {
-                const t = this.GetPreviousSupersetLoadPromise(
-                  e,
-                  _.vn.k_EStoreItemType_Creator,
-                  u,
-                );
-                if (t) m.push(t);
+                const t = this.GetPreviousSupersetLoadPromise(e, 6, u);
+                if (t) h.push(t);
                 else {
-                  c.push(_.oY.fromObject({ creatorid: e }));
-                  let t = g(
-                    this.GetStoreItemDataRequest(
-                      e,
-                      _.vn.k_EStoreItemType_Creator,
-                    ),
-                    u,
-                  );
-                  const s = this.m_mapCreatorsInFlight.get(e);
-                  (t = g(null == s ? void 0 : s.dataRequest, t)),
-                    s && m.push(s.promise),
-                    this.m_mapCreatorsInFlight.set(e, {
-                      promise: s ? v(s.promise, d) : d,
-                      dataRequest: t,
-                    });
-                }
-              }),
-              (l || []).forEach((e) => {
-                const t = this.GetPreviousSupersetLoadPromise(
-                  e,
-                  _.vn.k_EStoreItemType_HubCategory,
-                  u,
-                );
-                if (t) m.push(t);
-                else {
-                  c.push(_.oY.fromObject({ hubcategoryid: e }));
-                  let t = g(
-                    this.GetStoreItemDataRequest(
-                      e,
-                      _.vn.k_EStoreItemType_HubCategory,
-                    ),
-                    u,
-                  );
+                  c.push(l.oY.fromObject({ hubcategoryid: e }));
+                  let t = _(this.GetStoreItemDataRequest(e, 6), u);
                   const s = this.m_mapHubCategoriesInFlight.get(e);
-                  (t = g(null == s ? void 0 : s.dataRequest, t)),
-                    s && m.push(s.promise),
+                  (t = _(null == s ? void 0 : s.dataRequest, t)),
+                    s && h.push(s.promise),
                     this.m_mapHubCategoriesInFlight.set(e, {
-                      promise: s ? v(s.promise, d) : d,
+                      promise: s ? p(s.promise, d) : d,
                       dataRequest: t,
                     });
                 }
               });
-            let h = n.s.k_EResultOK;
+            let m = 1;
             if (
               (c.length > 0 &&
-                (h = yield this.InternalHandleLoadStoreItems(e, c, u)),
-              r(h),
-              m.length > 0)
+                (m = yield this.InternalHandleLoadStoreItems(e, c, u)),
+              r(m),
+              h.length > 0)
             ) {
-              const e = yield Promise.all(m);
-              for (const t of e)
-                t != n.s.k_EResultOK && h == n.s.k_EResultOK && (h = t);
+              const e = yield Promise.all(h);
+              for (const t of e) 1 != t && 1 == m && (m = t);
             }
             return (
               (t || []).forEach((e) => this.m_mapAppsInFlight.delete(e)),
               (s || []).forEach((e) => this.m_mapPackageInFlight.delete(e)),
               (i || []).forEach((e) => this.m_mapBundleInFlight.delete(e)),
               (a || []).forEach((e) => this.m_mapTagsInFlight.delete(e)),
-              (o || []).forEach((e) => this.m_mapCreatorsInFlight.delete(e)),
-              (l || []).forEach((e) =>
+              (n || []).forEach((e) => this.m_mapCreatorsInFlight.delete(e)),
+              (o || []).forEach((e) =>
                 this.m_mapHubCategoriesInFlight.delete(e),
               ),
-              h
+              m
             );
           });
         }
@@ -2057,35 +1960,35 @@
           let t = e.slice();
           return (
             t.sort((e, t) => {
-              var s, r, i, n, a, o, l, u, _, d, c, m;
-              let h = null !== (s = e.appid()) && void 0 !== s ? s : 0,
+              var s, r, i, a, n, o, l, u, d, c, h, m;
+              let _ = null !== (s = e.appid()) && void 0 !== s ? s : 0,
                 p = null !== (r = t.appid()) && void 0 !== r ? r : 0;
-              if (h != p) return h - p;
+              if (_ != p) return _ - p;
               let g = null !== (i = e.packageid()) && void 0 !== i ? i : 0,
-                v = null !== (n = t.packageid()) && void 0 !== n ? n : 0;
+                v = null !== (a = t.packageid()) && void 0 !== a ? a : 0;
               if (g != v) return g - v;
-              let I = null !== (a = e.bundleid()) && void 0 !== a ? a : 0,
-                k = null !== (o = t.bundleid()) && void 0 !== o ? o : 0;
-              if (I != k) return I - k;
-              let f = null !== (l = e.tagid()) && void 0 !== l ? l : 0,
-                y = null !== (u = t.tagid()) && void 0 !== u ? u : 0;
-              if (f != y) return f - y;
-              let R = null !== (_ = e.creatorid()) && void 0 !== _ ? _ : 0,
-                S = null !== (d = t.creatorid()) && void 0 !== d ? d : 0;
-              if (R != S) return R - S;
-              let b = null !== (c = e.hubcategoryid()) && void 0 !== c ? c : 0,
-                T = null !== (m = t.hubcategoryid()) && void 0 !== m ? m : 0;
-              return b != T ? b - T : 0;
+              let f = null !== (n = e.bundleid()) && void 0 !== n ? n : 0,
+                I = null !== (o = t.bundleid()) && void 0 !== o ? o : 0;
+              if (f != I) return f - I;
+              let R = null !== (l = e.tagid()) && void 0 !== l ? l : 0,
+                b = null !== (u = t.tagid()) && void 0 !== u ? u : 0;
+              if (R != b) return R - b;
+              let C = null !== (d = e.creatorid()) && void 0 !== d ? d : 0,
+                y = null !== (c = t.creatorid()) && void 0 !== c ? c : 0;
+              if (C != y) return C - y;
+              let S = null !== (h = e.hubcategoryid()) && void 0 !== h ? h : 0,
+                k = null !== (m = t.hubcategoryid()) && void 0 !== m ? m : 0;
+              return S != k ? S - k : 0;
             }),
             t
           );
         }
         InternalHandleLoadStoreItems(e, t, s) {
           return (0, r.mG)(this, void 0, void 0, function* () {
-            let r = n.s.k_EResultOK;
+            let r = 1;
             e ||
               (this.GetSteamInterface() ||
-                this.SetSteamInterface(new l.J(m.De.WEBAPI_BASE_URL)),
+                this.SetSteamInterface(new n.J(c.De.WEBAPI_BASE_URL)),
               (e = this.GetSteamInterface())),
               (t = this.SortStoreItems(t)),
               s.include_included_items &&
@@ -2095,103 +1998,101 @@
                     { include_included_items: !1 },
                   ),
                 }));
-            const d = new Array();
+            const u = new Array();
             try {
-              const l = [];
+              const n = [];
               for (; t.length > 0; ) {
                 const r = t.splice(0, this.k_nMaxBatchSize);
-                if ((d.push(r), this.m_bUsePartnerAPI)) {
-                  const t = o.gA.Init(u.z);
+                if ((u.push(r), this.m_bUsePartnerAPI)) {
+                  const t = a.gA.Init(o.z);
                   t.Body().set_include_unpublished(!1);
                   const i = t.Body().request(!0);
                   i.set_context((0, h.Fq)(this.m_bUsePartnerAPI)),
-                    i.set_data_request(_.Qn.fromObject(s)),
+                    i.set_data_request(l.Qn.fromObject(s)),
                     i.set_ids(r),
-                    l.push(u.n.GetItems(e.GetServiceTransport(), t));
+                    n.push(o.n.GetItems(e.GetServiceTransport(), t));
                 } else {
-                  const t = o.gA.Init(_.eK);
+                  const t = a.gA.Init(l.eK);
                   (0, h.pA)(t, this.m_bUsePartnerAPI),
                     (0, h.De)(t, s),
                     t.Body().set_ids(r),
-                    l.push(_.VJ.GetItems(e.GetAnonymousServiceTransport(), t));
+                    n.push(l.VJ.GetItems(e.GetAnonymousServiceTransport(), t));
                 }
               }
-              (yield Promise.all(l)).forEach((e, o) => {
-                e.GetEResult() == n.s.k_EResultOK
+              (yield Promise.all(n)).forEach((e, a) => {
+                1 == e.GetEResult()
                   ? e
                       .Body()
                       .store_items()
                       .forEach((r) => {
                         const a = r.id(),
-                          o = r.item_type();
-                        let l =
-                            this.m_bReturnUnavailableItems &&
-                            r.success() == n.s.k_EResultAccessDenied,
-                          u =
-                            r.success() == n.s.k_EResultOK &&
-                            !this.BIsStoreItemMissing(a, o);
-                        if (l || u) this.ReadItem(r, s);
+                          n = r.item_type();
+                        let o =
+                            this.m_bReturnUnavailableItems && 15 == r.success(),
+                          l =
+                            1 == r.success() && !this.BIsStoreItemMissing(a, n);
+                        if (o || l) this.ReadItem(r, s);
                         else {
                           switch (
-                            ("dev" == m.De.WEB_UNIVERSE &&
+                            ("dev" == c.De.WEB_UNIVERSE &&
                               console.warn(
-                                `Failed to load ${a} type ${o} with error ${r.success()}`,
+                                `Failed to load ${a} type ${n} with error ${r.success()}`,
                                 r,
                               ),
-                            o)
+                            n)
                           ) {
-                            case _.vn.k_EStoreItemType_App:
+                            case 0:
                               this.m_setUnavailableApps.add(a),
                                 this.m_mapApps.delete(a);
                               break;
-                            case _.vn.k_EStoreItemType_Package:
+                            case 1:
                               this.m_setUnavailablePackages.add(a),
                                 this.m_mapPackages.delete(a);
                               break;
-                            case _.vn.k_EStoreItemType_Bundle:
+                            case 2:
                               this.m_setUnavailableBundles.add(a),
                                 this.m_mapBundles.delete(a);
                               break;
-                            case _.vn.k_EStoreItemType_Tag:
+                            case 4:
                               this.m_setUnavailableTags.add(a),
                                 this.m_mapTags.delete(a);
                               break;
-                            case _.vn.k_EStoreItemType_Creator:
+                            case 5:
                               this.m_setUnavailableCreators.add(a),
                                 this.m_mapCreators.delete(a);
                               break;
-                            case _.vn.k_EStoreItemType_HubCategory:
+                            case 6:
                               this.m_setUnavailableHubCategories.add(a),
                                 this.m_mapHubCategories.delete(a);
                               break;
                             default:
                               console.error(
                                 "CStoreItemCache.InternalHandleLoadStoreItems unexpected item_type in response " +
-                                  o +
+                                  n +
                                   " " +
                                   a,
                               );
                           }
                           if (r.unvailable_for_country_restriction())
-                            switch (o) {
-                              case _.vn.k_EStoreItemType_App:
+                            switch (n) {
+                              case 0:
                                 this.m_setUnavailableDueToCountryRestrictionApps.add(
                                   a,
                                 );
                                 break;
-                              case _.vn.k_EStoreItemType_Package:
+                              case 1:
                                 this.m_setUnavailableDueToCountryRestrictionPackages.add(
                                   a,
                                 );
                                 break;
-                              case _.vn.k_EStoreItemType_Bundle:
+                              case 2:
                                 this.m_setUnavailableDueToCountryRestrictionBundles.add(
                                   a,
                                 );
                                 break;
-                              case _.vn.k_EStoreItemType_Tag:
-                              case _.vn.k_EStoreItemType_Creator:
-                              case _.vn.k_EStoreItemType_HubCategory:
+                              case 4:
+                              case 5:
+                              case 6:
                                 console.error(
                                   "CStoreItemCache::InternalHandleLoadStoreItems - tags, creators or categories don't have country restrictions. eResult: " +
                                     e.GetEResult() +
@@ -2209,21 +2110,20 @@
                         e.Hdr().error_message(),
                       (0, i.ZN)(t),
                     ),
-                    (e.Hdr().transport_error() == a.k$.k_ETransportOK ||
-                      m.De.FROM_WEB) &&
-                      this.MarkStoreItemIDUnavailable(d[o]),
-                    r == n.s.k_EResultOK && (r = e.GetEResult()));
+                    (1 == e.Hdr().transport_error() || c.De.FROM_WEB) &&
+                      this.MarkStoreItemIDUnavailable(u[a]),
+                    1 == r && (r = e.GetEResult()));
               });
             } catch (e) {
-              const t = (0, c.l)(e);
+              const t = (0, d.l)(e);
               return (
                 console.error(
                   "CStoreItemCache::InternalHandleLoadStoreItems failed: " +
                     t.strErrorMsg,
                   t,
                 ),
-                d.forEach((e) => this.MarkStoreItemIDUnavailable(e)),
-                n.s.k_EResultUnexpectedError
+                u.forEach((e) => this.MarkStoreItemIDUnavailable(e)),
+                79
               );
             }
             return r;
@@ -2232,22 +2132,22 @@
         GetMapForType(e) {
           let t;
           switch (e) {
-            case _.vn.k_EStoreItemType_App:
+            case 0:
               t = this.m_mapApps;
               break;
-            case _.vn.k_EStoreItemType_Bundle:
+            case 2:
               t = this.m_mapBundles;
               break;
-            case _.vn.k_EStoreItemType_Package:
+            case 1:
               t = this.m_mapPackages;
               break;
-            case _.vn.k_EStoreItemType_Tag:
+            case 4:
               t = this.m_mapTags;
               break;
-            case _.vn.k_EStoreItemType_Creator:
+            case 5:
               t = this.m_mapCreators;
               break;
-            case _.vn.k_EStoreItemType_HubCategory:
+            case 6:
               t = this.m_mapHubCategories;
               break;
             default:
@@ -2262,11 +2162,7 @@
           );
         }
         GetStoreItem(e, t) {
-          if (
-            t == _.vn.k_EStoreItemType_Invalid ||
-            t == _.vn.k_EStoreItemType_Mtx
-          )
-            return;
+          if (-1 == t || 3 == t) return;
           const s = this.GetMapForType(t);
           return null == s ? void 0 : s.get(e);
         }
@@ -2289,54 +2185,54 @@
           );
         }
         BHasApp(e, t) {
-          return this.BHasStoreItem(e, _.vn.k_EStoreItemType_App, t);
+          return this.BHasStoreItem(e, 0, t);
         }
         GetApp(e) {
-          return this.GetStoreItem(e, _.vn.k_EStoreItemType_App);
+          return this.GetStoreItem(e, 0);
         }
         BHasPackage(e, t) {
-          return this.BHasStoreItem(e, _.vn.k_EStoreItemType_Package, t);
+          return this.BHasStoreItem(e, 1, t);
         }
         GetPackage(e) {
-          return this.GetStoreItem(e, _.vn.k_EStoreItemType_Package);
+          return this.GetStoreItem(e, 1);
         }
         BHasBundle(e, t) {
-          return this.BHasStoreItem(e, _.vn.k_EStoreItemType_Bundle, t);
+          return this.BHasStoreItem(e, 2, t);
         }
         GetBundle(e) {
-          return this.GetStoreItem(e, _.vn.k_EStoreItemType_Bundle);
+          return this.GetStoreItem(e, 2);
         }
         BHasTag(e, t) {
-          return this.BHasStoreItem(e, _.vn.k_EStoreItemType_Tag, t);
+          return this.BHasStoreItem(e, 4, t);
         }
         GetTag(e) {
-          return this.GetStoreItem(e, _.vn.k_EStoreItemType_Tag);
+          return this.GetStoreItem(e, 4);
         }
         BHasCreator(e, t) {
-          return this.BHasStoreItem(e, _.vn.k_EStoreItemType_Creator, t);
+          return this.BHasStoreItem(e, 5, t);
         }
         GetCreator(e) {
-          return this.GetStoreItem(e, _.vn.k_EStoreItemType_Creator);
+          return this.GetStoreItem(e, 5);
         }
         BHasHubCategory(e, t) {
-          return this.BHasStoreItem(e, _.vn.k_EStoreItemType_HubCategory, t);
+          return this.BHasStoreItem(e, 6, t);
         }
         GetHubCategory(e) {
-          return this.GetStoreItem(e, _.vn.k_EStoreItemType_HubCategory);
+          return this.GetStoreItem(e, 6);
         }
         BIsStoreItemMissing(e, t) {
           switch (t) {
-            case _.vn.k_EStoreItemType_App:
+            case 0:
               return this.BIsAppMissing(e);
-            case _.vn.k_EStoreItemType_Package:
+            case 1:
               return this.BIsPackageMissing(e);
-            case _.vn.k_EStoreItemType_Bundle:
+            case 2:
               return this.BIsBundleMissing(e);
-            case _.vn.k_EStoreItemType_Tag:
+            case 4:
               return this.BIsTagMissing(e);
-            case _.vn.k_EStoreItemType_Creator:
+            case 5:
               return this.BIsCreatorMissing(e);
-            case _.vn.k_EStoreItemType_HubCategory:
+            case 6:
               return this.BIsHubCategoryMissing(e);
             default:
               return console.error("BStoreItemMissing invalid type", t), !0;
@@ -2362,15 +2258,15 @@
         }
         BIsStoreItemUnavailableDueToCountryRestriction(e, t) {
           switch (t) {
-            case _.vn.k_EStoreItemType_App:
+            case 0:
               return this.BIsAppUnavailableDueToCountryRestriction(e);
-            case _.vn.k_EStoreItemType_Package:
+            case 1:
               return this.BIsPackageUnavailableDueToCountryRestriction(e);
-            case _.vn.k_EStoreItemType_Bundle:
+            case 2:
               return this.BIsBundleUnavailableDueToCountryRestriction(e);
-            case _.vn.k_EStoreItemType_Tag:
-            case _.vn.k_EStoreItemType_Creator:
-            case _.vn.k_EStoreItemType_HubCategory:
+            case 4:
+            case 5:
+            case 6:
               return (
                 console.error(
                   "BIsStoreItemUnavailableDueToCountryRestriction - tags, creators or categories don't have country restrictions. type: ",
@@ -2400,22 +2296,22 @@
           const s = e.item_type();
           let r = null;
           switch (s) {
-            case _.vn.k_EStoreItemType_App:
+            case 0:
               r = this.m_mapApps;
               break;
-            case _.vn.k_EStoreItemType_Package:
+            case 1:
               r = this.m_mapPackages;
               break;
-            case _.vn.k_EStoreItemType_Bundle:
+            case 2:
               r = this.m_mapBundles;
               break;
-            case _.vn.k_EStoreItemType_Tag:
+            case 4:
               r = this.m_mapTags;
               break;
-            case _.vn.k_EStoreItemType_Creator:
+            case 5:
               r = this.m_mapCreators;
               break;
-            case _.vn.k_EStoreItemType_HubCategory:
+            case 6:
               r = this.m_mapHubCategories;
               break;
             default:
@@ -2423,7 +2319,7 @@
           }
           let i = r.get(e.id());
           if (
-            (i ? i.MergeData(e, t) : ((i = new p.Z(e, t)), r.set(e.id(), i)),
+            (i ? i.MergeData(e, t) : ((i = new m.Z(e, t)), r.set(e.id(), i)),
             t.include_included_items && e.included_items(!1))
           ) {
             for (const s of e.included_items().included_apps())
@@ -2434,10 +2330,10 @@
           return i;
         }
       }
-      (I.k_DataRequest_CommonOnly = {}),
-        (I.k_DataRequest_BasicInfo = { include_basic_info: !0 }),
-        (I.k_DataRequest_Assets = { include_assets: !0 }),
-        (I.k_DataRequest_IncludeAll = {
+      (g.k_DataRequest_CommonOnly = {}),
+        (g.k_DataRequest_BasicInfo = { include_basic_info: !0 }),
+        (g.k_DataRequest_Assets = { include_assets: !0 }),
+        (g.k_DataRequest_IncludeAll = {
           include_assets: !0,
           include_release: !0,
           include_platforms: !0,
@@ -2450,95 +2346,70 @@
           include_basic_info: !0,
           include_supported_languages: !0,
         });
-      const k = I;
+      const v = g;
     },
     85886: (e, t, s) => {
       "use strict";
-      s.d(t, {
-        Bl: () => d,
-        Bo: () => h,
-        D3: () => o,
-        GV: () => a,
-        Hy: () => _,
-        RB: () => R,
-        TM: () => u,
-        Uc: () => k,
-        Xm: () => c,
-        YF: () => v,
-        bg: () => f,
-        hQ: () => I,
-        mm: () => y,
-        qE: () => l,
-        t9: () => m,
-        u$: () => g,
-        y: () => p,
-      });
-      var r,
-        i = s(44208),
-        n = s(68562);
-      function a(e) {
-        return "app" == e
-          ? n.vn.k_EStoreItemType_App
-          : "sub" == e
-          ? n.vn.k_EStoreItemType_Package
-          : n.vn.k_EStoreItemType_Bundle;
+      var r;
+      function i(e) {
+        return "app" == e ? 0 : "sub" == e ? 1 : 2;
       }
-      function o(e, t = n.vn.k_EStoreItemType_Invalid) {
+      function a(e, t = -1) {
         return (null == e ? void 0 : e.appid)
-          ? n.vn.k_EStoreItemType_App
+          ? 0
           : (null == e ? void 0 : e.packageid)
-          ? n.vn.k_EStoreItemType_Package
+          ? 1
           : (null == e ? void 0 : e.bundleid)
-          ? n.vn.k_EStoreItemType_Bundle
+          ? 2
           : (null == e ? void 0 : e.creatorid)
-          ? n.vn.k_EStoreItemType_Creator
+          ? 5
           : (null == e ? void 0 : e.hubcategoryid)
-          ? n.vn.k_EStoreItemType_HubCategory
+          ? 6
           : (null == e ? void 0 : e.tagid)
-          ? n.vn.k_EStoreItemType_Tag
+          ? 4
           : t;
       }
-      function l(e) {
+      function n(e) {
         switch (e) {
-          case n.vn.k_EStoreItemType_App:
+          case 0:
             return "app";
-          case n.vn.k_EStoreItemType_Bundle:
+          case 2:
             return "bundle";
-          case n.vn.k_EStoreItemType_Package:
+          case 1:
             return "package";
-          case n.vn.k_EStoreItemType_Mtx:
+          case 3:
             return "mtx";
         }
         return "invalid";
       }
-      function u(e) {
+      function o(e) {
         switch (e) {
           case "sub":
-            return n.vn.k_EStoreItemType_Package;
+            return 1;
           case "bundle":
-            return n.vn.k_EStoreItemType_Bundle;
+            return 2;
           default:
-            return n.vn.k_EStoreItemType_App;
+            return 0;
         }
       }
-      function _(e) {
+      function l(e) {
         switch (e) {
-          case n.vn.k_EStoreItemType_Bundle:
+          case 2:
             return "bundle";
-          case n.vn.k_EStoreItemType_Package:
+          case 1:
             return "sub";
           default:
             return "app";
         }
       }
-      function d(e, t, s) {
+      function u(e, t, s) {
         return e
           ? { id: e, item_type: "app" }
           : t
           ? { id: t, item_type: "sub" }
           : { id: s, item_type: "bundle" };
       }
-      function c(e) {
+      function d(e) {
         return "app" == (null == e ? void 0 : e.item_type)
           ? { appid: e.id }
           : "sub" == (null == e ? void 0 : e.item_type)
@@ -2547,12 +2418,12 @@
           ? { bundleid: e.id }
           : null;
       }
-      function m(e, t) {
-        return t == n.vn.k_EStoreItemType_App
+      function c(e, t) {
+        return 0 == t
           ? { id: e, item_type: "app" }
-          : t == n.vn.k_EStoreItemType_Package
+          : 1 == t
           ? { id: e, item_type: "sub" }
-          : t == n.vn.k_EStoreItemType_Bundle
+          : 2 == t
           ? { id: e, item_type: "bundle" }
           : (console.error(
               "ConvertEStoreItemTypeToStoreItemKey unexpected item type: ",
@@ -2561,15 +2432,15 @@
             { id: 0, item_type: "app" });
       }
       function h(e, t) {
-        return t == n.vn.k_EStoreItemType_App
+        return 0 == t
           ? { appid: e }
-          : t == n.vn.k_EStoreItemType_Package
+          : 1 == t
           ? { packageid: e }
-          : t == n.vn.k_EStoreItemType_Bundle
+          : 2 == t
           ? { bundleid: e }
           : null;
       }
-      function p(e) {
+      function m(e) {
         return (null == e ? void 0 : e.appid)
           ? "a" + e.appid
           : (null == e ? void 0 : e.packageid)
@@ -2578,7 +2449,7 @@
           ? "b" + e.bundleid
           : "unknown0";
       }
-      function g(e) {
+      function _(e) {
         return (null == e ? void 0 : e.appid)
           ? e.appid
           : (null == e ? void 0 : e.packageid)
@@ -2593,16 +2464,16 @@
           ? e.tagid
           : 0;
       }
-      function v(e) {
+      function p(e) {
         return "app" == (null == e ? void 0 : e.item_type)
-          ? n.vn.k_EStoreItemType_App
+          ? 0
           : "sub" == (null == e ? void 0 : e.item_type)
-          ? n.vn.k_EStoreItemType_Package
+          ? 1
           : "bundle" == (null == e ? void 0 : e.item_type)
-          ? n.vn.k_EStoreItemType_Bundle
-          : n.vn.k_EStoreItemType_Invalid;
+          ? 2
+          : -1;
       }
-      function I(e) {
+      function g(e) {
         const t = Number.parseInt(e.substring(1));
         switch (e.charAt(0)) {
           case "a":
@@ -2613,78 +2484,86 @@
             return { bundleid: t };
         }
       }
-      function k(e) {
+      function v(e) {
         return "application" == e
-          ? n.vn.k_EStoreItemType_App
+          ? 0
           : "bundle" == e
-          ? n.vn.k_EStoreItemType_Bundle
+          ? 2
           : "package" == e
-          ? n.vn.k_EStoreItemType_Package
-          : n.vn.k_EStoreItemType_Invalid;
+          ? 1
+          : -1;
       }
       function f(e) {
-        return e == n.vn.k_EStoreItemType_App
+        return 0 == e
           ? "application"
-          : e == n.vn.k_EStoreItemType_Package
+          : 1 == e
           ? "package"
-          : e == n.vn.k_EStoreItemType_Bundle
+          : 2 == e
           ? "bundle"
           : null;
       }
-      function y(e) {
-        return e == i.xf.k_EMarketingMessageAppAssociation
-          ? n.vn.k_EStoreItemType_App
-          : e == i.xf.k_EMarketingMessageBundleAssociation
-          ? n.vn.k_EStoreItemType_Bundle
-          : e == i.xf.k_EMarketingMessageSubscriptionAssociation
-          ? n.vn.k_EStoreItemType_Package
-          : n.vn.k_EStoreItemType_Invalid;
+      function I(e) {
+        return 1 == e ? 0 : 5 == e ? 2 : 2 == e ? 1 : -1;
       }
       function R(e) {
-        return e == n.vn.k_EStoreItemType_App
-          ? i.xf.k_EMarketingMessageAppAssociation
-          : e == n.vn.k_EStoreItemType_Package
-          ? i.xf.k_EMarketingMessageSubscriptionAssociation
-          : e == n.vn.k_EStoreItemType_Bundle
-          ? i.xf.k_EMarketingMessageBundleAssociation
-          : null;
+        return 0 == e ? 1 : 1 == e ? 2 : 2 == e ? 5 : null;
       }
-      !(function (e) {
-        (e[(e.k_NotRejected = -1)] = "k_NotRejected"),
-          (e[(e.k_RejectNoMainCap = 0)] = "k_RejectNoMainCap"),
-          (e[(e.k_RejectWrongPlatform = 1)] = "k_RejectWrongPlatform"),
-          (e[(e.k_RejectNoComingSoon = 2)] = "k_RejectNoComingSoon"),
-          (e[(e.k_RejectNoVR = 3)] = "k_RejectNoVR"),
-          (e[(e.k_RejectCreatorClan = 4)] = "k_RejectCreatorClan"),
-          (e[(e.k_RejectIgnoredGame = 5)] = "k_RejectIgnoredGame"),
-          (e[(e.k_RejectSupportedLanguage = 6)] = "k_RejectSupportedLanguage"),
-          (e[(e.k_RejectNotLoaded = 7)] = "k_RejectNotLoaded"),
-          (e[(e.k_RejectIgnoreGameTags = 8)] = "k_RejectIgnoreGameTags"),
-          (e[(e.k_RejectIgnoreContentDescriptors = 9)] =
-            "k_RejectIgnoreContentDescriptors"),
-          (e[(e.k_RejectEarlyAccess = 10)] = "k_RejectEarlyAccess"),
-          (e[(e.k_RejectSoftware = 11)] = "k_RejectSoftware"),
-          (e[(e.k_RejectDLC = 12)] = "k_RejectDLC"),
-          (e[(e.k_RejectInLibrary = 13)] = "k_RejectInLibrary"),
-          (e[(e.k_RejectNotInLibrary = 14)] = "k_RejectNotInLibrary"),
-          (e[(e.k_RejectVideo = 15)] = "k_RejectVideo"),
-          (e[(e.k_RejectNoDiscount = 16)] = "k_RejectNoDiscount"),
-          (e[(e.k_RejectAlreadyDisplayed = 17)] = "k_RejectAlreadyDisplayed");
-      })(r || (r = {}));
+      s.d(t, {
+        Bl: () => u,
+        Bo: () => h,
+        D3: () => a,
+        GV: () => i,
+        Hy: () => l,
+        RB: () => R,
+        TM: () => o,
+        Uc: () => v,
+        Xm: () => d,
+        YF: () => p,
+        bg: () => f,
+        hQ: () => g,
+        mm: () => I,
+        qE: () => n,
+        t9: () => c,
+        u$: () => _,
+        y: () => m,
+      }),
+        (function (e) {
+          (e[(e.k_NotRejected = -1)] = "k_NotRejected"),
+            (e[(e.k_RejectNoMainCap = 0)] = "k_RejectNoMainCap"),
+            (e[(e.k_RejectWrongPlatform = 1)] = "k_RejectWrongPlatform"),
+            (e[(e.k_RejectNoComingSoon = 2)] = "k_RejectNoComingSoon"),
+            (e[(e.k_RejectNoVR = 3)] = "k_RejectNoVR"),
+            (e[(e.k_RejectCreatorClan = 4)] = "k_RejectCreatorClan"),
+            (e[(e.k_RejectIgnoredGame = 5)] = "k_RejectIgnoredGame"),
+            (e[(e.k_RejectSupportedLanguage = 6)] =
+              "k_RejectSupportedLanguage"),
+            (e[(e.k_RejectNotLoaded = 7)] = "k_RejectNotLoaded"),
+            (e[(e.k_RejectIgnoreGameTags = 8)] = "k_RejectIgnoreGameTags"),
+            (e[(e.k_RejectIgnoreContentDescriptors = 9)] =
+              "k_RejectIgnoreContentDescriptors"),
+            (e[(e.k_RejectEarlyAccess = 10)] = "k_RejectEarlyAccess"),
+            (e[(e.k_RejectSoftware = 11)] = "k_RejectSoftware"),
+            (e[(e.k_RejectDLC = 12)] = "k_RejectDLC"),
+            (e[(e.k_RejectInLibrary = 13)] = "k_RejectInLibrary"),
+            (e[(e.k_RejectNotInLibrary = 14)] = "k_RejectNotInLibrary"),
+            (e[(e.k_RejectVideo = 15)] = "k_RejectVideo"),
+            (e[(e.k_RejectNoDiscount = 16)] = "k_RejectNoDiscount"),
+            (e[(e.k_RejectAlreadyDisplayed = 17)] = "k_RejectAlreadyDisplayed");
+        })(r || (r = {}));
     },
     81500: (e, t, s) => {
       "use strict";
-      s.d(t, { M: () => a, y: () => n });
+      s.d(t, { M: () => n, y: () => a });
       var r = s(14826),
         i = s(72120);
-      function n(e) {
-        return a(
+      function a(e) {
+        return n(
           e.coming_soon_display,
           e.steam_release_date,
           e.custom_release_date_message,
         );
       }
-      function a(e, t, s) {
+      function n(e, t, s) {
         switch (e) {
           case "date_full":
             return (0, r.vX)(t);
@@ -2705,14 +2584,14 @@
     },
     58218: (e, t, s) => {
       "use strict";
-      s.d(t, { T: () => a });
+      s.d(t, { T: () => n });
       var r = s(52868),
         i = s.n(r),
-        n = s(89526);
-      function a(e) {
-        const t = n.useRef(i().CancelToken.source());
+        a = s(89526);
+      function n(e) {
+        const t = a.useRef(i().CancelToken.source());
         return (
-          n.useEffect(() => {
+          a.useEffect(() => {
             const s = t.current;
             return () => s.cancel(e ? `${e}: unmounting` : "unmounting");
           }, [e]),
@@ -2722,17 +2601,13 @@
     },
     23217: (e, t, s) => {
       "use strict";
-      s.d(t, { l: () => o });
-      var r = s(42735),
-        i = s(52868),
-        n = s.n(i),
-        a = s(67328);
-      function o(e) {
-        if (n().isCancel(e))
-          return {
-            strErrorMsg: "Action Cancelled:" + e,
-            errorCode: r.s.k_EResultCancelled,
-          };
+      s.d(t, { l: () => n });
+      var r = s(52868),
+        i = s.n(r),
+        a = s(68333);
+      function n(e) {
+        if (i().isCancel(e))
+          return { strErrorMsg: "Action Cancelled:" + e, errorCode: 52 };
         if (
           void 0 !== e.response &&
           e.response.data &&
@@ -2795,12 +2670,9 @@
         return "object" == typeof e && "status" in e
           ? {
               strErrorMsg: "Unknown Error: " + e + "\nStatus Code:" + e.status,
-              errorCode: r.s.k_EResultFail,
+              errorCode: 2,
             }
-          : {
-              strErrorMsg: "Unknown Error: " + e,
-              errorCode: r.s.k_EResultFail,
-            };
+          : { strErrorMsg: "Unknown Error: " + e, errorCode: 2 };
       }
     },
   },

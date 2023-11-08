@@ -986,7 +986,7 @@
                       : typeof e;
                   })(e);
           }
-          function N(e, t) {
+          function A(e, t) {
             for (var n = 0; n < t.length; n++) {
               var r = t[n];
               (r.enumerable = r.enumerable || !1),
@@ -995,8 +995,8 @@
                 Object.defineProperty(e, r.key, r);
             }
           }
-          function A(e, t) {
-            return (A = Object.setPrototypeOf
+          function N(e, t) {
+            return (N = Object.setPrototypeOf
               ? Object.setPrototypeOf.bind()
               : function (e, t) {
                   return (e.__proto__ = t), e;
@@ -1118,7 +1118,7 @@
                   constructor: { value: e, writable: !0, configurable: !0 },
                 })),
                   Object.defineProperty(e, "prototype", { writable: !1 }),
-                  t && A(e, t);
+                  t && N(e, t);
               })(i, e);
               var t,
                 n,
@@ -1382,7 +1382,7 @@
                           this.setState(this.getTimeParts(this.props.viewDate));
                     },
                   },
-                ]) && N(t.prototype, n),
+                ]) && A(t.prototype, n),
                 Object.defineProperty(t, "prototype", { writable: !1 }),
                 i
               );
@@ -2887,8 +2887,8 @@
               j = (m = d = 0),
               T = 0,
               V = 0,
-              N = 0,
               A = 0,
+              N = 0,
               L = c.length,
               z = L - 1,
               Z = "",
@@ -2927,7 +2927,7 @@
               switch (h) {
                 case 123:
                   for (
-                    d = (Z = Z.trim()).charCodeAt(0), m = 1, A = ++T;
+                    d = (Z = Z.trim()).charCodeAt(0), m = 1, N = ++T;
                     T < L;
 
                   ) {
@@ -2977,7 +2977,7 @@
                     T++;
                   }
                   if (
-                    ((m = c.substring(A, T)),
+                    ((m = c.substring(N, T)),
                     0 === d &&
                       (d = (Z = Z.replace(l, "").trim()).charCodeAt(0)),
                     64 === d)
@@ -2995,14 +2995,14 @@
                         V = R;
                     }
                     if (
-                      ((A = (m = t(r, V, m, h, f + 1)).length),
+                      ((N = (m = t(r, V, m, h, f + 1)).length),
                       0 < F &&
-                        ((w = s(3, m, (V = n(R, Z, N)), r, M, D, A, h, f, u)),
+                        ((w = s(3, m, (V = n(R, Z, A)), r, M, D, N, h, f, u)),
                         (Z = V.join("")),
                         void 0 !== w &&
-                          0 === (A = (m = w.trim()).length) &&
+                          0 === (N = (m = w.trim()).length) &&
                           ((h = 0), (m = ""))),
-                      0 < A)
+                      0 < N)
                     )
                       switch (h) {
                         case 115:
@@ -3023,26 +3023,26 @@
                           (m = Z + m), 112 === u && ((W += m), (m = ""));
                       }
                     else m = "";
-                  } else m = t(r, n(r, Z, N), m, u, f + 1);
+                  } else m = t(r, n(r, Z, A), m, u, f + 1);
                   (U += m),
-                    (m = N = V = j = d = 0),
+                    (m = A = V = j = d = 0),
                     (Z = ""),
                     (h = c.charCodeAt(++T));
                   break;
                 case 125:
                 case 59:
                   if (
-                    1 < (A = (Z = (0 < V ? Z.replace(p, "") : Z).trim()).length)
+                    1 < (N = (Z = (0 < V ? Z.replace(p, "") : Z).trim()).length)
                   )
                     switch (
                       (0 === j &&
                         ((d = Z.charCodeAt(0)),
                         45 === d || (96 < d && 123 > d)) &&
-                        (A = (Z = Z.replace(" ", ":")).length),
+                        (N = (Z = Z.replace(" ", ":")).length),
                       0 < F &&
                         void 0 !==
                           (w = s(1, Z, r, e, M, D, W.length, u, f, u)) &&
-                        0 === (A = (Z = w.trim()).length) &&
+                        0 === (N = (Z = w.trim()).length) &&
                         (Z = "\0\0"),
                       (d = Z.charCodeAt(0)),
                       (h = Z.charCodeAt(1)),
@@ -3056,10 +3056,10 @@
                           break;
                         }
                       default:
-                        58 !== Z.charCodeAt(A - 1) &&
+                        58 !== Z.charCodeAt(N - 1) &&
                           (W += i(Z, d, h, Z.charCodeAt(2)));
                     }
-                  (N = V = j = d = 0), (Z = ""), (h = c.charCodeAt(++T));
+                  (A = V = j = d = 0), (Z = ""), (h = c.charCodeAt(++T));
               }
             }
             switch (h) {
@@ -3107,7 +3107,7 @@
                     v = "\\v";
                     break;
                   case 38:
-                    0 === E + C + S && ((V = N = 1), (v = "\f" + v));
+                    0 === E + C + S && ((V = A = 1), (v = "\f" + v));
                     break;
                   case 108:
                     if (0 === E + C + S + x && 0 < j)
@@ -3158,15 +3158,15 @@
                               C = 47;
                               break;
                             case 220:
-                              (A = T), (C = 42);
+                              (N = T), (C = 42);
                           }
                           break;
                         case 42:
                           47 === h &&
                             42 === P &&
-                            A + 2 !== T &&
-                            (33 === c.charCodeAt(A + 2) &&
-                              (W += c.substring(A, T + 1)),
+                            N + 2 !== T &&
+                            (33 === c.charCodeAt(N + 2) &&
+                              (W += c.substring(N, T + 1)),
                             (v = ""),
                             (C = 0));
                       }
@@ -3175,11 +3175,11 @@
             }
             (B = P), (P = h), T++;
           }
-          if (0 < (A = W.length)) {
+          if (0 < (N = W.length)) {
             if (
               ((V = r),
               0 < F &&
-                void 0 !== (w = s(2, W, V, e, M, D, A, u, f, u)) &&
+                void 0 !== (w = s(2, W, V, e, M, D, N, u, f, u)) &&
                 0 === (W = w).length)
             )
               return H + W + U;
@@ -3821,8 +3821,8 @@
           "undefined" != typeof HTMLElement ? w() : null,
         ),
         V = (0, c.createContext)({}),
-        N = T.Provider,
-        A = function (e) {
+        A = T.Provider,
+        N = function (e) {
           var t = function (t, n) {
             return (0, c.createElement)(T.Consumer, null, function (r) {
               return e(t, r, n);
@@ -3856,7 +3856,7 @@
             d = (0, c.createElement)(z, null);
           return (0, c.createElement)(c.Fragment, null, d, f);
         },
-        W = A(function (e, t, n) {
+        W = N(function (e, t, n) {
           return "function" == typeof e.css
             ? (0, c.createElement)(V.Consumer, null, function (r) {
                 return Z(t, e, r, n);
@@ -3910,7 +3910,7 @@
       var Y = function () {
           return null;
         },
-        G = A(function (e, t) {
+        G = N(function (e, t) {
           return (0, c.createElement)(V.Consumer, null, function (n) {
             var r = function () {
                 for (
@@ -4468,8 +4468,8 @@
           };
         },
         Ve = Te,
-        Ne = Te,
-        Ae = (function () {
+        Ae = Te,
+        Ne = (function () {
           var e = U.apply(void 0, arguments),
             t = "animation-" + e.name;
           return {
@@ -4488,7 +4488,7 @@
             css: U(
               {
                 animation: ""
-                  .concat(Ae, " 1s ease-in-out ")
+                  .concat(Ne, " 1s ease-in-out ")
                   .concat(t, "ms infinite;"),
                 backgroundColor: "currentColor",
                 borderRadius: "1em",
@@ -5753,7 +5753,7 @@
           return !!e.isDisabled;
         };
       var Vt = {
-        clearIndicator: Ne,
+        clearIndicator: Ae,
         container: function (e) {
           var t = e.isDisabled;
           return {
@@ -6037,7 +6037,7 @@
           };
         },
       };
-      var Nt = {
+      var At = {
         borderRadius: 4,
         colors: {
           primary: "#2684FF",
@@ -6060,7 +6060,7 @@
         },
         spacing: { baseUnit: 4, controlHeight: 38, menuGutter: 8 },
       };
-      function At(e, t) {
+      function Nt(e, t) {
         var n = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var r = Object.getOwnPropertySymbols(e);
@@ -6076,12 +6076,12 @@
         for (var t = 1; t < arguments.length; t++) {
           var n = null != arguments[t] ? arguments[t] : {};
           t % 2
-            ? At(Object(n), !0).forEach(function (t) {
+            ? Nt(Object(n), !0).forEach(function (t) {
                 (0, ee.Z)(e, t, n[t]);
               })
             : Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-            : At(Object(n)).forEach(function (t) {
+            : Nt(Object(n)).forEach(function (t) {
                 Object.defineProperty(
                   e,
                   t,
@@ -7026,9 +7026,9 @@
                 value: function () {
                   return this.props.theme
                     ? "function" == typeof this.props.theme
-                      ? this.props.theme(Nt)
-                      : Lt(Lt({}, Nt), this.props.theme)
-                    : Nt;
+                      ? this.props.theme(At)
+                      : Lt(Lt({}, At), this.props.theme)
+                    : At;
                 },
               },
               {
@@ -7958,43 +7958,31 @@
           Kt);
       const Qt = Jt;
     },
-    75553: (e, t, n) => {
+    702: (e, t, n) => {
       "use strict";
       n.d(t, {
-        Ad: () => l,
-        QA: () => g,
-        WC: () => h,
-        Yc: () => c,
-        nd: () => w,
-        rt: () => s,
+        Ad: () => c,
+        QA: () => v,
+        WC: () => f,
+        Yc: () => w,
+        nd: () => g,
       });
       var r = n(45878),
-        i = n(43898),
-        o = n(67328);
+        i = n(50995),
+        o = n(68333);
       const a = r.Message;
-      var s, c;
-      !(function (e) {
-        (e[(e.k_ENewsRecommendationState_None = 0)] =
-          "k_ENewsRecommendationState_None"),
-          (e[(e.k_ENewsRecommendationState_Recommended = 1)] =
-            "k_ENewsRecommendationState_Recommended"),
-          (e[(e.k_ENewsRecommendationState_NotRecommended = 2)] =
-            "k_ENewsRecommendationState_NotRecommended"),
-          (e[(e.k_ENewsRecommendationState_Informative = 3)] =
-            "k_ENewsRecommendationState_Informative");
-      })(s || (s = {}));
-      class u extends a {
+      class s extends a {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            u.prototype.gid || i.aR(u.M()),
+            s.prototype.gid || i.aR(s.M()),
             a.initialize(this, e, 0, -1, [5], null);
         }
         static M() {
           return (
-            u.sm_m ||
-              (u.sm_m = {
-                proto: u,
+            s.sm_m ||
+              (s.sm_m = {
+                proto: s,
                 fields: {
                   gid: {
                     n: 1,
@@ -8060,56 +8048,56 @@
                   },
                 },
               }),
-            u.sm_m
+            s.sm_m
           );
         }
         static MBF() {
-          return u.sm_mbf || (u.sm_mbf = i.Bh(u.M())), u.sm_mbf;
+          return s.sm_mbf || (s.sm_mbf = i.Bh(s.M())), s.sm_mbf;
         }
         toObject(e = !1) {
-          return u.toObject(e, this);
+          return s.toObject(e, this);
         }
         static toObject(e, t) {
-          return i.TA(u.M(), e, t);
+          return i.TA(s.M(), e, t);
         }
         static fromObject(e) {
-          return i.aD(u.M(), e);
+          return i.aD(s.M(), e);
         }
         static deserializeBinary(e) {
           let t = new r.BinaryReader(e),
-            n = new u();
-          return u.deserializeBinaryFromReader(n, t);
+            n = new s();
+          return s.deserializeBinaryFromReader(n, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return i.F(u.MBF(), e, t);
+          return i.F(s.MBF(), e, t);
         }
         serializeBinary() {
           var e = new r.BinaryWriter();
-          return u.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return s.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          i.l2(u.M(), e, t);
+          i.l2(s.M(), e, t);
         }
         serializeBase64String() {
           var e = new r.BinaryWriter();
-          return u.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return s.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CNewsFeedDef";
         }
       }
-      class l extends a {
+      class c extends a {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            l.prototype.gid || i.aR(l.M()),
+            c.prototype.gid || i.aR(c.M()),
             a.initialize(this, e, 0, -1, [11], null);
         }
         static M() {
           return (
-            l.sm_m ||
-              (l.sm_m = {
-                proto: l,
+            c.sm_m ||
+              (c.sm_m = {
+                proto: c,
                 fields: {
                   gid: {
                     n: 1,
@@ -8169,6 +8157,125 @@
                   },
                 },
               }),
+            c.sm_m
+          );
+        }
+        static MBF() {
+          return c.sm_mbf || (c.sm_mbf = i.Bh(c.M())), c.sm_mbf;
+        }
+        toObject(e = !1) {
+          return c.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return i.TA(c.M(), e, t);
+        }
+        static fromObject(e) {
+          return i.aD(c.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new r.BinaryReader(e),
+            n = new c();
+          return c.deserializeBinaryFromReader(n, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return i.F(c.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new r.BinaryWriter();
+          return c.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          i.l2(c.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new r.BinaryWriter();
+          return c.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CNewsFeedPostDef";
+        }
+      }
+      class u extends a {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            u.prototype.content || i.aR(u.M()),
+            a.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            u.sm_m ||
+              (u.sm_m = {
+                proto: u,
+                fields: {
+                  content: { n: 1, br: i.FE.readString, bw: i.Xc.writeString },
+                  preserve_newlines: {
+                    n: 2,
+                    d: !1,
+                    br: i.FE.readBool,
+                    bw: i.Xc.writeBool,
+                  },
+                },
+              }),
+            u.sm_m
+          );
+        }
+        static MBF() {
+          return u.sm_mbf || (u.sm_mbf = i.Bh(u.M())), u.sm_mbf;
+        }
+        toObject(e = !1) {
+          return u.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return i.TA(u.M(), e, t);
+        }
+        static fromObject(e) {
+          return i.aD(u.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new r.BinaryReader(e),
+            n = new u();
+          return u.deserializeBinaryFromReader(n, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return i.F(u.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new r.BinaryWriter();
+          return u.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          i.l2(u.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new r.BinaryWriter();
+          return u.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CNews_ConvertHTMLToBBCode_Request";
+        }
+      }
+      class l extends a {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            l.prototype.converted_content || i.aR(l.M()),
+            a.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            l.sm_m ||
+              (l.sm_m = {
+                proto: l,
+                fields: {
+                  converted_content: {
+                    n: 1,
+                    br: i.FE.readString,
+                    bw: i.Xc.writeString,
+                  },
+                  found_html: { n: 2, br: i.FE.readBool, bw: i.Xc.writeBool },
+                },
+              }),
             l.sm_m
           );
         }
@@ -8204,14 +8311,14 @@
           return l.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CNewsFeedPostDef";
+          return "CNews_ConvertHTMLToBBCode_Response";
         }
       }
       class p extends a {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            p.prototype.content || i.aR(p.M()),
+            p.prototype.rss_message || i.aR(p.M()),
             a.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
@@ -8220,12 +8327,25 @@
               (p.sm_m = {
                 proto: p,
                 fields: {
-                  content: { n: 1, br: i.FE.readString, bw: i.Xc.writeString },
-                  preserve_newlines: {
+                  rss_message: {
+                    n: 1,
+                    br: i.FE.readString,
+                    bw: i.Xc.writeString,
+                  },
+                  unique_id: {
                     n: 2,
-                    d: !1,
-                    br: i.FE.readBool,
-                    bw: i.Xc.writeBool,
+                    br: i.FE.readString,
+                    bw: i.Xc.writeString,
+                  },
+                  title: { n: 3, br: i.FE.readString, bw: i.Xc.writeString },
+                  desc: { n: 4, br: i.FE.readString, bw: i.Xc.writeString },
+                  jsondata: { n: 5, br: i.FE.readString, bw: i.Xc.writeString },
+                  post: { n: 6, c },
+                  valid_post: { n: 7, br: i.FE.readBool, bw: i.Xc.writeBool },
+                  post_error_msg: {
+                    n: 8,
+                    br: i.FE.readString,
+                    bw: i.Xc.writeString,
                   },
                 },
               }),
@@ -8264,14 +8384,14 @@
           return p.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CNews_ConvertHTMLToBBCode_Request";
+          return "CNewsPartnerEventPreview";
         }
       }
       class f extends a {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            f.prototype.converted_content || i.aR(f.M()),
+            f.prototype.rss_url || i.aR(f.M()),
             a.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
@@ -8280,12 +8400,8 @@
               (f.sm_m = {
                 proto: f,
                 fields: {
-                  converted_content: {
-                    n: 1,
-                    br: i.FE.readString,
-                    bw: i.Xc.writeString,
-                  },
-                  found_html: { n: 2, br: i.FE.readBool, bw: i.Xc.writeBool },
+                  rss_url: { n: 1, br: i.FE.readString, bw: i.Xc.writeString },
+                  lang: { n: 2, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
                 },
               }),
             f.sm_m
@@ -8323,15 +8439,15 @@
           return f.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CNews_ConvertHTMLToBBCode_Response";
+          return "CNews_PreviewPartnerEvents_Request";
         }
       }
       class d extends a {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            d.prototype.rss_message || i.aR(d.M()),
-            a.initialize(this, e, 0, -1, void 0, null);
+            d.prototype.rss_url || i.aR(d.M()),
+            a.initialize(this, e, 0, -1, [2], null);
         }
         static M() {
           return (
@@ -8339,23 +8455,10 @@
               (d.sm_m = {
                 proto: d,
                 fields: {
-                  rss_message: {
-                    n: 1,
-                    br: i.FE.readString,
-                    bw: i.Xc.writeString,
-                  },
-                  unique_id: {
-                    n: 2,
-                    br: i.FE.readString,
-                    bw: i.Xc.writeString,
-                  },
-                  title: { n: 3, br: i.FE.readString, bw: i.Xc.writeString },
-                  desc: { n: 4, br: i.FE.readString, bw: i.Xc.writeString },
-                  jsondata: { n: 5, br: i.FE.readString, bw: i.Xc.writeString },
-                  post: { n: 6, c: l },
-                  valid_post: { n: 7, br: i.FE.readBool, bw: i.Xc.writeBool },
-                  post_error_msg: {
-                    n: 8,
+                  rss_url: { n: 1, br: i.FE.readString, bw: i.Xc.writeString },
+                  results: { n: 2, c: p, r: !0, q: !0 },
+                  error_msg: {
+                    n: 3,
                     br: i.FE.readString,
                     bw: i.Xc.writeString,
                   },
@@ -8396,14 +8499,14 @@
           return d.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CNewsPartnerEventPreview";
+          return "CNews_PreviewPartnerEvents_Response";
         }
       }
       class h extends a {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            h.prototype.rss_url || i.aR(h.M()),
+            h.prototype.clan_account_id || i.aR(h.M()),
             a.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
@@ -8412,8 +8515,11 @@
               (h.sm_m = {
                 proto: h,
                 fields: {
-                  rss_url: { n: 1, br: i.FE.readString, bw: i.Xc.writeString },
-                  lang: { n: 2, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
+                  clan_account_id: {
+                    n: 1,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
                 },
               }),
             h.sm_m
@@ -8451,30 +8557,22 @@
           return h.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CNews_PreviewPartnerEvents_Request";
+          return "CNews_GetNewsFeedByRepublishClan_Request";
         }
       }
       class m extends a {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            m.prototype.rss_url || i.aR(m.M()),
-            a.initialize(this, e, 0, -1, [2], null);
+            m.prototype.feeds || i.aR(m.M()),
+            a.initialize(this, e, 0, -1, [1], null);
         }
         static M() {
           return (
             m.sm_m ||
               (m.sm_m = {
                 proto: m,
-                fields: {
-                  rss_url: { n: 1, br: i.FE.readString, bw: i.Xc.writeString },
-                  results: { n: 2, c: d, r: !0, q: !0 },
-                  error_msg: {
-                    n: 3,
-                    br: i.FE.readString,
-                    bw: i.Xc.writeString,
-                  },
-                },
+                fields: { feeds: { n: 1, c: s, r: !0, q: !0 } },
               }),
             m.sm_m
           );
@@ -8511,14 +8609,14 @@
           return m.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CNews_PreviewPartnerEvents_Response";
+          return "CNews_GetNewsFeedByRepublishClan_Response";
         }
       }
       class v extends a {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            v.prototype.clan_account_id || i.aR(v.M()),
+            v.prototype.post || i.aR(v.M()),
             a.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
@@ -8527,11 +8625,8 @@
               (v.sm_m = {
                 proto: v,
                 fields: {
-                  clan_account_id: {
-                    n: 1,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
+                  post: { n: 1, c },
+                  draft: { n: 2, br: i.FE.readBool, bw: i.Xc.writeBool },
                 },
               }),
             v.sm_m
@@ -8569,22 +8664,33 @@
           return v.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CNews_GetNewsFeedByRepublishClan_Request";
+          return "CNews_PublishPartnerEvent_Request";
         }
       }
       class b extends a {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            b.prototype.feeds || i.aR(b.M()),
-            a.initialize(this, e, 0, -1, [1], null);
+            b.prototype.clan_event_gid || i.aR(b.M()),
+            a.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
             b.sm_m ||
               (b.sm_m = {
                 proto: b,
-                fields: { feeds: { n: 1, c: u, r: !0, q: !0 } },
+                fields: {
+                  clan_event_gid: {
+                    n: 1,
+                    br: i.FE.readFixed64String,
+                    bw: i.Xc.writeFixed64String,
+                  },
+                  news_post_gid: {
+                    n: 2,
+                    br: i.FE.readFixed64String,
+                    bw: i.Xc.writeFixed64String,
+                  },
+                },
               }),
             b.sm_m
           );
@@ -8621,14 +8727,14 @@
           return b.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CNews_GetNewsFeedByRepublishClan_Response";
+          return "CNews_PublishPartnerEvent_Response";
         }
       }
       class g extends a {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            g.prototype.post || i.aR(g.M()),
+            g.prototype.news_feed_gid || i.aR(g.M()),
             a.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
@@ -8637,8 +8743,23 @@
               (g.sm_m = {
                 proto: g,
                 fields: {
-                  post: { n: 1, c: l },
-                  draft: { n: 2, br: i.FE.readBool, bw: i.Xc.writeBool },
+                  news_feed_gid: {
+                    n: 1,
+                    br: i.FE.readFixed64String,
+                    bw: i.Xc.writeFixed64String,
+                  },
+                  start_index: {
+                    n: 2,
+                    d: 0,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                  amount: {
+                    n: 3,
+                    d: 100,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
                 },
               }),
             g.sm_m
@@ -8676,15 +8797,15 @@
           return g.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CNews_PublishPartnerEvent_Request";
+          return "CNews_GetBatchPublishedPartnerEvent_Request";
         }
       }
       class y extends a {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            y.prototype.clan_event_gid || i.aR(y.M()),
-            a.initialize(this, e, 0, -1, void 0, null);
+            y.prototype.clan_account_id || i.aR(y.M()),
+            a.initialize(this, e, 0, -1, [3, 4, 5], null);
         }
         static M() {
           return (
@@ -8692,15 +8813,38 @@
               (y.sm_m = {
                 proto: y,
                 fields: {
-                  clan_event_gid: {
+                  clan_account_id: {
                     n: 1,
-                    br: i.FE.readFixed64String,
-                    bw: i.Xc.writeFixed64String,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
                   },
-                  news_post_gid: {
+                  news_feed_gid: {
                     n: 2,
                     br: i.FE.readFixed64String,
                     bw: i.Xc.writeFixed64String,
+                  },
+                  clan_event_gid: {
+                    n: 3,
+                    r: !0,
+                    q: !0,
+                    br: i.FE.readFixed64String,
+                    pbr: i.FE.readPackedFixed64String,
+                    bw: i.Xc.writeRepeatedFixed64String,
+                  },
+                  news_post_gid: {
+                    n: 4,
+                    r: !0,
+                    q: !0,
+                    br: i.FE.readFixed64String,
+                    pbr: i.FE.readPackedFixed64String,
+                    bw: i.Xc.writeRepeatedFixed64String,
+                  },
+                  news_url: {
+                    n: 5,
+                    r: !0,
+                    q: !0,
+                    br: i.FE.readString,
+                    bw: i.Xc.writeRepeatedString,
                   },
                 },
               }),
@@ -8739,168 +8883,13 @@
           return y.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CNews_PublishPartnerEvent_Response";
-        }
-      }
-      class w extends a {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            w.prototype.news_feed_gid || i.aR(w.M()),
-            a.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            w.sm_m ||
-              (w.sm_m = {
-                proto: w,
-                fields: {
-                  news_feed_gid: {
-                    n: 1,
-                    br: i.FE.readFixed64String,
-                    bw: i.Xc.writeFixed64String,
-                  },
-                  start_index: {
-                    n: 2,
-                    d: 0,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
-                  amount: {
-                    n: 3,
-                    d: 100,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
-                },
-              }),
-            w.sm_m
-          );
-        }
-        static MBF() {
-          return w.sm_mbf || (w.sm_mbf = i.Bh(w.M())), w.sm_mbf;
-        }
-        toObject(e = !1) {
-          return w.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return i.TA(w.M(), e, t);
-        }
-        static fromObject(e) {
-          return i.aD(w.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new r.BinaryReader(e),
-            n = new w();
-          return w.deserializeBinaryFromReader(n, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return i.F(w.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new r.BinaryWriter();
-          return w.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          i.l2(w.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new r.BinaryWriter();
-          return w.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CNews_GetBatchPublishedPartnerEvent_Request";
-        }
-      }
-      class O extends a {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            O.prototype.clan_account_id || i.aR(O.M()),
-            a.initialize(this, e, 0, -1, [3, 4, 5], null);
-        }
-        static M() {
-          return (
-            O.sm_m ||
-              (O.sm_m = {
-                proto: O,
-                fields: {
-                  clan_account_id: {
-                    n: 1,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
-                  news_feed_gid: {
-                    n: 2,
-                    br: i.FE.readFixed64String,
-                    bw: i.Xc.writeFixed64String,
-                  },
-                  clan_event_gid: {
-                    n: 3,
-                    r: !0,
-                    q: !0,
-                    br: i.FE.readFixed64String,
-                    pbr: i.FE.readPackedFixed64String,
-                    bw: i.Xc.writeRepeatedFixed64String,
-                  },
-                  news_post_gid: {
-                    n: 4,
-                    r: !0,
-                    q: !0,
-                    br: i.FE.readFixed64String,
-                    pbr: i.FE.readPackedFixed64String,
-                    bw: i.Xc.writeRepeatedFixed64String,
-                  },
-                  news_url: {
-                    n: 5,
-                    r: !0,
-                    q: !0,
-                    br: i.FE.readString,
-                    bw: i.Xc.writeRepeatedString,
-                  },
-                },
-              }),
-            O.sm_m
-          );
-        }
-        static MBF() {
-          return O.sm_mbf || (O.sm_mbf = i.Bh(O.M())), O.sm_mbf;
-        }
-        toObject(e = !1) {
-          return O.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return i.TA(O.M(), e, t);
-        }
-        static fromObject(e) {
-          return i.aD(O.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new r.BinaryReader(e),
-            n = new O();
-          return O.deserializeBinaryFromReader(n, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return i.F(O.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new r.BinaryWriter();
-          return O.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          i.l2(O.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new r.BinaryWriter();
-          return O.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
           return "CNews_GetBatchPublishedPartnerEvent_Response";
         }
       }
+      var w;
       !(function (e) {
         (e.ConvertHTMLToBBCode = function (e, t) {
-          return e.SendMsg("News.ConvertHTMLToBBCode#1", (0, o.MD)(p, t), f, {
+          return e.SendMsg("News.ConvertHTMLToBBCode#1", (0, o.MD)(u, t), l, {
             bConstMethod: !0,
             ePrivilege: 0,
             eWebAPIKeyRequirement: 1,
@@ -8909,33 +8898,33 @@
           (e.PreviewPartnerEvents = function (e, t) {
             return e.SendMsg(
               "News.PreviewPartnerEvents#1",
-              (0, o.MD)(h, t),
-              m,
+              (0, o.MD)(f, t),
+              d,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
           (e.GetNewsFeedByRepublishClan = function (e, t) {
             return e.SendMsg(
               "News.GetNewsFeedByRepublishClan#1",
-              (0, o.MD)(v, t),
-              b,
+              (0, o.MD)(h, t),
+              m,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
           (e.PublishPartnerEvent = function (e, t) {
-            return e.SendMsg("News.PublishPartnerEvent#1", (0, o.MD)(g, t), y, {
+            return e.SendMsg("News.PublishPartnerEvent#1", (0, o.MD)(v, t), b, {
               ePrivilege: 1,
             });
           }),
           (e.GetBatchPublishedPartnerEvent = function (e, t) {
             return e.SendMsg(
               "News.GetBatchPublishedPartnerEvent#1",
-              (0, o.MD)(w, t),
-              O,
+              (0, o.MD)(g, t),
+              y,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           });
-      })(c || (c = {}));
+      })(w || (w = {}));
     },
   },
 ]);

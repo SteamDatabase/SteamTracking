@@ -3,7 +3,7 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [1979],
   {
-    38695: (e) => {
+    43997: (e) => {
       e.exports = {
         Container: "discussionwidget_Container_3BVe_",
         VoteContainer: "discussionwidget_VoteContainer_1uhQY",
@@ -37,7 +37,7 @@
         VoteButtonSelected: "discussionwidget_VoteButtonSelected_2c_5V",
       };
     },
-    31265: (e) => {
+    72775: (e) => {
       e.exports = {
         Link: "salebanner_Link_26cHo",
         Banner: "salebanner_Banner_2df4N",
@@ -433,14 +433,14 @@
       "use strict";
       n.d(t, { i: () => w });
       var a = n(89526),
-        i = n(75457),
+        i = n(40442),
         s = n(68818),
         o = n(13345),
         r = n(19304),
         c = n(14826),
         d = n(207),
         u = n(32765),
-        l = n(31265);
+        l = n(72775);
       function w(e) {
         const { gidEvent: t } = e,
           n = (0, s.XC)(t),
@@ -498,7 +498,7 @@
           : null;
       }
     },
-    76672: (e, t, n) => {
+    37865: (e, t, n) => {
       "use strict";
       n.d(t, { Z: () => a });
       const a =

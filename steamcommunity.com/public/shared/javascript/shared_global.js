@@ -309,7 +309,7 @@ function ShowPromptDialogWithProps( rgParams )
 	var $Input = $J('<input/>', {type: inputType, 'class': '' } ).val( defaultValue );
 	if ( inputMaxSize )
 	{
-		$Input.attr( 'maxlength', rgModalParams.inputMaxSize );
+		$Input.attr( 'maxlength', inputMaxSize );
 	}
 	$Body.append( $J('<div/>', {'class': 'newmodal_prompt_description' } ).append( strDescription ) );
 	$Body.append( $J('<div/>', {'class': 'newmodal_prompt_input gray_bevel for_text_input fullwidth' } ).append( $Input ) );

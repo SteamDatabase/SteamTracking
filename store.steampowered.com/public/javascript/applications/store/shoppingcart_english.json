@@ -1,6 +1,7 @@
 {
     "language": "english",
     "Cart_Remove": "Remove",
+    "Cart_Edit": "Edit",
     "Cart_Quantity": "Qty: %1$s",
     "Cart_YourShoppingCart": "Your Shopping Cart",
     "Cart_EstimatedTotal": "Estimated total",
@@ -20,7 +21,7 @@
     "Cart_GiftDelivery_Scheduled": "Scheduled:",
     "Cart_GiftDelivery_ScheduleDelivery": "Schedule delivery",
     "Cart_GiftDelivery_From": "From:",
-    "Cart_GiftDelivery_RealName": "Real Name:",
+    "Cart_GiftDelivery_RealName": "Your real name:",
     "Cart_GiftDelivery_Body": "Gift message (160 character limit, %1$s remaining):",
     "Cart_GiftRecipientModal_Title": "Select Gift Recipient",
     "Cart_GiftRecipientModal_Save": "Save",
@@ -37,5 +38,19 @@
     "Cart_CountWidget": "Cart (%1$s)",
     "Cart_AddedToYourCart": "Added to your cart!",
     "Cart_ContinueShopping": "Continue Shopping",
-    "Cart_ViewMyCart": "View My Cart (%1$s)"
+    "Cart_ComingSoon": "Available %1$s",
+    "Cart_ViewMyCart": "View My Cart (%1$s)",
+    "Cart_Error_AlreadyOwned_FootNote": "Your account already owns some of the above items, so you can’t purchase them again. You can purchase these items as a gift or adjust the contents of your cart to continue.",
+    "Cart_Error_AlreadyOwned_LineItem_Game": "You already own this game",
+    "Cart_Error_AlreadyOwned_LineItem": "You already own everything in this package",
+    "Cart_Error_DuplicateApps_FootNote": "It looks like you have packages which overlap in your cart. You need to remove the redundant packages from your cart before you can checkout.",
+    "Cart_Error_DuplicateApps_LineItem": "Already in your cart:",
+    "Cart_Error_UnavailableCountry_FootNote": "Your cart contains a package that is unavailable in your country. You need to remove the package from your cart before you can checkout.",
+    "Cart_Error_UnavailableCountry_LineItem": "Unavailable in your country",
+    "Cart_Error_MasterSubscription_FootNote": "Your cart contains content that is also available through on of your active subscriptions.",
+    "Cart_Error_MasterSubscription_LineItem": "Available through your subscription of:",
+    "Cart_Warning_AlreadyOwned_LineItem": "If purchasing for yourself, you will not receive an extra copy of:",
+    "Cart_Warning_ExtraCopies_LineItem": "If purchasing for yourself, you will receive an extra, giftable copy of:",
+    "Cart_Warning_PriceChange_FootNote": "Note: One or more of the items below have changed in price since you added it to your cart.",
+    "Cart_Warning_PriceChange_LineItem": "The price of this item has changed"
 }

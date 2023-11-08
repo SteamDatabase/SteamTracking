@@ -322,7 +322,8 @@
 }
 .shared_svg_library_SteamDeckCompatInfo_3VPnv {
   display: flex;
-  background-color: #0e141b;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(100px);
   padding: 2px;
   border-radius: 20px;
 }
@@ -1903,6 +1904,7 @@ html.contextmenu_ContextMenuPopup_14wqd body {
 .DesktopUI .pagedsettings_PagedSettingsDialog_PageListColumn_2kwFF {
   padding-left: 0px;
   min-width: 160px;
+  height: 95vh;
 }
 .pagedsettings_NewNoteButton_g8SKU {
   margin: 0px 4px 4px 4px;
@@ -1922,12 +1924,18 @@ html.contextmenu_ContextMenuPopup_14wqd body {
 }
 .pagedsettings_PagedSettingsDialog_PageList_18QCu {
   line-height: 16px;
+  height: 100vh;
   white-space: nowrap;
   overflow-y: overlay;
+  overflow: scroll;
   flex-shrink: 1;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
+  padding-bottom: 40px;
+}
+.pagedsettings_PagedSettingsDialog_PageList_18QCu::-webkit-scrollbar-corner {
+  background: transparent;
 }
 .pagedsettings_PagedSettingsDialog_PageList_18QCu.pagedsettings_PagedSettingsDialog_PageList_DisableScrolling_yTqIu {
   overflow-y: hidden;
@@ -2420,6 +2428,13 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover,
 button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover.Primary {
   background: rgba(255, 255, 255, 0.15);
 }
+button.gamepaddialog_Button_cXzBZ.DialogButton.EmptyButton,
+button.gamepaddialog_Button_cXzBZ.DialogButton:enabled.EmptyButton,
+button.gamepaddialog_Button_cXzBZ.DialogButton:active.EmptyButton,
+button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover.EmptyButton {
+  padding: 0px;
+  overflow: hidden;
+}
 button.gamepaddialog_Button_cXzBZ.DialogButton.BarButton,
 button.gamepaddialog_Button_cXzBZ.DialogButton:enabled.BarButton,
 button.gamepaddialog_Button_cXzBZ.DialogButton:active.BarButton,
@@ -2437,7 +2452,7 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:hover,
 button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:hover,
 button.gamepaddialog_Button_cXzBZ.DialogButton:active:hover,
 button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:hover {
-  background: #3d4450;
+  background: rgba(255, 255, 255, 0.2);
   transition: background-color 150ms ease-in;
 }
 button.gamepaddialog_Button_cXzBZ.DialogButton.Primary:hover,
@@ -3254,7 +3269,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   cursor: pointer;
 }
 .gamepadslider_SliderControl_1udlG:hover .gamepadslider_SliderTrack_2_vG6 {
-  background: #3d4450;
+  background: rgba(255, 255, 255, 0.3);
   --left-track-color: #00bbff;
 }
 .gamepadslider_SliderTrack_2_vG6 {
@@ -3985,15 +4000,26 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   padding-bottom: 40px;
 }
 .gamepadpagedsettings_PagedSettingsDialog_Title_3aOHb {
-  color: #67707b;
-  text-transform: uppercase;
-  padding-top: calc(12px + 1.4vw);
+  color: #fff;
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 28px;
+  padding-top: calc(8px + var(--basicui-header-height, 0px));
   padding-left: calc(12px + 1.4vw);
-  padding-right: calc(12px + 1.4vw);
-  font-weight: 500;
-  letter-spacing: 0.2px;
+  padding-right: 16px;
   overflow: hidden;
-  white-space: nowrap;
   text-overflow: ellipsis;
 }
 .gamepadpagedsettings_PagedSettingsDialog_PageList_gNwoz {
@@ -4013,6 +4039,9 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
 .gamepadpagedsettings_PagedSettingsDialog_PageList_gNwoz.gamepadpagedsettings_PagedSettingsDialog_PageList_DisableScrolling_sMDrh {
   overflow-y: hidden;
 }
+.gamepadpagedsettings_PagedSettingsDialog_PageList_gNwoz.gamepadpagedsettings_PagedSettingsDialog_PageList_ShowTitle_3UfIN {
+  padding-top: 16px;
+}
 .gamepadpagedsettings_PagedSettingsDialog_PageListItem_2mL2H {
   font-family: "Motiva Sans", Helvetica, sans-serif;
   font-weight: normal;
@@ -4026,7 +4055,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   text-transform: none;
   letter-spacing: 0px;
   color: #fff;
-  padding: 10px 16px;
+  padding: 10px calc(12px + 1.4vw);
   color: #b8bcbf;
   cursor: pointer;
   display: flex;
