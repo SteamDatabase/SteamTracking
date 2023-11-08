@@ -314,11 +314,14 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 
 				file_put_contents( $File, $Data );
 
+				/*
+				// It was compiled with Hermes
 				system( 'unzip -j ".support/archives/steam-android.apk" "assets/index.android.bundle" -d "."' );
 				system( 'mv index.android.bundle Scripts/WebUI/steammobile_app.js' );
 				system( 'npm run prettier Scripts/WebUI/steammobile_app.js' );
 
 				$this->DumpJavascriptFiles = true;
+				*/
 
 				return true;
 			}
