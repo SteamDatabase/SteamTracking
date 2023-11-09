@@ -26,7 +26,7 @@
 "Friends_Chat_ReJoin"					"Volver a entrar"
 "Friends_Chat_CannotSendFriendOffline" "%friend% no está conectado y no se puede enviar el mensaje.\n"
 "Friends_Chat_SendOfflineMessage" "%friend% no está en línea en este momento, recibirá tu mensaje cuando vuelva a conectarse.\n"
-"Friends_Chat_InvitedToGame"			"%friend% te ha invitado a unirte a una partida de %game%. "
+"Friends_Chat_InvitedToGame"			"%friend% te invitó a unirte a una partida de %game%. "
 "Friends_Chat_FriendHasChangedGame"	"%friend% está jugando %game%. "
 "Friends_Chat_FriendHasChangedApp"	"%friend% está usando ahora %game%. "
 "Friends_Chat_UnknownGame"			"una partida"
@@ -394,8 +394,8 @@
 "Friends_OnlineNotification_Info"			"está en línea en este momento"
 "Friends_InGameNotification_Info"			"está jugando"
 "Friends_InAppNotification_Info"			"está usando en este momento"
-"Friends_ChatInvitation_Info"				"te ha invitado a un chat"
-"Friends_VoiceChatInvitation_Info"		"te ha invitado a un chat de voz"
+"Friends_ChatInvitation_Info"				"te invitó a un chat"
+"Friends_VoiceChatInvitation_Info"		"te invitó a un chat de voz"
 "Friends_ChatNotification_Info"			"dice:"
 "Friends_PostNotification_Info"			"publicado:"
 "Friends_GameInvitation_Info"				"te invitó a jugar"
@@ -602,7 +602,7 @@
 
 "friends_voice_friendendedcall"			"%friend% ha finalizado la llamada."
 
-"friends_trade_invite"		"%friend% te ha invitado a intercambiar artículos"
+"friends_trade_invite"		"%friend% te invitó a intercambiar artículos"
 "friends_trade_invite_action"		"HAZ CLIC AQUÍ PARA INTERCAMBIAR"
 
 "friends_trade_invite_sent"	"Se ha enviado una petición de intercambio a %friend%"
@@ -648,7 +648,7 @@
 "friends_trade_accepted"			"%friend% ha aceptado tu petición de intercambio."
 "friends_trade_you_accepted"		"Has aceptado la petición de intercambio de %friend%."
 "friends_invite_to_trade"			"Petición de intercambio"
-"Friends_TradeInvitation_Info"		"te ha invitado a intercambiar"
+"Friends_TradeInvitation_Info"		"te invitó a intercambiar"
 "friends_view_item_in_inventory"	"Ver en el inventario"
 
 "friends_voice_usedbygame"			"El micrófono está siendo usado por el juego"
@@ -678,8 +678,8 @@
 
 "Friends_FriendInvitedToBroadcast_Title" "INVITAR - %friend%"
 "Friends_FriendInvitedToBroadcast_Info" "Se ha enviado una invitación a %friend% para ver tu partida."
-"Friends_BroadcastInvite" "%friend% te ha invitado a ver su retransmisión"
-"Friends_BroadcastInviteNotification" "te ha invitado a ver su retransmisión"
+"Friends_BroadcastInvite" "%friend% te invitó a ver su retransmisión"
+"Friends_BroadcastInviteNotification" "te invitó a ver su retransmisión"
 "Friends_Chat_InviteToBroadcast" "Invitar a ver"
 "Friends_BroadcastApproveNotification" "le gustaría ver tu retransmisión"
 "Friends_BroadcastCantStart_Streaming" "no puede verte mientras se utiliza la retransmisión en casa"

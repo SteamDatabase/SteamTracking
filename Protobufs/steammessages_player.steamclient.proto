@@ -339,6 +339,20 @@ message CPlayer_GetEmoticonList_Response {
 	repeated .CPlayer_GetEmoticonList_Response.Emoticon emoticons = 1;
 }
 
+message CPlayer_GetCommunityBadgeProgress_Request {
+	optional uint64 steamid = 1 [(description) = "The player we're asking about"];
+	optional int32 badgeid = 2 [(description) = "The badge we're asking about"];
+}
+
+message CPlayer_GetCommunityBadgeProgress_Response {
+	message Quest {
+		optional uint32 questid = 1;
+		optional bool completed = 2;
+	}
+
+	repeated .CPlayer_GetCommunityBadgeProgress_Response.Quest quests = 1;
+}
+
 message CPlayer_GetTopAchievementsForGames_Request {
 	optional uint64 steamid = 1;
 	optional string language = 2;
@@ -895,6 +909,10 @@ service Player {
 
 	rpc GetEmoticonList (.CPlayer_GetEmoticonList_Request) returns (.CPlayer_GetEmoticonList_Response) {
 		option (method_description) = "Gets a list of the emoticons a user has with metadata";
+	}
+
+	rpc GetCommunityBadgeProgress (.CPlayer_GetCommunityBadgeProgress_Request) returns (.CPlayer_GetCommunityBadgeProgress_Response) {
+		option (method_description) = "Gets all the quests needed to get the specified badge, and which are completed";
 	}
 
 	rpc GetTopAchievementsForGames (.CPlayer_GetTopAchievementsForGames_Request) returns (.CPlayer_GetTopAchievementsForGames_Response) {

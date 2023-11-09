@@ -481,7 +481,7 @@
     "Chat_DefaultChannelName": "Główny",
     "Chat_SaveVoiceRoom": "Zapisz ten kanał głosowy",
     "Chat_SaveVoiceRoom_Name": "Nazwa dla tego kanału:",
-    "Chat_SaveVoiceRoom_Description": "Możesz zapisać ten kanał głosowy poprzesz nadanie mu nazwy. Wszystkie wiadomości wpisane na szybkim czacie zostaną zachowane i kanał będzie dostępny dla wszystkich użytkowników, nawet jeśli nikt nie będzie połączony.",
+    "Chat_SaveVoiceRoom_Description": "Możesz zapisać ten kanał głosowy poprzez nadanie mu nazwy. Wszystkie wiadomości wpisane na szybkim czacie zostaną zachowane i kanał będzie dostępny dla wszystkich użytkowników, nawet jeśli nikt nie będzie połączony.",
     "Chat_SaveVoiceRoom_Error_EmptyName": "Podaj nazwę dla tego kanału",
     "ChatRoom_ServerMessage_RenameChatRoom": "Użytkownik %2$s zmienił nazwę pokoju na: %1$s",
     "ChatRoom_ServerMessage_ChatRoomTaglineChanged": "Użytkownik %2$s zmienił slogan czatu na: %1$s",

@@ -103,7 +103,7 @@
 "ServerBrowser_ServersCount"			"ΔΙΑΚΟΜΙΣΤΕΣ (%s1)"
 "ServerBrowser_UnableToQueryMasters"		"Αδυναμία προσδιορισμού διευθύνσεων του κύριου διακομιστή. Ο περιηγητής διακομιστών δε θα λειτουργεί σωστά."
 
-"ServerBrowser_ESRBNotice"			"Σημείωση ESRB: Η εμπειρία του παιχνιδιού ενδέχεται να αλλάξει στο διαδίκτυο"
+"ServerBrowser_ESRBNotice"			"Σημείωση ESRB: Το παιχνίδι ενδέχεται να διαφέρει στο διαδίκτυο"
 "ServerBrowser_Password"			"ΣΥΝΘΗΜΑΤΙΚΟ"
 "ServerBrowser_Bots"				"Bots"
 "ServerBrowser_Secure"				"Ασφαλές"

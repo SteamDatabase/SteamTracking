@@ -7,7 +7,6 @@ __TEXT
 __text
 __TEXT
 P
-Rh4
 P
 __stubs
 __TEXT
@@ -18,15 +17,17 @@ __const
 __TEXT
 __objc_methname
 __TEXT
-@=:
+D:
 :
-@=:
+D:
 __objc_classname__TEXT
-zG:
-zG:
+:N:
+:N:
 __objc_methtype
 __TEXT
+YN:
 0
+YN:
 __cstring
 __TEXT
 __unwind_info
@@ -67,20 +68,22 @@ __DATA
 0
 __thread_data
 __DATA
+IC
 @
+IC
 __thread_bss
 __DATA
-IC
+@IC
 __bss
 __DATA
-MC
+@MC
 __common
 __DATA
 H
 __LINKEDIT
 "
-@%
-(gD
+H%
+8gD
 P
 /usr/lib/dyld
 
@@ -119,25 +122,23 @@ h
 /usr/lib/libobjc.A.dylib
 &
 )
-g4
 )
-Z4
-G4
+[4
 0
-t7f9PHG
-?G
-t@f9O>G
 9
-4
 0
-4
 @
 @
 4
+4
+}9
+m9
 @
 @
 @
 @
+j9
+g9
 $
 Hi
 Hi
@@ -145,37 +146,37 @@ Hi
 Q(
 r)
 >
-<
+z3
 (
 (
 (
-#9
 (
 (
 (
+9
 B
 B
-/3
+9
+9
 )
-3
-3
 
 %
+3
 )
 )
 )
 )
 n'
 ()
+4
 (
+;
 
 0
-8
-8
 5
+8
 (
 (
-2
 c<
 
 0
@@ -191,11 +192,8 @@ AT=
 D
 @
 @
-@
-@
-@
-&7
-$7
+7
+7
 7
 7
 7
@@ -234,8 +232,7 @@ IcE
 @
 @
 ;
-e0
-46
+V0
 NSt3__117bad_function_callE
 15CBaseFileSystem
 11IFileSystem
@@ -1837,20 +1834,18 @@ EXTRACTOR-dtls_srtp
 14CUtlLinkedListI14CScheduledItemiE
 System
 @
-`
-d
-(
-0
-@
-@h
-|
-l
-x
 p
+t
 8
-P
 @
+@
+@x
+|
 H
+`
+P
+X
+(
 
 
 H
@@ -1944,21 +1939,22 @@ H
 P
 `
 X
-$
-(
 ,
 0
 4
 8
+<
+@
+D
 (
 (
-A
-b
-i
-(
+B
+d
 k
-q
-r
+(
+m
+s
+t
 P
 X
 0
@@ -1967,7 +1963,7 @@ X
 H
 @
 h
-@
+H
 (
 13CMsgIPAddress
 19CMsgIPAddressBucket
@@ -2402,7 +2398,7 @@ ReLaunchCmdLine
 ClientLauncherType
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlqueue.h
 IsValidIndex( idx )
-Startup - updater built Nov  7 2023 15:22:23
+Startup - updater built Nov  8 2023 17:57:41
 Startup - Steam Client launched with: %s
 Shutdown
 no hosts found
@@ -2693,8 +2689,8 @@ m_iRefs >= 0 && m_iRefs < 0x0ffffff
 #SteamBootstrapper_UpdatingSteam
 Updating Steam...
 Tahoma
-Nov  7 2023
-15:22:23
+Nov  8 2023
+17:57:41
 crashhandler004
 steam
 Steam Executable Crash
@@ -2791,7 +2787,7 @@ China
 %s/%s%s
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamexe/updateui.h
 ThreadInMainThread()
-15:22:22
+17:57:39
 [%3d%%] %s
 [----] %s
 [%3d%%] !!! Fatal Error: %s
@@ -10914,7 +10910,7 @@ steamwebhelper
 Steam Helper
 cefwebhelper
 1.0
-15:20:20
+17:55:28
 Jan
 Feb
 Mar
@@ -11911,6 +11907,7 @@ Got GOAWAY frame with last stream processed %d for stream %d
 Got frame type %d for stream %d
 Got RST STREAM for stream %d with error %u
 HTTP client connection (%p) HTTP2OnDataChunkRecvCallback for a stream with no request, dropping data without closing connection (maybe we cancelled request)
+HTTP client connection (%p) HTTP2OnStreamCloseCallback %d - %s for stream %d which we don't have?  Ignoring it.
 HTTP client connection (%p) HTTP2OnStreamCloseCallback %d - %s for stream %d
 pHandle->AccessResponse()->m_bufBody.TellPut() == 0
 :status
@@ -12321,7 +12318,6 @@ k_EMsgClientRegisterKey
 k_EMsgClientPurchaseWithMachineID
 k_EMsgClientAppUsageEvent
 k_EMsgClientSteamUsageEvent
-k_EMsgClientNatTraversalStatEvent
 k_EMsgClientP2PIntroducerMessage
 k_EMsgClientP2PConnectionInfo
 k_EMsgClientP2PConnectionFailInfo
@@ -13359,32 +13355,30 @@ out of memory
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/zip_helpers.cpp
 n <= (size_t)INT_MAX
 file_ofs == pFile->GetBytesWritten()
-Xo:
 
-so:
-B=
+3v:
+Ev:
 
+VA=
 0
-@I=
-g4
+P=
 )
-Z4
-G4
+[4
 0
-t7f9PHG
-?G
-t@f9O>G
 9
-4
 0
-4
 @
 @
 4
+4
+}9
+m9
 @
 @
 @
 @
+j9
+g9
 $
 Hi
 Hi
@@ -13392,37 +13386,37 @@ Hi
 Q(
 r)
 >
-<
+z3
 (
 (
 (
-#9
 (
 (
 (
+9
 B
 B
-/3
+9
+9
 )
-3
-3
 
 %
+3
 )
 )
 )
 )
 n'
 ()
+4
 (
+;
 
 0
-8
-8
 5
+8
 (
 (
-2
 c<
 
 0
@@ -13438,11 +13432,8 @@ AT=
 D
 @
 @
-@
-@
-@
-&7
-$7
+7
+7
 7
 7
 7
@@ -13481,17 +13472,15 @@ IcE
 @
 @
 ;
-e0
-46
-6
-6
+V0
 0
+6
+6
 6
 V
 :
 =
-/
-/
+I/
 /
 /
 /
@@ -13500,48 +13489,41 @@ V
 5
 5
 =
-4
-*4
+n.
+6.
 .
 .
 .
 .
-V-
-N-
+.
+.
+/
 !
 -
 -
 -
-3
-3
-3
-@
-7
-$
+-
+-
 @
 &
 +
 1
-,
+1
+1
+1
+1
+7*
+2
 4
 4
-u)
+K)
+7)
+2
 )
-)
-)
-)
-)
-)
-)
-/
-/
 @
 M9e
 @
 @
-y.
-3
-4(
 ?
 ?
 ?
@@ -13554,8 +13536,8 @@ y.
 ?
 ?
 :
-(
 ?
+(
 ?
 ?
 
@@ -13563,15 +13545,15 @@ AESNI-CBC+SHA1 stitch for x86_64, CRYPTOGAMS by <appro@openssl.org>
 AESNI-CBC+SHA256 stitch for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
 @
-;
 AES for Intel AES-NI, CRYPTOGAMS by <appro@openssl.org>
-'
 @
-i1
+j1
 %
+6-
 `
 `
 @
+-
 -
 -
 j
@@ -13579,7 +13561,6 @@ j
 Pj
 ARj
 j
-
 0
 0
 IcU
@@ -13589,7 +13570,9 @@ M)u
 =
 @
 =
-l&
+
+
+>+
 =
 %
 =
@@ -13890,10 +13873,6 @@ ChaCha20 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
 @
 0
-
-
-
-
 H=
 Ic]
 j
@@ -13901,21 +13880,22 @@ j
 j
 j
 )
+)
+)
 j
 j
 
-/
-:'
-#'
+%'
 t$I;M
-O"
+'
+)
 e
 W
 ,7~5d
-#}t/
-#]q/
+#]j/
 H
 0
+"
 "
 
 
@@ -13923,7 +13903,6 @@ H
 
 
 
-!
 
 
 
@@ -13935,7 +13914,6 @@ AES-NI GCM module for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @8
 `$
 '
-'
 @
 ,
 *
@@ -13946,7 +13924,6 @@ Poly1305 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 $
 0
 0
-F&
 N
 N
 N
@@ -14113,8 +14090,9 @@ H=LA
 | =
 =
 |q=
-
 | =
+
+
 |O=
 | =
 |"=
@@ -14210,8 +14188,6 @@ S
 8
 @
 @
-
-
 0
 0
 0
@@ -14222,12 +14198,16 @@ S
 H=
 0
 &
+4
 E
+
 0
 Hi
 E
 0
 0
+
+
 0
 
 
@@ -14239,6 +14219,7 @@ E
 
 j
 j
+?
 0
 @
 @
@@ -14249,15 +14230,17 @@ j
 Hc
 J
 0
-$
 @
 @
 &
 %
+E
+8
 @
 =h2
 P
 P
+@
 @
 @
 @
@@ -14272,6 +14255,7 @@ P
 =a
 0
 Hi
+J
 $
 $
 $

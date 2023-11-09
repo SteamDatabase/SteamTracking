@@ -382,6 +382,31 @@ message CStoreBrowse_GetDLCForAppsSolr_Response {
 	repeated .CStoreBrowse_GetDLCForAppsSolr_Response.DLCList dlc_lists = 1;
 }
 
+message CStoreBrowse_GetHardwareItems_Request {
+	repeated uint32 packageid = 1;
+	optional .StoreBrowseContext context = 2;
+}
+
+message CHardwarePackageDetails {
+	optional uint32 packageid = 1;
+	optional bool inventory_available = 3;
+	optional bool high_pending_orders = 4;
+	optional bool account_restricted_from_purchasing = 5;
+	optional bool requires_reservation = 6;
+	optional uint32 rtime_estimated_notification = 7 [(description) = "Latest date we think you will receive the message if you or based on your current position"];
+	optional string notificaton_token = 8 [(description) = "How we should render the timestamp"];
+	optional int32 reservation_state = 9;
+	optional bool expired = 10;
+	optional uint32 time_expires = 11;
+	optional uint32 time_reserved = 12;
+	optional bool allow_quantity_purchase = 13;
+	optional int32 max_quantity_per_purchase = 14;
+}
+
+message CStoreBrowse_GetHardwareItems_Response {
+	repeated .CHardwarePackageDetails details = 1;
+}
+
 service StoreBrowse {
 	option (service_description) = "APIs for accessing store item data";
 
@@ -399,5 +424,9 @@ service StoreBrowse {
 
 	rpc GetDLCForAppsSolr (.CStoreBrowse_GetDLCForAppsSolr_Request) returns (.CStoreBrowse_GetDLCForAppsSolr_Response) {
 		option (method_description) = "Returns all DLC appids for the specified games.";
+	}
+
+	rpc GetHardwareItems (.CStoreBrowse_GetHardwareItems_Request) returns (.CStoreBrowse_GetHardwareItems_Response) {
+		option (method_description) = "Get additional meta data specific to hardware store items (things that require physical shipping)";
 	}
 }

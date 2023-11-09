@@ -3008,7 +3008,7 @@ Tanıdığınız birine e-posta aracılığıyla bir hediye göndererek arkadaş
 "Steam_GamesDialog_RightClick_AddToUnblockedGames"			"Aile Oyunlarına Ekle"
 "Steam_GamesDialog_RightClick_RemoveFromUnblockedGames"		"Aile Oyunlarından Kaldır"
 
-"steam_menu_checkforupdates"						"Steam Güncellemelerini Denetle..."
+"steam_menu_checkforupdates"						"Steam İstemcisi Güncellemelerini Denetle..."
 "steam_menu_checkforupdates_osx"					"Güncellemeleri Kontrol Et..."
 "steam_checkforupdates_title"						"Steam - Güncelleyici"
 "steam_ClientUpdateAvailableDownloading"			"Steam güncellemesi mevcut ve şimdi indiriliyor."

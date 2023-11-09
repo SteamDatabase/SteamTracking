@@ -487,9 +487,6 @@ enum EMsg {
 	k_EMsgBaseDP = 1600;
 	k_EMsgDPSetPublishingState = 1601;
 	k_EMsgDPUniquePlayersStat = 1603;
-	k_EMsgDPStreamingUniquePlayersStat = 1604;
-	k_EMsgDPBlockingStats = 1607;
-	k_EMsgDPNatTraversalStats = 1608;
 	k_EMsgDPCloudStats = 1612;
 	k_EMsgDPGetPlayerCount = 1615;
 	k_EMsgDPGetPlayerCountResponse = 1616;
@@ -693,7 +690,6 @@ enum EMsg {
 	k_EMsgAMSetUserNewsSubscriptions = 4149;
 	k_EMsgAMSendQueuedEmails = 4152;
 	k_EMsgAMSetLicenseFlags = 4153;
-	k_EMsgCommunityDeleteUserNews = 4155;
 	k_EMsgAMGetAccountStatus = 4158;
 	k_EMsgAMGetAccountStatusResponse = 4159;
 	k_EMsgAMEditBanReason = 4160;

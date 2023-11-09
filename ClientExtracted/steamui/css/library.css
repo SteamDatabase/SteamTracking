@@ -2461,7 +2461,8 @@ html.contextmenu_ContextMenuPopup_2GpKT body {
 }
 .shared_svg_library_SteamDeckCompatInfo_2LcFI {
   display: flex;
-  background-color: #0e141b;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(100px);
   padding: 2px;
   border-radius: 20px;
 }
@@ -2628,7 +2629,7 @@ html.contextmenu_ContextMenuPopup_2GpKT body {
   left: 0;
   top: 0;
   pointer-events: none;
-  z-index: 100;
+  z-index: 2000;
 }
 .tooltip_TextToolTip_29b2a {
   box-sizing: border-box;
@@ -2821,6 +2822,7 @@ html.contextmenu_ContextMenuPopup_2GpKT body {
 .DesktopUI .pagedsettings_PagedSettingsDialog_PageListColumn_RTicB {
   padding-left: 0px;
   min-width: 160px;
+  height: 95vh;
 }
 .pagedsettings_NewNoteButton_sc_I7 {
   margin: 0px 4px 4px 4px;
@@ -2840,12 +2842,18 @@ html.contextmenu_ContextMenuPopup_2GpKT body {
 }
 .pagedsettings_PagedSettingsDialog_PageList__EebF {
   line-height: 16px;
+  height: 100vh;
   white-space: nowrap;
   overflow-y: overlay;
+  overflow: scroll;
   flex-shrink: 1;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
+  padding-bottom: 40px;
+}
+.pagedsettings_PagedSettingsDialog_PageList__EebF::-webkit-scrollbar-corner {
+  background: transparent;
 }
 .pagedsettings_PagedSettingsDialog_PageList__EebF.pagedsettings_PagedSettingsDialog_PageList_DisableScrolling_36Srg {
   overflow-y: hidden;
@@ -3076,6 +3084,14 @@ html.contextmenu_ContextMenuPopup_2GpKT body {
 .gamepadui_svg_library_GenericGamepadHighlight_1zfyD {
   fill: #4897d2;
 }
+@keyframes gamepaddialog_BackgroundAnimation_1_Rc0 {
+  from {
+    background-position: 0 100%;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
 @keyframes gamepaddialog_ItemFocusAnim-darkerGrey-nocolor_20uOg {
   from {
     background: #3d4450;
@@ -3096,11 +3112,11 @@ html.contextmenu_ContextMenuPopup_2GpKT body {
 }
 @keyframes gamepaddialog_ItemFocusAnim-darkGrey_2zfa- {
   from {
-    background: #67707b;
+    background: rgba(255, 255, 255, 0.25);
     color: #8b929a;
   }
   to {
-    background: #3d4450;
+    background: rgba(255, 255, 255, 0.15);
     color: #fff;
   }
 }
@@ -3111,6 +3127,26 @@ html.contextmenu_ContextMenuPopup_2GpKT body {
   }
   to {
     background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes gamepaddialog_ItemFocusAnim-translucent-white-10_YLWBZ {
+  from {
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+  }
+}
+@keyframes gamepaddialog_ItemFocusAnim-translucent-white-20_1hX6Y {
+  from {
+    background: rgba(255, 255, 255, 0.5);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.2);
     color: #fff;
   }
 }
@@ -3150,6 +3186,14 @@ html.contextmenu_ContextMenuPopup_2GpKT body {
     background-position: 50% 0%;
   }
 }
+@keyframes gamepaddialog_BackgroundAnimation_1_Rc0 {
+  from {
+    background-position: 0 100%;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
 @keyframes gamepaddialog_ItemFocusAnim-darkerGrey-nocolor_20uOg {
   from {
     background: #3d4450;
@@ -3170,11 +3214,11 @@ html.contextmenu_ContextMenuPopup_2GpKT body {
 }
 @keyframes gamepaddialog_ItemFocusAnim-darkGrey_2zfa- {
   from {
-    background: #67707b;
+    background: rgba(255, 255, 255, 0.25);
     color: #8b929a;
   }
   to {
-    background: #3d4450;
+    background: rgba(255, 255, 255, 0.15);
     color: #fff;
   }
 }
@@ -3185,6 +3229,26 @@ html.contextmenu_ContextMenuPopup_2GpKT body {
   }
   to {
     background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes gamepaddialog_ItemFocusAnim-translucent-white-10_YLWBZ {
+  from {
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+  }
+}
+@keyframes gamepaddialog_ItemFocusAnim-translucent-white-20_1hX6Y {
+  from {
+    background: rgba(255, 255, 255, 0.5);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.2);
     color: #fff;
   }
 }
@@ -3255,9 +3319,24 @@ html.contextmenu_ContextMenuPopup_2GpKT body {
   line-height: 22px;
 }
 .BasicUI .gamepaddialog_GamepadDialogContent_3joNk .DialogSubHeader {
-  letter-spacing: 0.5px;
-  color: #8b929a;
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
   text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: rgba(255, 255, 255, 0.5);
   font-size: 16px;
   font-weight: 600;
 }
@@ -3301,7 +3380,7 @@ html.contextmenu_ContextMenuPopup_2GpKT body {
   .gamepaddialog_GamepadDialogContent_3joNk
   .DialogControlsSectionHeader {
   letter-spacing: 0.5px;
-  color: #8b929a;
+  color: rgba(255, 255, 255, 0.5);
   text-transform: uppercase;
   font-size: 16px;
   font-weight: 600;
@@ -3382,7 +3461,14 @@ button.gamepaddialog_Button_1kn70.DialogButton:active,
 button.gamepaddialog_Button_1kn70.DialogButton:active.Primary,
 button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover,
 button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover.Primary {
-  background: #23262e;
+  background: rgba(255, 255, 255, 0.15);
+}
+button.gamepaddialog_Button_1kn70.DialogButton.EmptyButton,
+button.gamepaddialog_Button_1kn70.DialogButton:enabled.EmptyButton,
+button.gamepaddialog_Button_1kn70.DialogButton:active.EmptyButton,
+button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover.EmptyButton {
+  padding: 0px;
+  overflow: hidden;
 }
 button.gamepaddialog_Button_1kn70.DialogButton.BarButton,
 button.gamepaddialog_Button_1kn70.DialogButton:enabled.BarButton,
@@ -3401,14 +3487,14 @@ button.gamepaddialog_Button_1kn70.DialogButton:hover,
 button.gamepaddialog_Button_1kn70.DialogButton:enabled:hover,
 button.gamepaddialog_Button_1kn70.DialogButton:active:hover,
 button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover:hover {
-  background: #3d4450;
+  background: rgba(255, 255, 255, 0.2);
   transition: background-color 150ms ease-in;
 }
 button.gamepaddialog_Button_1kn70.DialogButton.Primary:hover,
 button.gamepaddialog_Button_1kn70.DialogButton:enabled.Primary:hover,
 button.gamepaddialog_Button_1kn70.DialogButton:active.Primary:hover,
 button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover.Primary:hover {
-  background: #1aa0ff53;
+  background: #1aa0ff7c;
 }
 button.gamepaddialog_Button_1kn70.DialogButton.gpfocus,
 button.gamepaddialog_Button_1kn70.DialogButton:active,
@@ -3486,7 +3572,7 @@ button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover:before {
 }
 .gamepaddialog_StandaloneFieldSeparator_23kNb {
   height: 1px;
-  background: #23262e;
+  background: rgba(255, 255, 255, 0.1);
   margin-left: calc(-1 * var(--field-negative-horizontal-margin));
   margin-right: calc(-1 * var(--field-negative-horizontal-margin));
 }
@@ -3534,12 +3620,12 @@ button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover:before {
 .gamepaddialog_Field_S-_La.gamepaddialog_WithBottomSeparatorStandard_3s1Rk::after {
   bottom: -0.5px;
   height: 1px;
-  background: #23262e;
+  background: rgba(255, 255, 255, 0.1);
 }
 .gamepaddialog_Field_S-_La.gamepaddialog_WithBottomSeparatorThick_28hmy::after {
   bottom: -0.75px;
   height: 1.5px;
-  background: #23262e;
+  background: rgba(255, 255, 255, 0.1);
 }
 .gamepaddialog_GamepadDialogContent_3joNk .gamepaddialog_Field_S-_La {
   --field-negative-horizontal-margin: 2.8vw;
@@ -3869,6 +3955,11 @@ button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover:before {
 .gamepaddialog_BasicTextInput_3GCBi:not(.disabled):not(.gpfocus):hover {
   background: #23262e;
 }
+.BasicUI .gamepaddialog_BasicTextInput_3GCBi,
+.BasicUI
+  .gamepaddialog_BasicTextInput_3GCBi:not(.disabled):not(.gpfocus):hover {
+  background: rgba(255, 255, 255, 0.1);
+}
 .gamepaddialog_BasicTextInput_3GCBi,
 .gamepaddialog_BasicTextInput_3GCBi.gpfocus {
   padding: 10px 16px;
@@ -3923,7 +4014,7 @@ button.gamepaddialog_Button_1kn70.DialogButton:enabled:active:hover:before {
   right: 0;
   top: 0;
   bottom: 0;
-  background: #3d4450;
+  background: rgba(255, 255, 255, 0.15);
   border-radius: 9001px;
   overflow: hidden;
 }
@@ -4104,6 +4195,14 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Z-Cc svg {
 .gamepadinput_PinDigit_1oiQ5 {
   text-align: center;
 }
+@keyframes gamepadslider_BackgroundAnimation_3cacE {
+  from {
+    background-position: 0 100%;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
 @keyframes gamepadslider_ItemFocusAnim-darkerGrey-nocolor_2ieuB {
   from {
     background: #3d4450;
@@ -4124,11 +4223,11 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Z-Cc svg {
 }
 @keyframes gamepadslider_ItemFocusAnim-darkGrey_3mh_q {
   from {
-    background: #67707b;
+    background: rgba(255, 255, 255, 0.25);
     color: #8b929a;
   }
   to {
-    background: #3d4450;
+    background: rgba(255, 255, 255, 0.15);
     color: #fff;
   }
 }
@@ -4139,6 +4238,26 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Z-Cc svg {
   }
   to {
     background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes gamepadslider_ItemFocusAnim-translucent-white-10_10l9q {
+  from {
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+  }
+}
+@keyframes gamepadslider_ItemFocusAnim-translucent-white-20_1OCQ4 {
+  from {
+    background: rgba(255, 255, 255, 0.5);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.2);
     color: #fff;
   }
 }
@@ -4185,11 +4304,11 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Z-Cc svg {
   cursor: pointer;
 }
 .gamepadslider_SliderControl_3o137:hover .gamepadslider_SliderTrack_Mq25N {
-  background: #3d4450;
+  background: rgba(255, 255, 255, 0.3);
   --left-track-color: #00bbff;
 }
 .gamepadslider_SliderTrack_Mq25N {
-  background: #23262e;
+  background: rgba(255, 255, 255, 0.15);
   margin: auto;
   width: 100%;
   height: 6px;
@@ -4283,7 +4402,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Z-Cc svg {
     .gamepadslider_Disabled_1lI1N
   ).gpfocus
   .gamepadslider_SliderHandle_2yVKj {
-  border: solid 3px #0e141b;
+  border: solid 3px rgba(255, 255, 255, 0.15);
   margin: -3px;
   animation: gamepadslider_SliderHandleFocusPop_2lNxL 200ms ease-out;
 }
@@ -4368,7 +4487,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Z-Cc svg {
   height: 12px;
   flex-shrink: 0;
   flex-grow: 0;
-  background-color: #23262e;
+  background-color: rgba(255, 255, 255, 0.15);
 }
 .gamepadslider_SliderNotchTick_Fv1Ht.gamepadslider_TickActive_1gnUV {
   background-color: #1a9fff;
@@ -4690,6 +4809,14 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Z-Cc svg {
   bottom: 0;
   left: 0;
 }
+@keyframes gamepadpagedsettings_BackgroundAnimation_Lezt5 {
+  from {
+    background-position: 0 100%;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
 @keyframes gamepadpagedsettings_ItemFocusAnim-darkerGrey-nocolor_3M5nC {
   from {
     background: #3d4450;
@@ -4710,11 +4837,11 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Z-Cc svg {
 }
 @keyframes gamepadpagedsettings_ItemFocusAnim-darkGrey_3qFxl {
   from {
-    background: #67707b;
+    background: rgba(255, 255, 255, 0.25);
     color: #8b929a;
   }
   to {
-    background: #3d4450;
+    background: rgba(255, 255, 255, 0.15);
     color: #fff;
   }
 }
@@ -4725,6 +4852,26 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Z-Cc svg {
   }
   to {
     background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes gamepadpagedsettings_ItemFocusAnim-translucent-white-10_3_Y-e {
+  from {
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+  }
+}
+@keyframes gamepadpagedsettings_ItemFocusAnim-translucent-white-20_2NdaO {
+  from {
+    background: rgba(255, 255, 255, 0.5);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.2);
     color: #fff;
   }
 }
@@ -4746,6 +4893,14 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Z-Cc svg {
     color: #fff;
   }
 }
+@keyframes gamepadpagedsettings_BackgroundAnimation_Lezt5 {
+  from {
+    background-position: 0 100%;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
 @keyframes gamepadpagedsettings_ItemFocusAnim-darkerGrey-nocolor_3M5nC {
   from {
     background: #3d4450;
@@ -4766,11 +4921,11 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Z-Cc svg {
 }
 @keyframes gamepadpagedsettings_ItemFocusAnim-darkGrey_3qFxl {
   from {
-    background: #67707b;
+    background: rgba(255, 255, 255, 0.25);
     color: #8b929a;
   }
   to {
-    background: #3d4450;
+    background: rgba(255, 255, 255, 0.15);
     color: #fff;
   }
 }
@@ -4781,6 +4936,26 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Z-Cc svg {
   }
   to {
     background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes gamepadpagedsettings_ItemFocusAnim-translucent-white-10_3_Y-e {
+  from {
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+  }
+}
+@keyframes gamepadpagedsettings_ItemFocusAnim-translucent-white-20_2NdaO {
+  from {
+    background: rgba(255, 255, 255, 0.5);
+    color: #fff;
+  }
+  to {
+    background: rgba(255, 255, 255, 0.2);
     color: #fff;
   }
 }
@@ -4832,9 +5007,10 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Z-Cc svg {
   right: 0;
   bottom: 0;
   left: 0;
+  padding-bottom: 60px;
   overflow-x: hidden;
   overflow-y: auto;
-  scroll-padding: 56px 0px;
+  scroll-padding: 56px 0px 60px 0px;
   flex-direction: column;
   padding-top: calc(24px + var(--basicui-header-height, 0px));
 }
@@ -4849,26 +5025,36 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Z-Cc svg {
   margin-top: 5px;
 }
 .gamepadpagedsettings_PagedSettingsDialog_PageListColumn_2EZ3o {
-  background: #23262e;
+  background: rgba(255, 255, 255, 0.1);
   flex: 1;
   min-width: 240px;
   max-width: 40%;
   display: flex;
   flex-direction: column;
   position: relative;
-  border-right: 1px solid #0e141b;
-  padding-top: calc(0px + var(--basicui-header-height, 0px));
+  padding-bottom: 40px;
 }
 .gamepadpagedsettings_PagedSettingsDialog_Title_1Px9u {
-  color: #67707b;
-  text-transform: uppercase;
-  padding-top: calc(12px + 1.4vw);
+  color: #fff;
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 28px;
+  padding-top: calc(8px + var(--basicui-header-height, 0px));
   padding-left: calc(12px + 1.4vw);
-  padding-right: calc(12px + 1.4vw);
-  font-weight: 500;
-  letter-spacing: 0.2px;
+  padding-right: 16px;
   overflow: hidden;
-  white-space: nowrap;
   text-overflow: ellipsis;
 }
 .gamepadpagedsettings_PagedSettingsDialog_PageList_3c_Jp {
@@ -4883,9 +5069,13 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Z-Cc svg {
   flex-direction: column;
   scroll-snap-type: y mandatory;
   scroll-padding: 36px 0px;
+  padding-top: calc(0px + var(--basicui-header-height, 0px));
 }
 .gamepadpagedsettings_PagedSettingsDialog_PageList_3c_Jp.gamepadpagedsettings_PagedSettingsDialog_PageList_DisableScrolling_2brQE {
   overflow-y: hidden;
+}
+.gamepadpagedsettings_PagedSettingsDialog_PageList_3c_Jp.gamepadpagedsettings_PagedSettingsDialog_PageList_ShowTitle_d113O {
+  padding-top: 16px;
 }
 .gamepadpagedsettings_PagedSettingsDialog_PageListItem_1ix7r {
   font-family: "Motiva Sans", Helvetica, sans-serif;
@@ -4928,8 +5118,9 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Z-Cc svg {
 .gamepadpagedsettings_PagedSettingsDialog_PageListItem_1ix7r.gamepadpagedsettings_Active_22LLB {
   color: #fff;
   cursor: default;
-  background: #3d4450;
+  background: rgba(255, 255, 255, 0.15);
   transform: scale(1.1) rotateX(1deg);
+  clip-path: inset(5% 0% 5% 0%);
 }
 .gamepadpagedsettings_PagedSettingsDialog_PageListItem_1ix7r:focus {
   outline: none;
@@ -4941,7 +5132,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Z-Cc svg {
   animation-name: gamepadpagedsettings_ItemFocusAnim-darkGrey_3qFxl;
 }
 .gamepadpagedsettings_PagedSettingsDialog_PageListItem_1ix7r:hover {
-  background-color: #3d4450;
+  background-color: rgba(255, 255, 255, 0.05);
 }
 .gamepadpagedsettings_PageListItem_Icon_1F_5Q {
   height: 20px;
@@ -4959,12 +5150,12 @@ button.gamepadinput_TogglePasswordVisibilityBtn_1Z-Cc svg {
 }
 .gamepadpagedsettings_Separator_3vV7l {
   height: 1px;
-  background: #3d4450;
+  background: rgba(255, 255, 255, 0.1);
   margin: 8px calc(12px + 1.4vw);
   flex-shrink: 0;
 }
 .gamepadpagedsettings_PagedSettingDialog_ContentColumn_3JPle {
-  background: #0e141b;
+  background: transparent;
 }
 .gamepadpagedsettings_Up_3Qp0k
   > .gamepadpagedsettings_ContentTransition_NCmol.gamepadpagedsettings_Enter_2x_gO {

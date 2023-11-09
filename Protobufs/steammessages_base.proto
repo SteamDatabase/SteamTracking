@@ -128,6 +128,7 @@ message CMsgProtoBufHeader {
 	optional .CMsgProtoBufHeader.ESessionDisposition session_disposition = 38 [default = k_ESessionDispositionNormal];
 	optional string wg_token = 39;
 	optional string webui_auth_key = 40;
+	repeated int32 exclude_client_sessionids = 41;
 
 	oneof ip_addr {
 		uint32 ip = 15;
@@ -311,6 +312,8 @@ message CPackageReservationStatus {
 	optional bool expired = 6;
 	optional uint32 time_expires = 7;
 	optional uint32 time_reserved = 8;
+	optional uint32 rtime_estimated_notification = 9;
+	optional string notificaton_token = 10;
 }
 
 message CMsgKeyValuePair {

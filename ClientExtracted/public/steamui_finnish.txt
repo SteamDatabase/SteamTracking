@@ -1041,7 +1041,7 @@ Tämä kestää alle minuutin."
 
 "SteamUI_ValveSurvey_Summary_SoundCard"						"Äänikortti: %s1"
 "SteamUI_ValveSurvey_Summary_GameController"			"Peliohjain: %s1 havaittu"
-"SteamUI_ValveSurvey_Summary_GameController_None" "Peliohjain: ei mitään havaittu"
+"SteamUI_ValveSurvey_Summary_GameController_None" "Peliohjain: ei havaittu"
 
 "SteamUI_ValveSurvey_Summary_VRHeadset_None"				"VR-lasit: ei havaittu"
 "SteamUI_ValveSurvey_Summary_VRHardware"					"VR-laitteisto:"

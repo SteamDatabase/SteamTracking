@@ -29,6 +29,7 @@ message CMsgClientPeerChunkRequest {
 	optional uint32 app_id = 1;
 	optional uint32 depot_id = 2;
 	optional bytes sha = 3;
+	optional uint64 access_token = 4;
 }
 
 message CMsgClientPeerChunkResponse {

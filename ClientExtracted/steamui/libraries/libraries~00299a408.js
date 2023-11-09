@@ -1,4 +1,4 @@
-var CLSTAMP = "8475583";
+var CLSTAMP = "8480208";
 /* Third-party software licenses can be found at licenses.txt */ (self.webpackChunksteamui =
   self.webpackChunksteamui || []).push([
   [9394],
@@ -36033,7 +36033,7 @@ var CLSTAMP = "8475583";
         constructor(e = null) {
           super(),
             l.prototype.steamid || o.aR(l.M()),
-            i.initialize(this, e, 0, -1, [27], null);
+            i.initialize(this, e, 0, -1, [27, 41], null);
         }
         static M() {
           return (
@@ -36197,6 +36197,14 @@ var CLSTAMP = "8475583";
                     n: 40,
                     br: o.FE.readString,
                     bw: o.Xc.writeString,
+                  },
+                  exclude_client_sessionids: {
+                    n: 41,
+                    r: !0,
+                    q: !0,
+                    br: o.FE.readInt32,
+                    pbr: o.FE.readPackedInt32,
+                    bw: o.Xc.writeRepeatedInt32,
                   },
                 },
               }),

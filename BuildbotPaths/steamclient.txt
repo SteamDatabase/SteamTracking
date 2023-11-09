@@ -51,6 +51,7 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/controller_activator.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/controller_configuration_editor.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/controller_firmware_update.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/controller_gyroprocessing.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/controller_mapping.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/controller_mode.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/controller_source.cpp

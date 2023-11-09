@@ -5382,6 +5382,22 @@ enum UnnamedEnum0fd8aa29d83fb708
 	Overlay = 4;
 }
 
+enum UnnamedEnum103c46b6e6314ec9
+{
+	k_EUnknown = 0;
+	k_EActive = 1;
+	k_EActiveDownloading = 2;
+	k_EActivePaused = 3;
+	k_EQueued = 4;
+	k_EQueuedNext = 5;
+	k_EScheduled = 6;
+	k_ERemovedFromQueue = 7;
+	k_EError = 8;
+	k_EUpdatesDisabledByUser = 9;
+	k_EUpdatesDisabledByApp = 10;
+	k_ECompleted = 11;
+}
+
 enum UnnamedEnum10c37c457648be1b
 {
 	LastChatted = 0;
@@ -5568,21 +5584,6 @@ enum UnnamedEnum21e1ba10d510cf3b
 	None = 0;
 	Horizontal = 1;
 	Vertical = 2;
-}
-
-enum UnnamedEnum22f8b68527464a2f
-{
-	k_EUnknown = 0;
-	k_EActive = 1;
-	k_EActiveDownloading = 2;
-	k_EActivePaused = 3;
-	k_EQueued = 4;
-	k_EQueuedNext = 5;
-	k_EScheduled = 6;
-	k_ERemovedFromQueue = 7;
-	k_EError = 8;
-	k_EUpdatesDisabled = 9;
-	k_ECompleted = 10;
 }
 
 enum UnnamedEnum24822a7e69ba9ab7

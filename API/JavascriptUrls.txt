@@ -1126,6 +1126,7 @@ ${STORE_BASE_URL}account/ajaxsetcookiepreferences
 ${STORE_BASE_URL}account/ajaxsetnotificationsettings
 ${STORE_BASE_URL}account/emailoptout/app
 ${STORE_BASE_URL}account/familymanagement
+${STORE_BASE_URL}account/familymanagement?tab=requests
 ${STORE_BASE_URL}account/languagepreferences/
 ${STORE_BASE_URL}account/notificationsettings
 ${STORE_BASE_URL}account/notinterested

@@ -746,6 +746,7 @@ message CMsgClientStartPeerContentServerResponse {
 	optional uint32 result = 1;
 	optional uint32 server_port = 2;
 	repeated uint32 installed_depots = 3;
+	optional uint64 access_token = 4;
 }
 
 message CMsgClientGetPeerContentInfo {

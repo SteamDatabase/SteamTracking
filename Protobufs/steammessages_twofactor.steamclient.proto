@@ -46,7 +46,6 @@ message CTwoFactor_AddAuthenticator_Request {
 	optional fixed64 serial_number = 3 [(description) = "locally computed serial (deprecated)"];
 	optional uint32 authenticator_type = 4 [(description) = "Authenticator type"];
 	optional string device_identifier = 5 [(description) = "Authenticator identifier"];
-	optional string sms_phone_id = 6 [(description) = "ID of phone to use for SMS verification"];
 	repeated string http_headers = 7 [(description) = "HTTP headers alternating by K/V"];
 	optional uint32 version = 8 [default = 1, (description) = "What the version of our token should be"];
 }
@@ -63,6 +62,7 @@ message CTwoFactor_AddAuthenticator_Response {
 	optional bytes secret_1 = 9 [(description) = "Spare shared secret"];
 	optional int32 status = 10 [(description) = "Result code"];
 	optional string phone_number_hint = 11 [(description) = "a portion of the phone number the SMS code was sent to"];
+	optional int32 confirm_type = 12 [(description) = "how we expect to confirm adding the authenticator"];
 }
 
 message CTwoFactor_SendEmail_Request {
@@ -85,7 +85,6 @@ message CTwoFactor_FinalizeAddAuthenticator_Request {
 
 message CTwoFactor_FinalizeAddAuthenticator_Response {
 	optional bool success = 1 [(description) = "True if succeeded, or want more tries"];
-	optional bool want_more = 2 [(description) = "True if want more tries"];
 	optional uint64 server_time = 3 [(description) = "Current server time"];
 	optional int32 status = 4 [(description) = "Result code"];
 }

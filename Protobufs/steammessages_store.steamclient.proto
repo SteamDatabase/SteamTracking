@@ -30,6 +30,24 @@ enum EPlaytestStatus {
 	k_ETesterStatusGranted = 3;
 }
 
+enum EAppReportType {
+	k_EAppReportType_Invalid = 0;
+	k_EAppReportType_Scam = 1;
+	k_EAppReportType_Malware = 2;
+	k_EAppReportType_HateSpeech = 3;
+	k_EAppReportType_Pornography = 4;
+	k_EAppReportType_NonLabeledAdultContent = 5;
+	k_EAppReportType_Libelous = 6;
+	k_EAppReportType_Offensive = 7;
+	k_EAppReportType_ExploitsChildren = 8;
+	k_EAppReportType_MtxWithNonSteamWalletPaymentMethods = 9;
+	k_EAppReportType_CopyrightViolation = 10;
+	k_EAppReportType_ViolatesLaws = 11;
+	k_EAppReportType_Other = 12;
+	k_EAppReportType_Broken = 13;
+	k_EAppReportType_AIContentReport = 14;
+}
+
 enum EUserReviewScorePreference {
 	k_EUserReviewScorePreference_Unset = 0;
 	k_EUserReviewScorePreference_IncludeAll = 1;
@@ -223,6 +241,15 @@ message CStore_GetDiscoveryQueueSkippedApps_Response {
 	repeated uint32 appids = 1;
 }
 
+message CStore_ReportApp_Request {
+	optional uint32 appid = 1;
+	optional .EAppReportType report_type = 2 [default = k_EAppReportType_Invalid];
+	optional string report = 3;
+}
+
+message CStore_ReportApp_Response {
+}
+
 message CStore_GetStorePreferences_Request {
 }
 
@@ -275,6 +302,42 @@ message CStore_MigratePartnerLinkTracking_Notification {
 	optional uint32 accountid = 1;
 	optional uint64 browserid = 2;
 	optional .EPartnerLinkTrackingBackfillSource backfill_source = 3 [default = k_EPartnerLinkTrackingBackfillSource_None];
+}
+
+message CReservationPositionMessage {
+	optional uint32 edistributor = 1;
+	optional string product_identifier = 2;
+	optional uint32 start_queue_position = 3;
+	optional uint32 rtime_estimated_notification = 4 [(description) = "When we estimate the users will receive a message by"];
+	optional string localization_token = 5 [(description) = "Localization token that we want to use to format the above number"];
+	optional uint32 accountid = 6 [(description) = "User who created this entry"];
+	optional uint32 rtime_created = 7 [(description) = "When this entry was created"];
+}
+
+message CStore_SetReservationPositionMessage_Request {
+	repeated .CReservationPositionMessage settings = 1;
+}
+
+message CStore_SetReservationPositionMessage_Response {
+}
+
+message CStore_DeleteReservationPositionMessage_Request {
+	optional uint32 edistributor = 1;
+	optional string product_identifier = 2;
+	optional uint32 start_queue_position = 3;
+}
+
+message CStore_DeleteReservationPositionMessage_Response {
+}
+
+message CStore_GetAllReservationPositionMessages_Request {
+}
+
+message CStore_GetAllReservationPositionMessages_Response {
+	repeated .CReservationPositionMessage settings = 1;
+}
+
+message CStore_ReloadAllReservationPositionMessages_Notification {
 }
 
 message CSteamDeckCompatibility_SetFeedback_Request {
@@ -340,6 +403,10 @@ service Store {
 		option (method_description) = "Returns all the apps skipped so far in the given discovery queue for the given user.";
 	}
 
+	rpc ReportApp (.CStore_ReportApp_Request) returns (.CStore_ReportApp_Response) {
+		option (method_description) = "User is reporting the app";
+	}
+
 	rpc GetStorePreferences (.CStore_GetStorePreferences_Request) returns (.CStore_GetStorePreferences_Response) {
 		option (method_description) = "Returns the desired ratings board and maximum rating to show on the store";
 	}
@@ -350,6 +417,22 @@ service Store {
 
 	rpc MigratePartnerLinkTracking (.CStore_MigratePartnerLinkTracking_Notification) returns (.NoResponse) {
 		option (method_description) = "Move UTM data from the PartnerLinkTrackingLogNoUser table to the PartnerLinkTrackingLogWithUser table";
+	}
+
+	rpc SetReservationPositionMessage (.CStore_SetReservationPositionMessage_Request) returns (.CStore_SetReservationPositionMessage_Response) {
+		option (method_description) = "Creates/Update a reservation position message for people in the queue or next queue position for people deciding to join";
+	}
+
+	rpc DeleteReservationPositionMessage (.CStore_DeleteReservationPositionMessage_Request) returns (.CStore_DeleteReservationPositionMessage_Response) {
+		option (method_description) = "Marks a position is deleted and will no longer be surfaced";
+	}
+
+	rpc GetAllReservationPositionMessages (.CStore_GetAllReservationPositionMessages_Request) returns (.CStore_GetAllReservationPositionMessages_Response) {
+		option (method_description) = "Marks a position is deleted and will no longer be surfaced";
+	}
+
+	rpc ReloadAllReservationPositionMessages (.CStore_ReloadAllReservationPositionMessages_Notification) returns (.NoResponse) {
+		option (method_description) = "Refreshes all of the caches through the store features servers";
 	}
 
 	rpc SetCompatibilityFeedback (.CSteamDeckCompatibility_SetFeedback_Request) returns (.CSteamDeckCompatibility_SetFeedback_Response) {

@@ -1025,3 +1025,6 @@ message CMsgSetVRKeyboardVisibility {
 	optional uint32 browser_handle = 1;
 	optional bool visible = 2;
 }
+
+message CMsgRestartJSContext {
+}

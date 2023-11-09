@@ -252,7 +252,6 @@
  DeleteVideoPlayer
  Error
  FSCreateFileUnicode
- FSCreateStringFromHFSUniStr
  FSEventStreamCreate
  FSEventStreamInvalidate
  FSEventStreamRelease
@@ -260,7 +259,6 @@
  FSEventStreamStart
  FSEventStreamStop
  FSFindFolder
- FSGetCatalogInfo
  FSGetVolumeInfo
  FSMakeFSRefUnicode
  FSPathMakeRef
@@ -388,7 +386,6 @@
  Plat_gmtime
  Plat_localtime
  Plat_timegm
- Plat_timezone
  R typeinfo name for CAException
  R typeinfo name for bool (*)(char const*)
  R typeinfo name for bool (char const*)
@@ -421,7 +418,6 @@
  SCDynamicStoreKeyCreateProxies
  SDL_AddEventWatch
  SDL_AddGamepadMapping
- SDL_CloseGamepad
  SDL_CloseJoystick
  SDL_CreateWindow
  SDL_DelEventWatch
@@ -449,10 +445,7 @@
  SDL_GetError
  SDL_GetGamepadInstanceGUID
  SDL_GetGamepadInstanceMapping
- SDL_GetGamepadInstanceProduct
  SDL_GetGamepadInstanceType
- SDL_GetGamepadInstanceVendor
- SDL_GetGamepadJoystick
  SDL_GetGamepadMappingForGUID
  SDL_GetGamepadStringForAxis
  SDL_GetGamepadStringForButton
@@ -467,7 +460,6 @@
  SDL_GetJoystickInstanceGUID
  SDL_GetJoystickInstanceName
  SDL_GetJoystickInstanceType
- SDL_GetJoystickName
  SDL_GetJoystickProduct
  SDL_GetJoystickVendor
  SDL_GetJoysticks
@@ -485,7 +477,6 @@
  SDL_IsGamepad
  SDL_LockJoysticks
  SDL_OpenAudioDeviceStream
- SDL_OpenGamepad
  SDL_OpenJoystick
  SDL_PutAudioStreamData
  SDL_QuitSubSystem
@@ -1409,7 +1400,6 @@
  V_ReplaceBadFilenameCharactersInPlace
  V_SetExtension
  V_SetURLParam
- V_SplitNumbers
  V_SplitNumbersUint
  V_SplitStringInternal
  V_SplitStringInternal(char const*, char const* const*, char const**, int, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&, bool)
@@ -1418,7 +1408,6 @@
  V_StrSubst
  V_StrSubstInPlace
  V_StrTrim
- V_StripAndPreserveHTML
  V_StripAndPreserveHTMLCore
  V_StripExtension
  V_StripFilename
@@ -1483,9 +1472,7 @@
  V_vsnprintfRet
  V_vsnwprintf
  V_wcscat
- V_wcsncat
  V_wcsncpy
- V_wcstoi64
  V_wcstoui64
  ValidateSpew
  Warning
@@ -1548,7 +1535,6 @@
  _tlv_bootstrap
  abort
  accept
- access
  acosf
  aesni_cbc_encrypt
  aesni_cbc_sha1_enc
@@ -1925,7 +1911,6 @@
  pthread_setname_np
  pthread_setspecific
  putchar
- putenv
  puts
  pwrite
  qsort
@@ -2124,8 +2109,6 @@
  v8::Array::Length() const
  v8::Array::New(v8::Isolate*, int)
  v8::Boolean::Value() const
- v8::Context::Enter()
- v8::Context::Exit()
  v8::External::New(v8::Isolate*, void*)
  v8::External::Value() const
  v8::Function::GetName() const

@@ -200,7 +200,7 @@ SteamIDInvitesPage
 {
 	url			"%community%/%mystuff%/home/invites/"
 	method		"internal"
-	filter		"profile"
+	filter		"friends"
 }
 SteamIDEditPage
 {
@@ -824,25 +824,25 @@ CommunityScreenshots
 {
 	url		"%community%/%mystuff%/screenshots/"
 	method		"internal"
-	filter	"community"
+	filter	"profile"
 }
 CommunitySingleScreenshot
 {
 	url		"%community%/%mystuff%/screenshot/%p1%"
 	method		"internal"
-	filter	"community"
+	filter	"profile"
 }
 CommunityGameScreenshots
 {
 	url		"%community%/%mystuff%/screenshots/?tab=library&view=filter&filter=app_%p1%"
 	method		"internal"
-	filter	"community"
+	filter	"profile"
 }
 CommunityVideos
 {
 	url		"%community%/%mystuff%/videos/"
 	method		"internal"
-	filter	"community"
+	filter	"profile"
 }
 JoinTrade
 {

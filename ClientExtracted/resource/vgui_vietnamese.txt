@@ -11,8 +11,8 @@
 "FileOpenDialog_Open"		"Mở"
 "FileOpenDialog_Cancel"		"Hủy"
 "FileOpenDialog_Look_in"	"Tìm:"
-"FileOpenDialog_File_Name"	"Tên tệp:"
-"FileOpenDialog_File_Type"	"Loại tệp:"
+"FileOpenDialog_File_Name"	"Tên file:"
+"FileOpenDialog_File_Type"	"Loại file:"
 "FileOpenDialog_Name"		"Tên"
 "FileOpenDialog_Type"		"Loại"
 "SysMenu_Minimize"		" Thu nhỏ "
@@ -79,7 +79,7 @@
 "vgui_FileCopy_Estimate"	"còn %s1"
 "vgui_FileCopy_Copying_Multiple" "Đang sao chép '%s1' (còn %s2)"
 "vgui_FileCopy_Copying_Single" 	"Đang sao chép '%s1'"
-"vgui_FileCopy_Ovewwrite_Title"	"Ghi đè tệp tin"
+"vgui_FileCopy_Ovewwrite_Title"	"Ghi đè file tin"
 "vgui_FileCopy_Ovewwrite_Prompt" "Ghi đè '%filename%'?"
 
 "SMPEvent_AppLaunch"		"Khởi chạy ứng dụng"
@@ -105,7 +105,7 @@
 "SMPEvent_Restore"		"Khôi phục"
 
 "SMPStats_UserId"		"Tên tài khoản:"
-"SMPStats_Filename"		"Tên tệp:"
+"SMPStats_Filename"		"Tên file:"
 
 "SMPStats_EventTitle"		"Sự kiện"
 "SMPStats_TimeTitle"		"Thời gian (ms)"

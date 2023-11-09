@@ -101,6 +101,7 @@ message CBroadcast_WatchBroadcast_Response {
 		k_EWatchResponseClientOutOfDate = 10;
 		k_EWatchResponsePoorUploadQuality = 11;
 		k_EWatchResponseMissingSubscription = 12;
+		k_EWatchResponseTooManyViewers = 13;
 	}
 
 	optional .CBroadcast_WatchBroadcast_Response.EWatchResponse response = 1 [default = k_EWatchResponseReady];

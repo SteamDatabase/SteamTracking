@@ -19,7 +19,9 @@ __TEXT
 __gcc_except_tab__TEXT
 __unwind_info
 __TEXT
+l
 !
+l
 !
 __eh_frame
 __TEXT
@@ -124,9 +126,8 @@ h
 /usr/lib/libobjc.A.dylib
 &
 `],
-@6
+P6
 )
-p
 -
 C
 NSt3__117bad_function_callE
@@ -192,6 +193,7 @@ type.googleapis.com/
 type.googleprod.com/
 N6google8protobuf8internal15ExtensionFinderE
 N6google8protobuf8internal24GeneratedExtensionFinderE
+NSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE
 N6google8protobuf8internal12ExtensionSet8KeyValueE
 N6google8protobuf13RepeatedFieldIiEE
 N6google8protobuf13RepeatedFieldIxEE
@@ -340,8 +342,6 @@ N6google8protobuf23SourceCodeInfo_LocationE
 N6google8protobuf14SourceCodeInfoE
 N6google8protobuf28GeneratedCodeInfo_AnnotationE
 N6google8protobuf17GeneratedCodeInfoE
-N6google8protobuf8internal16InternalMetadata9ContainerINS0_15UnknownFieldSetEEE
-N6google8protobuf8internal16InternalMetadata13ContainerBaseE
 N6google8protobuf14DynamicMessageE
 N6google8protobuf21DynamicMessageFactoryE
 N6google8protobuf8internal29DescriptorPoolExtensionFinderE
@@ -6860,7 +6860,9 @@ P
 13CMsgSetUIMode
 16CMsgPopupCreated
 27CMsgSetVRKeyboardVisibility
-NSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEE
+20CMsgRestartJSContext
+N6google8protobuf8internal16InternalMetadata9ContainerINS0_15UnknownFieldSetEEE
+N6google8protobuf8internal16InternalMetadata13ContainerBaseE
 N4vgui19AnimatingImagePanelE
 10CUtlVectorIPN4vgui6IImageE10CUtlMemoryIS2_EE
 25CPanelAnimationDictionary
@@ -7761,8 +7763,8 @@ Steam pid that launched us
 VGUI_Application_001
 OK
 Cancel
-Nov  7 2023
-15:22:32
+Nov  8 2023
+17:57:47
 crashhandler004
 gameoverlayui
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/overlay/gameoverlayui/main.cpp
@@ -8743,8 +8745,6 @@ CHECK failed: !fields_.empty():
 CHECK failed: (TYPE_LENGTH_DELIMITED) == (type()):
 ./google/protobuf/message_lite.h
 CHECK failed: (size) <= (static_cast<size_t>(2147483647)):
-CHECK failed: *ptr:
-CHECK failed: (overrun) <= (kSlopBytes):
 Can't happen
 google/protobuf/wire_format.cc
 CHECK failed: descriptor:
@@ -10774,9 +10774,7 @@ Dec
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 0
-G+
-G+
-G+
+J+
 0
 
 
@@ -10787,7 +10785,6 @@ G+
 
 0
 @
-+
 j
 j
 j
@@ -10798,8 +10795,7 @@ j
 j
 j
 j
-z*
-s*
+e
 j
 j
 j
@@ -10857,9 +10853,6 @@ V
 !
 @
 &
-#
-#
-#
 @
 M9e
 @
@@ -11002,13 +10995,16 @@ P
 ?
 @
 @
+
+g
 d
 
 
 
 
-E
+
 A+M
+
 
 j
 j
@@ -11056,6 +11052,7 @@ d
 A+4$A+u
 =
 =
+u
 @
 j
 j

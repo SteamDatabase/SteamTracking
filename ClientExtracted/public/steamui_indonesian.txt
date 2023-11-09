@@ -2940,7 +2940,7 @@ Ayo tambahkan temanmu dengan mengirimkan hadiah ke mereka."
 "SteamUI_ValveSurvey_ControllerNoReceiver"		"Tidak Ada Penerima Nirkabel."
 "SteamUI_ValveSurvey_Summary_ControllerCradle"	"Unit dan Kabel Kontroler Steam:  %s1"
 
-"SteamUI_ValveSurvey_Linux_Runtime_Info" "Tentang Waktu Proses Steam Linux:"
+"SteamUI_ValveSurvey_Linux_Runtime_Info" "Tentang Steam Runtime Linux:"
 
 "Steam_SubscriptionFailure_ServiceUnavailable_Headline" "Server Steam tidak tersedia"
 "Steam_SubscriptionFailure_ServiceUnavailable" "Komputermu sedang tidak dapat menjangkau server Steam atau layanan sedang dinonaktifkan untuk sementara waktu. Mohon coba lagi nanti."
@@ -4339,7 +4339,7 @@ Pilih kategori untuk game-game ini agar kamu dapat mencarinya secara cepat dan m
 "Steam_Parental_UnlockInstructions"		"Masukkan PIN di bawah ini untuk keluar dari Mode Keluarga"
 "Steam_Parental_ForgotPIN"				"Saya lupa PIN"
 "Steam_Parental_NoRecoveryEmail"		"Tidak Ada Email Pemulihan yang Disetel"
-"Steam_Parental_NoRecoveryEmail_Instructions"		 "Tidak ada alamat email pemulihan yang disetel untuk akunmu. Untuk memperbarui alamat email pemulihanmu, silakan keluar dari Mode Keluarga dan jalankan kembali pengatuan Mode Keluarga."
+"Steam_Parental_NoRecoveryEmail_Instructions"		 "Tidak ada alamat email pemulihan yang disetel untuk akunmu. Untuk memperbarui alamat email pemulihanmu, silakan keluar dari Mode Keluarga dan jalankan kembali pengaturan Mode Keluarga."
 "Steam_Parental_UnlockFailureTitle"		"Mode Keluarga"
 "Steam_Parental_UnlockFailure"			"PIN salah. Silakan ulangi lagi."
 "Steam_Parental_UnlockFailureExceeded"	"Terlalu banyak kegagalan. Silakan restart Steam untuk mencoba lagi."

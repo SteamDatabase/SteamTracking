@@ -343,6 +343,7 @@
  T ByteToFloat
  T ByteToFloatRow_C
  T CRYPTO_memcmp
+ T CalculateSegmentCount
  T Camellia_DecryptBlock
  T Camellia_DecryptBlock_Rounds
  T Camellia_Ekeygen
