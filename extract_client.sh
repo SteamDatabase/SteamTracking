@@ -81,7 +81,6 @@ do
 done <   <(find bins/ -name '*.dylib' -print0)
 
 ./macho-strings/macho-strings -binary "$DIR/ClientExtracted/steam_osx" > "$DIR/Strings/steam_osx.txt"
-strings bins/steamui.dylib | grep "/api/" | sort > "$DIR/API/Storefront.txt"
 
 #
 # Jump to extracted folder
