@@ -12802,11 +12802,17 @@
             );
       }
       function Tn(e) {
-        const { reservationDef: t, language: n, event: i, bIsPreview: r } = e,
-          s = N.LJ.GetELanguageFallback(n),
-          o =
+        const {
+            reservationDef: t,
+            language: n,
+            event: i,
+            bIsPreview: r,
+            disabled: s,
+          } = e,
+          o = N.LJ.GetELanguageFallback(n),
+          l =
             t.localized_reservation_desc[n] ||
-            t.localized_reservation_desc[s] ||
+            t.localized_reservation_desc[o] ||
             "";
         return a.createElement(
           "div",
@@ -12815,15 +12821,20 @@
             "div",
             { className: kn.reservecopy },
             a.createElement(en.d, {
-              text: o,
+              text: l,
               partnerEventStore: qt.j1,
               showErrorInfo: r,
               event: i,
               languageOverride: n,
             }),
           ),
-          a.createElement(wn.TN, Object.assign({}, e)),
-          a.createElement(wn.EU, Object.assign({}, e)),
+          Boolean(!s) &&
+            a.createElement(
+              a.Fragment,
+              null,
+              a.createElement(wn.TN, Object.assign({}, e)),
+              a.createElement(wn.EU, Object.assign({}, e)),
+            ),
         );
       }
       var Nn = n(34714),
@@ -21844,7 +21855,7 @@
           }),
         );
       }
-      const Rs = a.Fragment;
+      const Rs = a.lazy(() => n.e(5988).then(n.bind(n, 24577)));
       function xs(e) {
         var t;
         const {
@@ -23002,7 +23013,7 @@
     },
     79946: (e, t, n) => {
       "use strict";
-      n.d(t, { EU: () => I, TN: () => D });
+      n.d(t, { EU: () => I, TN: () => D, tZ: () => A });
       var a = n(89526),
         i = n(84646),
         r = n(98009),
@@ -23036,13 +23047,24 @@
       }
       function D(e) {
         const {
-          reservationDef: t,
-          oReservationInfo: n,
-          myReserveState: i,
-          oDepositPackageInfo: r,
-          disabled: s,
-        } = e;
-        return C(n, i, s)
+            reservationDef: t,
+            oReservationInfo: n,
+            myReserveState: i,
+            oDepositPackageInfo: r,
+            disabled: s,
+          } = e,
+          o = C(n, i, s);
+        return (null == n ? void 0 : n.bComingSoon)
+          ? a.createElement(
+              "div",
+              { className: (0, _.Z)(y.reserverow, "ComingSoon") },
+              a.createElement(
+                c.zx,
+                { className: y.reservebutton, disabled: !0 },
+                (0, g.Xx)("#Sale_default_label_18"),
+              ),
+            )
+          : o
           ? a.createElement(B, { oReservationInfo: n, disabled: s })
           : (null == n ? void 0 : n.bOutOfStock)
           ? i.bKomodoReservation
@@ -23091,6 +23113,23 @@
           )
         )
           return null;
+        if (null == s ? void 0 : s.bComingSoon)
+          return a.createElement(
+            "div",
+            {
+              className: (0, _.Z)(y.expecteddate, "ReservationExpectedDateCtn"),
+            },
+            a.createElement(
+              "div",
+              {
+                className: (0, _.Z)(
+                  y.expecteddate_str,
+                  "ReservationExpectedDate",
+                ),
+              },
+              s.strComingSoonLaunchInfo,
+            ),
+          );
         if (C(s, o, c))
           return a.createElement(
             "div",
