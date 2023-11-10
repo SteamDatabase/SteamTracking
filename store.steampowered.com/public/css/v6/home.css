@@ -5653,3 +5653,12 @@ html.gpnav_active .maincap:focus-within
     outline: 4px solid blue;
     box-shadow: 0 0 2px inset #0000ff;
 }
+
+.mobile_app_out_of_date_banner {
+	background-color: #1A9FFF;
+	color: white;
+	text-align: center;
+	padding: 10px 20px;
+	font-size: 15px;
+	font-weight: 600;
+}

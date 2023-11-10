@@ -15,12 +15,12 @@
         FocusRingOnHiddenItem: "focusring_FocusRingOnHiddenItem_2OusV",
       };
     },
-    890: (e, t, n) => {
+    709: (e, t, n) => {
       "use strict";
       n.d(t, { Pf: () => r, y5: () => a });
       var i = n(655),
-        o = n(246),
-        s = n(129);
+        o = n(491),
+        s = n(993);
       class r {
         constructor() {
           SteamClient.BrowserView.RegisterForMessageFromParent(this.OnMessage);
@@ -80,7 +80,7 @@
       }
       (0, i.gn)([o.a], a.prototype, "OnMessage", null);
     },
-    129: (e, t, n) => {
+    993: (e, t, n) => {
       "use strict";
       n.d(t, { i: () => o, l: () => i });
       const i = "GamepadInput";
@@ -93,14 +93,14 @@
           (e[(e.Full = 4)] = "Full");
       })(o || (o = {}));
     },
-    299: (e, t, n) => {
+    666: (e, t, n) => {
       "use strict";
       n.r(t), n.d(t, { InitializeGamepadNavigation: () => ht });
       var i,
         o = n(655),
         s = n(311),
         r = n.n(s),
-        a = n(52);
+        a = n(258);
       !(function (e) {
         (e[(e.GAMEPAD = 0)] = "GAMEPAD"),
           (e[(e.KEYBOARD = 1)] = "KEYBOARD"),
@@ -160,10 +160,10 @@
           l
         );
       }
-      var g = n(246),
-        _ = n(129),
-        v = n(435),
-        p = n(890);
+      var g = n(491),
+        _ = n(993),
+        v = n(63),
+        p = n(709);
       class f {
         constructor(e) {
           (this.m_bIsGamepadInputExternallyControlled = !1),
@@ -571,7 +571,7 @@
             : console.assert(!!e, t, ...n)
           : e || console.warn(t, ...n);
       }
-      var y = n(591);
+      var y = n(789);
       class B extends class {
         GetObject(e) {
           return (0, o.mG)(this, void 0, void 0, function* () {
@@ -980,7 +980,7 @@
           );
         }
       }
-      var Y = n(904);
+      var Y = n(892);
       const X = new G("FocusNavigation").Debug,
         z = new G("GamepadEvents").Debug;
       class Q {
