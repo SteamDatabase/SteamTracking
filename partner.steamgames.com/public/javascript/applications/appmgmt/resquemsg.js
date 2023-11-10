@@ -655,7 +655,7 @@
     },
     9463: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => K });
+      n.r(t), n.d(t, { default: () => X });
       var r = n(89526),
         a = n(59954);
       const s = (0, a.kQ)("physical_goods", "application_config");
@@ -981,18 +981,19 @@
       var j = n(77557),
         M = n(82971),
         w = n(16670),
-        D = n(67736),
+        R = n(67736),
         k = n(57742),
-        P = n(24166),
-        R = n(60161),
-        T = n(14826),
-        y = n(17318),
+        D = n(24166),
+        P = n(60161),
+        y = n(14826),
+        T = n(17318),
         A = n(33150),
-        I = n.n(A);
-      function x(e, t) {
+        I = n.n(A),
+        x = n(85651);
+      function B(e, t) {
         return e > t + 1 ? e - t : e + 12 - t;
       }
-      function B(e) {
+      function L(e) {
         const { strToken: t, rtEstimatedNotifcationDate: n } = e,
           a = new Date(1e3 * n),
           s = a.getMonth() + 1;
@@ -1007,22 +1008,22 @@
             break;
           case "#Sale_Reservation_MonthYear":
           case "#Sale_Reservation_AfterMonthYear":
-            (o = (0, T.Xx)("#Sale_Reservation_MonthNoun_" + s)),
+            (o = (0, y.Xx)("#Sale_Reservation_MonthNoun_" + s)),
               (i = "" + a.getFullYear());
             break;
           case "#Sale_Reservation_TwoMonthRangeYear":
-            (o = (0, T.Xx)("#Sale_Reservation_MonthNoun_" + x(s, 1))),
-              (i = (0, T.Xx)("#Sale_Reservation_MonthNoun_" + s)),
+            (o = (0, y.Xx)("#Sale_Reservation_MonthNoun_" + B(s, 1))),
+              (i = (0, y.Xx)("#Sale_Reservation_MonthNoun_" + s)),
               (l = "" + a.getFullYear());
             break;
           case "#Sale_Reservation_ThreeMonthRangeYear":
-            (o = (0, T.Xx)("#Sale_Reservation_MonthNoun_" + x(s, 2))),
-              (i = (0, T.Xx)("#Sale_Reservation_MonthNoun_" + s)),
+            (o = (0, y.Xx)("#Sale_Reservation_MonthNoun_" + B(s, 2))),
+              (i = (0, y.Xx)("#Sale_Reservation_MonthNoun_" + s)),
               (l = "" + a.getFullYear());
             break;
           case "#Sale_Reservation_FourMonthRangeYear":
-            (o = (0, T.Xx)("#Sale_Reservation_MonthNoun_" + x(s, 3))),
-              (i = (0, T.Xx)("#Sale_Reservation_MonthNoun_" + s)),
+            (o = (0, y.Xx)("#Sale_Reservation_MonthNoun_" + B(s, 3))),
+              (i = (0, y.Xx)("#Sale_Reservation_MonthNoun_" + s)),
               (l = "" + a.getFullYear());
             break;
           case "#Sale_Reservation_Quarter_ThreeMonths":
@@ -1032,8 +1033,20 @@
           case "#Sale_Reservation_AfterQuarter_ThreeMonths":
             (d =
               "#Sale_Reservation_AfterQuarter" + (Math.floor((s - 1) / 3) + 1)),
-              (o = (0, T.Xx)("#Sale_Reservation_MonthNoun_" + s)),
+              (o = (0, y.Xx)("#Sale_Reservation_MonthNoun_" + s)),
               (i = "" + a.getFullYear());
+            break;
+          case "#Sale_Reservation_RelativeWeekly":
+            {
+              const e = x.JW.GetTimeNowWithOverride(),
+                t = Math.floor((n - e) / 86400);
+              t < 7 ||
+                (t < 28
+                  ? ((d = "#Sale_Reservation_RelativeWeekly_Plural"),
+                    (o = "" + Math.floor(t / 7 + 1)))
+                  : ((d = "#Sale_Reservation_RelativeMonthly"),
+                    (o = "" + Math.floor(t / 28 + 1))));
+            }
             break;
           default:
             d = "#Sale_Reservation_Fallback";
@@ -1041,17 +1054,17 @@
         return r.createElement(
           "div",
           { className: I().Ctn },
-          (0, T.Xx)(d, o, i, l, ""),
+          (0, y.Xx)(d, o, i, l, ""),
         );
       }
-      function L(e) {
+      function N(e) {
         const t = v();
         return t && 0 != t.length
           ? r.createElement(
               "div",
               null,
               t.map((e) =>
-                r.createElement(O, {
+                r.createElement(F, {
                   key: `${e.edistributor}_${e.product_identifier}`,
                   productID: e,
                 }),
@@ -1063,7 +1076,7 @@
               "No products with reservation position messages exists.",
             );
       }
-      function N(e) {
+      function G(e) {
         return r.createElement(
           "div",
           null,
@@ -1080,7 +1093,7 @@
           ),
         );
       }
-      function G(e) {
+      function O(e) {
         v();
         return r.createElement(
           "div",
@@ -1099,13 +1112,13 @@
           r.createElement(
             S.zx,
             {
-              onClick: (e) => (0, k.AM)(r.createElement(q, null), (0, R.RA)(e)),
+              onClick: (e) => (0, k.AM)(r.createElement(V, null), (0, P.RA)(e)),
             },
             "Force Reload Definitions on Steam Servers",
           ),
         );
       }
-      function O(e) {
+      function F(e) {
         const { productID: t } = e,
           n = (function (e) {
             return s.find(
@@ -1122,7 +1135,7 @@
             return (0, m.Qg)(p.Get().GetPositionListChangeCallback(e), n), t;
           })(t);
         return r.createElement(
-          P.ug,
+          D.ug,
           {
             bStartMinimized: !1,
             title: a,
@@ -1132,7 +1145,7 @@
             S.zx,
             {
               onClick: (e) =>
-                (0, k.AM)(r.createElement(z, { productID: t }), (0, R.RA)(e)),
+                (0, k.AM)(r.createElement(U, { productID: t }), (0, P.RA)(e)),
             },
             "Add new start position",
           ),
@@ -1156,7 +1169,7 @@
               "tbody",
               null,
               o.map((e) =>
-                r.createElement(F, {
+                r.createElement(z, {
                   key: a + e.start_queue_position,
                   positionMsg: e,
                 }),
@@ -1165,7 +1178,7 @@
           ),
         );
       }
-      function F(e) {
+      function z(e) {
         const { positionMsg: t } = e;
         return r.createElement(
           "tr",
@@ -1174,12 +1187,12 @@
           r.createElement(
             "td",
             null,
-            (0, T.$1)(t.rtime_estimated_notification),
+            (0, y.$1)(t.rtime_estimated_notification),
           ),
           r.createElement(
             "td",
             null,
-            r.createElement(B, {
+            r.createElement(L, {
               rtEstimatedNotifcationDate: t.rtime_estimated_notification,
               strToken: t.localization_token,
             }),
@@ -1194,7 +1207,7 @@
             ),
             r.createElement("br", null),
             "On: ",
-            (0, T.$1)(t.rtime_created),
+            (0, y.$1)(t.rtime_created),
           ),
           r.createElement(
             "td",
@@ -1204,11 +1217,11 @@
               {
                 onClick: (e) =>
                   (0, k.AM)(
-                    r.createElement(z, {
+                    r.createElement(U, {
                       productID: t,
                       existingPositionMsg: t,
                     }),
-                    (0, R.RA)(e),
+                    (0, P.RA)(e),
                   ),
               },
               "Update",
@@ -1218,8 +1231,8 @@
               {
                 onClick: (e) =>
                   (0, k.AM)(
-                    r.createElement(U, { positionMsg: t }),
-                    (0, R.RA)(e),
+                    r.createElement(q, { positionMsg: t }),
+                    (0, P.RA)(e),
                   ),
               },
               "Delete",
@@ -1227,7 +1240,7 @@
           ),
         );
       }
-      function z(e) {
+      function U(e) {
         const { productID: t, existingPositionMsg: n, closeModal: a } = e,
           { fnSetPositionMessages: s } = g(),
           o = Math.floor(Date.now() / 1e3),
@@ -1250,7 +1263,7 @@
               closeModal: a,
             })
           : r.createElement(
-              D.uH,
+              R.uH,
               {
                 bDisableBackgroundDismiss: !0,
                 strTitle: m,
@@ -1318,7 +1331,7 @@
               ),
             );
       }
-      function U(e) {
+      function q(e) {
         const { positionMsg: t, closeModal: n } = e,
           { fnDeletePositionMessage: a } = g(),
           s = `Delete Queue Position ${t.start_queue_position.toLocaleString()}`,
@@ -1329,7 +1342,7 @@
               strDialogTitle: s,
               closeModal: n,
             })
-          : r.createElement(D.uH, {
+          : r.createElement(R.uH, {
               strTitle: s,
               strDescription: "Are you sure, this action is no undo'able?",
               onCancel: n,
@@ -1347,7 +1360,7 @@
               },
             });
       }
-      function q(e) {
+      function V(e) {
         const { closeModal: t } = e,
           { fnReloadReservationPositionMessages: n } = g(),
           [a, s] = (0, r.useState)(!1);
@@ -1355,7 +1368,7 @@
           (0, r.useEffect)(() => {
             n().then(() => s(!0));
           }, [n]),
-          r.createElement(D.uH, {
+          r.createElement(R.uH, {
             bAlertDialog: !0,
             strTitle: "Reload Definition",
             strDescription: a
@@ -1365,7 +1378,7 @@
           })
         );
       }
-      const V = [
+      const W = [
         "#Sale_Reservation_MonthYear",
         "#Sale_Reservation_TwoMonthRangeYear",
         "#Sale_Reservation_ThreeMonthRangeYear",
@@ -1375,13 +1388,14 @@
         "#Sale_Reservation_AfterMonthYear",
         "#Sale_Reservation_Year",
         "#Sale_Reservation_AfterQuarter_ThreeMonths",
+        "#Sale_Reservation_RelativeWeekly",
       ];
       function Y(e) {
         const { strToken: t, fnSetToken: n, rtEstimateDate: a } = e,
           s = (0, r.useMemo)(
             () =>
-              V.map((e) => ({
-                label: r.createElement(B, {
+              W.map((e) => ({
+                label: r.createElement(L, {
                   strToken: e,
                   rtEstimatedNotifcationDate: a,
                 }),
@@ -1393,7 +1407,7 @@
           "div",
           null,
           r.createElement(S.ry, {
-            strDropDownClassName: y.DropDownScroll,
+            strDropDownClassName: T.DropDownScroll,
             label: "Date Format",
             rgOptions: s,
             selectedOption: t,
@@ -1411,9 +1425,9 @@
               r.createElement(
                 "div",
                 null,
-                (0, T.Xx)("#Sale_Reservation_ExpectedDate"),
+                (0, y.Xx)("#Sale_Reservation_ExpectedDate"),
               ),
-              r.createElement(B, {
+              r.createElement(L, {
                 rtEstimatedNotifcationDate: a,
                 strToken: t,
               }),
@@ -1421,48 +1435,48 @@
           ),
         );
       }
-      var W = n(19304),
-        Q = n(13364),
-        H = n.n(Q);
-      function K(e) {
+      var Q = n(19304),
+        H = n(13364),
+        K = n.n(H);
+      function X(e) {
         return r.createElement(
           "div",
-          { className: (0, W.Z)(f.ctn, H().AdminPageCtn) },
+          { className: (0, Q.Z)(f.ctn, K().AdminPageCtn) },
           r.createElement(
             "h1",
-            { className: H().PageTitle },
+            { className: K().PageTitle },
             "Reservation Queue - Messaging Tools",
           ),
           r.createElement("hr", { className: "VO" }),
           r.createElement(
             "div",
-            { className: H().ColumnCtn },
+            { className: K().ColumnCtn },
             r.createElement(
               "div",
-              { className: H().LeftCol },
+              { className: K().LeftCol },
               r.createElement(
                 "div",
-                { className: H().SectionCtn },
+                { className: K().SectionCtn },
                 r.createElement(C, null),
               ),
               r.createElement(
                 "div",
-                { className: H().SectionCtn },
-                r.createElement(L, null),
+                { className: K().SectionCtn },
+                r.createElement(N, null),
               ),
             ),
             r.createElement(
               "div",
-              { className: H().RightCol },
+              { className: K().RightCol },
               r.createElement(
                 "div",
-                { className: H().SectionCtn },
-                r.createElement(N, null),
+                { className: K().SectionCtn },
+                r.createElement(G, null),
               ),
               r.createElement(
                 "div",
-                { className: H().SectionCtn },
-                r.createElement(G, null),
+                { className: K().SectionCtn },
+                r.createElement(O, null),
               ),
             ),
           ),

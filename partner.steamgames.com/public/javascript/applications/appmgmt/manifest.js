@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "8484928";
+var CLSTAMP = "8486854";
 (() => {
   "use strict";
   var e,
@@ -295,7 +295,7 @@ var CLSTAMP = "8484928";
         3768: "3d75adbefaaf59757a3d",
         3786: "6a9132c46aa8d78e5230",
         4033: "2db1b31ef590f39f8901",
-        4108: "da78ea57e8e6dbea0ec2",
+        4108: "c930ebb0a42b882a3e24",
         4166: "5c44125e916a00734d0a",
         4171: "5c20e0e36380516858bb",
         4189: "5fdac00409d8ed9e74fd",
@@ -325,11 +325,11 @@ var CLSTAMP = "8484928";
         5625: "8b5d32831f0c52f1e16d",
         5676: "589d79e2d273584b571f",
         5785: "e7c52fce246dff083061",
-        5849: "bbbda7bde895d350dcea",
+        5849: "be3a351b8c3538c804e7",
         5855: "5a79220847ea16fb2251",
         5875: "8ce53f37d615df1a38bb",
         5925: "24f9387410750c739c17",
-        5933: "cd726107caaf13bdc67a",
+        5933: "29c7e37f453dfb2ef07d",
         5948: "1e2a78055ad805fc3caf",
         6007: "6bee0c159600852777f1",
         6019: "86ae1d38d2c232eba4cb",
@@ -343,7 +343,7 @@ var CLSTAMP = "8484928";
         6699: "2b2668585893837c21e0",
         6739: "723c5b0ae943c792924a",
         6762: "f1365e47a0cd0fc007ab",
-        6808: "583059e1550d45cd3091",
+        6808: "6ccfcc3a15af91cf0f74",
         6815: "44362d8ea3d871bbde8f",
         6817: "4518a68ed253539ad967",
         6846: "91ce799563e659d38188",
@@ -365,7 +365,7 @@ var CLSTAMP = "8484928";
         7942: "80323e3c4dbb542b546a",
         7951: "50f8143939a42601ce79",
         7952: "5a649608cb0a18301329",
-        7975: "be00c6458314d56828e8",
+        7975: "efe15482425da8c1ed74",
         8001: "aaabd9cb62d16d3f8472",
         8051: "b508e5b3442e0e789be5",
         8155: "5b5a22f585393757815d",
@@ -374,7 +374,7 @@ var CLSTAMP = "8484928";
         8385: "2b8df0b73c881d349b6f",
         8389: "aa1f7f4a65af131e9b60",
         8399: "fc279e43fd4c1db9a44e",
-        8754: "2083e11233cc334cb43e",
+        8754: "e626f2578f40f16dd5d6",
         8767: "9a45f3746266fbae2052",
         8774: "3b6d945f4c2441ae680a",
         8794: "d491c17738d061a2dbdd",
