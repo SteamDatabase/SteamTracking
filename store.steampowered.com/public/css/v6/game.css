@@ -3758,10 +3758,6 @@ div.early_access_announcements .divider {
 	background-color: #6f9fc8;
 }
 
-h2.bb_tag + br {
-	display: none;
-}
-
 #EmbedModal textarea {
     width: 100%;
 	height: 80px;
