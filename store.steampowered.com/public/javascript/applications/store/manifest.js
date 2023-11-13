@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "8484816";
+var CLSTAMP = "8490550";
 (() => {
   "use strict";
   var e,
@@ -10,28 +10,28 @@ var CLSTAMP = "8484816";
     c,
     d,
     r,
-    b = {},
-    f = {};
+    f = {},
+    b = {};
   function o(e) {
-    var a = f[e];
+    var a = b[e];
     if (void 0 !== a) return a.exports;
-    var n = (f[e] = { id: e, loaded: !1, exports: {} });
-    return b[e].call(n.exports, n, n.exports, o), (n.loaded = !0), n.exports;
+    var n = (b[e] = { id: e, loaded: !1, exports: {} });
+    return f[e].call(n.exports, n, n.exports, o), (n.loaded = !0), n.exports;
   }
-  (o.m = b),
+  (o.m = f),
     (e = []),
     (o.O = (a, n, s, c) => {
       if (!n) {
         var d = 1 / 0;
         for (i = 0; i < e.length; i++) {
-          for (var [n, s, c] = e[i], r = !0, b = 0; b < n.length; b++)
-            (!1 & c || d >= c) && Object.keys(o.O).every((e) => o.O[e](n[b]))
-              ? n.splice(b--, 1)
+          for (var [n, s, c] = e[i], r = !0, f = 0; f < n.length; f++)
+            (!1 & c || d >= c) && Object.keys(o.O).every((e) => o.O[e](n[f]))
+              ? n.splice(f--, 1)
               : ((r = !1), c < d && (d = c));
           if (r) {
             e.splice(i--, 1);
-            var f = s();
-            void 0 !== f && (a = f);
+            var b = s();
+            void 0 !== b && (a = b);
           }
         }
         return a;
@@ -436,7 +436,7 @@ var CLSTAMP = "8484816";
         6571: "5d0b8a169f7d3155d295",
         6693: "5b01375fac5ea14ac79c",
         6762: "0a8ec24c080ae01adc54",
-        6815: "976e7b4ba9d789a59976",
+        6815: "2bd3465dc6d5ee3fc14a",
         6817: "38a146ba3a8cce718bf6",
         6846: "72bf8cb75bc2523a6d68",
         7072: "15b10e5568940c497647",
@@ -489,7 +489,7 @@ var CLSTAMP = "8484816";
         9431: "9ce490cef760db3d5489",
         9568: "97b026abf1851972be60",
         9663: "1b973e5ae06acdfdd018",
-        9682: "65ee93257e53880e10e5",
+        9682: "880265a7ac858a62269f",
         9753: "acd9923b916174c67f52",
         9788: "bb858a6d2d704b745ce8",
         9795: "02975b5551656a5c3441",
@@ -576,14 +576,14 @@ var CLSTAMP = "8484816";
     (o.l = (e, a, n, d) => {
       if (s[e]) s[e].push(a);
       else {
-        var r, b;
+        var r, f;
         if (void 0 !== n)
           for (
-            var f = document.getElementsByTagName("script"), i = 0;
-            i < f.length;
+            var b = document.getElementsByTagName("script"), i = 0;
+            i < b.length;
             i++
           ) {
-            var t = f[i];
+            var t = b[i];
             if (
               t.getAttribute("src") == e ||
               t.getAttribute("data-webpack") == c + n
@@ -593,7 +593,7 @@ var CLSTAMP = "8484816";
             }
           }
         r ||
-          ((b = !0),
+          ((f = !0),
           ((r = document.createElement("script")).charset = "utf-8"),
           (r.timeout = 120),
           o.nc && r.setAttribute("nonce", o.nc),
@@ -617,7 +617,7 @@ var CLSTAMP = "8484816";
           );
         (r.onerror = l.bind(null, r.onerror)),
           (r.onload = l.bind(null, r.onload)),
-          b && document.head.appendChild(r);
+          f && document.head.appendChild(r);
       }
     }),
     (o.r = (e) => {
@@ -678,15 +678,15 @@ var CLSTAMP = "8484816";
                 if (((c.onerror = c.onload = null), "load" === d.type)) n();
                 else {
                   var r = d && ("load" === d.type ? "missing" : d.type),
-                    b = (d && d.target && d.target.href) || a,
-                    f = new Error(
-                      "Loading CSS chunk " + e + " failed.\n(" + b + ")",
+                    f = (d && d.target && d.target.href) || a,
+                    b = new Error(
+                      "Loading CSS chunk " + e + " failed.\n(" + f + ")",
                     );
-                  (f.code = "CSS_CHUNK_LOAD_FAILED"),
-                    (f.type = r),
-                    (f.request = b),
+                  (b.code = "CSS_CHUNK_LOAD_FAILED"),
+                    (b.type = r),
+                    (b.request = f),
                     c.parentNode.removeChild(c),
-                    s(f);
+                    s(b);
                 }
               }),
             (c.href = a),
@@ -773,14 +773,14 @@ var CLSTAMP = "8484816";
       var a = (a, n) => {
           var s,
             c,
-            [d, r, b] = n,
-            f = 0;
+            [d, r, f] = n,
+            b = 0;
           if (d.some((a) => 0 !== e[a])) {
             for (s in r) o.o(r, s) && (o.m[s] = r[s]);
-            if (b) var i = b(o);
+            if (f) var i = f(o);
           }
-          for (a && a(n); f < d.length; f++)
-            (c = d[f]), o.o(e, c) && e[c] && e[c][0](), (e[c] = 0);
+          for (a && a(n); b < d.length; b++)
+            (c = d[b]), o.o(e, c) && e[c] && e[c][0](), (e[c] = 0);
           return o.O(i);
         },
         n = (self.webpackChunkstore = self.webpackChunkstore || []);
