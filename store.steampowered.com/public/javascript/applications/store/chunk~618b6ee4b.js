@@ -2208,12 +2208,13 @@
           [r, i] = (0, l.useState)(a.k_Loading);
         return (
           (0, l.useEffect)(() => {
-            (t &&
-              t.length == e.length &&
-              (0, d.Eo)(
-                t.map((e) => e.packageid),
-                e,
-              )) ||
+            !((null == e ? void 0 : e.length) > 0) ||
+              (t &&
+                t.length == e.length &&
+                (0, d.Eo)(
+                  t.map((e) => e.packageid),
+                  e,
+                )) ||
               (i(a.k_Loading),
               h
                 .Get()
@@ -21957,14 +21958,25 @@
       function Vs(e) {
         var t, n;
         const { section: r, language: i, event: s, bIsPreview: l } = e,
-          c = N.LJ.GetELanguageFallback(i),
-          d = r.localized_description
-            ? r.localized_description[i] || r.localized_description[c] || ""
+          c = (0, a.useMemo)(() => {
+            var e, t;
+            return null ===
+              (t =
+                null === (e = r.internal_section_data) || void 0 === e
+                  ? void 0
+                  : e.while_supplies_last_option) || void 0 === t
+              ? void 0
+              : t.map((e) => e.supply_package);
+          }, [r]),
+          { eHardwareLoadingState: d } = (0, Ln.p6)(c),
+          u = N.LJ.GetELanguageFallback(i),
+          m = r.localized_description
+            ? r.localized_description[i] || r.localized_description[u] || ""
             : void 0,
-          u = r.text_section_contents
-            ? r.text_section_contents[i] || r.text_section_contents[c] || ""
+          p = r.text_section_contents
+            ? r.text_section_contents[i] || r.text_section_contents[u] || ""
             : void 0,
-          m = (0, w.id)();
+          _ = (0, w.id)();
         return a.createElement(
           C.ZP,
           { feature: "salereservations" },
@@ -21978,45 +21990,51 @@
                 g().SaleSectionCtn,
                 "ReservationCustomCSS",
               ),
-              style: (0, v.V)(r, s, m),
+              style: (0, v.V)(r, s, _),
             },
             a.createElement(Z.AO, { section: r, event: s, language: i }),
-            Boolean(d) &&
+            Boolean(m) &&
               a.createElement(
                 "div",
                 { className: xn.description },
                 a.createElement(en.d, {
-                  text: d,
+                  text: m,
                   partnerEventStore: qt.j1,
                   showErrorInfo: l,
                   event: s,
                   languageOverride: i,
                 }),
               ),
-            a.createElement(
-              "div",
-              { className: (0, I.Z)(xn.options, "options") },
-              null ===
-                (n =
-                  null === (t = r.internal_section_data) || void 0 === t
+            Boolean(d == Ln.Mx.k_LoadSuccess)
+              ? a.createElement(
+                  "div",
+                  { className: (0, I.Z)(xn.options, "options") },
+                  null ===
+                    (n =
+                      null === (t = r.internal_section_data) || void 0 === t
+                        ? void 0
+                        : t.while_supplies_last_option) || void 0 === n
                     ? void 0
-                    : t.while_supplies_last_option) || void 0 === n
-                ? void 0
-                : n.map((t) =>
-                    a.createElement(
-                      zs,
-                      Object.assign({ key: "supply" + t.unique_id }, e, {
-                        supplyInfo: t,
-                      }),
-                    ),
-                  ),
-            ),
-            Boolean(u) &&
+                    : n.map((t) =>
+                        a.createElement(
+                          zs,
+                          Object.assign({ key: "supply" + t.unique_id }, e, {
+                            supplyInfo: t,
+                          }),
+                        ),
+                      ),
+                )
+              : a.createElement(D.V, {
+                  string: (0, N.Xx)("#Loading"),
+                  position: "center",
+                  size: "medium",
+                }),
+            Boolean(p) &&
               a.createElement(
                 "div",
                 { className: xn.description2 },
                 a.createElement(en.d, {
-                  text: u,
+                  text: p,
                   partnerEventStore: qt.j1,
                   showErrorInfo: l,
                   event: s,
@@ -22028,66 +22046,78 @@
       }
       function zs(e) {
         const { supplyInfo: t, language: n, event: r, bIsPreview: i } = e,
-          s = N.LJ.GetELanguageFallback(n),
-          o = t.localized_supply_desc[n] || t.localized_supply_desc[s] || "",
-          l = (0, C.bJ)();
-        return a.createElement(
-          "div",
-          { className: (0, I.Z)(xn.reservation_ctn, "reservation_ctn") },
-          a.createElement(
-            "div",
-            { className: xn.reservecopy },
-            a.createElement(en.d, {
-              text: o,
-              partnerEventStore: qt.j1,
-              showErrorInfo: i,
-              event: r,
-              languageOverride: n,
-            }),
-          ),
-          Boolean(!0)
-            ? a.createElement(
-                "div",
-                {
-                  className: (0, I.Z)(
-                    xn.reserverowReserved,
-                    "WhileSupplyLastAddToCart",
-                  ),
-                },
-                a.createElement(
-                  me.zx,
-                  { onClick: (e) => (0, Pn.tZ)(e, t.supply_package, l) },
-                  (0, N.Xx)("#EventEmail_Button_BuyNow"),
-                ),
-              )
-            : a.createElement(
-                "div",
-                {
-                  className: (0, I.Z)(xn.reserverow, "ReservationUnavailable"),
-                },
-                a.createElement(
-                  me.zx,
-                  { className: xn.reservebutton, disabled: !0 },
-                  (0, N.Xx)("#Sale_ReserveExhausted"),
-                ),
-              ),
-          Boolean(!0) &&
-            a.createElement(
+          s = (0, Ln.Jv)(t.supply_package),
+          o = N.LJ.GetELanguageFallback(n),
+          l = t.localized_supply_desc[n] || t.localized_supply_desc[o] || "",
+          c = (0, C.bJ)();
+        return s
+          ? a.createElement(
               "div",
-              { className: (0, I.Z)(xn.expecteddate, "ReservationBuyNow") },
+              { className: (0, I.Z)(xn.reservation_ctn, "reservation_ctn") },
               a.createElement(
                 "div",
-                {
-                  className: (0, I.Z)(
-                    xn.expecteddate_str,
-                    "ReservationShipDate",
-                  ),
-                },
-                (0, N.Xx)("#Sale_Reservation_ExpectedDeliveryDate"),
+                { className: xn.reservecopy },
+                a.createElement(en.d, {
+                  text: l,
+                  partnerEventStore: qt.j1,
+                  showErrorInfo: i,
+                  event: r,
+                  languageOverride: n,
+                }),
               ),
-              (0, N.Xx)("#standard_shipping_estimate2_short"),
-            ),
-        );
+              Boolean(s.inventory_available)
+                ? a.createElement(
+                    "div",
+                    {
+                      className: (0, I.Z)(
+                        xn.reserverowReserved,
+                        "WhileSupplyLastAddToCart",
+                      ),
+                    },
+                    a.createElement(
+                      me.zx,
+                      { onClick: (e) => (0, Pn.tZ)(e, t.supply_package, c) },
+                      (0, N.Xx)("#EventEmail_Button_BuyNow"),
+                    ),
+                  )
+                : a.createElement(
+                    "div",
+                    {
+                      className: (0, I.Z)(
+                        xn.reserverow,
+                        "ReservationUnavailable",
+                      ),
+                    },
+                    a.createElement(
+                      me.zx,
+                      { className: xn.reservebutton, disabled: !0 },
+                      (0, N.Xx)("#Sale_ReserveExhausted"),
+                    ),
+                  ),
+              Boolean(s.inventory_available) &&
+                a.createElement(
+                  "div",
+                  { className: (0, I.Z)(xn.expecteddate, "ReservationBuyNow") },
+                  a.createElement(
+                    "div",
+                    {
+                      className: (0, I.Z)(
+                        xn.expecteddate_str,
+                        "ReservationShipDate",
+                      ),
+                    },
+                    (0, N.Xx)("#Sale_Reservation_ExpectedDeliveryDate"),
+                  ),
+                  Boolean(s.high_pending_orders)
+                    ? (0, N.Xx)("#delayed_shipping_description2_short")
+                    : (0, N.Xx)("#standard_shipping_estimate2_short"),
+                ),
+            )
+          : a.createElement(D.V, {
+              string: (0, N.Xx)("#Loading"),
+              position: "center",
+              size: "medium",
+            });
       }
       function Ws(e) {
         var t;
