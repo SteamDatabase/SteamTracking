@@ -23455,11 +23455,11 @@
                 ? "#Sale_Reservation_YourExpectedDate"
                 : "#Sale_Reservation_ExpectedDate",
             ),
+            a.createElement(w, {
+              rtEstimatedNotifcationDate: t.rtime_estimated_notification,
+              strToken: t.notificaton_token,
+            }),
           ),
-          a.createElement(w, {
-            rtEstimatedNotifcationDate: t.rtime_estimated_notification,
-            strToken: t.notificaton_token,
-          }),
         );
       }
       function B(e) {
