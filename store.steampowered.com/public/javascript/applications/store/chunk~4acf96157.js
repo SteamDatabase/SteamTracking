@@ -49,14 +49,15 @@
       "use strict";
       n.d(t, { C: () => d, R: () => c });
       var a = n(33940),
-        i = n(50265),
+        i = n(59621),
         s = n(47165),
         o = n(85651),
         r = n(10412);
       class c {
         constructor() {
           (this.m_mapBroadcasterSteamIDToEvents = new Map()),
-            (this.m_mapBroadcasterSteamIDData = new Map());
+            (this.m_mapBroadcasterSteamIDData = new Map()),
+            (0, i.rC)(this);
         }
         static GetBBCodeParam(e, t, n = "") {
           const a = new RegExp(`\\W${t}\\W*=\\W*\\"(.*?)\\"`, "gmi").exec(e);
@@ -211,14 +212,23 @@
       var a = n(33940),
         i = n(52868),
         s = n.n(i),
-        o = n(50265),
-        r = n(25125),
+        o = n(59621),
+        r = n(83315),
         c = n(89526),
         d = n(26464),
         u = n(85246),
         l = n(4306),
         w = n(32765);
       class _ {
+        constructor() {
+          (this.giveaway_id = void 0),
+            (this.seconds_until_drawing = void 0),
+            (this.rtime_start = void 0),
+            (this.rtime_end = void 0),
+            (this.closed = void 0),
+            (this.winner_count = void 0),
+            (0, o.rC)(this);
+        }
         BIsValid() {
           return void 0 !== this.giveaway_id && null !== this.giveaway_id;
         }
@@ -252,7 +262,8 @@
           (this.m_mapGiveawayIDToNextDrawInfo = new Map()),
             (this.m_mapGiveawayIDAndInstanceToNextDrawInfo = new Map()),
             (this.m_bLoadedFromConfig = !1),
-            (this.m_mapNextDrawChangeCallback = new Map());
+            (this.m_mapNextDrawChangeCallback = new Map()),
+            (0, o.rC)(this);
         }
         GetKey(e, t) {
           return e + "_" + t;

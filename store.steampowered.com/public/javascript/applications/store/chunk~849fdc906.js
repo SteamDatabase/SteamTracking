@@ -9,7 +9,7 @@
       var r = s(33940),
         a = s(52868),
         n = s.n(a),
-        o = s(50265),
+        o = s(59621),
         i = s(23217),
         d = s(32765),
         m = s(89526),
@@ -479,7 +479,8 @@
             (this.m_setAppsInCart = new Set()),
             (this.m_nCartLineItemCount = 0),
             (this.m_bIsLoaded = !1),
-            (this.m_bAjaxInFlight = !1);
+            (this.m_bAjaxInFlight = !1),
+            (0, o.rC)(this);
         }
       }
       function c() {

@@ -7,14 +7,15 @@
     52002: (e, t, a) => {
       a.d(t, { C: () => c, R: () => d });
       var n = a(33940),
-        r = a(50265),
+        r = a(59621),
         o = a(47165),
-        s = a(85651),
-        i = a(10412);
+        i = a(85651),
+        s = a(10412);
       class d {
         constructor() {
           (this.m_mapBroadcasterSteamIDToEvents = new Map()),
-            (this.m_mapBroadcasterSteamIDData = new Map());
+            (this.m_mapBroadcasterSteamIDData = new Map()),
+            (0, r.rC)(this);
         }
         static GetBBCodeParam(e, t, a = "") {
           const n = new RegExp(`\\W${t}\\W*=\\W*\\"(.*?)\\"`, "gmi").exec(e);
@@ -27,15 +28,15 @@
             const n = t.exec(e);
             if (null === n) break;
             const r = n[1],
-              s = n[2],
-              i = d.GetBBCodeParam(r, "steamid"),
+              i = n[2],
+              s = d.GetBBCodeParam(r, "steamid"),
               c = {
-                steamID: i ? new o.K(i) : void 0,
+                steamID: s ? new o.K(s) : void 0,
                 name: d.GetBBCodeParam(r, "name"),
                 title: d.GetBBCodeParam(r, "title"),
                 company: d.GetBBCodeParam(r, "company"),
                 photo: d.GetBBCodeParam(r, "photo"),
-                bio: s,
+                bio: i,
               };
             a.push(c);
           }
@@ -70,12 +71,12 @@
         }
         BuildBroadcasterSteamIDToActiveEventMap(e) {
           return (0, n.mG)(this, void 0, void 0, function* () {
-            const t = s.JW.GetTimeNowWithOverride(),
+            const t = i.JW.GetTimeNowWithOverride(),
               a = e.GetCalendarItemsInTimeRange(t - 3600, t);
             for (const e of a.rgCalendarItems)
-              i.j1.QueueLoadPartnerEvent(e.clanid, e.unique_id);
+              s.j1.QueueLoadPartnerEvent(e.clanid, e.unique_id);
             const n = a.rgCalendarItems.map((e) =>
-                i.j1.LoadPartnerEventFromClanEventGIDAndClanSteamID(
+                s.j1.LoadPartnerEventFromClanEventGIDAndClanSteamID(
                   o.K.InitFromClanID(e.clanid),
                   e.unique_id,
                   0,
@@ -164,18 +165,27 @@
       const c = new d();
     },
     93883: (e, t, a) => {
-      a.d(t, { J: () => I });
+      a.d(t, { J: () => h });
       var n = a(33940),
         r = a(52868),
         o = a.n(r),
-        s = a(50265),
-        i = a(25125),
+        i = a(59621),
+        s = a(83315),
         d = a(89526),
         c = a(26464),
         m = a(85246),
         l = a(4306),
         _ = a(32765);
       class u {
+        constructor() {
+          (this.giveaway_id = void 0),
+            (this.seconds_until_drawing = void 0),
+            (this.rtime_start = void 0),
+            (this.rtime_end = void 0),
+            (this.closed = void 0),
+            (this.winner_count = void 0),
+            (0, i.rC)(this);
+        }
         BIsValid() {
           return void 0 !== this.giveaway_id && null !== this.giveaway_id;
         }
@@ -198,18 +208,19 @@
           );
         }
       }
-      (0, n.gn)([s.LO], u.prototype, "giveaway_id", void 0),
-        (0, n.gn)([s.LO], u.prototype, "seconds_until_drawing", void 0),
-        (0, n.gn)([s.LO], u.prototype, "rtime_start", void 0),
-        (0, n.gn)([s.LO], u.prototype, "rtime_end", void 0),
-        (0, n.gn)([s.LO], u.prototype, "closed", void 0),
-        (0, n.gn)([s.LO], u.prototype, "winner_count", void 0);
-      class p {
+      (0, n.gn)([i.LO], u.prototype, "giveaway_id", void 0),
+        (0, n.gn)([i.LO], u.prototype, "seconds_until_drawing", void 0),
+        (0, n.gn)([i.LO], u.prototype, "rtime_start", void 0),
+        (0, n.gn)([i.LO], u.prototype, "rtime_end", void 0),
+        (0, n.gn)([i.LO], u.prototype, "closed", void 0),
+        (0, n.gn)([i.LO], u.prototype, "winner_count", void 0);
+      class w {
         constructor() {
           (this.m_mapGiveawayIDToNextDrawInfo = new Map()),
             (this.m_mapGiveawayIDAndInstanceToNextDrawInfo = new Map()),
             (this.m_bLoadedFromConfig = !1),
-            (this.m_mapNextDrawChangeCallback = new Map());
+            (this.m_mapNextDrawChangeCallback = new Map()),
+            (0, i.rC)(this);
         }
         GetKey(e, t) {
           return e + "_" + t;
@@ -244,7 +255,7 @@
               r = { origin: self.origin };
             return (
               (n = yield o().get(a, { params: r })),
-              (0, s.z)(() => {
+              (0, i.z)(() => {
                 if (
                   (this.m_mapGiveawayIDToNextDrawInfo.has(e) ||
                     this.m_mapGiveawayIDToNextDrawInfo.set(e, new u()),
@@ -275,12 +286,12 @@
         }
         static Get() {
           return (
-            p.s_Singleton ||
-              ((p.s_Singleton = new p()),
-              p.s_Singleton.Init(),
+            w.s_Singleton ||
+              ((w.s_Singleton = new w()),
+              w.s_Singleton.Init(),
               "dev" == _.De.WEB_UNIVERSE &&
-                (window.g_GiveawayStore = p.s_Singleton)),
-            p.s_Singleton
+                (window.g_GiveawayStore = w.s_Singleton)),
+            w.s_Singleton
           );
         }
         Init() {
@@ -295,13 +306,13 @@
           }
         }
       }
-      (0, n.gn)([s.LO], p.prototype, "m_mapGiveawayIDToNextDrawInfo", void 0),
-        (0, n.gn)([s.aD], p.prototype, "CopyToGiveaway", null);
-      class w {
+      (0, n.gn)([i.LO], w.prototype, "m_mapGiveawayIDToNextDrawInfo", void 0),
+        (0, n.gn)([i.aD], w.prototype, "CopyToGiveaway", null);
+      class p {
         constructor() {
           (this.m_myInstanceNumber = 0),
-            (this.m_myInstanceNumber = w.s_GlobalInstance),
-            (w.s_GlobalInstance += 1);
+            (this.m_myInstanceNumber = p.s_GlobalInstance),
+            (p.s_GlobalInstance += 1);
         }
         ClearRefreshInterval() {
           this.m_intervalID &&
@@ -325,22 +336,22 @@
         }
       }
       function v(e, t) {
-        const a = p.Get().GetInfoByInstance(e, t.m_myInstanceNumber);
+        const a = w.Get().GetInfoByInstance(e, t.m_myInstanceNumber);
         (a.seconds_until_drawing -= 1),
           0 == a.seconds_until_drawing && t.ClearCountDown();
       }
-      function I(e) {
-        const [t] = (0, d.useState)(new w()),
+      function h(e) {
+        const [t] = (0, d.useState)(new p()),
           a = (0, l.NW)();
         (0, d.useEffect)(
           () => (
-            p
+            w
               .Get()
               .ReloadGiveaway(e, t.m_myInstanceNumber)
               .then((n) => {
                 t.SetupRefreshDataInterval(n, () =>
                   (function (e, t) {
-                    const a = p
+                    const a = w
                       .Get()
                       .GetInfoByInstance(e, t.m_myInstanceNumber);
                     a &&
@@ -348,7 +359,7 @@
                       a.seconds_until_drawing <= 0 &&
                       !a.closed &&
                       (t.ClearCountDown(),
-                      p
+                      w
                         .Get()
                         .ReloadGiveaway(e, t.m_myInstanceNumber)
                         .then((a) => {
@@ -367,8 +378,8 @@
           ),
           [t, e, a],
         );
-        const n = p.Get().GetInfoByInstance(e, t.m_myInstanceNumber),
-          [r, o, s] = (0, i.SZ)(() => [
+        const n = w.Get().GetInfoByInstance(e, t.m_myInstanceNumber),
+          [r, o, i] = (0, s.SZ)(() => [
             null == n ? void 0 : n.winner_count,
             null == n ? void 0 : n.closed,
             null == n ? void 0 : n.seconds_until_drawing,
@@ -378,14 +389,14 @@
             !n || null == n.giveaway_id || !n.BStarted() || void 0 === r,
           winner_count: r,
           closed: o,
-          seconds_until_drawing: s,
+          seconds_until_drawing: i,
         };
       }
-      (w.s_GlobalInstance = 0),
-        (0, n.gn)([c.a], w.prototype, "ClearRefreshInterval", null),
-        (0, n.gn)([c.a], w.prototype, "ClearCountDown", null),
-        (0, n.gn)([c.a], w.prototype, "SetupRefreshDataInterval", null),
-        (0, n.gn)([c.a], w.prototype, "SetupCountDown", null);
+      (p.s_GlobalInstance = 0),
+        (0, n.gn)([c.a], p.prototype, "ClearRefreshInterval", null),
+        (0, n.gn)([c.a], p.prototype, "ClearCountDown", null),
+        (0, n.gn)([c.a], p.prototype, "SetupRefreshDataInterval", null),
+        (0, n.gn)([c.a], p.prototype, "SetupCountDown", null);
     },
   },
 ]);

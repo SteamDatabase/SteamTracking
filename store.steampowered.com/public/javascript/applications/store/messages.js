@@ -590,7 +590,7 @@
         S = a(14826),
         b = a(29551),
         A = a(37977),
-        G = a(25125),
+        G = a(83315),
         P = a(51438),
         T = a(17547),
         w = a(44865);
@@ -1217,7 +1217,7 @@
         d = a(11195),
         g = a(36704),
         _ = a(23801),
-        p = a(50265);
+        p = a(59621);
       class v {
         constructor(e) {
           (this.m_setMessagesSeen = new Set()), (this.m_SteamInterface = e);
@@ -1337,7 +1337,8 @@
                   );
               }
               return null;
-            })(e.template_vars_json()));
+            })(e.template_vars_json())),
+            (0, p.rC)(this);
         }
         get id() {
           return this.m_message.gid();

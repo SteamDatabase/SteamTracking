@@ -21,14 +21,15 @@
       "use strict";
       n.d(t, { C: () => d, R: () => l });
       var a = n(33940),
-        o = n(50265),
+        o = n(59621),
         r = n(47165),
         s = n(85651),
         i = n(10412);
       class l {
         constructor() {
           (this.m_mapBroadcasterSteamIDToEvents = new Map()),
-            (this.m_mapBroadcasterSteamIDData = new Map());
+            (this.m_mapBroadcasterSteamIDData = new Map()),
+            (0, o.rC)(this);
         }
         static GetBBCodeParam(e, t, n = "") {
           const a = new RegExp(`\\W${t}\\W*=\\W*\\"(.*?)\\"`, "gmi").exec(e);
@@ -194,7 +195,7 @@
         v = n(49234),
         h = n(52316),
         E = n(17547),
-        S = n(63821),
+        S = n(87345),
         I = n(74314);
       let _ = class extends o.Component {
         constructor() {
@@ -291,7 +292,7 @@
         D = n(4306),
         w = n(1275),
         f = n(82079),
-        b = n(50265);
+        b = n(59621);
       let B = class extends r.Component {
         constructor() {
           super(...arguments),

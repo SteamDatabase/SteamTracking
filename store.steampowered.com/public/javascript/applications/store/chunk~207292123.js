@@ -19,7 +19,7 @@
       var o = t(33940),
         m = t(52868),
         _ = t.n(m),
-        u = t(50265),
+        u = t(59621),
         S = t(89526),
         s = t(23217),
         n = t(32765);
@@ -45,6 +45,7 @@
               e.header_mobile &&
                 (this.m_strLocalizedStoryHeaderMobile = e.header_mobile);
           }
+          (0, u.rC)(this);
         }
         GetStoryBadgeGranted() {
           return this.m_eStoryBadgeGranted;

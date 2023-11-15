@@ -41,15 +41,15 @@
         s = i(89526),
         r = i(44026),
         o = i(17589),
-        c = i(4306),
-        a = i(32765),
+        a = i(4306),
+        c = i(32765),
         l = i(94952);
       function _(e) {
         const { children: t, navTreeRef: i } = e,
           _ = (0, n._T)(e, ["children", "navTreeRef"]),
           m = s.useRef(),
-          f = (0, c.BE)(m, i),
-          g = (0, a.id)(),
+          f = (0, a.BE)(m, i),
+          g = (0, c.id)(),
           p = window.__virtual_keyboard_client;
         if (
           ((0, s.useEffect)(() => {
@@ -73,18 +73,20 @@
     },
     14491: (e, t, i) => {
       "use strict";
-      i.r(t), i.d(t, { AccountPreferencesRoutes: () => H, default: () => I });
+      i.r(t), i.d(t, { AccountPreferencesRoutes: () => I, default: () => R });
       var n = i(89526),
         s = i(59934),
         r = i(33940),
-        o = i(50265),
-        c = (i(23217), i(32765)),
-        a = i(52868),
-        l = i.n(a),
+        o = i(59621),
+        a = (i(23217), i(32765)),
+        c = i(52868),
+        l = i.n(c),
         _ = i(14826);
       class m {
         constructor(e) {
-          (this.m_Preferences = e),
+          (this.m_Preferences = void 0),
+            (0, o.rC)(this),
+            (this.m_Preferences = e),
             (this.m_Preferences.content_customization &&
               !Array.isArray(this.m_Preferences.content_customization)) ||
               (this.m_Preferences.content_customization = {}),
@@ -197,9 +199,9 @@
         PostCookieSettings() {
           var e, t;
           return (0, r.mG)(this, void 0, void 0, function* () {
-            const i = c.De.STORE_BASE_URL + "account/ajaxsetcookiepreferences",
+            const i = a.De.STORE_BASE_URL + "account/ajaxsetcookiepreferences",
               n = new FormData();
-            n.set("sessionid", c.De.SESSIONID),
+            n.set("sessionid", a.De.SESSIONID),
               n.append("cookiepreferences", JSON.stringify(this.m_Preferences));
             try {
               let s = yield l().post(i, n, { withCredentials: !0 });
@@ -252,7 +254,7 @@
       const y = (0, f.Pi)(() => {
           let e = (function () {
             if (!N) {
-              let e = (0, c.kQ)("cookiepreferences", "application_config");
+              let e = (0, a.kQ)("cookiepreferences", "application_config");
               N = new m(e);
             }
             return N;
@@ -639,7 +641,10 @@
         });
       class T {
         constructor(e) {
-          (this.m_bUpdating = !1), (this.m_Preferences = e);
+          (this.m_Preferences = void 0),
+            (this.m_bUpdating = !1),
+            (0, o.rC)(this),
+            (this.m_Preferences = e);
         }
         GetPreferences() {
           return this.m_Preferences;
@@ -664,9 +669,9 @@
           var e, t;
           return (0, r.mG)(this, void 0, void 0, function* () {
             const i =
-                c.De.STORE_BASE_URL + "account/ajaxsetnotificationsettings",
+                a.De.STORE_BASE_URL + "account/ajaxsetnotificationsettings",
               n = new FormData();
-            n.set("sessionid", c.De.SESSIONID),
+            n.set("sessionid", a.De.SESSIONID),
               n.append(
                 "notificationpreferences",
                 JSON.stringify(this.m_Preferences),
@@ -702,7 +707,7 @@
       let x;
       function X() {
         if (!x) {
-          let e = (0, c.kQ)("notificationpreferences", "application_config");
+          let e = (0, a.kQ)("notificationpreferences", "application_config");
           x = new T(e);
         }
         return x;
@@ -768,7 +773,7 @@
             o = (0, n.useCallback)(() => {
               i.ToggleTargetPreference(2, t);
             }, [t, i]),
-            [c, a] = (0, n.useState)(!1),
+            [a, c] = (0, n.useState)(!1),
             l = i.BUpdatingPreferences(),
             m = 1 == (1 & t.notification_targets),
             f = 2 == (2 & t.notification_targets),
@@ -798,14 +803,14 @@
                 {
                   className: (0, h.Z)({
                     [b.PrefDetailsToggle]: !0,
-                    [b.Selected]: c,
+                    [b.Selected]: a,
                   }),
-                  onClick: () => a(!c),
+                  onClick: () => c(!a),
                 },
                 n.createElement(D.vVQ, { direction: "down" }),
               ),
             ),
-            c &&
+            a &&
               n.createElement(
                 "div",
                 { className: b.NotificationPrefDetails },
@@ -826,17 +831,29 @@
           var d;
         });
       var w = i(35993);
-      const B = {},
-        H = Object.assign(
+      const B = n.lazy(() =>
+          Promise.all([
+            i.e(4141),
+            i.e(2543),
+            i.e(8820),
+            i.e(7616),
+            i.e(453),
+            i.e(5755),
+            i.e(9267),
+            i.e(5800),
+          ]).then(i.bind(i, 20378)),
+        ),
+        H = { FamilyManagement: () => "/familymanagement" },
+        I = Object.assign(
           {
             CookieSettings: () => "/cookiepreferences",
             NotificationSettings: () => "/notificationsettings",
           },
-          B,
+          H,
         ),
-        I = (e) => {
+        R = (e) => {
           const t = e.match.url,
-            i = H;
+            i = I;
           return n.createElement(
             s.rs,
             null,
@@ -858,7 +875,15 @@
                   },
                 }),
             }),
-            !1,
+            n.createElement(s.AW, {
+              path: `${t}${i.FamilyManagement()}`,
+              render: () =>
+                n.createElement(w.d, {
+                  config: {
+                    "family-management": () => n.createElement(B, null),
+                  },
+                }),
+            }),
           );
         };
     },

@@ -97,7 +97,7 @@
         n = a(565),
         i = a(59934),
         r = a(18753),
-        c = a(50265),
+        c = a(59621),
         o = a(33940),
         d = a(32765),
         p = a(52868),
@@ -111,7 +111,10 @@
       })(m || (m = {}));
       class h {
         constructor() {
-          (this.eState = m.Unrequested), (this.nExpirationTime = 0);
+          (this.data = void 0),
+            (this.eState = m.Unrequested),
+            (this.nExpirationTime = 0),
+            (0, c.rC)(this);
         }
         getData(e, t, a) {
           const l = this.eState == m.Pending || this.eState == m.Rerequest;
@@ -173,7 +176,7 @@
         (0, o.gn)([c.LO], h.prototype, "nExpirationTime", void 0);
       class _ {
         constructor() {
-          this.m_mapKeyToDataWrapper = new Map();
+          (this.m_mapKeyToDataWrapper = new Map()), (0, c.rC)(this);
         }
         getAsyncDataWrapper(e) {
           let t;
@@ -210,7 +213,8 @@
           (this.m_asyncSchemaList = new _()),
             (this.m_asyncSchemaDetails = new _()),
             (this.m_asyncProblemList = new h()),
-            (this.m_asyncProblemDetails = new _());
+            (this.m_asyncProblemDetails = new _()),
+            (0, c.rC)(this);
         }
         static Get() {
           return (

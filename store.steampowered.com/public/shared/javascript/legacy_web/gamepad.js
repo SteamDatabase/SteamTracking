@@ -15,15 +15,18 @@
         FocusRingOnHiddenItem: "focusring_FocusRingOnHiddenItem_2OusV",
       };
     },
-    282: (e, t, n) => {
+    333: (e, t, n) => {
       "use strict";
       n.d(t, { Pf: () => r, y5: () => a });
       var i = n(655),
-        o = n(820),
-        s = n(373);
+        o = n(435),
+        s = n(289);
       class r {
         constructor() {
-          SteamClient.BrowserView.RegisterForMessageFromParent(this.OnMessage);
+          (this.m_fnCallback = void 0),
+            SteamClient.BrowserView.RegisterForMessageFromParent(
+              this.OnMessage,
+            );
         }
         RegisterForMessage(e) {
           this.m_fnCallback = e;
@@ -60,7 +63,8 @@
       (0, i.gn)([o.a], r.prototype, "OnMessage", null);
       class a {
         constructor(e) {
-          (this.m_postWindow = e),
+          (this.m_fnCallback = void 0),
+            (this.m_postWindow = e),
             window.addEventListener("message", this.OnMessage);
         }
         RegisterForMessage(e) {
@@ -80,7 +84,7 @@
       }
       (0, i.gn)([o.a], a.prototype, "OnMessage", null);
     },
-    373: (e, t, n) => {
+    289: (e, t, n) => {
       "use strict";
       n.d(t, { i: () => o, l: () => i });
       const i = "GamepadInput";
@@ -93,14 +97,14 @@
           (e[(e.Full = 4)] = "Full");
       })(o || (o = {}));
     },
-    913: (e, t, n) => {
+    882: (e, t, n) => {
       "use strict";
       n.r(t), n.d(t, { InitializeGamepadNavigation: () => ht });
       var i,
         o = n(655),
         s = n(311),
         r = n.n(s),
-        a = n(112);
+        a = n(133);
       !(function (e) {
         (e[(e.GAMEPAD = 0)] = "GAMEPAD"),
           (e[(e.KEYBOARD = 1)] = "KEYBOARD"),
@@ -160,10 +164,10 @@
           l
         );
       }
-      var g = n(820),
-        _ = n(373),
-        v = n(189),
-        p = n(282);
+      var g = n(435),
+        _ = n(289),
+        v = n(7),
+        p = n(333);
       class f {
         constructor(e) {
           (this.m_bIsGamepadInputExternallyControlled = !1),
@@ -571,7 +575,7 @@
             : console.assert(!!e, t, ...n)
           : e || console.warn(t, ...n);
       }
-      var y = n(424);
+      var y = n(321);
       class B extends class {
         GetObject(e) {
           return (0, o.mG)(this, void 0, void 0, function* () {
@@ -980,7 +984,7 @@
           );
         }
       }
-      var Y = n(987);
+      var Y = n(869);
       const X = new G("FocusNavigation").Debug,
         z = new G("GamepadEvents").Debug;
       class Q {

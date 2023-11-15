@@ -55,7 +55,7 @@
       var r = n(33940),
         s = n(52868),
         a = n.n(s),
-        i = n(50265),
+        i = n(59621),
         o = n(89526),
         d = n(4556),
         l = n(47165),
@@ -65,7 +65,8 @@
       class _ {
         constructor() {
           (this.m_mapProfiles = new Map()),
-            (this.m_mapProfilesLoading = new Map());
+            (this.m_mapProfilesLoading = new Map()),
+            (0, i.rC)(this);
         }
         LoadProfiles(e, t) {
           return (0, r.mG)(this, void 0, void 0, function* () {

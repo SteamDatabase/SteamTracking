@@ -157,7 +157,7 @@
         n = a.n(s),
         o = a(38072),
         i = a.n(o),
-        l = a(50265),
+        l = a(59621),
         m = a(89526),
         d = a(68333),
         u = a(2232),
@@ -171,6 +171,7 @@
             (this.m_mapStoredDrafts = e),
             (this.m_mapLocalUpdates = new Map());
           for (let t = 0; t < 31; t++) this.m_mapLocalUpdates.set(t, {});
+          (0, l.rC)(this);
         }
         BNeedsSaving(t) {
           if (void 0 !== t) {
@@ -428,7 +429,8 @@
             (this.m_steamInterface = null),
             "dev" == h.De.WEB_UNIVERSE && (window.g_FAQStore = this),
             h.De.IN_STEAMUI ||
-              (this.ReadInitialPayload(), this.SetUpWebAPIInterface());
+              (this.ReadInitialPayload(), this.SetUpWebAPIInterface()),
+            (0, l.rC)(this);
         }
         SetUpWebAPIInterface() {
           const t = (0, h.kQ)("faqstore", "application_config"),

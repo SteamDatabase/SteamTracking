@@ -2847,11 +2847,14 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:before {
   left: 0;
   right: 0;
   top: var(--basicui-header-height, 0px);
-  bottom: 0;
+  bottom: var(--gamepadui-current-footer-height, 0px);
   overflow-y: auto;
   overflow-x: hidden;
   scroll-padding: 80px 0px;
   flex-direction: column;
+}
+.gamepaddialog_ModalPosition_3A5uj.gamepaddialog_VR_3-Nqu {
+  bottom: 0;
 }
 .gamepaddialog_ModalPosition_3A5uj.gamepaddialog_WithStandardPadding_1XQXQ {
   padding: 24px;
@@ -3972,7 +3975,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   right: 0;
   bottom: 0;
   left: 0;
-  padding-bottom: 60px;
+  padding-bottom: calc(var(--gamepadui-current-footer-height, 0px) + 20px);
   overflow-x: hidden;
   overflow-y: auto;
   scroll-padding: 56px 0px 60px 0px;
@@ -3997,7 +4000,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   display: flex;
   flex-direction: column;
   position: relative;
-  padding-bottom: 40px;
+  padding-bottom: var(--gamepadui-current-footer-height, 0px);
 }
 .gamepadpagedsettings_PagedSettingsDialog_Title_3aOHb {
   color: #fff;
@@ -4041,6 +4044,9 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
 }
 .gamepadpagedsettings_PagedSettingsDialog_PageList_gNwoz.gamepadpagedsettings_PagedSettingsDialog_PageList_ShowTitle_3UfIN {
   padding-top: 16px;
+}
+.gamepadpagedsettings_PagedSettingsDialog_PageList_gNwoz.gamepadpagedsettings_PageSettingsDialog_PageList_NoHeaderPadding_2EiZ3 {
+  padding-top: 0px;
 }
 .gamepadpagedsettings_PagedSettingsDialog_PageListItem_2mL2H {
   font-family: "Motiva Sans", Helvetica, sans-serif;

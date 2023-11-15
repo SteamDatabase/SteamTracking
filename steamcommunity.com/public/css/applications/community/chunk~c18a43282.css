@@ -4899,7 +4899,7 @@ html.responsive.touch .ContentHubSalePage {
   .partnersaledisplay_SaleOuterContainer_3FwA4:not(
       .partnersaledisplay_SalePageLogoSet_3Od0-
     ) {
-    margin-top: 41vw !important;
+    margin-top: 41vw;
   }
 }
 .partnersaledisplay_SaleBackground_dmyDb {

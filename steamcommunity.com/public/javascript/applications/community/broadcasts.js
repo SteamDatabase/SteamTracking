@@ -88,7 +88,7 @@
         r = a(52868),
         o = a.n(r),
         l = a(88464),
-        s = a(25125),
+        s = a(83315),
         i = a(89526),
         c = a(40442),
         d = a(62983),
@@ -518,7 +518,7 @@
         l = a(33940),
         s = a(52868),
         i = a.n(s),
-        c = a(50265),
+        c = a(59621),
         d = a(47165),
         m = a(45475),
         u = a(23217),
@@ -527,7 +527,8 @@
         constructor() {
           (this.m_bShowOnlyVideo = !1),
             (this.m_bShowOnlyChat = !1),
-            (this.m_curDebugInfo = null);
+            (this.m_curDebugInfo = null),
+            (0, c.rC)(this);
         }
         GetBroadcasterSteamID() {
           return this.m_steamid;
@@ -1210,7 +1211,7 @@
           )
         );
       };
-      var K = a(25125),
+      var K = a(83315),
         Y = a(25871),
         j = a(32905),
         $ = a(701),

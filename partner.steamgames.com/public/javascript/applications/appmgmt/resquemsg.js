@@ -469,7 +469,7 @@
       "use strict";
       n.d(t, { F_: () => _, JW: () => u, kl: () => v, zD: () => g });
       var r = n(33940),
-        a = n(50265),
+        a = n(59621),
         s = n(36105),
         o = n.n(s),
         i = n(89526),
@@ -479,7 +479,8 @@
         constructor() {
           (this.bOpenEventLandingPage = !1),
             (this.bIncludeFeaturedAsGameSource = !0),
-            (this.nOverrideDateNow = void 0);
+            (this.nOverrideDateNow = void 0),
+            (0, a.rC)(this);
         }
         get bRequireAllEventsLoadedInTimeBlock() {
           return !1;

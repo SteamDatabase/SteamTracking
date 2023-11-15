@@ -308,8 +308,8 @@
         r = o(52868),
         n = o.n(r),
         l = o(88464),
-        p = o(1981),
-        d = o(4306),
+        d = o(1981),
+        p = o(4306),
         c = o(87178),
         h = o(23801),
         g = o(19304),
@@ -434,9 +434,9 @@
           );
         }
       }
-      (0, s.gn)([d.ak], I.prototype, "SetDimensions", null),
-        (0, s.gn)([d.ak], I.prototype, "OnPositionChanged", null),
-        (0, s.gn)([d.ak], I.prototype, "PostPositionChangeCallback", null);
+      (0, s.gn)([p.ak], I.prototype, "SetDimensions", null),
+        (0, s.gn)([p.ak], I.prototype, "OnPositionChanged", null),
+        (0, s.gn)([p.ak], I.prototype, "PostPositionChangeCallback", null);
       let k = class extends a.Component {
         constructor(e) {
           super(e),
@@ -513,17 +513,17 @@
               fnOnPositionChanged: r,
               height: n,
             } = this.props,
-            { bFallbackHeader: l, bHasLogoImage: d } = this.state,
+            { bFallbackHeader: l, bHasLogoImage: p } = this.state,
             h = (0, g.Z)(
               P().TopCapsule,
               s,
               !this.state.bHasHeaderImage && P().NoArt,
               (!this.props.hasHeroImage || l) && P().FallbackArt,
-              !d && i,
+              !p && i,
             ),
             m = { "--header-height": null == n ? void 0 : n + "px" };
           return a.createElement(
-            p.Z,
+            d.Z,
             {
               timeout: S,
               appear: !0,
@@ -543,7 +543,7 @@
                 onError: this.OnHeaderError,
                 onLoad: this.OnLoaded,
               }),
-              d &&
+              p &&
                 a.createElement(
                   R,
                   {
@@ -572,11 +572,11 @@
           );
         }
       };
-      (0, s.gn)([d.ak], k.prototype, "OnHeaderError", null),
-        (0, s.gn)([d.ak], k.prototype, "OnIncrementalLogoError", null),
-        (0, s.gn)([d.ak], k.prototype, "OnLogoError", null),
-        (0, s.gn)([d.ak], k.prototype, "OnLogoLoad", null),
-        (0, s.gn)([d.ak], k.prototype, "OnLoaded", null),
+      (0, s.gn)([p.ak], k.prototype, "OnHeaderError", null),
+        (0, s.gn)([p.ak], k.prototype, "OnIncrementalLogoError", null),
+        (0, s.gn)([p.ak], k.prototype, "OnLogoError", null),
+        (0, s.gn)([p.ak], k.prototype, "OnLogoLoad", null),
+        (0, s.gn)([p.ak], k.prototype, "OnLoaded", null),
         (k = (0, s.gn)([l.Pi], k));
       class b extends a.Component {
         constructor(e) {
@@ -684,7 +684,7 @@
             )),
             a.createElement(v.Consumer, null, (t) =>
               a.createElement(
-                p.Z,
+                d.Z,
                 { timeout: S, appear: !0, in: t.bFullscreen, classNames: C },
                 a.createElement(
                   "div",
@@ -742,13 +742,13 @@
           {
             nBottomPct: n,
             nTopPct: l,
-            nLeftPct: d,
+            nLeftPct: p,
             nRightPct: c,
           } = y(t.pinnedPosition, t.nWidthPct, t.nHeightPct),
           h =
             (a.useContext(v),
             {
-              left: `${d}%`,
+              left: `${p}%`,
               top: `${l}%`,
               width: `${t.nWidthPct}%`,
               height: `${t.nHeightPct}%`,
@@ -765,7 +765,7 @@
                 "div",
                 { className: m, style: h },
                 a.createElement(
-                  p.Z,
+                  d.Z,
                   { timeout: S, appear: !0, in: r, classNames: C },
                   a.createElement(
                     "div",
@@ -814,9 +814,9 @@
         return { nBottomPct: s, nTopPct: a, nLeftPct: i, nRightPct: r };
       }
       var T;
-      (0, s.gn)([d.ak], b.prototype, "OnIncrementalError", null),
-        (0, s.gn)([d.ak], b.prototype, "OnHeaderLoad", null),
-        (0, s.gn)([d.ak], b.prototype, "OnBlurImageFailed", null),
+      (0, s.gn)([p.ak], b.prototype, "OnIncrementalError", null),
+        (0, s.gn)([p.ak], b.prototype, "OnHeaderLoad", null),
+        (0, s.gn)([p.ak], b.prototype, "OnBlurImageFailed", null),
         (function (e) {
           (e.topleft = "Topleft"),
             (e.top = "Top"),
@@ -852,14 +852,14 @@
             nBottomPct: r,
             nTopPct: n,
             nLeftPct: l,
-            nRightPct: p,
+            nRightPct: d,
           } = y(o, s, a);
           return {
             id: i,
             curBottomPosPct: r,
             curTopPosPct: n,
             curLeftPosPct: l,
-            curRightPosPct: p,
+            curRightPosPct: d,
             curWidthPct: s,
             curHeightPct: a,
             EdgeDown: null,
@@ -1227,20 +1227,20 @@
           );
         }
       }
-      (0, s.gn)([d.ak], O.prototype, "LinkRegionBoxRef", null),
-        (0, s.gn)([d.ak], O.prototype, "OnMouseDown", null),
-        (0, s.gn)([d.ak], O.prototype, "UpdateBoxPosition", null),
-        (0, s.gn)([d.ak], O.prototype, "OnMouseMove", null),
-        (0, s.gn)([d.ak], O.prototype, "CheckBottomEdge", null),
-        (0, s.gn)([d.ak], O.prototype, "CheckRightEdge", null),
-        (0, s.gn)([d.ak], O.prototype, "CheckTopEdge", null),
-        (0, s.gn)([d.ak], O.prototype, "CheckLeftEdge", null),
-        (0, s.gn)([d.ak], O.prototype, "CalcLeftEdge", null),
-        (0, s.gn)([d.ak], O.prototype, "CalcRightEdge", null),
-        (0, s.gn)([d.ak], O.prototype, "CalcTopEdge", null),
-        (0, s.gn)([d.ak], O.prototype, "CalcBottomEdge", null),
-        (0, s.gn)([d.ak], O.prototype, "OnMouseUp", null),
-        (0, s.gn)([d.ak], O.prototype, "OnResizeComplete", null);
+      (0, s.gn)([p.ak], O.prototype, "LinkRegionBoxRef", null),
+        (0, s.gn)([p.ak], O.prototype, "OnMouseDown", null),
+        (0, s.gn)([p.ak], O.prototype, "UpdateBoxPosition", null),
+        (0, s.gn)([p.ak], O.prototype, "OnMouseMove", null),
+        (0, s.gn)([p.ak], O.prototype, "CheckBottomEdge", null),
+        (0, s.gn)([p.ak], O.prototype, "CheckRightEdge", null),
+        (0, s.gn)([p.ak], O.prototype, "CheckTopEdge", null),
+        (0, s.gn)([p.ak], O.prototype, "CheckLeftEdge", null),
+        (0, s.gn)([p.ak], O.prototype, "CalcLeftEdge", null),
+        (0, s.gn)([p.ak], O.prototype, "CalcRightEdge", null),
+        (0, s.gn)([p.ak], O.prototype, "CalcTopEdge", null),
+        (0, s.gn)([p.ak], O.prototype, "CalcBottomEdge", null),
+        (0, s.gn)([p.ak], O.prototype, "OnMouseUp", null),
+        (0, s.gn)([p.ak], O.prototype, "OnResizeComplete", null);
       const x = (e) => {
         const { title: t, className: o } = e;
         let s = 26;
@@ -1289,7 +1289,7 @@
         const { title: t, children: o } = e,
           s = a.useContext(v);
         return a.createElement(
-          p.Z,
+          d.Z,
           { timeout: S, appear: !0, in: s.bFullscreen, classNames: C },
           a.createElement(
             "div",
@@ -1303,10 +1303,12 @@
           ),
         );
       }
-      var N = o(50265);
+      var N = o(59621);
       class A {
         constructor(e) {
-          (this.m_strLibraryHeroURL = e.strLibraryHeroURL),
+          (this.m_logoPosition = void 0),
+            (0, N.rC)(this),
+            (this.m_strLibraryHeroURL = e.strLibraryHeroURL),
             (this.m_strLibraryLogoURL = e.strLibraryLogoURL),
             (this.m_unAppID = e.unAppID),
             (this.m_strAppName = e.strAppName),
@@ -1664,10 +1666,10 @@
           );
         }
       }
-      (0, s.gn)([d.ak], ee.prototype, "OnBeforeUnload", null),
-        (0, s.gn)([d.ak], ee.prototype, "OnOK", null),
-        (0, s.gn)([d.ak], ee.prototype, "OnCancel", null),
-        (0, s.gn)([d.ak], ee.prototype, "OnPositionChanged", null);
+      (0, s.gn)([p.ak], ee.prototype, "OnBeforeUnload", null),
+        (0, s.gn)([p.ak], ee.prototype, "OnOK", null),
+        (0, s.gn)([p.ak], ee.prototype, "OnCancel", null),
+        (0, s.gn)([p.ak], ee.prototype, "OnPositionChanged", null);
       class te extends a.Component {
         constructor(e) {
           super(e), (this.state = { bEditModeEnabled: !0 });
@@ -1725,7 +1727,7 @@
           );
         }
       }
-      (0, s.gn)([d.ak], te.prototype, "OnPositionChanged", null);
+      (0, s.gn)([p.ak], te.prototype, "OnPositionChanged", null);
       const oe = (0, l.Pi)((e) => {
         const t = e.LogoEditorStore.GetLogoPosition();
         return a.createElement(

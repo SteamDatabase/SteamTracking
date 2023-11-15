@@ -2252,7 +2252,7 @@
       var n = r(33940),
         a = r(38072),
         i = r.n(a),
-        o = r(50265),
+        o = r(59621),
         s = r(14826),
         l = r(52868),
         c = r.n(l),
@@ -2331,6 +2331,8 @@
             (this.m_rgActiveBonuses = o.LO.array([], { deep: !1 })),
             (this.m_mapAppRewards = new Map()),
             (this.m_inflightRewardItemRequests = {}),
+            (this.m_seasonalBadgeDefinition = void 0),
+            (this.m_goldenProfileDefinition = void 0),
             (this.m_goldenProfileConfigs = []),
             (this.m_bLoadedRecentlyPlayed = !1),
             (this.m_rgRecentlyPlayed = []),
@@ -2340,7 +2342,11 @@
             (this.m_bLoadedEligibleApps = !1),
             (this.m_rgEligibleApps = []),
             (this.m_mapEligibleApps = new Map()),
+            (this.m_rgProfileCustomizationsConfig = void 0),
+            (this.m_persona = void 0),
             (this.m_equippedItems = {}),
+            (this.m_rgPurchasedCustomizations = void 0),
+            (this.m_rgUpgradedCustomizations = void 0),
             (this.m_bLoadedAwardCost = !1),
             (this.m_unAwardPointsTransferred = 0),
             (this.m_bIsSaleActive = !1),
@@ -2394,7 +2400,8 @@
               },
             )),
             (this.m_mapPages = o.LO.map({}, { deep: !1 })),
-            (this.m_mapClusters = o.LO.map({}, { deep: !1 }));
+            (this.m_mapClusters = o.LO.map({}, { deep: !1 })),
+            (0, o.rC)(this);
         }
         Init(e, t) {
           if (
@@ -4544,7 +4551,10 @@
       }
       class Q {
         constructor() {
-          this.m_bCanClaimFreeItem = !1;
+          (this.m_bCanClaimFreeItem = !1),
+            (this.m_claimedFreeItemDef = void 0),
+            (this.m_rtNextClaimTime = void 0),
+            (0, o.rC)(this);
         }
         static Get() {
           return (
@@ -4643,7 +4653,7 @@
       var n = r(33940),
         a = r(89526),
         i = r(88464),
-        o = r(25125),
+        o = r(83315),
         s = r(58961),
         l = r(49587),
         c = r(14826),
@@ -7098,8 +7108,8 @@
       var n = r(33940),
         a = r(89526),
         i = r(51438),
-        o = r(50265),
-        s = r(25125),
+        o = r(59621),
+        s = r(83315),
         l = r(88464),
         c = r(4306),
         m = r(565),
@@ -7958,7 +7968,8 @@
             festive: [],
           }),
             (this.m_rgRunningEffects = []),
-            (this.m_effectSettings = e);
+            (this.m_effectSettings = e),
+            (0, o.rC)(this);
         }
         AddRoomEffect(e) {
           this.QueueRoomEffect(e), this.UpdateRunningRoomEffects();
@@ -11564,7 +11575,7 @@
         s = r(32765),
         l = r(19094),
         c = r(88464),
-        m = r(25125),
+        m = r(83315),
         d = r(565),
         p = r(93718),
         u = r(61876),
@@ -14843,13 +14854,14 @@
       }
       var Jt = r(68333),
         Kt = r(92791),
-        $t = r(50265);
+        $t = r(59621);
       class er {
         constructor() {
           (this.m_bLoadedCurrentUserBids = !1),
             (this.m_rgCurrentUserBids = $t.LO.array([], { deep: !0 })),
             (this.m_bLoadedAllItems = !1),
-            (this.m_mapAuctionItems = new Map());
+            (this.m_mapAuctionItems = new Map()),
+            (0, $t.rC)(this);
         }
         static Get() {
           return (

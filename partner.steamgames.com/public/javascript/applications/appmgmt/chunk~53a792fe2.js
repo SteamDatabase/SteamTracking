@@ -574,7 +574,7 @@
       var i = n(33940),
         a = n(52868),
         s = n.n(a),
-        o = n(50265),
+        o = n(59621),
         r = n(89526),
         c = n(5615),
         l = n(11837),
@@ -591,7 +591,8 @@
             (this.m_mapRequestedAppIDs = new Map()),
             (this.m_mapOptInNameCallback = new Map()),
             (this.m_mapSingleAppRegistrationChange = new Map()),
-            (this.m_loadCountChangeCallback = new g.pB());
+            (this.m_loadCountChangeCallback = new g.pB()),
+            (0, o.rC)(this);
         }
         BHasOptInRegistration(t, e) {
           var n;

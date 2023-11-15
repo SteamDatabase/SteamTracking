@@ -10,7 +10,7 @@
       var i = r(33940),
         a = r(52868),
         s = r.n(a),
-        n = r(50265),
+        n = r(59621),
         o = r(89526),
         c = r(4556),
         l = r(47165),
@@ -20,7 +20,8 @@
       class P {
         constructor() {
           (this.m_mapProfiles = new Map()),
-            (this.m_mapProfilesLoading = new Map());
+            (this.m_mapProfilesLoading = new Map()),
+            (0, n.rC)(this);
         }
         LoadProfiles(e, t) {
           return (0, i.mG)(this, void 0, void 0, function* () {
@@ -404,14 +405,14 @@
         a = r(52868),
         s = r.n(a),
         n = r(89526),
-        o = r(50265),
+        o = r(59621),
         c = r(23217),
         l = r(85246),
         u = r(4306),
         p = r(81349),
         d = r(32765),
         P = r(19533),
-        g = r(25125),
+        g = r(83315),
         m = r(23801);
       class f {
         static Get() {
@@ -435,6 +436,7 @@
             (this.m_rgPriceLevels = []),
             (this.m_strDisplayPriceKey = "USD"),
             (this.m_displayPriceKeyCallbackList = new l.pB()),
+            (0, o.rC)(this),
             "dev" == d.De.WEB_UNIVERSE && (window.g_PackagePricingStore = this);
         }
         Init() {

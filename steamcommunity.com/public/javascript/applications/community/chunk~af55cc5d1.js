@@ -29,7 +29,7 @@
       var n = e(33940),
         o = e(52868),
         r = e.n(o),
-        i = e(50265),
+        i = e(59621),
         s = e(89526),
         l = e(47165),
         m = e(23801),
@@ -42,7 +42,8 @@
             (this.m_mapClanAccountIDToClanInfo = new Map()),
             (this.m_mapPromisesLoading = new Map()),
             (this.m_rgQueuedEventsClanIDs = new Array()),
-            (this.m_bLoadedFromConfig = !1);
+            (this.m_bLoadedFromConfig = !1),
+            (0, i.rC)(this);
         }
         Init() {
           this.LazyInit();
@@ -373,7 +374,7 @@
         o = e(58218),
         r = e(52868),
         i = e.n(r),
-        s = e(50265),
+        s = e(59621),
         l = e(89526),
         m = e(32765);
       class c {
@@ -389,6 +390,7 @@
             (this.m_bIsLoaded = !1),
             (this.m_bIsHidden = !1),
             (this.m_clanAccountFlags = 0),
+            (0, s.rC)(this),
             (this.m_clanSteamID = t);
         }
         Initialize(t) {
@@ -527,7 +529,8 @@
         constructor() {
           (this.m_mapClanToCreatorHome = new Map()),
             (this.m_mapAppToCreatorIDList = new Map()),
-            (this.m_bLoadedFromConfig = !1);
+            (this.m_bLoadedFromConfig = !1),
+            (0, s.rC)(this);
         }
         LazyInit() {
           if (!this.m_bLoadedFromConfig) {

@@ -177,9 +177,9 @@
         n = a(52868),
         r = a.n(n),
         i = a(88464),
-        o = a(25125),
+        o = a(83315),
         l = a(89526),
-        d = a(50265),
+        d = a(59621),
         c = a(40103),
         m = a(20069),
         h = a(68333),
@@ -207,7 +207,8 @@
           (this.m_mapCallbacks = new Map()),
             (this.m_rgRegisteredEMsgs = []),
             (this.m_mapServiceMethodHandlers = new Map()),
-            (this.m_rgRegisteredServiceMethodHandlers = []);
+            (this.m_rgRegisteredServiceMethodHandlers = []),
+            (0, d.rC)(this);
         }
         InstallErrorReportingStore(e) {
           this.m_ErrorReportingStore = e;
@@ -643,7 +644,8 @@
       (L.s_Singleton = null), (0, s.gn)([B.ak], L.prototype, "OnMessage", null);
       class R {
         constructor(e) {
-          (this.m_mapPlayerCache = new Map()),
+          (this.m_TextFilterPreferences = void 0),
+            (this.m_mapPlayerCache = new Map()),
             (this.m_strBannedWords = ""),
             (this.m_strProfanityWords = ""),
             (this.m_strCleanWords = ""),
@@ -660,7 +662,9 @@
               bIgnoreFriends: e.text_filter_ignore_friends(),
             };
           }
-          (this.m_TextFilterWords = new E.No()), (this.m_DataAccess = e);
+          (this.m_TextFilterWords = new E.No()),
+            (this.m_DataAccess = e),
+            (0, d.rC)(this);
         }
         Init(e = 0, t = null, a = null) {
           return (0, s.mG)(this, void 0, void 0, function* () {
@@ -1069,7 +1073,7 @@
           );
         }
         constructor() {
-          this.m_mapChats = new Map();
+          (this.m_mapChats = new Map()), (0, d.rC)(this);
         }
       }
       (0, s.gn)([d.LO], V.prototype, "m_mapChats", void 0);
@@ -1103,6 +1107,7 @@
             (this.m_rgChatMessages = []),
             (this.m_rgAnnouncements = []),
             (this.m_latestAnnouncement = null),
+            (0, d.rC)(this),
             (this.m_webAPIInterface = new p.J(
               y.De.WEBAPI_BASE_URL,
               y.L7.webapi_token,
@@ -1760,7 +1765,8 @@
       class j {
         constructor() {
           (this.m_mapBroadcasterSteamIDToEvents = new Map()),
-            (this.m_mapBroadcasterSteamIDData = new Map());
+            (this.m_mapBroadcasterSteamIDData = new Map()),
+            (0, d.rC)(this);
         }
         static GetBBCodeParam(e, t, a = "") {
           const s = new RegExp(`\\W${t}\\W*=\\W*\\"(.*?)\\"`, "gmi").exec(e);
@@ -1942,6 +1948,15 @@
         ce = a(45475),
         me = a(13345);
       class he {
+        constructor() {
+          (this.giveaway_id = void 0),
+            (this.seconds_until_drawing = void 0),
+            (this.rtime_start = void 0),
+            (this.rtime_end = void 0),
+            (this.closed = void 0),
+            (this.winner_count = void 0),
+            (0, d.rC)(this);
+        }
         BIsValid() {
           return void 0 !== this.giveaway_id && null !== this.giveaway_id;
         }
@@ -1975,7 +1990,8 @@
           (this.m_mapGiveawayIDToNextDrawInfo = new Map()),
             (this.m_mapGiveawayIDAndInstanceToNextDrawInfo = new Map()),
             (this.m_bLoadedFromConfig = !1),
-            (this.m_mapNextDrawChangeCallback = new Map());
+            (this.m_mapNextDrawChangeCallback = new Map()),
+            (0, d.rC)(this);
         }
         GetKey(e, t) {
           return e + "_" + t;
@@ -2422,10 +2438,11 @@
           }
         };
       let ke = class extends l.Component {
-        constructor() {
-          super(...arguments),
+        constructor(e) {
+          super(e),
             (this.m_chat = null),
-            (this.messagesContainer = l.createRef());
+            (this.messagesContainer = l.createRef()),
+            (0, d.rC)(this);
         }
         componentDidMount() {
           this.StartChat();
@@ -4156,7 +4173,7 @@
       var s = a(33940),
         n = a(52868),
         r = a.n(n),
-        i = a(50265),
+        i = a(59621),
         o = a(88464),
         l = a(89526),
         d = a(40103),
@@ -4816,13 +4833,14 @@
         (0, s.gn)([T.ak], W.prototype, "BindSettingsPanel", null),
         (0, s.gn)([T.ak], W.prototype, "OnShowStats", null);
       let X = class extends l.Component {
-        constructor() {
-          super(...arguments),
+        constructor(e) {
+          super(e),
             (this.k_nHideSliderTimeout = 1500),
             (this.m_bShowSlider = true),
             (this.m_schHideSlider = new D.Ar()),
             (this.m_bChildDragging = !1),
-            (this.m_bMouseOver = !1);
+            (this.m_bMouseOver = !1),
+            (0, i.rC)(this);
         }
         componentWillUnmount() {
           this.m_schHideSlider.Cancel();
@@ -4895,10 +4913,11 @@
         (0, s.gn)([T.ak], X.prototype, "OnChildDrag", null),
         (X = (0, s.gn)([o.Pi], X));
       let j = class extends l.Component {
-        constructor() {
-          super(...arguments),
+        constructor(e) {
+          super(e),
             (this.m_elSlider = null),
-            (this.m_nVolumeStartOfDrag = 0);
+            (this.m_nVolumeStartOfDrag = 0),
+            (0, i.rC)(this);
         }
         OnMouseDown(e) {
           let t = e.currentTarget;
@@ -4981,6 +5000,7 @@
           super(e),
             (this.m_schHideControls = new D.Ar()),
             (this.m_schUnmountControls = new D.Ar()),
+            (this.m_elVideo = null),
             (this.m_elBroadcastPlayer = null),
             (this.m_bMouseDown = !1),
             (this.m_elMouseDown = null),
@@ -5516,13 +5536,22 @@
       (0, s.gn)([T.ak], ee.prototype, "OnTogglePlayPause", null),
         (ee = (0, s.gn)([o.Pi], ee));
       let te = class extends l.Component {
+        constructor(e) {
+          super(e),
+            (this.video = void 0),
+            (0, i.rC)(this),
+            (this.video = e.video);
+        }
+        componentDidUpdate() {
+          this.video = this.props.video;
+        }
         get has_previous_marker() {
           return void 0 !== this.GetPreviousMarkerTime();
         }
         GetPreviousMarkerTime() {
-          if (!this.props.video.has_markers) return;
-          let e = this.props.video.GetTimelineMarkers(),
-            t = this.props.video.GetPlaybackTime();
+          if (!this.video.has_markers) return;
+          let e = this.video.GetTimelineMarkers(),
+            t = this.video.GetPlaybackTime();
           for (let a = e.length - 1; a >= 0; a--)
             if (!(e[a].nTime >= t)) return e[a].nTime;
         }
@@ -5545,17 +5574,27 @@
           );
         }
       };
-      (0, s.gn)([i.Fl], te.prototype, "has_previous_marker", null),
+      (0, s.gn)([i.LO], te.prototype, "video", void 0),
+        (0, s.gn)([i.Fl], te.prototype, "has_previous_marker", null),
         (0, s.gn)([T.ak], te.prototype, "OnJumpToPreviousMarkerClicked", null),
         (te = (0, s.gn)([o.Pi], te));
       let ae = class extends l.Component {
+        constructor(e) {
+          super(e),
+            (this.video = void 0),
+            (0, i.rC)(this),
+            (this.video = e.video);
+        }
+        componentDidUpdate() {
+          this.video = this.props.video;
+        }
         get has_next_marker() {
           return void 0 !== this.GetNextMarkerTime();
         }
         GetNextMarkerTime() {
-          if (!this.props.video.has_markers) return;
-          let e = this.props.video.GetTimelineMarkers(),
-            t = this.props.video.GetPlaybackTime();
+          if (!this.video.has_markers) return;
+          let e = this.video.GetTimelineMarkers(),
+            t = this.video.GetPlaybackTime();
           for (let a = 0; a < e.length; a++)
             if (!(e[a].nTime <= t)) return e[a].nTime;
         }
@@ -5578,7 +5617,8 @@
           );
         }
       };
-      (0, s.gn)([i.Fl], ae.prototype, "has_next_marker", null),
+      (0, s.gn)([i.LO], ae.prototype, "video", void 0),
+        (0, s.gn)([i.Fl], ae.prototype, "has_next_marker", null),
         (0, s.gn)([T.ak], ae.prototype, "OnJumpToNextMarkerClicked", null),
         (ae = (0, s.gn)([o.Pi], ae));
       const se = (e) =>
@@ -5635,6 +5675,7 @@
         constructor(e) {
           super(e),
             (this.m_elSlider = l.createRef()),
+            (this.m_rectSlider = void 0),
             (this.state = {
               nGrabberMouseDownTime: 0,
               bGrabberMouseDown: !1,

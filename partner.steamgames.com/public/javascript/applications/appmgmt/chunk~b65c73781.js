@@ -902,7 +902,7 @@
       var n = a(33940),
         i = a(52868),
         s = a.n(i),
-        r = a(50265),
+        r = a(59621),
         l = a(23217),
         o = a(26464),
         c = a(85246),
@@ -915,7 +915,8 @@
             (this.m_strUploadPath = null),
             (this.m_fnUploadSuccessCallback = null),
             (this.m_strUploadPath = e),
-            (this.m_fnUploadSuccessCallback = t);
+            (this.m_fnUploadSuccessCallback = t),
+            (0, r.rC)(this);
         }
         GetUploadImages() {
           return this.m_filesToUpload;
@@ -1137,7 +1138,7 @@
       "use strict";
       a.d(t, { U: () => c });
       var n = a(33940),
-        i = a(50265),
+        i = a(59621),
         s = a(40442),
         r = a(11837),
         l = a(26464),
@@ -1176,7 +1177,8 @@
         constructor() {
           (this.m_eCurLang = (0, s.jM)(o.De.LANGUAGE)),
             (this.m_rgHasData = (0, r.LG)([], 31, !1)),
-            (this.m_bHasLocalizationContext = !1);
+            (this.m_bHasLocalizationContext = !1),
+            (0, i.rC)(this);
         }
       }
       (0, n.gn)([i.LO], c.prototype, "m_eCurLang", void 0),
@@ -1198,7 +1200,7 @@
         o = a(11195),
         c = a(74429),
         m = a(23801),
-        d = a(50265);
+        d = a(59621);
       class u {
         constructor(e) {
           (this.m_setMessagesSeen = new Set()), (this.m_SteamInterface = e);
@@ -1324,7 +1326,8 @@
                 e.associated_item(),
                 u.sm_DefaultDataRequest,
               )),
-            (this.m_templateVars = p(e.template_vars_json()));
+            (this.m_templateVars = p(e.template_vars_json())),
+            (0, d.rC)(this);
         }
         get id() {
           return this.m_message.gid();
@@ -1437,7 +1440,7 @@
       a.d(t, { j: () => O });
       var n = a(89526),
         i = a(33940),
-        s = a(25125),
+        s = a(83315),
         r = a(88464),
         l = a(40442),
         o = a(2232),
@@ -3998,7 +4001,7 @@
       "use strict";
       a.d(t, { Kq: () => D, VM: () => v, bZ: () => S, kK: () => E });
       var n = a(33940),
-        i = a(50265),
+        i = a(59621),
         s = a(2232),
         r = a(40442),
         l = a(1362),
@@ -4095,6 +4098,7 @@
             (this.m_storeItemID = null),
             (this.m_eSteamRealms = null),
             (this.k_DefaultFilterClause = { clause: "and", children: [] }),
+            (0, i.rC)(this),
             this.Reset(e);
         }
         Reset(e) {
@@ -5747,7 +5751,7 @@
       "use strict";
       a.d(t, { KF: () => d, wH: () => p, Rx: () => u });
       var n = a(33940),
-        i = a(50265),
+        i = a(59621),
         s = a(85886),
         r = a(85246),
         l = a(4306);
@@ -5758,6 +5762,7 @@
             (this.m_bDirty = !1),
             (this.m_callback = new r.pB()),
             (this.m_storeItemKey = null),
+            (0, i.rC)(this),
             this.Reset(e);
         }
         CalculateStoreItemKey() {
@@ -6416,7 +6421,7 @@
         vt: () => u,
       });
       var n = a(98132),
-        i = a(50265),
+        i = a(59621),
         s = a(89526),
         r = a(22444),
         l = a(85246),
@@ -6525,7 +6530,7 @@
       var n,
         i = a(1185),
         s = a(98132),
-        r = a(25125),
+        r = a(83315),
         l = a(89526),
         o = a(40442),
         c = a(43278),
@@ -7539,7 +7544,7 @@
       "use strict";
       a.d(t, { z9: () => v, Dv: () => E, R0: () => D, pY: () => S });
       var n = a(33940),
-        i = a(50265),
+        i = a(59621),
         s = a(85246),
         r = a(4306),
         l = a(44973);
@@ -7549,6 +7554,7 @@
             (this.m_originalInput = null),
             (this.m_bDirty = !1),
             (this.m_callback = new s.pB()),
+            (0, i.rC)(this),
             this.Reset(e, t);
         }
         Reset(e, t) {
@@ -8386,7 +8392,7 @@
         i = a(85246),
         s = a(4306),
         r = a(85886),
-        l = a(50265),
+        l = a(59621),
         o = a(32765),
         c = a(47165),
         m = a(23801),
@@ -8400,6 +8406,7 @@
             (this.m_bDirty = !1),
             (this.m_callback = new i.pB()),
             (this.m_storeItemKey = null),
+            (0, l.rC)(this),
             this.Reset(e, t);
         }
         Reset(e, t) {
@@ -10198,7 +10205,7 @@
       "use strict";
       a.d(t, { U: () => d });
       var n = a(33940),
-        i = a(50265),
+        i = a(59621),
         s = a(32765),
         r = a(52868),
         l = a.n(r),
@@ -10213,7 +10220,8 @@
             (this.m_rgArchive = new Array()),
             (this.m_rgActive = new Array()),
             (this.m_rgSeasonFeatured = new Array()),
-            (this.m_rgHiddenSeasonFeatured = new Array());
+            (this.m_rgHiddenSeasonFeatured = new Array()),
+            (0, i.rC)(this);
         }
         static Get() {
           return (
@@ -10443,7 +10451,7 @@
       "use strict";
       a.d(t, { oA: () => Y, v9: () => z, Vc: () => Z });
       var n = a(7979),
-        i = a(25125),
+        i = a(83315),
         s = a(89526),
         r = a(13364),
         l = a.n(r),
@@ -11340,7 +11348,7 @@
         s = a(57082),
         r = a(7979),
         l = a(20008),
-        o = a(25125),
+        o = a(83315),
         c = a(89526),
         m = a(85651),
         d = a(85886),
@@ -12654,7 +12662,7 @@
       var n = a(33940),
         i = a(43835),
         s = a(65395),
-        r = a(25125),
+        r = a(83315),
         l = a(89526),
         o = a(18030),
         c = a(92616),
@@ -12950,7 +12958,7 @@
         E = a(21963),
         D = a(701),
         S = a(84343),
-        f = a(25125);
+        f = a(83315);
       function y(e) {
         const { oEditableMessage: t } = e,
           a = t.GetUserMessageFilters();
@@ -17521,7 +17529,7 @@
         }
       }
       var Gt = a(18643),
-        Lt = a(25125),
+        Lt = a(83315),
         Bt = a(85886),
         Mt = a(13364),
         xt = a.n(Mt),
@@ -19315,7 +19323,7 @@
       }
       var Wa = a(1185),
         qa = a(43278),
-        Za = a(50265),
+        Za = a(59621),
         za = a(43489),
         Ka = a(77557),
         $a = a(37083),
@@ -24911,7 +24919,7 @@
       var n = a(7979),
         i = a(20008),
         s = a(49675),
-        r = a(25125),
+        r = a(83315),
         l = a(89526),
         o = a(85886),
         c = a(25871),
@@ -25334,11 +25342,11 @@
         R = a(75070),
         G = a(54614),
         L = a(82988),
-        B = a(25125),
+        B = a(83315),
         M = a(16670),
         x = a(13364),
         F = a.n(x),
-        O = a(50265),
+        O = a(59621),
         U = a(4306),
         V = a(32765),
         H = a(33940),
@@ -25351,6 +25359,7 @@
             (this.m_bDirty = !1),
             (this.m_callback = new j.pB()),
             (this.m_storeItemKey = null),
+            (0, O.rC)(this),
             this.Reset(e, t);
         }
         Reset(e, t) {
@@ -26590,7 +26599,7 @@
     23068: (e, t, a) => {
       "use strict";
       a.d(t, { l4: () => H, S7: () => X, $t: () => W });
-      var n = a(25125),
+      var n = a(83315),
         i = a(89526),
         s = a(22444),
         r = a(16670),
@@ -27754,7 +27763,7 @@
     48880: (e, t, a) => {
       "use strict";
       a.d(t, { E: () => R, c: () => L });
-      var n = a(25125),
+      var n = a(83315),
         i = a(89526),
         s = a(68818),
         r = a(22444),
@@ -27766,13 +27775,9 @@
         u = a(47165),
         p = a(82079),
         _ = a(74831),
-        h = a(50265),
+        h = a(59621),
         g = a(32765);
       class v {
-        constructor() {
-          (this.m_mapEventGIDToSolrData = new Map()),
-            (this.m_listEvents = new Array());
-        }
         BHasSolrEvent(e) {
           return this.m_mapEventGIDToSolrData.has(e);
         }
@@ -27781,6 +27786,11 @@
         }
         static Get() {
           return v.s_Singleton || (v.s_Singleton = new v()), v.s_Singleton;
+        }
+        constructor() {
+          (this.m_mapEventGIDToSolrData = new Map()),
+            (this.m_listEvents = new Array()),
+            (0, h.rC)(this);
         }
         ClearAllSolrEvents() {
           (this.m_mapEventGIDToSolrData = new Map()),
@@ -29456,7 +29466,7 @@
       "use strict";
       a.d(t, { K: () => pa, n: () => _a });
       var n = a(33940),
-        i = a(50265),
+        i = a(59621),
         s = a(32765);
       const r = new RegExp(
           /(?:steampowered\.com|valve\.org\/store|steam\.dev\/store)\/sale\/([a-zA-Z0-9\-_&]+)/i,
@@ -29475,7 +29485,8 @@
             (this.m_mapSaleVanityTakeover = new Map()),
             (this.m_mapSaleVanitySpotlight = new Map()),
             (this.m_mapSaleVanityIM = new Map()),
-            (this.m_mapSaleVanityDailyDeals = new Map());
+            (this.m_mapSaleVanityDailyDeals = new Map()),
+            (0, i.rC)(this);
         }
         BHasVanityFeaturing(e) {
           return this.m_mapSaleVanityTakeover.has(e.toLowerCase());
@@ -29778,7 +29789,8 @@
               this.m_stats.community_hub_read +
               this.m_stats.news_hub_read +
               this.m_stats.event_scroller_read),
-            (this.m_lastUpdateTime = e ? Math.floor(Date.now() / 1e3) : 0);
+            (this.m_lastUpdateTime = e ? Math.floor(Date.now() / 1e3) : 0),
+            (0, i.rC)(this);
         }
         reset(e) {
           (this.m_stats.library_overview_shown = e.library_overview_shown),
@@ -29826,7 +29838,8 @@
         constructor() {
           (this.m_mapPerEventStats = new Map()),
             (this.m_mapSummaryStats = new Map()),
-            (this.m_bLoadedFromConfig = !1);
+            (this.m_bLoadedFromConfig = !1),
+            (0, i.rC)(this);
         }
         LazyInit() {
           if (!this.m_bLoadedFromConfig) {
@@ -30152,7 +30165,8 @@
         constructor() {
           (this.m_mapMaterializedInsertion = new Map()),
             (this.m_mapInsertCallback = new Map()),
-            (this.m_rgFutureInsertions = new Array());
+            (this.m_rgFutureInsertions = new Array()),
+            (0, i.rC)(this);
         }
         Init() {
           const e = (0, s.ip)("capsuleinsert", "application_config");
@@ -30713,7 +30727,7 @@
         ge = a(84343),
         ve = a(71161),
         Ee = a(66615),
-        De = a(25125);
+        De = a(83315);
       function Se(e) {
         const t = Object.assign({}, e);
         if (!t) return t;
@@ -30779,17 +30793,20 @@
         return !0;
       }
       class we {
-        constructor(e, t, a, n, i, s) {
-          (this.m_bServerSideFiltering = !1),
+        constructor(e, t, a, n, s, r) {
+          (this.m_facets = []),
+            (this.m_priceStopInfo = []),
+            (this.m_bServerSideFiltering = !1),
             (this.m_bUnboundedScope = !1),
             (this.m_nMinMatches = 1),
             (this.m_facetSortKey = $.bS.k_ESortFacetsByMatchCount),
             (this.m_language = -1),
+            (this.m_sortedFacets = []),
             (this.m_nMinMatches = t),
             (this.m_facetSortKey = a),
             (this.m_language = n),
-            (this.m_bServerSideFiltering = i),
-            (this.m_bUnboundedScope = s),
+            (this.m_bServerSideFiltering = s),
+            (this.m_bUnboundedScope = r),
             this.LoadPriceStops(),
             (this.m_facets = []),
             e.forEach((e) => {
@@ -30825,7 +30842,8 @@
                   e.userPreference === $.oL.k_EHideIgnoredItems,
               ),
             )),
-            this.SortFacets();
+            this.SortFacets(),
+            (0, i.rC)(this);
         }
         BHasHideIgnoredItemsFacetValue() {
           return this.m_bHasHideIgnoredItemsFacetValue;
@@ -31164,18 +31182,20 @@
             S,
             f,
             y,
-            b;
+            b,
+            C;
           if (this.m_mapMultiFacetCounts) {
-            const b = "402",
-              C = "401",
-              k = "9",
-              I = "28",
-              P = "18",
-              w = "41",
-              A = "42",
-              N = "43",
-              R = "44",
-              G = "37";
+            const C = "402",
+              k = "401",
+              I = "9",
+              P = "28",
+              w = "18",
+              A = "41",
+              N = "42",
+              R = "43",
+              G = "44",
+              L = "61",
+              B = "37";
             switch (e.facetValue.type) {
               case $.HL.k_ESaleTagFilter:
               case void 0:
@@ -31220,31 +31240,31 @@
                         (l = this.m_mapMultiFacetCounts.get("vrsupport")) ||
                         void 0 === l
                         ? void 0
-                        : l.get(b);
+                        : l.get(C);
                     case "vr only":
                       return null ===
                         (o = this.m_mapMultiFacetCounts.get("vrsupport")) ||
                         void 0 === o
                         ? void 0
-                        : o.get(C);
+                        : o.get(k);
                     case "full controller":
                       return null ===
                         (c = this.m_mapMultiFacetCounts.get("category")) ||
                         void 0 === c
                         ? void 0
-                        : c.get(I);
+                        : c.get(P);
                     case "any controller":
                       return (
                         (null ===
                           (m = this.m_mapMultiFacetCounts.get("category")) ||
                         void 0 === m
                           ? void 0
-                          : m.get(I)) ||
+                          : m.get(P)) ||
                         (null ===
                           (d = this.m_mapMultiFacetCounts.get("category")) ||
                         void 0 === d
                           ? void 0
-                          : d.get(P))
+                          : d.get(w))
                       );
                     case "remote play":
                       return Math.max(
@@ -31252,35 +31272,35 @@
                           (u = this.m_mapMultiFacetCounts.get("category")) ||
                           void 0 === u
                           ? void 0
-                          : u.get(w),
+                          : u.get(A),
                         null ===
                           (p = this.m_mapMultiFacetCounts.get("category")) ||
                           void 0 === p
                           ? void 0
-                          : p.get(A),
+                          : p.get(N),
                         null ===
                           (_ = this.m_mapMultiFacetCounts.get("category")) ||
                           void 0 === _
                           ? void 0
-                          : _.get(N),
+                          : _.get(R),
                         null ===
                           (h = this.m_mapMultiFacetCounts.get("category")) ||
                           void 0 === h
                           ? void 0
-                          : h.get(R),
+                          : h.get(G),
                       );
                     case "remote play together":
                       return null ===
                         (g = this.m_mapMultiFacetCounts.get("category")) ||
                         void 0 === g
                         ? void 0
-                        : g.get(R);
+                        : g.get(G);
                     case "free":
                       return null ===
                         (v = this.m_mapMultiFacetCounts.get("genre")) ||
                         void 0 === v
                         ? void 0
-                        : v.get(G);
+                        : v.get(B);
                     case "discounted":
                       return null ===
                         (E = this.m_mapMultiFacetCounts.get("discounted")) ||
@@ -31292,32 +31312,38 @@
                         (D = this.m_mapMultiFacetCounts.get("category")) ||
                         void 0 === D
                         ? void 0
-                        : D.get(k);
+                        : D.get(I);
+                    case "hdr":
+                      return null ===
+                        (S = this.m_mapMultiFacetCounts.get("category")) ||
+                        void 0 === S
+                        ? void 0
+                        : S.get(L);
                   }
                 break;
               case $.HL.k_EAppType:
-                return null === (S = this.m_mapMultiFacetCounts.get("type")) ||
-                  void 0 === S
-                  ? void 0
-                  : S.get(e.facetValue.appType);
-              case $.HL.k_ELanguage:
-                const L = (0, T.j_)(e.facetValue.language);
-                return null ===
-                  (f = this.m_mapMultiFacetCounts.get("supportedlang_" + L)) ||
+                return null === (f = this.m_mapMultiFacetCounts.get("type")) ||
                   void 0 === f
                   ? void 0
-                  : f.get("true");
-              case $.HL.k_EContentDescriptor:
+                  : f.get(e.facetValue.appType);
+              case $.HL.k_ELanguage:
+                const M = (0, T.j_)(e.facetValue.language);
                 return null ===
-                  (y = this.m_mapMultiFacetCounts.get("descids")) ||
+                  (y = this.m_mapMultiFacetCounts.get("supportedlang_" + M)) ||
                   void 0 === y
                   ? void 0
-                  : y.get(e.facetValue.contentDescriptor.toString());
+                  : y.get("true");
+              case $.HL.k_EContentDescriptor:
+                return null ===
+                  (b = this.m_mapMultiFacetCounts.get("descids")) ||
+                  void 0 === b
+                  ? void 0
+                  : b.get(e.facetValue.contentDescriptor.toString());
             }
           } else if (this.m_facetCounts)
-            return null === (b = this.m_facetCounts) || void 0 === b
+            return null === (C = this.m_facetCounts) || void 0 === C
               ? void 0
-              : b.get(e.facetValue.nAtomicStoreTagID);
+              : C.get(e.facetValue.nAtomicStoreTagID);
           return null;
         }
         DeactivateFacetValues() {
@@ -32580,7 +32606,8 @@
             (this.m_mapChangeCallback = new Map()),
             (this.m_doorInitializedChangedCallback = new Y.pB()),
             (this.m_largestDoorChangeCallback = new Y.pB()),
-            (this.m_bIsAnyDoorOpenChangeCallback = new Y.pB());
+            (this.m_bIsAnyDoorOpenChangeCallback = new Y.pB()),
+            (0, i.rC)(this);
         }
         Init() {
           (this.m_userData = (0, s.kQ)("doorinfo", "application_config")),
@@ -33016,7 +33043,8 @@
             (this.m_rtimeLastServiceCallComplete = 0),
             (this.m_promise = null),
             (this.m_bTestMode = new Map()),
-            (this.m_bPreviewMode = !1);
+            (this.m_bPreviewMode = !1),
+            (0, i.rC)(this);
         }
       }
       function ut(e, t = null) {
@@ -33805,7 +33833,7 @@
       }
       class ft {
         constructor() {
-          this.m_mapSaleDetails = new Map();
+          (this.m_mapSaleDetails = new Map()), (0, i.rC)(this);
         }
         static Get() {
           return (

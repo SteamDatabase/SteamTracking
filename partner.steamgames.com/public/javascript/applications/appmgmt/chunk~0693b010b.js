@@ -320,7 +320,7 @@
       "use strict";
       s.d(t, { F_: () => h, JW: () => c, kl: () => g, zD: () => v });
       var r = s(33940),
-        i = s(50265),
+        i = s(59621),
         a = s(36105),
         n = s.n(a),
         o = s(89526),
@@ -330,7 +330,8 @@
         constructor() {
           (this.bOpenEventLandingPage = !1),
             (this.bIncludeFeaturedAsGameSource = !0),
-            (this.nOverrideDateNow = void 0);
+            (this.nOverrideDateNow = void 0),
+            (0, i.rC)(this);
         }
         get bRequireAllEventsLoadedInTimeBlock() {
           return !1;
@@ -438,7 +439,7 @@
     74429: (e, t, s) => {
       "use strict";
       s.d(t, { Z: () => d });
-      var r = s(50265),
+      var r = s(59621),
         i = s(85886),
         a = s(23801),
         n = s(14826),
@@ -1386,7 +1387,7 @@
       "use strict";
       s.d(t, { Z: () => v });
       var r = s(33940),
-        i = s(50265),
+        i = s(59621),
         a = s(68333),
         n = s(19094),
         o = s(14596),

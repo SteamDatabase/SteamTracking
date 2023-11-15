@@ -2898,8 +2898,8 @@
                   },
                   rtime_estimated_notification: {
                     n: 7,
-                    br: a.FE.readString,
-                    bw: a.Xc.writeString,
+                    br: a.FE.readUint32,
+                    bw: a.Xc.writeUint32,
                   },
                   notificaton_token: {
                     n: 8,
@@ -2931,6 +2931,11 @@
                     n: 14,
                     br: a.FE.readInt32,
                     bw: a.Xc.writeInt32,
+                  },
+                  allow_purchase_in_country: {
+                    n: 15,
+                    br: a.FE.readBool,
+                    bw: a.Xc.writeBool,
                   },
                 },
               }),

@@ -16,7 +16,7 @@
       "use strict";
       a.d(t, { Pv: () => p, U0: () => A.U, WV: () => A.W, sB: () => l });
       var i = a(33940),
-        r = a(50265),
+        r = a(59621),
         s = a(39818),
         n = a(58961),
         o = a(14826),
@@ -52,9 +52,16 @@
             (this.m_game_lobby_id = ""),
             (this.m_bPlayerNamePending = !1),
             (this.m_bAvatarPending = !1),
+            (this.m_broadcastId = void 0),
+            (this.m_broadcastAccountId = void 0),
+            (this.m_broadcastAppId = void 0),
+            (this.m_broadcastViewerCount = void 0),
+            (this.m_strBroadcastTitle = void 0),
+            (this.m_bCommunityBanned = void 0),
             (this.m_mapRichPresence = r.LO.map()),
             (this.m_bNameInitialized = !1),
             (this.m_bStatusInitialized = !1),
+            (0, r.rC)(this),
             (this.m_steamid = e);
         }
         Reset() {

@@ -1177,7 +1177,7 @@
     68818: (e, t, n) => {
       "use strict";
       n.d(t, { XC: () => l, ai: () => s });
-      var i = n(25125),
+      var i = n(83315),
         o = n(89526),
         r = n(10412),
         a = n(58218);
@@ -1288,7 +1288,7 @@
       "use strict";
       n.d(t, { Q8: () => f, md: () => g });
       var i = n(33940),
-        o = n(50265),
+        o = n(59621),
         r = n(40442),
         a = n(68333),
         s = n(57361),
@@ -1387,7 +1387,8 @@
             (this.m_cAppInfoRequestsInFlight = 0),
             (this.m_setPendingAppInfo = new Set()),
             (this.m_CacheStorage = null),
-            (this.m_fnCallbackOnAppInfoLoaded = new _.pB());
+            (this.m_fnCallbackOnAppInfoLoaded = new _.pB()),
+            (0, o.rC)(this);
         }
         Init(e) {
           this.m_CMInterface = e;
@@ -1672,12 +1673,13 @@
       var i = n(33940),
         o = n(52868),
         r = n.n(o),
-        a = n(50265),
+        a = n(59621),
         s = n(32765);
       class l {
         constructor() {
           (this.m_mapYouTubeVideo = new Map()),
-            (this.m_mapSharedFile = new Map());
+            (this.m_mapSharedFile = new Map()),
+            (0, a.rC)(this);
         }
         LoadYouTubeDynamicData(e, t) {
           return (0, i.mG)(this, void 0, void 0, function* () {
@@ -1753,7 +1755,7 @@
       n.d(t, { $: () => c, Q: () => l });
       var i = n(33940),
         o = n(32765),
-        r = n(50265),
+        r = n(59621),
         a = n(52868),
         s = n.n(a);
       class l {
@@ -2342,7 +2344,7 @@
         m = n(23217),
         d = n(85246),
         p = n(4306),
-        u = n(50265),
+        u = n(59621),
         h = n(75306);
       class _ {
         GetClaimItemState() {
@@ -2785,7 +2787,7 @@
       "use strict";
       n.d(t, { N: () => c });
       var i = n(33940),
-        o = n(50265),
+        o = n(59621),
         r = n(32765),
         a = n(52868),
         s = n.n(a);
@@ -2794,7 +2796,8 @@
           (this.m_bValidatedEmail = !1),
             (this.m_nMobileDeviceCount = 0),
             (this.m_bIsLoaded = !1),
-            (this.m_bLoadedFromConfig = !1);
+            (this.m_bLoadedFromConfig = !1),
+            (0, o.rC)(this);
         }
         LazyInit() {
           if (!this.m_bLoadedFromConfig) {
@@ -3366,7 +3369,7 @@
         D3: () => ie,
       });
       var i = n(33940),
-        o = n(50265),
+        o = n(59621),
         r = n(88464),
         a = n(89526),
         s = n(73961),
@@ -5095,7 +5098,7 @@
       };
       (0, i.gn)([c.ak], V.prototype, "OnSketchFabClick", null),
         (V = (0, i.gn)([w.Pi], V));
-      var X = n(50265),
+      var X = n(59621),
         Z = n(43658),
         W = n(84343),
         z = n(49245),
@@ -5344,11 +5347,15 @@
         De = n(23801);
       class ke {
         constructor() {
-          (this.timestamp = 0),
+          (this.file = void 0),
+            (this.dataURL = void 0),
+            (this.timestamp = 0),
             (this.imageWidth = 0),
             (this.imageHeight = 0),
             (this.eUploadState = 0),
-            (this.uploadProgress = 0);
+            (this.uploadProgress = 0),
+            (this.strErrorDescription = void 0),
+            (0, X.rC)(this);
         }
       }
       (0, i.gn)([X.LO], ke.prototype, "file", void 0),
@@ -5360,7 +5367,9 @@
         (0, i.gn)([X.LO], ke.prototype, "strErrorDescription", void 0);
       class we {
         constructor(e) {
-          (this.m_fileUploadProps = new ke()), (this.m_Callbacks = e);
+          (this.m_fileUploadProps = new ke()),
+            (this.m_Callbacks = e),
+            (0, X.rC)(this);
         }
         get file_upload_props() {
           return this.m_fileUploadProps;
@@ -5929,7 +5938,7 @@
           ),
         );
       }
-      var qe = n(25125),
+      var qe = n(83315),
         Je = n(71654);
       function Ke(e) {
         const { fileUploadManager: t } = e,
@@ -7313,7 +7322,7 @@
     15715: (e, t, n) => {
       "use strict";
       n.d(t, { w: () => v });
-      var i = n(50265),
+      var i = n(59621),
         o = n(89526),
         r = n(44026),
         a = n(54124),
@@ -7524,7 +7533,7 @@
     18845: (e, t, n) => {
       "use strict";
       n.d(t, { v: () => m, x: () => c });
-      var i = n(25125),
+      var i = n(83315),
         o = n(89526),
         r = n(53155),
         a = n(69338),

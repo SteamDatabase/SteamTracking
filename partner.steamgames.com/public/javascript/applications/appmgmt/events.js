@@ -398,8 +398,10 @@
           "nominationandvote_SteamAwardVoteButtonText_Zzla_",
         SteamAwardVoteButtonSubmitted:
           "nominationandvote_SteamAwardVoteButtonSubmitted_39ziF",
+        NominateCtn: "nominationandvote_NominateCtn_hS9w-",
         SteamAwardNominateButton:
           "nominationandvote_SteamAwardNominateButton_VcFKW",
+        Nominated: "nominationandvote_Nominated_2pePR",
         SteamAwardLinkToNominationPage:
           "nominationandvote_SteamAwardLinkToNominationPage_3XWCw",
         SteamAwardVoteCheckBox:
@@ -1582,12 +1584,13 @@
       var a = n(33940),
         i = n(52868),
         o = n.n(i),
-        l = n(50265),
+        l = n(59621),
         r = n(32765);
       class s {
         constructor() {
           (this.m_mapYouTubeVideo = new Map()),
-            (this.m_mapSharedFile = new Map());
+            (this.m_mapSharedFile = new Map()),
+            (0, l.rC)(this);
         }
         LoadYouTubeDynamicData(e, t) {
           return (0, a.mG)(this, void 0, void 0, function* () {
@@ -1663,7 +1666,7 @@
       n.d(t, { $: () => s });
       var a = n(33940),
         i = n(32765),
-        o = n(50265),
+        o = n(59621),
         l = n(52868),
         r = n.n(l);
       const s = new (class {
@@ -1958,7 +1961,7 @@
         v = n(4306),
         S = n(50304),
         f = n(73961),
-        y = n(50265),
+        y = n(59621),
         D = n(1069),
         I = n.n(D),
         b = n(19304);
@@ -2479,7 +2482,7 @@
         q = n(84343),
         Y = n(38737),
         Q = n.n(Y),
-        K = n(25125),
+        K = n(83315),
         $ = n(23801),
         J = n(89220),
         ee = n(17547),
@@ -4558,7 +4561,7 @@
         D3: () => ae,
       });
       var a = n(33940),
-        i = n(50265),
+        i = n(59621),
         o = n(88464),
         l = n(89526),
         r = n(73961),
@@ -6379,7 +6382,7 @@
       };
       (0, a.gn)([h.ak], W.prototype, "OnSketchFabClick", null),
         (W = (0, a.gn)([L.Pi], W));
-      var Z = n(50265),
+      var Z = n(59621),
         q = n(68333),
         Y = n(19094),
         Q = n(35507),
@@ -6836,11 +6839,15 @@
       var Oe = n(84770);
       class Be {
         constructor() {
-          (this.timestamp = 0),
+          (this.file = void 0),
+            (this.dataURL = void 0),
+            (this.timestamp = 0),
             (this.imageWidth = 0),
             (this.imageHeight = 0),
             (this.eUploadState = 0),
-            (this.uploadProgress = 0);
+            (this.uploadProgress = 0),
+            (this.strErrorDescription = void 0),
+            (0, Z.rC)(this);
         }
       }
       (0, a.gn)([Z.LO], Be.prototype, "file", void 0),
@@ -6852,7 +6859,9 @@
         (0, a.gn)([Z.LO], Be.prototype, "strErrorDescription", void 0);
       class Me {
         constructor(e) {
-          (this.m_fileUploadProps = new Be()), (this.m_Callbacks = e);
+          (this.m_fileUploadProps = new Be()),
+            (this.m_Callbacks = e),
+            (0, Z.rC)(this);
         }
         get file_upload_props() {
           return this.m_fileUploadProps;
@@ -7414,7 +7423,7 @@
           ),
         );
       }
-      var rt = n(25125),
+      var rt = n(83315),
         st = n(71654);
       function ct(e) {
         const { fileUploadManager: t } = e,
@@ -8834,7 +8843,7 @@
         p = n(61615),
         u = n(85651),
         _ = n(56368),
-        h = n(50265),
+        h = n(59621),
         g = n(32765),
         E = n(52868),
         v = n.n(E);
@@ -8843,7 +8852,8 @@
           (this.m_bValidatedEmail = !1),
             (this.m_nMobileDeviceCount = 0),
             (this.m_bIsLoaded = !1),
-            (this.m_bLoadedFromConfig = !1);
+            (this.m_bLoadedFromConfig = !1),
+            (0, h.rC)(this);
         }
         LazyInit() {
           if (!this.m_bLoadedFromConfig) {
@@ -9434,7 +9444,7 @@
       n.d(t, { Pi: () => v, ko: () => S, uW: () => E });
       var a = n(33940),
         i = n(88464),
-        o = n(25125),
+        o = n(83315),
         l = n(89526),
         r = n(40442),
         s = n(2232),
@@ -10476,7 +10486,7 @@
           );
         }
       }
-      var S = n(50265),
+      var S = n(59621),
         f = n(74802),
         y = n(51438),
         D = n(48616),
@@ -10722,7 +10732,8 @@
       class J {
         constructor() {
           (this.m_mapClanReposted = new Set()),
-            (this.m_mapSourceEventGIDToPostedClans = new Map());
+            (this.m_mapSourceEventGIDToPostedClans = new Map()),
+            (0, S.rC)(this);
         }
         static Get() {
           return (
@@ -11152,7 +11163,8 @@
             (this.m_cAppInfoRequestsInFlight = 0),
             (this.m_setPendingAppInfo = new Set()),
             (this.m_CacheStorage = null),
-            (this.m_fnCallbackOnAppInfoLoaded = new fe.pB());
+            (this.m_fnCallbackOnAppInfoLoaded = new fe.pB()),
+            (0, S.rC)(this);
         }
         Init(e) {
           this.m_CMInterface = e;
@@ -12246,13 +12258,14 @@
         });
       }
       let Ue = class extends l.Component {
-        constructor() {
-          super(...arguments),
+        constructor(e) {
+          super(e),
             (this.state = { eCategoryLoaded: null, nomineeAppID: null }),
             (this.m_strPreviousNomineeTitle = null),
             (this.m_cancelSignal = o().CancelToken.source()),
             (this.m_refCheckbox = l.createRef()),
-            (this.m_nominationEventDetails = null);
+            (this.m_nominationEventDetails = null),
+            (0, S.rC)(this);
         }
         componentDidMount() {
           this.FetchNominationState(),
@@ -12510,41 +12523,62 @@
                 { className: Me().SteamAwardVoteWidget },
                 l.createElement(
                   "div",
-                  {
-                    style: {
-                      background:
-                        null === (n = this.m_nominationEventDetails) ||
-                        void 0 === n
-                          ? void 0
-                          : n.strNominateButtonBGColor,
+                  { className: Me().NominateCtn },
+                  l.createElement(
+                    "div",
+                    {
+                      style: {
+                        background:
+                          null === (n = this.m_nominationEventDetails) ||
+                          void 0 === n
+                            ? void 0
+                            : n.strNominateButtonBGColor,
+                      },
+                      className: (0, x.Z)(
+                        Me().SteamAwardNominateButton,
+                        s && Me().Nominated,
+                      ),
                     },
-                    className: Me().SteamAwardNominateButton,
-                  },
-                  l.createElement(u.ji, {
-                    ref: this.m_refCheckbox,
-                    className: Me().SteamAwardVoteCheckBox,
-                    checked: s,
-                    onChange: this.OnNominateClick,
-                    disabled: !c,
-                    color: "#FFFFFF",
-                    highlightColor: "white",
-                    label: l.createElement(
-                      l.Fragment,
-                      null,
-                      l.createElement(
-                        "div",
-                        { className: Me().SteamAwardCategoryTitle },
-                        this.m_nominationEventDetails.rgAwardCategoryDetails[0]
-                          .strSuggestedCategoryTitle,
+                    l.createElement(u.ji, {
+                      ref: this.m_refCheckbox,
+                      className: (0, x.Z)(
+                        Me().SteamAwardVoteCheckBox,
+                        s && Me().Nominated,
                       ),
-                      l.createElement(
-                        "span",
-                        { className: Me().SteamAwardCategoryDesc },
-                        this.m_nominationEventDetails.rgAwardCategoryDetails[0]
-                          .strSuggestedCategoryDesc,
+                      checked: s,
+                      onChange: this.OnNominateClick,
+                      disabled: s,
+                      color: "#FFFFFF",
+                      highlightColor: "white",
+                      label: l.createElement(
+                        l.Fragment,
+                        null,
+                        l.createElement(
+                          "div",
+                          { className: Me().SteamAwardCategoryTitle },
+                          s
+                            ? (0, L.kQ)(
+                                "#SteamAwards_NominateWidget_CTA_PastTense",
+                                this.m_nominationEventDetails
+                                  .rgAwardCategoryDetails[0]
+                                  .strSuggestedCategoryTitle,
+                              )
+                            : (0, L.kQ)(
+                                "#SteamAwards_NominateWidget_CTA",
+                                this.m_nominationEventDetails
+                                  .rgAwardCategoryDetails[0]
+                                  .strSuggestedCategoryTitle,
+                              ),
+                        ),
                       ),
-                    ),
-                  }),
+                    }),
+                  ),
+                  l.createElement(
+                    "span",
+                    { className: Me().SteamAwardCategoryDesc },
+                    this.m_nominationEventDetails.rgAwardCategoryDetails[0]
+                      .strSuggestedCategoryDesc,
+                  ),
                 ),
                 c && o != this.m_nominationEventDetails.eLaborOfLove
                   ? l.createElement(
@@ -12620,11 +12654,12 @@
         (0, a.gn)([j.ak], je.prototype, "OnCancel", null),
         (je = (0, a.gn)([h.Pi], je));
       let He = class extends l.Component {
-        constructor() {
-          super(...arguments),
+        constructor(e) {
+          super(e),
             (this.state = { eCategoryLoaded: null, votedForAppID: null }),
             (this.m_strPreviousVotedForAppTitle = null),
-            (this.m_cancelSignal = o().CancelToken.source());
+            (this.m_cancelSignal = o().CancelToken.source()),
+            (0, S.rC)(this);
         }
         componentDidMount() {
           this.FetchVoteState();
@@ -12805,7 +12840,8 @@
           super(e),
             (this.m_cancelSignal = o().CancelToken.source()),
             (this.m_awardEventDetails = null),
-            (this.state = { bAppInfoLoaded: !1 });
+            (this.state = { bAppInfoLoaded: !1 }),
+            (0, S.rC)(this);
         }
         componentDidMount() {
           w.Z.Get()
@@ -12939,7 +12975,7 @@
         (Xe = (0, a.gn)([h.Pi], Xe));
       var ze = n(83809),
         Ve = n.n(ze),
-        We = n(25125),
+        We = n(83315),
         Ze = n(5411),
         qe = n(19094);
       var Ye = n(21904),
@@ -13760,7 +13796,8 @@
             (this.m_rgEvents = []),
             (this.m_eOlderDirection = gt.Idle),
             (this.m_eNewerDirection = gt.Idle),
-            (this.m_partnerEventStore = e);
+            (this.m_partnerEventStore = e),
+            (0, S.rC)(this);
         }
         GetEvents() {
           return this.m_rgEvents;
@@ -14403,7 +14440,7 @@
         l = n(52868),
         r = n.n(l),
         s = n(64368),
-        c = n(50265),
+        c = n(59621),
         d = n(40442),
         m = n(7948),
         p = n(23801),
@@ -14586,7 +14623,10 @@
       }
       class D {
         constructor(e, t) {
-          (this.m_bReadOnly = !1),
+          (this.m_email = void 0),
+            (this.m_bReadOnly = !1),
+            (this.m_sections = void 0),
+            (0, c.rC)(this),
             (this.m_strOptInName = e),
             (this.m_email = t),
             (this.m_sections = this.m_email.sections.map((e) => new I(e))),
@@ -14940,7 +14980,10 @@
         (0, o.gn)([c.aD.bound], D.prototype, "RemoveAppToCustomList", null);
       class I {
         constructor(e) {
-          (this.m_bReadOnly = !1), (this.m_section = e);
+          (this.m_section = void 0),
+            (this.m_bReadOnly = !1),
+            (0, c.rC)(this),
+            (this.m_section = e);
         }
         SetReadOnly(e) {
           this.m_bReadOnly = e;
@@ -15049,7 +15092,8 @@
             (this.m_archivedOptInDef = new Array()),
             (this.m_game_tags = []),
             (this.m_optin_stats = {}),
-            (this.m_mapHasUnpublishedChanges = new Map());
+            (this.m_mapHasUnpublishedChanges = new Map()),
+            (0, c.rC)(this);
         }
         GetActiveOptIn() {
           return this.m_activeOptInDef;
@@ -16235,13 +16279,18 @@
           );
         }
         constructor() {
-          (this.m_bDirty = !1),
+          (this.m_model = void 0),
+            (this.m_bDirty = !1),
+            (this.rgActiveStats = void 0),
+            (this.m_dynamicSections = void 0),
             (this.m_mapDynamicSection = new Map()),
+            (this.m_EmailDefinitions = void 0),
             (this.m_mapEmails = new Map()),
             (this.m_activeStatsChange = new T.pB()),
             (this.rgOptionalSuggestedRequired = []),
             (this.rgEventTypes = []),
-            (this.rgGameTokens = []);
+            (this.rgGameTokens = []),
+            (0, c.rC)(this);
         }
         Reset(e, t) {
           var n, a;
@@ -16743,7 +16792,7 @@
         (0, o.gn)([u.ak], R.prototype, "GetGameTagOptions", null);
       class O {
         constructor(e) {
-          this.m_section = e;
+          (this.m_section = void 0), (0, c.rC)(this), (this.m_section = e);
         }
         GetUniqueID() {
           return this.m_section.unique_id;
@@ -17324,7 +17373,8 @@
           (this.m_steamInterface = null),
             (this.m_mapOptInToEmailDef = new Map()),
             (this.m_mapEmailToReach = new Map()),
-            (this.m_mapOptInToEmailDefLoadFailure = new Map());
+            (this.m_mapOptInToEmailDefLoadFailure = new Map()),
+            (0, c.rC)(this);
         }
         Init() {
           const e = (0, w.kQ)("optin_webapi_token", "application_config");
@@ -18644,7 +18694,7 @@
           )
         );
       };
-      var ze = n(25125),
+      var ze = n(83315),
         Ve = n(18030),
         We = n(13364),
         Ze = n.n(We),
@@ -18764,7 +18814,7 @@
           );
         }
         constructor() {
-          this.m_steamInterface = null;
+          (this.m_steamInterface = null), (0, c.rC)(this);
         }
         Init() {
           const e = (0, w.kQ)("optin_webapi_token", "application_config");
@@ -21497,7 +21547,8 @@
         constructor() {
           (this.m_mapAppToDemoAppID = new Map()),
             (this.m_mapPromises = new Map()),
-            (this.m_mapLoadCallback = new Map());
+            (this.m_mapLoadCallback = new Map()),
+            (0, c.rC)(this);
         }
       }
       function ln(e) {
@@ -22230,7 +22281,7 @@
         yn = n(15254);
       class Dn {
         constructor() {
-          this.nLoadedOptIn = 0;
+          (this.nLoadedOptIn = 0), (0, c.rC)(this);
         }
         Increment() {
           this.nLoadedOptIn += 1;
@@ -23468,7 +23519,7 @@
       const jn = "edit_email";
       class Hn {
         constructor() {
-          this.m_curSelection = void 0;
+          (this.m_curSelection = void 0), (0, c.rC)(this);
         }
         SetSelectionFromQueryParams(e) {
           const t = (0, ee.ks)(e, jn);
@@ -28622,7 +28673,7 @@
           );
         }
         constructor() {
-          this.m_bDirty = !1;
+          (this.m_registration = void 0), (this.m_bDirty = !1), (0, c.rC)(this);
         }
         BHasAdditionalFeaturing() {
           return this.m_registration.additional_featuring;

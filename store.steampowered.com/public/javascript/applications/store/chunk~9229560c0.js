@@ -153,7 +153,7 @@
       var o,
         r,
         a = n(33940),
-        i = n(50265),
+        i = n(59621),
         s = n(52868),
         l = n.n(s),
         c = n(68333),
@@ -204,9 +204,11 @@
         })(r || (r = {}));
       class C {
         constructor(e, t, n, r) {
-          (this.m_bRemoteInteraction = !1),
+          (this.m_strChallengeURL = void 0),
+            (this.m_bRemoteInteraction = !1),
             (this.m_eFailureState = o.None),
             (this.m_strExtendedErrorMessage = ""),
+            (0, i.rC)(this),
             (this.m_transport = e),
             (this.m_onCompleteCallback = t),
             (this.m_onDeviceDetailsCallback = n),
@@ -434,14 +436,14 @@
       var o = n(33940),
         r = n(89526),
         a = n(19304),
-        i = n(50265),
+        i = n(59621),
         s = n(52868),
         l = n.n(s),
         c = n(32765),
         u = n(68333),
         m = n(79925),
         d = n(40442),
-        g = n(25125),
+        g = n(83315),
         _ = n(4306),
         h = n(97277),
         C = n(40831),
@@ -471,7 +473,8 @@
               this.m_onLoginComplete && this.m_onLoginComplete(t);
             }),
             (this.m_onLoginComplete = e.onComplete),
-            (this.m_onGetMachineAuth = e.onGetMachineAuth);
+            (this.m_onGetMachineAuth = e.onGetMachineAuth),
+            (0, i.rC)(this);
         }
         Start(e, t, n) {
           return (0, o.mG)(this, void 0, void 0, function* () {
@@ -1089,7 +1092,8 @@
             },
             e.onDeviceDetails,
           ),
-            (this.m_eStatus = 0);
+            (this.m_eStatus = 0),
+            (0, i.rC)(this);
         }
         Start() {
           return (0, o.mG)(this, void 0, void 0, function* () {

@@ -33,14 +33,15 @@
       "use strict";
       a.d(t, { C: () => c, R: () => s });
       var n = a(33940),
-        r = a(50265),
+        r = a(59621),
         o = a(47165),
-        l = a(85651),
-        i = a(10412);
+        i = a(85651),
+        l = a(10412);
       class s {
         constructor() {
           (this.m_mapBroadcasterSteamIDToEvents = new Map()),
-            (this.m_mapBroadcasterSteamIDData = new Map());
+            (this.m_mapBroadcasterSteamIDData = new Map()),
+            (0, r.rC)(this);
         }
         static GetBBCodeParam(e, t, a = "") {
           const n = new RegExp(`\\W${t}\\W*=\\W*\\"(.*?)\\"`, "gmi").exec(e);
@@ -53,15 +54,15 @@
             const n = t.exec(e);
             if (null === n) break;
             const r = n[1],
-              l = n[2],
-              i = s.GetBBCodeParam(r, "steamid"),
+              i = n[2],
+              l = s.GetBBCodeParam(r, "steamid"),
               c = {
-                steamID: i ? new o.K(i) : void 0,
+                steamID: l ? new o.K(l) : void 0,
                 name: s.GetBBCodeParam(r, "name"),
                 title: s.GetBBCodeParam(r, "title"),
                 company: s.GetBBCodeParam(r, "company"),
                 photo: s.GetBBCodeParam(r, "photo"),
-                bio: l,
+                bio: i,
               };
             a.push(c);
           }
@@ -96,12 +97,12 @@
         }
         BuildBroadcasterSteamIDToActiveEventMap(e) {
           return (0, n.mG)(this, void 0, void 0, function* () {
-            const t = l.JW.GetTimeNowWithOverride(),
+            const t = i.JW.GetTimeNowWithOverride(),
               a = e.GetCalendarItemsInTimeRange(t - 3600, t);
             for (const e of a.rgCalendarItems)
-              i.j1.QueueLoadPartnerEvent(e.clanid, e.unique_id);
+              l.j1.QueueLoadPartnerEvent(e.clanid, e.unique_id);
             const n = a.rgCalendarItems.map((e) =>
-                i.j1.LoadPartnerEventFromClanEventGIDAndClanSteamID(
+                l.j1.LoadPartnerEventFromClanEventGIDAndClanSteamID(
                   o.K.InitFromClanID(e.clanid),
                   e.unique_id,
                   0,
@@ -195,9 +196,9 @@
       var n = a(96927),
         r = a(13394),
         o = a(33940),
-        l = a(52868),
-        i = a.n(l),
-        s = a(50265),
+        i = a(52868),
+        l = a.n(i),
+        s = a(59621),
         c = a(88464),
         d = a(89526),
         m = a(47165),
@@ -226,14 +227,14 @@
               fnSetCurator: n,
               bLimitToCreatorHome: r,
             } = e,
-            l = (0, d.useRef)(null),
+            i = (0, d.useRef)(null),
             s = (0, d.useRef)(null),
             c = (0, d.useRef)(0),
             m = (0, d.useRef)();
           (0, d.useEffect)(
             () => () => {
               window.clearTimeout(c.current),
-                l.current && l.current("SearchForCurator: unmounting"),
+                i.current && i.current("SearchForCurator: unmounting"),
                 s.current && s.current.Hide();
             },
             [],
@@ -245,12 +246,12 @@
                 t &&
                   0 != t.trim().length &&
                   (window.clearTimeout(c.current),
-                  l.current && l.current("SearchForCurator: new request"),
+                  i.current && i.current("SearchForCurator: new request"),
                   (c.current = window.setTimeout(
                     () =>
                       (0, o.mG)(void 0, void 0, void 0, function* () {
-                        const e = i().CancelToken.source();
-                        l.current = e.cancel;
+                        const e = l().CancelToken.source();
+                        i.current = e.cancel;
                         try {
                           const a = yield A.bq.SearchCreatorHomeStore(t, r, e);
                           if (e.token.reason) return;
@@ -353,7 +354,7 @@
                 e.display_name.toLocaleLowerCase().indexOf("franchise") < 0,
             ),
             o = t.filter((e) => Boolean(e.gid_clan_event && e.hidden)),
-            l = t.filter((e) => Boolean(e.gid_clan_event && !e.hidden));
+            i = t.filter((e) => Boolean(e.gid_clan_event && !e.hidden));
           return d.createElement(
             "div",
             null,
@@ -375,7 +376,7 @@
             d.createElement(R, { strName: "Migrated but Hidden", records: o }),
             d.createElement(R, {
               strName: "Migrated and Visible",
-              records: l,
+              records: i,
               bHideByDefault: !0,
             }),
           );
@@ -491,8 +492,8 @@
         O = (e) => {
           const { record: t, closeModal: a } = e,
             [n, r] = (0, d.useState)(t.clan_account_id),
-            [o, l] = (0, d.useState)(!1),
-            [i, s] = (0, d.useState)(void 0),
+            [o, i] = (0, d.useState)(!1),
+            [l, s] = (0, d.useState)(void 0),
             [c, u] = (0, d.useState)(!1),
             [g, h] = (0, d.useState)(t.gid_clan_event),
             [v, _] = (0, d.useState)(null);
@@ -503,7 +504,7 @@
               strDescription: `Will migrate the sale page ${t.vanity} to the below clan `,
               bOKDisabled: !n || o,
               onOK: () => {
-                l(!0),
+                i(!0),
                   F.Get()
                     .MigrateOrUpdateSalePage(
                       t.sale_page_id,
@@ -542,9 +543,9 @@
                   }),
                   Boolean(v) && d.createElement(k, { creatorHome: v }),
                 ),
-            Boolean(o && !i) &&
+            Boolean(o && !l) &&
               d.createElement(E.V, { position: "center", size: "medium" }),
-            Boolean(i) && d.createElement("div", null, i),
+            Boolean(l) && d.createElement("div", null, l),
             Boolean(c) &&
               d.createElement(
                 "div",
@@ -656,14 +657,14 @@
                 void 0,
               ];
             try {
-              const l =
+              const i =
                 I.De.COMMUNITY_BASE_URL + "migrate/ajaxcreateupdatesalepage";
               let c = new URLSearchParams();
               c.append("sessionid", I.De.SESSIONID),
                 c.append("salePageID", e),
                 c.append("clanAccountID", "" + t),
                 a && c.append("gidClanEvent", a);
-              const d = yield i().post(l, c, { withCredentials: !0 });
+              const d = yield l().post(i, c, { withCredentials: !0 });
               if (
                 200 == (null == d ? void 0 : d.status) &&
                 1 ==
@@ -724,7 +725,7 @@
               const a =
                   I.De.COMMUNITY_BASE_URL + "migrate/ajaxgetsalepagestomigrate",
                 n = { sessionid: I.De.SESSIONID },
-                r = yield i().get(a, { params: n, withCredentials: !0 });
+                r = yield l().get(a, { params: n, withCredentials: !0 });
               if (
                 ((this.m_bLoadComplete = !0),
                 200 == (null == r ? void 0 : r.status) &&
@@ -783,7 +784,8 @@
           (this.m_mapSaleIDToInfo = new Map()),
             (this.m_listSaleState = new Array()),
             (this.m_stateLoadPromise = null),
-            (this.m_bLoadComplete = !1);
+            (this.m_bLoadComplete = !1),
+            (0, s.rC)(this);
         }
       }
       (0, o.gn)([s.LO], F.prototype, "m_mapSaleIDToInfo", void 0),
@@ -796,7 +798,8 @@
           (this.m_rgApps = []),
             (this.m_rgClanAccountIDs = []),
             (this.m_nHighestAppOffsetRequested = 0),
-            (this.m_nHighestClanOffsetRequested = 0);
+            (this.m_nHighestClanOffsetRequested = 0),
+            (0, s.rC)(this);
         }
         static Get() {
           return (
@@ -834,12 +837,12 @@
 
             ) {
               const t = Math.min(o, 100),
-                l = { offset: e, nBatchSize: t, start_appid: a },
+                i = { offset: e, nBatchSize: t, start_appid: a },
                 c = I.De.COMMUNITY_BASE_URL + "migrate/ajaxgetallapps";
               let d = null;
               try {
-                const a = yield i().get(c, {
-                  params: l,
+                const a = yield l().get(c, {
+                  params: i,
                   withCredentials: !0,
                   cancelToken: null == n ? void 0 : n.token,
                 });
@@ -889,9 +892,9 @@
             this.m_nHighestClanOffsetRequested = e + t;
             const r = { offset: e, count: t },
               o = I.De.COMMUNITY_BASE_URL + "migrate/ajaxgetallclans";
-            let l = null;
+            let i = null;
             try {
-              const e = yield i().get(o, {
+              const e = yield l().get(o, {
                 params: r,
                 withCredentials: !0,
                 cancelToken: null == a ? void 0 : a.token,
@@ -907,13 +910,13 @@
                   this.m_rgClanAccountIDs.concat(
                     e.data.accountids.map(Number),
                   ));
-              l = (0, S.l)(null == e ? void 0 : e.data);
+              i = (0, S.l)(null == e ? void 0 : e.data);
             } catch (e) {
-              l = (0, S.l)(e);
+              i = (0, S.l)(e);
             }
             console.error(
               "FetchClans: ajax request failed with error",
-              l.strErrorMsg,
+              i.strErrorMsg,
             );
           });
         }
@@ -929,7 +932,7 @@
             Promise.all([x.cb.InitGlobal(), r.wk.Init()]).then(() => a(!1));
           }, []);
           const [n, o] = (0, U.Ar)("start", 0),
-            [l, i] = (0, U.Ar)("start_appid", 0),
+            [i, l] = (0, U.Ar)("start_appid", 0),
             [s, c] = (0, U.Ar)("count", 10),
             [m, u] = (0, U.Ar)("autoload", !0),
             [g, p] = (0, U.Ar)("batch_size", 1),
@@ -938,7 +941,7 @@
             [S, I] = (0, U.Ar)("rolling", 0),
             [C, D] = (0, d.useState)(new Set()),
             A = (0, d.useRef)(0),
-            M = W.Get().GetApps(n, s, l),
+            M = W.Get().GetApps(n, s, i),
             B = 0 == S ? M : M.filter((e) => !C.has(Number(e.id))).slice(0, S),
             T = (e, t) => {
               C.has(e) ||
@@ -1007,7 +1010,7 @@
         j = (0, c.Pi)((e) => {
           const t = Number(e.app.id),
             [a, n] = (0, d.useState)(0),
-            [l, i] = (0, d.useState)([]),
+            [i, l] = (0, d.useState)([]),
             [s, c] = (0, d.useState)(!1),
             m = (0, d.useRef)(new Set()),
             u = (0, d.useRef)(0);
@@ -1030,9 +1033,9 @@
             h = `${I.De.COMMUNITY_BASE_URL}games/${
               g ? g.vanity_url : t
             }/partnerevents/`,
-            v = l.length,
+            v = i.length,
             _ = a == v,
-            f = l.filter((e) => e.BIsVisibleEvent()),
+            f = i.filter((e) => e.BIsVisibleEvent()),
             C = f.length,
             D = f.filter(
               (e) =>
@@ -1059,7 +1062,7 @@
                   e,
                   50,
                 );
-                i(l.concat(o)), c(!1);
+                l(i.concat(o)), c(!1);
               });
           (0, d.useEffect)(() => {
             e.bAutoLoad && _ && !s && T();
@@ -1070,7 +1073,7 @@
             w = () =>
               (0, o.mG)(void 0, void 0, void 0, function* () {
                 c(!0),
-                  yield (function (e, t, a, n, l) {
+                  yield (function (e, t, a, n, i) {
                     return (0, o.mG)(this, void 0, void 0, function* () {
                       for (const o of e.slice(0, t)) {
                         console.log(
@@ -1091,7 +1094,7 @@
                               yield r.wk.SaveModel(n),
                               console.log("Successfully migrated the event!"),
                               (o.bOldAnnouncement = !1),
-                              l(o.AnnouncementGID, !0);
+                              i(o.AnnouncementGID, !0);
                           }
                         } catch (e) {
                           const t = (0, S.l)(e);
@@ -1099,7 +1102,7 @@
                             "MigrateEvents: " + t.strErrorMsg.slice(0, 512),
                             t,
                           ),
-                            l(o.AnnouncementGID, !1);
+                            i(o.AnnouncementGID, !1);
                         }
                       }
                     });

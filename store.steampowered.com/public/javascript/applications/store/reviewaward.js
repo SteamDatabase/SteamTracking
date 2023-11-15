@@ -67,7 +67,7 @@
         m = a(19094),
         u = a(38072),
         _ = a.n(u),
-        g = a(50265),
+        g = a(59621),
         E = a(68333),
         h = a(32765),
         p = a(35507);
@@ -78,7 +78,8 @@
             (this.m_mapReactionConfiguration = new Map()),
             (this.m_bReactionConfigurationLoadedOrInFlight = !1),
             (this.m_mapExistingReactions = new Map()),
-            (this.m_transport = e);
+            (this.m_transport = e),
+            (0, g.rC)(this);
         }
         BIsLoggedIn() {
           return h.L7.logged_in;

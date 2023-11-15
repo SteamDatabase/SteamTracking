@@ -459,7 +459,7 @@
         a = r(66594),
         o = r(52868),
         n = r.n(o),
-        s = r(50265),
+        s = r(59621),
         l = r(65406),
         m = r(58961),
         c = r(89526),
@@ -478,6 +478,8 @@
         constructor(e) {
           (this.m_bLoadingData = !1),
             (this.m_rtLastLoad = 0),
+            (this.m_communityData = void 0),
+            (0, s.rC)(this),
             (this.m_accountid = e);
         }
         get community_data() {
@@ -749,10 +751,10 @@
                 }),
               ))
             : (w += " " + E().notInOrWatchingGame);
-          let O = !0,
-            D = !1,
+          let D = !0,
+            O = !1,
             x = !1;
-          s || ((w += " " + E().notFriends), (O = !1)),
+          s || ((w += " " + E().notFriends), (D = !1)),
             l && ((w += " " + E().communicationBlocked), (x = !0));
           let R,
             T = void 0 !== n,
@@ -810,7 +812,7 @@
                   ),
                   c.createElement(f._, { persona: r }),
                 )),
-            2 == this.props.friend_relationship && (D = !0),
+            2 == this.props.friend_relationship && (O = !0),
             c.createElement(
               c.Fragment,
               null,
@@ -880,11 +882,11 @@
                                 { className: E().awayStatusLabel },
                                 (0, h.Xx)("#PersonaStateOnline"),
                               ),
-                            !O &&
+                            !D &&
                               c.createElement(
                                 "div",
                                 { className: E().miniProfileNotFriends },
-                                D
+                                O
                                   ? (0, h.Xx)(
                                       "#Friend_Menu_NotAFriendRequesting",
                                     )
@@ -999,11 +1001,13 @@
       var b = r(47165),
         k = r(90531),
         w = r(52316),
-        O = r(68333),
-        D = r(16744);
+        D = r(68333),
+        O = r(16744);
       class x {
         constructor(e) {
-          this.m_SteamInterface = e;
+          (this.m_rgPreviousAvatars = []),
+            (0, s.rC)(this),
+            (this.m_SteamInterface = e);
         }
         GetAvatarHistory() {
           return this.StartLoadIfNeeded(), this.m_rgPreviousAvatars || [];
@@ -1022,12 +1026,12 @@
         }
         LoadAvatarHistory() {
           return (0, i.mG)(this, void 0, void 0, function* () {
-            const e = O.gA.Init(D.Er);
+            const e = D.gA.Init(O.Er);
             e.SetBodyFields({
               steamid: p.L7.steamid,
               filter_user_uploaded_only: !0,
             });
-            let t = yield D.AE.GetAvatarHistory(
+            let t = yield O.AE.GetAvatarHistory(
               this.m_SteamInterface.GetServiceTransport(),
               e,
             );
@@ -1076,6 +1080,9 @@
       }
       (0, i.gn)([s.LO], x.prototype, "m_rgPreviousAvatars", void 0);
       class R {
+        constructor() {
+          (this.m_AvatarData = void 0), (0, s.rC)(this);
+        }
         GetRecentGameAvatars() {
           return (
             this.StartLoadIfNeeded(),
@@ -1163,8 +1170,11 @@
       (0, i.gn)([s.LO.shallow], R.prototype, "m_AvatarData", void 0);
       class F {
         constructor(e, t) {
-          (this.m_eSaveStateByKey = new Map()),
+          (this.m_PrivacySettings = void 0),
+            (this.m_eCommentPermission = void 0),
+            (this.m_eSaveStateByKey = new Map()),
             (this.m_eCommentSaveState = 0),
+            (0, s.rC)(this),
             (this.m_PrivacySettings = e),
             (this.m_eCommentPermission = t);
         }
@@ -1283,6 +1293,8 @@
       class H {
         constructor(e, t, r) {
           (this.m_rgBadges = []),
+            (this.m_FavoriteBadge = void 0),
+            (0, s.rC)(this),
             (this.m_CMInterface = e),
             (this.m_AppInfoStore = t);
           const i = r.rgBadges,
@@ -1325,7 +1337,7 @@
           return (0, i.mG)(this, void 0, void 0, function* () {
             if (this.m_FavoriteBadge == this.m_CommittedFavoriteBadge) return 1;
             let e = this.FavoriteBadgeID,
-              t = O.gA.Init(U.nZ);
+              t = D.gA.Init(U.nZ);
             e.badgeid
               ? t.Body().set_badgeid(e.badgeid)
               : e.communityitemid &&
@@ -1461,6 +1473,7 @@
             (this.m_ProfileModifiers = new J(this)),
             (this.m_OnAvatarEquipmentChangedCallbacks = new W.pB()),
             (this.m_mapGoldenProfileConfigByAppID = new Map()),
+            (0, s.rC)(this),
             (this.m_SteamInterface = e),
             (this.m_AppInfoStore = t);
           for (let e of r) this.m_mapGoldenProfileConfigByAppID.set(e.appid, e);
@@ -1514,7 +1527,7 @@
               this.m_Backgrounds.BIsUncomitted())
             ) {
               {
-                let e = O.gA.Init(U.DN);
+                let e = D.gA.Init(U.DN);
                 e.Body().set_communityitemid(
                   this.m_Backgrounds.m_EquippedItem &&
                     this.m_Backgrounds.m_EquippedItem.communityitemid,
@@ -1529,7 +1542,7 @@
                 this.m_Backgrounds.m_EquippedItem &&
                 this.m_Backgrounds.m_EquippedItem.communityitemid
               ) {
-                let e = O.gA.Init(U.jZ);
+                let e = D.gA.Init(U.jZ);
                 e
                   .Body()
                   .set_communityitemid(
@@ -1587,7 +1600,7 @@
         CommitMiniProfileChanges() {
           return (0, i.mG)(this, void 0, void 0, function* () {
             if (this.m_MiniProfileBackgrounds.BIsUncomitted()) {
-              let e = O.gA.Init(U.N$);
+              let e = D.gA.Init(U.N$);
               e.Body().set_communityitemid(
                 this.m_MiniProfileBackgrounds.m_EquippedItem &&
                   this.m_MiniProfileBackgrounds.m_EquippedItem.communityitemid,
@@ -1618,7 +1631,7 @@
           return (0, i.mG)(this, void 0, void 0, function* () {
             let e, t;
             if (this.m_Avatars.BIsUncomitted()) {
-              let t = O.gA.Init(U.RR);
+              let t = D.gA.Init(U.RR);
               t
                 .Body()
                 .set_communityitemid(
@@ -1631,7 +1644,7 @@
                 ));
             }
             if (this.m_AvatarFrames.BIsUncomitted()) {
-              let e = O.gA.Init(U.Dq);
+              let e = D.gA.Init(U.Dq);
               e
                 .Body()
                 .set_communityitemid(
@@ -1790,7 +1803,7 @@
           this.m_ProfileModifiers.Revert();
         }
         ReloadEquippedItems() {
-          let e = O.gA.Init(U.cy);
+          let e = D.gA.Init(U.cy);
           e.Body().set_steamid(p.L7.steamid),
             e.Body().set_language(p.De.LANGUAGE),
             (this.m_promiseEquipped = U.lk.GetProfileItemsEquipped(
@@ -1816,7 +1829,7 @@
                 this.m_ProfileModifiers.m_CommittedEquippedItem !=
                   this.m_ProfileModifiers.m_EquippedItem
               ) {
-                let t = O.gA.Init(z.yg);
+                let t = D.gA.Init(z.yg);
                 t
                   .Body()
                   .set_communityitemid(
@@ -1837,7 +1850,7 @@
                 e = !0;
               }
               if (this.m_ProfileModifiers.m_EquippedItem) {
-                let t = O.gA.Init(z.yg);
+                let t = D.gA.Init(z.yg);
                 t
                   .Body()
                   .set_communityitemid(
@@ -1886,13 +1899,13 @@
         }
         Initialize() {
           return (0, i.mG)(this, void 0, void 0, function* () {
-            let e = O.gA.Init(U.XF);
+            let e = D.gA.Init(U.XF);
             e.Body().set_language(p.De.LANGUAGE),
               (this.m_promiseOwned = U.lk.GetProfileItemsOwned(
                 this.m_SteamInterface.GetServiceTransport(),
                 e,
               ));
-            let t = O.gA.Init(U.cy);
+            let t = D.gA.Init(U.cy);
             t.Body().set_steamid(p.L7.steamid),
               t.Body().set_language(p.De.LANGUAGE),
               (this.m_promiseEquipped = U.lk.GetProfileItemsEquipped(
@@ -1913,8 +1926,13 @@
         (0, i.gn)([s.aD], Q.prototype, "ReloadEquippedItems", null);
       class J {
         constructor(e) {
-          (this.m_bEquippedLoaded = !1),
+          (this.m_cItemsOwned = void 0),
+            (this.m_bEquippedLoaded = !1),
             (this.m_bUnsavedChanges = !1),
+            (this.m_CommittedEquippedItem = void 0),
+            (this.m_EquippedItem = void 0),
+            (this.m_EquipFlags = void 0),
+            (0, s.rC)(this),
             (this.m_parent = e);
         }
         GetOwnedItemCount() {
@@ -1998,8 +2016,15 @@
         (0, i.gn)([s.aD], J.prototype, "Revert", null);
       class ee {
         constructor(e, t, r, i, a, o) {
-          (this.m_bStateSelectionAvailable = !1),
+          (this.m_strDisplayCountry = void 0),
+            (this.m_strDisplayState = void 0),
+            (this.m_strDisplayCity = void 0),
+            (this.m_strCountryCode = void 0),
+            (this.m_strStateCode = void 0),
+            (this.m_strCityCode = void 0),
+            (this.m_bStateSelectionAvailable = !1),
             (this.m_bCitySelectionAvailable = !1),
+            (0, s.rC)(this),
             (this.m_strDisplayCountry = e),
             (this.m_strDisplayState = r),
             (this.m_strDisplayCity = a),
@@ -2165,7 +2190,9 @@
         (0, i.gn)([s.aD], ee.prototype, "FindAndSetActiveState", null);
       class te {
         constructor(e, t, r) {
-          (this.m_CMInterface = e),
+          (this.m_ActiveTheme = void 0),
+            (0, s.rC)(this),
+            (this.m_CMInterface = e),
             (this.m_rgAvailableThemes = r.map((e) =>
               Object.assign(Object.assign({}, e), {
                 theme_id: e.theme_id || "Default",
@@ -2199,7 +2226,7 @@
         }
         CommitActiveTheme() {
           return (0, i.mG)(this, void 0, void 0, function* () {
-            let e = O.gA.Init(U.tf);
+            let e = D.gA.Init(U.tf);
             e.Body().set_theme_id(
               "Default" == this.ActiveTheme.theme_id
                 ? ""
@@ -2249,7 +2276,9 @@
       }
       class ae {
         constructor(e) {
-          (this.m_bLoaded = !1),
+          (this.m_PrimaryGroup = void 0),
+            (this.m_bLoaded = !1),
+            (0, s.rC)(this),
             e &&
               (this.m_CommittedPrimaryGroup = this.m_PrimaryGroup =
                 new oe(new b.K(e.steamid), e.name, e.avatarHash));
@@ -2419,7 +2448,16 @@
       }
       class se {
         constructor(e) {
-          (this.m_strPersonaName = e.strPersonaName),
+          (this.m_strPersonaName = void 0),
+            (this.m_strCommittedPersonaName = void 0),
+            (this.m_strCustomURL = void 0),
+            (this.m_strRealName = void 0),
+            (this.m_strSummary = void 0),
+            (this.m_strAvatarHash = void 0),
+            (this.m_strCommittedAvatarHash = void 0),
+            (this.m_Preferences = void 0),
+            (0, s.rC)(this),
+            (this.m_strPersonaName = e.strPersonaName),
             (this.m_strCustomURL = e.strCustomURL),
             (this.m_strRealName = e.strRealName),
             (this.m_strSummary = e.strSummary),
@@ -3135,7 +3173,7 @@
           );
       var ke = r(88909),
         we = (r(99307), r(72120));
-      const Oe = ({ title: e, className: t, children: r }) =>
+      const De = ({ title: e, className: t, children: r }) =>
           c.createElement(
             "div",
             { className: (0, g.Z)(ke.ProfileBox, t) },
@@ -3146,7 +3184,7 @@
               c.createElement(Be.SV, null, r),
             ),
           ),
-        De = ({ onSave: e, onCancel: t, disabled: r }) =>
+        Oe = ({ onSave: e, onCancel: t, disabled: r }) =>
           c.createElement(
             "div",
             { className: ke.SaveCancelButtons },
@@ -3232,7 +3270,7 @@
                   ),
                 ),
               ),
-              c.createElement(De, {
+              c.createElement(Oe, {
                 onSave: this.CommitChanges,
                 onCancel: this.RevertChanges,
                 disabled: l,
@@ -3673,7 +3711,7 @@
                   ),
               ),
             ),
-            c.createElement(De, {
+            c.createElement(Oe, {
               onSave: this.OnSave,
               onCancel: this.RevertChanges,
               disabled: s || e.BIsAvatarChangeOnCooldown(),
@@ -4140,20 +4178,20 @@
             c.createElement(ue.Ac, null, c.createElement(ct, null)),
             c.createElement(Fe, { strHTMLError: o }),
             c.createElement(
-              Oe,
+              De,
               { title: (0, h.Xx)("#Profile_Edit_BasicInfo") },
               c.createElement(dt, { Profile: e }),
               !(0, me.e7)(p.De.EREALM) && c.createElement(ht, { Profile: e }),
             ),
             !(0, me.e7)(p.De.EREALM) &&
               c.createElement(
-                Oe,
+                De,
                 { title: (0, h.Xx)("#Profile_Edit_Location") },
                 c.createElement(et, { Profile: e }),
               ),
             !(0, me.e7)(p.De.EREALM) &&
               c.createElement(
-                Oe,
+                De,
                 { title: (0, h.Xx)("#Profile_FieldSummary") },
                 c.createElement(st, {
                   Profile: e,
@@ -4163,11 +4201,11 @@
               ),
             !(0, me.e7)(p.De.EREALM) &&
               c.createElement(
-                Oe,
+                De,
                 { title: (0, h.Xx)("#Profile_Edit_Preferences") },
                 c.createElement(_t, { Profile: e }),
               ),
-            c.createElement(De, { onCancel: this.RevertChanges, disabled: i }),
+            c.createElement(Oe, { onCancel: this.RevertChanges, disabled: i }),
           );
         }
       }
@@ -4391,7 +4429,7 @@
               },
               ItemComponent: St,
             }),
-            c.createElement(De, {
+            c.createElement(Oe, {
               onSave: this.CommitFavoriteBadge,
               onCancel: this.RevertFavoriteBadge,
               disabled: t,
@@ -4526,7 +4564,7 @@
               },
               ItemComponent: Lt,
             }),
-            c.createElement(De, {
+            c.createElement(Oe, {
               onSave: this.CommitFavoriteGroup,
               onCancel: this.RevertFavoriteGroup,
               disabled: t,
@@ -4597,10 +4635,10 @@
                 c.createElement(kt, { Item: e, small: r }),
               )
             : null;
-      function Ot(e) {
+      function Dt(e) {
         e.currentTarget.querySelector("video").play();
       }
-      function Dt(e) {
+      function Ot(e) {
         return [e.item_title, e.app_name];
       }
       function xt(e, t) {
@@ -4651,7 +4689,7 @@
               o && !t.BIsLegacyGoldenProfile(o.appid) && (o = null),
               c.createElement(Re, {
                 fnRevertChanges: a,
-                getSearchFields: Dt,
+                getSearchFields: Ot,
                 getItems: () => t.GetOwnedMiniProfileBackgrounds(),
                 fnCommitChanges: (e) =>
                   (0, i.mG)(void 0, void 0, void 0, function* () {
@@ -4726,7 +4764,7 @@
                 i && bt.Active,
               ),
               onClick: t,
-              onMouseEnter: o ? Ot : void 0,
+              onMouseEnter: o ? Dt : void 0,
             },
             c.createElement(
               "div",
@@ -4790,7 +4828,7 @@
               );
       var qt = r(40103),
         Xt = r(69159),
-        Zt = r(25125);
+        Zt = r(83315);
       let zt = class extends c.Component {
         render() {
           let e = this.props.PrivacyStore;
@@ -5651,7 +5689,7 @@
               ),
               c.createElement(Re, {
                 className: rr.BackgroundPickerPage,
-                getSearchFields: Dt,
+                getSearchFields: Ot,
                 getItems: () => e.GetOwnedBackgrounds(),
                 fnCommitChanges: this.CommitChanges,
                 fnRevertChanges: this.RevertChanges,
@@ -5770,7 +5808,7 @@
                 r && rr.Active,
               ),
               onClick: t,
-              onMouseEnter: a ? Ot : void 0,
+              onMouseEnter: a ? Dt : void 0,
             },
             c.createElement(
               "div",
@@ -6038,7 +6076,7 @@
             ),
             c.createElement(Re, {
               fnRevertChanges: this.OnDismiss,
-              getSearchFields: Dt,
+              getSearchFields: Ot,
               getItems: () => e.GetOwnedProfileModifiers(),
               fnCommitChanges: (t) =>
                 (0, i.mG)(this, void 0, void 0, function* () {
@@ -6164,8 +6202,8 @@
               fnCommitChanges: this.CommitChanges,
               fnRevertChanges: this.RevertChanges,
               fnRenderPreview: (e) =>
-                c.createElement(Or, { Theme: e, ProfileItems: t }),
-              fnIsSameItem: Dr,
+                c.createElement(Dr, { Theme: e, ProfileItems: t }),
+              fnIsSameItem: Or,
               ItemComponent: xr,
               classNameItemPicker: Lr.ProfileThemePicker,
               className: (0, g.Z)(r && Lr.ThemePickerDisabled),
@@ -6187,14 +6225,14 @@
             c.createElement("div", { className: ar[r] }, t)
           );
         },
-        Or = (0, d.Pi)(({ Theme: e, ProfileItems: t }) =>
+        Dr = (0, d.Pi)(({ Theme: e, ProfileItems: t }) =>
           c.createElement(
             "div",
             { className: Lr.ProfileThemePreviewCtn },
             c.createElement(sr, { ProfileItems: t, theme: e.theme_id }),
           ),
         ),
-        Dr = (e, t) => (e && e.theme_id) === (t && t.theme_id),
+        Or = (e, t) => (e && e.theme_id) === (t && t.theme_id),
         xr = ({ Item: e, onSelected: t, active: r, children: i }) => {
           const a = e.theme_id + "Theme",
             o = `ThemeOption${a}`;
@@ -6358,7 +6396,7 @@
               ),
               c.createElement(Fe, { strHTMLError: t }),
               c.createElement("div", { ref: this.m_refDiv }),
-              c.createElement(De, {
+              c.createElement(Oe, {
                 onCancel: this.RevertChanges,
                 disabled: e,
               }),

@@ -530,7 +530,7 @@
     38212: (e, t, n) => {
       "use strict";
       n.r(t), n.d(t, { DemoAndQuickPitch: () => j, Events: () => Z });
-      var a = n(71752),
+      var a = n(56903),
         r = n(89526),
         l = n(33940),
         o = n(25871),
@@ -544,8 +544,8 @@
         _ = n(66012),
         v = n(60161),
         g = n(14826),
-        E = n(32765),
-        h = n(21904),
+        h = n(32765),
+        E = n(21904),
         S = n(57742),
         C = n(5828),
         b = n(6319),
@@ -576,7 +576,7 @@
           [n],
         );
         const T = c && c.demo_appid > 0,
-          N = y ? y.GetNameWithFallback((0, d.jM)(E.De.LANGUAGE)) : null,
+          N = y ? y.GetNameWithFallback((0, d.jM)(h.De.LANGUAGE)) : null,
           G = !y || y.BHasEventEnded();
         return T
           ? r.createElement(
@@ -649,7 +649,7 @@
                         r.createElement(
                           "div",
                           { className: C.TileActionInnerText },
-                          r.createElement(h.H6, {
+                          r.createElement(E.H6, {
                             dateAndTime: y.GetStartTimeAndDateUnixSeconds(),
                             bSingleLine: !0,
                           }),
@@ -905,7 +905,7 @@
             eventModel: o,
             closeModal: s,
           } = e,
-          i = (0, E.id)();
+          i = (0, h.id)();
         return r.createElement(M.x, {
           className: i ? void 0 : P.StoreHeaderAdjust,
           eventClassName: i ? P.GamePadUIWidthAdjust : void 0,
@@ -974,7 +974,7 @@
       function W(e) {
         return (t) => r.createElement(a.n, null, r.createElement(e, t));
       }
-      (O.contextType = E.E_),
+      (O.contextType = h.E_),
         (0, l.gn)([H.ak], O.prototype, "ShowModal", null),
         (0, l.gn)([H.ak], O.prototype, "ShowLatestUpdateModal", null),
         (0, l.gn)([H.ak], O.prototype, "CloseModal", null);
@@ -1014,17 +1014,17 @@
         _ = n(24218),
         v = n(17547),
         g = n(97506),
-        E = n(1275),
-        h = n(45711),
+        h = n(1275),
+        E = n(45711),
         S = n(49234),
         C = n(33940),
-        b = n(25125),
+        b = n(83315),
         f = n(89480),
         I = n(84770),
         y = n(85651),
         w = n(56368),
         T = n(32765),
-        N = n(50265),
+        N = n(59621),
         G = n(23217);
       class L {
         constructor(e) {
@@ -1066,7 +1066,8 @@
               this.m_stats.community_hub_read +
               this.m_stats.news_hub_read +
               this.m_stats.event_scroller_read),
-            (this.m_lastUpdateTime = e ? Math.floor(Date.now() / 1e3) : 0);
+            (this.m_lastUpdateTime = e ? Math.floor(Date.now() / 1e3) : 0),
+            (0, N.rC)(this);
         }
         reset(e) {
           (this.m_stats.library_overview_shown = e.library_overview_shown),
@@ -1114,7 +1115,8 @@
         constructor() {
           (this.m_mapPerEventStats = new Map()),
             (this.m_mapSummaryStats = new Map()),
-            (this.m_bLoadedFromConfig = !1);
+            (this.m_bLoadedFromConfig = !1),
+            (0, N.rC)(this);
         }
         LazyInit() {
           if (!this.m_bLoadedFromConfig) {
@@ -1629,10 +1631,11 @@
           Promise.all([
             n.e(6499),
             n.e(3388),
+            n.e(4141),
             n.e(3184),
             n.e(9851),
             n.e(2706),
-            n.e(2675),
+            n.e(7616),
             n.e(6364),
             n.e(4134),
             n.e(7440),
@@ -1659,7 +1662,7 @@
             } = e,
             u = t.appid,
             _ = t.clanSteamID.GetAccountID(),
-            [g, E] = (0, k.vs)(u, {
+            [g, h] = (0, k.vs)(u, {
               include_assets: !0,
               include_platforms: !0,
               include_basic_info: !0,
@@ -1668,7 +1671,7 @@
             [S, C] = (0, p.KU)(_);
           if (
             (r.useEffect(() => window.scrollTo(0, 0), [u, _]),
-            !t.bLoaded || !C || (u && !g && 2 !== E))
+            !t.bLoaded || !C || (u && !g && 2 !== h))
           )
             return r.createElement(
               "div",
@@ -1679,7 +1682,7 @@
               }),
             );
           let b = t.GetDescriptionWithFallback(n);
-          const I = (0, h.q)(t, h.Ue.k_eStoreNewsHub, "allowRelative");
+          const I = (0, E.q)(t, E.Ue.k_eStoreNewsHub, "allowRelative");
           return r.createElement(ue, {
             event: t,
             lang: n,
@@ -1694,9 +1697,9 @@
                   crumbs: [
                     {
                       name: (0, Y.Xx)("#BreadCrumbs_AllEvents"),
-                      url: (0, h.q)(
+                      url: (0, E.q)(
                         t,
-                        h.Ue.k_eStoreUsersNewsHub,
+                        E.Ue.k_eStoreUsersNewsHub,
                         "allowRelative",
                       ),
                     },
@@ -2002,7 +2005,7 @@
                   { className: U().EventDetailsSticky },
                   v.is_ogg
                     ? r.createElement(ge, { appid: v.appid })
-                    : r.createElement(Ee, { clanSteamID: s }),
+                    : r.createElement(he, { clanSteamID: s }),
                   r.createElement(V.wM, {
                     event: t,
                     nOverrideEndTime: l,
@@ -2079,7 +2082,7 @@
           ),
         );
       }
-      function Ee(e) {
+      function he(e) {
         const { clanSteamID: t } = e,
           [n, a] = (0, p.KU)(t.GetAccountID());
         return a
@@ -2108,12 +2111,12 @@
             ),
             null);
       }
-      const he = ["", "en-US", "en-GB", "zh-CN", "es-ES", "br-BR"];
+      const Ee = ["", "en-US", "en-GB", "zh-CN", "es-ES", "br-BR"];
       let Se = class extends r.Component {
         GenerateOptions() {
           let e = new Array();
           return (
-            he.forEach((t) =>
+            Ee.forEach((t) =>
               e.push(r.createElement("option", { key: t, value: t }, t)),
             ),
             e
@@ -2304,7 +2307,8 @@
         }
         constructor() {
           (this.m_objApprovalPriviledge = null),
-            (this.m_LoadingPriviledgePromise = null);
+            (this.m_LoadingPriviledgePromise = null),
+            (0, N.rC)(this);
           let e = (0, T.kQ)("sc_app_privildge", "application_config");
           this.ValidateStoreDefault(e)
             ? ("dev" === T.De.WEB_UNIVERSE &&
@@ -2610,7 +2614,7 @@
             ? r.createElement(
                 v.SV,
                 null,
-                r.createElement(E.x, {
+                r.createElement(h.x, {
                   appid: s.appid,
                   trackingLocation: 7,
                   announcementGID: s.GetAnnouncementGID(),
@@ -2619,7 +2623,7 @@
                   showAppHeader: !0,
                   closeModal: () =>
                     e.history.push(
-                      (0, h.q)(s, h.Ue.k_eStoreNewsHub, "allowRelative"),
+                      (0, E.q)(s, E.Ue.k_eStoreNewsHub, "allowRelative"),
                     ),
                 }),
               )
@@ -2661,12 +2665,6 @@
         je = n(84343),
         Ye = n(54671);
       class ze {
-        constructor() {
-          (this.m_mapNewsCurators = new Map()),
-            (this.m_bIsLoadComplete = !1),
-            (this.m_mapLangToNewsCurators = new Map()),
-            (this.m_LoadingPromise = null);
-        }
         static Get() {
           return (
             ze.s_newsCuratorStore ||
@@ -2676,6 +2674,13 @@
               (window.g_NewsCuratorStore = ze.s_newsCuratorStore)),
             ze.s_newsCuratorStore
           );
+        }
+        constructor() {
+          (this.m_mapNewsCurators = new Map()),
+            (this.m_bIsLoadComplete = !1),
+            (this.m_mapLangToNewsCurators = new Map()),
+            (this.m_LoadingPromise = null),
+            (0, N.rC)(this);
         }
         IsLoaded() {
           return this.m_bIsLoadComplete;
@@ -3209,7 +3214,7 @@
               ? r.createElement(
                   v.SV,
                   null,
-                  r.createElement(E.x, {
+                  r.createElement(h.x, {
                     onEventNotFound: a,
                     appid: 0,
                     clanSteamID: e.clanInfo.clanSteamID,
@@ -3300,7 +3305,7 @@
         }
       }
       const gt = new vt();
-      class Et extends r.Component {
+      class ht extends r.Component {
         render() {
           const { specialEvent: e } = this.props,
             t = window.location.href === T.De.STORE_BASE_URL + e.newshubUrl,
@@ -3329,7 +3334,7 @@
           );
         }
       }
-      class ht extends r.Component {
+      class Et extends r.Component {
         render() {
           const e = gt.GetVisibleSpecialEvents();
           return 0 === e.length
@@ -3346,7 +3351,7 @@
                   "div",
                   { className: ut().SpecialEventList },
                   e.map((e) =>
-                    r.createElement(Et, { key: e.sLocToken, specialEvent: e }),
+                    r.createElement(ht, { key: e.sLocToken, specialEvent: e }),
                   ),
                 ),
               );
@@ -3487,14 +3492,15 @@
         wt = (e) =>
           (0, T.h4)() ? r.createElement(It, null) : r.createElement(yt, null);
       class Tt {
-        constructor() {
-          (this.m_curDisplay = "desktop_navigation"),
-            (this.m_fnGetRouterHistory = void 0);
-        }
         static Get() {
           return (
             Tt.s_GlobalStore || (Tt.s_GlobalStore = new Tt()), Tt.s_GlobalStore
           );
+        }
+        constructor() {
+          (this.m_curDisplay = "desktop_navigation"),
+            (this.m_fnGetRouterHistory = void 0),
+            (0, N.rC)(this);
         }
         UpdateLocation(e, t) {
           this.m_fnGetRouterHistory = e;
@@ -3969,7 +3975,7 @@
             (0, Y.kQ)("#EventCalendar_Title", r.createElement("br", null)),
           ),
           r.createElement(jt, { bIsUpcoming: n }),
-          r.createElement(ht, null),
+          r.createElement(Et, null),
           r.createElement(
             "div",
             { className: ut().SidePanelGameSearch },
@@ -4018,7 +4024,7 @@
                   (n = "app/" + e.id)),
               r.createElement(
                 Ve.rU,
-                { key: `suggestion-${e.id}`, to: `/${(0, h.x3)()}/${n}/` },
+                { key: `suggestion-${e.id}`, to: `/${(0, E.x3)()}/${n}/` },
                 t,
               )
             );
@@ -4086,7 +4092,7 @@
         );
       }
       function Vt(e, t) {
-        (0, Me.vY)().BIsCollectionCalendar(), (0, h.x3)();
+        (0, Me.vY)().BIsCollectionCalendar(), (0, E.x3)();
         const n = new Array();
         if ((y.JW.bIsCuratorsEnabled && n.push(Pt(Pe.B.Press, e)), t))
           for (const e of gt.GetVisibleSpecialEvents()) {
@@ -4392,7 +4398,7 @@
         }
         GotoGameOrClanHub() {
           const { eventModel: e } = this.props,
-            t = (0, h.q)(e, h.Ue.k_eStoreNewsHub, "allowRelative");
+            t = (0, E.q)(e, E.Ue.k_eStoreNewsHub, "allowRelative");
           t.startsWith("http")
             ? (window.location.href = t)
             : this.props.history.push(t);
@@ -4685,7 +4691,7 @@
               ? e.GetFallbackArtworkScreenshot()
               : e.GetImageURLWithFallback(u, s, d),
             g = p.sV.GetClanInfoByClanAccountID(e.clanSteamID.GetAccountID()),
-            E = g && !g.is_ogg,
+            h = g && !g.is_ogg,
             S = "upcoming" !== a && this.getVideoPreviewControl(),
             C = !S && "upcoming" !== a,
             b = e.GetCategoryAsString(),
@@ -4728,7 +4734,7 @@
                           className: (0, j.Z)(
                             Qt().AppBannerLogo,
                             _ && Qt().FallbackImage,
-                            E && Qt().ClanSource,
+                            h && Qt().ClanSource,
                           ),
                           style: { backgroundImage: `url(${o})` },
                         }),
@@ -4752,7 +4758,7 @@
                         className: (0, j.Z)(
                           Qt().TileImage,
                           _ && Qt().FallbackImage,
-                          E && Qt().ClanSource,
+                          h && Qt().ClanSource,
                         ),
                         style: { backgroundImage: `url(${k})` },
                       }),
@@ -4808,8 +4814,8 @@
             { className: G },
             r.createElement(nn.I, { event: e, recordNewsHubStats: !0 }),
             r.createElement(
-              h.JW,
-              { eventModel: e, route: h.Ue.k_eView },
+              E.JW,
+              { eventModel: e, route: E.Ue.k_eView },
               r.createElement(
                 "div",
                 { className: Qt().Tile, onClick: this.OnFallbackClick },
@@ -4891,7 +4897,7 @@
       let cn = class extends r.Component {
         OnTitleClick(e) {
           const { eventModel: t } = this.props,
-            n = (0, h.q)(t, h.Ue.k_eStoreNewsHub, "allowRelative");
+            n = (0, E.q)(t, E.Ue.k_eStoreNewsHub, "allowRelative");
           n.startsWith("http")
             ? (window.location.href = n)
             : this.props.history.push(n),
@@ -5189,7 +5195,7 @@
             ),
           );
         }),
-        En = (0, d.Pi)((e) => {
+        hn = (0, d.Pi)((e) => {
           const { partnerEventStore: t, calendarEvent: n } = e,
             a = (0, C._T)(e, ["partnerEventStore", "calendarEvent"]),
             l = t.GetClanEventModel(n.unique_id),
@@ -5217,7 +5223,7 @@
                 }),
               );
         });
-      var hn = n(46294),
+      var En = n(46294),
         Sn = n(57489),
         Cn = n.n(Sn),
         bn = n(51696),
@@ -5540,7 +5546,7 @@
           } = this.props;
           if (!e || 0 == e.length) return null;
           const o = e.map((l) =>
-            r.createElement(En, {
+            r.createElement(hn, {
               key: "ht-" + l.unique_id,
               calendarEvent: l,
               partnerEventStore: Ue.j1,
@@ -6154,7 +6160,7 @@
             (n && (n.style.transform = `translateY(${-1 * t}px)`),
             y.JW.bOpenEventLandingPage)
           ) {
-            const t = (0, h.q)(e, h.Ue.k_eStoreView, "allowRelative");
+            const t = (0, E.q)(e, E.Ue.k_eStoreView, "allowRelative");
             this.props.history.push(t);
           } else
             (0, s.Wo)(this.props.history, {
@@ -6208,7 +6214,7 @@
                 v.SV,
                 null,
                 this.state.modalEvent
-                  ? r.createElement(E.x, {
+                  ? r.createElement(h.x, {
                       appid: this.state.modalEvent.appid,
                       trackingLocation: 8,
                       announcementGID:
@@ -6486,11 +6492,11 @@
                       rtSectionStart: c,
                       rtSectionEnd: m,
                       bIsFutureSection: g,
-                      nRenderedHeight: E,
+                      nRenderedHeight: h,
                     } = e,
-                    h = n < u,
+                    E = n < u,
                     S = (0, j.Z)(ut().PastSection, p && ut().DarkerBackground);
-                  E > 0 &&
+                  h > 0 &&
                     ((p = !p),
                     void 0 !== _.nInlineOffset &&
                       n >= _.nInlineOffset &&
@@ -6498,15 +6504,15 @@
                       (v = o));
                   const C = !t && g;
                   return r.createElement(
-                    hn.Y,
+                    En.Y,
                     {
                       key: s,
                       className: ut().LazyCalendarSectionCtn,
-                      placeholderHeight: E,
+                      placeholderHeight: h,
                       rootMargin: "100% 0px 100% 0px",
                     },
                     r.createElement(aa, {
-                      bRenderStickyHeader: h,
+                      bRenderStickyHeader: E,
                       strSectionLabel: i,
                       rtSectionStart: c,
                       rtSectionEnd: m,
@@ -6533,12 +6539,12 @@
             ),
             e.GetCollectionID() === Pe.B.Press &&
               g.splice(0, 0, r.createElement(Un, { key: "LanguageFeedRow" }));
-          const E = c[0].rtSectionStart,
-            h = (0, Me.vY)().GetCurrentlyLoadedEventCount(0, E),
-            S = (0, Me.vY)().GetCurrentlyLoadedEventCount(E);
+          const h = c[0].rtSectionStart,
+            E = (0, Me.vY)().GetCurrentlyLoadedEventCount(0, h),
+            S = (0, Me.vY)().GetCurrentlyLoadedEventCount(h);
           let C =
-              h &&
-              (h.nCount
+              E &&
+              (E.nCount
                 ? "#EventCalendar_NoMorePastEvents"
                 : "#EventCalendar_NoPastEvents"),
             b =
@@ -6562,7 +6568,7 @@
                   ? "#EventCalendar_NoMoreFutureEvents"
                   : "#EventCalendar_NoFutureEvents")),
               (b =
-                h &&
+                E &&
                 r.createElement(
                   "div",
                   {
@@ -6574,13 +6580,13 @@
                   r.createElement(
                     "span",
                     { className: ut().SeeAllCount },
-                    h.nCount + (h.bIsComplete ? "" : "+"),
+                    E.nCount + (E.bIsComplete ? "" : "+"),
                   ),
                 )))
             : n &&
               (C =
-                h &&
-                (h.nCount
+                E &&
+                (E.nCount
                   ? "#EventCalendar_NoMorePastUpdates"
                   : "#EventCalendar_NoPastUpdates"));
           let f = null;
@@ -6680,7 +6686,7 @@
                     "div",
                     { className: ut().HorizontalTiles },
                     e.map((n) =>
-                      r.createElement(En, {
+                      r.createElement(hn, {
                         key: "ht-" + n.unique_id,
                         calendarEvent: n,
                         partnerEventStore: Ue.j1,
@@ -6723,14 +6729,20 @@
         e[(e.eCurators = 1)] = "eCurators";
       })(na || (na = {}));
       let aa = (Xn = class extends r.Component {
-        constructor() {
-          super(...arguments), (this.m_ref = r.createRef());
+        constructor(e) {
+          super(e),
+            (this.m_ref = r.createRef()),
+            (this.rtSectionStart = e.rtSectionStart),
+            (this.rtSectionEnd = e.rtSectionEnd),
+            (0, N.rC)(this);
         }
         componentDidMount() {
           this.UpdatePositioning();
         }
         componentDidUpdate() {
-          this.UpdatePositioning();
+          this.UpdatePositioning(),
+            (this.rtSectionStart = this.props.rtSectionStart),
+            (this.rtSectionEnd = this.props.rtSectionEnd);
         }
         UpdatePositioning() {
           this.m_ref.current &&
@@ -6744,8 +6756,8 @@
         }
         get cachedCalendarItems() {
           return (0, Me.vY)().GetCalendarItemsInTimeRange(
-            (0, xe.YN)(() => this.props.rtSectionStart),
-            (0, xe.YN)(() => this.props.rtSectionEnd),
+            (0, xe.YN)(() => this.rtSectionStart),
+            (0, xe.YN)(() => this.rtSectionEnd),
           );
         }
         GetCarouselGroupTitle(e) {
@@ -6850,7 +6862,7 @@
                 r.createElement(
                   "div",
                   { key: i.unique_id, className: ut().CalendarRow },
-                  r.createElement(En, {
+                  r.createElement(hn, {
                     calendarEvent: i,
                     partnerEventStore: Ue.j1,
                     mode: "wide",
@@ -6953,7 +6965,9 @@
           );
         }
       });
-      (0, C.gn)([N.Fl], aa.prototype, "cachedCalendarItems", null),
+      (0, C.gn)([N.LO], aa.prototype, "rtSectionStart", void 0),
+        (0, C.gn)([N.LO], aa.prototype, "rtSectionEnd", void 0),
+        (0, C.gn)([N.Fl], aa.prototype, "cachedCalendarItems", null),
         (aa = Xn = (0, C.gn)([d.Pi], aa));
       const ra = (e) => {
           const t = (0, Me.vY)().GetTimeEdgeForDirection(
@@ -7015,7 +7029,7 @@
               ),
             ),
           );
-      var oa = n(71752),
+      var oa = n(56903),
         sa = n(95408);
       function ia(e) {
         if ("steam" === e) {

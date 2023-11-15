@@ -1,0 +1,1363 @@
+.tabbar_GraphicalAssetsTabs_36r8g {
+  display: flex;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #67c1f5;
+  align-items: flex-end;
+  text-align: center;
+}
+.tabbar_GraphicalAssetsTab_K1_Tp {
+  margin: 0 16px;
+  padding: 4px 12px;
+  cursor: pointer;
+  border-bottom: 4px solid rgba(0, 0, 0, 0);
+  transition-property: border-bottom-color;
+  transition-duration: 0.25s;
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #fff;
+  text-transform: uppercase;
+}
+html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
+  font-size: 12px;
+}
+@media screen and (max-width: 910px) {
+  html:not(.force_desktop) .tabbar_GraphicalAssetsTab_K1_Tp {
+    font-size: 12px;
+  }
+}
+.tabbar_GraphicalAssetsTab_K1_Tp:first-child {
+  margin-left: 0;
+}
+.tabbar_GraphicalAssetsTab_K1_Tp.tabbar_Active_37f6M,
+.tabbar_GraphicalAssetsTab_K1_Tp:hover {
+  border-bottom-color: #67c1f5;
+  cursor: default;
+  cursor: pointer;
+}
+.tabbar_GraphicalAssetStatus_ojMj8 {
+  text-transform: uppercase;
+  font-size: 9px;
+}
+.tabbar_VOWarning_21XR- {
+  font-size: 9px;
+  color: #b22222;
+}
+.tabbar_StatusSuccess_1HWSe {
+  color: #a4d007;
+}
+.tabbar_StatusDanger_2jgbN {
+  color: #e24044;
+}
+.tabbar_StatusCaution_31Lxu {
+  color: #e76e34;
+}
+.throbber_LoadingWrapper_3Z36h {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+.throbber_LoadingWrapper_3Z36h.throbber_Static_kwzRJ {
+  animation-name: throbber_none_2iT5l;
+}
+.throbber_LoadingWrapper_3Z36h.throbber_Static_kwzRJ * {
+  animation-name: throbber_none_2iT5l !important;
+  stroke-dasharray: initial !important;
+  stroke-dashoffset: initial !important;
+  stroke-width: 5px !important;
+  opacity: 1 !important;
+}
+.throbber_LoadingWrapper_3Z36h.throbber_Static_kwzRJ
+  .throbber_bottomCircle_3-sjx
+  path {
+  stroke-width: 0 !important;
+}
+.throbber_LoadingWrapper_3Z36h.throbber_noString_M4pF_ {
+  flex-direction: row;
+}
+.throbber_LoadingWrapper_3Z36h .throbber_Throbber_7MdwT,
+.throbber_LoadingWrapper_3Z36h .SVGIcon_Throbber,
+.throbber_LoadingWrapper_3Z36h .SVGIcon_Throbber path {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.throbber_LoadingWrapper_3Z36h .throbber_Throbber_7MdwT {
+  align-self: center;
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+}
+.throbber_LoadingWrapper_3Z36h.throbber_throbber_small_29-XT
+  .throbber_Throbber_7MdwT {
+  width: 32px;
+  height: 32px;
+}
+.throbber_LoadingWrapper_3Z36h.throbber_throbber_medium_1yqSo
+  .throbber_Throbber_7MdwT {
+  width: 64px;
+  height: 64px;
+}
+.throbber_LoadingWrapper_3Z36h.throbber_throbber_large_1u2tL
+  .throbber_Throbber_7MdwT {
+  width: 92px;
+  height: 92px;
+}
+.throbber_throbber_center_wrapper_Yi4EM {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.throbber_ThrobberText_1Zlvf,
+.throbber_LoadingWrapper_3Z36h .throbber_ThrobberText_1Zlvf {
+  color: #3d85c8;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-align: center;
+  flex: 1;
+  user-select: none;
+  margin-top: 8px;
+  font-weight: 500;
+}
+.throbber_LoadingWrapper_3Z36h.throbber_throbber_medium_1yqSo
+  .throbber_ThrobberText_1Zlvf {
+  margin-top: 4px;
+}
+.throbber_LoadingWrapper_3Z36h.throbber_throbber_small_29-XT
+  .throbber_ThrobberText_1Zlvf {
+  margin-top: 2px;
+}
+.throbber_LoadingWrapper_3Z36h .SVGIcon_Throbber.throbber_blur_3ebLc {
+  filter: blur(3px);
+  position: absolute;
+  left: 0;
+  top: 0px;
+}
+.throbber_LoadingWrapper_3Z36h .SVGIcon_Throbber.throbber_blur_3ebLc path {
+  stroke: #4375fd;
+}
+.throbber_LoadingWrapper_3Z36h .SVGIcon_Throbber path {
+  stroke: #67c1f5;
+  animation-name: throbber_ThrobberRoundLoop_3SEk8;
+  animation-duration: 0.7s;
+  stroke-linecap: butt;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  opacity: 0;
+}
+.throbber_LoadingWrapper_3Z36h
+  .SVGIcon_Throbber
+  .throbber_roundOuterOutline_3M8Ar,
+.throbber_LoadingWrapper_3Z36h .SVGIcon_Throbber .throbber_roundOuter_3H7At {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 116;
+  stroke-width: 6px;
+}
+.throbber_LoadingWrapper_3Z36h .SVGIcon_Throbber .throbber_roundOuter_3H7At {
+  opacity: 1;
+  stroke: #3b8bb9;
+  stroke-width: 6px;
+  transform-origin: 50% 50%;
+  stroke-linecap: round;
+}
+.throbber_LoadingWrapper_3Z36h
+  .SVGIcon_Throbber
+  .throbber_roundOuterOutline_3M8Ar {
+  display: none;
+}
+@keyframes throbber_ThrobberRoundLoop_3SEk8 {
+  to {
+    stroke-dashoffset: -232;
+  }
+}
+.throbber_LoadingWrapper_3Z36h .SVGIcon_Throbber .throbber_roundFill_2FWWt {
+  animation-name: throbber_ThrobberFillLoop_1-rlb;
+  animation-duration: 3s;
+  animation-delay: -1.2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  opacity: 1;
+  stroke-width: 0;
+}
+@keyframes throbber_ThrobberFillLoop_1-rlb {
+  0% {
+    fill: rgba(103, 193, 245, 0);
+  }
+  50% {
+    fill: rgba(103, 193, 245, 0.05);
+  }
+  100% {
+    fill: rgba(103, 193, 245, 0);
+  }
+}
+.throbber_LoadingWrapper_3Z36h
+  .SVGIcon_Throbber
+  .throbber_topCircle_3znUF
+  .throbber_circlePulse_1oQUO,
+.throbber_LoadingWrapper_3Z36h
+  .SVGIcon_Throbber
+  .throbber_topCircle_3znUF
+  circle {
+  stroke: #67c1f5;
+  animation-name: throbber_ThrobberTopCircleLoop_3oqZE;
+  animation-duration: 3s;
+  animation-delay: -1.2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform-origin: 67% 36%;
+}
+.throbber_LoadingWrapper_3Z36h
+  .SVGIcon_Throbber
+  .throbber_topCircle_3znUF
+  circle {
+  animation-name: throbber_ThrobberBottomCircleLoop_3veQr;
+}
+.throbber_LoadingWrapper_3Z36h
+  .SVGIcon_Throbber
+  .throbber_bottomCircle_3-sjx
+  path {
+  fill: #67c1f5;
+  stroke-width: 0;
+  animation-name: throbber_ThrobberBottomCircleLoop_3veQr;
+  animation-duration: 3s;
+  animation-delay: -0.6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes throbber_ThrobberTopCircleLoop_3oqZE {
+  0% {
+    opacity: 0;
+    transform: scale(0.75);
+    stroke-width: 4px;
+  }
+  20% {
+    opacity: 0.3;
+  }
+  40% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+    transform: scale(5);
+    stroke-width: 0px;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(5);
+    stroke-width: 0px;
+  }
+}
+@keyframes throbber_ThrobberBottomCircleLoop_3veQr {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.throbber_LoadingWrapper_3Z36h
+  .SVGIcon_Throbber
+  .throbber_roundThrobber15_1gQte,
+.throbber_LoadingWrapper_3Z36h
+  .SVGIcon_Throbber
+  .throbber_roundThrobber14_3DXeR,
+.throbber_LoadingWrapper_3Z36h
+  .SVGIcon_Throbber
+  .throbber_roundThrobber13_5VEyI,
+.throbber_LoadingWrapper_3Z36h
+  .SVGIcon_Throbber
+  .throbber_roundThrobber12_wOdFm,
+.throbber_LoadingWrapper_3Z36h
+  .SVGIcon_Throbber
+  .throbber_roundThrobber11_3Jmyz,
+.throbber_LoadingWrapper_3Z36h
+  .SVGIcon_Throbber
+  .throbber_roundThrobber10_3QwXn,
+.throbber_LoadingWrapper_3Z36h
+  .SVGIcon_Throbber
+  .throbber_roundThrobber09_2Yhvq,
+.throbber_LoadingWrapper_3Z36h
+  .SVGIcon_Throbber
+  .throbber_roundThrobber08_3HcIU,
+.throbber_LoadingWrapper_3Z36h
+  .SVGIcon_Throbber
+  .throbber_roundThrobber07__2fn3,
+.throbber_LoadingWrapper_3Z36h
+  .SVGIcon_Throbber
+  .throbber_roundThrobber06_2gCCI,
+.throbber_LoadingWrapper_3Z36h
+  .SVGIcon_Throbber
+  .throbber_roundThrobber05_1SrtW,
+.throbber_LoadingWrapper_3Z36h
+  .SVGIcon_Throbber
+  .throbber_roundThrobber04_2P5xs,
+.throbber_LoadingWrapper_3Z36h
+  .SVGIcon_Throbber
+  .throbber_roundThrobber03_3zYDa,
+.throbber_LoadingWrapper_3Z36h
+  .SVGIcon_Throbber
+  .throbber_roundThrobber02_2_KYJ,
+.throbber_LoadingWrapper_3Z36h
+  .SVGIcon_Throbber
+  .throbber_roundThrobber01_3N41H {
+  animation-name: throbber_ThrobberRoundLoopThickness_1wAwc;
+  animation-duration: 3s;
+  stroke-dasharray: 150 950;
+}
+.throbber_LoadingWrapper_3Z36h
+  .SVGIcon_Throbber
+  .throbber_roundThrobber01_3N41H {
+  animation-delay: 0s;
+  opacity: 0.06;
+  stroke-width: 0.5px;
+}
+.throbber_LoadingWrapper_3Z36h
+  .SVGIcon_Throbber
+  .throbber_roundThrobber02_2_KYJ {
+  animation-delay: -0.1s;
+  opacity: 0.13;
+  stroke-width: 1px;
+}
+.throbber_LoadingWrapper_3Z36h
+  .SVGIcon_Throbber
+  .throbber_roundThrobber03_3zYDa {
+  animation-delay: -0.2s;
+  opacity: 0.2;
+  stroke-width: 1.5px;
+}
+.throbber_LoadingWrapper_3Z36h
+  .SVGIcon_Throbber
+  .throbber_roundThrobber04_2P5xs {
+  animation-delay: -0.3s;
+  opacity: 0.26;
+  stroke-width: 2px;
+}
+.throbber_LoadingWrapper_3Z36h
+  .SVGIcon_Throbber
+  .throbber_roundThrobber05_1SrtW {
+  animation-delay: -0.4s;
+  opacity: 0.33;
+  stroke-width: 2.5px;
+}
+.throbber_LoadingWrapper_3Z36h
+  .SVGIcon_Throbber
+  .throbber_roundThrobber06_2gCCI {
+  animation-delay: -0.5s;
+  opacity: 0.4;
+  stroke-width: 3px;
+}
+.throbber_LoadingWrapper_3Z36h
+  .SVGIcon_Throbber
+  .throbber_roundThrobber07__2fn3 {
+  animation-delay: -0.6s;
+  opacity: 0.46;
+  stroke-width: 3.5px;
+}
+.throbber_LoadingWrapper_3Z36h
+  .SVGIcon_Throbber
+  .throbber_roundThrobber08_3HcIU {
+  animation-delay: -0.7s;
+  opacity: 0.53;
+  stroke-width: 4px;
+}
+.throbber_LoadingWrapper_3Z36h
+  .SVGIcon_Throbber
+  .throbber_roundThrobber09_2Yhvq {
+  animation-delay: -0.8s;
+  opacity: 0.6;
+  stroke-width: 4.5px;
+}
+.throbber_LoadingWrapper_3Z36h
+  .SVGIcon_Throbber
+  .throbber_roundThrobber10_3QwXn {
+  animation-delay: -0.9s;
+  opacity: 0.66;
+  stroke-width: 5px;
+}
+.throbber_LoadingWrapper_3Z36h
+  .SVGIcon_Throbber
+  .throbber_roundThrobber11_3Jmyz {
+  animation-delay: -1s;
+  opacity: 0.73;
+  stroke-width: 5.5px;
+}
+.throbber_LoadingWrapper_3Z36h
+  .SVGIcon_Throbber
+  .throbber_roundThrobber12_wOdFm {
+  animation-delay: -1.1s;
+  opacity: 0.8;
+  stroke-width: 6px;
+}
+.throbber_LoadingWrapper_3Z36h
+  .SVGIcon_Throbber
+  .throbber_roundThrobber13_5VEyI {
+  animation-delay: -1.2s;
+  opacity: 0.86;
+  stroke-width: 6.5px;
+}
+.throbber_LoadingWrapper_3Z36h
+  .SVGIcon_Throbber
+  .throbber_roundThrobber14_3DXeR {
+  animation-delay: -1.3s;
+  opacity: 0.93;
+  stroke-width: 7px;
+}
+.throbber_LoadingWrapper_3Z36h
+  .SVGIcon_Throbber
+  .throbber_roundThrobber15_1gQte {
+  animation-delay: -1.4s;
+  opacity: 1;
+  stroke-width: 7.5px;
+}
+@keyframes throbber_ThrobberRoundLoopThickness_1wAwc {
+  100% {
+    stroke-dashoffset: -1100;
+  }
+}
+.throbber_throbber_small_29-XT {
+  width: 36px;
+  height: 36px;
+}
+.throbber_throbber_medium_1yqSo {
+  width: 64px;
+  height: 64px;
+}
+.throbber_throbber_large_1u2tL {
+  width: 92px;
+  height: 92px;
+}
+.throbber_throbber_xlarge_2jzZM {
+  width: 120px;
+  height: 120px;
+}
+.throbber_throbber_xxlarge_1DFOT {
+  width: 240px;
+  height: 240px;
+}
+.throbber_ThrobberDelayAppear_34XSs {
+  opacity: 0;
+  transition: opacity 1s;
+}
+.throbber_ThrobberDelayAppear_34XSs.throbber_Visible_1ziaT {
+  opacity: 1;
+}
+.throbber_NewThrobber_tAKvs img {
+  width: 100%;
+}
+.familyincominginvites_FamilyIncomingInvites_3-_pK {
+  background-color: #1f2a39;
+  padding-bottom: 5px;
+}
+.familyincominginvites_FamilyIncomingInvites_3-_pK
+  .familyincominginvites_IncomingInvitesHeader_3zIHX {
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.familyincominginvites_FamilyIncomingInvites_3-_pK
+  .familyincominginvites_IncomingInvitesDescription_1j-XQ {
+  padding: 10px 10px;
+}
+.familyincominginvites_FamilyIncomingInvites_3-_pK
+  .familyincominginvites_IncomingInviteRow_1GICw {
+  background-color: #0e141b;
+  margin: 10px;
+  padding: 5px;
+}
+.familyincominginvites_FamilyIncomingInvites_3-_pK
+  .familyincominginvites_IncomingInviteRow_1GICw
+  .familyincominginvites_InviteRowHeader_AYHhN {
+  display: flex;
+  align-items: center;
+}
+.familyincominginvites_FamilyIncomingInvites_3-_pK
+  .familyincominginvites_IncomingInviteRow_1GICw
+  .familyincominginvites_FamilyName_boWA4 {
+  margin-right: 5px;
+  margin-left: 5px;
+  color: #1a9fff;
+}
+.familyincominginvites_FamilyIncomingInvites_3-_pK
+  .familyincominginvites_IncomingInviteRow_1GICw
+  .familyincominginvites_PersonaName_3x3dD {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.familyincominginvites_FamilyIncomingInvites_3-_pK
+  .familyincominginvites_IncomingInviteRow_1GICw
+  .familyincominginvites_RoleIcon_3BhC4 {
+  margin-left: 10px;
+}
+.familyincominginvites_FamilyIncomingInvites_3-_pK
+  .familyincominginvites_IncomingInviteRow_1GICw
+  .familyincominginvites_RoleName_EVV-a {
+  padding-left: 3px;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: bold;
+}
+.familyincominginvites_FamilyIncomingInvites_3-_pK
+  .familyincominginvites_IncomingInviteRow_1GICw
+  .familyincominginvites_FamilyOverview_f8yHF {
+  background-color: #1f2a39;
+  padding: 10px 10px;
+  margin: 5px 5px;
+}
+.familyincominginvites_FamilyIncomingInvites_3-_pK
+  .familyincominginvites_IncomingInviteRow_1GICw
+  .familyincominginvites_ExpandRow_z39kD {
+  margin-left: auto;
+}
+.familyincominginvites_FamilyIncomingInvites_3-_pK
+  .familyincominginvites_IncomingInviteRow_1GICw
+  .familyincominginvites_ExpandRow_z39kD
+  svg {
+  fill: #fff;
+}
+.familyincominginvites_FamilyIncomingInvites_3-_pK
+  .familyincominginvites_IncomingInviteRow_1GICw
+  .familyincominginvites_FamilyOverviewHeader_1u0zN {
+  display: flex;
+  align-items: center;
+}
+.familyincominginvites_FamilyIncomingInvites_3-_pK
+  .familyincominginvites_IncomingInviteRow_1GICw
+  .familyincominginvites_FamilyOverviewMemberRow_3pjmB {
+  display: flex;
+  align-items: center;
+}
+.familyincominginvites_FamilyIncomingInvites_3-_pK
+  .familyincominginvites_IncomingInviteRow_1GICw
+  .familyincominginvites_Buttons_iZCbd {
+  display: flex;
+  justify-content: end;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-right: 5px;
+}
+.familyincominginvites_FamilyIncomingInvites_3-_pK
+  .familyincominginvites_AcceptInviteButton_34In_ {
+  width: auto;
+  background-color: #1a9fff;
+  padding: 2px 20px;
+}
+.familyincominginvites_FamilyIncomingInvites_3-_pK
+  .familyincominginvites_DeclineInviteButton_3CEsy {
+  width: auto;
+  background-color: #de3618;
+  padding: 2px 20px;
+  margin-left: 10px;
+}
+.familyincominginvites_FamilyIncomingInvites_3-_pK
+  .familyincominginvites_ThrobberContainer_2gVuB {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+.familysharedcomponents_RoleIcon_3bonx {
+  width: 20px;
+  height: 20px;
+}
+.familysharedcomponents_ProfileLink_2EK4M {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.familysharedcomponents_PlayerName_2aMDA {
+  padding-left: 10px;
+}
+.familysharedcomponents_ProfileRoleIcon_NW8Zt {
+  margin-left: 10px;
+}
+.familysharedcomponents_RoleName_2KKmg {
+  padding-left: 3px;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: bold;
+}
+.familysharedcomponents_FamilyErrorDisplay_2q8rI {
+  background-color: #de3618;
+  padding: 15px 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+.familyinvite_InviteFamilyMember_1X3V1
+  .familyinvite_InviteMemberExpandButton_1G0Kk {
+  display: flex;
+  justify-content: center;
+  background-color: #1f2a39;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.familyinvite_InviteFamilyMember_1X3V1
+  .familyinvite_InviteMemberExpandButton_1G0Kk
+  .SVGIcon_Button {
+  width: 40px;
+  height: 40px;
+  fill: rgba(255, 255, 255, 0.66);
+  padding: 20px 0px;
+}
+.familyinvite_InviteFamilyMember_1X3V1 .familyinvite_InviteSection_10bmo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1f2a39;
+  border-style: dotted;
+  border-color: #87cefa;
+  border-width: thin;
+  padding: 20px 20px;
+}
+.familyinvite_InviteFamilyMember_1X3V1
+  .familyinvite_InviteSection_10bmo
+  .familyinvite_CloseInviteSection_1wpqy {
+  align-self: flex-end;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
+.familyinvite_InviteFamilyMember_1X3V1
+  .familyinvite_InviteSection_10bmo
+  .familyinvite_Header_1Yrjr {
+  padding: 10px 0px 20px 0px;
+  padding-right: 10px;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+}
+.familyinvite_InviteFamilyMember_1X3V1
+  .familyinvite_InviteSection_10bmo
+  .familyinvite_GroupSlotCooldownDescription_T0rj6 {
+  color: crimson;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.familyinvite_InviteFamilyMember_1X3V1
+  .familyinvite_InviteSection_10bmo
+  .familyinvite_InviteRoleDescription_10qEf {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.familyinvite_InviteFamilyMember_1X3V1
+  .familyinvite_InviteSection_10bmo
+  .familyinvite_InviteRoles_1jIMh {
+  display: flex;
+  align-items: center;
+}
+.familyinvite_InviteFamilyMember_1X3V1
+  .familyinvite_InviteSection_10bmo
+  .familyinvite_InviteRole_14G2M {
+  display: flex;
+  align-items: center;
+  padding: 4px 14px;
+  border-style: none;
+  border-width: thin;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+}
+.familyinvite_InviteFamilyMember_1X3V1
+  .familyinvite_InviteSection_10bmo
+  .familyinvite_InviteRole_14G2M
+  input {
+  margin-left: 5px;
+}
+.familyinvite_InviteFamilyMember_1X3V1
+  .familyinvite_InviteSection_10bmo
+  .familyinvite_RoleIcon_MzHev {
+  margin-right: 8px;
+}
+.familyinvite_InviteFamilyMember_1X3V1
+  .familyinvite_InviteSection_10bmo
+  .familyinvite_ActiveRole_2Z5KM {
+  border: 1px solid #1a9fff;
+  background: rgba(0, 0, 0, 0.2);
+}
+.familyinvite_InviteFamilyMember_1X3V1
+  .familyinvite_InviteSection_10bmo
+  .familyinvite_InviteMethodHeader_1PqTY {
+  margin-top: 10px;
+}
+.familyinvite_InviteFamilyMember_1X3V1
+  .familyinvite_InviteSection_10bmo
+  .familyinvite_InviteMethods_LOswI {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin-top: 10px;
+}
+.familyinvite_InviteFamilyMember_1X3V1
+  .familyinvite_InviteSection_10bmo
+  .familyinvite_InviteMethodButton_ikBZQ {
+  background-color: green;
+  margin-top: 10px;
+}
+.familyinvite_InviteFamilyMember_1X3V1
+  .familyinvite_InviteSection_10bmo
+  .familyinvite_SelectedFriend_2UvjL {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.familyinvite_InviteFamilyMember_1X3V1
+  .familyinvite_InviteSection_10bmo
+  .familyinvite_SelectedFriend_2UvjL
+  .familyinvite_Avatar_3s-Er {
+  margin-right: 10px;
+}
+.familyinvite_InviteFamilyMember_1X3V1
+  .familyinvite_InviteSection_10bmo
+  .familyinvite_SelectedFriend_2UvjL
+  .familyinvite_RemoveSelection_UkN21 {
+  margin-left: 40px;
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+}
+.familyinvite_InviteFamilyMember_1X3V1
+  .familyinvite_InviteSection_10bmo
+  .familyinvite_InviteSectionButtons_2SSgC {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-top: 10px;
+}
+.familyinvite_InviteFamilyMember_1X3V1 .familyinvite_InviteButton_2hzB3 {
+  padding: 0px 20px;
+  width: auto;
+  margin-right: 20px;
+  background-color: #006400;
+}
+.familyinvite_InviteFamilyMember_1X3V1 .familyinvite_CancelButton_15nCu {
+  padding: 0px 20px;
+  width: auto;
+}
+.familyinvite_InviteFriendSelector_21OW_ {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  width: 100%;
+}
+.familyinvite_InviteFriendSelector_21OW_ .familyinvite_InputContainer_2SnCf {
+  margin-top: 10px;
+  width: 100%;
+}
+.familyinvite_InviteFriendSelector_21OW_ .familyinvite_InviteFriendInput_Rz-se {
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #fff;
+}
+.familyinvite_InviteFriendSelector_21OW_ .familyinvite_FriendList_1G_Da {
+  width: 100%;
+  height: 505px;
+  overflow-y: scroll;
+  display: inline-block;
+  position: relative;
+}
+.familyinvite_InviteFriendSelector_21OW_
+  .familyinvite_FriendList_1G_Da
+  .familyinvite_FriendSelectorRow_2qyKw {
+  display: flex;
+  align-items: center;
+}
+.familyinvite_InviteCodeSelector_38YBc {
+  margin-top: 10px;
+}
+.familyinvite_InviteCodeSelector_38YBc .familyinvite_InviteFriendCode_33XeF {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 30px;
+}
+.familyinvite_InviteCodeSelector_38YBc
+  .familyinvite_InviteFriendCode_33XeF
+  .familyinvite_InviteFriendCodeInput_29aYv {
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #fff;
+  width: 200px;
+}
+.familyinvite_InviteCodeSelector_38YBc
+  .familyinvite_InviteFriendCode_33XeF
+  .familyinvite_SetFriendCodeButton_2uCIU {
+  padding: 0px 20px;
+  margin-left: 5px;
+  width: auto;
+}
+.familyinvite_InviteText_2H_R6 {
+  text-align: center;
+}
+.familymanagement_FamilyManagementHeader_34_Dn {
+  position: relative;
+}
+.familymanagement_SectionDescription_1z6ZW {
+  padding: 0px 0px 10px 0px;
+}
+.familymanagement_CreateOrManageFamily_3L9Xi
+  .familymanagement_CreateFamilyHeader_1527D {
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.familymanagement_CreateOrManageFamily_3L9Xi
+  .familymanagement_CreateFamilyButton_3YXuC {
+  display: flex;
+  justify-content: center;
+  color: #dfe3e6;
+  transition-property: background, color, box-shadow;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+  background: #3d4450;
+  padding: 12px 25px 12px 25px;
+  margin: 12px 0px;
+  border-radius: 2px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  position: relative;
+  text-decoration: none;
+}
+.familymanagement_CreateOrManageFamily_3L9Xi
+  .familymanagement_CreateFamilyButton_3YXuC:hover {
+  background: #464d58;
+  color: #fff;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+.familymanagement_CreateOrManageFamily_3L9Xi
+  .familymanagement_CreateFamilyButton_3YXuC
+  .familymanagement_ShareText_1XjjH {
+  line-height: 22px;
+  font-size: 18px;
+}
+.familymanagement_CreateOrManageFamily_3L9Xi
+  .familymanagement_CreateFamilyButton_3YXuC
+  .familymanagement_CreateFamilyIcon_1K9EI {
+  width: 25px;
+  height: 25px;
+  fill: rgba(255, 255, 255, 0.66);
+}
+.familymanagement_CreateOrManageFamily_3L9Xi
+  .familymanagement_CreateFamilyNameInput_pc-Vv {
+  padding: 10px;
+}
+.familymanagement_CreateOrManageFamily_3L9Xi
+  .familymanagement_ManageFamilyHeader_3d7Jt {
+  display: flex;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  height: 30px;
+}
+.familymanagement_CreateOrManageFamily_3L9Xi
+  .familymanagement_ManageFamilyHeader_3d7Jt
+  .familymanagement_ManageFamilyHeaderLabel_1CjEt {
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-right: 10px;
+}
+.familymanagement_CreateOrManageFamily_3L9Xi
+  .familymanagement_ManageFamilyHeader_3d7Jt
+  .familymanagement_ManageFamilyHeaderName_2mRQC {
+  font-size: 16px;
+  font-weight: bold;
+  color: #1a9fff;
+}
+.familymanagement_CreateOrManageFamily_3L9Xi
+  .familymanagement_ManageFamilyHeader_3d7Jt
+  .familymanagement_ManageFamilyHeaderEdit_12wIk {
+  padding-left: 10px;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+.familymanagement_CreateOrManageFamily_3L9Xi
+  .familymanagement_ManageFamilyHeader_3d7Jt
+  .familymanagement_ManageFamilyHeaderSlotsLeft_u_3L9 {
+  margin-left: auto;
+  text-transform: uppercase;
+  font-size: 10px;
+}
+.familymanagement_CreateOrManageFamily_3L9Xi
+  .familymanagement_EditFamilyNameSaveButton_2suGn {
+  margin-left: 10px;
+  background-color: #1a9fff;
+  padding: 2px 10px;
+  width: unset;
+  line-height: unset;
+}
+.familymanagement_CreateOrManageFamily_3L9Xi
+  .familymanagement_EditFamilyNameCancelButton_3VN9c {
+  margin-left: 10px;
+  padding: 2px 10px;
+  width: unset;
+  line-height: unset;
+}
+.familymanagement_CreateOrManageFamily_3L9Xi
+  .familymanagement_ThrobberContainer_2guJi {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+.familymanagement_CreateOrManageFamily_3L9Xi
+  .familymanagement_InvitePending_23Q7c {
+  margin-left: 10px;
+  padding: 2px 10px;
+  text-transform: uppercase;
+  color: #ff0;
+  font-size: 12px;
+  border-style: solid;
+  border-color: #ff0;
+  border-width: thin;
+}
+.familymanagement_CreateOrManageFamily_3L9Xi
+  .familymanagement_FamilyMemberRow_2-Y4R {
+  display: flex;
+  flex-direction: column;
+  background-color: #1f2a39;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 5px;
+  transition: height 0.5s;
+}
+.familymanagement_CreateOrManageFamily_3L9Xi
+  .familymanagement_FamilyMemberRow_2-Y4R
+  .familymanagement_FamilyMemberRowTop_1yQtk {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.familymanagement_CreateOrManageFamily_3L9Xi
+  .familymanagement_FamilyMemberRow_2-Y4R
+  .familymanagement_ExpandRow_2wqag {
+  margin-left: auto;
+  cursor: pointer;
+  fill: #fff;
+  padding: 10px;
+}
+.familymanagement_CreateOrManageFamily_3L9Xi
+  .familymanagement_FamilyMemberRow_2-Y4R
+  .familymanagement_ExpandRow_2wqag
+  svg {
+  transition: transform linear 0.1s;
+}
+.familymanagement_CreateOrManageFamily_3L9Xi
+  .familymanagement_ActiveFamilyMemberRow_3oAx- {
+  border: 2px solid rgba(244, 244, 23, 0.712);
+}
+.familymanagement_CreateOrManageFamily_3L9Xi
+  .familymanagement_ExpandedPendingInvite_2t7pN {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1f2a39;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+.familymanagement_CreateOrManageFamily_3L9Xi
+  .familymanagement_ExpandedPendingInvite_2t7pN
+  .familymanagement_InviteDescription_3hEFW {
+  text-align: center;
+  width: 70%;
+}
+.familymanagement_CreateOrManageFamily_3L9Xi
+  .familymanagement_ExpandedPendingInvite_2t7pN
+  .familymanagement_Buttons_27d1E {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 20px;
+}
+.familymanagement_CreateOrManageFamily_3L9Xi
+  .familymanagement_ExpandedPendingInvite_2t7pN
+  .familymanagement_Buttons_27d1E
+  .familymanagement_ButtonIcon_1sn7W {
+  margin-right: 10px;
+}
+.familymanagement_CreateOrManageFamily_3L9Xi
+  .familymanagement_ExpandedPendingInvite_2t7pN
+  .familymanagement_Buttons_27d1E
+  .familymanagement_ManagementButton_7HLtN {
+  width: auto;
+  padding: 2px 20px;
+}
+.familymanagement_CreateOrManageFamily_3L9Xi
+  .familymanagement_CancelInviteButton_1nyw3 {
+  background-color: #de3618;
+  margin-right: 10px;
+}
+.familymanagement_CreateOrManageFamily_3L9Xi
+  .familymanagement_ResendInviteButton_2WPzA {
+  background-color: #1a9fff;
+}
+.familymanagement_CreateOrManageFamily_3L9Xi
+  .familymanagement_DeleteFamily_uXPF5 {
+  margin-top: 40px;
+  background-color: #de3618;
+}
+.familymanagement_CreateOrManageFamily_3L9Xi
+  .familymanagement_FamilyHistory_1t_5I {
+  overflow-y: scroll;
+  height: 50vh;
+}
+.familymanagement_CreateOrManageFamily_3L9Xi
+  .familymanagement_FamilyHistory_1t_5I
+  .familymanagement_Entry_2xRpe {
+  display: flex;
+  flex-direction: row;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #464d58;
+}
+.familymanagement_CreateOrManageFamily_3L9Xi
+  .familymanagement_FamilyHistory_1t_5I
+  .familymanagement_Entry_2xRpe
+  .familymanagement_Timestamp_3s0E2 {
+  align-self: flex-start;
+  width: 170px;
+  flex: none;
+}
+.familymanagement_CreateOrManageFamily_3L9Xi
+  .familymanagement_FamilyHistory_1t_5I
+  .familymanagement_Entry_2xRpe
+  .familymanagement_EntryText_3G8Ee {
+  align-self: flex-start;
+  flex-grow: 1;
+}
+.familymember_FamilyMemberManagementButtons_-kADz {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  gap: 6px;
+}
+.familymember_FamilyMemberManagementButtons_-kADz
+  .familymember_ManagementButton_vDtJq {
+  width: fit-content;
+  padding: 0px 8px;
+}
+.familymember_FamilyMemberManagementButtons_-kADz
+  .familymember_ManagementButton_vDtJq
+  svg {
+  margin-right: 4px;
+  width: 20px;
+  height: 20px;
+}
+.familymember_FamilyMemberManagementButtons_-kADz .familymember_Remove_UzQPb {
+  background-color: #de3618;
+}
+.familyparentalsettings_FamilyMemberParentalSettingsInner_2WflO {
+  padding: 0px 6px;
+}
+.familyparentalsettings_ParentalGameListHeader_2oJ9B {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  align-items: center;
+}
+.familyparentalsettings_ParentalGameListHeader_2oJ9B
+  .familyparentalsettings_Title_-8pd6 {
+  font-size: 16px;
+  font-weight: bold;
+}
+.familyparentalsettings_ParentalGameListHeader_2oJ9B
+  .familyparentalsettings_TitleCount_2LQav {
+  font-size: 14px;
+  height: 14px;
+  text-transform: uppercase;
+  flex-grow: 1;
+}
+.familyparentalsettings_ParentalGameListHeader_2oJ9B
+  .familyparentalsettings_FilterBox_3Bny2
+  .familyparentalsettings_Input_y-FOn {
+  height: 24px;
+  box-sizing: border-box;
+}
+.familyparentalsettings_ParentalGameList_2aIw2 {
+  height: 50vh;
+  overflow-y: scroll;
+  padding: 20px 10px 10px 10px;
+  display: none;
+}
+.familyparentalsettings_ParentalGameRow_e8fXQ {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  height: 40px;
+  padding: 4px 0px;
+  box-sizing: border-box;
+}
+.familyparentalsettings_ParentalGameRow_e8fXQ
+  .familyparentalsettings_Name_3L8NH {
+  flex-grow: 1;
+}
+.familyparentalsettings_ParentalGameRow_e8fXQ.familyparentalsettings_Allowed_2JNwI
+  .familyparentalsettings_Name_3L8NH {
+  color: #fff;
+}
+.familyparentalsettings_ParentalGameRow_e8fXQ
+  .familyparentalsettings_Icon_1HZTs {
+  height: 32px;
+  width: 32px;
+}
+.familyparentalsettings_ParentalGameRow_e8fXQ
+  .familyparentalsettings_RoundCheckbox_30BdY
+  .DialogRoundCheckboxField {
+  width: 16px;
+  height: 16px;
+}
+.familyparentalsettings_ParentalFeatures_Cj34z {
+  margin-bottom: 12px;
+}
+.familyparentalsettings_ParentalPlaytimeInner_1XMBk {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.familyparentalsettings_ParentalPlaytimeRow_2X1Gp {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  cursor: pointer;
+}
+.familyparentalsettings_ParentalPlaytimeRow_2X1Gp
+  .familyparentalsettings_Day_2WgTQ {
+  flex: 0 0 20%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.familyparentalsettings_ParentalPlaytimeRow_2X1Gp
+  .familyparentalsettings_Windows_30S29 {
+  flex-grow: 1;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.familyparentalsettings_ParentalPlaytimeRow_2X1Gp
+  .familyparentalsettings_Minutes_2q90E {
+  flex: 0 0 25%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.familyparentalsettings_ParentalPlaytimeWindowsDialog_1Ezae
+  .familyparentalsettings_Title_-8pd6 {
+  font-size: 28px;
+  margin-right: 0px;
+  text-transform: none;
+  font-weight: bold;
+}
+.familyparentalsettings_ParentalPlaytimeWindowsDialog_1Ezae
+  .DialogContent_InnerWidth {
+  max-width: 672px;
+  width: 672px;
+}
+.familyparentalsettings_ParentalPlaytimeWindowsDialog_1Ezae .DialogBodyText {
+  margin-bottom: 0px;
+}
+.familyparentalsettings_ParentalPlaytimeWindows_11oc_ {
+  min-width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.familyparentalsettings_ParentalPlaytimeGrid_l1Uf2 {
+  display: grid;
+  grid-template-columns: repeat(48, 14px);
+  grid-template-rows: 30px 10px auto;
+  overflow: hidden;
+}
+.familyparentalsettings_ParentalPlaytimeGrid_l1Uf2
+  .familyparentalsettings_Minutes_2q90E {
+  font-size: 10px;
+  padding-right: 8px;
+  display: flex;
+  align-items: center;
+}
+.familyparentalsettings_ParentalPlaytimeGrid_l1Uf2
+  .familyparentalsettings_Hours_PY2Sz {
+  font-size: 10px;
+  writing-mode: vertical-rl;
+  text-orientation: sideways;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding-bottom: 8px;
+}
+.familyparentalsettings_ParentalPlaytimeGrid_l1Uf2
+  .familyparentalsettings_HourMarker_68UkF {
+  font-size: 12px;
+  grid-row: 3;
+  text-align: center;
+}
+.familyparentalsettings_ParentalPlaytimeGrid_l1Uf2 .Hour0 {
+  text-align: left;
+}
+.familyparentalsettings_ParentalPlaytimeGrid_l1Uf2 .Hour48 {
+  text-align: right;
+}
+.familyparentalsettings_ParentalPlaytimeGrid_l1Uf2
+  .familyparentalsettings_HashMark_3kxXN {
+  grid-row: 2;
+  border-left: 1px solid #3d4450;
+}
+.familyparentalsettings_ParentalPlaytimeGrid_l1Uf2 .HashMark40 {
+  border-right: 1px solid #3d4450;
+}
+.familyparentalsettings_ParentalPlaytimeWindowSelector_1xAKt {
+  cursor: pointer;
+  background-color: rgba(61, 68, 80, 0.5);
+}
+.familyparentalsettings_ParentalPlaytimeWindowSelector_1xAKt:nth-child(odd) {
+  background-color: #3d4450;
+}
+.familyparentalsettings_ParentalPlaytimeWindowSelector_1xAKt.familyparentalsettings_Enabled_qJJzO {
+  background-color: rgba(26, 159, 255, 0.8);
+}
+.familyparentalsettings_ParentalPlaytimeWindowSelector_1xAKt.familyparentalsettings_Enabled_qJJzO:nth-child(
+    odd
+  ) {
+  background-color: #1a9fff;
+}
+.familyparentalsettings_ParentalPlaytimeWindowSelector_1xAKt.familyparentalsettings_Locked_SBNDn {
+  background-color: rgba(26, 159, 255, 0.6);
+  cursor: default;
+}
+.familyparentalsettings_ParentalPlaytimeWindowSelector_1xAKt.familyparentalsettings_Locked_SBNDn:nth-child(
+    odd
+  ) {
+  background-color: rgba(26, 159, 255, 0.8);
+}
+.familyparentalsettings_HoursSelector_2BVtR.familyparentalsettings_HoursSelector_2BVtR
+  .DialogDropDown_CurrentDisplay {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.familyparentalsettings_ParentalPlaytimeWindowsDialogInner_w9peV {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.familyparentalsettings_ParentalPlaytimeWindowsDialogInner_w9peV
+  .familyparentalsettings_TopRow_3jjYv {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+.familyparentalsettings_ParentalPlaytimeWindowsDialogInner_w9peV
+  .familyparentalsettings_Right_3r2iJ {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  overflow: hidden;
+}
+.familyparentalsettings_ParentalPlaytimeWindowsDialogInner_w9peV
+  .familyparentalsettings_DaySelector_h80CX {
+  flex: 0 0 20%;
+}
+.familyparentalsettings_ParentalPlaytimeWindowsDialogInner_w9peV
+  .familyparentalsettings_PlaytimeDescription_1--tA {
+  flex-grow: 1;
+  font-size: 14px;
+  color: #fff;
+  text-align: end;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.familyparentalsettings_ParentalPlaytimeWindowsDialogInner_w9peV
+  .familyparentalsettings_PlaytimeButtons_2zGFi {
+  display: flex;
+  justify-content: flex-end;
+}
+.familyparentalsettings_ParentalPlaytimeWindowsDialogInner_w9peV
+  .familyparentalsettings_PlaytimeButtons_2zGFi
+  a {
+  color: #a7bacc;
+  text-decoration: underline;
+  font-size: 14px;
+}
+.familyrequests_FamilyRequests_1VbIw {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.familyrequests_FamilyRequestItem_2g9Tr {
+  padding: 4px;
+  background-color: #1f2a39;
+}
+.familyrequests_FamilyRequestItem_2g9Tr .familyrequests_RequestInfo_1gqAh {
+  flex-grow: 1;
+}
+.familyrequests_FamilyRequestItem_2g9Tr .familyrequests_AvatarAndPersona_i8dlh {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+.familyrequests_FamilyRequestItem_2g9Tr .familyrequests_Buttons_2T2ci,
+.familyrequests_FamilyRequestItem_2g9Tr .familyrequests_RequestResponse_1M_WB {
+  flex-grow: 0;
+  flex-basis: 25%;
+}
+.familyrequests_ParentalFeatureRequestItem_3aZNX,
+.familyrequests_ParentalPlaytimeRequestItem_1FS_d {
+  display: flex;
+  flex-direction: row;
+}
+.familyrequests_ParentalFeatureRequestItem_3aZNX
+  .familyrequests_FeatureList_ccxwV,
+.familyrequests_ParentalPlaytimeRequestItem_1FS_d
+  .familyrequests_FeatureList_ccxwV {
+  padding-left: 80px;
+}
+.familyrequests_PurchaseRequestItem_wm_Nt {
+  display: flex;
+  flex-direction: row;
+}
+.familyrequests_PurchaseRequestItem_wm_Nt .familyrequests_CartSummary_25GJW {
+  margin-top: 10px;
+}
+.familyrequests_ApprovePlaytimeDialog_1ZDtF {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.familyrequests_ApprovePlaytimeDialog_1ZDtF .familyrequests_CurrentHours_1NbpM {
+  padding-top: 10px;
+}
+.familyrequests_ApprovePlaytimeDialog_1ZDtF .familyrequests_Text_2bwyf {
+  flex-grow: 1;
+  font-size: 14px;
+  color: #fff;
+  text-align: end;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-bottom: 8px;
+}

@@ -54,8 +54,8 @@
         u = i(48194),
         _ = i.n(u),
         y = i(33940),
-        h = i(50265),
-        N = i(25125),
+        h = i(59621),
+        N = i(83315),
         F = i(47742),
         g = i(47165),
         E = i(24448),
@@ -140,7 +140,8 @@
                 ),
                 fnFilter: this.IsCommentSubscribed,
               },
-            ]);
+            ]),
+            (0, h.rC)(this);
         }
         IsCommentOwned(t, e) {
           return t.bis_owner || t.owner_steam_id.ConvertTo64BitString() == e;
@@ -221,7 +222,7 @@
       function v() {
         return (0, N.SZ)(() => T.commentFilter);
       }
-      function b() {
+      function I() {
         return o.useMemo(() => {
           var t;
           const e = new Map();
@@ -265,13 +266,13 @@
       }
       (0, y.gn)([h.LO], k.prototype, "rgFilterState", void 0),
         (0, y.gn)([h.LO], k.prototype, "commentFilter", void 0);
-      const I = 300;
+      const b = 300;
       const T = new k(),
         w = new s.tL();
       var R = i(51438),
         A = i(4306),
         L = i(19304),
-        B = i(66559);
+        B = i(9341);
       function X(t) {
         const { hash: e } = t;
         (0, o.useEffect)(() => {
@@ -314,8 +315,8 @@
               n && !t.includes(o) && t.push(o);
             });
             do {
-              E.y$.LoadProfiles(t.splice(0, I));
-            } while (t.length > I);
+              E.y$.LoadProfiles(t.splice(0, b));
+            } while (t.length > b);
             E.y$.LoadProfiles(t);
           })(),
           w.m_rgNotificationRollups.length
@@ -475,7 +476,7 @@
         const { filterOptions: e } = t,
           { filters: i } = S();
         return 3 == e.type
-          ? o.createElement(z, { filterOptions: e, checked: i.get(e.type) })
+          ? o.createElement(j, { filterOptions: e, checked: i.get(e.type) })
           : o.createElement(d.ji, {
               className: _().FilterCheckbox,
               key: e.type,
@@ -508,7 +509,7 @@
       }
       function G(t) {
         const { className: e } = t,
-          i = b();
+          i = I();
         return o.createElement(
           "div",
           { className: (0, L.Z)(_().AdvancedCommentFilters, e) },
@@ -517,7 +518,7 @@
           ),
         );
       }
-      function j(t) {
+      function D(t) {
         const { expanded: e, children: i } = t,
           [n, s] = (0, o.useState)(void 0),
           a = (0, A.yU)((t) => {
@@ -533,7 +534,7 @@
           o.createElement("div", { ref: a }, i),
         );
       }
-      function z(t) {
+      function j(t) {
         const { filterOptions: e, checked: i } = t,
           n = (function () {
             const t = (0, F.M)();
@@ -554,7 +555,7 @@
               return i;
             }, [t]);
           })(),
-          a = b(),
+          a = I(),
           l = n.size > 2,
           r = a.size > 1,
           c = l || r;
@@ -575,7 +576,7 @@
               "div",
               { className: (0, L.Z)(_().CommentFilterCtn, i && _().Expanded) },
               o.createElement(
-                j,
+                D,
                 { expanded: i },
                 o.createElement(
                   "div",
@@ -586,7 +587,7 @@
             ),
         );
       }
-      function D(t, e, i) {
+      function z(t, e, i) {
         e.read ||
           (i && 0 != i.button && 1 != i.button) ||
           w.MarkItemRead(e.notification_id),
@@ -611,7 +612,7 @@
           const t = (0, s.gs)(e.item.body_data);
           if ((0, c.fk)(t.state) || 1 == t.state) return null;
         }
-        const m = i.bBasic ? B.oj : B.k6[e.type];
+        const m = B.L2[i.eRenderID];
         return m
           ? o.createElement(
               q,
@@ -619,7 +620,7 @@
               n &&
                 o.createElement(m, {
                   rollup: e,
-                  onNotificationClick: D,
+                  onNotificationClick: z,
                   onHide: r,
                   location: f.IS.AllNotificationsTray,
                   uimode: 7,

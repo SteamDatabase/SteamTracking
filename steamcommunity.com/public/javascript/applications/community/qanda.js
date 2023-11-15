@@ -444,7 +444,7 @@
       "use strict";
       r.d(t, { F_: () => u, JW: () => m, kl: () => h, zD: () => E });
       var n = r(33940),
-        a = r(50265),
+        a = r(59621),
         s = r(36105),
         o = r.n(s),
         i = r(89526),
@@ -454,7 +454,8 @@
         constructor() {
           (this.bOpenEventLandingPage = !1),
             (this.bIncludeFeaturedAsGameSource = !0),
-            (this.nOverrideDateNow = void 0);
+            (this.nOverrideDateNow = void 0),
+            (0, a.rC)(this);
         }
         get bRequireAllEventsLoadedInTimeBlock() {
           return !1;
@@ -541,7 +542,7 @@
       var n = r(33940),
         a = r(52868),
         s = r.n(a),
-        o = r(50265),
+        o = r(59621),
         i = r(89526),
         l = r(4556),
         d = r(47165),
@@ -551,7 +552,8 @@
       class v {
         constructor() {
           (this.m_mapProfiles = new Map()),
-            (this.m_mapProfilesLoading = new Map());
+            (this.m_mapProfilesLoading = new Map()),
+            (0, o.rC)(this);
         }
         LoadProfiles(e, t) {
           return (0, n.mG)(this, void 0, void 0, function* () {

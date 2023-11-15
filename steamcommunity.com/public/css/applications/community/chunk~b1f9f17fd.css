@@ -1722,6 +1722,9 @@ html.responsive.touch
     padding-right: 1em;
   }
 }
+.reservationdate_Ctn_Zy-bB {
+  position: relative;
+}
 .salebadgeprogressdisplay_OuterCtn_3yY4b {
   display: flex;
   flex-direction: row;
@@ -3995,12 +3998,24 @@ a.storywidget_BadgeFooter_3kBeS:hover {
   .controllerfiltersection_ControllerFilter_1h_gO {
   display: flex;
   margin-right: 16px;
-  background: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.7);
   padding: 8px;
   padding-left: 16px;
   padding-right: 16px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 24px;
+  transition:
+    box-shadow 0.2s ease-in-out,
+    background-color 0.2s ease-in-out;
+  cursor: default;
+}
+.controllerfiltersection_ControllerFilterCtn_1Pytb
+  .controllerfiltersection_ControllerFilter_1h_gO:not(
+    .controllerfiltersection_ControllerFilterActive_3xsW_
+  ):hover {
+  cursor: pointer;
+  background-color: rgba(89, 89, 89, 0.7);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
 }
 .controllerfiltersection_ControllerFilterCtn_1Pytb
   .controllerfiltersection_ControllerFilter_1h_gO
@@ -4024,7 +4039,7 @@ a.storywidget_BadgeFooter_3kBeS:hover {
 }
 .controllerfiltersection_ControllerFilterCtn_1Pytb
   .controllerfiltersection_ControllerFilterActive_3xsW_ {
-  background: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.9);
 }
 .controllerfiltersection_ControllerFilterCtn_1Pytb
   .controllerfiltersection_ControllerFilterActive_3xsW_

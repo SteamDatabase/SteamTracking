@@ -471,12 +471,23 @@
       "use strict";
       a.d(t, { rr: () => o });
       var n = a(33940),
-        i = a(50265),
+        i = a(59621),
         s = a(32765);
       s.De.CHAT_BASE_URL, s.De.CHAT_BASE_URL, s.De.CHAT_BASE_URL;
       class r {
         constructor(e) {
-          this.init(e);
+          (this.bValid = !1),
+            (this.stream = { 0: "#Broadcast_EnglishMain" }),
+            (this.name = ""),
+            (this.appName = ""),
+            (this.appID = 0),
+            (this.link = ""),
+            (this.linkName = ""),
+            (this.tabIcon = ""),
+            (this.offlineImage = ""),
+            (this.gidEvent = ""),
+            (0, i.rC)(this),
+            this.init(e);
         }
         init(e) {
           (this.bValid = e.bValid),
@@ -878,7 +889,7 @@
         Vv: () => U,
       });
       var n = a(33940),
-        i = a(50265),
+        i = a(59621),
         s = a(24174),
         r = a(2232);
       const o = {
@@ -1122,12 +1133,23 @@
         N = 80;
       class x {
         constructor() {
-          (this.type = 1),
+          (this.GID = void 0),
+            (this.AnnouncementGID = void 0),
+            (this.forumTopicGID = void 0),
+            (this.type = 1),
             (this.appid = 0),
             (this.name = new Map()),
             (this.description = new Map()),
             (this.timestamp_loc_updated = new Map()),
+            (this.startTime = void 0),
+            (this.endTime = void 0),
+            (this.visibilityStartTime = void 0),
+            (this.visibilityEndTime = void 0),
+            (this.m_nBuildID = void 0),
+            (this.m_strBuildBranch = void 0),
+            (this.postTime = void 0),
             (this.visibility_state = A.k_EEventStateUnpublished),
+            (this.broadcaster = void 0),
             (this.jsondata = V),
             (this.nCommentCount = 0),
             (this.nVotesUp = 0),
@@ -1137,7 +1159,16 @@
             (this.loadedAllLanguages = !1),
             (this.bLoaded = !1),
             (this.deleteInProgress = !1),
-            (this.vecTags = new Array());
+            (this.vecTags = new Array()),
+            (this.last_update_steamid = void 0),
+            (this.rtime32_last_modified = void 0),
+            (this.rtime32_last_solr_search_col_updated = void 0),
+            (this.rtime32_last_local_modification = void 0),
+            (this.rtime32_moderator_reviewed = void 0),
+            (this.video_preview_type = void 0),
+            (this.video_preview_id = void 0),
+            (this.m_overrideCurrentDay = void 0),
+            (0, i.rC)(this);
         }
         BIsPartnerEvent() {
           return !this.bOldAnnouncement && Boolean(this.GID);
@@ -2500,7 +2531,7 @@
         i = a(92616),
         s = a(52868),
         r = a.n(s),
-        o = a(50265),
+        o = a(59621),
         l = a(47165),
         d = a(45475),
         m = a(85651),
@@ -2526,7 +2557,8 @@
             (this.m_bCollapsed = void 0),
             (this.m_setStreamChangedListeners = new Set()),
             (this.m_bUseFakeData = !1),
-            (this.m_onLoadContextCall = new Map());
+            (this.m_onLoadContextCall = new Map()),
+            (0, o.rC)(this);
         }
         BHasStreams(e) {
           const t = this.GetStreams(e);
@@ -3048,7 +3080,7 @@
       "use strict";
       a.d(t, { VA: () => l, mv: () => d, nc: () => m });
       var n = a(33940),
-        i = a(50265);
+        i = a(59621);
       const s = "primary",
         r = "featured",
         o = "default_featured";
@@ -3073,8 +3105,12 @@
       })(l || (l = {}));
       class m {
         constructor() {
-          (this.default_selection_priority = l.k_eGeneral),
-            (this.current_selection_priority = l.k_eGeneral);
+          (this.title = void 0),
+            (this.viewer_count = void 0),
+            (this.gamedata_subtitle = void 0),
+            (this.default_selection_priority = l.k_eGeneral),
+            (this.current_selection_priority = l.k_eGeneral),
+            (0, i.rC)(this);
         }
       }
       (0, n.gn)([i.LO], m.prototype, "title", void 0),
@@ -3088,7 +3124,7 @@
       var n = a(33940),
         i = a(52868),
         s = a.n(i),
-        r = a(50265),
+        r = a(59621),
         o = a(73762),
         l = a(4306),
         d = a(20069);
@@ -3301,7 +3337,8 @@
             (this.m_nSegmentDurationMS = 0),
             (this.m_nPlaybackRate = 0),
             (this.m_nTimeToFirstFrameMS = -1),
-            (this.m_fpsMonitor = new L());
+            (this.m_fpsMonitor = new L()),
+            (0, r.rC)(this);
         }
         GetBytesReceivedToDisplay() {
           return (0, D.l)(this.m_allTimeSnapshot.m_nBytesReceived, 1);
@@ -3779,6 +3816,7 @@
             (this.m_nLastSegementDownloadStatus = 200),
             (this.m_nFramesDecoded = 0),
             (this.m_nFramesDropped = 0),
+            (0, r.rC)(this),
             (this.m_nInitialVideoResolution = e);
         }
         GetAverageBandwidth() {
@@ -3849,7 +3887,8 @@
             (this.m_rgResultsWindow = []),
             (this.m_nLastResizeMS = 0),
             (this.m_bDroppingFrameDetected = !1),
-            (this.m_nCurrentFPS = 0);
+            (this.m_nCurrentFPS = 0),
+            (0, r.rC)(this);
         }
         StartTracking(e) {
           this.m_schTracker.Schedule(this.k_nTestFrequencyMS, this.TakeReading),
@@ -4034,7 +4073,8 @@
         (0, n.gn)([r.aD.bound], L.prototype, "TakeReading", null);
       class q {
         constructor() {
-          (this.m_nMinBufferTime = 0),
+          (this.m_strType = void 0),
+            (this.m_nMinBufferTime = 0),
             (this.m_dtAvailabilityStartTime = null),
             (this.m_dtPublishTime = null),
             (this.m_nMinimumUpdatePeriod = 0),
@@ -4455,6 +4495,7 @@
             (this.m_nCurDownloadProgress = 0),
             (this.m_nCurDownloadBitrate = 0),
             (this.m_nNumConsecutiveDownloadGones = 0),
+            (this.m_rgGameDataFrames = []),
             (this.m_statsGameData = null),
             (this.m_callbacks = e),
             (this.m_mpd = t),
@@ -5046,6 +5087,7 @@
             (this.m_schFirstFrameThrottler = new g.Ar()),
             (this.m_bookMarkAdapter = null),
             (this.m_schBookmarkUpdater = new g.Ar()),
+            (0, r.rC)(this),
             (this.m_elVideo = e),
             this.m_schReportPlayerTrigger.Schedule(3e4, this.ReportPlayerStats),
             (this.m_bUseHLSManifest = t);
@@ -5603,10 +5645,14 @@
           );
         }
         IsPaused() {
-          return this.m_elVideo.paused;
+          return !this.m_bUserPlayChoice;
+        }
+        SetUserPlayChoice(e) {
+          (this.m_bUserPlayChoice = e),
+            this.DispatchEvent("valve-userpausechange");
         }
         Play() {
-          (this.m_bUserPlayChoice = !0),
+          this.SetUserPlayChoice(!0),
             !this.IsLiveContent() &&
             this.m_mpd &&
             this.m_mpd.GetEndTime() - this.GetCurrentPlayTime() < 1
@@ -5620,7 +5666,7 @@
               (null === (e = this.m_elVideo) || void 0 === e
                 ? void 0
                 : e.playbackRate) && (this.m_elVideo.playbackRate = 1),
-            (this.m_bUserPlayChoice = !1),
+            this.SetUserPlayChoice(!1),
             null === (t = this.m_elVideo) || void 0 === t || t.pause();
         }
         GetPlaybackRate() {
@@ -5891,7 +5937,7 @@
           return !0;
         }
         SeekAndPlay(e) {
-          return (this.m_bUserPlayChoice = !0), this.Seek(e);
+          return this.SetUserPlayChoice(!0), this.Seek(e);
         }
         Seek(e, t = ee.Absolute) {
           if (!this.m_bPlaybackStarted)
@@ -6119,12 +6165,17 @@
         constructor(e) {
           (this.m_elVideo = null),
             (this.m_peerConnection = null),
+            (this.m_strBroadcastSteamID = void 0),
+            (this.m_ulWebRTCSessionID = void 0),
             (this.m_schCandidateTimer = new g.Ar()),
+            (this.m_nHostCandidateGeneration = void 0),
+            (this.m_nCandidateUpdateIntervalMS = void 0),
             (this.m_listeners = new g.G_()),
             (this.m_bFirstPlay = !0),
             (this.m_bStatsViewVisible = !1),
             (this.m_schCaptureDisplayStatsTrigger = new g.Ar()),
             (this.m_stats = new G()),
+            (0, r.rC)(this),
             (this.m_elVideo = e);
         }
         PlayMPD(e) {
@@ -6520,7 +6571,8 @@
             (this.m_strStateDescription = ""),
             (this.m_rgVideos = []),
             (this.m_schManifestTimeout = new g.Ar()),
-            (this.m_schHeartbeatTimeout = new g.Ar());
+            (this.m_schHeartbeatTimeout = new g.Ar()),
+            (0, r.rC)(this);
         }
         SetState(e, t = "") {
           (this.m_eWatchState = e),
@@ -6545,6 +6597,7 @@
             (this.m_bIsOnline = !1),
             (this.m_schUpdateTimeout = new g.Ar()),
             (this.m_nRefCount = 0),
+            (0, r.rC)(this),
             (this.m_steamIDBroadcast = e);
         }
       }
@@ -6560,7 +6613,8 @@
         constructor() {
           (this.m_eWatchState = de.None),
             (this.m_strStateDescription = ""),
-            (this.m_rgVideos = []);
+            (this.m_rgVideos = []),
+            (0, r.rC)(this);
         }
         SetState(e, t = "") {
           (this.m_eWatchState = e),
@@ -6586,6 +6640,7 @@
             }),
             (this.m_schSaveSettings = new g.Ar()),
             (this.m_broadcastInfos = {}),
+            (0, r.rC)(this),
             this.LoadBroadcastSettings();
         }
         GetBroadcastState(e) {
@@ -7131,6 +7186,7 @@
             (this.m_rgMarkers = r.LO.array()),
             (this.m_rgSegments = r.LO.array()),
             (this.m_rgRegions = r.LO.array()),
+            (0, r.rC)(this),
             (this.m_elVideo = e),
             (this.m_nVolume = t),
             (this.m_bMuted = a),
@@ -7591,7 +7647,7 @@
       var n = a(33940),
         i = a(52868),
         s = a.n(i),
-        r = a(50265),
+        r = a(59621),
         o = a(2232),
         l = a(23217),
         d = a(26464),
@@ -7607,8 +7663,10 @@
           (this.m_filesToUpload = r.LO.array()),
             (this.m_filesCompleted = []),
             (this.m_allCancelTokens = new Array()),
+            (this.m_lastError = void 0),
             (this.m_fnSetImageURL = null),
-            (this.m_clanSteamID = e);
+            (this.m_clanSteamID = e),
+            (0, r.rC)(this);
         }
         GetClanSteamID() {
           return this.m_clanSteamID;
@@ -7852,15 +7910,21 @@
       "use strict";
       a.d(t, { Mr: () => u, RB: () => m, nZ: () => c });
       var n = a(33940),
-        i = a(50265),
+        i = a(59621),
         s = a(69678),
         r = a(60161),
         o = a(14826),
         l = a(48616);
       class d {
-        constructor(e, t, a, n, i, r) {
+        constructor(e, t, a, n, r, o) {
           if (
-            ((this.fileType = 0),
+            ((this.dataUrl = void 0),
+            (this.width = void 0),
+            (this.height = void 0),
+            (this.type = void 0),
+            (this.status = void 0),
+            (this.message = void 0),
+            (this.fileType = 0),
             (this.file = e),
             (this.fileType = l.aN.GetExtensionTypeFromURL(e.name)),
             (this.language = t),
@@ -7869,11 +7933,14 @@
             a)
           ) {
             const e = (0, s.Vy)(this.fileType, a);
-            let t = (0, l.S6)(i, r, e, !1);
-            void 0 === t && (t = (0, l.S6)(i, r, e, !0)),
+            let t = (0, l.S6)(r, o, e, !1);
+            void 0 === t && (t = (0, l.S6)(r, o, e, !0)),
               (this.type = t || a[0]);
           }
-          (this.height = r), (this.width = i), (this.dataUrl = n);
+          (this.height = o),
+            (this.width = r),
+            (this.dataUrl = n),
+            (0, i.rC)(this);
         }
         IsValidAssetType(e, t, a) {
           let n = 0,
@@ -7944,11 +8011,12 @@
         GetResizeDimension() {}
       }
       class u extends d {
-        constructor(e, t, a, n, i) {
+        constructor(e, t, a, n, s) {
           super(e, t, n, a.src, a.width, a.height),
             (this.bCropped = !1),
             (this.img = a),
-            (this.localizedImageGroupPrimaryImage = i);
+            (this.localizedImageGroupPrimaryImage = s),
+            (0, i.rC)(this);
         }
         ResetImage() {
           (this.height = this.img.height),
@@ -8038,7 +8106,7 @@
       var n = a(33940),
         i = a(52868),
         s = a.n(i),
-        r = a(50265),
+        r = a(59621),
         o = a(40442),
         l = a(69678),
         d = a(47165),
@@ -8073,7 +8141,8 @@
             (this.m_mapImageIDToResolution = new Map()),
             (this.m_curLocImageGroup = null),
             (this.m_curLocImageGroupType = null),
-            (this.m_vecClanImageDragListener = new Array());
+            (this.m_vecClanImageDragListener = new Array()),
+            (0, r.rC)(this);
         }
         BHasImageResolution(e) {
           return this.m_mapImageIDToResolution.has(e.imageid);
@@ -8503,7 +8572,7 @@
       var n = a(33940),
         i = a(52868),
         s = a.n(i),
-        r = a(50265),
+        r = a(59621),
         o = a(89526),
         l = a(47165),
         d = a(23801),
@@ -8516,7 +8585,8 @@
             (this.m_mapClanAccountIDToClanInfo = new Map()),
             (this.m_mapPromisesLoading = new Map()),
             (this.m_rgQueuedEventsClanIDs = new Array()),
-            (this.m_bLoadedFromConfig = !1);
+            (this.m_bLoadedFromConfig = !1),
+            (0, r.rC)(this);
         }
         Init() {
           this.LazyInit();
@@ -8926,7 +8996,7 @@
         i = a(58218),
         s = a(52868),
         r = a.n(s),
-        o = a(50265),
+        o = a(59621),
         l = a(89526),
         d = a(32765);
       class m {
@@ -8942,6 +9012,7 @@
             (this.m_bIsLoaded = !1),
             (this.m_bIsHidden = !1),
             (this.m_clanAccountFlags = 0),
+            (0, o.rC)(this),
             (this.m_clanSteamID = e);
         }
         Initialize(e) {
@@ -9080,7 +9151,8 @@
         constructor() {
           (this.m_mapClanToCreatorHome = new Map()),
             (this.m_mapAppToCreatorIDList = new Map()),
-            (this.m_bLoadedFromConfig = !1);
+            (this.m_bLoadedFromConfig = !1),
+            (0, o.rC)(this);
         }
         LazyInit() {
           if (!this.m_bLoadedFromConfig) {
@@ -9263,7 +9335,7 @@
       var n = a(33940),
         i = a(52868),
         s = a.n(i),
-        r = a(50265),
+        r = a(59621),
         o = a(89526),
         l = a(32765);
       class d {
@@ -9276,7 +9348,8 @@
       class m {
         constructor() {
           (this.m_mapAppToDemoInfo = new Map()),
-            (this.m_mapAppIDToLoadPromise = new Map());
+            (this.m_mapAppIDToLoadPromise = new Map()),
+            (0, r.rC)(this);
         }
         static Get() {
           return (
@@ -9435,7 +9508,7 @@
       var n = a(33940),
         i = a(52868),
         s = a.n(i),
-        r = a(50265),
+        r = a(59621),
         o = a(23217),
         l = a(32765),
         d = a(89526),
@@ -9905,7 +9978,8 @@
             (this.m_setAppsInCart = new Set()),
             (this.m_nCartLineItemCount = 0),
             (this.m_bIsLoaded = !1),
-            (this.m_bAjaxInFlight = !1);
+            (this.m_bAjaxInFlight = !1),
+            (0, r.rC)(this);
         }
       }
       function h() {
@@ -9964,19 +10038,21 @@
       a.d(t, { u: () => o });
       var n = a(33940),
         i = a(32765),
-        s = a(50265);
+        s = a(59621);
       const r = 604800;
       class o {
         constructor() {
           (this.m_bEmoticonListRequested = !1),
             (this.m_bInitialized = !1),
+            (this.m_rtMostRecentEmoticon = void 0),
             (this.m_rgEmoticons = []),
             (this.m_rgFlairs = []),
             (this.m_rgStickers = []),
             (this.m_rgEffects = []),
             (this.m_rtLastStickerOrEffect = Number.MIN_SAFE_INTEGER),
             (this.m_emoticonTrackerCallback = null),
-            (this.m_stickerTrackerCallback = null);
+            (this.m_stickerTrackerCallback = null),
+            (0, s.rC)(this);
         }
         static GetEmoticonURL(e, t) {
           return t
@@ -10333,7 +10409,7 @@
       a.d(t, { Ar: () => p, Gf: () => n, RC: () => v });
       var n,
         i = a(33940),
-        s = a(50265),
+        s = a(59621),
         r = a(7569),
         o = a(23801),
         l = a(32765),
@@ -10402,7 +10478,8 @@
                   e.rgHiddenClans.forEach((e) =>
                     this.m_mapHiddenClans.set(e, !0),
                   );
-            });
+            }),
+            (0, s.rC)(this);
         }
         GetGameSources() {
           return Array.from(this.m_mapGameSources.keys());
@@ -10609,7 +10686,7 @@
       var n = a(33940),
         i = a(52868),
         s = a.n(i),
-        r = a(50265),
+        r = a(59621),
         o = a(68333),
         l = a(16744),
         d = a(85246),
@@ -10734,7 +10811,8 @@
             (this.event_ignored = new Array()),
             (this.event_followed = new Array()),
             (this.event_followed_flags = new Array()),
-            (this.clanid = e);
+            (this.clanid = e),
+            (0, r.rC)(this);
         }
       }
       (0, n.gn)([r.LO], v.prototype, "clanid", void 0),
@@ -10759,7 +10837,8 @@
             (this.m_mapAnnounceGIDToVote = new Map()),
             (this.m_setReadEventGIDs = new Set()),
             (this.m_cm = void 0),
-            (this.m_bIsPresentationMode = (0, c.y9)());
+            (this.m_bIsPresentationMode = (0, c.y9)()),
+            (0, r.rC)(this);
         }
         static Get() {
           return (
@@ -11195,7 +11274,7 @@
       var n = a(33940),
         i = a(52868),
         s = a.n(i),
-        r = a(50265),
+        r = a(59621),
         o = a(39818),
         l = a(40442),
         d = a(84770),
@@ -11238,7 +11317,8 @@
             (this.m_rgQueuedEventsUniqueIDs = new Array()),
             (this.m_rgQueuedEventsForEditFlags = new Array()),
             (this.m_QueuedEventTimeout = new p.Ar()),
-            (this.m_bLoadedFromConfig = !1);
+            (this.m_bLoadedFromConfig = !1),
+            (0, r.rC)(this);
         }
         Init() {
           if (!this.m_bLoadedFromConfig) {
@@ -12325,8 +12405,7 @@
         ),
         (0, n.gn)([r.aD], y.prototype, "DeleteClanEvent", null),
         (0, n.gn)([r.aD], y.prototype, "RemoveGIDFromList", null),
-        (0, n.gn)([r.aD], y.prototype, "FlushEventFromCache", null),
-        (0, n.gn)([r.LO], y.prototype, "GetAppImportantUpdate", null);
+        (0, n.gn)([r.aD], y.prototype, "FlushEventFromCache", null);
       const I = new y();
       window.g_PartnerEventStore = I;
     },
@@ -12438,7 +12517,7 @@
       var n = a(33940),
         i = a(52868),
         s = a.n(i),
-        r = a(50265),
+        r = a(59621),
         o = a(23217),
         l = a(32765),
         d = a(87804);
@@ -13152,7 +13231,7 @@
         d = a(33940),
         m = a(52868),
         c = a.n(m),
-        u = a(50265),
+        u = a(59621),
         h = a(36105),
         p = a.n(h),
         _ = a(7569),
@@ -13184,7 +13263,8 @@
       class G {
         constructor() {
           (this.m_mapBlockedAppIds = new Map()),
-            (this.m_mapBlockedClanIds = new Map());
+            (this.m_mapBlockedClanIds = new Map()),
+            (0, u.rC)(this);
         }
         static Get() {
           return (
@@ -13308,7 +13388,8 @@
             (this.m_collectionMetaData = void 0),
             (this.m_key = e),
             (this.m_visibilityStore = new w.RC(t)),
-            l.jg.Get().HintLoad();
+            l.jg.Get().HintLoad(),
+            (0, u.rC)(this);
         }
         GetNumEventsLoaded() {
           return this.m_mapCalendarEventsByGid.size;
@@ -13926,7 +14007,8 @@
                 }
                 this.m_rgLoadedEventsBox.set(e);
               }),
-            ));
+            )),
+            (0, u.rC)(this);
         }
         dispose() {
           this.m_rgAutorunDisposer();
@@ -14257,7 +14339,7 @@
       var n = a(33940),
         i = a(52868),
         s = a.n(i),
-        r = a(50265),
+        r = a(59621),
         o = a(88464),
         l = a(89526),
         d = a(73961),
@@ -16132,7 +16214,7 @@
         h = a(6319),
         p = (a(31936), a(23715)),
         _ = a.n(p),
-        g = a(25125),
+        g = a(83315),
         S = a(98009),
         v = a(54671),
         f = a(17318),
@@ -17853,7 +17935,7 @@
         i = a(52868),
         s = a.n(i),
         r = a(81426),
-        o = a(50265),
+        o = a(59621),
         l = a(89526),
         d = a(5615),
         m = a(85246),

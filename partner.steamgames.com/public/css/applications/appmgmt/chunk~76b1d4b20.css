@@ -4422,7 +4422,7 @@ html.responsive.touch .ContentHubSalePage {
   .partnersaledisplay_SaleOuterContainer_3FwA4:not(
       .partnersaledisplay_SalePageLogoSet_3Od0-
     ) {
-    margin-top: 41vw !important;
+    margin-top: 41vw;
   }
 }
 .partnersaledisplay_SaleBackground_dmyDb {
@@ -4505,7 +4505,7 @@ span.partnersaledisplay_vr_required_1KRF9 {
   overflow: hidden;
 }
 .partnersaledisplay_fullscreen_bg_video_2iQk_ {
-  position: fixed;
+  position: absolute;
   top: 0;
   min-width: 100%;
   min-height: 100%;

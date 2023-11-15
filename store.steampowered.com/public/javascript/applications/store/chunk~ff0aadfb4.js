@@ -47,7 +47,7 @@
       var a = n(33940),
         o = n(52868),
         i = n.n(o),
-        l = n(50265),
+        l = n(59621),
         r = n(89526),
         s = n(47165),
         c = n(82079),
@@ -269,7 +269,8 @@
                       this.m_mapList.set(e.listid, e);
                   });
                 });
-              });
+              }),
+            (0, l.rC)(this);
         }
         ValidateStoreDefault(t) {
           const e = t;

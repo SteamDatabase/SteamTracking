@@ -3627,6 +3627,13 @@ enum ESplitScalingScaler
 	k_ESplitScalingScaler_Stretch = 5;
 }
 
+enum EStartupMovieVariant
+{
+	k_EStartupMovieVariant_Invalid = 0;
+	k_EStartupMovieVariant_Default = 1;
+	k_EStartupMovieVariant_Orange = 2;
+}
+
 enum ESteamDeckCompatibilityCategory
 {
 	k_ESteamDeckCompatibilityCategory_Unknown = 0;
@@ -3788,7 +3795,6 @@ enum EStoreCategory
 	k_EStoreCategoryCoop = 9;
 	k_EStoreCategoryDemo = 10;
 	k_EStoreCategoryFriends = 11;
-	k_EStoreCategoryHDR = 12;
 	k_EStoreCategoryCC = 13;
 	k_EStoreCategoryCommentary = 14;
 	k_EStoreCategoryStats = 15;
@@ -3834,6 +3840,7 @@ enum EStoreCategory
 	k_EStoreCategoryPS5ControllerBT = 58;
 	k_EStoreCategorySteamInputAPI = 59;
 	k_EStoreCategoryGamepadPreferred = 60;
+	k_EStoreCategoryHDR = 61;
 }
 
 enum EStoreCategoryType
@@ -5114,6 +5121,13 @@ enum LEAGUE_TIER
 	LEAGUE_TIER_DPC_LEAGUE_FINALS = 9;
 }
 
+enum Load
+{
+	k_Loading = 0;
+	k_LoadSuccess = 1;
+	k_LoadFailure = 2;
+}
+
 enum PFI_MatchingFileType
 {
 	k_PFI_MatchingFileType_Items = 0;
@@ -5425,6 +5439,19 @@ enum UnnamedEnum14b20255bb5ef56d
 	None = 0;
 	Ago = 1;
 	Remaining = 2;
+}
+
+enum UnnamedEnum151cacf609e0a2e0
+{
+	Comment = 0;
+	FriendInvite = 1;
+	Gift = 2;
+	ItemIdentifiers = 3;
+	Wishlist = 4;
+	TradeOffer = 5;
+	AsyncGame = 6;
+	Basic = 7;
+	SimplePersona = 8;
 }
 
 enum UnnamedEnum15675cb60f1450a5
@@ -7457,6 +7484,13 @@ enum UnnamedEnumc3c06b9797acb457
 	k_eGamepadAndMouse = 1;
 	k_eGamepadPreferred = 2;
 	k_eGamepadRequired = 3;
+}
+
+enum UnnamedEnumc3e92156fdf20f6c
+{
+	k_ParentalFeature = 0;
+	k_ParentalPlaytime = 1;
+	k_PurchaseRequest = 2;
 }
 
 enum UnnamedEnumc5bc47386f71e3e3
