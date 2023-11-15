@@ -6,7 +6,10 @@ option optimize_for = SPEED;
 option cc_generic_services = true;
 
 message CSteamOSManagerState {
-	optional string os_version = 1;
+	optional bool is_service_available = 1;
+	optional string os_version = 2;
+	optional bool is_mandatory_update_available = 3;
+	optional .EStartupMovieVariant startup_movie_variant = 4 [default = k_EStartupMovieVariant_Invalid];
 }
 
 message CSteamOSManager_GetState_Request {
@@ -31,6 +34,12 @@ message CSteamOSManager_OptOutOfSideloadedClient_Request {
 }
 
 message CSteamOSManager_OptOutOfSideloadedClient_Response {
+}
+
+message CSteamOSManager_ApplyMandatoryUpdate_Request {
+}
+
+message CSteamOSManager_ApplyMandatoryUpdate_Response {
 }
 
 message CSteamOSSLSPlugin {
@@ -76,6 +85,7 @@ service SteamOSManager {
 	rpc GetState (.CSteamOSManager_GetState_Request) returns (.CSteamOSManager_GetState_Response);
 	rpc NotifyStateChanged (.CSteamOSManager_StateChanged_Notification) returns (.WebUINoResponse);
 	rpc OptOutOfSideloadedClient (.CSteamOSManager_OptOutOfSideloadedClient_Request) returns (.CSteamOSManager_OptOutOfSideloadedClient_Response);
+	rpc ApplyMandatoryUpdate (.CSteamOSManager_ApplyMandatoryUpdate_Request) returns (.CSteamOSManager_ApplyMandatoryUpdate_Response);
 }
 
 service SteamOSSLS {

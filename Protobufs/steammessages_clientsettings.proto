@@ -177,4 +177,5 @@ message CMsgClientSettings {
 	optional int32 gamescope_app_target_framerate = 21002 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Gamescope/AppTargetFrameRate", (setting_default_int) = 0, (setting_profile_mode) = k_ESettingProfileMode_PerGamePerDisplay];
 	optional bool gamescope_enable_app_target_framerate = 21003 [(setting_store) = k_EClientSettingStore_Registry, (setting_name) = "HKEY_CURRENT_USER\\Software\\Valve\\Steam\\GamescopeEnableAppTargetRefreshRate2", (setting_default_bool) = true];
 	optional bool gamescope_disable_framelimit = 21004 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Gamescope/DisableFrameLimit", (setting_default_bool) = false, (setting_profile_mode) = k_ESettingProfileMode_PerGamePerDisplay];
+	optional int32 gamescope_display_refresh_rate = 21005 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Gamescope/RefreshRate", (setting_default_int) = 0, (setting_profile_mode) = k_ESettingProfileMode_PerGamePerDisplay];
 }

@@ -547,7 +547,7 @@
   text-align: center;
   font-size: 10px;
   text-transform: uppercase;
-  margin-bottom: -6px;
+  margin-bottom: 6px;
 }
 .controllerconfiguratorsummary_GlyphAndLabel_1AjG8 {
   padding-left: 8px;
@@ -2933,6 +2933,43 @@
   align-items: center;
   padding-bottom: 10px;
 }
+.controllerconfigurator_NoControllerColumn_3Zcp_ {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.controllerconfigurator_NoControllerColumn_3Zcp_
+  .controllerconfigurator_NoControllerLabel_2sGaa {
+  font-family: "Motiva Sans", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: 0px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 28px;
+  text-align: center;
+  color: #fff;
+}
+.controllerconfigurator_NoControllerColumn_3Zcp_
+  .controllerconfigurator_NoControllerSVG_2J8Fj {
+  width: 150px;
+  margin-bottom: 16px;
+}
+.controllerconfigurator_CenterColumn_13_Bu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .controllerconfigurator_ControllerSupportInfoSection_2q529 {
   font-family: "Motiva Sans", Helvetica, sans-serif;
   font-weight: normal;
@@ -2952,6 +2989,18 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 2px;
+}
+.controllerconfigurator_ControllerSupportInfoSection_2q529
+  .controllerconfigurator_SupportTitle_32f4m {
+  margin-top: 8px;
+  font-size: 16px;
+  line-height: 20px;
+  color: #dcdedf;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+  word-break: break-word;
 }
 .controllerconfigurator_ControllerSupportInfoSection_2q529
   .controllerconfigurator_SupportLabel_2fNrp {
@@ -4296,11 +4345,14 @@ button.controllerconfiguratormapping_Button_hv-G3.DialogButton:enabled:active:ho
   left: 0;
   right: 0;
   top: var(--basicui-header-height, 0px);
-  bottom: 0;
+  bottom: var(--gamepadui-current-footer-height, 0px);
   overflow-y: auto;
   overflow-x: hidden;
   scroll-padding: 80px 0px;
   flex-direction: column;
+}
+.controllerconfiguratormapping_ModalPosition_1B8RZ.controllerconfiguratormapping_VR_10CEX {
+  bottom: 0;
 }
 .controllerconfiguratormapping_ModalPosition_1B8RZ.controllerconfiguratormapping_WithStandardPadding_2gc-y {
   padding: 24px;
@@ -4756,6 +4808,8 @@ svg.controllerconfiguratormapping_DropDownStarSVG_2hQvm {
   justify-content: center;
   margin-top: 10px;
   align-self: center;
+  padding-top: 40px;
+  padding-bottom: 10px;
 }
 .controllerconfiguratormapping_SettingsSource_2qxNZ {
   font-family: "Motiva Sans", Helvetica, sans-serif;
@@ -4959,9 +5013,9 @@ svg.controllerconfiguratormapping_DropDownStarSVG_2hQvm {
   margin-top: 16px;
 }
 .controllerconfiguratoractionsetselector_ActionSetNameOverIndicators_1Xyoy {
-  padding-bottom: 10px;
-  padding-left: 32.5px;
-  padding-right: 32.5px;
+  padding-top: calc(24px + var(--basicui-header-height, 0px));
+  padding-left: calc(12px + 1.4vw);
+  padding-right: calc(12px + 1.4vw);
 }
 .controllerconfiguratoractionsetselector_ActionSetNameAndGlyphs_eAK-3 {
   display: flex;
@@ -33123,6 +33177,10 @@ button.TextButton.appdetailsfriendssection_ShowMore_34gmV
   flex-grow: 1;
   padding: 0px 4px 0px 40px;
 }
+.FlexGrowUniversalSearch
+  .searchbar_SearchAndTitleContainer_17M8g.searchbar_ShowingTitle_P5_Rq {
+  padding-left: 2.8vw;
+}
 .searchbar_SearchAndTitleContainer_17M8g .searchbar_SearchIconLeft_2Ya83 {
   opacity: 0;
   left: 10px;
@@ -38124,7 +38182,7 @@ div.NarrowRightPanel
 .controllerconfigurator_interstitial_ConfiguratorInterstitialContainer_3FS5u {
   max-width: 100%;
   height: 100%;
-  padding: 3% 10%;
+  padding: 24px;
   padding-bottom: 40px;
   position: relative;
   margin: auto;
@@ -38145,7 +38203,7 @@ div.NarrowRightPanel
 }
 .DesktopUI
   .controllerconfigurator_interstitial_ConfiguratorInterstitialContainer_3FS5u {
-  background-color: linear-gradient(126deg, #333840 4.36%, #25282e 93.41%);
+  background: linear-gradient(126deg, #333840 4.36%, #25282e 93.41%);
 }
 .controllerconfigurator_interstitial_ConfiguratorInterstitialContainer_3FS5u
   .controllerconfigurator_interstitial_DontShowAgain_8aT8x {
@@ -39836,6 +39894,73 @@ button.appdetailsheader_ExitEditModeButton_i7jBC.appdetailsheader_ExitEditModeBu
 }
 .appdetailscontrollersupport_PurchaseNoticeImage_2tCNv.appdetailscontrollersupport_VROnly_2N6y_ {
   height: 30%;
+}
+.appdetailscontrollersupport_ControllerStatusSVG_2A8Ng {
+  width: 44px;
+  min-width: 44px;
+  flex-basis: 44px;
+  height: 44px;
+  color: #fff;
+  margin-left: 12px;
+}
+.appdetailscontrollersupport_Stroke_29FYe {
+  position: relative;
+  width: 52px;
+  height: 3px;
+  top: 22px;
+  left: 7px;
+  background: #e05f5f;
+  transform: rotate(155.43deg);
+}
+.appdetailscontrollersupport_ControllerSectionBody_bG5F- {
+  display: flex;
+  flex-direction: column;
+}
+.appdetailscontrollersupport_ControllerSectionRow_Gs_qH {
+  display: flex;
+  flex-direction: row;
+}
+.appdetailscontrollersupport_ControllerSectionColumn_1vvIp {
+  display: flex;
+  flex-direction: column;
+  margin-left: 12px;
+  margin-top: 4px;
+}
+.appdetailscontrollersupport_Separator_2nW8y {
+  height: 1px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  background: rgba(217, 217, 217, 0.1);
+}
+.appdetailscontrollersupport_ControllerSupportSectionHeader_2L06P {
+  color: #fff;
+  font-family: "Motiva Sans", Sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 19px;
+  text-wrap: wrap;
+}
+.appdetailscontrollersupport_ControllerSupportSectionDesc_8tm4K {
+  display: flex;
+  font-family: "Motiva Sans", Sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 17px;
+  text-wrap: wrap;
+  color: #cacbcd;
+}
+.appdetailscontrollersupport_ControllerSupportSectionLink_2KI63 {
+  display: flex;
+  height: 19px;
+  align-self: flex-end;
+  font-family: "Motiva Sans", Sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 19px;
+  color: #8c9193;
 }
 .appdetailsbroadcastsection_TheaterMode_19yL9 {
   position: absolute;
@@ -53955,20 +54080,19 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   .nominationandvote_SteamAwardHeader_2TvWH
   .nominationandvote_SteamAwardMainTitle_6gN_u {
   position: relative;
-  color: #fff;
-  text-transform: uppercase;
+  color: #e5c6df;
   font-weight: 800;
   font-size: 36px;
   line-height: 36px;
   padding-right: 90px;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
 }
 .nominationandvote_SteamAwardContainer_jBtX5
   .nominationandvote_SteamAwardHeader_2TvWH
   .nominationandvote_SteamAwardSubTitle_3SuAg {
   position: relative;
   text-transform: uppercase;
-  color: #fff;
+  color: #ab92a6;
 }
 .nominationandvote_SteamAwardContainer_jBtX5
   .nominationandvote_SteamAwardHeader_2TvWH
@@ -53994,7 +54118,7 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   position: relative;
   padding-top: 15px;
   width: 85%;
-  color: #fff;
+  color: #e5c6df;
   font-size: 14px;
   font-style: italic;
   display: flex;
@@ -54042,7 +54166,7 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   font-weight: 500;
   font-size: 15px;
   text-align: center;
-  margin: auto 0;
+  margin: auto 0 auto 6px;
   flex: 1 0 25%;
 }
 .nominationandvote_SteamAwardContainer_jBtX5
@@ -54050,6 +54174,7 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   .nominationandvote_SteamAwardCategoryTitle_3hZED.nominationandvote_VotingTitle_at4wS {
   text-align: left;
   font-size: 20px;
+  margin-left: 0;
 }
 .nominationandvote_SteamAwardContainer_jBtX5
   .nominationandvote_SteamAwardVoteWidget_2-t3v
@@ -54141,19 +54266,42 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
 }
 .nominationandvote_SteamAwardContainer_jBtX5
   .nominationandvote_SteamAwardVoteWidget_2-t3v
-  .nominationandvote_SteamAwardNominateButton_VcFKW {
-  border: 1px solid #fff;
-  border-radius: 4px;
-  padding: 4px 6px 0px;
-  margin: 20px 15px 15px 15px;
+  .nominationandvote_NominateCtn_hS9w- {
+  display: flex;
+  flex-direction: column;
+  margin: 2px 15px 15px 15px;
 }
 .nominationandvote_SteamAwardContainer_jBtX5
   .nominationandvote_SteamAwardVoteWidget_2-t3v
+  .nominationandvote_NominateCtn_hS9w-
+  .nominationandvote_SteamAwardNominateButton_VcFKW {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 4px;
+  padding: 8px 8px 0px;
+}
+.nominationandvote_SteamAwardContainer_jBtX5
+  .nominationandvote_SteamAwardVoteWidget_2-t3v
+  .nominationandvote_NominateCtn_hS9w-
   .nominationandvote_SteamAwardNominateButton_VcFKW:hover {
   border: 1px solid #fff;
 }
 .nominationandvote_SteamAwardContainer_jBtX5
   .nominationandvote_SteamAwardVoteWidget_2-t3v
+  .nominationandvote_NominateCtn_hS9w-
+  .nominationandvote_SteamAwardNominateButton_VcFKW.nominationandvote_Nominated_2pePR {
+  border: unset;
+  padding-left: 0;
+}
+.nominationandvote_SteamAwardContainer_jBtX5
+  .nominationandvote_SteamAwardVoteWidget_2-t3v
+  .nominationandvote_NominateCtn_hS9w-
+  .nominationandvote_SteamAwardNominateButton_VcFKW.nominationandvote_Nominated_2pePR:hover {
+  border: unset;
+  cursor: text;
+}
+.nominationandvote_SteamAwardContainer_jBtX5
+  .nominationandvote_SteamAwardVoteWidget_2-t3v
+  .nominationandvote_NominateCtn_hS9w-
   .nominationandvote_SteamAwardNominateButton_VcFKW
   .DialogCheckbox {
   background-color: rgba(255, 255, 255, 0.1);
@@ -54164,14 +54312,18 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
 }
 .nominationandvote_SteamAwardContainer_jBtX5
   .nominationandvote_SteamAwardVoteWidget_2-t3v
-  .nominationandvote_SteamAwardNominateButton_VcFKW
+  .nominationandvote_NominateCtn_hS9w-
   .nominationandvote_SteamAwardCategoryDesc_3bu8i {
   margin-left: 0px;
+  background: #ffffff1a;
+  color: #d9ced7;
+  padding: 4px 8px;
+  font-size: 14px;
 }
 @media screen and (max-width: 620px) {
   .nominationandvote_SteamAwardContainer_jBtX5
     .nominationandvote_SteamAwardVoteWidget_2-t3v
-    .nominationandvote_SteamAwardNominateButton_VcFKW
+    .nominationandvote_NominateCtn_hS9w-
     .nominationandvote_SteamAwardCategoryDesc_3bu8i {
     width: 100%;
   }
@@ -54194,6 +54346,9 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
 }
 .nominationandvote_SteamAwardVoteCheckBox_LFbd4 {
   display: flex;
+}
+.nominationandvote_SteamAwardVoteCheckBox_LFbd4.nominationandvote_Nominated_2pePR {
+  cursor: default;
 }
 .nominationandvote_SteamAwardModalGameTitle_3hBdP {
   color: #fff;
@@ -59387,6 +59542,7 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
 }
 .euladialog_EulaModalDialog_3jj_K {
   flex: 1;
+  margin-bottom: 50px !important;
 }
 .euladialog_EulaModalDialog_3jj_K .euladialog_EulaDialogContent_2YXHR {
   display: flex;
@@ -74924,9 +75080,6 @@ img {
 }
 .footer_BasicFooter_3T1iF:not(.footer_WithKeyboard_1fMXT) {
   padding: 0 calc(12px + 1.4vw - 8px) 0 calc(12px + 1.4vw - 8px);
-}
-.footer_BasicFooter_3T1iF.footer_WithKeyboard_1fMXT {
-  display: none;
 }
 .footer_BasicFooter_3T1iF.footer_QuickAccessFooter_VdbQ_ {
   position: absolute;
@@ -112100,6 +112253,158 @@ svg.steamtemplates_FriendIndicator_suNJh .Outline {
 .Lounger .virtualkeyboard_KeyboardEmojiHeader_Qihxj img {
   filter: brightness(0) saturate(100%) invert(89%) sepia(26%) saturate(151%)
     hue-rotate(349deg) brightness(97%) contrast(89%);
+}
+.OLED {
+  --background-color: #000000;
+  --foreground-color: #f94d22;
+  --key-action-button-glyph-color: #b8bcbf;
+  --key-focused-action-button-left-color: #0e141b;
+  --key-focused-action-button-right-color: #0e141b;
+  --key-color: #f94d22;
+  --key-background-color: #000000;
+  --key-shift-label-color: #8e3521;
+  --key-focused-shift-label-color: #f94d22;
+  --key-focused-color: #fa4f38;
+  --key-focused-background-color: rgba(249, 77, 34, 0.15);
+  --key-meta-color: #f94d22;
+  --key-meta-background-color: #000000;
+  --key-tab-color: #f94d22;
+  --key-tab-background-color: #000000;
+  --key-caps-color: #f94d22;
+  --key-caps-background-color: #000000;
+  --key-shift-color: #f94d22;
+  --key-shift-background-color: #000000;
+  --key-enter-color: #f94d22;
+  --key-enter-background-color: #000000;
+  --key-enter-action-button-glyph-color: #f94d22;
+  --key-backspace-color: #f94d22;
+  --key-backspace-background-color: #000000;
+  --key-spacebar-color: #f94d22;
+  --key-spacebar-background-color: #000000;
+  --key-spacer-background-color: #000000;
+  --key-extendedkey-background-color: #8e3521;
+  --key-extendedkey-color: #000000;
+  --key-extendedkey-focused-background-color: #f94d22;
+  --key-extendedkey-focused-color: #000000;
+  --key-extendedkey-hover-background-color: #f94d22;
+  --key-extendedkey-hover-color: #000000;
+  --key-toggleon-background-color: #f94d22;
+  --key-toggleon-color: #000000;
+  --key-toggleoneshot-color: #f94d22;
+  --key-emoji-category-background-color: transparent;
+  --key-emoji-category-highlight-background-color: rgba(249, 77, 34, 0.15);
+  --key-emoji-row-background-color: transparent;
+  --key-emoji-background-color: transparent;
+  --key-emoji-color: #f94d22;
+  --key-emoji-focused-color: #000000;
+  --key-emoji-focused-background-color: #f94d22;
+  --key-touched-background-color: #f94d22;
+  --key-touched-color: #fa4f38;
+  --key-pointer-stroke-color: #000000;
+  --key-pointer-background-color: #f94d22;
+  --key-deadkey-background-color: #000000;
+  --key-deadkeyinactive-color: #8e3521;
+  --key-deadkeyactive-color: #f94d22;
+}
+.OLED .virtualkeyboard_KeyboardKey_2KhPX {
+  border-radius: 10px 3px 3px 3px;
+  box-shadow: inset 0px -8px 4px rgba(249, 77, 34, 0.15);
+}
+.OLED .virtualkeyboard_KeyboardKey_2KhPX.virtualkeyboard_Touched_3UFQq {
+  text-shadow: 0 0 10px #fa4f38;
+  background-color: rgba(249, 77, 34, 0.15);
+}
+.OLED .virtualkeyboard_KeyboardKey_2KhPX.virtualkeyboard_Touched_3UFQq::after {
+  content: "";
+  background: #fa4f38;
+  border-radius: 6px;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  mix-blend-mode: overlay;
+  animation: virtualkeyboard_shine_30kej 0.3s;
+}
+@keyframes virtualkeyboard_shine_30kej {
+  0% {
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+  }
+  100% {
+    width: 150%;
+    height: 150%;
+    opacity: 0;
+  }
+}
+.OLED .virtualkeyboard_KeyboardKey_2KhPX::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  filter: contrast(140%) brightness(350%);
+  background: linear-gradient(0deg, #ff1d00, rgba(0, 0, 0, 0)),
+    radial-gradient(circle at 50% 50%, #00f1ff, rgba(255, 255, 255, 0)),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 350 350' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  mix-blend-mode: color;
+  opacity: 0.25;
+}
+.OLED .virtualkeyboard_KeyboardKey_2KhPX::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 1px;
+  left: 2px;
+  bottom: 1px;
+  right: 2px;
+  box-shadow:
+    0 0 1px #f94d22,
+    inset 0 0 1px #f94d22,
+    0 0 3px rgba(249, 77, 34, 0.15),
+    inset 0 0 2px rgba(249, 77, 34, 0.15),
+    0 0 3px rgba(249, 77, 34, 0.15),
+    inset 0 0 4px rgba(249, 77, 34, 0.15);
+  filter: drop-shadow(3px 3px 3px #f94d22);
+  border-radius: 8px 2px 2px 2px;
+}
+.OLED .virtualkeyboard_KeyboardKey_2KhPX.virtualkeyboard_Focused_21EoN::before {
+  border: 1px solid #f94d22;
+  filter: drop-shadow(3px 3px 3px #f93822);
+}
+.OLED .virtualkeyboard_KeyboardKey_2KhPX img {
+  filter: brightness(0) saturate(100%) invert(34%) sepia(95%) saturate(4681%)
+    hue-rotate(350deg) brightness(104%) contrast(95%);
+}
+.OLED .virtualkeyboard_KeyboardKey_2KhPX.virtualkeyboard_Focused_21EoN img {
+  filter: brightness(0) saturate(100%) invert(36%) sepia(84%) saturate(2981%)
+    hue-rotate(342deg) brightness(101%) contrast(96%);
+}
+.OLED
+  .virtualkeyboard_KeyboardKey_2KhPX.virtualkeyboard_KeyboardSpacebar_ia41Q
+  img {
+  filter: brightness(0) saturate(100%) invert(34%) sepia(95%) saturate(4681%)
+    hue-rotate(350deg) brightness(104%) contrast(95%);
+}
+.OLED .virtualkeyboard_KeyboardKey_2KhPX.virtualkeyboard_ToggleOn_3Qrs- img {
+  filter: brightness(0) saturate(100%);
+}
+.OLED
+  .virtualkeyboard_KeyboardKey_2KhPX.virtualkeyboard_ToggleOn_3Qrs-.virtualkeyboard_Focused_21EoN
+  img {
+  filter: brightness(0) saturate(100%) invert(34%) sepia(95%) saturate(4681%)
+    hue-rotate(350deg) brightness(104%) contrast(95%);
+}
+.OLED .virtualkeyboard_KeyboardKey_2KhPX .virtualkeyboard_ShiftedLabel_3FZuk {
+  opacity: 1;
+}
+.OLED .virtualkeyboard_KeyboardEmojiHeader_Qihxj img {
+  filter: brightness(0) saturate(100%) invert(34%) sepia(95%) saturate(4681%)
+    hue-rotate(350deg) brightness(104%) contrast(95%);
 }
 .virtualkeyboard_Keyboard_45rH7 {
   max-width: 1280px;

@@ -1,4 +1,4 @@
-var CLSTAMP = "8480208";
+var CLSTAMP = "8496392";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -128,6 +128,7 @@ var CLSTAMP = "8480208";
           FieldLabelValue: "gamepaddialog_FieldLabelValue_lcD7J",
           FieldDescription: "gamepaddialog_FieldDescription_2OJfk",
           ModalPosition: "gamepaddialog_ModalPosition_30VHl",
+          VR: "gamepaddialog_VR_1sYg0",
           WithStandardPadding: "gamepaddialog_WithStandardPadding_1s9-e",
           NoHeaderPadding: "gamepaddialog_NoHeaderPadding_2kAHX",
           ModalClickToDismiss: "gamepaddialog_ModalClickToDismiss_2szdG",
@@ -198,6 +199,8 @@ var CLSTAMP = "8480208";
             "gamepadpagedsettings_PagedSettingsDialog_PageList_DisableScrolling_2brQE",
           PagedSettingsDialog_PageList_ShowTitle:
             "gamepadpagedsettings_PagedSettingsDialog_PageList_ShowTitle_d113O",
+          PageSettingsDialog_PageList_NoHeaderPadding:
+            "gamepadpagedsettings_PageSettingsDialog_PageList_NoHeaderPadding_2vaiq",
           PagedSettingsDialog_PageListItem:
             "gamepadpagedsettings_PagedSettingsDialog_PageListItem_1ix7r",
           DisabledItem: "gamepadpagedsettings_DisabledItem_3Lp2f",
@@ -1619,9 +1622,9 @@ var CLSTAMP = "8480208";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Nov 8 2023 : 18:44:28",
-                BUILD_TIME_UTC: "Nov 9 2023 : 02:44:28",
-                BUILD_RTIME_UTC: 1699497868,
+                BUILD_TIME_LOCAL: "Nov 14 2023 : 16:32:38",
+                BUILD_TIME_UTC: "Nov 15 2023 : 00:32:38",
+                BUILD_RTIME_UTC: 1700008358,
               }.MOBILE_BUILD)
             ) {
               window.addEventListener("beforeunload", (e) => {
@@ -7687,7 +7690,7 @@ var CLSTAMP = "8480208";
           n.d(t, {
             CMInterface: () => L,
             CMInterfaceSharedClientConnection: () => M,
-            CMInterfaceWebSocket: () => O,
+            CMInterfaceWebSocket: () => Z,
             k_nHeartbeatIntervalSecs: () => D,
           });
         var r = n(70655),
@@ -8562,7 +8565,7 @@ var CLSTAMP = "8480208";
           return (e.msPing || 0) + (e.nCMLoad || 0);
         }
         const D = 27;
-        class O extends L {
+        class Z extends L {
           constructor(e) {
             super(),
               (this.m_Session = {
@@ -8827,7 +8830,7 @@ var CLSTAMP = "8480208";
             }
           }
         }
-        (0, r.gn)([C.action], O.prototype, "DecodeAndDispatchMultiMsg", null);
+        (0, r.gn)([C.action], Z.prototype, "DecodeAndDispatchMultiMsg", null);
       },
       35871: (e, t, n) => {
         "use strict";
@@ -9635,13 +9638,13 @@ var CLSTAMP = "8480208";
             ContextMenuInstanceContext: () => x,
             ContextMenuItem: () => H,
             ContextMenuItemSubmenu: () => R,
-            ContextMenuMouseOverlay: () => B,
-            ContextMenuPosition: () => O,
+            ContextMenuMouseOverlay: () => O,
+            ContextMenuPosition: () => Z,
             ContextMenuSeparator: () => V,
             GBForcePopupContextMenus: () => z,
             GBStickyContextMenus: () => F,
             IconContextMenuItem: () => y,
-            OnRootContextMenu: () => Z,
+            OnRootContextMenu: () => B,
             SetForcePopupContextMenus: () => U,
             SetStickyContextMenus: () => P,
             useEnableContextMenuBlurDelay: () => A,
@@ -10045,7 +10048,7 @@ var CLSTAMP = "8480208";
           (0, r.gn)([E.bind], D.prototype, "RenderSubMenu", null),
           (0, r.gn)([E.bind], D.prototype, "OnMouseEnter", null),
           (0, r.gn)([E.bind], D.prototype, "OnClick", null);
-        let O = class extends o.Component {
+        let Z = class extends o.Component {
           constructor(e) {
             super(e),
               (this.m_elMenu = void 0),
@@ -10383,12 +10386,12 @@ var CLSTAMP = "8480208";
             );
           }
         };
-        function B(e) {
+        function O(e) {
           return o.createElement("div", {
             className: b().ContextMenuMouseOverlay,
           });
         }
-        function Z(e) {
+        function B(e) {
           let t = [],
             n = L.GetOwningWindowForEvent(e),
             r = n.getSelection(),
@@ -10541,17 +10544,17 @@ var CLSTAMP = "8480208";
             e.preventDefault(), e.stopPropagation();
           }
         }
-        (0, r.gn)([E.bind], O.prototype, "BindMenuElement", null),
+        (0, r.gn)([E.bind], Z.prototype, "BindMenuElement", null),
           (0, r.gn)(
             [E.bind, (0, v.debounce)(100)],
-            O.prototype,
+            Z.prototype,
             "OnMenuMutation",
             null,
           ),
-          (0, r.gn)([E.bind], O.prototype, "OnWindowResize", null),
-          (0, r.gn)([E.bind], O.prototype, "OnBlur", null),
-          (0, r.gn)([E.bind], O.prototype, "OnKeyDown", null),
-          (O = (0, r.gn)([i.observer], O));
+          (0, r.gn)([E.bind], Z.prototype, "OnWindowResize", null),
+          (0, r.gn)([E.bind], Z.prototype, "OnBlur", null),
+          (0, r.gn)([E.bind], Z.prototype, "OnKeyDown", null),
+          (Z = (0, r.gn)([i.observer], Z));
         const T = (e) => {
             const {
                 strDisplayNameLocToken: t,
@@ -10921,7 +10924,7 @@ var CLSTAMP = "8480208";
           BQ: () => j,
           FT: () => H,
           HV: () => _,
-          KM: () => Z,
+          KM: () => B,
           Ns: () => R,
           SI: () => S,
           Uq: () => k,
@@ -10940,7 +10943,7 @@ var CLSTAMP = "8480208";
           ji: () => U,
           l0: () => D,
           o9: () => F,
-          oX: () => O,
+          oX: () => Z,
           rs: () => z,
           sg: () => y,
           tr: () => G,
@@ -11028,7 +11031,7 @@ var CLSTAMP = "8480208";
             );
           }
         }
-        function O(e) {
+        function Z(e) {
           const { classNameContent: t, bCenterVertically: n } = e,
             o = (0, r._T)(e, ["classNameContent", "bCenterVertically"]);
           return i.createElement(
@@ -11038,7 +11041,7 @@ var CLSTAMP = "8480208";
           );
         }
         (0, r.gn)([C.a], D.prototype, "OnSubmit", null);
-        const B = i.forwardRef(function (e, t) {
+        const O = i.forwardRef(function (e, t) {
             const n = (0, u.D)(),
               { svgicon: l } = e,
               a = (0, r._T)(e, ["svgicon"]),
@@ -11082,9 +11085,9 @@ var CLSTAMP = "8480208";
               e.children,
             );
           }),
-          Z = i.forwardRef(function (e, t) {
+          B = i.forwardRef(function (e, t) {
             return i.createElement(
-              B,
+              O,
               Object.assign(
                 { preferredFocus: !0, type: e.onClick ? "button" : "submit" },
                 e,
@@ -11102,7 +11105,7 @@ var CLSTAMP = "8480208";
           }),
           T = i.forwardRef(function (e, t) {
             return i.createElement(
-              B,
+              O,
               Object.assign({ type: "button" }, e, {
                 ref: t,
                 className: (0, s.default)(
@@ -11116,7 +11119,7 @@ var CLSTAMP = "8480208";
           }),
           I = i.forwardRef(function (e, t) {
             return i.createElement(
-              B,
+              O,
               Object.assign({ type: "button" }, e, {
                 ref: t,
                 className: (0, s.default)(
@@ -11130,7 +11133,7 @@ var CLSTAMP = "8480208";
           }),
           N = i.forwardRef(function (e, t) {
             return i.createElement(
-              B,
+              O,
               Object.assign({ type: "button" }, e, {
                 ref: t,
                 className: (0, s.default)(
@@ -11142,7 +11145,7 @@ var CLSTAMP = "8480208";
           }),
           A = i.forwardRef(function (e, t) {
             return i.createElement(
-              B,
+              O,
               Object.assign({ type: "button" }, e, {
                 ref: t,
                 className: (0, s.default)(e.className, "TextButton"),
@@ -11158,7 +11161,7 @@ var CLSTAMP = "8480208";
             k,
             null,
             i.createElement(
-              Z,
+              B,
               {
                 onClick: e.onOK,
                 disabled: e.bOKDisabled,
@@ -11179,8 +11182,8 @@ var CLSTAMP = "8480208";
           );
         }
         function P(e) {
-          const t = e.bOKDisabled ? T : Z,
-            n = e.bOKDisabled ? Z : T;
+          const t = e.bOKDisabled ? T : B,
+            n = e.bOKDisabled ? B : T;
           return i.createElement(
             H,
             null,
@@ -12238,7 +12241,7 @@ var CLSTAMP = "8480208";
             IPv4InputField: () => He,
             InnerBody: () => r.HV,
             Input: () => f,
-            IsDropDownOptionSubmenu: () => O,
+            IsDropDownOptionSubmenu: () => Z,
             IsDropDownOptionValue: () => D,
             KeyValueField: () => Ce,
             Label: () => r.__,
@@ -12960,23 +12963,23 @@ var CLSTAMP = "8480208";
         function D(e) {
           return "object" == typeof e && "data" in e;
         }
-        function O(e) {
+        function Z(e) {
           return "object" == typeof e && "options" in e;
         }
-        function B(e, t) {
+        function O(e, t) {
           if (e === t) return !0;
           if (!Array.isArray(e) || !Array.isArray(t)) return !1;
           if (e.length != t.length) return !1;
-          for (let n = 0; n < e.length; n++) if (!Z(e[n], t[n])) return !1;
+          for (let n = 0; n < e.length; n++) if (!B(e[n], t[n])) return !1;
           return !0;
         }
-        function Z(e, t) {
+        function B(e, t) {
           return null == e || null == t
             ? e == t
             : e.label === t.label &&
                 e.tooltip === t.tooltip &&
-                O(e) == O(t) &&
-                !(O(e) && O(t) && !B(e.options, t.options)) &&
+                Z(e) == Z(t) &&
+                !(Z(e) && Z(t) && !O(e.options, t.options)) &&
                 (!D(e) || !D(t) || e.data === t.data);
         }
         function T(e) {
@@ -12986,7 +12989,7 @@ var CLSTAMP = "8480208";
             const e = t.shift();
             Array.isArray(e) &&
               e.forEach((e) => {
-                D(e) ? n.push(e) : O(e) && t.push(e.options);
+                D(e) ? n.push(e) : Z(e) && t.push(e.options);
               });
           }
           return n;
@@ -12996,7 +12999,7 @@ var CLSTAMP = "8480208";
             for (let n = 0; n < e.length; n++) {
               const r = e[n];
               if (D(r) && r.data === t) return r;
-              if (O(r)) {
+              if (Z(r)) {
                 const e = I(r.options, t);
                 if (null != e) return e;
               }
@@ -13096,7 +13099,7 @@ var CLSTAMP = "8480208";
           }
           SetSelectedOption(e) {
             const t = I(this.props.rgOptions, e);
-            Z(t, this.state.value) || this.setState({ value: t });
+            B(t, this.state.value) || this.setState({ value: t });
           }
           get value() {
             return this.state.value;
@@ -13105,8 +13108,8 @@ var CLSTAMP = "8480208";
             if (e.selectedOption !== this.props.selectedOption) return !0;
             if (e.disabled != this.props.disabled) return !0;
             if (t.bOpened !== this.state.bOpened) return !0;
-            if (!B(this.props.rgOptions, e.rgOptions)) return !0;
-            if (!Z(t.value, this.state.value)) return !0;
+            if (!O(this.props.rgOptions, e.rgOptions)) return !0;
+            if (!B(t.value, this.state.value)) return !0;
             let r = [
               "selectedOption",
               "tabIndex",
@@ -13117,7 +13120,7 @@ var CLSTAMP = "8480208";
             return !1;
           }
           componentDidUpdate(e, t) {
-            const n = !B(e.rgOptions, this.props.rgOptions),
+            const n = !O(e.rgOptions, this.props.rgOptions),
               r = e.selectedOption !== this.props.selectedOption,
               i = this.state.value !== t.value;
             (n || i || r) &&
@@ -13305,7 +13308,7 @@ var CLSTAMP = "8480208";
                           : o.createElement("div", null, t.label),
                       ),
                     )
-                  : O(t) && n.push(t.options);
+                  : Z(t) && n.push(t.options);
               });
           return o.createElement(
             "div",
@@ -13571,11 +13574,11 @@ var CLSTAMP = "8480208";
             V = null != _ ? _ : "front",
             R = "front" == V && !!l,
             D = "before-children" == V && !!l,
-            O = "inline" == y && !!c,
-            B = "below" == y && !!c,
-            Z = null != h ? h : S ? "shift-children-below" : "keep-inline",
+            Z = "inline" == y && !!c,
+            O = "below" == y && !!c,
+            B = null != h ? h : S ? "shift-children-below" : "keep-inline",
             T = !!(H.onClick || H.onActivate || H.focusable),
-            I = (null != l && R) || null != n || (O && null != c),
+            I = (null != l && R) || null != n || (Z && null != c),
             N = null != d ? d : "min",
             A = null != m ? m : "standard",
             G = null != g ? g : "standard",
@@ -13627,10 +13630,10 @@ var CLSTAMP = "8480208";
                   ee().Field,
                   f && ee().Disabled,
                   I && ee().WithFirstRow,
-                  O && ee().WithChildrenInline,
-                  B && ee().WithChildrenBelow,
+                  Z && ee().WithChildrenInline,
+                  O && ee().WithChildrenBelow,
                   "center" == z && ee().VerticalAlignCenter,
-                  "shift-children-below" == Z &&
+                  "shift-children-below" == B &&
                     ee().InlineWrapShiftsChildrenBelow,
                   !!r && ee().WithDescription,
                   "standard" == F && ee().WithBottomSeparatorStandard,
@@ -13663,7 +13666,7 @@ var CLSTAMP = "8480208";
                   b &&
                     o.createElement("span", { "data-tooltip-text": b }, " (?)"),
                 ),
-                O &&
+                Z &&
                   o.createElement(
                     "div",
                     { className: ee().FieldChildrenWithIcon },
@@ -13685,7 +13688,7 @@ var CLSTAMP = "8480208";
                     ),
                   ),
               ),
-            B &&
+            O &&
               o.createElement(
                 "div",
                 { className: ee().FieldChildrenWithIcon },
@@ -14017,7 +14020,7 @@ var CLSTAMP = "8480208";
         function Me(e, t) {
           for (const n of e.options) {
             if (D(n) && n.data === t) return !0;
-            if (O(n) && Me(n, t)) return !0;
+            if (Z(n) && Me(n, t)) return !0;
           }
           return !1;
         }
@@ -14037,7 +14040,7 @@ var CLSTAMP = "8480208";
                         },
                         o.createElement(o.Fragment, null, n.label),
                       )
-                    : O(n)
+                    : Z(n)
                     ? o.createElement(
                         Le.ContextMenuItemSubmenu,
                         {
@@ -14224,9 +14227,9 @@ var CLSTAMP = "8480208";
           Ve = n.n(ye),
           Re = n(5839),
           De = n(1445),
-          Oe = n(417),
-          Be = n(8082),
-          Ze = n(6802),
+          Ze = n(417),
+          Oe = n(8082),
+          Be = n(6802),
           Te = n(68503),
           Ie = n(23843);
         const Ne = 1,
@@ -14425,9 +14428,9 @@ var CLSTAMP = "8480208";
             var t, n;
             if (this.props.disabled) return !1;
             let r = 0;
-            if (e.detail.button == Ze.EGamepadButton.DIR_LEFT) r = -1;
+            if (e.detail.button == Be.EGamepadButton.DIR_LEFT) r = -1;
             else {
-              if (e.detail.button != Ze.EGamepadButton.DIR_RIGHT) return !1;
+              if (e.detail.button != Be.EGamepadButton.DIR_RIGHT) return !1;
               r = 1;
             }
             e.detail.is_repeat
@@ -14461,10 +14464,10 @@ var CLSTAMP = "8480208";
               h != this.props.value)
             ) {
               const e = h > this.m_fLatestUserValue;
-              Oe.LT.PlayNavSound(e ? Oe.qr.SliderUp : Oe.qr.SliderDown),
+              Ze.LT.PlayNavSound(e ? Ze.qr.SliderUp : Ze.qr.SliderDown),
                 (this.m_fLatestUserValue = h),
                 this.FireOnChange(h, 2);
-            } else Oe.LT.PlayNavSound(Oe.qr.FailedNav);
+            } else Ze.LT.PlayNavSound(Ze.qr.FailedNav);
             return !0;
           }
           FireOnChange(e, t) {
@@ -14525,7 +14528,7 @@ var CLSTAMP = "8480208";
                 t = 0 == this.step;
               if (
                 ((this.m_eDragMode == We.None || !t) &&
-                  Oe.LT.PlayNavSound(e ? Oe.qr.SliderUp : Oe.qr.SliderDown),
+                  Ze.LT.PlayNavSound(e ? Ze.qr.SliderUp : Ze.qr.SliderDown),
                 this.m_eDragMode == We.MouseDragging ||
                   this.m_eDragMode == We.TouchDragging)
               ) {
@@ -14621,7 +14624,7 @@ var CLSTAMP = "8480208";
             const t = 0 == this.step;
             if (this.m_fLatestUserValue != this.m_fStartValue && t && e) {
               const e = this.m_fLatestUserValue > this.m_fStartValue;
-              Oe.LT.PlayNavSound(e ? Oe.qr.SliderUp : Oe.qr.SliderDown);
+              Ze.LT.PlayNavSound(e ? Ze.qr.SliderUp : Ze.qr.SliderDown);
             }
           }
           RemoveDocumentEventListeners() {
@@ -14687,7 +14690,7 @@ var CLSTAMP = "8480208";
                 : ((e = this.props.resetValue > this.props.value),
                   this.props.onChangeComplete &&
                     this.props.onChangeComplete(this.props.resetValue, 4)),
-              Oe.LT.PlayNavSound(e ? Oe.qr.SliderUp : Oe.qr.SliderDown);
+              Ze.LT.PlayNavSound(e ? Ze.qr.SliderUp : Ze.qr.SliderDown);
           }
           OnContextMenu(e) {
             if (null != this.props.resetValue) {
@@ -14718,7 +14721,7 @@ var CLSTAMP = "8480208";
               c = null != i,
               C = {};
             this.CanResetToDefault &&
-              (C[Ze.EGamepadButton.SECONDARY] = (0, s.Localize)(
+              (C[Be.EGamepadButton.SECONDARY] = (0, s.Localize)(
                 "#ResetToDefault",
               ));
             let u = Ve().SliderHandle,
@@ -14742,7 +14745,7 @@ var CLSTAMP = "8480208";
                       : Ve().Right,
                   ))),
               o.createElement(
-                Be.PanelGroup,
+                Oe.PanelGroup,
                 {
                   noFocusRing: !0,
                   className: (0, p.default)(
@@ -14759,7 +14762,7 @@ var CLSTAMP = "8480208";
                   childFocusDisabled: this.props.disabled || !r,
                   onContextMenu: this.OnContextMenu,
                   onOKButton: this.props.disabled
-                    ? () => Oe.LT.PlayNavSound(Oe.qr.FailedNav)
+                    ? () => Ze.LT.PlayNavSound(Ze.qr.FailedNav)
                     : null,
                   onSecondaryButton: this.CanResetToDefault
                     ? this.ResetToDefault
@@ -14977,9 +14980,9 @@ var CLSTAMP = "8480208";
             V = (0, i._T)(S, ["icon"]),
             R = o.useRef(),
             D = o.useRef(),
-            O = o.useRef(),
-            B = (null != C ? C : L)(e.value, e.valueSuffix),
-            Z = (function (e) {
+            Z = o.useRef(),
+            O = (null != C ? C : L)(e.value, e.valueSuffix),
+            B = (function (e) {
               var t, n;
               const { min: r, max: i } = e,
                 l = null !== (t = e.validValues) && void 0 !== t ? t : "steps",
@@ -15013,7 +15016,7 @@ var CLSTAMP = "8480208";
               e.onChangeStart && e.onChangeStart(3), I(!0);
             },
             A = (t) => {
-              Z(t) &&
+              B(t) &&
                 (e.onChange && e.onChange(t, 3),
                 e.onChangeComplete && e.onChangeComplete(t, 3)),
                 I(!1);
@@ -15021,11 +15024,11 @@ var CLSTAMP = "8480208";
           o.useLayoutEffect(() => {
             var e, t;
             !T &&
-              (null === (e = O.current) || void 0 === e
+              (null === (e = Z.current) || void 0 === e
                 ? void 0
                 : e.BHasFocus()) &&
               (null === (t = D.current) || void 0 === t || t.TakeFocus());
-          }, [O, D, T]);
+          }, [Z, D, T]);
           let G = t;
           v
             ? (G = o.createElement(
@@ -15033,13 +15036,13 @@ var CLSTAMP = "8480208";
                 null,
                 o.createElement("div", { className: Ve().LabelText }, e.label),
                 o.createElement(Ye, {
-                  navRef: O,
+                  navRef: Z,
                   editing: T,
-                  renderedValue: B,
+                  renderedValue: O,
                   valueSuffix: e.valueSuffix,
                   onClick: N,
                   onChangeComplete: A,
-                  validator: Z,
+                  validator: B,
                 }),
               ))
             : c &&
@@ -15047,7 +15050,7 @@ var CLSTAMP = "8480208";
                 o.Fragment,
                 null,
                 o.createElement("div", { className: Ve().LabelText }, e.label),
-                o.createElement("div", { className: Ve().DescriptionValue }, B),
+                o.createElement("div", { className: Ve().DescriptionValue }, O),
               ));
           const F = o.useRef(null),
             P = o.useCallback(
@@ -15182,14 +15185,14 @@ var CLSTAMP = "8480208";
             S = (0, p.default)(Ve().DescriptionValue, H && Ve().RedBorder),
             [y, V] = o.useState(0),
             [R, D] = o.useState(0),
-            O = o.useRef(),
-            B = o.useCallback(() => {
-              const e = O.current.clientWidth;
+            Z = o.useRef(),
+            O = o.useCallback(() => {
+              const e = Z.current.clientWidth;
               L ? D(e) : V(e);
             }, [L]);
-          o.useLayoutEffect(B, []);
-          const Z = (0, a.useResizeObserver)(B),
-            T = (0, a.useMultipleRefs)(O, Z);
+          o.useLayoutEffect(O, []);
+          const B = (0, a.useResizeObserver)(O),
+            T = (0, a.useMultipleRefs)(Z, B);
           o.useLayoutEffect(() => {
             var e, t;
             (null === (e = m.current) || void 0 === e
@@ -15519,7 +15522,7 @@ var CLSTAMP = "8480208";
                 if (!i && r) {
                   const e = !n;
                   r(e),
-                    Oe.LT.PlayNavSound(e ? Oe.qr.ToggleOn : Oe.qr.ToggleOff);
+                    Ze.LT.PlayNavSound(e ? Ze.qr.ToggleOn : Ze.qr.ToggleOff);
                 }
               },
               ref: t,
@@ -15823,10 +15826,10 @@ var CLSTAMP = "8480208";
           const S = i.useRef(),
             R = i.useCallback(() => S.current.TakeFocus(), [S]),
             D = (e) => {
-              e && B(!0);
+              e && O(!0);
             },
-            [O, B] = i.useState(!1),
-            Z = C.map((t, n) => {
+            [Z, O] = i.useState(!1),
+            B = C.map((t, n) => {
               if (t === L) {
                 const t = n === g + 1 || n === g - 1;
                 return i.createElement(
@@ -15983,18 +15986,20 @@ var CLSTAMP = "8480208";
                     e.disablePageListScrolling &&
                       s.PagedSettingsDialog_PageList_DisableScrolling,
                     N && s.PagedSettingsDialog_PageList_ShowTitle,
+                    e.bNoHeaderPadding &&
+                      s.PageSettingsDialog_PageList_NoHeaderPadding,
                   ),
                   onFocusWithin: D,
                   ref: P,
                 },
-                Z,
+                B,
               ),
               e.bottomControls &&
                 i.createElement("div", null, e.bottomControls),
             ),
             i.createElement(
               o.Panel,
-              { className: A, onCancelButton: O ? R : null, navRef: T },
+              { className: A, onCancelButton: Z ? R : null, navRef: T },
               e.toggleHideList &&
                 i.createElement(y, {
                   hideList: e.hideList,
@@ -16285,35 +16290,35 @@ var CLSTAMP = "8480208";
         "use strict";
         n.r(t),
           n.d(t, {
-            ABXYButton: () => Si,
-            Accelerometer: () => Fi,
+            ABXYButton: () => yi,
+            Accelerometer: () => Pi,
             Achievement: () => nt,
-            ActionSetIndicator: () => Sr,
-            Activities: () => Ir,
+            ActionSetIndicator: () => yr,
+            Activities: () => Nr,
             Add: () => Xe,
             AddContained: () => $e,
             AddFriend: () => rt,
             AirplaneMode: () => te,
-            Arrow: () => Ze,
-            AsyncGameTurn: () => On,
+            Arrow: () => Be,
+            AsyncGameTurn: () => Zn,
             Attachment: () => kt,
             AudioVolumeIcon: () => Ee,
             Avatar: () => it,
             BarGraph: () => qe,
-            Battery: () => si,
-            BatteryFull: () => ci,
-            BatteryLarge: () => Ci,
-            BatteryLow: () => hi,
-            BatterySimple: () => ui,
+            Battery: () => ci,
+            BatteryFull: () => Ci,
+            BatteryLarge: () => ui,
+            BatteryLow: () => di,
+            BatterySimple: () => hi,
             BigPicture: () => g,
             BlockUser: () => ot,
             Bluetooth: () => re,
-            Bookmark: () => Z,
+            Bookmark: () => B,
             Brightness: () => F,
             Broadcast: () => m,
             Browse: () => rn,
             BugReport: () => kn,
-            CD: () => li,
+            CD: () => ai,
             Carat: () => Te,
             Caution: () => lt,
             Chat: () => M,
@@ -16325,7 +16330,7 @@ var CLSTAMP = "8480208";
             CloudDownload: () => Yt,
             CloudSync: () => Gt,
             CloudUpload: () => Kt,
-            Collapse: () => fr,
+            Collapse: () => vr,
             Color: () => P,
             Comment: () => Rn,
             CommentHistory: () => Mn,
@@ -16333,93 +16338,94 @@ var CLSTAMP = "8480208";
             Community: () => Tn,
             CompoundSliderNotch: () => Oi,
             CompoundSliderNotchLeft: () => Bi,
-            CompoundSliderNotchRight: () => Zi,
+            CompoundSliderNotchRight: () => Ti,
             ContactInfo: () => pn,
             Controller: () => j,
             ControllerStatus: () => U,
             ControllerType: () => K,
             Coop: () => At,
             Copy: () => ut,
-            CreateGroup: () => Bn,
+            CreateGroup: () => On,
             Crown: () => ht,
             CustomizeSteamDeck: () => b,
-            DLC: () => B,
-            DeckDockFront: () => Ii,
+            DLC: () => O,
+            DeckDockFront: () => Ni,
             DeckLogo: () => J,
             DeckLogoColor: () => q,
             Desktop: () => E,
             DevicesNone: () => ge,
-            Digg: () => Cr,
-            DirectionalButton: () => yi,
-            Discord: () => lr,
-            Discussions: () => Lo,
+            Digg: () => ur,
+            DirectionalButton: () => Vi,
+            Discord: () => ar,
+            Discussions: () => wo,
             Display: () => pe,
             DoNotDisturb: () => Lt,
             Dots: () => mt,
             DoubleCarat: () => Ie,
             Download: () => Ae,
-            Dynamic: () => Zn,
+            Dynamic: () => Bn,
             Edit: () => dt,
-            Emoji: () => Tr,
+            Emoji: () => Ir,
             Emoticon: () => nn,
             EmptyStar: () => N,
             Envelope: () => pt,
-            ExclamationPoint: () => di,
+            ExclamationPoint: () => mi,
             Exit: () => k,
-            Expand: () => gr,
-            Expand99: () => vr,
-            Facebook: () => rr,
+            Expand: () => fr,
+            Expand99: () => Lr,
+            Facebook: () => ir,
             FamilySharing: () => fn,
             FamilySharingOff: () => vn,
-            FeatureHidden: () => Er,
-            FeatureVisible: () => wr,
+            FeatureHidden: () => Mr,
+            FeatureVisible: () => Er,
             Featured: () => $n,
             FieldYellowExclamation: () => ee,
             Filter: () => gt,
             FlagReport: () => Hn,
-            Flags: () => Wr,
-            Food: () => Ar,
+            Flags: () => zr,
+            Food: () => Gr,
             ForYou: () => Jn,
-            FrankenController: () => Vo,
-            Friends: () => O,
-            Fullscreen: () => pr,
+            FrankenController: () => Ro,
+            Friends: () => Z,
+            Fullscreen: () => gr,
             GameHubs: () => yn,
-            GameOverview: () => fo,
+            GameOverview: () => vo,
             Games: () => Ln,
-            GenericGamepad: () => Hi,
-            GenericGamepadFrontOutline: () => fi,
-            GenericStoreGamepad: () => Io,
+            GenericGamepad: () => Si,
+            GenericGamepadFrontOutline: () => vi,
+            GenericStoreGamepad: () => No,
             Gift: () => A,
             Globe: () => xt,
             Groups: () => ft,
             GuideButton: () => Y,
             Guides: () => wn,
-            Gyro: () => Pi,
-            GyroPitch: () => Wi,
-            GyroRoll: () => Ui,
-            GyroYaw: () => zi,
+            Gyro: () => Wi,
+            GyroPitch: () => zi,
+            GyroRoll: () => ji,
+            GyroYaw: () => Ui,
+            HDR: () => rr,
             HalfStar: () => I,
-            Haptics: () => Yr,
+            Haptics: () => Xr,
             HardDrive: () => tt,
             Headphones: () => Nn,
-            Heart: () => xr,
-            HeartEmpty: () => kr,
-            Help: () => Kr,
+            Heart: () => kr,
+            HeartEmpty: () => Hr,
+            Help: () => Yr,
             HideKeyboard: () => Re,
-            HierarchyRowEnd: () => Ri,
-            HierarchyRowMid: () => Vi,
+            HierarchyRowEnd: () => Di,
+            HierarchyRowMid: () => Ri,
             Home: () => p,
-            HotbarMenu: () => Dr,
+            HotbarMenu: () => Zr,
             Hyperlink: () => vt,
             IconEmpty: () => Or,
             IconNotFound: () => Br,
             Idle: () => qt,
             Image: () => Fn,
-            InGame: () => xo,
+            InGame: () => ko,
             InGameVR: () => Oo,
             IncomingVoiceCall: () => Gn,
             Information: () => G,
-            Instagram: () => sr,
+            Instagram: () => cr,
             Invalid: () => wt,
             Inventory: () => En,
             KaratDown: () => He,
@@ -16427,99 +16433,100 @@ var CLSTAMP = "8480208";
             KaratRight: () => ye,
             KaratUp: () => ke,
             Keyboard: () => De,
-            LAN: () => go,
-            LanPeerContentReceive: () => Ai,
-            LanPeerContentSend: () => Gi,
-            Layout_AB: () => Jr,
-            Layout_AB_Nintendo: () => qr,
-            Layout_AB_Nintendo_JoyCon: () => Qr,
-            Layout_AB_Playstation: () => ei,
-            Layout_BA: () => ti,
-            Layout_BA_Nintendo: () => ni,
-            Layout_BA_Nintendo_JoyCon: () => ri,
-            Layout_BA_PlayStation: () => ii,
-            LeftStickScroll: () => Xr,
+            LAN: () => fo,
+            LanPeerContentReceive: () => Gi,
+            LanPeerContentSend: () => Fi,
+            Layout_AB: () => qr,
+            Layout_AB_Nintendo: () => Qr,
+            Layout_AB_Nintendo_JoyCon: () => ei,
+            Layout_AB_Playstation: () => ti,
+            Layout_BA: () => ni,
+            Layout_BA_Nintendo: () => ri,
+            Layout_BA_Nintendo_JoyCon: () => ii,
+            Layout_BA_PlayStation: () => oi,
+            LeftStickScroll: () => $r,
             Library: () => f,
             Lock: () => de,
-            LogOut: () => Be,
+            LogOut: () => Oe,
             Maximize: () => Et,
-            MediaGallery: () => ai,
+            MediaGallery: () => si,
             Microphone: () => z,
             Minimize: () => en,
             Minus: () => tn,
             Mobile: () => Mt,
             ModeratorMessage: () => Dn,
-            Mouse: () => Oe,
+            Mouse: () => Ze,
             Mulitplayer: () => bt,
             MultiPlayer: () => Nt,
             Multilingual: () => _t,
             Music: () => d,
-            Nature: () => Nr,
-            Network: () => zr,
+            Nature: () => Ar,
+            Network: () => Ur,
             Neutral: () => cn,
             NewReleases: () => Wn,
             NewUserLoginIcon: () => we,
             NextTrack: () => We,
             NightMode: () => ie,
-            NintendoJoyConLFrontOutline: () => bi,
-            NintendoJoyConPairFrontOutline: () => ki,
-            NintendoJoyConRFrontOutline: () => xi,
-            NintendoSwitchProControllerFrontOutline: () => _i,
-            Notes: () => vo,
-            Notifications: () => Lr,
-            Objects: () => Fr,
-            Opacity: () => po,
-            OverlayAchievements: () => Eo,
-            OverlayMusic: () => Mo,
-            OverlayRestore: () => _o,
-            OverlayWorkshop: () => wo,
-            PS3ControllerFrontOutline: () => wi,
-            PS4ControllerFrontOutline: () => Ei,
-            PS4Warning: () => Wo,
-            PS5ControllerFrontOutline: () => Mi,
-            PS5Warning: () => zo,
+            NintendoJoyConLFrontOutline: () => xi,
+            NintendoJoyConPairFrontOutline: () => Hi,
+            NintendoJoyConRFrontOutline: () => ki,
+            NintendoSwitchProControllerFrontOutline: () => bi,
+            NoController: () => jo,
+            Notes: () => Lo,
+            Notifications: () => wr,
+            Objects: () => Pr,
+            Opacity: () => go,
+            OverlayAchievements: () => Mo,
+            OverlayMusic: () => _o,
+            OverlayRestore: () => bo,
+            OverlayWorkshop: () => Eo,
+            PS3ControllerFrontOutline: () => Ei,
+            PS4ControllerFrontOutline: () => Mi,
+            PS4Warning: () => zo,
+            PS5ControllerFrontOutline: () => _i,
+            PS5Warning: () => Uo,
             Patch: () => Jt,
             Pause: () => Ge,
             PendingInvites: () => Ht,
             Pin: () => St,
-            PitchAxisOverlay: () => ji,
+            PitchAxisOverlay: () => Ki,
             Play: () => Fe,
             PlayContained: () => Pe,
             PlayTime: () => dn,
-            PlugInPS4: () => Fo,
-            PlugInPS5: () => Po,
+            PlugInPS4: () => Po,
+            PlugInPS5: () => Wo,
             Popout: () => yt,
             Power: () => L,
             PrevTrack: () => ze,
             Profile: () => H,
             PurchaseHistory: () => gn,
-            QAMPerformance: () => Ao,
+            QAMPerformance: () => Go,
             Question: () => Vt,
-            RSS: () => cr,
-            RadialMenu: () => yr,
-            Recent: () => Zr,
+            RSS: () => Cr,
+            RadialMenu: () => Vr,
+            Recent: () => Tr,
             Recommendations: () => zn,
             RecommendedByCurators: () => jn,
             RecommendedByFriends: () => Yn,
             RecommendedByTags: () => Xn,
-            Redo: () => $i,
+            Redo: () => Ji,
             Refresh: () => Qt,
             Reload: () => et,
             RemotePlay: () => Rt,
             RemotePlayTogether: () => In,
             Repeat: () => je,
             RepeatOne: () => Ke,
-            ReportAI: () => Go,
+            ReportAI: () => Fo,
             Resize: () => Dt,
-            Restore: () => Ot,
+            Restore: () => Zt,
             ReviewHelp: () => Cn,
             Reviews: () => hn,
-            RightStickScroll: () => $r,
-            RollAxisOverlay: () => Ki,
+            RightStickScroll: () => Jr,
+            RollAxisOverlay: () => Yi,
             Rows: () => Ye,
-            SDR: () => Ho,
-            Schedule: () => Bt,
-            Scratchpad: () => Zt,
+            SDR: () => So,
+            Schedule: () => Ot,
+            Scratchpad: () => Bt,
             Screenshot: () => D,
             Scroll: () => Tt,
             SdCard: () => Ct,
@@ -16530,91 +16537,91 @@ var CLSTAMP = "8480208";
             Security: () => C,
             Settings: () => _,
             Shader: () => Qe,
-            Share: () => ur,
+            Share: () => hr,
             ShoppingCart: () => qn,
             ShowKeyboard: () => Ve,
             Shuffle: () => Ue,
             SinglePlayer: () => It,
             SingleWindowToggle: () => Ft,
-            SketchArrowTopLeft: () => Hr,
-            SlimRadialMenu: () => Vr,
-            SortByGeneric: () => br,
-            SortByName: () => Mr,
-            SortByTime: () => _r,
+            SketchArrowTopLeft: () => Sr,
+            SlimRadialMenu: () => Rr,
+            SortByGeneric: () => xr,
+            SortByName: () => _r,
+            SortByTime: () => br,
             SortDescending: () => Ne,
             Specials: () => Qn,
-            SpellCheck: () => ko,
+            SpellCheck: () => Ho,
             Spinner: () => Pt,
-            Standing: () => Do,
+            Standing: () => Zo,
             Star: () => T,
             SteamAchievements: () => Vn,
-            SteamControllerRightPadHighlighted: () => Ni,
-            SteamCuratorsTwitch: () => mr,
-            SteamCuratorsTwitter: () => hr,
-            SteamCuratorsYoutube: () => dr,
+            SteamControllerRightPadHighlighted: () => Ai,
+            SteamCuratorsTwitch: () => pr,
+            SteamCuratorsTwitter: () => dr,
+            SteamCuratorsYoutube: () => mr,
             SteamDeck: () => X,
-            SteamDeckFrontOutline: () => pi,
+            SteamDeckFrontOutline: () => gi,
             SteamDeckNeedsUpdate: () => $,
-            SteamDeckSetupQR: () => oi,
-            SteamDeckTiltedOutline: () => gi,
+            SteamDeckSetupQR: () => li,
+            SteamDeckTiltedOutline: () => fi,
             SteamGuard: () => _n,
-            SteamInputAPISvg: () => Ti,
+            SteamInputAPISvg: () => Ii,
             SteamLogo: () => mn,
-            SteamLogoInsetLowBattery: () => yo,
-            SteamNetworkIssue: () => bo,
+            SteamLogoInsetLowBattery: () => Vo,
+            SteamNetworkIssue: () => xo,
             SteamNews: () => Wt,
             SteamPal: () => fe,
             SteamSupport: () => bn,
-            SteamdeckUpdate: () => Ur,
+            SteamdeckUpdate: () => jr,
             Store: () => v,
             StoreNews: () => er,
-            StoreStar: () => No,
-            Stream: () => mi,
+            StoreStar: () => Ao,
+            Stream: () => pi,
             Streaming: () => Le,
             Submit: () => zt,
             Support: () => on,
-            Symbols: () => Pr,
+            Symbols: () => Wr,
             TV: () => u,
-            TextBold: () => Ji,
-            TextBullets: () => qi,
-            TextCode: () => Qi,
-            TextCodeBlock: () => eo,
-            TextH1: () => to,
-            TextH2: () => no,
-            TextH3: () => ro,
-            TextH4: () => io,
-            TextH5: () => oo,
-            TextIndent: () => lo,
-            TextItalic: () => ao,
-            TextLink: () => so,
-            TextNewNote: () => co,
-            TextOutdent: () => Co,
-            TextParagraph: () => uo,
-            TextStrikethrough: () => ho,
-            TextUnderline: () => mo,
+            TextBold: () => qi,
+            TextBullets: () => Qi,
+            TextCode: () => eo,
+            TextCodeBlock: () => to,
+            TextH1: () => no,
+            TextH2: () => ro,
+            TextH3: () => io,
+            TextH4: () => oo,
+            TextH5: () => lo,
+            TextIndent: () => ao,
+            TextItalic: () => so,
+            TextLink: () => co,
+            TextNewNote: () => Co,
+            TextOutdent: () => uo,
+            TextParagraph: () => ho,
+            TextStrikethrough: () => mo,
+            TextUnderline: () => po,
             ThumbsDown: () => sn,
             ThumbsUp: () => an,
             TimeWarning: () => ct,
-            Timer: () => So,
+            Timer: () => yo,
             TopOfQueue: () => $t,
             TopSellers: () => Un,
-            TouchMenu: () => Rr,
+            TouchMenu: () => Dr,
             TouchTap: () => me,
             Trade: () => Kn,
             Transfer: () => Ut,
             Trash: () => jt,
-            Travel: () => Gr,
-            Twitch: () => ir,
-            Twitter: () => or,
-            Undo: () => Xi,
-            UnknownRing: () => To,
+            Travel: () => Fr,
+            Twitch: () => or,
+            Twitter: () => lr,
+            Undo: () => $i,
+            UnknownRing: () => Io,
             Upcoming: () => tr,
-            Update: () => jr,
+            Update: () => Kr,
             User: () => Xt,
             VR: () => nr,
-            VRControllerSide: () => Ro,
+            VRControllerSide: () => Do,
             VROnlyIcon: () => Bo,
-            VRSupportedIcon: () => Zo,
+            VRSupportedIcon: () => To,
             Video: () => Pn,
             VoiceRoom: () => An,
             Volume: () => W,
@@ -16623,7 +16630,7 @@ var CLSTAMP = "8480208";
             Volume60: () => _e,
             VolumeMuted: () => xe,
             Wallet: () => x,
-            WholeMouseImage: () => Di,
+            WholeMouseImage: () => Zi,
             WiFi: () => ne,
             WiredNetwork: () => ue,
             WiredNetworkWarning: () => he,
@@ -16635,12 +16642,12 @@ var CLSTAMP = "8480208";
             Workshop: () => w,
             WriteReview: () => un,
             X_Line: () => ln,
-            Xbox360ControllerFrontOutline: () => vi,
-            XboxOneControllerFrontOutline: () => Li,
-            YawAxisOverlay: () => Yi,
+            Xbox360ControllerFrontOutline: () => Li,
+            XboxOneControllerFrontOutline: () => wi,
+            YawAxisOverlay: () => Xi,
             YellowExclamation: () => Q,
             YourGroups: () => xn,
-            Youtube: () => ar,
+            Youtube: () => sr,
           });
         var r = n(70655),
           i = n(67294),
@@ -17155,7 +17162,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function O(e) {
+        function Z(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -17172,7 +17179,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function B(e) {
+        function O(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -17189,7 +17196,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function Z(e) {
+        function B(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -18742,7 +18749,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function Oe(e) {
+        function Ze(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -18765,7 +18772,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function Be(e) {
+        function Oe(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -18782,7 +18789,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function Ze(e) {
+        function Be(e) {
           const { direction: t } = e,
             n = (0, r._T)(e, ["direction"]);
           switch (t) {
@@ -19938,7 +19945,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function Ot(e) {
+        function Zt(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -19955,7 +19962,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function Bt(e) {
+        function Ot(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -19976,7 +19983,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function Zt(e) {
+        function Bt(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -21055,7 +21062,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function On(e) {
+        function Zn(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -21087,7 +21094,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function Bn(e) {
+        function On(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -21118,7 +21125,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function Zn(e) {
+        function Bn(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -21577,8 +21584,16 @@ var CLSTAMP = "8480208";
               e,
             ),
             i.createElement("path", {
-              d: "M28 4.05005H8C6.93913 4.05005 5.92172 4.47148 5.17157 5.22162C4.42143 5.97177 4 6.98918 4 8.05005V28.05C4 29.1109 4.42143 30.1283 5.17157 30.8785C5.92172 31.6286 6.93913 32.05 8 32.05H28C29.0609 32.05 30.0783 31.6286 30.8284 30.8785C31.5786 30.1283 32 29.1109 32 28.05V8.05005C32 6.98918 31.5786 5.97177 30.8284 5.22162C30.0783 4.47148 29.0609 4.05005 28 4.05005ZM24 12.05H20V15.05H24L23 19.05H20V28.05H16V19.05H13V15.05H16V12.86C16 11.5844 16.5068 10.3609 17.4088 9.45887C18.3109 8.55682 19.5343 8.05005 20.81 8.05005H24V12.05Z",
               fill: "currentColor",
+              d: "M8.61686 18.3184V13H11.3224V25.9716H8.61686V20.6533H2.72404V25.9716H0V13H2.72404V18.3184H8.61686Z",
+            }),
+            i.createElement("path", {
+              fill: "currentColor",
+              d: "M17.3216 13C18.6311 13 19.7924 13.2471 20.8054 13.7412C21.8308 14.223 22.6338 14.9457 23.2144 15.9093C23.8074 16.873 24.1039 18.0404 24.1039 19.4117C24.1039 20.7953 23.8074 21.9813 23.2144 22.9696C22.6338 23.9456 21.8308 24.693 20.8054 25.2119C19.78 25.7184 18.6188 25.9716 17.3216 25.9716H13.1707V13H17.3216ZM15.9318 15.4646V23.5255H17.3401C19.9221 23.5255 21.2131 22.1543 21.2131 19.4117C21.2131 18.028 20.8857 17.0274 20.2309 16.4097C19.5885 15.7796 18.6249 15.4646 17.3401 15.4646H15.9318Z",
+            }),
+            i.createElement("path", {
+              fill: "currentColor",
+              d: "M36 25.9716H32.9795L30.3666 21.5983H28.1244V25.9716H25.4003V13H30.2554C32.0344 13 33.3439 13.3583 34.184 14.0748C35.024 14.779 35.4441 15.7673 35.4441 17.0397C35.4441 18.0404 35.2217 18.8743 34.777 19.5414C34.3446 20.2085 33.7331 20.715 32.9424 21.0609L36 25.9716ZM28.1244 15.3164V19.2634H30.2554C30.972 19.2634 31.5279 19.0843 31.9232 18.726C32.3309 18.3554 32.5347 17.8489 32.5347 17.2065C32.5347 16.5765 32.3371 16.107 31.9417 15.7982C31.5588 15.477 30.9411 15.3164 30.0886 15.3164H28.1244Z",
             }),
           );
         }
@@ -21594,7 +21609,7 @@ var CLSTAMP = "8480208";
               e,
             ),
             i.createElement("path", {
-              d: "M25 18.05H22V11.05H25V18.05ZM19 11.05H16V18.05H19V11.05ZM9.83 4.05005L4 9.70005V29.05H11V35.05L16.83 29.05H22.5L32 19.88V4.05005H9.83ZM29 18L22.76 24H18L14 28V24H11V7.00005H29V18Z",
+              d: "M28 4.05005H8C6.93913 4.05005 5.92172 4.47148 5.17157 5.22162C4.42143 5.97177 4 6.98918 4 8.05005V28.05C4 29.1109 4.42143 30.1283 5.17157 30.8785C5.92172 31.6286 6.93913 32.05 8 32.05H28C29.0609 32.05 30.0783 31.6286 30.8284 30.8785C31.5786 30.1283 32 29.1109 32 28.05V8.05005C32 6.98918 31.5786 5.97177 30.8284 5.22162C30.0783 4.47148 29.0609 4.05005 28 4.05005ZM24 12.05H20V15.05H24L23 19.05H20V28.05H16V19.05H13V15.05H16V12.86C16 11.5844 16.5068 10.3609 17.4088 9.45887C18.3109 8.55682 19.5343 8.05005 20.81 8.05005H24V12.05Z",
               fill: "currentColor",
             }),
           );
@@ -21611,7 +21626,7 @@ var CLSTAMP = "8480208";
               e,
             ),
             i.createElement("path", {
-              d: "M18 3.05005C15.0333 3.05005 12.1332 3.92978 9.66645 5.578C7.19972 7.22623 5.27713 9.56891 4.14181 12.3098C3.0065 15.0507 2.70945 18.0667 3.28823 20.9764C3.86701 23.8861 5.29562 26.5589 7.3934 28.6567C9.49119 30.7544 12.1639 32.1831 15.0737 32.7618C17.9834 33.3406 20.9994 33.0436 23.7403 31.9082C26.4811 30.7729 28.8238 28.8503 30.472 26.3836C32.1203 23.9169 33 21.0168 33 18.05C33 16.0802 32.612 14.1297 31.8582 12.3098C31.1044 10.4899 29.9995 8.83633 28.6066 7.44345C27.2137 6.05057 25.5601 4.94568 23.7403 4.19186C21.9204 3.43804 19.9698 3.05005 18 3.05005ZM25.68 13.79C25.68 13.95 25.68 14.11 25.68 14.28C25.6928 16.2048 25.1857 18.0972 24.2123 19.7576C23.2388 21.4181 21.8351 22.7849 20.1494 23.7138C18.4636 24.6427 16.5583 25.0992 14.6347 25.0352C12.711 24.9712 10.8403 24.389 9.22001 23.35C9.52315 23.3653 9.82686 23.3653 10.13 23.35C11.8274 23.3493 13.4754 22.7788 14.81 21.73C14.0264 21.7114 13.2683 21.4477 12.6423 20.976C12.0163 20.5042 11.5539 19.8482 11.32 19.1C11.5711 19.1436 11.8252 19.1671 12.08 19.17C12.4504 19.1681 12.8194 19.1245 13.18 19.04C12.3466 18.8524 11.6064 18.3761 11.0903 17.6953C10.5742 17.0145 10.3155 16.1732 10.36 15.32C10.36 15.61 11.25 15.78 11.86 15.8C11.3218 15.4608 10.8723 14.998 10.5488 14.4501C10.2253 13.9023 10.0372 13.2852 10 12.65C10.0004 11.9798 10.1762 11.3213 10.51 10.74C11.4475 11.9172 12.6237 12.8823 13.9613 13.5717C15.2989 14.2612 16.7674 14.6594 18.27 14.74C18.2017 14.4585 18.1681 14.1697 18.17 13.88C18.1673 12.8793 18.5617 11.9183 19.2665 11.2078C19.9714 10.4973 20.9292 10.0953 21.93 10.09C22.4464 10.0894 22.9573 10.1957 23.4306 10.4022C23.9039 10.6087 24.3293 10.911 24.68 11.29C25.5229 11.1206 26.331 10.8095 27.07 10.37C26.7885 11.2421 26.2029 11.9838 25.42 12.46C26.1654 12.3724 26.8935 12.1735 27.58 11.87C27.058 12.6114 26.4158 13.2603 25.68 13.79Z",
+              d: "M25 18.05H22V11.05H25V18.05ZM19 11.05H16V18.05H19V11.05ZM9.83 4.05005L4 9.70005V29.05H11V35.05L16.83 29.05H22.5L32 19.88V4.05005H9.83ZM29 18L22.76 24H18L14 28V24H11V7.00005H29V18Z",
               fill: "currentColor",
             }),
           );
@@ -21628,7 +21643,7 @@ var CLSTAMP = "8480208";
               e,
             ),
             i.createElement("path", {
-              d: "M15.1 16.47C14.7407 16.4398 14.3806 16.5188 14.067 16.6967C13.7533 16.8746 13.5007 17.1431 13.3422 17.467C13.1837 17.7908 13.1267 18.155 13.1787 18.5118C13.2307 18.8687 13.3892 19.2015 13.6336 19.4666C13.8779 19.7318 14.1966 19.917 14.548 19.998C14.8994 20.079 15.267 20.052 15.6028 19.9205C15.9385 19.789 16.2267 19.5592 16.4297 19.2611C16.6326 18.963 16.7407 18.6106 16.74 18.25C16.7494 18.0254 16.7144 17.8012 16.637 17.5901C16.5596 17.3791 16.4414 17.1853 16.2891 17.02C16.1368 16.8547 15.9533 16.721 15.7493 16.6266C15.5453 16.5323 15.3246 16.4791 15.1 16.47ZM20.94 16.47C20.5807 16.4398 20.2206 16.5188 19.907 16.6967C19.5933 16.8746 19.3407 17.1431 19.1822 17.467C19.0237 17.7908 18.9667 18.155 19.0187 18.5118C19.0707 18.8687 19.2292 19.2015 19.4736 19.4666C19.7179 19.7318 20.0366 19.917 20.388 19.998C20.7394 20.079 21.107 20.052 21.4428 19.9205C21.7785 19.789 22.0667 19.5592 22.2696 19.2611C22.4726 18.963 22.5807 18.6106 22.58 18.25C22.5894 18.0254 22.5544 17.8012 22.477 17.5901C22.3996 17.3791 22.2814 17.1853 22.1291 17.02C21.9768 16.8547 21.7933 16.721 21.5893 16.6266C21.3853 16.5323 21.1646 16.4791 20.94 16.47ZM28 3.05005H8C6.93913 3.05005 5.92172 3.47148 5.17157 4.22162C4.42143 4.97177 4 5.98918 4 7.05005V27.05C4 28.1109 4.42143 29.1283 5.17157 29.8785C5.92172 30.6286 6.93913 31.05 8 31.05H25.42L24.58 28.1101L32 34.8V7.05005C32 5.98918 31.5786 4.97177 30.8284 4.22162C30.0783 3.47148 29.0609 3.05005 28 3.05005ZM22.54 24C22.54 24 21.97 23.3101 21.49 22.7001C22.6487 22.4307 23.6734 21.757 24.38 20.8C23.804 21.1817 23.1868 21.497 22.54 21.74C21.7964 22.0603 21.0177 22.2919 20.22 22.43C18.8524 22.6921 17.4476 22.6921 16.08 22.43C15.276 22.2775 14.4889 22.0464 13.73 21.74C13.3279 21.5876 12.9369 21.4071 12.56 21.2001L12.42 21.1201L12.35 21C12.06 20.84 11.9 20.73 11.9 20.73C12.5858 21.6658 13.5757 22.334 14.7 22.6201C14.22 23.2301 13.63 23.9501 13.63 23.9501C12.6793 23.9722 11.7375 23.7614 10.887 23.3361C10.0364 22.9108 9.30272 22.2839 8.75 21.51C8.802 18.2682 9.592 15.0809 11.06 12.19C12.3455 11.1767 13.915 10.5895 15.55 10.51L15.71 10.7C14.1706 11.0801 12.7334 11.7936 11.5 12.79C11.5 12.79 11.86 12.6 12.45 12.33C13.6006 11.81 14.8254 11.4726 16.08 11.33H16.35C17.4227 11.1991 18.5073 11.1991 19.58 11.33C21.2713 11.5196 22.909 12.0395 24.4 12.86C23.2242 11.9162 21.8605 11.2344 20.4 10.86L20.62 10.61C22.2579 10.6901 23.8304 11.2771 25.12 12.29C26.5822 15.1826 27.3687 18.3693 27.42 21.6101C26.8594 22.3722 26.1229 22.9876 25.2732 23.4037C24.4235 23.8199 23.4858 24.0244 22.54 24Z",
+              d: "M18 3.05005C15.0333 3.05005 12.1332 3.92978 9.66645 5.578C7.19972 7.22623 5.27713 9.56891 4.14181 12.3098C3.0065 15.0507 2.70945 18.0667 3.28823 20.9764C3.86701 23.8861 5.29562 26.5589 7.3934 28.6567C9.49119 30.7544 12.1639 32.1831 15.0737 32.7618C17.9834 33.3406 20.9994 33.0436 23.7403 31.9082C26.4811 30.7729 28.8238 28.8503 30.472 26.3836C32.1203 23.9169 33 21.0168 33 18.05C33 16.0802 32.612 14.1297 31.8582 12.3098C31.1044 10.4899 29.9995 8.83633 28.6066 7.44345C27.2137 6.05057 25.5601 4.94568 23.7403 4.19186C21.9204 3.43804 19.9698 3.05005 18 3.05005ZM25.68 13.79C25.68 13.95 25.68 14.11 25.68 14.28C25.6928 16.2048 25.1857 18.0972 24.2123 19.7576C23.2388 21.4181 21.8351 22.7849 20.1494 23.7138C18.4636 24.6427 16.5583 25.0992 14.6347 25.0352C12.711 24.9712 10.8403 24.389 9.22001 23.35C9.52315 23.3653 9.82686 23.3653 10.13 23.35C11.8274 23.3493 13.4754 22.7788 14.81 21.73C14.0264 21.7114 13.2683 21.4477 12.6423 20.976C12.0163 20.5042 11.5539 19.8482 11.32 19.1C11.5711 19.1436 11.8252 19.1671 12.08 19.17C12.4504 19.1681 12.8194 19.1245 13.18 19.04C12.3466 18.8524 11.6064 18.3761 11.0903 17.6953C10.5742 17.0145 10.3155 16.1732 10.36 15.32C10.36 15.61 11.25 15.78 11.86 15.8C11.3218 15.4608 10.8723 14.998 10.5488 14.4501C10.2253 13.9023 10.0372 13.2852 10 12.65C10.0004 11.9798 10.1762 11.3213 10.51 10.74C11.4475 11.9172 12.6237 12.8823 13.9613 13.5717C15.2989 14.2612 16.7674 14.6594 18.27 14.74C18.2017 14.4585 18.1681 14.1697 18.17 13.88C18.1673 12.8793 18.5617 11.9183 19.2665 11.2078C19.9714 10.4973 20.9292 10.0953 21.93 10.09C22.4464 10.0894 22.9573 10.1957 23.4306 10.4022C23.9039 10.6087 24.3293 10.911 24.68 11.29C25.5229 11.1206 26.331 10.8095 27.07 10.37C26.7885 11.2421 26.2029 11.9838 25.42 12.46C26.1654 12.3724 26.8935 12.1735 27.58 11.87C27.058 12.6114 26.4158 13.2603 25.68 13.79Z",
               fill: "currentColor",
             }),
           );
@@ -21645,12 +21660,29 @@ var CLSTAMP = "8480208";
               e,
             ),
             i.createElement("path", {
-              d: "M34 18.05C34.001 13.9026 33.0895 9.80577 31.33 6.05005H4.67001C2.91143 9.80607 1.99988 13.9027 1.99988 18.05C1.99988 22.1974 2.91143 26.294 4.67001 30.05H31.33C33.0867 26.2934 33.9981 22.1972 34 18.05ZM14 24.67V11.33L24.67 18L14 24.67Z",
+              d: "M15.1 16.47C14.7407 16.4398 14.3806 16.5188 14.067 16.6967C13.7533 16.8746 13.5007 17.1431 13.3422 17.467C13.1837 17.7908 13.1267 18.155 13.1787 18.5118C13.2307 18.8687 13.3892 19.2015 13.6336 19.4666C13.8779 19.7318 14.1966 19.917 14.548 19.998C14.8994 20.079 15.267 20.052 15.6028 19.9205C15.9385 19.789 16.2267 19.5592 16.4297 19.2611C16.6326 18.963 16.7407 18.6106 16.74 18.25C16.7494 18.0254 16.7144 17.8012 16.637 17.5901C16.5596 17.3791 16.4414 17.1853 16.2891 17.02C16.1368 16.8547 15.9533 16.721 15.7493 16.6266C15.5453 16.5323 15.3246 16.4791 15.1 16.47ZM20.94 16.47C20.5807 16.4398 20.2206 16.5188 19.907 16.6967C19.5933 16.8746 19.3407 17.1431 19.1822 17.467C19.0237 17.7908 18.9667 18.155 19.0187 18.5118C19.0707 18.8687 19.2292 19.2015 19.4736 19.4666C19.7179 19.7318 20.0366 19.917 20.388 19.998C20.7394 20.079 21.107 20.052 21.4428 19.9205C21.7785 19.789 22.0667 19.5592 22.2696 19.2611C22.4726 18.963 22.5807 18.6106 22.58 18.25C22.5894 18.0254 22.5544 17.8012 22.477 17.5901C22.3996 17.3791 22.2814 17.1853 22.1291 17.02C21.9768 16.8547 21.7933 16.721 21.5893 16.6266C21.3853 16.5323 21.1646 16.4791 20.94 16.47ZM28 3.05005H8C6.93913 3.05005 5.92172 3.47148 5.17157 4.22162C4.42143 4.97177 4 5.98918 4 7.05005V27.05C4 28.1109 4.42143 29.1283 5.17157 29.8785C5.92172 30.6286 6.93913 31.05 8 31.05H25.42L24.58 28.1101L32 34.8V7.05005C32 5.98918 31.5786 4.97177 30.8284 4.22162C30.0783 3.47148 29.0609 3.05005 28 3.05005ZM22.54 24C22.54 24 21.97 23.3101 21.49 22.7001C22.6487 22.4307 23.6734 21.757 24.38 20.8C23.804 21.1817 23.1868 21.497 22.54 21.74C21.7964 22.0603 21.0177 22.2919 20.22 22.43C18.8524 22.6921 17.4476 22.6921 16.08 22.43C15.276 22.2775 14.4889 22.0464 13.73 21.74C13.3279 21.5876 12.9369 21.4071 12.56 21.2001L12.42 21.1201L12.35 21C12.06 20.84 11.9 20.73 11.9 20.73C12.5858 21.6658 13.5757 22.334 14.7 22.6201C14.22 23.2301 13.63 23.9501 13.63 23.9501C12.6793 23.9722 11.7375 23.7614 10.887 23.3361C10.0364 22.9108 9.30272 22.2839 8.75 21.51C8.802 18.2682 9.592 15.0809 11.06 12.19C12.3455 11.1767 13.915 10.5895 15.55 10.51L15.71 10.7C14.1706 11.0801 12.7334 11.7936 11.5 12.79C11.5 12.79 11.86 12.6 12.45 12.33C13.6006 11.81 14.8254 11.4726 16.08 11.33H16.35C17.4227 11.1991 18.5073 11.1991 19.58 11.33C21.2713 11.5196 22.909 12.0395 24.4 12.86C23.2242 11.9162 21.8605 11.2344 20.4 10.86L20.62 10.61C22.2579 10.6901 23.8304 11.2771 25.12 12.29C26.5822 15.1826 27.3687 18.3693 27.42 21.6101C26.8594 22.3722 26.1229 22.9876 25.2732 23.4037C24.4235 23.8199 23.4858 24.0244 22.54 24Z",
               fill: "currentColor",
             }),
           );
         }
         function sr(e) {
+          return i.createElement(
+            "svg",
+            Object.assign(
+              {
+                xmlns: "http://www.w3.org/2000/svg",
+                viewBox: "0 0 36 36",
+                fill: "none",
+              },
+              e,
+            ),
+            i.createElement("path", {
+              d: "M34 18.05C34.001 13.9026 33.0895 9.80577 31.33 6.05005H4.67001C2.91143 9.80607 1.99988 13.9027 1.99988 18.05C1.99988 22.1974 2.91143 26.294 4.67001 30.05H31.33C33.0867 26.2934 33.9981 22.1972 34 18.05ZM14 24.67V11.33L24.67 18L14 24.67Z",
+              fill: "currentColor",
+            }),
+          );
+        }
+        function cr(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -21671,7 +21703,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function cr(e) {
+        function Cr(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -21688,7 +21720,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function Cr(e) {
+        function ur(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -21705,7 +21737,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function ur(e) {
+        function hr(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -21726,7 +21758,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function hr(e) {
+        function dr(e) {
           const [t, n] = (0, s.y)();
           return i.createElement(
             "svg",
@@ -21757,7 +21789,7 @@ var CLSTAMP = "8480208";
             ),
           );
         }
-        function dr(e) {
+        function mr(e) {
           const [t, n] = (0, s.y)();
           return i.createElement(
             "svg",
@@ -21788,7 +21820,7 @@ var CLSTAMP = "8480208";
             ),
           );
         }
-        function mr(e) {
+        function pr(e) {
           const [t, n] = (0, s.y)();
           return i.createElement(
             "svg",
@@ -21819,7 +21851,7 @@ var CLSTAMP = "8480208";
             ),
           );
         }
-        function pr(e) {
+        function gr(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -21840,7 +21872,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function gr(e) {
+        function fr(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -21857,7 +21889,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function fr(e) {
+        function vr(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -21878,7 +21910,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function vr(e) {
+        function Lr(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -21899,7 +21931,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function Lr(e) {
+        function wr(e) {
           const { alert: t, urgent: n } = e,
             o = (0, r._T)(e, ["alert", "urgent"]);
           return n
@@ -21975,7 +22007,7 @@ var CLSTAMP = "8480208";
                 ),
               );
         }
-        function wr(e) {
+        function Er(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -21994,7 +22026,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function Er(e) {
+        function Mr(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -22015,7 +22047,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function Mr(e) {
+        function _r(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -22032,7 +22064,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function _r(e) {
+        function br(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -22049,7 +22081,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function br(e) {
+        function xr(e) {
           return i.createElement(
             "svg",
             {
@@ -22069,7 +22101,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function xr(e) {
+        function kr(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -22086,7 +22118,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function kr(e) {
+        function Hr(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -22105,7 +22137,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function Hr() {
+        function Sr() {
           return i.createElement(
             "svg",
             {
@@ -22140,7 +22172,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function Sr(e) {
+        function yr(e) {
           const { layer: t, selected: n } = e,
             o = (0, r._T)(e, ["layer", "selected"]);
           return i.createElement(
@@ -22163,7 +22195,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function yr(e) {
+        function Vr(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -22198,7 +22230,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function Vr(e) {
+        function Rr(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -22233,7 +22265,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function Rr(e) {
+        function Dr(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -22273,7 +22305,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function Dr(e) {
+        function Zr(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -22357,7 +22389,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function Zr(e) {
+        function Tr(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -22376,7 +22408,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function Tr(e) {
+        function Ir(e) {
           return i.createElement(
             "svg",
             {
@@ -22392,7 +22424,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function Ir(e) {
+        function Nr(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -22417,7 +22449,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function Nr(e) {
+        function Ar(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -22436,7 +22468,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function Ar(e) {
+        function Gr(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -22460,7 +22492,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function Gr(e) {
+        function Fr(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -22479,7 +22511,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function Fr(e) {
+        function Pr(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -22505,7 +22537,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function Pr(e) {
+        function Wr(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -22522,7 +22554,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function Wr(e) {
+        function zr(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -22539,7 +22571,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function zr(e) {
+        function Ur(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -22556,7 +22588,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function Ur(e) {
+        function jr(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -22583,7 +22615,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function jr(e) {
+        function Kr(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -22600,7 +22632,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function Kr(e) {
+        function Yr(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -22619,7 +22651,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function Yr(e) {
+        function Xr(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -22654,7 +22686,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function Xr(e) {
+        function $r(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -22683,7 +22715,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function $r(e) {
+        function Jr(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -22716,7 +22748,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function Jr(e) {
+        function qr(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -22738,7 +22770,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function qr(e) {
+        function Qr(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -22760,7 +22792,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function Qr(e) {
+        function ei(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -22782,7 +22814,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function ei(e) {
+        function ti(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -22814,7 +22846,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function ti(e) {
+        function ni(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -22836,7 +22868,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function ni(e) {
+        function ri(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -22858,7 +22890,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function ri(e) {
+        function ii(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -22880,7 +22912,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function ii(e) {
+        function oi(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -22912,7 +22944,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function oi(e) {
+        function li(e) {
           return i.createElement(
             "svg",
             {
@@ -23332,7 +23364,7 @@ var CLSTAMP = "8480208";
             ),
           );
         }
-        function li(e) {
+        function ai(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -23351,7 +23383,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function ai(e) {
+        function si(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -23368,7 +23400,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function si(e) {
+        function ci(e) {
           const { acState: t, batteryLevel: n } = e,
             o = (0, r._T)(e, ["acState", "batteryLevel"]),
             l = 2 == t,
@@ -23429,7 +23461,7 @@ var CLSTAMP = "8480208";
             ),
           );
         }
-        function ci(e) {
+        function Ci(e) {
           const { acState: t, batteryLevel: n } = e,
             o = (0, r._T)(e, ["acState", "batteryLevel"]);
           return i.createElement(
@@ -23464,7 +23496,7 @@ var CLSTAMP = "8480208";
             ),
           );
         }
-        function Ci(e) {
+        function ui(e) {
           const { acState: t, batteryLevel: n } = e,
             o = (0, r._T)(e, ["acState", "batteryLevel"]),
             l = 2 == t,
@@ -23539,7 +23571,7 @@ var CLSTAMP = "8480208";
             ),
           );
         }
-        function ui(e) {
+        function hi(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -23564,7 +23596,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function hi(e) {
+        function di(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -23589,7 +23621,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function di(e) {
+        function mi(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -23608,7 +23640,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function mi(e) {
+        function pi(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -23627,7 +23659,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function pi(e) {
+        function gi(e) {
           const {
               highlightViewButton: t,
               highlightOptionsButton: n,
@@ -23791,7 +23823,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function gi(e) {
+        function fi(e) {
           const {
               highlightViewButton: t,
               highlightOptionsButton: n,
@@ -23842,8 +23874,8 @@ var CLSTAMP = "8480208";
             [H, S] = (0, s.y)(),
             [y, V] = (0, s.y)(),
             [R, D] = (0, s.y)(),
-            [O, B] = (0, s.y)(),
-            [Z, T] = (0, s.y)();
+            [Z, O] = (0, s.y)(),
+            [B, T] = (0, s.y)();
           return i.createElement(
             "svg",
             Object.assign(
@@ -23867,7 +23899,7 @@ var CLSTAMP = "8480208";
               d: "M823.07 242.31H768.71C764.6 242.31 761.25 239.13 761.25 235.22V200.62C761.25 196.71 764.6 193.53 768.71 193.53H823.07C827.18 193.53 830.53 196.71 830.53 200.62V235.22C830.53 239.12 827.18 242.31 823.07 242.31Z",
             }),
             i.createElement("path", {
-              fill: w ? B : null,
+              fill: w ? O : null,
               d: "M823.07 299.67H768.71C764.6 299.67 761.25 296.49 761.25 292.58V257.98C761.25 254.07 764.6 250.89 768.71 250.89H823.07C827.18 250.89 830.53 254.07 830.53 257.98V292.58C830.53 296.48 827.18 299.67 823.07 299.67Z",
             }),
             i.createElement("path", {
@@ -24252,7 +24284,7 @@ var CLSTAMP = "8480208";
                   height: "0.0820009",
                 },
                 i.createElement("use", {
-                  xlinkHref: "#" + Z,
+                  xlinkHref: "#" + B,
                   transform: "scale(0.00721709 0.0102501)",
                 }),
               ),
@@ -24265,7 +24297,7 @@ var CLSTAMP = "8480208";
                   height: "0.0820008",
                 },
                 i.createElement("use", {
-                  xlinkHref: "#" + Z,
+                  xlinkHref: "#" + B,
                   transform: "scale(0.00721709 0.0102501)",
                 }),
               ),
@@ -24278,25 +24310,25 @@ var CLSTAMP = "8480208";
                   height: "0.0820009",
                 },
                 i.createElement("use", {
-                  xlinkHref: "#" + Z,
+                  xlinkHref: "#" + B,
                   transform: "scale(0.00721709 0.0102501)",
                 }),
               ),
               i.createElement(
                 "pattern",
                 {
-                  id: O,
+                  id: Z,
                   patternContentUnits: "objectBoundingBox",
                   width: "0.0577367",
                   height: "0.0820008",
                 },
                 i.createElement("use", {
-                  xlinkHref: "#" + Z,
+                  xlinkHref: "#" + B,
                   transform: "scale(0.00721709 0.0102501)",
                 }),
               ),
               i.createElement("image", {
-                id: Z,
+                id: B,
                 width: "8",
                 height: "8",
                 xlinkHref:
@@ -24305,7 +24337,7 @@ var CLSTAMP = "8480208";
             ),
           );
         }
-        function fi(e) {
+        function vi(e) {
           const {
               hasCaptureButton: t,
               highlightLeftBumper: n,
@@ -24336,9 +24368,9 @@ var CLSTAMP = "8480208";
               highlightY: V,
               highlightDPadUp: R,
               highlightDPadDown: D,
-              highlightDPadLeft: O,
-              highlightDPadRight: B,
-              highlightTouchpad: Z,
+              highlightDPadLeft: Z,
+              highlightDPadRight: O,
+              highlightTouchpad: B,
               touchpadTouchX: T,
               touchpadTouchY: I,
               bUseReversedLayout: N,
@@ -24555,7 +24587,7 @@ var CLSTAMP = "8480208";
                 fill: "#97AFDD",
                 d: "M803.871 231.996L802.104 230.229L785.561 246.794L768.997 230.229L767.23 231.996L783.794 248.56L767.23 265.104L768.997 266.871L785.561 250.306L802.104 266.871L803.871 265.104L787.307 248.56L803.871 231.996Z",
               }),
-            B &&
+            O &&
               i.createElement("path", {
                 className: a().GenericGamepadHighlight,
                 stroke: "currentColor",
@@ -24563,7 +24595,7 @@ var CLSTAMP = "8480208";
                 strokeWidth: "3",
                 strokeMiterlimit: "10",
               }),
-            O &&
+            Z &&
               i.createElement("path", {
                 className: a().GenericGamepadHighlight,
                 stroke: "currentColor",
@@ -24587,7 +24619,7 @@ var CLSTAMP = "8480208";
                 strokeWidth: "3",
                 strokeMiterlimit: "10",
               }),
-            Z &&
+            B &&
               i.createElement("path", {
                 className: a().GenericGamepadHighlight,
                 stroke: "currentColor",
@@ -24599,7 +24631,7 @@ var CLSTAMP = "8480208";
               fill: "currentColor",
               d: "M229.691 121.612H231.691H229.691ZM229.691 243.223H227.691H229.691ZM229.691 211.131H227.691H229.691ZM229.691 153.704H227.691H229.691ZM260.09 110.1C266.448 110.1 271.602 115.254 271.602 121.612H275.602C275.602 113.045 268.657 106.1 260.09 106.1V110.1ZM243.203 110.1H260.09V106.1H243.203V110.1ZM231.691 121.612C231.691 115.254 236.845 110.1 243.203 110.1V106.1C234.636 106.1 227.691 113.045 227.691 121.612H231.691ZM231.691 153.704L231.691 121.612H227.691L227.691 153.704H231.691ZM190.847 162.46H222.935V158.46H190.847V162.46ZM179.335 173.972C179.335 167.614 184.489 162.46 190.847 162.46V158.46C182.28 158.46 175.335 165.405 175.335 173.972H179.335ZM179.335 190.863V173.972H175.335V190.863H179.335ZM190.847 202.375C184.489 202.375 179.335 197.221 179.335 190.863H175.335C175.335 199.43 182.28 206.375 190.847 206.375V202.375ZM222.935 202.375H190.847V206.375H222.935V202.375ZM231.691 243.223L231.691 211.131H227.691L227.691 243.223H231.691ZM243.203 254.735C236.845 254.735 231.691 249.581 231.691 243.223H227.691C227.691 251.79 234.636 258.735 243.203 258.735V254.735ZM260.09 254.735H243.203V258.735H260.09V254.735ZM271.602 243.223C271.602 249.581 266.448 254.735 260.09 254.735V258.735C268.657 258.735 275.602 251.79 275.602 243.223H271.602ZM271.602 211.131V243.223H275.602V211.131H271.602ZM312.446 202.375H280.358V206.375H312.446V202.375ZM323.958 190.863C323.958 197.221 318.804 202.375 312.446 202.375V206.375C321.013 206.375 327.958 199.43 327.958 190.863H323.958ZM323.958 173.972V190.863H327.958V173.972H323.958ZM312.446 162.46C318.804 162.46 323.958 167.614 323.958 173.972H327.958C327.958 165.405 321.013 158.46 312.446 158.46V162.46ZM280.358 162.46H312.446V158.46H280.358V162.46ZM271.602 121.612V153.704H275.602V121.612H271.602ZM280.358 158.46C277.732 158.46 275.602 156.331 275.602 153.704H271.602C271.602 158.54 275.522 162.46 280.358 162.46V158.46ZM275.602 211.131C275.602 208.505 277.732 206.375 280.358 206.375V202.375C275.522 202.375 271.602 206.295 271.602 211.131H275.602ZM222.935 206.375C225.561 206.375 227.691 208.505 227.691 211.131H231.691C231.691 206.295 227.77 202.375 222.935 202.375V206.375ZM227.691 153.704C227.691 156.331 225.561 158.46 222.935 158.46V162.46C227.77 162.46 231.691 158.54 231.691 153.704H227.691Z",
             }),
-            !Z &&
+            !B &&
               i.createElement("rect", {
                 className: b ? a().GenericGamepadHighlight : null,
                 stroke: "currentColor",
@@ -24611,7 +24643,7 @@ var CLSTAMP = "8480208";
                 strokeWidth: "4",
                 strokeMiterlimit: "10",
               }),
-            !Z &&
+            !B &&
               i.createElement("rect", {
                 className: _ ? a().GenericGamepadHighlight : null,
                 stroke: "currentColor",
@@ -24623,7 +24655,7 @@ var CLSTAMP = "8480208";
                 strokeWidth: "4",
                 strokeMiterlimit: "10",
               }),
-            !Z &&
+            !B &&
               i.createElement("rect", {
                 className: k ? a().GenericGamepadHighlight : null,
                 stroke: "currentColor",
@@ -24635,7 +24667,7 @@ var CLSTAMP = "8480208";
                 strokeWidth: "4",
                 strokeMiterlimit: "10",
               }),
-            !Z &&
+            !B &&
               i.createElement("path", {
                 className: x ? a().GenericGamepadHighlight : null,
                 stroke: "currentColor",
@@ -24731,7 +24763,7 @@ var CLSTAMP = "8480208";
               }),
           );
         }
-        function vi(e) {
+        function Li(e) {
           const {
               hasCaptureButton: t,
               highlightLeftBumper: n,
@@ -24762,9 +24794,9 @@ var CLSTAMP = "8480208";
               highlightY: V,
               highlightDPadUp: R,
               highlightDPadDown: D,
-              highlightDPadLeft: O,
-              highlightDPadRight: B,
-              highlightTouchpad: Z,
+              highlightDPadLeft: Z,
+              highlightDPadRight: O,
+              highlightTouchpad: B,
               touchpadTouchX: T,
               touchpadTouchY: I,
               bUseReversedLayout: N,
@@ -24842,22 +24874,22 @@ var CLSTAMP = "8480208";
               d: "M305.01 505.897C351.009 480.714 396.629 478.678 487.813 478.678C578.996 478.678 624.617 480.714 670.615 505.897C717.801 531.731 746.261 563.55 775.241 595.952C775.851 596.634 776.462 597.316 777.072 597.999C804.738 628.92 833.218 660.228 879.092 686.752C835.832 678.795 810.357 662.437 787.927 641.624C778.968 633.309 770.517 624.307 761.583 614.791C758.324 611.32 755.001 607.78 751.566 604.181C738.745 590.747 724.456 576.586 706.37 562.375C671.872 535.27 642.44 520.403 608.879 512.599C575.401 504.815 537.923 504.088 487.447 505.067C436.971 504.088 399.483 504.815 365.995 512.599C332.424 520.403 302.981 535.27 268.483 562.375C250.457 576.539 236.278 590.66 223.602 604.066C219.976 607.901 216.482 611.667 213.06 615.356C204.486 624.597 196.367 633.349 187.77 641.458C165.754 662.227 140.78 678.601 98.097 686.683C143.764 660.168 171.898 628.872 199.237 597.971C199.81 597.324 200.382 596.677 200.953 596.031C229.647 563.587 257.821 531.732 305.01 505.897Z",
               strokeWidth: "4",
             }),
-            B &&
+            O &&
               i.createElement("path", {
                 className: a().GenericGamepadHighlight,
                 d: "M344.3 312.8L380.849 349.326C389.211 341.827 400.259 337.263 412.367 337.263C419.191 338.767 421.826 291.042 412.367 289.744C399.895 289.744 388.548 284.902 380.103 276.997L344.3 312.8Z",
               }),
-            B &&
+            O &&
               i.createElement("path", {
                 fill: "currentColor",
                 d: "M344.3 312.8L343.239 311.739L342.178 312.8L343.24 313.861L344.3 312.8ZM380.849 349.326L379.789 350.387L380.793 351.391L381.851 350.443L380.849 349.326ZM380.103 276.997L381.128 275.902L380.068 274.91L379.042 275.936L380.103 276.997ZM412.367 337.263L412.69 335.799C412.584 335.775 412.475 335.763 412.367 335.763V337.263ZM412.367 289.744L412.571 288.258C412.503 288.249 412.435 288.244 412.367 288.244V289.744ZM343.24 313.861L379.789 350.387L381.91 348.265L345.36 311.739L343.24 313.861ZM412.044 338.728C413.925 339.143 415.237 337.736 415.996 336.485C416.821 335.128 417.49 333.208 418.032 331.015C419.125 326.595 419.806 320.616 419.973 314.596C420.139 308.578 419.795 302.409 418.785 297.618C418.282 295.232 417.595 293.094 416.663 291.472C415.744 289.874 414.425 288.512 412.571 288.258L412.163 291.23C412.674 291.3 413.341 291.713 414.062 292.968C414.77 294.199 415.376 295.99 415.849 298.237C416.793 302.713 417.137 308.625 416.974 314.513C416.811 320.399 416.145 326.15 415.12 330.295C414.603 332.386 414.021 333.958 413.432 334.928C413.137 335.413 412.897 335.652 412.75 335.753C412.685 335.797 412.657 335.802 412.664 335.8C412.667 335.799 412.673 335.798 412.681 335.798C412.689 335.798 412.692 335.799 412.69 335.799L412.044 338.728ZM412.367 288.244C400.291 288.244 389.306 283.558 381.128 275.902L379.078 278.092C387.789 286.247 399.499 291.244 412.367 291.244V288.244ZM379.042 275.936L343.239 311.739L345.361 313.86L381.163 278.058L379.042 275.936ZM381.851 350.443C389.948 343.18 400.643 338.763 412.367 338.763V335.763C399.875 335.763 388.474 340.473 379.848 348.21L381.851 350.443Z",
               }),
-            O &&
+            Z &&
               i.createElement("path", {
                 className: a().GenericGamepadHighlight,
                 d: "M344.3 312.8L307.301 349.55C298.91 341.918 287.763 337.264 275.535 337.264C266.362 336.995 267.891 289.452 275.535 289.744C288.184 289.744 299.677 284.764 308.158 276.658L344.3 312.8Z",
               }),
-            O &&
+            Z &&
               i.createElement("path", {
                 fill: "currentColor",
                 d: "M308.158 276.658L309.219 275.598L308.182 274.561L307.122 275.574L308.158 276.658ZM344.3 312.8L345.357 313.864L346.425 312.803L345.361 311.739L344.3 312.8ZM307.301 349.55L306.291 350.66L307.346 351.619L308.358 350.614L307.301 349.55ZM275.535 289.744L275.478 291.243C275.497 291.244 275.516 291.244 275.535 291.244V289.744ZM275.535 337.264L275.492 338.763C275.506 338.764 275.521 338.764 275.535 338.764V337.264ZM343.243 311.736L306.244 348.486L308.358 350.614L345.357 313.864L343.243 311.736ZM275.593 288.245C273.766 288.175 272.495 289.543 271.675 290.925C270.808 292.385 270.114 294.385 269.563 296.654C268.453 301.216 267.826 307.258 267.729 313.27C267.632 319.278 268.064 325.368 269.128 330.019C269.658 332.333 270.366 334.395 271.313 335.923C272.249 337.433 273.611 338.708 275.492 338.763L275.579 335.764C275.167 335.752 274.57 335.483 273.863 334.343C273.168 333.221 272.551 331.526 272.053 329.35C271.062 325.02 270.634 319.193 270.729 313.318C270.823 307.446 271.438 301.64 272.478 297.362C273.001 295.21 273.61 293.542 274.254 292.457C274.945 291.294 275.394 291.24 275.478 291.243L275.593 288.245ZM345.361 311.739L309.219 275.598L307.098 277.719L343.239 313.861L345.361 311.739ZM307.122 275.574C298.908 283.424 287.783 288.244 275.535 288.244V291.244C288.586 291.244 300.446 286.104 309.195 277.743L307.122 275.574ZM308.31 348.44C299.654 340.567 288.151 335.764 275.535 335.764V338.764C287.375 338.764 298.166 343.269 306.291 350.66L308.31 348.44Z",
@@ -25035,7 +25067,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function Li(e) {
+        function wi(e) {
           const {
               hasCaptureButton: t,
               highlightLeftBumper: n,
@@ -25066,9 +25098,9 @@ var CLSTAMP = "8480208";
               highlightY: V,
               highlightDPadUp: R,
               highlightDPadDown: D,
-              highlightDPadLeft: O,
-              highlightDPadRight: B,
-              highlightTouchpad: Z,
+              highlightDPadLeft: Z,
+              highlightDPadRight: O,
+              highlightTouchpad: B,
               touchpadTouchX: T,
               touchpadTouchY: I,
               bUseReversedLayout: N,
@@ -25248,7 +25280,7 @@ var CLSTAMP = "8480208";
               fill: "currentColor",
               d: "M777.073 282.229H769.632L766.661 272.807H753.035L750.208 282.205H742.96L756.2 240.699H763.447L777.073 282.229ZM764.535 265.801L759.703 250.411L755.088 265.801H764.535Z",
             }),
-            B &&
+            O &&
               i.createElement("path", {
                 className: a().GenericGamepadHighlight,
                 stroke: "currentColor",
@@ -25256,7 +25288,7 @@ var CLSTAMP = "8480208";
                 strokeWidth: "3",
                 strokeMiterlimit: "10",
               }),
-            O &&
+            Z &&
               i.createElement("path", {
                 className: a().GenericGamepadHighlight,
                 stroke: "currentColor",
@@ -25364,7 +25396,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function wi(e) {
+        function Ei(e) {
           const {
               hasCaptureButton: t,
               highlightLeftBumper: n,
@@ -25395,9 +25427,9 @@ var CLSTAMP = "8480208";
               highlightY: V,
               highlightDPadUp: R,
               highlightDPadDown: D,
-              highlightDPadLeft: O,
-              highlightDPadRight: B,
-              highlightTouchpad: Z,
+              highlightDPadLeft: Z,
+              highlightDPadRight: O,
+              highlightTouchpad: B,
               touchpadTouchX: T,
               touchpadTouchY: I,
               bUseReversedLayout: N,
@@ -25555,14 +25587,14 @@ var CLSTAMP = "8480208";
               strokeMiterlimit: "10",
             }),
             i.createElement("path", {
-              className: O ? a().GenericGamepadHighlight : null,
+              className: Z ? a().GenericGamepadHighlight : null,
               stroke: "currentColor",
               d: "M135.579 262.698C131.997 262.52 128.631 260.933 126.215 258.283C123.799 255.633 122.528 252.136 122.68 248.553V221.466C122.534 218.194 123.693 214.998 125.902 212.58C128.111 210.161 131.189 208.718 134.461 208.568H167.417C168.356 208.549 169.289 208.731 170.153 209.101C171.017 209.472 171.792 210.023 172.425 210.718L190.032 229.915C191.362 231.423 192.096 233.364 192.096 235.375C192.096 237.386 191.362 239.328 190.032 240.836L172.425 260.033C171.789 260.724 171.014 261.273 170.151 261.643C169.288 262.014 168.356 262.197 167.417 262.183V262.183L135.579 262.698Z",
               strokeWidth: "4",
               strokeMiterlimit: "10",
             }),
             i.createElement("path", {
-              className: B ? a().GenericGamepadHighlight : null,
+              className: O ? a().GenericGamepadHighlight : null,
               stroke: "currentColor",
               d: "M274.237 262.698C277.819 262.52 281.185 260.933 283.601 258.283C286.017 255.633 287.288 252.136 287.136 248.553V221.466C287.211 219.847 286.966 218.229 286.416 216.704C285.866 215.18 285.02 213.779 283.928 212.581C282.836 211.383 281.519 210.412 280.052 209.723C278.584 209.035 276.996 208.642 275.377 208.568H242.443C241.503 208.55 240.57 208.732 239.707 209.103C238.843 209.474 238.068 210.024 237.434 210.717L219.827 229.915C218.497 231.423 217.763 233.364 217.763 235.375C217.763 237.386 218.497 239.327 219.827 240.835L237.434 260.033C238.071 260.722 238.847 261.269 239.71 261.639C240.573 262.01 241.504 262.195 242.443 262.182L274.237 262.698Z",
               strokeWidth: "4",
@@ -25648,7 +25680,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function Ei(e) {
+        function Mi(e) {
           const {
               hasCaptureButton: t,
               highlightLeftBumper: n,
@@ -25679,9 +25711,9 @@ var CLSTAMP = "8480208";
               highlightY: V,
               highlightDPadUp: R,
               highlightDPadDown: D,
-              highlightDPadLeft: O,
-              highlightDPadRight: B,
-              highlightTouchpad: Z,
+              highlightDPadLeft: Z,
+              highlightDPadRight: O,
+              highlightTouchpad: B,
               touchpadTouchX: T,
               touchpadTouchY: I,
               bUseReversedLayout: N,
@@ -25846,7 +25878,7 @@ var CLSTAMP = "8480208";
               strokeMiterlimit: "10",
             }),
             i.createElement("path", {
-              className: Z ? a().GenericGamepadHighlight : null,
+              className: B ? a().GenericGamepadHighlight : null,
               stroke: "currentColor",
               d: "M348.143 29.4619H654.616C658.071 29.4619 661.385 30.8346 663.828 33.2779C666.272 35.7212 667.644 39.035 667.644 42.4904V199.505C667.644 204.688 665.585 209.659 661.92 213.324C658.255 216.989 653.285 219.048 648.102 219.048H354.657C349.474 219.048 344.503 216.989 340.838 213.324C337.173 209.659 335.114 204.688 335.114 199.505V42.4904C335.114 39.035 336.487 35.7212 338.93 33.2779C341.374 30.8346 344.687 29.4619 348.143 29.4619V29.4619Z",
               strokeWidth: "4",
@@ -25911,14 +25943,14 @@ var CLSTAMP = "8480208";
               strokeMiterlimit: "10",
             }),
             i.createElement("path", {
-              className: O ? a().GenericGamepadHighlight : null,
+              className: Z ? a().GenericGamepadHighlight : null,
               stroke: "currentColor",
               d: "M118.451 213.945C114.833 213.765 111.434 212.162 108.993 209.485C106.553 206.809 105.269 203.276 105.423 199.657V172.297C105.275 168.992 106.446 165.764 108.677 163.321C110.908 160.878 114.017 159.421 117.322 159.269H150.61C151.559 159.25 152.501 159.433 153.374 159.808C154.247 160.182 155.029 160.739 155.669 161.44L173.453 180.831C174.796 182.354 175.538 184.315 175.538 186.346C175.538 188.377 174.796 190.339 173.453 191.862L155.669 211.253C155.026 211.951 154.243 212.505 153.371 212.879C152.5 213.253 151.558 213.439 150.61 213.424V213.424L118.451 213.945Z",
               strokeWidth: "4",
               strokeMiterlimit: "10",
             }),
             i.createElement("path", {
-              className: B ? a().GenericGamepadHighlight : null,
+              className: O ? a().GenericGamepadHighlight : null,
               stroke: "currentColor",
               d: "M258.507 213.945C262.125 213.765 265.524 212.162 267.965 209.485C270.405 206.809 271.689 203.276 271.535 199.657V172.297C271.611 170.662 271.364 169.027 270.808 167.487C270.252 165.948 269.399 164.532 268.296 163.322C267.193 162.113 265.862 161.132 264.38 160.436C262.898 159.741 261.293 159.344 259.658 159.269H226.392C225.443 159.251 224.501 159.435 223.628 159.81C222.756 160.184 221.973 160.74 221.332 161.44L203.549 180.831C202.205 182.354 201.464 184.315 201.464 186.346C201.464 188.377 202.205 190.338 203.549 191.862L221.332 211.252C221.977 211.948 222.76 212.501 223.632 212.875C224.503 213.249 225.444 213.436 226.392 213.424L258.507 213.945Z",
               strokeWidth: "4",
@@ -26064,7 +26096,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function Mi(e) {
+        function _i(e) {
           const {
               hasCaptureButton: t,
               highlightLeftBumper: n,
@@ -26095,9 +26127,9 @@ var CLSTAMP = "8480208";
               highlightY: V,
               highlightDPadUp: R,
               highlightDPadDown: D,
-              highlightDPadLeft: O,
-              highlightDPadRight: B,
-              highlightTouchpad: Z,
+              highlightDPadLeft: Z,
+              highlightDPadRight: O,
+              highlightTouchpad: B,
               touchpadTouchX: T,
               touchpadTouchY: I,
               bUseReversedLayout: N,
@@ -26261,7 +26293,7 @@ var CLSTAMP = "8480208";
               strokeMiterlimit: "10",
             }),
             i.createElement("path", {
-              className: Z ? a().GenericGamepadHighlight : null,
+              className: B ? a().GenericGamepadHighlight : null,
               stroke: "currentColor",
               d: "M613.053 213.817C662.138 213.817 671.199 183.086 677.598 158.312C684.483 131.742 693.101 88.6136 699.416 50.7442C703.175 28.1873 704.717 13.7198 658.23 11.122C577.972 6.6655 498.305 5.8418 498.305 5.8418C498.305 5.8418 423.58 6.5598 343.385 11.0163C296.919 13.593 298.461 28.0606 302.221 50.6175C308.557 88.4657 317.153 131.615 324.017 158.185C330.353 182.96 339.498 213.711 388.583 213.711H497.819C497.819 213.711 542.046 213.817 613.053 213.817Z",
               strokeWidth: "2",
@@ -26333,14 +26365,14 @@ var CLSTAMP = "8480208";
               strokeMiterlimit: "10",
             }),
             i.createElement("path", {
-              className: O ? a().GenericGamepadHighlight : null,
+              className: Z ? a().GenericGamepadHighlight : null,
               stroke: "currentColor",
               d: "M116.253 206.594C112.562 206.424 109.089 204.8 106.592 202.078C104.095 199.355 102.777 195.754 102.926 192.063V164.31C102.852 162.648 103.106 160.987 103.675 159.422C104.243 157.858 105.114 156.421 106.238 155.193C107.362 153.965 108.716 152.971 110.225 152.266C111.733 151.562 113.365 151.162 115.028 151.089H148.821C149.795 151.093 150.757 151.303 151.644 151.703C152.532 152.103 153.326 152.685 153.974 153.412L172.054 173.16C173.425 174.706 174.183 176.701 174.183 178.768C174.183 180.834 173.425 182.829 172.054 184.375L153.974 204.102C153.326 204.829 152.532 205.411 151.644 205.811C150.757 206.211 149.795 206.421 148.821 206.425L116.253 206.594Z",
               strokeWidth: "4",
               strokeMiterlimit: "10",
             }),
             i.createElement("path", {
-              className: B ? a().GenericGamepadHighlight : null,
+              className: O ? a().GenericGamepadHighlight : null,
               stroke: "currentColor",
               d: "M258.754 206.594C266.104 206.594 272.06 200.089 272.06 192.063V164.31C272.134 162.648 271.879 160.987 271.311 159.422C270.743 157.858 269.872 156.421 268.748 155.193C267.624 153.965 266.269 152.971 264.761 152.266C263.253 151.562 261.621 151.162 259.958 151.089H226.165C225.19 151.089 224.227 151.297 223.339 151.697C222.45 152.098 221.657 152.682 221.011 153.412L202.911 173.16C201.539 174.706 200.782 176.701 200.782 178.768C200.782 180.834 201.539 182.829 202.911 184.375L221.011 204.102C221.657 204.832 222.45 205.416 223.339 205.817C224.227 206.217 225.19 206.425 226.165 206.425L258.754 206.594Z",
               strokeWidth: "4",
@@ -26461,7 +26493,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function _i(e) {
+        function bi(e) {
           const {
               hasCaptureButton: t,
               highlightLeftBumper: n,
@@ -26492,9 +26524,9 @@ var CLSTAMP = "8480208";
               highlightY: V,
               highlightDPadUp: R,
               highlightDPadDown: D,
-              highlightDPadLeft: O,
-              highlightDPadRight: B,
-              highlightTouchpad: Z,
+              highlightDPadLeft: Z,
+              highlightDPadRight: O,
+              highlightTouchpad: B,
               touchpadTouchX: T,
               touchpadTouchY: I,
               bUseReversedLayout: N,
@@ -26714,7 +26746,7 @@ var CLSTAMP = "8480208";
               fill: "currentColor",
               d: "M389.143 136.707V132.248H364.619V136.707H389.143Z",
             }),
-            B &&
+            O &&
               i.createElement("path", {
                 className: a().GenericGamepadHighlight,
                 stroke: "currentColor",
@@ -26722,7 +26754,7 @@ var CLSTAMP = "8480208";
                 strokeWidth: "4",
                 strokeMiterlimit: "10",
               }),
-            O &&
+            Z &&
               i.createElement("path", {
                 className: a().GenericGamepadHighlight,
                 stroke: "currentColor",
@@ -26860,7 +26892,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function bi(e) {
+        function xi(e) {
           const {
               hasCaptureButton: t,
               highlightLeftBumper: n,
@@ -26891,9 +26923,9 @@ var CLSTAMP = "8480208";
               highlightY: V,
               highlightDPadUp: R,
               highlightDPadDown: D,
-              highlightDPadLeft: O,
-              highlightDPadRight: B,
-              highlightTouchpad: Z,
+              highlightDPadLeft: Z,
+              highlightDPadRight: O,
+              highlightTouchpad: B,
               touchpadTouchX: T,
               touchpadTouchY: I,
               bUseReversedLayout: N,
@@ -27057,7 +27089,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function xi(e) {
+        function ki(e) {
           const {
               hasCaptureButton: t,
               highlightLeftBumper: n,
@@ -27088,9 +27120,9 @@ var CLSTAMP = "8480208";
               highlightY: V,
               highlightDPadUp: R,
               highlightDPadDown: D,
-              highlightDPadLeft: O,
-              highlightDPadRight: B,
-              highlightTouchpad: Z,
+              highlightDPadLeft: Z,
+              highlightDPadRight: O,
+              highlightTouchpad: B,
               touchpadTouchX: T,
               touchpadTouchY: I,
               bUseReversedLayout: N,
@@ -27262,7 +27294,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function ki(e) {
+        function Hi(e) {
           const {
               hasCaptureButton: t,
               highlightLeftBumper: n,
@@ -27293,9 +27325,9 @@ var CLSTAMP = "8480208";
               highlightY: V,
               highlightDPadUp: R,
               highlightDPadDown: D,
-              highlightDPadLeft: O,
-              highlightDPadRight: B,
-              highlightTouchpad: Z,
+              highlightDPadLeft: Z,
+              highlightDPadRight: O,
+              highlightTouchpad: B,
               touchpadTouchX: T,
               touchpadTouchY: I,
               bUseReversedLayout: N,
@@ -27476,14 +27508,14 @@ var CLSTAMP = "8480208";
               strokeMiterlimit: "10",
             }),
             i.createElement("path", {
-              className: O ? a().GenericGamepadHighlight : null,
+              className: Z ? a().GenericGamepadHighlight : null,
               stroke: "currentColor",
               d: "M66.4886 374.475C78.6814 374.475 88.5656 364.591 88.5656 352.398C88.5656 340.206 78.6814 330.321 66.4886 330.321C54.2958 330.321 44.4116 340.206 44.4116 352.398C44.4116 364.591 54.2958 374.475 66.4886 374.475Z",
               strokeWidth: "3.89022",
               strokeMiterlimit: "10",
             }),
             i.createElement("path", {
-              className: B ? a().GenericGamepadHighlight : null,
+              className: O ? a().GenericGamepadHighlight : null,
               stroke: "currentColor",
               d: "M167.323 374.979C179.515 374.979 189.4 365.095 189.4 352.902C189.4 340.709 179.515 330.825 167.323 330.825C155.13 330.825 145.246 340.709 145.246 352.902C145.246 365.095 155.13 374.979 167.323 374.979Z",
               strokeWidth: "3.89022",
@@ -27590,7 +27622,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function Hi(e) {
+        function Si(e) {
           const {
               highlightLeftBumper: t = !1,
               highlightRightBumper: n = !1,
@@ -27807,7 +27839,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function Si(e) {
+        function yi(e) {
           const { button: t } = e,
             n = (0, r._T)(e, ["button"]);
           switch (t) {
@@ -27886,7 +27918,7 @@ var CLSTAMP = "8480208";
               );
           }
         }
-        function yi(e) {
+        function Vi(e) {
           const { direction: t } = e,
             n = (0, r._T)(e, ["direction"]);
           switch (t) {
@@ -27964,7 +27996,7 @@ var CLSTAMP = "8480208";
               );
           }
         }
-        function Vi(e) {
+        function Ri(e) {
           return i.createElement(
             "svg",
             {
@@ -27988,7 +28020,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function Ri(e) {
+        function Di(e) {
           const [t, n] = (0, s.y)();
           return i.createElement(
             "svg",
@@ -28024,7 +28056,7 @@ var CLSTAMP = "8480208";
             ),
           );
         }
-        function Di(e) {
+        function Zi(e) {
           return i.createElement(
             "svg",
             {
@@ -28099,7 +28131,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function Zi(e) {
+        function Ti(e) {
           return i.createElement(
             "svg",
             {
@@ -28115,7 +28147,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function Ti(e) {
+        function Ii(e) {
           const { className: t } = e,
             n = (0, r._T)(e, ["className"]);
           return i.createElement(
@@ -28145,7 +28177,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function Ii(e) {
+        function Ni(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -28283,7 +28315,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function Ni(e) {
+        function Ai(e) {
           const [t, n] = (0, s.y)();
           return i.createElement(
             "svg",
@@ -28436,7 +28468,7 @@ var CLSTAMP = "8480208";
             ),
           );
         }
-        function Ai(e) {
+        function Gi(e) {
           return i.createElement(
             "svg",
             {
@@ -28473,7 +28505,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function Gi(e) {
+        function Fi(e) {
           return i.createElement(
             "svg",
             {
@@ -28510,7 +28542,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function Fi(e) {
+        function Pi(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -28553,7 +28585,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function Pi(e) {
+        function Wi(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -28602,7 +28634,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function Wi(e) {
+        function zi(e) {
           const [t, n] = (0, s.y)();
           return i.createElement(
             "svg",
@@ -28673,7 +28705,7 @@ var CLSTAMP = "8480208";
             ),
           );
         }
-        function zi(e) {
+        function Ui(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -28726,7 +28758,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function Ui(e) {
+        function ji(e) {
           const [t, n] = (0, s.y)();
           return i.createElement(
             "svg",
@@ -28793,7 +28825,7 @@ var CLSTAMP = "8480208";
             ),
           );
         }
-        function ji(e) {
+        function Ki(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -28814,7 +28846,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function Ki(e) {
+        function Yi(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -28841,7 +28873,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function Yi(e) {
+        function Xi(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -28862,7 +28894,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function Xi() {
+        function $i() {
           return i.createElement(
             "svg",
             {
@@ -28882,7 +28914,7 @@ var CLSTAMP = "8480208";
             ),
           );
         }
-        function $i() {
+        function Ji() {
           return i.createElement(
             "svg",
             {
@@ -28901,7 +28933,7 @@ var CLSTAMP = "8480208";
             ),
           );
         }
-        function Ji() {
+        function qi() {
           return i.createElement(
             "svg",
             {
@@ -28920,7 +28952,7 @@ var CLSTAMP = "8480208";
             ),
           );
         }
-        function qi() {
+        function Qi() {
           return i.createElement(
             "svg",
             {
@@ -28939,7 +28971,7 @@ var CLSTAMP = "8480208";
             ),
           );
         }
-        function Qi() {
+        function eo() {
           return i.createElement(
             "svg",
             {
@@ -28958,7 +28990,7 @@ var CLSTAMP = "8480208";
             ),
           );
         }
-        function eo() {
+        function to() {
           const [e, t] = (0, s.y)();
           return i.createElement(
             "svg",
@@ -29020,7 +29052,7 @@ var CLSTAMP = "8480208";
             ),
           );
         }
-        function to() {
+        function no() {
           return i.createElement(
             "svg",
             {
@@ -29039,7 +29071,7 @@ var CLSTAMP = "8480208";
             ),
           );
         }
-        function no() {
+        function ro() {
           return i.createElement(
             "svg",
             {
@@ -29058,7 +29090,7 @@ var CLSTAMP = "8480208";
             ),
           );
         }
-        function ro() {
+        function io() {
           return i.createElement(
             "svg",
             {
@@ -29077,7 +29109,7 @@ var CLSTAMP = "8480208";
             ),
           );
         }
-        function io() {
+        function oo() {
           return i.createElement(
             "svg",
             {
@@ -29096,7 +29128,7 @@ var CLSTAMP = "8480208";
             ),
           );
         }
-        function oo() {
+        function lo() {
           return i.createElement(
             "svg",
             {
@@ -29115,7 +29147,7 @@ var CLSTAMP = "8480208";
             ),
           );
         }
-        function lo() {
+        function ao() {
           const [e, t] = (0, s.y)();
           return i.createElement(
             "svg",
@@ -29156,7 +29188,7 @@ var CLSTAMP = "8480208";
             ),
           );
         }
-        function ao() {
+        function so() {
           return i.createElement(
             "svg",
             {
@@ -29175,7 +29207,7 @@ var CLSTAMP = "8480208";
             ),
           );
         }
-        function so() {
+        function co() {
           return i.createElement(
             "svg",
             {
@@ -29194,7 +29226,7 @@ var CLSTAMP = "8480208";
             ),
           );
         }
-        function co() {
+        function Co() {
           const [e, t] = (0, s.y)();
           return i.createElement(
             "svg",
@@ -29233,7 +29265,7 @@ var CLSTAMP = "8480208";
             ),
           );
         }
-        function Co() {
+        function uo() {
           return i.createElement(
             "svg",
             {
@@ -29262,7 +29294,7 @@ var CLSTAMP = "8480208";
             ),
           );
         }
-        function uo() {
+        function ho() {
           const [e, t] = (0, s.y)();
           return i.createElement(
             "svg",
@@ -29294,7 +29326,7 @@ var CLSTAMP = "8480208";
             ),
           );
         }
-        function ho() {
+        function mo() {
           const [e, t] = (0, s.y)();
           return i.createElement(
             "svg",
@@ -29328,7 +29360,7 @@ var CLSTAMP = "8480208";
             ),
           );
         }
-        function mo() {
+        function po() {
           const [e, t] = (0, s.y)();
           return i.createElement(
             "svg",
@@ -29364,7 +29396,7 @@ var CLSTAMP = "8480208";
             ),
           );
         }
-        function po(e) {
+        function go(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -29387,7 +29419,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function go(e) {
+        function fo(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -29408,7 +29440,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function fo(e) {
+        function vo(e) {
           return i.createElement(
             "svg",
             {
@@ -29426,7 +29458,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function vo(e) {
+        function Lo(e) {
           return i.createElement(
             "svg",
             {
@@ -29440,7 +29472,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function Lo(e) {
+        function wo(e) {
           return i.createElement(
             "svg",
             {
@@ -29458,7 +29490,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function wo(e) {
+        function Eo(e) {
           const [t, n] = (0, s.y)(),
             [r, o] = (0, s.y)();
           return i.createElement(
@@ -29512,7 +29544,7 @@ var CLSTAMP = "8480208";
             ),
           );
         }
-        function Eo(e) {
+        function Mo(e) {
           return i.createElement(
             "svg",
             {
@@ -29538,7 +29570,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function Mo(e) {
+        function _o(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -29555,7 +29587,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function _o(e) {
+        function bo(e) {
           return i.createElement(
             "svg",
             {
@@ -29575,7 +29607,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function bo(e) {
+        function xo(e) {
           return i.createElement(
             "svg",
             {
@@ -29602,7 +29634,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function xo(e) {
+        function ko(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -29645,7 +29677,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function ko(e) {
+        function Ho(e) {
           return i.createElement(
             "svg",
             {
@@ -29668,7 +29700,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function Ho(e) {
+        function So(e) {
           return i.createElement(
             "svg",
             {
@@ -29687,7 +29719,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function So(e) {
+        function yo(e) {
           return i.createElement(
             "svg",
             {
@@ -29738,7 +29770,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function yo(e) {
+        function Vo(e) {
           return i.createElement(
             "svg",
             {
@@ -29766,7 +29798,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function Vo(e) {
+        function Ro(e) {
           const { bGreyOutRightSide: t } = e,
             n = (0, r._T)(e, ["bGreyOutRightSide"]);
           return t
@@ -29817,7 +29849,7 @@ var CLSTAMP = "8480208";
                 }),
               );
         }
-        function Ro(e) {
+        function Do(e) {
           const { hand: t } = e,
             n = (0, r._T)(e, ["hand"]);
           return "left" == t
@@ -29860,7 +29892,7 @@ var CLSTAMP = "8480208";
                 }),
               );
         }
-        function Do(e) {
+        function Zo(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -29917,7 +29949,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function Zo(e) {
+        function To(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -29965,7 +29997,7 @@ var CLSTAMP = "8480208";
             ),
           );
         }
-        function To(e) {
+        function Io(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -30011,7 +30043,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function Io(e) {
+        function No(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -30031,7 +30063,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function No(e) {
+        function Ao(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -30053,7 +30085,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function Ao(e) {
+        function Go(e) {
           return i.createElement(
             "svg",
             {
@@ -30071,7 +30103,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function Go(e) {
+        function Fo(e) {
           return i.createElement(
             "svg",
             {
@@ -30094,7 +30126,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function Fo(e) {
+        function Po(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -30113,7 +30145,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function Po(e) {
+        function Wo(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -30158,71 +30190,331 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function Wo(e) {
-          return i.createElement(
-            "svg",
-            Object.assign(
-              {
-                xmlns: "http://www.w3.org/2000/svg",
-                viewBox: "0 0 160 113",
-                fill: "none",
-              },
-              e,
-            ),
-            i.createElement("path", {
-              fill: "currentColor",
-              d: "M93.8926 26.3521H53.1113V44.477H93.8926V26.3521Z",
-            }),
-            i.createElement("path", {
-              fill: "#FFC82C",
-              d: "M159.165 48.5528L130.918 2.29064C129.038 -0.792308 125.962 -0.748936 124.082 2.33401L95.8348 48.5331C93.9548 51.6181 95.3589 54 98.9551 54H156.043C159.641 53.9998 161.045 51.6337 159.165 48.5528ZM127.476 12.5307C129.285 12.5307 130.685 14.5385 130.593 16.9918L130.02 31.7774C129.927 34.2286 128.779 36.2364 127.47 36.2364C126.161 36.2364 125.011 34.2286 124.918 31.7774L124.352 16.9923C124.259 14.5388 125.663 12.5307 127.476 12.5307ZM127.476 47.3736C125.194 47.3736 123.628 45.6968 123.676 43.4057C123.676 41.0648 125.245 39.4377 127.476 39.4377C129.802 39.4377 131.273 41.0648 131.323 43.4057C131.323 45.697 129.802 47.3736 127.476 47.3736Z",
-            }),
-            i.createElement("path", {
-              fill: "currentColor",
-              fillRule: "evenodd",
-              clipRule: "evenodd",
-              d: "M89.2417 49.0093H53.1094C50.6069 49.0093 48.5782 46.9805 48.5782 44.4781V26.3531H41.7813L39.5159 24.0875C39.5159 24.0875 39.2755 24.0577 38.8466 24.0079C38.511 23.3355 38.007 22.5787 37.2502 21.8218C28.146 20.001 21.9685 22.5704 19.8939 23.6495C19.5572 23.7715 19.2961 23.9166 19.1252 24.0875C16.8596 26.3531 12.3283 35.4156 12.3283 35.4156C10.0626 42.2125 3.26583 62.6031 1.0002 89.7906C1.0002 89.7906 -1.26541 110.181 14.594 112.447C28.5182 114.188 33.0825 95.8712 35.4775 86.2598C36.2 83.3604 36.7251 81.2535 37.2502 80.7281C38.6114 79.3668 39.9726 78.8233 40.8424 78.607C43.3267 81.3038 46.8881 82.9937 50.8438 82.9937C54.8699 82.9937 58.4873 81.2437 60.9765 78.4625H86.024C88.5132 81.2437 92.1305 82.9937 96.1563 82.9937C100.112 82.9937 103.674 81.3038 106.158 78.607C107.028 78.8233 108.389 79.3668 109.75 80.7281C110.275 81.2535 110.8 83.3604 111.523 86.2598C113.918 95.8712 118.482 114.188 132.407 112.447C148.266 110.181 146 89.7906 146 89.7906C145.062 78.5347 143.348 68.4434 141.499 60.0001H101.745C103.86 61.6592 105.219 64.2383 105.219 67.1343C105.219 72.1397 101.162 76.1968 96.1563 76.1968C91.1514 76.1968 87.0938 72.1397 87.0938 67.1343C87.0938 63.1465 89.67 59.7598 93.249 58.5484C92.0525 57.8433 90.9646 56.8331 90.1499 55.42C88.8975 53.2471 88.7947 51.0025 89.2417 49.0093ZM49.9375 76.1968C54.9429 76.1968 59 72.1397 59 67.1343C59 62.1295 54.9429 58.0718 49.9375 58.0718C44.9326 58.0718 40.8752 62.1295 40.8752 67.1343C40.8752 72.1397 44.9326 76.1968 49.9375 76.1968ZM25.6704 35.4156C24.5581 35.4156 23.6565 36.3174 23.6565 37.4298V41.3785C23.6565 41.9127 23.8687 42.4249 24.2463 42.8028L26.7637 45.3199C27.5502 46.106 28.8253 46.106 29.6117 45.3199L32.1291 42.8028C32.5068 42.4249 32.719 41.9127 32.719 41.3785V37.4298C32.719 36.3174 31.8173 35.4156 30.7051 35.4156H25.6704ZM23.6565 58.3238C23.6565 59.4361 24.5581 60.3375 25.6704 60.3375H30.7051C31.8173 60.3375 32.719 59.4361 32.719 58.3238V54.3751C32.719 53.8409 32.5068 53.3282 32.1291 52.9512L29.6117 50.4337C28.8253 49.647 27.5502 49.647 26.7637 50.4337L24.2463 52.9512C23.8687 53.3282 23.6565 53.8409 23.6565 54.3751V58.3238ZM15.7268 50.3941C15.7268 51.5064 16.6285 52.4083 17.7407 52.4083H21.6895C22.2236 52.4083 22.7358 52.1959 23.1135 51.8179L25.6308 49.3008C26.4174 48.5142 26.4174 47.2393 25.6308 46.4527L23.1135 43.9351C22.7358 43.5577 22.2236 43.3458 21.6895 43.3458H17.7407C16.6285 43.3458 15.7268 44.2471 15.7268 45.3594V50.3941ZM38.6348 52.4083C39.747 52.4083 40.6487 51.5064 40.6487 50.3941V45.3594C40.6487 44.2471 39.747 43.3458 38.6348 43.3458H34.686C34.1519 43.3458 33.6396 43.5577 33.2619 43.9351L30.7446 46.4527C29.9581 47.2393 29.9581 48.5142 30.7446 49.3008L33.2619 51.8179C33.6396 52.1959 34.1519 52.4083 34.686 52.4083H38.6348Z",
-            }),
-          );
-        }
         function zo(e) {
           return i.createElement(
             "svg",
             Object.assign(
               {
                 xmlns: "http://www.w3.org/2000/svg",
-                viewBox: "0 0 160 115",
+                viewBox: "0 0 149 118",
+                fill: "none",
+              },
+              e,
+            ),
+            i.createElement("circle", {
+              stroke: "currentColor",
+              cx: "102.5",
+              cy: "47.5",
+              r: "11",
+            }),
+            i.createElement("circle", {
+              stroke: "currentColor",
+              cx: "102.5",
+              cy: "97.5",
+              r: "11",
+            }),
+            i.createElement("circle", {
+              stroke: "currentColor",
+              cx: "127.5",
+              cy: "72.5",
+              r: "11",
+            }),
+            i.createElement("circle", {
+              stroke: "currentColor",
+              cx: "77.5",
+              cy: "72.5",
+              r: "11",
+            }),
+            i.createElement("path", {
+              fill: "currentColor",
+              d: "M103.648 53H102.144V48.52L98.224 41.8H99.984L102.928 47.112L105.872 41.8H107.536L103.648 48.536V53Z",
+            }),
+            i.createElement("path", {
+              fill: "currentColor",
+              d: "M80.712 67.8H82.648L78.84 73.112L83.064 79H81.176L77.976 74.312L75.032 79H73.224L77.144 73.192L73.4 67.8H75.32L78.008 72.056L80.712 67.8Z",
+            }),
+            i.createElement("path", {
+              fill: "currentColor",
+              d: "M108.528 103H106.88L105.92 100.328H100.96L100 103H98.416L102.592 91.8H104.304L108.528 103ZM103.44 93.352L101.392 99.08H105.488L103.44 93.352Z",
+            }),
+            i.createElement("path", {
+              fill: "currentColor",
+              d: "M129.024 72.08C129.707 72.2293 130.267 72.5493 130.704 73.04C131.152 73.52 131.376 74.1387 131.376 74.896C131.376 75.92 131.019 76.6933 130.304 77.216C129.589 77.7387 128.635 78 127.44 78H123.456V66.8H127.024C128.219 66.8 129.125 67.04 129.744 67.52C130.363 67.9893 130.672 68.656 130.672 69.52C130.672 70.0747 130.523 70.5813 130.224 71.04C129.925 71.488 129.525 71.8347 129.024 72.08ZM124.96 68.064V71.728H126.848C127.563 71.728 128.128 71.5573 128.544 71.216C128.96 70.8747 129.168 70.4053 129.168 69.808C129.168 68.6453 128.379 68.064 126.8 68.064H124.96ZM127.28 76.736C128.133 76.736 128.768 76.5707 129.184 76.24C129.6 75.8987 129.808 75.4347 129.808 74.848C129.808 73.5573 128.987 72.912 127.344 72.912H124.96V76.736H127.28Z",
+            }),
+            i.createElement("path", {
+              fill: "currentColor",
+              d: "M55.7071 71.7071C56.0976 71.3166 56.0976 70.6834 55.7071 70.2929L49.3431 63.9289C48.9526 63.5384 48.3195 63.5384 47.9289 63.9289C47.5384 64.3195 47.5384 64.9526 47.9289 65.3431L53.5858 71L47.9289 76.6569C47.5384 77.0474 47.5384 77.6805 47.9289 78.0711C48.3195 78.4616 48.9526 78.4616 49.3431 78.0711L55.7071 71.7071ZM36 72H55V70H36V72Z",
+            }),
+            i.createElement(
+              "mask",
+              {
+                id: "mask0_2582_181",
+                type: "luminance",
+                maskUnits: "userSpaceOnUse",
+                x: "0",
+                y: "0",
+                width: "104",
+                height: "104",
+              },
+              i.createElement("path", {
+                fill: "currentColor",
+                d: "M103.164 0H0V103.164H103.164V0Z",
+              }),
+            ),
+            i.createElement(
+              "g",
+              { mask: "url(#mask0_2582_181)" },
+              i.createElement("path", {
+                fill: "currentColor",
+                d: "M67.0892 22.0195H38.0744V34.915H67.0892V22.0195Z",
+              }),
+              i.createElement("path", {
+                fill: "currentColor",
+                fillRule: "evenodd",
+                clipRule: "evenodd",
+                d: "M9.05943 28.4667C9.05943 28.4667 12.2833 22.019 13.8953 20.407C14.0168 20.2855 14.2026 20.1822 14.4422 20.0953C15.9182 19.3276 20.3133 17.4996 26.7908 18.7951C27.3292 19.3335 27.6877 19.8719 27.9265 20.3503C28.2317 20.3856 28.4027 20.407 28.4027 20.407L30.0145 22.0189L34.8503 22.019V34.9144C34.8503 36.6949 36.2937 38.1383 38.0742 38.1383H67.089C67.2173 38.1383 67.3438 38.1308 67.4681 38.1163C62.0902 43.938 58.166 51.1225 56.272 59.0935H43.6714C41.9004 61.0722 39.3267 62.3174 36.4622 62.3174C33.6479 62.3174 31.114 61.1149 29.3465 59.1961C28.7276 59.3503 27.7592 59.7368 26.7908 60.7054C26.4172 61.0791 26.0436 62.5781 25.5295 64.6411C23.8255 71.4792 20.5781 84.5108 10.6714 83.2725C-0.612164 81.6606 0.999767 67.1532 0.999767 67.1532C2.6117 47.8099 7.44747 33.3025 9.05943 28.4667ZM93.5595 23.7558C92.7404 22.3527 91.8859 21.0248 91.268 20.407C91.1465 20.2855 90.9608 20.1822 90.7213 20.0953C89.2452 19.3276 84.8501 17.4996 78.3726 18.7951C77.8344 19.3335 77.4756 19.8719 77.2369 20.3503C76.9317 20.3857 76.7609 20.4071 76.7609 20.4071L75.149 22.019L70.3129 22.019V34.9144C70.3129 35.0482 70.3047 35.18 70.2889 35.3094C76.677 29.4668 84.6843 25.3652 93.5595 23.7558ZM35.8175 57.4815C39.3786 57.4815 42.2652 54.595 42.2652 51.0338C42.2652 47.4729 39.3786 44.5861 35.8175 44.5861C32.2566 44.5861 29.3699 47.4729 29.3699 51.0338C29.3699 54.595 32.2566 57.4815 35.8175 57.4815ZM18.552 28.4667C17.7606 28.4667 17.1191 29.1083 17.1191 29.8995V32.709C17.1191 33.089 17.2701 33.4535 17.5388 33.7223L19.3298 35.5134C19.8894 36.0727 20.7966 36.0727 21.3562 35.5134L23.1472 33.7223C23.4159 33.4535 23.5669 33.089 23.5669 32.709V29.8995C23.5669 29.1083 22.9254 28.4667 22.1341 28.4667H18.552ZM17.1191 44.7652C17.1191 45.5567 17.7606 46.198 18.552 46.198H22.1341C22.9254 46.198 23.5669 45.5567 23.5669 44.7652V41.9557C23.5669 41.5757 23.4159 41.2112 23.1472 40.9427L21.3562 39.1516C20.7966 38.592 19.8894 38.592 19.3298 39.1516L17.5388 40.9427C17.2701 41.2112 17.1191 41.5757 17.1191 41.9557V44.7652ZM11.4774 39.1235C11.4774 39.9147 12.1189 40.5564 12.9102 40.5564H15.7197C16.0997 40.5564 16.4641 40.4053 16.7328 40.1365L18.5239 38.3455C19.0834 37.7861 19.0834 36.8789 18.5239 36.3192L16.7328 34.5282C16.4641 34.2594 16.0997 34.1086 15.7197 34.1086H12.9102C12.1189 34.1086 11.4774 34.75 11.4774 35.5415V39.1235ZM27.7758 40.5564C28.5672 40.5564 29.2087 39.9147 29.2087 39.1235V35.5415C29.2087 34.75 28.5672 34.1086 27.7758 34.1086H24.9664C24.5863 34.1086 24.2219 34.2594 23.9532 34.5282L22.1621 36.3192C21.6026 36.8789 21.6026 37.7861 22.1621 38.3455L23.9532 40.1365C24.2219 40.4053 24.5863 40.5564 24.9664 40.5564H27.7758Z",
+              }),
+            ),
+          );
+        }
+        function Uo(e) {
+          return i.createElement(
+            "svg",
+            Object.assign(
+              {
+                xmlns: "http://www.w3.org/2000/svg",
+                viewBox: "0 0 144 101",
                 fill: "none",
               },
               e,
             ),
             i.createElement("path", {
-              fill: "#FFC82C",
-              d: "M159.165 48.5528L130.918 2.29064C129.038 -0.792308 125.962 -0.748936 124.082 2.33401L95.8348 48.5331C93.9548 51.6181 95.3589 54 98.9551 54H156.043C159.641 53.9998 161.045 51.6337 159.165 48.5528ZM127.476 12.5307C129.285 12.5307 130.685 14.5385 130.593 16.9918L130.02 31.7774C129.927 34.2286 128.779 36.2364 127.47 36.2364C126.161 36.2364 125.011 34.2286 124.918 31.7774L124.352 16.9923C124.259 14.5388 125.663 12.5307 127.476 12.5307ZM127.476 47.3736C125.194 47.3736 123.628 45.6968 123.676 43.4057C123.676 41.0648 125.245 39.4377 127.476 39.4377C129.802 39.4377 131.273 41.0648 131.323 43.4057C131.323 45.697 129.802 47.3736 127.476 47.3736Z",
+              fill: "currentColor",
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              d: "M12.4085 5.59658V3.93223C12.4085 3.41364 12.6656 2.93089 13.1146 2.67128C14.5883 1.81912 18.1516 0 21.7149 0C26.3681 0 26.3681 1.55107 26.3681 1.55107V2.87729C27.3741 2.75307 28.4235 2.63419 29.5152 2.52221L29.505 2.53357C28.8893 3.22321 28.5779 4.08053 28.7572 5.06715L30.6463 15.4569C31.3285 19.2092 30.1199 23.0672 27.5484 25.9338C24.4988 29.3332 20.5287 34.076 17.9478 38.3777C16.1564 41.3631 14.3929 46.0784 12.8948 50.7506C11.3906 55.4419 10.1326 60.1599 9.36458 63.1933C9.02425 64.5373 7.61555 65.3146 6.31511 64.8812L5.91266 64.7472C4.40856 63.8923 3.19862 62.6247 2.56197 60.9419C1.32576 57.6737 0 52.4321 0 44.9809C0 31.0213 7.75533 7.75533 10.8575 6.20426C11.2243 6.02084 11.7431 5.81568 12.4085 5.59658ZM15.5107 12.4085C15.5107 11.5518 16.2051 10.8575 17.0617 10.8575H20.1639C21.0205 10.8575 21.7149 11.5518 21.7149 12.4085V14.8682C21.7149 15.2796 21.5515 15.6742 21.2606 15.9651L19.7096 17.5162C19.1038 18.1217 18.1217 18.1217 17.516 17.5162L15.9649 15.9651C15.6741 15.6742 15.5107 15.2796 15.5107 14.8682V12.4085ZM15.5107 26.3681C15.5107 27.2249 16.2051 27.9192 17.0617 27.9192H20.1639C21.0205 27.9192 21.7149 27.2249 21.7149 26.3681V23.9085C21.7149 23.4971 21.5515 23.1025 21.2606 22.8116L19.7096 21.2605C19.1038 20.655 18.1217 20.655 17.516 21.2605L15.9649 22.8116C15.6741 23.1025 15.5107 23.4971 15.5107 23.9085V26.3681ZM27.1437 20.9395C27.1437 21.796 26.4492 22.4903 25.5926 22.4903H23.1329C22.7216 22.4903 22.327 22.3271 22.0362 22.0362L20.4851 20.4851C19.8794 19.8793 19.8794 18.8974 20.4851 18.2916L22.0362 16.7405C22.327 16.4496 22.7216 16.2861 23.1329 16.2861H25.5926C26.4492 16.2861 27.1437 16.9807 27.1437 17.8374V20.9395ZM11.633 22.4903C10.7764 22.4903 10.0819 21.796 10.0819 20.9395V17.8374C10.0819 16.9807 10.7764 16.2861 11.633 16.2861H14.0927C14.504 16.2861 14.8985 16.4496 15.1894 16.7405L16.7405 18.2916C17.3462 18.8974 17.3462 19.8793 16.7405 20.4851L15.1894 22.0362C14.8985 22.3271 14.504 22.4903 14.0927 22.4903H11.633ZM24.899 6.36797C25.6651 5.98488 26.5968 6.29545 26.9799 7.06164L27.7554 8.61271C28.1387 9.37892 27.8279 10.3107 27.0618 10.6937C26.2956 11.0767 25.3639 10.7662 24.9808 9.9999L24.2053 8.44894C23.8222 7.68275 24.1327 6.75107 24.899 6.36797Z",
+              fillOpacity: "0.6",
+            }),
+            i.createElement("path", {
+              fill: "currentColor",
+              d: "M49.6341 1.55029C43.4583 1.55029 37.9094 1.80122 33.0596 2.19603C32.8713 2.2626 32.6899 2.33164 32.5156 2.40331C31.6467 2.76059 31.0285 3.15519 30.662 3.5658C30.3212 3.94759 30.2004 4.33344 30.2834 4.78889L31.7487 12.8481L33.5232 18.6476C34.2208 20.9305 36.3278 22.4895 38.7149 22.4895H60.5652C62.9474 22.4895 65.051 20.9368 65.7531 18.6606L67.4828 13.0502L68.9848 4.78889C69.0639 4.35349 68.947 3.97961 68.6048 3.60277C68.2367 3.19754 67.6166 2.80653 66.746 2.45115C66.5139 2.35646 66.269 2.26621 66.0128 2.1802C61.2093 1.79452 55.727 1.55029 49.6341 1.55029Z",
+              fillOpacity: "0.6",
             }),
             i.createElement("path", {
               fill: "currentColor",
               fillRule: "evenodd",
               clipRule: "evenodd",
-              d: "M18.125 26.1749V23.7438C18.125 22.9863 18.5005 22.2811 19.1564 21.9019C21.309 20.6572 26.5139 18 31.7188 18C38.5156 18 38.5156 20.2656 38.5156 20.2656V22.2028C39.985 22.0214 41.5179 21.8477 43.1125 21.6842L43.0976 21.7008C42.1982 22.7081 41.7435 23.9604 42.0053 25.4015L44.7647 40.5777C45.7612 46.0587 43.9958 51.694 40.2396 55.8813C35.7851 60.8467 29.986 67.7745 26.2161 74.0578C23.5995 78.4187 21.0236 85.3062 18.8353 92.1309C16.6382 98.9833 14.8006 105.875 13.6787 110.306C13.1816 112.269 11.124 113.404 9.22442 112.771L8.63656 112.575C6.43953 111.327 4.67218 109.475 3.74224 107.017C1.93652 102.243 0 94.587 0 83.7031C0 63.3125 11.3281 29.3281 15.8594 27.0625C16.3953 26.7946 17.153 26.4949 18.125 26.1749ZM22.6562 36.125C22.6562 34.8736 23.6706 33.8594 24.9219 33.8594H29.4531C30.7044 33.8594 31.7188 34.8736 31.7188 36.125V39.7178C31.7188 40.3187 31.4801 40.8951 31.0552 41.32L28.7895 43.5857C27.9048 44.4702 26.4702 44.4702 25.5855 43.5857L23.3198 41.32C22.8949 40.8951 22.6562 40.3187 22.6562 39.7178V36.125ZM22.6562 56.5156C22.6562 57.7671 23.6706 58.7813 24.9219 58.7813H29.4531C30.7044 58.7813 31.7188 57.7671 31.7188 56.5156V52.9228C31.7188 52.3219 31.4801 51.7455 31.0552 51.3206L28.7895 49.055C27.9048 48.1705 26.4702 48.1705 25.5855 49.055L23.3198 51.3206C22.8949 51.7455 22.6562 52.3219 22.6562 52.9228V56.5156ZM39.6484 48.5861C39.6484 49.8372 38.6341 50.8514 37.3828 50.8514H33.79C33.1891 50.8514 32.6129 50.6129 32.188 50.188L29.9224 47.9224C29.0376 47.0375 29.0376 45.6032 29.9224 44.7183L32.188 42.4526C32.6129 42.0277 33.1891 41.7889 33.79 41.7889H37.3828C38.6341 41.7889 39.6484 42.8035 39.6484 44.0549V48.5861ZM16.9922 50.8514C15.7409 50.8514 14.7266 49.8372 14.7266 48.5861V44.0549C14.7266 42.8035 15.7409 41.7889 16.9922 41.7889H20.585C21.1859 41.7889 21.7621 42.0277 22.187 42.4526L24.4526 44.7183C25.3374 45.6032 25.3374 47.0375 24.4526 47.9224L22.187 50.188C21.7621 50.6129 21.1859 50.8514 20.585 50.8514H16.9922ZM36.3696 27.3016C37.4888 26.7421 38.8497 27.1957 39.4093 28.3149L40.542 30.5805C41.1019 31.6997 40.6479 33.0607 39.5289 33.6201C38.4097 34.1796 37.0488 33.7261 36.4892 32.6067L35.3564 30.3413C34.7968 29.2221 35.2504 27.8612 36.3696 27.3016Z",
+              d: "M89.658 7.5701C89.1928 6.85538 88.7708 6.38401 88.4113 6.20426C88.0446 6.02084 87.5256 5.81568 86.8603 5.59658V3.93223C86.8603 3.41364 86.6033 2.93089 86.1541 2.67128C84.6805 1.81912 81.117 0 77.5539 0C72.9007 0 72.9007 1.55107 72.9007 1.55107V2.87729C71.8826 2.75158 70.8202 2.63135 69.7144 2.51821L69.7536 2.56068C70.3707 3.24006 70.6895 4.08842 70.5116 5.06715L69.0124 13.3119L69.0248 13.3157L68.9928 13.4194L68.6225 15.4569C68.5505 15.853 68.4995 16.2503 68.469 16.6474C71.3549 14.4398 74.5041 12.559 77.8614 11.0604C78.363 10.0224 79.4259 9.3064 80.656 9.3064C81.0538 9.3064 81.4342 9.3813 81.7837 9.51777C84.3178 8.65114 86.9495 7.99497 89.658 7.5701ZM74.3698 6.36797C73.6035 5.98488 72.6721 6.29545 72.2888 7.06164L71.5134 8.61271C71.1301 9.37892 71.4409 10.3107 72.2069 10.6937C72.9732 11.0767 73.9049 10.7662 74.2879 9.9999L75.0636 8.44894C75.4466 7.68275 75.1361 6.75107 74.3698 6.36797Z",
+              fillOpacity: "0.6",
             }),
             i.createElement("path", {
               fill: "currentColor",
               fillRule: "evenodd",
               clipRule: "evenodd",
-              d: "M141.79 60H108.358C112.029 64.3228 115.971 69.3696 118.784 74.0576C121.4 78.4185 123.977 85.3062 126.164 92.1309C128.362 98.9834 130.2 105.875 131.321 110.306C131.818 112.269 133.876 113.404 135.776 112.771L136.363 112.576C138.56 111.327 140.328 109.475 141.258 107.017C143.063 102.243 145 94.5869 145 83.7031C145 76.7783 143.693 68.2856 141.79 60Z",
+              d: "M60.7863 24.0386C60.7124 24.0409 60.6384 24.0421 60.5641 24.0421H38.7138C35.8314 24.0421 33.2667 22.274 32.2222 19.6274C31.7995 22.3342 30.5653 24.8931 28.7018 26.9703C25.6653 30.355 21.7779 35.0077 19.2767 39.1764C17.586 41.9942 15.8673 46.5573 14.3707 51.2248C12.8803 55.8733 11.6312 60.5568 10.8671 63.5749C10.615 64.5706 10.0039 65.3815 9.20932 65.9046L9.29494 65.9192C12.0178 66.3731 14.6892 64.8698 15.7144 62.3067L20.9249 49.2808C22.3382 45.7474 25.7602 43.4306 29.5657 43.4306H51.1932C52.8585 36.1836 56.1995 29.5764 60.7863 24.0386ZM40.3266 34.1242C40.3266 37.5506 37.5488 40.3285 34.1224 40.3285C30.696 40.3285 27.9181 37.5506 27.9181 34.1242C27.9181 30.6978 30.696 27.9199 34.1224 27.9199C37.5488 27.9199 40.3266 30.6978 40.3266 34.1242Z",
+              fillOpacity: "0.6",
+            }),
+            i.createElement("circle", {
+              stroke: "currentColor",
+              cx: "97.5",
+              cy: "30.5",
+              r: "11",
+            }),
+            i.createElement("circle", {
+              stroke: "currentColor",
+              cx: "97.5",
+              cy: "80.5",
+              r: "11",
+            }),
+            i.createElement("circle", {
+              stroke: "currentColor",
+              cx: "122.5",
+              cy: "55.5",
+              r: "11",
+            }),
+            i.createElement("circle", {
+              stroke: "currentColor",
+              cx: "72.5",
+              cy: "55.5",
+              r: "11",
             }),
             i.createElement("path", {
               fill: "currentColor",
-              fillRule: "evenodd",
-              clipRule: "evenodd",
-              d: "M99.735 30.6631L100.765 24.9961C100.881 24.3604 100.71 23.814 100.21 23.2637C99.6726 22.6719 98.7668 22.1006 97.4952 21.5815C97.156 21.4434 96.7984 21.3115 96.4242 21.1855C89.4078 20.6226 81.3998 20.2656 72.5 20.2656C63.479 20.2656 55.3739 20.6323 48.2898 21.209C48.2187 21.2339 48.1483 21.2593 48.0786 21.2847C47.8785 21.3584 47.6839 21.4341 47.4951 21.5117C46.226 22.0337 45.323 22.6099 44.7877 23.2095C44.2899 23.7676 44.1134 24.3311 44.2347 24.9961L46.375 36.7681L48.9669 45.2393C49.9859 48.5742 53.0636 50.8516 56.5504 50.8516H88.4669C88.6474 50.8516 88.8269 50.8457 89.005 50.8335C89.0727 48.7788 89.8274 46.8721 90.7179 45.4106L90.7225 45.4033L99.735 30.6631Z",
+              d: "M98.648 36H97.144V31.52L93.224 24.8H94.984L97.928 30.112L100.872 24.8H102.536L98.648 31.536V36Z",
             }),
             i.createElement("path", {
               fill: "currentColor",
-              fillRule: "evenodd",
-              clipRule: "evenodd",
-              d: "M105.373 60C109.34 64.5767 113.794 70.146 116.841 75.2231C119.311 79.3394 121.821 86.0044 124.007 92.8223C126.184 99.6123 128.009 106.454 129.125 110.862C129.493 112.316 130.386 113.501 131.546 114.265L131.422 114.287C127.444 114.949 123.542 112.753 122.044 109.01L114.434 89.9829C112.369 84.8218 107.371 81.4375 101.812 81.4375H43.1879C37.6292 81.4375 32.6307 84.8218 30.5663 89.9829L22.9554 109.01C21.458 112.753 17.5558 114.949 13.5786 114.287L13.4535 114.265C14.6141 113.501 15.5068 112.316 15.875 110.862C16.9912 106.454 18.8157 99.6123 20.9928 92.8223C23.1788 86.0044 25.6892 79.3394 28.1589 75.2231C31.8124 69.1343 37.4906 62.3379 41.9259 57.394C44.6479 54.3599 46.4507 50.6221 47.0682 46.6685C48.5939 50.5342 52.3402 53.1167 56.5504 53.1167H88.4669C88.7207 53.1167 88.9728 53.1074 89.2229 53.0889C89.4045 53.8652 89.7045 54.647 90.1499 55.4199C91.0996 57.0674 92.4207 58.167 93.8523 58.8745C89.4652 59.5068 86.0938 63.2817 86.0938 67.8438C86.0938 72.8486 90.1513 76.9062 95.1562 76.9062C100.161 76.9062 104.219 72.8486 104.219 67.8438C104.219 64.4941 102.401 61.5684 99.6983 60H105.373ZM58.9062 67.8438C58.9062 72.8486 54.8487 76.9062 49.8438 76.9062C44.8388 76.9062 40.7812 72.8486 40.7812 67.8438C40.7812 62.8389 44.8388 58.7812 49.8438 58.7812C54.8487 58.7812 58.9062 62.8389 58.9062 67.8438Z",
+              d: "M75.712 50.8H77.648L73.84 56.112L78.064 62H76.176L72.976 57.312L70.032 62H68.224L72.144 56.192L68.4 50.8H70.32L73.008 55.056L75.712 50.8Z",
+            }),
+            i.createElement("path", {
+              fill: "currentColor",
+              d: "M103.528 86H101.88L100.92 83.328H95.96L95 86H93.416L97.592 74.8H99.304L103.528 86ZM98.44 76.352L96.392 82.08H100.488L98.44 76.352Z",
+            }),
+            i.createElement("path", {
+              fill: "currentColor",
+              d: "M124.024 55.08C124.707 55.2293 125.267 55.5493 125.704 56.04C126.152 56.52 126.376 57.1387 126.376 57.896C126.376 58.92 126.019 59.6933 125.304 60.216C124.589 60.7387 123.635 61 122.44 61H118.456V49.8H122.024C123.219 49.8 124.125 50.04 124.744 50.52C125.363 50.9893 125.672 51.656 125.672 52.52C125.672 53.0747 125.523 53.5813 125.224 54.04C124.925 54.488 124.525 54.8347 124.024 55.08ZM119.96 51.064V54.728H121.848C122.563 54.728 123.128 54.5573 123.544 54.216C123.96 53.8747 124.168 53.4053 124.168 52.808C124.168 51.6453 123.379 51.064 121.8 51.064H119.96ZM122.28 59.736C123.133 59.736 123.768 59.5707 124.184 59.24C124.6 58.8987 124.808 58.4347 124.808 57.848C124.808 56.5573 123.987 55.912 122.344 55.912H119.96V59.736H122.28Z",
+            }),
+            i.createElement("path", {
+              fill: "currentColor",
+              d: "M50.7071 55.7071C51.0976 55.3166 51.0976 54.6834 50.7071 54.2929L44.3431 47.9289C43.9526 47.5384 43.3195 47.5384 42.9289 47.9289C42.5384 48.3195 42.5384 48.9526 42.9289 49.3431L48.5858 55L42.9289 60.6569C42.5384 61.0474 42.5384 61.6805 42.9289 62.0711C43.3195 62.4616 43.9526 62.4616 44.3431 62.0711L50.7071 55.7071ZM31 56H50V54H31V56Z",
+            }),
+          );
+        }
+        function jo(e) {
+          return i.createElement(
+            "svg",
+            Object.assign(
+              {
+                xmlns: "http://www.w3.org/2000/svg",
+                viewBox: "0 0 158 104",
+                fill: "none",
+              },
+              e,
+            ),
+            i.createElement("path", {
+              fill: "currentColor",
+              d: "M104.786 2.92353C108.097 1.11393 111.973 0.630923 115.628 1.57237L120.881 2.92567C122.466 3.33401 123.277 3.54279 124.024 3.80057C127.331 4.94083 130.24 6.92355 132.491 9.50802L131.964 9.78224C129.791 7.3243 127.002 5.43753 123.836 4.34598C123.113 4.09662 122.326 3.89365 120.721 3.48016L115.484 2.13105C111.971 1.22612 108.245 1.6904 105.062 3.4298C100.73 5.79678 95.8733 7.03725 90.937 7.03725H67.0632C62.1269 7.03725 57.2697 5.79678 52.9379 3.4298C49.7547 1.6904 46.0292 1.22612 42.5164 2.13105L37.2794 3.48016C35.6743 3.89365 34.8873 4.09662 34.1641 4.34598C29.0433 6.11169 24.9066 9.95819 22.7738 14.9372C22.4726 15.6404 22.213 16.4106 21.684 17.9814L12.2569 45.9781L11.7102 45.794L21.1427 17.7813L21.1427 17.7812C21.665 16.23 21.9321 15.4369 22.2435 14.71C24.4404 9.58141 28.7014 5.61933 33.976 3.80057C34.7236 3.5428 35.534 3.33402 37.1191 2.9257L42.3725 1.57237C46.0271 0.630923 49.9029 1.11393 53.2146 2.92353C57.4615 5.24415 62.2236 6.46033 67.0632 6.46033H90.937C95.7766 6.46033 100.539 5.24415 104.786 2.92353Z",
+            }),
+            i.createElement("path", {
+              fill: "currentColor",
+              d: "M146.29 45.794L145.743 45.9781L136.885 19.6722L137.394 19.3744L146.29 45.794Z",
+            }),
+            i.createElement("path", {
+              fill: "currentColor",
+              d: "M53.4999 5.66579C49.906 4.60838 46.0944 4.53383 42.4619 5.44992L37.5508 6.68848C35.0528 7.31846 33.8522 7.62232 32.7649 8.04553C28.4475 9.72591 24.8971 12.9326 22.7873 17.0572C22.2559 18.096 21.8318 19.2595 20.9516 21.6807L18.0767 29.5886C14.0698 40.6104 11.0092 51.9535 8.92814 63.4949L7.84181 69.5196C7.12884 73.4736 7.32528 77.4413 8.31865 81.1672L7.28932 81.7781C6.17924 77.801 5.94254 73.5504 6.70627 69.3148L7.7926 63.2902C9.88532 51.6842 12.963 40.2777 16.9923 29.1943L19.8846 21.2386C20.7433 18.8765 21.1921 17.642 21.76 16.5317C23.9985 12.1555 27.7656 8.75316 32.3464 6.97026C33.5085 6.51794 34.7822 6.19671 37.2194 5.58208L42.1797 4.33111C46.0122 3.36457 50.0338 3.44322 53.8255 4.55886C57.7196 5.70459 61.7577 6.28633 65.8168 6.28633H92.1835C96.2426 6.28633 100.281 5.70459 104.175 4.55886C107.966 3.44322 111.988 3.36457 115.821 4.33111L119.278 5.20311C123.182 6.1875 125.222 6.70205 127.027 7.56435C128.526 8.28079 129.923 9.17682 131.189 10.2272L130.154 10.873C129.041 9.98693 127.826 9.22496 126.529 8.60546C124.841 7.79866 122.918 7.31109 118.917 6.30204L115.538 5.44992C111.906 4.53384 108.094 4.60838 104.5 5.66579C100.501 6.84264 96.3528 7.44018 92.1835 7.44018H65.8168C61.6474 7.44018 57.4996 6.84264 53.4999 5.66579Z",
+            }),
+            i.createElement("path", {
+              fill: "currentColor",
+              d: "M19.9127 96.9282C24.5399 99.8467 30.6727 98.1985 33.2136 93.3537L40.0166 80.3824L40.0166 80.3823C41.9441 76.707 43.0235 74.6489 44.3872 73.0832L53.0628 68.0302C54.9736 67.6573 57.2453 67.6573 61.0592 67.6573H96.9411C101.389 67.6573 103.74 67.6573 105.867 68.249C108.714 69.0413 111.29 70.599 113.314 72.7528C114.826 74.3614 115.918 76.4428 117.984 80.3824L124.787 93.3537C127.328 98.1985 133.46 99.8467 138.088 96.9282C147.32 91.105 152.095 80.2619 150.158 69.5196L149.072 63.4949C146.991 51.9535 143.93 40.6104 139.924 29.5886L137.589 23.1659C137.123 21.8855 136.737 20.8247 136.394 19.9207L137.416 19.3612C137.774 20.2997 138.171 21.3901 138.645 22.6955L141.008 29.1944C145.037 40.2777 148.115 51.6842 150.208 63.2901L151.294 69.3148C153.314 80.5199 148.333 91.8301 138.703 97.9041C133.506 101.182 126.618 99.3309 123.765 93.8896L117.014 81.0179C114.883 76.954 113.864 75.0229 112.473 73.543C110.594 71.5429 108.202 70.0964 105.557 69.3606C103.601 68.8162 101.417 68.8112 96.8285 68.8112H61.1718C56.5829 68.8112 54.3997 68.8162 52.443 69.3606C49.7987 70.0964 47.4067 71.5429 45.5269 73.543C44.136 75.0229 43.1175 76.954 40.9862 81.0179L34.2355 93.8896C31.3818 99.3309 24.494 101.182 19.2971 97.9041C16.5645 96.1806 14.2062 94.0354 12.276 91.5907L13.287 91.0082C15.1177 93.2969 17.3425 95.3071 19.9127 96.9282Z",
+            }),
+            i.createElement("path", {
+              stroke: "currentColor",
+              opacity: "0.5",
+              d: "M32.5004 95.9105L42.9827 73.7898M125.309 95.9105L117.638 79.7225C115.188 74.5517 113.962 71.9662 112.087 70.0741C110.429 68.4013 108.413 67.1259 106.191 66.3437C103.678 65.4591 100.817 65.4591 95.095 65.4591H57.6284",
+              strokeWidth: "0.576923",
+              strokeMiterlimit: "10",
+            }),
+            i.createElement("path", {
+              stroke: "currentColor",
+              d: "M109.641 22.7319C109.04 22.4582 108.373 22.3057 107.669 22.3057C105.211 22.3057 103.188 24.1673 102.932 26.5575",
+              strokeWidth: "0.576923",
+              strokeMiterlimit: "10",
+            }),
+            i.createElement("path", {
+              stroke: "currentColor",
+              d: "M130.074 23.5883C131.004 24.4578 131.586 25.696 131.586 27.0701C131.586 29.7013 129.453 31.8344 126.822 31.8344C124.56 31.8344 122.666 30.2582 122.179 28.1443",
+              strokeWidth: "0.576923",
+              strokeMiterlimit: "10",
+            }),
+            i.createElement("path", {
+              stroke: "currentColor",
+              d: "M121.692 15.7317C120.927 14.1229 119.287 13.0107 117.387 13.0107C114.756 13.0107 112.623 15.1438 112.623 17.7751C112.623 18.7761 112.932 19.7051 113.46 20.4719",
+              strokeWidth: "0.576923",
+              strokeMiterlimit: "10",
+            }),
+            i.createElement("path", {
+              stroke: "currentColor",
+              d: "M117.387 41.0694C120.018 41.0694 122.151 38.9363 122.151 36.305C122.151 33.6738 120.018 31.5407 117.387 31.5407C114.756 31.5407 112.623 33.6738 112.623 36.305C112.623 38.9363 114.756 41.0694 117.387 41.0694Z",
+              strokeWidth: "0.576923",
+              strokeMiterlimit: "10",
+            }),
+            i.createElement("path", {
+              fill: "currentColor",
+              d: "M37.1286 17.9551H37.4171H37.1286ZM37.1286 35.4951H36.8402H37.1286ZM37.1286 30.8665H36.8402H37.1286ZM37.1286 22.5837H36.8402H37.1286ZM41.5131 16.2946C42.4301 16.2946 43.1735 17.038 43.1735 17.9551H43.7505C43.7505 16.7194 42.7488 15.7177 41.5131 15.7177V16.2946ZM39.0775 16.2946H41.5131V15.7177H39.0775V16.2946ZM37.4171 17.9551C37.4171 17.038 38.1605 16.2946 39.0775 16.2946V15.7177C37.8419 15.7177 36.8402 16.7194 36.8402 17.9551H37.4171ZM37.4171 22.5837L37.4171 17.9551H36.8402L36.8402 22.5837L37.4171 22.5837ZM31.5262 23.8466H36.1542V23.2697H31.5262V23.8466ZM29.8657 25.5071C29.8657 24.59 30.6091 23.8466 31.5262 23.8466V23.2697C30.2905 23.2697 29.2888 24.2714 29.2888 25.5071H29.8657ZM29.8657 27.9432V25.5071H29.2888V27.9432H29.8657ZM31.5262 29.6036C30.6091 29.6036 29.8657 28.8602 29.8657 27.9432H29.2888C29.2888 29.1788 30.2905 30.1805 31.5262 30.1805V29.6036ZM36.1542 29.6036H31.5262V30.1805H36.1542V29.6036ZM37.4171 35.4951L37.4171 30.8665H36.8402L36.8402 35.4951H37.4171ZM39.0775 37.1555C38.1605 37.1555 37.4171 36.4121 37.4171 35.4951H36.8402C36.8402 36.7307 37.8418 37.7324 39.0775 37.7324V37.1555ZM41.5131 37.1555H39.0775V37.7324H41.5131V37.1555ZM43.1735 35.4951C43.1735 36.4121 42.4301 37.1555 41.5131 37.1555V37.7324C42.7488 37.7324 43.7505 36.7307 43.7505 35.4951H43.1735ZM43.1735 30.8665V35.4951H43.7505V30.8665H43.1735ZM49.0644 29.6036H44.4364V30.1805H49.0644V29.6036ZM50.7249 27.9432C50.7249 28.8602 49.9815 29.6036 49.0644 29.6036V30.1805C50.3001 30.1805 51.3018 29.1788 51.3018 27.9432H50.7249ZM50.7249 25.5071V27.9432H51.3018V25.5071H50.7249ZM49.0645 23.8466C49.9815 23.8466 50.7249 24.59 50.7249 25.5071H51.3018C51.3018 24.2714 50.3001 23.2697 49.0645 23.2697V23.8466ZM44.4364 23.8466H49.0645V23.2697H44.4364V23.8466ZM43.1735 17.9551V22.5837H43.7505V17.9551H43.1735ZM44.4364 23.2697C44.0576 23.2697 43.7505 22.9626 43.7505 22.5837H43.1735C43.1735 23.2812 43.739 23.8466 44.4364 23.8466V23.2697ZM43.7505 30.8665C43.7505 30.4876 44.0576 30.1805 44.4364 30.1805V29.6036C43.739 29.6036 43.1735 30.169 43.1735 30.8665H43.7505ZM36.1542 30.1805C36.533 30.1805 36.8402 30.4876 36.8402 30.8665H37.4171C37.4171 30.169 36.8517 29.6036 36.1542 29.6036V30.1805ZM36.8402 22.5837C36.8402 22.9626 36.533 23.2697 36.1542 23.2697V23.8466C36.8517 23.8466 37.4171 23.2812 37.4171 22.5837L36.8402 22.5837Z",
+            }),
+            i.createElement("path", {
+              stroke: "currentColor",
+              opacity: "0.5",
+              d: "M56.6159 6.01793L58.5042 6.64741C60.9769 7.4717 62.874 9.47724 63.5598 11.9919L64.7901 16.5034M101.437 6.01793L99.5485 6.64741C97.0758 7.4717 95.1787 9.47724 94.493 11.9919L93.2529 16.539M65.8619 20.4336L67.1334 25.0962C67.8271 27.6399 70.1375 29.4046 72.7741 29.4046H85.2787C87.9153 29.4046 90.2257 27.6399 90.9193 25.0962L92.1895 20.4386",
+              strokeWidth: "0.576923",
+              strokeMiterlimit: "10",
+            }),
+            i.createElement(
+              "g",
+              { opacity: "0.5" },
+              i.createElement("path", {
+                fill: "currentColor",
+                fillRule: "evenodd",
+                clipRule: "evenodd",
+                d: "M110.65 48.9383H109.963V48.3614H110.65C113.632 48.3614 116.372 50.0035 117.779 52.6336L118.174 53.3733C125.024 66.1844 129.93 79.9435 132.731 94.1986L133.63 98.7781L133.064 98.8894L132.165 94.3098C129.375 80.1109 124.489 66.406 117.665 53.6453L117.27 52.9056C115.964 50.4633 113.419 48.9383 110.65 48.9383Z",
+              }),
+              i.createElement("path", {
+                fill: "currentColor",
+                d: "M47.403 48.9383C44.6334 48.9383 42.0888 50.4633 40.7829 52.9056L40.3874 53.6453C38.2228 57.6936 36.2531 61.8369 34.4834 66.0608L33.6567 66.5462C35.5086 62.0602 37.5846 57.6636 39.8786 53.3733L40.2741 52.6336C41.6804 50.0035 44.4206 48.3614 47.403 48.3614H47.725V48.9383H47.403Z",
+              }),
+              i.createElement("path", {
+                fill: "currentColor",
+                d: "M25.8882 94.3099L24.9886 98.8894L24.4225 98.7781L25.3221 94.1986C26.1007 90.2356 27.042 86.3109 28.1425 82.4343L28.8645 82.008C27.6963 86.059 26.7028 90.1634 25.8882 94.3099Z",
+              }),
+            ),
+            i.createElement("rect", {
+              stroke: "currentColor",
+              x: "61.4878",
+              y: "16.4932",
+              width: "9.74366",
+              height: "3.89777",
+              rx: "1.94888",
+              strokeWidth: "0.576923",
+              strokeMiterlimit: "10",
+            }),
+            i.createElement("rect", {
+              stroke: "currentColor",
+              x: "86.8213",
+              y: "16.4932",
+              width: "9.74366",
+              height: "3.89777",
+              rx: "1.94888",
+              strokeWidth: "0.576923",
+              strokeMiterlimit: "10",
+            }),
+            i.createElement("path", {
+              stroke: "currentColor",
+              opacity: "0.5",
+              d: "M86.9988 48.4063H88.7698",
+              strokeWidth: "0.576923",
+              strokeMiterlimit: "10",
+            }),
+            i.createElement("path", {
+              stroke: "currentColor",
+              d: "M100.98 40.341C104.924 41.1037 107.903 44.5753 107.903 48.7427C107.903 53.4689 104.072 57.3003 99.3458 57.3003C94.6199 57.3003 90.7888 53.4689 90.7888 48.7427C90.7888 47.7225 90.9673 46.7439 91.2948 45.8367",
+              strokeWidth: "0.576923",
+              strokeMiterlimit: "10",
+            }),
+            i.createElement("path", {
+              stroke: "currentColor",
+              d: "M99.3457 54.4266C102.484 54.4266 105.029 51.8819 105.029 48.7429C105.029 45.6039 102.484 43.0592 99.3457 43.0592C96.207 43.0592 93.6625 45.6039 93.6625 48.7429C93.6625 51.8819 96.207 54.4266 99.3457 54.4266Z",
+              strokeWidth: "0.576923",
+              strokeMiterlimit: "10",
+            }),
+            i.createElement("path", {
+              stroke: "currentColor",
+              opacity: "0.5",
+              d: "M103.42 38.8492C107.307 40.4517 110.042 44.2777 110.042 48.7427C110.042 54.6505 105.253 59.4397 99.3457 59.4397C93.4384 59.4397 88.6496 54.6505 88.6496 48.7427C88.6496 48.258 88.6818 47.7808 88.7443 47.3132",
+              strokeWidth: "0.576923",
+              strokeMiterlimit: "10",
+            }),
+            i.createElement("path", {
+              stroke: "currentColor",
+              d: "M53.121 55.3636C51.2071 53.7942 49.9859 51.411 49.9859 48.7427C49.9859 44.0164 53.8169 40.1851 58.5428 40.1851C62.777 40.1851 66.2928 43.2607 66.9786 47.2999",
+              strokeWidth: "0.576923",
+              strokeMiterlimit: "10",
+            }),
+            i.createElement("path", {
+              stroke: "currentColor",
+              d: "M55.9491 53.8015C54.1146 52.8589 52.8596 50.9475 52.8596 48.7429C52.8596 45.6039 55.404 43.0592 58.5428 43.0592C61.6815 43.0592 64.226 45.6039 64.226 48.7429C64.226 48.8524 64.2229 48.9612 64.2168 49.0692",
+              strokeWidth: "0.576923",
+              strokeMiterlimit: "10",
+            }),
+            i.createElement("path", {
+              stroke: "currentColor",
+              opacity: "0.5",
+              d: "M68.9366 46.2066C67.7979 41.523 63.5764 38.0457 58.5428 38.0457C52.6355 38.0457 47.8466 42.8349 47.8466 48.7427C47.8466 51.7868 49.1181 54.534 51.1589 56.4819",
+              strokeWidth: "0.576923",
+              strokeMiterlimit: "10",
+            }),
+            i.createElement("path", {
+              fill: "currentColor",
+              d: "M156.393 3.76298C157.111 3.34877 157.356 2.43139 156.942 1.71395C156.528 0.996508 155.611 0.750696 154.893 1.16491L1.60674 89.6649C0.889303 90.0791 0.643493 90.9965 1.05771 91.7139C1.47192 92.4314 2.3893 92.6772 3.10674 92.263L156.393 3.76298Z",
             }),
           );
         }
@@ -31822,14 +32114,14 @@ var CLSTAMP = "8480208";
             AddFriend: () => oe,
             AdvancedSearch: () => nn,
             AppleLogo: () => qt,
-            Arrow: () => Ze,
+            Arrow: () => Be,
             ArrowGamepadUI: () => Te,
             AsyncGameTurn: () => m,
             Avatar: () => Nn,
             AwardIcon: () => zn,
             Backgrounds: () => In,
             Badge: () => Gn,
-            Bell: () => Oe,
+            Bell: () => Ze,
             BigPicture: () => dt,
             Bookmark: () => cn,
             BroadcastAdminOfficer: () => Jn,
@@ -31842,7 +32134,7 @@ var CLSTAMP = "8480208";
             Caution: () => Se,
             Chart: () => ke,
             ChatBubble: () => lt,
-            ChatEffect: () => Bn,
+            ChatEffect: () => On,
             ChatEmoticon: () => Dn,
             ChatListView: () => he,
             ChatNotification: () => M,
@@ -31853,7 +32145,7 @@ var CLSTAMP = "8480208";
             Circle: () => Cr,
             Clock: () => S,
             ClosedCaption: () => yt,
-            CloudDownload: () => Bt,
+            CloudDownload: () => Ot,
             Collapse: () => Cn,
             Comment: () => gn,
             CommentThread: () => vn,
@@ -31869,15 +32161,15 @@ var CLSTAMP = "8480208";
             DoNotDisturb: () => tt,
             DoubleArrow: () => Ne,
             DownArrowContextMenu: () => x,
-            Download: () => Ot,
+            Download: () => Zt,
             DownloadsFilled: () => W,
             DynamicCollection: () => Kt,
             Edit: () => Wt,
-            Effect: () => Zn,
+            Effect: () => Bn,
             EffectFilled: () => Tn,
             Emoticon: () => R,
             EmoticonBow: () => Sn,
-            EmoticonFilled: () => On,
+            EmoticonFilled: () => Zn,
             Envelope: () => vt,
             ExitIcon: () => j,
             ExitIconFilled: () => U,
@@ -31912,12 +32204,12 @@ var CLSTAMP = "8480208";
             Info: () => Et,
             Information: () => zt,
             Instagram: () => bt,
-            Installed: () => Zt,
+            Installed: () => Bt,
             Invalid: () => an,
             Inventory: () => v,
             Invite: () => ae,
             InviteFriend: () => w,
-            LanguageOptions: () => B,
+            LanguageOptions: () => O,
             LargeMobilePhone: () => ft,
             LeaveVoiceChat: () => sr,
             Library: () => Tt,
@@ -31966,7 +32258,7 @@ var CLSTAMP = "8480208";
             RecentChats: () => ee,
             RecentClock: () => Me,
             Reload: () => je,
-            ResizeIcon: () => Z,
+            ResizeIcon: () => B,
             Restore: () => We,
             ReviewHelp: () => Mn,
             Reviews: () => $t,
@@ -32006,13 +32298,13 @@ var CLSTAMP = "8480208";
             StoryWidgetBookmarkPage: () => nr,
             Submit: () => D,
             TextButtonDoubleArrow: () => Ge,
-            TextChat: () => O,
+            TextChat: () => Z,
             TextRoom: () => K,
             ThickChevron: () => Ae,
             ThumbsUp: () => En,
             ThumbsUpUserNews: () => wn,
             TimeWarning: () => Fn,
-            Toast: () => Be,
+            Toast: () => Oe,
             TopOfQueue: () => Wn,
             Trade: () => Ke,
             Trash: () => Ye,
@@ -32743,7 +33035,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function O() {
+        function Z() {
           return i.createElement(
             "svg",
             {
@@ -32765,7 +33057,7 @@ var CLSTAMP = "8480208";
             ),
           );
         }
-        function B() {
+        function O() {
           const [e, t] = (0, C.y)();
           return i.createElement(
             "svg",
@@ -32790,7 +33082,7 @@ var CLSTAMP = "8480208";
             ),
           );
         }
-        function Z() {
+        function B() {
           return i.createElement(
             "svg",
             {
@@ -34763,7 +35055,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function Oe(e) {
+        function Ze(e) {
           return (0, c.useInGamepadUI)()
             ? i.createElement(
                 "svg",
@@ -34801,7 +35093,7 @@ var CLSTAMP = "8480208";
                 }),
               );
         }
-        function Be() {
+        function Oe() {
           return i.createElement(
             "svg",
             {
@@ -34875,7 +35167,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function Ze(e) {
+        function Be(e) {
           return i.createElement(
             "svg",
             {
@@ -36940,7 +37232,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function Ot() {
+        function Zt() {
           return i.createElement(
             "svg",
             {
@@ -36966,7 +37258,7 @@ var CLSTAMP = "8480208";
             ),
           );
         }
-        function Bt(e) {
+        function Ot(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -36985,7 +37277,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function Zt() {
+        function Bt() {
           return i.createElement(
             "svg",
             {
@@ -38663,7 +38955,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function On(e) {
+        function Zn(e) {
           return i.createElement(
             "svg",
             Object.assign(
@@ -38682,7 +38974,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function Bn(e) {
+        function On(e) {
           const { className: t } = e,
             n = (0, r._T)(e, ["className"]);
           return i.createElement(
@@ -38706,7 +38998,7 @@ var CLSTAMP = "8480208";
             }),
           );
         }
-        function Zn(e) {
+        function Bn(e) {
           const { className: t } = e,
             n = (0, r._T)(e, ["className"]);
           return i.createElement(
@@ -40717,7 +41009,7 @@ var CLSTAMP = "8480208";
             LinkInNewWindow: () => g,
             LocalizeOrdinal: () => V,
             MakeDivClassComponent: () => k,
-            NullComponent: () => O,
+            NullComponent: () => Z,
             ObservablePromise: () => b,
             OnImgContextMenu: () => w,
             OnImgContextMenuFullSize: () => E,
@@ -40979,7 +41271,7 @@ var CLSTAMP = "8480208";
           }
           return t;
         }
-        function O(e) {
+        function Z(e) {
           return null;
         }
         (0, r.gn)([i.observable], b.prototype, "m_Value", void 0);
@@ -41767,12 +42059,12 @@ var CLSTAMP = "8480208";
             CopyURLToClipboard: () => w,
             DistanceBetweenRects: () => h,
             FindAncestorWithAttribute: () => R,
-            FindAncestrally: () => Z,
+            FindAncestrally: () => B,
             FindCommonParentElement: () => z,
             FindCommonParentNode: () => U,
             FindFirstDescendantsWithAttribute: () => D,
-            FindScrollableAncestor: () => O,
-            FindScrollableAncestors: () => B,
+            FindScrollableAncestor: () => Z,
+            FindScrollableAncestors: () => O,
             GetClipboardText: () => v,
             GetDistanceFromRect: () => u,
             GetFileFromPasteEvent: () => E,
@@ -42092,7 +42384,7 @@ var CLSTAMP = "8480208";
           }
           return n;
         }
-        function O(e, t) {
+        function Z(e, t) {
           let n = null == e ? void 0 : e.parentElement;
           for (; n; ) {
             if (!t || "x" == t) {
@@ -42117,13 +42409,13 @@ var CLSTAMP = "8480208";
           }
           return n;
         }
-        function B(e, t) {
+        function O(e, t) {
           const n = [];
           let r = e;
-          for (; (r = O(r, t)); ) n.push(r);
+          for (; (r = Z(r, t)); ) n.push(r);
           return n;
         }
-        function Z(e, t) {
+        function B(e, t) {
           for (; e; ) {
             if (t(e)) return e;
             e = e.parentElement;
@@ -42602,13 +42894,13 @@ var CLSTAMP = "8480208";
             BDoesLocaleUse24Hourclock: () => p,
             ETimeSinceSuffix: () => r,
             LocalizeCalendarMonth: () => R,
-            LocalizeCalendarMonthAndYear: () => B,
-            LocalizeCalendarQuarter: () => Z,
+            LocalizeCalendarMonthAndYear: () => O,
+            LocalizeCalendarQuarter: () => B,
             LocalizeCalendarTime: () => E,
             LocalizeCalendarTimeLessGranular: () => M,
             LocalizeCalendarWeekday: () => V,
             LocalizeCalendarWeekdayAndDayMonth: () => y,
-            LocalizeCalendarYear: () => O,
+            LocalizeCalendarYear: () => Z,
             LocalizeDateHumanReadable: () => c,
             LocalizeDurationInSeconds: () => N,
             LocalizeRTimeToDateAndTimeAndTZ: () => w,
@@ -42773,10 +43065,10 @@ var CLSTAMP = "8480208";
           );
         }
         function h(e) {
-          return B(new Date(1e3 * e));
+          return O(new Date(1e3 * e));
         }
         function d(e) {
-          return O(new Date(1e3 * e));
+          return Z(new Date(1e3 * e));
         }
         !(function (e) {
           (e[(e.None = 0)] = "None"),
@@ -42870,7 +43162,7 @@ var CLSTAMP = "8480208";
             if (!a.bGranularFutureTime)
               return (
                 i.zO(n.getTime() - r.getTime()),
-                n.getFullYear() == r.getFullYear() ? R(n) : B(n)
+                n.getFullYear() == r.getFullYear() ? R(n) : O(n)
               );
             i.zO(new Date().setHours(24, 0, 0, 0) - r.getTime());
             let e = new Date();
@@ -42927,7 +43219,7 @@ var CLSTAMP = "8480208";
               ? (0, o.Localize)("#TimeSince_1Week")
               : (0, o.Localize)("#TimeSince_XWeeks", e);
           }
-          return n.getFullYear() == r.getFullYear() ? R(n) : B(n);
+          return n.getFullYear() == r.getFullYear() ? R(n) : O(n);
         }
         function M(e) {
           const t = new Date(1e3 * e),
@@ -42942,8 +43234,8 @@ var CLSTAMP = "8480208";
               : t.getFullYear() == n.getFullYear()
               ? R(t)
               : n.getMonth() < 6 && t.getFullYear() == n.getFullYear() - 1
-              ? B(t)
-              : O(t)
+              ? O(t)
+              : Z(t)
           );
         }
         const _ = new Map(),
@@ -43006,7 +43298,7 @@ var CLSTAMP = "8480208";
             t)
           );
         }
-        function O(e) {
+        function Z(e) {
           let t = x.get(e.getFullYear());
           return (
             t ||
@@ -43018,7 +43310,7 @@ var CLSTAMP = "8480208";
             t)
           );
         }
-        function B(e) {
+        function O(e) {
           const t = e.getMonth() + 12 * e.getFullYear();
           let n = k.get(t);
           return (
@@ -43031,7 +43323,7 @@ var CLSTAMP = "8480208";
             n)
           );
         }
-        function Z(e) {
+        function B(e) {
           switch (e.getUTCMonth()) {
             case 0:
             case 1:
@@ -43478,6 +43770,8 @@ var CLSTAMP = "8480208";
             useComputedZoom: () => r.ok,
             useDisjointedValue: () => r.rA,
             useEffectWithDependencyDebugging: () => r.w2,
+            useElementSize: () => r.h4,
+            useElementSizeCallback: () => r.fF,
             useEventListener: () => r.OR,
             useEventListenerRef: () => r.eF,
             useForceUpdate: () => r.NW,
@@ -43624,55 +43918,58 @@ var CLSTAMP = "8480208";
       55594: (e, t, n) => {
         "use strict";
         n.d(t, {
-          B: () => V,
-          B8: () => a,
-          Dc: () => R,
-          I5: () => F,
-          Iy: () => A,
-          J7: () => h,
-          JI: () => E,
-          KM: () => g,
-          KS: () => c,
-          L8: () => l,
+          B: () => R,
+          B8: () => s,
+          Dc: () => D,
+          I5: () => P,
+          Iy: () => G,
+          J7: () => d,
+          JI: () => M,
+          KM: () => f,
+          KS: () => C,
+          L8: () => a,
           Me: () => B,
-          NW: () => m,
-          OR: () => L,
-          Qg: () => _,
-          S: () => y,
-          Sd: () => p,
-          U4: () => x,
-          X9: () => D,
-          Yj: () => G,
-          Yz: () => u,
-          e1: () => b,
-          eF: () => w,
-          fB: () => v,
-          fJ: () => d,
-          kD: () => Z,
-          l4: () => C,
-          m4: () => s,
-          ok: () => f,
-          rA: () => k,
-          vK: () => M,
-          w2: () => S,
-          yX: () => T,
-          yx: () => I,
-          zP: () => H,
-          zZ: () => N,
+          NW: () => p,
+          OR: () => w,
+          Qg: () => b,
+          S: () => V,
+          Sd: () => g,
+          U4: () => k,
+          X9: () => Z,
+          Yj: () => F,
+          Yz: () => h,
+          e1: () => x,
+          eF: () => E,
+          fB: () => L,
+          fF: () => W,
+          fJ: () => m,
+          h4: () => z,
+          kD: () => T,
+          l4: () => u,
+          m4: () => c,
+          ok: () => v,
+          rA: () => H,
+          vK: () => _,
+          w2: () => y,
+          yX: () => I,
+          yx: () => N,
+          zP: () => S,
+          zZ: () => A,
         });
         var r = n(67294),
           i = n(2403),
-          o = n(49358);
-        function l(e, t) {
+          o = n(49358),
+          l = n(48287);
+        function a(e, t) {
           return (e, t, n) => n;
         }
-        function a(e, t, n) {
+        function s(e, t, n) {
           return [e, t, n];
         }
-        function s(e, t, n, r) {
+        function c(e, t, n, r) {
           return [e, t, n, r];
         }
-        function c(e, t, n = []) {
+        function C(e, t, n = []) {
           const i = r.useCallback(e, []);
           r.useEffect(() => {
             if (!i) return null;
@@ -43680,7 +43977,7 @@ var CLSTAMP = "8480208";
             return () => clearTimeout(e);
           }, [t, ...n]);
         }
-        function C(e, t, n = []) {
+        function u(e, t, n = []) {
           const i = r.useRef(e);
           (i.current = e),
             r.useEffect(() => {
@@ -43691,7 +43988,7 @@ var CLSTAMP = "8480208";
               return () => clearTimeout(e);
             }, [t, ...n]);
         }
-        function u(e, t, n = []) {
+        function h(e, t, n = []) {
           const i = r.useRef(e);
           (i.current = e),
             r.useEffect(() => {
@@ -43702,7 +43999,7 @@ var CLSTAMP = "8480208";
               return () => clearInterval(e);
             }, [t, ...n]);
         }
-        function h(e, t, n = !0) {
+        function d(e, t, n = !0) {
           const i = r.useRef(t);
           i.current = t;
           const [o, l] = r.useState(!1),
@@ -43725,7 +44022,7 @@ var CLSTAMP = "8480208";
             { bTimerCompleted: o, fnStopTimer: c, fnRestartTimer: C }
           );
         }
-        function d(e, t, n) {
+        function m(e, t, n) {
           const [i, o] = r.useState(n);
           return (
             r.useEffect(() => {
@@ -43744,11 +44041,11 @@ var CLSTAMP = "8480208";
             i
           );
         }
-        function m() {
+        function p() {
           const [, e] = r.useState(0);
           return r.useCallback(() => e((e) => e + 1), []);
         }
-        function p() {
+        function g() {
           const e = r.useRef(!1);
           r.useEffect(
             () => () => {
@@ -43758,7 +44055,7 @@ var CLSTAMP = "8480208";
           );
           return r.useCallback(() => e.current, []);
         }
-        function g(e) {
+        function f(e) {
           let t = 1;
           for (; null != e && "HTML" != e.tagName; ) {
             const n = getComputedStyle(e);
@@ -43770,11 +44067,11 @@ var CLSTAMP = "8480208";
           }
           return t;
         }
-        function f(e) {
-          const [t, n] = r.useState(1);
-          return r.useEffect(() => n(g(e.current)), [e]), t;
-        }
         function v(e) {
+          const [t, n] = r.useState(1);
+          return r.useEffect(() => n(f(e.current)), [e]), t;
+        }
+        function L(e) {
           const [t] = r.useState({
               flLastExecutionTimeMs: 0,
               fnLatestCallback: null,
@@ -43799,7 +44096,7 @@ var CLSTAMP = "8480208";
             }
           );
         }
-        function L(e, t, n, i) {
+        function w(e, t, n, i) {
           r.useEffect(() => {
             const r = null == e ? void 0 : e.current;
             if (r && n)
@@ -43808,7 +44105,7 @@ var CLSTAMP = "8480208";
               );
           }, [e, t, n]);
         }
-        function w(e, t, n) {
+        function E(e, t, n) {
           const i = r.useRef();
           i.current = n;
           const o = r.useRef(),
@@ -43828,7 +44125,7 @@ var CLSTAMP = "8480208";
             );
           return r.useEffect(() => l, [l]), a;
         }
-        function E(e, t, n, i) {
+        function M(e, t, n, i) {
           r.useEffect(() => {
             if (e && n)
               return (
@@ -43837,8 +44134,8 @@ var CLSTAMP = "8480208";
               );
           }, [e, t, n]);
         }
-        function M(e, t, n, r) {
-          return E(
+        function _(e, t, n, r) {
+          return M(
             e,
             "message",
             function (e) {
@@ -43847,14 +44144,14 @@ var CLSTAMP = "8480208";
             r,
           );
         }
-        function _(e, t) {
+        function b(e, t) {
           r.useLayoutEffect(() => {
             if (!t || !e) return;
             let n = e.Register(t);
             return () => n.Unregister();
           }, [e, t]);
         }
-        function b(e) {
+        function x(e) {
           const [t, n] = r.useState(null == e ? void 0 : e.Value);
           return (
             r.useEffect(() => {
@@ -43867,14 +44164,14 @@ var CLSTAMP = "8480208";
             t
           );
         }
-        function x(e, t) {
+        function k(e, t) {
           r.useEffect(() => {
             if (null == e) return () => {};
             const n = e.Subscribe(t);
             return null == n ? void 0 : n.Unsubscribe;
           }, [e, t]);
         }
-        function k(e, t, n = 1e3) {
+        function H(e, t, n = 1e3) {
           const i = r.useRef(t);
           i.current = t;
           const [o, l] = r.useState(e),
@@ -43882,16 +44179,16 @@ var CLSTAMP = "8480208";
             c = r.useCallback(() => {
               l(e), s(!1);
             }, [e, l]),
-            { fnStopTimer: C, fnRestartTimer: u } = h(n, c, !1),
-            d = r.useCallback(
+            { fnStopTimer: C, fnRestartTimer: u } = d(n, c, !1),
+            h = r.useCallback(
               (e) => {
                 u(), l(e), s(!0), i.current && i.current(e);
               },
               [l, u],
             );
-          return [a ? o : e, d, c];
+          return [a ? o : e, h, c];
         }
-        function H(e) {
+        function S(e) {
           const t = r.useRef(null);
           return (
             r.useEffect(() => {
@@ -43900,9 +44197,9 @@ var CLSTAMP = "8480208";
             t.current
           );
         }
-        function S(e, t, n = "") {
+        function y(e, t, n = "") {
           var i;
-          const o = null !== (i = H(t)) && void 0 !== i ? i : [];
+          const o = null !== (i = S(t)) && void 0 !== i ? i : [];
           for (let e = 0; e < o.length; e++)
             o[e] !== t[e] &&
               console.log(
@@ -43912,9 +44209,9 @@ var CLSTAMP = "8480208";
               );
           r.useEffect(e, t);
         }
-        function y(e, t, n = "") {
+        function V(e, t, n = "") {
           var i;
-          const o = null !== (i = H(t)) && void 0 !== i ? i : [];
+          const o = null !== (i = S(t)) && void 0 !== i ? i : [];
           for (let e = 0; e < o.length; e++)
             o[e] !== t[e] &&
               console.log(
@@ -43924,7 +44221,7 @@ var CLSTAMP = "8480208";
               );
           return r.useMemo(e, t);
         }
-        function V(e, t) {
+        function R(e, t) {
           const [n, i] = r.useState(e);
           return (
             r.useEffect(() => {
@@ -43937,10 +44234,10 @@ var CLSTAMP = "8480208";
             n
           );
         }
-        function R(e, t) {
-          return V(e, t) || e;
+        function D(e, t) {
+          return R(e, t) || e;
         }
-        function D(e = !1) {
+        function Z(e = !1) {
           const [t, n] = r.useState(e);
           return [
             t,
@@ -43953,7 +44250,7 @@ var CLSTAMP = "8480208";
           const [e] = r.useState(() => `:valve${(O++).toString(32)}:`);
           return e;
         }
-        function Z(e) {
+        function T(e) {
           const t = r.useRef();
           return r.useCallback(
             () => (
@@ -43964,7 +44261,7 @@ var CLSTAMP = "8480208";
             [e],
           );
         }
-        function T(e, t) {
+        function I(e, t) {
           const n = r.useRef();
           return null == e
             ? ((n.current = e), e)
@@ -43973,7 +44270,7 @@ var CLSTAMP = "8480208";
               (n.current = Math.max(n.current, e - t)),
               n.current);
         }
-        function I(e) {
+        function N(e) {
           const t = r.useRef();
           t.current = e;
           const n = r.useRef(!1),
@@ -43990,17 +44287,17 @@ var CLSTAMP = "8480208";
               null === (r = t.current) || void 0 === r || r.call(t, e),
                 (n.current = !0);
             }, []),
-            a = [w("mousedown", o), w("touchstart", l)];
+            a = [E("mousedown", o), E("touchstart", l)];
           return (0, i.BE)(...a);
         }
-        function N() {
+        function A() {
           const [e, t] = r.useState(!1),
             n = r.useCallback(() => t(!0), []),
             o = r.useCallback(() => t(!1), []),
-            l = [w("mouseenter", n), w("mouseleave", o)];
+            l = [E("mouseenter", n), E("mouseleave", o)];
           return { bHovering: e, ref: (0, i.BE)(...l) };
         }
-        function A(e, t) {
+        function G(e, t) {
           const n = r.useRef(),
             i = r.useCallback(
               (r) => {
@@ -44027,12 +44324,12 @@ var CLSTAMP = "8480208";
             i
           );
         }
-        function G(e = "vertical") {
+        function F(e = "vertical") {
           const t = "vertical" == e,
             n = r.useRef(),
             o = r.useRef(!0),
             l = r.useRef(!0),
-            a = m(),
+            a = p(),
             s = r.useCallback(() => {
               var e, r, i, s, c, C, u, h, d;
               const m =
@@ -44085,11 +44382,11 @@ var CLSTAMP = "8480208";
               [s],
             );
           r.useLayoutEffect(s, [s]);
-          const u = A(
+          const u = G(
               r.useCallback(() => s(), [s]),
               { subtree: !0, childList: !0 },
             ),
-            h = w("scroll", C),
+            h = E("scroll", C),
             d = (0, i.BE)(h, c, u);
           return {
             bScrolledToBeginning: o.current,
@@ -44097,7 +44394,7 @@ var CLSTAMP = "8480208";
             ref: d,
           };
         }
-        function F(e) {
+        function P(e) {
           const t = r.useRef([]),
             n = r.useCallback(() => {
               for (const e of t.current) e();
@@ -44116,6 +44413,58 @@ var CLSTAMP = "8480208";
             }, [n, i, e]),
             l
           );
+        }
+        function W(e) {
+          const t = r.useRef(!0),
+            n = r.useRef(void 0),
+            o = r.useRef(void 0),
+            a = r.useRef();
+          a.current = e;
+          const s = r.useRef(),
+            c = r.useCallback((e) => {
+              s.current !== e && ((s.current = e), (t.current = !0));
+            }, []),
+            C = r.useCallback(() => {
+              var e, t, r, i, l;
+              const c =
+                  null !==
+                    (t =
+                      null === (e = s.current) || void 0 === e
+                        ? void 0
+                        : e.offsetWidth) && void 0 !== t
+                    ? t
+                    : 0,
+                C =
+                  null !==
+                    (i =
+                      null === (r = s.current) || void 0 === r
+                        ? void 0
+                        : r.offsetHeight) && void 0 !== i
+                    ? i
+                    : 0;
+              (n.current === c && o.current === C) ||
+                (null === (l = a.current) || void 0 === l || l.call(a, c, C),
+                (n.current = c),
+                (o.current = C));
+            }, []);
+          r.useLayoutEffect(() => {
+            t.current && (C(), (t.current = !1));
+          });
+          const u = (0, l.useResizeObserver)(C);
+          return (0, i.BE)(c, u);
+        }
+        function z() {
+          const [e, t] = r.useState({ flOffsetWidth: 0, flOffsetHeight: 0 });
+          return {
+            ref: W(
+              r.useCallback(
+                (e, n) => t({ flOffsetWidth: e, flOffsetHeight: n }),
+                [],
+              ),
+            ),
+            flOffsetWidth: e.flOffsetWidth,
+            flOffsetHeight: e.flOffsetHeight,
+          };
         }
       },
       2403: (e, t, n) => {
@@ -44923,9 +45272,9 @@ var CLSTAMP = "8480208";
                 ? !{
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Nov 8 2023 : 18:44:28",
-                    BUILD_TIME_UTC: "Nov 9 2023 : 02:44:28",
-                    BUILD_RTIME_UTC: 1699497868,
+                    BUILD_TIME_LOCAL: "Nov 14 2023 : 16:32:38",
+                    BUILD_TIME_UTC: "Nov 15 2023 : 00:32:38",
+                    BUILD_RTIME_UTC: 1700008358,
                   }.MOBILE_BUILD && document.getElementById(t)
                 : t),
             r)
@@ -45470,11 +45819,11 @@ var CLSTAMP = "8480208";
       })[e] +
       ".js?contenthash=" +
       {
-        27: "f5dabe1358ac252f3979",
+        27: "24178ae8c6683d48bfff",
         33: "74c24a8a55c99103fb2c",
-        58: "d6becd366301f4a5c0b2",
-        131: "f194bb785686d2a0c4e2",
-        146: "ed5895aa9821e46a1767",
+        58: "c4a71e8fe1c59edfa8d4",
+        131: "34168d3a2e3ecdcb29e4",
+        146: "fe82141617955c939e33",
         200: "a5382d4346eadef3d5b5",
         220: "0355b5539ec987b27c67",
         224: "9f8948d140fdee081d66",
@@ -45483,31 +45832,31 @@ var CLSTAMP = "8480208";
         578: "c902d35ea381395e6614",
         662: "c4ea9aede9da90b18979",
         740: "6fe4bb81fc73d8ca23e5",
-        755: "65db3803dfe1c8abeb31",
+        755: "f734a44f41f20a2c1ab5",
         932: "f282bbf7aafe65529b01",
         1079: "606d1467e2cb92645672",
         1102: "551d59a9f1fcf3435261",
         1160: "d4415656a9210880b2ca",
-        1261: "89a64915272e56185aae",
+        1261: "d7aa98577e6b4820501b",
         1365: "cff361e984f9bfa2e284",
         1399: "93ea8269d88395c7feea",
         1493: "584f3a74e78d2e0d2863",
         1573: "d03a5d1e1ad88d7d1593",
-        1579: "49492a5ffa8179e3fa34",
+        1579: "c5edd999a2577e46962d",
         1617: "9d52fd127b08e9b9345f",
         1686: "196e93c6815da14a0b01",
         1926: "3596f59b21d9ff6ee204",
-        1953: "82d12fbda103491e907c",
+        1953: "dfcc98c33ecac938faa6",
         2028: "380f0439ddb63c926936",
         2029: "f3651b74d36ca2d3ad2b",
         2055: "0fc0b4fc1139d84b78b4",
-        2138: "02cd2d86bf49bbc573cf",
+        2138: "0318d5b6b4f08017515a",
         2307: "8d876a689da847f4f6d8",
         2387: "7a740811fdf0f0c44103",
         2450: "f6da6ca781b6b347406f",
         2499: "c9301009328a650bb08d",
         2543: "0e54b9f16d4c16c271cd",
-        2822: "d10c402bda3897e86255",
+        2822: "5a2a9dd4ff00cadda865",
         2847: "b4db4ad82d9a700b2e24",
         2888: "dc4813401b38d490b221",
         2915: "35d353b77a7a8534b754",
@@ -45515,17 +45864,17 @@ var CLSTAMP = "8480208";
         3061: "5f65411565750a65930d",
         3093: "c86ac93dc5d17d83c001",
         3225: "af9782eb3010fd0cbc16",
-        3298: "c44e05d29e398d3d1cde",
+        3298: "02b783b9473ab9eb4b79",
         3357: "5daca3e43ac029dae8e1",
         3403: "a87a0fd820563d54ca6b",
         3468: "88c93aa5bbc73ea901c0",
         3530: "c6a79db33a399e605d45",
-        3602: "34f6a3ecb9b739d9e052",
+        3602: "e802254e48bfb8c7d8a2",
         3858: "6d2ad781814ce26cb7b8",
         4061: "6131a16126ac5beefdf8",
-        4097: "bc08ac37afeaacdbf99b",
+        4097: "67d63cc630136312964a",
         4156: "770b1d39926308489da5",
-        4183: "5bcc049f919e92a9d27f",
+        4183: "662525c964d917567535",
         4325: "d3762d1a44c36673c05b",
         4331: "1bd609016061a9a1df37",
         4358: "0b968f9f37018cf01a9c",
@@ -45533,22 +45882,22 @@ var CLSTAMP = "8480208";
         4386: "c2dc2e6f6e90cc0d2b0e",
         4394: "46d5101dc34d5b4c6ca3",
         4401: "dc9bb5c89c46b954c72c",
-        4445: "98b88b1f68db6befa096",
-        4469: "b1c11fa85a4ef0b7f9db",
-        4487: "5dca73654029fad56e50",
-        4513: "5898cec9508807ef3ccc",
+        4445: "78e45ff12340659327a5",
+        4469: "8ab7db444e922db465d5",
+        4487: "1488e99683155f8726d7",
+        4513: "e85f31304360c5e0d52a",
         4601: "9cecffac18e2e958ea58",
         4725: "18d47bb9a562c01953e6",
-        4729: "320e7192bfca5b99d4b9",
+        4729: "ea89b0a458deeab14e0c",
         5065: "73ef41f01fb5005e8a69",
         5175: "8d33a39ab6f17b3a9376",
         5225: "8f0ce836951524347c4d",
-        5279: "f775002b2b41c5ee3114",
+        5279: "068e629cf77f4b3a0193",
         5505: "ac3abebad36b134efb39",
         5513: "abe59cec7ea24339f7e6",
         5547: "ac0eddbc1034030296e9",
         5590: "75df1dab00d5af9b2e0c",
-        5742: "28c97dd98cdfe55b8fc7",
+        5742: "35e7d3f70aa22bad7bd7",
         5895: "32c6376febd979f9e95a",
         5936: "6627f8623164ff607132",
         5984: "c69b0381e5fcd88e54f3",
@@ -45557,10 +45906,10 @@ var CLSTAMP = "8480208";
         6109: "9d6d01a06d58a9c3f35e",
         6112: "e8cd52eaf9ea6333dfd5",
         6255: "533e093408b5061e325b",
-        6403: "c32a6eab86e3e5b52775",
+        6403: "fe9997c830fbbec277c9",
         6678: "3838c20d12de4043cdb1",
         6703: "c1cf96faa61ac7e5a39f",
-        6844: "43b7eaf47b2d4693d4f9",
+        6844: "2c6da4f6d819ee7300df",
         6877: "362651552550c7939ae4",
         6964: "cb1e264fe2af4de7781c",
         6973: "f40ae422cfacf3d6e830",
@@ -45568,22 +45917,22 @@ var CLSTAMP = "8480208";
         7235: "65a11b6d7791cfbc6cd2",
         7541: "02660f49619493b2e8e7",
         7656: "f19c2a34f09864df9319",
-        7660: "3b87b21c1383ca0c3a8e",
+        7660: "1b933ab7acada674a47d",
         7725: "678c39e1ca2aae428368",
-        7781: "8661363cc085714ac43e",
+        7781: "b46b9a9d3a40660aa8e1",
         7832: "9d6d3d860dea2a65797b",
         7850: "d0392609efcb36f02a91",
-        7962: "6904598161295369a73b",
+        7962: "47f04e004e6e60b9fe63",
         8011: "cd9fdcd3471ebd4fb569",
         8052: "56f4d2ec38f7e9c4103a",
-        8085: "9afa9bf72d71c6ec6e9d",
+        8085: "90400b03db5fef2f26f9",
         8232: "af15c3cc7593d79b2818",
         8238: "171e23d01197780453de",
         8240: "721b744325a33532f6e8",
-        8282: "9d204f00fd0969d3bd7b",
+        8282: "7b2d1522725163dc96da",
         8319: "986aba691b8a6c395770",
-        8433: "a21d31d64968867a0422",
-        8467: "7773343380e54af9a2fa",
+        8433: "5cc00b01a4ba0150ee29",
+        8467: "ab8e71f476cfb4ea3efd",
         8490: "9c3ca98b03f2f8988299",
         8778: "4413d02d23008bab5331",
         8956: "23a508301d0f726b0976",
@@ -45592,13 +45941,13 @@ var CLSTAMP = "8480208";
         9365: "bde5f0f2d0ef0f47717a",
         9399: "039b8c957ccab38f5d49",
         9520: "b111c727308e6b8807f3",
-        9547: "e4b44036e7025bd66794",
+        9547: "69120266a9fa27ca766f",
         9548: "5dd63bf844688614aa5b",
         9722: "e81aed52698c8fb83d00",
         9746: "402629c927396e609fc8",
-        9854: "aa7be5cbaff50c07caa3",
+        9854: "64d393ffd91363f73b8f",
         9925: "453a902269d4e5f26af0",
-        9951: "76459814b06805faccc7",
+        9951: "677e0f640a387c929eba",
       }[e]),
     (a.miniCssF = (e) =>
       "css\\" +
