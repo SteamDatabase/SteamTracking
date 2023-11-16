@@ -2028,7 +2028,7 @@
     },
     24307: (e, t, n) => {
       "use strict";
-      n.d(t, { Jv: () => f, Mx: () => a, cR: () => E, p6: () => S });
+      n.d(t, { Jv: () => S, Mx: () => a, cR: () => f, p6: () => h });
       var a,
         r = n(33940),
         i = n(68333),
@@ -2037,13 +2037,12 @@
         l = n(89526),
         c = n(19094),
         d = n(11837),
-        u = n(23801),
-        m = n(85246),
-        p = n(4306),
-        _ = n(44973),
-        g = n(59954),
-        v = n(11195);
-      class h {
+        u = n(85246),
+        m = n(4306),
+        p = n(44973),
+        _ = n(59954),
+        g = n(11195);
+      class v {
         GetDetail(e) {
           return this.m_mapHardwareDetails.get(e);
         }
@@ -2053,7 +2052,7 @@
         GetDetailChangeCallback(e) {
           return (
             this.m_detailChangeCallback.has(e) ||
-              this.m_detailChangeCallback.set(e, new m.pB()),
+              this.m_detailChangeCallback.set(e, new u.pB()),
             this.m_detailChangeCallback.get(e)
           );
         }
@@ -2079,7 +2078,7 @@
         InternalLoadHardwareItems(e) {
           return (0, r.mG)(this, void 0, void 0, function* () {
             const t = i.gA.Init(o.lj);
-            t.Body().set_context((0, v.Fq)(!1)),
+            t.Body().set_context((0, g.Fq)(!1)),
               e.forEach((e) => t.Body().add_packageid(e));
             const n = yield o.VJ.GetHardwareItems(
               this.m_SteamInterface.GetServiceTransport(),
@@ -2109,7 +2108,7 @@
                 ),
                 !1
               );
-            if (!_.L7.logged_in)
+            if (!p.L7.logged_in)
               return (
                 console.log(
                   "CHardwareStore: Cannot reserve when user is not logged in",
@@ -2120,7 +2119,7 @@
             t
               ? a.Body().add_packages_to_reserve(e)
               : a.Body().add_packages_to_unreserve(e),
-              a.Body().set_country_code(_.L7.country_code);
+              a.Body().set_country_code(p.L7.country_code);
             const r = yield s.d6.UpdatePackageReservations(
               this.m_SteamInterface.GetServiceTransport(),
               a,
@@ -2181,29 +2180,28 @@
         }
         static Get() {
           return (
-            h.s_Singleton ||
-              ((h.s_Singleton = new h()),
-              ("dev" != _.De.WEB_UNIVERSE && "beta" != _.De.WEB_UNIVERSE) ||
-                (window.g_HardwareStore = h.s_Singleton),
-              h.s_Singleton.Init()),
-            h.s_Singleton
+            v.s_Singleton ||
+              ((v.s_Singleton = new v()),
+              ("dev" != p.De.WEB_UNIVERSE && "beta" != p.De.WEB_UNIVERSE) ||
+                (window.g_HardwareStore = v.s_Singleton),
+              v.s_Singleton.Init()),
+            v.s_Singleton
           );
         }
         constructor() {
           (this.m_mapHardwareDetails = new Map()),
             (this.m_mapPromises = new Map()),
             (this.m_detailChangeCallback = new Map()),
-            (this.m_listChangeCallback = new m.pB()),
+            (this.m_listChangeCallback = new u.pB()),
             (this.m_SteamInterface = null),
             (this.m_mapTestOriginalValues = new Map());
         }
         Init() {
-          const e = (0, g.kQ)("loyalty_webapi_token", "application_config");
-          (0, u.X)(e, "CHardwareStore: loyalty webapi token is missing"),
-            (this.m_SteamInterface = new c.J(_.De.WEBAPI_BASE_URL, e));
+          const e = (0, _.ip)("loyalty_webapi_token", "application_config");
+          this.m_SteamInterface = new c.J(p.De.WEBAPI_BASE_URL, e);
         }
       }
-      function S(e) {
+      function h(e) {
         const [t, n] = (0, l.useState)(void 0),
           [r, i] = (0, l.useState)(a.k_Loading);
         return (
@@ -2216,48 +2214,48 @@
                   e,
                 )) ||
               (i(a.k_Loading),
-              h
+              v
                 .Get()
                 .LoadHardwareItems(e)
                 .then((t) => {
                   t
-                    ? (n(h.Get().GetMultipleDetails(e)), i(a.k_LoadSuccess))
+                    ? (n(v.Get().GetMultipleDetails(e)), i(a.k_LoadSuccess))
                     : i(a.k_LoadFailure);
                 })
                 .catch(() => i(a.k_LoadFailure)));
           }, [t, e]),
-          (0, p.Qg)(h.Get().GetListChangeCallback(), n),
+          (0, m.Qg)(v.Get().GetListChangeCallback(), n),
           { rgHardwareDetails: t, eHardwareLoadingState: r }
         );
       }
-      function f(e) {
-        const [t, n] = (0, l.useState)(() => h.Get().GetDetail(e)),
+      function S(e) {
+        const [t, n] = (0, l.useState)(() => v.Get().GetDetail(e)),
           a = null == t ? void 0 : t.packageid;
         return (
           (0, l.useEffect)(() => {
             a != e &&
               e &&
-              h
+              v
                 .Get()
                 .LoadHardwareItems([e])
                 .then((t) => {
-                  t && n(h.Get().GetDetail(e));
+                  t && n(v.Get().GetDetail(e));
                 });
           }, [a, e]),
-          (0, p.Qg)(h.Get().GetDetailChangeCallback(e), n),
+          (0, m.Qg)(v.Get().GetDetailChangeCallback(e), n),
           t
         );
       }
-      function E() {
+      function f() {
         return {
-          fnUpdateReservation: h.Get().UpdateReservation,
-          Test_ReplaceDetails: h.Get().Test_ReplaceDetails,
-          Test_GetOriginalDetail: h.Get().Test_GetOriginalDetail,
+          fnUpdateReservation: v.Get().UpdateReservation,
+          Test_ReplaceDetails: v.Get().Test_ReplaceDetails,
+          Test_GetOriginalDetail: v.Get().Test_GetOriginalDetail,
         };
       }
-      (0, r.gn)([p.ak], h.prototype, "UpdateReservation", null),
-        (0, r.gn)([p.ak], h.prototype, "Test_ReplaceDetails", null),
-        (0, r.gn)([p.ak], h.prototype, "Test_GetOriginalDetail", null),
+      (0, r.gn)([m.ak], v.prototype, "UpdateReservation", null),
+        (0, r.gn)([m.ak], v.prototype, "Test_ReplaceDetails", null),
+        (0, r.gn)([m.ak], v.prototype, "Test_GetOriginalDetail", null),
         (function (e) {
           (e[(e.k_Loading = 0)] = "k_Loading"),
             (e[(e.k_LoadSuccess = 1)] = "k_LoadSuccess"),
@@ -12646,7 +12644,7 @@
         wn =
           2 == yn.De.EUNIVERSE
             ? [501556, 501557, 501558, 502103, 502106]
-            : [595603, 595604, 595605, 946113, 946114, 946115];
+            : [595603, 595604, 595605, 946113, 946114];
       const Gn = 1700157600,
         kn = 2 == yn.De.EUNIVERSE ? [502103, 502106] : [946113, 946114, 946115];
       function An(e) {
