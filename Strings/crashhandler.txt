@@ -542,8 +542,8 @@ CreateInterface
 steamwebhelper
 Steam Helper
 cefwebhelper
-Nov 15 2023
-17:52:34
+Nov 16 2023
+10:20:39
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 MainThrd
@@ -941,6 +941,7 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
+djc%
 PQ` 
 bXVh
 	<6m
@@ -1020,7 +1021,8 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231116015256Z0/
+231116182101Z0/
+((g0[
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -1028,19 +1030,20 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		TS/bolZz7mMSSXcJsmLW8jOhpVU=
+		oaaN24zJCJbc7nqhSnyNhAc+EJY=
 		</data>
 		<data>
-		4mN1e/8bKnMFRPTFcSGc31FOEdk=
+		jCfxSRGm6G7+f14impxLRcWMWnM=
 		</data>
 	</array>
 </dict>
 </plist>
->.j7a
-HK]q
-u:C,
- ?A0
-20231116015345Z0
+ZQA(
++yD{<>
+xvrdL
+Pn_I
+ 3cx
+20231116182154Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -1098,9 +1101,10 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231116015345Z0#
-+eUS.
-\#lj?`
+231116182154Z0#
+hQ:)
+|*< 
+;d1O
 __TEXT
 __text
 __TEXT
@@ -1146,6 +1150,7 @@ __common
 __DATA
 __LINKEDIT
 @loader_path/crashhandler.dylib
+L&VO
 /usr/lib/libiconv.2.dylib
 /System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
 /System/Library/Frameworks/IOKit.framework/Versions/A/IOKit
@@ -1837,8 +1842,8 @@ CreateInterface
 steamwebhelper
 Steam Helper
 cefwebhelper
-Nov 15 2023
-17:52:35
+Nov 16 2023
+10:20:39
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 MainThrd
@@ -2350,10 +2355,8 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231116015256Z0/
-14uP%m#
-ST0[
-t:46
+231116182101Z0/
+rn0[
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -2361,20 +2364,21 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		dIG6b+SAP8rMgwj/TffKOv9PNOA=
+		xDETUmsWXMbW1eQjy75MT72RAIU=
 		</data>
 		<data>
-		6V6D0uXqQ7tu/dg3RwTI+XQ6NDY=
+		ICTShGGZ9CS3kmA8TAitgBK4hLw=
 		</data>
 	</array>
 </dict>
 </plist>
-p3%D
-nfi5u
-<'#t
-Kn=+Cf
-G~{i
-20231116015345Z0
+XyH:
+:UI&|
+{zp9
+MhsQ
+Ka$5
+HT~]
+20231116182154Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -2430,14 +2434,10 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231116015345Z0#
+231116182154Z0#
 )b/{d
-X-u|
-J5SwL
-YMfhy
-Vsa7
-hy]j
-Uc<H
+i	%E
+').[
 __TEXT
 __text
 __TEXT
@@ -2737,8 +2737,8 @@ CreateInterface
 steamwebhelper
 Steam Helper
 cefwebhelper
-Nov 15 2023
-17:52:36
+Nov 16 2023
+10:20:39
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 MainThrd
@@ -3167,10 +3167,10 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-"[v'
 E:Rf
 6@'h
 Q_*p
+m>RP
 >E==
 subject.OU
 MXGJJ98X76
@@ -3185,8 +3185,6 @@ Zku\"=a
 u0%n
 KoxK!
 (1	W/t
-"	$t
-<+0m
 4pkI
 3Ts2
 Apple Inc.1&0$
@@ -3244,7 +3242,8 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231116015256Z0/
+231116182101Z0/
+i40M
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -3252,25 +3251,20 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		Hrbv/ezC+0goi2yqWm28U3Urtbs=
+		aIDrq8Zg8XYsxBxSzCHlCRUPtfE=
 		</data>
 		<data>
-		Dxn/v+DOtjO0NeP0JNK2Y4WW8MM=
+		hzjjxaboyM4n/9H6TqyH4P/r3Sg=
 		</data>
 	</array>
 </dict>
 </plist>
-'2/>
-$!SC
-+)<"8(
-c&%&
-_|A	
-/T3zF
-glRF
-OG<b
-b0	|
-20231116015345Z0
-;OB&
+.v\c
+R"Z:
+p.bpU
+O5Ol
+uZ"K
+20231116182154Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -3328,7 +3322,8 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231116015345Z0#
-e7[#
-Q0IM
-COB&
+231116182154Z0#
+2jw4
+WiQI?U
+a ahjN3V
+>ap6y|
