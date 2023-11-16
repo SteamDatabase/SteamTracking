@@ -22106,9 +22106,13 @@
                     },
                     (0, N.Xx)("#Sale_Reservation_ExpectedDeliveryDate"),
                   ),
-                  Boolean(s.high_pending_orders)
-                    ? (0, N.Xx)("#delayed_shipping_description2_short")
-                    : (0, N.Xx)("#standard_shipping_estimate2_short"),
+                  Boolean(946115 == s.packageid)
+                    ? Boolean(s.high_pending_orders)
+                      ? (0, N.Xx)("#delayed_shipping_description2_short")
+                      : (0, N.Xx)("#standard_shipping_estimate2_short")
+                    : Boolean(s.high_pending_orders)
+                    ? (0, N.Xx)("#delayed_shipping_description3_short")
+                    : (0, N.Xx)("#standard_shipping_estimate3_short"),
                 ),
             )
           : a.createElement(D.V, {
@@ -23410,15 +23414,16 @@
             );
       }
       function A(e) {
-        const { hardwareDetail: t } = e;
-        if (
-          (!t.inventory_available &&
-            (null == t.reservation_state ||
-              t.reservation_state ==
-                r.F.k_EPurchaseReservationState_NotReserved)) ||
-          (t.account_restricted_from_purchasing && !h.L7.logged_in)
-        )
-          return null;
+        const { hardwareDetail: t } = e,
+          n = !(
+            t.inventory_available ||
+            (null != t.reservation_state &&
+              t.reservation_state !=
+                r.F.k_EPurchaseReservationState_NotReserved) ||
+            t.requires_reservation
+          ),
+          i = t.account_restricted_from_purchasing && !h.L7.logged_in;
+        if (n || i) return null;
         if (
           G(t) ||
           t.reservation_state == r.F.k_EPurchaseReservationState_Allocated
@@ -23433,9 +23438,13 @@
               },
               (0, v.Xx)("#Sale_Reservation_ExpectedDeliveryDate"),
             ),
-            Boolean(t.high_pending_orders)
-              ? (0, v.Xx)("#delayed_shipping_description2_short")
-              : (0, v.Xx)("#standard_shipping_estimate2_short"),
+            Boolean(946115 == t.packageid)
+              ? Boolean(t.high_pending_orders)
+                ? (0, v.Xx)("#delayed_shipping_description2_short")
+                : (0, v.Xx)("#standard_shipping_estimate2_short")
+              : Boolean(t.high_pending_orders)
+              ? (0, v.Xx)("#delayed_shipping_description3_short")
+              : (0, v.Xx)("#standard_shipping_estimate3_short"),
           );
         return a.createElement(
           "div",
