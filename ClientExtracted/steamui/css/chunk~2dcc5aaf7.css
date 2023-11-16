@@ -2894,6 +2894,9 @@
   margin: 0 auto;
   width: var(--section-width);
   max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .controllerconfigurator_BottomSection_3RsRf {
   --field-negative-horizontal-margin: 10px;
@@ -2938,7 +2941,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  padding-bottom: 16px;
 }
 .controllerconfigurator_NoControllerColumn_3Zcp_
   .controllerconfigurator_NoControllerLabel_2sGaa {

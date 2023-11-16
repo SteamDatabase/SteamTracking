@@ -2769,6 +2769,8 @@
     "QuickAccess_Tab_Perf_AppRefreshRate_Hz": "%1$s Hz",
     "QuickAccess_Tab_Perf_AppRefreshRate_FPS": "%1$s FPS",
     "QuickAccess_Tab_Perf_AppRefreshRate_Explainer": "Specify the maximum frames per second (FPS) the game is allowed to render. Users typically prefer framerate limits near (or slightly lower than) the game's average framerate.\n\nHigher framerates typically produce smoother / lower-latency gameplay, at the expense of increased power usage.\n\nSome games may have adverse effects when refresh rate limiting is enabled, including increased input lag or audio glitches. For these cases it is recommended to set the framerate limit to maximum.",
+    "QuickAccess_Tab_Perf_AppRefreshRate_Restricted_Title": "Firmware Update Required",
+    "QuickAccess_Tab_Perf_AppRefreshRate_Restricted_Body": "A firmware update is required to use this feature.",
     "QuickAccess_Tab_Perf_DisableFrameLimit": "Disable Frame Limit",
     "QuickAccess_Tab_Perf_DisableFrameLimit_Explainer": "Disabling the frame limit allows games to render as fast as hardware performance allows (potentially higher than the display refresh rate).\n\nThis setting may minimize frame latency for some games, but can potentially consume large amounts of power to render frames that will not reach the screen.\n\nIt is recommend to keep this setting disabled under normal usage to preserve battery life.",
     "QuickAccess_Tab_Perf_GamescopeRefreshRate": "Refresh Rate",
@@ -3425,8 +3427,8 @@
     "Settings_DeckRewards_ClaimError_AccessDenied": "There was a problem claiming your Steam Deck rewards: access denied.",
     "Settings_DeckRewards_ClaimError_InsufficientPrivilege": "There was a problem claiming your Steam Deck rewards: your account must be in good standing to claim these rewards.",
     "Settings_DeckRewards_ClaimError_AlreadyRedeemed": "There was a problem claiming your Steam Deck rewards: the serial number for your device has already been used to claim rewards.",
-    "Settings_DeckRewards_ClaimSuccess": "Success! You can find your new Steam Community items in your Steam Inventory. You can select your Steam Deck keyboard theme under Keyboard section under Settings.",
-    "Settings_DeckRewards_GoToKeyboardSettings": "Go to Keyboard Settings",
+    "Settings_DeckRewards_ClaimSuccess": "Success! You can find your new Steam Community items in your Steam Inventory. Your Steam Deck items can be enabled under settings in their respective sections (Keyboard and/or Customization).",
+    "Settings_DeckRewards_GoToKeyboardSettings": "Go to Settings",
     "Settings_DeckRewards_EquipProfile": "Equip Profile",
     "Settings_System_Header": "System Settings",
     "Settings_System_About": "About",
@@ -7911,7 +7913,7 @@
     "AppDetailsControllerSection_Title_VR_Supported": "Supports VR",
     "AppDetailsControllerSection_VR_Supported": "This game includes a VR mode",
     "AppDetailsControllerSection_Title_VR_Only": "Requires VR",
-    "AppDetailsControllerSection_VR_Only": "This game cannot be played with a VR Headset",
+    "AppDetailsControllerSection_VR_Only": "This game needs a VR Headset to play",
     "AppControllerConfiguration_NoControllers": "No controller connected",
     "steamui_dummy": "DO NOT USE ME"
 }
