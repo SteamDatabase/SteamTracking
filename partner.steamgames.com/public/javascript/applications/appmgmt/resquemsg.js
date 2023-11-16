@@ -955,8 +955,8 @@
                             t.product_identifier == e.product_identifier,
                         ),
                     )
-                    .map((e, t) => ({
-                      value: t,
+                    .map((e) => ({
+                      value: e,
                       label: `${e.product_description} @ ${e.distributor} - product id: ${e.product_identifier}, part number ${e.part_number} `,
                     }))
                 : [],
@@ -965,7 +965,15 @@
         (0, r.useEffect)(() => {
           (null == a ? void 0 : a.current) && a.current.select.clearValue();
         }, [i]);
-        const d = o.findIndex((e) => e == t);
+        const d =
+          null == l
+            ? void 0
+            : l.find(
+                (e) =>
+                  t &&
+                  t.edistributor == e.value.edistributor &&
+                  t.product_identifier == e.value.product_identifier,
+              );
         return r.createElement(E.ZP, {
           isSearchable: !0,
           ref: a,
@@ -973,9 +981,9 @@
           isClearable: !0,
           className: f.ItemSelect,
           options: l,
-          value: null == l ? void 0 : l.find((e) => e.value == d),
+          value: d,
           onChange: (e) => {
-            e && n(o[e.value]);
+            e && n(e.value);
           },
         });
       }
