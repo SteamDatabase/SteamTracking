@@ -3621,7 +3621,7 @@ body.ShoppingCart {
 .purchasenotices_PurchaseNoticeContainer_3MM2B {
   display: flex;
   flex-direction: row;
-  height: 52px;
+  min-height: 52px;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
   border-radius: 2px;
   margin-bottom: 12px;
@@ -3637,6 +3637,7 @@ body.ShoppingCart {
   line-height: 20px;
   text-align: left;
   white-space: pre-wrap;
+  text-wrap: wrap;
   color: #fff;
   display: flex;
   align-content: center;
@@ -3649,8 +3650,8 @@ body.ShoppingCart {
   text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.75);
 }
 .purchasenotices_PurchaseNoticeImageContainer_2oYi0 {
-  height: 52px;
-  width: 52px;
+  min-height: 52px;
+  min-width: 52px;
   background-color: #ffc82c;
   display: flex;
   justify-content: center;
