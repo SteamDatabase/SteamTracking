@@ -7907,9 +7907,10 @@
           r,
           i,
           s,
-          l,
-          c = 0,
-          d = void 0,
+          o,
+          l = 0,
+          c = void 0,
+          d,
           u,
           m,
           p,
@@ -7918,20 +7919,19 @@
           v,
           h,
           S,
-          f,
         ) {
-          var E, b, y, C, D, I;
+          var f, E, b, y, C, D;
           return (0, G.mG)(this, void 0, void 0, function* () {
-            let G = this.m_mapSaleGameListsByFlavor.get(e);
-            if (!G) {
-              const t = this.GetJSONDataKey(i, v, a, s, d),
+            let I = this.m_mapSaleGameListsByFlavor.get(e);
+            if (!I) {
+              const t = this.GetJSONDataKey(i, g, a, s, c, v),
                 n = (0, w.ip)(t, "application_config");
               this.ValidateDataGameByFlavor(n)
-                ? ((G = n),
-                  (G.setAppIDs = new Set(G.appids)),
-                  (G.setStoreItemKeys = new Set(G.store_item_keys)),
+                ? ((I = n),
+                  (I.setAppIDs = new Set(I.appids)),
+                  (I.setStoreItemKeys = new Set(I.store_item_keys)),
                   this.m_mapSaleGameListsByFlavor.set(e, n))
-                : ((G = {
+                : ((I = {
                     appids: [],
                     store_item_keys: [],
                     setAppIDs: new Set(),
@@ -7939,18 +7939,18 @@
                     solr_index: 0,
                     possible_has_more: !0,
                   }),
-                  this.m_mapSaleGameListsByFlavor.set(e, G));
+                  this.m_mapSaleGameListsByFlavor.set(e, I));
             }
-            const k = G.appids.length,
-              B = c + l - k;
-            if (B > 0 && G.possible_has_more) {
+            const G = I.appids.length,
+              k = l + o - G;
+            if (k > 0 && I.possible_has_more) {
               const e =
                 w.De.STORE_BASE_URL +
                 (n
                   ? "saleaction/ajaxpreviewsaledynamicappquery"
                   : "saleaction/ajaxgetsaledynamicappquery");
-              let l = null;
-              const c = {
+              let o = null;
+              const l = {
                 cc: w.De.COUNTRY,
                 l: w.De.LANGUAGE,
                 clanAccountID:
@@ -7959,82 +7959,82 @@
                   (null == r ? void 0 : r.AnnouncementGID) || null,
                 flavor: i,
                 strFacetFilter: null == s ? void 0 : s.GetQuery(),
-                start: G.solr_index,
-                count: Math.max(B, 50),
+                start: I.solr_index,
+                count: Math.max(k, 50),
                 tabuniqueid: a,
-                sectionuniqueid: v,
+                sectionuniqueid: g,
                 return_capsules: !0,
-                search: t ? d : void 0,
+                search: t ? c : void 0,
                 origin: self.origin,
-                strContentHubType: null == u ? void 0 : u.type,
-                strContentHubCategory: null == u ? void 0 : u.category,
-                nContentHubTagID: null == u ? void 0 : u.tagid,
-                bContentHubDiscountedOnly: m,
-                strTabFilter: p,
-                strSectionFilter: _,
-                bPrioritizeDiscounts: g,
-                bRequestFacetCounts: S,
+                strContentHubType: null == d ? void 0 : d.type,
+                strContentHubCategory: null == d ? void 0 : d.category,
+                nContentHubTagID: null == d ? void 0 : d.tagid,
+                bContentHubDiscountedOnly: u,
+                strTabFilter: m,
+                strSectionFilter: p,
+                bPrioritizeDiscounts: _,
+                bRequestFacetCounts: h,
                 prune_list_optin_name:
                   (null == r ? void 0 : r.jsondata.prune_list_optin_name) ||
                   void 0,
                 optin_tagid:
+                  (null === (f = null == r ? void 0 : r.jsondata) ||
+                  void 0 === f
+                    ? void 0
+                    : f.optin_tagid) || void 0,
+                optin_prune_tagid:
                   (null === (E = null == r ? void 0 : r.jsondata) ||
                   void 0 === E
                     ? void 0
-                    : E.optin_tagid) || void 0,
-                optin_prune_tagid:
+                    : E.optin_prune_tagid) || void 0,
+                optin_only:
                   (null === (b = null == r ? void 0 : r.jsondata) ||
                   void 0 === b
                     ? void 0
-                    : b.optin_prune_tagid) || void 0,
-                optin_only:
-                  (null === (y = null == r ? void 0 : r.jsondata) ||
-                  void 0 === y
-                    ? void 0
-                    : y.optin_only) || void 0,
-                controller_category: (0, o.Pi)(Number(h)) || void 0,
+                    : b.optin_only) || void 0,
+                controller_category: Number(v) || void 0,
               };
               if (
-                ((l = yield A().get(e, {
-                  params: c,
+                ((o = yield A().get(e, {
+                  params: l,
                   withCredentials: n,
-                  cancelToken: null == f ? void 0 : f.token,
+                  cancelToken: null == S ? void 0 : S.token,
                 })),
-                200 != (null == l ? void 0 : l.status) ||
+                200 != (null == o ? void 0 : o.status) ||
                   1 !=
-                    (null === (C = l.data) || void 0 === C
+                    (null === (y = o.data) || void 0 === y
                       ? void 0
-                      : C.success) ||
-                  !(null === (D = l.data) || void 0 === D ? void 0 : D.appids))
+                      : y.success) ||
+                  !(null === (C = o.data) || void 0 === C ? void 0 : C.appids))
               )
                 throw new Error(
                   "query failed, status=" +
-                    (null == l ? void 0 : l.status) +
+                    (null == o ? void 0 : o.status) +
                     " success: " +
-                    (null === (I = null == l ? void 0 : l.data) || void 0 === I
+                    (null === (D = null == o ? void 0 : o.data) || void 0 === D
                       ? void 0
-                      : I.success),
+                      : D.success),
                 );
-              for (const e of l.data.appids)
-                G.setAppIDs.has(e) || (G.appids.push(e), G.setAppIDs.add(e));
-              for (const e of l.data.store_item_keys)
-                G.setStoreItemKeys.has(e) ||
-                  (G.store_item_keys.push(e), G.setStoreItemKeys.add(e));
-              (G.faceting = l.data.faceting),
-                (G.multifaceting = l.data.multifaceting),
-                (G.possible_has_more = l.data.possible_has_more),
-                (G.solr_index = l.data.solr_index),
-                (G.match_count = l.data.match_count);
+              for (const e of o.data.appids)
+                I.setAppIDs.has(e) || (I.appids.push(e), I.setAppIDs.add(e));
+              for (const e of o.data.store_item_keys)
+                I.setStoreItemKeys.has(e) ||
+                  (I.store_item_keys.push(e), I.setStoreItemKeys.add(e));
+              (I.faceting = o.data.faceting),
+                (I.multifaceting = o.data.multifaceting),
+                (I.possible_has_more = o.data.possible_has_more),
+                (I.solr_index = o.data.solr_index),
+                (I.match_count = o.data.match_count);
             }
-            this.m_mapSaleGameListsByFlavor.set(e, G);
-            const L = G.possible_has_more || c + l < G.appids.length;
+            this.m_mapSaleGameListsByFlavor.set(e, I);
+            const B = I.possible_has_more || l + o < I.appids.length;
             return {
-              appids: G.appids.slice(c, l),
-              rgStoreItemKeys: G.store_item_keys,
-              facetCounts: G.faceting,
-              multifaceting: G.multifaceting,
-              nMatchCount: G.match_count,
-              bHasPossibleMoreResults: L,
+              appids: I.appids.slice(l, o),
+              rgStoreItemKeys: I.store_item_keys,
+              facetCounts: I.faceting,
+              multifaceting: I.multifaceting,
+              nMatchCount: I.match_count,
+              bHasPossibleMoreResults: B,
             };
           });
         }
@@ -8050,7 +8050,7 @@
               strSearch: p,
               bPrioritizeDiscounts: _,
               nSectionUniqueID: g,
-              eControllerType: v,
+              eControllerCategory: v,
               bRequestFacetCounts: h,
             } = a;
             p = null == p ? void 0 : p.trim();
@@ -15816,7 +15816,7 @@
                   nSectionUniqueID:
                     "items" === a.section_type ? a.unique_id : void 0,
                   bRequestFacetCounts: a.enable_faceted_browsing,
-                  eControllerType: o,
+                  eControllerCategory: o,
                 },
                 d = yield j.Get().GetSaleGamesByFlavor(e, n, c, l, _);
               return (
@@ -16380,7 +16380,7 @@
             activeTab: l,
             nSaleDayIndex: c,
             promotionName: d,
-            controllerType: u,
+            controllerCategory: u,
           } = e,
           m = (0, w.id)(),
           [p, _] = (0, a.useState)(!1),
@@ -16823,39 +16823,39 @@
             return t(n);
           });
         }
-        InternalGetItems(e, t, n, a, r, i, s, l) {
-          var c, d, u, m, p, _, g, v;
+        InternalGetItems(e, t, n, a, r, i, s, o) {
+          var l, c, d, u, m, p, _, g;
           return (0, G.mG)(this, void 0, void 0, function* () {
-            if (l) return l(e, t, n, a, r, i, s);
-            const h = this.GetItemBrowserQueryKey(t, n, a, r);
-            Lr.Debug(h);
-            const S = (0, w.kQ)(h, "application_config");
-            if (S) {
+            if (o) return o(e, t, n, a, r, i, s);
+            const v = this.GetItemBrowserQueryKey(t, n, a, r);
+            Lr.Debug(v);
+            const h = (0, w.kQ)(v, "application_config");
+            if (h) {
               const e = [];
-              for (const t of S.store_item_keys) {
+              for (const t of h.store_item_keys) {
                 const n = t.split("_");
                 e.push({ type: (0, L.TM)(n[0]), id: Number(n[1]) });
               }
               return (
-                this.m_mapResults.set(h, {
+                this.m_mapResults.set(v, {
                   rgItems: e,
-                  faceting: S.faceting,
-                  multifaceting: S.multifaceting,
-                  nMatchCount: S.match_count,
-                  bMoreAvailable: S.possible_has_more,
+                  faceting: h.faceting,
+                  multifaceting: h.multifaceting,
+                  nMatchCount: h.match_count,
+                  bMoreAvailable: h.possible_has_more,
                   nNextSolrIndex: a + r,
                   strRequest:
-                    ("dev" === w.De.WEB_UNIVERSE && S.request) || void 0,
+                    ("dev" === w.De.WEB_UNIVERSE && h.request) || void 0,
                 }),
-                this.m_mapResults.get(h)
+                this.m_mapResults.get(v)
               );
             }
-            const f =
+            const S =
                 w.De.STORE_BASE_URL +
                 (i
                   ? "saleaction/ajaxpreviewsaledynamicappquery"
                   : "saleaction/ajaxgetsaledynamicappquery"),
-              E = {
+              f = {
                 cc: w.De.COUNTRY,
                 l: w.De.LANGUAGE,
                 clanAccountID:
@@ -16864,9 +16864,9 @@
                   (null == e ? void 0 : e.AnnouncementGID) || null,
                 flavor: t,
                 strFacetFilter:
-                  null === (c = n.facetFilter) || void 0 === c
+                  null === (l = n.facetFilter) || void 0 === l
                     ? void 0
-                    : c.GetQuery(),
+                    : l.GetQuery(),
                 start: a,
                 count: r,
                 tabuniqueid: n.nTabUniqueID,
@@ -16875,15 +16875,15 @@
                 search: n.strSearch || void 0,
                 origin: self.origin,
                 strContentHubType:
-                  null === (d = n.contentHub) || void 0 === d ? void 0 : d.type,
+                  null === (c = n.contentHub) || void 0 === c ? void 0 : c.type,
                 strContentHubCategory:
+                  null === (d = n.contentHub) || void 0 === d
+                    ? void 0
+                    : d.category,
+                nContentHubTagID:
                   null === (u = n.contentHub) || void 0 === u
                     ? void 0
-                    : u.category,
-                nContentHubTagID:
-                  null === (m = n.contentHub) || void 0 === m
-                    ? void 0
-                    : m.tagid,
+                    : u.tagid,
                 bContentHubDiscountedOnly: n.bContentHubDiscountedOnly,
                 strTabFilter: n.strTabFilter,
                 strSectionFilter: n.strSectionFilter,
@@ -16893,37 +16893,35 @@
                   (null == e ? void 0 : e.jsondata.prune_list_optin_name) ||
                   void 0,
                 optin_tagid:
+                  (null === (m = null == e ? void 0 : e.jsondata) ||
+                  void 0 === m
+                    ? void 0
+                    : m.optin_tagid) || void 0,
+                optin_prune_tagid:
                   (null === (p = null == e ? void 0 : e.jsondata) ||
                   void 0 === p
                     ? void 0
-                    : p.optin_tagid) || void 0,
-                optin_prune_tagid:
+                    : p.optin_prune_tagid) || void 0,
+                optin_only:
                   (null === (_ = null == e ? void 0 : e.jsondata) ||
                   void 0 === _
                     ? void 0
-                    : _.optin_prune_tagid) || void 0,
-                optin_only:
-                  (null === (g = null == e ? void 0 : e.jsondata) ||
-                  void 0 === g
-                    ? void 0
-                    : g.optin_only) || void 0,
-                controller_category: (0, o.Pi)(
-                  Number(n.eControllerType) || void 0,
-                ),
+                    : _.optin_only) || void 0,
+                controller_category: Number(n.eControllerCategory) || void 0,
               };
-            let b = null;
+            let E = null;
             try {
-              const e = yield A().get(f, {
-                params: E,
+              const e = yield A().get(S, {
+                params: f,
                 withCredentials: i,
                 cancelToken: null == s ? void 0 : s.token,
               });
               if (
                 200 === (null == e ? void 0 : e.status) &&
                 1 ===
-                  (null === (v = e.data) || void 0 === v
+                  (null === (g = e.data) || void 0 === g
                     ? void 0
-                    : v.success) &&
+                    : g.success) &&
                 e.data.store_item_keys
               ) {
                 const t = [];
@@ -16932,7 +16930,7 @@
                   t.push({ type: (0, L.TM)(e[0]), id: Number(e[1]) });
                 }
                 return (
-                  this.m_mapResults.set(h, {
+                  this.m_mapResults.set(v, {
                     rgItems: t,
                     faceting: e.data.faceting,
                     multifaceting: e.data.multifaceting,
@@ -16947,20 +16945,20 @@
                       a + r
                     }`,
                   ),
-                  this.m_mapResults.get(h)
+                  this.m_mapResults.get(v)
                 );
               }
-              this.m_mapPromises.delete(h), (b = (0, U.l)(e));
+              this.m_mapPromises.delete(v), (E = (0, U.l)(e));
             } catch (e) {
               if (
-                (this.m_mapPromises.delete(h),
-                (b = (0, U.l)(e)),
+                (this.m_mapPromises.delete(v),
+                (E = (0, U.l)(e)),
                 A().isCancel(e))
               )
                 return (
                   console.log(
                     "CSaleItemBrowserStore.InternalGetItems: " +
-                      (null == b ? void 0 : b.strErrorMsg),
+                      (null == E ? void 0 : E.strErrorMsg),
                   ),
                   null
                 );
@@ -16968,8 +16966,8 @@
             return (
               console.error(
                 "CSaleItemBrowserStore.InternalGetItems failed: " +
-                  (null == b ? void 0 : b.strErrorMsg),
-                b,
+                  (null == E ? void 0 : E.strErrorMsg),
+                E,
               ),
               null
             );
@@ -16983,7 +16981,7 @@
             (null === (r = t.facetFilter) || void 0 === r
               ? void 0
               : r.GetURLParam()) || "*"
-          }_${t.strSearch || "*"}_${t.eControllerType || "*"}`;
+          }_${t.strSearch || "*"}_${t.eControllerCategory || "*"}`;
         }
       }
       var Pr = n(94496),
@@ -17057,7 +17055,7 @@
                 : r.GetActiveTabUniqueID()) ||
             this.state.strFacetUrlParam !== o ||
             this.state.currentFlavor !== l ||
-            this.props.controllerType !== e.controllerType
+            this.props.controllerCategory !== e.controllerCategory
           ) {
             (null === (i = this.props.section) || void 0 === i
               ? void 0
@@ -17164,7 +17162,7 @@
               bIsPreview: n,
               activeTab: a,
               section: r,
-              controllerType: i,
+              controllerCategory: i,
             } = this.props;
             let {
               currentFlavor: s,
@@ -17194,7 +17192,7 @@
                   bContentHubDiscountedOnly: t.BContentHubDiscountedOnly(),
                   strSearch: d,
                   bRequestFacetCounts: r.enable_faceted_browsing,
-                  eControllerType: i,
+                  eControllerCategory: i,
                 },
                 c = Boolean(d) ? "search" : s;
               let u;
@@ -21851,34 +21849,33 @@
         Os = n(97448),
         Hs = n(47742);
       function Us(e) {
-        const { controllerType: t, setControllerType: n } = e,
+        const { controllerCategory: t, setControllerCategory: n } = e,
           r = (0, w.id)(),
-          { data: i } = js();
-        if ("dev" !== w.De.WEB_UNIVERSE) return null;
-        const s = [
-          {
-            value: 32,
-            label:
-              32 === i
-                ? "#Store_ControllerFilter_Your_Xbox"
-                : "#Store_ControllerFilter_Xbox",
-          },
-          {
-            value: 34,
-            label:
-              34 === i
-                ? "#Store_ControllerFilter_Your_PS4"
-                : "#Store_ControllerFilter_PS4",
-          },
-          {
-            value: 45,
-            label:
-              45 === i
-                ? "#Store_ControllerFilter_Your_PS5"
-                : "#Store_ControllerFilter_PS5",
-          },
-          { value: 0, label: "#Store_ControllerFilter_All" },
-        ];
+          { data: i } = js(),
+          s = [
+            {
+              value: 28,
+              label:
+                32 === i
+                  ? "#Store_ControllerFilter_Your_Xbox"
+                  : "#Store_ControllerFilter_Xbox",
+            },
+            {
+              value: 55,
+              label:
+                34 === i
+                  ? "#Store_ControllerFilter_Your_PS4"
+                  : "#Store_ControllerFilter_PS4",
+            },
+            {
+              value: 57,
+              label:
+                45 === i
+                  ? "#Store_ControllerFilter_Your_PS5"
+                  : "#Store_ControllerFilter_PS5",
+            },
+            { value: void 0, label: "#Store_ControllerFilter_All" },
+          ];
         return a.createElement(
           "div",
           {
@@ -21911,7 +21908,9 @@
                 a.createElement(
                   "div",
                   { className: Os.ControllerFilterIcon },
-                  a.createElement(Fs.CtA, { controllerType: e.value }),
+                  a.createElement(Fs.CtA, {
+                    controllerType: (0, o.bF)(e.value),
+                  }),
                 ),
                 a.createElement(
                   "div",
@@ -21925,32 +21924,36 @@
       }
       function js() {
         (0, Rs.bY)(), (0, Hs.M)();
-        return (0, vt.useQuery)(["GetControllersUsed"], () =>
-          (0, G.mG)(this, void 0, void 0, function* () {
-            var e;
-            let t;
-            try {
-              const n = `${w.De.STORE_BASE_URL}account/ajaxgetcontrollersused`,
-                a = {},
-                r = yield A().get(n, { params: a, withCredentials: !0 });
-              if (
-                200 === (null == r ? void 0 : r.status) &&
-                1 ===
-                  (null === (e = null == r ? void 0 : r.data) || void 0 === e
-                    ? void 0
-                    : e.success)
-              ) {
-                if (r.data.has_ps5_controller) return 45;
-                if (r.data.has_ps4_controller) return 34;
-                if (r.data.has_xbox_controller) return 32;
-              } else t = (0, U.l)(r);
-            } catch (e) {
-              t = (0, U.l)(e);
-            }
-            return (
-              t && console.error("useLastControllerUsedByPlayer failed:", t), 0
-            );
-          }),
+        return (0, vt.useQuery)(
+          ["GetControllersUsed"],
+          () =>
+            (0, G.mG)(this, void 0, void 0, function* () {
+              var e;
+              let t;
+              try {
+                const n = `${w.De.STORE_BASE_URL}account/ajaxgetcontrollersused`,
+                  a = {},
+                  r = yield A().get(n, { params: a, withCredentials: !0 });
+                if (
+                  200 === (null == r ? void 0 : r.status) &&
+                  1 ===
+                    (null === (e = null == r ? void 0 : r.data) || void 0 === e
+                      ? void 0
+                      : e.success)
+                ) {
+                  if (r.data.has_ps5_controller) return 45;
+                  if (r.data.has_ps4_controller) return 34;
+                  if (r.data.has_xbox_controller) return 32;
+                } else t = (0, U.l)(r);
+              } catch (e) {
+                t = (0, U.l)(e);
+              }
+              return (
+                t && console.error("useLastControllerUsedByPlayer failed:", t),
+                0
+              );
+            }),
+          { enabled: !!w.L7.accountid },
         );
       }
       function Vs(e) {
@@ -22544,7 +22547,7 @@
             );
           },
           { data: h } = js(),
-          [f, E] = (0, It.Ar)("controller", h),
+          [f, E] = (0, It.Ar)("controller", (0, o.Pi)(h)),
           b = a.useMemo(() => {
             const e = new Map();
             return (
@@ -22643,8 +22646,8 @@
                 selectedTabs: b,
                 setTabUniqueIDQueryParam: v,
                 expanded: D,
-                controllerType: f,
-                setControllerType: E,
+                controllerCategory: f,
+                setControllerCategory: E,
               }),
             );
           }
