@@ -960,7 +960,7 @@
     },
     7036: (e, r, t) => {
       "use strict";
-      t.r(r), t.d(r, { default: () => Xr });
+      t.r(r), t.d(r, { default: () => Fr });
       let n = {
         GameEdit: (e, r) => `/admin/game/${e}/${r}`,
         GameEditByAppID: (e) => `/admin/game/editbyappid/${e}`,
@@ -1178,7 +1178,7 @@
                 }),
               ),
             ),
-            a.createElement(H, null),
+            a.createElement(U, null),
           )
         );
       });
@@ -1312,7 +1312,7 @@
       function L(e) {
         return a.createElement("span", { className: R.BlueNote }, e.children);
       }
-      function H(e) {
+      function U(e) {
         const {
           rtEarliestDate: r,
           strReleaseState: t,
@@ -1329,7 +1329,7 @@
               ),
             );
       }
-      var U = t(19304);
+      var H = t(19304);
       function O(e) {
         const { bIsGameEdit: r, unAppID: t } = e,
           [n, o] = a.useState(e.rtReleaseDate),
@@ -1353,7 +1353,7 @@
             }),
           a.createElement(
             "div",
-            { className: (0, U.Z)(d.ReleaseDateInfoCtn, r && d.GameEditCtn) },
+            { className: (0, H.Z)(d.ReleaseDateInfoCtn, r && d.GameEditCtn) },
             a.createElement(
               "div",
               { className: d.ReleaseDateContent },
@@ -1367,7 +1367,7 @@
                 { label: (0, s.Xx)("#App_Landing_CustomersSeeReleaseDate") },
                 a.createElement(
                   "div",
-                  { className: (0, U.Z)(d.BigField, l ? d.Set : d.Unset) },
+                  { className: (0, H.Z)(d.BigField, l ? d.Set : d.Unset) },
                   l
                     ? (0, c.M)(l, n)
                     : (0, s.Xx)("#App_Landing_UnsetReleaseDate"),
@@ -1377,14 +1377,14 @@
             a.createElement(
               "div",
               { className: d.EditButton, onClick: E },
-              a.createElement("div", { className: (0, U.Z)(d.Spacer, d.Top) }),
+              a.createElement("div", { className: (0, H.Z)(d.Spacer, d.Top) }),
               a.createElement(
                 "div",
                 { className: d.EditButtonIcon },
                 a.createElement(p.I8b, null),
               ),
               a.createElement("div", {
-                className: (0, U.Z)(d.Spacer, d.Bottom),
+                className: (0, H.Z)(d.Spacer, d.Bottom),
               }),
             ),
           ),
@@ -1398,18 +1398,18 @@
               null,
               a.createElement(
                 "div",
-                { className: (0, U.Z)(d.BigField, d.Set) },
+                { className: (0, H.Z)(d.BigField, d.Set) },
                 (0, s.vX)(r),
               ),
               a.createElement(
                 "div",
-                { className: (0, U.Z)(d.SubField, d.Set) },
+                { className: (0, H.Z)(d.SubField, d.Set) },
                 (0, u.Sc)(r, {}, { timeZoneName: "short" }),
               ),
             )
           : a.createElement(
               "div",
-              { className: (0, U.Z)(d.BigField, d.Unset) },
+              { className: (0, H.Z)(d.BigField, d.Unset) },
               (0, s.Xx)("#App_Landing_UnsetReleaseDate"),
             );
       }
@@ -1459,7 +1459,7 @@
           a.createElement(
             "div",
             {
-              className: (0, U.Z)(
+              className: (0, H.Z)(
                 Z.ImgSection,
                 e.bHightlightRow && Z.HighlightRow,
                 e.bHighlightGPRequired && Z.GamepadRequired,
@@ -1470,7 +1470,7 @@
           a.createElement(
             "div",
             {
-              className: (0, U.Z)(
+              className: (0, H.Z)(
                 Z.LocSection,
                 e.bHighlightText && Z.HighlightText,
                 e.bHightlightRow && Z.HighlightRow,
@@ -1480,7 +1480,7 @@
             a.createElement(
               "div",
               {
-                className: (0, U.Z)(
+                className: (0, H.Z)(
                   Z.LocString,
                   e.bHighlightText && Z.HighlightText,
                   e.bHightlightRow && Z.HighlightRow,
@@ -1512,7 +1512,7 @@
       function Y() {
         return a.createElement(j, {
           tagImage: a.createElement(z.by3, {
-            className: (0, U.Z)(Z.Tilt, Z.SmallerSVG),
+            className: (0, H.Z)(Z.Tilt, Z.SmallerSVG),
           }),
           strLocalizationToken: "#Store_ControllerSupport_GamepadRequired",
           bHighlightGPRequired: !0,
@@ -1523,13 +1523,13 @@
       function q() {
         return a.createElement(
           "div",
-          { className: (0, U.Z)(Z.PurchaseNoticeContainer) },
+          { className: (0, H.Z)(Z.PurchaseNoticeContainer) },
           a.createElement(z.atL, {
-            className: (0, U.Z)(Z.PurchaseNoticeImage),
+            className: (0, H.Z)(Z.PurchaseNoticeImage),
           }),
           a.createElement(
             "div",
-            { className: (0, U.Z)(Z.PurchaseNoticeLabel) },
+            { className: (0, H.Z)(Z.PurchaseNoticeLabel) },
             (0, s.Xx)("#Store_ControllerSupport_GamepadPreferred"),
           ),
         );
@@ -1538,7 +1538,7 @@
         const { bNoKeyboardSupport: r, bGamepadPreferred: t } = e;
         return a.createElement(
           "div",
-          { className: (0, U.Z)(Z.NoticeContainer) },
+          { className: (0, H.Z)(Z.NoticeContainer) },
           r && a.createElement(Y, null),
           t && !r && a.createElement(q, null),
         );
@@ -1788,7 +1788,7 @@
                   S.EU,
                   { key: e.id, value: e.id },
                   a.createElement("div", {
-                    className: (0, U.Z)(
+                    className: (0, H.Z)(
                       ne.RadioButton,
                       c == e.id && ne.Selected,
                     ),
@@ -1881,7 +1881,7 @@
                   S.EU,
                   { key: e.id, value: e.id },
                   a.createElement("div", {
-                    className: (0, U.Z)(
+                    className: (0, H.Z)(
                       ne.RadioButton,
                       u == e.id && ne.Selected,
                     ),
@@ -2115,7 +2115,7 @@
                   S.EU,
                   { key: e.id, value: e.id },
                   a.createElement("div", {
-                    className: (0, U.Z)(
+                    className: (0, H.Z)(
                       ne.RadioButton,
                       i == e.id && ne.Selected,
                     ),
@@ -2309,20 +2309,20 @@
           o = (100 * (t + 1)) / (r + 1);
         return a.createElement(
           "div",
-          { className: (0, U.Z)(ne.ModalHeader) },
+          { className: (0, H.Z)(ne.ModalHeader) },
           !1,
           a.createElement("div", { className: ne.WizardTitle }, (0, s.Xx)(n)),
           a.createElement(
             "div",
             {
-              className: (0, U.Z)(
+              className: (0, H.Z)(
                 ne.ProgressBar,
                 t == r - 1 && ne.ProgressBarComplete,
               ),
             },
             t < r - 1 &&
               a.createElement("div", {
-                className: (0, U.Z)(ne.ProgressBarFillComponent),
+                className: (0, H.Z)(ne.ProgressBarFillComponent),
                 style: { width: o + "%" },
               }),
           ),
@@ -2435,7 +2435,7 @@
           ),
           a.createElement(
             "div",
-            { className: (0, U.Z)(W.ReleaseDateInfoCtn) },
+            { className: (0, H.Z)(W.ReleaseDateInfoCtn) },
             a.createElement(
               "div",
               { className: W.ReleaseDateContent },
@@ -2454,7 +2454,7 @@
                 "div",
                 { className: W.EditButton, onClick: o },
                 a.createElement("div", {
-                  className: (0, U.Z)(W.Spacer, W.Top),
+                  className: (0, H.Z)(W.Spacer, W.Top),
                 }),
                 a.createElement(
                   "div",
@@ -2462,7 +2462,7 @@
                   a.createElement(p.I8b, null),
                 ),
                 a.createElement("div", {
-                  className: (0, U.Z)(W.Spacer, W.Bottom),
+                  className: (0, H.Z)(W.Spacer, W.Bottom),
                 }),
               ),
           ),
@@ -3295,13 +3295,13 @@
           (e[(e.k_ERegionCodeMENA = 4)] = "k_ERegionCodeMENA"),
           (e[(e.k_ERegionCodeMax = 5)] = "k_ERegionCodeMax");
       })(Le || (Le = {}));
-      const He = [
+      const Ue = [
         Le.k_ERegionCodeCIS,
         Le.k_ERegionCodeSAsia,
         Le.k_ERegionCodeLATAM,
         Le.k_ERegionCodeMENA,
       ];
-      function Ue(e) {
+      function He(e) {
         switch (e) {
           case Le.k_ERegionCodeCIS:
             return "usd_cis";
@@ -3406,10 +3406,10 @@
               (e) => e.amount.currency_code == t,
             ) || r.push(we(t));
           }),
-          He.forEach((t) => {
+          Ue.forEach((t) => {
             const n = Oe(t);
             e.proposed_prices.region_amounts.some((e) => e.name == n) ||
-              r.push(Ue(t));
+              r.push(He(t));
           }),
           r
         );
@@ -3417,7 +3417,7 @@
       function Je(e, r, t) {
         var n, o, a, l, i, c;
         if (r) {
-          const t = Ue(r);
+          const t = He(r);
           return null ===
             (a =
               null ===
@@ -3447,7 +3447,7 @@
       function er(e, r, t, n, o, a) {
         n.price * qe.bm < r.amount.amount
           ? o.push({
-              strCurrency: t ? Ue(t) : xe(r.amount.currency_code),
+              strCurrency: t ? He(t) : xe(r.amount.currency_code),
               nAmountCents: r.amount.amount,
               nPercent: Math.floor((r.amount.amount / n.price) * 100) - 100,
               nProposedPrice: r.amount.amount,
@@ -3456,7 +3456,7 @@
             })
           : n.price / qe.bm > r.amount.amount &&
             a.push({
-              strCurrency: t ? Ue(t) : xe(r.amount.currency_code),
+              strCurrency: t ? He(t) : xe(r.amount.currency_code),
               nAmountCents: r.amount.amount,
               nPercent: 100 - Math.floor((r.amount.amount / n.price) * 100),
               nProposedPrice: r.amount.amount,
@@ -3672,7 +3672,7 @@
           i = `${De.De.PARTNER_BASE_URL}store/packagelanding/${t.packageid}`;
         return a.createElement(
           "div",
-          { className: (0, U.Z)(We.PackageInfoColumn, ir.PackageInfoColumn) },
+          { className: (0, H.Z)(We.PackageInfoColumn, ir.PackageInfoColumn) },
           a.createElement(
             "div",
             { className: We.PackageName },
@@ -3778,7 +3778,7 @@
                 a.createElement(V.HP, { toolTipContent: Be(e) }, we(e)),
               ),
             ),
-            He.map((e) =>
+            Ue.map((e) =>
               a.createElement(
                 "td",
                 { key: "header_region" + e },
@@ -3813,7 +3813,7 @@
               guidePrice: r,
             });
           }),
-          He.map((e) => {
+          Ue.map((e) => {
             const r = Re.k_ECurrencyCodeUSD,
               o =
                 n.GetRecommendPrice(i, r, e) ||
@@ -3933,7 +3933,7 @@
       function kr(e) {
         return a.createElement(
           "div",
-          { className: (0, U.Z)(We.RowCtn, We.CurrencyHeaderRow) },
+          { className: (0, H.Z)(We.RowCtn, We.CurrencyHeaderRow) },
           a.createElement(
             "div",
             { className: We.PackageInfoColumn },
@@ -4021,14 +4021,15 @@
         Rr = t(5029);
       function Dr(e) {
         const {
-          rgProposals: r,
-          oGuideline: t,
-          mapCurrentPrices: n,
-          mapPartnerPaidByPackage: o,
-        } = e;
+            rgProposals: r,
+            oGuideline: t,
+            mapCurrentPrices: n,
+            mapPartnerPaidByPackage: o,
+          } = e,
+          [l, i] = (0, a.useState)(!1);
         return a.createElement(
           "div",
-          { className: (0, U.Z)(ir.PriceDeltaCtn) },
+          { className: (0, H.Z)(ir.PriceDeltaCtn) },
           a.createElement(
             Fe.ug,
             { title: "Reasons Auto-Publish is blocked" },
@@ -4085,9 +4086,16 @@
               " view",
             ),
           ),
+          a.createElement(S.ji, {
+            label: "Show All Price Comparison Rows",
+            tooltip:
+              "Displays the price comparison rows for all of the section below.",
+            checked: l,
+            onChange: i,
+          }),
           a.createElement(
             "div",
-            { className: (0, U.Z)(ir.RowCtn) },
+            { className: (0, H.Z)(ir.RowCtn) },
             a.createElement(
               "div",
               { className: ir.PackageInfoColumn },
@@ -4108,6 +4116,7 @@
                 proposal: e,
                 mapCurrentPrices: n,
                 mapPartnerPaidByPackage: o,
+                bForceShowComparisonRows: l,
               }),
             ),
           ),
@@ -4122,21 +4131,63 @@
             { className: ir.RowCtn },
             a.createElement(sr, Object.assign({}, e)),
             a.createElement(Tr, Object.assign({}, e)),
-            a.createElement(Gr, Object.assign({}, e)),
+            a.createElement(Mr, Object.assign({}, e)),
           ),
-          a.createElement(Lr, Object.assign({}, e)),
+          a.createElement(Ur, Object.assign({}, e)),
         );
       }
       function Tr(e) {
         return a.createElement(
           "div",
           { className: ir.FailuresCtn },
-          a.createElement(Ar, Object.assign({}, e)),
-          a.createElement(Mr, Object.assign({}, e)),
           a.createElement(Ir, Object.assign({}, e)),
+          a.createElement(Lr, Object.assign({}, e)),
+          a.createElement(wr, Object.assign({}, e)),
+          a.createElement(Ar, Object.assign({}, e)),
         );
       }
       function Ar(e) {
+        var r, t;
+        const { proposal: n, mapCurrentPrices: o } = e,
+          l =
+            null ===
+              (r = n.proposed_prices.base_amounts.find(
+                (e) => e.amount.currency_code == Re.k_ECurrencyCodeUSD,
+              )) || void 0 === r
+              ? void 0
+              : r.amount.amount,
+          i =
+            null ===
+              (t = o
+                .get(n.packageid)
+                .current_costs.base_amounts.find(
+                  (e) => e.currency_code == Re.k_ECurrencyCodeUSD,
+                )) || void 0 === t
+              ? void 0
+              : t.amount;
+        return a.createElement(
+          a.Fragment,
+          null,
+          Boolean(l > 8e3) &&
+            a.createElement(
+              "div",
+              { className: ir.AboveAutoPublish },
+              "USD Price $",
+              Cr(l),
+              " is above $80 USD Threshold",
+            ),
+          Boolean(i && l > 2 * i) &&
+            a.createElement(
+              "div",
+              { className: ir.AboveAutoPublish },
+              "USD price $",
+              Cr(l),
+              " is more than twice existing USD Price $",
+              Cr(i),
+            ),
+        );
+      }
+      function Ir(e) {
         const { proposal: r } = e,
           t = (0, a.useMemo)(() => Qe(r), [r]);
         return (null == t ? void 0 : t.length) > 0
@@ -4154,7 +4205,7 @@
             )
           : null;
       }
-      function Ir(e) {
+      function wr(e) {
         var r;
         const { proposal: t, oGuideline: n } = e,
           o =
@@ -4176,10 +4227,10 @@
               Cr(o),
               " USD Price doesn't align with any matrix price point. Will compare proposal to scaled guideline.",
             ),
-          a.createElement(xr, Object.assign({}, e, { USDPriceCents: o })),
+          a.createElement(Gr, Object.assign({}, e, { USDPriceCents: o })),
         );
       }
-      function wr(e) {
+      function Br(e) {
         const { thresholdData: r, strDirection: t } = e;
         let n = null;
         return (
@@ -4194,12 +4245,12 @@
             ),
             a.createElement(
               "td",
-              { className: (0, U.Z)(ir.OriginalPrice, n) },
+              { className: (0, H.Z)(ir.OriginalPrice, n) },
               r.nOriginalPrice ? `${Cr(r.nOriginalPrice)}` : "--",
             ),
             a.createElement(
               "td",
-              { className: (0, U.Z)(ir.ProposedPrice, n) },
+              { className: (0, H.Z)(ir.ProposedPrice, n) },
               `${Cr(r.nProposedPrice)}`,
             ),
             a.createElement(
@@ -4215,7 +4266,7 @@
           )
         );
       }
-      function Br(e) {
+      function xr(e) {
         const { strGuidanceMessage: r, strDirection: t } = e;
         return a.createElement(
           "thead",
@@ -4227,7 +4278,7 @@
               "td",
               {
                 colSpan: 5,
-                className: (0, U.Z)(
+                className: (0, H.Z)(
                   ir.WarningTitle,
                   "above" == t ? ir.WarningAbove : ir.WarningBelow,
                 ),
@@ -4239,7 +4290,7 @@
           ),
           a.createElement(
             "tr",
-            { className: (0, U.Z)(ir.ThresholdRow, ir.ThresholdHeader) },
+            { className: (0, H.Z)(ir.ThresholdRow, ir.ThresholdHeader) },
             a.createElement("td", { className: ir.CurrencyName }, "Currency"),
             a.createElement("td", { className: ir.OriginalPrice }, "Current"),
             a.createElement("td", { className: ir.ProposedPrice }, "Proposed"),
@@ -4252,7 +4303,7 @@
           ),
         );
       }
-      function xr(e) {
+      function Gr(e) {
         const {
             proposal: r,
             oGuideline: t,
@@ -4283,7 +4334,7 @@
                 a.createElement(
                   "table",
                   { className: ir.ThresholdMiniTable },
-                  a.createElement(Br, {
+                  a.createElement(xr, {
                     strGuidanceMessage: `${l.length} currencies above guidance threshold for USD $ ${e}`,
                     strDirection: "above",
                   }),
@@ -4291,7 +4342,7 @@
                     "tbody",
                     null,
                     l.map((e) =>
-                      a.createElement(wr, {
+                      a.createElement(Br, {
                         key: r.packageid + "_" + e.strCurrency,
                         thresholdData: e,
                         strDirection: "▲",
@@ -4303,7 +4354,7 @@
                 a.createElement(
                   "table",
                   { className: ir.ThresholdMiniTable },
-                  a.createElement(Br, {
+                  a.createElement(xr, {
                     strGuidanceMessage: `${i.length} currencies below guidance threshold for USD $ ${e}`,
                     strDirection: "below",
                   }),
@@ -4311,7 +4362,7 @@
                     "tbody",
                     null,
                     i.map((e) =>
-                      a.createElement(wr, {
+                      a.createElement(Br, {
                         key: r.packageid + "_" + e.strCurrency,
                         thresholdData: e,
                         strDirection: "▼",
@@ -4324,7 +4375,7 @@
         }
         return null;
       }
-      function Gr(e) {
+      function Mr(e) {
         var r;
         const { proposal: t } = e;
         return (null === (r = t.proposed_prices.country_amounts) || void 0 === r
@@ -4340,7 +4391,7 @@
             )
           : null;
       }
-      function Mr(e) {
+      function Lr(e) {
         const { proposal: r } = e,
           [t] = (0, Ze.ie)(r.packageid, Ve);
         return t && tr(t)
@@ -4352,23 +4403,24 @@
             )
           : null;
       }
-      function Lr(e) {
-        const [r, t] = (0, a.useState)(!1);
-        return r
+      function Ur(e) {
+        const { bForceShowComparisonRows: r } = e,
+          [t, n] = (0, a.useState)(!1);
+        return t || r
           ? a.createElement(
               "div",
-              { className: (0, U.Z)(We.FullCurrencyTable) },
+              { className: (0, H.Z)(We.FullCurrencyTable) },
               a.createElement(_r, null),
               a.createElement(mr, Object.assign({}, e)),
             )
           : a.createElement(S.ji, {
               label: "Show Price Comparison Row",
-              onChange: () => t(!0),
+              onChange: () => n(!0),
             });
       }
       var Hr = t(13364),
-        Ur = t.n(Hr);
-      function Or() {
+        Or = t.n(Hr);
+      function Kr() {
         const [e, r] = (0, a.useState)(() =>
           (function () {
             const e = new Map();
@@ -4386,7 +4438,7 @@
         );
         return e;
       }
-      function Kr(e) {
+      function Xr(e) {
         (0, he.N)();
         const [r] = (0, a.useState)(
             () => (0, fe.kQ)("filter_name", "application_config") || "",
@@ -4403,7 +4455,7 @@
             return e;
           })(),
           o = ve(),
-          l = Or(),
+          l = Kr(),
           [i, c] = (0, Rr.Ar)("tab", "delta"),
           s = (e) => c(e.key),
           u = [
@@ -4443,7 +4495,7 @@
           null,
           a.createElement(
             "div",
-            { className: (0, U.Z)(Ur().AdminPageCtn, Ur().WidePageCtn) },
+            { className: (0, H.Z)(Or().AdminPageCtn, Or().WidePageCtn) },
             a.createElement("h1", null, "Package Prices Submissions Reviews"),
             a.createElement("p", null, r),
             a.createElement("hr", null),
@@ -4451,7 +4503,7 @@
           ),
         );
       }
-      function Xr(e) {
+      function Fr(e) {
         return a.createElement(
           l.rs,
           null,
@@ -4489,7 +4541,7 @@
           }),
           a.createElement(l.AW, {
             path: n.ReviewPriceProposals(),
-            component: Kr,
+            component: Xr,
           }),
         );
       }
