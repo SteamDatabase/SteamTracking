@@ -3216,7 +3216,7 @@
 						}
 						"settings"
 						{
-							"haptic_intensity"		"1"
+							"haptic_intensity"		"0"
 						}
 					}
 				}

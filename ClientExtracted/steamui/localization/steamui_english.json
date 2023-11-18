@@ -3947,7 +3947,7 @@
     "ControllerConfigurator_Interstitial_ControllerRequired_DescA2": "Your <1></1> should work great!",
     "ControllerConfigurator_Interstitial_ControllerRequired_DescA2_NoController": "You haven't registered any controllers, but any Xbox or PlayStation controller should work great",
     "ControllerConfigurator_Interstitial_ControllerRecommended_Title": "Grab a controller and kick back!",
-    "ControllerConfigurator_Interstitial_ControllerRecommended_Desc": "This game needs a controller for best experience. So grab a Xbox controller, a DualSense controller, or really any kind of controller-looking device that can connect to your PC.",
+    "ControllerConfigurator_Interstitial_ControllerRecommended_Desc": "This game needs a controller for best experience. So grab an Xbox controller, a DualSense controller, or really any kind of controller-looking device that can connect to your PC.",
     "ControllerConfigurator_Interstitial_DontShowAgain": "Don't show this on future games",
     "ControllerConfigurator_SourceMode_AbsoluteMouse_Explanation_on_Gyro": "Select this if the game expects mouse input to control a camera or cursor.",
     "ControllerConfigurator_SourceMode_MouseJoystick_Explanation_on_Gyro": "Select this if the game expects joystick input to control a camera or cursor.",
