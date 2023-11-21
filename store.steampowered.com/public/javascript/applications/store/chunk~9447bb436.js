@@ -179,9 +179,9 @@
           { staleTime: 1 / 0 },
         );
       }
-      function f(e, t, a) {
-        const o = (0, l.bY)(),
-          r = (0, d.useQueryClient)();
+      function f(e, t, a, o) {
+        const r = (0, l.bY)(),
+          c = (0, d.useQueryClient)();
         return (0, d.useMutation)(
           () =>
             (0, n.mG)(this, void 0, void 0, function* () {
@@ -198,14 +198,21 @@
                     [r.GetEResult(), r.Body().toObject()]
                   );
                 });
-              })(o, e, t, a);
+              })(r, e, t, a);
             }),
           {
             onSuccess([e, t]) {
-              1 == e &&
-                (function (e, t) {
-                  e.setQueryData(`SteamAwardNominations_${m.L7.accountid}`, t);
-                })(r, t.nominations);
+              1 == e
+                ? (function (e, t) {
+                    e.setQueryData(
+                      `SteamAwardNominations_${m.L7.accountid}`,
+                      t,
+                    );
+                  })(c, t.nominations)
+                : o && o(e);
+            },
+            onError() {
+              o && o();
             },
           },
         );
@@ -226,6 +233,7 @@
                     f: "jsonfull",
                     term: e.replace(" ", "+"),
                     require_type: "game",
+                    is_released_somewhere: 1,
                     excluded_tags: u.jg.Get().GetExcludedTagsSortedByID(),
                     excluded_content_descriptors:
                       u.jg.Get().ExcludedContentDescriptor,

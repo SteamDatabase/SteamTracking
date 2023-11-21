@@ -20,7 +20,7 @@ body.v6.SteamAwardsNominations #footer_spacer {
   position: relative;
   margin-bottom: 50px;
 }
-@media screen and (max-width: 910px) {
+@media screen and (max-width: 850px) {
   .nominations_SteamAwardCategories_192O0 {
     padding-right: 0;
   }
@@ -75,6 +75,7 @@ body.v6.SteamAwardsNominations #footer_spacer {
     .nominations_FAQHeaderArea_2Mwx1
     .nominations_FAQHeaderCtn_3Jx_3 {
     max-width: 60%;
+    padding-left: 0;
   }
 }
 .nominations_NominationsHeaderCtn_1TnKc
@@ -175,7 +176,7 @@ body.v6.SteamAwardsNominations #footer_spacer {
   color: #fff;
   position: relative;
 }
-@media screen and (max-width: 910px) {
+@media screen and (max-width: 850px) {
   .nominations_SteamAwardCategory_3i1u- {
     margin-left: 2%;
   }
@@ -223,7 +224,7 @@ body.v6.SteamAwardsNominations #footer_spacer {
   position: relative;
   z-index: 2;
 }
-@media screen and (max-width: 910px) {
+@media screen and (max-width: 850px) {
   .nominations_SteamAwardCategory_3i1u- .nominations_CategoryRow_1n-kh {
     flex-direction: column;
   }
@@ -364,6 +365,7 @@ body.v6.SteamAwardsNominations #footer_spacer {
   width: 330px;
   height: 150px;
   background: #000;
+  box-shadow: 0 0 10px #000;
 }
 .nominations_SteamAwardCategory_3i1u- .nominations_CapsuleContainer_1fSqp a {
   display: block;
@@ -703,12 +705,24 @@ body.v6.SteamAwardsNominations #footer_spacer {
   .nominations_NominateGameButton_CEmah {
   width: 100%;
   box-sizing: border-box;
+  justify-content: center;
 }
 .nominations_NominationPickerCtn_3I1Ga .nominations_GameCarouselItemCtn_1Em3_ {
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
+}
+.nominations_NominationPickerCtn_3I1Ga
+  .nominations_GameCarouselItemCtn_1Em3_
+  a {
+  display: block;
+  margin-bottom: 8px;
+}
+.nominations_NominationPickerCtn_3I1Ga
+  .nominations_GameCarouselItemCtn_1Em3_
+  img {
+  display: block;
 }
 .nominations_NominationPickerCtn_3I1Ga
   .nominations_GameCarouselItemCtn_1Em3_
@@ -720,14 +734,23 @@ body.v6.SteamAwardsNominations #footer_spacer {
 .nominations_NominationPickerCtn_3I1Ga
   .nominations_GameCarouselItemCtn_1Em3_
   .nominations_PlaytimeIndicator_3t0T2 {
-  padding: 1px;
-  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.5098039216);
   color: #fff;
   position: absolute;
-  right: 0;
-  top: 0;
+  font-size: 11px;
+  padding: 2px 6px;
+  top: -1px;
 }
-.nominations_NominateGameButton_CEmah {
+.nominations_BadgeSectionTitle_3G1iN {
+  color: #ffb335;
+  font-family: "Motiva Sans", Sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 19px;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+button.DialogButton.nominations_NominateGameButton_CEmah {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -741,22 +764,22 @@ body.v6.SteamAwardsNominations #footer_spacer {
   transition: background-color 0.3s ease-in-out;
   cursor: pointer;
 }
-.nominations_NominateGameButton_CEmah svg {
+button.DialogButton.nominations_NominateGameButton_CEmah svg {
   height: 18px;
   width: 18px;
   margin-right: 8px;
 }
-.nominations_NominateGameButton_CEmah.nominations_White_17enA {
+button.DialogButton.nominations_NominateGameButton_CEmah.nominations_White_17enA {
   color: #fff;
 }
-.nominations_NominateGameButton_CEmah.nominations_Nominated_4GIBs {
+button.DialogButton.nominations_NominateGameButton_CEmah.nominations_Nominated_4GIBs {
   cursor: default;
   opacity: 0.5;
 }
-.nominations_NominateGameButton_CEmah.nominations_Nominated_4GIBs:hover {
+button.DialogButton.nominations_NominateGameButton_CEmah.nominations_Nominated_4GIBs:hover {
   background-color: #cc8ec0;
 }
-.nominations_NominateGameButton_CEmah:hover {
+button.DialogButton.nominations_NominateGameButton_CEmah:hover {
   background-color: #fff;
 }
 .nominations_NoResultsCtn_2IlW9 {
@@ -790,9 +813,12 @@ body.v6.SteamAwardsNominations #footer_spacer {
   justify-content: space-between;
   align-items: center;
 }
-.nominations_ProgressAndShareCtn_3Fdxn
-  .nominations_NominationProgressCtn_2afYW
-  .nominations_ProgressTitle_3x6Hh {
+@media screen and (max-width: 910px) {
+  .nominations_ProgressAndShareCtn_3Fdxn {
+    padding-left: 3%;
+  }
+}
+.nominations_ProgressAndShareCtn_3Fdxn .nominations_ProgressTitle_3x6Hh {
   font-size: 20px;
   color: #e5c6df;
 }
@@ -864,6 +890,6 @@ body.v6.SteamAwardsNominations #footer_spacer {
   color: #fff;
   margin-top: 8px;
 }
-.nominations_ShareModalBody_3gj5b .DialogFooter button.DialogButton.Primary {
+.SteamAwardsNominations .DialogFooter .DialogButton.Primary {
   width: fit-content;
 }

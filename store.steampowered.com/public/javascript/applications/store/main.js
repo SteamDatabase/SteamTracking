@@ -21811,7 +21811,8 @@
         BL: () => a.BL,
         e1: () => _,
         D2: () => b,
-        jF: () => G,
+        RM: () => P,
+        jF: () => F,
         Yy: () => l,
       });
       var i = n(89526),
@@ -22117,8 +22118,11 @@
           return i.createElement(B, Object.assign({}, e));
         }
       };
+      function P(e, t) {
+        (0, x.AM)(i.createElement(N, { strDescription: e }), t);
+      }
       N = (0, R.gn)([M.Pi], N);
-      let P = class extends i.Component {
+      let G = class extends i.Component {
         render() {
           let e = Object.assign(
             { onOK: () => {}, onCancel: () => {}, bAlertDialog: !0 },
@@ -22136,10 +22140,10 @@
           );
         }
       };
-      function G(e, t, n) {
-        (0, x.AM)(i.createElement(P, { strTitle: e, strDescription: t }), n);
+      function F(e, t, n) {
+        (0, x.AM)(i.createElement(G, { strTitle: e, strDescription: t }), n);
       }
-      P = (0, R.gn)([M.Pi], P);
+      G = (0, R.gn)([M.Pi], G);
     },
     37494: (e, t, n) => {
       "use strict";
