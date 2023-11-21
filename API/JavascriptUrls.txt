@@ -1393,11 +1393,6 @@ ${STORE_BASE_URL}wishlist/profiles/${}/?wng=${}#sort=discount
 ${STORE_CDN_URL}/categories/headerimage/category/${}?cc=${COUNTRY}&l=${LANGUAGE}
 ${STORE_CDN_URL}/categories/headerimage/tags/${}?cc=${COUNTRY}&l=${LANGUAGE}
 ${STORE_CDN_URL}public/cdn/email/general/logo_med.png
-${STORE_CDN_URL}public/cdn/promo/steamawards2023/backgrounds/awardbg_${}.jpg?v=3
-${STORE_CDN_URL}public/cdn/promo/steamawards2023/level_01.png
-${STORE_CDN_URL}public/cdn/promo/steamawards2023/level_02.png
-${STORE_CDN_URL}public/cdn/promo/steamawards2023/level_03.png
-${STORE_CDN_URL}public/cdn/promo/steamawards2023/level_04.png
 ${STORE_CDN_URL}public/images/footerLogo_valve_new.png
 ${STORE_CDN_URL}public/images/loyalty/reactions/${_ ? "animated" : "still"}/${}.png
 ${STORE_CDN_URL}public/images/v6/ico/ico_selected.png
