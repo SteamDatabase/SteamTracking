@@ -1,4 +1,4 @@
-var CLSTAMP = "8509341";
+var CLSTAMP = "8513915";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -1622,9 +1622,9 @@ var CLSTAMP = "8509341";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Nov 17 2023 : 17:32:24",
-                BUILD_TIME_UTC: "Nov 18 2023 : 01:32:24",
-                BUILD_RTIME_UTC: 1700271144,
+                BUILD_TIME_LOCAL: "Nov 20 2023 : 17:50:43",
+                BUILD_TIME_UTC: "Nov 21 2023 : 01:50:43",
+                BUILD_RTIME_UTC: 1700531443,
               }.MOBILE_BUILD)
             ) {
               window.addEventListener("beforeunload", (e) => {
@@ -16523,7 +16523,7 @@ var CLSTAMP = "8509341";
             ReviewHelp: () => un,
             Reviews: () => dn,
             RightStickScroll: () => qr,
-            RollAxisOverlay: () => Xi,
+            RollAxisOverlay: () => $i,
             Rows: () => Xe,
             SDR: () => yo,
             Schedule: () => Bt,
@@ -16645,7 +16645,7 @@ var CLSTAMP = "8509341";
             X_Line: () => an,
             Xbox360ControllerFrontOutline: () => wi,
             XboxOneControllerFrontOutline: () => Ei,
-            YawAxisOverlay: () => $i,
+            YawAxisOverlay: () => Xi,
             YellowExclamation: () => ee,
             YourGroups: () => kn,
             Youtube: () => cr,
@@ -45299,9 +45299,9 @@ var CLSTAMP = "8509341";
                 ? !{
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Nov 17 2023 : 17:32:24",
-                    BUILD_TIME_UTC: "Nov 18 2023 : 01:32:24",
-                    BUILD_RTIME_UTC: 1700271144,
+                    BUILD_TIME_LOCAL: "Nov 20 2023 : 17:50:43",
+                    BUILD_TIME_UTC: "Nov 21 2023 : 01:50:43",
+                    BUILD_RTIME_UTC: 1700531443,
                   }.MOBILE_BUILD && document.getElementById(t)
                 : t),
             r)
@@ -45848,7 +45848,7 @@ var CLSTAMP = "8509341";
       {
         27: "24178ae8c6683d48bfff",
         33: "2e13c81f42e2fe8bee4d",
-        58: "e31603001f62c3c799b4",
+        58: "c26acaa2d00397878498",
         131: "34168d3a2e3ecdcb29e4",
         146: "fe82141617955c939e33",
         200: "a5382d4346eadef3d5b5",
@@ -45949,7 +45949,7 @@ var CLSTAMP = "8509341";
         7781: "b46b9a9d3a40660aa8e1",
         7832: "9d6d3d860dea2a65797b",
         7850: "d0392609efcb36f02a91",
-        7962: "6005cf9a170f2b0682a1",
+        7962: "34e71f74d2fd3c6e2479",
         8011: "cd9fdcd3471ebd4fb569",
         8052: "56f4d2ec38f7e9c4103a",
         8085: "90400b03db5fef2f26f9",
@@ -45959,7 +45959,7 @@ var CLSTAMP = "8509341";
         8282: "7b2d1522725163dc96da",
         8319: "f46ff14cebc26f5a7127",
         8433: "5cc00b01a4ba0150ee29",
-        8467: "e0c8eabd2cb01637fa20",
+        8467: "2e9fa192bd15addfb546",
         8490: "9c3ca98b03f2f8988299",
         8778: "cab9f74ef0f091dd6080",
         8956: "84bcf35cf73d92a16c28",

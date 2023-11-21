@@ -3159,7 +3159,6 @@ button.controllerconfigurator_EnableSteamInputButton_3yVdv.DialogButton {
   font-size: 12px;
   line-height: 16px;
   margin-top: 2px;
-  margin-bottom: 16px;
 }
 .controllerconfigurator_CommunityConfigsCallout_1xfC8
   .controllerconfigurator_SearchIcon_PQiNq {
@@ -37295,7 +37294,7 @@ div.NarrowRightPanel
 .achievementslist_AchievementList_1UXC2 {
   display: flex;
   flex-direction: column;
-  padding: 8px 20px;
+  padding: 8px 20px 60px 20px;
   gap: 8px;
   background-color: #0e141b;
 }
@@ -37598,7 +37597,7 @@ div.NarrowRightPanel
 .achievementspage_AchievementList_w90op {
   display: flex;
   flex-direction: column;
-  padding: 8px 20px;
+  padding: 8px 20px 60px 20px;
   gap: 8px;
   background-color: #0e141b;
 }
@@ -59545,7 +59544,6 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
 }
 .euladialog_EulaModalDialog_3jj_K {
   flex: 1;
-  margin-bottom: 50px !important;
 }
 .euladialog_EulaModalDialog_3jj_K .euladialog_EulaDialogContent_2YXHR {
   display: flex;
@@ -114152,7 +114150,6 @@ img.mainmenuapprunning_CurrentGameLogo_3V3VK {
   flex: 1 1 1px;
   min-height: 1px;
   scroll-padding: 48px 0px;
-  padding-bottom: 40px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

@@ -1948,7 +1948,7 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231117225831Z0/
+231121010422Z0/
 4Y$cU	
 6BaM0[
  2(v+
@@ -1967,10 +1967,9 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	</array>
 </dict>
 </plist>
-@i@o
-.	JL
--&}r
-20231117225931Z0
+;=v}p1
+ tg:JF
+20231121010541Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -2025,9 +2024,10 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231117225931Z0#
-8+0+
-AKN\
+231121010541Z0#
+ZJ!t
+{^	F
+4#:6Rv
 __TEXT
 __text
 __TEXT
@@ -4436,7 +4436,7 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231117225831Z0/
+231121010422Z0/
 0Q/-"
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -4453,13 +4453,11 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	</array>
 </dict>
 </plist>
-dAb-
-TEeK
-$o,>
-|l6dQ
-V7\"
-;r=Us
-20231117225931Z0
+rQBsp-
+2~!D
+N,e/Jy%
+FDY#f2>
+20231121010541Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -4514,10 +4512,9 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231117225931Z0#
-&T0+
-KtdW
-#"dnD
+231121010541Z0#
+fM+L
+BP<`o_
 __TEXT
 __text
 __TEXT
@@ -6187,7 +6184,7 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231117225831Z0/
+231121010422Z0/
 zZ[Y
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -6204,24 +6201,24 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	</array>
 </dict>
 </plist>
-^"13
-20231117225932Z0
+&I-S
+20231121010541Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231116210533Z
-231228210532Z0B1
-Timestamp Signer NWK21
+231116212004Z
+231228212003Z0B1
+Timestamp Signer NWK11
 Apple Inc.1
-o:	q
-"O!w
+ {s:9
+=}3]	j
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-pM,5Ee
-.	AU
+.9sDq
+jv-Gc{
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -6260,4 +6257,8 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231117225932Z0#
+231121010541Z0#
+]j2D
+gl|N
+ep4N
+ogk)
