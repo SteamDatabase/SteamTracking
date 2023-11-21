@@ -297,11 +297,12 @@
         var a;
         const { strSearch: t, category: i } = e,
           s = (0, l.tM)(t, i),
-          m = n.useRef();
+          m = n.useRef(),
+          c = (0, u.id)();
         return (
           n.useEffect(() => {
-            (null == m ? void 0 : m.current) && m.current.scrollIntoView();
-          }, [s]),
+            (null == m ? void 0 : m.current) && c && m.current.scrollIntoView();
+          }, [s, c]),
           n.createElement(
             "div",
             { ref: m },

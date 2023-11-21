@@ -3,6 +3,15 @@ declare(strict_types=1);
 
 ini_set( 'memory_limit', '1G' ); // Some files may be big
 
+if( \function_exists( 'sys_getloadavg' ) )
+{
+	if( \sys_getloadavg()[ 1 ] > 5.0 )
+	{
+		echo 'Not running due to high cpu load';
+		exit;
+	}
+}
+
 // Enable error tracking
 if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 {

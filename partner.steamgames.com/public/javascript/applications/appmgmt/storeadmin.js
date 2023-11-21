@@ -3368,9 +3368,9 @@
               : a.currency_prices.find((e) => e.currency_code == r),
             i = e / n;
           return {
-            currency_code: l.currency_code,
-            region_code: l.region_code,
-            price: Math.ceil(l.price * i),
+            currency_code: null == l ? void 0 : l.currency_code,
+            region_code: null == l ? void 0 : l.region_code,
+            price: Math.ceil((null == l ? void 0 : l.price) * i),
           };
         }
         constructor(e) {
