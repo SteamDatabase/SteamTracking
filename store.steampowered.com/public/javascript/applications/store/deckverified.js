@@ -46,22 +46,22 @@
         ToolTipContainer: "controllersupportinfo_ToolTipContainer_11C_j",
       };
     },
-    24981: (e, o, t) => {
+    24981: (e, t, o) => {
       "use strict";
-      t.r(o),
-        t.d(o, {
+      o.r(t),
+        o.d(t, {
           ControllerSupportInfoDisplay: () => u,
           ControllerSupportInfoDisplayInternal: () => C,
           ControllerSupportInfoStoreDisplay: () => S,
           default: () => d,
         });
-      var r = t(89526),
-        l = t(14826),
-        n = t(6429),
-        a = t(19304),
-        i = t(16826),
-        p = t(84343),
-        s = t(32765);
+      var r = o(89526),
+        l = o(14826),
+        n = o(6429),
+        a = o(19304),
+        i = o(16826),
+        p = o(84343),
+        s = o(32765);
       function c(e) {
         return r.createElement(
           "a",
@@ -160,18 +160,18 @@
         );
       }
       function g(e) {
-        const { bNoKeyboardSupport: o, bGamepadPreferred: t } = e;
+        const { bNoKeyboardSupport: t, bGamepadPreferred: o } = e;
         return r.createElement(
           "div",
           { className: (0, a.Z)(n.NoticeContainer) },
-          o && r.createElement(_, null),
-          t && !o && r.createElement(m, null),
+          t && r.createElement(_, null),
+          o && !t && r.createElement(m, null),
         );
       }
       function C(e) {
         const {
-          bControllerSupportWizardComplete: o,
-          bPS4ControllerSupport: t,
+          bControllerSupportWizardComplete: t,
+          bPS4ControllerSupport: o,
           bPS5ControllerSupport: a,
           bPS4ControllerBTSupport: p,
           bPS5ControllerBTSupport: s,
@@ -185,27 +185,29 @@
           bPreview: b,
         } = e;
         let f = [];
-        if (t && a && p && s) {
+        if (o && a && p && s) {
           const e = r.createElement(i.CtA, {
               className: n.SmallerSVG,
               controllerType: 34,
+              partial: !u,
             }),
-            o = C || d;
+            t = C || d;
           f.push(
             r.createElement(c, {
               key: "1",
               tagImage: e,
-              strLocalizationToken: o
+              strLocalizationToken: t
                 ? "#Store_ControllerSupport_PS_Personalized"
                 : "#Store_ControllerSupport_PS",
-              bPersonalized: o,
+              bPersonalized: t,
             }),
           );
         } else {
-          if (t) {
+          if (o) {
             const e = r.createElement(i.CtA, {
               className: n.SmallerSVG,
               controllerType: 34,
+              partial: !u,
             });
             p
               ? f.push(
@@ -235,6 +237,7 @@
             const e = r.createElement(i.CtA, {
               className: n.SmallerSVG,
               controllerType: 45,
+              partial: !u,
             });
             s
               ? f.push(
@@ -281,6 +284,7 @@
                 tagImage: r.createElement(i.CtA, {
                   className: n.SmallerSVG,
                   controllerType: 32,
+                  partial: !u,
                 }),
                 strLocalizationToken: P
                   ? "#Store_ControllerSupport_Xbox_Personalized"
@@ -299,7 +303,7 @@
                   strTooltipString: "#Store_ControllerSupport_Tooltip_SIAPI",
                   strCategory: "59",
                 }),
-              ((!b && !o) || (!_ && m && !P)) &&
+              ((!b && !t) || (!_ && m && !P)) &&
                 r.createElement(c, {
                   tagImage: r.createElement(i.uWd, { className: n.BiggerSVG }),
                   strLocalizationToken:
@@ -314,10 +318,10 @@
       }
       const d = S;
     },
-    74839: (e, o, t) => {
+    74839: (e, t, o) => {
       "use strict";
-      t.r(o), t.d(o, { default: () => r });
-      const r = t(53913).$g;
+      o.r(t), o.d(t, { default: () => r });
+      const r = o(53913).$g;
     },
   },
 ]);

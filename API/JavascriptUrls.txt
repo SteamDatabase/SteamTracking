@@ -235,6 +235,7 @@ ${COMMUNITY_BASE_URL}migrate/ajaxgetallclans
 ${COMMUNITY_BASE_URL}migrate/ajaxgetsalepagestomigrate
 ${COMMUNITY_BASE_URL}miniprofile/${}/json/?origin=${STORE_BASE_URL}
 ${COMMUNITY_BASE_URL}my
+${COMMUNITY_BASE_URL}my/badges/
 ${COMMUNITY_BASE_URL}my/badges/${}
 ${COMMUNITY_BASE_URL}my/edit/avatar
 ${COMMUNITY_BASE_URL}my/edit/avatar/${}
@@ -373,6 +374,7 @@ ${COMMUNITY_URL}oauth/login?client_id=${CLIENT_ID}&response_type=token&state=${}
 ${COMMUNITY_URL}oauth/login?client_id=${CLIENT_ID}&response_type=token&state=filmcontest/
 ${HELP_BASE_URL}
 ${HELP_BASE_URL}${}/
+${HELP_BASE_URL}en/ticketmaster/ticket/${help_requestid}
 ${HELP_BASE_URL}en/wizard/HelpWithPublishing?issueid=919
 ${HELP_BASE_URL}en/wizard/HelpWithPublishing?issueid=933
 ${HELP_BASE_URL}faqs/view/${url_code}
@@ -888,6 +890,8 @@ ${PARTNER_BASE_URL}/promotion${}
 ${PARTNER_BASE_URL}/promotion/${}
 ${PARTNER_BASE_URL}actions/ajaxgetpartnereventssaledetails
 ${PARTNER_BASE_URL}actions/ajaxgetpartnervalvecontacts
+${PARTNER_BASE_URL}admin/ajaxcreatesupportticketforrequest/
+${PARTNER_BASE_URL}admin/ajaxfetchsupportticketforpartner
 ${PARTNER_BASE_URL}admin/discounttaglookup?tag=${}
 ${PARTNER_BASE_URL}admin/editdiscountevent/${_ ? _ : _}
 ${PARTNER_BASE_URL}admin/editdiscountevent/${id}
@@ -1100,6 +1104,7 @@ ${STATS_BASE_URL}bundles/details/${}/${}
 ${STATS_BASE_URL}package/details/${}/${}
 ${STATS_BASE_URL}sales/details/?gid=${GID}&clanid=${}
 ${STATS_BASE_URL}sales/details/?gid=${}&clanid=${}
+${STATS_BASE_URL}steamdeck/reservations/
 ${STORE_BASE_URL}
 ${STORE_BASE_URL}${_ ? "events/ajaxgeteventdetailsforedit/" : "events/ajaxgeteventdetails/"}
 ${STORE_BASE_URL}${_ ? "saleaction/ajaxpreviewsaledynamicappquery" : "saleaction/ajaxgetsaledynamicappquery"}
@@ -1176,7 +1181,7 @@ ${STORE_BASE_URL}buyitem/${DOTA_APP_ID}/${}/${}
 ${STORE_BASE_URL}buyitem/${nAppID}/${nItemDefID}/${}
 ${STORE_BASE_URL}cart
 ${STORE_BASE_URL}cart/
-${STORE_BASE_URL}cart/?cart=${}&fpr=1&prsi=${}
+${STORE_BASE_URL}cart/?prsi=${}
 ${STORE_BASE_URL}cart/addtocart
 ${STORE_BASE_URL}cart/ajaxredeemtokensforcartdiscount
 ${STORE_BASE_URL}category/${category}
@@ -1367,7 +1372,9 @@ ${STORE_BASE_URL}steamawards/ajaxgetusernominations
 ${STORE_BASE_URL}steamawards/ajaxgetuservotes
 ${STORE_BASE_URL}steamawards/ajaxnominategame
 ${STORE_BASE_URL}steamawards/ajaxvoteforgame
+${STORE_BASE_URL}steamawards/nominations
 ${STORE_BASE_URL}steamawards/nominations/
+${STORE_BASE_URL}steamawards/nominations/${steamid}?k=${code}
 ${STORE_BASE_URL}sub/${id}
 ${STORE_BASE_URL}sub/${}
 ${STORE_BASE_URL}subs/${packageid}
@@ -1386,6 +1393,11 @@ ${STORE_BASE_URL}wishlist/profiles/${}/?wng=${}#sort=discount
 ${STORE_CDN_URL}/categories/headerimage/category/${}?cc=${COUNTRY}&l=${LANGUAGE}
 ${STORE_CDN_URL}/categories/headerimage/tags/${}?cc=${COUNTRY}&l=${LANGUAGE}
 ${STORE_CDN_URL}public/cdn/email/general/logo_med.png
+${STORE_CDN_URL}public/cdn/promo/steamawards2023/backgrounds/awardbg_${}.jpg?v=3
+${STORE_CDN_URL}public/cdn/promo/steamawards2023/level_01.png
+${STORE_CDN_URL}public/cdn/promo/steamawards2023/level_02.png
+${STORE_CDN_URL}public/cdn/promo/steamawards2023/level_03.png
+${STORE_CDN_URL}public/cdn/promo/steamawards2023/level_04.png
 ${STORE_CDN_URL}public/images/footerLogo_valve_new.png
 ${STORE_CDN_URL}public/images/loyalty/reactions/${_ ? "animated" : "still"}/${}.png
 ${STORE_CDN_URL}public/images/v6/ico/ico_selected.png

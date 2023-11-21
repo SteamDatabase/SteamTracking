@@ -1210,6 +1210,7 @@
     "SteamLearn_Status_SetInferenceVersion": "Set Train Live",
     "SteamLearn_Status_SaveOrDiscardFirst": "Save or Discard changes to enable setting train live",
     "SteamLearn_Status_InferenceLive": "Train set to Live",
+    "SteamLearn_Status_InferenceActive": "Train is Active (if just set, will be Live shortly)",
     "SteamLearn_Status_Train_EndEarly": "End Train",
     "SteamLearn_Status_Train_Status": "Status for Train %1$s",
     "SteamLearn_Status_Train_Status_Unpublished": "Unpublished versions cannot train.",

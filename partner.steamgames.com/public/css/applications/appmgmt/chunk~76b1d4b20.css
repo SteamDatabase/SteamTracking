@@ -1407,6 +1407,7 @@ div.creatorhomeembed_SocialContainer_1MvXz {
   display: flex;
   align-items: center;
   background: #4c6b22;
+  text-wrap: nowrap;
 }
 .BasicUI .salepreviewwidgets_StoreSaleDiscountBox_2fpFv {
   font-weight: 400;
@@ -1736,13 +1737,6 @@ div.creatorhomeembed_SocialContainer_1MvXz {
   position: relative;
   overflow: hidden;
   padding: 46.7391304348% 0 0 0;
-}
-@media only screen and (max-width: 768px) {
-  .salepreviewwidgets_HeaderCapsuleImageContainer_Cqh49,
-  .salepreviewwidgets_MainCapsuleImageContainer_31Zak,
-  .salepreviewwidgets_HeroCapsuleImageContainer_1ail_ {
-    min-width: 250px;
-  }
 }
 .salepreviewwidgets_MainCapsuleImageContainer_31Zak {
   padding: 57.3051948052% 0 0 0;

@@ -1,106 +1,75 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
+"use strict";
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [9211],
   {
-    5089: (t) => {
-      t.exports = {
-        "duration-app-launch": "800ms",
-        OtherEventsCtn: "eventrow_OtherEventsCtn_1qNsZ",
-        OtherEvents_MainImageCtn: "eventrow_OtherEvents_MainImageCtn_1_8oy",
-        OtherEvents: "eventrow_OtherEvents_2ioeM",
-        OtherEvents_EventCtn: "eventrow_OtherEvents_EventCtn_17gGs",
-        OtherEvents_MainImage: "eventrow_OtherEvents_MainImage_3xf4A",
-        OtherEvents_BGImage: "eventrow_OtherEvents_BGImage_3rp-l",
-        OtherEvents_ContentCtn: "eventrow_OtherEvents_ContentCtn_3QaFW",
-        OtherEvents_TextCtn: "eventrow_OtherEvents_TextCtn_2AVL1",
-        OtherEvents_TextTitle: "eventrow_OtherEvents_TextTitle_3Zufl",
-        UpcomingCtn: "eventrow_UpcomingCtn_--lM7",
-        OtherEvents_SubTitle: "eventrow_OtherEvents_SubTitle_2UUNj",
-        HoversEnabled: "eventrow_HoversEnabled_34Nxj",
-        PartnerEventRowCapsule_MainImage:
-          "eventrow_PartnerEventRowCapsule_MainImage_2bZBn",
-        EventSummaryContainer: "eventrow_EventSummaryContainer_3PdWg",
-        EventSummaryText: "eventrow_EventSummaryText_h5tE8",
-        EventSummaryType: "eventrow_EventSummaryType_1Fp_l",
-        HorizontalEvent: "eventrow_HorizontalEvent_1RS0b",
-        HorizontalSummary: "eventrow_HorizontalSummary_3_1Qo",
-        HorizontalTitle: "eventrow_HorizontalTitle_1m9zE",
-        HorizontalDescriptionCtn: "eventrow_HorizontalDescriptionCtn_2s9cB",
-        HorizontalDescription: "eventrow_HorizontalDescription_Dc9KC",
-        AppCapsuleImage: "eventrow_AppCapsuleImage_2vo-l",
-        AppCapsuleCtn: "eventrow_AppCapsuleCtn_1kYha",
-        AppCapsuleImageHover: "eventrow_AppCapsuleImageHover_rcwMf",
-        AppCapsulePrice: "eventrow_AppCapsulePrice_Jq75m",
-      };
-    },
-    16468: (t, e, n) => {
-      "use strict";
-      n.d(e, {
-        Bo: () => L,
-        FG: () => D,
+    16468: (t, e, a) => {
+      a.d(e, {
+        Bo: () => D,
+        FG: () => S,
         N: () => y,
         P4: () => I,
-        mb: () => C,
-        yS: () => S,
+        mb: () => b,
+        yS: () => C,
       });
-      var a = n(33940),
-        o = n(52868),
-        i = n.n(o),
-        l = n(59621),
-        r = n(89526),
-        s = n(47165),
-        c = n(82079),
-        u = n(98210),
-        d = n(54671),
-        _ = n(10412),
-        p = n(70750),
-        m = n(11837),
-        v = n(23801),
-        g = n(23217),
-        E = n(4306),
-        f = n(32765);
-      function h(t) {
+      var n = a(33940),
+        i = a(52868),
+        o = a.n(i),
+        l = a(59621),
+        s = a(89526),
+        r = a(47165),
+        c = a(82079),
+        u = a(98210),
+        d = a(54671),
+        p = a(10412),
+        _ = a(70750),
+        m = a(11837),
+        f = a(23801),
+        g = a(23217),
+        v = a(4306),
+        L = a(32765);
+      function E(t) {
         t.list_jsondata && "string" == typeof t.list_jsondata
           ? (t.list_jsondata = JSON.parse(t.list_jsondata))
-          : ((0, v.X)(
+          : ((0, f.X)(
               !t.list_jsondata,
               "Found unexpected ListDetails_t.list_jsondata type: " +
                 typeof t.list_jsondata,
             ),
             (t.list_jsondata = {}));
       }
-      const C = "0";
-      function b(t, e) {
+      const b = "0";
+      function h(t, e) {
         (e.localized_flat_title = (0, m.LG)([], 31, null)),
           (e.localized_flat_blurb = (0, m.LG)([], 31, null)),
           (e.localized_flat_link = (0, m.LG)([], 31, null)),
-          e.title !== C && (e.localized_flat_title[t] = e.title),
-          e.blurb !== C && (e.localized_flat_blurb[t] = e.blurb),
-          e.link !== C && (e.localized_flat_link[t] = e.link),
+          e.title !== b && (e.localized_flat_title[t] = e.title),
+          e.blurb !== b && (e.localized_flat_blurb[t] = e.blurb),
+          e.link !== b && (e.localized_flat_link[t] = e.link),
           e.title_localization.forEach((t) => {
-            var n;
-            (null === (n = t.localized_string) || void 0 === n
+            var a;
+            (null === (a = t.localized_string) || void 0 === a
               ? void 0
-              : n.length) > 0 &&
+              : a.length) > 0 &&
               (e.localized_flat_title[t.language] = t.localized_string);
           }),
           e.blurb_localization.forEach((t) => {
-            var n;
-            (null === (n = t.localized_string) || void 0 === n
+            var a;
+            (null === (a = t.localized_string) || void 0 === a
               ? void 0
-              : n.length) > 0 &&
+              : a.length) > 0 &&
               (e.localized_flat_blurb[t.language] = t.localized_string);
           }),
           e.link_localization.forEach((t) => {
-            var n;
-            (null === (n = t.localized_string) || void 0 === n
+            var a;
+            (null === (a = t.localized_string) || void 0 === a
               ? void 0
-              : n.length) > 0 &&
+              : a.length) > 0 &&
               (e.localized_flat_link[t.language] = t.localized_string);
           });
       }
-      class L {
+      class D {
         GetListDetails(t) {
           return this.m_mapList.get(t);
         }
@@ -110,38 +79,38 @@
         GetClanAccountFromListID(t) {
           return this.m_mapListIDToClanAccount.get(t);
         }
-        LoadListDetails(t, e, n) {
-          var o;
-          return (0, a.mG)(this, void 0, void 0, function* () {
+        LoadListDetails(t, e, a) {
+          var i;
+          return (0, n.mG)(this, void 0, void 0, function* () {
             if (this.m_mapList.has(e)) return this.m_mapList.get(e);
-            const a =
-                f.De.STORE_BASE_URL +
+            const n =
+                L.De.STORE_BASE_URL +
                 "curator/" +
                 t.GetAccountID() +
                 "/admin/ajaxgetlistdetails",
               l = { listid: e };
             try {
-              const r = yield i().get(a, {
+              const s = yield o().get(n, {
                 params: l,
-                cancelToken: null == n ? void 0 : n.token,
+                cancelToken: null == a ? void 0 : a.token,
               });
               if (
                 1 ==
-                (null === (o = null == r ? void 0 : r.data) || void 0 === o
+                (null === (i = null == s ? void 0 : s.data) || void 0 === i
                   ? void 0
-                  : o.success)
+                  : i.success)
               ) {
-                const n = Object.assign({}, r.data.list_details);
+                const a = Object.assign({}, s.data.list_details);
                 return (
-                  (0, v.X)(
-                    e == (null == n ? void 0 : n.listid),
-                    "Wanted" + e + "but got" + (null == n ? void 0 : n.listid),
+                  (0, f.X)(
+                    e == (null == a ? void 0 : a.listid),
+                    "Wanted" + e + "but got" + (null == a ? void 0 : a.listid),
                   ),
-                  h(n),
-                  b(r.data.curation_language, n),
-                  this.m_mapList.set(e, n),
+                  E(a),
+                  h(s.data.curation_language, a),
+                  this.m_mapList.set(e, a),
                   this.m_mapListIDToClanAccount.set(e, t.GetAccountID()),
-                  n
+                  a
                 );
               }
             } catch (t) {
@@ -155,17 +124,17 @@
             return null;
           });
         }
-        LoadMyFollowedSaleCurationLists(t, e, n) {
-          return (0, a.mG)(this, void 0, void 0, function* () {
+        LoadMyFollowedSaleCurationLists(t, e, a) {
+          return (0, n.mG)(this, void 0, void 0, function* () {
             if (
-              !f.L7.logged_in ||
+              !L.L7.logged_in ||
               (d.jg.Get().BIsLoaded() &&
                 0 == d.jg.Get().GetFollowedCuratorCount())
             )
               return [];
-            const a =
-                f.De.STORE_BASE_URL + "curators/ajaxgetmycuratorsalelists",
-              o = {
+            const n =
+                L.De.STORE_BASE_URL + "curators/ajaxgetmycuratorsalelists",
+              i = {
                 clan_account_id: t.GetAccountID(),
                 clan_event_gid: e,
                 origin: self.origin,
@@ -174,87 +143,88 @@
                   : void 0,
               };
             return this.InternalLoadSaleCuratorLists(
-              a,
-              o,
+              n,
+              i,
               "CCuratorListStore.LoadMyFollowedSaleCurationLists",
               t,
               e,
-              n,
+              a,
             );
           });
         }
-        LoadAllSaleCurationLists(t, e, n) {
-          return (0, a.mG)(this, void 0, void 0, function* () {
+        LoadAllSaleCurationLists(t, e, a) {
+          return (0, n.mG)(this, void 0, void 0, function* () {
             if (this.m_mapEventGIDToLists.has(e))
               return this.m_mapEventGIDToLists.get(e);
-            const a = f.De.STORE_BASE_URL + "curators/ajaxfindcuratorlists",
-              o = {
+            const n = L.De.STORE_BASE_URL + "curators/ajaxfindcuratorlists",
+              i = {
                 clan_account_id: t.GetAccountID(),
                 clan_event_gid: e,
                 origin: self.origin,
               };
             return this.InternalLoadSaleCuratorLists(
-              a,
-              o,
+              n,
+              i,
               "CCuratorListStore.LoadAllSaleCurationLists",
               t,
               e,
-              n,
+              a,
             );
           });
         }
-        InternalLoadSaleCuratorLists(t, e, n, o, r, s) {
+        InternalLoadSaleCuratorLists(t, e, a, i, s, r) {
           var c;
-          return (0, a.mG)(this, void 0, void 0, function* () {
+          return (0, n.mG)(this, void 0, void 0, function* () {
             try {
-              const n = yield i().get(t, {
+              const a = yield o().get(t, {
                 params: e,
-                cancelToken: null == s ? void 0 : s.token,
+                cancelToken: null == r ? void 0 : r.token,
               });
               if (
                 1 ==
-                (null === (c = null == n ? void 0 : n.data) || void 0 === c
+                (null === (c = null == a ? void 0 : a.data) || void 0 === c
                   ? void 0
                   : c.success)
               ) {
                 const t = new Array();
                 return (
                   (0, l.z)(() => {
-                    n.data.matches &&
-                      n.data.matches.forEach((e) => {
-                        e.multi_detail_lists.forEach((n) => {
+                    a.data.matches &&
+                      a.data.matches.forEach((e) => {
+                        e.multi_detail_lists.forEach((a) => {
                           this.m_mapListIDToClanAccount.set(
-                            n.listid,
+                            a.listid,
                             e.clan_account_id,
                           ),
-                            h(n),
-                            b(e.curation_language, n),
-                            this.m_mapList.set(n.listid, n),
-                            t.push(n);
+                            E(a),
+                            h(e.curation_language, a),
+                            this.m_mapList.set(a.listid, a),
+                            t.push(a);
                         });
                       }),
-                      this.m_mapEventGIDToLists.set(r, t);
+                      this.m_mapEventGIDToLists.set(s, t);
                   }),
                   t
                 );
               }
             } catch (t) {
               const e = (0, g.l)(t);
-              console.error(n + ": error on load: " + e.strErrorMsg, e);
+              console.error(a + ": error on load: " + e.strErrorMsg, e);
             }
             return [];
           });
         }
         static Get() {
-          return L.s_Singleton || (L.s_Singleton = new L()), L.s_Singleton;
+          return D.s_Singleton || (D.s_Singleton = new D()), D.s_Singleton;
         }
         constructor() {
           (this.m_mapList = new Map()),
             (this.m_mapEventGIDToLists = new Map()),
             (this.m_mapListIDToClanAccount = new Map()),
-            "dev" == f.De.WEB_UNIVERSE && (window.g_curatorListStore = this);
-          let t = (0, f.kQ)("curatorlistdata", "application_config");
-          ("dev" != f.De.WEB_UNIVERSE && "beta" != f.De.WEB_UNIVERSE) ||
+            (0, l.rC)(this),
+            "dev" == L.De.WEB_UNIVERSE && (window.g_curatorListStore = this);
+          let t = (0, L.kQ)("curatorlistdata", "application_config");
+          ("dev" != L.De.WEB_UNIVERSE && "beta" != L.De.WEB_UNIVERSE) ||
             console.log(
               "DEV_DEBUG: CCuratorListStore loading list payload: " +
                 (null == t ? void 0 : t.length),
@@ -264,13 +234,12 @@
               (0, l.z)(() => {
                 t.forEach((t) => {
                   t.multi_detail_lists.forEach((e) => {
-                    h(e),
-                      b(t.curation_language, e),
+                    E(e),
+                      h(t.curation_language, e),
                       this.m_mapList.set(e.listid, e);
                   });
                 });
-              }),
-            (0, l.rC)(this);
+              });
         }
         ValidateStoreDefault(t) {
           const e = t;
@@ -288,86 +257,86 @@
         }
       }
       function y(t, e) {
-        const n = (0, E.NW)();
+        const a = (0, v.NW)();
         return (
-          (0, r.useEffect)(() => {
-            if (L.Get().GetListDetails(e) || !t) return;
-            const o = i().CancelToken.source();
+          (0, s.useEffect)(() => {
+            if (D.Get().GetListDetails(e) || !t) return;
+            const i = o().CancelToken.source();
             return (
               (() => {
-                (0, a.mG)(this, void 0, void 0, function* () {
-                  var a, i;
-                  const l = yield L.Get().LoadListDetails(t, e);
-                  if (!o.token.reason)
+                (0, n.mG)(this, void 0, void 0, function* () {
+                  var n, o;
+                  const l = yield D.Get().LoadListDetails(t, e);
+                  if (!i.token.reason)
                     if (
-                      null === (a = null == l ? void 0 : l.apps) || void 0 === a
+                      null === (n = null == l ? void 0 : l.apps) || void 0 === n
                         ? void 0
-                        : a.length
+                        : n.length
                     ) {
                       const t = [];
                       for (const e of l.apps) {
-                        const n =
+                        const a =
                           null ===
-                            (i = null == e ? void 0 : e.recommended_app) ||
-                          void 0 === i
+                            (o = null == e ? void 0 : e.recommended_app) ||
+                          void 0 === o
                             ? void 0
-                            : i.appid;
-                        n && t.push({ id: n, type: "game" });
+                            : o.appid;
+                        a && t.push({ id: a, type: "game" });
                       }
-                      (0, p.qr)(
+                      (0, _.qr)(
                         t,
-                        Object.assign(Object.assign({}, p.NC), {
+                        Object.assign(Object.assign({}, _.NC), {
                           include_assets: !0,
                           include_release: !0,
                         }),
                       ),
                         u.ZP.Get().LoadAppIDsBatch(t.map((t) => t.id)),
-                        n();
+                        a();
                     } else console.error("Found no list data");
                 });
               })(),
-              () => o.cancel("unmounting CuratorList")
+              () => i.cancel("unmounting CuratorList")
             );
-          }, [t, e, n]),
-          L.Get().GetListDetails(e)
+          }, [t, e, a]),
+          D.Get().GetListDetails(e)
         );
       }
       function I(t) {
         const e = t && c.sV.GetClanInfoByClanAccountID(t),
-          [n, a] = (0, r.useState)(!!e);
+          [a, n] = (0, s.useState)(!!e);
         return (
-          (0, r.useEffect)(() => {
-            if (n && t) {
-              const e = s.K.InitFromClanID(t);
+          (0, s.useEffect)(() => {
+            if (a && t) {
+              const e = r.K.InitFromClanID(t);
               c.sV.LoadClanInfoForClanSteamID(e).finally(() => {
-                a(!0);
+                n(!0);
               });
             }
-          }, [n, t]),
+          }, [a, t]),
           e
         );
       }
-      function D(t) {
+      function S(t) {
         return (
           Boolean(null == t ? void 0 : t.sale_clan_event_gid) &&
           Boolean(null == t ? void 0 : t.sale_clan_steamid)
         );
       }
-      function S(t) {
-        const e = (0, E.NW)(),
-          n = D(t) ? t.sale_clan_event_gid : null,
-          o = n && _.j1.GetClanEventModel(n);
+      function C(t) {
+        const e = (0, v.NW)(),
+          a = S(t) ? t.sale_clan_event_gid : null,
+          i = a && p.j1.GetClanEventModel(a);
         return (
-          (0, r.useEffect)(() => {
-            if (o || !D(t)) return;
-            const l = i().CancelToken.source();
+          (0, s.useEffect)(() => {
+            if (i || !S(t)) return;
+            const l = o().CancelToken.source();
             return (
               (() => {
-                (0, a.mG)(this, void 0, void 0, function* () {
-                  _.j1.Init(),
-                    yield _.j1.LoadPartnerEventFromClanEventGIDAndClanSteamID(
-                      new s.K(t.sale_clan_steamid),
-                      n,
+                (0, n.mG)(this, void 0, void 0, function* () {
+                  p.j1.Init(),
+                    yield p.j1.LoadPartnerEventFromClanEventGIDAndClanSteamID(
+                      new r.K(t.sale_clan_steamid),
+                      a,
                       0,
                     ),
                     l.token.reason || e();
@@ -375,84 +344,83 @@
               })(),
               () => l.cancel("unmounting CuratorList")
             );
-          }, [t, n, o, e]),
-          o
+          }, [t, a, i, e]),
+          i
         );
       }
-      (0, a.gn)([l.LO], L.prototype, "m_mapList", void 0);
+      (0, n.gn)([l.LO], D.prototype, "m_mapList", void 0);
     },
-    31245: (t, e, n) => {
-      "use strict";
-      n.d(e, { B: () => T, O: () => w });
-      var a = n(89526),
-        o = n(62983),
-        i = n(44026),
-        l = n(51438),
-        r = n(16221),
-        s = n(98009),
-        c = n(54671),
-        u = n(85886),
-        d = n(25871),
-        _ = n(5089),
-        p = n(51441),
-        m = n(44421),
-        v = n(23715),
-        g = n.n(v),
-        E = n(67935),
-        f = n(21219),
-        h = n(87539),
-        C = n(3991),
-        b = n(33406),
-        L = n(98389),
-        y = n(42317),
-        I = n(71161),
-        D = n(19304),
-        S = n(14826),
-        A = n(207),
-        G = n(32765);
-      const w = "capsule_index_";
+    31245: (t, e, a) => {
+      a.d(e, { B: () => T, O: () => P });
+      var n = a(89526),
+        i = a(62983),
+        o = a(44026),
+        l = a(51438),
+        s = a(16221),
+        r = a(98009),
+        c = a(54671),
+        u = a(85886),
+        d = a(25871),
+        p = a(5089),
+        _ = a(51441),
+        m = a(44421),
+        f = a(23715),
+        g = a.n(f),
+        v = a(67935),
+        L = a(21219),
+        E = a(87539),
+        b = a(3991),
+        h = a(33406),
+        D = a(98389),
+        y = a(42317),
+        I = a(71161),
+        S = a(19304),
+        C = a(14826),
+        G = a(207),
+        A = a(32765);
+      const P = "capsule_index_";
       function T(t) {
         const {
             capsule: e,
-            bShowParentApp: n,
-            strExtraParams: s,
+            bShowParentApp: a,
+            strExtraParams: r,
             elElementToAppendToHover: c,
             index: m,
-            navKey: v,
-            bHideStoreHover: E,
+            navKey: f,
+            bHideStoreHover: v,
           } = t,
-          [f, b] = a.useState(!1),
-          [y] = (0, d.jk)(e.id, (0, u.TM)(e.type), o.bk),
-          [A] = (0, d.vs)(n && (null == y ? void 0 : y.GetParentAppID()), o.bk),
+          [L, h] = n.useState(!1),
+          [y] = (0, d.jk)(e.id, (0, u.TM)(e.type), i.bk),
+          [G] = (0, d.vs)(a && (null == y ? void 0 : y.GetParentAppID()), i.bk),
           T = (0, I.bJ)(),
-          P = (0, G.id)();
+          j = (0, A.id)();
         if (!y) return null;
-        const H = Boolean(A),
-          z = a.createElement(
-            O,
+        const w = Boolean(G),
+          z = n.createElement(
+            k,
             Object.assign({}, t, {
               info: e,
-              bIsHovered: f,
-              bHasParentAppToDisplay: H,
+              bIsHovered: L,
+              bHasParentAppToDisplay: w,
             }),
           );
-        return a.createElement(
+        return n.createElement(
           l.s,
           {
-            className: (0, D.Z)({
+            className: (0, S.Z)({
               [g().OuterCapsuleContainer]: !0,
-              [w + m]: 0 == m,
+              [P + m]: 0 == m,
             }),
-            navEntryPreferPosition: r.c4.PREFERRED_CHILD,
-            navKey: v,
+            navEntryPreferPosition: s.c4.PREFERRED_CHILD,
+            navKey: f,
           },
-          a.createElement(
-            C.zw,
+          n.createElement(
+            b.zw,
             { appid: y.GetAppID() },
-            Boolean(E)
-              ? a.createElement(a.Fragment, null, z)
-              : a.createElement(
-                  p.ll,
+            Boolean(v)
+              ? n.createElement(n.Fragment, null, z)
+              : n.createElement(
+                  _.ll,
                   {
                     className: g().CapsuleContainer,
                     item: e,
@@ -463,49 +431,49 @@
                     bHidePrice: t.bHidePrice,
                     bUseSubscriptionLayout: t.bUseSubscriptionLayout,
                     strExtraParams: t.strExtraParams,
-                    fnOnHoverStateChange: !P && b,
+                    fnOnHoverStateChange: !j && h,
                     nCreatorAccountID: t.creatorAccountID,
                   },
                   z,
                 ),
-            Boolean(c) && a.createElement("div", null, c),
+            Boolean(c) && n.createElement("div", null, c),
           ),
-          H &&
-            a.createElement(
-              i.Ks,
+          w &&
+            n.createElement(
+              o.Ks,
               Object.assign(
                 { className: g().CapsuleParentInfo },
-                (0, h.h)(A, T, P, t.strExtraParams),
+                (0, E.h)(G, T, j, t.strExtraParams),
               ),
-              a.createElement(
-                C.zw,
-                { appid: A.GetAppID() },
-                a.createElement(
+              n.createElement(
+                b.zw,
+                { appid: G.GetAppID() },
+                n.createElement(
                   "div",
                   { className: g().ParentType },
-                  (0, S.Xx)(
+                  (0, C.Xx)(
                     11 == y.GetAppType()
                       ? "#SalePage_ParentApp_SoundTrack"
                       : "#SalePage_ParentApp_DLC",
                   ),
                 ),
-                a.createElement(
-                  L._,
+                n.createElement(
+                  D._,
                   {
                     type: "app",
-                    id: A.GetAppID(),
+                    id: G.GetAppID(),
                     strExtraParams: t.strExtraParams,
                   },
-                  a.createElement(
+                  n.createElement(
                     "img",
                     Object.assign(
                       {
                         loading: "lazy",
-                        className: _.AppCapsuleImage,
-                        alt: A.GetName(),
-                        src: A.GetAssets().GetSmallCapsuleURL(),
+                        className: p.AppCapsuleImage,
+                        alt: G.GetName(),
+                        src: G.GetAssets().GetSmallCapsuleURL(),
                       },
-                      (0, o.fn)(),
+                      (0, i.fn)(),
                     ),
                   ),
                 ),
@@ -513,85 +481,85 @@
             ),
         );
       }
-      function O(t) {
+      function k(t) {
         var e;
         const {
-            info: n,
-            bHidePriceIfOwned: o,
+            info: a,
+            bHidePriceIfOwned: i,
             bHideStatusBanners: l,
-            strExtraParams: r,
-            imageType: _,
-            bHasParentAppToDisplay: v,
+            strExtraParams: s,
+            imageType: p,
+            bHasParentAppToDisplay: f,
             bUseSubscriptionLayout: g,
-            elElementToAppendToHover: h,
-            bHidePrice: L,
-            bHidePlatforms: D,
-            creatorAccountID: S,
-            bIsHovered: G,
+            elElementToAppendToHover: E,
+            bHidePrice: D,
+            bHidePlatforms: S,
+            creatorAccountID: C,
+            bIsHovered: A,
           } = t,
-          [w] = (0, d.jk)(n.id, (0, u.TM)(n.type), { include_platforms: !0 }),
+          [P] = (0, d.jk)(a.id, (0, u.TM)(a.type), { include_platforms: !0 }),
           T = (0, I.bJ)(),
-          O =
-            ((0, C.Dt)(n.type),
-            (0, a.useMemo)(
-              () => (null == w ? void 0 : w.GetIncludedAppIDsOrSelf()),
-              [w],
+          k =
+            ((0, b.Dt)(a.type),
+            (0, n.useMemo)(
+              () => (null == P ? void 0 : P.GetIncludedAppIDsOrSelf()),
+              [P],
             )),
-          P =
-            w &&
-            (null == w
+          j =
+            P &&
+            (null == P
               ? void 0
-              : w
-                  .GetIncludedAppIDsOrSelf()
-                  .every((t) => c.jg.Get().BOwnsApp(t)));
-        if (!w) return null;
-        const H = P && !l,
-          z = (0, A.bk)((0, s.Hf)(`${w.GetStorePageURL()}${r || ""}`, T));
-        let k,
-          j = null;
-        if (g && 0 == (null == w ? void 0 : w.GetStoreItemType()))
-          j = a.createElement(b.r, { appid: w.GetAppID(), bIsMuted: G });
-        else if (h);
+              : P.GetIncludedAppIDsOrSelf().every((t) =>
+                  c.jg.Get().BOwnsApp(t),
+                ));
+        if (!P) return null;
+        const w = j && !l,
+          z = (0, G.bk)((0, r.Hf)(`${P.GetStorePageURL()}${s || ""}`, T));
+        let B,
+          H = null;
+        if (g && 0 == (null == P ? void 0 : P.GetStoreItemType()))
+          H = n.createElement(h.r, { appid: P.GetAppID(), bIsMuted: A });
+        else if (E);
         else {
-          const e = P && o,
-            i = H;
-          j = a.createElement(m.Hl, {
-            info: n,
-            bShowAsMuted: i,
-            bHidePrice: L,
+          const e = j && i,
+            o = w;
+          H = n.createElement(m.Hl, {
+            info: a,
+            bShowAsMuted: o,
+            bHidePrice: D,
             bShowInLibraryInsteadOfPrice: e,
-            bHidePlatforms: D,
-            creatorAccountID: S,
+            bHidePlatforms: S,
+            creatorAccountID: C,
             bShowName: t.bShowName,
           });
         }
         return (
-          "overrideNavigation" in n &&
-            (k = (t) => (
-              n.overrideNavigation(t),
+          "overrideNavigation" in a &&
+            (B = (t) => (
+              a.overrideNavigation(t),
               t.preventDefault(),
               t.stopPropagation(),
               !1
             )),
-          a.createElement(
-            i.IS,
+          n.createElement(
+            o.IS,
             {
-              href: k ? null : z,
+              href: B ? null : z,
               style: { display: "block" },
-              preferredFocus: v,
-              onClick: k,
+              preferredFocus: f,
+              onClick: B,
             },
-            a.createElement(f.vs, { appids: O, hide_status_banners: l }),
-            a.createElement(m.a4, { imageType: _, info: n }),
-            a.createElement(y.y, {
+            n.createElement(L.vs, { appids: k, hide_status_banners: l }),
+            n.createElement(m.a4, { imageType: p, info: a }),
+            n.createElement(y.y, {
               eDeckCompatibilityCategory:
-                null === (e = null == w ? void 0 : w.GetPlatforms()) ||
+                null === (e = null == P ? void 0 : P.GetPlatforms()) ||
                 void 0 === e
                   ? void 0
                   : e.steam_deck_compat_category,
             }),
-            Boolean(G && !(0, p.Hu)()) && a.createElement(E.v, { appInfo: n }),
-            j,
+            Boolean(A && !(0, _.Hu)()) && n.createElement(v.v, { appInfo: a }),
+            H,
           )
         );
       }

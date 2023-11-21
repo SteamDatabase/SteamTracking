@@ -7492,7 +7492,7 @@
           let e = [];
           return (
             this.state.bReady &&
-              this.m_rgFireworks.map((t, r) => {
+              this.m_rgFireworks.forEach((t, r) => {
                 let n = `${r}`,
                   i = {
                     top: t.y,
@@ -7978,8 +7978,8 @@
             festive: [],
           }),
             (this.m_rgRunningEffects = []),
-            (this.m_effectSettings = e),
-            (0, o.rC)(this);
+            (0, o.rC)(this),
+            (this.m_effectSettings = e);
         }
         AddRoomEffect(e) {
           this.QueueRoomEffect(e), this.UpdateRunningRoomEffects();

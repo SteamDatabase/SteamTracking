@@ -9560,23 +9560,25 @@
               return () => clearInterval(t);
             }, [e.nProjectID, e.nTrainID]);
           const p = o.useCallback(
-            (e) => {
-              !(function (e, t, a) {
+            (e, a) => {
+              !(function (e, t, a, n) {
                 (0, d.mG)(this, void 0, void 0, function* () {
-                  let n = v.gA.Init(E.Sj);
-                  n.Body().set_project_id(e),
-                    n.Body().set_published_version(t),
-                    n.Body().set_train_id(a);
-                  const o = yield E.NG.SetTrainLive(
+                  let o = v.gA.Init(E.Sj);
+                  o.Body().set_project_id(e),
+                    o.Body().set_published_version(t),
+                    o.Body().set_train_id(a),
+                    o.Body().set_from_scheduled(!1),
+                    o.Body().set_deactivate(n);
+                  const r = yield E.NG.SetTrainLive(
                     g.Get().GetServiceTransport(),
-                    n,
+                    o,
                   );
                   return (
-                    o && 1 == o.GetEResult() && N.U.invalidateQueries([P, e]),
-                    o.Body().result()
+                    r && 1 == r.GetEResult() && N.U.invalidateQueries([P, e]),
+                    r.Body().result()
                   );
                 });
-              })(n.project_id(), t, e);
+              })(n.project_id(), t, e, a);
             },
             [n, t],
           );
@@ -9788,8 +9790,9 @@
             }
           const I = h && 3 == h.status(),
             k = h && h.live(),
-            X = h && 2 == h.status(),
-            O =
+            X = h && h.active(),
+            O = h && 2 == h.status(),
+            B =
               a && r && r.serializeBase64String() != a.serializeBase64String();
           return o.createElement(
             "div",
@@ -9805,26 +9808,28 @@
                   { className: Qt.OverallStatus },
                   (0, l.Xx)("#SteamLearn_Status_Train_Status", e.nTrainID),
                 ),
-                !O &&
+                !B &&
                   I &&
                   !k &&
+                  !X &&
                   o.createElement(
                     "div",
                     {
                       className: (0, i.Z)(Qt.SteamLearnButton, Qt.Blue),
-                      onClick: () => p(e.nTrainID),
+                      onClick: () => p(e.nTrainID, !1),
                     },
                     (0, l.Xx)("#SteamLearn_Status_SetInferenceVersion"),
                   ),
-                O &&
+                B &&
                   I &&
                   !k &&
+                  !X &&
                   o.createElement(
                     "div",
                     { className: Qt.WarningMessage },
                     (0, l.Xx)("#SteamLearn_Status_SaveOrDiscardFirst"),
                   ),
-                X &&
+                O &&
                   o.createElement(
                     "div",
                     {
@@ -9851,8 +9856,20 @@
                 k &&
                   o.createElement(
                     "div",
-                    { onClick: () => p(0), className: Qt.TrainLive },
+                    {
+                      onClick: () => p(e.nTrainID, !0),
+                      className: Qt.TrainLive,
+                    },
                     (0, l.Xx)("#SteamLearn_Status_InferenceLive"),
+                  ),
+                X &&
+                  o.createElement(
+                    "div",
+                    {
+                      onClick: () => p(e.nTrainID, !0),
+                      className: Qt.TrainLive,
+                    },
+                    (0, l.Xx)("#SteamLearn_Status_InferenceActive"),
                   ),
                 o.createElement(
                   "div",

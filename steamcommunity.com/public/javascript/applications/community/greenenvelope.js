@@ -35,11 +35,11 @@
         n.d(t, {
           GreenEnvelope: () => h,
           default: () => V,
-          useSteamNotifications: () => b,
+          useSteamNotifications: () => y,
         });
       var i = n(33940),
         o = n(89526),
-        r = n(26),
+        r = n(711),
         l = n(19304),
         s = n(14826),
         a = n(40103),
@@ -49,7 +49,7 @@
         f = n(77427),
         d = n(16826),
         _ = n(83315),
-        v = n(9341),
+        v = n(15757),
         p = n(40442),
         E = n(27070),
         g = n(41576);
@@ -78,7 +78,7 @@
                 });
               })(l));
         }, [l]);
-        const s = b();
+        const s = y();
         return t
           ? o.createElement(
               o.Fragment,
@@ -88,7 +88,7 @@
             )
           : o.createElement(M, { nTotalUnviewed: s.nUnviewed });
       }
-      function b() {
+      function y() {
         return (0, _.SZ)(() => ({
           notifications: N.m_rgNotificationRollups,
           summary: Object.assign({}, N.m_summary),
@@ -96,13 +96,13 @@
           nUnviewed: N.m_nUnviewed,
         }));
       }
-      function y() {
-        return b().notifications.filter((e) => !(0, r.sA)(e.item));
+      function b() {
+        return y().notifications.filter((e) => !(0, r.sA)(e.item));
       }
       function M(e) {
         const { nTotalUnviewed: t } = e,
           n = o.useRef(),
-          i = y(),
+          i = b(),
           [r, s] = o.useState(u().AnimateBell);
         o.useEffect(() => {
           n.current ||
@@ -247,8 +247,8 @@
           e();
       }
       function A() {
-        const e = b(),
-          t = y();
+        const e = y(),
+          t = b();
         return t.length || (0, r.ft)(e.summary)
           ? o.createElement(
               "div",
@@ -281,7 +281,7 @@
         );
       }
       function w() {
-        const e = b(),
+        const e = y(),
           t = `${m.De.COMMUNITY_BASE_URL}profiles/${m.L7.steamid}/inventory/#pending_gifts`;
         return o.createElement(v.wY, {
           url: t,
@@ -289,12 +289,12 @@
         });
       }
       function L() {
-        const e = b(),
+        const e = y(),
           t = `${m.De.COMMUNITY_BASE_URL}profiles/${m.L7.steamid}/notifications#comments`;
         return o.createElement(v.DY, { url: t, count: e.summary.comments });
       }
       function O() {
-        const e = b(),
+        const e = y(),
           t = `${m.De.COMMUNITY_BASE_URL}profiles/${m.L7.steamid}/home/invites`;
         return o.createElement(v.b9, {
           url: t,
@@ -302,7 +302,7 @@
         });
       }
       function R() {
-        const e = b(),
+        const e = y(),
           t = `${m.De.COMMUNITY_BASE_URL}profiles/${m.L7.steamid}/inventory`;
         return o.createElement(v.TO, {
           url: t,
@@ -310,12 +310,12 @@
         });
       }
       function D() {
-        const e = b(),
+        const e = y(),
           t = `${m.De.COMMUNITY_BASE_URL}profiles/${m.L7.steamid}/tradeoffers`;
         return o.createElement(v.OU, { url: t, count: e.summary.trade_offers });
       }
       function I() {
-        const e = b(),
+        const e = y(),
           t = `${m.De.COMMUNITY_BASE_URL}profiles/${m.L7.steamid}/gamenotifications`;
         return o.createElement(v.Lo, {
           url: t,
@@ -323,7 +323,7 @@
         });
       }
       function k() {
-        const e = b(),
+        const e = y(),
           t = `${m.De.HELP_BASE_URL}wizard/HelpRequests`;
         return o.createElement(v.ZS, {
           url: t,
@@ -331,7 +331,7 @@
         });
       }
       function H() {
-        const e = b(),
+        const e = y(),
           t = `${m.De.COMMUNITY_BASE_URL}my/moderatormessages`;
         return o.createElement(v.V2, {
           url: t,
@@ -339,9 +339,12 @@
         });
       }
       function $() {
-        const e = b(),
+        const e = y(),
           t = `${m.De.STORE_BASE_URL}account/familymanagement`;
-        return o.createElement(v.ij, { url: t, count: e.summary.pending_fi });
+        return o.createElement(v.ij, {
+          url: t,
+          count: e.summary.pending_family_invites,
+        });
       }
       function G() {
         return o.createElement(

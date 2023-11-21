@@ -1538,9 +1538,9 @@
                 : e;
               this.m_onLoginComplete && this.m_onLoginComplete(t);
             }),
+            (0, s.rC)(this),
             (this.m_onLoginComplete = e.onComplete),
-            (this.m_onGetMachineAuth = e.onGetMachineAuth),
-            (0, s.rC)(this);
+            (this.m_onGetMachineAuth = e.onGetMachineAuth);
         }
         Start(e, t, n) {
           return (0, o.mG)(this, void 0, void 0, function* () {
@@ -2521,6 +2521,7 @@
         );
       }
       var oe = n(44534);
+      n(99825);
       const ie = (0, i.createContext)(!1),
         re = () => (0, i.useContext)(ie);
       function se() {
@@ -2538,11 +2539,10 @@
           const t = (0, i.useRef)(e);
           t.current = e;
           const [n, r] = (0, i.useState)(!0),
-            s = (0, j.TH)(),
-            a = new URLSearchParams(s.search);
+            s = (0, j.TH)();
           return (
             (0, i.useEffect)(() => {
-              a.get("need_password")
+              new URLSearchParams(s.search).get("need_password")
                 ? r(!1)
                 : t.current
                 ? (function (e) {
@@ -2580,7 +2580,7 @@
                       (0, f.aF)("PerformRefresh exception", e), r(!1);
                     })
                 : r(!1);
-            }, [t]),
+            }, [t, s.search]),
             n
           );
         })(e.redirectUrl)
@@ -2832,7 +2832,7 @@
             ? void 0
             : t.login_token_id) &&
             c.setTokenToRevoke(e.refreshInfo.login_token_id);
-        }, [e.refreshInfo]);
+        }, [e.refreshInfo, c]);
         return {
           password: c,
           onComplete: l,

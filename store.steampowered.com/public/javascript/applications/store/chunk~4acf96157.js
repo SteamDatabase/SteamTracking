@@ -1,159 +1,117 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
+"use strict";
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [1979],
   {
-    43997: (e) => {
-      e.exports = {
-        Container: "discussionwidget_Container_3BVe_",
-        VoteContainer: "discussionwidget_VoteContainer_1uhQY",
-        DiscussContainer: "discussionwidget_DiscussContainer_3tXYJ",
-        ShareContainer: "discussionwidget_ShareContainer_cLK_F",
-        InnerContainer: "discussionwidget_InnerContainer_3kQsD",
-        DiscussionButton: "discussionwidget_DiscussionButton_wnKan",
-        DiscussIcon: "discussionwidget_DiscussIcon_3-isH",
-        linkField: "discussionwidget_linkField_1mRpV",
-        ShareButtonContainer: "discussionwidget_ShareButtonContainer_3tMDZ",
-        LinkInputLabel: "discussionwidget_LinkInputLabel_Gaizo",
-        LinkButton: "discussionwidget_LinkButton_q5-pg",
-        ShareSteamBtn: "discussionwidget_ShareSteamBtn_3Gc7y",
-        ClipboardText: "discussionwidget_ClipboardText_3iQp-",
-        LinkInput: "discussionwidget_LinkInput_2IeAw",
-        ShareIcon: "discussionwidget_ShareIcon_1kFSv",
-        ClipboardIcon: "discussionwidget_ClipboardIcon_sEXEi",
-        SteamIcon: "discussionwidget_SteamIcon_3ZAOL",
-        share_controls_ctn: "discussionwidget_share_controls_ctn_1PRQm",
-        ShareLanguagePicker: "discussionwidget_ShareLanguagePicker_c-WS8",
-        LanguageLabel: "discussionwidget_LanguageLabel_GHNBo",
-        ShareBtn: "discussionwidget_ShareBtn_1qDAn",
-        VoteCount: "discussionwidget_VoteCount_2dVe4",
-        DiscussionCount: "discussionwidget_DiscussionCount_1GFRK",
-        DiscussionButtonText: "discussionwidget_DiscussionButtonText_1qE1y",
-        VoteDownIcon: "discussionwidget_VoteDownIcon_3QPkc",
-        VoteDownSelectedIcon: "discussionwidget_VoteDownSelectedIcon_3SLkg",
-        VoteUpIcon: "discussionwidget_VoteUpIcon_vRT1W",
-        VoteUpSelectedIcon: "discussionwidget_VoteUpSelectedIcon_8WczG",
-        VoteUpStaticIcon: "discussionwidget_VoteUpStaticIcon_1g-En",
-        VoteButtonSelected: "discussionwidget_VoteButtonSelected_2c_5V",
-      };
-    },
-    72775: (e) => {
-      e.exports = {
-        Link: "salebanner_Link_26cHo",
-        Banner: "salebanner_Banner_2df4N",
-        Big: "salebanner_Big_1m7WT",
-        Mobile: "salebanner_Mobile_2w3oX",
-      };
-    },
-    52002: (e, t, n) => {
-      "use strict";
-      n.d(t, { C: () => d, R: () => c });
-      var a = n(33940),
-        i = n(59621),
-        s = n(47165),
-        o = n(85651),
-        r = n(10412);
-      class c {
+    52002: (e, t, a) => {
+      a.d(t, { C: () => c, R: () => d });
+      var n = a(33940),
+        r = a(59621),
+        o = a(47165),
+        i = a(85651),
+        s = a(10412);
+      class d {
         constructor() {
           (this.m_mapBroadcasterSteamIDToEvents = new Map()),
             (this.m_mapBroadcasterSteamIDData = new Map()),
-            (0, i.rC)(this);
+            (0, r.rC)(this);
         }
-        static GetBBCodeParam(e, t, n = "") {
-          const a = new RegExp(`\\W${t}\\W*=\\W*\\"(.*?)\\"`, "gmi").exec(e);
-          return a ? a[1] : n;
+        static GetBBCodeParam(e, t, a = "") {
+          const n = new RegExp(`\\W${t}\\W*=\\W*\\"(.*?)\\"`, "gmi").exec(e);
+          return n ? n[1] : a;
         }
         static ParseCalendarEventPresentersFromText(e) {
           const t = /\[\W*speaker(\W[\s\S]*?)\]([\s\S]*?)\[\W*\/speaker\W*\]/gi,
-            n = new Array();
+            a = new Array();
           for (;;) {
-            const a = t.exec(e);
-            if (null === a) break;
-            const i = a[1],
-              o = a[2],
-              r = c.GetBBCodeParam(i, "steamid"),
-              d = {
-                steamID: r ? new s.K(r) : void 0,
-                name: c.GetBBCodeParam(i, "name"),
-                title: c.GetBBCodeParam(i, "title"),
-                company: c.GetBBCodeParam(i, "company"),
-                photo: c.GetBBCodeParam(i, "photo"),
-                bio: o,
+            const n = t.exec(e);
+            if (null === n) break;
+            const r = n[1],
+              i = n[2],
+              s = d.GetBBCodeParam(r, "steamid"),
+              c = {
+                steamID: s ? new o.K(s) : void 0,
+                name: d.GetBBCodeParam(r, "name"),
+                title: d.GetBBCodeParam(r, "title"),
+                company: d.GetBBCodeParam(r, "company"),
+                photo: d.GetBBCodeParam(r, "photo"),
+                bio: i,
               };
-            n.push(d);
+            a.push(c);
           }
-          return n;
+          return a;
         }
         static ParseEventModelPresenters(e, t) {
-          const n = e.GetDescriptionWithFallback(t);
-          return c.ParseCalendarEventPresentersFromText(n);
+          const a = e.GetDescriptionWithFallback(t);
+          return d.ParseCalendarEventPresentersFromText(a);
         }
         static ParseEventAppReferencesFromText(e) {
           const t = /\/\/store\.steampowered\.com\/app\/(\d+)/gi,
-            n = new Set();
+            a = new Set();
           for (;;) {
-            const a = t.exec(e);
-            if (null === a) break;
-            const i = a[1];
-            n.add(Number(i));
+            const n = t.exec(e);
+            if (null === n) break;
+            const r = n[1];
+            a.add(Number(r));
           }
-          return n;
+          return a;
         }
         static ParseEventModelAppReferences(e, t) {
-          var n;
-          const a = e.GetDescriptionWithFallback(t),
-            i = c.ParseEventAppReferencesFromText(a);
+          var a;
+          const n = e.GetDescriptionWithFallback(t),
+            r = d.ParseEventAppReferencesFromText(n);
           if (
-            null === (n = e.jsondata) || void 0 === n
+            null === (a = e.jsondata) || void 0 === a
               ? void 0
-              : n.referenced_appids
+              : a.referenced_appids
           )
-            for (const t of e.jsondata.referenced_appids) i.add(t);
-          return i;
+            for (const t of e.jsondata.referenced_appids) r.add(t);
+          return r;
         }
         BuildBroadcasterSteamIDToActiveEventMap(e) {
-          return (0, a.mG)(this, void 0, void 0, function* () {
-            const t = o.JW.GetTimeNowWithOverride(),
-              n = e.GetCalendarItemsInTimeRange(t - 3600, t);
-            for (const e of n.rgCalendarItems)
-              r.j1.QueueLoadPartnerEvent(e.clanid, e.unique_id);
-            const a = n.rgCalendarItems.map((e) =>
-                r.j1.LoadPartnerEventFromClanEventGIDAndClanSteamID(
-                  s.K.InitFromClanID(e.clanid),
+          return (0, n.mG)(this, void 0, void 0, function* () {
+            const t = i.JW.GetTimeNowWithOverride(),
+              a = e.GetCalendarItemsInTimeRange(t - 3600, t);
+            for (const e of a.rgCalendarItems)
+              s.j1.QueueLoadPartnerEvent(e.clanid, e.unique_id);
+            const n = a.rgCalendarItems.map((e) =>
+                s.j1.LoadPartnerEventFromClanEventGIDAndClanSteamID(
+                  o.K.InitFromClanID(e.clanid),
                   e.unique_id,
                   0,
                 ),
               ),
-              i = yield Promise.all(a),
-              c = new Map();
-            for (const e of i)
+              r = yield Promise.all(n),
+              d = new Map();
+            for (const e of r)
               if (e && !(e.endTime && e.endTime < t))
                 for (const t of e.GetBroadcastWhitelistAsSteamIDs())
-                  c.has(t) ? c.get(t).push(e) : c.set(t, [e]);
-            return c;
+                  d.has(t) ? d.get(t).push(e) : d.set(t, [e]);
+            return d;
           });
         }
         IsBroadcasterAlreadyBound(e, t) {
-          const n = this.m_mapBroadcasterSteamIDToEvents.get(e),
-            a = n ? n.length : 0;
-          if ((t ? t.length : 0) != a) return !1;
-          for (let e = 0; e < a; e++) if (n[e] != t[e].GID) return !1;
+          const a = this.m_mapBroadcasterSteamIDToEvents.get(e),
+            n = a ? a.length : 0;
+          if ((t ? t.length : 0) != n) return !1;
+          for (let e = 0; e < n; e++) if (a[e] != t[e].GID) return !1;
           return !0;
         }
         static BuildSteamIDToPresenterMapFromEventList(e, t) {
-          let n = new Map();
-          for (const a of e) {
-            if (!a) continue;
-            const e = c.ParseEventModelPresenters(a, t);
+          let a = new Map();
+          for (const n of e) {
+            if (!n) continue;
+            const e = d.ParseEventModelPresenters(n, t);
             for (const t of e)
-              t.steamID && n.set(t.steamID.ConvertTo64BitString(), t);
+              t.steamID && a.set(t.steamID.ConvertTo64BitString(), t);
           }
-          return n;
+          return a;
         }
         RemoveCachedDataIfNotInMap(e) {
           const t = new Array();
-          this.m_mapBroadcasterSteamIDToEvents.forEach((n, a) => {
-            e.has(a) || t.push(a);
+          this.m_mapBroadcasterSteamIDToEvents.forEach((a, n) => {
+            e.has(n) || t.push(n);
           }),
             t.forEach((e) => {
               this.m_mapBroadcasterSteamIDData.delete(e),
@@ -161,31 +119,31 @@
             });
         }
         static BuildAppIDRefsForEventList(e, t) {
-          const n = new Set();
-          for (const a of e) {
-            c.ParseEventModelAppReferences(a, t).forEach((e) => n.add(e));
+          const a = new Set();
+          for (const n of e) {
+            d.ParseEventModelAppReferences(n, t).forEach((e) => a.add(e));
           }
-          return Array.from(n);
+          return Array.from(a);
         }
         UpdateCachedDataFromEvents(e, t) {
-          e.forEach((e, n) => {
-            if (this.IsBroadcasterAlreadyBound(n, e)) return;
-            const a = {
-              m_mapPresenters: c.BuildSteamIDToPresenterMapFromEventList(e, t),
-              m_rgAppIDs: c.BuildAppIDRefsForEventList(e, t),
+          e.forEach((e, a) => {
+            if (this.IsBroadcasterAlreadyBound(a, e)) return;
+            const n = {
+              m_mapPresenters: d.BuildSteamIDToPresenterMapFromEventList(e, t),
+              m_rgAppIDs: d.BuildAppIDRefsForEventList(e, t),
             };
-            this.m_mapBroadcasterSteamIDData.set(n, a),
+            this.m_mapBroadcasterSteamIDData.set(a, n),
               this.m_mapBroadcasterSteamIDToEvents.set(
-                n,
+                a,
                 e.map((e) => e.GID),
               );
           });
         }
         SynchronizeEventsWithBroadcasts(e, t) {
-          return (0, a.mG)(this, void 0, void 0, function* () {
-            const n = yield this.BuildBroadcasterSteamIDToActiveEventMap(e);
-            this.RemoveCachedDataIfNotInMap(n),
-              this.UpdateCachedDataFromEvents(n, t);
+          return (0, n.mG)(this, void 0, void 0, function* () {
+            const a = yield this.BuildBroadcasterSteamIDToActiveEventMap(e);
+            this.RemoveCachedDataIfNotInMap(a),
+              this.UpdateCachedDataFromEvents(a, t);
           });
         }
         GetPresenterMapForBroadcasterSteamID(e) {
@@ -203,23 +161,22 @@
             : t.m_rgAppIDs;
         }
       }
-      (0, a.gn)([i.LO], c.prototype, "m_mapBroadcasterSteamIDData", void 0);
-      const d = new c();
+      (0, n.gn)([r.LO], d.prototype, "m_mapBroadcasterSteamIDData", void 0);
+      const c = new d();
     },
-    93883: (e, t, n) => {
-      "use strict";
-      n.d(t, { J: () => g });
-      var a = n(33940),
-        i = n(52868),
-        s = n.n(i),
-        o = n(59621),
-        r = n(83315),
-        c = n(89526),
-        d = n(26464),
-        u = n(85246),
-        l = n(4306),
-        w = n(32765);
-      class _ {
+    93883: (e, t, a) => {
+      a.d(t, { J: () => h });
+      var n = a(33940),
+        r = a(52868),
+        o = a.n(r),
+        i = a(59621),
+        s = a(83315),
+        d = a(89526),
+        c = a(26464),
+        m = a(85246),
+        l = a(4306),
+        _ = a(32765);
+      class u {
         constructor() {
           (this.giveaway_id = void 0),
             (this.seconds_until_drawing = void 0),
@@ -227,7 +184,7 @@
             (this.rtime_end = void 0),
             (this.closed = void 0),
             (this.winner_count = void 0),
-            (0, o.rC)(this);
+            (0, i.rC)(this);
         }
         BIsValid() {
           return void 0 !== this.giveaway_id && null !== this.giveaway_id;
@@ -239,7 +196,7 @@
           );
         }
         clone() {
-          const e = new _();
+          const e = new u();
           return (
             (e.giveaway_id = this.giveaway_id),
             (e.seconds_until_drawing = this.seconds_until_drawing),
@@ -251,19 +208,19 @@
           );
         }
       }
-      (0, a.gn)([o.LO], _.prototype, "giveaway_id", void 0),
-        (0, a.gn)([o.LO], _.prototype, "seconds_until_drawing", void 0),
-        (0, a.gn)([o.LO], _.prototype, "rtime_start", void 0),
-        (0, a.gn)([o.LO], _.prototype, "rtime_end", void 0),
-        (0, a.gn)([o.LO], _.prototype, "closed", void 0),
-        (0, a.gn)([o.LO], _.prototype, "winner_count", void 0);
-      class D {
+      (0, n.gn)([i.LO], u.prototype, "giveaway_id", void 0),
+        (0, n.gn)([i.LO], u.prototype, "seconds_until_drawing", void 0),
+        (0, n.gn)([i.LO], u.prototype, "rtime_start", void 0),
+        (0, n.gn)([i.LO], u.prototype, "rtime_end", void 0),
+        (0, n.gn)([i.LO], u.prototype, "closed", void 0),
+        (0, n.gn)([i.LO], u.prototype, "winner_count", void 0);
+      class w {
         constructor() {
           (this.m_mapGiveawayIDToNextDrawInfo = new Map()),
             (this.m_mapGiveawayIDAndInstanceToNextDrawInfo = new Map()),
             (this.m_bLoadedFromConfig = !1),
             (this.m_mapNextDrawChangeCallback = new Map()),
-            (0, o.rC)(this);
+            (0, i.rC)(this);
         }
         GetKey(e, t) {
           return e + "_" + t;
@@ -276,7 +233,7 @@
         GetNextDrawChangeCallback(e) {
           return (
             this.m_mapNextDrawChangeCallback.has(e) ||
-              this.m_mapNextDrawChangeCallback.set(e, new u.pB()),
+              this.m_mapNextDrawChangeCallback.set(e, new m.pB()),
             this.m_mapNextDrawChangeCallback.get(e)
           );
         }
@@ -291,32 +248,32 @@
               (t.seconds_until_drawing = e.seconds_until_drawing);
         }
         ReloadGiveaway(e, t) {
-          return (0, a.mG)(this, void 0, void 0, function* () {
+          return (0, n.mG)(this, void 0, void 0, function* () {
             if (!e) return null;
-            let n = w.De.STORE_BASE_URL + "prizes/nextdraw/" + e,
-              a = null,
-              i = { origin: self.origin };
+            let a = _.De.STORE_BASE_URL + "prizes/nextdraw/" + e,
+              n = null,
+              r = { origin: self.origin };
             return (
-              (a = yield s().get(n, { params: i })),
-              (0, o.z)(() => {
+              (n = yield o().get(a, { params: r })),
+              (0, i.z)(() => {
                 if (
                   (this.m_mapGiveawayIDToNextDrawInfo.has(e) ||
-                    this.m_mapGiveawayIDToNextDrawInfo.set(e, new _()),
+                    this.m_mapGiveawayIDToNextDrawInfo.set(e, new u()),
                   this.CopyToGiveaway(
-                    a.data,
+                    n.data,
                     this.m_mapGiveawayIDToNextDrawInfo.get(e),
                   ),
                   void 0 !== t)
                 ) {
-                  const n = this.GetKey(e, t);
-                  this.m_mapGiveawayIDAndInstanceToNextDrawInfo.has(n) ||
+                  const a = this.GetKey(e, t);
+                  this.m_mapGiveawayIDAndInstanceToNextDrawInfo.has(a) ||
                     this.m_mapGiveawayIDAndInstanceToNextDrawInfo.set(
-                      n,
-                      new _(),
+                      a,
+                      new u(),
                     ),
                     this.CopyToGiveaway(
-                      a.data,
-                      this.m_mapGiveawayIDAndInstanceToNextDrawInfo.get(n),
+                      n.data,
+                      this.m_mapGiveawayIDAndInstanceToNextDrawInfo.get(a),
                     );
                 }
               }),
@@ -329,19 +286,19 @@
         }
         static Get() {
           return (
-            D.s_Singleton ||
-              ((D.s_Singleton = new D()),
-              D.s_Singleton.Init(),
-              "dev" == w.De.WEB_UNIVERSE &&
-                (window.g_GiveawayStore = D.s_Singleton)),
-            D.s_Singleton
+            w.s_Singleton ||
+              ((w.s_Singleton = new w()),
+              w.s_Singleton.Init(),
+              "dev" == _.De.WEB_UNIVERSE &&
+                (window.g_GiveawayStore = w.s_Singleton)),
+            w.s_Singleton
           );
         }
         Init() {
           if (!this.m_bLoadedFromConfig) {
-            let e = (0, w.kQ)("giveawaynextdraw", "application_config");
+            let e = (0, _.kQ)("giveawaynextdraw", "application_config");
             if (e && e.giveaway_id) {
-              let t = new _();
+              let t = new u();
               this.CopyToGiveaway(e, t),
                 this.m_mapGiveawayIDToNextDrawInfo.set(e.giveaway_id, t);
             }
@@ -349,13 +306,13 @@
           }
         }
       }
-      (0, a.gn)([o.LO], D.prototype, "m_mapGiveawayIDToNextDrawInfo", void 0),
-        (0, a.gn)([o.aD], D.prototype, "CopyToGiveaway", null);
-      class m {
+      (0, n.gn)([i.LO], w.prototype, "m_mapGiveawayIDToNextDrawInfo", void 0),
+        (0, n.gn)([i.aD], w.prototype, "CopyToGiveaway", null);
+      class p {
         constructor() {
           (this.m_myInstanceNumber = 0),
-            (this.m_myInstanceNumber = m.s_GlobalInstance),
-            (m.s_GlobalInstance += 1);
+            (this.m_myInstanceNumber = p.s_GlobalInstance),
+            (p.s_GlobalInstance += 1);
         }
         ClearRefreshInterval() {
           this.m_intervalID &&
@@ -369,151 +326,77 @@
         }
         SetupRefreshDataInterval(e, t) {
           if ((this.ClearRefreshInterval(), !e.closed)) {
-            let n =
+            let a =
               e.seconds_until_drawing <= 0 && 0 == e.winner_count ? 6e4 : 5e3;
-            this.m_intervalID = window.setInterval(t, n);
+            this.m_intervalID = window.setInterval(t, a);
           }
         }
         SetupCountDown(e, t) {
           e > 0 && (this.m_intervalCountDownID = window.setInterval(t, 1e3));
         }
       }
-      function I(e, t) {
-        const n = D.Get().GetInfoByInstance(e, t.m_myInstanceNumber);
-        (n.seconds_until_drawing -= 1),
-          0 == n.seconds_until_drawing && t.ClearCountDown();
+      function v(e, t) {
+        const a = w.Get().GetInfoByInstance(e, t.m_myInstanceNumber);
+        (a.seconds_until_drawing -= 1),
+          0 == a.seconds_until_drawing && t.ClearCountDown();
       }
-      function g(e) {
-        const [t] = (0, c.useState)(new m()),
-          n = (0, l.NW)();
-        (0, c.useEffect)(
+      function h(e) {
+        const [t] = (0, d.useState)(new p()),
+          a = (0, l.NW)();
+        (0, d.useEffect)(
           () => (
-            D.Get()
+            w
+              .Get()
               .ReloadGiveaway(e, t.m_myInstanceNumber)
-              .then((a) => {
-                t.SetupRefreshDataInterval(a, () =>
+              .then((n) => {
+                t.SetupRefreshDataInterval(n, () =>
                   (function (e, t) {
-                    const n = D.Get().GetInfoByInstance(
-                      e,
-                      t.m_myInstanceNumber,
-                    );
-                    n &&
-                      n.BIsValid() &&
-                      n.seconds_until_drawing <= 0 &&
-                      !n.closed &&
+                    const a = w
+                      .Get()
+                      .GetInfoByInstance(e, t.m_myInstanceNumber);
+                    a &&
+                      a.BIsValid() &&
+                      a.seconds_until_drawing <= 0 &&
+                      !a.closed &&
                       (t.ClearCountDown(),
-                      D.Get()
+                      w
+                        .Get()
                         .ReloadGiveaway(e, t.m_myInstanceNumber)
-                        .then((n) => {
-                          t.SetupCountDown(n.seconds_until_drawing, () =>
-                            I(e, t),
+                        .then((a) => {
+                          t.SetupCountDown(a.seconds_until_drawing, () =>
+                            v(e, t),
                           );
                         }));
                   })(e, t),
                 ),
-                  t.SetupCountDown(a.seconds_until_drawing, () => I(e, t)),
-                  n();
+                  t.SetupCountDown(n.seconds_until_drawing, () => v(e, t)),
+                  a();
               }),
             () => {
               t.ClearRefreshInterval(), t.ClearCountDown();
             }
           ),
-          [t, e, n],
+          [t, e, a],
         );
-        const a = D.Get().GetInfoByInstance(e, t.m_myInstanceNumber),
-          [i, s, o] = (0, r.SZ)(() => [
-            null == a ? void 0 : a.winner_count,
-            null == a ? void 0 : a.closed,
-            null == a ? void 0 : a.seconds_until_drawing,
+        const n = w.Get().GetInfoByInstance(e, t.m_myInstanceNumber),
+          [r, o, i] = (0, s.SZ)(() => [
+            null == n ? void 0 : n.winner_count,
+            null == n ? void 0 : n.closed,
+            null == n ? void 0 : n.seconds_until_drawing,
           ]);
         return {
           bLoadingGiveawayInfo:
-            !a || null == a.giveaway_id || !a.BStarted() || void 0 === i,
-          winner_count: i,
-          closed: s,
-          seconds_until_drawing: o,
+            !n || null == n.giveaway_id || !n.BStarted() || void 0 === r,
+          winner_count: r,
+          closed: o,
+          seconds_until_drawing: i,
         };
       }
-      (m.s_GlobalInstance = 0),
-        (0, a.gn)([d.a], m.prototype, "ClearRefreshInterval", null),
-        (0, a.gn)([d.a], m.prototype, "ClearCountDown", null),
-        (0, a.gn)([d.a], m.prototype, "SetupRefreshDataInterval", null),
-        (0, a.gn)([d.a], m.prototype, "SetupCountDown", null);
-    },
-    55330: (e, t, n) => {
-      "use strict";
-      n.d(t, { i: () => w });
-      var a = n(89526),
-        i = n(40442),
-        s = n(68818),
-        o = n(13345),
-        r = n(19304),
-        c = n(14826),
-        d = n(207),
-        u = n(32765),
-        l = n(72775);
-      function w(e) {
-        const { gidEvent: t } = e,
-          n = (0, s.XC)(t),
-          [w, _] = (0, a.useMemo)(() => {
-            var e, t, a, s;
-            if (
-              (null ===
-                (t =
-                  null === (e = null == n ? void 0 : n.jsondata) || void 0 === e
-                    ? void 0
-                    : e.localized_sale_product_banner) || void 0 === t
-                ? void 0
-                : t.length) > 0 &&
-              (null ===
-                (s =
-                  null === (a = null == n ? void 0 : n.jsondata) || void 0 === a
-                    ? void 0
-                    : a.localized_sale_product_mobile_banner) || void 0 === s
-                ? void 0
-                : s.length) > 0
-            ) {
-              const e = (0, i.jM)(u.De.LANGUAGE),
-                t = c.LZ.GetWithFallback(
-                  n.jsondata.localized_sale_product_banner,
-                  e,
-                ),
-                a = c.LZ.GetWithFallback(
-                  n.jsondata.localized_sale_product_mobile_banner,
-                  e,
-                );
-              if (
-                (null == t ? void 0 : t.length) > 0 &&
-                (null == a ? void 0 : a.length) > 0
-              ) {
-                const e = n.clanSteamID.GetAccountID();
-                return [`${(0, o.OL)()}${e}/${t}`, `${(0, o.OL)()}${e}/${a}`];
-              }
-            }
-            return [null, null];
-          }, [n]);
-        return (null == w ? void 0 : w.length) > 0 &&
-          (null == _ ? void 0 : _.length) > 0
-          ? a.createElement(
-              "a",
-              { href: (0, d.OL)(n.GetSaleURL()), className: l.Link },
-              a.createElement("img", {
-                src: w,
-                className: (0, r.Z)(l.Banner, l.Big),
-              }),
-              a.createElement("img", {
-                src: _,
-                className: (0, r.Z)(l.Banner, l.Mobile),
-              }),
-            )
-          : null;
-      }
-    },
-    37865: (e, t, n) => {
-      "use strict";
-      n.d(t, { Z: () => a });
-      const a =
-        "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMTQwMHB4IiBoZWlnaHQ9IjE0MDlweCIgdmlld0JveD0iMCAxODAxLjUgMTQwMCAxNDA5IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMTgwMS41IDE0MDAgMTQwOSIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cGF0aCBpZD0iaWNvbm1vbnN0ci1saW5rLTFfMV8iIGZpbGw9IiNGRkZGRkYiIGQ9Ik0zNjIuMzUzLDIzMTAuNTg4YzE0OC4yMzUtMTQ4LjIzNSwzODcuMDYtMTQ4LjIzNSw1MjcuMDYsMA0KCWMxNi40NzEsMTYuNDcxLDMyLjk0MSw0MS4xNzcsNDkuNDExLDU3LjY0N0w4MDcuMDU5LDI1MDBjLTQxLjE3Ni04Mi4zNTMtMTMxLjc2NS0xMzEuNzY1LTIyMi4zNTMtMTE1LjI5NA0KCWMtNDEuMTc3LDguMjM1LTc0LjExOCwyNC43MDYtOTguODIzLDQ5LjQxMWwtMjQ3LjA1OSwyNDcuMDZjLTc0LjExOCw3NC4xMTctNzQuMTE4LDE5Ny42NDYsMCwyODANCgljNzQuMTE4LDc0LjExNywxOTcuNjQ3LDc0LjExNywyODAsMGwwLDBsNzQuMTE4LTc0LjExOGM3NC4xMTcsMjQuNzA2LDE0OC4yMzUsNDEuMTc3LDIyMi4zNTMsMzIuOTQxbC0xNzIuOTQsMTcyLjk0MQ0KCWMtMTQ4LjIzNSwxNDguMjM1LTM4Ny4wNiwxNDguMjM1LTUyNy4wNiwwcy0xNDguMjM1LTM4Ny4wNTksMC01MjcuMDU5QzEwNy4wNTksMjU1Ny42NDcsMzYyLjM1MywyMzEwLjU4OCwzNjIuMzUzLDIzMTAuNTg4eg0KCSBNNzU3LjY0NiwxOTA3LjA1OUw1OTIuOTQxLDIwODBjNzQuMTE3LTguMjM1LDE0OC4yMzUsOC4yMzUsMjE0LjExNywzMi45NDFsNzQuMTE4LTc0LjExOGM3NC4xMTctNzQuMTE3LDE5Ny42NDYtNzQuMTE3LDI4MCwwDQoJYzgyLjM1Myw3NC4xMTgsNzQuMTE3LDE5Ny42NDcsMCwyODBsLTI1NS4yOTQsMjQ3LjA2Yy03NC4xMTgsNzQuMTE3LTE5Ny42NDcsNzQuMTE3LTI4MCwwDQoJYy04LjIzNS0xNi40NzEtMjQuNzA2LTQxLjE3Ny0zMi45NDEtNjUuODgzbC0xMzEuNzY1LDEzMS43NjVjMTYuNDcxLDI0LjcwNiwzMi45NCw0MS4xNzcsNDkuNDExLDU3LjY0Nw0KCWMxNDguMjM1LDE0OC4yMzUsMzg3LjA1OSwxNDguMjM1LDUyNy4wNiwwbDAsMGwyNDcuMDU5LTI0Ny4wNmMxNDguMjM1LTE0OC4yMzUsMTQ4LjIzNS0zODcuMDU5LDAtNTI3LjA1OQ0KCVM5MDUuODgzLDE3NjcuMDU5LDc1Ny42NDYsMTkwNy4wNTlMNzU3LjY0NiwxOTA3LjA1OUw3NTcuNjQ2LDE5MDcuMDU5eiIvPg0KPC9zdmc+DQo=";
+      (p.s_GlobalInstance = 0),
+        (0, n.gn)([c.a], p.prototype, "ClearRefreshInterval", null),
+        (0, n.gn)([c.a], p.prototype, "ClearCountDown", null),
+        (0, n.gn)([c.a], p.prototype, "SetupRefreshDataInterval", null),
+        (0, n.gn)([c.a], p.prototype, "SetupCountDown", null);
     },
   },
 ]);

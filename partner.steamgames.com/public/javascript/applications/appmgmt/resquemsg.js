@@ -989,9 +989,9 @@
       }
       var j = n(77557),
         M = n(82971),
-        w = n(16670),
-        R = n(67736),
-        k = n(57742),
+        k = n(16670),
+        w = n(67736),
+        R = n(57742),
         D = n(24166),
         P = n(60161),
         y = n(14826),
@@ -1121,7 +1121,7 @@
           r.createElement(
             S.zx,
             {
-              onClick: (e) => (0, k.AM)(r.createElement(V, null), (0, P.RA)(e)),
+              onClick: (e) => (0, R.AM)(r.createElement(V, null), (0, P.RA)(e)),
             },
             "Force Reload Definitions on Steam Servers",
           ),
@@ -1154,7 +1154,7 @@
             S.zx,
             {
               onClick: (e) =>
-                (0, k.AM)(r.createElement(U, { productID: t }), (0, P.RA)(e)),
+                (0, R.AM)(r.createElement(U, { productID: t }), (0, P.RA)(e)),
             },
             "Add new start position",
           ),
@@ -1212,7 +1212,7 @@
             r.createElement(
               "div",
               null,
-              r.createElement(w.N, { accountID: t.accountid }),
+              r.createElement(k.N, { accountID: t.accountid }),
             ),
             r.createElement("br", null),
             "On: ",
@@ -1225,7 +1225,7 @@
               S.zx,
               {
                 onClick: (e) =>
-                  (0, k.AM)(
+                  (0, R.AM)(
                     r.createElement(U, {
                       productID: t,
                       existingPositionMsg: t,
@@ -1239,7 +1239,7 @@
               S.zx,
               {
                 onClick: (e) =>
-                  (0, k.AM)(
+                  (0, R.AM)(
                     r.createElement(q, { positionMsg: t }),
                     (0, P.RA)(e),
                   ),
@@ -1272,7 +1272,7 @@
               closeModal: a,
             })
           : r.createElement(
-              R.uH,
+              w.uH,
               {
                 bDisableBackgroundDismiss: !0,
                 strTitle: m,
@@ -1351,7 +1351,7 @@
               strDialogTitle: s,
               closeModal: n,
             })
-          : r.createElement(R.uH, {
+          : r.createElement(w.uH, {
               strTitle: s,
               strDescription: "Are you sure, this action is no undo'able?",
               onCancel: n,
@@ -1377,7 +1377,7 @@
           (0, r.useEffect)(() => {
             n().then(() => s(!0));
           }, [n]),
-          r.createElement(R.uH, {
+          r.createElement(w.uH, {
             bAlertDialog: !0,
             strTitle: "Reload Definition",
             strDescription: a
@@ -1486,6 +1486,27 @@
                 "div",
                 { className: K().SectionCtn },
                 r.createElement(O, null),
+              ),
+              r.createElement(
+                "div",
+                { className: K().SectionCtn },
+                r.createElement(S.__, null, "Useful Links:"),
+                r.createElement(
+                  "ul",
+                  null,
+                  r.createElement(
+                    "li",
+                    null,
+                    r.createElement(
+                      "a",
+                      {
+                        href: `${h.De.STATS_BASE_URL}steamdeck/reservations/`,
+                        target: "_blank",
+                      },
+                      "Steam Deck reservation stats page",
+                    ),
+                  ),
+                ),
               ),
             ),
           ),

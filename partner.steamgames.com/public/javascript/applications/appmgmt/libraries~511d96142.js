@@ -8981,6 +8981,11 @@
                     br: i.FE.readUint32,
                     bw: i.Xc.writeUint32,
                   },
+                  snapshot_oversample_percent: {
+                    n: 8,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
                   config_account_ids: { n: 2, c: M },
                   config_app_ids: { n: 3, c: S },
                   config_other_project: { n: 4, c: z },
@@ -9846,6 +9851,11 @@
                     bw: i.Xc.writeUint32,
                   },
                   flatten: { n: 4, br: i.FE.readBool, bw: i.Xc.writeBool },
+                  export_name: {
+                    n: 5,
+                    br: i.FE.readString,
+                    bw: i.Xc.writeString,
+                  },
                 },
               }),
             P.sm_m
@@ -13709,6 +13719,7 @@
                     bw: i.Xc.writeBool,
                   },
                   live: { n: 16, br: i.FE.readBool, bw: i.Xc.writeBool },
+                  active: { n: 17, br: i.FE.readBool, bw: i.Xc.writeBool },
                 },
               }),
             qe.sm_m
@@ -13932,6 +13943,7 @@
                     br: i.FE.readBool,
                     bw: i.Xc.writeBool,
                   },
+                  deactivate: { n: 5, br: i.FE.readBool, bw: i.Xc.writeBool },
                 },
               }),
             He.sm_m

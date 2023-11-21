@@ -167,11 +167,12 @@
         h = a(32765);
       class f {
         constructor(t, e) {
-          (this.m_summary = t),
+          (this.m_mapLocalUpdates = new Map()),
+            (0, l.rC)(this),
+            (this.m_summary = t),
             (this.m_mapStoredDrafts = e),
             (this.m_mapLocalUpdates = new Map());
           for (let t = 0; t < 31; t++) this.m_mapLocalUpdates.set(t, {});
-          (0, l.rC)(this);
         }
         BNeedsSaving(t) {
           if (void 0 !== t) {
@@ -427,10 +428,10 @@
             (this.m_mapFAQDrafts = new Map()),
             (this.m_bHasFAQEdit = !1),
             (this.m_steamInterface = null),
+            (0, l.rC)(this),
             "dev" == h.De.WEB_UNIVERSE && (window.g_FAQStore = this),
             h.De.IN_STEAMUI ||
-              (this.ReadInitialPayload(), this.SetUpWebAPIInterface()),
-            (0, l.rC)(this);
+              (this.ReadInitialPayload(), this.SetUpWebAPIInterface());
         }
         SetUpWebAPIInterface() {
           const t = (0, h.kQ)("faqstore", "application_config"),

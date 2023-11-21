@@ -1214,6 +1214,7 @@
         Pi: () => p,
         Zh: () => c,
         _: () => l,
+        bF: () => u,
         ml: () => a,
         zs: () => m,
       });
@@ -1279,6 +1280,18 @@
             return 57;
           case 2:
             return 59;
+          default:
+            return;
+        }
+      }
+      function u(e) {
+        switch (e) {
+          case 28:
+            return 32;
+          case 55:
+            return 34;
+          case 57:
+            return 45;
           default:
             return;
         }
@@ -3007,6 +3020,7 @@
             style: { gap: n ? n + "px" : "unset" },
             className: (0, s.Z)({
               [u.ScrollSnapCarousel]: !0,
+              ScrollSnapCarousel: !0,
               SaleSectionCarousel: !0,
               SaleSectionCarouselPadding: t,
               [e.className]: !0,
@@ -5368,8 +5382,8 @@
       class we {
         constructor(e) {
           (this.m_fileUploadProps = new ke()),
-            (this.m_Callbacks = e),
-            (0, X.rC)(this);
+            (0, X.rC)(this),
+            (this.m_Callbacks = e);
         }
         get file_upload_props() {
           return this.m_fileUploadProps;

@@ -1918,6 +1918,12 @@ div.apppartnereventspage_EventDetailsBody_AWjK8 {
 .nominationandvote_SteamAwardConflictModal_1Ujn_ {
   min-width: 600px;
 }
+.nominationandvote_NominationSwitchCtn_3IrPA {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 16px;
+}
 body.v6.partner_events {
   background: #24282e;
 }

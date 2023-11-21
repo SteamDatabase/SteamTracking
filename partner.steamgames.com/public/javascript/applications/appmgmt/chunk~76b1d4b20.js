@@ -7665,8 +7665,8 @@
             (this.m_allCancelTokens = new Array()),
             (this.m_lastError = void 0),
             (this.m_fnSetImageURL = null),
-            (this.m_clanSteamID = e),
-            (0, r.rC)(this);
+            (0, r.rC)(this),
+            (this.m_clanSteamID = e);
         }
         GetClanSteamID() {
           return this.m_clanSteamID;
@@ -7925,6 +7925,7 @@
             (this.status = void 0),
             (this.message = void 0),
             (this.fileType = 0),
+            (0, i.rC)(this),
             (this.file = e),
             (this.fileType = l.aN.GetExtensionTypeFromURL(e.name)),
             (this.language = t),
@@ -7937,10 +7938,7 @@
             void 0 === t && (t = (0, l.S6)(r, o, e, !0)),
               (this.type = t || a[0]);
           }
-          (this.height = o),
-            (this.width = r),
-            (this.dataUrl = n),
-            (0, i.rC)(this);
+          (this.height = o), (this.width = r), (this.dataUrl = n);
         }
         IsValidAssetType(e, t, a) {
           let n = 0,
@@ -8014,9 +8012,9 @@
         constructor(e, t, a, n, s) {
           super(e, t, n, a.src, a.width, a.height),
             (this.bCropped = !1),
+            (0, i.rC)(this),
             (this.img = a),
-            (this.localizedImageGroupPrimaryImage = s),
-            (0, i.rC)(this);
+            (this.localizedImageGroupPrimaryImage = s);
         }
         ResetImage() {
           (this.height = this.img.height),
@@ -10471,6 +10469,7 @@
             (this.m_mapHiddenApps = new Map()),
             (this.m_mapHiddenClans = new Map()),
             (this.m_eStorageType = "session"),
+            (0, s.rC)(this),
             (0, s.z)(() => {
               (null == e ? void 0 : e.rgHiddenApps) &&
                 e.rgHiddenApps.forEach((e) => this.m_mapHiddenApps.set(e, !0)),
@@ -10478,8 +10477,7 @@
                   e.rgHiddenClans.forEach((e) =>
                     this.m_mapHiddenClans.set(e, !0),
                   );
-            }),
-            (0, s.rC)(this);
+            });
         }
         GetGameSources() {
           return Array.from(this.m_mapGameSources.keys());
@@ -10801,7 +10799,8 @@
         S = a(89526);
       class v {
         constructor(e) {
-          (this.appid = 0),
+          (this.clanid = void 0),
+            (this.appid = 0),
             (this.can_edit = !1),
             (this.owns_app = !1),
             (this.follows_app = !1),
@@ -10811,8 +10810,8 @@
             (this.event_ignored = new Array()),
             (this.event_followed = new Array()),
             (this.event_followed_flags = new Array()),
-            (this.clanid = e),
-            (0, r.rC)(this);
+            (0, r.rC)(this),
+            (this.clanid = e);
         }
       }
       (0, n.gn)([r.LO], v.prototype, "clanid", void 0),
@@ -13386,10 +13385,10 @@
             (this.m_rgCalendarSections = []),
             (this.m_rgFutureSections = []),
             (this.m_collectionMetaData = void 0),
+            (0, u.rC)(this),
             (this.m_key = e),
             (this.m_visibilityStore = new w.RC(t)),
-            l.jg.Get().HintLoad(),
-            (0, u.rC)(this);
+            l.jg.Get().HintLoad();
         }
         GetNumEventsLoaded() {
           return this.m_mapCalendarEventsByGid.size;
@@ -13979,6 +13978,7 @@
         constructor(e, t, a, n, i, s) {
           (this.m_rgLoadedEventsBox = u.LO.box([])),
             (this.m_lastLoadLatch = null),
+            (0, u.rC)(this),
             (this.m_fnGetUnfilteredEvents = e),
             (this.m_fnLoadAdditionalEvents = t),
             (this.m_fnBHitEventHorizon = a),
@@ -14007,8 +14007,7 @@
                 }
                 this.m_rgLoadedEventsBox.set(e);
               }),
-            )),
-            (0, u.rC)(this);
+            ));
         }
         dispose() {
           this.m_rgAutorunDisposer();
@@ -15192,12 +15191,12 @@
           const o = new Set();
           if (
             (null == s ||
-              s.map((e) => {
+              s.forEach((e) => {
                 const t = l.Z.Get().GetBundle(e);
                 null == t || t.GetIncludedAppIDs().forEach((e) => o.add(e));
               }),
             null == i ||
-              i.map((e) => {
+              i.forEach((e) => {
                 const t = l.Z.Get().GetPackage(e);
                 null == t || t.GetIncludedAppIDs().forEach((e) => o.add(e));
               }),
@@ -16788,7 +16787,7 @@
         const h = n.useCallback(() => {
           e.onImageError && e.onImageError(e.srcs[c]),
             c + 1 < e.srcs.length && u(c + 1);
-        }, []);
+        }, [c, e]);
         return n.createElement("img", {
           className: t,
           src: a[c],

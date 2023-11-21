@@ -76,8 +76,8 @@
             (this.m_mapReactionConfiguration = new Map()),
             (this.m_bReactionConfigurationLoadedOrInFlight = !1),
             (this.m_mapExistingReactions = new Map()),
-            (this.m_transport = e),
-            (0, g.rC)(this);
+            (0, g.rC)(this),
+            (this.m_transport = e);
         }
         BIsLoggedIn() {
           return C.L7.logged_in;

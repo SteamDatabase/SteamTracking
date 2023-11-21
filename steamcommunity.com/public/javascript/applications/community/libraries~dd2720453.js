@@ -3178,6 +3178,11 @@
                     br: n.FE.readFloat,
                     bw: n.Xc.writeFloat,
                   },
+                  external_asset_id: {
+                    n: 74,
+                    br: n.FE.readUint64String,
+                    bw: n.Xc.writeUint64String,
+                  },
                 },
               }),
             g.sm_m

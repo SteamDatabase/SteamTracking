@@ -1305,7 +1305,9 @@
       v.sm_DefaultDataRequest = { include_release: !0, include_assets: !0 };
       class E {
         constructor(e) {
-          (this.m_message = e),
+          (this.m_templateVars = void 0),
+            (0, p.rC)(this),
+            (this.m_message = e),
             e.associated_item() &&
               (this.m_item = new g.Z(
                 e.associated_item(),
@@ -1337,8 +1339,7 @@
                   );
               }
               return null;
-            })(e.template_vars_json())),
-            (0, p.rC)(this);
+            })(e.template_vars_json()));
         }
         get id() {
           return this.m_message.gid();

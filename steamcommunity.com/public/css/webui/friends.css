@@ -1398,43 +1398,6 @@
 .toggle_ToggleRow_1MBq0 .toggle_Label_1Dhs8.toggle_Disabled_M8qsA {
   opacity: 0.3;
 }
-.radio_Group_1ml4S {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: stretch;
-  background-color: #202226;
-  padding-top: 6px;
-  padding-bottom: 6px;
-  padding-left: 6px;
-  border-radius: 2px;
-  color: #dfe3e6;
-  box-shadow: inset 0 1px 1px 0px #000a;
-}
-.radio_Button_Hijmc {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 6px;
-  margin-right: 6px;
-  transition: background-color 0.18s ease-in-out;
-  background-color: #202226;
-  border-radius: 2px;
-  cursor: pointer;
-  font-size: 14px;
-}
-.radio_Button_Hijmc.radio_Active_3-_jM,
-.radio_Button_Hijmc.radio_Active_3-_jM:hover {
-  background-color: #1f8dff;
-  cursor: default;
-  color: #fff;
-}
-.radio_Button_Hijmc:hover {
-  background-color: #33363e;
-}
 .contextmenu_ContextMenuMouseOverlay_3Knd7 {
   position: fixed;
   top: 0;
@@ -1700,6 +1663,43 @@ html.contextmenu_ContextMenuPopup_14wqd body {
   opacity: 1;
   word-wrap: break-word;
 }
+.radio_Group_1ml4S {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: stretch;
+  background-color: #202226;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 6px;
+  border-radius: 2px;
+  color: #dfe3e6;
+  box-shadow: inset 0 1px 1px 0px #000a;
+}
+.radio_Button_Hijmc {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 6px;
+  margin-right: 6px;
+  transition: background-color 0.18s ease-in-out;
+  background-color: #202226;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.radio_Button_Hijmc.radio_Active_3-_jM,
+.radio_Button_Hijmc.radio_Active_3-_jM:hover {
+  background-color: #1f8dff;
+  cursor: default;
+  color: #fff;
+}
+.radio_Button_Hijmc:hover {
+  background-color: #33363e;
+}
 .dropdown_DialogDropDownMenu_Item_2oAiZ {
   padding: 10px 15px;
   cursor: pointer;
@@ -1926,7 +1926,6 @@ html.contextmenu_ContextMenuPopup_14wqd body {
   line-height: 16px;
   height: 100vh;
   white-space: nowrap;
-  overflow-y: overlay;
   overflow: scroll;
   flex-shrink: 1;
   flex-grow: 1;

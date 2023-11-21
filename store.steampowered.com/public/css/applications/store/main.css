@@ -717,7 +717,6 @@ html.contextmenu_ContextMenuPopup_2GpKT body {
   line-height: 16px;
   height: 100vh;
   white-space: nowrap;
-  overflow-y: overlay;
   overflow: scroll;
   flex-shrink: 1;
   flex-grow: 1;

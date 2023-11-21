@@ -115,19 +115,573 @@
           "partnereventshared_GamepadOnlyScrollPanel_cEBYf",
       };
     },
+    46700: (e, t, n) => {
+      var r = {
+        "./af": 94506,
+        "./af.js": 94506,
+        "./ar": 59687,
+        "./ar-dz": 62887,
+        "./ar-dz.js": 62887,
+        "./ar-kw": 66307,
+        "./ar-kw.js": 66307,
+        "./ar-ly": 51664,
+        "./ar-ly.js": 51664,
+        "./ar-ma": 89926,
+        "./ar-ma.js": 89926,
+        "./ar-sa": 85207,
+        "./ar-sa.js": 85207,
+        "./ar-tn": 52912,
+        "./ar-tn.js": 52912,
+        "./ar.js": 59687,
+        "./az": 5011,
+        "./az.js": 5011,
+        "./be": 25997,
+        "./be.js": 25997,
+        "./bg": 4427,
+        "./bg.js": 4427,
+        "./bm": 85385,
+        "./bm.js": 85385,
+        "./bn": 67703,
+        "./bn-bd": 57002,
+        "./bn-bd.js": 57002,
+        "./bn.js": 67703,
+        "./bo": 39841,
+        "./bo.js": 39841,
+        "./br": 45642,
+        "./br.js": 45642,
+        "./bs": 69038,
+        "./bs.js": 69038,
+        "./ca": 53512,
+        "./ca.js": 53512,
+        "./cs": 39497,
+        "./cs.js": 39497,
+        "./cv": 6479,
+        "./cv.js": 6479,
+        "./cy": 89318,
+        "./cy.js": 89318,
+        "./da": 97229,
+        "./da.js": 97229,
+        "./de": 63460,
+        "./de-at": 51044,
+        "./de-at.js": 51044,
+        "./de-ch": 26445,
+        "./de-ch.js": 26445,
+        "./de.js": 63460,
+        "./dv": 32096,
+        "./dv.js": 32096,
+        "./el": 16048,
+        "./el.js": 16048,
+        "./en-au": 74301,
+        "./en-au.js": 74301,
+        "./en-ca": 66855,
+        "./en-ca.js": 66855,
+        "./en-gb": 761,
+        "./en-gb.js": 761,
+        "./en-ie": 46127,
+        "./en-ie.js": 46127,
+        "./en-il": 49157,
+        "./en-il.js": 49157,
+        "./en-in": 37199,
+        "./en-in.js": 37199,
+        "./en-nz": 31511,
+        "./en-nz.js": 31511,
+        "./en-sg": 47309,
+        "./en-sg.js": 47309,
+        "./eo": 92160,
+        "./eo.js": 92160,
+        "./es": 68582,
+        "./es-do": 71885,
+        "./es-do.js": 71885,
+        "./es-mx": 2553,
+        "./es-mx.js": 2553,
+        "./es-us": 16962,
+        "./es-us.js": 16962,
+        "./es.js": 68582,
+        "./et": 98890,
+        "./et.js": 98890,
+        "./eu": 37704,
+        "./eu.js": 37704,
+        "./fa": 22562,
+        "./fa.js": 22562,
+        "./fi": 70877,
+        "./fi.js": 70877,
+        "./fil": 34246,
+        "./fil.js": 34246,
+        "./fo": 78341,
+        "./fo.js": 78341,
+        "./fr": 19867,
+        "./fr-ca": 82347,
+        "./fr-ca.js": 82347,
+        "./fr-ch": 17683,
+        "./fr-ch.js": 17683,
+        "./fr.js": 19867,
+        "./fy": 21982,
+        "./fy.js": 21982,
+        "./ga": 13905,
+        "./ga.js": 13905,
+        "./gd": 13443,
+        "./gd.js": 13443,
+        "./gl": 66905,
+        "./gl.js": 66905,
+        "./gom-deva": 91324,
+        "./gom-deva.js": 91324,
+        "./gom-latn": 41890,
+        "./gom-latn.js": 41890,
+        "./gu": 37134,
+        "./gu.js": 37134,
+        "./he": 96835,
+        "./he.js": 96835,
+        "./hi": 81394,
+        "./hi.js": 81394,
+        "./hr": 13564,
+        "./hr.js": 13564,
+        "./hu": 46269,
+        "./hu.js": 46269,
+        "./hy-am": 57269,
+        "./hy-am.js": 57269,
+        "./id": 44254,
+        "./id.js": 44254,
+        "./is": 8699,
+        "./is.js": 8699,
+        "./it": 28301,
+        "./it-ch": 92887,
+        "./it-ch.js": 92887,
+        "./it.js": 28301,
+        "./ja": 64642,
+        "./ja.js": 64642,
+        "./jv": 62168,
+        "./jv.js": 62168,
+        "./ka": 94501,
+        "./ka.js": 94501,
+        "./kk": 4702,
+        "./kk.js": 4702,
+        "./km": 45808,
+        "./km.js": 45808,
+        "./kn": 34881,
+        "./kn.js": 34881,
+        "./ko": 62951,
+        "./ko.js": 62951,
+        "./ku": 92452,
+        "./ku.js": 92452,
+        "./ky": 1853,
+        "./ky.js": 1853,
+        "./lb": 77639,
+        "./lb.js": 77639,
+        "./lo": 34502,
+        "./lo.js": 34502,
+        "./lt": 60874,
+        "./lt.js": 60874,
+        "./lv": 18237,
+        "./lv.js": 18237,
+        "./me": 87878,
+        "./me.js": 87878,
+        "./mi": 64234,
+        "./mi.js": 64234,
+        "./mk": 17535,
+        "./mk.js": 17535,
+        "./ml": 43896,
+        "./ml.js": 43896,
+        "./mn": 63046,
+        "./mn.js": 63046,
+        "./mr": 80927,
+        "./mr.js": 80927,
+        "./ms": 37224,
+        "./ms-my": 66332,
+        "./ms-my.js": 66332,
+        "./ms.js": 37224,
+        "./mt": 24866,
+        "./mt.js": 24866,
+        "./my": 24206,
+        "./my.js": 24206,
+        "./nb": 66723,
+        "./nb.js": 66723,
+        "./ne": 45097,
+        "./ne.js": 45097,
+        "./nl": 37529,
+        "./nl-be": 1355,
+        "./nl-be.js": 1355,
+        "./nl.js": 37529,
+        "./nn": 30296,
+        "./nn.js": 30296,
+        "./oc-lnc": 4802,
+        "./oc-lnc.js": 4802,
+        "./pa-in": 77057,
+        "./pa-in.js": 77057,
+        "./pl": 69850,
+        "./pl.js": 69850,
+        "./pt": 15552,
+        "./pt-br": 83726,
+        "./pt-br.js": 83726,
+        "./pt.js": 15552,
+        "./ro": 1717,
+        "./ro.js": 1717,
+        "./ru": 79117,
+        "./ru.js": 79117,
+        "./sd": 61742,
+        "./sd.js": 61742,
+        "./se": 92049,
+        "./se.js": 92049,
+        "./si": 83329,
+        "./si.js": 83329,
+        "./sk": 27619,
+        "./sk.js": 27619,
+        "./sl": 76707,
+        "./sl.js": 76707,
+        "./sq": 84281,
+        "./sq.js": 84281,
+        "./sr": 60436,
+        "./sr-cyrl": 13408,
+        "./sr-cyrl.js": 13408,
+        "./sr.js": 60436,
+        "./ss": 27500,
+        "./ss.js": 27500,
+        "./sv": 6950,
+        "./sv.js": 6950,
+        "./sw": 54222,
+        "./sw.js": 54222,
+        "./ta": 73746,
+        "./ta.js": 73746,
+        "./te": 1130,
+        "./te.js": 1130,
+        "./tet": 34740,
+        "./tet.js": 34740,
+        "./tg": 13378,
+        "./tg.js": 13378,
+        "./th": 20628,
+        "./th.js": 20628,
+        "./tk": 92622,
+        "./tk.js": 92622,
+        "./tl-ph": 30100,
+        "./tl-ph.js": 30100,
+        "./tlh": 22871,
+        "./tlh.js": 22871,
+        "./tr": 33600,
+        "./tr.js": 33600,
+        "./tzl": 18985,
+        "./tzl.js": 18985,
+        "./tzm": 3627,
+        "./tzm-latn": 51145,
+        "./tzm-latn.js": 51145,
+        "./tzm.js": 3627,
+        "./ug-cn": 4790,
+        "./ug-cn.js": 4790,
+        "./uk": 97712,
+        "./uk.js": 97712,
+        "./ur": 99529,
+        "./ur.js": 99529,
+        "./uz": 99141,
+        "./uz-latn": 61737,
+        "./uz-latn.js": 61737,
+        "./uz.js": 99141,
+        "./vi": 98205,
+        "./vi.js": 98205,
+        "./x-pseudo": 20697,
+        "./x-pseudo.js": 20697,
+        "./yo": 37826,
+        "./yo.js": 37826,
+        "./zh-cn": 83994,
+        "./zh-cn.js": 83994,
+        "./zh-hk": 36892,
+        "./zh-hk.js": 36892,
+        "./zh-mo": 43884,
+        "./zh-mo.js": 43884,
+        "./zh-tw": 85136,
+        "./zh-tw.js": 85136,
+      };
+      function a(e) {
+        var t = s(e);
+        return n(t);
+      }
+      function s(e) {
+        if (!n.o(r, e)) {
+          var t = new Error("Cannot find module '" + e + "'");
+          throw ((t.code = "MODULE_NOT_FOUND"), t);
+        }
+        return r[e];
+      }
+      (a.keys = function () {
+        return Object.keys(r);
+      }),
+        (a.resolve = s),
+        (e.exports = a),
+        (a.id = 46700);
+    },
+    85651: (e, t, n) => {
+      "use strict";
+      n.d(t, { JW: () => u, kl: () => v, rw: () => p });
+      var r = n(33940),
+        a = n(59621),
+        s = n(36105),
+        i = n.n(s),
+        o = n(89526),
+        l = (n(58218), n(32765));
+      class d {
+        constructor() {
+          (this.bOpenEventLandingPage = !1),
+            (this.bIncludeFeaturedAsGameSource = !0),
+            (this.nOverrideDateNow = void 0),
+            (0, a.rC)(this);
+        }
+        get bRequireAllEventsLoadedInTimeBlock() {
+          return !1;
+        }
+        get bIsFollowingEnabled() {
+          return !(0, l.h4)();
+        }
+        get bIsCuratorsEnabled() {
+          return !(0, l.h4)();
+        }
+        get bIncludeCurators() {
+          return !0;
+        }
+        GetTimeNowWithOverride() {
+          return this.nOverrideDateNow
+            ? this.nOverrideDateNow
+            : Math.floor(Date.now() / 1e3);
+        }
+        GetTimeNowWithOverrideAsDate() {
+          return this.nOverrideDateNow
+            ? new Date(1e3 * this.nOverrideDateNow)
+            : new Date();
+        }
+        BHasTimeOverride() {
+          return Boolean(this.nOverrideDateNow);
+        }
+        ParseDevOverrides(e) {
+          if (!e || 0 == e.length) return;
+          const t = new URLSearchParams("?" == e[0] ? e.substring(1) : e);
+          if (
+            t.has("t") &&
+            ("dev" == l.De.WEB_UNIVERSE || "beta" == l.De.WEB_UNIVERSE)
+          ) {
+            const e = t.get("t");
+            let n = /^\d+$/.test(e) ? i().unix(Number.parseInt(e)) : i()(e);
+            (this.nOverrideDateNow = Math.floor(n.unix())),
+              console.log(
+                "CEventCalendarDevFeatures overriding partner event time: " +
+                  this.nOverrideDateNow +
+                  " " +
+                  n.format(),
+              );
+          }
+        }
+      }
+      (0, r.gn)([a.LO], d.prototype, "nOverrideDateNow", void 0);
+      const u = new d();
+      window.g_EventCalendarDevFeatures = u;
+      const _ = new Date(),
+        c = Math.floor(_.getTime() / 1e3);
+      function v() {
+        var e;
+        return null !== (e = u.nOverrideDateNow) && void 0 !== e ? e : c;
+      }
+      function p() {
+        return o.useMemo(() => u.GetTimeNowWithOverrideAsDate(), []);
+      }
+    },
+    25871: (e, t, n) => {
+      "use strict";
+      n.d(t, {
+        Vm: () => _,
+        ie: () => u,
+        jk: () => l,
+        oA: () => p,
+        vs: () => d,
+        wZ: () => v,
+      });
+      var r = n(52868),
+        a = n.n(r),
+        s = n(89526),
+        i = (n(24174), n(4306)),
+        o = n(92616);
+      function l(e, t, n, r) {
+        const l = (0, s.useRef)(),
+          d = (0, s.useRef)(void 0),
+          u = (0, i.NW)();
+        l.current = e;
+        const [_, c] = (0, s.useState)(void 0),
+          {
+            include_assets: v,
+            include_release: p,
+            include_platforms: h,
+            include_all_purchase_options: j,
+            include_screenshots: m,
+            include_trailers: E,
+            include_ratings: f,
+            include_tag_count: g,
+            include_reviews: S,
+            include_basic_info: b,
+            include_supported_languages: C,
+            include_full_description: w,
+            include_included_items: k,
+          } = n;
+        if (
+          ((0, s.useEffect)(() => {
+            const n = {
+              include_assets: v,
+              include_release: p,
+              include_platforms: h,
+              include_all_purchase_options: j,
+              include_screenshots: m,
+              include_trailers: E,
+              include_ratings: f,
+              include_tag_count: g,
+              include_reviews: S,
+              include_basic_info: b,
+              include_supported_languages: C,
+              include_full_description: w,
+              include_included_items: k,
+            };
+            let s = null;
+            return (
+              !e ||
+                o.Z.Get().BHasStoreItem(e, t, n) ||
+                (void 0 !== _ && r && r == d.current) ||
+                (r !== d.current && (c(void 0), (d.current = r)),
+                (s = a().CancelToken.source()),
+                o.Z.Get()
+                  .QueueStoreItemRequest(e, t, n)
+                  .then((t) => {
+                    s.token.reason || l.current !== e || c(1 == t), u();
+                  })),
+              () => s && s.cancel("useStoreItemCache: unmounting")
+            );
+          }, [e, t, r, _, v, p, h, j, m, E, f, g, S, b, C, w, k, u]),
+          !e)
+        )
+          return [null, 2];
+        if (!1 === _) return [void 0, 2];
+        if (o.Z.Get().BIsStoreItemMissing(e, t)) return [void 0, 2];
+        if (!o.Z.Get().BHasStoreItem(e, t, n)) return [void 0, 1];
+        const T = o.Z.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
+        return T ? [T, 3] : [null, 2];
+      }
+      function d(e, t, n) {
+        return l(e, 0, t, n);
+      }
+      function u(e, t, n) {
+        return l(e, 1, t, n);
+      }
+      function _(e, t, n) {
+        const [r, i] = l(e, t, n),
+          [o, u] = (0, s.useState)(null),
+          [_, c] = d(o, n);
+        return (
+          (0, s.useEffect)(() => {
+            var e;
+            const t = a().CancelToken.source();
+            if (
+              1 == (null == r ? void 0 : r.GetStoreItemType()) &&
+              1 == (null == r ? void 0 : r.GetIncludedAppIDs().length)
+            ) {
+              const n = r.GetIncludedAppIDs()[0];
+              o != n &&
+                ((null === (e = null == t ? void 0 : t.token) || void 0 === e
+                  ? void 0
+                  : e.reason) ||
+                  u(n));
+            }
+            return () =>
+              t.cancel("useStoreItemCacheOrPackageSingleApp: unmounting");
+          }, [o, r]),
+          o ? [_, c] : [r, i]
+        );
+      }
+      function c(e, t, n, r) {
+        const l = (0, i.NW)(),
+          {
+            include_assets: d,
+            include_release: u,
+            include_platforms: _,
+            include_all_purchase_options: c,
+            include_screenshots: v,
+            include_trailers: p,
+            include_ratings: h,
+            include_tag_count: j,
+            include_reviews: m,
+            include_basic_info: E,
+            include_supported_languages: f,
+            include_full_description: g,
+            include_included_items: S,
+          } = n;
+        if (
+          ((0, s.useEffect)(() => {
+            if (!e || 0 == e.length) return;
+            const n = {
+                include_assets: d,
+                include_release: u,
+                include_platforms: _,
+                include_all_purchase_options: c,
+                include_screenshots: v,
+                include_trailers: p,
+                include_ratings: h,
+                include_tag_count: j,
+                include_reviews: m,
+                include_basic_info: E,
+                include_supported_languages: f,
+                include_full_description: g,
+                include_included_items: S,
+              },
+              r = e.filter(
+                (e) =>
+                  !(
+                    o.Z.Get().BHasStoreItem(e, t, n) ||
+                    o.Z.Get().BIsStoreItemMissing(e, t)
+                  ),
+              );
+            if (0 == r.length) return;
+            const s = a().CancelToken.source(),
+              i = r.map((e) => o.Z.Get().QueueStoreItemRequest(e, t, n));
+            return (
+              Promise.all(i).then(() => {
+                s.token.reason || l();
+              }),
+              () => s.cancel("useStoreItemCacheMultiplePackages: unmounting")
+            );
+          }, [e, t, r, l, d, u, _, c, v, p, h, j, m, E, f, g, S]),
+          !e)
+        )
+          return 2;
+        if (
+          !e.every(
+            (e) =>
+              o.Z.Get().BHasStoreItem(e, t, n) ||
+              o.Z.Get().BIsStoreItemMissing(e, t),
+          )
+        )
+          return 1;
+        return e.every((e) =>
+          o.Z.Get().GetStoreItemWithLegacyVisibilityCheck(e, t),
+        )
+          ? 3
+          : 2;
+      }
+      function v(e, t, n) {
+        return c(e, 0, t, n);
+      }
+      function p() {
+        s.useEffect(
+          () => (
+            o.Z.Get().SetReturnUnavailableItems(!0),
+            () => o.Z.Get().SetReturnUnavailableItems(!1)
+          ),
+          [],
+        );
+      }
+    },
     5557: (e, t, n) => {
       "use strict";
-      n.d(t, { r: () => l });
+      n.d(t, { r: () => o });
       var r = n(89526),
         a = n(99307),
-        o = n(14826),
+        s = n(14826),
         i = n(32765);
-      const l = (e) => {
+      const o = (e) => {
         let t = i.De.HELP_BASE_URL + "wizard/HelpWithLimitedAccount";
         return r.createElement(
           a.uH,
           {
-            strTitle: (0, o.Xx)("#Informational_Message"),
+            strTitle: (0, s.Xx)("#Informational_Message"),
             onCancel: e.closeModal,
             onOK: e.closeModal,
             bAlertDialog: !0,
@@ -135,75 +689,32 @@
           r.createElement(
             "div",
             null,
-            (0, o.kQ)(
+            (0, s.kQ)(
               e.strTokenOverride || "#User_LimitedAccount",
               r.createElement(
                 "a",
                 { href: t, target: i.De.IN_CLIENT ? void 0 : "_blank" },
-                (0, o.Xx)("#User_LimitedAccount_UrlInfo"),
+                (0, s.Xx)("#User_LimitedAccount_UrlInfo"),
               ),
             ),
           ),
         );
       };
     },
-    32905: (e, t, n) => {
+    58218: (e, t, n) => {
       "use strict";
-      n.d(t, { X: () => p, _: () => v });
-      var r = n(89526),
-        a = n(57742),
-        o = n(14826),
-        i = n(32765),
-        l = n(90580),
-        d = n(19094),
-        _ = n(79925);
-      function s(e) {
-        return r.createElement(
-          a.e1,
-          { onEscKeypress: e.closeModal, bDisableBackgroundDismiss: !0 },
-          r.createElement(h, { redirectURL: e.redirectURL }),
-        );
-      }
-      function p() {
-        (0, a.AM)(
-          r.createElement(s, {
-            ownerWin: window,
-            redirectURL: window.location.href,
-          }),
-          window,
-          { strTitle: (0, o.Xx)("#Login_SignIn") },
-        );
-      }
-      function v(e) {
-        (0, a.AM)(
-          r.createElement(s, { ownerWin: window, redirectURL: e }),
-          window,
-          { strTitle: (0, o.Xx)("#Login_SignIn") },
-        );
-      }
-      function h(e) {
-        const { redirectURL: t } = e,
-          [n] = (0, r.useState)(
-            new d.J(i.De.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
-          ),
-          [a, o] = (0, r.useState)(!1);
-        return r.createElement(
-          "div",
-          null,
-          a
-            ? r.createElement(l.pT, null)
-            : r.createElement(l.wK, {
-                autoFocus: !0,
-                transport: n,
-                platform: 2,
-                onComplete: (e) => {
-                  e == _.TG.k_PrimaryDomainFail
-                    ? o(!0)
-                    : window.location.assign(t);
-                },
-                redirectUrl: t,
-                theme: "modal",
-              }),
+      n.d(t, { T: () => i });
+      var r = n(52868),
+        a = n.n(r),
+        s = n(89526);
+      function i(e) {
+        const t = s.useRef(a().CancelToken.source());
+        return (
+          s.useEffect(() => {
+            const n = t.current;
+            return () => n.cancel(e ? `${e}: unmounting` : "unmounting");
+          }, [e]),
+          t.current
         );
       }
     },

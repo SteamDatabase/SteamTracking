@@ -30,6 +30,7 @@
         constructor() {
           (this.m_mapGenreToStickerResponse = new Map()),
             (this.m_eStoryBadgeGranted = 0),
+            (0, u.rC)(this),
             "dev" == n.De.WEB_UNIVERSE && (window.g_SummerSale2021Store = this);
           const e = (0, n.kQ)("summerstory", "application_config");
           if (e) {
@@ -45,7 +46,6 @@
               e.header_mobile &&
                 (this.m_strLocalizedStoryHeaderMobile = e.header_mobile);
           }
-          (0, u.rC)(this);
         }
         GetStoryBadgeGranted() {
           return this.m_eStoryBadgeGranted;

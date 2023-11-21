@@ -83,7 +83,7 @@
     },
     49234: (e, t, a) => {
       "use strict";
-      a.d(t, { KE: () => F, T4: () => H, _G: () => P, zY: () => z });
+      a.d(t, { KE: () => F, T4: () => H, _G: () => L, zY: () => z });
       var n = a(33940),
         r = a(52868),
         o = a.n(r),
@@ -119,8 +119,8 @@
         M = a.n(x),
         R = a(51441),
         U = a(23715),
-        L = a.n(U);
-      const P = (0, l.Pi)((e) => {
+        P = a.n(U);
+      const L = (0, l.Pi)((e) => {
           const {
               clanAccountID: t,
               gidAnnouncement: a,
@@ -277,8 +277,9 @@
             langOverride: r,
             onClick: o,
             eEventRount: l,
+            bHidePrices: d,
           } = e,
-          [d, m, u, v, E, C, b, f] = (0, s.SZ)(() => {
+          [m, u, v, E, C, b, f, B] = (0, s.SZ)(() => {
             const e = r || (0, c.jM)(T.De.LANGUAGE),
               n = Boolean(void 0 !== a)
                 ? a
@@ -294,7 +295,7 @@
               t.GetSubTitleWithLanguageFallback(e) || "",
             ];
           }),
-          [B, I] = (0, h.vs)(m, {
+          [I, G] = (0, h.vs)(u, {
             include_assets: !0,
             include_screenshots: !0,
           });
@@ -302,17 +303,17 @@
           return i.createElement("div", {
             className: M().OtherEvents_EventCtn,
           });
-        if (!B && m)
+        if (!I && u)
           return i.createElement(k.V, {
             size: "small",
             position: "center",
             string: (0, w.Xx)("#Loading"),
           });
-        const G = (0, S.vY)().GetStoreInitializationTimestamp().getTime() / 1e3,
-          D = t ? t.GetStartTimeAndDateUnixSeconds() : 0;
-        let A = f;
+        const D = (0, S.vY)().GetStoreInitializationTimestamp().getTime() / 1e3,
+          A = t ? t.GetStartTimeAndDateUnixSeconds() : 0;
+        let O = B;
         return (
-          f && (f.length > V || v.length > V) && (A = void 0),
+          B && (B.length > V || E.length > V) && (O = void 0),
           i.createElement(
             i.Fragment,
             null,
@@ -321,6 +322,7 @@
               {
                 className: (0, N.Z)(
                   M().OtherEvents_EventCtn,
+                  "OtherEvents_EventCtn",
                   M().HoversEnabled,
                 ),
                 eventModel: t,
@@ -331,14 +333,14 @@
               i.createElement(
                 "div",
                 { className: M().EventSummaryContainer },
-                i.createElement("div", { className: M().EventSummaryType }, E),
-                i.createElement("div", { className: M().EventSummaryText }, C),
+                i.createElement("div", { className: M().EventSummaryType }, C),
+                i.createElement("div", { className: M().EventSummaryText }, b),
               ),
               i.createElement("div", {
                 className: M().OtherEvents_BGImage,
                 style: {
                   backgroundColor: "#ffffff",
-                  backgroundImage: `url(${b})`,
+                  backgroundImage: `url(${f})`,
                 },
               }),
               i.createElement(
@@ -348,7 +350,7 @@
                   "div",
                   { className: M().OtherEvents_MainImageCtn },
                   i.createElement("img", {
-                    src: u,
+                    src: v,
                     className: M().OtherEvents_MainImage,
                   }),
                 ),
@@ -358,18 +360,18 @@
                   i.createElement(
                     "div",
                     { className: M().OtherEvents_TextTitle },
-                    v,
+                    E,
                   ),
-                  Boolean(A) &&
+                  Boolean(O) &&
                     i.createElement(
                       "div",
                       { className: M().OtherEvents_SubTitle },
-                      A,
+                      O,
                     ),
-                  Boolean(D > G)
+                  Boolean(A > D)
                     ? i.createElement(
                         "div",
-                        { className: M().UpcomingCtn },
+                        { className: (0, N.Z)(M().UpcomingCtn, "UpcomingCtn") },
                         i.createElement(y.H6, {
                           bSingleLine: !0,
                           dateAndTime: t.GetStartTimeAndDateUnixSeconds(),
@@ -383,7 +385,8 @@
                 ),
               ),
             ),
-            Boolean(n && t.appid) && i.createElement(z, { appid: t.appid }),
+            Boolean(n && t.appid) &&
+              i.createElement(z, { appid: t.appid, bHidePrice: d }),
           )
         );
       }
@@ -422,26 +425,26 @@
                 className: (0, N.Z)(
                   M().AppCapsulePrice,
                   Boolean(null == l ? void 0 : l.discount_pct)
-                    ? L().Discounted
+                    ? P().Discounted
                     : "",
                 ),
               },
               Boolean((null == l ? void 0 : l.discount_pct) && s) &&
                 i.createElement(
                   "div",
-                  { className: L().DiscountIconCtn },
+                  { className: P().DiscountIconCtn },
                   i.createElement(G.dCe, null),
                 ),
               Boolean((null == l ? void 0 : l.discount_pct) && !s) &&
                 i.createElement(
                   "span",
-                  { className: L().StoreSaleDiscountBox },
+                  { className: P().StoreSaleDiscountBox },
                   `-${null == l ? void 0 : l.discount_pct}%`,
                 ),
               Boolean(l.final_price_in_cents) &&
                 i.createElement(
                   "span",
-                  { className: L().StoreSalePriceBox },
+                  { className: P().StoreSalePriceBox },
                   l.formatted_final_price,
                 ),
             ),
@@ -748,8 +751,8 @@
         M = a(82988),
         R = a(21904),
         U = a(88443),
-        L = a(42701);
-      const P = (e) => {
+        P = a(42701);
+      const L = (e) => {
           const t = (0, n.useRef)(null),
             [a, r] = (0, n.useState)(null);
           return (
@@ -764,10 +767,10 @@
               null,
               n.createElement(
                 "div",
-                { className: (0, O.Z)(L.Container) },
+                { className: (0, O.Z)(P.Container) },
                 n.createElement(
                   "div",
-                  { className: L.Controls },
+                  { className: P.Controls },
                   n.createElement(
                     B.zx,
                     {
@@ -796,12 +799,12 @@
             s = m.c9.GetBroadcast(l);
           return n.createElement(
             "div",
-            { className: L.DisplaySection },
+            { className: P.DisplaySection },
             Boolean(a.last_error_result && 1 != a.last_error_result) &&
               n.createElement(
                 "div",
-                { className: L.SubSection },
-                n.createElement("div", { className: L.Header }, "Error"),
+                { className: P.SubSection },
+                n.createElement("div", { className: P.Header }, "Error"),
                 n.createElement(
                   "div",
                   null,
@@ -818,10 +821,10 @@
               ),
             n.createElement(
               "div",
-              { className: L.SubSection },
+              { className: P.SubSection },
               n.createElement(
                 "div",
-                { className: L.Header },
+                { className: P.Header },
                 "Broadcast Setup",
               ),
               n.createElement(
@@ -866,8 +869,8 @@
             ),
             n.createElement(
               "div",
-              { className: L.SubSection },
-              n.createElement("div", { className: L.Header }, "Ingester Info"),
+              { className: P.SubSection },
+              n.createElement("div", { className: P.Header }, "Ingester Info"),
               n.createElement(
                 "div",
                 null,
@@ -929,10 +932,10 @@
             Boolean(a.transcode_server) &&
               n.createElement(
                 "div",
-                { className: L.SubSection },
+                { className: P.SubSection },
                 n.createElement(
                   "div",
-                  { className: L.Header },
+                  { className: P.Header },
                   "Transcoder Info",
                 ),
                 n.createElement(
@@ -976,8 +979,8 @@
               ),
             n.createElement(
               "div",
-              { className: L.SubSection },
-              n.createElement("div", { className: L.Header }, "Origin Info"),
+              { className: P.SubSection },
+              n.createElement("div", { className: P.Header }, "Origin Info"),
               null === (t = null == a ? void 0 : a.origin_video_streams) ||
                 void 0 === t
                 ? void 0
@@ -1026,8 +1029,8 @@
             ),
             n.createElement(
               "div",
-              { className: L.SubSection },
-              n.createElement("div", { className: L.Header }, "Viewer Info"),
+              { className: P.SubSection },
+              n.createElement("div", { className: P.Header }, "Viewer Info"),
               n.createElement(
                 "div",
                 null,
@@ -1062,8 +1065,8 @@
             ),
             n.createElement(
               "div",
-              { className: L.SubSection },
-              n.createElement("div", { className: L.Header }, "Settings"),
+              { className: P.SubSection },
+              n.createElement("div", { className: P.Header }, "Settings"),
               n.createElement("div", null, "is replay? ", a.is_replay),
               n.createElement(
                 "div",
@@ -1092,8 +1095,8 @@
             ),
             n.createElement(
               "div",
-              { className: L.SubSection },
-              n.createElement("div", { className: L.Header }, "App Info"),
+              { className: P.SubSection },
+              n.createElement("div", { className: P.Header }, "App Info"),
               n.createElement("div", null, "appid: ", a.app_id),
               n.createElement("div", null, "app name: ", a.app_name),
               n.createElement("div", null, "broadcast title: ", a.title),
@@ -1103,16 +1106,16 @@
               Boolean(a.app_id && a.app_id > 0) &&
                 n.createElement(
                   "div",
-                  { className: L.AppSummaryWidgetCtn },
+                  { className: P.AppSummaryWidgetCtn },
                   n.createElement(N.ju, { id: a.app_id, type: "game" }),
                 ),
             ),
             n.createElement(
               "div",
-              { className: L.SubSection },
+              { className: P.SubSection },
               n.createElement(
                 "div",
-                { className: L.Header },
+                { className: P.Header },
                 "Manifest Information",
               ),
               n.createElement(
@@ -1131,12 +1134,12 @@
                 null,
                 n.createElement(
                   "div",
-                  { className: L.SubSection },
+                  { className: P.SubSection },
                   n.createElement(M.G, { data: a }),
                 ),
                 n.createElement(
                   "div",
-                  { className: L.SubSection },
+                  { className: P.SubSection },
                   n.createElement(M.G, {
                     data: (null == s ? void 0 : s.m_data) || "",
                   }),
@@ -1717,7 +1720,7 @@
                     {
                       className: (0, O.Z)(A().ValveOnlyBackground, H.DebugCtn),
                     },
-                    n.createElement(P, null),
+                    n.createElement(L, null),
                   ),
                 ),
               Boolean(a.m_strAppId && Number.parseInt(a.m_strAppId) > 7) &&

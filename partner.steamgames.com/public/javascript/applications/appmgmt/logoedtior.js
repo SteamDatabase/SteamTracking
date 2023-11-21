@@ -298,9 +298,9 @@
       "use strict";
       o.r(t),
         o.d(t, {
-          Init_LibraryLogoEditor: () => q,
-          LogoEditor: () => te,
-          LogoEditorPopup: () => ee,
+          Init_LibraryLogoEditor: () => ee,
+          LogoEditor: () => oe,
+          LogoEditorPopup: () => te,
         });
       var s = o(33940),
         a = o(89526),
@@ -308,8 +308,8 @@
         r = o(52868),
         n = o.n(r),
         l = o(88464),
-        d = o(1981),
-        p = o(4306),
+        p = o(1981),
+        d = o(4306),
         c = o(87178),
         h = o(23801),
         g = o(19304),
@@ -319,8 +319,9 @@
         P = o.n(_),
         f = o(64738),
         L = o.n(f),
-        E = o(75962);
-      const C = {
+        E = o(75962),
+        C = o(99825);
+      const S = {
           exit: P().FullscreenExitStart,
           exitActive: P().FullscreenExitActive,
           exitDone: P().FullscreenExitDone,
@@ -328,10 +329,10 @@
           enterDone: P().FullscreenEnterDone,
           enterActive: P().FullscreenEnterActive,
         },
-        S = (0, E.Qc)(L()["duration-app-launch"]),
-        B = { pinnedPosition: "BottomLeft", nWidthPct: 50, nHeightPct: 50 },
-        v = a.createContext({ bFullscreen: !1 });
-      class I extends a.Component {
+        B = (0, E.Qc)(L()["duration-app-launch"]),
+        v = { pinnedPosition: "BottomLeft", nWidthPct: 50, nHeightPct: 50 },
+        I = a.createContext({ bFullscreen: !1 });
+      class k extends a.Component {
         constructor(e) {
           super(e),
             (this.m_refTopCapsule = a.createRef()),
@@ -354,7 +355,7 @@
           );
         }
         GetLogoPosition() {
-          return this.state.logoPosition || this.props.logoPosition || B;
+          return this.state.logoPosition || this.props.logoPosition || v;
         }
         SetPinnedPosition(e) {
           this.setState(
@@ -388,10 +389,10 @@
         render() {
           if (!this.props.editMode)
             return a.createElement(
-              v.Provider,
+              I.Provider,
               { value: { bFullscreen: this.props.bFullscreen } },
               a.createElement(
-                k,
+                b,
                 Object.assign({ ref: this.m_refTopCapsule }, this.props),
               ),
             );
@@ -400,10 +401,10 @@
             r = (0, s._T)(e, ["children", "logoPosition", "editMode"]),
             n = this.GetLogoPosition();
           return a.createElement(
-            v.Provider,
+            I.Provider,
             { value: { bFullscreen: this.props.bFullscreen } },
             a.createElement(
-              k,
+              b,
               Object.assign({ ref: this.m_refTopCapsule }, r, {
                 editMode: !0,
                 logoPosition: n,
@@ -434,10 +435,10 @@
           );
         }
       }
-      (0, s.gn)([p.ak], I.prototype, "SetDimensions", null),
-        (0, s.gn)([p.ak], I.prototype, "OnPositionChanged", null),
-        (0, s.gn)([p.ak], I.prototype, "PostPositionChangeCallback", null);
-      let k = class extends a.Component {
+      (0, s.gn)([d.ak], k.prototype, "SetDimensions", null),
+        (0, s.gn)([d.ak], k.prototype, "OnPositionChanged", null),
+        (0, s.gn)([d.ak], k.prototype, "PostPositionChangeCallback", null);
+      let b = class extends a.Component {
         constructor(e) {
           super(e),
             (this.m_refBackgroundImage = a.createRef()),
@@ -513,27 +514,27 @@
               fnOnPositionChanged: r,
               height: n,
             } = this.props,
-            { bFallbackHeader: l, bHasLogoImage: p } = this.state,
+            { bFallbackHeader: l, bHasLogoImage: d } = this.state,
             h = (0, g.Z)(
               P().TopCapsule,
               s,
               !this.state.bHasHeaderImage && P().NoArt,
               (!this.props.hasHeroImage || l) && P().FallbackArt,
-              !p && i,
+              !d && i,
             ),
             m = { "--header-height": null == n ? void 0 : n + "px" };
           return a.createElement(
-            d.Z,
+            p.Z,
             {
-              timeout: S,
+              timeout: B,
               appear: !0,
               in: this.props.bFullscreen,
-              classNames: C,
+              classNames: S,
             },
             a.createElement(
               "div",
               { className: h, style: m },
-              a.createElement(b, {
+              a.createElement(R, {
                 ref: this.m_refBackgroundImage,
                 bLowPerfMode: this.props.bLowPerfMode,
                 appid: this.props.appid,
@@ -543,14 +544,14 @@
                 onError: this.OnHeaderError,
                 onLoad: this.OnLoaded,
               }),
-              p &&
+              d &&
                 a.createElement(
-                  R,
+                  y,
                   {
                     key: e[0],
                     strLogoImageURL: e[0],
                     editMode: t,
-                    logoPosition: o || B,
+                    logoPosition: o || v,
                     fnOnPositionChanged: t && r,
                     fullscreen: this.props.bFullscreen,
                   },
@@ -572,13 +573,13 @@
           );
         }
       };
-      (0, s.gn)([p.ak], k.prototype, "OnHeaderError", null),
-        (0, s.gn)([p.ak], k.prototype, "OnIncrementalLogoError", null),
-        (0, s.gn)([p.ak], k.prototype, "OnLogoError", null),
-        (0, s.gn)([p.ak], k.prototype, "OnLogoLoad", null),
-        (0, s.gn)([p.ak], k.prototype, "OnLoaded", null),
-        (k = (0, s.gn)([l.Pi], k));
-      class b extends a.Component {
+      (0, s.gn)([d.ak], b.prototype, "OnHeaderError", null),
+        (0, s.gn)([d.ak], b.prototype, "OnIncrementalLogoError", null),
+        (0, s.gn)([d.ak], b.prototype, "OnLogoError", null),
+        (0, s.gn)([d.ak], b.prototype, "OnLogoLoad", null),
+        (0, s.gn)([d.ak], b.prototype, "OnLoaded", null),
+        (b = (0, s.gn)([l.Pi], b));
+      class R extends a.Component {
         constructor(e) {
           super(e),
             (this.m_refBackgroundImage = a.createRef()),
@@ -682,10 +683,10 @@
                   blurAmount: 3,
                 }),
             )),
-            a.createElement(v.Consumer, null, (t) =>
+            a.createElement(I.Consumer, null, (t) =>
               a.createElement(
-                d.Z,
-                { timeout: S, appear: !0, in: t.bFullscreen, classNames: C },
+                p.Z,
+                { timeout: B, appear: !0, in: t.bFullscreen, classNames: S },
                 a.createElement(
                   "div",
                   {
@@ -731,7 +732,7 @@
           );
         }
       }
-      function R(e) {
+      function y(e) {
         const {
             logoPosition: t,
             strLogoImageURL: o,
@@ -742,13 +743,13 @@
           {
             nBottomPct: n,
             nTopPct: l,
-            nLeftPct: p,
+            nLeftPct: d,
             nRightPct: c,
-          } = y(t.pinnedPosition, t.nWidthPct, t.nHeightPct),
+          } = T(t.pinnedPosition, t.nWidthPct, t.nHeightPct),
           h =
-            (a.useContext(v),
+            (a.useContext(I),
             {
-              left: `${p}%`,
+              left: `${d}%`,
               top: `${l}%`,
               width: `${t.nWidthPct}%`,
               height: `${t.nHeightPct}%`,
@@ -765,8 +766,8 @@
                 "div",
                 { className: m, style: h },
                 a.createElement(
-                  d.Z,
-                  { timeout: S, appear: !0, in: r, classNames: C },
+                  p.Z,
+                  { timeout: B, appear: !0, in: r, classNames: S },
                   a.createElement(
                     "div",
                     { className: P().TitleImageContainer },
@@ -776,7 +777,7 @@
               ),
             e.editMode &&
               a.createElement(
-                O,
+                x,
                 {
                   id: o,
                   pinType: t.pinnedPosition,
@@ -790,7 +791,7 @@
           ),
         );
       }
-      function y(e, t, o) {
+      function T(e, t, o) {
         let s, a, i, r;
         switch (e) {
           case "BottomLeft":
@@ -813,10 +814,10 @@
         }
         return { nBottomPct: s, nTopPct: a, nLeftPct: i, nRightPct: r };
       }
-      var T;
-      (0, s.gn)([p.ak], b.prototype, "OnIncrementalError", null),
-        (0, s.gn)([p.ak], b.prototype, "OnHeaderLoad", null),
-        (0, s.gn)([p.ak], b.prototype, "OnBlurImageFailed", null),
+      var O;
+      (0, s.gn)([d.ak], R.prototype, "OnIncrementalError", null),
+        (0, s.gn)([d.ak], R.prototype, "OnHeaderLoad", null),
+        (0, s.gn)([d.ak], R.prototype, "OnBlurImageFailed", null),
         (function (e) {
           (e.topleft = "Topleft"),
             (e.top = "Top"),
@@ -827,8 +828,8 @@
             (e.bottomleft = "BottomLeft"),
             (e.bottom = "Bottom"),
             (e.bottomright = "BottomRight");
-        })(T || (T = {}));
-      class O extends a.Component {
+        })(O || (O = {}));
+      class x extends a.Component {
         constructor(e) {
           super(e),
             (this.m_fnMouseUp = null),
@@ -852,14 +853,14 @@
             nBottomPct: r,
             nTopPct: n,
             nLeftPct: l,
-            nRightPct: d,
-          } = y(o, s, a);
+            nRightPct: p,
+          } = T(o, s, a);
           return {
             id: i,
             curBottomPosPct: r,
             curTopPosPct: n,
             curLeftPosPct: l,
-            curRightPosPct: d,
+            curRightPosPct: p,
             curWidthPct: s,
             curHeightPct: a,
             EdgeDown: null,
@@ -908,7 +909,7 @@
             nTopPct: t,
             nLeftPct: o,
             nRightPct: s,
-          } = y(
+          } = T(
             this.m_pinType,
             this.state.curWidthPct,
             this.state.curHeightPct,
@@ -923,27 +924,27 @@
         OnMouseMove(e, t) {
           if (void 0 !== this.state.EdgeDown) {
             switch ((e.shiftKey && this.m_fnMouseUp(), t)) {
-              case T.left:
+              case O.left:
                 this.setState({ curLeftPosPct: this.CalcLeftEdge(e.clientX) }),
                   this.CheckLeftEdge();
                 break;
-              case T.right:
+              case O.right:
                 this.setState({
                   curRightPosPct: this.CalcRightEdge(e.clientX),
                 }),
                   this.CheckRightEdge();
                 break;
-              case T.top:
+              case O.top:
                 this.setState({ curTopPosPct: this.CalcTopEdge(e.clientY) }),
                   this.CheckTopEdge();
                 break;
-              case T.bottom:
+              case O.bottom:
                 this.setState({
                   curBottomPosPct: this.CalcBottomEdge(e.clientY),
                 }),
                   this.CheckBottomEdge();
                 break;
-              case T.topleft:
+              case O.topleft:
                 this.setState({ curTopPosPct: this.CalcTopEdge(e.clientY) }),
                   this.setState({
                     curLeftPosPct: this.CalcLeftEdge(e.clientX),
@@ -951,7 +952,7 @@
                   this.CheckTopEdge(),
                   this.CheckLeftEdge();
                 break;
-              case T.topright:
+              case O.topright:
                 this.setState({ curTopPosPct: this.CalcTopEdge(e.clientY) }),
                   this.setState({
                     curRightPosPct: this.CalcRightEdge(e.clientX),
@@ -959,7 +960,7 @@
                   this.CheckTopEdge(),
                   this.CheckRightEdge();
                 break;
-              case T.bottomleft:
+              case O.bottomleft:
                 this.setState({
                   curBottomPosPct: this.CalcBottomEdge(e.clientY),
                 }),
@@ -969,7 +970,7 @@
                   this.CheckBottomEdge(),
                   this.CheckLeftEdge();
                 break;
-              case T.bottomright:
+              case O.bottomright:
                 this.setState({
                   curBottomPosPct: this.CalcBottomEdge(e.clientY),
                 }),
@@ -979,7 +980,7 @@
                   this.CheckBottomEdge(),
                   this.CheckRightEdge();
                 break;
-              case T.middle:
+              case O.middle:
                 this.setState({
                   curRightPosPct: this.CalcRightEdge(e.clientX),
                   curBottomPosPct: this.CalcBottomEdge(e.clientY),
@@ -1156,27 +1157,27 @@
               a.createElement("div", {
                 className: `${P().BoxSizerEdge} ${P().TopLeft}`,
                 onMouseDown: (e) => {
-                  this.OnMouseDown(e, T.topleft);
+                  this.OnMouseDown(e, O.topleft);
                 },
                 draggable: !1,
               }),
               a.createElement("div", {
                 className: `${P().BoxSizerEdge} ${P().Top}`,
                 onMouseDown: (e) => {
-                  this.OnMouseDown(e, T.top);
+                  this.OnMouseDown(e, O.top);
                 },
               }),
               a.createElement("div", {
                 className: `${P().BoxSizerEdge} ${P().TopRight}`,
                 onMouseDown: (e) => {
-                  this.OnMouseDown(e, T.topright);
+                  this.OnMouseDown(e, O.topright);
                 },
                 draggable: !1,
               }),
               a.createElement("div", {
                 className: `${P().BoxSizerEdge} ${P().Left}`,
                 onMouseDown: (e) => {
-                  this.OnMouseDown(e, T.left);
+                  this.OnMouseDown(e, O.left);
                 },
                 draggable: !1,
               }),
@@ -1185,7 +1186,7 @@
                 {
                   className: `${P().BoxSizerEdge} ${P().Middle}`,
                   onMouseDown: (e) => {
-                    this.OnMouseDown(e, T.middle);
+                    this.OnMouseDown(e, O.middle);
                   },
                   draggable: !1,
                 },
@@ -1198,28 +1199,28 @@
               a.createElement("div", {
                 className: `${P().BoxSizerEdge} ${P().Right}`,
                 onMouseDown: (e) => {
-                  this.OnMouseDown(e, T.right);
+                  this.OnMouseDown(e, O.right);
                 },
                 draggable: !1,
               }),
               a.createElement("div", {
                 className: `${P().BoxSizerEdge} ${P().BottomLeft}`,
                 onMouseDown: (e) => {
-                  this.OnMouseDown(e, T.bottomleft);
+                  this.OnMouseDown(e, O.bottomleft);
                 },
                 draggable: !1,
               }),
               a.createElement("div", {
                 className: `${P().BoxSizerEdge} ${P().Bottom}`,
                 onMouseDown: (e) => {
-                  this.OnMouseDown(e, T.bottom);
+                  this.OnMouseDown(e, O.bottom);
                 },
                 draggable: !1,
               }),
               a.createElement("div", {
                 className: `${P().BoxSizerEdge} ${P().BottomRight}`,
                 onMouseDown: (e) => {
-                  this.OnMouseDown(e, T.bottomright);
+                  this.OnMouseDown(e, O.bottomright);
                 },
                 draggable: !1,
               }),
@@ -1227,99 +1228,98 @@
           );
         }
       }
-      (0, s.gn)([p.ak], O.prototype, "LinkRegionBoxRef", null),
-        (0, s.gn)([p.ak], O.prototype, "OnMouseDown", null),
-        (0, s.gn)([p.ak], O.prototype, "UpdateBoxPosition", null),
-        (0, s.gn)([p.ak], O.prototype, "OnMouseMove", null),
-        (0, s.gn)([p.ak], O.prototype, "CheckBottomEdge", null),
-        (0, s.gn)([p.ak], O.prototype, "CheckRightEdge", null),
-        (0, s.gn)([p.ak], O.prototype, "CheckTopEdge", null),
-        (0, s.gn)([p.ak], O.prototype, "CheckLeftEdge", null),
-        (0, s.gn)([p.ak], O.prototype, "CalcLeftEdge", null),
-        (0, s.gn)([p.ak], O.prototype, "CalcRightEdge", null),
-        (0, s.gn)([p.ak], O.prototype, "CalcTopEdge", null),
-        (0, s.gn)([p.ak], O.prototype, "CalcBottomEdge", null),
-        (0, s.gn)([p.ak], O.prototype, "OnMouseUp", null),
-        (0, s.gn)([p.ak], O.prototype, "OnResizeComplete", null);
-      const x = (e) => {
+      (0, s.gn)([d.ak], x.prototype, "LinkRegionBoxRef", null),
+        (0, s.gn)([d.ak], x.prototype, "OnMouseDown", null),
+        (0, s.gn)([d.ak], x.prototype, "UpdateBoxPosition", null),
+        (0, s.gn)([d.ak], x.prototype, "OnMouseMove", null),
+        (0, s.gn)([d.ak], x.prototype, "CheckBottomEdge", null),
+        (0, s.gn)([d.ak], x.prototype, "CheckRightEdge", null),
+        (0, s.gn)([d.ak], x.prototype, "CheckTopEdge", null),
+        (0, s.gn)([d.ak], x.prototype, "CheckLeftEdge", null),
+        (0, s.gn)([d.ak], x.prototype, "CalcLeftEdge", null),
+        (0, s.gn)([d.ak], x.prototype, "CalcRightEdge", null),
+        (0, s.gn)([d.ak], x.prototype, "CalcTopEdge", null),
+        (0, s.gn)([d.ak], x.prototype, "CalcBottomEdge", null),
+        (0, s.gn)([d.ak], x.prototype, "OnMouseUp", null),
+        (0, s.gn)([d.ak], x.prototype, "OnResizeComplete", null);
+      const w = (e) => {
         const { title: t, className: o } = e;
         let s = 26;
-        return (
-          t.length > 8 && (s = Math.max(s - (t.length - 5) / 2, 5.8)),
+        t.length > 8 && (s = Math.max(s - (t.length - 5) / 2, 5.8));
+        const [i, r] = (0, C.y)();
+        return a.createElement(
+          "svg",
+          { className: (0, g.Z)(P().SVGTitle, o), viewBox: "0 0 300 14" },
           a.createElement(
-            "svg",
-            { className: (0, g.Z)(P().SVGTitle, o), viewBox: "0 0 300 14" },
+            "defs",
+            null,
             a.createElement(
-              "defs",
-              null,
-              a.createElement(
-                "linearGradient",
-                {
-                  id: "gradient",
-                  x1: "0",
-                  x2: "0",
-                  y1: "0",
-                  y2: "100%",
-                  gradientUnits: "userSpaceOnUse",
-                },
-                a.createElement("stop", { stopColor: "#fff", offset: "0%" }),
-                a.createElement("stop", { stopColor: "#fff", offset: "20%" }),
-                a.createElement("stop", { stopColor: "#fff", offset: "40%" }),
-                a.createElement("stop", { stopColor: "#eee", offset: "60%" }),
-                a.createElement("stop", { stopColor: "#ddd", offset: "80%" }),
-                a.createElement("stop", { stopColor: "#ccc", offset: "100%" }),
-              ),
-            ),
-            a.createElement(
-              "text",
+              "linearGradient",
               {
-                x: "-1",
-                y: 14,
-                fontSize: s,
-                textAnchor: "bottom",
-                fontWeight: "200",
-                fill: "url(#gradient)",
+                id: i,
+                x1: "0",
+                x2: "0",
+                y1: "0",
+                y2: "100%",
+                gradientUnits: "userSpaceOnUse",
               },
-              t,
+              a.createElement("stop", { stopColor: "#fff", offset: "0%" }),
+              a.createElement("stop", { stopColor: "#fff", offset: "20%" }),
+              a.createElement("stop", { stopColor: "#fff", offset: "40%" }),
+              a.createElement("stop", { stopColor: "#eee", offset: "60%" }),
+              a.createElement("stop", { stopColor: "#ddd", offset: "80%" }),
+              a.createElement("stop", { stopColor: "#ccc", offset: "100%" }),
             ),
-          )
+          ),
+          a.createElement(
+            "text",
+            {
+              x: "-1",
+              y: 14,
+              fontSize: s,
+              textAnchor: "bottom",
+              fontWeight: "200",
+              fill: r,
+            },
+            t,
+          ),
         );
       };
-      function w(e) {
+      function N(e) {
         const { title: t, children: o } = e,
-          s = a.useContext(v);
+          s = a.useContext(I);
         return a.createElement(
-          d.Z,
-          { timeout: S, appear: !0, in: s.bFullscreen, classNames: C },
+          p.Z,
+          { timeout: B, appear: !0, in: s.bFullscreen, classNames: S },
           a.createElement(
             "div",
             { className: (0, g.Z)(P().TitleSection, t ? P().NoLogo : "") },
             a.createElement(
               "div",
               { className: P().TextNameSpace },
-              !!t && a.createElement(x, { title: t }),
+              !!t && a.createElement(w, { title: t }),
             ),
             a.createElement("div", { className: P().Features }, o),
           ),
         );
       }
-      var N = o(59621);
-      class A {
+      var A = o(59621);
+      class D {
         constructor(e) {
           (this.m_logoPosition = void 0),
-            (0, N.rC)(this),
+            (0, A.rC)(this),
             (this.m_strLibraryHeroURL = e.strLibraryHeroURL),
             (this.m_strLibraryLogoURL = e.strLibraryLogoURL),
             (this.m_unAppID = e.unAppID),
             (this.m_strAppName = e.strAppName),
-            (this.m_logoPosition = e.logoPosition || B),
+            (this.m_logoPosition = e.logoPosition || v),
             (this.m_strSaveURL = e.strSaveURL || null),
             this.m_logoPosition.pinnedPosition ||
-              (this.m_logoPosition.pinnedPosition = B.pinnedPosition),
+              (this.m_logoPosition.pinnedPosition = v.pinnedPosition),
             this.m_logoPosition.nHeightPct ||
-              (this.m_logoPosition.nHeightPct = B.nHeightPct),
+              (this.m_logoPosition.nHeightPct = v.nHeightPct),
             this.m_logoPosition.nWidthPct ||
-              (this.m_logoPosition.nWidthPct = B.nWidthPct);
+              (this.m_logoPosition.nWidthPct = v.nWidthPct);
         }
         GetHeroURL() {
           return this.m_strLibraryHeroURL;
@@ -1343,44 +1343,44 @@
           return this.m_strSaveURL;
         }
       }
-      (0, s.gn)([N.LO], A.prototype, "m_logoPosition", void 0);
-      var D = o(72201),
-        M = o.n(D),
-        H = o(53738),
-        U = o.n(H),
-        G = o(701);
-      function F() {
+      (0, s.gn)([A.LO], D.prototype, "m_logoPosition", void 0);
+      var M = o(72201),
+        H = o.n(M),
+        U = o(53738),
+        G = o.n(U),
+        F = o(701);
+      function z() {
         return a.createElement(
           a.Fragment,
           null,
           a.createElement("span", { style: { fontSize: 0 } }),
           a.createElement(
             "div",
-            { className: (0, g.Z)(U().Container) },
+            { className: (0, g.Z)(G().Container) },
             a.createElement(
               "div",
-              { className: U().Row },
-              a.createElement(Y, null),
-              a.createElement(z, null),
+              { className: G().Row },
+              a.createElement(X, null),
+              a.createElement(W, null),
               a.createElement(
                 "div",
-                { className: U().RightControls },
+                { className: G().RightControls },
                 a.createElement(
                   "div",
-                  { className: U().AppButtonsContainer },
+                  { className: G().AppButtonsContainer },
                   a.createElement(
                     "div",
-                    { className: U().MenuButton },
-                    a.createElement(G.Zrf, null),
+                    { className: G().MenuButton },
+                    a.createElement(F.Zrf, null),
                   ),
                   a.createElement(
                     "div",
-                    { className: U().GameInfoButton },
+                    { className: G().GameInfoButton },
                     "Game Info",
                     a.createElement(
                       "div",
-                      { className: U().Arrow },
-                      a.createElement(G.V7n, { angle: 180 }),
+                      { className: G().Arrow },
+                      a.createElement(F.V7n, { angle: 180 }),
                     ),
                   ),
                 ),
@@ -1389,110 +1389,110 @@
           ),
         );
       }
-      function z() {
-        return a.createElement(
-          "div",
-          { className: (0, g.Z)(U().StatusAndStats) },
-          a.createElement(W, null),
-        );
-      }
       function W() {
         return a.createElement(
           "div",
-          { className: U().GameStatsSection },
+          { className: (0, g.Z)(G().StatusAndStats) },
+          a.createElement(Z, null),
+        );
+      }
+      function Z() {
+        return a.createElement(
+          "div",
+          { className: G().GameStatsSection },
           a.createElement(
             "div",
-            { className: U().LastPlayed },
+            { className: G().LastPlayed },
             a.createElement(
               "div",
-              { className: U().LastPlayedRight },
+              { className: G().LastPlayedRight },
               a.createElement(
                 "div",
-                { className: U().LastPlayedLabel },
+                { className: G().LastPlayedLabel },
                 "LAST PLAYED",
               ),
               a.createElement(
                 "div",
-                { className: U().LastPlayedInfo },
+                { className: G().LastPlayedInfo },
                 "Mar 24",
               ),
             ),
           ),
           a.createElement(
             "div",
-            { className: U().Playtime },
-            a.createElement("div", { className: U().PlaytimeLeft }),
+            { className: G().Playtime },
+            a.createElement("div", { className: G().PlaytimeLeft }),
             a.createElement(
               "div",
-              { className: U().PlaytimeRight },
+              { className: G().PlaytimeRight },
               a.createElement(
                 "div",
-                { className: U().PlaytimeLabel },
+                { className: G().PlaytimeLabel },
                 "PLAY TIME",
               ),
               a.createElement(
                 "div",
-                { className: U().PlaytimeInfo },
+                { className: G().PlaytimeInfo },
                 "37 hours",
               ),
             ),
           ),
           a.createElement(
             "div",
-            { className: U().MiniAchievements },
-            a.createElement("div", { className: U().AchievementLeft }),
+            { className: G().MiniAchievements },
+            a.createElement("div", { className: G().AchievementLeft }),
             a.createElement(
               "div",
-              { className: U().AchievementRight },
+              { className: G().AchievementRight },
               a.createElement(
                 "div",
-                { className: U().AchievementLabel },
+                { className: G().AchievementLabel },
                 "ACHIEVEMENTS",
               ),
               a.createElement(
                 "div",
-                { className: U().AchievementProgressRow },
+                { className: G().AchievementProgressRow },
                 a.createElement(
                   "div",
-                  { className: U().AchievementCountLabel },
+                  { className: G().AchievementCountLabel },
                   "30/47",
                 ),
-                a.createElement(Z, { progressPct: 3e3 / 47 }),
+                a.createElement(Y, { progressPct: 3e3 / 47 }),
               ),
             ),
           ),
         );
       }
-      class Z extends a.Component {
+      class Y extends a.Component {
         render() {
           return a.createElement(
             "div",
-            { className: U().DetailsProgressContainer },
+            { className: G().DetailsProgressContainer },
             a.createElement("div", {
-              className: U().DetailsProgressBar,
+              className: G().DetailsProgressBar,
               style: { width: this.props.progressPct + "%" },
             }),
           );
         }
       }
-      function Y() {
+      function X() {
         return a.createElement(
           "div",
-          { className: U().ActionSection },
+          { className: G().ActionSection },
           a.createElement(
             "div",
-            { className: U().PlayButtonContainer },
+            { className: G().PlayButtonContainer },
             a.createElement(
               "div",
-              { className: (0, g.Z)(U().PlayButton, U().Green) },
-              a.createElement("div", { className: U().ButtonText }, "PLAY"),
+              { className: (0, g.Z)(G().PlayButton, G().Green) },
+              a.createElement("div", { className: G().ButtonText }, "PLAY"),
             ),
           ),
         );
       }
-      var X = o(64122),
-        $ = o.n(X);
-      class V extends a.Component {
+      var $ = o(64122),
+        V = o.n($);
+      class J extends a.Component {
         OnHighlightRef(e) {
           e && e.scrollIntoView({ block: "center" });
         }
@@ -1503,7 +1503,7 @@
             -1 === t.indexOf(e) && (t.push(e), t.sort()),
             a.createElement(
               "div",
-              { className: $().GameList },
+              { className: V().GameList },
               t.map((t) => {
                 let o = e === t;
                 return a.createElement(
@@ -1511,8 +1511,8 @@
                   {
                     key: t,
                     className: (0, g.Z)(
-                      $().GameListEntry,
-                      o ? $().Selected : $().Uninstalled,
+                      V().GameListEntry,
+                      o ? V().Selected : V().Uninstalled,
                     ),
                     ref: o && this.OnHighlightRef,
                   },
@@ -1523,16 +1523,16 @@
           );
         }
       }
-      var J = o(14826),
-        j = o(32765),
-        K = o(69338),
-        Q = o(22444);
-      function q(e, t) {
-        const o = (0, j.kQ)("editorconfig", t);
-        let s = new A(o);
-        i.render(a.createElement(e ? ee : te, { LogoEditorStore: s }), t);
+      var j = o(14826),
+        K = o(32765),
+        Q = o(69338),
+        q = o(22444);
+      function ee(e, t) {
+        const o = (0, K.kQ)("editorconfig", t);
+        let s = new D(o);
+        i.render(a.createElement(e ? te : oe, { LogoEditorStore: s }), t);
       }
-      class ee extends a.Component {
+      class te extends a.Component {
         constructor(e) {
           super(e),
             (this.state = { saving: !1, saved: !1, unsavedChanges: !1 });
@@ -1560,7 +1560,7 @@
                   try {
                     let o = new FormData();
                     o.append("json", "1"),
-                      o.append("sessionid", j.De.SESSIONID),
+                      o.append("sessionid", K.De.SESSIONID),
                       o.append(
                         "app[assets][library_logo][logo_position][pinned_position]",
                         t.pinnedPosition,
@@ -1589,7 +1589,7 @@
                     window.opener.postMessage(
                       Object.assign(
                         { appid: e.GetAppID() },
-                        (0, N.ZN)(e.GetLogoPosition()),
+                        (0, A.ZN)(e.GetLogoPosition()),
                       ),
                       "*",
                     ),
@@ -1614,50 +1614,50 @@
               "div",
               {
                 className: (0, g.Z)(
-                  M().LogoEditorPopup,
-                  this.state.saving && M().Saving,
+                  H().LogoEditorPopup,
+                  this.state.saving && H().Saving,
                 ),
               },
               a.createElement(
                 "div",
-                { className: M().LogoEditorSaveActions },
+                { className: H().LogoEditorSaveActions },
                 a.createElement(
                   "div",
                   {
                     className: (0, g.Z)(
-                      M().LogoEditorSavedMessage,
-                      this.state.saved && M().Saved,
+                      H().LogoEditorSavedMessage,
+                      this.state.saved && H().Saved,
                     ),
                   },
-                  (0, J.Xx)("#StoreAdmin_LibraryPlacementTool_ChangesSaved"),
+                  (0, j.Xx)("#StoreAdmin_LibraryPlacementTool_ChangesSaved"),
                 ),
                 a.createElement(
                   "div",
-                  { className: M().LogoEditorButtons },
+                  { className: H().LogoEditorButtons },
                   a.createElement(
-                    Q.KM,
-                    { onClick: this.OnOK, className: M().LogoEditorButton },
-                    (0, J.Xx)("#Button_Save"),
+                    q.KM,
+                    { onClick: this.OnOK, className: H().LogoEditorButton },
+                    (0, j.Xx)("#Button_Save"),
                   ),
                   a.createElement(
-                    Q.zx,
-                    { onClick: this.OnCancel, className: M().LogoEditorButton },
+                    q.zx,
+                    { onClick: this.OnCancel, className: H().LogoEditorButton },
                     this.state.unsavedChanges
-                      ? (0, J.Xx)("#Button_Cancel")
-                      : (0, J.Xx)("#Button_Close"),
+                      ? (0, j.Xx)("#Button_Cancel")
+                      : (0, j.Xx)("#Button_Close"),
                   ),
                 ),
               ),
               a.createElement(
                 "div",
-                { className: M().SavingThrobberContainer },
-                a.createElement(K.V, {
+                { className: H().SavingThrobberContainer },
+                a.createElement(Q.V, {
                   size: "xlarge",
-                  className: M().SavingThrobber,
+                  className: H().SavingThrobber,
                 }),
               ),
               a.createElement(
-                te,
+                oe,
                 Object.assign({}, this.props, {
                   fnOnPositionChanged: this.OnPositionChanged,
                 }),
@@ -1666,11 +1666,11 @@
           );
         }
       }
-      (0, s.gn)([p.ak], ee.prototype, "OnBeforeUnload", null),
-        (0, s.gn)([p.ak], ee.prototype, "OnOK", null),
-        (0, s.gn)([p.ak], ee.prototype, "OnCancel", null),
-        (0, s.gn)([p.ak], ee.prototype, "OnPositionChanged", null);
-      class te extends a.Component {
+      (0, s.gn)([d.ak], te.prototype, "OnBeforeUnload", null),
+        (0, s.gn)([d.ak], te.prototype, "OnOK", null),
+        (0, s.gn)([d.ak], te.prototype, "OnCancel", null),
+        (0, s.gn)([d.ak], te.prototype, "OnPositionChanged", null);
+      class oe extends a.Component {
         constructor(e) {
           super(e), (this.state = { bEditModeEnabled: !0 });
         }
@@ -1683,40 +1683,40 @@
           let t = !!e.GetLogoURL();
           return a.createElement(
             "div",
-            { className: M().LogoEditorContainer },
+            { className: H().LogoEditorContainer },
             a.createElement(
               "div",
-              { className: M().LogoEditorGameListContainer },
-              a.createElement(V, { highlightedName: e.GetAppName() }),
+              { className: H().LogoEditorGameListContainer },
+              a.createElement(J, { highlightedName: e.GetAppName() }),
             ),
-            a.createElement("div", { className: M().ListDivider }),
+            a.createElement("div", { className: H().ListDivider }),
             a.createElement(
               "div",
-              { className: M().LogoEditorDetailsContainer },
-              a.createElement(oe, { LogoEditorStore: e }),
+              { className: H().LogoEditorDetailsContainer },
+              a.createElement(se, { LogoEditorStore: e }),
               a.createElement(
                 "div",
-                { className: M().LogoEditorHeaderContainer },
+                { className: H().LogoEditorHeaderContainer },
                 a.createElement(
-                  I,
+                  k,
                   {
                     editMode: t && this.state.bEditModeEnabled,
                     hasHeroImage: !0,
                     rgHeaderImages: [e.GetHeroURL()],
                     rgLogoImages: t ? [e.GetLogoURL()] : [],
-                    classNameNoLogo: M().NoLogoImage,
+                    classNameNoLogo: H().NoLogoImage,
                     fnOnPositionChanged: this.OnPositionChanged,
                     logoPosition: e.GetLogoPosition(),
                   },
-                  a.createElement(w, {
+                  a.createElement(N, {
                     title: e.GetLogoURL() ? "" : e.GetAppName(),
                   }),
                 ),
               ),
-              a.createElement(F, null),
+              a.createElement(z, null),
               a.createElement(
                 "div",
-                { className: M().DetailsArea },
+                { className: H().DetailsArea },
                 a.createElement("br", null),
                 a.createElement("br", null),
                 a.createElement("br", null),
@@ -1727,8 +1727,8 @@
           );
         }
       }
-      (0, s.gn)([p.ak], te.prototype, "OnPositionChanged", null);
-      const oe = (0, l.Pi)((e) => {
+      (0, s.gn)([d.ak], oe.prototype, "OnPositionChanged", null);
+      const se = (0, l.Pi)((e) => {
         const t = e.LogoEditorStore.GetLogoPosition();
         return a.createElement(
           a.Fragment,

@@ -1028,27 +1028,30 @@
         G = n(23217);
       class L {
         constructor(e) {
-          (this.m_stats = Object.assign(
-            {
-              event_gid: "0",
-              library_overview_shown: 0,
-              library_overview_read: 0,
-              app_details_spotlight_shown: 0,
-              app_details_spotlight_read: 0,
-              app_details_activity_shown: 0,
-              app_details_activity_read: 0,
-              store_app_page_shown: 0,
-              store_app_page_read: 0,
-              store_front_page_shown: 0,
-              store_front_page_read: 0,
-              community_hub_shown: 0,
-              community_hub_read: 0,
-              news_hub_shown: 0,
-              news_hub_read: 0,
-              event_scroller_read: 0,
-            },
-            e,
-          )),
+          (this.m_stats = void 0),
+            (this.m_lastUpdateTime = void 0),
+            (0, N.rC)(this),
+            (this.m_stats = Object.assign(
+              {
+                event_gid: "0",
+                library_overview_shown: 0,
+                library_overview_read: 0,
+                app_details_spotlight_shown: 0,
+                app_details_spotlight_read: 0,
+                app_details_activity_shown: 0,
+                app_details_activity_read: 0,
+                store_app_page_shown: 0,
+                store_app_page_read: 0,
+                store_front_page_shown: 0,
+                store_front_page_read: 0,
+                community_hub_shown: 0,
+                community_hub_read: 0,
+                news_hub_shown: 0,
+                news_hub_read: 0,
+                event_scroller_read: 0,
+              },
+              e,
+            )),
             (this.m_stats.total_showm =
               this.m_stats.library_overview_shown +
               this.m_stats.app_details_activity_shown +
@@ -1066,8 +1069,7 @@
               this.m_stats.community_hub_read +
               this.m_stats.news_hub_read +
               this.m_stats.event_scroller_read),
-            (this.m_lastUpdateTime = e ? Math.floor(Date.now() / 1e3) : 0),
-            (0, N.rC)(this);
+            (this.m_lastUpdateTime = e ? Math.floor(Date.now() / 1e3) : 0);
         }
         reset(e) {
           (this.m_stats.library_overview_shown = e.library_overview_shown),
@@ -1629,20 +1631,20 @@
         ce = n(5877);
       const de = r.lazy(() =>
           Promise.all([
-            n.e(6499),
-            n.e(3388),
-            n.e(4141),
-            n.e(3184),
-            n.e(9851),
+            n.e(6436),
+            n.e(7720),
+            n.e(915),
+            n.e(7213),
+            n.e(6017),
             n.e(2706),
-            n.e(7616),
-            n.e(6364),
-            n.e(4134),
-            n.e(7440),
-            n.e(1614),
-            n.e(9057),
-            n.e(4193),
-            n.e(72),
+            n.e(6439),
+            n.e(7731),
+            n.e(4072),
+            n.e(4498),
+            n.e(8481),
+            n.e(347),
+            n.e(2970),
+            n.e(5786),
             n.e(1979),
             n.e(4601),
           ]).then(n.bind(n, 61909)),
@@ -6732,9 +6734,11 @@
         constructor(e) {
           super(e),
             (this.m_ref = r.createRef()),
+            (this.rtSectionStart = void 0),
+            (this.rtSectionEnd = void 0),
+            (0, N.rC)(this),
             (this.rtSectionStart = e.rtSectionStart),
-            (this.rtSectionEnd = e.rtSectionEnd),
-            (0, N.rC)(this);
+            (this.rtSectionEnd = e.rtSectionEnd);
         }
         componentDidMount() {
           this.UpdatePositioning();

@@ -3318,7 +3318,7 @@
             return p.createElement(
               "div",
               { className: ve.ModeratorAuditActionCtn },
-              t.ToModString,
+              t.ToModString(),
             );
         }
       }

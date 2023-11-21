@@ -1061,3 +1061,9 @@ button.Primary.partnereventshared_AddSectionButton_15e-D {
 .nominationandvote_SteamAwardConflictModal_1Ujn_ {
   min-width: 600px;
 }
+.nominationandvote_NominationSwitchCtn_3IrPA {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 16px;
+}

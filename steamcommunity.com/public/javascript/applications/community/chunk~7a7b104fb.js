@@ -3683,7 +3683,8 @@
             (this.m_regexBannedWords = null),
             (this.m_regexCleanWords = null),
             (this.m_bShownFilterTip = !1),
-            (this.m_nLoadLanguagesRetryTimeout = void 0);
+            (this.m_nLoadLanguagesRetryTimeout = void 0),
+            (0, i.rC)(this);
           {
             let e = new v.n8();
             this.m_TextFilterPreferences = {
@@ -3691,9 +3692,7 @@
               bIgnoreFriends: e.text_filter_ignore_friends(),
             };
           }
-          (this.m_TextFilterWords = new v.No()),
-            (this.m_DataAccess = e),
-            (0, i.rC)(this);
+          (this.m_TextFilterWords = new v.No()), (this.m_DataAccess = e);
         }
         Init(e = 0, t = null, s = null) {
           return (0, a.mG)(this, void 0, void 0, function* () {
