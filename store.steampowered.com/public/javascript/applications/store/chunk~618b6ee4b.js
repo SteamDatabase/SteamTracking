@@ -20077,15 +20077,12 @@
                             ? void 0
                             : r[0],
                         ),
-                        E = (0, n.useCallback)(
-                          (t) => {
-                            o.cb.Get().RecordEventRead(e, 8),
-                              (0, f.h)(e, h.RA(t)),
-                              t.stopPropagation(),
-                              t.preventDefault();
-                          },
-                          [e],
-                        );
+                        E = (t) => {
+                          o.cb.Get().RecordEventRead(e, 8),
+                            (0, f.h)(e, h.RA(t)),
+                            t.stopPropagation(),
+                            t.preventDefault();
+                        };
                       if (1 == m && !_ && y) {
                         const t = u
                             ? e.jsondata.localized_store_app_spotlight_mobile
