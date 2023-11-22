@@ -317,9 +317,10 @@
       "use strict";
       a.r(t),
         a.d(t, {
-          ConfirmOverwriteVoteOrNominationDialog: () => M,
+          ConfirmOverwriteVoteOrNominationDialog: () => O,
           EventDisplaySteamAwardNomination: () => b,
-          EventDisplaySteamAwardVote: () => O,
+          EventDisplaySteamAwardVote: () => M,
+          UserEligibleToNominateOrVote: () => V,
           WinterSaleSteamAwardVoteWrapper: () => F,
           default: () => R,
         });
@@ -574,7 +575,7 @@
                   );
                 u && u != d
                   ? (0, N.AM)(
-                      l.createElement(M, {
+                      l.createElement(O, {
                         strLocTokenInfix: "Nomination",
                         newAppID: d,
                         curNominatedAppID: u,
@@ -678,7 +679,7 @@
             )
           : null;
       }
-      function M(e) {
+      function O(e) {
         const {
             curNominatedAppID: t,
             newAppID: a,
@@ -730,7 +731,7 @@
               ),
         );
       }
-      let O = class extends l.Component {
+      let M = class extends l.Component {
         constructor(e) {
           super(e),
             (this.state = { eCategoryLoaded: null, votedForAppID: null }),
@@ -813,7 +814,7 @@
         HandleConflict(e) {
           const t = u.Z.Get().GetApp(this.props.appID);
           (0, N.AM)(
-            l.createElement(M, {
+            l.createElement(O, {
               strLocTokenInfix: "Vote",
               newAppID: null == t ? void 0 : t.GetAppID(),
               curNominatedAppID: this.state.votedForAppID,
@@ -905,10 +906,10 @@
             : null;
         }
       };
-      (0, n.gn)([r.LO], O.prototype, "m_strPreviousVotedForAppTitle", void 0),
-        (0, n.gn)([E.ak], O.prototype, "OnVoteClick", null),
-        (0, n.gn)([E.ak], O.prototype, "SaveVote", null),
-        (O = (0, n.gn)([d.Pi], O));
+      (0, n.gn)([r.LO], M.prototype, "m_strPreviousVotedForAppTitle", void 0),
+        (0, n.gn)([E.ak], M.prototype, "OnVoteClick", null),
+        (0, n.gn)([E.ak], M.prototype, "SaveVote", null),
+        (M = (0, n.gn)([d.Pi], M));
       class R extends l.Component {
         constructor(e) {
           super(e);
@@ -962,7 +963,7 @@
               e.forEach((e) => {
                 t.push(
                   l.createElement(
-                    O,
+                    M,
                     Object.assign(
                       {
                         key: e.eSteamAwardCategoryID,

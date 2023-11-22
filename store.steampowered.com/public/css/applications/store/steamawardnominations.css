@@ -525,17 +525,18 @@ body.v6.SteamAwardsNominations #footer_spacer {
   justify-content: space-between;
   align-items: center;
   backdrop-filter: blur(9px);
-  background-color: rgba(255, 255, 255, 0.45);
+  background-color: rgba(255, 255, 255, 0.13);
 }
 @media screen and (max-width: 910px) {
   .nominations_NominationPickerCtn_3I1Ga .nominations_TopRow_1ARPX {
     flex-direction: column;
+    padding: 8px;
   }
   .nominations_NominationPickerCtn_3I1Ga
     .nominations_TopRow_1ARPX
     .nominations_CloseButton_2kep5 {
     position: absolute;
-    top: -28px;
+    top: -9px;
     right: 10px;
   }
 }
@@ -549,11 +550,11 @@ body.v6.SteamAwardsNominations #footer_spacer {
   position: absolute;
   pointer-events: none;
   border-color: rgba(136, 183, 213, 0);
-  border-bottom-color: rgba(255, 255, 255, 0.45);
+  border-bottom-color: rgba(255, 255, 255, 0.13);
   border-width: 15px;
   margin-left: -15px;
 }
-@media screen and (max-width: 910px) {
+@media screen and (max-width: 850px) {
   .nominations_NominationPickerCtn_3I1Ga .nominations_TopRow_1ARPX:after {
     left: 22%;
   }
@@ -586,11 +587,15 @@ body.v6.SteamAwardsNominations #footer_spacer {
   font-size: 17px;
   margin-left: 16px;
   color: #fff;
+  background: #585560;
+  padding: 6px 12px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
 }
 .nominations_NominationPickerCtn_3I1Ga
   .nominations_TopRow_1ARPX
   .nominations_CloseButton_2kep5:hover {
   cursor: pointer;
+  background: #73707c;
   color: #fff;
 }
 .nominations_NominationPickerCtn_3I1Ga .nominations_RecommendationRow_3Xwn8 {
@@ -781,6 +786,7 @@ button.DialogButton.nominations_NominateGameButton_CEmah.nominations_Nominated_4
 }
 button.DialogButton.nominations_NominateGameButton_CEmah:hover {
   background-color: #fff;
+  color: #000;
 }
 .nominations_NoResultsCtn_2IlW9 {
   padding: 24px;
@@ -793,6 +799,16 @@ button.DialogButton.nominations_NominateGameButton_CEmah:hover {
   font-size: 15px;
   padding-top: 24px;
   padding-bottom: 20px;
+}
+html.tablet .carousel__slider-tray-wrapper {
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll;
+}
+@media screen and (max-width: 910px) {
+  .carousel__slider-tray-wrapper {
+    scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+  }
 }
 .nominations_FriendsHeaderCtn_1T9FW {
   display: flex;
@@ -862,6 +878,13 @@ button.DialogButton.nominations_NominateGameButton_CEmah:hover {
 }
 .nominations_ShareModalBody_3gj5b .DialogTextInputBase:read-only {
   color: #fff;
+}
+.nominations_ShareModalBody_3gj5b .nominations_ShareModalText_1xonF {
+  user-select: none;
+}
+.nominations_ShareModalBody_3gj5b
+  .nominations_ShareModalText_1xonF.nominations_IntroText_3_Vb7 {
+  margin-bottom: 20px;
 }
 .nominations_ShareModalBody_3gj5b .nominations_Button_2Ynf3 {
   width: fit-content;
