@@ -137,7 +137,7 @@
         X = t(11961),
         D = t(4795);
       const L = { include_basic_info: !0, include_assets: !0 };
-      function G(e) {
+      function b(e) {
         const { category: a, fnShowPicker: t } = e,
           [i, r] = n.useState("");
         if (!(0, l.WR)(a.voteid).data)
@@ -176,7 +176,7 @@
             ),
             i.trim().length > 0
               ? n.createElement(W, { strSearch: i, category: a })
-              : n.createElement(b, { category: a }),
+              : n.createElement(G, { category: a }),
             n.createElement(
               "div",
               { className: o().BottomRow },
@@ -189,7 +189,7 @@
           )
         );
       }
-      function b(e) {
+      function G(e) {
         var a, t, i, s;
         const { category: r } = e,
           m = (0, l.WR)(r.voteid),
@@ -847,7 +847,7 @@
                 }),
             ),
           ),
-          s && n.createElement(G, { fnShowPicker: m, category: a }),
+          s && n.createElement(b, { fnShowPicker: m, category: a }),
         );
       }
       function te(e) {
@@ -1275,6 +1275,7 @@
           v.uH,
           {
             closeModal: a,
+            bAlertDialog: !0,
             strCancelButtonText: (0, g.Xx)("#Steamawards_Close_Btn"),
             strTitle: (0, g.Xx)("#Steamawards_ShareLink_Title"),
           },

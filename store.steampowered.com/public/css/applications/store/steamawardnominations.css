@@ -892,7 +892,7 @@ html.tablet .carousel__slider-tray-wrapper {
 .nominations_ShareModalBody_3gj5b .nominations_UrlContainer_3CXjx {
   display: flex;
   flex-direction: column;
-  margin: 24px 0px;
+  margin-bottom: 24px;
 }
 .nominations_ShareModalBody_3gj5b
   .nominations_UrlContainer_3CXjx
@@ -903,7 +903,7 @@ html.tablet .carousel__slider-tray-wrapper {
   .nominations_UrlContainer_3CXjx
   .nominations_Url_3YxsX {
   background: rgba(0, 0, 0, 0.4);
-  padding: 8px 12px;
+  padding: 8px 8px;
   box-sizing: border-box;
 }
 .nominations_ShareModalBody_3gj5b .nominations_GenerateShareLinkBtn_23i3v {
