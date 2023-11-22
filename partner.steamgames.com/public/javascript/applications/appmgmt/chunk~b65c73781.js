@@ -5496,6 +5496,15 @@
           return this.m_mapOptInToPartners.has(e);
         }
         FindPartnerByName(e) {
+          return (0, n.mG)(this, void 0, void 0, function* () {
+            return (
+              this.m_mapPromises.has(e) ||
+                this.m_mapPromises.set(e, this.InternalFindPartnerByName(e)),
+              this.m_mapPromises.get(e)
+            );
+          });
+        }
+        InternalFindPartnerByName(e) {
           var t, a, i;
           return (0, n.mG)(this, void 0, void 0, function* () {
             const n = new Array();
@@ -5563,7 +5572,8 @@
           );
         }
         constructor() {
-          this.m_mapOptInToPartners = new Map();
+          (this.m_mapOptInToPartners = new Map()),
+            (this.m_mapPromises = new Map());
           let e = JSON.parse(
             JSON.stringify((0, o.kQ)("partner_info", "application_config")),
           );
