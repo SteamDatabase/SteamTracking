@@ -226,6 +226,10 @@
         LoginButton: "partnersaledisplay_LoginButton_1wBKC",
         SaleOverlayCtn: "partnersaledisplay_SaleOverlayCtn_2xKaE",
         SaleOverlay: "partnersaledisplay_SaleOverlay_3Ae58",
+        CarouselCapsuleBordered:
+          "partnersaledisplay_CarouselCapsuleBordered_320kq",
+        CarouselCapsuleAnimated:
+          "partnersaledisplay_CarouselCapsuleAnimated_3NNM0",
         AppSummaryWidgetCtn: "partnersaledisplay_AppSummaryWidgetCtn_1q54W",
         SaleBroadcastCtn: "partnersaledisplay_SaleBroadcastCtn_kBxKM",
         PresenterDisclaimer: "partnersaledisplay_PresenterDisclaimer_2DKML",

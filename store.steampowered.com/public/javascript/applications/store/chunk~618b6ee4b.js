@@ -20195,47 +20195,46 @@
                         });
                       }
                       {
-                        const a = d.single_item_style
-                          ? d.single_item_style
-                          : r.xb;
-                        let i;
-                        return (
-                          "overrideNavigation" in e &&
-                            (i = (t) => (
-                              e.overrideNavigation(t),
-                              t && (t.preventDefault(), t.stopPropagation()),
-                              !1
-                            )),
-                          n.createElement(
-                            "div",
-                            {
-                              key: v,
-                              className: (0, g.Z)({
-                                [E().AppSummaryWidgetCtn]: "bordered" == a,
-                                [p.O + c]: 0 === c,
-                              }),
-                            },
-                            n.createElement(G.T, {
-                              id: e.id,
-                              type: e.type,
-                              displayStyle: a,
-                              bShowPurchaseOptionsButton:
-                                d.show_purchase_options,
-                              bUseSubscriptionLayout: h,
-                              bShowDemoButton:
-                                d.show_as_demos ||
-                                (null === (s = t.activeTab) || void 0 === s
-                                  ? void 0
-                                  : s.BFilterRequiresFeatureDemo()),
-                              bHidePrice: d.hide_prices,
-                              bShowDeckCompatibilityDialog:
-                                d.show_deck_compability_details ||
-                                (null === (o = t.activeTab) || void 0 === o
-                                  ? void 0
-                                  : o.BFilterRequiresSteamDeckVerifiedOrPlayable()),
-                              fnOnClickOverride: i,
-                            }),
-                          )
+                        let a,
+                          i = d.single_item_style ? d.single_item_style : r.xb;
+                        "overrideNavigation" in e &&
+                          (a = (t) => (
+                            e.overrideNavigation(t),
+                            t && (t.preventDefault(), t.stopPropagation()),
+                            !1
+                          )),
+                          !(0, B.p)() ||
+                            ("library" != i && "animated" != i) ||
+                            (i = "bordered");
+                        let l = t.section.show_as_carousel,
+                          u = (0, g.Z)({
+                            [E().AppSummaryWidgetCtn]: !l && "bordered" == i,
+                            [E().CarouselCapsuleBordered]: l && "bordered" == i,
+                            [E().CarouselCapsuleAnimated]: l && "animated" == i,
+                            [p.O + c]: 0 === c,
+                          });
+                        return n.createElement(
+                          "div",
+                          { key: v, className: u },
+                          n.createElement(G.T, {
+                            id: e.id,
+                            type: e.type,
+                            displayStyle: i,
+                            bShowPurchaseOptionsButton: d.show_purchase_options,
+                            bUseSubscriptionLayout: h,
+                            bShowDemoButton:
+                              d.show_as_demos ||
+                              (null === (s = t.activeTab) || void 0 === s
+                                ? void 0
+                                : s.BFilterRequiresFeatureDemo()),
+                            bHidePrice: d.hide_prices,
+                            bShowDeckCompatibilityDialog:
+                              d.show_deck_compability_details ||
+                              (null === (o = t.activeTab) || void 0 === o
+                                ? void 0
+                                : o.BFilterRequiresSteamDeckVerifiedOrPlayable()),
+                            fnOnClickOverride: a,
+                          }),
                         );
                       }
                     })(e, t),

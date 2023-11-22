@@ -848,25 +848,21 @@ html.touch .gamehover_WishlistButton_1l89v .gamehover_WishlistButtonText_-ne-j,
 }
 .salepreviewwidgets_StoreSaleWidgetContainer_UlvFk.salepreviewwidgets_SaleItemDefaultCapsuleDisplay_34o91 {
   display: grid;
-  grid-template-columns: 227px auto 25% 25%;
-  grid-template-rows: auto;
-  grid-template-areas: "left left right right";
+  grid-template-columns: auto auto 25% 25%;
+  grid-template-rows: auto auto;
+  grid-template-areas: "left left left left" "right right right right";
   background: -webkit-linear-gradient(top, #3b3b3b 5%, #171717 95%);
   background: linear-gradient(to bottom, #3b3b3b 5%, #171717 95%);
   border-top-right-radius: 5px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
 }
-@media screen and (max-width: 560px) {
-  .salepreviewwidgets_StoreSaleWidgetContainer_UlvFk.salepreviewwidgets_SaleItemDefaultCapsuleDisplay_34o91 {
-    grid-template-columns: auto auto 25% 25%;
-    grid-template-rows: auto auto;
-    grid-template-areas: "left left left left" "right right right right";
-  }
-}
 .BasicUI
   .salepreviewwidgets_StoreSaleWidgetContainer_UlvFk.salepreviewwidgets_SaleItemDefaultCapsuleDisplay_34o91 {
   box-shadow: var(--gpShadow-Medium);
   border-radius: unset;
+  grid-template-columns: 227px auto 25% 25%;
+  grid-template-rows: auto;
+  grid-template-areas: "left left right right";
 }
 .salepreviewwidgets_StoreSaleWidgetContainer_UlvFk
   .salepreviewwidgets_StoreSaleWidgetHalfLeft_2Va3O {
@@ -1245,10 +1241,10 @@ html.touch .gamehover_WishlistButton_1l89v .gamehover_WishlistButtonText_-ne-j,
   text-align: left;
 }
 .BasicUI .salepreviewwidgets_StoreSaleWidgetTags_3OSJs {
-  height: unset;
+  height: 22px;
   display: flex;
-  margin-bottom: 4px;
   flex-wrap: wrap;
+  margin-bottom: 4px;
 }
 @media screen and (max-width: 560px) {
   .salepreviewwidgets_StoreSaleWidgetTags_3OSJs {
@@ -1315,7 +1311,7 @@ html.touch .gamehover_WishlistButton_1l89v .gamehover_WishlistButtonText_-ne-j,
   max-height: unset;
   flex-grow: unset;
   display: -webkit-box;
-  -webkit-line-clamp: 5;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -4103,6 +4099,26 @@ html.responsive.touch .ContentHubSalePage {
   .partnersaledisplay_SaleOverlay_3Ae58 {
     margin-top: 12vw;
   }
+}
+.partnersaledisplay_CarouselCapsuleBordered_320kq {
+  width: 350px;
+  flex-shrink: 0;
+  min-width: 0;
+  scroll-snap-align: start;
+  padding: 0px 0px 8px 0px;
+}
+.partnersaledisplay_CarouselCapsuleBordered_320kq:not(:last-child) {
+  margin-right: 16px;
+}
+.partnersaledisplay_CarouselCapsuleAnimated_3NNM0 {
+  width: 100%;
+  flex-shrink: 0;
+  min-width: 0;
+  scroll-snap-align: start;
+  padding: 0px 0px 8px 0px;
+}
+.partnersaledisplay_CarouselCapsuleAnimated_3NNM0:not(:last-child) {
+  margin-right: 16px;
 }
 .partnersaledisplay_AppSummaryWidgetCtn_1q54W {
   flex-grow: 2;
