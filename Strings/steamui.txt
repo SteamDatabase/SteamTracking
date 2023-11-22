@@ -19949,7 +19949,7 @@ sOSBuildId
 System details: codename:%s variant:%s version:%s build:%s bios:%s cef_debugging:%d
 nSteamVersion
 sSteamBuildDate
-Nov 20 2023 17:09:38
+Nov 22 2023 09:55:37
 sSteamAPI
 SteamClient021
 sCPUVendor
