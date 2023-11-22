@@ -3963,7 +3963,7 @@ html.touch
 }
 @media screen and (max-width: 940px) {
   .sale_page_n_section .responsive_page_frame {
-    width: 100vw;
+    width: auto;
     overflow: hidden;
     position: relative;
   }
