@@ -231,6 +231,8 @@
         CarouselCapsuleAnimated:
           "partnersaledisplay_CarouselCapsuleAnimated_3NNM0",
         AppSummaryWidgetCtn: "partnersaledisplay_AppSummaryWidgetCtn_1q54W",
+        CarouselSalePageCapsule:
+          "partnersaledisplay_CarouselSalePageCapsule_3m73y",
         SaleBroadcastCtn: "partnersaledisplay_SaleBroadcastCtn_kBxKM",
         PresenterDisclaimer: "partnersaledisplay_PresenterDisclaimer_2DKML",
         PresenterLabel: "partnersaledisplay_PresenterLabel_2DHK7",
