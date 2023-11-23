@@ -5292,6 +5292,11 @@ a.storywidget_BadgeFooter_3kBeS:hover {
   font-size: 13px;
   color: #fff;
 }
+.ScrollSnapCarousel .dlcforyou_CarouselDlcCapsule_363dj {
+  width: 258px;
+  min-width: 0;
+  flex-shrink: 0;
+}
 .salebackgroundoverlay_SaleBackgroundOverlay_MrIcZ {
   position: absolute;
   width: 100%;

@@ -339,6 +339,7 @@
         DLCStatColumn: "dlcforyou_DLCStatColumn_257MX",
         DLCStatNumber: "dlcforyou_DLCStatNumber_2bPU5",
         DLCStatDesc: "dlcforyou_DLCStatDesc_2FVzA",
+        CarouselDlcCapsule: "dlcforyou_CarouselDlcCapsule_363dj",
       };
     },
     33150: (e) => {
@@ -18638,12 +18639,18 @@
                       ? void 0
                       : E.map((e) => ({
                           Render: (t) =>
-                            n.createElement(Fe.B, {
-                              key: "dlc_" + e.id,
-                              capsule: e,
-                              imageType: "header",
-                              bShowName: !0,
-                            }),
+                            n.createElement(
+                              "div",
+                              {
+                                key: "dlc_" + e.id,
+                                className: Sr.CarouselDlcCapsule,
+                              },
+                              n.createElement(Fe.B, {
+                                capsule: e,
+                                imageType: "header",
+                                bShowName: !0,
+                              }),
+                            ),
                         }))) || [],
                     (0, f.tT)(o, S) || [2, 3, 4, 3],
                     ["grid"],
