@@ -1521,7 +1521,6 @@ ${associated_asset_url}${}
 ${baseSocialShareURL}${appendQueryParam}site=facebook&t=${}
 ${baseSocialShareURL}${appendQueryParam}site=reddit
 ${baseSocialShareURL}${appendQueryParam}site=twitter
-${baseURL}${subDir}/${hash}${ext}
 ${baseURL}/ajaxsaveuserpaymentinfo/
 ${baseURL}/userreviews/ajaxgetcontentcheckresults/${recommendationID}
 ${baseURL}/userreviews/ajaxgetreports/${recommendationID}
@@ -1588,9 +1587,7 @@ ${g_strProfileURL}/ajaxexchangegoo/
 ${g_strProfileURL}/ajaxgetboostereligibility/
 ${g_strProfileURL}/ajaxgetgoovalue/
 ${g_strProfileURL}/ajaxgrindintogoo/
-${g_strProfileURL}/ajaxsetprivacy
 ${g_strProfileURL}/ajaxunpackbooster/
-${g_strProfileURL}/edit
 ${g_strProfileURL}/edit/
 ${g_strProfileURL}/gamecards/${appid}/
 ${g_strProfileURL}/gamecards/${appid}/?border=1
@@ -1770,13 +1767,9 @@ ${url}${url}
 ${url}${}
 ${url}/
 ${url}?filter=${filter}
-${url}?timezoneOffset=${tzOffset}
-${url}delete/${}/${}/
 ${url}overview
 ${url}post/${steamidOwner}/${gidFeature}
-${url}post/${}/${}/
 ${url}symbolicate
-${url}voteup/${}/${}/
 ${webm_url}${_ ? _ : _}
 ${wiki_doc_url}${}
 ${wizard_url}
@@ -1824,7 +1817,6 @@ http://steamcommunity.com/sharedfiles/filedetails/?id=402492882
 http://steamcommunity.com/tradingcards/faq/
 http://steamloopback.host
 http://store-tc.k.steam.net/graph
-http://store.steampowered.com
 http://store.steampowered.com/about/
 http://store.steampowered.com/notifications
 http://store.steampowered.com/steam_refunds/
@@ -2152,7 +2144,6 @@ https://community.cloudflare.steamstatic.com/economy/boosterpack/${appid}?l=engl
 https://community.cloudflare.steamstatic.com/economy/boosterpackribbon/?l=english
 https://community.cloudflare.steamstatic.com/economy/emoticon/${strEmoticonName}
 https://community.cloudflare.steamstatic.com/economy/image/${icon_url_hash}/128fx128f
-https://community.cloudflare.steamstatic.com/economy/image/${imageName}${strSize}
 https://community.cloudflare.steamstatic.com/economy/image/${}${strSize}
 https://community.cloudflare.steamstatic.com/economy/image/${}${strSize}?allow_animated=1
 https://community.cloudflare.steamstatic.com/economy/image/${}/96fx96f
@@ -2524,9 +2515,7 @@ https://steamcommunity.com/actions/AddFriendAjax
 https://steamcommunity.com/actions/AddToWishlist
 https://steamcommunity.com/actions/BlockUserAjax
 https://steamcommunity.com/actions/ConvertHTMLToBBCode
-https://steamcommunity.com/actions/EditProcess
 https://steamcommunity.com/actions/FacebookAccountUnlink/
-https://steamcommunity.com/actions/GameAvatars/?json=1
 https://steamcommunity.com/actions/GetOwnedApps/
 https://steamcommunity.com/actions/GroupInvite
 https://steamcommunity.com/actions/IgnoreFriendInviteAjax
@@ -2535,7 +2524,6 @@ https://steamcommunity.com/actions/LogFriendActivityUpvote
 https://steamcommunity.com/actions/PlayerList/
 https://steamcommunity.com/actions/RefreshCaptcha/
 https://steamcommunity.com/actions/RemoveFriendAjax
-https://steamcommunity.com/actions/RemoveFromWishlist
 https://steamcommunity.com/actions/ReportAbuse/
 https://steamcommunity.com/actions/ReportProfile/${steamID}
 https://steamcommunity.com/actions/SearchApps/${}
@@ -2548,21 +2536,14 @@ https://steamcommunity.com/actions/modwarningdialog
 https://steamcommunity.com/app/${appid}
 https://steamcommunity.com/app/${appid}/joinOGG/
 https://steamcommunity.com/app/${appid}/leaveOGG/
-https://steamcommunity.com/app/${appid}/stopfollowing/
 https://steamcommunity.com/app/${appid}/workshop/
-https://steamcommunity.com/app/${g_appID}/setignoreagegatecookie
 https://steamcommunity.com/app/${steamworks_appid}/follow/
 https://steamcommunity.com/app/${steamworks_appid}/stopfollowing/
 https://steamcommunity.com/app/${}
 https://steamcommunity.com/app/${}/discussions/
-https://steamcommunity.com/apps/apphubthumbs
 https://steamcommunity.com/auction/ajaxgetgoovalueforitemtype/
 https://steamcommunity.com/auction/cancelbidajax/
 https://steamcommunity.com/auction/placebidajax/
-https://steamcommunity.com/broadcast/getbroadcastinfo/
-https://steamcommunity.com/broadcast/getbroadcastmpd
-https://steamcommunity.com/broadcast/getbroadcastviewers/
-https://steamcommunity.com/broadcast/getchatinfo/
 https://steamcommunity.com/chat/
 https://steamcommunity.com/chat/chatlog/${m_unAccountID}
 https://steamcommunity.com/chat/friend/${steamid}
@@ -2604,7 +2585,6 @@ https://steamcommunity.com/invites/ajaxrevoke
 https://steamcommunity.com/login/dologin/
 https://steamcommunity.com/login/getrsakey/
 https://steamcommunity.com/login/logout/
-https://steamcommunity.com/market/appfilters/${appid}
 https://steamcommunity.com/market/appfilters/${unAppId}
 https://steamcommunity.com/market/buylisting/${listingid}
 https://steamcommunity.com/market/canbuyback/
@@ -2616,19 +2596,15 @@ https://steamcommunity.com/market/itemordersactivity
 https://steamcommunity.com/market/itemordershistogram
 https://steamcommunity.com/market/listings/
 https://steamcommunity.com/market/listings/${appid}/${}
-https://steamcommunity.com/market/marketthumbs
 https://steamcommunity.com/market/myhistory
 https://steamcommunity.com/market/myhistory/
 https://steamcommunity.com/market/mylistings
 https://steamcommunity.com/market/mylistings/
-https://steamcommunity.com/market/popular
 https://steamcommunity.com/market/pricehistory/
 https://steamcommunity.com/market/priceoverview/
 https://steamcommunity.com/market/recent
 https://steamcommunity.com/market/recentcompleted
 https://steamcommunity.com/market/removelisting/${listingid}
-https://steamcommunity.com/market/restrictionsdialog
-https://steamcommunity.com/market/search/render
 https://steamcommunity.com/market/sellitem/
 https://steamcommunity.com/minigame/
 https://steamcommunity.com/minigame/gettoken
@@ -2651,7 +2627,6 @@ https://steamcommunity.com/news/post/${gid}
 https://steamcommunity.com/news/shareonsteam/${gid}?appid=${appid}
 https://steamcommunity.com/news/sharepost/${gid}
 https://steamcommunity.com/notes/save/${noteid}
-https://steamcommunity.com/ogg/${appid}/selectAvatar/
 https://steamcommunity.com/profiles/${m_strSteamID}/ajaxgroupinvite?select_primary=1
 https://steamcommunity.com/profiles/${steamIDInvitee}/
 https://steamcommunity.com/profiles/${steamID}
@@ -2660,7 +2635,6 @@ https://steamcommunity.com/public/captcha.php?gid=${gid}
 https://steamcommunity.com/saliengame/ajaxcustomizesalien
 https://steamcommunity.com/saliengame/gettoken
 https://steamcommunity.com/search/SearchCommunityAjax
-https://steamcommunity.com/sharedfiles/${checked ? 'subscribe' : 'unsubscribe'}
 https://steamcommunity.com/sharedfiles/acceptsplit
 https://steamcommunity.com/sharedfiles/addcontributor
 https://steamcommunity.com/sharedfiles/ajaxaddtocollections
@@ -2670,8 +2644,6 @@ https://steamcommunity.com/sharedfiles/ajaxeditcontentdescriptors/
 https://steamcommunity.com/sharedfiles/ajaxgetmycollections
 https://steamcommunity.com/sharedfiles/ajaxgetserviceproviders
 https://steamcommunity.com/sharedfiles/ajaxgetserviceprovidersplits
-https://steamcommunity.com/sharedfiles/ajaxgetsubscriptionstatus
-https://steamcommunity.com/sharedfiles/ajaxgetvotes
 https://steamcommunity.com/sharedfiles/ajaxgetvotes/
 https://steamcommunity.com/sharedfiles/ajaxgrantcommerceitem/${publishedFileID}/
 https://steamcommunity.com/sharedfiles/ajaxgrantcommerceitemstofriends/${publishedFileID}/
@@ -2709,7 +2681,6 @@ https://steamcommunity.com/sharedfiles/updateincompatible
 https://steamcommunity.com/sharedfiles/votedown
 https://steamcommunity.com/sharedfiles/votelater
 https://steamcommunity.com/sharedfiles/voteup
-https://steamcommunity.com/sharedfiles/youtube/${}
 https://steamcommunity.com/steamguard/reporterror
 https://steamcommunity.com/trade/${g_ulTradePartnerSteamID}/
 https://steamcommunity.com/trade/${g_ulTradePartnerSteamID}/additem/
@@ -2727,8 +2698,6 @@ https://steamcommunity.com/trade/${tradeid}/receipt
 https://steamcommunity.com/trade/${tradeid}/receipt/
 https://steamcommunity.com/tradeoffer/${m_nTradeOfferID}/decline
 https://steamcommunity.com/tradeoffer/${nTradeOfferID}/accept
-https://steamcommunity.com/tradeoffer/${nTradeOfferId}/accept
-https://steamcommunity.com/tradeoffer/${nTradeOfferId}/decline
 https://steamcommunity.com/tradeoffer/${tradeOfferID}/${strAction}
 https://steamcommunity.com/tradeoffer/${tradeOfferID}/${strParams}
 https://steamcommunity.com/tradeoffer/new/send
@@ -2762,7 +2731,6 @@ https://store.steamchina.com/
 https://store.steampowered.com
 https://store.steampowered.com/
 https://store.steampowered.com/${strSalePageURL}
-https://store.steampowered.com/${strURL}
 https://store.steampowered.com/${strUrlTarget}
 https://store.steampowered.com//account/preferences/#CommunityContentPreferences
 https://store.steampowered.com//ajaxreportproductaction/${appId}/
@@ -2790,12 +2758,9 @@ https://store.steampowered.com/account/updatesubscription/
 https://store.steampowered.com/actions/ReportAbuse/
 https://store.steampowered.com/actions/clues
 https://store.steampowered.com/api/addtowishlist
-https://store.steampowered.com/api/addtowishlist/
 https://store.steampowered.com/api/removefromwishlist
-https://store.steampowered.com/api/removefromwishlist/
 https://store.steampowered.com/app/${appid}/?snr=1_saliens_4__salienapps
 https://store.steampowered.com/app/${appid}?snr=${g_SNR}
-https://store.steampowered.com/app/${nAppID}
 https://store.steampowered.com/app/${unAppID}/
 https://store.steampowered.com/app/${unAppID}/${url_name}/
 https://store.steampowered.com/app/1046930/Dota_Underlords/
@@ -2805,13 +2770,11 @@ https://store.steampowered.com/appreport/${nAppId}/report/
 https://store.steampowered.com/appreviewhistogram/${appid}
 https://store.steampowered.com/appreviews/${appid}
 https://store.steampowered.com/broadcast/ajaxgetpopularpartnerbroadcasts/
-https://store.steampowered.com/bundle/${nBundleID}
 https://store.steampowered.com/bundle/${unBundleID}/
 https://store.steampowered.com/cart
 https://store.steampowered.com/cart/
 https://store.steampowered.com/cart/addtocart
 https://store.steampowered.com/cart/forgetcart
-https://store.steampowered.com/cart/getcartstate
 https://store.steampowered.com/categories/homepageimage/${strImageURL}?cc=${}&l=${}
 https://store.steampowered.com/checkout/?purchasetype=updatebillinginfo&agreementid=${agreementid}&agreementpackageid=${packageid}
 https://store.steampowered.com/checkout/cvv2explain/?webbasedpurchasing=1&type=${type}
@@ -2834,7 +2797,6 @@ https://store.steampowered.com/developer/${vanity_url}
 https://store.steampowered.com/dynamicstore/saledata/?cc=${strCC}
 https://store.steampowered.com/dynamicstore/updatehomeviewsettings
 https://store.steampowered.com/dynamicstore/userdata/?id=${accountid}&cc=${strCC}
-https://store.steampowered.com/explore/
 https://store.steampowered.com/explore/discoveryqueuesettings/
 https://store.steampowered.com/explore/followgame/
 https://store.steampowered.com/explore/generatenewdiscoveryqueue
@@ -2852,7 +2814,6 @@ https://store.steampowered.com/explore/updatediscoveryqueuesettings
 https://store.steampowered.com/franchise/${vanity_url}
 https://store.steampowered.com/freelicense/addfreebundle/${bundleid}
 https://store.steampowered.com/freelicense/addfreelicense
-https://store.steampowered.com/freelicense/addfreelicense/${subid}
 https://store.steampowered.com/freelicense/addfreelicense/${}
 https://store.steampowered.com/friends/frienddata
 https://store.steampowered.com/friends/recommendgame
@@ -2879,7 +2840,6 @@ https://store.steampowered.com/pub/${vanity_url}
 https://store.steampowered.com/public/captcha.php?gid=${gid}
 https://store.steampowered.com/public/data/widevine/cert_license_widevine_com.bin
 https://store.steampowered.com/publisher/${vanity_url}
-https://store.steampowered.com/purchaseoptions/${nAppID}/?ver=nx
 https://store.steampowered.com/recommended/ignorerecommendation
 https://store.steampowered.com/recommended/ignorerecommendation/
 https://store.steampowered.com/sale/nextfest
@@ -2893,7 +2853,6 @@ https://store.steampowered.com/search/results/
 https://store.steampowered.com/search/smallcapscroll
 https://store.steampowered.com/search/suggest
 https://store.steampowered.com/search/tab
-https://store.steampowered.com/seasonsandepisodes/${nAppID}/?ver=nx
 https://store.steampowered.com/steam_refunds_methods
 https://store.steampowered.com/steamaccount/addfunds
 https://store.steampowered.com/steamaccount/addfunds?marketlisting=${m_ulListingId}&returnurl=${m_sAddFundsReturnURL}
@@ -2902,7 +2861,6 @@ https://store.steampowered.com/steamaccount/addfunds?marketlisting=1&minneeded=$
 https://store.steampowered.com/steamaccount/addfunds?marketlisting=1&returnurl=${location}
 https://store.steampowered.com/steamawards/nominategame
 https://store.steampowered.com/steamawards/nominations/
-https://store.steampowered.com/sub/${nPackageID}
 https://store.steampowered.com/sub/${unPackageID}/
 https://store.steampowered.com/subscriptions/ea
 https://store.steampowered.com/supportmessages/ackmessages
