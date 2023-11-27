@@ -53,7 +53,7 @@
       a.d(t, {
         $: () => w,
         A7: () => h,
-        Cn: () => k,
+        Cn: () => G,
         Df: () => p,
         NL: () => E,
         TW: () => f,
@@ -73,8 +73,8 @@
         m = a(44973),
         c = a(59954),
         u = a(54671),
-        v = a(52868),
-        g = a.n(v);
+        g = a(52868),
+        v = a.n(g);
       const p = 2640290,
         S = 2215130;
       let _;
@@ -133,13 +133,17 @@
         );
       }
       function E(e) {
-        const t = h();
-        return t.data
-          ? {
-              currentNomination: t.data.find((t) => t.category_id == e),
+        var t;
+        const a = h();
+        return a.isLoading
+          ? { bLoadingNominationForCategory: !0 }
+          : {
+              currentNomination:
+                null === (t = a.data) || void 0 === t
+                  ? void 0
+                  : t.find((t) => t.category_id == e),
               bLoadingNominationForCategory: !1,
-            }
-          : { bLoadingNominationForCategory: !0 };
+            };
       }
       function C(e) {
         const t = (0, l.bY)();
@@ -250,7 +254,7 @@
                     1 == t.flag && (n.vrsupport = 1),
                     2 == t.flag && (n.steam_deck_compat_categories = [0, 2, 3]);
                   const i = `${m.De.STORE_BASE_URL}search/suggest`,
-                    r = yield g().get(i, { params: n, withCredentials: !0 });
+                    r = yield v().get(i, { params: n, withCredentials: !0 });
                   return null !== (a = r.data) && void 0 !== a ? a : [];
                 });
               })(e, t);
@@ -293,7 +297,7 @@
           },
         );
       }
-      function k() {
+      function G() {
         const e = (0, l.bY)(),
           t = (0, d.useQueryClient)();
         return (0, d.useMutation)(
@@ -317,9 +321,9 @@
       "use strict";
       a.r(t),
         a.d(t, {
-          ConfirmOverwriteVoteOrNominationDialog: () => O,
+          ConfirmOverwriteVoteOrNominationDialog: () => M,
           EventDisplaySteamAwardNomination: () => b,
-          EventDisplaySteamAwardVote: () => M,
+          EventDisplaySteamAwardVote: () => O,
           UserEligibleToNominateOrVote: () => V,
           WinterSaleSteamAwardVoteWrapper: () => F,
           default: () => R,
@@ -334,8 +338,8 @@
         m = a(85651),
         c = a(42977),
         u = a(92616),
-        v = a(25871),
-        g = a(57605),
+        g = a(25871),
+        v = a(57605),
         p = a(17318),
         S = a.n(p),
         _ = a(58218),
@@ -349,9 +353,9 @@
         N = a(57742),
         D = a(69338),
         T = a(5557),
-        k = a(6864),
-        G = a.n(k),
-        L = a(32905);
+        G = a(6864),
+        L = a.n(G),
+        k = a(32905);
       function V(e) {
         return y.L7.logged_in
           ? !y.L7.is_limited ||
@@ -371,7 +375,7 @@
                   "#EventDisplay_Share_NotLoggedIn_Description",
                 ),
                 strOKButtonText: (0, h.Xx)("#MobileLogin_SignIn"),
-                onOK: L.X,
+                onOK: k.X,
               }),
               window,
             ),
@@ -422,13 +426,13 @@
         const { event: n, lang: o, previewMode: i } = e,
           [r] = (0, s.SZ)(() => [n.GetSteamAwardCategory()]),
           d = (0, _.T)("EventDisplaySteamAwardNomination"),
-          [u, v] = (0, l.useState)(null),
-          { currentNomination: g, bLoadingNominationForCategory: p } = (0,
+          [u, g] = (0, l.useState)(null),
+          { currentNomination: v, bLoadingNominationForCategory: p } = (0,
           c.NL)(r);
         if (
           ((0, l.useEffect)(() => {
             I([r], d).then((e) => {
-              v(e);
+              g(e);
             });
           }, [d, r]),
           !u ||
@@ -446,7 +450,7 @@
         if (!i && !u.bIsAutumnSaleActive)
           return l.createElement(
             "div",
-            { className: G().ExpiredEventHeader },
+            { className: L().ExpiredEventHeader },
             " ",
             (0, h.Xx)("#SteamAwards_ExpiredEvent"),
             " ",
@@ -467,26 +471,26 @@
           "div",
           {
             style: E,
-            className: (0, w.Z)(G().SteamAwardContainer, S().PartnerEventFont),
+            className: (0, w.Z)(L().SteamAwardContainer, S().PartnerEventFont),
           },
           l.createElement(
             "div",
-            { className: G().SteamAwardHeader },
+            { className: L().SteamAwardHeader },
             l.createElement("img", {
-              className: G().SteamAwardHeaderImage,
+              className: L().SteamAwardHeaderImage,
               src: `${u.strTrophyImg}`,
             }),
             l.createElement(
               "div",
-              { className: G().SteamAwardMainCtn },
+              { className: L().SteamAwardMainCtn },
               l.createElement(
                 "div",
-                { className: G().SteamAwardMainTitle },
+                { className: L().SteamAwardMainTitle },
                 (0, h.Xx)("#SteamAwards_EventMainTitle"),
               ),
               l.createElement(
                 "div",
-                { className: G().SteamAwardSubTitle },
+                { className: L().SteamAwardSubTitle },
                 N
                   ? (0, h.Xx)("#SteamAwards_EventCallToAction")
                   : (0, h.Xx)("#SteamAwards_EventVotingDateTeaser", T),
@@ -497,7 +501,7 @@
                       href: (0, C.bk)(
                         y.De.STORE_BASE_URL + "steamawards/nominations/",
                       ),
-                      className: G().SteamAwardLearnMore,
+                      className: L().SteamAwardLearnMore,
                     },
                     "(",
                     (0, h.Xx)("#EventDisplay_CallToAction_LearnMore"),
@@ -506,7 +510,7 @@
               ),
               l.createElement(
                 "div",
-                { className: G().SteamAwardHeaderText },
+                { className: L().SteamAwardHeaderText },
                 N
                   ? f
                     ? (0, h.Xx)(
@@ -516,7 +520,7 @@
                     : l.createElement(
                         "a",
                         {
-                          className: G().LinkText,
+                          className: L().LinkText,
                           href: (0, C.bk)(
                             y.De.STORE_BASE_URL + "steamawards/nominations/",
                           ),
@@ -533,7 +537,7 @@
           l.createElement(x, {
             event: n,
             nominationEventDetails: u,
-            currentNomination: g,
+            currentNomination: v,
           }),
         );
       }
@@ -542,74 +546,51 @@
         const { event: a, nominationEventDetails: o, currentNomination: i } = e,
           [r, d] = (0, s.SZ)(() => [a.GetSteamAwardCategory(), a.appid]),
           u = null == i ? void 0 : i.appid,
-          v = (0, c.TW)(d, r, 0),
-          p = l.useRef(),
-          S =
+          g = (0, c.TW)(d, r, 0),
+          p = Boolean(
             (null == i ? void 0 : i.appid) == d &&
-            (null == i ? void 0 : i.category_id) == r,
-          _ = (0, l.useCallback)(
+              (null == i ? void 0 : i.category_id) == r,
+          ),
+          S = (0, l.useCallback)(
             (e) =>
               (0, n.mG)(this, void 0, void 0, function* () {
-                var t, a;
                 if (!e)
-                  return (
-                    console.log(
-                      "EventDisplaySteamAwardNomination: ignore turning off the checkbox",
-                    ),
-                    void (
-                      null === (t = p.current) ||
-                      void 0 === t ||
-                      t.setState({ checked: !1 })
-                    )
+                  return void console.log(
+                    "EventDisplaySteamAwardNomination: ignore turning off the checkbox",
                   );
                 if (!V(!1))
-                  return (
-                    console.log(
-                      "EventDisplaySteamAwardNomination: UserEligibleToNominateOrVote failed",
-                    ),
-                    void (
-                      null === (a = p.current) ||
-                      void 0 === a ||
-                      a.setState({ checked: !1 })
-                    )
+                  return void console.log(
+                    "EventDisplaySteamAwardNomination: UserEligibleToNominateOrVote failed",
                   );
                 u && u != d
                   ? (0, N.AM)(
-                      l.createElement(O, {
+                      l.createElement(M, {
                         strLocTokenInfix: "Nomination",
                         newAppID: d,
                         curNominatedAppID: u,
-                        fnOnConfirm: v.mutate,
-                        fnOnCancel: () => {
-                          var e;
-                          return (
-                            (null === (e = p.current) || void 0 === e
-                              ? void 0
-                              : e.checked) && p.current.Toggle()
-                          );
-                        },
+                        fnOnConfirm: g.mutate,
                       }),
                       window,
                     )
-                  : v.mutate();
+                  : g.mutate();
               }),
-            [u, d, v],
+            [u, d, g],
           ),
-          A = m.JW.GetTimeNowWithOverride(),
-          E =
+          _ = m.JW.GetTimeNowWithOverride(),
+          A =
             1 ==
             (null === (t = o.rgAwardCategoryDetails) || void 0 === t
               ? void 0
               : t.length),
-          f =
-            a.BIsEventActionEnabled() || A < a.GetStartTimeAndDateUnixSeconds();
-        return E && (f || S)
+          E =
+            a.BIsEventActionEnabled() || _ < a.GetStartTimeAndDateUnixSeconds();
+        return A && (E || p)
           ? l.createElement(
               "div",
-              { className: G().SteamAwardVoteWidget },
+              { className: L().SteamAwardVoteWidget },
               l.createElement(
                 "div",
-                { className: G().NominateCtn },
+                { className: L().NominateCtn },
                 l.createElement(
                   "div",
                   {
@@ -618,19 +599,19 @@
                         null == o ? void 0 : o.strNominateButtonBGColor,
                     },
                     className: (0, w.Z)(
-                      G().SteamAwardNominateButton,
-                      S && G().Nominated,
+                      L().SteamAwardNominateButton,
+                      p && L().Nominated,
                     ),
                   },
-                  l.createElement(g.ji, {
-                    ref: p,
+                  l.createElement(v.ji, {
+                    controlled: !0,
                     className: (0, w.Z)(
-                      G().SteamAwardVoteCheckBox,
-                      S && G().Nominated,
+                      L().SteamAwardVoteCheckBox,
+                      p && L().Nominated,
                     ),
-                    checked: S,
-                    onChange: _,
-                    disabled: S,
+                    checked: p,
+                    onChange: S,
+                    disabled: p,
                     color: "#FFFFFF",
                     highlightColor: "white",
                     label: l.createElement(
@@ -638,8 +619,8 @@
                       null,
                       l.createElement(
                         "div",
-                        { className: G().SteamAwardCategoryTitle },
-                        S
+                        { className: L().SteamAwardCategoryTitle },
+                        p
                           ? (0, h.kQ)(
                               "#SteamAwards_NominateWidget_CTA_PastTense",
                               o.rgAwardCategoryDetails[0]
@@ -656,14 +637,14 @@
                 ),
                 l.createElement(
                   "span",
-                  { className: G().SteamAwardCategoryDesc },
+                  { className: L().SteamAwardCategoryDesc },
                   o.rgAwardCategoryDetails[0].strSuggestedCategoryDesc,
                 ),
               ),
-              Boolean(f && r != o.eLaborOfLove) &&
+              Boolean(E && r != o.eLaborOfLove) &&
                 l.createElement(
                   "div",
-                  { className: G().SteamAwardLinkToNominationPage },
+                  { className: L().SteamAwardLinkToNominationPage },
                   l.createElement(
                     "a",
                     {
@@ -679,7 +660,7 @@
             )
           : null;
       }
-      function O(e) {
+      function M(e) {
         const {
             curNominatedAppID: t,
             newAppID: a,
@@ -688,23 +669,23 @@
             fnOnCancel: i,
             closeModal: r,
           } = e,
-          [s] = (0, v.vs)(t, B),
-          [d] = (0, v.vs)(a, B);
+          [s] = (0, g.vs)(t, B),
+          [d] = (0, g.vs)(a, B);
         return l.createElement(
           f.uH,
           {
-            modalClassName: G().SteamAwardConflictModal,
+            modalClassName: L().SteamAwardConflictModal,
             strTitle: (0, h.Xx)(`#SteamAward_${n}ConflictWarning_Title`),
             strDescription: (0, h.kQ)(
               `#SteamAward_${e.strLocTokenInfix}ConflictWarning_Explanation`,
               l.createElement(
                 "span",
-                { className: G().SteamAwardModalGameTitle },
+                { className: L().SteamAwardModalGameTitle },
                 null == s ? void 0 : s.GetName(),
               ),
               l.createElement(
                 "span",
-                { className: G().SteamAwardModalGameTitle },
+                { className: L().SteamAwardModalGameTitle },
                 null == d ? void 0 : d.GetName(),
               ),
             ),
@@ -720,7 +701,7 @@
               })
             : l.createElement(
                 "div",
-                { className: G().NominationSwitchCtn },
+                { className: L().NominationSwitchCtn },
                 l.createElement("img", {
                   src: s.GetAssets().GetSmallCapsuleURL(),
                 }),
@@ -731,7 +712,7 @@
               ),
         );
       }
-      let M = class extends l.Component {
+      let O = class extends l.Component {
         constructor(e) {
           super(e),
             (this.state = { eCategoryLoaded: null, votedForAppID: null }),
@@ -814,7 +795,7 @@
         HandleConflict(e) {
           const t = u.Z.Get().GetApp(this.props.appID);
           (0, N.AM)(
-            l.createElement(O, {
+            l.createElement(M, {
               strLocTokenInfix: "Vote",
               newAppID: null == t ? void 0 : t.GetAppID(),
               curNominatedAppID: this.state.votedForAppID,
@@ -858,17 +839,17 @@
           return this.props.bIsEventActionEnabled || this.props.previewMode || t
             ? l.createElement(
                 "div",
-                { className: (0, w.Z)(G().SteamAwardVoteWidget) },
-                l.createElement("div", { className: G().SteamAwardVotePrompt }),
+                { className: (0, w.Z)(L().SteamAwardVoteWidget) },
+                l.createElement("div", { className: L().SteamAwardVotePrompt }),
                 l.createElement(
                   "div",
-                  { className: G().SteamAwardVoteButtonArea },
+                  { className: L().SteamAwardVoteButtonArea },
                   l.createElement(
                     "div",
                     {
                       className: (0, w.Z)(
-                        G().SteamAwardCategoryTitle,
-                        G().VotingTitle,
+                        L().SteamAwardCategoryTitle,
+                        L().VotingTitle,
                       ),
                     },
                     this.props.strCategoryTitle,
@@ -876,28 +857,28 @@
                   !this.props.bRenderFromStorePage &&
                     l.createElement(
                       "span",
-                      { className: G().SteamAwardCategoryDesc },
+                      { className: L().SteamAwardCategoryDesc },
                       this.props.strCategoryDesc,
                     ),
                   t
                     ? l.createElement(
                         "div",
-                        { className: G().SteamAwardVoteButtonSubmitted },
+                        { className: L().SteamAwardVoteButtonSubmitted },
                         l.createElement(
                           "span",
-                          { className: G().SteamAwardVoteButtonText },
+                          { className: L().SteamAwardVoteButtonText },
                           (0, h.Xx)("#SteamAward_VoteButton_VotedText"),
                         ),
                       )
                     : l.createElement(
                         "button",
                         {
-                          className: G().SteamAwardVoteButton,
+                          className: L().SteamAwardVoteButton,
                           onClick: this.OnVoteClick,
                         },
                         l.createElement(
                           "span",
-                          { className: G().SteamAwardVoteButtonText },
+                          { className: L().SteamAwardVoteButtonText },
                           (0, h.Xx)("#SteamAward_VoteButton_PromptText"),
                         ),
                       ),
@@ -906,10 +887,10 @@
             : null;
         }
       };
-      (0, n.gn)([r.LO], M.prototype, "m_strPreviousVotedForAppTitle", void 0),
-        (0, n.gn)([E.ak], M.prototype, "OnVoteClick", null),
-        (0, n.gn)([E.ak], M.prototype, "SaveVote", null),
-        (M = (0, n.gn)([d.Pi], M));
+      (0, n.gn)([r.LO], O.prototype, "m_strPreviousVotedForAppTitle", void 0),
+        (0, n.gn)([E.ak], O.prototype, "OnVoteClick", null),
+        (0, n.gn)([E.ak], O.prototype, "SaveVote", null),
+        (O = (0, n.gn)([d.Pi], O));
       class R extends l.Component {
         constructor(e) {
           super(e);
@@ -963,7 +944,7 @@
               e.forEach((e) => {
                 t.push(
                   l.createElement(
-                    M,
+                    O,
                     Object.assign(
                       {
                         key: e.eSteamAwardCategoryID,
@@ -995,30 +976,30 @@
               {
                 style: t,
                 className: (0, w.Z)(
-                  G().SteamAwardContainer,
+                  L().SteamAwardContainer,
                   S().PartnerEventFont,
                 ),
               },
               l.createElement(
                 "div",
-                { className: G().SteamAwardHeader },
+                { className: L().SteamAwardHeader },
                 l.createElement("img", {
-                  className: G().SteamAwardHeaderImage,
+                  className: L().SteamAwardHeaderImage,
                   src: this.m_awardEventDetails.strTrophyImg,
                 }),
                 l.createElement(
                   "div",
-                  { className: G().SteamAwardMainCtn },
+                  { className: L().SteamAwardMainCtn },
                   l.createElement(
                     "div",
-                    { className: G().SteamAwardMainTitle },
+                    { className: L().SteamAwardMainTitle },
                     " ",
                     (0, h.Xx)("#SteamAwards_EventMainTitleCombined"),
                     " ",
                   ),
                   l.createElement(
                     "div",
-                    { className: G().SteamAwardHeaderText },
+                    { className: L().SteamAwardHeaderText },
                     this.props.bIsEventActionEnabled
                       ? l.createElement(
                           l.Fragment,
@@ -1037,8 +1018,8 @@
                                 y.De.STORE_BASE_URL + "steamawards/",
                               ),
                               className: (0, w.Z)(
-                                G().SteamAwardLearnMore,
-                                G().BottomRight,
+                                L().SteamAwardLearnMore,
+                                L().BottomRight,
                               ),
                             },
                             (0, h.Xx)("#EventDisplay_CallToAction_LearnMore"),
@@ -1050,14 +1031,14 @@
                             href: (0, C.bk)(
                               y.De.STORE_BASE_URL + "steamawards/",
                             ),
-                            className: G().LinkText,
+                            className: L().LinkText,
                           },
                           (0, h.Xx)("#SteamAwards_Event_VotesClosed"),
                         ),
                   ),
                   l.createElement(
                     "div",
-                    { className: G().AwardCategoriesCtn },
+                    { className: L().AwardCategoriesCtn },
                     this.GetNominatedAwardCategories(),
                   ),
                 ),
