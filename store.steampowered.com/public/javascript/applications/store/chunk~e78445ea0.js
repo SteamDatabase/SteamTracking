@@ -2808,7 +2808,8 @@
             ],
           );
         r.useEffect(() => {
-          K(!0).then(() => b(!0)),
+          w ||
+            (K(!0).then(() => b(!0)),
             h.jg.Get().HintLoad(),
             f(
               (() => {
@@ -2816,8 +2817,8 @@
                 return `DiscoveryQueue_${y.L7.accountid}_${e}`;
               })(),
             ),
-            L();
-        }, [n, K, L]);
+            L());
+        }, [n, K, L, w]);
         const J = r.useCallback(
             (e) =>
               m[e] == re
