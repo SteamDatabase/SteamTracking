@@ -1362,9 +1362,13 @@
               cellRenderer: (e) => {
                 const t = e.cellData;
                 return t
-                  ? m()
-                      .utc(m().duration(t, "seconds").asMilliseconds())
-                      .format("mm:ss")
+                  ? t < 3600
+                    ? m()
+                        .utc(m().duration(t, "seconds").asMilliseconds())
+                        .format("mm:ss")
+                    : m()
+                        .utc(m().duration(t, "seconds").asMilliseconds())
+                        .format("h:mm:ss")
                   : "-";
               },
             },
