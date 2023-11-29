@@ -27952,9 +27952,10 @@
                   bMatchWidth: !0,
                   bFitToWindow: !0,
                   bDisablePopTop: !0,
+                  bNoFocusWhenShown: !0,
                 },
               );
-              n.SetOnHideCallback(() => I(null)), I(n);
+              I(n);
             },
             [t],
           ),
@@ -28154,8 +28155,19 @@
             [C, o, A, h],
           );
         return i.createElement(r.II, {
-          onBlur: () => {
-            setTimeout(() => (null == k ? void 0 : k.Hide()), 200);
+          onBlur: (e) => {
+            const t = e.relatedTarget;
+            let a = !1;
+            null == t ||
+              t.classList.forEach((e) => {
+                e.includes("ContextMenuFocusContainer") && (a = !0);
+              }),
+              a
+                ? P.current.element.focus()
+                : setTimeout(() => (null == k ? void 0 : k.Hide()), 200);
+          },
+          onFocus: (e) => {
+            console.log("We are focussed");
           },
           ref: P,
           type: "text",
