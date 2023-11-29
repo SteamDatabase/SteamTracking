@@ -23,6 +23,7 @@ message CMsgGamescopeState {
 	optional bool is_app_refresh_rate_capable = 6;
 	optional bool is_refresh_rate_switching_supported = 7;
 	optional bool is_refresh_rate_switching_restricted = 8;
+	optional bool is_hdr_visualization_supported = 9;
 }
 
 message CGamescope_GetState_Request {
