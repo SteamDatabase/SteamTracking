@@ -2,8 +2,6 @@ __TEXT
 
 __text
 __TEXT
-`|
-`|
 __stubs
 __TEXT
 __stub_helper
@@ -914,6 +912,7 @@ Size on connection to existing CSharedMemStream doesn't match actual: %s, %u, %u
 Warning: Memory was locked for put while destructing!
 CSharedMemStream::Clear()
 Warning: Blocking wait on mutex failed in Clear: %d
+Warning: CSharedMemStream::Clear failed, expected %d bytes remaining, have %d.
 CSharedMemStream::Get()
 CSharedMemStream has memory already locked for put. Don't write with memory locked.
 Timed out waiting for mutex in GetInternal()
@@ -2424,11 +2423,9 @@ id
 
 @
 Ic
-{
-q
->
+}
+;
 1
-F
 
 
 
@@ -2450,8 +2447,6 @@ AT=
 D
 @
 @
-
-
 @
 Hc
 Hc

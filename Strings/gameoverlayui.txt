@@ -19,9 +19,9 @@ __TEXT
 __gcc_except_tab__TEXT
 __unwind_info
 __TEXT
-l
+t
 !
-l
+t
 !
 __eh_frame
 __TEXT
@@ -7659,6 +7659,7 @@ Size on connection to existing CSharedMemStream doesn't match actual: %s, %u, %u
 Warning: Memory was locked for put while destructing!
 CSharedMemStream::Clear()
 Warning: Blocking wait on mutex failed in Clear: %d
+Warning: CSharedMemStream::Clear failed, expected %d bytes remaining, have %d.
 CSharedMemStream::Get()
 CSharedMemStream has memory already locked for put. Don't write with memory locked.
 Timed out waiting for mutex in GetInternal()
@@ -7763,8 +7764,8 @@ Steam pid that launched us
 VGUI_Application_001
 OK
 Cancel
-Nov 24 2023
-14:14:49
+Nov 28 2023
+14:48:36
 crashhandler004
 gameoverlayui
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/overlay/gameoverlayui/main.cpp
@@ -7877,9 +7878,10 @@ FinalizingRenderStream
 Failed to init Mach IPC client
 BRunFrame()
 Waiting on game
+WaitMultiple game rendering / exiting: fatal error %d!
 Game Exit Event signaled.
-Warning: The game hasn't rendered a frame from us in over 10 seconds
-Warning: Tried to clear, but game started reading right as we would have done so
+Warning: The game hasn't rendered a frame from us in over 10 seconds.
+Warning: Tried to clear, but game started reading right as we would have done so. Last game frame rendered was %d ms ago
 Warning: Game claimed to have rendered after extra time, but render stream is not empty.
 Warning: Game claims to have rendered, but render stream is not empty.
 htmlframelesspopupchild
@@ -10774,6 +10776,7 @@ Dec
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
 0
+M+
 J+
 0
 
@@ -10795,7 +10798,6 @@ j
 j
 j
 j
-e
 j
 j
 j
@@ -10847,12 +10849,14 @@ IcE
 IcE
 @
 @
+r)
 V
 =
 =
 !
 @
 &
+~"
 @
 M9e
 @
@@ -11012,6 +11016,7 @@ j
 j
 j
 j
+A
 =
 0
 j
@@ -11052,7 +11057,6 @@ d
 A+4$A+u
 =
 =
-u
 @
 j
 j

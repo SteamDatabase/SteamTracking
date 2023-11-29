@@ -1322,8 +1322,12 @@ SerializedSurface::DrawPolyLine() not yet implemented
 CSerializedSurface::DrawSetTextureRGBA
 Loading raw RGBA texture with invalid height/width
 res > 0
-iClientFD != m_mapShMemFD.InvalidIndex()
+SendSHMemFDToClient pid %d failed: %d %s
+Closing socket.
 iRet > 0
+OnChromePaintBufferClientDisconnect m_mapShMemFD has %d entries, m_mapChromePaintBufferHandleToData %d entries.
+OnChromePaintBufferClientDisconnect m_mapShMemFD pid %u, ShMemFD %d
+OnChromePaintBufferClientDisconnect m_mapChromePaintBufferHandleToData ulHandle %llu, texture ID %d
 DrawSetSubTextureRGBA called on invalid texture
 DrawSetSubTextureRGBA called on unallocated texture
 DrawSetSubTextureRGBA out of bounds (width)

@@ -6,15 +6,19 @@ __stubs
 __TEXT
 __stub_helper
 __TEXT
+l`2
+l`2
 __cstring
 __TEXT
+`|2
+`|2
 __const
 __TEXT
+P5
+P5
 __gcc_except_tab__TEXT
 __objc_methname
 __TEXT
-h{:
-h{:
 __objc_classname__TEXT
 __objc_methtype
 __TEXT
@@ -147,9 +151,8 @@ h
 )
 HB
 0
-j=
 S1
-^=
+]=
 .
 
 
@@ -159,6 +162,7 @@ S1
 @
 
 1
+%%
 @
 @
 @
@@ -2992,6 +2996,7 @@ Size on connection to existing CSharedMemStream doesn't match actual: %s, %u, %u
 Warning: Memory was locked for put while destructing!
 CSharedMemStream::Clear()
 Warning: Blocking wait on mutex failed in Clear: %d
+Warning: CSharedMemStream::Clear failed, expected %d bytes remaining, have %d.
 CSharedMemStream::Get()
 CSharedMemStream has memory already locked for put. Don't write with memory locked.
 Timed out waiting for mutex in GetInternal()
@@ -5371,8 +5376,8 @@ linux
 Linux;tenfoot
 X-ValveUserAgent
 panorama %s %s
-Nov 24 2023
-14:15:14
+Nov 28 2023
+14:49:02
 X-SteamClientVersion
 hostName
 pchRemoteHost
@@ -8295,9 +8300,8 @@ src.IsValid()
 
 HB
 0
-j=
 S1
-^=
+]=
 .
 
 
@@ -8307,12 +8311,14 @@ S1
 @
 
 1
+%%
 @
 @
+T'
 :
-M'
+7/
 ;
-t%
+w/
 &
 /
 /
@@ -8322,24 +8328,24 @@ t%
 9
 &
 #
-:
-J%
 %
-9
 7
 7
 7
+7
+%;
 -
 -
 -
-j.
+^/
 j
+T,
 "
 .
 "
+p,
 ?
 )
-,
 >
 ;
 F
@@ -8348,17 +8354,18 @@ F
 +
 !
 &
-q(
+r(
+@(
+4(
 /
-,9
-9
+/-
 j
 +
 +
 +
 +
 +
-%+
++
 +
 @
 @
@@ -8374,6 +8381,7 @@ j
 @
 @
 @
+7'
 @
 @
 @
@@ -8440,9 +8448,10 @@ K
 @
 @
 0
+;*
 @
 @
-P6
+0&
 3
 &
 &
@@ -8456,33 +8465,39 @@ P6
 @
 @
 @
-9&
 0
-W)
 @
 @
+)
 )
 )
 )
 0
 0
 =
-O)
 @
 @
+v(
+)
 )
 H=
-,6
 (
-|$
-v$
+E$
+A$
+7)
 $
-A'
+4
+4
+4
+4
+4
+4
+4
 @
+>2
 =
 @
 @
-~0
 &
 &
 %
@@ -8491,21 +8506,19 @@ A'
 $
 ?
 /
-%.
-#
+m1
 @
-4$
+q#
 P
+R#
 $
 $
 $
-$
+D#
 (
 (
-%
 P
 j
-3#
 A
 A
 A
@@ -8514,55 +8527,49 @@ A
 #
 #
 #
-#
 @
 E9u
 E9u
+k"
 @
 A
 A
-S"
 A
 A
 A
 A
 A
 A
-$
 Ic
-B"
-s!
+>"
+=/
+C!
 /
 /
+%!
 !
 !
 !
+"
 "
 *
 !
-Y.
-1-
-C!
---
+L"
+0-
+P.
 @
-/-
-#-
 +
 -
-i"
 "
 }
 "
-a
 )
 +
-z&
 @
-N(
 $
 Hi
 (
-1#
+#
 #
 @
 @
@@ -8773,7 +8780,6 @@ IcE
 @
 @
 @
-o#
 @
 @
 @
@@ -8882,11 +8888,7 @@ o#
 #
 #
 #
-t8f;{j!
-t/f;tj!
-t&f;mj!
-j!
-f!
+#
 @
 j
 @
@@ -8990,7 +8992,6 @@ V
 
 @
 &
-o
 
 a
 
@@ -9020,7 +9021,7 @@ M9e
 ?
 ?
 
-=
+F
 @
 ,
 *
@@ -9127,4 +9128,4 @@ E
 @
 t
 _
-^
+Lc53T

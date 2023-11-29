@@ -38183,10 +38183,8 @@ div.NarrowRightPanel
 }
 .controllerconfigurator_interstitial_ConfiguratorInterstitialContainer_3FS5u {
   max-width: 100%;
-  height: 100%;
   padding: 24px;
-  padding-bottom: 40px;
-  position: relative;
+  position: absolute;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -38195,6 +38193,8 @@ div.NarrowRightPanel
   left: 0;
   bottom: 0;
   right: 0;
+  height: 100%;
+  overflow: hidden;
 }
 .GamepadMode
   .controllerconfigurator_interstitial_ConfiguratorInterstitialContainer_3FS5u {
@@ -38202,10 +38202,14 @@ div.NarrowRightPanel
   animation-timing-function: ease;
   animation-duration: 0.3s;
   animation-iteration-count: 1;
+  padding-bottom: 0;
+  padding-top: 0;
 }
 .DesktopUI
   .controllerconfigurator_interstitial_ConfiguratorInterstitialContainer_3FS5u {
+  position: relative;
   background: linear-gradient(126deg, #333840 4.36%, #25282e 93.41%);
+  padding-bottom: 0px;
 }
 .controllerconfigurator_interstitial_ConfiguratorInterstitialContainer_3FS5u
   .controllerconfigurator_interstitial_DontShowAgain_8aT8x {
@@ -38265,12 +38269,11 @@ div.NarrowRightPanel
 }
 .controllerconfigurator_interstitial_DescImage_1T0oY {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
   margin-top: 10px;
   margin-bottom: 10px;
 }
 .controllerconfigurator_interstitial_DescImage_1T0oY.controllerconfigurator_interstitial_PlugIn_81B4Y {
+  margin-top: 36px;
   width: 60%;
 }
 .controllerconfigurator_interstitial_DescImageRow_ztD0R {
@@ -38278,6 +38281,7 @@ div.NarrowRightPanel
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  grid-gap: 16px;
 }
 .controllerconfigurator_interstitial_ArrowHack_BvOCV {
   position: absolute;
@@ -38492,7 +38496,7 @@ div.NarrowRightPanel
   margin: 0px 40px;
 }
 .controllerconfigurator_interstitial_IntroImage1A_2-k2g {
-  width: 90%;
+  width: 80%;
   margin-top: 0px;
 }
 .controllerconfigurator_interstitial_IntroImage1B_1sg7Z {
@@ -38601,6 +38605,8 @@ div.NarrowRightPanel
   width: 70%;
   margin-top: 20px;
   margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .controllerconfigurator_interstitial_InterstitialImageLabelContainer_2ed7X {
   width: 56%;
@@ -38734,6 +38740,7 @@ div.NarrowRightPanel
 }
 .controllerconfigurator_interstitial_WarningImage_53CPT {
   width: 100%;
+  max-height: 250px;
 }
 .controllerconfigurator_interstitial_ControllerRecommendedImageRow_16TUC {
   display: flex;
@@ -38748,21 +38755,25 @@ div.NarrowRightPanel
   .DialogButton {
   padding-left: 10px;
   padding-right: 10px;
+  margin: 0;
 }
 .controllerconfigurator_interstitial_ConfiguratorInterstitialContainer_3FS5u
   .DialogButton.controllerconfigurator_interstitial_OKButton_vTxP0 {
   background-color: #769505;
 }
 .controllerconfigurator_interstitial_OptIn_1JKJY {
-  width: 200px;
+  width: 35vw;
+  height: 55vh;
 }
-.GamepadMode .controllerconfigurator_interstitial_OptIn_1JKJY {
-  width: 100%;
+.DesktopUI .controllerconfigurator_interstitial_OptIn_1JKJY {
+  width: 300px;
+  height: 300px;
 }
 .controllerconfigurator_interstitial_TwoColumn_-AT-2 {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
   grid-gap: 16px;
 }
 .guidedtour_PageIndicators_2Hdn3 {

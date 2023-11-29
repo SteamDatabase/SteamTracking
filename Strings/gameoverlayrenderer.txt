@@ -254,7 +254,6 @@ QRPS
 ^_[]
 ^_[]
 ^_[]
-^_[]
 \^_[]
 ^_[]
 PWVQ
@@ -305,12 +304,12 @@ VWjQ
 t`;X
 ,^_[]
 ^_[]
-M 9H
+u	9X
 <^_[]
-M 9H
 ^_[]
 @QPP
 PQRW
+^_[]
 ^_[]
 qL;u
 t	;p
@@ -327,6 +326,7 @@ L^_[]
 ;~,s
 +F =
 +F0=
+^_[]
 ^_[]
 ^_[]
 ^_[]
@@ -603,6 +603,7 @@ Failed creating view of file for %s
 Size on connection to existing CSharedMemStream doesn't match actual: %s, %u, %u
 Warning: Memory was locked for put while destructing!
 Warning: Blocking wait on mutex failed in Clear: %d
+Warning: CSharedMemStream::Clear failed, expected %d bytes remaining, have %d.
 CSharedMemStream has memory already locked for put. Don't write with memory locked.
 Timed out waiting for mutex in GetInternal()
 Failed to take mutex in GetInternal()
@@ -855,6 +856,7 @@ out vec4 FragColor;
 uniform sampler2DRect Texture;
 void main(void)
 	FragColor = Color * texture(Texture, TexCoord);
+COverlayGLRenderer
 NSLock
 alloc
 init
@@ -1098,8 +1100,12 @@ unlock
 	fragment float4 steamoverlay_nocolor_ps( Vertex inVertex [[ stage_in ]],
 											texture2d<float> overlay [[ texture( 0 ) ]] )
 		return overlay.sample( updateSampler, inVertex.texCoords );
+CBaseOverlayRenderer
+Waiting on shared FD for texture %d: received an outdated FD for texture %d instead, skipping.
+Waiting on shared FD for texture %d: peer is too far ahead and sending FD for texture %d.
 Mismatched chrome paint texture width/height!
 /tmp/steam_chrome_overlay_uid%d_spid%u
+  handle %llu: m_iTextureID %d m_fdPaintBuffer %d
 Corrupt render stream (getting cmd)... %s
 in saved stream
 in external stream
@@ -1164,8 +1170,8 @@ logfile opened early, s_Pid == 0 (Init has not been called yet)
 %a %b %d %H:%M:%S %Y UTC
 %s - 
 vrmonitor
-Failed to increase file count limit. Currently: %d
-GameID = %llu, AppID = %u, OverlayGameID = %llu, PID: %u, Executable: %s
+Failed to increase file count limit. Currently: %lu
+GameID = %llu, AppID = %u, OverlayGameID = %llu, PID: %u, tid %u Executable: %s
 IgnoreChildProcesses
 STEAM_OVERLAY_WINDOW_BLACKLIST
 GameOverlay_InputEventStream_%d
@@ -1346,7 +1352,7 @@ ASAXAXA`
 A^A[A^A\A`
 RCRB
 RCRBSCSASA`
-RASATBTASHp
+UATBTASFp
 p RBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRFp
 SBWATBTBYEZFZHVFRB
 R0@RCRARDp
@@ -1597,18 +1603,18 @@ ValveHookScreenshots
 ^SetNotificationPosition
 dBOverlayNeedsPresent
 jIsOverlayEnabled
-cYY0T
+cYY%
 Brrr
 XJ\Z
 :>6x
 :F	s
 FF26(
-4>>^
 L d\8
+?O	j
 zFRh
 035(I&R5&...
 "*."
-d60	<
+d00	<
 T0W[8 
 _BOverlayNeedsPresent
 _IsOverlayEnabled
@@ -1853,46 +1859,40 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-j imY
-2v7o
-L\e:
-L65|
-21&q
-pns)"
-r/K:<
-bcZ"
-II;M
-U4_q
-sG2U
-0n`[
-=xvl
-l_T1
-	XLT
-X%.J!
-#$d\
-v,iY
+n_8xgKsH:E
+\%dy
+N@}G
+dBy68g
+iCZU
+H/t!
+5y~:
+"rRD
+;6S3
+1L.d
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-['iW
-mKbN.
-,/.-1
-ULoy
-|%}g
-~SCw
-`([3S
-a?7&x 
-lacN}R
-:?3H
-+h"'
-~Tm G-
-$E_]
-3lIC
-IfRuJY
-#BNo
-\al-
-_:71
+7V)d
+S"T5
+%C)F
+?.-D
+Ew)f
+l#p|;
+:S<M
+wc{Xw
+M!=bx
+m){55
+had\w
+&)/M/
+^Va&`
+4Yq*
+h >WB5
+~!3)
+D!}/+V
+tT_(
+B4\v
+4ndVKt1
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -1948,10 +1948,8 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231124221240Z0/
-4Y$cU	
-6BaM0[
- 2(v+
+231128224629Z0/
+E1\q
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -1959,32 +1957,33 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		mjVOL5rafH8RDNd/NA330qlf5U0=
+		VFC1AeHKMQdTKVK/QZERNFzslxw=
 		</data>
 		<data>
-		Mih2Kxf/NR1z5IZI216WJ4EF5II=
+		tyVn17pchmyT9FStRTFcceyLNi8=
 		</data>
 	</array>
 </dict>
 </plist>
-|Bw2
-20231124221422Z0
+(h$a
+	9Uss
+20231128224630Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231116210533Z
-231228210532Z0B1
-Timestamp Signer NWK21
+231116212004Z
+231228212003Z0B1
+Timestamp Signer NWK11
 Apple Inc.1
-o:	q
-"O!w
+ {s:9
+=}3]	j
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-pM,5Ee
-.	AU
+.9sDq
+jv-Gc{
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -2023,11 +2022,10 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231124221422Z0#
-V36;o
-+ Fc
-){mT
-!>sa1
+231128224630Z0#
+"40+
+kG_g
+Y^It
 __TEXT
 __text
 __TEXT
@@ -2244,8 +2242,8 @@ AWAVAUATSH
 AWAVAUATSH
 t	E9
 [A\A]A^A_]
-t.E1
-[A^]
+AWAVSP
+[A^A_]
 AWAVAUATSP
 ~'E9
 [A\A]A^A_]
@@ -2320,7 +2318,7 @@ AWAVAUATSH
 D9` 
 D9c ~
 |$$I
-(%z{
+(%z}
 [A\A]A^A_]
 P A9
 [A\A]A^A_]
@@ -2365,8 +2363,8 @@ AWAVAUATSH
 H9^ 
 t$H9Y w
 D9A4u
-Y%ub
-(%-b
+Y%ud
+(%-d
 [A\A]A^A_]
 AWAVAUATSH
 8[A\A]A^A_]
@@ -2487,6 +2485,7 @@ AWAVATSI
 AWAVAUATSPH
 [A\A]A^A_]
 AVSH
+H9=Q
 [A^]
 H9GHt+H
 AWAVATSH
@@ -2500,17 +2499,19 @@ AWAVATSI
 D;K 
 [A\A^A_]
 AWAVAUATSH
-L9` 
-M9f 
+L9h 
+M9o veL
+A9_(u
+9F u	I
 9F t
 H[A\A]A^A_]
-A9N(u
-9F u
 AWAVSH
 86u"A
-h[A^A_]
+X[A^A_]
 AWAVATSH
 )CNH
+[A\A^A_]
+AWAVATSH
 [A\A^A_]
 AWAVAUATSH
 _`H9
@@ -2582,10 +2583,9 @@ AWAVSPI
 AWAVSP
 [A^A_]
 AWAVAUATSH
-D8-Lk
 ([A\A]A^A_]
-AWAVATSH
-[A\A^A_]
+AWAVAUATSH
+[A\A]A^A_]
 [A^]
 AWAVSH
 [A^A_]
@@ -2983,6 +2983,7 @@ Failed creating view of file for %s
 Size on connection to existing CSharedMemStream doesn't match actual: %s, %u, %u
 Warning: Memory was locked for put while destructing!
 Warning: Blocking wait on mutex failed in Clear: %d
+Warning: CSharedMemStream::Clear failed, expected %d bytes remaining, have %d.
 CSharedMemStream has memory already locked for put. Don't write with memory locked.
 Timed out waiting for mutex in GetInternal()
 Failed to take mutex in GetInternal()
@@ -3219,6 +3220,7 @@ out vec4 FragColor;
 uniform sampler2DRect Texture;
 void main(void)
 	FragColor = Color * texture(Texture, TexCoord);
+COverlayGLRenderer
 steamoverlay_
 Hooking %s::%s for %s
 Failed to hook %s::%s for %s
@@ -3307,8 +3309,12 @@ Game Metal RGB
 	fragment float4 steamoverlay_nocolor_ps( Vertex inVertex [[ stage_in ]],
 											texture2d<float> overlay [[ texture( 0 ) ]] )
 		return overlay.sample( updateSampler, inVertex.texCoords );
+CBaseOverlayRenderer
+Waiting on shared FD for texture %d: received an outdated FD for texture %d instead, skipping.
+Waiting on shared FD for texture %d: peer is too far ahead and sending FD for texture %d.
 Mismatched chrome paint texture width/height!
 /tmp/steam_chrome_overlay_uid%d_spid%u
+  handle %llu: m_iTextureID %d m_fdPaintBuffer %d
 Corrupt render stream (getting cmd)... %s
 in saved stream
 in external stream
@@ -3373,8 +3379,8 @@ logfile opened early, s_Pid == 0 (Init has not been called yet)
 %a %b %d %H:%M:%S %Y UTC
 %s - 
 vrmonitor
-Failed to increase file count limit. Currently: %d
-GameID = %llu, AppID = %u, OverlayGameID = %llu, PID: %u, Executable: %s
+Failed to increase file count limit. Currently: %lu
+GameID = %llu, AppID = %u, OverlayGameID = %llu, PID: %u, tid %u Executable: %s
 IgnoreChildProcesses
 STEAM_OVERLAY_WINDOW_BLACKLIST
 GameOverlay_InputEventStream_%d
@@ -3804,7 +3810,7 @@ ASAXAXA`
 A^A[A^A\A`
 RBRB
 RBRBSCSASA`
-RBRBSDTDTASDp
+RBRCSDTDTASDp
 p RARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARF
 SBTASDTDTDTASARAZBZASASARB
 XBWAp@p0`*ASASASASASASASB^CRAp
@@ -4086,7 +4092,6 @@ G.11
 T:dV
 >@.v
 D: 0 
-(44n
 n<Xj
 :"6~K
 :*z6
@@ -4347,40 +4352,38 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-)b+V
-[(|r
-!:1 (
-ll)),
-'Nza
-L*bc
-+UJH\
-s=M-Q
-##8>
-XH,.
-w05!
-pVVqpT
-[+9R
-y_-f
-{yji
+$yuU
+O4\G
+,A~E
+JQzTI
+a@^c
+fgaCd'
+OsT8
+3Zd\
+Z@{M
+d}c|
+=%=Y
+k#.F
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-VXe{
-gcsr_
-<@7V
-8NNvy
-J	,>
-.]00D
-wB[^
-QU)9qq
-KnvW
-.@26
-0u3\V(
-zZS.
-I26;o
-Vtp>O
-#TNJ
+_1y*-
+vE#}
+E&+c
+f]@H
+/^S{
+_V>"
+hc]L
+U=gw5 
+?7{-h80
+E,Js
+)4@'s
+-:F;@
+#y=9$
+Xr(Q
+b$ ~
+%,o,#
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -4436,8 +4439,8 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231124221240Z0/
-0Q/-"
+231128224629Z0/
+P8n!
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -4445,20 +4448,20 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		zQ4Lkj4HMFEvLSLEnhIqQ5MezoI=
+		ozJxlAxpkoRzNv1f+vR1BILI9B4=
 		</data>
 		<data>
-		IPFZegjLZxRkcWW2PByLUdxUAQk=
+		cbI8z+m+kUU89Wy96VA4biED3yE=
 		</data>
 	</array>
 </dict>
 </plist>
-WI0Q
-xsx{q
-JYz& 
-V\~0
-TUDW
-20231124221422Z0
+L%$K
+aQM[
+r~,+
+;LN&w_
+ 9yv=OH
+20231128224630Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -4513,7 +4516,10 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231124221422Z0#
+231128224630Z0#
+Eo4USC
+:_}m1sfX?
+Fp@z
 __TEXT
 __text
 __TEXT
@@ -4574,6 +4580,7 @@ __common
 __DATA
 __LINKEDIT
 @loader_path/gameoverlayrenderer.dylib
+t.{%2
 /System/Library/Frameworks/OpenGL.framework/Versions/A/OpenGL
 /System/Library/Frameworks/AppKit.framework/Versions/C/AppKit
 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices
@@ -4606,7 +4613,6 @@ h&B)
 56P@
 @9h*
 h&E9
- E9H
 4h^A
 $E9H
 .E9(
@@ -4618,9 +4624,8 @@ $E9H
 h&A)
 (	29
 jh8)	
-@)7(
+@)A(
 29:;	
-@9GB
 h"@9
 Th*@
 Th.@
@@ -4631,17 +4636,19 @@ XcZ@
 h&@9
 hvB9
 hrB9
-C9a"C9b&C9c*C9
-Td	P
-Vd	P
+C9a"C9b&C9c*C95B
+[)\B
+ty	P
+vy	P
 aBA9
-A`	0
+au	0
 h&D)
-l;	0
+lP	0
 <v}	
 =h"@9
 h"@9
 yi:@
+`1	p
 Th#@
 -D@!
 X`rA
@@ -4701,7 +4708,9 @@ X`"B
 X`~B
 X`zB
 X`&B
-H%	X
+:	X 
+y*	X
+Y&	XX
 	Am 8`
 #V)h
 4h.@
@@ -4720,13 +4729,16 @@ WA)9
 @z`:@z`
 o"E@
 !~"8"
-T( @
 TYC@
+T( @
 yixJ	
 T`2@
 T`2@
 T	!@
 T`2@
+Y)@(
+[)@'
+Ay %
 T`2@
 T`2@
 T`2@
@@ -4748,6 +4760,8 @@ Th&@
 Rh:@
 9`&@
 Th&@
+ F	X
+AD	X
 T`2@
 4a2@
 T*;A
@@ -4756,6 +4770,7 @@ hbD9H
 4h"A
 hbD9
 hbD9h
+IL9(
 !IzH
 	!F9
 hRG9
@@ -4841,6 +4856,7 @@ Failed creating view of file for %s
 Size on connection to existing CSharedMemStream doesn't match actual: %s, %u, %u
 Warning: Memory was locked for put while destructing!
 Warning: Blocking wait on mutex failed in Clear: %d
+Warning: CSharedMemStream::Clear failed, expected %d bytes remaining, have %d.
 CSharedMemStream has memory already locked for put. Don't write with memory locked.
 Timed out waiting for mutex in GetInternal()
 Failed to take mutex in GetInternal()
@@ -5077,6 +5093,7 @@ out vec4 FragColor;
 uniform sampler2DRect Texture;
 void main(void)
 	FragColor = Color * texture(Texture, TexCoord);
+COverlayGLRenderer
 steamoverlay_
 Hooking %s::%s for %s
 Failed to hook %s::%s for %s
@@ -5165,8 +5182,12 @@ Game Metal RGB
 	fragment float4 steamoverlay_nocolor_ps( Vertex inVertex [[ stage_in ]],
 											texture2d<float> overlay [[ texture( 0 ) ]] )
 		return overlay.sample( updateSampler, inVertex.texCoords );
+CBaseOverlayRenderer
+Waiting on shared FD for texture %d: received an outdated FD for texture %d instead, skipping.
+Waiting on shared FD for texture %d: peer is too far ahead and sending FD for texture %d.
 Mismatched chrome paint texture width/height!
 /tmp/steam_chrome_overlay_uid%d_spid%u
+  handle %llu: m_iTextureID %d m_fdPaintBuffer %d
 Corrupt render stream (getting cmd)... %s
 in saved stream
 in external stream
@@ -5231,8 +5252,8 @@ logfile opened early, s_Pid == 0 (Init has not been called yet)
 %a %b %d %H:%M:%S %Y UTC
 %s - 
 vrmonitor
-Failed to increase file count limit. Currently: %d
-GameID = %llu, AppID = %u, OverlayGameID = %llu, PID: %u, Executable: %s
+Failed to increase file count limit. Currently: %lu
+GameID = %llu, AppID = %u, OverlayGameID = %llu, PID: %u, tid %u Executable: %s
 IgnoreChildProcesses
 STEAM_OVERLAY_WINDOW_BLACKLIST
 GameOverlay_InputEventStream_%d
@@ -5560,7 +5581,7 @@ v24@0:8@"NSString"16
 @"NSError"16@0:8
 {CGPoint=dd}16@0:8
 @44@0:8Q16@24@32B40
-!pZA`
+!p[A`
 RASASAp
 RAVAp
 RARAXARARAVAp
@@ -5568,7 +5589,7 @@ RAYAp
 RAYARA`
 ARA`
 RBRB
-RBRBSCSBRAUBSFSCRDp
+RBRBSCSBRAUBSFSCRCp
 RBRB
 Ap@p0SASASASASASASB^CRAp
 RARARARARARARARARARARARARARARARARARARBRB`
@@ -6096,38 +6117,32 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-p*$c
-|Xq^Z&{
-d^yR<P*m
-zPYfQ
-.$I!L
-54**
-OH`#
-m8/Zq))G
-aYmu
-jJ;w
++gne
+58V'
+ RA2
+&2md
+VB,I
+.FSJ
+?<K@s2
+[d<o
 subject.OU
 MXGJJ98X76
 com.valvesoftware.steam
 MXGJJ98X76
-nUNU
-x)B	s
-7RX"
-8cGv_5
-BrVU
-VeM;
-VB9PU
-U{\$H
-Ea1N
-.t/	
-m,DWbg'
-$\l(
--Yf{
-Is.uwZ_>
-!_N)
-~%_Us
-R}Wb
-ROH"
+qtz1
+kUwM
+Jo"N
+`B/'
+<r c
+wP)'
+	r\Y3
+!{kc
+~!Cf
+pNn-
+Ne(3
+XQ/t6
+k^qRR2
+D6lG$
 Apple Inc.1&0$
 Apple Certification Authority1
 Apple Root CA0
@@ -6183,8 +6198,10 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231124221240Z0/
-zZ[Y
+231128224629Z0/
+m3W@
+E+vH%/b
+'mm1
 H<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -6192,35 +6209,36 @@ H<?xml version="1.0" encoding="UTF-8"?>
 	<key>cdhashes</key>
 	<array>
 		<data>
-		22SPirP6neEgEnt+z3paW1kKqWU=
+		1CdtbTHPy6QhTUL+6SNK/46s1WA=
 		</data>
 		<data>
-		BE4w3jmPkkl8n1xkPP7BH/j4mGA=
+		zxJTA8/6RxPzZw6VaahEIZjykyQ=
 		</data>
 	</array>
 </dict>
 </plist>
-tAV*u
-I|p)
-gPj10
-$z.?
-20231124221422Z0
+gV{vV&#)
+C?aw
+="ju
+8,$J
+ZGmdt`
+20231128224630Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231116212004Z
-231228212003Z0B1
-Timestamp Signer NWK11
+231116210533Z
+231228210532Z0B1
+Timestamp Signer NWK21
 Apple Inc.1
- {s:9
-=}3]	j
+o:	q
+"O!w
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-.9sDq
-jv-Gc{
+pM,5Ee
+.	AU
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -6259,8 +6277,10 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-231124221422Z0#
-h3b0+
-)Mt)
-_?|e
-n@~hfo:
+231128224630Z0#
+tp*X
+>.%\*
+mGT;f
+E`28
+zufXn
+kOI6Y
