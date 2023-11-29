@@ -10,8 +10,8 @@
       n.r(t), n.d(t, { default: () => d });
       var a = n(49675),
         o = n(89526),
-        c = n(69338),
-        r = n(44973),
+        r = n(69338),
+        c = n(44973),
         i = n(44989),
         u = n(87289);
       function d(e) {
@@ -27,20 +27,21 @@
                     t.start_date > e &&
                     t.start_date < n &&
                     !t.reviewed_by_account &&
-                    (t.creator_account_id == r.L7.accountid ||
-                      t.owner_account_id == r.L7.accountid ||
-                      t.artwork_owner_account_id == r.L7.accountid ||
-                      t.operator_account_id == r.L7.accountid ||
+                    (t.creator_account_id == c.L7.accountid ||
+                      t.owner_account_id == c.L7.accountid ||
+                      (t.artwork_owner_account_id == c.L7.accountid &&
+                        !t.artwork_completed_time) ||
+                      t.operator_account_id == c.L7.accountid ||
                       (null === (a = t.watch_list) || void 0 === a
                         ? void 0
-                        : a.includes(r.L7.accountid)))
+                        : a.includes(c.L7.accountid)))
                   );
                 })
                 .map((e) => e.id);
             }
             return null;
           }, [t]);
-        return r.L7.is_support
+        return c.L7.is_support
           ? n && 0 != t.length
             ? 0 == n.length
               ? o.createElement(
@@ -57,7 +58,7 @@
                     bHideTypeField: !0,
                   }),
                 )
-            : o.createElement(c.V, {
+            : o.createElement(r.V, {
                 string: "loading",
                 size: "medium",
                 position: "center",

@@ -15638,6 +15638,13 @@
           e !== this.m_model.sale_optin_enabled &&
             ((this.m_model.sale_optin_enabled = e), this.SetDirty(!0));
         }
+        GetOptInType() {
+          return this.m_model.optin_type || s.Vs.k_EOptInType_EventRegistration;
+        }
+        SetOptInType(e) {
+          e !== this.m_model.optin_type &&
+            ((this.m_model.optin_type = e), this.SetDirty(!0));
+        }
         GetPublicEventURL() {
           return this.m_model.public_event_url;
         }
@@ -16662,6 +16669,8 @@
         ),
         (0, o.gn)([u.ak], R.prototype, "BIsOptInEnabled", null),
         (0, o.gn)([c.aD.bound], R.prototype, "SetOptInEnabled", null),
+        (0, o.gn)([u.ak], R.prototype, "GetOptInType", null),
+        (0, o.gn)([c.aD.bound], R.prototype, "SetOptInType", null),
         (0, o.gn)([c.aD.bound], R.prototype, "SetPublicEventURL", null),
         (0, o.gn)(
           [c.aD.bound],
@@ -20506,7 +20515,17 @@
         );
       }
       const Ft = (0, De.Pi)((e) => {
-          const t = R.Get();
+          const t = R.Get(),
+            n = [
+              {
+                label: "Event Registration",
+                data: s.Vs.k_EOptInType_EventRegistration,
+              },
+              {
+                label: "Recommended Actions",
+                data: s.Vs.k_EOptInType_RecommendedAction,
+              },
+            ];
           return b.createElement(
             Le.ug,
             { title: "Basic Event Info", bStartMinimized: !1 },
@@ -20540,6 +20559,17 @@
                 classNameForTextArea: xe().EventBBCodeEditor,
                 limitBBCode: void 0,
                 nOverridesRows: 10,
+              }),
+              b.createElement("h3", null, "OptIn Type"),
+              b.createElement(F.ry, {
+                strDropDownClassName: H().DropDownScroll,
+                rgOptions: n,
+                selectedOption: t.GetOptInType(),
+                onChange: (e) => t.SetOptInType(e.data),
+                bDisableMouseOverlay: !0,
+                contextMenuPositionOptions: { bDisableMouseOverlay: !0 },
+                tooltip:
+                  "Allows us to re-use OptIn tech for non-event registration purposes.",
               }),
             ),
             b.createElement(

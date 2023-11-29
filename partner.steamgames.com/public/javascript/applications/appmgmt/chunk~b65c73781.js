@@ -4878,17 +4878,19 @@
     64368: (e, t, a) => {
       "use strict";
       a.d(t, {
-        B7: () => r,
-        JA: () => c,
-        MH: () => m,
+        B7: () => l,
+        JA: () => m,
+        MH: () => d,
         Sc: () => n,
-        Xj: () => l,
-        pM: () => o,
+        Vs: () => s,
+        Xj: () => o,
+        pM: () => c,
       });
       var n,
         i,
-        s = a(40442);
-      function r(e, t) {
+        s,
+        r = a(40442);
+      function l(e, t) {
         var a, n, i, s, r;
         if (e) {
           const l =
@@ -4918,30 +4920,30 @@
         }
         return !1;
       }
-      function l(e, t, a = "") {
+      function o(e, t, a = "") {
         if (e) {
-          const n = (0, s.j_)(t);
+          const n = (0, r.j_)(t);
           return e[n] ? e[n] : e.english ? e.english : a;
         }
         return a;
       }
-      function o(e, t, a = "") {
+      function c(e, t, a = "") {
         if (e) {
-          const n = (0, s.j_)(t);
+          const n = (0, r.j_)(t);
           return e[n] ? e[n] : a;
         }
         return a;
       }
-      function c(e, t) {
+      function m(e, t) {
         var a;
-        const n = (0, s.j_)(t);
+        const n = (0, r.j_)(t);
         return (
           (null === (a = null == e ? void 0 : e[n]) || void 0 === a
             ? void 0
             : a.length) > 0
         );
       }
-      function m(e) {
+      function d(e) {
         var t;
         null === (t = e.dynamic_sections) ||
           void 0 === t ||
@@ -4954,15 +4956,15 @@
                 null === (t = e.options) ||
                   void 0 === t ||
                   t.forEach((e, t) => {
-                    d(e.text), d(e.tooltip);
+                    u(e.text), u(e.tooltip);
                   });
               });
           });
       }
-      function d(e) {
+      function u(e) {
         if (e)
           for (let t = 0; t < 31; ++t) {
-            const a = (0, s.j_)(t);
+            const a = (0, r.j_)(t);
             null == e[a] ||
               null == e[a] ||
               Number.isNaN(e[a]) ||
@@ -4978,7 +4980,13 @@
           (e[(e.k_Optional = 0)] = "k_Optional"),
             (e[(e.k_Suggested = 1)] = "k_Suggested"),
             (e[(e.k_Required = 2)] = "k_Required");
-        })(i || (i = {}));
+        })(i || (i = {})),
+        (function (e) {
+          (e[(e.k_EOptInType_EventRegistration = 0)] =
+            "k_EOptInType_EventRegistration"),
+            (e[(e.k_EOptInType_RecommendedAction = 1)] =
+              "k_EOptInType_RecommendedAction");
+        })(s || (s = {}));
     },
     43835: (e, t, a) => {
       "use strict";

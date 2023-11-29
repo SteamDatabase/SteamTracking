@@ -2930,6 +2930,12 @@ enum ENotifyFlag
 	k_ENotifyFlagByPush = 2;
 }
 
+enum EOptInType
+{
+	k_EOptInType_EventRegistration = 0;
+	k_EOptInType_RecommendedAction = 1;
+}
+
 enum EOSBranch
 {
 	k_EOSBranch_Unknown = 0;
