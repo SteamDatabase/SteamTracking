@@ -7350,7 +7350,7 @@
                     null,
                     i.createElement(
                       i.Suspense,
-                      { fallback: i.createElement("div", null) },
+                      { fallback: null },
                       i.createElement(Qe, {
                         nAppIDVOD: e.appid,
                         watchLocation: 9,
@@ -12260,9 +12260,9 @@
           },
         );
       }
-      function Ve(e, t, n) {
-        const i = (0, Fe.bY)(),
-          o = (0, Pe.useQueryClient)();
+      function Ve(e, t, n, i) {
+        const o = (0, Fe.bY)(),
+          l = (0, Pe.useQueryClient)();
         return (0, Pe.useMutation)(
           () =>
             (0, a.mG)(this, void 0, void 0, function* () {
@@ -12279,14 +12279,21 @@
                     [o.GetEResult(), o.Body().toObject()]
                   );
                 });
-              })(i, e, t, n);
+              })(o, e, t, n);
             }),
           {
             onSuccess([e, t]) {
-              1 == e &&
-                (function (e, t) {
-                  e.setQueryData(`SteamAwardNominations_${Ue.L7.accountid}`, t);
-                })(o, t.nominations);
+              1 == e
+                ? (function (e, t) {
+                    e.setQueryData(
+                      `SteamAwardNominations_${Ue.L7.accountid}`,
+                      t,
+                    );
+                  })(l, t.nominations)
+                : i && i(e);
+            },
+            onError() {
+              i && i();
             },
           },
         );
@@ -12367,13 +12374,17 @@
           [c, d] = (0, l.useState)(null),
           { currentNomination: m, bLoadingNominationForCategory: p } =
             (function (e) {
-              const t = ze();
-              return t.data
-                ? {
-                    currentNomination: t.data.find((t) => t.category_id == e),
+              var t;
+              const n = ze();
+              return n.isLoading
+                ? { bLoadingNominationForCategory: !0 }
+                : {
+                    currentNomination:
+                      null === (t = n.data) || void 0 === t
+                        ? void 0
+                        : t.find((t) => t.category_id == e),
                     bLoadingNominationForCategory: !1,
-                  }
-                : { bLoadingNominationForCategory: !0 };
+                  };
             })(r);
         if (
           ((0, l.useEffect)(() => {
@@ -12493,35 +12504,20 @@
           [r, s] = (0, Be.SZ)(() => [n.GetSteamAwardCategory(), n.appid]),
           c = null == o ? void 0 : o.appid,
           d = Ve(s, r, 0),
-          m = l.useRef(),
-          p =
+          m = Boolean(
             (null == o ? void 0 : o.appid) == s &&
-            (null == o ? void 0 : o.category_id) == r,
-          _ = (0, l.useCallback)(
+              (null == o ? void 0 : o.category_id) == r,
+          ),
+          p = (0, l.useCallback)(
             (e) =>
               (0, a.mG)(this, void 0, void 0, function* () {
-                var t, n;
                 if (!e)
-                  return (
-                    console.log(
-                      "EventDisplaySteamAwardNomination: ignore turning off the checkbox",
-                    ),
-                    void (
-                      null === (t = m.current) ||
-                      void 0 === t ||
-                      t.setState({ checked: !1 })
-                    )
+                  return void console.log(
+                    "EventDisplaySteamAwardNomination: ignore turning off the checkbox",
                   );
                 if (!Ye(!1))
-                  return (
-                    console.log(
-                      "EventDisplaySteamAwardNomination: UserEligibleToNominateOrVote failed",
-                    ),
-                    void (
-                      null === (n = m.current) ||
-                      void 0 === n ||
-                      n.setState({ checked: !1 })
-                    )
+                  return void console.log(
+                    "EventDisplaySteamAwardNomination: UserEligibleToNominateOrVote failed",
                   );
                 c && c != s
                   ? (0, z.AM)(
@@ -12530,14 +12526,6 @@
                         newAppID: s,
                         curNominatedAppID: c,
                         fnOnConfirm: d.mutate,
-                        fnOnCancel: () => {
-                          var e;
-                          return (
-                            (null === (e = m.current) || void 0 === e
-                              ? void 0
-                              : e.checked) && m.current.Toggle()
-                          );
-                        },
                       }),
                       window,
                     )
@@ -12545,15 +12533,15 @@
               }),
             [c, s, d],
           ),
-          h = b.JW.GetTimeNowWithOverride(),
-          E =
+          _ = b.JW.GetTimeNowWithOverride(),
+          h =
             1 ==
             (null === (t = i.rgAwardCategoryDetails) || void 0 === t
               ? void 0
               : t.length),
-          v =
-            n.BIsEventActionEnabled() || h < n.GetStartTimeAndDateUnixSeconds();
-        return E && (v || p)
+          E =
+            n.BIsEventActionEnabled() || _ < n.GetStartTimeAndDateUnixSeconds();
+        return h && (E || m)
           ? l.createElement(
               "div",
               { className: qe().SteamAwardVoteWidget },
@@ -12569,18 +12557,18 @@
                     },
                     className: (0, x.Z)(
                       qe().SteamAwardNominateButton,
-                      p && qe().Nominated,
+                      m && qe().Nominated,
                     ),
                   },
                   l.createElement(u.ji, {
-                    ref: m,
+                    controlled: !0,
                     className: (0, x.Z)(
                       qe().SteamAwardVoteCheckBox,
-                      p && qe().Nominated,
+                      m && qe().Nominated,
                     ),
-                    checked: p,
-                    onChange: _,
-                    disabled: p,
+                    checked: m,
+                    onChange: p,
+                    disabled: m,
                     color: "#FFFFFF",
                     highlightColor: "white",
                     label: l.createElement(
@@ -12589,7 +12577,7 @@
                       l.createElement(
                         "div",
                         { className: qe().SteamAwardCategoryTitle },
-                        p
+                        m
                           ? (0, L.kQ)(
                               "#SteamAwards_NominateWidget_CTA_PastTense",
                               i.rgAwardCategoryDetails[0]
@@ -12610,7 +12598,7 @@
                   i.rgAwardCategoryDetails[0].strSuggestedCategoryDesc,
                 ),
               ),
-              Boolean(v && r != i.eLaborOfLove) &&
+              Boolean(E && r != i.eLaborOfLove) &&
                 l.createElement(
                   "div",
                   { className: qe().SteamAwardLinkToNominationPage },
@@ -13736,7 +13724,7 @@
                   { className: it().EventBroadcastCtn },
                   l.createElement(
                     l.Suspense,
-                    { fallback: l.createElement("div", null) },
+                    { fallback: null },
                     l.createElement(yt, { event: this.props.event }),
                   ),
                 ),
@@ -18722,7 +18710,7 @@
         );
       };
       var ze = n(83315),
-        Ve = n(18030),
+        Ve = n(17973),
         We = n(13364),
         Ze = n.n(We),
         qe = n(82971),
@@ -20169,7 +20157,6 @@
                 ),
                 b.createElement(Ve.ZP, {
                   styles: l,
-                  label: "Choose Type (Required):",
                   isSearchable: !0,
                   isMulti: !1,
                   placeholder: "Choose Event type",
@@ -29022,7 +29009,6 @@
               name: "searchField",
               backspaceRemovesValue: !0,
               isSearchable: !0,
-              multi: Boolean("multi_select" == t.input_style),
               isMulti: Boolean("multi_select" == t.input_style),
               defaultMenuIsOpen: !1,
               isClearable: !0,

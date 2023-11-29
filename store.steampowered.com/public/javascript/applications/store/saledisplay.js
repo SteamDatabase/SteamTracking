@@ -34,12 +34,7 @@
           m = (0, s.BE)(g, n),
           d = (0, i.id)(),
           E = window.__virtual_keyboard_client;
-        if (
-          ((0, r.useEffect)(() => {
-            u.Wz.SetHookFactory(() => E);
-          }, [E]),
-          d)
-        ) {
+        if (d) {
           const e = window.__nav_tree_root;
           return r.createElement(
             o.Fe,
@@ -48,7 +43,11 @@
               secondary: !0,
               parentEmbeddedNavTree: e,
             }),
-            r.createElement(c.O, null, t),
+            r.createElement(
+              u.o5,
+              { factory: E },
+              r.createElement(c.O, null, t),
+            ),
           );
         }
         return r.createElement(r.Fragment, null, t);

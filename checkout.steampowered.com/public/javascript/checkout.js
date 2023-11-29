@@ -753,7 +753,12 @@ function InitializeTransaction()
 		}
 
 		$('gift_tracking_description').hide();
-				if ( bIsGift )
+		$('checkout_receipt_description').show();
+				if ( g_bHardwareOnly )
+		{
+						$('checkout_receipt_description').hide();
+		}
+		else if ( bIsGift )
 		{
 			if ( $('send_self') && $('send_self').checked )
 			{

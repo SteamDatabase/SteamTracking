@@ -115,7 +115,13 @@
         LoginButton: "partnersaledisplay_LoginButton_1wBKC",
         SaleOverlayCtn: "partnersaledisplay_SaleOverlayCtn_2xKaE",
         SaleOverlay: "partnersaledisplay_SaleOverlay_3Ae58",
+        CarouselCapsuleBordered:
+          "partnersaledisplay_CarouselCapsuleBordered_320kq",
+        CarouselCapsuleAnimated:
+          "partnersaledisplay_CarouselCapsuleAnimated_3NNM0",
         AppSummaryWidgetCtn: "partnersaledisplay_AppSummaryWidgetCtn_1q54W",
+        CarouselSalePageCapsule:
+          "partnersaledisplay_CarouselSalePageCapsule_3m73y",
         SaleBroadcastCtn: "partnersaledisplay_SaleBroadcastCtn_kBxKM",
         PresenterDisclaimer: "partnersaledisplay_PresenterDisclaimer_2DKML",
         PresenterLabel: "partnersaledisplay_PresenterLabel_2DHK7",
@@ -14981,7 +14987,7 @@
             onMouseEnter: g,
             onMouseLeave: S,
             onFocus: g,
-            onClick: !!s && f,
+            onClick: s ? f : void 0,
             onTouchStart: y,
             onKeyDown: v,
           }),
@@ -18376,7 +18382,7 @@
       var n = a(24953),
         i = a(24176),
         s = a(89526),
-        r = a(18030),
+        r = a(17973),
         o = a(13364),
         l = a.n(o),
         d = a(22444),

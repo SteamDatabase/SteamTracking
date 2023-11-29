@@ -4,6 +4,71 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [7200],
   {
+    99813: (e) => {
+      /*
+object-assign
+(c) Sindre Sorhus
+@license MIT
+*/
+      var t = Object.getOwnPropertySymbols,
+        n = Object.prototype.hasOwnProperty,
+        o = Object.prototype.propertyIsEnumerable;
+      e.exports = (function () {
+        try {
+          if (!Object.assign) return !1;
+          var e = new String("abc");
+          if (((e[5] = "de"), "5" === Object.getOwnPropertyNames(e)[0]))
+            return !1;
+          for (var t = {}, n = 0; n < 10; n++)
+            t["_" + String.fromCharCode(n)] = n;
+          if (
+            "0123456789" !==
+            Object.getOwnPropertyNames(t)
+              .map(function (e) {
+                return t[e];
+              })
+              .join("")
+          )
+            return !1;
+          var o = {};
+          return (
+            "abcdefghijklmnopqrst".split("").forEach(function (e) {
+              o[e] = e;
+            }),
+            "abcdefghijklmnopqrst" ===
+              Object.keys(Object.assign({}, o)).join("")
+          );
+        } catch (e) {
+          return !1;
+        }
+      })()
+        ? Object.assign
+        : function (e, i) {
+            for (
+              var r,
+                u,
+                s = (function (e) {
+                  if (null == e)
+                    throw new TypeError(
+                      "Object.assign cannot be called with null or undefined",
+                    );
+                  return Object(e);
+                })(e),
+                a = 1;
+              a < arguments.length;
+              a++
+            ) {
+              for (var l in (r = Object(arguments[a])))
+                n.call(r, l) && (s[l] = r[l]);
+              if (t) {
+                u = t(r);
+                for (var g = 0; g < u.length; g++)
+                  o.call(r, u[g]) && (s[u[g]] = r[u[g]]);
+              }
+            }
+            return s;
+          };
+    },
     34641: (e, t, n) => {
       var o =
           Object.assign ||
@@ -318,10 +383,10 @@
                     j = a.value,
                     P = a.onFocus,
                     k = a.onKeyDown,
-                    R = this.willRenderSuggestions(this.props),
-                    E = S || (b && !w && R),
-                    D = E ? n : [],
-                    T = o({}, a, {
+                    E = this.willRenderSuggestions(this.props),
+                    R = S || (b && !w && E),
+                    T = R ? n : [],
+                    D = o({}, a, {
                       onFocus: function (t) {
                         if (
                           !e.justSelectedSuggestion &&
@@ -401,7 +466,7 @@
                           case 13:
                             if (229 === t.keyCode) break;
                             var l = e.getHighlightedSuggestion();
-                            if ((E && !S && e.closeSuggestions(), null != l)) {
+                            if ((R && !S && e.closeSuggestions(), null != l)) {
                               var g = v(l);
                               e.maybeCallOnChange(t, g, "enter"),
                                 e.onSuggestionSelected(t, {
@@ -418,8 +483,8 @@
                             }
                             break;
                           case 27:
-                            E && t.preventDefault();
-                            var c = E && !S;
+                            R && t.preventDefault();
+                            var c = R && !S;
                             if (null === x) {
                               if (!c) {
                                 e.maybeCallOnChange(t, "", "escape"),
@@ -439,7 +504,7 @@
                     M = { query: this.getQuery() };
                   return u.default.createElement(l.default, {
                     multiSection: c,
-                    items: D,
+                    items: T,
                     renderInputComponent: i,
                     renderItemsContainer: this.renderSuggestionsContainer,
                     renderItem: s,
@@ -448,7 +513,7 @@
                     getSectionItems: p,
                     highlightedSectionIndex: C,
                     highlightedItemIndex: _,
-                    inputProps: T,
+                    inputProps: D,
                     itemProps: this.itemProps,
                     theme: (0, g.mapToAutowhateverTheme)(m),
                     id: f,

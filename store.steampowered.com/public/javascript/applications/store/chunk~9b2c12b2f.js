@@ -2801,7 +2801,7 @@
                     null,
                     r.createElement(
                       r.Suspense,
-                      { fallback: r.createElement("div", null) },
+                      { fallback: null },
                       r.createElement(Ye, {
                         nAppIDVOD: e.appid,
                         watchLocation: 9,

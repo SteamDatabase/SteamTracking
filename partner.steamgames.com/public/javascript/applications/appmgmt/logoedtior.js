@@ -304,7 +304,7 @@
         });
       var s = o(33940),
         a = o(89526),
-        i = o(73961),
+        i = o(24470),
         r = o(52868),
         n = o.n(r),
         l = o(88464),
@@ -1530,7 +1530,7 @@
       function ee(e, t) {
         const o = (0, K.kQ)("editorconfig", t);
         let s = new D(o);
-        i.render(a.createElement(e ? te : oe, { LogoEditorStore: s }), t);
+        i.s(t).render(a.createElement(e ? te : oe, { LogoEditorStore: s }));
       }
       class te extends a.Component {
         constructor(e) {

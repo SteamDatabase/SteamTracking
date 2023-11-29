@@ -55,12 +55,7 @@
           d = (0, m.BE)(u, n),
           _ = (0, c.id)(),
           h = window.__virtual_keyboard_client;
-        if (
-          ((0, r.useEffect)(() => {
-            s.Wz.SetHookFactory(() => h);
-          }, [h]),
-          _)
-        ) {
+        if (_) {
           const e = window.__nav_tree_root;
           return r.createElement(
             o.Fe,
@@ -69,7 +64,11 @@
               secondary: !0,
               parentEmbeddedNavTree: e,
             }),
-            r.createElement(i.O, null, t),
+            r.createElement(
+              s.o5,
+              { factory: h },
+              r.createElement(i.O, null, t),
+            ),
           );
         }
         return r.createElement(r.Fragment, null, t);
@@ -152,8 +151,8 @@
         h = n(25871);
       var p = n(19304),
         H = n(69485),
-        S = n(5029),
-        y = n(59934),
+        y = n(5029),
+        S = n(59934),
         C = n(51438),
         b = n(66294),
         f = n(83145);
@@ -344,9 +343,9 @@
       const I = "subsection",
         T = "browsefilter";
       function N() {
-        const e = (0, y.k6)(),
-          t = (0, S.ks)(e, I),
-          n = (0, S.ks)(e, T);
+        const e = (0, S.k6)(),
+          t = (0, y.ks)(e, I),
+          n = (0, y.ks)(e, T);
         return r.createElement(
           "div",
           null,

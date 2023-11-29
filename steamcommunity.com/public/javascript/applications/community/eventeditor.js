@@ -1868,7 +1868,7 @@
               null,
               d.createElement(
                 d.Suspense,
-                { fallback: d.createElement("div", null) },
+                { fallback: null },
                 d.createElement(et, { bIsPreview: a, rgReservationDef: i }),
               ),
               Boolean(r.allow_purchase_in_country) &&

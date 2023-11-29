@@ -1151,7 +1151,7 @@
     },
     1362: (e, t, a) => {
       "use strict";
-      a.d(t, { Eg: () => _, r8: () => p });
+      a.d(t, { Eg: () => _, r8: () => p, wM: () => v });
       var n = a(33940),
         i = (a(5615), a(89526), a(40442)),
         s = a(68333),
@@ -1395,6 +1395,11 @@
         }
       }
       (0, n.gn)([d.LO], h.prototype, "m_templateVars", void 0);
+      const g = "^(replay)([0-9]{4})";
+      function v(e) {
+        const t = e.match(g);
+        return null == t ? void 0 : t[2];
+      }
     },
     10241: (e, t, a) => {
       "use strict";
@@ -12635,7 +12640,7 @@
         s = a(65395),
         r = a(83315),
         l = a(89526),
-        o = a(18030),
+        o = a(17973),
         c = a(92616),
         m = a(85886),
         d = a(25871),
@@ -13360,7 +13365,7 @@
         s = a(43278),
         r = a(29785),
         l = a(89526),
-        o = a(18030),
+        o = a(17973),
         c = a(92616),
         m = a(85886),
         d = a(25871),
@@ -13707,7 +13712,7 @@
         I = a(18643),
         P = a(36105),
         w = a.n(P),
-        A = a(43489),
+        A = a(20420),
         T = a(59934),
         N = a(85651),
         R = a(44973),
@@ -14264,7 +14269,7 @@
     },
     75709: (e, t, a) => {
       "use strict";
-      a.r(t), a.d(t, { PromotionRoutes: () => Zs, default: () => Ks });
+      a.r(t), a.d(t, { PromotionRoutes: () => Ks, default: () => zs });
       var n = a(96927),
         i = a(3674),
         s = a(42738),
@@ -17539,7 +17544,7 @@
           message: (e) =>
             !a ||
             !t() ||
-            e.pathname == "promotion/" + Zs.DailyDealEditor(a.GetDealID()) ||
+            e.pathname == "promotion/" + Ks.DailyDealEditor(a.GetDealID()) ||
             (0, P.Xx)("#DailyDeals_UnsavedChanges"),
         });
       }
@@ -17589,7 +17594,7 @@
             l.createElement("div", null, (0, P.Xx)("#DailyDeals_NotExist")),
             l.createElement(
               o.rU,
-              { to: Zs.DailyDealDashboard() },
+              { to: Ks.DailyDealDashboard() },
               (0, P.Xx)("#DailyDeals_Dashboard"),
             ),
           );
@@ -17626,7 +17631,7 @@
               o.rU,
               {
                 to:
-                  Zs.DailyDealDashboard() +
+                  Ks.DailyDealDashboard() +
                   (window.sessionStorage.getItem("dailyDealPageIndex") || ""),
                 className: (0, M.Z)(xt().DashLink, jt.DashLink),
               },
@@ -18143,7 +18148,7 @@
                     ? (window.location.href =
                         w.De.PARTNER_BASE_URL +
                         "promotion" +
-                        Zs.DailyDealDashboard())
+                        Ks.DailyDealDashboard())
                     : r("Failed To Delete, check console");
                 });
             },
@@ -18633,7 +18638,7 @@
           ? l.createElement(
               o.rU,
               {
-                to: Zs.DailyDealEditor(t.gid),
+                to: Ks.DailyDealEditor(t.gid),
                 className: (0, M.Z)({ [Sa.DailyDealCtn]: !0, [Sa.Taken]: !0 }),
               },
               (null == s ? void 0 : s.GetAssets().GetHeaderURL())
@@ -19310,7 +19315,7 @@
       var qa = a(1185),
         Za = a(43278),
         Ka = a(59621),
-        za = a(43489),
+        za = a(20420),
         $a = a(77557),
         Ja = a(37083),
         Qa = a(14449),
@@ -19381,7 +19386,7 @@
                             href:
                               w.De.PARTNER_BASE_URL +
                               "/promotion" +
-                              Zs.MarketingMessageEditor(t),
+                              Ks.MarketingMessageEditor(t),
                           },
                           "Edit Marketing Message",
                         ),
@@ -19687,10 +19692,10 @@
                 ? window.open(
                     `${
                       ra.De.PARTNER_BASE_URL
-                    }/promotion/${Zs.MarketingMessageEditor(a)}`,
+                    }/promotion/${Ks.MarketingMessageEditor(a)}`,
                     "_blank",
                   )
-                : n.push(Zs.MarketingMessageEditor(a));
+                : n.push(Ks.MarketingMessageEditor(a));
             },
           },
           l.createElement(
@@ -22775,11 +22780,11 @@
           message: (e) =>
             !a ||
             !t() ||
-            e.pathname == Zs.MarketingMessageEditor(a.GetGID()) ||
+            e.pathname == Ks.MarketingMessageEditor(a.GetGID()) ||
             (0, P.Xx)("#DailyDeals_UnsavedChanges"),
         });
       }
-      var rs = a(18030);
+      var rs = a(17973);
       function ls(e) {
         const { oEditableMessage: t } = e,
           a = (0, l.useMemo)(
@@ -23146,6 +23151,7 @@
                     label: "Display current price on message",
                   }),
                   l.createElement(hs, { oEditableMessage: t }),
+                  l.createElement(vs, { oEditableMessage: t }),
                 ),
                 l.createElement(pi, { oEditableMessage: t }),
               ),
@@ -23251,8 +23257,36 @@
           ),
         );
       }
-      var vs = a(48880);
-      function Es(e) {
+      function vs(e) {
+        const { oEditableMessage: t } = e,
+          [a] = (0, Lt.SZ)(() => [t.GetCustomTemplate()]),
+          n = (0, ds.wM)(a || ""),
+          [i, s] = (0, l.useState)(() => !!n);
+        return l.createElement(
+          l.Fragment,
+          null,
+          l.createElement(S.__, null, "REPLAY EVENT"),
+          l.createElement(S.ji, {
+            label: "Is Replay Event",
+            checked: i,
+            onChange: () => s(!i),
+          }),
+          i &&
+            l.createElement(S.II, {
+              mustBeNumeric: !0,
+              rangeMin: 2022,
+              maxChars: 4,
+              onChange: (e) => {
+                const a = Number(e.target.value);
+                isNaN(a) || t.SetCustomTemplate(`replay${a}`);
+              },
+              label: "Year for replay event",
+              value: n,
+            }),
+        );
+      }
+      var Es = a(48880);
+      function Ds(e) {
         const { gid: t } = e,
           a = (0, Za.Q2)(t),
           [n, i] = l.useState(!1);
@@ -23290,7 +23324,7 @@
             {
               name: "Editor Tab",
               key: "editor",
-              contents: l.createElement(te.SV, null, l.createElement(Ds, null)),
+              contents: l.createElement(te.SV, null, l.createElement(Ss, null)),
               onClick: r,
             },
             {
@@ -23350,7 +23384,7 @@
           l.createElement("div", { className: ne().ClearThings }),
         );
       }
-      function Ds(e) {
+      function Ss(e) {
         const t = (0, s.fL)();
         return l.createElement(
           "div",
@@ -23370,13 +23404,13 @@
               l.createElement(
                 "div",
                 { className: xt().LeftCol },
-                l.createElement(Ss, { oEditableMessage: t }),
-                l.createElement(ys, { oEditableMessage: t }),
+                l.createElement(fs, { oEditableMessage: t }),
+                l.createElement(bs, { oEditableMessage: t }),
                 l.createElement(es.A, { oEditableMessage: t }),
                 l.createElement(ls, { oEditableMessage: t }),
                 l.createElement(ms, { oEditableMessage: t }),
-                l.createElement(Cs, { oEditableMessage: t }),
                 l.createElement(ks, { oEditableMessage: t }),
+                l.createElement(Is, { oEditableMessage: t }),
                 l.createElement(pi, { oEditableMessage: t }),
               ),
               l.createElement(Gi, { oEditableMessage: t }),
@@ -23384,7 +23418,7 @@
           ),
         );
       }
-      function Ss(e) {
+      function fs(e) {
         const { oEditableMessage: t } = e,
           a = (0, Lt.SZ)(() => t.GetStoreItemID()),
           n = (0, l.useCallback)(
@@ -23458,12 +23492,12 @@
           ),
         );
       }
-      const fs = {
+      const ys = {
         include_assets: !0,
         include_basic_info: !0,
         include_release: !0,
       };
-      function ys(e) {
+      function bs(e) {
         const { oEditableMessage: t } = e,
           [a, n] = (0, Lt.SZ)(() => [
             t.GetStoreItemKey(),
@@ -23473,7 +23507,7 @@
           [r] = (0, N.jk)(
             null == a ? void 0 : a.id,
             (0, Bt.GV)(null == a ? void 0 : a.item_type),
-            fs,
+            ys,
           );
         return l.createElement(
           "div",
@@ -23532,13 +23566,13 @@
                   id: a.id,
                   itemType: r.GetStoreItemType(),
                 }),
-            l.createElement(bs, { oEditableMessage: t }),
+            l.createElement(Cs, { oEditableMessage: t }),
             Boolean(14 == (null == r ? void 0 : r.GetAppType())) &&
               l.createElement(
                 l.Fragment,
                 null,
                 i
-                  ? l.createElement(vs.E, { oEditablePlan: t })
+                  ? l.createElement(Es.E, { oEditablePlan: t })
                   : l.createElement(S.ji, {
                       checked: !1,
                       label:
@@ -23549,7 +23583,7 @@
           ),
         );
       }
-      function bs(e) {
+      function Cs(e) {
         const { oEditableMessage: t } = e,
           [a, n] = (0, Lt.SZ)(() => [t.GetRealm(), t.GetLinkURL()]),
           i = (0, qa.IN)(a, n);
@@ -23578,7 +23612,7 @@
             ),
         );
       }
-      function Cs(e) {
+      function ks(e) {
         const { oEditableMessage: t } = e;
         return l.createElement(
           "div",
@@ -23601,7 +23635,7 @@
           }),
         );
       }
-      function ks(e) {
+      function Is(e) {
         const { oEditableMessage: t } = e;
         return l.createElement(
           "div",
@@ -23624,13 +23658,13 @@
           }),
         );
       }
-      var Is = a(81373),
-        Ps = a(97388),
-        ws = a(78227),
-        As = a(51441),
-        Ts = a(35116);
-      function Ns(e) {
-        const t = (0, ws.r7)();
+      var Ps = a(81373),
+        ws = a(97388),
+        As = a(78227),
+        Ts = a(51441),
+        Ns = a(35116);
+      function Rs(e) {
+        const t = (0, As.r7)();
         return l.createElement(
           "div",
           null,
@@ -23639,12 +23673,12 @@
             null,
             l.createElement(
               "div",
-              { className: Ts.DashTitleBar },
+              { className: Ns.DashTitleBar },
               l.createElement("h1", null, "Sales Rank Dashboard"),
             ),
             l.createElement(
               "div",
-              { className: Ts.DashDescription },
+              { className: Ns.DashDescription },
               "Use the filters below fo find games to invite to curated promotion deals.",
             ),
           ),
@@ -23654,13 +23688,13 @@
                 position: "center",
                 size: "medium",
               })
-            : l.createElement(Rs, { rgTopData: t }),
+            : l.createElement(Gs, { rgTopData: t }),
         );
       }
-      function Rs(e) {
+      function Gs(e) {
         const { rgTopData: t } = e,
           a = (0, l.useMemo)(() => t.top_apps.map((e) => e.appid), [t]),
-          n = (0, ws.Aq)(t.num_days_history, a);
+          n = (0, As.Aq)(t.num_days_history, a);
         return l.createElement(
           "div",
           null,
@@ -23719,7 +23753,7 @@
               "tbody",
               null,
               t.top_apps.map((e) =>
-                l.createElement(Ls, {
+                l.createElement(Bs, {
                   key: "appid" + e.appid,
                   rgAppInfo: e,
                   appSummaries: n,
@@ -23729,13 +23763,13 @@
           ),
         );
       }
-      const Gs = {
+      const Ls = {
         month: "short",
         day: "numeric",
         year: "numeric",
         weekday: void 0,
       };
-      function Ls(e) {
+      function Bs(e) {
         var t;
         const { rgAppInfo: a, appSummaries: n } = e,
           [i] = (0, N.vs)(a.appid, {
@@ -23751,14 +23785,14 @@
                 "td",
                 null,
                 l.createElement(
-                  As.ll,
+                  Ts.ll,
                   {
                     item: { type: "game", id: a.appid },
                     hoverProps: {
                       direction: "overlay",
                       style: { minWidth: "320px", maxWidth: "320px" },
                     },
-                    className: Ts.GameItem,
+                    className: Ns.GameItem,
                   },
                   l.createElement("img", {
                     src: i.GetAssets().GetCommunityIconURL(),
@@ -23788,7 +23822,7 @@
               l.createElement(
                 "td",
                 null,
-                (0, P.$1)(i.GetReleaseDateRTime(), Gs),
+                (0, P.$1)(i.GetReleaseDateRTime(), Ls),
               ),
               l.createElement("td", null, "TODO Discount"),
               l.createElement(
@@ -23818,11 +23852,11 @@
             )
           : null;
       }
-      var Bs = a(57560);
-      function Ms(e) {
+      var Ms = a(57560);
+      function xs(e) {
         var t, a, n, i, s, r;
         const { spotlightID: o } = e,
-          c = (0, Bs.dh)(o);
+          c = (0, Ms.dh)(o);
         return c
           ? l.createElement(
               "div",
@@ -23898,8 +23932,8 @@
             )
           : l.createElement(b.V, { string: o, size: "small" });
       }
-      const xs = (0, za.Zt)(ht());
-      function Fs(e) {
+      const Fs = (0, za.Zt)(ht());
+      function Os(e) {
         const t = (e) =>
             window.sessionStorage.setItem(
               "spotlightdashboardtab",
@@ -23909,19 +23943,19 @@
             {
               name: "Active or Upcoming Spotlights",
               key: "current",
-              contents: l.createElement(te.SV, null, l.createElement(Hs, null)),
+              contents: l.createElement(te.SV, null, l.createElement(Xs, null)),
               onClick: t,
             },
             {
               name: "Calendar View",
               key: "calendar",
-              contents: l.createElement(te.SV, null, l.createElement(js, null)),
+              contents: l.createElement(te.SV, null, l.createElement(Ws, null)),
               onClick: t,
             },
             {
               name: "Search all Spotlights",
               key: "search",
-              contents: l.createElement(te.SV, null, l.createElement(Xs, null)),
+              contents: l.createElement(te.SV, null, l.createElement(js, null)),
               onClick: t,
             },
           ];
@@ -23953,20 +23987,20 @@
           l.createElement("div", { className: ne().ClearThings }),
         );
       }
-      var Os;
-      function Us(e) {
-        const t = (0, Bs.Og)();
-        return t && e != Os.k_DisplayAll
+      var Us;
+      function Vs(e) {
+        const t = (0, Ms.Og)();
+        return t && e != Us.k_DisplayAll
           ? t.filter((t) => {
               var a, n;
               return (
-                (e == Os.k_DisplayPublic &&
+                (e == Us.k_DisplayPublic &&
                   Boolean(
                     null === (a = t.visibility) || void 0 === a
                       ? void 0
                       : a.visible,
                   )) ||
-                (e == Os.k_DisplayBeta &&
+                (e == Us.k_DisplayBeta &&
                   !Boolean(
                     null === (n = t.visibility) || void 0 === n
                       ? void 0
@@ -23976,12 +24010,12 @@
             })
           : t;
       }
-      function Vs(e) {
+      function Hs(e) {
         const { display: t, fnSetDisplay: a } = e,
           n = [
-            { label: "Show All", data: Os.k_DisplayAll },
-            { label: "Show Visible", data: Os.k_DisplayPublic },
-            { label: "Show Hidden", data: Os.k_DisplayBeta },
+            { label: "Show All", data: Us.k_DisplayAll },
+            { label: "Show Visible", data: Us.k_DisplayPublic },
+            { label: "Show Hidden", data: Us.k_DisplayBeta },
           ];
         return l.createElement(
           "div",
@@ -24000,13 +24034,13 @@
           ),
         );
       }
-      function Hs(e) {
-        const [t, a] = (0, l.useState)(Os.k_DisplayAll),
-          n = Us(t);
+      function Xs(e) {
+        const [t, a] = (0, l.useState)(Us.k_DisplayAll),
+          n = Vs(t);
         return l.createElement(
           "div",
           null,
-          l.createElement(Vs, { display: t, fnSetDisplay: a }),
+          l.createElement(Hs, { display: t, fnSetDisplay: a }),
           l.createElement("div", null, "Present and Future Spotlights"),
           l.createElement("hr", null),
           l.createElement(
@@ -24022,15 +24056,15 @@
               "https://partner.steamgames.com/doc/store/assets/promos",
             ),
           ),
-          l.createElement(Ws, { rows: n }),
+          l.createElement(qs, { rows: n }),
         );
       }
-      function Xs(e) {
+      function js(e) {
         return l.createElement("div", null, "todo");
       }
-      function js(e) {
-        const [t, a] = (0, l.useState)(Os.k_DisplayAll),
-          n = Us(t),
+      function Ws(e) {
+        const [t, a] = (0, l.useState)(Us.k_DisplayAll),
+          n = Vs(t),
           i = (0, l.useMemo)(
             () =>
               n
@@ -24058,13 +24092,13 @@
         return l.createElement(
           "div",
           null,
-          l.createElement(Vs, { display: t, fnSetDisplay: a }),
+          l.createElement(Hs, { display: t, fnSetDisplay: a }),
           l.createElement("h1", null, "Calendar View of Spotlights"),
           l.createElement(za.f, {
             views: s,
             popup: !0,
             defaultView: "month",
-            localizer: xs,
+            localizer: Fs,
             events: i,
             style: { height: 1e3 },
             showMultiDayTimes: !0,
@@ -24087,7 +24121,7 @@
             },
           }),
           l.createElement("h1", null, "Remaining Spotlights without Dates"),
-          l.createElement(Ws, {
+          l.createElement(qs, {
             rows: n.filter((e) => {
               var t, a;
               return (
@@ -24102,21 +24136,21 @@
           }),
         );
       }
-      function Ws(e) {
+      function qs(e) {
         const { rows: t } = e;
         return l.createElement(
           l.Fragment,
           null,
-          t.map((e) => l.createElement(Ms, { key: e.id, spotlightID: e.id })),
+          t.map((e) => l.createElement(xs, { key: e.id, spotlightID: e.id })),
         );
       }
       !(function (e) {
         (e[(e.k_DisplayAll = 0)] = "k_DisplayAll"),
           (e[(e.k_DisplayPublic = 1)] = "k_DisplayPublic"),
           (e[(e.k_DisplayBeta = 2)] = "k_DisplayBeta");
-      })(Os || (Os = {}));
-      var qs = a(8231);
-      const Zs = {
+      })(Us || (Us = {}));
+      var Zs = a(8231);
+      const Ks = {
         DailyDealDashboard: () => "/dailydeals/dashboard",
         DailyDealPartnerDashboard: (e) => `/dailydeals/dashboard/${e}`,
         DailyDealEditor: (e) => `/dailydeals/edit/${e}`,
@@ -24132,7 +24166,7 @@
         PromotionThemeFestPlanning: () => "/planning/themes",
         SalesRankDashboard: () => "/planning/salesrank",
       };
-      function Ks(e) {
+      function zs(e) {
         (0, l.useEffect)(() => {
           0;
         }, []);
@@ -24156,13 +24190,13 @@
                 }),
                 l.createElement(c.AW, {
                   exact: !0,
-                  path: Zs.DailyDealDashboard(),
+                  path: Ks.DailyDealDashboard(),
                   render: (e) =>
                     l.createElement(sa.j, null, l.createElement(ja, null)),
                 }),
                 l.createElement(c.AW, {
                   exact: !0,
-                  path: Zs.DailyDealPartnerDashboard(":publisherid(\\d+)"),
+                  path: Ks.DailyDealPartnerDashboard(":publisherid(\\d+)"),
                   render: (e) =>
                     l.createElement(
                       sa.j,
@@ -24174,7 +24208,7 @@
                 }),
                 l.createElement(c.AW, {
                   exact: !0,
-                  path: Zs.DailyDealEditor(":dealid"),
+                  path: Ks.DailyDealEditor(":dealid"),
                   render: (e) =>
                     l.createElement(
                       sa.j,
@@ -24183,48 +24217,48 @@
                     ),
                 }),
                 l.createElement(c.AW, {
-                  path: Zs.DiscountPages(),
+                  path: Ks.DiscountPages(),
                   component: kt,
                 }),
                 l.createElement(c.AW, {
-                  path: Zs.PartnerSaleDashboard(":publisherid(\\d+)"),
+                  path: Ks.PartnerSaleDashboard(":publisherid(\\d+)"),
                   component: Pt.K,
                 }),
                 l.createElement(c.AW, {
-                  path: Zs.PartnerPlanningAssetRequest(":planid(\\d+)"),
+                  path: Ks.PartnerPlanningAssetRequest(":planid(\\d+)"),
                   component: wt.v9,
                 }),
                 l.createElement(c.AW, {
-                  path: Zs.PromotionPlanning(),
-                  component: Is.h,
+                  path: Ks.PromotionPlanning(),
+                  component: Ps.h,
                 }),
                 l.createElement(c.AW, {
                   exact: !0,
-                  path: Zs.PromotionPlanEditor(":planid"),
+                  path: Ks.PromotionPlanEditor(":planid"),
                   render: (e) =>
-                    l.createElement(Ps.p, { planid: e.match.params.planid }),
+                    l.createElement(ws.p, { planid: e.match.params.planid }),
                 }),
                 l.createElement(c.AW, {
-                  path: Zs.SpotlightDashboard(),
-                  component: Fs,
+                  path: Ks.SpotlightDashboard(),
+                  component: Os,
                 }),
                 l.createElement(c.AW, {
-                  path: Zs.MarketingMessageDashboard(),
+                  path: Ks.MarketingMessageDashboard(),
                   component: Zn,
                 }),
                 l.createElement(c.AW, {
                   exact: !0,
-                  path: Zs.MarketingMessageEditor(":gid"),
+                  path: Ks.MarketingMessageEditor(":gid"),
                   render: (e) =>
-                    l.createElement(Es, { gid: e.match.params.gid }),
+                    l.createElement(Ds, { gid: e.match.params.gid }),
                 }),
                 l.createElement(c.AW, {
-                  path: Zs.PromotionThemeFestPlanning(),
-                  component: qs.L3,
+                  path: Ks.PromotionThemeFestPlanning(),
+                  component: Zs.L3,
                 }),
                 l.createElement(c.AW, {
-                  path: Zs.SalesRankDashboard(),
-                  component: Ns,
+                  path: Ks.SalesRankDashboard(),
+                  component: Rs,
                 }),
                 l.createElement(c.AW, { component: r.R }),
               ),
@@ -28257,7 +28291,7 @@
       var s = a(29785),
         r = a(57560),
         l = a(89526),
-        o = a(18030),
+        o = a(17973),
         c = a(92616),
         m = a(85886),
         d = a(25871),

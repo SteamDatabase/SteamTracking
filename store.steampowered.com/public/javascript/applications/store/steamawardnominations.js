@@ -102,7 +102,7 @@
     },
     61474: (e, a, t) => {
       "use strict";
-      t.r(a), t.d(a, { default: () => K });
+      t.r(a), t.d(a, { default: () => $ });
       var n = t(89526),
         i = t(99896),
         o = t.n(i),
@@ -124,10 +124,10 @@
         w = t(33940),
         p = t(69338),
         B = t(71161),
-        h = t(5080),
-        F = t(11491),
-        y = t(10412),
-        T = t(47165),
+        F = t(5080),
+        h = t(11491),
+        T = t(10412),
+        y = t(47165),
         Q = t(49234),
         x = t(92616),
         k = t(56368),
@@ -136,8 +136,8 @@
         f = t(73070),
         X = t(11961),
         D = t(4795);
-      const L = { include_basic_info: !0, include_assets: !0 };
-      function b(e) {
+      const b = { include_basic_info: !0, include_assets: !0 };
+      function G(e) {
         const { category: a, fnShowPicker: t } = e,
           [i, r] = n.useState("");
         if (!(0, l.WR)(a.voteid).data)
@@ -176,7 +176,7 @@
             ),
             i.trim().length > 0
               ? n.createElement(W, { strSearch: i, category: a })
-              : n.createElement(G, { category: a }),
+              : n.createElement(L, { category: a }),
             n.createElement(
               "div",
               { className: o().BottomRow },
@@ -189,7 +189,7 @@
           )
         );
       }
-      function G(e) {
+      function L(e) {
         var a, t, i, s;
         const { category: r } = e,
           m = (0, l.WR)(r.voteid),
@@ -231,7 +231,7 @@
                   { className: o().RecommendationRowTitle },
                   (0, g.Xx)("#Steamawards_Nominate_GamesYouPlayed"),
                 ),
-                n.createElement(O, {
+                n.createElement(Z, {
                   eSteamAwardCategoryID: r.voteid,
                   eNominatonSource: 6,
                   rgGameCarouselItems: _,
@@ -263,7 +263,7 @@
             (null === (s = m.data) || void 0 === s
               ? void 0
               : s.suggested_apps) &&
-              n.createElement(O, {
+              n.createElement(Z, {
                 eSteamAwardCategoryID: r.voteid,
                 eNominatonSource: 7,
                 rgGameCarouselItems: m.data.suggested_apps.map((e) => ({
@@ -378,13 +378,13 @@
           a
         );
       }
-      function O(e) {
+      function Z(e) {
         const {
             rgGameCarouselItems: a,
             eSteamAwardCategoryID: t,
             eNominatonSource: i,
           } = e,
-          s = (0, c.wZ)(null == a ? void 0 : a.map((e) => e.appID), L),
+          s = (0, c.wZ)(null == a ? void 0 : a.map((e) => e.appID), b),
           r = (0, f.Wy)(),
           m = (null == r ? void 0 : r.ownerWindow) || window,
           [l, d] = n.useState(() => M(m)),
@@ -405,19 +405,19 @@
             B.ZP,
             { feature: "steamawards_nominate" },
             n.createElement(
-              F.l,
+              h.l,
               {
                 gap: 12,
-                hideArrows: !(0, h._)(),
+                hideArrows: !(0, F._)(),
                 visibleElements: l,
                 useTestScrollbar: !0,
                 bLazyRenderChildren: !0,
                 hidePips: _,
                 innerClassName: o().GameCarousel,
-                screenIsWide: (0, h._)(),
+                screenIsWide: (0, F._)(),
               },
               g.map((e) =>
-                n.createElement(Z, {
+                n.createElement(O, {
                   eNominatonSource: i,
                   eSteamAwardCategoryID: t,
                   key: e.appID,
@@ -429,14 +429,14 @@
           ),
         );
       }
-      function Z(e) {
+      function O(e) {
         const {
             appID: a,
             eSteamAwardCategoryID: t,
             eNominatonSource: i,
             nPlaytime: s,
           } = e,
-          [r] = (0, c.vs)(a, L);
+          [r] = (0, c.vs)(a, b);
         if (!r) return null;
         let l = null;
         return (
@@ -544,15 +544,15 @@
             (() => {
               (0, w.mG)(this, void 0, void 0, function* () {
                 a.forEach((e) => {
-                  y.j1.QueueLoadPartnerEvent(
+                  T.j1.QueueLoadPartnerEvent(
                     e.clanid,
                     e.event_gid,
                     "dev" == d.De.WEB_UNIVERSE,
                   );
                 });
                 const e = a.map((e) =>
-                  y.j1.LoadPartnerEventFromClanEventGIDAndClanSteamID(
-                    T.K.InitFromClanID(e.clanid),
+                  T.j1.LoadPartnerEventFromClanEventGIDAndClanSteamID(
+                    y.K.InitFromClanID(e.clanid),
                     e.event_gid,
                     0,
                     "dev" == d.De.WEB_UNIVERSE,
@@ -570,15 +570,15 @@
                   B.ZP,
                   { feature: "steamawards_event" },
                   n.createElement(
-                    F.l,
+                    h.l,
                     {
                       gap: 12,
-                      hideArrows: !(0, h._)(),
+                      hideArrows: !(0, F._)(),
                       visibleElements: m,
                       useTestScrollbar: !0,
                       bLazyRenderChildren: !0,
                       className: o().GameCarousel,
-                      screenIsWide: (0, h._)(),
+                      screenIsWide: (0, F._)(),
                     },
                     a.map((e) =>
                       n.createElement(V, {
@@ -598,7 +598,7 @@
       }
       function V(e) {
         const { gidEvent: a } = e,
-          t = y.j1.GetClanEventModel(a);
+          t = T.j1.GetClanEventModel(a);
         if (!t) return null;
         return n.createElement(Q.T4, {
           event: t,
@@ -613,20 +613,28 @@
         });
       }
       var Y = t(5029),
-        z = t(49437);
-      function K(e) {
+        z = t(49437),
+        K = t(36105),
+        j = t.n(K),
+        J = t(85651);
+      function $(e) {
         const { steamID: a } = e,
           [t, i] = n.useState(() => k.cb.IsInitialized()),
           [s] = (0, Y.Ar)("k", null),
-          m = Boolean((a && a != d.L7.steamid) || s);
+          m = Boolean((a && a != d.L7.steamid) || s),
+          l = j()("2023-11-28T10:00:00-08:00").unix(),
+          c = J.JW.GetTimeNowWithOverride(),
+          _ = !m && c <= l;
         return (
           n.useEffect(() => {
-            y.j1.Init(), k.cb.InitGlobal().then(() => i(!0));
+            T.j1.Init(), k.cb.InitGlobal().then(() => i(!0));
           }, []),
           n.createElement(
             r.s,
             { className: o().NominationsPageContent },
-            m ? n.createElement(J, { steamid: a }) : n.createElement(j, null),
+            m
+              ? n.createElement(ae, { bEnableNominating: _, steamid: a })
+              : n.createElement(ee, null),
             !m &&
               n.createElement(
                 "div",
@@ -636,20 +644,20 @@
                     o().ProgressAndShareCtn,
                   ),
                 },
-                n.createElement($, null),
-                n.createElement(le, null),
+                n.createElement(te, null),
+                n.createElement(_e, null),
               ),
-            t && n.createElement(ee, { bViewingOtherNominations: m }),
+            t && n.createElement(ne, { bEnableNominating: _ }),
             n.createElement(
               "div",
               { className: o().BackgroundDark },
-              !m && n.createElement(oe, null),
-              n.createElement(re, null),
+              !m && n.createElement(me, null),
+              n.createElement(ce, null),
             ),
           )
         );
       }
-      function j(e) {
+      function ee(e) {
         return n.createElement(
           "div",
           { className: o().NominationsHeaderCtn },
@@ -687,10 +695,10 @@
           ),
         );
       }
-      function J(e) {
+      function ae(e) {
         var a, t;
-        const { steamid: i } = e,
-          s = (0, z.IE)(i);
+        const { steamid: i, bEnableNominating: s } = e,
+          r = (0, z.IE)(i);
         return n.createElement(
           "div",
           { className: o().NominationsHeaderCtn },
@@ -702,7 +710,7 @@
               { className: o().FriendsHeaderCtn },
               n.createElement("img", {
                 src:
-                  null === (a = s.data) || void 0 === a
+                  null === (a = r.data) || void 0 === a
                     ? void 0
                     : a.avatar_url_full,
               }),
@@ -719,29 +727,30 @@
                   { className: o().FriendsTitle },
                   (0, g.Xx)(
                     "#Steamawards_FriendsNominations",
-                    null === (t = s.data) || void 0 === t
+                    null === (t = r.data) || void 0 === t
                       ? void 0
                       : t.m_strPlayerName,
                   ),
                 ),
               ),
             ),
-            n.createElement(
-              "div",
-              { className: o().HeaderButtonCtn },
+            s &&
               n.createElement(
-                "a",
-                {
-                  href: `${u.De.STORE_BASE_URL}steamawards/nominations`,
-                  className: (0, N.Z)(o().NominateGameButton, o().White),
-                },
-                (0, g.Xx)("#Steamawards_MakeYourOwnNominations_Btn"),
+                "div",
+                { className: o().HeaderButtonCtn },
+                n.createElement(
+                  "a",
+                  {
+                    href: `${u.De.STORE_BASE_URL}steamawards/nominations`,
+                    className: (0, N.Z)(o().NominateGameButton, o().White),
+                  },
+                  (0, g.Xx)("#Steamawards_MakeYourOwnNominations_Btn"),
+                ),
               ),
-            ),
           ),
         );
       }
-      function $(e) {
+      function te(e) {
         const a = (0, l.A7)(),
           t = a.data && 0 != a.data.length ? "" + a.data.length : "0";
         return n.createElement(
@@ -754,13 +763,13 @@
           ),
         );
       }
-      function ee(e) {
-        const { bViewingOtherNominations: a } = e,
+      function ne(e) {
+        const { bEnableNominating: a } = e,
           t = (0, l.$)(l.Df);
         if (!t.data) return null;
         const i = t.data.votes.map((e) =>
-          n.createElement(ae, {
-            bViewingOtherNominations: a,
+          n.createElement(ie, {
+            bEnableNominating: a,
             key: e.voteid,
             category: e,
           }),
@@ -771,8 +780,8 @@
           i,
         );
       }
-      function ae(e) {
-        const { category: a, bViewingOtherNominations: t } = e,
+      function ie(e) {
+        const { category: a, bEnableNominating: t } = e,
           { currentNomination: i } = (0, l.NL)(a.voteid),
           [s, m] = n.useState(!1),
           c = a.voteid,
@@ -801,7 +810,7 @@
               n.createElement(
                 "div",
                 { className: o().CategoryTitleRow },
-                !t &&
+                t &&
                   n.createElement(
                     "div",
                     { className: o().Checkbox },
@@ -830,27 +839,27 @@
                 "div",
                 { className: o().CapsuleBlurryContainer },
                 Boolean(i)
-                  ? n.createElement(te, { nomination: i, bBlurry: !0 })
-                  : n.createElement(ne, null),
+                  ? n.createElement(oe, { nomination: i, bBlurry: !0 })
+                  : n.createElement(se, null),
               ),
               n.createElement(
                 "div",
                 { className: o().CapsuleContainer },
                 Boolean(i)
-                  ? n.createElement(te, { nomination: i, bBlurry: !1 })
-                  : n.createElement(ne, null),
+                  ? n.createElement(oe, { nomination: i, bBlurry: !1 })
+                  : n.createElement(se, null),
               ),
-              !t &&
-                n.createElement(ie, {
+              t &&
+                n.createElement(re, {
                   fnShowPicker: m,
                   has_nomination: Boolean(i),
                 }),
             ),
           ),
-          s && n.createElement(b, { fnShowPicker: m, category: a }),
+          s && n.createElement(G, { fnShowPicker: m, category: a }),
         );
       }
-      function te(e) {
+      function oe(e) {
         const { nomination: a, bBlurry: t } = e,
           [i] = (0, c.vs)(a.appid, {
             include_basic_info: !0,
@@ -870,10 +879,10 @@
               )
           : null;
       }
-      function ne() {
+      function se() {
         return n.createElement("div", { className: o().NominatedGameCapsule });
       }
-      function ie(e) {
+      function re(e) {
         const { has_nomination: a, fnShowPicker: t } = e;
         let i = (0, g.Xx)("#Steamawards_Nominate_Btn"),
           s = o().ActionNominate,
@@ -896,7 +905,7 @@
           )
         );
       }
-      function oe() {
+      function me() {
         var e, a;
         const t = (0, l.w6)(65);
         let i = 0;
@@ -908,7 +917,7 @@
             : a.map(
                 (e) => (
                   e.completed && i++,
-                  n.createElement(se, {
+                  n.createElement(le, {
                     key: e.questid,
                     eStoreQuestID: e.questid,
                     completed: e.completed,
@@ -1021,7 +1030,7 @@
           ),
         );
       }
-      function se(e) {
+      function le(e) {
         const { eStoreQuestID: a, completed: t } = e;
         return n.createElement(
           "div",
@@ -1051,7 +1060,7 @@
           ),
         );
       }
-      function re() {
+      function ce() {
         const e = u.De.COMMUNITY_BASE_URL + "my/badges/";
         return n.createElement(
           "div",
@@ -1256,7 +1265,7 @@
           ),
         );
       }
-      function me(e) {
+      function de(e) {
         const { closeModal: a } = e,
           t = (0, l.hp)(),
           i = (0, l.Cn)(),
@@ -1336,7 +1345,7 @@
           ),
         );
       }
-      function le() {
+      function _e() {
         const e = (0, l.A7)();
         return d.L7.logged_in && e.data && 0 != e.data.length
           ? n.createElement(
@@ -1351,7 +1360,7 @@
                     e.preventDefault(),
                       e.stopPropagation(),
                       (a = (0, _.RA)(e)),
-                      (0, C.AM)(n.createElement(me, null), a);
+                      (0, C.AM)(n.createElement(de, null), a);
                   },
                 },
                 n.createElement(S.mBz, null),

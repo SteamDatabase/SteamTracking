@@ -6,18 +6,19 @@
   [6739],
   {
     74802: (e, r, t) => {
-      t.d(r, { h: () => S });
-      var i = !(
-        "undefined" == typeof window ||
-        !window.document ||
-        !window.document.createElement
-      );
-      var n = void 0;
-      function a() {
+      t.d(r, { h: () => h });
+      var i = t(74289),
+        n = !(
+          "undefined" == typeof window ||
+          !window.document ||
+          !window.document.createElement
+        );
+      var a = void 0;
+      function s() {
         return (
-          void 0 === n &&
-            (n = (function () {
-              if (!i) return !1;
+          void 0 === a &&
+            (a = (function () {
+              if (!n) return !1;
               if (
                 !window.addEventListener ||
                 !window.removeEventListener ||
@@ -37,16 +38,16 @@
               } catch (e) {}
               return e;
             })()),
-          n
+          a
         );
       }
-      function s(e) {
+      function o(e) {
         e.handlers === e.nextHandlers && (e.nextHandlers = e.handlers.slice());
       }
-      function o(e) {
+      function l(e) {
         (this.target = e), (this.events = {});
       }
-      (o.prototype.getEventHandlers = function (e, r) {
+      (l.prototype.getEventHandlers = function (e, r) {
         var t,
           i =
             String(e) +
@@ -65,17 +66,17 @@
           this.events[i]
         );
       }),
-        (o.prototype.handleEvent = function (e, r, t) {
+        (l.prototype.handleEvent = function (e, r, t) {
           var i = this.getEventHandlers(e, r);
           (i.handlers = i.nextHandlers),
             i.handlers.forEach(function (e) {
               e && e(t);
             });
         }),
-        (o.prototype.add = function (e, r, t) {
+        (l.prototype.add = function (e, r, t) {
           var i = this,
             n = this.getEventHandlers(e, t);
-          s(n),
+          o(n),
             0 === n.nextHandlers.length &&
               ((n.handleEvent = this.handleEvent.bind(this, e, t)),
               this.target.addEventListener(e, n.handleEvent, t)),
@@ -83,9 +84,9 @@
           var a = !0;
           return function () {
             if (a) {
-              (a = !1), s(n);
-              var o = n.nextHandlers.indexOf(r);
-              n.nextHandlers.splice(o, 1),
+              (a = !1), o(n);
+              var s = n.nextHandlers.indexOf(r);
+              n.nextHandlers.splice(s, 1),
                 0 === n.nextHandlers.length &&
                   (i.target &&
                     i.target.removeEventListener(e, n.handleEvent, t),
@@ -93,83 +94,17 @@
             }
           };
         });
-      var l = "__consolidated_events_handlers__";
-      function c(e, r, t, i) {
-        e[l] || (e[l] = new o(e));
+      var c = "__consolidated_events_handlers__";
+      function u(e, r, t, i) {
+        e[c] || (e[c] = new l(e));
         var n = (function (e) {
-          if (e) return a() ? e : !!e.capture;
+          if (e) return s() ? e : !!e.capture;
         })(i);
-        return e[l].add(r, t, n);
+        return e[c].add(r, t, n);
       }
-      var u = t(89526),
-        m = t(338);
-      function d(e, r) {
-        for (var t = 0; t < r.length; t++) {
-          var i = r[t];
-          (i.enumerable = i.enumerable || !1),
-            (i.configurable = !0),
-            "value" in i && (i.writable = !0),
-            Object.defineProperty(e, i.key, i);
-        }
-      }
-      function B(e) {
-        return (
-          (B = Object.setPrototypeOf
-            ? Object.getPrototypeOf
-            : function (e) {
-                return e.__proto__ || Object.getPrototypeOf(e);
-              }),
-          B(e)
-        );
-      }
-      function y(e, r) {
-        return (
-          (y =
-            Object.setPrototypeOf ||
-            function (e, r) {
-              return (e.__proto__ = r), e;
-            }),
-          y(e, r)
-        );
-      }
-      function b(e, r) {
-        return !r || ("object" != typeof r && "function" != typeof r)
-          ? (function (e) {
-              if (void 0 === e)
-                throw new ReferenceError(
-                  "this hasn't been initialised - super() hasn't been called",
-                );
-              return e;
-            })(e)
-          : r;
-      }
-      function w(e) {
-        var r = (function () {
-          if ("undefined" == typeof Reflect || !Reflect.construct) return !1;
-          if (Reflect.construct.sham) return !1;
-          if ("function" == typeof Proxy) return !0;
-          try {
-            return (
-              Date.prototype.toString.call(
-                Reflect.construct(Date, [], function () {}),
-              ),
-              !0
-            );
-          } catch (e) {
-            return !1;
-          }
-        })();
-        return function () {
-          var t,
-            i = B(e);
-          if (r) {
-            var n = B(this).constructor;
-            t = Reflect.construct(i, arguments, n);
-          } else t = i.apply(this, arguments);
-          return b(this, t);
-        };
-      }
-      function p(e, r) {
+      var m = t(89526),
+        d = t(338);
+      function B(e, r) {
         var t,
           i =
             ((t = e),
@@ -184,33 +119,34 @@
         })(e);
         return "number" == typeof n ? n * r : void 0;
       }
-      var f = "above",
-        g = "inside",
-        _ = "below",
-        z = "invisible";
-      function F(e) {
+      var y = "above",
+        b = "inside",
+        w = "below",
+        p = "invisible";
+      function f(e) {
         return "string" == typeof e.type;
       }
-      var h;
-      var M = [];
-      function R(e) {
-        M.push(e),
-          h ||
-            (h = setTimeout(function () {
+      var g;
+      var _ = [];
+      function z(e) {
+        _.push(e),
+          g ||
+            (g = setTimeout(function () {
               var e;
-              for (h = null; (e = M.shift()); ) e();
+              for (g = null; (e = _.shift()); ) e();
             }, 0));
         var r = !0;
         return function () {
           if (r) {
             r = !1;
-            var t = M.indexOf(e);
+            var t = _.indexOf(e);
             -1 !== t &&
-              (M.splice(t, 1), !M.length && h && (clearTimeout(h), (h = null)));
+              (_.splice(t, 1), !_.length && g && (clearTimeout(g), (g = null)));
           }
         };
       }
-      var v = {
+      var F = "undefined" != typeof window,
+        M = {
           debug: !1,
           scrollableAncestor: void 0,
           children: void 0,
@@ -222,251 +158,206 @@
           onPositionChange: function () {},
           fireOnRapidScroll: !0,
         },
-        S = (function (e) {
-          !(function (e, r) {
-            if ("function" != typeof r && null !== r)
-              throw new TypeError(
-                "Super expression must either be null or a function",
-              );
-            (e.prototype = Object.create(r && r.prototype, {
-              constructor: { value: e, writable: !0, configurable: !0 },
-            })),
-              r && y(e, r);
-          })(s, e);
-          var r,
-            i,
-            n,
-            a = w(s);
-          function s(e) {
-            var r;
+        h = (function (e) {
+          function r(r) {
+            var t;
             return (
-              (function (e, r) {
-                if (!(e instanceof r))
-                  throw new TypeError("Cannot call a class as a function");
-              })(this, s),
-              ((r = a.call(this, e)).refElement = function (e) {
-                r._ref = e;
+              ((t = e.call(this, r) || this).refElement = function (e) {
+                t._ref = e;
               }),
-              r
+              t
             );
           }
+          (0, i.Z)(r, e);
+          var n = r.prototype;
           return (
-            (r = s),
-            (i = [
-              {
-                key: "componentDidMount",
-                value: function () {
-                  var e = this;
-                  s.getWindow() &&
-                    (this.cancelOnNextTick = R(function () {
-                      e.cancelOnNextTick = null;
-                      var r = e.props,
-                        t = r.children;
-                      r.debug,
-                        (function (e, r) {
-                          if (e && !F(e) && !r)
-                            throw new Error(
-                              "<Waypoint> needs a DOM element to compute boundaries. The child you passed is neither a DOM element (e.g. <div>) nor does it use the innerRef prop.\n\nSee https://goo.gl/LrBNgw for more info.",
-                            );
-                        })(t, e._ref),
-                        (e._handleScroll = e._handleScroll.bind(e)),
-                        (e.scrollableAncestor = e._findScrollableAncestor()),
-                        (e.scrollEventListenerUnsubscribe = c(
-                          e.scrollableAncestor,
-                          "scroll",
-                          e._handleScroll,
-                          { passive: !0 },
-                        )),
-                        (e.resizeEventListenerUnsubscribe = c(
-                          window,
-                          "resize",
-                          e._handleScroll,
-                          { passive: !0 },
-                        )),
-                        e._handleScroll(null);
-                    }));
-                },
-              },
-              {
-                key: "componentDidUpdate",
-                value: function () {
-                  var e = this;
-                  s.getWindow() &&
-                    this.scrollableAncestor &&
-                    (this.cancelOnNextTick ||
-                      (this.cancelOnNextTick = R(function () {
-                        (e.cancelOnNextTick = null), e._handleScroll(null);
-                      })));
-                },
-              },
-              {
-                key: "componentWillUnmount",
-                value: function () {
-                  s.getWindow() &&
-                    (this.scrollEventListenerUnsubscribe &&
-                      this.scrollEventListenerUnsubscribe(),
-                    this.resizeEventListenerUnsubscribe &&
-                      this.resizeEventListenerUnsubscribe(),
-                    this.cancelOnNextTick && this.cancelOnNextTick());
-                },
-              },
-              {
-                key: "_findScrollableAncestor",
-                value: function () {
-                  var e = this.props,
-                    r = e.horizontal,
-                    i = e.scrollableAncestor;
-                  if (i)
-                    return (function (e) {
-                      return "window" === e ? t.g.window : e;
-                    })(i);
-                  for (var n = this._ref; n.parentNode; ) {
-                    if ((n = n.parentNode) === document.body) return window;
-                    var a = window.getComputedStyle(n),
-                      s =
-                        (r
-                          ? a.getPropertyValue("overflow-x")
-                          : a.getPropertyValue("overflow-y")) ||
-                        a.getPropertyValue("overflow");
-                    if ("auto" === s || "scroll" === s || "overlay" === s)
-                      return n;
-                  }
-                  return window;
-                },
-              },
-              {
-                key: "_handleScroll",
-                value: function (e) {
-                  if (this._ref) {
-                    var r = this._getBounds(),
-                      t = (function (e) {
-                        return e.viewportBottom - e.viewportTop == 0
-                          ? z
-                          : (e.viewportTop <= e.waypointTop &&
-                              e.waypointTop <= e.viewportBottom) ||
-                            (e.viewportTop <= e.waypointBottom &&
-                              e.waypointBottom <= e.viewportBottom) ||
-                            (e.waypointTop <= e.viewportTop &&
-                              e.viewportBottom <= e.waypointBottom)
-                          ? g
-                          : e.viewportBottom < e.waypointTop
-                          ? _
-                          : e.waypointTop < e.viewportTop
-                          ? f
-                          : z;
-                      })(r),
-                      i = this._previousPosition,
-                      n = this.props,
-                      a = (n.debug, n.onPositionChange),
-                      s = n.onEnter,
-                      o = n.onLeave,
-                      l = n.fireOnRapidScroll;
-                    if (((this._previousPosition = t), i !== t)) {
-                      var c = {
-                        currentPosition: t,
+            (n.componentDidMount = function () {
+              var e = this;
+              F &&
+                (this.cancelOnNextTick = z(function () {
+                  e.cancelOnNextTick = null;
+                  var r = e.props,
+                    t = r.children;
+                  r.debug;
+                  !(function (e, r) {
+                    if (e && !f(e) && !r)
+                      throw new Error(
+                        "<Waypoint> needs a DOM element to compute boundaries. The child you passed is neither a DOM element (e.g. <div>) nor does it use the innerRef prop.\n\nSee https://goo.gl/LrBNgw for more info.",
+                      );
+                  })(t, e._ref),
+                    (e._handleScroll = e._handleScroll.bind(e)),
+                    (e.scrollableAncestor = e._findScrollableAncestor()),
+                    (e.scrollEventListenerUnsubscribe = u(
+                      e.scrollableAncestor,
+                      "scroll",
+                      e._handleScroll,
+                      { passive: !0 },
+                    )),
+                    (e.resizeEventListenerUnsubscribe = u(
+                      window,
+                      "resize",
+                      e._handleScroll,
+                      { passive: !0 },
+                    )),
+                    e._handleScroll(null);
+                }));
+            }),
+            (n.componentDidUpdate = function () {
+              var e = this;
+              F &&
+                this.scrollableAncestor &&
+                (this.cancelOnNextTick ||
+                  (this.cancelOnNextTick = z(function () {
+                    (e.cancelOnNextTick = null), e._handleScroll(null);
+                  })));
+            }),
+            (n.componentWillUnmount = function () {
+              F &&
+                (this.scrollEventListenerUnsubscribe &&
+                  this.scrollEventListenerUnsubscribe(),
+                this.resizeEventListenerUnsubscribe &&
+                  this.resizeEventListenerUnsubscribe(),
+                this.cancelOnNextTick && this.cancelOnNextTick());
+            }),
+            (n._findScrollableAncestor = function () {
+              var e = this.props,
+                r = e.horizontal,
+                i = e.scrollableAncestor;
+              if (i)
+                return (function (e) {
+                  return "window" === e ? t.g.window : e;
+                })(i);
+              for (var n = this._ref; n.parentNode; ) {
+                if ((n = n.parentNode) === document.body) return window;
+                var a = window.getComputedStyle(n),
+                  s =
+                    (r
+                      ? a.getPropertyValue("overflow-x")
+                      : a.getPropertyValue("overflow-y")) ||
+                    a.getPropertyValue("overflow");
+                if ("auto" === s || "scroll" === s || "overlay" === s) return n;
+              }
+              return window;
+            }),
+            (n._handleScroll = function (e) {
+              if (this._ref) {
+                var r = this._getBounds(),
+                  t = (function (e) {
+                    return e.viewportBottom - e.viewportTop == 0
+                      ? p
+                      : (e.viewportTop <= e.waypointTop &&
+                          e.waypointTop <= e.viewportBottom) ||
+                        (e.viewportTop <= e.waypointBottom &&
+                          e.waypointBottom <= e.viewportBottom) ||
+                        (e.waypointTop <= e.viewportTop &&
+                          e.viewportBottom <= e.waypointBottom)
+                      ? b
+                      : e.viewportBottom < e.waypointTop
+                      ? w
+                      : e.waypointTop < e.viewportTop
+                      ? y
+                      : p;
+                  })(r),
+                  i = this._previousPosition,
+                  n = this.props,
+                  a = (n.debug, n.onPositionChange),
+                  s = n.onEnter,
+                  o = n.onLeave,
+                  l = n.fireOnRapidScroll;
+                if (((this._previousPosition = t), i !== t)) {
+                  var c = {
+                    currentPosition: t,
+                    previousPosition: i,
+                    event: e,
+                    waypointTop: r.waypointTop,
+                    waypointBottom: r.waypointBottom,
+                    viewportTop: r.viewportTop,
+                    viewportBottom: r.viewportBottom,
+                  };
+                  a.call(this, c),
+                    t === b ? s.call(this, c) : i === b && o.call(this, c),
+                    l &&
+                      ((i === w && t === y) || (i === y && t === w)) &&
+                      (s.call(this, {
+                        currentPosition: b,
                         previousPosition: i,
                         event: e,
                         waypointTop: r.waypointTop,
                         waypointBottom: r.waypointBottom,
                         viewportTop: r.viewportTop,
                         viewportBottom: r.viewportBottom,
-                      };
-                      a.call(this, c),
-                        t === g ? s.call(this, c) : i === g && o.call(this, c),
-                        l &&
-                          ((i === _ && t === f) || (i === f && t === _)) &&
-                          (s.call(this, {
-                            currentPosition: g,
-                            previousPosition: i,
-                            event: e,
-                            waypointTop: r.waypointTop,
-                            waypointBottom: r.waypointBottom,
-                            viewportTop: r.viewportTop,
-                            viewportBottom: r.viewportBottom,
-                          }),
-                          o.call(this, {
-                            currentPosition: t,
-                            previousPosition: g,
-                            event: e,
-                            waypointTop: r.waypointTop,
-                            waypointBottom: r.waypointBottom,
-                            viewportTop: r.viewportTop,
-                            viewportBottom: r.viewportBottom,
-                          }));
-                    }
-                  }
-                },
-              },
-              {
-                key: "_getBounds",
-                value: function () {
-                  var e,
-                    r,
-                    t = this.props,
-                    i = t.horizontal,
-                    n = (t.debug, this._ref.getBoundingClientRect()),
-                    a = n.left,
-                    s = n.top,
-                    o = n.right,
-                    l = n.bottom,
-                    c = i ? a : s,
-                    u = i ? o : l;
-                  this.scrollableAncestor === window
-                    ? ((e = i ? window.innerWidth : window.innerHeight),
-                      (r = 0))
-                    : ((e = i
-                        ? this.scrollableAncestor.offsetWidth
-                        : this.scrollableAncestor.offsetHeight),
-                      (r = i
-                        ? this.scrollableAncestor.getBoundingClientRect().left
-                        : this.scrollableAncestor.getBoundingClientRect().top));
-                  var m = this.props,
-                    d = m.bottomOffset;
-                  return {
-                    waypointTop: c,
-                    waypointBottom: u,
-                    viewportTop: r + p(m.topOffset, e),
-                    viewportBottom: r + e - p(d, e),
-                  };
-                },
-              },
-              {
-                key: "render",
-                value: function () {
-                  var e = this,
-                    r = this.props.children;
-                  return r
-                    ? F(r) || (0, m.isForwardRef)(r)
-                      ? u.cloneElement(r, {
-                          ref: function (t) {
-                            e.refElement(t),
-                              r.ref &&
-                                ("function" == typeof r.ref
-                                  ? r.ref(t)
-                                  : (r.ref.current = t));
-                          },
-                        })
-                      : u.cloneElement(r, { innerRef: this.refElement })
-                    : u.createElement("span", {
-                        ref: this.refElement,
-                        style: { fontSize: 0 },
-                      });
-                },
-              },
-            ]) && d(r.prototype, i),
-            n && d(r, n),
-            s
+                      }),
+                      o.call(this, {
+                        currentPosition: t,
+                        previousPosition: b,
+                        event: e,
+                        waypointTop: r.waypointTop,
+                        waypointBottom: r.waypointBottom,
+                        viewportTop: r.viewportTop,
+                        viewportBottom: r.viewportBottom,
+                      }));
+                }
+              }
+            }),
+            (n._getBounds = function () {
+              var e,
+                r,
+                t = this.props,
+                i = t.horizontal,
+                n = (t.debug, this._ref.getBoundingClientRect()),
+                a = n.left,
+                s = n.top,
+                o = n.right,
+                l = n.bottom,
+                c = i ? a : s,
+                u = i ? o : l;
+              this.scrollableAncestor === window
+                ? ((e = i ? window.innerWidth : window.innerHeight), (r = 0))
+                : ((e = i
+                    ? this.scrollableAncestor.offsetWidth
+                    : this.scrollableAncestor.offsetHeight),
+                  (r = i
+                    ? this.scrollableAncestor.getBoundingClientRect().left
+                    : this.scrollableAncestor.getBoundingClientRect().top));
+              var m = this.props,
+                d = m.bottomOffset;
+              return {
+                waypointTop: c,
+                waypointBottom: u,
+                viewportTop: r + B(m.topOffset, e),
+                viewportBottom: r + e - B(d, e),
+              };
+            }),
+            (n.render = function () {
+              var e = this,
+                r = this.props.children;
+              if (!r)
+                return m.createElement("span", {
+                  ref: this.refElement,
+                  style: { fontSize: 0 },
+                });
+              if (f(r) || (0, d.isForwardRef)(r)) {
+                return m.cloneElement(r, {
+                  ref: function (t) {
+                    e.refElement(t),
+                      r.ref &&
+                        ("function" == typeof r.ref
+                          ? r.ref(t)
+                          : (r.ref.current = t));
+                  },
+                });
+              }
+              return m.cloneElement(r, { innerRef: this.refElement });
+            }),
+            r
           );
-        })(u.PureComponent);
-      (S.above = f),
-        (S.below = _),
-        (S.inside = g),
-        (S.invisible = z),
-        (S.getWindow = function () {
-          if ("undefined" != typeof window) return window;
-        }),
-        (S.defaultProps = v),
-        (S.displayName = "Waypoint");
+        })(m.PureComponent);
+      (h.above = y),
+        (h.below = w),
+        (h.inside = b),
+        (h.invisible = p),
+        (h.defaultProps = M),
+        (h.displayName = "Waypoint");
     },
     14077: (e, r, t) => {
       function i(e) {
@@ -1564,18 +1455,18 @@
           return "CCommunity_RateCommentThread_Request";
         }
       }
-      class h extends o {
+      class M extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            h.prototype.gidcomment || n.aR(h.M()),
+            M.prototype.gidcomment || n.aR(M.M()),
             o.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            h.sm_m ||
-              (h.sm_m = {
-                proto: h,
+            M.sm_m ||
+              (M.sm_m = {
+                proto: M,
                 fields: {
                   gidcomment: {
                     n: 1,
@@ -1590,89 +1481,6 @@
                   count: { n: 3, br: n.FE.readUint32, bw: n.Xc.writeUint32 },
                   upvotes: { n: 4, br: n.FE.readUint32, bw: n.Xc.writeUint32 },
                   has_upvoted: { n: 5, br: n.FE.readBool, bw: n.Xc.writeBool },
-                },
-              }),
-            h.sm_m
-          );
-        }
-        static MBF() {
-          return h.sm_mbf || (h.sm_mbf = n.Bh(h.M())), h.sm_mbf;
-        }
-        toObject(e = !1) {
-          return h.toObject(e, this);
-        }
-        static toObject(e, r) {
-          return n.TA(h.M(), e, r);
-        }
-        static fromObject(e) {
-          return n.aD(h.M(), e);
-        }
-        static deserializeBinary(e) {
-          let r = new i.BinaryReader(e),
-            t = new h();
-          return h.deserializeBinaryFromReader(t, r);
-        }
-        static deserializeBinaryFromReader(e, r) {
-          return n.F(h.MBF(), e, r);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return h.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, r) {
-          n.l2(h.M(), e, r);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return h.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CCommunity_RateCommentThread_Response";
-        }
-      }
-      class M extends o {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            M.prototype.commentthreadtype || n.aR(M.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            M.sm_m ||
-              (M.sm_m = {
-                proto: M,
-                fields: {
-                  commentthreadtype: {
-                    n: 1,
-                    br: n.FE.readString,
-                    bw: n.Xc.writeString,
-                  },
-                  steamid: {
-                    n: 2,
-                    br: n.FE.readUint64String,
-                    bw: n.Xc.writeUint64String,
-                  },
-                  gidfeature: {
-                    n: 3,
-                    br: n.FE.readUint64String,
-                    bw: n.Xc.writeUint64String,
-                  },
-                  gidfeature2: {
-                    n: 4,
-                    br: n.FE.readUint64String,
-                    bw: n.Xc.writeUint64String,
-                  },
-                  gidcomment: {
-                    n: 5,
-                    br: n.FE.readUint64String,
-                    bw: n.Xc.writeUint64String,
-                  },
-                  max_results: {
-                    n: 6,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
                 },
               }),
             M.sm_m
@@ -1708,6 +1516,89 @@
         serializeBase64String() {
           var e = new i.BinaryWriter();
           return M.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CCommunity_RateCommentThread_Response";
+        }
+      }
+      class h extends o {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            h.prototype.commentthreadtype || n.aR(h.M()),
+            o.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            h.sm_m ||
+              (h.sm_m = {
+                proto: h,
+                fields: {
+                  commentthreadtype: {
+                    n: 1,
+                    br: n.FE.readString,
+                    bw: n.Xc.writeString,
+                  },
+                  steamid: {
+                    n: 2,
+                    br: n.FE.readUint64String,
+                    bw: n.Xc.writeUint64String,
+                  },
+                  gidfeature: {
+                    n: 3,
+                    br: n.FE.readUint64String,
+                    bw: n.Xc.writeUint64String,
+                  },
+                  gidfeature2: {
+                    n: 4,
+                    br: n.FE.readUint64String,
+                    bw: n.Xc.writeUint64String,
+                  },
+                  gidcomment: {
+                    n: 5,
+                    br: n.FE.readUint64String,
+                    bw: n.Xc.writeUint64String,
+                  },
+                  max_results: {
+                    n: 6,
+                    br: n.FE.readUint32,
+                    bw: n.Xc.writeUint32,
+                  },
+                },
+              }),
+            h.sm_m
+          );
+        }
+        static MBF() {
+          return h.sm_mbf || (h.sm_mbf = n.Bh(h.M())), h.sm_mbf;
+        }
+        toObject(e = !1) {
+          return h.toObject(e, this);
+        }
+        static toObject(e, r) {
+          return n.TA(h.M(), e, r);
+        }
+        static fromObject(e) {
+          return n.aD(h.M(), e);
+        }
+        static deserializeBinary(e) {
+          let r = new i.BinaryReader(e),
+            t = new h();
+          return h.deserializeBinaryFromReader(t, r);
+        }
+        static deserializeBinaryFromReader(e, r) {
+          return n.F(h.MBF(), e, r);
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return h.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, r) {
+          n.l2(h.M(), e, r);
+        }
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return h.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CCommunity_GetCommentThreadRatings_Request";
@@ -1998,18 +1889,18 @@
           return "CCommunity_GetClanAnnouncementVoteForUser_Response";
         }
       }
-      class O extends o {
+      class E extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            O.prototype.steamid || n.aR(O.M()),
+            E.prototype.steamid || n.aR(E.M()),
             o.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            O.sm_m ||
-              (O.sm_m = {
-                proto: O,
+            E.sm_m ||
+              (E.sm_m = {
+                proto: E,
                 fields: {
                   steamid: {
                     n: 1,
@@ -2022,58 +1913,6 @@
                     bw: n.Xc.writeBool,
                   },
                 },
-              }),
-            O.sm_m
-          );
-        }
-        static MBF() {
-          return O.sm_mbf || (O.sm_mbf = n.Bh(O.M())), O.sm_mbf;
-        }
-        toObject(e = !1) {
-          return O.toObject(e, this);
-        }
-        static toObject(e, r) {
-          return n.TA(O.M(), e, r);
-        }
-        static fromObject(e) {
-          return n.aD(O.M(), e);
-        }
-        static deserializeBinary(e) {
-          let r = new i.BinaryReader(e),
-            t = new O();
-          return O.deserializeBinaryFromReader(t, r);
-        }
-        static deserializeBinaryFromReader(e, r) {
-          return n.F(O.MBF(), e, r);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return O.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, r) {
-          n.l2(O.M(), e, r);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return O.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CCommunity_GetAvatarHistory_Request";
-        }
-      }
-      class E extends o {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            E.prototype.avatars || n.aR(E.M()),
-            o.initialize(this, e, 0, -1, [1], null);
-        }
-        static M() {
-          return (
-            E.sm_m ||
-              (E.sm_m = {
-                proto: E,
-                fields: { avatars: { n: 1, c: j, r: !0, q: !0 } },
               }),
             E.sm_m
           );
@@ -2108,6 +1947,58 @@
         serializeBase64String() {
           var e = new i.BinaryWriter();
           return E.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CCommunity_GetAvatarHistory_Request";
+        }
+      }
+      class O extends o {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            O.prototype.avatars || n.aR(O.M()),
+            o.initialize(this, e, 0, -1, [1], null);
+        }
+        static M() {
+          return (
+            O.sm_m ||
+              (O.sm_m = {
+                proto: O,
+                fields: { avatars: { n: 1, c: j, r: !0, q: !0 } },
+              }),
+            O.sm_m
+          );
+        }
+        static MBF() {
+          return O.sm_mbf || (O.sm_mbf = n.Bh(O.M())), O.sm_mbf;
+        }
+        toObject(e = !1) {
+          return O.toObject(e, this);
+        }
+        static toObject(e, r) {
+          return n.TA(O.M(), e, r);
+        }
+        static fromObject(e) {
+          return n.aD(O.M(), e);
+        }
+        static deserializeBinary(e) {
+          let r = new i.BinaryReader(e),
+            t = new O();
+          return O.deserializeBinaryFromReader(t, r);
+        }
+        static deserializeBinaryFromReader(e, r) {
+          return n.F(O.MBF(), e, r);
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return O.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, r) {
+          n.l2(O.M(), e, r);
+        }
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return O.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CCommunity_GetAvatarHistory_Response";
@@ -2630,6 +2521,100 @@
           return "CCommunity_ClearUserPartnerEventsAppPriorities_Request";
         }
       }
+      class D extends o {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(), o.initialize(this, e, 0, -1, void 0, null);
+        }
+        toObject(e = !1) {
+          return D.toObject(e, this);
+        }
+        static toObject(e, r) {
+          return e ? { $jspbMessageInstance: r } : {};
+        }
+        static fromObject(e) {
+          return new D();
+        }
+        static deserializeBinary(e) {
+          let r = new i.BinaryReader(e),
+            t = new D();
+          return D.deserializeBinaryFromReader(t, r);
+        }
+        static deserializeBinaryFromReader(e, r) {
+          return e;
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return D.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, r) {}
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return D.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CCommunity_ClearUserPartnerEventsAppPriorities_Response";
+        }
+      }
+      class N extends o {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            N.prototype.appid || n.aR(N.M()),
+            o.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            N.sm_m ||
+              (N.sm_m = {
+                proto: N,
+                fields: {
+                  appid: { n: 1, br: n.FE.readUint32, bw: n.Xc.writeUint32 },
+                  user_app_priority: {
+                    n: 2,
+                    br: n.FE.readInt32,
+                    bw: n.Xc.writeInt32,
+                  },
+                },
+              }),
+            N.sm_m
+          );
+        }
+        static MBF() {
+          return N.sm_mbf || (N.sm_mbf = n.Bh(N.M())), N.sm_mbf;
+        }
+        toObject(e = !1) {
+          return N.toObject(e, this);
+        }
+        static toObject(e, r) {
+          return n.TA(N.M(), e, r);
+        }
+        static fromObject(e) {
+          return n.aD(N.M(), e);
+        }
+        static deserializeBinary(e) {
+          let r = new i.BinaryReader(e),
+            t = new N();
+          return N.deserializeBinaryFromReader(t, r);
+        }
+        static deserializeBinaryFromReader(e, r) {
+          return n.F(N.MBF(), e, r);
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return N.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, r) {
+          n.l2(N.M(), e, r);
+        }
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return N.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CCommunity_PartnerEventsAppPriority";
+        }
+      }
       class k extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -2662,100 +2647,6 @@
           return k.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CCommunity_ClearUserPartnerEventsAppPriorities_Response";
-        }
-      }
-      class D extends o {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            D.prototype.appid || n.aR(D.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            D.sm_m ||
-              (D.sm_m = {
-                proto: D,
-                fields: {
-                  appid: { n: 1, br: n.FE.readUint32, bw: n.Xc.writeUint32 },
-                  user_app_priority: {
-                    n: 2,
-                    br: n.FE.readInt32,
-                    bw: n.Xc.writeInt32,
-                  },
-                },
-              }),
-            D.sm_m
-          );
-        }
-        static MBF() {
-          return D.sm_mbf || (D.sm_mbf = n.Bh(D.M())), D.sm_mbf;
-        }
-        toObject(e = !1) {
-          return D.toObject(e, this);
-        }
-        static toObject(e, r) {
-          return n.TA(D.M(), e, r);
-        }
-        static fromObject(e) {
-          return n.aD(D.M(), e);
-        }
-        static deserializeBinary(e) {
-          let r = new i.BinaryReader(e),
-            t = new D();
-          return D.deserializeBinaryFromReader(t, r);
-        }
-        static deserializeBinaryFromReader(e, r) {
-          return n.F(D.MBF(), e, r);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return D.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, r) {
-          n.l2(D.M(), e, r);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return D.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CCommunity_PartnerEventsAppPriority";
-        }
-      }
-      class N extends o {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(), o.initialize(this, e, 0, -1, void 0, null);
-        }
-        toObject(e = !1) {
-          return N.toObject(e, this);
-        }
-        static toObject(e, r) {
-          return e ? { $jspbMessageInstance: r } : {};
-        }
-        static fromObject(e) {
-          return new N();
-        }
-        static deserializeBinary(e) {
-          let r = new i.BinaryReader(e),
-            t = new N();
-          return N.deserializeBinaryFromReader(t, r);
-        }
-        static deserializeBinaryFromReader(e, r) {
-          return e;
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return N.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, r) {}
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return N.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
           return "CCommunity_GetUserPartnerEventsAppPriorities_Request";
         }
       }
@@ -2771,7 +2662,7 @@
             G.sm_m ||
               (G.sm_m = {
                 proto: G,
-                fields: { priorities: { n: 1, c: D, r: !0, q: !0 } },
+                fields: { priorities: { n: 1, c: N, r: !0, q: !0 } },
               }),
             G.sm_m
           );
@@ -3467,14 +3358,14 @@
             return e.SendMsg(
               "Community.RateCommentThread#1",
               (0, a.MD)(F, r),
-              h,
+              M,
               { ePrivilege: 3 },
             );
           }),
           (e.GetCommentThreadRatings = function (e, r) {
             return e.SendMsg(
               "Community.GetCommentThreadRatings#1",
-              (0, a.MD)(M, r),
+              (0, a.MD)(h, r),
               R,
               { ePrivilege: 2 },
             );
@@ -3498,8 +3389,8 @@
           (e.GetAvatarHistory = function (e, r) {
             return e.SendMsg(
               "Community.GetAvatarHistory#1",
-              (0, a.MD)(O, r),
-              E,
+              (0, a.MD)(E, r),
+              O,
               { ePrivilege: 1 },
             );
           }),
@@ -3555,14 +3446,14 @@
             return e.SendMsg(
               "Community.ClearUserPartnerEventsAppPriorities#1",
               (0, a.MD)(A, r),
-              k,
+              D,
               { ePrivilege: 1 },
             );
           }),
           (e.GetUserPartnerEventsAppPriorities = function (e, r) {
             return e.SendMsg(
               "Community.GetUserPartnerEventsAppPriorities#1",
-              (0, a.MD)(N, r),
+              (0, a.MD)(k, r),
               G,
               { ePrivilege: 1 },
             );

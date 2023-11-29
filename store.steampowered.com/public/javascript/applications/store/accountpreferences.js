@@ -51,12 +51,7 @@
           f = (0, c.BE)(m, i),
           g = (0, a.id)(),
           p = window.__virtual_keyboard_client;
-        if (
-          ((0, s.useEffect)(() => {
-            l.Wz.SetHookFactory(() => p);
-          }, [p]),
-          g)
-        ) {
+        if (g) {
           const e = window.__nav_tree_root;
           return s.createElement(
             r.Fe,
@@ -65,7 +60,11 @@
               secondary: !0,
               parentEmbeddedNavTree: e,
             }),
-            s.createElement(o.O, null, t),
+            s.createElement(
+              l.o5,
+              { factory: p },
+              s.createElement(o.O, null, t),
+            ),
           );
         }
         return s.createElement(s.Fragment, null, t);
@@ -73,7 +72,7 @@
     },
     14491: (e, t, i) => {
       "use strict";
-      i.r(t), i.d(t, { AccountPreferencesRoutes: () => H, default: () => I });
+      i.r(t), i.d(t, { AccountPreferencesRoutes: () => I, default: () => H });
       var n = i(89526),
         s = i(59934),
         r = i(33940),
@@ -832,16 +831,16 @@
         });
       var w = i(35993);
       const B = {},
-        H = Object.assign(
+        I = Object.assign(
           {
             CookieSettings: () => "/cookiepreferences",
             NotificationSettings: () => "/notificationsettings",
           },
           B,
         ),
-        I = (e) => {
+        H = (e) => {
           const t = e.match.url,
-            i = H;
+            i = I;
           return n.createElement(
             s.rs,
             null,

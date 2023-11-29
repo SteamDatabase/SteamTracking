@@ -643,17 +643,21 @@
         );
       }
       function g(e) {
-        const t = h();
-        return t.data
-          ? {
-              currentNomination: t.data.find((t) => t.category_id == e),
+        var t;
+        const n = h();
+        return n.isLoading
+          ? { bLoadingNominationForCategory: !0 }
+          : {
+              currentNomination:
+                null === (t = n.data) || void 0 === t
+                  ? void 0
+                  : t.find((t) => t.category_id == e),
               bLoadingNominationForCategory: !1,
-            }
-          : { bLoadingNominationForCategory: !0 };
+            };
       }
-      function v(e, t, n) {
-        const c = (0, s.bY)(),
-          d = (0, i.useQueryClient)();
+      function v(e, t, n, c) {
+        const d = (0, s.bY)(),
+          p = (0, i.useQueryClient)();
         return (0, i.useMutation)(
           () =>
             (0, a.mG)(this, void 0, void 0, function* () {
@@ -670,14 +674,21 @@
                     [s.GetEResult(), s.Body().toObject()]
                   );
                 });
-              })(c, e, t, n);
+              })(d, e, t, n);
             }),
           {
             onSuccess([e, t]) {
-              1 == e &&
-                (function (e, t) {
-                  e.setQueryData(`SteamAwardNominations_${l.L7.accountid}`, t);
-                })(d, t.nominations);
+              1 == e
+                ? (function (e, t) {
+                    e.setQueryData(
+                      `SteamAwardNominations_${l.L7.accountid}`,
+                      t,
+                    );
+                  })(p, t.nominations)
+                : c && c(e);
+            },
+            onError() {
+              c && c();
             },
           },
         );
@@ -1033,7 +1044,7 @@
           return Number.MAX_VALUE;
         }
       }
-      class k extends l.Component {
+      class w extends l.Component {
         constructor(e) {
           super(e),
             (this.descTextAreaRef = l.createRef()),
@@ -1198,17 +1209,17 @@
           );
         }
       }
-      (0, a.gn)([v.ak], k.prototype, "BindMentionDialog", null),
-        (0, a.gn)([v.ak], k.prototype, "OnKeyDown", null),
-        (0, a.gn)([v.ak], k.prototype, "OnFocus", null),
-        (0, a.gn)([v.ak], k.prototype, "OnKeyPress", null),
-        (0, a.gn)([v.ak], k.prototype, "OnClick", null),
-        (0, a.gn)([v.ak], k.prototype, "OnEmoticonSuggestionSelected", null),
-        (0, a.gn)([v.ak], k.prototype, "OnBBCodeSuggestionSelected", null),
-        (0, a.gn)([v.ak], k.prototype, "FocusTextInput", null),
-        (0, a.gn)([v.ak], k.prototype, "GetTextAreaRef", null),
-        (0, a.gn)([v.ak], k.prototype, "GetTextAreaCurrent", null);
-      var w = n(57605),
+      (0, a.gn)([v.ak], w.prototype, "BindMentionDialog", null),
+        (0, a.gn)([v.ak], w.prototype, "OnKeyDown", null),
+        (0, a.gn)([v.ak], w.prototype, "OnFocus", null),
+        (0, a.gn)([v.ak], w.prototype, "OnKeyPress", null),
+        (0, a.gn)([v.ak], w.prototype, "OnClick", null),
+        (0, a.gn)([v.ak], w.prototype, "OnEmoticonSuggestionSelected", null),
+        (0, a.gn)([v.ak], w.prototype, "OnBBCodeSuggestionSelected", null),
+        (0, a.gn)([v.ak], w.prototype, "FocusTextInput", null),
+        (0, a.gn)([v.ak], w.prototype, "GetTextAreaRef", null),
+        (0, a.gn)([v.ak], w.prototype, "GetTextAreaCurrent", null);
+      var k = n(57605),
         O = n(60866),
         G = n(17318),
         R = n.n(G),
@@ -1303,7 +1314,7 @@
           Boolean(y) && l.createElement("p", null, y),
           T &&
             l.createElement(
-              w.zx,
+              k.zx,
               {
                 onClick: (e) => {
                   const t = (0, V.RA)(e);
@@ -1336,7 +1347,7 @@
                     size: "small",
                   })
                 : l.createElement(
-                    w.zx,
+                    k.zx,
                     {
                       onClick: () =>
                         (0, a.mG)(void 0, void 0, void 0, function* () {
@@ -1390,7 +1401,7 @@
                   ),
             ),
           l.createElement(
-            w.zx,
+            k.zx,
             {
               onClick: (e) => {
                 const t = new m.K(X.JA.CLANSTEAMID);
@@ -1555,7 +1566,7 @@
                   this.state.bShowDragTarget ? Q().DragTarget : "",
                 ),
               },
-              l.createElement(k, {
+              l.createElement(w, {
                 cols: 90,
                 rows: this.props.nOverridesRows || 22,
                 maxLength: 32e3,
@@ -2504,7 +2515,7 @@
           l.createElement(
             "div",
             { className: Q().InsertSpeakerCtn },
-            l.createElement(w.II, {
+            l.createElement(k.II, {
               type: "text",
               label: (0, B.Xx)("#EventEditor_AddSpeaker_Name"),
               value: n,
@@ -2514,13 +2525,13 @@
             l.createElement(
               "div",
               { className: Q().TitleGroup },
-              l.createElement(w.II, {
+              l.createElement(k.II, {
                 type: "text",
                 label: (0, B.Xx)("#EventEditor_AddSpeaker_Title"),
                 value: s,
                 onChange: (e) => p(e.target.value),
               }),
-              l.createElement(w.II, {
+              l.createElement(k.II, {
                 type: "text",
                 label: (0, B.Xx)("#EventEditor_AddSpeaker_Company"),
                 value: h,
@@ -2571,17 +2582,17 @@
                 "div",
                 { className: Q().AssociateRowCtn },
                 l.createElement(
-                  w.zx,
+                  k.zx,
                   { onClick: () => I(new m.K(X.L7.steamid)) },
                   (0, B.Xx)("#EventEditor_SteamAccount_addme"),
                 ),
                 l.createElement(
-                  w.zx,
+                  k.zx,
                   { onClick: (e) => (0, d.yV)(x, e) },
                   (0, B.Xx)("#EventEditor_SteamAccount_addfriend"),
                 ),
                 l.createElement(
-                  w.zx,
+                  k.zx,
                   { onClick: () => I(void 0) },
                   (0, B.Xx)("#EventEditor_SteamAccount_clear"),
                 ),
@@ -2611,7 +2622,7 @@
                 { className: "DialogLabel" },
                 (0, B.Xx)("#EventEditor_AddSpeaker_About"),
               ),
-              l.createElement(w.E0, {
+              l.createElement(k.E0, {
                 value: _,
                 onChange: (e) => E(e.target.value),
                 rows: 8,
@@ -2748,17 +2759,17 @@
                   className: Q().BBCodeEditorInputStyles,
                 },
                 l.createElement(
-                  w.h4,
+                  k.h4,
                   null,
                   " ",
                   (0, B.Xx)("#EventEditor_ImportFromHTML"),
                   " ",
                 ),
                 l.createElement(
-                  w.uT,
+                  k.uT,
                   null,
                   l.createElement(
-                    w.Ac,
+                    k.Ac,
                     null,
                     l.createElement(
                       "div",
@@ -2831,9 +2842,9 @@
                     ),
                   ),
                   l.createElement(
-                    w.$_,
+                    k.$_,
                     null,
-                    l.createElement(w.$0, {
+                    l.createElement(k.$0, {
                       onCancel: e,
                       strOKText: (0, B.Xx)("#Button_Overwrite"),
                       onUpdate: this.OnConvertAndAppendHTML,
@@ -2955,7 +2966,7 @@
         const f = u.cb.Get().GetPartnerEventPermissions(v.K.InitFromClanID(n)),
           B = f && (f.can_edit || f.support_user),
           b = (0, T.h4)(),
-          k =
+          w =
             T.De.STORE_BASE_URL +
             "feeds/" +
             (0, L.x3)() +
@@ -2964,7 +2975,7 @@
             T.De.COUNTRY +
             "&l=" +
             T.De.LANGUAGE,
-          w = i.createElement("img", { className: A().AppBannerLogo, src: a });
+          k = i.createElement("img", { className: A().AppBannerLogo, src: a });
         return i.createElement(
           "div",
           { className: A().AppBannerCtn },
@@ -2987,7 +2998,7 @@
                         style: { minWidth: "320px" },
                       },
                     },
-                    w,
+                    k,
                   )
                 : i.createElement(
                     N._,
@@ -2996,12 +3007,12 @@
                       id: o,
                       hoverClassName: A().AppBannerLogoCtn,
                     },
-                    w,
+                    k,
                   )
               : i.createElement(
                   "div",
                   { className: A().AppBannerLogoCtn },
-                  w,
+                  k,
                   " ",
                 ),
             i.createElement(
@@ -3069,7 +3080,7 @@
                     "a",
                     {
                       className: A().AppBannerLink,
-                      href: (0, y.OL)(k),
+                      href: (0, y.OL)(w),
                       target: T.De.IN_CLIENT ? void 0 : "_blank",
                     },
                     i.createElement(S.opd, null),
@@ -3092,8 +3103,8 @@
         );
       });
       var b = n(85521),
-        k = n(92307),
-        w = n(4795),
+        w = n(92307),
+        k = n(4795),
         O = n(83809),
         G = n.n(O),
         R = n(92358),
@@ -3687,14 +3698,14 @@
                   { className: G().EventBroadcastCtn },
                   i.createElement(
                     i.Suspense,
-                    { fallback: i.createElement("div", null) },
+                    { fallback: null },
                     i.createElement(q, { event: this.props.event }),
                   ),
                 ),
               e.BHasTag("steam_award_nomination_request") &&
-                i.createElement(w.yi, { event: e, lang: E }),
+                i.createElement(k.yi, { event: e, lang: E }),
               e.BHasTag("steam_award_vote_request") &&
-                i.createElement(w.WF, {
+                i.createElement(k.WF, {
                   appID: e.appid,
                   bIsEventActionEnabled: e.BIsEventActionEnabled(),
                   voteCategories: e.GetSteamAwardNomineeCategories(),
@@ -3711,7 +3722,7 @@
                     ),
                     onContextMenu: T.De.IN_CLIENT ? h.T : void 0,
                   },
-                  i.createElement(k.d, {
+                  i.createElement(w.d, {
                     text: S,
                     partnerEventStore: n,
                     event: e,
@@ -4245,7 +4256,7 @@
         N = n(57605),
         B = n(17547),
         b = n(69338);
-      const k = (0, o.Pi)((e) => {
+      const w = (0, o.Pi)((e) => {
         const { eventModel: t } = e,
           [n, o] = (0, r.useState)(!0),
           [i, l] = (0, r.useState)(new Set()),
@@ -4415,7 +4426,7 @@
           )
         );
       });
-      var w = n(51438),
+      var k = n(51438),
         O = n(44026),
         G = n(88443),
         R = n(51326),
@@ -4550,7 +4561,7 @@
         }
         OpenRepostDialogs(e) {
           (0, p.AM)(
-            r.createElement(k, { eventModel: this.props.eventModel }),
+            r.createElement(w, { eventModel: this.props.eventModel }),
             (0, m.RA)(e),
           );
         }
@@ -4566,7 +4577,7 @@
             o = (0, i.h4)(),
             l = i.L7.logged_in && x.Get().BCanRepostPartnerEvent();
           return r.createElement(
-            w.s,
+            k.s,
             { className: g().Container, "flow-children": "row", focusable: !1 },
             r.createElement(
               "div",
@@ -4581,7 +4592,7 @@
                   (0, G.AV)(t),
                 ),
                 r.createElement(
-                  w.s,
+                  k.s,
                   {
                     focusable: !0,
                     className: (0, u.Z)(
@@ -4605,7 +4616,7 @@
                   ),
                 ),
                 r.createElement(
-                  w.s,
+                  k.s,
                   {
                     focusable: !0,
                     className: (0, u.Z)(
@@ -4635,7 +4646,7 @@
                   "div",
                   { className: g().VoteContainer },
                   r.createElement(
-                    w.s,
+                    k.s,
                     {
                       focusable: !0,
                       className: (0, u.Z)(
@@ -4657,7 +4668,7 @@
               { className: g().ShareContainer },
               !this.props.bInGamepadUI &&
                 r.createElement(
-                  w.s,
+                  k.s,
                   {
                     focusable: !0,
                     className: (0, u.Z)(
@@ -4712,7 +4723,7 @@
             ),
           !n &&
             r.createElement(
-              w.s,
+              k.s,
               {
                 focusable: !0,
                 onActivate: a,
@@ -5072,7 +5083,7 @@
     },
     4795: (e, t, n) => {
       "use strict";
-      n.d(t, { WF: () => P, yi: () => w });
+      n.d(t, { WF: () => P, yi: () => k });
       var a = n(33940),
         r = n(52868),
         o = n.n(r),
@@ -5165,8 +5176,8 @@
           return null;
         });
       }
-      const k = { include_assets: !0 };
-      function w(e) {
+      const w = { include_assets: !0 };
+      function k(e) {
         var t, n;
         const { event: a, lang: r, previewMode: o } = e,
           [i] = (0, s.SZ)(() => [a.GetSteamAwardCategory()]),
@@ -5292,35 +5303,20 @@
           [i, l] = (0, s.SZ)(() => [n.GetSteamAwardCategory(), n.appid]),
           m = null == o ? void 0 : o.appid,
           u = (0, p.TW)(l, i, 0),
-          g = c.useRef(),
-          v =
+          g = Boolean(
             (null == o ? void 0 : o.appid) == l &&
-            (null == o ? void 0 : o.category_id) == i,
-          _ = (0, c.useCallback)(
+              (null == o ? void 0 : o.category_id) == i,
+          ),
+          v = (0, c.useCallback)(
             (e) =>
               (0, a.mG)(this, void 0, void 0, function* () {
-                var t, n;
                 if (!e)
-                  return (
-                    console.log(
-                      "EventDisplaySteamAwardNomination: ignore turning off the checkbox",
-                    ),
-                    void (
-                      null === (t = g.current) ||
-                      void 0 === t ||
-                      t.setState({ checked: !1 })
-                    )
+                  return void console.log(
+                    "EventDisplaySteamAwardNomination: ignore turning off the checkbox",
                   );
                 if (!B(!1))
-                  return (
-                    console.log(
-                      "EventDisplaySteamAwardNomination: UserEligibleToNominateOrVote failed",
-                    ),
-                    void (
-                      null === (n = g.current) ||
-                      void 0 === n ||
-                      n.setState({ checked: !1 })
-                    )
+                  return void console.log(
+                    "EventDisplaySteamAwardNomination: UserEligibleToNominateOrVote failed",
                   );
                 m && m != l
                   ? (0, f.AM)(
@@ -5329,14 +5325,6 @@
                         newAppID: l,
                         curNominatedAppID: m,
                         fnOnConfirm: u.mutate,
-                        fnOnCancel: () => {
-                          var e;
-                          return (
-                            (null === (e = g.current) || void 0 === e
-                              ? void 0
-                              : e.checked) && g.current.Toggle()
-                          );
-                        },
                       }),
                       window,
                     )
@@ -5344,15 +5332,15 @@
               }),
             [m, l, u],
           ),
-          E = d.JW.GetTimeNowWithOverride(),
-          D =
+          _ = d.JW.GetTimeNowWithOverride(),
+          E =
             1 ==
             (null === (t = r.rgAwardCategoryDetails) || void 0 === t
               ? void 0
               : t.length),
-          T =
-            n.BIsEventActionEnabled() || E < n.GetStartTimeAndDateUnixSeconds();
-        return D && (T || v)
+          D =
+            n.BIsEventActionEnabled() || _ < n.GetStartTimeAndDateUnixSeconds();
+        return E && (D || g)
           ? c.createElement(
               "div",
               { className: M().SteamAwardVoteWidget },
@@ -5368,18 +5356,18 @@
                     },
                     className: (0, S.Z)(
                       M().SteamAwardNominateButton,
-                      v && M().Nominated,
+                      g && M().Nominated,
                     ),
                   },
                   c.createElement(h.ji, {
-                    ref: g,
+                    controlled: !0,
                     className: (0, S.Z)(
                       M().SteamAwardVoteCheckBox,
-                      v && M().Nominated,
+                      g && M().Nominated,
                     ),
-                    checked: v,
-                    onChange: _,
-                    disabled: v,
+                    checked: g,
+                    onChange: v,
+                    disabled: g,
                     color: "#FFFFFF",
                     highlightColor: "white",
                     label: c.createElement(
@@ -5388,7 +5376,7 @@
                       c.createElement(
                         "div",
                         { className: M().SteamAwardCategoryTitle },
-                        v
+                        g
                           ? (0, C.kQ)(
                               "#SteamAwards_NominateWidget_CTA_PastTense",
                               r.rgAwardCategoryDetails[0]
@@ -5409,7 +5397,7 @@
                   r.rgAwardCategoryDetails[0].strSuggestedCategoryDesc,
                 ),
               ),
-              Boolean(T && i != r.eLaborOfLove) &&
+              Boolean(D && i != r.eLaborOfLove) &&
                 c.createElement(
                   "div",
                   { className: M().SteamAwardLinkToNominationPage },
@@ -5437,8 +5425,8 @@
             fnOnCancel: o,
             closeModal: i,
           } = e,
-          [s] = (0, u.vs)(t, k),
-          [l] = (0, u.vs)(n, k);
+          [s] = (0, u.vs)(t, w),
+          [l] = (0, u.vs)(n, w);
         return c.createElement(
           T.uH,
           {
@@ -6122,8 +6110,8 @@
         N = n(47165),
         B = n(97940),
         b = n(24448),
-        k = n(12763),
-        w = n(23217),
+        w = n(12763),
+        k = n(23217),
         O = n(69338),
         G = n(92307),
         R = n(31038),
@@ -6205,7 +6193,7 @@
                 r.token.reason ||
                   (C(!0), _((0, p.Xx)("#EventDisplay_Share_Success")));
               } catch (e) {
-                const t = (0, w.l)(e),
+                const t = (0, k.l)(e),
                   n =
                     (0, p.Xx)("#EventDisplay_Share_Failure") +
                     "\n\n" +
@@ -6286,7 +6274,7 @@
                     r.createElement(
                       "div",
                       { className: (0, d.Z)(l().FlexColumnContainer) },
-                      r.createElement(k.R, {
+                      r.createElement(w.R, {
                         strPlaceholder: (0, p.Xx)(
                           "#EventDisplay_Share_OnMyStatus_Placeholder",
                         ),

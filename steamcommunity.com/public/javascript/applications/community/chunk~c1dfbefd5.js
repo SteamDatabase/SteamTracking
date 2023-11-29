@@ -1090,6 +1090,13 @@
             this.m_rgPurchaseOptions
           );
         }
+        GetSelfPurchaseOption() {
+          this.BCheckDataRequestIncluded({ include_all_purchase_options: !0 });
+          const e = 2 === this.m_eItemType ? "bundleid" : "packageid";
+          return this.m_rgPurchaseOptions.find(
+            (t) => t[e] && t[e] === this.m_unID,
+          );
+        }
         BHasAgeSafeScreenshots() {
           return this.GetOnlyAllAgesSafeScreenshots().length > 0;
         }

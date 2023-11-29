@@ -156,7 +156,7 @@
     },
     42591: (e, t, i) => {
       "use strict";
-      i.r(t), i.d(t, { default: () => b });
+      i.r(t), i.d(t, { default: () => M });
       var a,
         n = i(33940),
         s = i(32765),
@@ -603,21 +603,6 @@
         onUpdateWithIgnored() {
           this.m_ResultDataCache.expireData(), (this.m_bIgnoredEdited = !1);
         }
-        onAppClicked(e, t) {
-          return (0, n.mG)(this, void 0, void 0, function* () {
-            let i = {
-              account_id: T.ACCOUNT_ID,
-              session_id: T.SESSION_ID,
-              app_id: e,
-              app_rank: t,
-              action: y.ClickThrough,
-              algorithm: 1,
-              setting_1: 100 * this.m_fPopularityValue,
-              setting_2: 100 * this.m_fRecencyValue,
-            };
-            yield v().post(`${T.BASE_URL}recommender/${T.STEAM_ID}/stats`, i);
-          });
-        }
         onAddToWishlist(e, t) {
           return (0, n.mG)(this, void 0, void 0, function* () {
             f.getAppInfo()[e].w = !0;
@@ -702,7 +687,6 @@
         (0, n.gn)([p.ak], R.prototype, "onSaveUserSettings", null),
         (0, n.gn)([p.ak], R.prototype, "onToggleIgnore", null),
         (0, n.gn)([p.ak], R.prototype, "onUpdateWithIgnored", null),
-        (0, n.gn)([p.ak], R.prototype, "onAppClicked", null),
         (0, n.gn)([p.ak], R.prototype, "onAddToWishlist", null),
         (0, n.gn)([p.ak], R.prototype, "onGoToWishlist", null),
         (0, n.gn)([p.ak], R.prototype, "onAddToCart", null),
@@ -717,7 +701,7 @@
         let e = (0, s.kQ)("ir_config", "application_config");
         e && (Object.assign(T, e), f.Init());
       })();
-      const A = ({ accountID: e }) => {
+      const N = ({ accountID: e }) => {
           const t = f.getInputApps(),
             i = Object.keys(t).length;
           let a = 0;
@@ -799,7 +783,7 @@
             )
           );
         };
-      let N = class extends l.Component {
+      let A = class extends l.Component {
         constructor(e) {
           super(e), (this.state = {});
         }
@@ -841,14 +825,14 @@
                 { className: u.Header },
                 (0, _.Xx)("#PlaytimeList_Header"),
               ),
-              l.createElement(A, { accountID: this.props.accountID }),
+              l.createElement(N, { accountID: this.props.accountID }),
               l.createElement("div", { className: u.List }, t),
             )
           );
         }
       };
-      N = (0, n.gn)([o.Pi], N);
-      const C = ({
+      A = (0, n.gn)([o.Pi], A);
+      const D = ({
           titleLabel: e,
           minLabel: t,
           maxLabel: i,
@@ -883,7 +867,7 @@
             l.createElement("div", { className: u.OptionalLabel }, d),
           );
         },
-        D = ({ className: e, titleLabel: t, checked: i, onChange: a }) =>
+        C = ({ className: e, titleLabel: t, checked: i, onChange: a }) =>
           l.createElement(
             "label",
             { className: (0, m.Z)(u.OptionCheckbox, e && e) },
@@ -1033,7 +1017,7 @@
           l.createElement(
             "div",
             { className: (0, m.Z)(u.Row, u.FirstRow) },
-            l.createElement(C, {
+            l.createElement(D, {
               minLabel: (0, _.Xx)("#Popularity_Popular"),
               titleLabel: (0, _.Xx)("#Popularity_Title"),
               maxLabel: (0, _.Xx)("#Popularity_Niche"),
@@ -1042,7 +1026,7 @@
               value: f.m_fQueuedPopularityValue,
               onChange: f.onPopularityChanged,
             }),
-            l.createElement(C, {
+            l.createElement(D, {
               minLabel: (0, _.Xx)("#Recency_Older"),
               titleLabel: (0, _.Xx)("#Recency_Title"),
               maxLabel: (0, _.Xx)("#Recency_Newer"),
@@ -1072,7 +1056,7 @@
               onAddTag: f.onTagExcludeAdd,
               onRemoveTag: f.onTagExcludeRemove,
             }),
-            l.createElement(D, {
+            l.createElement(C, {
               className: u.WishlistCheckbox,
               titleLabel: (0, _.Xx)("#ExcludeWishlisted"),
               checked: f.m_bExcludeWishlisted,
@@ -1191,11 +1175,11 @@
             y = Math.min(Number(t) / 100, 1e3);
           let R = !1,
             L = !1,
-            A = !0,
+            N = !0,
             I = "",
-            N = "",
-            C = "",
+            A = "",
             D = "",
+            C = "",
             x = "",
             P = !1,
             U = !0;
@@ -1204,7 +1188,7 @@
             e &&
               ((R = !0),
               (L = e.discount_pct > 0),
-              (A = "0" == e.discount_price),
+              (N = "0" == e.discount_price),
               "probably" ==
               document
                 .createElement("video")
@@ -1216,9 +1200,9 @@
                 ? ((x = e.microtrailer_mp4), (P = !0), (U = !1))
                 : (x = e.video_mp4),
               (I = `-${e.discount_pct}%`),
-              (N = e.base_price),
-              (C = A ? (0, _.Xx)("#FreeToPlay") : e.discount_price),
-              (D = e.description));
+              (A = e.base_price),
+              (D = N ? (0, _.Xx)("#FreeToPlay") : e.discount_price),
+              (C = e.description));
           }
           const w = x && x.length > 0;
           return l.createElement(
@@ -1228,7 +1212,6 @@
               "a",
               {
                 href: `${T.BASE_URL}app/${e}?snr=${T.LINK_PARAM}`,
-                onClick: () => f.onAppClicked(e, i),
                 className: (0, m.Z)(
                   u.RecommendationEntry,
                   "ds_flagged",
@@ -1322,7 +1305,7 @@
                           !S && u.Hidden,
                         ),
                       },
-                      D,
+                      C,
                     ),
                   ),
                   R &&
@@ -1363,12 +1346,12 @@
                                 l.createElement(
                                   "div",
                                   { className: "discount_original_price" },
-                                  N,
+                                  A,
                                 ),
                                 l.createElement(
                                   "div",
                                   { className: "discount_final_price" },
-                                  C,
+                                  D,
                                 ),
                               ),
                             ),
@@ -1382,9 +1365,9 @@
                                   u.Price,
                                 ),
                               },
-                              C,
+                              D,
                             ),
-                          !A &&
+                          !N &&
                             l.createElement(
                               "div",
                               {
@@ -1407,7 +1390,7 @@
                         ),
                       ),
                       !this.state.wishlisted &&
-                        !A &&
+                        !N &&
                         l.createElement(
                           "div",
                           {
@@ -1426,7 +1409,7 @@
                           ),
                         ),
                       this.state.wishlisted &&
-                        !A &&
+                        !N &&
                         l.createElement(
                           "div",
                           {
@@ -1575,7 +1558,7 @@
         }
       };
       w = (0, n.gn)([o.Pi], w);
-      let M = class extends l.Component {
+      let b = class extends l.Component {
         constructor() {
           super(...arguments), (this.state = { width: window.innerWidth });
         }
@@ -1616,7 +1599,7 @@
                   l.createElement(
                     "div",
                     { className: u.BottomSection },
-                    l.createElement(N, { accountID: s.L7.accountid }),
+                    l.createElement(A, { accountID: s.L7.accountid }),
                     l.createElement("div", { className: u.VerticalBar }),
                     l.createElement(w, { width: this.state.width }),
                   ),
@@ -1648,10 +1631,10 @@
               );
         }
       };
-      (0, n.gn)([p.ak], M.prototype, "updateDimensions", null),
-        (0, n.gn)([p.ak], M.prototype, "ShowLoginDialog", null),
-        (M = (0, n.gn)([o.Pi], M));
-      const b = M;
+      (0, n.gn)([p.ak], b.prototype, "updateDimensions", null),
+        (0, n.gn)([p.ak], b.prototype, "ShowLoginDialog", null),
+        (b = (0, n.gn)([o.Pi], b));
+      const M = b;
     },
   },
 ]);

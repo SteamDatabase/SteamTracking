@@ -408,12 +408,12 @@
     },
     85651: (e, t, n) => {
       "use strict";
-      n.d(t, { JW: () => u, kl: () => v, rw: () => p });
+      n.d(t, { JW: () => v, kl: () => h, rw: () => c });
       var r = n(33940),
         a = n(59621),
         s = n(36105),
-        i = n.n(s),
-        o = n(89526),
+        o = n.n(s),
+        i = n(89526),
         l = (n(58218), n(32765));
       class d {
         constructor() {
@@ -455,7 +455,7 @@
             ("dev" == l.De.WEB_UNIVERSE || "beta" == l.De.WEB_UNIVERSE)
           ) {
             const e = t.get("t");
-            let n = /^\d+$/.test(e) ? i().unix(Number.parseInt(e)) : i()(e);
+            let n = /^\d+$/.test(e) ? o().unix(Number.parseInt(e)) : o()(e);
             (this.nOverrideDateNow = Math.floor(n.unix())),
               console.log(
                 "CEventCalendarDevFeatures overriding partner event time: " +
@@ -467,217 +467,27 @@
         }
       }
       (0, r.gn)([a.LO], d.prototype, "nOverrideDateNow", void 0);
-      const u = new d();
-      window.g_EventCalendarDevFeatures = u;
+      const v = new d();
+      window.g_EventCalendarDevFeatures = v;
       const _ = new Date(),
-        c = Math.floor(_.getTime() / 1e3);
-      function v() {
+        p = Math.floor(_.getTime() / 1e3);
+      function h() {
         var e;
-        return null !== (e = u.nOverrideDateNow) && void 0 !== e ? e : c;
+        return null !== (e = v.nOverrideDateNow) && void 0 !== e ? e : p;
       }
-      function p() {
-        return o.useMemo(() => u.GetTimeNowWithOverrideAsDate(), []);
-      }
-    },
-    25871: (e, t, n) => {
-      "use strict";
-      n.d(t, {
-        Vm: () => _,
-        ie: () => u,
-        jk: () => l,
-        oA: () => p,
-        vs: () => d,
-        wZ: () => v,
-      });
-      var r = n(52868),
-        a = n.n(r),
-        s = n(89526),
-        i = (n(24174), n(4306)),
-        o = n(92616);
-      function l(e, t, n, r) {
-        const l = (0, s.useRef)(),
-          d = (0, s.useRef)(void 0),
-          u = (0, i.NW)();
-        l.current = e;
-        const [_, c] = (0, s.useState)(void 0),
-          {
-            include_assets: v,
-            include_release: p,
-            include_platforms: h,
-            include_all_purchase_options: j,
-            include_screenshots: m,
-            include_trailers: E,
-            include_ratings: f,
-            include_tag_count: g,
-            include_reviews: S,
-            include_basic_info: b,
-            include_supported_languages: C,
-            include_full_description: w,
-            include_included_items: k,
-          } = n;
-        if (
-          ((0, s.useEffect)(() => {
-            const n = {
-              include_assets: v,
-              include_release: p,
-              include_platforms: h,
-              include_all_purchase_options: j,
-              include_screenshots: m,
-              include_trailers: E,
-              include_ratings: f,
-              include_tag_count: g,
-              include_reviews: S,
-              include_basic_info: b,
-              include_supported_languages: C,
-              include_full_description: w,
-              include_included_items: k,
-            };
-            let s = null;
-            return (
-              !e ||
-                o.Z.Get().BHasStoreItem(e, t, n) ||
-                (void 0 !== _ && r && r == d.current) ||
-                (r !== d.current && (c(void 0), (d.current = r)),
-                (s = a().CancelToken.source()),
-                o.Z.Get()
-                  .QueueStoreItemRequest(e, t, n)
-                  .then((t) => {
-                    s.token.reason || l.current !== e || c(1 == t), u();
-                  })),
-              () => s && s.cancel("useStoreItemCache: unmounting")
-            );
-          }, [e, t, r, _, v, p, h, j, m, E, f, g, S, b, C, w, k, u]),
-          !e)
-        )
-          return [null, 2];
-        if (!1 === _) return [void 0, 2];
-        if (o.Z.Get().BIsStoreItemMissing(e, t)) return [void 0, 2];
-        if (!o.Z.Get().BHasStoreItem(e, t, n)) return [void 0, 1];
-        const T = o.Z.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
-        return T ? [T, 3] : [null, 2];
-      }
-      function d(e, t, n) {
-        return l(e, 0, t, n);
-      }
-      function u(e, t, n) {
-        return l(e, 1, t, n);
-      }
-      function _(e, t, n) {
-        const [r, i] = l(e, t, n),
-          [o, u] = (0, s.useState)(null),
-          [_, c] = d(o, n);
-        return (
-          (0, s.useEffect)(() => {
-            var e;
-            const t = a().CancelToken.source();
-            if (
-              1 == (null == r ? void 0 : r.GetStoreItemType()) &&
-              1 == (null == r ? void 0 : r.GetIncludedAppIDs().length)
-            ) {
-              const n = r.GetIncludedAppIDs()[0];
-              o != n &&
-                ((null === (e = null == t ? void 0 : t.token) || void 0 === e
-                  ? void 0
-                  : e.reason) ||
-                  u(n));
-            }
-            return () =>
-              t.cancel("useStoreItemCacheOrPackageSingleApp: unmounting");
-          }, [o, r]),
-          o ? [_, c] : [r, i]
-        );
-      }
-      function c(e, t, n, r) {
-        const l = (0, i.NW)(),
-          {
-            include_assets: d,
-            include_release: u,
-            include_platforms: _,
-            include_all_purchase_options: c,
-            include_screenshots: v,
-            include_trailers: p,
-            include_ratings: h,
-            include_tag_count: j,
-            include_reviews: m,
-            include_basic_info: E,
-            include_supported_languages: f,
-            include_full_description: g,
-            include_included_items: S,
-          } = n;
-        if (
-          ((0, s.useEffect)(() => {
-            if (!e || 0 == e.length) return;
-            const n = {
-                include_assets: d,
-                include_release: u,
-                include_platforms: _,
-                include_all_purchase_options: c,
-                include_screenshots: v,
-                include_trailers: p,
-                include_ratings: h,
-                include_tag_count: j,
-                include_reviews: m,
-                include_basic_info: E,
-                include_supported_languages: f,
-                include_full_description: g,
-                include_included_items: S,
-              },
-              r = e.filter(
-                (e) =>
-                  !(
-                    o.Z.Get().BHasStoreItem(e, t, n) ||
-                    o.Z.Get().BIsStoreItemMissing(e, t)
-                  ),
-              );
-            if (0 == r.length) return;
-            const s = a().CancelToken.source(),
-              i = r.map((e) => o.Z.Get().QueueStoreItemRequest(e, t, n));
-            return (
-              Promise.all(i).then(() => {
-                s.token.reason || l();
-              }),
-              () => s.cancel("useStoreItemCacheMultiplePackages: unmounting")
-            );
-          }, [e, t, r, l, d, u, _, c, v, p, h, j, m, E, f, g, S]),
-          !e)
-        )
-          return 2;
-        if (
-          !e.every(
-            (e) =>
-              o.Z.Get().BHasStoreItem(e, t, n) ||
-              o.Z.Get().BIsStoreItemMissing(e, t),
-          )
-        )
-          return 1;
-        return e.every((e) =>
-          o.Z.Get().GetStoreItemWithLegacyVisibilityCheck(e, t),
-        )
-          ? 3
-          : 2;
-      }
-      function v(e, t, n) {
-        return c(e, 0, t, n);
-      }
-      function p() {
-        s.useEffect(
-          () => (
-            o.Z.Get().SetReturnUnavailableItems(!0),
-            () => o.Z.Get().SetReturnUnavailableItems(!1)
-          ),
-          [],
-        );
+      function c() {
+        return i.useMemo(() => v.GetTimeNowWithOverrideAsDate(), []);
       }
     },
     5557: (e, t, n) => {
       "use strict";
-      n.d(t, { r: () => o });
+      n.d(t, { r: () => i });
       var r = n(89526),
         a = n(99307),
         s = n(14826),
-        i = n(32765);
-      const o = (e) => {
-        let t = i.De.HELP_BASE_URL + "wizard/HelpWithLimitedAccount";
+        o = n(32765);
+      const i = (e) => {
+        let t = o.De.HELP_BASE_URL + "wizard/HelpWithLimitedAccount";
         return r.createElement(
           a.uH,
           {
@@ -693,7 +503,7 @@
               e.strTokenOverride || "#User_LimitedAccount",
               r.createElement(
                 "a",
-                { href: t, target: i.De.IN_CLIENT ? void 0 : "_blank" },
+                { href: t, target: o.De.IN_CLIENT ? void 0 : "_blank" },
                 (0, s.Xx)("#User_LimitedAccount_UrlInfo"),
               ),
             ),
@@ -703,11 +513,11 @@
     },
     58218: (e, t, n) => {
       "use strict";
-      n.d(t, { T: () => i });
+      n.d(t, { T: () => o });
       var r = n(52868),
         a = n.n(r),
         s = n(89526);
-      function i(e) {
+      function o(e) {
         const t = s.useRef(a().CancelToken.source());
         return (
           s.useEffect(() => {

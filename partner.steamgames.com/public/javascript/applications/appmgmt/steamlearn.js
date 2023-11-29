@@ -3572,8 +3572,9 @@
               e.msgNode.embedding().embedding_width().toString(),
             ),
             [_, u] = o.useState(!0),
-            [p, g] = o.useState(e.msgNode.embedding().flatten()),
-            S = o.useCallback(
+            [p, g] = o.useState(e.msgNode.embedding().export_name()),
+            [S, v] = o.useState(e.msgNode.embedding().flatten()),
+            E = o.useCallback(
               (t) => {
                 const a = ie(t, 1),
                   n = de(e.msgWorkingProjectConfig, t);
@@ -3581,7 +3582,7 @@
               },
               [e],
             ),
-            v = o.useCallback((e) => {
+            N = o.useCallback((e) => {
               u(ie(e, 1)), m(e);
             }, []);
           return o.createElement(
@@ -3637,7 +3638,7 @@
                   type: "text",
                   className: (0, i.Z)(tt.OptionInput, !s && tt.Invalid),
                   value: n,
-                  onChange: (e) => S(e.target.value),
+                  onChange: (e) => E(e.target.value),
                 }),
               ),
               o.createElement(
@@ -3657,7 +3658,7 @@
                   type: "text",
                   className: (0, i.Z)(tt.OptionInput, !_ && tt.Invalid),
                   value: d,
-                  onChange: (e) => v(e.target.value),
+                  onChange: (e) => N(e.target.value),
                 }),
               ),
               o.createElement(
@@ -3681,8 +3682,8 @@
                   o.createElement("input", {
                     type: "checkbox",
                     id: "editflatten",
-                    checked: p,
-                    onChange: () => g(!p),
+                    checked: S,
+                    onChange: () => v(!S),
                   }),
                   o.createElement(
                     "label",
@@ -3690,6 +3691,26 @@
                     (0, l.Xx)("#SteamLearn_Config_Node_Embedding_Flatten"),
                   ),
                 ),
+              ),
+              o.createElement(
+                "div",
+                { className: tt.Option },
+                o.createElement(
+                  "div",
+                  { className: tt.OptionTitle },
+                  (0, l.Xx)("#SteamLearn_Config_Node_Extract_Name"),
+                ),
+                o.createElement(
+                  "div",
+                  { className: tt.OptionDesc },
+                  (0, l.Xx)("#SteamLearn_Config_Node_Extract_NameDesc"),
+                ),
+                o.createElement("input", {
+                  type: "text",
+                  className: tt.OptionInput,
+                  value: p,
+                  onChange: (e) => g(e.target.value),
+                }),
               ),
             ),
             o.createElement(
@@ -3710,7 +3731,8 @@
                         (e.msgNode.embedding().set_compact_table(n),
                         e.msgNode.embedding().set_max_value(0)),
                       e.msgNode.embedding().set_embedding_width(parseInt(d)),
-                      e.msgNode.embedding().set_flatten(p),
+                      e.msgNode.embedding().set_flatten(S),
+                      e.msgNode.embedding().set_export_name(p),
                       e.msgNode.set_comment(t),
                       re(e.msgWorkingProject),
                       e.closeModal();
@@ -3774,19 +3796,18 @@
                   (0, l.Xx)("#SteamLearn_Config_Node_Title_Concat"),
                 ),
                 o.createElement("div", { className: tt.NodeID }, t.node_id()),
-                s &&
-                  o.createElement("div", {
-                    className: tt.EditGear,
-                    onClick: () =>
-                      (0, Ie.AM)(
-                        o.createElement(lt, {
-                          msgNode: t,
-                          msgWorkingProject: a,
-                          msgWorkingProjectConfig: n,
-                        }),
-                        window,
-                      ),
-                  }),
+                o.createElement("div", {
+                  className: tt.EditGear,
+                  onClick: () =>
+                    (0, Ie.AM)(
+                      o.createElement(lt, {
+                        msgNode: t,
+                        msgWorkingProject: a,
+                        msgWorkingProjectConfig: n,
+                      }),
+                      window,
+                    ),
+                }),
                 s &&
                   o.createElement("div", {
                     className: tt.Delete,
@@ -6556,42 +6577,43 @@
               nPublishedVersion: d,
             } = we(),
             m = (0, ct.Z)(),
-            _ = r.connectors().filter((e) => e.is_input_connector()),
-            u = r.connectors().filter((e) => !e.is_input_connector()),
-            p = u.filter((e, t) => t % 2 == 0),
-            g = u.filter((e, t) => t % 2 == 1);
+            _ = 0 == d,
+            u = r.connectors().filter((e) => e.is_input_connector()),
+            p = r.connectors().filter((e) => !e.is_input_connector()),
+            g = p.filter((e, t) => t % 2 == 0),
+            S = p.filter((e, t) => t % 2 == 1);
           o.useEffect(() => {
             setTimeout(() => {
               for (const e of c.project_nodes())
                 7 == e.type() && m(f(e.node_id()));
             }, 0.1);
           }, [c, m]);
-          const S = Math.max(78, 20 * _.length);
-          let v = "";
+          const v = Math.max(78, 20 * u.length);
+          let E = "";
           switch (r.conditional_extract().extract_filter_type()) {
             case 1:
-              v = (0, l.Xx)(
+              E = (0, l.Xx)(
                 "#SteamLearn_Config_Node_ConditionalExtract_FilterType_Random",
               );
               break;
             case 2:
-              v = (0, l.Xx)(
+              E = (0, l.Xx)(
                 "#SteamLearn_Config_Node_ConditionalExtract_FilterType_AppID",
               );
               break;
             case 4:
-              v = (0, l.Xx)(
+              E = (0, l.Xx)(
                 "#SteamLearn_Config_Node_ConditionalExtract_FilterType_AppIDFeatured",
               );
           }
-          const E =
+          const N =
             2 == r.conditional_extract().extract_filter_type() ||
             4 == r.conditional_extract().extract_filter_type();
           return o.createElement(
             "div",
             { className: (0, i.Z)(tt.FlowNode, tt.OnehotNode) },
-            _.map((e, t) => {
-              const a = Math.floor(((t + 1) / (_.length + 1)) * 200),
+            u.map((e, t) => {
+              const a = Math.floor(((t + 1) / (u.length + 1)) * 200),
                 n = h(e.connector_id());
               return o.createElement(
                 qe.HH,
@@ -6630,22 +6652,23 @@
                     window,
                   ),
               }),
-              o.createElement("div", {
-                className: tt.Delete,
-                onClick: () =>
-                  (0, Ie.AM)(
-                    o.createElement(ot.uH, {
-                      strTitle: (0, l.Xx)(
-                        "#SteamLearn_Config_Node_Delete_Node",
-                      ),
-                      strDescription: (0, l.Xx)(
-                        "#SteamLearn_Config_Node_Delete_NodeDetails",
-                      ),
-                      onOK: () => ne(s, c, r.node_id()),
-                    }),
-                    window,
-                  ),
-              }),
+              _ &&
+                o.createElement("div", {
+                  className: tt.Delete,
+                  onClick: () =>
+                    (0, Ie.AM)(
+                      o.createElement(ot.uH, {
+                        strTitle: (0, l.Xx)(
+                          "#SteamLearn_Config_Node_Delete_Node",
+                        ),
+                        strDescription: (0, l.Xx)(
+                          "#SteamLearn_Config_Node_Delete_NodeDetails",
+                        ),
+                        onOK: () => ne(s, c, r.node_id()),
+                      }),
+                      window,
+                    ),
+                }),
             ),
             o.createElement("div", { className: tt.TitleUnderBar }),
             o.createElement(
@@ -6670,9 +6693,9 @@
                       "#SteamLearn_Config_Node_ConditionalExtract_FilterType",
                     ),
                   ),
-                  o.createElement("div", { className: tt.Value }, v),
+                  o.createElement("div", { className: tt.Value }, E),
                 ),
-                E &&
+                N &&
                   o.createElement(
                     "div",
                     { className: tt.LabelValue },
@@ -6692,7 +6715,7 @@
                         .appid_release_recency_months(),
                     ),
                   ),
-                E &&
+                N &&
                   2 == r.conditional_extract().extract_weight_type() &&
                   o.createElement(
                     "div",
@@ -6716,7 +6739,7 @@
                         : t.toFixed(2)) || "0",
                     ),
                   ),
-                E &&
+                N &&
                   3 == r.conditional_extract().extract_weight_type() &&
                   o.createElement(
                     "div",
@@ -6740,7 +6763,7 @@
                         : a.toFixed(0)) || "0",
                     ),
                   ),
-                E &&
+                N &&
                   3 == r.conditional_extract().extract_weight_type() &&
                   o.createElement(
                     "div",
@@ -6764,7 +6787,7 @@
                         : n.toFixed(2)) || "0",
                     ),
                   ),
-                E &&
+                N &&
                   o.createElement(
                     "div",
                     { className: tt.LabelValue },
@@ -6781,7 +6804,7 @@
                       r.conditional_extract().compact_table(),
                     ),
                   ),
-                E &&
+                N &&
                   o.createElement(
                     "div",
                     { className: tt.LabelValue },
@@ -6800,8 +6823,8 @@
                   ),
               ),
             ),
-            p.map((e, t) => {
-              const a = Math.floor(((t + 1) / (p.length + 1)) * 200),
+            g.map((e, t) => {
+              const a = Math.floor(((t + 1) / (g.length + 1)) * 200),
                 n = h(e.connector_id());
               return o.createElement(
                 qe.HH,
@@ -6819,8 +6842,8 @@
                 ),
               );
             }),
-            g.map((e, t) => {
-              const a = Math.floor(((t + 1) / (g.length + 1)) * (S - 24)),
+            S.map((e, t) => {
+              const a = Math.floor(((t + 1) / (S.length + 1)) * (v - 24)),
                 n = h(e.connector_id());
               return o.createElement(
                 qe.HH,
@@ -7756,7 +7779,7 @@
             m(e), g(t);
           }, [n, r, m, g]);
           const j = o.useCallback((e, t) => {
-              e.dataTransfer.setData("application/reactflow", t),
+              e.dataTransfer.setData("application/reactflow", t.toString()),
                 (e.dataTransfer.effectAllowed = "move");
             }, []),
             b = o.useCallback((e) => {
@@ -10291,7 +10314,7 @@
                 value: g,
                 onChange: (e) =>
                   ((e) => {
-                    const t = ie(e, 0, 99);
+                    const t = ie(e, 0, 500);
                     t &&
                       (_.snapshot_filter().set_sample_reduce_percent(
                         parseInt(e),

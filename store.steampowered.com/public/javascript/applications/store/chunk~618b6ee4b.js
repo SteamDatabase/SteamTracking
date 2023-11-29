@@ -8973,7 +8973,7 @@
             { feature: "salebroadcast" },
             n.createElement(
               n.Suspense,
-              { fallback: n.createElement("div", null) },
+              { fallback: null },
               n.createElement(
                 It.h,
                 { onEnter: () => d(!0) },
@@ -9897,7 +9897,7 @@
               null,
               n.createElement(
                 n.Suspense,
-                { fallback: n.createElement("div", null) },
+                { fallback: null },
                 n.createElement(Ra, {
                   bIsPreview: s,
                   rgReservationDef: t.internal_section_data.reservation_options,
@@ -19288,11 +19288,7 @@
                     },
                     (0, N.Xx)("#Sale_Reservation_ExpectedDeliveryDate"),
                   ),
-                  Boolean(946115 == r.packageid)
-                    ? Boolean(r.high_pending_orders)
-                      ? (0, N.Xx)("#delayed_shipping_description2_short")
-                      : (0, N.Xx)("#standard_shipping_estimate2_short")
-                    : Boolean(r.high_pending_orders)
+                  Boolean(r.high_pending_orders)
                     ? (0, N.Xx)("#delayed_shipping_description3_short")
                     : (0, N.Xx)("#standard_shipping_estimate3_short"),
                 ),
@@ -20630,11 +20626,7 @@
               },
               (0, h.Xx)("#Sale_Reservation_ExpectedDeliveryDate"),
             ),
-            Boolean(946115 == t.packageid)
-              ? Boolean(t.high_pending_orders)
-                ? (0, h.Xx)("#delayed_shipping_description2_short")
-                : (0, h.Xx)("#standard_shipping_estimate2_short")
-              : Boolean(t.high_pending_orders)
+            Boolean(t.high_pending_orders)
               ? (0, h.Xx)("#delayed_shipping_description3_short")
               : (0, h.Xx)("#standard_shipping_estimate3_short"),
           );
@@ -23249,7 +23241,7 @@
               null,
               i.createElement(
                 i.Suspense,
-                { fallback: i.createElement("div", null) },
+                { fallback: null },
                 i.createElement(X, { bIsPreview: n, rgReservationDef: r }),
               ),
               Boolean(s.allow_purchase_in_country) &&

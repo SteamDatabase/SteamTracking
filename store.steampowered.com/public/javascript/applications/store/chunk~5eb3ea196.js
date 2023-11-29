@@ -938,7 +938,7 @@
                   { className: S().EventBroadcastCtn },
                   i.createElement(
                     i.Suspense,
-                    { fallback: i.createElement("div", null) },
+                    { fallback: null },
                     i.createElement(W, { event: this.props.event }),
                   ),
                 ),

@@ -135,6 +135,11 @@ body.ban_keys #landingNav > a.active {
 	background-color: #4a0b12;
 }
 
+.errormsg a {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 .warningmsg {
 	padding: 10px;
 	padding-top: 5px;
@@ -2591,7 +2596,9 @@ html, body { height:100%; }
 	float: right;
 	line-height: 22px;
 	margin: 0px 10px 20px 0px;
+    text-decoration: underline;
 }
+
 .preview_in_store_link:hover {
     cursor: pointer;
 }
@@ -3767,6 +3774,7 @@ span.new {
     width: 9px;
     height: 13px;
     padding-left: 5px;
+    margin-top: 3px;
     line-height: 13px;
     float: right;
 }

@@ -1051,7 +1051,7 @@
                   (0, A.AM)(
                     m.createElement(C.JX, {
                       strTitle: (0, D.Xx)("#CuratorAdmin_RSSFeed_scannow"),
-                      strDescription: (0, b.l)(t),
+                      strDescription: (0, b.l)(t).strErrorMsg,
                     }),
                     (0, w.RA)(e),
                   ),
@@ -2890,7 +2890,7 @@
       var J = n(83315),
         $ = n(5556),
         ee = n.n($),
-        te = n(68416),
+        te = n(76959),
         ne = n(40442),
         ae = n(84770),
         se = n(73406);

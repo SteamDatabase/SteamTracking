@@ -5255,6 +5255,10 @@ body.modals_BodyNoScrollDialog_3jhMI {
   height: 100%;
   position: relative;
   overflow: scroll hidden;
+  margin-bottom: 40px;
+}
+.GamepadMode.friendlist .FriendsListTabPanelContainer.QuickAccess {
+  margin-bottom: 0px;
 }
 .GamepadMode.friendlist .TabPanelHeader {
   font-family: "Motiva Sans", Helvetica, sans-serif;
@@ -5394,17 +5398,6 @@ body.modals_BodyNoScrollDialog_3jhMI {
 }
 .GamepadMode.friendlist .FriendsListTabPanel.GroupsTabList > div:first-of-type {
   padding-top: 4px;
-}
-.GamepadMode.friendlist
-  .FriendsListTabPanel.FavoritesTabList
-  > div:last-of-type {
-  padding-bottom: 40px;
-}
-.GamepadMode.friendlist .FriendsListTabPanel.FriendsTabList > div:last-of-type {
-  padding-bottom: 40px;
-}
-.GamepadMode.friendlist .FriendsListTabPanel.GroupsTabList > div:last-of-type {
-  padding-bottom: 40px;
 }
 .GamepadMode.friendlist
   .FriendsListTabPanel.RecentMessagesTabList
@@ -17105,6 +17098,10 @@ a.bbcodes_LinkButton_jPpgc:hover {
   height: 100%;
   position: relative;
   overflow: scroll hidden;
+  margin-bottom: 40px;
+}
+.GamepadMode.friendlist .FriendsListTabPanelContainer.QuickAccess {
+  margin-bottom: 0px;
 }
 .GamepadMode.friendlist .TabPanelHeader {
   font-family: "Motiva Sans", Helvetica, sans-serif;
@@ -17244,17 +17241,6 @@ a.bbcodes_LinkButton_jPpgc:hover {
 }
 .GamepadMode.friendlist .FriendsListTabPanel.GroupsTabList > div:first-of-type {
   padding-top: 4px;
-}
-.GamepadMode.friendlist
-  .FriendsListTabPanel.FavoritesTabList
-  > div:last-of-type {
-  padding-bottom: 40px;
-}
-.GamepadMode.friendlist .FriendsListTabPanel.FriendsTabList > div:last-of-type {
-  padding-bottom: 40px;
-}
-.GamepadMode.friendlist .FriendsListTabPanel.GroupsTabList > div:last-of-type {
-  padding-bottom: 40px;
 }
 .GamepadMode.friendlist
   .FriendsListTabPanel.RecentMessagesTabList
@@ -19090,6 +19076,10 @@ a.bbcodes_LinkButton_jPpgc:hover {
   height: 100%;
   position: relative;
   overflow: scroll hidden;
+  margin-bottom: 40px;
+}
+.GamepadMode.friendlist .FriendsListTabPanelContainer.QuickAccess {
+  margin-bottom: 0px;
 }
 .GamepadMode.friendlist .TabPanelHeader {
   font-family: "Motiva Sans", Helvetica, sans-serif;
@@ -19229,17 +19219,6 @@ a.bbcodes_LinkButton_jPpgc:hover {
 }
 .GamepadMode.friendlist .FriendsListTabPanel.GroupsTabList > div:first-of-type {
   padding-top: 4px;
-}
-.GamepadMode.friendlist
-  .FriendsListTabPanel.FavoritesTabList
-  > div:last-of-type {
-  padding-bottom: 40px;
-}
-.GamepadMode.friendlist .FriendsListTabPanel.FriendsTabList > div:last-of-type {
-  padding-bottom: 40px;
-}
-.GamepadMode.friendlist .FriendsListTabPanel.GroupsTabList > div:last-of-type {
-  padding-bottom: 40px;
 }
 .GamepadMode.friendlist
   .FriendsListTabPanel.RecentMessagesTabList
@@ -21103,6 +21082,10 @@ a.bbcodes_LinkButton_jPpgc:hover {
   height: 100%;
   position: relative;
   overflow: scroll hidden;
+  margin-bottom: 40px;
+}
+.GamepadMode.friendlist .FriendsListTabPanelContainer.QuickAccess {
+  margin-bottom: 0px;
 }
 .GamepadMode.friendlist .TabPanelHeader {
   font-family: "Motiva Sans", Helvetica, sans-serif;
@@ -21242,17 +21225,6 @@ a.bbcodes_LinkButton_jPpgc:hover {
 }
 .GamepadMode.friendlist .FriendsListTabPanel.GroupsTabList > div:first-of-type {
   padding-top: 4px;
-}
-.GamepadMode.friendlist
-  .FriendsListTabPanel.FavoritesTabList
-  > div:last-of-type {
-  padding-bottom: 40px;
-}
-.GamepadMode.friendlist .FriendsListTabPanel.FriendsTabList > div:last-of-type {
-  padding-bottom: 40px;
-}
-.GamepadMode.friendlist .FriendsListTabPanel.GroupsTabList > div:last-of-type {
-  padding-bottom: 40px;
 }
 .GamepadMode.friendlist
   .FriendsListTabPanel.RecentMessagesTabList
@@ -22982,6 +22954,10 @@ a.bbcodes_LinkButton_jPpgc:hover {
   height: 100%;
   position: relative;
   overflow: scroll hidden;
+  margin-bottom: 40px;
+}
+.GamepadMode.friendlist .FriendsListTabPanelContainer.QuickAccess {
+  margin-bottom: 0px;
 }
 .GamepadMode.friendlist .TabPanelHeader {
   font-family: "Motiva Sans", Helvetica, sans-serif;
@@ -23121,17 +23097,6 @@ a.bbcodes_LinkButton_jPpgc:hover {
 }
 .GamepadMode.friendlist .FriendsListTabPanel.GroupsTabList > div:first-of-type {
   padding-top: 4px;
-}
-.GamepadMode.friendlist
-  .FriendsListTabPanel.FavoritesTabList
-  > div:last-of-type {
-  padding-bottom: 40px;
-}
-.GamepadMode.friendlist .FriendsListTabPanel.FriendsTabList > div:last-of-type {
-  padding-bottom: 40px;
-}
-.GamepadMode.friendlist .FriendsListTabPanel.GroupsTabList > div:last-of-type {
-  padding-bottom: 40px;
 }
 .GamepadMode.friendlist
   .FriendsListTabPanel.RecentMessagesTabList
@@ -26724,6 +26689,10 @@ svg.reorderablelist_ReorderArrow_1jEeo {
   height: 100%;
   position: relative;
   overflow: scroll hidden;
+  margin-bottom: 40px;
+}
+.GamepadMode.friendlist .FriendsListTabPanelContainer.QuickAccess {
+  margin-bottom: 0px;
 }
 .GamepadMode.friendlist .TabPanelHeader {
   font-family: "Motiva Sans", Helvetica, sans-serif;
@@ -26863,17 +26832,6 @@ svg.reorderablelist_ReorderArrow_1jEeo {
 }
 .GamepadMode.friendlist .FriendsListTabPanel.GroupsTabList > div:first-of-type {
   padding-top: 4px;
-}
-.GamepadMode.friendlist
-  .FriendsListTabPanel.FavoritesTabList
-  > div:last-of-type {
-  padding-bottom: 40px;
-}
-.GamepadMode.friendlist .FriendsListTabPanel.FriendsTabList > div:last-of-type {
-  padding-bottom: 40px;
-}
-.GamepadMode.friendlist .FriendsListTabPanel.GroupsTabList > div:last-of-type {
-  padding-bottom: 40px;
 }
 .GamepadMode.friendlist
   .FriendsListTabPanel.RecentMessagesTabList
@@ -30901,6 +30859,10 @@ div:hover > .BBCodeCollapseControl {
   height: 100%;
   position: relative;
   overflow: scroll hidden;
+  margin-bottom: 40px;
+}
+.GamepadMode.friendlist .FriendsListTabPanelContainer.QuickAccess {
+  margin-bottom: 0px;
 }
 .GamepadMode.friendlist .TabPanelHeader {
   font-family: "Motiva Sans", Helvetica, sans-serif;
@@ -31040,17 +31002,6 @@ div:hover > .BBCodeCollapseControl {
 }
 .GamepadMode.friendlist .FriendsListTabPanel.GroupsTabList > div:first-of-type {
   padding-top: 4px;
-}
-.GamepadMode.friendlist
-  .FriendsListTabPanel.FavoritesTabList
-  > div:last-of-type {
-  padding-bottom: 40px;
-}
-.GamepadMode.friendlist .FriendsListTabPanel.FriendsTabList > div:last-of-type {
-  padding-bottom: 40px;
-}
-.GamepadMode.friendlist .FriendsListTabPanel.GroupsTabList > div:last-of-type {
-  padding-bottom: 40px;
 }
 .GamepadMode.friendlist
   .FriendsListTabPanel.RecentMessagesTabList
@@ -32702,6 +32653,10 @@ div:hover > .BBCodeCollapseControl {
   height: 100%;
   position: relative;
   overflow: scroll hidden;
+  margin-bottom: 40px;
+}
+.GamepadMode.friendlist .FriendsListTabPanelContainer.QuickAccess {
+  margin-bottom: 0px;
 }
 .GamepadMode.friendlist .TabPanelHeader {
   font-family: "Motiva Sans", Helvetica, sans-serif;
@@ -32841,17 +32796,6 @@ div:hover > .BBCodeCollapseControl {
 }
 .GamepadMode.friendlist .FriendsListTabPanel.GroupsTabList > div:first-of-type {
   padding-top: 4px;
-}
-.GamepadMode.friendlist
-  .FriendsListTabPanel.FavoritesTabList
-  > div:last-of-type {
-  padding-bottom: 40px;
-}
-.GamepadMode.friendlist .FriendsListTabPanel.FriendsTabList > div:last-of-type {
-  padding-bottom: 40px;
-}
-.GamepadMode.friendlist .FriendsListTabPanel.GroupsTabList > div:last-of-type {
-  padding-bottom: 40px;
 }
 .GamepadMode.friendlist
   .FriendsListTabPanel.RecentMessagesTabList
@@ -34325,6 +34269,10 @@ div:hover > .BBCodeCollapseControl {
   height: 100%;
   position: relative;
   overflow: scroll hidden;
+  margin-bottom: 40px;
+}
+.GamepadMode.friendlist .FriendsListTabPanelContainer.QuickAccess {
+  margin-bottom: 0px;
 }
 .GamepadMode.friendlist .TabPanelHeader {
   font-family: "Motiva Sans", Helvetica, sans-serif;
@@ -34464,17 +34412,6 @@ div:hover > .BBCodeCollapseControl {
 }
 .GamepadMode.friendlist .FriendsListTabPanel.GroupsTabList > div:first-of-type {
   padding-top: 4px;
-}
-.GamepadMode.friendlist
-  .FriendsListTabPanel.FavoritesTabList
-  > div:last-of-type {
-  padding-bottom: 40px;
-}
-.GamepadMode.friendlist .FriendsListTabPanel.FriendsTabList > div:last-of-type {
-  padding-bottom: 40px;
-}
-.GamepadMode.friendlist .FriendsListTabPanel.GroupsTabList > div:last-of-type {
-  padding-bottom: 40px;
 }
 .GamepadMode.friendlist
   .FriendsListTabPanel.RecentMessagesTabList
@@ -36095,6 +36032,10 @@ div:hover > .BBCodeCollapseControl {
   height: 100%;
   position: relative;
   overflow: scroll hidden;
+  margin-bottom: 40px;
+}
+.GamepadMode.friendlist .FriendsListTabPanelContainer.QuickAccess {
+  margin-bottom: 0px;
 }
 .GamepadMode.friendlist .TabPanelHeader {
   font-family: "Motiva Sans", Helvetica, sans-serif;
@@ -36234,17 +36175,6 @@ div:hover > .BBCodeCollapseControl {
 }
 .GamepadMode.friendlist .FriendsListTabPanel.GroupsTabList > div:first-of-type {
   padding-top: 4px;
-}
-.GamepadMode.friendlist
-  .FriendsListTabPanel.FavoritesTabList
-  > div:last-of-type {
-  padding-bottom: 40px;
-}
-.GamepadMode.friendlist .FriendsListTabPanel.FriendsTabList > div:last-of-type {
-  padding-bottom: 40px;
-}
-.GamepadMode.friendlist .FriendsListTabPanel.GroupsTabList > div:last-of-type {
-  padding-bottom: 40px;
 }
 .GamepadMode.friendlist
   .FriendsListTabPanel.RecentMessagesTabList
@@ -40136,6 +40066,10 @@ body.in_global_drag .title-area {
   height: 100%;
   position: relative;
   overflow: scroll hidden;
+  margin-bottom: 40px;
+}
+.GamepadMode.friendlist .FriendsListTabPanelContainer.QuickAccess {
+  margin-bottom: 0px;
 }
 .GamepadMode.friendlist .TabPanelHeader {
   font-family: "Motiva Sans", Helvetica, sans-serif;
@@ -40275,17 +40209,6 @@ body.in_global_drag .title-area {
 }
 .GamepadMode.friendlist .FriendsListTabPanel.GroupsTabList > div:first-of-type {
   padding-top: 4px;
-}
-.GamepadMode.friendlist
-  .FriendsListTabPanel.FavoritesTabList
-  > div:last-of-type {
-  padding-bottom: 40px;
-}
-.GamepadMode.friendlist .FriendsListTabPanel.FriendsTabList > div:last-of-type {
-  padding-bottom: 40px;
-}
-.GamepadMode.friendlist .FriendsListTabPanel.GroupsTabList > div:last-of-type {
-  padding-bottom: 40px;
 }
 .GamepadMode.friendlist
   .FriendsListTabPanel.RecentMessagesTabList

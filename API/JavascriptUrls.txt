@@ -1856,6 +1856,7 @@ http://www.dota2.com/winter2016
 http://www.dota2.com/wraithnight/
 http://www.facebook.com/sharer.php?
 http://www.w3.org/1998/Math/MathML
+http://www.w3.org/1998/Math/MathML${}
 http://www.w3.org/1999/xhtml
 http://www.w3.org/1999/xhtml${}
 http://www.w3.org/1999/xlink

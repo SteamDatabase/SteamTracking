@@ -1732,7 +1732,7 @@
                   { className: U().EventBroadcastCtn },
                   r.createElement(
                     r.Suspense,
-                    { fallback: r.createElement("div", null) },
+                    { fallback: null },
                     r.createElement(de, {
                       event: t,
                       bIsPreview: c,

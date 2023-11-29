@@ -3231,21 +3231,6 @@ body.ShoppingCart {
   max-width: 615px;
   flex-grow: 1;
 }
-.shoppingcart_LineItemWrapper_1XnXT {
-  position: relative;
-  padding: 10px;
-  background-color: rgba(0, 0, 0, 0.2);
-  margin-bottom: 20px;
-}
-.shoppingcart_LineItemCapsule_3bQHp {
-  background-color: rgba(0, 0, 0, 0.2);
-  width: 220px;
-  height: 103px;
-}
-.shoppingcart_LineItemPlaceholder_2L-y7 {
-  min-height: 110px;
-  width: 600px;
-}
 .shoppingcart_LoadingThrobber_eDdFp {
   position: absolute;
   top: 50%;
@@ -3281,254 +3266,12 @@ body.ShoppingCart {
   color: #fff;
   font-size: 15px;
 }
-.shoppingcart_InnerLineItemCtn_2EWK- {
-  display: flex;
-  gap: 10px;
-}
-.shoppingcart_InnerLineItemCtn_2EWK- .shoppingcart_LineItemDetailsCtn_2Q4My {
-  flex-grow: 1;
-}
-.shoppingcart_InnerLineItemCtn_2EWK- .shoppingcart_LineItemCol_2KIVS {
-  display: flex;
-}
-.shoppingcart_InnerLineItemCtn_2EWK- .shoppingcart_RemoveLineItem_y3Ocs {
-  color: #606f7f;
-  text-decoration: underline;
-  cursor: pointer;
-  font-size: 12px;
-}
-.shoppingcart_InnerLineItemCtn_2EWK- .shoppingcart_RemoveLineItem_y3Ocs:hover {
-  color: #fff;
-}
-.shoppingcart_InnerLineItemCtn_2EWK- .shoppingcart_LineItemDetailsRow_2Za3F {
-  display: flex;
-  align-items: center;
-  margin-top: 8px;
-  flex-wrap: wrap;
-}
-.shoppingcart_InnerLineItemCtn_2EWK- .shoppingcart_LineItemDetailsRowTop_2aofi {
-  margin-top: 0px;
-}
-.shoppingcart_InnerLineItemCtn_2EWK- .shoppingcart_LineItemSpaceBetween_1sE14 {
-  justify-content: space-between;
-}
-.shoppingcart_InnerLineItemCtn_2EWK- .shoppingcart_LineItemTitle_HVnEq {
-  font-size: 18px;
-  line-height: 22px;
-  color: #fff;
-  font-weight: 500;
-}
-.shoppingcart_InnerLineItemCtn_2EWK-
-  .shoppingcart_LineItemPricingOptions_evgc4 {
-  margin: auto 0;
-}
-.shoppingcart_InnerLineItemCtn_2EWK- .shoppingcart_HeaderImg_PcW1_ {
-  max-width: 220px;
-}
-.shoppingcart_InnerLineItemCtn_2EWK- .shoppingcart_LineItemDropDown_2bDXG {
-  margin: 0;
-}
-.shoppingcart_InnerLineItemCtn_2EWK-
-  .shoppingcart_LineItemDropDown_2bDXG
-  :hover {
-  background: #464d58;
-}
-.shoppingcart_InnerLineItemCtn_2EWK- .shoppingcart_PlatformIcons_1AHjj {
-  fill: #ccd5e0;
-}
-.shoppingcart_InnerLineItemCtn_2EWK- .shoppingcart_PlatformIcons_1AHjj svg {
-  fill: #ccd5e0;
-}
-.DialogButton.shoppingcart_AddLineItemCtn_2inq2 {
-  width: 26px;
-  margin: 0;
-  padding: 0;
-  line-height: 28px;
-  margin-left: 10px;
-  background: rgba(59, 63, 72, 0.5);
-}
-.DialogButton.shoppingcart_AddLineItemCtn_2inq2
-  .shoppingcart_AddLineItemIcon_-STti {
-  width: 10px;
-  height: 10px;
-  margin: 0;
-  color: #ccd5e0;
-}
-.shoppingcart_PendingLineItem_HuHB6 {
-  opacity: 0.3;
-  user-select: none;
-}
-.shoppingcart_OriginalPrice_3HBQs {
-  color: #606f7f;
-  text-decoration-line: line-through;
-  font-size: 11px;
-}
-.shoppingcart_FinalPrice_3Yy3M {
-  color: #ccd5e0;
-  font-weight: 700;
-  font-size: 15px;
-}
-.shoppingcart_FlexRow_282Qn {
-  display: flex;
-}
 .shoppingcart_ShoppingCartBreadcrumbs_2FKdJ {
   color: #8f98a0;
 }
 .shoppingcart_ShoppingCartBreadcrumbs_2FKdJ
   .shoppingcart_CurrentBreadcrumb_3TtUD {
   color: #56707f;
-}
-.shoppingcart_GiftFormDivider_ub0iG {
-  border-top: 1px solid #343a44;
-  margin-bottom: 15px;
-}
-.shoppingcart_GiftFormSection_2SPni {
-  margin: 20px 0;
-}
-.shoppingcart_FormTextLabel_2XHPJ {
-  font-size: 14px;
-  color: #c6d4df;
-  line-height: 20px;
-  margin-bottom: 5px;
-}
-.shoppingcart_FormTitle_ceAkk {
-  font-size: 22px;
-  color: #fff;
-}
-.shoppingcart_RedText_2loJb {
-  color: red;
-}
-.shoppingcart_GiftNoteInput_37bAE {
-  border: 1px solid #0e141b;
-  border-radius: 4px;
-  background: rgba(59, 63, 72, 0.5);
-  color: #dfe3e6;
-  box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0);
-  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
-  resize: none;
-  padding: 8px;
-  font-size: 14px;
-  line-height: 20px;
-  width: calc(100% - 16px - 2px);
-  transition-property: background, box-shadow;
-  transition-duration: 0.18s;
-  transition-timing-function: ease-in-out;
-}
-.shoppingcart_GiftNoteInput_37bAE::placeholder {
-  font-style: italic;
-  color: rgba(148, 161, 166, 0.562);
-}
-.shoppingcart_GiftNoteInput_37bAE:focus {
-  outline: none;
-  background: rgba(29, 34, 39, 0.8);
-  box-shadow: inset 1px 1px 6px rgba(0, 0, 0, 0.4);
-}
-.shoppingcart_GiftNoteInput_37bAE:focus::placeholder {
-  margin-left: 2px;
-}
-.shoppingcart_WhiteText_1JFxA {
-  color: #fff;
-}
-.DialogDropDown.shoppingcart_DropDownThin_1hTs0 {
-  font-size: 12px;
-  padding: 5px 24px 5px 7px;
-  min-width: 100px;
-}
-.shoppingcart_DropDownThin_1hTs0 .DialogDropDown_Arrow {
-  width: 14px;
-  top: 9px;
-  right: 4px;
-}
-.shoppingcart_DropDownOptionsCtnThin_3NWLp {
-  font-size: 12px;
-  min-width: 300px;
-}
-.shoppingcart_DropDownOptionItem_1CH6Q {
-  padding: 5px;
-}
-.shoppingcart_GiftRecipientPickerModal_biUAd {
-  width: 600px;
-}
-.shoppingcart_GiftFriendsListCtn_MYCpY {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  max-height: 85%;
-  overflow: auto;
-}
-.shoppingcart_GiftRecipientPickerFormCtn_2bchQ {
-  height: 70vh;
-  display: flex;
-  flex-direction: column;
-}
-.shoppingcart_GiftRecipientPickerFormCtn_2bchQ
-  .shoppingcart_GiftFriendsInput_2P3oe {
-  margin: 10px 0;
-}
-.shoppingcart_GiftRecipientPickerFormCtn_2bchQ
-  .shoppingcart_GiftRecipientSaveBtn_3-mw1 {
-  margin-top: auto;
-}
-.shoppingcart_GiftPickerFriendBlock_3zsMT {
-  background: rgba(21, 21, 21, 0.15);
-  display: flex;
-  align-items: center;
-  padding: 10px 15px 10px 10px;
-  font-size: 13px;
-  cursor: pointer;
-}
-.shoppingcart_GiftPickerFriendBlock_3zsMT .shoppingcart_FriendAvatar_3_UaD {
-  margin-right: 2px;
-}
-.shoppingcart_GiftPickerFriendBlock_3zsMT.shoppingcart_Disabled_12He9 {
-  background: #3d4450;
-}
-.shoppingcart_GiftPickerFriendBlock_3zsMT.shoppingcart_Selected_35K1c {
-  border: 1px solid red;
-}
-.shoppingcart_GiftPickerFriendBlock_3zsMT
-  .shoppingcart_FavoriteFriendIcon_3pisY {
-  margin-left: 5px;
-  fill: #ff0;
-  width: 13px;
-}
-.shoppingcart_FriendsGiftLabel_ILhfY {
-  font-size: 13px;
-  margin-left: auto;
-}
-.shoppingcart_FriendsGiftLabel_ILhfY.shoppingcart_OwnsGame_1spCK {
-  color: #ffc82c;
-}
-.shoppingcart_FriendsGiftLabel_ILhfY.shoppingcart_OnWishlist_15qRp {
-  color: #1a9fff;
-}
-.shoppingcart_GiftFormRecipient_3D8FM {
-  display: flex;
-  align-items: center;
-  font-size: 15px;
-}
-.shoppingcart_GiftFormRecipient_3D8FM .shoppingcart_FriendAvatar_3_UaD {
-  margin: 0px 2px 0px 7px;
-}
-.shoppingcart_GiftFormRecipient_3D8FM
-  .shoppingcart_ChangeGiftRecipientBtn_1Qwdt {
-  width: auto;
-  margin-left: 15px;
-  padding: 0 5px;
-}
-.shoppingcart_GiftFormRecipient_3D8FM .shoppingcart_EditRecipient_3B5Iu {
-  color: #606f7f;
-  text-decoration: underline;
-  cursor: pointer;
-  font-size: 12px;
-  margin-left: 6px;
-}
-.shoppingcart_GiftFormRecipient_3D8FM .shoppingcart_EditRecipient_3B5Iu:hover {
-  color: #fff;
-}
-.shoppingcart_GiftDatePicker_24zqo {
-  display: flex;
-  margin-top: 10px;
 }
 .shoppingcart_ShoppingCartCountCtn_3d_VH {
   text-align: center;
@@ -3561,48 +3304,12 @@ body.ShoppingCart {
   width: 15px;
   vertical-align: sub;
 }
-.shoppingcart_GiftResetDeliveryLink_3Wx7q {
-  text-decoration: underline;
-  font-size: 11px;
-  margin-left: 5px;
-  cursor: pointer;
-}
-.DialogButton.shoppingcart_ScheduleGiftBtn_UpvR- {
-  width: fit-content;
-  padding: 5px 15px;
-  cursor: pointer;
-}
-.shoppingcart_GiftScheduleIcon_3BUMp {
-  width: 24px;
-  vertical-align: -5px;
-  fill: #fff;
-  margin-right: 10px;
-}
-.shoppingcart_GiftRadioLabel_ZC3J1 {
-  font-size: 14px;
-  color: #c6d4df;
-  margin-left: 5px;
-  vertical-align: 1px;
-}
-.shoppingcart_GiftRadioRow_15LUO {
-  margin-top: 10px;
-}
-.shoppingcart_GiftSignatureInput_103vJ {
-  max-width: 60%;
-}
 .shoppingcart_ShoppingCartModalBtns_1qRag {
   display: flex;
 }
 .shoppingcart_ShoppingCartModalBtns_1qRag .shoppingcart_OpenCartBtn_5w5S6 {
   margin-left: 20px;
   font-weight: 700;
-}
-.shoppingcart_PriceWidget_1FHzN div {
-  background: rgba(0, 0, 0, 0);
-  background-color: rgba(0, 0, 0, 0);
-}
-.shoppingcart_Warning_IIwxr {
-  color: #ffcc6a;
 }
 .shoppingcart_FooterNotice_LXZhw {
   display: flex;
@@ -3611,11 +3318,6 @@ body.ShoppingCart {
 }
 .shoppingcart_FooterNotice_LXZhw .shoppingcart_NoticeIndex_3GJop {
   margin-right: 10px;
-}
-.shoppingcart_LineItemNoticeAppsCtn_gx9zC {
-  display: inline-flex;
-  flex-wrap: wrap;
-  color: #fff;
 }
 .purchasenotices_PurchaseNoticeContainer_3MM2B {
   display: flex;

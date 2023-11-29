@@ -635,6 +635,7 @@
     "YIR_ShareModal_FailedToGenerateImages": "Failed to generate images, please try again later.",
     "YIR_FriendShared": "Some of your friends have shared their Steam Replays",
     "YIR_FriendShared_support": "NOTE: Your support account override privacy settings and also shows on other peoples Replay pages",
+    "YIR_MM_Header": "STEAM%1$s REPLAY %2$s",
     "YIR_MM_HashTag": "#SteamReplay",
     "YIR_MM_Generic_Title": "Sit Back, Relax and <1>REPLAY</1>",
     "YIR_MM_Generic_Action": "View your Steam Replay",

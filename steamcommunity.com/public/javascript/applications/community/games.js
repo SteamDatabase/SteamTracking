@@ -191,12 +191,7 @@
           u = (0, r.BE)(d, n),
           p = (0, l.id)(),
           _ = window.__virtual_keyboard_client;
-        if (
-          ((0, s.useEffect)(() => {
-            c.Wz.SetHookFactory(() => _);
-          }, [_]),
-          p)
-        ) {
+        if (p) {
           const e = window.__nav_tree_root;
           return s.createElement(
             o.Fe,
@@ -205,7 +200,11 @@
               secondary: !0,
               parentEmbeddedNavTree: e,
             }),
-            s.createElement(i.O, null, t),
+            s.createElement(
+              c.o5,
+              { factory: _ },
+              s.createElement(i.O, null, t),
+            ),
           );
         }
         return s.createElement(s.Fragment, null, t);
@@ -298,7 +297,7 @@
     },
     24830: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => In });
+      n.r(t), n.d(t, { default: () => xn });
       var a = n(33940),
         s = n(89526),
         o = n(5615),
@@ -710,7 +709,7 @@
           enabled: void 0 !== i.data && i.data.length > 0,
         });
       }
-      function S(e, t) {
+      function A(e, t) {
         const n = (0, r.bY)(),
           a = y.Get(),
           s = a.GetProfileSteamId();
@@ -724,7 +723,7 @@
           enabled: t,
         });
       }
-      function A(e) {
+      function S(e) {
         const t = (0, r.bY)(),
           n = y.Get(),
           a = n.GetProfileSteamId();
@@ -741,8 +740,8 @@
         M = n(5029),
         T = n(69338),
         U = n(84343),
-        F = n(19304);
-      var O = n(14826),
+        O = n(19304);
+      var F = n(14826),
         $ = n(37409),
         H = n(16826),
         X = n(701),
@@ -769,7 +768,7 @@
           o = e && "" != e;
         return s.createElement(
           "div",
-          { className: (0, F.Z)(Q.Filter, n) },
+          { className: (0, O.Z)(Q.Filter, n) },
           s.createElement("input", {
             ref: a,
             onChange: () => {
@@ -779,7 +778,7 @@
               );
             },
             value: null != e ? e : "",
-            placeholder: (0, O.Xx)("#GamesList_Filter_Placeholder"),
+            placeholder: (0, F.Xx)("#GamesList_Filter_Placeholder"),
           }),
           o
             ? s.createElement(
@@ -1206,7 +1205,7 @@
           "div",
           {
             ref: r,
-            className: (0, F.Z)(
+            className: (0, O.Z)(
               ye().AchievementIconWrapper,
               i,
               n && ye().RareAchievementNoAnimation,
@@ -1225,7 +1224,7 @@
               ),
             ),
           s.createElement("img", {
-            className: (0, F.Z)(ye().Icon, m && ye().IconGlow),
+            className: (0, O.Z)(ye().Icon, m && ye().IconGlow),
             src: e,
             loading: "lazy",
             alt: o,
@@ -1239,7 +1238,7 @@
         Le = n(21558);
       function Re({ nPercent: e, indeterminate: t, animate: n, className: a }) {
         return s.createElement("div", {
-          className: (0, F.Z)(
+          className: (0, O.Z)(
             Le.ProgressBar,
             n && Le.AnimateProgress,
             t && Le.Indeterminate,
@@ -1249,8 +1248,8 @@
         });
       }
       var Ne = n(29551);
-      var Se = n(14461),
-        Ae = n(15267),
+      var Ae = n(14461),
+        Se = n(15267),
         Be = n(99307),
         ke = n(57742),
         Ie = n(72120),
@@ -1287,17 +1286,17 @@
           );
         return s.createElement(xe.Provider, { value: a }, e);
       }
-      function Fe(e) {
+      function Oe(e) {
         switch (e) {
           case se.gg.k_EGamingDeviceType_StandardPC:
-            return (0, O.Xx)("#Library_DeviceType_PC");
+            return (0, F.Xx)("#Library_DeviceType_PC");
           case se.gg.k_EGamingDeviceType_SteamDeck:
-            return (0, O.Xx)("#Library_DeviceType_SteamDeck");
+            return (0, F.Xx)("#Library_DeviceType_SteamDeck");
           default:
             return;
         }
       }
-      const Oe = {
+      const Fe = {
         bFitToWindow: !0,
         bOverlapHorizontal: !0,
         bMatchWidth: !1,
@@ -1316,9 +1315,9 @@
                 },
                 key: e.client_instanceid,
               },
-              (0, O.Xx)(
+              (0, F.Xx)(
                 "#GamesList_Client_Indicator",
-                Fe(e.device_type),
+                Oe(e.device_type),
                 e.machine_name,
               ),
             ),
@@ -1338,7 +1337,7 @@
                   setRemoteDownloadClientId: n,
                 }),
                 a.current,
-                Oe,
+                Fe,
               );
           }, [n, a, e.data]);
         return t
@@ -1348,7 +1347,7 @@
               s.createElement(
                 "span",
                 { className: De.RemoteDownloadHeader },
-                (0, O.kQ)(
+                (0, F.kQ)(
                   "#GamesList_Header_RemoteDownload",
                   s.createElement(
                     s.Fragment,
@@ -1356,9 +1355,9 @@
                     s.createElement(
                       "span",
                       { className: De.ClientIndicator },
-                      (0, O.Xx)(
+                      (0, F.Xx)(
                         "#GamesList_Client_Indicator",
-                        Fe(t.device_type),
+                        Oe(t.device_type),
                         t.machine_name,
                       ),
                       e.data.sessions.length > 1 &&
@@ -1378,7 +1377,7 @@
               s.createElement(
                 U.HP,
                 {
-                  toolTipContent: (0, O.Xx)("#GamesList_RemoteDownload_Help"),
+                  toolTipContent: (0, F.Xx)("#GamesList_RemoteDownload_Help"),
                   className: De.InfoIcon,
                 },
                 s.createElement(K, null),
@@ -1387,7 +1386,7 @@
           : s.createElement(
               "details",
               {
-                className: (0, F.Z)(
+                className: (0, O.Z)(
                   De.RemoteDownloadClientBar,
                   De.NoConnection,
                 ),
@@ -1398,34 +1397,34 @@
                 s.createElement(
                   "span",
                   { className: De.RemoteDownloadStatus },
-                  (0, O.kQ)(
+                  (0, F.kQ)(
                     "#GamesList_Header_RemoteDownloadStatus",
                     s.createElement(
                       "span",
                       { className: De.NoConnectionText },
-                      (0, O.Xx)("#GamesList_RemoteDownload_NoConnection"),
+                      (0, F.Xx)("#GamesList_RemoteDownload_NoConnection"),
                     ),
                   ),
                 ),
                 s.createElement(
                   "span",
                   { className: De.LearnMoreCta },
-                  (0, O.Xx)("#GamesList_RemoteDownload_LearnMore"),
+                  (0, F.Xx)("#GamesList_RemoteDownload_LearnMore"),
                   s.createElement(z, null),
                 ),
               ),
               s.createElement(
                 "p",
                 { className: De.RemoteDownloadHelp },
-                (0, O.kQ)(
+                (0, F.kQ)(
                   "#GamesList_RemoteDownload_Info",
-                  (0, O.Xx)("#GamesList_RemoteDownload_Help"),
+                  (0, F.Xx)("#GamesList_RemoteDownload_Help"),
                   s.createElement(
                     "a",
                     {
                       href: "https://help.steampowered.com/faqs/view/1025-BD94-12FC-3409",
                     },
-                    (0, O.Xx)("#GamesList_RemoteDownload_ReadTheFAQ"),
+                    (0, F.Xx)("#GamesList_RemoteDownload_ReadTheFAQ"),
                   ),
                 ),
               ),
@@ -1443,9 +1442,9 @@
           c = !(e.bytes_downloaded && e.bytes_to_download),
           m = n ? s.createElement(X.dzL, null) : s.createElement(Y, null),
           d = n
-            ? (0, O.Xx)("#GamesList_Button_Pause")
-            : (0, O.Xx)("#GamesList_Button_Resume"),
-          u = (0, s.useContext)(vn);
+            ? (0, F.Xx)("#GamesList_Button_Pause")
+            : (0, F.Xx)("#GamesList_Button_Resume"),
+          u = (0, s.useContext)(bn);
         return (
           (0, s.useEffect)(
             () => (
@@ -1463,7 +1462,7 @@
               s.createElement(
                 "span",
                 { className: De.DownloadStatus },
-                (0, O.Xx)(i, l),
+                (0, F.Xx)(i, l),
               ),
               s.createElement(
                 "div",
@@ -1507,7 +1506,7 @@
               {
                 disabled: r.isLoading,
                 onClick: () => {
-                  r.mutateAsync(), un(e.appid);
+                  r.mutateAsync(), gn(e.appid);
                 },
                 className: De.DownloadIconButton,
               },
@@ -1525,7 +1524,7 @@
             "button",
             { disabled: !0, className: De.DownloadIconButton },
             s.createElement(V, null),
-            (0, O.Xx)("#GamesList_Button_Uninstalling"),
+            (0, F.Xx)("#GamesList_Button_Uninstalling"),
           ),
         );
       }
@@ -1567,7 +1566,7 @@
           l = e.rt_time_scheduled,
           c =
             l &&
-            (0, O.jr)(l, { bGranularFutureTime: !0 }) +
+            (0, F.jr)(l, { bGranularFutureTime: !0 }) +
               " " +
               (0, Ie.Sc)(l, { bForce24HourClock: !1 });
         return s.createElement(
@@ -1579,24 +1578,24 @@
             {
               disabled: n.isLoading,
               onClick: () => {
-                n.mutateAsync(), un(e.appid);
+                n.mutateAsync(), gn(e.appid);
               },
               className: De.DownloadIconButton,
             },
             s.createElement(X.Lao, null),
-            (0, O.Xx)("#GamesList_Button_UpdateRequired"),
+            (0, F.Xx)("#GamesList_Button_UpdateRequired"),
           ),
         );
       }
       function je({ app: e, closeModal: t, onOK: n }) {
         return s.createElement(Be.uH, {
-          strOKButtonText: (0, O.Xx)("#GamesList_Button_Uninstall"),
-          strCancelButtonText: (0, O.Xx)("#GamesList_Button_Cancel"),
-          strDescription: (0, O.Xx)(
+          strOKButtonText: (0, F.Xx)("#GamesList_Button_Uninstall"),
+          strCancelButtonText: (0, F.Xx)("#GamesList_Button_Cancel"),
+          strDescription: (0, F.Xx)(
             "#GamesList_RemoteDownload_UninstallConfirm",
             e.app,
           ),
-          strTitle: (0, O.Xx)("#GamesList_Button_Uninstall"),
+          strTitle: (0, F.Xx)("#GamesList_Button_Uninstall"),
           closeModal: t,
           onOK: n,
         });
@@ -1670,14 +1669,14 @@
                   s.createElement(je, {
                     app: e,
                     onOK: () => {
-                      l.mutateAsync(), un(e.appid);
+                      l.mutateAsync(), gn(e.appid);
                     },
                   }),
                   window,
                 );
               }
             : () => {
-                n.mutateAsync(), un(e.appid);
+                n.mutateAsync(), gn(e.appid);
               },
           d = e.installed
             ? "#GamesList_Button_Uninstall"
@@ -1701,7 +1700,7 @@
               className: De.DownloadIconButton,
             },
             s.createElement(u, null),
-            (0, O.Xx)(d),
+            (0, F.Xx)(d),
           ),
         );
       }
@@ -1739,11 +1738,11 @@
         )
           return s.createElement(
             "div",
-            { className: (0, F.Z)(De.RemoteControls, t) },
+            { className: (0, O.Z)(De.RemoteControls, t) },
             s.createElement(
               "span",
               { className: De.NoRemoteControl },
-              (0, O.Xx)("#GamesList_RemoteDownload_NoRemoteControl"),
+              (0, F.Xx)("#GamesList_RemoteDownload_NoRemoteControl"),
             ),
           );
         if (!o.data || 0 === o.data.size || !i) return null;
@@ -1782,7 +1781,7 @@
               );
         return s.createElement(
           "div",
-          { className: (0, F.Z)(De.RemoteControls, t) },
+          { className: (0, O.Z)(De.RemoteControls, t) },
           s.createElement("div", { className: De.ButtonContainer }, l),
         );
       }
@@ -1798,7 +1797,7 @@
           ? t
             ? s.createElement(Ve, Object.assign({ className: n }, o))
             : s.createElement("div", {
-                className: (0, F.Z)(De.RemoteControls, n),
+                className: (0, O.Z)(De.RemoteControls, n),
               })
           : null;
       }
@@ -1907,11 +1906,11 @@
           return (
             s.push({
               tab: ot.RecentlyPlayed,
-              label: (0, O.Xx)("#GamesList_Tab_RecentlyPlayed", rt(n)),
+              label: (0, F.Xx)("#GamesList_Tab_RecentlyPlayed", rt(n)),
             }),
             s.push({
               tab: ot.All,
-              label: (0, O.Xx)("#GamesList_Tab_AllGames", rt(t)),
+              label: (0, F.Xx)("#GamesList_Tab_AllGames", rt(t)),
             }),
             (o ||
               e === ot.Perfect ||
@@ -1919,13 +1918,13 @@
               (a.data && a.data.length > 0)) &&
               s.push({
                 tab: ot.Perfect,
-                label: (0, O.Xx)("#GamesList_Tab_PerfectGames", rt(a)),
+                label: (0, F.Xx)("#GamesList_Tab_PerfectGames", rt(a)),
               }),
             s.push(
               {
                 tab: ot.Followed,
                 href: `${h._.ProfileURL}followedgames`,
-                label: (0, O.Xx)(
+                label: (0, F.Xx)(
                   "#GamesList_Tab_Followed",
                   r > 0 ? `(${r})` : "",
                 ),
@@ -1933,7 +1932,7 @@
               {
                 tab: ot.Reviews,
                 href: `${h._.ProfileURL}reviews`,
-                label: (0, O.Xx)(
+                label: (0, F.Xx)(
                   "#GamesList_Tab_Reviews",
                   i > 0 ? `(${i})` : "",
                 ),
@@ -1941,7 +1940,7 @@
               {
                 tab: ot.Wishlist,
                 href: `${h._.ProfileURL}wishlist`,
-                label: (0, O.Xx)("#GamesList_Tab_Wishlist"),
+                label: (0, F.Xx)("#GamesList_Tab_Wishlist"),
                 className: it.WishlistTab,
               },
             ),
@@ -1956,7 +1955,7 @@
           s.createElement(
             "div",
             {
-              className: (0, F.Z)(
+              className: (0, O.Z)(
                 "sectionTabs item responsive_hidden",
                 it.tabList,
               ),
@@ -1966,7 +1965,7 @@
                 ? s.createElement(
                     "a",
                     {
-                      className: (0, F.Z)("sectionTab", e.className),
+                      className: (0, O.Z)("sectionTab", e.className),
                       href: e.href,
                       key: e.label,
                     },
@@ -1975,7 +1974,7 @@
                 : s.createElement(
                     "a",
                     {
-                      className: (0, F.Z)(
+                      className: (0, O.Z)(
                         "sectionTab",
                         e.tab === t && "active",
                         e.className,
@@ -1993,7 +1992,7 @@
           s.createElement(
             "div",
             {
-              className: (0, F.Z)(
+              className: (0, O.Z)(
                 "nonresponsive_hidden responsive_tab_ctn sharedfiles_responsive_tab",
                 it.SelectBaseline,
               ),
@@ -2030,7 +2029,7 @@
           ),
           s.createElement("div", {
             id: "tabs_baseline",
-            className: (0, F.Z)("responsive_tab_baseline", it.TabBaseline),
+            className: (0, O.Z)("responsive_tab_baseline", it.TabBaseline),
           }),
         );
       }
@@ -2071,38 +2070,50 @@
       }
       function ft(e) {
         const { data: t } = _t();
-        return !!ut.L7.accountid && (t ? t.has(e) : void 0);
+        return !!ut.L7.accountid && !!e && (t ? t.has(e) : void 0);
       }
       function ht(e) {
+        e.invalidateQueries(["AccountPrivateApps"]);
+      }
+      function vt(e) {
         const t = (0, r.bY)(),
           n = (0, o.useQueryClient)();
         return (0, o.useMutation)({
           mutationFn: (n) =>
             (0, a.mG)(this, void 0, void 0, function* () {
-              const a = i.gA.Init(dt._c);
-              a.Body().set_appid(e), a.Body().set_private(n);
-              const s = yield dt.kk.ToggleAppPrivacy(t, a);
-              if (!s.BSuccess()) throw s.GetErrorMessage();
+              return Et(t, e, n);
             }),
-          onSuccess(t, a) {
-            n.setQueryData(["AccountPrivateApps"], (t) => {
-              if (!t) return;
-              const n = new Set(t);
-              return a ? n.add(e) : n.delete(e), n;
-            });
-          },
+          onSuccess: (t, a) => yt(n, [e], a),
           onError() {
-            !(function (e) {
-              e.invalidateQueries(["AccountPrivateApps"]);
-            })(n);
+            ht(n);
           },
         });
       }
-      const vt = parseInt(Se.GameHeight),
-        Et = parseInt(Se.GamePadding),
-        yt = parseInt(Se.RemoteControlsHeight),
-        bt = vt + Et;
-      function Ct() {
+      function Et(e, t, n) {
+        return (0, a.mG)(this, void 0, void 0, function* () {
+          const a = i.gA.Init(dt._c);
+          a.Body().set_appid(t), a.Body().set_private(n);
+          const s = yield dt.kk.ToggleAppPrivacy(e, a);
+          if (!s.BSuccess()) throw s.GetErrorMessage();
+        });
+      }
+      function yt(e, t, n) {
+        e.setQueryData(["AccountPrivateApps"], (e) => {
+          if (!e) return;
+          const a = new Set(e);
+          return (
+            t.forEach((e) => {
+              n ? a.add(e) : a.delete(e);
+            }),
+            a
+          );
+        });
+      }
+      const bt = parseInt(Ae.GameHeight),
+        Ct = parseInt(Ae.GamePadding),
+        Gt = parseInt(Ae.RemoteControlsHeight),
+        wt = bt + Ct;
+      function Lt() {
         return (function (e) {
           const t = (0, s.useMemo)(() => matchMedia(e), [e]),
             [n, a] = (0, s.useState)(t.matches);
@@ -2118,10 +2129,10 @@
             }, [t]),
             n
           );
-        })(`(max-width: ${Se.MobileBreakpoint})`);
+        })(`(max-width: ${Ae.MobileBreakpoint})`);
       }
-      function Gt(e) {
-        const t = A(e.appid),
+      function Rt(e) {
+        const t = S(e.appid),
           n = (function (e) {
             const t = (0, r.bY)(),
               n = y.Get();
@@ -2141,13 +2152,13 @@
           return (
             s.push({
               href: `${f.De.COMMUNITY_BASE_URL}app/${e.appid}`,
-              label: (0, O.Xx)("#Community_GameHubMenuItem"),
+              label: (0, F.Xx)("#Community_GameHubMenuItem"),
               key: "gamehub",
             }),
             void 0 !== t.data &&
               s.push({
                 href: `${h._.ProfileURL}screenshots/?appid=${e.appid}`,
-                label: (0, O.Xx)(
+                label: (0, F.Xx)(
                   "#Community_ScreenshotsMenuItemFirstPerson",
                   t.data > 0 ? `(${t.data})` : "",
                 ),
@@ -2156,7 +2167,7 @@
             void 0 !== n.data &&
               s.push({
                 href: `${h._.ProfileURL}friendsthatplay/${e.appid}`,
-                label: (0, O.Xx)(
+                label: (0, F.Xx)(
                   "#Community_FriendsWhoPlayMenuItemFirstPerson",
                   n.data > 0 ? `(${n.data})` : "",
                 ),
@@ -2165,7 +2176,7 @@
             void 0 !== a.data &&
               s.push({
                 href: `${h._.ProfileURL}gamecards/${e.appid}`,
-                label: (0, O.Xx)(
+                label: (0, F.Xx)(
                   "#Community_TradingCardsMenuItemFirstPerson",
                   `(${a.data.owned}/${a.data.total})`,
                 ),
@@ -2173,7 +2184,7 @@
               }),
             s.push({
               href: `${h._.ProfileURL}recommended/${e.appid}`,
-              label: (0, O.Xx)("#Community_ReviewMenuItemFirstPerson"),
+              label: (0, F.Xx)("#Community_ReviewMenuItemFirstPerson"),
               key: "review",
             }),
             {
@@ -2183,9 +2194,9 @@
           );
         }, [e, t.data, t.isLoading, n.data, n.isLoading, a.data, a.isLoading]);
       }
-      function wt(e) {
+      function Nt(e) {
         const t = C(),
-          n = A(e.appid),
+          n = S(e.appid),
           a = (function (e) {
             const t = (0, r.bY)(),
               n = y.Get(),
@@ -2200,14 +2211,14 @@
           return (
             s.push({
               href: `${f.De.COMMUNITY_BASE_URL}app/${e.appid}`,
-              label: (0, O.Xx)("#Community_GameHubMenuItem"),
+              label: (0, F.Xx)("#Community_GameHubMenuItem"),
               key: "gamehub",
             }),
             n.data &&
               n.data > 0 &&
               s.push({
                 href: `${h._.ProfileURL}screenshots/?appid=${e.appid}`,
-                label: (0, O.Xx)(
+                label: (0, F.Xx)(
                   "#Community_ScreenshotsMenuItemThirdPerson",
                   t,
                   n.data > 0 ? `(${n.data})` : "",
@@ -2217,17 +2228,17 @@
             a.data &&
               s.push({
                 href: `${h._.ProfileURL}recommended/${e.appid}`,
-                label: (0, O.Xx)("#Community_ReviewMenuItemThirdPerson", t),
+                label: (0, F.Xx)("#Community_ReviewMenuItemThirdPerson", t),
                 key: "review",
               }),
             { rgLinks: s, bIsLoading: n.isLoading }
           );
         }, [e, t, n.data, n.isLoading, a.data]);
       }
-      function Lt(e) {
-        return w() ? Gt(e) : wt(e);
+      function At(e) {
+        return w() ? Rt(e) : Nt(e);
       }
-      function Rt(e) {
+      function St(e) {
         const t = C(),
           n = (function (e) {
             return y.Get().GetGCPDGames().includes(e.appid);
@@ -2240,50 +2251,50 @@
               (s.push({
                 href: `${h._.ProfileURL}stats/${e.appid}/?tab=achievements`,
                 label: a
-                  ? (0, O.Xx)("#Community_UsersAchievementsFirstPerson")
-                  : (0, O.Xx)("#Community_UsersAchievements", t),
+                  ? (0, F.Xx)("#Community_UsersAchievementsFirstPerson")
+                  : (0, F.Xx)("#Community_UsersAchievements", t),
                 key: "achievements",
               }),
               s.push({
                 href: `${f.De.COMMUNITY_BASE_URL}stats/${e.appid}/achievements/`,
-                label: (0, O.Xx)("#Community_GlobalAchievements"),
+                label: (0, F.Xx)("#Community_GlobalAchievements"),
                 key: "global_achievements",
               })),
             e.has_leaderboards &&
               (s.push({
                 href: `${h._.ProfileURL}stats/${e.appid}/?tab=leaderboards`,
                 label: a
-                  ? (0, O.Xx)("#Community_UsersLeaderboardsFirstPerson")
-                  : (0, O.Xx)("#Community_UsersLeaderboards", t),
+                  ? (0, F.Xx)("#Community_UsersLeaderboardsFirstPerson")
+                  : (0, F.Xx)("#Community_UsersLeaderboards", t),
                 key: "leaderboards",
               }),
               s.push({
                 href: `${f.De.COMMUNITY_BASE_URL}stats/${e.appid}/leaderboards/`,
-                label: (0, O.Xx)("#Community_GlobalLeaderboards"),
+                label: (0, F.Xx)("#Community_GlobalLeaderboards"),
                 key: "global_leaderboards",
               })),
             a &&
               n &&
               s.push({
                 href: `${h._.ProfileURL}gcpd/${e.appid}/`,
-                label: (0, O.Xx)("#Community_GamePersonalData", t),
+                label: (0, F.Xx)("#Community_GamePersonalData", t),
                 key: "gcpd",
               }),
             s
           );
         }, [t, e, n, a]);
       }
-      function Nt(e) {
+      function Bt(e) {
         const t = w(),
           n = ft(e.appid),
           a = gt() && t,
-          { mutate: o } = ht(e.appid);
+          { mutate: o } = vt(e.appid);
         return (0, s.useMemo)(() => {
           const t = [];
           return (
             t.push({
               href: `${f.De.STORE_BASE_URL}app/${e.appid}`,
-              label: (0, O.Xx)("#Community_StorePage"),
+              label: (0, F.Xx)("#Community_StorePage"),
               key: "store",
             }),
             (0, ee.e7)(f.De.EREALM) ||
@@ -2292,26 +2303,26 @@
                   href: `${f.De.IN_CLIENT ? "steam://openurl_external/" : ""}${
                     f.De.STORE_BASE_URL
                   }forum/${e.appid}`,
-                  label: (0, O.Xx)("#Community_Forums"),
+                  label: (0, F.Xx)("#Community_Forums"),
                   key: "forums",
                 },
                 {
                   href: `${
                     f.De.COMMUNITY_BASE_URL
                   }search/groups/?text=${encodeURIComponent(e.name)}`,
-                  label: (0, O.Xx)("#Community_Groups"),
+                  label: (0, F.Xx)("#Community_Groups"),
                   key: "groups",
                 },
                 {
                   href: `${f.De.IN_CLIENT ? "steam://openurl_external/" : ""}${
                     f.De.STORE_BASE_URL
                   }appofficialsite/${e.appid}`,
-                  label: (0, O.Xx)("#Community_OfficialWebsite"),
+                  label: (0, F.Xx)("#Community_OfficialWebsite"),
                   key: "website",
                 },
                 {
                   href: `${f.De.STORE_BASE_URL}news/?appids=${e.appid}`,
-                  label: (0, O.Xx)("#Community_News"),
+                  label: (0, F.Xx)("#Community_News"),
                   key: "news",
                 },
               ),
@@ -2319,28 +2330,28 @@
               (n
                 ? t.push({
                     action: () => o(!1),
-                    label: (0, O.Xx)("#AppPrivacy_UnmarkAsPrivate"),
+                    label: (0, F.Xx)("#AppPrivacy_UnmarkAsPrivate"),
                     key: "appprivacy",
                   })
                 : t.push({
                     action: () => o(!0),
-                    label: (0, O.Xx)("#AppPrivacy_MarkAsPrivate"),
+                    label: (0, F.Xx)("#AppPrivacy_MarkAsPrivate"),
                     key: "appprivacy",
-                    tooltip: (0, O.Xx)("#AppPrivacy_Explanation"),
+                    tooltip: (0, F.Xx)("#AppPrivacy_Explanation"),
                   })),
             t
           );
         }, [e, a, n, o]);
       }
-      const St = s.forwardRef(
+      const kt = s.forwardRef(
         ({ achievement: e, appid: t, className: n }, a) => {
           const o = parseFloat(e.player_percent_unlocked) < 10,
             i = `${f.De.MEDIA_CDN_COMMUNITY_URL}images/apps/${t}/${e.icon}`;
           return s.createElement(be, {
             ref: a,
-            className: (0, F.Z)(
-              Ae.AchievementIcon,
-              Ae.RareAchievementIconWrapper,
+            className: (0, O.Z)(
+              Se.AchievementIcon,
+              Se.RareAchievementIconWrapper,
               n,
             ),
             glow: o,
@@ -2348,36 +2359,36 @@
           });
         },
       );
-      function At({ appid: e, achievement: t }) {
+      function It({ appid: e, achievement: t }) {
         const n = `${f.De.MEDIA_CDN_COMMUNITY_URL}images/apps/${e}/${t.icon}`,
           a = parseFloat(t.player_percent_unlocked) < 10;
         return s.createElement(
           "div",
-          { className: Ae.AchievementHover },
+          { className: Se.AchievementHover },
           s.createElement(
             "div",
-            { className: Ae.Background },
-            s.createElement("img", { className: Ae.Blur, src: n }),
+            { className: Se.Background },
+            s.createElement("img", { className: Se.Blur, src: n }),
           ),
           s.createElement(
             "div",
-            { className: Ae.TopSection },
-            s.createElement(St, { appid: e, achievement: t }),
+            { className: Se.TopSection },
+            s.createElement(kt, { appid: e, achievement: t }),
             s.createElement(
               "div",
-              { className: Ae.TextSection },
-              s.createElement("div", { className: Ae.Name }, t.name),
-              s.createElement("div", { className: Ae.Desc }, t.desc),
+              { className: Se.TextSection },
+              s.createElement("div", { className: Se.Name }, t.name),
+              s.createElement("div", { className: Se.Desc }, t.desc),
             ),
           ),
           t.player_percent_unlocked &&
             s.createElement(
               "div",
-              { className: Ae.Unlocked },
+              { className: Se.Unlocked },
               s.createElement(
                 "span",
-                { className: (0, F.Z)(a && Ae.RareLabel) },
-                (0, O.Xx)(
+                { className: (0, O.Z)(a && Se.RareLabel) },
+                (0, F.Xx)(
                   "#GamesList_Achievement_Unlock_Percentage",
                   t.player_percent_unlocked,
                 ),
@@ -2385,22 +2396,22 @@
             ),
         );
       }
-      const Bt = {
+      const Pt = {
           direction: "top",
           bEnablePointerEvents: !1,
           style: { width: void 0, height: void 0, minHeight: void 0 },
         },
-        kt = s.forwardRef(({ appid: e, achievement: t }, n) =>
+        Dt = s.forwardRef(({ appid: e, achievement: t }, n) =>
           s.createElement(
             we.tl,
             {
-              hoverContent: s.createElement(At, { appid: e, achievement: t }),
-              hoverProps: Bt,
+              hoverContent: s.createElement(It, { appid: e, achievement: t }),
+              hoverProps: Pt,
             },
-            s.createElement(St, { ref: n, achievement: t, appid: e }),
+            s.createElement(kt, { ref: n, achievement: t, appid: e }),
           ),
         );
-      function It(e) {
+      function xt(e) {
         var {
             children: t,
             remainderRenderer: n,
@@ -2440,7 +2451,7 @@
           h < f && n(f - h),
         );
       }
-      function Pt({ game: e, visible: t, totalUnlocked: n }) {
+      function Mt({ game: e, visible: t, totalUnlocked: n }) {
         var a, o;
         const i = (function (e, t) {
             const n = (0, r.bY)(),
@@ -2464,21 +2475,21 @@
           ? void 0
           : o.length) > 0
           ? s.createElement(
-              It,
+              xt,
               {
-                className: Ae.AchievementIcons,
+                className: Se.AchievementIcons,
                 totalItemOverride: n,
                 itemPadding: 8,
                 remainderRenderer: (e) =>
                   s.createElement(
                     "a",
-                    { href: l, className: Ae.Remainder },
+                    { href: l, className: Se.Remainder },
                     "+",
                     e,
                   ),
               },
               i.data.achievements.map((t) =>
-                s.createElement(kt, {
+                s.createElement(Dt, {
                   appid: e.appid,
                   achievement: t,
                   key: `${t.statid}${t.bit}`,
@@ -2487,92 +2498,92 @@
             )
           : null;
       }
-      function Dt({ game: e, visible: t, showTop: n }) {
-        const a = S(e, t).data;
+      function Tt({ game: e, visible: t, showTop: n }) {
+        const a = A(e, t).data;
         if (!a) return null;
         if (0 === a.total) return null;
         const o = Math.floor((a.unlocked / a.total) * 100),
-          i = (0, O.Xx)("#GamesList_Header_Achievements"),
-          r = (0, O.Xx)("#GamesList_Achievement_Fraction", a.unlocked, a.total),
+          i = (0, F.Xx)("#GamesList_Header_Achievements"),
+          r = (0, F.Xx)("#GamesList_Achievement_Fraction", a.unlocked, a.total),
           l = `${h._.ProfileURL}stats/${e.appid}/?tab=achievements`;
         return s.createElement(
           s.Fragment,
           null,
           s.createElement(
             "div",
-            { className: Ae.AchievementsProgress },
+            { className: Se.AchievementsProgress },
             s.createElement(
               "a",
-              { className: Ae.AchievementsProgressLabel, href: l },
+              { className: Se.AchievementsProgressLabel, href: l },
               i,
             ),
-            s.createElement("span", { className: Ae.AchievementsFraction }, r),
+            s.createElement("span", { className: Se.AchievementsFraction }, r),
             s.createElement(Re, {
-              className: Ae.AchievementsProgressBar,
+              className: Se.AchievementsProgressBar,
               animate: !1,
               nPercent: o,
             }),
           ),
           n &&
-            s.createElement(Pt, {
+            s.createElement(Mt, {
               game: e,
               visible: t,
               totalUnlocked: a.unlocked,
             }),
         );
       }
-      function xt({ game: e, visible: t }) {
-        const n = S(e, t).data;
+      function Ut({ game: e, visible: t }) {
+        const n = A(e, t).data;
         return n && t && n.total && n.unlocked === n.total
           ? s.createElement(
               "div",
-              { title: (0, O.Xx)("#Perfect_Game_Description") },
+              { title: (0, F.Xx)("#Perfect_Game_Description") },
               s.createElement(X.Gue, {
                 fullcolor: !0,
-                className: Ae.PerfectRibbon,
+                className: Se.PerfectRibbon,
               }),
             )
           : null;
       }
-      const Mt = () => {};
-      function Tt({ links: e }) {
+      const Ot = () => {};
+      function Ft({ links: e }) {
         return s.createElement(
           Ce.xV,
-          { className: Ae.NavDropdownMenu },
+          { className: Se.NavDropdownMenu },
           e.map((e) =>
             s.createElement(
               Ce.Zo,
-              { onSelected: "action" in e ? () => e.action() : Mt, key: e.key },
-              s.createElement(zt, { link: e }),
+              { onSelected: "action" in e ? () => e.action() : Ot, key: e.key },
+              s.createElement(tn, { link: e }),
             ),
           ),
         );
       }
-      function Ut({ game: e }) {
-        const t = Lt(e);
+      function $t({ game: e }) {
+        const t = At(e);
         return t.bIsLoading
           ? s.createElement(
               Ce.xV,
-              { className: Ae.NavDropdownMenu },
+              { className: Se.NavDropdownMenu },
               s.createElement(T.V, { size: "small", position: "center" }),
             )
-          : s.createElement(Tt, { links: t.rgLinks });
+          : s.createElement(Ft, { links: t.rgLinks });
       }
-      const Ft = {
+      const Ht = {
         bFitToWindow: !0,
         bOverlapHorizontal: !0,
         bMatchWidth: !1,
         bShiftToFitWindow: !0,
       };
-      function Ot({ links: e, children: t, className: n }) {
+      function Xt({ links: e, children: t, className: n }) {
         const a = (0, s.useRef)(null),
           o = (0, s.useCallback)(() => {
-            (0, te.yV)(s.createElement(Tt, { links: e }), a.current, Ft);
+            (0, te.yV)(s.createElement(Ft, { links: e }), a.current, Ht);
           }, [a, e]);
         return s.createElement(
           P.s,
           {
-            className: (0, F.Z)(Ae.NavButton, n),
+            className: (0, O.Z)(Se.NavButton, n),
             onActivate: o,
             ref: a,
             focusable: !0,
@@ -2580,7 +2591,7 @@
           t,
         );
       }
-      function $t({ links: e, label: t, className: n, onClick: a }) {
+      function Qt({ links: e, label: t, className: n, onClick: a }) {
         return s.createElement(x.gB, {
           rgOptions: e.map((e) => ({ label: e.label, data: e })),
           onMenuOpened: a,
@@ -2588,13 +2599,13 @@
             "href" in e.data ? (location.href = e.data.href) : e.data.action();
           },
           strDefaultLabel: t,
-          strClassName: (0, F.Z)(Ae.GamepadNavigationDropdown, n),
-          strDropDownButtonClassName: Ae.GamepadNavigationDropdownButton,
+          strClassName: (0, O.Z)(Se.GamepadNavigationDropdown, n),
+          strDropDownButtonClassName: Se.GamepadNavigationDropdownButton,
           highlightOnFocus: !0,
         });
       }
-      function Ht({ game: e, setLinkData: t }) {
-        const n = Lt(e);
+      function Zt({ game: e, setLinkData: t }) {
+        const n = At(e);
         return (
           (0, s.useEffect)(() => {
             t(n.rgLinks);
@@ -2602,9 +2613,9 @@
           null
         );
       }
-      function Xt({ game: e }) {
+      function jt({ game: e }) {
         const t = w(),
-          n = (0, O.Xx)(
+          n = (0, F.Xx)(
             t ? "#Community_GameContentFirstPerson" : "#Community_GameContent",
           ),
           [a, o] = (0, s.useState)([]),
@@ -2612,70 +2623,70 @@
         return s.createElement(
           s.Fragment,
           null,
-          s.createElement($t, { links: a, label: n, onClick: () => r(!0) }),
-          i && s.createElement(Ht, { game: e, setLinkData: o }),
+          s.createElement(Qt, { links: a, label: n, onClick: () => r(!0) }),
+          i && s.createElement(Zt, { game: e, setLinkData: o }),
         );
       }
-      function Qt(e) {
+      function qt(e) {
         const { game: t, children: n } = e,
           a = w();
         return s.createElement(
           "div",
-          { className: Ae.GameLinks },
-          a && s.createElement(Zt, { game: t }),
+          { className: Se.GameLinks },
+          a && s.createElement(Wt, { game: t }),
           n,
         );
       }
-      function Zt(e) {
+      function Wt(e) {
         const { game: t } = e,
           n = ft(t.appid),
-          a = ht(t.appid);
+          a = vt(t.appid);
         return !0 !== n
           ? null
           : s.createElement(
               P.s,
               {
-                className: (0, F.Z)(
-                  Ae.AppPrivateIndicator,
-                  Ae.GameLinksButton,
-                  Ae.NavButton,
+                className: (0, O.Z)(
+                  Se.AppPrivateIndicator,
+                  Se.GameLinksButton,
+                  Se.NavButton,
                 ),
                 onActivate: () => a.mutate(!1),
               },
               s.createElement(H.dQJ, null),
             );
       }
-      function jt({ game: e }) {
-        const t = Nt(e);
+      function Yt({ game: e }) {
+        const t = Bt(e);
         return (0, f.id)()
-          ? s.createElement($t, {
+          ? s.createElement(Qt, {
               links: t,
-              label: (0, O.Xx)("#Community_GameLinks"),
+              label: (0, F.Xx)("#Community_GameLinks"),
             })
           : s.createElement(
-              Ot,
-              { links: t, className: Ae.GameLinksButton },
+              Xt,
+              { links: t, className: Se.GameLinksButton },
               s.createElement(H.bbz, null),
             );
       }
-      function qt({ game: e }) {
-        const t = Rt(e),
+      function Vt({ game: e }) {
+        const t = St(e),
           n = w(),
           a = (0, f.id)();
         if (0 === t.length) return null;
-        const o = (0, O.Xx)(
+        const o = (0, F.Xx)(
           n ? "#Community_GameStatsFirstPerson" : "#Community_GameStats",
         );
         return a
-          ? s.createElement($t, { links: t, label: o })
+          ? s.createElement(Qt, { links: t, label: o })
           : s.createElement(
-              Ot,
-              { links: t, className: Ae.StatLinks },
+              Xt,
+              { links: t, className: Se.StatLinks },
               s.createElement("span", null, " ", o, " "),
               s.createElement(z, null),
             );
       }
-      function Wt({ game: e }) {
+      function Kt({ game: e }) {
         const t = (0, s.useRef)(null),
           n = (0, r.P9)(),
           a = (0, s.useCallback)(() => {
@@ -2686,23 +2697,23 @@
                   useActiveSteamInterface: n.useActiveSteamInterface,
                   useStorage: n.useStorage,
                 },
-                s.createElement(Ut, { game: e }),
+                s.createElement($t, { game: e }),
               ),
               t.current,
-              Ft,
+              Ht,
             );
           }, [t, e, n]),
           o = w(),
           i = (0, f.id)(),
-          l = (0, O.Xx)(
+          l = (0, F.Xx)(
             o ? "#Community_GameContentFirstPerson" : "#Community_GameContent",
           );
         return i
-          ? s.createElement(Xt, { game: e })
+          ? s.createElement(jt, { game: e })
           : s.createElement(
               P.s,
               {
-                className: (0, F.Z)(Ae.NavButton, Ae.ContentLinks),
+                className: (0, O.Z)(Se.NavButton, Se.ContentLinks),
                 onActivate: a,
                 ref: t,
               },
@@ -2710,47 +2721,47 @@
               s.createElement(z, null),
             );
       }
-      function Yt({ label: e, children: t }) {
+      function zt({ label: e, children: t }) {
         return s.createElement(
           "details",
-          { className: Ae.BottomSheetSection },
+          { className: Se.BottomSheetSection },
           s.createElement("summary", null, e, s.createElement(z, null)),
-          s.createElement("div", { className: Ae.SectionContent }, t),
+          s.createElement("div", { className: Se.SectionContent }, t),
         );
       }
-      function Vt({ game: e }) {
-        const t = Rt(e);
+      function Jt({ game: e }) {
+        const t = St(e);
         return 0 === t.length
           ? null
           : s.createElement(
-              Yt,
-              { label: (0, O.Xx)("#Community_GameStats") },
+              zt,
+              { label: (0, F.Xx)("#Community_GameStats") },
               t.map((e) =>
-                s.createElement(zt, {
+                s.createElement(tn, {
                   key: e.key,
                   link: e,
-                  className: Ae.BottomSheetLink,
+                  className: Se.BottomSheetLink,
                 }),
               ),
             );
       }
-      function Kt({ game: e }) {
-        const t = Lt(e);
+      function en({ game: e }) {
+        const t = At(e);
         return 0 === t.rgLinks.length
           ? null
           : s.createElement(
-              Yt,
-              { label: (0, O.Xx)("#Community_GameContent") },
+              zt,
+              { label: (0, F.Xx)("#Community_GameContent") },
               t.rgLinks.map((e) =>
-                s.createElement(zt, {
+                s.createElement(tn, {
                   key: e.key,
                   link: e,
-                  className: Ae.BottomSheetLink,
+                  className: Se.BottomSheetLink,
                 }),
               ),
             );
       }
-      function zt(e) {
+      function tn(e) {
         const { link: t, className: n } = e;
         let a;
         return (
@@ -2767,51 +2778,51 @@
           a
         );
       }
-      function Jt({ game: e }) {
-        const t = Nt(e);
+      function nn({ game: e }) {
+        const t = Bt(e);
         return 0 === t.length
           ? null
           : s.createElement(
-              Yt,
-              { label: (0, O.Xx)("#GamesList_MenuLabel_GameInfo") },
+              zt,
+              { label: (0, F.Xx)("#GamesList_MenuLabel_GameInfo") },
               t.map((e) =>
-                s.createElement(zt, {
+                s.createElement(tn, {
                   key: e.key,
                   link: e,
-                  className: Ae.BottomSheetLink,
+                  className: Se.BottomSheetLink,
                 }),
               ),
             );
       }
-      function en({ game: e }) {
+      function an({ game: e }) {
         const t = w(),
           n = (function () {
             const e = Te();
             return e
-              ? (0, O.Xx)(
+              ? (0, F.Xx)(
                   "#GamesList_Client_Indicator",
-                  Fe(e.device_type),
+                  Oe(e.device_type),
                   e.machine_name,
                 )
               : null;
           })();
         return t && n
           ? s.createElement(
-              Yt,
-              { label: (0, O.Xx)("#GamesList_MenuLabel_RemoteDownload") },
-              s.createElement("span", { className: Ae.ClientName }, n),
+              zt,
+              { label: (0, F.Xx)("#GamesList_MenuLabel_RemoteDownload") },
+              s.createElement("span", { className: Se.ClientName }, n),
               s.createElement(ze, {
                 game: e,
-                className: Ae.BottomSheetRemoteControls,
+                className: Se.BottomSheetRemoteControls,
                 visible: !0,
                 enableDownloadBar: !0,
               }),
             )
           : null;
       }
-      function tn({ tab: e }) {
-        const t = ln().openGame,
-          n = rn(),
+      function sn({ tab: e }) {
+        const t = dn().openGame,
+          n = mn(),
           a = (0, s.useRef)(null);
         (0, s.useEffect)(() => {
           var e;
@@ -2828,9 +2839,9 @@
         return s.createElement(
           "div",
           {
-            className: (0, F.Z)(
-              Ae.BottomSheetContainer,
-              o && Ae.HasAdultContent,
+            className: (0, O.Z)(
+              Se.BottomSheetContainer,
+              o && Se.HasAdultContent,
             ),
             role: "dialog",
             "aria-modal": "true",
@@ -2839,69 +2850,69 @@
             },
           },
           s.createElement("div", {
-            className: Ae.BottomSheetOverlay,
+            className: Se.BottomSheetOverlay,
             onClick: (e) => {
               e.preventDefault(), e.stopPropagation(), n(void 0);
             },
           }),
           s.createElement(
             "div",
-            { className: Ae.BottomSheet, ref: a },
+            { className: Se.BottomSheet, ref: a },
             s.createElement(
               "div",
-              { className: Ae.GameInfo },
+              { className: Se.GameInfo },
               s.createElement(
                 "div",
-                { className: Ae.BlurredBackground },
+                { className: Se.BlurredBackground },
                 s.createElement("img", { src: i, alt: t.name }),
               ),
               s.createElement("img", {
                 src: i,
                 alt: t.name,
-                className: Ae.Portrait,
+                className: Se.Portrait,
               }),
               s.createElement(
                 "div",
-                { className: Ae.Facts },
-                s.createElement("span", { className: Ae.GameTitle }, t.name),
-                s.createElement(nn, { game: t, visible: !0, tab: e }),
+                { className: Se.Facts },
+                s.createElement("span", { className: Se.GameTitle }, t.name),
+                s.createElement(on, { game: t, visible: !0, tab: e }),
               ),
             ),
-            s.createElement(Kt, { game: t }),
-            s.createElement(Vt, { game: t }),
-            s.createElement(Jt, { game: t }),
             s.createElement(en, { game: t }),
+            s.createElement(Jt, { game: t }),
+            s.createElement(nn, { game: t }),
+            s.createElement(an, { game: t }),
           ),
         );
       }
-      function nn({ game: e, visible: t, tab: n }) {
+      function on({ game: e, visible: t, tab: n }) {
         const a = w(),
           o = R(e),
-          i = Ct(),
+          i = Lt(),
           r = n !== ot.All && !(i && n === ot.RecentlyPlayed);
         return s.createElement(
           "div",
-          { className: Ae.Playtime },
+          { className: Se.Playtime },
           n === ot.RecentlyPlayed &&
             !!e.playtime_2weeks &&
             s.createElement(
               "span",
-              { className: Ae.Hours2weeks },
+              { className: Se.Hours2weeks },
               s.createElement(
                 "span",
-                { className: Ae.FactLabel },
-                (0, O.Xx)("#GamesList_Header_TwoWeeks"),
+                { className: Se.FactLabel },
+                (0, F.Xx)("#GamesList_Header_TwoWeeks"),
               ),
               (0, Ne.W)(e.playtime_2weeks),
             ),
           !!e.playtime_forever &&
             s.createElement(
               "span",
-              { className: Ae.Hours },
+              { className: Se.Hours },
               s.createElement(
                 "span",
-                { className: Ae.FactLabel },
-                (0, O.Xx)("#GamesList_Header_TotalPlayed"),
+                { className: Se.FactLabel },
+                (0, F.Xx)("#GamesList_Header_TotalPlayed"),
               ),
               (0, Ne.W)(
                 e.playtime_forever +
@@ -2913,24 +2924,24 @@
             !!e.rtime_last_played &&
             s.createElement(
               "span",
-              { className: Ae.LastPlayed },
+              { className: Se.LastPlayed },
               s.createElement(
                 "span",
-                { className: Ae.FactLabel },
-                (0, O.Xx)("#GamesList_Header_LastPlayed"),
+                { className: Se.FactLabel },
+                (0, F.Xx)("#GamesList_Header_LastPlayed"),
               ),
-              (0, O.m9)(e.rtime_last_played),
+              (0, F.m9)(e.rtime_last_played),
             ),
           !o &&
             s.createElement(
               "div",
-              { className: Ae.AchievementContainer },
-              s.createElement(Dt, { game: e, visible: t, showTop: r }),
+              { className: Se.AchievementContainer },
+              s.createElement(Tt, { game: e, visible: t, showTop: r }),
             ),
         );
       }
-      function an({ game: e }) {
-        const t = Ct(),
+      function rn({ game: e }) {
+        const t = Lt(),
           [n, a] = (0, s.useState)(0),
           o = [
             `${f.De.STORE_ICON_BASE_URL}${e.appid}/${
@@ -2948,28 +2959,28 @@
             "picture",
             { onError: () => a((e) => e + 1) },
             s.createElement("source", {
-              media: `(max-width: ${Se.MobileBreakpoint})`,
+              media: `(max-width: ${Ae.MobileBreakpoint})`,
               srcSet: o[n],
             }),
             s.createElement("img", { src: i[n], alt: e.name, loading: "lazy" }),
           ),
-          r && s.createElement("span", { className: Ae.FallbackTitle }, e.name),
+          r && s.createElement("span", { className: Se.FallbackTitle }, e.name),
         );
       }
-      function sn({ game: e, hasEverBeenVisible: t }) {
-        const n = Ct();
+      function ln({ game: e, hasEverBeenVisible: t }) {
+        const n = Lt();
         return s.createElement(
           "div",
-          { className: Ae.PortraitContainer },
-          s.createElement(an, { game: e }),
-          !n && s.createElement(xt, { game: e, visible: t }),
+          { className: Se.PortraitContainer },
+          s.createElement(rn, { game: e }),
+          !n && s.createElement(Ut, { game: e, visible: t }),
         );
       }
-      const on = s.memo(function ({ game: e, top: t, tab: n }) {
+      const cn = s.memo(function ({ game: e, top: t, tab: n }) {
         const a = `${f.De.STORE_BASE_URL}app/${e.appid}`,
           o = w(),
-          i = Ct(),
-          r = rn(),
+          i = Lt(),
+          r = mn(),
           l = i ? "button" : ae.eh,
           c = i ? () => r(e) : void 0,
           [m, d] = (0, s.useState)(!1),
@@ -2986,9 +2997,9 @@
         return s.createElement(
           "div",
           {
-            className: (0, F.Z)(
-              Ae.GamesListItemContainer,
-              p && Ae.HasAdultContent,
+            className: (0, O.Z)(
+              Se.GamesListItemContainer,
+              p && Se.HasAdultContent,
             ),
             style: { top: `${t}px` },
             ref: u,
@@ -2996,76 +3007,76 @@
           s.createElement(
             l,
             {
-              className: (0, F.Z)(Ae.GamesListItem, e.changing && Ae.Changing),
+              className: (0, O.Z)(Se.GamesListItem, e.changing && Se.Changing),
               onClick: c,
             },
             s.createElement(
               g,
-              { href: a, className: Ae.GameItemPortrait },
-              s.createElement(sn, { game: e, hasEverBeenVisible: m }),
+              { href: a, className: Se.GameItemPortrait },
+              s.createElement(ln, { game: e, hasEverBeenVisible: m }),
             ),
             s.createElement(
               "span",
-              { className: Ae.GameNameContainer },
-              s.createElement(h, { href: a, className: Ae.GameName }, e.name),
+              { className: Se.GameNameContainer },
+              s.createElement(h, { href: a, className: Se.GameName }, e.name),
             ),
-            s.createElement(nn, { game: e, visible: m, tab: n }),
+            s.createElement(on, { game: e, visible: m, tab: n }),
             !i &&
               s.createElement(
                 s.Fragment,
                 null,
                 s.createElement(
                   "div",
-                  { className: Ae.Buttons },
-                  s.createElement(qt, { game: e }),
-                  s.createElement(Wt, { game: e }),
-                  _ && s.createElement(jt, { game: e }),
+                  { className: Se.Buttons },
+                  s.createElement(Vt, { game: e }),
+                  s.createElement(Kt, { game: e }),
+                  _ && s.createElement(Yt, { game: e }),
                 ),
                 !_ &&
                   s.createElement(
-                    Qt,
+                    qt,
                     { game: e },
-                    s.createElement(jt, { game: e }),
+                    s.createElement(Yt, { game: e }),
                   ),
               ),
             o &&
               !i &&
               s.createElement(ze, {
-                className: Ae.DownloadStatus,
+                className: Se.DownloadStatus,
                 game: e,
                 visible: m,
               }),
-            i && s.createElement(xt, { game: e, visible: m }),
+            i && s.createElement(Ut, { game: e, visible: m }),
           ),
           o && s.createElement(Ke, { game: e, visible: m }),
         );
       });
-      function rn() {
-        return ln().fnSetOpenGame;
+      function mn() {
+        return dn().fnSetOpenGame;
       }
-      function ln() {
-        const e = (0, s.useContext)(cn);
+      function dn() {
+        const e = (0, s.useContext)(un);
         if (!e)
           throw new Error(
             "attempted to use BottomSheetContext outside of provider",
           );
         return e;
       }
-      const cn = s.createContext(void 0);
-      function mn({ children: e }) {
+      const un = s.createContext(void 0);
+      function pn({ children: e }) {
         const [t, n] = (0, s.useState)(void 0);
         return s.createElement(
-          cn.Provider,
+          un.Provider,
           { value: { openGame: t, fnSetOpenGame: n } },
           e,
         );
       }
-      const dn = new Set();
-      function un(e) {
-        dn.add(e);
+      const _n = new Set();
+      function gn(e) {
+        _n.add(e);
       }
-      const pn = new Set();
-      function _n({ games: e, tab: t, fnCalculateGameSize: n }) {
+      const fn = new Set();
+      function hn({ games: e, tab: t, fnCalculateGameSize: n }) {
         const [a, o] = (0, s.useMemo)(() => {
           let t = 0;
           const a = e.map((e) => {
@@ -3113,9 +3124,9 @@
         let r = 0;
         return s.createElement(
           P.s,
-          { ref: i, className: Ae.List, style: { height: a }, autoFocus: !0 },
+          { ref: i, className: Se.List, style: { height: a }, autoFocus: !0 },
           s.createElement(
-            fn,
+            En,
             {
               disableContinuousRender: e.length > 1024,
               batchSize: 16,
@@ -3126,20 +3137,20 @@
               const a = r;
               return (
                 (r += o[n]),
-                s.createElement(on, { game: e, key: e.appid, top: a, tab: t })
+                s.createElement(cn, { game: e, key: e.appid, top: a, tab: t })
               );
             }),
           ),
         );
       }
-      function gn() {
+      function vn() {
         return (0, a.mG)(this, void 0, void 0, function* () {
           return new Promise((e) => {
             setTimeout(e, 0);
           });
         });
       }
-      function fn({
+      function En({
         children: e,
         batchSize: t,
         containerRef: n,
@@ -3160,7 +3171,7 @@
                       if (e) return;
                       null === (n = r[s]) || void 0 === n || n.call(r, !0);
                     }
-                    yield gn();
+                    yield vn();
                   }
                 });
               })(),
@@ -3201,17 +3212,17 @@
             s.Fragment,
             null,
             e.map((e, t) =>
-              s.createElement(hn, { key: e.key, index: t, renderers: r }, e),
+              s.createElement(yn, { key: e.key, index: t, renderers: r }, e),
             ),
           )
         );
       }
-      function hn({ renderers: e, index: t, children: n }) {
+      function yn({ renderers: e, index: t, children: n }) {
         const [a, o] = (0, s.useState)(!1);
         return (e[t] = o), a ? s.createElement(s.Fragment, null, n) : null;
       }
-      const vn = s.createContext(void 0);
-      function En({ query: e, isLoading: t, tab: n }) {
+      const bn = s.createContext(void 0);
+      function Cn({ query: e, isLoading: t, tab: n }) {
         var a;
         const o = de(),
           i = (function (e) {
@@ -3230,8 +3241,8 @@
               const a = new Set();
               if (null == n ? void 0 : n.data)
                 for (const e of n.data.mapApps.values())
-                  (pn.has(e.appid) || (!dn.has(e.appid) && We(e))) &&
-                    (a.add(e.appid), pn.add(e.appid));
+                  (fn.has(e.appid) || (!_n.has(e.appid) && We(e))) &&
+                    (a.add(e.appid), fn.add(e.appid));
               const s = [],
                 o = [];
               return (
@@ -3252,81 +3263,81 @@
           c = (0, s.useCallback)((e, t) => {
             l((n) => Object.assign(Object.assign({}, n), { [e]: t }));
           }, []),
-          m = (0, s.useCallback)((e) => (r[e.appid] ? bt + yt : bt), [r]);
+          m = (0, s.useCallback)((e) => (r[e.appid] ? wt + Gt : wt), [r]);
         return i.isLoading || o.isLoading || t
           ? s.createElement(T.V, {
-              string: (0, O.Xx)("#Loading"),
+              string: (0, F.Xx)("#Loading"),
               position: "center",
             })
           : 0 === (null === (a = i.data) || void 0 === a ? void 0 : a.length) &&
             n === ot.Perfect
           ? s.createElement(
               "p",
-              { className: Ae.emptyDescription },
-              (0, O.Xx)("#GamesList_PerfectGames_Description"),
+              { className: Se.emptyDescription },
+              (0, F.Xx)("#GamesList_PerfectGames_Description"),
             )
           : s.createElement(
-              vn.Provider,
+              bn.Provider,
               { value: c },
               !f.De.IN_CLIENT && s.createElement(He, null),
-              s.createElement(_n, {
+              s.createElement(hn, {
                 games: i.data,
                 tab: n,
                 fnCalculateGameSize: m,
               }),
             );
       }
-      function yn(e) {
-        return bt;
+      function Gn(e) {
+        return wt;
       }
-      function bn({ query: e, isLoading: t, tab: n }) {
+      function wn({ query: e, isLoading: t, tab: n }) {
         return void 0 === e.data || t
           ? null
-          : s.createElement(_n, {
+          : s.createElement(hn, {
               games: e.data,
               tab: n,
-              fnCalculateGameSize: yn,
+              fnCalculateGameSize: Gn,
             });
       }
-      const Cn = (0, Ge.AP)(
+      const Ln = (0, Ge.AP)(
           ({ owned: e, filter: t, dependencyLoading: n, sort: a, tab: o }) => {
             const i = st(Z(e, t), a),
               r = w(),
               l = i.isLoading || n;
             if (i.error && !l) throw i.error;
             return s.createElement(
-              mn,
+              pn,
               null,
-              s.createElement(tn, { tab: o }),
+              s.createElement(sn, { tab: o }),
               r
-                ? s.createElement(En, { query: i, isLoading: l, tab: o })
-                : s.createElement(bn, { query: i, isLoading: l, tab: o }),
+                ? s.createElement(Cn, { query: i, isLoading: l, tab: o })
+                : s.createElement(wn, { query: i, isLoading: l, tab: o }),
             );
           },
         ),
-        Gn = [
+        Rn = [
           {
-            label: (0, O.Xx)("#GamesList_Sort_HoursPlayed"),
+            label: (0, F.Xx)("#GamesList_Sort_HoursPlayed"),
             sortOption: Je.HoursPlayed,
           },
-          { label: (0, O.Xx)("#GamesList_Sort_Name"), sortOption: Je.Name },
+          { label: (0, F.Xx)("#GamesList_Sort_Name"), sortOption: Je.Name },
           {
-            label: (0, O.Xx)("#GamesList_Sort_AchievementCompletion"),
+            label: (0, F.Xx)("#GamesList_Sort_AchievementCompletion"),
             sortOption: Je.AchievementCompletion,
           },
         ];
-      function wn({ strSort: e, setStrSort: t }) {
+      function Nn({ strSort: e, setStrSort: t }) {
         return s.createElement(
           "ul",
           { className: $.SortOptions },
-          Gn.map((n) =>
+          Rn.map((n) =>
             s.createElement(
               "li",
               { key: n.sortOption },
               s.createElement(
                 "button",
                 {
-                  className: (0, F.Z)(
+                  className: (0, O.Z)(
                     $.SortOption,
                     e === n.sortOption && $.SelectedSort,
                   ),
@@ -3338,12 +3349,12 @@
           ),
         );
       }
-      function Ln() {
+      function An() {
         const [e, t] = (0, M.Ar)("games_in_common", !1);
         return s.createElement(
           "label",
           { className: $.BothOwnedFilter },
-          (0, O.Xx)("#GamesList_Filter_BothOwned"),
+          (0, F.Xx)("#GamesList_Filter_BothOwned"),
           s.createElement("input", {
             type: "checkbox",
             checked: e,
@@ -3351,12 +3362,12 @@
           }),
         );
       }
-      function Rn() {
+      function Sn() {
         return s.createElement(
           U.HP,
           {
-            toolTipContent: (0, O.Xx)("#GamesList_PrivacySettings_Tooltip"),
-            "aria-label": (0, O.Xx)("#GamesList_PrivacySettings_Tooltip"),
+            toolTipContent: (0, F.Xx)("#GamesList_PrivacySettings_Tooltip"),
+            "aria-label": (0, F.Xx)("#GamesList_PrivacySettings_Tooltip"),
             className: $.PrivacySettingsLink,
           },
           s.createElement(
@@ -3366,16 +3377,16 @@
           ),
         );
       }
-      function Nn(e) {
+      function Bn(e) {
         const t = new Set();
         return null == e || e.forEach((e) => t.add(e.appid)), t;
       }
-      function Sn(e, t, n) {
+      function kn(e, t, n) {
         const [a, s] = (0, M.Ar)(e, n);
         let o = a;
         return Object.values(t).includes(a) || (o = n), [o, s];
       }
-      function An(e, t) {
+      function In(e, t) {
         return (0, s.useMemo)(() => {
           var n;
           return {
@@ -3385,13 +3396,13 @@
           };
         }, [e.data, e.isLoading, e.error, t]);
       }
-      function Bn({ children: e }) {
+      function Pn({ children: e }) {
         return (0, f.id)() ? s.createElement(x.vY, null, e) : e;
       }
-      function kn(e) {
+      function Dn(e) {
         const t = G(),
-          [n, a] = Sn("sort", Je, Je.HoursPlayed),
-          [o, i] = Sn("tab", ot),
+          [n, a] = kn("sort", Je, Je.HoursPlayed),
+          [o, i] = kn("tab", ot),
           r = null != o ? o : ot.RecentlyPlayed,
           [l, c, m] = (function (e, t) {
             const [n, a] = (0, s.useState)(e),
@@ -3435,7 +3446,7 @@
           v = (function (e) {
             const t = b(f.L7.steamid, { enabled: e });
             return (0, s.useMemo)(
-              () => ({ data: Nn(t.data), isLoading: t.isLoading }),
+              () => ({ data: Bn(t.data), isLoading: t.isLoading }),
               [t.data, t.isLoading],
             );
           })(h),
@@ -3454,26 +3465,26 @@
           C = b(t),
           L = y.Get().GetPerfectUnownedGames(),
           R = y.Get().GetRecentlyPlayedUnownedGames(),
-          S = An(Z(C, _, p.isLoading), L),
-          A = An(Z(C, q), R);
+          A = In(Z(C, _, p.isLoading), L),
+          S = In(Z(C, q), R);
         (0, s.useEffect)(() => {
-          !o && A.data && 0 === A.data.length && i(ot.All);
-        }, [o, A.data, i]);
+          !o && S.data && 0 === S.data.length && i(ot.All);
+        }, [o, S.data, i]);
         const B = w(),
           k = (0, f.id)();
         let x = C;
-        r === ot.RecentlyPlayed ? (x = A) : r === ot.Perfect && (x = S),
+        r === ot.RecentlyPlayed ? (x = S) : r === ot.Perfect && (x = A),
           (0, s.useEffect)(() => {
-            dn.clear();
+            _n.clear();
           }, [r]);
-        const U = lt(r, C, A, S),
+        const U = lt(r, C, S, A),
           H = (function (...e) {
             return (0, s.useCallback)((t) => {
               for (const n of e) if (n && !n(t)) return !1;
               return !0;
             }, e);
           })(c && u, h && E),
-          X = (0, F.Z)($.Gameslistapp, k && "GamepadMode"),
+          X = (0, O.Z)($.Gameslistapp, k && "GamepadMode"),
           Q = (0, D.L)(),
           j = n === Je.AchievementCompletion && p.isLoading,
           Y = x.isLoading || j;
@@ -3484,14 +3495,14 @@
             Ue,
             null,
             s.createElement(
-              Bn,
+              Pn,
               null,
               s.createElement(
                 P.s,
                 { className: X },
                 Y &&
                   s.createElement(T.V, {
-                    string: (0, O.Xx)("#Loading"),
+                    string: (0, F.Xx)("#Loading"),
                     position: "center",
                   }),
                 !Y &&
@@ -3508,12 +3519,12 @@
                           setStrNameFilter: m,
                           className: $.FilterInput,
                         }),
-                        B && s.createElement(Rn, null),
-                        !B && r === ot.All && s.createElement(Ln, null),
-                        s.createElement(wn, { strSort: n, setStrSort: a }),
+                        B && s.createElement(Sn, null),
+                        !B && r === ot.All && s.createElement(An, null),
+                        s.createElement(Nn, { strSort: n, setStrSort: a }),
                       ),
                   ),
-                s.createElement(Cn, {
+                s.createElement(Ln, {
                   owned: x,
                   filter: H,
                   sort: r === ot.RecentlyPlayed ? Je.RecentlyPlayed : n,
@@ -3525,12 +3536,12 @@
           ),
         );
       }
-      function In(e) {
+      function xn(e) {
         const t = (0, k.kD)(s.useCallback(() => new B.Z(), []));
         return s.createElement(
           r.Ub,
           { useActiveSteamInterface: L, useStorage: t },
-          s.createElement(kn, Object.assign({}, e)),
+          s.createElement(Dn, Object.assign({}, e)),
         );
       }
     },

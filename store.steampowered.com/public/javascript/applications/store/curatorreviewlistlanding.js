@@ -105,12 +105,7 @@
           d = (0, i.BE)(m, a),
           p = (0, s.id)(),
           _ = window.__virtual_keyboard_client;
-        if (
-          ((0, n.useEffect)(() => {
-            u.Wz.SetHookFactory(() => _);
-          }, [_]),
-          p)
-        ) {
+        if (p) {
           const e = window.__nav_tree_root;
           return n.createElement(
             o.Fe,
@@ -119,7 +114,11 @@
               secondary: !0,
               parentEmbeddedNavTree: e,
             }),
-            n.createElement(l.O, null, t),
+            n.createElement(
+              u.o5,
+              { factory: _ },
+              n.createElement(l.O, null, t),
+            ),
           );
         }
         return n.createElement(n.Fragment, null, t);
@@ -665,8 +664,8 @@
         T = a(95408),
         N = a(16646),
         D = a.n(N),
-        k = a(701),
-        B = a(19304),
+        B = a(701),
+        k = a(19304),
         G = a(51857);
       const L = new RegExp(
         "(?:https?://)?(?:www.)?twitch.tv/videos/([0-9]+)S*",
@@ -692,7 +691,7 @@
           return n.createElement(
             "div",
             {
-              className: (0, B.Z)(
+              className: (0, k.Z)(
                 "YoutubePreviewContainer",
                 G.YoutubePreviewImage,
                 e.imageClassnames,
@@ -700,7 +699,7 @@
               onClick: () => m(!1),
             },
             n.createElement("img", {
-              className: (0, B.Z)("YoutubePreviewImage", G.YoutubePreviewImage),
+              className: (0, k.Z)("YoutubePreviewImage", G.YoutubePreviewImage),
               src:
                 t ||
                 E.De.COMMUNITY_CDN_URL +
@@ -709,7 +708,7 @@
             n.createElement(
               "div",
               { className: "YoutubePreviewPlay" },
-              n.createElement(k.GhU, null),
+              n.createElement(B.GhU, null),
             ),
           );
         let p = (0, E.Kc)().replace("https://", "");
@@ -729,9 +728,9 @@
             })(i)}`),
           n.createElement(
             "div",
-            { className: (0, B.Z)("YoutubePlayer", D().TwitchPlayer) },
+            { className: (0, k.Z)("YoutubePlayer", D().TwitchPlayer) },
             n.createElement("img", {
-              className: (0, B.Z)(
+              className: (0, k.Z)(
                 "YoutubePreviewContainer",
                 G.YoutubePreviewImage,
                 e.imageClassnames,
@@ -962,7 +961,7 @@
           n.createElement(
             u.s,
             {
-              className: (0, B.Z)(Z().CuratorList, m && Z().CuratorListGrid),
+              className: (0, k.Z)(Z().CuratorList, m && Z().CuratorListGrid),
               "flow-children": "grid",
             },
             l.map((e, a) =>

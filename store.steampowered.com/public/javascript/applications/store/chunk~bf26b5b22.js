@@ -11682,7 +11682,7 @@
             onMouseEnter: g,
             onMouseLeave: v,
             onFocus: g,
-            onClick: !!r && f,
+            onClick: r ? f : void 0,
             onTouchStart: E,
             onKeyDown: S,
           }),

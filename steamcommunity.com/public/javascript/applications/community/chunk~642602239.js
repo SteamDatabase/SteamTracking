@@ -5878,7 +5878,7 @@
                     null,
                     o.createElement(
                       o.Suspense,
-                      { fallback: o.createElement("div", null) },
+                      { fallback: null },
                       o.createElement(Oe, {
                         nAppIDVOD: e.appid,
                         watchLocation: 9,
