@@ -3007,11 +3007,13 @@ input.searchText
 
 .searchedTermsContainer
 {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-bottom: 10px;
-    margin-top: 10px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	gap: 2px;
 }
 
 .searchedTermsContainerEndPadding
@@ -3021,9 +3023,9 @@ input.searchText
 
 .searchedForTerm
 {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
 	height: 18px;
 	padding: 4px;
 	background-color: #68932f;
@@ -3032,7 +3034,7 @@ input.searchText
 	-moz-border-radius: 2px;
 	color: #d2ff96;
 	font-size: 14px;
-	margin-right: 2px;
+	white-space: nowrap;
 }
 
 .searchedForTerm:hover
