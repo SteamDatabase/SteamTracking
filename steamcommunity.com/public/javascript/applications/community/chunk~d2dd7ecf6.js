@@ -24636,9 +24636,10 @@
                   bMatchWidth: !0,
                   bFitToWindow: !0,
                   bDisablePopTop: !0,
+                  bNoFocusWhenShown: !0,
                 },
               );
-              n.SetOnHideCallback(() => p(null)), p(n);
+              p(n);
             },
             [t],
           ),
@@ -24838,8 +24839,19 @@
             [c, o, v, s],
           );
         return d.createElement(u.II, {
-          onBlur: () => {
-            setTimeout(() => (null == m ? void 0 : m.Hide()), 200);
+          onBlur: (e) => {
+            const t = e.relatedTarget;
+            let a = !1;
+            null == t ||
+              t.classList.forEach((e) => {
+                e.includes("ContextMenuFocusContainer") && (a = !0);
+              }),
+              a
+                ? g.current.element.focus()
+                : setTimeout(() => (null == m ? void 0 : m.Hide()), 200);
+          },
+          onFocus: (e) => {
+            console.log("We are focussed");
           },
           ref: g,
           type: "text",
@@ -34099,6 +34111,7 @@
                           bMatchWidth: !0,
                           bFitToWindow: !0,
                           bDisablePopTop: !0,
+                          bNoFocusWhenShown: !0,
                         },
                       ));
                   }),
@@ -34115,12 +34128,21 @@
               label: (0, j.Xx)("#Sale_SelectApps"),
               onChange: this.UpdateAppSuggestions,
               placeholder: (0, j.Xx)("#Sale_SelectApps_Placeholder"),
-              onBlur: () => {
-                setTimeout(
-                  () =>
-                    this.m_searchResultsMenu && this.m_searchResultsMenu.Hide(),
-                  200,
-                );
+              onBlur: (e) => {
+                const t = e.relatedTarget;
+                let a = !1;
+                null == t ||
+                  t.classList.forEach((e) => {
+                    e.includes("ContextMenuFocusContainer") && (a = !0);
+                  }),
+                  a
+                    ? this.m_refInput.current.element.focus()
+                    : setTimeout(
+                        () =>
+                          this.m_searchResultsMenu &&
+                          this.m_searchResultsMenu.Hide(),
+                        200,
+                      );
               },
               ref: this.m_refInput,
               tooltip: (0, j.Xx)("#Sale_SelectApps_Tooltip"),
