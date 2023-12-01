@@ -6903,19 +6903,6 @@ enum UnnamedEnum7282757b17cca874
 	Error = 3;
 }
 
-enum UnnamedEnum73275793a48d2416
-{
-	k_RegistrationConfirmation = 0;
-	k_Reminder = 1;
-	k_Invite = 2;
-	k_Followup = 3;
-	k_Starting = 4;
-	k_InviteReminder = 5;
-	k_Update = 6;
-	k_PermissionRequest = 7;
-	k_MediaUsageNotification = 8;
-}
-
 enum UnnamedEnum73fab2eb67048082
 {
 	Error = undefined;
@@ -7235,6 +7222,41 @@ enum UnnamedEnumad989ac806e57514
 	Linger = undefined;
 }
 
+enum UnnamedEnumaff7a1b4939c0142
+{
+	k_Custom = 0;
+	k_AssetKit = 1;
+	k_DemoPressPreview = 2;
+	k_ScheduleLiveStream = 3;
+	k_CancelSection = 4;
+	k_DemoNotReady = 5;
+	k_ReviewCategorization = 6;
+	k_DemoReview = 7;
+	k_PressPreviewDetails = 8;
+	k_StatsSummary = 9;
+	k_SurveyButton = 10;
+	k_DemoLaunch = 11;
+	k_CallForRegistration = 12;
+	k_EnterDiscount = 13;
+	k_EnterDiscountReminder = 14;
+	k_LearnMore = 15;
+	k_MediaUsePermission = 16;
+	k_MeasureResults = 17;
+	k_TrailerOrDemoPermissions = 18;
+	k_NextFestQASession = 19;
+	k_NextFestReturns = 20;
+	k_NextFestWhatNext = 21;
+	k_NextFestTips = 22;
+	k_NextFestStartsNow = 23;
+	k_MeasureResultsFree = 24;
+	k_NextFestThankYou = 25;
+	k_MediaPermissionReminder = 26;
+	k_SaleThankYou = 27;
+	k_NextFestMediaUsageIntended = 28;
+	k_GenericActionLink = 29;
+	k_SteamAwardsCategories = 30;
+}
+
 enum UnnamedEnumb0f99e67f3ec880b
 {
 	NONE = 0;
@@ -7319,39 +7341,6 @@ enum UnnamedEnumb9dbd68757ae6dad
 	Success = 3;
 	Failure = 4;
 	Busy = 5;
-}
-
-enum UnnamedEnumbb3ae5f8157543f0
-{
-	k_Custom = 0;
-	k_AssetKit = 1;
-	k_DemoPressPreview = 2;
-	k_ScheduleLiveStream = 3;
-	k_CancelSection = 4;
-	k_DemoNotReady = 5;
-	k_ReviewCategorization = 6;
-	k_DemoReview = 7;
-	k_PressPreviewDetails = 8;
-	k_StatsSummary = 9;
-	k_SurveyButton = 10;
-	k_DemoLaunch = 11;
-	k_CallForRegistration = 12;
-	k_EnterDiscount = 13;
-	k_EnterDiscountReminder = 14;
-	k_LearnMore = 15;
-	k_MediaUsePermission = 16;
-	k_MeasureResults = 17;
-	k_TrailerOrDemoPermissions = 18;
-	k_NextFestQASession = 19;
-	k_NextFestReturns = 20;
-	k_NextFestWhatNext = 21;
-	k_NextFestTips = 22;
-	k_NextFestStartsNow = 23;
-	k_MeasureResultsFree = 24;
-	k_NextFestThankYou = 25;
-	k_MediaPermissionReminder = 26;
-	k_SaleThankYou = 27;
-	k_NextFestMediaUsageIntended = 28;
 }
 
 enum UnnamedEnumbb409c705b092041
@@ -7942,6 +7931,21 @@ enum UnnamedEnumf126cd872c06e76e
 	jsondata_broadcast = 256;
 	jsondata_sales = 512;
 	jsondata_schedule = 1024;
+}
+
+enum UnnamedEnumf148f58a11f3d661
+{
+	k_RegistrationConfirmation = 0;
+	k_Reminder = 1;
+	k_Invite = 2;
+	k_Followup = 3;
+	k_Starting = 4;
+	k_InviteReminder = 5;
+	k_Update = 6;
+	k_PermissionRequest = 7;
+	k_MediaUsageNotification = 8;
+	k_GeneralCommunication = 9;
+	k_SteamAwardFinalists = 10;
 }
 
 enum UnnamedEnumf344f66096fda8b6

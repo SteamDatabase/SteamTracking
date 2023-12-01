@@ -260,6 +260,8 @@
     "OptIn_EmailSection_TrailerDemoPermission_Reminder2_Title": "REMINDER TO SUBMIT YOUR STORE ASSETS AND DEMO BUILD FOR REVIEW",
     "OptIn_EmailSection_TrailerDemoPermission_Reminder2_Body": "In order to remain in consideration for inclusion after opting in, you must also have at least one publicly visible trailer on your store page and have a playable build of your demo submitted for review and approved by %1$s. This deadline is firm; we suggest submitting your demo for review at least a week prior to the deadline.",
     "OptIn_EmailSection_TrailerDemoPermission_Reminder2_Body2": "You may continue to update your demo at any time and may publicly release your demo any time you choose prior to the festival start.",
+    "OptIn_EmailSection_SteamAwardsCategories_Title": "STEAM AWARD FINALIST",
+    "OptIn_EmailSection_SteamAwardsCategories_Body": "Your game is a finalist in the Steam Awards in the following categories:",
     "OptIn_Debug": "Debug Registration Data",
     "OptIn_Def_Debug": "Debug Definition Data",
     "OptIn_OptInOut_Title": "Registration",

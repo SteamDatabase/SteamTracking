@@ -1869,6 +1869,7 @@ https://
 https://${}
 https://${}/
 https://${}/cmping/
+https://...
 https://<Image URL?
 https://<MP4 URL?
 https://<WebM URL>

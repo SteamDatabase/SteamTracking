@@ -100,6 +100,7 @@
                 ? void 0
                 : e.definitions;
             },
+            enabled: e > 0,
           },
         );
       }
