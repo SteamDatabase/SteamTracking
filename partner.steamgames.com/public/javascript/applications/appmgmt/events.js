@@ -14803,6 +14803,14 @@
         GetCustomAppTargetList() {
           return this.m_email.custom_app_list || [];
         }
+        BHasCustomAppTargetList() {
+          var e;
+          return Boolean(
+            (null === (e = this.m_email.custom_app_list) || void 0 === e
+              ? void 0
+              : e.length) > 0,
+          );
+        }
         GetTrailerDemoDeadlineDate() {
           return this.m_email.trailer_demo_deadline_date;
         }
@@ -17425,24 +17433,24 @@
             return se(e.GetOwningOptInName()), { eResult: n, stats: a };
           });
         }
-        TestFireEmailToSelf(e) {
+        TestFireEmailToSelf(e, t = 220) {
           return (0, o.mG)(this, void 0, void 0, function* () {
-            const t = ne.gA.Init(ie.XD);
-            t.Body().set_email_def_id(e.GetServerEmailDefID()),
-              t.Body().set_appid(220);
-            let n = 2;
+            const n = ne.gA.Init(ie.XD);
+            n.Body().set_email_def_id(e.GetServerEmailDefID()),
+              n.Body().set_appid(t);
+            let a = 2;
             try {
               const e = yield ie.u2.TestFirePartnerAppOptInEmail(
                 this.m_steamInterface.GetServiceTransport(),
-                t,
+                n,
               );
-              (n = e.GetEResult()),
-                1 !== n &&
+              (a = e.GetEResult()),
+                1 !== a &&
                   console.error(
                     "COptInEmailAdmin.TestFireEmailToSelf: Create request failed:",
-                    n,
+                    a,
                     e,
-                    t,
+                    n,
                   );
             } catch (e) {
               const t = (0, A.l)(e);
@@ -17452,7 +17460,7 @@
                 t,
               );
             }
-            return n;
+            return a;
           });
         }
         static Get() {
@@ -26789,22 +26797,26 @@
                 strTitle: "Test Email Fire to yourself?",
                 strOKButtonText: "Test Email Now",
                 onOK: () => {
-                  a.fnSetLoading(!0),
-                    le
-                      .Get()
-                      .TestFireEmailToSelf(n)
-                      .then((e) => {
-                        1 != e
-                          ? (a.fnSetError(!0),
-                            a.fnSetStrError(
-                              "Send Error: Failed to test the email from the Steam server: Eresult: " +
-                                e,
-                            ))
-                          : (a.fnSetSuccess(!0),
-                            a.fnSetStrSuccess(
-                              "Test Email Completed. Check your inbox. You can close this dialog",
-                            ));
-                      });
+                  a.fnSetLoading(!0);
+                  let e = 220;
+                  if (n.BHasSteamAwardsAdApp() && n.GetCustomAppTargetList()) {
+                    const t = n.GetCustomAppTargetList();
+                    e = t[Math.floor(Math.random() * t.length)];
+                  }
+                  le.Get()
+                    .TestFireEmailToSelf(n, e)
+                    .then((e) => {
+                      1 != e
+                        ? (a.fnSetError(!0),
+                          a.fnSetStrError(
+                            "Send Error: Failed to test the email from the Steam server: Eresult: " +
+                              e,
+                          ))
+                        : (a.fnSetSuccess(!0),
+                          a.fnSetStrSuccess(
+                            "Test Email Completed. Check your inbox. You can close this dialog",
+                          ));
+                    });
                 },
               },
               I.createElement(

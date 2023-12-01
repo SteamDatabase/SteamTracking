@@ -1459,7 +1459,7 @@
         z = t(6429),
         Z = t(16826),
         V = t(84343);
-      function j(e) {
+      function $(e) {
         return a.createElement(
           "a",
           {
@@ -1512,7 +1512,7 @@
           ),
         );
       }
-      function $(e) {
+      function j(e) {
         return a.createElement(
           "div",
           { className: z.PreviewContainer },
@@ -1520,7 +1520,7 @@
         );
       }
       function q() {
-        return a.createElement(j, {
+        return a.createElement($, {
           tagImage: a.createElement(Z.by3, {
             className: (0, H.Z)(z.Tilt, z.SmallerSVG),
           }),
@@ -1578,7 +1578,7 @@
             }),
             r = p || C;
           E.push(
-            a.createElement(j, {
+            a.createElement($, {
               key: "1",
               tagImage: e,
               strLocalizationToken: r
@@ -1596,7 +1596,7 @@
             });
             o
               ? E.push(
-                  a.createElement(j, {
+                  a.createElement($, {
                     key: "2",
                     tagImage: e,
                     strLocalizationToken: p
@@ -1607,7 +1607,7 @@
                   }),
                 )
               : E.push(
-                  a.createElement(j, {
+                  a.createElement($, {
                     key: "3",
                     tagImage: e,
                     strLocalizationToken: p
@@ -1626,7 +1626,7 @@
             });
             l
               ? E.push(
-                  a.createElement(j, {
+                  a.createElement($, {
                     key: "4",
                     tagImage: e,
                     strLocalizationToken: C
@@ -1637,7 +1637,7 @@
                   }),
                 )
               : E.push(
-                  a.createElement(j, {
+                  a.createElement($, {
                     key: "5",
                     tagImage: e,
                     strLocalizationToken: C
@@ -1665,7 +1665,7 @@
                     : "#Store_ControllerSupport_PartialController",
                 ),
               ),
-              a.createElement(j, {
+              a.createElement($, {
                 tagImage: a.createElement(Z.CtA, {
                   className: z.SmallerSVG,
                   controllerType: 32,
@@ -1679,7 +1679,7 @@
               }),
               E,
               u &&
-                a.createElement(j, {
+                a.createElement($, {
                   tagImage: a.createElement(Z.IRk, {
                     className: z.BiggerSVG,
                     bGreyOutRightSide: !i,
@@ -1689,7 +1689,7 @@
                   strCategory: "59",
                 }),
               ((!m && !r) || (!u && d && !_)) &&
-                a.createElement(j, {
+                a.createElement($, {
                   tagImage: a.createElement(Z.uWd, { className: z.BiggerSVG }),
                   strLocalizationToken:
                     d || p || C
@@ -2190,7 +2190,7 @@
             "div",
             null,
             (r.bFullXboxControllerSupport || r.bPartialXboxControllerSupport) &&
-              a.createElement($, Object.assign({}, e.currentValues)),
+              a.createElement(j, Object.assign({}, e.currentValues)),
           ),
           n =
             r.bFullXboxControllerSupport || r.bPartialXboxControllerSupport
@@ -2460,7 +2460,7 @@
                 a.createElement(ge, { onClick: o }),
               e.bControllerSupportWizardComplete &&
                 i &&
-                a.createElement($, Object.assign({}, e)),
+                a.createElement(j, Object.assign({}, e)),
             ),
             e.bControllerSupportWizardComplete &&
               i &&
@@ -3422,8 +3422,8 @@
         }
       }
       var Ve = t(24166),
-        je = t(78941),
-        $e = t(38944),
+        $e = t(78941),
+        je = t(38944),
         qe = t(25871),
         Ye = t(16670);
       const Qe = { include_release: !0 };
@@ -3785,7 +3785,7 @@
             closeModal: n,
             nAccountIDProposer: o,
           } = e,
-          [l] = (0, $e.DV)(r),
+          [l] = (0, je.DV)(r),
           [i] = (0, qe.ie)(t, {}),
           c = (0, a.useMemo)(
             () => _r.K.InitFromAccountID(o).ConvertTo64BitString(),
@@ -3907,10 +3907,10 @@
           i = `${De.De.PARTNER_BASE_URL}store/packagelanding/${t.packageid}`;
         return a.createElement(
           "div",
-          { className: (0, H.Z)(je.PackageInfoColumn, pr.PackageInfoColumn) },
+          { className: (0, H.Z)($e.PackageInfoColumn, pr.PackageInfoColumn) },
           a.createElement(
             "div",
-            { className: je.PackageName },
+            { className: $e.PackageName },
             Boolean(o)
               ? a.createElement(
                   "span",
@@ -3929,7 +3929,7 @@
           ),
           a.createElement(
             "div",
-            { className: je.ReleaseDate },
+            { className: $e.ReleaseDate },
             Boolean(o && o.BIsVisible())
               ? "Release On: " +
                   (o.GetReleaseDateRTime()
@@ -3946,7 +3946,7 @@
           ),
           a.createElement(
             "div",
-            { className: je.SubmissionBy },
+            { className: $e.SubmissionBy },
             a.createElement(Ye.N, { accountID: t.account }),
           ),
           a.createElement(sr, Object.assign({}, e)),
@@ -3976,7 +3976,7 @@
       }
       function yr(e) {
         const { partnerID: r } = e,
-          [t] = (0, $e.DV)(r);
+          [t] = (0, je.DV)(r);
         return t
           ? a.createElement(
               "a",
@@ -4105,24 +4105,24 @@
         let o, l;
         if (r)
           if (n && n.price > r.amount.amount) {
-            o = je.outofmatrixlower;
+            o = $e.outofmatrixlower;
             l = `Suggested price ${hr(n.price)} - ${Math.floor(
               100 - (r.amount.amount / n.price) * 100,
             )}% ▼`;
           } else if (n && n.price < r.amount.amount) {
-            o = je.outofmatrix;
+            o = $e.outofmatrix;
             l = `Suggested price ${hr(n.price)} - ${Math.floor(
               (r.amount.amount / n.price) * 100 - 100,
             )}% ▲`;
           } else
             t
               ? t.amount > r.amount.amount
-                ? (o = je.priceChangedLower)
-                : t.amount < r.amount.amount && (o = je.priceChangedHigher)
-              : (o = je.priceChangedNew);
+                ? (o = $e.priceChangedLower)
+                : t.amount < r.amount.amount && (o = $e.priceChangedHigher)
+              : (o = $e.priceChangedNew);
         return a.createElement(
           "td",
-          { className: je.FullCurrencyColumn },
+          { className: $e.FullCurrencyColumn },
           a.createElement(
             V.HP,
             { toolTipContent: l },
@@ -4173,10 +4173,10 @@
       function Ar(e) {
         return a.createElement(
           "div",
-          { className: (0, H.Z)(je.RowCtn, je.CurrencyHeaderRow) },
+          { className: (0, H.Z)($e.RowCtn, $e.CurrencyHeaderRow) },
           a.createElement(
             "div",
-            { className: je.PackageInfoColumn },
+            { className: $e.PackageInfoColumn },
             "Package Info",
           ),
           a.createElement(fr, null),
@@ -4188,7 +4188,7 @@
           null,
           a.createElement(
             "div",
-            { className: je.RowCtn },
+            { className: $e.RowCtn },
             a.createElement(Pr, Object.assign({}, e)),
             a.createElement(vr, Object.assign({}, e)),
           ),
@@ -4201,7 +4201,7 @@
         return (null == t ? void 0 : t.length) > 0
           ? a.createElement(
               "div",
-              { className: je.RowCtn },
+              { className: $e.RowCtn },
               a.createElement("div", null, "^^^^"),
               t.map((e) =>
                 a.createElement(
@@ -4227,30 +4227,30 @@
           },
           a.createElement(
             "div",
-            { className: je.pricingLegend },
+            { className: $e.pricingLegend },
             a.createElement(
               "div",
-              { className: je.priceChangedLower },
+              { className: $e.priceChangedLower },
               "Price Decreases",
             ),
             a.createElement(
               "div",
-              { className: je.priceChangedHigher },
+              { className: $e.priceChangedHigher },
               "Price Increases",
             ),
             a.createElement(
               "div",
-              { className: je.priceChangedNew },
+              { className: $e.priceChangedNew },
               "Price is New",
             ),
             a.createElement(
               "div",
-              { className: je.outofmatrix },
+              { className: $e.outofmatrix },
               "Price is higher than guideline. Mouseover to see suggested price.",
             ),
             a.createElement(
               "div",
-              { className: je.outofmatrixlower },
+              { className: $e.outofmatrixlower },
               "Price is lower than guideline. Mouseover to see suggested price.",
             ),
           ),
@@ -4373,7 +4373,7 @@
             a.createElement(Hr, Object.assign({}, e)),
             a.createElement(Vr, Object.assign({}, e)),
           ),
-          a.createElement($r, Object.assign({}, e)),
+          a.createElement(jr, Object.assign({}, e)),
         );
       }
       function Hr(e) {
@@ -4389,7 +4389,7 @@
           { className: pr.FailuresCtn },
           a.createElement(Kr, Object.assign({}, e)),
           a.createElement(Xr, Object.assign({}, e)),
-          a.createElement(jr, Object.assign({}, e)),
+          a.createElement($r, Object.assign({}, e)),
           a.createElement(Fr, Object.assign({}, e)),
           a.createElement(Or, Object.assign({}, e)),
           a.createElement(mr, { partnerID: n }),
@@ -4464,10 +4464,20 @@
                 return (
                   e.proposed_prices.base_amounts.forEach((e) => {
                     Ue.has(e.amount.currency_code) ||
-                      r.push(we(e.amount.currency_code));
+                      (console.log(
+                        "Unexpected currency code: " + e.amount.currency_code,
+                        e,
+                      ),
+                      r.push(
+                        `Currency Code: "${e.amount.currency_code}" with price in cents ${e.amount.amount}`,
+                      ));
                   }),
                   e.proposed_prices.region_amounts.forEach((e) => {
-                    Ke.has(We(e.name.toUpperCase())) || r.push(e.name);
+                    Ke.has(We(e.name.toUpperCase())) ||
+                      (console.log(
+                        `Unexpected region code: ${e.name} and currency code ${e.amount.currency_code} with price in cents ${e.amount.amount}`,
+                      ),
+                      r.push(e.name));
                   }),
                   r
                 );
@@ -4675,7 +4685,7 @@
             )
           : null;
       }
-      function jr(e) {
+      function $r(e) {
         const { proposal: r } = e,
           [t] = (0, qe.ie)(r.packageid, Qe);
         return t && ir(t)
@@ -4687,13 +4697,13 @@
             )
           : null;
       }
-      function $r(e) {
+      function jr(e) {
         const { bForceShowComparisonRows: r } = e,
           [t, n] = (0, a.useState)(!1);
         return t || r
           ? a.createElement(
               "div",
-              { className: (0, H.Z)(je.FullCurrencyTable) },
+              { className: (0, H.Z)($e.FullCurrencyTable) },
               a.createElement(fr, null),
               a.createElement(vr, Object.assign({}, e)),
             )
