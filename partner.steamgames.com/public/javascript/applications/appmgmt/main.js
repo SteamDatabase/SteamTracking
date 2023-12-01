@@ -21600,7 +21600,8 @@
         );
       }
       function J() {
-        return new D.J(p.De.WEBAPI_BASE_URL);
+        const e = (0, p.ip)("loyalty_webapi_token", "application_config");
+        return new D.J(p.De.WEBAPI_BASE_URL, e);
       }
       function ee(e) {
         const t = (0, O.kD)(J),

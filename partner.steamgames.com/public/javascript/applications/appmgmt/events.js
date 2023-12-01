@@ -25070,7 +25070,11 @@
                     ),
                   ),
                   Boolean(a.data.votes.every((e) => e.app_discounts.length > 0))
-                    ? I.createElement("div", null, "Nominees Ready")
+                    ? I.createElement(
+                        "div",
+                        { className: ge.InfoStylesWithIcon },
+                        "Nominees Ready",
+                      )
                     : I.createElement(
                         "div",
                         { className: (0, W.Z)(ge.WarningStylesWithIcon) },
