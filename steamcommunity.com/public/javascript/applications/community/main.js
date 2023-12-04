@@ -23034,7 +23034,12 @@
             const e =
               document.getElementById("react_root") ||
               document.getElementById("application_root");
-            e && re.createRoot(e).render(i.createElement(ee, {}));
+            if (e) {
+              const t = window;
+              if (t.g_bCommunityReactInitialized) return void 0;
+              re.createRoot(e).render(i.createElement(ee, {})),
+                (t.g_bCommunityReactInitialized = !0);
+            }
           }),
         );
       let ue = [];
