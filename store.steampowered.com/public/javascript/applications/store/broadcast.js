@@ -2690,7 +2690,6 @@
             "div",
             { className: i },
             l.createElement(Pe.V, { size: "medium" }),
-            ";",
           );
         if (2 == r || !n.GetName())
           return l.createElement("div", {

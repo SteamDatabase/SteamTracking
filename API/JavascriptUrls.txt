@@ -380,6 +380,7 @@ ${HELP_BASE_URL}en/wizard/HelpWithPublishing?issueid=933
 ${HELP_BASE_URL}faqs/view/${url_code}
 ${HELP_BASE_URL}faqs/view/0689-74B8-92AC-10F2
 ${HELP_BASE_URL}faqs/view/548F-BC55-89EB-1BC8
+${HELP_BASE_URL}faqs/view/71D3-35C2-AD96-AA3A
 ${HELP_BASE_URL}ticketmaster/ticket/${_ ? _ : _}
 ${HELP_BASE_URL}wizard/HelpRecoverFamilyMember?childid=${}
 ${HELP_BASE_URL}wizard/HelpRequest/${ticket}
@@ -795,6 +796,7 @@ ${IMG_URL}outlanders/void_title.png
 ${IMG_URL}paint_swipe.svg
 ${IMG_URL}player_unknown.png
 ${IMG_URL}portrait_unknown.png
+${IMG_URL}promo/steamawards2023/placeholder_main.png
 ${IMG_URL}protopass/YOs.png
 ${IMG_URL}protopass/banners_web_a.png
 ${IMG_URL}protopass/daily_challenge.png
@@ -823,7 +825,7 @@ ${IMG_URL}webui/storeadmin/plus.png
 ${IMG_URL}x_close.png
 ${IMG_URL}x_red.png
 ${IMG_URL}yearinreview/achievement_grid_02.webp
-${IMG_URL}yearinreview/bg_2.png
+${IMG_URL}yearinreview/bg_2023.svg
 ${IMG_URL}yearinreview/controllers.png
 ${IMG_URL}yearinreview/keyboard.png
 ${IMG_URL}yearinreview/screenshot_placeholder.png
@@ -1131,6 +1133,7 @@ ${STORE_BASE_URL}account/ajaxsetcookiepreferences
 ${STORE_BASE_URL}account/ajaxsetnotificationsettings
 ${STORE_BASE_URL}account/emailoptout/app
 ${STORE_BASE_URL}account/familymanagement
+${STORE_BASE_URL}account/familymanagement/join
 ${STORE_BASE_URL}account/familymanagement?tab=requests
 ${STORE_BASE_URL}account/languagepreferences/
 ${STORE_BASE_URL}account/notificationsettings
@@ -2652,6 +2655,9 @@ https://steamcommunity.com/sharedfiles/ajaxgrantcommerceitemstofriends/${publish
 https://steamcommunity.com/sharedfiles/ajaxrefundcommerceitem/
 https://steamcommunity.com/sharedfiles/ajaxremovecommerceitem/${appID}/${itemID}/
 https://steamcommunity.com/sharedfiles/ajaxresendverificationemail/
+https://steamcommunity.com/sharedfiles/ajaxsavedwebqueriesget/
+https://steamcommunity.com/sharedfiles/ajaxsavedwebquerydelete
+https://steamcommunity.com/sharedfiles/ajaxsavedwebqueryupdate
 https://steamcommunity.com/sharedfiles/ajaxsetserviceprovidersplits
 https://steamcommunity.com/sharedfiles/ajaxshowcommercepurchasedialog/${publishedFileID}/
 https://steamcommunity.com/sharedfiles/ajaxshowcommercerefunddialog/${publishedFileID}/
@@ -2831,7 +2837,6 @@ https://store.steampowered.com/itemcart/checkout/
 https://store.steampowered.com/itemstore/${appid}/ajaxcheckout/
 https://store.steampowered.com/jserrorreport/
 https://store.steampowered.com/labs/mlttagwizard
-https://store.steampowered.com/login/?redir=app%2F__APPID__
 https://store.steampowered.com/login/?redir=grandprix
 https://store.steampowered.com/logout/
 https://store.steampowered.com/mobile
@@ -2861,8 +2866,6 @@ https://store.steampowered.com/steamaccount/addfunds?marketlisting=${m_ulListing
 https://store.steampowered.com/steamaccount/addfunds?marketlisting=1&minneeded=${g_nOrderTotal}${}&returnurl=${location}
 https://store.steampowered.com/steamaccount/addfunds?marketlisting=1&minneeded=${price}${}&returnurl=${location}
 https://store.steampowered.com/steamaccount/addfunds?marketlisting=1&returnurl=${location}
-https://store.steampowered.com/steamawards/nominategame
-https://store.steampowered.com/steamawards/nominations/
 https://store.steampowered.com/sub/${unPackageID}/
 https://store.steampowered.com/subscriptions/ea
 https://store.steampowered.com/supportmessages/ackmessages

@@ -285,6 +285,13 @@ a.dropdown.hover, a.dropdown:hover
 	border-style: none;
 }
 
+.saved_workshop_query_dialog {
+	margin-top: 20px;
+}
+.saved_workshop_query_dialog select {
+	width: 100%;
+}
+
 @media screen and (max-width: 910px)
 {
 	.browseAppDetails {

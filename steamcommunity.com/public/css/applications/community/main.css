@@ -652,7 +652,7 @@ html.contextmenu_ContextMenuPopup_2GpKT body {
 .DesktopUI .pagedsettings_PagedSettingsDialog_PageListColumn_RTicB {
   padding-left: 0px;
   min-width: 160px;
-  height: 95vh;
+  min-height: 95vh;
 }
 .pagedsettings_NewNoteButton_sc_I7 {
   margin: 0px 4px 4px 4px;

@@ -5243,14 +5243,18 @@
       class l {
         constructor(e) {
           (this.m_repeatOnAxis = i.None),
+            (this.m_bRepeatEnabled = !0),
             (this.m_config = e),
             (this.m_inputRepeatGenerator = new a(e));
         }
         Reset() {
           this.m_inputRepeatGenerator.Reset();
         }
+        SetEnabled(e) {
+          (this.m_bRepeatEnabled = e), this.m_bRepeatEnabled || this.Reset();
+        }
         HandleInputButtonDown(e, t, n) {
-          this.m_config.inputsThatRepeat.has(e)
+          this.m_bRepeatEnabled && this.m_config.inputsThatRepeat.has(e)
             ? this.m_repeatOnAxis == i.None &&
               ((e != o.DIR_UP && e != o.DIR_DOWN) ||
                 (this.m_repeatOnAxis = i.Vertical),
@@ -5364,6 +5368,9 @@
         }
         GetActiveControllerTime() {
           return this.m_fLastActiveTime;
+        }
+        SetRepeatAllowed(e) {
+          this.m_ButtonRepeatHandler.SetEnabled(e);
         }
         OnGamepadDetected() {
           console.log("Gamepad detected"),
@@ -6351,14 +6358,17 @@
           e && e.TakeFocus(r.uS.APPLICATION);
         }
         OnContextActivated(e) {
-          (this.m_ActiveContext = e), (this.m_LastActiveContext = e);
+          (this.m_ActiveContext = e),
+            (this.m_LastActiveContext = e),
+            this.UpdateRepeatAllowed();
         }
         OnContextDeactivated(e, t) {
           t &&
             (this.m_LastActiveContext == e &&
               (this.m_LastActiveContext = void 0),
             m.Zf(this.m_rgAllContexts, e)),
-            this.m_ActiveContext == e && (this.m_ActiveContext = void 0);
+            this.m_ActiveContext == e && (this.m_ActiveContext = void 0),
+            this.UpdateRepeatAllowed();
         }
         BIsRestoringHistory() {
           return this.m_bRestoringHistory;
@@ -6373,10 +6383,19 @@
             }
           });
         }
+        UpdateRepeatAllowed() {
+          var e;
+          const t =
+            null === (e = this.m_ActiveContext) || void 0 === e
+              ? void 0
+              : e.BIsActive();
+          for (const e of this.m_rgGamepadInputSources) e.SetRepeatAllowed(t);
+        }
       }
       (0, u.gn)([h.a], T.prototype, "OnButtonDown", null),
         (0, u.gn)([h.a], T.prototype, "OnButtonUp", null),
-        (0, u.gn)([h.a], T.prototype, "OnNavigationTypeChange", null);
+        (0, u.gn)([h.a], T.prototype, "OnNavigationTypeChange", null),
+        (0, u.gn)([h.a], T.prototype, "UpdateRepeatAllowed", null);
       class L {
         constructor(e) {
           this.m_node = e;
@@ -11361,6 +11380,7 @@
             (this.m_bIsVRRunning = void 0),
             (this.m_error = void 0),
             (this.m_eHMDActivityLevel = void 0),
+            (this.m_bVRDeviceSeenRecently = !1),
             (this.m_bIsKeyboardOpen = void 0),
             (this.m_eKeyboardFlags = void 0),
             (this.m_sInitialKeyboardText = void 0),
@@ -11369,7 +11389,7 @@
             (0, r.rC)(this);
         }
         Init() {
-          var e, t, n, i, o, r, s, a, l, c, u;
+          var e, t, n, i, o, r, s, a, l, c, u, d;
           null ===
             (t =
               null ===
@@ -11415,16 +11435,25 @@
               void 0 === a ||
               a.call(s, this.OnHMDActivityLevelChanged),
             null ===
-              (u =
+              (l =
+                null === SteamClient || void 0 === SteamClient
+                  ? void 0
+                  : SteamClient.OpenVR) ||
+              void 0 === l ||
+              l.Device.RegisterForVRDeviceSeenRecently(
+                this.OnVRDeviceSeenRecentlyChanged,
+              ),
+            null ===
+              (d =
                 null ===
-                  (l =
+                  (c =
                     null === SteamClient || void 0 === SteamClient
                       ? void 0
-                      : SteamClient.OpenVR) || void 0 === l
+                      : SteamClient.OpenVR) || void 0 === c
                   ? void 0
-                  : (c = l.Keyboard).RegisterForStatus) ||
-              void 0 === u ||
-              u.call(c, this.OnKeyboardStatus);
+                  : (u = c.Keyboard).RegisterForStatus) ||
+              void 0 === d ||
+              d.call(u, this.OnKeyboardStatus);
         }
         OnVRHardwareDetected(e, t, n) {
           (this.m_bHMDPresent = e),
@@ -11443,6 +11472,9 @@
         OnHMDActivityLevelChanged(e) {
           this.m_eHMDActivityLevel = e;
         }
+        OnVRDeviceSeenRecentlyChanged(e) {
+          this.m_bVRDeviceSeenRecently = e;
+        }
         OnKeyboardStatus(e, t, n) {
           (this.m_bIsKeyboardOpen = e),
             (this.m_eKeyboardFlags = t),
@@ -11456,27 +11488,7 @@
           );
         }
         HasVRHMDBeenSeen() {
-          var e, t;
-          let n =
-              null ===
-                (t =
-                  null ===
-                    (e =
-                      null === SteamClient || void 0 === SteamClient
-                        ? void 0
-                        : SteamClient.OpenVR) || void 0 === e
-                    ? void 0
-                    : e.Device) || void 0 === t
-                ? void 0
-                : t.BVRDeviceSeenRecently(),
-            i = !1;
-          return (
-            null == n ||
-              n.then((e) => {
-                i = e;
-              }),
-            i
-          );
+          return this.m_bVRDeviceSeenRecently;
         }
         get IsSteamVRRunning() {
           return this.m_bSimulatingVROnDesktop || this.m_bIsVRRunning;
@@ -11616,6 +11628,7 @@
         (0, i.gn)([r.LO], c.prototype, "m_bIsVRRunning", void 0),
         (0, i.gn)([r.LO], c.prototype, "m_error", void 0),
         (0, i.gn)([r.LO], c.prototype, "m_eHMDActivityLevel", void 0),
+        (0, i.gn)([r.LO], c.prototype, "m_bVRDeviceSeenRecently", void 0),
         (0, i.gn)([r.LO], c.prototype, "m_bIsKeyboardOpen", void 0),
         (0, i.gn)([r.LO], c.prototype, "m_eKeyboardFlags", void 0),
         (0, i.gn)([r.LO], c.prototype, "m_sInitialKeyboardText", void 0),
@@ -11624,6 +11637,12 @@
         (0, i.gn)([r.aD.bound], c.prototype, "OnVRModeChanged", null),
         (0, i.gn)([r.aD.bound], c.prototype, "OnStartupError", null),
         (0, i.gn)([r.aD.bound], c.prototype, "OnHMDActivityLevelChanged", null),
+        (0, i.gn)(
+          [r.aD.bound],
+          c.prototype,
+          "OnVRDeviceSeenRecentlyChanged",
+          null,
+        ),
         (0, i.gn)([r.aD.bound], c.prototype, "OnKeyboardStatus", null),
         (0, i.gn)([r.aD.bound], c.prototype, "ClearError", null);
       const d = new c();
@@ -17109,14 +17128,13 @@
       "use strict";
       n.d(t, {
         $nC: () => r,
-        Hz5: () => u,
-        RCC: () => h,
-        Tvf: () => m,
-        Tx5: () => c,
-        dQJ: () => d,
-        dqu: () => l,
+        Hz5: () => c,
+        RCC: () => m,
+        Tvf: () => d,
+        Tx5: () => l,
+        dQJ: () => u,
+        dqu: () => a,
         vVQ: () => s,
-        yBp: () => a,
       });
       var i = n(3940),
         o = n(9526);
@@ -17277,39 +17295,12 @@
           o.createElement("path", {
             fillRule: "evenodd",
             clipRule: "evenodd",
-            d: "M5.63604 19.636C7.32387 17.9482 9.61305 17 12 17C12.4664 17 12.9292 17.0362 13.3844 17.1071C13.1338 18.0289 13 18.9988 13 20C13 25.0351 16.383 29.2801 21 30.5859V31H3V26C3 23.6131 3.94821 21.3239 5.63604 19.636ZM14.7779 13.1573C13.9556 13.7068 12.9889 14 12 14C10.6739 14 9.40215 13.4732 8.46447 12.5355C7.52678 11.5979 7 10.3261 7 9C7 8.0111 7.29324 7.0444 7.84265 6.22215C8.39206 5.39991 9.17295 4.75904 10.0866 4.3806C11.0002 4.00217 12.0055 3.90315 12.9755 4.09608C13.9454 4.289 14.8363 4.76521 15.5355 5.46447C16.2348 6.16373 16.711 7.05465 16.9039 8.02455C17.0969 8.99446 16.9978 9.99979 16.6194 10.9134C16.241 11.827 15.6001 12.6079 14.7779 13.1573Z",
-            fill: "currentColor",
-          }),
-          o.createElement("path", {
-            fillRule: "evenodd",
-            clipRule: "evenodd",
-            d: "M24 28C28.4183 28 32 24.4183 32 20C32 15.5817 28.4183 12 24 12C19.5817 12 16 15.5817 16 20C16 24.4183 19.5817 28 24 28ZM22.5 21.5V26H25.5V21.5H30V18.5H25.5V14H22.5V18.5H18V21.5H22.5Z",
-            fill: "currentColor",
-          }),
-        );
-      }
-      function l(e) {
-        return o.createElement(
-          "svg",
-          Object.assign(
-            {
-              width: "36",
-              height: "36",
-              viewBox: "0 0 36 36",
-              fill: "none",
-              xmlns: "http://www.w3.org/2000/svg",
-            },
-            e,
-          ),
-          o.createElement("path", {
-            fillRule: "evenodd",
-            clipRule: "evenodd",
             d: "M31.7 15.2077C31.703 12.5623 30.94 9.97259 29.5032 7.75136C28.0664 5.53014 26.0172 3.77242 23.6031 2.69048C21.189 1.60855 18.5133 1.24869 15.8992 1.65436C13.2851 2.06002 10.8443 3.21387 8.87163 4.97655C6.89899 6.73922 5.47888 9.03532 4.78281 11.5875C4.08673 14.1397 4.14447 16.8389 4.94905 19.359C5.75363 21.8791 7.27063 24.1124 9.31684 25.7891C11.363 27.4658 13.8509 28.5142 16.48 28.8077V34.5077L27.31 25.2477C28.6947 23.9675 29.7996 22.4147 30.5551 20.6869C31.3106 18.959 31.7004 17.0935 31.7 15.2077ZM15.3 7.06885L16.3075 16.9577H20.1309L21.1039 7.06885H15.3ZM20.6927 22.0125C20.6927 23.3774 19.5862 24.4838 18.2213 24.4838C16.8564 24.4838 15.7499 23.3774 15.7499 22.0125C15.7499 20.6475 16.8564 19.5411 18.2213 19.5411C19.5862 19.5411 20.6927 20.6475 20.6927 22.0125Z",
             fill: "currentColor",
           }),
         );
       }
-      function c(e) {
+      function l(e) {
         const { alert: t, urgent: n } = e,
           r = (0, i._T)(e, ["alert", "urgent"]);
         return n
@@ -17385,7 +17376,7 @@
               ),
             );
       }
-      function u(e) {
+      function c(e) {
         return o.createElement(
           "svg",
           Object.assign(
@@ -17404,7 +17395,7 @@
           }),
         );
       }
-      function d(e) {
+      function u(e) {
         return o.createElement(
           "svg",
           Object.assign(
@@ -17425,7 +17416,7 @@
           }),
         );
       }
-      function m(e) {
+      function d(e) {
         return o.createElement(
           "svg",
           {
@@ -17441,7 +17432,7 @@
           }),
         );
       }
-      function h(e) {
+      function m(e) {
         return o.createElement(
           "svg",
           {
@@ -21002,6 +20993,35 @@
       }
       n.d(t, { Z: () => i });
     },
+    7361: (e, t, n) => {
+      "use strict";
+      function i(e) {
+        if (!r() || !window.document.cookie) return null;
+        let t = document.cookie.match("(^|; )" + e + "=([^;]*)");
+        return t && t[2] ? decodeURIComponent(t[2]) : null;
+      }
+      function o(e, t, n, i) {
+        if (!r()) return;
+        i || (i = "/");
+        let o = "";
+        if (void 0 !== n && n) {
+          let e = new Date();
+          e.setTime(e.getTime() + 864e5 * n),
+            (o = "; expires=" + e.toUTCString());
+        }
+        document.cookie =
+          encodeURIComponent(e) +
+          "=" +
+          encodeURIComponent(t) +
+          o +
+          ";path=" +
+          i;
+      }
+      function r() {
+        return !!window.document;
+      }
+      n.d(t, { I1: () => o, bG: () => i, t$: () => r });
+    },
     7377: (e, t, n) => {
       "use strict";
       function i(e) {
@@ -21422,7 +21442,7 @@
           let e = parseInt(n[2]),
             r = n[3] || "",
             a = (e >= 1 && e <= t.length ? t[e - 1] : null)
-              ? i.cloneElement(t[e - 1], {}, [r])
+              ? i.cloneElement(t[e - 1], {}, r ? [r] : null)
               : r;
           o.push(a);
         }
@@ -22515,7 +22535,7 @@
         o = n(2232),
         r = n(3801),
         s = n(4973),
-        a = n(5006);
+        a = n(9954);
       const l = i.createContext({}),
         c = (e) => {
           let t = i.useContext(l);
@@ -22596,7 +22616,7 @@
         Wj: () => l,
         dk: () => s,
       });
-      var i = n(5006);
+      var i = n(9954);
       const o = {
         EUNIVERSE: 0,
         WEB_UNIVERSE: "",
@@ -22697,82 +22717,56 @@
         },
         l = { ANNOUNCEMENT_GID: "", TAKEOVER_ANNOUNCEMENT_GID: "" };
     },
-    5006: (e, t, n) => {
+    9954: (e, t, n) => {
       "use strict";
       n.d(t, {
-        y9: () => g,
-        kQ: () => m,
-        ip: () => h,
-        c9: () => c,
-        Ek: () => d,
+        Ek: () => u,
+        c9: () => l,
+        ip: () => m,
+        kQ: () => d,
+        y9: () => _,
       });
-      var i = n(6041);
-      function o(e) {
-        if (!r() || !window.document.cookie) return null;
-        let t = document.cookie.match("(^|; )" + e + "=([^;]*)");
-        return t && t[2] ? decodeURIComponent(t[2]) : null;
+      var i = n(6041),
+        o = n(7361),
+        r = n(4973);
+      const s = "webui_config";
+      let a;
+      function l() {
+        if (!(0, o.t$)()) return a || (a = c()), a;
+        let e = (0, o.bG)("sessionid");
+        return e || (e = c()), e;
       }
-      function r() {
-        return !!window.document;
-      }
-      var s = n(4973);
-      const a = "webui_config";
-      let l;
       function c() {
-        if (!r()) return l || (l = u()), l;
-        let e = o("sessionid");
-        return e || (e = u()), e;
-      }
-      function u() {
         let e = (function () {
           let e = "";
           for (let t = 0; t < 24; t++) e += (0, i.LO)(0, 35).toString(36);
           return e;
         })();
-        return (
-          (function (e, t, n, i) {
-            if (!r()) return;
-            i || (i = "/");
-            let o = "";
-            if (void 0 !== n && n) {
-              let e = new Date();
-              e.setTime(e.getTime() + 864e5 * n),
-                (o = "; expires=" + e.toUTCString());
-            }
-            document.cookie =
-              encodeURIComponent(e) +
-              "=" +
-              encodeURIComponent(t) +
-              o +
-              ";path=" +
-              i;
-          })("sessionid", e, 0),
-          e
-        );
+        return (0, o.I1)("sessionid", e, 0), e;
       }
-      function d(e = a) {
+      function u(e = s) {
         const t = {},
-          n = m("config", e);
-        n && (delete n.SESSIONID, Object.assign(s.De, n), (t.config = !0));
-        const i = m("userinfo", e);
+          n = d("config", e);
+        n && (delete n.SESSIONID, Object.assign(r.De, n), (t.config = !0));
+        const i = d("userinfo", e);
         i &&
-          (Object.assign(s.L7, i),
+          (Object.assign(r.L7, i),
           (t.userConfig = !0),
-          s.L7.is_support && g() && (s.L7.is_support = !1));
-        const o = m("broadcast", e);
-        o && (Object.assign(s.dk, o), (t.broadcastConfig = !0));
-        const r = m("community", e);
-        r && (Object.assign(s.JA, r), (t.communityConfig = !0));
-        const l = m("event", e);
-        return l && (Object.assign(s.Wj, l), (t.eventConfig = !0)), t;
+          r.L7.is_support && _() && (r.L7.is_support = !1));
+        const o = d("broadcast", e);
+        o && (Object.assign(r.dk, o), (t.broadcastConfig = !0));
+        const a = d("community", e);
+        a && (Object.assign(r.JA, a), (t.communityConfig = !0));
+        const l = d("event", e);
+        return l && (Object.assign(r.Wj, l), (t.eventConfig = !0)), t;
       }
-      function m(e, t = a) {
-        return p(e, t, !0);
+      function d(e, t = s) {
+        return h(e, t, !0);
       }
-      function h(e, t = a) {
-        return p(e, t, !1);
+      function m(e, t = s) {
+        return h(e, t, !1);
       }
-      function p(e, t = a, n) {
+      function h(e, t = s, n) {
         let i;
         if (
           ((i =
@@ -22790,7 +22784,7 @@
           } catch (e) {
             console.error(
               "Failed to parse config for " +
-                s.L7.steamid +
+                r.L7.steamid +
                 " (" +
                 window.location.href +
                 ")",
@@ -22799,10 +22793,13 @@
           }
         else n && console.error("Missing config element #", t);
       }
-      const _ = "presentation_mode";
-      function g() {
+      const p = "presentation_mode";
+      function _() {
         let e = null;
-        return r() && (e = o(_)), Boolean(e && 1 === Number.parseInt(e));
+        return (
+          (0, o.t$)() && (e = (0, o.bG)(p)),
+          Boolean(e && 1 === Number.parseInt(e))
+        );
       }
     },
     4726: (e, t, n) => {
@@ -36402,7 +36399,7 @@
         Ns = n(1594),
         xs = n(4738);
       const Gs = o.lazy(() =>
-          Promise.all([n.e(5425), n.e(3068)]).then(n.bind(n, 8615)),
+          Promise.all([n.e(5425), n.e(3068)]).then(n.bind(n, 6737)),
         ),
         Fs = (e) =>
           o.createElement(

@@ -2910,7 +2910,7 @@
           r
         );
       };
-      var Yn = r(11225);
+      var Yn = r(66345);
       const $n = function (e, t) {
         var r = t ? (0, Yn.Z)(e.buffer) : e.buffer;
         return new e.constructor(r, e.byteOffset, e.byteLength);
@@ -10961,9 +10961,8 @@
       "use strict";
       r.d(t, {
         NK: () => u,
-        On: () => p,
         Wx: () => f,
-        X3: () => y,
+        X3: () => p,
         iC: () => o,
         sj: () => l,
       });
@@ -11094,7 +11093,11 @@
                 proto: l,
                 fields: {
                   daily_deal: { n: 1, c: o },
-                  appid: { n: 2, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
+                  partnerid: {
+                    n: 2,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
                 },
               }),
             l.sm_m
@@ -11380,153 +11383,13 @@
           return "CDailyDeal_DeleteDailyDeal_Response";
         }
       }
-      class p extends s {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            p.prototype.gid || i.aR(p.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            p.sm_m ||
-              (p.sm_m = {
-                proto: p,
-                fields: {
-                  gid: {
-                    n: 1,
-                    br: i.FE.readFixed64String,
-                    bw: i.Xc.writeFixed64String,
-                  },
-                  rtime32_start_date: {
-                    n: 2,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
-                  rtime32_end_date: {
-                    n: 3,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
-                  appid: { n: 4, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
-                  store_item_type: {
-                    n: 5,
-                    br: i.FE.readEnum,
-                    bw: i.Xc.writeEnum,
-                  },
-                  search_term: {
-                    n: 6,
-                    br: i.FE.readString,
-                    bw: i.Xc.writeString,
-                  },
-                },
-              }),
-            p.sm_m
-          );
-        }
-        static MBF() {
-          return p.sm_mbf || (p.sm_mbf = i.Bh(p.M())), p.sm_mbf;
-        }
-        toObject(e = !1) {
-          return p.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return i.TA(p.M(), e, t);
-        }
-        static fromObject(e) {
-          return i.aD(p.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new n.BinaryReader(e),
-            r = new p();
-          return p.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return i.F(p.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new n.BinaryWriter();
-          return p.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          i.l2(p.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new n.BinaryWriter();
-          return p.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CDailyDeal_GetDailyDeals_Request";
-        }
-      }
-      class h extends s {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            h.prototype.daily_deals || i.aR(h.M()),
-            s.initialize(this, e, 0, -1, [1], null);
-        }
-        static M() {
-          return (
-            h.sm_m ||
-              (h.sm_m = {
-                proto: h,
-                fields: { daily_deals: { n: 1, c: o, r: !0, q: !0 } },
-              }),
-            h.sm_m
-          );
-        }
-        static MBF() {
-          return h.sm_mbf || (h.sm_mbf = i.Bh(h.M())), h.sm_mbf;
-        }
-        toObject(e = !1) {
-          return h.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return i.TA(h.M(), e, t);
-        }
-        static fromObject(e) {
-          return i.aD(h.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new n.BinaryReader(e),
-            r = new h();
-          return h.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return i.F(h.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new n.BinaryWriter();
-          return h.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          i.l2(h.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new n.BinaryWriter();
-          return h.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CDailyDeal_GetDailyDeals_Response";
-        }
-      }
-      var y;
+      var p;
       !(function (e) {
-        (e.GetDailyDeals = function (e, t) {
-          return e.SendMsg("DailyDeal.GetDailyDeals#1", (0, a.MD)(p, t), h, {
-            bConstMethod: !0,
+        (e.CreateDailyDeal = function (e, t) {
+          return e.SendMsg("DailyDeal.CreateDailyDeal#1", (0, a.MD)(l, t), c, {
             ePrivilege: 1,
           });
         }),
-          (e.CreateDailyDeal = function (e, t) {
-            return e.SendMsg(
-              "DailyDeal.CreateDailyDeal#1",
-              (0, a.MD)(l, t),
-              c,
-              { ePrivilege: 1 },
-            );
-          }),
           (e.UpdateDailyDeal = function (e, t) {
             return e.SendMsg(
               "DailyDeal.UpdateDailyDeal#1",
@@ -11543,7 +11406,7 @@
               { ePrivilege: 1 },
             );
           });
-      })(y || (y = {}));
+      })(p || (p = {}));
     },
     31527: (e, t, r) => {
       "use strict";
@@ -13482,9 +13345,10 @@
         Ng: () => T,
         bn: () => y,
         eh: () => u,
-        nd: () => X,
+        nd: () => q,
         ow: () => f,
-        v9: () => H,
+        v9: () => G,
+        zP: () => X,
       });
       var n = r(45878),
         i = r(50995),
@@ -15629,7 +15493,115 @@
           return "CPromotionEventInvites_GetEmailTargets_Response";
         }
       }
-      var X, H;
+      class X extends s {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            X.prototype.inviteid || i.aR(X.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            X.sm_m ||
+              (X.sm_m = {
+                proto: X,
+                fields: {
+                  inviteid: {
+                    n: 1,
+                    br: i.FE.readFixed64String,
+                    bw: i.Xc.writeFixed64String,
+                  },
+                  rtdatechosen: {
+                    n: 2,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                  discount_days: {
+                    n: 3,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                  discount_info: {
+                    n: 4,
+                    br: i.FE.readString,
+                    bw: i.Xc.writeString,
+                  },
+                },
+              }),
+            X.sm_m
+          );
+        }
+        static MBF() {
+          return X.sm_mbf || (X.sm_mbf = i.Bh(X.M())), X.sm_mbf;
+        }
+        toObject(e = !1) {
+          return X.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return i.TA(X.M(), e, t);
+        }
+        static fromObject(e) {
+          return i.aD(X.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new n.BinaryReader(e),
+            r = new X();
+          return X.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return i.F(X.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new n.BinaryWriter();
+          return X.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          i.l2(X.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new n.BinaryWriter();
+          return X.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CPromotionEventInvites_AcceptInvite_Request";
+        }
+      }
+      class H extends s {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(), s.initialize(this, e, 0, -1, void 0, null);
+        }
+        toObject(e = !1) {
+          return H.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return e ? { $jspbMessageInstance: t } : {};
+        }
+        static fromObject(e) {
+          return new H();
+        }
+        static deserializeBinary(e) {
+          let t = new n.BinaryReader(e),
+            r = new H();
+          return H.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return e;
+        }
+        serializeBinary() {
+          var e = new n.BinaryWriter();
+          return H.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {}
+        serializeBase64String() {
+          var e = new n.BinaryWriter();
+          return H.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CPromotionEventInvites_AcceptInvite_Response";
+        }
+      }
+      var q, G;
       !(function (e) {
         (e.CreatePlan = function (e, t) {
           return e.SendMsg(
@@ -15743,7 +15715,7 @@
               { ePrivilege: 1 },
             );
           });
-      })(X || (X = {})),
+      })(q || (q = {})),
         (function (e) {
           (e.SetInvite = function (e, t) {
             return e.SendMsg(
@@ -15759,6 +15731,14 @@
                 (0, a.MD)(W, t),
                 P,
                 { bConstMethod: !0, ePrivilege: 11 },
+              );
+            }),
+            (e.AcceptInvite = function (e, t) {
+              return e.SendMsg(
+                "PromotionEventInvites.AcceptInvite#1",
+                (0, a.MD)(X, t),
+                H,
+                { ePrivilege: 1 },
               );
             }),
             (e.GetAllActiveInvites = function (e, t) {
@@ -15785,7 +15765,7 @@
                 { ePrivilege: 4 },
               );
             });
-        })(H || (H = {}));
+        })(G || (G = {}));
     },
   },
 ]);

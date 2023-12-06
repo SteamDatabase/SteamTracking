@@ -123,13 +123,19 @@
                     "name": "upstream_egress_utilization",
                     "type": "uint32",
                     "optional": false,
-                    "description": "What is the percent utilization of the busiest datacenter egress link?"
+                    "description": "(deprecated) What is the percent utilization of the busiest datacenter egress link?"
                 },
                 {
                     "name": "upstream_peering_utilization",
                     "type": "uint32",
                     "optional": false,
                     "description": "What is the percent utilization of the busiest peering link?"
+                },
+                {
+                    "name": "upstream_transit_utilization",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "What is the percent utilization of the busiest transit link?"
                 }
             ]
         }

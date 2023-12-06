@@ -464,6 +464,11 @@
                     br: n.FE.readFixed64String,
                     bw: n.Xc.writeFixed64String,
                   },
+                  manifest_url: {
+                    n: 4,
+                    br: n.FE.readString,
+                    bw: n.Xc.writeString,
+                  },
                 },
               }),
             b.sm_m

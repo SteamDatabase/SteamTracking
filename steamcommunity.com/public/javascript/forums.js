@@ -573,7 +573,7 @@ function Forum_BanCommenters( gidTopic )
 
 function Forum_MarkSpam( gidTopic )
 {
-	ShowConfirmDialog('Mark Spam ',
+	ShowConfirmDialog('Mark Suspicious ',
 		'This will delete the selected threads and ban the authors from the forum.  Are you sure this is what you want to do?',
 		'Delete Spam'
 	).done( function() {
@@ -597,7 +597,7 @@ function Forum_ReportPost( gidTopic, author, gidComment )
 function Forum_BlockUser( author, strPersonaName )
 {
 	ShowConfirmDialog( 'Block All Communication',
-		'You are about to block all communication with %s.'.replace( /%s/, strPersonaName ),
+		'You are about to block all communication with %s.'.replace( /%s/, V_EscapeHTML( strPersonaName ) ),
 		'Yes, block them'
 	).done( function() {
 		$J.post(
@@ -2063,13 +2063,13 @@ function ForumBulkPurge( strName, rgForumTopicGIDs, fnOnComplete )
 
 function ForumBulkSpam( strName, rgForumTopicGIDs )
 {
-	ShowConfirmDialog('Mark Spam ',
+	ShowConfirmDialog('Mark Suspicious ',
 		'This will delete the selected threads and ban the authors from the forum.  Are you sure this is what you want to do?',
 		'Delete Spam'
 	).done ( function() {
 	BulkModerate( strName, rgForumTopicGIDs, 'markspam', true )
 		.done( function( data ) {
-			ShowAlertDialog( 'Mark Spam', 'The selected topics have been deleted and the creators banned.' );
+			ShowAlertDialog( 'Mark Suspicious', 'The selected topics have been deleted and the creators banned.' );
 		});
 });
 }

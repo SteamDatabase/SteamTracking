@@ -135,9 +135,13 @@
   fill: #d3d3d3;
 }
 .greenenvelope_EmptyNotificationsCtn_1-M8K {
+  display: none;
   padding: 20px;
   text-align: center;
   font-size: 12px;
+}
+.greenenvelope_EmptyNotificationsCtn_1-M8K:first-child {
+  display: block;
 }
 .greenenvelope_EmptyNotificationsCtn_1-M8K
   .greenenvelope_EmptyNotificationsTitle_m0jm4 {

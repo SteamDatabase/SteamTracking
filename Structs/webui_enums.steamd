@@ -1690,6 +1690,15 @@ enum EGraphicsPerfOverlayState
 	EGraphicsPerfOverlayState_Max = 3;
 }
 
+enum EHDRSupport
+{
+	k_EHDRSupport_Unknown = 0;
+	k_EHDRSupport_SDR = 1;
+	k_EHDRSupport_HDR = 2;
+	k_EHDRSupport_HDR_Broken = 3;
+	k_EHDRSupport_HDR_RequiresUserAction = 4;
+}
+
 enum EHDRToneMapOperator
 {
 	k_EHDRToneMapOperator_Invalid = 0;
@@ -4345,6 +4354,7 @@ enum ESupport
 	k_ESupportPermissions_SendHighValueSupportShipments = 25;
 	k_ESupportPermissions_PartnerDeckCompatReadOnly = 26;
 	k_ESupportPermissions_CSGOTools = 27;
+	k_ESupportPermissions_LocalizationAdvanceAccess = 28;
 }
 
 enum ESuspendResumeProgressState

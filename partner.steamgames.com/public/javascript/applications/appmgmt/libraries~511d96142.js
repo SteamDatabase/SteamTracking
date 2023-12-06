@@ -704,7 +704,7 @@
         if (r + n > e.length) throw new RangeError("Index out of range");
       }
       function W(e, t, r, n, i) {
-        X(t, n, i, e, r, 7);
+        k(t, n, i, e, r, 7);
         let a = Number(t & BigInt(4294967295));
         (e[r++] = a),
           (a >>= 8),
@@ -726,7 +726,7 @@
         );
       }
       function P(e, t, r, n, i) {
-        X(t, n, i, e, r, 7);
+        k(t, n, i, e, r, 7);
         let a = Number(t & BigInt(4294967295));
         (e[r + 7] = a),
           (a >>= 8),
@@ -1249,14 +1249,14 @@
           }
         };
       }
-      function k(e) {
+      function X(e) {
         let t = "",
           r = e.length;
         const n = "-" === e[0] ? 1 : 0;
         for (; r >= n + 4; r -= 3) t = `_${e.slice(r - 3, r)}${t}`;
         return `${e.slice(0, r)}${t}`;
       }
-      function X(e, t, r, n, i, a) {
+      function k(e, t, r, n, i, a) {
         if (e > r || e < t) {
           const n = "bigint" == typeof t ? "n" : "";
           let i;
@@ -1317,12 +1317,12 @@
               i = r;
             return (
               Number.isInteger(r) && Math.abs(r) > 2 ** 32
-                ? (i = k(String(r)))
+                ? (i = X(String(r)))
                 : "bigint" == typeof r &&
                   ((i = String(r)),
                   (r > BigInt(2) ** BigInt(32) ||
                     r < -(BigInt(2) ** BigInt(32))) &&
-                    (i = k(i)),
+                    (i = X(i)),
                   (i += "n")),
               (n += ` It must be ${t}. Received ${i}`),
               n
@@ -2007,7 +2007,7 @@
         }
         return r;
       }
-      function k(e) {
+      function X(e) {
         for (var t = 1; t < arguments.length; t++) {
           var r = null != arguments[t] ? arguments[t] : {};
           t % 2
@@ -2026,7 +2026,7 @@
         }
         return e;
       }
-      var X = function (e) {
+      var k = function (e) {
           var t = e.source,
             r = e.sourceHandle,
             n = e.target,
@@ -2066,8 +2066,8 @@
               })(
                 (r =
                   "id" in (n = e) && "source" in n && "target" in n
-                    ? k({}, e)
-                    : k(k({}, e), {}, { id: X(e) })),
+                    ? X({}, e)
+                    : X(X({}, e), {}, { id: k(e) })),
                 t,
               )
               ? t
@@ -2138,7 +2138,7 @@
                 n = e.height,
                 i = e.selectable;
               if (s && !(void 0 === i || i)) return !1;
-              var a = M(k(k({}, t), {}, { width: r || 0, height: n || 0 })),
+              var a = M(X(X({}, t), {}, { width: r || 0, height: n || 0 })),
                 u = Math.max(0, Math.min(c.x2, a.x2) - Math.max(c.x, a.x)),
                 d = Math.max(0, Math.min(c.y2, a.y2) - Math.max(c.y, a.y)),
                 f = Math.ceil(u * d);
@@ -3452,7 +3452,7 @@
         }
         return r;
       }
-      var k = function (e) {
+      var X = function (e) {
           var t = e.x,
             r = e.y,
             o = e.label,
@@ -3545,7 +3545,7 @@
               : null
           );
         },
-        X = (0, i.memo)(k),
+        k = (0, i.memo)(X),
         L = function (e) {
           var t = e.path,
             r = e.centerX,
@@ -3560,7 +3560,7 @@
             f = e.markerEnd,
             m = e.markerStart,
             h = a
-              ? i.createElement(X, {
+              ? i.createElement(k, {
                   x: r,
                   y: n,
                   label: a,
@@ -4598,8 +4598,8 @@
             U = e.onSelectionDragStop,
             D = (0, n.b)(Ne, s),
             A = D.setNodes,
-            k = D.setEdges,
-            X = D.setDefaultNodesAndEdges,
+            X = D.setEdges,
+            k = D.setDefaultNodesAndEdges,
             L = D.setMinZoom,
             Z = D.setMaxZoom,
             q = D.setTranslateExtent,
@@ -4609,7 +4609,7 @@
           return (
             (0, i.useEffect)(function () {
               return (
-                X(a, o),
+                k(a, o),
                 function () {
                   V();
                 }
@@ -4643,9 +4643,9 @@
             De("onSelectionDragStart", N, H.setState),
             De("onSelectionDragStop", U, H.setState),
             Ue(t, A),
-            Ue(r, k),
+            Ue(r, X),
             Ue(a, A),
-            Ue(o, k),
+            Ue(o, X),
             Ue(g, L),
             Ue(b, Z),
             Ue(E, q),
@@ -4653,10 +4653,10 @@
             null
           );
         },
-        ke = function (e, t, r) {
+        Xe = function (e, t, r) {
           return r === n.P.Left ? e - t : r === n.P.Right ? e + t : e;
         },
-        Xe = function (e, t, r) {
+        ke = function (e, t, r) {
           return r === n.P.Top ? e - t : r === n.P.Bottom ? e + t : e;
         },
         Le = function (e) {
@@ -4668,8 +4668,8 @@
             c = void 0 === s ? 10 : s;
           return i.createElement("circle", {
             className: a(["react-flow__edgeupdater", t]),
-            cx: ke(n, c, r),
-            cy: Xe(o, c, r),
+            cx: Xe(n, c, r),
+            cy: ke(o, c, r),
             r: c,
             stroke: "transparent",
             fill: "transparent",
@@ -4713,8 +4713,8 @@
               U = t.onEdgeUpdateStart,
               D = t.onEdgeUpdateEnd,
               A = t.markerEnd,
-              k = t.markerStart,
-              X = t.rfId,
+              X = t.markerStart,
+              k = t.rfId,
               L = (0, i.useState)(!1),
               Z = (0, n._)(L, 2),
               q = Z[0],
@@ -4764,15 +4764,15 @@
               },
               ne = (0, i.useMemo)(
                 function () {
-                  return "url(#".concat((0, n.d)(k, X), ")");
+                  return "url(#".concat((0, n.d)(X, k), ")");
                 },
-                [k, X],
+                [X, k],
               ),
               ie = (0, i.useMemo)(
                 function () {
-                  return "url(#".concat((0, n.d)(A, X), ")");
+                  return "url(#".concat((0, n.d)(A, k), ")");
                 },
-                [A, X],
+                [A, k],
               );
             if (R) return null;
             var ae = !O && !l,
@@ -5157,8 +5157,8 @@
             U = e.noPanClassName,
             D = (0, n.u)(),
             A = (0, i.useRef)(!1),
-            k = (0, i.useRef)(null),
-            X = (0, i.useRef)({ x: 0, y: 0, zoom: 0 }),
+            X = (0, i.useRef)(null),
+            k = (0, i.useRef)({ x: 0, y: 0, zoom: 0 }),
             L = (0, n.b)(at, s),
             Z = L.d3Zoom,
             q = L.d3Selection,
@@ -5191,12 +5191,12 @@
                   }
                 );
               }, []);
-            })(k),
+            })(X),
             (0, i.useEffect)(function () {
-              if (k.current) {
+              if (X.current) {
                 var e,
                   t = (0, o.sP)().scaleExtent([z, O]).translateExtent(S),
-                  r = (0, E.Z)(k.current).call(t),
+                  r = (0, E.Z)(X.current).call(t),
                   i = (0, n.j)(T[0], S[0][0], S[1][0]),
                   a = (0, n.j)(T[1], S[0][1], S[1][1]),
                   s = (0, n.j)(j, z, O),
@@ -5284,7 +5284,7 @@
                   Z.on("start", function (e) {
                     if (((A.current = !0), r)) {
                       var t = nt(e.transform);
-                      (X.current = t), r(e.sourceEvent, t);
+                      (k.current = t), r(e.sourceEvent, t);
                     }
                   });
               },
@@ -5297,12 +5297,12 @@
                     if (
                       ((A.current = !1),
                       a &&
-                        ((r = X.current),
+                        ((r = k.current),
                         (n = e.transform),
                         r.x !== n.x || r.y !== n.y || r.zoom !== n.k))
                     ) {
                       var t = nt(e.transform);
-                      (X.current = t), a(e.sourceEvent, t);
+                      (k.current = t), a(e.sourceEvent, t);
                     }
                     var r, n;
                   });
@@ -5337,7 +5337,7 @@
               "div",
               {
                 className: "react-flow__renderer react-flow__container",
-                ref: k,
+                ref: X,
               },
               I,
             )
@@ -6676,7 +6676,7 @@
         }
         return r;
       }
-      var kt = function (e) {
+      var Xt = function (e) {
           var t = e.id,
             r = e.type,
             n = e.color,
@@ -6717,7 +6717,7 @@
             i.createElement(h, { color: n, strokeWidth: d }),
           );
         },
-        Xt = function (e) {
+        kt = function (e) {
           var t = e.defaultColor,
             r = e.rfId;
           return function (e) {
@@ -6768,7 +6768,7 @@
           var t = e.defaultColor,
             r = e.rfId,
             a = (0, n.b)(
-              (0, i.useCallback)(Xt({ defaultColor: t, rfId: r }), [t, r]),
+              (0, i.useCallback)(kt({ defaultColor: t, rfId: r }), [t, r]),
               function (e, t) {
                 return !(
                   e.length !== t.length ||
@@ -6782,7 +6782,7 @@
             "defs",
             null,
             a.map(function (e) {
-              return i.createElement(kt, {
+              return i.createElement(Xt, {
                 id: e.id,
                 key: e.id,
                 type: e.type,
@@ -7126,8 +7126,8 @@
           U = e.panOnScroll,
           D = e.panOnScrollSpeed,
           A = e.panOnScrollMode,
-          k = e.zoomOnDoubleClick,
-          X = e.panOnDrag,
+          X = e.zoomOnDoubleClick,
+          k = e.panOnDrag,
           L = e.onPaneClick,
           Z = e.onPaneScroll,
           q = e.onPaneContextMenu,
@@ -7177,11 +7177,11 @@
               onMoveEnd: o,
               zoomOnScroll: I,
               zoomOnPinch: N,
-              zoomOnDoubleClick: k,
+              zoomOnDoubleClick: X,
               panOnScroll: U,
               panOnScrollSpeed: D,
               panOnScrollMode: A,
-              panOnDrag: X,
+              panOnDrag: k,
               translateExtent: R,
               minZoom: j,
               maxZoom: C,
@@ -7310,8 +7310,8 @@
             U = w || B || d || f || m || h,
             D = (0, n.t)(r, x.getState, f),
             A = (0, n.t)(r, x.getState, m),
-            k = (0, n.t)(r, x.getState, h),
-            X = (0, n.t)(r, x.getState, p),
+            X = (0, n.t)(r, x.getState, h),
+            k = (0, n.t)(r, x.getState, p),
             L = (0, n.t)(r, x.getState, y);
           (0, i.useEffect)(
             function () {
@@ -7378,8 +7378,8 @@
                   ),
                   onMouseEnter: D,
                   onMouseMove: A,
-                  onMouseLeave: k,
-                  onContextMenu: X,
+                  onMouseLeave: X,
+                  onContextMenu: k,
                   onClick: function (e) {
                     if ((!w || (v && B) || (0, n.n)({ id: r, store: x }), d)) {
                       var t = x.getState().nodeInternals.get(r);
@@ -7663,8 +7663,8 @@
             N = e.onEdgesDelete,
             D = e.onSelectionChange,
             A = e.onSelectionDragStart,
-            k = e.onSelectionDrag,
-            X = e.onSelectionDragStop,
+            X = e.onSelectionDrag,
+            k = e.onSelectionDragStop,
             L = e.onSelectionContextMenu,
             Z = e.connectionMode,
             q = void 0 === Z ? n.C.Strict : Z,
@@ -7715,8 +7715,8 @@
             Ne = void 0 !== Pe && Pe,
             Ue = e.panOnScrollSpeed,
             De = void 0 === Ue ? 0.5 : Ue,
-            ke = e.panOnScrollMode,
-            Xe = void 0 === ke ? n.h.Free : ke,
+            Xe = e.panOnScrollMode,
+            ke = void 0 === Xe ? n.h.Free : Xe,
             Le = e.zoomOnDoubleClick,
             Ze = void 0 === Le || Le,
             qe = e.panOnDrag,
@@ -7797,7 +7797,7 @@
                 zoomOnDoubleClick: Ze,
                 panOnScroll: Ne,
                 panOnScrollSpeed: De,
-                panOnScrollMode: Xe,
+                panOnScrollMode: ke,
                 panOnDrag: Ye,
                 onPaneClick: He,
                 onPaneScroll: Ge,
@@ -7852,9 +7852,9 @@
                 onNodeDragStart: x,
                 onNodeDrag: W,
                 onNodeDragStop: P,
-                onSelectionDrag: k,
+                onSelectionDrag: X,
                 onSelectionDragStart: A,
-                onSelectionDragStop: X,
+                onSelectionDragStop: k,
               }),
               D && i.createElement(Ie, { onSelectionChange: D }),
               $e,
@@ -7949,7 +7949,7 @@
         _u: () => R,
         cJ: () => ct,
         dq: () => Ke,
-        kK: () => ke,
+        kK: () => Xe,
         mg: () => p,
         uK: () => Ze,
         wN: () => Ne,
@@ -8440,6 +8440,11 @@
                     n: 10,
                     br: i.FE.readString,
                     bw: i.Xc.writeString,
+                  },
+                  compact_table_count: {
+                    n: 11,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
                   },
                 },
               }),
@@ -9463,13 +9468,13 @@
                   train: { n: 15, c: I },
                   conditional_extract: { n: 16, c: N },
                   concatenate: { n: 17, c: A },
-                  shuffle: { n: 18, c: X },
+                  shuffle: { n: 18, c: k },
                   synced_shuffle: { n: 19, c: L },
                   onehot: { n: 20, c: Z },
                   explode: { n: 21, c: q },
                   conditional_swap: { n: 22, c: Y },
                   kmeans: { n: 23, c: V },
-                  combine: { n: 24, c: k },
+                  combine: { n: 24, c: X },
                 },
               }),
             R.sm_m
@@ -9920,6 +9925,11 @@
                   },
                   optimizer: { n: 5, br: i.FE.readEnum, bw: i.Xc.writeEnum },
                   loss: { n: 6, br: i.FE.readEnum, bw: i.Xc.writeEnum },
+                  learning_rate: {
+                    n: 7,
+                    br: i.FE.readFloat,
+                    bw: i.Xc.writeFloat,
+                  },
                 },
               }),
             I.sm_m
@@ -10211,53 +10221,53 @@
           return "CMsgSteamLearnModelNodeConcatenate";
         }
       }
-      class k extends o {
+      class X extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(), o.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
-          return k.toObject(e, this);
+          return X.toObject(e, this);
         }
         static toObject(e, t) {
           return e ? { $jspbMessageInstance: t } : {};
         }
         static fromObject(e) {
-          return new k();
+          return new X();
         }
         static deserializeBinary(e) {
           let t = new n.BinaryReader(e),
-            r = new k();
-          return k.deserializeBinaryFromReader(r, t);
+            r = new X();
+          return X.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
           return e;
         }
         serializeBinary() {
           var e = new n.BinaryWriter();
-          return k.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return X.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {}
         serializeBase64String() {
           var e = new n.BinaryWriter();
-          return k.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return X.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CMsgSteamLearnModelNodeCombine";
         }
       }
-      class X extends o {
+      class k extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            X.prototype.exclude_zeroes || i.aR(X.M()),
+            k.prototype.exclude_zeroes || i.aR(k.M()),
             o.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            X.sm_m ||
-              (X.sm_m = {
-                proto: X,
+            k.sm_m ||
+              (k.sm_m = {
+                proto: k,
                 fields: {
                   exclude_zeroes: {
                     n: 1,
@@ -10266,39 +10276,39 @@
                   },
                 },
               }),
-            X.sm_m
+            k.sm_m
           );
         }
         static MBF() {
-          return X.sm_mbf || (X.sm_mbf = i.Bh(X.M())), X.sm_mbf;
+          return k.sm_mbf || (k.sm_mbf = i.Bh(k.M())), k.sm_mbf;
         }
         toObject(e = !1) {
-          return X.toObject(e, this);
+          return k.toObject(e, this);
         }
         static toObject(e, t) {
-          return i.TA(X.M(), e, t);
+          return i.TA(k.M(), e, t);
         }
         static fromObject(e) {
-          return i.aD(X.M(), e);
+          return i.aD(k.M(), e);
         }
         static deserializeBinary(e) {
           let t = new n.BinaryReader(e),
-            r = new X();
-          return X.deserializeBinaryFromReader(r, t);
+            r = new k();
+          return k.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return i.F(X.MBF(), e, t);
+          return i.F(k.MBF(), e, t);
         }
         serializeBinary() {
           var e = new n.BinaryWriter();
-          return X.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return k.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          i.l2(X.M(), e, t);
+          i.l2(k.M(), e, t);
         }
         serializeBase64String() {
           var e = new n.BinaryWriter();
-          return X.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return k.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CMsgSteamLearnModelNodeShuffle";
@@ -13392,71 +13402,12 @@
           return "CMsgSteamLearn_GetTrainStatusVersions_Response";
         }
       }
-      class ke extends o {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            ke.prototype.project_id || i.aR(ke.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            ke.sm_m ||
-              (ke.sm_m = {
-                proto: ke,
-                fields: {
-                  project_id: {
-                    n: 1,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
-                  fetch_id: { n: 2, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
-                },
-              }),
-            ke.sm_m
-          );
-        }
-        static MBF() {
-          return ke.sm_mbf || (ke.sm_mbf = i.Bh(ke.M())), ke.sm_mbf;
-        }
-        toObject(e = !1) {
-          return ke.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return i.TA(ke.M(), e, t);
-        }
-        static fromObject(e) {
-          return i.aD(ke.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new n.BinaryReader(e),
-            r = new ke();
-          return ke.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return i.F(ke.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new n.BinaryWriter();
-          return ke.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          i.l2(ke.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new n.BinaryWriter();
-          return ke.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CMsgSteamLearn_GetFetchStatus_Request";
-        }
-      }
       class Xe extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Xe.prototype.result || i.aR(Xe.M()),
-            o.initialize(this, e, 0, -1, [4], null);
+            Xe.prototype.project_id || i.aR(Xe.M()),
+            o.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -13464,31 +13415,12 @@
               (Xe.sm_m = {
                 proto: Xe,
                 fields: {
-                  result: { n: 1, br: i.FE.readEnum, bw: i.Xc.writeEnum },
+                  project_id: {
+                    n: 1,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
                   fetch_id: { n: 2, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
-                  status: { n: 3, br: i.FE.readEnum, bw: i.Xc.writeEnum },
-                  workers: { n: 4, c: Le, r: !0, q: !0 },
-                  total_rows_written: {
-                    n: 5,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
-                  total_rows_processed: {
-                    n: 9,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
-                  total_rows: {
-                    n: 6,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
-                  start_time: {
-                    n: 7,
-                    br: i.FE.readUint32,
-                    bw: i.Xc.writeUint32,
-                  },
-                  end_time: { n: 8, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
                 },
               }),
             Xe.sm_m
@@ -13524,6 +13456,84 @@
         serializeBase64String() {
           var e = new n.BinaryWriter();
           return Xe.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CMsgSteamLearn_GetFetchStatus_Request";
+        }
+      }
+      class ke extends o {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            ke.prototype.result || i.aR(ke.M()),
+            o.initialize(this, e, 0, -1, [4], null);
+        }
+        static M() {
+          return (
+            ke.sm_m ||
+              (ke.sm_m = {
+                proto: ke,
+                fields: {
+                  result: { n: 1, br: i.FE.readEnum, bw: i.Xc.writeEnum },
+                  fetch_id: { n: 2, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
+                  status: { n: 3, br: i.FE.readEnum, bw: i.Xc.writeEnum },
+                  workers: { n: 4, c: Le, r: !0, q: !0 },
+                  total_rows_written: {
+                    n: 5,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                  total_rows_processed: {
+                    n: 9,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                  total_rows: {
+                    n: 6,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                  start_time: {
+                    n: 7,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                  end_time: { n: 8, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
+                },
+              }),
+            ke.sm_m
+          );
+        }
+        static MBF() {
+          return ke.sm_mbf || (ke.sm_mbf = i.Bh(ke.M())), ke.sm_mbf;
+        }
+        toObject(e = !1) {
+          return ke.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return i.TA(ke.M(), e, t);
+        }
+        static fromObject(e) {
+          return i.aD(ke.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new n.BinaryReader(e),
+            r = new ke();
+          return ke.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return i.F(ke.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new n.BinaryWriter();
+          return ke.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          i.l2(ke.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new n.BinaryWriter();
+          return ke.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CMsgSteamLearn_GetFetchStatus_Response";
@@ -14929,6 +14939,7 @@
                     bw: i.Xc.writeUint32,
                   },
                   train_id: { n: 3, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
+                  fetch_id: { n: 6, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
                   export_name: {
                     n: 4,
                     br: i.FE.readString,
@@ -15145,6 +15156,7 @@
                     pbr: i.FE.readPackedFloat,
                     bw: i.Xc.writeRepeatedFloat,
                   },
+                  fetch_id: { n: 7, br: i.FE.readUint32, bw: i.Xc.writeUint32 },
                 },
               }),
             mt.sm_m
@@ -15429,8 +15441,8 @@
           (e.GetFetchStatus = function (e, t) {
             return e.SendMsg(
               "SteamLearn.GetFetchStatus#1",
-              (0, a.MD)(ke, t),
-              Xe,
+              (0, a.MD)(Xe, t),
+              ke,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
@@ -15862,12 +15874,12 @@
       function A() {
         this.innerHTML = "";
       }
-      function k(e) {
+      function X(e) {
         return function () {
           this.innerHTML = e;
         };
       }
-      function X(e) {
+      function k(e) {
         return function () {
           var t = e.apply(this, arguments);
           this.innerHTML = null == t ? "" : t;
@@ -16266,7 +16278,7 @@
         },
         html: function (e) {
           return arguments.length
-            ? this.each(null == e ? A : ("function" == typeof e ? X : k)(e))
+            ? this.each(null == e ? A : ("function" == typeof e ? k : X)(e))
             : this.node().innerHTML;
         },
         raise: function () {
@@ -16420,7 +16432,7 @@
     },
     16480: (e, t, r) => {
       "use strict";
-      r.d(t, { sP: () => ke, CR: () => Te });
+      r.d(t, { sP: () => Xe, CR: () => Te });
       var n = r(23975),
         i = r(89448);
       function a(e) {
@@ -16676,21 +16688,21 @@
         });
       }
       function D(e, t) {
-        var r = k(e, t);
+        var r = X(e, t);
         if (r.state > C) throw new Error("too late; already scheduled");
         return r;
       }
       function A(e, t) {
-        var r = k(e, t);
+        var r = X(e, t);
         if (r.state > W) throw new Error("too late; already running");
         return r;
       }
-      function k(e, t) {
+      function X(e, t) {
         var r = e.__transition;
         if (!r || !(r = r[t])) throw new Error("transition not found");
         return r;
       }
-      function X(e, t) {
+      function k(e, t) {
         var r,
           n,
           i,
@@ -16868,7 +16880,7 @@
             (e.value || (e.value = {}))[t] = r.apply(this, arguments);
           }),
           function (e) {
-            return k(e, n).value[t];
+            return X(e, n).value[t];
           }
         );
       }
@@ -17055,7 +17067,7 @@
                 (c = e.call(s, s.__data__, f, l)) &&
                 ("__data__" in s && (c.__data__ = s.__data__),
                 (d[f] = c),
-                U(d[f], t, r, f, d, k(s, r)));
+                U(d[f], t, r, f, d, X(s, r)));
           return new Se(a, this._parents, t, r);
         },
         selectAll: function (e) {
@@ -17072,7 +17084,7 @@
                 for (
                   var f,
                     m = e.call(c, c.__data__, d, l),
-                    h = k(c, r),
+                    h = X(c, r),
                     p = 0,
                     y = m.length;
                   p < y;
@@ -17143,7 +17155,7 @@
           )
             for (var o, s = n[a], c = s.length, l = 0; l < c; ++l)
               if ((o = s[l])) {
-                var u = k(o, t);
+                var u = X(o, t);
                 U(o, e, r, l, s, {
                   time: u.time + u.delay + u.duration,
                   delay: 0,
@@ -17162,7 +17174,7 @@
         on: function (e, t) {
           var r = this._id;
           return arguments.length < 2
-            ? k(this.node(), r).on.on(e)
+            ? X(this.node(), r).on.on(e)
             : this.each(
                 (function (e, t, r) {
                   var n,
@@ -17365,7 +17377,7 @@
           var r = this._id;
           if (((e += ""), arguments.length < 2)) {
             for (
-              var n, i = k(this.node(), r).tween, a = 0, o = i.length;
+              var n, i = X(this.node(), r).tween, a = 0, o = i.length;
               a < o;
               ++a
             )
@@ -17378,13 +17390,13 @@
           var t = this._id;
           return arguments.length
             ? this.each(("function" == typeof e ? me : he)(t, e))
-            : k(this.node(), t).delay;
+            : X(this.node(), t).delay;
         },
         duration: function (e) {
           var t = this._id;
           return arguments.length
             ? this.each(("function" == typeof e ? pe : ye)(t, e))
-            : k(this.node(), t).duration;
+            : X(this.node(), t).duration;
         },
         ease: function (e) {
           var t = this._id;
@@ -17397,7 +17409,7 @@
                   };
                 })(t, e),
               )
-            : k(this.node(), t).ease;
+            : X(this.node(), t).ease;
         },
         easeVarying: function (e) {
           if ("function" != typeof e) throw new Error();
@@ -17453,7 +17465,7 @@
       }
       (d.ZP.prototype.interrupt = function (e) {
         return this.each(function () {
-          X(this, e);
+          k(this, e);
         });
       }),
         (d.ZP.prototype.transition = function (e) {
@@ -17575,7 +17587,7 @@
           o > a ? (a + o) / 2 : Math.min(0, a) || Math.max(0, o),
         );
       }
-      function ke() {
+      function Xe() {
         var e,
           t,
           r,
@@ -17675,7 +17687,7 @@
                 clearTimeout(r.wheel);
             else {
               if (n.k === i) return;
-              (r.mouse = [o, n.invert(o)]), X(this), r.start();
+              (r.mouse = [o, n.invert(o)]), k(this), r.start();
             }
             We(e),
               (r.wheel = setTimeout(function () {
@@ -17731,7 +17743,7 @@
             (0, i.Z)(e.view),
               xe(e),
               (o.mouse = [d, this.__zoom.invert(d)]),
-              X(this),
+              k(this),
               o.start();
           }
         }
@@ -17776,7 +17788,7 @@
                   (e = setTimeout(function () {
                     e = null;
                   }, b))),
-                X(this),
+                k(this),
                 f.start());
           }
         }

@@ -15,12 +15,12 @@
         FocusRingOnHiddenItem: "focusring_FocusRingOnHiddenItem_2OusV",
       };
     },
-    354: (e, t, n) => {
+    777: (e, t, n) => {
       "use strict";
       n.d(t, { Pf: () => r, y5: () => a });
       var i = n(655),
-        o = n(848),
-        s = n(578);
+        o = n(274),
+        s = n(486);
       class r {
         constructor() {
           (this.m_fnCallback = void 0),
@@ -84,7 +84,7 @@
       }
       (0, i.gn)([o.a], a.prototype, "OnMessage", null);
     },
-    578: (e, t, n) => {
+    486: (e, t, n) => {
       "use strict";
       n.d(t, { i: () => o, l: () => i });
       const i = "GamepadInput";
@@ -97,14 +97,14 @@
           (e[(e.Full = 4)] = "Full");
       })(o || (o = {}));
     },
-    775: (e, t, n) => {
+    897: (e, t, n) => {
       "use strict";
       n.r(t), n.d(t, { InitializeGamepadNavigation: () => ht });
       var i,
         o = n(655),
         s = n(311),
         r = n.n(s),
-        a = n(45);
+        a = n(354);
       !(function (e) {
         (e[(e.GAMEPAD = 0)] = "GAMEPAD"),
           (e[(e.KEYBOARD = 1)] = "KEYBOARD"),
@@ -164,10 +164,10 @@
           l
         );
       }
-      var g = n(848),
-        _ = n(578),
-        v = n(98),
-        p = n(354);
+      var g = n(274),
+        _ = n(486),
+        v = n(96),
+        p = n(777);
       class f {
         constructor(e) {
           (this.m_bIsGamepadInputExternallyControlled = !1),
@@ -278,13 +278,13 @@
         }
         return n;
       }
-      function S(e, t) {
+      function w(e, t) {
         if (!("ownerDocument" in e)) return !0;
         const n = e.ownerDocument.defaultView.getComputedStyle(e),
           i = "x" === t ? n.overflowX : n.overflowY;
         return "auto" === i || "scroll" === i;
       }
-      function w(e, t, n) {
+      function S(e, t, n) {
         if ("childList" === e.type) {
           for (let n = 0; n < e.addedNodes.length; n++) {
             const i = e.addedNodes[n];
@@ -575,7 +575,7 @@
             : console.assert(!!e, t, ...n)
           : e || console.warn(t, ...n);
       }
-      var y = n(683);
+      var y = n(652);
       class B extends class {
         GetObject(e) {
           return (0, o.mG)(this, void 0, void 0, function* () {
@@ -984,7 +984,7 @@
           );
         }
       }
-      var Y = n(978);
+      var Y = n(509);
       const X = new G("FocusNavigation").Debug,
         z = new G("GamepadEvents").Debug;
       class Q {
@@ -1852,14 +1852,17 @@
           e && e.TakeFocus(i.APPLICATION);
         }
         OnContextActivated(e) {
-          (this.m_ActiveContext = e), (this.m_LastActiveContext = e);
+          (this.m_ActiveContext = e),
+            (this.m_LastActiveContext = e),
+            this.UpdateRepeatAllowed();
         }
         OnContextDeactivated(e, t) {
           t &&
             (this.m_LastActiveContext == e &&
               (this.m_LastActiveContext = void 0),
             Y.Zf(this.m_rgAllContexts, e)),
-            this.m_ActiveContext == e && (this.m_ActiveContext = void 0);
+            this.m_ActiveContext == e && (this.m_ActiveContext = void 0),
+            this.UpdateRepeatAllowed();
         }
         BIsRestoringHistory() {
           return this.m_bRestoringHistory;
@@ -1874,10 +1877,19 @@
             }
           });
         }
+        UpdateRepeatAllowed() {
+          var e;
+          const t =
+            null === (e = this.m_ActiveContext) || void 0 === e
+              ? void 0
+              : e.BIsActive();
+          for (const e of this.m_rgGamepadInputSources) e.SetRepeatAllowed(t);
+        }
       }
       (0, o.gn)([g.a], se.prototype, "OnButtonDown", null),
         (0, o.gn)([g.a], se.prototype, "OnButtonUp", null),
-        (0, o.gn)([g.a], se.prototype, "OnNavigationTypeChange", null);
+        (0, o.gn)([g.a], se.prototype, "OnNavigationTypeChange", null),
+        (0, o.gn)([g.a], se.prototype, "UpdateRepeatAllowed", null);
       class re {
         constructor(e) {
           this.m_node = e;
@@ -2220,7 +2232,7 @@
       const Ae = new G("ScrollSnap").Debug;
       let Ce = !1;
       let be;
-      function Se(e) {
+      function we(e) {
         if (!e) return { left: 0, top: 0, right: 0, bottom: 0 };
         if (!("ownerDocument" in e))
           return {
@@ -2252,15 +2264,15 @@
           bottom: t + e.offsetHeight,
         };
       }
-      function we(e, t) {
+      function Se(e, t) {
         return "x" == t
           ? [e.left, e.right, e.right - e.left]
           : [e.top, e.bottom, e.bottom - e.top];
       }
       function Ne(e, t, n, i) {
-        let [o, s, r] = we(e, i),
-          [a, l, c] = we(t, i),
-          [u, h] = we(n, i);
+        let [o, s, r] = Se(e, i),
+          [a, l, c] = Se(t, i),
+          [u, h] = Se(n, i);
         return o < a && s > l
           ? 0
           : (o < a && r <= c) || (s > l && r > c)
@@ -2322,13 +2334,13 @@
           Ae("Scrolling Into View:", t);
         let s = [],
           r = t,
-          a = Se(t),
+          a = we(t),
           l = null != o ? o : Number.MAX_VALUE;
         for (; r; ) {
           let e = b(r);
           e || (e = C(r));
           let t = Re(r),
-            n = Ie(e, Se(e)),
+            n = Ie(e, we(e)),
             c = ye(e),
             u = { element: e, left: 0, top: 0 };
           if (
@@ -2343,7 +2355,7 @@
               a,
             ),
             (i && "y" != i) ||
-              !S(e, "y") ||
+              !w(e, "y") ||
               ((u.top = Ne(a, n, t, "y")),
               (u.top = N(u.top, -c.scrollTop, c.MaxScrollTop() - c.scrollTop)),
               o &&
@@ -2351,7 +2363,7 @@
                 (l -= Math.abs(u.top))),
               Ae(`- checked y: ${u.top}`)),
             (i && "x" != i) ||
-              !S(e, "x") ||
+              !w(e, "x") ||
               ((u.left = Ne(a, n, t, "x")),
               (u.left = N(
                 u.left,
@@ -3121,7 +3133,7 @@
                     : n.ownerDocument.defaultView,
                 i =
                   ("y" == o ? e.innerHeight : e.innerWidth) / (t ? 4.5 : 3.33),
-                r = Se(s.Element);
+                r = we(s.Element);
               if (
                 (r.top > e.innerHeight && r.bottom > e.innerHeight + i) ||
                 (r.bottom < 0 && r.top < -i) ||
@@ -3362,7 +3374,7 @@
                     a == xe.NoTransformSparseContent ||
                     !s;
                 if (t) {
-                  const t = c ? Se(l) : l.getBoundingClientRect();
+                  const t = c ? we(l) : l.getBoundingClientRect();
                   let n = !1;
                   const i = Math.max(1.4 * (t.bottom - t.top), 40);
                   ((be && performance.now() - be < 500) ||
@@ -3750,7 +3762,7 @@
         for (const t of e) {
           const e = [],
             n = [];
-          w(
+          S(
             t,
             (t) => e.push(t),
             (e) => n.push(e),
@@ -3801,7 +3813,7 @@
             var e;
             (function (e) {
               return "jquery" in e ? mt.has(e[0]) : mt.has(e);
-            })((e = this)) || wt(e);
+            })((e = this)) || St(e);
           }),
           (function () {
             for (let e = _t.length - 1; e >= 0; e--)
@@ -3814,7 +3826,7 @@
       function bt(e) {
         At(r()(e)), Ct(r()(e));
       }
-      function St(e) {
+      function wt(e) {
         const t = r()(e.Element);
         return (
           !t.data("gpFocusDisabled") &&
@@ -3824,7 +3836,7 @@
             "hidden" !== t.css("overflow"))
         );
       }
-      function wt(e) {
+      function St(e) {
         var t, n, s, a, l, h, g;
         const _ = r()(e),
           v = Nt(e);
@@ -3885,8 +3897,8 @@
         delete A["flow-children"];
         let {
             clickOnActivate: b,
-            maintainX: S,
-            maintainY: w,
+            maintainX: w,
+            maintainY: S,
             enableVirtualKeyboard: N,
             preferredChild: F,
             onOKActionDescription: R,
@@ -4040,9 +4052,9 @@
               })(C)
             : Pe.NONE;
         Z != Pe.NONE && ($.layout = Z),
-          S
+          w
             ? ($.navEntryPreferPosition = Ge.MAINTAIN_X)
-            : w
+            : S
             ? ($.navEntryPreferPosition = Ge.MAINTAIN_Y)
             : F && ($.navEntryPreferPosition = Ge.PREFERRED_CHILD),
           b &&
@@ -4081,7 +4093,7 @@
             actionDescriptionMap: O,
           }),
           te = Object.assign(
-            Object.assign({ fnCanTakeFocus: St, actionDescriptionMap: ee }, J),
+            Object.assign({ fnCanTakeFocus: wt, actionDescriptionMap: ee }, J),
             $,
           );
         return f.SetProperties(te), vt(e, f), f;
@@ -4107,7 +4119,7 @@
                 }
             }
             let n = ot.NotNeeded;
-            return t ? (n = wt(e)) : vt(e, n), n;
+            return t ? (n = St(e)) : vt(e, n), n;
           })(t);
         else if (n == ot.InReactTree) return n;
         return n instanceof Ve ? n : Nt(t);

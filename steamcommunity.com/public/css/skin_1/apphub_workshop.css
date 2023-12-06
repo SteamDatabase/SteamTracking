@@ -244,7 +244,8 @@
 .section.special_event_row,
 .section.merch_row,
 .section.announcements_row,
-.section.queue_row
+.section.queue_row,
+.section.saved_search_queries_row,
 {
 	margin-top: 20px;
 }
@@ -604,6 +605,23 @@ a.queue_area.gpfocus .voting_queue_link{
 .section_contents.voting_queue.landscape .voting_queue_link
 {
 	top: 38px;
+}
+
+.section_contents.saved_search_queries {
+	flex-direction: column;
+	gap: 2px;
+}
+.saved_search_query {
+	display: flex;
+	padding: 10px;
+	background: linear-gradient(to right, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+	border: 1px solid rgba(0,0,0,0);
+}
+.saved_search_query :nth-child(1) {
+	flex: 1;
+}
+.saved_search_query:hover {
+	border: 1px solid #66c0f4;
 }
 
 /* large promotion area for square items */

@@ -743,7 +743,7 @@ GHomepage = {
 		if ( rgAppInfo && rgAppInfo.mastersub_granting_app )
 		{
 			$divMasterSub = $J('<div/>', {'class': 'cluster_maincap_grantingapp grantedbymastersub'} );
-			$imgMasterSub = $J('<img/>', {'class': 'grantedbymastersub_app', 'src': rgAppInfo.mastersub_granting_app} );
+			$imgMasterSub = $J('<img/>', {'class': 'grantedbymastersub_app', 'src': rgAppInfo.mastersub_granting_app.capsule, 'alt': rgAppInfo.mastersub_granting_app.name } );
 			$divMasterSub.append( $imgMasterSub );
 
 			$ImgCtn.append( $divMasterSub );
@@ -805,7 +805,7 @@ GHomepage = {
 			rgRecommendationReasons.recommended_by_friend = false;
 			var friend = GStoreItemData.GetAccountData( null, reason.accountid_friends[0] )
 			var $ReasonMain = $J('<div/>').addClass('main').addClass('friend').html( "<strong>Recommended<\/strong> by your friend, <span>%1$s<\/span>".replace("%1$s", friend.name ) );
-			var $ReasonAvatar = $J('<div>').addClass('avatar').append($J('<img>').attr('src', GetAvatarURL( friend.avatar, '_medium' ) ) ).data('ds-miniprofile', friend.accountid );
+			var $ReasonAvatar = $J('<div>').addClass('avatar').append($J('<img>').attr('src', GetAvatarURL( friend.avatar, '_medium' ) ) ).attr('alt', friend.name).data('ds-miniprofile', friend.accountid );
 
 			$RecommendedReason.append( $ReasonAvatar );
 			$RecommendedReason.append( $ReasonMain )
@@ -1614,6 +1614,7 @@ GHomepage = {
 
 				var $image = $J( '<img/>', {
 					'src': "https://store.cloudflare.steamstatic.com/public/images/blank.gif",
+					"alt": '',	// intentionally blank, there is text overlaid on top of the image
 					"data-image-url": "https://store.steampowered.com/" + "categories/homepageimage/" + strImageURL + "?cc=" + cc + "&l=" + l,
 				} );
 				$capsule.append( $image );
@@ -1928,9 +1929,11 @@ GHomepage = {
 
 		var $ImgCtn = $J('<div class="capsule"/>').addClass( rgOptions.capsule_size );
 
-		var rgImageProperties = { src: rgItemData[rgOptions.capsule_size] };
-		if( rgOptions.lazy )
-			rgImageProperties = { 'data-image-url': rgItemData[rgOptions.capsule_size] };
+		var rgImageProperties = { alt: rgItemData.name };
+		if ( rgOptions.lazy )
+			rgImageProperties['data-image-url'] = rgItemData[rgOptions.capsule_size];
+		else
+			rgImageProperties['src'] = rgItemData[rgOptions.capsule_size];
 
 		$ImgCtn.append( $J('<img/>', rgImageProperties ) );
 		$CapCtn.append( $ImgCtn );
@@ -1958,7 +1961,7 @@ GHomepage = {
 		if ( rgAppInfo && rgAppInfo.mastersub_granting_app )
 		{
 			$divMasterSub = $J('<div/>', {'class': 'cluster_maincap_grantingapp grantedbymastersub'} );
-			$imgMasterSub = $J('<img/>', {'class': 'grantedbymastersub_app', 'src': rgAppInfo.mastersub_granting_app} );
+			$imgMasterSub = $J('<img/>', {'class': 'grantedbymastersub_app', 'src': rgAppInfo.mastersub_granting_app.capsule, 'alt': rgAppInfo.mastersub_granting_app.name } );
 			$divMasterSub.append( $imgMasterSub );
 
 			$ImgCtn.append( $divMasterSub );
@@ -2534,7 +2537,7 @@ GSteamCurators = {
 
 		var $ImgCtn = $J('<div class="capsule headerv5"/>');
 
-		$ImgCtn.append( $J('<img/>', { src: rgItemData.headerv5 } ) );
+		$ImgCtn.append( $J('<img/>', { src: rgItemData.headerv5, alt: rgItemData.name } ) );
 
 		if( rgItemData.has_live_broadcast )
 		{
@@ -2555,8 +2558,8 @@ GSteamCurators = {
 			if ( curatorsCache.hasOwnProperty( clanID ) )
 			{
 				var curator = curatorsCache[clanID];
-				var $Curator =  $J('<a/>', {'class': 'steam_curator_for_app tooltip', 'href': curator.link, "data-tooltip-text": curator.name } );
-				var $CuratorImg = $J('<img/>', {'class': 'steam_curator_for_app_img', 'src': GetAvatarURL( curator.strAvatarHash, '' ) });
+				var $Curator =  $J('<a/>', {'class': 'steam_curator_for_app tooltip', 'href': curator.link, "data-tooltip-text": curator.name, "aria-label": curator.name } );
+				var $CuratorImg = $J('<img/>', {'class': 'steam_curator_for_app_img', 'src': GetAvatarURL( curator.strAvatarHash, '' ), 'alt': curator.name });
 				$Curator.append( $CuratorImg );
 
 				$Curators.append( $Curator );
@@ -2633,7 +2636,7 @@ GSteamCurators = {
 
 
 		// Add the image
-		var $Curator =  $J('<a/>', {'class': 'tooltip', 'href': curator.link, "data-tooltip-text": curator.name } );
+		var $Curator =  $J('<a/>', {'class': 'tooltip', 'href': curator.link, "data-tooltip-text": curator.name, 'aria-label': curator.name } );
 		var $CuratorImg = $J('<img/>', {'class': '', 'src': GetAvatarURL( curator.strAvatarHash, '_full' ) });
 		$Curator.append( $CuratorImg );
 

@@ -408,7 +408,7 @@
     },
     85651: (e, t, n) => {
       "use strict";
-      n.d(t, { JW: () => v, kl: () => h, rw: () => c });
+      n.d(t, { JW: () => v, kl: () => h, rw: () => c, zD: () => u });
       var r = n(33940),
         a = n(59621),
         s = n(36105),
@@ -474,6 +474,9 @@
       function h() {
         var e;
         return null !== (e = v.nOverrideDateNow) && void 0 !== e ? e : p;
+      }
+      function u() {
+        return i.useMemo(() => h(), []);
       }
       function c() {
         return i.useMemo(() => v.GetTimeNowWithOverrideAsDate(), []);

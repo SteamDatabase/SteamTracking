@@ -1387,7 +1387,7 @@ html.touch .gamehover_WishlistButton_1l89v .gamehover_WishlistButtonText_-ne-j,
 }
 .salepreviewwidgets_StoreSaleWidgetContainer_UlvFk.salepreviewwidgets_SaleItemDefaultCapsuleDisplay_34o91 {
   display: grid;
-  grid-template-columns: auto auto 25% 25%;
+  grid-template-columns: 25% auto 25% 25%;
   grid-template-rows: auto auto;
   grid-template-areas: "left left right right";
   background: -webkit-linear-gradient(top, #3b3b3b 5%, #171717 95%);
@@ -1507,6 +1507,7 @@ html.touch .gamehover_WishlistButton_1l89v .gamehover_WishlistButtonText_-ne-j,
   height: 20px;
   width: 20px;
   fill: #fff;
+  color: #fff;
   margin-right: 4px;
 }
 .salepreviewwidgets_CapsulePlatform_3vzWb img.SVGIcon_WindowsLogo,
@@ -4859,6 +4860,9 @@ html.responsive.touch .ContentHubSalePage {
 }
 .partnersaledisplay_CarouselSalePageCapsule_3m73y {
   min-width: 258px;
+}
+.ItemCount_4 > .partnersaledisplay_CarouselSalePageCapsule_3m73y {
+  min-width: unset !important;
 }
 .ScrollSnapCarousel > .partnersaledisplay_CarouselSalePageCapsule_3m73y {
   width: 258px;

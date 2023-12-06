@@ -608,6 +608,7 @@ pre.results {
 
 .gameimagepreview.library_logo > img,
 .gameimagepreview.library_hero > img,
+.gameimagepreview.library_header > img,
 .gameimagepreview.library_capsule > img
 {
 	max-width: 100%;
@@ -617,6 +618,11 @@ pre.results {
 .gameimagepreview.library_capsule
 {
 	width: 300px;
+}
+
+.gameimagepreview.library_header
+{
+	width: 460px;
 }
 
 .gameimagepreview.library_logo,

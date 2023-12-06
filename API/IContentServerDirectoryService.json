@@ -2,6 +2,56 @@
     "name": "IContentServerDirectoryService",
     "methods": [
         {
+            "name": "GetCDNForVideo",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "property_type",
+                    "type": "int32",
+                    "optional": false,
+                    "description": "ECDNPropertyType"
+                },
+                {
+                    "name": "client_ip",
+                    "type": "string",
+                    "optional": false,
+                    "description": "client IP address"
+                },
+                {
+                    "name": "client_region",
+                    "type": "string",
+                    "optional": false,
+                    "description": "client region"
+                }
+            ]
+        },
+        {
+            "name": "PickSingleContentServer",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "property_type",
+                    "type": "int32",
+                    "optional": false,
+                    "description": "ECDNPropertyType"
+                },
+                {
+                    "name": "cell_id",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "client Cell ID"
+                },
+                {
+                    "name": "client_ip",
+                    "type": "string",
+                    "optional": false,
+                    "description": "client IP address"
+                }
+            ]
+        },
+        {
             "name": "GetServersForSteamPipe",
             "version": 1,
             "httpmethod": "GET",

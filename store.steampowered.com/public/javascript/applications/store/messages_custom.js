@@ -131,6 +131,7 @@
         chartAccentColor: "#fff",
         chartAccentColorAlt: "#1a9ffe",
         ImagesCtn: "yir2023_ImagesCtn_2w-zj",
+        scaleBackground: "yir2023_scaleBackground_dO6cB",
         SingleGame: "yir2023_SingleGame_10YwG",
         ImageTint: "yir2023_ImageTint_2GknM",
         Section: "yir2023_Section_1z6_O",
@@ -157,6 +158,7 @@
         TopMostGame: "yir2023_TopMostGame_1rn7C",
         GamePlayDetails: "yir2023_GamePlayDetails_2qarm",
         PlatformChartsCtn: "yir2023_PlatformChartsCtn_3cVLk",
+        gradient: "yir2023_gradient_3zLeB",
         IconAchievement: "yir2023_IconAchievement_3meex",
         IconGamesPlayed: "yir2023_IconGamesPlayed_1_Cfx",
         IconStreak: "yir2023_IconStreak_3A0kF",
@@ -194,7 +196,7 @@
     },
     20285: (e, a, r) => {
       "use strict";
-      r.d(a, { Fz: () => h, TQ: () => u, tE: () => A });
+      r.d(a, { Fz: () => h, TQ: () => u, tE: () => k });
       var t = r(33940),
         i = r(52868),
         n = r.n(i),
@@ -207,11 +209,11 @@
         m = r(32765),
         d = r(68333),
         C = r(97940),
-        p = r(27070);
-      const g = "nicknames";
+        g = r(27070);
+      const p = "nicknames";
       function u(e) {
-        const a = (0, p.bY)(),
-          { data: r, isLoading: i } = (0, c.useQuery)([g], () =>
+        const a = (0, g.bY)(),
+          { data: r, isLoading: i } = (0, c.useQuery)([p], () =>
             (0, t.mG)(this, void 0, void 0, function* () {
               const e = new Map();
               if (m.L7.logged_in) {
@@ -297,7 +299,7 @@
         );
         return [a, r];
       }
-      function A(e) {
+      function k(e) {
         const a = (0, c.useQueryClient)(),
           { data: r, isLoading: t } = (0, c.useQuery)({
             queryKey: [B, e],
@@ -350,13 +352,13 @@
             accentClass: (0, m.Z)(s.ReplayLogoAccent, a.ReplayLogoAccent),
           }),
           n.createElement(v, { year: e.year, theme: a }),
-          n.createElement(g, { className: (0, m.Z)(s.SteamLogo, a.SteamLogo) }),
+          n.createElement(p, { className: (0, m.Z)(s.SteamLogo, a.SteamLogo) }),
           n.createElement(B, { theme: a }),
           n.createElement(
             "div",
             { className: (0, m.Z)(s.Content, a.Content) },
             n.createElement(C, { theme: a }),
-            n.createElement(p, { theme: a }),
+            n.createElement(g, { theme: a }),
             n.createElement(
               "div",
               { className: (0, m.Z)(s.Description, a.Description) },
@@ -403,7 +405,7 @@
             )
           : null;
       }
-      function p(e) {
+      function g(e) {
         const { theme: a } = e,
           r = h();
         return n.createElement(
@@ -415,7 +417,7 @@
           (0, l.Xx)("#YIR_MM_Generic_Action"),
         );
       }
-      function g(e) {
+      function p(e) {
         return n.createElement(
           "svg",
           Object.assign(

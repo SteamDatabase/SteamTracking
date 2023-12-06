@@ -3012,6 +3012,16 @@
                     br: a.FE.readBool,
                     bw: a.Xc.writeBool,
                   },
+                  estimated_delivery_soonest_business_days: {
+                    n: 17,
+                    br: a.FE.readUint32,
+                    bw: a.Xc.writeUint32,
+                  },
+                  estimated_delivery_latest_business_days: {
+                    n: 18,
+                    br: a.FE.readUint32,
+                    bw: a.Xc.writeUint32,
+                  },
                 },
               }),
             H.sm_m

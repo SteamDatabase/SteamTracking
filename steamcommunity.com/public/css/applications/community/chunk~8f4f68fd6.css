@@ -103,15 +103,17 @@
 .standardtemplates_StandardTemplateContainer_1adpx {
   cursor: pointer;
 }
-.standardtemplates_StandardTemplateContainer_1adpx:hover,
-.standardtemplates_StandardTemplateContainer_1adpx.gpfocus {
+.BasicUI .standardtemplates_StandardTemplateContainer_1adpx:hover,
+.BasicUI .standardtemplates_StandardTemplateContainer_1adpx.gpfocus {
   background-color: #3d4450;
   animation-name: standardtemplates_ItemFocusAnim-darkerGrey_3uRWs;
   z-index: 1;
 }
-.standardtemplates_StandardTemplateContainer_1adpx:hover
+.BasicUI
+  .standardtemplates_StandardTemplateContainer_1adpx:hover
   .standardtemplates_Timestamp_2vSvC,
-.standardtemplates_StandardTemplateContainer_1adpx.gpfocus
+.BasicUI
+  .standardtemplates_StandardTemplateContainer_1adpx.gpfocus
   .standardtemplates_Timestamp_2vSvC {
   color: #67707b;
 }
@@ -1096,15 +1098,17 @@
 .shorttemplates_StandardTemplateContainer_3y65Y {
   cursor: pointer;
 }
-.shorttemplates_StandardTemplateContainer_3y65Y:hover,
-.shorttemplates_StandardTemplateContainer_3y65Y.gpfocus {
+.BasicUI .shorttemplates_StandardTemplateContainer_3y65Y:hover,
+.BasicUI .shorttemplates_StandardTemplateContainer_3y65Y.gpfocus {
   background-color: #3d4450;
   animation-name: shorttemplates_ItemFocusAnim-darkerGrey_11elP;
   z-index: 1;
 }
-.shorttemplates_StandardTemplateContainer_3y65Y:hover
+.BasicUI
+  .shorttemplates_StandardTemplateContainer_3y65Y:hover
   .shorttemplates_Timestamp_3OOgm,
-.shorttemplates_StandardTemplateContainer_3y65Y.gpfocus
+.BasicUI
+  .shorttemplates_StandardTemplateContainer_3y65Y.gpfocus
   .shorttemplates_Timestamp_3OOgm {
   color: #67707b;
 }
@@ -2143,15 +2147,17 @@
 .steamtemplates_StandardTemplateContainer_3zt0r {
   cursor: pointer;
 }
-.steamtemplates_StandardTemplateContainer_3zt0r:hover,
-.steamtemplates_StandardTemplateContainer_3zt0r.gpfocus {
+.BasicUI .steamtemplates_StandardTemplateContainer_3zt0r:hover,
+.BasicUI .steamtemplates_StandardTemplateContainer_3zt0r.gpfocus {
   background-color: #3d4450;
   animation-name: steamtemplates_ItemFocusAnim-darkerGrey_glTTS;
   z-index: 1;
 }
-.steamtemplates_StandardTemplateContainer_3zt0r:hover
+.BasicUI
+  .steamtemplates_StandardTemplateContainer_3zt0r:hover
   .steamtemplates_Timestamp_3L215,
-.steamtemplates_StandardTemplateContainer_3zt0r.gpfocus
+.BasicUI
+  .steamtemplates_StandardTemplateContainer_3zt0r.gpfocus
   .steamtemplates_Timestamp_3L215 {
   color: #67707b;
 }

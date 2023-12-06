@@ -58,7 +58,6 @@
             "div",
             { className: o },
             l.createElement(E.V, { size: "medium" }),
-            ";",
           );
         if (2 == s || !r.GetName())
           return l.createElement("div", {

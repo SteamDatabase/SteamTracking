@@ -33,81 +33,91 @@
       "use strict";
       n.r(t),
         n.d(t, {
-          GreenEnvelope: () => h,
-          default: () => V,
-          useSteamNotifications: () => y,
+          GreenEnvelope: () => M,
+          default: () => O,
+          useSteamNotifications: () => T,
         });
       var i = n(33940),
         o = n(89526),
-        r = n(711),
+        r = n(701),
+        s = n(711),
         l = n(19304),
-        s = n(14826),
-        a = n(40103),
-        c = n(15937),
-        u = n.n(c),
-        m = n(44973),
+        a = n(14826),
+        c = n(40103),
+        m = n(15937),
+        u = n.n(m),
+        d = n(44973),
         f = n(77427),
-        d = n(16826),
-        _ = n(83315),
+        _ = n(16826),
+        p = n(83315),
         v = n(15757),
-        p = n(40442),
-        E = n(27070),
-        g = n(41576);
-      const N = new r.tL();
-      function h(e) {
+        N = n(40442),
+        h = n(27070),
+        g = n(41576),
+        y = n(47742),
+        E = n(19934);
+      const b = new s.tL();
+      function M(e) {
         const { bResponsiveHeader: t, notifications: n } = e;
         o.useEffect(() => {
-          n && !N.m_bLoaded && N.ProcessNewNotificationPayload(n);
+          n && !b.m_bLoaded && b.ProcessNewNotificationPayload(n);
         }, [n]);
-        const l = (0, E.bY)();
+        const r = (0, h.bY)();
         (0, o.useEffect)(() => {
-          N.setTransport(l),
+          b.setTransport(r),
             (window.RefreshSteamNotifications = () =>
               (function (e) {
                 return (0, i.mG)(this, void 0, void 0, function* () {
                   let t = null;
                   try {
-                    t = yield (0, r.gQ)(
+                    t = yield (0, s.gQ)(
                       e,
-                      m.L7.steamid,
-                      (0, p.jM)(m.De.LANGUAGE),
+                      d.L7.steamid,
+                      (0, N.jM)(d.De.LANGUAGE),
                       !1,
                     );
                   } catch (e) {}
-                  t && N.ProcessNewNotificationPayload(t);
+                  t && b.ProcessNewNotificationPayload(t);
                 });
-              })(l));
-        }, [l]);
-        const s = y();
+              })(r));
+        }, [r]);
+        const l = T();
         return t
           ? o.createElement(
               o.Fragment,
               null,
-              o.createElement(C, null),
-              o.createElement(B, null),
+              o.createElement(k, null),
+              o.createElement(I, null),
             )
-          : o.createElement(M, { nTotalUnviewed: s.nUnviewed });
+          : o.createElement(U, { nTotalUnviewed: l.nUnviewed });
       }
-      function y() {
-        return (0, _.SZ)(() => ({
-          notifications: N.m_rgNotificationRollups,
-          summary: Object.assign({}, N.m_summary),
-          loaded: N.m_bLoaded,
-          nUnviewed: N.m_nUnviewed,
+      function T() {
+        return (0, p.SZ)(() => ({
+          notifications: b.m_rgNotificationRollups,
+          summary: b.m_summary,
+          loaded: b.m_bLoaded,
+          nUnviewed: b.m_nUnviewed,
         }));
       }
-      function b() {
-        return y().notifications.filter((e) => !(0, r.sA)(e.item));
+      function B() {
+        const e = T(),
+          t = (0, y.M)(),
+          n = (0, E.X1)(t),
+          i = (0, E.T8)();
+        return e.notifications.filter((e) => {
+          const t = (0, s.nM)(e.type);
+          return !(0, E.Bu)(n.data, t.eFeature, i) && !(0, s.sA)(e.item);
+        });
       }
-      function M(e) {
+      function U(e) {
         const { nTotalUnviewed: t } = e,
           n = o.useRef(),
-          i = b(),
+          i = B(),
           [r, s] = o.useState(u().AnimateBell);
         o.useEffect(() => {
           n.current ||
-            ((n.current = (0, a.yV)(
-              o.createElement(T, { popupRef: n }),
+            ((n.current = (0, c.yV)(
+              o.createElement(L, { popupRef: n }),
               document.getElementById("green_envelope_menu_root"),
               {
                 bPreferPopLeft: !0,
@@ -120,7 +130,7 @@
           e && (e.style.cssText = "background-color: rgba(0,0,0,0)"),
             window.setTimeout(() => s(null), 2e3);
         }, []);
-        const c = o.useCallback(
+        const a = o.useCallback(
           (e) => {
             var t;
             !e &&
@@ -131,7 +141,7 @@
         );
         return o.createElement(
           g.U,
-          { trigger: "repeated", onVisibilityChange: c },
+          { trigger: "repeated", onVisibilityChange: a },
           o.createElement(
             "div",
             {
@@ -139,7 +149,7 @@
                 if (!n.current.visible) {
                   n.current.Show();
                   -1 != i.findIndex((e) => !e.item.viewed) &&
-                    N.MarkAllItemsViewed();
+                    b.MarkAllItemsViewed();
                 }
               },
               id: "green_envelope_menu_root",
@@ -150,11 +160,11 @@
                 r,
               ),
             },
-            o.createElement(d.Tx5, { className: u().SVGNotifications }),
+            o.createElement(_.Tx5, { className: u().SVGNotifications }),
           ),
         );
       }
-      const T = (e) => {
+      const L = (e) => {
           var t;
           const { popupRef: n } = e,
             i = o.useRef(),
@@ -186,27 +196,28 @@
                   : e.Hide();
               },
             },
-            o.createElement(U, null),
+            o.createElement(w, null),
             o.createElement(
               "div",
               {
                 className: (0, l.Z)(u().NotificationsMenuScrollable, a),
                 ref: i,
               },
+              o.createElement(k, null),
               o.createElement(C, null),
-              o.createElement(A, null),
+              o.createElement(R, null),
             ),
           );
         },
-        U = () => {
-          const e = `${m.De.COMMUNITY_BASE_URL}profiles/${m.L7.steamid}/notifications`;
+        w = () => {
+          const e = `${d.De.COMMUNITY_BASE_URL}profiles/${d.L7.steamid}/notifications`;
           return o.createElement(
             "div",
             { className: (0, l.Z)(u().NotificationHeader) },
             o.createElement(
               "div",
               { className: u().AllNotificationsTitle },
-              (0, s.Xx)("#NotificationsMenu_Title"),
+              (0, a.Xx)("#NotificationsMenu_Title"),
             ),
             o.createElement(
               "a",
@@ -214,13 +225,13 @@
               o.createElement(
                 "div",
                 { className: u().AllNotificationsButton },
-                (0, s.Xx)("#NotificationsMenu_ViewAll"),
+                (0, a.Xx)("#NotificationsMenu_ViewAll"),
               ),
             ),
           );
         },
-        B = () => {
-          const e = `${m.De.COMMUNITY_BASE_URL}profiles/${m.L7.steamid}/notifications`;
+        I = () => {
+          const e = `${d.De.COMMUNITY_BASE_URL}profiles/${d.L7.steamid}/notifications`;
           return o.createElement(
             "div",
             {
@@ -235,143 +246,146 @@
               o.createElement(
                 "div",
                 { className: u().AllNotificationsButton },
-                (0, s.Xx)("#NotificationsMenu_ViewAll"),
+                (0, a.Xx)("#NotificationsMenu_ViewAll"),
               ),
             ),
           );
         };
-      function S(e, t, n) {
+      function A(e, t, n) {
         t.read ||
           (n && 0 != n.button && 1 != n.button) ||
-          N.MarkItemRead(t.notification_id),
+          b.MarkItemRead(t.notification_id),
           e();
       }
-      function A() {
-        const e = y(),
-          t = b();
-        return t.length || (0, r.ft)(e.summary)
-          ? o.createElement(
+      function C() {
+        const e = B();
+        return 0 == e.length
+          ? null
+          : o.createElement(
               "div",
               { className: u().NotificationsMenuEntriesContainer },
-              t.map((e, t) =>
+              e.map((e, t) =>
                 o.createElement(v.RW, {
                   key: t,
                   rollup: e,
-                  onNotificationClick: S,
+                  onNotificationClick: A,
                   uimode: 3,
                   location: f.IS.Tray,
                 }),
               ),
-            )
-          : o.createElement(G, null);
+            );
       }
-      function C() {
+      const S = [
+        {
+          fnUrl: () =>
+            `${d.De.COMMUNITY_BASE_URL}profiles/${d.L7.steamid}/inventory/#pending_gifts`,
+          countItem: "pending_gifts",
+          icon: r.ncs,
+          strLocToken: "#Notification_NewGiftsPinned_Body",
+          feature: 1,
+        },
+        {
+          fnUrl: () =>
+            `${d.De.COMMUNITY_BASE_URL}profiles/${d.L7.steamid}/home/invites`,
+          countItem: "pending_invites",
+          icon: r.yBp,
+          strLocToken: "#Notification_FriendInvitePinned_Body",
+          feature: 4,
+        },
+        {
+          fnUrl: () =>
+            `${d.De.COMMUNITY_BASE_URL}profiles/${d.L7.steamid}/notifications#comments`,
+          countItem: "comments",
+          icon: r.svY,
+          strLocToken: "#Notification_NewCommentPinned_Body",
+          feature: 2,
+        },
+        {
+          fnUrl: () =>
+            `${d.De.COMMUNITY_BASE_URL}profiles/${d.L7.steamid}/inventory`,
+          countItem: "inventory_items",
+          icon: r.F8F,
+          strLocToken: "#Notification_NewItemAnnouncementPinned_Body",
+          feature: 3,
+        },
+        {
+          fnUrl: () =>
+            `${d.De.COMMUNITY_BASE_URL}profiles/${d.L7.steamid}/tradeoffers`,
+          countItem: "trade_offers",
+          icon: r.hoX,
+          strLocToken: "#Notification_NewTradeOffersPinned_Body",
+          feature: 6,
+        },
+        {
+          fnUrl: () =>
+            `${d.De.COMMUNITY_BASE_URL}profiles/${d.L7.steamid}/gamenotifications`,
+          countItem: "async_game_updates",
+          icon: r.ydL,
+          strLocToken: "#Notification_NewAsyncGamePinned_Body",
+        },
+        {
+          fnUrl: () => `${d.De.COMMUNITY_BASE_URL}my/moderatormessages`,
+          countItem: "moderator_messages",
+          icon: _.dqu,
+          strLocToken: "#Notification_NewModeratorMessagePinned_Body",
+          feature: 2,
+        },
+        {
+          fnUrl: () => `${d.De.HELP_BASE_URL}wizard/HelpRequests`,
+          countItem: "help_request_replies",
+          icon: r.t6e,
+          strLocToken: "#Notification_NewHelpRequestRepliesPinned_Body",
+        },
+        {
+          fnUrl: () => `${d.De.STORE_BASE_URL}account/familymanagement`,
+          countItem: "family_invites",
+          icon: r.ui7,
+          strLocToken: "#Notification_FamilyInvitePinned_Body",
+        },
+      ];
+      function k() {
+        const e = T();
         return o.createElement(
-          "div",
+          o.Fragment,
           null,
-          o.createElement(w, null),
-          o.createElement(O, null),
-          o.createElement(L, null),
-          o.createElement(R, null),
-          o.createElement(D, null),
-          o.createElement(I, null),
-          o.createElement(H, null),
-          o.createElement(k, null),
-          o.createElement($, null),
+          S.map((t) =>
+            o.createElement(v.sz, {
+              key: t.countItem,
+              url: t.fnUrl(),
+              count: e.summary[t.countItem],
+              icon: t.icon,
+              strLocToken: t.strLocToken,
+              eFeature: t.feature,
+            }),
+          ),
         );
       }
-      function w() {
-        const e = y(),
-          t = `${m.De.COMMUNITY_BASE_URL}profiles/${m.L7.steamid}/inventory/#pending_gifts`;
-        return o.createElement(v.wY, {
-          url: t,
-          count: e.summary.pending_gifts,
-        });
-      }
-      function L() {
-        const e = y(),
-          t = `${m.De.COMMUNITY_BASE_URL}profiles/${m.L7.steamid}/notifications#comments`;
-        return o.createElement(v.DY, { url: t, count: e.summary.comments });
-      }
-      function O() {
-        const e = y(),
-          t = `${m.De.COMMUNITY_BASE_URL}profiles/${m.L7.steamid}/home/invites`;
-        return o.createElement(v.b9, {
-          url: t,
-          count: e.summary.pending_invites,
-        });
-      }
       function R() {
-        const e = y(),
-          t = `${m.De.COMMUNITY_BASE_URL}profiles/${m.L7.steamid}/inventory`;
-        return o.createElement(v.TO, {
-          url: t,
-          count: e.summary.inventory_items,
-        });
-      }
-      function D() {
-        const e = y(),
-          t = `${m.De.COMMUNITY_BASE_URL}profiles/${m.L7.steamid}/tradeoffers`;
-        return o.createElement(v.OU, { url: t, count: e.summary.trade_offers });
-      }
-      function I() {
-        const e = y(),
-          t = `${m.De.COMMUNITY_BASE_URL}profiles/${m.L7.steamid}/gamenotifications`;
-        return o.createElement(v.Lo, {
-          url: t,
-          count: e.summary.async_game_updates,
-        });
-      }
-      function k() {
-        const e = y(),
-          t = `${m.De.HELP_BASE_URL}wizard/HelpRequests`;
-        return o.createElement(v.ZS, {
-          url: t,
-          count: e.summary.help_request_replies,
-        });
-      }
-      function H() {
-        const e = y(),
-          t = `${m.De.COMMUNITY_BASE_URL}my/moderatormessages`;
-        return o.createElement(v.V2, {
-          url: t,
-          count: e.summary.moderator_messages,
-        });
-      }
-      function $() {
-        const e = y(),
-          t = `${m.De.STORE_BASE_URL}account/familymanagement`;
-        return o.createElement(v.ij, {
-          url: t,
-          count: e.summary.pending_family_invites,
-        });
-      }
-      function G() {
         return o.createElement(
           "div",
           { className: u().EmptyNotificationsCtn },
           o.createElement(
             "div",
             { className: u().EmptyNotificationsTitle },
-            (0, s.Xx)("#NotificationsList_EmptyTitle_New"),
+            (0, a.Xx)("#NotificationsList_EmptyTitle_New"),
           ),
           o.createElement(
             "div",
             { className: u().EmptyNotificationsBody },
-            (0, s.Xx)("#NotificationsList_EmptyBody"),
+            (0, a.Xx)("#NotificationsList_EmptyBody"),
           ),
         );
       }
-      const V = h;
+      const O = M;
     },
     41576: (e, t, n) => {
       "use strict";
-      n.d(t, { U: () => s });
+      n.d(t, { U: () => l });
       var i = n(33940),
         o = n(89526),
         r = n(60161),
-        l = n(4306);
-      class s extends o.Component {
+        s = n(4306);
+      class l extends o.Component {
         constructor() {
           super(...arguments),
             (this.m_observer = null),
@@ -409,7 +423,8 @@
           if (this.m_bPreviouslyIntersecting && this.BTriggerOnce()) return;
           this.m_observer &&
             e &&
-            e.rootMargin != this.m_observer.rootMargin &&
+            (e.rootMargin != this.m_observer.rootMargin ||
+              e.thresholds != this.m_observer.thresholds) &&
             this.DestroyObserver();
           let t = this.m_refElement.current;
           if (
@@ -421,7 +436,8 @@
           ) {
             let e = { root: this.FindScrollableAncestor(t) };
             this.props.rootMargin && (e.rootMargin = this.props.rootMargin),
-              (this.m_observer = (0, l.Gt)(t, this.OnIntersection, e));
+              this.props.thresholds && (e.threshold = this.props.thresholds),
+              (this.m_observer = (0, s.Gt)(t, this.OnIntersection, e));
           }
           this.m_observer &&
             t &&
@@ -436,7 +452,7 @@
             return (
               "scroll" == t ||
               "auto" == t ||
-              !!e.classList.contains(s.GetScrollableClassname())
+              !!e.classList.contains(l.GetScrollableClassname())
             );
           });
         }
@@ -458,9 +474,9 @@
               onVisibilityChange: t,
               rootMargin: n,
               trigger: r,
-              bHorizontal: l,
+              bHorizontal: s,
             } = e,
-            s = (0, i._T)(e, [
+            l = (0, i._T)(e, [
               "onVisibilityChange",
               "rootMargin",
               "trigger",
@@ -468,12 +484,12 @@
             ]);
           return o.createElement(
             "div",
-            Object.assign({ ref: this.m_refElement }, s),
+            Object.assign({ ref: this.m_refElement }, l),
             this.props.children,
           );
         }
       }
-      (0, i.gn)([l.ak], s.prototype, "OnIntersection", null);
+      (0, i.gn)([s.ak], l.prototype, "OnIntersection", null);
     },
   },
 ]);

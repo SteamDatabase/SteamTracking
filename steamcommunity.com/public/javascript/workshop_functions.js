@@ -1509,3 +1509,86 @@ function GamepadYouTubeVideoToggleMute( ytplayer )
 	}
 }
 
+function DeleteSavedWorkshopSearchQuery( appid, queryid )
+{
+	var dialog = ShowConfirmDialog( 'Delete', 'Are you sure you want to delete this saved search query?' );
+	dialog.done( function() {
+		$J.post( 'https://steamcommunity.com/sharedfiles/ajaxsavedwebquerydelete', { 'sessionid' : g_sessionID, 'appid': appid, 'queryid': queryid } )
+		.done( function() {
+			top.location.reload();
+		} ).fail( function() {
+			ShowAlertDialog( 'Error', 'Failed to delete your saved search query. Please try again later.' );
+		} );
+	} );
+}
+
+
+function SaveWorkshopSearchQuery( appid, params )
+{
+	$J.get( 'https://steamcommunity.com/sharedfiles/ajaxsavedwebqueriesget/', { appid: appid } )
+		.done( function( json ) {
+		if ( json.success != '1' )
+		{
+			ShowAlertDialog( 'Error', 'Unable to retrieve your saved search queries!' );
+			return;
+		}
+
+		params['sessionid'] = g_sessionID;
+		params['appid'] = appid;
+		params['queryid'] = 0;
+
+		var rgModalParams = { 'inputMaxSize': 45 };
+		var dialog = ShowPromptDialog( 'Save Your Search Query', 'Your search query name:', 'Save Query', null, rgModalParams );
+		var input = dialog.m_$Content.find( 'input' );
+		input.select();
+
+		if ( json.queries && json.queries.length != 0 )
+		{
+			var container = $J( '<div/>', { class: 'newmodal_prompt_description saved_workshop_query_dialog' } );
+			container.append( $J( '<div/>', { text: 'Select an existing search query to update it.' } ) );
+
+			var queries = $J( '<div/>' );
+			var select = $J( '<select/>' );
+			select.on( 'change', function() {
+				params['queryid'] = this.value;
+				if ( this.value != 0 )
+				{
+					var selectedText = $J( this ).find("option:selected").text();
+					input.val( selectedText );
+				}
+			} );
+
+			var newOption = $J( '<option/>', { value: 0, text: '<New Saved Search>' } );
+			select.append( newOption );
+			for ( var i = 0; i < json.queries.length; ++i )
+			{
+				var query = json.queries[i];
+				var option = $J( '<option/>', { value: query.queryid, text: query.query_name } );
+				select.append( option );
+			}
+
+			queries.append( $J( "<br/>" ) );
+			queries.append( select );
+
+			container.append( queries );
+			input.parent().parent().append( container );
+		}
+
+		dialog.done( function( queryName ) {
+			queryName = v_trim( queryName );
+			if ( queryName.length == 0 )
+				return;
+
+			params['queryName'] = queryName;
+
+			$J.post( 'https://steamcommunity.com/sharedfiles/ajaxsavedwebqueryupdate', params )
+				.done( function() {
+					ShowAlertDialog( 'Saved!', 'Saved your search query' );
+				} ).fail( function() {
+				ShowAlertDialog( 'Error', 'There was a problem trying to save your search query.  Please try again later.' );
+			} );
+		} );
+
+	} );
+}
+

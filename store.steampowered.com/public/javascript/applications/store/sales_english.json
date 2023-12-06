@@ -546,7 +546,7 @@
     "YIR_Compare_PlayerProgress_PlayedGames_Label_third": "%1$s played %2$s games",
     "YIR_Compare_PlayerProgress_LongestStreak_Label_second": "Your longest streak was %1$s days",
     "YIR_Compare_PlayerProgress_LongestStreak_Label_third": "%1$s's longest streak was %2$s days",
-    "YIR_Compare_PlayerProgress_Steam_Avg": "Steam Average %1$s",
+    "YIR_Compare_PlayerProgress_Steam_Avg": "Steam Median %1$s",
     "YIR_Compare_PlayerProgress_Steam_Top": "Top %1$s%",
     "YIR_Compare_NewGames_Flavor": "New Releases",
     "YIR_Compare_ComfortGames_Flavor": "Recent Favorites",

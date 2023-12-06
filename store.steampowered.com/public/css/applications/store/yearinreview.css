@@ -1,3 +1,37 @@
+@keyframes yirlanding_ElementFadeIn_czbvk {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateZ(0px);
+  }
+}
+@keyframes yirlanding_BadgeBoxIntro_cn3fL {
+  0% {
+    transform: translateY(100px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes yirlanding_BadgeBarFiller_3FOBY {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+@keyframes yirlanding_Appear_1sCZq {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 body.v6 {
   background: #0e1014;
 }
@@ -48,6 +82,7 @@ body.v6 {
 @media screen and (max-width: 620px) {
   .yirlanding_HeaderCtn_39_9J {
     flex-direction: column;
+    align-items: center;
   }
 }
 .yirlanding_HeaderCtn_39_9J .yirlanding_RewindHeader_1wMXR {
@@ -59,11 +94,18 @@ body.v6 {
   flex-direction: column;
   margin-bottom: 50px;
 }
+@media screen and (max-width: 620px) {
+  .yirlanding_HeaderCtn_39_9J .yirlanding_RewindHeader_1wMXR {
+    align-items: center;
+    text-align: center;
+  }
+}
 .yirlanding_HeaderCtn_39_9J
   .yirlanding_RewindHeader_1wMXR
   .yirlanding_AvatarName_18fA1 {
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 .yirlanding_HeaderCtn_39_9J
   .yirlanding_RewindHeader_1wMXR
@@ -74,6 +116,13 @@ body.v6 {
   border-radius: 6px;
   box-sizing: border-box;
 }
+@media screen and (max-width: 500px) {
+  .yirlanding_HeaderCtn_39_9J
+    .yirlanding_RewindHeader_1wMXR
+    .yirlanding_UserAvatar_Tfeqo {
+    margin-right: 0px;
+  }
+}
 .yirlanding_HeaderCtn_39_9J
   .yirlanding_RewindHeader_1wMXR
   .yirlanding_UserAvatar_Tfeqo
@@ -83,7 +132,7 @@ body.v6 {
 }
 @media screen and (max-width: 500px) {
   .yirlanding_HeaderCtn_39_9J .yirlanding_RewindHeader_1wMXR {
-    font-size: 3em;
+    font-size: 4em;
     line-height: 1em;
     margin-bottom: 0px;
   }
@@ -111,6 +160,10 @@ body.v6 {
   color: #fff;
   text-align: center;
   text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  transform: translateY(-30px);
+  opacity: 0;
+  animation: yirlanding_Appear_1sCZq 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: 500ms;
 }
 .yirlanding_SectionSubTitle_3zsxW {
   font-size: clamp(16px, 2em, 32px);
@@ -120,8 +173,13 @@ body.v6 {
   text-align: center;
   margin-bottom: 3vw;
   padding-top: 20px;
+  padding-bottom: 3vw;
   box-sizing: border-box;
   text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  transform: translateY(-30px);
+  opacity: 0;
+  animation: yirlanding_Appear_1sCZq 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: 1.5s;
 }
 @media screen and (max-width: 500px) {
   .yirlanding_SectionSubTitle_3zsxW {
@@ -132,7 +190,7 @@ body.v6 {
 .yirlanding_SummaryArea_3ollv {
   position: relative;
   width: 95vw;
-  margin: 9vw auto;
+  margin: 5vw auto;
   box-sizing: border-box;
 }
 @media screen and (max-width: 620px) {
@@ -177,6 +235,8 @@ body.v6 {
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
     height: 400vw;
     max-height: fit-content;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }
 .yirlanding_SummaryGridSparse_32Oxt {
@@ -215,6 +275,7 @@ body.v6 {
 .yirlanding_GridItem_2VmQC.yirlanding_OverviewBlock_e5tza
   .yirlanding_BackgroundImage_2UVYU {
   filter: opacity(0.5);
+  mix-blend-mode: soft-light;
 }
 .yirlanding_GridItem_2VmQC.yirlanding_StreakBlock_3VDFE
   .yirlanding_SummaryBlockHugeNumCtn_2jeQG
@@ -257,6 +318,28 @@ body.v6 {
   border-radius: 12px;
   box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.8);
   align-items: center;
+  transform: translateY(-30px);
+  opacity: 0;
+  animation: yirlanding_Appear_1sCZq 500ms ease forwards;
+  animation-delay: 2s;
+}
+.yirlanding_SummaryCtn_9eVnU:nth-child(1) {
+  animation-delay: 2.2s;
+}
+.yirlanding_SummaryCtn_9eVnU:nth-child(2) {
+  animation-delay: 2.4s;
+}
+.yirlanding_SummaryCtn_9eVnU:nth-child(3) {
+  animation-delay: 2.6s;
+}
+.yirlanding_SummaryCtn_9eVnU:nth-child(4) {
+  animation-delay: 2.8s;
+}
+.yirlanding_SummaryCtn_9eVnU:nth-child(5) {
+  animation-delay: 3s;
+}
+.yirlanding_SummaryCtn_9eVnU:nth-child(6) {
+  animation-delay: 3.2s;
 }
 .yirlanding_SummaryCtn_9eVnU .yirlanding_SubtleBorder_3AqWG {
   position: absolute;
@@ -274,7 +357,7 @@ body.v6 {
 }
 .yirlanding_SummaryCtn_9eVnU.yirlanding_GridItem_2VmQC
   .yirlanding_StatBox_3vEOC {
-  text-align: center;
+  text-align: left;
 }
 @media screen and (max-width: 620px) {
   .yirlanding_SummaryCtn_9eVnU.yirlanding_GridItem_2VmQC
@@ -407,7 +490,7 @@ body.v6 {
   display: flex;
   flex-direction: row;
   width: 88%;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
   z-index: 1;
 }
@@ -425,7 +508,8 @@ body.v6 {
   right: 0;
   bottom: 0;
   z-index: 0;
-  filter: saturate(0.4) opacity(0.6);
+  filter: saturate(0.6) opacity(0.6);
+  mix-blend-mode: soft-light;
   border-radius: 12px;
   transition-property: transform, filter;
   transition-duration: 0.32s;
@@ -484,7 +568,7 @@ body.v6 {
   .yirlanding_SummaryCtn_9eVnU
     .yirlanding_SummaryBlockTitle_3heph
     .yirlanding_RewindHeader_1wMXR {
-    margin-top: 0px;
+    margin-top: 8px;
   }
 }
 .yirlanding_SummaryCtn_9eVnU
@@ -519,14 +603,20 @@ body.v6 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-end;
+  gap: 10%;
   width: 88%;
   flex: 2;
   z-index: 1;
 }
 .yirlanding_SummaryCtn_9eVnU .yirlanding_LongestStreakStat_1f0il {
   flex: 1;
+}
+.yirlanding_SummaryCtn_9eVnU
+  .yirlanding_LongestStreakStat_1f0il
+  .yirlanding_BigText_3FbVj {
+  padding-bottom: 30px;
 }
 .yirlanding_StatBox_3vEOC {
   display: flex;
@@ -551,19 +641,28 @@ body.v6 {
 }
 .yirlanding_StatBox_3vEOC.yirlanding_Big_1l6lt {
   width: 100%;
-  align-items: flex-end;
+  align-items: flex-start;
   flex-grow: 1;
   position: absolute;
   right: 0;
-  top: clamp(56px, 6vh, 64px);
 }
 .yirlanding_StatBox_3vEOC.yirlanding_Big_1l6lt .yirlanding_BigNum_36SHE {
-  font-size: clamp(30px, 6.5vw, 120px);
-  line-height: clamp(36px, 6vw, 126px);
+  font-size: clamp(42px, 8vw, 160px);
+  line-height: clamp(52px, 10vw, 180px);
+  font-weight: 800;
+  color: #fff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+.yirlanding_StatBox_3vEOC.yirlanding_Big_1l6lt .yirlanding_SmallText_1oy_z {
+  font-size: clamp(16px, 1.5vw, 30px);
+  line-height: clamp(19px, 1.8vw, 36px);
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
 }
 .yirlanding_StatBox_3vEOC .yirlanding_BigText_3FbVj {
   font-size: clamp(13px, 1.1vw, 21px);
-  line-height: clamp(16px, 1.1vw, 25px);
+  line-height: clamp(22px, 1.1vw, 25px);
   color: #fff;
 }
 .yirlanding_SummaryBlockHugeNumCtn_2jeQG {
@@ -753,6 +852,9 @@ body.v6 {
 }
 .yirlanding_BottomCtn_2mhHS {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .steamavatar_avatarHolder_1YGAH {
   height: 36px;
@@ -936,6 +1038,12 @@ body.v6 {
   }
   100% {
     width: 90%;
+  }
+}
+@keyframes yirstatsbesidegametiles_Appear_7F-Qm {
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 .yirstatsbesidegametiles_Section_3Q6xY {
@@ -1185,6 +1293,12 @@ body.v6 {
     width: 90%;
   }
 }
+@keyframes yircomponents_Appear_ASaCP {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 .yircomponents_TotalHoursContainer_26dqO {
   display: flex;
   flex-direction: column;
@@ -1282,7 +1396,27 @@ html.responsive.touch .yircomponents_TopGameBlockContainer_1o-Oa {
   .yircomponents_IntroLine_3uV4W,
 .yircomponents_TopGameBlockContainer_1o-Oa.yircomponents_OddGradient_FZUw6
   .yircomponents_Title_2geom {
-  text-shadow: 2px 2px 13px rgba(24, 90, 29, 0.568627451);
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.65);
+  flex-direction: row !important;
+  text-align: left !important;
+  align-self: start !important;
+}
+@media screen and (max-width: 620px) {
+  .yircomponents_TopGameBlockContainer_1o-Oa.yircomponents_OddGradient_FZUw6
+    .yircomponents_BigNum_1cZBW,
+  .yircomponents_TopGameBlockContainer_1o-Oa.yircomponents_OddGradient_FZUw6
+    .yircomponents_NumSubtitle_3vVnX,
+  .yircomponents_TopGameBlockContainer_1o-Oa.yircomponents_OddGradient_FZUw6
+    .yircomponents_IntroLine_3uV4W,
+  .yircomponents_TopGameBlockContainer_1o-Oa.yircomponents_OddGradient_FZUw6
+    .yircomponents_Title_2geom {
+    text-align: center !important;
+    align-self: center !important;
+  }
+}
+.yircomponents_TopGameBlockContainer_1o-Oa.yircomponents_OddGradient_FZUw6
+  .yircomponents_StatsGroup_3nXdD {
+  justify-content: start !important;
 }
 .yircomponents_TopGameBlockContainer_1o-Oa.yircomponents_EvenGradient_3pmx1
   .yircomponents_BigNum_1cZBW,
@@ -1292,7 +1426,7 @@ html.responsive.touch .yircomponents_TopGameBlockContainer_1o-Oa {
   .yircomponents_IntroLine_3uV4W,
 .yircomponents_TopGameBlockContainer_1o-Oa.yircomponents_EvenGradient_3pmx1
   .yircomponents_Title_2geom {
-  text-shadow: 2px 2px 13px rgba(100, 36, 82, 0.568627451);
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.65);
 }
 .yircomponents_SelectedInfoCtn_3lVSa
   .yircomponents_TopGameBlockContainer_1o-Oa {
@@ -1371,6 +1505,8 @@ html.responsive.touch .yircomponents_TopGameBlockContainer_1o-Oa {
 @media screen and (max-width: 500px) {
   .yircomponents_StandardInfoCtn_qUC7C .yircomponents_InfoContentSpacing_1v_Ye {
     width: 90vw;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }
 .yircomponents_StandardInfoCtn_qUC7C .yircomponents_InfoContainer_30H7n {
@@ -1399,6 +1535,9 @@ html.responsive.touch .yircomponents_TopGameBlockContainer_1o-Oa {
   justify-content: center;
   align-items: center;
   font-size: 14px;
+  transition:
+    background,
+    box-shadow 150ms ease;
 }
 .yircomponents_StandardInfoCtn_qUC7C
   .yircomponents_InfoContainer_30H7n
@@ -1406,7 +1545,10 @@ html.responsive.touch .yircomponents_TopGameBlockContainer_1o-Oa {
   .yircomponents_GameLink_3qV5g:hover {
   background: rgba(255, 255, 255, 0.3);
   color: #fff;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  transition:
+    background,
+    box-shadow 150ms ease;
 }
 .yircomponents_StandardInfoCtn_qUC7C
   .yircomponents_InfoContainer_30H7n
@@ -1422,6 +1564,9 @@ html.responsive.touch .yircomponents_TopGameBlockContainer_1o-Oa {
   align-items: center;
   gap: 8px;
   font-size: 14px;
+  transition:
+    background,
+    box-shadow 150ms ease;
   cursor: pointer;
 }
 .yircomponents_StandardInfoCtn_qUC7C
@@ -1430,7 +1575,10 @@ html.responsive.touch .yircomponents_TopGameBlockContainer_1o-Oa {
   .yircomponents_AddToWishlist_2uHs7:hover {
   background: rgba(255, 255, 255, 0.3);
   color: #fff;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  transition:
+    background,
+    box-shadow 150ms ease;
 }
 .yircomponents_StandardInfoCtn_qUC7C
   .yircomponents_InfoContainer_30H7n
@@ -1564,7 +1712,7 @@ html.responsive.touch .yircomponents_TopGameBlockContainer_1o-Oa {
   .yircomponents_NumSubtitle_3vVnX {
   font-size: clamp(12px, 1vw, 16px);
   line-height: clamp(15px, 1vw, 19px);
-  font-weight: 200;
+  font-weight: 500;
   color: rgba(255, 255, 255, 0.6);
 }
 .yircomponents_StandardInfoCtn_qUC7C .yircomponents_ChartStuff_1zE1z {
@@ -1858,6 +2006,58 @@ html.responsive.touch .yircomponents_TopGameBlockContainer_1o-Oa {
 .yircomponents_PlatformDetailsSetup_xEGRx {
   margin-top: 7vw;
 }
+.yircomponents_LongestStreakGamesWrapper_2TFs3 {
+  width: 100%;
+}
+.yircomponents_LongestStreakGamesWrapper_2TFs3.NowVisible
+  .yircomponents_CapsuleCtn_L9qSF {
+  animation-name: yircomponents_Appear_ASaCP;
+  animation-duration: 1s;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  animation-iteration-count: 1;
+  animation-delay: 3.5s;
+  animation-fill-mode: forwards;
+}
+.yircomponents_LongestStreakGamesWrapper_2TFs3.NowVisible
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(1) {
+  animation-delay: 4s;
+}
+.yircomponents_LongestStreakGamesWrapper_2TFs3.NowVisible
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(2) {
+  animation-delay: 4.2s;
+}
+.yircomponents_LongestStreakGamesWrapper_2TFs3.NowVisible
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(3) {
+  animation-delay: 4.4s;
+}
+.yircomponents_LongestStreakGamesWrapper_2TFs3.NowVisible
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(4) {
+  animation-delay: 4.6s;
+}
+.yircomponents_LongestStreakGamesWrapper_2TFs3.NowVisible
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(5) {
+  animation-delay: 4.8s;
+}
+.yircomponents_LongestStreakGamesWrapper_2TFs3.NowVisible
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(6) {
+  animation-delay: 5s;
+}
+.yircomponents_LongestStreakGamesWrapper_2TFs3.NowVisible
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(7) {
+  animation-delay: 5.2s;
+}
+.yircomponents_LongestStreakGamesWrapper_2TFs3.NowVisible
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(8) {
+  animation-delay: 5.4s;
+}
+.yircomponents_LongestStreakGamesWrapper_2TFs3.NowVisible
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(9) {
+  animation-delay: 5.6s;
+}
+.yircomponents_LongestStreakGamesWrapper_2TFs3.NowVisible
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(10) {
+  animation-delay: 5.8s;
+}
 .yircomponents_CapRow_2P__J {
   width: 67vw;
   height: fit-content;
@@ -1865,6 +2065,11 @@ html.responsive.touch .yircomponents_TopGameBlockContainer_1o-Oa {
   flex-direction: row;
   justify-content: center;
   align-items: stretch;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k
+  .yircomponents_CapsuleCtn_L9qSF {
+  opacity: 0;
+  transform: translateY(-20px);
 }
 .yircomponents_CapRow_2P__J .yircomponents_CapsuleCtn_L9qSF {
   display: flex;
@@ -2166,6 +2371,23 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   );
   z-index: -1;
 }
+@keyframes yirbackgroundtiles_TilesAnimation_30Wt5 {
+  0% {
+    transform: rotate(-23deg) translate(-190px, 101px);
+  }
+  100% {
+    transform: rotate(-23deg) translate(-290px, -101px);
+  }
+}
+@keyframes yirbackgroundtiles_FadeInTiles_3pF3M {
+  to {
+    opacity: 1;
+  }
+}
+.yirbackgroundtiles_AllImagesCtn_3mYNn {
+  opacity: 0;
+  animation: yirbackgroundtiles_FadeInTiles_3pF3M 1s ease-out 0.5s 1 forwards;
+}
 .yirbackgroundtiles_AllImages_RxFaO {
   display: flex;
   flex-wrap: wrap;
@@ -2177,6 +2399,8 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   position: absolute;
   z-index: -1;
   filter: saturate(0.2) opacity(0.5);
+  animation: yirbackgroundtiles_TilesAnimation_30Wt5 40s ease 0s alternate
+    infinite;
   -webkit-mask: linear-gradient(180deg, black 58%, rgba(0, 0, 0, 0) 95%),
     radial-gradient(
       48.77% 50.22% at 47% 42.95%,
@@ -2212,7 +2436,8 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   display: block;
   width: 100%;
   height: auto;
-  filter: saturate(0.2) opacity(0.5);
+  opacity: 1;
+  filter: saturate(0.2) opacity(0.2);
 }
 .yirbackgroundtiles_SingleGame_VGWhX {
   position: absolute;
@@ -2276,12 +2501,24 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
     width: 90%;
   }
 }
+@keyframes yirbadges_Appear_CIj8T {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 .yirbadges_TopHonorsCtn_1xRuk {
   width: 100%;
   display: flex;
   flex-direction: column;
   margin-bottom: 50px;
   box-sizing: border-box;
+}
+@media screen and (max-width: 620px) {
+  .yirbadges_TopHonorsCtn_1xRuk {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
 .yirbadges_TopHonorsCtn_1xRuk .yirbadges_BadgeBox_21Ah2 {
   width: 100%;
@@ -2707,6 +2944,14 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   color: #9cc4ff;
   font-weight: bold;
 }
+@keyframes yirbadges_progressBar_3ghXb {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
 .yirbadges_PlayBehaviorContainer_1NBM7 {
   background-color: rgba(0, 0, 0, 0.2);
   width: 100%;
@@ -2778,7 +3023,7 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
 .yirbadges_PlayBehaviorContainer_1NBM7
   .yirbadges_PlayBehaviorSectionSubTitle_3g3Vy {
   font-size: clamp(17px, 2vw, 28px);
-  line-height: clamp(18px, 1em, 36px);
+  line-height: clamp(23px, 1em, 36px);
   padding-top: clamp(12px, 1vw, 20px);
 }
 .yirbadges_PlayBehaviorContainer_1NBM7
@@ -2791,6 +3036,110 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   border-radius: 8px;
   overflow: hidden;
 }
+@media screen and (max-width: 620px) {
+  .yirbadges_PlayBehaviorContainer_1NBM7
+    .yirbadges_PlayerBehaviorProgressCnt_pYgyD {
+    flex-direction: column;
+  }
+}
+.yirbadges_PlayBehaviorContainer_1NBM7
+  .yirbadges_PlayerBehaviorProgressCnt_pYgyD:nth-child(
+    1 of .yirbadges_PlayerBehaviorProgressCnt_pYgyD
+  ).NowVisible
+  .yirbadges_ProgressBarWrapper_2Vweo {
+  animation-delay: 1s;
+}
+.yirbadges_PlayBehaviorContainer_1NBM7
+  .yirbadges_PlayerBehaviorProgressCnt_pYgyD:nth-child(
+    1 of .yirbadges_PlayerBehaviorProgressCnt_pYgyD
+  ).NowVisible
+  .yirbadges_ProgressBar_ImOR1
+  .yirbadges_ProgressBarMid_1yo31 {
+  animation-delay: 1.3s;
+}
+.yirbadges_PlayBehaviorContainer_1NBM7
+  .yirbadges_PlayerBehaviorProgressCnt_pYgyD:nth-child(
+    1 of .yirbadges_PlayerBehaviorProgressCnt_pYgyD
+  ).NowVisible
+  .yirbadges_ProgressLabelsCnt_1AxNL
+  .yirbadges_ProgressSteamAvgLabel_3_bVG {
+  animation-delay: 1.3s;
+}
+.yirbadges_PlayBehaviorContainer_1NBM7
+  .yirbadges_PlayerBehaviorProgressCnt_pYgyD:nth-child(
+    2 of .yirbadges_PlayerBehaviorProgressCnt_pYgyD
+  ).NowVisible
+  .yirbadges_ProgressBarWrapper_2Vweo {
+  animation-delay: 2.3s;
+}
+.yirbadges_PlayBehaviorContainer_1NBM7
+  .yirbadges_PlayerBehaviorProgressCnt_pYgyD:nth-child(
+    2 of .yirbadges_PlayerBehaviorProgressCnt_pYgyD
+  ).NowVisible
+  .yirbadges_ProgressBar_ImOR1
+  .yirbadges_ProgressBarMid_1yo31 {
+  animation-delay: 2.6s;
+}
+.yirbadges_PlayBehaviorContainer_1NBM7
+  .yirbadges_PlayerBehaviorProgressCnt_pYgyD:nth-child(
+    2 of .yirbadges_PlayerBehaviorProgressCnt_pYgyD
+  ).NowVisible
+  .yirbadges_ProgressLabelsCnt_1AxNL
+  .yirbadges_ProgressSteamAvgLabel_3_bVG {
+  animation-delay: 2.6s;
+}
+.yirbadges_PlayBehaviorContainer_1NBM7
+  .yirbadges_PlayerBehaviorProgressCnt_pYgyD:nth-child(
+    3 of .yirbadges_PlayerBehaviorProgressCnt_pYgyD
+  ).NowVisible
+  .yirbadges_ProgressBarWrapper_2Vweo {
+  animation-delay: 3.6s;
+}
+.yirbadges_PlayBehaviorContainer_1NBM7
+  .yirbadges_PlayerBehaviorProgressCnt_pYgyD:nth-child(
+    3 of .yirbadges_PlayerBehaviorProgressCnt_pYgyD
+  ).NowVisible
+  .yirbadges_ProgressBar_ImOR1
+  .yirbadges_ProgressBarMid_1yo31 {
+  animation-delay: 3.9s;
+}
+.yirbadges_PlayBehaviorContainer_1NBM7
+  .yirbadges_PlayerBehaviorProgressCnt_pYgyD:nth-child(
+    3 of .yirbadges_PlayerBehaviorProgressCnt_pYgyD
+  ).NowVisible
+  .yirbadges_ProgressLabelsCnt_1AxNL
+  .yirbadges_ProgressSteamAvgLabel_3_bVG {
+  animation-delay: 3.9s;
+}
+.yirbadges_PlayBehaviorContainer_1NBM7
+  .yirbadges_PlayerBehaviorProgressCnt_pYgyD.NowVisible
+  .yirbadges_ProgressBarWrapper_2Vweo {
+  animation-name: yirbadges_progressBar_3ghXb;
+  animation-duration: 2s;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+.yirbadges_PlayBehaviorContainer_1NBM7
+  .yirbadges_PlayerBehaviorProgressCnt_pYgyD.NowVisible
+  .yirbadges_ProgressBar_ImOR1
+  .yirbadges_ProgressBarMid_1yo31 {
+  animation-name: yirbadges_Appear_CIj8T;
+  animation-duration: 500ms;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+.yirbadges_PlayBehaviorContainer_1NBM7
+  .yirbadges_PlayerBehaviorProgressCnt_pYgyD.NowVisible
+  .yirbadges_ProgressLabelsCnt_1AxNL
+  .yirbadges_ProgressSteamAvgLabel_3_bVG {
+  animation-name: yirbadges_Appear_CIj8T;
+  animation-duration: 500ms;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
 .yirbadges_PlayBehaviorContainer_1NBM7
   .yirbadges_PlayerBehaviorProgressCnt_pYgyD
   .yirbadges_ProgressIcon_3J3rX {
@@ -2799,6 +3148,14 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   background-color: rgba(0, 0, 0, 0.5333333333);
   flex-shrink: 0;
   display: flex;
+}
+@media screen and (max-width: 620px) {
+  .yirbadges_PlayBehaviorContainer_1NBM7
+    .yirbadges_PlayerBehaviorProgressCnt_pYgyD
+    .yirbadges_ProgressIcon_3J3rX {
+    width: 100%;
+    padding: 8px;
+  }
 }
 .yirbadges_PlayBehaviorContainer_1NBM7
   .yirbadges_PlayerBehaviorProgressCnt_pYgyD
@@ -2818,6 +3175,13 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   padding: 0 clamp(16px, 2vw, 32px);
   justify-content: center;
 }
+@media screen and (max-width: 620px) {
+  .yirbadges_PlayBehaviorContainer_1NBM7
+    .yirbadges_PlayerBehaviorProgressCnt_pYgyD
+    .yirbadges_ProgressRightSide_3FXre {
+    padding: clamp(16px, 2vw, 32px);
+  }
+}
 .yirbadges_PlayBehaviorContainer_1NBM7
   .yirbadges_PlayerBehaviorProgressCnt_pYgyD
   .yirbadges_ProgressRightSide_3FXre
@@ -2825,7 +3189,18 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   color: #fff;
   font-size: clamp(16px, 1.8vw, 26px);
   font-weight: 500;
-  margin-bottom: 0px;
+  margin-bottom: 8px;
+  display: flex;
+  gap: 7px;
+  flex-wrap: wrap;
+}
+.yirbadges_PlayBehaviorContainer_1NBM7
+  .yirbadges_PlayerBehaviorProgressCnt_pYgyD
+  .yirbadges_ProgressRightSide_3FXre
+  .yirbadges_ProgressBarWrapper_2Vweo {
+  width: 100%;
+  height: 100%;
+  clip-path: inset(0 100% 0 0);
 }
 .yirbadges_PlayBehaviorContainer_1NBM7
   .yirbadges_PlayerBehaviorProgressCnt_pYgyD
@@ -2851,6 +3226,7 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   top: -25%;
   border-radius: 6px;
   z-index: 2;
+  opacity: 0;
 }
 .yirbadges_PlayBehaviorContainer_1NBM7
   .yirbadges_PlayerBehaviorProgressCnt_pYgyD
@@ -2861,12 +3237,29 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   position: relative;
   justify-content: center;
 }
+@media screen and (max-width: 620px) {
+  .yirbadges_PlayBehaviorContainer_1NBM7
+    .yirbadges_PlayerBehaviorProgressCnt_pYgyD
+    .yirbadges_ProgressRightSide_3FXre
+    .yirbadges_ProgressLabelsCnt_1AxNL {
+    padding-top: 4px;
+  }
+  .yirbadges_PlayBehaviorContainer_1NBM7
+    .yirbadges_PlayerBehaviorProgressCnt_pYgyD
+    .yirbadges_ProgressRightSide_3FXre
+    .yirbadges_ProgressLabelsCnt_1AxNL
+    .yirbadges_ProgressSteamAvgLabel_3_bVG {
+    font-size: clamp(16px, 1.25vw, 24px);
+  }
+}
 .yirbadges_PlayBehaviorContainer_1NBM7
   .yirbadges_PlayerBehaviorProgressCnt_pYgyD
   .yirbadges_ProgressRightSide_3FXre
   .yirbadges_ProgressLabelsCnt_1AxNL
   .yirbadges_ProgressSteamAvgLabel_3_bVG {
   margin-top: 0px;
+  opacity: 0;
+  transform: translateY(5px);
   color: rgba(255, 255, 255, 0.66);
   font-size: clamp(12px, 1.25vw, 24px);
 }
@@ -2983,9 +3376,8 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   .yirbadges_PercentageLabel_1fy0h {
   font-size: clamp(24px, 3vw, 64px);
   font-weight: 600;
-  color: #fff;
+  color: #000;
   z-index: 1;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3333333333);
   position: relative;
 }
 .yirbadges_PlayBehaviorContainer_1NBM7
@@ -2995,7 +3387,7 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   font-size: 16px;
   z-index: 1;
   position: relative;
-  text-align: justify;
+  text-align: left;
 }
 .yirbadges_PlayBehaviorContainer_1NBM7
   .yirbadges_GameNewnessComparisonContainer_2ejw1
@@ -3156,6 +3548,40 @@ div.yirhowyouplayed_DeckContainer_3G2ne .yirhowyouplayed_Disclaimer_1h_am {
     font-size: 12px;
   }
 }
+@keyframes yirlongeststreak_ElementFadeIn_2yUpC {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateZ(0px);
+  }
+}
+@keyframes yirlongeststreak_BadgeBoxIntro_Fpz0E {
+  0% {
+    transform: translateY(100px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes yirlongeststreak_BadgeBarFiller_Oawh_ {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+@keyframes yirlongeststreak_Appear_3KLb3 {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 .yirlongeststreak_Section_32a0u {
   position: relative;
   width: 100%;
@@ -3169,28 +3595,28 @@ div.yirhowyouplayed_DeckContainer_3G2ne .yirhowyouplayed_Disclaimer_1h_am {
     overflow: hidden;
   }
 }
+.yirlongeststreak_SectionTitle_3vl8p {
+  position: relative;
+  font-size: clamp(24px, 3vw, 40px);
+  line-height: clamp(28px, 4vw, 46px);
+  font-weight: 800;
+  color: #fff;
+  text-align: center;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
 .yirlongeststreak_StreakSubTitle_6lD5o {
   font-size: 0.75em;
+}
+.yirlongeststreak_LongestStreakDailyCount_2V5k0 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 .yirlongeststreak_StreakSizeCtn_1uHL0 {
   display: block;
   height: 26px;
   width: 100%;
   box-sizing: border-box;
-}
-.yirlongeststreak_StreakSizeFullBar_3sks_ {
-  width: 100%;
-  height: 3px;
-  position: absolute;
-  top: 28%;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.35);
-  padding-right: 2px;
-}
-@media screen and (max-width: 500px) {
-  .yirlongeststreak_StreakSizeFullBar_3sks_ {
-    width: 1px;
-    top: 32%;
-  }
 }
 .yirlongeststreak_StreakDates_eeemD {
   width: 100%;
@@ -3200,14 +3626,39 @@ div.yirhowyouplayed_DeckContainer_3G2ne .yirhowyouplayed_Disclaimer_1h_am {
   font-size: 0.5em;
   font-weight: 600;
   margin-bottom: 5vh;
+  opacity: 0;
+  transform: translateY(-20px);
 }
-.yirlongeststreak_CapRowTitle_13uJv {
+.yirlongeststreak_StreakDates_eeemD.NowVisible {
+  animation-name: yirlongeststreak_Appear_3KLb3;
+  animation-duration: 2s;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  animation-delay: 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+.yirlongeststreak_LongestStreakGamesWrapper_3ztmU {
+  width: 100%;
+}
+.yirlongeststreak_LongestStreakGamesWrapper_3ztmU
+  .yirlongeststreak_CapRowTitle_13uJv {
   display: block;
   width: 100%;
   margin-bottom: 5px;
   font-size: 1.75em;
   color: #fff;
   text-align: center;
+  opacity: 0;
+  transform: translateY(-20px);
+}
+.yirlongeststreak_LongestStreakGamesWrapper_3ztmU.NowVisible
+  .yirlongeststreak_CapRowTitle_13uJv {
+  animation-name: yirlongeststreak_Appear_3KLb3;
+  animation-duration: 1s;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  animation-delay: 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 .yirlongeststreak_StreakCtn_LC_OK .yirlongeststreak_CapRowCtn_39X62 {
   position: relative;
@@ -3219,11 +3670,60 @@ div.yirhowyouplayed_DeckContainer_3G2ne .yirhowyouplayed_Disclaimer_1h_am {
   padding-bottom: 20px;
   font-size: 2em;
 }
+@keyframes yirlongeststreak_StreakBarAppear_4KjvW {
+  from {
+    clip-path: inset(0 100% 0 100%);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+@keyframes yirlongeststreak_StreakTicksAppear_2_94J {
+  from {
+    clip-path: inset(100% 0 100% 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
 .yirlongeststreak_StreakBarCtn_2z4wN {
   position: relative;
   margin-top: 5vh;
 }
-.yirlongeststreak_StreakTickCtn_3gcpm {
+.yirlongeststreak_StreakBarCtn_2z4wN .yirlongeststreak_StreakSizeFullBar_3sks_ {
+  width: 100%;
+  height: 3px;
+  position: absolute;
+  top: 28%;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.35);
+  padding-right: 2px;
+  clip-path: inset(0 0 0 0);
+}
+@media screen and (max-width: 500px) {
+  .yirlongeststreak_StreakBarCtn_2z4wN
+    .yirlongeststreak_StreakSizeFullBar_3sks_ {
+    width: 1px;
+    top: 32%;
+  }
+}
+.yirlongeststreak_StreakBarCtn_2z4wN.NowVisible
+  .yirlongeststreak_StreakSizeFullBar_3sks_ {
+  animation-name: yirlongeststreak_StreakBarAppear_4KjvW;
+  animation-duration: 2s;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+.yirlongeststreak_StreakBarCtn_2z4wN.NowVisible .yirlongeststreak_Tick_3XaLQ {
+  animation-name: yirlongeststreak_StreakTicksAppear_2_94J;
+  animation-duration: 1s;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  animation-delay: 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+.yirlongeststreak_StreakBarCtn_2z4wN .yirlongeststreak_StreakTickCtn_3gcpm {
   position: absolute;
   top: 4px;
   width: 100%;
@@ -3232,28 +3732,33 @@ div.yirhowyouplayed_DeckContainer_3G2ne .yirhowyouplayed_Disclaimer_1h_am {
   justify-content: space-between;
   align-items: center;
 }
-.yirlongeststreak_Tick_3XaLQ {
+.yirlongeststreak_StreakBarCtn_2z4wN .yirlongeststreak_Tick_3XaLQ {
   width: 1px;
   height: 16px;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.35);
   background-color: #fff;
+  clip-path: inset(100% 0 100% 0);
 }
-.yirlongeststreak_LargerTicks_1hWzh .yirlongeststreak_Tick_3XaLQ {
+.yirlongeststreak_LargerTicks_1hWzh
+  .yirlongeststreak_StreakBarCtn_2z4wN
+  .yirlongeststreak_Tick_3XaLQ {
   width: 3px;
   height: 16px;
   border-radius: 3px;
 }
 @media screen and (max-width: 500px) {
-  .yirlongeststreak_LargerTicks_1hWzh .yirlongeststreak_Tick_3XaLQ {
+  .yirlongeststreak_LargerTicks_1hWzh
+    .yirlongeststreak_StreakBarCtn_2z4wN
+    .yirlongeststreak_Tick_3XaLQ {
     width: 1px;
   }
 }
-.yirlongeststreak_Tick_3XaLQ:first-child,
-.yirlongeststreak_Tick_3XaLQ:last-child {
+.yirlongeststreak_StreakBarCtn_2z4wN .yirlongeststreak_Tick_3XaLQ:first-child,
+.yirlongeststreak_StreakBarCtn_2z4wN .yirlongeststreak_Tick_3XaLQ:last-child {
   height: 26px;
   width: 3px;
 }
-.yirlongeststreak_Tick_3XaLQ:last-child {
+.yirlongeststreak_StreakBarCtn_2z4wN .yirlongeststreak_Tick_3XaLQ:last-child {
   margin-right: -4px;
 }
 .yirlongeststreak_LongestStreakBgImage_szI1U {
@@ -3265,6 +3770,40 @@ div.yirhowyouplayed_DeckContainer_3G2ne .yirhowyouplayed_Disclaimer_1h_am {
   background-repeat: no-repeat;
   background-size: cover;
   background-blend-mode: hard-light;
+}
+@keyframes yirshare_ElementFadeIn_3_CA6 {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateZ(0px);
+  }
+}
+@keyframes yirshare_BadgeBoxIntro_3KDm8 {
+  0% {
+    transform: translateY(100px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes yirshare_BadgeBarFiller_25GQd {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+@keyframes yirshare_Appear_lI6Qf {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 @media screen and (max-width: 500px) {
   .DialogContent.GenericConfirmDialog {
@@ -3292,6 +3831,14 @@ div.yirhowyouplayed_DeckContainer_3G2ne .yirhowyouplayed_Disclaimer_1h_am {
   width: fit-content;
   text-align: center;
   background: rgba(255, 255, 255, 0.2);
+}
+.NowVisible .yirshare_ShareCtn_3wBwg {
+  animation-name: yirshare_ElementFadeIn_3_CA6;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 .yirshare_ShareCtn_3wBwg .yirshare_ShareHeader_j8KV_ {
   font-weight: 800;
@@ -4438,6 +4985,12 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
     width: 90%;
   }
 }
+@keyframes yirachievements_Appear_2HdNk {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 .yirachievements_AchievementsCtn_2LUzg {
   height: fit-content;
   opacity: 0;
@@ -4474,7 +5027,7 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
 .yirachievements_AchievementsCtn_2LUzg
   .yirachievements_AchievementSectionTitleCtn_2zup5
   .yirachievements_AchievementLinkCtn_309iQ:hover {
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
   background: rgba(255, 255, 255, 0.3);
 }
 .yirachievements_AchievementsCtn_2LUzg
@@ -4538,8 +5091,7 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   justify-content: center;
   height: auto;
   max-height: 80px;
-  background: rgba(42, 51, 86, 0.4392156863);
-  border: 1px solid rgba(125, 125, 207, 0.2901960784);
+  background: rgba(255, 255, 255, 0.2);
   padding: 0 8px;
   box-sizing: border-box;
   grid-column-start: 1;
@@ -4628,6 +5180,12 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   }
   100% {
     width: 90%;
+  }
+}
+@keyframes yirscreenshot_Appear_3MN1n {
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 .yirscreenshot_ScreenshotsCtn_HFVMb {
@@ -5022,25 +5580,41 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
 .yir2022_MMFrame_2k7W3.yir2022_MMOverride_1-C7j .yir2022_Description_2SJb0 {
   color: rgba(229, 229, 229, 0.75);
 }
+@keyframes yir2023_scaleBackground_dO6cB {
+  to {
+    background-size: 120%;
+  }
+}
 .yir2023_ImagesCtn_2w-zj {
-  background: linear-gradient(180deg, #a47f3c 30%, #b24c2d 90%, transparent);
+  background: radial-gradient(
+    98.31% 133.89% at 12.99% -30%,
+    #693f00 10%,
+    #33005c 62.6%,
+    #022216 90%,
+    transparent
+  );
+  background-size: 100%;
+  animation: yir2023_scaleBackground_dO6cB forwards;
+  animation-delay: 0s;
+  animation-duration: 2s;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .yir2023_SingleGame_10YwG {
   background: radial-gradient(
     108.31% 162.89% at 18.99% -21.75%,
-    #a47f3c 0%,
-    #b24c2d 52.6%
+    #693f00 0%,
+    #2c0050 52.6%
   );
 }
 .yir2023_SingleGame_10YwG .yir2023_ImageTint_2GknM {
-  background: linear-gradient(135deg, #a47f3c 0%, #b24c2d 100%);
+  background: linear-gradient(135deg, #693f00 0%, #2c0050 100%);
 }
 .yir2023_Section_1z6_O {
   background: radial-gradient(
     94.31% 143.89% at 2.99% -1.75%,
-    #a47f3c 0%,
-    #b24c2d 52.6%,
-    #a47f3c
+    #693f00 0%,
+    #2c0050 52.6%,
+    #022216
   );
 }
 .yir2023_StreakSizeFullBar_1Yndk {
@@ -5049,9 +5623,9 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
 .yir2023_LongestStreakBgImage_3rUSv {
   background-image: radial-gradient(
       94.31% 143.89% at 2.99% -1.75%,
-      #a47f3c 0%,
-      #b24c2d 52.6%,
-      #22455c
+      #693f00 0%,
+      #2c0050 52.6%,
+      #022216
     ),
     url("/public/images/yearinreview/streak_bg_large.webp");
 }
@@ -5059,102 +5633,113 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
   background-color: rgba(190, 240, 51, 0.34);
 }
 .yir2023_UserName_EJneU {
-  color: #dedaba;
+  color: #c48100;
 }
 .yir2023_ConclusionName_2qriz {
-  color: #dedaba;
+  color: #c48100;
 }
 .yir2023_GridItem_2u4ym.yir2023_Game0_3B1V7 {
-  background: linear-gradient(
-    119.08deg,
-    #a47f3c 1.25%,
-    rgba(178, 76, 45, 0.83) 97.55%
-  );
+  background: linear-gradient(90deg, #693f00 10%, #2c0050 164%, #022216 289%);
 }
 .yir2023_GridItem_2u4ym.yir2023_Game1_TyaIa {
-  background: linear-gradient(
-    119.08deg,
-    #a47f3c 1.25%,
-    rgba(178, 76, 45, 0.83) 97.55%
-  );
+  background: linear-gradient(90deg, #693f00 -55%, #2c0050 68%, #022216 194%);
 }
 .yir2023_GridItem_2u4ym.yir2023_Game2_2MJi2 {
-  background: linear-gradient(119.08deg, #a47f3c 1.25%, #a47f3c 97.55%);
+  background: linear-gradient(90deg, #693f00 -155%, #2c0050 2%, #022216 73%);
 }
 .yir2023_GridItem_2u4ym.yir2023_AchievementBlock_SK6TH {
-  background: linear-gradient(147.86deg, #a47f3c 25.78%, #b24c2d 79.81%);
+  background: linear-gradient(147.86deg, #693f00 25.78%, #2c0050 101.81%);
 }
 .yir2023_GridItem_2u4ym.yir2023_StreakBlock_1HWMU {
-  background: linear-gradient(147.86deg, #a47f3c 25.78%, #b24c2d 79.81%);
+  background: radial-gradient(100% 50% at 50% -10%, #c48100 0%, #2c0050 100%);
 }
 .yir2023_GridItem_2u4ym.yir2023_HardwareBlock_3u55A {
-  background: linear-gradient(147.86deg, #a47f3c 25.78%, #b24c2d 79.81%);
+  background: linear-gradient(147.86deg, #693f00 25.78%, #2c0050 79.81%);
 }
 .yir2023_GridItem_2u4ym.yir2023_DeviceBlock_30Nlt {
-  background: linear-gradient(147.86deg, #a47f3c 25.78%, #b24c2d 79.81%);
+  background: linear-gradient(147.86deg, #693f00 25.78%, #2c0050 79.81%);
 }
 .yir2023_SummaryCtn_3B7MS {
-  background: linear-gradient(147.86deg, #a47f3c 25.78%, #b24c2d 101.81%);
+  background: conic-gradient(
+    from 160deg at 113% -17%,
+    #693f00 30deg,
+    #0a6040 71deg,
+    #2c0050 125deg
+  );
 }
 .yir2023_TimeRelatedCtn_1NReD {
   background: radial-gradient(
     120.31% 100.89% at 74.99% -9.75%,
-    #a47f3c 0%,
-    #b24c2d,
-    #22455c
+    #693f00 0%,
+    #2c0050,
+    #022216
   );
 }
 .yir2023_TopHonorsSection_3_b2U {
   background: radial-gradient(
     101.49% 84.96% at 18% -1.96%,
-    #a47f3c 0%,
-    #b24c2d 100%
+    #693f00 0%,
+    #2c0050 100%
   );
 }
 .yir2023_FriendCtn_3vzUI {
-  background: linear-gradient(14deg, #a47f3c, #b24c2d);
+  background: linear-gradient(37deg, #693f00, #2c0050);
 }
 .yir2023_TopGameBlockContainer_3F7PU.yir2023_OddGradient_w_Lxb {
   background: radial-gradient(
     120.31% 100.89% at 74.99% -9.75%,
-    #a47f3c 10%,
-    #b24c2d 52.6%,
-    #22455c
+    #693f00 10%,
+    #2c0050 52.6%,
+    #022216
   );
 }
 .yir2023_TopGameBlockContainer_3F7PU.yir2023_EvenGradient_94te0 {
   background: radial-gradient(
     94.31% 143.89% at 49.99% -21.75%,
-    #a47f3c 10%,
-    #b24c2d 52.6%,
-    #22455c
+    #022216 10%,
+    #693f00 52.6%,
+    #2c0050
   );
 }
 .yir2023_TopMostGame_1rn7C .yir2023_TopGameBlockContainer_3F7PU {
   background: radial-gradient(
     51.31% 143.89% at 49.99% -21.75%,
-    #a47f3c 10%,
-    #b24c2d 52.6%
+    #693f00 10%,
+    #2c0050 52.6%
   );
 }
 .yir2023_GamePlayDetails_2qarm {
-  background: linear-gradient(45deg, #a47f3c 15%, #b24c2d 55%, #22455c);
+  background: linear-gradient(45deg, #693f00 15%, #2c0050 55%, #0a6040);
+}
+@keyframes yir2023_gradient_3zLeB {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 .yir2023_PlatformChartsCtn_3cVLk {
-  background: radial-gradient(#a47f3c, #b24c2d);
+  background: radial-gradient(#693f00, #2c0050);
+  background-size: 200% 200%;
+  background-position: 0% 0%;
+  animation: yir2023_gradient_3zLeB 15s ease infinite;
 }
 .yir2023_IconAchievement_3meex path {
-  fill: #a47f3c;
+  fill: #0a6040;
 }
 .yir2023_IconGamesPlayed_1_Cfx path {
-  fill: #a47f3c;
+  fill: #0a6040;
 }
 .yir2023_IconStreak_3A0kF path {
-  fill: #a47f3c;
+  fill: #0a6040;
 }
 .yir2023_PlayBehaviorContainer_9YqCa
   .yir2023_ProgressBarFilled_3wtv1.yir2023_ProgressBarFilledGradient_1bVTX {
-  background: linear-gradient(to right, #a47f3c 0%, #b24c2d 50%, #b24c2d 90%);
+  background: linear-gradient(to right, #0a6040 0%, #2c0050 50%, #693f00 90%);
 }
 .yir2023_PlayBehaviorContainer_9YqCa
   .yir2023_NewActive_18-Ta
@@ -5235,7 +5820,7 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
     url("/public/images/yearinreview/steam_logo_offset.png");
 }
 .yir2023_SeeRewindButton_2rDtQ {
-  background: #a47f3c;
+  background: #693f00;
   padding: 8px;
   font-size: 14px;
   border-radius: 2px;
@@ -5246,50 +5831,57 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
 }
 .yir2023_MMFrame_28xhD.yir2023_MMOverride_3kq0h {
   background: radial-gradient(
-    51.31% 143.89% at 49.99% -21.75%,
-    #d3d920 0%,
-    #d3d920 52.6%
+    98.31% 133.89% at 12.99% 12.25%,
+    #693f00 10%,
+    #2c0050 62.6%,
+    #022216 90%
   );
 }
 .yir2023_MMFrame_28xhD.yir2023_MMOverride_3kq0h .yir2023_Header_2jlbT {
-  color: #d3d920;
+  color: #c48100;
 }
 .yir2023_MMFrame_28xhD.yir2023_MMOverride_3kq0h .yir2023_YearSubtitle_2OhWL {
-  color: #d3d920;
+  color: #c48100;
 }
 .yir2023_MMFrame_28xhD.yir2023_MMOverride_3kq0h .yir2023_ReplayLogo_14dyb {
-  color: #d3d920;
+  color: #c48100;
 }
 .yir2023_MMFrame_28xhD.yir2023_MMOverride_3kq0h
   .yir2023_ReplayLogoAccent_3-RXv {
-  fill: #d3d920;
+  fill: #c48100;
 }
 .yir2023_MMFrame_28xhD.yir2023_MMOverride_3kq0h .yir2023_Hashtag_1hMTH {
-  color: #d3d920;
+  color: #c48100;
 }
 .yir2023_MMFrame_28xhD.yir2023_MMOverride_3kq0h .yir2023_Avatar_8e85n {
-  border-color: #d3d920;
+  border-color: #c48100;
+  border-radius: 2px;
 }
 .yir2023_MMFrame_28xhD.yir2023_MMOverride_3kq0h .yir2023_DataBlock_1vGwb {
-  color: #d3d920;
+  color: #f1f1f1;
 }
 .yir2023_MMFrame_28xhD.yir2023_MMOverride_3kq0h
   .yir2023_DataBlock_1vGwb
-  .yir2023_PersonaName_2zTjb,
+  .yir2023_PersonaName_2zTjb {
+  color: #c48100;
+}
 .yir2023_MMFrame_28xhD.yir2023_MMOverride_3kq0h
   .yir2023_DataBlock_1vGwb
   .yir2023_ReplayHighlight_X5blf {
-  color: #d3d920;
+  color: #f1f1f1;
 }
 .yir2023_MMFrame_28xhD.yir2023_MMOverride_3kq0h .yir2023_ViewPageButton_3YUlc {
-  background: linear-gradient(135deg, #d3d920 0%, #d3d920 100%);
-  color: #d3d920;
+  background: linear-gradient(135deg, #c48100 0%, #693f00 100%);
+  color: #f1f1f1;
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 .yir2023_MMFrame_28xhD.yir2023_MMOverride_3kq0h
   .yir2023_ViewPageButton_3YUlc:hover {
-  box-shadow: 2px 2px 10px #000;
-  background: linear-gradient(135deg, #d3d920 0%, #d3d920 100%);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, #c48100 0%, #693f00 100%);
 }
 .yir2023_MMFrame_28xhD.yir2023_MMOverride_3kq0h .yir2023_Description_1qc70 {
-  color: #d3d920;
+  color: #f1f1f1;
+  opacity: 0.7;
 }

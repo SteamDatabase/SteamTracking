@@ -524,7 +524,7 @@ function ReportItem()
 function SharedFiles_BlockAuthorModal( author, strPersonaName )
 {
 	ShowConfirmDialog( 'Block All Communication',
-		'You are about to block all communication with %s.'.replace( /%s/, strPersonaName ),
+		'You are about to block all communication with %s.'.replace( /%s/, V_EscapeHTML( strPersonaName ) ),
 		'Yes, block them'
 	).done( function() {
 		$J.post(

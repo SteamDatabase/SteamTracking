@@ -691,7 +691,7 @@
           ? void 0
           : t.some((e) => n.has(e));
       }
-      function N(e) {
+      function A(e) {
         const t = (0, r.bY)(),
           n = y.Get(),
           a = (0, o.useQueryClient)(),
@@ -709,7 +709,7 @@
           enabled: void 0 !== i.data && i.data.length > 0,
         });
       }
-      function A(e, t) {
+      function N(e, t) {
         const n = (0, r.bY)(),
           a = y.Get(),
           s = a.GetProfileSteamId();
@@ -763,7 +763,7 @@
           e.rtime_last_played > Date.now() / 1e3 - j
         );
       }
-      function W({ strNameFilter: e, setStrNameFilter: t, className: n }) {
+      function Y({ strNameFilter: e, setStrNameFilter: t, className: n }) {
         const a = (0, s.useRef)(null),
           o = e && "" != e;
         return s.createElement(
@@ -793,7 +793,7 @@
               ),
         );
       }
-      function Y(e) {
+      function W(e) {
         return s.createElement(
           "svg",
           Object.assign(
@@ -1247,8 +1247,8 @@
           style: { "--percent": e / 100 },
         });
       }
-      var Ne = n(29551);
-      var Ae = n(14461),
+      var Ae = n(29551);
+      var Ne = n(14461),
         Se = n(15267),
         Be = n(99307),
         ke = n(57742),
@@ -1440,7 +1440,7 @@
             ? Math.floor((100 * e.bytes_downloaded) / e.bytes_to_download)
             : 0,
           c = !(e.bytes_downloaded && e.bytes_to_download),
-          m = n ? s.createElement(X.dzL, null) : s.createElement(Y, null),
+          m = n ? s.createElement(X.dzL, null) : s.createElement(W, null),
           d = n
             ? (0, F.Xx)("#GamesList_Button_Pause")
             : (0, F.Xx)("#GamesList_Button_Resume"),
@@ -1681,7 +1681,7 @@
           d = e.installed
             ? "#GamesList_Button_Uninstall"
             : "#GamesList_Button_Download",
-          u = e.installed ? V : Y;
+          u = e.installed ? V : W;
         return s.createElement(
           s.Fragment,
           null,
@@ -1704,10 +1704,10 @@
           ),
         );
       }
-      function We(e) {
+      function Ye(e) {
         return e.BIsDownloading() || e.BIsPaused() || e.changing;
       }
-      function Ye({ game: e }) {
+      function We({ game: e }) {
         var t;
         const n = he(e.appid, !1),
           a = Te(),
@@ -1788,7 +1788,7 @@
       function Ke(e) {
         var { visible: t } = e,
           n = (0, a._T)(e, ["visible"]);
-        return t ? s.createElement(Ye, Object.assign({}, n)) : null;
+        return t ? s.createElement(We, Object.assign({}, n)) : null;
       }
       function ze(e) {
         var { visible: t, className: n } = e,
@@ -1849,7 +1849,7 @@
         );
       }
       function st(e, t) {
-        const n = N(G()),
+        const n = A(G()),
           a = (0, s.useCallback)(
             (e, a) => {
               switch (t) {
@@ -2066,7 +2066,7 @@
           return e ? e.size > 0 : void 0;
         })();
         (0, pt.yp)();
-        return e || "dev" == ut.De.WEB_UNIVERSE || "beta" == ut.De.WEB_UNIVERSE;
+        return e || !1;
       }
       function ft(e) {
         const { data: t } = _t();
@@ -2081,7 +2081,7 @@
         return (0, o.useMutation)({
           mutationFn: (n) =>
             (0, a.mG)(this, void 0, void 0, function* () {
-              return Et(t, e, n);
+              return Et(t, [e], n);
             }),
           onSuccess: (t, a) => yt(n, [e], a),
           onError() {
@@ -2092,7 +2092,7 @@
       function Et(e, t, n) {
         return (0, a.mG)(this, void 0, void 0, function* () {
           const a = i.gA.Init(dt._c);
-          a.Body().set_appid(t), a.Body().set_private(n);
+          a.Body().set_appids(t.slice()), a.Body().set_private(n);
           const s = yield dt.kk.ToggleAppPrivacy(e, a);
           if (!s.BSuccess()) throw s.GetErrorMessage();
         });
@@ -2109,9 +2109,9 @@
           );
         });
       }
-      const bt = parseInt(Ae.GameHeight),
-        Ct = parseInt(Ae.GamePadding),
-        Gt = parseInt(Ae.RemoteControlsHeight),
+      const bt = parseInt(Ne.GameHeight),
+        Ct = parseInt(Ne.GamePadding),
+        Gt = parseInt(Ne.RemoteControlsHeight),
         wt = bt + Ct;
       function Lt() {
         return (function (e) {
@@ -2129,7 +2129,7 @@
             }, [t]),
             n
           );
-        })(`(max-width: ${Ae.MobileBreakpoint})`);
+        })(`(max-width: ${Ne.MobileBreakpoint})`);
       }
       function Rt(e) {
         const t = S(e.appid),
@@ -2194,7 +2194,7 @@
           );
         }, [e, t.data, t.isLoading, n.data, n.isLoading, a.data, a.isLoading]);
       }
-      function Nt(e) {
+      function At(e) {
         const t = C(),
           n = S(e.appid),
           a = (function (e) {
@@ -2235,8 +2235,8 @@
           );
         }, [e, t, n.data, n.isLoading, a.data]);
       }
-      function At(e) {
-        return w() ? Rt(e) : Nt(e);
+      function Nt(e) {
+        return w() ? Rt(e) : At(e);
       }
       function St(e) {
         const t = C(),
@@ -2499,7 +2499,7 @@
           : null;
       }
       function Tt({ game: e, visible: t, showTop: n }) {
-        const a = A(e, t).data;
+        const a = N(e, t).data;
         if (!a) return null;
         if (0 === a.total) return null;
         const o = Math.floor((a.unlocked / a.total) * 100),
@@ -2533,7 +2533,7 @@
         );
       }
       function Ut({ game: e, visible: t }) {
-        const n = A(e, t).data;
+        const n = N(e, t).data;
         return n && t && n.total && n.unlocked === n.total
           ? s.createElement(
               "div",
@@ -2560,7 +2560,7 @@
         );
       }
       function $t({ game: e }) {
-        const t = At(e);
+        const t = Nt(e);
         return t.bIsLoading
           ? s.createElement(
               Ce.xV,
@@ -2605,7 +2605,7 @@
         });
       }
       function Zt({ game: e, setLinkData: t }) {
-        const n = At(e);
+        const n = Nt(e);
         return (
           (0, s.useEffect)(() => {
             t(n.rgLinks);
@@ -2633,11 +2633,11 @@
         return s.createElement(
           "div",
           { className: Se.GameLinks },
-          a && s.createElement(Wt, { game: t }),
+          a && s.createElement(Yt, { game: t }),
           n,
         );
       }
-      function Wt(e) {
+      function Yt(e) {
         const { game: t } = e,
           n = ft(t.appid),
           a = vt(t.appid);
@@ -2656,7 +2656,7 @@
               s.createElement(H.dQJ, null),
             );
       }
-      function Yt({ game: e }) {
+      function Wt({ game: e }) {
         const t = Bt(e);
         return (0, f.id)()
           ? s.createElement(Qt, {
@@ -2746,7 +2746,7 @@
             );
       }
       function en({ game: e }) {
-        const t = At(e);
+        const t = Nt(e);
         return 0 === t.rgLinks.length
           ? null
           : s.createElement(
@@ -2903,7 +2903,7 @@
                 { className: Se.FactLabel },
                 (0, F.Xx)("#GamesList_Header_TwoWeeks"),
               ),
-              (0, Ne.W)(e.playtime_2weeks),
+              (0, Ae.W)(e.playtime_2weeks),
             ),
           !!e.playtime_forever &&
             s.createElement(
@@ -2914,7 +2914,7 @@
                 { className: Se.FactLabel },
                 (0, F.Xx)("#GamesList_Header_TotalPlayed"),
               ),
-              (0, Ne.W)(
+              (0, Ae.W)(
                 e.playtime_forever +
                   (e.playtime_disconnected ? e.playtime_disconnected : 0),
               ),
@@ -2959,7 +2959,7 @@
             "picture",
             { onError: () => a((e) => e + 1) },
             s.createElement("source", {
-              media: `(max-width: ${Ae.MobileBreakpoint})`,
+              media: `(max-width: ${Ne.MobileBreakpoint})`,
               srcSet: o[n],
             }),
             s.createElement("img", { src: i[n], alt: e.name, loading: "lazy" }),
@@ -3030,13 +3030,13 @@
                   { className: Se.Buttons },
                   s.createElement(Vt, { game: e }),
                   s.createElement(Kt, { game: e }),
-                  _ && s.createElement(Yt, { game: e }),
+                  _ && s.createElement(Wt, { game: e }),
                 ),
                 !_ &&
                   s.createElement(
                     qt,
                     { game: e },
-                    s.createElement(Yt, { game: e }),
+                    s.createElement(Wt, { game: e }),
                   ),
               ),
             o &&
@@ -3241,7 +3241,7 @@
               const a = new Set();
               if (null == n ? void 0 : n.data)
                 for (const e of n.data.mapApps.values())
-                  (fn.has(e.appid) || (!_n.has(e.appid) && We(e))) &&
+                  (fn.has(e.appid) || (!_n.has(e.appid) && Ye(e))) &&
                     (a.add(e.appid), fn.add(e.appid));
               const s = [],
                 o = [];
@@ -3326,7 +3326,7 @@
             sortOption: Je.AchievementCompletion,
           },
         ];
-      function Nn({ strSort: e, setStrSort: t }) {
+      function An({ strSort: e, setStrSort: t }) {
         return s.createElement(
           "ul",
           { className: $.SortOptions },
@@ -3349,7 +3349,7 @@
           ),
         );
       }
-      function An() {
+      function Nn() {
         const [e, t] = (0, M.Ar)("games_in_common", !1);
         return s.createElement(
           "label",
@@ -3429,7 +3429,7 @@
             },
             [c, d],
           ),
-          p = N(t),
+          p = A(t),
           _ = (0, s.useCallback)(
             (e) =>
               !!p.data &&
@@ -3465,7 +3465,7 @@
           C = b(t),
           L = y.Get().GetPerfectUnownedGames(),
           R = y.Get().GetRecentlyPlayedUnownedGames(),
-          A = In(Z(C, _, p.isLoading), L),
+          N = In(Z(C, _, p.isLoading), L),
           S = In(Z(C, q), R);
         (0, s.useEffect)(() => {
           !o && S.data && 0 === S.data.length && i(ot.All);
@@ -3473,11 +3473,11 @@
         const B = w(),
           k = (0, f.id)();
         let x = C;
-        r === ot.RecentlyPlayed ? (x = S) : r === ot.Perfect && (x = A),
+        r === ot.RecentlyPlayed ? (x = S) : r === ot.Perfect && (x = N),
           (0, s.useEffect)(() => {
             _n.clear();
           }, [r]);
-        const U = lt(r, C, S, A),
+        const U = lt(r, C, S, N),
           H = (function (...e) {
             return (0, s.useCallback)((t) => {
               for (const n of e) if (n && !n(t)) return !1;
@@ -3487,7 +3487,7 @@
           X = (0, O.Z)($.Gameslistapp, k && "GamepadMode"),
           Q = (0, D.L)(),
           j = n === Je.AchievementCompletion && p.isLoading,
-          Y = x.isLoading || j;
+          W = x.isLoading || j;
         return s.createElement(
           I.p,
           { navID: "Gamelist", NavigationManager: Q },
@@ -3500,12 +3500,12 @@
               s.createElement(
                 P.s,
                 { className: X },
-                Y &&
+                W &&
                   s.createElement(T.V, {
                     string: (0, F.Xx)("#Loading"),
                     position: "center",
                   }),
-                !Y &&
+                !W &&
                   s.createElement(
                     s.Fragment,
                     null,
@@ -3514,21 +3514,21 @@
                       s.createElement(
                         "div",
                         { className: $.DisplayControls },
-                        s.createElement(W, {
+                        s.createElement(Y, {
                           strNameFilter: l,
                           setStrNameFilter: m,
                           className: $.FilterInput,
                         }),
                         B && s.createElement(Sn, null),
-                        !B && r === ot.All && s.createElement(An, null),
-                        s.createElement(Nn, { strSort: n, setStrSort: a }),
+                        !B && r === ot.All && s.createElement(Nn, null),
+                        s.createElement(An, { strSort: n, setStrSort: a }),
                       ),
                   ),
                 s.createElement(Ln, {
                   owned: x,
                   filter: H,
                   sort: r === ot.RecentlyPlayed ? Je.RecentlyPlayed : n,
-                  dependencyLoading: Y,
+                  dependencyLoading: W,
                   tab: r,
                 }),
               ),

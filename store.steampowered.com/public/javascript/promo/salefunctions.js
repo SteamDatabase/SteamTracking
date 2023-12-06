@@ -204,8 +204,8 @@ function fnRenderHeroCapsule( oItem )
 		return;
 
 	var $Cap = $J( '<div/>', {'class': 'hero_capsule', 'data-ds-appid': oItem.appid, 'data-panel': '{"clickOnActivate":"firstChild","onOptionsActionDescription":"Add to Cart","onOptionsButton":"%onOptionsButton%","flow-children":"column"}'.replace( '%onOptionsButton%', purchaseAction ) } );
-	$Cap.append( $J('<a/>', {'class': 'hero_click_overlay', 'href': url } ) );
-	$Cap.append( $J('<img/>', {'class': 'hero_capsule_img', 'alt': oItem.appid, 'style': 'max-height: 450px', src: 'https://store.cloudflare.steamstatic.com/public/images/blank.gif', 'data-image-url': rgItemData[ 'hero_capsule' ] ?? rgItemData[ 'main_capsule' ] } ) );
+	$Cap.append( $J('<a/>', {'class': 'hero_click_overlay', 'href': url, 'aria-label': rgItemData.name } ) );
+	$Cap.append( $J('<img/>', {'class': 'hero_capsule_img', 'alt': rgItemData.name, 'style': 'max-height: 450px', src: 'https://store.cloudflare.steamstatic.com/public/images/blank.gif', 'data-image-url': rgItemData[ 'hero_capsule' ] ?? rgItemData[ 'main_capsule' ] } ) );
 
 	if ( rgItemData.has_live_broadcast )
 	{
@@ -551,6 +551,7 @@ function SaleCap( item, strFeatureContext, strDiscountClass, bUseSmallCap, bPref
 
 		$Img.data('src-smallcap', rgItemData['small_capsule'] );
 	}
+	$Img.attr( 'alt', rgItemData['name'] );
 
 	$CapCtn.append( $J('<div/>', {'class': 'sale_capsule_image_ctn' } ).append( $J('<div/>', {'class': 'sale_capsule_image_hover'} ), $Img ) );
 	$CapCtn.append( rgItemData.discount_block ? $J(rgItemData.discount_block).addClass( strDiscountClass ) : '' );
@@ -1318,157 +1319,4 @@ CVideoScrollController.prototype.update = function()
 		}
 	}
 };
-
-/*
- {
- categoryid
- label
- nominatedid	o
- writein	o
- }
- */
-function InitSteamAwardNominationDialog( nominatedid, appname, rgCategories, bReleasedCurrentYear, bLimitedUser )
-{
-	$J('.show_nomination_dialog').click( function() {
-		var $PageElement = $J(this);
-
-		if ( $PageElement.hasClass( 'disabled' ) )
-			return;
-
-		if ( !g_AccountID )
-		{
-			// prompt for login
-			ShowConfirmDialog( 'Nominate Game',
-				'You need to log in first before you can vote.',
-				'Login'
-			).done( function() {
-				window.location = 'https://store.steampowered.com/login/?redir=app%2F__APPID__'.replace( /__APPID__/, nominatedid );
-			});
-			return;
-		}
-
-		if ( bLimitedUser )
-		{
-			ShowAlertDialog( 'Error', 'It appears that your account is limited. To prevent nomination abuse, you must spend $5 USD on Steam in order to participate in the Steam Awards. Visit <a href="https://support.steampowered.com/kb_article.php?ref=3330-IAGK-7663" target="_blank" rel="">Steam Support</a> for more info.' );
-			return;
-		}
-
-		var $Form = $J('<form/>', {'class': 'steamward_nominate_form'});
-
-		var bFoundCurrentApp = false;
-		var rgPreviousLaborOfLoveWinners = [230410,271590,730,105600,1091500];
-		for ( var i = 0; i < rgCategories.length; i++ )
-		{
-			var oCategory = rgCategories[i];
-			if ( oCategory.categoryid == -1 )
-				continue;
-
-			var bHideCategory = !bReleasedCurrentYear && oCategory.categoryid != 92;
-
-			if ( oCategory.categoryid == 92 && $J.inArray( nominatedid, rgPreviousLaborOfLoveWinners ) !== -1 )
-				bHideCategory = true;
-
-			if ( bHideCategory )
-				continue;
-
-			var id = 'category' + oCategory.categoryid;
-			var $Row = $J('<div/>', {'class': 'steamaward_nomination_row'} );
-
-			var $Div = $J('<div/>', {'class': 'steamaward_nomination_content'} );
-			var $Radio = $J('<input/>', {type: 'radio', id: id, name: 'nomination_category', value: oCategory.categoryid } );
-
-			$Row.append( $Radio.wrap( $J('<div/>', {'class': 'radio_ctn'} ) ).parent(), $Div );
-
-			$Div.append( $J('<label/>', {'for': id} ).html( '<span>' + oCategory.label + '</span><br>' + oCategory.desc ) );
-
-			$Radio.change( function() {
-				if ( $J(this).prop('checked') )
-					$J(this).parents( '.steamaward_nomination_row' ).addClass('selected').siblings().removeClass('selected');
-				else
-					$J(this).parents( '.steamaward_nomination_row' ).removeClass('selected');
-			});
-
-			if ( oCategory.appid == nominatedid )
-			{
-				$Radio.prop( 'checked', true ).change();
-				bFoundCurrentApp = true;
-			}
-
-			if ( oCategory.is_writein )
-			{
-				var $WriteInDiv = $J('<div/>', {'class': 'writein_ctn'} );
-				var $WriteInInput = $J('<input/>', {'id': id + '_writein', 'name': id + '_writein', 'type': 'text', 'value': oCategory.write_in_name || '' } );
-				$WriteInDiv.append(
-					$J('<label/>', {'for': id + '_writein'} ).text( 'Your category suggestion:' ),
-					$J('<div/>', {'class': 'gray_bevel for_text_input' } ).append( $WriteInInput )
-				);
-
-				$Div.append( $WriteInDiv );
-
-				$WriteInInput.keypress( function() {
-					if ( $J(this).val() )
-						$J(this).parents('.steamaward_nomination_row').find('input[type=radio]').prop('checked', true ).change();
-				});
-			}
-			$Form.append( $Row );
-		}
-
-		// build the display
-		var $Dialog = $J('<div/>');
-		$Dialog.append( $J('<p/>', {'class': 'steamawards_nomination_intro'}).html( 'Which award would you like to nominate %s for?'.replace( /%s/, appname ) ) );
-		$Dialog.append( $Form );
-		$Dialog.append( $J('<div/>', {'class': 'steamaward_nomination_learnmore' }).append( $J('<a/>', {'href': 'https://store.steampowered.com/steamawards/nominations/'}).text( 'Learn more about the Steam Awards' ) ) );
-
-		var fnSubmit = function()
-		{
-			var categoryid = $Form.find( 'input[name=nomination_category]:checked' ).val();
-			var writein = $Form.find('#category' + categoryid + '_writein').val();
-
-			if ( categoryid == -1 && v_trim( writein || '' ).length < 5 )
-			{
-				ShowAlertDialog( 'Error', 'Please enter a category suggestion' );
-				return;
-			}
-
-			$J.post( 'https://store.steampowered.com/steamawards/nominategame', {
-				sessionid: g_sessionID,
-				nominatedid: nominatedid,
-				categoryid: categoryid,
-				writein: writein,
-				source: 1			} ).done( function( data ) {
-				// update the metadata
-				if ( data.success == 1 )
-				{
-					rgCategories = data.rgCategories;
-					$PageElement.html( data.page_html );
-				}
-				else
-				{
-					if ( data.message && data.message.length )
-					{
-						ShowAlertDialog( 'Error', data.message );
-					}
-					else
-					{
-						ShowAlertDialog( 'Error', 'There was a problem saving your changes.  Please try again later.' );
-					}
-				}
-			}).fail( function() {
-				ShowAlertDialog( 'Error', 'There was a problem saving your changes.  Please try again later.' );
-			});
-		};
-
-		var Modal = ShowConfirmDialog( 'Nominate Game', $Dialog, 'Save' )
-			.done( function() {
-				fnSubmit();
-			});
-
-		$Form.submit( function( e ) {
-			e.preventDefault();
-			Modal.Dismiss();
-		});
-
-	});
-}
-
 

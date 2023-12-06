@@ -695,7 +695,7 @@ html.contextmenu_ContextMenuPopup_2GpKT body {
 .DesktopUI .pagedsettings_PagedSettingsDialog_PageListColumn_RTicB {
   padding-left: 0px;
   min-width: 160px;
-  height: 95vh;
+  min-height: 95vh;
 }
 .pagedsettings_NewNoteButton_sc_I7 {
   margin: 0px 4px 4px 4px;
@@ -3318,6 +3318,12 @@ body.ShoppingCart {
 }
 .shoppingcart_FooterNotice_LXZhw .shoppingcart_NoticeIndex_3GJop {
   margin-right: 10px;
+}
+.shoppingcart_LineItemsCtn_3SgHV {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 20px;
 }
 .purchasenotices_PurchaseNoticeContainer_3MM2B {
   display: flex;

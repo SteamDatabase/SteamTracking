@@ -402,10 +402,10 @@
     },
     85251: (e, r, t) => {
       t.d(r, {
-        Qn: () => j,
+        Qn: () => O,
         VJ: () => Y,
         VL: () => c,
-        WJ: () => X,
+        WJ: () => j,
         _A: () => G,
         cR: () => U,
         eK: () => C,
@@ -600,7 +600,7 @@
                     br: a.FE.readString,
                     bw: a.Xc.writeString,
                   },
-                  free_weekend: { n: 54, c: O },
+                  free_weekend: { n: 54, c: X },
                   unlisted: { n: 55, br: a.FE.readBool, bw: a.Xc.writeBool },
                   game_count: {
                     n: 56,
@@ -2144,18 +2144,18 @@
           return "StoreItem_SupportedLanguage";
         }
       }
-      class O extends l {
+      class X extends l {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            O.prototype.start_time || a.aR(O.M()),
+            X.prototype.start_time || a.aR(X.M()),
             l.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            O.sm_m ||
-              (O.sm_m = {
-                proto: O,
+            X.sm_m ||
+              (X.sm_m = {
+                proto: X,
                 fields: {
                   start_time: {
                     n: 1,
@@ -2166,56 +2166,56 @@
                   text: { n: 3, br: a.FE.readString, bw: a.Xc.writeString },
                 },
               }),
-            O.sm_m
+            X.sm_m
           );
         }
         static MBF() {
-          return O.sm_mbf || (O.sm_mbf = a.Bh(O.M())), O.sm_mbf;
+          return X.sm_mbf || (X.sm_mbf = a.Bh(X.M())), X.sm_mbf;
         }
         toObject(e = !1) {
-          return O.toObject(e, this);
+          return X.toObject(e, this);
         }
         static toObject(e, r) {
-          return a.TA(O.M(), e, r);
+          return a.TA(X.M(), e, r);
         }
         static fromObject(e) {
-          return a.aD(O.M(), e);
+          return a.aD(X.M(), e);
         }
         static deserializeBinary(e) {
           let r = new i.BinaryReader(e),
-            t = new O();
-          return O.deserializeBinaryFromReader(t, r);
+            t = new X();
+          return X.deserializeBinaryFromReader(t, r);
         }
         static deserializeBinaryFromReader(e, r) {
-          return a.F(O.MBF(), e, r);
+          return a.F(X.MBF(), e, r);
         }
         serializeBinary() {
           var e = new i.BinaryWriter();
-          return O.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return X.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, r) {
-          a.l2(O.M(), e, r);
+          a.l2(X.M(), e, r);
         }
         serializeBase64String() {
           var e = new i.BinaryWriter();
-          return O.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return X.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "StoreItem_FreeWeekend";
         }
       }
-      class j extends l {
+      class O extends l {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            j.prototype.include_assets || a.aR(j.M()),
+            O.prototype.include_assets || a.aR(O.M()),
             l.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            j.sm_m ||
-              (j.sm_m = {
-                proto: j,
+            O.sm_m ||
+              (O.sm_m = {
+                proto: O,
                 fields: {
                   include_assets: {
                     n: 1,
@@ -2282,7 +2282,72 @@
                     br: a.FE.readBool,
                     bw: a.Xc.writeBool,
                   },
-                  included_item_data_request: { n: 14, c: j },
+                  included_item_data_request: { n: 14, c: O },
+                },
+              }),
+            O.sm_m
+          );
+        }
+        static MBF() {
+          return O.sm_mbf || (O.sm_mbf = a.Bh(O.M())), O.sm_mbf;
+        }
+        toObject(e = !1) {
+          return O.toObject(e, this);
+        }
+        static toObject(e, r) {
+          return a.TA(O.M(), e, r);
+        }
+        static fromObject(e) {
+          return a.aD(O.M(), e);
+        }
+        static deserializeBinary(e) {
+          let r = new i.BinaryReader(e),
+            t = new O();
+          return O.deserializeBinaryFromReader(t, r);
+        }
+        static deserializeBinaryFromReader(e, r) {
+          return a.F(O.MBF(), e, r);
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return O.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, r) {
+          a.l2(O.M(), e, r);
+        }
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return O.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "StoreBrowseItemDataRequest";
+        }
+      }
+      class j extends l {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            j.prototype.language || a.aR(j.M()),
+            l.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            j.sm_m ||
+              (j.sm_m = {
+                proto: j,
+                fields: {
+                  language: { n: 1, br: a.FE.readString, bw: a.Xc.writeString },
+                  elanguage: { n: 2, br: a.FE.readInt32, bw: a.Xc.writeInt32 },
+                  country_code: {
+                    n: 3,
+                    br: a.FE.readString,
+                    bw: a.Xc.writeString,
+                  },
+                  steam_realm: {
+                    n: 4,
+                    br: a.FE.readInt32,
+                    bw: a.Xc.writeInt32,
+                  },
                 },
               }),
             j.sm_m
@@ -2318,71 +2383,6 @@
         serializeBase64String() {
           var e = new i.BinaryWriter();
           return j.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "StoreBrowseItemDataRequest";
-        }
-      }
-      class X extends l {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            X.prototype.language || a.aR(X.M()),
-            l.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            X.sm_m ||
-              (X.sm_m = {
-                proto: X,
-                fields: {
-                  language: { n: 1, br: a.FE.readString, bw: a.Xc.writeString },
-                  elanguage: { n: 2, br: a.FE.readInt32, bw: a.Xc.writeInt32 },
-                  country_code: {
-                    n: 3,
-                    br: a.FE.readString,
-                    bw: a.Xc.writeString,
-                  },
-                  steam_realm: {
-                    n: 4,
-                    br: a.FE.readInt32,
-                    bw: a.Xc.writeInt32,
-                  },
-                },
-              }),
-            X.sm_m
-          );
-        }
-        static MBF() {
-          return X.sm_mbf || (X.sm_mbf = a.Bh(X.M())), X.sm_mbf;
-        }
-        toObject(e = !1) {
-          return X.toObject(e, this);
-        }
-        static toObject(e, r) {
-          return a.TA(X.M(), e, r);
-        }
-        static fromObject(e) {
-          return a.aD(X.M(), e);
-        }
-        static deserializeBinary(e) {
-          let r = new i.BinaryReader(e),
-            t = new X();
-          return X.deserializeBinaryFromReader(t, r);
-        }
-        static deserializeBinaryFromReader(e, r) {
-          return a.F(X.MBF(), e, r);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return X.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, r) {
-          a.l2(X.M(), e, r);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return X.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "StoreBrowseContext";
@@ -2473,8 +2473,8 @@
                 proto: C,
                 fields: {
                   ids: { n: 1, c: v, r: !0, q: !0 },
-                  context: { n: 2, c: X },
-                  data_request: { n: 3, c: j },
+                  context: { n: 2, c: j },
+                  data_request: { n: 3, c: O },
                 },
               }),
             C.sm_m
@@ -2771,7 +2771,7 @@
               (A.sm_m = {
                 proto: A,
                 fields: {
-                  context: { n: 1, c: X },
+                  context: { n: 1, c: j },
                   store_page_filter: { n: 2, c: s._v },
                   appids: { n: 3, c: v, r: !0, q: !0 },
                   steamid: {
@@ -3019,7 +3019,7 @@
               (G.sm_m = {
                 proto: G,
                 fields: {
-                  context: { n: 1, c: X },
+                  context: { n: 1, c: j },
                   appids: {
                     n: 2,
                     r: !0,
@@ -3210,7 +3210,7 @@
                     pbr: a.FE.readPackedUint32,
                     bw: a.Xc.writeRepeatedUint32,
                   },
-                  context: { n: 2, c: X },
+                  context: { n: 2, c: j },
                 },
               }),
             K.sm_m
@@ -3329,6 +3329,16 @@
                     n: 15,
                     br: a.FE.readBool,
                     bw: a.Xc.writeBool,
+                  },
+                  estimated_delivery_soonest_business_days: {
+                    n: 17,
+                    br: a.FE.readUint32,
+                    bw: a.Xc.writeUint32,
+                  },
+                  estimated_delivery_latest_business_days: {
+                    n: 18,
+                    br: a.FE.readUint32,
+                    bw: a.Xc.writeUint32,
                   },
                 },
               }),

@@ -4607,6 +4607,478 @@ html.responsive.touch
   padding: 4px 8px;
   margin-bottom: 1px;
 }
+.planningdashboard_Container_1IVr1 {
+  position: relative;
+}
+.planningdashboard_CalendarCtn_3reVP {
+  position: relative;
+  z-index: 1;
+}
+.planningdashboard_CalendarCtn_3reVP .rbc-calendar .rbc-month-view {
+  border: none;
+}
+.planningdashboard_CalendarCtn_3reVP .rbc-calendar .rbc-month-view .rbc-day-bg {
+  background: #5f6372;
+  border-left: 1px solid #1b1e22;
+}
+.planningdashboard_CalendarCtn_3reVP
+  .rbc-calendar
+  .rbc-month-view
+  .rbc-day-bg.rbc-off-range-bg {
+  background: #23242a;
+}
+.planningdashboard_CalendarCtn_3reVP
+  .rbc-calendar
+  .rbc-month-view
+  .rbc-day-bg.DayInThePast {
+  background: rgba(41, 45, 51, 0.7);
+  pointer-events: none;
+  z-index: 5;
+}
+.planningdashboard_CalendarCtn_3reVP
+  .rbc-calendar
+  .rbc-month-view
+  .rbc-day-bg.rbc-today {
+  background: #9fa1a7;
+}
+.planningdashboard_CalendarCtn_3reVP
+  .rbc-calendar
+  .rbc-month-view
+  .rbc-date-cell.rbc-now {
+  color: #000;
+}
+.planningdashboard_CalendarCtn_3reVP
+  .rbc-calendar
+  .rbc-month-view
+  .rbc-month-row,
+.planningdashboard_CalendarCtn_3reVP .rbc-calendar .rbc-month-view .rbc-day-bg {
+  border-top: 1px solid #1b1e22;
+}
+.planningdashboard_CalendarCtn_3reVP .rbc-calendar .rbc-month-view .rbc-header {
+  background: #535764;
+  color: #fff;
+  border-bottom-color: #1b1e22;
+  border-left-color: #1b1e22;
+}
+.planningdashboard_CalendarCtn_3reVP .rbc-calendar .rbc-month-view .rbc-event {
+  z-index: 1;
+  position: relative;
+  width: calc(100% - 8px);
+  margin-left: 4px;
+}
+.planningdashboard_CalendarCtn_3reVP
+  .rbc-calendar
+  .rbc-month-view
+  .rbc-event.rbc-event-continues-after {
+  width: calc(100% - 4px);
+}
+.planningdashboard_CalendarCtn_3reVP
+  .rbc-calendar
+  .rbc-month-view
+  .rbc-event:hover {
+  z-index: 2;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+.planningdashboard_CalendarCtn_3reVP .rbc-toolbar {
+  position: sticky;
+  top: 0px;
+  z-index: 30;
+  background: #000;
+  padding: 16px;
+}
+.planningdashboard_CalendarCtn_3reVP .rbc-toolbar .rbc-toolbar-label {
+  font-size: 22px;
+  color: #fff;
+  font-weight: 200;
+  text-align: left;
+}
+.planningdashboard_CalendarCtn_3reVP .rbc-toolbar .rbc-btn-group {
+  position: relative;
+}
+.planningdashboard_CalendarCtn_3reVP .rbc-toolbar .rbc-btn-group button {
+  border-color: #1b1e22;
+  background-color: #535764;
+}
+.planningdashboard_CalendarCtn_3reVP
+  .rbc-toolbar
+  .rbc-btn-group
+  button.rbc-active {
+  background-color: #0eb0ff;
+  border-color: #1b1e22;
+}
+.planningdashboard_CalendarCtn_3reVP .rbc-toolbar .rbc-btn-group button:active,
+.planningdashboard_CalendarCtn_3reVP .rbc-toolbar .rbc-btn-group button:focus {
+  background-color: #0eb0ff;
+  border-color: #1b1e22;
+}
+.planningdashboard_CalendarCtn_3reVP .rbc-toolbar .rbc-btn-group button:hover {
+  background-color: #5f6472;
+  border-color: #1b1e22;
+}
+.planningdashboard_CreateNewCtn_OryGT {
+  display: flex;
+  flex-direction: row;
+  align-self: end;
+  padding: 11px 18px 18px 18px;
+  width: fit-content;
+  box-sizing: border-box;
+  position: sticky;
+  top: 0px;
+  z-index: 6;
+}
+.planningdashboard_CreateNewCtn_OryGT button.DialogButton {
+  width: 200px;
+  height: 42px;
+  margin: 0;
+}
+.planningdashboard_CreateNewCtn_OryGT div.DialogInput_Wrapper {
+  margin-bottom: 0px;
+  margin-right: 12px;
+}
+.planningdashboard_CreateNewCtn_OryGT div.DialogInputLabelGroup {
+  margin-bottom: 0;
+  margin-left: 12px;
+}
+.planningdashboard_CreateNewCtn_OryGT
+  div.DialogInputLabelGroup
+  .DialogDropDown {
+  padding-right: 40px;
+}
+.planningdashboard_filtersCtn_Epsp1 {
+  display: flex;
+  padding: 16px 0px;
+  background: #1b1e22;
+}
+.planningdashboard_filtersCtn_Epsp1 .DialogCheckbox_Container {
+  margin-right: 30px;
+}
+.planningdashboard_filtersCtn_Epsp1
+  .DialogCheckbox_Container
+  .DialogToggle_Label {
+  color: #fff;
+  padding: 0 6px;
+}
+.planningdashboard_filtersCtn_Epsp1
+  .DialogCheckbox_Container.weekenddeal
+  .DialogToggle_Label,
+.planningdashboard_filtersCtn_Epsp1
+  .DialogCheckbox_Container.midweek
+  .DialogToggle_Label {
+  background: #254069;
+}
+.planningdashboard_filtersCtn_Epsp1
+  .DialogCheckbox_Container.saleevent
+  .DialogToggle_Label {
+  background: #819c8a;
+}
+.planningdashboard_filtersCtn_Epsp1
+  .DialogCheckbox_Container.dailydeal
+  .DialogToggle_Label {
+  background: #80275d;
+}
+.planningdashboard_filtersCtn_Epsp1
+  .DialogCheckbox_Container.vacation
+  .DialogToggle_Label {
+  background: #6f7485;
+}
+.planningdashboard_filtersCtn_Epsp1
+  .DialogCheckbox_Container.important
+  .DialogToggle_Label {
+  background: #40ccfd;
+}
+.planningdashboard_FilterRow_2qhMY {
+  display: flex;
+  flex-direction: row;
+}
+.planningdashboard_FilterRow_2qhMY
+  .planningdashboard_VisibilityFilterCtn_hPops {
+  width: 15%;
+  margin-right: 8px;
+}
+.planningdashboard_FilterRow_2qhMY
+  .planningdashboard_VisibilityFilterCtn_hPops.planningdashboard_MarketingMessageSearch_36QLW {
+  width: 50%;
+}
+.planningdashboard_FilterRow_2qhMY
+  .planningdashboard_VisibilityFilterCtn_hPops.planningdashboard_MarketingMessageSearch_36QLW
+  input.DialogTextInputBase {
+  box-shadow: inset 0px 0px 5px #000;
+}
+.planningdashboard_OtherLinks_1ePXE {
+  display: flex;
+  flex-direction: column;
+}
+.marketingmessagefiltersedit_Dummy_3glD2 {
+  background-color: hotpink;
+}
+.marketingmessagefiltersedit_ConditionContainer_26iQ5 {
+  background: #222329;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+.marketingmessagefiltersedit_RemoveSelectedProductBtn_28FDK,
+.marketingmessagefiltersedit_RemoveConditionBtn_2I6jn,
+.marketingmessagefiltersedit_RemoveCaseBtn_jkA0e {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+.marketingmessagefiltersedit_AddConditionBtnCtn_2jPjO {
+  width: 25%;
+}
+.marketingmessagefiltersedit_AddConditionBtnCtn_2jPjO i {
+  color: #52f376;
+}
+.marketingmessagefiltersedit_CaseContainer_S7-lN {
+  border: 1px solid #434551;
+  padding: 16px;
+  margin-bottom: 4px;
+  margin-top: 4px;
+}
+.marketingmessagefiltersedit_CaseTypeSelectCtn_2zuM6 {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.marketingmessagefiltersedit_CaseTypeSelectCtn_2zuM6
+  .marketingmessagefiltersedit_CaseTypeSelect_2c8Z6 {
+  width: 30%;
+}
+.marketingmessagefiltersedit_AddCaseBtnCtn_6Trpe {
+  width: 22%;
+  margin-left: 16px;
+}
+.marketingmessagefiltersedit_AddCaseBtnCtn_6Trpe i {
+  color: #a667f5;
+}
+.marketingmessagefiltersedit_AddProductBtnCtn_1cTJt {
+  width: 13%;
+}
+.marketingmessagefiltersedit_SelectedProductList_B1AM6 {
+  display: flex;
+  flex-direction: row;
+  margin-left: 5%;
+  flex-wrap: wrap;
+}
+.marketingmessagefiltersedit_ConditionDescription_3jCu6 {
+  font-size: 13px;
+  margin-bottom: 4px;
+  margin-left: 5%;
+}
+.marketingmessagefiltersedit_SelectedProductCtn_BiBUb {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 12px;
+  height: fit-content;
+  margin-bottom: 8px;
+}
+.marketingmessagefiltersedit_SelectedProductCtn_BiBUb span {
+  font-style: italic;
+  color: #a667f5;
+}
+.marketingmessagefiltersedit_SelectedProductCtn_BiBUb
+  .marketingmessagefiltersedit_SelectedProduct_3qEa8 {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  align-items: center;
+  margin-right: 12px;
+  background: #2e2e38;
+  font-size: 13px;
+  height: 22px;
+  line-height: 22px;
+  padding: 7px 12px;
+}
+.marketingmessagefiltersedit_SelectedProductCtn_BiBUb
+  .marketingmessagefiltersedit_SelectedProduct_3qEa8
+  > div {
+  margin-left: 8px;
+}
+.marketingmessagefiltersedit_ConditionTitle_3b-fO {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 15px;
+  color: #fff;
+  font-style: italic;
+}
+.marketingmessagefiltersedit_ConditionTitleOr_2CvHf {
+  font-weight: 600;
+  color: #a667f5;
+}
+.marketingmessagefiltersedit_ConditionTitleAnd_yF0yE {
+  font-weight: 600;
+  color: #52f376;
+  display: inline-block;
+  margin-right: 6px;
+}
+.marketingmessagefiltersedit_AppSelectCtn_2n3Wn {
+  min-width: 600px;
+}
+.marketingmessagefiltersedit_AppSelectCtn_2n3Wn
+  .marketingmessagefiltersedit_ItemToAdd_33Wvv {
+  margin-top: 12px;
+  color: #fff;
+}
+.promotioncreatedialog_DateCtn_13RGK {
+  min-height: 200px;
+}
+.promoagendarow_RowCtn_1Cq0N {
+  margin-top: 10px;
+  background: #2c2e35;
+  padding: 12px;
+  border-left: 20px solid #2a2a2d;
+  position: relative;
+}
+.promoagendarow_RowCtn_1Cq0N::before {
+  letter-spacing: 1px;
+  position: absolute;
+  left: -37px;
+  width: 55px;
+  transform: rotate(-90deg);
+  top: 34%;
+  text-align: center;
+}
+.promoagendarow_RowCtn_1Cq0N.promoagendarow_Public_2p_SN {
+  background: #4f525f;
+  border-left: 20px solid #84d0fb;
+}
+.promoagendarow_RowCtn_1Cq0N.promoagendarow_Public_2p_SN::before {
+  content: "LIVE";
+  color: #078cda;
+}
+.promoagendarow_RowCtn_1Cq0N.promoagendarow_Public_2p_SN.promoagendarow_Future_EJs6P {
+  border-left: 20px solid #fce6a0;
+}
+.promoagendarow_RowCtn_1Cq0N.promoagendarow_Public_2p_SN.promoagendarow_Future_EJs6P::before {
+  content: "STAGED";
+  color: #ad8e05;
+}
+.promoagendarow_RowCtn_1Cq0N.promoagendarow_Ready_1PRvx {
+  background: #4f525f;
+  border-left: 20px solid #8afb84;
+}
+.promoagendarow_RowCtn_1Cq0N.promoagendarow_Ready_1PRvx::before {
+  content: "READY";
+  color: #0d2600;
+}
+.promoagendarow_RowCtn_1Cq0N:hover {
+  cursor: pointer;
+  background: #5d606f;
+}
+.promoagendarow_Row_2KUhB {
+  display: flex;
+  flex-direction: row;
+}
+.promoagendarow_Row_2KUhB.promoagendarow_Primary_2tQk8 {
+  color: #fff;
+  font-size: 14px;
+  justify-content: space-between;
+}
+.promoagendarow_Row_2KUhB:not(.promoagendarow_Primary_2tQk8) {
+  margin-top: 8px;
+}
+.promoagendarow_Col_2x28W {
+  line-height: 17px;
+}
+.promoagendarow_Col_2x28W.promoagendarow_ItemName_K3sWB {
+  width: 45%;
+  font-size: 16px;
+}
+.promoagendarow_Col_2x28W.promoagendarow_Type_1hntl {
+  flex-grow: 1;
+}
+.promoagendarow_Col_2x28W.promoagendarow_Type_1hntl.promoagendarow_Deal_1I4-4
+  span {
+  background-color: #254069;
+  padding: 2px 4px;
+}
+.promoagendarow_Col_2x28W.promoagendarow_Date_17dLA {
+  width: 320px;
+}
+.promoagendarow_Col_2x28W.promoagendarow_Creator_3VjL- {
+  width: 175px;
+}
+.promoagendarow_Col_2x28W.promoagendarow_Visibility_wvE-j {
+  width: 75px;
+  font-size: 12px;
+}
+.promoagendarow_CountryList_17dzI {
+  max-width: 50%;
+  overflow-wrap: anywhere;
+  word-break: break-all;
+  padding: 0px 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  margin-right: 8px;
+}
+.promoagendarow_OwnerLimit_LDwRn {
+  padding: 0px 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  margin-right: 8px;
+}
+.promoagendarow_CapsulePlatform_2OJsE {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 8px;
+  opacity: 0.5;
+}
+.promoagendarow_CapsulePlatform_2OJsE span {
+  margin-left: 8px;
+}
+.promoagendarow_CapsulePlatform_2OJsE img,
+.promoagendarow_CapsulePlatform_2OJsE svg {
+  height: 14px;
+  width: 14px;
+}
+.promoagendarow_ViewsColumn_1Wtq4 {
+  width: 45%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-right: 16px;
+  box-sizing: border-box;
+  font-size: 14px;
+  color: #84d0fb;
+}
+.promoagendarow_ViewsColumn_1Wtq4 .promoagendarow_ViewsCtn_qbvhk {
+  width: 175px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.promoagendarow_ViewsColumn_1Wtq4 span {
+  margin-left: 8px;
+  color: #a7a9af;
+}
+.promoagendarow_WillBecomeVisible_26S-q {
+  background-color: #fce6a0;
+  color: #ad8e05;
+  text-transform: uppercase;
+  padding: 2px 4px;
+  font-size: 12px;
+  margin-top: 4px;
+  display: block;
+  width: fit-content;
+}
+.promoagendarow_MissedRelease_1f2UQ {
+  background-color: #f77f47;
+  color: #8b1c00;
+  padding: 2px 4px;
+  margin-top: 4px;
+  display: block;
+  width: fit-content;
+}
+.promoagendarow_Unset_mDhm0 {
+  background-color: #f77f47;
+  color: #8b1c00;
+  padding: 2px 4px;
+  margin-top: 4px;
+}
 .dailydealcalendar_CalendarGridCtn_2smJ3 {
   display: flex;
   flex-direction: column;
@@ -4878,16 +5350,8 @@ ul li {
   grid-area: info;
   padding-left: 8px;
 }
-.invitesdialog_DialogCtn_3sIyQ {
-  margin-top: 20px;
-}
-.dailydealsdashboard_Row_2fsEu {
-  background-color: pink;
-  padding-bottom: 10px;
-}
-.dailydealsdashboard_InfoCtn_3t-3P {
-  display: flex;
-  flex-direction: row;
+.invitesdashboard_InviteResult_677sG {
+  padding-top: 10px;
 }
 .rbc-btn {
   color: inherit;
@@ -5659,480 +6123,22 @@ button.rbc-input::-moz-focus-inner {
   background-color: #74ad31;
   pointer-events: none;
 }
-.promoagendarow_RowCtn_1Cq0N {
-  margin-top: 10px;
-  background: #2c2e35;
-  padding: 12px;
-  border-left: 20px solid #2a2a2d;
-  position: relative;
+.invitesdialog_DialogCtn_3sIyQ {
+  margin-top: 20px;
 }
-.promoagendarow_RowCtn_1Cq0N::before {
-  letter-spacing: 1px;
-  position: absolute;
-  left: -37px;
-  width: 55px;
-  transform: rotate(-90deg);
-  top: 34%;
-  text-align: center;
+.invitesdialog_InviteResult_Fz3D_ {
+  padding-top: 10px;
 }
-.promoagendarow_RowCtn_1Cq0N.promoagendarow_Public_2p_SN {
-  background: #4f525f;
-  border-left: 20px solid #84d0fb;
+.dailydealsdashboard_Row_2fsEu {
+  background-color: pink;
+  padding-bottom: 10px;
 }
-.promoagendarow_RowCtn_1Cq0N.promoagendarow_Public_2p_SN::before {
-  content: "LIVE";
-  color: #078cda;
-}
-.promoagendarow_RowCtn_1Cq0N.promoagendarow_Public_2p_SN.promoagendarow_Future_EJs6P {
-  border-left: 20px solid #fce6a0;
-}
-.promoagendarow_RowCtn_1Cq0N.promoagendarow_Public_2p_SN.promoagendarow_Future_EJs6P::before {
-  content: "STAGED";
-  color: #ad8e05;
-}
-.promoagendarow_RowCtn_1Cq0N.promoagendarow_Ready_1PRvx {
-  background: #4f525f;
-  border-left: 20px solid #8afb84;
-}
-.promoagendarow_RowCtn_1Cq0N.promoagendarow_Ready_1PRvx::before {
-  content: "READY";
-  color: #0d2600;
-}
-.promoagendarow_RowCtn_1Cq0N:hover {
-  cursor: pointer;
-  background: #5d606f;
-}
-.promoagendarow_Row_2KUhB {
+.dailydealsdashboard_InfoCtn_3t-3P {
   display: flex;
   flex-direction: row;
-}
-.promoagendarow_Row_2KUhB.promoagendarow_Primary_2tQk8 {
-  color: #fff;
-  font-size: 14px;
-  justify-content: space-between;
-}
-.promoagendarow_Row_2KUhB:not(.promoagendarow_Primary_2tQk8) {
-  margin-top: 8px;
-}
-.promoagendarow_Col_2x28W {
-  line-height: 17px;
-}
-.promoagendarow_Col_2x28W.promoagendarow_ItemName_K3sWB {
-  width: 45%;
-  font-size: 16px;
-}
-.promoagendarow_Col_2x28W.promoagendarow_Type_1hntl {
-  flex-grow: 1;
-}
-.promoagendarow_Col_2x28W.promoagendarow_Type_1hntl.promoagendarow_Deal_1I4-4
-  span {
-  background-color: #254069;
-  padding: 2px 4px;
-}
-.promoagendarow_Col_2x28W.promoagendarow_Date_17dLA {
-  width: 320px;
-}
-.promoagendarow_Col_2x28W.promoagendarow_Creator_3VjL- {
-  width: 175px;
-}
-.promoagendarow_Col_2x28W.promoagendarow_Visibility_wvE-j {
-  width: 75px;
-  font-size: 12px;
-}
-.promoagendarow_CountryList_17dzI {
-  max-width: 50%;
-  overflow-wrap: anywhere;
-  word-break: break-all;
-  padding: 0px 6px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 2px;
-  margin-right: 8px;
-}
-.promoagendarow_OwnerLimit_LDwRn {
-  padding: 0px 6px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 2px;
-  margin-right: 8px;
-}
-.promoagendarow_CapsulePlatform_2OJsE {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-right: 8px;
-  opacity: 0.5;
-}
-.promoagendarow_CapsulePlatform_2OJsE span {
-  margin-left: 8px;
-}
-.promoagendarow_CapsulePlatform_2OJsE img,
-.promoagendarow_CapsulePlatform_2OJsE svg {
-  height: 14px;
-  width: 14px;
-}
-.promoagendarow_ViewsColumn_1Wtq4 {
-  width: 45%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding-right: 16px;
-  box-sizing: border-box;
-  font-size: 14px;
-  color: #84d0fb;
-}
-.promoagendarow_ViewsColumn_1Wtq4 .promoagendarow_ViewsCtn_qbvhk {
-  width: 175px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.promoagendarow_ViewsColumn_1Wtq4 span {
-  margin-left: 8px;
-  color: #a7a9af;
-}
-.promoagendarow_WillBecomeVisible_26S-q {
-  background-color: #fce6a0;
-  color: #ad8e05;
-  text-transform: uppercase;
-  padding: 2px 4px;
-  font-size: 12px;
-  margin-top: 4px;
-  display: block;
-  width: fit-content;
-}
-.promoagendarow_MissedRelease_1f2UQ {
-  background-color: #f77f47;
-  color: #8b1c00;
-  padding: 2px 4px;
-  margin-top: 4px;
-  display: block;
-  width: fit-content;
-}
-.promoagendarow_Unset_mDhm0 {
-  background-color: #f77f47;
-  color: #8b1c00;
-  padding: 2px 4px;
-  margin-top: 4px;
-}
-.planningdashboard_Container_1IVr1 {
-  position: relative;
-}
-.planningdashboard_CalendarCtn_3reVP {
-  position: relative;
-  z-index: 1;
-}
-.planningdashboard_CalendarCtn_3reVP .rbc-calendar .rbc-month-view {
-  border: none;
-}
-.planningdashboard_CalendarCtn_3reVP .rbc-calendar .rbc-month-view .rbc-day-bg {
-  background: #5f6372;
-  border-left: 1px solid #1b1e22;
-}
-.planningdashboard_CalendarCtn_3reVP
-  .rbc-calendar
-  .rbc-month-view
-  .rbc-day-bg.rbc-off-range-bg {
-  background: #23242a;
-}
-.planningdashboard_CalendarCtn_3reVP
-  .rbc-calendar
-  .rbc-month-view
-  .rbc-day-bg.DayInThePast {
-  background: rgba(41, 45, 51, 0.7);
-  pointer-events: none;
-  z-index: 5;
-}
-.planningdashboard_CalendarCtn_3reVP
-  .rbc-calendar
-  .rbc-month-view
-  .rbc-day-bg.rbc-today {
-  background: #9fa1a7;
-}
-.planningdashboard_CalendarCtn_3reVP
-  .rbc-calendar
-  .rbc-month-view
-  .rbc-date-cell.rbc-now {
-  color: #000;
-}
-.planningdashboard_CalendarCtn_3reVP
-  .rbc-calendar
-  .rbc-month-view
-  .rbc-month-row,
-.planningdashboard_CalendarCtn_3reVP .rbc-calendar .rbc-month-view .rbc-day-bg {
-  border-top: 1px solid #1b1e22;
-}
-.planningdashboard_CalendarCtn_3reVP .rbc-calendar .rbc-month-view .rbc-header {
-  background: #535764;
-  color: #fff;
-  border-bottom-color: #1b1e22;
-  border-left-color: #1b1e22;
-}
-.planningdashboard_CalendarCtn_3reVP .rbc-calendar .rbc-month-view .rbc-event {
-  z-index: 1;
-  position: relative;
-  width: calc(100% - 8px);
-  margin-left: 4px;
-}
-.planningdashboard_CalendarCtn_3reVP
-  .rbc-calendar
-  .rbc-month-view
-  .rbc-event.rbc-event-continues-after {
-  width: calc(100% - 4px);
-}
-.planningdashboard_CalendarCtn_3reVP
-  .rbc-calendar
-  .rbc-month-view
-  .rbc-event:hover {
-  z-index: 2;
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-}
-.planningdashboard_CalendarCtn_3reVP .rbc-toolbar {
-  position: sticky;
-  top: 0px;
-  z-index: 30;
-  background: #000;
-  padding: 16px;
-}
-.planningdashboard_CalendarCtn_3reVP .rbc-toolbar .rbc-toolbar-label {
-  font-size: 22px;
-  color: #fff;
-  font-weight: 200;
-  text-align: left;
-}
-.planningdashboard_CalendarCtn_3reVP .rbc-toolbar .rbc-btn-group {
-  position: relative;
-}
-.planningdashboard_CalendarCtn_3reVP .rbc-toolbar .rbc-btn-group button {
-  border-color: #1b1e22;
-  background-color: #535764;
-}
-.planningdashboard_CalendarCtn_3reVP
-  .rbc-toolbar
-  .rbc-btn-group
-  button.rbc-active {
-  background-color: #0eb0ff;
-  border-color: #1b1e22;
-}
-.planningdashboard_CalendarCtn_3reVP .rbc-toolbar .rbc-btn-group button:active,
-.planningdashboard_CalendarCtn_3reVP .rbc-toolbar .rbc-btn-group button:focus {
-  background-color: #0eb0ff;
-  border-color: #1b1e22;
-}
-.planningdashboard_CalendarCtn_3reVP .rbc-toolbar .rbc-btn-group button:hover {
-  background-color: #5f6472;
-  border-color: #1b1e22;
-}
-.planningdashboard_CreateNewCtn_OryGT {
-  display: flex;
-  flex-direction: row;
-  align-self: end;
-  padding: 11px 18px 18px 18px;
-  width: fit-content;
-  box-sizing: border-box;
-  position: sticky;
-  top: 0px;
-  z-index: 6;
-}
-.planningdashboard_CreateNewCtn_OryGT button.DialogButton {
-  width: 200px;
-  height: 42px;
-  margin: 0;
-}
-.planningdashboard_CreateNewCtn_OryGT div.DialogInput_Wrapper {
-  margin-bottom: 0px;
-  margin-right: 12px;
-}
-.planningdashboard_CreateNewCtn_OryGT div.DialogInputLabelGroup {
-  margin-bottom: 0;
-  margin-left: 12px;
-}
-.planningdashboard_CreateNewCtn_OryGT
-  div.DialogInputLabelGroup
-  .DialogDropDown {
-  padding-right: 40px;
-}
-.planningdashboard_filtersCtn_Epsp1 {
-  display: flex;
-  padding: 16px 0px;
-  background: #1b1e22;
-}
-.planningdashboard_filtersCtn_Epsp1 .DialogCheckbox_Container {
-  margin-right: 30px;
-}
-.planningdashboard_filtersCtn_Epsp1
-  .DialogCheckbox_Container
-  .DialogToggle_Label {
-  color: #fff;
-  padding: 0 6px;
-}
-.planningdashboard_filtersCtn_Epsp1
-  .DialogCheckbox_Container.weekenddeal
-  .DialogToggle_Label,
-.planningdashboard_filtersCtn_Epsp1
-  .DialogCheckbox_Container.midweek
-  .DialogToggle_Label {
-  background: #254069;
-}
-.planningdashboard_filtersCtn_Epsp1
-  .DialogCheckbox_Container.saleevent
-  .DialogToggle_Label {
-  background: #819c8a;
-}
-.planningdashboard_filtersCtn_Epsp1
-  .DialogCheckbox_Container.dailydeal
-  .DialogToggle_Label {
-  background: #80275d;
-}
-.planningdashboard_filtersCtn_Epsp1
-  .DialogCheckbox_Container.vacation
-  .DialogToggle_Label {
-  background: #6f7485;
-}
-.planningdashboard_filtersCtn_Epsp1
-  .DialogCheckbox_Container.important
-  .DialogToggle_Label {
-  background: #40ccfd;
-}
-.planningdashboard_FilterRow_2qhMY {
-  display: flex;
-  flex-direction: row;
-}
-.planningdashboard_FilterRow_2qhMY
-  .planningdashboard_VisibilityFilterCtn_hPops {
-  width: 15%;
-  margin-right: 8px;
-}
-.planningdashboard_FilterRow_2qhMY
-  .planningdashboard_VisibilityFilterCtn_hPops.planningdashboard_MarketingMessageSearch_36QLW {
-  width: 50%;
-}
-.planningdashboard_FilterRow_2qhMY
-  .planningdashboard_VisibilityFilterCtn_hPops.planningdashboard_MarketingMessageSearch_36QLW
-  input.DialogTextInputBase {
-  box-shadow: inset 0px 0px 5px #000;
-}
-.planningdashboard_OtherLinks_1ePXE {
-  display: flex;
-  flex-direction: column;
 }
 .marketingmessagecreatedialog_DateCtn_1mrqJ {
   min-height: 200px;
-}
-.promotioncreatedialog_DateCtn_13RGK {
-  min-height: 200px;
-}
-.marketingmessagefiltersedit_Dummy_3glD2 {
-  background-color: hotpink;
-}
-.marketingmessagefiltersedit_ConditionContainer_26iQ5 {
-  background: #222329;
-  padding: 16px;
-  margin-bottom: 16px;
-}
-.marketingmessagefiltersedit_RemoveSelectedProductBtn_28FDK,
-.marketingmessagefiltersedit_RemoveConditionBtn_2I6jn,
-.marketingmessagefiltersedit_RemoveCaseBtn_jkA0e {
-  width: 16px;
-  height: 16px;
-  cursor: pointer;
-}
-.marketingmessagefiltersedit_AddConditionBtnCtn_2jPjO {
-  width: 25%;
-}
-.marketingmessagefiltersedit_AddConditionBtnCtn_2jPjO i {
-  color: #52f376;
-}
-.marketingmessagefiltersedit_CaseContainer_S7-lN {
-  border: 1px solid #434551;
-  padding: 16px;
-  margin-bottom: 4px;
-  margin-top: 4px;
-}
-.marketingmessagefiltersedit_CaseTypeSelectCtn_2zuM6 {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.marketingmessagefiltersedit_CaseTypeSelectCtn_2zuM6
-  .marketingmessagefiltersedit_CaseTypeSelect_2c8Z6 {
-  width: 30%;
-}
-.marketingmessagefiltersedit_AddCaseBtnCtn_6Trpe {
-  width: 22%;
-  margin-left: 16px;
-}
-.marketingmessagefiltersedit_AddCaseBtnCtn_6Trpe i {
-  color: #a667f5;
-}
-.marketingmessagefiltersedit_AddProductBtnCtn_1cTJt {
-  width: 13%;
-}
-.marketingmessagefiltersedit_SelectedProductList_B1AM6 {
-  display: flex;
-  flex-direction: row;
-  margin-left: 5%;
-  flex-wrap: wrap;
-}
-.marketingmessagefiltersedit_ConditionDescription_3jCu6 {
-  font-size: 13px;
-  margin-bottom: 4px;
-  margin-left: 5%;
-}
-.marketingmessagefiltersedit_SelectedProductCtn_BiBUb {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-right: 12px;
-  height: fit-content;
-  margin-bottom: 8px;
-}
-.marketingmessagefiltersedit_SelectedProductCtn_BiBUb span {
-  font-style: italic;
-  color: #a667f5;
-}
-.marketingmessagefiltersedit_SelectedProductCtn_BiBUb
-  .marketingmessagefiltersedit_SelectedProduct_3qEa8 {
-  display: flex;
-  flex-direction: row;
-  width: fit-content;
-  align-items: center;
-  margin-right: 12px;
-  background: #2e2e38;
-  font-size: 13px;
-  height: 22px;
-  line-height: 22px;
-  padding: 7px 12px;
-}
-.marketingmessagefiltersedit_SelectedProductCtn_BiBUb
-  .marketingmessagefiltersedit_SelectedProduct_3qEa8
-  > div {
-  margin-left: 8px;
-}
-.marketingmessagefiltersedit_ConditionTitle_3b-fO {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  font-size: 15px;
-  color: #fff;
-  font-style: italic;
-}
-.marketingmessagefiltersedit_ConditionTitleOr_2CvHf {
-  font-weight: 600;
-  color: #a667f5;
-}
-.marketingmessagefiltersedit_ConditionTitleAnd_yF0yE {
-  font-weight: 600;
-  color: #52f376;
-  display: inline-block;
-  margin-right: 6px;
-}
-.marketingmessagefiltersedit_AppSelectCtn_2n3Wn {
-  min-width: 600px;
-}
-.marketingmessagefiltersedit_AppSelectCtn_2n3Wn
-  .marketingmessagefiltersedit_ItemToAdd_33Wvv {
-  margin-top: 12px;
-  color: #fff;
 }
 .marketingmessagedashboard_HeaderButtons_1Q4Pq {
   float: right;

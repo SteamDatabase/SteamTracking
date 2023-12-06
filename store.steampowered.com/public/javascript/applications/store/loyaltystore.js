@@ -2172,7 +2172,8 @@
           if (this.m_bPreviouslyIntersecting && this.BTriggerOnce()) return;
           this.m_observer &&
             e &&
-            e.rootMargin != this.m_observer.rootMargin &&
+            (e.rootMargin != this.m_observer.rootMargin ||
+              e.thresholds != this.m_observer.thresholds) &&
             this.DestroyObserver();
           let t = this.m_refElement.current;
           if (
@@ -2184,6 +2185,7 @@
           ) {
             let e = { root: this.FindScrollableAncestor(t) };
             this.props.rootMargin && (e.rootMargin = this.props.rootMargin),
+              this.props.thresholds && (e.threshold = this.props.thresholds),
               (this.m_observer = (0, o.Gt)(t, this.OnIntersection, e));
           }
           this.m_observer &&

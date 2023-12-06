@@ -1904,7 +1904,7 @@ html.contextmenu_ContextMenuPopup_14wqd body {
 .DesktopUI .pagedsettings_PagedSettingsDialog_PageListColumn_2kwFF {
   padding-left: 0px;
   min-width: 160px;
-  height: 95vh;
+  min-height: 95vh;
 }
 .pagedsettings_NewNoteButton_g8SKU {
   margin: 0px 4px 4px 4px;

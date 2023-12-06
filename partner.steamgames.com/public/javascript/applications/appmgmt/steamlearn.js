@@ -8310,7 +8310,7 @@
           ),
           W = o.useCallback(
             (e) => {
-              const t = ie(e, 500, 1e4),
+              const t = ie(e, 128, 1e4),
                 a = parseInt(e);
               t &&
                 a != c.train_config().train_batch_size() &&
@@ -9886,6 +9886,7 @@
                     (0, l.Xx)("#SteamLearn_Status_InferenceLive"),
                   ),
                 X &&
+                  !k &&
                   o.createElement(
                     "div",
                     {

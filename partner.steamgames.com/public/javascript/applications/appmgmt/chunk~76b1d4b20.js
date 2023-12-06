@@ -16113,32 +16113,52 @@
     },
     80845: (e, t, a) => {
       "use strict";
-      a.d(t, { a: () => m });
+      a.d(t, { a: () => c });
       var n = a(89526),
         i = a(85886),
         s = a(25871),
         r = a(701),
         o = a(19304),
         l = a(23715),
-        d = a.n(l);
-      function m(e) {
+        d = a.n(l),
+        m = a(14826);
+      function c(e) {
         var t;
         const { item: a, strClassName: l } = e,
-          [m] = (0, s.jk)(
+          [c] = (0, s.jk)(
             null == a ? void 0 : a.id,
             (0, i.TM)(null == a ? void 0 : a.type),
             { include_platforms: !0 },
           );
-        if (!m) return null;
-        const c = m.GetPlatforms();
+        if (!c) return null;
+        const u = c.GetPlatforms();
         return n.createElement(
           "span",
           { className: (0, o.Z)(d().CapsulePlatform, l) },
-          c.windows && n.createElement(r.Bh5, null),
-          c.mac && n.createElement(r.uZu, null),
-          c.steamos_linux && n.createElement(r.ui7, null),
-          (null === (t = c.vr_support) || void 0 === t ? void 0 : t.vrhmd) &&
-            n.createElement(r.VR, null),
+          u.windows &&
+            n.createElement(
+              "span",
+              { title: (0, m.Xx)("#Platform_Windows") },
+              n.createElement(r.Bh5, null),
+            ),
+          u.mac &&
+            n.createElement(
+              "span",
+              { title: (0, m.Xx)("#Platform_Mac") },
+              n.createElement(r.uZu, null),
+            ),
+          u.steamos_linux &&
+            n.createElement(
+              "span",
+              { title: (0, m.Xx)("#Platform_Linux") },
+              n.createElement(r.ui7, null),
+            ),
+          (null === (t = u.vr_support) || void 0 === t ? void 0 : t.vrhmd) &&
+            n.createElement(
+              "span",
+              { title: (0, m.Xx)("#Platform_VR") },
+              n.createElement(r.VR, null),
+            ),
         );
       }
     },

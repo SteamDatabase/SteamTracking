@@ -68,6 +68,18 @@
 	width: 300px;
 }
 
+.game_area_sys_req_note {
+	margin-top: 6px;
+}
+
+.game_area_sys_req_note strong {
+	color: #61686D;
+	font-size: 12px;
+	margin-right: 1px;
+	font-weight: normal;
+	text-transform: none;
+}
+
 .help_sysreqs .game_area_sys_req_leftCol, .help_sysreqs .game_area_sys_req_rightCol {
 	width: 282px;
 }

@@ -232,7 +232,7 @@ function BuildCreatorCapsuleToAppend( oItem )
 	var $AvatarsCtn = $J('<div class="avatars" />');
 	$CreatorsCtn.append($AvatarsCtn);
 
-	var $AvatarCap = $J('<a href="%1$s" title="%3$s"><img src="%2$s"></a>'.replace(/\%1\$s/g, oItem.link).replace(/\%2\$s/g, GetAvatarURL( oItem.avatar_sha, '_medium' ) ).replace(/\%3\$s/g, oItem.name) );
+	var $AvatarCap = $J('<a href="%1$s" title="%3$s"><img src="%2$s" alt="%3$s"></a>'.replace(/\%1\$s/g, oItem.link).replace(/\%2\$s/g, GetAvatarURL( oItem.avatar_sha, '_medium' ) ).replace(/\%3\$s/g, oItem.name) );
 	$AvatarsCtn.append( $AvatarCap );
 
 	var $Actions = $J('<div class="actions" />');

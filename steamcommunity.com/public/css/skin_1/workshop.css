@@ -3037,11 +3037,24 @@ input.searchText
 	white-space: nowrap;
 }
 
+
 .searchedForTerm:hover
 {
 	cursor: pointer;
 	background-color: #8ac33e;
 	border: 2px solid #8ac33e;
+}
+
+.searchedForTerm.savedQuery {
+	color: #66c0f4 !important;
+	background: rgba( 103, 193, 245, 0.2 );
+	border: 2px solid rgba( 103, 193, 245, 0.2 );
+}
+
+.searchedForTerm.savedQuery:hover {
+	color: #66c0f4 !important;
+	background: rgba( 103, 193, 245, 0.5 );
+	border: 2px solid rgba( 103, 193, 245, 0.5 );
 }
 
 .searchedForTermImage

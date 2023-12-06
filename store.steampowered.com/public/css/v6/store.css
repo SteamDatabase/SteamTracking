@@ -140,21 +140,27 @@ body.v6.movescrolltocontent #footer {
     }
     body.v6 #footer .valve_links {
         margin-top: 8px;
-        float: left;
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: normal; /* normal */
 
 		        font-size: 13px;
         color: #61686D;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		align-items: center;
+		flex-direction: row;
     }
     body.v6 #footer .valve_links a {
-       color: #C6D4DF;
+		color: #C6D4DF;
+		display: flex;
+		align-items: center;
     }
     body.v6 #footer .valve_links a:hover {
         color: #ffffff;
     }
 	body.v6 #footer .valve_links img {
-		vertical-align: bottom;
+		margin-right: 4px;
 	}
     body.v6 #footer_nav .pulldown {
         color: #969eab !important;

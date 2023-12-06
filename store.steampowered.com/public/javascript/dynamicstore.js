@@ -2216,7 +2216,7 @@ var GDynamicStoreHelpers = {
 
 		var $ImgCtn = $J('<div class="capsule"/>').addClass( rgOptions.capsule_size );
 
-		var rgImageProperties = { src: rgItemData[rgOptions.capsule_size] };
+		var rgImageProperties = { src: rgItemData[rgOptions.capsule_size], alt: rgItemData.name };
 		if( rgOptions.lazy )
 			rgImageProperties = { 'data-image-url': rgItemData[rgOptions.capsule_size] }
 
