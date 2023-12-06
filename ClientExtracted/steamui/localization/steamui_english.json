@@ -7918,6 +7918,8 @@
     "AppDetailsControllerSection_Title_VR_Only": "Requires VR",
     "AppDetailsControllerSection_VR_Only": "This game needs a VR Headset to play",
     "AppControllerConfiguration_NoControllers": "No controller connected",
+    "AppDetailsControllerSection_Title_Unknown": "Unknown Controller Support",
+    "AppDetailsControllerSection_Unknown": "This game has not yet provided new controller support information and support for your device is unknown",
     "steamui_dummy": "DO NOT USE ME",
     "GameList_View_FamilyGroup": "Steam Family",
     "Notification_FamilyGroup_PlaytimeWarning_Title": "Families",
