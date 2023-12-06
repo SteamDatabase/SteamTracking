@@ -20330,6 +20330,7 @@
               className: (0, g.Z)({
                 SaleSectionCarousel: !0,
                 SaleSectionCarouselPadding: !Boolean(h),
+                ItemCount_4: 4 == G[0],
               }),
               useTestScrollbar: !0,
               bLazyRenderChildren: !0,

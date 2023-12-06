@@ -12937,10 +12937,7 @@
             ),
           );
         if (i.BIsFree())
-          return 0 == i.GetStoreItemType() &&
-            4 != i.GetAppType() &&
-            11 != i.GetAppType() &&
-            i.GetParentAppID()
+          return 0 == i.GetStoreItemType() && 1 == i.GetAppType()
             ? s.createElement(
                 "div",
                 { className: r },
