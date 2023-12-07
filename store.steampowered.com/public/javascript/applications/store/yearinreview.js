@@ -3303,7 +3303,10 @@
           )
         );
       }
-      const vt = { 2022: { NewActive: 17, UsedActive: 64, OldActive: 19 } },
+      const vt = {
+          2022: { NewActive: 17, UsedActive: 64, OldActive: 19 },
+          2023: { NewActive: 17, UsedActive: 64, OldActive: 19 },
+        },
         ht = {
           NewActive: "#YIR_Compare_NewGames_Flavor",
           UsedActive: "#YIR_Compare_ComfortGames_Flavor",
