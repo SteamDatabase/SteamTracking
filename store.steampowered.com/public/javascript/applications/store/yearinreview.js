@@ -1057,7 +1057,7 @@
     },
     57562: (e, t, a) => {
       "use strict";
-      a.r(t), a.d(t, { YearInReviewRoutes: () => Qn, default: () => Xn });
+      a.r(t), a.d(t, { YearInReviewRoutes: () => Zn, default: () => Vn });
       var n = a(89526),
         r = a(96927),
         i = a(59934),
@@ -1980,10 +1980,10 @@
         H = a(97101),
         Z = a.n(H);
       function V() {
-        return (0, n.useContext)(Yn).bIsUser;
+        return (0, n.useContext)(Pn).bIsUser;
       }
       function Q() {
-        return (0, n.useContext)(Yn).themeStyle;
+        return (0, n.useContext)(Pn).themeStyle;
       }
       function X(e) {
         const t = o.L7.logged_in,
@@ -1993,7 +1993,7 @@
         return t ? !n && r : a;
       }
       function O() {
-        const e = (0, n.useContext)(Yn),
+        const e = (0, n.useContext)(Pn),
           t = e.bIsUser;
         return n.useCallback(
           (a, ...r) => {
@@ -2065,7 +2065,7 @@
         }
       }
       function K(e) {
-        const t = (0, n.useContext)(Yn).Screenshots,
+        const t = (0, n.useContext)(Pn).Screenshots,
           { data: a } = (0, u.useQuery)(
             ["yirscreenshots", t.steamid.ConvertTo64BitString(), t.year, e],
             () => t.GetScreenshots(e),
@@ -5186,7 +5186,7 @@
         );
       }
       function ka(e) {
-        const t = (0, n.useContext)(Yn).persona_name,
+        const t = (0, n.useContext)(Pn).persona_name,
           {
             rgGamesLength: a,
             nNewGames: r,
@@ -6418,7 +6418,7 @@
       }
       function Bn(e) {
         const { gameSummary: t, index: a, userYearInReview: r } = e,
-          i = (0, n.useContext)(Yn),
+          i = (0, n.useContext)(Pn),
           s = O();
         if (i.bIsUser) {
           const e = `#steamrewind${r.GetYear()}_gametext_appid_${t.appid}`,
@@ -6831,24 +6831,23 @@
         );
       }
       var Rn = a(14057);
-      const bn = new Date().getFullYear() - 1,
-        Tn = 2022;
-      function Pn(e) {
+      function bn(e) {
         const t = parseInt(e.year),
           a = e.steamId || "",
           r = (0, i.k6)();
-        n.useEffect(() => {
-          (0, se.nQ)(r, "src", null);
-        }, [r]);
-        new Date().getFullYear();
-        if (!a || !t || t < Tn || t > bn)
-          return n.createElement(Hn, {
+        if (
+          (n.useEffect(() => {
+            (0, se.nQ)(r, "src", null);
+          }, [r]),
+          !a || !t)
+        )
+          return n.createElement(Fn, {
             message: (0, U.Xx)("#YIR_Error_NoData"),
           });
         const s = new I.K(a);
-        return n.createElement(Ln, { steamID: s, year: t });
+        return n.createElement(Tn, { steamID: s, year: t });
       }
-      function Ln(e) {
+      function Tn(e) {
         var t, a;
         let { steamID: r, year: i } = e;
         const [s, l] = (0, ne.Fz)(r.GetAccountID()),
@@ -6871,11 +6870,11 @@
             position: "center",
           });
         if (!s || !r.BIsIndividualAccount())
-          return n.createElement(Hn, {
+          return n.createElement(Fn, {
             message: (0, U.Xx)("#YIR_Error_NoUser"),
           });
         if (!m)
-          return n.createElement(Hn, {
+          return n.createElement(Fn, {
             message: (0, U.Xx)("#YIR_Error_PageLoadFailed"),
           });
         const _ = !(null ===
@@ -6886,26 +6885,26 @@
           ? void 0
           : a.length);
         return o.L7.steamid !== s.steamid && _
-          ? n.createElement(Hn, {
+          ? n.createElement(Fn, {
               message: (0, U.Xx)("#YIR_Error_NoShareNoGameplayNotUser"),
             })
           : _
-          ? n.createElement(Hn, {
+          ? n.createElement(Fn, {
               message: (0, U.Xx)("#YIR_Error_NoShareNoGameplay"),
             })
           : n.createElement(
               "div",
               { className: Z().YearInReviewContainer },
-              n.createElement(Dn, { userYearInReview: m, avatarAndPersona: s }),
+              n.createElement(Yn, { userYearInReview: m, avatarAndPersona: s }),
             );
       }
-      const Yn = n.createContext({
+      const Pn = n.createContext({
         bIsUser: !1,
         persona_name: "",
         Screenshots: void 0,
         themeStyle: {},
       });
-      function xn(e) {
+      function Ln(e) {
         const {
             viewAsUser: t,
             avatarAndPersona: a,
@@ -6931,9 +6930,9 @@
             }),
             [t, a.persona_name, _, m],
           );
-        return n.createElement(Yn.Provider, { value: d }, s);
+        return n.createElement(Pn.Provider, { value: d }, s);
       }
-      function Dn(e) {
+      function Yn(e) {
         var t;
         const { userYearInReview: a, avatarAndPersona: r } = e,
           i = a.GetSteamID(),
@@ -6958,20 +6957,20 @@
               ? void 0
               : t.length;
         return n.createElement(
-          xn,
+          Ln,
           {
             viewAsUser: _,
             userYearInReview: a,
             avatarAndPersona: r,
             themeYear: u,
           },
-          n.createElement(Un, {
+          n.createElement(Mn, {
             viewAsUser: _,
             setViewAsUser: d,
             themeYear: u,
             setThemeYear: p,
           }),
-          n.createElement(Fn, { avatarAndPersona: r, userYearInReview: a }),
+          n.createElement(Dn, { avatarAndPersona: r, userYearInReview: a }),
           n.createElement(
             ie.SV,
             null,
@@ -7031,7 +7030,7 @@
               n.createElement(
                 We,
                 { userYearInReview: a },
-                n.createElement(Zn, {
+                n.createElement(Un, {
                   playerName: r.persona_name,
                   userYearInReview: a,
                 }),
@@ -7052,11 +7051,11 @@
             null,
             n.createElement(Rt, { userYearInReview: a }),
           ),
-          n.createElement(ie.SV, null, n.createElement(Vn, { year: s })),
+          n.createElement(ie.SV, null, n.createElement(Hn, { year: s })),
           n.createElement(Gn, { userYearInReview: a }),
         );
       }
-      function Mn(e) {
+      function xn(e) {
         const { avatarAndPersona: t } = e,
           a = Q();
         return n.createElement(
@@ -7073,7 +7072,7 @@
           ),
         );
       }
-      function Fn(e) {
+      function Dn(e) {
         let { avatarAndPersona: t, userYearInReview: a } = e;
         const r = a.GetSteamID(),
           i = a.GetYear();
@@ -7088,7 +7087,7 @@
               { className: Z().RewindHeader },
               (0, U.kQ)(
                 "#YearInReview_SteamRewindHeader",
-                n.createElement(Mn, { avatarAndPersona: t }),
+                n.createElement(xn, { avatarAndPersona: t }),
                 n.createElement(
                   "span",
                   { className: Z().YearSubtitle },
@@ -7112,7 +7111,7 @@
           ),
         );
       }
-      function Un(e) {
+      function Mn(e) {
         let {
           viewAsUser: t,
           setViewAsUser: a,
@@ -7143,7 +7142,7 @@
               }),
             );
       }
-      function Hn(e) {
+      function Fn(e) {
         let { message: t } = e;
         return n.createElement(
           "div",
@@ -7157,7 +7156,7 @@
           ),
         );
       }
-      function Zn(e) {
+      function Un(e) {
         let { userYearInReview: t } = e;
         const a = Q();
         if (!o.L7.is_support && o.L7.accountid != t.GetAccountID()) return null;
@@ -7180,7 +7179,7 @@
           ),
         );
       }
-      function Vn(e) {
+      function Hn(e) {
         return n.createElement(
           "div",
           {
@@ -7262,8 +7261,8 @@
           ),
         );
       }
-      const Qn = { Home: (e, t) => `${r.Z.YearInReview(e, t)}` };
-      function Xn(e) {
+      const Zn = { Home: (e, t) => `${r.Z.YearInReview(e, t)}` };
+      function Vn(e) {
         return (
           (0, pe.oA)(),
           n.createElement(
@@ -7273,7 +7272,7 @@
               i.rs,
               null,
               n.createElement(i.AW, {
-                path: `${Qn.Home(":steamId?", ":year?")}`,
+                path: `${Zn.Home(":steamId?", ":year?")}`,
                 render: (e) =>
                   n.createElement(
                     s.ZP,
@@ -7281,7 +7280,7 @@
                     n.createElement(
                       ie.SV,
                       null,
-                      n.createElement(Pn, {
+                      n.createElement(bn, {
                         steamId: e.match.params.steamId,
                         year: e.match.params.year,
                       }),
