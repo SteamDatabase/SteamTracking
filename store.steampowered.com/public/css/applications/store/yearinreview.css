@@ -28,7 +28,7 @@
 }
 @keyframes yirlanding_Appear_1sCZq {
   to {
-    transform: translateY(0);
+    transform: translateY(0) translateX(0);
     opacity: 1;
   }
 }
@@ -141,7 +141,7 @@ body.v6 {
   font-size: 0.75em;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 50vw;
+  max-width: 90vw;
 }
 .yirlanding_InlineUserName_3W5sy {
   color: #fff;
@@ -183,8 +183,9 @@ body.v6 {
 }
 @media screen and (max-width: 500px) {
   .yirlanding_SectionSubTitle_3zsxW {
-    font-size: 16px;
-    font-weight: 300;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 28px;
   }
 }
 .yirlanding_SummaryArea_3ollv {
@@ -534,7 +535,7 @@ body.v6 {
   text-align: center;
   font-weight: 200;
   color: rgba(255, 255, 255, 0.5215686275);
-  overflow: hidden;
+  overflow: visible;
   z-index: 1;
 }
 @media screen and (max-width: 620px) {
@@ -551,7 +552,6 @@ body.v6 {
 .yirlanding_SummaryCtn_9eVnU
   .yirlanding_SummaryBlockTitle_3heph
   .yirlanding_RewindHeader_1wMXR {
-  position: absolute;
   width: 100%;
   font-size: clamp(18px, 2vw, 44px);
   line-height: clamp(18px, 2.2vw, 44px);
@@ -578,7 +578,6 @@ body.v6 {
   line-height: clamp(22px, 1.2em, 48px);
   letter-spacing: 0;
   text-overflow: ellipsis;
-  width: 64%;
   display: -webkit-inline-box;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
@@ -598,6 +597,16 @@ body.v6 {
   font-size: clamp(18px, 2vw, 40px);
   line-height: clamp(18px, 2vw, 40px);
 }
+.yirlanding_SummaryCtn_9eVnU
+  .yirlanding_SummaryBlockTitle_3heph
+  .yirlanding_Big_1l6lt {
+  align-items: flex-end;
+}
+.yirlanding_SummaryCtn_9eVnU
+  .yirlanding_SummaryBlockTitle_3heph
+  .yirlanding_StatBox_3vEOC {
+  text-align: right;
+}
 .yirlanding_SummaryCtn_9eVnU .yirlanding_SubSummaryCtn_2gELE {
   height: 50%;
   display: flex;
@@ -612,11 +621,6 @@ body.v6 {
 }
 .yirlanding_SummaryCtn_9eVnU .yirlanding_LongestStreakStat_1f0il {
   flex: 1;
-}
-.yirlanding_SummaryCtn_9eVnU
-  .yirlanding_LongestStreakStat_1f0il
-  .yirlanding_BigText_3FbVj {
-  padding-bottom: 30px;
 }
 .yirlanding_StatBox_3vEOC {
   display: flex;
@@ -634,8 +638,8 @@ body.v6 {
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 .yirlanding_StatBox_3vEOC .yirlanding_SmallText_1oy_z {
-  font-size: clamp(13px, 1.1vw, 21px);
-  line-height: clamp(16px, 1.4vw, 26px);
+  font-size: clamp(16px, 1.1vw, 21px);
+  line-height: clamp(22px, 1.1vw, 25px);
   color: #fff;
   min-height: 3vw;
 }
@@ -643,15 +647,21 @@ body.v6 {
   width: 100%;
   align-items: flex-start;
   flex-grow: 1;
-  position: absolute;
-  right: 0;
 }
 .yirlanding_StatBox_3vEOC.yirlanding_Big_1l6lt .yirlanding_BigNum_36SHE {
   font-size: clamp(42px, 8vw, 160px);
+  line-height: clamp(52px, 8vw, 180px);
+  font-weight: 800;
+  color: #fff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+.yirlanding_StatBox_3vEOC.yirlanding_Big_1l6lt .yirlanding_ThreeNumbers_1jk8X {
+  font-size: clamp(42px, 7vw, 160px);
   line-height: clamp(52px, 10vw, 180px);
   font-weight: 800;
   color: #fff;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  margin-top: clamp(10px, 2vh, 37px);
 }
 .yirlanding_StatBox_3vEOC.yirlanding_Big_1l6lt .yirlanding_SmallText_1oy_z {
   font-size: clamp(16px, 1.5vw, 30px);
@@ -661,7 +671,7 @@ body.v6 {
   text-align: center;
 }
 .yirlanding_StatBox_3vEOC .yirlanding_BigText_3FbVj {
-  font-size: clamp(13px, 1.1vw, 21px);
+  font-size: clamp(16px, 1.1vw, 21px);
   line-height: clamp(22px, 1.1vw, 25px);
   color: #fff;
 }
@@ -1042,7 +1052,7 @@ body.v6 {
 }
 @keyframes yirstatsbesidegametiles_Appear_7F-Qm {
   to {
-    transform: translateY(0);
+    transform: translateY(0) translateX(0);
     opacity: 1;
   }
 }
@@ -1238,23 +1248,28 @@ body.v6 {
   display: flex;
   flex-direction: row;
   padding-bottom: 1.5vw;
-  margin-top: 2vw;
-  width: 39vw;
+  width: 80vw;
   justify-content: center;
 }
 .yirstatsbesidegametiles_StatBlock_e603W {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: rgba(255, 255, 255, 0.8);
-  font-size: clamp(12px, 1.3vw, 21px);
-  font-weight: 200;
   padding: 0 20px;
 }
 .yirstatsbesidegametiles_StatBlock_e603W .yirstatsbesidegametiles_BigNum_lJ1mE {
+  display: flex;
   font-size: clamp(23px, 3.5vw, 60px);
   line-height: clamp(26px, 3.7vw, 65px);
   font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  color: #fff;
+}
+.yirstatsbesidegametiles_StatBlock_e603W
+  .yirstatsbesidegametiles_StatDescription_1eD7U {
+  color: #fff;
+  font-size: clamp(12px, 1.3vw, 21px);
+  font-weight: 500;
 }
 .yirstatsbesidegametiles_Deck_18y68 {
   position: relative;
@@ -1295,7 +1310,7 @@ body.v6 {
 }
 @keyframes yircomponents_Appear_ASaCP {
   to {
-    transform: translateY(0);
+    transform: translateY(0) translateX(0);
     opacity: 1;
   }
 }
@@ -1349,11 +1364,17 @@ html.responsive.touch
     top: 62px;
   }
 }
+@media screen and (max-width: 500px) {
+  .yircomponents_TopGamesContainer_1j8KS .yircomponents_TopGameTitleCtn_37ivc {
+    padding: 20vw 16px;
+  }
+}
 .yircomponents_TopGamesContainer_1j8KS .yircomponents_TopGameTitle_3xEkR {
   font-size: 4em;
   text-align: center;
   font-weight: 800;
   color: #fff;
+  position: absolute;
   width: 100%;
 }
 @media screen and (max-width: 500px) {
@@ -1481,15 +1502,7 @@ html.responsive.touch .yircomponents_TopGameBlockContainer_1o-Oa {
       rgba(0, 0, 0, 0.18) 83.33%,
       rgba(0, 0, 0, 0) 95.31%
     );
-  mask: radial-gradient(
-    51.31% 143.89% at 49.99% -21.75%,
-    #000000 0%,
-    #000000 52.6%,
-    rgba(0, 0, 0, 0.18) 83.33%,
-    rgba(0, 0, 0, 0) 95.31%
-  );
   -webkit-mask-composite: source-in;
-  mask-composite: source-in;
 }
 @media screen and (max-width: 500px) {
   .yircomponents_StandardInfoCtn_qUC7C .yircomponents_BackgroundImage_1X3FQ {
@@ -1876,6 +1889,69 @@ html.responsive.touch .yircomponents_TopGameBlockContainer_1o-Oa {
   max-width: 95%;
   width: 100%;
 }
+.yircomponents_SteamDeckGameCapRow_Mi9vA .yircomponents_CapsuleCtn_L9qSF {
+  opacity: 0;
+  transform: translateX(20px);
+}
+.NowVisible
+  .yircomponents_SteamDeckGameCapRow_Mi9vA
+  .yircomponents_CapsuleCtn_L9qSF {
+  animation-name: yircomponents_Appear_ASaCP;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+.NowVisible
+  .yircomponents_SteamDeckGameCapRow_Mi9vA
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(1n) {
+  animation-delay: 0.2s;
+}
+.NowVisible
+  .yircomponents_SteamDeckGameCapRow_Mi9vA
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(2n) {
+  animation-delay: 0.4s;
+}
+.NowVisible
+  .yircomponents_SteamDeckGameCapRow_Mi9vA
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(3n) {
+  animation-delay: 0.6s;
+}
+.NowVisible
+  .yircomponents_SteamDeckGameCapRow_Mi9vA
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(4n) {
+  animation-delay: 0.8s;
+}
+.NowVisible
+  .yircomponents_SteamDeckGameCapRow_Mi9vA
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(5n) {
+  animation-delay: 1s;
+}
+.NowVisible
+  .yircomponents_SteamDeckGameCapRow_Mi9vA
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(6n) {
+  animation-delay: 1.2s;
+}
+.NowVisible
+  .yircomponents_SteamDeckGameCapRow_Mi9vA
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(7n) {
+  animation-delay: 1.4s;
+}
+.NowVisible
+  .yircomponents_SteamDeckGameCapRow_Mi9vA
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(8n) {
+  animation-delay: 1.6s;
+}
+.NowVisible
+  .yircomponents_SteamDeckGameCapRow_Mi9vA
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(9n) {
+  animation-delay: 1.8s;
+}
+.NowVisible
+  .yircomponents_SteamDeckGameCapRow_Mi9vA
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(10n) {
+  animation-delay: 2s;
+}
 @media screen and (max-width: 910px) {
   .yircomponents_GameCtn_3mz1i {
     scroll-snap-align: start;
@@ -2009,55 +2085,6 @@ html.responsive.touch .yircomponents_TopGameBlockContainer_1o-Oa {
 .yircomponents_LongestStreakGamesWrapper_2TFs3 {
   width: 100%;
 }
-.yircomponents_LongestStreakGamesWrapper_2TFs3.NowVisible
-  .yircomponents_CapsuleCtn_L9qSF {
-  animation-name: yircomponents_Appear_ASaCP;
-  animation-duration: 1s;
-  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
-  animation-iteration-count: 1;
-  animation-delay: 3.5s;
-  animation-fill-mode: forwards;
-}
-.yircomponents_LongestStreakGamesWrapper_2TFs3.NowVisible
-  .yircomponents_CapsuleCtn_L9qSF:nth-child(1) {
-  animation-delay: 4s;
-}
-.yircomponents_LongestStreakGamesWrapper_2TFs3.NowVisible
-  .yircomponents_CapsuleCtn_L9qSF:nth-child(2) {
-  animation-delay: 4.2s;
-}
-.yircomponents_LongestStreakGamesWrapper_2TFs3.NowVisible
-  .yircomponents_CapsuleCtn_L9qSF:nth-child(3) {
-  animation-delay: 4.4s;
-}
-.yircomponents_LongestStreakGamesWrapper_2TFs3.NowVisible
-  .yircomponents_CapsuleCtn_L9qSF:nth-child(4) {
-  animation-delay: 4.6s;
-}
-.yircomponents_LongestStreakGamesWrapper_2TFs3.NowVisible
-  .yircomponents_CapsuleCtn_L9qSF:nth-child(5) {
-  animation-delay: 4.8s;
-}
-.yircomponents_LongestStreakGamesWrapper_2TFs3.NowVisible
-  .yircomponents_CapsuleCtn_L9qSF:nth-child(6) {
-  animation-delay: 5s;
-}
-.yircomponents_LongestStreakGamesWrapper_2TFs3.NowVisible
-  .yircomponents_CapsuleCtn_L9qSF:nth-child(7) {
-  animation-delay: 5.2s;
-}
-.yircomponents_LongestStreakGamesWrapper_2TFs3.NowVisible
-  .yircomponents_CapsuleCtn_L9qSF:nth-child(8) {
-  animation-delay: 5.4s;
-}
-.yircomponents_LongestStreakGamesWrapper_2TFs3.NowVisible
-  .yircomponents_CapsuleCtn_L9qSF:nth-child(9) {
-  animation-delay: 5.6s;
-}
-.yircomponents_LongestStreakGamesWrapper_2TFs3.NowVisible
-  .yircomponents_CapsuleCtn_L9qSF:nth-child(10) {
-  animation-delay: 5.8s;
-}
 .yircomponents_CapRow_2P__J {
   width: 67vw;
   height: fit-content;
@@ -2070,6 +2097,414 @@ html.responsive.touch .yircomponents_TopGameBlockContainer_1o-Oa {
   .yircomponents_CapsuleCtn_L9qSF {
   opacity: 0;
   transform: translateY(-20px);
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF {
+  animation-name: yircomponents_Appear_ASaCP;
+  animation-duration: 1s;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(1n) {
+  animation-delay: 0.2s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(2n) {
+  animation-delay: 0.4s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(3n) {
+  animation-delay: 0.6s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(4n) {
+  animation-delay: 0.8s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(5n) {
+  animation-delay: 1s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(6n) {
+  animation-delay: 1.2s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(7n) {
+  animation-delay: 1.4s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(8n) {
+  animation-delay: 1.6s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(9n) {
+  animation-delay: 1.8s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(10n) {
+  animation-delay: 2s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(11n) {
+  animation-delay: 2.2s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(12n) {
+  animation-delay: 2.4s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(13n) {
+  animation-delay: 2.6s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(14n) {
+  animation-delay: 2.8s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(15n) {
+  animation-delay: 3s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(16n) {
+  animation-delay: 3.2s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(17n) {
+  animation-delay: 3.4s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(18n) {
+  animation-delay: 3.6s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(19n) {
+  animation-delay: 3.8s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(20n) {
+  animation-delay: 4s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(21n) {
+  animation-delay: 4.2s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(22n) {
+  animation-delay: 4.4s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(23n) {
+  animation-delay: 4.6s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(24n) {
+  animation-delay: 4.8s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(25n) {
+  animation-delay: 5s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(26n) {
+  animation-delay: 5.2s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(27n) {
+  animation-delay: 5.4s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(28n) {
+  animation-delay: 5.6s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(29n) {
+  animation-delay: 5.8s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(30n) {
+  animation-delay: 6s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(31n) {
+  animation-delay: 6.2s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(32n) {
+  animation-delay: 6.4s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(33n) {
+  animation-delay: 6.6s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(34n) {
+  animation-delay: 6.8s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(35n) {
+  animation-delay: 7s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(36n) {
+  animation-delay: 7.2s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(37n) {
+  animation-delay: 7.4s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(38n) {
+  animation-delay: 7.6s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(39n) {
+  animation-delay: 7.8s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(40n) {
+  animation-delay: 8s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(41n) {
+  animation-delay: 8.2s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(42n) {
+  animation-delay: 8.4s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(43n) {
+  animation-delay: 8.6s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(44n) {
+  animation-delay: 8.8s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(45n) {
+  animation-delay: 9s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(46n) {
+  animation-delay: 9.2s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(47n) {
+  animation-delay: 9.4s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(48n) {
+  animation-delay: 9.6s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(49n) {
+  animation-delay: 9.8s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(50n) {
+  animation-delay: 10s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(51n) {
+  animation-delay: 10.2s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(52n) {
+  animation-delay: 10.4s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(53n) {
+  animation-delay: 10.6s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(54n) {
+  animation-delay: 10.8s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(55n) {
+  animation-delay: 11s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(56n) {
+  animation-delay: 11.2s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(57n) {
+  animation-delay: 11.4s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(58n) {
+  animation-delay: 11.6s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(59n) {
+  animation-delay: 11.8s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(60n) {
+  animation-delay: 12s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(61n) {
+  animation-delay: 12.2s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(62n) {
+  animation-delay: 12.4s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(63n) {
+  animation-delay: 12.6s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(64n) {
+  animation-delay: 12.8s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(65n) {
+  animation-delay: 13s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(66n) {
+  animation-delay: 13.2s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(67n) {
+  animation-delay: 13.4s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(68n) {
+  animation-delay: 13.6s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(69n) {
+  animation-delay: 13.8s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(70n) {
+  animation-delay: 14s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(71n) {
+  animation-delay: 14.2s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(72n) {
+  animation-delay: 14.4s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(73n) {
+  animation-delay: 14.6s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(74n) {
+  animation-delay: 14.8s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(75n) {
+  animation-delay: 15s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(76n) {
+  animation-delay: 15.2s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(77n) {
+  animation-delay: 15.4s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(78n) {
+  animation-delay: 15.6s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(79n) {
+  animation-delay: 15.8s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(80n) {
+  animation-delay: 16s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(81n) {
+  animation-delay: 16.2s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(82n) {
+  animation-delay: 16.4s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(83n) {
+  animation-delay: 16.6s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(84n) {
+  animation-delay: 16.8s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(85n) {
+  animation-delay: 17s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(86n) {
+  animation-delay: 17.2s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(87n) {
+  animation-delay: 17.4s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(88n) {
+  animation-delay: 17.6s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(89n) {
+  animation-delay: 17.8s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(90n) {
+  animation-delay: 18s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(91n) {
+  animation-delay: 18.2s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(92n) {
+  animation-delay: 18.4s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(93n) {
+  animation-delay: 18.6s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(94n) {
+  animation-delay: 18.8s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(95n) {
+  animation-delay: 19s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(96n) {
+  animation-delay: 19.2s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(97n) {
+  animation-delay: 19.4s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(98n) {
+  animation-delay: 19.6s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(99n) {
+  animation-delay: 19.8s;
+}
+.yircomponents_CapRow_2P__J.yircomponents_LongestStreak_jek6k.yircomponents_AnimateCap_r7XAG
+  .yircomponents_CapsuleCtn_L9qSF:nth-child(100n) {
+  animation-delay: 20s;
 }
 .yircomponents_CapRow_2P__J .yircomponents_CapsuleCtn_L9qSF {
   display: flex;
@@ -2120,7 +2555,8 @@ html.responsive.touch .yircomponents_TopGameBlockContainer_1o-Oa {
   }
 }
 .yircomponents_TimePlayed_2slxL {
-  background-color: #1a9ffe;
+  background-color: #eee;
+  color: #000;
   width: fit-content;
   padding: 1px 8px;
   box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.6);
@@ -2148,8 +2584,7 @@ html.responsive.touch .yircomponents_TopGameBlockContainer_1o-Oa {
   overflow: hidden;
   color: #b9c2cc;
   background: linear-gradient(to bottom, #ffffff 0%, #b1b7ca 60%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  background-clip: text;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 .yircomponents_GameDetailsPopup_3OhDS {
@@ -2328,7 +2763,7 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
 }
 @media screen and (max-width: 500px) {
   .yirallgames_GameCtn_1ctBs {
-    width: 75px;
+    width: 150px;
   }
 }
 .yirallgames_GameCtn_1ctBs:hover {
@@ -2399,8 +2834,8 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   position: absolute;
   z-index: -1;
   filter: saturate(0.2) opacity(0.5);
-  animation: yirbackgroundtiles_TilesAnimation_30Wt5 40s ease 0s alternate
-    infinite;
+  animation: yirbackgroundtiles_TilesAnimation_30Wt5 40s ease 0s forwards
+    alternate infinite;
   -webkit-mask: linear-gradient(180deg, black 58%, rgba(0, 0, 0, 0) 95%),
     radial-gradient(
       48.77% 50.22% at 47% 42.95%,
@@ -2503,7 +2938,7 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
 }
 @keyframes yirbadges_Appear_CIj8T {
   to {
-    transform: translateY(0);
+    transform: translateY(0) translateX(0);
     opacity: 1;
   }
 }
@@ -2806,6 +3241,8 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   min-height: 400px;
   margin: auto;
   min-width: 100%;
+  display: flex;
+  align-items: center;
 }
 @media screen and (max-width: 620px) {
   .yirbadges_SpidergraphContainer_2zK9j .yirbadges_GraphBox_2n56d {
@@ -2864,8 +3301,14 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   stroke: red;
 }
 .yirbadges_SpidergraphContainer_2zK9j text {
-  font-size: clamp(12px, 2vw, 20px);
+  font-size: clamp(14px, 2vw, 20px);
   fill: #fff;
+}
+@media screen and (max-width: 500px) {
+  .yirbadges_SpiderResponsiveContainer_3-KEF {
+    width: 95% !important;
+    height: 65% !important;
+  }
 }
 .yirbadges_NumbersRowsCnt_1s-wI {
   margin-top: 32px;
@@ -2931,9 +3374,11 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   padding-top: 32px;
 }
 .yirbadges_SectionDesc_j92P6 {
-  font-size: 18px;
-  font-weight: 300;
-  color: rgba(255, 255, 255, 0.7);
+  font-size: clamp(17px, 2vw, 20px);
+  line-height: clamp(23px, 1.5em, 36px);
+  padding-top: clamp(12px, 1vw, 20px);
+  font-weight: 200;
+  color: #fff;
   align-self: center;
   max-width: 80%;
 }
@@ -2943,6 +3388,12 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
 .yirbadges_SectionDesc_j92P6 span {
   color: #9cc4ff;
   font-weight: bold;
+}
+@media screen and (max-width: 500px) {
+  .yirbadges_SectionDesc_j92P6 {
+    text-align: center;
+    font-weight: 200;
+  }
 }
 @keyframes yirbadges_progressBar_3ghXb {
   from {
@@ -3261,7 +3712,7 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   opacity: 0;
   transform: translateY(5px);
   color: rgba(255, 255, 255, 0.66);
-  font-size: clamp(12px, 1.25vw, 24px);
+  font-size: clamp(16px, 1.25vw, 24px);
 }
 .yirbadges_PlayBehaviorContainer_1NBM7 .yirbadges_PlayNewnessContainer_30ZGr {
   display: flex;
@@ -3290,8 +3741,8 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
 .yirbadges_PlayBehaviorContainer_1NBM7
   .yirbadges_GameNewnessComparisonContainer_2ejw1
   .yirbadges_WheelChart_3uLgh {
-  width: clamp(102px, 30vw, 280px);
-  height: clamp(102px, 30vw, 280px);
+  width: clamp(200px, 30vw, 280px);
+  height: clamp(200px, 30vw, 280px);
   margin-right: 2vw;
   align-self: flex-start;
 }
@@ -3489,11 +3940,24 @@ html.responsive.touch .tabbar_GraphicalAssetsTab_K1_Tp {
   margin-left: auto;
   margin-right: auto;
 }
+.yirhowyouplayed_Video_2etdS {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  object-position: bottom;
+  object-fit: cover;
+}
+.yirhowyouplayed_PlatformDataContainer_2gJdN {
+  transform: translateY(-40px);
+}
 div.yirhowyouplayed_DeckContainer_3G2ne {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
-  background-size: max(100%, (var(--contentSize) + 48px) * 2.3629489603);
+  background-size: max(100%, (var(--contentSize) + 60px) * 2.3629489603);
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 26vw 1fr;
@@ -3534,6 +3998,9 @@ div.yirhowyouplayed_DeckContainer_3G2ne .yirhowyouplayed_Disclaimer_1h_am {
   }
 }
 @media (max-width: 620px) {
+  .yirhowyouplayed_PlatformDataContainer_2gJdN {
+    transform: translateY(-22px);
+  }
   div.yirhowyouplayed_DeckContainer_3G2ne {
     grid-template-rows: auto 55vw auto;
   }
@@ -3578,7 +4045,7 @@ div.yirhowyouplayed_DeckContainer_3G2ne .yirhowyouplayed_Disclaimer_1h_am {
 }
 @keyframes yirlongeststreak_Appear_3KLb3 {
   to {
-    transform: translateY(0);
+    transform: translateY(0) translateX(0);
     opacity: 1;
   }
 }
@@ -3608,15 +4075,16 @@ div.yirhowyouplayed_DeckContainer_3G2ne .yirhowyouplayed_Disclaimer_1h_am {
   font-size: 0.75em;
 }
 .yirlongeststreak_LongestStreakDailyCount_2V5k0 {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+  display: inline;
 }
 .yirlongeststreak_StreakSizeCtn_1uHL0 {
   display: block;
   height: 26px;
   width: 100%;
   box-sizing: border-box;
+}
+.yirlongeststreak_LongestStreakNumber_wzmjO {
+  display: inline;
 }
 .yirlongeststreak_StreakDates_eeemD {
   width: 100%;
@@ -3628,6 +4096,11 @@ div.yirhowyouplayed_DeckContainer_3G2ne .yirhowyouplayed_Disclaimer_1h_am {
   margin-bottom: 5vh;
   opacity: 0;
   transform: translateY(-20px);
+}
+@media screen and (max-width: 620px) {
+  .yirlongeststreak_StreakDates_eeemD {
+    font-size: 0.7em;
+  }
 }
 .yirlongeststreak_StreakDates_eeemD.NowVisible {
   animation-name: yirlongeststreak_Appear_3KLb3;
@@ -3644,21 +4117,21 @@ div.yirhowyouplayed_DeckContainer_3G2ne .yirhowyouplayed_Disclaimer_1h_am {
   .yirlongeststreak_CapRowTitle_13uJv {
   display: block;
   width: 100%;
-  margin-bottom: 5px;
+  margin-bottom: 12px;
   font-size: 1.75em;
+  font-weight: 500;
   color: #fff;
   text-align: center;
   opacity: 0;
   transform: translateY(-20px);
 }
-.yirlongeststreak_LongestStreakGamesWrapper_3ztmU.NowVisible
-  .yirlongeststreak_CapRowTitle_13uJv {
-  animation-name: yirlongeststreak_Appear_3KLb3;
-  animation-duration: 1s;
-  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
-  animation-delay: 3s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
+.yirlongeststreak_LongestStreakGamesWrapper_3ztmU
+  .yirlongeststreak_CapRowTitle_13uJv.yirlongeststreak_AnimateTitle_26I4e {
+  opacity: 1;
+  transform: translateY(0px);
+  transition: opacity, transform;
+  transition-delay: 0s;
+  transition-duration: 1s;
 }
 .yirlongeststreak_StreakCtn_LC_OK .yirlongeststreak_CapRowCtn_39X62 {
   position: relative;
@@ -3698,13 +4171,6 @@ div.yirhowyouplayed_DeckContainer_3G2ne .yirhowyouplayed_Disclaimer_1h_am {
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.35);
   padding-right: 2px;
   clip-path: inset(0 0 0 0);
-}
-@media screen and (max-width: 500px) {
-  .yirlongeststreak_StreakBarCtn_2z4wN
-    .yirlongeststreak_StreakSizeFullBar_3sks_ {
-    width: 1px;
-    top: 32%;
-  }
 }
 .yirlongeststreak_StreakBarCtn_2z4wN.NowVisible
   .yirlongeststreak_StreakSizeFullBar_3sks_ {
@@ -3801,7 +4267,7 @@ div.yirhowyouplayed_DeckContainer_3G2ne .yirhowyouplayed_Disclaimer_1h_am {
 }
 @keyframes yirshare_Appear_lI6Qf {
   to {
-    transform: translateY(0);
+    transform: translateY(0) translateX(0);
     opacity: 1;
   }
 }
@@ -4987,7 +5453,7 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
 }
 @keyframes yirachievements_Appear_2HdNk {
   to {
-    transform: translateY(0);
+    transform: translateY(0) translateX(0);
     opacity: 1;
   }
 }
@@ -5184,7 +5650,7 @@ div.LowPerfMode .achievementiconbase_RareAchievementIconGlow_rORbR {
 }
 @keyframes yirscreenshot_Appear_3MN1n {
   to {
-    transform: translateY(0);
+    transform: translateY(0) translateX(0);
     opacity: 1;
   }
 }
