@@ -36521,7 +36521,10 @@
       function Hs(e) {
         const t = (0, ce.kD)(Us),
           n = (0, ce.kD)(o.useCallback(() => new Bs.Z(), [])),
-          i = (0, o.useMemo)(() => ({ useActiveAccount: () => "" }), []);
+          i = (0, o.useMemo)(
+            () => ({ useActiveAccount: () => s.L7.steamid }),
+            [],
+          );
         return o.createElement(
           xs.B,
           { value: i },
