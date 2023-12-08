@@ -2803,5 +2803,7 @@
     "FamilyManagement_Role_0": "Unknown",
     "FamilyManagement_Role_1": "Adult",
     "FamilyManagement_Role_2": "Child",
+    "RemotePlay_StoreFunctionalityBlocked_Title": "Store Not Available",
+    "RemotePlay_StoreFunctionalityBlocked_Description": "Access to the store is unavailable while running through this Steam Link client.",
     "shared_dummy": "dont translate"
 }

@@ -339,6 +339,9 @@
   border: none;
   outline: none;
 }
+.parentalunlockdialog_RemotePlayStoreBlockedDialog_3VYWG {
+  max-width: 490px;
+}
 @keyframes controllerconfiguratorsummary_BackgroundAnimation_1Wojo {
   from {
     background-position: 0 100%;
@@ -67054,6 +67057,29 @@ div.NarrowRightPanel
   display: -webkit-box;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+.SeasonalSale_SeasonalSale_2wSgz {
+  width: 100%;
+  height: 215px;
+  position: relative;
+  display: none;
+  overflow: hidden;
+}
+.SeasonalSale_SeasonalSale_2wSgz.SeasonalSale_Loaded_3O2zs {
+  display: block;
+}
+.SeasonalSale_Banner_123Uq {
+  width: 100%;
+}
+.SeasonalSale_SnowFall_1W8wH {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+  pointer-events: none;
+  user-select: none;
 }
 @keyframes gamepadhomerecommended_BackgroundAnimation_1iwF4 {
   from {
