@@ -7248,24 +7248,32 @@
         );
       }
       function Dn(e) {
-        let {
-          viewAsUser: t,
-          setViewAsUser: a,
-          themeYear: r,
-          setThemeYear: i,
-        } = e;
-        const s = (0, n.useCallback)(
-          (e) => {
-            i(e.data);
-          },
-          [i],
-        );
-        return "dev" !== o.De.WEB_UNIVERSE && "beta" !== o.De.WEB_UNIVERSE
+        const {
+            viewAsUser: t,
+            setViewAsUser: a,
+            themeYear: r,
+            setThemeYear: i,
+          } = e,
+          s = (0, n.useCallback)(
+            (e) => {
+              i(e.data);
+            },
+            [i],
+          );
+        return (o.L7.is_support &&
+          Boolean(
+            (0, o.ip)("localization_advanced_access", "application_config"),
+          )) ||
+          ("dev" !== o.De.WEB_UNIVERSE && "beta" !== o.De.WEB_UNIVERSE)
           ? null
           : n.createElement(
               "div",
               { className: (0, ce.Z)(V().DevToggle, oe.ValveOnlyBackground) },
-              n.createElement("div", null, "Toggle First Person View"),
+              n.createElement(
+                "div",
+                null,
+                "Debug Only: Toggle First Person View",
+              ),
               n.createElement(ie.gE, { onChange: a, checked: t }),
               n.createElement(ie.TW, {
                 rgOptions: [
