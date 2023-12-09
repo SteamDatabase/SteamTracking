@@ -690,6 +690,14 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 			$Data = explode( "\n", $Data );
 			$Urls = [];
 
+			// Add sale urls for current year
+			$Year = idate( 'Y' );
+			$Data[] = 'https://store.steampowered.com/public/css/promo/autumn' . $Year . '_nominations.css?__TIME__&_cdn=cloudflare';
+			$Data[] = 'https://store.steampowered.com/public/css/promo/autumn' . $Year . '_sale.css?__TIME__&_cdn=cloudflare';
+			$Data[] = 'https://store.steampowered.com/public/css/promo/spring' . $Year . '_sale.css?__TIME__&_cdn=cloudflare';
+			$Data[] = 'https://store.steampowered.com/public/css/promo/summer' . $Year . '_sale.css?__TIME__&_cdn=cloudflare';
+			$Data[] = 'https://store.steampowered.com/public/css/promo/winter' . $Year . '_sale.css?__TIME__&_cdn=cloudflare';
+
 			foreach( $Data as $Line )
 			{
 				$Line = trim( $Line );

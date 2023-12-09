@@ -1,0 +1,247 @@
+
+/* Purpose: render the background image and color within PHP while we're waiting for react to load */
+body.SteamAwardsNominations {
+    background-color: #21081f;
+}
+
+body.SteamAwardsNominations .responsive_page_frame {
+    background: url(https://cdn.cloudflare.steamstatic.com/store/promo/steamawards2023/SA_header_still.png?v=2) no-repeat;
+    background-position: center top;
+    background-size: contain;
+    background-color: #21081f;
+    min-height: 517px;
+}
+
+/* Define fonts for applying to the game-page banner */
+.mslight {
+		font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		}
+
+.msblack {
+		font-family: "Motiva Sans", Sans-serif;
+		font-weight: 900; /* black */
+
+		}
+
+.msmedium {
+		font-family: "Motiva Sans", Sans-serif;
+		font-weight: 500; /* medium */
+
+		}
+
+.msthin {
+		font-family: "Motiva Sans", Sans-serif;
+		font-weight: 200; /* thin */
+
+		}
+
+.msbold {
+		font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+		}
+.msregular {
+		font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		}
+
+.steamaward_nominate_gamepage_ctn {
+    position: relative;
+    color: #c6d5e0;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    box-shadow: 4px 4px 4px #0f1522;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.steamaward_nominate_background {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    background: url(https://cdn.cloudflare.steamstatic.com/store/promo/steamawards2023/SA_header_notrophy.jpg);
+    background-size: cover;
+    background-position: center;
+    background-color: #21081f;
+    transition: transform 0.3s ease-in-out;
+}
+
+.steamaward_nominate_gamepage_ctn .nominate_check_ctn {
+    border: 3px solid #0f1522;
+}
+
+.steamaward_nominate_gamepage_ctn .nominate_check {
+    background: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20width%3D%221em%22%20height%3D%221em%22%20preserveAspectRatio%3D%22xMidYMid%20meet%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M9%2019.414l-6.707-6.707l1.414-1.414L9%2016.586L20.293%205.293l1.414%201.414z%22%20fill%3D%22currentColor%22%2F%3E%3C%2Fsvg%3E) no-repeat center;
+}
+
+.steamaward_nominate_gamepage_ctn:not(.homepage):not(.gamewinner) .steamaward_nominate_right:not(.disabled):hover {
+    box-shadow: 5px 6px 0 rgb(0 0 0 / 40%);
+    filter: brightness(1.1);
+    /* color: #c6d5e0; */
+}
+
+.steamaward_nominate_gamepage_ctn:not(.homepage) .game_nominate:not(:hover) .hover_highlight {
+    color: #c6d5e0;
+}
+
+.steamaward_nominate_gamepage_ctn:not(.homepage) .game_nominate:not(:hover) .hover_highlight {
+    color: #c6d5e0;
+}
+
+a.steamaward_nominate_link {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: block;
+    box-sizing: border-box;
+    overflow: hidden;
+    color: #c6d5e0;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.steamaward_nominate_link:hover {
+    box-shadow: 0 0 8px #e5c6df;
+}
+.steamaward_nominate_link:hover .steamaward_nominate_background {
+    transform: scale(1.1);
+}
+
+.game_nominate {
+    display: block;
+    font-size: 14px;
+    border-radius: 0px;
+    flex-grow: 1;
+}
+
+.game_nominate.steamaward_nominate_full {
+    float: none;
+    width: auto;
+}
+
+@media screen and (max-width: 840px ) {
+    html.responsive .game_nominate,
+    html.responsive .homepage .game_nominate {
+        float: none;
+        width: auto;
+    }
+
+    html.responsive .game_nominate.steamaward_nominate_contents {
+        overflow: hidden;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    html.responsive .steamaward_nominate_gamepage_ctn.homepage .game_nominate.steamaward_nominate_contents {
+        margin-bottom: 0;
+    }
+
+    html.responsive .game_nominate span.game_nominate_collapsed_only {
+        display: inline;
+    }
+
+    html.responsive .game_nominate div.game_nominate_collapsed_only {
+        display: block;
+    }
+
+    html.responsive .game_nominate .game_nominate_noncollapsed_only {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px ) {
+
+    html.responsive	.steamaward_nominate_gamepage_ctn,
+    html.responsive	.steamawards_winner_label {
+        padding-left: 15px;
+    }
+    html.responsive	.steamawards_winner_label {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 410px ) {
+    html.responsive .game_nominate_line1 {
+        font-size: 14px;
+    }
+
+    html.responsive .game_nominate_line2 {
+        font-size: 20px;
+    }
+
+    html.responsive .game_nominate_line3 {
+        font-size: 11px;
+    }
+}
+
+.steamaward_nominate_gamepage_ctn.homepage .hover_highlight {
+    color: #c6d5e0;
+}
+
+.steamaward_nominate_award {
+    position: absolute ;
+    left: 13px;
+    top: -19px;
+    width: 68px;
+    height: calc( 100% + 19px);
+    overflow: hidden;
+    pointer-events: none;
+}
+.steamaward_nominate_award img {
+    width: 54px;
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.steamaward_nominate_gamepage_ctn:hover .steamaward_nominate_award img {
+    transform: scale(1.1);
+}
+
+.steamaward_nominate_contents {
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    padding: 15px 15px 15px 92px;
+    box-shadow: none;
+}
+
+.game_nominate_line1 {
+    font-size: 15px;
+    letter-spacing: 0.05em;
+    line-height: 17px;
+}
+
+.game_nominate_line2 {
+    		font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		    font-size: 24px;
+    line-height: 26px;
+    color: #e5c6df;
+    text-shadow: 0 0 8px rgba(0,0,0,0.4);
+}
+.game_nominate_line2 span {
+    		font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+		    color: #ffcb60;
+}
+
+.game_nominate_line3 {
+    font-size: 13px;
+    line-height: 15px;
+    color: #c7b4c4;
+}
+
+.game_nominate_toupper {
+    text-transform: uppercase;
+}
+
+.game_nominate .game_nominate_collapsed_only {
+    display: none;
+}
