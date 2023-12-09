@@ -692,11 +692,11 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 
 			// Add sale urls for current year
 			$Year = idate( 'Y' );
-			$Data[] = 'https://store.steampowered.com/public/css/promo/autumn' . $Year . '_nominations.css?__TIME__&_cdn=cloudflare';
-			$Data[] = 'https://store.steampowered.com/public/css/promo/autumn' . $Year . '_sale.css?__TIME__&_cdn=cloudflare';
-			$Data[] = 'https://store.steampowered.com/public/css/promo/spring' . $Year . '_sale.css?__TIME__&_cdn=cloudflare';
-			$Data[] = 'https://store.steampowered.com/public/css/promo/summer' . $Year . '_sale.css?__TIME__&_cdn=cloudflare';
-			$Data[] = 'https://store.steampowered.com/public/css/promo/winter' . $Year . '_sale.css?__TIME__&_cdn=cloudflare';
+			$Data[] = 'store.steampowered.com/public/css/promo/autumn_year_nominations.css @ https://store.steampowered.com/public/css/promo/autumn' . $Year . '_nominations.css?__TIME__&_cdn=cloudflare';
+			$Data[] = 'store.steampowered.com/public/css/promo/autumn_year_sale.css @ https://store.steampowered.com/public/css/promo/autumn' . $Year . '_sale.css?__TIME__&_cdn=cloudflare';
+			$Data[] = 'store.steampowered.com/public/css/promo/spring_year_sale.css @ https://store.steampowered.com/public/css/promo/spring' . $Year . '_sale.css?__TIME__&_cdn=cloudflare';
+			$Data[] = 'store.steampowered.com/public/css/promo/summer_year_sale.css @ https://store.steampowered.com/public/css/promo/summer' . $Year . '_sale.css?__TIME__&_cdn=cloudflare';
+			$Data[] = 'store.steampowered.com/public/css/promo/winter_year_sale.css @ https://store.steampowered.com/public/css/promo/winter' . $Year . '_sale.css?__TIME__&_cdn=cloudflare';
 
 			foreach( $Data as $Line )
 			{
