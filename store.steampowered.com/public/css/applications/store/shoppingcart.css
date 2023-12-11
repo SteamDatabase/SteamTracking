@@ -1,0 +1,711 @@
+.packagepricewidget_StoreSalePriceWidget_2ykYV {
+  margin-left: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.packagepricewidget_StoreSaleDiscountedPriceCtn_1f3PI {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: 5px;
+}
+.packagepricewidget_StoreSaleDiscountedPriceCtn_1f3PI
+  .packagepricewidget_StoreSalePriceBox_2WBvz {
+  padding: 0px;
+  line-height: 16px;
+}
+.packagepricewidget_StoreSaleDiscountedPriceCtn_1f3PI
+  .packagepricewidget_StoreSaleReservationPriceBox_3u-EJ {
+  background: none;
+  color: #fff;
+  font-size: 0.7em;
+  font-weight: 600;
+  padding: 0px;
+}
+.packagepricewidget_StoreSaleDiscountBox_2rkkq {
+  height: 100%;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 3px 5px;
+  background-color: #4c6b22;
+  color: #a4d007;
+  display: flex;
+  align-items: center;
+  margin-right: 3px;
+}
+.packagepricewidget_StoreSaleDiscountBox_2rkkq.packagepricewidget_FromCoupon_1Q2do {
+  background-color: #007eb3;
+  color: #fff;
+}
+.packagepricewidget_StoreOriginalPrice_3h9iQ {
+  text-decoration: line-through;
+  color: #626366;
+  font-size: 11px;
+  line-height: 11px;
+  margin-top: 2px;
+}
+.packagepricewidget_StoreSalePriceBox_2WBvz {
+  background: #000;
+  font-size: 14px;
+  padding: 5px;
+  background-color: #000;
+  align-items: center;
+  display: flex;
+}
+.packagepricewidget_StoreSaleReservationPriceBox_3u-EJ {
+  background: none;
+  color: #fff;
+  font-size: 0.7em;
+  font-weight: 600;
+  padding: 0px;
+}
+.partnereventshareddates_EventTimeSection_27EoU:first-child {
+  margin-bottom: 12px;
+}
+.partnereventshareddates_EventTimeSection_27EoU:last-child {
+  margin-bottom: 0px;
+}
+.partnereventshareddates_EventTimeTitle_2sTdT {
+  font-size: 11px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 3px;
+  position: relative;
+}
+.partnereventshareddates_EventVisibilityItem_3Q0gD {
+  line-height: 24px;
+}
+.partnereventshareddates_EventEditorInputPaneContainer_3j82M
+  input.partnereventshareddates_TimeWidth_2W8sg {
+  font-size: 15px;
+}
+.partnereventshareddates_EventPublishTimeCtn_12m3S {
+  margin-left: 20px;
+  margin-top: 8px;
+}
+.partnereventshareddates_DateWidth_2ao2W {
+  max-width: 200px;
+}
+.partnereventshareddates_TimeWidth_2W8sg {
+  max-width: 100px;
+}
+.partnereventshareddates_PacificTimeHint_VTwea {
+  display: block;
+  line-height: 22px;
+  padding: 10px;
+  font-size: 14px;
+}
+.partnereventshareddates_TimeZone_2RLF9 {
+  padding: 10px;
+}
+.partnereventshareddates_InputBorder_2mTwC.partnereventshareddates_TimeBlock_1O49u {
+  margin-right: 8px;
+}
+.partnereventshareddates_TimeRowContainer_3ksYF {
+  justify-content: flex-start;
+  padding: 10px;
+  border-radius: 3px;
+  background-color: rgba(57, 61, 71, 0.5);
+}
+.partnereventshareddates_TimeRowDropDown_3KrsS {
+  margin-top: 5px;
+  padding-top: 10px;
+  margin-bottom: 15px;
+  margin-left: 10px;
+  padding-left: 20px;
+  border-left: #399aec 1px solid;
+}
+.partnereventshareddates_TimeRowDropDown_3KrsS
+  > .partnereventshareddates_EndDateAmountCtn_2_8MR {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 8px;
+  width: 50%;
+}
+.partnereventshareddates_TimeRowDropDown_3KrsS
+  > .partnereventshareddates_EndRound_1MAHS
+  > span {
+  margin-bottom: 0px;
+}
+.partnereventshareddates_VisibilityItemList_rYX24 {
+  display: flex;
+  flex-direction: column;
+}
+.partnereventshareddates_VisibilityItems_2SAGi {
+  padding: 10px;
+  border-radius: 3px;
+  background: rgba(57, 61, 71, 0.5);
+}
+.partnereventshareddates_EventEditorVisibilityCtn_1jbnR {
+  margin-top: 12px;
+}
+.partnereventshareddates_DateErrorCtn_Bww9B {
+  position: absolute;
+  top: -13px;
+  left: 30px;
+  background: #744f4f;
+  padding: 2px 8px 2px 2px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 2px;
+  box-shadow: 1px 1px 8px #000;
+}
+.partnereventshareddates_DateErrorCtn_Bww9B img {
+  margin-right: 4px;
+}
+/*!
+ * https://github.com/arqex/react-datetime
+ */
+.rdt {
+  position: relative;
+}
+.rdtPicker {
+  display: none;
+  position: absolute;
+  min-width: 250px;
+  padding: 4px;
+  margin-top: 1px;
+  z-index: 99999 !important;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #f9f9f9;
+}
+.rdtOpen .rdtPicker {
+  display: block;
+}
+.rdtStatic .rdtPicker {
+  box-shadow: none;
+  position: static;
+}
+.rdtPicker .rdtTimeToggle {
+  text-align: center;
+}
+.rdtPicker table {
+  width: 100%;
+  margin: 0;
+}
+.rdtPicker td,
+.rdtPicker th {
+  text-align: center;
+  height: 28px;
+}
+.rdtPicker td {
+  cursor: pointer;
+}
+.rdtPicker td.rdtDay:hover,
+.rdtPicker td.rdtHour:hover,
+.rdtPicker td.rdtMinute:hover,
+.rdtPicker td.rdtSecond:hover,
+.rdtPicker .rdtTimeToggle:hover {
+  background: #eee;
+  cursor: pointer;
+}
+.rdtPicker td.rdtOld,
+.rdtPicker td.rdtNew {
+  color: #999;
+}
+.rdtPicker td.rdtToday {
+  position: relative;
+}
+.rdtPicker td.rdtToday:before {
+  content: "";
+  display: inline-block;
+  border-left: 7px solid rgba(0, 0, 0, 0);
+  border-bottom: 7px solid #428bca;
+  border-top-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+}
+.rdtPicker td.rdtActive,
+.rdtPicker td.rdtActive:hover {
+  background-color: #428bca;
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+.rdtPicker td.rdtActive.rdtToday:before {
+  border-bottom-color: #fff;
+}
+.rdtPicker td.rdtDisabled,
+.rdtPicker td.rdtDisabled:hover {
+  background: none;
+  color: #999;
+  cursor: not-allowed;
+}
+.rdtPicker td span.rdtOld {
+  color: #999;
+}
+.rdtPicker td span.rdtDisabled,
+.rdtPicker td span.rdtDisabled:hover {
+  background: none;
+  color: #999;
+  cursor: not-allowed;
+}
+.rdtPicker th {
+  border-bottom: 1px solid #f9f9f9;
+}
+.rdtPicker .dow {
+  width: 14.2857%;
+  border-bottom: none;
+  cursor: default;
+}
+.rdtPicker th.rdtSwitch {
+  width: 100px;
+}
+.rdtPicker th.rdtNext,
+.rdtPicker th.rdtPrev {
+  font-size: 21px;
+  vertical-align: top;
+}
+.rdtPrev span,
+.rdtNext span {
+  display: block;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.rdtPicker th.rdtDisabled,
+.rdtPicker th.rdtDisabled:hover {
+  background: none;
+  color: #999;
+  cursor: not-allowed;
+}
+.rdtPicker thead tr:first-of-type th {
+  cursor: pointer;
+}
+.rdtPicker thead tr:first-of-type th:hover {
+  background: #eee;
+}
+.rdtPicker tfoot {
+  border-top: 1px solid #f9f9f9;
+}
+.rdtPicker button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.rdtPicker button:hover {
+  background-color: #eee;
+}
+.rdtPicker thead button {
+  width: 100%;
+  height: 100%;
+}
+td.rdtMonth,
+td.rdtYear {
+  height: 50px;
+  width: 25%;
+  cursor: pointer;
+}
+td.rdtMonth:hover,
+td.rdtYear:hover {
+  background: #eee;
+}
+.rdtCounters {
+  display: inline-block;
+}
+.rdtCounters > div {
+  float: left;
+}
+.rdtCounter {
+  height: 100px;
+}
+.rdtCounter {
+  width: 40px;
+}
+.rdtCounterSeparator {
+  line-height: 100px;
+}
+.rdtCounter .rdtBtn {
+  height: 40%;
+  line-height: 40px;
+  cursor: pointer;
+  display: block;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.rdtCounter .rdtBtn:hover {
+  background: #eee;
+}
+.rdtCounter .rdtCount {
+  height: 20%;
+  font-size: 1.2em;
+}
+.rdtMilli {
+  vertical-align: middle;
+  padding-left: 8px;
+  width: 48px;
+}
+.rdtMilli input {
+  width: 100%;
+  font-size: 1.2em;
+  margin-top: 37px;
+}
+.rdtTime td {
+  cursor: default;
+}
+.giftform_GiftFormDivider_1mAU7 {
+  border-top: 1px solid #343a44;
+  margin-bottom: 15px;
+}
+.giftform_GiftFormSection_1tgux {
+  margin: 20px 0;
+}
+.giftform_FormTextLabel_1TulC {
+  font-size: 14px;
+  color: #c6d4df;
+  line-height: 20px;
+  margin-bottom: 5px;
+}
+.giftform_FormTitle_NYKHM {
+  font-size: 22px;
+  color: #fff;
+}
+.giftform_RedText_1Ja8R {
+  color: red;
+}
+.giftform_GiftNoteInput_3wPcW {
+  border: 1px solid #0e141b;
+  border-radius: 4px;
+  background: rgba(59, 63, 72, 0.5);
+  color: #dfe3e6;
+  box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0);
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  resize: none;
+  padding: 8px;
+  font-size: 14px;
+  line-height: 20px;
+  width: calc(100% - 16px - 2px);
+  transition-property: background, box-shadow;
+  transition-duration: 0.18s;
+  transition-timing-function: ease-in-out;
+}
+.giftform_GiftNoteInput_3wPcW::placeholder {
+  font-style: italic;
+  color: rgba(148, 161, 166, 0.562);
+}
+.giftform_GiftNoteInput_3wPcW:focus {
+  outline: none;
+  background: rgba(29, 34, 39, 0.8);
+  box-shadow: inset 1px 1px 6px rgba(0, 0, 0, 0.4);
+}
+.giftform_GiftNoteInput_3wPcW:focus::placeholder {
+  margin-left: 2px;
+}
+.giftform_GiftRecipientPickerModal_3R_gi {
+  width: 600px;
+}
+.giftform_GiftFriendsListCtn_321Wo {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  max-height: 85%;
+  overflow: auto;
+}
+.giftform_GiftRecipientPickerFormCtn_2SDa5 {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+}
+.giftform_GiftRecipientPickerFormCtn_2SDa5 .giftform_GiftFriendsInput_1OuNJ {
+  margin: 10px 0;
+}
+.giftform_GiftRecipientPickerFormCtn_2SDa5
+  .giftform_GiftRecipientSaveBtn_18bhp {
+  margin-top: auto;
+}
+.giftform_GiftPickerFriendBlock_3qPIR {
+  background: rgba(21, 21, 21, 0.15);
+  display: flex;
+  align-items: center;
+  padding: 10px 15px 10px 10px;
+  font-size: 13px;
+  cursor: pointer;
+}
+.giftform_GiftPickerFriendBlock_3qPIR .giftform_FriendAvatar_1AeyM {
+  margin-right: 2px;
+}
+.giftform_GiftPickerFriendBlock_3qPIR.giftform_Disabled_3jwhG {
+  background: #3d4450;
+}
+.giftform_GiftPickerFriendBlock_3qPIR.giftform_Selected_1Wx7O {
+  border: 1px solid red;
+}
+.giftform_GiftPickerFriendBlock_3qPIR .giftform_FavoriteFriendIcon_3Kd8P {
+  margin-left: 5px;
+  fill: #ff0;
+  width: 13px;
+}
+.giftform_FriendsGiftLabel_3FPeG {
+  font-size: 13px;
+  margin-left: auto;
+}
+.giftform_FriendsGiftLabel_3FPeG.giftform_OwnsGame_YK5pj {
+  color: #ffc82c;
+}
+.giftform_FriendsGiftLabel_3FPeG.giftform_OnWishlist_28yZd {
+  color: #1a9fff;
+}
+.giftform_GiftFormRecipient_2bnjZ {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+}
+.giftform_GiftFormRecipient_2bnjZ .giftform_FriendAvatar_1AeyM {
+  margin: 0px 2px 0px 7px;
+}
+.giftform_GiftFormRecipient_2bnjZ .giftform_ChangeGiftRecipientBtn_2nYV3 {
+  width: auto;
+  margin-left: 15px;
+  padding: 0 5px;
+}
+.giftform_LinkButton_12zYF {
+  color: #606f7f;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 12px;
+  margin-left: 6px;
+}
+.giftform_LinkButton_12zYF:hover {
+  color: #fff;
+}
+.giftform_GiftDatePicker_VZsqg {
+  display: flex;
+  margin-top: 10px;
+}
+.DialogButton.giftform_ScheduleGiftBtn_3gADD {
+  width: fit-content;
+  padding: 5px 15px;
+  cursor: pointer;
+}
+.giftform_GiftScheduleIcon_742Uk {
+  width: 24px;
+  vertical-align: -5px;
+  fill: #fff;
+  margin-right: 10px;
+}
+.giftform_GiftRadioLabel_3Ilfj {
+  font-size: 14px;
+  color: #c6d4df;
+  margin-left: 5px;
+  vertical-align: 1px;
+}
+.giftform_GiftRadioRow_RMDo0 {
+  margin-top: 10px;
+}
+.giftform_GiftSignatureInput_3tP7D {
+  max-width: 60%;
+}
+.coupons_CouponPickerRowGlow_2ETXQ {
+  background: linear-gradient(-45deg, #0056d6 8%, #1a9fff 90%);
+  border-radius: 2px;
+  padding: 1px;
+}
+.coupons_CouponPickerRowGlow_2ETXQ .coupons_CouponPickerRow_3wfeH {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 9px;
+  min-height: 40px;
+  background-color: #23262e;
+}
+.coupons_CouponPickerRowGlow_2ETXQ
+  .coupons_CouponPickerRow_3wfeH
+  .coupons_ModifyLink_3JmdO {
+  color: #ccd5e0;
+  flex: 1;
+  text-align: end;
+  text-decoration: underline;
+}
+.coupons_CouponRepresentation_1_LYY {
+  width: 80px;
+  height: 40px;
+  background-color: rgba(26, 160, 255, 0.3254901961);
+}
+.coupons_PackageName_3L1DF {
+  font-weight: bold;
+}
+.coupons_CouponListContainer_ir0tp {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.coupons_CouponListItem_3pw4q {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  padding: 12px;
+  gap: 12px;
+  min-width: 400px;
+  background-color: rgba(61, 68, 80, 0.5019607843);
+}
+.coupons_CouponListItem_3pw4q.coupons_Disabled_1GFD8 {
+  opacity: 0.5;
+  cursor: default;
+}
+.coupons_CouponListItem_3pw4q .coupons_Image_2gY_V {
+  width: 63px;
+}
+.coupons_CouponListItem_3pw4q .coupons_Info_1Je1c {
+  flex: 1;
+}
+.coupons_CouponListItem_3pw4q .coupons_Discount_3KPbt {
+  color: #ccd5e0;
+  font-size: 15px;
+  font-weight: bold;
+}
+.coupons_CouponInfoText_FicMn {
+  color: #1a9fff;
+  font-size: 12px;
+}
+.coupons_Checkbox_265qJ {
+  width: 16px;
+  height: 16px;
+  background-color: #0e141b;
+}
+.coupons_Checkbox_265qJ.coupons_Hidden_21w27 {
+  visibility: hidden;
+}
+.lineitem_LineItemWrapper_2KiPY {
+  position: relative;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.lineitem_LineItemCapsule_2_GgL {
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 220px;
+  height: 103px;
+}
+.lineitem_LineItemPlaceholder_1qKu4 {
+  min-height: 110px;
+  width: 600px;
+}
+.lineitem_InnerLineItemCtn_yW_j0 {
+  display: flex;
+  gap: 10px;
+}
+.lineitem_InnerLineItemCtn_yW_j0 .lineitem_LineItemDetailsCtn_jRg6O {
+  flex-grow: 1;
+}
+.lineitem_InnerLineItemCtn_yW_j0 .lineitem_LineItemCol_26Nx9 {
+  display: flex;
+}
+.lineitem_InnerLineItemCtn_yW_j0 .lineitem_RemoveLineItem_33j4S {
+  color: #606f7f;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 12px;
+}
+.lineitem_InnerLineItemCtn_yW_j0 .lineitem_RemoveLineItem_33j4S:hover {
+  color: #fff;
+}
+.lineitem_InnerLineItemCtn_yW_j0 .lineitem_LineItemDetailsRow_F6ZEr {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+.lineitem_InnerLineItemCtn_yW_j0 .lineitem_LineItemDetailsRowTop_1SauQ {
+  margin-top: 0px;
+}
+.lineitem_InnerLineItemCtn_yW_j0 .lineitem_LineItemSpaceBetween_n7b9Q {
+  justify-content: space-between;
+}
+.lineitem_InnerLineItemCtn_yW_j0 .lineitem_LineItemTitle_pVXX8 {
+  font-size: 18px;
+  line-height: 22px;
+  color: #fff;
+  font-weight: 500;
+}
+.lineitem_InnerLineItemCtn_yW_j0 .lineitem_LineItemPricingOptions_3f1Xk {
+  margin: auto 0;
+}
+.lineitem_InnerLineItemCtn_yW_j0 .lineitem_HeaderImg_1iNQ1 {
+  max-width: 220px;
+}
+.lineitem_InnerLineItemCtn_yW_j0 .lineitem_LineItemDropDown_1LZzN {
+  margin: 0;
+}
+.lineitem_InnerLineItemCtn_yW_j0 .lineitem_LineItemDropDown_1LZzN :hover {
+  background: #464d58;
+}
+.lineitem_InnerLineItemCtn_yW_j0 .lineitem_PlatformIcons_3kyTA {
+  fill: #ccd5e0;
+  color: #ccd5e0;
+}
+.lineitem_InnerLineItemCtn_yW_j0 .lineitem_PlatformIcons_3kyTA svg {
+  fill: #ccd5e0;
+  color: #ccd5e0;
+}
+.DialogButton.lineitem_AddLineItemCtn_3eduN {
+  width: 26px;
+  margin: 0;
+  padding: 0;
+  line-height: 28px;
+  margin-left: 10px;
+  background: rgba(59, 63, 72, 0.5);
+}
+.DialogButton.lineitem_AddLineItemCtn_3eduN .lineitem_AddLineItemIcon_1As00 {
+  width: 10px;
+  height: 10px;
+  margin: 0;
+  color: #ccd5e0;
+}
+.lineitem_PendingLineItem_PqpM1 {
+  opacity: 0.3;
+  user-select: none;
+}
+.lineitem_FlexRow_hPrcq {
+  display: flex;
+}
+.lineitem_PriceWidget_2yigx div {
+  background: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
+}
+.lineitem_Warning_1PZ2h {
+  color: #ffcc6a;
+}
+.lineitem_LineItemNoticeAppsCtn_1-Zbq {
+  display: inline-flex;
+  flex-wrap: wrap;
+  color: #fff;
+}
+.lineitem_LoadingThrobber_3eDAt {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.DialogDropDown.lineitem_DropDownThin_j19kQ {
+  font-size: 12px;
+  padding: 5px 24px 5px 7px;
+  min-width: 100px;
+}
+.lineitem_DropDownThin_j19kQ .DialogDropDown_Arrow {
+  width: 14px;
+  top: 9px;
+  right: 4px;
+}
+.lineitem_DropDownOptionsCtnThin_2I90N {
+  font-size: 12px;
+  min-width: 300px;
+}
+.lineitem_DropDownOptionItem_2M6LS {
+  padding: 5px;
+}
+.lineitem_WhiteText_rXbF7 {
+  color: #fff;
+}
