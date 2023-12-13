@@ -71,7 +71,7 @@ function ShowPurchaseDialog( publishedFileID, returnPublishedFileID, priceOverri
 	if ( bSkipRequiredItemsCheck == false && $J( "[name=requiredItems]").length != 0 )
 	{
 		var requiredItems = $J( "#RequiredItems").clone();
-		requiredItems.prepend( 'This item requires all of the following other items in order to function properly.<br><br>You can click on each one here to learn more about and subscribe to the item before proceeding.<br><br>' );
+		requiredItems.prepend( 'This item requires all of the following other items in order to function properly.<br><br>You can click on each one here to learn more about and subscribe to the item before proceeding.<br><br>You can also choose to subscribe to all these required items (and all the items they in turn require), but be warned that could include many more items.<br><br>' );
 		var dialog = ShowConfirmDialog( 'Additional Required Items', requiredItems, 'Continue' );
 		dialog.done( function() {
 			ShowPurchaseDialog( publishedFileID, returnPublishedFileID, priceOverride, true );

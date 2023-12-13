@@ -550,66 +550,74 @@ function HideSharePoup()
 	$('ShareItemBtn').removeClassName( 'toggled' );
 }
 
-function SendSubscribeItemRequest()
+function SendSubscribeItemRequest( id, appID, bIncludeDependencies )
 {
 	$('action_wait').show();
-	$('PublishedFileSubscribe').request( {
-		onSuccess: function( response )
+
+	var params = {
+		id: id,
+		appid: appID,
+		include_dependencies: bIncludeDependencies,
+		sessionid: g_sessionID
+	};
+
+	$J.post( "https://steamcommunity.com/sharedfiles/subscribe", params )
+	.done( function( data )
+	{
+		switch( data.success )
 		{
-			switch( response.responseJSON.success )
+			case 1:
 			{
-				case 1:
+				if ($('JustSubscribed') !== null )
 				{
-					if ($('JustSubscribed') !== null )
-					{
-						$('JustSubscribed').show();
-					}
-					$('SubscribeItemBtn').addClassName("toggled");
-					$('SubscribeItemOptionAdd').className = "subscribeOption add";
-					$('SubscribeItemOptionSubscribed').className = "subscribeOption subscribed selected";
+					$('JustSubscribed').show();
 				}
-				break;
-
-				case 15:
-				{
-					ShowAlertDialog( "Error", "You do not have permission to subscribe to this item." );
-				}
-				break;
-
-				case 25:
-				{
-					ShowAlertDialog( "Error", "You cannot subscribe to this item because you have reached the limit of 15,000 subscriptions across all products on Steam." );
-				}
-				break;
-
-				default:
-				{
-					ShowAlertDialog( "Error", "There was a problem trying to subscribe to this item. Please try again later." );
-				}
-				break;
+				$('SubscribeItemBtn').addClassName("toggled");
+				$('SubscribeItemOptionAdd').className = "subscribeOption add";
+				$('SubscribeItemOptionSubscribed').className = "subscribeOption subscribed selected";
 			}
+				break;
 
-			$('action_wait').hide();
+			case 15:
+			{
+				ShowAlertDialog( "Error", "You do not have permission to subscribe to this item." );
+			}
+				break;
+
+			case 25:
+			{
+				ShowAlertDialog( "Error", "You cannot subscribe to this item because you have reached the limit of 15,000 subscriptions across all products on Steam." );
+			}
+				break;
+
+			default:
+			{
+				ShowAlertDialog( "Error", "There was a problem trying to subscribe to this item. Please try again later." );
+			}
+				break;
 		}
+
+		$('action_wait').hide();
 	} );
+
 }
 
-function SubscribeItem()
+function SubscribeItem( id, appID )
 {
 	if ( !$('SubscribeItemBtn').hasClassName( "toggled" ) )
 	{
 		if ( $J( "[name=requiredItems]").length != 0 )
 		{
 			var requiredItems = $J( "#RequiredItems").clone();
-			requiredItems.prepend( 'This item requires all of the following other items in order to function properly.<br><br>You can click on each one here to learn more about and subscribe to the item before proceeding.<br><br>' );
-			var dialog = ShowConfirmDialog( 'Additional Required Items', requiredItems, 'Continue' );
-			dialog.done( function() {
-				SendSubscribeItemRequest();
+			requiredItems.prepend( 'This item requires all of the following other items in order to function properly.<br><br>You can click on each one here to learn more about and subscribe to the item before proceeding.<br><br>You can also choose to subscribe to all these required items (and all the items they in turn require), but be warned that could include many more items.<br><br>' );
+			var dialog = ShowConfirmDialog( 'Additional Required Items', requiredItems, 'Subscribe to Just This Item', undefined, 'Subscribe to All' );
+			dialog.done( function( action ) {
+				SendSubscribeItemRequest( id, appID, action == 'SECONDARY' );
 			} );
 		}
 		else
 		{
-			SendSubscribeItemRequest();
+			SendSubscribeItemRequest( id, appID, false );
 		}
 	}
 	else
